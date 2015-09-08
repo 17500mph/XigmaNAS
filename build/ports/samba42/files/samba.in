@@ -384,7 +384,7 @@ sambaad_mkconf_cmd()
 		-o "state directory = ${_path}" -n \
 		-o "private dir = ${_path}/private" -n \
 		-o "smb passwd file = ${_path}/private/smbpasswd" -n \
-		-o "usershare path = ${_path}/usersharesmbpasswd" -n \
+		-o "usershare path = ${_path}/usershares" -n \
 		-v "concat('dns forwarder = ',//sambaad/dns_forwarder)" -n \
 		-i "//sambaad/fstype[. = 'ntvfs']" \
 			-o "server services = rpc, nbt, wrepl, ldap, cldap, kdc, drepl, winbind, ntp_signd, kcc, dnsupdate, dns, smb" -n \
