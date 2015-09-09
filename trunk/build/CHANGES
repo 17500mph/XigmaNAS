@@ -6,10 +6,13 @@ Changes:
 - Add Mellanox ConnectX-2 EN driver module. (x64 only)
 - Upgrade bash 4.3 to patch 42.
 - Upgrade lighttpd to 1.4.37.
+- Upgrade php to 5.6.13.
 
 Fixes:
 - Undefined symbol "av_find_stream_info" in fuppes/libmetadata_libavformat.so.
 - AFP share is not advised.
+- Fix webserver user logins.
+- Fix wrong path ticket 228.
 
 Note:
 - iperf2 has been replaced for iperf3 because of inconsistent results for UDP above 2Gbps.
