@@ -9,6 +9,7 @@ Changes:
 - Upgrade php to 5.6.13.
 
 Fixes:
+- Fix wrong path in Samba AD. (ticket #228, #232)
 - Undefined symbol "av_find_stream_info" in fuppes/libmetadata_libavformat.so.
 - AFP share is not advised.
 - Fix webserver user logins.
