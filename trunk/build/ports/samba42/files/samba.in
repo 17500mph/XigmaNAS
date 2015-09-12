@@ -73,6 +73,7 @@ configxml_isset //sambaad/enable
 sambaad=$?
 if [ 0 -eq ${sambaad} ]; then
 	samba_daemons="samba"
+	mkconf_cmd="sambaad_mkconf_cmd"
 fi
 
 # Create required directories.
@@ -392,6 +393,10 @@ sambaad_mkconf_cmd()
 		-b \
 		-o "idmap_ldb:use rfc2307 = yes" -n \
 		-o "nsupdate command = /usr/local/bin/samba-nsupdate -g" -n \
+		-n \
+		-m "//sambaad/auxparam" \
+			-v "." -n \
+		-b \
 		-n \
 		-o "[netlogon]" -n \
 		-o "path = ${_path}/sysvol/${_dns_domain}/scripts" -n \
