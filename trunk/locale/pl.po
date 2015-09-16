@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-07-16 03:45+0000\n"
-"PO-Revision-Date: 2015-07-15 19:48+0000\n"
-"Last-Translator: Krzysztof Sokol <chrisf4lc0n@gmail.com>\n"
+"POT-Creation-Date: 2015-08-29 16:41+0000\n"
+"PO-Revision-Date: 2015-09-15 09:25+0000\n"
+"Last-Translator: Marcin <marcin@morawiec.info>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-22 00:13+0000\n"
-"X-Generator: Launchpad (build 17690)\n"
+"X-Launchpad-Export-Date: 2015-09-16 10:37+0000\n"
+"X-Generator: Launchpad (build 17737)\n"
 "X-Poedit-Country: POLAND\n"
 "Language: \n"
 "X-Poedit-Language: Polish\n"
@@ -91,19 +91,25 @@ msgid "%sB used of %sB"
 msgstr "użyto %sB z %sB"
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
-msgstr ""
+msgstr "(Znaleziono w dyskach Maxtor 6B200M0 200GB i Maxtor 2R015H1 15GB)"
 
 msgid ""
 "(Kingston)Counts the number of flash erase failures. This Attribute returns "
 "the total number of Flash erase operation failures since the drive was "
 "deployed. This Attribute is identical to Attribute 182."
 msgstr ""
+"(Kingston) Błędy kasowania pamięci są liczone. Ten atrybut zwraca ilość "
+"wszystkich operacji błędów kasowania od początku działania dysku.\r\n"
+"Ten atrybut jest identyczny z Atrybutem 182."
 
 msgid ""
 "(Kingston)Counts the number of flash program failures. This Attribute "
 "returns the total number of Flash program operation failures since the drive "
 "was deployed. This attribute is identical to attribute 181."
 msgstr ""
+"(Kingston) Błędy programowania pamięci są liczone. Ten atrybut zwraca ilość "
+"wszystkich operacji błędów programowania od początku działania dysku.\r\n"
+"Ten atrybut jest identyczny z Atrybutem 181."
 
 msgid ""
 "(Vendor specific raw value.) Rate of seek errors of the magnetic heads. If "
@@ -356,7 +362,7 @@ msgid "ARP tables"
 msgstr "tablice ARP"
 
 msgid "ATTRIBUTE NAME"
-msgstr ""
+msgstr "ATRYBUT"
 
 msgid "Access"
 msgstr "Dostęp"
@@ -624,7 +630,7 @@ msgid "Allow"
 msgstr "Zezwól"
 
 msgid "Allow TLS connections only."
-msgstr ""
+msgstr "Zezwalaj tylko na połączenia TLS"
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Zezwalaj klientowi na dostęp do kont z pustym hasłem."
@@ -797,6 +803,9 @@ msgstr "Metoda Autentykacji"
 msgid "Authenticate URL"
 msgstr "URL Autentykacji"
 
+msgid "Authenticate path & realm"
+msgstr ""
+
 msgid "Authentication"
 msgstr "Uwierzytelnianie"
 
@@ -841,6 +850,7 @@ msgstr ""
 
 msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr ""
+"Średni czas startu dysku (Od zera obrotów do pełnej prędkości operacyjnej"
 
 msgid "Backup configuration"
 msgstr "Kopia zapasowa konfiguracji"
@@ -1401,7 +1411,7 @@ msgid ""
 msgstr ""
 
 msgid "Count of load/unload cycles into head landing zone position."
-msgstr ""
+msgstr "Licznik ładowań/wyładowań głowicy do strefy parkowania."
 
 msgid "Count of off-track errors."
 msgstr ""
@@ -1438,7 +1448,7 @@ msgid ""
 msgstr ""
 
 msgid "Count of times head changes position."
-msgstr ""
+msgstr "Liczba zmian położenia głowicy"
 
 msgid ""
 "Count of times the heads are loaded off the media. Heads can be unloaded "
@@ -1509,7 +1519,7 @@ msgid "Current Version:"
 msgstr "Aktualna wersja:"
 
 msgid "Current internal temperature."
-msgstr ""
+msgstr "Aktualna temperatura wewnątrz"
 
 msgid "Current password"
 msgstr "Aktualne hasło"
@@ -1549,7 +1559,7 @@ msgid "DAAP"
 msgstr "DAAP"
 
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "OPIS"
 
 msgid "DHCP"
 msgstr "DHCP"
@@ -1564,13 +1574,13 @@ msgid "DLNA/UPnP Media Server"
 msgstr "Serwer DLNA/UPnP"
 
 msgid "DNS domain"
-msgstr ""
+msgstr "Domena DNS"
 
 msgid "DNS forwarder"
-msgstr ""
+msgstr "Forwarder DNS"
 
 msgid "DNS server is empty."
-msgstr ""
+msgstr "Brak określonego serwera DNS"
 
 msgid "DNS settings"
 msgstr "Ustawienia DNS"
@@ -1857,7 +1867,7 @@ msgid "Device"
 msgstr "Urządzenie"
 
 msgid "Device / Label"
-msgstr ""
+msgstr "Urządzenie / Etykieta"
 
 #, php-format
 msgid "Device /dev/%s - %s"
@@ -2201,7 +2211,7 @@ msgid "Download firewall rules."
 msgstr "Pobierz reguły zapory ogniowej."
 
 msgid "Drive Temperature."
-msgstr ""
+msgstr "Temperatura urządzenia"
 
 msgid "Drive's seek performance during its internal tests."
 msgstr ""
@@ -2396,7 +2406,7 @@ msgstr ""
 "działa"
 
 msgid "Enable TLS connections."
-msgstr ""
+msgstr "Włącz połączenia TLS"
 
 msgid "Enable Time Machine support"
 msgstr "Włącz obsługę Time Machine"
@@ -2736,7 +2746,7 @@ msgstr "Wykonanie zadania cron-a nie powiodło się."
 
 #, php-format
 msgid "Failed to remove: %s"
-msgstr ""
+msgstr "Błąd przy usuwaniu: %s"
 
 #, c-format
 msgid "Failed to send status report to: %s."
@@ -2816,7 +2826,7 @@ msgid "Filename"
 msgstr "Nazwa pliku"
 
 msgid "Fileserver"
-msgstr ""
+msgstr "Serwer plików"
 
 msgid "Filter"
 msgstr "Filtr"
@@ -3137,7 +3147,7 @@ msgid "I/O timeout in seconds (%d by default)."
 msgstr "Limit czasu wejścia/wyjścia w sekundach (domyślnie %d)."
 
 msgid "ID"
-msgstr ""
+msgstr "Identyfikator"
 
 msgid "IG"
 msgstr "IG"
@@ -3325,7 +3335,7 @@ msgid "In slave mode it is the UPS name (Identifier) at the UPS master."
 msgstr "W trybie slave, to jest nazwa UPS (Identyfikator), przy UPS Master."
 
 msgid "In/Out errors"
-msgstr ""
+msgstr "Błędy Wejścia/Wyjścia"
 
 msgid "In/Out packets"
 msgstr ""
@@ -3945,7 +3955,7 @@ msgid "Masquerade address"
 msgstr "Adres maskarady"
 
 msgid "Max Protocol"
-msgstr ""
+msgstr "Najwyższy protokół"
 
 msgid "Max. TTL"
 msgstr "Maksymalna wielkość TTL pakietu danych"
@@ -4222,7 +4232,7 @@ msgid "Name of the variable."
 msgstr "Nazwa zmiennej."
 
 msgid "NetBIOS domain"
-msgstr ""
+msgstr "Domena NetBIOS"
 
 msgid "NetBIOS name"
 msgstr "Nazwa NetBIOS"
@@ -4436,7 +4446,7 @@ msgid "Not attached"
 msgstr "Nie załączone"
 
 msgid "Not found path."
-msgstr ""
+msgstr "Nie znaleziono ścieżki"
 
 msgid "Note"
 msgstr "Uwaga"
@@ -4482,7 +4492,7 @@ msgid "Number of clients"
 msgstr "Liczba klientów"
 
 msgid "Number of hours elapsed in the power-on state."
-msgstr ""
+msgstr "Liczba przepracowanych godzin"
 
 msgid "Number of log entries to show"
 msgstr "Liczba wpisów logu do wyświetlenia"
@@ -5323,10 +5333,10 @@ msgid "SSID"
 msgstr "SSID"
 
 msgid "Samba AD"
-msgstr ""
+msgstr "Samba AD"
 
 msgid "Samba Active Directory Domain Controller"
-msgstr ""
+msgstr "Kontroler Domeny Samba Active Directory"
 
 #, php-format
 msgid ""
@@ -5407,7 +5417,7 @@ msgid "Security"
 msgstr "Bezpieczeństwo"
 
 msgid "See attribute E8."
-msgstr ""
+msgstr "Zobacz atrybut E8"
 
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
@@ -5456,7 +5466,7 @@ msgid "Selected"
 msgstr "Zaznaczone"
 
 msgid "Selected device or label does not exist."
-msgstr ""
+msgstr "Wybrane urządzenie lub etykieta nie istnieje."
 
 msgid "Selected file isn't an valid ISO file."
 msgstr "Wskazany plik nie jest prawidłowym plikiem ISO."
@@ -5995,7 +6005,7 @@ msgid "TKIP"
 msgstr "TKIP"
 
 msgid "TLS"
-msgstr ""
+msgstr "TLS"
 
 msgid "TLS mode"
 msgstr "Tryb TLS"
@@ -7015,7 +7025,7 @@ msgid "This controls the access to this share with an access password."
 msgstr "Kontroluje to dostęp do tego udziału przy użyciu hasła."
 
 msgid "This controls whether this share is accessible by guest account."
-msgstr ""
+msgstr "Kontroluje, czy udział ten jest dostępny dla konta gościa."
 
 msgid ""
 "This controls whether this share is seen in the list of available shares in "
@@ -7636,13 +7646,13 @@ msgid "URL"
 msgstr "URL"
 
 msgid "Ukrainian"
-msgstr ""
+msgstr "Ukraiński"
 
 msgid "Unavailable"
 msgstr "Niedostępne"
 
 msgid "Uncorrected read errors reported to the operating system."
-msgstr ""
+msgstr "Nieskorygowane błędy odczytu przekazane do systemu operacyjnego."
 
 msgid "Unformated"
 msgstr "Niesformatowany"
@@ -7672,7 +7682,7 @@ msgid "Unknown or unformatted"
 msgstr "Nieznany lub niesformatowany"
 
 msgid "Unload"
-msgstr ""
+msgstr "Wyładuj"
 
 msgid "Unmount disk/partition"
 msgstr "Odmontuj dysk/partycję"
@@ -7709,6 +7719,8 @@ msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
 msgstr ""
+"Użyj spacji aby wprowadzić kilka adresów (wymagany jeden). Pamiętaj aby "
+"podać co najmniej jeden serwer DNS jeżeli podajesz tutaj nazwę hosta."
 
 msgid "Use as sparse volume. (thin provisioning)"
 msgstr "Użyj jako rzadki wolumin. (alokowanie elastyczne)"
@@ -7725,6 +7737,8 @@ msgid ""
 "Use the new 64k streaming read and write variant SMB requests introduced "
 "with Windows 2000."
 msgstr ""
+"Użyj nowego 64k wariantu odczytu i zapisu zapytań do SMB wprowadzonego razem "
+"z Windows 2000."
 
 msgid "Use the specified NTP server."
 msgstr "Użyj wskazanago serwera NTP."
@@ -7797,7 +7811,7 @@ msgid "User portal"
 msgstr "Portal użytkownika"
 
 msgid "User shares"
-msgstr ""
+msgstr "Udziały użytkownika"
 
 msgid "User suffix"
 msgstr "Użytkownicy"
@@ -7915,7 +7929,7 @@ msgid "WPA-PSK WPA-EAP"
 msgstr "WPA-PSK WPA-EAP"
 
 msgid "WPA2"
-msgstr ""
+msgstr "WPA2"
 
 msgid "Wait time"
 msgstr "Czas oczekiwania"
@@ -7941,7 +7955,7 @@ msgstr ""
 "utracone i nie będą mogły być przywrócone."
 
 msgid "Watch directory"
-msgstr ""
+msgstr "Obserwowany katalog"
 
 msgid "WebGUI"
 msgstr "WebGUI"
@@ -7950,18 +7964,21 @@ msgid "Webserver"
 msgstr "Serwer WWW"
 
 msgid "Webserver document root is missing."
-msgstr ""
+msgstr "Główny katalog Serwera WWW nie został podany."
 
 msgid "Week days"
 msgstr "Dni tygodnia"
 
 msgid "Western Digital attribute."
-msgstr ""
+msgstr "Parametr stosowany przez firmę Western Digital"
 
 msgid ""
 "Western Digital, Samsung or Seagate attribute: Total number of data blocks "
 "with detected, uncorrectable errors encountered during normal operation."
 msgstr ""
+"Atrybut Western Digital,  Samsunga i Seagate'a. Całkowita liczba wykrytych "
+"bloków danych łącznie z nienaprawialnymi błędami wykrytymi podczas normalnej "
+"pracy."
 
 msgid ""
 "When HAST is enabled, the local devices, the local services and the "
@@ -7998,6 +8015,9 @@ msgid ""
 "Whether scans should be skipped if there are no users connected. This allows "
 "the drive to spin down when no users are connected."
 msgstr ""
+"Czy skanowanie powinno być przerwane jeżeli żaden z użytkowników nie jest "
+"podłączony. Pozwala to zatrzymać talerze dyskom kiedy nie ma aktywnych "
+"użytkowników."
 
 msgid "Whether to skip initial boot-up scan."
 msgstr ""
@@ -8021,7 +8041,7 @@ msgid "Write"
 msgstr "Zapisz"
 
 msgid "Write Cache"
-msgstr ""
+msgstr "Bufor Zapisu"
 
 msgid "Write only"
 msgstr "Tylko do zapisu"
@@ -8086,7 +8106,7 @@ msgstr ""
 
 #, php-format
 msgid "You may specify logical block length (%d by default)."
-msgstr ""
+msgstr "Możesz określić długość bloku logicznego (domyślnie %d)."
 
 #, php-format
 msgid ""
@@ -8106,7 +8126,7 @@ msgid "You must have a minimum of %dMiB RAM for using iSCSI target."
 msgstr ""
 
 msgid "You must initialize data before enabling."
-msgstr ""
+msgstr "Przed włączeniem musisz zainicjować dane."
 
 msgid "You must select at least one authentication method."
 msgstr "Musisz wybrać przynajmniej jedną metodę autoryzacji."
@@ -8202,7 +8222,7 @@ msgid "greatest settable low voltage transfer point"
 msgstr "największy dostępny próg przełączenia niskiego napięcia"
 
 msgid "hiadaptive (high performance)"
-msgstr ""
+msgstr "hiadaptive (wysoka wydajność)"
 
 msgid "hour(s)"
 msgstr "godzina(godziny)"
@@ -8275,7 +8295,7 @@ msgid "rotated block-interleaved parity"
 msgstr ""
 
 msgid "scan target failed."
-msgstr ""
+msgstr "skanowanie celu nieudane."
 
 msgid "second(s)"
 msgstr "sekunda (sekundy)"
@@ -8302,7 +8322,7 @@ msgid "to"
 msgstr "do"
 
 msgid "umask"
-msgstr ""
+msgstr "maska"
 
 msgid "umount"
 msgstr "odmontuj"
