@@ -35,6 +35,9 @@ require("guiconfig.inc");
 
 $pgtitle = array(gettext("Services"), gettext("Samba AD"));
 
+if (!isset($config['sambaad']['auxparam']) || !is_array($config['sambaad']['auxparam']))
+	$config['sambaad']['auxparam'] = array();
+
 $errormsg="";
 
 if ($config['interfaces']['lan']['ipaddr'] == "dhcp") {
