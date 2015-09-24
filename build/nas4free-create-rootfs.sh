@@ -98,6 +98,8 @@ mkdir usr/local/www ;
 mkdir usr/local/www/syntaxhighlighter ;
 mkdir usr/sbin ;
 mkdir usr/share ;
+mkdir usr/share/examples ;
+mkdir usr/share/examples/bhyve ;
 mkdir usr/share/misc ;
 mkdir usr/share/locale ;
 mkdir usr/share/snmp ;
