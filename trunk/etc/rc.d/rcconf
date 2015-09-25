@@ -544,7 +544,10 @@ setserialconsole()
 	fi
     else
 	if [ "$_ttyuonoff" = "on" ]; then
-	    sed -i.bak -e "/^${_ttyu}/ s/on/off/" /etc/ttys
+	    #sed -i.bak -e "/^${_ttyu}/ s/on/off/" /etc/ttys
+	    sed -i.bak -e "/^${_ttyu}/ s/on/onifconsole/" /etc/ttys
+	else
+	    sed -i.bak -e "/^${_ttyu}/ s/off/onifconsole/" /etc/ttys
 	fi
     fi
 }
