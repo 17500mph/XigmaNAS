@@ -261,6 +261,12 @@ function get_smbios_info() {
 		$serial = chop(`/sbin/sysctl -n hw.board.serial`);
 		if (!empty($serial))
 			$smbios['planar']['product'] .= " (S/N: $serial)";
+	} else if ($smbios['bios']['vendor'] == 'BHYVE') {
+		$smbios['bios']['reldate'] = "01/01/2015";
+		$smbios['bios']['vendor'] = "BHyVe";
+		$smbios['bios']['version'] = "1.0";
+		$smbios['planar']['maker'] = "";
+		$smbios['planar']['product'] = "BHyVe";
 	}
 	return $smbios;
 }
