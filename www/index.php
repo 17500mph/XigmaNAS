@@ -631,6 +631,33 @@ $(document).ready(function(){
 			<?php endif;?>
 			</table></td>
 		</tr>
+		<?php
+			unset($vmlist);
+			mwexec2("/usr/bin/find /dev/vmm -type c", $vmlist);
+			if (!empty($vmlist)):
+		?>
+		<tr>
+			<td width="25%" class="vncellt"><?=gettext("Virtual Machine");?></td>
+			<td width="75%" class="listr">
+			<table width="100%" border="0" cellspacing="0" cellpadding="1">
+			<?php
+				$vmtype = "BHyVe";
+				$index = 0;
+				foreach ($vmlist as $vmpath) {
+					$vm = basename($vmpath);
+					unset($temp);
+					exec("/usr/sbin/bhyvectl ".escapeshellarg("--vm=$vm")." --get-lowmem | sed -e 's/.*\\///'", $temp);
+					$vram = $temp[0] / 1024 / 1024;
+					echo "<tr><td><div id='vminfo$index'>";
+					echo htmlspecialchars("$vmtype: $vm ($vram MiB)");
+					echo "</div></td></tr>\n";
+					if (++$index < count($vmlist))
+						echo "<tr><td><hr size='1' /></td></tr>\n";
+				}
+			?>
+			</table></td>
+		</tr>
+		<?php endif;?>
 	<?php endif;?>
 	</table></td>
     </tr>
