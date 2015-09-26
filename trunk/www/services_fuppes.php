@@ -1,6 +1,6 @@
 <?php
 /*
-	services_upnp.php
+	services_fuppes.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2015 The NAS4Free Project <info@nas4free.org>.
@@ -183,7 +183,7 @@ function transcoding_change() {
 }
 //-->
 </script>
-<form action="services_upnp.php" method="post" name="iform" id="iform">
+<form action="services_fuppes.php" method="post" name="iform" id="iform">
 	<table width="100%" border="0" cellpadding="0" cellspacing="0">
 		<tr>
 			<td class="tabcont">
