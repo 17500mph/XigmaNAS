@@ -15,6 +15,7 @@
     SUBDIR += fuppes
     SUBDIR += fusefs-ntfs
     SUBDIR += geom_raid5
+    SUBDIR += grub2-bhyve
     SUBDIR += gzip
     SUBDIR += inadyn-mt
     SUBDIR += iperf3
