@@ -14,6 +14,7 @@ Changes:
 - Upgrade isboot to 0.2.11.
 
 Fixes:
+- Fix boot time ntpdate fail when AD DC enabled.
 - Fix wrong path in Samba AD. (ticket #228, #232)
 - Undefined symbol "av_find_stream_info" in fuppes/libmetadata_libavformat.so.
 - AFP share is not advised.
