@@ -508,6 +508,25 @@ sambaad_mkconf_cmd()
 	fi
 }
 
+sambaad_resolv() {
+	# Update resolv.conf for AD DC
+	_ipaddress=`configxml_get "//interfaces/lan/ipaddr"`
+	if [ "dhcp" != "${_ipaddress}" ]; then
+		#echo "Updating resolv.conf."
+		# Set the domain, IP4 and IP6 DNS servers.
+		/usr/local/bin/xml sel -t -o "domain " -v "//system/domain" -n \
+			-m "//system/dnsserver" \
+				-i "string-length() > 0" -o "nameserver " -v "." -n -b \
+			-b \
+			-i "count(//interfaces/*[enable]/ipv6_enable) > 0" \
+				-m "//system/ipv6dnsserver" \
+					-i "string-length() > 0" -o "nameserver " -v "." -n -b \
+				-b \
+			-b \
+			${configxml_file} | /usr/local/bin/xml unesc > /etc/resolv.conf
+	fi
+}
+
 samba_start_precmd() {
 	# XXX: Never delete winbindd_idmap, winbindd_cache and group_mapping
 	if [ -n "${samba_lockdir}" -a -d "${samba_lockdir}" ]; then
@@ -650,6 +669,9 @@ samba_cmd() {
 # Create required config file
 if [ 0 -eq ${sambaad} ]; then
     sambaad_mkconf_cmd
+    if [ "${BOOTING}" = "1" ]; then
+	sambaad_resolv
+    fi
 else
     samba_mkconf_cmd
 fi
