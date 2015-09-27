@@ -1777,6 +1777,12 @@ $DIALOG --title \"$NAS4FREE_PRODUCTNAME - Ports\" \\
 					state="OFF"; break;
 				fi
 			done
+		elif [ "i386" = ${NAS4FREE_ARCH} ]; then
+			for forceoff in grub2-bhyve; do
+				if [ "$port" = "$forceoff" ]; then
+					state="OFF"; break;
+				fi
+			done
 		fi
 		case ${state} in
 			[hH][iI][dD][eE])
