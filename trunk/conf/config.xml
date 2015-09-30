@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- NAS4Free default system configuration -->
 <nas4free>
-	<version>2.0</version>
+	<version>2.1</version>
 	<lastchange></lastchange>
 	<system>
 		<hostname>nas4free</hostname>
@@ -398,13 +398,25 @@
 				<id>999</id>
 				<primarygroup>999</primarygroup>
 				<group>50</group>
-				<extraoptions>-m -w random</extraoptions>
+				<extraoptions>-m -w random -c &quot;Transmission Daemon&quot;</extraoptions>
+			</user>
+			<user>
+				<uuid>132a0a60-a16d-4244-ba04-09312adda744</uuid>
+				<name>dlna</name>
+				<id>933</id>
+				<primarygroup>933</primarygroup>
+				<extraoptions>-c &quot;DLNA Daemon&quot; -d /nonexistent -s /usr/sbin/nologin</extraoptions>
 			</user>
 			<group>
 				<uuid>e8cc78b8-7c3d-46de-a34c-11b1c260a37e</uuid>
 				<id>999</id>
 				<name>transmission</name>
 			</group>
+			<group>
+				<uuid>ab0ee675-e8d1-4052-b7c2-e6b46c918eb8</uuid>
+				<id>933</id>
+				<name>dlna</name>
+				</group>
 			<group>
 				<uuid>e504881b-c8dc-43d7-9ca4-74552f9b405b</uuid>
 				<id>1000</id>
@@ -876,7 +888,6 @@
 		<sndbuf>128480</sndbuf>
 		<storedosattributes/>
 		<largereadwrite/>
-		<!-- <usesendfile/> -->
 		<!-- <aio/> -->
 		<aiorsize>1024</aiorsize>
 		<aiowsize>1024</aiowsize>
