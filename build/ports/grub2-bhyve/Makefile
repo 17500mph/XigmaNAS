@@ -19,6 +19,6 @@ DEP_STAGEDIR=		${PORTSDIR}/sysutils/grub2-bhyve/work/stage
 do-install:
 # NAS4Free install
 	@echo "install for ${NAS4FREE_ROOTFS}"
-	@${INSTALL_PROGRAM} -m 4755 -v ${DEP_STAGEDIR}${PREFIX}/sbin/grub-bhyve ${NAS4FREE_ROOTFS}/usr/local/sbin
+	@${INSTALL_PROGRAM} -v ${DEP_STAGEDIR}${PREFIX}/sbin/grub-bhyve ${NAS4FREE_ROOTFS}/usr/local/sbin
 
 .include <bsd.port.mk>
