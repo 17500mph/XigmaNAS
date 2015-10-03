@@ -17,6 +17,7 @@ Changes:
 - Upgrade php to 5.6.14.
 
 Fixes:
+- Fix NFS share network. (ticket #238)
 - Fix boot time ntpdate fail when AD DC enabled.
 - Fix wrong path in Samba AD. (ticket #228, #232)
 - Undefined symbol "av_find_stream_info" in fuppes/libmetadata_libavformat.so.
