@@ -42,9 +42,7 @@ NLS_USES=	gettext-runtime
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MKQUEUE}
-.if ${ARCH} != "armv6"
 EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-kqueue
-.endif
 .endif
 
 # NAS4Free
