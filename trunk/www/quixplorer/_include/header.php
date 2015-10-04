@@ -231,6 +231,23 @@ function display_menu($menuid) {
 	echo "	</div>\n";
 	echo "</li>\n";
 }
+function include_ext_menu() {
+	global $g;
+	$dh = @opendir("{$g['www_path']}/ext");
+	if ($dh) {
+		while (($extd = readdir($dh)) !== false) {
+			if (($extd === ".") || ($extd === ".."))
+				continue;
+			ob_start();
+			@include("{$g['www_path']}/ext/" . $extd . "/menu.inc");
+			$tmp = trim(ob_get_contents());
+			ob_end_clean();
+			$tmp = preg_replace('/href=\"([^\/\.])/', 'href="../\1', $tmp);
+			echo "$tmp\n";
+		}
+		closedir($dh);
+	}
+}
 /* QUIXPLORER CODE */
 // header for html-page
 function show_header($title, $additional_header_content = null)
@@ -298,20 +315,7 @@ function show_header($title, $additional_header_content = null)
 				echo "<a href=\"../index.php\" onmouseover=\"mopen('extensions')\" onmouseout=\"mclosetime()\">".gettext("Extensions")."</a>\n";
 			}
 			echo "<div id=\"extensions\" onmouseover=\"mcancelclosetime()\" onmouseout=\"mclosetime()\">\n";
-				$dh = @opendir("{$g['www_path']}/ext");
-				if ($dh) {
-					while (($extd = readdir($dh)) !== false) {
-						if (($extd === ".") || ($extd === ".."))
-							continue;
-						ob_start();
-						@include("{$g['www_path']}/ext/" . $extd . "/menu.inc");
-						$tmp = trim(ob_get_contents());
-						ob_end_clean();
-						$tmp = preg_replace('/href=\"([^\/\.])/', 'href="../\1', $tmp);
-						echo "$tmp\n";
-					}
-					closedir($dh);
-				}
+			include_ext_menu();
 			echo "</div>\n";
 		echo "</li>\n";
 	endif;
