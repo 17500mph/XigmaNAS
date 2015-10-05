@@ -10,7 +10,7 @@
  AC_CHECK_FUNCS(inotify_init, AC_DEFINE(HAVE_INOTIFY,1,[Whether kernel has inotify support]), [
      AC_MSG_CHECKING([for __NR_inotify_init syscall])
 --- inotify.c.orig	2015-09-11 04:24:09.000000000 +0900
-+++ inotify.c	2015-10-04 20:46:53.627397000 +0900
++++ inotify.c	2015-10-05 04:37:06.260767000 +0900
 @@ -17,7 +17,7 @@
   */
  #include "config.h"
@@ -186,7 +186,7 @@
  void *
  start_inotify()
  {
-@@ -758,4 +809,239 @@
+@@ -758,4 +809,241 @@
  
  	return 0;
  }
@@ -229,6 +229,8 @@
 +		timeout.tv_nsec = 0;
 +		if ( (rv = kevent(global_kqueue_handle, NULL, 0, &ke, 1, &timeout)) == -1)
 +		{
++			if (errno == EINTR)
++				continue;
 +			DPRINTF(E_WARN, L_INOTIFY,	"kevent polling failure: %s\n", strerror(errno));
 +			continue;
 +		}
