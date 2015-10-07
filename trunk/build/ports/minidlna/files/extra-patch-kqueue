@@ -507,9 +507,14 @@
  		DPRINTF(E_DEBUG, L_HTTP, "upnpevents_selectfds: %p %d %d\n",
  		       obj, obj->state, obj->s);
  		if(obj->s >= 0) {
---- inotify.c.orig	2015-09-30 21:45:03.450323000 +0900
-+++ inotify.c	2015-09-30 21:51:52.802012000 +0900
-@@ -336,6 +336,7 @@
+--- inotify.c.orig	2015-10-07 10:53:52.924597000 +0900
++++ inotify.c	2015-10-07 10:59:55.679114000 +0900
+@@ -333,10 +333,12 @@
+ 	char * parent_buf = NULL;
+ 	char * id = NULL;
+ 	int depth = 1;
++	int retry;
+ 	int ts;
  	media_types types = ALL_MEDIA;
  	struct media_dir_s * media_path = media_dirs;
  	struct stat st;
@@ -517,17 +522,20 @@
  
  	DPRINTF(E_DEBUG, L_INOTIFY, "inotify_insert_file: %s @ %s\n", name, path);
  
-@@ -403,6 +404,16 @@
+@@ -404,6 +406,19 @@
  	if( stat(path, &st) != 0 )
  		return -1;
  
 +	(void)gettimeofday(&now, NULL);
-+	while (now.tv_sec < st.st_mtime + 3)
++	retry = 0;
++	while (now.tv_sec < st.st_mtime + 3 && ++retry < 10)
 +	{
 +		DPRINTF(E_DEBUG, L_INOTIFY, "Sleeping until %s is stable for a few seconds ...\n", path);
 +		sleep(1);
 +		(void)gettimeofday(&now, NULL);
 +		if (stat(path, &st) != 0)
++			return -1;
++		if (quitting)
 +			return -1;
 +	}
 +
