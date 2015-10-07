@@ -21,6 +21,7 @@
     SUBDIR += iperf3
     SUBDIR += isboot
     SUBDIR += istgt
+    SUBDIR += libvncserver
     SUBDIR += lighttpd
     SUBDIR += lcdproc
     SUBDIR += locale
@@ -29,6 +30,7 @@
     SUBDIR += msmtp
     SUBDIR += nano
     SUBDIR += netatalk3
+    SUBDIR += novnc
     SUBDIR += nss_ldap
     SUBDIR += nut
     SUBDIR += open-vm-tools
@@ -36,6 +38,7 @@
     SUBDIR += pam_ldap
     SUBDIR += pam_mkhomedir
     SUBDIR += php56
+    SUBDIR += phpvirtualbox
     SUBDIR += proftpd
     SUBDIR += python2
     SUBDIR += rconf
@@ -51,6 +54,7 @@
     SUBDIR += transmission
     SUBDIR += tw_cli
     SUBDIR += unison
+    SUBDIR += vbox
     SUBDIR += vbox-additions
     SUBDIR += wait_on
     SUBDIR += wol
