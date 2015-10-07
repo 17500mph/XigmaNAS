@@ -165,6 +165,8 @@ if (!isset($config['system']['disablefm'])) {
 }
 $menu['advanced']['menuitem'][] = array("type" => "separator", "visible" => Session::isAdmin());
 $menu['advanced']['menuitem'][] = array("desc" => gettext("Command"), "link" => "../exec.php", "visible" => Session::isAdmin());
+$menu['advanced']['menuitem'][] = array("type" => "separator", "visible" => Session::isAdmin());
+$menu['advanced']['menuitem'][] = array("desc" => gettext("VirtualBox"), "link" => "../vm_vbox.php", "visible" => Session::isAdmin());
 
 // Diagnostics
 $menu['diagnostics']['desc'] = gettext("Diagnostics");
