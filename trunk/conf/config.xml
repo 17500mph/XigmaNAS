@@ -407,6 +407,13 @@
 				<primarygroup>933</primarygroup>
 				<extraoptions>-c &quot;DLNA Daemon&quot; -d /nonexistent -s /usr/sbin/nologin</extraoptions>
 			</user>
+			<user>
+				<uuid>715997e1-b2eb-493d-86cf-c7d217998a67</uuid>
+				<name>vboxusers</name>
+				<id>920</id>
+				<primarygroup>920</primarygroup>
+				<extraoptions>-c &quot;Virtualbox user&quot; -d /nonexistent -s /usr/sbin/nologin</extraoptions>
+			</user>
 			<group>
 				<uuid>e8cc78b8-7c3d-46de-a34c-11b1c260a37e</uuid>
 				<id>999</id>
@@ -416,7 +423,12 @@
 				<uuid>ab0ee675-e8d1-4052-b7c2-e6b46c918eb8</uuid>
 				<id>933</id>
 				<name>dlna</name>
-				</group>
+			</group>
+			<group>
+				<uuid>235a1033-f7ee-443a-8c55-6bea64d5139e</uuid>
+				<id>920</id>
+				<name>vboxusers</name>
+			</group>
 			<group>
 				<uuid>e504881b-c8dc-43d7-9ca4-74552f9b405b</uuid>
 				<id>1000</id>
@@ -1534,4 +1546,8 @@
 			<!-- <auxparam></auxparam> -->
 		</lcdproc>
 	</lcdproc>
+	<vbox>
+		<!-- <enable/> -->
+		<homedir></homedir>
+	</vbox>
 </nas4free>
