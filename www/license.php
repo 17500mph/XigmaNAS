@@ -243,6 +243,10 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
 
       <p>VirtualBox Open Source Edition (OSE) (guest additions) (<a href="http://www.virtualbox.org/" target="_blank">http://www.virtualbox.org/</a>)</p>
 
+      <p>phpVirtualBox (<a href="http://sourceforge.net/projects/phpvirtualbox/" target="_blank">http://sourceforge.net/projects/phpvirtualbox/</a>)</p>
+
+      <p>noVNC (<a href="http://kanaka.github.io/noVNC/" target="_blank">http://kanaka.github.io/noVNC/</a>)</p>
+
       <p>LCDproc: A client/server suite for LCD devices (<a href="http://lcdproc.org/" target="_blank">http://lcdproc.org</a>)<br />
 	 Copyright &copy; 1998-2006 William Ferrell, Selene Scriven and many other contributors. All Rights Reserved.</p>
 
