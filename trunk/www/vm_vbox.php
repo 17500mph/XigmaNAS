@@ -71,16 +71,9 @@ if ($_POST) {
 
 		write_config();
 		$retval = 0;
-		if (!file_exists($d_sysrebootreqd_path)) {
-			config_lock();
-			$retval |= rc_exec_service("userdb");
-			$retval |= rc_update_service("vbox");
-			config_unlock();
-		} else {
-			config_lock();
-			$retval |= rc_exec_service("userdb");
-			config_unlock();
-		}
+		config_lock();
+		$retval |= rc_exec_service("userdb");
+		config_unlock();
 
 		if ($dir != "/nonexistent" && file_exists($dir)) {
 			// adjust permission
@@ -91,6 +84,12 @@ if ($_POST) {
 			// update auth method
 			$cmd = "/usr/local/bin/sudo -u {$user} /usr/local/bin/VBoxManage setproperty websrvauthlibrary null";
 			mwexec2("$cmd 2>&1", $rawdata, $result);
+
+			if (!file_exists($d_sysrebootreqd_path)) {
+				config_lock();
+				$retval |= rc_update_service("vbox");
+				config_unlock();
+			}
 		}
 
 		$savemsg = get_std_save_message($retval);
