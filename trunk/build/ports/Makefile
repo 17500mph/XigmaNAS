@@ -13,6 +13,7 @@
     SUBDIR += fdisk
     SUBDIR += firefly
     SUBDIR += fuppes
+    SUBDIR += fusefs-exfat
     SUBDIR += fusefs-ntfs
     SUBDIR += geom_raid5
     SUBDIR += grub2-bhyve
