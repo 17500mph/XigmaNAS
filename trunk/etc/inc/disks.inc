@@ -1684,6 +1684,15 @@ function disks_try_ext2($file) {
 	return "EXT2";
 }
 
+function disks_try_exfat($file) {
+	$mntpath = "/tmp/disks_import";
+	if (0 != mwexec("/usr/local/bin/mount.exfat -o ro {$file} {$mntpath} 2>/dev/null"))
+		return false;
+	if (1 == mwexec("/sbin/umount {$mntpath}"))
+		return false;
+	return "EXFAT";
+}
+
 function disks_import_try_allfs($dev) {
 	$mntpath = "/tmp/disks_import";
 
@@ -1703,6 +1712,9 @@ function disks_import_try_allfs($dev) {
 			$ext2 = disks_try_ext2($file);
 			if (!empty($ext2))
 				return "ext2";
+			$exfat = disks_try_exfat($file);
+			if (!empty($exfat))
+				return "exfat";
 		}
 	}
 
@@ -1722,6 +1734,9 @@ function disks_import_try_allfs($dev) {
 			$ext2 = disks_try_ext2($file);
 			if (!empty($ext2))
 				return "ext2";
+			$exfat = disks_try_exfat($file);
+			if (!empty($exfat))
+				return "exfat";
 		}
 	}
 
@@ -1741,6 +1756,9 @@ function disks_import_try_allfs($dev) {
 			$ext2 = disks_try_ext2($file);
 			if (!empty($ext2))
 				return "ext2";
+			$exfat = disks_try_exfat($file);
+			if (!empty($exfat))
+				return "exfat";
 		}
 	}
 

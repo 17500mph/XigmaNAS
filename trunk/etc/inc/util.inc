@@ -2063,41 +2063,57 @@ function get_fstype_list() {
 }
 
 function get_fstype_shortdesc($fstype) {
-  $shortdesc = "";
+	$shortdesc = "";
 
-  switch($fstype)
-  {
-    case "":              $shortdesc = gettext("Unformated");
-                          break;
-    case "ufs":
-    case "ufs_no_su":
-    case "ufsgpt":
-    case "ufsgpt_no_su":  $shortdesc = "UFS";
-                          break;
-    case "msdos":         $shortdesc = "FAT32";
-                          break;
-    case "cd9660":				$shortdesc = "CD/DVD";
-                          break;
-    case "ntfs":          $shortdesc = "NTFS";
-                          break;
-    case "gmirror":       $shortdesc = "gmirror";
-                          break;
-    case "gconcat":       $shortdesc = "gconcat";
-                          break;
-    case "gstripe":       $shortdesc = "gstripe";
-                          break;
-    case "graid5":				$shortdesc = "graid5";
-                          break;
-    case "gvinum":        $shortdesc = "gvinum";
-                          break;
-    case "softraid":      $shortdesc = gettext("SoftRaid");
-                          break;
-		case "geli":					$shortdesc = gettext("Encrypted");
-                          break;
-    case "ext2":					$shortdesc = "EXT2";
-    											break;
-		case "zfs":						$shortdesc = "ZFS storage pool device";
-    											break;
+	switch($fstype) {
+		case "":
+			$shortdesc = gettext("Unformated");
+			break;
+		case "ufs":
+		case "ufs_no_su":
+		case "ufsgpt":
+		case "ufsgpt_no_su":
+			$shortdesc = "UFS";
+			break;
+		case "msdos":
+			$shortdesc = "FAT32";
+			break;
+		case "cd9660":
+			$shortdesc = "CD/DVD";
+			break;
+		case "ntfs":
+			$shortdesc = "NTFS";
+			break;
+		case "gmirror":
+			$shortdesc = "gmirror";
+			break;
+		case "gconcat":
+			$shortdesc = "gconcat";
+			break;
+		case "gstripe":
+			$shortdesc = "gstripe";
+			break;
+		case "graid5":
+			$shortdesc = "graid5";
+			break;
+		case "gvinum":
+			$shortdesc = "gvinum";
+			break;
+		case "softraid":
+			$shortdesc = gettext("SoftRaid");
+			break;
+		case "geli":
+			$shortdesc = gettext("Encrypted");
+			break;
+		case "ext2":
+			$shortdesc = "EXT2";
+			break;
+		case "exfat":
+			$shortdesc = "exFAT";
+			break;
+		case "zfs":
+			$shortdesc = "ZFS storage pool device";
+			break;
   }
 
   return $shortdesc;
