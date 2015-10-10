@@ -36,12 +36,14 @@ do-install:
 	@${LN} -fsv /usr/local/lib/virtualbox/VBox.sh ${NAS4FREE_ROOTFS}/usr/local/bin/${file}
 .endfor
 # lib
+	@${RM} -rf ${NAS4FREE_ROOTFS}/usr/local/lib/virtualbox
 	@${CP} -Rpv ${DEP_STAGEDIR}${PREFIX}/lib/virtualbox ${NAS4FREE_ROOTFS}/usr/local/lib
 .for file in VBoxHeadless VBoxNetAdpCtl VBoxNetDHCP
 	chown 0:920 ${NAS4FREE_ROOTFS}/usr/local/lib/virtualbox/${file}
 	chmod 4510 ${NAS4FREE_ROOTFS}/usr/local/lib/virtualbox/${file}
 .endfor
 # share
+	@${RM} -rf ${NAS4FREE_ROOTFS}/usr/local/share/virtualbox-ose
 	@${CP} -Rpv ${DEP_STAGEDIR}${PREFIX}/share/virtualbox-ose ${NAS4FREE_ROOTFS}/usr/local/share
 # misc
 	@${MKDIR} -p ${NAS4FREE_ROOTFS}/usr/local/lib/python2.7/site-packages
