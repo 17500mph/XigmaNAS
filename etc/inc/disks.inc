@@ -1858,6 +1858,9 @@ function disks_import_all_disks($clean_import) {
 	$need_write_config = false;
 	$num = $error = 0;
 
+	// FUSE for NTFS/exFAT
+	mwexec("/sbin/kldload /boot/kernel/fuse.ko");
+
 	$disks = get_all_disks_list();
 	$disks = array_merge((array)$disks, (array)get_hast_disks_list());
 	if (empty($disks))

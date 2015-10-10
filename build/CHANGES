@@ -22,6 +22,7 @@ Changes:
 - Upgrade php to 5.6.14.
 
 Fixes:
+- Fix NTFS is not detected on Import disks.
 - Fix SSL certificate link. (ticket #239)
 - Fix NFS share network. (ticket #238)
 - Fix boot time ntpdate fail when AD DC enabled.
