@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-09-26 11:38+0000\n"
-"PO-Revision-Date: 2015-09-25 16:25+0000\n"
-"Last-Translator: Patricio Ghirardi <patricio.ghirardi@binnaris.com>\n"
+"POT-Creation-Date: 2015-10-10 16:28+0000\n"
+"PO-Revision-Date: 2015-10-10 09:42+0000\n"
+"Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-27 12:04+0000\n"
-"X-Generator: Launchpad (build 17754)\n"
+"X-Launchpad-Export-Date: 2015-10-10 13:41+0000\n"
+"X-Generator: Launchpad (build 17802)\n"
 "X-Poedit-Country: SPAIN\n"
 "Language: \n"
 "X-Poedit-Language: Spanish\n"
@@ -1412,6 +1412,8 @@ msgstr ""
 
 msgid "Count of attempts to compensate for platter speed variations."
 msgstr ""
+"Cuenta de intentos de compensación por variaciones de la velocidad de "
+"rotación de los platos."
 
 msgid ""
 "Count of buzz routines needed to spin up the drive due to insufficient power."
@@ -2577,9 +2579,6 @@ msgstr "Activar traps"
 msgid "Enable tuning of some kernel variables"
 msgstr "Permitir ajustar algunas variables del kernel"
 
-msgid "Enable use sendfile."
-msgstr "Permitir el uso de sendfile"
-
 msgid "Enable write cache mode."
 msgstr "Habilitar Write Cache"
 
@@ -2621,6 +2620,11 @@ msgstr ""
 "Introduzca un nº de puerto para la WebGUI si quiere dejar de utilizar el de "
 "por defecto ( 80 para HTTP y 443 para HTTPS)."
 
+msgid ""
+"Enter a space-separated list of tap devices. The devices will be created and "
+"automatically added it to the bridge."
+msgstr ""
+
 msgid "Enter a valid sysctl MIB name."
 msgstr "Ingrese un nombre sysctl MIB válido."
 
@@ -2637,6 +2641,11 @@ msgid ""
 msgstr ""
 "Introduzca la contraseña que será usada en el modo WPA-PSK. Esta debe tener "
 "entre 8 y 63 caracteres de longitud"
+
+msgid ""
+"Enter the path to the home directory of VirtualBox. VM config and HDD image "
+"will be created under the specified directory."
+msgstr ""
 
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
@@ -3195,7 +3204,7 @@ msgstr ""
 "Tiempo de espera en segundos (%d por defecto), para operaciones de I/O"
 
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgid "IG"
 msgstr "IG"
@@ -6121,6 +6130,9 @@ msgstr "Etiqueta%d"
 msgid "Tag%d (%s)"
 msgstr "Etiqueta%d (%s)"
 
+msgid "Tap device"
+msgstr ""
+
 msgid "Tape"
 msgstr "Cinta"
 
@@ -7253,16 +7265,6 @@ msgid "This is for information only (not using during iSCSI negotiation)."
 msgstr "Esto es solo informativo (no se usará durante la negociación iSCSI)"
 
 msgid ""
-"This may make more efficient use of the system CPU's and cause Samba to be "
-"faster. Samba automatically turns this off for clients that use protocol "
-"levels lower than NT LM 0.12 and when it detects a client is Windows 9x."
-msgstr ""
-"Esto podria hacer mas eficiente el uso del CPU del sistema y hacer que Samba "
-"sea más rapido. Automáticamente Samba lo deshabilita para los clientes que "
-"usan niveles de protocolo por debajo de NT LM 0.12 y cuando detecta un "
-"cliente que sea Windows 9x."
-
-msgid ""
 "This means that the image you uploaded is not an official/supported image "
 "and may lead to unexpected behavior or security compromises. Only install "
 "images that come from sources that you trust, and make sure that the image "
@@ -7958,9 +7960,6 @@ msgstr ""
 msgid "Use as sparse volume. (thin provisioning)"
 msgstr "Usar como Volumen esparcido (thin provisioning)"
 
-msgid "Use sendfile"
-msgstr "Utilice sendfile"
-
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
 msgstr ""
@@ -8084,6 +8083,9 @@ msgstr "VLAN"
 msgid "VLAN tag"
 msgstr "Etiqueta VLAN"
 
+msgid "VM"
+msgstr ""
+
 msgid "Value"
 msgstr "Valor"
 
@@ -8121,6 +8123,9 @@ msgstr "Dispositivos virtuales"
 
 msgid "Virtual interface"
 msgstr "Interfaces virtuales"
+
+msgid "VirtualBox"
+msgstr ""
 
 msgid "Volume"
 msgstr "Volumen"
@@ -8528,11 +8533,17 @@ msgstr "n/d"
 msgid "no new encrypted disk found."
 msgstr "No se han encontrado nuevos discos encriptados"
 
+msgid "noVNC"
+msgstr ""
+
 msgid "none"
 msgstr "ninguno"
 
 msgid "phpBB"
 msgstr "phpBB"
+
+msgid "phpVirtualBox"
+msgstr ""
 
 msgid "rc.conf"
 msgstr "rc.conf"
