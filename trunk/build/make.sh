@@ -1820,6 +1820,10 @@ $DIALOG --title \"$NAS4FREE_PRODUCTNAME - Ports\" \\
 				cd ${NAS4FREE_SVNDIR}/build/ports/${port};
 				make clean;
 			done;
+			if [ "i386" = ${NAS4FREE_ARCH} ]; then
+				# workaround patch
+				cp ${NAS4FREE_SVNDIR}/build/ports/vbox/files/extra-patch-src-VBox-Devices-Graphics-DevVGA.h /usr/ports/emulators/virtualbox-ose/files/patch-src-VBox-Devices-Graphics-DevVGA.h
+			fi
 			# Build ports.
 			for port in $(cat $ports | tr -d '"'); do
 				echo;
