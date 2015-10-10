@@ -108,6 +108,7 @@ $g_filesystems = array(
 	"cd9660" => "CD/DVD",
 	"ntfs" => "NTFS",
 	"ext2" => "EXT2",
+	"exfat" => "exFAT",
 	"softraid" => "Software RAID",
 	"geli" => "Encrypted",
 	"zfs" => "ZFS storage pool device"
