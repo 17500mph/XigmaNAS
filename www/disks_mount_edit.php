@@ -536,7 +536,9 @@ function fstype_change() {
 	switch (document.iform.fstype.selectedIndex) {
 	case 5: /* exFAT */
 		if (!first_fstype_changed) {
+<?php if (!isset($uuid)):?>
 			document.iform.partitiontype.value = "s";
+<?php endif;?>
 			first_fstype_changed = 1;
 		}
 		break;
