@@ -27,6 +27,7 @@
     SUBDIR += lcdproc
     SUBDIR += locale
     SUBDIR += mDNSResponder
+    SUBDIR += minidlna
     SUBDIR += mkpw
     SUBDIR += msmtp
     SUBDIR += nano
