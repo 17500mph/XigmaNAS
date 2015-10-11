@@ -56,8 +56,12 @@ do
 done
 
 # Generate samba local group
+_logname=${LOGNAME}
+if [ -z "${_logname}" ]; then
+	_logname=`/usr/bin/id -un`
+fi
 # builtin admin
-net groupmap add ntgroup="admin" unixgroup="admin" type=l > /dev\null
+LOGNAME="${_logname}" net groupmap add ntgroup="admin" unixgroup="admin" type=l > /dev\null
 # all configured groups
 _groupnum=`configxml_get_count "//access/group"`
 while [ ${_groupnum} -gt 0 ]
@@ -66,7 +70,7 @@ do
 	_gid=`configxml_get "//access/group[position()=${_groupnum}]/id"`
 
 	if [ ${_gid} -ge ${passdb_mingid} ]; then
-		net groupmap add ntgroup="${_groupname}" unixgroup="${_groupname}" type=l > /dev\null
+		LOGNAME="${_logname}" net groupmap add ntgroup="${_groupname}" unixgroup="${_groupname}" type=l > /dev\null
 	fi
 
 	_groupnum=$(( ${_groupnum} - 1 ))
