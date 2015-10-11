@@ -462,11 +462,23 @@ function get_interface_list() {
 function get_interface_wlist() {
 	global $g;
 
+	$iflist = array();
+
+	$osver = @exec("/usr/bin/uname -U");
+	if ($osver >= 1100000) {
+		$devs = @exec("/sbin/sysctl -n net.wlan.devices");
+		$ifs = explode(" ", $devs);
+		foreach ($ifs as $ifname) {
+			$iflist[$ifname] = array();
+			$iflist[$ifname]['mac'] = "00:00:00:00:00:00";
+			$iflist[$ifname]['up'] = false;
+		}
+		return $iflist;
+	}
+
 	/* build interface list with netstat */
 	exec("/usr/bin/netstat -inW -f link", $linkinfo);
 	array_shift($linkinfo);
-
-	$iflist = array();
 
 	foreach ($linkinfo as $link) {
 		$alink = preg_split("/\s+/", ltrim($link));
