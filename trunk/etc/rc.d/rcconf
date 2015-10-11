@@ -264,6 +264,11 @@ setifconfig()
 		${configxml_file} | /usr/local/bin/xml unesc | \
 		while read _wlan _wlandev _wlan_args; do
 			[ -n "${_wlan}" ] && eval /usr/local/sbin/rconf attribute set "wlans_${_wlandev}" "${_wlan}"
+			_wdev=`echo $_wlandev | sed -e 's/[0-9]*$//'`
+			#if [ -f "/cf/boot/kernel/if_${_wdev}.ko" ]; then
+			#	/sbin/kldload "/cf/boot/kernel/if_${_wdev}.ko" > /dev/null 2>&1
+			#fi
+			/sbin/kldload "if_${_wdev}.ko" > /dev/null 2>&1
 		done
 	/usr/local/bin/xml sel -t \
 		-m "//vinterfaces/wlan[apmode]" \
