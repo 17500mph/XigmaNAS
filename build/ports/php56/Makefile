@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PHP:S,$,:release,}
 MASTER_SITE_SUBDIR=	distributions/:release
 DISTNAME=		php-${PORTVERSION:S/.r/RC/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}:release
-USES=			tar:bzip2 cpe
+USES=			tar:bzip2 cpe iconv
 
 BUILD_DEPENDS=	sqlite3>=3.0:${PORTSDIR}/databases/sqlite3
 LIB_DEPENDS=		libpcre.so:${PORTSDIR}/devel/pcre
