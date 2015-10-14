@@ -310,7 +310,10 @@ samba_mkconf_cmd()
 				-o "recycle " \
 			-b \
 			-v "concat(aiomodule, ' ')" \
-			-i "count(storealternatedatastreams) > 0" \
+			-i "count(//afp/enable) > 0" \
+				-o "catia fruit " \
+			-b \
+			-i "count(storealternatedatastreams) > 0 or count(//afp/enable) > 0" \
 				-o "streams_xattr " \
 			-b \
 			-i "count(storentfsacls) > 0" \
@@ -342,7 +345,10 @@ samba_mkconf_cmd()
 				-o "veto files = /.zfs/" -n \
 			-b \
 			-i "count(//afp/enable) > 0" \
-				-o "#vfs objects = netatalk" -n \
+				-o "fruit:resource = file" -n \
+				-o "fruit:metadata = netatalk" -n \
+				-o "fruit:locking = netatalk" -n \
+				-o "fruit:encoding = native" -n \
 			-b \
 			-m "auxparam" \
 				-v "." -n \
@@ -456,7 +462,10 @@ sambaad_mkconf_cmd()
 					-o "recycle " \
 				-b \
 				-v "concat(aiomodule, ' ')" \
-				-i "count(storealternatedatastreams) > 0" \
+				-i "count(//afp/enable) > 0" \
+					-o "catia fruit " \
+				-b \
+				-i "count(storealternatedatastreams) > 0 or count(//afp/enable) > 0" \
 					-o "streams_xattr " \
 				-b \
 				-i "count(storentfsacls) > 0" \
@@ -488,7 +497,10 @@ sambaad_mkconf_cmd()
 					-o "veto files = /.zfs/" -n \
 				-b \
 				-i "count(//afp/enable) > 0" \
-					-o "#vfs objects = netatalk" -n \
+					-o "fruit:resource = file" -n \
+					-o "fruit:metadata = netatalk" -n \
+					-o "fruit:locking = netatalk" -n \
+					-o "fruit:encoding = native" -n \
 				-b \
 				-m "auxparam" \
 					-v "." -n \
