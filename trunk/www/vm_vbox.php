@@ -50,6 +50,11 @@ if ($_POST) {
 		$reqdfieldst = explode(" ", "string");
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
+	} else {
+		// disable VirtualBox
+		config_lock();
+		$retval |= rc_exec_script("/etc/rc.d/vbox onestop");
+		config_unlock();
 	}
 
 	if (empty($input_errors)) {
