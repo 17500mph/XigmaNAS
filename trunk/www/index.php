@@ -581,7 +581,7 @@ $(document).ready(function(){
 							"<span name='diskusage_{$ctrlid}_capacity' id='diskusage_{$ctrlid}_capacity' class='capacity'>{$poolv['cap']}</span>",
 							$poolv['size']);
 						echo "<br />";
-						echo sprintf(gettext("Total: %s | Used: %s | Free: %s | State: %s"),
+						echo sprintf(gettext("Total: %s | Alloc: %s | Free: %s | State: %s"),
 							"<span name='diskusage_{$ctrlid}_total' id='diskusage_{$ctrlid}_total' class='total'>{$poolv['size']}</span>",
 							"<span name='diskusage_{$ctrlid}_used' id='diskusage_{$ctrlid}_used' class='used'>{$poolv['alloc']}</span>",
 							"<span name='diskusage_{$ctrlid}_free' id='diskusage_{$ctrlid}_free' class='free'>{$poolv['free']}</span>",
