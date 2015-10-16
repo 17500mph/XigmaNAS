@@ -295,8 +295,8 @@ $(document).ready(function(){
 					$('#diskusage_'+pu.id+'_bar_free').attr('title', pu['tooltip'].available);
 					$('#diskusage_'+pu.id+'_capacity').text(pu.capacity);
 					$('#diskusage_'+pu.id+'_total').text(pu.size);
-					$('#diskusage_'+pu.id+'_used').text(pu.used);
-					$('#diskusage_'+pu.id+'_free').text(pu.avail);
+					$('#diskusage_'+pu.id+'_used').text(pu.alloc);
+					$('#diskusage_'+pu.id+'_free').text(pu.free);
 					$('#diskusage_'+pu.id+'_state').children().text(pu.health);
 				}
 			}
