@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-10-10 16:28+0000\n"
-"PO-Revision-Date: 2015-10-10 14:35+0000\n"
+"POT-Creation-Date: 2015-10-16 12:19+0000\n"
+"PO-Revision-Date: 2015-10-17 04:07+0000\n"
 "Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-10-11 13:08+0000\n"
-"X-Generator: Launchpad (build 17802)\n"
+"X-Launchpad-Export-Date: 2015-10-17 16:24+0000\n"
+"X-Generator: Launchpad (build 17812)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
 "X-Poedit-Language: Russian\n"
@@ -647,6 +647,9 @@ msgstr "Все диски программных RAID импортированы
 
 msgid "All users will have the root privilege."
 msgstr "Все пользователи будут иметь права учетной записи root."
+
+msgid "Alloc"
+msgstr "Распред."
 
 msgid "Allow"
 msgstr "Разрешить"
@@ -7794,12 +7797,12 @@ msgstr ""
 "на рабочую поверхность диска."
 
 #, php-format
-msgid "Total: %s | Used: %s | Free: %s"
-msgstr "Всего: %s | Занято: %s | Свободно: %s"
+msgid "Total: %s | Alloc: %s | Free: %s | State: %s"
+msgstr "Всего: %s | Распред.: %s | Свободно: %s | Состояние: %s"
 
 #, php-format
-msgid "Total: %s | Used: %s | Free: %s | State: %s"
-msgstr "Всего: %s | Занято: %s | Свободно: %s | Статус: %s"
+msgid "Total: %s | Used: %s | Free: %s"
+msgstr "Всего: %s | Занято: %s | Свободно: %s"
 
 msgid "Traceroute"
 msgstr "Команда traceroute"
