@@ -495,8 +495,16 @@
  	smonitor = OpenAndConfMonitorSocket();
  
 --- upnpevents.c.orig	2015-09-11 04:24:09.000000000 +0900
-+++ upnpevents.c	2015-09-30 21:51:12.319195000 +0900
-@@ -417,6 +417,10 @@
++++ upnpevents.c	2015-10-17 18:23:47.204539000 +0900
+@@ -47,6 +47,7 @@
+  */
+ #include "config.h"
+ 
++#define FD_SETSIZE 8192
+ #include <stdio.h>
+ #include <string.h>
+ #include <errno.h>
+@@ -417,6 +418,10 @@
  {
  	struct upnp_event_notify * obj;
  	for(obj = notifylist.lh_first; obj != NULL; obj = obj->entries.le_next) {
