@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-10-10 16:28+0000\n"
-"PO-Revision-Date: 2015-10-10 21:19+0000\n"
+"POT-Creation-Date: 2015-10-16 12:19+0000\n"
+"PO-Revision-Date: 2015-10-16 10:19+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-10-11 13:08+0000\n"
-"X-Generator: Launchpad (build 17802)\n"
+"X-Launchpad-Export-Date: 2015-10-17 16:26+0000\n"
+"X-Generator: Launchpad (build 17812)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -92,7 +92,7 @@ msgstr "%sB elérhető a(z) %sB-ból"
 
 #, c-format, php-format
 msgid "%sB used of %sB"
-msgstr "%sB használt a(z) %sB-ból"
+msgstr "%sB foglalt a(z) %sB-ból"
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(Maxtor 6B200M0 200GB és Maxtor 2R015H1 15GB lemezekben van)."
@@ -417,7 +417,7 @@ msgid "Active Directory"
 msgstr "Címtárszolgáltatás (AD)"
 
 msgid "Active Directory List"
-msgstr "Címtárszolgáltatók felsorolása"
+msgstr "Aktív könyvtárak felsorolása"
 
 msgid "Active Shares"
 msgstr "Aktív megosztások"
@@ -646,6 +646,9 @@ msgstr "Összes szoftveres raid lemez importálva."
 
 msgid "All users will have the root privilege."
 msgstr "Az összes felhasználónak root privilégiuma lesz."
+
+msgid "Alloc"
+msgstr "Foglalt"
 
 msgid "Allow"
 msgstr "Engedélyez"
@@ -1976,7 +1979,7 @@ msgstr ""
 
 #, php-format
 msgid "Device: %s | Total: %s | Used: %s | Free: %s"
-msgstr "Eszköz: %s | Összes: %s | Használt: %s | Szabad: %s"
+msgstr "Eszköz: %s | Összes: %s | Foglalt: %s | Szabad: %s"
 
 msgid "Devices"
 msgstr "Eszközök"
@@ -2641,8 +2644,8 @@ msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr ""
-"WebGUI port száma, amennyiben ez az alapértelmezettől eltér (80 a HTTP, 443 "
-"a HTTPS esetén)."
+"WebGUI port száma, amennyiben ez az alapértelmezettől eltér (80 HTTP, 443 "
+"HTTPS esetén)."
 
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
@@ -2658,8 +2661,8 @@ msgid ""
 "Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to "
 "select it."
 msgstr ""
-"Írja be beállítandó rendszeridőt (hh/nn/éé óó:pp formátumban) vagy az ikonra "
-"kattintva válassza ki."
+"Írd be beállítandó rendszeridőt (hh/nn/éé óó:pp formátumban) vagy az ikonra "
+"kattintva válaszd ki."
 
 msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
@@ -2679,7 +2682,7 @@ msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
 msgstr ""
-"Írja be a felhasználó saját mappájának útvonalát. Ha üresen hagyja, akkor az "
+"Írd be a felhasználó saját mappájának útvonalát. Ha üresen hagyod, akkor az "
 "alapértelmezett útvonal a /mnt."
 
 msgid "Enter the port to send the traps to (default 162)."
@@ -2974,7 +2977,7 @@ msgid "Free"
 msgstr "Szabad"
 
 msgid "Free disk space"
-msgstr "Szabad hely"
+msgstr "Szabad lemezterület"
 
 msgid "French"
 msgstr "Francia"
@@ -3643,7 +3646,7 @@ msgid ""
 "It's recommended to change the default username and password for accessing "
 "the WebGUI, enter the username here."
 msgstr ""
-"Tanácsos lecserélni az alapértelmezett WebGUI felhasználónevet és jelszót, "
+"Ajánlott lecserélni az alapértelmezett WebGUI felhasználónevet és jelszót, "
 "add meg itt az új felhasználónevet."
 
 msgid "Italian"
@@ -4014,7 +4017,7 @@ msgid "MS Active Directory"
 msgstr "MS Címtárszolgáltatás"
 
 msgid "MS Active Directory informations"
-msgstr "MS Címtárszolgáltatás információk"
+msgstr "MS Címtárszolgáltatási információk"
 
 msgid "MS Domain"
 msgstr "MS tartomány"
@@ -4191,7 +4194,7 @@ msgid "Minimum battery level for UPS restart after power-off"
 msgstr "Minimum elem szint a kikapcsolás után a szünetmentes újraindításához"
 
 msgid "Minimum free space"
-msgstr "Minimális szabad hely"
+msgstr "Minimális szabad lemezterület"
 
 msgid "Minimum frequency"
 msgstr "Minimum frekvencia"
@@ -4324,7 +4327,7 @@ msgstr "Név"
 
 #, php-format
 msgid "Name of the NAS host, without domain part e.g. %s."
-msgstr "A NAS gép neve tartományok nélkül, pl.: %s."
+msgstr "A NAS gép neve tartomány nélkül, pl.: %s."
 
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
@@ -5850,7 +5853,7 @@ msgid "Source share"
 msgstr "Forrás megosztása"
 
 msgid "Space Used"
-msgstr "Helyhasználat"
+msgstr "Foglalt hely"
 
 msgid ""
 "Space delimited set of IP or CIDR notation that permitted to access the "
@@ -7515,7 +7518,7 @@ msgid "This tag already exists."
 msgstr "Ez az elem már létezik."
 
 msgid "This tag is used."
-msgstr "A tag használatban van."
+msgstr "Ez címke használatban van."
 
 msgid "This the IP address or DNS name of the iSCSI target."
 msgstr "Az iSCSI-cél neve vagy IP címe."
@@ -7730,12 +7733,12 @@ msgstr ""
 "parkolózónában töltött idő)."
 
 #, php-format
-msgid "Total: %s | Used: %s | Free: %s"
-msgstr "Összes: %s | Használt: %s | Szabad: %s"
+msgid "Total: %s | Alloc: %s | Free: %s | State: %s"
+msgstr "Kapacitás: %s | Foglalt: %s | Szabad: %s | Állapot: %s"
 
 #, php-format
-msgid "Total: %s | Used: %s | Free: %s | State: %s"
-msgstr "Összes: %s | Használt: %s | Szabad: %s | Állapot: %s"
+msgid "Total: %s | Used: %s | Free: %s"
+msgstr "Kapacitás: %s | Foglalt: %s | Szabad: %s"
 
 msgid "Traceroute"
 msgstr "Traceroute"
