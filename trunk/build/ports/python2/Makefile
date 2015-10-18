@@ -6,6 +6,8 @@ CATEGORIES=		lang python
 COMMENT=		Interpreted object-oriented programming language
 MAINTAINER=		aoyama@nas4free.org
 
+USES=			python:run
+
 DISTFILES=
 NO_BUILD=		yes
 NO_PKG_REGISTER=	yes
