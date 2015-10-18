@@ -44,6 +44,7 @@
     SUBDIR += proftpd
     SUBDIR += python2
     SUBDIR += rconf
+    SUBDIR += rrdtool
     SUBDIR += rsync
     SUBDIR += samba42
     SUBDIR += scponly
