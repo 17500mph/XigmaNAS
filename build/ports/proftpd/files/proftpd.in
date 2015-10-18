@@ -79,7 +79,7 @@ pidfile="/var/run/${name}.pid"
 
 proftpd_mkconf()
 {
-	local _welcomemsg _productname _certificate _privatekey _tmpfile
+	local _welcomemsg _productname _certificate _privatekey _tmpfile _allowgroup
 
 	# Check if required directories exists.
 	[ ! -d "/var/run/${name}" ] && mkdir "/var/run/${name}"
@@ -121,6 +121,10 @@ proftpd_mkconf()
 		fi
 	fi
 
+	_allowgroup=`configxml_get "//ftpd/allowgroup"`
+	if [ -z "${_allowgroup}" ]; then
+	    _allowgroup="ftp"
+	fi
 	/usr/local/bin/xml sel -t \
 		-v "concat('ServerName \"',//system/hostname,' FTP Server\"')" -n \
 		-o "ServerType standalone" -n \
@@ -173,7 +177,7 @@ proftpd_mkconf()
 		-i "count(localusersonly) > 0" \
 			-n \
 			-o "<Limit LOGIN>" -n \
-			-o "  AllowGroup ftp" -n \
+			-o "  AllowGroup OR ${_allowgroup}" -n \
 			-i "count(permitrootlogin) > 0" -o "  AllowGroup wheel" -n -b \
 			-o "  DenyAll" -n \
 			-o "</Limit>" -n \

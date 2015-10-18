@@ -50,6 +50,7 @@ $pconfig['maxloginattempts'] = $config['ftpd']['maxloginattempts'];
 $pconfig['timeout'] = $config['ftpd']['timeout'];
 $pconfig['anonymousonly'] = isset($config['ftpd']['anonymousonly']);
 $pconfig['localusersonly'] = isset($config['ftpd']['localusersonly']);
+$pconfig['allowgroup'] = !empty($config['ftpd']['allowgroup']) ? $config['ftpd']['allowgroup'] : "";
 $pconfig['pasv_max_port'] = $config['ftpd']['pasv_max_port'];
 $pconfig['pasv_min_port'] = $config['ftpd']['pasv_min_port'];
 $pconfig['pasv_address'] = $config['ftpd']['pasv_address'];
@@ -145,6 +146,7 @@ if ($_POST) {
 		$config['ftpd']['port'] = $_POST['port'];
 		$config['ftpd']['anonymousonly'] = isset($_POST['anonymousonly']) ? true : false;
 		$config['ftpd']['localusersonly'] = isset($_POST['localusersonly']) ? true : false;
+		$config['ftpd']['allowgroup'] = $_POST['allowgroup'];
 		$config['ftpd']['pasv_max_port'] = $_POST['pasv_max_port'];
 		$config['ftpd']['pasv_min_port'] = $_POST['pasv_min_port'];
 		$config['ftpd']['pasv_address'] = $_POST['pasv_address'];
@@ -201,6 +203,7 @@ function enable_change(enable_change) {
 	document.iform.maxloginattempts.disabled = endis;
 	document.iform.anonymousonly.disabled = endis;
 	document.iform.localusersonly.disabled = endis;
+	document.iform.allowgroup.disabled = endis;
 	document.iform.banner.disabled = endis;
 	document.iform.fxp.disabled = endis;
 	document.iform.allowrestart.disabled = endis;
@@ -243,11 +246,13 @@ function tls_change() {
 function localusersonly_change() {
 	switch (document.iform.localusersonly.checked) {
 		case true:
+			showElementById('allowgroup_tr','show');
 			showElementById('anonymousbandwidthup_tr','hide');
 			showElementById('anonymousbandwidthdown_tr','hide');
 			break;
 
 		case false:
+			showElementById('allowgroup_tr','hide');
 			showElementById('anonymousbandwidthup_tr','show');
 			showElementById('anonymousbandwidthdown_tr','show');
 			break;
@@ -293,6 +298,7 @@ function anonymousonly_change() {
 					<?php html_checkbox("permitrootlogin", gettext("Permit root login"), !empty($pconfig['permitrootlogin']) ? true : false, gettext("Specifies whether it is allowed to login as superuser (root) directly."), "", false);?>
 					<?php html_checkbox("anonymousonly", gettext("Anonymous users only"), !empty($pconfig['anonymousonly']) ? true : false, gettext("Only allow anonymous users. Use this on a public FTP site with no remote FTP access to real accounts."), "", false, "anonymousonly_change()");?>
 					<?php html_checkbox("localusersonly", gettext("Local users only"), !empty($pconfig['localusersonly']) ? true : false, gettext("Only allow authenticated users. Anonymous logins are prohibited."), "", false, "localusersonly_change()");?>
+					<?php html_inputbox("allowgroup", gettext("Allow group"), $pconfig['allowgroup'], gettext("Comma-separated list of group names that are permitted to login to the FTP server. (empty is ftp group)"), false, 40);?>
 					<?php html_textarea("banner", gettext("Banner"), $pconfig['banner'], gettext("Greeting banner displayed by FTP when a connection first comes in."), false, 65, 7, false, false);?>
 					<?php html_separator();?>
 					<?php html_titleline(gettext("Advanced settings"));?>
