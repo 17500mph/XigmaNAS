@@ -49,7 +49,18 @@ do-install:
 	@${CP} -pv ${PANGO_MODULES}/../modules.cache ${NAS4FREE_ROOTFS}${PREFIX}/etc/pango/pango.modules
 # fonts
 	@${MKDIR} -p ${NAS4FREE_ROOTFS}${PREFIX}/share/fonts
+	@${MKDIR} -p ${NAS4FREE_ROOTFS}${PREFIX}/etc/fonts/conf.avail
+	@${MKDIR} -p ${NAS4FREE_ROOTFS}${PREFIX}/etc/fonts/conf.d
 	@${RM} -rf ${NAS4FREE_ROOTFS}${PREFIX}/share/fonts/dejavu
 	@${CP} -Rpv ${PREFIX}/share/fonts/dejavu ${NAS4FREE_ROOTFS}${PREFIX}/share/fonts
+	@${CP} -pv ${PREFIX}/etc/fonts/fonts.conf ${NAS4FREE_ROOTFS}${PREFIX}/etc/fonts
+	@${CP} -pv ${PREFIX}/etc/fonts/fonts.dtd ${NAS4FREE_ROOTFS}${PREFIX}/etc/fonts
+
+	@${CP} -pv ${PREFIX}/etc/fonts/conf.avail/57-dejavu-sans-mono.conf ${NAS4FREE_ROOTFS}${PREFIX}/etc/fonts/conf.avail
+	@${CP} -pv ${PREFIX}/etc/fonts/conf.avail/57-dejavu-sans.conf ${NAS4FREE_ROOTFS}${PREFIX}/etc/fonts/conf.avail
+	@${CP} -pv ${PREFIX}/etc/fonts/conf.avail/57-dejavu-serif.conf ${NAS4FREE_ROOTFS}${PREFIX}/etc/fonts/conf.avail
+	@${LN} -fsv ${PREFIX}/etc/fonts/conf.avail/57-dejavu-sans-mono.conf ${NAS4FREE_ROOTFS}/usr/local/etc/fonts/conf.d/
+	@${LN} -fsv ${PREFIX}/etc/fonts/conf.avail/57-dejavu-sans.conf ${NAS4FREE_ROOTFS}/usr/local/etc/fonts/conf.d/
+	@${LN} -fsv ${PREFIX}/etc/fonts/conf.avail/57-dejavu-serif.conf ${NAS4FREE_ROOTFS}/usr/local/etc/fonts/conf.d/
 
 .include <bsd.port.mk>
