@@ -73,6 +73,7 @@ $pconfig['enable'] = isset($config['samba']['enable']);
 $pconfig['largereadwrite'] = isset($config['samba']['largereadwrite']);
 $pconfig['easupport'] = isset($config['samba']['easupport']);
 $pconfig['storedosattributes'] = isset($config['samba']['storedosattributes']);
+$pconfig['mapdosattributes'] = isset($config['samba']['mapdosattributes']);
 $pconfig['createmask'] = !empty($config['samba']['createmask']) ? $config['samba']['createmask'] : "";
 $pconfig['directorymask'] = !empty($config['samba']['directorymask']) ? $config['samba']['directorymask'] : "";
 $pconfig['guestaccount'] = $config['samba']['guestaccount'];
@@ -157,6 +158,7 @@ if ($_POST) {
 		$config['samba']['largereadwrite'] = isset($_POST['largereadwrite']) ? true : false;
 		$config['samba']['easupport'] = isset($_POST['easupport']) ? true : false;
 		$config['samba']['storedosattributes'] = isset($_POST['storedosattributes']) ? true : false;
+		$config['samba']['mapdosattributes'] = isset($_POST['mapdosattributes']) ? true : false;
 		if (!empty($_POST['createmask']))
 			$config['samba']['createmask'] = $_POST['createmask'];
 		else
@@ -224,6 +226,7 @@ function enable_change(enable_change) {
 	document.iform.largereadwrite.disabled = endis;
 	document.iform.easupport.disabled = endis;
 	document.iform.storedosattributes.disabled = endis;
+	document.iform.mapdosattributes.disabled = endis;
 	document.iform.createmask.disabled = endis;
 	document.iform.directorymask.disabled = endis;
 	document.iform.guestaccount.disabled = endis;
@@ -425,6 +428,14 @@ function aio_change() {
 							<input name="storedosattributes" type="checkbox" id="storedosattributes" value="yes" <?php if (isset($pconfig['storedosattributes']) && $pconfig['storedosattributes']) echo "checked=\"checked\""; ?> />
 							<?=gettext("Enable store DOS attributes");?><span class="vexpl"><br />
 							<?=gettext("If this parameter is set, Samba attempts to first read DOS attributes (SYSTEM, HIDDEN, ARCHIVE or READ-ONLY) from a filesystem extended attribute, before mapping DOS attributes to UNIX permission bits. When set, DOS attributes will be stored onto an extended attribute in the UNIX filesystem, associated with the file or directory.");?></span>
+						</td>
+					</tr>
+					<tr>
+						<td width="22%" valign="top" class="vncell"><?=gettext("Mapping DOS attributes");?></td>
+						<td width="78%" class="vtable">
+							<input name="mapdosattributes" type="checkbox" id="mapdosattributes" value="yes" <?php if (isset($pconfig['mapdosattributes']) && $pconfig['mapdosattributes']) echo "checked=\"checked\""; ?> />
+							<?=gettext("Enable mapping DOS attributes");?><span class="vexpl"><br />
+							<?=gettext("Convert DOS attributes to UNIX execution bits when Store DOS attributes is disabled.");?></span>
 						</td>
 					</tr>
 					<tr>
