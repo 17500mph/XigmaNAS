@@ -19,9 +19,10 @@ Changes:
 - Add quirk for Silicon Power 16GB and more.
 - Add allow group when local users only mode on FTP service.
 - Add RRDtool and related files.
-- Add mapping DOS attributes on CIFS/SMB.
+- Add mapping DOS attributes on CIFS/SMB. (ON by default)
 - Remove usesendfile on CIFS/SMB.
 - Change ZFS pool info reflected from zpool list.
+- Change Store DOS attributes to OFF by default.
 - Upgrade bash 4.3 to patch 42.
 - Upgrade lighttpd to 1.4.37.
 - Upgrade samba to 4.2.4.
