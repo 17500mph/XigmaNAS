@@ -169,6 +169,11 @@ samba_mkconf_cmd()
 		-i "count(//samba/storedosattributes) > 0" \
 			-o "store dos attributes = yes" -n \
 		-b \
+		-i "count(//samba/storedosattributes) = 0 and count(//samba/mapdosattributes) > 0" \
+			-o "create mask = 0755" -n \
+			-o "map hidden = yes" -n \
+			-o "map system = yes" -n \
+		-b \
 		-i "//samba/localmaster[. = 'yes']" \
 			-v "concat('local master = ',//samba/localmaster)" -n \
 			-o "domain master = yes" -n \
