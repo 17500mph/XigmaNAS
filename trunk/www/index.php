@@ -503,7 +503,7 @@ $(document).ready(function(){
 
 					$ctrlid++;
 					if ($ctrlid < count($swapinfo))
-						echo "<tr><td><hr size='1' /></td></tr>";
+						echo "<tr><td><hr size='1' /></td></tr>\n";
 				}
 			?>
 			</table></td>
@@ -552,7 +552,7 @@ $(document).ready(function(){
 						echo "</div></td></tr>";
 
 						if (++$index < count($diskusage))
-							echo "<tr><td><hr size='1' /></td></tr>";
+							echo "<tr><td><hr size='1' /></td></tr>\n";
 					}
 				}
 
@@ -562,7 +562,7 @@ $(document).ready(function(){
 					$index = 0;
 
 					if (!empty($diskusage))
-						echo "<tr><td><hr size='1' /></td></tr>";
+						echo "<tr><td><hr size='1' /></td></tr>\n";
 
 					foreach ($zfspools as $poolk => $poolv) {
 						$ctrlid = $poolv['name'];
@@ -589,7 +589,7 @@ $(document).ready(function(){
 						echo "</div></td></tr>";
 
 						if (++$index < count($zfspools))
-							echo "<tr><td><hr size='1' /></td></tr>";
+							echo "<tr><td><hr size='1' /></td></tr>\n";
 					}
 				}
 
