@@ -182,12 +182,12 @@ if ($spa == '') {
 } else if ($spa < 21) {
 	mwexec2("zpool list -H -o name,altroot,size,allocated,free,capacity,health", $rawdata);
 } else {
-	mwexec2("zpool list -H -o name,altroot,size,allocated,free,capacity,health,dedup", $rawdata);
+	mwexec2("zpool list -H -o name,altroot,size,allocated,free,capacity,expandsz,frag,health,dedup", $rawdata);
 }
 foreach ($rawdata as $line)
 {
 	if ($line == 'no pools available') { continue; }
-	list($pool, $root, $size, $alloc, $free, $cap, $health, $dedup) = explode("\t", $line);
+	list($pool, $root, $size, $alloc, $free, $cap, $expandsz, $frag, $health, $dedup) = explode("\t", $line);
 	if ($root != '-')
 	{
 		$zfs['pools']['pool'][$pool]['root'] = $root;
@@ -195,6 +195,8 @@ foreach ($rawdata as $line)
 	$zfs['extra']['pools']['pool'][$pool]['size'] = $size;
 	$zfs['extra']['pools']['pool'][$pool]['alloc'] = $alloc;
 	$zfs['extra']['pools']['pool'][$pool]['free'] = $free;
+	$zfs['extra']['pools']['pool'][$pool]['expandsz'] = $expandsz;
+	$zfs['extra']['pools']['pool'][$pool]['frag'] = $frag;
 	$zfs['extra']['pools']['pool'][$pool]['cap'] = $cap;
 	$zfs['extra']['pools']['pool'][$pool]['health'] = $health;
 	$zfs['extra']['pools']['pool'][$pool]['dedup'] = $dedup;
@@ -397,12 +399,14 @@ if (!$health)
 		<td class="tabcont">
 			<?php if (!empty($message_box_text)) print_core_box($message_box_type, $message_box_text);?>
 			<table width="100%" border="0" cellpadding="0" cellspacing="0">
-				<?php html_titleline(gettext('Pools').' ('.count($zfs['pools']['pool']).')', 8);?>
+				<?php html_titleline(gettext('Pools').' ('.count($zfs['pools']['pool']).')', 10);?>
 				<tr>
 					<td width="16%" class="listhdrlr"><?=gettext("Name");?></td>
 					<td width="12%" class="listhdrr"><?=gettext("Size");?></td>
 					<td width="12%" class="listhdrr"><?=gettext("Alloc");?></td>
 					<td width="12%" class="listhdrr"><?=gettext("Free");?></td>
+					<td width="12%" class="listhdrr"><?=gettext("Expandsz");?></td>
+					<td width="12%" class="listhdrr"><?=gettext("Frag");?></td>
 					<td width="12%" class="listhdrr"><?=gettext("Dedup");?></td>
 					<td width="12%" class="listhdrr"><?=gettext("Health");?></td>
 					<td width="12%" class="listhdrr"><?=gettext("Mount point");?></td>
@@ -414,6 +418,8 @@ if (!$health)
 					<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['size']; ?></td>
 					<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['alloc']; ?> (<?= $zfs['extra']['pools']['pool'][$key]['cap']; ?>)</td>
 					<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['free']; ?></td>
+					<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['expandsz']; ?></td>
+					<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['frag']; ?></td>
 					<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['dedup']; ?></td>
 					<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['health']; ?></td>
 					<td class="listr"><?= $pool['mountpoint']; ?></td>
