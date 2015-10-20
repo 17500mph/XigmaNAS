@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-10-18 20:04+0000\n"
-"PO-Revision-Date: 2015-10-19 04:01+0000\n"
+"POT-Creation-Date: 2015-10-20 03:14+0000\n"
+"PO-Revision-Date: 2015-10-20 01:57+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-10-19 21:32+0000\n"
+"X-Launchpad-Export-Date: 2015-10-20 02:08+0000\n"
 "X-Generator: Launchpad (build 17812)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -677,7 +677,7 @@ msgstr "Sta werkstations toe tot accounts met een leeg wachtwoord."
 msgid ""
 "Allow clients to attempt to store OS/2 style extended attributes on a share."
 msgstr ""
-"Sta werkstations toe om OS/2-stijl externe attributen op te slaan op een "
+"Sta werkstations toe om in OS/2-stijl externe attributen op te slaan op een "
 "gedeeld station."
 
 msgid "Allow clients to resume interrupted uploads and downloads."
@@ -1429,6 +1429,13 @@ msgstr ""
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Controleert of deze dataset kan worden gewijzigd."
+
+msgid ""
+"Convert DOS attributes to UNIX execution bits when Store DOS attributes is "
+"disabled."
+msgstr ""
+"Omzetten DOS attributen naar UNIX execution bitten indien Store DOS "
+"attributen is uitgeschakeld."
 
 msgid "Count"
 msgstr "Aantal"
@@ -2392,7 +2399,7 @@ msgstr ""
 "Dynamische IP adressen (DHCP) kunnen niet worden gebruikt voor HAST bronnen."
 
 msgid "EA support"
-msgstr "EA support"
+msgstr "EA ondersteuning"
 
 msgid "EFI/GPT partition can be use with UFS only."
 msgstr "EFI/GPT partitie kan alleen gebruikt worden met UFS."
@@ -2589,7 +2596,7 @@ msgid "Enable encryption."
 msgstr "Encryptie gebruiken."
 
 msgid "Enable extended attribute support"
-msgstr "Inschakelen externe attributen support"
+msgstr "Inschakelen externe attributen ondersteuning"
 
 msgid "Enable extended attributes for this file system."
 msgstr "Uitgebreide attributen voor dit bestandssysteem inschakelen."
@@ -2618,6 +2625,9 @@ msgstr "Inschakelen groot lezen/schrijven"
 
 msgid "Enable local user authentication."
 msgstr "Inschakelen lokale gebruikers verificatie."
+
+msgid "Enable mapping DOS attributes"
+msgstr "Inschakelen mapping DOS attributen"
 
 msgid "Enable module listing."
 msgstr "Inschakelen modulenlijst."
@@ -2661,7 +2671,7 @@ msgid "Enable shadow copy"
 msgstr "Activeer schaduw kopie"
 
 msgid "Enable store DOS attributes"
-msgstr "Inschakelen opslaan van DOS attributen."
+msgstr "Inschakelen opslaan van DOS attributen"
 
 msgid "Enable syslog'ing to remote syslog server"
 msgstr "Inschakelen syslog'ing naar een externe syslog server"
@@ -3048,6 +3058,9 @@ msgstr "Rapportage indelen voor plaatsing op het NAS4Free forum."
 
 msgid "Forum"
 msgstr "Forum"
+
+msgid "Frag"
+msgstr "Frag"
 
 msgid "Free"
 msgstr "Vrij"
@@ -4155,6 +4168,9 @@ msgstr "Verwijs naar gast"
 
 msgid "Map to user"
 msgstr "Aan gebruiker toewijzen"
+
+msgid "Mapping DOS attributes"
+msgstr "Mapping DOS attributen"
 
 msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
