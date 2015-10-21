@@ -422,7 +422,7 @@ if (!$health)
 					<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['frag']; ?></td>
 					<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['dedup']; ?></td>
 					<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['health']; ?></td>
-					<td class="listr"><?= $pool['mountpoint']; ?></td>
+					<td class="listr"><?= empty($pool['mountpoint']) ? "/mnt/{$pool['name']}" : $pool['mountpoint']; ?></td>
 					<td class="listr"><?= empty($pool['root']) ? '-' : $pool['root']; ?></td>
 				</tr>
 				<?php endforeach; ?>
