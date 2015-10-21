@@ -242,7 +242,7 @@ sbin/shutdown
 sbin/sysctl
 
 ## swapon - Enable swap
-sbin/swapon:sbin/swapoff
+sbin/swapon:sbin/swapoff:sbin/swapctl
 
 ## pstat, swapinfo -- display system data structures
 usr/sbin/pstat:usr/sbin/swapinfo
@@ -259,8 +259,8 @@ sbin/camcontrol
 ## rcorder -- print a dependency ordering of interdependent files
 sbin/rcorder
 
-## md5, sha1, sha256, rmd160 -- calculate a message-digest fingerprint
-sbin/md5:sbin/sha1:sbin/sha256:sbin/rmd160
+## md5, sha1, sha256, sha512, rmd160 -- calculate a message-digest fingerprint
+sbin/md5:sbin/sha1:sbin/sha256:sbin/sha512:sbin/rmd160
 
 ## mksnap_ffs -- take a file system snapshot
 sbin/mksnap_ffs
@@ -297,6 +297,9 @@ sbin/restore
 
 ## resolvconf -- a framework for managing multiple DNS configurations
 sbin/resolvconf
+
+## nvmecontrol -- NVM Express control utility
+sbin/nvmecontrol
 
 ####### contents of /usr/bin
 
@@ -574,9 +577,18 @@ usr/bin/file
 ## truncate -- truncate or extend the length of files
 usr/bin/truncate
 
+## ntpq -- standard NTP query program
+usr/bin/ntpq
+
 ####### contents of /usr/sbin
 ## acpiconf -- control ACPI power management
 usr/sbin/acpiconf
+
+## acpidb -- ACPI DSDT debugger
+usr/sbin/acpidb
+
+## acpidump -- dump ACPI tables and ASL
+usr/sbin/acpidump
 
 ## ancontrol -- configure Aironet 4500/4800 devices
 usr/sbin/ancontrol
@@ -703,7 +715,7 @@ usr/sbin/vidcontrol
 usr/sbin/kbdcontrol
 
 ## kbdmap, vidfont -- front end for syscons and vt
-usr/sbin/kbdmap
+usr/sbin/kbdmap:usr/sbin/vidfont
 
 ## gstat -- print statistics about GEOM disks
 usr/sbin/gstat
@@ -738,6 +750,54 @@ usr/sbin/bhyvectl
 
 ## bhyveload -- load a FreeBSD guest inside a bhyve virtual machine
 usr/sbin/bhyveload
+
+## ctladm -- CAM Target Layer control utility
+usr/sbin/ctladm
+
+## ctld -- CAM Target Layer / iSCSI target daemon
+usr/sbin/ctld
+
+## devinfo -- print information about system device configuration
+usr/sbin/devinfo
+
+## fstyp -- determine filesystem type
+usr/sbin/fstyp
+
+## gpioctl -- GPIO control utility
+usr/sbin/gpioctl
+
+## hv_kvp_daemon -- Hyper-V Key Value Pair Daemon
+usr/sbin/hv_kvp_daemon
+
+## ntpd -- NTP daemon program
+usr/sbin/ntpd
+
+## periodic -- run periodic system functions
+usr/sbin/periodic
+
+## rarpd -- reverse ARP daemon
+usr/sbin/rarpd
+
+## service -- control (start/stop/etc.) or list system services
+usr/sbin/service
+
+## usbdump -- dump traffic on USB host controller
+usr/sbin/usbdump
+
+## watchdog -- watchdog control program
+usr/sbin/watchdog
+
+## watchdogd -- watchdog daemon
+usr/sbin/watchdogd
+
+## wlandebug -- set/query 802.11 wireless debugging messages
+usr/sbin/wlandebug
+
+## wpa_passphrase -- utility for generating a 256-bit pre-shared WPA key
+usr/sbin/wpa_passphrase
+
+## zhack -- ZFS debugging tool
+usr/sbin/zhack
 
 ####### contents of /usr/libexec
 # ld-elf.so.1, ld.so, rtld -- run-time link-editor
