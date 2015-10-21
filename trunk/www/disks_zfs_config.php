@@ -402,15 +402,15 @@ if (!$health)
 				<?php html_titleline(gettext('Pools').' ('.count($zfs['pools']['pool']).')', 10);?>
 				<tr>
 					<td width="16%" class="listhdrlr"><?=gettext("Name");?></td>
-					<td width="12%" class="listhdrr"><?=gettext("Size");?></td>
-					<td width="12%" class="listhdrr"><?=gettext("Alloc");?></td>
-					<td width="12%" class="listhdrr"><?=gettext("Free");?></td>
-					<td width="12%" class="listhdrr"><?=gettext("Expandsz");?></td>
-					<td width="12%" class="listhdrr"><?=gettext("Frag");?></td>
-					<td width="12%" class="listhdrr"><?=gettext("Dedup");?></td>
-					<td width="12%" class="listhdrr"><?=gettext("Health");?></td>
-					<td width="12%" class="listhdrr"><?=gettext("Mount point");?></td>
-					<td width="12%" class="listhdrr"><?=gettext("AltRoot");?></td>
+					<td width="10%" class="listhdrr"><?=gettext("Size");?></td>
+					<td width="9%" class="listhdrr"><?=gettext("Alloc");?></td>
+					<td width="9%" class="listhdrr"><?=gettext("Free");?></td>
+					<td width="9%" class="listhdrr"><?=gettext("Expandsz");?></td>
+					<td width="9%" class="listhdrr"><?=gettext("Frag");?></td>
+					<td width="9%" class="listhdrr"><?=gettext("Dedup");?></td>
+					<td width="9%" class="listhdrr"><?=gettext("Health");?></td>
+					<td width="10%" class="listhdrr"><?=gettext("Mount point");?></td>
+					<td width="10%" class="listhdrr"><?=gettext("AltRoot");?></td>
 				</tr>
 				<?php foreach ($zfs['pools']['pool'] as $key => $pool):?>
 				<tr>
