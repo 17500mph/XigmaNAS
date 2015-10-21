@@ -165,12 +165,12 @@ if ($spa == '') {
 } else if ($spa < 21) {
 	mwexec2("zpool list -H -o name,altroot,size,allocated,free,capacity,health", $rawdata);
 } else {
-	mwexec2("zpool list -H -o name,altroot,size,allocated,free,capacity,health,dedup", $rawdata);
+	mwexec2("zpool list -H -o name,altroot,size,allocated,free,capacity,expandsz,frag,health,dedup", $rawdata);
 }
 foreach ($rawdata as $line)
 {
 	if ($line == 'no pools available') { continue; }
-	list($pool, $root, $size, $alloc, $free, $cap, $health, $dedup) = explode("\t", $line);
+	list($pool, $root, $size, $alloc, $free, $cap, $expandsz, $frag, $health, $dedup) = explode("\t", $line);
 	if ($root != '-')
 	{
 		$zfs['pools']['pool'][$pool]['root'] = $root;
@@ -178,6 +178,8 @@ foreach ($rawdata as $line)
 	$zfs['extra']['pools']['pool'][$pool]['size'] = $size;
 	$zfs['extra']['pools']['pool'][$pool]['alloc'] = $alloc;
 	$zfs['extra']['pools']['pool'][$pool]['free'] = $free;
+	$zfs['extra']['pools']['pool'][$pool]['expandsz'] = $expandsz;
+	$zfs['extra']['pools']['pool'][$pool]['frag'] = $frag;
 	$zfs['extra']['pools']['pool'][$pool]['cap'] = $cap;
 	$zfs['extra']['pools']['pool'][$pool]['health'] = $health;
 	$zfs['extra']['pools']['pool'][$pool]['dedup'] = $dedup;
@@ -525,17 +527,19 @@ if (!$health)
 			<?php endif; ?>
 			<form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-					<?php html_titleline(gettext('Pools').' ('.count($zfs['pools']['pool']).')', 9);?>
+					<?php html_titleline(gettext('Pools').' ('.count($zfs['pools']['pool']).')', 11);?>
 					<tr>
 						<td width="1%" class="listhdrlr">&nbsp;</td>
 						<td width="15%" class="listhdrr"><?=gettext("Name");?></td>
-						<td width="12%" class="listhdrr"><?=gettext("Size");?></td>
-						<td width="12%" class="listhdrr"><?=gettext("Alloc");?></td>
-						<td width="12%" class="listhdrr"><?=gettext("Free");?></td>
-						<td width="12%" class="listhdrr"><?=gettext("Dedup");?></td>
-						<td width="12%" class="listhdrr"><?=gettext("Health");?></td>
-						<td width="12%" class="listhdrr"><?=gettext("Mount point");?></td>
-						<td width="12%" class="listhdrr"><?=gettext("AltRoot");?></td>
+						<td width="10%" class="listhdrr"><?=gettext("Size");?></td>
+						<td width="9%" class="listhdrr"><?=gettext("Alloc");?></td>
+						<td width="9%" class="listhdrr"><?=gettext("Free");?></td>
+						<td width="9%" class="listhdrr"><?=gettext("Expandsz");?></td>
+						<td width="9%" class="listhdrr"><?=gettext("Frag");?></td>
+						<td width="9%" class="listhdrr"><?=gettext("Dedup");?></td>
+						<td width="9%" class="listhdrr"><?=gettext("Health");?></td>
+						<td width="10%" class="listhdrr"><?=gettext("Mount point");?></td>
+						<td width="10%" class="listhdrr"><?=gettext("AltRoot");?></td>
 					</tr>
 					<?php foreach ($zfs['pools']['pool'] as $key => $pool):?>
 					<tr>
@@ -544,9 +548,11 @@ if (!$health)
 						<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['size']; ?></td>
 						<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['alloc']; ?> (<?= $zfs['extra']['pools']['pool'][$key]['cap']; ?>)</td>
 						<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['free']; ?></td>
+						<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['expandsz']; ?></td>
+						<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['frag']; ?></td>
 						<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['dedup']; ?></td>
 						<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['health']; ?></td>
-						<td class="listr"><?= $pool['mountpoint']; ?></td>
+						<td class="listr"><?= empty($pool['mountpoint']) ? "/mnt/{$pool['name']}" : $pool['mountpoint']; ?></td>
 						<td class="listr"><?= empty($pool['root']) ? '-' : $pool['root']; ?></td>
 					</tr>
 					<?php endforeach; ?>
