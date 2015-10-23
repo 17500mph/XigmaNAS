@@ -56,10 +56,11 @@ else
 		echo "------------"
 		if [ ${DISABLE_LIVEMODE} -eq 0 ]; then
 			echo -n "1) Configure Network Interfaces"
-			echo "    10) Restart WebGUI"
+			echo "    10) Configure Hosts allow for WebGUI"
 			echo -n "2) Configure Network IP Address"
+			echo "    11) Restart WebGUI"
+			echo -n "3) Reset WebGUI Password       "
 			echo "    20) Console Keyboard Map"
-			echo "3) Reset WebGUI Password"
 			echo "4) Reset to Factory Defaults"
 			echo "5) Ping Host"
 		else
@@ -120,6 +121,11 @@ else
 				esac
 				;;
 			10)
+				if [ ${DISABLE_LIVEMODE} -eq 0 ]; then
+					/etc/rc.initial.hostsallow
+				fi
+				;;
+			11)
 				if [ ${DISABLE_LIVEMODE} -eq 0 ]; then
 					/etc/rc.d/lighttpd forcestop > /dev/null 2>&1
 					rm -f /var/run/config.lock
