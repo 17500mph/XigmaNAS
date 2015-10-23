@@ -102,10 +102,14 @@ lighttpd_mkconf()
 	fi
 	# hosts allow
 	_hostsallow=`configxml_get "//system/webgui/hostsallow"`
+	_hostsallow_disable=0
 	if [ -z "$_hostsallow" ]; then
 		_hostsallow="$_network"
 	fi
 	_hostsallow="${_hostsallow} 127.0.0.1"
+	if configxml_isset "//system/webgui/hostsallow_disable"; then
+		_hostsallow_disable=1
+	fi
 
 	# Create lighttpd.conf file
 	cat <<EOF > ${lighttpd_conf}
@@ -211,16 +215,18 @@ EOF
 		fi
 	fi
 	# hosts allow
-	cat <<EOF >> ${lighttpd_conf}
+	if [ $_hostsallow_disable -eq 0 ]; then
+		cat <<EOF >> ${lighttpd_conf}
 url.access-deny = ( "" )
 EOF
-	for h in $_hostsallow; do
-		cat <<EOF >> ${lighttpd_conf}
+		for h in $_hostsallow; do
+			cat <<EOF >> ${lighttpd_conf}
 \$HTTP["remoteip"] == "$h" {
 	url.access-deny = ( "~", ".inc", ".htpasswd" )
 }
 EOF
-	done
+		done
+	fi
 
 	# Set temporary directory
 	cat <<EOF >> ${lighttpd_conf}
