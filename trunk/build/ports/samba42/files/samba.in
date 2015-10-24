@@ -196,6 +196,7 @@ samba_mkconf_cmd()
 		-v "concat('syslog = ',//samba/loglevel)" -n \
 		-o "load printers = no" -n \
 		-o "printing = bsd" -n \
+		-o "printcap cache time = 0" -n \
 		-o "printcap name = /dev/null" -n \
 		-o "disable spoolss = yes" -n \
 		-v "concat('log level = ',//samba/loglevel)" -n \
