@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-10-20 03:14+0000\n"
-"PO-Revision-Date: 2015-10-18 11:43+0000\n"
+"POT-Creation-Date: 2015-10-21 18:40+0000\n"
+"PO-Revision-Date: 2015-10-22 14:27+0000\n"
 "Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-10-20 02:09+0000\n"
+"X-Launchpad-Export-Date: 2015-10-24 15:28+0000\n"
 "X-Generator: Launchpad (build 17812)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -649,7 +649,7 @@ msgid "All users will have the root privilege."
 msgstr "Все пользователи будут иметь права учетной записи root."
 
 msgid "Alloc"
-msgstr "Распред."
+msgstr "Распределено"
 
 msgid "Allow"
 msgstr "Разрешить"
@@ -1416,6 +1416,8 @@ msgid ""
 "Convert DOS attributes to UNIX execution bits when Store DOS attributes is "
 "disabled."
 msgstr ""
+"Конвертирование DOS атрибутов в исполнительные биты UNIX когда хранение DOS "
+"атрибутов отключено."
 
 msgid "Count"
 msgstr "Счетчик"
@@ -2597,7 +2599,7 @@ msgid "Enable local user authentication."
 msgstr "Разрешить локальную аутентификацию пользователя"
 
 msgid "Enable mapping DOS attributes"
-msgstr ""
+msgstr "Включить преобразование атрибутов DOS"
 
 msgid "Enable module listing."
 msgstr "Включить перечисление модулей"
@@ -2768,6 +2770,9 @@ msgstr ""
 
 msgid "Execute now"
 msgstr "Выполнить немедленно"
+
+msgid "Expandsz"
+msgstr "Расширение размера"
 
 msgid "Expire"
 msgstr "Срок действия"
@@ -3029,7 +3034,7 @@ msgid "Forum"
 msgstr "Форум разработчиков"
 
 msgid "Frag"
-msgstr ""
+msgstr "Фрагментировано"
 
 msgid "Free"
 msgstr "Свободно"
@@ -4128,7 +4133,7 @@ msgid "Map to user"
 msgstr "Пользователь"
 
 msgid "Mapping DOS attributes"
-msgstr ""
+msgstr "Преобразование атрибутов DOS"
 
 msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
@@ -7822,7 +7827,7 @@ msgstr ""
 
 #, php-format
 msgid "Total: %s | Alloc: %s | Free: %s | State: %s"
-msgstr "Всего: %s | Распред.: %s | Свободно: %s | Состояние: %s"
+msgstr "Всего: %s | Распределено: %s | Свободно: %s | Состояние: %s"
 
 #, php-format
 msgid "Total: %s | Used: %s | Free: %s"
