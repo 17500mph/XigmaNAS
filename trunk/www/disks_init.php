@@ -48,6 +48,7 @@ $a_fst = array_slice($a_fst, 1); // Remove the first blank line 'unknown'
 unset($a_fst['ufs']); // Remove old UFS type: Now NAS4Free will impose only one UFS type: GPT/EFI with softupdate
 unset($a_fst['ufs_no_su']);
 unset($a_fst['ufsgpt_no_su']);
+unset($a_fst['exfat']); // Remove exFAT: need test
 
 // Load the /etc/cfdevice file to find out on which disk the OS is installed.
 $cfdevice = trim(file_get_contents("{$g['etc_path']}/cfdevice"));
