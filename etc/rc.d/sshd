@@ -33,7 +33,7 @@ sshd_config=${sshd_config:-"/var/etc/ssh/sshd_config"}
 sshd_hostrsakey=${sshd_hostrsakey:-"/var/etc/ssh/ssh_host_rsa_key"}
 sshd_hostdsakey=${sshd_hostdsakey:-"/var/etc/ssh/ssh_host_dsa_key"}
 command="/usr/sbin/${name}"
-command_args="-f /var/etc/ssh/sshd_config -h /var/etc/ssh/ssh_host_dsa_key"
+command_args="-f /var/etc/ssh/sshd_config -h /var/etc/ssh/ssh_host_rsa_key"
 pidfile="/var/run/${name}.pid"
 
 sshd_mkconf()
