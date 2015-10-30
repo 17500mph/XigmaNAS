@@ -65,12 +65,12 @@ sshd_mkconf()
 		-b \
 		${configxml_file} | /usr/local/bin/xml unesc > ${sshd_config}
 
-	# Create ssh_host_dsa_key file
+	# Create ssh_host_rsa_key file
 	_privatekey=`configxml_get "//sshd/private-key"`
 	if [ -n "${_privatekey}" ]; then
-		echo "${_privatekey}" > ${sshd_hostdsakey}.tmp
-		/usr/bin/uudecode -m -p -r ${sshd_hostdsakey}.tmp > ${sshd_hostdsakey}
-		/bin/rm -f ${sshd_hostdsakey}.tmp
+		echo "${_privatekey}" > ${sshd_hostrsakey}.tmp
+		/usr/bin/uudecode -m -p -r ${sshd_hostrsakey}.tmp > ${sshd_hostrsakey}
+		/bin/rm -f ${sshd_hostrsakey}.tmp
 	else
 		echo "-----BEGIN RSA PRIVATE KEY-----
 MIIEogIBAAKCAQEAvzenPFTj9cOw+30GhPpNk8OJ8prhW27iT3zbOXP+vSIxkLnS
