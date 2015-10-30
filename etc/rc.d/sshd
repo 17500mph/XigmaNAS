@@ -64,6 +64,20 @@ sshd_mkconf()
 		-b \
 		${configxml_file} | /usr/local/bin/xml unesc > ${sshd_config}
 
+	# Create private key
+	_platform=`cat /etc/platform | sed -e 's/.*-//'`
+	_confkey="/conf/ssh_host_rsa_key"
+	if [ -d /conf -a ! -f ${_confkey} ]; then
+		if [ "${_platform}" = "embedded" ]; then
+			/sbin/mount -uw /cf
+		fi
+		/usr/bin/ssh-keygen -q -t rsa -f ${_confkey} -N ""
+		/usr/bin/ssh-keygen -l -f ${_confkey}.pub
+		if [ "${_platform}" = "embedded" ]; then
+			/sbin/umount /cf; /sbin/mount /cf
+		fi
+	fi
+
 	# Create ssh_host_rsa_key file
 	_privatekey=`configxml_get "//sshd/private-key"`
 	/bin/rm -f ${sshd_hostrsakey}
@@ -72,6 +86,8 @@ sshd_mkconf()
 		echo "${_privatekey}" > ${sshd_hostrsakey}.tmp
 		/usr/bin/uudecode -m -p -r ${sshd_hostrsakey}.tmp > ${sshd_hostrsakey}
 		/bin/rm -f ${sshd_hostrsakey}.tmp
+	elif [ -d /conf -a -f ${_confkey} ]; then
+		cp ${_confkey} ${sshd_hostrsakey}
 	else
 		echo "-----BEGIN RSA PRIVATE KEY-----
 MIIEogIBAAKCAQEAvzenPFTj9cOw+30GhPpNk8OJ8prhW27iT3zbOXP+vSIxkLnS
