@@ -529,13 +529,19 @@ function install_backup_config($disk)
 		write_console("Error: Failed to backup the configuration file!\n");
 		return 1;
 	}
+	$files = glob("{$mnt_cf_disk}/conf/ssh_host_*") or array();
+	foreach ($files as $file) {
+		if (1 == mwexec("/bin/cp -p {$file} {$tmp_cf_bak}")) {
+			write_console("Error: Failed to backup the configuration file!\n");
+			return 1;
+		}
+	}
 	if (file_exists("{$mnt_cf_disk}/boot.config")
 	    && 1 == mwexec("/bin/cp -p {$mnt_cf_disk}/boot.config {$tmp_cf_bak}")) {
 		write_console("Error: Failed to backup the configuration file!\n");
 		return 1;
 	}
-    
-    if (file_exists("{$mnt_cf_disk}/boot/loader.conf.local")
+	if (file_exists("{$mnt_cf_disk}/boot/loader.conf.local")
 	    && 1 == mwexec("/bin/cp -p {$mnt_cf_disk}/boot/loader.conf.local {$tmp_cf_bak}")) {
 		write_console("Error: Failed to backup the configuration file!\n");
 		return 1;
@@ -569,6 +575,13 @@ function install_restore_config($disk)
 	if (1 == mwexec("/bin/cp -p {$tmp_cf_bak}/config.xml {$mnt_cf_disk}/conf")) {
 		write_console("Error: Failed to restore the configuration file! (config.xml)\n");
 		return 1;
+	}
+	$files = glob("{$tmp_cf_bak}/ssh_host_*") or array();
+	foreach ($files as $file) {
+		if (1 == mwexec("/bin/cp -p {$file} {$mnt_cf_disk}/conf")) {
+			write_console("Error: Failed to restore the configuration file!({$file})\n");
+			return 1;
+		}
 	}
 	if (file_exists("{$tmp_cf_bak}/boot.config")) {
 		if (1 == mwexec("/bin/cp -p {$tmp_cf_bak}/boot.config {$mnt_cf_disk}/")) {
