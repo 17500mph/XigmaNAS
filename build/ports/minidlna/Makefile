@@ -20,6 +20,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-db-path=/var/db/minidlna \
 		--with-os-url="http://www.FreeBSD.org"
 CPPFLAGS+=	-I${LOCALBASE}/include
+CFLAGS+=	-DNAS4Free
 LIBS+=		-L${LOCALBASE}/lib
 USES=		autoreconf gettext-tools iconv jpeg
 
