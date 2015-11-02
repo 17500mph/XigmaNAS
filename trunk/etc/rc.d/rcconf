@@ -567,6 +567,43 @@ setserialconsole()
     fi
 }
 
+# ARM: resize MBR partition and create/resize UFS partition
+resizepartition()
+{
+	local ARCH _cfdev _dev _ufsid
+
+	ARCH=`/usr/bin/uname -m`
+	_cfdev=`cat /etc/cfdevice | sed -e 's/s[0-9][a-h]$//'`
+	_dev="/dev/${_cfdev}"
+
+	if [ "${ARCH}" = "arm" -a -f /cf/req_resize ]; then
+		# resize MBR partition
+		echo ""
+		echo "${_dev}: resize MBR/BSD partition"
+		/sbin/mount -uw /cf
+		/bin/rm -f /cf/req_resize
+		/sbin/umount /cf
+		/sbin/gpart resize -i4 ${_dev}
+		/sbin/gpart commit ${_dev}s4
+		/sbin/gpart resize -a4m -i1 ${_dev}s4
+		/sbin/mount /cf
+		# create or resize UFS partition
+		_ufsid=`/sbin/dumpfs -l ${_dev}s4a 2>/dev/null`
+		if [ "${_ufsid}" = "" ]; then
+			# create new UFS
+			/sbin/newfs -U -j ${_dev}s4a
+			# fixup: at this point, we cannot use operator(/etc/group)
+			/sbin/mount ${_dev}s4a /mnt
+			/usr/sbin/chown 0:5 /mnt/.snap
+			/sbin/umount /mnt
+		else
+			# use existing UFS
+			/sbin/growfs -y ${_dev}s4a
+		fi
+		echo "${_dev}s4a: resize done."
+	fi
+}
+
 load_rc_config ${name}
 
 echo -n "Updating rc.conf:"
@@ -578,6 +615,7 @@ sethostname
 setifconfig
 setoptions
 setserialconsole
+resizepartition
 
 # Finally issue a line break
 echo
