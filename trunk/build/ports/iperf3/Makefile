@@ -1,5 +1,6 @@
 PORTNAME=		iperf
-PORTVERSION=	3.0.11
+PORTVERSION=	3.1
+PORTREVISION?=  0
 CATEGORIES=		benchmarks ipv6
 COMMENT=		Improved tool to measure TCP and UDP bandwidth
 MAINTAINER=		zoon01@nas4free.org
