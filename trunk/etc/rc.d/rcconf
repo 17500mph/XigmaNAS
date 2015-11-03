@@ -601,6 +601,7 @@ resizepartition()
 			/sbin/growfs -y ${_dev}s4a
 		fi
 		echo "${_dev}s4a: resize done."
+		/sbin/reboot
 	fi
 }
 
