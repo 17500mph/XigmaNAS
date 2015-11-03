@@ -1480,6 +1480,9 @@ create_rpisd() {
 	cp -p ${RPI_BOOTDIR}/bootversion ${NAS4FREE_TMPDIR}
 	cp -p ${RPI_BOOTDIR}/ubldr ${NAS4FREE_TMPDIR}
 
+	# Enable auto resize
+	touch ${NAS4FREE_TMPDIR}/req_resize
+
 	sync
 	cd ${NAS4FREE_WORKINGDIR}
 	umount ${NAS4FREE_TMPDIR}
@@ -1611,6 +1614,9 @@ create_rpi2sd() {
 	# Install bootversion/ubldr
 	cp -p ${RPI_BOOTDIR}/bootversion ${NAS4FREE_TMPDIR}
 	cp -p ${RPI_BOOTDIR}/ubldr ${NAS4FREE_TMPDIR}
+
+	# Enable auto resize
+	touch ${NAS4FREE_TMPDIR}/req_resize
 
 	sync
 	cd ${NAS4FREE_WORKINGDIR}
