@@ -215,13 +215,13 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
       <p>XMLStarlet Command Line XML Toolkit (<a href="http://xmlstar.sourceforge.net" target="_blank">http://xmlstar.sourceforge.net</a>)<br />
         Copyright &copy; 2002 Mikhail Grushinskiy. All Rights Reserved.</p>
 
-      <p>sipcalc (<a href="http://www.routemeister.net/projects/sipcalc" target="_blank">http://www.routemeister.net/projects/sipcalc</a>)<br />
+      <p>sipcalc (<a href="http://www.routemeister.net/projects/sipcalc/" target="_blank">http://www.routemeister.net/projects/sipcalc/</a>)<br />
         Copyright &copy; 2003 Simon Ekstrand. All Rights Reserved.</p>
 
       <p>msmtp - An SMTP client with a sendmail compatible interface (<a href="http://msmtp.sourceforge.net" target="_blank">http://msmtp.sourceforge.net</a>)<br />
         Copyright &copy; 2008 Martin Lambers and others. All Rights Reserved.</p>
 
-      <p>cdialog - Display simple dialog boxes from shell scripts (<a href="http://invisible-island.net/dialog" target="_blank">http://invisible-island.net/dialog</a>)<br />
+      <p>cdialog - Display simple dialog boxes from shell scripts (<a href="http://invisible-island.net/dialog/" target="_blank">http://invisible-island.net/dialog/</a>)<br />
         Copyright &copy; 2000-2006, 2007 Thomas E. Dickey. All Rights Reserved.</p>
 
       <p>host - An utility to query DNS servers<br />
@@ -241,13 +241,15 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
 
       <p>Open Virtual Machine Tools (<a href="http://sourceforge.net/projects/open-vm-tools/" target="_blank">http://sourceforge.net/projects/open-vm-tools/</a>)</p>
 
-      <p>VirtualBox Open Source Edition (OSE) (guest additions) (<a href="http://www.virtualbox.org/" target="_blank">http://www.virtualbox.org/</a>)</p>
+      <p>VirtualBox Open Source Edition (OSE) (guest additions) (<a href="http://www.virtualbox.org" target="_blank">http://www.virtualbox.org</a>)</p>
 
-      <p>phpVirtualBox (<a href="http://sourceforge.net/projects/phpvirtualbox/" target="_blank">http://sourceforge.net/projects/phpvirtualbox/</a>)</p>
+      <p>phpVirtualBox (<a href="http://sourceforge.net/projects/phpvirtualbox/" target="_blank">http://sourceforge.net/projects/phpvirtualbox/</a>)<br />
+        Copyright &copy; 2011  Ian Moore, Inc. All Rights Reserved.</p>
 
-      <p>noVNC (<a href="http://kanaka.github.io/noVNC/" target="_blank">http://kanaka.github.io/noVNC/</a>)</p>
+      <p>noVNC (<a href="http://kanaka.github.io/noVNC/" target="_blank">http://kanaka.github.io/noVNC/</a>)<br />
+        Copyright &copy; 2011  Joel Martin (<a href="mailto:github@martintribe.org">github@martintribe.org</a>) Inc. All Rights Reserved.</p>
 
-      <p>LCDproc: A client/server suite for LCD devices (<a href="http://lcdproc.org/" target="_blank">http://lcdproc.org</a>)<br />
+      <p>LCDproc: A client/server suite for LCD devices (<a href="http://lcdproc.org" target="_blank">http://lcdproc.org</a>)<br />
 	 Copyright &copy; 1998-2006 William Ferrell, Selene Scriven and many other contributors. All Rights Reserved.</p>
 
       <p>tmux: tmux is a terminal multiplexer. (<a href="http://sourceforge.net/projects/tmux/" target="_blank">http://sourceforge.net/projects/tmux/</a>)<br />
@@ -256,7 +258,7 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
       <p>iperf3: An tool to measure TCP and UDP bandwidth. (<a href="http://software.es.net/iperf/" target="_blank">http://software.es.net/iperf/</a>)<br />
 	 Copyright &copy; 2014 The Regents of the University of California. All Rights Reserved.</p>
 
-      <p>sudo: An tool to allow a sysadmin to give limited root privileges. (<a href="http://www.sudo.ws/" target="_blank">http://www.sudo.ws/</a>)<br />
+      <p>sudo: An tool to allow a sysadmin to give limited root privileges. (<a href="http://www.sudo.ws" target="_blank">http://www.sudo.ws</a>)<br />
 	 Copyright &copy; 1994-1996, 1998-2015 Todd C. Miller. All Rights Reserved.</p>
 
       <p>Some of the software used for NAS4Free are under the <a href="gpl-license.txt">GNU General Public License</a> (<a href="gpl-license.txt">GPLv2</a>, <a href="gpl3-license.txt">GPLv3</a>), <a href="lgpl-license.txt">GNU Lesser General Public License (LGPL)</a>, <a href="apple-license.txt">Apple Public Source License</a> and <a href="php-license.txt">PHP License</a>.</p>
