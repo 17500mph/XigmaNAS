@@ -1480,9 +1480,6 @@ create_rpisd() {
 	cp -p ${RPI_BOOTDIR}/bootversion ${NAS4FREE_TMPDIR}
 	cp -p ${RPI_BOOTDIR}/ubldr ${NAS4FREE_TMPDIR}
 
-	# Enable auto resize
-	touch ${NAS4FREE_TMPDIR}/req_resize
-
 	sync
 	cd ${NAS4FREE_WORKINGDIR}
 	umount ${NAS4FREE_TMPDIR}
@@ -1510,6 +1507,9 @@ create_rpisd() {
 
 	echo "RPISD: Mount this virtual disk on $NAS4FREE_TMPDIR"
 	mount /dev/${mdp} $NAS4FREE_TMPDIR
+
+	# Enable auto resize
+	touch ${NAS4FREE_TMPDIR}/req_resize
 
 	echo "RPISD: Unmount memory disk"
 	umount $NAS4FREE_TMPDIR
@@ -1615,9 +1615,6 @@ create_rpi2sd() {
 	cp -p ${RPI_BOOTDIR}/bootversion ${NAS4FREE_TMPDIR}
 	cp -p ${RPI_BOOTDIR}/ubldr ${NAS4FREE_TMPDIR}
 
-	# Enable auto resize
-	touch ${NAS4FREE_TMPDIR}/req_resize
-
 	sync
 	cd ${NAS4FREE_WORKINGDIR}
 	umount ${NAS4FREE_TMPDIR}
@@ -1645,6 +1642,9 @@ create_rpi2sd() {
 
 	echo "RPISD: Mount this virtual disk on $NAS4FREE_TMPDIR"
 	mount /dev/${mdp} $NAS4FREE_TMPDIR
+
+	# Enable auto resize
+	touch ${NAS4FREE_TMPDIR}/req_resize
 
 	echo "RPISD: Unmount memory disk"
 	umount $NAS4FREE_TMPDIR
