@@ -579,7 +579,7 @@ resizepartition()
 	if [ "${ARCH}" = "arm" -a -f /cf/req_resize ]; then
 		# resize MBR partition
 		echo ""
-		echo "${_dev}: resize MBR/BSD partition"
+		echo "${_dev}: resize MBR/BSD partition. (auto reboot)"
 		/sbin/mount -uw /cf
 		/bin/rm -f /cf/req_resize
 		/sbin/umount /cf
