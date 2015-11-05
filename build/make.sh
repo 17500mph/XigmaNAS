@@ -1193,6 +1193,9 @@ create_full() {
 	echo 'kern.maxfiles="65536"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 	echo 'kern.maxfilesperproc="60000"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 	echo 'kern.cam.boot_delay="8000"' >> $NAS4FREE_TMPDIR/boot/loader.conf
+	echo 'kern.geom.label.disk_ident.enable="0"' >> $NAS4FREE_TMPDIR/boot/loader.conf
+	echo 'hint.acpi_throttle.0.disabled="0"' >> $NAS4FREE_TMPDIR/boot/loader.conf
+	echo 'hint.p4tcc.0.disabled="0"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 	echo 'splash_bmp_load="YES"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 	echo 'bitmap_load="YES"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 	echo 'bitmap_name="/boot/splash.bmp"' >> $NAS4FREE_TMPDIR/boot/loader.conf
