@@ -88,14 +88,9 @@ $disk_error = gettext("No disks configured, please add disks to see the diagnost
 								$name = $diskv['name'];
 								$device = $diskv['devicespecialfile'];
 
-								echo gettext("Disk") . ":		{$name}<br />";
-						
-								// need fix
-								// echo gettext("Transfer mode") . ":		{$dma}<br />";
-
 								// Display more information
 								exec("/usr/local/sbin/ataidle {$device}", $rawdata);
-								$rawdata = array_slice($rawdata, 2);
+								$rawdata = array_slice($rawdata, 1);
 								echo htmlspecialchars(implode("\n", $rawdata));
 								unset($rawdata);
 							echo "</pre>\n";
