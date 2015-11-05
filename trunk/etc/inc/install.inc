@@ -251,6 +251,9 @@ zfs_load="YES"
 geom_xmd_load="YES"
 
 EOD;
+	if ($g['arch'] == "x64") {
+		$loaderconf .= 'mlxen_load="YES"' . "\n";
+	}
 
 	if (false === file_put_contents("{$mntpath}/boot/loader.conf", $loaderconf)) {
 		write_console("Error: Failed to create '/boot/loader.conf'.\n");
