@@ -16,16 +16,36 @@
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
 
-	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
-	ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-	WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-	DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+	3. All advertising materials mentioning features or use of this software
+	   must display the following acknowledgment:
+	   "This product includes software developed by the NAS4Free Project
+	   for use in the NAS4Free Software Distribution. (http://www.nas4free.org)".
+
+	4. The names NAS4Free nor the names of its contributors may be used to
+	   endorse or promote products derived from this software without 
+	   specific prior written permission.
+
+	5. Products derived from this software may not be called "NAS4Free"  
+	   nor may "NAS4Free" appear in their names without prior written  
+	   permission of the NAS4Free Project. For written permission, please 
+	   contact info@nas4free.org
+
+	6. Redistributions of any form whatsoever must retain the following  
+	   acknowledgment:
+
+	   "This product includes software developed by the NAS4Free Project
+	   for use in the NAS4Free Software Distribution (http://www.nas4free.org).
+
+	THIS SOFTWARE IS PROVIDED BY THE NAS4Free PROJECT ``AS IS'' AND ANY
+	EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+	WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+	IN NO EVENT SHALL THE NAS4Free PROJECT OR ITS CONTRIBUTORS BE LIABLE FOR
 	ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
 	(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-	LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-	ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-	(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-	SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+	LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+	ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+	(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+	THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 	The views and conclusions contained in the software and documentation are those
 	of the authors and should not be interpreted as representing official policies,
@@ -53,7 +73,7 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
 
 		<p>NAS4Free use legally portions of FreeNAS 7 which is Copyright &copy; 2005-2011 by Olivier Cochard (olivier@freenas.org).</p>
 		<p>NAS4Free use portions of m0n0wall which is Copyright &copy; 2002-2006 by Manuel Kasper (mk@neon1.net).</p>
-		<p>NAS4Free code and documentation are released under the Simplified BSD license, under terms as follows.</p>
+		<p>The compilation of software, code and documentation known as NAS4Free is distributed under the following terms:</p>
             <p> Redistribution and use in source and binary forms, with or without<br />
               modification, are permitted provided that the following conditions
               are met:<br />
@@ -63,24 +83,40 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
               this list of conditions and the following disclaimer.<br />
               <br />
               2. Redistributions in binary form must reproduce the above copyright<br />
-              notice, this list of conditions and the following disclaimer in
-              the<br />
+              notice, this list of conditions and the following disclaimer in the<br />
               documentation and/or other materials provided with the distribution.<br />
               <br />
-              3. Neither the name of the copyright holder nor the names of its contributors<br />
-              may be used to endorse or promote products derived from this software
-              without specific prior written permission.<br />
+	      3. All advertising materials mentioning features or use of this software<br />
+	      must display the following acknowledgment:<br />
+	      "This product includes software developed by the NAS4Free Project<br />
+	      for use in the NAS4Free Software Distribution. (http://www.nas4free.org).<br />
               <br />
-              <strong>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND<br />
-              ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,<br />
-              THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR<br />
-              PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE PARTICULAR COPYRIGHT OWNER OR<br />
-              CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR<br /> 
-              CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE<br />
-              GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER<br />
-              CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR<br />
-              TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS<br />
-	      SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</strong><br />
+              4. The names NAS4Free nor the names of its contributors may be used to<br />
+              endorse or promote products derived from this software without specific<br />
+              prior written permission.<br />
+              <br />
+	      5. Products derived from this software may not be called "NAS4Free"<br />
+	      nor may "NAS4Free" appear in their names without prior written<br />
+	      permission of the NAS4Free Project. For written permission, please<br />
+	      contact info@nas4free.org<br />
+	      <br />
+	      6. Redistributions of any form whatsoever must retain the following<br />
+	      acknowledgment:<br />
+	      <br />
+	      "This product includes software developed by the NAS4Free Project<br />
+	      for use in the NAS4Free Software Distribution (http://www.nas4free.org)".<br />
+	      <br />
+
+              <strong>THIS SOFTWARE IS PROVIDED BY THE NAS4Free PROJECT ``AS IS'' AND ANY<br />
+              EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED<br />
+              WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.<br />
+              IN NO EVENT SHALL THE NAS4Free PROJECT OR ITS CONTRIBUTORS BE LIABLE FOR<br />
+              ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES<br /> 
+              (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;<br />
+              LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON<br />
+              ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT<br />
+              (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF<br />
+	      THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</strong><br />
             <p>The views and conclusions contained in the software and documentation are those of the authors and should<br /> 
                not be interpreted as representing official policies, either expressed or implied, of the NAS4Free Project.</p>
 							</td>
