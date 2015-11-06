@@ -23,6 +23,7 @@ Changes:
 - Add various daemon/utility/debug tools for future development.
 - Add hosts allow on console menu.
 - Add autoresize on SD image. (ARM only)
+- Add sendmail_path to php.ini to use mail() function.
 - Remove usesendfile on CIFS/SMB.
 - Remove legacy disk aliases such as /dev/ad0.
 - Change DSA private key to RSA private key on SSH service.

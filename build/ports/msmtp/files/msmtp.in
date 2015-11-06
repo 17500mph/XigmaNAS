@@ -22,6 +22,7 @@ load_rc_config "${name}"
 
 # Defaults
 msmtp_config=${msmtp_config:-"/var/etc/msmtp.conf"}
+msmtprc=${msmtprc:-"/usr/local/etc/msmtprc"}
 
 # Create msmtp.conf configuration
 /usr/local/bin/xml sel -t \
@@ -46,3 +47,7 @@ msmtp_config=${msmtp_config:-"/var/etc/msmtp.conf"}
 
 # Set user permissions
 chmod 0600 ${msmtp_config}
+# for PHP mail()
+cp ${msmtp_config} ${msmtprc}
+chown root:www ${msmtprc}
+chmod 0640 ${msmtprc}
