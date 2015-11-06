@@ -53,7 +53,8 @@ sig_reload="-INT"
 
 websrv_mkconf()
 {
-	local _protocol _certificate _privatekey _documentroot _uploaddir _runasuser
+	local _protocol _certificate _privatekey _documentroot _uploaddir
+	local _runasuser _runasgroup
 
 	# Get configuration data
 	_protocol=`configxml_get "//websrv/protocol"`
@@ -62,6 +63,10 @@ websrv_mkconf()
 	_documentroot=`configxml_get "//websrv/documentroot"`
 	_uploaddir=`configxml_get "//websrv/uploaddir"`
 	_runasuser=`configxml_get "//websrv/runasuser"`
+	_runasgroup=""
+	if [ -n "$_runasuser" ]; then
+		_runasgroup="server.groupname = \"www\""
+	fi
 	if [ -z "$_uploaddir" ]; then
 		_uploaddir="/var/tmp/ftmp"
 	fi
@@ -69,7 +74,8 @@ websrv_mkconf()
 	# Create .conf file
 	/usr/local/bin/xml sel -t -m "//websrv" \
 		-v "concat('server.port = ',port)" -n \
-		-v "concat('',runasuser,'')" -n \
+		-o "${_runasuser}" -n \
+		-o "${_runasgroup}" -n \
 		-v "concat('server.document-root = \"',documentroot,'\"')" -n \
 		-i "count(dirlisting) > 0" \
 			-o "server.dir-listing = \"enable\"" -n \
