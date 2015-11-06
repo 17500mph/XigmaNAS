@@ -85,17 +85,20 @@ server.modules = (
   "mod_auth",
   "mod_expire",
   "mod_cgi",
+  "mod_setenv",
   "mod_rewrite",
   "mod_redirect",
   "mod_alias"
  )
 server.errorlog-use-syslog = "enable"
-# debugmode ° debug.log-request-handling enable/disable
+# debugmode debug.log-request-handling enable/disable
 debug.log-request-handling = "disable"
 #server.event-handler = "freebsd-kqueue"
 server.event-handler = "libev"
 server.max-write-idle = ${websrv_server_maxwriteidle}
 index-file.names   = ( "index.php", "index.html", "index.htm", "index.shtml", "default.htm" )
+# set trust path
+setenv.add-environment = ( "PATH" => "/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin" )
 #\$HTTP["url"] =~ "\.(js|css|png|gif|jpg)$" {
 #    expire.url = ( "" => "access plus 1 hours" )
 #}
