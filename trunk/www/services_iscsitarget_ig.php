@@ -142,9 +142,9 @@ function iscsitargetig_process_updatenotification($mode, $data) {
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td width="5%" class="listhdrlr"><?=gettext("Tag");?></td>
-          <td width="30%" class="listhdrr"><?=gettext("Initiators");?></td>
+          <td width="35%" class="listhdrr"><?=gettext("Initiators");?></td>
           <td width="25%" class="listhdrr"><?=gettext("Networks");?></td>
-          <td width="30%" class="listhdrr"><?=gettext("Comment");?></td>
+          <td width="25%" class="listhdrr"><?=gettext("Comment");?></td>
           <td width="10%" class="list"></td>
         </tr>
         <?php foreach($config['iscsitarget']['initiatorgroup'] as $ig):?>
