@@ -22,7 +22,9 @@ start_precmd="vbox_mkconf"
 start_cmd="vbox_start"
 stop_cmd="vbox_stop"
 mkconf_cmd="vbox_mkconf"
-extra_commands="mkconf"
+vmstart_cmd="vbox_vmstart"
+vmstop_cmd="vbox_vmstop"
+extra_commands="mkconf vmstart vmstop"
 
 phpvbox_conf=${phpvbox_conf:-"/usr/local/www/phpvirtualbox/config.php"}
 vbox_user=${vbox_user:-"vboxusers"}
@@ -60,6 +62,7 @@ var \$disableTabVMConsole = true;
 var \$consoleResolutions = array('640x480','800x600','1024x768','1280x720','1440x900');
 var \$consoleKeyboardLayout = 'EN';
 var \$nicMax = 4;
+var \$startStopConfig = true;
 }
 EOF
 
@@ -73,6 +76,128 @@ EOF
 	fi
 }
 
+_get_vmlist()
+{
+	local _vmlist
+
+	_vmlist=`/usr/local/bin/sudo -u vboxusers /usr/local/bin/vboxmanage list runningvms | sed -e 's/.*{\(.*\)}$/\1/'`
+	echo $_vmlist
+}
+
+_get_vmname()
+{
+	local _vmname _uuid
+
+	_uuid="$1"
+	if [ -z "$_uuid" ]; then
+	    return
+	fi
+	_vmname=`/usr/local/bin/sudo -u vboxusers /usr/local/bin/vboxmanage showvminfo "$_uuid" --machinereadable | sed -ne 's/^name="\(.*\)"$/\1/p'`
+	echo $_vmname
+}
+
+_get_startup_vmlist()
+{
+	local _startupvm _vmlist _uuid _mode
+
+	_vmlist=`/usr/local/bin/sudo -u vboxusers /usr/local/bin/vboxmanage list vms | sed -e 's/.*{\(.*\)}$/\1/'`
+	_startupvm=""
+	for _uuid in $_vmlist; do
+		_mode=`/usr/local/bin/sudo -u vboxusers /usr/local/bin/vboxmanage getextradata "$_uuid" pvbx/startupMode | sed -e 's/^.*: \(.*\)$/\1/'`
+		if [ "$_mode" = "auto" ]; then
+			_startupvm="$_startupvm $_uuid"
+		fi
+	done
+	echo $_startupvm
+}
+
+_vmstart()
+{
+	local _vmlist _vmname _uuid
+
+	_vmlist=`_get_startup_vmlist`
+	for _uuid in $_vmlist; do
+		_vmname=`_get_vmname "$_uuid"`
+		echo "Starting: $_vmname ($_uuid)"
+		/usr/local/bin/sudo -u vboxusers /usr/local/bin/vboxmanage startvm "$_uuid" --type headless >/dev/null 2>&1
+	done
+}
+
+_vmstop_acpioff()
+{
+	local _vmlist _vmname _uuid
+
+	_vmlist=`_get_vmlist`
+	for _uuid in $_vmlist; do
+		_vmname=`_get_vmname "$_uuid"`
+		echo "ACPI off: $_vmname ($_uuid)"
+		/usr/local/bin/sudo -u vboxusers /usr/local/bin/vboxmanage controlvm "$_uuid" acpipowerbutton >/dev/null 2>&1
+	done
+}
+
+_vmstop_poweroff()
+{
+	local _vmlist _vmname _uuid
+
+	_vmlist=`_get_vmlist`
+	for _uuid in $_vmlist; do
+		_vmname=`_get_vmname "$_uuid"`
+		echo "poweroff: $_vmname ($_uuid)"
+		/usr/local/bin/sudo -u vboxusers /usr/local/bin/vboxmanage controlvm "$_uuid" poweroff >/dev/null 2>&1
+	done
+}
+
+vbox_vmstart()
+{
+	echo "Starting VM"
+	_vmstart
+}
+
+vbox_vmstop()
+{
+	local _wait _vmlist _vmname _uuid
+
+	echo "ACPI shutdown VM"
+	_vmstop_acpioff
+
+	# Waiting to stop (max 40 secs.)
+	_wait=40
+	echo -n "Waiting to stop VMs"
+	while [ ${_wait} -gt 0 ]; do
+		echo -n "."
+		_wait=$((${_wait} - 1))
+		/bin/sleep 1
+		_vmlist=`_get_vmlist`
+		if [ -z "$_vmlist" ]; then
+			break
+		fi
+	done
+	echo ""
+	if [ -n "$_vmlist" ]; then
+		echo "poweroff VM"
+		_vmstop_poweroff
+		# Waiting to stop (max 10 secs.)
+		_wait=10
+		echo -n "Waiting to stop VMs"
+		while [ ${_wait} -gt 0 ]; do
+			echo -n "."
+			_wait=$((${_wait} - 1))
+			/bin/sleep 1
+			_vmlist=`_get_vmlist`
+			if [ -z "$_vmlist" ]; then
+				break
+			fi
+		done
+		echo ""
+		if [ -n "$_vmlist" ]; then
+			for _uuid in $_vmlist; do
+				_vmname=`_get_vmname "$_uuid"`
+				echo "Cannot stop vm: $_vmname ($_uuid)"
+			done
+		fi
+	fi
+}
+
 vbox_start()
 {
 	echo "VBox start..."
@@ -83,12 +208,31 @@ vbox_start()
 	/sbin/sysctl -q net.link.tap.up_on_open=1 > /dev/null
 	/usr/local/etc/rc.d/vboxnet onestart
 	/usr/local/etc/rc.d/vboxwebsrv onestart
+
+	/bin/sleep 3
+	vbox_vmstart
 }
 
 vbox_stop()
 {
+	local _wait
+
 	echo "VBox stop..."
+	vbox_vmstop
 	/usr/local/etc/rc.d/vboxwebsrv onestop
+
+	# Waiting VBoxSVC shutdown
+	_wait=15
+	echo -n "Shutdown VBoxSVC"
+	while [ ${_wait} -gt 0 ]; do
+		echo -n "."
+		_wait=$((${_wait} - 1))
+		/bin/sleep 1
+		if [ -z "`/bin/pgrep VBoxSVC`" ]; then
+			break
+		fi
+	done
+	echo ""
 }
 
 load_rc_config "${name}"
