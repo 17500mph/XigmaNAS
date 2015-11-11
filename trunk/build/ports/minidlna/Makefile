@@ -48,6 +48,12 @@ EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-kqueue
 
 # NAS4Free
 NO_PKG_REGISTER=	yes
+ICONSDIR=${MASTERDIR}/icons
+N4F_ICONS=${WRKSRC}/nas4free-icons.c
+
+post-configure:
+	@echo "creating icon file..."
+	@(cd ${ICONSDIR}; sh mkicons.sh > ${N4F_ICONS})
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/*.5 ${STAGEDIR}${MANPREFIX}/man/man5/
