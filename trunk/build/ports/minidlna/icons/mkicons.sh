@@ -15,7 +15,7 @@ bin2chex()
 
 	file="$1"
 	if [ -f "$file" ]; then
-		hexdump -ve '16/1 "\\x%02x" "\n"' $file | sed -e 's/\\x  //g' -e 's/^\(.*\)$/"\1"/' -e '$s/$/;/'
+		hexdump -ve '16/1 "\\x%02x" "\n"' $file | sed -e '$s/\\x  //g' -e 's/^\(.*\)$/"\1"/' -e '$s/$/;/'
 	fi
 }
 
