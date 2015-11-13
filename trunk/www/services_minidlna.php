@@ -51,12 +51,6 @@ $pgtitle = array(gettext("Services"),gettext("DLNA/UPnP MiniDLNA"));
 
 $homechanged =0;
 
-$a_interface = get_interface_list();
-
-// Use first interface as default if it is not set.
-if (empty($pconfig['if']) && is_array($a_interface))
-	$pconfig['if'] = key($a_interface);
-
 if (!isset($config['minidlna']) || !is_array($config['minidlna']))
 	$config['minidlna'] = array();
 
@@ -149,6 +143,13 @@ if ($_POST) {
 				}
 	}
 }
+
+$a_interface = get_interface_list();
+
+// Use first interface as default if it is not set.
+if (empty($pconfig['if']) && is_array($a_interface))
+	$pconfig['if'] = key($a_interface);
+
 include("fbegin.inc"); ?>
 <script type="text/javascript">
 <!--
