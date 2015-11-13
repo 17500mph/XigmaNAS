@@ -15,25 +15,27 @@
 . /etc/configxml.subr
 . /etc/util.subr
 
-name=minidlna
-rcvar=${name}_enable
+name="minidlna"
+rcvar=minidlna_enable
+
 load_rc_config "${name}"
+
+# Custom commands
+command=/usr/local/sbin/${name}d
+mkconf_cmd="minidlna_mkconf"
+start_precmd="minidlna_prestart"
+stop_postcmd="minidlna_poststop"
+rescan_cmd="minidlna_rescan"
+extra_commands="mkconf rescan"
+
+# Defaults
 minidlna_uid=${minidlna_uid-"dlna"}
 minidlna_enable=${minidlna_enable:="NO"}
-homefolder=`configxml_get "//${name}/homefolder"`
+minidlna_home=`configxml_get "//${name}/home"`
 minidlna_config_dir="/var/etc"
 scanner_indicator="/var/run/${name}/upnp-av.scan"
 minidlna_config=${minidlna_config_dir}/${name}.conf
 minidlna_logdir=${minidlna_logdir-"/var/log"}
-
-#Commands 
-command=/usr/local/sbin/${name}d
-mkconf_cmd="minidlna_mkconf"
-start_precmd="minidlna_prestart"
-
-stop_postcmd="minidlna_poststop"
-rescan_cmd="minidlna_rescan"
-extra_commands="mkconf rescan"
 
 pidfile="/var/run/${name}/${name}.pid"
 command_args=" -P $pidfile -u $minidlna_uid -f $minidlna_config"
@@ -45,7 +47,7 @@ minidlna_mkconf()
 		_if=`configxml_get "//minidlna/if"`
 		_port=`configxml_get "//minidlna/port"`
 		_serial=`cat /etc/prd.revision`
-		_model=`minidlnad -V | awk '{print$2}'`
+		_version=`minidlnad -V | awk '{print$2}'`
 		_container=`configxml_get "//minidlna/container"`
 		_notifyinterval=`configxml_get "//minidlna/notify_int"`
 		_loglevel=`configxml_get "//minidlna/loglevel"`
@@ -53,16 +55,16 @@ minidlna_mkconf()
 		if [ "${_ip_adress}" = "dhcp" ]; then
 			_ip_adress=`get_ipaddr inet ${_if}`
 		fi
-		_home=`configxml_get "//minidlna/home"`
 	cat << EOF > ${minidlna_config}
 friendly_name=${_name}
 network_interface=${_if}
 port=${_port}
 serial=${_serial}
-model_number=${_model}
+version_number=${_version}
 notify_interval=${_notifyinterval}
 log_dir=${minidlna_logdir}
 root_container=${_container}
+db_dir=${minidlna_home}
 log_level=general,artwork,database,inotify,scanner,metadata,http,ssdp,tivo=${_loglevel}
 album_art_names=Cover.jpg/cover.jpg/AlbumArtSmall.jpg/albumartsmall.jpg/AlbumArt.jpg/albumart.jpg/Album.jpg/album.jpg/Folder.jpg/folder.jpg/Thumb.jpg/thumb.jpg
 minissdpdsocket=/var/run/minissdpd.sock
@@ -87,21 +89,20 @@ minidlna_prestart()
 {
 minidlna_mkconf
 /sbin/route add -net 239.0.0.0 -netmask 240.0.0.0 -interface ${_if} >/dev/null 2>&1
-#install -d -o $minidlna_uid ${pidfile%/*} /var/db/minidlna
 }
 
 minidlna_rescan()
 {
-_home=`configxml_get "//minidlna/home"`
+minidlna_home=`configxml_get "//${name}/home"`
 PID=`cat $pidfile`
 kill $PID
 minidlna_poststop
 rm -f $pidfile
-if [ -f ${_home}/files.db ]; then
-	rm -f ${_home}/files.db
+if [ -f ${minidlna_home}/files.db ]; then
+	rm -f ${minidlna_home}/files.db
 fi
-if [ -d ${_home}/art_cache ]; then
-	rm -fr ${_home}/art_cache
+if [ -d ${minidlna_home}/art_cache ]; then
+	rm -fr ${minidlna_home}/art_cache
 fi
 $command $command_args
 logger "rescan minidlna"
