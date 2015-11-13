@@ -51,8 +51,10 @@ $pgtitle = array(gettext("Services"),gettext("DLNA/UPnP MiniDLNA"));
 
 $homechanged =0;
 
-if (!isset($config['minidlna']) || !is_array($config['minidlna']))
+if (!isset($config['minidlna']) || !is_array($config['minidlna'])) {
 	$config['minidlna'] = array();
+	$config['minidlna']['inotify'] = true;
+}
 
 if (!isset($config['minidlna']['content']) || !is_array($config['minidlna']['content']))
 	$config['minidlna']['content'] = array();
@@ -64,7 +66,7 @@ $pconfig['name'] = !empty($config['minidlna']['name']) ? $config['minidlna']['na
 $pconfig['if'] = !empty($config['minidlna']['if']) ? $config['minidlna']['if'] : "";
 $pconfig['port'] = !empty($config['minidlna']['port']) ? $config['minidlna']['port'] : "8200";
 $pconfig['home'] = !empty($config['minidlna']['home']) ? $config['minidlna']['home'] : "";
-$pconfig['notify_int'] = !empty($config['minidlna']['notify_int']) ? $config['minidlna']['notify_int'] : "60";
+$pconfig['notify_int'] = !empty($config['minidlna']['notify_int']) ? $config['minidlna']['notify_int'] : "300";
 $pconfig['strict'] = isset($config['minidlna']['strict']);
 $pconfig['loglevel'] = !empty($config['minidlna']['loglevel']) ? $config['minidlna']['loglevel'] : "warn";
 $pconfig['tivo'] = isset($config['minidlna']['tivo']);
