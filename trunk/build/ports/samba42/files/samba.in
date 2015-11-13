@@ -186,7 +186,9 @@ samba_mkconf_cmd()
 			-o "preferred master = no" -n \
 			-o "os level = 0" -n \
 		-b \
-		-v "concat('time server = ',//samba/timesrv)" -n \
+		-i "string-length(//samba/timesrv) > 0" \
+			-v "concat('time server = ',//samba/timesrv)" -n \
+		-b \
 		-i "string-length(//samba/guestaccount) > 0" -v "concat('guest account = ',//samba/guestaccount)" -n -b \
 		-i "string-length(//samba/guestaccount) = 0" -o "guest account = ftp" -n -b \
 		-v "concat('map to guest = ',//samba/maptoguest)" -n \
