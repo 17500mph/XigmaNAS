@@ -13,22 +13,43 @@
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
-	1. Redistributions of source code must retain the above copyright notice, this
-	   list of conditions and the following disclaimer.
-	2. Redistributions in binary form must reproduce the above copyright notice,
-	   this list of conditions and the following disclaimer in the documentation
-	   and/or other materials provided with the distribution.
+	1. Redistributions of source code must retain the above copyright
+	   notice, this list of conditions and the following disclaimer.
 
-	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
-	ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-	WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-	DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+	2. Redistributions in binary form must reproduce the above copyright
+	   notice, this list of conditions and the following disclaimer in the
+	   documentation and/or other materials provided with the distribution.
+
+	3. All advertising materials mentioning features or use of this software
+	   must display the following acknowledgment:
+	   "This product includes software developed by the NAS4Free Project
+	   for use in the NAS4Free Software Distribution. (http://www.nas4free.org)".
+
+	4. The names NAS4Free nor the names of its contributors may be used to
+	   endorse or promote products derived from this software without specific
+	   prior written permission.
+
+	5. Products derived from this software may not be called "NAS4Free"
+	   nor may "NAS4Free" appear in their names without prior written
+	   permission of the NAS4Free Project. For written permission, please
+	   contact info@nas4free.org
+
+	6. Redistributions of any form whatsoever must retain the following
+	   acknowledgment:
+
+	   "This product includes software developed by the NAS4Free Project
+	   for use in the NAS4Free Software Distribution (http://www.nas4free.org)".
+
+	THIS SOFTWARE IS PROVIDED BY THE NAS4FREE PROJECT ``AS IS'' AND ANY
+	EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+	WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+	IN NO EVENT SHALL THE NAS4FREE PROJECT OR ITS CONTRIBUTORS BE LIABLE FOR
 	ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
 	(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-	LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-	ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-	(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-	SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+	LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+	ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+	(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+	THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 	The views and conclusions contained in the software and documentation are those
 	of the authors and should not be interpreted as representing official policies,
@@ -38,7 +59,7 @@ require("auth.inc");
 require("guiconfig.inc");
 require("services.inc");
 
-$pgtitle = array(gettext("Services"),gettext("DLNA/UPnP"));
+$pgtitle = array(gettext("Services"),gettext("DLNA/UPnP Fuppes"));
 
 if (!isset($config['upnp']) || !is_array($config['upnp']))
 	$config['upnp'] = array();
@@ -181,21 +202,29 @@ function transcoding_change() {
 			break;
 	}
 }
+
 //-->
 </script>
 <form action="services_fuppes.php" method="post" name="iform" id="iform">
 	<table width="100%" border="0" cellpadding="0" cellspacing="0">
-		<tr>
+	<tr id="tabnavtbl"><td class="tabnavtbl">
+		<ul id="tabnav">
+			<li class="tabact"><a href="services_fuppes.php"><span><?=gettext("Fuppes")?></span></a></li>
+		    	<li class="tabinact"><a href="services_minidlna.php"><span><?=gettext("MiniDLNA");?></span></a></li>
+			</ul>
+		</td></tr>
+		   <tr>
 			<td class="tabcont">
+				<?php if (true === isset($config['minidlna']['enable'])) {
+					$savemsg = "MiniDLNA enabled. If you like to use Fuppes, disable MiniDLNA first"; 
+					if (!empty($savemsg)) print_info_box($savemsg);					
+					}else{?>
 				<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
 				<?php if (!empty($savemsg)) print_info_box($savemsg); ?>
 				<?php if (file_exists($d_upnpconfdirty_path)) print_config_change_box();?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-				<?php html_titleline_checkbox("enable", gettext("DLNA/UPnP Media Server"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "enable_change(false)");?>
+				<?php html_titleline_checkbox("enable", gettext("Fuppes Media Server"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "enable_change(false)");?>
 					<?php html_inputbox("name", gettext("Name"), $pconfig['name'], gettext("Give your media library a friendly name."), true, 35);?>
-					<!--
-					<?php html_interfacecombobox("if", gettext("Interface"), $pconfig['if'], gettext("Select which interface to use. (only selectable if your server has more than one)"), true);?>
-					-->
 				<tr>
 					<td width="22%" valign="top" class="vncellreq"><?=gettext("Interface selection");?></td>
 					<td width="78%" class="vtable">
@@ -206,7 +235,7 @@ function transcoding_change() {
 							<?php endif;?>
 						<?php endforeach;?>
 					</select>
-					<br /><?=gettext("Select which interface to use. (only selectable if your server has more than one)");?>
+					<br /><?=gettext("Select which interface to use. (Only selectable if your server has more than one)");?>
 					</td>
 				</tr>
 					<?php html_inputbox("port", gettext("Port"), $pconfig['port'], sprintf(gettext("Port to listen on. Only dynamic or private ports can be used (from %d through %d). Default port is %d."), 1025, 65535, 49152), true, 5);?>
@@ -234,10 +263,10 @@ function transcoding_change() {
 	</table>
 	<?php include("formend.inc");?>
 </form>
+<?php } ?>
 <script type="text/javascript">
 <!--
 profile_change();
-web_change();
 transcoding_change();
 enable_change(false);
 //-->

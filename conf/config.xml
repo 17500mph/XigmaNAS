@@ -1123,6 +1123,22 @@
 		<port>49152</port>
 		<profile>default</profile>
 	</upnp>
+	<minidlna>
+		<!--
+		<enable/>
+		<name>xxx</name>
+		<if>xxx</if>
+		<content>xxx</content>
+		<home>xxx</home> // Directory where database get stored.
+		<inotify/>
+		<web/>
+		<deviceip>xxx.xxx.xxx.xxx<deviceip>
+		-->
+		<port>8200</port>
+		<notify_int>60</notify_int>
+		<container>B</container>
+		<loglevel>info</loglevel>
+	</minidlna>
 	<daap>
 		<!--
 		<enable/>
