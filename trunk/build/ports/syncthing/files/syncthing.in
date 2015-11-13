@@ -1,52 +1,62 @@
 #!/bin/sh
-
-# $FreeBSD: head/net/syncthing/files/syncthing.in 383386 2015-04-05 22:20:52Z swills $
 #
+# Part of NAS4Free (http://www.nas4free.org).
+# Copyright (c) 2012-2015 The NAS4Free Project <info@nas4free.org>.
+# All rights reserved.
+#
+
 # PROVIDE: syncthing
 # REQUIRE: LOGIN
 # KEYWORD: shutdown
-#
-# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
-# to enable this service:
-#
-# syncthing_enable (bool):	Set to NO by default.
-#				Set it to YES to enable syncthing.
-# syncthing_user (user):        Set user to run syncthing.
-#                               Default is "syncthing".
-# syncthing_group (group):      Set group to run syncthing.
-#                               Default is "syncthing".
-# syncthing_dir (dir):          Set dir to run syncthing in.
-#                               Default is "/var/db/syncthing".
+# XQUERY: -i "count(//syncthing/enable) > 0" -o "0" -b
+# RCVAR: syncthing
 
 . /etc/rc.subr
+. /etc/util.subr
+. /etc/configxml.subr
 
-name=syncthing
-rcvar=syncthing_enable
+name="syncthing"
+rcvar="syncthing_enable"
 
-load_rc_config $name
+load_rc_config "${name}"
 
 : ${syncthing_enable:="NO"}
 : ${syncthing_user:="syncthing"}
 : ${syncthing_group:="syncthing"}
 : ${syncthing_dir:="/var/db/syncthing"}
 
+homedir=`configxml_get "//syncthing/homedir"`
 pidfile=/var/run/syncthing.pid
-procname="%%PREFIX%%/bin/syncthing"
+procname="/usr/local/bin/syncthing"
 command="/usr/sbin/daemon"
-command_args="-f -p ${pidfile} ${procname} -home=${syncthing_dir} -no-browser ${syncthing_args}"
+command_args="-f -p ${pidfile} ${procname} -home=${homedir} -no-browser ${syncthing_args}"
 
 start_precmd=syncthing_startprecmd
+extra_commands="mkconf"
+
+syncthing_mkconf()
+{
+	local _user _group _homedir
+
+	_user=${syncthing_user}
+	_group=${syncthing_group}
+	_homedir=${homedir}
+	if [ "$_homedir" = "" ]; then
+		_homedir="/var/db/syncthing"
+	fi
+
+	# config is created by GUI
+}
 
 syncthing_startprecmd()
 {
-        if [ ! -e ${pidfile} ]; then
-                install -o ${syncthing_user} -g ${syncthing_group} /dev/null ${pidfile};
-        fi
+	if [ ! -e ${pidfile} ]; then
+		install -o ${syncthing_user} -g ${syncthing_group} /dev/null ${pidfile}
+	fi
 
-        if [ ! -d ${syncthing_dir} ]; then
-                install -d -o ${syncthing_user} -g ${syncthing_group} ${syncthing_dir}
-        fi
-
+	if [ ! -d ${homedir} ]; then
+		install -d -o ${syncthing_user} -g ${syncthing_group} ${homedir}
+	fi
 }
 
 run_rc_command "$1"
