@@ -999,6 +999,26 @@ function config_upgrade() {
 		$config['version'] = "2.2";
 	}
 
+	/* Convert 2.2 -> 2.3 */
+	if ($config['version'] === "2.2") {
+		$config['system']['usermanagement']['user'][] = array(
+			"uuid" => uuid(),
+			"name" => "syncthing",
+			"id" => "983",
+			"primarygroup" => "983",
+			"extraoptions" => '-c "Syncthing Daemon" -d /var/tmp/syncthing -s /usr/sbin/nologin' );
+		$config['system']['usermanagement']['group'][] = array(
+			"uuid" => uuid(),
+			"name" => "syncthing",
+			"id" => "983" );
+		$config['minidlna']['port'] = "8200";
+		$config['minidlna']['notify_int'] = "300";
+		$config['minidlna']['container'] = "B";
+		$config['minidlna']['loglevel'] = "info";
+		$config['minidlna']['inotify'] = true;
+		$config['version'] = "2.3";
+	}
+
 	/* XXX Convert 9.5 -> 9.7 (must skip 9.6) */
 
 	write_config();
