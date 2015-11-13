@@ -66,7 +66,7 @@ root_container=${_container}
 log_level=general,artwork,database,inotify,scanner,metadata,http,ssdp,tivo=${_loglevel}
 album_art_names=Cover.jpg/cover.jpg/AlbumArtSmall.jpg/albumartsmall.jpg/AlbumArt.jpg/albumart.jpg/Album.jpg/album.jpg/Folder.jpg/folder.jpg/Thumb.jpg/thumb.jpg
 minissdpdsocket=/var/run/minissdpd.sock
-presentation_url=http://${_ip_adress}:${_port}/index.php
+presentation_url=http://${_ip_adress}:${_port}/
 EOF
 
 	xml sel -t \
