@@ -414,6 +414,13 @@
 				<primarygroup>920</primarygroup>
 				<extraoptions>-c &quot;Virtualbox user&quot; -d /nonexistent -s /usr/sbin/nologin</extraoptions>
 			</user>
+			<user>
+				<uuid>8937d051-f1b4-4048-8207-c73e81d5d364</uuid>
+				<name>syncthing</name>
+				<id>983</id>
+				<primarygroup>983</primarygroup>
+				<extraoptions>-c &quot;Syncthing Daemon&quot; -d /var/tmp/syncthing -s /usr/sbin/nologin</extraoptions>
+			</user>
 			<group>
 				<uuid>e8cc78b8-7c3d-46de-a34c-11b1c260a37e</uuid>
 				<id>999</id>
@@ -428,6 +435,11 @@
 				<uuid>235a1033-f7ee-443a-8c55-6bea64d5139e</uuid>
 				<id>920</id>
 				<name>vboxusers</name>
+			</group>
+			<group>
+				<uuid>6f5c8dd0-4c98-4ccf-8a18-64ad5e8e067f</uuid>
+				<id>983</id>
+				<name>syncthing</name>
 			</group>
 			<group>
 				<uuid>e504881b-c8dc-43d7-9ca4-74552f9b405b</uuid>
