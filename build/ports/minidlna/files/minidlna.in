@@ -47,7 +47,7 @@ minidlna_mkconf()
 		_if=`configxml_get "//minidlna/if"`
 		_port=`configxml_get "//minidlna/port"`
 		_serial=`cat /etc/prd.revision`
-		_version=`minidlnad -V | awk '{print$2}'`
+		_model=`minidlnad -V | awk '{print$2}'`
 		_container=`configxml_get "//minidlna/container"`
 		_notifyinterval=`configxml_get "//minidlna/notify_int"`
 		_loglevel=`configxml_get "//minidlna/loglevel"`
@@ -60,7 +60,7 @@ friendly_name=${_name}
 network_interface=${_if}
 port=${_port}
 serial=${_serial}
-version_number=${_version}
+model_number=${_model}
 notify_interval=${_notifyinterval}
 log_dir=${minidlna_logdir}
 root_container=${_container}
