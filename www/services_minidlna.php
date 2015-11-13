@@ -212,7 +212,7 @@ function enable_change(enable_change) {
 					</td>
 				</tr>
 					<?php html_inputbox("port", gettext("Port"), $pconfig['port'], sprintf(gettext("Port to listen on. Only dynamic or private ports can be used (from %d through %d). Default port is %d."), 1025, 65535, 8200), true, 5);?>
-					<?php html_inputbox("notify_int", gettext("Broadcast interval"), $pconfig['notify_int'], sprintf(gettext("Broadcasts its availability every N seconds on the network. (Default 60 seconds)"), 1025, 65535, 60), true, 5);?>
+					<?php html_inputbox("notify_int", gettext("Broadcast interval"), $pconfig['notify_int'], sprintf(gettext("Broadcasts its availability every N seconds on the network. (Default 300 seconds)"), 1025, 65535, 60), true, 5);?>
 					<?php html_filechooser("home", gettext("Database directory"), $pconfig['home'], gettext("Location where the database with media contents will be stored."), $g['media_path'], true, 67);?>
 					<?php html_minidlnabox("content", gettext("Media library"), !empty($pconfig['content']) ? $pconfig['content'] : array(), gettext("Location of the files to share."), $g['media_path'], true);?>
 					<?php html_checkbox ("inotify", gettext("Inotify"), !empty($pconfig['inotify']) ? true : false, gettext("Enable inotify."), gettext("Use inotify monitoring to automatically discover new files."), false);?>
