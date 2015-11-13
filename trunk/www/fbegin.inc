@@ -110,6 +110,7 @@ $menu['services']['menuitem'][] = array("desc" => gettext("SSH"), "link" => "ser
 $menu['services']['menuitem'][] = array("desc" => gettext("NFS"), "link" => "services_nfs.php", "visible" => TRUE);
 $menu['services']['menuitem'][] = array("desc" => gettext("AFP"), "link" => "services_afp.php", "visible" => TRUE);
 $menu['services']['menuitem'][] = array("desc" => gettext("Rsync"), "link" => "services_rsyncd.php", "visible" => TRUE);
+$menu['services']['menuitem'][] = array("desc" => gettext("Syncthing"), "link" => "services_syncthing.php", "visible" => TRUE);
 $menu['services']['menuitem'][] = array("desc" => gettext("Unison"), "link" => "services_unison.php", "visible" => TRUE);
 $menu['services']['menuitem'][] = array("desc" => gettext("iSCSI Target"), "link" => "services_iscsitarget.php", "visible" => TRUE);
 $menu['services']['menuitem'][] = array("desc" => gettext("DLNA/UPnP"), "link" => "services_fuppes.php", "visible" => TRUE);
