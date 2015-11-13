@@ -270,6 +270,9 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
       <p>sudo: An tool to allow a sysadmin to give limited root privileges. (<a href="http://www.sudo.ws" target="_blank">http://www.sudo.ws</a>)<br />
 	 Copyright &copy; 1994-1996, 1998-2015 Todd C. Miller. All Rights Reserved.</p>
 
+      <p>syncthing (<a href="https://syncthing.net" target="_blank">https://syncthing.net</a>)<br />
+      </p>
+
       <p>Some of the software used for NAS4Free are under the <a href="gpl-license.txt">GNU General Public License</a> (<a href="gpl-license.txt">GPLv2</a>, <a href="gpl3-license.txt">GPLv3</a>), <a href="lgpl-license.txt">GNU Lesser General Public License (LGPL)</a>, <a href="apple-license.txt">Apple Public Source License</a> and <a href="php-license.txt">PHP License</a>.</p>
 
 					</td>

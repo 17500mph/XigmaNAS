@@ -51,6 +51,7 @@
     SUBDIR += sipcalc
     SUBDIR += smartmontools
     SUBDIR += spindown
+    SUBDIR += syncthing
     SUBDIR += sudo
     SUBDIR += tftp-hpa
     SUBDIR += tmux
