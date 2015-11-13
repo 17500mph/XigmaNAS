@@ -944,7 +944,7 @@ class HTMLFolderBox1 extends HTMLFolderBox {
 		echo "			<option value=''>All</option>";
 		echo "			<option value='A'>Audio</option>";
 		echo "			<option value='V'>Video</option>";
-		echo "  		<option value='P'>Picturies</option>";
+		echo "  		<option value='P'>Pictures</option>";
 		echo "    </select>";
 
 		echo "    <input name='{$ctrlname}data' type='text' class='formfld' id='{$ctrlname}data' size='60' value='' />\n";
