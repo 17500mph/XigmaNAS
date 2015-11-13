@@ -159,12 +159,14 @@ function enable_change(enable_change) {
 	document.iform.port.disabled = endis;
 	document.iform.notify_int.disabled = endis;
 	document.iform.content.disabled = endis;
+	document.iform.contentfiletype.disabled = endis;
 	document.iform.contentaddbtn.disabled = endis;
 	document.iform.contentchangebtn.disabled = endis;
 	document.iform.contentdeletebtn.disabled = endis;
 	document.iform.contentdata.disabled = endis;
 	document.iform.contentbrowsebtn.disabled = endis;
 	document.iform.home.disabled = endis;
+	document.iform.homebrowsebtn.disabled = endis;
 	document.iform.inotify.disabled = endis;
 	document.iform.container.disabled = endis;
 	document.iform.strict.disabled = endis;
