@@ -475,4 +475,12 @@ function html_folderbox($ctrlname, $title, $value, $desc, $path, $required = fal
 	$ctrl->SetPath($path);
 	$ctrl->Render();
 }
+
+function html_minidlnabox($ctrlname, $title, $value, $desc, $path, $required = false, $readonly = false) {
+	$ctrl = new HTMLFolderBox1($ctrlname, $title, $value, $desc);
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->SetPath($path);
+	$ctrl->Render();
+}
 ?>
