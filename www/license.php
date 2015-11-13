@@ -16,21 +16,12 @@
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
 
-	3. All advertising materials mentioning features or use of this software
-	   must display the following acknowledgment:
-	   "This product includes software developed by the NAS4Free Project
-	   for use in the NAS4Free Software Distribution. (http://www.nas4free.org)".
-
-	4. The names NAS4Free nor the names of its contributors may be used to
-	   endorse or promote products derived from this software without 
-	   specific prior written permission.
-
-	5. Products derived from this software may not be called "NAS4Free"  
+	3. Products derived from this software may not be called "NAS4Free"  
 	   nor may "NAS4Free" appear in their names without prior written  
 	   permission of the NAS4Free Project. For written permission, please 
 	   contact info@nas4free.org
 
-	6. Redistributions of any form whatsoever must retain the following  
+	4. Redistributions of any form whatsoever must retain the following  
 	   acknowledgment:
 
 	   "This product includes software developed by the NAS4Free Project
@@ -74,10 +65,9 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
 		<p>NAS4Free use legally portions of FreeNAS 7 which is Copyright &copy; 2005-2011 by Olivier Cochard (olivier@freenas.org).</p>
 		<p>NAS4Free use portions of m0n0wall which is Copyright &copy; 2002-2006 by Manuel Kasper (mk@neon1.net).</p>
 		<p>The compilation of software, code and documentation known as NAS4Free is distributed under the following terms:</p>
-            <p> Redistribution and use in source and binary forms, with or without<br />
-              modification, are permitted provided that the following conditions
-              are met:<br />
-              <br />
+                <p>Redistribution and use in source and binary forms, with or without<br />
+                   modification, are permitted provided that the following conditions are met:</p>
+
               1. Redistributions of source code must retain the above copyright
               notice,<br />
               this list of conditions and the following disclaimer.<br />
@@ -86,21 +76,12 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
               notice, this list of conditions and the following disclaimer in the<br />
               documentation and/or other materials provided with the distribution.<br />
               <br />
-	      3. All advertising materials mentioning features or use of this software<br />
-	      must display the following acknowledgment:<br />
-	      "This product includes software developed by the NAS4Free Project<br />
-	      for use in the NAS4Free Software Distribution. (http://www.nas4free.org).<br />
-              <br />
-              4. The names NAS4Free nor the names of its contributors may be used to<br />
-              endorse or promote products derived from this software without specific<br />
-              prior written permission.<br />
-              <br />
-	      5. Products derived from this software may not be called "NAS4Free"<br />
+	      3. Products derived from this software may not be called "NAS4Free"<br />
 	      nor may "NAS4Free" appear in their names without prior written<br />
 	      permission of the NAS4Free Project. For written permission, please<br />
 	      contact info@nas4free.org<br />
 	      <br />
-	      6. Redistributions of any form whatsoever must retain the following<br />
+	      4. Redistributions of any form whatsoever must retain the following<br />
 	      acknowledgment:<br />
 	      <br />
 	      "This product includes software developed by the NAS4Free Project<br />
