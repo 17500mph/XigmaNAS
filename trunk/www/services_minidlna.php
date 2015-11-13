@@ -81,7 +81,6 @@ $pconfig['inotify'] = isset($config['minidlna']['inotify']);
 if ($_POST) {
 
 	if (isset($_POST['Submit']) && $_POST['Submit']) {
-file_put_contents("/tmp/postsubmit", serialize($_POST));
 	unset($input_errors);
 
 	// Input validation.
