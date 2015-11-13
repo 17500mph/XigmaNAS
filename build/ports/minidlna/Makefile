@@ -61,10 +61,10 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/minidlna.conf ${STAGEDIR}${PREFIX}/etc/minidlna.conf.sample
 
 # NAS4Free install
-	@${INSTALL_SCRIPT} -v ${FILESDIR}/minidlna.in ${NAS4FREE_ROOTFS}/etc/rc.d/minidlna
 	@echo "install for ${NAS4FREE_ROOTFS}"
 	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/sbin/minidlnad ${NAS4FREE_ROOTFS}/usr/local/sbin
 	@${INSTALL_SCRIPT} -v ${WRKDIR}/minidlna ${NAS4FREE_ROOTFS}/usr/local/etc/rc.d
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/minidlna.in ${NAS4FREE_ROOTFS}/etc/rc.d/minidlna
 	${INSTALL_DATA} ${STAGEDIR}${PREFIX}/etc/minidlna.conf.sample ${NAS4FREE_ROOTFS}/usr/local/etc
 	for lang in da de es fr it ja nb nl pl ru sl sv; do \
 		${CP} -pv ${STAGEDIR}${PREFIX}/share/locale/$${lang}/LC_MESSAGES/minidlna.mo ${NAS4FREE_ROOTFS}/usr/local/share/locale/$${lang}/LC_MESSAGES; \
