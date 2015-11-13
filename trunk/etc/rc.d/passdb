@@ -61,7 +61,7 @@ if [ -z "${_logname}" ]; then
 	_logname=`/usr/bin/id -un`
 fi
 # builtin admin
-LOGNAME="${_logname}" net groupmap add ntgroup="admin" unixgroup="admin" type=l > /dev\null
+LOGNAME="${_logname}" net groupmap add ntgroup="admin" unixgroup="admin" type=l > /dev/null
 # all configured groups
 _groupnum=`configxml_get_count "//access/group"`
 while [ ${_groupnum} -gt 0 ]
