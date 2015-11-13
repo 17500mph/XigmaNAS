@@ -76,17 +76,6 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
               notice, this list of conditions and the following disclaimer in the<br />
               documentation and/or other materials provided with the distribution.<br />
               <br />
-	      3. Products derived from this software may not be called "NAS4Free"<br />
-	      nor may "NAS4Free" appear in their names without prior written<br />
-	      permission of the NAS4Free Project. For written permission, please<br />
-	      contact info@nas4free.org<br />
-	      <br />
-	      4. Redistributions of any form whatsoever must retain the following<br />
-	      acknowledgment:<br />
-	      <br />
-	      "This product includes software developed by the NAS4Free Project<br />
-	      for use in the NAS4Free Software Distribution (http://www.nas4free.org)".<br />
-	      <br />
 
               <strong>THIS SOFTWARE IS PROVIDED BY THE NAS4Free PROJECT ``AS IS'' AND ANY<br />
               EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED<br />
@@ -98,7 +87,8 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
               ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT<br />
               (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF<br />
 	      THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</strong><br />
-            <p>The views and conclusions contained in the software and documentation are those of the authors and should<br /> 
+	      <br />
+              <p>The views and conclusions contained in the software and documentation are those of the authors and should<br /> 
                not be interpreted as representing official policies, either expressed or implied, of the NAS4Free Project.</p>
 							</td>
 							
