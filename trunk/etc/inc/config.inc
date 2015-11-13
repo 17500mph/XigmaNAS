@@ -1016,6 +1016,14 @@ function config_upgrade() {
 		$config['minidlna']['container'] = "B";
 		$config['minidlna']['loglevel'] = "info";
 		$config['minidlna']['inotify'] = true;
+		if (isset($config['samba']) && !isset($config['samba']['timesrv']))
+			$config['samba']['timesrv'] = "yes";
+		if (isset($config['samba']) && !isset($config['samba']['doscharset']))
+			$config['samba']['doscharset'] = "CP437";
+		if (isset($config['samba']) && !isset($config['samba']['unixcharset']))
+			$config['samba']['unixcharset'] = "UTF-8";
+		if (isset($config['samba']) && !isset($config['samba']['loglevel']))
+			$config['samba']['loglevel'] = "1";
 		$config['version'] = "2.3";
 	}
 
