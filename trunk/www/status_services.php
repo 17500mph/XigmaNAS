@@ -13,22 +13,43 @@
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
-	1. Redistributions of source code must retain the above copyright notice, this
-	   list of conditions and the following disclaimer.
-	2. Redistributions in binary form must reproduce the above copyright notice,
-	   this list of conditions and the following disclaimer in the documentation
-	   and/or other materials provided with the distribution.
+	1. Redistributions of source code must retain the above copyright
+	   notice, this list of conditions and the following disclaimer.
 
-	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
-	ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-	WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-	DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+	2. Redistributions in binary form must reproduce the above copyright
+	   notice, this list of conditions and the following disclaimer in the
+	   documentation and/or other materials provided with the distribution.
+
+	3. All advertising materials mentioning features or use of this software
+	   must display the following acknowledgment:
+	   "This product includes software developed by the NAS4Free Project
+	   for use in the NAS4Free Software Distribution. (http://www.nas4free.org)".
+
+	4. The names NAS4Free nor the names of its contributors may be used to
+	   endorse or promote products derived from this software without specific
+	   prior written permission.
+
+	5. Products derived from this software may not be called "NAS4Free"
+	   nor may "NAS4Free" appear in their names without prior written
+	   permission of the NAS4Free Project. For written permission, please
+	   contact info@nas4free.org
+
+	6. Redistributions of any form whatsoever must retain the following
+	   acknowledgment:
+
+	   "This product includes software developed by the NAS4Free Project
+	   for use in the NAS4Free Software Distribution (http://www.nas4free.org)".
+
+	THIS SOFTWARE IS PROVIDED BY THE NAS4FREE PROJECT ``AS IS'' AND ANY
+	EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+	WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+	IN NO EVENT SHALL THE NAS4FREE PROJECT OR ITS CONTRIBUTORS BE LIABLE FOR
 	ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
 	(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-	LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-	ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-	(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-	SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+	LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+	ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+	(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+	THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 	The views and conclusions contained in the software and documentation are those
 	of the authors and should not be interpreted as representing official policies,
@@ -52,7 +73,8 @@ $a_service[] = array("desc" => gettext("AFP"), "link" => "services_afp.php", "co
 $a_service[] = array("desc" => gettext("RSYNC"), "link" => "services_rsyncd.php", "config" => "rsyncd", "scriptname" => "rsyncd");
 $a_service[] = array("desc" => gettext("Unison"), "link" => "services_unison.php", "config" => "unison", "scriptname" => "unison");
 $a_service[] = array("desc" => gettext("iSCSI Target"), "link" => "services_iscsitarget.php", "config" => "iscsitarget", "scriptname" => "iscsi_target");
-$a_service[] = array("desc" => gettext("DLNA/UPnP"), "link" => "services_fuppes.php", "config" => "upnp", "scriptname" => "fuppes");
+$a_service[] = array("desc" => gettext("DLNA/UPnP Fuppes"), "link" => "services_fuppes.php", "config" => "upnp", "scriptname" => "fuppes");
+$a_service[] = array("desc" => gettext("DLNA/UPnP MiniDLNA"), "link" => "services_minidlna.php", "config" => "minidlna", "scriptname" => "minidlna");
 $a_service[] = array("desc" => gettext("iTunes/DAAP"), "link" => "services_daap.php", "config" => "daap", "scriptname" => "mt-daapd");
 $a_service[] = array("desc" => gettext("Dynamic DNS"), "link" => "services_dynamicdns.php", "config" => "dynamicdns", "scriptname" => "inadyn");
 $a_service[] = array("desc" => gettext("SNMP"), "link" => "services_snmp.php", "config" => "snmpd", "scriptname" => "bsnmpd");

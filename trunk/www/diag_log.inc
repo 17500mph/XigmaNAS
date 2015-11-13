@@ -9,30 +9,47 @@
 	Portions of freenas (http://www.freenas.org).
 	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
 	All rights reserved.
-	
-	Portions of m0n0wall (http://m0n0.ch/wall).
-	Copyright (c) 2003-2006 Manuel Kasper <mk@neon1.net>.
-	All rights reserved.	
 
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
-	1. Redistributions of source code must retain the above copyright notice, this
-	   list of conditions and the following disclaimer.
-	2. Redistributions in binary form must reproduce the above copyright notice,
-	   this list of conditions and the following disclaimer in the documentation
-	   and/or other materials provided with the distribution.
+	1. Redistributions of source code must retain the above copyright
+	   notice, this list of conditions and the following disclaimer.
 
-	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
-	ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-	WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-	DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+	2. Redistributions in binary form must reproduce the above copyright
+	   notice, this list of conditions and the following disclaimer in the
+	   documentation and/or other materials provided with the distribution.
+
+	3. All advertising materials mentioning features or use of this software
+	   must display the following acknowledgment:
+	   "This product includes software developed by the NAS4Free Project
+	   for use in the NAS4Free Software Distribution. (http://www.nas4free.org)".
+
+	4. The names NAS4Free nor the names of its contributors may be used to
+	   endorse or promote products derived from this software without specific
+	   prior written permission.
+
+	5. Products derived from this software may not be called "NAS4Free"
+	   nor may "NAS4Free" appear in their names without prior written
+	   permission of the NAS4Free Project. For written permission, please
+	   contact info@nas4free.org
+
+	6. Redistributions of any form whatsoever must retain the following
+	   acknowledgment:
+
+	   "This product includes software developed by the NAS4Free Project
+	   for use in the NAS4Free Software Distribution (http://www.nas4free.org)".
+
+	THIS SOFTWARE IS PROVIDED BY THE NAS4FREE PROJECT ``AS IS'' AND ANY
+	EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+	WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+	IN NO EVENT SHALL THE NAS4FREE PROJECT OR ITS CONTRIBUTORS BE LIABLE FOR
 	ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
 	(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-	LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-	ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-	(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-	SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+	LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+	ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+	(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+	THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 	The views and conclusions contained in the software and documentation are those
 	of the authors and should not be interpreted as representing official policies,
@@ -177,13 +194,25 @@ $loginfo = array(
 		)),
 	array(
 		"visible" => TRUE,
-		"desc" => gettext("UPnP"),
+		"desc" => gettext("UPnP/DLNA - Fuppes"),
 		"logfile" => $fuppes_logfile,
 		"filename" => "fuppes.log",
 		"type" => "plain",
 		"pattern" => "/^(.*)$/",
 		"columns" => array(
 			array("title" => gettext("Event"), "class" => "listlr", "param" => "", "pmid" => 1)
+		)),
+	array(
+		"visible" => TRUE,
+		"desc" => gettext("UPnP/DLNA - MiniDLNA"),
+		"logfile" => "{$clogdir}/minidlna.log",
+		"filename" => "minidlna.log",
+		"type" => "plain",
+		"pattern" => "/^(\[\S+\s+\S+\]+\s)(\S+\:\s)(.+)/",
+		"columns" => array(
+			array("title" => gettext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
+			array("title" => gettext("Who"), "class" => "listr", "param" => "nowrap=\"nowrap\"", "pmid" => 2),
+			array("title" => gettext("Event"), "class" => "listr", "param" => "", "pmid" => 3)
 		)),
 	array(
 		"visible" => TRUE,

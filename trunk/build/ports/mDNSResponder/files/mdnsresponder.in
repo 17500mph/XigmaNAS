@@ -134,6 +134,13 @@ mdnsresponder_mkconf()
 			-i "string-length(//upnp/port) = 0" -o "49152" -n -b \
 			-n \
 		-b \
+		-i "count(//minidlna/enable) > 0" \
+			-v "//minidlna/name" -n \
+			-o "_upnp._tcp. ${_domain}" -n \
+			-i "string-length(//minidlna/port) > 0" -v "//minidlna/port" -n -b \
+			-i "string-length(//minidlna/port) = 0" -o "8200" -n -b \
+			-n \
+		-b \
 		-i "count(//daap/enable) > 0" \
 			-v "//daap/servername" -n \
 			-o "_daap._tcp. ${_domain}" -n \
