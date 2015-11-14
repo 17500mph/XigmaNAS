@@ -207,7 +207,7 @@ function transcoding_change() {
 		   <tr>
 			<td class="tabcont">
 				<?php if (true === isset($config['minidlna']['enable'])) {
-					$savemsg = "MiniDLNA enabled. If you like to use Fuppes, disable MiniDLNA first"; 
+					$savemsg = gettext("MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable MiniDLNA first.");
 					if (!empty($savemsg)) print_info_box($savemsg);					
 					}else{?>
 				<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
