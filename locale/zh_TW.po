@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-10-30 21:15+0000\n"
+"POT-Creation-Date: 2015-11-14 10:31+0000\n"
 "PO-Revision-Date: 2015-07-14 10:32+0000\n"
 "Last-Translator: Alex Lin <linuxant@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-13 02:21+0000\n"
+"X-Launchpad-Export-Date: 2015-11-14 18:01+0000\n"
 "X-Generator: Launchpad (build 17845)\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -899,11 +899,23 @@ msgstr "啟動分區是太小了。您需要從LiveCD的或LiveUSB重新安裝�
 msgid "Bridge"
 msgstr "橋接"
 
+msgid "Broadcast interval"
+msgstr ""
+
+#, php-format
+msgid ""
+"Broadcasts its availability every N seconds on the network. (Default 300 "
+"seconds)"
+msgstr ""
+
 msgid "Browseable"
 msgstr "可瀏覽"
 
 msgid "Build date"
 msgstr "建立日期"
+
+msgid "Building database in progress"
+msgstr ""
 
 msgid "Bulgarian"
 msgstr "保加利亞文"
@@ -1203,6 +1215,9 @@ msgid ""
 "system: 'admin@email.address'."
 msgstr "聯絡人資訊，例如系統管理員的姓名或是電子郵件：admin@email.address。"
 
+msgid "Container"
+msgstr ""
+
 msgid "Content"
 msgstr "內容"
 
@@ -1497,8 +1512,11 @@ msgstr "DHCP不能用於LAN接口。"
 msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
 
-msgid "DLNA/UPnP Media Server"
-msgstr "DLNA/UPnP 的媒體伺服器"
+msgid "DLNA/UPnP Fuppes"
+msgstr ""
+
+msgid "DLNA/UPnP MiniDLNA"
+msgstr ""
 
 msgid "DNS domain"
 msgstr "DNS域名"
@@ -2309,6 +2327,9 @@ msgstr "啟用STARTTLS加密。這並不意味著您必須使用TLS，您可以�
 msgid "Enable TLS connections."
 msgstr "啟用TLS連接。"
 
+msgid "Enable TiVo support."
+msgstr ""
+
 msgid "Enable Time Machine support"
 msgstr "啟用 Time Machine 的支持"
 
@@ -2364,6 +2385,9 @@ msgstr "啟用訪客（guest）訪問"
 
 msgid "Enable guest access."
 msgstr "允許訪客（guest）登入。"
+
+msgid "Enable inotify."
+msgstr ""
 
 msgid "Enable keyboard-interactive authentication."
 msgstr "啟用鍵盤認證。"
@@ -2424,6 +2448,9 @@ msgstr "啟用 ident 協議（RFC1413）。"
 
 msgid "Enable the system power control utility"
 msgstr "啟用電源監控程序。"
+
+msgid "Enable to strictly adhere to DLNA standards."
+msgstr ""
 
 msgid "Enable transcoding."
 msgstr "啟用轉碼。"
@@ -2500,6 +2527,11 @@ msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
 msgstr "請輸入該用戶的主目錄的路徑。將此字段留空以使用默認的路徑到 /mnt。"
+
+msgid ""
+"Enter the path to the home directory. The config will be created under the "
+"specified directory."
+msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "請輸入 Traps 傳送端口（預設為 162）。"
@@ -2802,6 +2834,12 @@ msgstr "額滿"
 
 msgid "Full Name"
 msgstr "全名"
+
+msgid "Fuppes"
+msgstr ""
+
+msgid "Fuppes Media Server"
+msgstr ""
 
 msgid "GID"
 msgstr "GID"
@@ -3276,6 +3314,9 @@ msgstr "啟動器端用戶名（CHAP 相互認證）"
 msgid "Initiators"
 msgstr "啟動器（Initiators）"
 
+msgid "Inotify"
+msgstr ""
+
 msgid "Input current (A)"
 msgstr "輸入電流（A）"
 
@@ -3671,6 +3712,9 @@ msgstr "记录设备"
 msgid "Log Level"
 msgstr "記錄檔層級"
 
+msgid "Log level"
+msgstr ""
+
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "這條規則所處理的記錄檔到syslog。"
 
@@ -3904,6 +3948,15 @@ msgstr "MibII"
 
 msgid "Min. passive port"
 msgstr "最小被動端口"
+
+msgid "MiniDLNA"
+msgstr ""
+
+msgid "MiniDLNA A/V Media Server"
+msgstr ""
+
+msgid "Minidlna configuration has been updated."
+msgstr ""
 
 msgid "Minimum"
 msgstr "最小值"
@@ -4582,6 +4635,12 @@ msgstr "操作系統平台"
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "請查看 <a href='%s' target='_blank'>文檔</a>。"
 
+msgid "Please define the Database directory location."
+msgstr ""
+
+msgid "Please define the Media library location."
+msgstr ""
+
 msgid "Please note that blanks in path names are not allowed."
 msgstr "請注意在路徑中不可以有空白字元。"
 
@@ -4681,6 +4740,9 @@ msgstr "前綴"
 
 msgid "Preformatted file system"
 msgstr "已格式化之檔案系統"
+
+msgid "Presentation WebGUI"
+msgstr ""
 
 msgid "Preserve extended attributes"
 msgstr "保留擴展屬性"
@@ -4952,6 +5014,9 @@ msgstr "需要認證。"
 msgid "Required"
 msgstr "必填"
 
+msgid "Rescan database in progress"
+msgstr ""
+
 msgid "Rescan disks"
 msgstr "重新掃描磁碟"
 
@@ -5222,9 +5287,9 @@ msgid ""
 msgstr "選擇已加密的伺服器配置GZIP文件或XML文件，並點擊下面的按鈕來恢復配置。"
 
 msgid ""
-"Select which interface to use. (only selectable if your server has more than "
+"Select which interface to use. (Only selectable if your server has more than "
 "one)"
-msgstr "選擇要使用的介面。（如果您的伺服器有多過一個以上才可選擇）"
+msgstr ""
 
 msgid "Select your read balance algorithm."
 msgstr "請選擇您的閱覽平衡演算法。"
@@ -5601,6 +5666,9 @@ msgstr "存儲交換數據流"
 msgid "Store alternate data streams in Extended Attributes"
 msgstr "存儲交換數據流於擴展屬性"
 
+msgid "Strict DLNA"
+msgstr ""
+
 msgid ""
 "String displayed in the dialog presented to the user when accessing the URL."
 msgstr "當用戶訪問該URL時，在對話框中顯示的字符串。"
@@ -5677,6 +5745,9 @@ msgstr "同步時間"
 
 msgid "Synchronize"
 msgstr "同步"
+
+msgid "Syncthing"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -6910,6 +6981,11 @@ msgstr "此用戶已經存在。"
 msgid "This virtual device name already exists."
 msgstr "此虛擬裝置名稱已經存在。"
 
+msgid ""
+"This will allow server-side downscaling of very large JPEG images, it can "
+"hurt JPEG serving performance on (at least) Sony DLNA products."
+msgstr ""
+
 #, php-format
 msgid ""
 "This will cause %s not to check for newer firmware versions when the <a "
@@ -6938,8 +7014,15 @@ msgstr "這將提供ZFS ACL 支持。（只是 ZFS）"
 msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
 msgstr "這將提供自動快照創建的陰影複製。（只是 ZFS）"
 
+msgid ""
+"This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
+msgstr ""
+
 msgid "TiB"
 msgstr "TiB"
+
+msgid "TiVo support"
+msgstr ""
 
 msgid "Time"
 msgstr "時間"
@@ -7257,8 +7340,11 @@ msgstr "UPS 類型"
 msgid "UPS watchdog status"
 msgstr "UPS 監視狀態"
 
-msgid "UPnP"
-msgstr "UPnP"
+msgid "UPnP/DLNA - Fuppes"
+msgstr ""
+
+msgid "UPnP/DLNA - MiniDLNA"
+msgstr ""
 
 msgid "URI"
 msgstr "URI"
@@ -7343,6 +7429,9 @@ msgstr "使用空白字元來分隔多個主機(一個空白即可)。如果您�
 
 msgid "Use as sparse volume. (thin provisioning)"
 msgstr "用作稀疏卷（虛擬化儲存）。"
+
+msgid "Use inotify monitoring to automatically discover new files."
+msgstr ""
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -7787,6 +7876,9 @@ msgstr "chroot() 所有用戶，除了 root。"
 msgid "day(s)"
 msgstr "天"
 
+msgid "debug"
+msgstr ""
+
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -7798,6 +7890,12 @@ msgstr "在導入時檢測到一個錯誤。"
 #, php-format
 msgid "e.g. %s"
 msgstr "例如：%s"
+
+msgid "error"
+msgstr ""
+
+msgid "fatal"
+msgstr ""
 
 msgid "filechooser"
 msgstr "filechooser"
@@ -7838,6 +7936,9 @@ msgstr "iTunes/DAAP"
 
 msgid "infinity"
 msgstr "無限制"
+
+msgid "info"
+msgstr ""
 
 msgid "load/unload failed."
 msgstr "加載/卸載失敗。"
@@ -7925,3 +8026,17 @@ msgstr "卸載"
 
 msgid "version:"
 msgstr "版本："
+
+msgid "warning"
+msgstr ""
+
+#~ msgid "UPnP"
+#~ msgstr "UPnP"
+
+#~ msgid ""
+#~ "Select which interface to use. (only selectable if your server has more than "
+#~ "one)"
+#~ msgstr "選擇要使用的介面。（如果您的伺服器有多過一個以上才可選擇）"
+
+#~ msgid "DLNA/UPnP Media Server"
+#~ msgstr "DLNA/UPnP 的媒體伺服器"

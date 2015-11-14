@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-10-30 21:15+0000\n"
+"POT-Creation-Date: 2015-11-14 10:31+0000\n"
 "PO-Revision-Date: 2015-10-05 21:47+0000\n"
 "Last-Translator: Robert Gdula <robert.gdula@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-13 02:22+0000\n"
+"X-Launchpad-Export-Date: 2015-11-14 18:01+0000\n"
 "X-Generator: Launchpad (build 17845)\n"
 "X-Poedit-Country: POLAND\n"
 "Language: \n"
@@ -973,11 +973,23 @@ msgstr ""
 msgid "Bridge"
 msgstr "Mostek"
 
+msgid "Broadcast interval"
+msgstr ""
+
+#, php-format
+msgid ""
+"Broadcasts its availability every N seconds on the network. (Default 300 "
+"seconds)"
+msgstr ""
+
 msgid "Browseable"
 msgstr "Widoczny"
 
 msgid "Build date"
 msgstr "Data kompilacji"
+
+msgid "Building database in progress"
+msgstr ""
 
 msgid "Bulgarian"
 msgstr "Bułgarski"
@@ -1291,6 +1303,9 @@ msgstr ""
 "Contact information, e.g. name or email of the person responsible for this "
 "system: 'admin@email.address'."
 
+msgid "Container"
+msgstr ""
+
 msgid "Content"
 msgstr "Zawartość"
 
@@ -1595,8 +1610,11 @@ msgstr "DHCP nie może zostać użyte dla interfejsu LAN"
 msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
 
-msgid "DLNA/UPnP Media Server"
-msgstr "Serwer DLNA/UPnP"
+msgid "DLNA/UPnP Fuppes"
+msgstr ""
+
+msgid "DLNA/UPnP MiniDLNA"
+msgstr ""
 
 msgid "DNS domain"
 msgstr "Domena DNS"
@@ -2433,6 +2451,9 @@ msgstr ""
 msgid "Enable TLS connections."
 msgstr "Włącz połączenia TLS"
 
+msgid "Enable TiVo support."
+msgstr ""
+
 msgid "Enable Time Machine support"
 msgstr "Włącz obsługę Time Machine"
 
@@ -2490,6 +2511,9 @@ msgstr "Włącz dostęp gościa"
 
 msgid "Enable guest access."
 msgstr "Włącz dostęp dla gości."
+
+msgid "Enable inotify."
+msgstr ""
 
 msgid "Enable keyboard-interactive authentication."
 msgstr "Włącz interaktywną autoryzację poprzez klawiaturę ekranową"
@@ -2553,6 +2577,9 @@ msgstr "Włącz protokół identyfikacji (RFC1413)."
 
 msgid "Enable the system power control utility"
 msgstr "Włącz narzędzie kontroli energi systemowej"
+
+msgid "Enable to strictly adhere to DLNA standards."
+msgstr ""
 
 msgid "Enable transcoding."
 msgstr "Włącz kodowanie znaków."
@@ -2638,6 +2665,11 @@ msgid ""
 msgstr ""
 "Podaj ścieżkę dostępu do katalogu domowego tego użytkownika. Pozostaw pole "
 "puste aby użyć domyślną ścieżkę /mnt."
+
+msgid ""
+"Enter the path to the home directory. The config will be created under the "
+"specified directory."
+msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Port na który mają trafiać komunikaty SNMP-Trap (domyślnie 162)."
@@ -2956,6 +2988,12 @@ msgstr "Pełny"
 
 msgid "Full Name"
 msgstr "Pełna nazwa"
+
+msgid "Fuppes"
+msgstr ""
+
+msgid "Fuppes Media Server"
+msgstr ""
 
 msgid "GID"
 msgstr "GID"
@@ -3462,6 +3500,9 @@ msgstr ""
 msgid "Initiators"
 msgstr "Inicjatory"
 
+msgid "Inotify"
+msgstr ""
+
 msgid "Input current (A)"
 msgstr "Prąd wejścia (A)"
 
@@ -3879,6 +3920,9 @@ msgstr "Urządzenie logujące"
 msgid "Log Level"
 msgstr "Poziom logowania"
 
+msgid "Log level"
+msgstr ""
+
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Loguj do syslog pakiety, które zostały zatrzymane przez tą regułę."
 
@@ -4117,6 +4161,15 @@ msgstr "MibII"
 
 msgid "Min. passive port"
 msgstr "Najniższy port pasywny"
+
+msgid "MiniDLNA"
+msgstr ""
+
+msgid "MiniDLNA A/V Media Server"
+msgstr ""
+
+msgid "Minidlna configuration has been updated."
+msgstr ""
 
 msgid "Minimum"
 msgstr "Minimum"
@@ -4838,6 +4891,12 @@ msgstr "System operacyjny platformy"
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "Proszę sprawdzić <a href='%s' target='_blank'>dokumentację</a>."
 
+msgid "Please define the Database directory location."
+msgstr ""
+
+msgid "Please define the Media library location."
+msgstr ""
+
 msgid "Please note that blanks in path names are not allowed."
 msgstr "Puste pola (spacje) nie są dozwolone w ścieżkach"
 
@@ -4940,6 +4999,9 @@ msgstr "Prefiks"
 
 msgid "Preformatted file system"
 msgstr "Wstępnie sformatowany system plików"
+
+msgid "Presentation WebGUI"
+msgstr ""
 
 msgid "Preserve extended attributes"
 msgstr "Zachowaj atrybuty roszerzone"
@@ -5215,6 +5277,9 @@ msgstr "Wymaga autoryzacji."
 
 msgid "Required"
 msgstr "Wymagany"
+
+msgid "Rescan database in progress"
+msgstr ""
 
 msgid "Rescan disks"
 msgstr "Skanuj ponownie dyski"
@@ -5498,10 +5563,9 @@ msgstr ""
 "poniżej by przywrócić konfigurację."
 
 msgid ""
-"Select which interface to use. (only selectable if your server has more than "
+"Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
-"Wybierz używany interfejs. (Można wybrać gdy serwer posiada więcej niż jeden)"
 
 msgid "Select your read balance algorithm."
 msgstr "Wybierz algorytm balansu odczytu"
@@ -5901,6 +5965,9 @@ msgstr "Przechowuj alternatywne strumienie danych"
 msgid "Store alternate data streams in Extended Attributes"
 msgstr "Przechowuj alternatywne strumienie danych z rozszerzonymi atrybutami"
 
+msgid "Strict DLNA"
+msgstr ""
+
 msgid ""
 "String displayed in the dialog presented to the user when accessing the URL."
 msgstr ""
@@ -5980,6 +6047,9 @@ msgstr "Czas synchronizacji"
 
 msgid "Synchronize"
 msgstr "Synchronizuj"
+
+msgid "Syncthing"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -7321,6 +7391,11 @@ msgstr "Ten użytkownik już istnieje."
 msgid "This virtual device name already exists."
 msgstr "Ta nazwa urządzenia wirtualnego już istnieje."
 
+msgid ""
+"This will allow server-side downscaling of very large JPEG images, it can "
+"hurt JPEG serving performance on (at least) Sony DLNA products."
+msgstr ""
+
 #, php-format
 msgid ""
 "This will cause %s not to check for newer firmware versions when the <a "
@@ -7353,8 +7428,15 @@ msgstr "Wprowadzenie kontroli dostępu (ACL) (tylko dla systemu plików ZFS)"
 msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
 msgstr ""
 
+msgid ""
+"This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
+msgstr ""
+
 msgid "TiB"
 msgstr "TB"
+
+msgid "TiVo support"
+msgstr ""
 
 msgid "Time"
 msgstr "Czas"
@@ -7678,8 +7760,11 @@ msgstr "Typ UPS"
 msgid "UPS watchdog status"
 msgstr ""
 
-msgid "UPnP"
-msgstr "UPnP"
+msgid "UPnP/DLNA - Fuppes"
+msgstr ""
+
+msgid "UPnP/DLNA - MiniDLNA"
+msgstr ""
 
 msgid "URI"
 msgstr "URI"
@@ -7766,6 +7851,9 @@ msgstr ""
 
 msgid "Use as sparse volume. (thin provisioning)"
 msgstr "Użyj jako rzadki wolumin. (alokowanie elastyczne)"
+
+msgid "Use inotify monitoring to automatically discover new files."
+msgstr ""
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -8245,6 +8333,9 @@ msgstr ""
 msgid "day(s)"
 msgstr "dzień(dni)"
 
+msgid "debug"
+msgstr ""
+
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -8256,6 +8347,12 @@ msgstr "Wykryto błąd w czasie importowania."
 #, php-format
 msgid "e.g. %s"
 msgstr "np. %s"
+
+msgid "error"
+msgstr ""
+
+msgid "fatal"
+msgstr ""
 
 msgid "filechooser"
 msgstr "Przeglądarka plików"
@@ -8296,6 +8393,9 @@ msgstr "iTunes/DAAP"
 
 msgid "infinity"
 msgstr "nieskończoność"
+
+msgid "info"
+msgstr ""
 
 msgid "load/unload failed."
 msgstr ""
@@ -8383,3 +8483,18 @@ msgstr "odmontuj"
 
 msgid "version:"
 msgstr "wersja:"
+
+msgid "warning"
+msgstr ""
+
+#~ msgid "UPnP"
+#~ msgstr "UPnP"
+
+#~ msgid "DLNA/UPnP Media Server"
+#~ msgstr "Serwer DLNA/UPnP"
+
+#~ msgid ""
+#~ "Select which interface to use. (only selectable if your server has more than "
+#~ "one)"
+#~ msgstr ""
+#~ "Wybierz używany interfejs. (Można wybrać gdy serwer posiada więcej niż jeden)"

@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-10-30 21:15+0000\n"
+"POT-Creation-Date: 2015-11-14 10:31+0000\n"
 "PO-Revision-Date: 2014-12-01 00:17+0000\n"
 "Last-Translator: nomizfs <nomisma@fastmail.fm>\n"
 "Language-Team: NAS4Free <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-13 02:21+0000\n"
+"X-Launchpad-Export-Date: 2015-11-14 18:01+0000\n"
 "X-Generator: Launchpad (build 17845)\n"
 "X-Poedit-Country: FINLAND\n"
 "X-Poedit-Language: Finnish\n"
@@ -927,10 +927,22 @@ msgstr ""
 msgid "Bridge"
 msgstr ""
 
+msgid "Broadcast interval"
+msgstr ""
+
+#, php-format
+msgid ""
+"Broadcasts its availability every N seconds on the network. (Default 300 "
+"seconds)"
+msgstr ""
+
 msgid "Browseable"
 msgstr "Selattava"
 
 msgid "Build date"
+msgstr ""
+
+msgid "Building database in progress"
 msgstr ""
 
 msgid "Bulgarian"
@@ -1233,6 +1245,9 @@ msgstr ""
 "Yhteystiedot, esim. nimi tai sähköposti henkilölle joka vastaa tästä "
 "järjestelmästä: 'admin@email.address'."
 
+msgid "Container"
+msgstr ""
+
 msgid "Content"
 msgstr "Sisältö"
 
@@ -1514,7 +1529,10 @@ msgstr ""
 msgid "DLNA/UPnP"
 msgstr ""
 
-msgid "DLNA/UPnP Media Server"
+msgid "DLNA/UPnP Fuppes"
+msgstr ""
+
+msgid "DLNA/UPnP MiniDLNA"
 msgstr ""
 
 msgid "DNS domain"
@@ -2324,6 +2342,9 @@ msgstr ""
 msgid "Enable TLS connections."
 msgstr ""
 
+msgid "Enable TiVo support."
+msgstr ""
+
 msgid "Enable Time Machine support"
 msgstr ""
 
@@ -2379,6 +2400,9 @@ msgstr ""
 
 msgid "Enable guest access."
 msgstr "Ota vieraan pääsyoikeus käyttöön."
+
+msgid "Enable inotify."
+msgstr ""
 
 msgid "Enable keyboard-interactive authentication."
 msgstr "Ota interaktiivinen näppäimistöllä todennus käyttöön."
@@ -2439,6 +2463,9 @@ msgstr "Ota yksityisyys protokolla käyttöön (RFC1413)."
 
 msgid "Enable the system power control utility"
 msgstr "Ota järjestelmän virranhallinta käyttöön."
+
+msgid "Enable to strictly adhere to DLNA standards."
+msgstr ""
 
 msgid "Enable transcoding."
 msgstr ""
@@ -2516,6 +2543,11 @@ msgstr ""
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
+msgstr ""
+
+msgid ""
+"Enter the path to the home directory. The config will be created under the "
+"specified directory."
 msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
@@ -2821,6 +2853,12 @@ msgstr "Täysi"
 
 msgid "Full Name"
 msgstr "Kokonimi"
+
+msgid "Fuppes"
+msgstr ""
+
+msgid "Fuppes Media Server"
+msgstr ""
 
 msgid "GID"
 msgstr ""
@@ -3287,6 +3325,9 @@ msgstr ""
 msgid "Initiators"
 msgstr ""
 
+msgid "Inotify"
+msgstr ""
+
 msgid "Input current (A)"
 msgstr ""
 
@@ -3688,6 +3729,9 @@ msgstr ""
 msgid "Log Level"
 msgstr "Lokitustaso"
 
+msgid "Log level"
+msgstr ""
+
 msgid "Log packets that are handled by this rule to syslog."
 msgstr ""
 
@@ -3922,6 +3966,15 @@ msgid "MibII"
 msgstr ""
 
 msgid "Min. passive port"
+msgstr ""
+
+msgid "MiniDLNA"
+msgstr ""
+
+msgid "MiniDLNA A/V Media Server"
+msgstr ""
+
+msgid "Minidlna configuration has been updated."
 msgstr ""
 
 msgid "Minimum"
@@ -4599,6 +4652,12 @@ msgstr ""
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr ""
 
+msgid "Please define the Database directory location."
+msgstr ""
+
+msgid "Please define the Media library location."
+msgstr ""
+
 msgid "Please note that blanks in path names are not allowed."
 msgstr ""
 
@@ -4698,6 +4757,9 @@ msgstr "Etuliite"
 
 msgid "Preformatted file system"
 msgstr "Valmiiksi alustettu tiedostojärjestelmä"
+
+msgid "Presentation WebGUI"
+msgstr ""
 
 msgid "Preserve extended attributes"
 msgstr "Säilytä laajennetut määritteet"
@@ -4969,6 +5031,9 @@ msgstr ""
 msgid "Required"
 msgstr ""
 
+msgid "Rescan database in progress"
+msgstr ""
+
 msgid "Rescan disks"
 msgstr ""
 
@@ -5236,7 +5301,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Select which interface to use. (only selectable if your server has more than "
+"Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
 
@@ -5611,6 +5676,9 @@ msgstr ""
 msgid "Store alternate data streams in Extended Attributes"
 msgstr ""
 
+msgid "Strict DLNA"
+msgstr ""
+
 msgid ""
 "String displayed in the dialog presented to the user when accessing the URL."
 msgstr ""
@@ -5686,6 +5754,9 @@ msgid "Synchronization time"
 msgstr ""
 
 msgid "Synchronize"
+msgstr ""
+
+msgid "Syncthing"
 msgstr ""
 
 #, php-format
@@ -6896,6 +6967,11 @@ msgstr ""
 msgid "This virtual device name already exists."
 msgstr ""
 
+msgid ""
+"This will allow server-side downscaling of very large JPEG images, it can "
+"hurt JPEG serving performance on (at least) Sony DLNA products."
+msgstr ""
+
 #, php-format
 msgid ""
 "This will cause %s not to check for newer firmware versions when the <a "
@@ -6924,7 +7000,14 @@ msgstr ""
 msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
 msgstr ""
 
+msgid ""
+"This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
+msgstr ""
+
 msgid "TiB"
+msgstr ""
+
+msgid "TiVo support"
 msgstr ""
 
 msgid "Time"
@@ -7226,8 +7309,11 @@ msgstr ""
 msgid "UPS watchdog status"
 msgstr ""
 
-msgid "UPnP"
-msgstr "UPnP"
+msgid "UPnP/DLNA - Fuppes"
+msgstr ""
+
+msgid "UPnP/DLNA - MiniDLNA"
+msgstr ""
 
 msgid "URI"
 msgstr ""
@@ -7311,6 +7397,9 @@ msgid ""
 msgstr ""
 
 msgid "Use as sparse volume. (thin provisioning)"
+msgstr ""
+
+msgid "Use inotify monitoring to automatically discover new files."
 msgstr ""
 
 msgid ""
@@ -7756,6 +7845,9 @@ msgstr ""
 msgid "day(s)"
 msgstr ""
 
+msgid "debug"
+msgstr ""
+
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -7767,6 +7859,12 @@ msgstr ""
 #, php-format
 msgid "e.g. %s"
 msgstr "esim.. %s"
+
+msgid "error"
+msgstr ""
+
+msgid "fatal"
+msgstr ""
 
 msgid "filechooser"
 msgstr ""
@@ -7806,6 +7904,9 @@ msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
 
 msgid "infinity"
+msgstr ""
+
+msgid "info"
 msgstr ""
 
 msgid "load/unload failed."
@@ -7894,3 +7995,9 @@ msgstr ""
 
 msgid "version:"
 msgstr ""
+
+msgid "warning"
+msgstr ""
+
+#~ msgid "UPnP"
+#~ msgstr "UPnP"

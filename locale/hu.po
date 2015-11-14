@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-10-30 21:15+0000\n"
+"POT-Creation-Date: 2015-11-14 10:31+0000\n"
 "PO-Revision-Date: 2015-10-31 20:14+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-13 02:22+0000\n"
+"X-Launchpad-Export-Date: 2015-11-14 18:01+0000\n"
 "X-Generator: Launchpad (build 17845)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -996,11 +996,23 @@ msgstr ""
 msgid "Bridge"
 msgstr "Híd (bridge)"
 
+msgid "Broadcast interval"
+msgstr ""
+
+#, php-format
+msgid ""
+"Broadcasts its availability every N seconds on the network. (Default 300 "
+"seconds)"
+msgstr ""
+
 msgid "Browseable"
 msgstr "Böngészhető"
 
 msgid "Build date"
 msgstr "Rendszerfordítás ideje"
+
+msgid "Building database in progress"
+msgstr ""
 
 msgid "Bulgarian"
 msgstr "Bulgár"
@@ -1318,6 +1330,9 @@ msgid ""
 msgstr ""
 "Elérhetőség, például a rendszerért felelős személy neve vagy e-mailcíme. "
 "\"rendszergazda@email.cím\"."
+
+msgid "Container"
+msgstr ""
 
 msgid "Content"
 msgstr "Tartalom"
@@ -1657,8 +1672,11 @@ msgstr "LAN interfészhez nem használható DHCP."
 msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
 
-msgid "DLNA/UPnP Media Server"
-msgstr "DLNA/UPnP Média Szerver"
+msgid "DLNA/UPnP Fuppes"
+msgstr ""
+
+msgid "DLNA/UPnP MiniDLNA"
+msgstr ""
 
 msgid "DNS domain"
 msgstr "DNS domain"
@@ -2499,6 +2517,9 @@ msgstr ""
 msgid "Enable TLS connections."
 msgstr "TLS kapcsolat engedélyezése."
 
+msgid "Enable TiVo support."
+msgstr ""
+
 msgid "Enable Time Machine support"
 msgstr "Időkiszolgáló támogatásának engedélyezése"
 
@@ -2555,6 +2576,9 @@ msgstr "Vendég hozzáférés engedélyezése"
 
 msgid "Enable guest access."
 msgstr "Vendég hozzáférés engedélyezése."
+
+msgid "Enable inotify."
+msgstr ""
 
 msgid "Enable keyboard-interactive authentication."
 msgstr "Billentyű-interaktív authentikáció hitelesítés"
@@ -2617,6 +2641,9 @@ msgstr "Ident protocol (RFC1413) engedélyezése"
 
 msgid "Enable the system power control utility"
 msgstr "A rendszer energiafelhasználást irányító eszközének engedélyezése."
+
+msgid "Enable to strictly adhere to DLNA standards."
+msgstr ""
 
 msgid "Enable transcoding."
 msgstr "Transcoding engedélyezése."
@@ -2705,6 +2732,11 @@ msgid ""
 msgstr ""
 "Írd be a felhasználó saját mappájának útvonalát. Ha üresen hagyod, akkor az "
 "alapértelmezett útvonal a /mnt."
+
+msgid ""
+"Enter the path to the home directory. The config will be created under the "
+"specified directory."
+msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Adja meg a csapdák portját (alapértelmezett 162)."
@@ -3023,6 +3055,12 @@ msgstr "Teljes"
 
 msgid "Full Name"
 msgstr "Teljes név"
+
+msgid "Fuppes"
+msgstr ""
+
+msgid "Fuppes Media Server"
+msgstr ""
 
 msgid "GID"
 msgstr "GID"
@@ -3538,6 +3576,9 @@ msgstr "Kezdeményező oldal felhasználóneve (kölcsönös CHAP hitelesítés)
 msgid "Initiators"
 msgstr "Kezdeményezők"
 
+msgid "Inotify"
+msgstr ""
+
 msgid "Input current (A)"
 msgstr "Bemeneti áram (A)"
 
@@ -3971,6 +4012,9 @@ msgstr "Napló eszköz"
 msgid "Log Level"
 msgstr "Naplózási szint"
 
+msgid "Log level"
+msgstr ""
+
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Naplózd készítése a syslog-ba."
 
@@ -4216,6 +4260,15 @@ msgstr "MibII"
 
 msgid "Min. passive port"
 msgstr "Min. passzív port"
+
+msgid "MiniDLNA"
+msgstr ""
+
+msgid "MiniDLNA A/V Media Server"
+msgstr ""
+
+msgid "Minidlna configuration has been updated."
+msgstr ""
 
 msgid "Minimum"
 msgstr "Minimum"
@@ -4949,6 +5002,12 @@ msgstr "Platform operációs rendszere"
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "Kérjük olvasd el a <a href='%s' target='_blank'>dokumentációt</a>."
 
+msgid "Please define the Database directory location."
+msgstr ""
+
+msgid "Please define the Media library location."
+msgstr ""
+
 msgid "Please note that blanks in path names are not allowed."
 msgstr ""
 "Kérjük ügyeljen arra, hogy az elérési útvonal nem tartalmazhat üres "
@@ -5052,6 +5111,9 @@ msgstr "Előtag"
 
 msgid "Preformatted file system"
 msgstr "Előreformázott fájlrendszer"
+
+msgid "Presentation WebGUI"
+msgstr ""
 
 msgid "Preserve extended attributes"
 msgstr "Kiterjesztett attribútumok megtartása"
@@ -5334,6 +5396,9 @@ msgstr "Hitelesítést igényel."
 
 msgid "Required"
 msgstr "Kötelező"
+
+msgid "Rescan database in progress"
+msgstr ""
 
 msgid "Rescan disks"
 msgstr "Lemezek újrakeresése"
@@ -5623,10 +5688,9 @@ msgstr ""
 "visszatöltéséhez."
 
 msgid ""
-"Select which interface to use. (only selectable if your server has more than "
+"Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
-"Válassz interfészt. (csak akkor tudsz választani, ha több mint egy darab van)"
 
 msgid "Select your read balance algorithm."
 msgstr "Válassz olvasási mérlegelési algoritmust."
@@ -6039,6 +6103,9 @@ msgstr "Alternatív adatfolyamok tárolása"
 msgid "Store alternate data streams in Extended Attributes"
 msgstr "Alternatív adatfolyamok tárolása Kiterjesztett Attribútumokban"
 
+msgid "Strict DLNA"
+msgstr ""
+
 msgid ""
 "String displayed in the dialog presented to the user when accessing the URL."
 msgstr ""
@@ -6117,6 +6184,9 @@ msgstr "Szinkronizációs idő"
 
 msgid "Synchronize"
 msgstr "Szinkronizálás"
+
+msgid "Syncthing"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -7565,6 +7635,11 @@ msgstr "A felhasználó már létezik."
 msgid "This virtual device name already exists."
 msgstr "A virtuális meghajtó neve már foglalt."
 
+msgid ""
+"This will allow server-side downscaling of very large JPEG images, it can "
+"hurt JPEG serving performance on (at least) Sony DLNA products."
+msgstr ""
+
 #, php-format
 msgid ""
 "This will cause %s not to check for newer firmware versions when the <a "
@@ -7601,8 +7676,15 @@ msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
 msgstr ""
 "Árnyékmásolatot hoz létre az automatikus pillanatképből. (csak ZFS esetén)"
 
+msgid ""
+"This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
+msgstr ""
+
 msgid "TiB"
 msgstr "TiB"
+
+msgid "TiVo support"
+msgstr ""
 
 msgid "Time"
 msgstr "idő"
@@ -7945,8 +8027,11 @@ msgstr "Szünetmentes típusa"
 msgid "UPS watchdog status"
 msgstr "Szünetmentes watchdog állapot"
 
-msgid "UPnP"
-msgstr "UPnP"
+msgid "UPnP/DLNA - Fuppes"
+msgstr ""
+
+msgid "UPnP/DLNA - MiniDLNA"
+msgstr ""
 
 msgid "URI"
 msgstr "URI"
@@ -8033,6 +8118,9 @@ msgstr ""
 
 msgid "Use as sparse volume. (thin provisioning)"
 msgstr "Sparse kötetként használd. (thin provisioning)"
+
+msgid "Use inotify monitoring to automatically discover new files."
+msgstr ""
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -8522,6 +8610,9 @@ msgstr "chroot() mindenki, kivéve root."
 msgid "day(s)"
 msgstr "nap"
 
+msgid "debug"
+msgstr ""
+
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -8535,6 +8626,12 @@ msgstr "hiba az importálás közben"
 #, php-format
 msgid "e.g. %s"
 msgstr "pl. %s"
+
+msgid "error"
+msgstr ""
+
+msgid "fatal"
+msgstr ""
 
 msgid "filechooser"
 msgstr "fájlválasztó"
@@ -8575,6 +8672,9 @@ msgstr "iTunes/DAAP"
 
 msgid "infinity"
 msgstr "végtelenített"
+
+msgid "info"
+msgstr ""
 
 msgid "load/unload failed."
 msgstr "töltési hiba"
@@ -8662,3 +8762,18 @@ msgstr "leválasztás"
 
 msgid "version:"
 msgstr "verzió:"
+
+msgid "warning"
+msgstr ""
+
+#~ msgid "UPnP"
+#~ msgstr "UPnP"
+
+#~ msgid ""
+#~ "Select which interface to use. (only selectable if your server has more than "
+#~ "one)"
+#~ msgstr ""
+#~ "Válassz interfészt. (csak akkor tudsz választani, ha több mint egy darab van)"
+
+#~ msgid "DLNA/UPnP Media Server"
+#~ msgstr "DLNA/UPnP Média Szerver"

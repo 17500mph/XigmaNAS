@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-10-30 21:15+0000\n"
-"PO-Revision-Date: 2015-11-06 01:34+0000\n"
+"POT-Creation-Date: 2015-11-14 10:31+0000\n"
+"PO-Revision-Date: 2015-11-14 17:55+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-13 02:22+0000\n"
+"X-Launchpad-Export-Date: 2015-11-14 18:02+0000\n"
 "X-Generator: Launchpad (build 17845)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -1014,11 +1014,25 @@ msgstr ""
 msgid "Bridge"
 msgstr "Bridge"
 
+msgid "Broadcast interval"
+msgstr "Uitzend interval"
+
+#, php-format
+msgid ""
+"Broadcasts its availability every N seconds on the network. (Default 300 "
+"seconds)"
+msgstr ""
+"Zendt de beschikbaarheid elke N seconden uit op het netwerk. (Standaard 300 "
+"seconden)"
+
 msgid "Browseable"
 msgstr "Verkenbaar"
 
 msgid "Build date"
 msgstr "Gecompileerd"
+
+msgid "Building database in progress"
+msgstr "De database wordt nu op de achtergrond opgebouwd"
 
 msgid "Bulgarian"
 msgstr "Bulgaars"
@@ -1339,6 +1353,9 @@ msgid ""
 msgstr ""
 "Contact informatie, bijv. de naam of e-mail adres van de persoon die "
 "verantwoordelijk is voor dit systeem: 'admin@email.adres'."
+
+msgid "Container"
+msgstr "Houder"
 
 msgid "Content"
 msgstr "Mediabibliotheek"
@@ -1701,8 +1718,11 @@ msgstr "DHCP kan niet worden gebruikt voor de LAN-interface."
 msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
 
-msgid "DLNA/UPnP Media Server"
-msgstr "DLNA/UPnP Media Server"
+msgid "DLNA/UPnP Fuppes"
+msgstr "DLNA/UPnP Fuppes"
+
+msgid "DLNA/UPnP MiniDLNA"
+msgstr "DLNA/UPnP MiniDLNA"
 
 msgid "DNS domain"
 msgstr "DNS domein"
@@ -2557,6 +2577,9 @@ msgstr ""
 msgid "Enable TLS connections."
 msgstr "Inschakelen TLS verbindingen."
 
+msgid "Enable TiVo support."
+msgstr "Inschakelen TiVo ondersteuning."
+
 msgid "Enable Time Machine support"
 msgstr "Inschakelen Time Machine ondersteuning"
 
@@ -2616,6 +2639,9 @@ msgstr "Inschakelen gast toegang"
 
 msgid "Enable guest access."
 msgstr "Inschakelen gast toegang."
+
+msgid "Enable inotify."
+msgstr "Inschakelen inotify"
 
 msgid "Enable keyboard-interactive authentication."
 msgstr "Inschakelen interactieve-toetsenbord verificatie."
@@ -2681,6 +2707,9 @@ msgstr "Inschakelen van de ident protocol (RFC1413)."
 
 msgid "Enable the system power control utility"
 msgstr "Inschakelen van de systeem energiebeheer service"
+
+msgid "Enable to strictly adhere to DLNA standards."
+msgstr "Inschakelen om zich strikt aan de DLNA-normen te houden."
 
 msgid "Enable transcoding."
 msgstr "Inschakelen hercoderen."
@@ -2769,6 +2798,13 @@ msgid ""
 msgstr ""
 "Vul het pad in naar de hoofdmap van deze gebruiker. Laat dit veld leeg om de "
 "standaard pad te gebruiken /mnt."
+
+msgid ""
+"Enter the path to the home directory. The config will be created under the "
+"specified directory."
+msgstr ""
+"Vul het pad in naar de hoofdmap. De configuratie zal onder de opgegeven map "
+"worden aangemaakt."
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr ""
@@ -3088,6 +3124,12 @@ msgstr "Volledig"
 
 msgid "Full Name"
 msgstr "Volledige naam"
+
+msgid "Fuppes"
+msgstr "Fuppes"
+
+msgid "Fuppes Media Server"
+msgstr "Fuppes Media Server"
 
 msgid "GID"
 msgstr "GID"
@@ -3617,6 +3659,9 @@ msgstr "Initiator zijde gebruikersnaam. (voor wederzijdse CHAP verificatie)"
 msgid "Initiators"
 msgstr "Initiators"
 
+msgid "Inotify"
+msgstr "Inotify"
+
 msgid "Input current (A)"
 msgstr "Ingangsstroom (A)"
 
@@ -4060,6 +4105,9 @@ msgstr "Log-device"
 msgid "Log Level"
 msgstr "Log Niveau"
 
+msgid "Log level"
+msgstr "Log niveau"
+
 msgid "Log packets that are handled by this rule to syslog."
 msgstr ""
 "Log pakketten die worden behandeld door deze regel door naar de syslog."
@@ -4309,6 +4357,15 @@ msgstr "MibII"
 
 msgid "Min. passive port"
 msgstr "Min. passieve poort"
+
+msgid "MiniDLNA"
+msgstr "MiniDLNA"
+
+msgid "MiniDLNA A/V Media Server"
+msgstr "MiniDLNA A/V Media Server"
+
+msgid "Minidlna configuration has been updated."
+msgstr "Minidlna configuratie is bijgewerkt."
 
 msgid "Minimum"
 msgstr "Minimaal"
@@ -5045,6 +5102,12 @@ msgstr "Platform OS"
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "Bekijk de <a href='%s' target='_blank'>documentatie</a>."
 
+msgid "Please define the Database directory location."
+msgstr "Definieer de database locatie."
+
+msgid "Please define the Media library location."
+msgstr "Definieer de Mediatheek locatie."
+
 msgid "Please note that blanks in path names are not allowed."
 msgstr "Spaties in de padnamen niet zijn toegestaan."
 
@@ -5147,6 +5210,9 @@ msgstr "Voorvoegsel"
 
 msgid "Preformatted file system"
 msgstr "Reeds geformatteerd bestandssyteem"
+
+msgid "Presentation WebGUI"
+msgstr "Presentatie WebGUI"
 
 msgid "Preserve extended attributes"
 msgstr "Reserveer externe attubuten"
@@ -5428,6 +5494,9 @@ msgstr "Verificatie vereist."
 
 msgid "Required"
 msgstr "Vereist"
+
+msgid "Rescan database in progress"
+msgstr "Bezig met het bijwerken van de database"
 
 msgid "Rescan disks"
 msgstr "Herscan schijven"
@@ -5716,10 +5785,10 @@ msgstr ""
 "knop 'Configuratie Herstellen' om de server in oude staat te herstellen."
 
 msgid ""
-"Select which interface to use. (only selectable if your server has more than "
+"Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
-"Selecteer de interface om te gebruiken. (alleen te selecteren indien uw "
+"Selecteer het netwerk om te gebruiken. (Alleen te selecteren indien uw "
 "server er meer dan één heeft)"
 
 msgid "Select your read balance algorithm."
@@ -6138,6 +6207,9 @@ msgstr "Opslaan alternatieve gegevensstromen"
 msgid "Store alternate data streams in Extended Attributes"
 msgstr "Opslaan alternatieve gegevensstromen in Uitgebreide Attributen"
 
+msgid "Strict DLNA"
+msgstr "Strikte DLNA"
+
 msgid ""
 "String displayed in the dialog presented to the user when accessing the URL."
 msgstr ""
@@ -6216,6 +6288,9 @@ msgstr "Synchronisatietijd"
 
 msgid "Synchronize"
 msgstr "Synchronisatie"
+
+msgid "Syncthing"
+msgstr "Syncthing"
 
 #, php-format
 msgid ""
@@ -7705,6 +7780,14 @@ msgstr "Deze gebruiker bestaat reeds."
 msgid "This virtual device name already exists."
 msgstr "Deze virtuele schijfnaam bestaat reeds."
 
+msgid ""
+"This will allow server-side downscaling of very large JPEG images, it can "
+"hurt JPEG serving performance on (at least) Sony DLNA products."
+msgstr ""
+"Dit zal aan de server-kant downscaling  toelaten van zeer grote JPEG "
+"afbeeldingen, het kan de JPEG aanbied prestaties negatief beïnvloeden op "
+"(minstens) Sony DLNA producten."
+
 #, php-format
 msgid ""
 "This will cause %s not to check for newer firmware versions when the <a "
@@ -7742,8 +7825,17 @@ msgstr ""
 "Deze optie zorgt voor schaduw kopie ondersteuing, gecreerd door automatische "
 "snapshot (alleen ZFS)"
 
+msgid ""
+"This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
+msgstr ""
+"Dit zal streaming ondersteunen van .jpg en .mp3 bestanden naar een TiVo "
+"ondersteunende HMO."
+
 msgid "TiB"
 msgstr "TiB"
+
+msgid "TiVo support"
+msgstr "TiVo ondersteuning"
 
 msgid "Time"
 msgstr "Tijd"
@@ -8089,8 +8181,11 @@ msgstr "UPS type"
 msgid "UPS watchdog status"
 msgstr "UPS watchdog status"
 
-msgid "UPnP"
-msgstr "UPnP"
+msgid "UPnP/DLNA - Fuppes"
+msgstr "UPnP/DLNA - Fuppes"
+
+msgid "UPnP/DLNA - MiniDLNA"
+msgstr "UPnP/DLNA - MiniDLNA"
 
 msgid "URI"
 msgstr "URI"
@@ -8178,6 +8273,10 @@ msgstr ""
 
 msgid "Use as sparse volume. (thin provisioning)"
 msgstr "Gebruik als sparse volume. (thin provisioning)"
+
+msgid "Use inotify monitoring to automatically discover new files."
+msgstr ""
+"Gebruik inotify monitoring om nieuwe bestanden automatisch te ontdekken."
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -8675,6 +8774,9 @@ msgstr "chroot() iedereen, maar niet de root."
 msgid "day(s)"
 msgstr "dag(en)"
 
+msgid "debug"
+msgstr "foutopsporing"
+
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -8688,6 +8790,12 @@ msgstr "Fout geconstateerd tijdens het importeren."
 #, php-format
 msgid "e.g. %s"
 msgstr "bijv. %s"
+
+msgid "error"
+msgstr "fout"
+
+msgid "fatal"
+msgstr "fataal"
 
 msgid "filechooser"
 msgstr "bestandsselector"
@@ -8728,6 +8836,9 @@ msgstr "iTunes/DAAP"
 
 msgid "infinity"
 msgstr "oneindig"
+
+msgid "info"
+msgstr "info"
 
 msgid "load/unload failed."
 msgstr "load/unload mislukt."
@@ -8815,3 +8926,19 @@ msgstr "loskoppelen"
 
 msgid "version:"
 msgstr "versie:"
+
+msgid "warning"
+msgstr "waarschuwing"
+
+#~ msgid "UPnP"
+#~ msgstr "UPnP"
+
+#~ msgid ""
+#~ "Select which interface to use. (only selectable if your server has more than "
+#~ "one)"
+#~ msgstr ""
+#~ "Selecteer de interface om te gebruiken. (alleen te selecteren indien uw "
+#~ "server er meer dan één heeft)"
+
+#~ msgid "DLNA/UPnP Media Server"
+#~ msgstr "DLNA/UPnP Media Server"
