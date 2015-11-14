@@ -189,7 +189,7 @@ function enable_change(enable_change) {
 		   <tr>
 			<td class="tabcont">
 				<?php if (true === isset($config['upnp']['enable'])) {
-				$savemsg = "Fuppes enabled. If you like to use MiniDLNA , disable Fuppes first";
+				$savemsg = gettext("Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable Fuppes first.");
 				if (!empty($savemsg)) print_info_box($savemsg);
 				}else{?>
 			<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
@@ -216,7 +216,7 @@ function enable_change(enable_change) {
 					<?php html_filechooser("home", gettext("Database directory"), $pconfig['home'], gettext("Location where the database with media contents will be stored."), $g['media_path'], true, 67);?>
 					<?php html_minidlnabox("content", gettext("Media library"), !empty($pconfig['content']) ? $pconfig['content'] : array(), gettext("Location of the files to share."), $g['media_path'], true);?>
 					<?php html_checkbox ("inotify", gettext("Inotify"), !empty($pconfig['inotify']) ? true : false, gettext("Enable inotify."), gettext("Use inotify monitoring to automatically discover new files."), false);?>
-					<?php html_combobox("container", gettext("Container"), $pconfig['container'], array("." => "Standard", "B" =>"Browse Directory", "M" => "Music", "V" => "Video", "P" => "Pictures"), "Use different container as root of the tree.", false, false, "" );?>
+					<?php html_combobox("container", gettext("Container"), $pconfig['container'], array("." => gettext("Standard"), "B" => gettext("Browse Directory"), "M" => gettext("Music"), "V" => gettext("Video"), "P" => gettext("Pictures")), gettext("Use different container as root of the tree."), false, false, "" );?>
 					<?php html_checkbox ("strict", gettext("Strict DLNA"), !empty($pconfig['strict']) ? true : false, gettext("Enable to strictly adhere to DLNA standards."), gettext("This will allow server-side downscaling of very large JPEG images, it can hurt JPEG serving performance on (at least) Sony DLNA products."), false);?>
 					<?php html_checkbox ("tivo", gettext("TiVo support"), !empty($pconfig['tivo']) ? true : false, gettext("Enable TiVo support."), gettext("This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."), false);?>
 					<?php html_combobox("loglevel", gettext("Log level"), $pconfig['loglevel'], array("off" => gettext("Off"), "fatal" => gettext("fatal"), "error" => gettext("error"), "warn" => gettext("warning"), "info" => gettext("info"),"debug" => gettext("debug")), "", false, false, "" );?>
