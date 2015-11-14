@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-10-30 21:15+0000\n"
+"POT-Creation-Date: 2015-11-14 10:31+0000\n"
 "PO-Revision-Date: 2014-11-17 04:09+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-13 02:21+0000\n"
+"X-Launchpad-Export-Date: 2015-11-14 18:01+0000\n"
 "X-Generator: Launchpad (build 17845)\n"
 "X-Poedit-Country: ALBANIA\n"
 "Language: \n"
@@ -936,10 +936,22 @@ msgstr ""
 msgid "Bridge"
 msgstr ""
 
+msgid "Broadcast interval"
+msgstr ""
+
+#, php-format
+msgid ""
+"Broadcasts its availability every N seconds on the network. (Default 300 "
+"seconds)"
+msgstr ""
+
 msgid "Browseable"
 msgstr "I Eksplorushem"
 
 msgid "Build date"
+msgstr ""
+
+msgid "Building database in progress"
 msgstr ""
 
 msgid "Bulgarian"
@@ -1248,6 +1260,9 @@ msgstr ""
 "Informacionet per kontakt, p.sh. emer ose posta elektronike i personit qe "
 "eshte pergjegjes per kete sistem: 'admin@email.adresa'."
 
+msgid "Container"
+msgstr ""
+
 msgid "Content"
 msgstr "Permbajtje"
 
@@ -1529,7 +1544,10 @@ msgstr ""
 msgid "DLNA/UPnP"
 msgstr ""
 
-msgid "DLNA/UPnP Media Server"
+msgid "DLNA/UPnP Fuppes"
+msgstr ""
+
+msgid "DLNA/UPnP MiniDLNA"
 msgstr ""
 
 msgid "DNS domain"
@@ -2350,6 +2368,9 @@ msgstr ""
 msgid "Enable TLS connections."
 msgstr ""
 
+msgid "Enable TiVo support."
+msgstr ""
+
 msgid "Enable Time Machine support"
 msgstr ""
 
@@ -2405,6 +2426,9 @@ msgstr ""
 
 msgid "Enable guest access."
 msgstr "Aktivizo hyrjen e miqve."
+
+msgid "Enable inotify."
+msgstr ""
 
 msgid "Enable keyboard-interactive authentication."
 msgstr ""
@@ -2465,6 +2489,9 @@ msgstr "Aktivo protokollin e identitetit (RFC1413)."
 
 msgid "Enable the system power control utility"
 msgstr "Aktivizo kontrollin energjitik te sistemit"
+
+msgid "Enable to strictly adhere to DLNA standards."
+msgstr ""
 
 msgid "Enable transcoding."
 msgstr "Aktivizo transkodimin."
@@ -2544,6 +2571,11 @@ msgstr ""
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
+msgstr ""
+
+msgid ""
+"Enter the path to the home directory. The config will be created under the "
+"specified directory."
 msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
@@ -2857,6 +2889,12 @@ msgstr "Plot"
 
 msgid "Full Name"
 msgstr "Emri i Plotë"
+
+msgid "Fuppes"
+msgstr ""
+
+msgid "Fuppes Media Server"
+msgstr ""
 
 msgid "GID"
 msgstr "GID"
@@ -3334,6 +3372,9 @@ msgstr ""
 msgid "Initiators"
 msgstr "Iniciatoret"
 
+msgid "Inotify"
+msgstr ""
+
 msgid "Input current (A)"
 msgstr ""
 
@@ -3739,6 +3780,9 @@ msgstr ""
 msgid "Log Level"
 msgstr ""
 
+msgid "Log level"
+msgstr ""
+
 msgid "Log packets that are handled by this rule to syslog."
 msgstr ""
 
@@ -3974,6 +4018,15 @@ msgstr "MibII"
 
 msgid "Min. passive port"
 msgstr "Minimumi i portave pasive"
+
+msgid "MiniDLNA"
+msgstr ""
+
+msgid "MiniDLNA A/V Media Server"
+msgstr ""
+
+msgid "Minidlna configuration has been updated."
+msgstr ""
 
 msgid "Minimum"
 msgstr "Minimum"
@@ -4664,6 +4717,12 @@ msgstr ""
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr ""
 
+msgid "Please define the Database directory location."
+msgstr ""
+
+msgid "Please define the Media library location."
+msgstr ""
+
 msgid "Please note that blanks in path names are not allowed."
 msgstr ""
 
@@ -4762,6 +4821,9 @@ msgid "Prefix"
 msgstr "Prefiks"
 
 msgid "Preformatted file system"
+msgstr ""
+
+msgid "Presentation WebGUI"
 msgstr ""
 
 msgid "Preserve extended attributes"
@@ -5034,6 +5096,9 @@ msgstr "Kerkohet autentikim"
 msgid "Required"
 msgstr "Kerkohet"
 
+msgid "Rescan database in progress"
+msgstr ""
+
 msgid "Rescan disks"
 msgstr ""
 
@@ -5301,7 +5366,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Select which interface to use. (only selectable if your server has more than "
+"Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
 
@@ -5676,6 +5741,9 @@ msgstr ""
 msgid "Store alternate data streams in Extended Attributes"
 msgstr ""
 
+msgid "Strict DLNA"
+msgstr ""
+
 msgid ""
 "String displayed in the dialog presented to the user when accessing the URL."
 msgstr ""
@@ -5751,6 +5819,9 @@ msgid "Synchronization time"
 msgstr ""
 
 msgid "Synchronize"
+msgstr ""
+
+msgid "Syncthing"
 msgstr ""
 
 #, php-format
@@ -6960,6 +7031,11 @@ msgstr ""
 msgid "This virtual device name already exists."
 msgstr ""
 
+msgid ""
+"This will allow server-side downscaling of very large JPEG images, it can "
+"hurt JPEG serving performance on (at least) Sony DLNA products."
+msgstr ""
+
 #, php-format
 msgid ""
 "This will cause %s not to check for newer firmware versions when the <a "
@@ -6988,7 +7064,14 @@ msgstr ""
 msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
 msgstr ""
 
+msgid ""
+"This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
+msgstr ""
+
 msgid "TiB"
+msgstr ""
+
+msgid "TiVo support"
 msgstr ""
 
 msgid "Time"
@@ -7292,8 +7375,11 @@ msgstr ""
 msgid "UPS watchdog status"
 msgstr ""
 
-msgid "UPnP"
-msgstr "UPnP"
+msgid "UPnP/DLNA - Fuppes"
+msgstr ""
+
+msgid "UPnP/DLNA - MiniDLNA"
+msgstr ""
 
 msgid "URI"
 msgstr ""
@@ -7377,6 +7463,9 @@ msgid ""
 msgstr ""
 
 msgid "Use as sparse volume. (thin provisioning)"
+msgstr ""
+
+msgid "Use inotify monitoring to automatically discover new files."
 msgstr ""
 
 msgid ""
@@ -7828,6 +7917,9 @@ msgstr ""
 msgid "day(s)"
 msgstr "ditë(t)"
 
+msgid "debug"
+msgstr ""
+
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -7839,6 +7931,12 @@ msgstr ""
 #, php-format
 msgid "e.g. %s"
 msgstr "shembull. %s"
+
+msgid "error"
+msgstr ""
+
+msgid "fatal"
+msgstr ""
 
 msgid "filechooser"
 msgstr "Zgjedhja e dosjes"
@@ -7878,6 +7976,9 @@ msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
 
 msgid "infinity"
+msgstr ""
+
+msgid "info"
 msgstr ""
 
 msgid "load/unload failed."
@@ -7966,3 +8067,9 @@ msgstr "zmonto"
 
 msgid "version:"
 msgstr ""
+
+msgid "warning"
+msgstr ""
+
+#~ msgid "UPnP"
+#~ msgstr "UPnP"

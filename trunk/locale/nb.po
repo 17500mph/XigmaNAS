@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-10-30 21:15+0000\n"
+"POT-Creation-Date: 2015-11-14 10:31+0000\n"
 "PO-Revision-Date: 2015-04-05 17:53+0000\n"
 "Last-Translator: Asbjørn <lordcrc@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-13 02:22+0000\n"
+"X-Launchpad-Export-Date: 2015-11-14 18:01+0000\n"
 "X-Generator: Launchpad (build 17845)\n"
 "X-Poedit-Country: NORWAY\n"
 "Language: \n"
@@ -945,10 +945,22 @@ msgstr ""
 msgid "Bridge"
 msgstr ""
 
+msgid "Broadcast interval"
+msgstr ""
+
+#, php-format
+msgid ""
+"Broadcasts its availability every N seconds on the network. (Default 300 "
+"seconds)"
+msgstr ""
+
 msgid "Browseable"
 msgstr "Søkbar"
 
 msgid "Build date"
+msgstr ""
+
+msgid "Building database in progress"
 msgstr ""
 
 msgid "Bulgarian"
@@ -1259,6 +1271,9 @@ msgstr ""
 "Kontaktinformasjon, f.eks. navn eller e-post til personen ansvarlig for "
 "dette systemet: 'admin@epost.adresse'."
 
+msgid "Container"
+msgstr ""
+
 msgid "Content"
 msgstr "Innhold"
 
@@ -1546,7 +1561,10 @@ msgstr ""
 msgid "DLNA/UPnP"
 msgstr ""
 
-msgid "DLNA/UPnP Media Server"
+msgid "DLNA/UPnP Fuppes"
+msgstr ""
+
+msgid "DLNA/UPnP MiniDLNA"
 msgstr ""
 
 msgid "DNS domain"
@@ -2370,6 +2388,9 @@ msgstr ""
 msgid "Enable TLS connections."
 msgstr ""
 
+msgid "Enable TiVo support."
+msgstr ""
+
 msgid "Enable Time Machine support"
 msgstr ""
 
@@ -2427,6 +2448,9 @@ msgstr ""
 
 msgid "Enable guest access."
 msgstr "Tillat gjeste tilgang"
+
+msgid "Enable inotify."
+msgstr ""
 
 msgid "Enable keyboard-interactive authentication."
 msgstr "Slå på tastatur-interaktiv autentisering."
@@ -2490,6 +2514,9 @@ msgstr "Slå på ident protokollen (RFC1413)"
 
 msgid "Enable the system power control utility"
 msgstr "Slå på system strøm kontroll verktøyet."
+
+msgid "Enable to strictly adhere to DLNA standards."
+msgstr ""
 
 msgid "Enable transcoding."
 msgstr "Slå på transkoding"
@@ -2572,6 +2599,11 @@ msgid ""
 msgstr ""
 "Skriv inn banen til brukerens hjemmeområde. Om feltet er tomt brukes /mnt "
 "som standard."
+
+msgid ""
+"Enter the path to the home directory. The config will be created under the "
+"specified directory."
+msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Angi portnummeret som fellene skal sende til (standard 162)."
@@ -2881,6 +2913,12 @@ msgstr "Full"
 
 msgid "Full Name"
 msgstr "Fullt navn"
+
+msgid "Fuppes"
+msgstr ""
+
+msgid "Fuppes Media Server"
+msgstr ""
 
 msgid "GID"
 msgstr "GID"
@@ -3364,6 +3402,9 @@ msgstr ""
 msgid "Initiators"
 msgstr ""
 
+msgid "Inotify"
+msgstr ""
+
 msgid "Input current (A)"
 msgstr ""
 
@@ -3762,6 +3803,9 @@ msgstr ""
 msgid "Log Level"
 msgstr "Logg nivå"
 
+msgid "Log level"
+msgstr ""
+
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Loggpakker som er håndtert av denne regelen til syslog."
 
@@ -3997,6 +4041,15 @@ msgstr "MibII"
 
 msgid "Min. passive port"
 msgstr "Min. passive port"
+
+msgid "MiniDLNA"
+msgstr ""
+
+msgid "MiniDLNA A/V Media Server"
+msgstr ""
+
+msgid "Minidlna configuration has been updated."
+msgstr ""
 
 msgid "Minimum"
 msgstr "Minimum"
@@ -4694,6 +4747,12 @@ msgstr ""
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr ""
 
+msgid "Please define the Database directory location."
+msgstr ""
+
+msgid "Please define the Media library location."
+msgstr ""
+
 msgid "Please note that blanks in path names are not allowed."
 msgstr "Legg merke til at tomme felter i navn på baner ikke er tilltatt."
 
@@ -4796,6 +4855,9 @@ msgstr "Prefiks"
 
 msgid "Preformatted file system"
 msgstr "Preformatert filsystem"
+
+msgid "Presentation WebGUI"
+msgstr ""
 
 msgid "Preserve extended attributes"
 msgstr "Behold utvidede attributter"
@@ -5073,6 +5135,9 @@ msgstr "Krev autentisering."
 msgid "Required"
 msgstr "Obligatorisk"
 
+msgid "Rescan database in progress"
+msgstr ""
+
 msgid "Rescan disks"
 msgstr ""
 
@@ -5340,7 +5405,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Select which interface to use. (only selectable if your server has more than "
+"Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
 
@@ -5724,6 +5789,9 @@ msgstr ""
 msgid "Store alternate data streams in Extended Attributes"
 msgstr ""
 
+msgid "Strict DLNA"
+msgstr ""
+
 msgid ""
 "String displayed in the dialog presented to the user when accessing the URL."
 msgstr ""
@@ -5800,6 +5868,9 @@ msgstr ""
 
 msgid "Synchronize"
 msgstr "Synkroniser"
+
+msgid "Syncthing"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -7025,6 +7096,11 @@ msgstr ""
 msgid "This virtual device name already exists."
 msgstr ""
 
+msgid ""
+"This will allow server-side downscaling of very large JPEG images, it can "
+"hurt JPEG serving performance on (at least) Sony DLNA products."
+msgstr ""
+
 #, php-format
 msgid ""
 "This will cause %s not to check for newer firmware versions when the <a "
@@ -7055,7 +7131,14 @@ msgstr ""
 msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
 msgstr ""
 
+msgid ""
+"This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
+msgstr ""
+
 msgid "TiB"
+msgstr ""
+
+msgid "TiVo support"
 msgstr ""
 
 msgid "Time"
@@ -7359,8 +7442,11 @@ msgstr ""
 msgid "UPS watchdog status"
 msgstr ""
 
-msgid "UPnP"
-msgstr "UPnP"
+msgid "UPnP/DLNA - Fuppes"
+msgstr ""
+
+msgid "UPnP/DLNA - MiniDLNA"
+msgstr ""
 
 msgid "URI"
 msgstr ""
@@ -7446,6 +7532,9 @@ msgstr ""
 "sette opp minst en DNS tjener hvis du skriver inn et vertsnavn her!"
 
 msgid "Use as sparse volume. (thin provisioning)"
+msgstr ""
+
+msgid "Use inotify monitoring to automatically discover new files."
 msgstr ""
 
 msgid ""
@@ -7896,6 +7985,9 @@ msgstr "chroot()  alle bortsett fra root."
 msgid "day(s)"
 msgstr ""
 
+msgid "debug"
+msgstr ""
+
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -7907,6 +7999,12 @@ msgstr ""
 #, php-format
 msgid "e.g. %s"
 msgstr "f.eks. %s"
+
+msgid "error"
+msgstr ""
+
+msgid "fatal"
+msgstr ""
 
 msgid "filechooser"
 msgstr ""
@@ -7946,6 +8044,9 @@ msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
 
 msgid "infinity"
+msgstr ""
+
+msgid "info"
 msgstr ""
 
 msgid "load/unload failed."
@@ -8034,3 +8135,9 @@ msgstr "avmontér"
 
 msgid "version:"
 msgstr ""
+
+msgid "warning"
+msgstr ""
+
+#~ msgid "UPnP"
+#~ msgstr "UPnP"

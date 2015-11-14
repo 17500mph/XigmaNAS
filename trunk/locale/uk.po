@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-10-30 21:15+0000\n"
+"POT-Creation-Date: 2015-11-14 10:31+0000\n"
 "PO-Revision-Date: 2015-11-04 13:58+0000\n"
 "Last-Translator: Balabuha <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-13 02:21+0000\n"
+"X-Launchpad-Export-Date: 2015-11-14 18:01+0000\n"
 "X-Generator: Launchpad (build 17845)\n"
 "Language: uk\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -958,11 +958,23 @@ msgstr ""
 msgid "Bridge"
 msgstr "Міст"
 
+msgid "Broadcast interval"
+msgstr ""
+
+#, php-format
+msgid ""
+"Broadcasts its availability every N seconds on the network. (Default 300 "
+"seconds)"
+msgstr ""
+
 msgid "Browseable"
 msgstr "Доступний для перегляду (листання)"
 
 msgid "Build date"
 msgstr "Дата збірки"
+
+msgid "Building database in progress"
+msgstr ""
 
 msgid "Bulgarian"
 msgstr "Болгарська"
@@ -1276,6 +1288,9 @@ msgstr ""
 "Контактна інформація, наприклад ім'я або адреса електронної пошти особи, "
 "відповідальної за цю систему: «admin@email.address»."
 
+msgid "Container"
+msgstr ""
+
 msgid "Content"
 msgstr "Вміст"
 
@@ -1579,8 +1594,11 @@ msgstr ""
 msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
 
-msgid "DLNA/UPnP Media Server"
-msgstr "Медіасервер DLNA/UPnP"
+msgid "DLNA/UPnP Fuppes"
+msgstr ""
+
+msgid "DLNA/UPnP MiniDLNA"
+msgstr ""
 
 msgid "DNS domain"
 msgstr ""
@@ -2416,6 +2434,9 @@ msgstr ""
 msgid "Enable TLS connections."
 msgstr ""
 
+msgid "Enable TiVo support."
+msgstr ""
+
 msgid "Enable Time Machine support"
 msgstr "Увімкнути підтримку Time Machine"
 
@@ -2474,6 +2495,9 @@ msgstr "Дозволити гостьовий доступ"
 
 msgid "Enable guest access."
 msgstr "Дозволити гостьовий доступ."
+
+msgid "Enable inotify."
+msgstr ""
 
 msgid "Enable keyboard-interactive authentication."
 msgstr "Увімкнути інтерактивну клавіатурну автентифікацію."
@@ -2536,6 +2560,9 @@ msgstr "Увімкнути протокол ідентифікації (RFC1413)
 
 msgid "Enable the system power control utility"
 msgstr "Увімкнути утиліту контролю системного живлення"
+
+msgid "Enable to strictly adhere to DLNA standards."
+msgstr ""
 
 msgid "Enable transcoding."
 msgstr "Дозволити перекодування."
@@ -2618,6 +2645,11 @@ msgid ""
 msgstr ""
 "Введіть шлях додомашньої директорії цього користувача. Залишіть поле пустим "
 "для використання типового шляху /mnt."
+
+msgid ""
+"Enter the path to the home directory. The config will be created under the "
+"specified directory."
+msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr ""
@@ -2930,6 +2962,12 @@ msgstr "Повний"
 
 msgid "Full Name"
 msgstr "Повне ім'я"
+
+msgid "Fuppes"
+msgstr ""
+
+msgid "Fuppes Media Server"
+msgstr ""
 
 msgid "GID"
 msgstr "GID"
@@ -3405,6 +3443,9 @@ msgstr ""
 msgid "Initiators"
 msgstr "Ініціатори"
 
+msgid "Inotify"
+msgstr ""
+
 msgid "Input current (A)"
 msgstr "Вхідний струм (A)"
 
@@ -3813,6 +3854,9 @@ msgstr "Пристрій для журналу"
 msgid "Log Level"
 msgstr "Рівень запису до журналу"
 
+msgid "Log level"
+msgstr ""
+
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Записувати пакети, оброблені цим правилом до журналу syslog."
 
@@ -4048,6 +4092,15 @@ msgstr "MibII"
 
 msgid "Min. passive port"
 msgstr "Мінімальний пасивний порт"
+
+msgid "MiniDLNA"
+msgstr ""
+
+msgid "MiniDLNA A/V Media Server"
+msgstr ""
+
+msgid "Minidlna configuration has been updated."
+msgstr ""
 
 msgid "Minimum"
 msgstr "Мінімум"
@@ -4739,6 +4792,12 @@ msgstr "ОС платформи"
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr ""
 
+msgid "Please define the Database directory location."
+msgstr ""
+
+msgid "Please define the Media library location."
+msgstr ""
+
 msgid "Please note that blanks in path names are not allowed."
 msgstr "Зауважте, що пробіли в іменах шляхів не дозволені."
 
@@ -4838,6 +4897,9 @@ msgstr "Префікс"
 
 msgid "Preformatted file system"
 msgstr "Відпорматована файлова система"
+
+msgid "Presentation WebGUI"
+msgstr ""
 
 msgid "Preserve extended attributes"
 msgstr "Зберегти розширені атрибути"
@@ -5121,6 +5183,9 @@ msgstr "Потрібна аутентифікація."
 msgid "Required"
 msgstr "Вимагається"
 
+msgid "Rescan database in progress"
+msgstr ""
+
 msgid "Rescan disks"
 msgstr "Пересканувати диски"
 
@@ -5388,7 +5453,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Select which interface to use. (only selectable if your server has more than "
+"Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
 
@@ -5764,6 +5829,9 @@ msgstr ""
 msgid "Store alternate data streams in Extended Attributes"
 msgstr ""
 
+msgid "Strict DLNA"
+msgstr ""
+
 msgid ""
 "String displayed in the dialog presented to the user when accessing the URL."
 msgstr ""
@@ -5839,6 +5907,9 @@ msgid "Synchronization time"
 msgstr ""
 
 msgid "Synchronize"
+msgstr ""
+
+msgid "Syncthing"
 msgstr ""
 
 #, php-format
@@ -7074,6 +7145,11 @@ msgstr "Такий користувач вже існує."
 msgid "This virtual device name already exists."
 msgstr "Таке ім'я віртуального пристрою вже існує."
 
+msgid ""
+"This will allow server-side downscaling of very large JPEG images, it can "
+"hurt JPEG serving performance on (at least) Sony DLNA products."
+msgstr ""
+
 #, php-format
 msgid ""
 "This will cause %s not to check for newer firmware versions when the <a "
@@ -7102,8 +7178,15 @@ msgstr ""
 msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
 msgstr ""
 
+msgid ""
+"This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
+msgstr ""
+
 msgid "TiB"
 msgstr "ТіБ"
+
+msgid "TiVo support"
+msgstr ""
 
 msgid "Time"
 msgstr "Час"
@@ -7412,8 +7495,11 @@ msgstr "Тип ДБЖ"
 msgid "UPS watchdog status"
 msgstr "Статус сторожового таймера ДБЖ"
 
-msgid "UPnP"
-msgstr "UPnP"
+msgid "UPnP/DLNA - Fuppes"
+msgstr ""
+
+msgid "UPnP/DLNA - MiniDLNA"
+msgstr ""
 
 msgid "URI"
 msgstr "URI"
@@ -7497,6 +7583,9 @@ msgid ""
 msgstr ""
 
 msgid "Use as sparse volume. (thin provisioning)"
+msgstr ""
+
+msgid "Use inotify monitoring to automatically discover new files."
 msgstr ""
 
 msgid ""
@@ -7943,6 +8032,9 @@ msgstr ""
 msgid "day(s)"
 msgstr "день(днів)"
 
+msgid "debug"
+msgstr ""
+
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -7954,6 +8046,12 @@ msgstr "під час імпорту виявлено помилку."
 #, php-format
 msgid "e.g. %s"
 msgstr "наприклад %s"
+
+msgid "error"
+msgstr ""
+
+msgid "fatal"
+msgstr ""
 
 msgid "filechooser"
 msgstr ""
@@ -7994,6 +8092,9 @@ msgstr "iTunes/DAAP"
 
 msgid "infinity"
 msgstr "безкінечно"
+
+msgid "info"
+msgstr ""
 
 msgid "load/unload failed."
 msgstr "сбій завантаження / розвантаження."
@@ -8081,3 +8182,12 @@ msgstr "umount"
 
 msgid "version:"
 msgstr "версія:"
+
+msgid "warning"
+msgstr ""
+
+#~ msgid "UPnP"
+#~ msgstr "UPnP"
+
+#~ msgid "DLNA/UPnP Media Server"
+#~ msgstr "Медіасервер DLNA/UPnP"

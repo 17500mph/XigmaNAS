@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-10-30 21:15+0000\n"
+"POT-Creation-Date: 2015-11-14 10:31+0000\n"
 "PO-Revision-Date: 2015-11-05 18:31+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-13 02:22+0000\n"
+"X-Launchpad-Export-Date: 2015-11-14 18:02+0000\n"
 "X-Generator: Launchpad (build 17845)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -1015,11 +1015,23 @@ msgstr ""
 msgid "Bridge"
 msgstr "Síťový most"
 
+msgid "Broadcast interval"
+msgstr ""
+
+#, php-format
+msgid ""
+"Broadcasts its availability every N seconds on the network. (Default 300 "
+"seconds)"
+msgstr ""
+
 msgid "Browseable"
 msgstr "Možné procházet"
 
 msgid "Build date"
 msgstr "Datum sestavení"
+
+msgid "Building database in progress"
+msgstr ""
 
 msgid "Bulgarian"
 msgstr "bulharština"
@@ -1349,6 +1361,9 @@ msgid ""
 msgstr ""
 "Kontaktní údaje, např. jméno nebo e-mailová adresa osoby, zodpovědné za "
 "tento systém, např.: admin@emailova.adresa."
+
+msgid "Container"
+msgstr ""
 
 msgid "Content"
 msgstr "Obsah"
@@ -1711,8 +1726,11 @@ msgstr ""
 msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
 
-msgid "DLNA/UPnP Media Server"
-msgstr "DLNA/UPnP server s multimédii"
+msgid "DLNA/UPnP Fuppes"
+msgstr ""
+
+msgid "DLNA/UPnP MiniDLNA"
+msgstr ""
 
 msgid "DNS domain"
 msgstr "DNS doména"
@@ -2556,6 +2574,9 @@ msgstr ""
 msgid "Enable TLS connections."
 msgstr "Zapnout TLS spojení."
 
+msgid "Enable TiVo support."
+msgstr ""
+
 msgid "Enable Time Machine support"
 msgstr "Zapnout podporu pro aplikaci Apple Time Machine"
 
@@ -2615,6 +2636,9 @@ msgstr "Umožnit přístup hostovi"
 
 msgid "Enable guest access."
 msgstr "Umožnit anonymní přístup."
+
+msgid "Enable inotify."
+msgstr ""
 
 msgid "Enable keyboard-interactive authentication."
 msgstr "Zapnout interaktivní ověřování pomocí klávesnice."
@@ -2680,6 +2704,9 @@ msgstr "Používat protokol ident (norma RFC1413)"
 
 msgid "Enable the system power control utility"
 msgstr "Zapnout systémový nástroj pro správu napájení"
+
+msgid "Enable to strictly adhere to DLNA standards."
+msgstr ""
 
 msgid "Enable transcoding."
 msgstr "Zapnout převod kódování znaků"
@@ -2768,6 +2795,11 @@ msgid ""
 msgstr ""
 "Zadejte umístění domovské složky tohoto uživatele. Pokud má být využíváno "
 "výchozí umístění (/mnt), nevyplňujte."
+
+msgid ""
+"Enter the path to the home directory. The config will be created under the "
+"specified directory."
+msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr ""
@@ -3089,6 +3121,12 @@ msgstr "Plné"
 
 msgid "Full Name"
 msgstr "Úplný název"
+
+msgid "Fuppes"
+msgstr ""
+
+msgid "Fuppes Media Server"
+msgstr ""
 
 msgid "GID"
 msgstr "Identifikátor skupiny (GID)"
@@ -3617,6 +3655,9 @@ msgstr ""
 msgid "Initiators"
 msgstr "Iniciátory"
 
+msgid "Inotify"
+msgstr ""
+
 msgid "Input current (A)"
 msgstr "Vstupní proud (A)"
 
@@ -4063,6 +4104,9 @@ msgstr "Zařízení, na které zaznamenávat události"
 msgid "Log Level"
 msgstr "Podrobnost protokolování"
 
+msgid "Log level"
+msgstr ""
+
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Zaznamenávat pakety, odpovídající tomuto pravidlu, do syslog."
 
@@ -4317,6 +4361,15 @@ msgstr "MIB-II"
 
 msgid "Min. passive port"
 msgstr "Nejnižší číslo pasivního portu"
+
+msgid "MiniDLNA"
+msgstr ""
+
+msgid "MiniDLNA A/V Media Server"
+msgstr ""
+
+msgid "Minidlna configuration has been updated."
+msgstr ""
 
 msgid "Minimum"
 msgstr "Nejnižší hodnota"
@@ -5051,6 +5104,12 @@ msgstr "Operační systém platformy"
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "Viz <a href='%s' target='_blank'>dokumentace</a>."
 
+msgid "Please define the Database directory location."
+msgstr ""
+
+msgid "Please define the Media library location."
+msgstr ""
+
 msgid "Please note that blanks in path names are not allowed."
 msgstr ""
 "Mějte na paměti, že v popisech umístění nejsou dovoleny prázdné znaky "
@@ -5160,6 +5219,9 @@ msgstr "Předpona"
 
 msgid "Preformatted file system"
 msgstr "Předpřipraveno se souborovým systémem"
+
+msgid "Presentation WebGUI"
+msgstr ""
 
 msgid "Preserve extended attributes"
 msgstr "Zachovat rozšířené atributy"
@@ -5441,6 +5503,9 @@ msgstr "Vyžadovat ověření."
 
 msgid "Required"
 msgstr "Vyžadováno"
+
+msgid "Rescan database in progress"
+msgstr ""
 
 msgid "Rescan disks"
 msgstr "Znovu zjistit disky"
@@ -5729,11 +5794,9 @@ msgstr ""
 "záloze."
 
 msgid ""
-"Select which interface to use. (only selectable if your server has more than "
+"Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
-"Vyberte rozhraní, které k tomu použít. (k dispozici pouze tehdy, pokud je "
-"tento server vybaven více než jedním)"
 
 msgid "Select your read balance algorithm."
 msgstr "Vyberte algoritmus vyvažování čtení."
@@ -6147,6 +6210,9 @@ msgstr "Uložit alternativní datové proudy."
 msgid "Store alternate data streams in Extended Attributes"
 msgstr "Uložit alternativní datové proudy v Rozšířených atributech."
 
+msgid "Strict DLNA"
+msgstr ""
+
 msgid ""
 "String displayed in the dialog presented to the user when accessing the URL."
 msgstr ""
@@ -6225,6 +6291,9 @@ msgstr "Čas synchronizace"
 
 msgid "Synchronize"
 msgstr "Synchronizovat"
+
+msgid "Syncthing"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -7695,6 +7764,11 @@ msgstr "Toto uživatelské jméno je už  v systému používáno."
 msgid "This virtual device name already exists."
 msgstr "Tento název je už používán jiným virtuálním zařízením."
 
+msgid ""
+"This will allow server-side downscaling of very large JPEG images, it can "
+"hurt JPEG serving performance on (at least) Sony DLNA products."
+msgstr ""
+
 #, php-format
 msgid ""
 "This will cause %s not to check for newer firmware versions when the <a "
@@ -7733,8 +7807,15 @@ msgstr ""
 "Toto poskytuje stínovou kopii vytvořenou automatickým pořízením zachyceného "
 "stavu. (pouze ZFS)"
 
+msgid ""
+"This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
+msgstr ""
+
 msgid "TiB"
 msgstr "TiB"
+
+msgid "TiVo support"
+msgstr ""
 
 msgid "Time"
 msgstr "Čas"
@@ -8084,8 +8165,11 @@ msgstr "Typ UPS zdroje"
 msgid "UPS watchdog status"
 msgstr "Stav resetátoru UPS zdroje"
 
-msgid "UPnP"
-msgstr "UPnP"
+msgid "UPnP/DLNA - Fuppes"
+msgstr ""
+
+msgid "UPnP/DLNA - MiniDLNA"
+msgstr ""
 
 msgid "URI"
 msgstr "URI adresa"
@@ -8175,6 +8259,9 @@ msgid "Use as sparse volume. (thin provisioning)"
 msgstr ""
 "Použít jako tzv. „řídký“ (sparse) svazek. (přidělování zdrojů dle potřeby – "
 "thin provisioning)"
+
+msgid "Use inotify monitoring to automatically discover new files."
+msgstr ""
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -8674,6 +8761,9 @@ msgstr "použít funkci chroot() pro každého s výjimkou správce systému."
 msgid "day(s)"
 msgstr "dnů"
 
+msgid "debug"
+msgstr ""
+
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -8687,6 +8777,12 @@ msgstr "zjištěna chyba při importu."
 #, php-format
 msgid "e.g. %s"
 msgstr "např. %s"
+
+msgid "error"
+msgstr ""
+
+msgid "fatal"
+msgstr ""
 
 msgid "filechooser"
 msgstr "vyberte soubor"
@@ -8731,6 +8827,9 @@ msgstr "iTunes/DAAP"
 
 msgid "infinity"
 msgstr "nekonečno"
+
+msgid "info"
+msgstr ""
 
 msgid "load/unload failed."
 msgstr "načtení/uvolnění se nezdařilo."
@@ -8822,3 +8921,19 @@ msgstr "odpojit (umount)"
 
 msgid "version:"
 msgstr "verze:"
+
+msgid "warning"
+msgstr ""
+
+#~ msgid "UPnP"
+#~ msgstr "UPnP"
+
+#~ msgid ""
+#~ "Select which interface to use. (only selectable if your server has more than "
+#~ "one)"
+#~ msgstr ""
+#~ "Vyberte rozhraní, které k tomu použít. (k dispozici pouze tehdy, pokud je "
+#~ "tento server vybaven více než jedním)"
+
+#~ msgid "DLNA/UPnP Media Server"
+#~ msgstr "DLNA/UPnP server s multimédii"

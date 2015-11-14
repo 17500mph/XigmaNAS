@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-10-30 21:15+0000\n"
+"POT-Creation-Date: 2015-11-14 10:31+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-13 02:22+0000\n"
+"X-Launchpad-Export-Date: 2015-11-14 18:01+0000\n"
 "X-Generator: Launchpad (build 17845)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -906,10 +906,22 @@ msgstr ""
 msgid "Bridge"
 msgstr ""
 
+msgid "Broadcast interval"
+msgstr ""
+
+#, php-format
+msgid ""
+"Broadcasts its availability every N seconds on the network. (Default 300 "
+"seconds)"
+msgstr ""
+
 msgid "Browseable"
 msgstr "검색 가능 여부"
 
 msgid "Build date"
+msgstr ""
+
+msgid "Building database in progress"
 msgstr ""
 
 msgid "Bulgarian"
@@ -1213,6 +1225,9 @@ msgid ""
 "system: 'admin@email.address'."
 msgstr "연락처 정보. 예컨대 이 시스템을 책임지는 사람의 이름이나 이메일: 'admin@email.address'."
 
+msgid "Container"
+msgstr ""
+
 msgid "Content"
 msgstr "내용"
 
@@ -1497,7 +1512,10 @@ msgstr ""
 msgid "DLNA/UPnP"
 msgstr ""
 
-msgid "DLNA/UPnP Media Server"
+msgid "DLNA/UPnP Fuppes"
+msgstr ""
+
+msgid "DLNA/UPnP MiniDLNA"
 msgstr ""
 
 msgid "DNS domain"
@@ -2309,6 +2327,9 @@ msgstr ""
 msgid "Enable TLS connections."
 msgstr ""
 
+msgid "Enable TiVo support."
+msgstr ""
+
 msgid "Enable Time Machine support"
 msgstr ""
 
@@ -2364,6 +2385,9 @@ msgstr ""
 
 msgid "Enable guest access."
 msgstr "guest 접근 활성화."
+
+msgid "Enable inotify."
+msgstr ""
 
 msgid "Enable keyboard-interactive authentication."
 msgstr "키보드 대화형 인증 활성화."
@@ -2425,6 +2449,9 @@ msgstr "ident 프로토콜(RFC1413) 활성화."
 
 msgid "Enable the system power control utility"
 msgstr "시스템 전원 제어 유틸리티 활성화"
+
+msgid "Enable to strictly adhere to DLNA standards."
+msgstr ""
 
 msgid "Enable transcoding."
 msgstr "트랜스코딩 활성화."
@@ -2501,6 +2528,11 @@ msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
 msgstr "이 사용자의 홈 디렉터리 경로를 입력합니다. 기본 경로인 /mnt를 이용하려면 이 난을 비워 두십시오."
+
+msgid ""
+"Enter the path to the home directory. The config will be created under the "
+"specified directory."
+msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "트랩을 전송할 포트를 입력하십시오9기본 값은 162)."
@@ -2807,6 +2839,12 @@ msgstr "전체"
 
 msgid "Full Name"
 msgstr "전체 이름"
+
+msgid "Fuppes"
+msgstr ""
+
+msgid "Fuppes Media Server"
+msgstr ""
 
 msgid "GID"
 msgstr "GID"
@@ -3284,6 +3322,9 @@ msgstr "개시자 측의 사용자 명. (상호 CHAP 인증을 위한)"
 msgid "Initiators"
 msgstr "개시자"
 
+msgid "Inotify"
+msgstr ""
+
 msgid "Input current (A)"
 msgstr ""
 
@@ -3681,6 +3722,9 @@ msgstr ""
 msgid "Log Level"
 msgstr "로그 수준"
 
+msgid "Log level"
+msgstr ""
+
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "이 규칙에 의해 처리된 패킷들을 syslog에 기록합니다."
 
@@ -3914,6 +3958,15 @@ msgstr "MibII"
 
 msgid "Min. passive port"
 msgstr "최소 passive 포트"
+
+msgid "MiniDLNA"
+msgstr ""
+
+msgid "MiniDLNA A/V Media Server"
+msgstr ""
+
+msgid "Minidlna configuration has been updated."
+msgstr ""
 
 msgid "Minimum"
 msgstr "최소"
@@ -4596,6 +4649,12 @@ msgstr ""
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "<a href='%s' target='_blank'>문서</a>를 체크 하기 바랍니다."
 
+msgid "Please define the Database directory location."
+msgstr ""
+
+msgid "Please define the Media library location."
+msgstr ""
+
 msgid "Please note that blanks in path names are not allowed."
 msgstr "경로 명에서 공백 문자는 허용되지 않는다는 것에 주의하십시오."
 
@@ -4695,6 +4754,9 @@ msgstr "접두사"
 
 msgid "Preformatted file system"
 msgstr "이미 포맷된 파일 시스템"
+
+msgid "Presentation WebGUI"
+msgstr ""
 
 msgid "Preserve extended attributes"
 msgstr "확장 속성 보존"
@@ -4966,6 +5028,9 @@ msgstr "인증이 필요함."
 msgid "Required"
 msgstr "필요함"
 
+msgid "Rescan database in progress"
+msgstr ""
+
 msgid "Rescan disks"
 msgstr "디스크 재 스캔"
 
@@ -5235,7 +5300,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Select which interface to use. (only selectable if your server has more than "
+"Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
 
@@ -5616,6 +5681,9 @@ msgstr ""
 msgid "Store alternate data streams in Extended Attributes"
 msgstr ""
 
+msgid "Strict DLNA"
+msgstr ""
+
 msgid ""
 "String displayed in the dialog presented to the user when accessing the URL."
 msgstr "대화 박스에 표시된 문자열은 사용자가 URL을 접근할 때 사용자에게 제공됩니다."
@@ -5692,6 +5760,9 @@ msgstr "동기화 시간"
 
 msgid "Synchronize"
 msgstr "동기화"
+
+msgid "Syncthing"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -6945,6 +7016,11 @@ msgstr "이 사용자는 이미 존재합니다."
 msgid "This virtual device name already exists."
 msgstr "이 가상 장치 명은 이미 존재합니다."
 
+msgid ""
+"This will allow server-side downscaling of very large JPEG images, it can "
+"hurt JPEG serving performance on (at least) Sony DLNA products."
+msgstr ""
+
 #, php-format
 msgid ""
 "This will cause %s not to check for newer firmware versions when the <a "
@@ -6975,8 +7051,15 @@ msgstr ""
 msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
 msgstr ""
 
+msgid ""
+"This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
+msgstr ""
+
 msgid "TiB"
 msgstr "TiB"
+
+msgid "TiVo support"
+msgstr ""
 
 msgid "Time"
 msgstr "시간"
@@ -7295,8 +7378,11 @@ msgstr ""
 msgid "UPS watchdog status"
 msgstr ""
 
-msgid "UPnP"
-msgstr "UPnP"
+msgid "UPnP/DLNA - Fuppes"
+msgstr ""
+
+msgid "UPnP/DLNA - MiniDLNA"
+msgstr ""
 
 msgid "URI"
 msgstr ""
@@ -7382,6 +7468,9 @@ msgstr ""
 "한다는 것을 기억하시기 바랍니다!"
 
 msgid "Use as sparse volume. (thin provisioning)"
+msgstr ""
+
+msgid "Use inotify monitoring to automatically discover new files."
 msgstr ""
 
 msgid ""
@@ -7828,6 +7917,9 @@ msgstr "root를 제외한 모두에게 chroot()."
 msgid "day(s)"
 msgstr "일"
 
+msgid "debug"
+msgstr ""
+
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -7839,6 +7931,12 @@ msgstr ""
 #, php-format
 msgid "e.g. %s"
 msgstr "예. %s"
+
+msgid "error"
+msgstr ""
+
+msgid "fatal"
+msgstr ""
 
 msgid "filechooser"
 msgstr "파일 선택기"
@@ -7878,6 +7976,9 @@ msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
 
 msgid "infinity"
+msgstr ""
+
+msgid "info"
 msgstr ""
 
 msgid "load/unload failed."
@@ -7966,3 +8067,9 @@ msgstr "마운트 해제"
 
 msgid "version:"
 msgstr ""
+
+msgid "warning"
+msgstr ""
+
+#~ msgid "UPnP"
+#~ msgstr "UPnP"
