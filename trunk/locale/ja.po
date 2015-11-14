@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-10-30 21:15+0000\n"
-"PO-Revision-Date: 2015-10-30 13:49+0000\n"
+"POT-Creation-Date: 2015-11-14 10:31+0000\n"
+"PO-Revision-Date: 2015-11-14 02:01+0000\n"
 "Last-Translator: Daisuke Aoyama <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-13 02:22+0000\n"
+"X-Launchpad-Export-Date: 2015-11-14 04:52+0000\n"
 "X-Generator: Launchpad (build 17845)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -928,11 +928,23 @@ msgstr ""
 msgid "Bridge"
 msgstr "ブリッジ"
 
+msgid "Broadcast interval"
+msgstr "ブロードキャスト間隔"
+
+#, php-format
+msgid ""
+"Broadcasts its availability every N seconds on the network. (Default 300 "
+"seconds)"
+msgstr "装置検出のためN秒毎にネットワークにブロードキャストします。 (デフォルトは300秒)"
+
 msgid "Browseable"
 msgstr "ブラウズ可能"
 
 msgid "Build date"
 msgstr "構築された日付"
+
+msgid "Building database in progress"
+msgstr "データベース構築中"
 
 msgid "Bulgarian"
 msgstr "ブルガリア語"
@@ -1238,6 +1250,9 @@ msgid ""
 "system: 'admin@email.address'."
 msgstr "連絡先情報 例:このシステムの管理者の名前やメールアドレス等"
 
+msgid "Container"
+msgstr "コンテナ"
+
 msgid "Content"
 msgstr "コンテンツ"
 
@@ -1541,8 +1556,11 @@ msgstr "DHCPはLANインタフェースに使用することはできません�
 msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
 
-msgid "DLNA/UPnP Media Server"
-msgstr "DLNA/UPnP メディアサーバー"
+msgid "DLNA/UPnP Fuppes"
+msgstr "DLNA/UPnP Fuppes"
+
+msgid "DLNA/UPnP MiniDLNA"
+msgstr "DLNA/UPnP MiniDLNA"
 
 msgid "DNS domain"
 msgstr "DNS ドメイン"
@@ -2357,6 +2375,9 @@ msgstr "STARTTLS暗号化を有効にします。これはTLSを必ず利用し�
 msgid "Enable TLS connections."
 msgstr "TLS 接続を有効にします。"
 
+msgid "Enable TiVo support."
+msgstr "TiVoサポートを有効にします。"
+
 msgid "Enable Time Machine support"
 msgstr "Time Machine サポートを有効にします。"
 
@@ -2412,6 +2433,9 @@ msgstr "ゲストアクセスの有効化"
 
 msgid "Enable guest access."
 msgstr "ゲストアクセスを許可。"
+
+msgid "Enable inotify."
+msgstr "inotifyを有効にします。"
 
 msgid "Enable keyboard-interactive authentication."
 msgstr "キーボードインタラクティブでの認証を有効にします。"
@@ -2473,6 +2497,9 @@ msgstr "Ident プロトコル (RFC1413) を有効にします。"
 
 msgid "Enable the system power control utility"
 msgstr "システムの電源制御ユーティリティを有効にします"
+
+msgid "Enable to strictly adhere to DLNA standards."
+msgstr "厳密にDLNAに準拠します。"
 
 msgid "Enable transcoding."
 msgstr "トランスコーディングを有効にします。"
@@ -2549,6 +2576,11 @@ msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
 msgstr "ユーザのホームディレクトリパスを入力して下さい。デフォルトパスの /mnt を使用する場合は、このフィールドを空のままにして下さい。"
+
+msgid ""
+"Enter the path to the home directory. The config will be created under the "
+"specified directory."
+msgstr "ホームディレクトリへのパスを入力します。設定は指定したディレクトリの下に作成されます。"
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "SNMPトラップの送信に利用するポート番号を入力してください。(初期値: 162)"
@@ -2854,6 +2886,12 @@ msgstr "フル"
 
 msgid "Full Name"
 msgstr "フルネーム"
+
+msgid "Fuppes"
+msgstr "Fuppes"
+
+msgid "Fuppes Media Server"
+msgstr "Fuppes メディアサーバ"
 
 msgid "GID"
 msgstr "グループ ID"
@@ -3338,6 +3376,9 @@ msgstr "イニシエータ側ユーザ名。(双方向 CHAP 認証)"
 msgid "Initiators"
 msgstr "イニシエータ"
 
+msgid "Inotify"
+msgstr "Inotify"
+
 msgid "Input current (A)"
 msgstr "入力電流(A)"
 
@@ -3736,6 +3777,9 @@ msgstr "ログ デバイス"
 msgid "Log Level"
 msgstr "ログレベル"
 
+msgid "Log level"
+msgstr "ログレベル"
+
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "このルールによって処理されたパケットを syslog に記録します。"
 
@@ -3971,6 +4015,15 @@ msgstr "MibII"
 
 msgid "Min. passive port"
 msgstr "パッシブモードで使用するポート(最小)"
+
+msgid "MiniDLNA"
+msgstr "MiniDLNA"
+
+msgid "MiniDLNA A/V Media Server"
+msgstr "MiniDLNA AV メディアサーバ"
+
+msgid "Minidlna configuration has been updated."
+msgstr "Minidlna構成が更新されました。"
 
 msgid "Minimum"
 msgstr "最小"
@@ -4655,6 +4708,12 @@ msgstr "プラットフォームOS"
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "<a href='%s' target='_blank'>ドキュメント</a> を確認してください。"
 
+msgid "Please define the Database directory location."
+msgstr "データベースディレクトリの場所を定義してください。"
+
+msgid "Please define the Media library location."
+msgstr "メディアライブラリの場所を定義してください。"
+
 msgid "Please note that blanks in path names are not allowed."
 msgstr "パス内に空白が含まれないように注意して下さい。"
 
@@ -4754,6 +4813,9 @@ msgstr "プレフィックス"
 
 msgid "Preformatted file system"
 msgstr "ファイルシステム事前フォーマット"
+
+msgid "Presentation WebGUI"
+msgstr "プレゼンテーション WebGUI"
 
 msgid "Preserve extended attributes"
 msgstr "拡張属性を保持します。"
@@ -5024,6 +5086,9 @@ msgstr "認証を要求します。"
 
 msgid "Required"
 msgstr "必須"
+
+msgid "Rescan database in progress"
+msgstr "データベース再スキャン中"
 
 msgid "Rescan disks"
 msgstr "ディスクの再スキャン"
@@ -5299,7 +5364,7 @@ msgid ""
 msgstr "暗号化された GZIP ファイルまたは XML ファイルのサーバー設定ファイルを選択後、下のボタンをクリックすると設定が復元されます。"
 
 msgid ""
-"Select which interface to use. (only selectable if your server has more than "
+"Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr "利用するインターフェースを選択してください。(2個以上サーバーに装着してある場合にのみ選択可能)"
 
@@ -5685,6 +5750,9 @@ msgstr "代替データストリームの保存"
 msgid "Store alternate data streams in Extended Attributes"
 msgstr "代替データストリームを拡張属性に保存する"
 
+msgid "Strict DLNA"
+msgstr "厳密なDLNA"
+
 msgid ""
 "String displayed in the dialog presented to the user when accessing the URL."
 msgstr "URL へアクセスする際のダイアログボックスにここで記述した文字列をユーザに表示します。"
@@ -5761,6 +5829,9 @@ msgstr "時間の同期"
 
 msgid "Synchronize"
 msgstr "同期"
+
+msgid "Syncthing"
+msgstr "Syncthing"
 
 #, php-format
 msgid ""
@@ -7032,6 +7103,13 @@ msgstr "このユーザは既に存在しています。"
 msgid "This virtual device name already exists."
 msgstr "この仮想デバイス名は既に存在しています。"
 
+msgid ""
+"This will allow server-side downscaling of very large JPEG images, it can "
+"hurt JPEG serving performance on (at least) Sony DLNA products."
+msgstr ""
+"非常に大きなJPEG画像のサーバー側でのダウンスケールを許可します。それは少なくともソニーのDLNA製品のJPEGサービスのパフォーマンスを損なう可能性が"
+"あります。"
+
 #, php-format
 msgid ""
 "This will cause %s not to check for newer firmware versions when the <a "
@@ -7060,8 +7138,15 @@ msgstr "ZFS ACLサポートを提供します。(ZFS専用)"
 msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
 msgstr "自動スナップショットにより作成されたシャドウコピーを提供します。(ZFS専用)"
 
+msgid ""
+"This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
+msgstr "TiVoサポートHMOでストリーミング .jpg と .mp3 ファイルをサポートします。"
+
 msgid "TiB"
 msgstr "TiB"
+
+msgid "TiVo support"
+msgstr "TiVoサポート"
 
 msgid "Time"
 msgstr "時間"
@@ -7385,8 +7470,11 @@ msgstr "UPSタイプ"
 msgid "UPS watchdog status"
 msgstr "UPSウォッチドッグステータス"
 
-msgid "UPnP"
-msgstr "UPnP"
+msgid "UPnP/DLNA - Fuppes"
+msgstr "UPnP/DLNA - Fuppes"
+
+msgid "UPnP/DLNA - MiniDLNA"
+msgstr "UPnP/DLNA - MiniDLNA"
 
 msgid "URI"
 msgstr "URI"
@@ -7472,6 +7560,9 @@ msgstr ""
 
 msgid "Use as sparse volume. (thin provisioning)"
 msgstr "スパースボリュームとして利用する。（シン・プロビジョニング）"
+
+msgid "Use inotify monitoring to automatically discover new files."
+msgstr "自動的に新しいファイルを発見するためにinotify監視を使用します。"
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -7923,6 +8014,9 @@ msgstr "root 以外のユーザに chroot() を有効にします。"
 msgid "day(s)"
 msgstr "日"
 
+msgid "debug"
+msgstr "デバッグ"
+
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -7934,6 +8028,12 @@ msgstr "インポート中にエラーを検出しました。"
 #, php-format
 msgid "e.g. %s"
 msgstr "例) %s"
+
+msgid "error"
+msgstr "エラー"
+
+msgid "fatal"
+msgstr "致命的"
 
 msgid "filechooser"
 msgstr "ファイル選択"
@@ -7974,6 +8074,9 @@ msgstr "iTunes/DAAP"
 
 msgid "infinity"
 msgstr "無限"
+
+msgid "info"
+msgstr "情報"
 
 msgid "load/unload failed."
 msgstr "ロード/アンロードに失敗しました。"
@@ -8061,3 +8164,20 @@ msgstr "アンマウント"
 
 msgid "version:"
 msgstr "バージョン:"
+
+msgid "warning"
+msgstr "警告"
+
+#~ msgid "UPnP"
+#~ msgstr "UPnP"
+
+#~ msgid "DLNA/UPnP Media Server"
+#~ msgstr "DLNA/UPnP メディアサーバー"
+
+#~ msgid ""
+#~ "Select which interface to use. (only selectable if your server has more than "
+#~ "one)"
+#~ msgstr "利用するインターフェースを選択してください。(2個以上サーバーに装着してある場合にのみ選択可能)"
+
+#~ msgid "Broadcasts interval"
+#~ msgstr "ブロードキャストの間隔"
