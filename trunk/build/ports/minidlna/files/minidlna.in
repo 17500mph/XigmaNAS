@@ -68,7 +68,7 @@ db_dir=${minidlna_home}
 log_level=general,artwork,database,inotify,scanner,metadata,http,ssdp,tivo=${_loglevel}
 album_art_names=Cover.jpg/cover.jpg/AlbumArtSmall.jpg/albumartsmall.jpg/AlbumArt.jpg/albumart.jpg/Album.jpg/album.jpg/Folder.jpg/folder.jpg/Thumb.jpg/thumb.jpg
 minissdpdsocket=/var/run/minissdpd.sock
-presentation_url=http://${_ip_adress}:${_port}/
+presentation_url=http://${_ip_adress}:${_port}/status
 EOF
 
 	xml sel -t \
