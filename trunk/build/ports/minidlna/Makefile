@@ -18,7 +18,7 @@ LIB_DEPENDS=	libsqlite3.so:${PORTSDIR}/databases/sqlite3	\
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-db-path=/var/db/minidlna \
-		--with-os-url="http://www.FreeBSD.org"
+		--with-os-url="http://www.nas4free.org"
 CPPFLAGS+=	-I${LOCALBASE}/include
 CFLAGS+=	-DNAS4Free
 LIBS+=		-L${LOCALBASE}/lib
