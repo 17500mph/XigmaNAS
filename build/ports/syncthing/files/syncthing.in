@@ -26,10 +26,11 @@ load_rc_config "${name}"
 : ${syncthing_dir:="/var/db/syncthing"}
 
 homedir=`configxml_get "//syncthing/homedir"`
+logfile="${homedir}/syncthing.log"
 pidfile=/var/run/syncthing.pid
 procname="/usr/local/bin/syncthing"
 command="/usr/sbin/daemon"
-command_args="-f -p ${pidfile} ${procname} -home=${homedir} -no-browser ${syncthing_args}"
+command_args="-p ${pidfile} ${procname} -home=${homedir} -no-browser ${syncthing_args} > ${logfile} 2>&1"
 
 start_precmd=syncthing_startprecmd
 extra_commands="mkconf"
@@ -57,6 +58,8 @@ syncthing_startprecmd()
 	if [ ! -d ${homedir} ]; then
 		install -d -o ${syncthing_user} -g ${syncthing_group} ${homedir}
 	fi
+	HOME=${syncthing_dir}
+	export HOME
 }
 
 run_rc_command "$1"
