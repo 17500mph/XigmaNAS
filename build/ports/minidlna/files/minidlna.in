@@ -72,15 +72,17 @@ presentation_url=http://${_ip_adress}:${_port}/
 EOF
 
 	xml sel -t \
-		-i "count(//minidlna/tivo) > 0" -o "enable_tivo=yes" --else -o "enable_tivo=no" -b -n \
-		      ${configxml_file} | /usr/local/bin/xml unesc >> ${minidlna_config}
-	xml sel -t \
 		-i "count(//minidlna/strict) > 0" -o "strict_dlna=yes" --else -o "strict_dlna=no" -b -n \
 		      ${configxml_file} | /usr/local/bin/xml unesc >> ${minidlna_config}
 	/usr/local/bin/xml sel -t -m "//minidlna/content" \
 		-o "media_dir=" -v "." -n \
 		      ${configxml_file} | /usr/local/bin/xml unesc >> ${minidlna_config}
-  xml sel -t \
+
+	xml sel -t \
+		-i "count(//minidlna/tivo) > 0" -o "enable_tivo=yes" --else -o "enable_tivo=no" -b -n \
+		      ${configxml_file} | /usr/local/bin/xml unesc >> ${minidlna_config}
+
+	xml sel -t \
 		-i "count(//minidlna/inotify) > 0" -o "inotify=yes" --else -o "inotify=no" -b -n \
 		      ${configxml_file} | /usr/local/bin/xml unesc >> ${minidlna_config}
 }
@@ -130,4 +132,4 @@ minidlna_poststop()
 	rm -f $pidfile
 }
 
-run_rc_command $1
+run_rc_command "$1"
