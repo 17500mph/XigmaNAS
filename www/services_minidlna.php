@@ -225,7 +225,7 @@ function enable_change(enable_change) {
 					<?php
 						$if = get_ifname($pconfig['if']);
 						$ipaddr = get_ipaddr($if);
-						$url = htmlspecialchars("http://{$ipaddr}:{$pconfig['port']}");
+						$url = htmlspecialchars("http://{$ipaddr}:{$pconfig['port']}/status");
 						$text = "<a href='{$url}' target='_blank'>{$url}</a>";
 					?>
 					<?php html_text("url", gettext("URL"), $text);?>
