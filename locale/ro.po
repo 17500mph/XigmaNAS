@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-14 10:31+0000\n"
-"PO-Revision-Date: 2015-11-02 15:18+0000\n"
+"POT-Creation-Date: 2015-11-15 21:51+0000\n"
+"PO-Revision-Date: 2015-11-15 18:14+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-14 18:01+0000\n"
+"X-Launchpad-Export-Date: 2015-11-15 21:08+0000\n"
 "X-Generator: Launchpad (build 17845)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -834,6 +834,9 @@ msgstr "Atașat"
 msgid "Attaching provider '%s'."
 msgstr "Atașează providerul '%s'."
 
+msgid "Audio"
+msgstr "Audio"
+
 msgid "Auth Group"
 msgstr "Grup Auth"
 
@@ -1008,13 +1011,18 @@ msgid "Bridge"
 msgstr "Punte"
 
 msgid "Broadcast interval"
-msgstr ""
+msgstr "Interval transmisie"
 
 #, php-format
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
 "seconds)"
 msgstr ""
+"Transmite în rețea disponibilitatea la fiecare N secunde. (Implicit 300 "
+"secunde)"
+
+msgid "Browse Directory"
+msgstr "Navigare directoare"
 
 msgid "Browseable"
 msgstr "Navigabil"
@@ -1023,7 +1031,7 @@ msgid "Build date"
 msgstr "Data creării"
 
 msgid "Building database in progress"
-msgstr ""
+msgstr "Se construiește baza de date"
 
 msgid "Bulgarian"
 msgstr "Bulgară"
@@ -1345,7 +1353,7 @@ msgstr ""
 "administratorului de sistem: 'admin@adresa.de.email'."
 
 msgid "Container"
-msgstr ""
+msgstr "Container"
 
 msgid "Content"
 msgstr "Conținut"
@@ -1714,10 +1722,10 @@ msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
 
 msgid "DLNA/UPnP Fuppes"
-msgstr ""
+msgstr "DLNA/UPnP Fuppes"
 
 msgid "DLNA/UPnP MiniDLNA"
-msgstr ""
+msgstr "DLNA/UPnP MiniDLNA"
 
 msgid "DNS domain"
 msgstr "Domeniu DNS"
@@ -2561,7 +2569,7 @@ msgid "Enable TLS connections."
 msgstr "Activare conexiuni TLS."
 
 msgid "Enable TiVo support."
-msgstr ""
+msgstr "Activare suport TiVo."
 
 msgid "Enable Time Machine support"
 msgstr "Activare compatibilitate Time Machine"
@@ -2624,7 +2632,7 @@ msgid "Enable guest access."
 msgstr "Activare acces în modul guest."
 
 msgid "Enable inotify."
-msgstr ""
+msgstr "Activare inotify."
 
 msgid "Enable keyboard-interactive authentication."
 msgstr "Activare autentificare interactivă de la tastatură."
@@ -2690,7 +2698,7 @@ msgid "Enable the system power control utility"
 msgstr "Activare utilitar control alimentare sistem"
 
 msgid "Enable to strictly adhere to DLNA standards."
-msgstr ""
+msgstr "Activare suport strict pentru standardul DLNA."
 
 msgid "Enable transcoding."
 msgstr "Activare transcodare."
@@ -2785,6 +2793,8 @@ msgid ""
 "Enter the path to the home directory. The config will be created under the "
 "specified directory."
 msgstr ""
+"Introduceți calea către directorul home. Fișierul de configurare va fi creat "
+"în directorul specificat."
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Introduceți portul pentru capcane software (implicit 162)."
@@ -3105,10 +3115,17 @@ msgid "Full Name"
 msgstr "Nume Complet"
 
 msgid "Fuppes"
-msgstr ""
+msgstr "Fuppes"
 
 msgid "Fuppes Media Server"
+msgstr "Server media Fuppes"
+
+msgid ""
+"Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
+"Fuppes first."
 msgstr ""
+"Serverul Fuppes este activ. Dacă doriți să folosiți MiniDLNA va trebui să "
+"dezactivați mai întâi serverul Fuppes."
 
 msgid "GID"
 msgstr "GID"
@@ -3643,7 +3660,7 @@ msgid "Initiators"
 msgstr "Inițiatori"
 
 msgid "Inotify"
-msgstr ""
+msgstr "Inotify"
 
 msgid "Input current (A)"
 msgstr "Curent de intrare (A)"
@@ -4090,7 +4107,7 @@ msgid "Log Level"
 msgstr "Nivel Jurnal"
 
 msgid "Log level"
-msgstr ""
+msgstr "Nivel jurnal"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Memorare pachete gestionate de această regulă în syslog."
@@ -4338,13 +4355,20 @@ msgid "Min. passive port"
 msgstr "Valoare minimă port pasiv"
 
 msgid "MiniDLNA"
-msgstr ""
+msgstr "MiniDLNA"
 
 msgid "MiniDLNA A/V Media Server"
+msgstr "Server media MiniDLNA A/V"
+
+msgid ""
+"MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
+"MiniDLNA first."
 msgstr ""
+"Serverul MiniDLNA este activ. Dacă doriți să folosiți Fuppes va trebui să "
+"dezactivați mai întâi serverul MiniDLNA."
 
 msgid "Minidlna configuration has been updated."
-msgstr ""
+msgstr "Configurația MiniDLNA a fost actualizată."
 
 msgid "Minimum"
 msgstr "Minim"
@@ -4435,6 +4459,9 @@ msgstr "Montare..."
 
 msgid "Mounts"
 msgstr "Montări"
+
+msgid "Music"
+msgstr "Muzică"
 
 msgid "Must choose one"
 msgstr "trebuie să selectați un disc"
@@ -5056,6 +5083,9 @@ msgstr "Permite SSH Tunneling."
 msgid "Physical interface"
 msgstr "Interfață fizică"
 
+msgid "Pictures"
+msgstr "Imagini"
+
 msgid "Ping"
 msgstr "Ping"
 
@@ -5076,10 +5106,10 @@ msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "Consultați <a href='%s' target='_blank'>documentația</a>."
 
 msgid "Please define the Database directory location."
-msgstr ""
+msgstr "Introduceți directorul pentru baza de date."
 
 msgid "Please define the Media library location."
-msgstr ""
+msgstr "Introduceți directorul pentru biblioteca media."
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr ""
@@ -5191,7 +5221,7 @@ msgid "Preformatted file system"
 msgstr "Sistem de fișiere preformatat"
 
 msgid "Presentation WebGUI"
-msgstr ""
+msgstr "WebGUI de prezentare"
 
 msgid "Preserve extended attributes"
 msgstr "Păstrare atribute extinse"
@@ -5472,7 +5502,7 @@ msgid "Required"
 msgstr "Necesar"
 
 msgid "Rescan database in progress"
-msgstr ""
+msgstr "Se rescanează baza de date"
 
 msgid "Rescan disks"
 msgstr "Rescanare discuri"
@@ -5760,6 +5790,7 @@ msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
+"Selectați interfața. (Opțiune valabilă doar dacă aveți mai multe interfețe)"
 
 msgid "Select your read balance algorithm."
 msgstr "Selectați algoritmul de echilibrare la citire."
@@ -6175,7 +6206,7 @@ msgid "Store alternate data streams in Extended Attributes"
 msgstr "Salveaza stream de date in Atribute Extinse"
 
 msgid "Strict DLNA"
-msgstr ""
+msgstr "Strict DLNA"
 
 msgid ""
 "String displayed in the dialog presented to the user when accessing the URL."
@@ -6255,7 +6286,7 @@ msgid "Synchronize"
 msgstr "Sincronizare"
 
 msgid "Syncthing"
-msgstr ""
+msgstr "Syncthing"
 
 #, php-format
 msgid ""
@@ -7725,6 +7756,8 @@ msgid ""
 "This will allow server-side downscaling of very large JPEG images, it can "
 "hurt JPEG serving performance on (at least) Sony DLNA products."
 msgstr ""
+"Permite redimensionarea de către server a imaginilor JPEG foarte mari, cu "
+"scăderea performanțelor (cel puțin) pentru produsele Sony DLNA."
 
 #, php-format
 msgid ""
@@ -7770,12 +7803,14 @@ msgstr ""
 msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
 msgstr ""
+"Activează suportul pentru streaming-ul fișierelor .jpg și .mp3 către sisteme "
+"TiVo care au suport HMO."
 
 msgid "TiB"
 msgstr "TiB"
 
 msgid "TiVo support"
-msgstr ""
+msgstr "Suport TiVo"
 
 msgid "Time"
 msgstr "Timp"
@@ -8123,10 +8158,10 @@ msgid "UPS watchdog status"
 msgstr "Stare watchdog UPS"
 
 msgid "UPnP/DLNA - Fuppes"
-msgstr ""
+msgstr "UPnP/DLNA - Fuppes"
 
 msgid "UPnP/DLNA - MiniDLNA"
-msgstr ""
+msgstr "UPnP/DLNA - MiniDLNA"
 
 msgid "URI"
 msgstr "URI"
@@ -8215,8 +8250,14 @@ msgstr ""
 msgid "Use as sparse volume. (thin provisioning)"
 msgstr "Utilizat ca volum de rezervă. (thin provisioning)"
 
+msgid "Use different container as root of the tree."
+msgstr ""
+"Utilizare container diferit ca rădăcină pentru structura arborescentă."
+
 msgid "Use inotify monitoring to automatically discover new files."
 msgstr ""
+"Folosește serviciul de monitorizare inotify pentru descoperirea de noi "
+"fișiere."
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -8367,6 +8408,9 @@ msgstr "Versiune"
 
 msgid "Vibration During Write."
 msgstr "Vibrații în timpul scrierii"
+
+msgid "Video"
+msgstr "Video"
 
 msgid "Virtual Host ID"
 msgstr "ID Sistem Virtual"
@@ -8716,7 +8760,7 @@ msgid "day(s)"
 msgstr "zi(le)"
 
 msgid "debug"
-msgstr ""
+msgstr "debug"
 
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
@@ -8733,10 +8777,10 @@ msgid "e.g. %s"
 msgstr "ex. %s"
 
 msgid "error"
-msgstr ""
+msgstr "eroare"
 
 msgid "fatal"
-msgstr ""
+msgstr "fatal"
 
 msgid "filechooser"
 msgstr "selector fișiere"
@@ -8779,7 +8823,7 @@ msgid "infinity"
 msgstr "infinit"
 
 msgid "info"
-msgstr ""
+msgstr "info"
 
 msgid "load/unload failed."
 msgstr "eroare încărcare/descărcare."
@@ -8869,17 +8913,4 @@ msgid "version:"
 msgstr "versiune:"
 
 msgid "warning"
-msgstr ""
-
-#~ msgid "UPnP"
-#~ msgstr "UPnP"
-
-#~ msgid ""
-#~ "Select which interface to use. (only selectable if your server has more than "
-#~ "one)"
-#~ msgstr ""
-#~ "Selectare interfață. (opțiune activă doar dacă serverul are mai multe "
-#~ "interfețe disponibile)"
-
-#~ msgid "DLNA/UPnP Media Server"
-#~ msgstr "Server media DLNA/UPnP"
+msgstr "avertisment"
