@@ -42,6 +42,7 @@ Changes:
 - Upgrade iperf3 to 3.1.
 
 Fixes:
+- Fix smbclient use NT1 instead of SMB3/SMB2. (ticket #236)
 - Fix cannot execute samba if time server is empty.
 - Fix missing loader parameters on fresh installation. (full only)
 - Fix NTFS is not detected on Import disks.
