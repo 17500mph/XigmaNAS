@@ -91,12 +91,23 @@ cron_mkconf()
 	# Remove all existing user crontabs
 	rm ${cron_tabspath}/* > /dev/null 2>&1
 
+	# Create /etc/newsyslog.conf
+	cat << EOF > /etc/newsyslog.conf
+# logfilename          [owner:group]    mode count size when  flags [/pid_file] [sig_num]
+
+<include> /etc/newsyslog.conf.d/*
+<include> /usr/local/etc/newsyslog.conf.d/*
+EOF
+
 	# Create /etc/crontab
 	echo "SHELL=/bin/sh
 PATH=/etc:/bin:/sbin:/usr/bin:/usr/sbin
 HOME=/var/log
 #
 #minute	hour	mday	month	wday	who	command
+#
+# Rotate log files every hour, if necessary.
+0	*	*	*	*	root	newsyslog
 #
 # Perform daily/weekly/monthly maintenance.
 1	3	*	*	*	root	periodic daily
