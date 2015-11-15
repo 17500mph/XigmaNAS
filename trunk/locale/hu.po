@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-11-14 10:31+0000\n"
-"PO-Revision-Date: 2015-10-31 20:14+0000\n"
+"POT-Creation-Date: 2015-11-15 21:51+0000\n"
+"PO-Revision-Date: 2015-11-15 20:15+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-14 18:01+0000\n"
+"X-Launchpad-Export-Date: 2015-11-15 21:09+0000\n"
 "X-Generator: Launchpad (build 17845)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -577,10 +577,9 @@ msgid ""
 "IP address of your computer</li><li>access the webGUI with the new IP "
 "address</li></ul>"
 msgstr ""
-"Miután a &quot;Mentés&quot;-re kattintottál, a következő lépések "
-"valamelyikét végre kell hajtani, mielőtt a szervert újra elérnéd: "
-"<ul><li>számítógéped IP címének megváltoztatása</li><li>WebGUI elérése az új "
-"IP címmel</li></ul>"
+"Miután a &quot;Mentés&quot; gombra kattintottál, lehetséges hogy valamelyik "
+"lépést végre kell hajtani mielőtt a szervert újra eléred: <ul><li>szervered "
+"IP címének megváltoztatása</li><li>a WebGUI elérése az új IP címen</li></ul>"
 
 #, php-format
 msgid ""
@@ -825,6 +824,9 @@ msgstr "Csatolt"
 msgid "Attaching provider '%s'."
 msgstr "'%s' szolgáltató csatlakoztatása."
 
+msgid "Audio"
+msgstr "audió"
+
 msgid "Auth Group"
 msgstr "Auth csoport"
 
@@ -997,13 +999,17 @@ msgid "Bridge"
 msgstr "Híd (bridge)"
 
 msgid "Broadcast interval"
-msgstr ""
+msgstr "Broadcast időköz"
 
 #, php-format
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
 "seconds)"
 msgstr ""
+"A rendelkezésre állás körbeküldése a hálózaton minden N-edik másodpercben."
+
+msgid "Browse Directory"
+msgstr "Könyvtár tallózása"
 
 msgid "Browseable"
 msgstr "Böngészhető"
@@ -1012,7 +1018,7 @@ msgid "Build date"
 msgstr "Rendszerfordítás ideje"
 
 msgid "Building database in progress"
-msgstr ""
+msgstr "Adatbázis felépítése folyamatban"
 
 msgid "Bulgarian"
 msgstr "Bulgár"
@@ -1154,7 +1160,7 @@ msgid "Change below file"
 msgstr "Változás az alábbi fájlt"
 
 msgid "Change password"
-msgstr "Megváltoztatni a jelszót"
+msgstr "Jelszó megváltoztatása"
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr ""
@@ -1332,7 +1338,7 @@ msgstr ""
 "\"rendszergazda@email.cím\"."
 
 msgid "Container"
-msgstr ""
+msgstr "Tároló"
 
 msgid "Content"
 msgstr "Tartalom"
@@ -1673,10 +1679,10 @@ msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
 
 msgid "DLNA/UPnP Fuppes"
-msgstr ""
+msgstr "DLNA/UPnP Fuppes"
 
 msgid "DLNA/UPnP MiniDLNA"
-msgstr ""
+msgstr "DLNA/UPnP MiniDLNA"
 
 msgid "DNS domain"
 msgstr "DNS domain"
@@ -2518,7 +2524,7 @@ msgid "Enable TLS connections."
 msgstr "TLS kapcsolat engedélyezése."
 
 msgid "Enable TiVo support."
-msgstr ""
+msgstr "TiVo támogatás engedélyezése"
 
 msgid "Enable Time Machine support"
 msgstr "Időkiszolgáló támogatásának engedélyezése"
@@ -2578,7 +2584,7 @@ msgid "Enable guest access."
 msgstr "Vendég hozzáférés engedélyezése."
 
 msgid "Enable inotify."
-msgstr ""
+msgstr "Inotify engedélyezése"
 
 msgid "Enable keyboard-interactive authentication."
 msgstr "Billentyű-interaktív authentikáció hitelesítés"
@@ -2643,7 +2649,7 @@ msgid "Enable the system power control utility"
 msgstr "A rendszer energiafelhasználást irányító eszközének engedélyezése."
 
 msgid "Enable to strictly adhere to DLNA standards."
-msgstr ""
+msgstr "DLNA-szabványok szigorú betartásának engedélyezése."
 
 msgid "Enable transcoding."
 msgstr "Transcoding engedélyezése."
@@ -2723,20 +2729,22 @@ msgid ""
 "Enter the path to the home directory of VirtualBox. VM config and HDD image "
 "will be created under the specified directory."
 msgstr ""
-"Add meg a VirtualBox home könyvtárának útvonalát. A VM konfiguráció és a HDD "
-"képfájl a megadott könyvtárba kerül."
+"Add meg a VirtualBox saját könyvtárának útvonalát. A VM konfiguráció és a "
+"HDD képfájl a megadott könyvtárba kerül."
 
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
 msgstr ""
-"Írd be a felhasználó saját mappájának útvonalát. Ha üresen hagyod, akkor az "
-"alapértelmezett útvonal a /mnt."
+"Írd be a felhasználó saját mappájának útvonalát. Az alapértelmezett útvonal "
+"/mnt használatához hagyd üresen."
 
 msgid ""
 "Enter the path to the home directory. The config will be created under the "
 "specified directory."
 msgstr ""
+"Add meg a saját könyvtár útvonalát. A konfigurációs állomány a megadott "
+"könyvtárba kerül."
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Adja meg a csapdák portját (alapértelmezett 162)."
@@ -3057,10 +3065,16 @@ msgid "Full Name"
 msgstr "Teljes név"
 
 msgid "Fuppes"
-msgstr ""
+msgstr "Fuppes"
 
 msgid "Fuppes Media Server"
+msgstr "Fuppes Média Szerver"
+
+msgid ""
+"Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
+"Fuppes first."
 msgstr ""
+"Fuppes engedélyezve van. A MiniDLNA használatához a Fuppes-t le kell tiltani."
 
 msgid "GID"
 msgstr "GID"
@@ -3577,7 +3591,7 @@ msgid "Initiators"
 msgstr "Kezdeményezők"
 
 msgid "Inotify"
-msgstr ""
+msgstr "Inotify"
 
 msgid "Input current (A)"
 msgstr "Bemeneti áram (A)"
@@ -4013,7 +4027,7 @@ msgid "Log Level"
 msgstr "Naplózási szint"
 
 msgid "Log level"
-msgstr ""
+msgstr "Naplózás szintje"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Naplózd készítése a syslog-ba."
@@ -4262,13 +4276,20 @@ msgid "Min. passive port"
 msgstr "Min. passzív port"
 
 msgid "MiniDLNA"
-msgstr ""
+msgstr "MiniDLNA"
 
 msgid "MiniDLNA A/V Media Server"
+msgstr "MiniDLNA A/V Médiaszerver"
+
+msgid ""
+"MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
+"MiniDLNA first."
 msgstr ""
+"MiniDLNA engedélyezve van. A Fuppes használatához a MiniDLNA-t le kell "
+"tiltani."
 
 msgid "Minidlna configuration has been updated."
-msgstr ""
+msgstr "MiniDLNA konfigurációja sikeresen módosult."
 
 msgid "Minimum"
 msgstr "Minimum"
@@ -4358,6 +4379,9 @@ msgstr "Csatolás..."
 
 msgid "Mounts"
 msgstr "Csatolások (mounts)"
+
+msgid "Music"
+msgstr "Zene"
 
 msgid "Must choose one"
 msgstr "Válassz"
@@ -4983,6 +5007,9 @@ msgstr "SSH csatorna engedélyezése"
 msgid "Physical interface"
 msgstr "Fizikai interfész"
 
+msgid "Pictures"
+msgstr "Képek"
+
 msgid "Ping"
 msgstr "Ping"
 
@@ -5003,10 +5030,10 @@ msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "Kérjük olvasd el a <a href='%s' target='_blank'>dokumentációt</a>."
 
 msgid "Please define the Database directory location."
-msgstr ""
+msgstr "Add meg az adatbázis  könyvtárának helyét."
 
 msgid "Please define the Media library location."
-msgstr ""
+msgstr "Add meg a Médiakönyvtár helyét."
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr ""
@@ -5113,7 +5140,7 @@ msgid "Preformatted file system"
 msgstr "Előreformázott fájlrendszer"
 
 msgid "Presentation WebGUI"
-msgstr ""
+msgstr "WebGUI megjelenítése"
 
 msgid "Preserve extended attributes"
 msgstr "Kiterjesztett attribútumok megtartása"
@@ -5398,7 +5425,7 @@ msgid "Required"
 msgstr "Kötelező"
 
 msgid "Rescan database in progress"
-msgstr ""
+msgstr "Adatbázis újravizsgálása folyamatban."
 
 msgid "Rescan disks"
 msgstr "Lemezek újrakeresése"
@@ -5691,6 +5718,7 @@ msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
+"Válaszd ki, melyik csatolót használjuk (csak akkor, ha egynél több van.)"
 
 msgid "Select your read balance algorithm."
 msgstr "Válassz olvasási mérlegelési algoritmust."
@@ -6104,7 +6132,7 @@ msgid "Store alternate data streams in Extended Attributes"
 msgstr "Alternatív adatfolyamok tárolása Kiterjesztett Attribútumokban"
 
 msgid "Strict DLNA"
-msgstr ""
+msgstr "Szigorú DLNA"
 
 msgid ""
 "String displayed in the dialog presented to the user when accessing the URL."
@@ -6170,7 +6198,7 @@ msgid "Switch off when running on battery and no/low load"
 msgstr "Kikapcsolás, amikor elemről fut és nincs/alacsony a töltöttség"
 
 msgid "Switch to"
-msgstr "Váltás"
+msgstr "Váltás erre:"
 
 #, php-format
 msgid "Switch to %s/s"
@@ -6186,7 +6214,7 @@ msgid "Synchronize"
 msgstr "Szinkronizálás"
 
 msgid "Syncthing"
-msgstr ""
+msgstr "Syncthing"
 
 #, php-format
 msgid ""
@@ -7639,6 +7667,9 @@ msgid ""
 "This will allow server-side downscaling of very large JPEG images, it can "
 "hurt JPEG serving performance on (at least) Sony DLNA products."
 msgstr ""
+"Ez engedélyezi szerver oldalon a nagyméretű JPEG képek kicsinyítését, ami "
+"visszavetheti (legalább) a Sony DLNA-termékek JPEG-szolgáltatási "
+"teljesítményét."
 
 #, php-format
 msgid ""
@@ -7679,12 +7710,14 @@ msgstr ""
 msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
 msgstr ""
+"Ez támogatja a .jpg és az .mp3 fájlok közvetítését egy HMO támogatású TiVo "
+"felé."
 
 msgid "TiB"
 msgstr "TiB"
 
 msgid "TiVo support"
-msgstr ""
+msgstr "TiVo támogatás"
 
 msgid "Time"
 msgstr "idő"
@@ -8028,10 +8061,10 @@ msgid "UPS watchdog status"
 msgstr "Szünetmentes watchdog állapot"
 
 msgid "UPnP/DLNA - Fuppes"
-msgstr ""
+msgstr "UPnP/DLNA - Fuppes"
 
 msgid "UPnP/DLNA - MiniDLNA"
-msgstr ""
+msgstr "UPnP/DLNA - MiniDLNA"
 
 msgid "URI"
 msgstr "URI"
@@ -8085,7 +8118,7 @@ msgid "Unmounting..."
 msgstr "Leválasztás..."
 
 msgid "Up"
-msgstr "Fel"
+msgstr "Felfelé"
 
 msgid "Update period"
 msgstr "Frissítési időköz"
@@ -8119,8 +8152,11 @@ msgstr ""
 msgid "Use as sparse volume. (thin provisioning)"
 msgstr "Sparse kötetként használd. (thin provisioning)"
 
+msgid "Use different container as root of the tree."
+msgstr "Másik tárolót válassz a fa gyökerének."
+
 msgid "Use inotify monitoring to automatically discover new files."
-msgstr ""
+msgstr "Inotify használata új fájlok automatikus felfedezésére."
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -8265,6 +8301,9 @@ msgstr "Verzió"
 
 msgid "Vibration During Write."
 msgstr "Írás közbeni rezgés."
+
+msgid "Video"
+msgstr "Videó"
 
 msgid "Virtual Host ID"
 msgstr "Virtuális gép ID"
@@ -8611,7 +8650,7 @@ msgid "day(s)"
 msgstr "nap"
 
 msgid "debug"
-msgstr ""
+msgstr "hibakeresés"
 
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
@@ -8628,10 +8667,10 @@ msgid "e.g. %s"
 msgstr "pl. %s"
 
 msgid "error"
-msgstr ""
+msgstr "hiba"
 
 msgid "fatal"
-msgstr ""
+msgstr "végzetes"
 
 msgid "filechooser"
 msgstr "fájlválasztó"
@@ -8674,7 +8713,7 @@ msgid "infinity"
 msgstr "végtelenített"
 
 msgid "info"
-msgstr ""
+msgstr "információ"
 
 msgid "load/unload failed."
 msgstr "töltési hiba"
@@ -8764,16 +8803,4 @@ msgid "version:"
 msgstr "verzió:"
 
 msgid "warning"
-msgstr ""
-
-#~ msgid "UPnP"
-#~ msgstr "UPnP"
-
-#~ msgid ""
-#~ "Select which interface to use. (only selectable if your server has more than "
-#~ "one)"
-#~ msgstr ""
-#~ "Válassz interfészt. (csak akkor tudsz választani, ha több mint egy darab van)"
-
-#~ msgid "DLNA/UPnP Media Server"
-#~ msgstr "DLNA/UPnP Média Szerver"
+msgstr "figyelmeztetés"

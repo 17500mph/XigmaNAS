@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-11-14 10:31+0000\n"
-"PO-Revision-Date: 2015-11-14 03:39+0000\n"
+"POT-Creation-Date: 2015-11-15 21:51+0000\n"
+"PO-Revision-Date: 2015-11-15 14:11+0000\n"
 "Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-14 18:01+0000\n"
+"X-Launchpad-Export-Date: 2015-11-15 21:08+0000\n"
 "X-Generator: Launchpad (build 17845)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -826,6 +826,9 @@ msgstr "Присоединен"
 msgid "Attaching provider '%s'."
 msgstr "Подключение провайдера '%s'."
 
+msgid "Audio"
+msgstr "Аудио"
+
 msgid "Auth Group"
 msgstr "Группа аутентификации"
 
@@ -1011,6 +1014,9 @@ msgid ""
 msgstr ""
 "Транслирует свою доступность в сети каждые N секунд. (По умолчанию 300 "
 "секунд)"
+
+msgid "Browse Directory"
+msgstr "Просмотр Папки"
 
 msgid "Browseable"
 msgstr "Просматриваемый"
@@ -3102,6 +3108,13 @@ msgstr "Fuppes"
 msgid "Fuppes Media Server"
 msgstr "Fuppes Media Server"
 
+msgid ""
+"Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
+"Fuppes first."
+msgstr ""
+"Задействован Fuppes. Если вы желаете использовать MiniDLNA, вам следует "
+"сначала отключить Fuppes."
+
 msgid "GID"
 msgstr "GID"
 
@@ -4322,6 +4335,13 @@ msgstr "MiniDLNA"
 msgid "MiniDLNA A/V Media Server"
 msgstr "MiniDLNA A/V Media Server"
 
+msgid ""
+"MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
+"MiniDLNA first."
+msgstr ""
+"Задействован MiniDLNA. Если вы желаете использовать Fuppes, вам следует "
+"сначала отключить MiniDLNA."
+
 msgid "Minidlna configuration has been updated."
 msgstr "Конфигурация Minidlna была обновлена."
 
@@ -4415,6 +4435,9 @@ msgstr "Монтируется..."
 
 msgid "Mounts"
 msgstr "Точки монтирования"
+
+msgid "Music"
+msgstr "Музыка"
 
 msgid "Must choose one"
 msgstr "Выберите..."
@@ -5038,6 +5061,9 @@ msgstr "Разрешать SSH-туннелирование"
 
 msgid "Physical interface"
 msgstr "Физический интерфейс"
+
+msgid "Pictures"
+msgstr "Изображения"
 
 msgid "Ping"
 msgstr "Команда ping"
@@ -8199,6 +8225,9 @@ msgstr ""
 "Использовать, как разреженный том(sparse volume) - тонкое "
 "резервирование(thin provisioning)"
 
+msgid "Use different container as root of the tree."
+msgstr "Используйте другой контейнер в качестве корня дерева."
+
 msgid "Use inotify monitoring to automatically discover new files."
 msgstr ""
 "Включение наблюдения inotify для автоматического обнаружения новых файлов."
@@ -8349,6 +8378,9 @@ msgstr "Версия"
 
 msgid "Vibration During Write."
 msgstr "Вибрация во время записи."
+
+msgid "Video"
+msgstr "Видео"
 
 msgid "Virtual Host ID"
 msgstr "Идентификатор виртуального узла"
@@ -8858,16 +8890,3 @@ msgstr "версия:"
 
 msgid "warning"
 msgstr "предупреждение"
-
-#~ msgid "UPnP"
-#~ msgstr "UPnP"
-
-#~ msgid ""
-#~ "Select which interface to use. (only selectable if your server has more than "
-#~ "one)"
-#~ msgstr ""
-#~ "Выберите, какой интерфейс использовать (выбрать можно только если ваш сервер "
-#~ "имеет более одного)"
-
-#~ msgid "DLNA/UPnP Media Server"
-#~ msgstr "DLNA/UPnP Медиа Сервер"
