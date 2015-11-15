@@ -941,10 +941,10 @@ class HTMLFolderBox1 extends HTMLFolderBox {
 		echo "    </select>\n";
 		echo "    <input name='{$ctrlname}deletebtn' type='button' class='formbtn' id='{$ctrlname}deletebtn' value='".htmlspecialchars(gettext("Delete"), ENT_QUOTES)."' onclick='onclick_delete_{$ctrlname}()' /><br />\n";
 		echo "    <select name='{$ctrlname}filetype' class='formfld' id='{$ctrlname}filetype' > ";
-		echo "			<option value=''>All</option>";
-		echo "			<option value='A'>Audio</option>";
-		echo "			<option value='V'>Video</option>";
-		echo "  		<option value='P'>Pictures</option>";
+		echo "			<option value=''>".htmlspecialchars(gettext("All"), ENT_QUOTES)."</option>";
+		echo "			<option value='A'>".htmlspecialchars(gettext("Audio"), ENT_QUOTES)."</option>";
+		echo "			<option value='V'>".htmlspecialchars(gettext("Video"), ENT_QUOTES)."</option>";
+		echo "  		<option value='P'>".htmlspecialchars(gettext("Pictures"), ENT_QUOTES)."</option>";
 		echo "    </select>";
 
 		echo "    <input name='{$ctrlname}data' type='text' class='formfld' id='{$ctrlname}data' size='60' value='' />\n";
