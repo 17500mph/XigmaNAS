@@ -318,7 +318,7 @@ function aio_change() {
               <br /><?=gettext("Server description. This can usually be left blank.") ;?>
             </td>
           </tr>
-          <?php html_combobox("doscharset", gettext("Dos charset"), $pconfig['doscharset'], array("CP437" => gettext("CP437 (Latin US)"), "CP850" => gettext("CP850 (Latin 1)"), "CP852" => gettext("CP852 (Latin 2)"), "CP866" => gettext("CP866 (Cyrillic CIS 1)"), "CP932" => gettext("CP932 (Japanese Shift-JIS)"), "CP936" => gettext("CP936 (Simplified Chinese GBK)"), "CP949" => gettext("CP949 (Korean)"), "CP950" => gettext("CP950 (Traditional Chinese Big5)"), "CP1251" => gettext("CP1251 (Cyrillic)"), "ASCII" => "ASCII"), "", false);?>
+          <?php html_combobox("doscharset", gettext("Dos charset"), $pconfig['doscharset'], array("CP437" => gettext("CP437 (Latin US)"), "CP850" => gettext("CP850 (Latin 1)"), "CP852" => gettext("CP852 (Latin 2)"), "CP866" => gettext("CP866 (Cyrillic CIS 1)"), "CP932" => gettext("CP932 (Japanese Shift-JIS)"), "CP936" => gettext("CP936 (Simplified Chinese GBK)"), "CP949" => gettext("CP949 (Korean)"), "CP950" => gettext("CP950 (Traditional Chinese Big5)"), "CP1251" => gettext("CP1251 (Cyrillic)"), "CP1252" => gettext("CP1252 (Latin 1)"), "ASCII" => "ASCII"), "", false);?>
           <?php html_combobox("unixcharset", gettext("Unix charset"), $pconfig['unixcharset'], array("UTF-8" => "UTF-8", "iso-8859-1" => "iso-8859-1", "iso-8859-15" => "iso-8859-15", "gb2312" => "gb2312", "EUC-JP" => "EUC-JP", "ASCII" => "ASCII"), "", false);?>
           <?php html_combobox("loglevel", gettext("Log Level"), $pconfig['loglevel'], array("1" => gettext("Minimum"), "2" => gettext("Normal"), "3" => gettext("Full"), "10" => gettext("Debug")), "", false);?>
           <tr>
