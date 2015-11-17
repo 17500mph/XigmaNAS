@@ -199,7 +199,7 @@ $loginfo = array(
 		"logfile" => "{$clogdir}/minidlna.log",
 		"filename" => "minidlna.log",
 		"type" => "plain",
-		"pattern" => "/^(\[\S+\s+\S+\]+\s)(\S+\:\s)(.+)/",
+		"pattern" => "/^\[(.*?)\]\s+(.*?)\..*?:\d+:\s+.*?:\s+(.*)$/",
 		"columns" => array(
 			array("title" => gettext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
 			array("title" => gettext("Who"), "class" => "listr", "param" => "nowrap=\"nowrap\"", "pmid" => 2),
