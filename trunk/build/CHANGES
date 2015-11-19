@@ -43,6 +43,7 @@ Changes:
 - Upgrade nano to 2.4.3.
 
 Fixes:
+- Fix minidlna log file location mismatch. (ticket #255)
 - Fix smbclient use NT1 instead of SMB3/SMB2. (ticket #236)
 - Fix cannot execute samba if time server is empty.
 - Fix missing loader parameters on fresh installation. (full only)
