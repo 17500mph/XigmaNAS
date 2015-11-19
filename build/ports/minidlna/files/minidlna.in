@@ -35,7 +35,7 @@ minidlna_home=`configxml_get "//${name}/home"`
 minidlna_config_dir="/var/etc"
 scanner_indicator="/var/run/${name}/upnp-av.scan"
 minidlna_config=${minidlna_config_dir}/${name}.conf
-minidlna_logdir=${minidlna_logdir-"/var/log"}
+minidlna_logdir=${minidlna_logdir-"/var/log/minidlna"}
 
 pidfile="/var/run/${name}/${name}.pid"
 command_args=" -P $pidfile -u $minidlna_uid -f $minidlna_config"
@@ -62,9 +62,9 @@ port=${_port}
 serial=${_serial}
 model_number=${_model}
 notify_interval=${_notifyinterval}
-log_dir=${minidlna_logdir}
 root_container=${_container}
 db_dir=${minidlna_home}
+log_dir=${minidlna_logdir}
 log_level=general,artwork,database,inotify,scanner,metadata,http,ssdp,tivo=${_loglevel}
 album_art_names=Cover.jpg/cover.jpg/AlbumArtSmall.jpg/albumartsmall.jpg/AlbumArt.jpg/albumart.jpg/Album.jpg/album.jpg/Folder.jpg/folder.jpg/Thumb.jpg/thumb.jpg
 minissdpdsocket=/var/run/minissdpd.sock
