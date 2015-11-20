@@ -98,6 +98,10 @@ if ($_POST) {
 			config_unlock();
 		}
 		$savemsg = get_std_save_message($retval);
+		if ($retval == 0 && !isset($config['syncthing']['enable']) && file_exists("/var/run/syncthing.pid")) {
+			// remove pidfile if service is disabled
+			unlink("/var/run/syncthing.pid");
+		}
 	}
 }
 ?>
