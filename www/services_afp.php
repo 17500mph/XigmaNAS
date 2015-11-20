@@ -46,7 +46,6 @@ $pconfig['enable'] = isset($config['afp']['enable']);
 $pconfig['afpname'] = !empty($config['afp']['afpname']) ? $config['afp']['afpname'] : "";
 $pconfig['guest'] = isset($config['afp']['guest']);
 $pconfig['local'] = isset($config['afp']['local']);
-$pconfig['noddp'] = isset($config['afp']['noddp']);
 if (is_array($config['afp']['auxparam']))
 	$pconfig['auxparam'] = implode("\n", $config['afp']['auxparam']);
 
@@ -63,7 +62,6 @@ if ($_POST) {
 		$config['afp']['afpname'] = $_POST['afpname'];
 		$config['afp']['guest'] = isset($_POST['guest']) ? true : false;
 		$config['afp']['local'] = isset($_POST['local']) ? true : false;
-		$config['afp']['noddp'] = isset($_POST['noddp']) ? true : false;
 		
 		# Write additional parameters.
 		unset($config['afp']['auxparam']);
@@ -94,7 +92,7 @@ function enable_change(enable_change) {
 	document.iform.afpname.disabled = endis;
 	document.iform.guest.disabled = endis;
 	document.iform.local.disabled = endis;
-	document.iform.noddp.disabled = endis;
+	document.iform.auxparam.disabled = endis;
 }
 //-->
 </script>
