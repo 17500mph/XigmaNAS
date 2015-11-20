@@ -37,6 +37,8 @@ $pgtitle = array(gettext("VM"), gettext("VirtualBox"));
 
 $pconfig['enable'] = isset($config['vbox']['enable']);
 $pconfig['homedir'] = $config['vbox']['homedir'];
+$vbox_user = rc_getenv_ex("vbox_user", "vboxusers");
+$vbox_group = rc_getenv_ex("vbox_group", "vboxusers");
 
 if ($_POST) {
 	unset($input_errors);
@@ -66,8 +68,8 @@ if ($_POST) {
 			$dir = "/nonexistent";
 
 		// update homedir
-		$user = "vboxusers";
-		$group = "vboxusers";
+		$user = $vbox_user;
+		$group = $vbox_group;
 		$opt = "-c \"Virtualbox user\" -d \"{$dir}\" -s /usr/sbin/nologin";
 		$index = array_search_ex($user, $config['system']['usermanagement']['user'], "name");
 		if ($index != false) {
