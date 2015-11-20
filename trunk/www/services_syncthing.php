@@ -44,6 +44,8 @@ $pconfig['homedir'] = $config['syncthing']['homedir'];
 $if = get_ifname($config['interfaces']['lan']['if']);
 $gui_ipaddr = get_ipaddr($if);
 $gui_port = 8384;
+$syncthing_user = rc_getenv_ex("syncthing_user", "syncthing");
+$syncthing_group = rc_getenv_ex("syncthing_group", "syncthing");
 
 if ($_POST) {
 	unset($input_errors);
@@ -73,8 +75,8 @@ if ($_POST) {
 
 		$dir = $_POST['homedir'];
 		if ($dir != "/mnt" && file_exists($dir) && !file_exists("${dir}/config.xml")) {
-			$user = "syncthing";
-			$group = "syncthing";
+			$user = $syncthing_user;
+			$group = $syncthing_group;
 
 			chmod($dir, 0700);
 			chown($dir, $user);
