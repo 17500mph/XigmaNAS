@@ -1,5 +1,5 @@
 PORTNAME=			cdialog
-PORTVERSION=	1.2.20140219
+PORTVERSION=	1.2.20150920
 PORTEPOCH=	1
 CATEGORIES=			devel
 COMMENT=			An enhanced version of 'dialog' to work with ncurses
