@@ -121,10 +121,11 @@ function enable_change(enable_change) {
 	document.iform.location.disabled = endis;
 	document.iform.contact.disabled = endis;
 	document.iform.read.disabled = endis;
-	document.iform.mibii.disabled = endis;
 	document.iform.netgraph.disabled = endis;
 	document.iform.hostres.disabled = endis;
 	document.iform.ucd.disabled = endis;
+	document.iform.auxparam.disabled = endis;
+	document.iform.mibii.disabled = endis;
 	document.iform.trapenable.disabled = endis;
 	document.iform.traphost.disabled = endis;
 	document.iform.trapport.disabled = endis;
