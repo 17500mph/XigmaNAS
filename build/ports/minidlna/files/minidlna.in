@@ -35,7 +35,7 @@ minidlna_home=`configxml_get "//${name}/home"`
 minidlna_config_dir="/var/etc"
 scanner_indicator="/var/run/${name}/upnp-av.scan"
 minidlna_config=${minidlna_config_dir}/${name}.conf
-minidlna_logdir=${minidlna_logdir-"/var/log/minidlna"}
+minidlna_logdir=${minidlna_logdir-"/var/log"}
 
 pidfile="/var/run/${name}/${name}.pid"
 command_args=" -P $pidfile -u $minidlna_uid -f $minidlna_config"
