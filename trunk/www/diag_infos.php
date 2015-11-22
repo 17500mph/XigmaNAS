@@ -120,9 +120,12 @@ $a_phy_disk = array_merge((array)get_physical_disks_list());
 					if(strcmp($matches[0], "Available") == 0){
 						$matches[0] = gettext("Available");
 						if(strcmp($matches[1], "Enabled") == 0){
-							$matches[0] = $matches[0].' , ';
-							$matches[1]  = gettext("Enabled");
-							}
+							$matches[0] = $matches[0].', ';
+							$matches[1] = gettext("Enabled");
+						} else if(strcmp($matches[1], "Disabled") == 0){
+							$matches[0] = $matches[0].', ';
+							$matches[1] = gettext("Disabled");
+						}
 					}
 					else if(strcmp($matches[0], "Unavailable") == 0){
 						$matches[0] = gettext("Unavailable");
