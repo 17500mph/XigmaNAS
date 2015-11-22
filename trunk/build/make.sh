@@ -413,7 +413,13 @@ add_libs() {
 			if [ ! -d ${DESTDIR} ]; then
 			    DESTDIR=${NAS4FREE_ROOTFS}/usr/local/lib
 			fi
-			install -c -s -v ${NAS4FREE_WORLD}${i} ${DESTDIR}
+			FILE=`basename ${i}`
+			if [ -L "${DESTDIR}/${FILE}" ]; then
+				# do not remove symbolic link
+				echo "link: ${i}"
+			else
+				install -c -s -v ${NAS4FREE_WORLD}${i} ${DESTDIR}
+			fi
 		fi
 	done
 
