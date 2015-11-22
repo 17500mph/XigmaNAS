@@ -465,7 +465,9 @@ function write_loader_config(){
 		}
 
 		if(strlen($lines) == 0){
-			unlink($loader_filename);
+			if (file_exists($loader_filename)) {
+				@unlink($loader_filename);
+			}
 		}
 		// Write configuration file
 		else if (file_put_contents_safe($loader_filename, $lines ) === FALSE) {
