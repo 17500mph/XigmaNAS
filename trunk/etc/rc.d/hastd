@@ -60,6 +60,7 @@ hastd_mkconf()
 
 hastd_stop_precmd()
 {
+	/etc/rc.d/iscsi_initiator forcestop
 	/usr/local/sbin/hastswitch shutdown
 	${hastctl} role ${hastctl_args} init all
 }
