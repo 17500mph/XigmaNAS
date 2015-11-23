@@ -46,6 +46,7 @@ Changes:
 - Upgrade xmd to 0.5.
 
 Fixes:
+- Fix bridged member cannot be set IP address.
 - Fix minidlna log file location mismatch. (ticket #255)
 - Fix smbclient use NT1 instead of SMB3/SMB2. (ticket #236)
 - Fix cannot execute samba if time server is empty.
