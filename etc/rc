@@ -105,7 +105,7 @@ case ${PLATFORM} in
 					if [ -f /boot/kernel/geom_xmd.ko ]; then
 						/sbin/mdconfig -d -u ${md}
 						/sbin/kldload /boot/kernel/geom_xmd.ko 2> /dev/null
-						md=`/sbin/xmdconfig -s ${MDLOCALSIZE}`
+						md=`/sbin/xmdconfig -c 4 -s ${MDLOCALSIZE}`
 					fi
 				else
 					# not use LiveUSB
@@ -116,7 +116,7 @@ case ${PLATFORM} in
 					if [ -f /boot/kernel/geom_xmd.ko ]; then
 						/sbin/mdconfig -d -u ${md}
 						/sbin/kldload /boot/kernel/geom_xmd.ko 2> /dev/null
-						md=`/sbin/xmdconfig -s ${MDLOCALSIZE}`
+						md=`/sbin/xmdconfig -c 4 -s ${MDLOCALSIZE}`
 					fi
 				fi
 
@@ -169,7 +169,7 @@ case ${PLATFORM} in
 					if [ -f /boot/kernel/geom_xmd.ko ]; then
 						/sbin/mdconfig -d -u ${md}
 						/sbin/kldload /boot/kernel/geom_xmd.ko 2> /dev/null
-						md=`/sbin/xmdconfig -s ${MDLOCALSIZE}`
+						md=`/sbin/xmdconfig -c 4 -s ${MDLOCALSIZE}`
 					fi
 				else
 					if [ "${swap}" != "NONE" -a -e "/dev/${swap}" ]; then
@@ -179,7 +179,7 @@ case ${PLATFORM} in
 					if [ -f /boot/kernel/geom_xmd.ko ]; then
 						/sbin/mdconfig -d -u ${md}
 						/sbin/kldload /boot/kernel/geom_xmd.ko 2> /dev/null
-						md=`/sbin/xmdconfig -s ${MDLOCALSIZE}`
+						md=`/sbin/xmdconfig -c 4 -s ${MDLOCALSIZE}`
 					fi
 				fi
 
