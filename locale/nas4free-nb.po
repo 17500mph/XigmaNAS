@@ -1,86 +1,82 @@
-# Turkish translation for freenas
-# Copyright (c) 2007 Rosetta Contributors and Canonical Ltd 2007
-# This file is distributed under the same license as the freenas package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2007.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2015-11-17 01:18+0000\n"
-"PO-Revision-Date: 2015-10-13 18:26+0000\n"
-"Last-Translator: Hasan Yılmaz <iletisim@hasanyilmaz.net>\n"
-"Language-Team: NAS4Free <tr@li.org>\n"
+"PO-Revision-Date: 2015-04-05 17:53+0000\n"
+"Last-Translator: Asbjørn <lordcrc@gmail.com>\n"
+"Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-19 03:32+0000\n"
+"X-Launchpad-Export-Date: 2015-11-23 22:45+0000\n"
 "X-Generator: Launchpad (build 17850)\n"
-"X-Poedit-Country: TURKEY\n"
-"X-Poedit-Language: Turkish\n"
+"X-Poedit-Country: NORWAY\n"
+"Language: \n"
+"X-Poedit-Language: Norwegian Bokmal\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 msgid " interfaces:"
-msgstr " Arayüzler"
+msgstr " nettverkskort"
 
 msgid " was assigned to "
-msgstr " ayrılmıştır. "
+msgstr " ble tildelt "
 
 #, php-format
 msgid "%d days"
-msgstr "%d gün"
+msgstr "%d dager"
 
 #, php-format
 msgid "%d week"
-msgstr "%d hafta"
+msgstr "%d uke"
 
 #, php-format
 msgid "%d weeks"
-msgstr "%d hafta"
+msgstr "%d uker"
 
 #, php-format
 msgid "%d year"
-msgstr "%d yıl"
+msgstr "%d år"
 
 #, php-format
 msgid "%d years"
-msgstr "%d yıl"
+msgstr "%d år"
 
 #, c-format, php-format
 msgid "%d%% of %dMiB"
-msgstr "%d%% in %dMiB"
+msgstr "%d%% av %dMiB"
 
 #, php-format
 msgid "%dB / block"
-msgstr "%dB / bloğu"
+msgstr "%dB / blokk"
 
 #, php-format
 msgid "%s interface"
-msgstr "%s arayüzü"
+msgstr "%s grensesnitt"
 
 #, php-format
 msgid "%s is too long."
-msgstr "%s çok uzun."
+msgstr "%s er for langt."
 
 #, php-format
 msgid "%s is used to create %s volumes."
-msgstr "%s oluşturmak için kullanılacak %s birim."
+msgstr "%s blir brukt til å opprette %s volumer."
 
 #, php-format
 msgid "%s of %sB"
-msgstr "%sB'nin %s"
+msgstr "%s av %sB"
 
 #, php-format
 msgid "%s on %s"
-msgstr "%s üzerinde %s"
+msgstr "%s på %s"
 
 #, php-format
 msgid "%s%% available"
-msgstr ""
+msgstr "%s%% tilgjengelig"
 
 #, php-format
 msgid "%s%d %s is already used by %s%d."
-msgstr "%s%d %s zaten %s%d tarafından kullanılmaktadır."
+msgstr "%s%d %s er allerede brukt av %s%d."
 
 #, php-format
 msgid "%s: cannot get mirror name."
@@ -88,11 +84,11 @@ msgstr ""
 
 #, c-format, php-format
 msgid "%sB available of %sB"
-msgstr "%sB'nin %sB'si kullanılabilir"
+msgstr "%sB tilgjengelig av %sB"
 
 #, c-format, php-format
 msgid "%sB used of %sB"
-msgstr "%sB'nin %sB'si kullanıldı."
+msgstr "%sB brukt av %sB"
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr ""
@@ -131,24 +127,23 @@ msgid ""
 msgstr ""
 
 msgid "*** Imported duplicate ***"
-msgstr "*** Tekrarlanan işlem ***"
+msgstr "*** Importet duplikat ***"
 
 msgid "0=disabled, 1-255=enabled command queuing with specified depth."
-msgstr "0=devre dışı, 1-255=komutu belirtilen derinliği ile kuyruk etkin"
+msgstr "0=deaktivert, 1-255= aktivert kommandokø med spesifisert dybde."
 
 msgid ""
 "1. Use these specials actions for debugging only!<br />2. There is no need "
 "of using this menu for starting a RAID volume (start automaticaly)."
 msgstr ""
-"1. Bu özel eylemi sadece hata ayıklama için kullanın!<br />1.  Raid birimini "
-"çalıştırmak için bu menünün kullanımına gerek yoktur (otomatik olarak "
-"çalışır )."
+"1. Bruk disse spesialkommandoene kun for debugging! <br />2. Man behøver "
+"ikke bruke denne menyen for å starte et RAID (starter automatisk)"
 
 msgid "4KB wrapper"
 msgstr ""
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
-msgstr "802.1Q VLAN etiketi (1 ve 4094 arası)."
+msgstr "802.1Q VLAN tagg (mellom 1 og 4094)"
 
 msgid "<->"
 msgstr "<->"
@@ -158,8 +153,8 @@ msgid ""
 "<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
 "href='%s'>user</a> must have shell access."
 msgstr ""
-"<a href='%s'>SSHD</a> Unision 'ın çalışması için etkinleştirilmelidir, ve <a "
-"href='%s'>kullanıcısı</a> kabuk erişimine sahip olmalıdır."
+"<a href='%s'>SSHD</a> må være aktivt for at Unison skal virke, og <a "
+"href='%s'>brukeren</a> må ha shell-tilgang."
 
 msgid ""
 "<b>EFI GPT partition</b> if you want to mount a GPT formatted drive "
@@ -167,17 +162,22 @@ msgid ""
 "UFS formatted drive or do imported disks from other OS.<br/><b>CD/DVD "
 "volume</b> if you want to mount a CD/DVD volume."
 msgstr ""
+"<b>EFI GPT partisjon</b> om du vil mounte en GPT formatert harddisk "
+"(<b>standard partisjon</b>).<br/><b>MBR partisjon</b> om du ønsker å mounte "
+"en UFS formatert harddisk eller importere fra et annet "
+"OS(operativsystem).<br/><b>CD/DVD drev</b> om du vil mounte et DVD drev."
 
 msgid ""
 "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
 msgstr ""
-"<div id='enumeration'><ul><li>%d - Tarih</li><li>%h - Host "
-"adı</li></ul></div>"
+"<div id='enumeration'><ul><li>%d -Dato</li><li>%h - Vertsnavn</li></ul></div>"
 
 msgid ""
 "<div id='enumeration'><ul><li>The new password is also the default root "
 "password of the system!</li></ul></div>"
 msgstr ""
+"<div id='enumeration'><ul><li>Det nye passordet vil bli standard for dette "
+"systemet!</li></ul></div"
 
 msgid ""
 "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
@@ -188,45 +188,58 @@ msgid ""
 "transfer, and then removed after the transfer completes.</li><li>After - "
 "File-deletions will be done after the transfer has completed.</li>"
 msgstr ""
+"<li>Standard - Rsync vil velge 'underveis' algoritmen når den kommuniserer "
+"med rsync 3.0.0 eller nyere, og 'før' algoritmen når den kommuniserer med en "
+"eldre rsync.</li><li>Før - Sletting av filer vil foregå før filøverføringen "
+"starter.</li><li>Underveis - Sletting av filer vil bli gjort inkrementelt "
+"mens filoverføringen foregår.</li><li>Forsinket - Sletting av filer vil bli "
+"kalkulert under filoverføring, og deretter slettet etter filoverføringen er "
+"ferdig.</li><li>Etter - Sletting av filer vil bli gjort når filøverføringene "
+"er ferdige.</li>"
 
 msgid ""
 "A Auth Group contains authorised users and secrets for additional security."
 msgstr ""
-"Bir Auth Group yetkili kullanıcıları ve ek güvenlik için sırları içerir."
+"En \"Auth\" gruppe inneholder autoriserte brukere og 'hemmeligheter' for "
+"ekstra sikkerhet."
 
 msgid ""
 "A Initiator Group contains authorised initiator names and networks to access "
 "the target."
 msgstr ""
-"Initiator Grubu hedef erişimine isim ve ağları için yetkileri içerir."
+"En oppstartsgruppe består av autoriserte initiativtagernavn og nettverk for "
+"å aksessere ressursen."
 
 msgid ""
 "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
 msgstr ""
-"Bir NTP saat sunucu adı sadece a'dan z'ye harf 0'dan 9'a rakam \"-\" ve "
-"\".\" içerebilir."
+"En NTP tids-tjeners navn kan kun inneholde tegnene a-z, 0-9 '-' og '.'."
 
 msgid ""
 "A Portal Group contains IP addresses and listening TCP ports to connect the "
 "target from the initiator."
 msgstr ""
-"Hedefe bağlanmak için Portal grubunun Ip adreslerini içerir ve Tcp "
-"portlarını dinler."
+"En portalgruppe inneholder IP adresser og lyttende TCP porter for å koble "
+"ressursen ut fra initiativtageren."
 
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
-msgstr "etiketi %s olan VLAN zaten bu arabirimde tanımlanır."
+msgstr "Et VLAN med taggen %s er allerede definert på dette grensesnittet."
 
 msgid ""
 "A directory listing is generated if a directory is requested and no index-"
 "file (index.php, index.html, index.htm or default.htm) was found in that "
 "directory."
 msgstr ""
+"En opplisting blir generert hvis en katalog blir hentet og ingen indeks fil "
+"(index.php, index.html, index.htm eller default.htm) ble funnet i katalogen."
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
 "that has the same IP. Use a space to separate multiple alias names."
 msgstr ""
+"Kallenavn på node. Denne innstillingen kan forekomme flere ganger for hvert "
+"domene som har samme IP. Bruk et mellomrom for å separere kallenavnene."
 
 msgid ""
 "A key will be either 5 or 13 characters (40 or 104 bits) depending of the "
@@ -234,9 +247,12 @@ msgid ""
 "either as a plain string or as a string of hexadecimal digits preceded by "
 "'0x'."
 msgstr ""
+"En nøkkel vil enten være 5 eller 13 tegn (40 eller 104 bits) avhenging av "
+"det lokale nettverket og kapabiliteten til adapteret. Kan spesifiseres som "
+"en enkelt string eller som string med heksadesimale tegn forutgått av '0x'."
 
 msgid "A route to this destination network already exists."
-msgstr "Hedef ağ'a bir yönlendirme bulunuyor."
+msgstr "En rute til dette mottaker nettverket eksisterer allerede."
 
 msgid ""
 "A tally of spindle start/stop cycles. The spindle turns on, and hence the "
@@ -246,53 +262,56 @@ msgid ""
 msgstr ""
 
 msgid "A valid IP address must be specified."
-msgstr "Geçerli bir İP adresinin belirtilmiş olması gerekir."
+msgstr "En gyldig IP adresse må bli spesifisert"
 
 msgid ""
 "A valid IP address or CIDR notation must be specified for the hosts allow."
 msgstr ""
+"En gyldig IP adresse eller CIDR må spesifiseres for att vertene kan tillates"
 
 msgid ""
 "A valid IPv4 address must be specified for the primary/secondary DNS server."
-msgstr "Birincil ve ikincil DNS sunucusu için bir geçerli IPv4 adresi girin"
+msgstr ""
+"En valid IPv4 adresse må spesifiseres for den primære/sekundære DNS tjeneren."
 
 msgid "A valid IPv4 address must be specified."
-msgstr "Geçerli bir IPv4 adresinin belirtilmiş olması gerekir."
+msgstr "En gyldig IPv4 adresse må spesifiseres."
 
 msgid "A valid IPv4 network bit count must be specified."
-msgstr "Geçerli bir IPv4 network bit hesaplaması belirtilmiş olması gerekir."
+msgstr "Et gyldig IPv4 nettverksbit må spesifiseres."
 
 msgid "A valid IPv6 Gateway address must be specified."
-msgstr "Geçerli bir IPv6 Ağ Geçidi adresi belirtilmiş olması gerekir."
+msgstr "En gyldig IPv6 portaladresse må spesifiseres."
 
 msgid ""
 "A valid IPv6 address must be specified for the primary/secondary DNS server."
 msgstr ""
-"Birincil ve İkincil DNS Server için geçerli bir IPv6 adresi belirtilmelidir."
+"En gyldig IPv6 adresse må spesifiseres for den primære/sekundære DNS "
+"tjeneren."
 
 msgid "A valid IPv6 address must be specified."
-msgstr "Geçerli bir IPv6 adresi belirtilmelidir."
+msgstr "En gyldig IPv6 adresse må spesifiseres."
 
 msgid "A valid IPv6 prefix must be specified."
-msgstr "Geçerli bir IPv6 ön eki belirtilmelidir."
+msgstr "Et gyldig IPv6 prefiks må spesifiseres."
 
 msgid "A valid destination network must be specified."
-msgstr "Geçerli bir hedef ağ belirtilmelidir."
+msgstr "Et gyldig mottaksnettverk må spesifiseres."
 
 msgid "A valid gateway IP address must be specified."
-msgstr "Geçerli bir Ağ geçidi IP adresi belirtilmelidir."
+msgstr "En gyldig IP adresse må spesifiseres på portalen."
 
 msgid "A valid mtu size must be specified."
-msgstr "Geçerli bir MTU boyutu belirtilmelidir."
+msgstr "En gyldig størrelse på mtu må spesifiseres."
 
 msgid "A valid network bit count (1-32) must be specified."
-msgstr "Geçerli bir ağ bit sayımı belirtilmelidir. (1-32 arasında)"
+msgstr "Et gyldig antall nettverksbit (1-32) må spesifiseres."
 
 msgid "A valid prefix (1-128) must be specified."
-msgstr "Geçerli bir ön ek (1-128) belirtilmiş olması gerekir."
+msgstr "Et gyldig prefiks (1-128) må spesifiseres."
 
 msgid "A valid systctl MIB value."
-msgstr "Geçerli bir Systctl MIB değeri."
+msgstr "En gyldig systctl MIB verdi."
 
 msgid "ACL inherit"
 msgstr ""
@@ -301,10 +320,10 @@ msgid "ACL mode"
 msgstr ""
 
 msgid "AD authentication disabled"
-msgstr "AD doğrulaması devredışı"
+msgstr "AD autentisering avslått"
 
 msgid "AD or PDC name."
-msgstr "AD veya PDC ismi"
+msgstr "AD eller PDC navn."
 
 msgid "AFP"
 msgstr "AFP"
@@ -316,209 +335,209 @@ msgid "AIO module"
 msgstr ""
 
 msgid "AIO read size"
-msgstr "AIO okuma boyutu"
+msgstr "AIO lesestørrelse"
 
 msgid "AIO write size"
-msgstr "AIO yazma boyutu"
+msgstr "AIO skrivestørrelse"
 
 msgid "ALL interfaces"
-msgstr "TÜM arayüzler"
+msgstr "Alle nettverkskort"
 
 msgid "AP mode"
 msgstr ""
 
 msgid "ARP Tables"
-msgstr "ARP Tabloları"
+msgstr "ARP tabeller"
 
 msgid "ARP tables"
-msgstr "ARP Tabloları"
+msgstr "ARP tabeller"
 
 msgid "ATTRIBUTE NAME"
 msgstr ""
 
 msgid "Access"
-msgstr "Erişim"
+msgstr "Tilgang"
 
 msgid "Access Restrictions"
-msgstr "Erişim Kısıtlamaları"
+msgstr "Tilgangsrestriksjoner"
 
 msgid "Access Time (atime)"
-msgstr ""
+msgstr "Tilgangstid"
 
 msgid "Access mode"
-msgstr "Erişim Modu"
+msgstr "Tilgangsmodus"
 
 msgid "Acoustic level"
-msgstr "Akustik Seviyesi"
+msgstr "Akustisk nivå"
 
 msgid "Action"
-msgstr "Eylem"
+msgstr "Handling"
 
 msgid "Activate"
-msgstr "Etkinleştir"
+msgstr "Aktiver"
 
 msgid "Activate S.M.A.R.T. monitoring for this device."
-msgstr "Bu aygıt için S.M.A.R.T. özelliğini etkinleştir."
+msgstr "Aktiver S.M.A.R.T. overvåking for denne enheten."
 
 msgid ""
 "Activate email report if you want to be notified if a failure or a new error "
 "has been detected, or if a S.M.A.R.T. command to a disk fails."
 msgstr ""
-"Hata, problem veya S.M.A.R.T'ın uyardığı disk hataları için e-posta raporu "
-"gönderilmesini etkinleştir."
+"Aktiver e-post rapporter hvis du vil bli varslet om en stans, om en feil har "
+"blitt oppdaget eller hvis en S.M.A.R.T. kommando til en disk feiler."
 
 msgid "Active Directory"
 msgstr "Active Directory"
 
 msgid "Active Directory List"
-msgstr ""
+msgstr "Active Directory List"
 
 msgid "Active Shares"
-msgstr ""
+msgstr "Aktive Delinger"
 
 msgid "Active Users"
-msgstr "Aktif Kullanıcılar"
+msgstr "Aktive brukere"
 
 msgid "Add"
-msgstr "Ekle"
+msgstr "Tilføy"
 
 msgid "Add Host"
-msgstr "Bilgisayar Ekle"
+msgstr "Legg til vert"
 
 msgid "Add MIB"
-msgstr "MIB Ekle"
+msgstr "Legg til MIB"
 
 msgid "Add RAID"
-msgstr "RAID Ekle"
+msgstr "Legg til RAID"
 
 msgid "Add Route"
-msgstr "Route Ekle"
+msgstr "Legg til rute"
 
 msgid "Add Rsync job"
-msgstr "Rsync görevi ekle"
+msgstr "Legg til Rsync jobb"
 
 msgid "Add URL"
-msgstr "URL ekle"
+msgstr "Legg til URL"
 
 msgid "Add additional scheduled self-test."
-msgstr "Rutin olarak self-test ekle"
+msgstr "Legg til en planlagt selv-test til."
 
 msgid "Add auth group"
-msgstr "Doğrulama grubu ekle"
+msgstr "Legg til auth gruppe"
 
 msgid "Add auto snapshot"
-msgstr ""
+msgstr "Legg til auto øyeblikksbilde"
 
 msgid "Add command"
-msgstr "Komut Ekle"
+msgstr "Legg til kommando"
 
 msgid "Add dataset"
-msgstr "Veriseti ekle"
+msgstr "Legg til datasett"
 
 msgid "Add device"
-msgstr "Aygıt Ekle"
+msgstr "Legg til enhet"
 
 msgid "Add disk"
-msgstr "Disk Ekle"
+msgstr "Legg til disk"
 
 msgid "Add extent"
-msgstr "Uzantı Ekle"
+msgstr "Legg til omfang"
 
 msgid "Add group"
-msgstr "Grup ekle"
+msgstr "Legg til gruppe"
 
 msgid "Add initiator"
-msgstr "Initiator Ekle"
+msgstr "Legg til initiativtager"
 
 msgid "Add initiator group"
-msgstr "Başlatıcı grup ekle"
+msgstr "Legg til oppstartsgruppe"
 
 msgid "Add interface"
-msgstr "Arayüz Ekle"
+msgstr "Legg til grensesnitt"
 
 msgid "Add job"
-msgstr "Görev Ekle"
+msgstr "Legg til jobb"
 
 msgid "Add module"
-msgstr "Modül Ekle"
+msgstr "Legg til modul"
 
 msgid "Add mount point"
-msgstr "Bağlama noktası ekle"
+msgstr "Legg til monteringspunkt"
 
 msgid "Add option"
-msgstr "Seçenek ekle"
+msgstr "Legg til valg"
 
 msgid "Add pool"
-msgstr "Havuz ekle"
+msgstr "Legg til mengde"
 
 msgid "Add portal group"
-msgstr "Portal grubu ekle"
+msgstr "Legg til portalgruppe"
 
 msgid "Add resource"
-msgstr "Kaynak ekle"
+msgstr "Legg til enhet"
 
 msgid "Add rule"
-msgstr "Kural ekle"
+msgstr "Legg til regel"
 
 msgid "Add self-test"
-msgstr "Self-Test ekle"
+msgstr "Legg til selv-test"
 
 msgid "Add share"
-msgstr "Paylaşım Ekle"
+msgstr "Legg til område for deling"
 
 msgid "Add snapshot"
-msgstr ""
+msgstr "Legg til bildefil"
 
 msgid "Add target"
-msgstr "Hedef Ekle"
+msgstr "Legg til mål"
 
 msgid "Add user"
-msgstr "Kullanıcı Ekle"
+msgstr "Legg til bruker"
 
 msgid "Add volume"
-msgstr ""
+msgstr "Legg til volum"
 
 msgid "Additional group"
-msgstr "Ek Grup"
+msgstr "Ekstra gruppe"
 
 msgid "Additional parameters to the hardware-specific part of the driver."
-msgstr ""
+msgstr "Flere parametre for maskinvarespesifike delere av driveren."
 
 msgid "Address"
-msgstr "Adres"
+msgstr "Adresse"
 
 msgid "Address of the remote hastd daemon. It must be a static IP address."
-msgstr ""
+msgstr "Ip adresse for host-daemon. Kun statisc IP-adresse kan benyttes"
 
 msgid "Admin password"
 msgstr ""
 
 msgid "Administration password"
-msgstr "Yönetici Parolası"
+msgstr "Passord for administrasjon (admin password)"
 
 msgid "Administrative WebGUI"
-msgstr ""
+msgstr "Web grensesnitt for administrasjon"
 
 msgid "Administrator name"
-msgstr "Yönetici Adı"
+msgstr "Administrator navn"
 
 msgid "Advanced"
-msgstr "Gelişmiş"
+msgstr "Avansert"
 
 msgid "Advanced Configuration"
-msgstr "Gelişmiş Yapılandırma"
+msgstr "Avansert konfigurasjon"
 
 msgid "Advanced Format"
-msgstr "Gelişmiş Format"
+msgstr "Avansert Format"
 
 msgid "Advanced Options"
-msgstr "Gelişmiş Seçenekler"
+msgstr "Avanserte innstillinger"
 
 msgid "Advanced Power Management"
-msgstr "Gelişmiş Güç Yönetimi"
+msgstr "Avansert strømstyring"
 
 msgid "Advanced settings"
-msgstr "Gelişmiş Ayarlar"
+msgstr "Avanserte innstillinger"
 
 msgid "Advertisement skew"
 msgstr ""
@@ -530,6 +549,10 @@ msgid ""
 "IP address of your computer</li><li>access the webGUI with the new IP "
 "address</li></ul>"
 msgstr ""
+"Når du har klikket på &quot;Lagre&quot; kan det hende at du må gjøre ett "
+"eller flere av følgende stegene før du kan få tilgang til serveren igjen: "
+"<ul><li>endre IP adressen til din datamaskin</li><li>koble til webGUI med "
+"den nye IP adressen</li></ul>"
 
 #, php-format
 msgid ""
@@ -539,12 +562,18 @@ msgid ""
 "class='vexpl'>change the IP address of your server</span></li><li><span "
 "class='vexpl'>access the webGUI with the new IP address</span></li></ul>"
 msgstr ""
+"Når du har klikket på &quot;Lagre&quot; må du kjøre en omstart av serveren "
+"for at endringene skal tre i kraft. Det kan hende at du også må gjøre ett "
+"eller flere av de følgende stegene før du kan få tilgang til "
+"serveren:<ul><li><span class='vexpl'>endre IP adressen til "
+"serveren</span></li><li><span class='vexpl'>koble til webGUI med den nye IP "
+"adressen</span></li></ul>"
 
 msgid "Aggregation protocol"
-msgstr "Yığın protokolü"
+msgstr "Aggregerings protokol"
 
 msgid "Aggressive"
-msgstr "Agresif"
+msgstr "Aggressiv"
 
 msgid ""
 "Airflow temperature on Western Digital HDs (Same as temp. , but current "
@@ -552,10 +581,10 @@ msgid ""
 msgstr ""
 
 msgid "Albanian"
-msgstr "Arnavutça"
+msgstr "Albansk"
 
 msgid "All"
-msgstr "Tümü"
+msgstr "Alle"
 
 msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
@@ -563,55 +592,57 @@ msgid ""
 msgstr ""
 
 msgid "All dirs"
-msgstr "Tüm Dizinler"
+msgstr "Alle kataloger"
 
 #, php-format
 msgid "All dirs requires mounted path, but Path %s is not mounted."
-msgstr ""
-"%s konumu tanımlanmamış.Tüm dizinler tanımlanmış bir konuma ihtiyaç duyuyor."
+msgstr "Alle kataloger krever en montert sti, men Path %s er ikke montert."
 
 msgid "All disks are imported."
-msgstr ""
+msgstr "Alle diskene er importert."
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
 "anything beginning with .Apple illegal."
 msgstr ""
+"Alle delte enheter benytter 'usedots'. Dette gjør filnavn som .Parent og alt "
+"annet som starter med .Apple ugyldig."
 
 msgid "All software raid disks are imported."
 msgstr ""
 
 msgid "All users will have the root privilege."
-msgstr "Tüm kullanıcılar root hakkına sahip olacak."
+msgstr "Alle brukere vil ha superbrukerprivilegier."
 
 msgid "Alloc"
 msgstr ""
 
 msgid "Allow"
-msgstr "İzin ver"
+msgstr "Tillat"
 
 msgid "Allow TLS connections only."
 msgstr ""
 
 msgid "Allow client access to accounts that have null passwords."
-msgstr "Parolası boş olan hesaplara istemci erişim izni ver."
+msgstr "Tillat klienttilgang til kontoer som har tomme passord."
 
 msgid ""
 "Allow clients to attempt to store OS/2 style extended attributes on a share."
 msgstr ""
+"Tillat forsøk på lagring av utvidede OS/2 attributter fra klienter på en "
+"delt ressurs."
 
 msgid "Allow clients to resume interrupted uploads and downloads."
-msgstr ""
-"Kullanıcıların yükleme ve indirmelerini durdurup devam etmelerine izin ver."
+msgstr "Tillat klienter å fortsette stoppede opplastinger og nedlastinger."
 
 msgid "Allow group"
 msgstr ""
 
 msgid "Allow new files"
-msgstr "Yeni dosyalara izin ver"
+msgstr "Tillatt nye filer"
 
 msgid "Allow new files to be created."
-msgstr "Yeni dosyalar oluşturulmasına izin ver."
+msgstr "Tillatt nye filer å bli laget"
 
 msgid "Allow to start UPS from battery"
 msgstr ""
@@ -623,14 +654,15 @@ msgid ""
 "Allows  certain  users and groups to have read/write access to a share. This "
 "follows the allow option format."
 msgstr ""
-"Belirli ve kullanıcı ve gruplara yazma/okuma ve paylaşım erişimine izin ver."
+"Tillat visse brukere og grupper til å ha lese/skrive rettigheter til en "
+"deling. Dette følger tillatt formatet."
 
 msgid ""
 "Allows certain users and groups to have read-only  access  to  a share. This "
 "follows the allow option format."
 msgstr ""
-"Belirlenmiş kullanıcılara ve gruplara bir paylaşıma erişim için sadece okuma "
-"izni ver, Bu işlem izin verme seçeneğinden sonra gelir"
+"Lar visse brukere og grupper å ha kun lese tilgang på en deling. Dette "
+"følger tillat formatet."
 
 #, php-format
 msgid "Allows the server to try and become a local master browser."
@@ -648,19 +680,19 @@ msgid "AltRoot"
 msgstr "AltRoot"
 
 msgid "Alternate TCP port. Default is 22"
-msgstr "Varsayılan alternatif TCP Port 22'dir."
+msgstr "Alternativ TCP port. Standard er 22"
 
 msgid "Alternate TCP port. Default is 873"
-msgstr "Varsayılan Alternatif TCP port 873'tür."
+msgstr "Alternativ TCP port. Standard er 873"
 
 msgid "Alternative configuration directory (usually empty)."
-msgstr "Alternaif yapılandırma dizini (genelde boştur)"
+msgstr "Alternativ konfigurasjons katalog (vanligvis tom)."
 
 msgid "Always on"
-msgstr "Her zaman açık."
+msgstr "Alltid på"
 
 msgid "Always scan"
-msgstr "Her zaman tara"
+msgstr "Alltid scan"
 
 msgid "Ambient Conditions From External Probe Equipment"
 msgstr ""
@@ -680,125 +712,125 @@ msgid ""
 msgstr ""
 
 msgid "An host with this name already exists."
-msgstr "Bu isim ile zaten bir bilgisayar mevcut"
+msgstr "En vert med det navnet eksisterer allerede."
 
 msgid "An interface with the specified description already exists."
-msgstr "Belirtmiş olduğunuz tanım zaten bir arayüzde tanımlanmış."
+msgstr "Et grensesnitt med den spesifiserte beskrivelsen finnes allerede."
 
 msgid "Anonymous bind"
-msgstr ""
+msgstr "Anonym binding"
 
 msgid "Anonymous user bandwidth"
-msgstr "Blinmeyen kullanıcı bağlantıgenişliği"
+msgstr "Anonym bruker-båndbredde"
 
 msgid ""
 "Anonymous user download bandwith in KB/s. An empty field means infinity."
-msgstr ""
-"Blinmeyen kullanıcı indirme KB/s belirtilmiştir. Boş alan sonsuz demektir."
+msgstr "Anonym nedlastings båndbredde i KB/s. Et tomt felt betyr uendelig."
 
 msgid ""
 "Anonymous user upload bandwith in KB/s. An empty field means infinity."
-msgstr ""
-"Blinmeyen kullanıcı yükleme KB/s belirtilmiştir. Boş alan sonsuz demektir."
+msgstr "Anonym opplastings båndbredde i KB/s. Et tomt felt betyr uendelig."
 
 msgid "Anonymous users only"
-msgstr "Sadece anonim kullanıcılar"
+msgstr "Kun anonyme brukere"
 
 msgid "Any"
-msgstr "Herhangi"
+msgstr "Hvilken som helst"
 
 msgid "Append user defined shares"
 msgstr ""
 
 msgid "Apple Filing Protocol"
-msgstr ""
+msgstr "Apple Filing Protocol"
 
 msgid "Apply"
-msgstr "Uygula"
+msgstr "Bruk"
 
 msgid "Apply changes"
-msgstr "Değişiklikleri uygula"
+msgstr "Bruk endringene"
 
 msgid "Archive"
-msgstr "Arşiv"
+msgstr "Arkiver"
 
 msgid "Archive mode."
-msgstr "Arşivleme modu."
+msgstr "Arkiveringsmodus."
 
 msgid "Are you sure you want to proceed?"
-msgstr "Devam etmek istediğinize emin misiniz?"
+msgstr "Er du sikker på at du vil fortsette?"
 
 msgid "Are you sure you want to reboot the system?"
-msgstr "Sistemi yeniden başlatmak istediğinize emin misiniz?"
+msgstr "Er du sikker på at du vil starte systemet på nytt?"
 
 msgid "Are you sure you want to shutdown the system?"
-msgstr "Sistemi kapatmak istediğinize emin misiniz?"
+msgstr "Er du sikker på at du vil slå av systemet?"
 
 msgid "Asynchronous I/O (AIO)"
-msgstr "Asenkronize I/O (AIO)"
+msgstr "Asynkron I/O (AIO)"
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
 "made up of one or more extents."
 msgstr ""
+"På det høyeste nivået, et mål er hva som presenteres til initiativtageren og "
+"består av en eller flere størrelser."
 
 msgid "Attached"
-msgstr "Eklenmiş"
+msgstr "Tilkoblet"
 
 #, php-format
 msgid "Attaching provider '%s'."
-msgstr "Bağlantı Sağlayan '%s'"
+msgstr "Legger til tilbyder '%s'."
 
 msgid "Audio"
 msgstr ""
 
 msgid "Auth Group"
-msgstr "Doğrulama Grubu"
+msgstr "Auth gruppe"
 
 msgid "Auth Groups"
-msgstr "Doğrulama Gruplar"
+msgstr "Auth grupper"
 
 msgid "Auth Method"
-msgstr "Doğrulama Methodu"
+msgstr "Auth metode"
 
 msgid "Authenticate URL"
-msgstr "URL Doğrula"
+msgstr "Autentiser URL"
 
 msgid "Authenticate path & realm"
 msgstr ""
 
 msgid "Authentication"
-msgstr "Kimlik Denetimi"
+msgstr "Autentikasjon"
 
 msgid "Authentication method"
-msgstr "Doğrulama yöntemi"
+msgstr "Autentiseringsmetode"
 
 msgid "Authorised network"
-msgstr "Yetkilendirilmiş Ağ"
+msgstr "Autorisert nettverk"
 
 msgid "Auths"
-msgstr "Doğrulamalar"
+msgstr "Auths"
 
 msgid "Auto"
-msgstr "Otomatik"
+msgstr "Auto"
 
 msgid "Auto Snapshot"
 msgstr ""
 
 msgid "Auto size"
-msgstr "Otomatik boyut"
+msgstr "Automatisk størrelse"
 
 msgid "AutoScale"
-msgstr "OtomatikÖlçeklendirme"
+msgstr "AutoSkaler"
 
 msgid "Autoselect"
-msgstr "Otomatik seçim"
+msgstr "Autovalg"
 
 msgid "Auxiliary device firmware"
 msgstr ""
 
 msgid "Auxiliary parameters"
-msgstr "Yardımcı Parametreler"
+msgstr "Hjelpe-parametere"
 
 msgid "Available"
 msgstr ""
@@ -813,41 +845,41 @@ msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr ""
 
 msgid "Backup configuration"
-msgstr "Yapılandırmayı Yedekle"
+msgstr "Innstillinger for sikkerhetskopi"
 
 msgid "Backup file"
-msgstr "Yedek dosyası"
+msgstr "Sikkerhetskopi"
 
 msgid "Backup/Restore"
-msgstr "Yedekle/Geri al"
+msgstr "Sikkerhetskopi/Gjennoppretting"
 
 msgid "Bad User - non existing users"
-msgstr ""
+msgstr "Feil bruker - ikke eksisterende bruker"
 
 msgid "Balance algorithm"
-msgstr "Balans Algoritması"
+msgstr "Balanse algoritme"
 
 msgid "Ban list"
-msgstr "Yasak listesi"
+msgstr "Utestengte adresser"
 
 msgid "Ban list rule"
-msgstr "Yasak liste kuralları"
+msgstr "Regler for utestegning"
 
 msgid "Banner"
 msgstr "Banner"
 
 msgid "Base DN"
-msgstr "Taban DN"
+msgstr "Basis DN"
 
 msgid "Base Name"
-msgstr ""
+msgstr "Basisnavn"
 
 msgid ""
 "Base Name will be appended automatically when starting without 'iqn.'."
-msgstr ""
+msgstr "Basisnavn vil bli lagt til automatisk ved start uten 'iqn.'."
 
 msgid "Battery Details"
-msgstr ""
+msgstr "Batteridetaljer"
 
 msgid "Battery Level"
 msgstr ""
@@ -860,19 +892,19 @@ msgid ""
 msgstr ""
 
 msgid "Battery alarm threshold"
-msgstr ""
+msgstr "Terskel for batterialarm"
 
 msgid "Battery capacity"
-msgstr ""
+msgstr "Batterikapasitet"
 
 msgid "Battery change date"
-msgstr ""
+msgstr "Dato for batteribytte"
 
 msgid "Battery chemistry"
 msgstr ""
 
 msgid "Battery current"
-msgstr ""
+msgstr "Batteristrøm"
 
 msgid "Battery level"
 msgstr ""
@@ -884,25 +916,25 @@ msgid "Battery manufacturing date"
 msgstr ""
 
 msgid "Battery temperature"
-msgstr ""
+msgstr "Batteritemperatur"
 
 msgid "Battery voltage"
 msgstr ""
 
 msgid "Best available"
-msgstr "Mümkün olan en iyisi"
+msgstr "Beste tilgjengelige"
 
 msgid "Bind DN"
-msgstr "DN ekle"
+msgstr "Bind DN"
 
 msgid "Bind password"
-msgstr "Parolayı ekle"
+msgstr "Bind passord"
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
 
 msgid "Blank time"
-msgstr "Belirsiz zaman"
+msgstr "Blank tid"
 
 msgid "Blocksize"
 msgstr ""
@@ -929,7 +961,7 @@ msgid "Browse Directory"
 msgstr ""
 
 msgid "Browseable"
-msgstr "Gözatılabilir"
+msgstr "Søkbar"
 
 msgid "Build date"
 msgstr ""
@@ -938,10 +970,10 @@ msgid "Building database in progress"
 msgstr ""
 
 msgid "Bulgarian"
-msgstr "Bulgarca"
+msgstr "Bulgarsk"
 
 msgid "By default, only already existing files can be uploaded."
-msgstr "Varsayalın ayarlara göre, sadece varolan dosya yüklenebilir."
+msgstr "Som standard kan kun allerede eksisterende filer lastes opp."
 
 msgid "CARP"
 msgstr ""
@@ -956,7 +988,7 @@ msgid "CCMP TKIP"
 msgstr "CCMP TKIP"
 
 msgid "CD/DVD"
-msgstr ""
+msgstr "CD/DVD"
 
 msgid "CHANGED"
 msgstr ""
@@ -965,34 +997,34 @@ msgid "CHAP"
 msgstr "CHAP"
 
 msgid "CHAP Users"
-msgstr "CHAP Kullanıcıları"
+msgstr "CHAP brukere"
 
 msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
 
 msgid "CIFS/SMB disabled"
-msgstr "CIFS/SMB etkin değil"
+msgstr "CIFS/SMB deaktivert"
 
 msgid "CIFS/SMB informations"
-msgstr "CIFS/SMB bilgileri"
+msgstr "CIFS/SMB informasjon"
 
 msgid "CIFS/SMB is enabled."
 msgstr ""
 
 msgid "CP1251 (Cyrillic)"
-msgstr ""
+msgstr "CP1251 (Kyrillisk)"
 
 msgid "CP1252 (Latin 1)"
 msgstr ""
 
 msgid "CP437 (Latin US)"
-msgstr ""
+msgstr "CP437 (Latin US)"
 
 msgid "CP850 (Latin 1)"
-msgstr ""
+msgstr "CP850 (Latin 1)"
 
 msgid "CP852 (Latin 2)"
-msgstr ""
+msgstr "CP852 (Latin 2)"
 
 msgid "CP866 (Cyrillic CIS 1)"
 msgstr ""
@@ -1010,55 +1042,55 @@ msgid "CP950 (Traditional Chinese Big5)"
 msgstr ""
 
 msgid "CPU frequency"
-msgstr "İşlemci Hızı"
+msgstr "CPU frekvens"
 
 msgid "CPU frequency:"
-msgstr ""
+msgstr "Prosessor frekvens"
 
 msgid "CPU load"
-msgstr "İşlemci Yükü"
+msgstr "CPU belastning"
 
 msgid "CPU temperature"
-msgstr "İşlemci sıcaklığı"
+msgstr "CPU temperatur"
 
 msgid "CPU usage"
-msgstr "CPU kullanımı"
+msgstr "CPU bruk"
 
 msgid "Cache"
-msgstr "Önebllek"
+msgstr "Mellomlager"
 
 msgid "Cache Device"
-msgstr "Önbellek aygıtı"
+msgstr "Mellomlager medium"
 
 msgid "Calibration Battery"
 msgstr ""
 
 msgid "Can't format the OS origin disk!"
-msgstr "Os Başlangıç Diski Biçimlendirilemez"
+msgstr "Kan ikke formatere OS disken!"
 
 msgid "Can't get UFS ID."
 msgstr ""
 
 msgid "Can't mount the system partition 1, the DATA partition is the 2."
-msgstr ""
+msgstr "Kan ikke montere system partisjon 1, DATA partisjonen er 2."
 
 msgid "Cancel"
-msgstr "İptal\""
+msgstr "Avbryt"
 
 msgid "Canmount"
-msgstr ""
+msgstr "Canmount"
 
 msgid "Cannot get CPU load"
 msgstr ""
 
 msgid "Cannot get data about interface"
-msgstr "Arayüz hakkında veri alınamıyor"
+msgstr "Kan ikke hente data om grensesnittet"
 
 msgid "Cannot use DHCP for LAN interface."
 msgstr ""
 
 msgid "Capacity"
-msgstr "Kapasite"
+msgstr "Kapasitet"
 
 msgid ""
 "Causes the server to display the network information for the specified IP "
@@ -1066,27 +1098,31 @@ msgid ""
 "address or DNS host is acting as a NAT gateway or port forwarder for the "
 "server."
 msgstr ""
+"Får tjeneren til å vise nettverksinformasjon for klientens spesifiserte IP "
+"adressen eller DNS vertsnavn. Her antas det at IP adressen eller DNS verten "
+"er nav for nettoversetting (NAT gateway) eller bedriver videresending av "
+"portforespørsler til tjeneren."
 
 msgid "Certificate"
-msgstr "Sertifika"
+msgstr "Sertifikat"
 
 msgid "Change"
-msgstr "Değiştir"
+msgstr "Endre"
 
 msgid "Change below file"
-msgstr ""
+msgstr "Endre filen under"
 
 msgid "Change password"
-msgstr "Parolayı değiştir"
+msgstr "Endre passord"
 
 msgid "Changes to this option will take effect after a reboot."
-msgstr "Değişiklikleri görebilmek için yeniden başlatınız"
+msgstr "Endringer på denne innstillingen trer i kraft etter omstart."
 
 msgid "Channel"
 msgstr "Kanal"
 
 msgid "Charging Battery"
-msgstr ""
+msgstr "Lader batteri"
 
 #, php-format
 msgid "Check <a href=\"%s\">System|General Setup</a> before initializing."
@@ -1096,34 +1132,35 @@ msgid "Check and replace cable"
 msgstr ""
 
 msgid "Check interval"
-msgstr "Kontrol aralığı"
+msgstr "Intervallsjekk"
 
 msgid "Check shared secret:"
-msgstr "Gizli Paylaşımları Kontrol Et"
+msgstr "Sjekk delt hemmelighet:"
 
 msgid "Chinese (Simplified)"
-msgstr "Çince (Basitleştirilmiş)"
+msgstr "Kinesisk (enkel)"
 
 msgid "Chinese (Traditional)"
-msgstr "Çince (Geleneksel)"
+msgstr "Kinesisk (tradisjonell)"
 
 msgid "Choose UPS mode."
 msgstr ""
 
 msgid "Choose on which interface packets must come in to match this rule."
 msgstr ""
+"Velg hvilket grensesnitt pakker må komme på for å være lik denne regelen."
 
 msgid "Choose which IP protocol this rule should match."
-msgstr ""
+msgstr "Velg hvilken IP protokoll denne regelen bør være lik."
 
 msgid "Choose which interface this route applies to."
-msgstr "bu yola uygulanacak arayüzü seçin"
+msgstr "Velg grensesnittet denne ruten gjelder for."
 
 msgid "Clear"
-msgstr "Temizle"
+msgstr "Tøm"
 
 msgid "Clear config and Import disks"
-msgstr ""
+msgstr "Slett konfigurasjon og importer disker"
 
 msgid "Clear config and Import software raid disks"
 msgstr ""
@@ -1140,19 +1177,19 @@ msgid ""
 msgstr ""
 
 msgid "Client"
-msgstr "İstemci"
+msgstr "Klient"
 
 msgid "Clone"
-msgstr ""
+msgstr "Klone"
 
 msgid "Collecting initial data, please wait..."
-msgstr "Başlangıç verisi toplanıyor, lütfen bekleyin..."
+msgstr "Samler inn data, vennligst vent..."
 
 msgid "Collisions"
-msgstr "Çarpışma"
+msgstr "Kollisjoner"
 
 msgid "Cols"
-msgstr "Cols"
+msgstr "Kolonner"
 
 msgid ""
 "Comma-separated list of group names that are permitted to login to the FTP "
@@ -1160,7 +1197,7 @@ msgid ""
 msgstr ""
 
 msgid "Command"
-msgstr "Komut"
+msgstr "Kommando"
 
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
@@ -1171,55 +1208,58 @@ msgid "Command for LINK_UP event (e.g. %s)."
 msgstr ""
 
 msgid "Command output:"
-msgstr "Komut Çıktısı"
+msgstr "Utdata fra kommando:"
 
 msgid "Command scripts"
-msgstr "Komut Scripti"
+msgstr "Kommandoskript"
 
 msgid "Comment"
-msgstr "Açıklama"
+msgstr "Kommentarer"
 
 msgid "Common Internet File System"
-msgstr "Ortak İnternet Dosya Sistemi"
+msgstr "Common Internet File System"
 
 msgid "Community"
-msgstr "Topluluk"
+msgstr "Samfunn"
 
 msgid "Compilations directories"
 msgstr ""
 
 msgid "Compliant profile to be used."
-msgstr "Compliant Profil kullanılmış."
+msgstr "Kompatibel profil skal brukes."
 
 msgid "Compress"
-msgstr "Sıkıştırma"
+msgstr "Komprimer"
 
 msgid "Compress file data during the transfer."
-msgstr "Transfer esnasında dosya verilerini sıkıştır."
+msgstr "Komprimer fildata under overføring."
 
 msgid "Compression"
-msgstr "Sıkıştırma"
+msgstr "Komprimering"
 
 msgid ""
 "Compression is worth using if your connection is slow. The efficiency of the "
 "compression depends on the type of the file, and varies widely. Useful for "
 "internet transfer only."
 msgstr ""
+"Komprimering er verdt det hvis din tilkobling er sakte. Effektiviteten av "
+"komprimeringen avhenger av filtypen og varierer sterkt. Brukbar kun for "
+"Internettoverføringer."
 
 msgid "Configuration"
-msgstr "Yapılandırma"
+msgstr "Konfigurasjon"
 
 msgid "Configuration directory"
-msgstr "Yapılandırma dizini"
+msgstr "Konfigurasjonskatalog"
 
 msgid "Configuring"
-msgstr "Ayarla"
+msgstr "Konfigruering"
 
 msgid "Confirmation"
-msgstr "Doğrulama"
+msgstr "Bekreftelse"
 
 msgid "Connected FTP users"
-msgstr "Bağlı FTP kullanıcıları"
+msgstr "Tilkoblede FTP brukere"
 
 msgid "Consider replacing this drive"
 msgstr ""
@@ -1228,41 +1268,41 @@ msgid "Console Menu"
 msgstr ""
 
 msgid "Console screensaver"
-msgstr "Konsol ekran koruyucusu"
+msgstr "Skjermsparer for konsoll"
 
 msgid "Contact"
-msgstr "İletişim"
+msgstr "Kontakt"
 
 msgid ""
 "Contact information, e.g. name or email of the person responsible for this "
 "system: 'admin@email.address'."
 msgstr ""
-"İletişim Bilgileri, Örn. Bu sistem için sorumlu kişinin email ve ismi: "
-"'admin@email.address'."
+"Kontaktinformasjon, f.eks. navn eller e-post til personen ansvarlig for "
+"dette systemet: 'admin@epost.adresse'."
 
 msgid "Container"
 msgstr ""
 
 msgid "Content"
-msgstr "İçerik"
+msgstr "Innhold"
 
 msgid "Controller"
 msgstr ""
 
 msgid "Controller Auth Group"
-msgstr "Doğrulama Grubu Denetleyicisi"
+msgstr "Autoriseringsgruppe for kontroller"
 
 msgid "Controller Auth Method"
-msgstr "Doğrulama Metodu Denetleyicisi"
+msgstr "Autoriseringsmetode for kontroller"
 
 msgid "Controller Authorised network"
-msgstr "Doğrulanmış Ağ Denetleyicisi"
+msgstr "Autorisert nettverk for kontroller"
 
 msgid "Controller IP address"
-msgstr "IP adres Denetleyicisi"
+msgstr "IP adresse for kontroller"
 
 msgid "Controller TCP Port"
-msgstr "TCP Port Denetleyicisi"
+msgstr "TCP port for kontroller"
 
 msgid "Controller model"
 msgstr ""
@@ -1281,6 +1321,11 @@ msgid ""
 "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
 "Currently, 'gzip' is equivalent to 'gzip-6'."
 msgstr ""
+"Styrer kompresjonsalgoritmen for dette datasettet. 'lzjb' "
+"kompresjonsalgoritmen er optimalisert for ytelse samtidig som den yter OK "
+"kompresjon. Valget 'On' bruker 'lzjb' algoritmen. Du kan spesifisere 'gzip' "
+"kompresjon ved å velge verdien 'gzip-N', hvor N er et tall fra 1 (hurtigst) "
+"til 9 (best kompresjon). For øyeblikket er 'gzip' lik 'gzip-6'."
 
 msgid ""
 "Controls the compression algorithm used for this volume. The 'lzjb' "
@@ -1308,7 +1353,7 @@ msgid ""
 msgstr ""
 
 msgid "Controls whether this dataset can be modified."
-msgstr ""
+msgstr "Kontrollerer om dette datasettet kan bli modifisert"
 
 msgid ""
 "Convert DOS attributes to UNIX execution bits when Store DOS attributes is "
@@ -1316,7 +1361,7 @@ msgid ""
 msgstr ""
 
 msgid "Count"
-msgstr "Sayı"
+msgstr "Antall"
 
 msgid "Count of 'Free Fall Events' detected."
 msgstr ""
@@ -1422,16 +1467,16 @@ msgid "Create ZFS on GPT partition"
 msgstr ""
 
 msgid "Create and initialize RAID."
-msgstr "RAID oluştur ve başlat"
+msgstr "Lag og intialiser RAID"
 
 msgid "Create encrypted volume"
-msgstr "Şifrelenmiş Volume Oluşturuldu"
+msgstr "Lag kryptert volum"
 
 msgid "Create mask"
-msgstr "Maske Oluşturuldu"
+msgstr "Lag maske"
 
 msgid "Create work directory if it doesn't exist."
-msgstr "Çalışma dizini yoksa oluştur."
+msgstr "Lag en arbeids-katalog om den ikke eksisterer"
 
 msgid "Created UFS file system:"
 msgstr ""
@@ -1443,31 +1488,31 @@ msgid "Creates the recursive snapshot."
 msgstr ""
 
 msgid "Creating filesystem"
-msgstr "Dosya sistemi oluşturuluyor"
+msgstr "Lager filsystem"
 
 msgid "Creating filesystem with 'Soft Updates'"
-msgstr "Dosya sistemi 'Basit Güncelleme' ile oluşturuluyor'"
+msgstr "Lager filsystem med 'Soft Updates'"
 
 msgid "Creating partition"
-msgstr "Birim oluşturuluyor"
+msgstr "Lager partisjon"
 
 msgid "Creation"
 msgstr ""
 
 msgid "Credits"
-msgstr "Katkıda Bulunanlar"
+msgstr "Bidragsytere"
 
 msgid "Critical"
-msgstr "Kritik"
+msgstr "Kritisk"
 
 msgid "Cron"
 msgstr "Cron"
 
 msgid "Cron job"
-msgstr "Cron Görevi"
+msgstr "Cron jobb"
 
 msgid "Current"
-msgstr ""
+msgstr "Gjeldende"
 
 msgid "Current Version:"
 msgstr ""
@@ -1481,6 +1526,7 @@ msgstr ""
 msgid ""
 "Current password is default password. You should use your own password."
 msgstr ""
+"Gjeldende passord er standard passordet. Du bør bruke ditt eget passord."
 
 msgid "Current state of drive operation based upon the Life Curve."
 msgstr ""
@@ -1492,22 +1538,22 @@ msgid "Current value of real power (Watts)"
 msgstr ""
 
 msgid "Custom"
-msgstr ""
+msgstr "Egendefinert"
 
 msgid "Custom device"
 msgstr ""
 
 msgid "Custom script"
-msgstr ""
+msgstr "Egendefinert skript"
 
 msgid "Custom script is not found."
-msgstr ""
+msgstr "Egendefinert skript ikke funnet."
 
 msgid "Custom script is required."
-msgstr ""
+msgstr "Egendefinert skript er påkrevd."
 
 msgid "Czech"
-msgstr "Çek"
+msgstr "tsjekkisk"
 
 msgid "DAAP"
 msgstr "DAAP"
@@ -1540,7 +1586,7 @@ msgid "DNS server is empty."
 msgstr ""
 
 msgid "DNS settings"
-msgstr "DNS ayarları"
+msgstr "DNS innstillinger"
 
 #, php-format
 msgid ""
@@ -1555,40 +1601,40 @@ msgid "DVD"
 msgstr "DVD"
 
 msgid "Daemon"
-msgstr "Daemon"
+msgstr "Tjeneste"
 
 msgid "Daemon events"
-msgstr "Daemon olayları"
+msgstr "Tjenestehendelser"
 
 msgid "Daemon log"
-msgstr "Daemon Kayıt defteri"
+msgstr "Tjenestelogg"
 
 msgid "Danish"
-msgstr ""
+msgstr "Dansk"
 
 msgid "Data digest"
 msgstr ""
 
 msgid "Data integrity"
-msgstr "Veri Bütünlüğü"
+msgstr "Dataintegritet"
 
 msgid "Database directory"
-msgstr "Veritabanı Dizini"
+msgstr "Databasekatalog"
 
 msgid "Dataset"
-msgstr "Veriseti"
+msgstr "Datasett"
 
 msgid "Datasets"
-msgstr "Verisetleri"
+msgstr "Datasett"
 
 msgid "Date & Time"
-msgstr "Tarih & Saat"
+msgstr "Dato og klokkeslett"
 
 msgid "Days"
-msgstr "Günler"
+msgstr "Dager"
 
 msgid "Debug"
-msgstr "Hata ayıklama"
+msgstr "Feilsøk"
 
 msgid ""
 "Decoded as: byte 0-1-2 = average erase count (big endian) and byte 3-4-5 = "
@@ -1602,164 +1648,164 @@ msgid "Dedup"
 msgstr ""
 
 msgid "Default"
-msgstr "Varsayılan"
+msgstr "Standard"
 
 #, php-format
 msgid "Default is %s."
-msgstr "Varsayılan %s."
+msgstr "Standard er %s."
 
 msgid "Default root"
-msgstr "Varsayılan root"
+msgstr "Standard root"
 
 msgid "Default user name is 'admin'."
-msgstr "İlk geçerli kullanıcı adı 'admin' dir."
+msgstr "Standard brukernavn er 'admin'."
 
 msgid "DefaultTime2Retain"
-msgstr "Varsayılan Time2Retain"
+msgstr ""
 
 msgid "DefaultTime2Wait"
-msgstr "Varsayılan Time2Wait"
+msgstr ""
 
 msgid "Define directories/URL's that require authentication."
-msgstr "Kimlik doğrulaması gerektiren URL'lerin konumlarını belirleyin."
+msgstr "Definer kataloger/URL'er som krever autentisering."
 
 msgid "Defines when the shutdown is initiated."
-msgstr "Kapanmanın ne zaman başlatılacağını belirleyin."
+msgstr "Definerer når avslåing startes."
 
 msgid "Delete"
-msgstr "Sil"
+msgstr "Slett"
 
 msgid "Delete ARP entry"
-msgstr "ARP girdisini Sil"
+msgstr "Slett ARP innslag"
 
 msgid "Delete Host"
-msgstr "Bilgisayarı Sil"
+msgstr "Slett vert"
 
 msgid "Delete Login Info"
-msgstr "Oturum açma bilgisini sil"
+msgstr "Slett innlogginsinformasjon"
 
 msgid "Delete MIB"
-msgstr "MIB'yi sil"
+msgstr "Slett MIB"
 
 msgid "Delete RAID"
-msgstr "RAID Sil"
+msgstr "Slett RAID"
 
 msgid "Delete Route"
-msgstr "Route Sil"
+msgstr "Slett rute"
 
 msgid "Delete Rsync job"
-msgstr "Rsync Görevini Sil"
+msgstr "Slett Rsync jobb"
 
 msgid "Delete URL"
-msgstr "URL sil"
+msgstr "Slett URL"
 
 msgid "Delete algorithm"
-msgstr "Algoritmayı sil"
+msgstr "Slett algoritme"
 
 msgid "Delete all MIBs"
-msgstr "Tüm MIB'leri sil"
+msgstr "Slett alle MIB"
 
 msgid "Delete all options"
-msgstr "Tüm ayarları sil"
+msgstr "Slett alle alternativer"
 
 msgid "Delete all rules"
-msgstr "Tüm kuralları sil"
+msgstr "Slett alle regler"
 
 msgid "Delete all self-tests"
-msgstr "Tüm self-test'leri sil"
+msgstr "Slett alle selv-tester"
 
 msgid "Delete auth group"
-msgstr "Tüm doğrulama gruplarını sil"
+msgstr "Slett auth gruppe"
 
 msgid "Delete auto snapshot"
 msgstr ""
 
 msgid "Delete clone"
-msgstr ""
+msgstr "Slett klone"
 
 msgid "Delete command"
-msgstr "Komut Sil"
+msgstr "Slett kommando"
 
 msgid "Delete dataset"
-msgstr "Verisetini sil"
+msgstr "Slett datasett"
 
 msgid "Delete device"
-msgstr "Aygıt Sil"
+msgstr "Slett enhet"
 
 msgid "Delete disk"
-msgstr "Disk Sil"
+msgstr "Slett disk"
 
 msgid "Delete extent"
-msgstr "Uzantı Sil"
+msgstr "Slett omfang"
 
 msgid "Delete files on the receiving side that don't exist on sender."
-msgstr "Gönderici tarafı olmayan dosyaları sil."
+msgstr "Slett filer på mottakers side som ikke eksisterer hos sender."
 
 msgid "Delete group"
-msgstr "Grup Sil"
+msgstr "Slett gruppe"
 
 msgid "Delete initiator"
-msgstr "İnitiator'u sil"
+msgstr "Slett initiator"
 
 msgid "Delete initiator group"
-msgstr "Başlatıcı grubunu sil"
+msgstr "Slett initiativgruppe"
 
 msgid "Delete interface"
-msgstr "Arayüz Sil"
+msgstr "Slett grensesnitt"
 
 msgid "Delete job"
-msgstr "Görev Sil"
+msgstr "Slett jobb"
 
 msgid "Delete module"
-msgstr "Modül Sil"
+msgstr "Slett modul"
 
 msgid "Delete mount point"
-msgstr "Disk bağlantı noktasını sil"
+msgstr "Slett monteringspunkt"
 
 msgid "Delete option"
-msgstr "Seçeneği sil"
+msgstr "Slett alternativ"
 
 msgid "Delete pool"
 msgstr ""
 
 msgid "Delete portal group"
-msgstr "Portal grubunu sil"
+msgstr "Slett portal gruppe"
 
 msgid "Delete resource"
 msgstr ""
 
 msgid "Delete rule"
-msgstr "Kuralı sil"
+msgstr "Slett regel"
 
 msgid "Delete self-test"
-msgstr "Self-test'i sil"
+msgstr "Slett selv-test"
 
 msgid "Delete share"
-msgstr "Paylaşım Sil"
+msgstr "Slett deling"
 
 msgid "Delete snapshot"
 msgstr ""
 
 msgid "Delete target"
-msgstr "Hedef Sil"
+msgstr "Slett mål"
 
 msgid "Delete user"
-msgstr "Kullanıcı sil"
+msgstr "Slett bruker"
 
 msgid "Delete volume"
-msgstr ""
+msgstr "Slett volum"
 
 msgid "Deletes the recursive snapshot."
 msgstr ""
 
 msgid "Deleting"
-msgstr "Siliniyor"
+msgstr "Sletter"
 
 msgid "Deleting GEOM metadata"
-msgstr "GEOM metadaları siliniyor"
+msgstr "Sletter GEOM metadata"
 
 msgid "Deleting MBR and partition table"
-msgstr "MBR ve Disk birimlerini siliyor"
+msgstr "Sletter MBR og partisjonstabellen."
 
 msgid ""
 "Delta between most-worn and least-worn Flash blocks. It describes how "
@@ -1767,43 +1813,43 @@ msgid ""
 msgstr ""
 
 msgid "Deny"
-msgstr "Reddet"
+msgstr "Nekt"
 
 msgid "Description"
-msgstr "Açıklama"
+msgstr "Beskrivelse"
 
 msgid "Destination"
-msgstr "Hedef"
+msgstr "Mål"
 
 msgid "Destination email address."
-msgstr "Hedef E-mail adresi"
+msgstr "Destinasjons e-post adresse."
 
 msgid "Destination host name or IP number."
-msgstr "Hedef IP adresi yada ismi."
+msgstr "Målets vertsnavn eller IP adresse."
 
 msgid "Destination network"
-msgstr "Hedef Ağ"
+msgstr "Mottaker nettverk"
 
 msgid "Destination network bit count"
-msgstr "Hedef Ağ Bit sayısı"
+msgstr "Destinasjons nettverkets bitantall"
 
 msgid "Destination network for this static route"
-msgstr "Bu statik Roue için hedef network"
+msgstr "Mottaker nettverk for denne statiske ruten"
 
 msgid "Destination port"
-msgstr "Hedef port"
+msgstr "Destinasjons port"
 
 msgid "Destination share"
-msgstr "Hedef Paylaşım"
+msgstr "Mål deling"
 
 msgid "Detected"
-msgstr "Algılandı"
+msgstr "Oppdaget"
 
 msgid "Detected Language:<br />(Change if needed)"
 msgstr ""
 
 msgid "Detected RSYNC remote shares"
-msgstr "RSYNC Uzak paylaşım algıladı"
+msgstr "Oppdag RSYNC fjerne delinger"
 
 msgid "Detected an error while importing."
 msgstr ""
@@ -1812,33 +1858,33 @@ msgid ""
 "Determine the default timeout, in microseconds, before the first packet is "
 "retransmitted. The default is 1000000 (1 second)."
 msgstr ""
-"Paketlerin tekrar iletilmeden önce mikrosaniye olarak zaman aşımı süresi "
-"belirleyin. Ön tanımlı 1000000 (1 saniyedir)."
+"Sett standard tidsavbrudd i mikrosekunder, før første pakke blir sendt på "
+"nytt. Standard er 1000000 (1 sekund)."
 
 msgid "Device"
-msgstr "Aygıt"
+msgstr "Enhet"
 
 msgid "Device / Label"
 msgstr ""
 
 #, php-format
 msgid "Device /dev/%s - %s"
-msgstr "Aygıt /dev/%s - %s"
+msgstr "Enhet /dev/%s - %s"
 
 msgid "Device IP"
-msgstr "Aygıt IP"
+msgstr "Enhets IP"
 
 msgid "Device Pass-through"
-msgstr ""
+msgstr "Transparent enhet"
 
 msgid "Device Serial"
 msgstr ""
 
 msgid "Device model"
-msgstr "Cihaz modeli"
+msgstr "Enhetsmodell"
 
 msgid "Device polling"
-msgstr "Aygıt seçimi"
+msgstr "Enhets spørring"
 
 msgid ""
 "Device polling is a technique that lets the system periodically poll network "
@@ -1847,92 +1893,98 @@ msgid ""
 "forwarding delay (the devices are polled 1000 times per second). Not all "
 "NICs support polling."
 msgstr ""
+"Enhetsspørring er en teknikk som lar systemet periodisk hente ny data fra "
+"nettverksenheter istedet for å være avhengig av prosessoravbrudd. Dette kan "
+"redusere lasten på prosessoren og dermed forbedre datagjennomstrømningen. "
+"Dette medfører en liten økning i videresendingsforsinkelsen. (forespørsler "
+"til enhetene blir gjort 1000 ganger per sekund). Ikke alle nettverkskort "
+"støtter spørring."
 
 #, php-format
 msgid "Device: %s | Total: %s | Used: %s | Free: %s"
-msgstr "Aygıt: %s | Toplam: %s | Kullanılan: %s | Boş: %s"
+msgstr "Enhet: %s | Total: %s | Brukt: %s | Ledig: %s"
 
 msgid "Devices"
-msgstr "Aygıtlar"
+msgstr "Enheter"
 
 msgid "Diagnostics"
-msgstr "sistem Kontrolü"
+msgstr "Diagnostikk"
 
 msgid "Difference"
-msgstr ""
+msgstr "Forskjell"
 
 msgid "Digital Audio Access Protocol"
-msgstr "Dijital Ses Erişim Protokolül"
+msgstr "Digital Audio Access Protocol"
 
 msgid "Direction"
-msgstr ""
+msgstr "Retning"
 
 msgid "Directory"
-msgstr "Dizin"
+msgstr "Katalog"
 
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr ""
 
 msgid "Directory listing"
-msgstr "Dizin listeleme"
+msgstr "Kataloglisting"
 
 msgid "Directory mask"
-msgstr "Dizin Maskesi"
+msgstr "Katalog maske"
 
 msgid "Directory that contains removable media. (e.g /mnt/iscsi/)"
-msgstr "Dizin çıkartılabilir aygıtlar içeriyor. (örn /mnt/iscsi/)"
+msgstr "Katalog som inneholder fjernbar media. (eks. /mnt/iscsi/)"
 
 msgid "Directory to watch for new .torrent files."
-msgstr ""
+msgstr "Katalog for å oppdage nye .torrent-filer"
 
 msgid "Disable File Manager"
-msgstr "Dosya Yöneticisini Devredışı Bırak"
+msgstr "Deaktiver filordner"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
 msgid "Disable console menu"
-msgstr "Konsol menüsünü Devre Dışı bırak"
+msgstr "Slå av konsoll menyen"
 
 msgid "Disable firmware upload"
-msgstr "Firmware yüklemeyi devre dışı bırak"
+msgstr "Slå av fabrikkvare opplasting"
 
 msgid "Disable firmware version check"
-msgstr "Firmware versiyon kontrolünü Devre Dışı bırak"
+msgstr "Slå av fabrikkvare versjon sjekk"
 
 msgid "Disable speaker beep on startup and shutdown"
-msgstr "Kapanırken ve Açılırken hoparler Bip sesini Devre Dışı bırak"
+msgstr "Slå av høytaler pip under oppstart og avslutting."
 
 msgid "Disabled"
-msgstr "Devre Dışı bırak"
+msgstr "Slått av"
 
 #, php-format
 msgid "Discovered iSCSI target for %s"
-msgstr ""
+msgstr "Oppdaget iSCSI mål for %s"
 
 msgid "Discovery Auth Group"
-msgstr "Doğrulama Grubunu Tanımla"
+msgstr "Oppdag Auth gruppe"
 
 msgid "Discovery Auth Method"
-msgstr "Doğrulama Grubunu Tanımla"
+msgstr "Oppdag Auth metode"
 
 msgid "Disk"
 msgstr "Disk"
 
 msgid "Disk space usage"
-msgstr "Diskteki boş alan"
+msgstr "Bruk av diskplass"
 
 msgid "Disks"
-msgstr "Diskler"
+msgstr "Disker"
 
 msgid "Disks (ATA)"
-msgstr "Diskler (ATA)"
+msgstr "Disker (ATA)"
 
 msgid "Disks (ATA) information"
 msgstr ""
 
 msgid "Display"
-msgstr ""
+msgstr "Skjerm"
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -1940,7 +1992,7 @@ msgid ""
 msgstr ""
 
 msgid "Distributed hash table"
-msgstr ""
+msgstr "Distribuert hash-tabell"
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -1948,208 +2000,207 @@ msgid ""
 msgstr ""
 
 msgid "Do you really want to delete all MIBs?"
-msgstr "Tüm MIB'ları silmek istediğinden emin misin?"
+msgstr "Vil du virkelig slette alle MIB's?"
 
 msgid "Do you really want to delete all options?"
-msgstr "Tüm ayarlarları silmek istediğinden emin misin?"
+msgstr "Vil du virkelig slette alle alternativer?"
 
 msgid "Do you really want to delete all rules?"
-msgstr "Tüm kuralları silmek istediğinden emin misin?"
+msgstr "Vil du virkelig slette alle reglene?"
 
 msgid "Do you really want to delete all scheduled self-tests?"
-msgstr "Tüm zamanlanmış self-test'leri silmek istediğinden emin misin?"
+msgstr "Vil du virkelig slette alle planlagte selv-tester?"
 
 msgid "Do you really want to delete this MIB?"
-msgstr "Bu MIB silmek istediğinden emin misin?"
+msgstr "Vil du virkelig slette denne MIB?"
 
 msgid "Do you really want to delete this Rsync job?"
-msgstr "Bu Rsync görevini silmek istediğinden emin misin?"
+msgstr "Vil du virkelig slette denne Rsync jobben?"
 
 msgid "Do you really want to delete this URL?"
-msgstr "Bu URL silmek istediğinden emin misin?"
+msgstr "Vil du virkelig slette denne URL-en?"
 
 msgid "Do you really want to delete this auth group?"
-msgstr "Bu doğrulama grubunu silmek istediğinden emin misin?"
+msgstr "Vil du virkelig slette den auth gruppen?"
 
 msgid "Do you really want to delete this auto snapshot?"
 msgstr ""
 
 msgid "Do you really want to delete this clone?"
-msgstr ""
+msgstr "Vil du virkelig slette denne klonen?"
 
 msgid "Do you really want to delete this command?"
-msgstr "Bu komutu gerçekten silmek istediğinize emin misiniz?"
+msgstr "Vil du virkelig slette denne kommandoen?"
 
 msgid "Do you really want to delete this cron job?"
-msgstr "Bu Cron görevini gerçekten silmek istediğinize emin misiniz?"
+msgstr "Vil du virkelig slette denne cron jobben?"
 
 msgid "Do you really want to delete this dataset?"
-msgstr "Bu verisetini silmek istediğinden emin misin?"
+msgstr "Vil du virkelig slette dette datasettet?"
 
 msgid "Do you really want to delete this device?"
-msgstr "Bu aygıtı gerçekten silmek istediğinize emin misiniz?"
+msgstr "Vil du virkelig slette denne enheten?"
 
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
 "become invalid (e.g. share)!"
 msgstr ""
-"Bu diski gerçekten silmek istediğinize emin misiniz? Kullanılan tüm öğeler "
-"geçersiz kılınacak (Paylaşım gibi)"
+"Vil du virkelig slette denne disken? Alle elementene som bruker den vil bli "
+"feil (f.eks. delinger)!"
 
 msgid "Do you really want to delete this extent?"
-msgstr "Bu uzantıyı gerçekten silmek istediğinize emin misiniz?"
+msgstr "Vil du virkelig slette dette omfanget?"
 
 msgid "Do you really want to delete this group?"
-msgstr "Bu grubu gerçekten silmek istediğinize emin misiniz?"
+msgstr "Vil du virkelig slette denne gruppen?"
 
 msgid "Do you really want to delete this host?"
-msgstr "Bu Bilgisayarı gerçekten silmek istediğinize emin misiniz?"
+msgstr "Vil du virkelig slette denne verten?"
 
 msgid "Do you really want to delete this initiator group?"
-msgstr "Bu başlatıcı grubu silmek istediğinden emin misin?"
+msgstr ""
 
 msgid ""
 "Do you really want to delete this initiator? All elements that still use it "
 "will become invalid (e.g. share)!"
 msgstr ""
-"Bu iniator'u gerçekten silmek istediğinize emin misiniz?  (Paylaşım gibi)"
+"VIl du virkelig slette denne initiatoren? Alle elementer som bruker den vil "
+"bli invalide (f.eks. delinger)!"
 
 msgid "Do you really want to delete this interface?"
-msgstr "Bu arayüzü silmek istediğinden emin misin?"
+msgstr "Vil du virkelig slette dette grensesnittet?"
 
 msgid "Do you really want to delete this module?"
-msgstr "Bu modülü gerçekten silmek istediğinize emin misiniz?"
+msgstr "Vil du virkelig slette denne modulen?"
 
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
 msgstr ""
-"Fazladan yaratılmış bu noktayı silmek istiyor musunuz?Kullanılan öğeler "
-"geçersiz kılınacak"
+"Vil du virkelig slette dette monterings punktet? Alle elementer som "
+"fremdeles bruker denne vil i invalide (f.eks. delinger)!"
 
 msgid "Do you really want to delete this option?"
-msgstr "Bu seçeneği kaldırmak istediğinden emin misin?"
+msgstr "Vil du virkelig slette dette alternativet?"
 
 msgid "Do you really want to delete this pool?"
-msgstr "Bu MIB silmek istediğinden emin misin?"
+msgstr ""
 
 msgid "Do you really want to delete this portal group?"
-msgstr "Bu portal grubunu silmek istediğinden emin misin?"
+msgstr "Vil du virkelig slette denne portal-gruppen?"
 
 msgid "Do you really want to delete this resource?"
 msgstr ""
 
 msgid "Do you really want to delete this route?"
-msgstr "Bu Route'u gerçekten silmek istediğinize emin misiniz?"
+msgstr "Vil du virkelig slette denne ruten?"
 
 msgid "Do you really want to delete this rule?"
-msgstr "Bu kuralı silmek istediğinden emin misin?"
+msgstr "Vil du virkelig slette denne regelen?"
 
 msgid "Do you really want to delete this scheduled self-test?"
-msgstr "Bu zamanlanmış self-test'ini silmek istediğinden emin misin?"
+msgstr "Vil du virkelig slette denne planlagte selv-testen?"
 
 msgid "Do you really want to delete this share?"
-msgstr "Bu paylaşımı gerçekten silmek istediğinize emin misiniz?"
+msgstr "Vil du virkelig slette denne delingen?"
 
 msgid "Do you really want to delete this snapshot?"
 msgstr ""
 
 msgid "Do you really want to delete this target?"
-msgstr "Bu hedefi gerçekten silmek istediğinize emin misiniz?"
+msgstr "Vil du virkelig slette dette målet?"
 
 msgid "Do you really want to delete this user?"
-msgstr "Bu kullanıcıyı gerçekten silmek istediğinize emin misiniz?"
+msgstr "Vil du virkelig slette denne brukeren?"
 
 msgid "Do you really want to delete this volume?"
-msgstr ""
+msgstr "Vil du virkelig slette dette volumet?"
 
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
 "and can not be recovered. !!!"
 msgstr ""
-"Bu disk alanını karldırmak istediğine emin misin?\\n!!! Tüm veri geri "
-"çağrılamayacak şekilde silinicek. !!!"
+"Vil du virkelig slette dette volumet?\\n!!! Obs, all data vil forsvinne og "
+"kan ikke bli gjenopprettet. !!!"
 
 msgid "Do you really want to format this disk? All data will be lost!"
-msgstr ""
-"Bu diski gerçekten silmek istediğinize emin misiniz? Tüm verileriniz "
-"kaybolacaktır!"
+msgstr "Vil du virkelig slette denne disken? Alle data vil forsvinne!"
 
 msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
 msgstr ""
 
 msgid "Do you really want to remove the selected item from the list?"
-msgstr "Seçilen öğeyi listeden kaldırmak istediğinden emin misin?"
+msgstr "Vil du virkelig fjerne det valgte objektet fra listen?"
 
 msgid "Do you really want to uninstall this package?"
-msgstr "Bu paketi gerçekten kaldırmak istediğinize emin misiniz?"
+msgstr "Vil du virkelig avinstallere denne pakken?"
 
 msgid "Document root"
-msgstr ""
+msgstr "Dokument rot"
 
 msgid "Document root of the webserver. Home of the web page files."
-msgstr ""
+msgstr "Dokument roten på nett-serveren. Hjemmet til nettsidene."
 
 msgid "Domain"
-msgstr "Alan Adı"
+msgstr "Domene"
 
 msgid "Domain controller name"
-msgstr ""
+msgstr "Domenekontrollernavn"
 
 msgid "Domain have no 2nd level name."
 msgstr ""
 
 msgid "Domain name"
-msgstr "Alan adı"
+msgstr "Domenenavn"
 
 msgid "Domain name (DNS/Realm-Name)"
-msgstr "Domain adı (DNS/Realm-Name)"
+msgstr "Domenenavn (DNS/Realm-Name)"
 
 msgid "Domain name (NetBIOS-Name)"
-msgstr "Domain adı (NetBIOS-İsmi)"
+msgstr "Domenenavn (NetBIOS navn)"
 
 msgid "Domain name in old format, e.g. EXAMPLE."
-msgstr ""
+msgstr "Domenenavn i gammelt format; f.eks. EKSEMPEL."
 
 msgid "Domain name, e.g. example.com."
-msgstr "Domain adı, örenğin mynet.com."
+msgstr "Domenenavn; f.eks. eksempel.no"
 
 msgid "Don't Erase MBR"
-msgstr "MBR silinemez"
+msgstr "Ikke slett MBR"
 
 msgid "Don't erase the MBR (useful for some RAID controller cards)"
-msgstr "MBR silinemez (Bazı RAID kontrol kartları için yararlıdır)"
+msgstr "Ikke slett MBR (nyttig for noen RAID kontroller kort)"
 
 msgid "Donate"
-msgstr "Bağış"
+msgstr "Doner"
 
 msgid "Done"
-msgstr ""
+msgstr "Ferdig"
 
 msgid "Done."
-msgstr "Bitti"
+msgstr "Gjort."
 
 msgid "Dos charset"
-msgstr "Dos karakter seti"
+msgstr "Dos tegnsett"
 
 msgid "Double-parity RAID-Z"
 msgstr ""
 
 msgid "Download"
-msgstr "İndir"
+msgstr "Last ned"
 
 msgid "Download bandwidth"
-msgstr "İndirme hızı"
+msgstr "Nedlastingsbåndbredde"
 
 msgid "Download configuration"
-msgstr "Yapılanıdırmayı indir"
+msgstr "Last ned konfigurasjon"
 
 msgid "Download directory"
-msgstr "İndirme dizini"
+msgstr "Nedlastingsmappe"
 
 msgid "Download firewall rules."
-msgstr "İndirme için güvenlik duvarı kuralları"
+msgstr "Last ned brannmur regler."
 
 msgid "Drive Temperature."
 msgstr ""
@@ -2158,10 +2209,10 @@ msgid "Drive's seek performance during its internal tests."
 msgstr ""
 
 msgid "Driver"
-msgstr "Sürücü"
+msgstr "Driver"
 
 msgid "Driver list"
-msgstr "Sürücü listesi"
+msgstr "Driverliste"
 
 msgid "Driver parameters"
 msgstr ""
@@ -2179,118 +2230,118 @@ msgid "Duplex"
 msgstr "Duplex"
 
 msgid "Duplicate mount point name."
-msgstr "Bağlantı noktası ismini çoğalt"
+msgstr "Dupliker monteringspunkt navnet."
 
 msgid "Dutch"
-msgstr ""
+msgstr "Nederlansk"
 
 msgid "Dynamic DNS"
-msgstr "Dinamik DNS"
+msgstr "Dynamisk DNS"
 
 msgid "Dynamic IP (DHCP) can not be used for HAST resources."
 msgstr ""
 
 msgid "EA support"
-msgstr "EA desteği"
+msgstr "EA støtte"
 
 msgid "EFI/GPT partition can be use with UFS only."
-msgstr "EFI/GPT bölümü sadece UFS ile kullanılabilir"
+msgstr "EFI/GPT kan kun brukes med UFS."
 
 msgid "ERROR:"
 msgstr ""
 
 msgid "Edit"
-msgstr "Düzenle"
+msgstr "Rediger"
 
 msgid "Edit Host"
-msgstr "Host'u Düzenle"
+msgstr "Endre vert"
 
 msgid "Edit MIB"
-msgstr "MIB Düzenle"
+msgstr "Endre MIB"
 
 msgid "Edit RAID"
-msgstr "RAID'i Düzenle"
+msgstr "Endre RAID"
 
 msgid "Edit Route"
-msgstr "Route'u Düzenle"
+msgstr "Endre rute"
 
 msgid "Edit Rsync job"
-msgstr "Rsync Görevini Düzenle"
+msgstr "Endre Rsync job"
 
 msgid "Edit URL"
-msgstr "URL'yi Düzenle"
+msgstr "Endre URL"
 
 msgid "Edit auth group"
-msgstr "Doğrulama grubunu Düzenle"
+msgstr "Endre auth-gruppe"
 
 msgid "Edit auto snapshot"
 msgstr ""
 
 msgid "Edit command"
-msgstr "Komutu düzenle"
+msgstr "Rediger kommando"
 
 msgid "Edit dataset"
-msgstr "Verisetini düzenle"
+msgstr "Endre datasett"
 
 msgid "Edit device"
-msgstr "Aygıt Düzenle"
+msgstr "Endre enhet"
 
 msgid "Edit disk"
-msgstr "Disk Düzenle"
+msgstr "Endre disk"
 
 msgid "Edit extent"
-msgstr "Uzantı Düzenle"
+msgstr "Endre omfang"
 
 msgid "Edit group"
-msgstr "Grubu düzenle"
+msgstr "Endre gruppe"
 
 msgid "Edit initiator"
-msgstr "Initiotr'u düzenle"
+msgstr "Endre initiator"
 
 msgid "Edit initiator group"
-msgstr "Başlatıcı grubunu düzenle"
+msgstr "Endre initator-gruppe"
 
 msgid "Edit interface"
-msgstr "Arayüzü düzenle"
+msgstr "Endre grensesnitt"
 
 msgid "Edit job"
-msgstr "Görev Düzenle"
+msgstr "Endre jobb"
 
 msgid "Edit module"
-msgstr "Modül Düzenle"
+msgstr "Endre modul"
 
 msgid "Edit mount point"
-msgstr "Disk bağlantı noktasını düzenle"
+msgstr "Endre monteringspunkt"
 
 msgid "Edit option"
-msgstr "Seçenek düzenle"
+msgstr "Endre alternativ"
 
 msgid "Edit pool"
-msgstr "Havuzu düzenle"
+msgstr ""
 
 msgid "Edit portal group"
-msgstr "Portal grubunu düzenle"
+msgstr "Endre portal-gruppe"
 
 msgid "Edit resource"
 msgstr ""
 
 msgid "Edit rule"
-msgstr "Kuralı düzenle"
+msgstr "Rediger regel"
 
 msgid "Edit self-test"
-msgstr "Self-testi düzenle"
+msgstr "Endre selv-test"
 
 msgid "Edit share"
-msgstr "Paylaşım Düzenle"
+msgstr "Endre deling"
 
 msgid "Edit snapshot"
 msgstr ""
 
 msgid "Edit target"
-msgstr "Hedef Düzenle"
+msgstr "Endre mål"
 
 msgid "Edit user"
-msgstr "Kullanıcı düzenle"
+msgstr "Endre bruker"
 
 msgid "Edit volume"
 msgstr ""
@@ -2300,43 +2351,43 @@ msgid ""
 msgstr ""
 
 msgid "Email"
-msgstr "E-posta"
+msgstr "E-Post"
 
 msgid "Email Report"
-msgstr "Email Raporu"
+msgstr "Send rapport på e-post"
 
 msgid "Email notification"
-msgstr "E-posta Bildirimi"
+msgstr "E-post notifikasjon"
 
 msgid "Email report"
-msgstr "Email Raporu"
+msgstr "E-post rapport"
 
 msgid "Empty as default."
 msgstr ""
 
 msgid "Enable"
-msgstr "Etkinleştir"
+msgstr "Aktiver"
 
 msgid "Enable ACL inheritance"
 msgstr ""
 
 msgid "Enable Advanced Format (4KB sector)"
-msgstr "Gelişmiş Format'ı (4KB sector) Etkinleştir"
+msgstr "Aktiver avansert formatering (4KB sector)"
 
 msgid "Enable Asynchronous I/O (AIO)"
-msgstr "Asynchronous I/O (AIO) Etkinleştir"
+msgstr "Aktiver Asynkron I/O (AIO)"
 
 msgid "Enable FXP protocol."
-msgstr "FXP protocolünü Aktifleştir"
+msgstr "Slå på FXP protokollen."
 
 msgid "Enable NFSv4 server."
 msgstr ""
 
 msgid "Enable NTP"
-msgstr "NTP'yi Aktifleştir"
+msgstr "Slå på NTP"
 
 msgid "Enable SMTP authentication."
-msgstr "SMTP kimlik doğrulamasını etkinleştir."
+msgstr "Slå på SMTP autentisering"
 
 msgid ""
 "Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can "
@@ -2356,138 +2407,140 @@ msgid "Enable ZFS ACL"
 msgstr ""
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device"
-msgstr ""
-"Zeroconf/Bonjour hizmetleri bu aygıt üzerinde yayın yapmasını etkinleştir"
+msgstr "Slå på Zeroconf/Bonjour for å reklamere tjenester for denne enheten."
 
 msgid "Enable anonymous bind."
-msgstr ""
+msgstr "Slå på anonyme bindinger."
 
 msgid "Enable authentication."
-msgstr "Kimlik doğrulamasını etkinleştir."
+msgstr "Slå på autentisering"
 
 msgid "Enable compression."
-msgstr "Sıkıştırmayı Aktifleştir"
+msgstr "Slå på komprimering."
 
 msgid "Enable console screensaver"
-msgstr "Konsol ekran koruyucusunu etkinleştir"
+msgstr "Slå på konsollskjermsparer"
 
 msgid "Enable device polling"
-msgstr "Aygıt seçimini Aktifleştir"
+msgstr "Slå på enhets spørring"
 
 msgid "Enable directory listing."
-msgstr "Dizin listelemeyi etkinleştir."
+msgstr "Slå på kataloglisting."
 
 msgid "Enable distributed hash table."
-msgstr "Dağıtılabilen hash tablolarını etkinleştir."
+msgstr "Slå på distribuert hash-tabell"
 
 msgid "Enable domain wildcarding."
-msgstr ""
+msgstr "Slå på domenejoker."
 
 msgid "Enable encryption."
 msgstr ""
 
 msgid "Enable extended attribute support"
-msgstr "Genişletilmiş öztenlik desteğini aktifleştir"
+msgstr "Slå på utvidet attributt støtte."
 
 msgid "Enable extended attributes for this file system."
-msgstr "Bu dosya sisteminde genişletilmiş öznitelikleri etkinleştir."
+msgstr "Slå på utvidede atributter for dette filsystemet."
 
 msgid "Enable firmware upload"
-msgstr "Firmware yüklemeyi aktifleştir"
+msgstr "Slå på fabrikkvare opplasting"
 
 msgid ""
 "Enable foreground/background file system consistency check during boot "
 "process."
 msgstr ""
-"Boot işlemi süresinde dosya sistem kontrol uyumunu önplan/arka plan da "
-"aktifleştir"
+"Tillat forgrunns/backgrunns filsystem konsistens sjekk under oppstarts "
+"prosessen."
 
 msgid "Enable guest access"
 msgstr ""
 
 msgid "Enable guest access."
-msgstr "Misafir erişimini Aktifleştir"
+msgstr "Tillat gjeste tilgang"
 
 msgid "Enable inotify."
 msgstr ""
 
 msgid "Enable keyboard-interactive authentication."
-msgstr "Keyboard-interactivedoğrulamayı aktifleştir"
+msgstr "Slå på tastatur-interaktiv autentisering."
 
 msgid "Enable large read/write"
-msgstr "Büyük yazma ve okumayı Aktifleştir"
+msgstr "Slå på stor les/skriv"
 
 msgid "Enable local user authentication."
-msgstr "Lokal kullanıcı yetkilendirmesini Aktifleştir"
+msgstr "Slå på lokal bruker autentisering."
 
 msgid "Enable mapping DOS attributes"
 msgstr ""
 
 msgid "Enable module listing."
-msgstr "Modül listelemeyi Aktifleştir"
+msgstr "Slå på modul lister"
 
 msgid "Enable peer exchange (PEX)."
-msgstr "Kaynak değiş-tokuşunu etkinleştir (PEX)."
+msgstr "Slå på peer exchange (PEX)."
 
 msgid "Enable permission inheritance"
-msgstr "miras iznini etkin kıl"
+msgstr "Slå på tillatelse arv"
 
 msgid "Enable port forwarding via NAT-PMP or UPnP."
-msgstr "NAT-PMP veya UPnP üzerinden port yanıtlamayı etkinleştir."
+msgstr "Slå på port-videresending via NAT-PMP eller UPnP."
 
 msgid "Enable proxy authentication."
-msgstr "Proxy üzerinden kimlik doğrulamasını etkinleştir"
+msgstr "Slå på proxy autentisering."
 
 msgid "Enable recycle bin"
-msgstr "Geri Dönüşüm Kutusunu Aktifleştir"
+msgstr "Slå på papirkurven"
 
 msgid "Enable remote monitoring of the local connected UPS."
-msgstr ""
+msgstr "Slå på fjernovervåking av den tilkoblede UPSen."
 
 msgid ""
 "Enable reverse DNS lookup performed on the remote host's IP address for "
 "incoming active mode data connections and outgoing passive mode data "
 "connections."
 msgstr ""
+"Aktiver baklengs DNS-oppslag som gjennomføres på fjerntjenerens IP adresse "
+"for innkommende datakoblinger som er i aktiv modus og utgående datakoblinger "
+"som er i passiv modus."
 
 msgid "Enable reverse DNS lookup."
-msgstr ""
+msgstr "Slå på reversert DNS oppslag."
 
 msgid "Enable serial console"
-msgstr ""
+msgstr "Aktiver seriell konsoll"
 
 msgid "Enable shadow copy"
 msgstr ""
 
 msgid "Enable store DOS attributes"
-msgstr "DOS simgelerini yedeklemeyi etkin kıl"
+msgstr "Slå på lagring av DOS attributter"
 
 msgid "Enable syslog'ing to remote syslog server"
-msgstr "uzaktan erişimde syslog sunucusuna sysloging ile etkin kıl"
+msgstr "Slå på logging til fjern syslog tjener"
 
 msgid "Enable the ident protocol (RFC1413)."
-msgstr ""
+msgstr "Slå på ident protokollen (RFC1413)"
 
 msgid "Enable the system power control utility"
-msgstr "Sistem güç kontrol aracından faydalan"
+msgstr "Slå på system strøm kontroll verktøyet."
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr ""
 
 msgid "Enable transcoding."
-msgstr ""
+msgstr "Slå på transkoding"
 
 msgid "Enable traps."
-msgstr ""
+msgstr "Aktiver feller."
 
 msgid "Enable tuning of some kernel variables"
-msgstr "bazı kernel değişkenlerinde değişiklik yapmayı etkin kıl"
+msgstr "Slå på finstilling av noen kernel variabler"
 
 msgid "Enable write cache mode."
 msgstr ""
 
 msgid "Enabled"
-msgstr "Etkinleştirildi"
+msgstr "Slått på"
 
 msgid "Encrypt password"
 msgstr ""
@@ -2496,26 +2549,26 @@ msgid "Encrypt password (confirmed)"
 msgstr ""
 
 msgid "Encrypted"
-msgstr "Şifreli"
+msgstr "Krypters"
 
 msgid "Encrypted configuration is automatically gzipped."
 msgstr ""
 
 #, php-format
 msgid "Encrypting '%s'... Please wait"
-msgstr "'%s' şifreleniyor...Lütfen Bekleyin"
+msgstr "Krypterer '%s'... Vennligst vent"
 
 msgid "Encryption"
-msgstr "Şifreleme"
+msgstr "Kryptering"
 
 msgid "Encryption algorithm"
-msgstr "Şifreleme Algoritması"
+msgstr "Krypterings algoritme"
 
 msgid "Encryption algorithm to use."
-msgstr ""
+msgstr "Krypteringsalgoritme som skal brukes."
 
 msgid "English"
-msgstr "İngilizce"
+msgstr "Engelsk"
 
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
@@ -2528,17 +2581,21 @@ msgid ""
 msgstr ""
 
 msgid "Enter a valid sysctl MIB name."
-msgstr "Geçerli bir sysctl MIB ismi girin."
+msgstr "Skriv inn et gyldig sysctl MIB navn."
 
 msgid ""
 "Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to "
 "select it."
 msgstr ""
+"Skriv inn ønsket system tid direkte (format mm/dd/åååå tt:mm) eller bruk "
+"ikonet for å velge det."
 
 msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
 "8 and 63 characters long."
 msgstr ""
+"Skriv inn passordet som skal brukes i WPA-PSK modues. Dette må være mellom 8 "
+"og 63 tegn langt."
 
 msgid ""
 "Enter the path to the home directory of VirtualBox. VM config and HDD image "
@@ -2549,6 +2606,8 @@ msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
 msgstr ""
+"Skriv inn banen til brukerens hjemmeområde. Om feltet er tomt brukes /mnt "
+"som standard."
 
 msgid ""
 "Enter the path to the home directory. The config will be created under the "
@@ -2556,49 +2615,51 @@ msgid ""
 msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
-msgstr "Tuzakları (varsayılan 162) göndermek için port numarasını girin"
+msgstr "Angi portnummeret som fellene skal sende til (standard 162)."
 
 msgid "Enter trap host name."
-msgstr "Uzak bilgşsayar adını gir."
+msgstr "Angi vertsnavnet på fellen."
 
 msgid "Error"
-msgstr "Hata"
+msgstr "Feil"
 
 #, c-format
 msgid "Error: The changes could not be applied (error code %s)."
-msgstr "Hata: Değişiklikler uygulanamadı (Hata kodu: %s)."
+msgstr "Feil: Endringene kunne ikke tas i bruk (feilkode %s)."
 
 msgid "Event"
-msgstr "Olay"
+msgstr "Hendelse"
 
 msgid "Execute"
-msgstr ""
+msgstr "Kjør"
 
 msgid "Execute command"
-msgstr "Komut Çalıştır"
+msgstr "Kjør kommando"
 
 msgid ""
 "Execute command pre or post system initialization (booting) or before system "
 "shutdown."
 msgstr ""
+"Kjør kommando før eller etter system initialisering (booting) eller før "
+"systemet blir slått av."
 
 msgid "Execute now"
-msgstr ""
+msgstr "Kjør nå"
 
 msgid "Expandsz"
 msgstr ""
 
 msgid "Expire"
-msgstr ""
+msgstr "Utløpt"
 
 msgid "Export"
-msgstr "Dışa aktar"
+msgstr "Eksportér"
 
 msgid "Export all the directories in the specified path."
 msgstr ""
 
 msgid "Extended attributes"
-msgstr ""
+msgstr "Utvidede attributter"
 
 msgid "Extended input frequency range"
 msgstr ""
@@ -2607,42 +2668,45 @@ msgid "Extended input voltage range"
 msgstr ""
 
 msgid "Extensions"
-msgstr "Uzantılar"
+msgstr "Utvidelser"
 
 msgid "Extent"
-msgstr "Uzantı"
+msgstr "Omfang"
 
 msgid "Extent Name"
 msgstr ""
 
 msgid "Extent name"
-msgstr "Uzantı adı"
+msgstr "Omfang navn"
 
 msgid ""
 "Extents must be defined before they can be used, and extents cannot be used "
 "more than once."
 msgstr ""
+"Omfang må defineres før de kan brukes og de kan ikke brukes mer enn en gang."
 
 msgid "Extra options"
-msgstr "Extra ayarlar"
+msgstr "Ekstra alternativer"
 
 msgid "Extra options (usually empty)."
-msgstr ""
+msgstr "Ekstra alternativer (vanligvis tom)."
 
 msgid ""
 "Extra options to /etc/ssh/sshd_config (usually empty). Note, incorrect "
 "entered options prevent SSH service to be started."
 msgstr ""
+"Extra alternativer til /etc/ssh/sshd_config (vanligvis tom). Obs, feil "
+"alternativer kan føre til at SSH-tjenesten ikke starter."
 
 msgid "Extra options to ifconfig (usually empty)."
-msgstr ""
+msgstr "Ekstra alternativer til ifconfig (vanligvis tomt)."
 
 msgid ""
 "Extra options to pass over rpc using transmission-remote (usually empty)."
 msgstr ""
 
 msgid "Extra options to rsync (usually empty)."
-msgstr "Rsync için extra ayarlar(genellikle boştur)."
+msgstr "Ekstra alternativer til rsync (vanligvis tomt)."
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
@@ -2651,22 +2715,22 @@ msgid "FTP"
 msgstr "FTP"
 
 msgid "FTP - Ban module"
-msgstr "FTP - Yasaklama modulü"
+msgstr "FTP - Bannlysnings modul"
 
 msgid "FTP - File transfer"
-msgstr "FTP - Dosya transferi"
+msgstr "FTP - Filoverføring"
 
 msgid "FTP Proxy"
 msgstr "FTP Proxy"
 
 msgid "FTP events"
-msgstr "FTP olayları"
+msgstr "FTP hendelser"
 
 msgid "FTP log"
-msgstr "FTP günlüğü"
+msgstr "FTP logg"
 
 msgid "FTP server disabled"
-msgstr "FTP sunucu devredışı"
+msgstr "FTP server avslått"
 
 msgid "FXP"
 msgstr "FXP"
@@ -2675,20 +2739,20 @@ msgid ""
 "FXP allows transfers between two remote servers without any file data going "
 "to the client asking for the transfer (insecure!)."
 msgstr ""
-"FXP uzaktaki iki sunucunun istemciye veriyi transfer etmeyi sormadan direk "
-"bu iki sunucu arasında transfer etmesini sağlar (güvensizdir!)"
+"FXP tillater overføring mellom to tjenere uten at fil data går mellom "
+"klienten som spør om overføringen (usikkert!)."
 
 msgid "Factory defaults"
-msgstr "Fabrika ayarları"
+msgstr "Farbrikk standard"
 
 msgid "Failed"
-msgstr "Başarısız"
+msgstr "Feilet"
 
 msgid "Failed to create in-memory file system."
-msgstr "in-memory dosya sistemi oşuturmada başarısız oldu"
+msgstr "Feilet med å lage i-minne filsystem."
 
 msgid "Failed to execute cron job."
-msgstr ""
+msgstr "Kunne ikke kjøre cron jobb."
 
 #, php-format
 msgid "Failed to remove: %s"
@@ -2696,110 +2760,106 @@ msgstr ""
 
 #, c-format
 msgid "Failed to send status report to: %s."
-msgstr "Durum raporu gönderilemedi: %s."
+msgstr "Feilet i å sende status rapport til: %s."
 
 #, php-format
 msgid ""
 "Failed to send status report. Please check the <a href='%s'>log</a> files."
-msgstr ""
-"Durum raporu gönderilemedi.Ayrıntılı bilgi için <a href='%s'>log</a> "
-"dosyalarını inceleye bilirsiniz.\""
+msgstr "Feilet i å sende status rapport. Sjekk <a href='%s'>logg</a> filene."
 
 #, php-format
 msgid "Failed to send test email to: %s."
-msgstr "Test e-postası gönderilemedi: %s."
+msgstr "Feilet i å sende test e-post til: %s."
 
 #, php-format
 msgid ""
 "Failed to send test email. Please check the <a href='%s'>log</a> files."
-msgstr ""
-"Test e-postası gönderilemedi. Ayrıntılı bilgi için <a href='%s'>log</a> "
-"dosyalarını inceleye bilirsiniz."
+msgstr "Feilet i å sende test e-post. Sjekk <a href='%s'>logg</a> filene."
 
 msgid "Failed to upload file."
-msgstr "Dosya gönderilemedi."
+msgstr "Opplasting av fil feilet."
 
 msgid "Failed to upload metadata backup file."
-msgstr "Metada yedek dosyasını gönderemedi."
+msgstr "Feiler i å laste opp metadata sikkerhetskopi."
 
 msgid "Failed to write file to disk."
-msgstr ""
+msgstr "Feil oppstod ved skriving til disk."
 
 msgid "Failed."
-msgstr "Başarısız."
+msgstr "Mislyktes."
 
 msgid "Failover"
-msgstr ""
+msgstr "Reserve"
 
 msgid "File"
-msgstr "Dosya"
+msgstr "Fil"
 
 msgid "File Editor"
-msgstr "Dosya Düzenleyici"
+msgstr "Fil redigerer"
 
 msgid "File Manager"
-msgstr "Dosya Yöneticisi"
+msgstr "Filhåndterer"
 
 msgid "File Transfer Protocol"
-msgstr "Dosya Transfer Protokolü"
+msgstr "File Transfer Protocol"
 
 msgid "File not found"
-msgstr "Dosya bulunamadı"
+msgstr "Fil ikke funnet"
 
 msgid "File path"
-msgstr "Dosya yolu"
+msgstr "Fil sti"
 
 #, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
 msgstr ""
 
 msgid "File size"
-msgstr "Dosya boyutu"
+msgstr "Fil størrelse"
 
 msgid "File sizeunit"
-msgstr ""
+msgstr "Fil enhetsstørrelse"
 
 msgid "File system"
-msgstr "Dosya sistemi"
+msgstr "Filsystem"
 
 msgid "File system check"
-msgstr "Dosya sistem kontrolü"
+msgstr "Filsystem sjekk"
 
 msgid "File upload stopped by extension."
-msgstr "Dosya gönderimi uzantısı sebebiyle durduruldu."
+msgstr "Opplastning stoppet av plugin."
 
 msgid "Filename"
-msgstr "Dosya ismi"
+msgstr "Filnavn"
 
 msgid "Fileserver"
 msgstr ""
 
 msgid "Filter"
-msgstr ""
+msgstr "Filter"
 
 msgid "Finnish"
 msgstr ""
 
 msgid "Firewall"
-msgstr "Güvenlik Duvarı"
+msgstr "Brannmur"
 
 msgid "Firewall rule"
-msgstr "Güvenlik Duvarı kural"
+msgstr "Brannmur reger"
 
 msgid "Firmware"
-msgstr "Firmware"
+msgstr "Fastvare"
 
 msgid "Firmware image file"
-msgstr "Firmware image dosyası"
+msgstr "Fabrikkvare bildefil"
 
 msgid "Firmware uploading is not supported on this platform."
-msgstr "Firmware yükleme bu platform üstünde desteklenmez"
+msgstr "Fabrikkvare opplasting er ikke støttet på denne platformen."
 
 msgid "Firmware version"
 msgstr ""
 
 msgid "Firmware version check"
-msgstr "Firmware versiyon kontrolü"
+msgstr "Fabrikkvare versjon sjekk"
 
 msgid "FirstBurstLength"
 msgstr ""
@@ -2808,16 +2868,16 @@ msgid "Flag xxx (ups.conf or cmdline -x) status"
 msgstr ""
 
 msgid "Flags"
-msgstr "İşaretler"
+msgstr "Flagg"
 
 msgid "Follow"
-msgstr "Takip et"
+msgstr "Følg"
 
 msgid "Force use"
 msgstr ""
 
 msgid "Forced update period"
-msgstr "Periyodik olarak güncellemeye zorla"
+msgstr "Tving oppdaterings periode"
 
 msgid ""
 "Forces use of vdevs, even if they appear in use or specify different size. "
@@ -2825,13 +2885,13 @@ msgid ""
 msgstr ""
 
 msgid "Format"
-msgstr "Biçim"
+msgstr "Format"
 
 msgid "Format disk"
-msgstr "Diski biçimlendir"
+msgstr "Formater disk"
 
 msgid "Format the report for phpBB forum."
-msgstr ""
+msgstr "Formater rapporten for phpBB forum."
 
 msgid "Forum"
 msgstr "Forum"
@@ -2840,28 +2900,28 @@ msgid "Frag"
 msgstr ""
 
 msgid "Free"
-msgstr "Boş"
+msgstr "Ledig"
 
 msgid "Free disk space"
-msgstr "Boş Alan"
+msgstr "Ledig diskplass"
 
 msgid "French"
-msgstr "Fransızca"
+msgstr "Fransk"
 
 msgid "Frequency"
-msgstr ""
+msgstr "Frekvens"
 
 msgid "From email"
-msgstr "E-mail'den"
+msgstr "Fra epost"
 
 msgid "Fsck"
 msgstr "Fsck"
 
 msgid "Full"
-msgstr ""
+msgstr "Full"
 
 msgid "Full Name"
-msgstr "Tam Adı"
+msgstr "Fullt navn"
 
 msgid "Fuppes"
 msgstr ""
@@ -2875,88 +2935,88 @@ msgid ""
 msgstr ""
 
 msgid "GID"
-msgstr ""
+msgstr "GID"
 
 msgid "GPT partition"
-msgstr ""
+msgstr "GPT partisjon"
 
 msgid "Gateway"
-msgstr "Ağ Geçidi"
+msgstr "Gateway"
 
 msgid "Gateway to be used to reach the destination network."
-msgstr ""
+msgstr "Gateway som skal brukes for å nå mål-nettverket."
 
 msgid "General"
-msgstr "Genel"
+msgstr "Genrelt"
 
 msgid "General Setup"
-msgstr "Genel Ayarlar"
+msgstr "Generelt Oppsett"
 
 msgid "Generate"
-msgstr ""
+msgstr "Generer"
 
 msgid "Generate password if leave empty."
 msgstr ""
 
 msgid "German"
-msgstr "Almanca"
+msgstr "Tysk"
 
 msgid "Get Target Info"
-msgstr ""
+msgstr "Hent målinformasjon"
 
 msgid "GiB"
 msgstr "GiB"
 
 msgid "Give only local users access to the web page."
-msgstr ""
+msgstr "Gi kun lokale brukere tilgang til nettsiden."
 
 msgid "Give your media library a friendly name."
 msgstr ""
 
 msgid "Grant access to the user portal."
-msgstr ""
+msgstr "Gi tilgang til bruker portalen."
 
 msgid "Graph"
-msgstr "Grafik"
+msgstr "Graf"
 
 msgid "Graph shows last 120 seconds"
 msgstr ""
 
 msgid "Greek"
-msgstr "Yunanca"
+msgstr "Gresk"
 
 msgid "Greeting banner displayed by FTP when a connection first comes in."
-msgstr "Bağlantı gerçekleştiğinde FTP üzerinden  ekranda kutucuk göster"
+msgstr "Velkomst banner vist av FTP når en tilkobling først kommer."
 
 msgid "Group"
-msgstr "Grup"
+msgstr "Gruppe"
 
 msgid "Group ID"
-msgstr "Grup Kimliği"
+msgstr "Gruppe-ID"
 
 msgid "Group compilations"
 msgstr ""
 
 msgid "Group description."
-msgstr "Grup tanımlaması"
+msgstr "Gruppe beskrivelse."
 
 msgid "Group name."
-msgstr "Grup ismi"
+msgstr "Gruppe navn."
 
 msgid "Group numeric id."
-msgstr "Grup sayı kimliği"
+msgstr "Gruppe numerisk id."
 
 msgid "Group suffix"
-msgstr "Grup soneki"
+msgstr "Gruppe suffiks"
 
 msgid "Groups"
-msgstr "Gruplar"
+msgstr "Grupper"
 
 msgid "Guest"
-msgstr "Misafir"
+msgstr "Gjest"
 
 msgid "Guest account"
-msgstr "Misafir hesabı"
+msgstr "Gjestekonto"
 
 msgid "HAST"
 msgstr ""
@@ -2993,10 +3053,10 @@ msgid "HTTP Proxy"
 msgstr "HTTP Proxy"
 
 msgid "Hard disk standby time"
-msgstr ""
+msgstr "Hard disk standby tid"
 
 msgid "Hardware"
-msgstr "Donanım"
+msgstr "Maskinvare"
 
 msgid "Header and Data digest"
 msgstr ""
@@ -3005,7 +3065,7 @@ msgid "Header digest"
 msgstr ""
 
 msgid "Health"
-msgstr ""
+msgstr "Helse"
 
 msgid ""
 "Height of heads above the disk surface. A flying height that's too low "
@@ -3014,10 +3074,10 @@ msgid ""
 msgstr ""
 
 msgid "Help"
-msgstr "Yardım"
+msgstr "Hjelp"
 
 msgid "Hide dot files"
-msgstr ""
+msgstr "Gjem dot filer"
 
 msgid "High voltage boosting transfer point"
 msgstr ""
@@ -3029,10 +3089,10 @@ msgid "High voltage trimming transfer point"
 msgstr ""
 
 msgid "Highlighting"
-msgstr "Vurgu"
+msgstr "Markering"
 
 msgid "Hint"
-msgstr "İpucu"
+msgstr "Hint"
 
 #, php-format
 msgid ""
@@ -3042,63 +3102,65 @@ msgid ""
 msgstr ""
 
 msgid "Home directory"
-msgstr "Başlangıç dizini"
+msgstr "Hjemme mappe"
 
 msgid "Host"
-msgstr "Bilgisayar"
+msgstr "Vert"
 
 msgid "Host access control"
-msgstr "Sunucu erişim kontrolü"
+msgstr "Vertsnavn kontroll"
 
 msgid "Host name"
-msgstr "Sunucu adu"
+msgstr "Vertsnavn"
 
 msgid "Host resources"
-msgstr "Host kaynakları"
+msgstr "Tjener ressurser"
 
 msgid "Hostname"
-msgstr "Bilgisayar adı"
+msgstr "Vertsnavn"
 
 msgid "Hostname database"
-msgstr ""
+msgstr "Vertsnavn database"
 
 msgid "Hosts"
-msgstr "Bilgisayarlar"
+msgstr "Verter"
 
 msgid "Hosts allow"
-msgstr "Bilgisayarlara izin ver"
+msgstr "Verter tillatt"
 
 msgid "Hosts deny"
-msgstr "Bilgisayarlara reddet"
+msgstr "Verter nektet"
 
 msgid "Hot Spare"
-msgstr ""
+msgstr "Varmreserv"
 
 msgid "Hours"
-msgstr ""
+msgstr "Timer"
 
 msgid ""
 "How often the IP is checked. The period is in seconds (max. is 10 days)."
 msgstr ""
-"Ne sıklıkla kontrol edilmiş. Bu periyod saniyeler içinde (maks. 10 gün)."
+"Hvor ofte blir IP'en sjekket. Perioden er i sekunder (maks er 10 dager)."
 
 msgid ""
 "How often the IP is updated even if it is not changed. The period is in "
 "seconds (max. is 10 days)."
 msgstr ""
+"Hvor ofte IP'en blir oppdatert selv om den ikke er endret. Perioden er i "
+"sekunder (maks er 10 dager)."
 
 msgid "Hungarian"
-msgstr ""
+msgstr "Ungarsk"
 
 msgid "I/O Timeout"
-msgstr "I/O Zaman aşımı"
+msgstr "I/O tidsavbrudd"
 
 msgid "I/O statistics"
-msgstr "I/O İstatistikleri"
+msgstr "I/O statistikk"
 
 #, php-format
 msgid "I/O timeout in seconds (%d by default)."
-msgstr "I/O saniyedeki zaman aşımı (Ön tanımlı%d )."
+msgstr "I/O tidsavbrudd i sekunder (%d som standard)"
 
 msgid "ID"
 msgstr ""
@@ -3110,70 +3172,75 @@ msgid "IP"
 msgstr "IP"
 
 msgid "IP address"
-msgstr "IP adresi"
+msgstr "IP adresse"
 
 msgid "IP address of remote syslog server"
-msgstr "Uzak syslog sunucu IP adresi"
+msgstr "IP adressen til den fjerne syslog tjeneren"
 
 #, php-format
 msgid ""
 "IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
 "addresses to hostnames&quot;</a> is enabled."
 msgstr ""
+"IP adresser er knyttet til vertsnavn hvis <a href='%s'>&quot; Knytt IP "
+"adresser til vertsnavn&quot;</a> er aktivert."
 
 msgid "IP or FQDN address of remote Rsync server."
-msgstr ""
+msgstr "IP eller FQDN til fjern Rsync tjener."
 
 msgid "IP type mismatch for network and gateway."
-msgstr "Ağ geçidi ve network için uyumsuz ip türü"
+msgstr "IP type stemmer ikke for nettverk og gateway."
 
 msgid "IPv4 Configuration"
-msgstr "IPv4 Yapılandırması"
+msgstr "IPv4 Konfigurasjon"
 
 msgid "IPv4 DNS servers"
-msgstr "IPv4 DNS sunucuları"
+msgstr "IPv4 DNS tjenere"
 
 msgid "IPv4 addresses"
-msgstr "IPv4 adresleri"
+msgstr "IPv4 adresser"
 
 msgid "IPv6 Configuration"
-msgstr "IPv6 yapılandırması"
+msgstr "IPv6 Konfigurasjon"
 
 msgid "IPv6 DNS servers"
-msgstr "IPv6 DNS sunucuları"
+msgstr "IPv6 DNS tjenere"
 
 msgid "IPv6 Gateway"
-msgstr "IPv6 Ağ geçidi"
+msgstr "IPv6 Gateway"
 
 msgid "IPv6 Prefix"
-msgstr "IPv6 Öneki(prefix)"
+msgstr "IPv6-prefiks"
 
 msgid "IPv6 address"
-msgstr "IPv6 adresi"
+msgstr "IPv6 adresse"
 
 msgid "IPv6 addresses"
-msgstr "IPv6 adresleri"
+msgstr "IPv6 adresser"
 
 msgid "IRC Live Support"
-msgstr "IRC Canlı Destek"
+msgstr "IRC Live Hjelp"
 
 msgid "ISO file to be mounted."
-msgstr ""
+msgstr "ISO til montering."
 
 msgid "ISP DNS servers"
-msgstr "ISP DNS sunucuları"
+msgstr "ISP DNS tjenere"
 
 msgid "Ident protocol"
-msgstr ""
+msgstr "Ident protokoll"
 
 msgid "Identifier"
-msgstr ""
+msgstr "Identifikator"
 
 msgid ""
 "Idle - Check the device unless it is in SLEEP, STANDBY or IDLE mode. In the "
 "IDLE state, most disks are still spinning, so this is probably not what you "
 "want."
 msgstr ""
+"Idle - Sjekk enheten med mindre den er i SLEEP, STANDBY eller IDLE modus. I "
+"IDLE modus spinner de fleste disker fremdeles, så dette er sansynligvis ikke "
+"hva du vil ha."
 
 msgid "If allowed, a user of the trusted domains can access the share."
 msgstr ""
@@ -3183,6 +3250,9 @@ msgid ""
 "after a client authenticates. This can be used to effectively isolate the "
 "client from a portion of the host system filespace."
 msgstr ""
+"Hvis standard root er aktivert, gjennomføres en chroot operasjon umiddelbart "
+"etter en klient autentiseres. Dette kan effektivt brukes for å isolere "
+"klienten fra en del av vertens eget system filrom."
 
 msgid ""
 "If the selected disk/partition is mounted it will be unmounted temporarily "
@@ -3190,6 +3260,9 @@ msgid ""
 "mode.<br />Service disruption to users accessing this mount will occur "
 "during this process."
 msgstr ""
+"Dersom valgte disk/partisjon er montert vil den bli temporært avmontert for "
+"å utføre valgt kommando, hvis ikke virker kommandoen i lese-modus.<br "
+"/>Brukere tilkoblet den aktuelle stasjonen vil merke tjenesteforstyrrelser."
 
 msgid ""
 "If the server is behind a proxy set these parameters to give local services "
@@ -3208,9 +3281,10 @@ msgid ""
 "If this parameter is set, then users may not create or modify files in the "
 "share."
 msgstr ""
+"Hvis denne er slått på kan brukere ikke lage eller endre filer i delingen."
 
 msgid "If this property is disabled, the file system cannot be mounted."
-msgstr ""
+msgstr "Hvis denne er slått av, kan filsystemet ikke monteres."
 
 msgid ""
 "If this property is enabled, the snapshots are displayed into .zfs directory."
@@ -3227,34 +3301,35 @@ msgid ""
 "If you want to change the password for accessing the WebGUI, enter it here "
 "twice."
 msgstr ""
-"WebGUI'ye erişmek için parola değiştirmek istiyorsanız, iki kere girin."
+"Hvis du vil endre passordet for å aksessere WebGUI, skriv det inn her to "
+"ganger."
 
 msgid "Image upload failed (out of memory?)"
-msgstr "Resim yükleme başarısız ( yetersiz bellek?)"
+msgstr "Opplasting av bilde feilet (tomt for minne?)"
 
 msgid "Import"
-msgstr "İçe aktart"
+msgstr "Importér"
 
 msgid "Import disks"
-msgstr ""
+msgstr "Importer disker"
 
 msgid "Import disks used in configuration."
-msgstr ""
+msgstr "Importer disker brukt i denne konfigurasjonen."
 
 msgid "Import firewall rules."
-msgstr ""
+msgstr "Importer brannmur regler"
 
 msgid "Import on-disk ZFS config"
-msgstr ""
+msgstr "Importer ZFS-konfigurasjon fra fil"
 
 msgid "Import software raid disks"
 msgstr ""
 
 msgid "In"
-msgstr "İçerde"
+msgstr "Inn"
 
 msgid "In most cases, 'public' is used here."
-msgstr "Genellikle burada \"public\" kullanılır."
+msgstr "Som oftest blir 'public' brukt her."
 
 msgid "In slave mode it is the UPS name (Identifier) at the UPS master."
 msgstr ""
@@ -3266,13 +3341,13 @@ msgid "In/Out packets"
 msgstr ""
 
 msgid "Include basic hardware information."
-msgstr ""
+msgstr "Inkluder grunnleggende maskinvare informasjon."
 
 msgid "Incoming Line/Power Information"
 msgstr ""
 
 msgid "Incomplete directory"
-msgstr ""
+msgstr "Uferdig mappe"
 
 msgid ""
 "Indicates the approximate SSD life left, in terms of program/erase cycles or "
@@ -3280,16 +3355,16 @@ msgid ""
 msgstr ""
 
 msgid "Info"
-msgstr "Bilgi"
+msgstr "Info"
 
 msgid "Informal"
-msgstr ""
+msgstr "Uformell"
 
 msgid "Information"
-msgstr "Bilgi"
+msgstr "Informasjon"
 
 msgid "Information & Manual"
-msgstr ""
+msgstr "Informasjon og brukerhåndbok"
 
 msgid "Information & Manuals"
 msgstr ""
@@ -3298,33 +3373,31 @@ msgid "Inherit ACL"
 msgstr ""
 
 msgid "Inherit permissions"
-msgstr "İzinleri miras olarak al"
+msgstr "Arv tillatelser"
 
 msgid "Inhibit some of the syslog diagnostics for bad lines in /etc/exports."
 msgstr ""
-"/etc/exports içindeki  kötü çizgiler için syslog teşhislerinin bazılarını "
-"miras olarak al."
 
 msgid "Initial Digest"
 msgstr ""
 
 msgid "Initialize"
-msgstr "Başlangıç"
+msgstr "Initialiser"
 
 msgid "Initialize and encrypt disk."
-msgstr ""
+msgstr "Initialiser og krypter disk."
 
 msgid "Initializing"
-msgstr "Başlatılıyor"
+msgstr "Klargjør"
 
 msgid "Initializing..."
 msgstr ""
 
 msgid "Initiator Group"
-msgstr "Başlatıcı Grup"
+msgstr ""
 
 msgid "Initiator Groups"
-msgstr "Başlatıcı Gruplar"
+msgstr ""
 
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
@@ -3332,7 +3405,7 @@ msgid ""
 msgstr ""
 
 msgid "Initiator name"
-msgstr "Başlatanın ismi"
+msgstr "Initierings navn"
 
 msgid "Initiator side secret. (for mutual CHAP authentication)"
 msgstr ""
@@ -3371,22 +3444,22 @@ msgid "Input voltage"
 msgstr ""
 
 msgid "Inquiry Product"
-msgstr ""
+msgstr "Spør om produkt"
 
 msgid "Inquiry Revision"
-msgstr ""
+msgstr "Spør om revisjon"
 
 msgid "Inquiry Serial"
-msgstr ""
+msgstr "Spør om serienummer"
 
 msgid "Inquiry Vendor"
-msgstr ""
+msgstr "Spør om forhandler"
 
 msgid "Install"
-msgstr "Kur"
+msgstr "Installer"
 
 msgid "Install package"
-msgstr "Paket yükle"
+msgstr "Installer pakke"
 
 msgid ""
 "Intel SSD reports a normalized value of 100 (when the SSD is new) and "
@@ -3400,16 +3473,16 @@ msgid ""
 msgstr ""
 
 msgid "Interface"
-msgstr "Arayüz"
+msgstr "Grensesnitt"
 
 msgid "Interface Management"
-msgstr "Arayüz Yönetimi"
+msgstr "Grensesnitt håndtering"
 
 msgid "Interface selection"
 msgstr ""
 
 msgid "Interfaces"
-msgstr "Arayüzler"
+msgstr "Grensesnitt"
 
 msgid "Internal Server Information"
 msgstr ""
@@ -3424,7 +3497,7 @@ msgid "Interval between self tests"
 msgstr ""
 
 msgid "Interval must be greater or equal than 10 seconds."
-msgstr ""
+msgstr "Intervallet må være større enn eller lik 10 sekunder."
 
 msgid "Interval to wait after shutdown with delay command"
 msgstr ""
@@ -3439,11 +3512,11 @@ msgid "Invalid file format or incorrect password."
 msgstr ""
 
 msgid "Invalid file format."
-msgstr ""
+msgstr "Ugyldig filformat."
 
 #, php-format
 msgid "Invalid max. block size! It must be in the range from %d to %d."
-msgstr ""
+msgstr "Feil maks. blokk størrelse. Må være innen rekkevidden fra %d til %d."
 
 msgid "Invalid username or password. Please try again."
 msgstr ""
@@ -3460,8 +3533,8 @@ msgid ""
 "It is impossible to enable 'Anonymous users only' and 'Local users only' "
 "authentication simultaneously."
 msgstr ""
-"Aynı anda hem \"Yalnızca yerel kullanıcılar\" ve \"Yalnızca adı bilinmeyen "
-"kullanıcılar\"ı etkinleştirmek olanaksız."
+"Det er ikke mulig å slå på 'Kun anonyme brukere' og 'Kun lokale brukere' "
+"autentisering samtidig."
 
 msgid ""
 "It is not recommanded to import non healthy pools nor virtual devices that "
@@ -3474,7 +3547,7 @@ msgid ""
 msgstr ""
 
 msgid "Italian"
-msgstr "İtalyanca"
+msgstr "Italiensk"
 
 msgid "JBOD"
 msgstr "JBOD"
@@ -3486,28 +3559,29 @@ msgid ""
 "January February March April May June July August September October November "
 "December"
 msgstr ""
-"Ocak Şubat Mart Nisan Mayıs Haziran Temmuz Ağustos Eylül Ekim Kasım Aralık"
+"Januas Februar Mars April May Juni Juli August September Oktober November "
+"Desember"
 
 msgid "Japanese"
-msgstr "Japonca"
+msgstr "Japansk"
 
 msgid "Key"
-msgstr "Anahtar"
+msgstr "Nøkkel"
 
 msgid "Key Management Protocol"
-msgstr "Anahtar Yönetim Protokolü"
+msgstr "Key Management Protocol"
 
 msgid "Key length"
-msgstr "Anahtar Uzunluğu"
+msgstr "Nøkkellengde"
 
 msgid "Key length to use with the given cryptographic algorithm."
-msgstr ""
+msgstr "Nøkkellengde for bruk med den kryptografiske algoritmen."
 
 msgid "Kill encrypted volume"
-msgstr "Şifrelenmiş Volümü Sil"
+msgstr "Drep kryptert volum"
 
 msgid "Korean"
-msgstr "Korece"
+msgstr ""
 
 msgid "LACP (Link Aggregation Control Protocol)"
 msgstr "LACP (Link Aggregation Control Protocol)"
@@ -3516,10 +3590,10 @@ msgid "LAGG"
 msgstr "LAGG"
 
 msgid "LAN Management"
-msgstr "Lan Yönetimi"
+msgstr ""
 
 msgid "LAN net"
-msgstr "LAN ağı"
+msgstr "LAN nett"
 
 msgid "LAN only"
 msgstr ""
@@ -3537,19 +3611,19 @@ msgid "LUN"
 msgstr "LUN"
 
 msgid "LUNs"
-msgstr "LUNs"
+msgstr "LUNer"
 
 msgid "Language"
-msgstr "Dil"
+msgstr "Språk"
 
 msgid "Language to use on front panel"
 msgstr ""
 
 msgid "Large read/write"
-msgstr "Büyük okuma/yazma"
+msgstr "Stor les/skriv"
 
 msgid "Last config change"
-msgstr "Son ayar dosyasını değiştir"
+msgstr "Siste konfig endring"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -3572,7 +3646,7 @@ msgid "Latest Release: %s"
 msgstr ""
 
 msgid "Latvian"
-msgstr ""
+msgstr "Latvisk"
 
 #, php-format
 msgid ""
@@ -3590,39 +3664,38 @@ msgid "Leave this field empty to use default settings."
 msgstr ""
 
 msgid "Level 1 - Minimum power usage with Standby (spindown)"
-msgstr "Seviye 1 - Bekleme konumda en düşük güç tüketimi (spindown)"
+msgstr "Nivå 1 - Minimalt strømforbruk med standby (spindown)"
 
 msgid "Level 127 - Intermediate power usage with Standby"
-msgstr "Seviye 127 - Bekleme konumunda orta seviye güç tüketimi"
+msgstr "Nivå 127 - Middels strømforbruk med standby"
 
 msgid "Level 128 - Minimum power usage without Standby (no spindown)"
-msgstr ""
-"Seviye 128 - Bekleme konumunda olmadan minimum güç tüketimi (no spindown)"
+msgstr "Nivå 128 - Minimalt strømforbruk uten stadby (ingen spindown)"
 
 msgid "Level 192 - Intermediate power usage without Standby"
-msgstr "Seviye 192 - Bekleme konumunda olmadan orta seviye güç tüketimi"
+msgstr "Nivå 192 - Middels strømforbruk uten standby"
 
 msgid "Level 254 - Maximum performance, maximum power usage"
-msgstr "Seviye 254 - Maximum performans, maximum güç tüketemi"
+msgstr "Nivå 254 - Maskimal ytelse, maksimalt strømforbruk"
 
 msgid "Level 64 - Intermediate power usage with Standby"
-msgstr "Seviye 64 - Bekleme konumunda orta seviye güç tüketimi"
+msgstr "Nivå 64 - Middels strømforbruk med standby"
 
 #, php-format
 msgid "Levels (MHz/mW): %s"
-msgstr "Seviyeler (MHz/mW): %s"
+msgstr "Nivå (MHz/mW): %s"
 
 msgid "License"
-msgstr "Lisans"
+msgstr "Lisens"
 
 msgid "License & Credits"
-msgstr "Katkıda Bulunanlar & Lisans"
+msgstr ""
 
 msgid "Life time"
 msgstr ""
 
 msgid "Lightweight Directory Access Protocol"
-msgstr ""
+msgstr "Lightweight Directory Access Protocol"
 
 msgid ""
 "Limits the amount of space a dataset and its descendants can consume. This "
@@ -3651,22 +3724,22 @@ msgid ""
 msgstr ""
 
 msgid "List of available target name on all configured iSCSI targets"
-msgstr ""
+msgstr "Liste over tilgjengelige målnavn og alle konfigurerte iSCSI mål"
 
 msgid "List of detected disks"
 msgstr ""
 
 msgid "List of imported users"
-msgstr ""
+msgstr "Liste over importerte brukere"
 
 msgid "List of mount points"
-msgstr "Bağlantı noktalarının listesi"
+msgstr "Liste over monterings punkter"
 
 msgid "Load"
-msgstr "Yükle"
+msgstr "Last inn"
 
 msgid "Load averages"
-msgstr "Ortalamaları yükle"
+msgstr "Gjennomsnittlig belastning"
 
 msgid "Load file"
 msgstr ""
@@ -3678,50 +3751,50 @@ msgid "Load when UPS switches to overload condition (\"OVER\")"
 msgstr ""
 
 msgid "Loadbalance"
-msgstr ""
+msgstr "Lastbalansering"
 
 msgid "Local"
-msgstr "Yerel"
+msgstr "Lokal"
 
 msgid "Local Master Browser"
-msgstr "Local Master Browser"
+msgstr ""
 
 msgid "Local User"
-msgstr "Yerel Kullanıcı"
+msgstr "Lokal bruker"
 
 msgid "Local share (destination)"
-msgstr "Yerel paylaşım (hedef)"
+msgstr "Lokal deling (mål)"
 
 msgid "Local shares to be synchronized"
-msgstr "Senkronize edilmiş olan paylaşımların listesi"
+msgstr "Lokale delinger som skal synkroniseres"
 
 msgid "Local user bandwidth"
-msgstr ""
+msgstr "Lokal bruker båndbredde"
 
 msgid "Local user download bandwith in KB/s. An empty field means infinity."
-msgstr ""
+msgstr "Lokal bruker båndbredde i KB/s. Et tomt felt betyr ubegrenset."
 
 msgid "Local user upload bandwith in KB/s. An empty field means infinity."
 msgstr ""
+"Lokal båndbredde for opplasting i KB/s. Et tomt felt betyr ubegrenset."
 
 msgid "Local users only"
-msgstr "Sadece yerek kullanıcılar"
+msgstr "Lokale brukere kun"
 
 msgid "Location"
-msgstr "Konum"
+msgstr "Plassering"
 
 msgid ""
 "Location information, e.g. physical location of this system: 'Floor of "
 "building, Room xyz'."
 msgstr ""
-"Yer bilgisi, Örneğin bu sistemin fiziksel yer bilgisi (Binanın x katı, y "
-"odası)"
+"Lokaliserings informasjon, f.eks. fyskisk plassering av systemet: 'Rom XYZ'."
 
 msgid "Location of the files to share."
-msgstr ""
+msgstr "Filer som skal deles"
 
 msgid "Location where the content database file will be stored."
-msgstr ""
+msgstr "Lokasjon hvor innholdsdatabasen skal lagres."
 
 msgid "Location where the database with media contents will be stored."
 msgstr ""
@@ -3730,54 +3803,55 @@ msgstr ""
 msgid ""
 "Location where the working files will be stored, e.g. %s/backup/.unison"
 msgstr ""
+"Lokasjon der fungerende filer vil bli lagret, f.eks %s/backup/.unison"
 
 msgid "Log"
-msgstr "Günlük"
+msgstr "Logg"
 
 msgid "Log (mirror)"
-msgstr ""
+msgstr "Logg (speilet)"
 
 msgid "Log Device"
 msgstr ""
 
 msgid "Log Level"
-msgstr "Günlükleme Seviyesi"
+msgstr "Logg nivå"
 
 msgid "Log level"
 msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
-msgstr ""
+msgstr "Loggpakker som er håndtert av denne regelen til syslog."
 
 msgid "Logical Block Length"
-msgstr "Matıksal Blok Uzunluğu"
+msgstr "Logisk Blokklengde"
 
 #, php-format
 msgid "Logical Unit Controller Authorised network (%s by default)"
-msgstr "Doğrulanmış Ağlar için Mantıksal Birim Denetleyicisi (%s varsayılan)"
+msgstr ""
 
 #, php-format
 msgid "Logical Unit Controller IP address (%s by default)"
-msgstr "IP adresi Mantıksal Birim Denetleyicisi (%s varsayılan)"
+msgstr ""
 
 #, php-format
 msgid "Logical Unit Controller TCP port (%d by default)"
-msgstr "TCP Portu Mantıksal Birim Denetleyicisi (%d varsayılan)"
+msgstr ""
 
 msgid "Logical Unit Controller login information"
-msgstr "Oturum bilgisi Mantıksal Birim Denetleyicisi)"
+msgstr ""
 
 msgid "Logical Unit Type mapped to LUN."
 msgstr ""
 
 msgid "Login"
-msgstr "Oturum Açma"
+msgstr "Innlogging"
 
 msgid "Login name of user."
-msgstr "Kullanıcının oturum açma adı"
+msgstr "Brukers innloggingsnavn"
 
 msgid "Logout"
-msgstr "Oturumu kapat"
+msgstr "Logg ut"
 
 msgid "Low voltage boosting transfer point"
 msgstr ""
@@ -3794,16 +3868,16 @@ msgid ""
 msgstr ""
 
 msgid "MAC address"
-msgstr "MAC adresi"
+msgstr "MAC adresse"
 
 msgid "MBR partition"
-msgstr "MBR disk bölümü"
+msgstr "MBT partisjon"
 
 msgid "MIB"
 msgstr "MIB"
 
 msgid "MISSING"
-msgstr "MISSING"
+msgstr "MANGLER"
 
 msgid "MOTD"
 msgstr "MOTD"
@@ -3815,42 +3889,44 @@ msgid "MS Active Directory"
 msgstr "MS Active Directory"
 
 msgid "MS Active Directory informations"
-msgstr ""
+msgstr "MS Active Directory informasjon"
 
 msgid "MS Domain"
-msgstr "MS Domain"
+msgstr "MS Domene"
 
 msgid "MTU"
 msgstr "MTU"
 
 msgid "Machine suffix"
-msgstr ""
+msgstr "Maskin suffiks"
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
-msgstr ""
+msgstr "Forsikre deg om at du har aktivert S.M.A.R.T. for dine enheter."
 
 #, php-format
 msgid ""
 "Make sure you have already configured your <a href='%s'>Email</a> settings."
 msgstr ""
+"Sjekk at du allerede har konfigurert dine <a href='%s'>e-post</a> "
+"innstillinger."
 
 msgid "Management"
-msgstr "Yönetim"
+msgstr "Håndering"
 
 msgid "Manufacturer"
-msgstr "Üretici"
+msgstr "Produsent"
 
 msgid "Manufacturing date"
 msgstr ""
 
 msgid "Map all users to root"
-msgstr "Tüm kullanıcıları roota yönlendir"
+msgstr "Map alle brukere til root"
 
 msgid "Map to guest"
 msgstr ""
 
 msgid "Map to user"
-msgstr "Kullanıcıya yönlendir"
+msgstr "Map til bruker"
 
 msgid "Mapping DOS attributes"
 msgstr ""
@@ -3861,38 +3937,38 @@ msgid ""
 msgstr ""
 
 msgid "Masquerade address"
-msgstr ""
+msgstr "Masker adresse"
 
 msgid "Max Protocol"
 msgstr ""
 
 msgid "Max. TTL"
-msgstr "Max. TTL"
+msgstr "Maks. TTL"
 
 msgid "Max. block size"
-msgstr "Max. blok boyutu"
+msgstr "Maks. blokk størrelse"
 
 msgid "Max. conn. per IP"
-msgstr "IP başıma maksimum bağlantı"
+msgstr "Maks tilkoblinger per IP"
 
 msgid "Max. connections"
-msgstr "Max. bağlantı"
+msgstr "Maks tilkoblinger"
 
 msgid "Max. login attempts"
-msgstr ""
+msgstr "Maks innloggings forsøk"
 
 msgid "Max. passive port"
-msgstr "Max. pasif port"
+msgstr "Maks passiv port"
 
 msgid "Max. pre-send R2T"
 msgstr ""
 
 msgid "Max. sessions"
-msgstr "Max. oturum"
+msgstr "Maks sesjoner"
 
 msgid ""
 "Max. time-to-live (max. number of hops) used in outgoing probe packets."
-msgstr ""
+msgstr "Maks. time-to-live (maks. antall hopp) brukt i utgående søke-pakker."
 
 msgid "MaxBurstLength"
 msgstr ""
@@ -3904,26 +3980,26 @@ msgid "MaxRecvDataSegmentLength"
 msgstr ""
 
 msgid "Maximum connections"
-msgstr "Maksimum bağlantılar"
+msgstr "Maksimalt antall tilkoblinger"
 
 msgid "Maximum frequency"
 msgstr ""
 
 msgid "Maximum idle time in seconds."
-msgstr ""
+msgstr "Maksimal inaktivitetstid i sekunder."
 
 msgid "Maximum incoming voltage seen"
 msgstr ""
 
 msgid "Maximum number of allowed password attempts before disconnection."
-msgstr ""
+msgstr "Maksimalt antall feilede innloggingsforsøk før avkobling."
 
 #, php-format
 msgid "Maximum number of connections in each session (%d by default)."
-msgstr ""
+msgstr "Maksimalt antall tilkoblinger i hver økt (%d standard)."
 
 msgid "Maximum number of connections per IP address (0 = unlimited)."
-msgstr "IP adresi başına en fazla bağlantı sayısı (0=limitsiz)."
+msgstr "Maksimalt antall tilkoblinger per IP adresse (0 = ubegrenset)."
 
 #, php-format
 msgid ""
@@ -3933,16 +4009,16 @@ msgstr ""
 
 #, php-format
 msgid "Maximum number of sessions holding at same time (%d by default)."
-msgstr ""
+msgstr "Maksimalt antall samtidsøkter (%d standard)."
 
 msgid "Maximum number of simultaneous clients."
-msgstr "Aynı anda en fazla istemci sayısı"
+msgstr "Maksimalt antall samtidige klienter."
 
 msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
-msgstr "Aynı anda en fazla bağlantı sayısı.Varsayılan 0'dır.(Limitsiz)"
+msgstr "Maksimalt antall samtidige tilkoblinger. Standard er 0 (ubegrenset)."
 
 msgid "Maximum performance, maximum acoustic output"
-msgstr "en fazla performans, en fazla akustik üretim"
+msgstr "Maksimal ytelse, maksimal akustisk lyd"
 
 msgid "Maximum relative humidity seen (percent)"
 msgstr ""
@@ -3951,25 +4027,25 @@ msgid "Maximum temperature seen (degrees C)"
 msgstr ""
 
 msgid "Media"
-msgstr "Ortam"
+msgstr "Media"
 
 msgid "Media Directory"
-msgstr ""
+msgstr "Mediamappe"
 
 msgid "Media library"
 msgstr ""
 
 msgid "Medium acoustic output"
-msgstr "Medium acoustic output"
+msgstr "Middels akustisk lyd"
 
 msgid "Member Interface"
 msgstr ""
 
 msgid "Memory usage"
-msgstr "Bellek kullanımı"
+msgstr "Minne bruk"
 
 msgid "Message of the day."
-msgstr "Günün mesajı"
+msgstr "Message of the day."
 
 msgid "MiB"
 msgstr "MiB"
@@ -3978,7 +4054,7 @@ msgid "MibII"
 msgstr "MibII"
 
 msgid "Min. passive port"
-msgstr ""
+msgstr "Min. passive port"
 
 msgid "MiniDLNA"
 msgstr ""
@@ -4001,7 +4077,7 @@ msgid "Minimum battery level for UPS restart after power-off"
 msgstr ""
 
 msgid "Minimum free space"
-msgstr "Mnimum boş alan"
+msgstr "Minimum ledig plass"
 
 msgid "Minimum frequency"
 msgstr ""
@@ -4010,7 +4086,7 @@ msgid "Minimum incoming voltage seen"
 msgstr ""
 
 msgid "Minimum performance, Minimum acoustic output"
-msgstr "Mnimum performans, Minimum acoustic output"
+msgstr "Minimal ytelse, Minimal akustisk lyd"
 
 msgid "Minimum relative humidity seen (percent)"
 msgstr ""
@@ -4019,19 +4095,19 @@ msgid "Minimum temperature seen (degrees C)"
 msgstr ""
 
 msgid "Minutes"
-msgstr ""
+msgstr "Minutter"
 
 msgid "Minutes between network time sync."
-msgstr "Network zaman senkronizasyonu arasındaki dakikalar"
+msgstr "Minutter mellom nettverks tids synk."
 
 msgid "Mirror"
-msgstr ""
+msgstr "Speil"
 
 msgid "Missing a temporary folder."
-msgstr ""
+msgstr "Mangler en midlertidig mappe."
 
 msgid "Mode"
-msgstr ""
+msgstr "Modus"
 
 msgid "Model"
 msgstr ""
@@ -4040,53 +4116,55 @@ msgid "Model extra"
 msgstr ""
 
 msgid "Model name"
-msgstr ""
+msgstr "Modellnavn"
 
 msgid "Modified"
 msgstr ""
 
 msgid "Modifying"
-msgstr ""
+msgstr "Endrer"
 
 msgid "Module"
-msgstr "Modül"
+msgstr "Modul"
 
 msgid "Modules"
-msgstr "Modüller"
+msgstr "Moduler"
 
 msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
 msgstr ""
 
 msgid "Months"
-msgstr ""
+msgstr "Måneder"
 
 msgid "Mount Point"
-msgstr "Bağlanma Noktası"
+msgstr "Monteringspunkt"
 
 msgid "Mount point"
-msgstr "Bağlanma noktası"
+msgstr "Monteringspunkt"
 
 msgid "Mount point name"
-msgstr ""
+msgstr "Monteringspunkt navn"
 
 msgid ""
 "Mount the file system read-only (even the super-user may not write it)."
 msgstr ""
+"Monter filsystemet som read-only (les-kun), selv ikke superbrukeren kan "
+"skrive til det."
 
 msgid "Mounting device."
-msgstr "Bağlanan aygıt."
+msgstr "Monterer enhet"
 
 msgid "Mounting..."
-msgstr "Bağlanıyor"
+msgstr "Monterer...."
 
 msgid "Mounts"
-msgstr ""
+msgstr "Monteringer"
 
 msgid "Music"
 msgstr ""
 
 msgid "Must choose one"
-msgstr "Birtane seçilmeli"
+msgstr "Må velge en"
 
 msgid "Mutual CHAP"
 msgstr ""
@@ -4114,7 +4192,7 @@ msgid "NOPIN sending interval in seconds (%d by default)."
 msgstr ""
 
 msgid "NOT YET AVAILABLE"
-msgstr ""
+msgstr "IKKE TILGJENGELIG ENNÅ"
 
 msgid "NT1"
 msgstr ""
@@ -4126,44 +4204,46 @@ msgid "NTP must be enabled."
 msgstr ""
 
 msgid "NTP time server"
-msgstr "NTP saat server"
+msgstr "NTP-tids tjener"
 
 msgid "NUT Internal Driver Information"
 msgstr ""
 
 msgid "Name"
-msgstr "İsim"
+msgstr "Navn"
 
 #, php-format
 msgid "Name of the NAS host, without domain part e.g. %s."
-msgstr ""
+msgstr "Navnet til NAS verten, uten domene delen. F.eks. %s."
 
 #, php-format
 msgid "Name of the device to use as swap device, e.g. %s."
-msgstr ""
+msgstr "Navnet på enheten som skal benyttes som swap enhet, f.eks. %s."
 
 msgid ""
 "Name of the server. If this field is left empty the default server is "
 "specified."
-msgstr "Sunucunun adı.Bu alan boş bırakılırsa varsayılan sunucu belirlenir."
+msgstr ""
+"Navnet på tjeneren. Hvis dette feltet er tomt vil standard tjener bli "
+"spesifisert."
 
 msgid "Name of the variable."
-msgstr "Değişken ismi"
+msgstr "Variabelens navn"
 
 msgid "NetBIOS domain"
 msgstr ""
 
 msgid "NetBIOS name"
-msgstr "NetBIOS ismi"
+msgstr "NetBIOS navn"
 
 msgid "Netgraph"
 msgstr "Netgraph"
 
 msgid "Network"
-msgstr "Network"
+msgstr "Nettverk"
 
 msgid "Network File System"
-msgstr "Ağ Dosya Sistemi"
+msgstr "Network File System"
 
 msgid ""
 "Network authorised to access to the iSCSI target. It takes IP or CIDR "
@@ -4171,16 +4251,16 @@ msgid ""
 msgstr ""
 
 msgid "Network mask"
-msgstr "Network Maskesi"
+msgstr "Nettverksmaske"
 
 msgid "Network port"
-msgstr "Network port"
+msgstr "Nettverks port"
 
 msgid "Network that is authorised to access the NFS share."
-msgstr ""
+msgstr "Nettverk som er autorisert til å aksessere NFS-delingen."
 
 msgid "Networks"
-msgstr "Ağlar"
+msgstr "Nettverk"
 
 msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
@@ -4191,26 +4271,24 @@ msgid "Never - default"
 msgstr ""
 
 msgid "New Device"
-msgstr "Yeni Aygıt"
+msgstr "Ny enhet"
 
 msgid "New password"
 msgstr ""
 
 msgid "No"
-msgstr "Hayır"
+msgstr "Nei"
 
 msgid "No DNS setting found."
 msgstr ""
 
 msgid "No RSYNC Client configured"
-msgstr "Yapılandırılmış RSYNC Client yok"
+msgstr "Ingen RSYNC klient konfigruert"
 
 #, php-format
 msgid ""
 "No configured Auth Group. Please add new <a href='%s'>Auth Group</a> first."
 msgstr ""
-"Yapılandırılmış doğrulama grubu yok. Önce lütfen yeni bir<a "
-"href='%s'>Doğrulama Grubu</a> ekleyin."
 
 msgid "No configured CARP interfaces."
 msgstr ""
@@ -4230,16 +4308,12 @@ msgid ""
 "No configured Initiator Group. Please add new <a href='%s'>Initiator "
 "Group</a> first."
 msgstr ""
-"Yapılandırılmış başlatıcı grubu yok. Önce lütfen yeni bir<a "
-"href='%s'>Başlatıcı Grubu</a> ekleyin."
 
 #, php-format
 msgid ""
 "No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
 "first."
 msgstr ""
-"Yapılandırılmış portal grubu yok. Önce lütfen yeni bir<a href='%s'>Portal "
-"Grubu</a> ekleyin."
 
 #, php-format
 msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
@@ -4250,17 +4324,20 @@ msgid ""
 "No configured virtual devices. Please add new <a href='%s'>virtual "
 "device</a> first."
 msgstr ""
+"Ingen konfigurerte virtuelle enheter. Vennligst legg til <a "
+"href='%s'>disker</a> for å fortsette."
 
 msgid "No device selected."
-msgstr "Herhangi bir aygıt seçilmedi"
+msgstr "Ingen enhet valgt."
 
 msgid "No disk configured"
-msgstr "Yapılandırılmış Disk yok"
+msgstr "Ingen disker konfigruert"
 
 #, php-format
 msgid "No disks available. Please add new <a href='%s'>disk</a> first."
 msgstr ""
-"Herhangi bir disk yok. Lütfen yeni bir <a href='%s'>disk</a> ekleyin."
+"Ingen disker tilgjengelig. Vennligst legg til <a href='%s'>disker</a> for å "
+"fortsette."
 
 msgid ""
 "No disks configured, please add disks to see the diagnostic information of "
@@ -4268,7 +4345,7 @@ msgid ""
 msgstr ""
 
 msgid "No file was uploaded."
-msgstr ""
+msgstr "Ingen fil ble lastet opp."
 
 msgid "No new disk found."
 msgstr ""
@@ -4328,54 +4405,61 @@ msgid "Nominal value of real power (Watts)"
 msgstr ""
 
 msgid "None"
-msgstr "Hiçbiri"
+msgstr "Ingen"
 
 msgid "Normal"
 msgstr "Normal"
 
 msgid "Norwegian (Bokmal)"
-msgstr ""
+msgstr "Norsk (bokmål)"
 
 msgid ""
 "Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do "
 "not explicitly support it, VLAN tagging will still work, but the reduced MTU "
 "may cause problems."
 msgstr ""
+"Ikke alle drivere/kort støtter 8021Q VLAN tagging riktig. På kort som ikke "
+"eksplisitt støtter det vil VLAN tagging fremdeles fungere men redusert MTU "
+"kan skape problemer."
 
 msgid "Not attached"
-msgstr "Ekli değil"
+msgstr "Ikke tilkoblet"
 
 msgid "Not found path."
 msgstr ""
 
 msgid "Note"
-msgstr "Not"
+msgstr "Notat"
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
 "minutes, hours, days and months."
 msgstr ""
+"Mark: Ctrl-klikk (eller kommand-klikk på Mac) for å velge og fjerne "
+"minutter, timer, dager og måneder."
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and deselect groups."
 msgstr ""
+"Tips: CTRL-klikk (eller kommando-klikk på Mac) for å velge og ta vekk "
+"grupper."
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select multiple entries."
-msgstr ""
+msgstr "Obs: Ctrl-klikk (eller kommando-klikk på Mac) for å velge flere."
 
 msgid "Nothing to synchronize"
-msgstr ""
+msgstr "Ingenting å synkronisere"
 
 #, php-format
 msgid "Notification email from host: %s"
-msgstr ""
+msgstr "Notifikasjons e-post fra: %s"
 
 msgid "Now"
-msgstr "Şimdi"
+msgstr "Nå"
 
 msgid "Null passwords"
-msgstr "Boş parolalar"
+msgstr "Tomme passord"
 
 msgid "Number of bad battery packs"
 msgstr ""
@@ -4384,16 +4468,16 @@ msgid "Number of battery packs"
 msgstr ""
 
 msgid "Number of clients"
-msgstr "İstemcilerin numarası"
+msgstr "Antall klienter"
 
 msgid "Number of hours elapsed in the power-on state."
 msgstr ""
 
 msgid "Number of log entries to show"
-msgstr ""
+msgstr "Antall log innslag som skal vises"
 
 msgid "Number of log entries to show must be between 5 and 1000."
-msgstr ""
+msgstr "Antall logg-innlegg å vise må være mellom 5 og 1000."
 
 msgid ""
 "Number of physical erase cycles completed on the drive as a percentage of "
@@ -4401,13 +4485,13 @@ msgid ""
 msgstr ""
 
 msgid "Number of servers"
-msgstr "Serverların numarası"
+msgstr "Antall tjenere"
 
 msgid "Numeric identifier of the group."
 msgstr ""
 
 msgid "OK"
-msgstr "Tamam"
+msgstr "Ok"
 
 msgid "ONLINE"
 msgstr "ONLINE"
@@ -4416,22 +4500,22 @@ msgid "OPT only"
 msgstr ""
 
 msgid "Object name"
-msgstr "Nesne adı"
+msgstr "Objekt navn"
 
 msgid "Occurrence"
-msgstr "Tekrarlanma"
+msgstr "Forekomst"
 
 msgid "Off"
-msgstr "Açık"
+msgstr "Av"
 
 msgid "Old passphrase"
-msgstr ""
+msgstr "Gammelt passord"
 
 msgid "Old password"
-msgstr "Eski parola"
+msgstr "Gammelt passord"
 
 msgid "On"
-msgstr "Açık"
+msgstr "På"
 
 msgid ""
 "Once you add the virtual device, it becomes impossible to delete again. It "
@@ -4445,36 +4529,38 @@ msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
 "access to real accounts."
 msgstr ""
+"Tillat kun anonyme brukere. Bruk dette på en offentlig FTP side uten FTP "
+"tilgang for ekte kontoer."
 
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
-msgstr ""
+msgstr "Tillat kun autentiserte brukere. Anonyme innlogginger er forbudt."
 
 msgid "Option"
-msgstr ""
+msgstr "Alternativ"
 
 msgid "Optional user-friendly string of the target."
-msgstr ""
+msgstr "Valgfri brukervennlig målstreng."
 
 msgid "Options"
-msgstr "Ayarlar"
+msgstr "Alternativer"
 
 msgid "Origin"
 msgstr ""
 
 msgid "Others"
-msgstr ""
+msgstr "Andre"
 
 msgid "Out"
-msgstr "Dışarı"
+msgstr "Ut"
 
 msgid "Outgoing Power/Inverter Information"
 msgstr ""
 
 msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
-msgstr "giden SMTP mail server adresi, örn. smtp.mycorp.com"
+msgstr "Utgående SMTP e-post tjener adresse, f.rks. smtp.minbedrift.no."
 
 msgid "Outgoing mail server"
-msgstr "giden mail sunucusu"
+msgstr "Utgående e-post tjener"
 
 msgid "Output current (A)"
 msgstr ""
@@ -4498,19 +4584,19 @@ msgid "Overload"
 msgstr ""
 
 msgid "Overwrite already configured disks (only affects filesystem value)."
-msgstr ""
+msgstr "Overskriv konfigurerte disker (påvirker kun filsystemverdi)."
 
 msgid "Overwrite disks configuration"
-msgstr ""
+msgstr "Overskriv diskkonfigurasjon"
 
 msgid "Owner"
-msgstr ""
+msgstr "Eier"
 
 msgid "PG"
 msgstr "PG"
 
 msgid "PHP Command"
-msgstr "PHP komutu"
+msgstr "PHP kommando"
 
 msgid "PPPoE"
 msgstr "PPPoE"
@@ -4519,32 +4605,32 @@ msgid "PPTP"
 msgstr "PPTP"
 
 msgid "PPTP clients"
-msgstr "PPTP istemcileri"
+msgstr "PPTP klienter"
 
 #, c-format
 msgid "PSK"
 msgstr "PSK"
 
 msgid "Package Name"
-msgstr "Paket Adı"
+msgstr "Pakke Navn"
 
 msgid "Package file"
-msgstr "Paket Adı"
+msgstr "Pakke fil"
 
 msgid "Package is already installed."
-msgstr "Paket zaten yüklenmiş"
+msgstr "Pakken er allerede installert"
 
 msgid "Package upload failed (out of memory?)"
-msgstr "Paket gönderimi başarısız (yetersiz bellek?)"
+msgstr "Pakke opplasting feilet (tomt for minne?)"
 
 msgid "Packages"
-msgstr "Paketler"
+msgstr "Pakker"
 
 msgid "Painfully aggressive"
-msgstr ""
+msgstr "Smertefullt aggressive"
 
 msgid "Pairwise"
-msgstr ""
+msgstr "Parvis"
 
 msgid "Parameter xxx (ups.conf or cmdline -x) setting"
 msgstr ""
@@ -4553,16 +4639,16 @@ msgid "Parent Directory"
 msgstr ""
 
 msgid "Partition number"
-msgstr "Birim numarası"
+msgstr "Partisjonsnummer"
 
 msgid "Partition type"
-msgstr "Birim türü"
+msgstr "Partisjonstype"
 
 msgid "Partitions"
-msgstr "Disk bölümleri"
+msgstr "Partisjoner"
 
 msgid "Passive ports"
-msgstr "Pasif portlar"
+msgstr "Passive porter"
 
 msgid ""
 "Passive ports restricts the range of ports from which the server will select "
@@ -4573,33 +4659,39 @@ msgid ""
 "enough to handle many simultaneous passive connections (for example, 49152-"
 "65534, the IANA-registered ephemeral port range)."
 msgstr ""
+"Passive porter begrenser hvilke porter som tjeneren vil velge ved mottak av "
+"PASV-kommando fra en klient. Tjeneren vil tilfeldig velge et nummer fra "
+"dataområdet til en åpen port er funnet. Dataområdet må være i det ikke-"
+"privilegerte området (større enn eller lik 1024). Det anbefales sterkt at "
+"det valgte området er stort nok til å godta mange samtidige passive "
+"tilkoblinger (f.eks, 49152-65534, IANA-registrert flyktig målområde)."
 
 msgid "Passphrase"
-msgstr ""
+msgstr "Passord"
 
 msgid "Passphrase don't match."
-msgstr ""
+msgstr "Passordene er ikke like."
 
 msgid "Password"
-msgstr "Parola"
+msgstr "Passord"
 
 msgid "Password (confirmed)"
-msgstr "Parola (doğrulanmış)"
+msgstr "Passord (bekreftet)"
 
 msgid "Password authentication"
-msgstr "Parola doğrulaması"
+msgstr "Passord autentikasjon"
 
 msgid "Password don't match."
-msgstr "Parola eşleşmiyor."
+msgstr "Passordene er ikke like"
 
 msgid "Password encryption"
-msgstr "Parola şifrelemesi"
+msgstr "Passord kryptering"
 
 msgid "Password for the administrative pages."
-msgstr "Yönetici sayfaları için parola"
+msgstr "Passord for de administrative sidene."
 
 msgid "Password of domain administrator account."
-msgstr ""
+msgstr "Passordet til domenets administrator konto."
 
 msgid "Password server"
 msgstr ""
@@ -4609,25 +4701,25 @@ msgid ""
 msgstr ""
 
 msgid "Password suffix"
-msgstr "Parola son eki"
+msgstr "Passord suffiks"
 
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
 msgstr ""
 
 msgid "Paste a signed certificate in X.509 PEM format here."
-msgstr ""
+msgstr "Lim inn et signert sertifikat i X.509 PEM format her."
 
 msgid "Paste an private key in PEM format here."
-msgstr ""
+msgstr "Lim inn en privat nøkkel i PEM format her."
 
 msgid "Path"
-msgstr "Dosya yolu"
+msgstr "Sti"
 
 msgid "Path of the URL relative to document root."
-msgstr ""
+msgstr "Bane til URL relativt til dokument roten."
 
 msgid "Path to be shared."
-msgstr ""
+msgstr "Sti som skal deles"
 
 #, php-format
 msgid "Path to the local device. (e.g. %s)"
@@ -4643,20 +4735,20 @@ msgid "Peer exchange"
 msgstr ""
 
 msgid "Peer port"
-msgstr "Kaynak portu"
+msgstr ""
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
 msgstr ""
 
 msgid "Permit root login"
-msgstr ""
+msgstr "Tillat root innlogging"
 
 msgid "Permit to do SSH Tunneling."
-msgstr ""
+msgstr "Tilatt SSH tunneler."
 
 msgid "Physical interface"
-msgstr "Fiziksel arayüz"
+msgstr "Fysisk grensesnitt"
 
 msgid "Pictures"
 msgstr ""
@@ -4665,13 +4757,13 @@ msgid "Ping"
 msgstr "Ping"
 
 msgid "Ping winbindd to see if it is alive:"
-msgstr ""
+msgstr "Ping winbindd for å se om den er i live:"
 
 msgid "Ping/Traceroute"
-msgstr "Ping/Traceroute"
+msgstr "Ping/Sporing"
 
 msgid "Platform"
-msgstr "Platform"
+msgstr "Plattform"
 
 msgid "Platform OS"
 msgstr ""
@@ -4687,10 +4779,10 @@ msgid "Please define the Media library location."
 msgstr ""
 
 msgid "Please note that blanks in path names are not allowed."
-msgstr ""
+msgstr "Legg merke til at tomme felter i navn på baner ikke er tilltatt."
 
 msgid "Polish"
-msgstr ""
+msgstr "Polsk"
 
 msgid "Polling time"
 msgstr ""
@@ -4712,39 +4804,42 @@ msgstr "Port "
 
 #, php-format
 msgid "Port %ld is already used by another service."
-msgstr "%ld portunu başka bir hizmet kullanılıyor."
+msgstr "Port %ld er allerede i bruk av en annen tjeneste."
 
 msgid "Port forwarding"
-msgstr ""
+msgstr "Port videresending"
 
 #, php-format
 msgid "Port to listen for incoming peer connections. Default port is %d."
 msgstr ""
+"Port for å lytte etter innkommende tilkoblinger. Standard port er %d."
 
 msgid "Port to listen on. Default iTunes port is 3689."
-msgstr "Port dinleme açık.Varsayılan iTunes portu %d."
+msgstr "Port til å lytte til. Standard iTunes port er 3689."
 
 #, php-format
 msgid "Port to listen on. Default port is %d."
-msgstr "Port dinleme açık.Varsayılan port %d."
+msgstr "Port til å lytte på. Standard er %d."
 
 #, php-format
 msgid ""
 "Port to listen on. Only dynamic or private ports can be used (from %d "
 "through %d). Default port is %d."
 msgstr ""
+"Port til å lytte til. Kun dynamiske eller private porter kan brukes (fra %d "
+"til %d). Standardport er %d."
 
 msgid "Portal Group"
-msgstr "Portal Grubu"
+msgstr "Portal gruppe"
 
 msgid "Portal Groups"
-msgstr "Portal Grupları"
+msgstr "Portal grupper"
 
 msgid "Portals"
-msgstr "Portallar"
+msgstr "Portaler"
 
 msgid "Ports"
-msgstr "Portlar"
+msgstr "Porter"
 
 msgid "Portuguese (Brazil)"
 msgstr ""
@@ -4753,16 +4848,16 @@ msgid "Portuguese (Portugal)"
 msgstr ""
 
 msgid "PostInit"
-msgstr ""
+msgstr "PostInit"
 
 msgid "Power Daemon"
-msgstr ""
+msgstr "Strøm Daemon"
 
 msgid "Power Mode"
 msgstr ""
 
 msgid "Power mode"
-msgstr "Güç modu"
+msgstr "Strømmodus"
 
 msgid "Pre-Fail' Attribute used at least in HP devices."
 msgstr ""
@@ -4778,25 +4873,25 @@ msgid "Predefined system groups"
 msgstr ""
 
 msgid "Preferred"
-msgstr ""
+msgstr "Foretrukket"
 
 msgid "Prefix"
-msgstr ""
+msgstr "Prefiks"
 
 msgid "Preformatted file system"
-msgstr ""
+msgstr "Preformatert filsystem"
 
 msgid "Presentation WebGUI"
 msgstr ""
 
 msgid "Preserve extended attributes"
-msgstr ""
+msgstr "Behold utvidede attributter"
 
 msgid "Preserve modification times."
-msgstr ""
+msgstr "Behold endringstidspunkter."
 
 msgid "Preserve permissions"
-msgstr ""
+msgstr "Behold rettigheter"
 
 msgid "Prevent deep discharge of battery"
 msgstr ""
@@ -4805,43 +4900,43 @@ msgid "Primary"
 msgstr ""
 
 msgid "Primary Group"
-msgstr "Öncelikli Grup"
+msgstr "Primær gruppe"
 
 msgid "Primary group"
-msgstr "Öncelikli grup"
+msgstr "Primærgruppe"
 
 msgid "Primary group is also selected in additional group."
-msgstr ""
+msgstr "Primærgruppe er også valgt i tilleggs gruppe."
 
 msgid "Private Key"
-msgstr ""
+msgstr "Privat nøkkel"
 
 msgid "Private key"
-msgstr ""
+msgstr "Privat nøkkel"
 
 msgid "Process"
-msgstr "İşlem"
+msgstr "Prosess"
 
 msgid "Processes"
-msgstr "İşlemler"
+msgstr "Prosesser"
 
 msgid "Processes information"
-msgstr "İşlem bilgileri"
+msgstr "Prosess informasjon"
 
 msgid "Product ID"
 msgstr ""
 
 msgid "Profile"
-msgstr "Profile\""
+msgstr "Profil"
 
 msgid "Proto"
 msgstr "Proto"
 
 msgid "Protocol"
-msgstr "Protokol"
+msgstr "Protokoll"
 
 msgid "Provider"
-msgstr "Sağlayıcı"
+msgstr "Tilbyder"
 
 msgid "Proxy"
 msgstr "Proxy"
@@ -4850,15 +4945,17 @@ msgid ""
 "Puts the hard disk into standby mode when the selected amount of time after "
 "the last hard disk access has been elapsed."
 msgstr ""
+"Setter harddisken i stand-by modues når den valgte tiden har gått siden "
+"harddisken sist ble brukt."
 
 msgid "Queue Depth"
-msgstr "Sıra Uzunluğu"
+msgstr ""
 
 msgid "Quiet"
-msgstr ""
+msgstr "Stille"
 
 msgid "Quota"
-msgstr ""
+msgstr "Kvote"
 
 msgid "RAID 0"
 msgstr "RAID 0"
@@ -4903,37 +5000,37 @@ msgid "RSYNC"
 msgstr "RSYNC"
 
 msgid "RSYNC - Client"
-msgstr "RSYNC - İstemcisi"
+msgstr "RSYNC - klient"
 
 msgid "RSYNC - Local"
-msgstr "RSYNC - Yerel"
+msgstr "RSYNC - lokal"
 
 msgid "RSYNC - Server"
-msgstr "RSYNC - Sunucusu"
+msgstr "RSYNC - server"
 
 msgid "RSYNC Client"
-msgstr "RSYNC İstemcisi"
+msgstr "RSYNC Klient"
 
 msgid "RSYNC Client informations"
-msgstr "RSYNC İstemci bilgileri"
+msgstr "RSYNC Klient informasjon"
 
 msgid "RSYNC events"
-msgstr "RSYNC olayları"
+msgstr "RSYNC hendelser"
 
 msgid "RSYNC log"
-msgstr "RSYNC günlüğü"
+msgstr "RSYNC logg"
 
 msgid "Raid name"
-msgstr "Raid adı"
+msgstr "RAID navn"
 
 msgid "Read"
-msgstr ""
+msgstr "Les"
 
 msgid "Read Only (ro)"
 msgstr ""
 
 msgid "Read Only Access"
-msgstr ""
+msgstr "Kun lese tilgang"
 
 msgid "Read from biggest priority"
 msgstr ""
@@ -4942,10 +5039,10 @@ msgid "Read from lowest load"
 msgstr ""
 
 msgid "Read only"
-msgstr ""
+msgstr "Kun lesing"
 
 msgid "Read/Write"
-msgstr ""
+msgstr "Les/Skriv"
 
 msgid "Read/Write (rw)"
 msgstr ""
@@ -4960,37 +5057,37 @@ msgid ""
 msgstr ""
 
 msgid "Read/Write Access"
-msgstr ""
+msgstr "Les/Skriv tilgang"
 
 msgid "Readonly"
-msgstr "Saltokunur"
+msgstr ""
 
 msgid "Realm"
-msgstr ""
+msgstr "Realm"
 
 msgid "Reason for last transfer to battery (* opaque)"
 msgstr ""
 
 msgid "Reboot"
-msgstr "Yeniden Başlat"
+msgstr "Omstart"
 
 msgid "Receive Buffer Size"
-msgstr ""
+msgstr "Motta Buffer størrelse"
 
 msgid "Recurse into directories."
-msgstr ""
+msgstr "Rekursivt i kataloger"
 
 msgid "Recursive"
-msgstr ""
+msgstr "Rekursivt"
 
 msgid "Recycle bin"
-msgstr "Çöp kutusu"
+msgstr "Papirkurv"
 
 msgid "Refresh"
-msgstr "Yenile"
+msgstr "Oppdater"
 
 msgid "Reject"
-msgstr "Reddet"
+msgstr "Avvis"
 
 msgid "Relative humidity alarm (enabled/disabled)"
 msgstr ""
@@ -4999,74 +5096,78 @@ msgid "Relative humidity threshold high (percent)"
 msgstr ""
 
 msgid "Release Notes"
-msgstr "Sürüm Bilgileri"
+msgstr "Utgivelsesinformasjon"
 
 msgid "Reload page"
-msgstr "Sayfayı yenile"
+msgstr "Last inn siden på nytt"
 
 msgid "Remaining battery runtime"
 msgstr ""
 
 msgid "Remote Rsync Server"
-msgstr ""
+msgstr "Fjern Rsync tjener"
 
 msgid "Remote address"
-msgstr ""
+msgstr "Fjern adresse"
 
 msgid "Remote module (source)"
-msgstr ""
+msgstr "Fjern modul (kilde)"
 
 msgid "Remote module name"
-msgstr ""
+msgstr "Fjern modulnavn"
 
 msgid "Remote monitoring"
-msgstr ""
+msgstr "Fjernovervåking"
 
 msgid "Remote rsync daemon"
 msgstr ""
 
 msgid "Remote syslog server"
-msgstr ""
+msgstr "Fjern syslog tjener"
 
 msgid "Removable"
 msgstr ""
 
 msgid "Remove all entries from ARP table"
-msgstr ""
+msgstr "Slett alle innslag fra ARP tabellen"
 
 msgid "Replace Battery UPS"
 msgstr ""
 
 msgid "Report Generator"
-msgstr "Rapor Oluşturucu"
+msgstr "Rapport generator"
 
 msgid ""
 "Report if the temperature had changed by at least N degrees Celsius since "
 "last report. Set to 0 to disable this report."
 msgstr ""
+"Rapporter hvis temperaturen har endret seg med minst N grader Celsius siden "
+"siste rapport. Set til 0 for å slå av denne rapporten."
 
 msgid ""
 "Report if the temperature is greater or equal than N degrees Celsius. Set to "
 "0 to disable this report."
 msgstr ""
+"Rapporter hvis temperaturen er høyere enn eller lik N grader Celsius. Sett "
+"til 0 for å slå av denne rapporten."
 
 msgid "Reports"
-msgstr "Raporlar"
+msgstr "Rapporter"
 
 msgid "Require authentication."
-msgstr "Kimlik doğrulaması gerekli."
+msgstr "Krev autentisering."
 
 msgid "Required"
-msgstr "Gerekli"
+msgstr "Obligatorisk"
 
 msgid "Rescan database in progress"
 msgstr ""
 
 msgid "Rescan disks"
-msgstr "Diskleri yeniden tara"
+msgstr ""
 
 msgid "Rescan interval"
-msgstr ""
+msgstr "Intervall for nytt søk"
 
 msgid "Reservation"
 msgstr ""
@@ -5075,10 +5176,10 @@ msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr ""
 
 msgid "Resolve"
-msgstr ""
+msgstr "Løs"
 
 msgid "Resolve IP addresses to hostnames"
-msgstr ""
+msgstr "Løs IP adresser til vertsnavn"
 
 msgid "Resource"
 msgstr ""
@@ -5090,28 +5191,28 @@ msgid "Resources"
 msgstr ""
 
 msgid "Restore configuration"
-msgstr ""
+msgstr "Gjenopprett konfigurasjon"
 
 msgid "Restore metadata from the given file to the given provider."
 msgstr ""
 
 msgid "Results for net rpc testjoin:"
-msgstr ""
+msgstr "Resultat for net rpc testjoin:"
 
 msgid "Results of last self test"
 msgstr ""
 
 msgid "Resume"
-msgstr ""
+msgstr "Fortsett"
 
 msgid "Retry"
-msgstr ""
+msgstr "Prøv igjen"
 
 msgid "Return to Command page"
 msgstr ""
 
 msgid "Reverse DNS lookup"
-msgstr ""
+msgstr "Reversert DNS oppslag"
 
 msgid "Reverse direction"
 msgstr ""
@@ -5120,16 +5221,16 @@ msgid "Role"
 msgstr ""
 
 msgid "Romanian"
-msgstr ""
+msgstr "Romansk"
 
 msgid "Root"
-msgstr "Root"
+msgstr "Rot"
 
 msgid "Root bind DN"
-msgstr ""
+msgstr "Root bind DN"
 
 msgid "Root bind password"
-msgstr ""
+msgstr "Root bind passord"
 
 msgid "Rotation rate"
 msgstr ""
@@ -5138,58 +5239,58 @@ msgid "Round-robin read"
 msgstr ""
 
 msgid "Roundrobin"
-msgstr ""
+msgstr "Roundrobin"
 
 msgid "Routes"
-msgstr "Rotalar"
+msgstr "Ruter"
 
 msgid "Routing tables"
-msgstr "Yönlendirme tabloları"
+msgstr "Ruting tabeller"
 
 msgid "Rows"
-msgstr "Satırlar"
+msgstr "Rader"
 
 msgid "Rsync"
 msgstr "Rsync"
 
 msgid "Rsync job"
-msgstr ""
+msgstr "Rsync jobb"
 
 msgid "Rule"
-msgstr "Kural"
+msgstr "Regel"
 
 msgid "Rule number"
-msgstr "Kural numarası"
+msgstr "Regel nummer"
 
 msgid "Rules"
-msgstr "Kurallar"
+msgstr "Regler"
 
 msgid "Run as"
 msgstr ""
 
 msgid "Run now"
-msgstr "Şimdi çalıştır"
+msgstr "Kjør nå"
 
 msgid "Run without requiring remote rsync daemon. (Disabled by default)"
 msgstr ""
 
 msgid "Running"
-msgstr "Çalışıyor"
+msgstr "Kjører"
 
 msgid "Russian"
-msgstr "Rusça"
+msgstr "Russisk"
 
 msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
 
 msgid "S.M.A.R.T. events"
-msgstr "S.M.A.R.T. olayları"
+msgstr "S.M.A.R.T. saker"
 
 msgid "S.M.A.R.T. extra options"
-msgstr "S.M.A.R.T. extra ayarlar"
+msgstr "S.M.A.R.T. ekstra alternativer"
 
 msgid "S.M.A.R.T. log"
-msgstr "S.M.A.R.T. günlüğü"
+msgstr "S.M.A.R.T. logg"
 
 msgid "SMB2"
 msgstr ""
@@ -5206,16 +5307,16 @@ msgid "SNMP"
 msgstr "SNMP"
 
 msgid "SNMP Modules"
-msgstr "SNMP Modulleri"
+msgstr "SNMP Moduler"
 
 msgid "SSH"
 msgstr "SSH"
 
 msgid "SSH events"
-msgstr "SSH olayları"
+msgstr "SSH saker"
 
 msgid "SSHD log"
-msgstr "SSHD günlüğü"
+msgstr "SSHD logg"
 
 msgid "SSID"
 msgstr "SSID"
@@ -5239,22 +5340,22 @@ msgid ""
 msgstr ""
 
 msgid "Save"
-msgstr "Kaydet"
+msgstr "Lagre"
 
 msgid "Save and Restart"
-msgstr "Kaydet ve Yeniden Başlat"
+msgstr "Lagre og start på nytt"
 
 msgid "Save file"
 msgstr ""
 
 msgid "Save login information in configuration file."
-msgstr "Oturum açma bilgilerini yapılandırma dosyasına kaydet"
-
-msgid "Saved file to"
 msgstr ""
 
+msgid "Saved file to"
+msgstr "Lagret fil til"
+
 msgid "Scan Targets"
-msgstr "Hedefi Tara"
+msgstr ""
 
 msgid ""
 "Scan file system every N seconds to see if any files have been added or "
@@ -5264,37 +5365,37 @@ msgid ""
 msgstr ""
 
 msgid "Scan type"
-msgstr "Tarama tipi"
+msgstr "Skann type"
 
 msgid "Schedule time"
-msgstr "Zamanlanmış süre"
+msgstr "Planlagt tid"
 
 msgid "Scheduled"
-msgstr "Zamanlanmış"
+msgstr "Planlagt"
 
 msgid "Scheduled Self-Test"
-msgstr "Zamanlanmış self-test"
+msgstr "Planlagt selv-test"
 
 msgid "Scheduled reboot"
-msgstr "Zamanlanmış yeniden başlatma"
+msgstr "Planglagt omstart"
 
 msgid "Scheduled self-tests"
-msgstr "Zamanlanmış self-test'ler"
+msgstr "Planlagte selv-tester"
 
 msgid "Scheduled shutdown"
-msgstr "Zamanlanmış kapanma"
+msgstr "Planlagt slå av"
 
 msgid "Secondary"
 msgstr ""
 
 msgid "Secret"
-msgstr ""
+msgstr "Hemmelighet"
 
 msgid "Secure Shell"
-msgstr ""
+msgstr "SSH"
 
 msgid "Security"
-msgstr "Güvenlik"
+msgstr "Sikkerhet"
 
 msgid "See attribute E8."
 msgstr ""
@@ -5305,22 +5406,22 @@ msgid ""
 msgstr ""
 
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
-msgstr ""
+msgstr "Velg en disk som er klar for S.M.A.R.T. overvåking."
 
 msgid "Select item to remove from the list"
 msgstr ""
 
 msgid "Select mount point where to create the swap file."
-msgstr ""
+msgstr "Velg et monteringspunkt for swap fil skal lages."
 
 msgid "Select the FreeBSD package to be installed."
-msgstr ""
+msgstr "Velg FreeBSD pakken som skal installeres."
 
 msgid "Select the language of the WebGUI."
 msgstr ""
 
 msgid "Select the location closest to you."
-msgstr ""
+msgstr "Velg stedet nærmest deg"
 
 #, php-format
 msgid ""
@@ -5334,37 +5435,37 @@ msgid ""
 msgstr ""
 
 msgid "Select your read balance algorithm."
-msgstr ""
+msgstr "Velg din lese balansering algoritme."
 
 msgid "Selected"
-msgstr "Seçildi"
+msgstr "Valgt"
 
 msgid "Selected device or label does not exist."
 msgstr ""
 
 msgid "Selected file isn't an valid ISO file."
-msgstr "Seçtiğin doysa geçerli bir ISO dosyası değil."
+msgstr "Den valgte filen er ikke en valid ISO fil."
 
 msgid "Self-Monitoring, Analysis and Reporting Technology"
-msgstr ""
+msgstr "Self-Monitoring, Analysis and Reporting Technology"
 
 msgid "Send Buffer Size"
-msgstr ""
+msgstr "Send Buffer størrelse"
 
 msgid "Send Command!"
-msgstr ""
+msgstr "Send kommando!"
 
 msgid "Send a TEST warning email on startup."
-msgstr ""
+msgstr "Send en TEST advarsels e-post under oppstart"
 
 msgid "Send now"
-msgstr "Şimdigönder"
+msgstr "Send nå"
 
 msgid "Send test email"
-msgstr "Test maili gönder"
+msgstr "Send test e-post"
 
 msgid "Separate email addresses by semi-colon."
-msgstr ""
+msgstr "Separer e-post adresser med semikolon."
 
 msgid "Serial Console"
 msgstr ""
@@ -5373,49 +5474,49 @@ msgid "Serial number"
 msgstr ""
 
 msgid "Server"
-msgstr "Sunuc"
+msgstr "Tjener"
 
 msgid "Server Name"
-msgstr "Sunucu Adı"
+msgstr "Tjener navn"
 
 msgid "Server description. This can usually be left blank."
-msgstr "Sunucu açıklaması. Genelde boş bırakılır"
+msgstr "Tjener beskrivelse. Denne kan vanligvis være tom."
 
 msgid "Server information"
 msgstr ""
 
 msgid "Server name"
-msgstr "Sunucu adı"
+msgstr "Tjenernavn"
 
 msgid "Server version"
 msgstr ""
 
 msgid "Service"
-msgstr "Hizmet"
+msgstr "Tjeneste"
 
 msgid "Services"
-msgstr "Hizmetler"
+msgstr "Tjenester"
 
 msgid "Set additional group memberships for this account."
-msgstr "Bu grup için ek olarak grup üyeliği ayarla"
+msgstr "Sett tilleggs gruppe-medlemskap for denne kontoen."
 
 msgid "Set browseable"
-msgstr "Gezilebilebilir olarak ayarla"
+msgstr "Sett søkbar"
 
 msgid "Set read only"
-msgstr ""
+msgstr "Set kun-lese"
 
 msgid "Set share password."
-msgstr "Ortak parola ayarla."
+msgstr "Set delings passord."
 
 msgid "Set the account's primary group to the given group."
-msgstr ""
+msgstr "Sett kontoens primærgruppe til den oppgitte gruppen."
 
 msgid "Set the content location(s) to or from the media library."
 msgstr ""
 
 msgid "Set the desired Service Set Identifier (aka network name)."
-msgstr ""
+msgstr "Sett ønsket Service Set Identifier (dvs. nettverks-navnet)."
 
 msgid ""
 "Set the maximum transmission unit of the interface to n, default is "
@@ -5440,6 +5541,8 @@ msgid ""
 "Sets the interval between disk checks to N seconds. The minimum allowed "
 "value is 10."
 msgstr ""
+"Setter intervallet mellom disk-sjekker til N sekunder. Den minste tillatte "
+"verdien er 10."
 
 msgid ""
 "Sets the umask for newly created files to the specified value. The default "
@@ -5447,7 +5550,7 @@ msgid ""
 msgstr ""
 
 msgid "Settings"
-msgstr "Ayarlar"
+msgstr "Innstillinger"
 
 msgid "Shadow Copy"
 msgstr ""
@@ -5456,22 +5559,22 @@ msgid "Shadow Copy format"
 msgstr ""
 
 msgid "Share"
-msgstr "Paylaşım"
+msgstr "Deling"
 
 msgid "Share Character Set"
-msgstr ""
+msgstr "Delingens tegnsett"
 
 msgid "Share Password"
-msgstr "Ortak Parola"
+msgstr "Delings passord"
 
 msgid "Share passwords can not be more than 8 characters."
-msgstr ""
+msgstr "Delingspassord kan ikke være lengre enn 8 tegn."
 
 msgid "Shares"
-msgstr "Paylaşımlar"
+msgstr "Delinger"
 
 msgid "Shell"
-msgstr ""
+msgstr "Skall"
 
 msgid "Shock During Write."
 msgstr ""
@@ -5480,22 +5583,22 @@ msgid "Show RAW UPS Info"
 msgstr ""
 
 msgid "Show log entries in reverse order (newest entries on top)"
-msgstr ""
+msgstr "Vis logg innslag i reversert rekkefølge (nyeste på topp)"
 
 msgid "Show process information"
-msgstr "İşlem bilgilerini göster"
+msgstr "Vis prosess informasjon"
 
 msgid "Show ups information"
 msgstr ""
 
 msgid "Shutdown"
-msgstr "KApat"
+msgstr "Slå av"
 
 msgid "Shutdown mode"
-msgstr "Kapatma modu"
+msgstr ""
 
 msgid "Shutdown timer"
-msgstr "Kapanma zamanlayıcısı"
+msgstr ""
 
 msgid "Simple Network Management Protocol"
 msgstr "Simple Network Management Protocol"
@@ -5504,7 +5607,7 @@ msgid "Single-parity RAID-Z"
 msgstr ""
 
 msgid "Size"
-msgstr "Boyut"
+msgstr "Størrelse"
 
 #, php-format
 msgid "Size of receive buffer (%d by default)."
@@ -5526,13 +5629,13 @@ msgid "Skip first scan"
 msgstr ""
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
-msgstr ""
+msgstr "Sleep - Sjekk enheten med mindre den er i SLEEP-modus."
 
 msgid "Slovak"
 msgstr ""
 
 msgid "Slovenian"
-msgstr ""
+msgstr "Slovensk"
 
 msgid "SmartBoost"
 msgstr ""
@@ -5550,31 +5653,31 @@ msgid "Snapshots"
 msgstr ""
 
 msgid "Sockets"
-msgstr ""
+msgstr "Kontakter"
 
 msgid "SoftRaid"
-msgstr ""
+msgstr "SoftRaid"
 
 msgid "Software RAID"
-msgstr "RAID programı"
+msgstr "Programvare RAID"
 
 msgid "Software used"
-msgstr ""
+msgstr "Programvare brukt"
 
 msgid "Source"
-msgstr "Kaynak"
+msgstr "Kilde"
 
 msgid "Source directory to be synchronized."
-msgstr ""
+msgstr "Kildekatalog som skal synkroniseres."
 
 msgid "Source port"
-msgstr ""
+msgstr "Kildeport"
 
 msgid "Source share"
-msgstr ""
+msgstr "Kilde deling"
 
 msgid "Space Used"
-msgstr "kullanılıyor"
+msgstr "Plass brukt"
 
 msgid ""
 "Space delimited set of IP or CIDR notation that permitted to access the "
@@ -5582,7 +5685,7 @@ msgid ""
 msgstr ""
 
 msgid "Spanish"
-msgstr "İspanyolca"
+msgstr "Spansk"
 
 msgid "Sparse"
 msgstr ""
@@ -5601,13 +5704,13 @@ msgid "Specified path is NFSv4 root directory."
 msgstr ""
 
 msgid "Specifies how many servers to create."
-msgstr ""
+msgstr "Spesifiserer hvor mange tjenere som skal lages."
 
 msgid "Specifies that the file system should be exported read-only."
-msgstr ""
+msgstr "Spesifiserer at filsystemet kun skal eksporteres med lese-tilgang."
 
 msgid "Specifies the command to be run."
-msgstr ""
+msgstr "Spesifiserer kommandoen som skal kjøres."
 
 msgid ""
 "Specifies the maximum permitted block size. The permitted range for this "
@@ -5618,6 +5721,8 @@ msgid ""
 "Specifies the share character set. For example UTF8, UTF8-MAC, ISO-8859-15, "
 "etc."
 msgstr ""
+"Spesifiserer delingens tegnsett. For eksempel UTF8, UTF8-MAC, ISO-8859-15, "
+"etc."
 
 msgid "Specifies the time in hh:mm:ss after which the ban expires."
 msgstr ""
@@ -5633,18 +5738,23 @@ msgstr ""
 msgid ""
 "Specifies whether it is allowed to login as superuser (root) directly."
 msgstr ""
+"Spesifiserer hvorvidt det er tillatt å logge inn som superbruker (root) "
+"direkte."
 
 msgid ""
 "Specify the percentage of space held back from normal users. Note that "
 "lowering the threshold can adversely affect performance and auto-"
 "defragmentation."
 msgstr ""
+"Spesifiser prosenten av plass hold unne fra normale brukere. Legg merke til "
+"at ved å senke denne kan man negativt påvirke ytelsen og auto-"
+"defragmenteringen."
 
 msgid "Split request"
 msgstr ""
 
 msgid "Standard"
-msgstr "Standart"
+msgstr "Standard"
 
 msgid ""
 "Standby - Check the device unless it is in SLEEP or STANDBY mode. In these "
@@ -5653,44 +5763,44 @@ msgid ""
 msgstr ""
 
 msgid "Standby time"
-msgstr "Beklemede kala süresi"
+msgstr "Standby tid"
 
 msgid "Start"
-msgstr "Başlat"
+msgstr ""
 
 msgid "Static"
-msgstr "Statik"
+msgstr "Statisk"
 
 msgid "Static Routes"
-msgstr ""
+msgstr "Statiske ruter"
 
 msgid "Static routes"
-msgstr ""
+msgstr "Statiske ruter"
 
 msgid "Status"
-msgstr "Durum"
+msgstr "Status"
 
 #, c-format
 msgid "Status report successfully sent to: %s."
-msgstr ""
+msgstr "Status rapport sendt til: %s"
 
 msgid "Status report successfully sent."
-msgstr ""
+msgstr "Status rapport sendt vellykket."
 
 msgid "Stop"
-msgstr "Durdur"
+msgstr ""
 
 msgid "Stop after sending (and receiving) N packets."
-msgstr ""
+msgstr "Stop etter å ha sendt (og mottatt) N pakker."
 
 msgid "Stopped"
-msgstr "Durduruldu"
+msgstr "Stoppet"
 
 msgid "Storage"
-msgstr ""
+msgstr "Lagring"
 
 msgid "Store DOS attributes"
-msgstr ""
+msgstr "Lagre DOS attributter"
 
 msgid "Store NTFS acls"
 msgstr ""
@@ -5715,49 +5825,49 @@ msgid "String identifier of the extent."
 msgstr ""
 
 msgid "Stripe"
-msgstr ""
+msgstr "Stripe"
 
 msgid "Subject"
-msgstr "Konu"
+msgstr "Emne"
 
 msgid "Subnet bit count"
-msgstr ""
+msgstr "Subnett bit antall"
 
 msgid "Subnet mask"
-msgstr ""
+msgstr "Subnett maske"
 
 msgid "Subsystem"
 msgstr ""
 
 msgid "Successful"
-msgstr ""
+msgstr "Vellykket"
 
 msgid "Successful."
-msgstr ""
+msgstr "Vellykket"
 
 msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
-msgstr ""
+msgstr "Søndag Mandag Tirsdag Onsdag Torsdag Fredag Lørdag"
 
 msgid "Suppress non-error messages."
-msgstr ""
+msgstr "Ikke vis ikke-feilmeldinger."
 
 msgid "Swap"
-msgstr ""
+msgstr "Veksel"
 
 msgid "Swap disabled"
-msgstr ""
+msgstr "Swap slått av"
 
 msgid "Swap memory"
-msgstr ""
+msgstr "Veksel minne"
 
 msgid "Swap status"
-msgstr ""
+msgstr "Swap status"
 
 msgid "Swap usage"
-msgstr ""
+msgstr "Swap bruk"
 
 msgid "Swedish"
-msgstr ""
+msgstr "Svensk"
 
 msgid "Switch VIP to BACKUP"
 msgstr ""
@@ -5769,11 +5879,11 @@ msgid "Switch off when running on battery and no/low load"
 msgstr ""
 
 msgid "Switch to"
-msgstr ""
+msgstr "Bytt til"
 
 #, php-format
 msgid "Switch to %s/s"
-msgstr ""
+msgstr "Bytt itl %s/s"
 
 msgid "Sync"
 msgstr ""
@@ -5782,7 +5892,7 @@ msgid "Synchronization time"
 msgstr ""
 
 msgid "Synchronize"
-msgstr ""
+msgstr "Synkroniser"
 
 msgid "Syncthing"
 msgstr ""
@@ -5795,52 +5905,52 @@ msgid ""
 msgstr ""
 
 msgid "System"
-msgstr "Sistem"
+msgstr "System"
 
 msgid "System Beep"
-msgstr "Sistem Uyarısı"
+msgstr "System pip"
 
 msgid "System bios"
 msgstr ""
 
 msgid "System events"
-msgstr "Sistem Olayları"
+msgstr "System hendelser"
 
 msgid "System firewall"
-msgstr "Sistem Güvenlik Duvarı"
+msgstr "System brannmur"
 
 msgid "System info"
-msgstr "Sistem Bilgisi"
+msgstr "System info"
 
 msgid "System information"
-msgstr "Sistem bilgileri"
+msgstr "System informasjon"
 
 msgid "System load"
 msgstr ""
 
 msgid "System log"
-msgstr "Sistem günlükleri"
+msgstr "System logg"
 
 msgid "System message buffer"
-msgstr "Sistem mesaj belleği"
+msgstr "System beskjed buffer"
 
 msgid "System time"
-msgstr "Sistem zamanı"
+msgstr "System tid"
 
 msgid "System tuning"
-msgstr ""
+msgstr "System tuning"
 
 msgid "System uptime"
 msgstr ""
 
 msgid "TCP forwarding"
-msgstr ""
+msgstr "TCP videresending"
 
 msgid "TCP port"
 msgstr "TCP port"
 
 msgid "TCP port to bind the server to."
-msgstr ""
+msgstr "TCP-port til å binde tjeneren til."
 
 msgid "TCP wrapper"
 msgstr ""
@@ -5861,18 +5971,18 @@ msgid "TLS only"
 msgstr ""
 
 msgid "Tag"
-msgstr ""
+msgstr "Tag"
 
 msgid "Tag number"
 msgstr ""
 
 #, php-format
 msgid "Tag%d"
-msgstr ""
+msgstr "Tag%d"
 
 #, php-format
 msgid "Tag%d (%s)"
-msgstr ""
+msgstr "Tag%d (%s)"
 
 msgid "Tap device"
 msgstr ""
@@ -5881,19 +5991,19 @@ msgid "Tape"
 msgstr ""
 
 msgid "Target"
-msgstr "Hedef"
+msgstr "Mål"
 
 msgid "Target Alias"
 msgstr ""
 
 msgid "Target Name"
-msgstr ""
+msgstr "Mål navn"
 
 msgid "Target address"
-msgstr ""
+msgstr "Mål adresse"
 
 msgid "Target directory."
-msgstr ""
+msgstr "Målkatalog"
 
 msgid "Target information"
 msgstr ""
@@ -5905,7 +6015,7 @@ msgid "Target list"
 msgstr ""
 
 msgid "Target name"
-msgstr ""
+msgstr "Mål navn"
 
 msgid "Target side secret."
 msgstr ""
@@ -5914,16 +6024,16 @@ msgid "Target side user name. It is usually the initiator name by default."
 msgstr ""
 
 msgid "Targets"
-msgstr ""
+msgstr "Mål"
 
 msgid "Temperature"
-msgstr ""
+msgstr "Temperatur"
 
 msgid "Temperature alarm (enabled/disabled)"
 msgstr ""
 
 msgid "Temperature monitoring"
-msgstr ""
+msgstr "Temperatur måling"
 
 msgid "Temperature threshold high (degrees C)"
 msgstr ""
@@ -5935,24 +6045,24 @@ msgid "Temporary Device"
 msgstr ""
 
 msgid "Temporary directory"
-msgstr ""
+msgstr "Midlertidig katalog"
 
 msgid "Temporary directory to store transcoded files."
 msgstr ""
 
 msgid "Test email"
-msgstr "Test email"
+msgstr "Test e-øost"
 
 #, php-format
 msgid "Test email from host: %s"
-msgstr ""
+msgstr "Test e-post fra vert: %s"
 
 #, php-format
 msgid "Test email successfully sent to: %s."
 msgstr ""
 
 msgid "Test email successfully sent."
-msgstr ""
+msgstr "Sending av test e-post vellykket."
 
 msgid ""
 "The  deny  option specifies users and groups who are not allowed access to "
@@ -5969,15 +6079,15 @@ msgid "The IP address of the UPS master."
 msgstr ""
 
 msgid "The IP address that this hostname represents."
-msgstr ""
+msgstr "IP adressen som dette vertsnavnet representerer."
 
 #, php-format
 msgid "The MIB '%s' already exist."
-msgstr "MIB '%s' zaten var."
+msgstr "MIB '%s' finnes allerede."
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
-msgstr ""
+msgstr "MIB '%s' finnes ikke i sysctl."
 
 msgid ""
 "The Minimum Spares Remaining attribute indicates the number of remaining "
@@ -5995,14 +6105,12 @@ msgid ""
 "The RAID volume is currently mounted! Remove the <a href='%s'>mount "
 "point</a> first before proceeding."
 msgstr ""
-"RAID bölümü az önce tanımlandı! İşleme başalamadan önce <a href='%s'>mount "
-"point</a> siliniz."
 
 msgid "The TCP port must be a valid port number."
-msgstr "TCP portu geçerli bir port numarası olmalıdır."
+msgstr "TCP porten må være et valid port nummer"
 
 msgid "The VLAN ID must be between 1 and 4094."
-msgstr "VLAN ID 1 ile 4094 arasında bir değer olmalıdır."
+msgstr "VLAN ID må være mellom 1 og 4094."
 
 msgid ""
 "The action which will be executed when the packet match the criteria "
@@ -6041,7 +6149,7 @@ msgstr ""
 
 #, c-format, php-format
 msgid "The attribute '%s' contains invalid characters."
-msgstr "'%s' özniteliği gerçersiz karakter içeriyor."
+msgstr "Attributten '%s' inneholder invalide tegn."
 
 #, c-format
 msgid ""
@@ -6051,23 +6159,23 @@ msgstr ""
 
 #, c-format
 msgid "The attribute '%s' does not appear to be a valid certificate."
-msgstr "'%s' özniteliğinin geçerli bir sertfikası yok."
+msgstr "Attributten '%s' ser ikke ut til å være et gyldig sertifikat."
 
 #, c-format
 msgid "The attribute '%s' does not appear to be a valid private %s key."
-msgstr ""
+msgstr "Attributten '%s' ser ikke ut til å være en gyldig privat %s nøkkel."
 
 #, c-format
 msgid "The attribute '%s' does not appear to be a valid private key."
-msgstr ""
+msgstr "Attributten '%s' ser ikke ut til å være en gyldig privat nøkkel."
 
 #, c-format
 msgid "The attribute '%s' is an invalid port number."
-msgstr "'%s' özniteliğinin port numarası geçersiz."
+msgstr "Attributten '%s' er et invalid port nummer."
 
 #, c-format, php-format
 msgid "The attribute '%s' is invalid."
-msgstr "'%s' özniteliği geçersiz"
+msgstr "Attributtten '%s' er invalid"
 
 #, c-format
 msgid "The attribute '%s' is not a valid IP address."
@@ -6096,37 +6204,36 @@ msgstr ""
 
 #, c-format, php-format
 msgid "The attribute '%s' is required."
-msgstr "Öznielik için '%s' gerekli."
+msgstr "'%s' attributten er påkrevd."
 
 #, php-format
 msgid ""
 "The attribute '%s' may only consist of the characters a-z, A-Z, 0-9, _ , -."
-msgstr ""
-"The attribute '%s' may only consist of the characters a-z, A-Z, 0-9, _ , -."
+msgstr "Attributtten '%s'  kan kun bestå av tegnene a-z, A-Z, 0-9,_,-."
 
 #, c-format
 msgid "The attribute '%s' may only consist of the characters a-z, A-Z, 0-9."
-msgstr "Öznitelik  '%s' yanlızca a-z, A-Z, 0-9 karakterlerinden oluşabilir"
+msgstr "Attributten '%s' kan kun bestå av tegnene a-z, A-Z, 0-9."
 
 #, c-format, php-format
 msgid "The attribute '%s' must be a number."
-msgstr "Öznitelik '%s' bir rakam olmalı."
+msgstr "Attributten '%'s må være et tall."
 
 #, c-format
 msgid "The attribute '%s' must be a string."
-msgstr "Öznitelik '%s' bir karakter olmalı."
+msgstr "Attributten '%s' må være en streng."
 
 #, php-format
 msgid "The attribute '%s' must be in the range from %d to %d."
-msgstr "Öznitelik '%s' %d to %d arasında olmalı."
+msgstr ""
 
 #, php-format
 msgid "The attribute '%s' must be less than '%s'."
-msgstr "Öznitelik '%s' '%s' küçük olmalı."
+msgstr ""
 
 #, c-format
 msgid "The attribute '%s' must contain at least one entry."
-msgstr "Öznitelik '%s' bir giriş içeriyor olmalı."
+msgstr ""
 
 #, php-format
 msgid "The attribute '%s': use a port in the range from %d to %d."
@@ -6153,7 +6260,7 @@ msgid ""
 msgstr ""
 
 msgid "The changes have been applied successfully."
-msgstr "Değişiklikler başarıyla uygulandı"
+msgstr "Endringene er tatt i bruk"
 
 #, c-format
 msgid ""
@@ -6165,10 +6272,10 @@ msgid "The cleartext credentials with which to bind."
 msgstr ""
 
 msgid "The command to be executed."
-msgstr "Komut çalıştırıldı."
+msgstr "Kommando som skal kjøres."
 
 msgid "The configuration could not be restored."
-msgstr "Yapılandırma geriye alınamadı."
+msgstr "Konfigurasjon kunne ikke gjennopprettes."
 
 #, php-format
 msgid "The configuration could not be restored. %s"
@@ -6246,7 +6353,7 @@ msgid ""
 msgstr ""
 
 msgid "The default SMTP mail server port, e.g. 25 or 587."
-msgstr "Varsayılan SMTP mail sunucu portu,  25 veya 587."
+msgstr "Standard SMTP e-post tjener port, f.eks. 25 eller 587"
 
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
@@ -6256,17 +6363,15 @@ msgid ""
 "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
 "and 192 for 3DES."
 msgstr ""
-"Varsayılan anahtar uzunlukları: AES için 128, Blowfish için 128, Camellia "
-"için 128 ve 3DES 192."
 
 msgid "The default time in seconds to display a screen."
 msgstr ""
 
 msgid "The device name may only consist of the characters a-z, A-Z, 0-9."
-msgstr "Aygıt ismi yanlızca a-z, A-Z, 0-9 karakterlerini içerebilir."
+msgstr "Enhets navnet kan kun bestå av tegnene a-z, A-Z, 0-9."
 
 msgid "The device's IP address."
-msgstr "Aygıtın IP adresi"
+msgstr "Enhetens IP adresse."
 
 msgid ""
 "The device(s) in config are different to actual device(s). Please remove the "
@@ -6290,7 +6395,7 @@ msgid ""
 msgstr ""
 
 msgid "The disk/partition is already configured."
-msgstr ""
+msgstr "Disken/partisjonen er allerede konfigurert."
 
 #, php-format
 msgid "The distinguished name to bind to the directory server, e.g. %s"
@@ -6328,27 +6433,27 @@ msgid ""
 msgstr ""
 
 msgid "The following input errors were detected"
-msgstr ""
+msgstr "De følgende inndata feilene ble oppdaget"
 
 msgid "The full name contains invalid characters."
-msgstr ""
+msgstr "Det hele navnet inneholder invalide tegn."
 
 msgid "The group description contains invalid characters."
-msgstr ""
+msgstr "Gruppebeskrivelsen inneholder invalide tegn."
 
 msgid "The group name contains invalid characters."
-msgstr ""
+msgstr "Gruppenavnet inneholder invalide tegn."
 
 msgid "The host name contain invalid characters."
-msgstr ""
+msgstr "Vertsnavnet inneholder invalide tegn."
 
 msgid ""
 "The host name may only consist of the characters a-z, A-Z and 0-9, - , _ and "
 "."
-msgstr ""
+msgstr "Et vertsnavn kan kun bestå av tengene a-z, A-Z og 0-9,-,_ og ."
 
 msgid "The image file is corrupt"
-msgstr ""
+msgstr "Bilde filen er korrupt"
 
 msgid "The initial digest mode negotiated with the initiator."
 msgstr ""
@@ -6377,23 +6482,23 @@ msgid ""
 msgstr ""
 
 msgid "The login name contains invalid characters."
-msgstr ""
+msgstr "Innloggings navnet inneholder invalide tegn."
 
 msgid "The login name is a reserved login name."
-msgstr ""
+msgstr "Innloggings navnet er et reservert innloggings navn."
 
 msgid "The login name is limited to 16 characters."
 msgstr ""
 
 msgid "The max. connection per IP must be either 0 (unlimited) or greater."
-msgstr ""
+msgstr "Antall tilkoblinger per IP må være enten 0 (uendelig) eller høyere."
 
 msgid ""
 "The maximum download bandwith in KiB/s. An empty field means infinity."
 msgstr ""
 
 msgid "The maximum idle time be a number."
-msgstr ""
+msgstr "Maksimum idle tid må være et tall."
 
 msgid ""
 "The maximum port to allocate for PASV style data connections (0 = use any "
@@ -6436,14 +6541,14 @@ msgstr ""
 
 #, php-format
 msgid "The network '%s' is invalid."
-msgstr "'%s'ağı geçersiz."
+msgstr ""
 
 msgid ""
 "The new password does not match. Please ensure the passwords match exactly."
 msgstr ""
 
 msgid "The number of clients must be between 1 and 50."
-msgstr "İstemci sayısı 1 ile 50 arasında olmalıdır."
+msgstr "Antallet klienter må være mellom 1 og 50."
 
 msgid ""
 "The number of errors caused by incorrect checksum during the error "
@@ -6451,16 +6556,16 @@ msgid ""
 msgstr ""
 
 msgid "The old password is not correct."
-msgstr "Eski parola yanlış."
+msgstr "Den gamle passordet er ikke riktig."
 
 msgid "The password contains the illegal character ':'."
-msgstr ""
+msgstr "Passordet inneholder tegnet ':', dette er ikke mulig."
 
 msgid "The password encryption protocol to use."
 msgstr ""
 
 msgid "The passwords do not match."
-msgstr "Parolalar eşleşmiyor."
+msgstr "Passordene er ikke like."
 
 #, php-format
 msgid "The path '%s' does not exist."
@@ -6497,7 +6602,7 @@ msgstr ""
 
 #, php-format
 msgid "The portal '%s' is invalid."
-msgstr "'%s' portalı geçersiz."
+msgstr ""
 
 msgid ""
 "The portal takes the form of 'address:port'. for example '192.168.1.1:3260' "
@@ -6510,6 +6615,8 @@ msgid ""
 "The powerd utility monitors the system state and sets various power control "
 "options accordingly."
 msgstr ""
+"powerd overvåker systemstatusen og setter forskjellige strøm-innstillinger i "
+"forhold til dette."
 
 msgid "The queuedepth range is invalid."
 msgstr ""
@@ -6551,7 +6658,7 @@ msgid "The server will reboot after restoring the configuration."
 msgstr ""
 
 msgid "The share name is already used."
-msgstr "Paylaşım ismi zaten kullanılıyor."
+msgstr "Delingsnavnet er allerede i bruk."
 
 msgid "The size of the swap file in MB."
 msgstr ""
@@ -6564,16 +6671,16 @@ msgid "The storage area mapped to LUN%d."
 msgstr ""
 
 msgid "The subject of the email."
-msgstr "E-posta konusu."
+msgstr "Emnet til eposten."
 
 msgid "The system is halting now. This may take one minute."
-msgstr ""
+msgstr "Systemet blir nå slått av. Dette kan ta et minutt."
 
 msgid "The system is rebooting now. This may take one minute."
-msgstr ""
+msgstr "Systemet starter på nytt nå. Dette kan ta et minutt."
 
 msgid "The tag range is invalid."
-msgstr "Etiket aralığı geçersiz"
+msgstr ""
 
 msgid "The target name already exists."
 msgstr ""
@@ -6584,7 +6691,7 @@ msgid ""
 msgstr ""
 
 msgid "The time update interval must be either between 6 and 1440."
-msgstr ""
+msgstr "Tidsoppdaterings intervallet må være mellom 6 og 1440."
 
 msgid "The total count of errors when writing a sector."
 msgstr ""
@@ -6596,13 +6703,13 @@ msgid ""
 msgstr ""
 
 msgid "The unique group ID is already used."
-msgstr "Benzersiz Grup kimliği kullanımda."
+msgstr "Den unike gruppe ID'en er allerede i bruk."
 
 msgid "The unique rule number is already used."
-msgstr "Benzersiz Grup kural numarası kullanımda."
+msgstr ""
 
 msgid "The unique user ID is already used."
-msgstr ""
+msgstr "Den unike bruker ID'en er allerede i bruk."
 
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
@@ -6617,16 +6724,16 @@ msgid "The uploaded file was only partially uploaded."
 msgstr ""
 
 msgid "The uploaded image file is not for this platform"
-msgstr ""
+msgstr "Det opplastede bilde er ikke for denne platformen"
 
 msgid "The user's login shell."
 msgstr ""
 
 msgid "The value of the variable."
-msgstr "Değişkenin değeri"
+msgstr "Variabelens verdi."
 
 msgid "The volume must be detached before it can be deleted."
-msgstr ""
+msgstr "Volumet på bli koblet fra før det kan slettes."
 
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
@@ -6637,40 +6744,40 @@ msgid "The working directory does not exist."
 msgstr ""
 
 msgid "There are too many additional groups."
-msgstr "Çok fazla ek grup var."
+msgstr ""
 
 msgid "There is no error, the file uploaded with success."
-msgstr "Herhangi bir hata olmadı, dosya başarıyla yüklendi."
+msgstr ""
 
 msgid "There must be 2 disks in a RAID 1 volume."
-msgstr "RAID 1 Biriminde en az 2 disk olmalı."
+msgstr "Dett må være 2 disker i et RAID 1 volum."
 
 msgid "There must be a minimum of 2 disks in a JBOD."
-msgstr "JBOD en az iki disk bulunmalı."
+msgstr "Det må være minst 2 disker i et JBOD."
 
 msgid "There must be a minimum of 2 disks in a RAID 0 volume."
-msgstr "RAID 0 biriminde en az iki disk olmalı."
+msgstr "Det må være minst 2 disker i et RAID 0 volum."
 
 msgid "There must be a minimum of 3 disks in a RAID 5 volume."
-msgstr "RAID 5 biriminde en az 3 disk olmalı."
+msgstr "Det må være minst 3 disker i et RAID 5 volum."
 
 msgid "There must be at least 1 disks selected."
-msgstr "Bir disk seçmelesin."
+msgstr ""
 
 msgid "There must be at least 2 disks in a mirror."
-msgstr "Yansıma için en az 2 disk seçmelesin."
+msgstr ""
 
 msgid "There must be at least 2 disks in a raidz."
-msgstr "Raidz için iki disk seçmelisin."
+msgstr ""
 
 msgid "There must be at least 3 disks in a raidz2."
-msgstr "Raidz2 için 3 disk seçmelisin."
+msgstr ""
 
 msgid "There must be at least 4 disks in a raidz3."
 msgstr ""
 
 msgid "There must be selected a minimum of 1 interface."
-msgstr "Bir arayüz seçmelisin."
+msgstr "Minst et grensesnitt må velges."
 
 msgid ""
 "There should be enough to handle the maximum level of concurrency from its "
@@ -6681,11 +6788,15 @@ msgid ""
 "These MIBs will be added to /etc/sysctl.conf. This allow you to make changes "
 "to a running system."
 msgstr ""
+"MIB vil bli lagt til i /etc/sysctl.conf. Dette lar deg gjøre endringer til "
+"et kjørende system."
 
 msgid ""
 "These commands will be executed pre or post system initialization (booting) "
 "or before system shutdown."
 msgstr ""
+"Disse kommandoene vil bli kjørt før eller etter system initialiseringen "
+"(boot) eller før systemet slår seg av."
 
 msgid ""
 "These option(s) will be added to /boot/loader.conf.local. This allows you to "
@@ -6697,10 +6808,12 @@ msgid ""
 "These option(s) will be added to /etc/rc.conf. This allow you to overwrite "
 "options used by various generic startup scripts."
 msgstr ""
+"Alternativene vil bli lagt til i /etc/rc.conf. Dette lar deg overskrive "
+"alternativer satt av forskjellige generiske oppstarts-skript."
 
 #, php-format
 msgid "These parameters are added to %s."
-msgstr "%s parametreler eklendi."
+msgstr ""
 
 #, php-format
 msgid "These parameters are added to [Global] section of %s."
@@ -6708,11 +6821,11 @@ msgstr ""
 
 #, php-format
 msgid "These parameters are added to [Share] section of %s."
-msgstr "Parametreler %s'in [Paylaşım]'ına eklendi."
+msgstr ""
 
 #, php-format
 msgid "These parameters will be added to %s."
-msgstr "%s parametre eklenecek"
+msgstr ""
 
 #, php-format
 msgid "These parameters will be added to [global] settings in %s."
@@ -6739,11 +6852,12 @@ msgid ""
 msgstr ""
 
 msgid "This URL is already configured."
-msgstr ""
+msgstr "URL'en er allerede konfigurert."
 
 msgid ""
 "This VLAN cannot be deleted because it is still being used as an interface."
 msgstr ""
+"VLAN'et kan ikke slettes fordi det fremdeles blir brukt som et grensesnitt."
 
 msgid ""
 "This WLAN cannot be deleted because it is still being used as an interface."
@@ -6753,17 +6867,20 @@ msgid ""
 "This allows you to lower the power consumption of the drive, at the expense "
 "of performance."
 msgstr ""
+"Dette lar deg senke strømforbruket til disken på bekostning av ytelsen."
 
 msgid "This allows you to set how loud the drive is while it's operating."
-msgstr ""
+msgstr "Dette lar deg sette hvor mye disken støyer når den jobber."
 
 msgid ""
 "This allows you to set the file system for preformatted hard disks "
 "containing data."
 msgstr ""
+"Dette lar deg sette filsystemet for ferdigformaterte harddisker som "
+"inneholder data."
 
 msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
-msgstr ""
+msgstr "Dette lar deg sette overføringsmodusen for ATA/IDE harddisker."
 
 msgid ""
 "This attribute indicates the count of full hard disk power on/off cycles."
@@ -6794,7 +6911,8 @@ msgid "This controls the access a remote host has to this module."
 msgstr ""
 
 msgid "This controls the access to this share with an access password."
-msgstr "Bu denetleyici bu paylaşıma parola ile ulaşmanızı sağlar."
+msgstr ""
+"Denne kontrollerer adgangen til denne delingen med et adgangspassord."
 
 msgid "This controls whether this share is accessible by guest account."
 msgstr ""
@@ -6803,15 +6921,17 @@ msgid ""
 "This controls whether this share is seen in the list of available shares in "
 "a net view and in the browse list."
 msgstr ""
+"Dette styrer om ressursen er synlig i lista over tilgjengelige ressurser i "
+"en nettvisning og i visningslista."
 
 msgid "This couple targetname/targetaddress already exists in the disk list."
 msgstr ""
 
 msgid "This device already exists in the raid volume list."
-msgstr "Bu aygıt raid birimleri listesinde zaten var."
+msgstr "Enheten eksisterer allerede i RAID volum listen."
 
 msgid "This disk already exists in the disk list."
-msgstr "Bu disk zaten var."
+msgstr "Disken eksisterer allerede i disk listen."
 
 msgid "This email has been sent to validate your email configuration."
 msgstr ""
@@ -6823,7 +6943,7 @@ msgid "This function is unsupported. Use it on your own risk!"
 msgstr ""
 
 msgid "This group already exists in the group list."
-msgstr "Bu grup zaten grup listesinde mevcut."
+msgstr "Gruppen eksisterer allerede i gruppe listen."
 
 msgid ""
 "This is a way to take an existing insecure connection, and upgrade it to a "
@@ -6847,14 +6967,14 @@ msgid ""
 msgstr ""
 
 msgid "This name already exists in the disk list."
-msgstr "Bu isim zaten disk listesinde mevcut."
+msgstr "Navnet eksisterer allerede i disk listen."
 
 #, php-format
 msgid "This name is for example: %s."
-msgstr "Örnek isim: %s."
+msgstr ""
 
 msgid "This name is for example: iqn.2005-01.il.ac.huji.cs:somebody."
-msgstr "Bu isim için örnek: iqn.2005-01.il.ac.huji.cs:somebody."
+msgstr "Dette navnet er for eksempel:iqn.2005-01.il.ac.huji.cs:somebody."
 
 msgid "This name is used to uniquely identify your UPS on this system."
 msgstr ""
@@ -6942,6 +7062,8 @@ msgid ""
 "This parameter controls whether files starting with a dot appear as hidden "
 "files."
 msgstr ""
+"Denne parameteren kontrollere om filer som starter med en punktum skal vises "
+"som skjulte filer."
 
 msgid ""
 "This parameter says that if N occurrences of the event happen within the "
@@ -6982,22 +7104,22 @@ msgid "This server uses default swap."
 msgstr ""
 
 msgid "This tag already exists."
-msgstr "Etiket kullanılıyor."
-
-msgid "This tag is used."
-msgstr "Etiket kullanıldı."
-
-msgid "This the IP address or DNS name of the iSCSI target."
 msgstr ""
 
+msgid "This tag is used."
+msgstr ""
+
+msgid "This the IP address or DNS name of the iSCSI target."
+msgstr "IP adressen eller DNS navnet til iSCSI målet."
+
 msgid "This user already exists in the user list."
-msgstr "Bu kullanıcı zaten kayıtlı"
+msgstr "Brukeren eksisterer allerede i bruker listen."
 
 msgid "This user already exists."
-msgstr "Bu kullanıcı zaten var."
+msgstr ""
 
 msgid "This virtual device name already exists."
-msgstr "Sanal aygıt ismi zaten var."
+msgstr ""
 
 msgid ""
 "This will allow server-side downscaling of very large JPEG images, it can "
@@ -7011,12 +7133,14 @@ msgid ""
 msgstr ""
 
 msgid "This will create a recycle bin on the share."
-msgstr "Bu paylaşımda bir geri dönüşüm kutusu oluşturacak."
+msgstr "Dette lager en papirkurv på delingen."
 
 msgid ""
 "This will erase ALL data on the selected disks! Do not use this option if "
 "you want to add an already existing RAID again."
 msgstr ""
+"Dette vil slette ALL data på den valgte disken. Ikke bruk dette alternativer "
+"hvis du vil legge til et allerede eksisterende RAID igjen."
 
 msgid ""
 "This will erase ALL data on your disk! Do not use this option if you want to "
@@ -7037,13 +7161,13 @@ msgid ""
 msgstr ""
 
 msgid "TiB"
-msgstr "TiB"
+msgstr ""
 
 msgid "TiVo support"
 msgstr ""
 
 msgid "Time"
-msgstr "Süre"
+msgstr "Tid"
 
 msgid "Time Machine"
 msgstr ""
@@ -7058,10 +7182,10 @@ msgid "Time before the load will be started"
 msgstr ""
 
 msgid "Time interval"
-msgstr "Zaman aralığı"
+msgstr ""
 
 msgid "Time server"
-msgstr "Saat sunucusu"
+msgstr "Tids tjener"
 
 msgid "Time spent during the positioning of the drive heads."
 msgstr ""
@@ -7071,16 +7195,16 @@ msgid ""
 msgstr ""
 
 msgid "Time update interval"
-msgstr "Saat güncelleme aralığı"
+msgstr "Tids-oppdaterings intervall"
 
 msgid "Time zone"
-msgstr "Zaman dilimi"
+msgstr "Tidssone"
 
 msgid "Timeout"
-msgstr "Zaman aşımı"
+msgstr "Tidsbrudd"
 
 msgid "Times"
-msgstr "Süreler"
+msgstr ""
 
 msgid "TitleSpeed"
 msgstr ""
@@ -7096,10 +7220,10 @@ msgid ""
 msgstr ""
 
 msgid "To e-mail"
-msgstr "Alıcı"
+msgstr "Til e-post"
 
 msgid "To email"
-msgstr "Alıcı"
+msgstr "Til epost"
 
 #, php-format
 msgid ""
@@ -7145,7 +7269,7 @@ msgid "Tolerated"
 msgstr ""
 
 msgid "Tools"
-msgstr "Araçlar"
+msgstr "Verktøy"
 
 msgid ""
 "Total NAND Writes. Raw value reports the number of writes to NAND in 1GB "
@@ -7179,7 +7303,7 @@ msgstr ""
 
 #, php-format
 msgid "Total: %s | Used: %s | Free: %s"
-msgstr "Toolam: %s | Kullanılan: %s | Boş: %s"
+msgstr ""
 
 msgid "Traceroute"
 msgstr "Traceroute"
@@ -7188,6 +7312,8 @@ msgid ""
 "Traceroute may take a while to complete. You may hit the Stop button on your "
 "browser at any time to see the progress of failed traceroutes."
 msgstr ""
+"Traceroute kan ta litt tid å fullføre. Du kan trykke på Stop knappen i din "
+"nettleser når som helst for å se fremgangen til feilede traceroutes."
 
 msgid ""
 "Tracks whose path contains one or more of these comma separated strings will "
@@ -7198,7 +7324,7 @@ msgid "Transcoding"
 msgstr ""
 
 msgid "Transfer mode"
-msgstr ""
+msgstr "Overføringsmodus"
 
 msgid "Transfer rate"
 msgstr ""
@@ -7234,7 +7360,7 @@ msgid "Try to import from on-disk ZFS config."
 msgstr ""
 
 msgid "Tuning"
-msgstr ""
+msgstr "Finstilling"
 
 msgid "Turkish"
 msgstr ""
@@ -7246,13 +7372,13 @@ msgid "Turn the monitor to standby after N seconds."
 msgstr ""
 
 msgid "Type"
-msgstr "Tür"
+msgstr "Type"
 
 msgid "Type used as extent."
 msgstr ""
 
 msgid "UCD-SNMP-MIB"
-msgstr "UCD-SNMP-MIB"
+msgstr ""
 
 msgid "UFS"
 msgstr ""
@@ -7306,7 +7432,7 @@ msgid "UPS coldstarts from battery"
 msgstr ""
 
 msgid "UPS disabled"
-msgstr "Ups devredışı"
+msgstr ""
 
 msgid "UPS external contact sensors"
 msgstr ""
@@ -7327,7 +7453,7 @@ msgid "UPS starts when mains is (re)applied"
 msgstr ""
 
 msgid "UPS status"
-msgstr "UPS durumu"
+msgstr "UPS-status"
 
 msgid "UPS system identifier"
 msgstr ""
@@ -7366,7 +7492,7 @@ msgid "Unformated"
 msgstr ""
 
 msgid "Uninstall package"
-msgstr ""
+msgstr "Fjern pakke."
 
 msgid "Uninterruptible Power Supply"
 msgstr ""
@@ -7375,40 +7501,40 @@ msgid "Unison"
 msgstr "Unison"
 
 msgid "Unison File Synchronisation"
-msgstr ""
+msgstr "Unison fil synkronisering"
 
 msgid "Unix Command"
 msgstr ""
 
 msgid "Unix charset"
-msgstr ""
+msgstr "Unix tegnsett"
 
 msgid "Unknown"
-msgstr ""
+msgstr "Ukjent"
 
 msgid "Unknown or unformatted"
-msgstr ""
+msgstr "Ukjent eller uformatert"
 
 msgid "Unload"
 msgstr ""
 
 msgid "Unmount disk/partition"
-msgstr ""
+msgstr "Avmonter disk/partisjon"
 
 msgid "Unmounting..."
-msgstr ""
+msgstr "Avmonterer..."
 
 msgid "Up"
-msgstr ""
+msgstr "Opp"
 
 msgid "Update period"
-msgstr ""
+msgstr "Oppdaterings periode"
 
 msgid "Updating in 5 seconds."
-msgstr ""
+msgstr "Oppdaterer om 5 sekunder."
 
 msgid "Upgrade firmware"
-msgstr ""
+msgstr "Oppgrader fabrikkvare"
 
 msgid "Upload"
 msgstr ""
@@ -7427,6 +7553,8 @@ msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
 msgstr ""
+"Bruk et mellomrom for å separere flere verter (kun en er påkrevd). Husk å "
+"sette opp minst en DNS tjener hvis du skriver inn et vertsnavn her!"
 
 msgid "Use as sparse volume. (thin provisioning)"
 msgstr ""
@@ -7439,7 +7567,7 @@ msgstr ""
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
-msgstr ""
+msgstr "Bruk følgende IP adresse som kildeadresse i utgående pakker."
 
 msgid ""
 "Use the new 64k streaming read and write variant SMB requests introduced "
@@ -7447,7 +7575,7 @@ msgid ""
 msgstr ""
 
 msgid "Use the specified NTP server."
-msgstr ""
+msgstr "Bruk den spesifiserte NTP tjeneren."
 
 #, php-format
 msgid ""
@@ -7481,26 +7609,26 @@ msgid "Used"
 msgstr ""
 
 msgid "User"
-msgstr "Kullanıcı"
+msgstr "Bruker"
 
 msgid "User ID"
-msgstr ""
+msgstr "Bruker ID"
 
 #, php-format
 msgid "User defined groups"
 msgstr ""
 
 msgid "User full name."
-msgstr ""
+msgstr "Brukers hele navn."
 
 msgid "User mask"
 msgstr ""
 
 msgid "User numeric id."
-msgstr ""
+msgstr "Brukers numeriske ID"
 
 msgid "User password."
-msgstr "Kullanıcı parolası."
+msgstr "Brukers passord"
 
 msgid "User portal"
 msgstr ""
@@ -7509,10 +7637,10 @@ msgid "User shares"
 msgstr ""
 
 msgid "User suffix"
-msgstr ""
+msgstr "Bruker suffiks"
 
 msgid "Username"
-msgstr "Kullanıcı Adı"
+msgstr "Brukernavn"
 
 msgid "Username contains invalid character(s) : "
 msgstr ""
@@ -7521,13 +7649,13 @@ msgid "Username field : "
 msgstr ""
 
 msgid "Username of a domain administrator account."
-msgstr ""
+msgstr "Brukernavnet til domeneadministrator kontoen."
 
 msgid "Users"
-msgstr "Kullanıcılar"
+msgstr "Brukere"
 
 msgid "Users and Groups"
-msgstr "Kullanıcılar ve Gruplar"
+msgstr "Brukere og grupper"
 
 #, c-format
 msgid "Using %s bytes fragment size."
@@ -7540,13 +7668,13 @@ msgid "VLAN"
 msgstr "VLAN"
 
 msgid "VLAN tag"
-msgstr "VLAN etiketi"
+msgstr "VLAN tag"
 
 msgid "VM"
 msgstr ""
 
 msgid "Value"
-msgstr "Değer"
+msgstr "Verdi"
 
 msgid ""
 "Value is equal to (100-temp. &deg;C), allowing manufacturer to set a minimum "
@@ -7554,13 +7682,13 @@ msgid ""
 msgstr ""
 
 msgid "Variable"
-msgstr "Değişken"
+msgstr "Variabel"
 
 msgid "Vendor ID"
 msgstr ""
 
 msgid "Version"
-msgstr "Sürüm"
+msgstr "Versjon"
 
 msgid "Vibration During Write."
 msgstr ""
@@ -7578,13 +7706,13 @@ msgid "Virtual Machine"
 msgstr ""
 
 msgid "Virtual device"
-msgstr "Sanal aygıt"
+msgstr ""
 
 msgid "Virtual devices"
-msgstr "Sanal aygıtlat"
+msgstr ""
 
 msgid "Virtual interface"
-msgstr "Sanal arayüz"
+msgstr "Virituellt grensesnitt"
 
 msgid "VirtualBox"
 msgstr ""
@@ -7593,31 +7721,31 @@ msgid "Volume"
 msgstr ""
 
 msgid "Volume Name"
-msgstr "Birim İsmi"
+msgstr "Volum navn"
 
 msgid "Volume Size Limit"
 msgstr ""
 
 msgid "Volume label"
-msgstr "Birim etiketi"
+msgstr "Volumnavn"
 
 msgid "Volume label of the new file system."
-msgstr "Yeni dosya sisteminin birim etiketi"
+msgstr "Volumnavnet til det nye filsystemet."
 
 msgid "Volumes"
 msgstr ""
 
 msgid "WAN address"
-msgstr "WAN adresi"
+msgstr "WAN adresse"
 
 msgid "WEP"
 msgstr "WEP"
 
 msgid "WINS server"
-msgstr "WINS sunucu"
+msgstr "WINS tjener"
 
 msgid "WINS server IP address (e.g. from MS Active Directory server)."
-msgstr "WINS server IP address (e.g. from MS Active Directory server)."
+msgstr "WINS tjener IP-adresse (f.eks. fra MS Active Directory tjener)."
 
 msgid "WLAN"
 msgstr ""
@@ -7645,32 +7773,36 @@ msgid "Wake On LAN"
 msgstr ""
 
 msgid "Warning"
-msgstr "Dikkat"
+msgstr "Advarsel"
 
 msgid ""
 "Warning: You are going to delete a RAID volume. All data will get lost and "
 "can not be recovered."
 msgstr ""
+"Advarsel: Du er på vei til å slette et RAID volum. All data vil bli tapt og "
+"kan ikke gjenopprettes."
 
 msgid ""
 "Warning: You are going to delete an encrypted volume. All data will get lost "
 "and can not be recovered."
 msgstr ""
+"Advarsel: Du er på vei til å slette et kryptert volum. All data vil bli tapt "
+"og kan ikke gjenopprettes."
 
 msgid "Watch directory"
-msgstr "Dizini gözetle"
+msgstr ""
 
 msgid "WebGUI"
 msgstr "WebGUI"
 
 msgid "Webserver"
-msgstr "Webserver"
+msgstr "Nettjener"
 
 msgid "Webserver document root is missing."
 msgstr ""
 
 msgid "Week days"
-msgstr "Haftanın günleri"
+msgstr ""
 
 msgid "Western Digital attribute."
 msgstr ""
@@ -7713,43 +7845,45 @@ msgid ""
 "Whether scans should be skipped if there are no users connected. This allows "
 "the drive to spin down when no users are connected."
 msgstr ""
+"Om søk skal hoppes over dersom ingen brukere er koblet til. Dette lar drevet "
+"spinne ned når ingen brukere er tilkoblet."
 
 msgid "Whether to skip initial boot-up scan."
 msgstr ""
 
 msgid "Who"
-msgstr ""
+msgstr "Hvem"
 
 msgid "Wildcard"
-msgstr ""
+msgstr "Joker"
 
 msgid "Wireless configuration"
-msgstr "Kablosuz yapılandırma"
+msgstr "Trådløs konfigurasjon"
 
 msgid "Workgroup"
-msgstr ""
+msgstr "Arbeidsgruppe"
 
 msgid "Working directory"
 msgstr ""
 
 msgid "Write"
-msgstr ""
+msgstr "Skriv"
 
 msgid "Write Cache"
 msgstr ""
 
 msgid "Write only"
-msgstr ""
+msgstr "Kun skriving"
 
 msgid "Wrong partition type or partition number."
-msgstr "Yanlış birim türü yada numarası."
+msgstr ""
 
 #, php-format
 msgid "Wrong permission on %s."
 msgstr ""
 
 msgid "Yes"
-msgstr "Evet"
+msgstr "Ja"
 
 msgid ""
 "You can also install a package via SSH or console using the the pkg add "
@@ -7768,6 +7902,8 @@ msgid ""
 "You can't unmount a drive which is used by swap file, a iSCSI-target file or "
 "any other running process!"
 msgstr ""
+"Du kan ikke avmontere et drev som er i bruk av en swap fil, en iSCSI-mål fil "
+"eller en annen kjørende prosess!"
 
 #, php-format
 msgid ""
@@ -7777,10 +7913,10 @@ msgstr ""
 
 #, c-format
 msgid "You have to select at least one item for '%s'."
-msgstr ""
+msgstr "Du må velge minst et element for '%s'."
 
 msgid "You may enter a description here for your reference."
-msgstr ""
+msgstr "Du kan legge til en beskrivelse her som din referanse."
 
 msgid "You may enter a device file or label path."
 msgstr ""
@@ -7802,10 +7938,10 @@ msgid ""
 msgstr ""
 
 msgid "You must add disks first."
-msgstr "Önce diskleri eklemelisin"
+msgstr "Du må legge til disker først."
 
 msgid "You must enter the same IP type for network and gateway."
-msgstr ""
+msgstr "Du må skrive samme IP type for nettverket og gatewayen."
 
 #, php-format
 msgid "You must have a minimum of %dMiB RAM for using iSCSI target."
@@ -7815,28 +7951,28 @@ msgid "You must initialize data before enabling."
 msgstr ""
 
 msgid "You must select at least one authentication method."
-msgstr "En az bir tane doğrulama methodu seçmelisiniz."
+msgstr "Du må velge minst en autentiserings metode."
 
 msgid "You should use HTTPS as WebGUI protocol for sending passphrase."
-msgstr ""
+msgstr "Du bør bruke HTTPS som WebGUI protokol for å sende passord."
 
 msgid "Your ZFS system is not healthy."
 msgstr ""
 
 msgid "Your own email address."
-msgstr "E-posta adresin"
+msgstr "Din egen epost adresse."
 
 msgid "ZFS"
-msgstr "ZFS"
+msgstr ""
 
 msgid "ZFS ACL"
 msgstr ""
 
 msgid "ZFS dataset information and status"
-msgstr "ZFS veriseti bilgisi ve durumu"
+msgstr ""
 
 msgid "ZFS dataset properties"
-msgstr "ZFS veriseti ayarları"
+msgstr ""
 
 msgid "ZFS snapshot information and status"
 msgstr ""
@@ -7845,7 +7981,7 @@ msgid "ZFS snapshot properties"
 msgstr ""
 
 msgid "ZFS volume"
-msgstr "ZFS birimi"
+msgstr ""
 
 msgid "ZFS volume information and status"
 msgstr ""
@@ -7872,13 +8008,13 @@ msgid "all encrypted disks are imported."
 msgstr ""
 
 msgid "change failed."
-msgstr "değişiklik yapılamadı."
-
-msgid "chroot() everyone, but root."
 msgstr ""
 
+msgid "chroot() everyone, but root."
+msgstr "chroot()  alle bortsett fra root."
+
 msgid "day(s)"
-msgstr "Gün"
+msgstr ""
 
 msgid "debug"
 msgstr ""
@@ -7893,7 +8029,7 @@ msgstr ""
 
 #, php-format
 msgid "e.g. %s"
-msgstr ""
+msgstr "f.eks. %s"
 
 msgid "error"
 msgstr ""
@@ -7902,7 +8038,7 @@ msgid "fatal"
 msgstr ""
 
 msgid "filechooser"
-msgstr "filechooser"
+msgstr ""
 
 msgid "get target info failed."
 msgstr ""
@@ -7920,20 +8056,20 @@ msgid "hour(s)"
 msgstr ""
 
 msgid "iSCSI Initiator"
-msgstr "iSCSI Başlatıcı"
+msgstr "iSCSI initiering"
 
 msgid "iSCSI Target"
-msgstr ""
+msgstr "iSCSI mål"
 
 msgid "iSCSI Target Logical Unit Controller"
-msgstr "iSCSI Mantıksal Birim Kontrol Hedefi"
+msgstr ""
 
 #, php-format
 msgid "iSCSI initial parameter (%d by default)."
-msgstr "iSCSI başlangıç parametresi (%d varsayılan)."
+msgstr ""
 
 msgid "iSCSI initiator disabled"
-msgstr "iSCSI başlatıcı devredışı"
+msgstr "iSCSI initiator slått av"
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
@@ -7957,19 +8093,19 @@ msgid "minimum (power saving)"
 msgstr ""
 
 msgid "minute(s)"
-msgstr "dakika(lar)"
+msgstr ""
 
 msgid "minutes"
-msgstr "dakikadır"
+msgstr "minutter"
 
 msgid "mirroring"
-msgstr ""
+msgstr "speiling"
 
 msgid "mount"
 msgstr ""
 
 msgid "n/a"
-msgstr ""
+msgstr "n/a"
 
 msgid "no new encrypted disk found."
 msgstr ""
@@ -7981,7 +8117,7 @@ msgid "none"
 msgstr ""
 
 msgid "phpBB"
-msgstr "phpBB"
+msgstr ""
 
 msgid "phpVirtualBox"
 msgstr ""
@@ -7990,16 +8126,16 @@ msgid "rc.conf"
 msgstr "rc.conf"
 
 msgid "revision"
-msgstr "revizyon"
-
-msgid "rotated block-interleaved parity"
 msgstr ""
 
+msgid "rotated block-interleaved parity"
+msgstr "rotated block-interleaved parity"
+
 msgid "scan target failed."
-msgstr "hedef tarama başarısız"
+msgstr ""
 
 msgid "second(s)"
-msgstr "saniye(ler)"
+msgstr "sekund(er)"
 
 msgid "smallest settable high voltage transfer point"
 msgstr ""
@@ -8008,10 +8144,10 @@ msgid "smallest settable low voltage transfer point"
 msgstr ""
 
 msgid "striping"
-msgstr ""
+msgstr "striping"
 
 msgid "successfully."
-msgstr "Başarılı"
+msgstr "suksessfullt."
 
 msgid "sysctl.conf"
 msgstr "sysctl.conf"
@@ -8023,10 +8159,10 @@ msgid "to"
 msgstr ""
 
 msgid "umask"
-msgstr "umask"
+msgstr ""
 
 msgid "umount"
-msgstr "umount"
+msgstr "avmontér"
 
 msgid "version:"
 msgstr ""
