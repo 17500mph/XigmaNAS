@@ -301,8 +301,9 @@ setifconfig()
 					sysctl -q net.link.bridge.inherit_mac=1 > /dev/null
 				else
 					_value=`/usr/sbin/sysrc -qn ifconfig_${_bridgeif}`
-					if [ "${_value}" != "syncdhcp" -a "${_value}" != "dhcp" ]; then
-						eval /usr/local/sbin/rconf attribute set "ifconfig_${_bridgeif}" "${_bridgeif_args} ${_value}"
+					#if [ "${_value}" != "syncdhcp" -a "${_value}" != "dhcp" ]; then
+					if [ -z "${_value}" ]; then
+						eval /usr/local/sbin/rconf attribute set "ifconfig_${_bridgeif}" "${_bridgeif_args}"
 					fi
 				fi
 			fi
