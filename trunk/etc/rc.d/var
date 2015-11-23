@@ -42,15 +42,15 @@ PLATFORM=`/bin/cat /etc/platform`
 case "${varmfs}" in
 [Yy][Ee][Ss])
 	if [ ${BOOT_LOWMEM} -ne 0 ]; then
-		xmd=`/sbin/xmdconfig -a -s ${varsize} -t lz4 -c 6`
+		xmd=`/sbin/xmdconfig -a -s ${varsize} -t lz4 -c 9`
 		#/sbin/newfs -U -t -m2 -o space /dev/${xmd} >/dev/null
 		/sbin/newfs -U -t /dev/${xmd} >/dev/null
 		/sbin/mount -o noatime,acls /dev/${xmd} /var
-		/sbin/xmdconfig -m -c 6 -u ${xmd}
+		/sbin/xmdconfig -m -c 4 -u ${xmd}
 	else
 		case ${PLATFORM} in
 		*-embedded)
-			xmd=`/sbin/xmdconfig -a -s ${varsize} -t lz4 -c 6`
+			xmd=`/sbin/xmdconfig -a -s ${varsize} -t lz4 -c 9`
 			/sbin/newfs -U -t /dev/${xmd} >/dev/null
 			/sbin/mount -o noatime,acls /dev/${xmd} /var
 			/sbin/xmdconfig -m -c 1 -u ${xmd}
@@ -73,7 +73,7 @@ case "${varmfs}" in
 			xmd=`/sbin/xmdconfig -a -s ${varsize} -t lz4 -c 9`
 			/sbin/newfs -U -t /dev/${xmd} >/dev/null
 			/sbin/mount -o noatime,acls /dev/${xmd} /var
-			/sbin/xmdconfig -m -c 6 -u ${xmd}
+			/sbin/xmdconfig -m -c 4 -u ${xmd}
 		else
 			case ${PLATFORM} in
 			*-embedded)
