@@ -1,5 +1,5 @@
 PORTNAME=		xmd
-PORTVERSION=		0.4.4
+PORTVERSION=		0.5
 CATEGORIES=		sysutils
 COMMENT=		Experimental memory disk by Daisuke Aoyama (aoyama@peach.ne.jp)
 
@@ -20,10 +20,6 @@ BASEDIR=x86
 BASEDIR=armv6
 .else
 IGNORE=unsupported on ${ARCH}
-.endif
-
-.if ${OSVERSION} >= 1100000
-EXTRA_PATCHES+= ${FILESDIR}/extra-patch-xmd__xmd.c
 .endif
 
 post-build:
