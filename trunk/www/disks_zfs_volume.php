@@ -137,9 +137,10 @@ function zfsvolume_process_updatenotification($mode, $data) {
 					<tr>
 						<td width="20%" class="listhdrlr"><?=gettext("Pool");?></td>
 						<td width="20%" class="listhdrr"><?=gettext("Name");?></td>
-						<td width="10%" class="listhdrr"><?=gettext("Size");?></td>
-						<td width="10%" class="listhdrr"><?=gettext("Sparse");?></td>
-						<td width="30%" class="listhdrr"><?=gettext("Description");?></td>
+						<td width="9%" class="listhdrr"><?=gettext("Size");?></td>
+						<td width="8%" class="listhdrr"><?=gettext("Compression");?></td>
+						<td width="9%" class="listhdrr"><?=gettext("Sparse");?></td>
+						<td width="24%" class="listhdrr"><?=gettext("Description");?></td>
 						<td width="10%" class="list"></td>
 					</tr>
 					<?php foreach ($a_volume as $volumev):?>
@@ -149,9 +150,11 @@ function zfsvolume_process_updatenotification($mode, $data) {
 						<td class="listr"><?=htmlspecialchars($volumev['name']);?>&nbsp;</td>
 						<?php if (UPDATENOTIFY_MODE_MODIFIED == $notificationmode || UPDATENOTIFY_MODE_NEW == $notificationmode):?>
 						<td class="listr"><?=htmlspecialchars($volumev['volsize']);?>&nbsp;</td>
+						<td class="listr"><?=htmlspecialchars($volumev['compression']);?>&nbsp;</td>
 						<td class="listr"><?=htmlspecialchars((!isset($volumev['sparse']) ? '-' : 'on'));?>&nbsp;</td>
 						<?php else:?>
 						<td class="listr"><?=htmlspecialchars(get_volsize($volumev['pool'][0], $volumev['name']));?>&nbsp;</td>
+						<td class="listr"><?=htmlspecialchars($volumev['compression']);?>&nbsp;</td>
 						<td class="listr"><?=htmlspecialchars(isset($volumev['sparse']) ? get_volused($volumev['pool'][0], $volumev['name']) : '-');?>&nbsp;</td>
 						<?php endif;?>
 						<td class="listbg"><?=htmlspecialchars($volumev['desc']);?>&nbsp;</td>
@@ -168,7 +171,7 @@ function zfsvolume_process_updatenotification($mode, $data) {
 					</tr>
 					<?php endforeach;?>
 					<tr>
-						<td class="list" colspan="5"></td>
+						<td class="list" colspan="6"></td>
 						<td class="list">
 							<a href="disks_zfs_volume_edit.php"><img src="plus.gif" title="<?=gettext("Add volume");?>" border="0" alt="<?=gettext("Add volume");?>" /></a>
 						</td>

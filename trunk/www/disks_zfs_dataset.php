@@ -128,7 +128,8 @@ function zfsdataset_process_updatenotification($mode, $data) {
 					<tr>
 						<td width="20%" class="listhdrlr"><?=gettext("Pool");?></td>
 						<td width="25%" class="listhdrr"><?=gettext("Name");?></td>
-						<td width="45%" class="listhdrr"><?=gettext("Description");?></td>
+						<td width="8%" class="listhdrr"><?=gettext("Compression");?></td>
+						<td width="32%" class="listhdrr"><?=gettext("Description");?></td>
 						<td width="10%" class="list"></td>
 					</tr>
 					<?php foreach ($a_dataset as $datasetv):?>
@@ -136,6 +137,7 @@ function zfsdataset_process_updatenotification($mode, $data) {
 					<tr>
 						<td class="listlr"><?=htmlspecialchars($datasetv['pool'][0]);?>&nbsp;</td>
 						<td class="listr"><?=htmlspecialchars($datasetv['name']);?>&nbsp;</td>
+						<td class="listr"><?=htmlspecialchars($datasetv['compression']);?>&nbsp;</td>
 						<td class="listbg"><?=htmlspecialchars($datasetv['desc']);?>&nbsp;</td>
 						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 						<td valign="middle" nowrap="nowrap" class="list">
@@ -150,7 +152,7 @@ function zfsdataset_process_updatenotification($mode, $data) {
 					</tr>
 					<?php endforeach;?>
 					<tr>
-						<td class="list" colspan="3"></td>
+						<td class="list" colspan="4"></td>
 						<td class="list">
 							<a href="disks_zfs_dataset_edit.php"><img src="plus.gif" title="<?=gettext("Add dataset");?>" border="0" alt="<?=gettext("Add dataset");?>" /></a>
 						</td>
