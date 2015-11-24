@@ -1,7 +1,7 @@
 PORTNAME=		xmd
 PORTVERSION=		0.5
 CATEGORIES=		sysutils
-COMMENT=		Experimental memory disk by Daisuke Aoyama (aoyama@peach.ne.jp)
+COMMENT=		Memory Disk driver by Daisuke Aoyama (aoyama@peach.ne.jp)
 
 MAINTAINER=		aoyama@nas4free.org
 MASTER_SITES=		http://www.peach.ne.jp/archives/nas4free/xmd/
