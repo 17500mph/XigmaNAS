@@ -47,6 +47,7 @@ Changes:
 - Upgrade syncthing to 0.12.4.
 
 Fixes:
+- Fix VirtualBox cannot be connected via noVNC if using HTTPS.
 - Fix bridged member cannot be set IP address.
 - Fix minidlna log file location mismatch. (ticket #255)
 - Fix smbclient use NT1 instead of SMB3/SMB2. (ticket #236)
