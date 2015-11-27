@@ -80,7 +80,7 @@ _get_vmlist()
 {
 	local _vmlist
 
-	_vmlist=`/usr/local/bin/sudo -u vboxusers /usr/local/bin/vboxmanage list runningvms | sed -e 's/.*{\(.*\)}$/\1/'`
+	_vmlist=`/usr/local/bin/sudo -u ${vbox_user} /usr/local/bin/vboxmanage list runningvms | sed -e 's/.*{\(.*\)}$/\1/'`
 	echo $_vmlist
 }
 
@@ -92,7 +92,7 @@ _get_vmname()
 	if [ -z "$_uuid" ]; then
 	    return
 	fi
-	_vmname=`/usr/local/bin/sudo -u vboxusers /usr/local/bin/vboxmanage showvminfo "$_uuid" --machinereadable | sed -ne 's/^name="\(.*\)"$/\1/p'`
+	_vmname=`/usr/local/bin/sudo -u ${vbox_user} /usr/local/bin/vboxmanage showvminfo "$_uuid" --machinereadable | sed -ne 's/^name="\(.*\)"$/\1/p'`
 	echo $_vmname
 }
 
@@ -100,10 +100,10 @@ _get_startup_vmlist()
 {
 	local _startupvm _vmlist _uuid _mode
 
-	_vmlist=`/usr/local/bin/sudo -u vboxusers /usr/local/bin/vboxmanage list vms | sed -e 's/.*{\(.*\)}$/\1/'`
+	_vmlist=`/usr/local/bin/sudo -u ${vbox_user} /usr/local/bin/vboxmanage list vms | sed -e 's/.*{\(.*\)}$/\1/'`
 	_startupvm=""
 	for _uuid in $_vmlist; do
-		_mode=`/usr/local/bin/sudo -u vboxusers /usr/local/bin/vboxmanage getextradata "$_uuid" pvbx/startupMode | sed -e 's/^.*: \(.*\)$/\1/'`
+		_mode=`/usr/local/bin/sudo -u ${vbox_user} /usr/local/bin/vboxmanage getextradata "$_uuid" pvbx/startupMode | sed -e 's/^.*: \(.*\)$/\1/'`
 		if [ "$_mode" = "auto" ]; then
 			_startupvm="$_startupvm $_uuid"
 		fi
@@ -119,7 +119,7 @@ _vmstart()
 	for _uuid in $_vmlist; do
 		_vmname=`_get_vmname "$_uuid"`
 		echo "Starting: $_vmname ($_uuid)"
-		/usr/local/bin/sudo -u vboxusers /usr/local/bin/vboxmanage startvm "$_uuid" --type headless >/dev/null 2>&1
+		/usr/local/bin/sudo -u ${vbox_user} /usr/local/bin/vboxmanage startvm "$_uuid" --type headless >/dev/null 2>&1
 	done
 }
 
@@ -131,7 +131,7 @@ _vmstop_acpioff()
 	for _uuid in $_vmlist; do
 		_vmname=`_get_vmname "$_uuid"`
 		echo "ACPI off: $_vmname ($_uuid)"
-		/usr/local/bin/sudo -u vboxusers /usr/local/bin/vboxmanage controlvm "$_uuid" acpipowerbutton >/dev/null 2>&1
+		/usr/local/bin/sudo -u ${vbox_user} /usr/local/bin/vboxmanage controlvm "$_uuid" acpipowerbutton >/dev/null 2>&1
 	done
 }
 
@@ -143,7 +143,7 @@ _vmstop_poweroff()
 	for _uuid in $_vmlist; do
 		_vmname=`_get_vmname "$_uuid"`
 		echo "poweroff: $_vmname ($_uuid)"
-		/usr/local/bin/sudo -u vboxusers /usr/local/bin/vboxmanage controlvm "$_uuid" poweroff >/dev/null 2>&1
+		/usr/local/bin/sudo -u ${vbox_user} /usr/local/bin/vboxmanage controlvm "$_uuid" poweroff >/dev/null 2>&1
 	done
 }
 
