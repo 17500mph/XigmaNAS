@@ -22,12 +22,21 @@ STRIP=		# stripping can break go binaries
 # NAS4Free
 NO_PKG_REGISTER=	yes
 
+.include <bsd.port.pre.mk>
+
 post-patch:
 	@cd ${WRKSRC} ; ${MKDIR} src/github.com/${PORTNAME}/${PORTNAME} ; \
 		${MV} .gitattributes .gitignore .mailmap AUTHORS CONDUCT.md \
 		CONTRIBUTING.md Godeps LICENSE NICKS README.md assets build.go \
 		build.sh cmd etc gui lib man protocol script test \
 		src/github.com/${PORTNAME}/${PORTNAME}
+# NAS4Free
+.if ${ARCH} == "i386"
+	# SSE disable patch (run "pkg delete go" before building)
+	@if [ -n "`pkg query %n go`" ]; then pkg delete -y -f go; fi
+	@${CP} -v ${FILESDIR}/extra-go-patch-src__cmd__dist__build.go-noSSE2-n4f ${PORTSDIR}/lang/go/files/patch-src__cmd__dist__build.go-noSSE2-n4f
+	@rm -rf ${PORTSDIR}/lang/go/work
+.endif
 
 do-build:
 	# timestamp here refers to source, not build time
@@ -41,4 +50,4 @@ do-install:
 		${NAS4FREE_ROOTFS}${PREFIX}/bin/
 	@${INSTALL_SCRIPT} -v ${WRKDIR}/syncthing ${NAS4FREE_ROOTFS}/etc/rc.d
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
