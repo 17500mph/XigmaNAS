@@ -27,6 +27,7 @@ vmstop_cmd="vbox_vmstop"
 extra_commands="mkconf vmstart vmstop"
 
 phpvbox_conf=${phpvbox_conf:-"/usr/local/www/phpvirtualbox/config.php"}
+vbox_certpem=${vbox_certpem:-"/var/etc/vbox-cert.pem"}
 vbox_user=${vbox_user:-"vboxusers"}
 vbox_group=${vbox_group:-"vboxusers"}
 vbox_ipaddr=${vbox_ipaddr:-"127.0.0.1"}
@@ -36,6 +37,7 @@ vbox_vrdeports=${vbox_vrdeports:-"9000-9100"}
 vbox_mkconf()
 {
 	local _user _group _homedir
+	local _certificate _privatekey _tmpfile
 
 	_user=${vbox_user}
 	_group=${vbox_group}
@@ -73,6 +75,25 @@ EOF
 		echo "add path 'tap*' mode 0660 group ${vbox_group}" >> /etc/devfs.rules
 		/usr/local/sbin/rconf attribute set devfs_system_ruleset vbox_tap
 		/etc/rc.d/devfs start
+	fi
+
+	# Create certificate
+	_certificate=`configxml_get "//system/webgui/certificate"`
+	_privatekey=`configxml_get "//system/webgui/privatekey"`
+	if [ -n "${_certificate}" -a -n "${_privatekey}" ]; then
+		_tmpfile=/tmp/vbox$$.tmp
+
+		echo "${_certificate}" > ${_tmpfile}
+		/usr/bin/uudecode -m -p -r ${_tmpfile} > ${vbox_certpem}
+		echo "" >> ${vbox_certpem}
+		echo "${_privatekey}" > ${_tmpfile}
+		/usr/bin/uudecode -m -p -r ${_tmpfile} >> ${vbox_certpem}
+
+		/bin/rm -f ${_tmpfile}
+	fi
+	if [ -e ${vbox_certpem} ]; then
+		/bin/chmod 0600 ${vbox_certpem}
+		/usr/sbin/chown "${vbox_user}:${vbox_group}" ${vbox_certpem}
 	fi
 }
 
