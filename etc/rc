@@ -30,8 +30,8 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin:/usr/local/sbin
 export HOME PATH
 
 # Get operating platform
-PLATFORM=`cat /etc/platform`
-XARCH=`/bin/echo ${PLATFORM} | sed -e 's/-.*//'`
+PLATFORM=`/bin/cat /etc/platform`
+XARCH=`/bin/echo ${PLATFORM} | /usr/bin/sed -e 's/-.*//'`
 ARCH=`/usr/bin/uname -m`
 
 # Fixed values requested by build/make.sh

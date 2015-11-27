@@ -20,8 +20,8 @@
 #
 
 SIZE="512M"
-PLATFORM=`cat /etc/platform`
-XARCH=`/bin/echo ${PLATFORM} | sed -e 's/-.*//'`
+PLATFORM=`/bin/cat /etc/platform`
+XARCH=`/bin/echo ${PLATFORM} | /usr/bin/sed -e 's/-.*//'`
 ARCH=`/usr/bin/uname -m`
 if [ "${ARCH}" == "arm" ]; then
 	# write to pre-aligned partition
