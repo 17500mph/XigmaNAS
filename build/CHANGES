@@ -47,6 +47,7 @@ Changes:
 - Upgrade php to 5.6.16.
 
 Fixes:
+- Fix broken menu options livecd/liveusb.
 - Fix syncthing causes Illegal instruction on old i386. (don't use SSE2)
 - Fix VirtualBox cannot be connected via noVNC if using HTTPS.
 - Fix bridged member cannot be set IP address.
