@@ -37,7 +37,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("System"), gettext("Factory defaults"));
+$pgtitle = array(gettext("System"), gettext("Factory Defaults"));
 
 if ($_POST) {
 	if (0 == strcmp($_POST['Submit'], gettext("Yes"))) {
@@ -59,7 +59,7 @@ if ($_POST) {
 				<p>
 					<strong>
 						<?=sprintf(gettext("If you click 'Yes', The server will be reset to factory defaults and will reboot immediately. The entire system configuration will be overwritten. The LAN IP address will be reset to %s and the password will be set to '%s'."), $g['default_ip'], $g['default_passwd']);?><br /><br />
-						<?=gettext("Are you sure you want to proceed?");?>
+						<p class="red"><?=gettext("Are you sure you want to proceed?");?>
 					</strong>
 				</p>
 				<div id="submit">
