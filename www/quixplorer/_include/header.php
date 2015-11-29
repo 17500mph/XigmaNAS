@@ -70,7 +70,7 @@ if ("full" === $g['platform']) {
 	$menu['system']['menuitem'][] = array("desc" => gettext("Firmware"), "link" => "../system_firmware.php", "visible" => Session::isAdmin());
 }
 $menu['system']['menuitem'][] = array("desc" => gettext("Backup/Restore"), "link" => "../system_backup.php", "visible" => Session::isAdmin());
-$menu['system']['menuitem'][] = array("desc" => gettext("Factory defaults"), "link" => "../system_defaults.php", "visible" => Session::isAdmin());
+$menu['system']['menuitem'][] = array("desc" => gettext("Factory Defaults"), "link" => "../system_defaults.php", "visible" => Session::isAdmin());
 $menu['system']['menuitem'][] = array("type" => "separator", "visible" => Session::isAdmin());
 $menu['system']['menuitem'][] = array("desc" => gettext("Reboot"), "link" => "../reboot.php", "visible" => Session::isAdmin());
 $menu['system']['menuitem'][] = array("desc" => gettext("Shutdown"), "link" => "../shutdown.php", "visible" => Session::isAdmin());
@@ -137,7 +137,7 @@ $menu['access']['desc'] = gettext("Access");
 $menu['access']['visible'] = Session::isAdmin();
 $menu['access']['link'] = "../index.php";
 $menu['access']['menuitem'] = array();
-$menu['access']['menuitem'][] = array("desc" => gettext("Users and Groups"), "link" => "../access_users.php", "visible" => TRUE);
+$menu['access']['menuitem'][] = array("desc" => gettext("Users & Groups"), "link" => "../access_users.php", "visible" => TRUE);
 $menu['access']['menuitem'][] = array("desc" => gettext("Active Directory"), "link" => "../access_ad.php", "visible" => TRUE);
 $menu['access']['menuitem'][] = array("desc" => gettext("LDAP"), "link" => "../access_ldap.php", "visible" => TRUE);
 $menu['access']['menuitem'][] = array("desc" => gettext("NIS"), "link" => "../notavailable.php", "visible" => false);
