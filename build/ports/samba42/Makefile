@@ -2,7 +2,7 @@
 
 PORTNAME?=		${SAMBA4_BASENAME}42
 PORTVERSION?=		${SAMBA4_VERSION}
-PORTREVISION?=		2
+PORTREVISION?=		1
 CATEGORIES?=		net
 MASTER_SITES=		SAMBA/samba/stable SAMBA/samba/rc
 DISTNAME=		${SAMBA4_DISTNAME}
@@ -16,7 +16,7 @@ NO_LICENSES_DIALOGS=	yes
 
 LICENSE=		GPLv3
 
-CONFLICTS?=		*samba3[2-6]-3.* samba4-4.0.* samba41-4.1.*
+CONFLICTS?=		*samba3[2-6]-3.* samba4-4.0.* samba41-4.1.* samba43-4.3.*
 
 SAMBA4_BASENAME=	samba
 SAMBA4_PORTNAME=	${SAMBA4_BASENAME}4
@@ -94,24 +94,24 @@ BUILD_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}dnspython>=1.9.4:${PORTSDIR}/dns/py-dnsp
 RUN_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}dnspython>=1.9.4:${PORTSDIR}/dns/py-dnspython
 PLIST_SUB+=		PY_DNSPYTHON="@comment "
 # talloc
-BUILD_DEPENDS+=		talloc>=2.1.3_1:${PORTSDIR}/devel/talloc
-RUN_DEPENDS+=		talloc>=2.1.3_1:${PORTSDIR}/devel/talloc
+BUILD_DEPENDS+=		talloc>=2.1.5:${PORTSDIR}/devel/talloc
+RUN_DEPENDS+=		talloc>=2.1.5:${PORTSDIR}/devel/talloc
 SAMBA4_BUNDLED_LIBS+=	!talloc
 # tevent
 BUILD_DEPENDS+=		tevent>=0.9.25:${PORTSDIR}/devel/tevent
 RUN_DEPENDS+=		tevent>=0.9.25:${PORTSDIR}/devel/tevent
 SAMBA4_BUNDLED_LIBS+=	!tevent
 # tdb
-BUILD_DEPENDS+=		tdb>=1.3.7_1:${PORTSDIR}/databases/tdb
-RUN_DEPENDS+=		tdb>=1.3.7_1:${PORTSDIR}/databases/tdb
+BUILD_DEPENDS+=		tdb>=1.3.8:${PORTSDIR}/databases/tdb
+RUN_DEPENDS+=		tdb>=1.3.8:${PORTSDIR}/databases/tdb
 SAMBA4_BUNDLED_LIBS+=	!tdb
 # ntdb
 BUILD_DEPENDS+=		ntdb>=1.0:${PORTSDIR}/databases/ntdb
 RUN_DEPENDS+=		ntdb>=1.0:${PORTSDIR}/databases/ntdb
 SAMBA4_BUNDLED_LIBS+=	!ntdb
 # ldb
-BUILD_DEPENDS+=		ldb>=1.1.21_1:${PORTSDIR}/databases/ldb
-RUN_DEPENDS+=		ldb>=1.1.21_1:${PORTSDIR}/databases/ldb
+BUILD_DEPENDS+=		ldb>=1.1.23:${PORTSDIR}/databases/ldb
+RUN_DEPENDS+=		ldb>=1.1.23:${PORTSDIR}/databases/ldb
 SAMBA4_BUNDLED_LIBS+=	!ldb
 # Don't use external libcom_err
 SAMBA4_BUNDLED_LIBS+=	com_err
