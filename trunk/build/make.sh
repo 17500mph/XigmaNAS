@@ -1843,6 +1843,12 @@ $DIALOG --title \"$NAS4FREE_PRODUCTNAME - Ports\" \\
 					state="OFF"; break;
 				fi
 			done
+		elif [ "dom0" = ${NAS4FREE_XARCH} ]; then
+			for forceoff in firefly fuppes grub2-bhyve inadyn-mt minidlna netatalk3 open-vm-tools phpvirtualbox samba42 transmission vbox vbox-additions; do
+				if [ "$port" = "$forceoff" ]; then
+					state="OFF"; break;
+				fi
+			done
 		fi
 		case ${state} in
 			[hH][iI][dD][eE])
