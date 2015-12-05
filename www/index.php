@@ -160,6 +160,38 @@ function get_vbox_vminfo($user, $uuid) {
 	return $vminfo;
 }
 
+function get_xen_info() {
+	$info = array();
+	unset($rawdata);
+	mwexec2("/usr/local/sbin/xl info", $rawdata);
+	foreach ($rawdata as $line) {
+		if (preg_match("/^([^:]+)\s+:\s+(.+)\s*$/", $line, $match)) {
+			$a = array();
+			$a['raw'] = $match[0];
+			$a['key'] = trim($match[1]);
+			$a['value'] = trim($match[2]);
+			$info[$a['key']] = $a;
+		}
+	}
+	return $info;
+}
+
+function get_xen_console($domid) {
+	$info = array();
+	unset($rawdata);
+	mwexec2("/usr/local/bin/xenstore-ls /local/domain/{$domid}/console", $rawdata);
+	foreach ($rawdata as $line) {
+		if (preg_match("/^([^=]+)\s+=\s+\"(.+)\"$/", $line, $match)) {
+			$a = array();
+			$a['raw'] = $match[0];
+			$a['key'] = trim($match[1]);
+			$a['value'] = trim($match[2]);
+			$info[$a['key']] = $a;
+		}
+	}
+	return $info;
+}
+
 if (is_ajax()) {
 	$sysinfo = system_get_sysinfo();
 	$vipstatus = get_vip_status();
@@ -656,8 +688,19 @@ $(document).ready(function(){
 			$vbox_ipaddr = get_ipaddr($vbox_if);
 			if (isset($config['vbox']['enable'])) {
 				mwexec2("/usr/local/bin/sudo -u {$vbox_user} /usr/local/bin/VBoxManage list runningvms", $vmlist2);
+			} else {
+				$vmlist2 = array();
 			}
-			if (!empty($vmlist) || !empty($vmlist2)):
+			unset($vmlist3);
+			if ($g['arch'] == "dom0") {
+				$xen_if = get_ifname($config['interfaces']['lan']['if']);
+				$xen_ipaddr = get_ipaddr($xen_if);
+				$vmlist_json = shell_exec("/usr/local/sbin/xl list -l");
+				$vmlist3 = json_decode($vmlist_json, true);
+			} else {
+				$vmlist3 = array();
+			}
+			if (!empty($vmlist) || !empty($vmlist2) || !empty($vmlist3)):
 		?>
 		<tr>
 			<td width="25%" class="vncellt"><?=gettext("Virtual Machine");?></td>
@@ -701,6 +744,78 @@ $(document).ready(function(){
 					}
 					echo "</div></td></tr>\n";
 					if (++$index < count($vmlist2))
+						echo "<tr><td><hr size='1' /></td></tr>\n";
+				}
+
+				$vmtype = "Xen";
+				$index = 0;
+				$vncport_unused = 5900;
+				foreach ($vmlist3 as $k => $v) {
+					$domid = $v['domid'];
+					$type = $v['config']['c_info']['type'];
+					$vm = $v['config']['c_info']['name'];
+					$vram = (int)(($v['config']['b_info']['target_memkb'] + 1023 ) / 1024);
+					$vcpus = 1;
+					if ($domid == 0) {
+						$vcpus = @exec("/sbin/sysctl -q -n hw.ncpu");
+						$info = get_xen_info();
+						$cpus = $info['nr_cpus']['value'];
+						$th = $info['threads_per_core']['value'];
+						if (empty($th)) {
+							$th = 1;
+						}
+						$core = (int)($cpus / $th);
+						$mem = $info['total_memory']['value'];
+						$ver = $info['xen_version']['value'];
+					} else if (!empty($v['config']['b_info']['max_vcpus'])) {
+						$vcpus = $v['config']['b_info']['max_vcpus'];
+					}
+					echo "<tr><td><div id='vminfo3_$index'>";
+					echo htmlspecialchars("$vmtype $type: $vm ($vram MiB / $vcpus VCPUs)");
+					if ($domid == 0) {
+						echo " ";
+						echo htmlspecialchars("Xen version {$ver} / {$mem} MiB / {$core} core".($th > 1 ? "/HT" : ""));
+					} else if ($type == 'pv' && isset($v['config']['vfbs']) && isset($v['config']['vfbs'][0]['vnc'])) {
+						$vnc = $v['config']['vfbs'][0]['vnc'];
+						$vncport = "unknown";
+						/*
+						if (isset($vnc['display'])) {
+							$vncdisplay = $vnc['display'];
+							$vncport = 5900 + $vncdisplay;
+						} else if (isset($vnc['findunused'])) {
+							$vncport = $vncport_unused;
+							$vncport_unused++;
+						}
+						*/
+						$console = get_xen_console($domid);
+						if (!empty($console) && isset($console['vnc-port'])) {
+							$vncport = $console['vnc-port']['value'];
+						}
+
+						echo " ";
+						echo htmlspecialchars("vnc://{$xen_ipaddr}:{$vncport}/");
+					} else if ($type == 'hvm' && isset($v['config']['b_info']['type.hvm']['vnc']['enable'])) {
+						$vnc = $v['config']['b_info']['type.hvm']['vnc'];
+						$vncport = "unknown";
+						/*
+						if (isset($vnc['display'])) {
+							$vncdisplay = $vnc['display'];
+							$vncport = 5900 + $vncdisplay;
+						} else if (isset($vnc['findunused'])) {
+							$vncport = $vncport_unused;
+							$vncport_unused++;
+						}
+						*/
+						$console = get_xen_console($domid);
+						if (!empty($console) && isset($console['vnc-port'])) {
+							$vncport = $console['vnc-port']['value'];
+						}
+
+						echo " ";
+						echo htmlspecialchars("vnc://{$xen_ipaddr}:{$vncport}/");
+					}
+					echo "</div></td></tr>\n";
+					if (++$index < count($vmlist3))
 						echo "<tr><td><hr size='1' /></td></tr>\n";
 				}
 			?>

@@ -54,6 +54,7 @@ $pgtitle = array(gettext("Status"), gettext("Services"));
 $ups_script = "nut";
 if (isset($config["ups"]["mode"]) && ($config["ups"]["mode"] == "slave")) { $ups_script = "nut_upsmon"; }
 
+if ("dom0" !== $g['arch']) {
 $a_service[] = array("desc" => gettext("HAST"), "link" => "services_hast.php", "config" => "hast", "scriptname" => "hastd");
 $a_service[] = array("desc" => gettext("CIFS/SMB"), "link" => "services_samba.php", "config" => "samba", "scriptname" => "samba");
 $a_service[] = array("desc" => gettext("FTP"), "link" => "services_ftp.php", "config" => "ftpd", "scriptname" => "proftpd");
@@ -74,6 +75,12 @@ $a_service[] = array("desc" => gettext("UPS"), "link" => "services_ups.php", "co
 $a_service[] = array("desc" => gettext("Webserver"), "link" => "services_websrv.php", "config" => "websrv", "scriptname" => "websrv");
 $a_service[] = array("desc" => gettext("BitTorrent"), "link" => "services_bittorrent.php", "config" => "bittorrent", "scriptname" => "transmission");
 $a_service[] = array("desc" => gettext("LCDproc"), "link" => "services_lcdproc.php", "config" => "lcdproc", "scriptname" => "LCDd");
+} else {
+$a_service[] = array("desc" => gettext("SSH"), "link" => "services_sshd.php", "config" => "sshd", "scriptname" => "sshd");
+$a_service[] = array("desc" => gettext("NFS"), "link" => "services_nfs.php", "config" => "nfsd", "scriptname" => "nfsd");
+$a_service[] = array("desc" => gettext("iSCSI Target"), "link" => "services_iscsitarget.php", "config" => "iscsitarget", "scriptname" => "iscsi_target");
+$a_service[] = array("desc" => gettext("UPS"), "link" => "services_ups.php", "config" => "ups", "scriptname" => $ups_script);
+}
 ?>
 <?php include("fbegin.inc");?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">

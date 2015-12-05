@@ -100,6 +100,7 @@ $menu['services']['desc'] = gettext("Services");
 $menu['services']['visible'] = Session::isAdmin();
 $menu['services']['link'] = "status_services.php";
 $menu['services']['menuitem'] = array();
+if ("dom0" !== $g['arch']) {
 $menu['services']['menuitem'][] = array("desc" => gettext("HAST"), "link" => "services_hast.php", "visible" => TRUE);
 $menu['services']['menuitem'][] = array("desc" => gettext("Samba AD"), "link" => "services_samba_ad.php", "visible" => TRUE);
 $menu['services']['menuitem'][] = array("type" => "separator", "visible" => TRUE);
@@ -121,6 +122,21 @@ $menu['services']['menuitem'][] = array("desc" => gettext("UPS"), "link" => "ser
 $menu['services']['menuitem'][] = array("desc" => gettext("Webserver"), "link" => "services_websrv.php", "visible" => TRUE);
 $menu['services']['menuitem'][] = array("desc" => gettext("BitTorrent"), "link" => "services_bittorrent.php", "visible" => TRUE);
 $menu['services']['menuitem'][] = array("desc" => gettext("LCDproc"), "link" => "services_lcdproc.php", "visible" => TRUE);
+} else {
+$menu['services']['menuitem'][] = array("desc" => gettext("SSH"), "link" => "services_sshd.php", "visible" => TRUE);
+$menu['services']['menuitem'][] = array("desc" => gettext("NFS"), "link" => "services_nfs.php", "visible" => TRUE);
+$menu['services']['menuitem'][] = array("desc" => gettext("iSCSI Target"), "link" => "services_iscsitarget.php", "visible" => TRUE);
+$menu['services']['menuitem'][] = array("desc" => gettext("UPS"), "link" => "services_ups.php", "visible" => TRUE);
+}
+
+// VM
+$menu['vm']['desc'] = gettext("VM");
+$menu['vm']['visible'] = Session::isAdmin();
+$menu['vm']['link'] = "";
+$menu['vm']['menuitem'] = array();
+if ("dom0" === $g['arch']) {
+$menu['vm']['menuitem'][] = array("desc" => gettext("Virtual Machine"), "link" => "vm_xen.php", "visible" => TRUE);
+}
 
 // Access
 $menu['access']['desc'] = gettext("Access");
@@ -128,9 +144,11 @@ $menu['access']['visible'] = Session::isAdmin();
 $menu['access']['link'] = "";
 $menu['access']['menuitem'] = array();
 $menu['access']['menuitem'][] = array("desc" => gettext("Users & Groups"), "link" => "access_users.php", "visible" => TRUE);
+if ("dom0" !== $g['arch']) {
 $menu['access']['menuitem'][] = array("desc" => gettext("Active Directory"), "link" => "access_ad.php", "visible" => TRUE);
 $menu['access']['menuitem'][] = array("desc" => gettext("LDAP"), "link" => "access_ldap.php", "visible" => TRUE);
 $menu['access']['menuitem'][] = array("desc" => gettext("NIS"), "link" => "notavailable.php", "visible" => false);
+}
 
 // Status
 $menu['status']['desc'] = gettext("Status");
@@ -157,7 +175,9 @@ if (!isset($config['system']['disablefm'])) {
 $menu['advanced']['menuitem'][] = array("type" => "separator", "visible" => Session::isAdmin());
 $menu['advanced']['menuitem'][] = array("desc" => gettext("Command"), "link" => "exec.php", "visible" => Session::isAdmin());
 $menu['advanced']['menuitem'][] = array("type" => "separator", "visible" => Session::isAdmin());
+if ("dom0" !== $g['arch']) {
 $menu['advanced']['menuitem'][] = array("desc" => gettext("VirtualBox"), "link" => "vm_vbox.php", "visible" => Session::isAdmin());
+}
 
 // Diagnostics
 $menu['diagnostics']['desc'] = gettext("Diagnostics");
@@ -307,6 +327,7 @@ function display_menu($menuid) {
 		</li>
 		<?php endif;?>
 		<!-- End extension section -->
+		<?=display_menu("vm");?>
 		<?=display_menu("access");?>
 		<?=display_menu("status");?>
 		<?=display_menu("diagnostics");?>
