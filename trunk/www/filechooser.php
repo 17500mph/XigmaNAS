@@ -72,10 +72,13 @@ class FileChooser
 
     // Check if file exists.
     if(!file_exists($path)) {
-    	echo "<tr><td class=\"addrbar\">";
+    	echo "<tr><td class=\"infobar\">";
 		  print_info_box("File not found $path");
 		  echo "</tr></td>";
-      $path = $this->get_valid_parent_dir($path);
+		  if (substr($path, 0, 1) == '/')
+				 $path = $this->get_valid_parent_dir($path);
+			else
+				 $path = "/mnt";
     }
 
     $dir = $path;
@@ -575,8 +578,9 @@ EOD;
 
 			/* Navigation bar */
 			.filechooser .navbar { background-color: #eee; padding: 6px 9px; text-align:left; border-left:1px solid #eee; border-right:1px solid #eee; border-bottom:1px solid #eee; border-spacing:0; height: 40px }
-			.filechooser .navbar .input { position:absolute; width:75%; top: 6px; left: 9px; }
+			.filechooser .navbar .input { /*position:absolute;*/ width:75%; top: 6px; left: 9px; }
 			.filechooser .navbar .button { position:relative; float:right; }
+			.filechooser .infobar { height: 100px; }
 		-->
 		</style>
 		<script type="text/javascript">
