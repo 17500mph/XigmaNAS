@@ -11,20 +11,31 @@
 # All rights reserved.
 #
 
+PLATFORM=`/bin/cat /etc/platform`
+XARCH=`/bin/echo ${PLATFORM} | /usr/bin/sed -e 's/-.*//'`
+ARCH=`/usr/bin/uname -m`
+
 tmpfile=`tmpfile 2>/dev/null` || tmpfile=/tmp/tui$$
 trap "rm -f $tmpfile" 0 1 2 5 15
 
 # Endless loop
 while : ; do
+    if [ "${XARCH}" != "dom0" ]; then
 	cdialog --clear --title "NAS4Free Install & Upgrade Options Menu" --cancel-label "Exit" --menu "" 14 73 8 \
 		"1" "Install 'Embedded' OS/MBR on HDD/SSD/CF/USB (preferred)" \
-		"2" "Install 'Embedded' OS/GPT for over 2TB bootdisk (experimental)" \
-		"3" "Upgrade 'Embedded' OS from LiveCD/LiveUSB (preferred)" \
+		"2" "Install 'Embedded' OS/GPT for over 2TB bootdisk" \
+		"3" "Upgrade 'Embedded' OS from LiveCD/LiveUSB" \
 		"-" "---------------------------------------------------------------" \
 		"4" "Install 'Embedded' OS/MBR without SWAP (for expert)" \
 		"5" "Install 'Full' OS on HDD/SSD + DATA + SWAP (for expert)" \
 		"6" "Upgrade 'Full' OS from LiveCD/LiveUSB" \
 		"7" "Upgrade and convert 'Full' OS to 'Embedded'" 2> $tmpfile
+    else
+	cdialog --clear --title "NAS4Free Install & Upgrade Options Menu" --cancel-label "Exit" --menu "" 9 73 3 \
+		"1" "Install 'Embedded' OS/MBR on HDD/SSD/CF/USB (preferred)" \
+		"2" "Install 'Embedded' OS/GPT for over 2TB bootdisk" \
+		"3" "Upgrade 'Embedded' OS from LiveCD/LiveUSB" 2> $tmpfile
+    fi
 
 	if [ 0 -ne $? ]; then
 		exit 0;
