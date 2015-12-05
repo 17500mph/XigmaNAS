@@ -75,7 +75,7 @@
 	$tty = @exec("/usr/bin/tty");
 	function _esc($code) {
 		global $tty;
-		if (!preg_match('/ttyu[0-9]+/', $tty))
+		if (!preg_match('/(ttyu[0-9]+|xc0)/', $tty))
 			return "$code";
 		return "";
 	}
