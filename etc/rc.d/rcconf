@@ -505,7 +505,7 @@ updateservices()
 # Set additional options.
 setoptions()
 {
-	local _option _name _value
+	local _option _name _value _platform
 
 	# Set rc.conf variables configured via WebGUI.
 	/usr/local/bin/xml sel -t -m "//system/rcconf/param[enable]" \
@@ -541,6 +541,14 @@ setoptions()
 	# Disable ipfw (enabled by /etc/rc.d/ipfw)
 	sysctl -q net.inet.ip.fw.enable=0 > /dev/null
 	sysctl -q net.inet6.ip6.fw.enable=0 > /dev/null
+
+	_platform=`cat /etc/platform`
+	case ${_platform} in
+		dom0-*)
+			/sbin/kldload -qn if_tap.ko > /dev/null
+			sysctl -q vm.max_wired=-1 > /dev/null
+			;;
+	esac
 }
 
 # Serial console
