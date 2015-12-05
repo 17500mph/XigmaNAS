@@ -28,8 +28,16 @@ if [ -f "${NAS4FREE_SVNDIR}/local.revision" ]; then
 fi
 NAS4FREE_ARCH=$(uname -p)
 NAS4FREE_KERNCONF="$(echo ${NAS4FREE_PRODUCTNAME} | tr '[:lower:]' '[:upper:]')-${NAS4FREE_ARCH}"
+NAS4FREE_BUILD_DOM0=0
+if [ -f ${NAS4FREE_ROOTDIR}/build-dom0 ]; then
+    NAS4FREE_BUILD_DOM0=1
+fi
 if [ "amd64" = ${NAS4FREE_ARCH} ]; then
     NAS4FREE_XARCH="x64"
+    if [ ${NAS4FREE_BUILD_DOM0} -ne 0 ]; then
+	NAS4FREE_XARCH="dom0"
+	NAS4FREE_KERNCONF="$(echo ${NAS4FREE_PRODUCTNAME} | tr '[:lower:]' '[:upper:]')-${NAS4FREE_XARCH}"
+    fi
 elif [ "i386" = ${NAS4FREE_ARCH} ]; then
     NAS4FREE_XARCH="x86"
 elif [ "armv6" = ${NAS4FREE_ARCH} ]; then
@@ -60,11 +68,13 @@ export NAS4FREE_WORLD
 export NAS4FREE_PRODUCTNAME
 export NAS4FREE_VERSION
 export NAS4FREE_ARCH
+export NAS4FREE_XARCH
 export NAS4FREE_KERNCONF
 export NAS4FREE_OBJDIRPREFIX
 export NAS4FREE_BOOTDIR
 export NAS4FREE_REVISION
 export NAS4FREE_TMPDIR
+#export NAS4FREE_BUILD_DOM0
 
 NAS4FREE_MK=${NAS4FREE_SVNDIR}/build/ports/nas4free.mk
 rm -rf ${NAS4FREE_MK}
@@ -76,11 +86,13 @@ echo "NAS4FREE_WORLD=${NAS4FREE_WORLD}" >> ${NAS4FREE_MK}
 echo "NAS4FREE_PRODUCTNAME=${NAS4FREE_PRODUCTNAME}" >> ${NAS4FREE_MK}
 echo "NAS4FREE_VERSION=${NAS4FREE_VERSION}" >> ${NAS4FREE_MK}
 echo "NAS4FREE_ARCH=${NAS4FREE_ARCH}" >> ${NAS4FREE_MK}
+echo "NAS4FREE_XARCH=${NAS4FREE_XARCH}" >> ${NAS4FREE_MK}
 echo "NAS4FREE_KERNCONF=${NAS4FREE_KERNCONF}" >> ${NAS4FREE_MK}
 echo "NAS4FREE_OBJDIRPREFIX=${NAS4FREE_OBJDIRPREFIX}" >> ${NAS4FREE_MK}
 echo "NAS4FREE_BOOTDIR=${NAS4FREE_BOOTDIR}" >> ${NAS4FREE_MK}
 echo "NAS4FREE_REVISION=${NAS4FREE_REVISION}" >> ${NAS4FREE_MK}
 echo "NAS4FREE_TMPDIR=${NAS4FREE_TMPDIR}" >> ${NAS4FREE_MK}
+#echo "NAS4FREE_BUILD_DOM0=${NAS4FREE_BUILD_DOM0}" >> ${NAS4FREE_MK}
 
 # Local variables
 NAS4FREE_URL=$(cat $NAS4FREE_SVNDIR/etc/prd.url)
@@ -736,6 +748,13 @@ create_image() {
 		echo 'mlxen_load="YES"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 	fi
 
+	# Xen
+	if [ "dom0" == ${NAS4FREE_XARCH} ]; then
+		install -v -o root -g wheel -m 555 ${NAS4FREE_BOOTDIR}/xen ${NAS4FREE_TMPDIR}/boot
+		install -v -o root -g wheel -m 644 ${NAS4FREE_BOOTDIR}/xen.4th ${NAS4FREE_TMPDIR}/boot
+		kldxref -R ${NAS4FREE_TMPDIR}/boot
+	fi
+
 	echo "===> Unmount memory disk"
 	umount $NAS4FREE_TMPDIR
 	echo "===> Detach memory disk"
@@ -857,6 +876,13 @@ create_iso () {
 	# Mellanox ConnectX EN
 	if [ "amd64" == ${NAS4FREE_ARCH} ]; then
 		echo 'mlxen_load="YES"' >> $NAS4FREE_TMPDIR/boot/loader.conf
+	fi
+
+	# Xen
+	if [ "dom0" == ${NAS4FREE_XARCH} ]; then
+		install -v -o root -g wheel -m 555 ${NAS4FREE_BOOTDIR}/xen ${NAS4FREE_TMPDIR}/boot
+		install -v -o root -g wheel -m 644 ${NAS4FREE_BOOTDIR}/xen.4th ${NAS4FREE_TMPDIR}/boot
+		kldxref -R ${NAS4FREE_TMPDIR}/boot
 	fi
 
 	if [ ! $TINY_ISO ]; then
@@ -1092,6 +1118,13 @@ create_usb () {
 		echo 'mlxen_load="YES"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 	fi
 
+	# Xen
+	if [ "dom0" == ${NAS4FREE_XARCH} ]; then
+		install -v -o root -g wheel -m 555 ${NAS4FREE_BOOTDIR}/xen ${NAS4FREE_TMPDIR}/boot
+		install -v -o root -g wheel -m 644 ${NAS4FREE_BOOTDIR}/xen.4th ${NAS4FREE_TMPDIR}/boot
+		kldxref -R ${NAS4FREE_TMPDIR}/boot
+	fi
+
 	echo "USB: Copying IMG file to $NAS4FREE_TMPDIR"
 	cp ${NAS4FREE_WORKINGDIR}/image.bin.xz ${NAS4FREE_TMPDIR}/${NAS4FREE_PRODUCTNAME}-${NAS4FREE_XARCH}-embedded.xz
 
@@ -1214,6 +1247,13 @@ create_full() {
 	# Mellanox ConnectX EN
 	if [ "amd64" == ${NAS4FREE_ARCH} ]; then
 		echo 'mlxen_load="YES"' >> $NAS4FREE_TMPDIR/boot/loader.conf
+	fi
+
+	# Xen
+	if [ "dom0" == ${NAS4FREE_XARCH} ]; then
+		install -v -o root -g wheel -m 555 ${NAS4FREE_BOOTDIR}/xen ${NAS4FREE_TMPDIR}/boot
+		install -v -o root -g wheel -m 644 ${NAS4FREE_BOOTDIR}/xen.4th ${NAS4FREE_TMPDIR}/boot
+		kldxref -R ${NAS4FREE_TMPDIR}/boot
 	fi
 
 	#Check that there is no /etc/fstab file! This file can be generated only during install, and must be kept
