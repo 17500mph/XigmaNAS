@@ -28,6 +28,12 @@
         ..
         portsnap
         ..
+        xen
+            xenpaging
+            ..
+        ..
+        xenstored
+        ..
     ..
     empty           mode=0555
     ..
@@ -48,11 +54,15 @@
     log            
         samba4         
         ..
+        xen
+        ..
     ..
     mount          
     ..
     run            
         wpa_supplicant
+        ..
+        xen
         ..
     ..
     spool          
@@ -60,5 +70,9 @@
         ..
     ..
     tmp             mode=01777
+    ..
+    xen
+        dump
+        ..
     ..
 ..
