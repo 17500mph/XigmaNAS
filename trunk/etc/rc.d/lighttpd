@@ -59,6 +59,11 @@ if [ ! -d "${lighttpd_uploaddir}/ftmp" ]; then
 fi
 chmod 1777 "${lighttpd_uploaddir}/ftmp"
 
+# FastCGI socket directory
+mkdir -p /var/tmp/fastcgi
+chmod 755 /var/tmp/fastcgi
+
+
 lighttpd_mkconf()
 {
 	local _protocol _certificate _privatekey _tmpfile
@@ -118,6 +123,7 @@ server.modules = (
   "mod_auth",
   "mod_expire",
   "mod_cgi",
+  "mod_fastcgi",
   "mod_setenv"
  )
 server.document-root = "${lighttpd_docroot}"
@@ -196,7 +202,29 @@ mimetype.assign             = (
 #url.access-deny = ( "~", ".inc", ".htpasswd" )
 static-file.exclude-extensions = ( ".php", ".pl", ".fcgi" )
 server.pid-file = "${pidfile}"
-cgi.assign = (".php" => "/usr/local/bin/php-cgi")
+#cgi.assign = (".php" => "/usr/local/bin/php-cgi")
+
+# FastCGI
+fastcgi.server = ( ".php" =>
+  ( "localhost" =>
+    ( "socket" => "/var/tmp/fastcgi/php.socket",
+        "bin-path" => "/usr/local/bin/php-cgi",
+        "check-local" => "disable",
+        "bin-environment" => (
+            "PHP_FCGI_CHILDREN" => "2",
+            "PHP_FCGI_MAX_REQUESTS" => "500"
+        ),
+        "bin-copy-environment" => (
+            "PATH", "SHELL", "USER" ),
+        "broken-scriptfilename" => "enable",
+        "min-procs" => 1,
+        "max-procs" => 2,
+        "max-load-per-proc" => 90,
+        "idle-timeout" => 360,
+        "allow-x-send-file" => "enable"
+    )
+  )
+)
 EOF
 
 	# Set IP address and TCP port
