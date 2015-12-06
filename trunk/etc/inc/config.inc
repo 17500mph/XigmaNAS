@@ -1067,7 +1067,24 @@ function config_upgrade() {
 				$config['system']['rcconf']['param'][$index]['value'] = "256m";
 			}
 		}
-		//$config['version'] = "2.4";
+
+		$config['system']['loaderconf']['param'][] = array(
+			"uuid" => uuid(),
+			"name" => "vfs.zfs.arc_max",
+			"value" => "2G",
+			"comment" => "ZFS maximum ARC size");
+		$config['system']['loaderconf']['param'][] = array(
+			"uuid" => uuid(),
+			"name" => "vfs.zfs.arc_min",
+			"value" => "1G",
+			"comment" => "ZFS minimum ARC size");
+		$config['system']['loaderconf']['param'][] = array(
+			"uuid" => uuid(),
+			"name" => "vfs.zfs.prefetch_disable",
+			"value" => "1",
+			"comment" => "ZFS prefech disable");
+
+		$config['version'] = "2.4";
 	}
 
 	/* XXX Convert 9.5 -> 9.7 (must skip 9.6) */
