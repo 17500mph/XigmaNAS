@@ -1029,6 +1029,47 @@ function config_upgrade() {
 		$config['version'] = "2.3";
 	}
 
+	/* Convert 2.3 -> 2.4 */
+	if ($config['version'] === "2.3") {
+		$tmp = array();
+		$found = 0;
+		foreach ($config['system']['usermanagement']['user'] as $v) {
+			if ($v['name'] == "syncthing") {
+				if ($found)
+					continue;
+				$found = 1;
+			}
+			$tmp[] = $v;
+		}
+		$config['system']['usermanagement']['user'] = $tmp;
+
+		$tmp = array();
+		$found = 0;
+		foreach ($config['system']['usermanagement']['group'] as $v) {
+			if ($v['name'] == "syncthing") {
+				if ($found)
+					continue;
+				$found = 1;
+			}
+			$tmp[] = $v;
+		}
+		$config['system']['usermanagement']['group'] = $tmp;
+
+		$index = array_search_ex("varsize", $config['system']['rcconf']['param'], "name");
+		if ($index !== false) {
+			if ($config['system']['rcconf']['param'][$index]['value'] === "256m") {
+				$config['system']['rcconf']['param'][$index]['value'] = "512m";
+			}
+		}
+		$index = array_search_ex("vartmpsize", $config['system']['rcconf']['param'], "name");
+		if ($index !== false) {
+			if ($config['system']['rcconf']['param'][$index]['value'] == "128m") {
+				$config['system']['rcconf']['param'][$index]['value'] = "256m";
+			}
+		}
+		//$config['version'] = "2.4";
+	}
+
 	/* XXX Convert 9.5 -> 9.7 (must skip 9.6) */
 
 	write_config();
