@@ -85,6 +85,29 @@
 			<auth/>
 			-->
 		</email>
+		<loaderconf>
+			<param>
+				<!-- <enable/> -->
+				<uuid>938a66c6-fe89-4e2c-8e07-ad0aac8db511</uuid>
+				<name>vfs.zfs.arc_max</name>
+				<value>2G</value>
+				<comment>ZFS maximum ARC size</comment>
+			</param>
+			<param>
+				<!-- <enable/> -->
+				<uuid>2f380ee0-4b3f-440e-9ade-ad346c7f58d1</uuid>
+				<name>vfs.zfs.arc_min</name>
+				<value>1G</value>
+				<comment>ZFS minimum ARC size</comment>
+			</param>
+			<param>
+				<!-- <enable/> -->
+				<uuid>e1583f30-44da-4fc3-b726-b650dad74aee</uuid>
+				<name>vfs.zfs.prefetch_disable</name>
+				<value>1</value>
+				<comment>ZFS prefech disable</comment>
+			</param>
+		</loaderconf>
 		<rcconf>
 			<!--
 			<param>
