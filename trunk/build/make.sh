@@ -1825,7 +1825,7 @@ build_ports() {
 	# Create list of available ports.
 	echo "#! /bin/sh
 $DIALOG --title \"$NAS4FREE_PRODUCTNAME - Ports\" \\
---checklist \"Select the ports you want to process.\" 21 75 14 \\" > $tempfile
+--checklist \"Select the ports you want to process.\" 21 130 14 \\" > $tempfile
 
 	for s in $NAS4FREE_SVNDIR/build/ports/*; do
 		[ ! -d "$s" ] && continue
