@@ -20,6 +20,7 @@
     SUBDIR += gzip
     SUBDIR += inadyn-mt
     SUBDIR += iperf3
+    SUBDIR += ipmitool
     SUBDIR += isboot
     SUBDIR += istgt
     SUBDIR += libvncserver
