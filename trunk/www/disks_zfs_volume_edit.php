@@ -61,11 +61,17 @@ if (!isset($uuid) && (!sizeof($a_pool))) {
 	$errormsg = sprintf(gettext("No configured pools. Please add new <a href='%s'>pools</a> first."), "disks_zfs_zpool.php");
 }
 
+function get_volblocksize($pool, $name) {
+	mwexec2("zfs get -H -o value volblocksize $pool/$name 2>&1", $rawdata);
+	return $rawdata[0];
+}
+
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_volume, "uuid")))) {
 	$pconfig['uuid'] = $a_volume[$cnid]['uuid'];
 	$pconfig['name'] = $a_volume[$cnid]['name'];
 	$pconfig['pool'] = $a_volume[$cnid]['pool'][0];
 	$pconfig['volsize'] = $a_volume[$cnid]['volsize'];
+	$pconfig['volblocksize'] = get_volblocksize($pconfig['pool'], $pconfig['name']);
 	$pconfig['compression'] = $a_volume[$cnid]['compression'];
 	$pconfig['dedup'] = $a_volume[$cnid]['dedup'];
 	$pconfig['sync'] = $a_volume[$cnid]['sync'];
@@ -77,6 +83,7 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_volume, "uuid"
 	$pconfig['pool'] = "";
 	$pconfig['compression'] = "off";
 	$pconfig['volsize'] = "";
+	$pconfig['volblocksize'] = "";
 	$pconfig['dedup'] = "off";
 	$pconfig['sync'] = "standard";
 	$pconfig['sparse'] = false;
@@ -108,6 +115,7 @@ if ($_POST) {
 		$volume['name'] = $_POST['name'];
 		$volume['pool'] = $_POST['pool'];
 		$volume['volsize'] = $_POST['volsize'];
+		$volume['volblocksize'] = $_POST['volblocksize'];
 		$volume['compression'] = $_POST['compression'];
 		$volume['dedup'] = $_POST['dedup'];
 		$volume['sync'] = $_POST['sync'];
@@ -136,6 +144,7 @@ if ($_POST) {
 function enable_change(enable_change) {
 	document.iform.name.disabled = !enable_change;
 	document.iform.pool.disabled = !enable_change;
+	document.iform.volblocksize.disabled = !enable_change;
 }
 // -->
 </script>
@@ -177,6 +186,7 @@ function enable_change(enable_change) {
 					<?php $a_sync = array("standard" => "standard", "always" => "always", "disabled" => "disabled"); ?>
 					<?php html_combobox("sync", gettext("Sync"), $pconfig['sync'], $a_sync, gettext("Controls the behavior of synchronous requests."), true);?>
 					<?php html_checkbox("sparse", gettext("Sparse Volume"), !empty($pconfig['sparse']) ? true : false, gettext("Use as sparse volume. (thin provisioning)"), "", false);?>
+					<?php html_inputbox("volblocksize", gettext("Block size"), $pconfig['volblocksize'], gettext("ZFS volume block size. This value can not be changed after creation. Empty as default."), false, 10);?>
 					<?php html_inputbox("desc", gettext("Description"), $pconfig['desc'], gettext("You may enter a description here for your reference."), false, 40);?>
 				</table>
 				<div id="submit">

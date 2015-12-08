@@ -664,7 +664,10 @@ function zfs_volume_configure($uuid) {
 		$param .= "-o sync={$volume['sync']} ";
 		
 	if (!empty($volume['atime']))
-		$param .= "-o atime={$volume['atime']} ";		
+		$param .= "-o atime={$volume['atime']} ";
+
+	if (!empty($volume['volblocksize']))
+		$param .= "-o volblocksize={$volume['volblocksize']} ";
 
 	// Create the volume
 	$cmd = "zfs create -V {$volume['volsize']} {$param} {$volume['pool'][0]}/{$volume['name']}";
