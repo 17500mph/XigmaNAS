@@ -666,6 +666,9 @@ function zfs_volume_configure($uuid) {
 	if (!empty($volume['atime']))
 		$param .= "-o atime={$volume['atime']} ";
 
+	if (!empty($volume['volmode']) && $volume['volmode'] != "default")
+		$param .= "-o volmode={$volume['volmode']} ";
+
 	if (!empty($volume['volblocksize']))
 		$param .= "-o volblocksize={$volume['volblocksize']} ";
 
@@ -742,7 +745,7 @@ function zfs_volume_properties($uuid) {
 
 	$result = 0;
 
-	foreach (explode(" ", "volsize sparse compression dedup sync atime") as $attr) {
+	foreach (explode(" ", "volsize sparse compression dedup sync atime volmode") as $attr) {
 		$param = "";
 
 		switch ($attr) {
@@ -776,6 +779,11 @@ function zfs_volume_properties($uuid) {
 			case "atime":
 				if (!empty($volume['atime']))
 					$param = "atime={$volume['atime']}";
+				break;
+
+			case "volmode":
+				if (!empty($volume['volmode']))
+					$param = "volmode={$volume['volmode']}";
 				break;
 		}		
 		

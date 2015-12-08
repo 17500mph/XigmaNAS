@@ -71,6 +71,7 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_volume, "uuid"
 	$pconfig['name'] = $a_volume[$cnid]['name'];
 	$pconfig['pool'] = $a_volume[$cnid]['pool'][0];
 	$pconfig['volsize'] = $a_volume[$cnid]['volsize'];
+	$pconfig['volmode'] = $a_volume[$cnid]['volmode'];
 	$pconfig['volblocksize'] = get_volblocksize($pconfig['pool'], $pconfig['name']);
 	$pconfig['compression'] = $a_volume[$cnid]['compression'];
 	$pconfig['dedup'] = $a_volume[$cnid]['dedup'];
@@ -83,6 +84,7 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_volume, "uuid"
 	$pconfig['pool'] = "";
 	$pconfig['compression'] = "off";
 	$pconfig['volsize'] = "";
+	$pconfig['volmode'] = "default";
 	$pconfig['volblocksize'] = "";
 	$pconfig['dedup'] = "off";
 	$pconfig['sync'] = "standard";
@@ -115,6 +117,7 @@ if ($_POST) {
 		$volume['name'] = $_POST['name'];
 		$volume['pool'] = $_POST['pool'];
 		$volume['volsize'] = $_POST['volsize'];
+		$volume['volmode'] = $_POST['volmode'];
 		$volume['volblocksize'] = $_POST['volblocksize'];
 		$volume['compression'] = $_POST['compression'];
 		$volume['dedup'] = $_POST['dedup'];
@@ -179,6 +182,8 @@ function enable_change(enable_change) {
 					<?php $a_poollist = array(); foreach ($a_pool as $poolv) { $poolstatus = zfs_get_pool_list(); $poolstatus = $poolstatus[$poolv['name']]; $text = "{$poolv['name']}: {$poolstatus['size']}"; if (!empty($poolv['desc'])) { $text .= " ({$poolv['desc']})"; } $a_poollist[$poolv['name']] = htmlspecialchars($text); }?>
 					<?php html_combobox("pool", gettext("Pool"), $pconfig['pool'], $a_poollist, "", true);?>
 					<?php html_inputbox("volsize", gettext("Size"), $pconfig['volsize'], gettext("ZFS volume size. To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."), true, 10);?>
+					<?php $a_volmode = array("default" => gettext("Default"), "geom" => "geom", "dev" => "dev", "none" => "none");?>
+					<?php html_combobox("volmode", gettext("Volume mode"), $pconfig['volmode'], $a_volmode, gettext("Specifies how the volume should be exposed to the OS."), true);?>
 					<?php $a_compressionmode = array("on" => gettext("On"), "off" => gettext("Off"), "lz4" => "lz4", "lzjb" => "lzjb", "gzip" => "gzip", "zle" => "zle"); for ($n = 1; $n <= 9; $n++) { $mode = "gzip-{$n}"; $a_compressionmode[$mode] = $mode; }?>
 					<?php html_combobox("compression", gettext("Compression"), $pconfig['compression'], $a_compressionmode, gettext("Controls the compression algorithm used for this volume. The 'lzjb' compression algorithm is optimized for performance while providing decent data compression. Setting compression to 'On' uses the 'lzjb' compression algorithm. You can specify the 'gzip' level by using the value 'gzip-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'gzip' is equivalent to 'gzip-6'."), true);?>
 					<?php $a_dedup = array("on" => gettext("On"), "off" => gettext("Off"), "verify" => "verify", "sha256" => "sha256", "sha256,verify" => "sha256,verify"); ?>
