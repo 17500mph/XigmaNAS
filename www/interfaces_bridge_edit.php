@@ -85,8 +85,10 @@ if ($_POST) {
 		exit;
 	}
 
+	/*
 	if (count($_POST['bridgeif']) < 1)
 		$input_errors[] = gettext("There must be selected a minimum of 1 interface.");
+	*/
 	if (!empty($_POST['mtu']) && !is_numericint($_POST['mtu']))
 		$input_errors[] = sprintf(gettext("The attribute '%s' must be a number."), gettext("MTU"));
 
@@ -95,7 +97,7 @@ if ($_POST) {
 		$bridge['enable'] = $_POST['enable'] ? true : false;
 		$bridge['uuid'] = $_POST['uuid'];
 		$bridge['if'] = $_POST['if'];
-		$bridge['bridgeif'] = $_POST['bridgeif'];
+		$bridge['bridgeif'] = !empty($_POST['bridgeif']) ? $_POST['bridgeif'] : array();
 		$bridge['mtu'] = $_POST['mtu'];
 		$bridge['extraoptions'] = $_POST['extraoptions'];
 		$bridge['taplist'] = $_POST['taplist'];
