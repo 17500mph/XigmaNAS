@@ -109,9 +109,9 @@ $g_filesystems = array(
 	"ntfs" => "NTFS",
 	"ext2" => "EXT2",
 	"exfat" => "exFAT",
-	"softraid" => "Software RAID",
+	"softraid" => "Software RAID Device",
 	"geli" => "Encrypted",
-	"zfs" => "ZFS storage pool device"
+	"zfs" => "ZFS Storage Pool Device"
 );
 
 $g_file_upload_error = array(

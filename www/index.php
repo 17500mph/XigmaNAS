@@ -41,7 +41,7 @@ require("auth.inc");
 require("guiconfig.inc");
 require("zfs.inc");
 
-$pgtitle = array(gettext("System information"));
+$pgtitle = array(gettext("System Information"));
 $pgtitle_omit = true;
 
 if (!isset($config['vinterfaces']['carp']) || !is_array($config['vinterfaces']['carp']))
@@ -406,7 +406,7 @@ $(document).ready(function(){
   <tr>
     <td class="tabcont">
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
-	<?php html_titleline(gettext("System information"));?>
+	<?php html_titleline(gettext("System Information"));?>
 	<?php if (!empty($config['vinterfaces']['carp'])):?>
 	<?php html_textinfo("vipstatus", gettext("Virtual IP address"), htmlspecialchars(get_vip_status()));?>
 	<?php endif;?>

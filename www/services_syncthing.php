@@ -139,7 +139,7 @@ $(document).ready(function(){
 	<?php html_titleline_checkbox("enable", gettext("Syncthing"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "");?>
 	<?php html_filechooser("homedir", gettext("Home directory"), $pconfig['homedir'], gettext("Enter the path to the home directory. The config will be created under the specified directory."), $g['media_path'], false, 60);?>
 	<?php html_separator();?>
-	<?php html_titleline(sprintf("%s (%s)", gettext("Administrative WebGUI"), gettext("Syncthing")));?>
+	<?php html_titleline(gettext("Administrative WebGUI"));?>
 	<?php
 		$url = "http://${gui_ipaddr}:${gui_port}/";
 		$text = "<a href='${url}' id='a_url' target='_blank'>{$url}</a>";
@@ -147,7 +147,7 @@ $(document).ready(function(){
 	<?php html_text("url", gettext("URL"), $text);?>
 	</table>
 	<div id="submit">
-	  <input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save and Restart");?>" />
+	  <input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" />
 	</div>
 	<?php include("formend.inc");?>
       </form>

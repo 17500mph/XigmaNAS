@@ -71,7 +71,7 @@ $pgtitle = array(gettext("Diagnostics"), gettext("Information"), gettext("Mounts
   <tr>
     <td class="tabcont">
     	<table width="100%" border="0">
-    		<?php html_titleline(gettext("List of mount points"));?>
+    		<?php html_titleline(gettext("List Mount Points"));?>
 				<tr>
 					<td>
 						<pre><?php unset($rawdata); exec("/sbin/mount", $rawdata); echo htmlspecialchars(implode("\n", $rawdata));?></pre>

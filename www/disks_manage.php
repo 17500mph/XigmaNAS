@@ -171,13 +171,13 @@ function diskmanagement_process_updatenotification($mode, $data) {
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
 					<tr>
 						<td width="5%" class="listhdrlr"><?=gettext("Device"); ?></td>
-						<td width="15%" class="listhdrr"><?=gettext("Device model"); ?></td>
+						<td width="15%" class="listhdrr"><?=gettext("Device Model"); ?></td>
 						<td width="5%" class="listhdrr"><?=gettext("Size"); ?></td>
-						<td width="15%" class="listhdrr"><?=gettext("Serial number"); ?></td>
+						<td width="15%" class="listhdrr"><?=gettext("Serial Number"); ?></td>
 						<td width="5%" class="listhdrr"><?=gettext("Controller"); ?></td>
-						<td width="15%" class="listhdrr"><?=gettext("Controller model"); ?></td>
-						<td width="7%" class="listhdrr"><?=gettext("Standby time"); ?></td>
-						<td width="8%" class="listhdrr"><?=gettext("File system"); ?></td>
+						<td width="15%" class="listhdrr"><?=gettext("Controller Model"); ?></td>
+						<td width="7%" class="listhdrr"><?=gettext("Standby Time"); ?></td>
+						<td width="8%" class="listhdrr"><?=gettext("File System"); ?></td>
 						<td width="17%" class="listhdrr"><?=gettext("Status"); ?></td>
 						<td width="8%" class="list"></td>
 					</tr>
@@ -256,7 +256,7 @@ function diskmanagement_process_updatenotification($mode, $data) {
 						print $start_tag . ((empty($disk['serial']) ) === FALSE ? htmlspecialchars($disk['serial']) : htmlspecialchars(gettext("n/a"))) . $end_tag;
 						print $start_tag . htmlspecialchars($disk['controller'].$disk['controller_id']) . $end_tag;
 						print $start_tag . htmlspecialchars($disk['controller_desc']) . $end_tag;
-						print $start_tag . ($disk['harddiskstandby'] ? htmlspecialchars($disk['harddiskstandby']) : gettext("Always on")) . $end_tag;
+						print $start_tag . ($disk['harddiskstandby'] ? htmlspecialchars($disk['harddiskstandby']) : gettext("Always On")) . $end_tag;
 						print $start_tag . ((!empty($disk['fstype'])) ? htmlspecialchars(get_fstype_shortdesc($disk['fstype'])) : htmlspecialchars(gettext("Unknown or unformatted"))) . $end_tag;
 						print $status_start_tag . htmlspecialchars($status) . $status_end_tag;
 					?>
