@@ -30,6 +30,7 @@ Changes:
 - Add vfs.zfs.arc_max, vfs.zfs.arc_min, vfs.zfs.prefetch_disable.
 - Add IPMItool needs ipmi_load enabled in System|Advanced|loader.conf.
 - Add volblocksize on ZFS volume creation.
+- Add volmode on ZFS volume.
 - Remove usesendfile on CIFS/SMB.
 - Remove legacy disk aliases such as /dev/ad0.
 - Change DSA private key to RSA private key on SSH service.
