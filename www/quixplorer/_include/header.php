@@ -144,7 +144,9 @@ $menu['vm']['desc'] = gettext("VM");
 $menu['vm']['visible'] = Session::isAdmin();
 $menu['vm']['link'] = "../index.php";
 $menu['vm']['menuitem'] = array();
-if ("dom0" === $g['arch']) {
+if ("dom0" !== $g['arch']) {
+$menu['vm']['menuitem'][] = array("desc" => gettext("VirtualBox"), "link" => "../vm_vbox.php", "visible" => Session::isAdmin());
+} else {
 $menu['vm']['menuitem'][] = array("desc" => gettext("Virtual Machine"), "link" => "../vm_xen.php", "visible" => TRUE);
 }
 
@@ -185,9 +187,6 @@ if (!isset($config['system']['disablefm'])) {
 $menu['advanced']['menuitem'][] = array("type" => "separator", "visible" => Session::isAdmin());
 $menu['advanced']['menuitem'][] = array("desc" => gettext("Command"), "link" => "../exec.php", "visible" => Session::isAdmin());
 $menu['advanced']['menuitem'][] = array("type" => "separator", "visible" => Session::isAdmin());
-if ("dom0" !== $g['arch']) {
-$menu['advanced']['menuitem'][] = array("desc" => gettext("VirtualBox"), "link" => "../vm_vbox.php", "visible" => Session::isAdmin());
-}
 
 // Diagnostics
 $menu['diagnostics']['desc'] = gettext("Diagnostics");
