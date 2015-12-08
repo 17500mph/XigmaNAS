@@ -231,7 +231,7 @@ function enable_change(enable_change) {
 					<?php html_text("url", gettext("URL"), $text);?>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save and Restart");?>" onclick="onsubmit_content(); enable_change(true)" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" onclick="onsubmit_content(); enable_change(true)" />
 					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
 				</div>
 			</td>

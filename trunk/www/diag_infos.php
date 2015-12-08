@@ -75,21 +75,21 @@ $a_phy_disk = array_merge((array)get_physical_disks_list());
 	<tr>
 		<td class="tabcont">
 			<table width="100%" border="0">
-				<?php html_titleline(gettext("List of detected disks"));?>
+				<?php html_titleline(gettext("List Detected Disks"));?>
 				<tr>
 					<td>
 			<table width="100%" border="0" cellpadding="0" cellspacing="0">
 				<tr>
 					<td width="5%" class="listhdrlr"><?=gettext("Device");?></td>
-					<td width="10%" class="listhdrr"><?=gettext("Device model"); ?></td>
+					<td width="10%" class="listhdrr"><?=gettext("Device Model"); ?></td>
 					<td width="15%" class="listhdrr"><?=gettext("Description"); ?></td>
 					<td width="8%" class="listhdrr"><?=gettext("Size");?></td>
-					<td width="10%" class="listhdrr"><?=gettext("Serial number"); ?></td>
-					<td width="5%" class="listhdrr"><?=gettext("Rotation rate"); ?></td>
-					<td width="5%" class="listhdrr"><?=gettext("Transfer rate"); ?></td>
+					<td width="10%" class="listhdrr"><?=gettext("Serial Number"); ?></td>
+					<td width="5%" class="listhdrr"><?=gettext("Rotation Rate"); ?></td>
+					<td width="5%" class="listhdrr"><?=gettext("Transfer Rate"); ?></td>
 					<td width="8%" class="listhdrr"><?=gettext("S.M.A.R.T."); ?></td>
 					<td width="5%" class="listhdrr"><?=gettext("Controller"); ?></td>
-					<td width="15%" class="listhdrr"><?=gettext("Controller model"); ?></td>
+					<td width="15%" class="listhdrr"><?=gettext("Controller Model"); ?></td>
 					<td width="8%" class="listhdrr"><?=gettext("Temperature");?></td>
 					<td width="6%" class="listhdrr"><?=gettext("Status");?></td>
 				</tr>

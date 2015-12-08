@@ -321,7 +321,7 @@ function webguiproto_change() {
 					<?php html_inputbox("hostname", gettext("Hostname"), $pconfig['hostname'], sprintf(gettext("Name of the NAS host, without domain part e.g. %s."), "<em>" . strtolower(get_product_name()) ."</em>"), true, 40);?>
 					<?php html_inputbox("domain", gettext("Domain"), $pconfig['domain'], sprintf(gettext("e.g. %s"), "<em>com, local</em>"), false, 40);?>
 					<?php html_separator();?>
-					<?php html_titleline(gettext("DNS settings"));?>
+					<?php html_titleline(gettext("DNS"));?>
 			    <tr>
 			      <td width="22%" valign="top" class="vncell"><?=gettext("IPv4 DNS servers");?></td>
 			      <td width="78%" class="vtable">

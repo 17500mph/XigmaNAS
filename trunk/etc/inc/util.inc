@@ -2124,7 +2124,7 @@ function get_fstype_shortdesc($fstype) {
 			$shortdesc = "exFAT";
 			break;
 		case "zfs":
-			$shortdesc = "ZFS storage pool device";
+			$shortdesc = "ZFS Storage Pool";
 			break;
   }
 

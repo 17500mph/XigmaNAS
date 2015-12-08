@@ -71,14 +71,14 @@ $pgtitle = array(gettext("Diagnostics"), gettext("Information"), gettext("Space 
   <tr>
     <td class="tabcont">
       <table width="100%" border="0">
-	<?php html_titleline(gettext("Free disk space"));?>
+	<?php html_titleline(gettext("Space Usage"));?>
 	<tr>
 	  <td>
 	    <pre><?php unset($rawdata); exec("/bin/df -h", $rawdata); echo htmlspecialchars(implode("\n", $rawdata));?></pre>
 	  </td>
 	</tr>
 <?php if (file_exists("/sbin/xmdconfig")) { ?>
-	<?php html_titleline(gettext("Memory usage"));?>
+	<?php html_titleline(gettext("Memory Usage"));?>
 	<tr>
 	  <td>
 	    <pre><?php $xmdconfig_header = "Device  Type       Size Comp  Level    Ratio (compressed/allocated/uncompressed)"; // don't translate this header. it will be removed later.

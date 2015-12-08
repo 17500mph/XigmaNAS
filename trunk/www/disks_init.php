@@ -188,7 +188,7 @@ $(document).ready(function(){
 			      <td valign="top" class="vncellreq"><?=gettext("Disk"); ?></td>
 			      <td class="vtable">
 			        <select name="disk" class="formfld" id="disk">
-								<option value=""><?=gettext("Must choose one");?></option>
+								<option value=""><?=gettext("Select disk");?></option>
 								<?php foreach ($a_disk as $diskv):?>
 								<?php if (0 == strcmp($diskv['size'], "NA")) continue;?>
 								<?php if (1 == disks_exists($diskv['devicespecialfile'])) continue;?>
@@ -200,7 +200,7 @@ $(document).ready(function(){
 			      </td>
 					</tr>
 					<tr>
-				    <td valign="top" class="vncellreq"><?=gettext("File system");?></td>
+				    <td valign="top" class="vncellreq"><?=gettext("Filesystem");?></td>
 				    <td class="vtable">
 				      <select name="type" class="formfld" id="type">
 				        <?php foreach ($a_fst as $fstval => $fstname): ?>
@@ -231,7 +231,7 @@ $(document).ready(function(){
 			    <?php html_checkbox("aft4k", gettext("Advanced Format"), $pconfig['aft4k'] ? true : false, gettext("Enable Advanced Format (4KB sector)"), "", false, "");?>
 			    <?php html_checkbox("zfsgpt", gettext("GPT partition"), $pconfig['zfsgpt'] ? true : false, gettext("Create ZFS on GPT partition"), "", false, "");?>
 			    <tr>
-			      <td width="22%" valign="top" class="vncell"><?=gettext("Don't Erase MBR");?></td>
+			      <td width="22%" valign="top" class="vncell"><?=gettext("MBR Erase");?></td>
 			      <td width="78%" class="vtable">
 			        <input name="notinitmbr" id="notinitmbr" type="checkbox" value="yes" />
 			        <?=gettext("Don't erase the MBR (useful for some RAID controller cards)");?>
@@ -239,7 +239,7 @@ $(document).ready(function(){
 				  </tr>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Format disk");?>" onclick="return confirm('<?=gettext("Do you really want to format this disk? All data will be lost!");?>')" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Format");?>" onclick="return confirm('<?=gettext("Do you really want to format this disk? All data will be lost!");?>')" />
 				</div>
 				<?php if ($do_format) {
 				echo(sprintf("<div id='cmdoutput'>%s</div>", gettext("Command output:")));
