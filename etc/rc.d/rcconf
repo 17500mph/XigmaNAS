@@ -311,6 +311,7 @@ setifconfig()
 	/usr/local/bin/xml sel -t \
 		-m "//vinterfaces/bridge" \
 			-v if \
+			-v "concat(' \"', mtu,'\"')" \
 			-m "bridgeif" \
 				-v "concat(' addm ',.)" \
 			-b \
@@ -318,8 +319,10 @@ setifconfig()
 			-n \
 		-b \
 		${configxml_file} | /usr/local/bin/xml unesc | \
-		while read _bridge _bridge_args; do
-			_bridge_args="up ${_bridge_args}"
+		while read _bridge _mtu _bridge_args; do
+			if [ "${_mtu}" = '""' ]; then _mtu='"1500"'; fi
+			_mtu=`echo ${_mtu} | sed -e 's/^"\(.*\)"$/\1/'`
+			_bridge_args="up mtu ${_mtu} ${_bridge_args}"
 			_bridge_addr=`/usr/local/bin/xml sel -t -m "//interfaces/*[if = '${_bridge}']" \
 				-i "ipaddr[. = 'dhcp']" -o "syncdhcp" -b \
 				-i "ipaddr[. != 'dhcp']" -v "concat(ipaddr,'/',subnet)" -b \
