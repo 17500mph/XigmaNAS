@@ -281,7 +281,7 @@ function enable_change(enable_change) {
 						</td>
 					</tr>
 					<?php html_separator();?>
-					<?php html_titleline_checkbox("email_enable", gettext("Email report"), !empty($pconfig['email_enable']) ? true : false, gettext("Activate"), "enable_change(this)");?>
+					<?php html_titleline_checkbox("email_enable", gettext("Email Report"), !empty($pconfig['email_enable']) ? true : false, gettext("Activate"), "enable_change(this)");?>
 					<?php html_inputbox("email_to", gettext("To email"), !empty($pconfig['email_to']) ? $pconfig['email_to'] : "", sprintf("%s %s", gettext("Destination email address."), gettext("Separate email addresses by semi-colon.")), true, 40);?>
 					<?php html_checkbox("email_testemail", gettext("Test email"), !empty($pconfig['email_testemail']) ? true : false, gettext("Send a TEST warning email on startup."));?>
 				</table>
