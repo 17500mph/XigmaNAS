@@ -102,7 +102,6 @@ $menu['disks']['menuitem'][] = array("desc" => gettext("Management"), "link" => 
 $menu['disks']['menuitem'][] = array("desc" => gettext("Software RAID"), "link" => "../disks_raid_gmirror.php", "visible" => TRUE);
 $menu['disks']['menuitem'][] = array("desc" => gettext("Encryption"), "link" => "../disks_crypt.php", "visible" => TRUE);
 $menu['disks']['menuitem'][] = array("desc" => gettext("ZFS"), "link" => "../disks_zfs_zpool.php", "visible" => TRUE);
-$menu['disks']['menuitem'][] = array("desc" => gettext("Format"), "link" => "../disks_init.php", "visible" => TRUE);
 $menu['disks']['menuitem'][] = array("desc" => gettext("Mount Point"), "link" => "../disks_mount.php", "visible" => TRUE);
 
 // Services
@@ -186,7 +185,6 @@ if (!isset($config['system']['disablefm'])) {
 }
 $menu['advanced']['menuitem'][] = array("type" => "separator", "visible" => Session::isAdmin());
 $menu['advanced']['menuitem'][] = array("desc" => gettext("Command"), "link" => "../exec.php", "visible" => Session::isAdmin());
-$menu['advanced']['menuitem'][] = array("type" => "separator", "visible" => Session::isAdmin());
 
 // Diagnostics
 $menu['diagnostics']['desc'] = gettext("Diagnostics");
