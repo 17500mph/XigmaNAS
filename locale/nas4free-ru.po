@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-09 12:48+0000\n"
-"PO-Revision-Date: 2015-12-09 13:15+0000\n"
+"POT-Creation-Date: 2015-12-09 16:19+0000\n"
+"PO-Revision-Date: 2015-12-09 15:33+0000\n"
 "Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-09 13:44+0000\n"
+"X-Launchpad-Export-Date: 2015-12-09 15:41+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -902,7 +902,7 @@ msgstr ""
 "Среднее время раскрутки шпинделя (от состояния покоя до полной раскрутки)."
 
 msgid "Backup Configuration"
-msgstr "Сохранить конфигурацию"
+msgstr "Сохранение конфигурации"
 
 msgid "Backup file"
 msgstr "Файл резервной копии"
@@ -2369,7 +2369,7 @@ msgid "Download"
 msgstr "Скачать"
 
 msgid "Download Configuration"
-msgstr "Загрузить конфигурацию"
+msgstr "Сохранить конфигурацию"
 
 msgid "Download bandwidth"
 msgstr "Скорость загрузки"
@@ -2381,7 +2381,7 @@ msgid "Download directory"
 msgstr "Каталог скачиваемых файлов"
 
 msgid "Download firewall rules."
-msgstr "Экспортировать правила firewall."
+msgstr "Экспортировать правила брандмауэра"
 
 msgid "Drive Temperature."
 msgstr "Температура диска."
@@ -2538,14 +2538,8 @@ msgstr "Эффективность ИБП (соотношение значени
 msgid "Email"
 msgstr "Электронная почта"
 
-msgid "Email Notifications"
-msgstr "Email уведомления"
-
 msgid "Email Report"
 msgstr "Отчет по электронной почте"
-
-msgid "Email report"
-msgstr "Отправить отчет по e-mail"
 
 msgid "Empty as default."
 msgstr "Пустое по умолчанию"
@@ -3054,7 +3048,7 @@ msgid "Finnish"
 msgstr "Финский"
 
 msgid "Firewall"
-msgstr "Firewall"
+msgstr "Брандмауэр"
 
 msgid "Firewall Rule Settings"
 msgstr "Настройки правил брандмауэра"
@@ -3564,7 +3558,7 @@ msgid "Import disks used in configuration."
 msgstr "Импортировать диски, используемые в конфигурации"
 
 msgid "Import firewall rules."
-msgstr "Импортировать правила firewall."
+msgstr "Импортировать правила брандмауэра"
 
 msgid "Import on-disk ZFS config"
 msgstr "Импортировать конфигурацию с дисков ZFS"
@@ -3961,7 +3955,7 @@ msgstr ""
 "Level 254 - Максимальная производительность, максимальное энергопотребление"
 
 msgid "Level 64 - Intermediate Power Usage with Standby"
-msgstr "Level 64 - Среднее энергоплтребление с режимом Standby"
+msgstr "Среднее энергопотребление с режимом Standby"
 
 #, php-format
 msgid "Levels (MHz/mW): %s"
@@ -3974,7 +3968,7 @@ msgid "License & Credits"
 msgstr "Лицензия и список разработчиков"
 
 msgid "Life Time"
-msgstr "Продолжительность жизни"
+msgstr "Время жизни"
 
 msgid "Life time"
 msgstr "Время жизни"
@@ -4134,7 +4128,7 @@ msgid "Logical Unit Controller IP address (%s by default)"
 msgstr "IP-адрес Logical Unit Controller (по умолчанию %s)"
 
 msgid "Logical Unit Controller Login Information"
-msgstr ""
+msgstr "Информация о входе Logical Unit Controller"
 
 #, php-format
 msgid "Logical Unit Controller TCP port (%d by default)"
@@ -4245,7 +4239,7 @@ msgid "Masquerade address"
 msgstr "Маскарадный адрес"
 
 msgid "Max Protocol"
-msgstr "Максимальные протокол"
+msgstr "Максимальный протокол"
 
 msgid "Max. TTL"
 msgstr "Максимальный TTL"
@@ -4339,7 +4333,7 @@ msgstr ""
 "Максимальное зафиксированное значение температуры (в градусах Целься)"
 
 msgid "Media"
-msgstr "Скорость интерфейса"
+msgstr "Информация"
 
 msgid "Media Directory"
 msgstr "Каталог носителей"
@@ -5101,6 +5095,9 @@ msgstr "Разрешать вход с учетной записью root"
 msgid "Permit to do SSH Tunneling."
 msgstr "Разрешать SSH-туннелирование"
 
+msgid "Physical Interface"
+msgstr "Физический интерфейс"
+
 msgid "Physical interface"
 msgstr "Физический интерфейс"
 
@@ -5288,7 +5285,7 @@ msgid "Profile"
 msgstr "Профиль"
 
 msgid "Proto"
-msgstr "Proto"
+msgstr "Протокол"
 
 msgid "Protocol"
 msgstr "Протокол"
@@ -5843,7 +5840,7 @@ msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "Мониторинг, технология анализа и отчетности"
 
 msgid "Self-tests Management"
-msgstr "Управление тестами"
+msgstr "Управление самотестированием"
 
 msgid "Send Buffer Size"
 msgstr "Размер буфера отправки"
@@ -6120,7 +6117,7 @@ msgid "Sparse"
 msgstr "Разряженный том"
 
 msgid "Sparse Volume"
-msgstr "Разреженный том(Sparse Volume)"
+msgstr "Разреженный том (Sparse Volume)"
 
 msgid ""
 "Specific to He8 drives from HGST. The Helium, so says the literature, allows "
@@ -7935,8 +7932,8 @@ msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
 "<a href='%s' target='_blank'>documentation</a>."
 msgstr ""
-"Чтобы получить подробную информацию о создании правил firewall, прочтите <a "
-"href='%s' target='_blank'>документацию</a> по FreeBSD."
+"Чтобы получить подробную информацию о создании правил брандмауэра, прочтите "
+"<a href='%s' target='_blank'>документацию</a> по FreeBSD."
 
 #, php-format
 msgid ""
@@ -8148,6 +8145,9 @@ msgstr "UID"
 msgid "UPS"
 msgstr "UPS"
 
+msgid "UPS Information & Status"
+msgstr "Информация и статус ИБП"
+
 msgid "UPS Off Line"
 msgstr "ИБП в автономном режиме"
 
@@ -8307,8 +8307,8 @@ msgstr ""
 
 msgid "Use as sparse volume. (thin provisioning)"
 msgstr ""
-"Использовать, как разреженный том(sparse volume) - тонкое "
-"резервирование(thin provisioning)"
+"Использовать как разреженный том (sparse volume) - тонкое резервирование "
+"(thin provisioning)"
 
 msgid "Use different container as root of the tree."
 msgstr "Используйте другой контейнер в качестве корня дерева."
@@ -8435,6 +8435,9 @@ msgstr "VHID"
 msgid "VLAN"
 msgstr "VLAN"
 
+msgid "VLAN Tag"
+msgstr "Метка VLAN"
+
 msgid "VLAN tag"
 msgstr "Метка VLAN"
 
@@ -8476,17 +8479,20 @@ msgstr "Виртуальные устройства"
 msgid "Virtual Host ID"
 msgstr "Идентификатор виртуального узла"
 
+msgid "Virtual IP Address"
+msgstr "Виртуальный IP-адрес"
+
 msgid "Virtual IP address"
 msgstr "Виртуальный IP-адрес"
+
+msgid "Virtual Interface"
+msgstr "Виртуальный интерфейс"
 
 msgid "Virtual Machine"
 msgstr "Виртуальная машина"
 
 msgid "Virtual devices"
 msgstr "Виртуальные устройства"
-
-msgid "Virtual interface"
-msgstr "Виртуальный интерфейс"
 
 msgid "VirtualBox"
 msgstr "VirtualBox"
@@ -8597,7 +8603,7 @@ msgid ""
 "additional packages which do not support HAST volume cannot be used."
 msgstr ""
 "Когда режим HAST включен, локальные устройства, локальные сервисы и "
-"дополнительные пакеты, которые не поддерживают том(volume) HAST, не могут "
+"дополнительные пакеты, которые не поддерживают том (volume) HAST, не могут "
 "быть использованы."
 
 msgid ""
@@ -8773,10 +8779,10 @@ msgid "ZFS ACL"
 msgstr "ZFS ACL"
 
 msgid "ZFS Dataset Information & Status"
-msgstr "Информация и статус ZFS Dataset"
+msgstr "Информация и статус ZFS Dataset'ов"
 
 msgid "ZFS Dataset Properties"
-msgstr "Свойства ZFS Dataset"
+msgstr "Свойства ZFS Dataset'ов"
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "Информация и статус ZFS слепков"
@@ -9020,6 +9026,9 @@ msgstr "предупреждение"
 #~ msgid "Email notification"
 #~ msgstr "Уведомление по е-mail"
 
+#~ msgid "Email report"
+#~ msgstr "Отправить отчет по e-mail"
+
 #~ msgid "File path"
 #~ msgstr "Путь к файлу"
 
@@ -9167,6 +9176,9 @@ msgstr "предупреждение"
 #~ msgid "Virtual device"
 #~ msgstr "Виртуальные устройства"
 
+#~ msgid "Virtual interface"
+#~ msgstr "Виртуальный интерфейс"
+
 #~ msgid "ZFS dataset information and status"
 #~ msgstr "Информация и состояние dataset'ов ZFS"
 
@@ -9249,3 +9261,6 @@ msgstr "предупреждение"
 
 #~ msgid "HAST status of the configured resources"
 #~ msgstr "Состояние HAST сконфигурированных ресурсов"
+
+#~ msgid "Email Notifications"
+#~ msgstr "Email уведомления"

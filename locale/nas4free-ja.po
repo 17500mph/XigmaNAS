@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-11-29 22:43+0000\n"
+"POT-Creation-Date: 2015-12-09 16:19+0000\n"
 "PO-Revision-Date: 2015-11-30 15:15+0000\n"
 "Last-Translator: Daisuke Aoyama <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-30 15:20+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2015-12-09 15:41+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
 "X-Poedit-Language: Japanese\n"
@@ -51,8 +51,8 @@ msgid "%dB / block"
 msgstr "%dバイト / ブロック"
 
 #, php-format
-msgid "%s interface"
-msgstr "%s インタフェース"
+msgid "%s Interface"
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -306,6 +306,12 @@ msgstr "有効なプレフィックス値 (1-128) を指定してください。
 msgid "A valid systctl MIB value."
 msgstr "有効な sysctl MIB の値を入力して下さい。"
 
+msgid "ACL Inherit"
+msgstr ""
+
+msgid "ACL Mode"
+msgstr ""
+
 msgid "ACL inherit"
 msgstr "ACL 継承"
 
@@ -350,6 +356,9 @@ msgstr "属性名"
 
 msgid "Access"
 msgstr "アクセス"
+
+msgid "Access Mode"
+msgstr ""
 
 msgid "Access Restrictions"
 msgstr "アクセス制限"
@@ -526,8 +535,8 @@ msgstr "Advanced Format"
 msgid "Advanced Options"
 msgstr "高度なオプション"
 
-msgid "Advanced Power Management"
-msgstr "高度な電源管理"
+msgid "Advanced Settings"
+msgstr ""
 
 msgid "Advanced settings"
 msgstr "高度な設定"
@@ -671,8 +680,8 @@ msgstr "代わりの TCP ポート。デフォルトは 873"
 msgid "Alternative configuration directory (usually empty)."
 msgstr "代替の設定ディレクトリ (通常は空です)。"
 
-msgid "Always on"
-msgstr "常にオン"
+msgid "Always On"
+msgstr ""
 
 msgid "Always scan"
 msgstr "常にスキャン"
@@ -825,8 +834,8 @@ msgstr "磁気ヘッドのシーク動作の平均性能。この属性が減少
 msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr "スピンドルが停止状態から既定の回転数になるまでにかかった平均時間。"
 
-msgid "Backup configuration"
-msgstr "設定のバックアップ"
+msgid "Backup Configuration"
+msgstr ""
 
 msgid "Backup file"
 msgstr "バックアップファイル"
@@ -840,8 +849,8 @@ msgstr "Bad User - 存在しないユーザ"
 msgid "Balance algorithm"
 msgstr "負荷分散アルゴリズム"
 
-msgid "Ban list"
-msgstr "接続拒否リスト"
+msgid "Ban List"
+msgstr ""
 
 msgid "Ban list rule"
 msgstr "接続拒否ルール"
@@ -916,6 +925,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "待機時間"
+
+msgid "Block size"
+msgstr ""
 
 msgid "Blocksize"
 msgstr "ブロックサイズ"
@@ -1023,6 +1035,9 @@ msgstr "CP949 (韓国語)"
 
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (中国語 繁体字 Big5)"
+
+msgid "CPU Load"
+msgstr ""
 
 msgid "CPU frequency"
 msgstr "CPU 周波数"
@@ -1139,11 +1154,14 @@ msgstr "このルートに対応するインタフェースを指定します。
 msgid "Clear"
 msgstr "消去"
 
+msgid "Clear Config & Import Disks"
+msgstr ""
+
+msgid "Clear Config & Import Software Raid Disks"
+msgstr ""
+
 msgid "Clear config and Import disks"
 msgstr "コンフィグ消去とディスクのインポート"
-
-msgid "Clear config and Import software raid disks"
-msgstr "コンフィグ消去とソフトウェアRAIDのインポート"
 
 msgid ""
 "Click &quot;Enable firmware upload&quot; below, then choose the embedded "
@@ -1239,8 +1257,8 @@ msgstr "設定"
 msgid "Confirmation"
 msgstr "確認"
 
-msgid "Connected FTP users"
-msgstr "FTP 接続中のユーザ"
+msgid "Connected FTP Users & Status"
+msgstr ""
 
 msgid "Consider replacing this drive"
 msgstr "このドライブを交換することを検討してください"
@@ -1277,14 +1295,17 @@ msgstr "コントローラ 認証方法"
 msgid "Controller Authorised network"
 msgstr "コントローラ 認証ネットワーク"
 
+msgid "Controller IP Address"
+msgstr ""
+
 msgid "Controller IP address"
 msgstr "コントローラ IP アドレス"
 
+msgid "Controller Model"
+msgstr ""
+
 msgid "Controller TCP Port"
 msgstr "コントローラ TCP ポート"
-
-msgid "Controller model"
-msgstr "コントローラーモデル"
 
 msgid "Controls power consumption."
 msgstr "消費電力の制御。"
@@ -1571,6 +1592,9 @@ msgstr "DLNA/UPnP Fuppes"
 msgid "DLNA/UPnP MiniDLNA"
 msgstr "DLNA/UPnP MiniDLNA"
 
+msgid "DNS"
+msgstr ""
+
 msgid "DNS domain"
 msgstr "DNS ドメイン"
 
@@ -1579,9 +1603,6 @@ msgstr "DNS フォワーダ"
 
 msgid "DNS server is empty."
 msgstr "DNS サーバが空欄です。"
-
-msgid "DNS settings"
-msgstr "DNS の設定"
 
 #, php-format
 msgid ""
@@ -1819,6 +1840,9 @@ msgstr "概要"
 msgid "Destination"
 msgstr "宛て先"
 
+msgid "Destination Share"
+msgstr ""
+
 msgid "Destination email address."
 msgstr "メールの宛て先"
 
@@ -1870,14 +1894,14 @@ msgstr "デバイス /dev/%s - %s"
 msgid "Device IP"
 msgstr "デバイスのIP"
 
+msgid "Device Model"
+msgstr ""
+
 msgid "Device Pass-through"
 msgstr "SCSIデバイスパススルー"
 
 msgid "Device Serial"
 msgstr "デバイスシリアル"
-
-msgid "Device model"
-msgstr "デバイスモデル"
 
 msgid "Device polling"
 msgstr "デバイスポーリング"
@@ -2153,9 +2177,6 @@ msgstr "古い形式のドメイン名 例.EXAMPLE"
 msgid "Domain name, e.g. example.com."
 msgstr "ドメイン名 (例: example.com)"
 
-msgid "Don't Erase MBR"
-msgstr "MBR を消去しない"
-
 msgid "Don't erase the MBR (useful for some RAID controller cards)"
 msgstr "MBR を消去しない (いくつかの RAID コントローラカードで有用です)"
 
@@ -2176,6 +2197,9 @@ msgstr "ダブルパリティ RAID-Z (RAID 6)"
 
 msgid "Download"
 msgstr "ダウンロード"
+
+msgid "Download Configuration"
+msgstr ""
 
 msgid "Download bandwidth"
 msgstr "ダウンロード帯域"
@@ -2239,6 +2263,9 @@ msgstr "エラー:"
 
 msgid "Edit"
 msgstr "編集"
+
+msgid "Edit File"
+msgstr ""
 
 msgid "Edit Host"
 msgstr "ホストを編集"
@@ -2341,12 +2368,6 @@ msgid "Email"
 msgstr "メール"
 
 msgid "Email Report"
-msgstr "レポートメール"
-
-msgid "Email notification"
-msgstr "メール通知"
-
-msgid "Email report"
 msgstr "レポートメール"
 
 msgid "Empty as default."
@@ -2633,6 +2654,9 @@ msgstr "エクスポート"
 msgid "Export all the directories in the specified path."
 msgstr "指定されたパスの中にあるすべてのディレクトリーをエクスポートします。"
 
+msgid "Extended Attributes"
+msgstr ""
+
 msgid "Extended attributes"
 msgstr "拡張属性"
 
@@ -2773,14 +2797,14 @@ msgstr "ファイルエディタ"
 msgid "File Manager"
 msgstr "ファイルマネージャ"
 
+msgid "File Path"
+msgstr ""
+
 msgid "File Transfer Protocol"
 msgstr "ファイル転送プロトコル"
 
 msgid "File not found"
 msgstr "ファイルが存在しません"
-
-msgid "File path"
-msgstr "ファイルパス"
 
 #, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
@@ -2807,6 +2831,9 @@ msgstr "ファイル名"
 msgid "Fileserver"
 msgstr "ファイルサーバ"
 
+msgid "Filesystem"
+msgstr ""
+
 msgid "Filter"
 msgstr "フィルタ"
 
@@ -2816,8 +2843,8 @@ msgstr "フィンランド語"
 msgid "Firewall"
 msgstr "ファイアウォール"
 
-msgid "Firewall rule"
-msgstr "ファイアウォールルール"
+msgid "Firewall Rule Settings"
+msgstr ""
 
 msgid "Firmware"
 msgstr "ファームウェア"
@@ -2860,9 +2887,6 @@ msgstr "仮想デバイスが使用中でも異なるサイズを指定しても
 msgid "Format"
 msgstr "フォーマット"
 
-msgid "Format disk"
-msgstr "ディスクをフォーマット"
-
 msgid "Format the report for phpBB forum."
 msgstr "phpBB フォーラムのフォーマットでレポートを生成します。"
 
@@ -2874,9 +2898,6 @@ msgstr "断片化"
 
 msgid "Free"
 msgstr "空き容量"
-
-msgid "Free disk space"
-msgstr "ディスクの空き容量"
 
 msgid "French"
 msgstr "フランス語"
@@ -2997,14 +3018,14 @@ msgstr "HAST"
 msgid "HAST (Highly Available Storage)"
 msgstr "HAST (高可用性ストレージ)"
 
+msgid "HAST Information & Status Configured Resources"
+msgstr ""
+
+msgid "HAST Resource"
+msgstr ""
+
 msgid "HAST disabled"
 msgstr "HASTは無効です"
-
-msgid "HAST resource"
-msgstr "HAST リソース"
-
-msgid "HAST status of the configured resources"
-msgstr "構成済みリソースのHASTステータス"
 
 msgid "HAST volume"
 msgstr "HAST ボリューム"
@@ -3025,11 +3046,11 @@ msgstr ""
 "険な浮上状態が発生した場合、書き込みプロセスが停止され、情報がハードドライブの安全な領域に書き換えまたは再割り当てされます。この属性は、ドライブの寿命にわ"
 "たって検出したこれらのエラー数を示します。この機能は、最新のシーゲイトドライブに実装されています。"
 
+msgid "HDD standby time"
+msgstr ""
+
 msgid "HTTP Proxy"
 msgstr "HTTP プロキシ"
-
-msgid "Hard disk standby time"
-msgstr "ハードディスクスタンバイ時間"
 
 msgid "Hardware"
 msgstr "ハードウェア"
@@ -3127,11 +3148,11 @@ msgstr "IP アドレスの更新間隔。アドレスに変更が無くても更
 msgid "Hungarian"
 msgstr "ハンガリー語"
 
+msgid "I/O Statistics"
+msgstr ""
+
 msgid "I/O Timeout"
 msgstr "I/O タイムアウト"
-
-msgid "I/O statistics"
-msgstr "I/O 統計"
 
 #, php-format
 msgid "I/O timeout in seconds (%d by default)."
@@ -3145,6 +3166,9 @@ msgstr "IG"
 
 msgid "IP"
 msgstr "IP"
+
+msgid "IP Address"
+msgstr ""
 
 msgid "IP address"
 msgstr "IP アドレス"
@@ -3284,6 +3308,12 @@ msgstr "イメージアップロードが失敗しました (メモリ不足?)�
 msgid "Import"
 msgstr "インポート"
 
+msgid "Import Disks"
+msgstr ""
+
+msgid "Import Software Raid Disks"
+msgstr ""
+
 msgid "Import disks"
 msgstr "ディスクのインポート"
 
@@ -3295,9 +3325,6 @@ msgstr "ファイアウォールルールをインポート。"
 
 msgid "Import on-disk ZFS config"
 msgstr "ディスク上のZFS設定をインポート"
-
-msgid "Import software raid disks"
-msgstr "ソフトウェアRAIDのインポート"
 
 msgid "In"
 msgstr "入力"
@@ -3526,8 +3553,8 @@ msgstr "イタリア語"
 msgid "JBOD"
 msgstr "JBOD"
 
-msgid "JBOD information and status"
-msgstr "JBOD 情報とステータス"
+msgid "JBOD Information & Status"
+msgstr ""
 
 msgid ""
 "January February March April May June July August September October November "
@@ -3573,8 +3600,8 @@ msgstr "LAN のみ"
 msgid "LCDproc"
 msgstr "LCDproc"
 
-msgid "LCDproc (client)"
-msgstr "LCDproc (クライアント)"
+msgid "LCDproc (Client)"
+msgstr ""
 
 msgid "LDAP"
 msgstr "LDAP"
@@ -3636,23 +3663,23 @@ msgstr "自動スナップショットの保存"
 msgid "Leave this field empty to use default settings."
 msgstr "デフォルトの設定を使用する場合はこのフィールドを空のままにして下さい。"
 
-msgid "Level 1 - Minimum power usage with Standby (spindown)"
-msgstr "レベル 1 - スタンバイ (スピンダウン) の有る最小の消費電力"
+msgid "Level 1 - Minimum Power Usage with Standby (Spindown)"
+msgstr ""
 
-msgid "Level 127 - Intermediate power usage with Standby"
-msgstr "レベル 127 - スタンバイ有りの中間の消費電力"
+msgid "Level 127 - Intermediate Power Usage with Standby"
+msgstr ""
 
-msgid "Level 128 - Minimum power usage without Standby (no spindown)"
-msgstr "レベル 128 - スタンバイ (スピンダウン) の無い最小の消費電力"
+msgid "Level 128 - Minimum Power Usage without Standby (No Spindown)"
+msgstr ""
 
-msgid "Level 192 - Intermediate power usage without Standby"
-msgstr "レベル 192 - スタンバイ無しの中間の消費電力"
+msgid "Level 192 - Intermediate Power Usage without Standby"
+msgstr ""
 
-msgid "Level 254 - Maximum performance, maximum power usage"
-msgstr "レベル 254 - 最大のパフォーマンス、最大の消費電力"
+msgid "Level 254 - Maximum Performance, Maximum Power Usage"
+msgstr ""
 
-msgid "Level 64 - Intermediate power usage with Standby"
-msgstr "レベル 64 - スタンバイ有りの中間の消費電力"
+msgid "Level 64 - Intermediate Power Usage with Standby"
+msgstr ""
 
 #, php-format
 msgid "Levels (MHz/mW): %s"
@@ -3663,6 +3690,9 @@ msgstr "ライセンス"
 
 msgid "License & Credits"
 msgstr "ライセンスとクレジット"
+
+msgid "Life Time"
+msgstr ""
 
 msgid "Life time"
 msgstr "生存期間"
@@ -3693,6 +3723,15 @@ msgstr "リンクアップ時の処理"
 msgid "List"
 msgstr "リスト"
 
+msgid "List Detected Disks"
+msgstr ""
+
+msgid "List Imported Users"
+msgstr ""
+
+msgid "List Mount Points"
+msgstr ""
+
 msgid ""
 "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP "
 "(AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
@@ -3701,18 +3740,6 @@ msgstr ""
 "WPA で利用可能な暗号アルゴリズムのリスト。以下のうちひとつ以上: CCMP (AES, Counter mode with CBC-MAC "
 "Protocol, RFC 3610, IEEE 802.11i/D7.0)、TKIP (Temporal Key Integrity "
 "Protocol, IEEE 802.11i/D7.0)。"
-
-msgid "List of available target name on all configured iSCSI targets"
-msgstr "iSCSI ターゲットとして設定された使用可能なターゲット名の一覧"
-
-msgid "List of detected disks"
-msgstr "検出されたディスクのリスト"
-
-msgid "List of imported users"
-msgstr "インポートされたユーザの一覧"
-
-msgid "List of mount points"
-msgstr "マウントポイントのリスト"
 
 msgid "Load"
 msgstr "ロード"
@@ -3737,6 +3764,9 @@ msgstr "ローカル"
 
 msgid "Local Master Browser"
 msgstr "ローカルマスタブラウザ"
+
+msgid "Local Share (Destination)"
+msgstr ""
 
 msgid "Local User"
 msgstr "ローカルユーザ"
@@ -3810,12 +3840,12 @@ msgstr "論理装置コントローラの認証ネットワーク。(デフォ�
 msgid "Logical Unit Controller IP address (%s by default)"
 msgstr "論理装置コントローラのIPアドレス。(デフォルトは %s)"
 
+msgid "Logical Unit Controller Login Information"
+msgstr ""
+
 #, php-format
 msgid "Logical Unit Controller TCP port (%d by default)"
 msgstr "論理装置コントローラのTCPポート。(デフォルトは %d)"
-
-msgid "Logical Unit Controller login information"
-msgstr "論理装置コントローラ ログイン情報"
 
 msgid "Logical Unit Type mapped to LUN."
 msgstr "LUN に割り当てる装置のタイプ。"
@@ -3848,6 +3878,9 @@ msgstr ""
 msgid "MAC address"
 msgstr "MAC アドレス"
 
+msgid "MBR Erase"
+msgstr ""
+
 msgid "MBR partition"
 msgstr "MBR パーティション"
 
@@ -3866,8 +3899,8 @@ msgstr "移動先"
 msgid "MS Active Directory"
 msgstr "MS Active Directory"
 
-msgid "MS Active Directory informations"
-msgstr "MS Active Directory の情報"
+msgid "MS Active Directory Information & Status"
+msgstr ""
 
 msgid "MS Domain"
 msgstr "MS ドメイン"
@@ -3955,6 +3988,9 @@ msgstr "MaxOutstandingR2T"
 msgid "MaxRecvDataSegmentLength"
 msgstr "MaxRecvDataSegmentLength"
 
+msgid "Maximum Performance, Maximum Acoustic Output"
+msgstr ""
+
 msgid "Maximum connections"
 msgstr "最大接続数"
 
@@ -3993,9 +4029,6 @@ msgstr "同時接続クライアントの最大値。"
 msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
 msgstr "最大の同時接続数。初期値は 0 (無制限)。"
 
-msgid "Maximum performance, maximum acoustic output"
-msgstr "最大のパフォーマンス、最大の音響出力"
-
 msgid "Maximum relative humidity seen (percent)"
 msgstr "最大相対湿度"
 
@@ -4011,11 +4044,14 @@ msgstr "メディアディレクトリ"
 msgid "Media library"
 msgstr "メディアライブラリ"
 
-msgid "Medium acoustic output"
-msgstr "中間の音響出力"
+msgid "Medium Acoustic Output"
+msgstr ""
 
 msgid "Member Interface"
 msgstr "メンバ インターフェース"
+
+msgid "Memory Usage"
+msgstr ""
 
 msgid "Memory usage"
 msgstr "メモリ使用率"
@@ -4049,6 +4085,9 @@ msgstr "Minidlna構成が更新されました。"
 msgid "Minimum"
 msgstr "最小"
 
+msgid "Minimum Performance, Minimum Acoustic Output"
+msgstr ""
+
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr "電源OFF後のUPS再起動の最少バッテリー残量"
 
@@ -4060,9 +4099,6 @@ msgstr "最少周波数"
 
 msgid "Minimum incoming voltage seen"
 msgstr "最少入力電圧"
-
-msgid "Minimum performance, Minimum acoustic output"
-msgstr "最小のパフォーマンス、最小の音響出力"
 
 msgid "Minimum relative humidity seen (percent)"
 msgstr "最少相対湿度(%)"
@@ -4088,11 +4124,11 @@ msgstr "モード"
 msgid "Model"
 msgstr "モデル"
 
-msgid "Model extra"
-msgstr "Model extra"
+msgid "Model Extra"
+msgstr ""
 
-msgid "Model name"
-msgstr "モデル名"
+msgid "Model Name"
+msgstr ""
 
 msgid "Modified"
 msgstr "変更日"
@@ -4329,14 +4365,14 @@ msgstr "プールは見つかりませんでした。"
 msgid "Node A IP address"
 msgstr "ノード A IPアドレス"
 
-msgid "Node A settings"
-msgstr "ノード A 設定"
+msgid "Node A Settings"
+msgstr ""
 
 msgid "Node B IP address"
 msgstr "ノードB IPアドレス"
 
-msgid "Node B settings"
-msgstr "ノード B 設定"
+msgid "Node B Settings"
+msgstr ""
 
 msgid "Node Base"
 msgstr "ノードベース"
@@ -4489,8 +4525,8 @@ msgstr ""
 "仮想デバイスを一旦加えると、再び削除することは不可能になります。\r\n"
 "既存の仮想デバイスと同じ数のドライブを加えることを推奨します。"
 
-msgid "Online version check"
-msgstr "オンラインバージョンチェック"
+msgid "Online"
+msgstr ""
 
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
@@ -4710,6 +4746,9 @@ msgstr "root ログインを許可"
 msgid "Permit to do SSH Tunneling."
 msgstr "SSH トンネリングを許可します。"
 
+msgid "Physical Interface"
+msgstr ""
+
 msgid "Physical interface"
 msgstr "物理インタフェース"
 
@@ -4753,8 +4792,8 @@ msgstr "ポーリング時間"
 msgid "Pool"
 msgstr "プール"
 
-msgid "Pool information and status"
-msgstr "プールの情報とステータス"
+msgid "Pool Information & Status"
+msgstr ""
 
 msgid "Pools"
 msgstr "プール"
@@ -4816,6 +4855,9 @@ msgstr "電源管理 デーモン"
 msgid "Power Mode"
 msgstr "電源モード"
 
+msgid "Power management"
+msgstr ""
+
 msgid "Power mode"
 msgstr "電源モード"
 
@@ -4829,8 +4871,8 @@ msgid "PreInit"
 msgstr "初期化前"
 
 #, php-format
-msgid "Predefined system groups"
-msgstr "システム定義済みグループ"
+msgid "Predefined Groups"
+msgstr ""
 
 msgid "Preferred"
 msgstr "優先"
@@ -4880,8 +4922,8 @@ msgstr "プロセス"
 msgid "Processes"
 msgstr "プロセス"
 
-msgid "Processes information"
-msgstr "プロセス情報"
+msgid "Processes Information"
+msgstr ""
 
 msgid "Product ID"
 msgstr "製品ID"
@@ -4902,9 +4944,9 @@ msgid "Proxy"
 msgstr "プロキシ"
 
 msgid ""
-"Puts the hard disk into standby mode when the selected amount of time after "
-"the last hard disk access has been elapsed."
-msgstr "最後にアクセスしてから、指定された時間が経過すると、ハードディスクを待機モードにします。"
+"Puts the disk into standby mode when the selected amount of time after the "
+"last disk access has been elapsed."
+msgstr ""
 
 msgid "Queue Depth"
 msgstr "キューの深さ"
@@ -4918,26 +4960,26 @@ msgstr "クォータ"
 msgid "RAID 0"
 msgstr "RAID 0"
 
-msgid "RAID 0 information and status"
-msgstr "RAID 0 情報とステータス"
+msgid "RAID 0 Information & Status"
+msgstr ""
 
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
-msgid "RAID 0/1/5 information and status"
-msgstr "RAID 0/1/5 情報とステータス"
+msgid "RAID 0/1/5 Information & Status"
+msgstr ""
 
 msgid "RAID 1"
 msgstr "RAID 1"
 
-msgid "RAID 1 information and status"
-msgstr "RAID 1 情報とステータス"
+msgid "RAID 1 Information & Status"
+msgstr ""
 
 msgid "RAID 5"
 msgstr "RAID 5"
 
-msgid "RAID 5 information and status"
-msgstr "RAID 5 情報とステータス"
+msgid "RAID 5 Information & Status"
+msgstr ""
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -4969,8 +5011,8 @@ msgstr "RSYNC - サーバー"
 msgid "RSYNC Client"
 msgstr "RSYNC クライアント"
 
-msgid "RSYNC Client informations"
-msgstr "RSYNC クライアント情報"
+msgid "RSYNC Client Information & Status"
+msgstr ""
 
 msgid "RSYNC events"
 msgstr "RSYNC のイベント"
@@ -5062,11 +5104,14 @@ msgstr "ページの再読込み"
 msgid "Remaining battery runtime"
 msgstr "残りバッテリー時間"
 
+msgid "Remote Address"
+msgstr ""
+
+msgid "Remote Module (Source)"
+msgstr ""
+
 msgid "Remote Rsync Server"
 msgstr "リモート Rsync サーバ"
-
-msgid "Remote address"
-msgstr "リモートアドレス"
 
 msgid "Remote module (source)"
 msgstr "リモートモジュール (ソース)"
@@ -5114,11 +5159,11 @@ msgstr "認証を要求します。"
 msgid "Required"
 msgstr "必須"
 
+msgid "Rescan Disks"
+msgstr ""
+
 msgid "Rescan database in progress"
 msgstr "データベース再スキャン中"
-
-msgid "Rescan disks"
-msgstr "ディスクの再スキャン"
 
 msgid "Rescan interval"
 msgstr "再スキャンの間隔"
@@ -5143,6 +5188,9 @@ msgstr "リソース名"
 
 msgid "Resources"
 msgstr "リソース"
+
+msgid "Restore Configuration"
+msgstr ""
 
 msgid "Restore configuration"
 msgstr "設定のリストア"
@@ -5186,8 +5234,8 @@ msgstr "Root bind DN"
 msgid "Root bind password"
 msgstr "Root bind パスワード"
 
-msgid "Rotation rate"
-msgstr "回転数"
+msgid "Rotation Rate"
+msgstr ""
 
 msgid "Round-robin read"
 msgstr "ラウンドロビンでの読み出し"
@@ -5207,8 +5255,8 @@ msgstr "列"
 msgid "Rsync"
 msgstr "Rsync"
 
-msgid "Rsync job"
-msgstr "Rsync ジョブ"
+msgid "Rsync Job"
+msgstr ""
 
 msgid "Rule"
 msgstr "ルール"
@@ -5298,6 +5346,12 @@ msgstr "Samba は要求サイズがこの値より大きい場合に非同期フ
 msgid "Save"
 msgstr "保存"
 
+msgid "Save & Restart"
+msgstr ""
+
+msgid "Save File"
+msgstr ""
+
 msgid "Save and Restart"
 msgstr "保存して再起動"
 
@@ -5326,23 +5380,26 @@ msgstr ""
 msgid "Scan type"
 msgstr "スキャンタイプ"
 
+msgid "Schedule Time"
+msgstr ""
+
 msgid "Schedule time"
 msgstr "スケジュール時刻"
 
 msgid "Scheduled"
 msgstr "スケジュール"
 
+msgid "Scheduled Reboot"
+msgstr ""
+
 msgid "Scheduled Self-Test"
 msgstr "スケジュールされたセルフテスト"
 
-msgid "Scheduled reboot"
-msgstr "スケジュールされたリブート"
+msgid "Scheduled Shutdown"
+msgstr ""
 
-msgid "Scheduled self-tests"
-msgstr "スケジュールされたセルフテスト"
-
-msgid "Scheduled shutdown"
-msgstr "シャットダウンスケジュール"
+msgid "Scheduled tests"
+msgstr ""
 
 msgid "Secondary"
 msgstr "セカンダリ"
@@ -5358,6 +5415,9 @@ msgstr "セキュリティー"
 
 msgid "See attribute E8."
 msgstr "E8属性を参照してください。"
+
+msgid "Select"
+msgstr ""
 
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
@@ -5407,14 +5467,20 @@ msgstr "選択したデバイスまたはラベルが存在しません。"
 msgid "Selected file isn't an valid ISO file."
 msgstr "選択されたファイルは有効な ISOファイルではありません。"
 
-msgid "Self-Monitoring, Analysis and Reporting Technology"
-msgstr "セルフモニタリング、分析及びレポート"
+msgid "Self-Monitoring, Analysis & Reporting Technology"
+msgstr ""
+
+msgid "Self-tests Management"
+msgstr ""
 
 msgid "Send Buffer Size"
 msgstr "送信バッファサイズ"
 
 msgid "Send Command!"
 msgstr "コマンド送信!"
+
+msgid "Send Now"
+msgstr ""
 
 msgid "Send a TEST warning email on startup."
 msgstr "起動時にテストとして警告メールを送信します。"
@@ -5430,6 +5496,9 @@ msgstr "セミコロンを使用してメールアドレスを複数記述する
 
 msgid "Serial Console"
 msgstr "シリアルコンソール"
+
+msgid "Serial Number"
+msgstr ""
 
 msgid "Serial number"
 msgstr "シリアル番号"
@@ -5543,17 +5612,17 @@ msgstr "シェル"
 msgid "Shock During Write."
 msgstr "書き込み中の衝撃。"
 
+msgid "Show Process Information"
+msgstr ""
+
 msgid "Show RAW UPS Info"
 msgstr "無加工UPS情報の表示"
 
+msgid "Show UPS Information"
+msgstr ""
+
 msgid "Show log entries in reverse order (newest entries on top)"
 msgstr "逆順でログエントリを表示する (もっとも新しいエントリがトップ)"
-
-msgid "Show process information"
-msgstr "プロセス情報の表示"
-
-msgid "Show ups information"
-msgstr "UPS情報の表示"
 
 msgid "Shutdown"
 msgstr "シャットダウン"
@@ -5631,6 +5700,9 @@ msgstr "使用ソフトウェア"
 msgid "Source"
 msgstr "送信元"
 
+msgid "Source Share"
+msgstr ""
+
 msgid "Source directory to be synchronized."
 msgstr "同期するソースディレクトリを指定します。"
 
@@ -5639,6 +5711,9 @@ msgstr "送信ポート"
 
 msgid "Source share"
 msgstr "接続元共有"
+
+msgid "Space Usage"
+msgstr ""
 
 msgid "Space Used"
 msgstr "使用量"
@@ -5671,6 +5746,9 @@ msgstr "指定されたパスはNFSv4のルートディレクトリです。"
 
 msgid "Specifies how many servers to create."
 msgstr "作成するサーバ数を指定します。"
+
+msgid "Specifies how the volume should be exposed to the OS."
+msgstr ""
 
 msgid "Specifies that the file system should be exported read-only."
 msgstr "エクスポートされるファイルシステムを読み取り専用とします。"
@@ -5716,6 +5794,9 @@ msgstr "分割リクエスト"
 msgid "Standard"
 msgstr "標準"
 
+msgid "Standby"
+msgstr ""
+
 msgid ""
 "Standby - Check the device unless it is in SLEEP or STANDBY mode. In these "
 "modes most disks are not spinning, so if you want to prevent a laptop disk "
@@ -5724,9 +5805,6 @@ msgstr ""
 "Standby - "
 "スリープ又はスタンバイモードで無い限り、デバイスをチェックします。これらのモードではディスクはほとんど回転しません。ラップトップで使用しているディスクでポ"
 "ーリングによるスピンアップを防止したい場合は望まれる選択肢です。"
-
-msgid "Standby time"
-msgstr "スタンバイ時間"
 
 msgid "Start"
 msgstr "開始"
@@ -5817,14 +5895,14 @@ msgstr "エラーでは無いメッセージの出力を抑制します。"
 msgid "Swap"
 msgstr "スワップ"
 
+msgid "Swap Information & Status"
+msgstr ""
+
+msgid "Swap Memory"
+msgstr ""
+
 msgid "Swap disabled"
 msgstr "スワップ無効"
-
-msgid "Swap memory"
-msgstr "スワップメモリ"
-
-msgid "Swap status"
-msgstr "スワップステータス"
 
 msgid "Swap usage"
 msgstr "スワップ使用率"
@@ -5875,23 +5953,20 @@ msgstr "システム"
 msgid "System Beep"
 msgstr "システムビープ"
 
+msgid "System Information"
+msgstr ""
+
+msgid "System Load"
+msgstr ""
+
 msgid "System bios"
 msgstr "システムBIOS"
 
 msgid "System events"
 msgstr "システムイベント"
 
-msgid "System firewall"
-msgstr "システムファイアウォール"
-
 msgid "System info"
 msgstr "システム情報"
-
-msgid "System information"
-msgstr "システムインフォメーション"
-
-msgid "System load"
-msgstr "システム負荷"
 
 msgid "System log"
 msgstr "システムログ"
@@ -5994,11 +6069,11 @@ msgstr "ターゲット"
 msgid "Temperature"
 msgstr "温度"
 
+msgid "Temperature Monitoring"
+msgstr ""
+
 msgid "Temperature alarm (enabled/disabled)"
 msgstr "温度警告(有効/無効)"
-
-msgid "Temperature monitoring"
-msgstr "温度監視"
 
 msgid "Temperature threshold high (degrees C)"
 msgstr "温度上限値(セ氏)"
@@ -6853,9 +6928,9 @@ msgid ""
 msgstr "この WLAN はインターフェースとして使用されているため、削除できません。"
 
 msgid ""
-"This allows you to lower the power consumption of the drive, at the expense "
+"This allows you to lower the power consumption of the disk, at the expense "
 "of performance."
-msgstr "性能を犠牲にする事で、ドライブの消費電力量を下げる事が可能になります。"
+msgstr ""
 
 msgid "This allows you to set how loud the drive is while it's operating."
 msgstr "オペレーション中のドライブの騒音レベルを設定する事が出来ます。"
@@ -6865,8 +6940,8 @@ msgid ""
 "containing data."
 msgstr "事前フォーマットされ、ファイルシステムを含んだハードディスクを設定する事が可能です。"
 
-msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
-msgstr "ATA/IDE ハードディスクドライブの転送モードを設定する事が出来ます。"
+msgid "This allows you to set the transfer mode for ATA/IDE disks."
+msgstr ""
 
 msgid ""
 "This attribute indicates the count of full hard disk power on/off cycles."
@@ -7349,11 +7424,11 @@ msgstr "カンマ区切りのパスをコンピレーションとして取り扱
 msgid "Transcoding"
 msgstr "トランスコーディング"
 
+msgid "Transfer Rate"
+msgstr ""
+
 msgid "Transfer mode"
 msgstr "転送モード"
-
-msgid "Transfer rate"
-msgstr "転送速度"
 
 msgid "Trap host"
 msgstr "トラップホスト"
@@ -7411,6 +7486,13 @@ msgstr "UFS"
 
 #, php-format
 msgid ""
+"UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
+"filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
+"unpredictable results, file corruption and the loss of data!"
+msgstr ""
+
+#, php-format
+msgid ""
 "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
 "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
 "NTFS can result in unpredictable results, file corruption, and loss of data!"
@@ -7433,6 +7515,9 @@ msgstr "UID"
 
 msgid "UPS"
 msgstr "UPS"
+
+msgid "UPS Information & Status"
+msgstr ""
 
 msgid "UPS Off Line"
 msgstr "UPSオフライン"
@@ -7643,12 +7728,12 @@ msgstr "使用量"
 msgid "User"
 msgstr "ユーザ"
 
+#, php-format
+msgid "User Defined Groups"
+msgstr ""
+
 msgid "User ID"
 msgstr "ユーザ ID"
-
-#, php-format
-msgid "User defined groups"
-msgstr "ユーザ定義グループ"
 
 msgid "User full name."
 msgstr "ユーザのフルネーム。"
@@ -7699,6 +7784,9 @@ msgstr "VHID"
 msgid "VLAN"
 msgstr "VLAN"
 
+msgid "VLAN Tag"
+msgstr ""
+
 msgid "VLAN tag"
 msgstr "VLAN タグ"
 
@@ -7728,23 +7816,29 @@ msgstr "書き込み中の振動。"
 msgid "Video"
 msgstr "動画"
 
+msgid "Virtual Device"
+msgstr ""
+
+msgid "Virtual Devices"
+msgstr ""
+
 msgid "Virtual Host ID"
 msgstr "仮想ホストID"
+
+msgid "Virtual IP Address"
+msgstr ""
 
 msgid "Virtual IP address"
 msgstr "仮想IPアドレス"
 
+msgid "Virtual Interface"
+msgstr ""
+
 msgid "Virtual Machine"
 msgstr "仮想マシン"
 
-msgid "Virtual device"
-msgstr "仮想デバイス"
-
 msgid "Virtual devices"
 msgstr "仮想デバイス"
-
-msgid "Virtual interface"
-msgstr "仮想インタフェース"
 
 msgid "VirtualBox"
 msgstr "VirtualBox"
@@ -7763,6 +7857,9 @@ msgstr "ボリュームラベル"
 
 msgid "Volume label of the new file system."
 msgstr "新しいファイルシステムのボリュームラベル"
+
+msgid "Volume mode"
+msgstr ""
 
 msgid "Volumes"
 msgstr "ボリューム"
@@ -7999,26 +8096,31 @@ msgstr "ZFS"
 msgid "ZFS ACL"
 msgstr "ZFS ACL"
 
-msgid "ZFS dataset information and status"
-msgstr "ZFS データセット情報と状態"
+msgid "ZFS Dataset Information & Status"
+msgstr ""
 
-msgid "ZFS dataset properties"
-msgstr "ZFS データセットプロパティ"
+msgid "ZFS Dataset Properties"
+msgstr ""
 
-msgid "ZFS snapshot information and status"
-msgstr "ZFS スナップショット情報と状態"
+msgid "ZFS Snapshot Information & Status"
+msgstr ""
 
-msgid "ZFS snapshot properties"
-msgstr "ZFS スナップショットプロパティ"
+msgid "ZFS Snapshot Properties"
+msgstr ""
+
+msgid "ZFS Volume Information & Status"
+msgstr ""
+
+msgid "ZFS Volume Properties"
+msgstr ""
 
 msgid "ZFS volume"
 msgstr "ZFS ボリューム"
 
-msgid "ZFS volume information and status"
-msgstr "ZFS ボリューム情報と状態"
-
-msgid "ZFS volume properties"
-msgstr "ZFS ボリュームプロパティ"
+msgid ""
+"ZFS volume block size. This value can not be changed after creation. Empty "
+"as default."
+msgstr ""
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
@@ -8095,6 +8197,9 @@ msgstr "iSCSI ターゲット"
 msgid "iSCSI Target Logical Unit Controller"
 msgstr "iSCSI ターゲット論理装置コントローラ"
 
+msgid "iSCSI Targets Information & Status"
+msgstr ""
+
 #, php-format
 msgid "iSCSI initial parameter (%d by default)."
 msgstr "iSCSI 初期パラメータ(初期値:%d)"
@@ -8124,9 +8229,6 @@ msgid "minimum (power saving)"
 msgstr "minimum (省電力)"
 
 msgid "minute(s)"
-msgstr "分"
-
-msgid "minutes"
 msgstr "分"
 
 msgid "mirroring"
@@ -8200,3 +8302,259 @@ msgstr "バージョン:"
 
 msgid "warning"
 msgstr "警告"
+
+#, php-format
+#~ msgid "%s interface"
+#~ msgstr "%s インタフェース"
+
+#~ msgid "Advanced Power Management"
+#~ msgstr "高度な電源管理"
+
+#~ msgid "Always on"
+#~ msgstr "常にオン"
+
+#~ msgid "Backup configuration"
+#~ msgstr "設定のバックアップ"
+
+#~ msgid "Ban list"
+#~ msgstr "接続拒否リスト"
+
+#~ msgid "Connected FTP users"
+#~ msgstr "FTP 接続中のユーザ"
+
+#~ msgid "DNS settings"
+#~ msgstr "DNS の設定"
+
+#~ msgid "Device model"
+#~ msgstr "デバイスモデル"
+
+#~ msgid "Don't Erase MBR"
+#~ msgstr "MBR を消去しない"
+
+#~ msgid "Email notification"
+#~ msgstr "メール通知"
+
+#~ msgid "Email report"
+#~ msgstr "レポートメール"
+
+#~ msgid "File path"
+#~ msgstr "ファイルパス"
+
+#~ msgid "Firewall rule"
+#~ msgstr "ファイアウォールルール"
+
+#~ msgid "Format disk"
+#~ msgstr "ディスクをフォーマット"
+
+#~ msgid "Free disk space"
+#~ msgstr "ディスクの空き容量"
+
+#~ msgid "Hard disk standby time"
+#~ msgstr "ハードディスクスタンバイ時間"
+
+#~ msgid "I/O statistics"
+#~ msgstr "I/O 統計"
+
+#~ msgid "LCDproc (client)"
+#~ msgstr "LCDproc (クライアント)"
+
+#~ msgid "Level 1 - Minimum power usage with Standby (spindown)"
+#~ msgstr "レベル 1 - スタンバイ (スピンダウン) の有る最小の消費電力"
+
+#~ msgid "Level 127 - Intermediate power usage with Standby"
+#~ msgstr "レベル 127 - スタンバイ有りの中間の消費電力"
+
+#~ msgid "Level 128 - Minimum power usage without Standby (no spindown)"
+#~ msgstr "レベル 128 - スタンバイ (スピンダウン) の無い最小の消費電力"
+
+#~ msgid "Level 192 - Intermediate power usage without Standby"
+#~ msgstr "レベル 192 - スタンバイ無しの中間の消費電力"
+
+#~ msgid "Level 254 - Maximum performance, maximum power usage"
+#~ msgstr "レベル 254 - 最大のパフォーマンス、最大の消費電力"
+
+#~ msgid "Level 64 - Intermediate power usage with Standby"
+#~ msgstr "レベル 64 - スタンバイ有りの中間の消費電力"
+
+#~ msgid "List of available target name on all configured iSCSI targets"
+#~ msgstr "iSCSI ターゲットとして設定された使用可能なターゲット名の一覧"
+
+#~ msgid "List of imported users"
+#~ msgstr "インポートされたユーザの一覧"
+
+#~ msgid "List of mount points"
+#~ msgstr "マウントポイントのリスト"
+
+#~ msgid "Logical Unit Controller login information"
+#~ msgstr "論理装置コントローラ ログイン情報"
+
+#~ msgid "MS Active Directory informations"
+#~ msgstr "MS Active Directory の情報"
+
+#~ msgid "Maximum performance, maximum acoustic output"
+#~ msgstr "最大のパフォーマンス、最大の音響出力"
+
+#~ msgid "Medium acoustic output"
+#~ msgstr "中間の音響出力"
+
+#~ msgid "Minimum performance, Minimum acoustic output"
+#~ msgstr "最小のパフォーマンス、最小の音響出力"
+
+#~ msgid "Model extra"
+#~ msgstr "Model extra"
+
+#~ msgid "Model name"
+#~ msgstr "モデル名"
+
+#~ msgid "Online version check"
+#~ msgstr "オンラインバージョンチェック"
+
+#~ msgid "Pool information and status"
+#~ msgstr "プールの情報とステータス"
+
+#~ msgid "Processes information"
+#~ msgstr "プロセス情報"
+
+#~ msgid ""
+#~ "Puts the hard disk into standby mode when the selected amount of time after "
+#~ "the last hard disk access has been elapsed."
+#~ msgstr "最後にアクセスしてから、指定された時間が経過すると、ハードディスクを待機モードにします。"
+
+#~ msgid "RSYNC Client informations"
+#~ msgstr "RSYNC クライアント情報"
+
+#~ msgid "Remote address"
+#~ msgstr "リモートアドレス"
+
+#~ msgid "Rescan disks"
+#~ msgstr "ディスクの再スキャン"
+
+#~ msgid "Rsync job"
+#~ msgstr "Rsync ジョブ"
+
+#~ msgid "Scheduled reboot"
+#~ msgstr "スケジュールされたリブート"
+
+#~ msgid "Scheduled self-tests"
+#~ msgstr "スケジュールされたセルフテスト"
+
+#~ msgid "Scheduled shutdown"
+#~ msgstr "シャットダウンスケジュール"
+
+#~ msgid "Self-Monitoring, Analysis and Reporting Technology"
+#~ msgstr "セルフモニタリング、分析及びレポート"
+
+#~ msgid "Show process information"
+#~ msgstr "プロセス情報の表示"
+
+#~ msgid "Standby time"
+#~ msgstr "スタンバイ時間"
+
+#~ msgid "Swap memory"
+#~ msgstr "スワップメモリ"
+
+#~ msgid "Swap status"
+#~ msgstr "スワップステータス"
+
+#~ msgid "System firewall"
+#~ msgstr "システムファイアウォール"
+
+#~ msgid "System information"
+#~ msgstr "システムインフォメーション"
+
+#~ msgid "Temperature monitoring"
+#~ msgstr "温度監視"
+
+#~ msgid ""
+#~ "This allows you to lower the power consumption of the drive, at the expense "
+#~ "of performance."
+#~ msgstr "性能を犠牲にする事で、ドライブの消費電力量を下げる事が可能になります。"
+
+#~ msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
+#~ msgstr "ATA/IDE ハードディスクドライブの転送モードを設定する事が出来ます。"
+
+#~ msgid "Virtual device"
+#~ msgstr "仮想デバイス"
+
+#~ msgid "Virtual interface"
+#~ msgstr "仮想インタフェース"
+
+#~ msgid "ZFS dataset information and status"
+#~ msgstr "ZFS データセット情報と状態"
+
+#~ msgid "ZFS dataset properties"
+#~ msgstr "ZFS データセットプロパティ"
+
+#~ msgid "ZFS snapshot information and status"
+#~ msgstr "ZFS スナップショット情報と状態"
+
+#~ msgid "ZFS snapshot properties"
+#~ msgstr "ZFS スナップショットプロパティ"
+
+#~ msgid "ZFS volume information and status"
+#~ msgstr "ZFS ボリューム情報と状態"
+
+#~ msgid "ZFS volume properties"
+#~ msgstr "ZFS ボリュームプロパティ"
+
+#~ msgid "minutes"
+#~ msgstr "分"
+
+#, php-format
+#~ msgid "User defined groups"
+#~ msgstr "ユーザ定義グループ"
+
+#, php-format
+#~ msgid "Predefined system groups"
+#~ msgstr "システム定義済みグループ"
+
+#~ msgid "List of detected disks"
+#~ msgstr "検出されたディスクのリスト"
+
+#~ msgid "Clear config and Import software raid disks"
+#~ msgstr "コンフィグ消去とソフトウェアRAIDのインポート"
+
+#~ msgid "Import software raid disks"
+#~ msgstr "ソフトウェアRAIDのインポート"
+
+#~ msgid "HAST status of the configured resources"
+#~ msgstr "構成済みリソースのHASTステータス"
+
+#~ msgid "Node B settings"
+#~ msgstr "ノード B 設定"
+
+#~ msgid "HAST resource"
+#~ msgstr "HAST リソース"
+
+#~ msgid "Node A settings"
+#~ msgstr "ノード A 設定"
+
+#~ msgid "Show ups information"
+#~ msgstr "UPS情報の表示"
+
+#~ msgid "Controller model"
+#~ msgstr "コントローラーモデル"
+
+#~ msgid "Rotation rate"
+#~ msgstr "回転数"
+
+#~ msgid "System load"
+#~ msgstr "システム負荷"
+
+#~ msgid "Transfer rate"
+#~ msgstr "転送速度"
+
+#~ msgid "RAID 5 information and status"
+#~ msgstr "RAID 5 情報とステータス"
+
+#~ msgid "RAID 1 information and status"
+#~ msgstr "RAID 1 情報とステータス"
+
+#~ msgid "RAID 0/1/5 information and status"
+#~ msgstr "RAID 0/1/5 情報とステータス"
+
+#~ msgid "RAID 0 information and status"
+#~ msgstr "RAID 0 情報とステータス"
+
+#~ msgid "JBOD information and status"
+#~ msgstr "JBOD 情報とステータス"

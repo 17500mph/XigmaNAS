@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-11-17 01:18+0000\n"
+"POT-Creation-Date: 2015-12-09 16:19+0000\n"
 "PO-Revision-Date: 2015-11-06 06:41+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-23 22:44+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2015-12-09 15:41+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -51,8 +51,8 @@ msgid "%dB / block"
 msgstr "%dB / block"
 
 #, php-format
-msgid "%s interface"
-msgstr "%s-gränssnitt"
+msgid "%s Interface"
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -330,6 +330,12 @@ msgstr "Ett giltigt prefix (1-128) måste anges."
 msgid "A valid systctl MIB value."
 msgstr "Ett giltigt systctl MIB värde."
 
+msgid "ACL Inherit"
+msgstr ""
+
+msgid "ACL Mode"
+msgstr ""
+
 msgid "ACL inherit"
 msgstr "Ärv ACL"
 
@@ -374,6 +380,9 @@ msgstr "ATTRIBUTNAMN"
 
 msgid "Access"
 msgstr "Åtkomst"
+
+msgid "Access Mode"
+msgstr ""
 
 msgid "Access Restrictions"
 msgstr "Åtkomstbegränsningar"
@@ -552,8 +561,8 @@ msgstr "Avancerat format"
 msgid "Advanced Options"
 msgstr "Avancerade alternativ"
 
-msgid "Advanced Power Management"
-msgstr "Avancerad strömhantering (APM)"
+msgid "Advanced Settings"
+msgstr ""
 
 msgid "Advanced settings"
 msgstr "Avancerade inställningar"
@@ -713,8 +722,8 @@ msgstr "Alternativ TCP port. Standard är 873."
 msgid "Alternative configuration directory (usually empty)."
 msgstr "Alternativ konfigurationskatalog (vanligtvis tom)."
 
-msgid "Always on"
-msgstr "Alltid på"
+msgid "Always On"
+msgstr ""
 
 msgid "Always scan"
 msgstr "Skanna alltid"
@@ -877,8 +886,8 @@ msgstr ""
 msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr "Medeluppvarvningstid (från 0 RPM till fullt drift)"
 
-msgid "Backup configuration"
-msgstr "Konfiguration för säkerhetskopior"
+msgid "Backup Configuration"
+msgstr ""
 
 msgid "Backup file"
 msgstr "Säkerhetskopia"
@@ -892,8 +901,8 @@ msgstr "Felaktig användare - användare saknas"
 msgid "Balance algorithm"
 msgstr "Balanseringsalgoritm"
 
-msgid "Ban list"
-msgstr "Bannlysta adresser"
+msgid "Ban List"
+msgstr ""
 
 msgid "Ban list rule"
 msgstr "Regel för bannlistning"
@@ -968,6 +977,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "Blank tid"
+
+msgid "Block size"
+msgstr ""
 
 msgid "Blocksize"
 msgstr "Blockstorlek"
@@ -1075,6 +1087,9 @@ msgstr "CP949 (koreanskt)"
 
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Traditionell kinesiska Big5)"
+
+msgid "CPU Load"
+msgstr ""
 
 msgid "CPU frequency"
 msgstr "CPU frekvens"
@@ -1195,11 +1210,14 @@ msgstr "Välj det gränssnitt som denna väg gäller."
 msgid "Clear"
 msgstr "Rensa"
 
+msgid "Clear Config & Import Disks"
+msgstr ""
+
+msgid "Clear Config & Import Software Raid Disks"
+msgstr ""
+
 msgid "Clear config and Import disks"
 msgstr "Rensa inställningar och importera diskar"
-
-msgid "Clear config and Import software raid disks"
-msgstr "Rensa inställningar och importera mjukvaruraiddiskar"
 
 msgid ""
 "Click &quot;Enable firmware upload&quot; below, then choose the embedded "
@@ -1301,8 +1319,8 @@ msgstr "Konfigurering"
 msgid "Confirmation"
 msgstr "Bekräftelse"
 
-msgid "Connected FTP users"
-msgstr "Anslutna FTP-användare"
+msgid "Connected FTP Users & Status"
+msgstr ""
 
 msgid "Consider replacing this drive"
 msgstr "Överväg att byta denna disk"
@@ -1341,14 +1359,17 @@ msgstr "Typ av auktorisering för kontrollant"
 msgid "Controller Authorised network"
 msgstr "Auktoriserat nätverk för kontrollant"
 
+msgid "Controller IP Address"
+msgstr ""
+
 msgid "Controller IP address"
 msgstr "IP Adress för kontrollant"
 
+msgid "Controller Model"
+msgstr ""
+
 msgid "Controller TCP Port"
 msgstr "TCP Port för kontrollant"
-
-msgid "Controller model"
-msgstr "Diskkontrollermodell"
 
 msgid "Controls power consumption."
 msgstr "Styr effektförbrukningen"
@@ -1671,6 +1692,9 @@ msgstr ""
 msgid "DLNA/UPnP MiniDLNA"
 msgstr ""
 
+msgid "DNS"
+msgstr ""
+
 msgid "DNS domain"
 msgstr "DNS-domän"
 
@@ -1679,9 +1703,6 @@ msgstr ""
 
 msgid "DNS server is empty."
 msgstr "DNS-server är tom."
-
-msgid "DNS settings"
-msgstr "DNS inställningar"
 
 #, php-format
 msgid ""
@@ -1925,6 +1946,9 @@ msgstr "Beskrivning"
 msgid "Destination"
 msgstr "Mål"
 
+msgid "Destination Share"
+msgstr ""
+
 msgid "Destination email address."
 msgstr "E-postadress för mottagaren av rapporter."
 
@@ -1978,14 +2002,14 @@ msgstr "Enhet /dev/%s - %s"
 msgid "Device IP"
 msgstr "Enhetens IP"
 
+msgid "Device Model"
+msgstr ""
+
 msgid "Device Pass-through"
 msgstr "Komponent genomströmning"
 
 msgid "Device Serial"
 msgstr "Serieport"
-
-msgid "Device model"
-msgstr "Komponent modell"
 
 msgid "Device polling"
 msgstr "Enhetspolling"
@@ -2277,9 +2301,6 @@ msgstr "Domännamn i gammalt format, såsom EXEMPEL."
 msgid "Domain name, e.g. example.com."
 msgstr "Domännamn, såsom exempel.com."
 
-msgid "Don't Erase MBR"
-msgstr "Radera inte huvudstartsektorn (MBR)"
-
 msgid "Don't erase the MBR (useful for some RAID controller cards)"
 msgstr "Radera inte MBR (användbart för vissa RAID-kontrollerkort)"
 
@@ -2300,6 +2321,9 @@ msgstr "Dubbelparitets RAID-Z"
 
 msgid "Download"
 msgstr "Ladda ner"
+
+msgid "Download Configuration"
+msgstr ""
 
 msgid "Download bandwidth"
 msgstr "Nerladdningsbandbredd"
@@ -2363,6 +2387,9 @@ msgstr "FEL:"
 
 msgid "Edit"
 msgstr "Redigera"
+
+msgid "Edit File"
+msgstr ""
 
 msgid "Edit Host"
 msgstr "Redigera värd"
@@ -2466,12 +2493,6 @@ msgstr "E-post"
 
 msgid "Email Report"
 msgstr "E-posta Rapport"
-
-msgid "Email notification"
-msgstr "E-postnotifiering"
-
-msgid "Email report"
-msgstr "E-posta rapport"
 
 msgid "Empty as default."
 msgstr "Tom som standard"
@@ -2775,6 +2796,9 @@ msgstr "Exportera"
 msgid "Export all the directories in the specified path."
 msgstr "Exportera alla kataloger i den angivna sökvägen."
 
+msgid "Extended Attributes"
+msgstr ""
+
 msgid "Extended attributes"
 msgstr "Utökade attribut"
 
@@ -2862,8 +2886,8 @@ msgstr ""
 "FXP tillåter överföring mellan två fjärrservrar utan någon data till "
 "klienten som frågar efter överföringen (osäkert!)."
 
-msgid "Factory defaults"
-msgstr "Fabriksinställningar"
+msgid "Factory Defaults"
+msgstr ""
 
 msgid "Failed"
 msgstr "Misslyckades"
@@ -2923,14 +2947,14 @@ msgstr "Filredigerare"
 msgid "File Manager"
 msgstr "Filhanterare"
 
+msgid "File Path"
+msgstr ""
+
 msgid "File Transfer Protocol"
 msgstr "Fil Överförings Protokoll (FTP)"
 
 msgid "File not found"
 msgstr "Filen hittades inte"
-
-msgid "File path"
-msgstr "Filsökväg"
 
 #, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
@@ -2957,6 +2981,9 @@ msgstr "Filnamn"
 msgid "Fileserver"
 msgstr "Filserver"
 
+msgid "Filesystem"
+msgstr ""
+
 msgid "Filter"
 msgstr "Filtrera"
 
@@ -2966,8 +2993,8 @@ msgstr "Finsk"
 msgid "Firewall"
 msgstr "Brandvägg"
 
-msgid "Firewall rule"
-msgstr "Brandväggsregel"
+msgid "Firewall Rule Settings"
+msgstr ""
 
 msgid "Firmware"
 msgstr "Systemprogramvara"
@@ -3012,9 +3039,6 @@ msgstr ""
 msgid "Format"
 msgstr "Formatera"
 
-msgid "Format disk"
-msgstr "Formatera disk"
-
 msgid "Format the report for phpBB forum."
 msgstr "Formatera rapporten för phpBB-forum"
 
@@ -3026,9 +3050,6 @@ msgstr ""
 
 msgid "Free"
 msgstr "Ledigt"
-
-msgid "Free disk space"
-msgstr "Ledigt diskutrymme"
 
 msgid "French"
 msgstr "Franska"
@@ -3150,14 +3171,14 @@ msgstr "HAST"
 msgid "HAST (Highly Available Storage)"
 msgstr "HAST (Hög tillgänglighets lagring)"
 
+msgid "HAST Information & Status Configured Resources"
+msgstr ""
+
+msgid "HAST Resource"
+msgstr ""
+
 msgid "HAST disabled"
 msgstr "HAST inaktiverat"
-
-msgid "HAST resource"
-msgstr "HAST resurs"
-
-msgid "HAST status of the configured resources"
-msgstr "HAST status för konfigurerade resurser"
 
 msgid "HAST volume"
 msgstr "HAST volym"
@@ -3181,11 +3202,11 @@ msgstr ""
 "Detta attribut indikerar antalet av dessa fel under diskens livslängd. Denna "
 "funktion är implementerad i de modernaste Seagatediskarna."
 
+msgid "HDD standby time"
+msgstr ""
+
 msgid "HTTP Proxy"
 msgstr "HTTP-proxy"
-
-msgid "Hard disk standby time"
-msgstr "Tid innan hårddisken går i väntläge"
 
 msgid "Hardware"
 msgstr "Hårdvara"
@@ -3291,11 +3312,11 @@ msgstr ""
 msgid "Hungarian"
 msgstr "Ungerska"
 
+msgid "I/O Statistics"
+msgstr ""
+
 msgid "I/O Timeout"
 msgstr "I/O Timeout"
-
-msgid "I/O statistics"
-msgstr "I/O statistik"
 
 #, php-format
 msgid "I/O timeout in seconds (%d by default)."
@@ -3309,6 +3330,9 @@ msgstr "IG"
 
 msgid "IP"
 msgstr "IP"
+
+msgid "IP Address"
+msgstr ""
 
 msgid "IP address"
 msgstr "IP-adress"
@@ -3463,6 +3487,12 @@ msgstr "Uppsändning av avbild misslyckades (slut på minne?)"
 msgid "Import"
 msgstr "Importera"
 
+msgid "Import Disks"
+msgstr ""
+
+msgid "Import Software Raid Disks"
+msgstr ""
+
 msgid "Import disks"
 msgstr "Importera diskar"
 
@@ -3474,9 +3504,6 @@ msgstr "Importera brandväggsregler"
 
 msgid "Import on-disk ZFS config"
 msgstr "Importera diskbaserad ZFS konfiguration"
-
-msgid "Import software raid disks"
-msgstr "Importera mjukvaruraiddiskar"
 
 msgid "In"
 msgstr "I"
@@ -3726,8 +3753,8 @@ msgstr "Italienska"
 msgid "JBOD"
 msgstr "JBOD"
 
-msgid "JBOD information and status"
-msgstr "JBOD information och status"
+msgid "JBOD Information & Status"
+msgstr ""
 
 msgid ""
 "January February March April May June July August September October November "
@@ -3775,8 +3802,8 @@ msgstr "endast LAN"
 msgid "LCDproc"
 msgstr "LCDproc"
 
-msgid "LCDproc (client)"
-msgstr "LCDproc (klient)"
+msgid "LCDproc (Client)"
+msgstr ""
 
 msgid "LDAP"
 msgstr "LDAP"
@@ -3839,24 +3866,23 @@ msgstr "Lämna konfigurering av automatiska avbild."
 msgid "Leave this field empty to use default settings."
 msgstr "Lämna fältet tomt för att använda grundinställningar"
 
-msgid "Level 1 - Minimum power usage with Standby (spindown)"
-msgstr "Nivå 1 - Lägsta strömförbrukning med Standby (spindown)"
-
-msgid "Level 127 - Intermediate power usage with Standby"
-msgstr "Nivå 127 - medium strömförbrukning med Väntläge"
-
-msgid "Level 128 - Minimum power usage without Standby (no spindown)"
+msgid "Level 1 - Minimum Power Usage with Standby (Spindown)"
 msgstr ""
-"Nivå 128 - minimal strömförbrukning med Väntläge (ingen diskavstängning)"
 
-msgid "Level 192 - Intermediate power usage without Standby"
-msgstr "Nivå 192 - medium strömförbrukning utan Väntläge"
+msgid "Level 127 - Intermediate Power Usage with Standby"
+msgstr ""
 
-msgid "Level 254 - Maximum performance, maximum power usage"
-msgstr "Nivå 254 - maximala prestanda med maximal strömförbrukning"
+msgid "Level 128 - Minimum Power Usage without Standby (No Spindown)"
+msgstr ""
 
-msgid "Level 64 - Intermediate power usage with Standby"
-msgstr "Nivå 64 - medium strömförbrukning med Väntläge"
+msgid "Level 192 - Intermediate Power Usage without Standby"
+msgstr ""
+
+msgid "Level 254 - Maximum Performance, Maximum Power Usage"
+msgstr ""
+
+msgid "Level 64 - Intermediate Power Usage with Standby"
+msgstr ""
 
 #, php-format
 msgid "Levels (MHz/mW): %s"
@@ -3867,6 +3893,9 @@ msgstr "Licens"
 
 msgid "License & Credits"
 msgstr "Licens & Erkännande"
+
+msgid "Life Time"
+msgstr ""
 
 msgid "Life time"
 msgstr "Livstid"
@@ -3899,6 +3928,15 @@ msgstr "Länk uppe, åtgärd"
 msgid "List"
 msgstr "Lista"
 
+msgid "List Detected Disks"
+msgstr ""
+
+msgid "List Imported Users"
+msgstr ""
+
+msgid "List Mount Points"
+msgstr ""
+
 msgid ""
 "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP "
 "(AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
@@ -3907,18 +3945,6 @@ msgstr ""
 "Lista över tillåtna parvisa (unicast) chiffer för WPA. En eller flera av: "
 "CCMP (AES i Counter-läge med CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
 "(Temporal Key Integrity Protocol, IEEE 802.11i/D7.0)."
-
-msgid "List of available target name on all configured iSCSI targets"
-msgstr "Lista med tillgängliga målnamn på alla konfigurerade iSCSI-mål."
-
-msgid "List of detected disks"
-msgstr "Lista med detekterade diskar"
-
-msgid "List of imported users"
-msgstr "Lista över importerade användare"
-
-msgid "List of mount points"
-msgstr "Lista med monteringspunkter"
 
 msgid "Load"
 msgstr "Läs in"
@@ -3943,6 +3969,9 @@ msgstr "Lokal"
 
 msgid "Local Master Browser"
 msgstr "Lokal prioriterad bläddrare (Local Master Browser)"
+
+msgid "Local Share (Destination)"
+msgstr ""
 
 msgid "Local User"
 msgstr "Lokal användare"
@@ -4020,12 +4049,12 @@ msgstr "Logisk enhetskontrollant för auktoriserat nätverk (%s som standard)"
 msgid "Logical Unit Controller IP address (%s by default)"
 msgstr "Logisk enhetskontrollant för IP-adress (%s som standard)"
 
+msgid "Logical Unit Controller Login Information"
+msgstr ""
+
 #, php-format
 msgid "Logical Unit Controller TCP port (%d by default)"
 msgstr "Logisk enhetskontrollant för TCP-port (%d som standard)"
-
-msgid "Logical Unit Controller login information"
-msgstr "Logisk enhetskontrollant för inloggningsinformation"
 
 msgid "Logical Unit Type mapped to LUN."
 msgstr "Logisk enhetstyp mappad till LUN"
@@ -4058,6 +4087,9 @@ msgstr ""
 msgid "MAC address"
 msgstr "MAC-adress"
 
+msgid "MBR Erase"
+msgstr ""
+
 msgid "MBR partition"
 msgstr "MBR partition"
 
@@ -4076,8 +4108,8 @@ msgstr "FLYTTAD TILL"
 msgid "MS Active Directory"
 msgstr "MS Active Directory"
 
-msgid "MS Active Directory informations"
-msgstr "MS Active Directory information"
+msgid "MS Active Directory Information & Status"
+msgstr ""
 
 msgid "MS Domain"
 msgstr "MS-domän"
@@ -4169,6 +4201,9 @@ msgstr "MaxOutstandingR2T"
 msgid "MaxRecvDataSegmentLength"
 msgstr "MaxRecvDataSegmentLength"
 
+msgid "Maximum Performance, Maximum Acoustic Output"
+msgstr ""
+
 msgid "Maximum connections"
 msgstr "Maximalt antal anslutningar"
 
@@ -4209,9 +4244,6 @@ msgstr "Maximalt antal samtidiga klienter."
 msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
 msgstr "Maximalt antal simultana anslutningar. Standard är 0 (obegränsat)."
 
-msgid "Maximum performance, maximum acoustic output"
-msgstr "Maximal prestanda, Maximal akustisk nivå."
-
 msgid "Maximum relative humidity seen (percent)"
 msgstr "Högsta uppmätta relativa fuktighet"
 
@@ -4227,11 +4259,14 @@ msgstr "Media Katalog"
 msgid "Media library"
 msgstr "Mediebibliotek"
 
-msgid "Medium acoustic output"
-msgstr "Medelnivå av det akustiska ljudläget"
+msgid "Medium Acoustic Output"
+msgstr ""
 
 msgid "Member Interface"
 msgstr "Medlemsinterface"
+
+msgid "Memory Usage"
+msgstr ""
 
 msgid "Memory usage"
 msgstr "Minnesanvändning"
@@ -4265,6 +4300,9 @@ msgstr ""
 msgid "Minimum"
 msgstr "Minimum"
 
+msgid "Minimum Performance, Minimum Acoustic Output"
+msgstr ""
+
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr "Lägsta batterinivå för återstart av UPS efter nedstängning"
 
@@ -4276,9 +4314,6 @@ msgstr "Minfrekvens"
 
 msgid "Minimum incoming voltage seen"
 msgstr "Lägsta uppmätta inkommande spänning"
-
-msgid "Minimum performance, Minimum acoustic output"
-msgstr "Minimal prestanda, Minimal akustisk nivå"
 
 msgid "Minimum relative humidity seen (percent)"
 msgstr "Lägsta uppmätta relativa luftfuktighet"
@@ -4304,11 +4339,11 @@ msgstr "Läge"
 msgid "Model"
 msgstr "Modell"
 
-msgid "Model extra"
-msgstr "Extramodell"
+msgid "Model Extra"
+msgstr ""
 
-msgid "Model name"
-msgstr "Modellnamn"
+msgid "Model Name"
+msgstr ""
 
 msgid "Modified"
 msgstr "Ändrad"
@@ -4568,14 +4603,14 @@ msgstr "Ingen pool finns."
 msgid "Node A IP address"
 msgstr "Nod A IP-adress"
 
-msgid "Node A settings"
-msgstr "Nod A inställningar"
+msgid "Node A Settings"
+msgstr ""
 
 msgid "Node B IP address"
 msgstr "Nod B IP-adress"
 
-msgid "Node B settings"
-msgstr "Nod B inställningar"
+msgid "Node B Settings"
+msgstr ""
 
 msgid "Node Base"
 msgstr "Nod Bas"
@@ -4737,8 +4772,8 @@ msgstr ""
 "rekommenderas att man lägger till samma antal diskar som antalet existerande "
 "virtuella enheter."
 
-msgid "Online version check"
-msgstr "Online versionskontroll"
+msgid "Online"
+msgstr ""
 
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
@@ -4968,6 +5003,9 @@ msgstr "Tillåt root inloggning"
 msgid "Permit to do SSH Tunneling."
 msgstr "Tillåt att köra SSH-tunnelering."
 
+msgid "Physical Interface"
+msgstr ""
+
 msgid "Physical interface"
 msgstr "Fysiskt gränssnitt"
 
@@ -5012,8 +5050,8 @@ msgstr "Avbrottstid (Polling tid)"
 msgid "Pool"
 msgstr "Pool"
 
-msgid "Pool information and status"
-msgstr "Pool information och status"
+msgid "Pool Information & Status"
+msgstr ""
 
 msgid "Pools"
 msgstr "Pooler"
@@ -5078,6 +5116,9 @@ msgstr "Strömdemon"
 msgid "Power Mode"
 msgstr "Effektläge"
 
+msgid "Power management"
+msgstr ""
+
 msgid "Power mode"
 msgstr "Effektläge"
 
@@ -5091,8 +5132,8 @@ msgid "PreInit"
 msgstr "Förinitiering"
 
 #, php-format
-msgid "Predefined system groups"
-msgstr "System för fördefinierade grupper"
+msgid "Predefined Groups"
+msgstr ""
 
 msgid "Preferred"
 msgstr "Föredragen"
@@ -5142,8 +5183,8 @@ msgstr "Process"
 msgid "Processes"
 msgstr "Processer"
 
-msgid "Processes information"
-msgstr "Processinformation"
+msgid "Processes Information"
+msgstr ""
 
 msgid "Product ID"
 msgstr "Produkt-ID"
@@ -5164,11 +5205,9 @@ msgid "Proxy"
 msgstr "Proxy"
 
 msgid ""
-"Puts the hard disk into standby mode when the selected amount of time after "
-"the last hard disk access has been elapsed."
+"Puts the disk into standby mode when the selected amount of time after the "
+"last disk access has been elapsed."
 msgstr ""
-"Försätter hårddisken i väntläge när förinställd tid har gått efter den "
-"senaste diskåtkomsten."
 
 msgid "Queue Depth"
 msgstr "Ködjup"
@@ -5182,26 +5221,26 @@ msgstr "Kvot"
 msgid "RAID 0"
 msgstr "RAID 0"
 
-msgid "RAID 0 information and status"
-msgstr "RAID 0 information och status"
+msgid "RAID 0 Information & Status"
+msgstr ""
 
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
-msgid "RAID 0/1/5 information and status"
-msgstr "RAID 0/1/5 information och status"
+msgid "RAID 0/1/5 Information & Status"
+msgstr ""
 
 msgid "RAID 1"
 msgstr "RAID 1"
 
-msgid "RAID 1 information and status"
-msgstr "RAID 1 information och status"
+msgid "RAID 1 Information & Status"
+msgstr ""
 
 msgid "RAID 5"
 msgstr "RAID 5"
 
-msgid "RAID 5 information and status"
-msgstr "RAID 5 information och status"
+msgid "RAID 5 Information & Status"
+msgstr ""
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -5233,8 +5272,8 @@ msgstr "RSYNC - Server"
 msgid "RSYNC Client"
 msgstr "RSYNC Klient"
 
-msgid "RSYNC Client informations"
-msgstr "Klientinformation för RSYNC"
+msgid "RSYNC Client Information & Status"
+msgstr ""
 
 msgid "RSYNC events"
 msgstr "RSYNC-händelser"
@@ -5330,11 +5369,14 @@ msgstr "Ladda om sidan"
 msgid "Remaining battery runtime"
 msgstr "Kvarstående batteritid"
 
+msgid "Remote Address"
+msgstr ""
+
+msgid "Remote Module (Source)"
+msgstr ""
+
 msgid "Remote Rsync Server"
 msgstr "Fjärr-server för Rsync"
-
-msgid "Remote address"
-msgstr "Fjärradress"
 
 msgid "Remote module (source)"
 msgstr "Fjärr-modul (källa)"
@@ -5386,11 +5428,11 @@ msgstr "Kräv autentisering."
 msgid "Required"
 msgstr "Obligatorisk"
 
-msgid "Rescan database in progress"
+msgid "Rescan Disks"
 msgstr ""
 
-msgid "Rescan disks"
-msgstr "Skanna om diskarna"
+msgid "Rescan database in progress"
+msgstr ""
 
 msgid "Rescan interval"
 msgstr "Intervall för omskanning"
@@ -5415,6 +5457,9 @@ msgstr "Resursnamn"
 
 msgid "Resources"
 msgstr "Resurser"
+
+msgid "Restore Configuration"
+msgstr ""
 
 msgid "Restore configuration"
 msgstr "Återskapa konfiguration"
@@ -5458,8 +5503,8 @@ msgstr "Root bind DN"
 msgid "Root bind password"
 msgstr "Root bind lösenord"
 
-msgid "Rotation rate"
-msgstr "Rotationsintervall"
+msgid "Rotation Rate"
+msgstr ""
 
 msgid "Round-robin read"
 msgstr "'Round-robin' läsning"
@@ -5479,8 +5524,8 @@ msgstr "Rader"
 msgid "Rsync"
 msgstr "Rsync"
 
-msgid "Rsync job"
-msgstr "Rsync jobb"
+msgid "Rsync Job"
+msgstr ""
 
 msgid "Rule"
 msgstr "Regel"
@@ -5574,6 +5619,12 @@ msgstr ""
 msgid "Save"
 msgstr "Spara"
 
+msgid "Save & Restart"
+msgstr ""
+
+msgid "Save File"
+msgstr ""
+
 msgid "Save and Restart"
 msgstr "Spara och starta om"
 
@@ -5603,23 +5654,26 @@ msgstr ""
 msgid "Scan type"
 msgstr "Typ av genomsökning"
 
+msgid "Schedule Time"
+msgstr ""
+
 msgid "Schedule time"
 msgstr "Schematid"
 
 msgid "Scheduled"
 msgstr "Schemalagd"
 
+msgid "Scheduled Reboot"
+msgstr ""
+
 msgid "Scheduled Self-Test"
 msgstr "Schemalagt självtest"
 
-msgid "Scheduled reboot"
-msgstr "Schemalagd omstart"
+msgid "Scheduled Shutdown"
+msgstr ""
 
-msgid "Scheduled self-tests"
-msgstr "Schemalagda självtester"
-
-msgid "Scheduled shutdown"
-msgstr "Schemalagd avstängning"
+msgid "Scheduled tests"
+msgstr ""
 
 msgid "Secondary"
 msgstr "Sekundär"
@@ -5635,6 +5689,9 @@ msgstr "Säkerhet"
 
 msgid "See attribute E8."
 msgstr "Se attribut E8."
+
+msgid "Select"
+msgstr ""
 
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
@@ -5686,14 +5743,20 @@ msgstr "Vald enhet eller etikett existerar inte."
 msgid "Selected file isn't an valid ISO file."
 msgstr "Den valda filen är inte en giltig ISO fil."
 
-msgid "Self-Monitoring, Analysis and Reporting Technology"
-msgstr "Self-Monitoring, Analysis and Reporting Technology"
+msgid "Self-Monitoring, Analysis & Reporting Technology"
+msgstr ""
+
+msgid "Self-tests Management"
+msgstr ""
 
 msgid "Send Buffer Size"
 msgstr "Sändbuffert Storlek"
 
 msgid "Send Command!"
 msgstr "Skicka kommando!"
+
+msgid "Send Now"
+msgstr ""
 
 msgid "Send a TEST warning email on startup."
 msgstr "Skicka ett TEST-ebrev under uppstarten."
@@ -5709,6 +5772,9 @@ msgstr "Separerar e-postadresser med semikolon."
 
 msgid "Serial Console"
 msgstr "Seriell Konsol"
+
+msgid "Serial Number"
+msgstr ""
 
 msgid "Serial number"
 msgstr "Serienummer"
@@ -5829,17 +5895,17 @@ msgstr "Skal"
 msgid "Shock During Write."
 msgstr ""
 
+msgid "Show Process Information"
+msgstr ""
+
 msgid "Show RAW UPS Info"
 msgstr "Visa UPS-info i råformat"
 
+msgid "Show UPS Information"
+msgstr ""
+
 msgid "Show log entries in reverse order (newest entries on top)"
 msgstr "Visa loggposter i omvänd ordning (senaste posterna överst)"
-
-msgid "Show process information"
-msgstr "Visa processinformation"
-
-msgid "Show ups information"
-msgstr "Visa UPS-information"
 
 msgid "Shutdown"
 msgstr "Stäng av"
@@ -5920,6 +5986,9 @@ msgstr "Använd mjukvara"
 msgid "Source"
 msgstr "Källa"
 
+msgid "Source Share"
+msgstr ""
+
 msgid "Source directory to be synchronized."
 msgstr "Källkatalog som ska synkroniseras."
 
@@ -5928,6 +5997,9 @@ msgstr "Källport"
 
 msgid "Source share"
 msgstr "Källa för delning"
+
+msgid "Space Usage"
+msgstr ""
 
 msgid "Space Used"
 msgstr "Utrymme använt"
@@ -5965,6 +6037,9 @@ msgstr "Angiven sökvög är NFSv4 rotkatalog."
 
 msgid "Specifies how many servers to create."
 msgstr "Specificerar hur många servrar som skall skapas."
+
+msgid "Specifies how the volume should be exposed to the OS."
+msgstr ""
 
 msgid "Specifies that the file system should be exported read-only."
 msgstr ""
@@ -6023,6 +6098,9 @@ msgstr "Split begäran"
 msgid "Standard"
 msgstr "Standard"
 
+msgid "Standby"
+msgstr ""
+
 msgid ""
 "Standby - Check the device unless it is in SLEEP or STANDBY mode. In these "
 "modes most disks are not spinning, so if you want to prevent a laptop disk "
@@ -6032,9 +6110,6 @@ msgstr ""
 "dessa lägen snurrar de flesta diskar inte, så om du vill förhindra en laptop "
 "disk från att snurra igång vid varje pollning, detta är antagligen vad du "
 "vill."
-
-msgid "Standby time"
-msgstr "Tid för väntläge"
 
 msgid "Start"
 msgstr "Starta"
@@ -6127,14 +6202,14 @@ msgstr "Uteslut korrekta meddelanden"
 msgid "Swap"
 msgstr "Växling"
 
+msgid "Swap Information & Status"
+msgstr ""
+
+msgid "Swap Memory"
+msgstr ""
+
 msgid "Swap disabled"
 msgstr "Växlingsutrymme inaktiverat"
-
-msgid "Swap memory"
-msgstr "Växlingsminne"
-
-msgid "Swap status"
-msgstr "Status för växlingsutrymme"
 
 msgid "Swap usage"
 msgstr "Användning av växlingsutrymme"
@@ -6186,23 +6261,20 @@ msgstr "System"
 msgid "System Beep"
 msgstr "Systemsignal"
 
+msgid "System Information"
+msgstr ""
+
+msgid "System Load"
+msgstr ""
+
 msgid "System bios"
 msgstr "Systembios"
 
 msgid "System events"
 msgstr "Systemhändelser"
 
-msgid "System firewall"
-msgstr "Systemets brandvägg"
-
 msgid "System info"
 msgstr "Systeminfo"
-
-msgid "System information"
-msgstr "Systeminformation"
-
-msgid "System load"
-msgstr "Systemlast"
 
 msgid "System log"
 msgstr "Systemlogg"
@@ -6306,11 +6378,11 @@ msgstr "Mål"
 msgid "Temperature"
 msgstr "Temperatur"
 
+msgid "Temperature Monitoring"
+msgstr ""
+
 msgid "Temperature alarm (enabled/disabled)"
 msgstr "Temperaturlarm (aktiv/inaktiv)"
-
-msgid "Temperature monitoring"
-msgstr "Temperaturövervakning"
 
 msgid "Temperature threshold high (degrees C)"
 msgstr "Larmgräns hög temperatur (graders C)"
@@ -7276,11 +7348,9 @@ msgid ""
 msgstr "Detta WLAN kan ej tas bort då gränssnittet fortfarande används."
 
 msgid ""
-"This allows you to lower the power consumption of the drive, at the expense "
+"This allows you to lower the power consumption of the disk, at the expense "
 "of performance."
 msgstr ""
-"Detta tillåter dig att minska strömförbrukningen på disken, dock med "
-"minskade prestanda."
 
 msgid "This allows you to set how loud the drive is while it's operating."
 msgstr ""
@@ -7293,10 +7363,8 @@ msgstr ""
 "Detta låter dig ställa in filsystemet för förformaterade hårddiskar som "
 "innehåller data."
 
-msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
+msgid "This allows you to set the transfer mode for ATA/IDE disks."
 msgstr ""
-"Detta låter dig ställa in överföringsläget (transfer mode) för ATA/IDE "
-"hårddiskar."
 
 msgid ""
 "This attribute indicates the count of full hard disk power on/off cycles."
@@ -7846,11 +7914,11 @@ msgstr ""
 msgid "Transcoding"
 msgstr "Omkodar"
 
+msgid "Transfer Rate"
+msgstr ""
+
 msgid "Transfer mode"
 msgstr "Överföringsläge"
-
-msgid "Transfer rate"
-msgstr "Överföringshastighet"
 
 msgid "Trap host"
 msgstr "Värdfälla (Trap host)"
@@ -7908,6 +7976,13 @@ msgstr "UFS"
 
 #, php-format
 msgid ""
+"UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
+"filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
+"unpredictable results, file corruption and the loss of data!"
+msgstr ""
+
+#, php-format
+msgid ""
 "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
 "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
 "NTFS can result in unpredictable results, file corruption, and loss of data!"
@@ -7934,6 +8009,9 @@ msgstr "UID"
 
 msgid "UPS"
 msgstr "UPS"
+
+msgid "UPS Information & Status"
+msgstr ""
 
 msgid "UPS Off Line"
 msgstr "UPS frånkopplad"
@@ -8160,12 +8238,12 @@ msgstr "Använt"
 msgid "User"
 msgstr "Användare"
 
+#, php-format
+msgid "User Defined Groups"
+msgstr ""
+
 msgid "User ID"
 msgstr "Användar-ID"
-
-#, php-format
-msgid "User defined groups"
-msgstr "Användardefinierade grupper"
 
 msgid "User full name."
 msgstr "Användarens fullständiga namn."
@@ -8203,8 +8281,8 @@ msgstr "Användarnamn för ett domänadministratörskonto."
 msgid "Users"
 msgstr "Användare"
 
-msgid "Users and Groups"
-msgstr "Användare och grupper"
+msgid "Users & Groups"
+msgstr ""
 
 #, c-format
 msgid "Using %s bytes fragment size."
@@ -8215,6 +8293,9 @@ msgstr "VHID"
 
 msgid "VLAN"
 msgstr "VLAN"
+
+msgid "VLAN Tag"
+msgstr ""
 
 msgid "VLAN tag"
 msgstr "VLAN-tagg"
@@ -8247,23 +8328,29 @@ msgstr "Vibration under skrivning."
 msgid "Video"
 msgstr ""
 
+msgid "Virtual Device"
+msgstr ""
+
+msgid "Virtual Devices"
+msgstr ""
+
 msgid "Virtual Host ID"
 msgstr "ID för virtuell värd"
+
+msgid "Virtual IP Address"
+msgstr ""
 
 msgid "Virtual IP address"
 msgstr "Virtuell IP-adress"
 
+msgid "Virtual Interface"
+msgstr ""
+
 msgid "Virtual Machine"
 msgstr "Virtuell maskin"
 
-msgid "Virtual device"
-msgstr "Virtuell enhet"
-
 msgid "Virtual devices"
 msgstr "Virtuella enheter"
-
-msgid "Virtual interface"
-msgstr "Virtuellt gränssnitt"
 
 msgid "VirtualBox"
 msgstr "VirtualBox"
@@ -8282,6 +8369,9 @@ msgstr "Volymetikett"
 
 msgid "Volume label of the new file system."
 msgstr "Volymetikett för det nya filesystemet."
+
+msgid "Volume mode"
+msgstr ""
 
 msgid "Volumes"
 msgstr "Volymer"
@@ -8541,26 +8631,31 @@ msgstr "ZFS"
 msgid "ZFS ACL"
 msgstr "ZFS ACL"
 
-msgid "ZFS dataset information and status"
-msgstr "ZFS dataset information och status"
+msgid "ZFS Dataset Information & Status"
+msgstr ""
 
-msgid "ZFS dataset properties"
-msgstr "ZFS dataset egenskaper"
+msgid "ZFS Dataset Properties"
+msgstr ""
 
-msgid "ZFS snapshot information and status"
-msgstr "Information och status för ZFS avbild"
+msgid "ZFS Snapshot Information & Status"
+msgstr ""
 
-msgid "ZFS snapshot properties"
-msgstr "Egenskaper för ZFS avbild"
+msgid "ZFS Snapshot Properties"
+msgstr ""
+
+msgid "ZFS Volume Information & Status"
+msgstr ""
+
+msgid "ZFS Volume Properties"
+msgstr ""
 
 msgid "ZFS volume"
 msgstr "ZFS volym"
 
-msgid "ZFS volume information and status"
-msgstr "Information och status för ZFS volym"
-
-msgid "ZFS volume properties"
-msgstr "Egenskaper för ZFS volym"
+msgid ""
+"ZFS volume block size. This value can not be changed after creation. Empty "
+"as default."
+msgstr ""
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
@@ -8641,6 +8736,9 @@ msgstr "iSCSI Mål"
 msgid "iSCSI Target Logical Unit Controller"
 msgstr "iSCSI Logisk enhetshanterare för målet (TLUC)"
 
+msgid "iSCSI Targets Information & Status"
+msgstr ""
+
 #, php-format
 msgid "iSCSI initial parameter (%d by default)."
 msgstr "iSCSI initialt värde (%d som standard)"
@@ -8671,9 +8769,6 @@ msgstr "minimal (effektbesparing)"
 
 msgid "minute(s)"
 msgstr "minut(er)"
-
-msgid "minutes"
-msgstr "minuter"
 
 msgid "mirroring"
 msgstr "spegling"
@@ -8746,3 +8841,266 @@ msgstr "version:"
 
 msgid "warning"
 msgstr ""
+
+#, php-format
+#~ msgid "%s interface"
+#~ msgstr "%s-gränssnitt"
+
+#~ msgid "Advanced Power Management"
+#~ msgstr "Avancerad strömhantering (APM)"
+
+#~ msgid "Always on"
+#~ msgstr "Alltid på"
+
+#~ msgid "Ban list"
+#~ msgstr "Bannlysta adresser"
+
+#~ msgid "Connected FTP users"
+#~ msgstr "Anslutna FTP-användare"
+
+#~ msgid "DNS settings"
+#~ msgstr "DNS inställningar"
+
+#~ msgid "Device model"
+#~ msgstr "Komponent modell"
+
+#~ msgid "Don't Erase MBR"
+#~ msgstr "Radera inte huvudstartsektorn (MBR)"
+
+#~ msgid "Email notification"
+#~ msgstr "E-postnotifiering"
+
+#~ msgid "Email report"
+#~ msgstr "E-posta rapport"
+
+#~ msgid "File path"
+#~ msgstr "Filsökväg"
+
+#~ msgid "Firewall rule"
+#~ msgstr "Brandväggsregel"
+
+#~ msgid "Format disk"
+#~ msgstr "Formatera disk"
+
+#~ msgid "Free disk space"
+#~ msgstr "Ledigt diskutrymme"
+
+#~ msgid "Hard disk standby time"
+#~ msgstr "Tid innan hårddisken går i väntläge"
+
+#~ msgid "I/O statistics"
+#~ msgstr "I/O statistik"
+
+#~ msgid "Level 1 - Minimum power usage with Standby (spindown)"
+#~ msgstr "Nivå 1 - Lägsta strömförbrukning med Standby (spindown)"
+
+#~ msgid "Level 127 - Intermediate power usage with Standby"
+#~ msgstr "Nivå 127 - medium strömförbrukning med Väntläge"
+
+#~ msgid "Level 128 - Minimum power usage without Standby (no spindown)"
+#~ msgstr ""
+#~ "Nivå 128 - minimal strömförbrukning med Väntläge (ingen diskavstängning)"
+
+#~ msgid "Level 192 - Intermediate power usage without Standby"
+#~ msgstr "Nivå 192 - medium strömförbrukning utan Väntläge"
+
+#~ msgid "Level 254 - Maximum performance, maximum power usage"
+#~ msgstr "Nivå 254 - maximala prestanda med maximal strömförbrukning"
+
+#~ msgid "Level 64 - Intermediate power usage with Standby"
+#~ msgstr "Nivå 64 - medium strömförbrukning med Väntläge"
+
+#~ msgid "List of available target name on all configured iSCSI targets"
+#~ msgstr "Lista med tillgängliga målnamn på alla konfigurerade iSCSI-mål."
+
+#~ msgid "List of imported users"
+#~ msgstr "Lista över importerade användare"
+
+#~ msgid "List of mount points"
+#~ msgstr "Lista med monteringspunkter"
+
+#~ msgid "Logical Unit Controller login information"
+#~ msgstr "Logisk enhetskontrollant för inloggningsinformation"
+
+#~ msgid "MS Active Directory informations"
+#~ msgstr "MS Active Directory information"
+
+#~ msgid "Maximum performance, maximum acoustic output"
+#~ msgstr "Maximal prestanda, Maximal akustisk nivå."
+
+#~ msgid "Medium acoustic output"
+#~ msgstr "Medelnivå av det akustiska ljudläget"
+
+#~ msgid "Minimum performance, Minimum acoustic output"
+#~ msgstr "Minimal prestanda, Minimal akustisk nivå"
+
+#~ msgid "Model extra"
+#~ msgstr "Extramodell"
+
+#~ msgid "Model name"
+#~ msgstr "Modellnamn"
+
+#~ msgid "Pool information and status"
+#~ msgstr "Pool information och status"
+
+#~ msgid "Processes information"
+#~ msgstr "Processinformation"
+
+#~ msgid ""
+#~ "Puts the hard disk into standby mode when the selected amount of time after "
+#~ "the last hard disk access has been elapsed."
+#~ msgstr ""
+#~ "Försätter hårddisken i väntläge när förinställd tid har gått efter den "
+#~ "senaste diskåtkomsten."
+
+#~ msgid "RSYNC Client informations"
+#~ msgstr "Klientinformation för RSYNC"
+
+#~ msgid "Remote address"
+#~ msgstr "Fjärradress"
+
+#~ msgid "Rescan disks"
+#~ msgstr "Skanna om diskarna"
+
+#~ msgid "Rsync job"
+#~ msgstr "Rsync jobb"
+
+#~ msgid "Scheduled reboot"
+#~ msgstr "Schemalagd omstart"
+
+#~ msgid "Scheduled self-tests"
+#~ msgstr "Schemalagda självtester"
+
+#~ msgid "Scheduled shutdown"
+#~ msgstr "Schemalagd avstängning"
+
+#~ msgid "Self-Monitoring, Analysis and Reporting Technology"
+#~ msgstr "Self-Monitoring, Analysis and Reporting Technology"
+
+#~ msgid "Show process information"
+#~ msgstr "Visa processinformation"
+
+#~ msgid "Standby time"
+#~ msgstr "Tid för väntläge"
+
+#~ msgid "Swap memory"
+#~ msgstr "Växlingsminne"
+
+#~ msgid "Swap status"
+#~ msgstr "Status för växlingsutrymme"
+
+#~ msgid "System firewall"
+#~ msgstr "Systemets brandvägg"
+
+#~ msgid "System information"
+#~ msgstr "Systeminformation"
+
+#~ msgid "Temperature monitoring"
+#~ msgstr "Temperaturövervakning"
+
+#~ msgid ""
+#~ "This allows you to lower the power consumption of the drive, at the expense "
+#~ "of performance."
+#~ msgstr ""
+#~ "Detta tillåter dig att minska strömförbrukningen på disken, dock med "
+#~ "minskade prestanda."
+
+#~ msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
+#~ msgstr ""
+#~ "Detta låter dig ställa in överföringsläget (transfer mode) för ATA/IDE "
+#~ "hårddiskar."
+
+#~ msgid "Virtual device"
+#~ msgstr "Virtuell enhet"
+
+#~ msgid "Virtual interface"
+#~ msgstr "Virtuellt gränssnitt"
+
+#~ msgid "ZFS dataset information and status"
+#~ msgstr "ZFS dataset information och status"
+
+#~ msgid "ZFS dataset properties"
+#~ msgstr "ZFS dataset egenskaper"
+
+#~ msgid "minutes"
+#~ msgstr "minuter"
+
+#~ msgid "ZFS volume properties"
+#~ msgstr "Egenskaper för ZFS volym"
+
+#~ msgid "LCDproc (client)"
+#~ msgstr "LCDproc (klient)"
+
+#~ msgid "List of detected disks"
+#~ msgstr "Lista med detekterade diskar"
+
+#~ msgid "ZFS snapshot information and status"
+#~ msgstr "Information och status för ZFS avbild"
+
+#~ msgid "ZFS snapshot properties"
+#~ msgstr "Egenskaper för ZFS avbild"
+
+#~ msgid "ZFS volume information and status"
+#~ msgstr "Information och status för ZFS volym"
+
+#~ msgid "Online version check"
+#~ msgstr "Online versionskontroll"
+
+#, php-format
+#~ msgid "User defined groups"
+#~ msgstr "Användardefinierade grupper"
+
+#, php-format
+#~ msgid "Predefined system groups"
+#~ msgstr "System för fördefinierade grupper"
+
+#~ msgid "Clear config and Import software raid disks"
+#~ msgstr "Rensa inställningar och importera mjukvaruraiddiskar"
+
+#~ msgid "Import software raid disks"
+#~ msgstr "Importera mjukvaruraiddiskar"
+
+#~ msgid "Node B settings"
+#~ msgstr "Nod B inställningar"
+
+#~ msgid "Node A settings"
+#~ msgstr "Nod A inställningar"
+
+#~ msgid "Show ups information"
+#~ msgstr "Visa UPS-information"
+
+#~ msgid "System load"
+#~ msgstr "Systemlast"
+
+#~ msgid "HAST status of the configured resources"
+#~ msgstr "HAST status för konfigurerade resurser"
+
+#~ msgid "HAST resource"
+#~ msgstr "HAST resurs"
+
+#~ msgid "Transfer rate"
+#~ msgstr "Överföringshastighet"
+
+#~ msgid "Controller model"
+#~ msgstr "Diskkontrollermodell"
+
+#~ msgid "Rotation rate"
+#~ msgstr "Rotationsintervall"
+
+#~ msgid "Backup configuration"
+#~ msgstr "Konfiguration för säkerhetskopior"
+
+#~ msgid "JBOD information and status"
+#~ msgstr "JBOD information och status"
+
+#~ msgid "RAID 0 information and status"
+#~ msgstr "RAID 0 information och status"
+
+#~ msgid "RAID 5 information and status"
+#~ msgstr "RAID 5 information och status"
+
+#~ msgid "RAID 1 information and status"
+#~ msgstr "RAID 1 information och status"
+
+#~ msgid "RAID 0/1/5 information and status"
+#~ msgstr "RAID 0/1/5 information och status"

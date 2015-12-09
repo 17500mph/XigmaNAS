@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-11-17 01:18+0000\n"
+"POT-Creation-Date: 2015-12-09 16:19+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-23 22:45+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2015-12-09 15:41+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
 "X-Poedit-Language: Korean\n"
@@ -51,8 +51,8 @@ msgid "%dB / block"
 msgstr "%dB / 블록"
 
 #, php-format
-msgid "%s interface"
-msgstr "%s 인터페이스"
+msgid "%s Interface"
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -292,6 +292,12 @@ msgstr "유효한 접두사(1-128)이 명세 되어야 합니다."
 msgid "A valid systctl MIB value."
 msgstr "유효한 systctl MIB 값."
 
+msgid "ACL Inherit"
+msgstr ""
+
+msgid "ACL Mode"
+msgstr ""
+
 msgid "ACL inherit"
 msgstr ""
 
@@ -336,6 +342,9 @@ msgstr ""
 
 msgid "Access"
 msgstr "접근"
+
+msgid "Access Mode"
+msgstr ""
 
 msgid "Access Restrictions"
 msgstr "접근 제한"
@@ -512,8 +521,8 @@ msgstr "확장 포맷"
 msgid "Advanced Options"
 msgstr "고급 옵션"
 
-msgid "Advanced Power Management"
-msgstr "고급 전원 관리"
+msgid "Advanced Settings"
+msgstr ""
 
 msgid "Advanced settings"
 msgstr "고급 설정"
@@ -651,8 +660,8 @@ msgstr "다른 TCP 포트. 기본 값은 873"
 msgid "Alternative configuration directory (usually empty)."
 msgstr "다른 설정 디렉터리(보통은 비워 둠)."
 
-msgid "Always on"
-msgstr "항상 켜둠"
+msgid "Always On"
+msgstr ""
 
 msgid "Always scan"
 msgstr "항상 스캔"
@@ -805,8 +814,8 @@ msgstr ""
 msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr ""
 
-msgid "Backup configuration"
-msgstr "백업 설정"
+msgid "Backup Configuration"
+msgstr ""
 
 msgid "Backup file"
 msgstr "백업 파일"
@@ -820,8 +829,8 @@ msgstr ""
 msgid "Balance algorithm"
 msgstr "밸런스 알고리즘"
 
-msgid "Ban list"
-msgstr "추방 목록"
+msgid "Ban List"
+msgstr ""
 
 msgid "Ban list rule"
 msgstr "추방 목록 규칙"
@@ -896,6 +905,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "빈 시간"
+
+msgid "Block size"
+msgstr ""
 
 msgid "Blocksize"
 msgstr ""
@@ -1000,6 +1012,9 @@ msgid "CP949 (Korean)"
 msgstr ""
 
 msgid "CP950 (Traditional Chinese Big5)"
+msgstr ""
+
+msgid "CPU Load"
 msgstr ""
 
 msgid "CPU frequency"
@@ -1117,10 +1132,13 @@ msgstr "이 라우트가 적용되어야 할 인터페이스를 선택하십시�
 msgid "Clear"
 msgstr "제거"
 
-msgid "Clear config and Import disks"
+msgid "Clear Config & Import Disks"
 msgstr ""
 
-msgid "Clear config and Import software raid disks"
+msgid "Clear Config & Import Software Raid Disks"
+msgstr ""
+
+msgid "Clear config and Import disks"
 msgstr ""
 
 msgid ""
@@ -1214,8 +1232,8 @@ msgstr "설정 중"
 msgid "Confirmation"
 msgstr "확인"
 
-msgid "Connected FTP users"
-msgstr "연결된 FTP 사용자들"
+msgid "Connected FTP Users & Status"
+msgstr ""
 
 msgid "Consider replacing this drive"
 msgstr ""
@@ -1252,14 +1270,17 @@ msgstr "컨트롤러 인증 방법"
 msgid "Controller Authorised network"
 msgstr "컨트롤러 권한을 부여 받은 네트워크"
 
+msgid "Controller IP Address"
+msgstr ""
+
 msgid "Controller IP address"
 msgstr "컨트롤러 IP 주소"
 
+msgid "Controller Model"
+msgstr ""
+
 msgid "Controller TCP Port"
 msgstr "컨트롤러 TCP 포트"
-
-msgid "Controller model"
-msgstr ""
 
 msgid "Controls power consumption."
 msgstr ""
@@ -1527,6 +1548,9 @@ msgstr ""
 msgid "DLNA/UPnP MiniDLNA"
 msgstr ""
 
+msgid "DNS"
+msgstr ""
+
 msgid "DNS domain"
 msgstr ""
 
@@ -1535,9 +1559,6 @@ msgstr ""
 
 msgid "DNS server is empty."
 msgstr ""
-
-msgid "DNS settings"
-msgstr "DNS 설정"
 
 #, php-format
 msgid ""
@@ -1772,6 +1793,9 @@ msgstr "설명"
 msgid "Destination"
 msgstr "목적지"
 
+msgid "Destination Share"
+msgstr ""
+
 msgid "Destination email address."
 msgstr "목적지 전자우편 주소."
 
@@ -1824,14 +1848,14 @@ msgstr "장치 /dev/%s - %s"
 msgid "Device IP"
 msgstr "장치 IP"
 
+msgid "Device Model"
+msgstr ""
+
 msgid "Device Pass-through"
 msgstr "장치 창구"
 
 msgid "Device Serial"
 msgstr ""
-
-msgid "Device model"
-msgstr "장치 모델"
 
 msgid "Device polling"
 msgstr "장치 polling"
@@ -2105,9 +2129,6 @@ msgstr "기존 포맷의 도메인 명. 예. EXAMPLE."
 msgid "Domain name, e.g. example.com."
 msgstr "도메인 명. 예. example.com."
 
-msgid "Don't Erase MBR"
-msgstr "MBR을 지우지 않음"
-
 msgid "Don't erase the MBR (useful for some RAID controller cards)"
 msgstr "MBR을 지우지 않습니다(몇몇 RAID 컨트롤러 카드에 유용)"
 
@@ -2128,6 +2149,9 @@ msgstr ""
 
 msgid "Download"
 msgstr "다운로드"
+
+msgid "Download Configuration"
+msgstr ""
 
 msgid "Download bandwidth"
 msgstr "다운로드 대역 폭"
@@ -2191,6 +2215,9 @@ msgstr ""
 
 msgid "Edit"
 msgstr "편집"
+
+msgid "Edit File"
+msgstr ""
 
 msgid "Edit Host"
 msgstr "호스트 편집"
@@ -2293,12 +2320,6 @@ msgid "Email"
 msgstr "전자우편"
 
 msgid "Email Report"
-msgstr "전자우편 보고"
-
-msgid "Email notification"
-msgstr "전자우편 알림"
-
-msgid "Email report"
 msgstr "전자우편 보고"
 
 msgid "Empty as default."
@@ -2585,6 +2606,9 @@ msgstr "내보내기"
 msgid "Export all the directories in the specified path."
 msgstr ""
 
+msgid "Extended Attributes"
+msgstr ""
+
 msgid "Extended attributes"
 msgstr "확장 속성"
 
@@ -2668,8 +2692,8 @@ msgstr ""
 "FXP는 전송을 요청하는 클라이언트에 어떠한 파일 데이터도 가지 않은 상태로 두 개의 원격 서버 사이의 전송을 허용합니다(보안에 "
 "취약함!)."
 
-msgid "Factory defaults"
-msgstr "공장 기본 값"
+msgid "Factory Defaults"
+msgstr ""
 
 msgid "Failed"
 msgstr "실패함"
@@ -2726,14 +2750,14 @@ msgstr "파일 편집기"
 msgid "File Manager"
 msgstr "파일 관리자"
 
+msgid "File Path"
+msgstr ""
+
 msgid "File Transfer Protocol"
 msgstr "파일 전송 프로토콜"
 
 msgid "File not found"
 msgstr "파일이 발견되지 않습니다"
-
-msgid "File path"
-msgstr "파일 경로"
 
 #, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
@@ -2760,6 +2784,9 @@ msgstr "파일 명"
 msgid "Fileserver"
 msgstr ""
 
+msgid "Filesystem"
+msgstr ""
+
 msgid "Filter"
 msgstr ""
 
@@ -2769,8 +2796,8 @@ msgstr ""
 msgid "Firewall"
 msgstr "방화벽"
 
-msgid "Firewall rule"
-msgstr "방화벽 규칙"
+msgid "Firewall Rule Settings"
+msgstr ""
 
 msgid "Firmware"
 msgstr "펌웨어"
@@ -2813,9 +2840,6 @@ msgstr ""
 msgid "Format"
 msgstr "포맷"
 
-msgid "Format disk"
-msgstr "디스크 포맷"
-
 msgid "Format the report for phpBB forum."
 msgstr "phpBB 포럼에 대한 보고서 형식으로 포맷."
 
@@ -2827,9 +2851,6 @@ msgstr ""
 
 msgid "Free"
 msgstr "여유량"
-
-msgid "Free disk space"
-msgstr "디스크 여유 공간"
 
 msgid "French"
 msgstr "프랑스어"
@@ -2950,13 +2971,13 @@ msgstr ""
 msgid "HAST (Highly Available Storage)"
 msgstr ""
 
+msgid "HAST Information & Status Configured Resources"
+msgstr ""
+
+msgid "HAST Resource"
+msgstr ""
+
 msgid "HAST disabled"
-msgstr ""
-
-msgid "HAST resource"
-msgstr ""
-
-msgid "HAST status of the configured resources"
 msgstr ""
 
 msgid "HAST volume"
@@ -2975,11 +2996,11 @@ msgid ""
 "the drive. This feature is implemented in most modern Seagate drives."
 msgstr ""
 
+msgid "HDD standby time"
+msgstr ""
+
 msgid "HTTP Proxy"
 msgstr "HTTP 프록시"
-
-msgid "Hard disk standby time"
-msgstr "하드 디스크 대기 시간"
 
 msgid "Hardware"
 msgstr "하드웨어"
@@ -3075,11 +3096,11 @@ msgstr "변경되지 않더라도 얼마나 자주 IP가 갱신되는 지를 설
 msgid "Hungarian"
 msgstr "헝가리어"
 
+msgid "I/O Statistics"
+msgstr ""
+
 msgid "I/O Timeout"
 msgstr "I/O 타임아웃"
-
-msgid "I/O statistics"
-msgstr "I/O 통계"
 
 #, php-format
 msgid "I/O timeout in seconds (%d by default)."
@@ -3093,6 +3114,9 @@ msgstr "IG"
 
 msgid "IP"
 msgstr "IP"
+
+msgid "IP Address"
+msgstr ""
 
 msgid "IP address"
 msgstr "IP 주소"
@@ -3230,6 +3254,12 @@ msgstr "이미지 업로드 실패함(메모리 부족?)"
 msgid "Import"
 msgstr "가져오기"
 
+msgid "Import Disks"
+msgstr ""
+
+msgid "Import Software Raid Disks"
+msgstr ""
+
 msgid "Import disks"
 msgstr "디스크 가져오기"
 
@@ -3241,9 +3271,6 @@ msgstr "방화벽 규칙 가져오기."
 
 msgid "Import on-disk ZFS config"
 msgstr "온-디스크 ZFS 설정 가져오기"
-
-msgid "Import software raid disks"
-msgstr ""
 
 msgid "In"
 msgstr "안"
@@ -3470,7 +3497,7 @@ msgstr "이탈리아어"
 msgid "JBOD"
 msgstr "JBOD"
 
-msgid "JBOD information and status"
+msgid "JBOD Information & Status"
 msgstr ""
 
 msgid ""
@@ -3517,7 +3544,7 @@ msgstr ""
 msgid "LCDproc"
 msgstr ""
 
-msgid "LCDproc (client)"
+msgid "LCDproc (Client)"
 msgstr ""
 
 msgid "LDAP"
@@ -3579,23 +3606,23 @@ msgstr ""
 msgid "Leave this field empty to use default settings."
 msgstr ""
 
-msgid "Level 1 - Minimum power usage with Standby (spindown)"
-msgstr "레벨 1 - 대기 상태에서 최소 전원 이용(회전 중지)"
+msgid "Level 1 - Minimum Power Usage with Standby (Spindown)"
+msgstr ""
 
-msgid "Level 127 - Intermediate power usage with Standby"
-msgstr "레벨 127 - 대기 상태에서 중간 정도의 전원 이용"
+msgid "Level 127 - Intermediate Power Usage with Standby"
+msgstr ""
 
-msgid "Level 128 - Minimum power usage without Standby (no spindown)"
-msgstr "레벨 128 - 대기 상태 없이 최소 전원 이용(회전 중지 안함)"
+msgid "Level 128 - Minimum Power Usage without Standby (No Spindown)"
+msgstr ""
 
-msgid "Level 192 - Intermediate power usage without Standby"
-msgstr "레벨 192 - 대기 상태 없이 중간 정도의 전원 이용"
+msgid "Level 192 - Intermediate Power Usage without Standby"
+msgstr ""
 
-msgid "Level 254 - Maximum performance, maximum power usage"
-msgstr "레벨 254 - 최대 성능, 최대 전원 이용"
+msgid "Level 254 - Maximum Performance, Maximum Power Usage"
+msgstr ""
 
-msgid "Level 64 - Intermediate power usage with Standby"
-msgstr "레벨 64 - 대기 상태에서 중간 정도의 전원 이용"
+msgid "Level 64 - Intermediate Power Usage with Standby"
+msgstr ""
 
 #, php-format
 msgid "Levels (MHz/mW): %s"
@@ -3606,6 +3633,9 @@ msgstr "사용 허가서"
 
 msgid "License & Credits"
 msgstr "사용 허가서와 제작자"
+
+msgid "Life Time"
+msgstr ""
 
 msgid "Life time"
 msgstr ""
@@ -3636,6 +3666,15 @@ msgstr ""
 msgid "List"
 msgstr "리스트"
 
+msgid "List Detected Disks"
+msgstr ""
+
+msgid "List Imported Users"
+msgstr ""
+
+msgid "List Mount Points"
+msgstr ""
+
 msgid ""
 "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP "
 "(AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
@@ -3644,18 +3683,6 @@ msgstr ""
 "WPA를 위해 받아들일 수 있는 pairwise(unicast) 암호들의 목록. CCMP(AES in Counter mode with "
 "CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP(Temporal Key Integrity Protocol, "
 "IEEE 802.11i/D7.0) 중 하나 이상."
-
-msgid "List of available target name on all configured iSCSI targets"
-msgstr "설정된 모든 iSCSI 타젯에서 이용할 수 있는 타젯 명들의 목록"
-
-msgid "List of detected disks"
-msgstr ""
-
-msgid "List of imported users"
-msgstr "import 된 사용자들의 리스트"
-
-msgid "List of mount points"
-msgstr "마운트 지점 목록"
 
 msgid "Load"
 msgstr "로드"
@@ -3680,6 +3707,9 @@ msgstr "로컬"
 
 msgid "Local Master Browser"
 msgstr "로컬 마스터 브라우저"
+
+msgid "Local Share (Destination)"
+msgstr ""
 
 msgid "Local User"
 msgstr "로컬 사용자"
@@ -3753,12 +3783,12 @@ msgstr "논리적 유닛 컨트롤러 권한을 받은 네트워크(기본 값�
 msgid "Logical Unit Controller IP address (%s by default)"
 msgstr "논리적 유닛 컨트롤러 IP 주소(기본 값은 %s)"
 
+msgid "Logical Unit Controller Login Information"
+msgstr ""
+
 #, php-format
 msgid "Logical Unit Controller TCP port (%d by default)"
 msgstr "논리적 유닛 컨트롤러 TCP 포트(기본 값은 %d)"
-
-msgid "Logical Unit Controller login information"
-msgstr "논리적 유닛 컨트롤러 로그인 정보"
 
 msgid "Logical Unit Type mapped to LUN."
 msgstr "LUN에 mapping 된 로지컬 유닛 타입"
@@ -3789,6 +3819,9 @@ msgstr ""
 msgid "MAC address"
 msgstr "MAC 주소"
 
+msgid "MBR Erase"
+msgstr ""
+
 msgid "MBR partition"
 msgstr "MBR 파티션"
 
@@ -3807,8 +3840,8 @@ msgstr ""
 msgid "MS Active Directory"
 msgstr "MS 액티브 디렉터리"
 
-msgid "MS Active Directory informations"
-msgstr "MS 액티브 디렉터리 정보"
+msgid "MS Active Directory Information & Status"
+msgstr ""
 
 msgid "MS Domain"
 msgstr "MS 도메인"
@@ -3896,6 +3929,9 @@ msgstr "MaxOutstandingR2T"
 msgid "MaxRecvDataSegmentLength"
 msgstr "MaxRecvDataSegmentLength"
 
+msgid "Maximum Performance, Maximum Acoustic Output"
+msgstr ""
+
 msgid "Maximum connections"
 msgstr "최대 연결 수"
 
@@ -3934,9 +3970,6 @@ msgstr "동시 클라이언트의 최대 수."
 msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
 msgstr "동시 연결의 최대 수. 기본 값은 0(무한)."
 
-msgid "Maximum performance, maximum acoustic output"
-msgstr "최대 성능, 최대 소음 출력"
-
 msgid "Maximum relative humidity seen (percent)"
 msgstr ""
 
@@ -3952,10 +3985,13 @@ msgstr "매체 디렉터리"
 msgid "Media library"
 msgstr ""
 
-msgid "Medium acoustic output"
-msgstr "보통 소음 출력"
+msgid "Medium Acoustic Output"
+msgstr ""
 
 msgid "Member Interface"
+msgstr ""
+
+msgid "Memory Usage"
 msgstr ""
 
 msgid "Memory usage"
@@ -3990,6 +4026,9 @@ msgstr ""
 msgid "Minimum"
 msgstr "최소"
 
+msgid "Minimum Performance, Minimum Acoustic Output"
+msgstr ""
+
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr ""
 
@@ -4001,9 +4040,6 @@ msgstr ""
 
 msgid "Minimum incoming voltage seen"
 msgstr ""
-
-msgid "Minimum performance, Minimum acoustic output"
-msgstr "최소 성능, 최소 소음 출력"
 
 msgid "Minimum relative humidity seen (percent)"
 msgstr ""
@@ -4029,11 +4065,11 @@ msgstr "모드"
 msgid "Model"
 msgstr ""
 
-msgid "Model extra"
-msgstr "추가 모델"
+msgid "Model Extra"
+msgstr ""
 
-msgid "Model name"
-msgstr "모델 명"
+msgid "Model Name"
+msgstr ""
 
 msgid "Modified"
 msgstr ""
@@ -4270,13 +4306,13 @@ msgstr "풀을 찾을 수 없습니다."
 msgid "Node A IP address"
 msgstr ""
 
-msgid "Node A settings"
+msgid "Node A Settings"
 msgstr ""
 
 msgid "Node B IP address"
 msgstr ""
 
-msgid "Node B settings"
+msgid "Node B Settings"
 msgstr ""
 
 msgid "Node Base"
@@ -4428,7 +4464,7 @@ msgid ""
 "recommends adding the same number of drives as the existing virtual device."
 msgstr ""
 
-msgid "Online version check"
+msgid "Online"
 msgstr ""
 
 msgid ""
@@ -4649,6 +4685,9 @@ msgstr "root 로그인 허용"
 msgid "Permit to do SSH Tunneling."
 msgstr "SSH 터널링 허용."
 
+msgid "Physical Interface"
+msgstr ""
+
 msgid "Physical interface"
 msgstr "물리적 인터페이스"
 
@@ -4692,8 +4731,8 @@ msgstr "polling 시간"
 msgid "Pool"
 msgstr "풀"
 
-msgid "Pool information and status"
-msgstr "풀 정보와 상태"
+msgid "Pool Information & Status"
+msgstr ""
 
 msgid "Pools"
 msgstr "풀"
@@ -4755,6 +4794,9 @@ msgstr "파워 데몬"
 msgid "Power Mode"
 msgstr ""
 
+msgid "Power management"
+msgstr ""
+
 msgid "Power mode"
 msgstr "파워 모드"
 
@@ -4768,7 +4810,7 @@ msgid "PreInit"
 msgstr "초기화 전"
 
 #, php-format
-msgid "Predefined system groups"
+msgid "Predefined Groups"
 msgstr ""
 
 msgid "Preferred"
@@ -4819,8 +4861,8 @@ msgstr "프로세스"
 msgid "Processes"
 msgstr "프로세스"
 
-msgid "Processes information"
-msgstr "프로세스 정보"
+msgid "Processes Information"
+msgstr ""
 
 msgid "Product ID"
 msgstr ""
@@ -4841,9 +4883,9 @@ msgid "Proxy"
 msgstr "프록시"
 
 msgid ""
-"Puts the hard disk into standby mode when the selected amount of time after "
-"the last hard disk access has been elapsed."
-msgstr "하드 디스크의 마지막 접근 후 선택된 양의 시간이 경과했을 때 하드 디스크를 대기 모드로 만듭니다."
+"Puts the disk into standby mode when the selected amount of time after the "
+"last disk access has been elapsed."
+msgstr ""
 
 msgid "Queue Depth"
 msgstr "Queue 깊이"
@@ -4857,25 +4899,25 @@ msgstr "할당량"
 msgid "RAID 0"
 msgstr "RAID 0"
 
-msgid "RAID 0 information and status"
+msgid "RAID 0 Information & Status"
 msgstr ""
 
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
-msgid "RAID 0/1/5 information and status"
+msgid "RAID 0/1/5 Information & Status"
 msgstr ""
 
 msgid "RAID 1"
 msgstr "RAID 1"
 
-msgid "RAID 1 information and status"
+msgid "RAID 1 Information & Status"
 msgstr ""
 
 msgid "RAID 5"
 msgstr "RAID 5"
 
-msgid "RAID 5 information and status"
+msgid "RAID 5 Information & Status"
 msgstr ""
 
 msgid "RAID0"
@@ -4908,8 +4950,8 @@ msgstr "RSYNC - 서버"
 msgid "RSYNC Client"
 msgstr "RSYNC 클라이언트"
 
-msgid "RSYNC Client informations"
-msgstr "RSYNC 클라이언트 정보"
+msgid "RSYNC Client Information & Status"
+msgstr ""
 
 msgid "RSYNC events"
 msgstr "RSYNC 이벤트"
@@ -5001,11 +5043,14 @@ msgstr "페이지 다시 읽기"
 msgid "Remaining battery runtime"
 msgstr ""
 
+msgid "Remote Address"
+msgstr ""
+
+msgid "Remote Module (Source)"
+msgstr ""
+
 msgid "Remote Rsync Server"
 msgstr "원격 Rsync 서버"
-
-msgid "Remote address"
-msgstr "원격 주소"
 
 msgid "Remote module (source)"
 msgstr "원격 모듈(소스)"
@@ -5053,11 +5098,11 @@ msgstr "인증이 필요함."
 msgid "Required"
 msgstr "필요함"
 
-msgid "Rescan database in progress"
+msgid "Rescan Disks"
 msgstr ""
 
-msgid "Rescan disks"
-msgstr "디스크 재 스캔"
+msgid "Rescan database in progress"
+msgstr ""
 
 msgid "Rescan interval"
 msgstr "재 스캔 간격"
@@ -5081,6 +5126,9 @@ msgid "Resource name"
 msgstr ""
 
 msgid "Resources"
+msgstr ""
+
+msgid "Restore Configuration"
 msgstr ""
 
 msgid "Restore configuration"
@@ -5125,7 +5173,7 @@ msgstr "루트 bind DN"
 msgid "Root bind password"
 msgstr "루트 바인트 암호"
 
-msgid "Rotation rate"
+msgid "Rotation Rate"
 msgstr ""
 
 msgid "Round-robin read"
@@ -5146,8 +5194,8 @@ msgstr "행"
 msgid "Rsync"
 msgstr "Rsync"
 
-msgid "Rsync job"
-msgstr "Rsync 작업"
+msgid "Rsync Job"
+msgstr ""
 
 msgid "Rule"
 msgstr "규칙"
@@ -5235,6 +5283,12 @@ msgstr "요청된 크기가 이 값보다 클 때 삼바는 파일을 비동기�
 msgid "Save"
 msgstr "저장"
 
+msgid "Save & Restart"
+msgstr ""
+
+msgid "Save File"
+msgstr ""
+
 msgid "Save and Restart"
 msgstr "저장 후 재 시작"
 
@@ -5262,23 +5316,26 @@ msgstr ""
 msgid "Scan type"
 msgstr "스캔 타입"
 
+msgid "Schedule Time"
+msgstr ""
+
 msgid "Schedule time"
 msgstr "시간 일정"
 
 msgid "Scheduled"
 msgstr "예약"
 
+msgid "Scheduled Reboot"
+msgstr ""
+
 msgid "Scheduled Self-Test"
 msgstr "예약된 자체 테스트"
 
-msgid "Scheduled reboot"
-msgstr "예약된 리붓"
+msgid "Scheduled Shutdown"
+msgstr ""
 
-msgid "Scheduled self-tests"
-msgstr "예약된 자체 테스트"
-
-msgid "Scheduled shutdown"
-msgstr "예약된 끄기"
+msgid "Scheduled tests"
+msgstr ""
 
 msgid "Secondary"
 msgstr ""
@@ -5293,6 +5350,9 @@ msgid "Security"
 msgstr "보안"
 
 msgid "See attribute E8."
+msgstr ""
+
+msgid "Select"
 msgstr ""
 
 msgid ""
@@ -5341,14 +5401,20 @@ msgstr ""
 msgid "Selected file isn't an valid ISO file."
 msgstr "선택된 파일은 유효한 ISO 파일이 아닙니다."
 
-msgid "Self-Monitoring, Analysis and Reporting Technology"
-msgstr "자체 감시, 분석, 보고 기술"
+msgid "Self-Monitoring, Analysis & Reporting Technology"
+msgstr ""
+
+msgid "Self-tests Management"
+msgstr ""
 
 msgid "Send Buffer Size"
 msgstr "버퍼 크기 전송"
 
 msgid "Send Command!"
 msgstr "명령 전송!"
+
+msgid "Send Now"
+msgstr ""
 
 msgid "Send a TEST warning email on startup."
 msgstr "기동 시 테스트 경보 전자우편 보내기."
@@ -5364,6 +5430,9 @@ msgstr "전자우편 주소들을 세미콜론 문자로 분리하십시오."
 
 msgid "Serial Console"
 msgstr "직렬 콘솔"
+
+msgid "Serial Number"
+msgstr ""
 
 msgid "Serial number"
 msgstr "일련 번호"
@@ -5474,17 +5543,17 @@ msgstr "셸"
 msgid "Shock During Write."
 msgstr ""
 
+msgid "Show Process Information"
+msgstr ""
+
 msgid "Show RAW UPS Info"
+msgstr ""
+
+msgid "Show UPS Information"
 msgstr ""
 
 msgid "Show log entries in reverse order (newest entries on top)"
 msgstr "로그 항목을 역순(새 항목이 위쪽)으로 보이기"
-
-msgid "Show process information"
-msgstr "프로세스 정보 보기"
-
-msgid "Show ups information"
-msgstr ""
 
 msgid "Shutdown"
 msgstr "끄기"
@@ -5562,6 +5631,9 @@ msgstr "이용된 소프트웨어"
 msgid "Source"
 msgstr "소스"
 
+msgid "Source Share"
+msgstr ""
+
 msgid "Source directory to be synchronized."
 msgstr "동기화 될 소스 디렉터리."
 
@@ -5570,6 +5642,9 @@ msgstr "소스 포트"
 
 msgid "Source share"
 msgstr "소스 공유"
+
+msgid "Space Usage"
+msgstr ""
 
 msgid "Space Used"
 msgstr "사용된 공간"
@@ -5600,6 +5675,9 @@ msgstr ""
 
 msgid "Specifies how many servers to create."
 msgstr "몇 개의 서버를 생성할 지를 명세 합니다."
+
+msgid "Specifies how the volume should be exposed to the OS."
+msgstr ""
 
 msgid "Specifies that the file system should be exported read-only."
 msgstr "파일 시스템이 읽기 전용으로 export 되어야 하는 지를 명세 합니다."
@@ -5646,6 +5724,9 @@ msgstr "분할 요청"
 msgid "Standard"
 msgstr "표준"
 
+msgid "Standby"
+msgstr ""
+
 msgid ""
 "Standby - Check the device unless it is in SLEEP or STANDBY mode. In these "
 "modes most disks are not spinning, so if you want to prevent a laptop disk "
@@ -5653,9 +5734,6 @@ msgid ""
 msgstr ""
 "대기 - 휴면이나 대기 모드가 아닐 경우 장치를 check 합니다. 이 모드에서 대부분의 디스크는 회전하므로 poll이 있을 때마다 랩탑 "
 "디스크가 다시 회전하는 것을 방지하려면 아마도 이 옵션이 원하는 옵션일 것입니다."
-
-msgid "Standby time"
-msgstr "대기 시간"
 
 msgid "Start"
 msgstr "시작"
@@ -5746,14 +5824,14 @@ msgstr "에러가 아닌 메시지들을 억제합니다."
 msgid "Swap"
 msgstr "스왑"
 
+msgid "Swap Information & Status"
+msgstr ""
+
+msgid "Swap Memory"
+msgstr ""
+
 msgid "Swap disabled"
 msgstr "스왑 비활성화됨"
-
-msgid "Swap memory"
-msgstr "스왑 메모리"
-
-msgid "Swap status"
-msgstr "스왑 상태"
 
 msgid "Swap usage"
 msgstr "스왑 사용"
@@ -5802,23 +5880,20 @@ msgstr "시스템"
 msgid "System Beep"
 msgstr "시스템 beep 음"
 
+msgid "System Information"
+msgstr ""
+
+msgid "System Load"
+msgstr ""
+
 msgid "System bios"
 msgstr ""
 
 msgid "System events"
 msgstr "시스템 이벤트"
 
-msgid "System firewall"
-msgstr "시스템 방화벽"
-
 msgid "System info"
 msgstr "시스템 정보"
-
-msgid "System information"
-msgstr "시스템 정보"
-
-msgid "System load"
-msgstr ""
 
 msgid "System log"
 msgstr "시스템 로그"
@@ -5921,11 +5996,11 @@ msgstr "타젯"
 msgid "Temperature"
 msgstr "온도"
 
-msgid "Temperature alarm (enabled/disabled)"
+msgid "Temperature Monitoring"
 msgstr ""
 
-msgid "Temperature monitoring"
-msgstr "온도 모니터링"
+msgid "Temperature alarm (enabled/disabled)"
+msgstr ""
 
 msgid "Temperature threshold high (degrees C)"
 msgstr ""
@@ -6765,9 +6840,9 @@ msgid ""
 msgstr ""
 
 msgid ""
-"This allows you to lower the power consumption of the drive, at the expense "
+"This allows you to lower the power consumption of the disk, at the expense "
 "of performance."
-msgstr "이것은 성능을 희생하고 드라이브의 전원 소비를 낮추도록 해줍니다."
+msgstr ""
 
 msgid "This allows you to set how loud the drive is while it's operating."
 msgstr "이것은 드라이브가 동작하는 동안 소음 레벨이 어느 정도일 지를 설정할 수 있게 합니다."
@@ -6777,8 +6852,8 @@ msgid ""
 "containing data."
 msgstr "이것은 데이터를 포함하고 있는 이미 포맷 된 하드 디스크에 파일 시스템을 설정할 수 있게 해줍니다."
 
-msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
-msgstr "이것은 ATA/IDE 하드 드라이브의 전송 모드를 설정할 수 있게 해줍니다."
+msgid "This allows you to set the transfer mode for ATA/IDE disks."
+msgstr ""
 
 msgid ""
 "This attribute indicates the count of full hard disk power on/off cycles."
@@ -7257,11 +7332,11 @@ msgstr ""
 msgid "Transcoding"
 msgstr "트랜스코딩"
 
+msgid "Transfer Rate"
+msgstr ""
+
 msgid "Transfer mode"
 msgstr "전송 모드"
-
-msgid "Transfer rate"
-msgstr ""
 
 msgid "Trap host"
 msgstr "트랩 호스트"
@@ -7319,6 +7394,13 @@ msgstr ""
 
 #, php-format
 msgid ""
+"UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
+"filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
+"unpredictable results, file corruption and the loss of data!"
+msgstr ""
+
+#, php-format
+msgid ""
 "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
 "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
 "NTFS can result in unpredictable results, file corruption, and loss of data!"
@@ -7339,6 +7421,9 @@ msgstr "UID"
 
 msgid "UPS"
 msgstr "UPS"
+
+msgid "UPS Information & Status"
+msgstr ""
 
 msgid "UPS Off Line"
 msgstr ""
@@ -7550,12 +7635,12 @@ msgstr "이용 양"
 msgid "User"
 msgstr "사용자"
 
+#, php-format
+msgid "User Defined Groups"
+msgstr ""
+
 msgid "User ID"
 msgstr "사용자 ID"
-
-#, php-format
-msgid "User defined groups"
-msgstr ""
 
 msgid "User full name."
 msgstr "사용자 전체 이름."
@@ -7593,8 +7678,8 @@ msgstr "도메인 관리 계정의 사용자 명."
 msgid "Users"
 msgstr "사용자"
 
-msgid "Users and Groups"
-msgstr "사용자와 그룹"
+msgid "Users & Groups"
+msgstr ""
 
 #, c-format
 msgid "Using %s bytes fragment size."
@@ -7605,6 +7690,9 @@ msgstr ""
 
 msgid "VLAN"
 msgstr "VLAN"
+
+msgid "VLAN Tag"
+msgstr ""
 
 msgid "VLAN tag"
 msgstr "VLAN 태그"
@@ -7635,23 +7723,29 @@ msgstr ""
 msgid "Video"
 msgstr ""
 
+msgid "Virtual Device"
+msgstr ""
+
+msgid "Virtual Devices"
+msgstr ""
+
 msgid "Virtual Host ID"
+msgstr ""
+
+msgid "Virtual IP Address"
 msgstr ""
 
 msgid "Virtual IP address"
 msgstr ""
 
+msgid "Virtual Interface"
+msgstr ""
+
 msgid "Virtual Machine"
 msgstr ""
 
-msgid "Virtual device"
-msgstr "가상 장치"
-
 msgid "Virtual devices"
 msgstr "가상 장치"
-
-msgid "Virtual interface"
-msgstr "가상 인터페이스"
 
 msgid "VirtualBox"
 msgstr ""
@@ -7670,6 +7764,9 @@ msgstr "볼륨 라벨"
 
 msgid "Volume label of the new file system."
 msgstr "새 파일 시스템의 볼륨 라벨."
+
+msgid "Volume mode"
+msgstr ""
 
 msgid "Volumes"
 msgstr ""
@@ -7900,25 +7997,30 @@ msgstr "ZFS"
 msgid "ZFS ACL"
 msgstr ""
 
-msgid "ZFS dataset information and status"
-msgstr "ZFS 데이터 셋 정보와 상태"
-
-msgid "ZFS dataset properties"
-msgstr "ZFS 데이터 셋 속성"
-
-msgid "ZFS snapshot information and status"
+msgid "ZFS Dataset Information & Status"
 msgstr ""
 
-msgid "ZFS snapshot properties"
+msgid "ZFS Dataset Properties"
+msgstr ""
+
+msgid "ZFS Snapshot Information & Status"
+msgstr ""
+
+msgid "ZFS Snapshot Properties"
+msgstr ""
+
+msgid "ZFS Volume Information & Status"
+msgstr ""
+
+msgid "ZFS Volume Properties"
 msgstr ""
 
 msgid "ZFS volume"
 msgstr "ZFS 볼륨"
 
-msgid "ZFS volume information and status"
-msgstr ""
-
-msgid "ZFS volume properties"
+msgid ""
+"ZFS volume block size. This value can not be changed after creation. Empty "
+"as default."
 msgstr ""
 
 msgid ""
@@ -7996,6 +8098,9 @@ msgstr "iSCSI 타젯"
 msgid "iSCSI Target Logical Unit Controller"
 msgstr "iSCSI 타젯 논리적 유닛 컨트롤러"
 
+msgid "iSCSI Targets Information & Status"
+msgstr ""
+
 #, php-format
 msgid "iSCSI initial parameter (%d by default)."
 msgstr "iSCSI 초기 인자(기본 값은 %d)."
@@ -8025,9 +8130,6 @@ msgid "minimum (power saving)"
 msgstr ""
 
 msgid "minute(s)"
-msgstr "분"
-
-msgid "minutes"
 msgstr "분"
 
 msgid "mirroring"
@@ -8101,3 +8203,182 @@ msgstr ""
 
 msgid "warning"
 msgstr ""
+
+#, php-format
+#~ msgid "%s interface"
+#~ msgstr "%s 인터페이스"
+
+#~ msgid "Advanced Power Management"
+#~ msgstr "고급 전원 관리"
+
+#~ msgid "Always on"
+#~ msgstr "항상 켜둠"
+
+#~ msgid "Backup configuration"
+#~ msgstr "백업 설정"
+
+#~ msgid "Ban list"
+#~ msgstr "추방 목록"
+
+#~ msgid "Connected FTP users"
+#~ msgstr "연결된 FTP 사용자들"
+
+#~ msgid "DNS settings"
+#~ msgstr "DNS 설정"
+
+#~ msgid "Device model"
+#~ msgstr "장치 모델"
+
+#~ msgid "Don't Erase MBR"
+#~ msgstr "MBR을 지우지 않음"
+
+#~ msgid "Email notification"
+#~ msgstr "전자우편 알림"
+
+#~ msgid "Email report"
+#~ msgstr "전자우편 보고"
+
+#~ msgid "File path"
+#~ msgstr "파일 경로"
+
+#~ msgid "Firewall rule"
+#~ msgstr "방화벽 규칙"
+
+#~ msgid "Format disk"
+#~ msgstr "디스크 포맷"
+
+#~ msgid "Free disk space"
+#~ msgstr "디스크 여유 공간"
+
+#~ msgid "Hard disk standby time"
+#~ msgstr "하드 디스크 대기 시간"
+
+#~ msgid "I/O statistics"
+#~ msgstr "I/O 통계"
+
+#~ msgid "Level 1 - Minimum power usage with Standby (spindown)"
+#~ msgstr "레벨 1 - 대기 상태에서 최소 전원 이용(회전 중지)"
+
+#~ msgid "Level 127 - Intermediate power usage with Standby"
+#~ msgstr "레벨 127 - 대기 상태에서 중간 정도의 전원 이용"
+
+#~ msgid "Level 128 - Minimum power usage without Standby (no spindown)"
+#~ msgstr "레벨 128 - 대기 상태 없이 최소 전원 이용(회전 중지 안함)"
+
+#~ msgid "Level 192 - Intermediate power usage without Standby"
+#~ msgstr "레벨 192 - 대기 상태 없이 중간 정도의 전원 이용"
+
+#~ msgid "Level 254 - Maximum performance, maximum power usage"
+#~ msgstr "레벨 254 - 최대 성능, 최대 전원 이용"
+
+#~ msgid "Level 64 - Intermediate power usage with Standby"
+#~ msgstr "레벨 64 - 대기 상태에서 중간 정도의 전원 이용"
+
+#~ msgid "List of available target name on all configured iSCSI targets"
+#~ msgstr "설정된 모든 iSCSI 타젯에서 이용할 수 있는 타젯 명들의 목록"
+
+#~ msgid "List of imported users"
+#~ msgstr "import 된 사용자들의 리스트"
+
+#~ msgid "List of mount points"
+#~ msgstr "마운트 지점 목록"
+
+#~ msgid "Logical Unit Controller login information"
+#~ msgstr "논리적 유닛 컨트롤러 로그인 정보"
+
+#~ msgid "MS Active Directory informations"
+#~ msgstr "MS 액티브 디렉터리 정보"
+
+#~ msgid "Maximum performance, maximum acoustic output"
+#~ msgstr "최대 성능, 최대 소음 출력"
+
+#~ msgid "Medium acoustic output"
+#~ msgstr "보통 소음 출력"
+
+#~ msgid "Minimum performance, Minimum acoustic output"
+#~ msgstr "최소 성능, 최소 소음 출력"
+
+#~ msgid "Model extra"
+#~ msgstr "추가 모델"
+
+#~ msgid "Model name"
+#~ msgstr "모델 명"
+
+#~ msgid "Pool information and status"
+#~ msgstr "풀 정보와 상태"
+
+#~ msgid "Processes information"
+#~ msgstr "프로세스 정보"
+
+#~ msgid ""
+#~ "Puts the hard disk into standby mode when the selected amount of time after "
+#~ "the last hard disk access has been elapsed."
+#~ msgstr "하드 디스크의 마지막 접근 후 선택된 양의 시간이 경과했을 때 하드 디스크를 대기 모드로 만듭니다."
+
+#~ msgid "RSYNC Client informations"
+#~ msgstr "RSYNC 클라이언트 정보"
+
+#~ msgid "Remote address"
+#~ msgstr "원격 주소"
+
+#~ msgid "Rescan disks"
+#~ msgstr "디스크 재 스캔"
+
+#~ msgid "Rsync job"
+#~ msgstr "Rsync 작업"
+
+#~ msgid "Scheduled reboot"
+#~ msgstr "예약된 리붓"
+
+#~ msgid "Scheduled self-tests"
+#~ msgstr "예약된 자체 테스트"
+
+#~ msgid "Scheduled shutdown"
+#~ msgstr "예약된 끄기"
+
+#~ msgid "Self-Monitoring, Analysis and Reporting Technology"
+#~ msgstr "자체 감시, 분석, 보고 기술"
+
+#~ msgid "Show process information"
+#~ msgstr "프로세스 정보 보기"
+
+#~ msgid "Standby time"
+#~ msgstr "대기 시간"
+
+#~ msgid "Swap memory"
+#~ msgstr "스왑 메모리"
+
+#~ msgid "Swap status"
+#~ msgstr "스왑 상태"
+
+#~ msgid "System firewall"
+#~ msgstr "시스템 방화벽"
+
+#~ msgid "System information"
+#~ msgstr "시스템 정보"
+
+#~ msgid "Temperature monitoring"
+#~ msgstr "온도 모니터링"
+
+#~ msgid ""
+#~ "This allows you to lower the power consumption of the drive, at the expense "
+#~ "of performance."
+#~ msgstr "이것은 성능을 희생하고 드라이브의 전원 소비를 낮추도록 해줍니다."
+
+#~ msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
+#~ msgstr "이것은 ATA/IDE 하드 드라이브의 전송 모드를 설정할 수 있게 해줍니다."
+
+#~ msgid "Virtual device"
+#~ msgstr "가상 장치"
+
+#~ msgid "Virtual interface"
+#~ msgstr "가상 인터페이스"
+
+#~ msgid "ZFS dataset information and status"
+#~ msgstr "ZFS 데이터 셋 정보와 상태"
+
+#~ msgid "ZFS dataset properties"
+#~ msgstr "ZFS 데이터 셋 속성"
+
+#~ msgid "minutes"
+#~ msgstr "분"

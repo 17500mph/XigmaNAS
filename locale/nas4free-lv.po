@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-11-17 01:18+0000\n"
+"POT-Creation-Date: 2015-12-09 16:19+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: Jānis Marks Gailis <jm-gailis@fai-vianet.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-23 22:45+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2015-12-09 15:41+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: LATVIA\n"
 "Language: \n"
 "X-Poedit-Language: Latvian\n"
@@ -51,8 +51,8 @@ msgid "%dB / block"
 msgstr "%dB / blokā"
 
 #, php-format
-msgid "%s interface"
-msgstr "%s interfeiss"
+msgid "%s Interface"
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -310,6 +310,12 @@ msgstr "Jābūt norādītam derīgam prefiksam (1-128)."
 msgid "A valid systctl MIB value."
 msgstr "Derīga sysctl MIB vērtība."
 
+msgid "ACL Inherit"
+msgstr ""
+
+msgid "ACL Mode"
+msgstr ""
+
 msgid "ACL inherit"
 msgstr ""
 
@@ -354,6 +360,9 @@ msgstr ""
 
 msgid "Access"
 msgstr "Piekļuve"
+
+msgid "Access Mode"
+msgstr ""
 
 msgid "Access Restrictions"
 msgstr "Piekļuves ierobežojumi"
@@ -530,8 +539,8 @@ msgstr "Attīstītāks Formāts"
 msgid "Advanced Options"
 msgstr "Paplašinātās iespējas"
 
-msgid "Advanced Power Management"
-msgstr "Advancēts Enerģijas Menedžments"
+msgid "Advanced Settings"
+msgstr ""
 
 msgid "Advanced settings"
 msgstr "Paplašināti iestatījumi"
@@ -674,8 +683,8 @@ msgstr "Mainīt TCP portu. Noklusējumā ir 873"
 msgid "Alternative configuration directory (usually empty)."
 msgstr "Alternatīva konfigurācijas direktorija (parasti tukša)."
 
-msgid "Always on"
-msgstr "Vienmēr ieslēgts"
+msgid "Always On"
+msgstr ""
 
 msgid "Always scan"
 msgstr "Vienmēr skenēt"
@@ -834,8 +843,8 @@ msgstr ""
 msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr ""
 
-msgid "Backup configuration"
-msgstr "Dublēšanas konfigurēšana"
+msgid "Backup Configuration"
+msgstr ""
 
 msgid "Backup file"
 msgstr "Dublēt datni"
@@ -849,8 +858,8 @@ msgstr ""
 msgid "Balance algorithm"
 msgstr "Balancēt algoritmu"
 
-msgid "Ban list"
-msgstr "Aizliegumu saraksts"
+msgid "Ban List"
+msgstr ""
 
 msgid "Ban list rule"
 msgstr "Aizliegumu saraksta noteikums"
@@ -925,6 +934,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "Tukš laiks"
+
+msgid "Block size"
+msgstr ""
 
 msgid "Blocksize"
 msgstr ""
@@ -1030,6 +1042,9 @@ msgid "CP949 (Korean)"
 msgstr "CP949 (Korejiešu)"
 
 msgid "CP950 (Traditional Chinese Big5)"
+msgstr ""
+
+msgid "CPU Load"
 msgstr ""
 
 msgid "CPU frequency"
@@ -1149,10 +1164,13 @@ msgstr "Izvēlies, kuram interfeisam pieder šis ceļš."
 msgid "Clear"
 msgstr "Notīrīt"
 
-msgid "Clear config and Import disks"
+msgid "Clear Config & Import Disks"
 msgstr ""
 
-msgid "Clear config and Import software raid disks"
+msgid "Clear Config & Import Software Raid Disks"
+msgstr ""
+
+msgid "Clear config and Import disks"
 msgstr ""
 
 msgid ""
@@ -1248,8 +1266,8 @@ msgstr "Konfigurē"
 msgid "Confirmation"
 msgstr "Apstiprinājums"
 
-msgid "Connected FTP users"
-msgstr "Pievienojušies FTP lietotāji"
+msgid "Connected FTP Users & Status"
+msgstr ""
 
 msgid "Consider replacing this drive"
 msgstr ""
@@ -1288,14 +1306,17 @@ msgstr "Kontroliera Autentifikācijas Metode"
 msgid "Controller Authorised network"
 msgstr "Kontroliera Autorizētais tīkls"
 
+msgid "Controller IP Address"
+msgstr ""
+
 msgid "Controller IP address"
 msgstr "Kontroliera IP adrese"
 
+msgid "Controller Model"
+msgstr ""
+
 msgid "Controller TCP Port"
 msgstr "Kontroliera TCP ports"
-
-msgid "Controller model"
-msgstr ""
 
 msgid "Controls power consumption."
 msgstr ""
@@ -1566,6 +1587,9 @@ msgstr ""
 msgid "DLNA/UPnP MiniDLNA"
 msgstr ""
 
+msgid "DNS"
+msgstr ""
+
 msgid "DNS domain"
 msgstr ""
 
@@ -1574,9 +1598,6 @@ msgstr ""
 
 msgid "DNS server is empty."
 msgstr ""
-
-msgid "DNS settings"
-msgstr "DNS uzstādījumi"
 
 #, php-format
 msgid ""
@@ -1811,6 +1832,9 @@ msgstr "Apraksts"
 msgid "Destination"
 msgstr "Galamērķis"
 
+msgid "Destination Share"
+msgstr ""
+
 msgid "Destination email address."
 msgstr "Saņēmēja e-pasta adrese"
 
@@ -1864,14 +1888,14 @@ msgstr "Ierīce /dev/%s - %s"
 msgid "Device IP"
 msgstr "Ierīces IP"
 
+msgid "Device Model"
+msgstr ""
+
 msgid "Device Pass-through"
 msgstr "Ierīces Padot-caur"
 
 msgid "Device Serial"
 msgstr ""
-
-msgid "Device model"
-msgstr "Ierīces modelis"
 
 msgid "Device polling"
 msgstr "Ierīces aptauja"
@@ -2155,9 +2179,6 @@ msgstr "Domēna nosaukums vecajā formātā, piem. EXAMPLE"
 msgid "Domain name, e.g. example.com."
 msgstr "Domēna nosaukums, piem. piemers.com."
 
-msgid "Don't Erase MBR"
-msgstr "Nedzēst MBR"
-
 msgid "Don't erase the MBR (useful for some RAID controller cards)"
 msgstr "Nedzēst MBR (noderīgs dažām RAID kontrolieru kartēm)"
 
@@ -2178,6 +2199,9 @@ msgstr ""
 
 msgid "Download"
 msgstr "Lejupielāde"
+
+msgid "Download Configuration"
+msgstr ""
 
 msgid "Download bandwidth"
 msgstr "Lejupielādes joslas platums"
@@ -2241,6 +2265,9 @@ msgstr ""
 
 msgid "Edit"
 msgstr "Labot"
+
+msgid "Edit File"
+msgstr ""
 
 msgid "Edit Host"
 msgstr "Labot saimniekdatoru"
@@ -2343,12 +2370,6 @@ msgid "Email"
 msgstr "E-pasts"
 
 msgid "Email Report"
-msgstr "E-pasta pārskats"
-
-msgid "Email notification"
-msgstr "E-pasta ziņošana"
-
-msgid "Email report"
 msgstr "E-pasta pārskats"
 
 msgid "Empty as default."
@@ -2647,6 +2668,9 @@ msgstr "Eksportēt"
 msgid "Export all the directories in the specified path."
 msgstr ""
 
+msgid "Extended Attributes"
+msgstr ""
+
 msgid "Extended attributes"
 msgstr "Paplašināti atribūti"
 
@@ -2732,8 +2756,8 @@ msgstr ""
 "FXP atļauj pārsūtīt starp diviem attālinātiem serveriem, neprasot klientam "
 "(nedrošs!)."
 
-msgid "Factory defaults"
-msgstr "Rūpnīcas noklusējumi"
+msgid "Factory Defaults"
+msgstr ""
 
 msgid "Failed"
 msgstr "Nesekmīgi"
@@ -2794,14 +2818,14 @@ msgstr "Datnes labotājs"
 msgid "File Manager"
 msgstr "Datņu Pārvaldnieks"
 
+msgid "File Path"
+msgstr ""
+
 msgid "File Transfer Protocol"
 msgstr "Datņu Transfēra Protokols"
 
 msgid "File not found"
 msgstr "Datne nav atrasta"
-
-msgid "File path"
-msgstr "Ceļš uz failu"
 
 #, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
@@ -2828,6 +2852,9 @@ msgstr "Datnes nosaukums"
 msgid "Fileserver"
 msgstr ""
 
+msgid "Filesystem"
+msgstr ""
+
 msgid "Filter"
 msgstr ""
 
@@ -2837,8 +2864,8 @@ msgstr ""
 msgid "Firewall"
 msgstr "Ugunsmūris"
 
-msgid "Firewall rule"
-msgstr "Ugunsmūra noteikums"
+msgid "Firewall Rule Settings"
+msgstr ""
 
 msgid "Firmware"
 msgstr "Programmaparatūra"
@@ -2881,9 +2908,6 @@ msgstr ""
 msgid "Format"
 msgstr "Formatēt"
 
-msgid "Format disk"
-msgstr "Formatēt disku"
-
 msgid "Format the report for phpBB forum."
 msgstr "Formatēt ziņojumu priekš phpBB foruma."
 
@@ -2895,9 +2919,6 @@ msgstr ""
 
 msgid "Free"
 msgstr "Brīvs"
-
-msgid "Free disk space"
-msgstr "Brīvā diska vieta"
 
 msgid "French"
 msgstr "Franču"
@@ -3019,13 +3040,13 @@ msgstr ""
 msgid "HAST (Highly Available Storage)"
 msgstr ""
 
+msgid "HAST Information & Status Configured Resources"
+msgstr ""
+
+msgid "HAST Resource"
+msgstr ""
+
 msgid "HAST disabled"
-msgstr ""
-
-msgid "HAST resource"
-msgstr ""
-
-msgid "HAST status of the configured resources"
 msgstr ""
 
 msgid "HAST volume"
@@ -3044,11 +3065,11 @@ msgid ""
 "the drive. This feature is implemented in most modern Seagate drives."
 msgstr ""
 
+msgid "HDD standby time"
+msgstr ""
+
 msgid "HTTP Proxy"
 msgstr "HTTP Starpniekserveris"
-
-msgid "Hard disk standby time"
-msgstr "Cietā diska nodrose"
 
 msgid "Hardware"
 msgstr "Aparatūra"
@@ -3147,11 +3168,11 @@ msgstr ""
 msgid "Hungarian"
 msgstr "Ungāru"
 
+msgid "I/O Statistics"
+msgstr ""
+
 msgid "I/O Timeout"
 msgstr "I/O noildze"
-
-msgid "I/O statistics"
-msgstr "I/O statistika"
 
 #, php-format
 msgid "I/O timeout in seconds (%d by default)."
@@ -3165,6 +3186,9 @@ msgstr "IG"
 
 msgid "IP"
 msgstr "IP"
+
+msgid "IP Address"
+msgstr ""
 
 msgid "IP address"
 msgstr "IP adrese"
@@ -3311,6 +3335,12 @@ msgstr "Bildes augšupielāde neizdevās (beidzās atmiņa?)"
 msgid "Import"
 msgstr "Importēt"
 
+msgid "Import Disks"
+msgstr ""
+
+msgid "Import Software Raid Disks"
+msgstr ""
+
 msgid "Import disks"
 msgstr "Importēt diskus"
 
@@ -3322,9 +3352,6 @@ msgstr "Importēt ugunsmūra nosacījumus."
 
 msgid "Import on-disk ZFS config"
 msgstr "Importēt uz-diska ZFS konfigurāciju"
-
-msgid "Import software raid disks"
-msgstr ""
 
 msgid "In"
 msgstr "Iekš"
@@ -3557,7 +3584,7 @@ msgstr "Itāļu"
 msgid "JBOD"
 msgstr "JBOD"
 
-msgid "JBOD information and status"
+msgid "JBOD Information & Status"
 msgstr ""
 
 msgid ""
@@ -3607,7 +3634,7 @@ msgstr ""
 msgid "LCDproc"
 msgstr ""
 
-msgid "LCDproc (client)"
+msgid "LCDproc (Client)"
 msgstr ""
 
 msgid "LDAP"
@@ -3671,26 +3698,23 @@ msgstr ""
 msgid "Leave this field empty to use default settings."
 msgstr ""
 
-msgid "Level 1 - Minimum power usage with Standby (spindown)"
+msgid "Level 1 - Minimum Power Usage with Standby (Spindown)"
 msgstr ""
-"Līmenis 1 - Minimāls elektrības lietojums ar Nodrosi (griezšanās beigšanu)"
 
-msgid "Level 127 - Intermediate power usage with Standby"
-msgstr "Līmenis 127 - Vidējs elektrības lietojums ar Nodrosi"
-
-msgid "Level 128 - Minimum power usage without Standby (no spindown)"
+msgid "Level 127 - Intermediate Power Usage with Standby"
 msgstr ""
-"Līmenis 128 - Minimāls elektrības lietojums bez Nodroses (griezšanās "
-"beigšanas)"
 
-msgid "Level 192 - Intermediate power usage without Standby"
-msgstr "Līmenis 192 - Vidējs elektrības lietojums bez Nodroses"
+msgid "Level 128 - Minimum Power Usage without Standby (No Spindown)"
+msgstr ""
 
-msgid "Level 254 - Maximum performance, maximum power usage"
-msgstr "Līmenis 254 - Maksimāla jauda, minimāls elektrības lietojums"
+msgid "Level 192 - Intermediate Power Usage without Standby"
+msgstr ""
 
-msgid "Level 64 - Intermediate power usage with Standby"
-msgstr "Līmenis 64 - Vidējs elektrības lietojums ar Nodrosi"
+msgid "Level 254 - Maximum Performance, Maximum Power Usage"
+msgstr ""
+
+msgid "Level 64 - Intermediate Power Usage with Standby"
+msgstr ""
 
 #, php-format
 msgid "Levels (MHz/mW): %s"
@@ -3701,6 +3725,9 @@ msgstr "Licenze"
 
 msgid "License & Credits"
 msgstr "Licenze & Titri"
+
+msgid "Life Time"
+msgstr ""
 
 msgid "Life time"
 msgstr ""
@@ -3733,6 +3760,15 @@ msgstr ""
 msgid "List"
 msgstr "Saraksts"
 
+msgid "List Detected Disks"
+msgstr ""
+
+msgid "List Imported Users"
+msgstr ""
+
+msgid "List Mount Points"
+msgstr ""
+
 msgid ""
 "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP "
 "(AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
@@ -3742,19 +3778,6 @@ msgstr ""
 "vairāk no: CCMP (AES Skaitītāja režīmā ar CBC-MAC, RFC 3610, IEEE "
 "802.11i/D7.0), TKIP (Pagaidu Atslēgas Integritātes Protokols, IEEE "
 "802.11i/D7.0)."
-
-msgid "List of available target name on all configured iSCSI targets"
-msgstr ""
-"Saraksts ar pieejamajiem mērķa vārdiem visiem konfigurētajiem iSCSI mērķiem"
-
-msgid "List of detected disks"
-msgstr ""
-
-msgid "List of imported users"
-msgstr "Saraksts ar importētiem lietotājiem"
-
-msgid "List of mount points"
-msgstr "Saraksts ar montēšanas punktiem"
 
 msgid "Load"
 msgstr "Slodze"
@@ -3779,6 +3802,9 @@ msgstr "Vietējs"
 
 msgid "Local Master Browser"
 msgstr "Vietējais Saimnieka Pārlūks"
+
+msgid "Local Share (Destination)"
+msgstr ""
 
 msgid "Local User"
 msgstr "Vietējais Lietotājs"
@@ -3858,12 +3884,12 @@ msgstr "Lokālās Vienības Kontroliera Autorizētais tīkls (%s pēc noklusēju
 msgid "Logical Unit Controller IP address (%s by default)"
 msgstr "Lokālās Vienības Kontroliera IP adrese (%s pēc noklusējuma)"
 
+msgid "Logical Unit Controller Login Information"
+msgstr ""
+
 #, php-format
 msgid "Logical Unit Controller TCP port (%d by default)"
 msgstr "Lokālās Vienības Kontroliera TCP ports (%d pēc noklusējuma)"
-
-msgid "Logical Unit Controller login information"
-msgstr "Loģiskās Vienības Kontroliera autorizācijas informācija"
 
 msgid "Logical Unit Type mapped to LUN."
 msgstr "Loģiskais Vienības Tips kartēts uz LUN"
@@ -3894,6 +3920,9 @@ msgstr ""
 msgid "MAC address"
 msgstr "MAC adrese"
 
+msgid "MBR Erase"
+msgstr ""
+
 msgid "MBR partition"
 msgstr "MBR partīcija"
 
@@ -3912,8 +3941,8 @@ msgstr ""
 msgid "MS Active Directory"
 msgstr "MS Aktīvā Mape"
 
-msgid "MS Active Directory informations"
-msgstr "MS Aktīvās Mapes informācijas"
+msgid "MS Active Directory Information & Status"
+msgstr ""
 
 msgid "MS Domain"
 msgstr "MS Domēns"
@@ -4004,6 +4033,9 @@ msgstr "Maks.ĀrpusstāvošaisR2T"
 msgid "MaxRecvDataSegmentLength"
 msgstr "MaxRecvDataSegmentLength"
 
+msgid "Maximum Performance, Maximum Acoustic Output"
+msgstr ""
+
 msgid "Maximum connections"
 msgstr "Maksimālie pieslēgumi"
 
@@ -4045,9 +4077,6 @@ msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
 msgstr ""
 "Maksimālais skaits vienlaicīgu lietotāju. Noklusējums ir 0 (neierobežots)."
 
-msgid "Maximum performance, maximum acoustic output"
-msgstr "Maksimāla jauda, maksimālā akustiskā izvade"
-
 msgid "Maximum relative humidity seen (percent)"
 msgstr ""
 
@@ -4063,10 +4092,13 @@ msgstr "Multimēdija Mape"
 msgid "Media library"
 msgstr ""
 
-msgid "Medium acoustic output"
-msgstr "Vidēja akustiskā izvade"
+msgid "Medium Acoustic Output"
+msgstr ""
 
 msgid "Member Interface"
+msgstr ""
+
+msgid "Memory Usage"
 msgstr ""
 
 msgid "Memory usage"
@@ -4101,6 +4133,9 @@ msgstr ""
 msgid "Minimum"
 msgstr "Minimums"
 
+msgid "Minimum Performance, Minimum Acoustic Output"
+msgstr ""
+
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr ""
 
@@ -4112,9 +4147,6 @@ msgstr ""
 
 msgid "Minimum incoming voltage seen"
 msgstr ""
-
-msgid "Minimum performance, Minimum acoustic output"
-msgstr "Minimāla jauda, Minimāla akustiskā izvade"
 
 msgid "Minimum relative humidity seen (percent)"
 msgstr ""
@@ -4140,11 +4172,11 @@ msgstr "Režīms"
 msgid "Model"
 msgstr ""
 
-msgid "Model extra"
-msgstr "Modeļa papildus"
+msgid "Model Extra"
+msgstr ""
 
-msgid "Model name"
-msgstr "Modeļa nosaukums"
+msgid "Model Name"
+msgstr ""
 
 msgid "Modified"
 msgstr ""
@@ -4400,13 +4432,13 @@ msgstr "Neviens pūls netika atrasts."
 msgid "Node A IP address"
 msgstr ""
 
-msgid "Node A settings"
+msgid "Node A Settings"
 msgstr ""
 
 msgid "Node B IP address"
 msgstr ""
 
-msgid "Node B settings"
+msgid "Node B Settings"
 msgstr ""
 
 msgid "Node Base"
@@ -4565,8 +4597,8 @@ msgid ""
 "recommends adding the same number of drives as the existing virtual device."
 msgstr ""
 
-msgid "Online version check"
-msgstr "Tiešsaistes versijas pārbaude"
+msgid "Online"
+msgstr ""
 
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
@@ -4794,6 +4826,9 @@ msgstr "Atļaut saknes autorizāciju"
 msgid "Permit to do SSH Tunneling."
 msgstr "Atļaut veikt SSH Tunelēšanu."
 
+msgid "Physical Interface"
+msgstr ""
+
 msgid "Physical interface"
 msgstr "Fiziskais interfeiss"
 
@@ -4837,8 +4872,8 @@ msgstr "Balsošanas laiks"
 msgid "Pool"
 msgstr "Pūls"
 
-msgid "Pool information and status"
-msgstr "Pūla informācija un statuss"
+msgid "Pool Information & Status"
+msgstr ""
 
 msgid "Pools"
 msgstr "Pūli"
@@ -4904,6 +4939,9 @@ msgstr "Jaudas Dēmons"
 msgid "Power Mode"
 msgstr ""
 
+msgid "Power management"
+msgstr ""
+
 msgid "Power mode"
 msgstr "Jaudas režīms"
 
@@ -4917,7 +4955,7 @@ msgid "PreInit"
 msgstr "Pirms inicializācijas"
 
 #, php-format
-msgid "Predefined system groups"
+msgid "Predefined Groups"
 msgstr ""
 
 msgid "Preferred"
@@ -4968,8 +5006,8 @@ msgstr "Process"
 msgid "Processes"
 msgstr "Procesi"
 
-msgid "Processes information"
-msgstr "Procesu informācija"
+msgid "Processes Information"
+msgstr ""
 
 msgid "Product ID"
 msgstr ""
@@ -4990,11 +5028,9 @@ msgid "Proxy"
 msgstr "Starpniekserveris"
 
 msgid ""
-"Puts the hard disk into standby mode when the selected amount of time after "
-"the last hard disk access has been elapsed."
+"Puts the disk into standby mode when the selected amount of time after the "
+"last disk access has been elapsed."
 msgstr ""
-"Ievietot cieto disku Nodroses režīmā, kad izvēlētais laika daudzums pēc "
-"pēdējām piekļuves diskam ir pagājis."
 
 msgid "Queue Depth"
 msgstr "Rindas Dziļums"
@@ -5008,25 +5044,25 @@ msgstr "Kvota"
 msgid "RAID 0"
 msgstr "RAID 0"
 
-msgid "RAID 0 information and status"
+msgid "RAID 0 Information & Status"
 msgstr ""
 
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
-msgid "RAID 0/1/5 information and status"
+msgid "RAID 0/1/5 Information & Status"
 msgstr ""
 
 msgid "RAID 1"
 msgstr "RAID 1"
 
-msgid "RAID 1 information and status"
+msgid "RAID 1 Information & Status"
 msgstr ""
 
 msgid "RAID 5"
 msgstr "RAID 5"
 
-msgid "RAID 5 information and status"
+msgid "RAID 5 Information & Status"
 msgstr ""
 
 msgid "RAID0"
@@ -5059,8 +5095,8 @@ msgstr "RSYNC - Serveris"
 msgid "RSYNC Client"
 msgstr "RSYNC Klients"
 
-msgid "RSYNC Client informations"
-msgstr "RSYNC Klienta informācija"
+msgid "RSYNC Client Information & Status"
+msgstr ""
 
 msgid "RSYNC events"
 msgstr "RSYNC notikumi"
@@ -5156,11 +5192,14 @@ msgstr "Atsvaidzināt lapu"
 msgid "Remaining battery runtime"
 msgstr ""
 
+msgid "Remote Address"
+msgstr ""
+
+msgid "Remote Module (Source)"
+msgstr ""
+
 msgid "Remote Rsync Server"
 msgstr "Attālināts Rsync Serveris"
-
-msgid "Remote address"
-msgstr "Attālināta adrese"
 
 msgid "Remote module (source)"
 msgstr "Attālināts modulis (avots)"
@@ -5212,11 +5251,11 @@ msgstr "Pieprasa autentifikāciju"
 msgid "Required"
 msgstr "Obligāts"
 
-msgid "Rescan database in progress"
+msgid "Rescan Disks"
 msgstr ""
 
-msgid "Rescan disks"
-msgstr "Pārskanēt diskus"
+msgid "Rescan database in progress"
+msgstr ""
 
 msgid "Rescan interval"
 msgstr "Pārskanēšanas intervāls"
@@ -5240,6 +5279,9 @@ msgid "Resource name"
 msgstr ""
 
 msgid "Resources"
+msgstr ""
+
+msgid "Restore Configuration"
 msgstr ""
 
 msgid "Restore configuration"
@@ -5284,7 +5326,7 @@ msgstr "Saknes bindes DN"
 msgid "Root bind password"
 msgstr "Saknes bindes parole"
 
-msgid "Rotation rate"
+msgid "Rotation Rate"
 msgstr ""
 
 msgid "Round-robin read"
@@ -5305,8 +5347,8 @@ msgstr "Rindas"
 msgid "Rsync"
 msgstr "Rsync"
 
-msgid "Rsync job"
-msgstr "Rsync darbs"
+msgid "Rsync Job"
+msgstr ""
 
 msgid "Rule"
 msgstr "Noteikums"
@@ -5398,6 +5440,12 @@ msgstr ""
 msgid "Save"
 msgstr "Saglabāt"
 
+msgid "Save & Restart"
+msgstr ""
+
+msgid "Save File"
+msgstr ""
+
 msgid "Save and Restart"
 msgstr "Saglabāt un Pārsāknēt"
 
@@ -5427,23 +5475,26 @@ msgstr ""
 msgid "Scan type"
 msgstr "Skana tips"
 
+msgid "Schedule Time"
+msgstr ""
+
 msgid "Schedule time"
 msgstr "Grafikā paredzētais laiks"
 
 msgid "Scheduled"
 msgstr "Plānotais"
 
+msgid "Scheduled Reboot"
+msgstr ""
+
 msgid "Scheduled Self-Test"
 msgstr "Plānotā Pāšpārbaude"
 
-msgid "Scheduled reboot"
-msgstr "Plānota pārstartēšanās"
+msgid "Scheduled Shutdown"
+msgstr ""
 
-msgid "Scheduled self-tests"
-msgstr "Plānotās pašpārbaudes"
-
-msgid "Scheduled shutdown"
-msgstr "Plānotā izslēgšanās"
+msgid "Scheduled tests"
+msgstr ""
 
 msgid "Secondary"
 msgstr ""
@@ -5458,6 +5509,9 @@ msgid "Security"
 msgstr "Drošība"
 
 msgid "See attribute E8."
+msgstr ""
+
+msgid "Select"
 msgstr ""
 
 msgid ""
@@ -5506,14 +5560,20 @@ msgstr ""
 msgid "Selected file isn't an valid ISO file."
 msgstr "Izvēlētā datne nav derīga ISO datne."
 
-msgid "Self-Monitoring, Analysis and Reporting Technology"
-msgstr "Paš-Pieskatīšana, Analīze un Paziņošanas Tehnoloģija"
+msgid "Self-Monitoring, Analysis & Reporting Technology"
+msgstr ""
+
+msgid "Self-tests Management"
+msgstr ""
 
 msgid "Send Buffer Size"
 msgstr "Sūtīšanas Bufera izmērs"
 
 msgid "Send Command!"
 msgstr "Sūtīt Komandu!"
+
+msgid "Send Now"
+msgstr ""
 
 msgid "Send a TEST warning email on startup."
 msgstr "Sūtīt TESTA brīdinājuma e-pastu sāknēšanās laikā."
@@ -5529,6 +5589,9 @@ msgstr "Atdalīt e-pasta adreses ar semikolu."
 
 msgid "Serial Console"
 msgstr "Seriālā Konsole"
+
+msgid "Serial Number"
+msgstr ""
 
 msgid "Serial number"
 msgstr "Sērijas numurs"
@@ -5647,17 +5710,17 @@ msgstr "Čaula"
 msgid "Shock During Write."
 msgstr ""
 
+msgid "Show Process Information"
+msgstr ""
+
 msgid "Show RAW UPS Info"
+msgstr ""
+
+msgid "Show UPS Information"
 msgstr ""
 
 msgid "Show log entries in reverse order (newest entries on top)"
 msgstr "Rādīt žurnāla ierakstus pretējā secībā (jaunākie ieraksti augšā)"
-
-msgid "Show process information"
-msgstr "Rādīt procesa informāciju"
-
-msgid "Show ups information"
-msgstr ""
 
 msgid "Shutdown"
 msgstr "Izslēgt"
@@ -5737,6 +5800,9 @@ msgstr "Lietotā programmatūra"
 msgid "Source"
 msgstr "Avots"
 
+msgid "Source Share"
+msgstr ""
+
 msgid "Source directory to be synchronized."
 msgstr "Sinhronizējamā avota mape."
 
@@ -5745,6 +5811,9 @@ msgstr "Avota ports"
 
 msgid "Source share"
 msgstr "Pirmavota kopīgojums"
+
+msgid "Space Usage"
+msgstr ""
 
 msgid "Space Used"
 msgstr "Lietotā Kvota"
@@ -5775,6 +5844,9 @@ msgstr ""
 
 msgid "Specifies how many servers to create."
 msgstr "Norāda, cik daudz serveru veidot."
+
+msgid "Specifies how the volume should be exposed to the OS."
+msgstr ""
 
 msgid "Specifies that the file system should be exported read-only."
 msgstr ""
@@ -5829,6 +5901,9 @@ msgstr "Sadalīt pieprasījumu"
 msgid "Standard"
 msgstr "Standarts"
 
+msgid "Standby"
+msgstr ""
+
 msgid ""
 "Standby - Check the device unless it is in SLEEP or STANDBY mode. In these "
 "modes most disks are not spinning, so if you want to prevent a laptop disk "
@@ -5837,9 +5912,6 @@ msgstr ""
 "Nodrose - Pārbaudīt ierīce, ja vien tā nav GULĒŠANAS vai NODROSES režīmā. "
 "Šajos režīmos vairums disku negriežas, ja tu vēlies, lai klēpjdatora diski "
 "nesāktu griezties pie katras aptaujas, šis ir tas ko tu vēlies."
-
-msgid "Standby time"
-msgstr "Nodroses laiks"
 
 msgid "Start"
 msgstr "Sākt"
@@ -5931,14 +6003,14 @@ msgstr "Noklusēt ziņojumus bez kļūdām."
 msgid "Swap"
 msgstr "Maiņatmiņa"
 
+msgid "Swap Information & Status"
+msgstr ""
+
+msgid "Swap Memory"
+msgstr ""
+
 msgid "Swap disabled"
 msgstr "Maiņatmiņa atspējota"
-
-msgid "Swap memory"
-msgstr "Maiņatmiņas atmiņa"
-
-msgid "Swap status"
-msgstr "Apmaiņas statuss"
 
 msgid "Swap usage"
 msgstr "Maiņatmiņas lietojums"
@@ -5987,23 +6059,20 @@ msgstr "Sistēma"
 msgid "System Beep"
 msgstr "Sistēmas pīkstiens"
 
+msgid "System Information"
+msgstr ""
+
+msgid "System Load"
+msgstr ""
+
 msgid "System bios"
 msgstr ""
 
 msgid "System events"
 msgstr "Sistēmas notikumi"
 
-msgid "System firewall"
-msgstr "Sistēmas ugunsmūris"
-
 msgid "System info"
 msgstr "Sistēmas informācija"
-
-msgid "System information"
-msgstr "Sistēmas informācija"
-
-msgid "System load"
-msgstr ""
 
 msgid "System log"
 msgstr "Sistēmas žurnāls"
@@ -6108,11 +6177,11 @@ msgstr "Mērķi"
 msgid "Temperature"
 msgstr "Temperatūra"
 
-msgid "Temperature alarm (enabled/disabled)"
+msgid "Temperature Monitoring"
 msgstr ""
 
-msgid "Temperature monitoring"
-msgstr "Temperatūras uzraudzīšana"
+msgid "Temperature alarm (enabled/disabled)"
+msgstr ""
 
 msgid "Temperature threshold high (degrees C)"
 msgstr ""
@@ -7018,9 +7087,9 @@ msgid ""
 msgstr ""
 
 msgid ""
-"This allows you to lower the power consumption of the drive, at the expense "
+"This allows you to lower the power consumption of the disk, at the expense "
 "of performance."
-msgstr "Šis ļauj samazināt elektrības patēriņu diskam upurējot jaudu."
+msgstr ""
 
 msgid "This allows you to set how loud the drive is while it's operating."
 msgstr "Šis ļauj uzstādīt cik skaļam jābūt diskam, kad tas darbojas."
@@ -7032,8 +7101,8 @@ msgstr ""
 "Šis ļauj uzstādīt datņu sistēmu iepriekš formatētiem cietajiem diskiem, "
 "kuros ir dati."
 
-msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
-msgstr "Šis ļauj uzstādīt pārsūtīšanās režīmu ATA/IDE cietajiem diskiem."
+msgid "This allows you to set the transfer mode for ATA/IDE disks."
+msgstr ""
 
 msgid ""
 "This attribute indicates the count of full hard disk power on/off cycles."
@@ -7563,11 +7632,11 @@ msgstr ""
 msgid "Transcoding"
 msgstr "Pārkodēšana"
 
+msgid "Transfer Rate"
+msgstr ""
+
 msgid "Transfer mode"
 msgstr "Pārsūtīšanas metode"
-
-msgid "Transfer rate"
-msgstr ""
 
 msgid "Trap host"
 msgstr "Slazda saimniekdators"
@@ -7625,6 +7694,13 @@ msgstr ""
 
 #, php-format
 msgid ""
+"UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
+"filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
+"unpredictable results, file corruption and the loss of data!"
+msgstr ""
+
+#, php-format
+msgid ""
 "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
 "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
 "NTFS can result in unpredictable results, file corruption, and loss of data!"
@@ -7647,6 +7723,9 @@ msgstr "UID"
 
 msgid "UPS"
 msgstr "UPS"
+
+msgid "UPS Information & Status"
+msgstr ""
 
 msgid "UPS Off Line"
 msgstr ""
@@ -7871,12 +7950,12 @@ msgstr "Izmantots"
 msgid "User"
 msgstr "Lietotājs"
 
+#, php-format
+msgid "User Defined Groups"
+msgstr ""
+
 msgid "User ID"
 msgstr "Lietotāja ID"
-
-#, php-format
-msgid "User defined groups"
-msgstr ""
 
 msgid "User full name."
 msgstr "Lietotāja pilnais vārds"
@@ -7914,8 +7993,8 @@ msgstr "Domēna administratora lietotāja lietotājvārds."
 msgid "Users"
 msgstr "Lietotāji"
 
-msgid "Users and Groups"
-msgstr "Lietotāji un Grupas"
+msgid "Users & Groups"
+msgstr ""
 
 #, c-format
 msgid "Using %s bytes fragment size."
@@ -7926,6 +8005,9 @@ msgstr ""
 
 msgid "VLAN"
 msgstr "VLAN"
+
+msgid "VLAN Tag"
+msgstr ""
 
 msgid "VLAN tag"
 msgstr "VLAN birka"
@@ -7956,23 +8038,29 @@ msgstr ""
 msgid "Video"
 msgstr ""
 
+msgid "Virtual Device"
+msgstr ""
+
+msgid "Virtual Devices"
+msgstr ""
+
 msgid "Virtual Host ID"
+msgstr ""
+
+msgid "Virtual IP Address"
 msgstr ""
 
 msgid "Virtual IP address"
 msgstr ""
 
+msgid "Virtual Interface"
+msgstr ""
+
 msgid "Virtual Machine"
 msgstr ""
 
-msgid "Virtual device"
-msgstr "Virtuālā ierīce"
-
 msgid "Virtual devices"
 msgstr "Virtuālās ierīces"
-
-msgid "Virtual interface"
-msgstr "Virtuālais interfeiss"
 
 msgid "VirtualBox"
 msgstr ""
@@ -7991,6 +8079,9 @@ msgstr "Sējuma apzīmējums"
 
 msgid "Volume label of the new file system."
 msgstr "Sējuma apzīmējums jaunajai datņu sistēmai."
+
+msgid "Volume mode"
+msgstr ""
 
 msgid "Volumes"
 msgstr ""
@@ -8237,25 +8328,30 @@ msgstr "ZFS"
 msgid "ZFS ACL"
 msgstr ""
 
-msgid "ZFS dataset information and status"
-msgstr "ZFS datu kopas informācija un stāvoklis"
-
-msgid "ZFS dataset properties"
-msgstr "ZFS datu kopas īpašības"
-
-msgid "ZFS snapshot information and status"
+msgid "ZFS Dataset Information & Status"
 msgstr ""
 
-msgid "ZFS snapshot properties"
+msgid "ZFS Dataset Properties"
+msgstr ""
+
+msgid "ZFS Snapshot Information & Status"
+msgstr ""
+
+msgid "ZFS Snapshot Properties"
+msgstr ""
+
+msgid "ZFS Volume Information & Status"
+msgstr ""
+
+msgid "ZFS Volume Properties"
 msgstr ""
 
 msgid "ZFS volume"
 msgstr "ZFS sējums"
 
-msgid "ZFS volume information and status"
-msgstr ""
-
-msgid "ZFS volume properties"
+msgid ""
+"ZFS volume block size. This value can not be changed after creation. Empty "
+"as default."
 msgstr ""
 
 msgid ""
@@ -8333,6 +8429,9 @@ msgstr "iSCSI Mērķis"
 msgid "iSCSI Target Logical Unit Controller"
 msgstr "iSCSI Mērķa Loģiskās Vienības Kontrolieris"
 
+msgid "iSCSI Targets Information & Status"
+msgstr ""
+
 #, php-format
 msgid "iSCSI initial parameter (%d by default)."
 msgstr "iSCSI sākumparametrs (%d pēc noklusējuma)."
@@ -8363,9 +8462,6 @@ msgstr ""
 
 msgid "minute(s)"
 msgstr "minūte(es)"
-
-msgid "minutes"
-msgstr "minūtes"
 
 msgid "mirroring"
 msgstr "spoguļošana"
@@ -8438,3 +8534,191 @@ msgstr ""
 
 msgid "warning"
 msgstr ""
+
+#, php-format
+#~ msgid "%s interface"
+#~ msgstr "%s interfeiss"
+
+#~ msgid "Advanced Power Management"
+#~ msgstr "Advancēts Enerģijas Menedžments"
+
+#~ msgid "Always on"
+#~ msgstr "Vienmēr ieslēgts"
+
+#~ msgid "Backup configuration"
+#~ msgstr "Dublēšanas konfigurēšana"
+
+#~ msgid "Ban list"
+#~ msgstr "Aizliegumu saraksts"
+
+#~ msgid "Connected FTP users"
+#~ msgstr "Pievienojušies FTP lietotāji"
+
+#~ msgid "DNS settings"
+#~ msgstr "DNS uzstādījumi"
+
+#~ msgid "Device model"
+#~ msgstr "Ierīces modelis"
+
+#~ msgid "Don't Erase MBR"
+#~ msgstr "Nedzēst MBR"
+
+#~ msgid "Email notification"
+#~ msgstr "E-pasta ziņošana"
+
+#~ msgid "Email report"
+#~ msgstr "E-pasta pārskats"
+
+#~ msgid "File path"
+#~ msgstr "Ceļš uz failu"
+
+#~ msgid "Firewall rule"
+#~ msgstr "Ugunsmūra noteikums"
+
+#~ msgid "Format disk"
+#~ msgstr "Formatēt disku"
+
+#~ msgid "Free disk space"
+#~ msgstr "Brīvā diska vieta"
+
+#~ msgid "Hard disk standby time"
+#~ msgstr "Cietā diska nodrose"
+
+#~ msgid "I/O statistics"
+#~ msgstr "I/O statistika"
+
+#~ msgid "Level 1 - Minimum power usage with Standby (spindown)"
+#~ msgstr ""
+#~ "Līmenis 1 - Minimāls elektrības lietojums ar Nodrosi (griezšanās beigšanu)"
+
+#~ msgid "Level 127 - Intermediate power usage with Standby"
+#~ msgstr "Līmenis 127 - Vidējs elektrības lietojums ar Nodrosi"
+
+#~ msgid "Level 128 - Minimum power usage without Standby (no spindown)"
+#~ msgstr ""
+#~ "Līmenis 128 - Minimāls elektrības lietojums bez Nodroses (griezšanās "
+#~ "beigšanas)"
+
+#~ msgid "Level 192 - Intermediate power usage without Standby"
+#~ msgstr "Līmenis 192 - Vidējs elektrības lietojums bez Nodroses"
+
+#~ msgid "Level 254 - Maximum performance, maximum power usage"
+#~ msgstr "Līmenis 254 - Maksimāla jauda, minimāls elektrības lietojums"
+
+#~ msgid "Level 64 - Intermediate power usage with Standby"
+#~ msgstr "Līmenis 64 - Vidējs elektrības lietojums ar Nodrosi"
+
+#~ msgid "List of available target name on all configured iSCSI targets"
+#~ msgstr ""
+#~ "Saraksts ar pieejamajiem mērķa vārdiem visiem konfigurētajiem iSCSI mērķiem"
+
+#~ msgid "List of imported users"
+#~ msgstr "Saraksts ar importētiem lietotājiem"
+
+#~ msgid "List of mount points"
+#~ msgstr "Saraksts ar montēšanas punktiem"
+
+#~ msgid "Logical Unit Controller login information"
+#~ msgstr "Loģiskās Vienības Kontroliera autorizācijas informācija"
+
+#~ msgid "MS Active Directory informations"
+#~ msgstr "MS Aktīvās Mapes informācijas"
+
+#~ msgid "Maximum performance, maximum acoustic output"
+#~ msgstr "Maksimāla jauda, maksimālā akustiskā izvade"
+
+#~ msgid "Medium acoustic output"
+#~ msgstr "Vidēja akustiskā izvade"
+
+#~ msgid "Minimum performance, Minimum acoustic output"
+#~ msgstr "Minimāla jauda, Minimāla akustiskā izvade"
+
+#~ msgid "Model extra"
+#~ msgstr "Modeļa papildus"
+
+#~ msgid "Model name"
+#~ msgstr "Modeļa nosaukums"
+
+#~ msgid "Online version check"
+#~ msgstr "Tiešsaistes versijas pārbaude"
+
+#~ msgid "Pool information and status"
+#~ msgstr "Pūla informācija un statuss"
+
+#~ msgid "Processes information"
+#~ msgstr "Procesu informācija"
+
+#~ msgid ""
+#~ "Puts the hard disk into standby mode when the selected amount of time after "
+#~ "the last hard disk access has been elapsed."
+#~ msgstr ""
+#~ "Ievietot cieto disku Nodroses režīmā, kad izvēlētais laika daudzums pēc "
+#~ "pēdējām piekļuves diskam ir pagājis."
+
+#~ msgid "RSYNC Client informations"
+#~ msgstr "RSYNC Klienta informācija"
+
+#~ msgid "Remote address"
+#~ msgstr "Attālināta adrese"
+
+#~ msgid "Rescan disks"
+#~ msgstr "Pārskanēt diskus"
+
+#~ msgid "Rsync job"
+#~ msgstr "Rsync darbs"
+
+#~ msgid "Scheduled reboot"
+#~ msgstr "Plānota pārstartēšanās"
+
+#~ msgid "Scheduled self-tests"
+#~ msgstr "Plānotās pašpārbaudes"
+
+#~ msgid "Scheduled shutdown"
+#~ msgstr "Plānotā izslēgšanās"
+
+#~ msgid "Self-Monitoring, Analysis and Reporting Technology"
+#~ msgstr "Paš-Pieskatīšana, Analīze un Paziņošanas Tehnoloģija"
+
+#~ msgid "Show process information"
+#~ msgstr "Rādīt procesa informāciju"
+
+#~ msgid "Standby time"
+#~ msgstr "Nodroses laiks"
+
+#~ msgid "Swap memory"
+#~ msgstr "Maiņatmiņas atmiņa"
+
+#~ msgid "Swap status"
+#~ msgstr "Apmaiņas statuss"
+
+#~ msgid "System firewall"
+#~ msgstr "Sistēmas ugunsmūris"
+
+#~ msgid "System information"
+#~ msgstr "Sistēmas informācija"
+
+#~ msgid "Temperature monitoring"
+#~ msgstr "Temperatūras uzraudzīšana"
+
+#~ msgid ""
+#~ "This allows you to lower the power consumption of the drive, at the expense "
+#~ "of performance."
+#~ msgstr "Šis ļauj samazināt elektrības patēriņu diskam upurējot jaudu."
+
+#~ msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
+#~ msgstr "Šis ļauj uzstādīt pārsūtīšanās režīmu ATA/IDE cietajiem diskiem."
+
+#~ msgid "Virtual device"
+#~ msgstr "Virtuālā ierīce"
+
+#~ msgid "Virtual interface"
+#~ msgstr "Virtuālais interfeiss"
+
+#~ msgid "ZFS dataset information and status"
+#~ msgstr "ZFS datu kopas informācija un stāvoklis"
+
+#~ msgid "ZFS dataset properties"
+#~ msgstr "ZFS datu kopas īpašības"
+
+#~ msgid "minutes"
+#~ msgstr "minūtes"
