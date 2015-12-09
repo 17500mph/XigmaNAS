@@ -188,7 +188,7 @@ function upsc_enable_change() {
     <td class="tabcont">
     	<!-- <table width="100%" border="0"> -->
 		<?php tblopen();?>
-				<?php html_titleline(gettext("UPS Status"));?>
+				<?php html_titleline(gettext("UPS Informatie & Status"));?>
 				<?php if (!isset($config['ups']['enable'])):?>
 				<tr>
 					<td>

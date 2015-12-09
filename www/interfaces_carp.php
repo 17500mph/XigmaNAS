@@ -106,7 +106,7 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 			<tr>
 				<td width="17%" class="listhdrlr"><?=gettext("Interface");?></td>
 				<td width="9%" class="listhdrr"><?=gettext("VHID");?></td>
-				<td width="20%" class="listhdrr"><?=gettext("Virtual IP address");?></td>
+				<td width="20%" class="listhdrr"><?=gettext("Virtual IP Address");?></td>
 				<td width="9%" class="listhdrr"><?=gettext("Skew");?></td>
 				<td width="35%" class="listhdrr"><?=gettext("Description");?></td>
 				<td width="10%" class="list"></td>
