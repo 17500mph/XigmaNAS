@@ -123,7 +123,7 @@ function enable_change(enable_change) {
 					<?php html_checkbox("v4enable", gettext("NFSv4"), !empty($pconfig['v4enable']) ? true : false, gettext("Enable NFSv4 server."), "", false);?>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save and Restart");?>" onclick="enable_change(true)" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" onclick="enable_change(true)" />
 				</div>
 				<?php include("formend.inc");?>
 			</form>

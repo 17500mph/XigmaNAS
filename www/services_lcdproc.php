@@ -155,12 +155,12 @@ function lcdproc_enable_change(enable_change) {
 	<?php html_textarea("param", gettext("Driver parameters"), !empty($pconfig['param']) ? $pconfig['param'] : "", gettext("Additional parameters to the hardware-specific part of the driver."), false, 65, 10, false, false);?>
 	<?php html_textarea("auxparam", gettext("Auxiliary parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", "", false, 65, 5, false, false);?>
 	<?php html_separator();?>
-	<?php html_titleline_checkbox("lcdproc_enable", gettext("LCDproc (client)"), !empty($pconfig['lcdproc_enable']) ? true : false, gettext("Enable"), "lcdproc_enable_change(false)");?>
+	<?php html_titleline_checkbox("lcdproc_enable", gettext("LCDproc (Client)"), !empty($pconfig['lcdproc_enable']) ? true : false, gettext("Enable"), "lcdproc_enable_change(false)");?>
 	<?php html_textarea("lcdproc_param", gettext("Extra options"), !empty($pconfig['lcdproc_param']) ? $pconfig['lcdproc_param'] : "", "", false, 65, 10, false, false);?>
 	<?php html_textarea("lcdproc_auxparam", gettext("Auxiliary parameters"), !empty($pconfig['lcdproc_auxparam']) ? $pconfig['lcdproc_auxparam'] : "", "", false, 65, 5, false, false);?>
 	</table>
 	<div id="submit">
-	  <input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save and Restart");?>" onclick="enable_change(true); lcdproc_enable_change(true);" />
+	  <input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" onclick="enable_change(true); lcdproc_enable_change(true);" />
 	</div>
 	<div id="remarks">
 	  <?php html_remark("note", gettext("Note"), sprintf(gettext("To get more information how to configure LCDproc check the LCDproc <a href='%s' target='_blank'>documentation</a>."), "http://lcdproc.omnipotent.net"));?>

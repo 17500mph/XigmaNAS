@@ -61,8 +61,8 @@ $raidstatus = get_sraid_disks_list();
 			<table width="100%" border="0" cellpadding="0" cellspacing="0">
 				<tr>
 					<td width="5%" class="listhdrlr"><?=gettext("Device");?></td>
-					<td width="6%" class="listhdrr"><?=gettext("Size");?></td>
-					<td width="16%" class="listhdrr"><?=gettext("Device Model"); ?></td>
+					<td width="7%" class="listhdrr"><?=gettext("Size");?></td>
+					<td width="15%" class="listhdrr"><?=gettext("Device Model"); ?></td>
 					<td width="17%" class="listhdrr"><?=gettext("Description");?></td>
 					<td width="13%" class="listhdrr"><?=gettext("Serial Number"); ?></td>
 					<td width="9%" class="listhdrr"><?=gettext("Filesystem"); ?></td>

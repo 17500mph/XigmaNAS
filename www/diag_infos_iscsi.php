@@ -76,7 +76,7 @@ $a_disk = $config['iscsiinit']['vdisk'];
   <tr>
     <td class="tabcont">
     	<table width="100%" border="0">
-    		<?php html_titleline(gettext("List of available target name on all configured iSCSI targets"));?>
+    		<?php html_titleline(gettext("iSCSI Targets Information & Status"));?>
 				<tr>
 			    <td>
 			    	<?php if (0 >= count($a_disk)):?>

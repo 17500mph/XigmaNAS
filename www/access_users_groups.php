@@ -110,7 +110,7 @@ function userdbgroup_process_updatenotification($mode, $data) {
 				<table width="100%">
 					<tr>
 						<td>
-							<?php html_titleline(sprintf(gettext("User defined groups"))); ?>
+							<?php html_titleline(sprintf(gettext("User Defined Groups"))); ?>
 						</td>
 					</tr>
 					<tr>
@@ -154,7 +154,7 @@ function userdbgroup_process_updatenotification($mode, $data) {
 				<table width="100%">
 					<tr>
 						<td>
-							<?php html_titleline(sprintf(gettext("Predefined system groups"))); ?>
+							<?php html_titleline(sprintf(gettext("Predefined Groups"))); ?>
 						</td>
 					</tr>
 					<tr>

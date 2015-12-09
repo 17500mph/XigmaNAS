@@ -109,7 +109,7 @@ function hastresource_process_updatenotification($mode, $data) {
 	    <td width="10%" class="listhdrr"><?=gettext("Status");?></td>
 	    <td width="20%" class="listhdrr"><?=gettext("Node Name");?></td>
 	    <td width="22%" class="listhdrr"><?=gettext("Path");?></td>
-	    <td width="20%" class="listhdrr"><?=gettext("IP address");?></td>
+	    <td width="20%" class="listhdrr"><?=gettext("IP Address");?></td>
 	    <td width="6%" class="list"></td>
 	  </tr>
 	  <?php foreach ($a_resource as $resourcev):?>

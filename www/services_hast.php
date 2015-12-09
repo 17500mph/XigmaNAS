@@ -277,11 +277,11 @@ $(document).ready(function(){
 	  </td>
 	</tr>
 	<?php html_separator();?>
-	<?php html_titleline(gettext("Advanced settings"));?>
+	<?php html_titleline(gettext("Advanced Settings"));?>
 	<?php html_textarea("auxparam", gettext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gettext("These parameters are added to %s."), "hast.conf") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/disks-hast.html"), false, 65, 5, false, false);?>
 	</table>
 	<div id="submit">
-	  <input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save and Restart");?>" />
+	  <input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" />
 	</div>
 	<div id="remarks">
 	  <?php html_remark("note", gettext("Note"), sprintf("<div id='enumeration'><ul><li>%s</li><li>%s</li><li>%s</li></ul></div>", gettext("When HAST is enabled, the local devices, the local services and the additional packages which do not support HAST volume cannot be used."), gettext("The HAST volumes can not be accessed until HAST node becomes Primary."), gettext("Dynamic IP (DHCP) can not be used for HAST resources.")));?>

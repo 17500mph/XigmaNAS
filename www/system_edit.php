@@ -103,11 +103,11 @@ else
 				<table width="100%" cellpadding='9' cellspacing='9' bgcolor='#eeeeee'>
 					<tr>
 						<td>
-							<span class="label"><?=gettext("File path");?></span>
+							<span class="label"><?=gettext("File Path");?></span>
 							<input size="42" id="savetopath" name="savetopath" value="<?=$savetopath;?>" />
 							<input name="browse" type="button" class="formbtn" id="Browse" onclick='ifield = form.savetopath; filechooser = window.open("filechooser.php?p="+encodeURIComponent(ifield.value), "filechooser", "scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300"); filechooser.ifield = ifield; window.ifield = ifield;' value="..." />
-							<input name="submit" type="submit" class="formbtn" id="Load" value="<?=gettext("Load file");?>" />
-							<input name="submit" type="submit" class="formbtn" id="Save" value="<?=gettext("Save file");?>" />
+							<input name="submit" type="submit" class="formbtn" id="Load" value="<?=gettext("Edit File");?>" />
+							<input name="submit" type="submit" class="formbtn" id="Save" value="<?=gettext("Save File");?>" />
 							<hr noshade="noshade" />
 							<?php if(isset($_POST['highlight']) && $_POST['highlight'] == "no"): ?>
 							<?=gettext("Rows"); ?>: <input size="3" name="rows" value="<? echo $rows; ?>" />

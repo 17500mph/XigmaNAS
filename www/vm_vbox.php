@@ -156,7 +156,7 @@ $(document).ready(function(){
 	<?php html_text("url2", gettext("URL"), $text);?>
 	</table>
 	<div id="submit">
-	  <input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save and Restart");?>" />
+	  <input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" />
 	</div>
 	<?php include("formend.inc");?>
       </form>

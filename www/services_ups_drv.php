@@ -72,8 +72,8 @@ function nut_get_driverlist() {
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
           <tr>
           	<td width="25%" class="listhdrlr"><?=gettext("Manufacturer");?></td>
-            <td width="25%" class="listhdrr"><?=gettext("Model name");?></td>
-            <td width="25%" class="listhdrr"><?=gettext("Model extra");?></td>
+            <td width="25%" class="listhdrr"><?=gettext("Model Name");?></td>
+            <td width="25%" class="listhdrr"><?=gettext("Model Extra");?></td>
             <td width="25%" class="listhdrr"><?=gettext("Driver");?></td>
           </tr>
   			  <?php foreach(nut_get_driverlist() as $driverinfov):?>

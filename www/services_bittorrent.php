@@ -254,7 +254,7 @@ function authrequired_change() {
 					<?php html_text("url", gettext("URL"), $text);?>
 			  </table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save and Restart");?>" onclick="enable_change(true)" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" onclick="enable_change(true)" />
 				</div>
 			</td>
 		</tr>

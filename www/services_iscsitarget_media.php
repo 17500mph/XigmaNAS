@@ -582,8 +582,8 @@ function sizeunit_change() {
       <?php if (!empty($errormsg)) print_error_box($errormsg);?>
       <?php if (!empty($savemsg)) print_info_box($savemsg);?>
       <table width="100%" border="0" cellpadding="6" cellspacing="0">
-      <?php html_titleline(gettext("Logical Unit Controller login information"));?>
-      <?php html_inputbox("media_uctladdress", gettext("Controller IP address"), $pconfig['media_uctladdress'], "", true, 30);?>
+      <?php html_titleline(gettext("Logical Unit Controller Login Information"));?>
+      <?php html_inputbox("media_uctladdress", gettext("Controller IP Address"), $pconfig['media_uctladdress'], "", true, 30);?>
       <?php html_inputbox("media_uctlport", gettext("Controller TCP Port"), $pconfig['media_uctlport'], "", true, 15);?>
       <?php html_combobox("media_uctlauthmethod", gettext("Controller Auth Method"), $pconfig['media_uctlauthmethod'], array("CHAP" => gettext("CHAP"), "CHAP mutual" => gettext("Mutual CHAP")), "", true, false, "authmethod_change()");?>
       <?php html_inputbox("media_uctluser", gettext("User"), $pconfig['media_uctluser'], "", true, 60);?>

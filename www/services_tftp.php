@@ -131,7 +131,7 @@ function enable_change(enable_change) {
 					<?php html_filechooser("dir", gettext("Directory"), $pconfig['dir'], gettext("The directory containing the files you want to publish. The remote host does not need to pass along the directory as part of the transfer."), $g['media_path'], true, 60);?>
 					<?php html_checkbox("allowfilecreation", gettext("Allow new files"), !empty($pconfig['allowfilecreation']) ? true : false, gettext("Allow new files to be created."), gettext("By default, only already existing files can be uploaded."), false);?>
 					<?php html_separator();?>
-					<?php html_titleline(gettext("Advanced settings"));?>
+					<?php html_titleline(gettext("Advanced Settings"));?>
 					<?php html_inputbox("port", gettext("Port"), $pconfig['port'], gettext("The port to listen to. The default is to listen to the tftp port specified in /etc/services."), false, 5);?>
 					<?php $a_user = array(); foreach (system_get_user_list() as $userk => $userv) { $a_user[$userk] = htmlspecialchars($userk); }?>
 					<?php html_combobox("username", gettext("Username"), $pconfig['username'], $a_user, gettext("Specifies the username which the service will run as."), false);?>
@@ -141,7 +141,7 @@ function enable_change(enable_change) {
 					<?php html_inputbox("extraoptions", gettext("Extra options"), $pconfig['extraoptions'], gettext("Extra options (usually empty)."), false, 40);?>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save and Restart");?>" onclick="enable_change(true)" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" onclick="enable_change(true)" />
 				</div>
 				<?php include("formend.inc");?>
 			</form>

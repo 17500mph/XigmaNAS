@@ -368,7 +368,7 @@ function aio_change() {
 			      <td colspan="2" class="list" height="12"></td>
 			    </tr>
 			    <tr>
-			      <td colspan="2" valign="top" class="listtopic"><?=gettext("Advanced settings");?></td>
+			      <td colspan="2" valign="top" class="listtopic"><?=gettext("Advanced Settings");?></td>
 			    </tr>
 					<tr>
 						<td width="22%" valign="top" class="vncell"><?=gettext("Guest account");?></td>
@@ -452,7 +452,7 @@ function aio_change() {
 					<?php html_textarea("auxparam", gettext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gettext("These parameters are added to [Global] section of %s."), "smb4.conf") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://us1.samba.org/samba/docs/man/manpages-3/smb.conf.5.html"), false, 65, 5, false, false);?>
         </table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save and Restart");?>" onclick="enable_change(true)" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" onclick="enable_change(true)" />
 				</div>
 				<div id="remarks">
 					<?php html_remark("note", gettext("Note"), sprintf(gettext("To increase CIFS performance try the following:<div id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a href='%s'>Tuning</a>' switch</li></ul></div>"), "system_advanced.php", "interfaces_lan.php"));?>

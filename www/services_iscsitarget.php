@@ -290,7 +290,7 @@ function uctlenable_change(enable_change) {
 	?>
 	<?php html_combobox("discoveryauthgroup", gettext("Discovery Auth Group"), $pconfig['discoveryauthgroup'], $ag_list, gettext("The initiator can discover the targets with correct user and secret in specific Auth Group."), true);?>
 	<?php html_separator();?>
-	<?php html_titleline(gettext("Advanced settings"));?>
+	<?php html_titleline(gettext("Advanced Settings"));?>
 	<?php html_inputbox("timeout", gettext("I/O Timeout"), $pconfig['timeout'], sprintf(gettext("I/O timeout in seconds (%d by default)."), 30), true, 30, false);?>
 	<?php html_inputbox("nopininterval", gettext("NOPIN Interval"), $pconfig['nopininterval'], sprintf(gettext("NOPIN sending interval in seconds (%d by default)."), 20), true, 30, false);?>
 	<?php html_inputbox("maxsessions", gettext("Max. sessions"), $pconfig['maxsessions'], sprintf(gettext("Maximum number of sessions holding at same time (%d by default)."), 16), true, 30, false);?>
@@ -324,7 +324,7 @@ function uctlenable_change(enable_change) {
 	<?php html_filechooser("mediadirectory", gettext("Media Directory"), $pconfig['mediadirectory'], gettext("Directory that contains removable media. (e.g /mnt/iscsi/)"), $g['media_path'], true);?>
 	</table>
 	<div id="submit">
-	  <input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save and Restart");?>" onclick="enable_change(true)" />
+	  <input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" onclick="enable_change(true)" />
 	</div>
 	<div id="remarks">
 	  <?php html_remark("note", gettext("Note"), sprintf(gettext("You must have a minimum of %dMiB RAM for using iSCSI target."), 512));?>
