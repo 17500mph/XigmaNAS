@@ -175,10 +175,10 @@ function diskmanagement_process_updatenotification($mode, $data) {
 						<td width="5%" class="listhdrr"><?=gettext("Size"); ?></td>
 						<td width="15%" class="listhdrr"><?=gettext("Serial Number"); ?></td>
 						<td width="5%" class="listhdrr"><?=gettext("Controller"); ?></td>
-						<td width="15%" class="listhdrr"><?=gettext("Controller Model"); ?></td>
-						<td width="7%" class="listhdrr"><?=gettext("Standby Time"); ?></td>
-						<td width="8%" class="listhdrr"><?=gettext("File System"); ?></td>
-						<td width="17%" class="listhdrr"><?=gettext("Status"); ?></td>
+						<td width="17%" class="listhdrr"><?=gettext("Controller Model"); ?></td>
+						<td width="9%" class="listhdrr"><?=gettext("Standby"); ?></td>
+						<td width="10%" class="listhdrr"><?=gettext("Filesystem"); ?></td>
+						<td width="11%" class="listhdrr"><?=gettext("Status"); ?></td>
 						<td width="8%" class="list"></td>
 					</tr>
 					<?php foreach ($a_disk_conf as $disk):?>
