@@ -84,7 +84,7 @@ $(document).ready(function(){
   <tr>
     <td class="tabcont">
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
-	<?php html_titleline(gettext("HAST status of the configured resources"));?>
+	<?php html_titleline(gettext("HAST Information & Status Configured Resources"));?>
 	<tr>
 	  <td class="listt">
 	  <pre><span id="hast_status"></span></pre>

@@ -301,7 +301,7 @@ function anonymousonly_change() {
 					<?php html_inputbox("allowgroup", gettext("Allow group"), $pconfig['allowgroup'], gettext("Comma-separated list of group names that are permitted to login to the FTP server. (empty is ftp group)"), false, 40);?>
 					<?php html_textarea("banner", gettext("Banner"), $pconfig['banner'], gettext("Greeting banner displayed by FTP when a connection first comes in."), false, 65, 7, false, false);?>
 					<?php html_separator();?>
-					<?php html_titleline(gettext("Advanced settings"));?>
+					<?php html_titleline(gettext("Advanced Settings"));?>
 					<?php html_inputbox("filemask", gettext("Create mask"), $pconfig['filemask'], gettext("Use this option to override the file creation mask (077 by default)."), false, 3);?>
 					<?php html_inputbox("directorymask", gettext("Directory mask"), $pconfig['directorymask'], gettext("Use this option to override the directory creation mask (022 by default)."), false, 3);?>
 					<?php html_checkbox("fxp", gettext("FXP"), !empty($pconfig['fxp']) ? true : false, gettext("Enable FXP protocol."), gettext("FXP allows transfers between two remote servers without any file data going to the client asking for the transfer (insecure!)."), false);?>
@@ -324,7 +324,7 @@ function anonymousonly_change() {
 					<?php html_textarea("auxparam", gettext("Auxiliary parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", sprintf(gettext("These parameters are added to %s."), "proftpd.conf") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://www.proftpd.org/docs/directives/linked/configuration.html"), false, 65, 5, false, false);?>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save and Restart");?>" onclick="enable_change(true)" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" onclick="enable_change(true)" />
 				</div>
 				<?php include("formend.inc");?>
 			</form>

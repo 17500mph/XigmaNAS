@@ -117,7 +117,7 @@ function ftpd_mod_ban_process_updatenotification($mode, $data) {
 				<?php if (updatenotify_exists("ftpd_mod_ban")) print_config_change_box();?>
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline_checkbox("mod_ban_enable", gettext("Ban list"), !empty($pconfig['mod_ban_enable']) ? true : false, gettext("Enable"), "enable_change(false)");?>
+					<?php html_titleline_checkbox("mod_ban_enable", gettext("Ban List"), !empty($pconfig['mod_ban_enable']) ? true : false, gettext("Enable"), "enable_change(false)");?>
 					<tr>
 						<td width="22%" valign="top" class="vncell"><?=gettext("Rules");?></td>
 						<td width="78%" class="vtable">
@@ -163,7 +163,7 @@ function ftpd_mod_ban_process_updatenotification($mode, $data) {
 					</tr>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save and Restart");?>" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" />
 				</div>
 				<?php include("formend.inc");?>
 			</form>

@@ -75,7 +75,7 @@ if (!isset($config['ad']) || !is_array($config['ad']))
 	<tr>
 		<td class="tabcont">
 			<table width="100%" border="0">
-				<?php html_titleline(gettext("MS Active Directory informations"));?>
+				<?php html_titleline(gettext("MS Active Directory Information & Status"));?>
 				<tr>
 					<td>
 						<?php if (!isset($config['ad']['enable'])):?>
@@ -97,7 +97,7 @@ if (!isset($config['ad']) || !is_array($config['ad']))
 						?></pre>
 					</td>
 				</tr>
-				<?php html_titleline(gettext("List of imported users"));?>
+				<?php html_titleline(gettext("List Imported Users"));?>
 				<tr>
 					<td>
 						<pre><?php

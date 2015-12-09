@@ -383,8 +383,8 @@ function enable_change(enable_change) {
 					</tr>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save and Restart");?>" onclick="enable_change(true)" />
-					<input name="Submit" id="sendnow" type="submit" class="formbtn" value="<?=gettext("Send now");?>" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" onclick="enable_change(true)" />
+					<input name="Submit" id="sendnow" type="submit" class="formbtn" value="<?=gettext("Send Now");?>" />
 				</div>
 			</td>
 		</tr>

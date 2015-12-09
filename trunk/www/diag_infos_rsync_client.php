@@ -71,7 +71,7 @@ $pgtitle = array(gettext("Diagnostics"), gettext("Information"), gettext("RSYNC 
   <tr>
     <td class="tabcont">
 			<table width="100%" border="0">
-				<?php html_titleline(gettext("RSYNC Client informations"));?>
+				<?php html_titleline(gettext("RSYNC Client Information & Status"));?>
 				<tr>
 			    <td>
 			    	<?php if (!is_array($config['rsync']) || !is_array($config['rsync']['rsyncclient'])):?>

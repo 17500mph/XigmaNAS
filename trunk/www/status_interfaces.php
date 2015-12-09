@@ -58,7 +58,7 @@ $pgtitle = array(gettext("Status"), gettext("Interfaces"));
 		      <?php endif; ?>
 		      <tr>
 		        <td colspan="2" class="listtopic">
-		          <?=sprintf(gettext("%s interface"), htmlspecialchars($ifname));?>
+		          <?=sprintf(gettext("%s Interface"), htmlspecialchars($ifname));?>
 		        </td>
 		      </tr>
 		      <tr>

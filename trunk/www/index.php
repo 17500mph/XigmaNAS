@@ -549,7 +549,7 @@ $(document).ready(function(){
 				$loadaverage = substr(strrchr($result[0], "load averages:"), 15);
 				?>
 				<input style="padding: 0; border: 0; background-color:#FCFCFC;" size="14" name="loadaverage" id="loadaverage" value="<?=$loadaverage;?>" />
-				<?="<small>[<a href='status_process.php'>".gettext("Show process information")."</a></small>]";?>
+				<?="<small>[<a href='status_process.php'>".gettext("Show Process Information")."</a></small>]";?>
 			</td>
 		</tr>
 		<tr>
@@ -663,7 +663,7 @@ $(document).ready(function(){
 						tblrow('ERROR:', 'Data stale!');
 
 					$disp_status = get_ups_disp_status($ups['ups.status']);
-					tblrow(gettext('Status'), '<span id="ups_status_disp_status">'.$disp_status."</span>". "  <small>[<a href='diag_infos_ups.php'>" . gettext("Show ups information")."</a></small>]");
+					tblrow(gettext('Status'), '<span id="ups_status_disp_status">'.$disp_status."</span>". "  <small>[<a href='diag_infos_ups.php'>" . gettext("Show UPS Information")."</a></small>]");
 					tblrowbar("load", gettext('Load'), $ups['ups.load'], '%', '100-80', '79-60', '59-0');
 					tblrowbar("battery", gettext('Battery Level'), $ups['battery.charge'], '%', '0-29' ,'30-79', '80-100');
 				}

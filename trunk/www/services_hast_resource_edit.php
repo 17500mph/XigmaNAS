@@ -139,16 +139,16 @@ if ($_POST) {
       <form action="services_hast_resource_edit.php" method="post" name="iform" id="iform">
         <?php if ($input_errors) print_input_errors($input_errors);?>
 	<table width="100%" border="0" cellpadding="6" cellspacing="0">
-	<?php html_titleline(gettext("HAST resource"));?>
+	<?php html_titleline(gettext("HAST Resource"));?>
 	<?php html_inputbox("name", gettext("Resource name"), $pconfig['name'], "", false, 30);?>
 	<?php html_textarea("auxparam", gettext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gettext("These parameters are added to %s."), "hast.conf") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://www.freebsd.org/cgi/man.cgi?query=hast.conf&sektion=5"), false, 65, 5, false, false);?>
 	<?php html_separator();?>
-	<?php html_titleline(gettext("Node A settings"));?>
+	<?php html_titleline(gettext("Node A Settings"));?>
 	<?php html_inputbox("aname", gettext("Node Name"), $pconfig['aname'], "", false, 40);?>
 	<?php html_inputbox("apath", gettext("Path"), $pconfig['apath'], sprintf(gettext("Path to the local device. (e.g. %s)"), "/dev/da1"), false, 40);?>
 	<?php html_inputbox("aremoteaddr", gettext("Node B IP address"), $pconfig['aremoteaddr'], gettext("Address of the remote hastd daemon. It must be a static IP address."), false, 40);?>
 	<?php html_separator();?>
-	<?php html_titleline(gettext("Node B settings"));?>
+	<?php html_titleline(gettext("Node B Settings"));?>
 	<?php html_inputbox("bname", gettext("Node Name"), $pconfig['bname'], "", false, 40);?>
 	<?php html_inputbox("bpath", gettext("Path"), $pconfig['bpath'], sprintf(gettext("Path to the local device. (e.g. %s)"), "/dev/da1"), false, 40);?>
 	<?php html_inputbox("bremoteaddr", gettext("Node A IP address"), $pconfig['bremoteaddr'], gettext("Address of the remote hastd daemon. It must be a static IP address."), false, 40);?>

@@ -121,7 +121,7 @@ function rsyncd_process_updatenotification($mode, $data) {
             <td width="35%" class="listhdrr"><?=gettext("Path");?></td>
             <td width="20%" class="listhdrr"><?=gettext("Comment");?></td>
             <td width="10%" class="listhdrr"><?=gettext("List");?></td>
-            <td width="10%" class="listhdrr"><?=gettext("Access mode");?></td>
+            <td width="10%" class="listhdrr"><?=gettext("Access Mode");?></td>
             <td width="10%" class="list"></td>
           </tr>
   			  <?php foreach($a_module as $modulev):?>

@@ -114,8 +114,8 @@ function rsynclocal_process_updatenotification($mode, $data) {
         <?php if (updatenotify_exists("rsynclocal")) print_config_change_box();?>
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
           <tr>
-            <td width="25%" class="listhdrlr"><?=gettext("Source share");?></td>
-						<td width="25%" class="listhdrr"><?=gettext("Destination share");?></td>
+            <td width="25%" class="listhdrlr"><?=gettext("Source Share");?></td>
+						<td width="25%" class="listhdrr"><?=gettext("Destination Share");?></td>
 						<td width="10%" class="listhdrr"><?=gettext("Who");?></td>
 						<td width="30%" class="listhdrr"><?=gettext("Description");?></td>
             <td width="10%" class="list"></td>

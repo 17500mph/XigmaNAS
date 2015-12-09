@@ -75,7 +75,7 @@ if (file_exists("{$g['etc_path']}/swapdevice"))
   <tr>
     <td class="tabcont">
     	<table width="100%" border="0">
-				<?php html_titleline(gettext("Swap status"));?>
+				<?php html_titleline(gettext("Swap Information & Status"));?>
 				<tr>
 			    <td>
 			    	<?php if ($swapdevice == "NONE" && !isset($config['system']['swap']['enable'])):?>

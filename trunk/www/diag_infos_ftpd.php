@@ -71,7 +71,7 @@ $pgtitle = array(gettext("Diagnostics"), gettext("Information"), gettext("FTP"))
   <tr>
     <td class="tabcont">
     	<table width="100%" border="0">
-    		<?php html_titleline(gettext("Connected FTP users"));?>
+    		<?php html_titleline(gettext("Connected FTP Users & Status"));?>
 				<tr>
 			    <td>
 			    	<?php if (!isset($config['ftpd']['enable'])):?>
