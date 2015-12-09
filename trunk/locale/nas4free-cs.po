@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-11-17 01:18+0000\n"
-"PO-Revision-Date: 2015-11-17 22:54+0000\n"
-"Last-Translator: Pavel Borecki <Unknown>\n"
+"POT-Creation-Date: 2015-12-09 16:19+0000\n"
+"PO-Revision-Date: 2015-11-30 19:33+0000\n"
+"Last-Translator: Tomáš Bednář <bednto@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-23 22:45+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2015-12-09 15:41+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
 "X-Poedit-Language: Czech\n"
@@ -51,8 +51,8 @@ msgid "%dB / block"
 msgstr "%dB / blok"
 
 #, php-format
-msgid "%s interface"
-msgstr "%s rozhraní"
+msgid "%s Interface"
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -347,6 +347,12 @@ msgstr "Je třeba zadat platnou předponu (1-128)."
 msgid "A valid systctl MIB value."
 msgstr "Platná hodnota sysctl MIB."
 
+msgid "ACL Inherit"
+msgstr ""
+
+msgid "ACL Mode"
+msgstr ""
+
 msgid "ACL inherit"
 msgstr "Přebírání ACL seznamů"
 
@@ -391,6 +397,9 @@ msgstr "NÁZEV ATRIBUTU"
 
 msgid "Access"
 msgstr "Přístup"
+
+msgid "Access Mode"
+msgstr ""
 
 msgid "Access Restrictions"
 msgstr "Omezení přístupu"
@@ -572,8 +581,8 @@ msgstr "Pokročilý formát"
 msgid "Advanced Options"
 msgstr "Pokročilé předvolby"
 
-msgid "Advanced Power Management"
-msgstr "Pokročilá správa napájení"
+msgid "Advanced Settings"
+msgstr ""
 
 msgid "Advanced settings"
 msgstr "Pokročilá nastavení"
@@ -743,8 +752,8 @@ msgstr "Alternativní TCP port. Výchozí je 873"
 msgid "Alternative configuration directory (usually empty)."
 msgstr "Alternativní složka s nastaveními (obvykle nevyplněno)"
 
-msgid "Always on"
-msgstr "Vždy zapnuto"
+msgid "Always On"
+msgstr ""
 
 msgid "Always scan"
 msgstr "Vždy prohledávat"
@@ -907,8 +916,8 @@ msgstr ""
 "Průměrný čas, potřebný pro roztočení ploten disku (ze stojících až na "
 "provozní otáčky)."
 
-msgid "Backup configuration"
-msgstr "Zálohovat nastavení"
+msgid "Backup Configuration"
+msgstr ""
 
 msgid "Backup file"
 msgstr "Soubor se zálohou"
@@ -922,8 +931,8 @@ msgstr "Chybný uživatel – neexistující uživatelé"
 msgid "Balance algorithm"
 msgstr "Vyvažovací algoritmus"
 
-msgid "Ban list"
-msgstr "Seznam udělených vyloučení (ban)"
+msgid "Ban List"
+msgstr ""
 
 msgid "Ban list rule"
 msgstr "Pravidlo pro zařazení na seznam vyloučených"
@@ -1003,6 +1012,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "Prodleva potemnění obrazovky"
+
+msgid "Block size"
+msgstr ""
 
 msgid "Blocksize"
 msgstr "Velikost bloku"
@@ -1114,6 +1126,9 @@ msgstr "CP949 (korejština)"
 
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (tradiční čínština Big5)"
+
+msgid "CPU Load"
+msgstr ""
 
 msgid "CPU frequency"
 msgstr "Frekvence procesoru"
@@ -1240,11 +1255,14 @@ msgstr "Zvolte rozhraní, pro které bude tato trasa platit."
 msgid "Clear"
 msgstr "Vyčistit"
 
+msgid "Clear Config & Import Disks"
+msgstr ""
+
+msgid "Clear Config & Import Software Raid Disks"
+msgstr ""
+
 msgid "Clear config and Import disks"
 msgstr "Vyčistit nastavení a importovat disky"
-
-msgid "Clear config and Import software raid disks"
-msgstr "Vyčistit nastavení a importovat disky softwarového RAID pole"
 
 msgid ""
 "Click &quot;Enable firmware upload&quot; below, then choose the embedded "
@@ -1351,8 +1369,8 @@ msgstr "Nastavování"
 msgid "Confirmation"
 msgstr "Potvrzení"
 
-msgid "Connected FTP users"
-msgstr "Připojení FTP uživatelé"
+msgid "Connected FTP Users & Status"
+msgstr ""
 
 msgid "Consider replacing this drive"
 msgstr "Zvažte výměnu této jednotky (disku, SSD)"
@@ -1391,14 +1409,17 @@ msgstr "Metoda, pomocí které řadič ověřuje"
 msgid "Controller Authorised network"
 msgstr "Síť, ze které je umožněn přístup k řadiči"
 
+msgid "Controller IP Address"
+msgstr ""
+
 msgid "Controller IP address"
 msgstr "IP adresa řadiče"
 
+msgid "Controller Model"
+msgstr ""
+
 msgid "Controller TCP Port"
 msgstr "TCP port řadiče"
-
-msgid "Controller model"
-msgstr "Model řadiče"
 
 msgid "Controls power consumption."
 msgstr "Řídí spotřebu energie."
@@ -1743,6 +1764,9 @@ msgstr "DLNA/UPnP Fuppes"
 msgid "DLNA/UPnP MiniDLNA"
 msgstr "DLNA/UPnP MiniDLNA"
 
+msgid "DNS"
+msgstr ""
+
 msgid "DNS domain"
 msgstr "DNS doména"
 
@@ -1751,9 +1775,6 @@ msgstr "DNS přeposílání"
 
 msgid "DNS server is empty."
 msgstr "Není vyplněn DNS server."
-
-msgid "DNS settings"
-msgstr "Nastavení DNS"
 
 #, php-format
 msgid ""
@@ -2000,6 +2021,9 @@ msgstr "Popis"
 msgid "Destination"
 msgstr "Cíl"
 
+msgid "Destination Share"
+msgstr ""
+
 msgid "Destination email address."
 msgstr "Cílová e-mailové adresa."
 
@@ -2053,14 +2077,14 @@ msgstr "Zařízení /dev/%s – %s"
 msgid "Device IP"
 msgstr "IP adresa zařízení"
 
+msgid "Device Model"
+msgstr ""
+
 msgid "Device Pass-through"
 msgstr "Předávání zařízení"
 
 msgid "Device Serial"
 msgstr "Sériové číslo zařízení"
-
-msgid "Device model"
-msgstr "Model zařízení"
 
 msgid "Device polling"
 msgstr "Dotazování (polling) zařízení"
@@ -2352,9 +2376,6 @@ msgstr "Název domény ve starém formátu, např. EXAMPLE."
 msgid "Domain name, e.g. example.com."
 msgstr "Název domény, např.: example.com."
 
-msgid "Don't Erase MBR"
-msgstr "Nemazat oblast MBR (hlavní zaváděcí záznam)"
-
 msgid "Don't erase the MBR (useful for some RAID controller cards)"
 msgstr "Nemazat MBR (užitečné v případě některých RAID řadičů)"
 
@@ -2375,6 +2396,9 @@ msgstr "RAID-Z s dvojitou detekcí chyb"
 
 msgid "Download"
 msgstr "Stáhnout"
+
+msgid "Download Configuration"
+msgstr ""
 
 msgid "Download bandwidth"
 msgstr "Rychlost stahování"
@@ -2438,6 +2462,9 @@ msgstr "CHYBA:"
 
 msgid "Edit"
 msgstr "Upravit"
+
+msgid "Edit File"
+msgstr ""
 
 msgid "Edit Host"
 msgstr "Upravit záznam o stroji"
@@ -2540,12 +2567,6 @@ msgid "Email"
 msgstr "E-mail"
 
 msgid "Email Report"
-msgstr "Hlášení e-mailem"
-
-msgid "Email notification"
-msgstr "Upozorňování e-mailem"
-
-msgid "Email report"
 msgstr "Hlášení e-mailem"
 
 msgid "Empty as default."
@@ -2858,6 +2879,9 @@ msgstr "Exportovat"
 msgid "Export all the directories in the specified path."
 msgstr "Exportovat všechny složky v zadaném umístění."
 
+msgid "Extended Attributes"
+msgstr ""
+
 msgid "Extended attributes"
 msgstr "Rozšířené atributy"
 
@@ -2945,8 +2969,8 @@ msgstr ""
 "FXP umožňuje přenášení dat mezi dvěma vzdálenými servery bez toho, aby data "
 "procházela přes klienta, požadujícího přenos (nezabezpečené!)."
 
-msgid "Factory defaults"
-msgstr "Obnovit výchozí nastavení"
+msgid "Factory Defaults"
+msgstr "Tovární nastavení"
 
 msgid "Failed"
 msgstr "Nezdařilo se"
@@ -3007,14 +3031,14 @@ msgstr "Editor souborů"
 msgid "File Manager"
 msgstr "Správce souborů"
 
+msgid "File Path"
+msgstr ""
+
 msgid "File Transfer Protocol"
 msgstr "File Transfer Protocol (protokol pro přenos souborů)"
 
 msgid "File not found"
 msgstr "Soubor nebyl nalezen"
-
-msgid "File path"
-msgstr "Popis umístění souboru"
 
 #, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
@@ -3043,6 +3067,9 @@ msgstr "Název souboru"
 msgid "Fileserver"
 msgstr "Souborový server"
 
+msgid "Filesystem"
+msgstr ""
+
 msgid "Filter"
 msgstr "Filtr"
 
@@ -3052,8 +3079,8 @@ msgstr "finština"
 msgid "Firewall"
 msgstr "Brána firewall"
 
-msgid "Firewall rule"
-msgstr "Pravidlo brány firewall"
+msgid "Firewall Rule Settings"
+msgstr ""
 
 msgid "Firmware"
 msgstr "Firmware"
@@ -3098,9 +3125,6 @@ msgstr ""
 msgid "Format"
 msgstr "Formátovat"
 
-msgid "Format disk"
-msgstr "Formátovat disk"
-
 msgid "Format the report for phpBB forum."
 msgstr "Připravit výstup do podoby vhodné pro phpBB fórum."
 
@@ -3112,9 +3136,6 @@ msgstr "Frag"
 
 msgid "Free"
 msgstr "Volné"
-
-msgid "Free disk space"
-msgstr "Volné místo na disku"
 
 msgid "French"
 msgstr "francouzština"
@@ -3239,14 +3260,14 @@ msgstr "HAST"
 msgid "HAST (Highly Available Storage)"
 msgstr "HAST (úložiště s vysokou dostupností)"
 
+msgid "HAST Information & Status Configured Resources"
+msgstr ""
+
+msgid "HAST Resource"
+msgstr ""
+
 msgid "HAST disabled"
 msgstr "HAST je vypnuto"
-
-msgid "HAST resource"
-msgstr "HAST prostředek"
-
-msgid "HAST status of the configured resources"
-msgstr "Stav nastavených HAST prostředků"
 
 msgid "HAST volume"
 msgstr "HAST svazek"
@@ -3271,11 +3292,11 @@ msgstr ""
 "počet takových chyb zjištěných za dobu provozování disku. Tato funkce je "
 "přítomná na většině moderních disků od Seagate."
 
+msgid "HDD standby time"
+msgstr ""
+
 msgid "HTTP Proxy"
 msgstr "HTTP Proxy"
-
-msgid "Hard disk standby time"
-msgstr "Prodleva před přechodem disku do pohotovostního režimu"
 
 msgid "Hardware"
 msgstr "Hardware"
@@ -3386,11 +3407,11 @@ msgstr ""
 msgid "Hungarian"
 msgstr "maďarština"
 
+msgid "I/O Statistics"
+msgstr ""
+
 msgid "I/O Timeout"
 msgstr "Časový limit pro vst./výst."
-
-msgid "I/O statistics"
-msgstr "Statistiky vst./výst."
 
 #, php-format
 msgid "I/O timeout in seconds (%d by default)."
@@ -3404,6 +3425,9 @@ msgstr "Sk. inic."
 
 msgid "IP"
 msgstr "IP"
+
+msgid "IP Address"
+msgstr ""
 
 msgid "IP address"
 msgstr "IP adresa"
@@ -3561,6 +3585,12 @@ msgstr "Nahrání obrazu se nezdařilo (nedostatek paměti?)"
 msgid "Import"
 msgstr "Importovat"
 
+msgid "Import Disks"
+msgstr ""
+
+msgid "Import Software Raid Disks"
+msgstr ""
+
 msgid "Import disks"
 msgstr "Importovat disky"
 
@@ -3572,9 +3602,6 @@ msgstr "Import pravidel brány firewall"
 
 msgid "Import on-disk ZFS config"
 msgstr "Import nastavení ZFS přímo z disku"
-
-msgid "Import software raid disks"
-msgstr "Import disků softwarového raid pole"
 
 msgid "In"
 msgstr "Do"
@@ -3824,8 +3851,8 @@ msgstr "italština"
 msgid "JBOD"
 msgstr "JBOD"
 
-msgid "JBOD information and status"
-msgstr "JBOD informace a stav"
+msgid "JBOD Information & Status"
+msgstr ""
 
 msgid ""
 "January February March April May June July August September October November "
@@ -3875,8 +3902,8 @@ msgstr "Pouze místní síť"
 msgid "LCDproc"
 msgstr "LCDproc"
 
-msgid "LCDproc (client)"
-msgstr "LCDproc (klient)"
+msgid "LCDproc (Client)"
+msgstr ""
 
 msgid "LDAP"
 msgstr "LDAP"
@@ -3952,26 +3979,23 @@ msgstr "Ponechat nastavení automatického zachycení stavu"
 msgid "Leave this field empty to use default settings."
 msgstr "Pokud chcete použít výchozí nastavení, tuto kolonku nevyplňujte."
 
-msgid "Level 1 - Minimum power usage with Standby (spindown)"
+msgid "Level 1 - Minimum Power Usage with Standby (Spindown)"
 msgstr ""
-"Úroveň 1 – Nejnižší spotřeba s pohotovostním režimem (zastavení rotace)"
 
-msgid "Level 127 - Intermediate power usage with Standby"
-msgstr "Úroveň 127 – Střední spotřeba s pohotovostním režimem"
-
-msgid "Level 128 - Minimum power usage without Standby (no spindown)"
+msgid "Level 127 - Intermediate Power Usage with Standby"
 msgstr ""
-"Úroveň 128 – Nejnižší spotřeba bez pohotovostního režimu (bez zastavení "
-"rotace)"
 
-msgid "Level 192 - Intermediate power usage without Standby"
-msgstr "Úroveň 192 – Střední spotřeba bez pohotovostního režimu"
+msgid "Level 128 - Minimum Power Usage without Standby (No Spindown)"
+msgstr ""
 
-msgid "Level 254 - Maximum performance, maximum power usage"
-msgstr "Úroveň 254 – Nejvyšší výkon, ale také nejvyšší spotřeba energie"
+msgid "Level 192 - Intermediate Power Usage without Standby"
+msgstr ""
 
-msgid "Level 64 - Intermediate power usage with Standby"
-msgstr "Úroveň 64 – Střední spotřeba s pohotovostním režimem"
+msgid "Level 254 - Maximum Performance, Maximum Power Usage"
+msgstr ""
+
+msgid "Level 64 - Intermediate Power Usage with Standby"
+msgstr ""
 
 #, php-format
 msgid "Levels (MHz/mW): %s"
@@ -3982,6 +4006,9 @@ msgstr "Licence"
 
 msgid "License & Credits"
 msgstr "Licence a zásluhy"
+
+msgid "Life Time"
+msgstr ""
 
 msgid "Life time"
 msgstr "Životnost"
@@ -4016,6 +4043,15 @@ msgstr "Akce při obnovení spojení"
 msgid "List"
 msgstr "Seznam"
 
+msgid "List Detected Disks"
+msgstr ""
+
+msgid "List Imported Users"
+msgstr ""
+
+msgid "List Mount Points"
+msgstr ""
+
 msgid ""
 "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP "
 "(AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
@@ -4024,18 +4060,6 @@ msgstr ""
 "Seznam přípustných párových (unicast) šifer pro WPA. Jedno neb více z: CCMP "
 "(AES v režimu čítače s CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP (Protokol "
 "celistvosti časového klíče, IEEE 802.11i/D7.0)."
-
-msgid "List of available target name on all configured iSCSI targets"
-msgstr "Seznam dostupných názvů cílů na všech nastavených iSCSI cílech."
-
-msgid "List of detected disks"
-msgstr "Seznam zjištěných disků"
-
-msgid "List of imported users"
-msgstr "Seznam importovaných uživatelů"
-
-msgid "List of mount points"
-msgstr "Výpis přípojných bodů"
 
 msgid "Load"
 msgstr "Vytížení"
@@ -4060,6 +4084,9 @@ msgstr "Místní"
 
 msgid "Local Master Browser"
 msgstr "Místní hlavní prohlížeč (WINS)"
+
+msgid "Local Share (Destination)"
+msgstr ""
 
 msgid "Local User"
 msgstr "Místní uživatel"
@@ -4142,12 +4169,12 @@ msgstr ""
 msgid "Logical Unit Controller IP address (%s by default)"
 msgstr "IP adresa řadiče logické jednotky (výchozí je %s)"
 
+msgid "Logical Unit Controller Login Information"
+msgstr ""
+
 #, php-format
 msgid "Logical Unit Controller TCP port (%d by default)"
 msgstr "TCP port řadiče logické jednotky (výchozí je %d)"
-
-msgid "Logical Unit Controller login information"
-msgstr "Přihlašovací údaje řadiče logických jednotek"
 
 msgid "Logical Unit Type mapped to LUN."
 msgstr "Typ logické jednotky mapované na LUN."
@@ -4185,6 +4212,9 @@ msgstr ""
 msgid "MAC address"
 msgstr "MAC adresa"
 
+msgid "MBR Erase"
+msgstr ""
+
 msgid "MBR partition"
 msgstr "MBR diskový oddíl"
 
@@ -4203,8 +4233,8 @@ msgstr "PŘESUNUTO DO"
 msgid "MS Active Directory"
 msgstr "Microsoft Active Directory"
 
-msgid "MS Active Directory informations"
-msgstr "Informace o MS Active Directory"
+msgid "MS Active Directory Information & Status"
+msgstr ""
 
 msgid "MS Domain"
 msgstr "Doména Microsoft"
@@ -4294,6 +4324,9 @@ msgstr "MaxZbyvajicichZpravPriravenychKPrenosu"
 msgid "MaxRecvDataSegmentLength"
 msgstr "MaxDelkaPrijmutehoDatovehoSegmentu"
 
+msgid "Maximum Performance, Maximum Acoustic Output"
+msgstr ""
+
 msgid "Maximum connections"
 msgstr "Nejvýše umožněno souběžných spojení"
 
@@ -4342,9 +4375,6 @@ msgstr ""
 "Nejvyšší umožněný počet souběžnýc spojení. Výchozí je 0 (nula), což znamená "
 "neomezeno."
 
-msgid "Maximum performance, maximum acoustic output"
-msgstr "Nejvyšší výkon, ale i nejvyšší hlučnost"
-
 msgid "Maximum relative humidity seen (percent)"
 msgstr "Nejvyšší zaznamenaná relativní vlhkost (procenta)"
 
@@ -4360,11 +4390,14 @@ msgstr "Složka s multimédii"
 msgid "Media library"
 msgstr "Multimediální knihovna"
 
-msgid "Medium acoustic output"
-msgstr "Střední hlučnost"
+msgid "Medium Acoustic Output"
+msgstr ""
 
 msgid "Member Interface"
 msgstr "Účastnící se rozhraní"
+
+msgid "Memory Usage"
+msgstr ""
 
 msgid "Memory usage"
 msgstr "Využití operační paměti"
@@ -4400,6 +4433,9 @@ msgstr "Nastavení minidlna byla zaktualizována"
 msgid "Minimum"
 msgstr "Nejnižší hodnota"
 
+msgid "Minimum Performance, Minimum Acoustic Output"
+msgstr ""
+
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr ""
 "Nakolik musejí být akumulátory UPS zdroje nabité, aby bylo zapnuto napájení "
@@ -4413,9 +4449,6 @@ msgstr "Minimální frekvence"
 
 msgid "Minimum incoming voltage seen"
 msgstr "Nejnižší zaznamenané vstupní napětí"
-
-msgid "Minimum performance, Minimum acoustic output"
-msgstr "Nejnižší hlučnost ale i nejnižší výkon"
 
 msgid "Minimum relative humidity seen (percent)"
 msgstr "Nejnižší zaznamenaná relativní vlhkost (procenta)"
@@ -4441,11 +4474,11 @@ msgstr "Režim"
 msgid "Model"
 msgstr "Model"
 
-msgid "Model extra"
-msgstr "Model - rozšířené"
+msgid "Model Extra"
+msgstr ""
 
-msgid "Model name"
-msgstr "Název modelu"
+msgid "Model Name"
+msgstr ""
 
 msgid "Modified"
 msgstr "Upraveno"
@@ -4707,14 +4740,14 @@ msgstr "Nebyl nalezen žádný fond."
 msgid "Node A IP address"
 msgstr "IP adresa uzlu A"
 
-msgid "Node A settings"
-msgstr "Nastavení uzlu A"
+msgid "Node A Settings"
+msgstr ""
 
 msgid "Node B IP address"
 msgstr "IP adresa uzlu B"
 
-msgid "Node B settings"
-msgstr "Nastavení uzlu B"
+msgid "Node B Settings"
+msgstr ""
 
 msgid "Node Base"
 msgstr "Základ uzlu"
@@ -4881,8 +4914,8 @@ msgstr ""
 "doporučeno přidat stejné množství disků, jaké má stávající virtuální "
 "zařízení."
 
-msgid "Online version check"
-msgstr "Ověřit dostupnost případné novější verze"
+msgid "Online"
+msgstr ""
 
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
@@ -5111,6 +5144,9 @@ msgstr "Umožnit přihlašování správce systému (root)"
 msgid "Permit to do SSH Tunneling."
 msgstr "Umožnit tunelování SSH"
 
+msgid "Physical Interface"
+msgstr ""
+
 msgid "Physical interface"
 msgstr "Fyzické rozhraní"
 
@@ -5156,8 +5192,8 @@ msgstr "Interval dotazování"
 msgid "Pool"
 msgstr "Fond"
 
-msgid "Pool information and status"
-msgstr "Stav a informace o fondu"
+msgid "Pool Information & Status"
+msgstr ""
 
 msgid "Pools"
 msgstr "Fondy"
@@ -5223,6 +5259,9 @@ msgstr "Služba správy napájení"
 msgid "Power Mode"
 msgstr "Režim napájení"
 
+msgid "Power management"
+msgstr ""
+
 msgid "Power mode"
 msgstr "Režim napájení"
 
@@ -5240,8 +5279,8 @@ msgid "PreInit"
 msgstr "Před inicializací"
 
 #, php-format
-msgid "Predefined system groups"
-msgstr "Předpřipravené systémové skupiny"
+msgid "Predefined Groups"
+msgstr ""
 
 msgid "Preferred"
 msgstr "Upřednostňováno"
@@ -5291,8 +5330,8 @@ msgstr "Proces"
 msgid "Processes"
 msgstr "Procesy"
 
-msgid "Processes information"
-msgstr "Informace o procesech"
+msgid "Processes Information"
+msgstr ""
 
 msgid "Product ID"
 msgstr "Identifikátor produktu"
@@ -5313,11 +5352,9 @@ msgid "Proxy"
 msgstr "Proxy"
 
 msgid ""
-"Puts the hard disk into standby mode when the selected amount of time after "
-"the last hard disk access has been elapsed."
+"Puts the disk into standby mode when the selected amount of time after the "
+"last disk access has been elapsed."
 msgstr ""
-"Při nečinnosti delší, než nastavený čas, přepne pevný disk do pohotovostního "
-"režimu."
 
 msgid "Queue Depth"
 msgstr "Délka fronty"
@@ -5331,26 +5368,26 @@ msgstr "Kvóta"
 msgid "RAID 0"
 msgstr "RAID 0"
 
-msgid "RAID 0 information and status"
-msgstr "RAID 0 – informace a stav"
+msgid "RAID 0 Information & Status"
+msgstr ""
 
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
-msgid "RAID 0/1/5 information and status"
-msgstr "RAID 0/1/5 – informace a stav"
+msgid "RAID 0/1/5 Information & Status"
+msgstr ""
 
 msgid "RAID 1"
 msgstr "RAID 1"
 
-msgid "RAID 1 information and status"
-msgstr "RAID 1 – informace a stav"
+msgid "RAID 1 Information & Status"
+msgstr ""
 
 msgid "RAID 5"
 msgstr "RAID 5"
 
-msgid "RAID 5 information and status"
-msgstr "RAID 5 – informac a stav"
+msgid "RAID 5 Information & Status"
+msgstr ""
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -5382,8 +5419,8 @@ msgstr "RSYNC – server"
 msgid "RSYNC Client"
 msgstr "RSYNC klient"
 
-msgid "RSYNC Client informations"
-msgstr "Informace o RSYNC klientovi"
+msgid "RSYNC Client Information & Status"
+msgstr ""
 
 msgid "RSYNC events"
 msgstr "Události v RSYNC"
@@ -5480,11 +5517,14 @@ msgstr "Načíst stránku znovu"
 msgid "Remaining battery runtime"
 msgstr "Zbývající doba provozu z akumulátorů"
 
+msgid "Remote Address"
+msgstr ""
+
+msgid "Remote Module (Source)"
+msgstr ""
+
 msgid "Remote Rsync Server"
 msgstr "Rsync server na protějšku"
-
-msgid "Remote address"
-msgstr "IP adresa protějšku"
 
 msgid "Remote module (source)"
 msgstr "modul na protějšku (zdroj)"
@@ -5536,11 +5576,11 @@ msgstr "Vyžadovat ověření."
 msgid "Required"
 msgstr "Vyžadováno"
 
+msgid "Rescan Disks"
+msgstr ""
+
 msgid "Rescan database in progress"
 msgstr "Probíhá opětovný sken databáze"
-
-msgid "Rescan disks"
-msgstr "Znovu zjistit disky"
 
 msgid "Rescan interval"
 msgstr "Interval opakování zjišťování"
@@ -5565,6 +5605,9 @@ msgstr "Název prostředku"
 
 msgid "Resources"
 msgstr "Prostředky"
+
+msgid "Restore Configuration"
+msgstr ""
 
 msgid "Restore configuration"
 msgstr "Obnovit nastavení"
@@ -5608,8 +5651,8 @@ msgstr "Spojovací rozlišený název správce systému"
 msgid "Root bind password"
 msgstr "Spojovací heslo správce systému"
 
-msgid "Rotation rate"
-msgstr "Rychlost otáčení"
+msgid "Rotation Rate"
+msgstr ""
 
 msgid "Round-robin read"
 msgstr "Čtení algoritmem Round-robin"
@@ -5629,8 +5672,8 @@ msgstr "Řádky"
 msgid "Rsync"
 msgstr "Rsync"
 
-msgid "Rsync job"
-msgstr "Rsync úloha"
+msgid "Rsync Job"
+msgstr ""
 
 msgid "Rule"
 msgstr "Pravidlo"
@@ -5727,6 +5770,12 @@ msgstr ""
 msgid "Save"
 msgstr "Uložit"
 
+msgid "Save & Restart"
+msgstr ""
+
+msgid "Save File"
+msgstr ""
+
 msgid "Save and Restart"
 msgstr "Uložit a restartovat"
 
@@ -5757,23 +5806,26 @@ msgstr ""
 msgid "Scan type"
 msgstr "Typ skenu"
 
+msgid "Schedule Time"
+msgstr ""
+
 msgid "Schedule time"
 msgstr "Naplánovaný čas"
 
 msgid "Scheduled"
 msgstr "Naplánovat"
 
+msgid "Scheduled Reboot"
+msgstr ""
+
 msgid "Scheduled Self-Test"
 msgstr "Naplánovaný samotest"
 
-msgid "Scheduled reboot"
-msgstr "Naplánovaný restart"
+msgid "Scheduled Shutdown"
+msgstr ""
 
-msgid "Scheduled self-tests"
-msgstr "Naplánované samotesty"
-
-msgid "Scheduled shutdown"
-msgstr "Naplánované vypnutí"
+msgid "Scheduled tests"
+msgstr ""
 
 msgid "Secondary"
 msgstr "Vedlejší"
@@ -5789,6 +5841,9 @@ msgstr "Zabezpečení"
 
 msgid "See attribute E8."
 msgstr "Viz atribut E8"
+
+msgid "Select"
+msgstr ""
 
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
@@ -5844,14 +5899,20 @@ msgstr "Vybrané zařízení nebo označení neexistuje."
 msgid "Selected file isn't an valid ISO file."
 msgstr "Vybraný soubor není platným ISO souborem."
 
-msgid "Self-Monitoring, Analysis and Reporting Technology"
-msgstr "Sebe-sledovací, analyzující a oznamovací technologie"
+msgid "Self-Monitoring, Analysis & Reporting Technology"
+msgstr ""
+
+msgid "Self-tests Management"
+msgstr ""
 
 msgid "Send Buffer Size"
 msgstr "Velikost vyrovnávací paměti odesílání"
 
 msgid "Send Command!"
 msgstr "Odeslat (potvrdit) příkaz!"
+
+msgid "Send Now"
+msgstr ""
 
 msgid "Send a TEST warning email on startup."
 msgstr "Při startu poslat ZKUŠEBNÍ varovný e-mail."
@@ -5867,6 +5928,9 @@ msgstr "E-mailové adresy oddělujte pomocí středníku."
 
 msgid "Serial Console"
 msgstr "Sériová konzole"
+
+msgid "Serial Number"
+msgstr ""
 
 msgid "Serial number"
 msgstr "Sériové číslo"
@@ -5989,18 +6053,18 @@ msgstr "Terminál"
 msgid "Shock During Write."
 msgstr "Otřes v průběhu zápisu"
 
+msgid "Show Process Information"
+msgstr ""
+
 msgid "Show RAW UPS Info"
 msgstr "Zobrazit informace z UPS v nezpracované podobě"
+
+msgid "Show UPS Information"
+msgstr ""
 
 msgid "Show log entries in reverse order (newest entries on top)"
 msgstr ""
 "Zobrazit položky záznamu událostí v opačném pořadí (nejnovější na začátku)."
-
-msgid "Show process information"
-msgstr "Zobrazit informace o procesech"
-
-msgid "Show ups information"
-msgstr "Zobrazit informace o UPS zdroji"
 
 msgid "Shutdown"
 msgstr "Vypnout"
@@ -6080,6 +6144,9 @@ msgstr "Použitý software"
 msgid "Source"
 msgstr "Zdroj"
 
+msgid "Source Share"
+msgstr ""
+
 msgid "Source directory to be synchronized."
 msgstr "Zdrojová složka pro synchronizaci."
 
@@ -6088,6 +6155,9 @@ msgstr "Zdrojový port"
 
 msgid "Source share"
 msgstr "Zdrojové sdílení"
+
+msgid "Space Usage"
+msgstr ""
 
 msgid "Space Used"
 msgstr "Využité místo"
@@ -6126,6 +6196,9 @@ msgstr "Zadané umístění je NFSv4 kořenová složka."
 
 msgid "Specifies how many servers to create."
 msgstr "Určuje kolik instancí serveru vytvořit."
+
+msgid "Specifies how the volume should be exposed to the OS."
+msgstr ""
 
 msgid "Specifies that the file system should be exported read-only."
 msgstr "Určuje, že souborový systém má být exportován pouze pro čtení."
@@ -6180,6 +6253,9 @@ msgstr "Rozdělit požadavek"
 msgid "Standard"
 msgstr "Standardní"
 
+msgid "Standby"
+msgstr ""
+
 msgid ""
 "Standby - Check the device unless it is in SLEEP or STANDBY mode. In these "
 "modes most disks are not spinning, so if you want to prevent a laptop disk "
@@ -6189,9 +6265,6 @@ msgstr ""
 "nebo ÚSPORNÝ. V těchto režimech se u většiny jednotek pevných disků plotny "
 "netočí, takže pokud chcete zabránit tomu, aby se notebookový disk roztáčel "
 "při každém dotazu, toto je to, co nejspíš chcete nastavit."
-
-msgid "Standby time"
-msgstr "Čas přechodu do pohotovostního režimu [min]"
 
 msgid "Start"
 msgstr "Spustit"
@@ -6286,14 +6359,14 @@ msgstr "Zobrazit pouze zprávy o chybách, ostatní potlačit."
 msgid "Swap"
 msgstr "Odkládání stránek oper. paměti (swap)"
 
+msgid "Swap Information & Status"
+msgstr ""
+
+msgid "Swap Memory"
+msgstr ""
+
 msgid "Swap disabled"
 msgstr "Stránkování na disk vypnuto"
-
-msgid "Swap memory"
-msgstr "Stránkování paměti"
-
-msgid "Swap status"
-msgstr "Stav stránkování"
 
 msgid "Swap usage"
 msgstr "Využití odkládacího prostoru stránek"
@@ -6345,23 +6418,20 @@ msgstr "Systém"
 msgid "System Beep"
 msgstr "Systémové zvukové znamení"
 
+msgid "System Information"
+msgstr ""
+
+msgid "System Load"
+msgstr ""
+
 msgid "System bios"
 msgstr "Systémový BIOS"
 
 msgid "System events"
 msgstr "Systémové události"
 
-msgid "System firewall"
-msgstr "Brána firewall systému"
-
 msgid "System info"
 msgstr "Informace o systému"
-
-msgid "System information"
-msgstr "Informace o systému"
-
-msgid "System load"
-msgstr "Vytížení systému"
 
 msgid "System log"
 msgstr "Záznam událostí v systému"
@@ -6466,11 +6536,11 @@ msgstr "Cíle"
 msgid "Temperature"
 msgstr "Teplota"
 
+msgid "Temperature Monitoring"
+msgstr ""
+
 msgid "Temperature alarm (enabled/disabled)"
 msgstr "Teplotní výstraha (zapnuto/vypnuto)"
-
-msgid "Temperature monitoring"
-msgstr "Sledování teploty"
 
 msgid "Temperature threshold high (degrees C)"
 msgstr "Práh vysoké teploty (stupně Celsia)"
@@ -7458,11 +7528,9 @@ msgstr ""
 "Tuto bezdrátovou síť nelze smazat, protože je pořád používána jako rozhraní."
 
 msgid ""
-"This allows you to lower the power consumption of the drive, at the expense "
+"This allows you to lower the power consumption of the disk, at the expense "
 "of performance."
 msgstr ""
-"Toto umožní snížit množství energie, spotřebovávané diskem, ovšem na úkor "
-"rychlosti přístupu k datům."
 
 msgid "This allows you to set how loud the drive is while it's operating."
 msgstr "Zde je možné nastavit, jak budou disky za chodu hlučné."
@@ -7473,8 +7541,8 @@ msgid ""
 msgstr ""
 "Tímto nastavíte systém souborů pro zformátované disky užobsahující data."
 
-msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
-msgstr "Zde je možné nastavit přenosový režim pro rozhraní ATA/IDE disků."
+msgid "This allows you to set the transfer mode for ATA/IDE disks."
+msgstr ""
 
 msgid ""
 "This attribute indicates the count of full hard disk power on/off cycles."
@@ -8049,11 +8117,11 @@ msgstr ""
 msgid "Transcoding"
 msgstr "Převod kódování"
 
+msgid "Transfer Rate"
+msgstr ""
+
 msgid "Transfer mode"
 msgstr "Přenosový režim"
-
-msgid "Transfer rate"
-msgstr "Přenosová rychlost"
 
 msgid "Trap host"
 msgstr "Stroj, na který upozornění posílat"
@@ -8112,6 +8180,13 @@ msgstr "UFS"
 
 #, php-format
 msgid ""
+"UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
+"filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
+"unpredictable results, file corruption and the loss of data!"
+msgstr ""
+
+#, php-format
+msgid ""
 "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
 "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
 "NTFS can result in unpredictable results, file corruption, and loss of data!"
@@ -8138,6 +8213,9 @@ msgstr "Jedinečný identifikátor"
 
 msgid "UPS"
 msgstr "Zdroj nepřeruš. napájení (UPS)"
+
+msgid "UPS Information & Status"
+msgstr ""
 
 msgid "UPS Off Line"
 msgstr "UPS je vypnuta"
@@ -8366,12 +8444,12 @@ msgstr "Použito"
 msgid "User"
 msgstr "Uživatel"
 
+#, php-format
+msgid "User Defined Groups"
+msgstr ""
+
 msgid "User ID"
 msgstr "Identifikátor uživatele"
-
-#, php-format
-msgid "User defined groups"
-msgstr "Uživatelem definované skupiny"
 
 msgid "User full name."
 msgstr "Celé jméno uživatele"
@@ -8409,7 +8487,7 @@ msgstr "Uživatelské jméno účtu správce domény."
 msgid "Users"
 msgstr "Uživatelé"
 
-msgid "Users and Groups"
+msgid "Users & Groups"
 msgstr "Uživatelé a skupiny"
 
 #, c-format
@@ -8421,6 +8499,9 @@ msgstr "VHID"
 
 msgid "VLAN"
 msgstr "Virtuální síť (VLAN)"
+
+msgid "VLAN Tag"
+msgstr ""
 
 msgid "VLAN tag"
 msgstr "VLAN značka"
@@ -8453,23 +8534,29 @@ msgstr "Vibrace při zápisu"
 msgid "Video"
 msgstr "Video"
 
+msgid "Virtual Device"
+msgstr ""
+
+msgid "Virtual Devices"
+msgstr ""
+
 msgid "Virtual Host ID"
 msgstr "Identifikátor virtuálního stroje"
+
+msgid "Virtual IP Address"
+msgstr ""
 
 msgid "Virtual IP address"
 msgstr "Virtuální IP adresa"
 
+msgid "Virtual Interface"
+msgstr ""
+
 msgid "Virtual Machine"
 msgstr "Virtuální stroj"
 
-msgid "Virtual device"
-msgstr "Virtuální zařízení"
-
 msgid "Virtual devices"
 msgstr "Virtuální zařízení"
-
-msgid "Virtual interface"
-msgstr "Virtuální rozhraní"
 
 msgid "VirtualBox"
 msgstr "VirtualBox"
@@ -8488,6 +8575,9 @@ msgstr "Štítek svazku"
 
 msgid "Volume label of the new file system."
 msgstr "Štítek nového souborového systému"
+
+msgid "Volume mode"
+msgstr ""
 
 msgid "Volumes"
 msgstr "Svazky"
@@ -8754,26 +8844,31 @@ msgstr "ZFS"
 msgid "ZFS ACL"
 msgstr "ZFS ACL seznamy"
 
-msgid "ZFS dataset information and status"
-msgstr "Stav a informace o ZFS datové sadě"
+msgid "ZFS Dataset Information & Status"
+msgstr ""
 
-msgid "ZFS dataset properties"
-msgstr "Vlastnosti ZFS datové sady"
+msgid "ZFS Dataset Properties"
+msgstr ""
 
-msgid "ZFS snapshot information and status"
-msgstr "Stav a informace o ZFS zachyceném stavu"
+msgid "ZFS Snapshot Information & Status"
+msgstr ""
 
-msgid "ZFS snapshot properties"
-msgstr "Vlastnosti ZFS zachyceného stavu"
+msgid "ZFS Snapshot Properties"
+msgstr ""
+
+msgid "ZFS Volume Information & Status"
+msgstr ""
+
+msgid "ZFS Volume Properties"
+msgstr ""
 
 msgid "ZFS volume"
 msgstr "ZFS svazek"
 
-msgid "ZFS volume information and status"
-msgstr "Stav a Informace o ZFS svazku"
-
-msgid "ZFS volume properties"
-msgstr "Vlastnosti ZFS svazku"
+msgid ""
+"ZFS volume block size. This value can not be changed after creation. Empty "
+"as default."
+msgstr ""
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
@@ -8858,6 +8953,9 @@ msgstr "iSCSI cíl"
 msgid "iSCSI Target Logical Unit Controller"
 msgstr "Řadič logických jednotek iSCSI cíle"
 
+msgid "iSCSI Targets Information & Status"
+msgstr ""
+
 #, php-format
 msgid "iSCSI initial parameter (%d by default)."
 msgstr "počáteční parametr iSCSI (výchozí je %d)."
@@ -8888,9 +8986,6 @@ msgstr "co nejméně (úspora energie)"
 
 msgid "minute(s)"
 msgstr "minut"
-
-msgid "minutes"
-msgstr "minuty"
 
 msgid "mirroring"
 msgstr "zrcadlení"
@@ -8967,3 +9062,266 @@ msgstr "verze:"
 
 msgid "warning"
 msgstr "varování"
+
+#, php-format
+#~ msgid "%s interface"
+#~ msgstr "%s rozhraní"
+
+#~ msgid "Advanced Power Management"
+#~ msgstr "Pokročilá správa napájení"
+
+#~ msgid "Always on"
+#~ msgstr "Vždy zapnuto"
+
+#~ msgid "Connected FTP users"
+#~ msgstr "Připojení FTP uživatelé"
+
+#~ msgid "DNS settings"
+#~ msgstr "Nastavení DNS"
+
+#~ msgid "Device model"
+#~ msgstr "Model zařízení"
+
+#~ msgid "Format disk"
+#~ msgstr "Formátovat disk"
+
+#~ msgid "Free disk space"
+#~ msgstr "Volné místo na disku"
+
+#~ msgid "List of available target name on all configured iSCSI targets"
+#~ msgstr "Seznam dostupných názvů cílů na všech nastavených iSCSI cílech."
+
+#~ msgid "List of imported users"
+#~ msgstr "Seznam importovaných uživatelů"
+
+#~ msgid "List of mount points"
+#~ msgstr "Výpis přípojných bodů"
+
+#~ msgid "Medium acoustic output"
+#~ msgstr "Střední hlučnost"
+
+#~ msgid "Model name"
+#~ msgstr "Název modelu"
+
+#~ msgid "Scheduled reboot"
+#~ msgstr "Naplánovaný restart"
+
+#~ msgid "Scheduled shutdown"
+#~ msgstr "Naplánované vypnutí"
+
+#~ msgid "Self-Monitoring, Analysis and Reporting Technology"
+#~ msgstr "Sebe-sledovací, analyzující a oznamovací technologie"
+
+#~ msgid "Show process information"
+#~ msgstr "Zobrazit informace o procesech"
+
+#~ msgid "Standby time"
+#~ msgstr "Čas přechodu do pohotovostního režimu [min]"
+
+#~ msgid "System information"
+#~ msgstr "Informace o systému"
+
+#~ msgid "minutes"
+#~ msgstr "minuty"
+
+#, php-format
+#~ msgid "User defined groups"
+#~ msgstr "Uživatelem definované skupiny"
+
+#~ msgid "Controller model"
+#~ msgstr "Model řadiče"
+
+#~ msgid "ZFS volume properties"
+#~ msgstr "Vlastnosti ZFS svazku"
+
+#~ msgid "Virtual device"
+#~ msgstr "Virtuální zařízení"
+
+#~ msgid "Transfer rate"
+#~ msgstr "Přenosová rychlost"
+
+#~ msgid "Show ups information"
+#~ msgstr "Zobrazit informace o UPS zdroji"
+
+#~ msgid "List of detected disks"
+#~ msgstr "Seznam zjištěných disků"
+
+#~ msgid "Node B settings"
+#~ msgstr "Nastavení uzlu B"
+
+#~ msgid "Node A settings"
+#~ msgstr "Nastavení uzlu A"
+
+#~ msgid "Backup configuration"
+#~ msgstr "Zálohovat nastavení"
+
+#~ msgid "Email report"
+#~ msgstr "Hlášení e-mailem"
+
+#~ msgid "Maximum performance, maximum acoustic output"
+#~ msgstr "Nejvyšší výkon, ale i nejvyšší hlučnost"
+
+#~ msgid "LCDproc (client)"
+#~ msgstr "LCDproc (klient)"
+
+#~ msgid "Hard disk standby time"
+#~ msgstr "Prodleva před přechodem disku do pohotovostního režimu"
+
+#~ msgid "HAST status of the configured resources"
+#~ msgstr "Stav nastavených HAST prostředků"
+
+#~ msgid "HAST resource"
+#~ msgstr "HAST prostředek"
+
+#~ msgid "Import software raid disks"
+#~ msgstr "Import disků softwarového raid pole"
+
+#~ msgid "Logical Unit Controller login information"
+#~ msgstr "Přihlašovací údaje řadiče logických jednotek"
+
+#~ msgid "Rsync job"
+#~ msgstr "Rsync úloha"
+
+#~ msgid "Temperature monitoring"
+#~ msgstr "Sledování teploty"
+
+#~ msgid "Virtual interface"
+#~ msgstr "Virtuální rozhraní"
+
+#~ msgid "Swap memory"
+#~ msgstr "Stránkování paměti"
+
+#~ msgid "Swap status"
+#~ msgstr "Stav stránkování"
+
+#~ msgid ""
+#~ "This allows you to lower the power consumption of the drive, at the expense "
+#~ "of performance."
+#~ msgstr ""
+#~ "Toto umožní snížit množství energie, spotřebovávané diskem, ovšem na úkor "
+#~ "rychlosti přístupu k datům."
+
+#~ msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
+#~ msgstr "Zde je možné nastavit přenosový režim pro rozhraní ATA/IDE disků."
+
+#~ msgid "Model extra"
+#~ msgstr "Model - rozšířené"
+
+#~ msgid "Pool information and status"
+#~ msgstr "Stav a informace o fondu"
+
+#~ msgid "Processes information"
+#~ msgstr "Informace o procesech"
+
+#~ msgid ""
+#~ "Puts the hard disk into standby mode when the selected amount of time after "
+#~ "the last hard disk access has been elapsed."
+#~ msgstr ""
+#~ "Při nečinnosti delší, než nastavený čas, přepne pevný disk do pohotovostního "
+#~ "režimu."
+
+#~ msgid "Scheduled self-tests"
+#~ msgstr "Naplánované samotesty"
+
+#, php-format
+#~ msgid "Predefined system groups"
+#~ msgstr "Předpřipravené systémové skupiny"
+
+#~ msgid "JBOD information and status"
+#~ msgstr "JBOD informace a stav"
+
+#~ msgid "System firewall"
+#~ msgstr "Brána firewall systému"
+
+#~ msgid "System load"
+#~ msgstr "Vytížení systému"
+
+#~ msgid "Level 1 - Minimum power usage with Standby (spindown)"
+#~ msgstr ""
+#~ "Úroveň 1 – Nejnižší spotřeba s pohotovostním režimem (zastavení rotace)"
+
+#~ msgid "Rotation rate"
+#~ msgstr "Rychlost otáčení"
+
+#~ msgid "Clear config and Import software raid disks"
+#~ msgstr "Vyčistit nastavení a importovat disky softwarového RAID pole"
+
+#~ msgid "Minimum performance, Minimum acoustic output"
+#~ msgstr "Nejnižší hlučnost ale i nejnižší výkon"
+
+#~ msgid "Online version check"
+#~ msgstr "Ověřit dostupnost případné novější verze"
+
+#~ msgid "RAID 0 information and status"
+#~ msgstr "RAID 0 – informace a stav"
+
+#~ msgid "RAID 0/1/5 information and status"
+#~ msgstr "RAID 0/1/5 – informace a stav"
+
+#~ msgid "RAID 1 information and status"
+#~ msgstr "RAID 1 – informace a stav"
+
+#~ msgid "ZFS dataset information and status"
+#~ msgstr "Stav a informace o ZFS datové sadě"
+
+#~ msgid "ZFS dataset properties"
+#~ msgstr "Vlastnosti ZFS datové sady"
+
+#~ msgid "ZFS volume information and status"
+#~ msgstr "Stav a Informace o ZFS svazku"
+
+#~ msgid "Ban list"
+#~ msgstr "Seznam udělených vyloučení (ban)"
+
+#~ msgid "Don't Erase MBR"
+#~ msgstr "Nemazat oblast MBR (hlavní zaváděcí záznam)"
+
+#~ msgid "Email notification"
+#~ msgstr "Upozorňování e-mailem"
+
+#~ msgid "File path"
+#~ msgstr "Popis umístění souboru"
+
+#~ msgid "Firewall rule"
+#~ msgstr "Pravidlo brány firewall"
+
+#~ msgid "I/O statistics"
+#~ msgstr "Statistiky vst./výst."
+
+#~ msgid "Level 127 - Intermediate power usage with Standby"
+#~ msgstr "Úroveň 127 – Střední spotřeba s pohotovostním režimem"
+
+#~ msgid "Level 128 - Minimum power usage without Standby (no spindown)"
+#~ msgstr ""
+#~ "Úroveň 128 – Nejnižší spotřeba bez pohotovostního režimu (bez zastavení "
+#~ "rotace)"
+
+#~ msgid "Level 192 - Intermediate power usage without Standby"
+#~ msgstr "Úroveň 192 – Střední spotřeba bez pohotovostního režimu"
+
+#~ msgid "Level 254 - Maximum performance, maximum power usage"
+#~ msgstr "Úroveň 254 – Nejvyšší výkon, ale také nejvyšší spotřeba energie"
+
+#~ msgid "Level 64 - Intermediate power usage with Standby"
+#~ msgstr "Úroveň 64 – Střední spotřeba s pohotovostním režimem"
+
+#~ msgid "MS Active Directory informations"
+#~ msgstr "Informace o MS Active Directory"
+
+#~ msgid "RSYNC Client informations"
+#~ msgstr "Informace o RSYNC klientovi"
+
+#~ msgid "Remote address"
+#~ msgstr "IP adresa protějšku"
+
+#~ msgid "Rescan disks"
+#~ msgstr "Znovu zjistit disky"
+
+#~ msgid "ZFS snapshot information and status"
+#~ msgstr "Stav a informace o ZFS zachyceném stavu"
+
+#~ msgid "ZFS snapshot properties"
+#~ msgstr "Vlastnosti ZFS zachyceného stavu"
+
+#~ msgid "RAID 5 information and status"
+#~ msgstr "RAID 5 – informac a stav"

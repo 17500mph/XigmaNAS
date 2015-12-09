@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-11-17 01:18+0000\n"
-"PO-Revision-Date: 2015-11-04 13:58+0000\n"
+"POT-Creation-Date: 2015-12-09 16:19+0000\n"
+"PO-Revision-Date: 2015-11-24 17:55+0000\n"
 "Last-Translator: Balabuha <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-23 22:44+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2015-12-09 15:41+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 "Language: uk\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -49,8 +49,8 @@ msgid "%dB / block"
 msgstr "%dбайт / блок"
 
 #, php-format
-msgid "%s interface"
-msgstr "%s інтерфейс"
+msgid "%s Interface"
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -89,7 +89,7 @@ msgid "%sB used of %sB"
 msgstr "%sбайт зайнято з %sбайт"
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
-msgstr ""
+msgstr "(Виявлено в дисках Maxtor 6B200M0 200GB і Maxtor 2R015H1 15GB)."
 
 msgid ""
 "(Kingston)Counts the number of flash erase failures. This Attribute returns "
@@ -317,6 +317,12 @@ msgstr "Правильний префікс (1-128) повинен бути вк
 msgid "A valid systctl MIB value."
 msgstr "правильне значення systctl MIB."
 
+msgid "ACL Inherit"
+msgstr ""
+
+msgid "ACL Mode"
+msgstr ""
+
 msgid "ACL inherit"
 msgstr "Успадкування ACL"
 
@@ -361,6 +367,9 @@ msgstr "Ім'я атрибута"
 
 msgid "Access"
 msgstr "Доступ"
+
+msgid "Access Mode"
+msgstr ""
 
 msgid "Access Restrictions"
 msgstr "Обмеження доступу"
@@ -537,8 +546,8 @@ msgstr "Розширений формат"
 msgid "Advanced Options"
 msgstr "Додаткові параметри"
 
-msgid "Advanced Power Management"
-msgstr "Розширене керування живленням"
+msgid "Advanced Settings"
+msgstr ""
 
 msgid "Advanced settings"
 msgstr "Додаткові налаштування"
@@ -692,8 +701,8 @@ msgstr "Альтернативний TCP порт. За умовчанням 873
 msgid "Alternative configuration directory (usually empty)."
 msgstr "Альтернативна дикекторія для конфігурації (зазвичай пуста)"
 
-msgid "Always on"
-msgstr "Завжди ввімкнено"
+msgid "Always On"
+msgstr ""
 
 msgid "Always scan"
 msgstr "Завжди сканувати"
@@ -746,7 +755,7 @@ msgid "Any"
 msgstr "Будь-який"
 
 msgid "Append user defined shares"
-msgstr ""
+msgstr "Додати визначені користувачем спільні ресурси"
 
 msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
@@ -790,7 +799,7 @@ msgid "Attaching provider '%s'."
 msgstr "Приєдную провайдера '%s'."
 
 msgid "Audio"
-msgstr ""
+msgstr "Аудіо"
 
 msgid "Auth Group"
 msgstr "Авторизаційна група"
@@ -850,10 +859,10 @@ msgid ""
 msgstr ""
 
 msgid "Average time of spindle spin up (from zero RPM to fully operational)."
-msgstr ""
+msgstr "Середній час розгону шпінделя (від нуля до робочої швидкості)."
 
-msgid "Backup configuration"
-msgstr "Конфігурація резервування"
+msgid "Backup Configuration"
+msgstr ""
 
 msgid "Backup file"
 msgstr "резервний файл"
@@ -867,8 +876,8 @@ msgstr "Bad User - неіснуючий користувач"
 msgid "Balance algorithm"
 msgstr "Алгоритм балансування"
 
-msgid "Ban list"
-msgstr "Чорний список"
+msgid "Ban List"
+msgstr ""
 
 msgid "Ban list rule"
 msgstr "Правила чорного списку"
@@ -947,6 +956,9 @@ msgstr "BitTorrent"
 msgid "Blank time"
 msgstr "Пусте значення часу"
 
+msgid "Block size"
+msgstr ""
+
 msgid "Blocksize"
 msgstr "Розмір блоку"
 
@@ -962,16 +974,18 @@ msgid "Bridge"
 msgstr "Міст"
 
 msgid "Broadcast interval"
-msgstr ""
+msgstr "Інтервал"
 
 #, php-format
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
 "seconds)"
 msgstr ""
+"Анонсувати доступність в мережі кожних N секунд. (За замовчуванням 300 "
+"секунд)"
 
 msgid "Browse Directory"
-msgstr ""
+msgstr "Переглянути директорію"
 
 msgid "Browseable"
 msgstr "Доступний для перегляду (листання)"
@@ -980,7 +994,7 @@ msgid "Build date"
 msgstr "Дата збірки"
 
 msgid "Building database in progress"
-msgstr ""
+msgstr "Триває створення бази даних"
 
 msgid "Bulgarian"
 msgstr "Болгарська"
@@ -1028,7 +1042,7 @@ msgid "CP1251 (Cyrillic)"
 msgstr "CP1251 (Кирилиця)"
 
 msgid "CP1252 (Latin 1)"
-msgstr ""
+msgstr "CP1252 (Latin 1)"
 
 msgid "CP437 (Latin US)"
 msgstr "CP437 (Latin US)"
@@ -1053,6 +1067,9 @@ msgstr "CP949 (Корейська)"
 
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Традиційна китайська Big5)"
+
+msgid "CPU Load"
+msgstr ""
 
 msgid "CPU frequency"
 msgstr "Частота ЦП"
@@ -1171,11 +1188,14 @@ msgstr "Виберіть інтерфейси до яких застосуват
 msgid "Clear"
 msgstr "Очистити"
 
+msgid "Clear Config & Import Disks"
+msgstr ""
+
+msgid "Clear Config & Import Software Raid Disks"
+msgstr ""
+
 msgid "Clear config and Import disks"
 msgstr "Очистити налаштування та імпортувати диски"
-
-msgid "Clear config and Import software raid disks"
-msgstr "Очистити конфігурацію та імпортувати диски програмного RAID"
 
 msgid ""
 "Click &quot;Enable firmware upload&quot; below, then choose the embedded "
@@ -1212,6 +1232,8 @@ msgid ""
 "Comma-separated list of group names that are permitted to login to the FTP "
 "server. (empty is ftp group)"
 msgstr ""
+"Список імен груп з дозволом логування на FTP сервер розділених комою. "
+"(пустий - група ftp)"
 
 msgid "Command"
 msgstr "Команда"
@@ -1275,11 +1297,11 @@ msgstr "Налаштування"
 msgid "Confirmation"
 msgstr "Підтвердждення"
 
-msgid "Connected FTP users"
-msgstr "Підключенні FTP користувачі"
+msgid "Connected FTP Users & Status"
+msgstr ""
 
 msgid "Consider replacing this drive"
-msgstr ""
+msgstr "Розгляньте можливість заміни цього диска"
 
 msgid "Console Menu"
 msgstr "Консольне меню"
@@ -1298,7 +1320,7 @@ msgstr ""
 "відповідальної за цю систему: «admin@email.address»."
 
 msgid "Container"
-msgstr ""
+msgstr "Контейнер"
 
 msgid "Content"
 msgstr "Вміст"
@@ -1315,14 +1337,17 @@ msgstr "Метод авторизації контролера"
 msgid "Controller Authorised network"
 msgstr "Авторизовані мережі контролера"
 
+msgid "Controller IP Address"
+msgstr ""
+
 msgid "Controller IP address"
 msgstr "IP адреса контролера"
 
+msgid "Controller Model"
+msgstr ""
+
 msgid "Controller TCP Port"
 msgstr "TCP порт контролера"
-
-msgid "Controller model"
-msgstr "Модель контролера"
 
 msgid "Controls power consumption."
 msgstr "Керує енергоспоживанням."
@@ -1609,6 +1634,9 @@ msgstr ""
 msgid "DLNA/UPnP MiniDLNA"
 msgstr ""
 
+msgid "DNS"
+msgstr ""
+
 msgid "DNS domain"
 msgstr ""
 
@@ -1617,9 +1645,6 @@ msgstr ""
 
 msgid "DNS server is empty."
 msgstr ""
-
-msgid "DNS settings"
-msgstr "Налаштування DNS"
 
 #, php-format
 msgid ""
@@ -1860,6 +1885,9 @@ msgstr "Опис"
 msgid "Destination"
 msgstr "Призначення"
 
+msgid "Destination Share"
+msgstr ""
+
 msgid "Destination email address."
 msgstr "Email адреса призначення."
 
@@ -1913,14 +1941,14 @@ msgstr "Пристрій /dev/%s - %s"
 msgid "Device IP"
 msgstr "IP адреса пристрою"
 
+msgid "Device Model"
+msgstr ""
+
 msgid "Device Pass-through"
 msgstr "Pass-through (наскрізний) пристрій"
 
 msgid "Device Serial"
 msgstr "Серійний номер пристрою"
-
-msgid "Device model"
-msgstr "Модель пристрою"
 
 msgid "Device polling"
 msgstr "Опитування пристрою"
@@ -2210,9 +2238,6 @@ msgstr "Ім'я домена в старому форматі, напр. HOME."
 msgid "Domain name, e.g. example.com."
 msgstr "Ім'я домена, напр. example.com"
 
-msgid "Don't Erase MBR"
-msgstr "Не витирати MBR"
-
 msgid "Don't erase the MBR (useful for some RAID controller cards)"
 msgstr "Не витирати MBR (корисно для деяких апаратних RAID контролерів)"
 
@@ -2233,6 +2258,9 @@ msgstr "Подвійний контроль парності RAID-Z"
 
 msgid "Download"
 msgstr "Завантажити"
+
+msgid "Download Configuration"
+msgstr ""
 
 msgid "Download bandwidth"
 msgstr "Ширина смуги завантаження"
@@ -2296,6 +2324,9 @@ msgstr "ПОМИЛКА:"
 
 msgid "Edit"
 msgstr "Редагувати"
+
+msgid "Edit File"
+msgstr ""
 
 msgid "Edit Host"
 msgstr "Редагувати хост"
@@ -2398,12 +2429,6 @@ msgid "Email"
 msgstr "Електронна пошта"
 
 msgid "Email Report"
-msgstr "Звіт електронною поштою"
-
-msgid "Email notification"
-msgstr "Повідомлення електронною поштою"
-
-msgid "Email report"
 msgstr "Звіт електронною поштою"
 
 msgid "Empty as default."
@@ -2702,6 +2727,9 @@ msgstr "Експорт"
 msgid "Export all the directories in the specified path."
 msgstr "Експортувати всі папки за вказаним шляхом."
 
+msgid "Extended Attributes"
+msgstr ""
+
 msgid "Extended attributes"
 msgstr "Розширені атрибути"
 
@@ -2787,8 +2815,8 @@ msgstr ""
 "FXP дозволяє передачу даних між двома віддаленими серверами без надсилання "
 "їх до клієнта, що запросив передачу (небезпечно!)."
 
-msgid "Factory defaults"
-msgstr "Заводські налаштування"
+msgid "Factory Defaults"
+msgstr ""
 
 msgid "Failed"
 msgstr "Помилка"
@@ -2849,14 +2877,14 @@ msgstr "Редактор файлів"
 msgid "File Manager"
 msgstr "Менеджер файлів"
 
+msgid "File Path"
+msgstr ""
+
 msgid "File Transfer Protocol"
 msgstr "Протокол передачі файлів"
 
 msgid "File not found"
 msgstr "Файл не знайдено"
-
-msgid "File path"
-msgstr "Шлях до файла"
 
 #, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
@@ -2883,6 +2911,9 @@ msgstr "Ім'я файла"
 msgid "Fileserver"
 msgstr ""
 
+msgid "Filesystem"
+msgstr ""
+
 msgid "Filter"
 msgstr "Фільтр"
 
@@ -2892,8 +2923,8 @@ msgstr "Фінський"
 msgid "Firewall"
 msgstr "Брандмауер"
 
-msgid "Firewall rule"
-msgstr "Правило брандмауера"
+msgid "Firewall Rule Settings"
+msgstr ""
 
 msgid "Firmware"
 msgstr "Прошивка"
@@ -2936,9 +2967,6 @@ msgstr ""
 msgid "Format"
 msgstr "Формат"
 
-msgid "Format disk"
-msgstr "Форматувати диск"
-
 msgid "Format the report for phpBB forum."
 msgstr ""
 
@@ -2950,9 +2978,6 @@ msgstr ""
 
 msgid "Free"
 msgstr "Вільно"
-
-msgid "Free disk space"
-msgstr "Вільний дисковий простір"
 
 msgid "French"
 msgstr "Французський"
@@ -3074,14 +3099,14 @@ msgstr "HAST"
 msgid "HAST (Highly Available Storage)"
 msgstr "HAST (Highly Available Storage)"
 
+msgid "HAST Information & Status Configured Resources"
+msgstr ""
+
+msgid "HAST Resource"
+msgstr ""
+
 msgid "HAST disabled"
 msgstr "HAST вимкнено"
-
-msgid "HAST resource"
-msgstr "HAST ресурс"
-
-msgid "HAST status of the configured resources"
-msgstr ""
 
 msgid "HAST volume"
 msgstr "HAST диск"
@@ -3099,11 +3124,11 @@ msgid ""
 "the drive. This feature is implemented in most modern Seagate drives."
 msgstr ""
 
+msgid "HDD standby time"
+msgstr ""
+
 msgid "HTTP Proxy"
 msgstr "HTTP проксі"
-
-msgid "Hard disk standby time"
-msgstr ""
 
 msgid "Hardware"
 msgstr "Апаратне обладнання"
@@ -3199,11 +3224,11 @@ msgstr ""
 msgid "Hungarian"
 msgstr "Венгерський"
 
+msgid "I/O Statistics"
+msgstr ""
+
 msgid "I/O Timeout"
 msgstr "Таймаут вводу/виводу"
-
-msgid "I/O statistics"
-msgstr "Статистика вводу/виводу"
 
 #, php-format
 msgid "I/O timeout in seconds (%d by default)."
@@ -3217,6 +3242,9 @@ msgstr "IG"
 
 msgid "IP"
 msgstr "IP"
+
+msgid "IP Address"
+msgstr ""
 
 msgid "IP address"
 msgstr "IP адреса"
@@ -3351,6 +3379,12 @@ msgstr "Помилка завантаження зображення (недос
 msgid "Import"
 msgstr "Імпортувати"
 
+msgid "Import Disks"
+msgstr ""
+
+msgid "Import Software Raid Disks"
+msgstr ""
+
 msgid "Import disks"
 msgstr "Імпортувати диски"
 
@@ -3362,9 +3396,6 @@ msgstr "Імпортувати правила брандмауера."
 
 msgid "Import on-disk ZFS config"
 msgstr ""
-
-msgid "Import software raid disks"
-msgstr "Імпортувати диски програмного RAID-масиву"
 
 msgid "In"
 msgstr "В"
@@ -3598,8 +3629,8 @@ msgstr "Італійска"
 msgid "JBOD"
 msgstr "JBOD"
 
-msgid "JBOD information and status"
-msgstr "Інформація і статус JBOD"
+msgid "JBOD Information & Status"
+msgstr ""
 
 msgid ""
 "January February March April May June July August September October November "
@@ -3647,8 +3678,8 @@ msgstr "Лише локальна мережа (LAN)"
 msgid "LCDproc"
 msgstr "LCDproc"
 
-msgid "LCDproc (client)"
-msgstr "LCDproc (клієнт)"
+msgid "LCDproc (Client)"
+msgstr ""
 
 msgid "LDAP"
 msgstr "LDAP"
@@ -3709,27 +3740,23 @@ msgstr "Залишити автоматичну конфігурацію зні�
 msgid "Leave this field empty to use default settings."
 msgstr "Залишіть це поле пустим для використання типових налаштувань."
 
-msgid "Level 1 - Minimum power usage with Standby (spindown)"
+msgid "Level 1 - Minimum Power Usage with Standby (Spindown)"
 msgstr ""
-"Рівень 1 - Мінімальне використання енергії із сплячим режимом (зупинка диска)"
 
-msgid "Level 127 - Intermediate power usage with Standby"
-msgstr "Рівень 127 - Середнє використання енергії із засинанням"
-
-msgid "Level 128 - Minimum power usage without Standby (no spindown)"
+msgid "Level 127 - Intermediate Power Usage with Standby"
 msgstr ""
-"Рівень 128 - Мінімальне використання енергії без засинання (без зупинки "
-"жорстких дисків)"
 
-msgid "Level 192 - Intermediate power usage without Standby"
-msgstr "Рівень 192 - Середнє використання енергії без засинання"
-
-msgid "Level 254 - Maximum performance, maximum power usage"
+msgid "Level 128 - Minimum Power Usage without Standby (No Spindown)"
 msgstr ""
-"Рівень 254 - Максимальна продуктивність, максимальне використання енергії"
 
-msgid "Level 64 - Intermediate power usage with Standby"
-msgstr "Рівень 64 - Середнє використання енергії із засинанням"
+msgid "Level 192 - Intermediate Power Usage without Standby"
+msgstr ""
+
+msgid "Level 254 - Maximum Performance, Maximum Power Usage"
+msgstr ""
+
+msgid "Level 64 - Intermediate Power Usage with Standby"
+msgstr ""
 
 #, php-format
 msgid "Levels (MHz/mW): %s"
@@ -3740,6 +3767,9 @@ msgstr "Ліцензія"
 
 msgid "License & Credits"
 msgstr "Ліцензія і список розробників"
+
+msgid "Life Time"
+msgstr ""
 
 msgid "Life time"
 msgstr "Пожиттєвий"
@@ -3767,23 +3797,20 @@ msgstr "Дія при активації інтерфейса"
 msgid "List"
 msgstr "Список"
 
+msgid "List Detected Disks"
+msgstr ""
+
+msgid "List Imported Users"
+msgstr ""
+
+msgid "List Mount Points"
+msgstr ""
+
 msgid ""
 "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP "
 "(AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
 "(Temporal Key Integrity Protocol, IEEE 802.11i/D7.0)."
 msgstr ""
-
-msgid "List of available target name on all configured iSCSI targets"
-msgstr ""
-
-msgid "List of detected disks"
-msgstr "Список виявлених дисків"
-
-msgid "List of imported users"
-msgstr "Список імпортованих користувачів"
-
-msgid "List of mount points"
-msgstr "Список точок монтування"
 
 msgid "Load"
 msgstr "Завантажити"
@@ -3807,6 +3834,9 @@ msgid "Local"
 msgstr "Локальний"
 
 msgid "Local Master Browser"
+msgstr ""
+
+msgid "Local Share (Destination)"
 msgstr ""
 
 msgid "Local User"
@@ -3885,12 +3915,12 @@ msgstr ""
 msgid "Logical Unit Controller IP address (%s by default)"
 msgstr "IP-адреса Logical Unit Controller (типово %s)"
 
+msgid "Logical Unit Controller Login Information"
+msgstr ""
+
 #, php-format
 msgid "Logical Unit Controller TCP port (%d by default)"
 msgstr "TCP-порт Logical Unit Controller (типово %d)"
-
-msgid "Logical Unit Controller login information"
-msgstr ""
 
 msgid "Logical Unit Type mapped to LUN."
 msgstr ""
@@ -3921,6 +3951,9 @@ msgstr ""
 msgid "MAC address"
 msgstr "MAC-адреса"
 
+msgid "MBR Erase"
+msgstr ""
+
 msgid "MBR partition"
 msgstr "MBR розділ"
 
@@ -3939,8 +3972,8 @@ msgstr "ПЕРЕМІЩЕНО ДО"
 msgid "MS Active Directory"
 msgstr "MS Active Directory"
 
-msgid "MS Active Directory informations"
-msgstr "Інформація про MS Active Directory"
+msgid "MS Active Directory Information & Status"
+msgstr ""
 
 msgid "MS Domain"
 msgstr ""
@@ -4029,6 +4062,9 @@ msgstr "MaxOutstandingR2T"
 msgid "MaxRecvDataSegmentLength"
 msgstr "MaxRecvDataSegmentLength"
 
+msgid "Maximum Performance, Maximum Acoustic Output"
+msgstr ""
+
 msgid "Maximum connections"
 msgstr "Максимальна кількість з'єднань"
 
@@ -4068,9 +4104,6 @@ msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
 msgstr ""
 "Максимальна кількість одночасних з'єднань. За замовчуванням 0 (без обмежень)."
 
-msgid "Maximum performance, maximum acoustic output"
-msgstr "Максимальна продуктивність, максимальний рівень шуму"
-
 msgid "Maximum relative humidity seen (percent)"
 msgstr "Максимальне зафіксоване значення відносної вологості"
 
@@ -4086,10 +4119,13 @@ msgstr "Медіа директорія"
 msgid "Media library"
 msgstr "Медіа бібліотека"
 
-msgid "Medium acoustic output"
-msgstr "Середній рівень шуму"
+msgid "Medium Acoustic Output"
+msgstr ""
 
 msgid "Member Interface"
+msgstr ""
+
+msgid "Memory Usage"
 msgstr ""
 
 msgid "Memory usage"
@@ -4124,6 +4160,9 @@ msgstr ""
 msgid "Minimum"
 msgstr "Мінімум"
 
+msgid "Minimum Performance, Minimum Acoustic Output"
+msgstr ""
+
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr ""
 "Мінімальний залишковий рівень батареї для старту від ДБЖ після виключення"
@@ -4136,9 +4175,6 @@ msgstr "Мінімальна частота"
 
 msgid "Minimum incoming voltage seen"
 msgstr "Мінімальне зафіксоване значення вхідної напруги"
-
-msgid "Minimum performance, Minimum acoustic output"
-msgstr "Мінімальна продуктивність, мінімальний рівень шуму"
 
 msgid "Minimum relative humidity seen (percent)"
 msgstr "Мінімальна зафіксована відносна вологість (в процентах)"
@@ -4164,11 +4200,11 @@ msgstr "Режим"
 msgid "Model"
 msgstr "Модель"
 
-msgid "Model extra"
+msgid "Model Extra"
 msgstr ""
 
-msgid "Model name"
-msgstr "Назва моделі"
+msgid "Model Name"
+msgstr ""
 
 msgid "Modified"
 msgstr "Змінений"
@@ -4412,14 +4448,14 @@ msgstr ""
 msgid "Node A IP address"
 msgstr "IP адреса вузла А."
 
-msgid "Node A settings"
-msgstr "Налаштування вузла А."
+msgid "Node A Settings"
+msgstr ""
 
 msgid "Node B IP address"
 msgstr "IP адреса вузла В."
 
-msgid "Node B settings"
-msgstr "Налаштування вузла В."
+msgid "Node B Settings"
+msgstr ""
 
 msgid "Node Base"
 msgstr ""
@@ -4572,8 +4608,8 @@ msgid ""
 "recommends adding the same number of drives as the existing virtual device."
 msgstr ""
 
-msgid "Online version check"
-msgstr "Перевірка версії онлайн"
+msgid "Online"
+msgstr ""
 
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
@@ -4792,6 +4828,9 @@ msgstr "Дозволити користувача root"
 msgid "Permit to do SSH Tunneling."
 msgstr "Дозволити SSH тунелі"
 
+msgid "Physical Interface"
+msgstr ""
+
 msgid "Physical interface"
 msgstr "Фізичний інтерфейс"
 
@@ -4835,8 +4874,8 @@ msgstr "Час опитування"
 msgid "Pool"
 msgstr "Список"
 
-msgid "Pool information and status"
-msgstr "Інформація і статус списку"
+msgid "Pool Information & Status"
+msgstr ""
 
 msgid "Pools"
 msgstr "Списки"
@@ -4898,6 +4937,9 @@ msgstr "Сервіс живлення"
 msgid "Power Mode"
 msgstr "Режим живлення"
 
+msgid "Power management"
+msgstr ""
+
 msgid "Power mode"
 msgstr "Режим живлення"
 
@@ -4911,8 +4953,8 @@ msgid "PreInit"
 msgstr "Попередня ініціалізація"
 
 #, php-format
-msgid "Predefined system groups"
-msgstr "Попередньо визначені системні групи"
+msgid "Predefined Groups"
+msgstr ""
 
 msgid "Preferred"
 msgstr "Бажаний"
@@ -4962,8 +5004,8 @@ msgstr "Процес"
 msgid "Processes"
 msgstr "Процеси"
 
-msgid "Processes information"
-msgstr "Інформація про процеси"
+msgid "Processes Information"
+msgstr ""
 
 msgid "Product ID"
 msgstr "ІД виробу"
@@ -4984,11 +5026,9 @@ msgid "Proxy"
 msgstr "Проксі"
 
 msgid ""
-"Puts the hard disk into standby mode when the selected amount of time after "
-"the last hard disk access has been elapsed."
+"Puts the disk into standby mode when the selected amount of time after the "
+"last disk access has been elapsed."
 msgstr ""
-"Переводить жорсткий диск в режим очікування, якщо обраний час після "
-"останнього доступі до жорсткого диска було вичерпано."
 
 msgid "Queue Depth"
 msgstr "глибина запитів"
@@ -5002,26 +5042,26 @@ msgstr "Квота"
 msgid "RAID 0"
 msgstr "RAID 0"
 
-msgid "RAID 0 information and status"
-msgstr "Інформація і статус RAID 0"
+msgid "RAID 0 Information & Status"
+msgstr ""
 
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
-msgid "RAID 0/1/5 information and status"
-msgstr "Інформація і статус RAID 0/1/5"
+msgid "RAID 0/1/5 Information & Status"
+msgstr ""
 
 msgid "RAID 1"
 msgstr "RAID 1"
 
-msgid "RAID 1 information and status"
-msgstr "Інформація і статус RAID 1"
+msgid "RAID 1 Information & Status"
+msgstr ""
 
 msgid "RAID 5"
 msgstr "RAID 5"
 
-msgid "RAID 5 information and status"
-msgstr "Інформація і статус RAID 5"
+msgid "RAID 5 Information & Status"
+msgstr ""
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -5053,8 +5093,8 @@ msgstr "Сервер RSYNC"
 msgid "RSYNC Client"
 msgstr "Клієнт RSYNC"
 
-msgid "RSYNC Client informations"
-msgstr "Клієнтська інформація RSYNC"
+msgid "RSYNC Client Information & Status"
+msgstr ""
 
 msgid "RSYNC events"
 msgstr "Події RSYNC"
@@ -5151,11 +5191,14 @@ msgstr "Перезавантажити сторінку"
 msgid "Remaining battery runtime"
 msgstr "Залишок роботи від батареї"
 
+msgid "Remote Address"
+msgstr ""
+
+msgid "Remote Module (Source)"
+msgstr ""
+
 msgid "Remote Rsync Server"
 msgstr "Віддалений RSYNC сервер"
-
-msgid "Remote address"
-msgstr "Віддалена адреса"
 
 msgid "Remote module (source)"
 msgstr "Віддалений модуль (джерело)"
@@ -5208,11 +5251,11 @@ msgstr "Потрібна аутентифікація."
 msgid "Required"
 msgstr "Вимагається"
 
-msgid "Rescan database in progress"
+msgid "Rescan Disks"
 msgstr ""
 
-msgid "Rescan disks"
-msgstr "Пересканувати диски"
+msgid "Rescan database in progress"
+msgstr ""
 
 msgid "Rescan interval"
 msgstr "Інтервал пересканування"
@@ -5237,6 +5280,9 @@ msgstr "Ім'я ресурса"
 
 msgid "Resources"
 msgstr "Ресурси"
+
+msgid "Restore Configuration"
+msgstr ""
 
 msgid "Restore configuration"
 msgstr "Віднивити конфігурацію"
@@ -5280,8 +5326,8 @@ msgstr ""
 msgid "Root bind password"
 msgstr ""
 
-msgid "Rotation rate"
-msgstr "Швидкість обертання"
+msgid "Rotation Rate"
+msgstr ""
 
 msgid "Round-robin read"
 msgstr "Почергове читання"
@@ -5301,7 +5347,7 @@ msgstr "Рядки"
 msgid "Rsync"
 msgstr "Rsync"
 
-msgid "Rsync job"
+msgid "Rsync Job"
 msgstr ""
 
 msgid "Rule"
@@ -5390,6 +5436,12 @@ msgstr ""
 msgid "Save"
 msgstr "Зберегти"
 
+msgid "Save & Restart"
+msgstr ""
+
+msgid "Save File"
+msgstr ""
+
 msgid "Save and Restart"
 msgstr "Зберегти і перезавантажити"
 
@@ -5415,23 +5467,26 @@ msgstr ""
 msgid "Scan type"
 msgstr "Тип сканування"
 
+msgid "Schedule Time"
+msgstr ""
+
 msgid "Schedule time"
 msgstr "Запланувати час"
 
 msgid "Scheduled"
 msgstr "Заплановано"
 
+msgid "Scheduled Reboot"
+msgstr ""
+
 msgid "Scheduled Self-Test"
 msgstr "Заплановане самотестування"
 
-msgid "Scheduled reboot"
-msgstr "Заплановане перезавантаження"
+msgid "Scheduled Shutdown"
+msgstr ""
 
-msgid "Scheduled self-tests"
-msgstr "Заплановані самотестування"
-
-msgid "Scheduled shutdown"
-msgstr "Заплановане завершення роботи"
+msgid "Scheduled tests"
+msgstr ""
 
 msgid "Secondary"
 msgstr "Вторинний"
@@ -5446,6 +5501,9 @@ msgid "Security"
 msgstr "Безпека"
 
 msgid "See attribute E8."
+msgstr ""
+
+msgid "Select"
 msgstr ""
 
 msgid ""
@@ -5494,14 +5552,20 @@ msgstr ""
 msgid "Selected file isn't an valid ISO file."
 msgstr ""
 
-msgid "Self-Monitoring, Analysis and Reporting Technology"
-msgstr "Self-Monitoring, Analysis and Reporting Technology"
+msgid "Self-Monitoring, Analysis & Reporting Technology"
+msgstr ""
+
+msgid "Self-tests Management"
+msgstr ""
 
 msgid "Send Buffer Size"
 msgstr ""
 
 msgid "Send Command!"
 msgstr "Надіслати команду!"
+
+msgid "Send Now"
+msgstr ""
 
 msgid "Send a TEST warning email on startup."
 msgstr ""
@@ -5517,6 +5581,9 @@ msgstr ""
 
 msgid "Serial Console"
 msgstr "Серійна консоль"
+
+msgid "Serial Number"
+msgstr ""
 
 msgid "Serial number"
 msgstr "Серійний номер"
@@ -5625,17 +5692,17 @@ msgstr "Командна оболонка"
 msgid "Shock During Write."
 msgstr ""
 
+msgid "Show Process Information"
+msgstr ""
+
 msgid "Show RAW UPS Info"
 msgstr "Показати необроблену інформацію БДЖ"
 
+msgid "Show UPS Information"
+msgstr ""
+
 msgid "Show log entries in reverse order (newest entries on top)"
 msgstr "Показувати записи журналу у зворотньому порядку (новіші наверху)"
-
-msgid "Show process information"
-msgstr "Показати інформацію про процес"
-
-msgid "Show ups information"
-msgstr "Показати інформацію про БДЖ"
 
 msgid "Shutdown"
 msgstr "Завершення роботи"
@@ -5713,6 +5780,9 @@ msgstr "Використовуване ПЗ"
 msgid "Source"
 msgstr "Джерело"
 
+msgid "Source Share"
+msgstr ""
+
 msgid "Source directory to be synchronized."
 msgstr ""
 
@@ -5720,6 +5790,9 @@ msgid "Source port"
 msgstr "Вихідний порт"
 
 msgid "Source share"
+msgstr ""
+
+msgid "Space Usage"
 msgstr ""
 
 msgid "Space Used"
@@ -5750,6 +5823,9 @@ msgid "Specified path is NFSv4 root directory."
 msgstr ""
 
 msgid "Specifies how many servers to create."
+msgstr ""
+
+msgid "Specifies how the volume should be exposed to the OS."
 msgstr ""
 
 msgid "Specifies that the file system should be exported read-only."
@@ -5796,13 +5872,13 @@ msgstr ""
 msgid "Standard"
 msgstr "Стандартний"
 
+msgid "Standby"
+msgstr ""
+
 msgid ""
 "Standby - Check the device unless it is in SLEEP or STANDBY mode. In these "
 "modes most disks are not spinning, so if you want to prevent a laptop disk "
 "from spinning up each poll, this is probably what you want."
-msgstr ""
-
-msgid "Standby time"
 msgstr ""
 
 msgid "Start"
@@ -5894,14 +5970,14 @@ msgstr "Приховати повідомлення не про помилку."
 msgid "Swap"
 msgstr "Swap"
 
+msgid "Swap Information & Status"
+msgstr ""
+
+msgid "Swap Memory"
+msgstr ""
+
 msgid "Swap disabled"
 msgstr "Swap вимкнено"
-
-msgid "Swap memory"
-msgstr "Swap пам'ять"
-
-msgid "Swap status"
-msgstr "Статус Swap"
 
 msgid "Swap usage"
 msgstr "Використання Swap"
@@ -5950,23 +6026,20 @@ msgstr "Система"
 msgid "System Beep"
 msgstr "Системний сигнал"
 
+msgid "System Information"
+msgstr ""
+
+msgid "System Load"
+msgstr ""
+
 msgid "System bios"
 msgstr "BIOS"
 
 msgid "System events"
 msgstr "Системні події"
 
-msgid "System firewall"
-msgstr ""
-
 msgid "System info"
 msgstr "Відомості про систему"
-
-msgid "System information"
-msgstr "Системна інформація"
-
-msgid "System load"
-msgstr ""
 
 msgid "System log"
 msgstr "Журнал системи"
@@ -6069,11 +6142,11 @@ msgstr "Призначення"
 msgid "Temperature"
 msgstr "Температура"
 
+msgid "Temperature Monitoring"
+msgstr ""
+
 msgid "Temperature alarm (enabled/disabled)"
 msgstr "Сигналізація перегріву (увімкнено/вимкнено)"
-
-msgid "Temperature monitoring"
-msgstr "Моніторинг температури"
 
 msgid "Temperature threshold high (degrees C)"
 msgstr "Верхня межа температури (градуси С)"
@@ -6913,10 +6986,9 @@ msgstr ""
 "Цей WLAN не може бути видалений, оскільки досі використовується як інтерфейс."
 
 msgid ""
-"This allows you to lower the power consumption of the drive, at the expense "
+"This allows you to lower the power consumption of the disk, at the expense "
 "of performance."
 msgstr ""
-"Це дозволить зменшити споживання енергії за рахунок зменшення продуктивності."
 
 msgid "This allows you to set how loud the drive is while it's operating."
 msgstr ""
@@ -6927,8 +6999,8 @@ msgid ""
 "containing data."
 msgstr ""
 
-msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
-msgstr "Це дозволяє встановити режим передачі для ATA/IDE жорстких дисків."
+msgid "This allows you to set the transfer mode for ATA/IDE disks."
+msgstr ""
 
 msgid ""
 "This attribute indicates the count of full hard disk power on/off cycles."
@@ -7376,11 +7448,11 @@ msgstr ""
 msgid "Transcoding"
 msgstr "Перекодування"
 
+msgid "Transfer Rate"
+msgstr ""
+
 msgid "Transfer mode"
 msgstr "Режим передачі"
-
-msgid "Transfer rate"
-msgstr "Швидкість передачі"
 
 msgid "Trap host"
 msgstr ""
@@ -7438,6 +7510,13 @@ msgstr "UFS"
 
 #, php-format
 msgid ""
+"UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
+"filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
+"unpredictable results, file corruption and the loss of data!"
+msgstr ""
+
+#, php-format
+msgid ""
 "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
 "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
 "NTFS can result in unpredictable results, file corruption, and loss of data!"
@@ -7456,6 +7535,9 @@ msgstr "UID"
 
 msgid "UPS"
 msgstr "UPS"
+
+msgid "UPS Information & Status"
+msgstr ""
 
 msgid "UPS Off Line"
 msgstr "ДБЖ неактивне"
@@ -7662,12 +7744,12 @@ msgstr ""
 msgid "User"
 msgstr "Користувач"
 
+#, php-format
+msgid "User Defined Groups"
+msgstr ""
+
 msgid "User ID"
 msgstr "Ідентифікатор користувача"
-
-#, php-format
-msgid "User defined groups"
-msgstr ""
 
 msgid "User full name."
 msgstr "Повне ім'я користувача."
@@ -7705,8 +7787,8 @@ msgstr ""
 msgid "Users"
 msgstr "Користувачі"
 
-msgid "Users and Groups"
-msgstr "Користувачі та групи"
+msgid "Users & Groups"
+msgstr ""
 
 #, c-format
 msgid "Using %s bytes fragment size."
@@ -7717,6 +7799,9 @@ msgstr "VHID"
 
 msgid "VLAN"
 msgstr "VLAN"
+
+msgid "VLAN Tag"
+msgstr ""
 
 msgid "VLAN tag"
 msgstr ""
@@ -7747,22 +7832,28 @@ msgstr ""
 msgid "Video"
 msgstr ""
 
+msgid "Virtual Device"
+msgstr ""
+
+msgid "Virtual Devices"
+msgstr ""
+
 msgid "Virtual Host ID"
+msgstr ""
+
+msgid "Virtual IP Address"
 msgstr ""
 
 msgid "Virtual IP address"
 msgstr ""
 
+msgid "Virtual Interface"
+msgstr ""
+
 msgid "Virtual Machine"
 msgstr ""
 
-msgid "Virtual device"
-msgstr ""
-
 msgid "Virtual devices"
-msgstr ""
-
-msgid "Virtual interface"
 msgstr ""
 
 msgid "VirtualBox"
@@ -7781,6 +7872,9 @@ msgid "Volume label"
 msgstr ""
 
 msgid "Volume label of the new file system."
+msgstr ""
+
+msgid "Volume mode"
 msgstr ""
 
 msgid "Volumes"
@@ -8013,26 +8107,31 @@ msgstr "ZFS"
 msgid "ZFS ACL"
 msgstr "ZFS ACL"
 
-msgid "ZFS dataset information and status"
+msgid "ZFS Dataset Information & Status"
 msgstr ""
 
-msgid "ZFS dataset properties"
+msgid "ZFS Dataset Properties"
 msgstr ""
 
-msgid "ZFS snapshot information and status"
+msgid "ZFS Snapshot Information & Status"
 msgstr ""
 
-msgid "ZFS snapshot properties"
-msgstr "властивості образу ZFS"
+msgid "ZFS Snapshot Properties"
+msgstr ""
+
+msgid "ZFS Volume Information & Status"
+msgstr ""
+
+msgid "ZFS Volume Properties"
+msgstr ""
 
 msgid "ZFS volume"
 msgstr "Том ZFS"
 
-msgid "ZFS volume information and status"
-msgstr "Інформація та статус тома ZFS"
-
-msgid "ZFS volume properties"
-msgstr "Властивості тома ZFS"
+msgid ""
+"ZFS volume block size. This value can not be changed after creation. Empty "
+"as default."
+msgstr ""
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
@@ -8111,6 +8210,9 @@ msgstr "iSCSI об'єкт"
 msgid "iSCSI Target Logical Unit Controller"
 msgstr ""
 
+msgid "iSCSI Targets Information & Status"
+msgstr ""
+
 #, php-format
 msgid "iSCSI initial parameter (%d by default)."
 msgstr "параметр iSCSI ініціатора (%d за умовчанням)"
@@ -8140,9 +8242,6 @@ msgid "minimum (power saving)"
 msgstr "мінімальна (збереження енергії)"
 
 msgid "minute(s)"
-msgstr "хвилин"
-
-msgid "minutes"
 msgstr "хвилин"
 
 msgid "mirroring"
@@ -8216,3 +8315,220 @@ msgstr "версія:"
 
 msgid "warning"
 msgstr ""
+
+#, php-format
+#~ msgid "%s interface"
+#~ msgstr "%s інтерфейс"
+
+#~ msgid "minutes"
+#~ msgstr "хвилин"
+
+#~ msgid "System information"
+#~ msgstr "Системна інформація"
+
+#~ msgid "Advanced Power Management"
+#~ msgstr "Розширене керування живленням"
+
+#~ msgid "Always on"
+#~ msgstr "Завжди ввімкнено"
+
+#~ msgid "Backup configuration"
+#~ msgstr "Конфігурація резервування"
+
+#~ msgid "Ban list"
+#~ msgstr "Чорний список"
+
+#~ msgid "ZFS volume information and status"
+#~ msgstr "Інформація та статус тома ZFS"
+
+#~ msgid "ZFS volume properties"
+#~ msgstr "Властивості тома ZFS"
+
+#~ msgid "Processes information"
+#~ msgstr "Інформація про процеси"
+
+#~ msgid ""
+#~ "Puts the hard disk into standby mode when the selected amount of time after "
+#~ "the last hard disk access has been elapsed."
+#~ msgstr ""
+#~ "Переводить жорсткий диск в режим очікування, якщо обраний час після "
+#~ "останнього доступі до жорсткого диска було вичерпано."
+
+#~ msgid "RSYNC Client informations"
+#~ msgstr "Клієнтська інформація RSYNC"
+
+#~ msgid "Remote address"
+#~ msgstr "Віддалена адреса"
+
+#~ msgid "Rescan disks"
+#~ msgstr "Пересканувати диски"
+
+#~ msgid "Clear config and Import software raid disks"
+#~ msgstr "Очистити конфігурацію та імпортувати диски програмного RAID"
+
+#~ msgid "Connected FTP users"
+#~ msgstr "Підключенні FTP користувачі"
+
+#~ msgid "Controller model"
+#~ msgstr "Модель контролера"
+
+#~ msgid "DNS settings"
+#~ msgstr "Налаштування DNS"
+
+#~ msgid "Device model"
+#~ msgstr "Модель пристрою"
+
+#~ msgid "Don't Erase MBR"
+#~ msgstr "Не витирати MBR"
+
+#~ msgid "File path"
+#~ msgstr "Шлях до файла"
+
+#~ msgid "Firewall rule"
+#~ msgstr "Правило брандмауера"
+
+#~ msgid "HAST resource"
+#~ msgstr "HAST ресурс"
+
+#~ msgid "Import software raid disks"
+#~ msgstr "Імпортувати диски програмного RAID-масиву"
+
+#~ msgid "Level 192 - Intermediate power usage without Standby"
+#~ msgstr "Рівень 192 - Середнє використання енергії без засинання"
+
+#~ msgid "Level 127 - Intermediate power usage with Standby"
+#~ msgstr "Рівень 127 - Середнє використання енергії із засинанням"
+
+#~ msgid "Level 128 - Minimum power usage without Standby (no spindown)"
+#~ msgstr ""
+#~ "Рівень 128 - Мінімальне використання енергії без засинання (без зупинки "
+#~ "жорстких дисків)"
+
+#~ msgid "Level 254 - Maximum performance, maximum power usage"
+#~ msgstr ""
+#~ "Рівень 254 - Максимальна продуктивність, максимальне використання енергії"
+
+#~ msgid "Level 64 - Intermediate power usage with Standby"
+#~ msgstr "Рівень 64 - Середнє використання енергії із засинанням"
+
+#~ msgid "List of detected disks"
+#~ msgstr "Список виявлених дисків"
+
+#~ msgid "List of mount points"
+#~ msgstr "Список точок монтування"
+
+#~ msgid "Model name"
+#~ msgstr "Назва моделі"
+
+#~ msgid "Node B settings"
+#~ msgstr "Налаштування вузла В."
+
+#~ msgid "Node A settings"
+#~ msgstr "Налаштування вузла А."
+
+#~ msgid "Online version check"
+#~ msgstr "Перевірка версії онлайн"
+
+#~ msgid "Pool information and status"
+#~ msgstr "Інформація і статус списку"
+
+#~ msgid "Scheduled reboot"
+#~ msgstr "Заплановане перезавантаження"
+
+#~ msgid "Scheduled shutdown"
+#~ msgstr "Заплановане завершення роботи"
+
+#~ msgid "Scheduled self-tests"
+#~ msgstr "Заплановані самотестування"
+
+#~ msgid "Self-Monitoring, Analysis and Reporting Technology"
+#~ msgstr "Self-Monitoring, Analysis and Reporting Technology"
+
+#~ msgid "Show ups information"
+#~ msgstr "Показати інформацію про БДЖ"
+
+#~ msgid "Show process information"
+#~ msgstr "Показати інформацію про процес"
+
+#~ msgid "Swap memory"
+#~ msgstr "Swap пам'ять"
+
+#~ msgid "Swap status"
+#~ msgstr "Статус Swap"
+
+#~ msgid "Temperature monitoring"
+#~ msgstr "Моніторинг температури"
+
+#~ msgid ""
+#~ "This allows you to lower the power consumption of the drive, at the expense "
+#~ "of performance."
+#~ msgstr ""
+#~ "Це дозволить зменшити споживання енергії за рахунок зменшення продуктивності."
+
+#~ msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
+#~ msgstr "Це дозволяє встановити режим передачі для ATA/IDE жорстких дисків."
+
+#~ msgid "Transfer rate"
+#~ msgstr "Швидкість передачі"
+
+#~ msgid "Email report"
+#~ msgstr "Звіт електронною поштою"
+
+#~ msgid "Email notification"
+#~ msgstr "Повідомлення електронною поштою"
+
+#~ msgid "Free disk space"
+#~ msgstr "Вільний дисковий простір"
+
+#~ msgid "ZFS snapshot properties"
+#~ msgstr "властивості образу ZFS"
+
+#~ msgid "Format disk"
+#~ msgstr "Форматувати диск"
+
+#~ msgid "I/O statistics"
+#~ msgstr "Статистика вводу/виводу"
+
+#~ msgid "LCDproc (client)"
+#~ msgstr "LCDproc (клієнт)"
+
+#~ msgid "Level 1 - Minimum power usage with Standby (spindown)"
+#~ msgstr ""
+#~ "Рівень 1 - Мінімальне використання енергії із сплячим режимом (зупинка диска)"
+
+#~ msgid "MS Active Directory informations"
+#~ msgstr "Інформація про MS Active Directory"
+
+#~ msgid "Medium acoustic output"
+#~ msgstr "Середній рівень шуму"
+
+#~ msgid "Maximum performance, maximum acoustic output"
+#~ msgstr "Максимальна продуктивність, максимальний рівень шуму"
+
+#~ msgid "Minimum performance, Minimum acoustic output"
+#~ msgstr "Мінімальна продуктивність, мінімальний рівень шуму"
+
+#~ msgid "JBOD information and status"
+#~ msgstr "Інформація і статус JBOD"
+
+#~ msgid "List of imported users"
+#~ msgstr "Список імпортованих користувачів"
+
+#~ msgid "RAID 1 information and status"
+#~ msgstr "Інформація і статус RAID 1"
+
+#~ msgid "RAID 5 information and status"
+#~ msgstr "Інформація і статус RAID 5"
+
+#, php-format
+#~ msgid "Predefined system groups"
+#~ msgstr "Попередньо визначені системні групи"
+
+#~ msgid "RAID 0/1/5 information and status"
+#~ msgstr "Інформація і статус RAID 0/1/5"
+
+#~ msgid "RAID 0 information and status"
+#~ msgstr "Інформація і статус RAID 0"
+
+#~ msgid "Rotation rate"
+#~ msgstr "Швидкість обертання"

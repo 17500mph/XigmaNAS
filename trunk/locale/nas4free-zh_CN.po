@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-11-17 01:18+0000\n"
+"POT-Creation-Date: 2015-12-09 16:19+0000\n"
 "PO-Revision-Date: 2015-07-14 10:32+0000\n"
 "Last-Translator: Alex Lin <linuxant@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-23 22:44+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2015-12-09 15:41+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -49,8 +49,8 @@ msgid "%dB / block"
 msgstr "%dB / 块"
 
 #, php-format
-msgid "%s interface"
-msgstr "%s 介面"
+msgid "%s Interface"
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -284,6 +284,12 @@ msgstr "请输入一个有效的前缀 (1-128)。"
 msgid "A valid systctl MIB value."
 msgstr "有效的systctl MIB值"
 
+msgid "ACL Inherit"
+msgstr ""
+
+msgid "ACL Mode"
+msgstr ""
+
 msgid "ACL inherit"
 msgstr "ACL继承"
 
@@ -328,6 +334,9 @@ msgstr ""
 
 msgid "Access"
 msgstr "权限"
+
+msgid "Access Mode"
+msgstr ""
 
 msgid "Access Restrictions"
 msgstr "存取权限"
@@ -502,8 +511,8 @@ msgstr "先进格式化（Advanced Format）"
 msgid "Advanced Options"
 msgstr "高级选项"
 
-msgid "Advanced Power Management"
-msgstr "高级电源管理"
+msgid "Advanced Settings"
+msgstr ""
 
 msgid "Advanced settings"
 msgstr "高级设置"
@@ -644,8 +653,8 @@ msgstr "备用TCP端口。默认为 873"
 msgid "Alternative configuration directory (usually empty)."
 msgstr "备用配置目录（通常是空的） 。"
 
-msgid "Always on"
-msgstr "永远开启"
+msgid "Always On"
+msgstr ""
 
 msgid "Always scan"
 msgstr "永远扫描"
@@ -798,8 +807,8 @@ msgstr ""
 msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr ""
 
-msgid "Backup configuration"
-msgstr "备份设置"
+msgid "Backup Configuration"
+msgstr ""
 
 msgid "Backup file"
 msgstr "备份文件"
@@ -813,8 +822,8 @@ msgstr "不良用戶 - 非現有用戶"
 msgid "Balance algorithm"
 msgstr "平衡演算法"
 
-msgid "Ban list"
-msgstr "封禁名單"
+msgid "Ban List"
+msgstr ""
 
 msgid "Ban list rule"
 msgstr "封禁名單規則"
@@ -889,6 +898,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "空闲时间"
+
+msgid "Block size"
+msgstr ""
 
 msgid "Blocksize"
 msgstr "数据块大小"
@@ -994,6 +1006,9 @@ msgstr "CP949 (韩文)"
 
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (繁体中文 Big5)"
+
+msgid "CPU Load"
+msgstr ""
 
 msgid "CPU frequency"
 msgstr "CPU 频率"
@@ -1108,11 +1123,14 @@ msgstr "选择本路由设置要应用的网络介面。"
 msgid "Clear"
 msgstr "清除"
 
+msgid "Clear Config & Import Disks"
+msgstr ""
+
+msgid "Clear Config & Import Software Raid Disks"
+msgstr ""
+
 msgid "Clear config and Import disks"
 msgstr "清除和导入磁盘设置"
-
-msgid "Clear config and Import software raid disks"
-msgstr "清除和导入软体RAID的磁盘设置"
 
 msgid ""
 "Click &quot;Enable firmware upload&quot; below, then choose the embedded "
@@ -1205,8 +1223,8 @@ msgstr "设置中"
 msgid "Confirmation"
 msgstr "确认"
 
-msgid "Connected FTP users"
-msgstr "已连接 FTP 用户"
+msgid "Connected FTP Users & Status"
+msgstr ""
 
 msgid "Consider replacing this drive"
 msgstr ""
@@ -1243,14 +1261,17 @@ msgstr "控制器认证方法"
 msgid "Controller Authorised network"
 msgstr "控制器授权网络"
 
+msgid "Controller IP Address"
+msgstr ""
+
 msgid "Controller IP address"
 msgstr "控制器的 IP 位址"
 
+msgid "Controller Model"
+msgstr ""
+
 msgid "Controller TCP Port"
 msgstr "控制器的TCP端口"
-
-msgid "Controller model"
-msgstr "控制器型号"
 
 msgid "Controls power consumption."
 msgstr "控制电源模式。"
@@ -1527,6 +1548,9 @@ msgstr ""
 msgid "DLNA/UPnP MiniDLNA"
 msgstr ""
 
+msgid "DNS"
+msgstr ""
+
 msgid "DNS domain"
 msgstr "DNS域名"
 
@@ -1535,9 +1559,6 @@ msgstr "DNS转发器"
 
 msgid "DNS server is empty."
 msgstr "DNS伺服器是空白的。"
-
-msgid "DNS settings"
-msgstr "DNS 设置"
 
 #, php-format
 msgid ""
@@ -1774,6 +1795,9 @@ msgstr "说明"
 msgid "Destination"
 msgstr "目的端"
 
+msgid "Destination Share"
+msgstr ""
+
 msgid "Destination email address."
 msgstr "电邮目的端。"
 
@@ -1825,14 +1849,14 @@ msgstr "设备 /dev/%s - %s"
 msgid "Device IP"
 msgstr "设备 IP"
 
+msgid "Device Model"
+msgstr ""
+
 msgid "Device Pass-through"
 msgstr "设备直通（Device Pass-through）"
 
 msgid "Device Serial"
 msgstr "设备编号"
-
-msgid "Device model"
-msgstr "设备型号"
 
 msgid "Device polling"
 msgstr "设备轮询"
@@ -2105,9 +2129,6 @@ msgstr "旧式网域名称，例如：DOMAIN"
 msgid "Domain name, e.g. example.com."
 msgstr "网域名称，例如：domain.com"
 
-msgid "Don't Erase MBR"
-msgstr "不要删除 MBR"
-
 msgid "Don't erase the MBR (useful for some RAID controller cards)"
 msgstr "不删除 MBR (对某些RAID控制卡有用)"
 
@@ -2128,6 +2149,9 @@ msgstr "双奇偶校验容错性（RAID-Z2）"
 
 msgid "Download"
 msgstr "下载"
+
+msgid "Download Configuration"
+msgstr ""
 
 msgid "Download bandwidth"
 msgstr "下载带宽"
@@ -2191,6 +2215,9 @@ msgstr "错误："
 
 msgid "Edit"
 msgstr "编辑"
+
+msgid "Edit File"
+msgstr ""
 
 msgid "Edit Host"
 msgstr "编辑主机资讯"
@@ -2293,12 +2320,6 @@ msgid "Email"
 msgstr "电子邮件"
 
 msgid "Email Report"
-msgstr "电邮报告"
-
-msgid "Email notification"
-msgstr "邮件通知"
-
-msgid "Email report"
 msgstr "电邮报告"
 
 msgid "Empty as default."
@@ -2584,6 +2605,9 @@ msgstr "导出"
 msgid "Export all the directories in the specified path."
 msgstr "导出指定的路径中的所有目录。"
 
+msgid "Extended Attributes"
+msgstr ""
+
 msgid "Extended attributes"
 msgstr "扩展属性"
 
@@ -2663,8 +2687,8 @@ msgid ""
 "to the client asking for the transfer (insecure!)."
 msgstr "FXP是支持两个远端服务器互传文件的通讯协议。(有安全疑虑！)."
 
-msgid "Factory defaults"
-msgstr "恢复出厂设置"
+msgid "Factory Defaults"
+msgstr ""
 
 msgid "Failed"
 msgstr "失败"
@@ -2721,14 +2745,14 @@ msgstr "文件编辑器"
 msgid "File Manager"
 msgstr "文件管理程式"
 
+msgid "File Path"
+msgstr ""
+
 msgid "File Transfer Protocol"
 msgstr "文件传输协议（File Transfer Protocol）"
 
 msgid "File not found"
 msgstr "找不到文件"
-
-msgid "File path"
-msgstr "文件路径"
 
 #, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
@@ -2755,6 +2779,9 @@ msgstr "文件名称"
 msgid "Fileserver"
 msgstr "文件伺服器"
 
+msgid "Filesystem"
+msgstr ""
+
 msgid "Filter"
 msgstr "过滤"
 
@@ -2764,8 +2791,8 @@ msgstr "芬兰文"
 msgid "Firewall"
 msgstr "防火墙"
 
-msgid "Firewall rule"
-msgstr "防火墙规则"
+msgid "Firewall Rule Settings"
+msgstr ""
 
 msgid "Firmware"
 msgstr "固件"
@@ -2808,9 +2835,6 @@ msgstr "强制使用 vdevs ，即使它们在使用中或指定容量大小有�
 msgid "Format"
 msgstr "格式化"
 
-msgid "Format disk"
-msgstr "格式化硬盘"
-
 msgid "Format the report for phpBB forum."
 msgstr "将报告格式化成适合 phpBB 论坛的形式"
 
@@ -2821,9 +2845,6 @@ msgid "Frag"
 msgstr ""
 
 msgid "Free"
-msgstr "可用空间"
-
-msgid "Free disk space"
 msgstr "可用空间"
 
 msgid "French"
@@ -2945,14 +2966,14 @@ msgstr "HAST"
 msgid "HAST (Highly Available Storage)"
 msgstr "HAST（高可用性存储）"
 
+msgid "HAST Information & Status Configured Resources"
+msgstr ""
+
+msgid "HAST Resource"
+msgstr ""
+
 msgid "HAST disabled"
 msgstr "HAST关闭"
-
-msgid "HAST resource"
-msgstr "HAST资源"
-
-msgid "HAST status of the configured resources"
-msgstr "HAST的资源状态"
 
 msgid "HAST volume"
 msgstr "HAST卷"
@@ -2970,11 +2991,11 @@ msgid ""
 "the drive. This feature is implemented in most modern Seagate drives."
 msgstr ""
 
+msgid "HDD standby time"
+msgstr ""
+
 msgid "HTTP Proxy"
 msgstr "HTTP 代理伺服器"
-
-msgid "Hard disk standby time"
-msgstr "硬盘待命时间"
 
 msgid "Hardware"
 msgstr "硬体"
@@ -3072,11 +3093,11 @@ msgstr "多久强制更新一次 IP 资讯。以秒为单位（最多 10 天）"
 msgid "Hungarian"
 msgstr "匈牙利语(Hungarian)"
 
+msgid "I/O Statistics"
+msgstr ""
+
 msgid "I/O Timeout"
 msgstr "I/O 超时"
-
-msgid "I/O statistics"
-msgstr "I/O 统计资料"
 
 #, php-format
 msgid "I/O timeout in seconds (%d by default)."
@@ -3090,6 +3111,9 @@ msgstr "IG"
 
 msgid "IP"
 msgstr "IP 地址"
+
+msgid "IP Address"
+msgstr ""
 
 msgid "IP address"
 msgstr "IP 地址"
@@ -3221,6 +3245,12 @@ msgstr "固体映像档上传失败（记忆体不足？）"
 msgid "Import"
 msgstr "导入"
 
+msgid "Import Disks"
+msgstr ""
+
+msgid "Import Software Raid Disks"
+msgstr ""
+
 msgid "Import disks"
 msgstr "导入磁盘"
 
@@ -3232,9 +3262,6 @@ msgstr "导入防火墙规则。"
 
 msgid "Import on-disk ZFS config"
 msgstr "从硬碟上导入 ZFS 设定"
-
-msgid "Import software raid disks"
-msgstr "导入软件磁盘阵列"
 
 msgid "In"
 msgstr "入"
@@ -3461,8 +3488,8 @@ msgstr "意大利文"
 msgid "JBOD"
 msgstr "JBOD"
 
-msgid "JBOD information and status"
-msgstr "JBOD 信息和状态"
+msgid "JBOD Information & Status"
+msgstr ""
 
 msgid ""
 "January February March April May June July August September October November "
@@ -3508,8 +3535,8 @@ msgstr "只限局域网"
 msgid "LCDproc"
 msgstr "LCDproc"
 
-msgid "LCDproc (client)"
-msgstr "LCDproc (客户端)"
+msgid "LCDproc (Client)"
+msgstr ""
 
 msgid "LDAP"
 msgstr "LDAP"
@@ -3570,23 +3597,23 @@ msgstr "保留自动快照的配置"
 msgid "Leave this field empty to use default settings."
 msgstr "将此字段留空以使用默认的设置。"
 
-msgid "Level 1 - Minimum power usage with Standby (spindown)"
-msgstr "Level 1 - 最低用电量，待机（硬盘降速）"
+msgid "Level 1 - Minimum Power Usage with Standby (Spindown)"
+msgstr ""
 
-msgid "Level 127 - Intermediate power usage with Standby"
-msgstr "Level 127 - 中级用电量，待机"
+msgid "Level 127 - Intermediate Power Usage with Standby"
+msgstr ""
 
-msgid "Level 128 - Minimum power usage without Standby (no spindown)"
-msgstr "Level 128 - 最低用电量，不待机（不降速）"
+msgid "Level 128 - Minimum Power Usage without Standby (No Spindown)"
+msgstr ""
 
-msgid "Level 192 - Intermediate power usage without Standby"
-msgstr "Level 192 - 中级用电量，不待机"
+msgid "Level 192 - Intermediate Power Usage without Standby"
+msgstr ""
 
-msgid "Level 254 - Maximum performance, maximum power usage"
-msgstr "Level 254 - 最高性能，最高用电量"
+msgid "Level 254 - Maximum Performance, Maximum Power Usage"
+msgstr ""
 
-msgid "Level 64 - Intermediate power usage with Standby"
-msgstr "Level 64 - 中级用电量，待机"
+msgid "Level 64 - Intermediate Power Usage with Standby"
+msgstr ""
 
 #, php-format
 msgid "Levels (MHz/mW): %s"
@@ -3597,6 +3624,9 @@ msgstr "授权"
 
 msgid "License & Credits"
 msgstr "授权及鸣谢"
+
+msgid "Life Time"
+msgstr ""
 
 msgid "Life time"
 msgstr "终身"
@@ -3626,6 +3656,15 @@ msgstr "连接动作"
 msgid "List"
 msgstr "列表"
 
+msgid "List Detected Disks"
+msgstr ""
+
+msgid "List Imported Users"
+msgstr ""
+
+msgid "List Mount Points"
+msgstr ""
+
 msgid ""
 "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP "
 "(AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
@@ -3633,18 +3672,6 @@ msgid ""
 msgstr ""
 "可接受的成对（单播）为WPA密码的列表。一个或多个：CCMP（AES计数器模式CBC-"
 "MAC，RFC3610，IEEE802.11i/D7.0），TKIP（临时密钥完整性协议，IEEE802.11i/D7.0）。"
-
-msgid "List of available target name on all configured iSCSI targets"
-msgstr "所有已配置和可用的iSCSI 目标名称列表"
-
-msgid "List of detected disks"
-msgstr "检测到的磁盘列表"
-
-msgid "List of imported users"
-msgstr "已导入用户列表"
-
-msgid "List of mount points"
-msgstr "挂载点列表"
 
 msgid "Load"
 msgstr "载入"
@@ -3669,6 +3696,9 @@ msgstr "区域"
 
 msgid "Local Master Browser"
 msgstr "局域网主浏览器（Local Master Browser）。"
+
+msgid "Local Share (Destination)"
+msgstr ""
 
 msgid "Local User"
 msgstr "本机用户"
@@ -3742,12 +3772,12 @@ msgstr "逻辑单元控制器授权网络（默认为 %s）"
 msgid "Logical Unit Controller IP address (%s by default)"
 msgstr "逻辑单元控制器 IP 位址（默认为 %s）"
 
+msgid "Logical Unit Controller Login Information"
+msgstr ""
+
 #, php-format
 msgid "Logical Unit Controller TCP port (%d by default)"
 msgstr "逻辑单元控制器TCP 端口（默认为 %d）"
-
-msgid "Logical Unit Controller login information"
-msgstr "逻辑单元控制器（Logical Unit Controller）登入资讯"
 
 msgid "Logical Unit Type mapped to LUN."
 msgstr "映射到 LUN 的逻辑单元类型。"
@@ -3778,6 +3808,9 @@ msgstr "最低值是更优先。对于主节点，使用0或1。如果启用抢�
 msgid "MAC address"
 msgstr "MAC地址"
 
+msgid "MBR Erase"
+msgstr ""
+
 msgid "MBR partition"
 msgstr "MBR 分区"
 
@@ -3796,8 +3829,8 @@ msgstr "移动到"
 msgid "MS Active Directory"
 msgstr "MS Active Directory"
 
-msgid "MS Active Directory informations"
-msgstr "MS Active Directory 资讯"
+msgid "MS Active Directory Information & Status"
+msgstr ""
 
 msgid "MS Domain"
 msgstr "MS 网域"
@@ -3885,6 +3918,9 @@ msgstr "MaxOutstandingR2T"
 msgid "MaxRecvDataSegmentLength"
 msgstr "MaxRecvDataSegmentLength"
 
+msgid "Maximum Performance, Maximum Acoustic Output"
+msgstr ""
+
 msgid "Maximum connections"
 msgstr "连线数目上限"
 
@@ -3923,9 +3959,6 @@ msgstr "连接数目上限。"
 msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
 msgstr "同时最高连接数目。默认为0(不限制)。"
 
-msgid "Maximum performance, maximum acoustic output"
-msgstr "最高效能，最高噪音输出"
-
 msgid "Maximum relative humidity seen (percent)"
 msgstr "最高相对湿度（百分比）"
 
@@ -3941,11 +3974,14 @@ msgstr "媒体目录"
 msgid "Media library"
 msgstr "媒体库"
 
-msgid "Medium acoustic output"
-msgstr "中等效能/噪音"
+msgid "Medium Acoustic Output"
+msgstr ""
 
 msgid "Member Interface"
 msgstr "介面成员"
+
+msgid "Memory Usage"
+msgstr ""
 
 msgid "Memory usage"
 msgstr "记忆体使用率"
@@ -3979,6 +4015,9 @@ msgstr ""
 msgid "Minimum"
 msgstr "最小值"
 
+msgid "Minimum Performance, Minimum Acoustic Output"
+msgstr ""
+
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr "断电后UPS重启的最小电池电量"
 
@@ -3990,9 +4029,6 @@ msgstr "最小频率"
 
 msgid "Minimum incoming voltage seen"
 msgstr "可见的最小输入电压"
-
-msgid "Minimum performance, Minimum acoustic output"
-msgstr "最低的效能，最低噪音输出"
 
 msgid "Minimum relative humidity seen (percent)"
 msgstr "最低相对湿度（百分比）"
@@ -4018,11 +4054,11 @@ msgstr "模式"
 msgid "Model"
 msgstr "型号"
 
-msgid "Model extra"
-msgstr "附加型号"
+msgid "Model Extra"
+msgstr ""
 
-msgid "Model name"
-msgstr "型号名称"
+msgid "Model Name"
+msgstr ""
 
 msgid "Modified"
 msgstr "已修改"
@@ -4257,14 +4293,14 @@ msgstr "找不到池。"
 msgid "Node A IP address"
 msgstr "A 节点的 IP 位址"
 
-msgid "Node A settings"
-msgstr "A 节点的设置"
+msgid "Node A Settings"
+msgstr ""
 
 msgid "Node B IP address"
 msgstr "B 节点的 IP 位址"
 
-msgid "Node B settings"
-msgstr "B 节点的设置"
+msgid "Node B Settings"
+msgstr ""
 
 msgid "Node Base"
 msgstr "Base 节点"
@@ -4415,8 +4451,8 @@ msgid ""
 "recommends adding the same number of drives as the existing virtual device."
 msgstr "您一旦添加虚拟设备，就不可能再删除。建议您添加与现有的虚拟设备相同数量的驱动器​​。"
 
-msgid "Online version check"
-msgstr "在线版本检查"
+msgid "Online"
+msgstr ""
 
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
@@ -4634,6 +4670,9 @@ msgstr "允许root登录"
 msgid "Permit to do SSH Tunneling."
 msgstr "允许 SSH Tunneling"
 
+msgid "Physical Interface"
+msgstr ""
+
 msgid "Physical interface"
 msgstr "物理接口"
 
@@ -4677,8 +4716,8 @@ msgstr "轮询时间"
 msgid "Pool"
 msgstr "存储池"
 
-msgid "Pool information and status"
-msgstr "存储池的信息和状态"
+msgid "Pool Information & Status"
+msgstr ""
 
 msgid "Pools"
 msgstr "存储池（Pool）"
@@ -4740,6 +4779,9 @@ msgstr "电源监控守护进程"
 msgid "Power Mode"
 msgstr "电源模式"
 
+msgid "Power management"
+msgstr ""
+
 msgid "Power mode"
 msgstr "电源模式"
 
@@ -4753,8 +4795,8 @@ msgid "PreInit"
 msgstr "前置初始动作（PreInit）"
 
 #, php-format
-msgid "Predefined system groups"
-msgstr "预设的系统群组"
+msgid "Predefined Groups"
+msgstr ""
 
 msgid "Preferred"
 msgstr "首选"
@@ -4804,8 +4846,8 @@ msgstr "程序"
 msgid "Processes"
 msgstr "程序"
 
-msgid "Processes information"
-msgstr "程序资讯"
+msgid "Processes Information"
+msgstr ""
 
 msgid "Product ID"
 msgstr "产品编号"
@@ -4826,9 +4868,9 @@ msgid "Proxy"
 msgstr "代理伺服器（Proxy）"
 
 msgid ""
-"Puts the hard disk into standby mode when the selected amount of time after "
-"the last hard disk access has been elapsed."
-msgstr "设定当硬碟待命了指定的时间后设为待命模式。"
+"Puts the disk into standby mode when the selected amount of time after the "
+"last disk access has been elapsed."
+msgstr ""
 
 msgid "Queue Depth"
 msgstr "伫列深度"
@@ -4842,26 +4884,26 @@ msgstr "配额"
 msgid "RAID 0"
 msgstr "RAID 0"
 
-msgid "RAID 0 information and status"
-msgstr "RAID 0 信息和状态"
+msgid "RAID 0 Information & Status"
+msgstr ""
 
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
-msgid "RAID 0/1/5 information and status"
-msgstr "RAID 0/1/5 信息和状态"
+msgid "RAID 0/1/5 Information & Status"
+msgstr ""
 
 msgid "RAID 1"
 msgstr "RAID 1"
 
-msgid "RAID 1 information and status"
-msgstr "RAID 1 信息和状态"
+msgid "RAID 1 Information & Status"
+msgstr ""
 
 msgid "RAID 5"
 msgstr "RAID 5"
 
-msgid "RAID 5 information and status"
-msgstr "RAID 5 信息和状态"
+msgid "RAID 5 Information & Status"
+msgstr ""
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -4893,8 +4935,8 @@ msgstr "RSYNC - 伺服端"
 msgid "RSYNC Client"
 msgstr "RSYNC 客户端"
 
-msgid "RSYNC Client informations"
-msgstr "RSYNC 客户端资讯"
+msgid "RSYNC Client Information & Status"
+msgstr ""
 
 msgid "RSYNC events"
 msgstr "RSYNC 事件"
@@ -4986,11 +5028,14 @@ msgstr "刷新页面"
 msgid "Remaining battery runtime"
 msgstr "电池剩余时间"
 
+msgid "Remote Address"
+msgstr ""
+
+msgid "Remote Module (Source)"
+msgstr ""
+
 msgid "Remote Rsync Server"
 msgstr "远端 Rsync 伺服器"
-
-msgid "Remote address"
-msgstr "远端位置"
 
 msgid "Remote module (source)"
 msgstr "远端模组（来源）"
@@ -5038,11 +5083,11 @@ msgstr "需要认证。"
 msgid "Required"
 msgstr "必填"
 
-msgid "Rescan database in progress"
+msgid "Rescan Disks"
 msgstr ""
 
-msgid "Rescan disks"
-msgstr "重新扫描硬盘"
+msgid "Rescan database in progress"
+msgstr ""
 
 msgid "Rescan interval"
 msgstr "重新扫描间隔"
@@ -5067,6 +5112,9 @@ msgstr "资源名称"
 
 msgid "Resources"
 msgstr "资源"
+
+msgid "Restore Configuration"
+msgstr ""
 
 msgid "Restore configuration"
 msgstr "还原设置"
@@ -5110,8 +5158,8 @@ msgstr "Root bind DN"
 msgid "Root bind password"
 msgstr "Root bind 密码"
 
-msgid "Rotation rate"
-msgstr "旋转速度"
+msgid "Rotation Rate"
+msgstr ""
 
 msgid "Round-robin read"
 msgstr "轮替式读"
@@ -5131,8 +5179,8 @@ msgstr "行"
 msgid "Rsync"
 msgstr "Rsync"
 
-msgid "Rsync job"
-msgstr "Rsync 工作"
+msgid "Rsync Job"
+msgstr ""
 
 msgid "Rule"
 msgstr "规则"
@@ -5222,6 +5270,12 @@ msgstr "当大小要求大于这个数值时，Samba将异步写入文件。 （
 msgid "Save"
 msgstr "储存"
 
+msgid "Save & Restart"
+msgstr ""
+
+msgid "Save File"
+msgstr ""
+
 msgid "Save and Restart"
 msgstr "保存并重启服务"
 
@@ -5248,23 +5302,26 @@ msgstr ""
 msgid "Scan type"
 msgstr "扫描类型"
 
+msgid "Schedule Time"
+msgstr ""
+
 msgid "Schedule time"
 msgstr "排程时间"
 
 msgid "Scheduled"
 msgstr "排程"
 
+msgid "Scheduled Reboot"
+msgstr ""
+
 msgid "Scheduled Self-Test"
 msgstr "自我检测排程"
 
-msgid "Scheduled reboot"
-msgstr "重新启动排程"
+msgid "Scheduled Shutdown"
+msgstr ""
 
-msgid "Scheduled self-tests"
-msgstr "自我检测排程"
-
-msgid "Scheduled shutdown"
-msgstr "关机排程"
+msgid "Scheduled tests"
+msgstr ""
 
 msgid "Secondary"
 msgstr "次要"
@@ -5279,6 +5336,9 @@ msgid "Security"
 msgstr "安全选项"
 
 msgid "See attribute E8."
+msgstr ""
+
+msgid "Select"
 msgstr ""
 
 msgid ""
@@ -5327,14 +5387,20 @@ msgstr "选定的设备或标签不存在。"
 msgid "Selected file isn't an valid ISO file."
 msgstr "所选择的文件不是一个有效的 ISO 文件。"
 
-msgid "Self-Monitoring, Analysis and Reporting Technology"
-msgstr "自我监测、分析与回报技术（Self-Monitoring, Analysis and Reporting Technology）"
+msgid "Self-Monitoring, Analysis & Reporting Technology"
+msgstr ""
+
+msgid "Self-tests Management"
+msgstr ""
 
 msgid "Send Buffer Size"
 msgstr "发送缓冲区的大小"
 
 msgid "Send Command!"
 msgstr "发送命令！"
+
+msgid "Send Now"
+msgstr ""
 
 msgid "Send a TEST warning email on startup."
 msgstr "启动时传送测试警示电邮。"
@@ -5350,6 +5416,9 @@ msgstr "以 \";\" 分号隔开电邮位址。"
 
 msgid "Serial Console"
 msgstr "串行控制台（Serial Console）"
+
+msgid "Serial Number"
+msgstr ""
 
 msgid "Serial number"
 msgstr "序号"
@@ -5461,17 +5530,17 @@ msgstr "命令壳 (shell)"
 msgid "Shock During Write."
 msgstr ""
 
+msgid "Show Process Information"
+msgstr ""
+
 msgid "Show RAW UPS Info"
 msgstr "显示RAW UPS的信息"
 
+msgid "Show UPS Information"
+msgstr ""
+
 msgid "Show log entries in reverse order (newest entries on top)"
 msgstr "以相反的次序显示记录（先显示最新记录）"
-
-msgid "Show process information"
-msgstr "显示程序资讯"
-
-msgid "Show ups information"
-msgstr "显示 UPS 信息"
 
 msgid "Shutdown"
 msgstr "关机"
@@ -5549,6 +5618,9 @@ msgstr "使用软RAID"
 msgid "Source"
 msgstr "来源位置"
 
+msgid "Source Share"
+msgstr ""
+
 msgid "Source directory to be synchronized."
 msgstr "要备份的资料夹。"
 
@@ -5557,6 +5629,9 @@ msgstr "来源端口"
 
 msgid "Source share"
 msgstr "来源位置"
+
+msgid "Space Usage"
+msgstr ""
 
 msgid "Space Used"
 msgstr "使用空间"
@@ -5587,6 +5662,9 @@ msgstr "指定的路径是NFSv4的根目录。"
 
 msgid "Specifies how many servers to create."
 msgstr "输入预建立服务器的数量。"
+
+msgid "Specifies how the volume should be exposed to the OS."
+msgstr ""
 
 msgid "Specifies that the file system should be exported read-only."
 msgstr "指定文件系统导出为唯读。"
@@ -5631,15 +5709,15 @@ msgstr "Split request"
 msgid "Standard"
 msgstr "标准"
 
+msgid "Standby"
+msgstr ""
+
 msgid ""
 "Standby - Check the device unless it is in SLEEP or STANDBY mode. In these "
 "modes most disks are not spinning, so if you want to prevent a laptop disk "
 "from spinning up each poll, this is probably what you want."
 msgstr ""
 "待机 - 检查装置，除非它是在睡眠或待机模式。在这些模式中，大多数磁盘都没有转动，所以，如果您要防止一台笔记本电脑磁盘每次轮询都转动的话，您该选择此选项。"
-
-msgid "Standby time"
-msgstr "待命时间"
 
 msgid "Start"
 msgstr "启动"
@@ -5730,14 +5808,14 @@ msgstr "只显示错误讯息。"
 msgid "Swap"
 msgstr "交换分区（Swap）"
 
+msgid "Swap Information & Status"
+msgstr ""
+
+msgid "Swap Memory"
+msgstr ""
+
 msgid "Swap disabled"
 msgstr "关闭 Swap"
-
-msgid "Swap memory"
-msgstr "Swap记忆体"
-
-msgid "Swap status"
-msgstr "Swap 状态"
 
 msgid "Swap usage"
 msgstr "Swap 使用量"
@@ -5788,23 +5866,20 @@ msgstr "系统"
 msgid "System Beep"
 msgstr "声音提示"
 
+msgid "System Information"
+msgstr ""
+
+msgid "System Load"
+msgstr ""
+
 msgid "System bios"
 msgstr "系統BIOS"
 
 msgid "System events"
 msgstr "系统事件"
 
-msgid "System firewall"
-msgstr "系统防火墙"
-
 msgid "System info"
 msgstr "系统信息"
-
-msgid "System information"
-msgstr "系统资讯"
-
-msgid "System load"
-msgstr "系统负载"
 
 msgid "System log"
 msgstr "系统记录"
@@ -5907,11 +5982,11 @@ msgstr "目标器（Targets）"
 msgid "Temperature"
 msgstr "温度"
 
+msgid "Temperature Monitoring"
+msgstr ""
+
 msgid "Temperature alarm (enabled/disabled)"
 msgstr "温度警报（启用/禁用）"
-
-msgid "Temperature monitoring"
-msgstr "温度监测"
 
 msgid "Temperature threshold high (degrees C)"
 msgstr "温度高阈值（摄氏度）"
@@ -6744,9 +6819,9 @@ msgid ""
 msgstr "无法侦测到无线局域网因为另一个界面正在使用中。"
 
 msgid ""
-"This allows you to lower the power consumption of the drive, at the expense "
+"This allows you to lower the power consumption of the disk, at the expense "
 "of performance."
-msgstr "这使您能够以性能为代价，降低驱动器的耗电量。"
+msgstr ""
 
 msgid "This allows you to set how loud the drive is while it's operating."
 msgstr "这是硬盘的运作噪音控制选项。"
@@ -6756,8 +6831,8 @@ msgid ""
 "containing data."
 msgstr "此选项让您可以设置已经格式化，包含数据的硬盘的档案系统。"
 
-msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
-msgstr "这是硬盘的 ATA 传输模式选项。"
+msgid "This allows you to set the transfer mode for ATA/IDE disks."
+msgstr ""
 
 msgid ""
 "This attribute indicates the count of full hard disk power on/off cycles."
@@ -7214,11 +7289,11 @@ msgstr ""
 msgid "Transcoding"
 msgstr "转码"
 
+msgid "Transfer Rate"
+msgstr ""
+
 msgid "Transfer mode"
 msgstr "传输模式"
-
-msgid "Transfer rate"
-msgstr "传输速率"
 
 msgid "Trap host"
 msgstr "Trap 主机"
@@ -7276,6 +7351,13 @@ msgstr "UFS"
 
 #, php-format
 msgid ""
+"UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
+"filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
+"unpredictable results, file corruption and the loss of data!"
+msgstr ""
+
+#, php-format
+msgid ""
 "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
 "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
 "NTFS can result in unpredictable results, file corruption, and loss of data!"
@@ -7298,6 +7380,9 @@ msgstr "UID"
 
 msgid "UPS"
 msgstr "UPS"
+
+msgid "UPS Information & Status"
+msgstr ""
 
 msgid "UPS Off Line"
 msgstr "UPS 离线"
@@ -7506,12 +7591,12 @@ msgstr "已用空间"
 msgid "User"
 msgstr "用户"
 
+#, php-format
+msgid "User Defined Groups"
+msgstr ""
+
 msgid "User ID"
 msgstr "用户 ID"
-
-#, php-format
-msgid "User defined groups"
-msgstr "用户的定义群组"
 
 msgid "User full name."
 msgstr "用户全名"
@@ -7549,8 +7634,8 @@ msgstr "请在此设置管理员的帐号。"
 msgid "Users"
 msgstr "用户"
 
-msgid "Users and Groups"
-msgstr "用户/组"
+msgid "Users & Groups"
+msgstr ""
 
 #, c-format
 msgid "Using %s bytes fragment size."
@@ -7561,6 +7646,9 @@ msgstr "VHID"
 
 msgid "VLAN"
 msgstr "虚拟局域网（VLAN）"
+
+msgid "VLAN Tag"
+msgstr ""
 
 msgid "VLAN tag"
 msgstr "VLAN 标签"
@@ -7591,23 +7679,29 @@ msgstr ""
 msgid "Video"
 msgstr ""
 
+msgid "Virtual Device"
+msgstr ""
+
+msgid "Virtual Devices"
+msgstr ""
+
 msgid "Virtual Host ID"
 msgstr "虚拟主机 ID"
+
+msgid "Virtual IP Address"
+msgstr ""
 
 msgid "Virtual IP address"
 msgstr "虚拟 IP 地址"
 
+msgid "Virtual Interface"
+msgstr ""
+
 msgid "Virtual Machine"
 msgstr ""
 
-msgid "Virtual device"
-msgstr "虚拟设备（Virtual device）"
-
 msgid "Virtual devices"
 msgstr "虚拟设备"
-
-msgid "Virtual interface"
-msgstr "虚拟介面"
 
 msgid "VirtualBox"
 msgstr ""
@@ -7626,6 +7720,9 @@ msgstr "磁盘卷标签（Volume label）"
 
 msgid "Volume label of the new file system."
 msgstr "新文件系统的硬盘标签"
+
+msgid "Volume mode"
+msgstr ""
 
 msgid "Volumes"
 msgstr "卷（Volumes）"
@@ -7856,26 +7953,31 @@ msgstr "ZFS"
 msgid "ZFS ACL"
 msgstr "ZFS存取控制清单（ACL）"
 
-msgid "ZFS dataset information and status"
-msgstr "ZFS数据集的资讯和状态"
+msgid "ZFS Dataset Information & Status"
+msgstr ""
 
-msgid "ZFS dataset properties"
-msgstr "ZFS数据集属性"
+msgid "ZFS Dataset Properties"
+msgstr ""
 
-msgid "ZFS snapshot information and status"
-msgstr "ZFS快照的资讯和状态"
+msgid "ZFS Snapshot Information & Status"
+msgstr ""
 
-msgid "ZFS snapshot properties"
-msgstr "ZFS快照属性"
+msgid "ZFS Snapshot Properties"
+msgstr ""
+
+msgid "ZFS Volume Information & Status"
+msgstr ""
+
+msgid "ZFS Volume Properties"
+msgstr ""
 
 msgid "ZFS volume"
 msgstr "ZFS 卷（volume）"
 
-msgid "ZFS volume information and status"
-msgstr "ZFS 卷的资讯和状​​态"
-
-msgid "ZFS volume properties"
-msgstr "ZFS 卷属性"
+msgid ""
+"ZFS volume block size. This value can not be changed after creation. Empty "
+"as default."
+msgstr ""
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
@@ -7952,6 +8054,9 @@ msgstr "iSCSI 目标器（iSCSI Target）"
 msgid "iSCSI Target Logical Unit Controller"
 msgstr "iSCSI 目标逻辑单元控制器（iSCSI Target Logical Unit Controller）"
 
+msgid "iSCSI Targets Information & Status"
+msgstr ""
+
 #, php-format
 msgid "iSCSI initial parameter (%d by default)."
 msgstr "iSCSI 的初始参数（默认值为 %d）"
@@ -7981,9 +8086,6 @@ msgid "minimum (power saving)"
 msgstr "最低（省电）"
 
 msgid "minute(s)"
-msgstr "分"
-
-msgid "minutes"
 msgstr "分"
 
 msgid "mirroring"
@@ -8057,3 +8159,259 @@ msgstr "版本："
 
 msgid "warning"
 msgstr ""
+
+#~ msgid "Advanced Power Management"
+#~ msgstr "高级电源管理"
+
+#~ msgid "Always on"
+#~ msgstr "永远开启"
+
+#~ msgid "Backup configuration"
+#~ msgstr "备份设置"
+
+#~ msgid "Connected FTP users"
+#~ msgstr "已连接 FTP 用户"
+
+#~ msgid "DNS settings"
+#~ msgstr "DNS 设置"
+
+#~ msgid "File path"
+#~ msgstr "文件路径"
+
+#~ msgid "Firewall rule"
+#~ msgstr "防火墙规则"
+
+#~ msgid "Format disk"
+#~ msgstr "格式化硬盘"
+
+#~ msgid "Free disk space"
+#~ msgstr "可用空间"
+
+#~ msgid "List of mount points"
+#~ msgstr "挂载点列表"
+
+#~ msgid "Model name"
+#~ msgstr "型号名称"
+
+#~ msgid "Remote address"
+#~ msgstr "远端位置"
+
+#~ msgid "Swap status"
+#~ msgstr "Swap 状态"
+
+#~ msgid "Temperature monitoring"
+#~ msgstr "温度监测"
+
+#~ msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
+#~ msgstr "这是硬盘的 ATA 传输模式选项。"
+
+#~ msgid "minutes"
+#~ msgstr "分"
+
+#, php-format
+#~ msgid "%s interface"
+#~ msgstr "%s 介面"
+
+#~ msgid "Ban list"
+#~ msgstr "封禁名單"
+
+#~ msgid "Clear config and Import software raid disks"
+#~ msgstr "清除和导入软体RAID的磁盘设置"
+
+#~ msgid "Device model"
+#~ msgstr "设备型号"
+
+#~ msgid "Don't Erase MBR"
+#~ msgstr "不要删除 MBR"
+
+#~ msgid "Email report"
+#~ msgstr "电邮报告"
+
+#~ msgid "Email notification"
+#~ msgstr "邮件通知"
+
+#~ msgid "Hard disk standby time"
+#~ msgstr "硬盘待命时间"
+
+#~ msgid "HAST status of the configured resources"
+#~ msgstr "HAST的资源状态"
+
+#~ msgid "HAST resource"
+#~ msgstr "HAST资源"
+
+#~ msgid "Import software raid disks"
+#~ msgstr "导入软件磁盘阵列"
+
+#~ msgid "LCDproc (client)"
+#~ msgstr "LCDproc (客户端)"
+
+#~ msgid "Level 1 - Minimum power usage with Standby (spindown)"
+#~ msgstr "Level 1 - 最低用电量，待机（硬盘降速）"
+
+#~ msgid "Level 127 - Intermediate power usage with Standby"
+#~ msgstr "Level 127 - 中级用电量，待机"
+
+#~ msgid "Level 128 - Minimum power usage without Standby (no spindown)"
+#~ msgstr "Level 128 - 最低用电量，不待机（不降速）"
+
+#~ msgid "Level 192 - Intermediate power usage without Standby"
+#~ msgstr "Level 192 - 中级用电量，不待机"
+
+#~ msgid "Level 254 - Maximum performance, maximum power usage"
+#~ msgstr "Level 254 - 最高性能，最高用电量"
+
+#~ msgid "Level 64 - Intermediate power usage with Standby"
+#~ msgstr "Level 64 - 中级用电量，待机"
+
+#~ msgid "List of detected disks"
+#~ msgstr "检测到的磁盘列表"
+
+#~ msgid "List of imported users"
+#~ msgstr "已导入用户列表"
+
+#~ msgid "List of available target name on all configured iSCSI targets"
+#~ msgstr "所有已配置和可用的iSCSI 目标名称列表"
+
+#~ msgid "Logical Unit Controller login information"
+#~ msgstr "逻辑单元控制器（Logical Unit Controller）登入资讯"
+
+#~ msgid "MS Active Directory informations"
+#~ msgstr "MS Active Directory 资讯"
+
+#~ msgid "Medium acoustic output"
+#~ msgstr "中等效能/噪音"
+
+#~ msgid "Maximum performance, maximum acoustic output"
+#~ msgstr "最高效能，最高噪音输出"
+
+#~ msgid "Minimum performance, Minimum acoustic output"
+#~ msgstr "最低的效能，最低噪音输出"
+
+#~ msgid "Node B settings"
+#~ msgstr "B 节点的设置"
+
+#~ msgid "Node A settings"
+#~ msgstr "A 节点的设置"
+
+#~ msgid "Online version check"
+#~ msgstr "在线版本检查"
+
+#~ msgid "Pool information and status"
+#~ msgstr "存储池的信息和状态"
+
+#, php-format
+#~ msgid "Predefined system groups"
+#~ msgstr "预设的系统群组"
+
+#~ msgid "Processes information"
+#~ msgstr "程序资讯"
+
+#~ msgid ""
+#~ "Puts the hard disk into standby mode when the selected amount of time after "
+#~ "the last hard disk access has been elapsed."
+#~ msgstr "设定当硬碟待命了指定的时间后设为待命模式。"
+
+#~ msgid "RSYNC Client informations"
+#~ msgstr "RSYNC 客户端资讯"
+
+#~ msgid "Rescan disks"
+#~ msgstr "重新扫描硬盘"
+
+#~ msgid "Rsync job"
+#~ msgstr "Rsync 工作"
+
+#~ msgid "Scheduled reboot"
+#~ msgstr "重新启动排程"
+
+#~ msgid "Scheduled shutdown"
+#~ msgstr "关机排程"
+
+#~ msgid "Scheduled self-tests"
+#~ msgstr "自我检测排程"
+
+#~ msgid "Self-Monitoring, Analysis and Reporting Technology"
+#~ msgstr "自我监测、分析与回报技术（Self-Monitoring, Analysis and Reporting Technology）"
+
+#~ msgid "Show process information"
+#~ msgstr "显示程序资讯"
+
+#~ msgid "Standby time"
+#~ msgstr "待命时间"
+
+#~ msgid "Swap memory"
+#~ msgstr "Swap记忆体"
+
+#~ msgid "System information"
+#~ msgstr "系统资讯"
+
+#~ msgid ""
+#~ "This allows you to lower the power consumption of the drive, at the expense "
+#~ "of performance."
+#~ msgstr "这使您能够以性能为代价，降低驱动器的耗电量。"
+
+#, php-format
+#~ msgid "User defined groups"
+#~ msgstr "用户的定义群组"
+
+#~ msgid "Virtual interface"
+#~ msgstr "虚拟介面"
+
+#~ msgid "ZFS dataset information and status"
+#~ msgstr "ZFS数据集的资讯和状态"
+
+#~ msgid "ZFS dataset properties"
+#~ msgstr "ZFS数据集属性"
+
+#~ msgid "ZFS snapshot information and status"
+#~ msgstr "ZFS快照的资讯和状态"
+
+#~ msgid "ZFS snapshot properties"
+#~ msgstr "ZFS快照属性"
+
+#~ msgid "ZFS volume information and status"
+#~ msgstr "ZFS 卷的资讯和状​​态"
+
+#~ msgid "ZFS volume properties"
+#~ msgstr "ZFS 卷属性"
+
+#~ msgid "System firewall"
+#~ msgstr "系统防火墙"
+
+#~ msgid "Virtual device"
+#~ msgstr "虚拟设备（Virtual device）"
+
+#~ msgid "I/O statistics"
+#~ msgstr "I/O 统计资料"
+
+#~ msgid "Show ups information"
+#~ msgstr "显示 UPS 信息"
+
+#~ msgid "System load"
+#~ msgstr "系统负载"
+
+#~ msgid "Model extra"
+#~ msgstr "附加型号"
+
+#~ msgid "Controller model"
+#~ msgstr "控制器型号"
+
+#~ msgid "Rotation rate"
+#~ msgstr "旋转速度"
+
+#~ msgid "Transfer rate"
+#~ msgstr "传输速率"
+
+#~ msgid "RAID 5 information and status"
+#~ msgstr "RAID 5 信息和状态"
+
+#~ msgid "RAID 1 information and status"
+#~ msgstr "RAID 1 信息和状态"
+
+#~ msgid "RAID 0/1/5 information and status"
+#~ msgstr "RAID 0/1/5 信息和状态"
+
+#~ msgid "RAID 0 information and status"
+#~ msgstr "RAID 0 信息和状态"
+
+#~ msgid "JBOD information and status"
+#~ msgstr "JBOD 信息和状态"

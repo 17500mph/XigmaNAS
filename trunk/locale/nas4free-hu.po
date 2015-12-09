@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-11-17 01:18+0000\n"
-"PO-Revision-Date: 2015-11-16 19:16+0000\n"
+"POT-Creation-Date: 2015-12-09 16:19+0000\n"
+"PO-Revision-Date: 2015-12-09 15:26+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-23 22:45+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2015-12-09 15:41+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -55,7 +55,7 @@ msgid "%dB / block"
 msgstr "%dB / blokk"
 
 #, php-format
-msgid "%s interface"
+msgid "%s Interface"
 msgstr "%s interfész"
 
 #, php-format
@@ -341,6 +341,12 @@ msgstr "Érvényes előtagot (1-128) kell megadni."
 msgid "A valid systctl MIB value."
 msgstr "Érvényes systctl MIB érték."
 
+msgid "ACL Inherit"
+msgstr "ACL öröklődés"
+
+msgid "ACL Mode"
+msgstr "ACL mód"
+
 msgid "ACL inherit"
 msgstr "ACL öröklődés"
 
@@ -385,6 +391,9 @@ msgstr "ATTRIBÚTUM MEGNEVEZÉSE"
 
 msgid "Access"
 msgstr "Hozzáférés"
+
+msgid "Access Mode"
+msgstr "Hozzáférési mód"
 
 msgid "Access Restrictions"
 msgstr "Hozzáférési korlátozások"
@@ -561,8 +570,8 @@ msgstr "Fejlett formázás"
 msgid "Advanced Options"
 msgstr "Haladó beállítások"
 
-msgid "Advanced Power Management"
-msgstr "Fejlett energiakezelés (APM)"
+msgid "Advanced Settings"
+msgstr "Haladó beállítások"
 
 msgid "Advanced settings"
 msgstr "Speciális beállítások"
@@ -727,7 +736,7 @@ msgstr "Alternatív TCP port. Az alapértelmezett 873."
 msgid "Alternative configuration directory (usually empty)."
 msgstr "Alternatív konfigurációs mappa (általában üresen hagyandó)."
 
-msgid "Always on"
+msgid "Always On"
 msgstr "Mindig bekapcsolva"
 
 msgid "Always scan"
@@ -891,7 +900,7 @@ msgstr ""
 "Működési fordulatszám eléréséhez szükséges átlagos idő (álló helyzetből "
 "működési fordulatig)."
 
-msgid "Backup configuration"
+msgid "Backup Configuration"
 msgstr "Beállítások biztonsági mentése"
 
 msgid "Backup file"
@@ -906,8 +915,8 @@ msgstr "Hibás felhasználó - nem létező felhasználó"
 msgid "Balance algorithm"
 msgstr "Kiegyensúlyozó algoritmus"
 
-msgid "Ban list"
-msgstr "Tiltó lista"
+msgid "Ban List"
+msgstr "Kitiltási lista"
 
 msgid "Ban list rule"
 msgstr "Tiltó lista szabály"
@@ -983,6 +992,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "Üres idő"
+
+msgid "Block size"
+msgstr "Blokkméret"
 
 msgid "Blocksize"
 msgstr "Blokkméret"
@@ -1091,6 +1103,9 @@ msgstr "CP949 (koreai)"
 
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Traditional Chinese Big5)"
+
+msgid "CPU Load"
+msgstr "Processzorterhelés"
 
 msgid "CPU frequency"
 msgstr "CPU (processzor) frekvencia"
@@ -1212,11 +1227,14 @@ msgstr "Válaszd ki, melyik interfészhez tartozik ez az útvonal."
 msgid "Clear"
 msgstr "Törlés"
 
-msgid "Clear config and Import disks"
+msgid "Clear Config & Import Disks"
 msgstr "Beállítások törlése és lemezek importálása"
 
-msgid "Clear config and Import software raid disks"
-msgstr "Beállítások törlése és szoftveres raid lemezek importálása"
+msgid "Clear Config & Import Software Raid Disks"
+msgstr "Beállítások törlése és szoftveres RAID-es lemezek importálása"
+
+msgid "Clear config and Import disks"
+msgstr "Beállítások törlése és lemezek importálása"
 
 msgid ""
 "Click &quot;Enable firmware upload&quot; below, then choose the embedded "
@@ -1318,8 +1336,8 @@ msgstr "Beállítás"
 msgid "Confirmation"
 msgstr "Megerősítés"
 
-msgid "Connected FTP users"
-msgstr "Kapcsolódott FTP felhasználók"
+msgid "Connected FTP Users & Status"
+msgstr "Csatlakozott FTP-felhasználók és állapotuk"
 
 msgid "Consider replacing this drive"
 msgstr "Fontold meg a meghajtó cseréjét"
@@ -1358,14 +1376,17 @@ msgstr "Kontroller Auth eljárás"
 msgid "Controller Authorised network"
 msgstr "Kontroller engedélyezett hálózat"
 
+msgid "Controller IP Address"
+msgstr "Kontroller IP-cím"
+
 msgid "Controller IP address"
 msgstr "Kontroller IP cím"
 
+msgid "Controller Model"
+msgstr "Kontroller modell"
+
 msgid "Controller TCP Port"
 msgstr "Kontroller IP port"
-
-msgid "Controller model"
-msgstr "Vezérlőmodell"
 
 msgid "Controls power consumption."
 msgstr "Ez szabályozza az energiafogyasztást."
@@ -1687,6 +1708,9 @@ msgstr "DLNA/UPnP Fuppes"
 msgid "DLNA/UPnP MiniDLNA"
 msgstr "DLNA/UPnP MiniDLNA"
 
+msgid "DNS"
+msgstr "DNS"
+
 msgid "DNS domain"
 msgstr "DNS domain"
 
@@ -1695,9 +1719,6 @@ msgstr "DNS továbbító"
 
 msgid "DNS server is empty."
 msgstr "DNS szerver üres."
-
-msgid "DNS settings"
-msgstr "DNS beállítások"
 
 #, php-format
 msgid ""
@@ -1942,6 +1963,9 @@ msgstr "Leírás"
 msgid "Destination"
 msgstr "Célállomás"
 
+msgid "Destination Share"
+msgstr ""
+
 msgid "Destination email address."
 msgstr "Cél e-mailcím."
 
@@ -1996,14 +2020,14 @@ msgstr "Eszköz /dev/%s - %s"
 msgid "Device IP"
 msgstr "Eszköz IP"
 
+msgid "Device Model"
+msgstr "Eszköz modell"
+
 msgid "Device Pass-through"
 msgstr "Átmenő Eszköz"
 
 msgid "Device Serial"
 msgstr "Soros eszköz"
-
-msgid "Device model"
-msgstr "Eszköz típusa"
 
 msgid "Device polling"
 msgstr "Device polling (eszköz szavaztatás)"
@@ -2293,9 +2317,6 @@ msgstr "Régi formátumú tartománynév, pl.: MINTA."
 msgid "Domain name, e.g. example.com."
 msgstr "Tartománynév, pl.: minta.hu"
 
-msgid "Don't Erase MBR"
-msgstr "Ne töröld az MBR-t"
-
 msgid "Don't erase the MBR (useful for some RAID controller cards)"
 msgstr "Ne töröld az MBR-t (néhány RAID vezérlő kártyánál lehet hasznos)"
 
@@ -2316,6 +2337,9 @@ msgstr "Dupla-paritásos RAID-Z"
 
 msgid "Download"
 msgstr "Letöltés"
+
+msgid "Download Configuration"
+msgstr "Konfiguráció letöltése"
 
 msgid "Download bandwidth"
 msgstr "Letöltési sávszélesség"
@@ -2379,6 +2403,9 @@ msgstr "HIBA:"
 
 msgid "Edit"
 msgstr "Szerkesztés"
+
+msgid "Edit File"
+msgstr "Fájl szerkesztése"
 
 msgid "Edit Host"
 msgstr "Állomásnév módosítása"
@@ -2481,12 +2508,6 @@ msgid "Email"
 msgstr "E-mail"
 
 msgid "Email Report"
-msgstr "E-mail jelentés"
-
-msgid "Email notification"
-msgstr "Figyelmeztető e-mail"
-
-msgid "Email report"
 msgstr "E-mail jelentés"
 
 msgid "Empty as default."
@@ -2793,6 +2814,9 @@ msgstr "Exportálás"
 msgid "Export all the directories in the specified path."
 msgstr "A kiválasztott útvonalon lévő összes könyvtár exportálása."
 
+msgid "Extended Attributes"
+msgstr ""
+
 msgid "Extended attributes"
 msgstr "Kiterjesztett attribútumok"
 
@@ -2880,8 +2904,8 @@ msgstr ""
 "Az FXP lehetővé teszi a két távoli szerver közti adatcserét anélkül, hogy a "
 "klienstől kérnék az átvitelt."
 
-msgid "Factory defaults"
-msgstr "Gyári értékek"
+msgid "Factory Defaults"
+msgstr "Gyári beállítások"
 
 msgid "Failed"
 msgstr "Hibás"
@@ -2942,14 +2966,14 @@ msgstr "Fájlszerkesztő"
 msgid "File Manager"
 msgstr "Fájlkezelő"
 
+msgid "File Path"
+msgstr "Elérési út"
+
 msgid "File Transfer Protocol"
 msgstr "File Transfer Protocol"
 
 msgid "File not found"
 msgstr "A fájl nem található"
-
-msgid "File path"
-msgstr "Fájl elérési útvonala"
 
 #, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
@@ -2976,6 +3000,9 @@ msgstr "Fájlnév"
 msgid "Fileserver"
 msgstr "Fájlszerver"
 
+msgid "Filesystem"
+msgstr "Fájlrendszer"
+
 msgid "Filter"
 msgstr "Szűrő"
 
@@ -2985,8 +3012,8 @@ msgstr "Finn"
 msgid "Firewall"
 msgstr "Tűzfal"
 
-msgid "Firewall rule"
-msgstr "Tűzfalszabály"
+msgid "Firewall Rule Settings"
+msgstr "Tűzfalszabály beállításai"
 
 msgid "Firmware"
 msgstr "Firmware"
@@ -3031,9 +3058,6 @@ msgstr ""
 msgid "Format"
 msgstr "Formázás"
 
-msgid "Format disk"
-msgstr "Lemez formázása"
-
 msgid "Format the report for phpBB forum."
 msgstr "Jelentés formázása phpBB fórumhoz."
 
@@ -3045,9 +3069,6 @@ msgstr "Töredezettség"
 
 msgid "Free"
 msgstr "Szabad"
-
-msgid "Free disk space"
-msgstr "Szabad lemezterület"
 
 msgid "French"
 msgstr "Francia"
@@ -3169,14 +3190,14 @@ msgstr "HAST"
 msgid "HAST (Highly Available Storage)"
 msgstr "HAST (Highly Available Storage)"
 
-msgid "HAST disabled"
-msgstr "HAST tiltva"
+msgid "HAST Information & Status Configured Resources"
+msgstr ""
 
-msgid "HAST resource"
+msgid "HAST Resource"
 msgstr "HAST erőforrás"
 
-msgid "HAST status of the configured resources"
-msgstr "A konfigurált erőforrások HAST állapota"
+msgid "HAST disabled"
+msgstr "HAST tiltva"
 
 msgid "HAST volume"
 msgstr "HAST kötet"
@@ -3202,11 +3223,11 @@ msgstr ""
 "hibákat mutatja. Ez az attribútum a legtöbb modern Seagate meghajtóba "
 "beépítésre került."
 
+msgid "HDD standby time"
+msgstr ""
+
 msgid "HTTP Proxy"
 msgstr "HTTP proxy"
-
-msgid "Hard disk standby time"
-msgstr "Merevlemez készenléti ideje."
 
 msgid "Hardware"
 msgstr "Hardver"
@@ -3312,11 +3333,11 @@ msgstr ""
 msgid "Hungarian"
 msgstr "Magyar"
 
+msgid "I/O Statistics"
+msgstr "I/O statisztikák"
+
 msgid "I/O Timeout"
 msgstr "I/O időtúllépés"
-
-msgid "I/O statistics"
-msgstr "I/O statisztika"
 
 #, php-format
 msgid "I/O timeout in seconds (%d by default)."
@@ -3330,6 +3351,9 @@ msgstr "IG"
 
 msgid "IP"
 msgstr "IP"
+
+msgid "IP Address"
+msgstr "IP-cím"
 
 msgid "IP address"
 msgstr "IP-cím"
@@ -3487,6 +3511,12 @@ msgstr "Lemezkép fájl feltöltési hiba (memória elfogyás?)"
 msgid "Import"
 msgstr "Importálás"
 
+msgid "Import Disks"
+msgstr "Lemezek importálása"
+
+msgid "Import Software Raid Disks"
+msgstr ""
+
 msgid "Import disks"
 msgstr "Lemezek importálása"
 
@@ -3498,9 +3528,6 @@ msgstr "Tűzfalszabályok importálása"
 
 msgid "Import on-disk ZFS config"
 msgstr "Lemezen levő ZFS beállítás importálása"
-
-msgid "Import software raid disks"
-msgstr "Szoftveres raid lemezek importálása"
 
 msgid "In"
 msgstr "Be"
@@ -3740,8 +3767,8 @@ msgstr "Olasz"
 msgid "JBOD"
 msgstr "JBOD"
 
-msgid "JBOD information and status"
-msgstr "JBOD információ és állapot"
+msgid "JBOD Information & Status"
+msgstr ""
 
 msgid ""
 "January February March April May June July August September October November "
@@ -3789,8 +3816,8 @@ msgstr "Csak hálózat"
 msgid "LCDproc"
 msgstr "LCDproc"
 
-msgid "LCDproc (client)"
-msgstr "LCDproc (kliens)"
+msgid "LCDproc (Client)"
+msgstr ""
 
 msgid "LDAP"
 msgstr "LDAP"
@@ -3864,25 +3891,23 @@ msgstr "Ne módosuljanak az automatikus pillanatkép beállításai."
 msgid "Leave this field empty to use default settings."
 msgstr "Az alapértelmezett beállításokhoz hagyd üresen."
 
-msgid "Level 1 - Minimum power usage with Standby (spindown)"
-msgstr "1. Szint - Minimális áramfelvétel készenléti állapottal (lepörög)"
-
-msgid "Level 127 - Intermediate power usage with Standby"
-msgstr "127. Szint - Közepes áramfelvétel készenléti állapottal"
-
-msgid "Level 128 - Minimum power usage without Standby (no spindown)"
+msgid "Level 1 - Minimum Power Usage with Standby (Spindown)"
 msgstr ""
-"128. Szint - Minimális áramfelvétel készenléti állapot nélkül (nincs "
-"lepörgés)"
 
-msgid "Level 192 - Intermediate power usage without Standby"
-msgstr "192. Szint - Közepes áramfelvétel készenléti állapot nélkül"
+msgid "Level 127 - Intermediate Power Usage with Standby"
+msgstr ""
 
-msgid "Level 254 - Maximum performance, maximum power usage"
-msgstr "254. Szint - Maximális teljesítmény, maximális áramfelvétel"
+msgid "Level 128 - Minimum Power Usage without Standby (No Spindown)"
+msgstr ""
 
-msgid "Level 64 - Intermediate power usage with Standby"
-msgstr "64. Szint - Közepes áramfelvétel készenléti állapottal"
+msgid "Level 192 - Intermediate Power Usage without Standby"
+msgstr ""
+
+msgid "Level 254 - Maximum Performance, Maximum Power Usage"
+msgstr ""
+
+msgid "Level 64 - Intermediate Power Usage with Standby"
+msgstr ""
 
 #, php-format
 msgid "Levels (MHz/mW): %s"
@@ -3893,6 +3918,9 @@ msgstr "Licensz"
 
 msgid "License & Credits"
 msgstr "Licensz és készítők"
+
+msgid "Life Time"
+msgstr ""
 
 msgid "Life time"
 msgstr "Élettartam"
@@ -3925,6 +3953,15 @@ msgstr "Bekapcsolás (link up) művelet"
 msgid "List"
 msgstr "Lista"
 
+msgid "List Detected Disks"
+msgstr ""
+
+msgid "List Imported Users"
+msgstr ""
+
+msgid "List Mount Points"
+msgstr ""
+
 msgid ""
 "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP "
 "(AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
@@ -3933,18 +3970,6 @@ msgstr ""
 "WPA-ra használható pairwise-ok (unicast) listája. Egy vagy több a "
 "következőkből: CCMP (AES számoló módban CBC-MAC-kel, RFC 3610, IEEE "
 "802.11i/D7.0), TKIP (Temporal Key Integrity Protokoll, IEEE 802.11i/D7.0)."
-
-msgid "List of available target name on all configured iSCSI targets"
-msgstr "Elérhető célnevek listája az összes konfigurált iSCSI-célokon"
-
-msgid "List of detected disks"
-msgstr "Érzékelt lemezek listája"
-
-msgid "List of imported users"
-msgstr "Importált felhasználók listája"
-
-msgid "List of mount points"
-msgstr "Csatolási pontok listája"
 
 msgid "Load"
 msgstr "Terhelés"
@@ -3969,6 +3994,9 @@ msgstr "Helyi"
 
 msgid "Local Master Browser"
 msgstr "Local Master Browser"
+
+msgid "Local Share (Destination)"
+msgstr ""
 
 msgid "Local User"
 msgstr "Helyi felhasználó"
@@ -4047,12 +4075,12 @@ msgstr ""
 msgid "Logical Unit Controller IP address (%s by default)"
 msgstr "Logikai Egység Kontroller IP címe (%s alapértelmezetten)"
 
+msgid "Logical Unit Controller Login Information"
+msgstr ""
+
 #, php-format
 msgid "Logical Unit Controller TCP port (%d by default)"
 msgstr "Logikai Egység Kontroller TCP portja (%d alapértelmezetten)"
-
-msgid "Logical Unit Controller login information"
-msgstr "Logikai Egység Kontroller bejelentkezési információ"
 
 msgid "Logical Unit Type mapped to LUN."
 msgstr "Logikai Egység Típus LUN-en."
@@ -4086,6 +4114,9 @@ msgstr ""
 msgid "MAC address"
 msgstr "Fizikai cím (MAC address)"
 
+msgid "MBR Erase"
+msgstr ""
+
 msgid "MBR partition"
 msgstr "MBR partíció"
 
@@ -4104,8 +4135,8 @@ msgstr "ÁTHELYEZVE:"
 msgid "MS Active Directory"
 msgstr "MS Címtárszolgáltatás"
 
-msgid "MS Active Directory informations"
-msgstr "MS Címtárszolgáltatási információk"
+msgid "MS Active Directory Information & Status"
+msgstr ""
 
 msgid "MS Domain"
 msgstr "MS tartomány"
@@ -4198,6 +4229,9 @@ msgstr "MaxOutstandingR2T"
 msgid "MaxRecvDataSegmentLength"
 msgstr "MaxRecvDataSegmentLength"
 
+msgid "Maximum Performance, Maximum Acoustic Output"
+msgstr ""
+
 msgid "Maximum connections"
 msgstr "Maximális kapcsolatok száma"
 
@@ -4239,9 +4273,6 @@ msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
 msgstr ""
 "Egyidejű kapcsolatok maximális száma. Alapértelmezetten 0 (nincs korlát)"
 
-msgid "Maximum performance, maximum acoustic output"
-msgstr "Maximális teljesítmény, maximális zajszint"
-
 msgid "Maximum relative humidity seen (percent)"
 msgstr "Valaha mért maximális relatív páratartalom (százalék)"
 
@@ -4257,11 +4288,14 @@ msgstr "Média könyvtár"
 msgid "Media library"
 msgstr "Média library"
 
-msgid "Medium acoustic output"
-msgstr "Közepes hang kimenet"
+msgid "Medium Acoustic Output"
+msgstr ""
 
 msgid "Member Interface"
 msgstr "Interfész tag"
+
+msgid "Memory Usage"
+msgstr ""
 
 msgid "Memory usage"
 msgstr "Memóriahasználat"
@@ -4297,6 +4331,9 @@ msgstr "MiniDLNA konfigurációja sikeresen módosult."
 msgid "Minimum"
 msgstr "Minimum"
 
+msgid "Minimum Performance, Minimum Acoustic Output"
+msgstr ""
+
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr "Minimum elem szint a kikapcsolás után a szünetmentes újraindításához"
 
@@ -4308,9 +4345,6 @@ msgstr "Minimum frekvencia"
 
 msgid "Minimum incoming voltage seen"
 msgstr "Valaha legkisebb bejövő feszültség"
-
-msgid "Minimum performance, Minimum acoustic output"
-msgstr "Minimális teljesítmény, minimális zajszint"
 
 msgid "Minimum relative humidity seen (percent)"
 msgstr "Valaha legkisebb relatív páratartalom (százalék)"
@@ -4336,11 +4370,11 @@ msgstr "Mód"
 msgid "Model"
 msgstr "Modell"
 
-msgid "Model extra"
-msgstr "Modell extra"
+msgid "Model Extra"
+msgstr ""
 
-msgid "Model name"
-msgstr "Modellnév"
+msgid "Model Name"
+msgstr ""
 
 msgid "Modified"
 msgstr "Módosítva"
@@ -4601,14 +4635,14 @@ msgstr "Nincs tároló"
 msgid "Node A IP address"
 msgstr "Node A IP cím"
 
-msgid "Node A settings"
-msgstr "Node A beállítások"
+msgid "Node A Settings"
+msgstr ""
 
 msgid "Node B IP address"
 msgstr "Node B IP cím"
 
-msgid "Node B settings"
-msgstr "Node B beállítások"
+msgid "Node B Settings"
+msgstr ""
 
 msgid "Node Base"
 msgstr "Node alap"
@@ -4774,8 +4808,8 @@ msgstr ""
 "Ajánlott azonos számú meghajtók hozzáadása, mint a már meglévő virtuális "
 "eszköz száma."
 
-msgid "Online version check"
-msgstr "Online verzió ellenőrzése"
+msgid "Online"
+msgstr ""
 
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
@@ -5007,6 +5041,9 @@ msgstr "root bejelentkezés engedélyezése"
 msgid "Permit to do SSH Tunneling."
 msgstr "SSH csatorna engedélyezése"
 
+msgid "Physical Interface"
+msgstr ""
+
 msgid "Physical interface"
 msgstr "Fizikai interfész"
 
@@ -5052,8 +5089,8 @@ msgstr "Lekérdezési idő"
 msgid "Pool"
 msgstr "Tároló"
 
-msgid "Pool information and status"
-msgstr "Tároló információ és állapot"
+msgid "Pool Information & Status"
+msgstr ""
 
 msgid "Pools"
 msgstr "Tárolók (pools)"
@@ -5117,6 +5154,9 @@ msgstr "Energiafelhasználás démon"
 msgid "Power Mode"
 msgstr "Energia üzemmód"
 
+msgid "Power management"
+msgstr ""
+
 msgid "Power mode"
 msgstr "Energia üzemmód"
 
@@ -5130,8 +5170,8 @@ msgid "PreInit"
 msgstr "Indítás előtt"
 
 #, php-format
-msgid "Predefined system groups"
-msgstr "Előre definiált rendszercsoportok"
+msgid "Predefined Groups"
+msgstr ""
 
 msgid "Preferred"
 msgstr "Preferált"
@@ -5182,8 +5222,8 @@ msgstr "Folyamat"
 msgid "Processes"
 msgstr "Folyamatok"
 
-msgid "Processes information"
-msgstr "Információ a folyamatokról"
+msgid "Processes Information"
+msgstr ""
 
 msgid "Product ID"
 msgstr "Termékazonosító"
@@ -5204,11 +5244,9 @@ msgid "Proxy"
 msgstr "Proxy"
 
 msgid ""
-"Puts the hard disk into standby mode when the selected amount of time after "
-"the last hard disk access has been elapsed."
+"Puts the disk into standby mode when the selected amount of time after the "
+"last disk access has been elapsed."
 msgstr ""
-"A merevlemez készenléti módba helyezése, amikor az utolsó merevlemez-elérés "
-"után a kiválasztott idő eltelt."
 
 msgid "Queue Depth"
 msgstr "Sor mélység"
@@ -5222,26 +5260,26 @@ msgstr "Kvóta"
 msgid "RAID 0"
 msgstr "RAID 0"
 
-msgid "RAID 0 information and status"
-msgstr "RAID 0 információ és állapot"
+msgid "RAID 0 Information & Status"
+msgstr ""
 
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
-msgid "RAID 0/1/5 information and status"
-msgstr "RAID 0/1/5 információ és állapot"
+msgid "RAID 0/1/5 Information & Status"
+msgstr ""
 
 msgid "RAID 1"
 msgstr "RAID 1"
 
-msgid "RAID 1 information and status"
-msgstr "RAID 1 információ és állapot"
+msgid "RAID 1 Information & Status"
+msgstr ""
 
 msgid "RAID 5"
 msgstr "RAID 5"
 
-msgid "RAID 5 information and status"
-msgstr "RAID 5 információ és állapot"
+msgid "RAID 5 Information & Status"
+msgstr ""
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -5273,8 +5311,8 @@ msgstr "RSYNC - Kiszolgáló"
 msgid "RSYNC Client"
 msgstr "RSYNC kliens"
 
-msgid "RSYNC Client informations"
-msgstr "RSYNC kliens információk"
+msgid "RSYNC Client Information & Status"
+msgstr ""
 
 msgid "RSYNC events"
 msgstr "RSYNC események"
@@ -5371,11 +5409,14 @@ msgstr "Oldal újratöltése"
 msgid "Remaining battery runtime"
 msgstr "Hátralévő akkumulátor-kapacitás"
 
+msgid "Remote Address"
+msgstr ""
+
+msgid "Remote Module (Source)"
+msgstr ""
+
 msgid "Remote Rsync Server"
 msgstr "Távoli Rsync Kiszolgáló"
-
-msgid "Remote address"
-msgstr "Távoli cím"
 
 msgid "Remote module (source)"
 msgstr "Távoli modul (forrás)"
@@ -5427,11 +5468,11 @@ msgstr "Hitelesítést igényel."
 msgid "Required"
 msgstr "Kötelező"
 
+msgid "Rescan Disks"
+msgstr ""
+
 msgid "Rescan database in progress"
 msgstr "Adatbázis újravizsgálása folyamatban."
-
-msgid "Rescan disks"
-msgstr "Lemezek újrakeresése"
 
 msgid "Rescan interval"
 msgstr "Újrakeresési időköz"
@@ -5458,6 +5499,9 @@ msgstr "Erőforrás neve"
 
 msgid "Resources"
 msgstr "Erőforrások"
+
+msgid "Restore Configuration"
+msgstr ""
 
 msgid "Restore configuration"
 msgstr "Beállítások visszaállítása"
@@ -5502,8 +5546,8 @@ msgstr "Root bind DN"
 msgid "Root bind password"
 msgstr "Root bind jelszó"
 
-msgid "Rotation rate"
-msgstr "Forgatás százalékban"
+msgid "Rotation Rate"
+msgstr ""
 
 msgid "Round-robin read"
 msgstr "Round-robin olvasás"
@@ -5523,8 +5567,8 @@ msgstr "Sorok"
 msgid "Rsync"
 msgstr "Rsync"
 
-msgid "Rsync job"
-msgstr "Rsync feladat"
+msgid "Rsync Job"
+msgstr ""
 
 msgid "Rule"
 msgstr "Szabály"
@@ -5621,6 +5665,12 @@ msgstr ""
 msgid "Save"
 msgstr "Mentés"
 
+msgid "Save & Restart"
+msgstr ""
+
+msgid "Save File"
+msgstr ""
+
 msgid "Save and Restart"
 msgstr "Mentés és újraindítás"
 
@@ -5650,23 +5700,26 @@ msgstr ""
 msgid "Scan type"
 msgstr "Átvizsgálás típusa"
 
+msgid "Schedule Time"
+msgstr ""
+
 msgid "Schedule time"
 msgstr "Ütemezési idő"
 
 msgid "Scheduled"
 msgstr "Ütemezett"
 
+msgid "Scheduled Reboot"
+msgstr ""
+
 msgid "Scheduled Self-Test"
 msgstr "Ütemezett önteszt"
 
-msgid "Scheduled reboot"
-msgstr "Ütemezett újraindítás"
+msgid "Scheduled Shutdown"
+msgstr ""
 
-msgid "Scheduled self-tests"
-msgstr "Ütemezett öntesztek"
-
-msgid "Scheduled shutdown"
-msgstr "Ütemezett leállítás"
+msgid "Scheduled tests"
+msgstr ""
 
 msgid "Secondary"
 msgstr "Másodlagos"
@@ -5682,6 +5735,9 @@ msgstr "Biztonság"
 
 msgid "See attribute E8."
 msgstr "Lásd E8 attribútum."
+
+msgid "Select"
+msgstr ""
 
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
@@ -5735,14 +5791,20 @@ msgstr "A kiválasztott eszköz vagy címke nem létezik."
 msgid "Selected file isn't an valid ISO file."
 msgstr "A kiválasztott fájl nem érvényes ISO fájl."
 
-msgid "Self-Monitoring, Analysis and Reporting Technology"
-msgstr "Önellenőrző, Analizáló és Jelentő Technológia (S.M.A.R.T.)"
+msgid "Self-Monitoring, Analysis & Reporting Technology"
+msgstr ""
+
+msgid "Self-tests Management"
+msgstr ""
 
 msgid "Send Buffer Size"
 msgstr "Puffer méret küldése"
 
 msgid "Send Command!"
 msgstr "Parancs kiadása!"
+
+msgid "Send Now"
+msgstr ""
 
 msgid "Send a TEST warning email on startup."
 msgstr "A rendszer indulásakor figyelmeztető TESZT email küldése."
@@ -5758,6 +5820,9 @@ msgstr "Több e-mailcímet pontosvesszővel elválasztva adj meg."
 
 msgid "Serial Console"
 msgstr "Soros konzol"
+
+msgid "Serial Number"
+msgstr ""
 
 msgid "Serial number"
 msgstr "Sorozatszám"
@@ -5880,18 +5945,18 @@ msgstr "Parancsértelmező"
 msgid "Shock During Write."
 msgstr "Írás közbeni ütés."
 
+msgid "Show Process Information"
+msgstr ""
+
 msgid "Show RAW UPS Info"
 msgstr "Nyers szünetmentes információk megjelenítése"
+
+msgid "Show UPS Information"
+msgstr ""
 
 msgid "Show log entries in reverse order (newest entries on top)"
 msgstr ""
 "Napló bejegyzések megjelenítése fordított sorrendben (az újak vannak felül)"
-
-msgid "Show process information"
-msgstr "Folyamatinformáció megjelenítése"
-
-msgid "Show ups information"
-msgstr "Szünetmentes információk megjelenítése"
 
 msgid "Shutdown"
 msgstr "Leállítás"
@@ -5972,6 +6037,9 @@ msgstr "Használt szoftver"
 msgid "Source"
 msgstr "Forrás"
 
+msgid "Source Share"
+msgstr ""
+
 msgid "Source directory to be synchronized."
 msgstr "Szinkronizálandó forrásmappa."
 
@@ -5980,6 +6048,9 @@ msgstr "Forrás portja"
 
 msgid "Source share"
 msgstr "Forrás megosztása"
+
+msgid "Space Usage"
+msgstr ""
 
 msgid "Space Used"
 msgstr "Foglalt hely"
@@ -6017,6 +6088,9 @@ msgstr "A megadott útvonal az NFSv4 gyökérkönyvtára."
 
 msgid "Specifies how many servers to create."
 msgstr "A létrehozandó szerverek számát határozza meg."
+
+msgid "Specifies how the volume should be exposed to the OS."
+msgstr ""
 
 msgid "Specifies that the file system should be exported read-only."
 msgstr "A fájlrendszert írásvédettként exportálhatóságát adja meg."
@@ -6072,6 +6146,9 @@ msgstr "Osztott kérés"
 msgid "Standard"
 msgstr "Általános"
 
+msgid "Standby"
+msgstr ""
+
 msgid ""
 "Standby - Check the device unless it is in SLEEP or STANDBY mode. In these "
 "modes most disks are not spinning, so if you want to prevent a laptop disk "
@@ -6081,9 +6158,6 @@ msgstr ""
 "KÉSZENLÉTI állapotban van. Ezekben az üzemmódokban a legtöbb lemez nem "
 "forog, ezért ha szeretnéd elkerülni, hogy a laptop lemeze minden hívásra "
 "felpörögjön, akkor valószínűleg ez az amit akarsz."
-
-msgid "Standby time"
-msgstr "Készenléti idő"
 
 msgid "Start"
 msgstr "Indítás"
@@ -6176,14 +6250,14 @@ msgstr "Elhagyja a nem-hiba üzenetek"
 msgid "Swap"
 msgstr "Cserehely"
 
+msgid "Swap Information & Status"
+msgstr ""
+
+msgid "Swap Memory"
+msgstr ""
+
 msgid "Swap disabled"
 msgstr "Cserehely kikapcsolva"
-
-msgid "Swap memory"
-msgstr "Cserehely memória"
-
-msgid "Swap status"
-msgstr "Cserehely állapota"
 
 msgid "Swap usage"
 msgstr "Cserehely használata"
@@ -6235,23 +6309,20 @@ msgstr "Rendszer"
 msgid "System Beep"
 msgstr "Rendszersípolás"
 
+msgid "System Information"
+msgstr ""
+
+msgid "System Load"
+msgstr ""
+
 msgid "System bios"
 msgstr "BIOS"
 
 msgid "System events"
 msgstr "Rendszeresemények"
 
-msgid "System firewall"
-msgstr "Rendszertűzfal"
-
 msgid "System info"
 msgstr "Rendszerinformáció"
-
-msgid "System information"
-msgstr "Rendszerinformáció"
-
-msgid "System load"
-msgstr "Rendszertöltés"
 
 msgid "System log"
 msgstr "Rendszernapló"
@@ -6354,11 +6425,11 @@ msgstr "Célok"
 msgid "Temperature"
 msgstr "Hőmérséklet"
 
+msgid "Temperature Monitoring"
+msgstr ""
+
 msgid "Temperature alarm (enabled/disabled)"
 msgstr "Riasztási hőmérséklet (engedélyezve/tiltva)"
-
-msgid "Temperature monitoring"
-msgstr "Hőmérsékletfigyelés"
 
 msgid "Temperature threshold high (degrees C)"
 msgstr "Hőmérséklet küszöb magas (fok C)"
@@ -7330,11 +7401,9 @@ msgstr ""
 "Ez a WLAN nem törölhető, mert interfészként még mindig használatban van."
 
 msgid ""
-"This allows you to lower the power consumption of the drive, at the expense "
+"This allows you to lower the power consumption of the disk, at the expense "
 "of performance."
 msgstr ""
-"Ez lehetővé teszi, hogy csökkentse a meghajtó energiafogyasztását a "
-"teljesítmény rovására."
 
 msgid "This allows you to set how loud the drive is while it's operating."
 msgstr ""
@@ -7347,9 +7416,8 @@ msgstr ""
 "Ez lehetővé teszi, hogy a fájlrendszer beállítását előre formázott "
 "merevlemezeken, mely adatokat tartalmaz."
 
-msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
+msgid "This allows you to set the transfer mode for ATA/IDE disks."
 msgstr ""
-"Ez lehetővé teszi, hogy beállítsd az ATA/IDE merevlemezek átviteli módját."
 
 msgid ""
 "This attribute indicates the count of full hard disk power on/off cycles."
@@ -7911,11 +7979,11 @@ msgstr ""
 msgid "Transcoding"
 msgstr "Átkódolás"
 
+msgid "Transfer Rate"
+msgstr ""
+
 msgid "Transfer mode"
 msgstr "Átviteli mód"
-
-msgid "Transfer rate"
-msgstr "Átviteli sebesség"
 
 msgid "Trap host"
 msgstr "Csapdák port"
@@ -7973,6 +8041,13 @@ msgstr "UFS"
 
 #, php-format
 msgid ""
+"UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
+"filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
+"unpredictable results, file corruption and the loss of data!"
+msgstr ""
+
+#, php-format
+msgid ""
 "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
 "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
 "NTFS can result in unpredictable results, file corruption, and loss of data!"
@@ -7999,6 +8074,9 @@ msgstr "UID"
 
 msgid "UPS"
 msgstr "Szünetmentes táp (UPS)"
+
+msgid "UPS Information & Status"
+msgstr ""
 
 msgid "UPS Off Line"
 msgstr "Szünetmentes kikapcsolva"
@@ -8220,12 +8298,12 @@ msgstr "Felhasznált"
 msgid "User"
 msgstr "Felhasználó"
 
+#, php-format
+msgid "User Defined Groups"
+msgstr ""
+
 msgid "User ID"
 msgstr "Felhasználó-azonosító (ID)"
-
-#, php-format
-msgid "User defined groups"
-msgstr "Felhasználó által definiált csoportok"
 
 msgid "User full name."
 msgstr "A felhasználó teljes neve."
@@ -8263,7 +8341,7 @@ msgstr "Tartományi rendszergazdai fiók felhasználóneve."
 msgid "Users"
 msgstr "Felhasználók"
 
-msgid "Users and Groups"
+msgid "Users & Groups"
 msgstr "Felhasználók és csoportok"
 
 #, c-format
@@ -8275,6 +8353,9 @@ msgstr "VHID"
 
 msgid "VLAN"
 msgstr "VLAN"
+
+msgid "VLAN Tag"
+msgstr ""
 
 msgid "VLAN tag"
 msgstr "VLAN címke"
@@ -8308,23 +8389,29 @@ msgstr "Írás közbeni rezgés."
 msgid "Video"
 msgstr "Videó"
 
+msgid "Virtual Device"
+msgstr ""
+
+msgid "Virtual Devices"
+msgstr ""
+
 msgid "Virtual Host ID"
 msgstr "Virtuális gép ID"
+
+msgid "Virtual IP Address"
+msgstr ""
 
 msgid "Virtual IP address"
 msgstr "Virtuális IP címek"
 
+msgid "Virtual Interface"
+msgstr ""
+
 msgid "Virtual Machine"
 msgstr "Virtuális gép"
 
-msgid "Virtual device"
-msgstr "Virtuális eszköz"
-
 msgid "Virtual devices"
 msgstr "Virtuális eszközök"
-
-msgid "Virtual interface"
-msgstr "Virtuális interfész"
 
 msgid "VirtualBox"
 msgstr "VirtualBox"
@@ -8343,6 +8430,9 @@ msgstr "Címke"
 
 msgid "Volume label of the new file system."
 msgstr "Az új kötet címkéje"
+
+msgid "Volume mode"
+msgstr ""
 
 msgid "Volumes"
 msgstr "Kötetek (volumes)"
@@ -8602,26 +8692,31 @@ msgstr "ZFS"
 msgid "ZFS ACL"
 msgstr "ZFS ACL"
 
-msgid "ZFS dataset information and status"
-msgstr "ZFS adattár információ és állapot"
+msgid "ZFS Dataset Information & Status"
+msgstr ""
 
-msgid "ZFS dataset properties"
-msgstr "ZFS adattár tulajdonságok"
+msgid "ZFS Dataset Properties"
+msgstr ""
 
-msgid "ZFS snapshot information and status"
-msgstr "ZFS pillanatkép-információ és -állapot"
+msgid "ZFS Snapshot Information & Status"
+msgstr ""
 
-msgid "ZFS snapshot properties"
-msgstr "ZFS pillanatkép tulajdonságok"
+msgid "ZFS Snapshot Properties"
+msgstr ""
+
+msgid "ZFS Volume Information & Status"
+msgstr ""
+
+msgid "ZFS Volume Properties"
+msgstr ""
 
 msgid "ZFS volume"
 msgstr "ZFS kötet"
 
-msgid "ZFS volume information and status"
-msgstr "ZFS kötet információ és állapot"
-
-msgid "ZFS volume properties"
-msgstr "ZFS kötet tulajdonságai"
+msgid ""
+"ZFS volume block size. This value can not be changed after creation. Empty "
+"as default."
+msgstr ""
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
@@ -8702,6 +8797,9 @@ msgstr "iSCSI-cél (iSCSI Target)"
 msgid "iSCSI Target Logical Unit Controller"
 msgstr "iSCSI -cél Logikai Egység Vezérlő"
 
+msgid "iSCSI Targets Information & Status"
+msgstr ""
+
 #, php-format
 msgid "iSCSI initial parameter (%d by default)."
 msgstr "iSCSI initial parameter (%d az alapértelmezett)."
@@ -8731,9 +8829,6 @@ msgid "minimum (power saving)"
 msgstr "minimum (energiatakarékos)"
 
 msgid "minute(s)"
-msgstr "perc"
-
-msgid "minutes"
 msgstr "perc"
 
 msgid "mirroring"
@@ -8807,3 +8902,269 @@ msgstr "verzió:"
 
 msgid "warning"
 msgstr "figyelmeztetés"
+
+#, php-format
+#~ msgid "%s interface"
+#~ msgstr "%s interfész"
+
+#~ msgid "Always on"
+#~ msgstr "Mindig bekapcsolva"
+
+#~ msgid "Backup configuration"
+#~ msgstr "Beállítások biztonsági mentése"
+
+#~ msgid "Ban list"
+#~ msgstr "Tiltó lista"
+
+#~ msgid "Connected FTP users"
+#~ msgstr "Kapcsolódott FTP felhasználók"
+
+#~ msgid "DNS settings"
+#~ msgstr "DNS beállítások"
+
+#~ msgid "Don't Erase MBR"
+#~ msgstr "Ne töröld az MBR-t"
+
+#~ msgid "Email notification"
+#~ msgstr "Figyelmeztető e-mail"
+
+#~ msgid "Email report"
+#~ msgstr "E-mail jelentés"
+
+#~ msgid "Firewall rule"
+#~ msgstr "Tűzfalszabály"
+
+#~ msgid "Format disk"
+#~ msgstr "Lemez formázása"
+
+#~ msgid "I/O statistics"
+#~ msgstr "I/O statisztika"
+
+#~ msgid "Level 1 - Minimum power usage with Standby (spindown)"
+#~ msgstr "1. Szint - Minimális áramfelvétel készenléti állapottal (lepörög)"
+
+#~ msgid "Level 127 - Intermediate power usage with Standby"
+#~ msgstr "127. Szint - Közepes áramfelvétel készenléti állapottal"
+
+#~ msgid "Level 128 - Minimum power usage without Standby (no spindown)"
+#~ msgstr ""
+#~ "128. Szint - Minimális áramfelvétel készenléti állapot nélkül (nincs "
+#~ "lepörgés)"
+
+#~ msgid "Level 192 - Intermediate power usage without Standby"
+#~ msgstr "192. Szint - Közepes áramfelvétel készenléti állapot nélkül"
+
+#~ msgid "Level 254 - Maximum performance, maximum power usage"
+#~ msgstr "254. Szint - Maximális teljesítmény, maximális áramfelvétel"
+
+#~ msgid "Level 64 - Intermediate power usage with Standby"
+#~ msgstr "64. Szint - Közepes áramfelvétel készenléti állapottal"
+
+#~ msgid "List of imported users"
+#~ msgstr "Importált felhasználók listája"
+
+#~ msgid "List of mount points"
+#~ msgstr "Csatolási pontok listája"
+
+#~ msgid "Maximum performance, maximum acoustic output"
+#~ msgstr "Maximális teljesítmény, maximális zajszint"
+
+#~ msgid "Minimum performance, Minimum acoustic output"
+#~ msgstr "Minimális teljesítmény, minimális zajszint"
+
+#~ msgid "Model name"
+#~ msgstr "Modellnév"
+
+#~ msgid "RSYNC Client informations"
+#~ msgstr "RSYNC kliens információk"
+
+#~ msgid "Remote address"
+#~ msgstr "Távoli cím"
+
+#~ msgid "Rsync job"
+#~ msgstr "Rsync feladat"
+
+#~ msgid "Standby time"
+#~ msgstr "Készenléti idő"
+
+#~ msgid "Swap status"
+#~ msgstr "Cserehely állapota"
+
+#~ msgid "System information"
+#~ msgstr "Rendszerinformáció"
+
+#~ msgid "Temperature monitoring"
+#~ msgstr "Hőmérsékletfigyelés"
+
+#~ msgid "Virtual device"
+#~ msgstr "Virtuális eszköz"
+
+#~ msgid "Virtual interface"
+#~ msgstr "Virtuális interfész"
+
+#~ msgid "minutes"
+#~ msgstr "perc"
+
+#~ msgid "HAST resource"
+#~ msgstr "HAST erőforrás"
+
+#, php-format
+#~ msgid "User defined groups"
+#~ msgstr "Felhasználó által definiált csoportok"
+
+#~ msgid "ZFS volume properties"
+#~ msgstr "ZFS kötet tulajdonságai"
+
+#~ msgid "LCDproc (client)"
+#~ msgstr "LCDproc (kliens)"
+
+#~ msgid "List of detected disks"
+#~ msgstr "Érzékelt lemezek listája"
+
+#~ msgid "Logical Unit Controller login information"
+#~ msgstr "Logikai Egység Kontroller bejelentkezési információ"
+
+#~ msgid "Medium acoustic output"
+#~ msgstr "Közepes hang kimenet"
+
+#~ msgid "Model extra"
+#~ msgstr "Modell extra"
+
+#~ msgid "Node A settings"
+#~ msgstr "Node A beállítások"
+
+#~ msgid "Node B settings"
+#~ msgstr "Node B beállítások"
+
+#, php-format
+#~ msgid "Predefined system groups"
+#~ msgstr "Előre definiált rendszercsoportok"
+
+#~ msgid "System load"
+#~ msgstr "Rendszertöltés"
+
+#~ msgid ""
+#~ "This allows you to lower the power consumption of the drive, at the expense "
+#~ "of performance."
+#~ msgstr ""
+#~ "Ez lehetővé teszi, hogy csökkentse a meghajtó energiafogyasztását a "
+#~ "teljesítmény rovására."
+
+#~ msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
+#~ msgstr ""
+#~ "Ez lehetővé teszi, hogy beállítsd az ATA/IDE merevlemezek átviteli módját."
+
+#~ msgid "Clear config and Import software raid disks"
+#~ msgstr "Beállítások törlése és szoftveres raid lemezek importálása"
+
+#~ msgid "Device model"
+#~ msgstr "Eszköz típusa"
+
+#~ msgid "File path"
+#~ msgstr "Fájl elérési útvonala"
+
+#~ msgid "HAST status of the configured resources"
+#~ msgstr "A konfigurált erőforrások HAST állapota"
+
+#~ msgid "Import software raid disks"
+#~ msgstr "Szoftveres raid lemezek importálása"
+
+#~ msgid "Online version check"
+#~ msgstr "Online verzió ellenőrzése"
+
+#~ msgid "Pool information and status"
+#~ msgstr "Tároló információ és állapot"
+
+#~ msgid "Self-Monitoring, Analysis and Reporting Technology"
+#~ msgstr "Önellenőrző, Analizáló és Jelentő Technológia (S.M.A.R.T.)"
+
+#~ msgid "ZFS dataset information and status"
+#~ msgstr "ZFS adattár információ és állapot"
+
+#~ msgid "ZFS dataset properties"
+#~ msgstr "ZFS adattár tulajdonságok"
+
+#~ msgid "ZFS volume information and status"
+#~ msgstr "ZFS kötet információ és állapot"
+
+#~ msgid "Transfer rate"
+#~ msgstr "Átviteli sebesség"
+
+#~ msgid "Rotation rate"
+#~ msgstr "Forgatás százalékban"
+
+#~ msgid "Swap memory"
+#~ msgstr "Cserehely memória"
+
+#~ msgid "Advanced Power Management"
+#~ msgstr "Fejlett energiakezelés (APM)"
+
+#~ msgid "Show process information"
+#~ msgstr "Folyamatinformáció megjelenítése"
+
+#~ msgid "ZFS snapshot information and status"
+#~ msgstr "ZFS pillanatkép-információ és -állapot"
+
+#~ msgid "ZFS snapshot properties"
+#~ msgstr "ZFS pillanatkép tulajdonságok"
+
+#~ msgid "RAID 5 information and status"
+#~ msgstr "RAID 5 információ és állapot"
+
+#~ msgid "RAID 1 information and status"
+#~ msgstr "RAID 1 információ és állapot"
+
+#~ msgid "RAID 0/1/5 information and status"
+#~ msgstr "RAID 0/1/5 információ és állapot"
+
+#~ msgid "RAID 0 information and status"
+#~ msgstr "RAID 0 információ és állapot"
+
+#~ msgid "JBOD information and status"
+#~ msgstr "JBOD információ és állapot"
+
+#~ msgid "List of available target name on all configured iSCSI targets"
+#~ msgstr "Elérhető célnevek listája az összes konfigurált iSCSI-célokon"
+
+#~ msgid "Show ups information"
+#~ msgstr "Szünetmentes információk megjelenítése"
+
+#~ msgid "Free disk space"
+#~ msgstr "Szabad lemezterület"
+
+#~ msgid "MS Active Directory informations"
+#~ msgstr "MS Címtárszolgáltatási információk"
+
+#~ msgid "System firewall"
+#~ msgstr "Rendszertűzfal"
+
+#~ msgid "Rescan disks"
+#~ msgstr "Lemezek újrakeresése"
+
+#~ msgid "Controller model"
+#~ msgstr "Vezérlőmodell"
+
+#~ msgid "Hard disk standby time"
+#~ msgstr "Merevlemez készenléti ideje."
+
+#~ msgid "Scheduled shutdown"
+#~ msgstr "Ütemezett leállítás"
+
+#~ msgid "Scheduled self-tests"
+#~ msgstr "Ütemezett öntesztek"
+
+#~ msgid ""
+#~ "Puts the hard disk into standby mode when the selected amount of time after "
+#~ "the last hard disk access has been elapsed."
+#~ msgstr ""
+#~ "A merevlemez készenléti módba helyezése, amikor az utolsó merevlemez-elérés "
+#~ "után a kiválasztott idő eltelt."
+
+#~ msgid "Scheduled reboot"
+#~ msgstr "Ütemezett újraindítás"
+
+#~ msgid "Processes information"
+#~ msgstr "Információ a folyamatokról"
+
+#~ msgid "Email Notifications"
+#~ msgstr "E-mail értesítések"
