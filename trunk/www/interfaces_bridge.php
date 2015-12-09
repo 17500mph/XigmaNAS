@@ -104,7 +104,7 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 			<?php if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));?>
 			<table width="100%" border="0" cellpadding="0" cellspacing="0">
 			<tr>
-				<td width="20%" class="listhdrlr"><?=gettext("Virtual interface");?></td>
+				<td width="20%" class="listhdrlr"><?=gettext("Virtual Interface");?></td>
 				<td width="35%" class="listhdrr"><?=gettext("Member Interface");?></td>
 				<td width="35%" class="listhdrr"><?=gettext("Description");?></td>
 				<td width="10%" class="list"></td>
