@@ -80,13 +80,13 @@ function zfs_volume_display_properties() {
 	<tr>
 		<td class="tabcont">
 			<table width="100%" border="0">
-				<?php html_titleline(gettext("ZFS volume information and status"));?>
+				<?php html_titleline(gettext("ZFS Volume Information & Status"));?>
 				<tr>
 					<td class="listt">
 						<pre><span id="zfs_volume_list"><?=zfs_volume_display_list();?></span></pre>
 					</td>
 				</tr>
-				<?php html_titleline(gettext("ZFS volume properties"));?>
+				<?php html_titleline(gettext("ZFS Volume Properties"));?>
 				<tr>
 					<td class="listt">
 						<pre><span id="zfs_volume_properties"><?=zfs_volume_display_properties();?></span></pre>

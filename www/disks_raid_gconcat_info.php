@@ -79,7 +79,7 @@ $(document).ready(function(){
   <tr>
     <td class="tabcont">
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
-	    <?php html_titleline(gettext("JBOD information and status"));?>
+	    <?php html_titleline(gettext("JBOD Information & Status"));?>
 	    <tr>
 		<td class="listt">
 		    <pre><span id="raidinfo"></span></pre>

@@ -178,6 +178,7 @@ function enable_change(enable_change) {
     <td class="tabnavtbl">
       <ul id="tabnav">
       	<li class="tabinact"><a href="disks_manage.php"><span><?=gettext("Management");?></span></a></li>
+				<li class="tabinact"><a href="disks_init.php"><span><?=gettext("Format");?></span></a></li>
 				<li class="tabact"><a href="disks_manage_smart.php" title="<?=gettext("Reload page");?>"><span><?=gettext("S.M.A.R.T.");?></span></a></li>
 				<li class="tabinact"><a href="disks_manage_iscsi.php"><span><?=gettext("iSCSI Initiator");?></span></a></li>
       </ul>
@@ -192,7 +193,7 @@ function enable_change(enable_change) {
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<?php if (updatenotify_exists("smartssd")) print_config_change_box();?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline_checkbox("enable", gettext("Self-Monitoring, Analysis and Reporting Technology"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "enable_change(this)");?>
+					<?php html_titleline_checkbox("enable", gettext("Self-Monitoring, Analysis & Reporting Technology"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "enable_change(this)");?>
 					<?php html_inputbox("interval", gettext("Check interval"), $pconfig['interval'], gettext("Sets the interval between disk checks to N seconds. The minimum allowed value is 10."), true, 5);?>
 					<tr>
 						<td width="22%" valign="top" class="vncellreq"><?=gettext("Power mode");?></td>
@@ -214,7 +215,7 @@ function enable_change(enable_change) {
 						</td>
 					</tr>
 					<?php html_separator();?>
-					<?php html_titleline(gettext("Temperature monitoring"));?>
+					<?php html_titleline(gettext("Temperature Monitoring"));?>
 					<tr>
 						<td width="22%" valign="top" class="vncellreq"><?=gettext("Difference");?></td>
 						<td width="78%" class="vtable">
@@ -237,9 +238,9 @@ function enable_change(enable_change) {
 						</td>
 					</tr>
 					<?php html_separator();?>
-					<?php html_titleline(gettext("Scheduled self-tests"));?>
+					<?php html_titleline(gettext("Self-tests Management"));?>
 				  <tr>
-			    	<td width="22%" valign="top" class="vncell"><?=gettext("Scheduled self-tests");?></td>
+			    	<td width="22%" valign="top" class="vncell"><?=gettext("Scheduled tests");?></td>
 						<td width="78%" class="vtable">
 				      <table width="100%" border="0" cellpadding="0" cellspacing="0">
 				        <tr>

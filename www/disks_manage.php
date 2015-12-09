@@ -156,6 +156,7 @@ function diskmanagement_process_updatenotification($mode, $data) {
 		<td class="tabnavtbl">
   		<ul id="tabnav">
 				<li class="tabact"><a href="disks_manage.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Management");?></span></a></li>
+				<li class="tabinact"><a href="disks_init.php"><span><?=gettext("Format");?></span></a></li>
 				<li class="tabinact"><a href="disks_manage_smart.php"><span><?=gettext("S.M.A.R.T.");?></span></a></li>
 				<li class="tabinact"><a href="disks_manage_iscsi.php"><span><?=gettext("iSCSI Initiator");?></span></a></li>
   		</ul>
@@ -172,13 +173,13 @@ function diskmanagement_process_updatenotification($mode, $data) {
 					<tr>
 						<td width="5%" class="listhdrlr"><?=gettext("Device"); ?></td>
 						<td width="15%" class="listhdrr"><?=gettext("Device Model"); ?></td>
-						<td width="5%" class="listhdrr"><?=gettext("Size"); ?></td>
+						<td width="7%" class="listhdrr"><?=gettext("Size"); ?></td>
 						<td width="15%" class="listhdrr"><?=gettext("Serial Number"); ?></td>
 						<td width="5%" class="listhdrr"><?=gettext("Controller"); ?></td>
-						<td width="17%" class="listhdrr"><?=gettext("Controller Model"); ?></td>
+						<td width="18%" class="listhdrr"><?=gettext("Controller Model"); ?></td>
 						<td width="9%" class="listhdrr"><?=gettext("Standby"); ?></td>
 						<td width="10%" class="listhdrr"><?=gettext("Filesystem"); ?></td>
-						<td width="11%" class="listhdrr"><?=gettext("Status"); ?></td>
+						<td width="8%" class="listhdrr"><?=gettext("Status"); ?></td>
 						<td width="8%" class="list"></td>
 					</tr>
 					<?php foreach ($a_disk_conf as $disk):?>
@@ -279,13 +280,13 @@ function diskmanagement_process_updatenotification($mode, $data) {
 					</tr>
 				</table>
 				<div id="submit">
-					<input name="import" type="submit" class="formbtn" value="<?=gettext("Import disks");?>" onclick="return confirm('<?=gettext("Do you really want to import?\\nThe existing config may be overwritten.");?>');" />
-					<input name="clear_import" type="submit" class="formbtn" value="<?=gettext("Clear config and Import disks");?>" onclick="return confirm('<?=gettext("Do you really want to clear and import?\\nThe existing config will be cleared and overwritten.");?>');" />
-					<input name="disks_rescan" type="submit" class="formbtn" value="<?=gettext("Rescan disks");?>" />
+					<input name="import" type="submit" class="formbtn" value="<?=gettext("Import Disks");?>" onclick="return confirm('<?=gettext("Do you really want to import?\\nThe existing config may be overwritten.");?>');" />
+					<input name="clear_import" type="submit" class="formbtn" value="<?=gettext("Clear Config & Import Disks");?>" onclick="return confirm('<?=gettext("Do you really want to clear and import?\\nThe existing config will be cleared and overwritten.");?>');" />
+					<input name="disks_rescan" type="submit" class="formbtn" value="<?=gettext("Rescan Disks");?>" />
 					<br />
 					<br />
-					<input name="import_swraid" type="submit" class="formbtn" value="<?=gettext("Import software raid disks");?>" onclick="return confirm('<?=gettext("Do you really want to import?\\nThe existing config may be overwritten.");?>');" />
-					<input name="clear_import_swraid" type="submit" class="formbtn" value="<?=gettext("Clear config and Import software raid disks");?>" onclick="return confirm('<?=gettext("Do you really want to clear and import?\\nThe existing config will be cleared and overwritten.");?>');" />
+					<input name="import_swraid" type="submit" class="formbtn" value="<?=gettext("Import Software Raid Disks");?>" onclick="return confirm('<?=gettext("Do you really want to import?\\nThe existing config may be overwritten.");?>');" />
+					<input name="clear_import_swraid" type="submit" class="formbtn" value="<?=gettext("Clear Config & Import Software Raid Disks");?>" onclick="return confirm('<?=gettext("Do you really want to clear and import?\\nThe existing config will be cleared and overwritten.");?>');" />
 				</div>
 				<?php
 				if ($do_action) {

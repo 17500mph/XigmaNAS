@@ -141,7 +141,7 @@ function enable_change(enable_change) {
       <form action="shutdown_sched.php" method="post" name="iform" id="iform">
       	<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
         <table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline_checkbox("enable", gettext("Scheduled shutdown"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "enable_change(false)");?>
+					<?php html_titleline_checkbox("enable", gettext("Scheduled Shutdown"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "enable_change(false)");?>
           <tr>
 						<td width="22%" valign="top" class="vncellreq"><?=gettext("Time");?></td>
 						<td width="78%" class="vtable">

@@ -86,13 +86,13 @@ function zfs_snapshot_display_properties() {
 	<tr>
 		<td class="tabcont">
 			<table width="100%" border="0">
-				<?php html_titleline(gettext("ZFS snapshot information and status"));?>
+				<?php html_titleline(gettext("ZFS Snapshot Information & Status"));?>
 				<tr>
 					<td class="listt">
 						<pre><span id="zfs_snapshot_list"><?=zfs_snapshot_display_list();?></span></pre>
 					</td>
 				</tr>
-				<?php html_titleline(gettext("ZFS snapshot properties"));?>
+				<?php html_titleline(gettext("ZFS Snapshot Properties"));?>
 				<tr>
 					<td class="listt">
 						<pre><span id="zfs_snapshot_properties"><?=zfs_snapshot_display_properties();?></span></pre>

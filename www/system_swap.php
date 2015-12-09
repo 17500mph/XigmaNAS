@@ -148,7 +148,7 @@ function type_change() {
 				<?php if (!empty($infomsg)) print_info_box($infomsg); ?>
 				<?php if (!empty($savemsg)) print_info_box($savemsg); ?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline_checkbox("enable", gettext("Swap memory"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "enable_change(false)");?>
+					<?php html_titleline_checkbox("enable", gettext("Swap Memory"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "enable_change(false)");?>
 					<?php html_combobox("type", gettext("Type"), $pconfig['type'], array("file" => gettext("File"), "device" => gettext("Device")), "", true, false, "type_change()");?>
 					<?php html_mountcombobox("mountpoint", gettext("Mount point"), $pconfig['mountpoint'], gettext("Select mount point where to create the swap file."), true);?>
 					<?php html_inputbox("size", gettext("Size"), $pconfig['size'], gettext("The size of the swap file in MB."), true, 10);?>

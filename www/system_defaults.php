@@ -54,6 +54,10 @@ if ($_POST) {
 <?php if (!empty($rebootmsg)): echo print_info_box($rebootmsg); else:?>
 <form action="system_defaults.php" method="post">
 	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="tabcont">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<?php html_titleline(gettext("Factory Defaults"));?>
 	  <tr>
 	    <td class="tabcont">
 				<p>

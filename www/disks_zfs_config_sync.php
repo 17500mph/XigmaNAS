@@ -538,7 +538,7 @@ if (!$health)
 						<td width="9%" class="listhdrr"><?=gettext("Frag");?></td>
 						<td width="9%" class="listhdrr"><?=gettext("Dedup");?></td>
 						<td width="9%" class="listhdrr"><?=gettext("Health");?></td>
-						<td width="10%" class="listhdrr"><?=gettext("Mount point");?></td>
+						<td width="10%" class="listhdrr"><?=gettext("Mount Point");?></td>
 						<td width="10%" class="listhdrr"><?=gettext("AltRoot");?></td>
 					</tr>
 					<?php foreach ($zfs['pools']['pool'] as $key => $pool):?>
@@ -559,7 +559,7 @@ if (!$health)
 				</table>
 				<br />
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-					<?php html_titleline(gettext('Virtual devices').' ('.count($zfs['vdevices']['vdevice']).')', 5);?>
+					<?php html_titleline(gettext('Virtual Devices').' ('.count($zfs['vdevices']['vdevice']).')', 5);?>
 					<tr>
 						<td width="1%" class="listhdrlr">&nbsp;</td>
 						<td width="15%" class="listhdrr"><?=gettext("Name");?></td>
@@ -587,12 +587,12 @@ if (!$health)
 						<td width="7%" class="listhdrr"><?=gettext("Compression");?></td>
 						<td width="7%" class="listhdrr"><?=gettext("Dedup");?></td>
 						<td width="9%" class="listhdrr"><?=gettext("Sync");?></td>
-						<td width="9%" class="listhdrr"><?=gettext("ACL inherit");?></td>
-						<td width="9%" class="listhdrr"><?=gettext("ACL mode");?></td>
+						<td width="9%" class="listhdrr"><?=gettext("ACL Inherit");?></td>
+						<td width="9%" class="listhdrr"><?=gettext("ACL Mode");?></td>
 						<td width="7%" class="listhdrr"><?=gettext("Canmount");?></td>
 						<td width="8%" class="listhdrr"><?=gettext("Quota");?></td>
 <!--
-						<td width="8%" class="listhdrr"><?=gettext("Extended attributes");?></td>
+						<td width="8%" class="listhdrr"><?=gettext("Extended Attributes");?></td>
 -->
 						<td width="7%" class="listhdrr"><?=gettext("Readonly");?></td>
 						<td width="9%" class="listhdrr"><?=gettext("Snapshot Visibility");?></td>

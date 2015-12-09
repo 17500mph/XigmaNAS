@@ -37,7 +37,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Disks"), gettext("Format"));
+$pgtitle = array(gettext("Disks"), gettext("Management"), gettext("Format"));
 
 // Get list of all supported file systems.
 $a_fst = get_fstype_list();
@@ -178,8 +178,18 @@ $(document).ready(function(){
 //]]>
 </script>
 <form action="disks_init.php" method="post" name="iform" id="iform">
-	<table width="100%" border="0" cellpadding="0" cellspacing="0">
-	  <tr>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+    <td class="tabnavtbl">
+	<ul id="tabnav">
+      		<li class="tabinact"><a href="disks_manage.php"><span><?=gettext("Management");?></span></a></li>
+        	<li class="tabact"><a href="disks_init.php" title="<?=gettext("Reload page");?>" ><span><?=gettext("Format");?></span></a></li>
+      		<li class="tabinact"><a href="disks_manage_smart.php"><span><?=gettext("S.M.A.R.T.");?></span></a></li>
+		<li class="tabinact"><a href="disks_manage_iscsi.php" title="<?=gettext("Reload page");?>"><span><?=gettext("iSCSI Initiator");?></span></a></li>
+	</ul>
+    </td>
+  </tr>
+  <tr>
 	    <td class="tabcont">
 				<?php if(!empty($input_errors)) print_input_errors($input_errors);?>
 				<?php if(!empty($errormsg)) print_error_box($errormsg);?>
@@ -188,7 +198,7 @@ $(document).ready(function(){
 			      <td valign="top" class="vncellreq"><?=gettext("Disk"); ?></td>
 			      <td class="vtable">
 			        <select name="disk" class="formfld" id="disk">
-								<option value=""><?=gettext("Select disk");?></option>
+								<option value=""><?=gettext("Select");?></option>
 								<?php foreach ($a_disk as $diskv):?>
 								<?php if (0 == strcmp($diskv['size'], "NA")) continue;?>
 								<?php if (1 == disks_exists($diskv['devicespecialfile'])) continue;?>
@@ -250,7 +260,7 @@ $(document).ready(function(){
 				}
 				?>
 				<div id="remarks">
-					<?php html_remark("Warning", gettext("Warning"), sprintf(gettext("UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in unpredictable results, file corruption, and loss of data!"), get_product_name()));?>
+					<?php html_remark("Warning", gettext("Warning"), sprintf(gettext("UFS and ZFS are NATIVE filesystems of %s. Attempting to use other filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in unpredictable results, file corruption and the loss of data!"), get_product_name()));?>
 				</div>
 			</td>
 		</tr>

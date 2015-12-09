@@ -167,8 +167,8 @@ function zfsautosnapshot_process_updatenotification($mode, $data) {
 						<td width="20%" class="listhdrr"><?=gettext("Name");?></td>
 						<td width="10%" class="listhdrr"><?=gettext("Recursive");?></td>
 						<td width="10%" class="listhdrr"><?=gettext("Type");?></td>
-						<td width="10%" class="listhdrr"><?=gettext("Schedule time");?></td>
-						<td width="10%" class="listhdrr"><?=gettext("Life time");?></td>
+						<td width="10%" class="listhdrr"><?=gettext("Schedule Time");?></td>
+						<td width="10%" class="listhdrr"><?=gettext("Life Time");?></td>
 						<td width="10%" class="list"></td>
 					</tr>
 					<?php foreach ($a_autosnapshot as $autosnapshotv):?>

@@ -630,11 +630,11 @@ function pool_change() {
   <tr>
     <td class="tabnavtbl">
       <ul id="tabnav2">
-	<li class="tabinact"><a href="disks_zfs_zpool_vdevice.php"><span><?=gettext("Virtual device");?></span></a></li>
+	<li class="tabinact"><a href="disks_zfs_zpool_vdevice.php"><span><?=gettext("Virtual Device");?></span></a></li>
 	<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gettext("Management");?></span></a></li>
 	<li class="tabact"><a href="disks_zfs_zpool_tools.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Tools");?></span></a></li>
 	<li class="tabinact"><a href="disks_zfs_zpool_info.php"><span><?=gettext("Information");?></span></a></li>
-	<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gettext("I/O statistics");?></span></a></li>
+	<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gettext("I/O Statistics");?></span></a></li>
       </ul>
     </td>
   </tr>
@@ -693,7 +693,7 @@ function pool_change() {
 	<?php html_combobox("device_cache", gettext("Cache Device"), NULL, NULL, "", true);?>
 	<?php html_combobox("device_log", gettext("Log Device"), NULL, NULL, "", true);?>
 	<?php html_combobox("device_spare", gettext("Hot Spare"), NULL, NULL, "", true);?>
-	<?php html_combobox("device_vdev", gettext("Virtual device"), NULL, NULL, gettext("Once you add the virtual device, it becomes impossible to delete again. It recommends adding the same number of drives as the existing virtual device."), true);?>
+	<?php html_combobox("device_vdev", gettext("Virtual Device"), NULL, NULL, gettext("Once you add the virtual device, it becomes impossible to delete again. It recommends adding the same number of drives as the existing virtual device."), true);?>
 	</table>
 	<?php if (!$do_action) { ?>
 	<div id="submit">
