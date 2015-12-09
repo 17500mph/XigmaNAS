@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2015-11-29 22:43+0000\n"
+"POT-Creation-Date: 2015-12-09 12:48+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -44,7 +44,7 @@ msgid "%dB / block"
 msgstr ""
 
 #, php-format
-msgid "%s interface"
+msgid "%s Interface"
 msgstr ""
 
 #, php-format
@@ -211,6 +211,12 @@ msgstr ""
 msgid "A valid systctl MIB value."
 msgstr ""
 
+msgid "ACL Inherit"
+msgstr ""
+
+msgid "ACL Mode"
+msgstr ""
+
 msgid "ACL inherit"
 msgstr ""
 
@@ -254,6 +260,9 @@ msgid "ATTRIBUTE NAME"
 msgstr ""
 
 msgid "Access"
+msgstr ""
+
+msgid "Access Mode"
 msgstr ""
 
 msgid "Access Restrictions"
@@ -427,7 +436,7 @@ msgstr ""
 msgid "Advanced Options"
 msgstr ""
 
-msgid "Advanced Power Management"
+msgid "Advanced Settings"
 msgstr ""
 
 msgid "Advanced settings"
@@ -539,7 +548,7 @@ msgstr ""
 msgid "Alternative configuration directory (usually empty)."
 msgstr ""
 
-msgid "Always on"
+msgid "Always On"
 msgstr ""
 
 msgid "Always scan"
@@ -684,7 +693,7 @@ msgstr ""
 msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr ""
 
-msgid "Backup configuration"
+msgid "Backup Configuration"
 msgstr ""
 
 msgid "Backup file"
@@ -699,7 +708,7 @@ msgstr ""
 msgid "Balance algorithm"
 msgstr ""
 
-msgid "Ban list"
+msgid "Ban List"
 msgstr ""
 
 msgid "Ban list rule"
@@ -772,6 +781,9 @@ msgid "BitTorrent"
 msgstr ""
 
 msgid "Blank time"
+msgstr ""
+
+msgid "Block size"
 msgstr ""
 
 msgid "Blocksize"
@@ -873,6 +885,9 @@ msgid "CP949 (Korean)"
 msgstr ""
 
 msgid "CP950 (Traditional Chinese Big5)"
+msgstr ""
+
+msgid "CPU Load"
 msgstr ""
 
 msgid "CPU frequency"
@@ -984,10 +999,13 @@ msgstr ""
 msgid "Clear"
 msgstr ""
 
-msgid "Clear config and Import disks"
+msgid "Clear Config & Import Disks"
 msgstr ""
 
-msgid "Clear config and Import software raid disks"
+msgid "Clear Config & Import Software Raid Disks"
+msgstr ""
+
+msgid "Clear config and Import disks"
 msgstr ""
 
 msgid "Click &quot;Enable firmware upload&quot; below, then choose the embedded image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start the upgrade process."
@@ -1070,7 +1088,7 @@ msgstr ""
 msgid "Confirmation"
 msgstr ""
 
-msgid "Connected FTP users"
+msgid "Connected FTP Users & Status"
 msgstr ""
 
 msgid "Consider replacing this drive"
@@ -1106,13 +1124,16 @@ msgstr ""
 msgid "Controller Authorised network"
 msgstr ""
 
+msgid "Controller IP Address"
+msgstr ""
+
 msgid "Controller IP address"
 msgstr ""
 
-msgid "Controller TCP Port"
+msgid "Controller Model"
 msgstr ""
 
-msgid "Controller model"
+msgid "Controller TCP Port"
 msgstr ""
 
 msgid "Controls power consumption."
@@ -1310,6 +1331,9 @@ msgstr ""
 msgid "DLNA/UPnP MiniDLNA"
 msgstr ""
 
+msgid "DNS"
+msgstr ""
+
 msgid "DNS domain"
 msgstr ""
 
@@ -1317,9 +1341,6 @@ msgid "DNS forwarder"
 msgstr ""
 
 msgid "DNS server is empty."
-msgstr ""
-
-msgid "DNS settings"
 msgstr ""
 
 #, php-format
@@ -1546,6 +1567,9 @@ msgstr ""
 msgid "Destination"
 msgstr ""
 
+msgid "Destination Share"
+msgstr ""
+
 msgid "Destination email address."
 msgstr ""
 
@@ -1595,13 +1619,13 @@ msgstr ""
 msgid "Device IP"
 msgstr ""
 
+msgid "Device Model"
+msgstr ""
+
 msgid "Device Pass-through"
 msgstr ""
 
 msgid "Device Serial"
-msgstr ""
-
-msgid "Device model"
 msgstr ""
 
 msgid "Device polling"
@@ -1855,9 +1879,6 @@ msgstr ""
 msgid "Domain name, e.g. example.com."
 msgstr ""
 
-msgid "Don't Erase MBR"
-msgstr ""
-
 msgid "Don't erase the MBR (useful for some RAID controller cards)"
 msgstr ""
 
@@ -1877,6 +1898,9 @@ msgid "Double-parity RAID-Z"
 msgstr ""
 
 msgid "Download"
+msgstr ""
+
+msgid "Download Configuration"
 msgstr ""
 
 msgid "Download bandwidth"
@@ -1940,6 +1964,9 @@ msgid "ERROR:"
 msgstr ""
 
 msgid "Edit"
+msgstr ""
+
+msgid "Edit File"
 msgstr ""
 
 msgid "Edit Host"
@@ -2041,10 +2068,10 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-msgid "Email Report"
+msgid "Email Notifications"
 msgstr ""
 
-msgid "Email notification"
+msgid "Email Report"
 msgstr ""
 
 msgid "Email report"
@@ -2310,6 +2337,9 @@ msgstr ""
 msgid "Export all the directories in the specified path."
 msgstr ""
 
+msgid "Extended Attributes"
+msgstr ""
+
 msgid "Extended attributes"
 msgstr ""
 
@@ -2438,13 +2468,13 @@ msgstr ""
 msgid "File Manager"
 msgstr ""
 
+msgid "File Path"
+msgstr ""
+
 msgid "File Transfer Protocol"
 msgstr ""
 
 msgid "File not found"
-msgstr ""
-
-msgid "File path"
 msgstr ""
 
 #, php-format
@@ -2472,6 +2502,9 @@ msgstr ""
 msgid "Fileserver"
 msgstr ""
 
+msgid "Filesystem"
+msgstr ""
+
 msgid "Filter"
 msgstr ""
 
@@ -2481,7 +2514,7 @@ msgstr ""
 msgid "Firewall"
 msgstr ""
 
-msgid "Firewall rule"
+msgid "Firewall Rule Settings"
 msgstr ""
 
 msgid "Firmware"
@@ -2523,9 +2556,6 @@ msgstr ""
 msgid "Format"
 msgstr ""
 
-msgid "Format disk"
-msgstr ""
-
 msgid "Format the report for phpBB forum."
 msgstr ""
 
@@ -2536,9 +2566,6 @@ msgid "Frag"
 msgstr ""
 
 msgid "Free"
-msgstr ""
-
-msgid "Free disk space"
 msgstr ""
 
 msgid "French"
@@ -2658,13 +2685,13 @@ msgstr ""
 msgid "HAST (Highly Available Storage)"
 msgstr ""
 
+msgid "HAST Information & Status Configured Resources"
+msgstr ""
+
+msgid "HAST Resource"
+msgstr ""
+
 msgid "HAST disabled"
-msgstr ""
-
-msgid "HAST resource"
-msgstr ""
-
-msgid "HAST status of the configured resources"
 msgstr ""
 
 msgid "HAST volume"
@@ -2676,10 +2703,10 @@ msgstr ""
 msgid "HDD producers implement a Fly Height Monitor that attempts to provide additional protections for write operations by detecting when a recording head is flying outside its normal operating range. If an unsafe fly height condition is encountered, the write process is stopped, and the information is rewritten or reallocated to a safe region of the hard drive. This attribute indicates the count of these errors detected over the lifetime of the drive. This feature is implemented in most modern Seagate drives."
 msgstr ""
 
-msgid "HTTP Proxy"
+msgid "HDD standby time"
 msgstr ""
 
-msgid "Hard disk standby time"
+msgid "HTTP Proxy"
 msgstr ""
 
 msgid "Hardware"
@@ -2767,10 +2794,10 @@ msgstr ""
 msgid "Hungarian"
 msgstr ""
 
-msgid "I/O Timeout"
+msgid "I/O Statistics"
 msgstr ""
 
-msgid "I/O statistics"
+msgid "I/O Timeout"
 msgstr ""
 
 #, php-format
@@ -2784,6 +2811,9 @@ msgid "IG"
 msgstr ""
 
 msgid "IP"
+msgstr ""
+
+msgid "IP Address"
 msgstr ""
 
 msgid "IP address"
@@ -2884,6 +2914,12 @@ msgstr ""
 msgid "Import"
 msgstr ""
 
+msgid "Import Disks"
+msgstr ""
+
+msgid "Import Software Raid Disks"
+msgstr ""
+
 msgid "Import disks"
 msgstr ""
 
@@ -2894,9 +2930,6 @@ msgid "Import firewall rules."
 msgstr ""
 
 msgid "Import on-disk ZFS config"
-msgstr ""
-
-msgid "Import software raid disks"
 msgstr ""
 
 msgid "In"
@@ -3107,7 +3140,7 @@ msgstr ""
 msgid "JBOD"
 msgstr ""
 
-msgid "JBOD information and status"
+msgid "JBOD Information & Status"
 msgstr ""
 
 msgid "January February March April May June July August September October November December"
@@ -3152,7 +3185,7 @@ msgstr ""
 msgid "LCDproc"
 msgstr ""
 
-msgid "LCDproc (client)"
+msgid "LCDproc (Client)"
 msgstr ""
 
 msgid "LDAP"
@@ -3203,22 +3236,22 @@ msgstr ""
 msgid "Leave this field empty to use default settings."
 msgstr ""
 
-msgid "Level 1 - Minimum power usage with Standby (spindown)"
+msgid "Level 1 - Minimum Power Usage with Standby (Spindown)"
 msgstr ""
 
-msgid "Level 127 - Intermediate power usage with Standby"
+msgid "Level 127 - Intermediate Power Usage with Standby"
 msgstr ""
 
-msgid "Level 128 - Minimum power usage without Standby (no spindown)"
+msgid "Level 128 - Minimum Power Usage without Standby (No Spindown)"
 msgstr ""
 
-msgid "Level 192 - Intermediate power usage without Standby"
+msgid "Level 192 - Intermediate Power Usage without Standby"
 msgstr ""
 
-msgid "Level 254 - Maximum performance, maximum power usage"
+msgid "Level 254 - Maximum Performance, Maximum Power Usage"
 msgstr ""
 
-msgid "Level 64 - Intermediate power usage with Standby"
+msgid "Level 64 - Intermediate Power Usage with Standby"
 msgstr ""
 
 #, php-format
@@ -3229,6 +3262,9 @@ msgid "License"
 msgstr ""
 
 msgid "License & Credits"
+msgstr ""
+
+msgid "Life Time"
 msgstr ""
 
 msgid "Life time"
@@ -3252,19 +3288,16 @@ msgstr ""
 msgid "List"
 msgstr ""
 
+msgid "List Detected Disks"
+msgstr ""
+
+msgid "List Imported Users"
+msgstr ""
+
+msgid "List Mount Points"
+msgstr ""
+
 msgid "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP (AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP (Temporal Key Integrity Protocol, IEEE 802.11i/D7.0)."
-msgstr ""
-
-msgid "List of available target name on all configured iSCSI targets"
-msgstr ""
-
-msgid "List of detected disks"
-msgstr ""
-
-msgid "List of imported users"
-msgstr ""
-
-msgid "List of mount points"
 msgstr ""
 
 msgid "Load"
@@ -3289,6 +3322,9 @@ msgid "Local"
 msgstr ""
 
 msgid "Local Master Browser"
+msgstr ""
+
+msgid "Local Share (Destination)"
 msgstr ""
 
 msgid "Local User"
@@ -3360,11 +3396,11 @@ msgstr ""
 msgid "Logical Unit Controller IP address (%s by default)"
 msgstr ""
 
-#, php-format
-msgid "Logical Unit Controller TCP port (%d by default)"
+msgid "Logical Unit Controller Login Information"
 msgstr ""
 
-msgid "Logical Unit Controller login information"
+#, php-format
+msgid "Logical Unit Controller TCP port (%d by default)"
 msgstr ""
 
 msgid "Logical Unit Type mapped to LUN."
@@ -3394,6 +3430,9 @@ msgstr ""
 msgid "MAC address"
 msgstr ""
 
+msgid "MBR Erase"
+msgstr ""
+
 msgid "MBR partition"
 msgstr ""
 
@@ -3412,7 +3451,7 @@ msgstr ""
 msgid "MS Active Directory"
 msgstr ""
 
-msgid "MS Active Directory informations"
+msgid "MS Active Directory Information & Status"
 msgstr ""
 
 msgid "MS Domain"
@@ -3497,6 +3536,9 @@ msgstr ""
 msgid "MaxRecvDataSegmentLength"
 msgstr ""
 
+msgid "Maximum Performance, Maximum Acoustic Output"
+msgstr ""
+
 msgid "Maximum connections"
 msgstr ""
 
@@ -3533,9 +3575,6 @@ msgstr ""
 msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
 msgstr ""
 
-msgid "Maximum performance, maximum acoustic output"
-msgstr ""
-
 msgid "Maximum relative humidity seen (percent)"
 msgstr ""
 
@@ -3551,10 +3590,13 @@ msgstr ""
 msgid "Media library"
 msgstr ""
 
-msgid "Medium acoustic output"
+msgid "Medium Acoustic Output"
 msgstr ""
 
 msgid "Member Interface"
+msgstr ""
+
+msgid "Memory Usage"
 msgstr ""
 
 msgid "Memory usage"
@@ -3587,6 +3629,9 @@ msgstr ""
 msgid "Minimum"
 msgstr ""
 
+msgid "Minimum Performance, Minimum Acoustic Output"
+msgstr ""
+
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr ""
 
@@ -3597,9 +3642,6 @@ msgid "Minimum frequency"
 msgstr ""
 
 msgid "Minimum incoming voltage seen"
-msgstr ""
-
-msgid "Minimum performance, Minimum acoustic output"
 msgstr ""
 
 msgid "Minimum relative humidity seen (percent)"
@@ -3626,10 +3668,10 @@ msgstr ""
 msgid "Model"
 msgstr ""
 
-msgid "Model extra"
+msgid "Model Extra"
 msgstr ""
 
-msgid "Model name"
+msgid "Model Name"
 msgstr ""
 
 msgid "Modified"
@@ -3847,13 +3889,13 @@ msgstr ""
 msgid "Node A IP address"
 msgstr ""
 
-msgid "Node A settings"
+msgid "Node A Settings"
 msgstr ""
 
 msgid "Node B IP address"
 msgstr ""
 
-msgid "Node B settings"
+msgid "Node B Settings"
 msgstr ""
 
 msgid "Node Base"
@@ -3992,7 +4034,7 @@ msgstr ""
 msgid "Once you add the virtual device, it becomes impossible to delete again. It recommends adding the same number of drives as the existing virtual device."
 msgstr ""
 
-msgid "Online version check"
+msgid "Online"
 msgstr ""
 
 msgid "Only allow anonymous users. Use this on a public FTP site with no remote FTP access to real accounts."
@@ -4239,7 +4281,7 @@ msgstr ""
 msgid "Pool"
 msgstr ""
 
-msgid "Pool information and status"
+msgid "Pool Information & Status"
 msgstr ""
 
 msgid "Pools"
@@ -4300,6 +4342,9 @@ msgstr ""
 msgid "Power Mode"
 msgstr ""
 
+msgid "Power management"
+msgstr ""
+
 msgid "Power mode"
 msgstr ""
 
@@ -4313,7 +4358,7 @@ msgid "PreInit"
 msgstr ""
 
 #, php-format
-msgid "Predefined system groups"
+msgid "Predefined Groups"
 msgstr ""
 
 msgid "Preferred"
@@ -4364,7 +4409,7 @@ msgstr ""
 msgid "Processes"
 msgstr ""
 
-msgid "Processes information"
+msgid "Processes Information"
 msgstr ""
 
 msgid "Product ID"
@@ -4385,7 +4430,7 @@ msgstr ""
 msgid "Proxy"
 msgstr ""
 
-msgid "Puts the hard disk into standby mode when the selected amount of time after the last hard disk access has been elapsed."
+msgid "Puts the disk into standby mode when the selected amount of time after the last disk access has been elapsed."
 msgstr ""
 
 msgid "Queue Depth"
@@ -4400,25 +4445,25 @@ msgstr ""
 msgid "RAID 0"
 msgstr ""
 
-msgid "RAID 0 information and status"
+msgid "RAID 0 Information & Status"
 msgstr ""
 
 msgid "RAID 0/1/5"
 msgstr ""
 
-msgid "RAID 0/1/5 information and status"
+msgid "RAID 0/1/5 Information & Status"
 msgstr ""
 
 msgid "RAID 1"
 msgstr ""
 
-msgid "RAID 1 information and status"
+msgid "RAID 1 Information & Status"
 msgstr ""
 
 msgid "RAID 5"
 msgstr ""
 
-msgid "RAID 5 information and status"
+msgid "RAID 5 Information & Status"
 msgstr ""
 
 msgid "RAID0"
@@ -4451,7 +4496,7 @@ msgstr ""
 msgid "RSYNC Client"
 msgstr ""
 
-msgid "RSYNC Client informations"
+msgid "RSYNC Client Information & Status"
 msgstr ""
 
 msgid "RSYNC events"
@@ -4541,10 +4586,13 @@ msgstr ""
 msgid "Remaining battery runtime"
 msgstr ""
 
-msgid "Remote Rsync Server"
+msgid "Remote Address"
 msgstr ""
 
-msgid "Remote address"
+msgid "Remote Module (Source)"
+msgstr ""
+
+msgid "Remote Rsync Server"
 msgstr ""
 
 msgid "Remote module (source)"
@@ -4589,10 +4637,10 @@ msgstr ""
 msgid "Required"
 msgstr ""
 
-msgid "Rescan database in progress"
+msgid "Rescan Disks"
 msgstr ""
 
-msgid "Rescan disks"
+msgid "Rescan database in progress"
 msgstr ""
 
 msgid "Rescan interval"
@@ -4617,6 +4665,9 @@ msgid "Resource name"
 msgstr ""
 
 msgid "Resources"
+msgstr ""
+
+msgid "Restore Configuration"
 msgstr ""
 
 msgid "Restore configuration"
@@ -4661,7 +4712,7 @@ msgstr ""
 msgid "Root bind password"
 msgstr ""
 
-msgid "Rotation rate"
+msgid "Rotation Rate"
 msgstr ""
 
 msgid "Round-robin read"
@@ -4682,7 +4733,7 @@ msgstr ""
 msgid "Rsync"
 msgstr ""
 
-msgid "Rsync job"
+msgid "Rsync Job"
 msgstr ""
 
 msgid "Rule"
@@ -4765,6 +4816,12 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
+msgid "Save & Restart"
+msgstr ""
+
+msgid "Save File"
+msgstr ""
+
 msgid "Save and Restart"
 msgstr ""
 
@@ -4786,22 +4843,25 @@ msgstr ""
 msgid "Scan type"
 msgstr ""
 
+msgid "Schedule Time"
+msgstr ""
+
 msgid "Schedule time"
 msgstr ""
 
 msgid "Scheduled"
 msgstr ""
 
+msgid "Scheduled Reboot"
+msgstr ""
+
 msgid "Scheduled Self-Test"
 msgstr ""
 
-msgid "Scheduled reboot"
+msgid "Scheduled Shutdown"
 msgstr ""
 
-msgid "Scheduled self-tests"
-msgstr ""
-
-msgid "Scheduled shutdown"
+msgid "Scheduled tests"
 msgstr ""
 
 msgid "Secondary"
@@ -4817,6 +4877,9 @@ msgid "Security"
 msgstr ""
 
 msgid "See attribute E8."
+msgstr ""
+
+msgid "Select"
 msgstr ""
 
 msgid "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol Secure (HTTPS) for the WebGUI."
@@ -4859,13 +4922,19 @@ msgstr ""
 msgid "Selected file isn't an valid ISO file."
 msgstr ""
 
-msgid "Self-Monitoring, Analysis and Reporting Technology"
+msgid "Self-Monitoring, Analysis & Reporting Technology"
+msgstr ""
+
+msgid "Self-tests Management"
 msgstr ""
 
 msgid "Send Buffer Size"
 msgstr ""
 
 msgid "Send Command!"
+msgstr ""
+
+msgid "Send Now"
 msgstr ""
 
 msgid "Send a TEST warning email on startup."
@@ -4881,6 +4950,9 @@ msgid "Separate email addresses by semi-colon."
 msgstr ""
 
 msgid "Serial Console"
+msgstr ""
+
+msgid "Serial Number"
 msgstr ""
 
 msgid "Serial number"
@@ -4979,16 +5051,16 @@ msgstr ""
 msgid "Shock During Write."
 msgstr ""
 
+msgid "Show Process Information"
+msgstr ""
+
 msgid "Show RAW UPS Info"
 msgstr ""
 
+msgid "Show UPS Information"
+msgstr ""
+
 msgid "Show log entries in reverse order (newest entries on top)"
-msgstr ""
-
-msgid "Show process information"
-msgstr ""
-
-msgid "Show ups information"
 msgstr ""
 
 msgid "Shutdown"
@@ -5065,6 +5137,9 @@ msgstr ""
 msgid "Source"
 msgstr ""
 
+msgid "Source Share"
+msgstr ""
+
 msgid "Source directory to be synchronized."
 msgstr ""
 
@@ -5072,6 +5147,9 @@ msgid "Source port"
 msgstr ""
 
 msgid "Source share"
+msgstr ""
+
+msgid "Space Usage"
 msgstr ""
 
 msgid "Space Used"
@@ -5096,6 +5174,9 @@ msgid "Specified path is NFSv4 root directory."
 msgstr ""
 
 msgid "Specifies how many servers to create."
+msgstr ""
+
+msgid "Specifies how the volume should be exposed to the OS."
 msgstr ""
 
 msgid "Specifies that the file system should be exported read-only."
@@ -5131,10 +5212,10 @@ msgstr ""
 msgid "Standard"
 msgstr ""
 
-msgid "Standby - Check the device unless it is in SLEEP or STANDBY mode. In these modes most disks are not spinning, so if you want to prevent a laptop disk from spinning up each poll, this is probably what you want."
+msgid "Standby"
 msgstr ""
 
-msgid "Standby time"
+msgid "Standby - Check the device unless it is in SLEEP or STANDBY mode. In these modes most disks are not spinning, so if you want to prevent a laptop disk from spinning up each poll, this is probably what you want."
 msgstr ""
 
 msgid "Start"
@@ -5225,13 +5306,13 @@ msgstr ""
 msgid "Swap"
 msgstr ""
 
+msgid "Swap Information & Status"
+msgstr ""
+
+msgid "Swap Memory"
+msgstr ""
+
 msgid "Swap disabled"
-msgstr ""
-
-msgid "Swap memory"
-msgstr ""
-
-msgid "Swap status"
 msgstr ""
 
 msgid "Swap usage"
@@ -5278,22 +5359,19 @@ msgstr ""
 msgid "System Beep"
 msgstr ""
 
+msgid "System Information"
+msgstr ""
+
+msgid "System Load"
+msgstr ""
+
 msgid "System bios"
 msgstr ""
 
 msgid "System events"
 msgstr ""
 
-msgid "System firewall"
-msgstr ""
-
 msgid "System info"
-msgstr ""
-
-msgid "System information"
-msgstr ""
-
-msgid "System load"
 msgstr ""
 
 msgid "System log"
@@ -5397,10 +5475,10 @@ msgstr ""
 msgid "Temperature"
 msgstr ""
 
-msgid "Temperature alarm (enabled/disabled)"
+msgid "Temperature Monitoring"
 msgstr ""
 
-msgid "Temperature monitoring"
+msgid "Temperature alarm (enabled/disabled)"
 msgstr ""
 
 msgid "Temperature threshold high (degrees C)"
@@ -6076,7 +6154,7 @@ msgstr ""
 msgid "This WLAN cannot be deleted because it is still being used as an interface."
 msgstr ""
 
-msgid "This allows you to lower the power consumption of the drive, at the expense of performance."
+msgid "This allows you to lower the power consumption of the disk, at the expense of performance."
 msgstr ""
 
 msgid "This allows you to set how loud the drive is while it's operating."
@@ -6085,7 +6163,7 @@ msgstr ""
 msgid "This allows you to set the file system for preformatted hard disks containing data."
 msgstr ""
 
-msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
+msgid "This allows you to set the transfer mode for ATA/IDE disks."
 msgstr ""
 
 msgid "This attribute indicates the count of full hard disk power on/off cycles."
@@ -6403,10 +6481,10 @@ msgstr ""
 msgid "Transcoding"
 msgstr ""
 
-msgid "Transfer mode"
+msgid "Transfer Rate"
 msgstr ""
 
-msgid "Transfer rate"
+msgid "Transfer mode"
 msgstr ""
 
 msgid "Trap host"
@@ -6461,6 +6539,10 @@ msgid "UCD-SNMP-MIB"
 msgstr ""
 
 msgid "UFS"
+msgstr ""
+
+#, php-format
+msgid "UFS and ZFS are NATIVE filesystems of %s. Attempting to use other filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in unpredictable results, file corruption and the loss of data!"
 msgstr ""
 
 #, php-format
@@ -6668,11 +6750,11 @@ msgstr ""
 msgid "User"
 msgstr ""
 
-msgid "User ID"
+#, php-format
+msgid "User Defined Groups"
 msgstr ""
 
-#, php-format
-msgid "User defined groups"
+msgid "User ID"
 msgstr ""
 
 msgid "User full name."
@@ -6751,6 +6833,12 @@ msgstr ""
 msgid "Video"
 msgstr ""
 
+msgid "Virtual Device"
+msgstr ""
+
+msgid "Virtual Devices"
+msgstr ""
+
 msgid "Virtual Host ID"
 msgstr ""
 
@@ -6758,9 +6846,6 @@ msgid "Virtual IP address"
 msgstr ""
 
 msgid "Virtual Machine"
-msgstr ""
-
-msgid "Virtual device"
 msgstr ""
 
 msgid "Virtual devices"
@@ -6785,6 +6870,9 @@ msgid "Volume label"
 msgstr ""
 
 msgid "Volume label of the new file system."
+msgstr ""
+
+msgid "Volume mode"
 msgstr ""
 
 msgid "Volumes"
@@ -6988,25 +7076,28 @@ msgstr ""
 msgid "ZFS ACL"
 msgstr ""
 
-msgid "ZFS dataset information and status"
+msgid "ZFS Dataset Information & Status"
 msgstr ""
 
-msgid "ZFS dataset properties"
+msgid "ZFS Dataset Properties"
 msgstr ""
 
-msgid "ZFS snapshot information and status"
+msgid "ZFS Snapshot Information & Status"
 msgstr ""
 
-msgid "ZFS snapshot properties"
+msgid "ZFS Snapshot Properties"
+msgstr ""
+
+msgid "ZFS Volume Information & Status"
+msgstr ""
+
+msgid "ZFS Volume Properties"
 msgstr ""
 
 msgid "ZFS volume"
 msgstr ""
 
-msgid "ZFS volume information and status"
-msgstr ""
-
-msgid "ZFS volume properties"
+msgid "ZFS volume block size. This value can not be changed after creation. Empty as default."
 msgstr ""
 
 msgid "ZFS volume size. To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."
@@ -7080,6 +7171,9 @@ msgstr ""
 msgid "iSCSI Target Logical Unit Controller"
 msgstr ""
 
+msgid "iSCSI Targets Information & Status"
+msgstr ""
+
 #, php-format
 msgid "iSCSI initial parameter (%d by default)."
 msgstr ""
@@ -7109,9 +7203,6 @@ msgid "minimum (power saving)"
 msgstr ""
 
 msgid "minute(s)"
-msgstr ""
-
-msgid "minutes"
 msgstr ""
 
 msgid "mirroring"
