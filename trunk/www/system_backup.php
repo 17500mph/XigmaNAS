@@ -189,7 +189,7 @@ $(document).ready(function(){
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 			  <table width="100%" border="0" cellspacing="0" cellpadding="6">
 			    <tr>
-			      <td colspan="2" class="listtopic"><?=gettext("Backup configuration");?></td>
+			      <td colspan="2" class="listtopic"><?=gettext("Backup Configuration");?></td>
 			    </tr>
 			    <tr>
 					<td width="22%" valign="top" class="vncell"><?=gettext("Encryption");?></td>
@@ -212,7 +212,7 @@ $(document).ready(function(){
 							<?php html_remark("note", gettext("Note"), sprintf("%s", /*gettext("Current administrator password is used for encryption.")*/ gettext("Encrypted configuration is automatically gzipped.")));?>
 						</div>
 						<div id="submit">
-							<input name="Submit" type="submit" class="formbtn" id="download" value="<?=gettext("Download configuration");?>" />
+							<input name="Submit" type="submit" class="formbtn" id="download" value="<?=gettext("Download Configuration");?>" />
 						</div>
 					</td>
 			    </tr>
@@ -220,7 +220,7 @@ $(document).ready(function(){
 			      <td colspan="2" class="list" height="12"></td>
 			    </tr>
 			    <tr>
-			      <td colspan="2" class="listtopic"><?=gettext("Restore configuration");?></td>
+			      <td colspan="2" class="listtopic"><?=gettext("Restore Configuration");?></td>
 			    </tr>
 			    <tr id="decrypt_password_tr">
 				<td width="22%" valign="top" class="vncell"><label for="decrypt_password"><?=gettext("Decrypt password");?></label></td>
@@ -239,7 +239,7 @@ $(document).ready(function(){
 						<input name="conffile" type="file" class="formfld" id="conffile" size="40" />
 						</div>
 						<div id="submit">
-						<input name="Submit" type="submit" class="formbtn" id="restore" value="<?=gettext("Restore configuration");?>" />
+						<input name="Submit" type="submit" class="formbtn" id="restore" value="<?=gettext("Restore Configuration");?>" />
 						</div>
 					</td>
 			    </tr>

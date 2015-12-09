@@ -157,7 +157,7 @@ function get_next_rulenumber() {
       <form action="system_firewall_edit.php" method="post" name="iform" id="iform">
       	<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
         <table width="100%" border="0" cellpadding="6" cellspacing="0">
-        	<?php html_titleline_checkbox("enable", gettext("Firewall rule"), !empty($pconfig['enable']) ? true : false, gettext("Enable"));?>
+        	<?php html_titleline_checkbox("enable", gettext("Firewall Rule Settings"), !empty($pconfig['enable']) ? true : false, gettext("Enable"));?>
         	<?php html_inputbox("ruleno", gettext("Rule number"), $pconfig['ruleno'], gettext("The rule number determines the order of the rule."), true, 10);?>
 					<?php html_combobox("action", gettext("Action"), $pconfig['action'], array("allow" => gettext("Allow"), "deny" => gettext("Deny"), "unreach host" => gettext("Reject")), gettext("The action which will be executed when the packet match the criteria specified below."), true);?>
 					<?php $a_interface = array("" => gettext("All"), get_ifname($config['interfaces']['lan']['if']) => "LAN"); for ($i = 1; isset($config['interfaces']['opt' . $i]); ++$i) { $a_interface[$config['interfaces']['opt' . $i]['if']] = $config['interfaces']['opt' . $i]['descr']; }?>

@@ -207,7 +207,7 @@ function enable_change(enable_change) {
 				<?php if ($savemsg) print_info_box($savemsg);?>
 				<?php if (updatenotify_exists("firewall")) print_config_change_box();?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline_checkbox("enable", gettext("System firewall"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "enable_change(false)");?>
+					<?php html_titleline_checkbox("enable", gettext("Firewall"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "enable_change(false)");?>
 					<tr>
 						<td width="22%" valign="top" class="vncell"><?=gettext("Rules");?></td>
 						<td width="78%" class="vtable">
@@ -292,7 +292,7 @@ function enable_change(enable_change) {
 					</tr>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save and Restart");?>" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" />
 				</div>
 			</td>
 		</tr>

@@ -350,7 +350,7 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 			<?php html_text("Current version", gettext("Current Version:"), sprintf("%s %s (%s)", get_product_name(), get_product_version(), get_product_revision()));?>
 			<?php html_separator();?>
 			<?php if (isset($fwinfo) && $fwinfo) {
-				html_titleline(gettext("Online version check"));
+				html_titleline(gettext("Online"));
 				echo "<tr id='fwinfo'><td class='vtable' colspan='2'>";
 				echo "{$fwinfo}";
 				echo "</td></tr>\n";

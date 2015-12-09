@@ -181,16 +181,17 @@ function smart_enable_change() {
 </script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabact"><a href="disks_manage.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Management");?></span></a></li>
-				<li class="tabinact"><a href="disks_manage_smart.php"><span><?=gettext("S.M.A.R.T.");?></span></a></li>
-				<li class="tabinact"><a href="disks_manage_iscsi.php"><span><?=gettext("iSCSI Initiator");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td class="tabcont">
+	<td class="tabnavtbl">
+	<ul id="tabnav">
+		<li class="tabact"><a href="disks_manage.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Management");?></span></a></li>
+		<li class="tabinact"><a href="disks_init.php"><span><?=gettext("Format");?></span></a></li>
+		<li class="tabinact"><a href="disks_manage_smart.php"><span><?=gettext("S.M.A.R.T.");?></span></a></li>
+		<li class="tabinact"><a href="disks_manage_iscsi.php"><span><?=gettext("iSCSI Initiator");?></span></a></li>
+	</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="tabcont">
 			<form action="disks_manage_edit.php" method="post" name="iform" id="iform">
 				<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
@@ -208,12 +209,12 @@ function smart_enable_change() {
 					</tr>
 					<?php html_inputbox("desc", gettext("Description"), $pconfig['desc'], gettext("You may enter a description here for your reference."), false, 40);?>
 					<?php $options = array("auto" => "Auto", "PIO0" => "PIO0", "PIO1" => "PIO1", "PIO2" => "PIO2", "PIO3" => "PIO3", "PIO4" => "PIO4", "WDMA2" => "WDMA2", "UDMA2" => "UDMA-33", "UDMA4" => "UDMA-66", "UDMA5" => "UDMA-100", "UDMA6" => "UDMA-133");?>
-					<?php html_combobox("transfermode", gettext("Transfer mode"), $pconfig['transfermode'], $options, gettext("This allows you to set the transfer mode for ATA/IDE hard drives."), false);?>
-					<?php $options = array(0 => gettext("Always on")); foreach(array(5, 10, 20, 30, 60, 120, 180, 240, 300, 360) as $vsbtime) { $options[$vsbtime] = sprintf("%d %s", $vsbtime, gettext("minutes")); }?>
-					<?php html_combobox("harddiskstandby", gettext("Hard disk standby time"), $pconfig['harddiskstandby'], $options, gettext("Puts the hard disk into standby mode when the selected amount of time after the last hard disk access has been elapsed."), false);?>
-					<?php $options = array(0 => gettext("Disabled"), 1 => gettext("Level 1 - Minimum power usage with Standby (spindown)"), 64 => gettext("Level 64 - Intermediate power usage with Standby"), 127 => gettext("Level 127 - Intermediate power usage with Standby"), 128 => gettext("Level 128 - Minimum power usage without Standby (no spindown)"), 192 => gettext("Level 192 - Intermediate power usage without Standby"), 254 => gettext("Level 254 - Maximum performance, maximum power usage"));?>
-					<?php html_combobox("apm", gettext("Advanced Power Management"), $pconfig['apm'], $options, gettext("This allows you to lower the power consumption of the drive, at the expense of performance."), false);?>
-					<?php $options = array(0 => gettext("Disabled"), 1 => gettext("Minimum performance, Minimum acoustic output"), 64 => gettext("Medium acoustic output"), 127 => gettext("Maximum performance, maximum acoustic output"));?>
+					<?php html_combobox("transfermode", gettext("Transfer mode"), $pconfig['transfermode'], $options, gettext("This allows you to set the transfer mode for ATA/IDE disks."), false);?>
+					<?php $options = array(0 => gettext("Always On")); foreach(array(5, 10, 20, 30, 60, 120, 180, 240, 300, 360) as $vsbtime) { $options[$vsbtime] = sprintf("%d %s", $vsbtime, gettext("Minutes")); }?>
+					<?php html_combobox("harddiskstandby", gettext("HDD standby time"), $pconfig['harddiskstandby'], $options, gettext("Puts the disk into standby mode when the selected amount of time after the last disk access has been elapsed."), false);?>
+					<?php $options = array(0 => gettext("Disabled"), 1 => gettext("Level 1 - Minimum Power Usage with Standby (Spindown)"), 64 => gettext("Level 64 - Intermediate Power Usage with Standby"), 127 => gettext("Level 127 - Intermediate Power Usage with Standby"), 128 => gettext("Level 128 - Minimum Power Usage without Standby (No Spindown)"), 192 => gettext("Level 192 - Intermediate Power Usage without Standby"), 254 => gettext("Level 254 - Maximum Performance, Maximum Power Usage"));?>
+					<?php html_combobox("apm", gettext("Power management"), $pconfig['apm'], $options, gettext("This allows you to lower the power consumption of the disk, at the expense of performance."), false);?>
+					<?php $options = array(0 => gettext("Disabled"), 1 => gettext("Minimum Performance, Minimum Acoustic Output"), 64 => gettext("Medium Acoustic Output"), 127 => gettext("Maximum Performance, Maximum Acoustic Output"));?>
 					<?php html_combobox("acoustic", gettext("Acoustic level"), $pconfig['acoustic'], $options, gettext("This allows you to set how loud the drive is while it's operating."), false);?>
 					<?php html_checkbox("smart_enable", gettext("S.M.A.R.T."), !empty($pconfig['smart_enable']) ? true : false, gettext("Activate S.M.A.R.T. monitoring for this device."), "", false, "smart_enable_change()");?>
 					<?php html_inputbox("smart_extraoptions", gettext("S.M.A.R.T. extra options"), $pconfig['smart_extraoptions'], gettext("Extra options (usually empty).") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://smartmontools.sourceforge.net/man/smartd.conf.5.html"), false, 40);?>

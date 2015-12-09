@@ -80,13 +80,13 @@ function zfs_dataset_display_properties() {
 	<tr>
 		<td class="tabcont">
 			<table width="100%" border="0">
-				<?php html_titleline(gettext("ZFS dataset information and status"));?>
+				<?php html_titleline(gettext("ZFS Dataset Information & Status"));?>
 				<tr>
 					<td class="listt">
 						<pre><span id="zfs_dataset_list"><?=zfs_dataset_display_list();?></span></pre>
 					</td>
 				</tr>
-				<?php html_titleline(gettext("ZFS dataset properties"));?>
+				<?php html_titleline(gettext("ZFS Dataset Properties"));?>
 				<tr>
 					<td class="listt">
 						<pre><span id="zfs_dataset_properties"><?=zfs_dataset_display_properties();?></span></pre>
