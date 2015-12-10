@@ -461,7 +461,7 @@ $(document).ready(function(){
 	  <td width="10%" class="listhdrr"><?=gettext("Mem");?></td>
 	  <td width="10%" class="listhdrr"><?=gettext("VCPUs");?></td>
 	  <td width="10%" class="listhdrr"><?=gettext("VM Type");?></td>
-	  <td width="10%" class="listhdrr"><?=gettext("VNC display");?></td>
+	  <td width="10%" class="listhdrr"><?=gettext("VNC Display");?></td>
 	  <td width="10%" class="listhdrr"><?=gettext("DomID");?></td>
 	  <td width="25%" class="listhdrr"><?=gettext("Command");?></td>
 	  <td width="5%" class="list"></td>
