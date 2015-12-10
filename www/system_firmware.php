@@ -391,7 +391,7 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 					</div>
 					<br />
 					<div id="remarks">
-					<?php html_remark("warning", gettext("Warning"), sprintf(gettext("DO NOT abort the firmware upgrade process once it has started.<br />DO NOT try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br />It is recommended that you <a href='%s'>Backup</a> the server configuration before doing a upgrade."), get_product_name(), "system_backup.php"));?>
+					<?php html_remark("warning", gettext("Warning"), sprintf(gettext("DO NOT abort the firmware upgrade process once it has started.<br />DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br />It is recommended that you <a href='%s'>Backup</a> the server configuration before doing a upgrade."), get_product_name(), $g['arch'], "system_backup.php"));?>
 					</div>
 					<?php endif;?>
 				<?php else:?>
