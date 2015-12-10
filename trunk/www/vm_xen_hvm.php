@@ -184,7 +184,7 @@ if ($_POST) {
 		$reqdfieldst = explode(" ", "numericint string");
 		*/
 		$reqdfields = explode(" ", "vncdisplay");
-		$reqdfieldsn = array(gettext("VNC display"));
+		$reqdfieldsn = array(gettext("VNC Display"));
 		$reqdfieldst = explode(" ", "numericint");
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
@@ -210,7 +210,7 @@ if ($_POST) {
 		}
 		$index = array_search_ex($_POST['vncdisplay'], $config['xen']['vms']['param'], "vncdisplay");
 		if ($index !== false) {
-			$input_errors[] = sprintf(gettext("The attribute '%s' already exists."), gettext("VNC display"));
+			$input_errors[] = sprintf(gettext("The attribute '%s' already exists."), gettext("VNC Display"));
 		}
 	}
 
