@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-09 16:19+0000\n"
-"PO-Revision-Date: 2015-12-10 09:38+0000\n"
+"POT-Creation-Date: 2015-12-10 23:13+0000\n"
+"PO-Revision-Date: 2015-12-10 14:34+0000\n"
 "Last-Translator: Daisuke Aoyama <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-10 09:44+0000\n"
+"X-Launchpad-Export-Date: 2015-12-10 14:36+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -499,6 +499,12 @@ msgstr "ユーザの追加"
 msgid "Add volume"
 msgstr "ボリュームの追加"
 
+msgid "Additional Network"
+msgstr "追加のネットワーク"
+
+msgid "Additional Storage"
+msgstr "追加のストレージ"
+
 msgid "Additional group"
 msgstr "グループの追加"
 
@@ -935,6 +941,20 @@ msgstr "ブロックサイズ"
 msgid "Blocksize"
 msgstr "ブロックサイズ"
 
+msgid "Boot Arguments"
+msgstr "ブート引数"
+
+msgid "Boot Loader"
+msgstr "ブートローダ"
+
+#, php-format
+msgid "Boot argument (e.g. %s)."
+msgstr "ブート引数 (例: %s)"
+
+#, php-format
+msgid "Boot loader (e.g. %s)."
+msgstr "ブートローダ (例: %s)"
+
 #, php-format
 msgid ""
 "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
@@ -942,6 +962,9 @@ msgid ""
 msgstr ""
 "ブートパーティションが小さすぎます。LiveCD か LiveUSB から再インストール、または %s "
 "のブートパーティションのサイズを変更する必要があります。\n"
+
+msgid "Bootloader"
+msgstr "ブートローダ"
 
 msgid "Bridge"
 msgstr "ブリッジ"
@@ -987,6 +1010,9 @@ msgstr "CCMP TKIP"
 
 msgid "CD/DVD"
 msgstr "CD/DVD"
+
+msgid "CD/DVD drive"
+msgstr "CD/DVD ドライブ"
 
 msgid "CHANGED"
 msgstr "変更"
@@ -1165,15 +1191,6 @@ msgstr "コンフィグ消去とソフトウェアRAIDのインポート"
 
 msgid "Clear config and Import disks"
 msgstr "コンフィグ消去とディスクのインポート"
-
-msgid ""
-"Click &quot;Enable firmware upload&quot; below, then choose the embedded "
-"image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
-"the upgrade process."
-msgstr ""
-"&quot;ファームウェアアップロードを許可&quot; "
-"をクリックし、書き込みするイメージファイルを選択して下さい。<br/>その後、アップグレードプロセスを起動する為 "
-"&quot;ファームウェアアップグレード&quot; をクリックして下さい。"
 
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
@@ -1483,6 +1500,12 @@ msgstr "過去最悪のブロック消去回数。"
 msgid "Create 4KB wrapper (nop device)."
 msgstr "4KBラッパー (nop デバイス) を作成する"
 
+msgid "Create HVM Guest"
+msgstr "HVM ゲスト作成"
+
+msgid "Create PV Guest"
+msgstr "PV ゲスト作成"
+
 msgid "Create ZFS on GPT partition"
 msgstr "GPTパーティション上にZFSを作成する"
 
@@ -1609,15 +1632,11 @@ msgstr "DNS サーバが空欄です。"
 
 #, php-format
 msgid ""
-"DO NOT abort the firmware upgrade process once it has started. Once it is "
-"completed, the server will automatically reboot, the current configuration "
-"will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
-"the upgrade.<br />It is strongly recommended that you <a "
-"href='%s'>Backup</a> the server configuration before doing a upgrade."
+"DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
+"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"/>It is recommended that you <a href='%s'>Backup</a> the server "
+"configuration before doing a upgrade."
 msgstr ""
-"ファームウェアのアップグレードを一旦開始したら途中で終了しないでください。サーバーはファームウェアのアップグレードが完了すると自動的に再起動します。現在の"
-"設定は維持されます。<br/>ファームウェアのアップグレードを行うには最低 %d MiB の 空き容量RAM "
-"が必要となります。<br/>ファームウェアをアップグレードする前にシステム設定の <a href='%s'>バックアップ</a> を行う事をお勧めします。"
 
 msgid "DVD"
 msgstr "DVD"
@@ -1720,6 +1739,9 @@ msgstr "Rsync ジョブを削除"
 
 msgid "Delete URL"
 msgstr "URL を削除"
+
+msgid "Delete VM"
+msgstr "VM 削除"
 
 msgid "Delete algorithm"
 msgstr "アルゴリズムを削除"
@@ -1960,14 +1982,14 @@ msgstr "新しい .torrent ファイルを監視するディレクトリ。"
 msgid "Disable File Manager"
 msgstr "ファイルマネージャを無効にする"
 
+msgid "Disable Firmware Update"
+msgstr "ファームウェアアップデートを無効化"
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "TCP wrapper (mod_wrapモジュール) を無効にします。"
 
 msgid "Disable console menu"
 msgstr "コンソールメニューを無効にする"
-
-msgid "Disable firmware upload"
-msgstr "ファームウェアアップロードを無効"
 
 msgid "Disable firmware version check"
 msgstr "ファームウェアバージョンチェックを無効にする"
@@ -2039,6 +2061,9 @@ msgstr "この Rsync ジョブを削除してもよろしいですか?"
 
 msgid "Do you really want to delete this URL?"
 msgstr "この URL を削除してもよろしいですか?"
+
+msgid "Do you really want to delete this VM?"
+msgstr "仮想マシンを削除してもよろしいですか?"
 
 msgid "Do you really want to delete this auth group?"
 msgstr "この認証グループを削除してもよろしいですか?"
@@ -2156,6 +2181,9 @@ msgstr "ドキュメントルート"
 msgid "Document root of the webserver. Home of the web page files."
 msgstr "Web サーバのドキュメントルートを設定します。Web ページファイルのホームになります。"
 
+msgid "DomID"
+msgstr "ドメイン ID"
+
 msgid "Domain"
 msgstr "ドメイン"
 
@@ -2267,9 +2295,6 @@ msgstr "エラー:"
 msgid "Edit"
 msgstr "編集"
 
-msgid "Edit File"
-msgstr "ファイルを編集"
-
 msgid "Edit Host"
 msgstr "ホストを編集"
 
@@ -2287,6 +2312,9 @@ msgstr "Rsync ジョブを編集"
 
 msgid "Edit URL"
 msgstr "URL を編集"
+
+msgid "Edit VM"
+msgstr "VM 編集"
 
 msgid "Edit auth group"
 msgstr "認証グループの編集"
@@ -2391,6 +2419,9 @@ msgstr "非同期I/O (AIO)を有効にします。"
 msgid "Enable FXP protocol."
 msgstr "FXP プロトコルを有効にします。"
 
+msgid "Enable Firmware Update"
+msgstr "ファームウェアアップデートを有効化"
+
 msgid "Enable NFSv4 server."
 msgstr "NFSv4 サーバを有効にします。"
 
@@ -2453,9 +2484,6 @@ msgstr "拡張属性サポートを有効にします"
 msgid "Enable extended attributes for this file system."
 msgstr "ファイルシステムの拡張属性を有効にします。"
 
-msgid "Enable firmware upload"
-msgstr "ファームウェアアップロードを許可"
-
 msgid ""
 "Enable foreground/background file system consistency check during boot "
 "process."
@@ -2484,6 +2512,9 @@ msgstr "DOS属性のマッピングを有効化にします"
 
 msgid "Enable module listing."
 msgstr "モジュールリストを有効にします。"
+
+msgid "Enable nested virtualization"
+msgstr "ネストされた仮想化を許可します。"
 
 msgid "Enable peer exchange (PEX)."
 msgstr "ピアエクスチェンジ(PEX)を有効にする。"
@@ -2810,6 +2841,10 @@ msgid "File not found"
 msgstr "ファイルが存在しません"
 
 #, php-format
+msgid "File path (e.g. %s) or ZFS volume (e.g. %s) used as Hard disk image."
+msgstr "ハードディスクイメージとして使うファイルパス (例: %s) または ZFS ボリューム (例: %s)。"
+
+#, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
 msgstr "エクステントとして使用するファイルのパス (例: /mnt/sharename/extent/%s)"
 
@@ -2852,8 +2887,8 @@ msgstr "ファイアウォールルール設定"
 msgid "Firmware"
 msgstr "ファームウェア"
 
-msgid "Firmware image file"
-msgstr "ファームウェアイメージファイル"
+msgid "Firmware upload failed (out of memory?)"
+msgstr "ファームウェアアップロードに失敗しました (メモリ不足？)"
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "ファームウェアアップロードはこのプラットフォームではサポートされていません。"
@@ -3036,6 +3071,12 @@ msgstr "HAST ボリューム"
 msgid "HAST volume can be use with GPT/UFS only."
 msgstr "HAST ボリュームは GPT/UFS のみ使用できます。"
 
+msgid "HDD Format"
+msgstr "HDD フォーマット"
+
+msgid "HDD Management"
+msgstr "HDD 管理"
+
 msgid ""
 "HDD producers implement a Fly Height Monitor that attempts to provide "
 "additional protections for write operations by detecting when a recording "
@@ -3054,6 +3095,12 @@ msgstr "HDDスタンバイ時間"
 
 msgid "HTTP Proxy"
 msgstr "HTTP プロキシ"
+
+msgid "HVM Guest"
+msgstr "HVM ゲスト"
+
+msgid "Hard Disk"
+msgstr "ハードディスク"
 
 msgid "Hardware"
 msgstr "ハードウェア"
@@ -3222,6 +3269,10 @@ msgstr "IPv6 アドレス一覧"
 msgid "IRC Live Support"
 msgstr "IRC ライブサポート"
 
+#, php-format
+msgid "ISO file path (e.g. %s) used as CD/DVD drive."
+msgstr "CD/DVD ドライブとして利用する ISO ファイルパス (例: %s)。"
+
 msgid "ISO file to be mounted."
 msgstr "マウントする ISO ファイル。"
 
@@ -3305,9 +3356,6 @@ msgid ""
 "twice."
 msgstr "WebGUIにアクセスする為のパスワードを変更するには、ここに同じパスワードを2回入力してください。"
 
-msgid "Image upload failed (out of memory?)"
-msgstr "イメージアップロードが失敗しました (メモリ不足?)。"
-
 msgid "Import"
 msgstr "インポート"
 
@@ -3384,6 +3432,10 @@ msgstr "/etc/exports 内で間違った行があった際、syslog への診断�
 
 msgid "Initial Digest"
 msgstr "ダイジェスト初期値"
+
+#, php-format
+msgid "Initial ramdisk (e.g. %s)."
+msgstr "初期 ramdisk (例: %s)。"
 
 msgid "Initialize"
 msgstr "初期化"
@@ -3566,6 +3618,13 @@ msgstr "1月 2月 3月 4月 5月 6月 7月 8月 9月 10月 11月 12月"
 
 msgid "Japanese"
 msgstr "日本語"
+
+msgid "Kernel"
+msgstr "カーネル"
+
+#, php-format
+msgid "Kernel file (e.g. %s)."
+msgstr "カーネルファイル (例: %s)。"
 
 msgid "Key"
 msgstr "鍵"
@@ -3756,9 +3815,6 @@ msgstr "ロード"
 msgid "Load averages"
 msgstr "システム負荷"
 
-msgid "Load file"
-msgstr "ロード"
-
 msgid "Load on UPS"
 msgstr "UPSの負荷"
 
@@ -3883,6 +3939,9 @@ msgid ""
 msgstr ""
 "小さい値は高い優先度です。マスターノードの場合は 0 または 1 を使用してください。preempt "
 "が有効になっている場合は、失敗時に240に調整されます。"
+
+msgid "MAC Address"
+msgstr "MAC アドレス"
 
 msgid "MAC address"
 msgstr "MAC アドレス"
@@ -4056,8 +4115,14 @@ msgstr "メディアライブラリ"
 msgid "Medium Acoustic Output"
 msgstr "中間の音響出力"
 
+msgid "Mem"
+msgstr "メモリ"
+
 msgid "Member Interface"
 msgstr "メンバ インターフェース"
+
+msgid "Memory (MiB)"
+msgstr "メモリ (MiB)"
 
 msgid "Memory Usage"
 msgstr "メモリ使用量"
@@ -4247,6 +4312,9 @@ msgstr "サーバ名。フィールドが空の場合はデフォルトのサー
 msgid "Name of the variable."
 msgstr "変数の名前"
 
+msgid "Nested HVM"
+msgstr "ネストしたHVM"
+
 msgid "NetBIOS domain"
 msgstr "NetBIOS ドメイン"
 
@@ -4258,6 +4326,9 @@ msgstr "Netgraph"
 
 msgid "Network"
 msgstr "ネットワーク"
+
+msgid "Network Adapter"
+msgstr "ネットワークアダプタ"
 
 msgid "Network File System"
 msgstr "NFS (Network File System)"
@@ -4333,6 +4404,12 @@ msgid ""
 "No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
 "first."
 msgstr "ポータルグループがありません。まず最初に新しい <a href='%s'>ポータルグループ</a> を追加してください。"
+
+#, php-format
+msgid ""
+"No configured bridge interfaces. Please add new <a href='%s'>bridge "
+"interface</a> first."
+msgstr "ブリッジインターフェースがありません。まず最初に新しい <a href='%s'>ブリッジインターフェース</a> を追加してください。"
 
 #, php-format
 msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
@@ -4620,6 +4697,9 @@ msgstr "PPTP クライアント"
 #, c-format
 msgid "PSK"
 msgstr "PSK"
+
+msgid "PV Guest"
+msgstr "PV ゲスト"
 
 msgid "Package Name"
 msgstr "パッケージ名"
@@ -5032,6 +5112,9 @@ msgstr "RSYNC のログ"
 msgid "Raid name"
 msgstr "Raid 名"
 
+msgid "Ramdisk"
+msgstr "RAMディスク"
+
 msgid "Read"
 msgstr "読込み"
 
@@ -5358,14 +5441,8 @@ msgstr "保存"
 msgid "Save & Restart"
 msgstr "保存して再起動"
 
-msgid "Save File"
-msgstr "ファイル保存"
-
 msgid "Save and Restart"
 msgstr "保存して再起動"
-
-msgid "Save file"
-msgstr "保存"
 
 msgid "Save login information in configuration file."
 msgstr "ログイン情報を設定ファイルに保存します。"
@@ -5438,6 +5515,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "S.M.A.R.T. を有効にするディスクを選択してください。"
 
+msgid "Select firmware:"
+msgstr "ファームウェア選択:"
+
 msgid "Select item to remove from the list"
 msgstr "リストから削除するアイテムを選択"
 
@@ -5490,6 +5570,9 @@ msgstr "コマンド送信!"
 
 msgid "Send Now"
 msgstr "今すぐ送信"
+
+msgid "Send Test Email"
+msgstr "テストメールの送信"
 
 msgid "Send a TEST warning email on startup."
 msgstr "起動時にテストとして警告メールを送信します。"
@@ -6000,6 +6083,9 @@ msgstr "TCP転送"
 msgid "TCP port"
 msgstr "TCP ポート"
 
+msgid "TCP port is 5900+N, where N is VNC display number."
+msgstr "TCP ポートは 5900+N (N は VNC ディスプレイ番号)。"
+
 msgid "TCP port to bind the server to."
 msgstr "サーバが待ち受ける TCP ポート。"
 
@@ -6175,6 +6261,10 @@ msgstr "貴方の変更が適用された事を管理者に通知しました。
 #, php-format
 msgid "The associated MIB files can be found at %s."
 msgstr "関連付けられた MIB ファイルは %s 以下にあります。"
+
+#, php-format
+msgid "The attribute '%s' already exists."
+msgstr "属性 '%s' は既に存在しています。"
 
 #, c-format
 msgid ""
@@ -6493,6 +6583,12 @@ msgstr "ディスクは既にマウントされています! 次へ進む為に�
 msgid "The extent name already exists."
 msgstr "エクステント名は既に存在しています。"
 
+msgid "The file you try to flash is not for this platform"
+msgstr "指定したファイルはこのプラットフォーム用ではありません。"
+
+msgid "The firmware file is corrupt"
+msgstr "ファームウェアファイルは破損しています"
+
 #, php-format
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -6517,9 +6613,6 @@ msgid ""
 "The host name may only consist of the characters a-z, A-Z and 0-9, - , _ and "
 "."
 msgstr "ホスト名には英数字(a-z,A-Z,0-9)と一部の記号( - , _ , . )のみが使用できます。"
-
-msgid "The image file is corrupt"
-msgstr "イメージファイルは破損しています"
 
 msgid "The initial digest mode negotiated with the initiator."
 msgstr "イニシエータと交渉する初期状態のダイジェストモードを選択します。"
@@ -6802,9 +6895,6 @@ msgstr "アップロードされたファイルは、php.ini の upload_max_file
 msgid "The uploaded file was only partially uploaded."
 msgstr "アップロードされたファイルは部分的にだけアップロードされています。"
 
-msgid "The uploaded image file is not for this platform"
-msgstr "アップロードされたイメージファイルはこのプラットフォームの物ではありません。"
-
 msgid "The user's login shell."
 msgstr "ユーザログインシェル"
 
@@ -7035,15 +7125,12 @@ msgid "This is for information only (not using during iSCSI negotiation)."
 msgstr "この内容は iSCSI ネゴシエーションには使用されません。"
 
 msgid ""
-"This means that the image you uploaded is not an official/supported image "
-"and may lead to unexpected behavior or security compromises. Only install "
-"images that come from sources that you trust, and make sure that the image "
-"has not been tampered with.<br /><br />Do you want to install this image "
-"anyway (on your own risk)?"
+"This means that the firmware you flashed is not an official/supported "
+"firmware and may lead to unexpected behavior or security compromises. Only "
+"install firmwares that come from sources that you trust, and make sure that "
+"the firmware has not been tampered with.<br /><br />Do you want to install "
+"this firmware anyway (on your own risk)?"
 msgstr ""
-"これはアップロードしたイメージが正式な/サポートされたイメージでは無い為、予期しない挙動又はセキュリティが損なわれるかもしれない事を意味しています。信頼で"
-"きる所から取得し、イメージの改変がないと確認出来るイメージをインストールして下さい。<br /><br />とにかくこのイメージを "
-"(あなた自身のリスクで) インストールしてもよろしいですか?"
 
 msgid "This name already exists in the disk list."
 msgstr "この名前は既にディスクリストに存在しています。"
@@ -7661,7 +7748,7 @@ msgstr "アップデート間隔"
 msgid "Updating in 5 seconds."
 msgstr "5秒毎に更新"
 
-msgid "Upgrade firmware"
+msgid "Upgrade Firmware"
 msgstr "ファームウェアアップグレード"
 
 msgid "Upload"
@@ -7791,6 +7878,9 @@ msgstr "ユーザとグループ"
 msgid "Using %s bytes fragment size."
 msgstr "%s バイトのフラグメントサイズを利用します。"
 
+msgid "VCPUs"
+msgstr "VCPU"
+
 msgid "VHID"
 msgstr "VHID"
 
@@ -7805,6 +7895,15 @@ msgstr "VLAN タグ"
 
 msgid "VM"
 msgstr "VM"
+
+msgid "VM Type"
+msgstr "VM 形式"
+
+msgid "VNC Display"
+msgstr "VNC ディスプレイ"
+
+msgid "VNC Password"
+msgstr "VNC パスワード"
 
 msgid "Value"
 msgstr "値"
@@ -8021,6 +8120,12 @@ msgstr "パーティションタイプまたはパーティション番号が間
 #, php-format
 msgid "Wrong permission on %s."
 msgstr "%sは間違ったパーミッションです。"
+
+msgid "Xen"
+msgstr "Xen"
+
+msgid "Xen Virtual Machine"
+msgstr "Xen 仮想マシン"
 
 msgid "Yes"
 msgstr "Yes"
@@ -8315,3 +8420,102 @@ msgstr "バージョン:"
 
 msgid "warning"
 msgstr "警告"
+
+#~ msgid "Disable firmware upload"
+#~ msgstr "ファームウェアアップロードを無効"
+
+#~ msgid "Enable firmware upload"
+#~ msgstr "ファームウェアアップロードを許可"
+
+#~ msgid "Firmware image file"
+#~ msgstr "ファームウェアイメージファイル"
+
+#~ msgid "Image upload failed (out of memory?)"
+#~ msgstr "イメージアップロードが失敗しました (メモリ不足?)。"
+
+#~ msgid "The image file is corrupt"
+#~ msgstr "イメージファイルは破損しています"
+
+#~ msgid "The uploaded image file is not for this platform"
+#~ msgstr "アップロードされたイメージファイルはこのプラットフォームの物ではありません。"
+
+#~ msgid ""
+#~ "This means that the image you uploaded is not an official/supported image "
+#~ "and may lead to unexpected behavior or security compromises. Only install "
+#~ "images that come from sources that you trust, and make sure that the image "
+#~ "has not been tampered with.<br /><br />Do you want to install this image "
+#~ "anyway (on your own risk)?"
+#~ msgstr ""
+#~ "これはアップロードしたイメージが正式な/サポートされたイメージでは無い為、予期しない挙動又はセキュリティが損なわれるかもしれない事を意味しています。信頼で"
+#~ "きる所から取得し、イメージの改変がないと確認出来るイメージをインストールして下さい。<br /><br />とにかくこのイメージを "
+#~ "(あなた自身のリスクで) インストールしてもよろしいですか?"
+
+#~ msgid "Upgrade firmware"
+#~ msgstr "ファームウェアアップグレード"
+
+#~ msgid "Save file"
+#~ msgstr "保存"
+
+#~ msgid "Load file"
+#~ msgstr "ロード"
+
+#~ msgid ""
+#~ "Click &quot;Enable firmware upload&quot; below, then choose the embedded "
+#~ "image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
+#~ "the upgrade process."
+#~ msgstr ""
+#~ "&quot;ファームウェアアップロードを許可&quot; "
+#~ "をクリックし、書き込みするイメージファイルを選択して下さい。<br/>その後、アップグレードプロセスを起動する為 "
+#~ "&quot;ファームウェアアップグレード&quot; をクリックして下さい。"
+
+#, php-format
+#~ msgid ""
+#~ "DO NOT abort the firmware upgrade process once it has started. Once it is "
+#~ "completed, the server will automatically reboot, the current configuration "
+#~ "will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
+#~ "the upgrade.<br />It is strongly recommended that you <a "
+#~ "href='%s'>Backup</a> the server configuration before doing a upgrade."
+#~ msgstr ""
+#~ "ファームウェアのアップグレードを一旦開始したら途中で終了しないでください。サーバーはファームウェアのアップグレードが完了すると自動的に再起動します。現在の"
+#~ "設定は維持されます。<br/>ファームウェアのアップグレードを行うには最低 %d MiB の 空き容量RAM "
+#~ "が必要となります。<br/>ファームウェアをアップグレードする前にシステム設定の <a href='%s'>バックアップ</a> を行う事をお勧めします。"
+
+#~ msgid "Edit File"
+#~ msgstr "ファイルを編集"
+
+#~ msgid "Save File"
+#~ msgstr "ファイル保存"
+
+#~ msgid "Boot arguments"
+#~ msgstr "ブート引数"
+
+#~ msgid "Boot loader"
+#~ msgstr "ブートローダ"
+
+#~ msgid "VNC display"
+#~ msgstr "VNC ディスプレイ"
+
+#~ msgid "VNC password"
+#~ msgstr "VNC パスワード"
+
+#, php-format
+#~ msgid ""
+#~ "DO NOT abort the firmware upgrade process once it has started.<br />Try to "
+#~ "flash other files than a valid embedded (img.xz) firmware only.<br />It is "
+#~ "recommended that you <a href='%s'>Backup</a> the server configuration before "
+#~ "doing a upgrade."
+#~ msgstr ""
+#~ "ファームウェアのアップグレードを一旦開始したら途中で終了しないでください。<br />\r\n"
+#~ "有効な埋め込みファームウェア(img.xz)のみアップグレードに利用できます。<br />\r\n"
+#~ "ファームウェアをアップグレードする前にシステム設定の <a href='%s'>バックアップ</a> を行う事をお勧めします。"
+
+#~ msgid ""
+#~ "This means that the firmware you uploaded is not an official/supported image "
+#~ "and may lead to unexpected behavior or security compromises. Only install "
+#~ "images that come from sources that you trust, and make sure that the image "
+#~ "has not been tampered with.<br /><br />Do you want to install this image "
+#~ "anyway (on your own risk)?"
+#~ msgstr ""
+#~ "これはアップロードしたイメージが正式な/サポートされたイメージでは無い為、予期しない挙動又はセキュリティが損なわれるかもしれない事を意味しています。信頼で"
+#~ "きる所から取得し、イメージの改変がないと確認出来るイメージをインストールして下さい。<br /><br />とにかくこのイメージを "
+#~ "(あなた自身のリスクで) インストールしてもよろしいですか?"
