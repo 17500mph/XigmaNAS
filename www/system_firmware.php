@@ -252,11 +252,11 @@ if ($_POST && !file_exists($d_firmwarelock_path)) {
 	unset($input_errors);
 	unset($sig_warning);
 
-	if (stristr($_POST['Submit'], gettext("Enable firmware upload")))
+	if (stristr($_POST['Submit'], gettext("Enable Firmware Update")))
 		$mode = "enable";
-	else if (stristr($_POST['Submit'], gettext("Disable firmware upload")))
+	else if (stristr($_POST['Submit'], gettext("Disable Firmware Update")))
 		$mode = "disable";
-	else if (stristr($_POST['Submit'], gettext("Upgrade firmware")) || $_POST['sig_override'])
+	else if (stristr($_POST['Submit'], gettext("Upgrade Firmware")) || $_POST['sig_override'])
 		$mode = "upgrade";
 	else if ($_POST['sig_no'])
 		unlink("{$g['ftmp_path']}/firmware.img");
@@ -277,10 +277,10 @@ if ($_POST && !file_exists($d_firmwarelock_path)) {
 			if (!empty($_FILES) && is_uploaded_file($_FILES['ulfile']['tmp_name'])) {
 				/* verify firmware image(s) */
 				if (!stristr($_FILES['ulfile']['name'], $g['fullplatform']) && !$_POST['sig_override'])
-					$input_errors[] = gettext("The uploaded image file is not for this platform")." ({$g['fullplatform']}).";
+					$input_errors[] = gettext("The file you try to flash is not for this platform")." ({$g['fullplatform']}).";
 				else if (!file_exists($_FILES['ulfile']['tmp_name'])) {
 					/* probably out of memory for the MFS */
-					$input_errors[] = gettext("Image upload failed (out of memory?)");
+					$input_errors[] = gettext("Firmware upload failed (out of memory?)");
 				} else {
 					/* move the image so PHP won't delete it */
 					move_uploaded_file($_FILES['ulfile']['tmp_name'], "{$g['ftmp_path']}/firmware.img");
@@ -363,7 +363,7 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 			<?php elseif (!empty($sig_warning) && empty($input_errors)): ?>
 			<form action="system_firmware.php" method="post">
 			<?php
-			$sig_warning = "<strong>" . $sig_warning . "</strong><br />".gettext("This means that the image you uploaded is not an official/supported image and may lead to unexpected behavior or security compromises. Only install images that come from sources that you trust, and make sure that the image has not been tampered with.<br /><br />Do you want to install this image anyway (on your own risk)?");
+			$sig_warning = "<strong>" . $sig_warning . "</strong><br />".gettext("This means that the firmware you uploaded is not an official/supported image and may lead to unexpected behavior or security compromises. Only install images that come from sources that you trust, and make sure that the image has not been tampered with.<br /><br />Do you want to install this image anyway (on your own risk)?");
 			print_info_box($sig_warning);
 			?>
 			<input name="sig_override" type="submit" class="formbtn" id="sig_override" value=" Yes ">
@@ -377,11 +377,11 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 				<?php if (!file_exists($d_sysrebootreqd_path)):?>
 					<?php if (!file_exists($d_fwupenabled_path)):?>
 					<div id="submit">
-					<input name="Submit" id="Enable" type="submit" class="formbtn" value="<?=gettext("Enable Firmware Upload");?>" />
+					<input name="Submit" id="Enable" type="submit" class="formbtn" value="<?=gettext("Enable Firmware Update");?>" />
 					</div>
 					<?php else:?>
 					<div id="submit">
-					<input name="Submit" id="Disable" type="submit" class="formbtn" value="<?=gettext("Disable Firmware Upload");?>" />
+					<input name="Submit" id="Disable" type="submit" class="formbtn" value="<?=gettext("Disable Firmware Update");?>" />
 					</div>
 					<div id="submit">
 					<strong><?=gettext("Select firmware:");?> </strong>&nbsp;<input name="ulfile" type="file" class="formfld" size="40" />
@@ -389,14 +389,14 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 					<div id="submit">
 					<input name="Submit" id="Upgrade" type="submit" class="formbtn" value="<?=gettext("Upgrade Firmware");?>" />
 					</div>
+					<br />
+					<div id="remarks">
+					<?php html_remark("warning", gettext("Warning"), sprintf(gettext("DO NOT abort the firmware upgrade process once it has started.<br />Try to flash other files than a valid embedded (img.xz) firmware only.<br />It is recommended that you <a href='%s'>Backup</a> the server configuration before doing a upgrade."), 512, "system_backup.php"));?>
+					</div>
 					<?php endif;?>
 				<?php else:?>
 				<strong><?=sprintf(gettext("You must <a href='%s'>reboot</a> the system before you can upgrade the firmware."), "reboot.php");?></strong>
 				<?php endif;?>
-				<br />
-				<div id="remarks">
-					<?php html_remark("warning", gettext("Warning"), sprintf(gettext("DO NOT abort the firmware upgrade process once it has started.<br />Try to flash other files than a valid embedded (img.xz) firmware only.<br />It is recommended that you <a href='%s'>Backup</a> the server configuration before doing a upgrade."), 512, "system_backup.php"));?>
-				</div>
 				<?php include("formend.inc");?>
 			</form>
 			<?php endif;?>
