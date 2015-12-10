@@ -37,7 +37,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Disks"),gettext("Management"));
+$pgtitle = array(gettext("Disks"),gettext("Management"),gettext("HDD Management"),);
 
 if ($_POST) {
 	$pconfig = $_POST;
@@ -155,8 +155,8 @@ function diskmanagement_process_updatenotification($mode, $data) {
   <tr>
 		<td class="tabnavtbl">
   		<ul id="tabnav">
-				<li class="tabact"><a href="disks_manage.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Management");?></span></a></li>
-				<li class="tabinact"><a href="disks_init.php"><span><?=gettext("Format");?></span></a></li>
+				<li class="tabact"><a href="disks_manage.php" title="<?=gettext("Reload page");?>"><span><?=gettext("HDD Management");?></span></a></li>
+				<li class="tabinact"><a href="disks_init.php"><span><?=gettext("HDD Format");?></span></a></li>
 				<li class="tabinact"><a href="disks_manage_smart.php"><span><?=gettext("S.M.A.R.T.");?></span></a></li>
 				<li class="tabinact"><a href="disks_manage_iscsi.php"><span><?=gettext("iSCSI Initiator");?></span></a></li>
   		</ul>
