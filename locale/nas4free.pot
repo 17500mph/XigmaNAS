@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2015-12-09 16:19+0000\n"
+"POT-Creation-Date: 2015-12-10 11:16+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -1008,9 +1008,6 @@ msgstr ""
 msgid "Clear config and Import disks"
 msgstr ""
 
-msgid "Click &quot;Enable firmware upload&quot; below, then choose the embedded image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start the upgrade process."
-msgstr ""
-
 msgid "Click this button to download the server configuration in encrypted GZIP file or XML format."
 msgstr ""
 
@@ -1344,7 +1341,7 @@ msgid "DNS server is empty."
 msgstr ""
 
 #, php-format
-msgid "DO NOT abort the firmware upgrade process once it has started. Once it is completed, the server will automatically reboot, the current configuration will be maintained.<br />You need a minimum of %d MiB free RAM to perform the upgrade.<br />It is strongly recommended that you <a href='%s'>Backup</a> the server configuration before doing a upgrade."
+msgid "DO NOT abort the firmware upgrade process once it has started.<br />Try to flash other files than a valid embedded (img.xz) firmware only.<br />It is recommended that you <a href='%s'>Backup</a> the server configuration before doing a upgrade."
 msgstr ""
 
 msgid "DVD"
@@ -1674,6 +1671,9 @@ msgstr ""
 msgid "Disable File Manager"
 msgstr ""
 
+msgid "Disable Firmware Upload"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
@@ -1966,9 +1966,6 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-msgid "Edit File"
-msgstr ""
-
 msgid "Edit Host"
 msgstr ""
 
@@ -2087,6 +2084,9 @@ msgid "Enable Asynchronous I/O (AIO)"
 msgstr ""
 
 msgid "Enable FXP protocol."
+msgstr ""
+
+msgid "Enable Firmware Upload"
 msgstr ""
 
 msgid "Enable NFSv4 server."
@@ -2514,9 +2514,6 @@ msgstr ""
 msgid "Firmware"
 msgstr ""
 
-msgid "Firmware image file"
-msgstr ""
-
 msgid "Firmware uploading is not supported on this platform."
 msgstr ""
 
@@ -2692,6 +2689,12 @@ msgid "HAST volume"
 msgstr ""
 
 msgid "HAST volume can be use with GPT/UFS only."
+msgstr ""
+
+msgid "HDD Format"
+msgstr ""
+
+msgid "HDD Management"
 msgstr ""
 
 msgid "HDD producers implement a Fly Height Monitor that attempts to provide additional protections for write operations by detecting when a recording head is flying outside its normal operating range. If an unsafe fly height condition is encountered, the write process is stopped, and the information is rewritten or reallocated to a safe region of the hard drive. This attribute indicates the count of these errors detected over the lifetime of the drive. This feature is implemented in most modern Seagate drives."
@@ -3298,9 +3301,6 @@ msgid "Load"
 msgstr ""
 
 msgid "Load averages"
-msgstr ""
-
-msgid "Load file"
 msgstr ""
 
 msgid "Load on UPS"
@@ -4816,13 +4816,7 @@ msgstr ""
 msgid "Save & Restart"
 msgstr ""
 
-msgid "Save File"
-msgstr ""
-
 msgid "Save and Restart"
-msgstr ""
-
-msgid "Save file"
 msgstr ""
 
 msgid "Save login information in configuration file."
@@ -4885,6 +4879,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr ""
 
+msgid "Select firmware:"
+msgstr ""
+
 msgid "Select item to remove from the list"
 msgstr ""
 
@@ -4932,6 +4929,9 @@ msgid "Send Command!"
 msgstr ""
 
 msgid "Send Now"
+msgstr ""
+
+msgid "Send Test Email"
 msgstr ""
 
 msgid "Send a TEST warning email on startup."
@@ -6686,6 +6686,9 @@ msgid "Update period"
 msgstr ""
 
 msgid "Updating in 5 seconds."
+msgstr ""
+
+msgid "Upgrade Firmware"
 msgstr ""
 
 msgid "Upgrade firmware"
