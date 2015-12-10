@@ -286,12 +286,12 @@ if ($_POST && !file_exists($d_firmwarelock_path)) {
 					move_uploaded_file($_FILES['ulfile']['tmp_name'], "{$g['ftmp_path']}/firmware.img");
 
 					if (!verify_xz_file("{$g['ftmp_path']}/firmware.img")) {
-						$input_errors[] = gettext("The image file is corrupt");
+						$input_errors[] = gettext("The firmware file is corrupt");
 						unlink("{$g['ftmp_path']}/firmware.img");
 					}
 				}
 			} else {
-				$input_errors[] = gettext("Image upload failed (out of memory?)");
+				$input_errors[] = gettext("Firmware upload failed (out of memory?)");
 			}
 
 			// Cleanup if there were errors.
