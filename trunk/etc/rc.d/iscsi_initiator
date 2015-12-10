@@ -67,6 +67,7 @@ iscsi_initiator_stop()
 	echo "Wait for iSCSI session end"
 	while [ $retry -ne 0 ]; do
 		num=`/sbin/sysctl -q -n net.iscsi_initiator.sessions`
+		[ -z "$num" ] && break;
 		[ $num -eq 0 ] && break;
 		echo -n "."
 		sleep 1
