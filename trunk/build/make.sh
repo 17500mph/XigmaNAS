@@ -1753,6 +1753,9 @@ use_svn() {
 	fi
 	# adjust for dom0
 	if [ "dom0" = ${NAS4FREE_XARCH} ]; then
+		if [ -f ${NAS4FREE_ROOTFS}/etc/rc.d/initrandom ]; then
+			rm -f ${NAS4FREE_ROOTFS}/etc/rc.d/initrandom
+		fi
 		sed -i '' -e "/^xc0/ s/off/on /" ${NAS4FREE_ROOTFS}/etc/ttys
 	fi
 
