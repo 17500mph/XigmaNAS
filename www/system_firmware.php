@@ -363,7 +363,7 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 			<?php elseif (!empty($sig_warning) && empty($input_errors)): ?>
 			<form action="system_firmware.php" method="post">
 			<?php
-			$sig_warning = "<strong>" . $sig_warning . "</strong><br />".gettext("This means that the firmware you uploaded is not an official/supported image and may lead to unexpected behavior or security compromises. Only install images that come from sources that you trust, and make sure that the image has not been tampered with.<br /><br />Do you want to install this image anyway (on your own risk)?");
+			$sig_warning = "<strong>" . $sig_warning . "</strong><br />".gettext("This means that the firmware you flashed is not an official/supported firmware and may lead to unexpected behavior or security compromises. Only install firmwares that come from sources that you trust, and make sure that the firmware has not been tampered with.<br /><br />Do you want to install this firmware anyway (on your own risk)?");
 			print_info_box($sig_warning);
 			?>
 			<input name="sig_override" type="submit" class="formbtn" id="sig_override" value=" Yes ">
@@ -391,7 +391,7 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 					</div>
 					<br />
 					<div id="remarks">
-					<?php html_remark("warning", gettext("Warning"), sprintf(gettext("DO NOT abort the firmware upgrade process once it has started.<br />Try to flash other files than a valid embedded (img.xz) firmware only.<br />It is recommended that you <a href='%s'>Backup</a> the server configuration before doing a upgrade."), 512, "system_backup.php"));?>
+					<?php html_remark("warning", gettext("Warning"), sprintf(gettext("DO NOT abort the firmware upgrade process once it has started.<br />DO NOT try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br />It is recommended that you <a href='%s'>Backup</a> the server configuration before doing a upgrade."), get_product_name(), "system_backup.php"));?>
 					</div>
 					<?php endif;?>
 				<?php else:?>
