@@ -180,7 +180,7 @@ if ($_POST) {
 	if (trim($_POST['vncdisplay']) != "") {
 		/*
 		$reqdfields = explode(" ", "vncdisplay vncpassword");
-		$reqdfieldsn = array(gettext("VNC display"), gettext("VNC password"));
+		$reqdfieldsn = array(gettext("VNC Display"), gettext("VNC Password"));
 		$reqdfieldst = explode(" ", "numericint string");
 		*/
 		$reqdfields = explode(" ", "vncdisplay");
@@ -292,8 +292,8 @@ $(document).ready(function(){
 
 	<?php html_separator();?>
 	<?php html_titleline(gettext("Display"));?>
-	<?php html_inputbox("vncdisplay", gettext("VNC display"), $pconfig['vncdisplay'], gettext("TCP port is 5900+N, where N is VNC display number."), true, 10);?>
-	<?php html_passwordbox("vncpassword", gettext("VNC password"), $pconfig['vncpassword'], "", false, 15);?>
+	<?php html_inputbox("vncdisplay", gettext("VNC Display"), $pconfig['vncdisplay'], gettext("TCP port is 5900+N, where N is VNC display number."), true, 10);?>
+	<?php html_passwordbox("vncpassword", gettext("VNC Password"), $pconfig['vncpassword'], "", false, 15);?>
 
 	<?php html_separator();?>
 	<?php html_titleline(gettext("Network"));?>

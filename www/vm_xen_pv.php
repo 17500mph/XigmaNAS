@@ -180,11 +180,11 @@ if ($_POST) {
 	if (trim($_POST['vncdisplay']) != "") {
 		/*
 		$reqdfields = explode(" ", "vncdisplay vncpassword");
-		$reqdfieldsn = array(gettext("VNC display"), gettext("VNC password"));
+		$reqdfieldsn = array(gettext("VNC Display"), gettext("VNC Password"));
 		$reqdfieldst = explode(" ", "numericint string");
 		*/
 		$reqdfields = explode(" ", "vncdisplay");
-		$reqdfieldsn = array(gettext("VNC display"));
+		$reqdfieldsn = array(gettext("VNC Display"));
 		$reqdfieldst = explode(" ", "numericint");
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
@@ -294,13 +294,13 @@ $(document).ready(function(){
 	<?php html_inputbox("kernel", gettext("Kernel"), $pconfig['kernel'], sprintf(gettext("Kernel file (e.g. %s)."), "/mnt/sharename/vmlinuz"), false, 60);?>
 	<?php html_inputbox("ramdisk", gettext("Ramdisk"), $pconfig['ramdisk'], sprintf(gettext("Initial ramdisk (e.g. %s)."), "/mnt/sharename/initrd.gz"), false, 60);?>
 	<?php html_titleline(gettext("Bootloader"));?>
-	<?php html_inputbox("bootloader", gettext("Boot loader"), $pconfig['bootloader'], sprintf(gettext("Boot loader (e.g. %s)."), "pygrub"), false, 60);?>
-	<?php html_inputbox("bootargs", gettext("Boot arguments"), $pconfig['bootargs'], sprintf(gettext("Boot argument (e.g. %s)."), "--kernel=install.amd/xen/vmlinuz --ramdisk=install.amd/xen/initrd.gz"), false, 60);?>
+	<?php html_inputbox("bootloader", gettext("Boot Loader"), $pconfig['bootloader'], sprintf(gettext("Boot loader (e.g. %s)."), "pygrub"), false, 60);?>
+	<?php html_inputbox("bootargs", gettext("Boot Arguments"), $pconfig['bootargs'], sprintf(gettext("Boot argument (e.g. %s)."), "--kernel=install.amd/xen/vmlinuz --ramdisk=install.amd/xen/initrd.gz"), false, 60);?>
 
 	<?php html_separator();?>
 	<?php html_titleline(gettext("Display"));?>
-	<?php html_inputbox("vncdisplay", gettext("VNC display"), $pconfig['vncdisplay'], gettext("TCP port is 5900+N, where N is VNC display number."), true, 10);?>
-	<?php html_passwordbox("vncpassword", gettext("VNC password"), $pconfig['vncpassword'], "", false, 15);?>
+	<?php html_inputbox("vncdisplay", gettext("VNC Display"), $pconfig['vncdisplay'], gettext("TCP port is 5900+N, where N is VNC display number."), true, 10);?>
+	<?php html_passwordbox("vncpassword", gettext("VNC Password"), $pconfig['vncpassword'], "", false, 15);?>
 
 	<?php html_separator();?>
 	<?php html_titleline(gettext("Network"));?>
