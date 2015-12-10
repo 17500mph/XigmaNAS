@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-09 16:19+0000\n"
+"POT-Creation-Date: 2015-12-10 23:13+0000\n"
 "PO-Revision-Date: 2015-10-05 21:47+0000\n"
 "Last-Translator: Robert Gdula <robert.gdula@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-09 15:41+0000\n"
+"X-Launchpad-Export-Date: 2015-12-10 15:13+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: POLAND\n"
 "Language: \n"
@@ -516,6 +516,12 @@ msgstr "Dodaj użytkownika"
 msgid "Add volume"
 msgstr "Dodaj wolumin"
 
+msgid "Additional Network"
+msgstr ""
+
+msgid "Additional Storage"
+msgstr ""
+
 msgid "Additional group"
 msgstr "Dodatkowa grupa"
 
@@ -976,6 +982,20 @@ msgstr ""
 msgid "Blocksize"
 msgstr "Rozmiar bloku"
 
+msgid "Boot Arguments"
+msgstr ""
+
+msgid "Boot Loader"
+msgstr ""
+
+#, php-format
+msgid "Boot argument (e.g. %s)."
+msgstr ""
+
+#, php-format
+msgid "Boot loader (e.g. %s)."
+msgstr ""
+
 #, php-format
 msgid ""
 "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
@@ -984,6 +1004,9 @@ msgstr ""
 "Partycja rozruchowa jest za mała. Musisz przeinstalować oprogramowanie "
 "używając LiveCD lub LiveUSB, albo zwiększyć rozmiar partycji rozruchowej z "
 "%s.\n"
+
+msgid "Bootloader"
+msgstr ""
 
 msgid "Bridge"
 msgstr "Mostek"
@@ -1029,6 +1052,9 @@ msgstr "CCMP TKIP"
 
 msgid "CD/DVD"
 msgstr "CD/DVD"
+
+msgid "CD/DVD drive"
+msgstr ""
 
 msgid "CHANGED"
 msgstr "ZMIENIONO"
@@ -1209,15 +1235,6 @@ msgstr ""
 
 msgid "Clear config and Import disks"
 msgstr "Wyczyść konfiguracje i zaimportuj dyski"
-
-msgid ""
-"Click &quot;Enable firmware upload&quot; below, then choose the embedded "
-"image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
-"the upgrade process."
-msgstr ""
-"Kliknij &quot;Włącz wysyłanie firmware&quot; poniżej, następnie wybierz "
-"obrazdo sflashowania(embedded).<br />Kliknij &quot;Aktualizuj firmware&quot; "
-"by rozpocząć proces aktualizacji."
 
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
@@ -1534,6 +1551,12 @@ msgstr ""
 msgid "Create 4KB wrapper (nop device)."
 msgstr ""
 
+msgid "Create HVM Guest"
+msgstr ""
+
+msgid "Create PV Guest"
+msgstr ""
+
 msgid "Create ZFS on GPT partition"
 msgstr "Stworzyć ZFS na partycji GPT"
 
@@ -1660,17 +1683,11 @@ msgstr "Brak określonego serwera DNS"
 
 #, php-format
 msgid ""
-"DO NOT abort the firmware upgrade process once it has started. Once it is "
-"completed, the server will automatically reboot, the current configuration "
-"will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
-"the upgrade.<br />It is strongly recommended that you <a "
-"href='%s'>Backup</a> the server configuration before doing a upgrade."
+"DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
+"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"/>It is recommended that you <a href='%s'>Backup</a> the server "
+"configuration before doing a upgrade."
 msgstr ""
-"Nie przerywaj procesu aktualizacji po jej rozpoczęciu. Po zakończeniu serwer "
-"zostanie uruchomiony ponownie, aktualna konfiguracja zostanie zachowana.<br "
-"/>Potrzebujesz co najmniej %d MB wolnej pamięci RAM by wykonać "
-"aktualizację.<br />Wysoce zalecana jest<a href='%s'>Kopia zapasowa</a> "
-"konfiguracji serwera przed aktualizacją"
 
 msgid "DVD"
 msgstr "DVD"
@@ -1773,6 +1790,9 @@ msgstr "Usuń zadanie Rsync"
 
 msgid "Delete URL"
 msgstr "Skasuj URL"
+
+msgid "Delete VM"
+msgstr ""
 
 msgid "Delete algorithm"
 msgstr "Usuń algorytm"
@@ -2019,14 +2039,14 @@ msgstr "Katalog w którym znajdują się pliki .torrent."
 msgid "Disable File Manager"
 msgstr "Wyłącz Menadżer plików"
 
+msgid "Disable Firmware Update"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Wyłącz TCP wrapper (moduł mod_wrap)"
 
 msgid "Disable console menu"
 msgstr "Wyłącz menu konsoli"
-
-msgid "Disable firmware upload"
-msgstr "Wyłącz wysyłanie firmware"
 
 msgid "Disable firmware version check"
 msgstr "Wyłącz sprawdzanie wersji firmware"
@@ -2100,6 +2120,9 @@ msgstr "Jesteś pewien, że chcesz usunąć te zadanie Rsync?"
 
 msgid "Do you really want to delete this URL?"
 msgstr "Czy na pewno chcesz skasować ten URL?"
+
+msgid "Do you really want to delete this VM?"
+msgstr ""
 
 msgid "Do you really want to delete this auth group?"
 msgstr "Czy na pewno chcesz usunąc tą grupę zabezpieczeń?"
@@ -2226,6 +2249,9 @@ msgid "Document root of the webserver. Home of the web page files."
 msgstr ""
 "Katalog główny dokumentów serwera WWW. Katalog domowy dla plików strony WWW."
 
+msgid "DomID"
+msgstr ""
+
 msgid "Domain"
 msgstr "Domena"
 
@@ -2337,9 +2363,6 @@ msgstr "BŁĄD:"
 msgid "Edit"
 msgstr "Edytuj"
 
-msgid "Edit File"
-msgstr ""
-
 msgid "Edit Host"
 msgstr "Edytuj hosta"
 
@@ -2357,6 +2380,9 @@ msgstr "Edytuj zadanie Rsync"
 
 msgid "Edit URL"
 msgstr "Edytuj URL"
+
+msgid "Edit VM"
+msgstr ""
 
 msgid "Edit auth group"
 msgstr "Edytuj grupę zabezpieczeń"
@@ -2462,6 +2488,9 @@ msgstr "Włącz synchroniczne wejście/wyjście (AIO)"
 msgid "Enable FXP protocol."
 msgstr "Włącz protokół FXP."
 
+msgid "Enable Firmware Update"
+msgstr ""
+
 msgid "Enable NFSv4 server."
 msgstr "Uruchom serwer NFSv4"
 
@@ -2526,9 +2555,6 @@ msgstr "Włącz obsługę rozszerzonych atrybutów"
 msgid "Enable extended attributes for this file system."
 msgstr "Włącz atrybuty rozszerzone dla tego systemu plików."
 
-msgid "Enable firmware upload"
-msgstr "Włącz wysyłanie firmware."
-
 msgid ""
 "Enable foreground/background file system consistency check during boot "
 "process."
@@ -2559,6 +2585,9 @@ msgstr ""
 
 msgid "Enable module listing."
 msgstr "Włącz wyświetlanie listy modułów."
+
+msgid "Enable nested virtualization"
+msgstr ""
 
 msgid "Enable peer exchange (PEX)."
 msgstr "Włącz wymianę peerów (PEX)"
@@ -2907,6 +2936,10 @@ msgid "File not found"
 msgstr "Nie znaleziono pliku"
 
 #, php-format
+msgid "File path (e.g. %s) or ZFS volume (e.g. %s) used as Hard disk image."
+msgstr ""
+
+#, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
 msgstr "Scieżka (np. /mnt/sharename/extent/%s) używana jako zakres."
 
@@ -2949,8 +2982,8 @@ msgstr ""
 msgid "Firmware"
 msgstr "Firmware"
 
-msgid "Firmware image file"
-msgstr "Plik obrazu firmware"
+msgid "Firmware upload failed (out of memory?)"
+msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "Wysyłanie firmware nie jest obsługiwane na tej platformie."
@@ -3135,6 +3168,12 @@ msgstr "Wolumin HAST"
 msgid "HAST volume can be use with GPT/UFS only."
 msgstr "Wolumin HAST może być użyty tylko z GPT/UFS."
 
+msgid "HDD Format"
+msgstr ""
+
+msgid "HDD Management"
+msgstr ""
+
 msgid ""
 "HDD producers implement a Fly Height Monitor that attempts to provide "
 "additional protections for write operations by detecting when a recording "
@@ -3150,6 +3189,12 @@ msgstr ""
 
 msgid "HTTP Proxy"
 msgstr "Proxy HTTP"
+
+msgid "HVM Guest"
+msgstr ""
+
+msgid "Hard Disk"
+msgstr ""
 
 msgid "Hardware"
 msgstr "Sprzęt"
@@ -3322,6 +3367,10 @@ msgstr "Adresy IPv6"
 msgid "IRC Live Support"
 msgstr "Wsparcie IRC Live."
 
+#, php-format
+msgid "ISO file path (e.g. %s) used as CD/DVD drive."
+msgstr ""
+
 msgid "ISO file to be mounted."
 msgstr "Plik ISO do zamotowania."
 
@@ -3421,9 +3470,6 @@ msgid ""
 "twice."
 msgstr "Jeśli chcesz zmienić hasło dostępu do WebGUI, wprowadź je podwójnie."
 
-msgid "Image upload failed (out of memory?)"
-msgstr "Wysyłanie obrazu nieudane (brak pamięci ?)"
-
 msgid "Import"
 msgstr "Import"
 
@@ -3501,6 +3547,10 @@ msgstr ""
 "/etc/eksports."
 
 msgid "Initial Digest"
+msgstr ""
+
+#, php-format
+msgid "Initial ramdisk (e.g. %s)."
 msgstr ""
 
 msgid "Initialize"
@@ -3699,6 +3749,13 @@ msgstr ""
 msgid "Japanese"
 msgstr "Japoński"
 
+msgid "Kernel"
+msgstr ""
+
+#, php-format
+msgid "Kernel file (e.g. %s)."
+msgstr ""
+
 msgid "Key"
 msgstr "Klucz"
 
@@ -3877,9 +3934,6 @@ msgstr "Załaduj"
 msgid "Load averages"
 msgstr "Średnie obciążenie"
 
-msgid "Load file"
-msgstr "Wczytaj plik"
-
 msgid "Load on UPS"
 msgstr "Obciążenie na UPS"
 
@@ -4012,6 +4066,9 @@ msgid ""
 msgstr ""
 "Najniższa wartość ma wyższy priorytet. Przy Master Node, użyj 0 lub 1. Jeśli "
 "'preempt' jest włączony, jest on ustawiony na 240 przy niepowodzeniu."
+
+msgid "MAC Address"
+msgstr ""
 
 msgid "MAC address"
 msgstr "Adres MAC"
@@ -4187,8 +4244,14 @@ msgstr "Biblioteka Medialna"
 msgid "Medium Acoustic Output"
 msgstr ""
 
+msgid "Mem"
+msgstr ""
+
 msgid "Member Interface"
 msgstr "Intersejs użytkownika"
+
+msgid "Memory (MiB)"
+msgstr ""
 
 msgid "Memory Usage"
 msgstr ""
@@ -4381,6 +4444,9 @@ msgstr ""
 msgid "Name of the variable."
 msgstr "Nazwa zmiennej."
 
+msgid "Nested HVM"
+msgstr ""
+
 msgid "NetBIOS domain"
 msgstr "Domena NetBIOS"
 
@@ -4392,6 +4458,9 @@ msgstr "Wykres obciążenia sieci"
 
 msgid "Network"
 msgstr "Sieć"
+
+msgid "Network Adapter"
+msgstr ""
 
 msgid "Network File System"
 msgstr "Sieciowy System Plików (NFS)"
@@ -4480,6 +4549,12 @@ msgid ""
 msgstr ""
 "Nie udało się wysłać testowej wiadomości. Proszę przejrzeć <a "
 "href='%s'>Portal Group</a>."
+
+#, php-format
+msgid ""
+"No configured bridge interfaces. Please add new <a href='%s'>bridge "
+"interface</a> first."
+msgstr ""
 
 #, php-format
 msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
@@ -4784,6 +4859,9 @@ msgstr "Klienci PPTP"
 #, c-format
 msgid "PSK"
 msgstr "PSK"
+
+msgid "PV Guest"
+msgstr ""
 
 msgid "Package Name"
 msgstr "Nazwa pakietu"
@@ -5202,6 +5280,9 @@ msgstr "Dziennik RSYNC"
 msgid "Raid name"
 msgstr "Nazwa Raid"
 
+msgid "Ramdisk"
+msgstr ""
+
 msgid "Read"
 msgstr "Odczyt"
 
@@ -5536,14 +5617,8 @@ msgstr "Zapisz"
 msgid "Save & Restart"
 msgstr ""
 
-msgid "Save File"
-msgstr ""
-
 msgid "Save and Restart"
 msgstr "Zapisz i restaruj"
-
-msgid "Save file"
-msgstr "Zapisz plik"
 
 msgid "Save login information in configuration file."
 msgstr "Zapisz informacje logowania w pliku konfiguracyjnym"
@@ -5618,6 +5693,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Wybierz dysk, który ma włączone monitorowanie S.M.A.R.T."
 
+msgid "Select firmware:"
+msgstr ""
+
 msgid "Select item to remove from the list"
 msgstr "Wybierz pozycję do usunięcia z listy"
 
@@ -5671,6 +5749,9 @@ msgid "Send Command!"
 msgstr "Wyślij polecenie!"
 
 msgid "Send Now"
+msgstr ""
+
+msgid "Send Test Email"
 msgstr ""
 
 msgid "Send a TEST warning email on startup."
@@ -6200,6 +6281,9 @@ msgstr "Przekierowania TCP"
 msgid "TCP port"
 msgstr "Port TCP"
 
+msgid "TCP port is 5900+N, where N is VNC display number."
+msgstr ""
+
 msgid "TCP port to bind the server to."
 msgstr "Port TCP do przypisania systemu"
 
@@ -6382,6 +6466,10 @@ msgstr "Administrator został poinformowany w celu akceptacji Twoich zmian."
 #, php-format
 msgid "The associated MIB files can be found at %s."
 msgstr "Dowiązane pliki MIB znajdują się w %s."
+
+#, php-format
+msgid "The attribute '%s' already exists."
+msgstr ""
 
 #, c-format
 msgid ""
@@ -6715,6 +6803,12 @@ msgstr ""
 msgid "The extent name already exists."
 msgstr "Nazwa zakresu już istnieje."
 
+msgid "The file you try to flash is not for this platform"
+msgstr ""
+
+msgid "The firmware file is corrupt"
+msgstr ""
+
 #, php-format
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -6742,9 +6836,6 @@ msgid ""
 "."
 msgstr ""
 "Nazwa hosta może składać się wyłącznie ze znaków a-z, A-Z i 0-9, -, _ oraz ."
-
-msgid "The image file is corrupt"
-msgstr "Plik obrazu jest uszkodzony"
 
 msgid "The initial digest mode negotiated with the initiator."
 msgstr ""
@@ -7045,9 +7136,6 @@ msgstr ""
 msgid "The uploaded file was only partially uploaded."
 msgstr "Plik został wysłany tylko częściowo."
 
-msgid "The uploaded image file is not for this platform"
-msgstr "Wysłany obraz nie jest dla tej platformy"
-
 msgid "The user's login shell."
 msgstr "Login użytkownika w powłoce."
 
@@ -7290,11 +7378,11 @@ msgid "This is for information only (not using during iSCSI negotiation)."
 msgstr "Pole informacyjne  ( nie używane podczas pracy iSCSI)."
 
 msgid ""
-"This means that the image you uploaded is not an official/supported image "
-"and may lead to unexpected behavior or security compromises. Only install "
-"images that come from sources that you trust, and make sure that the image "
-"has not been tampered with.<br /><br />Do you want to install this image "
-"anyway (on your own risk)?"
+"This means that the firmware you flashed is not an official/supported "
+"firmware and may lead to unexpected behavior or security compromises. Only "
+"install firmwares that come from sources that you trust, and make sure that "
+"the firmware has not been tampered with.<br /><br />Do you want to install "
+"this firmware anyway (on your own risk)?"
 msgstr ""
 
 msgid "This name already exists in the disk list."
@@ -7930,8 +8018,8 @@ msgstr "Odstęp między aktualizacjami"
 msgid "Updating in 5 seconds."
 msgstr "Aktualizacja co 5 sekund."
 
-msgid "Upgrade firmware"
-msgstr "Aktualizuj firmware"
+msgid "Upgrade Firmware"
+msgstr ""
 
 msgid "Upload"
 msgstr "Wyślij"
@@ -8072,6 +8160,9 @@ msgstr ""
 msgid "Using %s bytes fragment size."
 msgstr ""
 
+msgid "VCPUs"
+msgstr ""
+
 msgid "VHID"
 msgstr "VHID"
 
@@ -8085,6 +8176,15 @@ msgid "VLAN tag"
 msgstr "Etykieta VLAN"
 
 msgid "VM"
+msgstr ""
+
+msgid "VM Type"
+msgstr ""
+
+msgid "VNC Display"
+msgstr ""
+
+msgid "VNC Password"
 msgstr ""
 
 msgid "Value"
@@ -8310,6 +8410,12 @@ msgstr "Nieprawidłowy typ lub numer partycji"
 #, php-format
 msgid "Wrong permission on %s."
 msgstr "Złe uprawnienia w %s."
+
+msgid "Xen"
+msgstr ""
+
+msgid "Xen Virtual Machine"
+msgstr ""
 
 msgid "Yes"
 msgstr "Tak"
@@ -8614,261 +8720,52 @@ msgstr "wersja:"
 msgid "warning"
 msgstr ""
 
-#, php-format
-#~ msgid "%s interface"
-#~ msgstr "interfejs %s"
+#~ msgid "Disable firmware upload"
+#~ msgstr "Wyłącz wysyłanie firmware"
 
-#~ msgid "Advanced Power Management"
-#~ msgstr "Zaawansowane zarządzanie energią"
+#~ msgid "Enable firmware upload"
+#~ msgstr "Włącz wysyłanie firmware."
 
-#~ msgid "Always on"
-#~ msgstr "Zawsze włączony"
+#~ msgid "Firmware image file"
+#~ msgstr "Plik obrazu firmware"
 
-#~ msgid "Backup configuration"
-#~ msgstr "Kopia zapasowa konfiguracji"
+#~ msgid "Image upload failed (out of memory?)"
+#~ msgstr "Wysyłanie obrazu nieudane (brak pamięci ?)"
 
-#~ msgid "Ban list"
-#~ msgstr "Czarna lista"
+#~ msgid "The image file is corrupt"
+#~ msgstr "Plik obrazu jest uszkodzony"
 
-#~ msgid "Connected FTP users"
-#~ msgstr "Połączeni użytkownicy FTP"
+#~ msgid "The uploaded image file is not for this platform"
+#~ msgstr "Wysłany obraz nie jest dla tej platformy"
 
-#~ msgid "DNS settings"
-#~ msgstr "Ustawienia DNS"
+#~ msgid "Upgrade firmware"
+#~ msgstr "Aktualizuj firmware"
 
-#~ msgid "Don't Erase MBR"
-#~ msgstr "Nie czyść MBR"
-
-#~ msgid "Email notification"
-#~ msgstr "Powiadomienie poprzez email."
-
-#~ msgid "Email report"
-#~ msgstr "Wyślij raport"
-
-#~ msgid "File path"
-#~ msgstr "Ścieżka pliku"
-
-#~ msgid "Firewall rule"
-#~ msgstr "Reguła firewall'a"
-
-#~ msgid "Format disk"
-#~ msgstr "Formatowanie dysku"
-
-#~ msgid "Free disk space"
-#~ msgstr "Wolna przestrzeń dyskowa"
-
-#~ msgid "Hard disk standby time"
-#~ msgstr "Czas stanu gotowości dysku twardego"
-
-#~ msgid "I/O statistics"
-#~ msgstr "Statystyki We/Wy"
-
-#~ msgid "Level 127 - Intermediate power usage with Standby"
-#~ msgstr "Poziom 127 - średnie zużycie energii z trybem Standby"
-
-#~ msgid "Level 192 - Intermediate power usage without Standby"
-#~ msgstr "Poziom 192 - średnie zużycie energii bez trybu Standby"
-
-#~ msgid "Level 254 - Maximum performance, maximum power usage"
-#~ msgstr "Poziom 254 - maksymalna wydajność, maksymalne zużycie energii"
-
-#~ msgid "Level 64 - Intermediate power usage with Standby"
-#~ msgstr "Poziom 64 - średnie zużycie energii z trybem Standby"
-
-#~ msgid "List of available target name on all configured iSCSI targets"
-#~ msgstr ""
-#~ "Lista dostępnych nazw celów dla wszystkich skonfiguraowanych celów iSCSI"
-
-#~ msgid "List of imported users"
-#~ msgstr "Lista zaimportowanych użytkowników"
-
-#~ msgid "List of mount points"
-#~ msgstr "Lista punktów zamontowania"
-
-#~ msgid "MS Active Directory informations"
-#~ msgstr "Informacje o MS Active Directory"
-
-# hałas?
-#~ msgid "Maximum performance, maximum acoustic output"
-#~ msgstr "Maksymalna wydajność, Maksymalny poziom akustyczny"
-
-#~ msgid "Medium acoustic output"
-#~ msgstr "Średni poziom akustyczny"
-
-# hałas ?
-#~ msgid "Minimum performance, Minimum acoustic output"
-#~ msgstr "Minimalna wydajność, Minimalny poziom akustyczny"
-
-#~ msgid "Model name"
-#~ msgstr "Nazwa modelu"
-
-#~ msgid "Pool information and status"
-#~ msgstr "Informacje o puli i jej stan"
-
-#~ msgid "Processes information"
-#~ msgstr "Informacje procesów"
+#~ msgid "Save file"
+#~ msgstr "Zapisz plik"
 
 #~ msgid ""
-#~ "Puts the hard disk into standby mode when the selected amount of time after "
-#~ "the last hard disk access has been elapsed."
+#~ "Click &quot;Enable firmware upload&quot; below, then choose the embedded "
+#~ "image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
+#~ "the upgrade process."
 #~ msgstr ""
-#~ "Wprowadza dysk w stan spoczynku, gdy upłynął podany czas bezczynności dysku."
+#~ "Kliknij &quot;Włącz wysyłanie firmware&quot; poniżej, następnie wybierz "
+#~ "obrazdo sflashowania(embedded).<br />Kliknij &quot;Aktualizuj firmware&quot; "
+#~ "by rozpocząć proces aktualizacji."
 
-#~ msgid "RSYNC Client informations"
-#~ msgstr "Informacje o kliencie RSYNC"
-
-#~ msgid "Remote address"
-#~ msgstr "Zdalny dostęp"
-
-#~ msgid "Rescan disks"
-#~ msgstr "Skanuj ponownie dyski"
-
-#~ msgid "Rsync job"
-#~ msgstr "Zadanie Rsync"
-
-#~ msgid "Scheduled reboot"
-#~ msgstr "Zaplanowany restart"
-
-#~ msgid "Scheduled self-tests"
-#~ msgstr "Zaplanowane testy wewnętrzne"
-
-#~ msgid "Scheduled shutdown"
-#~ msgstr "Wyłączenie wg harmonogramu"
-
-#~ msgid "Self-Monitoring, Analysis and Reporting Technology"
-#~ msgstr "Self-Monitoring, Analysis and Reporting Technology"
-
-#~ msgid "Show process information"
-#~ msgstr "Pokaż informacje o procesie"
-
-#~ msgid "Standby time"
-#~ msgstr "Czas stanu gotowości"
-
-#~ msgid "Swap memory"
-#~ msgstr "Pamięć wirtualna"
-
-#~ msgid "Swap status"
-#~ msgstr "Status partycji wymiany"
-
-#~ msgid "System firewall"
-#~ msgstr "Systemowa zapora sieciowa"
-
-#~ msgid "System information"
-#~ msgstr "Informacje o systemie"
-
-#~ msgid "Temperature monitoring"
-#~ msgstr "Monitorowanie temperatury"
-
+#, php-format
 #~ msgid ""
-#~ "This allows you to lower the power consumption of the drive, at the expense "
-#~ "of performance."
-#~ msgstr "Pozwala to zmniejszyć pobór energii przez dysk kosztem wydajności."
-
-#~ msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
-#~ msgstr "Pozwala to ustawić tryb transferu dla dysków ATA/IDE."
-
-#~ msgid "Virtual device"
-#~ msgstr "Urządzenie wirtualne"
-
-#~ msgid "Virtual interface"
-#~ msgstr "Interfejs wirtualny"
-
-#~ msgid "ZFS dataset information and status"
-#~ msgstr "Stan i informacje o zestawie danych ZFS"
-
-#~ msgid "ZFS dataset properties"
-#~ msgstr "Właściwości zestawu danych ZFS"
-
-#~ msgid "minutes"
-#~ msgstr "minut"
-
-#~ msgid "List of detected disks"
-#~ msgstr "Lista wykrytych dysków"
-
-#~ msgid "Device model"
-#~ msgstr "Model urządzenia"
-
-#~ msgid "Logical Unit Controller login information"
-#~ msgstr "Informacje logowania jednostki logicznej kontrolera"
-
-#~ msgid "Online version check"
-#~ msgstr "Sprawdzenie wersji online"
-
-#~ msgid "Controller model"
-#~ msgstr "Model kontrolera"
-
-#~ msgid "Clear config and Import software raid disks"
-#~ msgstr "Wyczyść konfiguracje i zaimportuj dyski RAID"
-
-#~ msgid "Import software raid disks"
-#~ msgstr "Zaimportuj dyski RAID"
-
-#~ msgid "ZFS volume information and status"
-#~ msgstr "Informacje i status woluminu ZFS"
-
-#~ msgid "ZFS volume properties"
-#~ msgstr "Właściwości woluminu ZFS"
-
-#~ msgid "HAST status of the configured resources"
-#~ msgstr "Status HAST skonfigurowanych źródeł"
-
-#~ msgid "HAST resource"
-#~ msgstr "Źródło HAST"
-
-#~ msgid "LCDproc (client)"
-#~ msgstr "LCDproc (klient)"
-
-#~ msgid "Level 1 - Minimum power usage with Standby (spindown)"
+#~ "DO NOT abort the firmware upgrade process once it has started. Once it is "
+#~ "completed, the server will automatically reboot, the current configuration "
+#~ "will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
+#~ "the upgrade.<br />It is strongly recommended that you <a "
+#~ "href='%s'>Backup</a> the server configuration before doing a upgrade."
 #~ msgstr ""
-#~ "Poziom 1 - Minimalne zużycie energii ze stanem wstrzymania (spindown)"
+#~ "Nie przerywaj procesu aktualizacji po jej rozpoczęciu. Po zakończeniu serwer "
+#~ "zostanie uruchomiony ponownie, aktualna konfiguracja zostanie zachowana.<br "
+#~ "/>Potrzebujesz co najmniej %d MB wolnej pamięci RAM by wykonać "
+#~ "aktualizację.<br />Wysoce zalecana jest<a href='%s'>Kopia zapasowa</a> "
+#~ "konfiguracji serwera przed aktualizacją"
 
-#~ msgid "Level 128 - Minimum power usage without Standby (no spindown)"
-#~ msgstr ""
-#~ "Poziom 128 - Minimalne zużycie energii bez stanu wstrzymania (bez spindown)"
-
-#~ msgid "Rotation rate"
-#~ msgstr "Wskaźnik rotacji"
-
-#~ msgid "Show ups information"
-#~ msgstr "Wyświetlane informacji zasilacza UPS"
-
-#~ msgid "System load"
-#~ msgstr "Obciążenie systemu"
-
-#~ msgid "Transfer rate"
-#~ msgstr "Szybkość transmisji"
-
-#, php-format
-#~ msgid "Predefined system groups"
-#~ msgstr "Zdefiniowane grupy systemowe"
-
-#, php-format
-#~ msgid "User defined groups"
-#~ msgstr "Grupy zdefiniowane przez użytkownika"
-
-#~ msgid "Node B settings"
-#~ msgstr "Ustawienia węzła B"
-
-#~ msgid "Node A settings"
-#~ msgstr "Ustawienia węzła A"
-
-#~ msgid "ZFS snapshot information and status"
-#~ msgstr "Informacje i status snapshota ZFS"
-
-#~ msgid "ZFS snapshot properties"
-#~ msgstr "Właściwości snapshota ZFS"
-
-#~ msgid "JBOD information and status"
-#~ msgstr "JBOD informacja i status"
-
-#~ msgid "RAID 0 information and status"
-#~ msgstr "RAID 0 informacja i status"
-
-#~ msgid "RAID 0/1/5 information and status"
-#~ msgstr "RAID 0/1/5 informacja i status"
-
-#~ msgid "RAID 1 information and status"
-#~ msgstr "RAID 1 informacja i status"
-
-#~ msgid "RAID 5 information and status"
-#~ msgstr "RAID 5 informacja i status"
+#~ msgid "Load file"
+#~ msgstr "Wczytaj plik"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-09 16:19+0000\n"
+"POT-Creation-Date: 2015-12-10 23:13+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: Jānis Marks Gailis <jm-gailis@fai-vianet.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-09 15:41+0000\n"
+"X-Launchpad-Export-Date: 2015-12-10 15:12+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: LATVIA\n"
 "Language: \n"
@@ -503,6 +503,12 @@ msgstr "Pievienot lietotāju"
 msgid "Add volume"
 msgstr "Pievienot tilpumu"
 
+msgid "Additional Network"
+msgstr ""
+
+msgid "Additional Storage"
+msgstr ""
+
 msgid "Additional group"
 msgstr "Papildus grupa"
 
@@ -941,10 +947,27 @@ msgstr ""
 msgid "Blocksize"
 msgstr ""
 
+msgid "Boot Arguments"
+msgstr ""
+
+msgid "Boot Loader"
+msgstr ""
+
+#, php-format
+msgid "Boot argument (e.g. %s)."
+msgstr ""
+
+#, php-format
+msgid "Boot loader (e.g. %s)."
+msgstr ""
+
 #, php-format
 msgid ""
 "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
 "resize boot partition of %s.\n"
+msgstr ""
+
+msgid "Bootloader"
 msgstr ""
 
 msgid "Bridge"
@@ -991,6 +1014,9 @@ msgid "CCMP TKIP"
 msgstr "CCMP TKIP"
 
 msgid "CD/DVD"
+msgstr ""
+
+msgid "CD/DVD drive"
 msgstr ""
 
 msgid "CHANGED"
@@ -1171,12 +1197,6 @@ msgid "Clear Config & Import Software Raid Disks"
 msgstr ""
 
 msgid "Clear config and Import disks"
-msgstr ""
-
-msgid ""
-"Click &quot;Enable firmware upload&quot; below, then choose the embedded "
-"image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
-"the upgrade process."
 msgstr ""
 
 msgid ""
@@ -1475,6 +1495,12 @@ msgstr ""
 msgid "Create 4KB wrapper (nop device)."
 msgstr ""
 
+msgid "Create HVM Guest"
+msgstr ""
+
+msgid "Create PV Guest"
+msgstr ""
+
 msgid "Create ZFS on GPT partition"
 msgstr ""
 
@@ -1601,11 +1627,10 @@ msgstr ""
 
 #, php-format
 msgid ""
-"DO NOT abort the firmware upgrade process once it has started. Once it is "
-"completed, the server will automatically reboot, the current configuration "
-"will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
-"the upgrade.<br />It is strongly recommended that you <a "
-"href='%s'>Backup</a> the server configuration before doing a upgrade."
+"DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
+"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"/>It is recommended that you <a href='%s'>Backup</a> the server "
+"configuration before doing a upgrade."
 msgstr ""
 
 msgid "DVD"
@@ -1709,6 +1734,9 @@ msgstr "Dzēst Rsunc darbu"
 
 msgid "Delete URL"
 msgstr "Dzēst URL"
+
+msgid "Delete VM"
+msgstr ""
 
 msgid "Delete algorithm"
 msgstr "Dzēst algoritmu"
@@ -1953,14 +1981,14 @@ msgstr "Mape, kurā skatīties pēc jaunām .torrent datnem."
 msgid "Disable File Manager"
 msgstr "Atspējot Datņu Menedžeri"
 
+msgid "Disable Firmware Update"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
 msgid "Disable console menu"
 msgstr "Atspējot konsoles izvēlni"
-
-msgid "Disable firmware upload"
-msgstr "Atspējot programmatūras augšupielādi"
 
 msgid "Disable firmware version check"
 msgstr "Atspējot programmatūras versijas pārbaudi"
@@ -2032,6 +2060,9 @@ msgstr "Vai Tu patiešām vēlies dzēst šo Rsync darbu?"
 
 msgid "Do you really want to delete this URL?"
 msgstr "Vai Tu patiešām vēlies dzēst šo URL?"
+
+msgid "Do you really want to delete this VM?"
+msgstr ""
 
 msgid "Do you really want to delete this auth group?"
 msgstr "Vai Tu patiešām vēlies dzēst šo autorizācijas grupu?"
@@ -2155,6 +2186,9 @@ msgstr "Dokumentu sakne"
 msgid "Document root of the webserver. Home of the web page files."
 msgstr "Dokumentu sakne iekš web servera. Mājas mājaslapām."
 
+msgid "DomID"
+msgstr ""
+
 msgid "Domain"
 msgstr "Domēns"
 
@@ -2266,9 +2300,6 @@ msgstr ""
 msgid "Edit"
 msgstr "Labot"
 
-msgid "Edit File"
-msgstr ""
-
 msgid "Edit Host"
 msgstr "Labot saimniekdatoru"
 
@@ -2286,6 +2317,9 @@ msgstr "Labot Rsync darbu"
 
 msgid "Edit URL"
 msgstr "Labot URL"
+
+msgid "Edit VM"
+msgstr ""
 
 msgid "Edit auth group"
 msgstr "Labot autorizācijas grupu"
@@ -2390,6 +2424,9 @@ msgstr "Iespējot Asinhrono I/O (AIO)"
 msgid "Enable FXP protocol."
 msgstr "Iespējot FXP protokolu"
 
+msgid "Enable Firmware Update"
+msgstr ""
+
 msgid "Enable NFSv4 server."
 msgstr ""
 
@@ -2452,9 +2489,6 @@ msgstr "Iespējot paplašināto atribūtu atbalstu"
 msgid "Enable extended attributes for this file system."
 msgstr "Iespējot paplašinātos atribūtus šai datņu sistēmai."
 
-msgid "Enable firmware upload"
-msgstr "Iespējot programmatūras augšupielādi"
-
 msgid ""
 "Enable foreground/background file system consistency check during boot "
 "process."
@@ -2485,6 +2519,9 @@ msgstr ""
 
 msgid "Enable module listing."
 msgstr "Iespējot moduļu izdruku."
+
+msgid "Enable nested virtualization"
+msgstr ""
 
 msgid "Enable peer exchange (PEX)."
 msgstr "Iespējot vienādranga apmaiņu (PEX)."
@@ -2828,6 +2865,10 @@ msgid "File not found"
 msgstr "Datne nav atrasta"
 
 #, php-format
+msgid "File path (e.g. %s) or ZFS volume (e.g. %s) used as Hard disk image."
+msgstr ""
+
+#, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
 msgstr "Ceļš uz failu (piem. /mnt/sharename/extent/%s) lietots, kā apjoms."
 
@@ -2870,8 +2911,8 @@ msgstr ""
 msgid "Firmware"
 msgstr "Programmaparatūra"
 
-msgid "Firmware image file"
-msgstr "Programmatūras bildes datne"
+msgid "Firmware upload failed (out of memory?)"
+msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "Programmatūras augšupielāde nav atbalstīta uz šīs platformas."
@@ -3055,6 +3096,12 @@ msgstr ""
 msgid "HAST volume can be use with GPT/UFS only."
 msgstr ""
 
+msgid "HDD Format"
+msgstr ""
+
+msgid "HDD Management"
+msgstr ""
+
 msgid ""
 "HDD producers implement a Fly Height Monitor that attempts to provide "
 "additional protections for write operations by detecting when a recording "
@@ -3070,6 +3117,12 @@ msgstr ""
 
 msgid "HTTP Proxy"
 msgstr "HTTP Starpniekserveris"
+
+msgid "HVM Guest"
+msgstr ""
+
+msgid "Hard Disk"
+msgstr ""
 
 msgid "Hardware"
 msgstr "Aparatūra"
@@ -3241,6 +3294,10 @@ msgstr "IPv6 adreses"
 msgid "IRC Live Support"
 msgstr "IRC Tiešsaistes Palīdzība"
 
+#, php-format
+msgid "ISO file path (e.g. %s) used as CD/DVD drive."
+msgstr ""
+
 msgid "ISO file to be mounted."
 msgstr "ISO datne, kura tiks piemontēta."
 
@@ -3329,9 +3386,6 @@ msgid ""
 "twice."
 msgstr "Ja vēlies mainīt paroli piekļūstot WebGUI, ievadi to te divreiz."
 
-msgid "Image upload failed (out of memory?)"
-msgstr "Bildes augšupielāde neizdevās (beidzās atmiņa?)"
-
 msgid "Import"
 msgstr "Importēt"
 
@@ -3409,6 +3463,10 @@ msgstr ""
 
 msgid "Initial Digest"
 msgstr "Sākuma apgūšana"
+
+#, php-format
+msgid "Initial ramdisk (e.g. %s)."
+msgstr ""
 
 msgid "Initialize"
 msgstr "Inicializēt"
@@ -3596,6 +3654,13 @@ msgstr ""
 
 msgid "Japanese"
 msgstr "Japāņu"
+
+msgid "Kernel"
+msgstr ""
+
+#, php-format
+msgid "Kernel file (e.g. %s)."
+msgstr ""
 
 msgid "Key"
 msgstr "Atslēga"
@@ -3785,9 +3850,6 @@ msgstr "Slodze"
 msgid "Load averages"
 msgstr "Vidējā slodze"
 
-msgid "Load file"
-msgstr ""
-
 msgid "Load on UPS"
 msgstr ""
 
@@ -3915,6 +3977,9 @@ msgstr ""
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
+msgstr ""
+
+msgid "MAC Address"
 msgstr ""
 
 msgid "MAC address"
@@ -4095,7 +4160,13 @@ msgstr ""
 msgid "Medium Acoustic Output"
 msgstr ""
 
+msgid "Mem"
+msgstr ""
+
 msgid "Member Interface"
+msgstr ""
+
+msgid "Memory (MiB)"
 msgstr ""
 
 msgid "Memory Usage"
@@ -4290,6 +4361,9 @@ msgstr ""
 msgid "Name of the variable."
 msgstr "Mainīgā vērtība."
 
+msgid "Nested HVM"
+msgstr ""
+
 msgid "NetBIOS domain"
 msgstr ""
 
@@ -4301,6 +4375,9 @@ msgstr "Netgraph"
 
 msgid "Network"
 msgstr "Tīkls"
+
+msgid "Network Adapter"
+msgstr ""
 
 msgid "Network File System"
 msgstr "Tīkla Datņu Sistēma"
@@ -4386,6 +4463,12 @@ msgid ""
 msgstr ""
 "Nav konfigurēta Portāla Grupa. Lūdzu pievieno jaunu <a href='%s'>Portāla "
 "Grupu</a> vispirms."
+
+#, php-format
+msgid ""
+"No configured bridge interfaces. Please add new <a href='%s'>bridge "
+"interface</a> first."
+msgstr ""
 
 #, php-format
 msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
@@ -4688,6 +4771,9 @@ msgstr "PPTP klienti"
 #, c-format
 msgid "PSK"
 msgstr "PSK"
+
+msgid "PV Guest"
+msgstr ""
 
 msgid "Package Name"
 msgstr "Pakotnes nosaukums"
@@ -5107,6 +5193,9 @@ msgstr "RSYNC žurnāls"
 msgid "Raid name"
 msgstr "Raid nosaukums"
 
+msgid "Ramdisk"
+msgstr ""
+
 msgid "Read"
 msgstr "Lasīt"
 
@@ -5443,14 +5532,8 @@ msgstr "Saglabāt"
 msgid "Save & Restart"
 msgstr ""
 
-msgid "Save File"
-msgstr ""
-
 msgid "Save and Restart"
 msgstr "Saglabāt un Pārsāknēt"
-
-msgid "Save file"
-msgstr ""
 
 msgid "Save login information in configuration file."
 msgstr "Saglabāt autorizācijas informāciju konfigurācijas datnē."
@@ -5522,6 +5605,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Izvēlies disku, kas ir iespējot priekš S.M.A.R.T. pāraudzības."
 
+msgid "Select firmware:"
+msgstr ""
+
 msgid "Select item to remove from the list"
 msgstr "Izvēlies vērtību, kuru izņemt no saraksta"
 
@@ -5573,6 +5659,9 @@ msgid "Send Command!"
 msgstr "Sūtīt Komandu!"
 
 msgid "Send Now"
+msgstr ""
+
+msgid "Send Test Email"
 msgstr ""
 
 msgid "Send a TEST warning email on startup."
@@ -6095,6 +6184,9 @@ msgstr "TCP pārsūtīšana"
 msgid "TCP port"
 msgstr "TCP ports"
 
+msgid "TCP port is 5900+N, where N is VNC display number."
+msgstr ""
+
 msgid "TCP port to bind the server to."
 msgstr "TCP ports sasiešanai ar serveri."
 
@@ -6277,6 +6369,10 @@ msgstr "Administrators ir informēts, lai viņš veiktu izmaiņas."
 #, php-format
 msgid "The associated MIB files can be found at %s."
 msgstr "Asociētās MIB datnes var tikt atrastas iekš %s."
+
+#, php-format
+msgid "The attribute '%s' already exists."
+msgstr ""
 
 #, c-format
 msgid ""
@@ -6608,6 +6704,12 @@ msgstr ""
 msgid "The extent name already exists."
 msgstr "Apjoma nosaukums jau eksistē."
 
+msgid "The file you try to flash is not for this platform"
+msgstr ""
+
+msgid "The firmware file is corrupt"
+msgstr ""
+
 #, php-format
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -6633,9 +6735,6 @@ msgid ""
 "."
 msgstr ""
 "Saimniekdatora nosaukums var sastāvēt tiktai no a-z, A-Z un 0-9,-,_ un ."
-
-msgid "The image file is corrupt"
-msgstr "Bildes datne ir bojāta"
 
 msgid "The initial digest mode negotiated with the initiator."
 msgstr "Sākuma izklāsta režīms sazinājās ar iniciatoru."
@@ -6943,9 +7042,6 @@ msgstr ""
 msgid "The uploaded file was only partially uploaded."
 msgstr "Augšupielādētā datne augšupielādējās tikai daļēji."
 
-msgid "The uploaded image file is not for this platform"
-msgstr "Augšupielādētā bildes datne nav šai platformai"
-
 msgid "The user's login shell."
 msgstr "Lietotāja autorizācijas čaula"
 
@@ -7188,17 +7284,12 @@ msgid "This is for information only (not using during iSCSI negotiation)."
 msgstr ""
 
 msgid ""
-"This means that the image you uploaded is not an official/supported image "
-"and may lead to unexpected behavior or security compromises. Only install "
-"images that come from sources that you trust, and make sure that the image "
-"has not been tampered with.<br /><br />Do you want to install this image "
-"anyway (on your own risk)?"
+"This means that the firmware you flashed is not an official/supported "
+"firmware and may lead to unexpected behavior or security compromises. Only "
+"install firmwares that come from sources that you trust, and make sure that "
+"the firmware has not been tampered with.<br /><br />Do you want to install "
+"this firmware anyway (on your own risk)?"
 msgstr ""
-"Šis nozīmē, ka bilde, kuru Jūs augšupielādējāt nav oficiāla/atbalstīta bilde "
-"un ka tas var novest pie negaidītas uzvedības vai drošības kompromisiem. "
-"Instalē tikai bildes, kas nāk no avotiem, kuriem Tu uzticies un "
-"pārliecinies, ka bilde nav rediģēta.<br /><br />Vai Tu vēlies turpināt "
-"uzstādīt šo bildi (uz paša riska)?"
 
 msgid "This name already exists in the disk list."
 msgstr "Vārds jau eksistē iekš disku saraksta."
@@ -7856,8 +7947,8 @@ msgstr "Atjaunot periodu"
 msgid "Updating in 5 seconds."
 msgstr "Atjauno 5 sekundēs."
 
-msgid "Upgrade firmware"
-msgstr "Atjaunot programmatūru"
+msgid "Upgrade Firmware"
+msgstr ""
 
 msgid "Upload"
 msgstr "Augšupielāde"
@@ -8000,6 +8091,9 @@ msgstr ""
 msgid "Using %s bytes fragment size."
 msgstr ""
 
+msgid "VCPUs"
+msgstr ""
+
 msgid "VHID"
 msgstr ""
 
@@ -8013,6 +8107,15 @@ msgid "VLAN tag"
 msgstr "VLAN birka"
 
 msgid "VM"
+msgstr ""
+
+msgid "VM Type"
+msgstr ""
+
+msgid "VNC Display"
+msgstr ""
+
+msgid "VNC Password"
 msgstr ""
 
 msgid "Value"
@@ -8233,6 +8336,12 @@ msgstr "Nepareizs partīcijas tips vai partīcijas numurs."
 
 #, php-format
 msgid "Wrong permission on %s."
+msgstr ""
+
+msgid "Xen"
+msgstr ""
+
+msgid "Xen Virtual Machine"
 msgstr ""
 
 msgid "Yes"
@@ -8535,190 +8644,36 @@ msgstr ""
 msgid "warning"
 msgstr ""
 
-#, php-format
-#~ msgid "%s interface"
-#~ msgstr "%s interfeiss"
+#~ msgid "Disable firmware upload"
+#~ msgstr "Atspējot programmatūras augšupielādi"
 
-#~ msgid "Advanced Power Management"
-#~ msgstr "Advancēts Enerģijas Menedžments"
+#~ msgid "Enable firmware upload"
+#~ msgstr "Iespējot programmatūras augšupielādi"
 
-#~ msgid "Always on"
-#~ msgstr "Vienmēr ieslēgts"
+#~ msgid "Firmware image file"
+#~ msgstr "Programmatūras bildes datne"
 
-#~ msgid "Backup configuration"
-#~ msgstr "Dublēšanas konfigurēšana"
+#~ msgid "Image upload failed (out of memory?)"
+#~ msgstr "Bildes augšupielāde neizdevās (beidzās atmiņa?)"
 
-#~ msgid "Ban list"
-#~ msgstr "Aizliegumu saraksts"
+#~ msgid "The image file is corrupt"
+#~ msgstr "Bildes datne ir bojāta"
 
-#~ msgid "Connected FTP users"
-#~ msgstr "Pievienojušies FTP lietotāji"
-
-#~ msgid "DNS settings"
-#~ msgstr "DNS uzstādījumi"
-
-#~ msgid "Device model"
-#~ msgstr "Ierīces modelis"
-
-#~ msgid "Don't Erase MBR"
-#~ msgstr "Nedzēst MBR"
-
-#~ msgid "Email notification"
-#~ msgstr "E-pasta ziņošana"
-
-#~ msgid "Email report"
-#~ msgstr "E-pasta pārskats"
-
-#~ msgid "File path"
-#~ msgstr "Ceļš uz failu"
-
-#~ msgid "Firewall rule"
-#~ msgstr "Ugunsmūra noteikums"
-
-#~ msgid "Format disk"
-#~ msgstr "Formatēt disku"
-
-#~ msgid "Free disk space"
-#~ msgstr "Brīvā diska vieta"
-
-#~ msgid "Hard disk standby time"
-#~ msgstr "Cietā diska nodrose"
-
-#~ msgid "I/O statistics"
-#~ msgstr "I/O statistika"
-
-#~ msgid "Level 1 - Minimum power usage with Standby (spindown)"
-#~ msgstr ""
-#~ "Līmenis 1 - Minimāls elektrības lietojums ar Nodrosi (griezšanās beigšanu)"
-
-#~ msgid "Level 127 - Intermediate power usage with Standby"
-#~ msgstr "Līmenis 127 - Vidējs elektrības lietojums ar Nodrosi"
-
-#~ msgid "Level 128 - Minimum power usage without Standby (no spindown)"
-#~ msgstr ""
-#~ "Līmenis 128 - Minimāls elektrības lietojums bez Nodroses (griezšanās "
-#~ "beigšanas)"
-
-#~ msgid "Level 192 - Intermediate power usage without Standby"
-#~ msgstr "Līmenis 192 - Vidējs elektrības lietojums bez Nodroses"
-
-#~ msgid "Level 254 - Maximum performance, maximum power usage"
-#~ msgstr "Līmenis 254 - Maksimāla jauda, minimāls elektrības lietojums"
-
-#~ msgid "Level 64 - Intermediate power usage with Standby"
-#~ msgstr "Līmenis 64 - Vidējs elektrības lietojums ar Nodrosi"
-
-#~ msgid "List of available target name on all configured iSCSI targets"
-#~ msgstr ""
-#~ "Saraksts ar pieejamajiem mērķa vārdiem visiem konfigurētajiem iSCSI mērķiem"
-
-#~ msgid "List of imported users"
-#~ msgstr "Saraksts ar importētiem lietotājiem"
-
-#~ msgid "List of mount points"
-#~ msgstr "Saraksts ar montēšanas punktiem"
-
-#~ msgid "Logical Unit Controller login information"
-#~ msgstr "Loģiskās Vienības Kontroliera autorizācijas informācija"
-
-#~ msgid "MS Active Directory informations"
-#~ msgstr "MS Aktīvās Mapes informācijas"
-
-#~ msgid "Maximum performance, maximum acoustic output"
-#~ msgstr "Maksimāla jauda, maksimālā akustiskā izvade"
-
-#~ msgid "Medium acoustic output"
-#~ msgstr "Vidēja akustiskā izvade"
-
-#~ msgid "Minimum performance, Minimum acoustic output"
-#~ msgstr "Minimāla jauda, Minimāla akustiskā izvade"
-
-#~ msgid "Model extra"
-#~ msgstr "Modeļa papildus"
-
-#~ msgid "Model name"
-#~ msgstr "Modeļa nosaukums"
-
-#~ msgid "Online version check"
-#~ msgstr "Tiešsaistes versijas pārbaude"
-
-#~ msgid "Pool information and status"
-#~ msgstr "Pūla informācija un statuss"
-
-#~ msgid "Processes information"
-#~ msgstr "Procesu informācija"
+#~ msgid "The uploaded image file is not for this platform"
+#~ msgstr "Augšupielādētā bildes datne nav šai platformai"
 
 #~ msgid ""
-#~ "Puts the hard disk into standby mode when the selected amount of time after "
-#~ "the last hard disk access has been elapsed."
+#~ "This means that the image you uploaded is not an official/supported image "
+#~ "and may lead to unexpected behavior or security compromises. Only install "
+#~ "images that come from sources that you trust, and make sure that the image "
+#~ "has not been tampered with.<br /><br />Do you want to install this image "
+#~ "anyway (on your own risk)?"
 #~ msgstr ""
-#~ "Ievietot cieto disku Nodroses režīmā, kad izvēlētais laika daudzums pēc "
-#~ "pēdējām piekļuves diskam ir pagājis."
+#~ "Šis nozīmē, ka bilde, kuru Jūs augšupielādējāt nav oficiāla/atbalstīta bilde "
+#~ "un ka tas var novest pie negaidītas uzvedības vai drošības kompromisiem. "
+#~ "Instalē tikai bildes, kas nāk no avotiem, kuriem Tu uzticies un "
+#~ "pārliecinies, ka bilde nav rediģēta.<br /><br />Vai Tu vēlies turpināt "
+#~ "uzstādīt šo bildi (uz paša riska)?"
 
-#~ msgid "RSYNC Client informations"
-#~ msgstr "RSYNC Klienta informācija"
-
-#~ msgid "Remote address"
-#~ msgstr "Attālināta adrese"
-
-#~ msgid "Rescan disks"
-#~ msgstr "Pārskanēt diskus"
-
-#~ msgid "Rsync job"
-#~ msgstr "Rsync darbs"
-
-#~ msgid "Scheduled reboot"
-#~ msgstr "Plānota pārstartēšanās"
-
-#~ msgid "Scheduled self-tests"
-#~ msgstr "Plānotās pašpārbaudes"
-
-#~ msgid "Scheduled shutdown"
-#~ msgstr "Plānotā izslēgšanās"
-
-#~ msgid "Self-Monitoring, Analysis and Reporting Technology"
-#~ msgstr "Paš-Pieskatīšana, Analīze un Paziņošanas Tehnoloģija"
-
-#~ msgid "Show process information"
-#~ msgstr "Rādīt procesa informāciju"
-
-#~ msgid "Standby time"
-#~ msgstr "Nodroses laiks"
-
-#~ msgid "Swap memory"
-#~ msgstr "Maiņatmiņas atmiņa"
-
-#~ msgid "Swap status"
-#~ msgstr "Apmaiņas statuss"
-
-#~ msgid "System firewall"
-#~ msgstr "Sistēmas ugunsmūris"
-
-#~ msgid "System information"
-#~ msgstr "Sistēmas informācija"
-
-#~ msgid "Temperature monitoring"
-#~ msgstr "Temperatūras uzraudzīšana"
-
-#~ msgid ""
-#~ "This allows you to lower the power consumption of the drive, at the expense "
-#~ "of performance."
-#~ msgstr "Šis ļauj samazināt elektrības patēriņu diskam upurējot jaudu."
-
-#~ msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
-#~ msgstr "Šis ļauj uzstādīt pārsūtīšanās režīmu ATA/IDE cietajiem diskiem."
-
-#~ msgid "Virtual device"
-#~ msgstr "Virtuālā ierīce"
-
-#~ msgid "Virtual interface"
-#~ msgstr "Virtuālais interfeiss"
-
-#~ msgid "ZFS dataset information and status"
-#~ msgstr "ZFS datu kopas informācija un stāvoklis"
-
-#~ msgid "ZFS dataset properties"
-#~ msgstr "ZFS datu kopas īpašības"
-
-#~ msgid "minutes"
-#~ msgstr "minūtes"
+#~ msgid "Upgrade firmware"
+#~ msgstr "Atjaunot programmatūru"

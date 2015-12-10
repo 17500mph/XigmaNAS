@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-09 16:19+0000\n"
+"POT-Creation-Date: 2015-12-10 23:13+0000\n"
 "PO-Revision-Date: 2015-07-14 10:32+0000\n"
 "Last-Translator: Alex Lin <linuxant@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-09 15:41+0000\n"
+"X-Launchpad-Export-Date: 2015-12-10 15:13+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -475,6 +475,12 @@ msgstr "新增用戶"
 msgid "Add volume"
 msgstr "新增卷"
 
+msgid "Additional Network"
+msgstr ""
+
+msgid "Additional Storage"
+msgstr ""
+
 msgid "Additional group"
 msgstr "其餘群組"
 
@@ -905,11 +911,28 @@ msgstr ""
 msgid "Blocksize"
 msgstr "區塊大小"
 
+msgid "Boot Arguments"
+msgstr ""
+
+msgid "Boot Loader"
+msgstr ""
+
+#, php-format
+msgid "Boot argument (e.g. %s)."
+msgstr ""
+
+#, php-format
+msgid "Boot loader (e.g. %s)."
+msgstr ""
+
 #, php-format
 msgid ""
 "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
 "resize boot partition of %s.\n"
 msgstr "啟動分區是太小了。您需要從LiveCD的或LiveUSB重新安裝或調整的 %s 的啟動分區。\n"
+
+msgid "Bootloader"
+msgstr ""
 
 msgid "Bridge"
 msgstr "橋接"
@@ -955,6 +978,9 @@ msgstr "CCMP TKIP"
 
 msgid "CD/DVD"
 msgstr "CD/DVD"
+
+msgid "CD/DVD drive"
+msgstr ""
 
 msgid "CHANGED"
 msgstr "已更改"
@@ -1131,12 +1157,6 @@ msgstr ""
 
 msgid "Clear config and Import disks"
 msgstr "清除和匯入磁碟設定"
-
-msgid ""
-"Click &quot;Enable firmware upload&quot; below, then choose the embedded "
-"image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
-"the upgrade process."
-msgstr "點擊以下&quot;啟用韌體升級功能&quot;，然後選擇升级韌體的檔案。<br />點擊 &quot;升级韌體&quot; 開始升级。"
 
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
@@ -1436,6 +1456,12 @@ msgstr ""
 msgid "Create 4KB wrapper (nop device)."
 msgstr "創建4KB封套（NOP裝置）。"
 
+msgid "Create HVM Guest"
+msgstr ""
+
+msgid "Create PV Guest"
+msgstr ""
+
 msgid "Create ZFS on GPT partition"
 msgstr "在GPT分區上創建ZFS"
 
@@ -1562,14 +1588,11 @@ msgstr "DNS伺服器是空白的。"
 
 #, php-format
 msgid ""
-"DO NOT abort the firmware upgrade process once it has started. Once it is "
-"completed, the server will automatically reboot, the current configuration "
-"will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
-"the upgrade.<br />It is strongly recommended that you <a "
-"href='%s'>Backup</a> the server configuration before doing a upgrade."
+"DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
+"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"/>It is recommended that you <a href='%s'>Backup</a> the server "
+"configuration before doing a upgrade."
 msgstr ""
-"一旦韌體升級程序啟動後,不可中止升級程序。一旦固件升級程序啟動後，不要中止升級程序。一旦升級完成後，服務器會自動重啟，當前的配置將保持不變。<br "
-"/>您至少需要 %d MIB 的可用RAM 來升級程序。<br />強烈建議您在升級前<a href='%s'>備份</a> 伺服器的配置。"
 
 msgid "DVD"
 msgstr "DVD"
@@ -1672,6 +1695,9 @@ msgstr "刪除 Rsync 任務"
 
 msgid "Delete URL"
 msgstr "刪除 URL"
+
+msgid "Delete VM"
+msgstr ""
 
 msgid "Delete algorithm"
 msgstr "刪除演算法"
@@ -1911,14 +1937,14 @@ msgstr "監視新 .torrent 檔案的目錄。"
 msgid "Disable File Manager"
 msgstr "關閉檔案管理程式"
 
+msgid "Disable Firmware Update"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "關閉 TCP Wrapper（mod_wrap 模塊）。"
 
 msgid "Disable console menu"
 msgstr "關閉控制台選單"
-
-msgid "Disable firmware upload"
-msgstr "關閉韌體升級功能"
 
 msgid "Disable firmware version check"
 msgstr "關閉韌體版本檢查功能"
@@ -1990,6 +2016,9 @@ msgstr "您確定要刪除這個 Rsync 任務嗎？"
 
 msgid "Do you really want to delete this URL?"
 msgstr "您確定要刪除這個 URL 嗎？"
+
+msgid "Do you really want to delete this VM?"
+msgstr ""
 
 msgid "Do you really want to delete this auth group?"
 msgstr "您確定要刪除這個認證組嗎？"
@@ -2105,6 +2134,9 @@ msgstr "檔案根目錄"
 msgid "Document root of the webserver. Home of the web page files."
 msgstr "網頁伺服器檔案根目錄。"
 
+msgid "DomID"
+msgstr ""
+
 msgid "Domain"
 msgstr "網域"
 
@@ -2216,9 +2248,6 @@ msgstr "錯誤："
 msgid "Edit"
 msgstr "編輯"
 
-msgid "Edit File"
-msgstr ""
-
 msgid "Edit Host"
 msgstr "編輯主機資訊"
 
@@ -2236,6 +2265,9 @@ msgstr "編輯 Rsync 任務"
 
 msgid "Edit URL"
 msgstr "編輯 URL"
+
+msgid "Edit VM"
+msgstr ""
 
 msgid "Edit auth group"
 msgstr "編輯認證組"
@@ -2340,6 +2372,9 @@ msgstr "啟用異步 I/O（AIO）"
 msgid "Enable FXP protocol."
 msgstr "啟用 FXP 協議。"
 
+msgid "Enable Firmware Update"
+msgstr ""
+
 msgid "Enable NFSv4 server."
 msgstr "啟用NFSv4伺服器。"
 
@@ -2402,9 +2437,6 @@ msgstr "啟用延伸屬性支援"
 msgid "Enable extended attributes for this file system."
 msgstr "啟用此檔案系統的延伸屬性。"
 
-msgid "Enable firmware upload"
-msgstr "啟用韌體升級功能"
-
 msgid ""
 "Enable foreground/background file system consistency check during boot "
 "process."
@@ -2433,6 +2465,9 @@ msgstr ""
 
 msgid "Enable module listing."
 msgstr "啟用模組列表。"
+
+msgid "Enable nested virtualization"
+msgstr ""
 
 msgid "Enable peer exchange (PEX)."
 msgstr "啟用對等交換（PEX）。"
@@ -2755,6 +2790,10 @@ msgid "File not found"
 msgstr "找不到檔案"
 
 #, php-format
+msgid "File path (e.g. %s) or ZFS volume (e.g. %s) used as Hard disk image."
+msgstr ""
+
+#, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
 msgstr "Extent 的檔案路徑（例如  /mnt/sharename/extent/%s）。"
 
@@ -2797,8 +2836,8 @@ msgstr ""
 msgid "Firmware"
 msgstr "韌體"
 
-msgid "Firmware image file"
-msgstr "韌體映像檔案"
+msgid "Firmware upload failed (out of memory?)"
+msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "此系統並不支援韌體上傳功能。."
@@ -2981,6 +3020,12 @@ msgstr "HAST卷"
 msgid "HAST volume can be use with GPT/UFS only."
 msgstr "HAST 卷只可用於 GPT/UFS 。"
 
+msgid "HDD Format"
+msgstr ""
+
+msgid "HDD Management"
+msgstr ""
+
 msgid ""
 "HDD producers implement a Fly Height Monitor that attempts to provide "
 "additional protections for write operations by detecting when a recording "
@@ -2996,6 +3041,12 @@ msgstr ""
 
 msgid "HTTP Proxy"
 msgstr "HTTP 代理伺服器"
+
+msgid "HVM Guest"
+msgstr ""
+
+msgid "Hard Disk"
+msgstr ""
 
 msgid "Hardware"
 msgstr "硬體"
@@ -3163,6 +3214,10 @@ msgstr "IPv6 位址"
 msgid "IRC Live Support"
 msgstr "IRC 在線支援"
 
+#, php-format
+msgid "ISO file path (e.g. %s) used as CD/DVD drive."
+msgstr ""
+
 msgid "ISO file to be mounted."
 msgstr "要掛載的 ISO 檔案。"
 
@@ -3240,9 +3295,6 @@ msgid ""
 "twice."
 msgstr "如果您想更改訪問網頁界面的密碼，請在這裡輸入兩次。"
 
-msgid "Image upload failed (out of memory?)"
-msgstr "韌體映像檔上傳失敗（記憶體不足？）"
-
 msgid "Import"
 msgstr "導入"
 
@@ -3319,6 +3371,10 @@ msgstr "抑制一些在 /etc/exports 裡的 syslog 錯行。"
 
 msgid "Initial Digest"
 msgstr "初步摘要"
+
+#, php-format
+msgid "Initial ramdisk (e.g. %s)."
+msgstr ""
 
 msgid "Initialize"
 msgstr "初始化"
@@ -3500,6 +3556,13 @@ msgstr "一月 二月 三月 四月 五月 六月 七月 八月 九月 十月 �
 msgid "Japanese"
 msgstr "日文"
 
+msgid "Kernel"
+msgstr ""
+
+#, php-format
+msgid "Kernel file (e.g. %s)."
+msgstr ""
+
 msgid "Key"
 msgstr "密鑰"
 
@@ -3680,9 +3743,6 @@ msgstr "載入"
 msgid "Load averages"
 msgstr "系統負載"
 
-msgid "Load file"
-msgstr "載入檔案"
-
 msgid "Load on UPS"
 msgstr "UPS 負載"
 
@@ -3805,6 +3865,9 @@ msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
 msgstr "最低值是更優先。對於主節點，使用0或1。如果啟用搶占，失敗時將被調整到240。"
+
+msgid "MAC Address"
+msgstr ""
 
 msgid "MAC address"
 msgstr "MAC 位址"
@@ -3978,8 +4041,14 @@ msgstr "媒體庫"
 msgid "Medium Acoustic Output"
 msgstr ""
 
+msgid "Mem"
+msgstr ""
+
 msgid "Member Interface"
 msgstr "介面成員"
+
+msgid "Memory (MiB)"
+msgstr ""
 
 msgid "Memory Usage"
 msgstr ""
@@ -4169,6 +4238,9 @@ msgstr "伺服器名稱。如果空白則會使用預設的伺服器名稱。"
 msgid "Name of the variable."
 msgstr "變量（variable）名稱。"
 
+msgid "Nested HVM"
+msgstr ""
+
 msgid "NetBIOS domain"
 msgstr "NetBIOS域名"
 
@@ -4180,6 +4252,9 @@ msgstr "網路圖表"
 
 msgid "Network"
 msgstr "網路"
+
+msgid "Network Adapter"
+msgstr ""
 
 msgid "Network File System"
 msgstr "網路檔案系統(NFS)"
@@ -4253,6 +4328,12 @@ msgid ""
 "No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
 "first."
 msgstr "尚未配置門戶組（Portal Group）。請先添加新的<a href='%s'>門戶組（Portal Group）</a>。"
+
+#, php-format
+msgid ""
+"No configured bridge interfaces. Please add new <a href='%s'>bridge "
+"interface</a> first."
+msgstr ""
 
 #, php-format
 msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
@@ -4538,6 +4619,9 @@ msgstr "PPTP 客戶端"
 #, c-format
 msgid "PSK"
 msgstr "PSK"
+
+msgid "PV Guest"
+msgstr ""
 
 msgid "Package Name"
 msgstr "套件名稱"
@@ -4948,6 +5032,9 @@ msgstr "RSYNC 記錄"
 msgid "Raid name"
 msgstr "RAID 名稱"
 
+msgid "Ramdisk"
+msgstr ""
+
 msgid "Read"
 msgstr "讀取"
 
@@ -5274,14 +5361,8 @@ msgstr "儲存"
 msgid "Save & Restart"
 msgstr ""
 
-msgid "Save File"
-msgstr ""
-
 msgid "Save and Restart"
 msgstr "儲存並重新啟動"
-
-msgid "Save file"
-msgstr "儲存檔案"
 
 msgid "Save login information in configuration file."
 msgstr "將登入訊息儲存在設定檔內。"
@@ -5350,6 +5431,9 @@ msgstr "請在網頁界面中選擇超文本傳輸協議（HTTP）或安全超�
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "選擇要開啟 S.M.A.R.T. 監測的磁碟。"
 
+msgid "Select firmware:"
+msgstr ""
+
 msgid "Select item to remove from the list"
 msgstr "請從列表中選擇要刪除的項目"
 
@@ -5401,6 +5485,9 @@ msgid "Send Command!"
 msgstr "傳送指令！"
 
 msgid "Send Now"
+msgstr ""
+
+msgid "Send Test Email"
 msgstr ""
 
 msgid "Send a TEST warning email on startup."
@@ -5903,6 +5990,9 @@ msgstr "TCP 轉發"
 msgid "TCP port"
 msgstr "TCP 端口"
 
+msgid "TCP port is 5900+N, where N is VNC display number."
+msgstr ""
+
 msgid "TCP port to bind the server to."
 msgstr "綁定伺服器的TCP端口。"
 
@@ -6077,6 +6167,10 @@ msgstr "已通知來管理員套用您的更改。"
 #, php-format
 msgid "The associated MIB files can be found at %s."
 msgstr "可以在 %s 中找到相關的 MIB 文件。"
+
+#, php-format
+msgid "The attribute '%s' already exists."
+msgstr ""
 
 #, c-format
 msgid ""
@@ -6386,6 +6480,12 @@ msgstr "加密裝置正在掛載中！繼續前請先 <a href='%s'>卸載</a> �
 msgid "The extent name already exists."
 msgstr "Extent 名稱已經存在。"
 
+msgid "The file you try to flash is not for this platform"
+msgstr ""
+
+msgid "The firmware file is corrupt"
+msgstr ""
+
 #, php-format
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -6410,9 +6510,6 @@ msgid ""
 "The host name may only consist of the characters a-z, A-Z and 0-9, - , _ and "
 "."
 msgstr "主機名稱只可以由 a-z , A-Z , 0-9 , \"-\"  和 \".\" 組成。"
-
-msgid "The image file is corrupt"
-msgstr "映像檔已損毀"
 
 msgid "The initial digest mode negotiated with the initiator."
 msgstr "最初與啟動器談判的摘要模式。"
@@ -6687,9 +6784,6 @@ msgstr "上傳的檔案大小超過在 php.ini 裡指定的 upload_max_filesize 
 msgid "The uploaded file was only partially uploaded."
 msgstr "只上傳了部分的文件。"
 
-msgid "The uploaded image file is not for this platform"
-msgstr "上傳的映像檔並不適於此系統"
-
 msgid "The user's login shell."
 msgstr "用戶的登入 shell。"
 
@@ -6912,14 +7006,12 @@ msgid "This is for information only (not using during iSCSI negotiation)."
 msgstr "僅供參考（不在iSCSI 的交涉中使用）。"
 
 msgid ""
-"This means that the image you uploaded is not an official/supported image "
-"and may lead to unexpected behavior or security compromises. Only install "
-"images that come from sources that you trust, and make sure that the image "
-"has not been tampered with.<br /><br />Do you want to install this image "
-"anyway (on your own risk)?"
+"This means that the firmware you flashed is not an official/supported "
+"firmware and may lead to unexpected behavior or security compromises. Only "
+"install firmwares that come from sources that you trust, and make sure that "
+"the firmware has not been tampered with.<br /><br />Do you want to install "
+"this firmware anyway (on your own risk)?"
 msgstr ""
-"這意味著您上傳的映像檔不是正式/支援的映像檔，所以可能導致意想不到的問題或安全隱患。請您只安裝您信任的映像檔來源，並確保映像檔沒有被篡改。<br "
-"/><br />你確定要繼續安裝此映像檔（自行承擔風險）？"
 
 msgid "This name already exists in the disk list."
 msgstr "磁盤列表中已經有這個名稱存在。"
@@ -7516,8 +7608,8 @@ msgstr "更新間隔"
 msgid "Updating in 5 seconds."
 msgstr "五秒內更新"
 
-msgid "Upgrade firmware"
-msgstr "韌體升級"
+msgid "Upgrade Firmware"
+msgstr ""
 
 msgid "Upload"
 msgstr "上傳"
@@ -7644,6 +7736,9 @@ msgstr ""
 msgid "Using %s bytes fragment size."
 msgstr "%s 字節的片段大小（fragment size）。"
 
+msgid "VCPUs"
+msgstr ""
+
 msgid "VHID"
 msgstr "VHID"
 
@@ -7657,6 +7752,15 @@ msgid "VLAN tag"
 msgstr "VLAN標籤"
 
 msgid "VM"
+msgstr ""
+
+msgid "VM Type"
+msgstr ""
+
+msgid "VNC Display"
+msgstr ""
+
+msgid "VNC Password"
 msgstr ""
 
 msgid "Value"
@@ -7870,6 +7974,12 @@ msgstr "錯誤的分區格式或分區編號。"
 #, php-format
 msgid "Wrong permission on %s."
 msgstr "%s 的權限錯誤。"
+
+msgid "Xen"
+msgstr ""
+
+msgid "Xen Virtual Machine"
+msgstr ""
 
 msgid "Yes"
 msgstr "是"
@@ -8163,258 +8273,56 @@ msgstr "版本："
 msgid "warning"
 msgstr ""
 
-#, php-format
-#~ msgid "%s interface"
-#~ msgstr "%s 介面"
+#~ msgid "Disable firmware upload"
+#~ msgstr "關閉韌體升級功能"
 
-#~ msgid "Advanced Power Management"
-#~ msgstr "進階電源管理"
+#~ msgid "The image file is corrupt"
+#~ msgstr "映像檔已損毀"
 
-#~ msgid "Always on"
-#~ msgstr "永遠開啟"
-
-#~ msgid "Backup configuration"
-#~ msgstr "備份設定"
-
-#~ msgid "Ban list"
-#~ msgstr "阻擋列表"
-
-#~ msgid "File path"
-#~ msgstr "檔案路徑"
-
-#~ msgid "Firewall rule"
-#~ msgstr "防火牆規則"
-
-#~ msgid "Format disk"
-#~ msgstr "格式化磁碟"
-
-#~ msgid "Hard disk standby time"
-#~ msgstr "硬碟待命時間"
-
-#~ msgid "I/O statistics"
-#~ msgstr "I/O 統計資料"
-
-#~ msgid "MS Active Directory informations"
-#~ msgstr "MS Active Directory 資訊"
-
-#~ msgid "Medium acoustic output"
-#~ msgstr "中等效能/噪音"
-
-#~ msgid "Processes information"
-#~ msgstr "程序資訊"
+#~ msgid "Upgrade firmware"
+#~ msgstr "韌體升級"
 
 #~ msgid ""
-#~ "Puts the hard disk into standby mode when the selected amount of time after "
-#~ "the last hard disk access has been elapsed."
-#~ msgstr "設定當硬碟沒有作動多久之後將其設為待命模式。"
+#~ "This means that the image you uploaded is not an official/supported image "
+#~ "and may lead to unexpected behavior or security compromises. Only install "
+#~ "images that come from sources that you trust, and make sure that the image "
+#~ "has not been tampered with.<br /><br />Do you want to install this image "
+#~ "anyway (on your own risk)?"
+#~ msgstr ""
+#~ "這意味著您上傳的映像檔不是正式/支援的映像檔，所以可能導致意想不到的問題或安全隱患。請您只安裝您信任的映像檔來源，並確保映像檔沒有被篡改。<br "
+#~ "/><br />你確定要繼續安裝此映像檔（自行承擔風險）？"
 
-#~ msgid "Remote address"
-#~ msgstr "遠端位置"
+#~ msgid "Enable firmware upload"
+#~ msgstr "啟用韌體升級功能"
 
-#~ msgid "Rescan disks"
-#~ msgstr "重新掃描磁碟"
+#~ msgid "Image upload failed (out of memory?)"
+#~ msgstr "韌體映像檔上傳失敗（記憶體不足？）"
 
-#~ msgid "Rsync job"
-#~ msgstr "Rsync 工作"
+#~ msgid "Firmware image file"
+#~ msgstr "韌體映像檔案"
 
-#~ msgid "Swap memory"
-#~ msgstr "Swap記憶體"
+#~ msgid "The uploaded image file is not for this platform"
+#~ msgstr "上傳的映像檔並不適於此系統"
 
-#~ msgid "Swap status"
-#~ msgstr "Swap 狀態"
+#~ msgid "Load file"
+#~ msgstr "載入檔案"
 
-#~ msgid "System firewall"
-#~ msgstr "系統防火牆"
-
-#~ msgid "System information"
-#~ msgstr "系統資訊"
-
-#~ msgid "Temperature monitoring"
-#~ msgstr "溫度監測"
-
-#~ msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
-#~ msgstr "這是磁碟的 ATA 傳輸模式選項。"
-
-#~ msgid "Virtual interface"
-#~ msgstr "虛擬介面"
-
-#~ msgid "minutes"
-#~ msgstr "分鐘"
-
-#~ msgid "Connected FTP users"
-#~ msgstr "已連線 FTP用戶"
-
-#~ msgid "Device model"
-#~ msgstr "裝置型號"
-
-#~ msgid "Email report"
-#~ msgstr "電郵報告"
-
-#~ msgid "Email notification"
-#~ msgstr "電郵通知"
-
-#~ msgid "HAST resource"
-#~ msgstr "HAST 資源"
-
-#~ msgid "LCDproc (client)"
-#~ msgstr "LCDproc （客戶端）"
-
-#~ msgid "Level 254 - Maximum performance, maximum power usage"
-#~ msgstr "Level 254 - 最高性能，最高用電量"
-
-#~ msgid "Level 64 - Intermediate power usage with Standby"
-#~ msgstr "Level 64 - 中級用電量，待機"
-
-#~ msgid "Level 1 - Minimum power usage with Standby (spindown)"
-#~ msgstr "Level 1 - 最低用電量，待機（硬盤降速）"
-
-#~ msgid "Level 127 - Intermediate power usage with Standby"
-#~ msgstr "Level 127 - 中級用電量，待機"
-
-#~ msgid "Level 192 - Intermediate power usage without Standby"
-#~ msgstr "Level 192 - 中級用電量，不待機"
-
-#~ msgid "List of available target name on all configured iSCSI targets"
-#~ msgstr "所有已配置和可用的 iSCSI 目標名稱列表"
-
-#~ msgid "List of imported users"
-#~ msgstr "已導入用戶列表"
-
-#~ msgid "List of mount points"
-#~ msgstr "掛載點列表"
-
-#~ msgid "Minimum performance, Minimum acoustic output"
-#~ msgstr "最低的效能，最低噪音輸出"
-
-#~ msgid "Model name"
-#~ msgstr "型號名稱"
-
-#~ msgid "Node B settings"
-#~ msgstr "B 節點的設置"
-
-#~ msgid "Node A settings"
-#~ msgstr "A 節點的設置"
-
-#~ msgid "Online version check"
-#~ msgstr "在線版本檢查"
-
-#~ msgid "Pool information and status"
-#~ msgstr "存儲池的信息和狀態"
+#~ msgid "Save file"
+#~ msgstr "儲存檔案"
 
 #, php-format
-#~ msgid "Predefined system groups"
-#~ msgstr "預設的系統群組"
-
-#~ msgid "RSYNC Client informations"
-#~ msgstr "RSYNC 客戶端資訊"
-
-#~ msgid "Scheduled reboot"
-#~ msgstr "重新啟動排程"
-
-#~ msgid "Scheduled shutdown"
-#~ msgstr "關機排程"
-
-#~ msgid "Scheduled self-tests"
-#~ msgstr "自我檢測排程"
-
-#~ msgid "Self-Monitoring, Analysis and Reporting Technology"
-#~ msgstr "自我監測、分析與回報技術 （Self-Monitoring, Analysis and Reporting Technology）"
+#~ msgid ""
+#~ "DO NOT abort the firmware upgrade process once it has started. Once it is "
+#~ "completed, the server will automatically reboot, the current configuration "
+#~ "will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
+#~ "the upgrade.<br />It is strongly recommended that you <a "
+#~ "href='%s'>Backup</a> the server configuration before doing a upgrade."
+#~ msgstr ""
+#~ "一旦韌體升級程序啟動後,不可中止升級程序。一旦固件升級程序啟動後，不要中止升級程序。一旦升級完成後，服務器會自動重啟，當前的配置將保持不變。<br "
+#~ "/>您至少需要 %d MIB 的可用RAM 來升級程序。<br />強烈建議您在升級前<a href='%s'>備份</a> 伺服器的配置。"
 
 #~ msgid ""
-#~ "This allows you to lower the power consumption of the drive, at the expense "
-#~ "of performance."
-#~ msgstr "這使您能夠以性能為代價，降低驅動器的耗電量。"
-
-#~ msgid "ZFS dataset information and status"
-#~ msgstr "ZFS 數據集的資訊和狀態"
-
-#~ msgid "ZFS dataset properties"
-#~ msgstr "ZFS 數據集屬性"
-
-#~ msgid "ZFS snapshot information and status"
-#~ msgstr "ZFS快照的資訊和狀態"
-
-#~ msgid "ZFS snapshot properties"
-#~ msgstr "ZFS快照屬性"
-
-#~ msgid "ZFS volume information and status"
-#~ msgstr "ZFS 卷的資訊和狀態"
-
-#~ msgid "ZFS volume properties"
-#~ msgstr "ZFS 卷屬性"
-
-#~ msgid "Show process information"
-#~ msgstr "顯示程序資訊"
-
-#~ msgid "Logical Unit Controller login information"
-#~ msgstr "邏輯單元控制器（Logical Unit Controller）登入資訊"
-
-#~ msgid "Standby time"
-#~ msgstr "待命時間"
-
-#~ msgid "Maximum performance, maximum acoustic output"
-#~ msgstr "最高效能，最高噪音輸出"
-
-#~ msgid "Level 128 - Minimum power usage without Standby (no spindown)"
-#~ msgstr "Level 128 - 最低用電量，不待機（不降速）"
-
-#~ msgid "DNS settings"
-#~ msgstr "DNS 设置"
-
-#~ msgid "Don't Erase MBR"
-#~ msgstr "不要刪除 MBR"
-
-#~ msgid "HAST status of the configured resources"
-#~ msgstr "HAST的資源狀態"
-
-#, php-format
-#~ msgid "User defined groups"
-#~ msgstr "用戶的定義群組"
-
-#~ msgid "Virtual device"
-#~ msgstr "虛擬裝置（Virtual device）"
-
-#~ msgid "Show ups information"
-#~ msgstr "顯示 UPS 信息"
-
-#~ msgid "System load"
-#~ msgstr "系統負載"
-
-#~ msgid "Model extra"
-#~ msgstr "附加型號"
-
-#~ msgid "Controller model"
-#~ msgstr "控制器型號"
-
-#~ msgid "Rotation rate"
-#~ msgstr "旋轉速度"
-
-#~ msgid "Transfer rate"
-#~ msgstr "傳輸速率"
-
-#~ msgid "Clear config and Import software raid disks"
-#~ msgstr "清除和匯入軟體RAID設定"
-
-#~ msgid "Free disk space"
-#~ msgstr "磁碟可用空間"
-
-#~ msgid "Import software raid disks"
-#~ msgstr "匯入軟體RAID的磁碟"
-
-#~ msgid "List of detected disks"
-#~ msgstr "列出已偵測到的磁碟"
-
-#~ msgid "RAID 5 information and status"
-#~ msgstr "RAID 5 信息和狀態"
-
-#~ msgid "RAID 1 information and status"
-#~ msgstr "RAID 1 信息和狀態"
-
-#~ msgid "RAID 0/1/5 information and status"
-#~ msgstr "RAID 0/1/5  信息和狀態"
-
-#~ msgid "RAID 0 information and status"
-#~ msgstr "RAID 0 信息和狀態"
-
-#~ msgid "JBOD information and status"
-#~ msgstr "JBOD 信息和狀態"
+#~ "Click &quot;Enable firmware upload&quot; below, then choose the embedded "
+#~ "image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
+#~ "the upgrade process."
+#~ msgstr "點擊以下&quot;啟用韌體升級功能&quot;，然後選擇升级韌體的檔案。<br />點擊 &quot;升级韌體&quot; 開始升级。"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-09 16:19+0000\n"
+"POT-Creation-Date: 2015-12-10 23:13+0000\n"
 "PO-Revision-Date: 2015-11-15 18:14+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-09 15:41+0000\n"
+"X-Launchpad-Export-Date: 2015-12-10 15:13+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -541,6 +541,12 @@ msgstr "Adăugare utilizator"
 msgid "Add volume"
 msgstr "Adăugare volum"
 
+msgid "Additional Network"
+msgstr ""
+
+msgid "Additional Storage"
+msgstr ""
+
 msgid "Additional group"
 msgstr "Grup adițional"
 
@@ -1011,6 +1017,20 @@ msgstr ""
 msgid "Blocksize"
 msgstr "Dimensiune Block"
 
+msgid "Boot Arguments"
+msgstr ""
+
+msgid "Boot Loader"
+msgstr ""
+
+#, php-format
+msgid "Boot argument (e.g. %s)."
+msgstr ""
+
+#, php-format
+msgid "Boot loader (e.g. %s)."
+msgstr ""
+
 #, php-format
 msgid ""
 "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
@@ -1018,6 +1038,9 @@ msgid ""
 msgstr ""
 "Sectorul Boot este prea mic. Este necesara reinstalarea sistemului de pe "
 "LiveCD sau LiveUSB, sau redimensionarea sectorului Boot la  %s.\n"
+
+msgid "Bootloader"
+msgstr ""
 
 msgid "Bridge"
 msgstr "Punte"
@@ -1065,6 +1088,9 @@ msgstr "CCMP TKIP"
 
 msgid "CD/DVD"
 msgstr "CD/DVD"
+
+msgid "CD/DVD drive"
+msgstr ""
 
 msgid "CHANGED"
 msgstr "MODIFICAT"
@@ -1250,15 +1276,6 @@ msgstr ""
 
 msgid "Clear config and Import disks"
 msgstr "Ştergere Configurație și Import discuri"
-
-msgid ""
-"Click &quot;Enable firmware upload&quot; below, then choose the embedded "
-"image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
-"the upgrade process."
-msgstr ""
-"Click pe &quot;Activare actualizare&quot; și selectați fișierul imagine de "
-"încărcat.<br />Click pe &quot;Actualizare firmware&quot; pentru a începe "
-"efectiv procesul de actualizare."
 
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
@@ -1637,6 +1654,12 @@ msgstr ""
 msgid "Create 4KB wrapper (nop device)."
 msgstr "Creare wrapper 4KB (dispozitiv nop)."
 
+msgid "Create HVM Guest"
+msgstr ""
+
+msgid "Create PV Guest"
+msgstr ""
+
 msgid "Create ZFS on GPT partition"
 msgstr "Creare ZFS în partiție GPT"
 
@@ -1765,18 +1788,11 @@ msgstr "Serverul DNS este nul."
 
 #, php-format
 msgid ""
-"DO NOT abort the firmware upgrade process once it has started. Once it is "
-"completed, the server will automatically reboot, the current configuration "
-"will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
-"the upgrade.<br />It is strongly recommended that you <a "
-"href='%s'>Backup</a> the server configuration before doing a upgrade."
+"DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
+"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"/>It is recommended that you <a href='%s'>Backup</a> the server "
+"configuration before doing a upgrade."
 msgstr ""
-"Odată început NU OPRIŢI sub nicio formă procesul de actualizare! După "
-"terminarea actualizării sistemul va reporni în mod automat cu păstrarea "
-"configurației curente. <br />Aveți nevoie de minim %d MiB memorie RAM liberă "
-"pentru a putea efectua actualizarea.<br />Vă sugerăm să efectuați "
-"obligatoriu un <a href='%s'>Backup</a> al configurației curente a sistemului "
-"înainte de orice actualizare firmware."
 
 msgid "DVD"
 msgstr "DVD"
@@ -1881,6 +1897,9 @@ msgstr "Ștergere activitate Rsync"
 
 msgid "Delete URL"
 msgstr "Ștergere URL"
+
+msgid "Delete VM"
+msgstr ""
 
 msgid "Delete algorithm"
 msgstr "Ștergere algoritm"
@@ -2131,14 +2150,14 @@ msgstr "Folder pentru urmărirea apariției fișierelor noi tip .torrent."
 msgid "Disable File Manager"
 msgstr "Dezactivare Manager de Fişiere"
 
+msgid "Disable Firmware Update"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Dezactivare wrapper TCP (modul mod_wrap)."
 
 msgid "Disable console menu"
 msgstr "Dezactivare meniu consolă"
-
-msgid "Disable firmware upload"
-msgstr "Dezactivare actualizare"
 
 msgid "Disable firmware version check"
 msgstr "Dezactivare verificare versiune firmware"
@@ -2212,6 +2231,9 @@ msgstr "Doriți să ștergeți această acțiune Rsync?"
 
 msgid "Do you really want to delete this URL?"
 msgstr "Doriți să ștergeți acest URL?"
+
+msgid "Do you really want to delete this VM?"
+msgstr ""
 
 msgid "Do you really want to delete this auth group?"
 msgstr "Doriți să ștergeți acest Auth Group?"
@@ -2337,6 +2359,9 @@ msgstr "Folderul rădăcină"
 msgid "Document root of the webserver. Home of the web page files."
 msgstr "Folderul rădăcină a fișierele pentru serverul web."
 
+msgid "DomID"
+msgstr ""
+
 msgid "Domain"
 msgstr "Domeniu"
 
@@ -2449,9 +2474,6 @@ msgstr "EROARE:"
 msgid "Edit"
 msgstr "Editare"
 
-msgid "Edit File"
-msgstr ""
-
 msgid "Edit Host"
 msgstr "Editare sistem"
 
@@ -2469,6 +2491,9 @@ msgstr "Editare activitate Rsync"
 
 msgid "Edit URL"
 msgstr "Editare URL"
+
+msgid "Edit VM"
+msgstr ""
 
 msgid "Edit auth group"
 msgstr "Editare Grup Auth"
@@ -2573,6 +2598,9 @@ msgstr "Activare mod I/O Asincron (AIO)"
 msgid "Enable FXP protocol."
 msgstr "Activare protocol FXP."
 
+msgid "Enable Firmware Update"
+msgstr ""
+
 msgid "Enable NFSv4 server."
 msgstr "Activeaza server NFSv4."
 
@@ -2639,9 +2667,6 @@ msgstr "Activare suport atribute extinse"
 msgid "Enable extended attributes for this file system."
 msgstr "Activare atribute extinse pentru acest sistem de fișiere."
 
-msgid "Enable firmware upload"
-msgstr "Activare actualizare"
-
 msgid ""
 "Enable foreground/background file system consistency check during boot "
 "process."
@@ -2672,6 +2697,9 @@ msgstr "Activare mapare atribute DOS"
 
 msgid "Enable module listing."
 msgstr "Activare listare module."
+
+msgid "Enable nested virtualization"
+msgstr ""
 
 msgid "Enable peer exchange (PEX)."
 msgstr "Activare schimburi în grup (PEX)."
@@ -3026,6 +3054,10 @@ msgid "File not found"
 msgstr "Fișier negăsit"
 
 #, php-format
+msgid "File path (e.g. %s) or ZFS volume (e.g. %s) used as Hard disk image."
+msgstr ""
+
+#, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
 msgstr "Cale fișier (ex. /mnt/sharename/extent/%s) utilizată ca extensie."
 
@@ -3068,8 +3100,8 @@ msgstr ""
 msgid "Firmware"
 msgstr "Firmware"
 
-msgid "Firmware image file"
-msgstr "Fișier imagine Firmware"
+msgid "Firmware upload failed (out of memory?)"
+msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "Actualizarea nu este posibilă pe această platformă."
@@ -3258,6 +3290,12 @@ msgstr "Volum HAST"
 msgid "HAST volume can be use with GPT/UFS only."
 msgstr "Volumul HAST poate fi utizat doar cu GPT/UFS."
 
+msgid "HDD Format"
+msgstr ""
+
+msgid "HDD Management"
+msgstr ""
+
 msgid ""
 "HDD producers implement a Fly Height Monitor that attempts to provide "
 "additional protections for write operations by detecting when a recording "
@@ -3282,6 +3320,12 @@ msgstr ""
 
 msgid "HTTP Proxy"
 msgstr "Proxy HTTP"
+
+msgid "HVM Guest"
+msgstr ""
+
+msgid "Hard Disk"
+msgstr ""
 
 msgid "Hardware"
 msgstr "Echipament"
@@ -3463,6 +3507,10 @@ msgstr "Adrese IPv6"
 msgid "IRC Live Support"
 msgstr "Suport Live IRC"
 
+#, php-format
+msgid "ISO file path (e.g. %s) used as CD/DVD drive."
+msgstr ""
+
 msgid "ISO file to be mounted."
 msgstr "Fișier ISO de montat."
 
@@ -3566,9 +3614,6 @@ msgstr ""
 "Dacă doriți să schimbați parola de acces pentru Interfața Web, introduceți-o "
 "aici de două ori."
 
-msgid "Image upload failed (out of memory?)"
-msgstr "Eroare la încărcarea imaginii (memorie insuficientă?)"
-
 msgid "Import"
 msgstr "Import"
 
@@ -3649,6 +3694,10 @@ msgstr "Inhibare diagnostic pentru unele linii incorecte din /etc/exports."
 
 msgid "Initial Digest"
 msgstr "Rezumat Inițial"
+
+#, php-format
+msgid "Initial ramdisk (e.g. %s)."
+msgstr ""
 
 msgid "Initialize"
 msgstr "Inițializare"
@@ -3854,6 +3903,13 @@ msgstr ""
 msgid "Japanese"
 msgstr "Japoneză"
 
+msgid "Kernel"
+msgstr ""
+
+#, php-format
+msgid "Kernel file (e.g. %s)."
+msgstr ""
+
 msgid "Key"
 msgstr "Cheie"
 
@@ -4051,9 +4107,6 @@ msgstr "Încărcare"
 msgid "Load averages"
 msgstr "Încărcare medie"
 
-msgid "Load file"
-msgstr "Încărcare fişier"
-
 msgid "Load on UPS"
 msgstr "Încărcare UPS"
 
@@ -4187,6 +4240,9 @@ msgstr ""
 "Valoarea mai mica are prioritate mai ridicata. Pentru noduri master, "
 "foloseste 0 sau 1. Daca preempt este activat, se reconfigureaza la 240 in "
 "caz de erroare."
+
+msgid "MAC Address"
+msgstr ""
 
 msgid "MAC address"
 msgstr "Adresa MAC"
@@ -4368,8 +4424,14 @@ msgstr "Bibliotecă media"
 msgid "Medium Acoustic Output"
 msgstr ""
 
+msgid "Mem"
+msgstr ""
+
 msgid "Member Interface"
 msgstr "Interfață Membru"
+
+msgid "Memory (MiB)"
+msgstr ""
 
 msgid "Memory Usage"
 msgstr ""
@@ -4566,6 +4628,9 @@ msgstr ""
 msgid "Name of the variable."
 msgstr "Numele variabilei."
 
+msgid "Nested HVM"
+msgstr ""
+
 msgid "NetBIOS domain"
 msgstr "Domeniu NetBIOS"
 
@@ -4577,6 +4642,9 @@ msgstr "Grafice rețea"
 
 msgid "Network"
 msgstr "Rețea"
+
+msgid "Network Adapter"
+msgstr ""
 
 msgid "Network File System"
 msgstr "Sistem Fișiere Rețea"
@@ -4664,6 +4732,12 @@ msgid ""
 msgstr ""
 "Niciun Grup Portal configurat. Adăugați mai întîi un <a href='%s'>Grup "
 "Portal</a>"
+
+#, php-format
+msgid ""
+"No configured bridge interfaces. Please add new <a href='%s'>bridge "
+"interface</a> first."
+msgstr ""
 
 #, php-format
 msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
@@ -4977,6 +5051,9 @@ msgstr "Clienți PPTP"
 #, c-format
 msgid "PSK"
 msgstr "PSK"
+
+msgid "PV Guest"
+msgstr ""
 
 msgid "Package Name"
 msgstr "Nume Pachet"
@@ -5401,6 +5478,9 @@ msgstr "Jurnal RSYNC"
 msgid "Raid name"
 msgstr "Nume Raid"
 
+msgid "Ramdisk"
+msgstr ""
+
 msgid "Read"
 msgstr "Citire"
 
@@ -5740,14 +5820,8 @@ msgstr "Salvare"
 msgid "Save & Restart"
 msgstr ""
 
-msgid "Save File"
-msgstr ""
-
 msgid "Save and Restart"
 msgstr "Salvare și Repornire"
-
-msgid "Save file"
-msgstr "Salvare fișier"
 
 msgid "Save login information in configuration file."
 msgstr "Salvare informații autentificare în fișierul de configurare."
@@ -5822,6 +5896,9 @@ msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr ""
 "Selectați un disc care are activată opțiunea de monitorizare S.M.A.R.T."
 
+msgid "Select firmware:"
+msgstr ""
+
 msgid "Select item to remove from the list"
 msgstr "Selectați un element din listă pentru eliminare"
 
@@ -5876,6 +5953,9 @@ msgid "Send Command!"
 msgstr "Trimitere Comandă!"
 
 msgid "Send Now"
+msgstr ""
+
+msgid "Send Test Email"
 msgstr ""
 
 msgid "Send a TEST warning email on startup."
@@ -6417,6 +6497,9 @@ msgstr "Retransmitere TCP"
 msgid "TCP port"
 msgstr "Port TCP"
 
+msgid "TCP port is 5900+N, where N is VNC display number."
+msgstr ""
+
 msgid "TCP port to bind the server to."
 msgstr "Port utilizat de server pentru legătură."
 
@@ -6606,6 +6689,10 @@ msgstr ""
 #, php-format
 msgid "The associated MIB files can be found at %s."
 msgstr "Fișierele MIB asociate pot fi găsite la %s."
+
+#, php-format
+msgid "The attribute '%s' already exists."
+msgstr ""
 
 #, c-format
 msgid ""
@@ -6975,6 +7062,12 @@ msgstr ""
 msgid "The extent name already exists."
 msgstr "Numele extins există deja."
 
+msgid "The file you try to flash is not for this platform"
+msgstr ""
+
+msgid "The firmware file is corrupt"
+msgstr ""
+
 #, php-format
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -7001,9 +7094,6 @@ msgid ""
 "."
 msgstr ""
 "Numele sistemului poate conține doar caracterele a-z, A-Z and 0-9, - , _ și ."
-
-msgid "The image file is corrupt"
-msgstr "Fișierul imagine sistem este corupt"
 
 msgid "The initial digest mode negotiated with the initiator."
 msgstr "Modul rezumat iniţial negociat cu inițiatorul."
@@ -7329,10 +7419,6 @@ msgstr ""
 msgid "The uploaded file was only partially uploaded."
 msgstr "Fișierul a fost parțial încărcat."
 
-msgid "The uploaded image file is not for this platform"
-msgstr ""
-"Imaginea sistem încarcată nu a fost generată pentru această platformă"
-
 msgid "The user's login shell."
 msgstr "Consola de autentificare utilizator."
 
@@ -7599,18 +7685,12 @@ msgstr ""
 "Doar pentru informare (nu va fi utilizat în timpul negocierii iSCSI)."
 
 msgid ""
-"This means that the image you uploaded is not an official/supported image "
-"and may lead to unexpected behavior or security compromises. Only install "
-"images that come from sources that you trust, and make sure that the image "
-"has not been tampered with.<br /><br />Do you want to install this image "
-"anyway (on your own risk)?"
+"This means that the firmware you flashed is not an official/supported "
+"firmware and may lead to unexpected behavior or security compromises. Only "
+"install firmwares that come from sources that you trust, and make sure that "
+"the firmware has not been tampered with.<br /><br />Do you want to install "
+"this firmware anyway (on your own risk)?"
 msgstr ""
-"Aceasta înseamnă că imaginea încărcată nu este o imagine oficială/suportată "
-"și poate duce la comportamente neprevăzute ale sistemului sau chiar "
-"compromiterea securității acestuia. Instalați doar imagini obținute de la "
-"surse de încredere și verificați ca ele să nu fi fost "
-"alterate/modificate.<br /><br />Doriți să instalați totuși această imagine "
-"pe riscul propriu?"
 
 msgid "This name already exists in the disk list."
 msgstr "Acest nume există deja în lista discurilor."
@@ -8305,8 +8385,8 @@ msgstr "Perioada de actualizare"
 msgid "Updating in 5 seconds."
 msgstr "Actualizare în 5 secunde."
 
-msgid "Upgrade firmware"
-msgstr "Actualizare firmware"
+msgid "Upgrade Firmware"
+msgstr ""
 
 msgid "Upload"
 msgstr "Încărcare"
@@ -8456,6 +8536,9 @@ msgstr ""
 msgid "Using %s bytes fragment size."
 msgstr "Utilizare fragmente de %s octeți."
 
+msgid "VCPUs"
+msgstr ""
+
 msgid "VHID"
 msgstr "VHID"
 
@@ -8470,6 +8553,15 @@ msgstr "Eticheta VLAN"
 
 msgid "VM"
 msgstr "VM"
+
+msgid "VM Type"
+msgstr ""
+
+msgid "VNC Display"
+msgstr ""
+
+msgid "VNC Password"
+msgstr ""
 
 msgid "Value"
 msgstr "Valoare"
@@ -8703,6 +8795,12 @@ msgstr "Tip partiție sau număr partiție eronat."
 #, php-format
 msgid "Wrong permission on %s."
 msgstr "Permisiune greșită în %s."
+
+msgid "Xen"
+msgstr ""
+
+msgid "Xen Virtual Machine"
+msgstr ""
 
 msgid "Yes"
 msgstr "Da"
@@ -9014,264 +9112,68 @@ msgstr "versiune:"
 msgid "warning"
 msgstr "avertisment"
 
-#~ msgid "Always on"
-#~ msgstr "Pornit Mereu"
+#~ msgid "Image upload failed (out of memory?)"
+#~ msgstr "Eroare la încărcarea imaginii (memorie insuficientă?)"
 
-#~ msgid "Ban list"
-#~ msgstr "Lista neagră"
+#~ msgid "Firmware image file"
+#~ msgstr "Fișier imagine Firmware"
 
-#~ msgid "Email notification"
-#~ msgstr "Notificare prin email"
+#~ msgid "The image file is corrupt"
+#~ msgstr "Fișierul imagine sistem este corupt"
 
-#~ msgid "Email report"
-#~ msgstr "Raport email"
-
-#~ msgid "Format disk"
-#~ msgstr "Formatare disc"
-
-#~ msgid "Hard disk standby time"
-#~ msgstr "Timp de standby disc"
-
-#~ msgid "List of mount points"
-#~ msgstr "Lista punctelor de montare"
-
-#~ msgid "Standby time"
-#~ msgstr "Timp Standby"
-
-#~ msgid "minutes"
-#~ msgstr "minute"
-
-#~ msgid "Firewall rule"
-#~ msgstr "Regulă Firewall"
-
-#~ msgid "I/O statistics"
-#~ msgstr "Statistici I/O"
-
-#~ msgid "Import software raid disks"
-#~ msgstr "Import discuri raid software"
-
-#~ msgid "Level 1 - Minimum power usage with Standby (spindown)"
+#~ msgid "The uploaded image file is not for this platform"
 #~ msgstr ""
-#~ "Nivel 1 - Nivel energetic minim de utilizare în Standby (oprire platane disc)"
-
-#~ msgid "List of detected disks"
-#~ msgstr "Lista discurilor detectate"
-
-#~ msgid "Model extra"
-#~ msgstr "Extra Model"
-
-#~ msgid "Model name"
-#~ msgstr "Nume Model"
-
-#~ msgid "Level 127 - Intermediate power usage with Standby"
-#~ msgstr "Nivel 127 - Nivel intermediar energetic pentru modul Standby"
-
-#~ msgid "Level 192 - Intermediate power usage without Standby"
-#~ msgstr "Nivel 129 - Nivel intermediar energetic fără modul Standby"
-
-#~ msgid "Level 64 - Intermediate power usage with Standby"
-#~ msgstr "Nivel 64 - Nivel intermediar energetic în modul Standby"
-
-#, php-format
-#~ msgid "Predefined system groups"
-#~ msgstr "Grupuri sistem predefinite"
-
-#~ msgid "Rescan disks"
-#~ msgstr "Rescanare discuri"
-
-#~ msgid "Scheduled self-tests"
-#~ msgstr "Auto-Teste Programate"
-
-#~ msgid "System firewall"
-#~ msgstr "Firewall sistem"
-
-#~ msgid "Swap status"
-#~ msgstr "Stare swap"
-
-#~ msgid "DNS settings"
-#~ msgstr "Setări DNS"
-
-#, php-format
-#~ msgid "User defined groups"
-#~ msgstr "Grupuri definite de utilizator"
-
-#~ msgid "Virtual device"
-#~ msgstr "Dispozitiv virtual"
-
-#~ msgid "Scheduled reboot"
-#~ msgstr "Repornire programată"
-
-#~ msgid "Scheduled shutdown"
-#~ msgstr "Oprire Programată"
-
-#~ msgid "Device model"
-#~ msgstr "Model"
-
-#~ msgid "HAST status of the configured resources"
-#~ msgstr "Starea resurselor configurate HAST"
-
-#~ msgid "HAST resource"
-#~ msgstr "resursă HAST"
-
-#~ msgid "Node B settings"
-#~ msgstr "Setări nod B"
-
-#~ msgid "Node A settings"
-#~ msgstr "Setări nod A"
-
-#~ msgid "Advanced Power Management"
-#~ msgstr "Mod Avansat Management Energetic"
-
-#, php-format
-#~ msgid "%s interface"
-#~ msgstr "Interfața %s"
-
-#~ msgid "Backup configuration"
-#~ msgstr "Salvare configurație"
-
-#~ msgid "Clear config and Import software raid disks"
-#~ msgstr "Ştergere Configurație și Import discuri Raid software"
-
-#~ msgid "Connected FTP users"
-#~ msgstr "Utilizatori FTP conectați"
-
-#~ msgid "Don't Erase MBR"
-#~ msgstr "Formatare fără ștergerea MBR"
-
-#~ msgid "File path"
-#~ msgstr "Cale fișier"
-
-#~ msgid "Free disk space"
-#~ msgstr "Spațiu liber pe disc"
-
-#~ msgid "LCDproc (client)"
-#~ msgstr "LCDproc (client)"
-
-#~ msgid "Level 128 - Minimum power usage without Standby (no spindown)"
-#~ msgstr ""
-#~ "Nivel 128 - Nivel minim energetic pentru modul Standby (fără reducerea "
-#~ "turației discurilor)"
-
-#~ msgid "Level 254 - Maximum performance, maximum power usage"
-#~ msgstr "Nivel 127 - Nivel maxim de performanţă și de consum energetic"
-
-#~ msgid "List of available target name on all configured iSCSI targets"
-#~ msgstr ""
-#~ "Lista cu numele disponibile pentru toate destinațiile iSCSI configurate"
-
-#~ msgid "List of imported users"
-#~ msgstr "Lista utilizatorilor importați"
-
-#~ msgid "Logical Unit Controller login information"
-#~ msgstr "Informație Autorizare Controler Logic"
-
-#~ msgid "MS Active Directory informations"
-#~ msgstr "Informații MS Active Directory"
-
-#~ msgid "Maximum performance, maximum acoustic output"
-#~ msgstr "Performanță maximă, nivel maxim acustic"
-
-#~ msgid "Medium acoustic output"
-#~ msgstr "Nivel mediu acustic"
-
-#~ msgid "Minimum performance, Minimum acoustic output"
-#~ msgstr "Performanță minimă, nivel minim acustic"
-
-#~ msgid "Pool information and status"
-#~ msgstr "Stare și Informații Structură"
-
-#~ msgid "Processes information"
-#~ msgstr "Informații procese"
+#~ "Imaginea sistem încarcată nu a fost generată pentru această platformă"
 
 #~ msgid ""
-#~ "Puts the hard disk into standby mode when the selected amount of time after "
-#~ "the last hard disk access has been elapsed."
-#~ msgstr "Pune hard discul în modul standby după expirarea timpului setat."
+#~ "This means that the image you uploaded is not an official/supported image "
+#~ "and may lead to unexpected behavior or security compromises. Only install "
+#~ "images that come from sources that you trust, and make sure that the image "
+#~ "has not been tampered with.<br /><br />Do you want to install this image "
+#~ "anyway (on your own risk)?"
+#~ msgstr ""
+#~ "Aceasta înseamnă că imaginea încărcată nu este o imagine oficială/suportată "
+#~ "și poate duce la comportamente neprevăzute ale sistemului sau chiar "
+#~ "compromiterea securității acestuia. Instalați doar imagini obținute de la "
+#~ "surse de încredere și verificați ca ele să nu fi fost "
+#~ "alterate/modificate.<br /><br />Doriți să instalați totuși această imagine "
+#~ "pe riscul propriu?"
 
-#~ msgid "RSYNC Client informations"
-#~ msgstr "Informații Client RSYNC"
+#~ msgid "Save file"
+#~ msgstr "Salvare fișier"
 
-#~ msgid "Remote address"
-#~ msgstr "Adresă Destinație"
+#~ msgid "Load file"
+#~ msgstr "Încărcare fişier"
 
-#~ msgid "Rsync job"
-#~ msgstr "Activitate Rsync"
+#~ msgid "Upgrade firmware"
+#~ msgstr "Actualizare firmware"
 
-#~ msgid "Self-Monitoring, Analysis and Reporting Technology"
-#~ msgstr "Tehnologie de Auto-Monitorizare, Analiză și Raportare"
+#, php-format
+#~ msgid ""
+#~ "DO NOT abort the firmware upgrade process once it has started. Once it is "
+#~ "completed, the server will automatically reboot, the current configuration "
+#~ "will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
+#~ "the upgrade.<br />It is strongly recommended that you <a "
+#~ "href='%s'>Backup</a> the server configuration before doing a upgrade."
+#~ msgstr ""
+#~ "Odată început NU OPRIŢI sub nicio formă procesul de actualizare! După "
+#~ "terminarea actualizării sistemul va reporni în mod automat cu păstrarea "
+#~ "configurației curente. <br />Aveți nevoie de minim %d MiB memorie RAM liberă "
+#~ "pentru a putea efectua actualizarea.<br />Vă sugerăm să efectuați "
+#~ "obligatoriu un <a href='%s'>Backup</a> al configurației curente a sistemului "
+#~ "înainte de orice actualizare firmware."
 
-#~ msgid "Show process information"
-#~ msgstr "Afișare informații proces"
+#~ msgid "Disable firmware upload"
+#~ msgstr "Dezactivare actualizare"
 
-#~ msgid "Swap memory"
-#~ msgstr "Memorie swap"
-
-#~ msgid "System information"
-#~ msgstr "Informații Sistem"
-
-#~ msgid "Temperature monitoring"
-#~ msgstr "Monitorizare temperatură"
+#~ msgid "Enable firmware upload"
+#~ msgstr "Activare actualizare"
 
 #~ msgid ""
-#~ "This allows you to lower the power consumption of the drive, at the expense "
-#~ "of performance."
+#~ "Click &quot;Enable firmware upload&quot; below, then choose the embedded "
+#~ "image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
+#~ "the upgrade process."
 #~ msgstr ""
-#~ "Aceasta vă permite să micșorați consumul de energie în detrimentul "
-#~ "performanței."
-
-#~ msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
-#~ msgstr "Vă permite să stabiliți modul de transfer pentru discurile ATA/IDE."
-
-#~ msgid "Virtual interface"
-#~ msgstr "Interfețe virtuale"
-
-#~ msgid "ZFS dataset information and status"
-#~ msgstr "Informații și stare ZFS"
-
-#~ msgid "ZFS dataset properties"
-#~ msgstr "Proprietăți ZFS"
-
-#~ msgid "ZFS snapshot information and status"
-#~ msgstr "Informații și stare imagine ZFS"
-
-#~ msgid "ZFS snapshot properties"
-#~ msgstr "Proprietăți imagine ZFS"
-
-#~ msgid "ZFS volume information and status"
-#~ msgstr "Informații și stare volum ZFS"
-
-#~ msgid "ZFS volume properties"
-#~ msgstr "Proprietăți volum ZFS"
-
-#~ msgid "Show ups information"
-#~ msgstr "Afișare informații UPS"
-
-#~ msgid "System load"
-#~ msgstr "Încărcare sistem"
-
-#~ msgid "Controller model"
-#~ msgstr "Model controler"
-
-#~ msgid "Transfer rate"
-#~ msgstr "Rată transfer"
-
-#~ msgid "JBOD information and status"
-#~ msgstr "Informații și stare JBOD"
-
-#~ msgid "RAID 5 information and status"
-#~ msgstr "Informații și stare RAID 5"
-
-#~ msgid "RAID 1 information and status"
-#~ msgstr "Informații și stare RAID 1"
-
-#~ msgid "RAID 0/1/5 information and status"
-#~ msgstr "Informații și stare RAID 0/1/5"
-
-#~ msgid "RAID 0 information and status"
-#~ msgstr "Informații și stare RAID 0"
-
-#~ msgid "Online version check"
-#~ msgstr "Verificare actualizări"
-
-#~ msgid "Rotation rate"
-#~ msgstr "Viteză"
+#~ "Click pe &quot;Activare actualizare&quot; și selectați fișierul imagine de "
+#~ "încărcat.<br />Click pe &quot;Actualizare firmware&quot; pentru a începe "
+#~ "efectiv procesul de actualizare."

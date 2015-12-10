@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-09 16:19+0000\n"
+"POT-Creation-Date: 2015-12-10 23:13+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-09 15:41+0000\n"
+"X-Launchpad-Export-Date: 2015-12-10 15:12+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -485,6 +485,12 @@ msgstr "사용자 추가"
 msgid "Add volume"
 msgstr ""
 
+msgid "Additional Network"
+msgstr ""
+
+msgid "Additional Storage"
+msgstr ""
+
 msgid "Additional group"
 msgstr "추가 그룹"
 
@@ -912,10 +918,27 @@ msgstr ""
 msgid "Blocksize"
 msgstr ""
 
+msgid "Boot Arguments"
+msgstr ""
+
+msgid "Boot Loader"
+msgstr ""
+
+#, php-format
+msgid "Boot argument (e.g. %s)."
+msgstr ""
+
+#, php-format
+msgid "Boot loader (e.g. %s)."
+msgstr ""
+
 #, php-format
 msgid ""
 "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
 "resize boot partition of %s.\n"
+msgstr ""
+
+msgid "Bootloader"
 msgstr ""
 
 msgid "Bridge"
@@ -961,6 +984,9 @@ msgid "CCMP TKIP"
 msgstr "CCMP TKIP"
 
 msgid "CD/DVD"
+msgstr ""
+
+msgid "CD/DVD drive"
 msgstr ""
 
 msgid "CHANGED"
@@ -1139,12 +1165,6 @@ msgid "Clear Config & Import Software Raid Disks"
 msgstr ""
 
 msgid "Clear config and Import disks"
-msgstr ""
-
-msgid ""
-"Click &quot;Enable firmware upload&quot; below, then choose the embedded "
-"image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
-"the upgrade process."
 msgstr ""
 
 msgid ""
@@ -1436,6 +1456,12 @@ msgstr ""
 msgid "Create 4KB wrapper (nop device)."
 msgstr ""
 
+msgid "Create HVM Guest"
+msgstr ""
+
+msgid "Create PV Guest"
+msgstr ""
+
 msgid "Create ZFS on GPT partition"
 msgstr ""
 
@@ -1562,11 +1588,10 @@ msgstr ""
 
 #, php-format
 msgid ""
-"DO NOT abort the firmware upgrade process once it has started. Once it is "
-"completed, the server will automatically reboot, the current configuration "
-"will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
-"the upgrade.<br />It is strongly recommended that you <a "
-"href='%s'>Backup</a> the server configuration before doing a upgrade."
+"DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
+"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"/>It is recommended that you <a href='%s'>Backup</a> the server "
+"configuration before doing a upgrade."
 msgstr ""
 
 msgid "DVD"
@@ -1670,6 +1695,9 @@ msgstr "Rsync 작업 삭제"
 
 msgid "Delete URL"
 msgstr "URL 삭제"
+
+msgid "Delete VM"
+msgstr ""
 
 msgid "Delete algorithm"
 msgstr "알고리즘 삭제"
@@ -1911,14 +1939,14 @@ msgstr "새 .torrent 파일들을 감시할 디렉터리"
 msgid "Disable File Manager"
 msgstr "파일 관리자 비활성화"
 
+msgid "Disable Firmware Update"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
 msgid "Disable console menu"
 msgstr "콘솔 메뉴 비활성화"
-
-msgid "Disable firmware upload"
-msgstr "펌웨어 업로드 비활성화"
 
 msgid "Disable firmware version check"
 msgstr "펌웨어 버전 체크 비활성화"
@@ -1990,6 +2018,9 @@ msgstr "정말로 이 rsync 작업을 지우시겠습니까?"
 
 msgid "Do you really want to delete this URL?"
 msgstr "정말로 이 URL을 지우시겠습니까?"
+
+msgid "Do you really want to delete this VM?"
+msgstr ""
 
 msgid "Do you really want to delete this auth group?"
 msgstr "정말로 이 인증 그룹을 삭제하시겠습니까?"
@@ -2105,6 +2136,9 @@ msgstr "문서 루트"
 msgid "Document root of the webserver. Home of the web page files."
 msgstr "웹 서버의 문서 루트. 웹 페이지 파일들의 홈."
 
+msgid "DomID"
+msgstr ""
+
 msgid "Domain"
 msgstr "도메인"
 
@@ -2216,9 +2250,6 @@ msgstr ""
 msgid "Edit"
 msgstr "편집"
 
-msgid "Edit File"
-msgstr ""
-
 msgid "Edit Host"
 msgstr "호스트 편집"
 
@@ -2236,6 +2267,9 @@ msgstr "Rsync 작업 편집"
 
 msgid "Edit URL"
 msgstr "URL 편집"
+
+msgid "Edit VM"
+msgstr ""
 
 msgid "Edit auth group"
 msgstr "인증 그룹 편집"
@@ -2340,6 +2374,9 @@ msgstr "비동기적 I/O 활성화(AIO)"
 msgid "Enable FXP protocol."
 msgstr "FXP 프로토콜 활성화."
 
+msgid "Enable Firmware Update"
+msgstr ""
+
 msgid "Enable NFSv4 server."
 msgstr ""
 
@@ -2402,9 +2439,6 @@ msgstr "확장 속성 지원 활성화"
 msgid "Enable extended attributes for this file system."
 msgstr "이 파일 시스템에 확장 속성 활성화."
 
-msgid "Enable firmware upload"
-msgstr "펌웨어 업로드 활성화"
-
 msgid ""
 "Enable foreground/background file system consistency check during boot "
 "process."
@@ -2433,6 +2467,9 @@ msgstr ""
 
 msgid "Enable module listing."
 msgstr "모듈 리스팅 활성화."
+
+msgid "Enable nested virtualization"
+msgstr ""
 
 msgid "Enable peer exchange (PEX)."
 msgstr "피어 간 교환(PEX) 활성화."
@@ -2760,6 +2797,10 @@ msgid "File not found"
 msgstr "파일이 발견되지 않습니다"
 
 #, php-format
+msgid "File path (e.g. %s) or ZFS volume (e.g. %s) used as Hard disk image."
+msgstr ""
+
+#, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
 msgstr "범위로 이용될 파일 경로(예. /mnt/sharename/extent/%s)."
 
@@ -2802,8 +2843,8 @@ msgstr ""
 msgid "Firmware"
 msgstr "펌웨어"
 
-msgid "Firmware image file"
-msgstr "펌웨어 이미지 파일"
+msgid "Firmware upload failed (out of memory?)"
+msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "이 플랫폼에서는 펌웨어 업로드가 지원되지 않습니다."
@@ -2986,6 +3027,12 @@ msgstr ""
 msgid "HAST volume can be use with GPT/UFS only."
 msgstr ""
 
+msgid "HDD Format"
+msgstr ""
+
+msgid "HDD Management"
+msgstr ""
+
 msgid ""
 "HDD producers implement a Fly Height Monitor that attempts to provide "
 "additional protections for write operations by detecting when a recording "
@@ -3001,6 +3048,12 @@ msgstr ""
 
 msgid "HTTP Proxy"
 msgstr "HTTP 프록시"
+
+msgid "HVM Guest"
+msgstr ""
+
+msgid "Hard Disk"
+msgstr ""
 
 msgid "Hardware"
 msgstr "하드웨어"
@@ -3168,6 +3221,10 @@ msgstr "IPv6 주소"
 msgid "IRC Live Support"
 msgstr "IRC 라이브 지원"
 
+#, php-format
+msgid "ISO file path (e.g. %s) used as CD/DVD drive."
+msgstr ""
+
 msgid "ISO file to be mounted."
 msgstr "마운트 될 ISO 파일."
 
@@ -3248,9 +3305,6 @@ msgid ""
 "twice."
 msgstr "WebGUI를 접근하기 위한 비밀번호를 변경하려면 여기에 두 번 입력하십시오."
 
-msgid "Image upload failed (out of memory?)"
-msgstr "이미지 업로드 실패함(메모리 부족?)"
-
 msgid "Import"
 msgstr "가져오기"
 
@@ -3327,6 +3381,10 @@ msgstr "/etc/exports의 잘못된 줄에 대한 몇 가지의 syslog 진단을 �
 
 msgid "Initial Digest"
 msgstr "초기 digest"
+
+#, php-format
+msgid "Initial ramdisk (e.g. %s)."
+msgstr ""
 
 msgid "Initialize"
 msgstr "초기화"
@@ -3507,6 +3565,13 @@ msgstr "1월 2월 3월 4월 5월 6월 7월 8월 9월 10월 11월 12월"
 
 msgid "Japanese"
 msgstr "일본어"
+
+msgid "Kernel"
+msgstr ""
+
+#, php-format
+msgid "Kernel file (e.g. %s)."
+msgstr ""
 
 msgid "Key"
 msgstr "키"
@@ -3690,9 +3755,6 @@ msgstr "로드"
 msgid "Load averages"
 msgstr "로드 평균"
 
-msgid "Load file"
-msgstr ""
-
 msgid "Load on UPS"
 msgstr ""
 
@@ -3814,6 +3876,9 @@ msgstr ""
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
+msgstr ""
+
+msgid "MAC Address"
 msgstr ""
 
 msgid "MAC address"
@@ -3988,7 +4053,13 @@ msgstr ""
 msgid "Medium Acoustic Output"
 msgstr ""
 
+msgid "Mem"
+msgstr ""
+
 msgid "Member Interface"
+msgstr ""
+
+msgid "Memory (MiB)"
 msgstr ""
 
 msgid "Memory Usage"
@@ -4179,6 +4250,9 @@ msgstr "서버의 이름. 이 난이 비어 있으면 기본 서버가 명세 �
 msgid "Name of the variable."
 msgstr "변수의 이름."
 
+msgid "Nested HVM"
+msgstr ""
+
 msgid "NetBIOS domain"
 msgstr ""
 
@@ -4190,6 +4264,9 @@ msgstr "네트 그래프"
 
 msgid "Network"
 msgstr "네트워크"
+
+msgid "Network Adapter"
+msgstr ""
 
 msgid "Network File System"
 msgstr "네트워크 파일 시스템"
@@ -4265,6 +4342,12 @@ msgid ""
 "No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
 "first."
 msgstr "포털 그룹이 구성되지 않았음. 먼저 <a href='%s'>포털 그룹</a>을 새로 추가하십시오."
+
+#, php-format
+msgid ""
+"No configured bridge interfaces. Please add new <a href='%s'>bridge "
+"interface</a> first."
+msgstr ""
 
 #, php-format
 msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
@@ -4550,6 +4633,9 @@ msgstr "PPTP 클라이언트"
 #, c-format
 msgid "PSK"
 msgstr "PSK"
+
+msgid "PV Guest"
+msgstr ""
 
 msgid "Package Name"
 msgstr "패키지 명"
@@ -4962,6 +5048,9 @@ msgstr "RSYNC 로그"
 msgid "Raid name"
 msgstr "Raid 명"
 
+msgid "Ramdisk"
+msgstr ""
+
 msgid "Read"
 msgstr "읽기"
 
@@ -5286,14 +5375,8 @@ msgstr "저장"
 msgid "Save & Restart"
 msgstr ""
 
-msgid "Save File"
-msgstr ""
-
 msgid "Save and Restart"
 msgstr "저장 후 재 시작"
-
-msgid "Save file"
-msgstr ""
 
 msgid "Save login information in configuration file."
 msgstr "설정 파일에 로그인 정보 저장."
@@ -5363,6 +5446,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "S.M.A.R.T. 모니터링이 활성화된 디스크를 선택하십시오."
 
+msgid "Select firmware:"
+msgstr ""
+
 msgid "Select item to remove from the list"
 msgstr "리스트에서 지울 항목을 선택하십시오"
 
@@ -5414,6 +5500,9 @@ msgid "Send Command!"
 msgstr "명령 전송!"
 
 msgid "Send Now"
+msgstr ""
+
+msgid "Send Test Email"
 msgstr ""
 
 msgid "Send a TEST warning email on startup."
@@ -5916,6 +6005,9 @@ msgstr "TCP 포워딩"
 msgid "TCP port"
 msgstr "TCP 포트"
 
+msgid "TCP port is 5900+N, where N is VNC display number."
+msgstr ""
+
 msgid "TCP port to bind the server to."
 msgstr "서버가 bind 할 TCP 포트."
 
@@ -6091,6 +6183,10 @@ msgstr "변경 내용을 적용하라는 당신의 공지를 관리자가 받았
 #, php-format
 msgid "The associated MIB files can be found at %s."
 msgstr "연관된 MIB 파일들은 %s에서 발견할 수 있습니다."
+
+#, php-format
+msgid "The attribute '%s' already exists."
+msgstr ""
 
 #, c-format
 msgid ""
@@ -6403,6 +6499,12 @@ msgstr ""
 msgid "The extent name already exists."
 msgstr "범위 명이 이미 존재합니다."
 
+msgid "The file you try to flash is not for this platform"
+msgstr ""
+
+msgid "The firmware file is corrupt"
+msgstr ""
+
 #, php-format
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -6427,9 +6529,6 @@ msgid ""
 "The host name may only consist of the characters a-z, A-Z and 0-9, - , _ and "
 "."
 msgstr "호스트 명은 a-z, A-Z, 0-9, -, _과 . 문자만 포함할 수 있습니다."
-
-msgid "The image file is corrupt"
-msgstr "이미지 파일이 깨졌습니다"
 
 msgid "The initial digest mode negotiated with the initiator."
 msgstr "개시자와 협상하는 초기 digest 모드."
@@ -6704,9 +6803,6 @@ msgstr "업로드 된 파일은 php.ini의 upload_max_filesize 지시자의 크�
 msgid "The uploaded file was only partially uploaded."
 msgstr "업로드 된 파일은 일부만 업로드 되었습니다."
 
-msgid "The uploaded image file is not for this platform"
-msgstr "업로드 된 이미지 파일은 이 플랫폼 용이 아닙니다."
-
 msgid "The user's login shell."
 msgstr "사용자 로그인 셸."
 
@@ -6934,15 +7030,12 @@ msgid "This is for information only (not using during iSCSI negotiation)."
 msgstr ""
 
 msgid ""
-"This means that the image you uploaded is not an official/supported image "
-"and may lead to unexpected behavior or security compromises. Only install "
-"images that come from sources that you trust, and make sure that the image "
-"has not been tampered with.<br /><br />Do you want to install this image "
-"anyway (on your own risk)?"
+"This means that the firmware you flashed is not an official/supported "
+"firmware and may lead to unexpected behavior or security compromises. Only "
+"install firmwares that come from sources that you trust, and make sure that "
+"the firmware has not been tampered with.<br /><br />Do you want to install "
+"this firmware anyway (on your own risk)?"
 msgstr ""
-"이것은 당신이 업로드 한 이미지가 공식적으로 지원되는 이미지가 아니어서 예기치 않은 행동이나 보안 취약점을 일으킬 수도 있다는 것을 "
-"의미합니다. 신뢰할 수 있는 소스에서 얻은 이미지들만 설치하시고 이미지가 변조 되지 않았는지 확인하시기 바랍니다.<br /><br "
-"/>어쨌든 (당신의 책임 하에) 이 이미지를 설치하시겠습니까?"
 
 msgid "This name already exists in the disk list."
 msgstr "이 이름은 디스크 리스트에 이미 존재합니다."
@@ -7554,8 +7647,8 @@ msgstr "갱신 간격"
 msgid "Updating in 5 seconds."
 msgstr "5초 내에 갱신합니다."
 
-msgid "Upgrade firmware"
-msgstr "펌웨어 업그레이드"
+msgid "Upgrade Firmware"
+msgstr ""
 
 msgid "Upload"
 msgstr "업로드"
@@ -7685,6 +7778,9 @@ msgstr ""
 msgid "Using %s bytes fragment size."
 msgstr ""
 
+msgid "VCPUs"
+msgstr ""
+
 msgid "VHID"
 msgstr ""
 
@@ -7698,6 +7794,15 @@ msgid "VLAN tag"
 msgstr "VLAN 태그"
 
 msgid "VM"
+msgstr ""
+
+msgid "VM Type"
+msgstr ""
+
+msgid "VNC Display"
+msgstr ""
+
+msgid "VNC Password"
 msgstr ""
 
 msgid "Value"
@@ -7911,6 +8016,12 @@ msgstr "잘못된 파티션 타입이나 파티션 번호."
 
 #, php-format
 msgid "Wrong permission on %s."
+msgstr ""
+
+msgid "Xen"
+msgstr ""
+
+msgid "Xen Virtual Machine"
 msgstr ""
 
 msgid "Yes"
@@ -8204,181 +8315,34 @@ msgstr ""
 msgid "warning"
 msgstr ""
 
-#, php-format
-#~ msgid "%s interface"
-#~ msgstr "%s 인터페이스"
+#~ msgid "Disable firmware upload"
+#~ msgstr "펌웨어 업로드 비활성화"
 
-#~ msgid "Advanced Power Management"
-#~ msgstr "고급 전원 관리"
+#~ msgid "Enable firmware upload"
+#~ msgstr "펌웨어 업로드 활성화"
 
-#~ msgid "Always on"
-#~ msgstr "항상 켜둠"
+#~ msgid "Firmware image file"
+#~ msgstr "펌웨어 이미지 파일"
 
-#~ msgid "Backup configuration"
-#~ msgstr "백업 설정"
+#~ msgid "Image upload failed (out of memory?)"
+#~ msgstr "이미지 업로드 실패함(메모리 부족?)"
 
-#~ msgid "Ban list"
-#~ msgstr "추방 목록"
+#~ msgid "The image file is corrupt"
+#~ msgstr "이미지 파일이 깨졌습니다"
 
-#~ msgid "Connected FTP users"
-#~ msgstr "연결된 FTP 사용자들"
-
-#~ msgid "DNS settings"
-#~ msgstr "DNS 설정"
-
-#~ msgid "Device model"
-#~ msgstr "장치 모델"
-
-#~ msgid "Don't Erase MBR"
-#~ msgstr "MBR을 지우지 않음"
-
-#~ msgid "Email notification"
-#~ msgstr "전자우편 알림"
-
-#~ msgid "Email report"
-#~ msgstr "전자우편 보고"
-
-#~ msgid "File path"
-#~ msgstr "파일 경로"
-
-#~ msgid "Firewall rule"
-#~ msgstr "방화벽 규칙"
-
-#~ msgid "Format disk"
-#~ msgstr "디스크 포맷"
-
-#~ msgid "Free disk space"
-#~ msgstr "디스크 여유 공간"
-
-#~ msgid "Hard disk standby time"
-#~ msgstr "하드 디스크 대기 시간"
-
-#~ msgid "I/O statistics"
-#~ msgstr "I/O 통계"
-
-#~ msgid "Level 1 - Minimum power usage with Standby (spindown)"
-#~ msgstr "레벨 1 - 대기 상태에서 최소 전원 이용(회전 중지)"
-
-#~ msgid "Level 127 - Intermediate power usage with Standby"
-#~ msgstr "레벨 127 - 대기 상태에서 중간 정도의 전원 이용"
-
-#~ msgid "Level 128 - Minimum power usage without Standby (no spindown)"
-#~ msgstr "레벨 128 - 대기 상태 없이 최소 전원 이용(회전 중지 안함)"
-
-#~ msgid "Level 192 - Intermediate power usage without Standby"
-#~ msgstr "레벨 192 - 대기 상태 없이 중간 정도의 전원 이용"
-
-#~ msgid "Level 254 - Maximum performance, maximum power usage"
-#~ msgstr "레벨 254 - 최대 성능, 최대 전원 이용"
-
-#~ msgid "Level 64 - Intermediate power usage with Standby"
-#~ msgstr "레벨 64 - 대기 상태에서 중간 정도의 전원 이용"
-
-#~ msgid "List of available target name on all configured iSCSI targets"
-#~ msgstr "설정된 모든 iSCSI 타젯에서 이용할 수 있는 타젯 명들의 목록"
-
-#~ msgid "List of imported users"
-#~ msgstr "import 된 사용자들의 리스트"
-
-#~ msgid "List of mount points"
-#~ msgstr "마운트 지점 목록"
-
-#~ msgid "Logical Unit Controller login information"
-#~ msgstr "논리적 유닛 컨트롤러 로그인 정보"
-
-#~ msgid "MS Active Directory informations"
-#~ msgstr "MS 액티브 디렉터리 정보"
-
-#~ msgid "Maximum performance, maximum acoustic output"
-#~ msgstr "최대 성능, 최대 소음 출력"
-
-#~ msgid "Medium acoustic output"
-#~ msgstr "보통 소음 출력"
-
-#~ msgid "Minimum performance, Minimum acoustic output"
-#~ msgstr "최소 성능, 최소 소음 출력"
-
-#~ msgid "Model extra"
-#~ msgstr "추가 모델"
-
-#~ msgid "Model name"
-#~ msgstr "모델 명"
-
-#~ msgid "Pool information and status"
-#~ msgstr "풀 정보와 상태"
-
-#~ msgid "Processes information"
-#~ msgstr "프로세스 정보"
+#~ msgid "The uploaded image file is not for this platform"
+#~ msgstr "업로드 된 이미지 파일은 이 플랫폼 용이 아닙니다."
 
 #~ msgid ""
-#~ "Puts the hard disk into standby mode when the selected amount of time after "
-#~ "the last hard disk access has been elapsed."
-#~ msgstr "하드 디스크의 마지막 접근 후 선택된 양의 시간이 경과했을 때 하드 디스크를 대기 모드로 만듭니다."
+#~ "This means that the image you uploaded is not an official/supported image "
+#~ "and may lead to unexpected behavior or security compromises. Only install "
+#~ "images that come from sources that you trust, and make sure that the image "
+#~ "has not been tampered with.<br /><br />Do you want to install this image "
+#~ "anyway (on your own risk)?"
+#~ msgstr ""
+#~ "이것은 당신이 업로드 한 이미지가 공식적으로 지원되는 이미지가 아니어서 예기치 않은 행동이나 보안 취약점을 일으킬 수도 있다는 것을 "
+#~ "의미합니다. 신뢰할 수 있는 소스에서 얻은 이미지들만 설치하시고 이미지가 변조 되지 않았는지 확인하시기 바랍니다.<br /><br "
+#~ "/>어쨌든 (당신의 책임 하에) 이 이미지를 설치하시겠습니까?"
 
-#~ msgid "RSYNC Client informations"
-#~ msgstr "RSYNC 클라이언트 정보"
-
-#~ msgid "Remote address"
-#~ msgstr "원격 주소"
-
-#~ msgid "Rescan disks"
-#~ msgstr "디스크 재 스캔"
-
-#~ msgid "Rsync job"
-#~ msgstr "Rsync 작업"
-
-#~ msgid "Scheduled reboot"
-#~ msgstr "예약된 리붓"
-
-#~ msgid "Scheduled self-tests"
-#~ msgstr "예약된 자체 테스트"
-
-#~ msgid "Scheduled shutdown"
-#~ msgstr "예약된 끄기"
-
-#~ msgid "Self-Monitoring, Analysis and Reporting Technology"
-#~ msgstr "자체 감시, 분석, 보고 기술"
-
-#~ msgid "Show process information"
-#~ msgstr "프로세스 정보 보기"
-
-#~ msgid "Standby time"
-#~ msgstr "대기 시간"
-
-#~ msgid "Swap memory"
-#~ msgstr "스왑 메모리"
-
-#~ msgid "Swap status"
-#~ msgstr "스왑 상태"
-
-#~ msgid "System firewall"
-#~ msgstr "시스템 방화벽"
-
-#~ msgid "System information"
-#~ msgstr "시스템 정보"
-
-#~ msgid "Temperature monitoring"
-#~ msgstr "온도 모니터링"
-
-#~ msgid ""
-#~ "This allows you to lower the power consumption of the drive, at the expense "
-#~ "of performance."
-#~ msgstr "이것은 성능을 희생하고 드라이브의 전원 소비를 낮추도록 해줍니다."
-
-#~ msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
-#~ msgstr "이것은 ATA/IDE 하드 드라이브의 전송 모드를 설정할 수 있게 해줍니다."
-
-#~ msgid "Virtual device"
-#~ msgstr "가상 장치"
-
-#~ msgid "Virtual interface"
-#~ msgstr "가상 인터페이스"
-
-#~ msgid "ZFS dataset information and status"
-#~ msgstr "ZFS 데이터 셋 정보와 상태"
-
-#~ msgid "ZFS dataset properties"
-#~ msgstr "ZFS 데이터 셋 속성"
-
-#~ msgid "minutes"
-#~ msgstr "분"
+#~ msgid "Upgrade firmware"
+#~ msgstr "펌웨어 업그레이드"
