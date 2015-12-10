@@ -318,7 +318,7 @@ EOD;
 		sleep(1);
 	}
 	if ($retry == 0) {
-		write_console("Error: Failed to umount {$mntpath}!\n");
+		write_console("Error: Failed to unmount {$mntpath}!\n");
 		return 1;
 	}
 	mwexec("/bin/rm -f -r {$mntpath}");
@@ -431,7 +431,7 @@ EOD;
 		sleep(1);
 	}
 	if ($retry == 0) {
-		write_console("Error: Failed to umount {$mntpath}!\n");
+		write_console("Error: Failed to unmount {$mntpath}!\n");
 		return 1;
 	}
 	mwexec("/bin/rm -f -r {$mntpath}");
