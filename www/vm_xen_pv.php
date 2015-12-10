@@ -210,7 +210,7 @@ if ($_POST) {
 		}
 		$index = array_search_ex($_POST['vncdisplay'], $config['xen']['vms']['param'], "vncdisplay");
 		if ($index !== false) {
-			$input_errors[] = sprintf(gettext("The attribute '%s' already exists."), gettext("VNC display"));
+			$input_errors[] = sprintf(gettext("The attribute '%s' already exists."), gettext("VNC Display"));
 		}
 	}
 
