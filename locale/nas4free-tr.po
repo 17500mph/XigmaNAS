@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-12-09 16:19+0000\n"
+"POT-Creation-Date: 2015-12-10 23:13+0000\n"
 "PO-Revision-Date: 2015-10-13 18:26+0000\n"
 "Last-Translator: Hasan Yılmaz <iletisim@hasanyilmaz.net>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-09 15:41+0000\n"
+"X-Launchpad-Export-Date: 2015-12-10 15:13+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
@@ -487,6 +487,12 @@ msgstr "Kullanıcı Ekle"
 msgid "Add volume"
 msgstr ""
 
+msgid "Additional Network"
+msgstr ""
+
+msgid "Additional Storage"
+msgstr ""
+
 msgid "Additional group"
 msgstr "Ek Grup"
 
@@ -919,10 +925,27 @@ msgstr ""
 msgid "Blocksize"
 msgstr ""
 
+msgid "Boot Arguments"
+msgstr ""
+
+msgid "Boot Loader"
+msgstr ""
+
+#, php-format
+msgid "Boot argument (e.g. %s)."
+msgstr ""
+
+#, php-format
+msgid "Boot loader (e.g. %s)."
+msgstr ""
+
 #, php-format
 msgid ""
 "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
 "resize boot partition of %s.\n"
+msgstr ""
+
+msgid "Bootloader"
 msgstr ""
 
 msgid "Bridge"
@@ -968,6 +991,9 @@ msgid "CCMP TKIP"
 msgstr "CCMP TKIP"
 
 msgid "CD/DVD"
+msgstr ""
+
+msgid "CD/DVD drive"
 msgstr ""
 
 msgid "CHANGED"
@@ -1144,12 +1170,6 @@ msgid "Clear Config & Import Software Raid Disks"
 msgstr ""
 
 msgid "Clear config and Import disks"
-msgstr ""
-
-msgid ""
-"Click &quot;Enable firmware upload&quot; below, then choose the embedded "
-"image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
-"the upgrade process."
 msgstr ""
 
 msgid ""
@@ -1439,6 +1459,12 @@ msgstr ""
 msgid "Create 4KB wrapper (nop device)."
 msgstr ""
 
+msgid "Create HVM Guest"
+msgstr ""
+
+msgid "Create PV Guest"
+msgstr ""
+
 msgid "Create ZFS on GPT partition"
 msgstr ""
 
@@ -1565,11 +1591,10 @@ msgstr ""
 
 #, php-format
 msgid ""
-"DO NOT abort the firmware upgrade process once it has started. Once it is "
-"completed, the server will automatically reboot, the current configuration "
-"will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
-"the upgrade.<br />It is strongly recommended that you <a "
-"href='%s'>Backup</a> the server configuration before doing a upgrade."
+"DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
+"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"/>It is recommended that you <a href='%s'>Backup</a> the server "
+"configuration before doing a upgrade."
 msgstr ""
 
 msgid "DVD"
@@ -1673,6 +1698,9 @@ msgstr "Rsync Görevini Sil"
 
 msgid "Delete URL"
 msgstr "URL sil"
+
+msgid "Delete VM"
+msgstr ""
 
 msgid "Delete algorithm"
 msgstr "Algoritmayı sil"
@@ -1912,14 +1940,14 @@ msgstr ""
 msgid "Disable File Manager"
 msgstr "Dosya Yöneticisini Devredışı Bırak"
 
+msgid "Disable Firmware Update"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
 msgid "Disable console menu"
 msgstr "Konsol menüsünü Devre Dışı bırak"
-
-msgid "Disable firmware upload"
-msgstr "Firmware yüklemeyi devre dışı bırak"
 
 msgid "Disable firmware version check"
 msgstr "Firmware versiyon kontrolünü Devre Dışı bırak"
@@ -1991,6 +2019,9 @@ msgstr "Bu Rsync görevini silmek istediğinden emin misin?"
 
 msgid "Do you really want to delete this URL?"
 msgstr "Bu URL silmek istediğinden emin misin?"
+
+msgid "Do you really want to delete this VM?"
+msgstr ""
 
 msgid "Do you really want to delete this auth group?"
 msgstr "Bu doğrulama grubunu silmek istediğinden emin misin?"
@@ -2115,6 +2146,9 @@ msgstr ""
 msgid "Document root of the webserver. Home of the web page files."
 msgstr ""
 
+msgid "DomID"
+msgstr ""
+
 msgid "Domain"
 msgstr "Alan Adı"
 
@@ -2226,9 +2260,6 @@ msgstr ""
 msgid "Edit"
 msgstr "Düzenle"
 
-msgid "Edit File"
-msgstr ""
-
 msgid "Edit Host"
 msgstr "Host'u Düzenle"
 
@@ -2246,6 +2277,9 @@ msgstr "Rsync Görevini Düzenle"
 
 msgid "Edit URL"
 msgstr "URL'yi Düzenle"
+
+msgid "Edit VM"
+msgstr ""
 
 msgid "Edit auth group"
 msgstr "Doğrulama grubunu Düzenle"
@@ -2350,6 +2384,9 @@ msgstr "Asynchronous I/O (AIO) Etkinleştir"
 msgid "Enable FXP protocol."
 msgstr "FXP protocolünü Aktifleştir"
 
+msgid "Enable Firmware Update"
+msgstr ""
+
 msgid "Enable NFSv4 server."
 msgstr ""
 
@@ -2413,9 +2450,6 @@ msgstr "Genişletilmiş öztenlik desteğini aktifleştir"
 msgid "Enable extended attributes for this file system."
 msgstr "Bu dosya sisteminde genişletilmiş öznitelikleri etkinleştir."
 
-msgid "Enable firmware upload"
-msgstr "Firmware yüklemeyi aktifleştir"
-
 msgid ""
 "Enable foreground/background file system consistency check during boot "
 "process."
@@ -2446,6 +2480,9 @@ msgstr ""
 
 msgid "Enable module listing."
 msgstr "Modül listelemeyi Aktifleştir"
+
+msgid "Enable nested virtualization"
+msgstr ""
 
 msgid "Enable peer exchange (PEX)."
 msgstr "Kaynak değiş-tokuşunu etkinleştir (PEX)."
@@ -2774,6 +2811,10 @@ msgid "File not found"
 msgstr "Dosya bulunamadı"
 
 #, php-format
+msgid "File path (e.g. %s) or ZFS volume (e.g. %s) used as Hard disk image."
+msgstr ""
+
+#, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
 msgstr ""
 
@@ -2816,8 +2857,8 @@ msgstr ""
 msgid "Firmware"
 msgstr "Firmware"
 
-msgid "Firmware image file"
-msgstr "Firmware image dosyası"
+msgid "Firmware upload failed (out of memory?)"
+msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "Firmware yükleme bu platform üstünde desteklenmez"
@@ -3000,6 +3041,12 @@ msgstr ""
 msgid "HAST volume can be use with GPT/UFS only."
 msgstr ""
 
+msgid "HDD Format"
+msgstr ""
+
+msgid "HDD Management"
+msgstr ""
+
 msgid ""
 "HDD producers implement a Fly Height Monitor that attempts to provide "
 "additional protections for write operations by detecting when a recording "
@@ -3015,6 +3062,12 @@ msgstr ""
 
 msgid "HTTP Proxy"
 msgstr "HTTP Proxy"
+
+msgid "HVM Guest"
+msgstr ""
+
+msgid "Hard Disk"
+msgstr ""
 
 msgid "Hardware"
 msgstr "Donanım"
@@ -3181,6 +3234,10 @@ msgstr "IPv6 adresleri"
 msgid "IRC Live Support"
 msgstr "IRC Canlı Destek"
 
+#, php-format
+msgid "ISO file path (e.g. %s) used as CD/DVD drive."
+msgstr ""
+
 msgid "ISO file to be mounted."
 msgstr ""
 
@@ -3252,9 +3309,6 @@ msgid ""
 "twice."
 msgstr ""
 "WebGUI'ye erişmek için parola değiştirmek istiyorsanız, iki kere girin."
-
-msgid "Image upload failed (out of memory?)"
-msgstr "Resim yükleme başarısız ( yetersiz bellek?)"
 
 msgid "Import"
 msgstr "İçe aktart"
@@ -3333,6 +3387,10 @@ msgstr ""
 "miras olarak al."
 
 msgid "Initial Digest"
+msgstr ""
+
+#, php-format
+msgid "Initial ramdisk (e.g. %s)."
 msgstr ""
 
 msgid "Initialize"
@@ -3518,6 +3576,13 @@ msgstr ""
 msgid "Japanese"
 msgstr "Japonca"
 
+msgid "Kernel"
+msgstr ""
+
+#, php-format
+msgid "Kernel file (e.g. %s)."
+msgstr ""
+
 msgid "Key"
 msgstr "Anahtar"
 
@@ -3694,9 +3759,6 @@ msgstr "Yükle"
 msgid "Load averages"
 msgstr "Ortalamaları yükle"
 
-msgid "Load file"
-msgstr ""
-
 msgid "Load on UPS"
 msgstr ""
 
@@ -3820,6 +3882,9 @@ msgstr ""
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
+msgstr ""
+
+msgid "MAC Address"
 msgstr ""
 
 msgid "MAC address"
@@ -3994,7 +4059,13 @@ msgstr ""
 msgid "Medium Acoustic Output"
 msgstr ""
 
+msgid "Mem"
+msgstr ""
+
 msgid "Member Interface"
+msgstr ""
+
+msgid "Memory (MiB)"
 msgstr ""
 
 msgid "Memory Usage"
@@ -4185,6 +4256,9 @@ msgstr "Sunucunun adı.Bu alan boş bırakılırsa varsayılan sunucu belirlenir
 msgid "Name of the variable."
 msgstr "Değişken ismi"
 
+msgid "Nested HVM"
+msgstr ""
+
 msgid "NetBIOS domain"
 msgstr ""
 
@@ -4196,6 +4270,9 @@ msgstr "Netgraph"
 
 msgid "Network"
 msgstr "Network"
+
+msgid "Network Adapter"
+msgstr ""
 
 msgid "Network File System"
 msgstr "Ağ Dosya Sistemi"
@@ -4275,6 +4352,12 @@ msgid ""
 msgstr ""
 "Yapılandırılmış portal grubu yok. Önce lütfen yeni bir<a href='%s'>Portal "
 "Grubu</a> ekleyin."
+
+#, php-format
+msgid ""
+"No configured bridge interfaces. Please add new <a href='%s'>bridge "
+"interface</a> first."
+msgstr ""
 
 #, php-format
 msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
@@ -4559,6 +4642,9 @@ msgstr "PPTP istemcileri"
 #, c-format
 msgid "PSK"
 msgstr "PSK"
+
+msgid "PV Guest"
+msgstr ""
 
 msgid "Package Name"
 msgstr "Paket Adı"
@@ -4967,6 +5053,9 @@ msgstr "RSYNC günlüğü"
 msgid "Raid name"
 msgstr "Raid adı"
 
+msgid "Ramdisk"
+msgstr ""
+
 msgid "Read"
 msgstr ""
 
@@ -5291,14 +5380,8 @@ msgstr "Kaydet"
 msgid "Save & Restart"
 msgstr ""
 
-msgid "Save File"
-msgstr ""
-
 msgid "Save and Restart"
 msgstr "Kaydet ve Yeniden Başlat"
-
-msgid "Save file"
-msgstr ""
 
 msgid "Save login information in configuration file."
 msgstr "Oturum açma bilgilerini yapılandırma dosyasına kaydet"
@@ -5366,6 +5449,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr ""
 
+msgid "Select firmware:"
+msgstr ""
+
 msgid "Select item to remove from the list"
 msgstr ""
 
@@ -5417,6 +5503,9 @@ msgid "Send Command!"
 msgstr ""
 
 msgid "Send Now"
+msgstr ""
+
+msgid "Send Test Email"
 msgstr ""
 
 msgid "Send a TEST warning email on startup."
@@ -5913,6 +6002,9 @@ msgstr ""
 msgid "TCP port"
 msgstr "TCP port"
 
+msgid "TCP port is 5900+N, where N is VNC display number."
+msgstr ""
+
 msgid "TCP port to bind the server to."
 msgstr ""
 
@@ -6088,6 +6180,10 @@ msgstr ""
 
 #, php-format
 msgid "The associated MIB files can be found at %s."
+msgstr ""
+
+#, php-format
+msgid "The attribute '%s' already exists."
 msgstr ""
 
 #, c-format
@@ -6396,6 +6492,12 @@ msgstr ""
 msgid "The extent name already exists."
 msgstr ""
 
+msgid "The file you try to flash is not for this platform"
+msgstr ""
+
+msgid "The firmware file is corrupt"
+msgstr ""
+
 #, php-format
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -6419,9 +6521,6 @@ msgstr ""
 msgid ""
 "The host name may only consist of the characters a-z, A-Z and 0-9, - , _ and "
 "."
-msgstr ""
-
-msgid "The image file is corrupt"
 msgstr ""
 
 msgid "The initial digest mode negotiated with the initiator."
@@ -6690,9 +6789,6 @@ msgstr ""
 msgid "The uploaded file was only partially uploaded."
 msgstr ""
 
-msgid "The uploaded image file is not for this platform"
-msgstr ""
-
 msgid "The user's login shell."
 msgstr ""
 
@@ -6913,11 +7009,11 @@ msgid "This is for information only (not using during iSCSI negotiation)."
 msgstr ""
 
 msgid ""
-"This means that the image you uploaded is not an official/supported image "
-"and may lead to unexpected behavior or security compromises. Only install "
-"images that come from sources that you trust, and make sure that the image "
-"has not been tampered with.<br /><br />Do you want to install this image "
-"anyway (on your own risk)?"
+"This means that the firmware you flashed is not an official/supported "
+"firmware and may lead to unexpected behavior or security compromises. Only "
+"install firmwares that come from sources that you trust, and make sure that "
+"the firmware has not been tampered with.<br /><br />Do you want to install "
+"this firmware anyway (on your own risk)?"
 msgstr ""
 
 msgid "This name already exists in the disk list."
@@ -7491,7 +7587,7 @@ msgstr ""
 msgid "Updating in 5 seconds."
 msgstr ""
 
-msgid "Upgrade firmware"
+msgid "Upgrade Firmware"
 msgstr ""
 
 msgid "Upload"
@@ -7617,6 +7713,9 @@ msgstr ""
 msgid "Using %s bytes fragment size."
 msgstr ""
 
+msgid "VCPUs"
+msgstr ""
+
 msgid "VHID"
 msgstr ""
 
@@ -7630,6 +7729,15 @@ msgid "VLAN tag"
 msgstr "VLAN etiketi"
 
 msgid "VM"
+msgstr ""
+
+msgid "VM Type"
+msgstr ""
+
+msgid "VNC Display"
+msgstr ""
+
+msgid "VNC Password"
 msgstr ""
 
 msgid "Value"
@@ -7842,6 +7950,12 @@ msgstr "Yanlış birim türü yada numarası."
 
 #, php-format
 msgid "Wrong permission on %s."
+msgstr ""
+
+msgid "Xen"
+msgstr ""
+
+msgid "Xen Virtual Machine"
 msgstr ""
 
 msgid "Yes"
@@ -8135,130 +8249,14 @@ msgstr ""
 msgid "warning"
 msgstr ""
 
-#, php-format
-#~ msgid "%s interface"
-#~ msgstr "%s arayüzü"
+#~ msgid "Disable firmware upload"
+#~ msgstr "Firmware yüklemeyi devre dışı bırak"
 
-#~ msgid "Advanced Power Management"
-#~ msgstr "Gelişmiş Güç Yönetimi"
+#~ msgid "Enable firmware upload"
+#~ msgstr "Firmware yüklemeyi aktifleştir"
 
-#~ msgid "Always on"
-#~ msgstr "Her zaman açık."
+#~ msgid "Firmware image file"
+#~ msgstr "Firmware image dosyası"
 
-#~ msgid "Backup configuration"
-#~ msgstr "Yapılandırmayı Yedekle"
-
-#~ msgid "Ban list"
-#~ msgstr "Yasak listesi"
-
-#~ msgid "Connected FTP users"
-#~ msgstr "Bağlı FTP kullanıcıları"
-
-#~ msgid "DNS settings"
-#~ msgstr "DNS ayarları"
-
-#~ msgid "Device model"
-#~ msgstr "Cihaz modeli"
-
-#~ msgid "Don't Erase MBR"
-#~ msgstr "MBR silinemez"
-
-#~ msgid "Email notification"
-#~ msgstr "E-posta Bildirimi"
-
-#~ msgid "Email report"
-#~ msgstr "Email Raporu"
-
-#~ msgid "File path"
-#~ msgstr "Dosya yolu"
-
-#~ msgid "Firewall rule"
-#~ msgstr "Güvenlik Duvarı kural"
-
-#~ msgid "Format disk"
-#~ msgstr "Diski biçimlendir"
-
-#~ msgid "Free disk space"
-#~ msgstr "Boş Alan"
-
-#~ msgid "I/O statistics"
-#~ msgstr "I/O İstatistikleri"
-
-#~ msgid "Level 1 - Minimum power usage with Standby (spindown)"
-#~ msgstr "Seviye 1 - Bekleme konumda en düşük güç tüketimi (spindown)"
-
-#~ msgid "Level 127 - Intermediate power usage with Standby"
-#~ msgstr "Seviye 127 - Bekleme konumunda orta seviye güç tüketimi"
-
-#~ msgid "Level 128 - Minimum power usage without Standby (no spindown)"
-#~ msgstr ""
-#~ "Seviye 128 - Bekleme konumunda olmadan minimum güç tüketimi (no spindown)"
-
-#~ msgid "Level 192 - Intermediate power usage without Standby"
-#~ msgstr "Seviye 192 - Bekleme konumunda olmadan orta seviye güç tüketimi"
-
-#~ msgid "Level 254 - Maximum performance, maximum power usage"
-#~ msgstr "Seviye 254 - Maximum performans, maximum güç tüketemi"
-
-#~ msgid "Level 64 - Intermediate power usage with Standby"
-#~ msgstr "Seviye 64 - Bekleme konumunda orta seviye güç tüketimi"
-
-#~ msgid "List of mount points"
-#~ msgstr "Bağlantı noktalarının listesi"
-
-#~ msgid "Logical Unit Controller login information"
-#~ msgstr "Oturum bilgisi Mantıksal Birim Denetleyicisi)"
-
-#~ msgid "Maximum performance, maximum acoustic output"
-#~ msgstr "en fazla performans, en fazla akustik üretim"
-
-#~ msgid "Medium acoustic output"
-#~ msgstr "Medium acoustic output"
-
-#~ msgid "Minimum performance, Minimum acoustic output"
-#~ msgstr "Mnimum performans, Minimum acoustic output"
-
-#~ msgid "Processes information"
-#~ msgstr "İşlem bilgileri"
-
-#~ msgid "RSYNC Client informations"
-#~ msgstr "RSYNC İstemci bilgileri"
-
-#~ msgid "Rescan disks"
-#~ msgstr "Diskleri yeniden tara"
-
-#~ msgid "Scheduled reboot"
-#~ msgstr "Zamanlanmış yeniden başlatma"
-
-#~ msgid "Scheduled self-tests"
-#~ msgstr "Zamanlanmış self-test'ler"
-
-#~ msgid "Scheduled shutdown"
-#~ msgstr "Zamanlanmış kapanma"
-
-#~ msgid "Show process information"
-#~ msgstr "İşlem bilgilerini göster"
-
-#~ msgid "Standby time"
-#~ msgstr "Beklemede kala süresi"
-
-#~ msgid "System firewall"
-#~ msgstr "Sistem Güvenlik Duvarı"
-
-#~ msgid "System information"
-#~ msgstr "Sistem bilgileri"
-
-#~ msgid "Virtual device"
-#~ msgstr "Sanal aygıt"
-
-#~ msgid "Virtual interface"
-#~ msgstr "Sanal arayüz"
-
-#~ msgid "ZFS dataset information and status"
-#~ msgstr "ZFS veriseti bilgisi ve durumu"
-
-#~ msgid "ZFS dataset properties"
-#~ msgstr "ZFS veriseti ayarları"
-
-#~ msgid "minutes"
-#~ msgstr "dakikadır"
+#~ msgid "Image upload failed (out of memory?)"
+#~ msgstr "Resim yükleme başarısız ( yetersiz bellek?)"

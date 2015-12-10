@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-09 16:19+0000\n"
+"POT-Creation-Date: 2015-12-10 23:13+0000\n"
 "PO-Revision-Date: 2015-11-24 17:55+0000\n"
 "Last-Translator: Balabuha <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-09 15:41+0000\n"
+"X-Launchpad-Export-Date: 2015-12-10 15:13+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "Language: uk\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -510,6 +510,12 @@ msgstr "Додати користувача"
 msgid "Add volume"
 msgstr "Додати том"
 
+msgid "Additional Network"
+msgstr ""
+
+msgid "Additional Storage"
+msgstr ""
+
 msgid "Additional group"
 msgstr "Додаткові групи"
 
@@ -962,6 +968,20 @@ msgstr ""
 msgid "Blocksize"
 msgstr "Розмір блоку"
 
+msgid "Boot Arguments"
+msgstr ""
+
+msgid "Boot Loader"
+msgstr ""
+
+#, php-format
+msgid "Boot argument (e.g. %s)."
+msgstr ""
+
+#, php-format
+msgid "Boot loader (e.g. %s)."
+msgstr ""
+
 #, php-format
 msgid ""
 "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
@@ -969,6 +989,9 @@ msgid ""
 msgstr ""
 "Завантажувальний розділ замалий. Вам необхідно здійснити повторну інсталяцію "
 "з  LiveCD або  LiveUSB, або змінити розмір завантажувального розділу для %s\n"
+
+msgid "Bootloader"
+msgstr ""
 
 msgid "Bridge"
 msgstr "Міст"
@@ -1016,6 +1039,9 @@ msgstr "CCMP TKIP"
 
 msgid "CD/DVD"
 msgstr "CD/DVD"
+
+msgid "CD/DVD drive"
+msgstr ""
 
 msgid "CHANGED"
 msgstr "ЗМІНЕНО"
@@ -1196,15 +1222,6 @@ msgstr ""
 
 msgid "Clear config and Import disks"
 msgstr "Очистити налаштування та імпортувати диски"
-
-msgid ""
-"Click &quot;Enable firmware upload&quot; below, then choose the embedded "
-"image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
-"the upgrade process."
-msgstr ""
-"Натисніть &quot;Дозволити вивантаження прошивки&quot; нижче, і тоді оберіть "
-"файл вбудованого образу для прошивки.<br />Натисніть &quot;Оновлення "
-"прошивки&quot; для початку процесу оновлення."
 
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
@@ -1522,6 +1539,12 @@ msgstr ""
 msgid "Create 4KB wrapper (nop device)."
 msgstr "створити 4KB оболонку (пристрій nop)"
 
+msgid "Create HVM Guest"
+msgstr ""
+
+msgid "Create PV Guest"
+msgstr ""
+
 msgid "Create ZFS on GPT partition"
 msgstr "Створити ZFS на розділі GPT"
 
@@ -1648,17 +1671,11 @@ msgstr ""
 
 #, php-format
 msgid ""
-"DO NOT abort the firmware upgrade process once it has started. Once it is "
-"completed, the server will automatically reboot, the current configuration "
-"will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
-"the upgrade.<br />It is strongly recommended that you <a "
-"href='%s'>Backup</a> the server configuration before doing a upgrade."
+"DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
+"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"/>It is recommended that you <a href='%s'>Backup</a> the server "
+"configuration before doing a upgrade."
 msgstr ""
-"НЕ переривайте прецес оновлення програмного забезпечення. Як тільки він "
-"закінчиться, сервер автоматично перезавантажиться, поточну конфігурацію буде "
-"збережено.<br />Вам потрібно мінімум %d MiB вільної ОП для процесу "
-"оновлення.<br />Наполегливо рекомендується зробити <a href='%s'>резервну "
-"копію</a> конфігурації сервера перед почапком процесу оновлення."
 
 msgid "DVD"
 msgstr "DVD"
@@ -1761,6 +1778,9 @@ msgstr "Видалити завдання Rsync"
 
 msgid "Delete URL"
 msgstr "Видалити URL"
+
+msgid "Delete VM"
+msgstr ""
 
 msgid "Delete algorithm"
 msgstr "Видалити алгоритм"
@@ -2007,14 +2027,14 @@ msgstr "Директорія де слідкувати за новими .torren
 msgid "Disable File Manager"
 msgstr "Вимкнути файловий менеджер"
 
+msgid "Disable Firmware Update"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Вимкнути обгортку TCP (модуль mod_wrap)."
 
 msgid "Disable console menu"
 msgstr "Заборонити консольне меню"
-
-msgid "Disable firmware upload"
-msgstr "Заборонити завантаження прошивки"
 
 msgid "Disable firmware version check"
 msgstr "Вимкнути перевірку версії прошивки"
@@ -2088,6 +2108,9 @@ msgstr "Ви дійсно хочете видалити це завдання Rs
 
 msgid "Do you really want to delete this URL?"
 msgstr "Ви дійсно хочете видалити це посилання?"
+
+msgid "Do you really want to delete this VM?"
+msgstr ""
 
 msgid "Do you really want to delete this auth group?"
 msgstr "Ви дійсно хочете видалити цю авторизаційну групу?"
@@ -2214,6 +2237,9 @@ msgid "Document root of the webserver. Home of the web page files."
 msgstr ""
 "Кореневий каталог веб-сервера. Місце розташування файлів веб-сторінки."
 
+msgid "DomID"
+msgstr ""
+
 msgid "Domain"
 msgstr "Домен"
 
@@ -2325,9 +2351,6 @@ msgstr "ПОМИЛКА:"
 msgid "Edit"
 msgstr "Редагувати"
 
-msgid "Edit File"
-msgstr ""
-
 msgid "Edit Host"
 msgstr "Редагувати хост"
 
@@ -2345,6 +2368,9 @@ msgstr "Редагувати завдання Rsync"
 
 msgid "Edit URL"
 msgstr "Редагувати посилання"
+
+msgid "Edit VM"
+msgstr ""
 
 msgid "Edit auth group"
 msgstr "Редагувати авторизаційну групу"
@@ -2449,6 +2475,9 @@ msgstr "Дозволити асинхронний ввід/вивід (AIO)"
 msgid "Enable FXP protocol."
 msgstr "Дозволити протокол FXP"
 
+msgid "Enable Firmware Update"
+msgstr ""
+
 msgid "Enable NFSv4 server."
 msgstr "Увімкнути NFSv4 сервер."
 
@@ -2514,9 +2543,6 @@ msgid "Enable extended attributes for this file system."
 msgstr ""
 "Дозволити викорстання розширених атрибутів для даної файлової системи."
 
-msgid "Enable firmware upload"
-msgstr "Дозволити завантаження прошивки"
-
 msgid ""
 "Enable foreground/background file system consistency check during boot "
 "process."
@@ -2547,6 +2573,9 @@ msgstr ""
 
 msgid "Enable module listing."
 msgstr "Увімкнути список модулів"
+
+msgid "Enable nested virtualization"
+msgstr ""
 
 msgid "Enable peer exchange (PEX)."
 msgstr "Увімкнути обмін списками учасників (PEX)"
@@ -2887,6 +2916,10 @@ msgid "File not found"
 msgstr "Файл не знайдено"
 
 #, php-format
+msgid "File path (e.g. %s) or ZFS volume (e.g. %s) used as Hard disk image."
+msgstr ""
+
+#, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
 msgstr ""
 
@@ -2929,8 +2962,8 @@ msgstr ""
 msgid "Firmware"
 msgstr "Прошивка"
 
-msgid "Firmware image file"
-msgstr "Файл прошивки"
+msgid "Firmware upload failed (out of memory?)"
+msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "Ця платформа не підтримує завантаження прошивок"
@@ -3114,6 +3147,12 @@ msgstr "HAST диск"
 msgid "HAST volume can be use with GPT/UFS only."
 msgstr ""
 
+msgid "HDD Format"
+msgstr ""
+
+msgid "HDD Management"
+msgstr ""
+
 msgid ""
 "HDD producers implement a Fly Height Monitor that attempts to provide "
 "additional protections for write operations by detecting when a recording "
@@ -3129,6 +3168,12 @@ msgstr ""
 
 msgid "HTTP Proxy"
 msgstr "HTTP проксі"
+
+msgid "HVM Guest"
+msgstr ""
+
+msgid "Hard Disk"
+msgstr ""
 
 msgid "Hardware"
 msgstr "Апаратне обладнання"
@@ -3294,6 +3339,10 @@ msgstr "IPv6 адреси"
 msgid "IRC Live Support"
 msgstr ""
 
+#, php-format
+msgid "ISO file path (e.g. %s) used as CD/DVD drive."
+msgstr ""
+
 msgid "ISO file to be mounted."
 msgstr "ISO файл для монтування."
 
@@ -3373,9 +3422,6 @@ msgid ""
 msgstr ""
 "Якщо ви хочете змінити пароль для доступу до WebGUI, введіть його тут двіччі."
 
-msgid "Image upload failed (out of memory?)"
-msgstr "Помилка завантаження зображення (недостатньо пам'яті?)"
-
 msgid "Import"
 msgstr "Імпортувати"
 
@@ -3452,6 +3498,10 @@ msgstr ""
 
 msgid "Initial Digest"
 msgstr "Початковий дайджест"
+
+#, php-format
+msgid "Initial ramdisk (e.g. %s)."
+msgstr ""
 
 msgid "Initialize"
 msgstr "Ініціалізувати"
@@ -3642,6 +3692,13 @@ msgstr ""
 msgid "Japanese"
 msgstr "Японська"
 
+msgid "Kernel"
+msgstr ""
+
+#, php-format
+msgid "Kernel file (e.g. %s)."
+msgstr ""
+
 msgid "Key"
 msgstr "Ключ"
 
@@ -3818,9 +3875,6 @@ msgstr "Завантажити"
 msgid "Load averages"
 msgstr "Середнє завантаження"
 
-msgid "Load file"
-msgstr "Завантажити файл"
-
 msgid "Load on UPS"
 msgstr "Навантаження на ДБЖ"
 
@@ -3946,6 +4000,9 @@ msgstr ""
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
+msgstr ""
+
+msgid "MAC Address"
 msgstr ""
 
 msgid "MAC address"
@@ -4122,7 +4179,13 @@ msgstr "Медіа бібліотека"
 msgid "Medium Acoustic Output"
 msgstr ""
 
+msgid "Mem"
+msgstr ""
+
 msgid "Member Interface"
+msgstr ""
+
+msgid "Memory (MiB)"
 msgstr ""
 
 msgid "Memory Usage"
@@ -4317,6 +4380,9 @@ msgstr ""
 msgid "Name of the variable."
 msgstr "Ім'я змінної."
 
+msgid "Nested HVM"
+msgstr ""
+
 msgid "NetBIOS domain"
 msgstr "NetBIOS domain"
 
@@ -4328,6 +4394,9 @@ msgstr "Netgraph"
 
 msgid "Network"
 msgstr "Мережа"
+
+msgid "Network Adapter"
+msgstr ""
 
 msgid "Network File System"
 msgstr "Мережева файлова система"
@@ -4402,6 +4471,12 @@ msgstr ""
 msgid ""
 "No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
 "first."
+msgstr ""
+
+#, php-format
+msgid ""
+"No configured bridge interfaces. Please add new <a href='%s'>bridge "
+"interface</a> first."
 msgstr ""
 
 #, php-format
@@ -4697,6 +4772,9 @@ msgstr "PPTP клієнт"
 #, c-format
 msgid "PSK"
 msgstr "PSK"
+
+msgid "PV Guest"
+msgstr ""
 
 msgid "Package Name"
 msgstr "Назва пакета"
@@ -5105,6 +5183,9 @@ msgstr "Протокол RSYNC"
 msgid "Raid name"
 msgstr "Ім'я RAID масиву"
 
+msgid "Ramdisk"
+msgstr ""
+
 msgid "Read"
 msgstr "Читати"
 
@@ -5439,14 +5520,8 @@ msgstr "Зберегти"
 msgid "Save & Restart"
 msgstr ""
 
-msgid "Save File"
-msgstr ""
-
 msgid "Save and Restart"
 msgstr "Зберегти і перезавантажити"
-
-msgid "Save file"
-msgstr "Зберегти файл"
 
 msgid "Save login information in configuration file."
 msgstr ""
@@ -5514,6 +5589,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Виберіть диск для якого дозволено моніторинг S.M.A.R.T."
 
+msgid "Select firmware:"
+msgstr ""
+
 msgid "Select item to remove from the list"
 msgstr "Виберіть елемент для видалення із списку"
 
@@ -5565,6 +5643,9 @@ msgid "Send Command!"
 msgstr "Надіслати команду!"
 
 msgid "Send Now"
+msgstr ""
+
+msgid "Send Test Email"
 msgstr ""
 
 msgid "Send a TEST warning email on startup."
@@ -6062,6 +6143,9 @@ msgstr ""
 msgid "TCP port"
 msgstr "TCP порт"
 
+msgid "TCP port is 5900+N, where N is VNC display number."
+msgstr ""
+
 msgid "TCP port to bind the server to."
 msgstr "TCP порт на якому працюватиме сервер."
 
@@ -6235,6 +6319,10 @@ msgstr "Адміністратора боло повідомлено для за
 
 #, php-format
 msgid "The associated MIB files can be found at %s."
+msgstr ""
+
+#, php-format
+msgid "The attribute '%s' already exists."
 msgstr ""
 
 #, c-format
@@ -6551,6 +6639,12 @@ msgstr ""
 msgid "The extent name already exists."
 msgstr ""
 
+msgid "The file you try to flash is not for this platform"
+msgstr ""
+
+msgid "The firmware file is corrupt"
+msgstr ""
+
 #, php-format
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -6575,9 +6669,6 @@ msgid ""
 "The host name may only consist of the characters a-z, A-Z and 0-9, - , _ and "
 "."
 msgstr "Ім'я хоста може містити лише символи a-z, A-Z і 0-9, - , _ і ."
-
-msgid "The image file is corrupt"
-msgstr "Файл образу пошкоджено"
 
 msgid "The initial digest mode negotiated with the initiator."
 msgstr ""
@@ -6850,9 +6941,6 @@ msgstr ""
 msgid "The uploaded file was only partially uploaded."
 msgstr "Файл був лише частково завантежний."
 
-msgid "The uploaded image file is not for this platform"
-msgstr ""
-
 msgid "The user's login shell."
 msgstr ""
 
@@ -7080,11 +7168,11 @@ msgid "This is for information only (not using during iSCSI negotiation)."
 msgstr ""
 
 msgid ""
-"This means that the image you uploaded is not an official/supported image "
-"and may lead to unexpected behavior or security compromises. Only install "
-"images that come from sources that you trust, and make sure that the image "
-"has not been tampered with.<br /><br />Do you want to install this image "
-"anyway (on your own risk)?"
+"This means that the firmware you flashed is not an official/supported "
+"firmware and may lead to unexpected behavior or security compromises. Only "
+"install firmwares that come from sources that you trust, and make sure that "
+"the firmware has not been tampered with.<br /><br />Do you want to install "
+"this firmware anyway (on your own risk)?"
 msgstr ""
 
 msgid "This name already exists in the disk list."
@@ -7668,8 +7756,8 @@ msgstr "Період оновлення"
 msgid "Updating in 5 seconds."
 msgstr "Оновлюється кожних 5 секунд."
 
-msgid "Upgrade firmware"
-msgstr "Оновити прошивку"
+msgid "Upgrade Firmware"
+msgstr ""
 
 msgid "Upload"
 msgstr "Вивантажити"
@@ -7794,6 +7882,9 @@ msgstr ""
 msgid "Using %s bytes fragment size."
 msgstr ""
 
+msgid "VCPUs"
+msgstr ""
+
 msgid "VHID"
 msgstr "VHID"
 
@@ -7807,6 +7898,15 @@ msgid "VLAN tag"
 msgstr ""
 
 msgid "VM"
+msgstr ""
+
+msgid "VM Type"
+msgstr ""
+
+msgid "VNC Display"
+msgstr ""
+
+msgid "VNC Password"
 msgstr ""
 
 msgid "Value"
@@ -8022,6 +8122,12 @@ msgstr "Невірний тип або номер розділу"
 #, php-format
 msgid "Wrong permission on %s."
 msgstr "Невірні атрибути дозволу на %s."
+
+msgid "Xen"
+msgstr ""
+
+msgid "Xen Virtual Machine"
+msgstr ""
 
 msgid "Yes"
 msgstr "Так"
@@ -8316,219 +8422,49 @@ msgstr "версія:"
 msgid "warning"
 msgstr ""
 
-#, php-format
-#~ msgid "%s interface"
-#~ msgstr "%s інтерфейс"
-
-#~ msgid "minutes"
-#~ msgstr "хвилин"
-
-#~ msgid "System information"
-#~ msgstr "Системна інформація"
-
-#~ msgid "Advanced Power Management"
-#~ msgstr "Розширене керування живленням"
-
-#~ msgid "Always on"
-#~ msgstr "Завжди ввімкнено"
-
-#~ msgid "Backup configuration"
-#~ msgstr "Конфігурація резервування"
-
-#~ msgid "Ban list"
-#~ msgstr "Чорний список"
-
-#~ msgid "ZFS volume information and status"
-#~ msgstr "Інформація та статус тома ZFS"
-
-#~ msgid "ZFS volume properties"
-#~ msgstr "Властивості тома ZFS"
-
-#~ msgid "Processes information"
-#~ msgstr "Інформація про процеси"
+#~ msgid "Save file"
+#~ msgstr "Зберегти файл"
 
 #~ msgid ""
-#~ "Puts the hard disk into standby mode when the selected amount of time after "
-#~ "the last hard disk access has been elapsed."
+#~ "Click &quot;Enable firmware upload&quot; below, then choose the embedded "
+#~ "image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
+#~ "the upgrade process."
 #~ msgstr ""
-#~ "Переводить жорсткий диск в режим очікування, якщо обраний час після "
-#~ "останнього доступі до жорсткого диска було вичерпано."
-
-#~ msgid "RSYNC Client informations"
-#~ msgstr "Клієнтська інформація RSYNC"
-
-#~ msgid "Remote address"
-#~ msgstr "Віддалена адреса"
-
-#~ msgid "Rescan disks"
-#~ msgstr "Пересканувати диски"
-
-#~ msgid "Clear config and Import software raid disks"
-#~ msgstr "Очистити конфігурацію та імпортувати диски програмного RAID"
-
-#~ msgid "Connected FTP users"
-#~ msgstr "Підключенні FTP користувачі"
-
-#~ msgid "Controller model"
-#~ msgstr "Модель контролера"
-
-#~ msgid "DNS settings"
-#~ msgstr "Налаштування DNS"
-
-#~ msgid "Device model"
-#~ msgstr "Модель пристрою"
-
-#~ msgid "Don't Erase MBR"
-#~ msgstr "Не витирати MBR"
-
-#~ msgid "File path"
-#~ msgstr "Шлях до файла"
-
-#~ msgid "Firewall rule"
-#~ msgstr "Правило брандмауера"
-
-#~ msgid "HAST resource"
-#~ msgstr "HAST ресурс"
-
-#~ msgid "Import software raid disks"
-#~ msgstr "Імпортувати диски програмного RAID-масиву"
-
-#~ msgid "Level 192 - Intermediate power usage without Standby"
-#~ msgstr "Рівень 192 - Середнє використання енергії без засинання"
-
-#~ msgid "Level 127 - Intermediate power usage with Standby"
-#~ msgstr "Рівень 127 - Середнє використання енергії із засинанням"
-
-#~ msgid "Level 128 - Minimum power usage without Standby (no spindown)"
-#~ msgstr ""
-#~ "Рівень 128 - Мінімальне використання енергії без засинання (без зупинки "
-#~ "жорстких дисків)"
-
-#~ msgid "Level 254 - Maximum performance, maximum power usage"
-#~ msgstr ""
-#~ "Рівень 254 - Максимальна продуктивність, максимальне використання енергії"
-
-#~ msgid "Level 64 - Intermediate power usage with Standby"
-#~ msgstr "Рівень 64 - Середнє використання енергії із засинанням"
-
-#~ msgid "List of detected disks"
-#~ msgstr "Список виявлених дисків"
-
-#~ msgid "List of mount points"
-#~ msgstr "Список точок монтування"
-
-#~ msgid "Model name"
-#~ msgstr "Назва моделі"
-
-#~ msgid "Node B settings"
-#~ msgstr "Налаштування вузла В."
-
-#~ msgid "Node A settings"
-#~ msgstr "Налаштування вузла А."
-
-#~ msgid "Online version check"
-#~ msgstr "Перевірка версії онлайн"
-
-#~ msgid "Pool information and status"
-#~ msgstr "Інформація і статус списку"
-
-#~ msgid "Scheduled reboot"
-#~ msgstr "Заплановане перезавантаження"
-
-#~ msgid "Scheduled shutdown"
-#~ msgstr "Заплановане завершення роботи"
-
-#~ msgid "Scheduled self-tests"
-#~ msgstr "Заплановані самотестування"
-
-#~ msgid "Self-Monitoring, Analysis and Reporting Technology"
-#~ msgstr "Self-Monitoring, Analysis and Reporting Technology"
-
-#~ msgid "Show ups information"
-#~ msgstr "Показати інформацію про БДЖ"
-
-#~ msgid "Show process information"
-#~ msgstr "Показати інформацію про процес"
-
-#~ msgid "Swap memory"
-#~ msgstr "Swap пам'ять"
-
-#~ msgid "Swap status"
-#~ msgstr "Статус Swap"
-
-#~ msgid "Temperature monitoring"
-#~ msgstr "Моніторинг температури"
-
-#~ msgid ""
-#~ "This allows you to lower the power consumption of the drive, at the expense "
-#~ "of performance."
-#~ msgstr ""
-#~ "Це дозволить зменшити споживання енергії за рахунок зменшення продуктивності."
-
-#~ msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
-#~ msgstr "Це дозволяє встановити режим передачі для ATA/IDE жорстких дисків."
-
-#~ msgid "Transfer rate"
-#~ msgstr "Швидкість передачі"
-
-#~ msgid "Email report"
-#~ msgstr "Звіт електронною поштою"
-
-#~ msgid "Email notification"
-#~ msgstr "Повідомлення електронною поштою"
-
-#~ msgid "Free disk space"
-#~ msgstr "Вільний дисковий простір"
-
-#~ msgid "ZFS snapshot properties"
-#~ msgstr "властивості образу ZFS"
-
-#~ msgid "Format disk"
-#~ msgstr "Форматувати диск"
-
-#~ msgid "I/O statistics"
-#~ msgstr "Статистика вводу/виводу"
-
-#~ msgid "LCDproc (client)"
-#~ msgstr "LCDproc (клієнт)"
-
-#~ msgid "Level 1 - Minimum power usage with Standby (spindown)"
-#~ msgstr ""
-#~ "Рівень 1 - Мінімальне використання енергії із сплячим режимом (зупинка диска)"
-
-#~ msgid "MS Active Directory informations"
-#~ msgstr "Інформація про MS Active Directory"
-
-#~ msgid "Medium acoustic output"
-#~ msgstr "Середній рівень шуму"
-
-#~ msgid "Maximum performance, maximum acoustic output"
-#~ msgstr "Максимальна продуктивність, максимальний рівень шуму"
-
-#~ msgid "Minimum performance, Minimum acoustic output"
-#~ msgstr "Мінімальна продуктивність, мінімальний рівень шуму"
-
-#~ msgid "JBOD information and status"
-#~ msgstr "Інформація і статус JBOD"
-
-#~ msgid "List of imported users"
-#~ msgstr "Список імпортованих користувачів"
-
-#~ msgid "RAID 1 information and status"
-#~ msgstr "Інформація і статус RAID 1"
-
-#~ msgid "RAID 5 information and status"
-#~ msgstr "Інформація і статус RAID 5"
+#~ "Натисніть &quot;Дозволити вивантаження прошивки&quot; нижче, і тоді оберіть "
+#~ "файл вбудованого образу для прошивки.<br />Натисніть &quot;Оновлення "
+#~ "прошивки&quot; для початку процесу оновлення."
 
 #, php-format
-#~ msgid "Predefined system groups"
-#~ msgstr "Попередньо визначені системні групи"
+#~ msgid ""
+#~ "DO NOT abort the firmware upgrade process once it has started. Once it is "
+#~ "completed, the server will automatically reboot, the current configuration "
+#~ "will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
+#~ "the upgrade.<br />It is strongly recommended that you <a "
+#~ "href='%s'>Backup</a> the server configuration before doing a upgrade."
+#~ msgstr ""
+#~ "НЕ переривайте прецес оновлення програмного забезпечення. Як тільки він "
+#~ "закінчиться, сервер автоматично перезавантажиться, поточну конфігурацію буде "
+#~ "збережено.<br />Вам потрібно мінімум %d MiB вільної ОП для процесу "
+#~ "оновлення.<br />Наполегливо рекомендується зробити <a href='%s'>резервну "
+#~ "копію</a> конфігурації сервера перед почапком процесу оновлення."
 
-#~ msgid "RAID 0/1/5 information and status"
-#~ msgstr "Інформація і статус RAID 0/1/5"
+#~ msgid "Disable firmware upload"
+#~ msgstr "Заборонити завантаження прошивки"
 
-#~ msgid "RAID 0 information and status"
-#~ msgstr "Інформація і статус RAID 0"
+#~ msgid "Enable firmware upload"
+#~ msgstr "Дозволити завантаження прошивки"
 
-#~ msgid "Rotation rate"
-#~ msgstr "Швидкість обертання"
+#~ msgid "Firmware image file"
+#~ msgstr "Файл прошивки"
+
+#~ msgid "Image upload failed (out of memory?)"
+#~ msgstr "Помилка завантаження зображення (недостатньо пам'яті?)"
+
+#~ msgid "Load file"
+#~ msgstr "Завантажити файл"
+
+#~ msgid "The image file is corrupt"
+#~ msgstr "Файл образу пошкоджено"
+
+#~ msgid "Upgrade firmware"
+#~ msgstr "Оновити прошивку"

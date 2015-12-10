@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-09 16:19+0000\n"
+"POT-Creation-Date: 2015-12-10 23:13+0000\n"
 "PO-Revision-Date: 2015-04-24 14:59+0000\n"
 "Last-Translator: delvago <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-09 15:41+0000\n"
+"X-Launchpad-Export-Date: 2015-12-10 15:12+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: BULGARIA\n"
 "Language: \n"
@@ -496,6 +496,12 @@ msgstr "Добави потребител"
 msgid "Add volume"
 msgstr ""
 
+msgid "Additional Network"
+msgstr ""
+
+msgid "Additional Storage"
+msgstr ""
+
 msgid "Additional group"
 msgstr "Допълнителна група"
 
@@ -937,6 +943,20 @@ msgstr ""
 msgid "Blocksize"
 msgstr "Размер на блока"
 
+msgid "Boot Arguments"
+msgstr ""
+
+msgid "Boot Loader"
+msgstr ""
+
+#, php-format
+msgid "Boot argument (e.g. %s)."
+msgstr ""
+
+#, php-format
+msgid "Boot loader (e.g. %s)."
+msgstr ""
+
 #, php-format
 msgid ""
 "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
@@ -944,6 +964,9 @@ msgid ""
 msgstr ""
 "Boot partition-а е твърде малък. Трябва да преинсталирате от LiveCD или "
 "LiveUSB, или да промените размера на boot partition-а в %s.\n"
+
+msgid "Bootloader"
+msgstr ""
 
 msgid "Bridge"
 msgstr "Мост (bridge)"
@@ -990,6 +1013,9 @@ msgstr "CCMP TKIP"
 
 msgid "CD/DVD"
 msgstr "CD/DVD"
+
+msgid "CD/DVD drive"
+msgstr ""
 
 msgid "CHANGED"
 msgstr "ПРОМЕНЕН"
@@ -1171,12 +1197,6 @@ msgstr ""
 
 msgid "Clear config and Import disks"
 msgstr "Изчисти настройките и вмъкни дискове"
-
-msgid ""
-"Click &quot;Enable firmware upload&quot; below, then choose the embedded "
-"image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
-"the upgrade process."
-msgstr ""
 
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
@@ -1477,6 +1497,12 @@ msgstr ""
 msgid "Create 4KB wrapper (nop device)."
 msgstr ""
 
+msgid "Create HVM Guest"
+msgstr ""
+
+msgid "Create PV Guest"
+msgstr ""
+
 msgid "Create ZFS on GPT partition"
 msgstr ""
 
@@ -1605,17 +1631,11 @@ msgstr ""
 
 #, php-format
 msgid ""
-"DO NOT abort the firmware upgrade process once it has started. Once it is "
-"completed, the server will automatically reboot, the current configuration "
-"will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
-"the upgrade.<br />It is strongly recommended that you <a "
-"href='%s'>Backup</a> the server configuration before doing a upgrade."
+"DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
+"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"/>It is recommended that you <a href='%s'>Backup</a> the server "
+"configuration before doing a upgrade."
 msgstr ""
-"НЕ ПРЕКЪСВАЙТЕ процеса на ъпгрейда на фърмуера след като е започнал. Когато "
-"бъде завършен, сървърът автоматично ще се рестартира, текущата конфигурация "
-"ще се запази. <br /> Трябват минимум %d MiB свободна RAM, за да извършите "
-"надстройката. <br /> Силно препоръчително е, да сте <a href='%s'>Backup</a> "
-"конфигурацията на сървъра, преди да правите ъпгрейд."
 
 msgid "DVD"
 msgstr "DVD"
@@ -1718,6 +1738,9 @@ msgstr "Изтрий rsync з адача"
 
 msgid "Delete URL"
 msgstr "Изтрий URL"
+
+msgid "Delete VM"
+msgstr ""
 
 msgid "Delete algorithm"
 msgstr "Изтрий алгоритъм"
@@ -1957,14 +1980,14 @@ msgstr ""
 msgid "Disable File Manager"
 msgstr ""
 
+msgid "Disable Firmware Update"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
 msgid "Disable console menu"
 msgstr "Забрани конзолното меню"
-
-msgid "Disable firmware upload"
-msgstr "Забрани качването на firmware"
 
 msgid "Disable firmware version check"
 msgstr "забрани проверката на версията на фирмуера"
@@ -2035,6 +2058,9 @@ msgid "Do you really want to delete this Rsync job?"
 msgstr ""
 
 msgid "Do you really want to delete this URL?"
+msgstr ""
+
+msgid "Do you really want to delete this VM?"
 msgstr ""
 
 msgid "Do you really want to delete this auth group?"
@@ -2157,6 +2183,9 @@ msgstr ""
 msgid "Document root of the webserver. Home of the web page files."
 msgstr ""
 
+msgid "DomID"
+msgstr ""
+
 msgid "Domain"
 msgstr "Домейн"
 
@@ -2268,9 +2297,6 @@ msgstr ""
 msgid "Edit"
 msgstr "Редакция"
 
-msgid "Edit File"
-msgstr ""
-
 msgid "Edit Host"
 msgstr "Редактиране на хост"
 
@@ -2287,6 +2313,9 @@ msgid "Edit Rsync job"
 msgstr ""
 
 msgid "Edit URL"
+msgstr ""
+
+msgid "Edit VM"
 msgstr ""
 
 msgid "Edit auth group"
@@ -2392,6 +2421,9 @@ msgstr ""
 msgid "Enable FXP protocol."
 msgstr "позволи FXP протолола"
 
+msgid "Enable Firmware Update"
+msgstr ""
+
 msgid "Enable NFSv4 server."
 msgstr ""
 
@@ -2454,9 +2486,6 @@ msgstr ""
 msgid "Enable extended attributes for this file system."
 msgstr ""
 
-msgid "Enable firmware upload"
-msgstr "Позволи качването на firmware"
-
 msgid ""
 "Enable foreground/background file system consistency check during boot "
 "process."
@@ -2484,6 +2513,9 @@ msgid "Enable mapping DOS attributes"
 msgstr ""
 
 msgid "Enable module listing."
+msgstr ""
+
+msgid "Enable nested virtualization"
 msgstr ""
 
 msgid "Enable peer exchange (PEX)."
@@ -2809,6 +2841,10 @@ msgid "File not found"
 msgstr "Файла не е намерен"
 
 #, php-format
+msgid "File path (e.g. %s) or ZFS volume (e.g. %s) used as Hard disk image."
+msgstr ""
+
+#, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
 msgstr ""
 
@@ -2851,8 +2887,8 @@ msgstr ""
 msgid "Firmware"
 msgstr "Firmware"
 
-msgid "Firmware image file"
-msgstr "Firmware image фаил"
+msgid "Firmware upload failed (out of memory?)"
+msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "Firmware uploading is not supported on this platform."
@@ -3035,6 +3071,12 @@ msgstr ""
 msgid "HAST volume can be use with GPT/UFS only."
 msgstr ""
 
+msgid "HDD Format"
+msgstr ""
+
+msgid "HDD Management"
+msgstr ""
+
 msgid ""
 "HDD producers implement a Fly Height Monitor that attempts to provide "
 "additional protections for write operations by detecting when a recording "
@@ -3049,6 +3091,12 @@ msgid "HDD standby time"
 msgstr ""
 
 msgid "HTTP Proxy"
+msgstr ""
+
+msgid "HVM Guest"
+msgstr ""
+
+msgid "Hard Disk"
 msgstr ""
 
 msgid "Hardware"
@@ -3215,6 +3263,10 @@ msgstr ""
 msgid "IRC Live Support"
 msgstr ""
 
+#, php-format
+msgid "ISO file path (e.g. %s) used as CD/DVD drive."
+msgstr ""
+
 msgid "ISO file to be mounted."
 msgstr ""
 
@@ -3285,9 +3337,6 @@ msgid ""
 "If you want to change the password for accessing the WebGUI, enter it here "
 "twice."
 msgstr ""
-
-msgid "Image upload failed (out of memory?)"
-msgstr "Качването се провали (Недостиг на памет?)"
 
 msgid "Import"
 msgstr ""
@@ -3364,6 +3413,10 @@ msgid "Inhibit some of the syslog diagnostics for bad lines in /etc/exports."
 msgstr ""
 
 msgid "Initial Digest"
+msgstr ""
+
+#, php-format
+msgid "Initial ramdisk (e.g. %s)."
 msgstr ""
 
 msgid "Initialize"
@@ -3548,6 +3601,13 @@ msgstr ""
 msgid "Japanese"
 msgstr ""
 
+msgid "Kernel"
+msgstr ""
+
+#, php-format
+msgid "Kernel file (e.g. %s)."
+msgstr ""
+
 msgid "Key"
 msgstr "Ключ"
 
@@ -3724,9 +3784,6 @@ msgstr "Зареди"
 msgid "Load averages"
 msgstr "Средно натоварване"
 
-msgid "Load file"
-msgstr ""
-
 msgid "Load on UPS"
 msgstr ""
 
@@ -3848,6 +3905,9 @@ msgstr ""
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
+msgstr ""
+
+msgid "MAC Address"
 msgstr ""
 
 msgid "MAC address"
@@ -4023,7 +4083,13 @@ msgstr ""
 msgid "Medium Acoustic Output"
 msgstr ""
 
+msgid "Mem"
+msgstr ""
+
 msgid "Member Interface"
+msgstr ""
+
+msgid "Memory (MiB)"
 msgstr ""
 
 msgid "Memory Usage"
@@ -4214,6 +4280,9 @@ msgstr ""
 msgid "Name of the variable."
 msgstr ""
 
+msgid "Nested HVM"
+msgstr ""
+
 msgid "NetBIOS domain"
 msgstr ""
 
@@ -4225,6 +4294,9 @@ msgstr ""
 
 msgid "Network"
 msgstr "мрежа"
+
+msgid "Network Adapter"
+msgstr ""
 
 msgid "Network File System"
 msgstr ""
@@ -4297,6 +4369,12 @@ msgstr ""
 msgid ""
 "No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
 "first."
+msgstr ""
+
+#, php-format
+msgid ""
+"No configured bridge interfaces. Please add new <a href='%s'>bridge "
+"interface</a> first."
 msgstr ""
 
 #, php-format
@@ -4582,6 +4660,9 @@ msgstr ""
 
 #, c-format
 msgid "PSK"
+msgstr ""
+
+msgid "PV Guest"
 msgstr ""
 
 msgid "Package Name"
@@ -4991,6 +5072,9 @@ msgstr ""
 msgid "Raid name"
 msgstr "Име на Raid"
 
+msgid "Ramdisk"
+msgstr ""
+
 msgid "Read"
 msgstr ""
 
@@ -5315,13 +5399,7 @@ msgstr "Запази"
 msgid "Save & Restart"
 msgstr ""
 
-msgid "Save File"
-msgstr ""
-
 msgid "Save and Restart"
-msgstr ""
-
-msgid "Save file"
 msgstr ""
 
 msgid "Save login information in configuration file."
@@ -5390,6 +5468,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr ""
 
+msgid "Select firmware:"
+msgstr ""
+
 msgid "Select item to remove from the list"
 msgstr ""
 
@@ -5441,6 +5522,9 @@ msgid "Send Command!"
 msgstr "Изпрати командата"
 
 msgid "Send Now"
+msgstr ""
+
+msgid "Send Test Email"
 msgstr ""
 
 msgid "Send a TEST warning email on startup."
@@ -5941,6 +6025,9 @@ msgstr ""
 msgid "TCP port"
 msgstr "ТCP порт"
 
+msgid "TCP port is 5900+N, where N is VNC display number."
+msgstr ""
+
 msgid "TCP port to bind the server to."
 msgstr ""
 
@@ -6114,6 +6201,10 @@ msgstr ""
 
 #, php-format
 msgid "The associated MIB files can be found at %s."
+msgstr ""
+
+#, php-format
+msgid "The attribute '%s' already exists."
 msgstr ""
 
 #, c-format
@@ -6419,6 +6510,12 @@ msgstr ""
 msgid "The extent name already exists."
 msgstr ""
 
+msgid "The file you try to flash is not for this platform"
+msgstr ""
+
+msgid "The firmware file is corrupt"
+msgstr ""
+
 #, php-format
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -6445,9 +6542,6 @@ msgid ""
 msgstr ""
 "The host name may only consist of the characters a-z, A-Z and 0-9, - , _ and "
 "."
-
-msgid "The image file is corrupt"
-msgstr "The image file is corrupt"
 
 msgid "The initial digest mode negotiated with the initiator."
 msgstr ""
@@ -6721,9 +6815,6 @@ msgstr ""
 msgid "The uploaded file was only partially uploaded."
 msgstr ""
 
-msgid "The uploaded image file is not for this platform"
-msgstr "Качения имидж не е за тази платформа"
-
 msgid "The user's login shell."
 msgstr ""
 
@@ -6944,11 +7035,11 @@ msgid "This is for information only (not using during iSCSI negotiation)."
 msgstr ""
 
 msgid ""
-"This means that the image you uploaded is not an official/supported image "
-"and may lead to unexpected behavior or security compromises. Only install "
-"images that come from sources that you trust, and make sure that the image "
-"has not been tampered with.<br /><br />Do you want to install this image "
-"anyway (on your own risk)?"
+"This means that the firmware you flashed is not an official/supported "
+"firmware and may lead to unexpected behavior or security compromises. Only "
+"install firmwares that come from sources that you trust, and make sure that "
+"the firmware has not been tampered with.<br /><br />Do you want to install "
+"this firmware anyway (on your own risk)?"
 msgstr ""
 
 msgid "This name already exists in the disk list."
@@ -7524,8 +7615,8 @@ msgstr ""
 msgid "Updating in 5 seconds."
 msgstr ""
 
-msgid "Upgrade firmware"
-msgstr "Поднови firmware-а"
+msgid "Upgrade Firmware"
+msgstr ""
 
 msgid "Upload"
 msgstr ""
@@ -7652,6 +7743,9 @@ msgstr ""
 msgid "Using %s bytes fragment size."
 msgstr ""
 
+msgid "VCPUs"
+msgstr ""
+
 msgid "VHID"
 msgstr ""
 
@@ -7665,6 +7759,15 @@ msgid "VLAN tag"
 msgstr "VLAN tag"
 
 msgid "VM"
+msgstr ""
+
+msgid "VM Type"
+msgstr ""
+
+msgid "VNC Display"
+msgstr ""
+
+msgid "VNC Password"
 msgstr ""
 
 msgid "Value"
@@ -7877,6 +7980,12 @@ msgstr ""
 
 #, php-format
 msgid "Wrong permission on %s."
+msgstr ""
+
+msgid "Xen"
+msgstr ""
+
+msgid "Xen Virtual Machine"
 msgstr ""
 
 msgid "Yes"
@@ -8171,72 +8280,37 @@ msgstr "версия:"
 msgid "warning"
 msgstr ""
 
+#~ msgid "Disable firmware upload"
+#~ msgstr "Забрани качването на firmware"
+
+#~ msgid "Enable firmware upload"
+#~ msgstr "Позволи качването на firmware"
+
+#~ msgid "Firmware image file"
+#~ msgstr "Firmware image фаил"
+
+#~ msgid "Image upload failed (out of memory?)"
+#~ msgstr "Качването се провали (Недостиг на памет?)"
+
+#~ msgid "The image file is corrupt"
+#~ msgstr "The image file is corrupt"
+
+#~ msgid "The uploaded image file is not for this platform"
+#~ msgstr "Качения имидж не е за тази платформа"
+
+#~ msgid "Upgrade firmware"
+#~ msgstr "Поднови firmware-а"
+
 #, php-format
-#~ msgid "%s interface"
-#~ msgstr "%s интерфейс"
-
-#~ msgid "Advanced Power Management"
-#~ msgstr "Управление на захранването"
-
-#~ msgid "Backup configuration"
-#~ msgstr "Запази конфигурацията"
-
-#~ msgid "Don't Erase MBR"
-#~ msgstr "не изтривай MBR"
-
-#~ msgid "File path"
-#~ msgstr "Път до файла"
-
-#~ msgid "Format disk"
-#~ msgstr "форматирай диска"
-
-#~ msgid "Hard disk standby time"
-#~ msgstr "време за стендбай режим на харддиска"
-
-#~ msgid "List of mount points"
-#~ msgstr "лист на точките за монтиране"
-
-#~ msgid "Maximum performance, maximum acoustic output"
-#~ msgstr "Maximum performance, maximum acoustic output"
-
-#~ msgid "Medium acoustic output"
-#~ msgstr "средно акустично ниво"
-
-#~ msgid "Minimum performance, Minimum acoustic output"
-#~ msgstr "Minimum performance, Minimum acoustic output"
-
-#~ msgid "Processes information"
-#~ msgstr "Информация за процесите"
-
-#~ msgid "Remote address"
-#~ msgstr "Отдалечен адрес"
-
-#~ msgid "Scheduled shutdown"
-#~ msgstr "Предвидено изключване"
-
-#~ msgid "Standby time"
-#~ msgstr "Standby time"
-
-#~ msgid "Swap memory"
-#~ msgstr "Суап памет"
-
-#~ msgid "System information"
-#~ msgstr "Системна информация"
-
-#~ msgid "minutes"
-#~ msgstr "минути"
-
-#~ msgid "Always on"
-#~ msgstr "Винаги включен"
-
-#~ msgid "Clear config and Import software raid disks"
-#~ msgstr "Изчисти настройките и вмъкни софтуер райд дискове"
-
-#~ msgid "Connected FTP users"
-#~ msgstr "Свързани FTP потребители"
-
-#~ msgid "DNS settings"
-#~ msgstr "DNS настроики"
-
-#~ msgid "Ban list"
-#~ msgstr "Забранителен списък"
+#~ msgid ""
+#~ "DO NOT abort the firmware upgrade process once it has started. Once it is "
+#~ "completed, the server will automatically reboot, the current configuration "
+#~ "will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
+#~ "the upgrade.<br />It is strongly recommended that you <a "
+#~ "href='%s'>Backup</a> the server configuration before doing a upgrade."
+#~ msgstr ""
+#~ "НЕ ПРЕКЪСВАЙТЕ процеса на ъпгрейда на фърмуера след като е започнал. Когато "
+#~ "бъде завършен, сървърът автоматично ще се рестартира, текущата конфигурация "
+#~ "ще се запази. <br /> Трябват минимум %d MiB свободна RAM, за да извършите "
+#~ "надстройката. <br /> Силно препоръчително е, да сте <a href='%s'>Backup</a> "
+#~ "конфигурацията на сървъра, преди да правите ъпгрейд."

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-09 16:19+0000\n"
-"PO-Revision-Date: 2015-12-09 15:33+0000\n"
+"POT-Creation-Date: 2015-12-10 23:13+0000\n"
+"PO-Revision-Date: 2015-12-10 15:09+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-09 15:41+0000\n"
+"X-Launchpad-Export-Date: 2015-12-10 15:12+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -547,6 +547,12 @@ msgstr "Gebruiker toevoegen"
 msgid "Add volume"
 msgstr "Voeg Volume toe"
 
+msgid "Additional Network"
+msgstr "Bijkomend Netwerk"
+
+msgid "Additional Storage"
+msgstr "Bijkomend Opslag"
+
 msgid "Additional group"
 msgstr "Extra groep"
 
@@ -1018,6 +1024,20 @@ msgstr "Blokgrootte"
 msgid "Blocksize"
 msgstr "Blokgrootte"
 
+msgid "Boot Arguments"
+msgstr "Opstart Argumenten"
+
+msgid "Boot Loader"
+msgstr "Opstartlader"
+
+#, php-format
+msgid "Boot argument (e.g. %s)."
+msgstr "Opstart argument (bijv. %s)."
+
+#, php-format
+msgid "Boot loader (e.g. %s)."
+msgstr "Opstartlader (bijv. %s)."
+
 #, php-format
 msgid ""
 "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
@@ -1025,6 +1045,9 @@ msgid ""
 msgstr ""
 "De boot partitie is te klein. Een herinstallatie via LiveCD of LiveUSB is "
 "nodig, of herindeel de boot partitie van %s.\n"
+
+msgid "Bootloader"
+msgstr "Opstartlader"
 
 msgid "Bridge"
 msgstr "Bridge"
@@ -1072,6 +1095,9 @@ msgstr "CCMP TKIP"
 
 msgid "CD/DVD"
 msgstr "CD/DVD"
+
+msgid "CD/DVD drive"
+msgstr "CD/DVD drive"
 
 msgid "CHANGED"
 msgstr "VERANDERD"
@@ -1257,15 +1283,6 @@ msgstr "Config Leegmaken & Importeer Software RAID Schijven"
 
 msgid "Clear config and Import disks"
 msgstr "Config leegmaken en importeer schijven"
-
-msgid ""
-"Click &quot;Enable firmware upload&quot; below, then choose the embedded "
-"image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
-"the upgrade process."
-msgstr ""
-"Druk op de knop &quot;Inschakelen Firmware Update&quot; en selecteer nu het "
-"image bestand.<br />Druk op &quot;Update Firmware&quot; om het updateproces "
-"te starten."
 
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
@@ -1640,6 +1657,12 @@ msgstr "Telt het maximum slechtste wis telling op een blok."
 msgid "Create 4KB wrapper (nop device)."
 msgstr "Creëer 4KB wrapper (nop device)."
 
+msgid "Create HVM Guest"
+msgstr "Creëer HVM Gast"
+
+msgid "Create PV Guest"
+msgstr "Creëer PV Gast"
+
 msgid "Create ZFS on GPT partition"
 msgstr "Creëer ZFS op GPT-partitie"
 
@@ -1768,16 +1791,14 @@ msgstr "DNS server is leeg."
 
 #, php-format
 msgid ""
-"DO NOT abort the firmware upgrade process once it has started. Once it is "
-"completed, the server will automatically reboot, the current configuration "
-"will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
-"the upgrade.<br />It is strongly recommended that you <a "
-"href='%s'>Backup</a> the server configuration before doing a upgrade."
+"DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
+"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"/>It is recommended that you <a href='%s'>Backup</a> the server "
+"configuration before doing a upgrade."
 msgstr ""
-"Breek de firmware update procedure niet af nadat deze is gestart. De server "
-"zal automatisch herstarten na het updaten van de nieuwe firmware. De huidige "
-"configuratie zal behouden blijven.<br />Er is minimaal %d Mb RAM nodig om de "
-"firmware update uit te voeren.<br />Het is aanbevolen eerst een <a "
+"NIET afbreken van de firmware upgrade proces indien deze eenmaal is "
+"gestart.<br />Probeer geen andere bestanden te flashen dan alleen geldige "
+"'%s-x -embedded.img.xz' bestanden.<br />Het is aanbevolen eerst een <a "
 "href='%s'>Backup</a> van de huidige configuratie te maken, alvorens de "
 "firmware update uit te voeren"
 
@@ -1884,6 +1905,9 @@ msgstr "Rsync taak verwijderen"
 
 msgid "Delete URL"
 msgstr "URL verwijderen"
+
+msgid "Delete VM"
+msgstr "Verwijder VM"
 
 msgid "Delete algorithm"
 msgstr "Algoritme verwijderen"
@@ -2135,14 +2159,14 @@ msgstr "Map om in te kijken voor nieuwe .torrent bestanden."
 msgid "Disable File Manager"
 msgstr "Bestands Manager Uitschakelen"
 
+msgid "Disable Firmware Update"
+msgstr "Uitschakelen Firmware Update"
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Uitschakelen TCP wrapper (mod_wrap module)."
 
 msgid "Disable console menu"
 msgstr "Uitschakelen console menu"
-
-msgid "Disable firmware upload"
-msgstr "Uitschakelen Firmware Update"
 
 msgid "Disable firmware version check"
 msgstr "Uitschakelen firmware versie controle"
@@ -2218,6 +2242,9 @@ msgstr "Weet u zeker dat u deze Rsync taak wilt verwijderen?"
 
 msgid "Do you really want to delete this URL?"
 msgstr "Weet u zeker dat u deze URL wilt wissen?"
+
+msgid "Do you really want to delete this VM?"
+msgstr "Weet u zeker dat u deze VM wilt verwijderen?"
 
 msgid "Do you really want to delete this auth group?"
 msgstr "Weet u zeker dat u deze auth groep wilt verwijderen?"
@@ -2348,6 +2375,9 @@ msgstr ""
 "Documentenmap voor de webserver. Dit is de map waarin u alle webbestanden "
 "kunt plaatsen voor uw website."
 
+msgid "DomID"
+msgstr "DomID"
+
 msgid "Domain"
 msgstr "Domein"
 
@@ -2463,9 +2493,6 @@ msgstr "FOUT:"
 msgid "Edit"
 msgstr "Bewerken"
 
-msgid "Edit File"
-msgstr "Bestand Bewerken"
-
 msgid "Edit Host"
 msgstr "Bewerk Host"
 
@@ -2483,6 +2510,9 @@ msgstr "Rsync taak bewerken"
 
 msgid "Edit URL"
 msgstr "Bewerk URL"
+
+msgid "Edit VM"
+msgstr "Bewerk VM"
 
 msgid "Edit auth group"
 msgstr "Auth groep bewerken"
@@ -2588,6 +2618,9 @@ msgstr "Inschakelen Asynchrone I/O (AIO)"
 msgid "Enable FXP protocol."
 msgstr "Inschakelen FXP protocol."
 
+msgid "Enable Firmware Update"
+msgstr "Inschakelen Firmware Update"
+
 msgid "Enable NFSv4 server."
 msgstr "Inschakelen NFSv4 server."
 
@@ -2654,9 +2687,6 @@ msgstr "Inschakelen externe attributen ondersteuning"
 msgid "Enable extended attributes for this file system."
 msgstr "Uitgebreide attributen voor dit bestandssysteem inschakelen."
 
-msgid "Enable firmware upload"
-msgstr "Inschakelen Firmware Update"
-
 msgid ""
 "Enable foreground/background file system consistency check during boot "
 "process."
@@ -2687,6 +2717,9 @@ msgstr "Inschakelen mapping DOS attributen"
 
 msgid "Enable module listing."
 msgstr "Inschakelen modulenlijst."
+
+msgid "Enable nested virtualization"
+msgstr "Inschakelen geneste virtualisatie"
 
 msgid "Enable peer exchange (PEX)."
 msgstr ""
@@ -3034,7 +3067,7 @@ msgid "File Manager"
 msgstr "Bestands Manager"
 
 msgid "File Path"
-msgstr "Selecteer bestand"
+msgstr "Bestandslocatie"
 
 msgid "File Transfer Protocol"
 msgstr "Bestandsoverdracht Protocol (FTP)"
@@ -3043,8 +3076,14 @@ msgid "File not found"
 msgstr "Bestand niet gevonden"
 
 #, php-format
+msgid "File path (e.g. %s) or ZFS volume (e.g. %s) used as Hard disk image."
+msgstr ""
+"Bestandslocatie (bijv. %s) of ZFS volume (bijv. %s) gebruikt als Harde "
+"schijf image."
+
+#, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
-msgstr "Bestands pad (bijv. /mnt/deelnaam/omvang/%s) gebruikt als omvang."
+msgstr "Bestandslocatie (bijv. /mnt/deelnaam/omvang/%s) gebruikt als omvang."
 
 msgid "File size"
 msgstr "bestands grootte"
@@ -3085,8 +3124,8 @@ msgstr "Firewall Regel Instellingen"
 msgid "Firmware"
 msgstr "Firmware Update"
 
-msgid "Firmware image file"
-msgstr "Firmware image bestand"
+msgid "Firmware upload failed (out of memory?)"
+msgstr "Firmware upload mislukt (niet genoeg geheugen?)"
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "Het updaten van de firmware wordt niet ondersteund op dit platform."
@@ -3275,6 +3314,12 @@ msgstr "HAST volume"
 msgid "HAST volume can be use with GPT/UFS only."
 msgstr "HAST volumes kunnen alleen worden gebruikt met GPT/UFS."
 
+msgid "HDD Format"
+msgstr "HDD Formateren"
+
+msgid "HDD Management"
+msgstr "HDD Management"
+
 msgid ""
 "HDD producers implement a Fly Height Monitor that attempts to provide "
 "additional protections for write operations by detecting when a recording "
@@ -3298,6 +3343,12 @@ msgstr "HDD standby tijd"
 
 msgid "HTTP Proxy"
 msgstr "HTTP Proxy"
+
+msgid "HVM Guest"
+msgstr "HVM Gast"
+
+msgid "Hard Disk"
+msgstr "Harde Schijf"
 
 msgid "Hardware"
 msgstr "Hardware"
@@ -3476,6 +3527,10 @@ msgstr "IPv6 adressen"
 msgid "IRC Live Support"
 msgstr "IRC Live Ondersteuning"
 
+#, php-format
+msgid "ISO file path (e.g. %s) used as CD/DVD drive."
+msgstr "ISO bestandslocatie (bijv. %s) gebruikt als CD/DVD drive."
+
 msgid "ISO file to be mounted."
 msgstr "ISO bestand om aangekoppeld te worden."
 
@@ -3581,9 +3636,6 @@ msgstr ""
 "Als u het wachtwoord voor de toegang naar de WebGUI wil veranderen, vul het "
 "hier dan twee keer in."
 
-msgid "Image upload failed (out of memory?)"
-msgstr "Image upload mislukt (niet genoeg geheugen?)"
-
 msgid "Import"
 msgstr "Importeren"
 
@@ -3664,6 +3716,10 @@ msgstr "Verbieden van syslog diagnose voor verkeerde regels in /etc/exports."
 
 msgid "Initial Digest"
 msgstr "Aanvankelijke Overzicht"
+
+#, php-format
+msgid "Initial ramdisk (e.g. %s)."
+msgstr "initiële ramschijf (bijv. %s)."
 
 msgid "Initialize"
 msgstr "Initialiseer"
@@ -3861,6 +3917,13 @@ msgstr ""
 
 msgid "Japanese"
 msgstr "Japans"
+
+msgid "Kernel"
+msgstr "Kernel"
+
+#, php-format
+msgid "Kernel file (e.g. %s)."
+msgstr "Kernel bestand (bijv. %s)."
 
 msgid "Key"
 msgstr "Sleutel"
@@ -4061,9 +4124,6 @@ msgstr "Belasting"
 msgid "Load averages"
 msgstr "Systeemprocessen belasting"
 
-msgid "Load file"
-msgstr "Bestand openen"
-
 msgid "Load on UPS"
 msgstr "Belasting op UPS"
 
@@ -4202,6 +4262,9 @@ msgid ""
 msgstr ""
 "Laagste waarde is hogere prioriteit. Voor de master node, gebruik 0 of 1. "
 "Indien preempt is ingeschakeld, wordt deze aangepast aan 240 bij storing."
+
+msgid "MAC Address"
+msgstr "MAC-adres"
 
 msgid "MAC address"
 msgstr "MAC-adres"
@@ -4388,8 +4451,14 @@ msgstr "Mediabibliotheek"
 msgid "Medium Acoustic Output"
 msgstr "Medium Geluidsproductie"
 
+msgid "Mem"
+msgstr "Geheugen"
+
 msgid "Member Interface"
 msgstr "Gebruikers Interface"
+
+msgid "Memory (MiB)"
+msgstr "Geheugen (MiB)"
 
 msgid "Memory Usage"
 msgstr "Geheugen Gebruik"
@@ -4587,6 +4656,9 @@ msgstr ""
 msgid "Name of the variable."
 msgstr "Naam van de variable."
 
+msgid "Nested HVM"
+msgstr "Geneste HVM"
+
 msgid "NetBIOS domain"
 msgstr "NetBIOS domein"
 
@@ -4598,6 +4670,9 @@ msgstr "Netgrafiek"
 
 msgid "Network"
 msgstr "Netwerk"
+
+msgid "Network Adapter"
+msgstr "Netwerkadapter"
 
 msgid "Network File System"
 msgstr "Netwerk Bestandssysteem"
@@ -4686,6 +4761,14 @@ msgid ""
 msgstr ""
 "Er is geen Portaal Groep geconfigureerd. Voeg eerst een nieuwe <a "
 "href='%s'>Portaal Groep</a> toe."
+
+#, php-format
+msgid ""
+"No configured bridge interfaces. Please add new <a href='%s'>bridge "
+"interface</a> first."
+msgstr ""
+"Er zijn geen bridge netwerken geconfigureerd. U dient eerst een nieuw <a "
+"href='%s'>bridge netwerk</a> toe te voegen."
 
 #, php-format
 msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
@@ -5000,6 +5083,9 @@ msgstr "PPTP werkstations"
 #, c-format
 msgid "PSK"
 msgstr "PSK"
+
+msgid "PV Guest"
+msgstr "PV Gast"
 
 msgid "Package Name"
 msgstr "Pakketnaam"
@@ -5423,6 +5509,9 @@ msgstr "RSYNC log"
 msgid "Raid name"
 msgstr "RAID naam"
 
+msgid "Ramdisk"
+msgstr "Ramdisk"
+
 msgid "Read"
 msgstr "Lezen"
 
@@ -5765,14 +5854,8 @@ msgstr "Opslaan"
 msgid "Save & Restart"
 msgstr "Opslaan & Herstarten"
 
-msgid "Save File"
-msgstr "Bestand Opslaan"
-
 msgid "Save and Restart"
 msgstr "Opslaan en Herstarten"
-
-msgid "Save file"
-msgstr "Bestand opslaan"
 
 msgid "Save login information in configuration file."
 msgstr "Inloginformatie opslaan in het configuratiebestand."
@@ -5847,6 +5930,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Selecteer een schijf dat is ingeschakeld voor S.M.A.R.T. controle."
 
+msgid "Select firmware:"
+msgstr "Selecteer firmware:"
+
 msgid "Select item to remove from the list"
 msgstr "Selecteer het item om van de lijst te verwijderen"
 
@@ -5905,6 +5991,9 @@ msgstr "Opdracht Versturen!"
 
 msgid "Send Now"
 msgstr "Nu Verzenden"
+
+msgid "Send Test Email"
+msgstr "Verstuur Test E-mail"
 
 msgid "Send a TEST warning email on startup."
 msgstr ""
@@ -6450,6 +6539,9 @@ msgstr "TCP forwarding"
 msgid "TCP port"
 msgstr "TCP-poort"
 
+msgid "TCP port is 5900+N, where N is VNC display number."
+msgstr "TCP poort is 5900+N, waar N het VNC scherm nummer is."
+
 msgid "TCP port to bind the server to."
 msgstr "TCP-poort om de sever aan te koppelen."
 
@@ -6642,6 +6734,10 @@ msgstr ""
 #, php-format
 msgid "The associated MIB files can be found at %s."
 msgstr "De geassocieerde MIB bestanden kunnen gevonden worden op %s."
+
+#, php-format
+msgid "The attribute '%s' already exists."
+msgstr "De attribuut '%s' bestaat reeds."
 
 #, c-format
 msgid ""
@@ -7012,6 +7108,12 @@ msgstr ""
 msgid "The extent name already exists."
 msgstr "Deze extentie naam bestaat reeds."
 
+msgid "The file you try to flash is not for this platform"
+msgstr "Het bestand dat u probeert te flashen is niet voor dit platform"
+
+msgid "The firmware file is corrupt"
+msgstr "Het firmware bestand is beschadigd"
+
 #, php-format
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -7038,9 +7140,6 @@ msgid ""
 "."
 msgstr ""
 "De hostnaam mag enkel bestaan uit de tekens a-z, A-Z en 0-9, - , _ en ."
-
-msgid "The image file is corrupt"
-msgstr "Het image bestand is beschadigd."
 
 msgid "The initial digest mode negotiated with the initiator."
 msgstr "De aanvankelijke overzicht die met de initiator wordt besproken."
@@ -7372,9 +7471,6 @@ msgstr ""
 msgid "The uploaded file was only partially uploaded."
 msgstr "Het geuploade bestand werd slechts gedeeltelijk geupload."
 
-msgid "The uploaded image file is not for this platform"
-msgstr "Het geuploade image bestand is niet geschikt voor dit platform"
-
 msgid "The user's login shell."
 msgstr "De gebruikers inlog shell."
 
@@ -7657,18 +7753,18 @@ msgstr ""
 "onderhandelingen)."
 
 msgid ""
-"This means that the image you uploaded is not an official/supported image "
-"and may lead to unexpected behavior or security compromises. Only install "
-"images that come from sources that you trust, and make sure that the image "
-"has not been tampered with.<br /><br />Do you want to install this image "
-"anyway (on your own risk)?"
+"This means that the firmware you flashed is not an official/supported "
+"firmware and may lead to unexpected behavior or security compromises. Only "
+"install firmwares that come from sources that you trust, and make sure that "
+"the firmware has not been tampered with.<br /><br />Do you want to install "
+"this firmware anyway (on your own risk)?"
 msgstr ""
-"Dit betekent dat het image bestand dat u wilt gebruiken geen "
-"officieel/ondersteund image bestand is en dat dit kan leiden tot een "
+"Dit betekent dat het firmware bestand dat u wilt gebruiken geen "
+"officieel/ondersteund firmware bestand is en dat dit kan leiden tot een "
 "onverwacht systeemgedrag of een beveiligingsrisico. Installeer uitsluitend "
-"bestanden die afkomstig zijn uit betrouwbare bronnen, en zorgt u ervoor dat "
-"er niets veranderd is aan het bestand.<br /><br />Wilt u het image bestand "
-"toch installeren (op eigen risico)?"
+"firmware bestanden die afkomstig zijn uit betrouwbare bronnen, en zorgt u "
+"ervoor dat er niets veranderd is aan/in de firmware.<br /><br />Wilt u het "
+"firmware bestand toch installeren (Dit is op eigen risico)?"
 
 msgid "This name already exists in the disk list."
 msgstr "Deze naam bestaat reeds in de schijf lijst."
@@ -8364,7 +8460,7 @@ msgstr "Update periode"
 msgid "Updating in 5 seconds."
 msgstr "Bijwerken over 5 seconden"
 
-msgid "Upgrade firmware"
+msgid "Upgrade Firmware"
 msgstr "Update Firmware"
 
 msgid "Upload"
@@ -8511,6 +8607,9 @@ msgstr "Gebruikers & Groepen"
 msgid "Using %s bytes fragment size."
 msgstr "%s fragment groote gebruiken"
 
+msgid "VCPUs"
+msgstr "VCPUs"
+
 msgid "VHID"
 msgstr "VHID"
 
@@ -8525,6 +8624,15 @@ msgstr "VLAN markering"
 
 msgid "VM"
 msgstr "VM"
+
+msgid "VM Type"
+msgstr "VM Type"
+
+msgid "VNC Display"
+msgstr "VNC Scherm"
+
+msgid "VNC Password"
+msgstr "VNC Wachtwoord"
 
 msgid "Value"
 msgstr "Waarde"
@@ -8759,6 +8867,12 @@ msgstr "Fout partitie type of partitie nummer."
 #, php-format
 msgid "Wrong permission on %s."
 msgstr "Verkeerde permissie op %s."
+
+msgid "Xen"
+msgstr "Xen"
+
+msgid "Xen Virtual Machine"
+msgstr "Xen Virtuele Machine"
 
 msgid "Yes"
 msgstr "Ja"
@@ -9072,273 +9186,98 @@ msgstr "versie:"
 msgid "warning"
 msgstr "waarschuwing"
 
-#, php-format
-#~ msgid "%s interface"
-#~ msgstr "%s netwerk"
+#~ msgid "Disable firmware upload"
+#~ msgstr "Uitschakelen Firmware Update"
 
-#~ msgid "Advanced Power Management"
-#~ msgstr "Geavanceerde Energiebeheer"
+#~ msgid "Enable firmware upload"
+#~ msgstr "Inschakelen Firmware Update"
 
-#~ msgid "Always on"
-#~ msgstr "Altijd aan"
+#~ msgid "Firmware image file"
+#~ msgstr "Firmware image bestand"
 
-#~ msgid "Backup configuration"
-#~ msgstr "Backup Configuratie"
+#~ msgid "Image upload failed (out of memory?)"
+#~ msgstr "Image upload mislukt (niet genoeg geheugen?)"
 
-#~ msgid "Ban list"
-#~ msgstr "Banlijst"
+#~ msgid "The image file is corrupt"
+#~ msgstr "Het image bestand is beschadigd."
 
-#~ msgid "Connected FTP users"
-#~ msgstr "Verbonden FTP gebruikers"
-
-#~ msgid "DNS settings"
-#~ msgstr "DNS instellingen"
-
-#~ msgid "Don't Erase MBR"
-#~ msgstr "Niet Wissen MBR"
-
-#~ msgid "Email notification"
-#~ msgstr "E-mail berichtgeving"
-
-#~ msgid "Email report"
-#~ msgstr "E-mail rapportage"
-
-#~ msgid "File path"
-#~ msgstr "Selecteer bestand"
-
-#~ msgid "Firewall rule"
-#~ msgstr "Firewall regel"
-
-#~ msgid "Format disk"
-#~ msgstr "Formatteer harde schijf"
-
-#~ msgid "Free disk space"
-#~ msgstr "Vrije schijfruimte"
-
-#~ msgid "Hard disk standby time"
-#~ msgstr "Standby tijd harde schijf"
-
-#~ msgid "I/O statistics"
-#~ msgstr "In/Uitgaande statistieken"
-
-#~ msgid "LCDproc (client)"
-#~ msgstr "LCDproc (client)"
-
-#~ msgid "Level 1 - Minimum power usage with Standby (spindown)"
-#~ msgstr "Niveau 1 - Minimaal energieverbruik met Standby (spin-down)"
-
-#~ msgid "Level 127 - Intermediate power usage with Standby"
-#~ msgstr "Niveau 127 - Intermediair energieverbruik met Standby"
-
-#~ msgid "Level 128 - Minimum power usage without Standby (no spindown)"
-#~ msgstr ""
-#~ "Niveau 128 - Minimaal energieverbruik zonder Standby (geen spin-down)"
-
-#~ msgid "Level 192 - Intermediate power usage without Standby"
-#~ msgstr "Niveau 192 - Intermediair energieverbruik zonder Standby"
-
-#~ msgid "Level 254 - Maximum performance, maximum power usage"
-#~ msgstr "Niveau 254 - Maximale prestatie's, maximaal energieverbruik"
-
-#~ msgid "Level 64 - Intermediate power usage with Standby"
-#~ msgstr "Niveau 64 - Intermediair energieverbruik met Standby"
-
-#~ msgid "List of available target name on all configured iSCSI targets"
-#~ msgstr ""
-#~ "Lijst van beschikbare doelnamen van alle geconfigureerde iSCSI doelen."
-
-#~ msgid "List of imported users"
-#~ msgstr "Lijst van geimporteerde gebruikers"
-
-#~ msgid "List of mount points"
-#~ msgstr "Koppelpunt lijst"
-
-#~ msgid "Logical Unit Controller login information"
-#~ msgstr "Inloginformatie Logical Unit Controller"
-
-#~ msgid "MS Active Directory informations"
-#~ msgstr "MS Active Directory informatie"
-
-#~ msgid "Maximum performance, maximum acoustic output"
-#~ msgstr "Maximale prestaties, maximale geluidsproductie"
-
-#~ msgid "Medium acoustic output"
-#~ msgstr "Medium geluidsproductie"
-
-#~ msgid "Minimum performance, Minimum acoustic output"
-#~ msgstr "Minimale prestaties, Minimale geluidsproductie"
-
-#~ msgid "Model extra"
-#~ msgstr "Model extra"
-
-#~ msgid "Model name"
-#~ msgstr "Modelnaam"
-
-#~ msgid "Online version check"
-#~ msgstr "Online Versie Controle"
-
-#~ msgid "Pool information and status"
-#~ msgstr "Pool status en informatie"
-
-#~ msgid "Processes information"
-#~ msgstr "systeemprocessen"
+#~ msgid "The uploaded image file is not for this platform"
+#~ msgstr "Het geuploade image bestand is niet geschikt voor dit platform"
 
 #~ msgid ""
-#~ "Puts the hard disk into standby mode when the selected amount of time after "
-#~ "the last hard disk access has been elapsed."
+#~ "This means that the image you uploaded is not an official/supported image "
+#~ "and may lead to unexpected behavior or security compromises. Only install "
+#~ "images that come from sources that you trust, and make sure that the image "
+#~ "has not been tampered with.<br /><br />Do you want to install this image "
+#~ "anyway (on your own risk)?"
 #~ msgstr ""
-#~ "Zet de hardeschijf in de standby mode wanneer na de geselecteerde tijd de "
-#~ "laatste harde schijf gebruik is verstreken."
+#~ "Dit betekent dat het image bestand dat u wilt gebruiken geen "
+#~ "officieel/ondersteund image bestand is en dat dit kan leiden tot een "
+#~ "onverwacht systeemgedrag of een beveiligingsrisico. Installeer uitsluitend "
+#~ "bestanden die afkomstig zijn uit betrouwbare bronnen, en zorgt u ervoor dat "
+#~ "er niets veranderd is aan het bestand.<br /><br />Wilt u het image bestand "
+#~ "toch installeren (op eigen risico)?"
 
-#~ msgid "RSYNC Client informations"
-#~ msgstr "RSYNC Werkstation informatie"
+#~ msgid "Upgrade firmware"
+#~ msgstr "Update Firmware"
 
-#~ msgid "Remote address"
-#~ msgstr "Remote adres"
+#~ msgid "Save file"
+#~ msgstr "Bestand opslaan"
 
-#~ msgid "Rescan disks"
-#~ msgstr "Herscan schijven"
+#~ msgid "Load file"
+#~ msgstr "Bestand openen"
 
-#~ msgid "Rsync job"
-#~ msgstr "Rsync taak"
-
-#~ msgid "Scheduled reboot"
-#~ msgstr "Gepland herstarten"
-
-#~ msgid "Scheduled self-tests"
-#~ msgstr "Geplande zelf-testen"
-
-#~ msgid "Scheduled shutdown"
-#~ msgstr "Gepland uitschakelen"
-
-#~ msgid "Self-Monitoring, Analysis and Reporting Technology"
-#~ msgstr "Zelf-Controle, Analyseren en Rapportage Techniek"
-
-#~ msgid "Show process information"
-#~ msgstr "Processen weergeven"
-
-#~ msgid "Standby time"
-#~ msgstr "Standby tijd"
-
-#~ msgid "Swap memory"
-#~ msgstr "Wisselbestand"
-
-#~ msgid "Swap status"
-#~ msgstr "Wisselbestand status"
-
-#~ msgid "System firewall"
-#~ msgstr "Systeem firewall"
-
-#~ msgid "System information"
-#~ msgstr "Systeemoverzicht"
-
-#~ msgid "Temperature monitoring"
-#~ msgstr "Temperatuur controle"
+#, php-format
+#~ msgid ""
+#~ "DO NOT abort the firmware upgrade process once it has started. Once it is "
+#~ "completed, the server will automatically reboot, the current configuration "
+#~ "will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
+#~ "the upgrade.<br />It is strongly recommended that you <a "
+#~ "href='%s'>Backup</a> the server configuration before doing a upgrade."
+#~ msgstr ""
+#~ "Breek de firmware update procedure niet af nadat deze is gestart. De server "
+#~ "zal automatisch herstarten na het updaten van de nieuwe firmware. De huidige "
+#~ "configuratie zal behouden blijven.<br />Er is minimaal %d Mb RAM nodig om de "
+#~ "firmware update uit te voeren.<br />Het is aanbevolen eerst een <a "
+#~ "href='%s'>Backup</a> van de huidige configuratie te maken, alvorens de "
+#~ "firmware update uit te voeren"
 
 #~ msgid ""
-#~ "This allows you to lower the power consumption of the drive, at the expense "
-#~ "of performance."
+#~ "Click &quot;Enable firmware upload&quot; below, then choose the embedded "
+#~ "image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
+#~ "the upgrade process."
 #~ msgstr ""
-#~ "Selecteer het energie niveau voor de schijf, diverse niveau's kunnen energie "
-#~ "besparen maar brengt dan wel de systeemprestaties omlaag."
+#~ "Druk op de knop &quot;Inschakelen Firmware Update&quot; en selecteer nu het "
+#~ "image bestand.<br />Druk op &quot;Update Firmware&quot; om het updateproces "
+#~ "te starten."
 
-#~ msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
-#~ msgstr "Selecteer de overdracht mode voor ATA/IDE schijven."
+#~ msgid "Edit File"
+#~ msgstr "Bestand Bewerken"
 
-#~ msgid "Virtual device"
-#~ msgstr "Virtuele schijf"
-
-#~ msgid "Virtual interface"
-#~ msgstr "Virtueel netwerk"
-
-#~ msgid "ZFS dataset information and status"
-#~ msgstr "ZFS dataset informatie en status"
-
-#~ msgid "ZFS dataset properties"
-#~ msgstr "ZFS dataset eigenschappen"
-
-#~ msgid "ZFS snapshot information and status"
-#~ msgstr "ZFS snapshot informatie en status"
-
-#~ msgid "ZFS snapshot properties"
-#~ msgstr "ZFS snapshot eigenschappen"
-
-#~ msgid "ZFS volume information and status"
-#~ msgstr "ZFS volume informatie en status"
-
-#~ msgid "ZFS volume properties"
-#~ msgstr "ZFS volume eigenschappen"
-
-#~ msgid "minutes"
-#~ msgstr "minuten"
-
-#~ msgid "List of detected disks"
-#~ msgstr "Lijst van gedetecteerde schijven"
+#~ msgid "Save File"
+#~ msgstr "Bestand Opslaan"
 
 #, php-format
-#~ msgid "User defined groups"
-#~ msgstr "Door de gebruiker gedefinieerde groepen"
+#~ msgid ""
+#~ "DO NOT abort the firmware upgrade process once it has started.<br />Try to "
+#~ "flash other files than a valid embedded (img.xz) firmware only.<br />It is "
+#~ "recommended that you <a href='%s'>Backup</a> the server configuration before "
+#~ "doing a upgrade."
+#~ msgstr ""
+#~ "Breek de firmware update procedure niet af nadat deze is gestart. <br "
+#~ "/>Probeer geen andere bestanden te flashen dan alleen geldige embedded "
+#~ "(img.xz) firmware bestanden.<br />Het is aanbevolen eerst een <a "
+#~ "href='%s'>Backup</a> van de huidige configuratie te maken, alvorens de "
+#~ "firmware update uit te voeren."
 
-#, php-format
-#~ msgid "Predefined system groups"
-#~ msgstr "Vooraf gedefinieerde systeemgroepen"
+#~ msgid "Boot arguments"
+#~ msgstr "Opstart argumenten"
 
-#~ msgid "Import software raid disks"
-#~ msgstr "Importeer Software RAID schijven"
+#~ msgid "Boot loader"
+#~ msgstr "Opstartlader"
 
-#~ msgid "Clear config and Import software raid disks"
-#~ msgstr "Config leegmaken en importeer Software RAID schijven"
+#~ msgid "VNC password"
+#~ msgstr "VNC wachtwoord"
 
-#~ msgid "HAST status of the configured resources"
-#~ msgstr "HAST status van de geconfigureerde bronnen"
-
-#~ msgid "Node B settings"
-#~ msgstr "Node B instellingen"
-
-#~ msgid "Node A settings"
-#~ msgstr "Node A instellingen"
-
-#~ msgid "HAST resource"
-#~ msgstr "HAST bron"
-
-#~ msgid "Show ups information"
-#~ msgstr "UPS informatie weergeven"
-
-#~ msgid "System load"
-#~ msgstr "Systeem belasting"
-
-#~ msgid "Rotation rate"
-#~ msgstr "Rotatie snelheid"
-
-#~ msgid "Transfer rate"
-#~ msgstr "Overdracht snelheid"
-
-#~ msgid "RAID 5 information and status"
-#~ msgstr "RAID 5 status en informatie"
-
-#~ msgid "RAID 1 information and status"
-#~ msgstr "RAID 1 status en informatie"
-
-#~ msgid "RAID 0/1/5 information and status"
-#~ msgstr "RAID 0/1/5 status en informatie"
-
-#~ msgid "RAID 0 information and status"
-#~ msgstr "RAID 0 status en informatie"
-
-#~ msgid "JBOD information and status"
-#~ msgstr "JBOD status en informatie"
-
-#~ msgid "Device model"
-#~ msgstr "Modelnaam"
-
-#~ msgid "Controller model"
-#~ msgstr "Controller model"
-
-#~ msgid "Email Notifications"
-#~ msgstr "E-mail Notificaties"
-
-#~ msgid "E-mail Rapportage"
-#~ msgstr "E-mail Rapportage"
-
-#~ msgid "UPS Informatie & Status"
-#~ msgstr "UPS Informatie & Status"
+#~ msgid "VNC display"
+#~ msgstr "VNC scherm"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-09 16:19+0000\n"
+"POT-Creation-Date: 2015-12-10 23:13+0000\n"
 "PO-Revision-Date: 2015-11-06 06:41+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-09 15:41+0000\n"
+"X-Launchpad-Export-Date: 2015-12-10 15:13+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -524,6 +524,12 @@ msgstr "Lägg till användare"
 msgid "Add volume"
 msgstr "Lägg till volym"
 
+msgid "Additional Network"
+msgstr ""
+
+msgid "Additional Storage"
+msgstr ""
+
 msgid "Additional group"
 msgstr "Ytterligare grupper"
 
@@ -984,6 +990,20 @@ msgstr ""
 msgid "Blocksize"
 msgstr "Blockstorlek"
 
+msgid "Boot Arguments"
+msgstr ""
+
+msgid "Boot Loader"
+msgstr ""
+
+#, php-format
+msgid "Boot argument (e.g. %s)."
+msgstr ""
+
+#, php-format
+msgid "Boot loader (e.g. %s)."
+msgstr ""
+
 #, php-format
 msgid ""
 "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
@@ -991,6 +1011,9 @@ msgid ""
 msgstr ""
 "Bootpartitionen är för liten. Du måste göra en fullständig installation från "
 "LiveCD eller LiveUSB alternativt ändra storlek på bootpartionen  på %s.\n"
+
+msgid "Bootloader"
+msgstr ""
 
 msgid "Bridge"
 msgstr "Brygga"
@@ -1036,6 +1059,9 @@ msgstr "CCMP TKIP"
 
 msgid "CD/DVD"
 msgstr "CD/DVD"
+
+msgid "CD/DVD drive"
+msgstr ""
 
 msgid "CHANGED"
 msgstr "ÄNDRAD"
@@ -1218,15 +1244,6 @@ msgstr ""
 
 msgid "Clear config and Import disks"
 msgstr "Rensa inställningar och importera diskar"
-
-msgid ""
-"Click &quot;Enable firmware upload&quot; below, then choose the embedded "
-"image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
-"the upgrade process."
-msgstr ""
-"Klicka på &quot;Aktivera uppladdning av systemprogramvara&quot; nedan, välj "
-"sedan avbildningsfilen,<br />Klicka på &quot;Uppdatera systemprogram&quot; "
-"för att starta uppgraderingen."
 
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
@@ -1579,6 +1596,12 @@ msgstr "Räknar max raderingar på något block."
 msgid "Create 4KB wrapper (nop device)."
 msgstr ""
 
+msgid "Create HVM Guest"
+msgstr ""
+
+msgid "Create PV Guest"
+msgstr ""
+
 msgid "Create ZFS on GPT partition"
 msgstr "Skapa ZFS på en GPT-partition"
 
@@ -1706,17 +1729,11 @@ msgstr "DNS-server är tom."
 
 #, php-format
 msgid ""
-"DO NOT abort the firmware upgrade process once it has started. Once it is "
-"completed, the server will automatically reboot, the current configuration "
-"will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
-"the upgrade.<br />It is strongly recommended that you <a "
-"href='%s'>Backup</a> the server configuration before doing a upgrade."
+"DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
+"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"/>It is recommended that you <a href='%s'>Backup</a> the server "
+"configuration before doing a upgrade."
 msgstr ""
-"Avbryt inte uppgraderingen av systemmjukvaran när den startats. När den är "
-"klar kommer servern att starta om, nuvarande inställningar bibehålls.<br "
-"/>Du behöver minst %d MiB ledigt RAM-minne för att genomföra "
-"uppgraderingen.<br />Det är starkt rekommenderat att du <a "
-"href='%s'>Backup</a> serverns inställningar innan du uppgraderar."
 
 msgid "DVD"
 msgstr "DVD"
@@ -1821,6 +1838,9 @@ msgstr "Radera Rsync jobb"
 
 msgid "Delete URL"
 msgstr "Radera URL"
+
+msgid "Delete VM"
+msgstr ""
 
 msgid "Delete algorithm"
 msgstr "Radera algoritm"
@@ -2069,14 +2089,14 @@ msgstr "Katalog att bevaka efter .torrentfiler"
 msgid "Disable File Manager"
 msgstr "Avaktivera Filhanterare"
 
+msgid "Disable Firmware Update"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Inaktivera TCP-wrapper (mod_wrap module)."
 
 msgid "Disable console menu"
 msgstr "Inaktivera konsollmeny"
-
-msgid "Disable firmware upload"
-msgstr "Inaktivera uppladdning av systemprogramvara"
 
 msgid "Disable firmware version check"
 msgstr "Inaktivera versionskontroll av systemprogramvara"
@@ -2152,6 +2172,9 @@ msgstr "Vill du verkligen ta bort detta Rsync jobb?"
 
 msgid "Do you really want to delete this URL?"
 msgstr "Vill du verkligen radera denna URL?"
+
+msgid "Do you really want to delete this VM?"
+msgstr ""
 
 msgid "Do you really want to delete this auth group?"
 msgstr "Vill du verkligen radera denna autentiseringsgrupp?"
@@ -2277,6 +2300,9 @@ msgstr "Dokumentrot"
 msgid "Document root of the webserver. Home of the web page files."
 msgstr "Dokumentrot för webbservern. Hem till filerna för webbsidorna."
 
+msgid "DomID"
+msgstr ""
+
 msgid "Domain"
 msgstr "Domän"
 
@@ -2388,9 +2414,6 @@ msgstr "FEL:"
 msgid "Edit"
 msgstr "Redigera"
 
-msgid "Edit File"
-msgstr ""
-
 msgid "Edit Host"
 msgstr "Redigera värd"
 
@@ -2408,6 +2431,9 @@ msgstr "Redigera Rsync jobb"
 
 msgid "Edit URL"
 msgstr "Redigera URL"
+
+msgid "Edit VM"
+msgstr ""
 
 msgid "Edit auth group"
 msgstr "Editera auth gruppen"
@@ -2512,6 +2538,9 @@ msgstr "Aktivera Asynkron I/O (AIO)"
 msgid "Enable FXP protocol."
 msgstr "Aktivera FXP-protokoll."
 
+msgid "Enable Firmware Update"
+msgstr ""
+
 msgid "Enable NFSv4 server."
 msgstr "Aktivera NFSv4 server."
 
@@ -2577,9 +2606,6 @@ msgstr "Aktivera utöka attributsupport"
 msgid "Enable extended attributes for this file system."
 msgstr "Aktivera utökade attribut för detta filsystem."
 
-msgid "Enable firmware upload"
-msgstr "Aktivera uppkaddning av systemprogramvara"
-
 msgid ""
 "Enable foreground/background file system consistency check during boot "
 "process."
@@ -2610,6 +2636,9 @@ msgstr "Aktivera översättning av DOS-attribut"
 
 msgid "Enable module listing."
 msgstr "Aktivera modullistning"
+
+msgid "Enable nested virtualization"
+msgstr ""
 
 msgid "Enable peer exchange (PEX)."
 msgstr "Aktivera peer exchange (PEX)."
@@ -2957,6 +2986,10 @@ msgid "File not found"
 msgstr "Filen hittades inte"
 
 #, php-format
+msgid "File path (e.g. %s) or ZFS volume (e.g. %s) used as Hard disk image."
+msgstr ""
+
+#, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
 msgstr "Sökvägen (t ex. /mnt/sharename/extent/%s) används som område."
 
@@ -2999,8 +3032,8 @@ msgstr ""
 msgid "Firmware"
 msgstr "Systemprogramvara"
 
-msgid "Firmware image file"
-msgstr "Avbildsfil för systemprogramvara"
+msgid "Firmware upload failed (out of memory?)"
+msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "Uppladdning av systemprogramvara stöds inte på den här plattformen."
@@ -3186,6 +3219,12 @@ msgstr "HAST volym"
 msgid "HAST volume can be use with GPT/UFS only."
 msgstr "HAST volym kan endast användas med GPT/UFS."
 
+msgid "HDD Format"
+msgstr ""
+
+msgid "HDD Management"
+msgstr ""
+
 msgid ""
 "HDD producers implement a Fly Height Monitor that attempts to provide "
 "additional protections for write operations by detecting when a recording "
@@ -3207,6 +3246,12 @@ msgstr ""
 
 msgid "HTTP Proxy"
 msgstr "HTTP-proxy"
+
+msgid "HVM Guest"
+msgstr ""
+
+msgid "Hard Disk"
+msgstr ""
 
 msgid "Hardware"
 msgstr "Hårdvara"
@@ -3384,6 +3429,10 @@ msgstr "IPv6-adresser"
 msgid "IRC Live Support"
 msgstr "IRC Live-support"
 
+#, php-format
+msgid "ISO file path (e.g. %s) used as CD/DVD drive."
+msgstr ""
+
 msgid "ISO file to be mounted."
 msgstr "ISO fil som ska monteras."
 
@@ -3481,9 +3530,6 @@ msgid ""
 msgstr ""
 "Om du vill ändra lösenordet för webbgränssnittet skriv in det här två gånger."
 
-msgid "Image upload failed (out of memory?)"
-msgstr "Uppsändning av avbild misslyckades (slut på minne?)"
-
 msgid "Import"
 msgstr "Importera"
 
@@ -3565,6 +3611,10 @@ msgstr ""
 
 msgid "Initial Digest"
 msgstr "Initialt datasammandrag"
+
+#, php-format
+msgid "Initial ramdisk (e.g. %s)."
+msgstr ""
 
 msgid "Initialize"
 msgstr "Initiera"
@@ -3766,6 +3816,13 @@ msgstr ""
 msgid "Japanese"
 msgstr "Japanska"
 
+msgid "Kernel"
+msgstr ""
+
+#, php-format
+msgid "Kernel file (e.g. %s)."
+msgstr ""
+
 msgid "Key"
 msgstr "Nyckel"
 
@@ -3952,9 +4009,6 @@ msgstr "Läs in"
 msgid "Load averages"
 msgstr "Genomsnittlig belastning"
 
-msgid "Load file"
-msgstr "Ladda fil"
-
 msgid "Load on UPS"
 msgstr "UPS-last"
 
@@ -4083,6 +4137,9 @@ msgid ""
 msgstr ""
 "Lägsta värdet är högsta prioritet. För mastern ska du använda 0 eller 1, vid "
 "fel ändras detta värde till 240."
+
+msgid "MAC Address"
+msgstr ""
 
 msgid "MAC address"
 msgstr "MAC-adress"
@@ -4262,8 +4319,14 @@ msgstr "Mediebibliotek"
 msgid "Medium Acoustic Output"
 msgstr ""
 
+msgid "Mem"
+msgstr ""
+
 msgid "Member Interface"
 msgstr "Medlemsinterface"
+
+msgid "Memory (MiB)"
+msgstr ""
 
 msgid "Memory Usage"
 msgstr ""
@@ -4457,6 +4520,9 @@ msgstr ""
 msgid "Name of the variable."
 msgstr "Namn på variabeln."
 
+msgid "Nested HVM"
+msgstr ""
+
 msgid "NetBIOS domain"
 msgstr "NetBios domän"
 
@@ -4468,6 +4534,9 @@ msgstr "Nätverksgraf"
 
 msgid "Network"
 msgstr "Nätverk"
+
+msgid "Network Adapter"
+msgstr ""
 
 msgid "Network File System"
 msgstr "Network File System"
@@ -4555,6 +4624,12 @@ msgid ""
 msgstr ""
 "Ingen konfigurerad Portalgrupp (Portal Group). Lägg till ny <a "
 "href='%s'>Portal Group</a> först."
+
+#, php-format
+msgid ""
+"No configured bridge interfaces. Please add new <a href='%s'>bridge "
+"interface</a> first."
+msgstr ""
 
 #, php-format
 msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
@@ -4864,6 +4939,9 @@ msgstr "PPTP klienter"
 #, c-format
 msgid "PSK"
 msgstr "PSK"
+
+msgid "PV Guest"
+msgstr ""
 
 msgid "Package Name"
 msgstr "Paketnamn"
@@ -5284,6 +5362,9 @@ msgstr "RSYNC logg"
 msgid "Raid name"
 msgstr "RAID-namn"
 
+msgid "Ramdisk"
+msgstr ""
+
 msgid "Read"
 msgstr "Läs"
 
@@ -5622,14 +5703,8 @@ msgstr "Spara"
 msgid "Save & Restart"
 msgstr ""
 
-msgid "Save File"
-msgstr ""
-
 msgid "Save and Restart"
 msgstr "Spara och starta om"
-
-msgid "Save file"
-msgstr "Spara fil"
 
 msgid "Save login information in configuration file."
 msgstr "Spara inloggningsinformation i konfigurationsfilen"
@@ -5703,6 +5778,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Välj en disk som har S.M.A.R.T.-övervakning aktiverat."
 
+msgid "Select firmware:"
+msgstr ""
+
 msgid "Select item to remove from the list"
 msgstr "Välj poster att ta bort från listan"
 
@@ -5756,6 +5834,9 @@ msgid "Send Command!"
 msgstr "Skicka kommando!"
 
 msgid "Send Now"
+msgstr ""
+
+msgid "Send Test Email"
 msgstr ""
 
 msgid "Send a TEST warning email on startup."
@@ -6297,6 +6378,9 @@ msgstr "Vidarebefodran av TCP"
 msgid "TCP port"
 msgstr "TCP-port"
 
+msgid "TCP port is 5900+N, where N is VNC display number."
+msgstr ""
+
 msgid "TCP port to bind the server to."
 msgstr "TCP-port att knyta servern till."
 
@@ -6482,6 +6566,10 @@ msgstr "Administratören har blivit meddelad om att aktivera dina ändringar."
 #, php-format
 msgid "The associated MIB files can be found at %s."
 msgstr "De assosierade MIB filerna finns på %s"
+
+#, php-format
+msgid "The attribute '%s' already exists."
+msgstr ""
 
 #, c-format
 msgid ""
@@ -6849,6 +6937,12 @@ msgstr ""
 msgid "The extent name already exists."
 msgstr "Utökelsenamnet finns redan."
 
+msgid "The file you try to flash is not for this platform"
+msgstr ""
+
+msgid "The firmware file is corrupt"
+msgstr ""
+
 #, php-format
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
@@ -6875,9 +6969,6 @@ msgid ""
 "."
 msgstr ""
 "Värdnamnet får endast innehåller tecknen a-z, A-Z och 0-9, - , _ och ."
-
-msgid "The image file is corrupt"
-msgstr "Avbildsfilen är skadad"
 
 msgid "The initial digest mode negotiated with the initiator."
 msgstr "Det initiala sammansmältningsläget är förhandlat med Initiatorn."
@@ -7194,9 +7285,6 @@ msgstr ""
 msgid "The uploaded file was only partially uploaded."
 msgstr "Den uppladdade filen blev inte fullständigt överförd."
 
-msgid "The uploaded image file is not for this platform"
-msgstr "Den uppskickade avbildsfilen är inte för den här plattformen"
-
 msgid "The user's login shell."
 msgstr "Användarens inloggningsskal"
 
@@ -7455,17 +7543,12 @@ msgid "This is for information only (not using during iSCSI negotiation)."
 msgstr "Detta är enbart för information (används ej under iSCSI-förhandling)"
 
 msgid ""
-"This means that the image you uploaded is not an official/supported image "
-"and may lead to unexpected behavior or security compromises. Only install "
-"images that come from sources that you trust, and make sure that the image "
-"has not been tampered with.<br /><br />Do you want to install this image "
-"anyway (on your own risk)?"
+"This means that the firmware you flashed is not an official/supported "
+"firmware and may lead to unexpected behavior or security compromises. Only "
+"install firmwares that come from sources that you trust, and make sure that "
+"the firmware has not been tampered with.<br /><br />Do you want to install "
+"this firmware anyway (on your own risk)?"
 msgstr ""
-"Detta innebär att den filavbildning du laddat upp inte är en "
-"officiell/stöttad filavbildning och kan leda till oväntat beteende eller "
-"bristande säkerhet. Installera endast filavbildningar som kommer från källor "
-"som du litar på, och se till att filavbildningarna inte har manipulerats.<br "
-"/><br />Vill du installera den här filavbildningen ändå (på egen risk)?"
 
 msgid "This name already exists in the disk list."
 msgstr "Namnet finns redan i disklistan."
@@ -8142,8 +8225,8 @@ msgstr "Uppdateringsperiod"
 msgid "Updating in 5 seconds."
 msgstr "Uppdaterar inom 5 sekunder."
 
-msgid "Upgrade firmware"
-msgstr "Uppgradera fast programvara"
+msgid "Upgrade Firmware"
+msgstr ""
 
 msgid "Upload"
 msgstr "Ladda upp"
@@ -8288,6 +8371,9 @@ msgstr ""
 msgid "Using %s bytes fragment size."
 msgstr "Använder %s bytes fragmentstorlek."
 
+msgid "VCPUs"
+msgstr ""
+
 msgid "VHID"
 msgstr "VHID"
 
@@ -8302,6 +8388,15 @@ msgstr "VLAN-tagg"
 
 msgid "VM"
 msgstr "VM"
+
+msgid "VM Type"
+msgstr ""
+
+msgid "VNC Display"
+msgstr ""
+
+msgid "VNC Password"
+msgstr ""
 
 msgid "Value"
 msgstr "Värde"
@@ -8533,6 +8628,12 @@ msgstr "Felaktig partition eller partitionsnummer"
 #, php-format
 msgid "Wrong permission on %s."
 msgstr "Fel rättigheter på %s."
+
+msgid "Xen"
+msgstr ""
+
+msgid "Xen Virtual Machine"
+msgstr ""
 
 msgid "Yes"
 msgstr "Ja"
@@ -8842,265 +8943,65 @@ msgstr "version:"
 msgid "warning"
 msgstr ""
 
-#, php-format
-#~ msgid "%s interface"
-#~ msgstr "%s-gränssnitt"
+#~ msgid "Image upload failed (out of memory?)"
+#~ msgstr "Uppsändning av avbild misslyckades (slut på minne?)"
 
-#~ msgid "Advanced Power Management"
-#~ msgstr "Avancerad strömhantering (APM)"
+#~ msgid "The image file is corrupt"
+#~ msgstr "Avbildsfilen är skadad"
 
-#~ msgid "Always on"
-#~ msgstr "Alltid på"
-
-#~ msgid "Ban list"
-#~ msgstr "Bannlysta adresser"
-
-#~ msgid "Connected FTP users"
-#~ msgstr "Anslutna FTP-användare"
-
-#~ msgid "DNS settings"
-#~ msgstr "DNS inställningar"
-
-#~ msgid "Device model"
-#~ msgstr "Komponent modell"
-
-#~ msgid "Don't Erase MBR"
-#~ msgstr "Radera inte huvudstartsektorn (MBR)"
-
-#~ msgid "Email notification"
-#~ msgstr "E-postnotifiering"
-
-#~ msgid "Email report"
-#~ msgstr "E-posta rapport"
-
-#~ msgid "File path"
-#~ msgstr "Filsökväg"
-
-#~ msgid "Firewall rule"
-#~ msgstr "Brandväggsregel"
-
-#~ msgid "Format disk"
-#~ msgstr "Formatera disk"
-
-#~ msgid "Free disk space"
-#~ msgstr "Ledigt diskutrymme"
-
-#~ msgid "Hard disk standby time"
-#~ msgstr "Tid innan hårddisken går i väntläge"
-
-#~ msgid "I/O statistics"
-#~ msgstr "I/O statistik"
-
-#~ msgid "Level 1 - Minimum power usage with Standby (spindown)"
-#~ msgstr "Nivå 1 - Lägsta strömförbrukning med Standby (spindown)"
-
-#~ msgid "Level 127 - Intermediate power usage with Standby"
-#~ msgstr "Nivå 127 - medium strömförbrukning med Väntläge"
-
-#~ msgid "Level 128 - Minimum power usage without Standby (no spindown)"
-#~ msgstr ""
-#~ "Nivå 128 - minimal strömförbrukning med Väntläge (ingen diskavstängning)"
-
-#~ msgid "Level 192 - Intermediate power usage without Standby"
-#~ msgstr "Nivå 192 - medium strömförbrukning utan Väntläge"
-
-#~ msgid "Level 254 - Maximum performance, maximum power usage"
-#~ msgstr "Nivå 254 - maximala prestanda med maximal strömförbrukning"
-
-#~ msgid "Level 64 - Intermediate power usage with Standby"
-#~ msgstr "Nivå 64 - medium strömförbrukning med Väntläge"
-
-#~ msgid "List of available target name on all configured iSCSI targets"
-#~ msgstr "Lista med tillgängliga målnamn på alla konfigurerade iSCSI-mål."
-
-#~ msgid "List of imported users"
-#~ msgstr "Lista över importerade användare"
-
-#~ msgid "List of mount points"
-#~ msgstr "Lista med monteringspunkter"
-
-#~ msgid "Logical Unit Controller login information"
-#~ msgstr "Logisk enhetskontrollant för inloggningsinformation"
-
-#~ msgid "MS Active Directory informations"
-#~ msgstr "MS Active Directory information"
-
-#~ msgid "Maximum performance, maximum acoustic output"
-#~ msgstr "Maximal prestanda, Maximal akustisk nivå."
-
-#~ msgid "Medium acoustic output"
-#~ msgstr "Medelnivå av det akustiska ljudläget"
-
-#~ msgid "Minimum performance, Minimum acoustic output"
-#~ msgstr "Minimal prestanda, Minimal akustisk nivå"
-
-#~ msgid "Model extra"
-#~ msgstr "Extramodell"
-
-#~ msgid "Model name"
-#~ msgstr "Modellnamn"
-
-#~ msgid "Pool information and status"
-#~ msgstr "Pool information och status"
-
-#~ msgid "Processes information"
-#~ msgstr "Processinformation"
+#~ msgid "The uploaded image file is not for this platform"
+#~ msgstr "Den uppskickade avbildsfilen är inte för den här plattformen"
 
 #~ msgid ""
-#~ "Puts the hard disk into standby mode when the selected amount of time after "
-#~ "the last hard disk access has been elapsed."
+#~ "This means that the image you uploaded is not an official/supported image "
+#~ "and may lead to unexpected behavior or security compromises. Only install "
+#~ "images that come from sources that you trust, and make sure that the image "
+#~ "has not been tampered with.<br /><br />Do you want to install this image "
+#~ "anyway (on your own risk)?"
 #~ msgstr ""
-#~ "Försätter hårddisken i väntläge när förinställd tid har gått efter den "
-#~ "senaste diskåtkomsten."
+#~ "Detta innebär att den filavbildning du laddat upp inte är en "
+#~ "officiell/stöttad filavbildning och kan leda till oväntat beteende eller "
+#~ "bristande säkerhet. Installera endast filavbildningar som kommer från källor "
+#~ "som du litar på, och se till att filavbildningarna inte har manipulerats.<br "
+#~ "/><br />Vill du installera den här filavbildningen ändå (på egen risk)?"
 
-#~ msgid "RSYNC Client informations"
-#~ msgstr "Klientinformation för RSYNC"
+#~ msgid "Upgrade firmware"
+#~ msgstr "Uppgradera fast programvara"
 
-#~ msgid "Remote address"
-#~ msgstr "Fjärradress"
+#, php-format
+#~ msgid ""
+#~ "DO NOT abort the firmware upgrade process once it has started. Once it is "
+#~ "completed, the server will automatically reboot, the current configuration "
+#~ "will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
+#~ "the upgrade.<br />It is strongly recommended that you <a "
+#~ "href='%s'>Backup</a> the server configuration before doing a upgrade."
+#~ msgstr ""
+#~ "Avbryt inte uppgraderingen av systemmjukvaran när den startats. När den är "
+#~ "klar kommer servern att starta om, nuvarande inställningar bibehålls.<br "
+#~ "/>Du behöver minst %d MiB ledigt RAM-minne för att genomföra "
+#~ "uppgraderingen.<br />Det är starkt rekommenderat att du <a "
+#~ "href='%s'>Backup</a> serverns inställningar innan du uppgraderar."
 
-#~ msgid "Rescan disks"
-#~ msgstr "Skanna om diskarna"
+#~ msgid "Load file"
+#~ msgstr "Ladda fil"
 
-#~ msgid "Rsync job"
-#~ msgstr "Rsync jobb"
+#~ msgid "Save file"
+#~ msgstr "Spara fil"
 
-#~ msgid "Scheduled reboot"
-#~ msgstr "Schemalagd omstart"
+#~ msgid "Disable firmware upload"
+#~ msgstr "Inaktivera uppladdning av systemprogramvara"
 
-#~ msgid "Scheduled self-tests"
-#~ msgstr "Schemalagda självtester"
+#~ msgid "Enable firmware upload"
+#~ msgstr "Aktivera uppkaddning av systemprogramvara"
 
-#~ msgid "Scheduled shutdown"
-#~ msgstr "Schemalagd avstängning"
-
-#~ msgid "Self-Monitoring, Analysis and Reporting Technology"
-#~ msgstr "Self-Monitoring, Analysis and Reporting Technology"
-
-#~ msgid "Show process information"
-#~ msgstr "Visa processinformation"
-
-#~ msgid "Standby time"
-#~ msgstr "Tid för väntläge"
-
-#~ msgid "Swap memory"
-#~ msgstr "Växlingsminne"
-
-#~ msgid "Swap status"
-#~ msgstr "Status för växlingsutrymme"
-
-#~ msgid "System firewall"
-#~ msgstr "Systemets brandvägg"
-
-#~ msgid "System information"
-#~ msgstr "Systeminformation"
-
-#~ msgid "Temperature monitoring"
-#~ msgstr "Temperaturövervakning"
+#~ msgid "Firmware image file"
+#~ msgstr "Avbildsfil för systemprogramvara"
 
 #~ msgid ""
-#~ "This allows you to lower the power consumption of the drive, at the expense "
-#~ "of performance."
+#~ "Click &quot;Enable firmware upload&quot; below, then choose the embedded "
+#~ "image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
+#~ "the upgrade process."
 #~ msgstr ""
-#~ "Detta tillåter dig att minska strömförbrukningen på disken, dock med "
-#~ "minskade prestanda."
-
-#~ msgid "This allows you to set the transfer mode for ATA/IDE hard drives."
-#~ msgstr ""
-#~ "Detta låter dig ställa in överföringsläget (transfer mode) för ATA/IDE "
-#~ "hårddiskar."
-
-#~ msgid "Virtual device"
-#~ msgstr "Virtuell enhet"
-
-#~ msgid "Virtual interface"
-#~ msgstr "Virtuellt gränssnitt"
-
-#~ msgid "ZFS dataset information and status"
-#~ msgstr "ZFS dataset information och status"
-
-#~ msgid "ZFS dataset properties"
-#~ msgstr "ZFS dataset egenskaper"
-
-#~ msgid "minutes"
-#~ msgstr "minuter"
-
-#~ msgid "ZFS volume properties"
-#~ msgstr "Egenskaper för ZFS volym"
-
-#~ msgid "LCDproc (client)"
-#~ msgstr "LCDproc (klient)"
-
-#~ msgid "List of detected disks"
-#~ msgstr "Lista med detekterade diskar"
-
-#~ msgid "ZFS snapshot information and status"
-#~ msgstr "Information och status för ZFS avbild"
-
-#~ msgid "ZFS snapshot properties"
-#~ msgstr "Egenskaper för ZFS avbild"
-
-#~ msgid "ZFS volume information and status"
-#~ msgstr "Information och status för ZFS volym"
-
-#~ msgid "Online version check"
-#~ msgstr "Online versionskontroll"
-
-#, php-format
-#~ msgid "User defined groups"
-#~ msgstr "Användardefinierade grupper"
-
-#, php-format
-#~ msgid "Predefined system groups"
-#~ msgstr "System för fördefinierade grupper"
-
-#~ msgid "Clear config and Import software raid disks"
-#~ msgstr "Rensa inställningar och importera mjukvaruraiddiskar"
-
-#~ msgid "Import software raid disks"
-#~ msgstr "Importera mjukvaruraiddiskar"
-
-#~ msgid "Node B settings"
-#~ msgstr "Nod B inställningar"
-
-#~ msgid "Node A settings"
-#~ msgstr "Nod A inställningar"
-
-#~ msgid "Show ups information"
-#~ msgstr "Visa UPS-information"
-
-#~ msgid "System load"
-#~ msgstr "Systemlast"
-
-#~ msgid "HAST status of the configured resources"
-#~ msgstr "HAST status för konfigurerade resurser"
-
-#~ msgid "HAST resource"
-#~ msgstr "HAST resurs"
-
-#~ msgid "Transfer rate"
-#~ msgstr "Överföringshastighet"
-
-#~ msgid "Controller model"
-#~ msgstr "Diskkontrollermodell"
-
-#~ msgid "Rotation rate"
-#~ msgstr "Rotationsintervall"
-
-#~ msgid "Backup configuration"
-#~ msgstr "Konfiguration för säkerhetskopior"
-
-#~ msgid "JBOD information and status"
-#~ msgstr "JBOD information och status"
-
-#~ msgid "RAID 0 information and status"
-#~ msgstr "RAID 0 information och status"
-
-#~ msgid "RAID 5 information and status"
-#~ msgstr "RAID 5 information och status"
-
-#~ msgid "RAID 1 information and status"
-#~ msgstr "RAID 1 information och status"
-
-#~ msgid "RAID 0/1/5 information and status"
-#~ msgstr "RAID 0/1/5 information och status"
+#~ "Klicka på &quot;Aktivera uppladdning av systemprogramvara&quot; nedan, välj "
+#~ "sedan avbildningsfilen,<br />Klicka på &quot;Uppdatera systemprogram&quot; "
+#~ "för att starta uppgraderingen."
