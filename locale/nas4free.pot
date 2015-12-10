@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2015-12-10 11:16+0000\n"
+"POT-Creation-Date: 2015-12-10 20:55+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -400,6 +400,12 @@ msgstr ""
 msgid "Add volume"
 msgstr ""
 
+msgid "Additional Network"
+msgstr ""
+
+msgid "Additional Storage"
+msgstr ""
+
 msgid "Additional group"
 msgstr ""
 
@@ -790,7 +796,24 @@ msgid "Blocksize"
 msgstr ""
 
 #, php-format
+msgid "Boot argument (e.g. %s)."
+msgstr ""
+
+msgid "Boot arguments"
+msgstr ""
+
+msgid "Boot loader"
+msgstr ""
+
+#, php-format
+msgid "Boot loader (e.g. %s)."
+msgstr ""
+
+#, php-format
 msgid "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or resize boot partition of %s.\n"
+msgstr ""
+
+msgid "Bootloader"
 msgstr ""
 
 msgid "Bridge"
@@ -834,6 +857,9 @@ msgid "CCMP TKIP"
 msgstr ""
 
 msgid "CD/DVD"
+msgstr ""
+
+msgid "CD/DVD drive"
 msgstr ""
 
 msgid "CHANGED"
@@ -1217,6 +1243,12 @@ msgstr ""
 msgid "Create 4KB wrapper (nop device)."
 msgstr ""
 
+msgid "Create HVM Guest"
+msgstr ""
+
+msgid "Create PV Guest"
+msgstr ""
+
 msgid "Create ZFS on GPT partition"
 msgstr ""
 
@@ -1442,6 +1474,9 @@ msgid "Delete Rsync job"
 msgstr ""
 
 msgid "Delete URL"
+msgstr ""
+
+msgid "Delete VM"
 msgstr ""
 
 msgid "Delete algorithm"
@@ -1671,16 +1706,13 @@ msgstr ""
 msgid "Disable File Manager"
 msgstr ""
 
-msgid "Disable Firmware Upload"
+msgid "Disable Firmware Update"
 msgstr ""
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
 msgid "Disable console menu"
-msgstr ""
-
-msgid "Disable firmware upload"
 msgstr ""
 
 msgid "Disable firmware version check"
@@ -1748,6 +1780,9 @@ msgid "Do you really want to delete this Rsync job?"
 msgstr ""
 
 msgid "Do you really want to delete this URL?"
+msgstr ""
+
+msgid "Do you really want to delete this VM?"
 msgstr ""
 
 msgid "Do you really want to delete this auth group?"
@@ -1853,6 +1888,9 @@ msgid "Document root"
 msgstr ""
 
 msgid "Document root of the webserver. Home of the web page files."
+msgstr ""
+
+msgid "DomID"
 msgstr ""
 
 msgid "Domain"
@@ -1984,6 +2022,9 @@ msgstr ""
 msgid "Edit URL"
 msgstr ""
 
+msgid "Edit VM"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr ""
 
@@ -2086,7 +2127,7 @@ msgstr ""
 msgid "Enable FXP protocol."
 msgstr ""
 
-msgid "Enable Firmware Upload"
+msgid "Enable Firmware Update"
 msgstr ""
 
 msgid "Enable NFSv4 server."
@@ -2149,9 +2190,6 @@ msgstr ""
 msgid "Enable extended attributes for this file system."
 msgstr ""
 
-msgid "Enable firmware upload"
-msgstr ""
-
 msgid "Enable foreground/background file system consistency check during boot process."
 msgstr ""
 
@@ -2177,6 +2215,9 @@ msgid "Enable mapping DOS attributes"
 msgstr ""
 
 msgid "Enable module listing."
+msgstr ""
+
+msgid "Enable nested virtualization"
 msgstr ""
 
 msgid "Enable peer exchange (PEX)."
@@ -2472,6 +2513,10 @@ msgid "File not found"
 msgstr ""
 
 #, php-format
+msgid "File path (e.g. %s) or ZFS volume (e.g. %s) used as Hard disk image."
+msgstr ""
+
+#, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
 msgstr ""
 
@@ -2512,6 +2557,9 @@ msgid "Firewall Rule Settings"
 msgstr ""
 
 msgid "Firmware"
+msgstr ""
+
+msgid "Firmware upload failed (out of memory?)"
 msgstr ""
 
 msgid "Firmware uploading is not supported on this platform."
@@ -2706,6 +2754,12 @@ msgstr ""
 msgid "HTTP Proxy"
 msgstr ""
 
+msgid "HVM Guest"
+msgstr ""
+
+msgid "Hard Disk"
+msgstr ""
+
 msgid "Hardware"
 msgstr ""
 
@@ -2859,6 +2913,10 @@ msgstr ""
 msgid "IRC Live Support"
 msgstr ""
 
+#, php-format
+msgid "ISO file path (e.g. %s) used as CD/DVD drive."
+msgstr ""
+
 msgid "ISO file to be mounted."
 msgstr ""
 
@@ -2981,6 +3039,10 @@ msgid "Inhibit some of the syslog diagnostics for bad lines in /etc/exports."
 msgstr ""
 
 msgid "Initial Digest"
+msgstr ""
+
+#, php-format
+msgid "Initial ramdisk (e.g. %s)."
 msgstr ""
 
 msgid "Initialize"
@@ -3144,6 +3206,13 @@ msgid "January February March April May June July August September October Novem
 msgstr ""
 
 msgid "Japanese"
+msgstr ""
+
+msgid "Kernel"
+msgstr ""
+
+#, php-format
+msgid "Kernel file (e.g. %s)."
 msgstr ""
 
 msgid "Key"
@@ -3421,6 +3490,9 @@ msgstr ""
 msgid "Lowest value is higher priority. For master node, use 0 or 1. If preempt is enabled, it is adjusted to 240 on failure."
 msgstr ""
 
+msgid "MAC Address"
+msgstr ""
+
 msgid "MAC address"
 msgstr ""
 
@@ -3587,7 +3659,13 @@ msgstr ""
 msgid "Medium Acoustic Output"
 msgstr ""
 
+msgid "Mem"
+msgstr ""
+
 msgid "Member Interface"
+msgstr ""
+
+msgid "Memory (MiB)"
 msgstr ""
 
 msgid "Memory Usage"
@@ -3773,6 +3851,9 @@ msgstr ""
 msgid "Name of the variable."
 msgstr ""
 
+msgid "Nested HVM"
+msgstr ""
+
 msgid "NetBIOS domain"
 msgstr ""
 
@@ -3783,6 +3864,9 @@ msgid "Netgraph"
 msgstr ""
 
 msgid "Network"
+msgstr ""
+
+msgid "Network Adapter"
 msgstr ""
 
 msgid "Network File System"
@@ -3845,6 +3929,10 @@ msgstr ""
 
 #, php-format
 msgid "No configured Portal Group. Please add new <a href='%s'>Portal Group</a> first."
+msgstr ""
+
+#, php-format
+msgid "No configured bridge interfaces. Please add new <a href='%s'>bridge interface</a> first."
 msgstr ""
 
 #, php-format
@@ -4108,6 +4196,9 @@ msgstr ""
 
 #, c-format
 msgid "PSK"
+msgstr ""
+
+msgid "PV Guest"
 msgstr ""
 
 msgid "Package Name"
@@ -4503,6 +4594,9 @@ msgid "RSYNC log"
 msgstr ""
 
 msgid "Raid name"
+msgstr ""
+
+msgid "Ramdisk"
 msgstr ""
 
 msgid "Read"
@@ -5392,6 +5486,9 @@ msgstr ""
 msgid "TCP port"
 msgstr ""
 
+msgid "TCP port is 5900+N, where N is VNC display number."
+msgstr ""
+
 msgid "TCP port to bind the server to."
 msgstr ""
 
@@ -5554,6 +5651,10 @@ msgstr ""
 
 #, php-format
 msgid "The associated MIB files can be found at %s."
+msgstr ""
+
+#, php-format
+msgid "The attribute '%s' already exists."
 msgstr ""
 
 #, c-format
@@ -5797,6 +5898,9 @@ msgstr ""
 msgid "The extent name already exists."
 msgstr ""
 
+msgid "The file you try to flash is not for this platform"
+msgstr ""
+
 #, php-format
 msgid "The firmware is now being installed. The server will reboot automatically."
 msgstr ""
@@ -6037,9 +6141,6 @@ msgstr ""
 msgid "The uploaded file was only partially uploaded."
 msgstr ""
 
-msgid "The uploaded image file is not for this platform"
-msgstr ""
-
 msgid "The user's login shell."
 msgstr ""
 
@@ -6218,7 +6319,7 @@ msgstr ""
 msgid "This is for information only (not using during iSCSI negotiation)."
 msgstr ""
 
-msgid "This means that the image you uploaded is not an official/supported image and may lead to unexpected behavior or security compromises. Only install images that come from sources that you trust, and make sure that the image has not been tampered with.<br /><br />Do you want to install this image anyway (on your own risk)?"
+msgid "This means that the firmware you uploaded is not an official/supported image and may lead to unexpected behavior or security compromises. Only install images that come from sources that you trust, and make sure that the image has not been tampered with.<br /><br />Do you want to install this image anyway (on your own risk)?"
 msgstr ""
 
 msgid "This name already exists in the disk list."
@@ -6691,9 +6792,6 @@ msgstr ""
 msgid "Upgrade Firmware"
 msgstr ""
 
-msgid "Upgrade firmware"
-msgstr ""
-
 msgid "Upload"
 msgstr ""
 
@@ -6803,6 +6901,9 @@ msgstr ""
 msgid "Using %s bytes fragment size."
 msgstr ""
 
+msgid "VCPUs"
+msgstr ""
+
 msgid "VHID"
 msgstr ""
 
@@ -6816,6 +6917,15 @@ msgid "VLAN tag"
 msgstr ""
 
 msgid "VM"
+msgstr ""
+
+msgid "VM Type"
+msgstr ""
+
+msgid "VNC display"
+msgstr ""
+
+msgid "VNC password"
 msgstr ""
 
 msgid "Value"
@@ -7010,6 +7120,12 @@ msgstr ""
 
 #, php-format
 msgid "Wrong permission on %s."
+msgstr ""
+
+msgid "Xen"
+msgstr ""
+
+msgid "Xen Virtual Machine"
 msgstr ""
 
 msgid "Yes"
