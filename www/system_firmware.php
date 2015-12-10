@@ -373,29 +373,29 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 			<?php else:?>
 			<?php if ($part1ok): ?>
 			<?php if (!file_exists($d_firmwarelock_path)):?>
-			<?=gettext("Click &quot;Enable firmware upload&quot; below, then choose the embedded image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start the upgrade process.");?>
 			<form action="system_firmware.php" method="post" enctype="multipart/form-data">
 				<?php if (!file_exists($d_sysrebootreqd_path)):?>
 					<?php if (!file_exists($d_fwupenabled_path)):?>
 					<div id="submit">
-					<input name="Submit" id="Enable" type="submit" class="formbtn" value="<?=gettext("Enable firmware upload");?>" />
+					<input name="Submit" id="Enable" type="submit" class="formbtn" value="<?=gettext("Enable Firmware Upload");?>" />
 					</div>
 					<?php else:?>
 					<div id="submit">
-					<input name="Submit" id="Disable" type="submit" class="formbtn" value="<?=gettext("Disable firmware upload");?>" />
+					<input name="Submit" id="Disable" type="submit" class="formbtn" value="<?=gettext("Disable Firmware Upload");?>" />
 					</div>
 					<div id="submit">
-					<strong><?=gettext("Firmware image file");?> </strong>&nbsp;<input name="ulfile" type="file" class="formfld" size="40" />
+					<strong><?=gettext("Select firmware:");?> </strong>&nbsp;<input name="ulfile" type="file" class="formfld" size="40" />
 					</div>
 					<div id="submit">
-					<input name="Submit" id="Upgrade" type="submit" class="formbtn" value="<?=gettext("Upgrade firmware");?>" />
+					<input name="Submit" id="Upgrade" type="submit" class="formbtn" value="<?=gettext("Upgrade Firmware");?>" />
 					</div>
 					<?php endif;?>
 				<?php else:?>
 				<strong><?=sprintf(gettext("You must <a href='%s'>reboot</a> the system before you can upgrade the firmware."), "reboot.php");?></strong>
 				<?php endif;?>
+				<br />
 				<div id="remarks">
-					<?php html_remark("warning", gettext("Warning"), sprintf(gettext("DO NOT abort the firmware upgrade process once it has started. Once it is completed, the server will automatically reboot, the current configuration will be maintained.<br />You need a minimum of %d MiB free RAM to perform the upgrade.<br />It is strongly recommended that you <a href='%s'>Backup</a> the server configuration before doing a upgrade."), 512, "system_backup.php"));?>
+					<?php html_remark("warning", gettext("Warning"), sprintf(gettext("DO NOT abort the firmware upgrade process once it has started.<br />Try to flash other files than a valid embedded (img.xz) firmware only.<br />It is recommended that you <a href='%s'>Backup</a> the server configuration before doing a upgrade."), 512, "system_backup.php"));?>
 				</div>
 				<?php include("formend.inc");?>
 			</form>

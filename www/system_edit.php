@@ -43,7 +43,7 @@ $savetopath = "";
 if (isset($_POST['savetopath']))
 	$savetopath = htmlspecialchars($_POST['savetopath']);
 
-if ((isset($_POST['submit']) && $_POST['submit'] === gettext("Load file")) && file_exists($savetopath) && is_file($savetopath)) {
+if ((isset($_POST['submit']) && $_POST['submit'] === gettext("Edit")) && file_exists($savetopath) && is_file($savetopath)) {
 	$content = file_get_contents($savetopath);
 	$edit_area = "";
 	if (stristr($savetopath, ".php") == true)
@@ -58,7 +58,7 @@ if ((isset($_POST['submit']) && $_POST['submit'] === gettext("Load file")) && fi
 		$language = "js";
 	else if (stristr($savetopath, ".css") == true)
 		$language = "css";
-} else if ((isset($_POST['submit']) && $_POST['submit'] === gettext("Save file"))) {
+} else if ((isset($_POST['submit']) && $_POST['submit'] === gettext("Save"))) {
 	conf_mount_rw();
 	$content = preg_replace("/\r/","",$_POST['code']) ;
 	file_put_contents($savetopath, $content);
@@ -106,8 +106,8 @@ else
 							<span class="label"><?=gettext("File Path");?></span>
 							<input size="42" id="savetopath" name="savetopath" value="<?=$savetopath;?>" />
 							<input name="browse" type="button" class="formbtn" id="Browse" onclick='ifield = form.savetopath; filechooser = window.open("filechooser.php?p="+encodeURIComponent(ifield.value), "filechooser", "scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300"); filechooser.ifield = ifield; window.ifield = ifield;' value="..." />
-							<input name="submit" type="submit" class="formbtn" id="Load" value="<?=gettext("Edit File");?>" />
-							<input name="submit" type="submit" class="formbtn" id="Save" value="<?=gettext("Save File");?>" />
+							<input name="submit" type="submit" class="formbtn" id="Edit" value="<?=gettext("Edit");?>" />
+							<input name="submit" type="submit" class="formbtn" id="Save" value="<?=gettext("Save");?>" />
 							<hr noshade="noshade" />
 							<?php if(isset($_POST['highlight']) && $_POST['highlight'] == "no"): ?>
 							<?=gettext("Rows"); ?>: <input size="3" name="rows" value="<? echo $rows; ?>" />
