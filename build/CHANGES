@@ -54,6 +54,7 @@ Changes:
 - Upgrade syncthing to 0.12.7.
 
 Fixes:
+- Fix run now on cron don't use Who field.
 - Fix duplicate syncthing account when fresh install by 2067.
 - Fix broken menu options livecd/liveusb.
 - Fix syncthing causes Illegal instruction on old i386. (don't use SSE2)

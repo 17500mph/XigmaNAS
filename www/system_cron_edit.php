@@ -119,7 +119,11 @@ if ($_POST) {
 		$cronjob['command'] = $_POST['command'];
 
 		if (stristr($_POST['Submit'], gettext("Run now"))) {
-			mwexec2(escapeshellcmd($_POST['command']), $output, $retval);
+			if ($_POST['who'] != "root") {
+				mwexec2(escapeshellcmd("sudo -u {$_POST['who']} {$_POST['command']}"), $output, $retval);
+			} else {
+				mwexec2(escapeshellcmd($_POST['command']), $output, $retval);
+			}
 			if (0 == $retval) {
 				$execmsg = gettext("The cron job has been executed successfully.");
 				write_log("The cron job '{$_POST['command']}' has been executed successfully.");
