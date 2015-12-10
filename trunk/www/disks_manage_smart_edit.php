@@ -151,8 +151,8 @@ function enable_change(enable_change) {
 	<tr>
     <td class="tabnavtbl">
 	<ul id="tabnav">
-		<li class="tabinact"><a href="disks_manage.php"><span><?=gettext("Management");?></span></a></li>
-		<li class="tabinact"><a href="disks_init.php"><span><?=gettext("Format");?></span></a></li>
+		<li class="tabinact"><a href="disks_manage.php"><span><?=gettext("HDD Management");?></span></a></li>
+		<li class="tabinact"><a href="disks_init.php"><span><?=gettext("HDD Format");?></span></a></li>
 		<li class="tabact"><a href="disks_manage_smart.php" title="<?=gettext("Reload page");?>"><span><?=gettext("S.M.A.R.T.");?></span></a></li>
 		<li class="tabinact"><a href="disks_manage_iscsi.php"><span><?=gettext("iSCSI Initiator");?></span></a></li>
 	</ul>
