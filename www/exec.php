@@ -65,7 +65,7 @@ $pglocalheader = <<< EOD
 <style type="text/css">
 <!--
 pre {
-   border: 2px solid #435370;
+   border: 2px solid #555555;
    background: #F0F0F0;
    padding: 1em;
    font-family: courier new, courier;
