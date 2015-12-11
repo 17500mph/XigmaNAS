@@ -240,7 +240,7 @@ if (isset($_POST['txtPHPCommand']) && !isBlank($_POST['txtPHPCommand'])) {
     <tr>
       <td align="right"><?=gettext("Download");?></td>
       <td>
-        <input name="dlPath" type="text" id="dlPath" size="50" value="" />
+        <input name="dlPath" type="text" id="dlPath" size="56" value="" />
         <input name="browse" type="button" class="formbtn" id="Browse" onclick='ifield = form.dlPath; filechooser = window.open("filechooser.php?p="+encodeURIComponent(ifield.value), "filechooser", "scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300"); filechooser.ifield = ifield; window.ifield = ifield;' value="..." />
         <input name="submit" type="submit" class="formbtn" id="download" value="<?=gettext("Download");?>" />
         </td>
@@ -256,7 +256,7 @@ if (isset($_POST['txtPHPCommand']) && !isBlank($_POST['txtPHPCommand'])) {
 		</tr>
 		<tr>
 			<td align="right"><?=gettext("PHP Command");?></td>
-			<td class="type"><textarea id="txtPHPCommand" name="txtPHPCommand" rows="3" cols="50" wrap="off"><?=htmlspecialchars(!empty($_POST['txtPHPCommand']) ? $_POST['txtPHPCommand'] : "");?></textarea></td>
+			<td class="type"><textarea id="txtPHPCommand" name="txtPHPCommand" rows="3" cols="49" wrap="off"><?=htmlspecialchars(!empty($_POST['txtPHPCommand']) ? $_POST['txtPHPCommand'] : "");?></textarea></td>
 		</tr>
 		<tr>
 			<td valign="top">&nbsp;&nbsp;&nbsp;</td>
