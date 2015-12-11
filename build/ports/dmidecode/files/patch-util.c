@@ -1,6 +1,47 @@
 --- util.c.orig	2015-09-03 08:03:19.000000000 +0200
-+++ util.c	2015-10-14 14:37:09.000000000 +0200
-@@ -152,6 +152,7 @@
++++ util.c	2015-12-11 12:11:38.000000000 +0200
+@@ -94,10 +94,11 @@
+  * needs to be freed by the caller.
+  * This provides a similar usage model to mem_chunk()
+  *
+- * Returns pointer to buffer of max_len bytes, or NULL on error
++ * Returns pointer to buffer of max_len bytes, or NULL on error, and
++ * sets max_len to the length actually read.
+  *
+  */
+-void *read_file(size_t max_len, const char *filename)
++void *read_file(size_t *max_len, const char *filename)
+ {
+ 	int fd;
+ 	size_t r2 = 0;
+@@ -115,7 +116,7 @@
+ 		return(NULL);
+ 	}
+ 
+-	if ((p = malloc(max_len)) == NULL)
++	if ((p = malloc(*max_len)) == NULL)
+ 	{
+ 		perror("malloc");
+ 		return NULL;
+@@ -123,7 +124,7 @@
+ 
+ 	do
+ 	{
+-		r = read(fd, p + r2, max_len - r2);
++		r = read(fd, p + r2, *max_len - r2);
+ 		if (r == -1)
+ 		{
+ 			if (errno != EINTR)
+@@ -140,6 +141,8 @@
+ 	while (r != 0);
+ 
+ 	close(fd);
++	*max_len = r2;
++
+ 	return p;
+ }
+ 
+@@ -152,6 +155,7 @@
  	void *p;
  	int fd;
  #ifdef USE_MMAP
@@ -8,7 +49,7 @@
  	off_t mmoffset;
  	void *mmp;
  #endif
-@@ -165,10 +166,28 @@
+@@ -165,10 +169,28 @@
  	if ((p = malloc(len)) == NULL)
  	{
  		perror("malloc");
@@ -38,7 +79,7 @@
  #ifdef _SC_PAGESIZE
  	mmoffset = base % sysconf(_SC_PAGESIZE);
  #else
-@@ -199,19 +218,17 @@
+@@ -199,19 +221,17 @@
  	{
  		fprintf(stderr, "%s: ", devmem);
  		perror("lseek");
