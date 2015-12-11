@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-10 23:13+0000\n"
-"PO-Revision-Date: 2015-12-10 12:33+0000\n"
+"POT-Creation-Date: 2015-12-11 10:18+0000\n"
+"PO-Revision-Date: 2015-12-11 10:02+0000\n"
 "Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-10 15:13+0000\n"
+"X-Launchpad-Export-Date: 2015-12-11 10:41+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -1012,10 +1012,10 @@ msgid "Blocksize"
 msgstr "Размер блока"
 
 msgid "Boot Arguments"
-msgstr ""
+msgstr "Аргументы загрузки"
 
 msgid "Boot Loader"
-msgstr ""
+msgstr "Загрузчик"
 
 #, php-format
 msgid "Boot argument (e.g. %s)."
@@ -1055,9 +1055,6 @@ msgstr "Просмотр Папки"
 
 msgid "Browseable"
 msgstr "Просматриваемый"
-
-msgid "Build date"
-msgstr "Дата сборки"
 
 msgid "Building database in progress"
 msgstr "Построение базы данных в процессе"
@@ -1325,6 +1322,9 @@ msgstr "Сообщество"
 
 msgid "Compilations directories"
 msgstr "Каталоги сборников"
+
+msgid "Compiled"
+msgstr "Скомпилировано"
 
 msgid "Compliant profile to be used."
 msgstr "Используется подходящий профиль."
@@ -1768,10 +1768,14 @@ msgstr "DNS сервер пуст."
 #, php-format
 msgid ""
 "DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
 "/>It is recommended that you <a href='%s'>Backup</a> the server "
 "configuration before doing a upgrade."
 msgstr ""
+"НЕ прерывайте процесс обновления прошивки после старта.<br />НЕ пытайтесь "
+"произвести прошивку сервера файлами отличными от '%s-%s-embedded.img.xz'.<br "
+"/>Рекомендуется <a href='%s'>Сохранить</a> конфигурацию сервера перед "
+"началом прошивки."
 
 msgid "DVD"
 msgstr "DVD"
@@ -3941,9 +3945,6 @@ msgstr "Язык, используемый на лицевой панели"
 
 msgid "Large read/write"
 msgstr "Чтение/запись большими блоками"
-
-msgid "Last config change"
-msgstr "Последнее изменение конфигурации"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -6454,6 +6455,9 @@ msgstr "События системы"
 msgid "System info"
 msgstr "Информация о системе"
 
+msgid "System last config change"
+msgstr "Последняя конфигурация системы изменена"
+
 msgid "System log"
 msgstr "Журнал системы"
 
@@ -7048,7 +7052,7 @@ msgid "The file you try to flash is not for this platform"
 msgstr "Файл, который Вы пытаетесь прошить не для этой платформы"
 
 msgid "The firmware file is corrupt"
-msgstr ""
+msgstr "Файл прошивки поврежден"
 
 #, php-format
 msgid ""
@@ -7641,11 +7645,11 @@ msgstr ""
 msgid "This extent is used."
 msgstr "Этот экстент уже используется."
 
-msgid "This function is unsupported. Use it on your own risk!"
-msgstr "Используйте эту функцию исключительно на свой риск!"
-
 msgid "This group already exists in the group list."
 msgstr "Такая группа уже есть в списке групп."
+
+msgid "This is a very powerful tool. Use it on your own risk!"
+msgstr "Это очень мощный инструмент. Используйте его на свой страх и риск!"
 
 msgid ""
 "This is a way to take an existing insecure connection, and upgrade it to a "
@@ -7670,6 +7674,12 @@ msgid ""
 "the firmware has not been tampered with.<br /><br />Do you want to install "
 "this firmware anyway (on your own risk)?"
 msgstr ""
+"Это означает, что прошивка, который вы пытаетесь обновиться не является "
+"официальной/поддерживаемой прошивкой и может привести к неожиданному "
+"поведению или изъянам в безопасности. Обновляйте только прошивками, которые "
+"получаете от источников, которым вы доверяете, и убедитесь, что прошивка не "
+"была подделана.<br /><br />Вы хотите обновиться с помощью этой прошивки в "
+"любом случае (на свой страх и риск)?"
 
 msgid "This name already exists in the disk list."
 msgstr "Такое имя уже есть в списке дисков."
@@ -8537,10 +8547,10 @@ msgid "VM Type"
 msgstr "Тип ВМ"
 
 msgid "VNC Display"
-msgstr ""
+msgstr "VNC дисплей"
 
 msgid "VNC Password"
-msgstr ""
+msgstr "VNC пароль"
 
 msgid "Value"
 msgstr "Значение"
@@ -9099,116 +9109,11 @@ msgstr "версия:"
 msgid "warning"
 msgstr "предупреждение"
 
-#~ msgid "Disable firmware upload"
-#~ msgstr "Запретить загрузку прошивки"
+#~ msgid "Last config change"
+#~ msgstr "Последнее изменение конфигурации"
 
-#~ msgid "Enable firmware upload"
-#~ msgstr "Разрешить загрузку прошивки"
+#~ msgid "This function is unsupported. Use it on your own risk!"
+#~ msgstr "Используйте эту функцию исключительно на свой риск!"
 
-#~ msgid "Firmware image file"
-#~ msgstr "Файл образа прошивки"
-
-#~ msgid "Image upload failed (out of memory?)"
-#~ msgstr "Неудача при загрузке файла (возможно, мало памяти)"
-
-#~ msgid "The image file is corrupt"
-#~ msgstr "Файл образа поврежден"
-
-#~ msgid "The uploaded image file is not for this platform"
-#~ msgstr "Загруженный файл не для этой платформы"
-
-#~ msgid ""
-#~ "This means that the image you uploaded is not an official/supported image "
-#~ "and may lead to unexpected behavior or security compromises. Only install "
-#~ "images that come from sources that you trust, and make sure that the image "
-#~ "has not been tampered with.<br /><br />Do you want to install this image "
-#~ "anyway (on your own risk)?"
-#~ msgstr ""
-#~ "Это означает, что файл образа, предложенный вами, не является официальным "
-#~ "или поддерживаемым, а его использование может привести к неожиданному "
-#~ "поведению или нарушению безопасности. Устанавливайте только те образы, "
-#~ "которые были получены из доверенных источников, убедившись, что они не были "
-#~ "изменены.<br /><br />Вы все равно хотите установить этот образ (на свой "
-#~ "риск)?"
-
-#~ msgid "Upgrade firmware"
-#~ msgstr "Обновить прошивку"
-
-#~ msgid "Save file"
-#~ msgstr "Сохранить файл"
-
-#~ msgid "Load file"
-#~ msgstr "Загрузка файла"
-
-#~ msgid ""
-#~ "Click &quot;Enable firmware upload&quot; below, then choose the embedded "
-#~ "image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
-#~ "the upgrade process."
-#~ msgstr ""
-#~ "Нажмите &quot;Разрешить загрузку прошивки&quot; ниже, затем выберите образ "
-#~ "embedded прошивки для загрузки.<br />Нажмите &quot;Загрузить прошивку&quot; "
-#~ "для начала процесса апгрейда."
-
-#, php-format
-#~ msgid ""
-#~ "DO NOT abort the firmware upgrade process once it has started. Once it is "
-#~ "completed, the server will automatically reboot, the current configuration "
-#~ "will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
-#~ "the upgrade.<br />It is strongly recommended that you <a "
-#~ "href='%s'>Backup</a> the server configuration before doing a upgrade."
-#~ msgstr ""
-#~ "НЕ ПРЕРЫВАЙТЕ начатый процесс обновления прошивки. После его завершения, "
-#~ "сервер автоматически перезагрузится, текущая конфигурация будет сохранена. "
-#~ "<br /> Вам необходимо как минимум %d MiB свободной оперативной памяти для "
-#~ "выполнения обновления. <br /> Перед апгрейдом настоятельно рекомендуется "
-#~ "произвести <a href='%s'>Резервное копирование</a> конфигурации сервера."
-
-#~ msgid "Edit File"
-#~ msgstr "Изменить файл"
-
-#~ msgid "Save File"
-#~ msgstr "Сохранить файл"
-
-#~ msgid "Disable Firmware Upload"
-#~ msgstr "Отключить загрузку прошивки"
-
-#, php-format
-#~ msgid ""
-#~ "DO NOT abort the firmware upgrade process once it has started.<br />Try to "
-#~ "flash other files than a valid embedded (img.xz) firmware only.<br />It is "
-#~ "recommended that you <a href='%s'>Backup</a> the server configuration before "
-#~ "doing a upgrade."
-#~ msgstr ""
-#~ "НЕ прерывайте процесс обновления прошивки!!!. <br/>НЕ попробуйте прошить "
-#~ "другие файлы, отличные от оригинального файла прошивки embedded (img.xz). "
-#~ "<br/> Рекомендуется сделать <а HREF = \"%s\" > Резервное копирование </a> "
-#~ "конфигурации сервера, прежде чем делать апгрейд."
-
-#~ msgid "Enable Firmware Upload"
-#~ msgstr "Включить загрузку прошивки"
-
-#~ msgid "Boot arguments"
-#~ msgstr "Аргументы загрузки"
-
-#~ msgid "Boot loader"
-#~ msgstr "Загрузчик"
-
-#~ msgid ""
-#~ "This means that the firmware you uploaded is not an official/supported image "
-#~ "and may lead to unexpected behavior or security compromises. Only install "
-#~ "images that come from sources that you trust, and make sure that the image "
-#~ "has not been tampered with.<br /><br />Do you want to install this image "
-#~ "anyway (on your own risk)?"
-#~ msgstr ""
-#~ "Это означает, что прошивка, которую вы загрузили не является "
-#~ "официальной/поддерживаемой и может привести к неожиданному поведению или "
-#~ "изъянах в безопасности. Устанавливайте только прошивки, которые получаете от "
-#~ "источников, которым вы доверяете, и убедитесь, что образ не был изменен. "
-#~ "<br/><br/> Хотите установить этот образ в любом случае (на свой страх и "
-#~ "риск)?"
-
-#~ msgid "VNC display"
-#~ msgstr "Дисплей VNC"
-
-#~ msgid "VNC password"
-#~ msgstr "Пароль VNC"
+#~ msgid "Build date"
+#~ msgstr "Дата сборки"
