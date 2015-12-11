@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-10 23:13+0000\n"
+"POT-Creation-Date: 2015-12-11 15:09+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: Jānis Marks Gailis <jm-gailis@fai-vianet.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-10 15:12+0000\n"
+"X-Launchpad-Export-Date: 2015-12-11 14:44+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: LATVIA\n"
 "Language: \n"
@@ -988,9 +988,6 @@ msgstr ""
 msgid "Browseable"
 msgstr "Pārlūkojams"
 
-msgid "Build date"
-msgstr ""
-
 msgid "Building database in progress"
 msgstr ""
 
@@ -1251,6 +1248,9 @@ msgid "Community"
 msgstr "Kopiena"
 
 msgid "Compilations directories"
+msgstr ""
+
+msgid "Compiled"
 msgstr ""
 
 msgid "Compliant profile to be used."
@@ -1628,7 +1628,7 @@ msgstr ""
 #, php-format
 msgid ""
 "DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
 "/>It is recommended that you <a href='%s'>Backup</a> the server "
 "configuration before doing a upgrade."
 msgstr ""
@@ -3054,9 +3054,6 @@ msgstr "Grupas ID"
 msgid "Group compilations"
 msgstr ""
 
-msgid "Group description."
-msgstr "Grupas apraksts."
-
 msgid "Group name."
 msgstr "Grupas nosaukums."
 
@@ -3719,9 +3716,6 @@ msgstr ""
 
 msgid "Large read/write"
 msgstr "Liels lasīšana/rakstīšana"
-
-msgid "Last config change"
-msgstr "Pēdējā konfigurācijas izmaiņa"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -5074,9 +5068,6 @@ msgstr ""
 msgid "Primary Group"
 msgstr "Primārā Grupa"
 
-msgid "Primary group"
-msgstr "Primātā grupa"
-
 msgid "Primary group is also selected in additional group."
 msgstr "Primārā grupa ir izvēlēta arī iekš papildus grupas."
 
@@ -6162,6 +6153,9 @@ msgstr "Sistēmas notikumi"
 
 msgid "System info"
 msgstr "Sistēmas informācija"
+
+msgid "System last config change"
+msgstr ""
 
 msgid "System log"
 msgstr "Sistēmas žurnāls"
@@ -7261,11 +7255,11 @@ msgstr ""
 msgid "This extent is used."
 msgstr "Šis apjoms ir lietots."
 
-msgid "This function is unsupported. Use it on your own risk!"
-msgstr "Šī funkcija netiek atbalstīta. Lieto uz paša risku!"
-
 msgid "This group already exists in the group list."
 msgstr "Šī grupa jau eksistē grupu sarakstā!"
+
+msgid "This is a very powerful tool. Use it on your own risk!"
+msgstr ""
 
 msgid ""
 "This is a way to take an existing insecure connection, and upgrade it to a "
@@ -7788,13 +7782,6 @@ msgid ""
 "UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
 "filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
 "unpredictable results, file corruption and the loss of data!"
-msgstr ""
-
-#, php-format
-msgid ""
-"UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
-"Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
-"NTFS can result in unpredictable results, file corruption, and loss of data!"
 msgstr ""
 
 #, php-format
@@ -8644,36 +8631,14 @@ msgstr ""
 msgid "warning"
 msgstr ""
 
-#~ msgid "Disable firmware upload"
-#~ msgstr "Atspējot programmatūras augšupielādi"
+#~ msgid "Group description."
+#~ msgstr "Grupas apraksts."
 
-#~ msgid "Enable firmware upload"
-#~ msgstr "Iespējot programmatūras augšupielādi"
+#~ msgid "Last config change"
+#~ msgstr "Pēdējā konfigurācijas izmaiņa"
 
-#~ msgid "Firmware image file"
-#~ msgstr "Programmatūras bildes datne"
+#~ msgid "Primary group"
+#~ msgstr "Primātā grupa"
 
-#~ msgid "Image upload failed (out of memory?)"
-#~ msgstr "Bildes augšupielāde neizdevās (beidzās atmiņa?)"
-
-#~ msgid "The image file is corrupt"
-#~ msgstr "Bildes datne ir bojāta"
-
-#~ msgid "The uploaded image file is not for this platform"
-#~ msgstr "Augšupielādētā bildes datne nav šai platformai"
-
-#~ msgid ""
-#~ "This means that the image you uploaded is not an official/supported image "
-#~ "and may lead to unexpected behavior or security compromises. Only install "
-#~ "images that come from sources that you trust, and make sure that the image "
-#~ "has not been tampered with.<br /><br />Do you want to install this image "
-#~ "anyway (on your own risk)?"
-#~ msgstr ""
-#~ "Šis nozīmē, ka bilde, kuru Jūs augšupielādējāt nav oficiāla/atbalstīta bilde "
-#~ "un ka tas var novest pie negaidītas uzvedības vai drošības kompromisiem. "
-#~ "Instalē tikai bildes, kas nāk no avotiem, kuriem Tu uzticies un "
-#~ "pārliecinies, ka bilde nav rediģēta.<br /><br />Vai Tu vēlies turpināt "
-#~ "uzstādīt šo bildi (uz paša riska)?"
-
-#~ msgid "Upgrade firmware"
-#~ msgstr "Atjaunot programmatūru"
+#~ msgid "This function is unsupported. Use it on your own risk!"
+#~ msgstr "Šī funkcija netiek atbalstīta. Lieto uz paša risku!"

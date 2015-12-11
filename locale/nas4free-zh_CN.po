@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-10 23:13+0000\n"
+"POT-Creation-Date: 2015-12-11 15:09+0000\n"
 "PO-Revision-Date: 2015-07-14 10:32+0000\n"
 "Last-Translator: Alex Lin <linuxant@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-10 15:13+0000\n"
+"X-Launchpad-Export-Date: 2015-12-11 14:44+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -952,9 +952,6 @@ msgstr ""
 msgid "Browseable"
 msgstr "可浏览"
 
-msgid "Build date"
-msgstr "创建日期"
-
 msgid "Building database in progress"
 msgstr ""
 
@@ -1210,6 +1207,9 @@ msgid "Community"
 msgstr "社群"
 
 msgid "Compilations directories"
+msgstr ""
+
+msgid "Compiled"
 msgstr ""
 
 msgid "Compliant profile to be used."
@@ -1588,7 +1588,7 @@ msgstr "DNS伺服器是空白的。"
 #, php-format
 msgid ""
 "DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
 "/>It is recommended that you <a href='%s'>Backup</a> the server "
 "configuration before doing a upgrade."
 msgstr ""
@@ -2977,9 +2977,6 @@ msgstr "群组 ID"
 msgid "Group compilations"
 msgstr ""
 
-msgid "Group description."
-msgstr "群组描述文字。"
-
 msgid "Group name."
 msgstr "群组名称。"
 
@@ -3617,9 +3614,6 @@ msgstr "前置面板的语言"
 
 msgid "Large read/write"
 msgstr "大笔资料 读／写"
-
-msgid "Last config change"
-msgstr "上次配置更改时间"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -4911,9 +4905,6 @@ msgstr "主要"
 msgid "Primary Group"
 msgstr "主要群组"
 
-msgid "Primary group"
-msgstr "主要群组"
-
 msgid "Primary group is also selected in additional group."
 msgstr "主要群组也会被加入到附加群组中。"
 
@@ -5967,6 +5958,9 @@ msgstr "系统事件"
 msgid "System info"
 msgstr "系统信息"
 
+msgid "System last config change"
+msgstr ""
+
 msgid "System log"
 msgstr "系统记录"
 
@@ -6983,11 +6977,11 @@ msgstr "已经发送验证电邮配置的电子邮件。"
 msgid "This extent is used."
 msgstr "此 extent 正在使用中。"
 
-msgid "This function is unsupported. Use it on your own risk!"
-msgstr "不支援此功能。请自行承担风险！"
-
 msgid "This group already exists in the group list."
 msgstr "此群组已存在群组列表中。"
+
+msgid "This is a very powerful tool. Use it on your own risk!"
+msgstr ""
 
 msgid ""
 "This is a way to take an existing insecure connection, and upgrade it to a "
@@ -7446,15 +7440,6 @@ msgid ""
 "filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
 "unpredictable results, file corruption and the loss of data!"
 msgstr ""
-
-#, php-format
-msgid ""
-"UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
-"Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
-"NTFS can result in unpredictable results, file corruption, and loss of data!"
-msgstr ""
-"UFS 和 ZFS 是 FreeBSD 的（%s 的原操作系统）的初始文件系统。尝试使用其他的文件系统，如 "
-"FAT，FAT32，EXT2，EXT3，EXT4 或 NTFS 可能会导致不可预测的结果，文件损坏和数据丢失！"
 
 #, php-format
 msgid ""
@@ -8269,57 +8254,26 @@ msgstr "版本："
 msgid "warning"
 msgstr ""
 
-#~ msgid "Disable firmware upload"
-#~ msgstr "关闭固件升级功能"
+#~ msgid "Primary group"
+#~ msgstr "主要群组"
 
-#~ msgid "Upgrade firmware"
-#~ msgstr "固件升级"
+#~ msgid "Build date"
+#~ msgstr "创建日期"
 
-#~ msgid "Firmware image file"
-#~ msgstr "固件映像文件"
+#~ msgid "Group description."
+#~ msgstr "群组描述文字。"
 
-#~ msgid "Image upload failed (out of memory?)"
-#~ msgstr "固体映像档上传失败（记忆体不足？）"
+#~ msgid "Last config change"
+#~ msgstr "上次配置更改时间"
 
-#~ msgid "The image file is corrupt"
-#~ msgstr "映像档已经损坏"
-
-#~ msgid "The uploaded image file is not for this platform"
-#~ msgstr "上传的映像档并不适于此系统"
-
-#~ msgid ""
-#~ "This means that the image you uploaded is not an official/supported image "
-#~ "and may lead to unexpected behavior or security compromises. Only install "
-#~ "images that come from sources that you trust, and make sure that the image "
-#~ "has not been tampered with.<br /><br />Do you want to install this image "
-#~ "anyway (on your own risk)?"
-#~ msgstr ""
-#~ "这意味着您上传的映像档不是正式/支援的映像档，所以可能导致意想不到的问题或安全隐患。请您只安装您信任的映像档来源，并确保映像档没有被篡改。 <br "
-#~ "/><br />你确定要继续安装此映像档（自行承担风险）？"
-
-#~ msgid "Save file"
-#~ msgstr "储存档案"
-
-#~ msgid "Load file"
-#~ msgstr "载入文件"
-
-#~ msgid "Enable firmware upload"
-#~ msgstr "启用固件升级功能"
-
-#~ msgid ""
-#~ "Click &quot;Enable firmware upload&quot; below, then choose the embedded "
-#~ "image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
-#~ "the upgrade process."
-#~ msgstr ""
-#~ "点击以下 &quot;启用固件升级功能&quot; ，然后选择升级固件的文件。<br />点击 &quot;升级固件&quot; 开始升级。"
+#~ msgid "This function is unsupported. Use it on your own risk!"
+#~ msgstr "不支援此功能。请自行承担风险！"
 
 #, php-format
 #~ msgid ""
-#~ "DO NOT abort the firmware upgrade process once it has started. Once it is "
-#~ "completed, the server will automatically reboot, the current configuration "
-#~ "will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
-#~ "the upgrade.<br />It is strongly recommended that you <a "
-#~ "href='%s'>Backup</a> the server configuration before doing a upgrade."
+#~ "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
+#~ "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
+#~ "NTFS can result in unpredictable results, file corruption, and loss of data!"
 #~ msgstr ""
-#~ "一旦固件升级程序启动后，不可中止升级程序。一旦固件升级程序启动后，不要中止升级程序。一旦升级完成后，服务器会自动重启，当前的配置将保持不变。.<br "
-#~ "/>您至少需要 %d MIB 的可用 RAM 来升级程序。<br />强烈建议您在升级前 <a href='%s'>备份</a> 伺服器的配置。"
+#~ "UFS 和 ZFS 是 FreeBSD 的（%s 的原操作系统）的初始文件系统。尝试使用其他的文件系统，如 "
+#~ "FAT，FAT32，EXT2，EXT3，EXT4 或 NTFS 可能会导致不可预测的结果，文件损坏和数据丢失！"

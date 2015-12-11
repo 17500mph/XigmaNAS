@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-10 23:13+0000\n"
+"POT-Creation-Date: 2015-12-11 15:09+0000\n"
 "PO-Revision-Date: 2015-06-15 08:06+0000\n"
 "Last-Translator: Carsten Matzon <carsten@matzon.dk>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-10 15:12+0000\n"
+"X-Launchpad-Export-Date: 2015-12-11 14:44+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
@@ -987,9 +987,6 @@ msgstr ""
 msgid "Browseable"
 msgstr "Kan gennemses"
 
-msgid "Build date"
-msgstr "Fremstillingsdato"
-
 msgid "Building database in progress"
 msgstr ""
 
@@ -1252,6 +1249,9 @@ msgstr "Forum"
 
 msgid "Compilations directories"
 msgstr "Kompilerings mapper"
+
+msgid "Compiled"
+msgstr ""
 
 msgid "Compliant profile to be used."
 msgstr "Overholdelses profil der skal bruges."
@@ -1641,7 +1641,7 @@ msgstr "DNS server er tom"
 #, php-format
 msgid ""
 "DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
 "/>It is recommended that you <a href='%s'>Backup</a> the server "
 "configuration before doing a upgrade."
 msgstr ""
@@ -3075,9 +3075,6 @@ msgstr "Gruppe ID"
 msgid "Group compilations"
 msgstr "Gruppe kompileringer"
 
-msgid "Group description."
-msgstr "Gruppe beskrivelse."
-
 msgid "Group name."
 msgstr "Gruppe navn."
 
@@ -3742,9 +3739,6 @@ msgstr "Anvendt sprog på front panel"
 
 msgid "Large read/write"
 msgstr "Stor læsning/skrivning"
-
-msgid "Last config change"
-msgstr "Sidste konfigurations ændring"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -5097,9 +5091,6 @@ msgstr "Primær"
 msgid "Primary Group"
 msgstr "Primær Gruppe"
 
-msgid "Primary group"
-msgstr "Primær gruppe"
-
 msgid "Primary group is also selected in additional group."
 msgstr "Den primære grupper bliver også valgt som en yderlig gruppe."
 
@@ -6189,6 +6180,9 @@ msgstr "Systemhændelser"
 
 msgid "System info"
 msgstr "System info"
+
+msgid "System last config change"
+msgstr ""
 
 msgid "System log"
 msgstr "System log"
@@ -7307,11 +7301,11 @@ msgstr "Denne email er sendt for at validere din email konfiguration"
 msgid "This extent is used."
 msgstr "Denne extent er brugt."
 
-msgid "This function is unsupported. Use it on your own risk!"
-msgstr "Denne funktion er ikke understøttet. Brug den på eget ansvar!"
-
 msgid "This group already exists in the group list."
 msgstr "Denne gruppe eksisterer allerede i gruppe listen."
+
+msgid "This is a very powerful tool. Use it on your own risk!"
+msgstr ""
 
 msgid ""
 "This is a way to take an existing insecure connection, and upgrade it to a "
@@ -7839,13 +7833,6 @@ msgid ""
 "UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
 "filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
 "unpredictable results, file corruption and the loss of data!"
-msgstr ""
-
-#, php-format
-msgid ""
-"UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
-"Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
-"NTFS can result in unpredictable results, file corruption, and loss of data!"
 msgstr ""
 
 #, php-format
@@ -8693,56 +8680,17 @@ msgstr "version:"
 msgid "warning"
 msgstr ""
 
-#~ msgid "Disable firmware upload"
-#~ msgstr "Deaktiver firmware upload"
+#~ msgid "Group description."
+#~ msgstr "Gruppe beskrivelse."
 
-#~ msgid "Enable firmware upload"
-#~ msgstr "Aktiver firmware upload"
+#~ msgid "Last config change"
+#~ msgstr "Sidste konfigurations ændring"
 
-#~ msgid "Firmware image file"
-#~ msgstr "Firmware image fil"
+#~ msgid "Primary group"
+#~ msgstr "Primær gruppe"
 
-#~ msgid "Image upload failed (out of memory?)"
-#~ msgstr "Image upload fejlede (ikke nok ledig hukommelse?)"
+#~ msgid "This function is unsupported. Use it on your own risk!"
+#~ msgstr "Denne funktion er ikke understøttet. Brug den på eget ansvar!"
 
-#~ msgid "The image file is corrupt"
-#~ msgstr "Image-filen er korrupt"
-
-#~ msgid "The uploaded image file is not for this platform"
-#~ msgstr "Den uploadede image-fil er ikke til denne platform"
-
-#~ msgid ""
-#~ "This means that the image you uploaded is not an official/supported image "
-#~ "and may lead to unexpected behavior or security compromises. Only install "
-#~ "images that come from sources that you trust, and make sure that the image "
-#~ "has not been tampered with.<br /><br />Do you want to install this image "
-#~ "anyway (on your own risk)?"
-#~ msgstr ""
-#~ "Dette betyder at det image du har uploaded ikke er et officielt/understøttet "
-#~ "image, og kan resultere i uventet opførsel eller sikkerheds problemer. "
-#~ "Installer kun images der kommer fra kilder du stoler på, og er sikker på at "
-#~ "imaget ikke er blevet ændret.<br /><br />Vil du installere dette image "
-#~ "alligevel (på egen risiko)?"
-
-#~ msgid "Upgrade firmware"
-#~ msgstr "Opgrader firmware"
-
-#, php-format
-#~ msgid ""
-#~ "DO NOT abort the firmware upgrade process once it has started. Once it is "
-#~ "completed, the server will automatically reboot, the current configuration "
-#~ "will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
-#~ "the upgrade.<br />It is strongly recommended that you <a "
-#~ "href='%s'>Backup</a> the server configuration before doing a upgrade."
-#~ msgstr ""
-#~ "AFBRYD IKKE denne firmware opgradering når først den er startet. Når "
-#~ "opgraderingen er genneført, vil serveren automatisk genstarte. Nuværende "
-#~ "konfiguration er bevaret.<br />Du behøver minimum %d MiB ledig hukommelse "
-#~ "for at gennemføre opgraderingen.<br />Det anbefales kraftigt at gemme en <a "
-#~ "href='%s'>kopi</a> af server konfigurationen før opgradering."
-
-#~ msgid "Load file"
-#~ msgstr "Åbn fil"
-
-#~ msgid "Save file"
-#~ msgstr "Gem fil"
+#~ msgid "Build date"
+#~ msgstr "Fremstillingsdato"

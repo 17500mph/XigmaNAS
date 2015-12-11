@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-10 23:13+0000\n"
+"POT-Creation-Date: 2015-12-11 15:09+0000\n"
 "PO-Revision-Date: 2015-11-24 17:55+0000\n"
 "Last-Translator: Balabuha <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-10 15:13+0000\n"
+"X-Launchpad-Export-Date: 2015-12-11 14:44+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "Language: uk\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -1013,9 +1013,6 @@ msgstr "Переглянути директорію"
 msgid "Browseable"
 msgstr "Доступний для перегляду (листання)"
 
-msgid "Build date"
-msgstr "Дата збірки"
-
 msgid "Building database in progress"
 msgstr "Триває створення бази даних"
 
@@ -1280,6 +1277,9 @@ msgstr "Спільнота"
 
 msgid "Compilations directories"
 msgstr "Каталоги збірників"
+
+msgid "Compiled"
+msgstr ""
 
 msgid "Compliant profile to be used."
 msgstr "Відповідний профіль буде використовуватися."
@@ -1672,7 +1672,7 @@ msgstr ""
 #, php-format
 msgid ""
 "DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
 "/>It is recommended that you <a href='%s'>Backup</a> the server "
 "configuration before doing a upgrade."
 msgstr ""
@@ -3105,9 +3105,6 @@ msgstr "ID групи"
 msgid "Group compilations"
 msgstr ""
 
-msgid "Group description."
-msgstr "Опис групи."
-
 msgid "Group name."
 msgstr "Ім'я групи."
 
@@ -3755,9 +3752,6 @@ msgstr "Мова, яку використовувати на передній п
 
 msgid "Large read/write"
 msgstr "Читання/запис великими блоками"
-
-msgid "Last config change"
-msgstr "Остання зміна в конфігурації"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -5064,9 +5058,6 @@ msgstr "Первинний"
 msgid "Primary Group"
 msgstr "Основна група"
 
-msgid "Primary group"
-msgstr "Основна група"
-
 msgid "Primary group is also selected in additional group."
 msgstr ""
 
@@ -6122,6 +6113,9 @@ msgstr "Системні події"
 msgid "System info"
 msgstr "Відомості про систему"
 
+msgid "System last config change"
+msgstr ""
+
 msgid "System log"
 msgstr "Журнал системи"
 
@@ -7148,11 +7142,11 @@ msgstr ""
 msgid "This extent is used."
 msgstr ""
 
-msgid "This function is unsupported. Use it on your own risk!"
-msgstr "Функція не підтримується. Використовуйте на власний ризик!"
-
 msgid "This group already exists in the group list."
 msgstr "Група вже присутня в списку груп."
+
+msgid "This is a very powerful tool. Use it on your own risk!"
+msgstr ""
 
 msgid ""
 "This is a way to take an existing insecure connection, and upgrade it to a "
@@ -7601,13 +7595,6 @@ msgid ""
 "UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
 "filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
 "unpredictable results, file corruption and the loss of data!"
-msgstr ""
-
-#, php-format
-msgid ""
-"UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
-"Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
-"NTFS can result in unpredictable results, file corruption, and loss of data!"
 msgstr ""
 
 #, php-format
@@ -8422,49 +8409,17 @@ msgstr "версія:"
 msgid "warning"
 msgstr ""
 
-#~ msgid "Save file"
-#~ msgstr "Зберегти файл"
+#~ msgid "Build date"
+#~ msgstr "Дата збірки"
 
-#~ msgid ""
-#~ "Click &quot;Enable firmware upload&quot; below, then choose the embedded "
-#~ "image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
-#~ "the upgrade process."
-#~ msgstr ""
-#~ "Натисніть &quot;Дозволити вивантаження прошивки&quot; нижче, і тоді оберіть "
-#~ "файл вбудованого образу для прошивки.<br />Натисніть &quot;Оновлення "
-#~ "прошивки&quot; для початку процесу оновлення."
+#~ msgid "Group description."
+#~ msgstr "Опис групи."
 
-#, php-format
-#~ msgid ""
-#~ "DO NOT abort the firmware upgrade process once it has started. Once it is "
-#~ "completed, the server will automatically reboot, the current configuration "
-#~ "will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
-#~ "the upgrade.<br />It is strongly recommended that you <a "
-#~ "href='%s'>Backup</a> the server configuration before doing a upgrade."
-#~ msgstr ""
-#~ "НЕ переривайте прецес оновлення програмного забезпечення. Як тільки він "
-#~ "закінчиться, сервер автоматично перезавантажиться, поточну конфігурацію буде "
-#~ "збережено.<br />Вам потрібно мінімум %d MiB вільної ОП для процесу "
-#~ "оновлення.<br />Наполегливо рекомендується зробити <a href='%s'>резервну "
-#~ "копію</a> конфігурації сервера перед почапком процесу оновлення."
+#~ msgid "Last config change"
+#~ msgstr "Остання зміна в конфігурації"
 
-#~ msgid "Disable firmware upload"
-#~ msgstr "Заборонити завантаження прошивки"
+#~ msgid "This function is unsupported. Use it on your own risk!"
+#~ msgstr "Функція не підтримується. Використовуйте на власний ризик!"
 
-#~ msgid "Enable firmware upload"
-#~ msgstr "Дозволити завантаження прошивки"
-
-#~ msgid "Firmware image file"
-#~ msgstr "Файл прошивки"
-
-#~ msgid "Image upload failed (out of memory?)"
-#~ msgstr "Помилка завантаження зображення (недостатньо пам'яті?)"
-
-#~ msgid "Load file"
-#~ msgstr "Завантажити файл"
-
-#~ msgid "The image file is corrupt"
-#~ msgstr "Файл образу пошкоджено"
-
-#~ msgid "Upgrade firmware"
-#~ msgstr "Оновити прошивку"
+#~ msgid "Primary group"
+#~ msgstr "Основна група"
