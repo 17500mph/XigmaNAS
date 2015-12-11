@@ -98,6 +98,9 @@ else
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabcont">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<?php html_titleline(gettext("File Editor"));?>
+				<tr>
 			<form action="system_edit.php" method="post">
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<table width="100%" cellpadding='9' cellspacing='9' bgcolor='#eeeeee'>

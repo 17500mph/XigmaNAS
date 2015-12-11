@@ -219,7 +219,7 @@ function get_nextuser_id() {
 					<?php html_inputbox("userid", gettext("User ID"), $pconfig['userid'], gettext("User numeric id."), true, 20, isset($uuid) && (FALSE !== $cnid));?>
 					<?php html_combobox("shell", gettext("Shell"), $pconfig['shell'], array("nologin" => "nologin", "scponly" => "scponly", "sh" => "sh",  "csh" => "csh", "tcsh" => "tcsh", "bash" => "bash"), gettext("The user's login shell."), true);?>
 					<?php $grouplist = array(); foreach ($a_group as $groupk => $groupv) { $grouplist[$groupv] = $groupk; } ?>
-					<?php html_combobox("primarygroup", gettext("Primary group"), $pconfig['primarygroup'], $grouplist, gettext("Set the account's primary group to the given group."), true);?>
+					<?php html_combobox("primarygroup", gettext("Primary Group"), $pconfig['primarygroup'], $grouplist, gettext("Set the account's primary group to the given group."), true);?>
 					<?php html_listbox("group", gettext("Additional group"), !empty($pconfig['group']) ? $pconfig['group'] : array(), $grouplist, gettext("Set additional group memberships for this account.")."<br />".gettext("Note: Ctrl-click (or command-click on the Mac) to select and deselect groups."));?>
 					<?php html_filechooser("homedir", gettext("Home directory"), $pconfig['homedir'], gettext("Enter the path to the home directory of that user. Leave this field empty to use default path /mnt."), $g['media_path'], false, 60);?>
 					<?php html_checkbox("userportal", gettext("User portal"), !empty($pconfig['userportal']) ? true : false, gettext("Grant access to the user portal."), "", false);?>
