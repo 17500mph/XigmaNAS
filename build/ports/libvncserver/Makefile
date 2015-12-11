@@ -5,7 +5,7 @@ CATEGORIES=	net devel
 MASTER_SITES=	SF
 DISTNAME=	LibVNCServer-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	aoyama@nas4free.org
 COMMENT=	Provide an easy API to a custom vnc server
 
 LICENSE=	GPLv2
