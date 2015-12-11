@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2015-12-11 00:20+0000\n"
+"POT-Creation-Date: 2015-12-11 10:18+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -832,9 +832,6 @@ msgstr ""
 msgid "Browseable"
 msgstr ""
 
-msgid "Build date"
-msgstr ""
-
 msgid "Building database in progress"
 msgstr ""
 
@@ -1082,6 +1079,9 @@ msgid "Community"
 msgstr ""
 
 msgid "Compilations directories"
+msgstr ""
+
+msgid "Compiled"
 msgstr ""
 
 msgid "Compliant profile to be used."
@@ -3267,9 +3267,6 @@ msgid "Language to use on front panel"
 msgstr ""
 
 msgid "Large read/write"
-msgstr ""
-
-msgid "Last config change"
 msgstr ""
 
 msgid "Last test result as microseconds to discharge cap, saturated at its maximum value. Also logs minutes since last test and lifetime number of tests. Raw value contains the following data: Bytes 0-1: Last test result as microseconds to discharge cap, saturates at max value. Test result expected in range 25 <= result <= 5000000, lower indicates specific error code. Bytes 2-3: Minutes since last test, saturates at max value. Bytes 4-5: Lifetime number of tests, not incremented on power cycle, saturates at max value. Normalized value is set to one on test failure or 11 if the capacitor has been tested in an excessive temperature condition, otherwise 100."
@@ -5462,6 +5459,9 @@ msgstr ""
 msgid "System info"
 msgstr ""
 
+msgid "System last config change"
+msgstr ""
+
 msgid "System log"
 msgstr ""
 
@@ -6301,10 +6301,10 @@ msgstr ""
 msgid "This extent is used."
 msgstr ""
 
-msgid "This function is unsupported. Use it on your own risk!"
+msgid "This group already exists in the group list."
 msgstr ""
 
-msgid "This group already exists in the group list."
+msgid "This is a very powerful tool. Use it on your own risk!"
 msgstr ""
 
 msgid "This is a way to take an existing insecure connection, and upgrade it to a secure connection using SSL/TLS."
