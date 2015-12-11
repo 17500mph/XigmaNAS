@@ -24,7 +24,7 @@ load_rc_config $name
 populate_var()
 {
 	# Create required directories in /var
-	/usr/sbin/mtree -deU -f /etc/mtree/BSD.var.dist -p /var > /dev/null
+	/usr/sbin/mtree -deiU -f /etc/mtree/BSD.var.dist -p /var > /dev/null
 	# Configure the shared library cache
 	/sbin/ldconfig -elf /usr/lib /usr/local/lib /lib
 }
