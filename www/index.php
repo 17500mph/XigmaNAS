@@ -412,7 +412,7 @@ $(document).ready(function(){
 	<?php endif;?>
 	<?php html_textinfo("hostname", gettext("Hostname"), system_get_hostname());?>
 	<?php html_textinfo("version", gettext("Version"), sprintf("<strong>%s %s</strong> (%s %s)", get_product_version(), get_product_versionname(), gettext("revision"), get_product_revision()));?>
-	<?php html_textinfo("builddate", gettext("Build date"), get_product_buildtime());?>
+	<?php html_textinfo("builddate", gettext("Compiled"), get_product_buildtime());?>
 	<?php
 		exec("/sbin/sysctl -n kern.osrevision", $osrevision);
 		exec("/sbin/sysctl -n kern.version", $osversion);
@@ -425,7 +425,7 @@ $(document).ready(function(){
 	<?php html_textinfo("system_uptime", gettext("System uptime"), htmlspecialchars(system_get_uptime()));?>
 	<?php if (Session::isAdmin()):?>
 		<?php if ($config['lastchange']):?>
-			<?php html_textinfo("last_config_change", gettext("Last config change"), htmlspecialchars(date("D M j G:i:s T Y", $config['lastchange'])));?>
+			<?php html_textinfo("last_config_change", gettext("System last config change"), htmlspecialchars(date("D M j G:i:s T Y", $config['lastchange'])));?>
 		<?php endif;?>
 		<?php if (!empty($cpuinfo['temperature2'])):
 			echo "<tr>";
