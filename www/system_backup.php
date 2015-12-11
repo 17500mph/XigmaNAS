@@ -60,15 +60,15 @@ if ($_POST) {
 	$encryption = 0;
 	if (!empty($_POST['encryption']))
 		$encryption = 1;
-	if (0 == strcmp($_POST['Submit'], gettext("Restore configuration"))) {
+	if (0 == strcmp($_POST['Submit'], gettext("Restore Configuration"))) {
 		$mode = "restore";
-	} else if (0 == strcmp($_POST['Submit'], gettext("Download configuration"))) {
+	} else if (0 == strcmp($_POST['Submit'], gettext("Download Configuration"))) {
 		$mode = "download";
 	}
 
 	if ($encryption) {
 		$reqdfields = explode(" ", "encrypt_password encrypt_password_confirm");
-		$reqdfieldsn = array(gettext("Encrypt password"), gettext("Encrypt password (confirmed)"));
+		$reqdfieldsn = array(gettext("Encrypt password"), gettext("Encrypt Password (confirmed)"));
 		$reqdfieldst = explode(" ", "password password");
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -129,7 +129,7 @@ if ($_POST) {
 				}
 				if (!$validate) {
 					$errormsg = sprintf(gettext("The configuration could not be restored. %s"),
-						$encrypted ? gettext("Invalid file format or incorrect password.") : gettext("Invalid file format."));
+						$encrypted ? gettext("Invalid file format or incorrect password.") : gettext("Invalid file format or incorrect password."));
 				} else {
 					// Install configuration backup
 					if ($encrypted) {
