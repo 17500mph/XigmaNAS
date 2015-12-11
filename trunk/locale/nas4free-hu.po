@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-10 23:13+0000\n"
-"PO-Revision-Date: 2015-12-10 11:02+0000\n"
+"POT-Creation-Date: 2015-12-11 15:09+0000\n"
+"PO-Revision-Date: 2015-12-10 21:29+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-10 15:12+0000\n"
+"X-Launchpad-Export-Date: 2015-12-11 14:44+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -535,10 +535,10 @@ msgid "Add volume"
 msgstr "Kötet hozzáadása"
 
 msgid "Additional Network"
-msgstr ""
+msgstr "Kiegészítő hálózat"
 
 msgid "Additional Storage"
-msgstr ""
+msgstr "Kiegészítő tároló"
 
 msgid "Additional group"
 msgstr "További csoport"
@@ -1006,18 +1006,18 @@ msgid "Blocksize"
 msgstr "Blokkméret"
 
 msgid "Boot Arguments"
-msgstr ""
+msgstr "Rendszerindító argumentumok"
 
 msgid "Boot Loader"
-msgstr ""
+msgstr "Rendszerbetöltő"
 
 #, php-format
 msgid "Boot argument (e.g. %s)."
-msgstr ""
+msgstr "Rendszerindító argumentum (pl. %s)."
 
 #, php-format
 msgid "Boot loader (e.g. %s)."
-msgstr ""
+msgstr "Rendszerbetöltő (pl. %s)."
 
 #, php-format
 msgid ""
@@ -1028,7 +1028,7 @@ msgstr ""
 "LiveUSB-ről, vagy át kell méretezni a rendszerindító partíciót %s méretűre.\n"
 
 msgid "Bootloader"
-msgstr ""
+msgstr "Rendszerbetöltő"
 
 msgid "Bridge"
 msgstr "Híd (bridge)"
@@ -1048,9 +1048,6 @@ msgstr "Könyvtár tallózása"
 
 msgid "Browseable"
 msgstr "Böngészhető"
-
-msgid "Build date"
-msgstr "Rendszerfordítás ideje"
 
 msgid "Building database in progress"
 msgstr "Adatbázis felépítése folyamatban"
@@ -1077,7 +1074,7 @@ msgid "CD/DVD"
 msgstr "CD/DVD"
 
 msgid "CD/DVD drive"
-msgstr ""
+msgstr "CD/DVD lemez"
 
 msgid "CHANGED"
 msgstr "MEGVÁLTOZOTT"
@@ -1319,6 +1316,9 @@ msgstr "Közösség"
 
 msgid "Compilations directories"
 msgstr "Összeválogatott könyvtárak"
+
+msgid "Compiled"
+msgstr ""
 
 msgid "Compliant profile to be used."
 msgstr "Kompatibilis profilt kell használni."
@@ -1612,10 +1612,10 @@ msgid "Create 4KB wrapper (nop device)."
 msgstr "4KB wrapper létrehozása (nop eszköz)"
 
 msgid "Create HVM Guest"
-msgstr ""
+msgstr "HVM vendég létrehozása"
 
 msgid "Create PV Guest"
-msgstr ""
+msgstr "PV vendég létrehozása"
 
 msgid "Create ZFS on GPT partition"
 msgstr "ZFS létrehozása GPT partíción"
@@ -1746,10 +1746,13 @@ msgstr "DNS szerver üres."
 #, php-format
 msgid ""
 "DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
 "/>It is recommended that you <a href='%s'>Backup</a> the server "
 "configuration before doing a upgrade."
 msgstr ""
+"NE SZAKÍTSD meg a frissítési folyamatot, ha már elindítottad.<br />NE "
+"próbálj valid '%s-%s-embedded.img.xz' fájltól eltérővel frissíteni.<br "
+"/>Frissítés előtt készíts <a href='%s'>biztonsági másolatot</a>."
 
 msgid "DVD"
 msgstr "DVD"
@@ -1856,7 +1859,7 @@ msgid "Delete URL"
 msgstr "URL törlése"
 
 msgid "Delete VM"
-msgstr ""
+msgstr "VM törlése"
 
 msgid "Delete algorithm"
 msgstr "Algoritmus törlése"
@@ -2107,7 +2110,7 @@ msgid "Disable File Manager"
 msgstr "Fájlkezelő tiltása"
 
 msgid "Disable Firmware Update"
-msgstr ""
+msgstr "Firmware feltöltés tiltása"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "TCP wrapper tiltása(mod_wrap module)."
@@ -2191,7 +2194,7 @@ msgid "Do you really want to delete this URL?"
 msgstr "Biztos, hogy törli ezt az URL-t?"
 
 msgid "Do you really want to delete this VM?"
-msgstr ""
+msgstr "Biztos, hogy törlöd ezt a VM-et?"
 
 msgid "Do you really want to delete this auth group?"
 msgstr "Biztos, hogy törli ezt az auth csoportot?"
@@ -2317,7 +2320,7 @@ msgstr ""
 "A webkiszolgáló dokumentumainak főkönyvtára. A weblap fájljainak lakhelye."
 
 msgid "DomID"
-msgstr ""
+msgstr "DomID"
 
 msgid "Domain"
 msgstr "Tartomány"
@@ -2449,7 +2452,7 @@ msgid "Edit URL"
 msgstr "URL szerkesztése"
 
 msgid "Edit VM"
-msgstr ""
+msgstr "VM módosítása"
 
 msgid "Edit auth group"
 msgstr "Auth csoport szerkesztése"
@@ -2555,7 +2558,7 @@ msgid "Enable FXP protocol."
 msgstr "FXP protokoll engedélyezése."
 
 msgid "Enable Firmware Update"
-msgstr ""
+msgstr "Firmware feltöltés engedélyezése"
 
 msgid "Enable NFSv4 server."
 msgstr "NFSv4 szerver engedélyezése."
@@ -2652,7 +2655,7 @@ msgid "Enable module listing."
 msgstr "Modulok listázásának engedélyezése."
 
 msgid "Enable nested virtualization"
-msgstr ""
+msgstr "Egymásba ágyazott virtualizáció engedélyezése"
 
 msgid "Enable peer exchange (PEX)."
 msgstr "Peer csere engedélyezése (PEX)."
@@ -3006,7 +3009,7 @@ msgstr "A fájl nem található"
 
 #, php-format
 msgid "File path (e.g. %s) or ZFS volume (e.g. %s) used as Hard disk image."
-msgstr ""
+msgstr "Lemezképnek használandó fájlútvonal (pl. %s) vagy ZFS kötet (%s)."
 
 #, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
@@ -3052,7 +3055,7 @@ msgid "Firmware"
 msgstr "Firmware"
 
 msgid "Firmware upload failed (out of memory?)"
-msgstr ""
+msgstr "Firmware feltöltése meghiúsult (elfogyott a memória?)"
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "Firmware feltöltése nem támogatott ezen a platformon."
@@ -3196,9 +3199,6 @@ msgstr "Csoportazonosító"
 msgid "Group compilations"
 msgstr "Válogatások csoportosítása"
 
-msgid "Group description."
-msgstr "Csoport leírás."
-
 msgid "Group name."
 msgstr "Csoportnév."
 
@@ -3269,10 +3269,10 @@ msgid "HTTP Proxy"
 msgstr "HTTP proxy"
 
 msgid "HVM Guest"
-msgstr ""
+msgstr "HVM vendég"
 
 msgid "Hard Disk"
-msgstr ""
+msgstr "Merevlemez"
 
 msgid "Hardware"
 msgstr "Hardver"
@@ -3452,7 +3452,7 @@ msgstr "IRC elő támogatás"
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
-msgstr ""
+msgstr "CD/DVD lemeznek használandó ISO fájl útvonala (pl. %s)."
 
 msgid "ISO file to be mounted."
 msgstr "Csatolandó ISO fájl."
@@ -3631,7 +3631,7 @@ msgstr "Kezdő kivonat"
 
 #, php-format
 msgid "Initial ramdisk (e.g. %s)."
-msgstr ""
+msgstr "Kiindulási memórialemez (pl. %s)."
 
 msgid "Initialize"
 msgstr "Inicializálás"
@@ -3831,11 +3831,11 @@ msgid "Japanese"
 msgstr "Japán"
 
 msgid "Kernel"
-msgstr ""
+msgstr "Kernel"
 
 #, php-format
 msgid "Kernel file (e.g. %s)."
-msgstr ""
+msgstr "Kernelfájl (pl. %s)."
 
 msgid "Key"
 msgstr "Kulcs"
@@ -3893,9 +3893,6 @@ msgstr "Első panelen használt nyelv"
 
 msgid "Large read/write"
 msgstr "Nagy olvasás/írás"
-
-msgid "Last config change"
-msgstr "Utolsó konfigurációs változtatás"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -4170,7 +4167,7 @@ msgstr ""
 "esetén 240 lesz az értéke."
 
 msgid "MAC Address"
-msgstr ""
+msgstr "MAC cím"
 
 msgid "MAC address"
 msgstr "Fizikai cím (MAC address)"
@@ -4353,13 +4350,13 @@ msgid "Medium Acoustic Output"
 msgstr "Közepes zajszint kimenet"
 
 msgid "Mem"
-msgstr ""
+msgstr "Memória"
 
 msgid "Member Interface"
 msgstr "Interfész tag"
 
 msgid "Memory (MiB)"
-msgstr ""
+msgstr "Memória (MiB)"
 
 msgid "Memory Usage"
 msgstr "Memóriahasználat"
@@ -4557,7 +4554,7 @@ msgid "Name of the variable."
 msgstr "A változó neve."
 
 msgid "Nested HVM"
-msgstr ""
+msgstr "Egymásba ágyazott HVM"
 
 msgid "NetBIOS domain"
 msgstr "NetBIOS domain"
@@ -4572,7 +4569,7 @@ msgid "Network"
 msgstr "Hálózat"
 
 msgid "Network Adapter"
-msgstr ""
+msgstr "Hálózati adapter"
 
 msgid "Network File System"
 msgstr "Hálózati fájlrendszer"
@@ -4667,6 +4664,8 @@ msgid ""
 "No configured bridge interfaces. Please add new <a href='%s'>bridge "
 "interface</a> first."
 msgstr ""
+"Nincs híd interfész konfigurálva. Először hozz létre egy <a href='%s'>híd "
+"interfészt</a>."
 
 #, php-format
 msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
@@ -4984,7 +4983,7 @@ msgid "PSK"
 msgstr "PSK"
 
 msgid "PV Guest"
-msgstr ""
+msgstr "PV vendég"
 
 msgid "Package Name"
 msgstr "Csomagnév"
@@ -5287,9 +5286,6 @@ msgstr "Elsődleges"
 msgid "Primary Group"
 msgstr "Elsődleges csoport"
 
-msgid "Primary group"
-msgstr "Elsődleges csoport"
-
 msgid "Primary group is also selected in additional group."
 msgstr ""
 "Az elsődleges csoport szintén ki lett választva a további csoportban."
@@ -5410,7 +5406,7 @@ msgid "Raid name"
 msgstr "RAID neve"
 
 msgid "Ramdisk"
-msgstr ""
+msgstr "Memórialemez"
 
 msgid "Read"
 msgstr "Olvasás"
@@ -6415,6 +6411,9 @@ msgstr "Rendszeresemények"
 msgid "System info"
 msgstr "Rendszerinformáció"
 
+msgid "System last config change"
+msgstr ""
+
 msgid "System log"
 msgstr "Rendszernapló"
 
@@ -6437,7 +6436,7 @@ msgid "TCP port"
 msgstr "TCP port"
 
 msgid "TCP port is 5900+N, where N is VNC display number."
-msgstr ""
+msgstr "A TCP port 5900+N, ahol N a VNC kijelző száma."
 
 msgid "TCP port to bind the server to."
 msgstr "Szerverhez kötő TCP port"
@@ -6628,7 +6627,7 @@ msgstr "A kapcsolódó MIB fájlok megtalálható a következő helyen: %s."
 
 #, php-format
 msgid "The attribute '%s' already exists."
-msgstr ""
+msgstr "'%s' attribútum már létezik."
 
 #, c-format
 msgid ""
@@ -6996,10 +6995,10 @@ msgid "The extent name already exists."
 msgstr "A extent már létezik"
 
 msgid "The file you try to flash is not for this platform"
-msgstr ""
+msgstr "A frissítési fájl nem ehhez a platformhoz készült."
 
 msgid "The firmware file is corrupt"
-msgstr ""
+msgstr "A firmware fájl sérült."
 
 #, php-format
 msgid ""
@@ -7591,11 +7590,11 @@ msgstr ""
 msgid "This extent is used."
 msgstr "Ez a mérték használatban van."
 
-msgid "This function is unsupported. Use it on your own risk!"
-msgstr "Ez a funkció nem támogatott. Csak saját felelősségére használd!"
-
 msgid "This group already exists in the group list."
 msgstr "Ez a csoport már szerepel a listában."
+
+msgid "This is a very powerful tool. Use it on your own risk!"
+msgstr ""
 
 msgid ""
 "This is a way to take an existing insecure connection, and upgrade it to a "
@@ -7621,6 +7620,11 @@ msgid ""
 "the firmware has not been tampered with.<br /><br />Do you want to install "
 "this firmware anyway (on your own risk)?"
 msgstr ""
+"Nem hivatalos/támogatott firmware fájllal tervezel frissíteni. Ez "
+"kiszámíthatatlan viselkedéshez és komoly biztonsági hibákhoz vezethet. Csak "
+"akkor telepítsd ezt a firmware-t, ha biztosan megbízható forrásból származik "
+"és nem hamisított/módosított. <br /><br />Biztos, hogy telepíted ezt a "
+"firmware-t (csak a saját felelősségedre)?"
 
 msgid "This name already exists in the disk list."
 msgstr "Ez a név már szerepel a lemezlistában."
@@ -8147,17 +8151,6 @@ msgstr ""
 
 #, php-format
 msgid ""
-"UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
-"Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
-"NTFS can result in unpredictable results, file corruption, and loss of data!"
-msgstr ""
-"UFS és ZFS a FreeBSD - a(z) %s alapjául szolgáló operációs rendszer - NATÍV "
-"fájlrendszerei. Más fájlrendszer használata, mint például a FAT, FAT32, "
-"EXT2, EXT3, EXT4 vagy az NTFS kiszámíthatatlan eseményeket, fájlok "
-"sérüléseit, és adatvesztést okozhat!"
-
-#, php-format
-msgid ""
 "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
 "of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
 "or NTFS can result in unpredictable results, file corruption, and loss of "
@@ -8448,7 +8441,7 @@ msgid "Using %s bytes fragment size."
 msgstr "A% s bájt a töredékméret"
 
 msgid "VCPUs"
-msgstr ""
+msgstr "VCPU-k"
 
 msgid "VHID"
 msgstr "VHID"
@@ -8466,13 +8459,13 @@ msgid "VM"
 msgstr "VM"
 
 msgid "VM Type"
-msgstr ""
+msgstr "VM típusa"
 
 msgid "VNC Display"
-msgstr ""
+msgstr "VNC kijelző"
 
 msgid "VNC Password"
-msgstr ""
+msgstr "VNC jelszó"
 
 msgid "Value"
 msgstr "Érték"
@@ -8709,10 +8702,10 @@ msgid "Wrong permission on %s."
 msgstr "Hibás jogosultság  a következőn: %s."
 
 msgid "Xen"
-msgstr ""
+msgstr "Xen"
 
 msgid "Xen Virtual Machine"
-msgstr ""
+msgstr "Xen Virtuális Gép"
 
 msgid "Yes"
 msgstr "Igen"
@@ -9022,88 +9015,28 @@ msgstr "verzió:"
 msgid "warning"
 msgstr "figyelmeztetés"
 
-#~ msgid "Firmware image file"
-#~ msgstr "Firmware lemezkép"
+#~ msgid "Group description."
+#~ msgstr "Csoport leírás."
 
-#~ msgid "Image upload failed (out of memory?)"
-#~ msgstr "Lemezkép fájl feltöltési hiba (memória elfogyás?)"
+#~ msgid "Primary group"
+#~ msgstr "Elsődleges csoport"
 
-#~ msgid "The image file is corrupt"
-#~ msgstr "A lemezkép fájl hibás."
+#~ msgid "Build date"
+#~ msgstr "Rendszerfordítás ideje"
 
-#~ msgid "The uploaded image file is not for this platform"
-#~ msgstr "A feltöltött lemezkép fájl nem való ehhez a platformhoz."
+#~ msgid "Last config change"
+#~ msgstr "Utolsó konfigurációs változtatás"
 
-#~ msgid "Save file"
-#~ msgstr "Fájl mentése"
-
-#~ msgid "Load file"
-#~ msgstr "Fájl betöltése"
+#~ msgid "This function is unsupported. Use it on your own risk!"
+#~ msgstr "Ez a funkció nem támogatott. Csak saját felelősségére használd!"
 
 #, php-format
 #~ msgid ""
-#~ "DO NOT abort the firmware upgrade process once it has started. Once it is "
-#~ "completed, the server will automatically reboot, the current configuration "
-#~ "will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
-#~ "the upgrade.<br />It is strongly recommended that you <a "
-#~ "href='%s'>Backup</a> the server configuration before doing a upgrade."
+#~ "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
+#~ "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
+#~ "NTFS can result in unpredictable results, file corruption, and loss of data!"
 #~ msgstr ""
-#~ "NE SZAKÍTSD meg a frissítési folyamatot, ha már elindítottad! Amint "
-#~ "befejeződött, a szerver automatikusan újraindul, a jelenlegi konfiguráció "
-#~ "utána is megmarad. <br />Legalább %d MiB szabad RAM szükséges a "
-#~ "frissítéshez. <br />Frissítés előtt célszerű a beállításokat menteni: <a "
-#~ "href='%s'>Mentés</a>."
-
-#~ msgid ""
-#~ "This means that the image you uploaded is not an official/supported image "
-#~ "and may lead to unexpected behavior or security compromises. Only install "
-#~ "images that come from sources that you trust, and make sure that the image "
-#~ "has not been tampered with.<br /><br />Do you want to install this image "
-#~ "anyway (on your own risk)?"
-#~ msgstr ""
-#~ "Ez azt jelenti, hogy a feltöltött kép nem hivatalos/támogatott kép és nem "
-#~ "várt működést vagy biztonsági kompromisszumokat okozhat. Csak akkor "
-#~ "telepítsd, ha megbízható forrásból származik, és győződjön meg róla, hogy a "
-#~ "képet nem módosították.<br /><br />Biztos szeretnéd telepíteni ezt a képet "
-#~ "(saját felelősségedre)?"
-
-#~ msgid "Enable firmware upload"
-#~ msgstr "Firmware feltöltésének engedélyezése"
-
-#~ msgid ""
-#~ "Click &quot;Enable firmware upload&quot; below, then choose the embedded "
-#~ "image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
-#~ "the upgrade process."
-#~ msgstr ""
-#~ "Kattints a &quot;Firmware feltöltésének engedélyezése&quot; gombra, majd "
-#~ "válaszd ki az embedded képfájlt.<br />Végül kattints a &quot;Firmware "
-#~ "frissítése&quot; gombra a folyamat indításához."
-
-#~ msgid "Disable firmware upload"
-#~ msgstr "Firmware feltöltésének letiltása"
-
-#~ msgid "Upgrade firmware"
-#~ msgstr "Firmware frissítése"
-
-#~ msgid "Edit File"
-#~ msgstr "Fájl szerkesztése"
-
-#~ msgid "Save File"
-#~ msgstr "Fájl mentése"
-
-#~ msgid "Disable Firmware Upload"
-#~ msgstr "Firmware feltöltés tiltása"
-
-#~ msgid "Enable Firmware Upload"
-#~ msgstr "Firmware feltöltés engedélyezése"
-
-#, php-format
-#~ msgid ""
-#~ "DO NOT abort the firmware upgrade process once it has started.<br />Try to "
-#~ "flash other files than a valid embedded (img.xz) firmware only.<br />It is "
-#~ "recommended that you <a href='%s'>Backup</a> the server configuration before "
-#~ "doing a upgrade."
-#~ msgstr ""
-#~ "NE SZAKÍTSD meg a frissítési folyamatot, ha már elindítottad!<br/>Csak "
-#~ "érvényes embedded (img.xz) firmware-t használj.<br/>\r\n"
-#~ "Frissítés előtt célszerű a beállításokat menteni: <a href='%s'>Mentés</a> ."
+#~ "UFS és ZFS a FreeBSD - a(z) %s alapjául szolgáló operációs rendszer - NATÍV "
+#~ "fájlrendszerei. Más fájlrendszer használata, mint például a FAT, FAT32, "
+#~ "EXT2, EXT3, EXT4 vagy az NTFS kiszámíthatatlan eseményeket, fájlok "
+#~ "sérüléseit, és adatvesztést okozhat!"

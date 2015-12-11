@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-12-10 23:13+0000\n"
+"POT-Creation-Date: 2015-12-11 15:09+0000\n"
 "PO-Revision-Date: 2015-10-13 18:26+0000\n"
 "Last-Translator: Hasan Yılmaz <iletisim@hasanyilmaz.net>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-10 15:13+0000\n"
+"X-Launchpad-Export-Date: 2015-12-11 14:44+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
@@ -966,9 +966,6 @@ msgstr ""
 msgid "Browseable"
 msgstr "Gözatılabilir"
 
-msgid "Build date"
-msgstr ""
-
 msgid "Building database in progress"
 msgstr ""
 
@@ -1224,6 +1221,9 @@ msgid "Community"
 msgstr "Topluluk"
 
 msgid "Compilations directories"
+msgstr ""
+
+msgid "Compiled"
 msgstr ""
 
 msgid "Compliant profile to be used."
@@ -1592,7 +1592,7 @@ msgstr ""
 #, php-format
 msgid ""
 "DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
 "/>It is recommended that you <a href='%s'>Backup</a> the server "
 "configuration before doing a upgrade."
 msgstr ""
@@ -2999,9 +2999,6 @@ msgstr "Grup Kimliği"
 msgid "Group compilations"
 msgstr ""
 
-msgid "Group description."
-msgstr "Grup tanımlaması"
-
 msgid "Group name."
 msgstr "Grup ismi"
 
@@ -3639,9 +3636,6 @@ msgstr ""
 
 msgid "Large read/write"
 msgstr "Büyük okuma/yazma"
-
-msgid "Last config change"
-msgstr "Son ayar dosyasını değiştir"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -4934,9 +4928,6 @@ msgstr ""
 msgid "Primary Group"
 msgstr "Öncelikli Grup"
 
-msgid "Primary group"
-msgstr "Öncelikli grup"
-
 msgid "Primary group is also selected in additional group."
 msgstr ""
 
@@ -5981,6 +5972,9 @@ msgstr "Sistem Olayları"
 msgid "System info"
 msgstr "Sistem Bilgisi"
 
+msgid "System last config change"
+msgstr ""
+
 msgid "System log"
 msgstr "Sistem günlükleri"
 
@@ -6989,11 +6983,11 @@ msgstr ""
 msgid "This extent is used."
 msgstr ""
 
-msgid "This function is unsupported. Use it on your own risk!"
-msgstr ""
-
 msgid "This group already exists in the group list."
 msgstr "Bu grup zaten grup listesinde mevcut."
+
+msgid "This is a very powerful tool. Use it on your own risk!"
+msgstr ""
 
 msgid ""
 "This is a way to take an existing insecure connection, and upgrade it to a "
@@ -7432,13 +7426,6 @@ msgid ""
 "UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
 "filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
 "unpredictable results, file corruption and the loss of data!"
-msgstr ""
-
-#, php-format
-msgid ""
-"UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
-"Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
-"NTFS can result in unpredictable results, file corruption, and loss of data!"
 msgstr ""
 
 #, php-format
@@ -8249,14 +8236,11 @@ msgstr ""
 msgid "warning"
 msgstr ""
 
-#~ msgid "Disable firmware upload"
-#~ msgstr "Firmware yüklemeyi devre dışı bırak"
+#~ msgid "Group description."
+#~ msgstr "Grup tanımlaması"
 
-#~ msgid "Enable firmware upload"
-#~ msgstr "Firmware yüklemeyi aktifleştir"
+#~ msgid "Last config change"
+#~ msgstr "Son ayar dosyasını değiştir"
 
-#~ msgid "Firmware image file"
-#~ msgstr "Firmware image dosyası"
-
-#~ msgid "Image upload failed (out of memory?)"
-#~ msgstr "Resim yükleme başarısız ( yetersiz bellek?)"
+#~ msgid "Primary group"
+#~ msgstr "Öncelikli grup"

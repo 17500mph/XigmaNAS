@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-10 23:13+0000\n"
+"POT-Creation-Date: 2015-12-11 15:09+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-10 15:12+0000\n"
+"X-Launchpad-Export-Date: 2015-12-11 14:44+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -959,9 +959,6 @@ msgstr ""
 msgid "Browseable"
 msgstr "검색 가능 여부"
 
-msgid "Build date"
-msgstr ""
-
 msgid "Building database in progress"
 msgstr ""
 
@@ -1219,6 +1216,9 @@ msgid "Community"
 msgstr "커뮤니티"
 
 msgid "Compilations directories"
+msgstr ""
+
+msgid "Compiled"
 msgstr ""
 
 msgid "Compliant profile to be used."
@@ -1589,7 +1589,7 @@ msgstr ""
 #, php-format
 msgid ""
 "DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
 "/>It is recommended that you <a href='%s'>Backup</a> the server "
 "configuration before doing a upgrade."
 msgstr ""
@@ -2985,9 +2985,6 @@ msgstr "그룹 ID"
 msgid "Group compilations"
 msgstr ""
 
-msgid "Group description."
-msgstr "그룹 설명."
-
 msgid "Group name."
 msgstr "그룹 명."
 
@@ -3629,9 +3626,6 @@ msgstr ""
 
 msgid "Large read/write"
 msgstr "대용량 읽기/쓰기"
-
-msgid "Last config change"
-msgstr "마지막 설정 변경일"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -4929,9 +4923,6 @@ msgstr ""
 msgid "Primary Group"
 msgstr "기본 그룹"
 
-msgid "Primary group"
-msgstr "기본 그룹"
-
 msgid "Primary group is also selected in additional group."
 msgstr "기본 그룹이 추가 그룹에서도 선택되었습니다."
 
@@ -5984,6 +5975,9 @@ msgstr "시스템 이벤트"
 msgid "System info"
 msgstr "시스템 정보"
 
+msgid "System last config change"
+msgstr ""
+
 msgid "System log"
 msgstr "시스템 로그"
 
@@ -7008,11 +7002,11 @@ msgstr ""
 msgid "This extent is used."
 msgstr "이 범위는 이용되고 있습니다."
 
-msgid "This function is unsupported. Use it on your own risk!"
-msgstr "이 기능은 지원되지 않습니다. 자기 책임 하에 이용하십시오!"
-
 msgid "This group already exists in the group list."
 msgstr "이 그룹은 그룹 목록에 이미 존재합니다."
+
+msgid "This is a very powerful tool. Use it on your own risk!"
+msgstr ""
 
 msgid ""
 "This is a way to take an existing insecure connection, and upgrade it to a "
@@ -7490,13 +7484,6 @@ msgid ""
 "UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
 "filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
 "unpredictable results, file corruption and the loss of data!"
-msgstr ""
-
-#, php-format
-msgid ""
-"UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
-"Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
-"NTFS can result in unpredictable results, file corruption, and loss of data!"
 msgstr ""
 
 #, php-format
@@ -8315,34 +8302,14 @@ msgstr ""
 msgid "warning"
 msgstr ""
 
-#~ msgid "Disable firmware upload"
-#~ msgstr "펌웨어 업로드 비활성화"
+#~ msgid "Group description."
+#~ msgstr "그룹 설명."
 
-#~ msgid "Enable firmware upload"
-#~ msgstr "펌웨어 업로드 활성화"
+#~ msgid "Last config change"
+#~ msgstr "마지막 설정 변경일"
 
-#~ msgid "Firmware image file"
-#~ msgstr "펌웨어 이미지 파일"
+#~ msgid "Primary group"
+#~ msgstr "기본 그룹"
 
-#~ msgid "Image upload failed (out of memory?)"
-#~ msgstr "이미지 업로드 실패함(메모리 부족?)"
-
-#~ msgid "The image file is corrupt"
-#~ msgstr "이미지 파일이 깨졌습니다"
-
-#~ msgid "The uploaded image file is not for this platform"
-#~ msgstr "업로드 된 이미지 파일은 이 플랫폼 용이 아닙니다."
-
-#~ msgid ""
-#~ "This means that the image you uploaded is not an official/supported image "
-#~ "and may lead to unexpected behavior or security compromises. Only install "
-#~ "images that come from sources that you trust, and make sure that the image "
-#~ "has not been tampered with.<br /><br />Do you want to install this image "
-#~ "anyway (on your own risk)?"
-#~ msgstr ""
-#~ "이것은 당신이 업로드 한 이미지가 공식적으로 지원되는 이미지가 아니어서 예기치 않은 행동이나 보안 취약점을 일으킬 수도 있다는 것을 "
-#~ "의미합니다. 신뢰할 수 있는 소스에서 얻은 이미지들만 설치하시고 이미지가 변조 되지 않았는지 확인하시기 바랍니다.<br /><br "
-#~ "/>어쨌든 (당신의 책임 하에) 이 이미지를 설치하시겠습니까?"
-
-#~ msgid "Upgrade firmware"
-#~ msgstr "펌웨어 업그레이드"
+#~ msgid "This function is unsupported. Use it on your own risk!"
+#~ msgstr "이 기능은 지원되지 않습니다. 자기 책임 하에 이용하십시오!"

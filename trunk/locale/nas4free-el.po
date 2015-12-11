@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-10 23:13+0000\n"
-"PO-Revision-Date: 2015-12-10 15:01+0000\n"
+"POT-Creation-Date: 2015-12-11 15:09+0000\n"
+"PO-Revision-Date: 2015-12-11 12:36+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-10 15:12+0000\n"
+"X-Launchpad-Export-Date: 2015-12-11 14:44+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -1078,9 +1078,6 @@ msgstr "Περιήγηση στον κατάλογο"
 msgid "Browseable"
 msgstr "Περιηγήσιμα"
 
-msgid "Build date"
-msgstr "Ημερομηνία δημιουργίας"
-
 msgid "Building database in progress"
 msgstr "Δημιουργία βάσης δεδομένων σε εξέλιξη"
 
@@ -1352,6 +1349,9 @@ msgstr "Κοινότητα"
 
 msgid "Compilations directories"
 msgstr "Φάκελοι συλλογών"
+
+msgid "Compiled"
+msgstr ""
 
 msgid "Compliant profile to be used."
 msgstr "Συμβατό προφίλ που θα χρησιμοποιηθεί."
@@ -1811,15 +1811,10 @@ msgstr "Το πεδίο για το διακομιστή DNS είναι άδει
 #, php-format
 msgid ""
 "DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
 "/>It is recommended that you <a href='%s'>Backup</a> the server "
 "configuration before doing a upgrade."
 msgstr ""
-"ΜΗΝ κάνετε ακύρωση της διαδικασίας ενημέρωσης  από τη στιγμή που θα "
-"ξεκινήσει.<br />ΜΗΝ προσπαθείτε να φορτώσετε άλλα  αρχεία εκτός από τα "
-"έγκυρα αρχεία  '%s-x -embedded.img.xz'.<br />Συνιστάται να πάρετε ένα <a "
-"href='%s'>Αντίγραφο Ασφαλείας</a> των ρυθμίσεων του διακομιστή πριν "
-"προχωρήσετε με την ενημέρωση."
 
 msgid "DVD"
 msgstr "DVD"
@@ -3297,9 +3292,6 @@ msgstr "ID Ομάδας"
 msgid "Group compilations"
 msgstr "Ομαδοποίηση συλλογών"
 
-msgid "Group description."
-msgstr "Περιγραφή ομάδας."
-
 msgid "Group name."
 msgstr "Όνομα ομάδας."
 
@@ -4020,9 +4012,6 @@ msgstr "Γλώσσα για χρήση στην μπροστινή οθόνη"
 
 msgid "Large read/write"
 msgstr "Μεγάλη ανάγνωση/εγγραφή"
-
-msgid "Last config change"
-msgstr "Τελευταία αλλαγή ρυθμίσεων"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -5433,9 +5422,6 @@ msgstr "Πρωτεύων"
 msgid "Primary Group"
 msgstr "Πρωτεύουσα Ομάδα"
 
-msgid "Primary group"
-msgstr "Πρωτεύουσα ομάδα"
-
 msgid "Primary group is also selected in additional group."
 msgstr "Η κύρια ομάδα έχει επίσης επιλεγεί ως επιπλέον ομάδα."
 
@@ -6569,6 +6555,9 @@ msgstr "Συμβάντα συστήματος"
 
 msgid "System info"
 msgstr "Πληροφορίες συστήματος"
+
+msgid "System last config change"
+msgstr "Τελευταία αλλαγή ρυθμίσεων του συστήματος"
 
 msgid "System log"
 msgstr "Αρχείο καταγραφής συστήματος"
@@ -7810,13 +7799,12 @@ msgstr ""
 msgid "This extent is used."
 msgstr "Αυτή η επέκταση χρησιμοποιείται."
 
-msgid "This function is unsupported. Use it on your own risk!"
-msgstr ""
-"Γι' αυτήν τη λειτουργία δεν παρέχεται υποστήριξη. Χρησιμοποιήστε την με δική "
-"σας ευθύνη!"
-
 msgid "This group already exists in the group list."
 msgstr "Αυτή η ομάδα υπάρχει ήδη στη λίστα ομάδων."
+
+msgid "This is a very powerful tool. Use it on your own risk!"
+msgstr ""
+"Αυτό είναι ένα πολύ ισχυρό εργαλείο. Χρησιμοποιήστε το με δικό σας ρίσκο!"
 
 msgid ""
 "This is a way to take an existing insecure connection, and upgrade it to a "
@@ -8398,17 +8386,6 @@ msgstr ""
 "άλλων συστημάτων αρχείων, όπως EXT2, EXT3, EXT4, FAT, FAT32, ή NTFS μπορεί "
 "να οδηγήσει σε απρόβλεπτη συμπεριφορά, καταστροφή αρχείων και απώλεια "
 "δεδομένων!"
-
-#, php-format
-msgid ""
-"UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
-"Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
-"NTFS can result in unpredictable results, file corruption, and loss of data!"
-msgstr ""
-"Το UFS και το ZFS  είναι τα ΕΓΓΕΝΗ συστήματα αρχείων του FreeBSD (το OS στο "
-"οποίο βασίζεται το %s). Η προσπάθεια χρήσης άλλων συστημάτων αρχείων, όπως "
-"FAT, FAT32, EXT2, EXT3, ή NTFS μπορεί να έχει ως επακόλουθο απρόβλεπτα "
-"αποτελέσματα, καταστροφή αρχείων, και χάσιμο δεδομένων!"
 
 #, php-format
 msgid ""
@@ -9301,98 +9278,30 @@ msgstr "έκδοση:"
 msgid "warning"
 msgstr "προειδοποίηση"
 
-#~ msgid "Disable firmware upload"
-#~ msgstr "Απενεργοποίηση αποστολής firmware"
+#~ msgid "Group description."
+#~ msgstr "Περιγραφή ομάδας."
 
-#~ msgid "Enable firmware upload"
-#~ msgstr "Ενεργοποίηση αποστολής firmware"
+#~ msgid "Last config change"
+#~ msgstr "Τελευταία αλλαγή ρυθμίσεων"
 
-#~ msgid "Firmware image file"
-#~ msgstr "Αρχείο εικόνας firmware"
+#~ msgid "Primary group"
+#~ msgstr "Πρωτεύουσα ομάδα"
 
-#~ msgid "The image file is corrupt"
-#~ msgstr "Το αρχείο εικόνας είναι κατεσταμμένο"
-
-#~ msgid "The uploaded image file is not for this platform"
-#~ msgstr "Η εικόνα που έχει αποσταλεί δεν είναι για αυτήν την πλατφόρμα"
-
-#~ msgid "Upgrade firmware"
-#~ msgstr "Αναβάθμιση firmware"
-
-#~ msgid ""
-#~ "This means that the image you uploaded is not an official/supported image "
-#~ "and may lead to unexpected behavior or security compromises. Only install "
-#~ "images that come from sources that you trust, and make sure that the image "
-#~ "has not been tampered with.<br /><br />Do you want to install this image "
-#~ "anyway (on your own risk)?"
+#~ msgid "This function is unsupported. Use it on your own risk!"
 #~ msgstr ""
-#~ "Αυτό σημαίνει ότι το image που φορτώθηκε δεν είναι επισήμως υποστηριζόμενο "
-#~ "image και μπορεί να οδηγήσει σε μη αναμενόμενη συμπεριφορά ή σε κενά "
-#~ "ασφαλείας. Να εγκαθιστάτε μόνο images που προέρχονται από πηγές που "
-#~ "εμπιστεύεστε, και βεβαιωθείτε ότι το image δεν έχει αλλοιωθεί.<br /><br "
-#~ "/>Θέλετε να εγκαταστήσετε αυτό το image ούτως ή άλλως (με δική σας ευθύνη);"
+#~ "Γι' αυτήν τη λειτουργία δεν παρέχεται υποστήριξη. Χρησιμοποιήστε την με δική "
+#~ "σας ευθύνη!"
 
-#~ msgid "Image upload failed (out of memory?)"
-#~ msgstr "Αποτυχία αποστολής αρχείου image (δεν επαρκεί η μνήμη;)"
-
-#~ msgid "Save file"
-#~ msgstr "Αποθήκευση αρχείου"
-
-#~ msgid "Load file"
-#~ msgstr "Φόρτωση αρχείου"
+#~ msgid "Build date"
+#~ msgstr "Ημερομηνία δημιουργίας"
 
 #, php-format
 #~ msgid ""
-#~ "DO NOT abort the firmware upgrade process once it has started. Once it is "
-#~ "completed, the server will automatically reboot, the current configuration "
-#~ "will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
-#~ "the upgrade.<br />It is strongly recommended that you <a "
-#~ "href='%s'>Backup</a> the server configuration before doing a upgrade."
+#~ "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
+#~ "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
+#~ "NTFS can result in unpredictable results, file corruption, and loss of data!"
 #~ msgstr ""
-#~ "ΜΗΝ κάνετε ακύρωση της αναβάθμισης του firmware από τη στιγμή που έχει "
-#~ "ξεκινήσει. Όταν η διαδικασία ολοκληρωθεί, ο διακομιστής θα κάνει "
-#~ "επανεκκίνηση αυτόματα, ενώ οι τρέχουσες ρυθμίσεις σας θα διατηρηθούν. <br "
-#~ "/>Χρειάζεστε τουλάχιστον %d Mb ελεύθερη RAM για να κάνετε την αναβάθμιση "
-#~ ".<br />Σας συνιστούμε να κάνετε λήψη ενός <a href='%s'>Αντιγράφου "
-#~ "ασφαλείας</a> των ρυθμίσεων του συστήματος πριν κάνετε την αναβάθμιση."
-
-#~ msgid ""
-#~ "Click &quot;Enable firmware upload&quot; below, then choose the embedded "
-#~ "image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
-#~ "the upgrade process."
-#~ msgstr ""
-#~ "Πατήστε το &quot;Ενεργοποίηση αποστολής firmware&quot; παρακάτω, και κατόπιν "
-#~ "επιλέξτε το αρχείο που θέλετε να ανεβάσετε.<br/>Πατήστε το &quot;Αναβάθμιση "
-#~ "firmware&quot; για να ξεκινήσει η διαδικασία αναβάθμισης."
-
-#~ msgid "Edit File"
-#~ msgstr "Επεξεργασία αρχείου"
-
-#~ msgid "Save File"
-#~ msgstr "Αποθήκευση Αρχείου"
-
-#~ msgid "Boot arguments"
-#~ msgstr "Παράμετροι εκκίνησης"
-
-#~ msgid "Boot loader"
-#~ msgstr "Διαχειριστής Εκκίνησης"
-
-#~ msgid "VNC display"
-#~ msgstr "Προβολή VNC"
-
-#~ msgid "VNC password"
-#~ msgstr "Κωδικός VNC"
-
-#~ msgid ""
-#~ "This means that the firmware you uploaded is not an official/supported image "
-#~ "and may lead to unexpected behavior or security compromises. Only install "
-#~ "images that come from sources that you trust, and make sure that the image "
-#~ "has not been tampered with.<br /><br />Do you want to install this image "
-#~ "anyway (on your own risk)?"
-#~ msgstr ""
-#~ "Αυτό σημαίνει ότι το υλικολογισμικό που μεταφορτώσατε δεν είναι "
-#~ "επίσημο/υποστηριζόμενο image και μπορεί να οδηγήσει σε απρόβλεπτη "
-#~ "συμπεριφορά ή σε συμβιβασμούς από πλευράς ασφαλείας. Να εγκαθιστάτε αρχεία "
-#~ "υλικολογισμικού που προέρχονται μόνο από πηγές που εμπιστεύεστε, και να "
-#~ "βεβαιώνεστε ότι το αρχείο image δεν έχει πειραχθεί.<br /><br />Θέλετε να "
-#~ "εγκαταστήσετε αυτό το image όπως και να' χει (με δικό σας ρίσκο);"
+#~ "Το UFS και το ZFS  είναι τα ΕΓΓΕΝΗ συστήματα αρχείων του FreeBSD (το OS στο "
+#~ "οποίο βασίζεται το %s). Η προσπάθεια χρήσης άλλων συστημάτων αρχείων, όπως "
+#~ "FAT, FAT32, EXT2, EXT3, ή NTFS μπορεί να έχει ως επακόλουθο απρόβλεπτα "
+#~ "αποτελέσματα, καταστροφή αρχείων, και χάσιμο δεδομένων!"

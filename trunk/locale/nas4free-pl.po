@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-10 23:13+0000\n"
+"POT-Creation-Date: 2015-12-11 15:09+0000\n"
 "PO-Revision-Date: 2015-10-05 21:47+0000\n"
 "Last-Translator: Robert Gdula <robert.gdula@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-10 15:13+0000\n"
+"X-Launchpad-Export-Date: 2015-12-11 14:44+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: POLAND\n"
 "Language: \n"
@@ -1026,9 +1026,6 @@ msgstr ""
 msgid "Browseable"
 msgstr "Widoczny"
 
-msgid "Build date"
-msgstr "Data kompilacji"
-
 msgid "Building database in progress"
 msgstr ""
 
@@ -1291,6 +1288,9 @@ msgstr "Społeczność"
 
 msgid "Compilations directories"
 msgstr "Katalogi kompilacji"
+
+msgid "Compiled"
+msgstr ""
 
 msgid "Compliant profile to be used."
 msgstr "Zgodny profil do użycia."
@@ -1684,7 +1684,7 @@ msgstr "Brak określonego serwera DNS"
 #, php-format
 msgid ""
 "DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
 "/>It is recommended that you <a href='%s'>Backup</a> the server "
 "configuration before doing a upgrade."
 msgstr ""
@@ -3126,9 +3126,6 @@ msgstr "ID grupy"
 msgid "Group compilations"
 msgstr "Grupa - kompilacje"
 
-msgid "Group description."
-msgstr "Opis grupy."
-
 msgid "Group name."
 msgstr "Nazwa grupy."
 
@@ -3812,9 +3809,6 @@ msgstr "Język używany na przednim panelu"
 
 msgid "Large read/write"
 msgstr "Opcja \"large read/write\""
-
-msgid "Last config change"
-msgstr "Ostatnie zmiany konfiguracji"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -5161,9 +5155,6 @@ msgstr "Podstawowy"
 msgid "Primary Group"
 msgstr "Główna grupa"
 
-msgid "Primary group"
-msgstr "Główna grupa"
-
 msgid "Primary group is also selected in additional group."
 msgstr "Głowna grupa jest także zaznaczona w dodatkowej grupie."
 
@@ -6260,6 +6251,9 @@ msgstr "Zdarzenia systemowe"
 msgid "System info"
 msgstr "Informacje systemowe"
 
+msgid "System last config change"
+msgstr ""
+
 msgid "System log"
 msgstr "Dziennik systemowy"
 
@@ -7355,12 +7349,11 @@ msgstr ""
 msgid "This extent is used."
 msgstr "Ten zakres jest używany."
 
-msgid "This function is unsupported. Use it on your own risk!"
-msgstr ""
-"Ta funkcja nie jest wspierana. Używasz jej na własną odpowiedzialność."
-
 msgid "This group already exists in the group list."
 msgstr "Ta grupa już występuje na liście grup."
+
+msgid "This is a very powerful tool. Use it on your own risk!"
+msgstr ""
 
 msgid ""
 "This is a way to take an existing insecure connection, and upgrade it to a "
@@ -7856,17 +7849,6 @@ msgid ""
 "filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
 "unpredictable results, file corruption and the loss of data!"
 msgstr ""
-
-#, php-format
-msgid ""
-"UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
-"Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
-"NTFS can result in unpredictable results, file corruption, and loss of data!"
-msgstr ""
-"UFS i ZFS są natywnymi systemami plików w FreeBSD (system na którym bazuje "
-"%s). Próba użycia innych systemów plików, takich jak FAT, FAT32, EXT2, EXT3, "
-"EXT4 lub NTFS może spowodować nieprzewidywalne skutki, uszkodzenie pliku lub "
-"utratę danych!"
 
 #, php-format
 msgid ""
@@ -8720,52 +8702,29 @@ msgstr "wersja:"
 msgid "warning"
 msgstr ""
 
-#~ msgid "Disable firmware upload"
-#~ msgstr "Wyłącz wysyłanie firmware"
+#~ msgid "Group description."
+#~ msgstr "Opis grupy."
 
-#~ msgid "Enable firmware upload"
-#~ msgstr "Włącz wysyłanie firmware."
+#~ msgid "Last config change"
+#~ msgstr "Ostatnie zmiany konfiguracji"
 
-#~ msgid "Firmware image file"
-#~ msgstr "Plik obrazu firmware"
+#~ msgid "Primary group"
+#~ msgstr "Główna grupa"
 
-#~ msgid "Image upload failed (out of memory?)"
-#~ msgstr "Wysyłanie obrazu nieudane (brak pamięci ?)"
-
-#~ msgid "The image file is corrupt"
-#~ msgstr "Plik obrazu jest uszkodzony"
-
-#~ msgid "The uploaded image file is not for this platform"
-#~ msgstr "Wysłany obraz nie jest dla tej platformy"
-
-#~ msgid "Upgrade firmware"
-#~ msgstr "Aktualizuj firmware"
-
-#~ msgid "Save file"
-#~ msgstr "Zapisz plik"
-
-#~ msgid ""
-#~ "Click &quot;Enable firmware upload&quot; below, then choose the embedded "
-#~ "image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
-#~ "the upgrade process."
+#~ msgid "This function is unsupported. Use it on your own risk!"
 #~ msgstr ""
-#~ "Kliknij &quot;Włącz wysyłanie firmware&quot; poniżej, następnie wybierz "
-#~ "obrazdo sflashowania(embedded).<br />Kliknij &quot;Aktualizuj firmware&quot; "
-#~ "by rozpocząć proces aktualizacji."
+#~ "Ta funkcja nie jest wspierana. Używasz jej na własną odpowiedzialność."
+
+#~ msgid "Build date"
+#~ msgstr "Data kompilacji"
 
 #, php-format
 #~ msgid ""
-#~ "DO NOT abort the firmware upgrade process once it has started. Once it is "
-#~ "completed, the server will automatically reboot, the current configuration "
-#~ "will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
-#~ "the upgrade.<br />It is strongly recommended that you <a "
-#~ "href='%s'>Backup</a> the server configuration before doing a upgrade."
+#~ "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
+#~ "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
+#~ "NTFS can result in unpredictable results, file corruption, and loss of data!"
 #~ msgstr ""
-#~ "Nie przerywaj procesu aktualizacji po jej rozpoczęciu. Po zakończeniu serwer "
-#~ "zostanie uruchomiony ponownie, aktualna konfiguracja zostanie zachowana.<br "
-#~ "/>Potrzebujesz co najmniej %d MB wolnej pamięci RAM by wykonać "
-#~ "aktualizację.<br />Wysoce zalecana jest<a href='%s'>Kopia zapasowa</a> "
-#~ "konfiguracji serwera przed aktualizacją"
-
-#~ msgid "Load file"
-#~ msgstr "Wczytaj plik"
+#~ "UFS i ZFS są natywnymi systemami plików w FreeBSD (system na którym bazuje "
+#~ "%s). Próba użycia innych systemów plików, takich jak FAT, FAT32, EXT2, EXT3, "
+#~ "EXT4 lub NTFS może spowodować nieprzewidywalne skutki, uszkodzenie pliku lub "
+#~ "utratę danych!"

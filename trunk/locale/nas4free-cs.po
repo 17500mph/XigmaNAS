@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-10 23:13+0000\n"
+"POT-Creation-Date: 2015-12-11 15:09+0000\n"
 "PO-Revision-Date: 2015-12-10 07:34+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-10 15:12+0000\n"
+"X-Launchpad-Export-Date: 2015-12-11 14:44+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -1070,9 +1070,6 @@ msgstr "Procházet složku"
 msgid "Browseable"
 msgstr "Možné procházet"
 
-msgid "Build date"
-msgstr "Datum sestavení"
-
 msgid "Building database in progress"
 msgstr "Probíhá vytváření databáze"
 
@@ -1352,6 +1349,9 @@ msgstr "Komunita (přihlašovací jméno)"
 
 msgid "Compilations directories"
 msgstr "Složky sbírek"
+
+msgid "Compiled"
+msgstr ""
 
 msgid "Compliant profile to be used."
 msgstr "Odpovídající profil, který má být použit."
@@ -1802,7 +1802,7 @@ msgstr "Není vyplněn DNS server."
 #, php-format
 msgid ""
 "DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-"try to flash other files than a valid '%s-x -embedded.img.xz' file only.<br "
+"try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
 "/>It is recommended that you <a href='%s'>Backup</a> the server "
 "configuration before doing a upgrade."
 msgstr ""
@@ -3266,9 +3266,6 @@ msgstr "Identifikátor skupiny"
 msgid "Group compilations"
 msgstr "Sbírky skupiny"
 
-msgid "Group description."
-msgstr "Popis skupiny"
-
 msgid "Group name."
 msgstr "Název skupiny"
 
@@ -3979,9 +3976,6 @@ msgstr "Jazyk pro zobrazení na čelním panelu"
 
 msgid "Large read/write"
 msgstr "Velké čtení/zápis"
-
-msgid "Last config change"
-msgstr "Poslední změna v nastavení"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -5394,9 +5388,6 @@ msgstr "Hlavní"
 msgid "Primary Group"
 msgstr "Hlavní skupina"
 
-msgid "Primary group"
-msgstr "Hlavní skupina"
-
 msgid "Primary group is also selected in additional group."
 msgstr "Hlavní skupina je vybrána i mezi dalšími skupinami."
 
@@ -6519,6 +6510,9 @@ msgstr "Systémové události"
 
 msgid "System info"
 msgstr "Informace o systému"
+
+msgid "System last config change"
+msgstr ""
 
 msgid "System log"
 msgstr "Záznam událostí v systému"
@@ -7705,11 +7699,11 @@ msgstr "Tato zpráva byla odeslán pro ověření správného nastavení e-mailu
 msgid "This extent is used."
 msgstr "Tato úložná jednotka je používána."
 
-msgid "This function is unsupported. Use it on your own risk!"
-msgstr "Tato funkce je bez záruky. Použijte pouze na vlastní nebezpečí!"
-
 msgid "This group already exists in the group list."
 msgstr "Tato skupina už v seznamu skupin existuje."
+
+msgid "This is a very powerful tool. Use it on your own risk!"
+msgstr ""
 
 msgid ""
 "This is a way to take an existing insecure connection, and upgrade it to a "
@@ -8276,17 +8270,6 @@ msgstr ""
 "souborových systémů, jako třeba EXT2, EXT3, EXT4, FAT, FAT32, nebo NTFS může "
 "vést k neočekávaným výsledkům, poškození souborového systému a vůbec ke "
 "ztrátě dat!"
-
-#, php-format
-msgid ""
-"UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
-"Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
-"NTFS can result in unpredictable results, file corruption, and loss of data!"
-msgstr ""
-"UFS a ZFS jsou pro operační systém FreeBSD (na kterém je %s založený) "
-"PŘIROZENÝMI souborovými systémy. Pokus o použití ostatních souborových "
-"systémů, jako např. FAT, FAT32, EXT2, EXT3, EXT4 nebo NTFS může vyústit v "
-"nečekané důsledky, poškození souborů a ztrátu dat!"
 
 #, php-format
 msgid ""
@@ -9175,73 +9158,28 @@ msgstr "verze:"
 msgid "warning"
 msgstr "varování"
 
-#~ msgid "Load file"
-#~ msgstr "Načíst soubor"
+#~ msgid "Build date"
+#~ msgstr "Datum sestavení"
 
-#~ msgid "Save file"
-#~ msgstr "Uložit soubor"
+#~ msgid "Last config change"
+#~ msgstr "Poslední změna v nastavení"
 
-#~ msgid "Image upload failed (out of memory?)"
-#~ msgstr "Nahrání obrazu se nezdařilo (nedostatek paměti?)"
+#~ msgid "Primary group"
+#~ msgstr "Hlavní skupina"
 
-#~ msgid "Upgrade firmware"
-#~ msgstr "Přejít na novější verzi firmware"
-
-#~ msgid "The image file is corrupt"
-#~ msgstr "Soubor s obrazem firmware je poškozený"
-
-#~ msgid "The uploaded image file is not for this platform"
-#~ msgstr ""
-#~ "Firmware, poskytnutý v tomto souboru, není určen pro platformu, na které je "
-#~ "tento server založen."
-
-#~ msgid ""
-#~ "Click &quot;Enable firmware upload&quot; below, then choose the embedded "
-#~ "image file for flashing.<br />Click &quot;Upgrade firmware&quot; to start "
-#~ "the upgrade process."
-#~ msgstr ""
-#~ "Klikněte na „Povolit nahrávání firmware“ níže, poté zvolte soubor s obrazem "
-#~ "systému ve „vestavěné“ (embeded) variantě, který má být nahrán.<br />Nakonec "
-#~ "celý proces spusťte kliknutím na „Přejít na novější verzi firmware“."
-
-#~ msgid "Disable firmware upload"
-#~ msgstr "Vypnout nahrání firmware"
-
-#~ msgid "Enable firmware upload"
-#~ msgstr "Umožnit nahrávání firmware"
-
-#~ msgid "Firmware image file"
-#~ msgstr "Soubor s obrazem firmware"
+#~ msgid "This function is unsupported. Use it on your own risk!"
+#~ msgstr "Tato funkce je bez záruky. Použijte pouze na vlastní nebezpečí!"
 
 #, php-format
 #~ msgid ""
-#~ "DO NOT abort the firmware upgrade process once it has started. Once it is "
-#~ "completed, the server will automatically reboot, the current configuration "
-#~ "will be maintained.<br />You need a minimum of %d MiB free RAM to perform "
-#~ "the upgrade.<br />It is strongly recommended that you <a "
-#~ "href='%s'>Backup</a> the server configuration before doing a upgrade."
+#~ "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
+#~ "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
+#~ "NTFS can result in unpredictable results, file corruption, and loss of data!"
 #~ msgstr ""
-#~ "Jakmile je spuštěn, NEPŘERUŠUJTE proces nahrávání nového firmware. Po "
-#~ "dokončení bude server automaticky restartován, stávající nastavení by měla "
-#~ "zůstat zachována.<br />K provedení přechodu na novější verzi bude zapotřebí "
-#~ "alespoň %d MiB volné operační paměti.<br />Nejprve je ale důrazně doporučeno "
-#~ "provést <a href='%s'>zálohu</a> nastavení serveru."
+#~ "UFS a ZFS jsou pro operační systém FreeBSD (na kterém je %s založený) "
+#~ "PŘIROZENÝMI souborovými systémy. Pokus o použití ostatních souborových "
+#~ "systémů, jako např. FAT, FAT32, EXT2, EXT3, EXT4 nebo NTFS může vyústit v "
+#~ "nečekané důsledky, poškození souborů a ztrátu dat!"
 
-#~ msgid ""
-#~ "This means that the image you uploaded is not an official/supported image "
-#~ "and may lead to unexpected behavior or security compromises. Only install "
-#~ "images that come from sources that you trust, and make sure that the image "
-#~ "has not been tampered with.<br /><br />Do you want to install this image "
-#~ "anyway (on your own risk)?"
-#~ msgstr ""
-#~ "To znamená, že obraz, který jste nahráli, není oficiální/podporovaný a může "
-#~ "vést neočekávanému chování nebo narušení zabezpečení. Používejte pouze "
-#~ "instalacní obrazy pocházející ze zdrojů, kterým důvěřujete a ověřte, že s "
-#~ "nimi nebylo manipulováno (kontrolní součty).<br /><br />Přesto chcete, na "
-#~ "vlastní riziko, instalovat tento obraz?"
-
-#~ msgid "Edit File"
-#~ msgstr "Upravit soubor"
-
-#~ msgid "Save File"
-#~ msgstr "Uložit soubor"
+#~ msgid "Group description."
+#~ msgstr "Popis skupiny"

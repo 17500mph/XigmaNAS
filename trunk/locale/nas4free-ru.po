@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-11 10:18+0000\n"
+"POT-Creation-Date: 2015-12-11 15:09+0000\n"
 "PO-Revision-Date: 2015-12-11 10:02+0000\n"
 "Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-11 10:41+0000\n"
+"X-Launchpad-Export-Date: 2015-12-11 14:44+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -3240,9 +3240,6 @@ msgstr "ID группы"
 msgid "Group compilations"
 msgstr "Группа сборников"
 
-msgid "Group description."
-msgstr "Описание группы."
-
 msgid "Group name."
 msgstr "Имя группы."
 
@@ -5338,9 +5335,6 @@ msgid "Primary"
 msgstr "Первичный (Primary)"
 
 msgid "Primary Group"
-msgstr "Основная группа"
-
-msgid "Primary group"
 msgstr "Основная группа"
 
 msgid "Primary group is also selected in additional group."
@@ -8214,17 +8208,6 @@ msgstr ""
 
 #, php-format
 msgid ""
-"UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
-"Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
-"NTFS can result in unpredictable results, file corruption, and loss of data!"
-msgstr ""
-"UFS и ZFS являются РОДНЫМИ файловыми системами FreeBSD (базовая ОС %s). "
-"Попытки использования иных файловых систем, таких как FAT, FAT32, EXT2, "
-"EXT3, EXT4 или NTFS, могут привести к непредсказуемым результатам, "
-"повреждению файлов и потерям информации!"
-
-#, php-format
-msgid ""
 "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
 "of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
 "or NTFS can result in unpredictable results, file corruption, and loss of "
@@ -9109,11 +9092,28 @@ msgstr "версия:"
 msgid "warning"
 msgstr "предупреждение"
 
+#~ msgid "Group description."
+#~ msgstr "Описание группы."
+
 #~ msgid "Last config change"
 #~ msgstr "Последнее изменение конфигурации"
+
+#~ msgid "Primary group"
+#~ msgstr "Основная группа"
 
 #~ msgid "This function is unsupported. Use it on your own risk!"
 #~ msgstr "Используйте эту функцию исключительно на свой риск!"
 
 #~ msgid "Build date"
 #~ msgstr "Дата сборки"
+
+#, php-format
+#~ msgid ""
+#~ "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
+#~ "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
+#~ "NTFS can result in unpredictable results, file corruption, and loss of data!"
+#~ msgstr ""
+#~ "UFS и ZFS являются РОДНЫМИ файловыми системами FreeBSD (базовая ОС %s). "
+#~ "Попытки использования иных файловых систем, таких как FAT, FAT32, EXT2, "
+#~ "EXT3, EXT4 или NTFS, могут привести к непредсказуемым результатам, "
+#~ "повреждению файлов и потерям информации!"
