@@ -165,7 +165,7 @@ function get_nextgroup_id() {
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_inputbox("name", gettext("Name"), $pconfig['name'], gettext("Group name."), true, 20, isset($uuid) && (FALSE !== $cnid));?>
 					<?php html_inputbox("groupid", gettext("Group ID"), $pconfig['groupid'], gettext("Group numeric id."), true, 20, isset($uuid) && (FALSE !== $cnid));?>
-					<?php html_inputbox("desc", gettext("Description"), $pconfig['desc'], gettext("Group description."), true, 20);?>
+					<?php html_inputbox("desc", gettext("Description"), $pconfig['desc'], gettext("You may enter a description here for your reference."), true, 48);?>
 				</table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gettext("Save") : gettext("Add")?>" />
