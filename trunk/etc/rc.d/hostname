@@ -4,11 +4,7 @@
 # Copyright (c) 2012-2015 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
 #
-# Portions of freenas (http://www.freenas.org).
-# Copyright (c) 2005-2011 Olivier Cochard-Labbe <olivier@freenas.org>.
-# All rights reserved.
-#
-# $FreeBSD: src/etc/rc.d/hostname
+# $FreeBSD: /etc/rc.d/hostname Revision 286671
 #
 
 # PROVIDE: hostname
@@ -25,16 +21,13 @@ stop_cmd=":"
 
 hostname_start()
 {
-	# If we are not inside a jail, set the host name if it is not already set.
-	# If we are inside a jail, set the host name even if it is already set,
-	# but first check if it is permitted.
+	# If we are not inside a jail, set the host name.
+	# If we are inside a jail, set the host name if it is permitted.
 	#
 	if [ `$SYSCTL_N security.jail.jailed` -eq 1 ]; then
 		if [ `$SYSCTL_N security.jail.set_hostname_allowed` -eq 0 ]; then
 			return
 		fi
-	elif [ -n "`/bin/hostname -s`" ]; then
-		return
 	else
 		# If we're not in a jail and rc.conf doesn't specify a
 		# hostname, see if we can get one from kenv.
