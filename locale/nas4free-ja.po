@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-11 15:09+0000\n"
-"PO-Revision-Date: 2015-12-10 15:44+0000\n"
+"POT-Creation-Date: 2015-12-11 21:33+0000\n"
+"PO-Revision-Date: 2015-12-12 11:35+0000\n"
 "Last-Translator: Daisuke Aoyama <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-11 14:44+0000\n"
+"X-Launchpad-Export-Date: 2015-12-12 11:44+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -1244,7 +1244,7 @@ msgid "Compilations directories"
 msgstr "コンピレーション ディレクトリ"
 
 msgid "Compiled"
-msgstr ""
+msgstr "コンパイル"
 
 msgid "Compliant profile to be used."
 msgstr "使用するプロファイルを選択します。"
@@ -2237,9 +2237,6 @@ msgstr "設定のダウンロード"
 
 msgid "Download bandwidth"
 msgstr "ダウンロード帯域"
-
-msgid "Download configuration"
-msgstr "設定のダウンロード"
 
 msgid "Download directory"
 msgstr "ダウンロードディレクトリ"
@@ -5278,9 +5275,6 @@ msgstr "リソース"
 msgid "Restore Configuration"
 msgstr "設定のリストア"
 
-msgid "Restore configuration"
-msgstr "設定のリストア"
-
 msgid "Restore metadata from the given file to the given provider."
 msgstr "メタデータをファイルからプロバイダに復元します。"
 
@@ -6057,7 +6051,7 @@ msgid "System info"
 msgstr "システム情報"
 
 msgid "System last config change"
-msgstr ""
+msgstr "最終設定変更日"
 
 msgid "System log"
 msgstr "システムログ"
@@ -7105,7 +7099,7 @@ msgid "This group already exists in the group list."
 msgstr "グループは既にグループリストに存在しています。"
 
 msgid "This is a very powerful tool. Use it on your own risk!"
-msgstr ""
+msgstr "これは非常に強力なツールです。リスクを理解した上で使用して下さい！"
 
 msgid ""
 "This is a way to take an existing insecure connection, and upgrade it to a "
@@ -8411,27 +8405,3 @@ msgstr "バージョン:"
 
 msgid "warning"
 msgstr "警告"
-
-#~ msgid "Group description."
-#~ msgstr "グループの説明"
-
-#~ msgid "Last config change"
-#~ msgstr "最終設定変更日"
-
-#~ msgid "Primary group"
-#~ msgstr "プライマリグループ"
-
-#~ msgid "This function is unsupported. Use it on your own risk!"
-#~ msgstr "この機能はサポートされていません。リスクを理解した上で使用して下さい!"
-
-#~ msgid "Build date"
-#~ msgstr "構築された日付"
-
-#, php-format
-#~ msgid ""
-#~ "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
-#~ "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
-#~ "NTFS can result in unpredictable results, file corruption, and loss of data!"
-#~ msgstr ""
-#~ "UFS と ZFS はFreeBSD (%s のベース OS) のネイティブなファイルフォーマットです。FAT、FAT32、EXT2、EXT3 又は "
-#~ "NTFS 等の他ファイルフォーマットを使う場合、予期せぬ結果、ファイルの破損及びデータの紛失が起こる恐れがあります！"
