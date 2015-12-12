@@ -8,9 +8,10 @@
 # Copyright (c) 2005-2011 Olivier Cochard-Labbe <olivier@freenas.org>.
 # All rights reserved.
 #
-# $FreeBSD: src/etc/rc.d/fsck
-# Changes: - Refactor fsck_start to process configured disks only
-# 	   - Add fsck_start_root to check root file system on 'full' installations
+# $FreeBSD: /etc/rc.d/fsck Revision 289186
+#
+# NAS4Free Changes: - Refactor fsck_start to process configured disks only.
+# 	   	    - Add fsck_start_root to check root file system on 'full' installations.
 #
 
 # PROVIDE: fsck
@@ -35,7 +36,7 @@ fsck_start()
 	elif [ ! -r /etc/fstab ]; then
 		echo "Warning! No /etc/fstab: skipping disk checks."
 	elif [ "$autoboot" = yes ]; then
-					# During fsck ignore SIGQUIT
+		# During fsck ignore SIGQUIT
 		trap : 3
 
 		echo "Starting file system checks:"
