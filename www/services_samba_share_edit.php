@@ -74,6 +74,7 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_share, "uuid")
 	$pconfig['zfsacl'] = isset($a_share[$cnid]['zfsacl']);
 	$pconfig['storealternatedatastreams'] = isset($a_share[$cnid]['storealternatedatastreams']);
 	$pconfig['storentfsacls'] = isset($a_share[$cnid]['storentfsacls']);
+	$pconfig['afpcompat'] = isset($a_share[$cnid]['afpcompat']);
 	$pconfig['aiomodule'] = $a_share[$cnid]['aiomodule'];
 	$pconfig['hostsallow'] = $a_share[$cnid]['hostsallow'];
 	$pconfig['hostsdeny'] = $a_share[$cnid]['hostsdeny'];
@@ -97,6 +98,7 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_share, "uuid")
 	$pconfig['zfsacl'] = false;
 	$pconfig['storealternatedatastreams'] = false;
 	$pconfig['storentfsacls'] = false;
+	$pconfig['afpcompat'] = false;
 	$pconfig['aiomodule'] = "aio_pthread";
 	$pconfig['hostsallow'] = "";
 	$pconfig['hostsdeny'] = "";
@@ -200,6 +202,7 @@ if ($_POST) {
 		$share['zfsacl'] = $zfsacl;
 		$share['storealternatedatastreams'] = isset($_POST['storealternatedatastreams']) ? true : false;
 		$share['storentfsacls'] = isset($_POST['storentfsacls']) ? true : false;
+		$share['afpcompat'] = isset($_POST['afpcompat']) ? true : false;
 		$share['aiomodule'] = $_POST['aiomodule'];
 		$share['hostsallow'] = $_POST['hostsallow'];
 		$share['hostsdeny'] = $_POST['hostsdeny'];
@@ -342,6 +345,7 @@ if ($_POST) {
 			    </tr>
 			    <?php html_checkbox("storealternatedatastreams", gettext("Store alternate data streams"), !empty($pconfig['storealternatedatastreams']) ? true : false, gettext("Store alternate data streams in Extended Attributes"), "", false);?>
 			    <?php html_checkbox("storentfsacls", gettext("Store NTFS acls"), !empty($pconfig['storentfsacls']) ? true : false, gettext("Store NTFS acls in Extended Attributes"), gettext("This will provide NTFS acls without ZFS ACL support such as UFS."), false);?>
+			    <?php html_checkbox("afpcompat", gettext("AFP compatibility"), !empty($pconfig['afpcompat']) ? true : false, gettext("Enhanced compatibility with Netatalk AFP server"), "", false);?>
 			    <?php html_combobox("aiomodule", gettext("AIO module"), $pconfig['aiomodule'], array("aio_pthread" => "aio_pthread", "aio_posix" => "aio_posix"), "", false, false, "");?>
 			    <tr>
 			      <td width="22%" valign="top" class="vncell"><?=gettext("Hosts allow");?></td>
