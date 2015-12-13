@@ -419,7 +419,13 @@ $(document).ready(function(){
 	?>
 	<?php html_textinfo("platform_os", gettext("Platform OS"), sprintf("FreeBSD Revision: %s<br/>%s",  $osrevision[0], $osversion[0]));?>
 	<?php html_textinfo("platform", gettext("Platform"), sprintf(gettext("%s on %s"), $g['fullplatform'], $cpuinfo['model']));?>
-	<?php html_textinfo("system", gettext("System"), sprintf("%s %s", htmlspecialchars($smbios['planar']['maker']), htmlspecialchars($smbios['planar']['product'])));?>
+	<?php
+		if (!empty($smbios['planar'])) {
+			html_textinfo("system", gettext("System"), sprintf("%s %s", htmlspecialchars($smbios['planar']['maker']), htmlspecialchars($smbios['planar']['product'])));
+		} else {
+			html_textinfo("system", gettext("System"), sprintf("%s %s", htmlspecialchars($smbios['system']['maker']), htmlspecialchars($smbios['system']['product'])));
+		}
+	?>
 	<?php html_textinfo("system_bios", gettext("System bios"), sprintf("%s %s %s %s", htmlspecialchars($smbios['bios']['vendor']), gettext("version:"), htmlspecialchars($smbios['bios']['version']), htmlspecialchars($smbios['bios']['reldate'])));?>
 	<?php html_textinfo("system_datetime", gettext("System time"), htmlspecialchars(shell_exec("date")));?>
 	<?php html_textinfo("system_uptime", gettext("System uptime"), htmlspecialchars(system_get_uptime()));?>
