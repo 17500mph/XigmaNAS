@@ -62,10 +62,10 @@ case $1 in
 		# Redirect I/O to console.
 		exec </dev/console >/dev/console 2>/dev/console
 
-		# Use efficient memory file system
+		# Use efficient memory filesystem
 		/sbin/mount -t tmpfs -o size=${SIZE},mode=1777 tmpfs ${FTMP} > /dev/null 2>&1
 		if [ 0 != $? ]; then # successfully?
-			msg="ERROR: Failed to create in-memory file system."
+			msg="ERROR: Failed to create in-memory filesystem."
 			printf "\n\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
 			exit 1
@@ -79,10 +79,10 @@ case $1 in
 		# Get the md device.
 		mdid=`/sbin/mount -p | /usr/bin/grep ${FTMP} | /usr/bin/awk '{print $1}'`
 
-		# Umount in-memory file system.
+		# Umount in-memory filesystem.
 		/sbin/umount -f ${FTMP} > /dev/null 2>&1
 		if [ 0 != $? ]; then # successfully?
-			msg="ERROR: Failed to umount in-memory file system."
+			msg="ERROR: Failed to unmount in-memory filesystem."
 			printf "\n\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
 			exit 1
@@ -98,18 +98,18 @@ case $1 in
 
 		printf "\n\n\33[37m%s\33[0m\n" "Firmware upgrade in progress. Please wait..."
 
-		# Check if firmware file exists
+		# Check if firmware image exists
 		if [ ! -r "$2" ]; then
-			msg="ERROR: Firmware file does not exist."
+			msg="ERROR: Firmware image does not exist."
 			printf "\n\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
 			exit 1
 		fi
 
-		# Test firmware file
+		# Test firmware image
 		/usr/bin/xz -t "$2" 2>&1
 		if [ 0 != $? ]; then
-			msg="ERROR: Firmware file is corrupted."
+			msg="ERROR: Firmware image is corrupted."
 			printf "\n\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
 			exit 1
@@ -129,7 +129,7 @@ case $1 in
 		# Unmount /cf
 		/sbin/umount -f /cf
 		if [ 0 != $? ]; then # successfully?
-			msg="ERROR: Failed to umount '/cf'!"
+			msg="ERROR: Failed to unmount '/cf'!"
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
 		fi
@@ -157,7 +157,7 @@ case $1 in
 					# resize boot partition
 					/sbin/growfs -y /dev/${CFDEVICE} > /dev/null 2>&1
 				fi
-				msg="Firmware installed successfully."
+				msg="Firmware installed successfully!"
 				printf "\33[37;44m%s\33[0m\n" "${msg}"
 				/usr/bin/logger "UPGRADE: ${msg}"
 			fi
@@ -231,18 +231,18 @@ case $1 in
 
 		printf "\n\n\33[37m%s\33[0m\n" "Firmware upgrade in progress. Please wait..."
 
-		# Check if firmware file exists.
+		# Check if firmware image exists.
 		if [ ! -r "$2" ]; then
-			msg="ERROR: Firmware file does not exist."
+			msg="ERROR: Firmware image does not exist."
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
 			exit 1
 		fi
 
-		# Test firmware file
+		# Test firmware image
 		/usr/bin/xz -t "$2" 2>&1
 		if [ 0 != $? ]; then
-			msg="ERROR: Firmware file is corrupted."
+			msg="ERROR: Firmware image is corrupted."
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
 			exit 1
@@ -269,7 +269,7 @@ case $1 in
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
 		else
-			msg="Firmware installed successfully."
+			msg="Firmware installed successfully!"
 			printf "\33[37;44m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE: ${msg}"
 		fi
@@ -297,7 +297,7 @@ case $1 in
 		# Reboot system if upgrade was successfully.
 		if [ 0 -eq ${result} ]; then
 			msg="Rebooting server..."
-			printf "\33[37m%s\33[0m\n" "${msg}"
+			printf "\33[44m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "${msg}"
 			/sbin/shutdown -r now > /dev/null 2>&1
 		else
