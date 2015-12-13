@@ -47,6 +47,8 @@ $pgtitle = array(gettext("Diagnostics"), gettext("Log"), gettext("Settings"));
 $pconfig['reverse']  = isset($config['syslogd']['reverse']);
 $pconfig['nentries'] = $config['syslogd']['nentries'];
 $pconfig['resolve']  = isset($config['syslogd']['resolve']);
+$pconfig['disablecomp'] = isset($config['syslogd']['disablecomp']);
+$pconfig['disablesecure'] = isset($config['syslogd']['disablesecure']);
 if (!empty($config['syslogd']['remote']) && is_array($config['syslogd']['remote'])) {
 	$pconfig['enable'] = isset($config['syslogd']['remote']['enable']);
 	$pconfig['ipaddr'] = $config['syslogd']['remote']['ipaddr'];
@@ -77,6 +79,8 @@ if ($_POST) {
 		$config['syslogd']['reverse'] = isset($_POST['reverse']) ? true : false;
 		$config['syslogd']['nentries'] = (int)$_POST['nentries'];
 		$config['syslogd']['resolve'] = isset($_POST['resolve']) ? true : false;
+		$config['syslogd']['disablecomp'] = isset($_POST['disablecomp']) ? true : false;
+		$config['syslogd']['disablesecure'] = isset($_POST['disablesecure']) ? true : false;
 		$config['syslogd']['remote']['enable'] = isset($_POST['enable']) ? true : false;
 		$config['syslogd']['remote']['ipaddr'] = $_POST['ipaddr'];
 		$config['syslogd']['remote']['system'] = isset($_POST['system']) ? true : false;
@@ -148,6 +152,18 @@ function enable_change(enable_change) {
 	            <strong><?=gettext("Resolve IP addresses to hostnames");?></strong><br />
 	            <?php echo sprintf(gettext("Hint: If this is checked, IP addresses in the server logs are resolved to real hostnames where possible.<br><font color='red'>Warning</font>: This can cause a huge delay in loading the log page!"));?>
 		  </td>
+	        </tr>
+	        <tr>
+	          <td width="22%" valign="top" class="vncell">&nbsp;</td>
+	          <td width="78%" class="vtable">
+							<input name="disablecomp" type="checkbox" id="disablecomp" value="yes" <?php if (!empty($pconfig['disablecomp'])) echo "checked=\"checked\""; ?> />
+	            <?=gettext("Disable the compression of repeated line");?></td>
+	        </tr>
+	        <tr>
+	          <td width="22%" valign="top" class="vncell">&nbsp;</td>
+	          <td width="78%" class="vtable">
+							<input name="disablesecure" type="checkbox" id="disablesecure" value="yes" <?php if (!empty($pconfig['disablesecure'])) echo "checked=\"checked\""; ?> />
+	            <?=gettext("Accept remote syslog messages");?></td>
 	        </tr>
 	        <tr>
 	          <td width="22%" valign="top" class="vncell">&nbsp;</td>
