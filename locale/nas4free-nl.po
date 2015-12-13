@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-11 15:09+0000\n"
-"PO-Revision-Date: 2015-12-11 13:36+0000\n"
+"POT-Creation-Date: 2015-12-13 16:10+0000\n"
+"PO-Revision-Date: 2015-12-13 09:25+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-11 14:44+0000\n"
+"X-Launchpad-Export-Date: 2015-12-13 09:36+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -374,6 +374,9 @@ msgstr "AD of PDC naam."
 msgid "AFP"
 msgstr "AFP"
 
+msgid "AFP compatibility"
+msgstr "AFP compatibiliteit"
+
 msgid "AG"
 msgstr "AG"
 
@@ -400,6 +403,9 @@ msgstr "ARP tabel"
 
 msgid "ATTRIBUTE NAME"
 msgstr "ATTRIBUUT NAAM"
+
+msgid "Accept remote syslog messages"
+msgstr "Accepteer remote syslog berichten"
 
 msgid "Access"
 msgstr "Toegang"
@@ -2174,6 +2180,9 @@ msgstr "Uitschakelen firmware versie controle"
 msgid "Disable speaker beep on startup and shutdown"
 msgstr "Uitschakelen systeemgeluiden tijdens het opstarten en afsluiten"
 
+msgid "Disable the compression of repeated line"
+msgstr "Uitschakelen compressie van herhaalde lijn"
+
 msgid "Disabled"
 msgstr "Uitgeschakeld"
 
@@ -2430,9 +2439,6 @@ msgstr "Configuratie Opslaan"
 
 msgid "Download bandwidth"
 msgstr "Download bandbreedte"
-
-msgid "Download configuration"
-msgstr "Configuratie Opslaan"
 
 msgid "Download directory"
 msgstr "Downloadmap"
@@ -2816,6 +2822,9 @@ msgstr "Selecteer een versleutelingsalgoritme om te gebruiken."
 
 msgid "English"
 msgstr "Engels"
+
+msgid "Enhanced compatibility with Netatalk AFP server"
+msgstr "Verbeterde compatibiliteit met Netatalk AFP server"
 
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
@@ -5680,9 +5689,6 @@ msgid "Resources"
 msgstr "Bronnen"
 
 msgid "Restore Configuration"
-msgstr "Configuratie Herstellen"
-
-msgid "Restore configuration"
 msgstr "Configuratie Herstellen"
 
 msgid "Restore metadata from the given file to the given provider."
@@ -9167,31 +9173,3 @@ msgstr "versie:"
 
 msgid "warning"
 msgstr "waarschuwing"
-
-#~ msgid "Group description."
-#~ msgstr "Groepsbeschrijving."
-
-#~ msgid "Last config change"
-#~ msgstr "Laatste configuratiewijziging"
-
-#~ msgid "Primary group"
-#~ msgstr "Primaire groep"
-
-#~ msgid "This function is unsupported. Use it on your own risk!"
-#~ msgstr ""
-#~ "Op deze functionaliteit wordt geen enkele support verleend. Gebruik is "
-#~ "geheel voor eigen risico!"
-
-#~ msgid "Build date"
-#~ msgstr "Gecompileerd"
-
-#, php-format
-#~ msgid ""
-#~ "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
-#~ "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
-#~ "NTFS can result in unpredictable results, file corruption, and loss of data!"
-#~ msgstr ""
-#~ "UFS en ZFS zijn de NATIVE bestandssystemen van FreeBSD (Het onderliggende OS "
-#~ "van %s). het gebruik van andere bestandssystemen zoals FAT, FAT32, EXT2, "
-#~ "EXT3, EXT4 of NTFS kan onvoorspelbare resultaten opleveren zoals "
-#~ "bestandsbeschadiging en verlies van data!"
