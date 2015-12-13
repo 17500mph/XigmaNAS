@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-11 15:09+0000\n"
-"PO-Revision-Date: 2015-12-11 10:02+0000\n"
+"POT-Creation-Date: 2015-12-13 16:10+0000\n"
+"PO-Revision-Date: 2015-12-13 08:46+0000\n"
 "Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-11 14:44+0000\n"
+"X-Launchpad-Export-Date: 2015-12-13 09:32+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -361,6 +361,9 @@ msgstr "Имя AD или PDC."
 msgid "AFP"
 msgstr "AFP"
 
+msgid "AFP compatibility"
+msgstr "Совместимость AFP"
+
 msgid "AG"
 msgstr "AG"
 
@@ -387,6 +390,9 @@ msgstr "Таблицы ARP"
 
 msgid "ATTRIBUTE NAME"
 msgstr "ИМЯ АТРИБУТА"
+
+msgid "Accept remote syslog messages"
+msgstr "Принимать дистанционные системные сообщения"
 
 msgid "Access"
 msgstr "Доступ"
@@ -2149,6 +2155,9 @@ msgstr "Запретить проверку версии прошивки"
 msgid "Disable speaker beep on startup and shutdown"
 msgstr "Запретить звуковой сигнал при включении и выключении"
 
+msgid "Disable the compression of repeated line"
+msgstr "Отключить сжатие повторяющихся строк"
+
 msgid "Disabled"
 msgstr "Запрещено"
 
@@ -2403,9 +2412,6 @@ msgstr "Сохранить конфигурацию"
 
 msgid "Download bandwidth"
 msgstr "Скорость загрузки"
-
-msgid "Download configuration"
-msgstr "Сохранить конфигурацию"
 
 msgid "Download directory"
 msgstr "Каталог скачиваемых файлов"
@@ -2785,6 +2791,9 @@ msgstr "Используемый алгоритм шифрования."
 
 msgid "English"
 msgstr "Английский"
+
+msgid "Enhanced compatibility with Netatalk AFP server"
+msgstr "Улучшение совместимости с сервером Netatalk AFP"
 
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
@@ -5635,9 +5644,6 @@ msgstr "Ресурсы"
 msgid "Restore Configuration"
 msgstr "Восстановление конфигурации"
 
-msgid "Restore configuration"
-msgstr "Восстановить конфигурацию"
-
 msgid "Restore metadata from the given file to the given provider."
 msgstr "Восстановить метаданные из выбранного файла в выбранное место."
 
@@ -6450,7 +6456,7 @@ msgid "System info"
 msgstr "Информация о системе"
 
 msgid "System last config change"
-msgstr "Последняя конфигурация системы изменена"
+msgstr "Последнее изменение конфигурации системы"
 
 msgid "System log"
 msgstr "Журнал системы"
@@ -7321,7 +7327,7 @@ msgstr ""
 "перезагрузка. Это может занять около минуты времени."
 
 msgid "The server will reboot after restoring the configuration."
-msgstr "Перезагрузка сервера будет выполнена после восстановления настроек."
+msgstr "Сервер будет перезагружен после восстановления конфигурации."
 
 msgid "The share name is already used."
 msgstr "Имя общего ресурса уже используется."
@@ -9091,29 +9097,3 @@ msgstr "версия:"
 
 msgid "warning"
 msgstr "предупреждение"
-
-#~ msgid "Group description."
-#~ msgstr "Описание группы."
-
-#~ msgid "Last config change"
-#~ msgstr "Последнее изменение конфигурации"
-
-#~ msgid "Primary group"
-#~ msgstr "Основная группа"
-
-#~ msgid "This function is unsupported. Use it on your own risk!"
-#~ msgstr "Используйте эту функцию исключительно на свой риск!"
-
-#~ msgid "Build date"
-#~ msgstr "Дата сборки"
-
-#, php-format
-#~ msgid ""
-#~ "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
-#~ "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
-#~ "NTFS can result in unpredictable results, file corruption, and loss of data!"
-#~ msgstr ""
-#~ "UFS и ZFS являются РОДНЫМИ файловыми системами FreeBSD (базовая ОС %s). "
-#~ "Попытки использования иных файловых систем, таких как FAT, FAT32, EXT2, "
-#~ "EXT3, EXT4 или NTFS, могут привести к непредсказуемым результатам, "
-#~ "повреждению файлов и потерям информации!"
