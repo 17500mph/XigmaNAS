@@ -1,6 +1,6 @@
 PORTNAME=	syncthing
-PORTVERSION=	0.12.7
-DISTVERSIONPREFIX=	v
+PORTVERSION=	0.12.8
+DISTVERSIONPREFIX= v
 CATEGORIES=	net
 
 MAINTAINER=	aoyama@nas4free.org
@@ -20,7 +20,7 @@ GROUPS=		syncthing
 STRIP=		# stripping can break go binaries
 
 # NAS4Free
-NO_PKG_REGISTER=	yes
+NO_PKG_REGISTER= yes
 
 .include <bsd.port.pre.mk>
 
