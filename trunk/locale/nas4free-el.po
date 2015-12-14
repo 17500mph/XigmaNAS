@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-11 15:09+0000\n"
-"PO-Revision-Date: 2015-12-11 12:36+0000\n"
+"POT-Creation-Date: 2015-12-13 16:10+0000\n"
+"PO-Revision-Date: 2015-12-13 19:26+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-11 14:44+0000\n"
+"X-Launchpad-Export-Date: 2015-12-14 11:16+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -371,6 +371,9 @@ msgstr "όνομα AD ή PCD."
 msgid "AFP"
 msgstr "AFP"
 
+msgid "AFP compatibility"
+msgstr "Συμβατότητα AFP"
+
 msgid "AG"
 msgstr "AG"
 
@@ -397,6 +400,9 @@ msgstr "Πίνακες ARP"
 
 msgid "ATTRIBUTE NAME"
 msgstr "ΟΝΟΜΑ ΧΑΡΑΚΤΗΡΙΣΤΙΚΟΥ"
+
+msgid "Accept remote syslog messages"
+msgstr "Αποδοχή μυνημάτων από απομακρυσμένο syslog"
 
 msgid "Access"
 msgstr "Πρόσβαση"
@@ -1351,7 +1357,7 @@ msgid "Compilations directories"
 msgstr "Φάκελοι συλλογών"
 
 msgid "Compiled"
-msgstr ""
+msgstr "Compiled"
 
 msgid "Compliant profile to be used."
 msgstr "Συμβατό προφίλ που θα χρησιμοποιηθεί."
@@ -1815,6 +1821,11 @@ msgid ""
 "/>It is recommended that you <a href='%s'>Backup</a> the server "
 "configuration before doing a upgrade."
 msgstr ""
+"ΜΗΝ ακυρώσετε τη διαδικασία αναβάθμισης υλικολογισμικού αφού ξεκινήσει. <br "
+"/>ΜΗΝ προσπαθήσετε να εγκαταστήσετε άλλα αρχεία εκτός από το έγκυρο αρχείο "
+"'%s-%s-embedded.img.xz'.<br />Συνιστάται να κάνετε ένα <a "
+"href='%s'>Αντίγραφο Ασφαλείας</a> των ρυθμίσεων του διακομιστή σας πριν "
+"κάνετε αναβάθμιση."
 
 msgid "DVD"
 msgstr "DVD"
@@ -2190,6 +2201,9 @@ msgstr ""
 "Απενεργοποίηση ηχητικής ειδοποίησης συστήματος κατά την έναρξη και τον "
 "τερματισμό"
 
+msgid "Disable the compression of repeated line"
+msgstr "Απενεργοποίση της συμπίεσης της επαναλαμβανόμενης γραμμής"
+
 msgid "Disabled"
 msgstr "Απενεργοποιημένο"
 
@@ -2443,9 +2457,6 @@ msgstr "Μεταφόρτωση αρχείου ρυθμίσεων"
 
 msgid "Download bandwidth"
 msgstr "Ταχύτητα λήψης"
-
-msgid "Download configuration"
-msgstr "Λήψη ρυθμίσεων"
 
 msgid "Download directory"
 msgstr "Φάκελος λήψεων"
@@ -2829,6 +2840,9 @@ msgstr "Αλγόριθμος κρυπτογράφησης που θα χρησι
 
 msgid "English"
 msgstr "Αγγλικά"
+
+msgid "Enhanced compatibility with Netatalk AFP server"
+msgstr "Ενισχυμένη συμβατότητα με διακομιστή Netatalk AFP"
 
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
@@ -5722,9 +5736,6 @@ msgstr "Πόροι"
 
 msgid "Restore Configuration"
 msgstr "Επαναφορά Ρυθμίσεων"
-
-msgid "Restore configuration"
-msgstr "Επαναφορά ρυθμίσεων"
 
 msgid "Restore metadata from the given file to the given provider."
 msgstr "Επαναφορά των μεταδεδομένων από το δοθέν αρχείο στο δοθέντα πάροχο."
@@ -9277,31 +9288,3 @@ msgstr "έκδοση:"
 
 msgid "warning"
 msgstr "προειδοποίηση"
-
-#~ msgid "Group description."
-#~ msgstr "Περιγραφή ομάδας."
-
-#~ msgid "Last config change"
-#~ msgstr "Τελευταία αλλαγή ρυθμίσεων"
-
-#~ msgid "Primary group"
-#~ msgstr "Πρωτεύουσα ομάδα"
-
-#~ msgid "This function is unsupported. Use it on your own risk!"
-#~ msgstr ""
-#~ "Γι' αυτήν τη λειτουργία δεν παρέχεται υποστήριξη. Χρησιμοποιήστε την με δική "
-#~ "σας ευθύνη!"
-
-#~ msgid "Build date"
-#~ msgstr "Ημερομηνία δημιουργίας"
-
-#, php-format
-#~ msgid ""
-#~ "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
-#~ "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
-#~ "NTFS can result in unpredictable results, file corruption, and loss of data!"
-#~ msgstr ""
-#~ "Το UFS και το ZFS  είναι τα ΕΓΓΕΝΗ συστήματα αρχείων του FreeBSD (το OS στο "
-#~ "οποίο βασίζεται το %s). Η προσπάθεια χρήσης άλλων συστημάτων αρχείων, όπως "
-#~ "FAT, FAT32, EXT2, EXT3, ή NTFS μπορεί να έχει ως επακόλουθο απρόβλεπτα "
-#~ "αποτελέσματα, καταστροφή αρχείων, και χάσιμο δεδομένων!"

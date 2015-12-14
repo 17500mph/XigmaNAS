@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-11 15:09+0000\n"
+"POT-Creation-Date: 2015-12-13 16:10+0000\n"
 "PO-Revision-Date: 2015-11-11 21:24+0000\n"
 "Last-Translator: apollo567 <apollo567@hotmail.de>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-11 14:44+0000\n"
+"X-Launchpad-Export-Date: 2015-12-14 11:16+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -363,6 +363,9 @@ msgstr "AD oder PDC-Name."
 msgid "AFP"
 msgstr "AFP"
 
+msgid "AFP compatibility"
+msgstr ""
+
 msgid "AG"
 msgstr "AG"
 
@@ -389,6 +392,9 @@ msgstr "ARP Tabellen"
 
 msgid "ATTRIBUTE NAME"
 msgstr "Attributbezeichnung"
+
+msgid "Accept remote syslog messages"
+msgstr ""
 
 msgid "Access"
 msgstr "Zugriff"
@@ -2100,6 +2106,9 @@ msgstr "Überprüfung der Firmware-Version abschalten"
 msgid "Disable speaker beep on startup and shutdown"
 msgstr "Systemlautsprecher beim Start und Shutdown ausschalten"
 
+msgid "Disable the compression of repeated line"
+msgstr ""
+
 msgid "Disabled"
 msgstr "Deaktiviert"
 
@@ -2352,9 +2361,6 @@ msgstr ""
 
 msgid "Download bandwidth"
 msgstr "Downloadbandbreite"
-
-msgid "Download configuration"
-msgstr "Konfiguration herunterladen"
 
 msgid "Download directory"
 msgstr "Download-Verzeichnis"
@@ -2734,6 +2740,9 @@ msgstr "Der zu verwendende Verschlüsselungsalgorithmus."
 
 msgid "English"
 msgstr "Englisch"
+
+msgid "Enhanced compatibility with Netatalk AFP server"
+msgstr ""
 
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
@@ -5548,9 +5557,6 @@ msgstr "Ressourcen"
 
 msgid "Restore Configuration"
 msgstr ""
-
-msgid "Restore configuration"
-msgstr "Konfiguration wiederherstellen"
 
 msgid "Restore metadata from the given file to the given provider."
 msgstr ""
@@ -8991,30 +8997,3 @@ msgstr "Version:"
 
 msgid "warning"
 msgstr ""
-
-#~ msgid "Group description."
-#~ msgstr "Gruppenbeschreibung."
-
-#~ msgid "Last config change"
-#~ msgstr "Letzte Änderung abgespeichert"
-
-#~ msgid "Primary group"
-#~ msgstr "Primäre Gruppe"
-
-#~ msgid "This function is unsupported. Use it on your own risk!"
-#~ msgstr ""
-#~ "Diese Funktion wird nicht unterstützt. Verwenden Sie dies auf eigene Gefahr."
-
-#~ msgid "Build date"
-#~ msgstr "Build-Datum"
-
-#, php-format
-#~ msgid ""
-#~ "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
-#~ "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
-#~ "NTFS can result in unpredictable results, file corruption, and loss of data!"
-#~ msgstr ""
-#~ "UFS und ZFS sind die originären Dateisysteme von FreeBSD (das zugrunde "
-#~ "liegende Betriebssystem von %s). Die Nutzung anderer Dateisysteme wie FAT, "
-#~ "FAT32, EXT2, EXT3, EXT4 or NTFS  kann zu unvorhersehbaren Ergebnissen führen "
-#~ "einschließlich Datenverlust. Deshalb wird von deren Nutzung abgeraten."
