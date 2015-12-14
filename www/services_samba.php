@@ -310,7 +310,7 @@ function aio_change() {
               <br /><?=gettext("The workgroup in which the server will appear when queried by Windows or SMB clients (maximum 15 characters).");?>
             </td>
           </tr>
-          <?php html_combobox("if", gettext("Interface"), $pconfig['if'], array("" => gettext("ALL interfaces"), "lan" => gettext("LAN only"), "opt" => gettext("OPT only"), "carp" => gettext("CARP only")), "", false);?>
+          <?php html_combobox("if", gettext("Interface selection"), $pconfig['if'], array("" => gettext("ALL Interfaces"), "lan" => gettext("LAN Only"), "opt" => gettext("OPT Only"), "carp" => gettext("CARP only")), "", false);?>
           <tr>
             <td width="22%" valign="top" class="vncell"><?=gettext("Description") ;?></td>
             <td width="78%" class="vtable">
@@ -319,7 +319,7 @@ function aio_change() {
             </td>
           </tr>
           <?php html_combobox("doscharset", gettext("Dos charset"), $pconfig['doscharset'], array("CP437" => gettext("CP437 (Latin US)"), "CP850" => gettext("CP850 (Latin 1)"), "CP852" => gettext("CP852 (Latin 2)"), "CP866" => gettext("CP866 (Cyrillic CIS 1)"), "CP932" => gettext("CP932 (Japanese Shift-JIS)"), "CP936" => gettext("CP936 (Simplified Chinese GBK)"), "CP949" => gettext("CP949 (Korean)"), "CP950" => gettext("CP950 (Traditional Chinese Big5)"), "CP1251" => gettext("CP1251 (Cyrillic)"), "CP1252" => gettext("CP1252 (Latin 1)"), "ASCII" => "ASCII"), "", false);?>
-          <?php html_combobox("unixcharset", gettext("Unix charset"), $pconfig['unixcharset'], array("UTF-8" => "UTF-8", "iso-8859-1" => "iso-8859-1", "iso-8859-15" => "iso-8859-15", "gb2312" => "gb2312", "EUC-JP" => "EUC-JP", "ASCII" => "ASCII"), "", false);?>
+          <?php html_combobox("unixcharset", gettext("Unix charset"), $pconfig['unixcharset'], array("UTF-8" => "UTF-8", "iso-8859-1" => "ISO-8859-1", "iso-8859-15" => "ISO-8859-15", "gb2312" => "GB2312", "EUC-JP" => "EUC-JP", "ASCII" => "ASCII"), "", false);?>
           <?php html_combobox("loglevel", gettext("Log Level"), $pconfig['loglevel'], array("1" => gettext("Minimum"), "2" => gettext("Normal"), "3" => gettext("Full"), "10" => gettext("Debug")), "", false);?>
           <tr>
             <td width="22%" valign="top" class="vncell"><?=gettext("Local Master Browser"); ?></td>
@@ -377,7 +377,7 @@ function aio_change() {
 							<br /><?=gettext("Use this option to override the username ('ftp' by default) which will be used for access to services which are specified as guest. Whatever privileges this user has will be available to any client connecting to the guest service. This user must exist in the password file, but does not require a valid login.");?>
 						</td>
 					</tr>
-					<?php html_combobox("maptoguest", gettext("Map to guest"), $pconfig['maptoguest'], array("Never" => gettext("Never - default"), "Bad User" => gettext("Bad User - non existing users")), "", false, false, "");?>
+					<?php html_combobox("maptoguest", gettext("Map to guest"), $pconfig['maptoguest'], array("Never" => gettext("Never - (Default)"), "Bad User" => gettext("Bad User - (Non Existing Users)")), "", false, false, "");?>
 					<tr id="createmask_tr">
 						<td width="22%" valign="top" class="vncell"><?=gettext("Create mask"); ?></td>
 						<td width="78%" class="vtable">
