@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-11 15:09+0000\n"
-"PO-Revision-Date: 2015-12-10 07:34+0000\n"
+"POT-Creation-Date: 2015-12-13 16:10+0000\n"
+"PO-Revision-Date: 2015-12-11 16:38+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-11 14:44+0000\n"
+"X-Launchpad-Export-Date: 2015-12-14 11:16+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -368,6 +368,9 @@ msgstr "Název řadiče domény AD nebo hlavního řadiče NT domény (PDC)."
 msgid "AFP"
 msgstr "AFP"
 
+msgid "AFP compatibility"
+msgstr ""
+
 msgid "AG"
 msgstr "Sk. ověř."
 
@@ -394,6 +397,9 @@ msgstr "ARP tabulky"
 
 msgid "ATTRIBUTE NAME"
 msgstr "NÁZEV ATRIBUTU"
+
+msgid "Accept remote syslog messages"
+msgstr ""
 
 msgid "Access"
 msgstr "Přístup"
@@ -542,10 +548,10 @@ msgid "Add volume"
 msgstr "Přidat svazek"
 
 msgid "Additional Network"
-msgstr ""
+msgstr "Další síť"
 
 msgid "Additional Storage"
-msgstr ""
+msgstr "Další úložiště"
 
 msgid "Additional group"
 msgstr "Doplňková skupina"
@@ -1026,18 +1032,18 @@ msgid "Blocksize"
 msgstr "Velikost bloku"
 
 msgid "Boot Arguments"
-msgstr ""
+msgstr "Parametry zavádění"
 
 msgid "Boot Loader"
-msgstr ""
+msgstr "Zavaděč operačního systému"
 
 #, php-format
 msgid "Boot argument (e.g. %s)."
-msgstr ""
+msgstr "Parametry zavádění (např. %s)"
 
 #, php-format
 msgid "Boot loader (e.g. %s)."
-msgstr ""
+msgstr "Zavaděč systému (např. %s)."
 
 #, php-format
 msgid ""
@@ -1048,7 +1054,7 @@ msgstr ""
 "zvětšit, nebo provést novou instalaci z instalačního média (LiveCD/USB).\n"
 
 msgid "Bootloader"
-msgstr ""
+msgstr "Zavaděč"
 
 msgid "Bridge"
 msgstr "Síťový most"
@@ -1097,7 +1103,7 @@ msgid "CD/DVD"
 msgstr "CD/DVD/BD"
 
 msgid "CD/DVD drive"
-msgstr ""
+msgstr "Jednotka CD/DVD/BD"
 
 msgid "CHANGED"
 msgstr "ZMĚNĚNO"
@@ -1351,7 +1357,7 @@ msgid "Compilations directories"
 msgstr "Složky sbírek"
 
 msgid "Compiled"
-msgstr ""
+msgstr "Převedeno do strojového kódu"
 
 msgid "Compliant profile to be used."
 msgstr "Odpovídající profil, který má být použit."
@@ -1662,10 +1668,10 @@ msgid "Create 4KB wrapper (nop device)."
 msgstr "Vytvořit 4KB obal (nop zařízení)."
 
 msgid "Create HVM Guest"
-msgstr ""
+msgstr "Vytvořit virt. stroj (HVM)"
 
 msgid "Create PV Guest"
-msgstr ""
+msgstr "Vytvořit virtualizační kontejner (PV)"
 
 msgid "Create ZFS on GPT partition"
 msgstr "Vytvořit soub. systém ZFS na GPT oddílu"
@@ -1806,6 +1812,10 @@ msgid ""
 "/>It is recommended that you <a href='%s'>Backup</a> the server "
 "configuration before doing a upgrade."
 msgstr ""
+"Jakmile započne, NEPŘERUŠUJTE proces aktualizace firmware.<br />NEAPLIKUJTE "
+"jiné, než platné %s-%s-embedded.img.xz soubory.<br />Před provedením "
+"aktualizace je důrazně doporučeno <a href='%s'>Zazálohovat</a> nastavení "
+"serveru."
 
 msgid "DVD"
 msgstr "DVD"
@@ -1912,7 +1922,7 @@ msgid "Delete URL"
 msgstr "Odstranit URL adresu"
 
 msgid "Delete VM"
-msgstr ""
+msgstr "Smazat virt. stroj"
 
 msgid "Delete algorithm"
 msgstr "Odstranit algoritmus"
@@ -2164,7 +2174,7 @@ msgid "Disable File Manager"
 msgstr "Vypnout webového správce souborů"
 
 msgid "Disable Firmware Update"
-msgstr ""
+msgstr "Vypnout aktualizaci firmware"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Vypnout TCP zprostředkovávající službu (modul mod_wrap)."
@@ -2177,6 +2187,9 @@ msgstr "Vypnout zjišťování novějších verzí firmwaru"
 
 msgid "Disable speaker beep on startup and shutdown"
 msgstr "Vypnout pípnutí při spouštění a vypínání systému"
+
+msgid "Disable the compression of repeated line"
+msgstr ""
 
 msgid "Disabled"
 msgstr "Vypnuto"
@@ -2248,7 +2261,7 @@ msgid "Do you really want to delete this URL?"
 msgstr "Opravdu chcete smazat tuto URL adresu?"
 
 msgid "Do you really want to delete this VM?"
-msgstr ""
+msgstr "Opravdu chcete tento virt. stroj smazat?"
 
 msgid "Do you really want to delete this auth group?"
 msgstr "Opravdu chcete smazat tuto skupinu pověřených?"
@@ -2429,9 +2442,6 @@ msgstr "Stáhnout si nastavení"
 msgid "Download bandwidth"
 msgstr "Rychlost stahování"
 
-msgid "Download configuration"
-msgstr "Stáhnout si nastavení"
-
 msgid "Download directory"
 msgstr "Složka pro stahování"
 
@@ -2508,7 +2518,7 @@ msgid "Edit URL"
 msgstr "Upravit URL adresu"
 
 msgid "Edit VM"
-msgstr ""
+msgstr "Upravit virt. stroj"
 
 msgid "Edit auth group"
 msgstr "Upravit skupinu pověřených"
@@ -2614,7 +2624,7 @@ msgid "Enable FXP protocol."
 msgstr "Zapnout FXP protokol."
 
 msgid "Enable Firmware Update"
-msgstr ""
+msgstr "Umožnit aktualizaci firmware"
 
 msgid "Enable NFSv4 server."
 msgstr "Zapnout NFSv4 server."
@@ -2714,7 +2724,7 @@ msgid "Enable module listing."
 msgstr "Umožnit výpisování modulů."
 
 msgid "Enable nested virtualization"
-msgstr ""
+msgstr "Zapnout vnořenou virtualizaci"
 
 msgid "Enable peer exchange (PEX)."
 msgstr "Umožnit výměnu stran (PEX)."
@@ -2811,6 +2821,9 @@ msgstr "Jaký šifrovací algoritmus použít."
 
 msgid "English"
 msgstr "angličtina"
+
+msgid "Enhanced compatibility with Netatalk AFP server"
+msgstr ""
 
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
@@ -3072,6 +3085,8 @@ msgstr "Soubor nebyl nalezen"
 #, php-format
 msgid "File path (e.g. %s) or ZFS volume (e.g. %s) used as Hard disk image."
 msgstr ""
+"Umístění souboru (např. %s) nebo ZFS svazku (např. %s), sloužícího jako "
+"obraz disku."
 
 #, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
@@ -3119,7 +3134,7 @@ msgid "Firmware"
 msgstr "Firmware"
 
 msgid "Firmware upload failed (out of memory?)"
-msgstr ""
+msgstr "Nahrání firmware se nezdařilo (nedostatek paměti?)"
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "Nahrávání firmware není na této platformě podporováno."
@@ -3306,10 +3321,10 @@ msgid "HAST volume can be use with GPT/UFS only."
 msgstr "HAST svazek je možné použít pouze s GPT/UFS."
 
 msgid "HDD Format"
-msgstr ""
+msgstr "Formát pevného disku"
 
 msgid "HDD Management"
-msgstr ""
+msgstr "Správa pevných disků"
 
 msgid ""
 "HDD producers implement a Fly Height Monitor that attempts to provide "
@@ -3335,10 +3350,10 @@ msgid "HTTP Proxy"
 msgstr "HTTP Proxy"
 
 msgid "HVM Guest"
-msgstr ""
+msgstr "HVM virt. stroj"
 
 msgid "Hard Disk"
-msgstr ""
+msgstr "Pevný disk"
 
 msgid "Hardware"
 msgstr "Hardware"
@@ -3523,7 +3538,7 @@ msgstr "Bezprostřední podpora prostřednictvím IRC"
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
-msgstr ""
+msgstr "Umístění .iso souboru (např. %s), použitého jako CD/DVD/BD jednotka."
 
 msgid "ISO file to be mounted."
 msgstr "ISO soubor, který připojit"
@@ -3708,7 +3723,7 @@ msgstr "Úvodní otisk"
 
 #, php-format
 msgid "Initial ramdisk (e.g. %s)."
-msgstr ""
+msgstr "Počáteční disk v operační paměti (např. %s)."
 
 msgid "Initialize"
 msgstr "Inicializovat"
@@ -3912,11 +3927,11 @@ msgid "Japanese"
 msgstr "japonština"
 
 msgid "Kernel"
-msgstr ""
+msgstr "Jádro systému"
 
 #, php-format
 msgid "Kernel file (e.g. %s)."
-msgstr ""
+msgstr "Soubor s jádrem systému (např. %s)."
 
 msgid "Key"
 msgstr "Klíč"
@@ -4262,7 +4277,7 @@ msgstr ""
 "hodnotu 240."
 
 msgid "MAC Address"
-msgstr ""
+msgstr "MAC adresa"
 
 msgid "MAC address"
 msgstr "MAC adresa"
@@ -4449,13 +4464,13 @@ msgid "Medium Acoustic Output"
 msgstr "Střední hlučnost"
 
 msgid "Mem"
-msgstr ""
+msgstr "Pam."
 
 msgid "Member Interface"
 msgstr "Účastnící se rozhraní"
 
 msgid "Memory (MiB)"
-msgstr ""
+msgstr "Paměť (MiB)"
 
 msgid "Memory Usage"
 msgstr "Využití operační paměti"
@@ -4656,7 +4671,7 @@ msgid "Name of the variable."
 msgstr "Název proměnné"
 
 msgid "Nested HVM"
-msgstr ""
+msgstr "Vnořený HVM virt. stroj"
 
 msgid "NetBIOS domain"
 msgstr "NetBIOS doména"
@@ -4671,7 +4686,7 @@ msgid "Network"
 msgstr "Síť"
 
 msgid "Network Adapter"
-msgstr ""
+msgstr "Síťové rozhraní"
 
 msgid "Network File System"
 msgstr "Síťový souborový systém"
@@ -5082,7 +5097,7 @@ msgid "PSK"
 msgstr "PSK"
 
 msgid "PV Guest"
-msgstr ""
+msgstr "Virt. kontejner (PV)"
 
 msgid "Package Name"
 msgstr "Název balíčku"
@@ -5507,7 +5522,7 @@ msgid "Raid name"
 msgstr "Název RAID pole"
 
 msgid "Ramdisk"
-msgstr ""
+msgstr "Disk v operační paměti"
 
 msgid "Read"
 msgstr "Čtení"
@@ -5685,9 +5700,6 @@ msgid "Resources"
 msgstr "Prostředky"
 
 msgid "Restore Configuration"
-msgstr "Obnovit nastavení"
-
-msgid "Restore configuration"
 msgstr "Obnovit nastavení"
 
 msgid "Restore metadata from the given file to the given provider."
@@ -5929,7 +5941,7 @@ msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Vyberte disk, který má zapnuté dohledování hodnot SMART diagnostiky."
 
 msgid "Select firmware:"
-msgstr ""
+msgstr "Vyberte firmware:"
 
 msgid "Select item to remove from the list"
 msgstr "Vyberte položku, kterou chcete ze seznamu odstranit"
@@ -5990,7 +6002,7 @@ msgid "Send Now"
 msgstr "Odeslat nyní"
 
 msgid "Send Test Email"
-msgstr ""
+msgstr "Odeslat testovací e-mail"
 
 msgid "Send a TEST warning email on startup."
 msgstr "Při startu poslat ZKUŠEBNÍ varovný e-mail."
@@ -6512,7 +6524,7 @@ msgid "System info"
 msgstr "Informace o systému"
 
 msgid "System last config change"
-msgstr ""
+msgstr "Minulá změna nastaven systému"
 
 msgid "System log"
 msgstr "Záznam událostí v systému"
@@ -6730,7 +6742,7 @@ msgstr "Příslušné MIB soubory jsou k dispozici v %s."
 
 #, php-format
 msgid "The attribute '%s' already exists."
-msgstr ""
+msgstr "Atribut %s už existuje."
 
 #, c-format
 msgid ""
@@ -7106,10 +7118,10 @@ msgid "The extent name already exists."
 msgstr "Název úložné jednotky je užpoužíván."
 
 msgid "The file you try to flash is not for this platform"
-msgstr ""
+msgstr "Soubor, který se snažíte aplikovat, není určen pro tuto platformu"
 
 msgid "The firmware file is corrupt"
-msgstr ""
+msgstr "Soubor s firmware je poškozený"
 
 #, php-format
 msgid ""
@@ -8422,7 +8434,7 @@ msgid "Updating in 5 seconds."
 msgstr "Aktualizace začne za 5 sekund."
 
 msgid "Upgrade Firmware"
-msgstr ""
+msgstr "Aktualizovat firmware"
 
 msgid "Upload"
 msgstr "Nahrát"
@@ -8588,7 +8600,7 @@ msgid "VM"
 msgstr "Virt. stroj"
 
 msgid "VM Type"
-msgstr ""
+msgstr "Typ virt. stroje"
 
 msgid "VNC Display"
 msgstr ""
@@ -9157,29 +9169,3 @@ msgstr "verze:"
 
 msgid "warning"
 msgstr "varování"
-
-#~ msgid "Build date"
-#~ msgstr "Datum sestavení"
-
-#~ msgid "Last config change"
-#~ msgstr "Poslední změna v nastavení"
-
-#~ msgid "Primary group"
-#~ msgstr "Hlavní skupina"
-
-#~ msgid "This function is unsupported. Use it on your own risk!"
-#~ msgstr "Tato funkce je bez záruky. Použijte pouze na vlastní nebezpečí!"
-
-#, php-format
-#~ msgid ""
-#~ "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
-#~ "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
-#~ "NTFS can result in unpredictable results, file corruption, and loss of data!"
-#~ msgstr ""
-#~ "UFS a ZFS jsou pro operační systém FreeBSD (na kterém je %s založený) "
-#~ "PŘIROZENÝMI souborovými systémy. Pokus o použití ostatních souborových "
-#~ "systémů, jako např. FAT, FAT32, EXT2, EXT3, EXT4 nebo NTFS může vyústit v "
-#~ "nečekané důsledky, poškození souborů a ztrátu dat!"
-
-#~ msgid "Group description."
-#~ msgstr "Popis skupiny"

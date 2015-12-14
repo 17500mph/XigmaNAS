@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-11 15:09+0000\n"
+"POT-Creation-Date: 2015-12-13 16:10+0000\n"
 "PO-Revision-Date: 2015-07-14 10:32+0000\n"
 "Last-Translator: Alex Lin <linuxant@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-11 14:44+0000\n"
+"X-Launchpad-Export-Date: 2015-12-14 11:17+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -305,6 +305,9 @@ msgstr "AD 或 PDC 的名稱。"
 msgid "AFP"
 msgstr "AFP"
 
+msgid "AFP compatibility"
+msgstr ""
+
 msgid "AG"
 msgstr "AG"
 
@@ -330,6 +333,9 @@ msgid "ARP tables"
 msgstr "ARP 表"
 
 msgid "ATTRIBUTE NAME"
+msgstr ""
+
+msgid "Accept remote syslog messages"
 msgstr ""
 
 msgid "Access"
@@ -1952,6 +1958,9 @@ msgstr "關閉韌體版本檢查功能"
 msgid "Disable speaker beep on startup and shutdown"
 msgstr "關閉開/關機時的提示聲響"
 
+msgid "Disable the compression of repeated line"
+msgstr ""
+
 msgid "Disabled"
 msgstr "關閉"
 
@@ -2187,9 +2196,6 @@ msgstr ""
 
 msgid "Download bandwidth"
 msgstr "下載頻寬"
-
-msgid "Download configuration"
-msgstr "下載配置"
 
 msgid "Download directory"
 msgstr "下載目錄"
@@ -2559,6 +2565,9 @@ msgstr "使用加密演算法"
 
 msgid "English"
 msgstr "英文"
+
+msgid "Enhanced compatibility with Netatalk AFP server"
+msgstr ""
 
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
@@ -5194,9 +5203,6 @@ msgstr "資源"
 
 msgid "Restore Configuration"
 msgstr ""
-
-msgid "Restore configuration"
-msgstr "還原設定"
 
 msgid "Restore metadata from the given file to the given provider."
 msgstr "從文件還原元數據給指定提供者。"
@@ -8256,28 +8262,3 @@ msgstr "版本："
 
 msgid "warning"
 msgstr ""
-
-#~ msgid "Group description."
-#~ msgstr "群組描述文字。"
-
-#~ msgid "Primary group"
-#~ msgstr "主要群組"
-
-#~ msgid "This function is unsupported. Use it on your own risk!"
-#~ msgstr "不支援此功能。請自行承擔風險！"
-
-#~ msgid "Last config change"
-#~ msgstr "上次配置更改時間"
-
-#, php-format
-#~ msgid ""
-#~ "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
-#~ "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
-#~ "NTFS can result in unpredictable results, file corruption, and loss of data!"
-#~ msgstr ""
-#~ "UFS 和 ZFS 是 FreeBSD 的（%s "
-#~ "的原操作系統）的初始檔案系統。嘗試使用其他的檔案系統，如FAT，FAT32，EXT2，EXT3，EXT4 或 NTFS "
-#~ "可能會導致不可預測的結果，損壞文件和丟失數據！"
-
-#~ msgid "Build date"
-#~ msgstr "建立日期"

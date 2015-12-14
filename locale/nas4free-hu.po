@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-11 15:09+0000\n"
-"PO-Revision-Date: 2015-12-10 21:29+0000\n"
+"POT-Creation-Date: 2015-12-13 16:10+0000\n"
+"PO-Revision-Date: 2015-12-14 07:31+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-11 14:44+0000\n"
+"X-Launchpad-Export-Date: 2015-12-14 11:16+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -195,7 +195,7 @@ msgid ""
 "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
 msgstr ""
 "<div id='enumeration'><ul><li>%d - Dátum</li><li>%h - "
-"Állomásónév</li></ul></div>"
+"Állomásnév</li></ul></div>"
 
 msgid ""
 "<div id='enumeration'><ul><li>The new password is also the default root "
@@ -362,6 +362,9 @@ msgstr "AD vagy PDC név."
 msgid "AFP"
 msgstr "AFP (Apple MacOSX)"
 
+msgid "AFP compatibility"
+msgstr "AFP kompatibilitás"
+
 msgid "AG"
 msgstr "AG"
 
@@ -388,6 +391,9 @@ msgstr "ARP (címfeloldási protokoll) táblák"
 
 msgid "ATTRIBUTE NAME"
 msgstr "ATTRIBÚTUM MEGNEVEZÉSE"
+
+msgid "Accept remote syslog messages"
+msgstr "Távoli rendszer naplóüzenetének fogadása"
 
 msgid "Access"
 msgstr "Hozzáférés"
@@ -427,7 +433,7 @@ msgid "Active Directory"
 msgstr "Címtárszolgáltatás (AD)"
 
 msgid "Active Directory List"
-msgstr "Címtárszolgáltatók felsorolása"
+msgstr "Aktív könyvtárak"
 
 msgid "Active Shares"
 msgstr "Aktív megosztások"
@@ -1318,7 +1324,7 @@ msgid "Compilations directories"
 msgstr "Összeválogatott könyvtárak"
 
 msgid "Compiled"
-msgstr ""
+msgstr "Lefordítva"
 
 msgid "Compliant profile to be used."
 msgstr "Kompatibilis profilt kell használni."
@@ -2124,6 +2130,9 @@ msgstr "Firmware verzióellenőrzés letiltása"
 msgid "Disable speaker beep on startup and shutdown"
 msgstr "Rendszersípolás letiltása induláskor és leálláskor."
 
+msgid "Disable the compression of repeated line"
+msgstr "Ismétlődő sor tömörítésének tiltása"
+
 msgid "Disabled"
 msgstr "Tiltva"
 
@@ -2341,10 +2350,10 @@ msgid "Domain name (NetBIOS-Name)"
 msgstr "Tartománynév (NetBIOS-Név)"
 
 msgid "Domain name in old format, e.g. EXAMPLE."
-msgstr "Régi formátumú tartománynév, pl.: MINTA."
+msgstr "Tartomány régi formátumú neve, pl.: MINTA."
 
 msgid "Domain name, e.g. example.com."
-msgstr "Tartománynév, pl.: minta.hu"
+msgstr "Tartománynév, pl.: minta.hu."
 
 msgid "Don't erase the MBR (useful for some RAID controller cards)"
 msgstr "Ne töröld az MBR-t (néhány RAID vezérlő kártyánál lehet hasznos)"
@@ -2372,9 +2381,6 @@ msgstr "Konfiguráció letöltése"
 
 msgid "Download bandwidth"
 msgstr "Letöltési sávszélesség"
-
-msgid "Download configuration"
-msgstr "Beállítások letöltése"
 
 msgid "Download directory"
 msgstr "Letöltési mappa"
@@ -2750,6 +2756,9 @@ msgstr "Válassz titkosítási algoritmust"
 msgid "English"
 msgstr "Angol"
 
+msgid "Enhanced compatibility with Netatalk AFP server"
+msgstr "Továbbfejlesztett kompatibilitás Netatalk AFP szerverrel"
+
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
 "default (80 for HTTP, 443 for HTTPS)."
@@ -2771,8 +2780,8 @@ msgid ""
 "Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to "
 "select it."
 msgstr ""
-"Írd be beállítandó rendszeridőt (hh/nn/éé óó:pp formátumban) vagy az ikonra "
-"kattintva válaszd ki."
+"Írd be a beállítandó rendszeridőt (hh/nn/éé óó:pp formátumban) vagy az "
+"ikonra kattintva válaszd ki."
 
 msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
@@ -3544,8 +3553,8 @@ msgid ""
 "LAN IP address will be reset to %s and the password will be set to '%s'."
 msgstr ""
 "Ha az 'Igen'-re kattintasz, a szerver visszaállítja a gyári beállításokat és "
-"újraindul. A meglévő beállítások felülíródnak. A hálózat IP cím %s, a jelszó "
-"(%s) lesz újra."
+"újraindul. Az összes beállítás felülíródik. A hálózat IP címe %s, a jelszó "
+"'%s' lesz újra."
 
 msgid ""
 "If you want to change the password for accessing the WebGUI, enter it here "
@@ -3765,7 +3774,7 @@ msgid "Interval to wait before rebooting the UPS)"
 msgstr "A szünetmentes újraindítása előtti várakozási idő."
 
 msgid "Interval to wait before restarting the load"
-msgstr "A töltés újraindítása előtti várakozási idő."
+msgstr "A töltés újraindítása előtti várakozási idő"
 
 msgid "Invalid file format or incorrect password."
 msgstr "Érvénytelen fájlformátum vagy hibás jelszó."
@@ -4758,7 +4767,7 @@ msgid "Nominal value of apparent power (Volt-Amps)"
 msgstr "Névértéke látszólagos teljesítmény (Volt-Amper)"
 
 msgid "Nominal value of real power (Watts)"
-msgstr "Névértéke valós teljesítmény (Watt)"
+msgstr "Valós teljesítmény névleges értéke (Watt)"
 
 msgid "None"
 msgstr "Nincs"
@@ -5067,7 +5076,7 @@ msgid "Password for the administrative pages."
 msgstr "Jelszó az rendszergazdai oldalakhoz."
 
 msgid "Password of domain administrator account."
-msgstr "Domain rendszergazda jelszava."
+msgstr "Tartományi rendszergazda jelszava."
 
 msgid "Password server"
 msgstr "Jelszó szerver"
@@ -5586,9 +5595,6 @@ msgid "Resources"
 msgstr "Erőforrások"
 
 msgid "Restore Configuration"
-msgstr "Beállítások visszaállítása"
-
-msgid "Restore configuration"
 msgstr "Beállítások visszaállítása"
 
 msgid "Restore metadata from the given file to the given provider."
@@ -6412,7 +6418,7 @@ msgid "System info"
 msgstr "Rendszerinformáció"
 
 msgid "System last config change"
-msgstr ""
+msgstr "Utolsó rendszermódosítás ideje"
 
 msgid "System log"
 msgstr "Rendszernapló"
@@ -7594,7 +7600,7 @@ msgid "This group already exists in the group list."
 msgstr "Ez a csoport már szerepel a listában."
 
 msgid "This is a very powerful tool. Use it on your own risk!"
-msgstr ""
+msgstr "Ez egy nagyon erőteljes eszköz. Csak saját felelősségre használd!"
 
 msgid ""
 "This is a way to take an existing insecure connection, and upgrade it to a "
@@ -8002,10 +8008,10 @@ msgid ""
 "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
 ">System</li></ul></div>"
 msgstr ""
-"A Címtárszolgáltató használatához a CIFS/SMB szolgáltatás is engedélyezésre "
-"kerül. A következő szolgáltatások használnak még AD hitelesítést:<div "
+"A Címtárszolgáltatás használatához a CIFS/SMB szolgáltatást is "
+"engedélyezzük. A következő szolgáltatások használnak AD hitelesítést:<div "
 "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-">System</li></ul></div>"
+">Rendszer</li></ul></div>"
 
 #, php-format
 msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
@@ -8636,7 +8642,7 @@ msgstr ""
 "nem használható."
 
 msgid "When UPS switches to Low Battery"
-msgstr "Amikor a szünetmentes alacsony tápellátásra kapcsol."
+msgstr "Amikor a szünetmentes alacsony tápellátásra kapcsol"
 
 msgid ""
 "When a client initially connects to the server the ident protocol is used to "
@@ -8718,7 +8724,7 @@ msgstr ""
 "használatával.<br />Például: pkg add csomagnév"
 
 msgid "You can use the following parameters for substitution:"
-msgstr "Használhatja a következő paraméterek helyettesítésre:"
+msgstr "A következő paramétereket használhatod helyettesítésre:"
 
 #, php-format
 msgid ""
@@ -9014,29 +9020,3 @@ msgstr "verzió:"
 
 msgid "warning"
 msgstr "figyelmeztetés"
-
-#~ msgid "Group description."
-#~ msgstr "Csoport leírás."
-
-#~ msgid "Primary group"
-#~ msgstr "Elsődleges csoport"
-
-#~ msgid "Build date"
-#~ msgstr "Rendszerfordítás ideje"
-
-#~ msgid "Last config change"
-#~ msgstr "Utolsó konfigurációs változtatás"
-
-#~ msgid "This function is unsupported. Use it on your own risk!"
-#~ msgstr "Ez a funkció nem támogatott. Csak saját felelősségére használd!"
-
-#, php-format
-#~ msgid ""
-#~ "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
-#~ "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
-#~ "NTFS can result in unpredictable results, file corruption, and loss of data!"
-#~ msgstr ""
-#~ "UFS és ZFS a FreeBSD - a(z) %s alapjául szolgáló operációs rendszer - NATÍV "
-#~ "fájlrendszerei. Más fájlrendszer használata, mint például a FAT, FAT32, "
-#~ "EXT2, EXT3, EXT4 vagy az NTFS kiszámíthatatlan eseményeket, fájlok "
-#~ "sérüléseit, és adatvesztést okozhat!"

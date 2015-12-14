@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-11 15:09+0000\n"
+"POT-Creation-Date: 2015-12-13 16:10+0000\n"
 "PO-Revision-Date: 2015-11-15 18:14+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-11 14:44+0000\n"
+"X-Launchpad-Export-Date: 2015-12-14 11:17+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -369,6 +369,9 @@ msgstr "Nume server AD sau PDC."
 msgid "AFP"
 msgstr "AFP"
 
+msgid "AFP compatibility"
+msgstr ""
+
 msgid "AG"
 msgstr "AG"
 
@@ -395,6 +398,9 @@ msgstr "Tabele ARP"
 
 msgid "ATTRIBUTE NAME"
 msgstr "NUME ATRIBUT"
+
+msgid "Accept remote syslog messages"
+msgstr ""
 
 msgid "Access"
 msgstr "Acces"
@@ -2165,6 +2171,9 @@ msgstr "Dezactivare verificare versiune firmware"
 msgid "Disable speaker beep on startup and shutdown"
 msgstr "Dezactivare sunet atenționare la pornirea/oprirea sistemului"
 
+msgid "Disable the compression of repeated line"
+msgstr ""
+
 msgid "Disabled"
 msgstr "Dezactivat"
 
@@ -2413,9 +2422,6 @@ msgstr ""
 
 msgid "Download bandwidth"
 msgstr "Lățime de bandă pentru descărcare"
-
-msgid "Download configuration"
-msgstr "Descărcare configurație"
 
 msgid "Download directory"
 msgstr "Folder de descărcare"
@@ -2794,6 +2800,9 @@ msgstr "Algoritm de criptare de utilizat."
 
 msgid "English"
 msgstr "Engleză"
+
+msgid "Enhanced compatibility with Netatalk AFP server"
+msgstr ""
 
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
@@ -5649,9 +5658,6 @@ msgstr "Resurse"
 
 msgid "Restore Configuration"
 msgstr ""
-
-msgid "Restore configuration"
-msgstr "Restaurare configurație"
 
 msgid "Restore metadata from the given file to the given provider."
 msgstr "Restaurare metadata de la fișierul dat la providerul specificat."
@@ -9093,30 +9099,3 @@ msgstr "versiune:"
 
 msgid "warning"
 msgstr "avertisment"
-
-#~ msgid "Group description."
-#~ msgstr "Descriere grup."
-
-#~ msgid "Last config change"
-#~ msgstr "Ultima modificare configurație"
-
-#~ msgid "Primary group"
-#~ msgstr "Grup primar"
-
-#~ msgid "This function is unsupported. Use it on your own risk!"
-#~ msgstr ""
-#~ "Utilizați această facilitate (execuția de comenzi) pe riscul propriu!"
-
-#~ msgid "Build date"
-#~ msgstr "Data creării"
-
-#, php-format
-#~ msgid ""
-#~ "UFS and ZFS are the NATIVE filesystems of FreeBSD (the underlying OS of %s). "
-#~ "Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or "
-#~ "NTFS can result in unpredictable results, file corruption, and loss of data!"
-#~ msgstr ""
-#~ "UFS și ZFS sînt sistemele de fișiere NATIVE pentru FreeBSD (sistemul de bază "
-#~ "pentru %s). Încercarea de a utiliza alte sisteme de fișiere gen FAT, FAT32, "
-#~ "EXT2, EXT3, EXT4 sau NTFS poate duce la rezultate impredictibile, fișiere "
-#~ "corupte, sau chiar pierderea de date!"
