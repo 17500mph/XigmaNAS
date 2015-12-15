@@ -214,12 +214,12 @@ function enable_change(enable_change) {
 					<?php html_inputbox("port", gettext("Port"), $pconfig['port'], sprintf(gettext("Port to listen on. Only dynamic or private ports can be used (from %d through %d). Default port is %d."), 1025, 65535, 8200), true, 5);?>
 					<?php html_inputbox("notify_int", gettext("Broadcast interval"), $pconfig['notify_int'], sprintf(gettext("Broadcasts its availability every N seconds on the network. (Default 300 seconds)"), 1025, 65535, 60), true, 5);?>
 					<?php html_filechooser("home", gettext("Database directory"), $pconfig['home'], gettext("Location where the database with media contents will be stored."), $g['media_path'], true, 67);?>
-					<?php html_minidlnabox("content", gettext("Media library"), !empty($pconfig['content']) ? $pconfig['content'] : array(), gettext("Location of the files to share."), $g['media_path'], true);?>
+					<?php html_minidlnabox("content", gettext("Media library"), !empty($pconfig['content']) ? $pconfig['content'] : array(), gettext("Set the content location(s) to or from the media library."), $g['media_path'], true);?>
 					<?php html_checkbox ("inotify", gettext("Inotify"), !empty($pconfig['inotify']) ? true : false, gettext("Enable inotify."), gettext("Use inotify monitoring to automatically discover new files."), false);?>
 					<?php html_combobox("container", gettext("Container"), $pconfig['container'], array("." => gettext("Standard"), "B" => gettext("Browse Directory"), "M" => gettext("Music"), "V" => gettext("Video"), "P" => gettext("Pictures")), gettext("Use different container as root of the tree."), false, false, "" );?>
 					<?php html_checkbox ("strict", gettext("Strict DLNA"), !empty($pconfig['strict']) ? true : false, gettext("Enable to strictly adhere to DLNA standards."), gettext("This will allow server-side downscaling of very large JPEG images, it can hurt JPEG serving performance on (at least) Sony DLNA products."), false);?>
 					<?php html_checkbox ("tivo", gettext("TiVo support"), !empty($pconfig['tivo']) ? true : false, gettext("Enable TiVo support."), gettext("This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."), false);?>
-					<?php html_combobox("loglevel", gettext("Log level"), $pconfig['loglevel'], array("off" => gettext("Off"), "fatal" => gettext("fatal"), "error" => gettext("error"), "warn" => gettext("warning"), "info" => gettext("info"),"debug" => gettext("debug")), "", false, false, "" );?>
+					<?php html_combobox("loglevel", gettext("Log level"), $pconfig['loglevel'], array("off" => gettext("Off"), "fatal" => gettext("Fatal"), "error" => gettext("Error"), "warn" => gettext("Warning"), "info" => gettext("Info"),"debug" => gettext("debug")), "", false, false, "" );?>
 					<?php html_separator();?>
 					<?php html_titleline(gettext("Presentation WebGUI"));?>
 					<?php
