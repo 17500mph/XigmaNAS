@@ -15,7 +15,7 @@ BUILD_DEPENDS=		sqlite3>=3.0:${PORTSDIR}/databases/sqlite3
 LIB_DEPENDS=		libpcre.so:${PORTSDIR}/devel/pcre
 LIB_DEPENDS+=		libcurl.so:${PORTSDIR}/ftp/curl
 LIB_DEPENDS+=		libmcrypt.so:${PORTSDIR}/security/libmcrypt
-LIB_DEPENDS+=		libonig.so:${PORTSDIR}/devel/oniguruma4
+LIB_DEPENDS+=		libonig.so:${PORTSDIR}/devel/oniguruma5
 LIB_DEPENDS+=		libfreetype.so:${PORTSDIR}/print/freetype2
 LIB_DEPENDS+=		libpng16.so:${PORTSDIR}/graphics/png
 LIB_DEPENDS+=		libjpeg.so:${PORTSDIR}/graphics/jpeg
