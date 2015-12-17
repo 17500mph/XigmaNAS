@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-13 16:10+0000\n"
-"PO-Revision-Date: 2015-12-13 09:25+0000\n"
+"POT-Creation-Date: 2015-12-18 00:47+0000\n"
+"PO-Revision-Date: 2015-12-17 23:55+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-14 11:16+0000\n"
+"X-Launchpad-Export-Date: 2015-12-17 23:56+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -389,8 +389,8 @@ msgstr "AIO lees grootte"
 msgid "AIO write size"
 msgstr "AIO schrijf grootte"
 
-msgid "ALL interfaces"
-msgstr "Alle netwerken"
+msgid "ALL Interfaces"
+msgstr "Alle Netwerken"
 
 msgid "AP mode"
 msgstr "AP modus"
@@ -656,8 +656,8 @@ msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
 "empty UFS directory is recommended."
 msgstr ""
-"Alle data in het pad wordt overschreven. Om ongeldige bestands/permissies te "
-"vermijden, gebruik van een lege UFS folder is ten sterkste aanbevolen."
+"Alle data in de locatie wordt overschreven. Om ongeldige data/permissies te "
+"vermijden, gebruik van een lege UFS bestand is ten sterkste aanbevolen."
 
 msgid "All dirs"
 msgstr "Alle mappen"
@@ -665,7 +665,8 @@ msgstr "Alle mappen"
 #, php-format
 msgid "All dirs requires mounted path, but Path %s is not mounted."
 msgstr ""
-"Alle mappen vereisen een aangekoppeld pad, maar Pad %s is niet aangekoppeld."
+"Alle mappen vereisen een aangekoppelde locatie, maar locatie %s is niet "
+"aangekoppeld."
 
 msgid "All disks are imported."
 msgstr "Alle schijven zijn geïmporteerd."
@@ -879,7 +880,7 @@ msgid "Authenticate URL"
 msgstr "Authenticeer URL"
 
 msgid "Authenticate path & realm"
-msgstr "Authenticatie pad en dialoog text"
+msgstr "Authenticatie locatie en dialoog text"
 
 msgid "Authentication"
 msgstr "Verificatie"
@@ -938,8 +939,8 @@ msgstr "Backup bestand"
 msgid "Backup/Restore"
 msgstr "Backup/Herstellen"
 
-msgid "Bad User - non existing users"
-msgstr "Verkeerde gebruiker - gebruiker bestaat niet"
+msgid "Bad User - (Non Existing Users)"
+msgstr "Foutieve gebruiker - (Gebruiker Bestaat Niet)"
 
 msgid "Balance algorithm"
 msgstr "Balanceer algoritme"
@@ -1070,7 +1071,7 @@ msgstr ""
 "seconden)"
 
 msgid "Browse Directory"
-msgstr "Blader Directory"
+msgstr "Blader Map"
 
 msgid "Browseable"
 msgstr "Verkenbaar"
@@ -2861,22 +2862,22 @@ msgid ""
 "Enter the path to the home directory of VirtualBox. VM config and HDD image "
 "will be created under the specified directory."
 msgstr ""
-"Vul het pad in naar de hoofdmap van VirtualBox. De VM configuratie en HDD "
+"Vul de locatie in naar de hoofdmap van VirtualBox. De VM configuratie en HDD "
 "image zal worden aangemaakt in de opgegeven hoofdmap."
 
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
 msgstr ""
-"Vul het pad in naar de hoofdmap van deze gebruiker. Laat dit veld leeg om de "
-"standaard pad te gebruiken /mnt."
+"Vul de locatie in naar de hoofdmap van deze gebruiker. Laat dit veld leeg om "
+"de standaard locatie te gebruiken /mnt."
 
 msgid ""
 "Enter the path to the home directory. The config will be created under the "
 "specified directory."
 msgstr ""
-"Vul het pad in naar de hoofdmap. De configuratie zal onder de opgegeven map "
-"worden aangemaakt."
+"Vul de locatie in naar de hoofdmap. De configuratie zal onder de opgegeven "
+"map worden aangemaakt."
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr ""
@@ -2921,7 +2922,7 @@ msgid "Export"
 msgstr "Exporteren"
 
 msgid "Export all the directories in the specified path."
-msgstr "Exporteer alle mappen in het opgegeven pad."
+msgstr "Exporteer alle mappen in de opgegeven locatie."
 
 msgid "Extended Attributes"
 msgstr "Uitgebreide Attributen"
@@ -3066,6 +3067,9 @@ msgstr "Mislukt."
 msgid "Failover"
 msgstr "Failover (Overname bij storing)"
 
+msgid "Fatal"
+msgstr "Fataal"
+
 msgid "File"
 msgstr "Bestand"
 
@@ -3092,7 +3096,7 @@ msgstr ""
 
 #, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
-msgstr "Bestandslocatie (bijv. /mnt/deelnaam/omvang/%s) gebruikt als omvang."
+msgstr "Bestands pad (bijv. /mnt/deelnaam/omvang/%s) gebruikt als omvang."
 
 msgid "File size"
 msgstr "bestands grootte"
@@ -3959,11 +3963,11 @@ msgstr "LAGG"
 msgid "LAN Management"
 msgstr "Lan Management"
 
+msgid "LAN Only"
+msgstr "Alleen LAN"
+
 msgid "LAN net"
 msgstr "LAN net"
-
-msgid "LAN only"
-msgstr "Alleen LAN"
 
 msgid "LCDproc"
 msgstr "LCDproc"
@@ -4699,6 +4703,9 @@ msgstr "Netwerk adres dat is gemachtigd voor toegang tot de gedeelde NFS."
 msgid "Networks"
 msgstr "Netwerken"
 
+msgid "Never - (Default)"
+msgstr "Nooit - (Standaard)"
+
 msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
 "a disk which is spun-down to be spun-up when it is checked."
@@ -4706,9 +4713,6 @@ msgstr ""
 "Never - Poll (controle) van de harde schijf ongeacht zijn energie mode. Dit "
 "kan een schijf die een spin-down heeft opnieuw een spin-up geven wanneer "
 "deze keuze geselecteerd is."
-
-msgid "Never - default"
-msgstr "Nooit - Standaard"
 
 msgid "New Device"
 msgstr "Nieuwe Schijf"
@@ -4888,7 +4892,7 @@ msgid "Not attached"
 msgstr "Niet verbonden"
 
 msgid "Not found path."
-msgstr "Niet gevonden pad."
+msgstr "Locatie niet gevonden."
 
 msgid "Note"
 msgstr "Opmerking"
@@ -4963,7 +4967,7 @@ msgstr "OK"
 msgid "ONLINE"
 msgstr "ONLINE"
 
-msgid "OPT only"
+msgid "OPT Only"
 msgstr "Alleen OPT"
 
 msgid "Object name"
@@ -5196,17 +5200,17 @@ msgid "Paste an private key in PEM format here."
 msgstr "Plak hier een privé sleutel in PEM formaat."
 
 msgid "Path"
-msgstr "Pad"
+msgstr "Locatie"
 
 msgid "Path of the URL relative to document root."
-msgstr "Pad van de URL evenredig aan de document root."
+msgstr "Locatie van de URL evenredig aan de document root."
 
 msgid "Path to be shared."
-msgstr "Pad dat gedeeld dient te worden."
+msgstr "Locatie dat gedeeld dient te worden."
 
 #, php-format
 msgid "Path to the local device. (e.g. %s)"
-msgstr "Pad naar het locale apparaat.. (bijv. %s)"
+msgstr "Locatie naar het locale apparaat. (bijv. %s)"
 
 msgid "Peer Secret"
 msgstr "Peer Wachtwoord"
@@ -5222,7 +5226,7 @@ msgstr "Peer poort"
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
-msgstr "Permanente samba datapad (bijv. %s)."
+msgstr "Permanente samba data locatie (bijv. %s)."
 
 msgid "Permit root login"
 msgstr "Root aanmeldingen toelaten"
@@ -5265,7 +5269,7 @@ msgid "Please define the Media library location."
 msgstr "Definieer de Mediatheek locatie."
 
 msgid "Please note that blanks in path names are not allowed."
-msgstr "Spaties in de padnamen niet zijn toegestaan."
+msgstr "Spaties in de naam van de locatie zijn niet toegestaan."
 
 msgid "Polish"
 msgstr "Pools"
@@ -6056,7 +6060,7 @@ msgid "Set the account's primary group to the given group."
 msgstr "Stel de account's primaire groep in naar de opgegeven groep."
 
 msgid "Set the content location(s) to or from the media library."
-msgstr "De media locatie(s) van of naar de mediabibliotheek instellen."
+msgstr "Zet de media locatie(s) in of uit de mediabibliotheek."
 
 msgid "Set the desired Service Set Identifier (aka network name)."
 msgstr "Stel de gewenste Service Set Identifier in (aka netwerk naam)."
@@ -6273,7 +6277,7 @@ msgstr ""
 "Helium levels uit specificatie zijn."
 
 msgid "Specified path is NFSv4 root directory."
-msgstr "Opgegeven pad is een NFSv4 root folder."
+msgstr "Opgegeven locatie is een NFSv4 root folder."
 
 msgid "Specifies how many servers to create."
 msgstr "Vul het aantal servers in die je wil creëren."
@@ -7288,15 +7292,15 @@ msgstr "De wachtwoorden komen niet overeen."
 
 #, php-format
 msgid "The path '%s' does not exist."
-msgstr "Het pad '%s' bestaat niet."
+msgstr "De locatie '%s' bestaat niet."
 
 #, php-format
 msgid "The path '%s' is a directory."
-msgstr "De pad '%s' is een map."
+msgstr "De locatie '%s' is een map."
 
 #, php-format
 msgid "The path '%s' is not a directory."
-msgstr "De pad '%s' is geen map."
+msgstr "De locatie '%s' is geen map."
 
 msgid "The peer connection encryption mode."
 msgstr "Versleutelings mode voor peer-to-peer verbindingen."
@@ -7675,9 +7679,9 @@ msgid ""
 "via the drive's cache RAM."
 msgstr ""
 "Dit attribuut is een onderdeel van Hewlett-Packard 's SMART IV technologie, "
-"evenals deel van andere leveranciers IO foutdetectie en correctie schema's, "
-"en het bevat een aantal pariteit fouten die zich in het data pad tot de "
-"media via de schijf  cache RAM voordoen."
+"evenals deel van andere makers IO foutdetectie en correctie schema's, en het "
+"bevat een aantal pariteit fouten die zich in het data locatie tot de media "
+"via de schijf cache RAM voordoen."
 
 #, php-format
 msgid ""
@@ -8221,7 +8225,7 @@ msgid ""
 "Tracks whose path contains one or more of these comma separated strings will "
 "be treated as a compilation."
 msgstr ""
-"Tracks waarvan het pad een of meer van deze door komma's gescheiden "
+"Traceert wiens locatie een of meer van deze door komma's gescheiden "
 "tekenreeksen worden behandeld als een compilatie."
 
 msgid "Transcoding"
@@ -8905,7 +8909,7 @@ msgid "You may enter a description here for your reference."
 msgstr "U kunt hier een beschrijving invullen als referentie."
 
 msgid "You may enter a device file or label path."
-msgstr "U kunt een schijf bestand of label pad in voeren."
+msgstr "U kunt een schijf bestand of label locatie in voeren."
 
 #, php-format
 msgid ""
@@ -9035,12 +9039,6 @@ msgstr "Fout geconstateerd tijdens het importeren."
 msgid "e.g. %s"
 msgstr "bijv. %s"
 
-msgid "error"
-msgstr "fout"
-
-msgid "fatal"
-msgstr "fataal"
-
 msgid "filechooser"
 msgstr "bestandsselector"
 
@@ -9083,9 +9081,6 @@ msgstr "iTunes/DAAP"
 
 msgid "infinity"
 msgstr "oneindig"
-
-msgid "info"
-msgstr "info"
 
 msgid "load/unload failed."
 msgstr "load/unload mislukt."
@@ -9157,7 +9152,7 @@ msgid "sysctl.conf"
 msgstr "sysctl.conf"
 
 msgid "sysvol exist in path."
-msgstr "sysvol bestaat in pad."
+msgstr "sysvol bestaat in de locatie."
 
 msgid "to"
 msgstr "naar"
@@ -9171,5 +9166,29 @@ msgstr "loskoppelen"
 msgid "version:"
 msgstr "versie:"
 
-msgid "warning"
-msgstr "waarschuwing"
+#~ msgid "Bad User - non existing users"
+#~ msgstr "Verkeerde gebruiker - gebruiker bestaat niet"
+
+#~ msgid "Never - default"
+#~ msgstr "Nooit - Standaard"
+
+#~ msgid "ALL interfaces"
+#~ msgstr "Alle netwerken"
+
+#~ msgid "OPT only"
+#~ msgstr "Alleen OPT"
+
+#~ msgid "LAN only"
+#~ msgstr "Alleen LAN"
+
+#~ msgid "fatal"
+#~ msgstr "fataal"
+
+#~ msgid "warning"
+#~ msgstr "waarschuwing"
+
+#~ msgid "info"
+#~ msgstr "info"
+
+#~ msgid "error"
+#~ msgstr "fout"
