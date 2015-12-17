@@ -18,7 +18,7 @@ CONFLICTS?=		*samba3[2-6]-3.* samba4-4.0.* samba41-4.1.* samba43-4.3.*
 
 SAMBA4_BASENAME=	samba
 SAMBA4_PORTNAME=	${SAMBA4_BASENAME}4
-SAMBA4_VERSION=		4.2.6
+SAMBA4_VERSION=		4.2.7
 SAMBA4_DISTNAME=	${SAMBA4_BASENAME}-${SAMBA4_VERSION:S|.p|pre|:S|.r|rc|:S|.t|tp|:S|.a|alpha|}
 
 WRKSRC?=		${WRKDIR}/${DISTNAME}
@@ -108,8 +108,8 @@ BUILD_DEPENDS+=		ntdb>=1.0:${PORTSDIR}/databases/ntdb
 RUN_DEPENDS+=		ntdb>=1.0:${PORTSDIR}/databases/ntdb
 SAMBA4_BUNDLED_LIBS+=	!ntdb
 # ldb
-BUILD_DEPENDS+=		ldb>=1.1.23:${PORTSDIR}/databases/ldb
-RUN_DEPENDS+=		ldb>=1.1.23:${PORTSDIR}/databases/ldb
+BUILD_DEPENDS+=		ldb>=1.1.24:${PORTSDIR}/databases/ldb
+RUN_DEPENDS+=		ldb>=1.1.24:${PORTSDIR}/databases/ldb
 SAMBA4_BUNDLED_LIBS+=	!ldb
 # Don't use external libcom_err
 SAMBA4_BUNDLED_LIBS+=	com_err
