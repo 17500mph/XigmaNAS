@@ -1,6 +1,6 @@
 PORTNAME=		tmux
 PORTVERSION=	2.1
-PORTREVISION?=  0
+PORTREVISION?=  1
 CATEGORIES=		sysutils
 COMMENT=		Terminal Multiplexer
 MAINTAINER=		zoon01@nas4free.org
