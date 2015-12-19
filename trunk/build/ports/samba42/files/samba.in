@@ -353,7 +353,7 @@ samba_mkconf_cmd()
 			-i "count(zfsacl) > 0" \
 				-o "veto files = /.zfs/" -n \
 			-b \
-			-i "count(afpcomapt) > 0" \
+			-i "count(afpcompat) > 0" \
 				-o "fruit:resource = file" -n \
 				-o "fruit:metadata = netatalk" -n \
 				-o "fruit:locking = netatalk" -n \
