@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-13 16:10+0000\n"
-"PO-Revision-Date: 2015-12-13 07:37+0000\n"
+"POT-Creation-Date: 2015-12-18 00:47+0000\n"
+"PO-Revision-Date: 2015-12-19 13:07+0000\n"
 "Last-Translator: Daisuke Aoyama <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-14 11:16+0000\n"
+"X-Launchpad-Export-Date: 2015-12-19 13:08+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -342,7 +342,7 @@ msgstr "AIO 読み込みサイズ"
 msgid "AIO write size"
 msgstr "AIO 書き込みサイズ"
 
-msgid "ALL interfaces"
+msgid "ALL Interfaces"
 msgstr "全てのインターフェース"
 
 msgid "AP mode"
@@ -858,8 +858,8 @@ msgstr "バックアップファイル"
 msgid "Backup/Restore"
 msgstr "バックアップ/リストア"
 
-msgid "Bad User - non existing users"
-msgstr "Bad User - 存在しないユーザ"
+msgid "Bad User - (Non Existing Users)"
+msgstr "Bad User - (存在しないユーザ)"
 
 msgid "Balance algorithm"
 msgstr "負荷分散アルゴリズム"
@@ -2834,6 +2834,9 @@ msgstr "失敗。"
 msgid "Failover"
 msgstr "フェイルオーバ"
 
+msgid "Fatal"
+msgstr "致命的"
+
 msgid "File"
 msgstr "ファイル"
 
@@ -3662,11 +3665,11 @@ msgstr "アグリゲーション"
 msgid "LAN Management"
 msgstr "LAN マネージメント"
 
+msgid "LAN Only"
+msgstr "LAN のみ"
+
 msgid "LAN net"
 msgstr "LAN net"
-
-msgid "LAN only"
-msgstr "LAN のみ"
 
 msgid "LCDproc"
 msgstr "LCDproc"
@@ -4356,15 +4359,15 @@ msgstr "NFS 共有にアクセス可能な権限を与えるネットワーク�
 msgid "Networks"
 msgstr "ネットワーク"
 
+msgid "Never - (Default)"
+msgstr "Never - (デフォルト)"
+
 msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
 "a disk which is spun-down to be spun-up when it is checked."
 msgstr ""
 "Never - 電源モードに関わらず、デバイスをポーリング (チェック) "
 "します。これは、スピンダウンしているディスクに対してのチェックが行われる際にスピンアップする可能性があります。"
-
-msgid "Never - default"
-msgstr "Never - デフォルト"
 
 msgid "New Device"
 msgstr "新しいデバイス"
@@ -4589,7 +4592,7 @@ msgstr "OK"
 msgid "ONLINE"
 msgstr "オンライン"
 
-msgid "OPT only"
+msgid "OPT Only"
 msgstr "OPT のみ"
 
 msgid "Object name"
@@ -8279,12 +8282,6 @@ msgstr "インポート中にエラーを検出しました。"
 msgid "e.g. %s"
 msgstr "例) %s"
 
-msgid "error"
-msgstr "エラー"
-
-msgid "fatal"
-msgstr "致命的"
-
 msgid "filechooser"
 msgstr "ファイル選択"
 
@@ -8327,9 +8324,6 @@ msgstr "iTunes/DAAP"
 
 msgid "infinity"
 msgstr "無限"
-
-msgid "info"
-msgstr "情報"
 
 msgid "load/unload failed."
 msgstr "ロード/アンロードに失敗しました。"
@@ -8414,6 +8408,3 @@ msgstr "アンマウント"
 
 msgid "version:"
 msgstr "バージョン:"
-
-msgid "warning"
-msgstr "警告"
