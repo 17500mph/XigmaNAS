@@ -59,6 +59,7 @@ Changes:
 - Upgrade samba to 4.2.7.
 
 Fixes:
+- Fix AFP compatibility don't work if you didn't enable Samaba AD.
 - Fix run now on cron don't use Who field.
 - Fix duplicate syncthing account when fresh install by 2067.
 - Fix broken menu options livecd/liveusb.
