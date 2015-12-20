@@ -87,7 +87,7 @@ RUN_DEPENDS+=		libarchive>=3.1.2:${PORTSDIR}/archivers/libarchive
 # External Samba dependencies
 # IDL compiler
 BUILD_DEPENDS+=		p5-Parse-Pidl>=4.0.0:${PORTSDIR}/devel/p5-Parse-Pidl
-# 
+#
 BUILD_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}dnspython>=1.9.4:${PORTSDIR}/dns/py-dnspython
 RUN_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}dnspython>=1.9.4:${PORTSDIR}/dns/py-dnspython
 PLIST_SUB+=		PY_DNSPYTHON="@comment "
@@ -177,7 +177,8 @@ SUB_LIST+=		NSUPDATE="@comment "
 .elif ${PORT_OPTIONS:MNSUPDATE}
 RUN_DEPENDS+=		samba-nsupdate:${PORTSDIR}/dns/samba-nsupdate
 SUB_LIST+=		NSUPDATE=""
-SUB_LIST+=              NSUPDATE="@comment "
+.else
+SUB_LIST+=		NSUPDATE="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MDEBUG}
@@ -243,10 +244,10 @@ CONFIGURE_ARGS+=	--without-acl-support
 .if ! ${PORT_OPTIONS:MAD_DC}
 CONFIGURE_ARGS+=	--without-ad-dc
 PLIST_SUB+=		AD_DC="@comment "
-SUB_LIST+=              AD_DC="@comment "
+SUB_LIST+=		AD_DC="@comment "
 .else
 PLIST_SUB+=		AD_DC=""
-SUB_LIST+=              AD_DC=""
+SUB_LIST+=		AD_DC=""
 .endif
 
 .if ${PORT_OPTIONS:MADS}
