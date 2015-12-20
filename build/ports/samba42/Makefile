@@ -1,6 +1,6 @@
 PORTNAME?=		${SAMBA4_BASENAME}42
 PORTVERSION?=		${SAMBA4_VERSION}
-PORTREVISION?=		0
+PORTREVISION?=		1
 CATEGORIES?=		net
 MASTER_SITES=		SAMBA/samba/stable SAMBA/samba/rc
 DISTNAME=		${SAMBA4_DISTNAME}
@@ -177,6 +177,7 @@ SUB_LIST+=		NSUPDATE="@comment "
 .elif ${PORT_OPTIONS:MNSUPDATE}
 RUN_DEPENDS+=		samba-nsupdate:${PORTSDIR}/dns/samba-nsupdate
 SUB_LIST+=		NSUPDATE=""
+SUB_LIST+=              NSUPDATE="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MDEBUG}
@@ -242,8 +243,10 @@ CONFIGURE_ARGS+=	--without-acl-support
 .if ! ${PORT_OPTIONS:MAD_DC}
 CONFIGURE_ARGS+=	--without-ad-dc
 PLIST_SUB+=		AD_DC="@comment "
+SUB_LIST+=              AD_DC="@comment "
 .else
 PLIST_SUB+=		AD_DC=""
+SUB_LIST+=              AD_DC=""
 .endif
 
 .if ${PORT_OPTIONS:MADS}
