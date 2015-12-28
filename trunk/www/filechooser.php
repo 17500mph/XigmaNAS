@@ -188,6 +188,13 @@ class FileChooser
         $folders[] = $file;
       elseif(is_file("{$dir}/{$file}"))
         $files[] = $file;
+      elseif(preg_match('#^/dev/zvol/#', "{$dir}") && strpos($file, '@') == FALSE) {
+        /* pickup ZFS volume but not snapshot */
+        $S_IFCHR = 0020000;
+        $st = stat("{$dir}/{$file}");
+        if ($st != FALSE && $st['mode'] & $S_IFCHR)
+          $files[] = $file;
+      }
     }
     @closedir($handle);
 
