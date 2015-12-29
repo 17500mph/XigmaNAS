@@ -438,7 +438,7 @@ function zfs_dataset_configure($uuid) {
 	}
 
 	// Check mountpoint
-	$mounted = isset($dataset['canmount']) ? true : falese;
+	$mounted = isset($dataset['canmount']) ? true : false;
 	$mountpoint = "/mnt/{$dataset['pool'][0]}/{$dataset['name']}";
 	mwexec2("zfs list -H -t filesystem -o mountpoint {$dataset['pool'][0]}/{$dataset['name']}", $rawdata2);
 	if (!empty($rawdata2) && $rawdata2[0] != "none" && $rawdata2[0] != "legacy")
@@ -717,7 +717,7 @@ function zfs_get_volume_reservation($volsize) {
 		}
 		return "{$size}{$suffix}";
 	}
-	return flase;
+	return false;
 }
 
 /**
