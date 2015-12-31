@@ -330,10 +330,11 @@ function create_vm_config($vmuuid) {
 		}
 		// Serial
 		fprintf($fp, "serial = \"pty\"\n");
-		/*
+		// USB pointer (absolute coordinates)
+		fprintf($fp, "usb = 1\n");
+		fprintf($fp, "usbdevice = \"tablet\"\n");
 		// ACPI
 		fprintf($fp, "acpi = 1\n");
-		*/
 		// Nested Virtualization
 		if (isset($vm['nestedhvm'])) {
 			fprintf($fp, "hap = 1\n");
