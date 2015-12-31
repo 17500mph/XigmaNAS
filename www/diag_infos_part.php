@@ -77,6 +77,7 @@ $a_disk = get_physical_disks_list();
   			<?php html_titleline(sprintf(gettext("Device /dev/%s - %s"), $diskk, $diskv['desc']));?>
 				<tr>
 					<td>
+						<pre><?php unset($rawdata); exec("/sbin/gpart show {$diskk}", $rawdata); echo htmlspecialchars(implode("\n", $rawdata));?></pre>
 						<pre><?php unset($rawdata); exec("/sbin/fdisk {$diskk}", $rawdata); echo htmlspecialchars(implode("\n", $rawdata));?></pre>
 					</td>
 				</tr>
