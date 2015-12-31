@@ -2692,6 +2692,10 @@ function uuid() {
 // Get the file size in bytes.
 // Fix PHP file size problem (see http://de.php.net/manual/en/function.filesize.php).
 function get_filesize($file) {
+	if (preg_match('#^/dev/zvol/(.+)$#', "{$file}", $m) && !empty($m[1])) {
+		$volname = str_replace('//', '/', $m[1]);
+		return @exec("zfs get -Hp -o value volsize " . escapeshellarg($volname));
+	}
 	return @exec("stat -f %z " . escapeshellarg($file));
 }
 
