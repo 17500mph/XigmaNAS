@@ -1,6 +1,6 @@
 PORTNAME=			fusefs-ntfs
 PORTVERSION=	1.0
-PORTREVISION=	0
+PORTREVISION=	1
 PORTEPOCH=		8
 CATEGORIES=		sysutils
 COMMENT=			Mount NTFS partitions and disk images
@@ -44,7 +44,8 @@ do-install:
 .endif
 	@${INSTALL_PROGRAM} -v ${PORTSDIR}/sysutils/fusefs-ntfs/work/ntfs-3g*/libntfs-3g/.libs/libntfs-3g.so.86 ${NAS4FREE_ROOTFS}/usr/local/lib
 #	@${INSTALL_PROGRAM} -v ${PORTSDIR}/sysutils/fusefs-libs/work/fuse-*/lib/.libs/lib*.so* ${NAS4FREE_ROOTFS}/usr/local/lib
-	@${INSTALL_PROGRAM} -v ${PORTSDIR}/sysutils/fusefs-libs/work/fuse-*/lib/.libs/lib*.so ${NAS4FREE_ROOTFS}/usr/local/lib
+	@${INSTALL_PROGRAM} -v ${PORTSDIR}/sysutils/fusefs-libs/work/stage/usr/local/lib/lib*.so ${NAS4FREE_ROOTFS}/usr/local/lib
+	@${INSTALL_PROGRAM} -v ${PORTSDIR}/sysutils/fusefs-libs/work/stage/usr/local/lib/lib*.so.2 ${NAS4FREE_ROOTFS}/usr/local/lib
 #	@${INSTALL_PROGRAM} -v ${PORTSDIR}/devel/libublio/work/libublio-*/libubl*.so* ${NAS4FREE_ROOTFS}/usr/local/lib
 	@${INSTALL_PROGRAM} -v ${PORTSDIR}/devel/libublio/work/libublio-*/libubl*.so ${NAS4FREE_ROOTFS}/usr/local/lib
 
