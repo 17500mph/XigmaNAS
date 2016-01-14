@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-13 16:10+0000\n"
-"PO-Revision-Date: 2015-12-14 07:31+0000\n"
+"POT-Creation-Date: 2015-12-18 00:47+0000\n"
+"PO-Revision-Date: 2015-12-18 07:26+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-14 11:16+0000\n"
-"X-Generator: Launchpad (build 17865)\n"
+"X-Launchpad-Export-Date: 2016-01-14 21:37+0000\n"
+"X-Generator: Launchpad (build 17886)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -377,8 +377,8 @@ msgstr "AIO olvasási méret"
 msgid "AIO write size"
 msgstr "AIO írási méret"
 
-msgid "ALL interfaces"
-msgstr "ÖSSZES interfész"
+msgid "ALL Interfaces"
+msgstr "Összes interfész"
 
 msgid "AP mode"
 msgstr "AP mód"
@@ -921,8 +921,8 @@ msgstr "Biztonsági mentés"
 msgid "Backup/Restore"
 msgstr "Mentés/Visszaállítás"
 
-msgid "Bad User - non existing users"
-msgstr "Hibás felhasználó - nem létező felhasználó"
+msgid "Bad User - (Non Existing Users)"
+msgstr "Rossz felhasználó - (nem létező felhasználók)"
 
 msgid "Balance algorithm"
 msgstr "Kiegyensúlyozó algoritmus"
@@ -2998,6 +2998,9 @@ msgstr "Nem sikerült."
 msgid "Failover"
 msgstr "Hibatűrés"
 
+msgid "Fatal"
+msgstr "Végzetes"
+
 msgid "File"
 msgstr "Fájl"
 
@@ -3873,11 +3876,11 @@ msgstr "LAGG"
 msgid "LAN Management"
 msgstr "Hálózat kezelése"
 
+msgid "LAN Only"
+msgstr "Csak LAN"
+
 msgid "LAN net"
 msgstr "Hálózat"
-
-msgid "LAN only"
-msgstr "Csak hálózat"
 
 msgid "LCDproc"
 msgstr "LCDproc"
@@ -4602,6 +4605,9 @@ msgstr "Hálózat, amely jogosult elérni a NFS-megosztás."
 msgid "Networks"
 msgstr "Hálózatok"
 
+msgid "Never - (Default)"
+msgstr "Soha - (alapértelmezett)"
+
 msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
 "a disk which is spun-down to be spun-up when it is checked."
@@ -4609,9 +4615,6 @@ msgstr ""
 "Soha (Never) - Ellenőrzi az eszközt, függetlenül az milyen teljesítmény "
 "üzemmódban van. A leállított lemezt is újra felpörgetheti az ellenőrzés "
 "idejére."
-
-msgid "Never - default"
-msgstr "Soha - alapértelmezett"
 
 msgid "New Device"
 msgstr "Új eszköz"
@@ -4868,7 +4871,7 @@ msgstr "OK"
 msgid "ONLINE"
 msgstr "Online"
 
-msgid "OPT only"
+msgid "OPT Only"
 msgstr "Csak OPT"
 
 msgid "Object name"
@@ -8882,12 +8885,6 @@ msgstr "hiba az importálás közben"
 msgid "e.g. %s"
 msgstr "pl. %s"
 
-msgid "error"
-msgstr "hiba"
-
-msgid "fatal"
-msgstr "végzetes"
-
 msgid "filechooser"
 msgstr "fájlválasztó"
 
@@ -8930,9 +8927,6 @@ msgstr "iTunes/DAAP"
 
 msgid "infinity"
 msgstr "végtelenített"
-
-msgid "info"
-msgstr "információ"
 
 msgid "load/unload failed."
 msgstr "töltési hiba"
@@ -9017,6 +9011,3 @@ msgstr "leválasztás"
 
 msgid "version:"
 msgstr "verzió:"
-
-msgid "warning"
-msgstr "figyelmeztetés"

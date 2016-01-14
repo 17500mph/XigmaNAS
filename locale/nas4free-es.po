@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-13 16:10+0000\n"
-"PO-Revision-Date: 2015-12-13 10:11+0000\n"
+"POT-Creation-Date: 2015-12-18 00:47+0000\n"
+"PO-Revision-Date: 2015-12-20 13:30+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-14 11:16+0000\n"
-"X-Generator: Launchpad (build 17865)\n"
+"X-Launchpad-Export-Date: 2016-01-14 21:37+0000\n"
+"X-Generator: Launchpad (build 17886)\n"
 "X-Poedit-Country: SPAIN\n"
 "Language: \n"
 "X-Poedit-Language: Spanish\n"
@@ -370,8 +370,8 @@ msgstr "AIO Tamaño Lectura"
 msgid "AIO write size"
 msgstr "AIO Tamaño Escritura"
 
-msgid "ALL interfaces"
-msgstr "Todos los interfaces"
+msgid "ALL Interfaces"
+msgstr "Todos los Interfaces"
 
 msgid "AP mode"
 msgstr "Modo AP"
@@ -917,8 +917,8 @@ msgstr "Archivo de respaldo"
 msgid "Backup/Restore"
 msgstr "Guardar/Restaurar"
 
-msgid "Bad User - non existing users"
-msgstr "Usuario Incorrecto - No existe el usuario"
+msgid "Bad User - (Non Existing Users)"
+msgstr "Usuario erroneo - (No existe el usuario)"
 
 msgid "Balance algorithm"
 msgstr "Algoritmo de balanceo"
@@ -2998,6 +2998,9 @@ msgstr "Fallo."
 msgid "Failover"
 msgstr "Failover"
 
+msgid "Fatal"
+msgstr "Fatal"
+
 msgid "File"
 msgstr "Archivo"
 
@@ -3880,11 +3883,11 @@ msgstr "LAGG"
 msgid "LAN Management"
 msgstr "LAN Administracion"
 
+msgid "LAN Only"
+msgstr ""
+
 msgid "LAN net"
 msgstr "Red LAN"
-
-msgid "LAN only"
-msgstr "Solo LAN"
 
 msgid "LCDproc"
 msgstr "LCDproc"
@@ -4600,13 +4603,13 @@ msgstr "Red que está autorizada a acceder a los recursos NFS compartidos."
 msgid "Networks"
 msgstr "Redes"
 
+msgid "Never - (Default)"
+msgstr ""
+
 msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
 "a disk which is spun-down to be spun-up when it is checked."
 msgstr "Never - Nunca revisar el dispositivo a pesar de su modo de energía."
-
-msgid "Never - default"
-msgstr "Nunca - Por defecto"
 
 msgid "New Device"
 msgstr "Dispositivo nuevo"
@@ -4858,8 +4861,8 @@ msgstr "OK"
 msgid "ONLINE"
 msgstr "CONECTADO"
 
-msgid "OPT only"
-msgstr "Solo OPT"
+msgid "OPT Only"
+msgstr ""
 
 msgid "Object name"
 msgstr "Nombre del objeto"
@@ -8879,12 +8882,6 @@ msgstr "Se ha detectado un error mientras se realizaba la importación"
 msgid "e.g. %s"
 msgstr "Ej: %s"
 
-msgid "error"
-msgstr "error"
-
-msgid "fatal"
-msgstr "fatal"
-
 msgid "filechooser"
 msgstr "Selector de ficheros"
 
@@ -8927,9 +8924,6 @@ msgstr "iTunes/DAAP"
 
 msgid "infinity"
 msgstr "infinito"
-
-msgid "info"
-msgstr ""
 
 msgid "load/unload failed."
 msgstr "Fallo en la carga y/o descarga"
@@ -9014,6 +9008,3 @@ msgstr "Desmontar"
 
 msgid "version:"
 msgstr "versión:"
-
-msgid "warning"
-msgstr ""

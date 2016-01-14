@@ -2,15 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-13 16:10+0000\n"
-"PO-Revision-Date: 2015-07-14 10:32+0000\n"
+"POT-Creation-Date: 2015-12-18 00:47+0000\n"
+"PO-Revision-Date: 2015-12-27 22:10+0000\n"
 "Last-Translator: Alex Lin <linuxant@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-14 11:17+0000\n"
-"X-Generator: Launchpad (build 17865)\n"
+"X-Launchpad-Export-Date: 2016-01-14 21:36+0000\n"
+"X-Generator: Launchpad (build 17886)\n"
+"Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -50,7 +51,7 @@ msgstr "%dB / 塊"
 
 #, php-format
 msgid "%s Interface"
-msgstr ""
+msgstr "%s 介面"
 
 #, php-format
 msgid "%s is too long."
@@ -285,13 +286,13 @@ msgid "A valid systctl MIB value."
 msgstr "一個有效的 systctl MIB 值。"
 
 msgid "ACL Inherit"
-msgstr ""
+msgstr "繼承 ACL"
 
 msgid "ACL Mode"
-msgstr ""
+msgstr "ACL模式"
 
 msgid "ACL inherit"
-msgstr "ACL繼承"
+msgstr "繼承 ACL"
 
 msgid "ACL mode"
 msgstr "ACL模式"
@@ -306,7 +307,7 @@ msgid "AFP"
 msgstr "AFP"
 
 msgid "AFP compatibility"
-msgstr ""
+msgstr "AFP 兼容性"
 
 msgid "AG"
 msgstr "AG"
@@ -320,8 +321,8 @@ msgstr "AIO 讀取大小"
 msgid "AIO write size"
 msgstr "AIO寫入大小"
 
-msgid "ALL interfaces"
-msgstr "所有介面"
+msgid "ALL Interfaces"
+msgstr ""
 
 msgid "AP mode"
 msgstr "AP 模式"
@@ -333,10 +334,10 @@ msgid "ARP tables"
 msgstr "ARP 表"
 
 msgid "ATTRIBUTE NAME"
-msgstr ""
+msgstr "屬性名"
 
 msgid "Accept remote syslog messages"
-msgstr ""
+msgstr "接受遠程syslog信息"
 
 msgid "Access"
 msgstr "權限"
@@ -482,13 +483,13 @@ msgid "Add volume"
 msgstr "新增卷"
 
 msgid "Additional Network"
-msgstr ""
+msgstr "其他網絡"
 
 msgid "Additional Storage"
 msgstr ""
 
 msgid "Additional group"
-msgstr "其餘群組"
+msgstr "其他群組"
 
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr "驅動程序中與硬件相關到附加參數。"
@@ -524,7 +525,7 @@ msgid "Advanced Options"
 msgstr "進階選項"
 
 msgid "Advanced Settings"
-msgstr ""
+msgstr "進階设置"
 
 msgid "Advanced settings"
 msgstr "進階设置"
@@ -617,7 +618,7 @@ msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "允許客戶端恢復中斷的上載和下載"
 
 msgid "Allow group"
-msgstr ""
+msgstr "允許群組"
 
 msgid "Allow new files"
 msgstr "允許新檔案"
@@ -666,7 +667,7 @@ msgid "Alternative configuration directory (usually empty)."
 msgstr "另外的組態目錄(通常為空白)。"
 
 msgid "Always On"
-msgstr ""
+msgstr "永遠開機"
 
 msgid "Always scan"
 msgstr "永遠掃描"
@@ -757,7 +758,7 @@ msgid "Attaching provider '%s'."
 msgstr "連接 '%s' 中。"
 
 msgid "Audio"
-msgstr ""
+msgstr "音頻"
 
 msgid "Auth Group"
 msgstr "驗證群組"
@@ -820,7 +821,7 @@ msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr ""
 
 msgid "Backup Configuration"
-msgstr ""
+msgstr "備份設定"
 
 msgid "Backup file"
 msgstr "備份檔"
@@ -828,17 +829,17 @@ msgstr "備份檔"
 msgid "Backup/Restore"
 msgstr "備份/還原"
 
-msgid "Bad User - non existing users"
-msgstr "不好用戶 - 非現有用戶"
+msgid "Bad User - (Non Existing Users)"
+msgstr "不良用戶 - （非現有用戶）"
 
 msgid "Balance algorithm"
 msgstr "平衡演算法"
 
 msgid "Ban List"
-msgstr ""
+msgstr "封禁名單"
 
 msgid "Ban list rule"
-msgstr "阻擋列表規則"
+msgstr "封禁名單規則"
 
 msgid "Banner"
 msgstr "歡迎文字"
@@ -912,24 +913,24 @@ msgid "Blank time"
 msgstr "空白時間"
 
 msgid "Block size"
-msgstr ""
+msgstr "區塊大小"
 
 msgid "Blocksize"
 msgstr "區塊大小"
 
 msgid "Boot Arguments"
-msgstr ""
+msgstr "啟動參數"
 
 msgid "Boot Loader"
-msgstr ""
+msgstr "啟動程序"
 
 #, php-format
 msgid "Boot argument (e.g. %s)."
-msgstr ""
+msgstr "啟動參數（例如：%s）"
 
 #, php-format
 msgid "Boot loader (e.g. %s)."
-msgstr ""
+msgstr "啟動程序（例如：%s）"
 
 #, php-format
 msgid ""
@@ -938,28 +939,28 @@ msgid ""
 msgstr "啟動分區是太小了。您需要從LiveCD的或LiveUSB重新安裝或調整的 %s 的啟動分區。\n"
 
 msgid "Bootloader"
-msgstr ""
+msgstr "啟動程序"
 
 msgid "Bridge"
 msgstr "橋接"
 
 msgid "Broadcast interval"
-msgstr ""
+msgstr "廣播間隔"
 
 #, php-format
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
 "seconds)"
-msgstr ""
+msgstr "每N秒在網絡上的廣播其可用性。 （默認為 300 秒）"
 
 msgid "Browse Directory"
-msgstr ""
+msgstr "瀏覽目錄"
 
 msgid "Browseable"
 msgstr "可瀏覽"
 
 msgid "Building database in progress"
-msgstr ""
+msgstr "正在建設數據庫中"
 
 msgid "Bulgarian"
 msgstr "保加利亞文"
@@ -983,7 +984,7 @@ msgid "CD/DVD"
 msgstr "CD/DVD"
 
 msgid "CD/DVD drive"
-msgstr ""
+msgstr "CD/DVD 驅動器"
 
 msgid "CHANGED"
 msgstr "已更改"
@@ -1010,7 +1011,7 @@ msgid "CP1251 (Cyrillic)"
 msgstr "CP1251（西里爾文）"
 
 msgid "CP1252 (Latin 1)"
-msgstr ""
+msgstr "CP1252 （拉丁文 1）"
 
 msgid "CP437 (Latin US)"
 msgstr "CP437（拉丁文 美）"
@@ -1037,7 +1038,7 @@ msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950（繁體中文 Big5）"
 
 msgid "CPU Load"
-msgstr ""
+msgstr "CPU 負載"
 
 msgid "CPU frequency"
 msgstr "CPU 頻率"
@@ -1123,7 +1124,7 @@ msgid "Check <a href=\"%s\">System|General Setup</a> before initializing."
 msgstr "初始化前檢查<a href=\"%s\">系統|一般設定</a>。"
 
 msgid "Check and replace cable"
-msgstr ""
+msgstr "檢查並更換電纜"
 
 msgid "Check interval"
 msgstr "檢查區間"
@@ -1153,10 +1154,10 @@ msgid "Clear"
 msgstr "清除"
 
 msgid "Clear Config & Import Disks"
-msgstr ""
+msgstr "清除和匯入磁碟設定"
 
 msgid "Clear Config & Import Software Raid Disks"
-msgstr ""
+msgstr "清除和匯入軟體RAID設定"
 
 msgid "Clear config and Import disks"
 msgstr "清除和匯入磁碟設定"
@@ -1249,10 +1250,10 @@ msgid "Confirmation"
 msgstr "確認"
 
 msgid "Connected FTP Users & Status"
-msgstr ""
+msgstr "FTP連接用戶和狀態"
 
 msgid "Consider replacing this drive"
-msgstr ""
+msgstr "考慮更換此驅動器"
 
 msgid "Console Menu"
 msgstr "控制台菜單"
@@ -1287,13 +1288,13 @@ msgid "Controller Authorised network"
 msgstr "控制器授權網路"
 
 msgid "Controller IP Address"
-msgstr ""
+msgstr "控制器的 IP 位址"
 
 msgid "Controller IP address"
 msgstr "控制器的 IP 位址"
 
 msgid "Controller Model"
-msgstr ""
+msgstr "控制器型號"
 
 msgid "Controller TCP Port"
 msgstr "控制器的TCP Port"
@@ -1523,7 +1524,7 @@ msgid "Current Version:"
 msgstr "目前版本："
 
 msgid "Current internal temperature."
-msgstr ""
+msgstr "當前的內部溫度。"
 
 msgid "Current password"
 msgstr "當前密碼"
@@ -1563,7 +1564,7 @@ msgid "DAAP"
 msgstr "DAAP"
 
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 msgid "DHCP"
 msgstr "DHCP"
@@ -1575,13 +1576,13 @@ msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
 
 msgid "DLNA/UPnP Fuppes"
-msgstr ""
+msgstr "DLNA/UPnP Fuppes"
 
 msgid "DLNA/UPnP MiniDLNA"
-msgstr ""
+msgstr "DLNA/UPnP MiniDLNA"
 
 msgid "DNS"
-msgstr ""
+msgstr "DNS"
 
 msgid "DNS domain"
 msgstr "DNS域名"
@@ -1703,7 +1704,7 @@ msgid "Delete URL"
 msgstr "刪除 URL"
 
 msgid "Delete VM"
-msgstr ""
+msgstr "刪除 VM"
 
 msgid "Delete algorithm"
 msgstr "刪除演算法"
@@ -1828,7 +1829,7 @@ msgid "Destination"
 msgstr "目的端"
 
 msgid "Destination Share"
-msgstr ""
+msgstr "共享目的端"
 
 msgid "Destination email address."
 msgstr "電郵目的端。"
@@ -1882,7 +1883,7 @@ msgid "Device IP"
 msgstr "裝置 IP"
 
 msgid "Device Model"
-msgstr ""
+msgstr "設備型號"
 
 msgid "Device Pass-through"
 msgstr "設備直通（Device Pass-through）"
@@ -1944,7 +1945,7 @@ msgid "Disable File Manager"
 msgstr "關閉檔案管理程式"
 
 msgid "Disable Firmware Update"
-msgstr ""
+msgstr "關閉固件更新"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "關閉 TCP Wrapper（mod_wrap 模塊）。"
@@ -2027,7 +2028,7 @@ msgid "Do you really want to delete this URL?"
 msgstr "您確定要刪除這個 URL 嗎？"
 
 msgid "Do you really want to delete this VM?"
-msgstr ""
+msgstr "您確定要刪除這個 VM 嗎？"
 
 msgid "Do you really want to delete this auth group?"
 msgstr "您確定要刪除這個認證組嗎？"
@@ -2192,7 +2193,7 @@ msgid "Download"
 msgstr "下載"
 
 msgid "Download Configuration"
-msgstr ""
+msgstr "下載設定"
 
 msgid "Download bandwidth"
 msgstr "下載頻寬"
@@ -2204,7 +2205,7 @@ msgid "Download firewall rules."
 msgstr "下載防火牆規則"
 
 msgid "Drive Temperature."
-msgstr ""
+msgstr "硬盤溫度。"
 
 msgid "Drive's seek performance during its internal tests."
 msgstr ""
@@ -2273,7 +2274,7 @@ msgid "Edit URL"
 msgstr "編輯 URL"
 
 msgid "Edit VM"
-msgstr ""
+msgstr "編輯 VM"
 
 msgid "Edit auth group"
 msgstr "編輯認證組"
@@ -2379,7 +2380,7 @@ msgid "Enable FXP protocol."
 msgstr "啟用 FXP 協議。"
 
 msgid "Enable Firmware Update"
-msgstr ""
+msgstr "啟用固件更新"
 
 msgid "Enable NFSv4 server."
 msgstr "啟用NFSv4伺服器。"
@@ -2399,10 +2400,10 @@ msgid "Enable TLS connections."
 msgstr "啟用TLS連接。"
 
 msgid "Enable TiVo support."
-msgstr ""
+msgstr "啟用TiVo 的支持。"
 
 msgid "Enable Time Machine support"
-msgstr "啟用 Time Machine 的支持"
+msgstr "啟用Time Machine的支持"
 
 msgid "Enable ZFS ACL"
 msgstr "啟用 ZFS 存取控制清單 (ACL)"
@@ -2650,7 +2651,7 @@ msgid "Export all the directories in the specified path."
 msgstr "導出指定的路徑中的所有目錄。"
 
 msgid "Extended Attributes"
-msgstr ""
+msgstr "擴展屬性"
 
 msgid "Extended attributes"
 msgstr "擴展屬性"
@@ -2780,6 +2781,9 @@ msgstr "失敗"
 msgid "Failover"
 msgstr "故障轉移"
 
+msgid "Fatal"
+msgstr "致命"
+
 msgid "File"
 msgstr "檔案"
 
@@ -2790,7 +2794,7 @@ msgid "File Manager"
 msgstr "檔案管理程式"
 
 msgid "File Path"
-msgstr ""
+msgstr "檔案路徑"
 
 msgid "File Transfer Protocol"
 msgstr "檔案傳輸協議（File Transfer Protocol）"
@@ -2828,7 +2832,7 @@ msgid "Fileserver"
 msgstr "文件伺服器"
 
 msgid "Filesystem"
-msgstr ""
+msgstr "檔案系統"
 
 msgid "Filter"
 msgstr "過濾"
@@ -2840,13 +2844,13 @@ msgid "Firewall"
 msgstr "防火牆"
 
 msgid "Firewall Rule Settings"
-msgstr ""
+msgstr "防火牆規則設置"
 
 msgid "Firmware"
 msgstr "韌體"
 
 msgid "Firmware upload failed (out of memory?)"
-msgstr ""
+msgstr "固件上傳失敗（內存不足？）"
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "此系統並不支援韌體上傳功能。."
@@ -2914,7 +2918,7 @@ msgid "Full Name"
 msgstr "全名"
 
 msgid "Fuppes"
-msgstr ""
+msgstr "Fuppes"
 
 msgid "Fuppes Media Server"
 msgstr ""
@@ -3027,10 +3031,10 @@ msgid "HAST volume can be use with GPT/UFS only."
 msgstr "HAST 卷只可用於 GPT/UFS 。"
 
 msgid "HDD Format"
-msgstr ""
+msgstr "HDD格式"
 
 msgid "HDD Management"
-msgstr ""
+msgstr "HDD管理"
 
 msgid ""
 "HDD producers implement a Fly Height Monitor that attempts to provide "
@@ -3043,7 +3047,7 @@ msgid ""
 msgstr ""
 
 msgid "HDD standby time"
-msgstr ""
+msgstr "HDD 待機時間"
 
 msgid "HTTP Proxy"
 msgstr "HTTP 代理伺服器"
@@ -3052,7 +3056,7 @@ msgid "HVM Guest"
 msgstr ""
 
 msgid "Hard Disk"
-msgstr ""
+msgstr "硬盤"
 
 msgid "Hardware"
 msgstr "硬體"
@@ -3151,7 +3155,7 @@ msgid "Hungarian"
 msgstr "匈牙利文"
 
 msgid "I/O Statistics"
-msgstr ""
+msgstr "I/O 統計"
 
 msgid "I/O Timeout"
 msgstr "I/O 逾時"
@@ -3161,7 +3165,7 @@ msgid "I/O timeout in seconds (%d by default)."
 msgstr "I/O 逾時（秒）（默認值是 %d ）"
 
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgid "IG"
 msgstr "IG"
@@ -3170,7 +3174,7 @@ msgid "IP"
 msgstr "IP 地址"
 
 msgid "IP Address"
-msgstr ""
+msgstr "IP 地址"
 
 msgid "IP address"
 msgstr "IP 地址"
@@ -3305,22 +3309,22 @@ msgid "Import"
 msgstr "導入"
 
 msgid "Import Disks"
-msgstr ""
+msgstr "導入磁盤"
 
 msgid "Import Software Raid Disks"
-msgstr ""
+msgstr "導入軟件RAID磁盤"
 
 msgid "Import disks"
-msgstr "匯入磁碟"
+msgstr "導入磁盤"
 
 msgid "Import disks used in configuration."
-msgstr "匯入磁碟設定"
+msgstr "導入磁盤設定"
 
 msgid "Import firewall rules."
 msgstr "導入防火牆規則。"
 
 msgid "Import on-disk ZFS config"
-msgstr "從硬碟上匯入ZFS 設定"
+msgstr "從磁盤上導入ZFS 設定"
 
 msgid "In"
 msgstr "入"
@@ -3552,7 +3556,7 @@ msgid "JBOD"
 msgstr "JBOD"
 
 msgid "JBOD Information & Status"
-msgstr ""
+msgstr "JBOD 信息和狀態"
 
 msgid ""
 "January February March April May June July August September October November "
@@ -3563,11 +3567,11 @@ msgid "Japanese"
 msgstr "日文"
 
 msgid "Kernel"
-msgstr ""
+msgstr "內核"
 
 #, php-format
 msgid "Kernel file (e.g. %s)."
-msgstr ""
+msgstr "內核文件（如 %s）。"
 
 msgid "Key"
 msgstr "密鑰"
@@ -3594,19 +3598,19 @@ msgid "LAGG"
 msgstr "LAGG"
 
 msgid "LAN Management"
-msgstr "局域網管理"
+msgstr "區域網路管理"
+
+msgid "LAN Only"
+msgstr "只有區域網路"
 
 msgid "LAN net"
 msgstr "區域網路"
-
-msgid "LAN only"
-msgstr "LAN 而已"
 
 msgid "LCDproc"
 msgstr "LCDproc"
 
 msgid "LCDproc (Client)"
-msgstr ""
+msgstr "LCDproc（客戶端）"
 
 msgid "LDAP"
 msgstr "LDAP"
@@ -3693,10 +3697,10 @@ msgid "License & Credits"
 msgstr "授權與貢獻"
 
 msgid "Life Time"
-msgstr ""
+msgstr "壽命"
 
 msgid "Life time"
-msgstr "終身"
+msgstr "壽命"
 
 msgid "Lightweight Directory Access Protocol"
 msgstr "輕型目錄訪問協議（Lightweight Directory Access Protocol）"
@@ -3724,13 +3728,13 @@ msgid "List"
 msgstr "列表"
 
 msgid "List Detected Disks"
-msgstr ""
+msgstr "列出檢測到的磁盤"
 
 msgid "List Imported Users"
-msgstr ""
+msgstr "列出導入的用戶"
 
 msgid "List Mount Points"
-msgstr ""
+msgstr "列出掛載點"
 
 msgid ""
 "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP "
@@ -3762,7 +3766,7 @@ msgid "Local Master Browser"
 msgstr "局域網主瀏覽器（Local Master Browser）。"
 
 msgid "Local Share (Destination)"
-msgstr ""
+msgstr "本地端分享區(目標)"
 
 msgid "Local User"
 msgstr "本機用戶"
@@ -3820,7 +3824,7 @@ msgid "Log Level"
 msgstr "記錄檔層級"
 
 msgid "Log level"
-msgstr ""
+msgstr "記錄檔層級"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "這條規則所處理的記錄檔到syslog。"
@@ -3837,7 +3841,7 @@ msgid "Logical Unit Controller IP address (%s by default)"
 msgstr "邏輯單元控制器 IP 位址（默認 %s）"
 
 msgid "Logical Unit Controller Login Information"
-msgstr ""
+msgstr "邏輯單元控制器登錄信息"
 
 #, php-format
 msgid "Logical Unit Controller TCP port (%d by default)"
@@ -3870,7 +3874,7 @@ msgid ""
 msgstr "最低值是更優先。對於主節點，使用0或1。如果啟用搶占，失敗時將被調整到240。"
 
 msgid "MAC Address"
-msgstr ""
+msgstr "MAC 位址"
 
 msgid "MAC address"
 msgstr "MAC 位址"
@@ -3897,7 +3901,7 @@ msgid "MS Active Directory"
 msgstr "MS Active Directory"
 
 msgid "MS Active Directory Information & Status"
-msgstr ""
+msgstr "MS Active Directory信息和狀態"
 
 msgid "MS Domain"
 msgstr "MS 網域"
@@ -4054,10 +4058,10 @@ msgid "Memory (MiB)"
 msgstr ""
 
 msgid "Memory Usage"
-msgstr ""
+msgstr "內存使用情況"
 
 msgid "Memory usage"
-msgstr "記憶體使用率"
+msgstr "內存使用情況"
 
 msgid "Message of the day."
 msgstr "每日訊息（每次登入時顯示）。"
@@ -4072,7 +4076,7 @@ msgid "Min. passive port"
 msgstr "最小被動端口"
 
 msgid "MiniDLNA"
-msgstr ""
+msgstr "MiniDLNA"
 
 msgid "MiniDLNA A/V Media Server"
 msgstr ""
@@ -4131,7 +4135,7 @@ msgid "Model Extra"
 msgstr ""
 
 msgid "Model Name"
-msgstr ""
+msgstr "型號名"
 
 msgid "Modified"
 msgstr "已修改"
@@ -4174,7 +4178,7 @@ msgid "Mounts"
 msgstr "掛載點"
 
 msgid "Music"
-msgstr ""
+msgstr "音樂"
 
 msgid "Must choose one"
 msgstr "必須選一"
@@ -4257,7 +4261,7 @@ msgid "Network"
 msgstr "網路"
 
 msgid "Network Adapter"
-msgstr ""
+msgstr "網絡適配器"
 
 msgid "Network File System"
 msgstr "網路檔案系統(NFS)"
@@ -4279,13 +4283,13 @@ msgstr "授權可以存取 NFS 分享區的網域。"
 msgid "Networks"
 msgstr "網路"
 
+msgid "Never - (Default)"
+msgstr "永不 - （默認）"
+
 msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
 "a disk which is spun-down to be spun-up when it is checked."
 msgstr "永不 - 永遠不管目標磁碟的電源模式而進行檢查。"
-
-msgid "Never - default"
-msgstr "從不 - 默認"
 
 msgid "New Device"
 msgstr "新裝置"
@@ -4379,13 +4383,13 @@ msgid "Node A IP address"
 msgstr "A 節點的 IP 位址"
 
 msgid "Node A Settings"
-msgstr ""
+msgstr "A 節點的設置"
 
 msgid "Node B IP address"
 msgstr "B 節點的 IP 位址"
 
 msgid "Node B Settings"
-msgstr ""
+msgstr "B 節點的設置"
 
 msgid "Node Base"
 msgstr "Base 節點"
@@ -4510,8 +4514,8 @@ msgstr "OK"
 msgid "ONLINE"
 msgstr "在線"
 
-msgid "OPT only"
-msgstr "只是 OPT"
+msgid "OPT Only"
+msgstr ""
 
 msgid "Object name"
 msgstr "物件名稱"
@@ -4759,13 +4763,13 @@ msgid "Permit to do SSH Tunneling."
 msgstr "允許 SSH Tunneling"
 
 msgid "Physical Interface"
-msgstr ""
+msgstr "實體介面"
 
 msgid "Physical interface"
 msgstr "實體介面"
 
 msgid "Pictures"
-msgstr ""
+msgstr "圖片"
 
 msgid "Ping"
 msgstr "Ping"
@@ -4805,7 +4809,7 @@ msgid "Pool"
 msgstr "存儲池"
 
 msgid "Pool Information & Status"
-msgstr ""
+msgstr "存儲池信息和狀態"
 
 msgid "Pools"
 msgstr "存儲池（Pool）"
@@ -4868,7 +4872,7 @@ msgid "Power Mode"
 msgstr "電源模式"
 
 msgid "Power management"
-msgstr ""
+msgstr "電源管理"
 
 msgid "Power mode"
 msgstr "電源模式"
@@ -4932,7 +4936,7 @@ msgid "Processes"
 msgstr "程序"
 
 msgid "Processes Information"
-msgstr ""
+msgstr "程序信息"
 
 msgid "Product ID"
 msgstr "產品編號"
@@ -4970,25 +4974,25 @@ msgid "RAID 0"
 msgstr "RAID 0"
 
 msgid "RAID 0 Information & Status"
-msgstr ""
+msgstr "RAID 0 信息和狀態"
 
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
-msgstr ""
+msgstr "RAID 0/1/5 信息和狀態"
 
 msgid "RAID 1"
 msgstr "RAID 1"
 
 msgid "RAID 1 Information & Status"
-msgstr ""
+msgstr "RAID 1 信息和狀態"
 
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
-msgstr ""
+msgstr "RAID 5 信息和狀態"
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -5021,7 +5025,7 @@ msgid "RSYNC Client"
 msgstr "RSYNC 客戶端"
 
 msgid "RSYNC Client Information & Status"
-msgstr ""
+msgstr "RSYNC 客戶端信息和狀態"
 
 msgid "RSYNC events"
 msgstr "RSYNC 事件"
@@ -5117,7 +5121,7 @@ msgid "Remaining battery runtime"
 msgstr "電池剩餘時間"
 
 msgid "Remote Address"
-msgstr ""
+msgstr "遠程地址"
 
 msgid "Remote Module (Source)"
 msgstr ""
@@ -5172,10 +5176,10 @@ msgid "Required"
 msgstr "必填"
 
 msgid "Rescan Disks"
-msgstr ""
+msgstr "重新掃描磁盤"
 
 msgid "Rescan database in progress"
-msgstr ""
+msgstr "重新掃描數據庫正在進行"
 
 msgid "Rescan interval"
 msgstr "重新掃描間隔"
@@ -5202,7 +5206,7 @@ msgid "Resources"
 msgstr "資源"
 
 msgid "Restore Configuration"
-msgstr ""
+msgstr "還原配置"
 
 msgid "Restore metadata from the given file to the given provider."
 msgstr "從文件還原元數據給指定提供者。"
@@ -5244,7 +5248,7 @@ msgid "Root bind password"
 msgstr "Root bind 密碼"
 
 msgid "Rotation Rate"
-msgstr ""
+msgstr "旋轉速率"
 
 msgid "Round-robin read"
 msgstr "輪替式讀"
@@ -5265,7 +5269,7 @@ msgid "Rsync"
 msgstr "Rsync"
 
 msgid "Rsync Job"
-msgstr ""
+msgstr "Rsync 任務"
 
 msgid "Rule"
 msgstr "規則"
@@ -5356,7 +5360,7 @@ msgid "Save"
 msgstr "儲存"
 
 msgid "Save & Restart"
-msgstr ""
+msgstr "儲存並重新啟動"
 
 msgid "Save and Restart"
 msgstr "儲存並重新啟動"
@@ -5382,25 +5386,25 @@ msgid "Scan type"
 msgstr "掃描類型"
 
 msgid "Schedule Time"
-msgstr ""
+msgstr "排程時間"
 
 msgid "Schedule time"
 msgstr "排程時間"
 
 msgid "Scheduled"
-msgstr "排程"
+msgstr "定時"
 
 msgid "Scheduled Reboot"
-msgstr ""
+msgstr "定時重啟"
 
 msgid "Scheduled Self-Test"
-msgstr "自我檢測排程"
+msgstr "定時自我檢測"
 
 msgid "Scheduled Shutdown"
-msgstr ""
+msgstr "定時關機"
 
 msgid "Scheduled tests"
-msgstr ""
+msgstr "定時測試"
 
 msgid "Secondary"
 msgstr "次要"
@@ -5418,7 +5422,7 @@ msgid "See attribute E8."
 msgstr ""
 
 msgid "Select"
-msgstr ""
+msgstr "選擇"
 
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
@@ -5429,7 +5433,7 @@ msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "選擇要開啟 S.M.A.R.T. 監測的磁碟。"
 
 msgid "Select firmware:"
-msgstr ""
+msgstr "選擇固件："
 
 msgid "Select item to remove from the list"
 msgstr "請從列表中選擇要刪除的項目"
@@ -5473,7 +5477,7 @@ msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr ""
 
 msgid "Self-tests Management"
-msgstr ""
+msgstr "自我測試管理"
 
 msgid "Send Buffer Size"
 msgstr "傳送緩衝區大小"
@@ -5482,10 +5486,10 @@ msgid "Send Command!"
 msgstr "傳送指令！"
 
 msgid "Send Now"
-msgstr ""
+msgstr "現在發送"
 
 msgid "Send Test Email"
-msgstr ""
+msgstr "發送測試電子郵件"
 
 msgid "Send a TEST warning email on startup."
 msgstr "啟動時傳送測試警示電郵。"
@@ -5503,7 +5507,7 @@ msgid "Serial Console"
 msgstr "串行控制台（Serial Console）"
 
 msgid "Serial Number"
-msgstr ""
+msgstr "序號"
 
 msgid "Serial number"
 msgstr "序號"
@@ -5616,13 +5620,13 @@ msgid "Shock During Write."
 msgstr ""
 
 msgid "Show Process Information"
-msgstr ""
+msgstr "顯示程序信息"
 
 msgid "Show RAW UPS Info"
 msgstr "顯示RAW UPS的信息"
 
 msgid "Show UPS Information"
-msgstr ""
+msgstr "顯示UPS信息"
 
 msgid "Show log entries in reverse order (newest entries on top)"
 msgstr "以相反的次序顯示記錄（先顯示最新記錄）"
@@ -5795,7 +5799,7 @@ msgid "Standard"
 msgstr "標準"
 
 msgid "Standby"
-msgstr ""
+msgstr "待用"
 
 msgid ""
 "Standby - Check the device unless it is in SLEEP or STANDBY mode. In these "
@@ -5894,10 +5898,10 @@ msgid "Swap"
 msgstr "交換分區（Swap）"
 
 msgid "Swap Information & Status"
-msgstr ""
+msgstr "交換分區信息和狀態"
 
 msgid "Swap Memory"
-msgstr ""
+msgstr "交換內存"
 
 msgid "Swap disabled"
 msgstr "關閉 Swap"
@@ -5934,7 +5938,7 @@ msgid "Synchronize"
 msgstr "同步"
 
 msgid "Syncthing"
-msgstr ""
+msgstr "Syncthing"
 
 #, php-format
 msgid ""
@@ -5952,10 +5956,10 @@ msgid "System Beep"
 msgstr "提示聲響"
 
 msgid "System Information"
-msgstr ""
+msgstr "系統資料"
 
 msgid "System Load"
-msgstr ""
+msgstr "系統負載"
 
 msgid "System bios"
 msgstr "系統BIOS"
@@ -5967,7 +5971,7 @@ msgid "System info"
 msgstr "系統資訊"
 
 msgid "System last config change"
-msgstr ""
+msgstr "系統最後一次配置更改"
 
 msgid "System log"
 msgstr "系統記錄"
@@ -6074,7 +6078,7 @@ msgid "Temperature"
 msgstr "溫度"
 
 msgid "Temperature Monitoring"
-msgstr ""
+msgstr "溫度監控"
 
 msgid "Temperature alarm (enabled/disabled)"
 msgstr "溫度警報（啟用/禁用）"
@@ -6170,7 +6174,7 @@ msgstr "可以在 %s 中找到相關的 MIB 文件。"
 
 #, php-format
 msgid "The attribute '%s' already exists."
-msgstr ""
+msgstr "%s 已存在。"
 
 #, c-format
 msgid ""
@@ -6484,7 +6488,7 @@ msgid "The file you try to flash is not for this platform"
 msgstr ""
 
 msgid "The firmware file is corrupt"
-msgstr ""
+msgstr "固件檔案已損壞"
 
 #, php-format
 msgid ""
@@ -7214,7 +7218,7 @@ msgid "TiB"
 msgstr "TiB"
 
 msgid "TiVo support"
-msgstr ""
+msgstr "TiVo 支持"
 
 msgid "Time"
 msgstr "時間"
@@ -7384,7 +7388,7 @@ msgid "Transcoding"
 msgstr "轉碼"
 
 msgid "Transfer Rate"
-msgstr ""
+msgstr "傳輸速率"
 
 msgid "Transfer mode"
 msgstr "傳輸模式"
@@ -7467,7 +7471,7 @@ msgid "UPS"
 msgstr "UPS"
 
 msgid "UPS Information & Status"
-msgstr ""
+msgstr "UPS 信息和狀態"
 
 msgid "UPS Off Line"
 msgstr "UPS 離線"
@@ -7533,10 +7537,10 @@ msgid "UPS watchdog status"
 msgstr "UPS 監視狀態"
 
 msgid "UPnP/DLNA - Fuppes"
-msgstr ""
+msgstr "UPnP/DLNA - Fuppes"
 
 msgid "UPnP/DLNA - MiniDLNA"
-msgstr ""
+msgstr "UPnP/DLNA - MiniDLNA"
 
 msgid "URI"
 msgstr "URI"
@@ -7599,7 +7603,7 @@ msgid "Updating in 5 seconds."
 msgstr "五秒內更新"
 
 msgid "Upgrade Firmware"
-msgstr ""
+msgstr "升級固件"
 
 msgid "Upload"
 msgstr "上傳"
@@ -7678,7 +7682,7 @@ msgstr "用戶"
 
 #, php-format
 msgid "User Defined Groups"
-msgstr ""
+msgstr "用戶定義的群組"
 
 msgid "User ID"
 msgstr "用戶ID"
@@ -7720,14 +7724,14 @@ msgid "Users"
 msgstr "用戶"
 
 msgid "Users & Groups"
-msgstr ""
+msgstr "用戶和群組"
 
 #, c-format
 msgid "Using %s bytes fragment size."
 msgstr "%s 字節的片段大小（fragment size）。"
 
 msgid "VCPUs"
-msgstr ""
+msgstr "VCPUs"
 
 msgid "VHID"
 msgstr "VHID"
@@ -7736,16 +7740,16 @@ msgid "VLAN"
 msgstr "虛擬局域網（VLAN）"
 
 msgid "VLAN Tag"
-msgstr ""
+msgstr "VLAN 標籤"
 
 msgid "VLAN tag"
-msgstr "VLAN標籤"
+msgstr "VLAN 標籤"
 
 msgid "VM"
-msgstr ""
+msgstr "VM"
 
 msgid "VM Type"
-msgstr ""
+msgstr "VM 類型"
 
 msgid "VNC Display"
 msgstr ""
@@ -7774,34 +7778,34 @@ msgid "Vibration During Write."
 msgstr ""
 
 msgid "Video"
-msgstr ""
+msgstr "視頻"
 
 msgid "Virtual Device"
-msgstr ""
+msgstr "虛擬設備"
 
 msgid "Virtual Devices"
-msgstr ""
+msgstr "虛擬設備"
 
 msgid "Virtual Host ID"
 msgstr "虛擬主機 ID"
 
 msgid "Virtual IP Address"
-msgstr ""
+msgstr "虛擬 IP 地址"
 
 msgid "Virtual IP address"
 msgstr "虛擬 IP 地址"
 
 msgid "Virtual Interface"
-msgstr ""
+msgstr "虛擬介面"
 
 msgid "Virtual Machine"
-msgstr ""
+msgstr "虛擬機"
 
 msgid "Virtual devices"
 msgstr "虛擬裝置"
 
 msgid "VirtualBox"
-msgstr ""
+msgstr "VirtualBox"
 
 msgid "Volume"
 msgstr "卷（Volume）"
@@ -7966,10 +7970,10 @@ msgid "Wrong permission on %s."
 msgstr "%s 的權限錯誤。"
 
 msgid "Xen"
-msgstr ""
+msgstr "Xen"
 
 msgid "Xen Virtual Machine"
-msgstr ""
+msgstr "Xen 虛擬機"
 
 msgid "Yes"
 msgstr "是"
@@ -8057,22 +8061,22 @@ msgid "ZFS ACL"
 msgstr "ZFS 存取控制清單（ACL）"
 
 msgid "ZFS Dataset Information & Status"
-msgstr ""
+msgstr "ZFS 數據集信息和狀態"
 
 msgid "ZFS Dataset Properties"
-msgstr ""
+msgstr "ZFS 數據集屬性"
 
 msgid "ZFS Snapshot Information & Status"
-msgstr ""
+msgstr "ZFS 快照信息和狀態"
 
 msgid "ZFS Snapshot Properties"
-msgstr ""
+msgstr "ZFS 快照屬性"
 
 msgid "ZFS Volume Information & Status"
-msgstr ""
+msgstr "ZFS 卷信息和狀態"
 
 msgid "ZFS Volume Properties"
-msgstr ""
+msgstr "ZFS卷屬性"
 
 msgid "ZFS volume"
 msgstr "ZFS 卷（volume）"
@@ -8110,7 +8114,7 @@ msgid "day(s)"
 msgstr "天"
 
 msgid "debug"
-msgstr ""
+msgstr "調試"
 
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
@@ -8123,12 +8127,6 @@ msgstr "在導入時檢測到一個錯誤。"
 #, php-format
 msgid "e.g. %s"
 msgstr "例如：%s"
-
-msgid "error"
-msgstr ""
-
-msgid "fatal"
-msgstr ""
 
 msgid "filechooser"
 msgstr "filechooser"
@@ -8158,7 +8156,7 @@ msgid "iSCSI Target Logical Unit Controller"
 msgstr "iSCSI 目標邏輯單元控制器（iSCSI Target Logical Unit Controller）"
 
 msgid "iSCSI Targets Information & Status"
-msgstr ""
+msgstr "iSCSI 目標器信息和狀態"
 
 #, php-format
 msgid "iSCSI initial parameter (%d by default)."
@@ -8172,9 +8170,6 @@ msgstr "iTunes/DAAP"
 
 msgid "infinity"
 msgstr "無限制"
-
-msgid "info"
-msgstr ""
 
 msgid "load/unload failed."
 msgstr "加載/卸載失敗。"
@@ -8204,7 +8199,7 @@ msgid "no new encrypted disk found."
 msgstr "沒有發現新的加密磁盤。"
 
 msgid "noVNC"
-msgstr ""
+msgstr "noVNC"
 
 msgid "none"
 msgstr "無"
@@ -8213,7 +8208,7 @@ msgid "phpBB"
 msgstr "phpBB"
 
 msgid "phpVirtualBox"
-msgstr ""
+msgstr "phpVirtualBox"
 
 msgid "rc.conf"
 msgstr "rc.conf"
@@ -8259,6 +8254,3 @@ msgstr "卸載"
 
 msgid "version:"
 msgstr "版本："
-
-msgid "warning"
-msgstr ""

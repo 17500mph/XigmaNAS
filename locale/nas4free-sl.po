@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-13 16:10+0000\n"
+"POT-Creation-Date: 2015-12-18 00:47+0000\n"
 "PO-Revision-Date: 2014-11-17 04:08+0000\n"
 "Last-Translator: jure <jure.medved@amis.net>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-14 11:17+0000\n"
-"X-Generator: Launchpad (build 17865)\n"
+"X-Launchpad-Export-Date: 2016-01-14 21:37+0000\n"
+"X-Generator: Launchpad (build 17886)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
 "X-Poedit-Language: Slovenian\n"
@@ -341,8 +341,8 @@ msgstr "AIO velikost branja"
 msgid "AIO write size"
 msgstr "AIO velikost pisanja"
 
-msgid "ALL interfaces"
-msgstr "Vsi vmesniki"
+msgid "ALL Interfaces"
+msgstr ""
 
 msgid "AP mode"
 msgstr ""
@@ -854,7 +854,7 @@ msgstr "Varnostna kopija"
 msgid "Backup/Restore"
 msgstr "Shrani/Naloži"
 
-msgid "Bad User - non existing users"
+msgid "Bad User - (Non Existing Users)"
 msgstr ""
 
 msgid "Balance algorithm"
@@ -2837,6 +2837,9 @@ msgstr "Spodletelo."
 msgid "Failover"
 msgstr "Failover"
 
+msgid "Fatal"
+msgstr ""
+
 msgid "File"
 msgstr "Datoteka"
 
@@ -3676,11 +3679,11 @@ msgstr "LAGG"
 msgid "LAN Management"
 msgstr "Upravljanje omrežja"
 
+msgid "LAN Only"
+msgstr ""
+
 msgid "LAN net"
 msgstr "LAN omrežje"
-
-msgid "LAN only"
-msgstr ""
 
 msgid "LCDproc"
 msgstr ""
@@ -4378,15 +4381,15 @@ msgstr "Omrežje, kateremu je dovoljen dostop do NFS deljene mape."
 msgid "Networks"
 msgstr "Omrežja"
 
+msgid "Never - (Default)"
+msgstr ""
+
 msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
 "a disk which is spun-down to be spun-up when it is checked."
 msgstr ""
 "Nikoli ne preveri (poll) naprave, neglede v katerem stanju je. To lahko "
 "povzroči zagon diska, če je pred tem že izklopljen."
-
-msgid "Never - default"
-msgstr ""
 
 msgid "New Device"
 msgstr "Nova naprava"
@@ -4624,7 +4627,7 @@ msgstr "Vredu"
 msgid "ONLINE"
 msgstr "ONLINE"
 
-msgid "OPT only"
+msgid "OPT Only"
 msgstr ""
 
 msgid "Object name"
@@ -8260,12 +8263,6 @@ msgstr ""
 msgid "e.g. %s"
 msgstr ""
 
-msgid "error"
-msgstr ""
-
-msgid "fatal"
-msgstr ""
-
 msgid "filechooser"
 msgstr ""
 
@@ -8307,9 +8304,6 @@ msgid "iTunes/DAAP"
 msgstr ""
 
 msgid "infinity"
-msgstr ""
-
-msgid "info"
 msgstr ""
 
 msgid "load/unload failed."
@@ -8394,7 +8388,4 @@ msgid "umount"
 msgstr "izvrzi"
 
 msgid "version:"
-msgstr ""
-
-msgid "warning"
 msgstr ""
