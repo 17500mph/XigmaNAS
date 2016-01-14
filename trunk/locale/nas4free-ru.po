@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-13 16:10+0000\n"
-"PO-Revision-Date: 2015-12-13 08:46+0000\n"
+"POT-Creation-Date: 2015-12-18 00:47+0000\n"
+"PO-Revision-Date: 2015-12-18 06:13+0000\n"
 "Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-14 11:17+0000\n"
-"X-Generator: Launchpad (build 17865)\n"
+"X-Launchpad-Export-Date: 2016-01-14 21:37+0000\n"
+"X-Generator: Launchpad (build 17886)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
 "X-Poedit-Language: Russian\n"
@@ -376,8 +376,8 @@ msgstr "AIO при чтении"
 msgid "AIO write size"
 msgstr "AIO при записи"
 
-msgid "ALL interfaces"
-msgstr "ВСЕ интерфейсы"
+msgid "ALL Interfaces"
+msgstr "Все интерфейсы"
 
 msgid "AP mode"
 msgstr "Режим точки доступа (AP mode)"
@@ -922,9 +922,8 @@ msgstr "Файл резервной копии"
 msgid "Backup/Restore"
 msgstr "Сохранение/восстановление"
 
-msgid "Bad User - non existing users"
-msgstr ""
-"Неправильно введено имя пользователя - такой пользователь не существует"
+msgid "Bad User - (Non Existing Users)"
+msgstr "Неверный пользователь - (не существующий пользователь)"
 
 msgid "Balance algorithm"
 msgstr "Алгоритм балансировки"
@@ -3035,6 +3034,9 @@ msgstr "Ошибка."
 msgid "Failover"
 msgstr "Резервирование от сбоев"
 
+msgid "Fatal"
+msgstr "Критическое"
+
 msgid "File"
 msgstr "Файл"
 
@@ -3922,11 +3924,11 @@ msgstr "LAGG"
 msgid "LAN Management"
 msgstr "Настройки LAN"
 
+msgid "LAN Only"
+msgstr "Только LAN"
+
 msgid "LAN net"
 msgstr "Локальная сеть"
-
-msgid "LAN only"
-msgstr "Только ЛВС"
 
 msgid "LCDproc"
 msgstr "LCDproc"
@@ -4656,15 +4658,15 @@ msgstr "Сеть, которой разрешен доступ к NFS-ресур
 msgid "Networks"
 msgstr "Сети"
 
+msgid "Never - (Default)"
+msgstr "Никогда - (по умолчанию)"
+
 msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
 "a disk which is spun-down to be spun-up when it is checked."
 msgstr ""
 "Never - проверять устройство вне зависимости от режима питания. Это может "
 "вызвать включение и выключение диска при проверке."
-
-msgid "Never - default"
-msgstr "Никогда - по умолчанию"
 
 msgid "New Device"
 msgstr "Новое устройство"
@@ -4918,7 +4920,7 @@ msgstr "ОК"
 msgid "ONLINE"
 msgstr "ONLINE"
 
-msgid "OPT only"
+msgid "OPT Only"
 msgstr "Только OPT"
 
 msgid "Object name"
@@ -8955,12 +8957,6 @@ msgstr "обнаружена ошибка во время импортирова
 msgid "e.g. %s"
 msgstr "Доменный суффикс (например  %s)."
 
-msgid "error"
-msgstr "ошибка"
-
-msgid "fatal"
-msgstr "фатальное"
-
 msgid "filechooser"
 msgstr "Выбор файла"
 
@@ -9005,9 +9001,6 @@ msgstr "iTunes/DAAP"
 
 msgid "infinity"
 msgstr "бесконечность"
-
-msgid "info"
-msgstr "инфо"
 
 msgid "load/unload failed."
 msgstr "неудачная загрузка/выгрузка."
@@ -9094,6 +9087,3 @@ msgstr "размонтировать"
 
 msgid "version:"
 msgstr "версия:"
-
-msgid "warning"
-msgstr "предупреждение"

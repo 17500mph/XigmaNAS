@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-13 16:10+0000\n"
-"PO-Revision-Date: 2015-10-05 21:47+0000\n"
-"Last-Translator: Robert Gdula <robert.gdula@gmail.com>\n"
+"POT-Creation-Date: 2015-12-18 00:47+0000\n"
+"PO-Revision-Date: 2015-12-17 19:22+0000\n"
+"Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-14 11:16+0000\n"
-"X-Generator: Launchpad (build 17865)\n"
+"X-Launchpad-Export-Date: 2016-01-14 21:37+0000\n"
+"X-Generator: Launchpad (build 17886)\n"
 "X-Poedit-Country: POLAND\n"
 "Language: \n"
 "X-Poedit-Language: Polish\n"
@@ -358,8 +358,8 @@ msgstr "Rozmiar dla odczytu AIO"
 msgid "AIO write size"
 msgstr "Rozmiar dla zapisu AIO"
 
-msgid "ALL interfaces"
-msgstr "Wszystkie interfejsy"
+msgid "ALL Interfaces"
+msgstr ""
 
 msgid "AP mode"
 msgstr "Tryb Access pointa"
@@ -380,7 +380,7 @@ msgid "Access"
 msgstr "Dostęp"
 
 msgid "Access Mode"
-msgstr ""
+msgstr "Tryb dostępu"
 
 msgid "Access Restrictions"
 msgstr "Ograniczenia dostępu"
@@ -566,7 +566,7 @@ msgid "Advanced Options"
 msgstr "Opcje zaawansowane"
 
 msgid "Advanced Settings"
-msgstr ""
+msgstr "Ustawienia zaawansowane"
 
 msgid "Advanced settings"
 msgstr "Ustawienia zaawansowane"
@@ -725,7 +725,7 @@ msgstr ""
 "Folder zawierający pliki z alternatywną konfiguracją (domyślnie puste)."
 
 msgid "Always On"
-msgstr ""
+msgstr "Zawsze włączone"
 
 msgid "Always scan"
 msgstr "Zawsze skanuj"
@@ -822,7 +822,7 @@ msgid "Attaching provider '%s'."
 msgstr "Dołączono dostawcę '%s'."
 
 msgid "Audio"
-msgstr ""
+msgstr "Dźwięk"
 
 msgid "Auth Group"
 msgstr "Grupa zabezpieczeń"
@@ -897,8 +897,8 @@ msgstr "Plik kopii zapasowej"
 msgid "Backup/Restore"
 msgstr "Backup/Przywróć"
 
-msgid "Bad User - non existing users"
-msgstr "Zły użytkownik - nie istnieje"
+msgid "Bad User - (Non Existing Users)"
+msgstr ""
 
 msgid "Balance algorithm"
 msgstr "Algorytm integralności danych"
@@ -992,7 +992,7 @@ msgid "Boot Arguments"
 msgstr ""
 
 msgid "Boot Loader"
-msgstr ""
+msgstr "Program rozruchowy"
 
 #, php-format
 msgid "Boot argument (e.g. %s)."
@@ -1000,7 +1000,7 @@ msgstr ""
 
 #, php-format
 msgid "Boot loader (e.g. %s)."
-msgstr ""
+msgstr "Program rozruchowy (np. %s)."
 
 #, php-format
 msgid ""
@@ -1012,7 +1012,7 @@ msgstr ""
 "%s.\n"
 
 msgid "Bootloader"
-msgstr ""
+msgstr "Program rozruchowy"
 
 msgid "Bridge"
 msgstr "Mostek"
@@ -1027,7 +1027,7 @@ msgid ""
 msgstr ""
 
 msgid "Browse Directory"
-msgstr ""
+msgstr "Przeglądaj katalog"
 
 msgid "Browseable"
 msgstr "Widoczny"
@@ -1057,7 +1057,7 @@ msgid "CD/DVD"
 msgstr "CD/DVD"
 
 msgid "CD/DVD drive"
-msgstr ""
+msgstr "Napęd CD/DVD"
 
 msgid "CHANGED"
 msgstr "ZMIENIONO"
@@ -1111,7 +1111,7 @@ msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Tradycyjny chiński Big5)"
 
 msgid "CPU Load"
-msgstr ""
+msgstr "Obciążenie CPU"
 
 msgid "CPU frequency"
 msgstr "Częstotliwość CPU"
@@ -1296,7 +1296,7 @@ msgid "Compilations directories"
 msgstr "Katalogi kompilacji"
 
 msgid "Compiled"
-msgstr ""
+msgstr "Skompilowany"
 
 msgid "Compliant profile to be used."
 msgstr "Zgodny profil do użycia."
@@ -1354,7 +1354,7 @@ msgstr ""
 "system: 'admin@email.address'."
 
 msgid "Container"
-msgstr ""
+msgstr "Kontener"
 
 msgid "Content"
 msgstr "Zawartość"
@@ -2926,6 +2926,9 @@ msgstr "Błąd."
 msgid "Failover"
 msgstr "Failover"
 
+msgid "Fatal"
+msgstr ""
+
 msgid "File"
 msgstr "Plik"
 
@@ -3789,11 +3792,11 @@ msgstr "LAGG"
 msgid "LAN Management"
 msgstr "Zarządzanie siecią lokalną"
 
+msgid "LAN Only"
+msgstr ""
+
 msgid "LAN net"
 msgstr "Sieć LAN"
-
-msgid "LAN only"
-msgstr "Tylko Lan"
 
 msgid "LCDproc"
 msgstr "LCDproc"
@@ -4487,6 +4490,9 @@ msgstr "Sieć autoryzowana do dostępu do udziału NFS."
 msgid "Networks"
 msgstr "Sieci"
 
+msgid "Never - (Default)"
+msgstr ""
+
 msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
 "a disk which is spun-down to be spun-up when it is checked."
@@ -4494,9 +4500,6 @@ msgstr ""
 "Nigdy - Sonda (sprawdzenie) urządzenia niezależnie od sposobu zasilania. "
 "Może to spowodować że dysk który zwalnia zacznie przyspieszać, gdy funkcja "
 "jest zaznaczona."
-
-msgid "Never - default"
-msgstr "Nigdy - domyślnie"
 
 msgid "New Device"
 msgstr "Nowe urządzenie"
@@ -4745,8 +4748,8 @@ msgstr "OK"
 msgid "ONLINE"
 msgstr "WŁĄCZONY"
 
-msgid "OPT only"
-msgstr "Tylko OPT"
+msgid "OPT Only"
+msgstr ""
 
 msgid "Object name"
 msgstr "Nazwa obiektu"
@@ -8569,12 +8572,6 @@ msgstr "Wykryto błąd w czasie importowania."
 msgid "e.g. %s"
 msgstr "np. %s"
 
-msgid "error"
-msgstr ""
-
-msgid "fatal"
-msgstr ""
-
 msgid "filechooser"
 msgstr "Przeglądarka plików"
 
@@ -8617,9 +8614,6 @@ msgstr "iTunes/DAAP"
 
 msgid "infinity"
 msgstr "nieskończoność"
-
-msgid "info"
-msgstr ""
 
 msgid "load/unload failed."
 msgstr ""
@@ -8704,6 +8698,3 @@ msgstr "odmontuj"
 
 msgid "version:"
 msgstr "wersja:"
-
-msgid "warning"
-msgstr ""

@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-13 16:10+0000\n"
-"PO-Revision-Date: 2015-11-24 17:55+0000\n"
+"POT-Creation-Date: 2015-12-18 00:47+0000\n"
+"PO-Revision-Date: 2015-12-24 15:01+0000\n"
 "Last-Translator: Balabuha <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-14 11:17+0000\n"
-"X-Generator: Launchpad (build 17865)\n"
+"X-Launchpad-Export-Date: 2016-01-14 21:36+0000\n"
+"X-Generator: Launchpad (build 17886)\n"
 "Language: uk\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -50,7 +50,7 @@ msgstr "%dбайт / блок"
 
 #, php-format
 msgid "%s Interface"
-msgstr ""
+msgstr "Інтерфейс %s"
 
 #, php-format
 msgid "%s is too long."
@@ -321,7 +321,7 @@ msgid "ACL Inherit"
 msgstr ""
 
 msgid "ACL Mode"
-msgstr ""
+msgstr "ACL режим"
 
 msgid "ACL inherit"
 msgstr "Успадкування ACL"
@@ -339,7 +339,7 @@ msgid "AFP"
 msgstr "AFP"
 
 msgid "AFP compatibility"
-msgstr ""
+msgstr "AFP сумісність"
 
 msgid "AG"
 msgstr "AG"
@@ -353,8 +353,8 @@ msgstr "Розмір читання AIO"
 msgid "AIO write size"
 msgstr "Розмір запису AIO"
 
-msgid "ALL interfaces"
-msgstr "УСІ інтерфейси"
+msgid "ALL Interfaces"
+msgstr "ВСІ інтерфейси"
 
 msgid "AP mode"
 msgstr "Режим точки доступу (AP mode)"
@@ -369,13 +369,13 @@ msgid "ATTRIBUTE NAME"
 msgstr "Ім'я атрибута"
 
 msgid "Accept remote syslog messages"
-msgstr ""
+msgstr "Приймати віддалені записи в журнал"
 
 msgid "Access"
 msgstr "Доступ"
 
 msgid "Access Mode"
-msgstr ""
+msgstr "Режим доступу"
 
 msgid "Access Restrictions"
 msgstr "Обмеження доступу"
@@ -517,10 +517,10 @@ msgid "Add volume"
 msgstr "Додати том"
 
 msgid "Additional Network"
-msgstr ""
+msgstr "Додаткова мережа"
 
 msgid "Additional Storage"
-msgstr ""
+msgstr "Додаткова пам'ять"
 
 msgid "Additional group"
 msgstr "Додаткові групи"
@@ -559,7 +559,7 @@ msgid "Advanced Options"
 msgstr "Додаткові параметри"
 
 msgid "Advanced Settings"
-msgstr ""
+msgstr "Розширені параметри:"
 
 msgid "Advanced settings"
 msgstr "Додаткові налаштування"
@@ -640,13 +640,13 @@ msgid "All users will have the root privilege."
 msgstr "Усі користувачі мають root права."
 
 msgid "Alloc"
-msgstr ""
+msgstr "Alloc"
 
 msgid "Allow"
 msgstr "Дозволити"
 
 msgid "Allow TLS connections only."
-msgstr ""
+msgstr "Дозволяти лише TLS з'єднання."
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Дозволити клієнтський доступ для аккаунтів, що мають пустий пароль."
@@ -714,7 +714,7 @@ msgid "Alternative configuration directory (usually empty)."
 msgstr "Альтернативна дикекторія для конфігурації (зазвичай пуста)"
 
 msgid "Always On"
-msgstr ""
+msgstr "Завжди увімкнено"
 
 msgid "Always scan"
 msgstr "Завжди сканувати"
@@ -874,7 +874,7 @@ msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr "Середній час розгону шпінделя (від нуля до робочої швидкості)."
 
 msgid "Backup Configuration"
-msgstr ""
+msgstr "Налаштування резервного зберігання"
 
 msgid "Backup file"
 msgstr "резервний файл"
@@ -882,14 +882,14 @@ msgstr "резервний файл"
 msgid "Backup/Restore"
 msgstr "Резервування / Відновлення"
 
-msgid "Bad User - non existing users"
-msgstr "Bad User - неіснуючий користувач"
+msgid "Bad User - (Non Existing Users)"
+msgstr ""
 
 msgid "Balance algorithm"
 msgstr "Алгоритм балансування"
 
 msgid "Ban List"
-msgstr ""
+msgstr "Список заборон"
 
 msgid "Ban list rule"
 msgstr "Правила чорного списку"
@@ -969,24 +969,24 @@ msgid "Blank time"
 msgstr "Пусте значення часу"
 
 msgid "Block size"
-msgstr ""
+msgstr "Розмір блоку"
 
 msgid "Blocksize"
 msgstr "Розмір блоку"
 
 msgid "Boot Arguments"
-msgstr ""
+msgstr "Параметри завантаження"
 
 msgid "Boot Loader"
-msgstr ""
+msgstr "Завантажувач"
 
 #, php-format
 msgid "Boot argument (e.g. %s)."
-msgstr ""
+msgstr "Параметри завантаження (напр. %s)."
 
 #, php-format
 msgid "Boot loader (e.g. %s)."
-msgstr ""
+msgstr "Завантажувач (напр. %s)."
 
 #, php-format
 msgid ""
@@ -997,7 +997,7 @@ msgstr ""
 "з  LiveCD або  LiveUSB, або змінити розмір завантажувального розділу для %s\n"
 
 msgid "Bootloader"
-msgstr ""
+msgstr "Завантажувач"
 
 msgid "Bridge"
 msgstr "Міст"
@@ -1044,7 +1044,7 @@ msgid "CD/DVD"
 msgstr "CD/DVD"
 
 msgid "CD/DVD drive"
-msgstr ""
+msgstr "CD/DVD пристрій"
 
 msgid "CHANGED"
 msgstr "ЗМІНЕНО"
@@ -1098,7 +1098,7 @@ msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Традиційна китайська Big5)"
 
 msgid "CPU Load"
-msgstr ""
+msgstr "Завантаження ЦП"
 
 msgid "CPU frequency"
 msgstr "Частота ЦП"
@@ -1218,10 +1218,10 @@ msgid "Clear"
 msgstr "Очистити"
 
 msgid "Clear Config & Import Disks"
-msgstr ""
+msgstr "Очистити конфігурацію дисків та імпортувати існуючу"
 
 msgid "Clear Config & Import Software Raid Disks"
-msgstr ""
+msgstr "Очистити конфігурацію програмних RAID та імпортувати існуючу"
 
 msgid "Clear config and Import disks"
 msgstr "Очистити налаштування та імпортувати диски"
@@ -1285,7 +1285,7 @@ msgid "Compilations directories"
 msgstr "Каталоги збірників"
 
 msgid "Compiled"
-msgstr ""
+msgstr "Зібрано"
 
 msgid "Compliant profile to be used."
 msgstr "Відповідний профіль буде використовуватися."
@@ -1361,13 +1361,13 @@ msgid "Controller Authorised network"
 msgstr "Авторизовані мережі контролера"
 
 msgid "Controller IP Address"
-msgstr ""
+msgstr "ІР адреса контролера"
 
 msgid "Controller IP address"
 msgstr "IP адреса контролера"
 
 msgid "Controller Model"
-msgstr ""
+msgstr "Модель контролера"
 
 msgid "Controller TCP Port"
 msgstr "TCP порт контролера"
@@ -1477,13 +1477,13 @@ msgid ""
 msgstr ""
 
 msgid "Count of errors corrected by software ECC."
-msgstr ""
+msgstr "Лічильник помилок виправлених програмним ECC."
 
 msgid "Count of errors due to high temperature."
-msgstr ""
+msgstr "Лічильник помилок спричениних перегрівом."
 
 msgid "Count of errors while reading from a disk."
-msgstr ""
+msgstr "Лічильник помилок читання з диску."
 
 msgid ""
 "Count of hours in power-on state. The raw value of this attribute shows "
@@ -1492,7 +1492,7 @@ msgid ""
 msgstr ""
 
 msgid "Count of load/unload cycles into head landing zone position."
-msgstr ""
+msgstr "Лічильник циклів паркування головок диску в зоні паркування."
 
 msgid "Count of off-track errors."
 msgstr ""
@@ -2906,6 +2906,9 @@ msgstr "Помилка."
 msgid "Failover"
 msgstr "Перехоплення"
 
+msgid "Fatal"
+msgstr ""
+
 msgid "File"
 msgstr "Файл"
 
@@ -3732,11 +3735,11 @@ msgstr "LAGG"
 msgid "LAN Management"
 msgstr "Керування локальною мережею (LAN)"
 
+msgid "LAN Only"
+msgstr ""
+
 msgid "LAN net"
 msgstr "Локальна мережа (LAN)"
-
-msgid "LAN only"
-msgstr "Лише локальна мережа (LAN)"
 
 msgid "LCDproc"
 msgstr "LCDproc"
@@ -4421,13 +4424,13 @@ msgstr "Підмережа, якій дозволено доступ до NFS-р
 msgid "Networks"
 msgstr "Мережі"
 
+msgid "Never - (Default)"
+msgstr ""
+
 msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
 "a disk which is spun-down to be spun-up when it is checked."
 msgstr ""
-
-msgid "Never - default"
-msgstr "Ніколи - типово"
 
 msgid "New Device"
 msgstr "Новий пристрій"
@@ -4660,8 +4663,8 @@ msgstr "OK"
 msgid "ONLINE"
 msgstr "ОНЛАЙН"
 
-msgid "OPT only"
-msgstr "Лише OPT"
+msgid "OPT Only"
+msgstr ""
 
 msgid "Object name"
 msgstr "Назва об'єкта"
@@ -8276,12 +8279,6 @@ msgstr "під час імпорту виявлено помилку."
 msgid "e.g. %s"
 msgstr "наприклад %s"
 
-msgid "error"
-msgstr ""
-
-msgid "fatal"
-msgstr ""
-
 msgid "filechooser"
 msgstr ""
 
@@ -8324,9 +8321,6 @@ msgstr "iTunes/DAAP"
 
 msgid "infinity"
 msgstr "безкінечно"
-
-msgid "info"
-msgstr ""
 
 msgid "load/unload failed."
 msgstr "сбій завантаження / розвантаження."
@@ -8411,6 +8405,3 @@ msgstr "umount"
 
 msgid "version:"
 msgstr "версія:"
-
-msgid "warning"
-msgstr ""

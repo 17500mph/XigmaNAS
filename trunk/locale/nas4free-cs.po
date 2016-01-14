@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-13 16:10+0000\n"
-"PO-Revision-Date: 2015-12-11 16:38+0000\n"
+"POT-Creation-Date: 2015-12-18 00:47+0000\n"
+"PO-Revision-Date: 2015-12-22 20:09+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-14 11:16+0000\n"
-"X-Generator: Launchpad (build 17865)\n"
+"X-Launchpad-Export-Date: 2016-01-14 21:37+0000\n"
+"X-Generator: Launchpad (build 17886)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
 "X-Poedit-Language: Czech\n"
@@ -369,7 +369,7 @@ msgid "AFP"
 msgstr "AFP"
 
 msgid "AFP compatibility"
-msgstr ""
+msgstr "Slučitelnost s AFP protokolem"
 
 msgid "AG"
 msgstr "Sk. ověř."
@@ -383,7 +383,7 @@ msgstr "Velikost čtení pro asynchr. vst./výst."
 msgid "AIO write size"
 msgstr "Velikost zápisu pro asynchr. vst./výst."
 
-msgid "ALL interfaces"
+msgid "ALL Interfaces"
 msgstr "VŠECHNA rozhraní"
 
 msgid "AP mode"
@@ -399,7 +399,7 @@ msgid "ATTRIBUTE NAME"
 msgstr "NÁZEV ATRIBUTU"
 
 msgid "Accept remote syslog messages"
-msgstr ""
+msgstr "Přijímat syslog zprávy z protějšku"
 
 msgid "Access"
 msgstr "Přístup"
@@ -937,8 +937,8 @@ msgstr "Soubor se zálohou"
 msgid "Backup/Restore"
 msgstr "Zálohovat/obnovit"
 
-msgid "Bad User - non existing users"
-msgstr "Chybný uživatel – neexistující uživatelé"
+msgid "Bad User - (Non Existing Users)"
+msgstr "Chybný uživatel – (neexistují uživatelé)"
 
 msgid "Balance algorithm"
 msgstr "Vyvažovací algoritmus"
@@ -2189,7 +2189,7 @@ msgid "Disable speaker beep on startup and shutdown"
 msgstr "Vypnout pípnutí při spouštění a vypínání systému"
 
 msgid "Disable the compression of repeated line"
-msgstr ""
+msgstr "Vypnout kompresi opakovaného řádku"
 
 msgid "Disabled"
 msgstr "Vypnuto"
@@ -2823,7 +2823,7 @@ msgid "English"
 msgstr "angličtina"
 
 msgid "Enhanced compatibility with Netatalk AFP server"
-msgstr ""
+msgstr "Vylepšená slučitelnost se serverem Netatalk AFP"
 
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
@@ -3063,6 +3063,9 @@ msgstr "Nezdařilo se."
 
 msgid "Failover"
 msgstr "Převzetí služby v případě výpadku"
+
+msgid "Fatal"
+msgstr "Fatální"
 
 msgid "File"
 msgstr "Soubor"
@@ -3962,11 +3965,11 @@ msgstr "LAGG"
 msgid "LAN Management"
 msgstr "Správa místní sítě (LAN)"
 
+msgid "LAN Only"
+msgstr "Pouze místní síť"
+
 msgid "LAN net"
 msgstr "Místní síť (LAN)"
-
-msgid "LAN only"
-msgstr "Pouze místní síť"
 
 msgid "LCDproc"
 msgstr "LCDproc"
@@ -4711,15 +4714,15 @@ msgstr "Síť, ze které umožnit přístup k NFS sdílení."
 msgid "Networks"
 msgstr "Sítě"
 
+msgid "Never - (Default)"
+msgstr "Nikdy – (výchozí)"
+
 msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
 "a disk which is spun-down to be spun-up when it is checked."
 msgstr ""
 "Nikdy – Dotazovat (kontrolovat) zařízení bez ohledu na to, v jakém režimu "
 "napájení se nachází Tato volba může způsobovat roztáčení zastavených disků."
-
-msgid "Never - default"
-msgstr "Nikdy – výchozí"
 
 msgid "New Device"
 msgstr "Nové zařízení"
@@ -4781,6 +4784,8 @@ msgid ""
 "No configured bridge interfaces. Please add new <a href='%s'>bridge "
 "interface</a> first."
 msgstr ""
+"Nejsou nastavena rozhraní síťových mostů. Nejprve nějaká nová <a "
+"href='%s'>přidejte</a>."
 
 #, php-format
 msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
@@ -4973,7 +4978,7 @@ msgstr "OK"
 msgid "ONLINE"
 msgstr "ZAPNUTO"
 
-msgid "OPT only"
+msgid "OPT Only"
 msgstr "Pouze OPT"
 
 msgid "Object name"
@@ -6548,7 +6553,7 @@ msgid "TCP port"
 msgstr "Port TCP"
 
 msgid "TCP port is 5900+N, where N is VNC display number."
-msgstr ""
+msgstr "TCP port je 5900+N, kde N je číslo VNC displeje."
 
 msgid "TCP port to bind the server to."
 msgstr "TCP port na který server navázat."
@@ -7716,6 +7721,7 @@ msgstr "Tato skupina už v seznamu skupin existuje."
 
 msgid "This is a very powerful tool. Use it on your own risk!"
 msgstr ""
+"Toto je velmi mocný nástroj. Použijte ho pouze na vlastní zodpovědnost!"
 
 msgid ""
 "This is a way to take an existing insecure connection, and upgrade it to a "
@@ -7743,6 +7749,11 @@ msgid ""
 "the firmware has not been tampered with.<br /><br />Do you want to install "
 "this firmware anyway (on your own risk)?"
 msgstr ""
+"To znamená, že firmware, který jste nahráli, není oficiální/podporovaný a "
+"může vést k neočekávanému chování či nedostatkům v zabezpečení. Instalujte "
+"pouze firmware, pocházející z důvěryhodných zdrojů a ověřte, že nebyl "
+"pozměněn.<br /><br />Opravdu i tak chcete tento firmware nainstalovat (na "
+"vlastní zodpovědnost)?"
 
 msgid "This name already exists in the disk list."
 msgstr "Tento název už v seznamu disků existuje."
@@ -8582,7 +8593,7 @@ msgid "Using %s bytes fragment size."
 msgstr "S použitím velikosti fragmentu %s bajtů."
 
 msgid "VCPUs"
-msgstr ""
+msgstr "Virt. procesory"
 
 msgid "VHID"
 msgstr "VHID"
@@ -8603,10 +8614,10 @@ msgid "VM Type"
 msgstr "Typ virt. stroje"
 
 msgid "VNC Display"
-msgstr ""
+msgstr "VNC displej"
 
 msgid "VNC Password"
-msgstr ""
+msgstr "Heslo VNC"
 
 msgid "Value"
 msgstr "Hodnota"
@@ -8844,10 +8855,10 @@ msgid "Wrong permission on %s."
 msgstr "Chybná přístupová práva na %s."
 
 msgid "Xen"
-msgstr ""
+msgstr "Xen"
 
 msgid "Xen Virtual Machine"
-msgstr ""
+msgstr "Xen virtuální stroj"
 
 msgid "Yes"
 msgstr "Ano"
@@ -9023,12 +9034,6 @@ msgstr "zjištěna chyba při importu."
 msgid "e.g. %s"
 msgstr "např. %s"
 
-msgid "error"
-msgstr "chyba"
-
-msgid "fatal"
-msgstr "fatální"
-
 msgid "filechooser"
 msgstr "vyberte soubor"
 
@@ -9075,9 +9080,6 @@ msgstr "iTunes/DAAP"
 
 msgid "infinity"
 msgstr "nekonečno"
-
-msgid "info"
-msgstr "pro informaci"
 
 msgid "load/unload failed."
 msgstr "načtení/uvolnění se nezdařilo."
@@ -9166,6 +9168,3 @@ msgstr "odpojit (umount)"
 
 msgid "version:"
 msgstr "verze:"
-
-msgid "warning"
-msgstr "varování"
