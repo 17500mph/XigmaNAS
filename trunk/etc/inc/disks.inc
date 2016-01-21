@@ -1909,7 +1909,28 @@ function disks_import_all_disks($clean_import) {
 				$pdisk['smart']['devicefilepath'] = $diskv['smart']['devicefilepath'];
 				$pdisk['smart']['devicetype'] = $diskv['smart']['devicetype'];
 				$pdisk['smart']['devicetypearg'] = $diskv['smart']['devicetypearg'];
-				$pdisk['smart']['enable'] = false;
+				// Enable S.M.A.R.T. Monitoring
+				$enablesmartmonondevice = true;
+				if ($enablesmartmonondevice) {
+					$enablesmartmonondevice = isset($config['smartd']['enablesmartmonondevice']);
+					if ($enablesmartmonondevice && is_bool($config['smartd']['enablesmartmonondevice'])) {
+						$enablesmartmonondevice = $config['smartd']['enablesmartmonondevice'];
+					}
+				}
+				if ($enablesmartmonondevice) {
+					$enablesmartmonondevice = isset($diskv['smart']['isavailable']);
+					if ($enablesmartmonondevice && is_bool($diskv['smart']['isavailable'])) {
+						$enablesmartmonondevice = $diskv['smart']['isavailable'];
+					}
+				}
+				if ($enablesmartmonondevice) {
+					$enablesmartmonondevice = isset($diskv['smart']['isenabled']);
+					if ($enablesmartmonondevice && is_bool($diskv['smart']['isenabled'])) {
+						$enablesmartmonondevice = $diskv['smart']['isenabled'];
+					}
+				}
+				updatenotify_set("device", UPDATENOTIFY_MODE_MODIFIED, $pdisk['uuid']);
+				$pdisk['smart']['enable'] = $enablesmartmonondevice;					
 				$pdisk['smart']['extraoptions'] = "";
 
 				$config['disks']['disk'][] = $pdisk;
@@ -2260,7 +2281,28 @@ function disks_import_all_encrypted_disks($clean_import) {
 				$pdisk['smart']['devicefilepath'] = $diskv['smart']['devicefilepath'];
 				$pdisk['smart']['devicetype'] = $diskv['smart']['devicetype'];
 				$pdisk['smart']['devicetypearg'] = $diskv['smart']['devicetypearg'];
-				$pdisk['smart']['enable'] = false;
+				// Enable S.M.A.R.T. Monitoring
+				$enablesmartmonondevice = true;
+				if ($enablesmartmonondevice) {
+					$enablesmartmonondevice = isset($config['smartd']['enablesmartmonondevice']);
+					if ($enablesmartmonondevice && is_bool($config['smartd']['enablesmartmonondevice'])) {
+						$enablesmartmonondevice = $config['smartd']['enablesmartmonondevice'];
+					}
+				}
+				if ($enablesmartmonondevice) {
+					$enablesmartmonondevice = isset($diskv['smart']['isavailable']);
+					if ($enablesmartmonondevice && is_bool($diskv['smart']['isavailable'])) {
+						$enablesmartmonondevice = $diskv['smart']['isavailable'];
+					}
+				}
+				if ($enablesmartmonondevice) {
+					$enablesmartmonondevice = isset($diskv['smart']['isenabled']);
+					if ($enablesmartmonondevice && is_bool($diskv['smart']['isenabled'])) {
+						$enablesmartmonondevice = $diskv['smart']['isenabled'];
+					}
+				}	
+				updatenotify_set("device", UPDATENOTIFY_MODE_MODIFIED, $pdisk['uuid']);
+				$pdisk['smart']['enable'] = $enablesmartmonondevice;					
 				$pdisk['smart']['extraoptions'] = "";
 				
 				$config['disks']['disk'][] = $pdisk;
