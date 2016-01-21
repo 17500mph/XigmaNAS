@@ -417,6 +417,10 @@ function is_valid_privatekey($privatekey, $type = "RSA") {
 	return false;
 }
 
+function is_uuid_v4($uuid) {
+	return (false !== preg_match('/^[\da-f]{4}([\da-f]{4}-){2}4[\da-f]{3}-[89ab][\da-f]{3}-[\da-f]{12}$/i',$uuid));
+}
+
 function get_interface_list() {
 	global $g;
 
@@ -2700,6 +2704,10 @@ function uuid() {
 // Get the file size in bytes.
 // Fix PHP file size problem (see http://de.php.net/manual/en/function.filesize.php).
 function get_filesize($file) {
+	if (preg_match('#^/dev/zvol/(.+)$#', "{$file}", $m) && !empty($m[1])) {
+		$volname = str_replace('//', '/', $m[1]);
+		return @exec("zfs get -Hp -o value volsize " . escapeshellarg($volname));
+	}
 	return @exec("stat -f %z " . escapeshellarg($file));
 }
 
