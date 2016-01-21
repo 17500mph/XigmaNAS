@@ -1246,6 +1246,8 @@ function parse_controller_config(&$devlist){
 		}else{
 			$device['smart']['smart_support'] = "Unavailable";
 		}
+		if(!empty($smartctl_info['isavailable'])) $device['smart']['isavailable'] = $smartctl_info['isavailable'];
+		if(!empty($smartctl_info['isenabled'])) $device['smart']['isenabled'] = $smartctl_info['isenabled'];
 
 		// retry empty case
 		if(empty($device['model'])) $device['model'] = system_get_volume_model($device['devicespecialfile']);
@@ -1348,10 +1350,14 @@ function get_smartctl_info($device){
 				if(empty($smartctl_info['smart_support'])){
 					if(preg_match("/(?<=SMART support is:).*(?=\-)+/", $line, $matches)){
 						$smartctl_info['smart_support'] = ltrim($matches[0]);
+						$smartctl_info['isavailable'] = strncasecmp(trim($matches[0]),"available", 9) == 0;
 					}
-				}else if( strncmp($smartctl_info['smart_support'], 'Available', 9) == 0 )  {
-					if( preg_match("/(?<=SMART support is: ).*/", $line, $matches)){
-						$smartctl_info['smart_support'] = $smartctl_info['smart_support'].', '.$matches[0];
+				} else {
+					if(strncasecmp($smartctl_info['smart_support'],"available", 9) == 0 )  {
+						if( preg_match("/(?<=SMART support is: ).*/", $line, $matches)){
+							$smartctl_info['smart_support'] = $smartctl_info['smart_support'].', '.$matches[0];
+							$smartctl_info['isenabled'] = strncasecmp(trim($matches[0]),"enabled", 7) == 0;
+						}
 					}
 				}
 				break;
@@ -1385,6 +1391,8 @@ function init_device_attributes(&$device){
 	$device['smart']['devicetype'] = '';
 	$device['smart']['devicetypearg'] = '';
 	$device['smart']['smart_support'] = '';
+	$device['smart']['isavailable'] = false;
+	$device['smart']['isenabled'] = false;
 }
 
 function parse_device_desc($device){
@@ -2692,10 +2700,6 @@ function uuid() {
 // Get the file size in bytes.
 // Fix PHP file size problem (see http://de.php.net/manual/en/function.filesize.php).
 function get_filesize($file) {
-	if (preg_match('#^/dev/zvol/(.+)$#', "{$file}", $m) && !empty($m[1])) {
-		$volname = str_replace('//', '/', $m[1]);
-		return @exec("zfs get -Hp -o value volsize " . escapeshellarg($volname));
-	}
 	return @exec("stat -f %z " . escapeshellarg($file));
 }
 

@@ -49,6 +49,7 @@ $pconfig['temp_crit'] = $config['smartd']['temp']['crit'];
 $pconfig['email_enable'] = isset($config['smartd']['email']['enable']);
 $pconfig['email_to'] = $config['smartd']['email']['to'];
 $pconfig['email_testemail'] = isset($config['smartd']['email']['testemail']);
+$pconfig['enablesmartmonondevice'] = isset($config['smartd']['enablesmartmonondevice']);
 
 if ($_POST) {
 	unset($input_errors);
@@ -83,6 +84,7 @@ if ($_POST) {
 		$config['smartd']['email']['enable'] = isset($_POST['email_enable']) ? true : false;
 		$config['smartd']['email']['to'] = !empty($_POST['email_to']) ? $_POST['email_to'] : "";
 		$config['smartd']['email']['testemail'] = isset($_POST['email_testemail']) ? true : false;
+		$config['smartd']['enablesmartmonondevice'] = isset($_POST['enablesmartmonondevice']) ? true : false;
 
 		write_config();
 
@@ -162,6 +164,7 @@ function enable_change(enable_change) {
 		document.iform.temp_info.disabled = endis;
 		document.iform.temp_crit.disabled = endis;
 		document.iform.email_enable.disabled = endis;
+		document.iform.enablesmartmonondevice.disabled = endis;
 
 		if (document.iform.enable.checked == true) {
 			endis = !(document.iform.email_enable.checked || enable_change);
@@ -214,6 +217,9 @@ function enable_change(enable_change) {
 							</div>
 						</td>
 					</tr>
+					<?php html_separator();?>
+					<?php html_titleline(gettext("Default Device Settings"));?>
+					<?php html_checkbox("enablesmartmonondevice", gettext("S.M.A.R.T. Monitoring"), !empty($pconfig['enablesmartmonondevice']) ? true : false, gettext("Enable S.M.A.R.T. monitoring of S.M.A.R.T. capable devices when they are added to the configuration."));?>
 					<?php html_separator();?>
 					<?php html_titleline(gettext("Temperature Monitoring"));?>
 					<tr>
