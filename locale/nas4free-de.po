@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-18 00:47+0000\n"
-"PO-Revision-Date: 2015-11-11 21:24+0000\n"
+"POT-Creation-Date: 2016-01-21 22:28+0000\n"
+"PO-Revision-Date: 2016-01-24 14:04+0000\n"
 "Last-Translator: apollo567 <apollo567@hotmail.de>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-14 21:37+0000\n"
-"X-Generator: Launchpad (build 17886)\n"
+"X-Launchpad-Export-Date: 2016-01-29 07:52+0000\n"
+"X-Generator: Launchpad (build 17908)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
 "X-Poedit-Language: German\n"
@@ -55,7 +55,7 @@ msgstr "%dB / block"
 
 #, php-format
 msgid "%s Interface"
-msgstr ""
+msgstr "%s Schnittstelle"
 
 #, php-format
 msgid "%s is too long."
@@ -94,7 +94,7 @@ msgid "%sB used of %sB"
 msgstr "%sB von %sB verwendet"
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
-msgstr ""
+msgstr "(findet sich in 6B200M0 200GB and Maxtor 2R015H1 15GB Festplatten)"
 
 msgid ""
 "(Kingston)Counts the number of flash erase failures. This Attribute returns "
@@ -343,10 +343,10 @@ msgid "A valid systctl MIB value."
 msgstr "Ein gültiger systctl MIB Wert."
 
 msgid "ACL Inherit"
-msgstr ""
+msgstr "Übernahme der Zugriffssteuerungsliste (ACL)"
 
 msgid "ACL Mode"
-msgstr ""
+msgstr "ACL Modus"
 
 msgid "ACL inherit"
 msgstr "ACL Vererbung"
@@ -364,7 +364,7 @@ msgid "AFP"
 msgstr "AFP"
 
 msgid "AFP compatibility"
-msgstr ""
+msgstr "Kompatibilität zum Apple Fle Protokol"
 
 msgid "AG"
 msgstr "AG"
@@ -379,7 +379,7 @@ msgid "AIO write size"
 msgstr "AIO schreib-größe"
 
 msgid "ALL Interfaces"
-msgstr ""
+msgstr "Alle Schnittstellen"
 
 msgid "AP mode"
 msgstr "AP Modus"
@@ -394,13 +394,13 @@ msgid "ATTRIBUTE NAME"
 msgstr "Attributbezeichnung"
 
 msgid "Accept remote syslog messages"
-msgstr ""
+msgstr "Erlaube Remote Syslog Nachrichten"
 
 msgid "Access"
 msgstr "Zugriff"
 
 msgid "Access Mode"
-msgstr ""
+msgstr "Zugriffsmodus"
 
 msgid "Access Restrictions"
 msgstr "Zugriffsbeschränkungen"
@@ -543,10 +543,10 @@ msgid "Add volume"
 msgstr "Datenträger hinzufügen"
 
 msgid "Additional Network"
-msgstr ""
+msgstr "zusätzliches Netzwerk"
 
 msgid "Additional Storage"
-msgstr ""
+msgstr "zusaätzlicher Speicher"
 
 msgid "Additional group"
 msgstr "Weitere Gruppe anlegen"
@@ -586,7 +586,7 @@ msgid "Advanced Options"
 msgstr "Erweiterte Einstellungen"
 
 msgid "Advanced Settings"
-msgstr ""
+msgstr "Erweiterte Einstellungen"
 
 msgid "Advanced settings"
 msgstr "Erweiterte Einstellungen"
@@ -630,7 +630,7 @@ msgstr "Aggressiv"
 msgid ""
 "Airflow temperature on Western Digital HDs (Same as temp. , but current "
 "value is 50 less for some models. Marked as obsolete.)"
-msgstr ""
+msgstr "Luftstrom-Temperatur von Western Digital Festplatten"
 
 msgid "Albanian"
 msgstr "Albanisch"
@@ -670,7 +670,7 @@ msgid "All users will have the root privilege."
 msgstr "Alle Benutzer erhalten Administratorrechte."
 
 msgid "Alloc"
-msgstr ""
+msgstr "Zugeordnet"
 
 msgid "Allow"
 msgstr "Erlauben"
@@ -690,7 +690,7 @@ msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "Erlaube Clients unterbrochene Uploads und Downloads fortzusetzen."
 
 msgid "Allow group"
-msgstr ""
+msgstr "Gruppe erlauben"
 
 msgid "Allow new files"
 msgstr "Erlaube neue Dateien"
@@ -744,7 +744,7 @@ msgid "Alternative configuration directory (usually empty)."
 msgstr "Alternatives Konfigurationsverzeichnis (gewöhnlich leer)"
 
 msgid "Always On"
-msgstr ""
+msgstr "Immer an"
 
 msgid "Always scan"
 msgstr "Immer prüfen"
@@ -765,6 +765,8 @@ msgid ""
 "Amplitude of 'thrashing' (distance of repetitive forward/reverse head "
 "motion)."
 msgstr ""
+"Häufigkeit des Lesekopf - 'Trashing' (wiederholtes Repositionieren der "
+"Leseköpfe der Festplatte)"
 
 msgid "An host with this name already exists."
 msgstr "Ein Host mit diesem Namen existiert bereits."
@@ -842,7 +844,7 @@ msgid "Attaching provider '%s'."
 msgstr "Binde Provider '%s' ein."
 
 msgid "Audio"
-msgstr ""
+msgstr "Ton"
 
 msgid "Auth Group"
 msgstr "Authentifizierungsgruppe"
@@ -908,7 +910,7 @@ msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr "Durchschnittliche Anlaufzeit der Festplatte"
 
 msgid "Backup Configuration"
-msgstr ""
+msgstr "Backup-Konfiguration"
 
 msgid "Backup file"
 msgstr "Sicherheitskopie"
@@ -917,13 +919,13 @@ msgid "Backup/Restore"
 msgstr "Sichern / Wiederherstellen"
 
 msgid "Bad User - (Non Existing Users)"
-msgstr ""
+msgstr "Benutzer existiert nicht"
 
 msgid "Balance algorithm"
 msgstr "Balance Algorithmus"
 
 msgid "Ban List"
-msgstr ""
+msgstr "Sperrliste"
 
 msgid "Ban list rule"
 msgstr "Regel der Bann Liste"
@@ -1002,24 +1004,24 @@ msgid "Blank time"
 msgstr "untätig"
 
 msgid "Block size"
-msgstr ""
+msgstr "Blockgröße"
 
 msgid "Blocksize"
 msgstr "Blockgrösse"
 
 msgid "Boot Arguments"
-msgstr ""
+msgstr "Startparameter"
 
 msgid "Boot Loader"
-msgstr ""
+msgstr "Bootloader"
 
 #, php-format
 msgid "Boot argument (e.g. %s)."
-msgstr ""
+msgstr "Startparameter (z.B. %s)"
 
 #, php-format
 msgid "Boot loader (e.g. %s)."
-msgstr ""
+msgstr "Startprogramm (z.B. %s) (Bootloader)"
 
 #, php-format
 msgid ""
@@ -1030,28 +1032,28 @@ msgstr ""
 "oder LiveUSB durchgeführt oder die Boot Partition von %s vergrößert werden.\n"
 
 msgid "Bootloader"
-msgstr ""
+msgstr "Bootloader"
 
 msgid "Bridge"
 msgstr "Netzwerkbrücke"
 
 msgid "Broadcast interval"
-msgstr ""
+msgstr "Intervall des Netzwerk Boradcast"
 
 #, php-format
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
 "seconds)"
-msgstr ""
+msgstr "Broadcast ist im Netzwerk  alle N Sekunden verfügbar"
 
 msgid "Browse Directory"
-msgstr ""
+msgstr "Verzeichnisliste anzeigen"
 
 msgid "Browseable"
 msgstr "Sichtbar"
 
 msgid "Building database in progress"
-msgstr ""
+msgstr "Die Datenbank wird erstellt......"
 
 msgid "Bulgarian"
 msgstr "Bulgarisch"
@@ -1076,7 +1078,7 @@ msgid "CD/DVD"
 msgstr "CD/DVD"
 
 msgid "CD/DVD drive"
-msgstr ""
+msgstr "CD/DVD - Laufwerk"
 
 msgid "CHANGED"
 msgstr "geändert"
@@ -1103,7 +1105,7 @@ msgid "CP1251 (Cyrillic)"
 msgstr "CP1251 (Kyrillisch)"
 
 msgid "CP1252 (Latin 1)"
-msgstr ""
+msgstr "CP1252 (Latin 1)"
 
 msgid "CP437 (Latin US)"
 msgstr "CP437 (Latin US)"
@@ -1130,7 +1132,7 @@ msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Traditionelles Chinesisch Big5)"
 
 msgid "CPU Load"
-msgstr ""
+msgstr "Prozessorlast"
 
 msgid "CPU frequency"
 msgstr "Prozessortaktfrequenz"
@@ -1258,10 +1260,10 @@ msgid "Clear"
 msgstr "Zurücksetzen"
 
 msgid "Clear Config & Import Disks"
-msgstr ""
+msgstr "Konfiguration löschen und neu von dem ZFS-Pool einlesen"
 
 msgid "Clear Config & Import Software Raid Disks"
-msgstr ""
+msgstr "Konfiguration löschen und neu von dem Software Raidl einlesen"
 
 msgid "Clear config and Import disks"
 msgstr "Konfiguration bereinigen und Platten importieren"
@@ -1292,6 +1294,8 @@ msgid ""
 "Comma-separated list of group names that are permitted to login to the FTP "
 "server. (empty is ftp group)"
 msgstr ""
+"Liste der  am FTP-Server zugriffsberechtigten Gruppennamen (separiert durch "
+"Komma)."
 
 msgid "Command"
 msgstr "Befehl"
@@ -1323,7 +1327,7 @@ msgid "Compilations directories"
 msgstr "Verzeichnisse der Aufstellung"
 
 msgid "Compiled"
-msgstr ""
+msgstr "Kompiliert"
 
 msgid "Compliant profile to be used."
 msgstr "Zu benutzendes, kompatibles Profil."
@@ -1359,7 +1363,7 @@ msgid "Confirmation"
 msgstr "Bestätigung"
 
 msgid "Connected FTP Users & Status"
-msgstr ""
+msgstr "angemeldete FTP-Nutzer (mit Status)"
 
 msgid "Consider replacing this drive"
 msgstr "Ein Wechsel dieser Festplatte wird empfohlen !"
@@ -1381,7 +1385,7 @@ msgstr ""
 "verantwortlichen Person: 'admin@email.address'."
 
 msgid "Container"
-msgstr ""
+msgstr "Container"
 
 msgid "Content"
 msgstr "Inhalt"
@@ -1399,13 +1403,13 @@ msgid "Controller Authorised network"
 msgstr "Controller authorisiertes Netzwerk"
 
 msgid "Controller IP Address"
-msgstr ""
+msgstr "IP-Adresse des Controllers"
 
 msgid "Controller IP address"
 msgstr "Kontroller IP Adresse"
 
 msgid "Controller Model"
-msgstr ""
+msgstr "Controller-Modell"
 
 msgid "Controller TCP Port"
 msgstr "Kontroller TCP Port"
@@ -1670,7 +1674,7 @@ msgstr ""
 "Passwort verwenden."
 
 msgid "Current state of drive operation based upon the Life Curve."
-msgstr ""
+msgstr "aktueller Status basierend auf der Lebensdauererwartung"
 
 msgid "Current value of apparent power (Volt-Amps)"
 msgstr "Aktuelle Scheinleistung (VA)"
@@ -1712,13 +1716,13 @@ msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
 
 msgid "DLNA/UPnP Fuppes"
-msgstr ""
+msgstr "DLNA/UPnP Fuppes"
 
 msgid "DLNA/UPnP MiniDLNA"
-msgstr ""
+msgstr "DLNA/UPnP MiniDLNA"
 
 msgid "DNS"
-msgstr ""
+msgstr "Domain Name System (DNS)"
 
 msgid "DNS domain"
 msgstr "DNS Domäne"
@@ -1736,6 +1740,11 @@ msgid ""
 "/>It is recommended that you <a href='%s'>Backup</a> the server "
 "configuration before doing a upgrade."
 msgstr ""
+"Unter keinen Umständen ein Firmware-Upgrade von Nas4Free unterbrechen !!!!! "
+".<br />Auf keinen Fall eine andere Datei als eine gültige '%s-%s-"
+"embedded.img.xz' Datei.<br />Es wird dringend empfohlen <a "
+"href='%s'>Backup</a> die Serverkonfigurationsdatei vor einem Upgrade zu "
+"sichern !!!"
 
 msgid "DVD"
 msgstr "DVD"
@@ -1790,6 +1799,9 @@ msgstr "Deduplizieren"
 msgid "Default"
 msgstr "Vorgaben"
 
+msgid "Default Device Settings"
+msgstr "Voreinstellungen"
+
 #, php-format
 msgid "Default is %s."
 msgstr "Standard ist %s."
@@ -1840,7 +1852,7 @@ msgid "Delete URL"
 msgstr "URL löschen"
 
 msgid "Delete VM"
-msgstr ""
+msgstr "VM löschen"
 
 msgid "Delete algorithm"
 msgstr "Löschalgorithmus."
@@ -1969,7 +1981,7 @@ msgid "Destination"
 msgstr "Ziel"
 
 msgid "Destination Share"
-msgstr ""
+msgstr "Ziel"
 
 msgid "Destination email address."
 msgstr "E-Mail Adresse des Empfängers."
@@ -2025,7 +2037,7 @@ msgid "Device IP"
 msgstr "IP des Geräts"
 
 msgid "Device Model"
-msgstr ""
+msgstr "Modell"
 
 msgid "Device Pass-through"
 msgstr "Gerät durchreichen"
@@ -2092,7 +2104,7 @@ msgid "Disable File Manager"
 msgstr "deaktiviere Dateimanager"
 
 msgid "Disable Firmware Update"
-msgstr ""
+msgstr "Firmware Update deaktivieren"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Deaktivieren des TCP Wrapper (mod_wrap Modul)"
@@ -2107,7 +2119,7 @@ msgid "Disable speaker beep on startup and shutdown"
 msgstr "Systemlautsprecher beim Start und Shutdown ausschalten"
 
 msgid "Disable the compression of repeated line"
-msgstr ""
+msgstr "Kompression der wiederholten Zeile deaktivieren"
 
 msgid "Disabled"
 msgstr "Deaktiviert"
@@ -2177,7 +2189,7 @@ msgid "Do you really want to delete this URL?"
 msgstr "Möchten Sie diese URL wirklich löschen?"
 
 msgid "Do you really want to delete this VM?"
-msgstr ""
+msgstr "Sind Sie sicher ? Wollen Sie diese VM wirklich löschen ?"
 
 msgid "Do you really want to delete this auth group?"
 msgstr "Möchten sie diese Authentifikationsgruppe wirklich löschen?"
@@ -2308,7 +2320,7 @@ msgstr ""
 "Stammverzeichnis auf dem Webserver. Hier liegen Dateien für Webseiten."
 
 msgid "DomID"
-msgstr ""
+msgstr "Domain ID"
 
 msgid "Domain"
 msgstr "Domäne"
@@ -2357,7 +2369,7 @@ msgid "Download"
 msgstr "Herunterladen"
 
 msgid "Download Configuration"
-msgstr ""
+msgstr "Sichern der Konfigurationsdatei"
 
 msgid "Download bandwidth"
 msgstr "Downloadbandbreite"
@@ -2439,7 +2451,7 @@ msgid "Edit URL"
 msgstr "URL bearbeiten"
 
 msgid "Edit VM"
-msgstr ""
+msgstr "VM bearbeiten"
 
 msgid "Edit auth group"
 msgstr "Editiere Authentifikationsgruppe"
@@ -2545,13 +2557,19 @@ msgid "Enable FXP protocol."
 msgstr "Aktiviere FXP-Protokoll."
 
 msgid "Enable Firmware Update"
-msgstr ""
+msgstr "Firmware Update aktivieren"
 
 msgid "Enable NFSv4 server."
 msgstr "Aktiviere NFSv4 Server."
 
 msgid "Enable NTP"
 msgstr "Aktiviere NTP"
+
+msgid ""
+"Enable S.M.A.R.T. monitoring of S.M.A.R.T. capable devices when they are "
+"added to the configuration."
+msgstr ""
+"S.M.A.R.T. - Daten überwachen, wenn entsprechende Geräte hinzugefügt werden"
 
 msgid "Enable SMTP authentication."
 msgstr "Aktiviere SMTP Authentifizierung."
@@ -2567,7 +2585,7 @@ msgid "Enable TLS connections."
 msgstr "SSL-Verbindungen aktivieren."
 
 msgid "Enable TiVo support."
-msgstr ""
+msgstr "TiVO - Unterstützung aktivieren"
 
 msgid "Enable Time Machine support"
 msgstr "Time Machine Unterstützung aktivieren"
@@ -2625,7 +2643,7 @@ msgid "Enable guest access."
 msgstr "Aktiviere Gast-Zugriff."
 
 msgid "Enable inotify."
-msgstr ""
+msgstr "inotify aktivieren"
 
 msgid "Enable keyboard-interactive authentication."
 msgstr "Keyboard-interactive authentication aktivieren."
@@ -2637,13 +2655,13 @@ msgid "Enable local user authentication."
 msgstr "Aktiviere Zugriff für lokale Benutzer."
 
 msgid "Enable mapping DOS attributes"
-msgstr ""
+msgstr "Mapping von DOS Datei-Attributen aktivieren"
 
 msgid "Enable module listing."
 msgstr "Modulauflistung aktivieren."
 
 msgid "Enable nested virtualization"
-msgstr ""
+msgstr "verschachtelte Virtualisierung aktivieren"
 
 msgid "Enable peer exchange (PEX)."
 msgstr "Peer-Austausch (PEX) aktivieren."
@@ -2696,7 +2714,7 @@ msgid "Enable the system power control utility"
 msgstr "Aktiviere das System Power Control Utility"
 
 msgid "Enable to strictly adhere to DLNA standards."
-msgstr ""
+msgstr "strikte Einhaltung von DLNA Standards erzwingen"
 
 msgid "Enable transcoding."
 msgstr "Umwandlung aktivieren."
@@ -2742,7 +2760,7 @@ msgid "English"
 msgstr "Englisch"
 
 msgid "Enhanced compatibility with Netatalk AFP server"
-msgstr ""
+msgstr "erhöhte Kompatibilität zum Netatalk AFP Server"
 
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
@@ -2756,6 +2774,7 @@ msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
 "automatically added it to the bridge."
 msgstr ""
+"Geben Sie eine Liste der 'Tap devices' ein  (separiert durch Leerzeichen)"
 
 msgid "Enter a valid sysctl MIB name."
 msgstr "Geben Sie einen gültigen sysctl MIB Namen an."
@@ -2778,6 +2797,8 @@ msgid ""
 "Enter the path to the home directory of VirtualBox. VM config and HDD image "
 "will be created under the specified directory."
 msgstr ""
+"Pfad der Virtualbox. Die VM-Konfiguration und das Festplattenimage werden "
+"dort gespeichert"
 
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
@@ -2789,7 +2810,7 @@ msgstr ""
 msgid ""
 "Enter the path to the home directory. The config will be created under the "
 "specified directory."
-msgstr ""
+msgstr "Pfad des 'Home Directory'. Die Konfiguration wird dort gespeichert"
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr ""
@@ -2839,7 +2860,7 @@ msgid "Export all the directories in the specified path."
 msgstr "Alle Ordner im angegebenen Pfad exportieren."
 
 msgid "Extended Attributes"
-msgstr ""
+msgstr "Erweiterte Attribute"
 
 msgid "Extended attributes"
 msgstr "Erweiterte Attribute"
@@ -2929,7 +2950,7 @@ msgstr ""
 "von Daten über den anfragenden Rechner (unsicher!)."
 
 msgid "Factory Defaults"
-msgstr ""
+msgstr "Werkeinstellungen"
 
 msgid "Failed"
 msgstr "Fehlgeschlagen"
@@ -2982,7 +3003,7 @@ msgid "Failover"
 msgstr "Failover"
 
 msgid "Fatal"
-msgstr ""
+msgstr "Fataler Fehler"
 
 msgid "File"
 msgstr "Datei"
@@ -2994,7 +3015,7 @@ msgid "File Manager"
 msgstr "Dateiverwaltung"
 
 msgid "File Path"
-msgstr ""
+msgstr "Dateipfad"
 
 msgid "File Transfer Protocol"
 msgstr "File Transfer Protocol"
@@ -3004,7 +3025,7 @@ msgstr "Datei nicht gefunden"
 
 #, php-format
 msgid "File path (e.g. %s) or ZFS volume (e.g. %s) used as Hard disk image."
-msgstr ""
+msgstr "Dateipfad (z.B. %s) oder ZFS volume (z.B. %s) des Festplattenimage."
 
 #, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
@@ -3032,7 +3053,7 @@ msgid "Fileserver"
 msgstr "Dateiserver (or Fileserver)"
 
 msgid "Filesystem"
-msgstr ""
+msgstr "Dateisystem"
 
 msgid "Filter"
 msgstr "Filter"
@@ -3044,13 +3065,15 @@ msgid "Firewall"
 msgstr "Firewall"
 
 msgid "Firewall Rule Settings"
-msgstr ""
+msgstr "Regeln der Firewall"
 
 msgid "Firmware"
 msgstr "Firmware"
 
 msgid "Firmware upload failed (out of memory?)"
 msgstr ""
+"Firmware konnte nicht auf den Server geladen werden. Nicht genug RAM-"
+"Speicher verfügbar ?"
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "Firmware-Upload wird auf dieser Plattform nicht unterstützt."
@@ -3120,15 +3143,16 @@ msgid "Full Name"
 msgstr "Vollständiger Name"
 
 msgid "Fuppes"
-msgstr ""
+msgstr "Fuppes"
 
 msgid "Fuppes Media Server"
-msgstr ""
+msgstr "Fuppes Media Server"
 
 msgid ""
 "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
 "Fuppes first."
 msgstr ""
+"Fuppes is aktiv. Zur Nutzung von MiniDLNA, muss Fuppes deaktiviert werden."
 
 msgid "GID"
 msgstr "GID"
@@ -3219,10 +3243,10 @@ msgid "HAST (Highly Available Storage)"
 msgstr "HAST (High Available Storage (Hoch verfügbares Storage))"
 
 msgid "HAST Information & Status Configured Resources"
-msgstr ""
+msgstr "Information & Status der HAST-Konfiguration"
 
 msgid "HAST Resource"
-msgstr ""
+msgstr "HAST Resource"
 
 msgid "HAST disabled"
 msgstr "HAST deaktiviert"
@@ -3236,10 +3260,10 @@ msgstr ""
 "verfügbar"
 
 msgid "HDD Format"
-msgstr ""
+msgstr "Festplatten Format"
 
 msgid "HDD Management"
-msgstr ""
+msgstr "Festplatten Management"
 
 msgid ""
 "HDD producers implement a Fly Height Monitor that attempts to provide "
@@ -3250,18 +3274,23 @@ msgid ""
 "attribute indicates the count of these errors detected over the lifetime of "
 "the drive. This feature is implemented in most modern Seagate drives."
 msgstr ""
+"Festplattenhersteller überwachen die Distanz zwischen Lesekopf und "
+"Magnetplatte. Liegt dieser Wert außerhalb der vorgegebenen Bandbreite, wird "
+"dieser Fehlerwert erhöht und die Schreiboperation an anderer Stelle "
+"wiederholt.  Dieses Feature ist bei den meisten modernen Seagate festplatten "
+"vorhanden."
 
 msgid "HDD standby time"
-msgstr ""
+msgstr "Zeit bis Festplatten Standby"
 
 msgid "HTTP Proxy"
 msgstr "HTTP-Proxy"
 
 msgid "HVM Guest"
-msgstr ""
+msgstr "HVM Gast"
 
 msgid "Hard Disk"
-msgstr ""
+msgstr "Festplatte"
 
 msgid "Hardware"
 msgstr "Hardware"
@@ -3368,7 +3397,7 @@ msgid "Hungarian"
 msgstr "Ungarisch"
 
 msgid "I/O Statistics"
-msgstr ""
+msgstr "Copy text \t I/O Statistik"
 
 msgid "I/O Timeout"
 msgstr "I/O Timeout"
@@ -3387,7 +3416,7 @@ msgid "IP"
 msgstr "IP"
 
 msgid "IP Address"
-msgstr ""
+msgstr "IP Adresse"
 
 msgid "IP address"
 msgstr "IP-Adresse"
@@ -3441,7 +3470,7 @@ msgstr "Copy text \t IRC Live Support"
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
-msgstr ""
+msgstr "Pfad der ISO-Datei (z.B. %s), die als CD/DVD genutzt wird"
 
 msgid "ISO file to be mounted."
 msgstr "ISO-Datei die eingehängt werden soll."
@@ -3552,10 +3581,10 @@ msgid "Import"
 msgstr "Importieren"
 
 msgid "Import Disks"
-msgstr ""
+msgstr "Festplatten importieren"
 
 msgid "Import Software Raid Disks"
-msgstr ""
+msgstr "Festplatten des Sotware-Raids importieren"
 
 msgid "Import disks"
 msgstr "Importiere Festplatten"
@@ -3628,7 +3657,7 @@ msgstr "Initialübersicht"
 
 #, php-format
 msgid "Initial ramdisk (e.g. %s)."
-msgstr ""
+msgstr "Initiale Ramdisk (e.g. %s)."
 
 msgid "Initialize"
 msgstr "Initialisierung"
@@ -3670,6 +3699,8 @@ msgstr "Initiatoren"
 
 msgid "Inotify"
 msgstr ""
+"Inotify (a Linux kernel subsystem that acts to extend filesystems to notice "
+"changes to the filesystem, and report those changes to applications)"
 
 msgid "Input current (A)"
 msgstr "Stromstärke (A)"
@@ -3723,6 +3754,8 @@ msgid ""
 "Intel SSD reports the number of available reserved space as a percentage of "
 "reserved space in a brand new SSD."
 msgstr ""
+"Intel SSD berichten den verfügbaren Reserveplatz als Prozentzahl des "
+"Neuwertes bei Herstellung."
 
 msgid "Interface"
 msgstr "Schnittstelle"
@@ -3813,7 +3846,7 @@ msgid "JBOD"
 msgstr "JBOD"
 
 msgid "JBOD Information & Status"
-msgstr ""
+msgstr "JBOD Information & Status"
 
 msgid ""
 "January February March April May June July August September October November "
@@ -3826,11 +3859,11 @@ msgid "Japanese"
 msgstr "Japanisch"
 
 msgid "Kernel"
-msgstr ""
+msgstr "Kernel"
 
 #, php-format
 msgid "Kernel file (e.g. %s)."
-msgstr ""
+msgstr "Systemkern-Datei (z.B. %s)"
 
 msgid "Key"
 msgstr "Schlüssel"
@@ -3860,7 +3893,7 @@ msgid "LAN Management"
 msgstr "LAN Management"
 
 msgid "LAN Only"
-msgstr ""
+msgstr "Nur kabellgebundenes Netzwerk"
 
 msgid "LAN net"
 msgstr "LAN net"
@@ -3869,7 +3902,7 @@ msgid "LCDproc"
 msgstr "LCDproc"
 
 msgid "LCDproc (Client)"
-msgstr ""
+msgstr "LCDproc (Client)"
 
 msgid "LDAP"
 msgstr "LDAP"
@@ -3931,21 +3964,26 @@ msgstr "Dieses Feld leer lassen, um die Standardeinstellungen zu nutzen."
 
 msgid "Level 1 - Minimum Power Usage with Standby (Spindown)"
 msgstr ""
+"Stufe 1 - Minimaler Stromverbrauch mit Standby (Spindown) der Festplatten"
 
 msgid "Level 127 - Intermediate Power Usage with Standby"
-msgstr ""
+msgstr "Stufe 127 -Mittlerer Stromverbrauch mit Standby"
 
 msgid "Level 128 - Minimum Power Usage without Standby (No Spindown)"
 msgstr ""
+"Stufe 128 - Minimaler Stomverbrauch ohne  Standby (kein Spindown) der "
+"Festplatten"
 
 msgid "Level 192 - Intermediate Power Usage without Standby"
-msgstr ""
+msgstr "Stufe 192 - Mittlerer Stromverbrauch ohne Standby"
 
 msgid "Level 254 - Maximum Performance, Maximum Power Usage"
 msgstr ""
+"Level 254 -  Maximale Gechwindigkeit - maximaler Stromverbrauch (permanente "
+"Höchstleistung)"
 
 msgid "Level 64 - Intermediate Power Usage with Standby"
-msgstr ""
+msgstr "Stufe 64 - Mittlerer Stromverbrauch mit Standby"
 
 #, php-format
 msgid "Levels (MHz/mW): %s"
@@ -3958,7 +3996,7 @@ msgid "License & Credits"
 msgstr "Lizenz & Mitwirkende"
 
 msgid "Life Time"
-msgstr ""
+msgstr "Lebensdauer"
 
 msgid "Life time"
 msgstr "Lebenszeit"
@@ -3993,13 +4031,13 @@ msgid "List"
 msgstr "Liste"
 
 msgid "List Detected Disks"
-msgstr ""
+msgstr "Übersicht gefundener Festplatten"
 
 msgid "List Imported Users"
-msgstr ""
+msgstr "Liste importierter Nutzer"
 
 msgid "List Mount Points"
-msgstr ""
+msgstr "List der Einhängepunkte (Mount Points)"
 
 msgid ""
 "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP "
@@ -4030,7 +4068,7 @@ msgid "Local Master Browser"
 msgstr "Local Master Browser"
 
 msgid "Local Share (Destination)"
-msgstr ""
+msgstr "lokales Ziel"
 
 msgid "Local User"
 msgstr "Lokaler Benutzer"
@@ -4096,7 +4134,7 @@ msgid "Log Level"
 msgstr "Log Level"
 
 msgid "Log level"
-msgstr ""
+msgstr "Protokollierungsstufe"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr ""
@@ -4151,13 +4189,13 @@ msgstr ""
 "eingestellt."
 
 msgid "MAC Address"
-msgstr ""
+msgstr "MAC-Adresse"
 
 msgid "MAC address"
 msgstr "MAC-Adresse"
 
 msgid "MBR Erase"
-msgstr ""
+msgstr "MBR (Master Boot Record) löschen"
 
 msgid "MBR partition"
 msgstr "MBR Partition"
@@ -4178,7 +4216,7 @@ msgid "MS Active Directory"
 msgstr "Microsoft ActiveDirectory"
 
 msgid "MS Active Directory Information & Status"
-msgstr ""
+msgstr "MS Active Directory Information & Status"
 
 msgid "MS Domain"
 msgstr "MS Domain"
@@ -4218,7 +4256,7 @@ msgid "Map to user"
 msgstr "Bilde auf den Benutzer ab"
 
 msgid "Mapping DOS attributes"
-msgstr ""
+msgstr "Maping der DOS-Datei Attribute"
 
 msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
@@ -4270,7 +4308,7 @@ msgid "MaxRecvDataSegmentLength"
 msgstr "MaxRecvDataSegmentLength"
 
 msgid "Maximum Performance, Maximum Acoustic Output"
-msgstr ""
+msgstr "Maximale Performance, Maximale Geräuschkulisse"
 
 msgid "Maximum connections"
 msgstr "Max. Verbindungen"
@@ -4334,19 +4372,19 @@ msgid "Media library"
 msgstr "Mediendatenbank"
 
 msgid "Medium Acoustic Output"
-msgstr ""
+msgstr "Mittlere Geräuschkulisse"
 
 msgid "Mem"
-msgstr ""
+msgstr "Speicher"
 
 msgid "Member Interface"
 msgstr "Mitglieds Schnittstelle"
 
 msgid "Memory (MiB)"
-msgstr ""
+msgstr "Speicher in (MiB)"
 
 msgid "Memory Usage"
-msgstr ""
+msgstr "Speicherauslastung"
 
 msgid "Memory usage"
 msgstr "Speicherbelegung"
@@ -4364,24 +4402,25 @@ msgid "Min. passive port"
 msgstr "Minimaler passiver Port"
 
 msgid "MiniDLNA"
-msgstr ""
+msgstr "MiniDLNA"
 
 msgid "MiniDLNA A/V Media Server"
-msgstr ""
+msgstr "MiniDLNA A/V Media Server"
 
 msgid ""
 "MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
 "MiniDLNA first."
 msgstr ""
+"MiniDLNA is aktiv. Zur Nutzung von Fuppes muss es zuerst deaktiviert werden"
 
 msgid "Minidlna configuration has been updated."
-msgstr ""
+msgstr "Die MiniDLNA Konfiguration wurde aktualisiert"
 
 msgid "Minimum"
 msgstr "Minimum"
 
 msgid "Minimum Performance, Minimum Acoustic Output"
-msgstr ""
+msgstr "Minimale Performance, geringste Geräuschkulisse"
 
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr "Minimaler Ladezustand für USV-Neustart nach Stromausfall"
@@ -4423,7 +4462,7 @@ msgid "Model Extra"
 msgstr ""
 
 msgid "Model Name"
-msgstr ""
+msgstr "Modell-Bezeichnung"
 
 msgid "Modified"
 msgstr "Verändert"
@@ -4468,7 +4507,7 @@ msgid "Mounts"
 msgstr "Einhängepunkte"
 
 msgid "Music"
-msgstr ""
+msgstr "Musik"
 
 msgid "Must choose one"
 msgstr "Es muss eines ausgewählt sein"
@@ -4538,7 +4577,7 @@ msgid "Name of the variable."
 msgstr "Name der Variablen."
 
 msgid "Nested HVM"
-msgstr ""
+msgstr "verschachteltes HVM"
 
 msgid "NetBIOS domain"
 msgstr "NetBIOS Domäne"
@@ -4553,7 +4592,7 @@ msgid "Network"
 msgstr "Netzwerk"
 
 msgid "Network Adapter"
-msgstr ""
+msgstr "Netzwerkadapter"
 
 msgid "Network File System"
 msgstr "Network File System"
@@ -4578,7 +4617,7 @@ msgid "Networks"
 msgstr "Netzwerke"
 
 msgid "Never - (Default)"
-msgstr ""
+msgstr "Nie (Voreinstellung)"
 
 msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
@@ -4647,6 +4686,8 @@ msgid ""
 "No configured bridge interfaces. Please add new <a href='%s'>bridge "
 "interface</a> first."
 msgstr ""
+"Es sind keine Brücken Schnittstellen konfiguriert. Bitte legen Sie zuerst "
+"ein <a href='%s'>bridge interface</a> an."
 
 #, php-format
 msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
@@ -4839,7 +4880,7 @@ msgid "ONLINE"
 msgstr "ONLINE"
 
 msgid "OPT Only"
-msgstr ""
+msgstr "nur OPT"
 
 msgid "Object name"
 msgstr "Objektname"
@@ -4868,7 +4909,7 @@ msgstr ""
 "existierenden bereits virtuellen Gerät vorhanden waren"
 
 msgid "Online"
-msgstr ""
+msgstr "In Betrieb"
 
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
@@ -4960,7 +5001,7 @@ msgid "PSK"
 msgstr "PSK"
 
 msgid "PV Guest"
-msgstr ""
+msgstr "PV Gast"
 
 msgid "Package Name"
 msgstr "Paketname"
@@ -5059,7 +5100,7 @@ msgid "Password suffix"
 msgstr "Passwortsuffix"
 
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
-msgstr ""
+msgstr "Einen  RSA PRIVATE KEY in PEM format hier eingeben"
 
 msgid "Paste a signed certificate in X.509 PEM format here."
 msgstr "Fügen Sie hier ein Zertifikat im X.509 PEM Format ein."
@@ -5103,13 +5144,13 @@ msgid "Permit to do SSH Tunneling."
 msgstr "SSH Tunneling erlauben."
 
 msgid "Physical Interface"
-msgstr ""
+msgstr "Physische Schnittstelle"
 
 msgid "Physical interface"
 msgstr "Physische Schnittstelle"
 
 msgid "Pictures"
-msgstr ""
+msgstr "Bilder"
 
 msgid "Ping"
 msgstr "Ping"
@@ -5131,10 +5172,10 @@ msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "Bitte überprüfe die <a href='%s' target='_blank'>Dokumentation</a>."
 
 msgid "Please define the Database directory location."
-msgstr ""
+msgstr "Bitte den Datenbank-Pfad festlegen"
 
 msgid "Please define the Media library location."
-msgstr ""
+msgstr "Bitte den Medien-Pfad festlegen"
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr "Bitte beachten, dass Leerstellen in Pfadnamen nicht erlaubt sind."
@@ -5149,7 +5190,7 @@ msgid "Pool"
 msgstr "Pool"
 
 msgid "Pool Information & Status"
-msgstr ""
+msgstr "Pool -Zustandsinformation"
 
 msgid "Pools"
 msgstr "Pools"
@@ -5216,7 +5257,7 @@ msgid "Power Mode"
 msgstr "Strom-Modus"
 
 msgid "Power management"
-msgstr ""
+msgstr "Energieverwaltung"
 
 msgid "Power mode"
 msgstr "Expertenmodus"
@@ -5232,7 +5273,7 @@ msgstr "PreInit"
 
 #, php-format
 msgid "Predefined Groups"
-msgstr ""
+msgstr "Vordefinierte Gruppen"
 
 msgid "Preferred"
 msgstr "Bevorzugt"
@@ -5244,7 +5285,7 @@ msgid "Preformatted file system"
 msgstr "Vorformatiertes Dateisystem"
 
 msgid "Presentation WebGUI"
-msgstr ""
+msgstr "Weboberfläche"
 
 msgid "Preserve extended attributes"
 msgstr "Erhalte erweiterte Attribute"
@@ -5280,7 +5321,7 @@ msgid "Processes"
 msgstr "Prozesse"
 
 msgid "Processes Information"
-msgstr ""
+msgstr "Prozessinformation"
 
 msgid "Product ID"
 msgstr "Produkt-ID"
@@ -5304,6 +5345,7 @@ msgid ""
 "Puts the disk into standby mode when the selected amount of time after the "
 "last disk access has been elapsed."
 msgstr ""
+"Nach der angegeben Zeit ohne Zugriff gehen die Festplatten in 'Stand-by'"
 
 msgid "Queue Depth"
 msgstr "Warteschlangenlänge"
@@ -5318,25 +5360,25 @@ msgid "RAID 0"
 msgstr "RAID 0"
 
 msgid "RAID 0 Information & Status"
-msgstr ""
+msgstr "Raid 0 Zustandsinformation"
 
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
-msgstr ""
+msgstr "Raid 0/1/5 Zustandsinformation"
 
 msgid "RAID 1"
 msgstr "RAID 1"
 
 msgid "RAID 1 Information & Status"
-msgstr ""
+msgstr "Raid 1 Zustandsinformation"
 
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
-msgstr ""
+msgstr "Raid 5 Zustandsinformation"
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -5369,7 +5411,7 @@ msgid "RSYNC Client"
 msgstr "RSYNC Client"
 
 msgid "RSYNC Client Information & Status"
-msgstr ""
+msgstr "RSYNC Client Zustandsinformation"
 
 msgid "RSYNC events"
 msgstr "RSYNC Ereignisse"
@@ -5381,7 +5423,7 @@ msgid "Raid name"
 msgstr "RAID Name"
 
 msgid "Ramdisk"
-msgstr ""
+msgstr "RAM-DISK"
 
 msgid "Read"
 msgstr "Lesen"
@@ -5469,7 +5511,7 @@ msgid "Remaining battery runtime"
 msgstr "verfügbare Restlaufzeit im Batteriebetrieb"
 
 msgid "Remote Address"
-msgstr ""
+msgstr "Fernadresse"
 
 msgid "Remote Module (Source)"
 msgstr ""
@@ -5529,10 +5571,10 @@ msgid "Required"
 msgstr "Erforderlich"
 
 msgid "Rescan Disks"
-msgstr ""
+msgstr "Festplatten wiedereinlesen"
 
 msgid "Rescan database in progress"
-msgstr ""
+msgstr "Dei Datenbank wird aktualisiert"
 
 msgid "Rescan interval"
 msgstr "Durchsuchungsintervall"
@@ -5559,7 +5601,7 @@ msgid "Resources"
 msgstr "Ressourcen"
 
 msgid "Restore Configuration"
-msgstr ""
+msgstr "Die Konfiguration wird wieder hergestellt."
 
 msgid "Restore metadata from the given file to the given provider."
 msgstr ""
@@ -5624,7 +5666,7 @@ msgid "Rsync"
 msgstr "Rsync"
 
 msgid "Rsync Job"
-msgstr ""
+msgstr "Rsync Job"
 
 msgid "Rule"
 msgstr "Regel"
@@ -5652,6 +5694,9 @@ msgstr "Russisch"
 
 msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
+
+msgid "S.M.A.R.T. Monitoring"
+msgstr "S.M.A.R.T. Überwachen"
 
 msgid "S.M.A.R.T. events"
 msgstr "S.M.A.R.T. Ereignisse"
@@ -5720,7 +5765,7 @@ msgid "Save"
 msgstr "Speichern"
 
 msgid "Save & Restart"
-msgstr ""
+msgstr "Speichern & System neu starten"
 
 msgid "Save and Restart"
 msgstr "Speichern und Neustart"
@@ -5749,7 +5794,7 @@ msgid "Scan type"
 msgstr "Suchart"
 
 msgid "Schedule Time"
-msgstr ""
+msgstr "geplante Zeit"
 
 msgid "Schedule time"
 msgstr "Geplante Zeit"
@@ -5758,16 +5803,16 @@ msgid "Scheduled"
 msgstr "Planmäßig"
 
 msgid "Scheduled Reboot"
-msgstr ""
+msgstr "geplanter Neustart des Systems"
 
 msgid "Scheduled Self-Test"
 msgstr "Geplanter Selbst-Test"
 
 msgid "Scheduled Shutdown"
-msgstr ""
+msgstr "geplantes Ausschalten des Systems"
 
 msgid "Scheduled tests"
-msgstr ""
+msgstr "geplante Tests"
 
 msgid "Secondary"
 msgstr "Sekundärer"
@@ -5785,7 +5830,7 @@ msgid "See attribute E8."
 msgstr "Verweis auf Attribut E8"
 
 msgid "Select"
-msgstr ""
+msgstr "Auswählen"
 
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
@@ -5799,7 +5844,7 @@ msgstr ""
 "Wähle ein Gerät welches für die S.M.A.R.T. Überwachung aktiviert wurde."
 
 msgid "Select firmware:"
-msgstr ""
+msgstr "Firmware Datei auswählen"
 
 msgid "Select item to remove from the list"
 msgstr "Objekt auswählen, welches von der Liste entfernt werden soll"
@@ -5828,6 +5873,8 @@ msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
+"Wählen Sie die Schnittstelle aus ( nur wählbar bei mehreren vorhanden "
+"Schnittstellen)"
 
 msgid "Select your read balance algorithm."
 msgstr "Auswahl des 'Read Balance Algorithmus'."
@@ -5842,7 +5889,7 @@ msgid "Selected file isn't an valid ISO file."
 msgstr "Gewählte Datei ist keine gültige ISO-Datei"
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
-msgstr ""
+msgstr "SMART"
 
 msgid "Self-tests Management"
 msgstr ""
@@ -5854,10 +5901,10 @@ msgid "Send Command!"
 msgstr "Sende Befehl!"
 
 msgid "Send Now"
-msgstr ""
+msgstr "Jetzt senden"
 
 msgid "Send Test Email"
-msgstr ""
+msgstr "Sende eine Test E-Mail"
 
 msgid "Send a TEST warning email on startup."
 msgstr "Sende eine TEST-Warnung als E-Mail nach dem Start."
@@ -5875,7 +5922,7 @@ msgid "Serial Console"
 msgstr "Serial Console"
 
 msgid "Serial Number"
-msgstr ""
+msgstr "Seriennummer"
 
 msgid "Serial number"
 msgstr "Seriennummer"
@@ -6000,13 +6047,14 @@ msgid "Shock During Write."
 msgstr "Schocks während Schreiboperationen"
 
 msgid "Show Process Information"
-msgstr ""
+msgstr "Prozessinformationen anzeigen"
 
 msgid "Show RAW UPS Info"
 msgstr "Zeige Rohdaten USV-Informationen"
 
 msgid "Show UPS Information"
 msgstr ""
+"Informationen über die unterbrechungsfreie Stromversorgung (UPS) anzeigen"
 
 msgid "Show log entries in reverse order (newest entries on top)"
 msgstr ""
@@ -6092,7 +6140,7 @@ msgid "Source"
 msgstr "Quelle"
 
 msgid "Source Share"
-msgstr ""
+msgstr "Quelle"
 
 msgid "Source directory to be synchronized."
 msgstr "Zu synchronisierendes Verzeichnis"
@@ -6104,7 +6152,7 @@ msgid "Source share"
 msgstr "Quell - Freigabe"
 
 msgid "Space Usage"
-msgstr ""
+msgstr "Festplattennutzung"
 
 msgid "Space Used"
 msgstr "Benutzter Speicherplatz"
@@ -6200,7 +6248,7 @@ msgid "Standard"
 msgstr "Standard"
 
 msgid "Standby"
-msgstr ""
+msgstr "Standby"
 
 msgid ""
 "Standby - Check the device unless it is in SLEEP or STANDBY mode. In these "
@@ -6307,7 +6355,7 @@ msgid "Swap Information & Status"
 msgstr ""
 
 msgid "Swap Memory"
-msgstr ""
+msgstr "Auslagerungsspeicher"
 
 msgid "Swap disabled"
 msgstr "Swap deaktiviert"
@@ -6363,10 +6411,10 @@ msgid "System Beep"
 msgstr "Systemlautsprecher piept"
 
 msgid "System Information"
-msgstr ""
+msgstr "Systeminformation"
 
 msgid "System Load"
-msgstr ""
+msgstr "Systemlast"
 
 msgid "System bios"
 msgstr "System-Bios"
@@ -6486,7 +6534,7 @@ msgid "Temperature"
 msgstr "Temperatur"
 
 msgid "Temperature Monitoring"
-msgstr ""
+msgstr "Temperaturüberwachung"
 
 msgid "Temperature alarm (enabled/disabled)"
 msgstr "Alarm für Temperatur (aktiviert/deaktiviert)"
@@ -6974,7 +7022,7 @@ msgid "The file you try to flash is not for this platform"
 msgstr ""
 
 msgid "The firmware file is corrupt"
-msgstr ""
+msgstr "Die Firmware-Datei ist defekt"
 
 #, php-format
 msgid ""
