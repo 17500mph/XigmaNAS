@@ -272,7 +272,7 @@ function include_ext_menu() {
 // header for html-page
 function show_header($title, $additional_header_content = null)
 {
-    global $site_name, $g;
+    global $site_name, $g, $config;
 
 	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 	header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
@@ -285,7 +285,7 @@ function show_header($title, $additional_header_content = null)
 	echo "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"".system_get_language_code()."\" lang=\"".system_get_language_code()."\" dir=\"".$GLOBALS["text_dir"]."\">\n";
 	echo "<head>\n";
 	echo "<meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"".$GLOBALS["charset"]."\">\n";
-	echo "<title>Nas4free.local - File Manager</title>\n";
+	echo "<title>".$config['system']['hostname'].".".$config['system']['domain']." - File Manager</title>\n";
 	if (isset($pgrefresh) && $pgrefresh):
 		echo "<meta http-equiv='refresh' content=\"".$pgrefresh."\"/>\n";
 	endif;
