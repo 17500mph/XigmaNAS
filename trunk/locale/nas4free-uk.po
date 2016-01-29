@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-18 00:47+0000\n"
-"PO-Revision-Date: 2015-12-24 15:01+0000\n"
+"POT-Creation-Date: 2016-01-21 22:28+0000\n"
+"PO-Revision-Date: 2016-01-22 15:19+0000\n"
 "Last-Translator: Balabuha <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-14 21:36+0000\n"
-"X-Generator: Launchpad (build 17886)\n"
+"X-Launchpad-Export-Date: 2016-01-29 07:53+0000\n"
+"X-Generator: Launchpad (build 17908)\n"
 "Language: uk\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -660,7 +660,7 @@ msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "Дозволити клієнтам продовжувати перервані закачування і скачування."
 
 msgid "Allow group"
-msgstr ""
+msgstr "Група дозволених"
 
 msgid "Allow new files"
 msgstr "Дозволити нові файли"
@@ -883,7 +883,7 @@ msgid "Backup/Restore"
 msgstr "Резервування / Відновлення"
 
 msgid "Bad User - (Non Existing Users)"
-msgstr ""
+msgstr "Невірний користувач (неіснуючий користувач)"
 
 msgid "Balance algorithm"
 msgstr "Алгоритм балансування"
@@ -1321,7 +1321,7 @@ msgid "Confirmation"
 msgstr "Підтвердждення"
 
 msgid "Connected FTP Users & Status"
-msgstr ""
+msgstr "Користувачі під'єднані до FTP і їх статус"
 
 msgid "Consider replacing this drive"
 msgstr "Розгляньте можливість заміни цього диска"
@@ -1520,6 +1520,9 @@ msgid ""
 "count of attempts to transfer data from reallocated sectors to a spare area. "
 "Both successful & unsuccessful attempts are counted."
 msgstr ""
+"Кількість операцій переназначення. Значення цього атрибута визначає загальну "
+"кількість спроб перенесення даних з переназначеного сектора в запасну "
+"область. Рухуються як упішні так і неуспішні спроби."
 
 msgid ""
 "Count of retry of spin start attempts. This attribute stores a total count "
@@ -1527,17 +1530,23 @@ msgid ""
 "condition that the first attempt was unsuccessful). An increase of this "
 "attribute value is a sign of problems in the hard disk mechanical subsystem."
 msgstr ""
+"Кількість спроб розкрутити диск. Цей атрибут містить загальну кількість "
+"спроб розкрутити диск до його робочої швидкості (за умови, що перша спроба "
+"була неуспішною). Зростання значення цього атрибута є признаком проблем з "
+"механічною підсистемою диска."
 
 msgid "Count of times head changes position."
-msgstr ""
+msgstr "Кількість змін положення головок диска."
 
 msgid ""
 "Count of times the heads are loaded off the media. Heads can be unloaded "
 "without actually powering off."
 msgstr ""
+"Кількість паркувань головок диска. Головки можуть паркуватися без виключення "
+"диска."
 
 msgid "Count of times the link is reset during a data transfer."
-msgstr ""
+msgstr "Кількість обривів зв'язку під час передачі даних."
 
 msgid "Counts the maximum worst erase count on any block."
 msgstr ""
@@ -1606,7 +1615,7 @@ msgid "Current Version:"
 msgstr "Поточна версія:"
 
 msgid "Current internal temperature."
-msgstr ""
+msgstr "Поточна внутрішня температура."
 
 msgid "Current password"
 msgstr "Поточний пароль"
@@ -1646,7 +1655,7 @@ msgid "DAAP"
 msgstr "DAAP"
 
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "ОПИС"
 
 msgid "DHCP"
 msgstr "DHCP"
@@ -1661,13 +1670,13 @@ msgid "DLNA/UPnP Fuppes"
 msgstr ""
 
 msgid "DLNA/UPnP MiniDLNA"
-msgstr ""
+msgstr "DLNA/UPnP MiniDLNA"
 
 msgid "DNS"
-msgstr ""
+msgstr "DNS"
 
 msgid "DNS domain"
-msgstr ""
+msgstr "DNS домен"
 
 msgid "DNS forwarder"
 msgstr ""
@@ -1736,6 +1745,9 @@ msgstr "Дедуплікація"
 msgid "Default"
 msgstr "За замовчуванням"
 
+msgid "Default Device Settings"
+msgstr "Налаштування пристроя за замовчуванням."
+
 #, php-format
 msgid "Default is %s."
 msgstr "За замовчуванням %s."
@@ -1786,7 +1798,7 @@ msgid "Delete URL"
 msgstr "Видалити URL"
 
 msgid "Delete VM"
-msgstr ""
+msgstr "Видалити VM (віртуальну машину)"
 
 msgid "Delete algorithm"
 msgstr "Видалити алгоритм"
@@ -1958,7 +1970,7 @@ msgid "Device"
 msgstr "Пристрій"
 
 msgid "Device / Label"
-msgstr ""
+msgstr "Пристрій / Мітка"
 
 #, php-format
 msgid "Device /dev/%s - %s"
@@ -1968,7 +1980,7 @@ msgid "Device IP"
 msgstr "IP адреса пристрою"
 
 msgid "Device Model"
-msgstr ""
+msgstr "Модель пристрою"
 
 msgid "Device Pass-through"
 msgstr "Pass-through (наскрізний) пристрій"
@@ -2034,7 +2046,7 @@ msgid "Disable File Manager"
 msgstr "Вимкнути файловий менеджер"
 
 msgid "Disable Firmware Update"
-msgstr ""
+msgstr "Заборонити оновлення прошивки"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Вимкнути обгортку TCP (модуль mod_wrap)."
@@ -2119,7 +2131,7 @@ msgid "Do you really want to delete this URL?"
 msgstr "Ви дійсно хочете видалити це посилання?"
 
 msgid "Do you really want to delete this VM?"
-msgstr ""
+msgstr "Ви справді хочете видалити цю віртуальну машину?"
 
 msgid "Do you really want to delete this auth group?"
 msgstr "Ви дійсно хочете видалити цю авторизаційну групу?"
@@ -2247,7 +2259,7 @@ msgstr ""
 "Кореневий каталог веб-сервера. Місце розташування файлів веб-сторінки."
 
 msgid "DomID"
-msgstr ""
+msgstr "DomID"
 
 msgid "Domain"
 msgstr "Домен"
@@ -2256,7 +2268,7 @@ msgid "Domain controller name"
 msgstr "Ім'я доменного контролера"
 
 msgid "Domain have no 2nd level name."
-msgstr ""
+msgstr "Домен не має імені другого рівня."
 
 msgid "Domain name"
 msgstr "Ім'я домену"
@@ -2295,7 +2307,7 @@ msgid "Download"
 msgstr "Завантажити"
 
 msgid "Download Configuration"
-msgstr ""
+msgstr "Завантажити конфігурацію"
 
 msgid "Download bandwidth"
 msgstr "Ширина смуги завантаження"
@@ -2307,10 +2319,10 @@ msgid "Download firewall rules."
 msgstr "Завантажити правила брандмауера."
 
 msgid "Drive Temperature."
-msgstr ""
+msgstr "Температура диска."
 
 msgid "Drive's seek performance during its internal tests."
-msgstr ""
+msgstr "Швидкість позиціонування згідно внутрішнього тесту."
 
 msgid "Driver"
 msgstr "Драйвер"
@@ -2376,7 +2388,7 @@ msgid "Edit URL"
 msgstr "Редагувати посилання"
 
 msgid "Edit VM"
-msgstr ""
+msgstr "Редагувати віртуальну машину"
 
 msgid "Edit auth group"
 msgstr "Редагувати авторизаційну групу"
@@ -2482,13 +2494,18 @@ msgid "Enable FXP protocol."
 msgstr "Дозволити протокол FXP"
 
 msgid "Enable Firmware Update"
-msgstr ""
+msgstr "Дозволити оновлення прошивки"
 
 msgid "Enable NFSv4 server."
 msgstr "Увімкнути NFSv4 сервер."
 
 msgid "Enable NTP"
 msgstr "Дозволити NTP"
+
+msgid ""
+"Enable S.M.A.R.T. monitoring of S.M.A.R.T. capable devices when they are "
+"added to the configuration."
+msgstr ""
 
 msgid "Enable SMTP authentication."
 msgstr "Дозволити SMTP аутентифікацію"
@@ -2501,7 +2518,7 @@ msgstr ""
 "можна використовувати і SSL."
 
 msgid "Enable TLS connections."
-msgstr ""
+msgstr "Дозволити TLS з'єднання."
 
 msgid "Enable TiVo support."
 msgstr ""
@@ -2563,7 +2580,7 @@ msgid "Enable guest access."
 msgstr "Дозволити гостьовий доступ."
 
 msgid "Enable inotify."
-msgstr ""
+msgstr "Дозволити inotify."
 
 msgid "Enable keyboard-interactive authentication."
 msgstr "Увімкнути інтерактивну клавіатурну автентифікацію."
@@ -2575,13 +2592,13 @@ msgid "Enable local user authentication."
 msgstr "Дозволити локальну автентифікацію користувачів"
 
 msgid "Enable mapping DOS attributes"
-msgstr ""
+msgstr "Дозволити DOS атрибути"
 
 msgid "Enable module listing."
 msgstr "Увімкнути список модулів"
 
 msgid "Enable nested virtualization"
-msgstr ""
+msgstr "Дозволити вкладену віртуалізацію"
 
 msgid "Enable peer exchange (PEX)."
 msgstr "Увімкнути обмін списками учасників (PEX)"
@@ -5457,6 +5474,9 @@ msgstr "Російська"
 
 msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
+
+msgid "S.M.A.R.T. Monitoring"
+msgstr ""
 
 msgid "S.M.A.R.T. events"
 msgstr "Події S.M.A.R.T."

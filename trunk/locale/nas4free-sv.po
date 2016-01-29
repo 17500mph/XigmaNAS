@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2015-12-18 00:47+0000\n"
-"PO-Revision-Date: 2015-12-29 06:38+0000\n"
+"POT-Creation-Date: 2016-01-21 22:28+0000\n"
+"PO-Revision-Date: 2016-01-24 06:30+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-14 21:37+0000\n"
-"X-Generator: Launchpad (build 17886)\n"
+"X-Launchpad-Export-Date: 2016-01-29 07:53+0000\n"
+"X-Generator: Launchpad (build 17908)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -382,7 +382,7 @@ msgid "ATTRIBUTE NAME"
 msgstr "ATTRIBUTNAMN"
 
 msgid "Accept remote syslog messages"
-msgstr ""
+msgstr "Acceptera externa sylogmeddelanden"
 
 msgid "Access"
 msgstr "Åtkomst"
@@ -553,7 +553,7 @@ msgid "Admin password"
 msgstr "Administratörslösenord"
 
 msgid "Administration password"
-msgstr "Administrationslösenord"
+msgstr "Administratörslösenord"
 
 msgid "Administrative WebGUI"
 msgstr "Anministrativt webbgränssnitt"
@@ -657,7 +657,7 @@ msgid "All users will have the root privilege."
 msgstr "Alla användare kommer att ha root behörighet."
 
 msgid "Alloc"
-msgstr "Allokera"
+msgstr "Allokerat"
 
 msgid "Allow"
 msgstr "Tillåt"
@@ -671,8 +671,8 @@ msgstr "Ge klienter tillgång till konton utan lösenord."
 msgid ""
 "Allow clients to attempt to store OS/2 style extended attributes on a share."
 msgstr ""
-"Tillåt klienter att försöka lagra OS/2 liknande attribut på en tilldelad "
-"enhet."
+"Tillåt klienter att försöka lagra OS/2-liknande utökade attribut på en "
+"tilldelad enhet."
 
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "Tillåt klienter att återuppta avbrutna upp- och nedladdningar"
@@ -1032,6 +1032,7 @@ msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
 "seconds)"
 msgstr ""
+"Annonserar sin tillgänglighet på nätverket var N sekund. (standard 300 s)"
 
 msgid "Browse Directory"
 msgstr ""
@@ -1252,8 +1253,8 @@ msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
 "file or XML format."
 msgstr ""
-"Klicka på knappen för att ladda ner en krypterad server konfigurations fil i "
-"GZIP eller XML format."
+"Klicka på knappen för att ladda ner en serverkonfigurations fil i GZIP "
+"(krypterad ) eller XML format."
 
 msgid "Client"
 msgstr "Klient"
@@ -1389,7 +1390,7 @@ msgid "Controller IP address"
 msgstr "IP Adress för kontrollant"
 
 msgid "Controller Model"
-msgstr ""
+msgstr "Diskkontrollermodell"
 
 msgid "Controller TCP Port"
 msgstr "TCP Port för kontrollant"
@@ -1600,7 +1601,7 @@ msgid "Counts the maximum worst erase count on any block."
 msgstr "Räknar max raderingar på något block."
 
 msgid "Create 4KB wrapper (nop device)."
-msgstr ""
+msgstr "Skapa 4KB wrapper (nop device)."
 
 msgid "Create HVM Guest"
 msgstr "Skapa HVM gäst"
@@ -1800,6 +1801,9 @@ msgstr "Deduplicering"
 msgid "Default"
 msgstr "Standard"
 
+msgid "Default Device Settings"
+msgstr "Standardinställningar"
+
 #, php-format
 msgid "Default is %s."
 msgstr "Standard är %s."
@@ -1977,7 +1981,7 @@ msgid "Destination"
 msgstr "Mål"
 
 msgid "Destination Share"
-msgstr ""
+msgstr "Mål Utdelning"
 
 msgid "Destination email address."
 msgstr "E-postadress för mottagaren av rapporter."
@@ -2033,7 +2037,7 @@ msgid "Device IP"
 msgstr "Enhetens IP"
 
 msgid "Device Model"
-msgstr ""
+msgstr "Enhetstyp"
 
 msgid "Device Pass-through"
 msgstr "Komponent genomströmning"
@@ -2115,7 +2119,7 @@ msgid "Disable speaker beep on startup and shutdown"
 msgstr "Inaktivera högtalarpip vid uppstart och nedstängning"
 
 msgid "Disable the compression of repeated line"
-msgstr ""
+msgstr "Inaktivera sammanslagning av upprepade rader"
 
 msgid "Disabled"
 msgstr "Inaktiverad"
@@ -2410,10 +2414,10 @@ msgid "Dynamic DNS"
 msgstr "Dynamisk DNS"
 
 msgid "Dynamic IP (DHCP) can not be used for HAST resources."
-msgstr "Dynamisk IP (DHCD) kan inte användas för HAST resurser."
+msgstr "Dynamisk IP (DHCP) kan inte användas för HAST resurser."
 
 msgid "EA support"
-msgstr "EA support"
+msgstr "Utökad attributsupport"
 
 msgid "EFI/GPT partition can be use with UFS only."
 msgstr "EFI/GPT partition kan enbart användas med UFS."
@@ -2557,6 +2561,13 @@ msgstr "Aktivera NFSv4 server."
 msgid "Enable NTP"
 msgstr "Aktivera NTP"
 
+msgid ""
+"Enable S.M.A.R.T. monitoring of S.M.A.R.T. capable devices when they are "
+"added to the configuration."
+msgstr ""
+"Aktivera S.M.A.R.T. övervakning av enheter med denna möjlighet när de läggs "
+"till."
+
 msgid "Enable SMTP authentication."
 msgstr "Aktivera SMTP-autentisering."
 
@@ -2611,7 +2622,7 @@ msgid "Enable encryption."
 msgstr "Tillåt kryptering"
 
 msgid "Enable extended attribute support"
-msgstr "Aktivera utöka attributsupport"
+msgstr "Aktivera utökad attributsupport"
 
 msgid "Enable extended attributes for this file system."
 msgstr "Aktivera utökade attribut för detta filsystem."
@@ -2677,7 +2688,7 @@ msgstr ""
 "aktiva data-läges anslutningar och utgående passiva data-läges anslutningar"
 
 msgid "Enable reverse DNS lookup."
-msgstr "Aktiver omvänd DNS uppslagning"
+msgstr "Aktivera omvänd DNS uppslagning"
 
 msgid "Enable serial console"
 msgstr "Aktivera seriellkonsol"
@@ -2707,7 +2718,7 @@ msgid "Enable traps."
 msgstr "Aktivera fällor."
 
 msgid "Enable tuning of some kernel variables"
-msgstr "Aktivera justering av vissa kärnvariabler"
+msgstr "Aktivera justering (Tuning) av vissa kärnvariabler"
 
 msgid "Enable write cache mode."
 msgstr "Aktivera skrivcache"
@@ -2877,7 +2888,7 @@ msgid "Extra options"
 msgstr "Extra alternativ"
 
 msgid "Extra options (usually empty)."
-msgstr "Tilläggs funktioner (vanligtvis tomt)."
+msgstr "Tilläggsfunktioner (vanligtvis tomt)."
 
 msgid ""
 "Extra options to /etc/ssh/sshd_config (usually empty). Note, incorrect "
@@ -3100,7 +3111,7 @@ msgid "Forum"
 msgstr "Forum"
 
 msgid "Frag"
-msgstr ""
+msgstr "Fragmentation"
 
 msgid "Free"
 msgstr "Ledigt"
@@ -3224,10 +3235,10 @@ msgid "HAST (Highly Available Storage)"
 msgstr "HAST (Hög tillgänglighets lagring)"
 
 msgid "HAST Information & Status Configured Resources"
-msgstr ""
+msgstr "HAST Information & Status för konfigurerade resurser"
 
 msgid "HAST Resource"
-msgstr ""
+msgstr "HAST resurs"
 
 msgid "HAST disabled"
 msgstr "HAST inaktiverat"
@@ -3239,10 +3250,10 @@ msgid "HAST volume can be use with GPT/UFS only."
 msgstr "HAST volym kan endast användas med GPT/UFS."
 
 msgid "HDD Format"
-msgstr ""
+msgstr "HDD formatering"
 
 msgid "HDD Management"
-msgstr ""
+msgstr "HDD hantering"
 
 msgid ""
 "HDD producers implement a Fly Height Monitor that attempts to provide "
@@ -3409,7 +3420,7 @@ msgid ""
 "IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
 "addresses to hostnames&quot;</a> is enabled."
 msgstr ""
-"IP-adresser är upplösta till domännamn om<a href='%s'>&quot;Resolve IP "
+"IP-adresser är översatta till domännamn om<a href='%s'>&quot;Resolve IP "
 "addresses to hostnames&quot;</a> är aktiverat."
 
 msgid "IP or FQDN address of remote Rsync server."
@@ -3870,7 +3881,7 @@ msgid "LAN Management"
 msgstr "LAN Hantering"
 
 msgid "LAN Only"
-msgstr ""
+msgstr "Endast LAN"
 
 msgid "LAN net"
 msgstr "LAN nät"
@@ -3879,7 +3890,7 @@ msgid "LCDproc"
 msgstr "LCDproc"
 
 msgid "LCDproc (Client)"
-msgstr ""
+msgstr "LCDproc (Klient)"
 
 msgid "LDAP"
 msgstr "LDAP"
@@ -3940,22 +3951,22 @@ msgid "Leave this field empty to use default settings."
 msgstr "Lämna fältet tomt för att använda grundinställningar"
 
 msgid "Level 1 - Minimum Power Usage with Standby (Spindown)"
-msgstr ""
+msgstr "Nivå 1 - Minimi effektförbrukning med strömsparläge"
 
 msgid "Level 127 - Intermediate Power Usage with Standby"
-msgstr ""
+msgstr "Nivå 127 - Medel effektfförbrukning med strömsparläge"
 
 msgid "Level 128 - Minimum Power Usage without Standby (No Spindown)"
-msgstr ""
+msgstr "Nivå 128 - Minimi effektförbrukning utan strömsparläge"
 
 msgid "Level 192 - Intermediate Power Usage without Standby"
-msgstr ""
+msgstr "Nivå 192 - Medel effektförbrukning utan strömsparläge"
 
 msgid "Level 254 - Maximum Performance, Maximum Power Usage"
-msgstr ""
+msgstr "Nivå 254 - Maximal prestanda, maximal effektförbrukning"
 
 msgid "Level 64 - Intermediate Power Usage with Standby"
-msgstr ""
+msgstr "Nivå 64 - Medel effektförbrukning med strömsparläge"
 
 #, php-format
 msgid "Levels (MHz/mW): %s"
@@ -4041,7 +4052,7 @@ msgid "Local Master Browser"
 msgstr "Lokal prioriterad bläddrare (Local Master Browser)"
 
 msgid "Local Share (Destination)"
-msgstr ""
+msgstr "Lokal utdelning (Destination)"
 
 msgid "Local User"
 msgstr "Lokal användare"
@@ -4222,7 +4233,7 @@ msgid "Map to user"
 msgstr "Koppla till användare"
 
 msgid "Mapping DOS attributes"
-msgstr "Översätter DOS-attribut"
+msgstr "Översätt DOS-attribut"
 
 msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
@@ -5149,7 +5160,7 @@ msgid "Pool"
 msgstr "Pool"
 
 msgid "Pool Information & Status"
-msgstr ""
+msgstr "Pool Information & Status"
 
 msgid "Pools"
 msgstr "Pooler"
@@ -5243,7 +5254,7 @@ msgid "Preformatted file system"
 msgstr "Förformaterat filsystem"
 
 msgid "Presentation WebGUI"
-msgstr ""
+msgstr "Webgränssnitt"
 
 msgid "Preserve extended attributes"
 msgstr "Bevara utökade attribut"
@@ -5279,7 +5290,7 @@ msgid "Processes"
 msgstr "Processer"
 
 msgid "Processes Information"
-msgstr ""
+msgstr "Processinformation"
 
 msgid "Product ID"
 msgstr "Produkt-ID"
@@ -5302,7 +5313,7 @@ msgstr "Proxy"
 msgid ""
 "Puts the disk into standby mode when the selected amount of time after the "
 "last disk access has been elapsed."
-msgstr ""
+msgstr "Sätter disken i strömsparläge inställd tid efter sista diskåtkomst."
 
 msgid "Queue Depth"
 msgstr "Ködjup"
@@ -5347,7 +5358,7 @@ msgid "RAID5"
 msgstr "RAID5"
 
 msgid "RAW VALUE"
-msgstr ""
+msgstr "Råvärde"
 
 msgid "RAW info"
 msgstr "RAW information"
@@ -5471,7 +5482,7 @@ msgid "Remote Address"
 msgstr "Fjärradress"
 
 msgid "Remote Module (Source)"
-msgstr ""
+msgstr "Remote Module (Källa)"
 
 msgid "Remote Rsync Server"
 msgstr "Fjärr-server för Rsync"
@@ -5527,10 +5538,10 @@ msgid "Required"
 msgstr "Obligatorisk"
 
 msgid "Rescan Disks"
-msgstr ""
+msgstr "Skanna om diskar"
 
 msgid "Rescan database in progress"
-msgstr ""
+msgstr "Omskanning av databas pågår"
 
 msgid "Rescan interval"
 msgstr "Intervall för omskanning"
@@ -5599,7 +5610,7 @@ msgid "Root bind password"
 msgstr "Root bind lösenord"
 
 msgid "Rotation Rate"
-msgstr ""
+msgstr "Rotationshastighet"
 
 msgid "Round-robin read"
 msgstr "'Round-robin' läsning"
@@ -5648,6 +5659,9 @@ msgstr "Ryska"
 
 msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
+
+msgid "S.M.A.R.T. Monitoring"
+msgstr "S.M.A.R.T. övervakning"
 
 msgid "S.M.A.R.T. events"
 msgstr "S.M.A.R.T.-händelser"
@@ -5744,7 +5758,7 @@ msgid "Scan type"
 msgstr "Typ av genomsökning"
 
 msgid "Schedule Time"
-msgstr ""
+msgstr "Körtid"
 
 msgid "Schedule time"
 msgstr "Schematid"
@@ -5841,10 +5855,10 @@ msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "Egenövervakning, analys & raporterings teknik (SMART)"
 
 msgid "Self-tests Management"
-msgstr ""
+msgstr "Hantering av självtester"
 
 msgid "Send Buffer Size"
-msgstr "Sändbuffert Storlek"
+msgstr "Storlek på sändningsbuffert"
 
 msgid "Send Command!"
 msgstr "Skicka kommando!"
@@ -6024,7 +6038,7 @@ msgstr "Storlek"
 
 #, php-format
 msgid "Size of receive buffer (%d by default)."
-msgstr "Storlek på bottagningsbufferten (%d är standard)"
+msgstr "Storlek på mottagningsbufferten (%d är standard)"
 
 #, php-format
 msgid "Size of send buffer (%d by default)."
@@ -6096,10 +6110,10 @@ msgid "Source share"
 msgstr "Källa för delning"
 
 msgid "Space Usage"
-msgstr ""
+msgstr "Utrymmesanvändning"
 
 msgid "Space Used"
-msgstr "Utrymme använt"
+msgstr "Använt utrymme"
 
 msgid ""
 "Space delimited set of IP or CIDR notation that permitted to access the "
@@ -6136,7 +6150,7 @@ msgid "Specifies how many servers to create."
 msgstr "Specificerar hur många servrar som skall skapas."
 
 msgid "Specifies how the volume should be exposed to the OS."
-msgstr ""
+msgstr "Specificerar hur volymen skall visas för operativsystemet."
 
 msgid "Specifies that the file system should be exported read-only."
 msgstr ""
@@ -6258,7 +6272,7 @@ msgid "Store alternate data streams in Extended Attributes"
 msgstr "Lagra alternativa dataströmmar i Extended Attributes"
 
 msgid "Strict DLNA"
-msgstr ""
+msgstr "Strikt DLNA"
 
 msgid ""
 "String displayed in the dialog presented to the user when accessing the URL."
@@ -6300,7 +6314,7 @@ msgid "Swap"
 msgstr "Växling"
 
 msgid "Swap Information & Status"
-msgstr ""
+msgstr "Swap Information & Status"
 
 msgid "Swap Memory"
 msgstr "Växlingsminne"
@@ -6340,7 +6354,7 @@ msgid "Synchronize"
 msgstr "Synkronisera"
 
 msgid "Syncthing"
-msgstr ""
+msgstr "Syncthing"
 
 #, php-format
 msgid ""
@@ -6374,7 +6388,7 @@ msgid "System info"
 msgstr "Systeminfo"
 
 msgid "System last config change"
-msgstr ""
+msgstr "Senaste ändring av systemkonfiguration"
 
 msgid "System log"
 msgstr "Systemlogg"
@@ -6398,7 +6412,7 @@ msgid "TCP port"
 msgstr "TCP-port"
 
 msgid "TCP port is 5900+N, where N is VNC display number."
-msgstr ""
+msgstr "TCP-port är 5900+N, där N är VNC skärmnummer."
 
 msgid "TCP port to bind the server to."
 msgstr "TCP-port att knyta servern till."
@@ -6588,7 +6602,7 @@ msgstr "De assosierade MIB filerna finns på %s"
 
 #, php-format
 msgid "The attribute '%s' already exists."
-msgstr ""
+msgstr "Parametern '%s' finns redan."
 
 #, c-format
 msgid ""
@@ -6840,6 +6854,7 @@ msgid ""
 "The count of times the magnetic armature was retracted automatically as a "
 "result of cutting power."
 msgstr ""
+"Antal gånger magnethuvudet drogs tillbaka på grund av bruten spänning."
 
 msgid "The credentials with which to bind."
 msgstr "Inloggningsdetaljer som används för att binda till katalogen."
@@ -7214,7 +7229,7 @@ msgid "The rule number determines the order of the rule."
 msgstr "Regelnumret bestämmer sorteringsordningen för regeln."
 
 msgid "The serial or USB port where your UPS is connected."
-msgstr "Seriell- eller USB-porten där UPS-enheten är inkopplad."
+msgstr "Serie- eller USB-porten där UPS-enheten är inkopplad."
 
 #, php-format
 msgid "The server advertises itself as a time server to Windows clients."
@@ -7494,6 +7509,10 @@ msgid ""
 "contains a count of parity errors which occur in the data path to the media "
 "via the drive's cache RAM."
 msgstr ""
+"Denna egenskap är en del av Hewlett-Packard's SMART IV teknologi, samt andra "
+"tillverkares ' IO Error Detection and Correction schemas', och innehåller en "
+"räknare över antal paritetsfel som uppstår i datasökvägen till mediat via "
+"cacheminnet i disken."
 
 #, php-format
 msgid ""
@@ -7571,6 +7590,11 @@ msgid ""
 "the firmware has not been tampered with.<br /><br />Do you want to install "
 "this firmware anyway (on your own risk)?"
 msgstr ""
+"Detta innebär att systemmjukvaran du försöker använda inte är en officiell "
+"version och kan leda till oväntat uppträdande eller säkerhetsproblem. "
+"Installera bra systemmjukvara från källor du litar på och försäkra dig om "
+"att den inte ändrats. <br /><br />Vill du ändå installera denna "
+"systemmjukvara (på egen risk)?"
 
 msgid "This name already exists in the disk list."
 msgstr "Namnet finns redan i disklistan."
@@ -7786,13 +7810,16 @@ msgid ""
 "This will allow server-side downscaling of very large JPEG images, it can "
 "hurt JPEG serving performance on (at least) Sony DLNA products."
 msgstr ""
+"Detta medger att servern skalar ner väldigt stora JPEG-bilder, det kan "
+"påverka prestanda vid visning av JPEG-bilder (i alla fall) på Sony DLNA "
+"produkter."
 
 #, php-format
 msgid ""
 "This will cause %s not to check for newer firmware versions when the <a "
 "href='%s'>%s</a> page is viewed."
 msgstr ""
-"Detta kommer att orsaka att %s är ​​inte kommer att kontrollera om det finns "
+"Detta kommer att orsaka att %s ​​inte kommer att kontrollera om det finns "
 "nyare firmware-version när <a href='%s'>% s </ a> sidan visas."
 
 msgid "This will create a recycle bin on the share."
@@ -7855,11 +7882,12 @@ msgid "Time server"
 msgstr "Tidsserver"
 
 msgid "Time spent during the positioning of the drive heads."
-msgstr ""
+msgstr "Tid som använts för positionering av magnethuvudena."
 
 msgid ""
 "Time spent operating under data load (movement of magnetic head armature)."
 msgstr ""
+"Tid som använts för rörelse av magnethuvudena vid läsning/skrivning.."
 
 msgid "Time update interval"
 msgstr "Intervall för tidsuppdatering"
@@ -7932,9 +7960,9 @@ msgid ""
 "href='%s'>Tuning</a>' switch</li></ul></div>"
 msgstr ""
 "För att öka prestandan för CIFS, prova följande:<div "
-"id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' "
-"switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a "
-"href='%s'>Tuning</a>' switch</li></ul></div>"
+"id='enumeration'><ul><li>Aktivera 'Asynkron I/O (AIO)' "
+"switch</li><li>Aktivera 'Stor läs/skriv' </li><li>Aktivera '<a "
+"href='%s'>Tuning</a>'</li></ul></div>"
 
 msgid "To match any IP address leave this field empty."
 msgstr "För att matcha varje IP-adress lämna detta fält tomt."
@@ -7991,7 +8019,7 @@ msgstr ""
 msgid ""
 "Total time of loading on the magnetic heads actuator (time not spent in "
 "parking area)."
-msgstr ""
+msgstr "Total tid när magnethuvudena inte varit i parkeringsarean."
 
 #, php-format
 msgid "Total: %s | Alloc: %s | Free: %s | State: %s"
@@ -8015,6 +8043,8 @@ msgid ""
 "Tracks whose path contains one or more of these comma separated strings will "
 "be treated as a compilation."
 msgstr ""
+"Spår vars sökväg innehåller en eller flera av dessa kommaseparerade "
+"textsträngar kommer behandlas som samlingar"
 
 msgid "Transcoding"
 msgstr "Omkodar"
@@ -8056,7 +8086,7 @@ msgid "Try to import from on-disk ZFS config."
 msgstr "Försök att importera från diskbaserad ZFS konfiguration."
 
 msgid "Tuning"
-msgstr "Justering"
+msgstr "Justering (Tuning)"
 
 msgid "Turkish"
 msgstr "Turkisk"
@@ -8201,7 +8231,7 @@ msgid "Uninstall package"
 msgstr "Avinstallera paket"
 
 msgid "Uninterruptible Power Supply"
-msgstr "Uninterruptible Power Supply"
+msgstr "Avbrottsfri kraft"
 
 msgid "Unison"
 msgstr "Unison"
@@ -8240,7 +8270,7 @@ msgid "Updating in 5 seconds."
 msgstr "Uppdaterar inom 5 sekunder."
 
 msgid "Upgrade Firmware"
-msgstr ""
+msgstr "Uppgradera systemmjukvara"
 
 msgid "Upload"
 msgstr "Ladda upp"
@@ -8759,10 +8789,10 @@ msgid "ZFS Snapshot Properties"
 msgstr "ZFS Snapshot Egenskaper"
 
 msgid "ZFS Volume Information & Status"
-msgstr "ZFS Volume Information & Status"
+msgstr "ZFS Volym Information & Status"
 
 msgid "ZFS Volume Properties"
-msgstr "ZFS Volume Egenskaper"
+msgstr "ZFS Volym Egenskaper"
 
 msgid "ZFS volume"
 msgstr "ZFS volym"
@@ -8771,7 +8801,7 @@ msgid ""
 "ZFS volume block size. This value can not be changed after creation. Empty "
 "as default."
 msgstr ""
-"ZFS volume blockstorlek. Detta värde kan inte ändras efter att volymen "
+"ZFS volym blockstorlek. Detta värde kan inte ändras efter att volymen "
 "skapats. Normalt tomt."
 
 msgid ""
