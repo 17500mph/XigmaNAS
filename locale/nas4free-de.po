@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-01-21 22:28+0000\n"
-"PO-Revision-Date: 2016-01-24 14:04+0000\n"
-"Last-Translator: apollo567 <apollo567@hotmail.de>\n"
+"PO-Revision-Date: 2016-01-30 00:31+0000\n"
+"Last-Translator: Tobias Bannert <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-29 07:52+0000\n"
+"X-Launchpad-Export-Date: 2016-01-31 12:24+0000\n"
 "X-Generator: Launchpad (build 17908)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -687,7 +687,9 @@ msgid ""
 msgstr "Clients dürfen Dateiattribute im OS/2-Style auf dem Share speichern."
 
 msgid "Allow clients to resume interrupted uploads and downloads."
-msgstr "Erlaube Clients unterbrochene Uploads und Downloads fortzusetzen."
+msgstr ""
+"Programmen das Fortsetzen vom unterbrochenen Hoch- und Herunterladen "
+"erlauben."
 
 msgid "Allow group"
 msgstr "Gruppe erlauben"
@@ -1276,13 +1278,13 @@ msgstr ""
 "GZIP-Datei oder XML-Format herunter zu laden."
 
 msgid "Client"
-msgstr "Client"
+msgstr "Programm"
 
 msgid "Clone"
 msgstr "Duplizieren"
 
 msgid "Collecting initial data, please wait..."
-msgstr "Ermittle Daten, bitte warten..."
+msgstr "Anfangsdaten werden gesammelt, bitte warten …"
 
 msgid "Collisions"
 msgstr "Kollisionen"
@@ -2375,7 +2377,7 @@ msgid "Download bandwidth"
 msgstr "Downloadbandbreite"
 
 msgid "Download directory"
-msgstr "Download-Verzeichnis"
+msgstr "Übertragungsverzeichnis"
 
 msgid "Download firewall rules."
 msgstr "Firewallregeln herunterladen."
@@ -2745,7 +2747,7 @@ msgstr "Verschlüsselte Konfiguration wird automatisch komprimiert (gzip)"
 
 #, php-format
 msgid "Encrypting '%s'... Please wait"
-msgstr "Verschlüssele '%s'... Bitte warten"
+msgstr "»%s« wird verschlüsselt, bitte warten …"
 
 msgid "Encryption"
 msgstr "Verschlüsselung"
@@ -4639,7 +4641,7 @@ msgid "No DNS setting found."
 msgstr "Keine DNS-Einstellung gefunden."
 
 msgid "No RSYNC Client configured"
-msgstr "Kein RSYNC Client eingerichtet"
+msgstr "Kein RSYNC-Programm konfiguriert"
 
 #, php-format
 msgid ""
@@ -4848,7 +4850,7 @@ msgid "Number of battery packs"
 msgstr "Anzahl Akkuzellen"
 
 msgid "Number of clients"
-msgstr "Anzahl der Clients"
+msgstr "Anzahl der Programme"
 
 msgid "Number of hours elapsed in the power-on state."
 msgstr "Anzahl Betriebsstunden"
@@ -4994,7 +4996,7 @@ msgid "PPTP"
 msgstr "PPTP"
 
 msgid "PPTP clients"
-msgstr "PPTP Clients"
+msgstr "PPTP-Programm"
 
 #, c-format
 msgid "PSK"
@@ -5013,7 +5015,7 @@ msgid "Package is already installed."
 msgstr "Paket ist schon installiert"
 
 msgid "Package upload failed (out of memory?)"
-msgstr "Paket-Upload fehlgeschlagen. (zuwenig Arbeitsspeicher?)"
+msgstr "Pakethochladen ist fehlgeschlagen. (Zu wenig Arbeitsspeicher?)"
 
 msgid "Packages"
 msgstr "Pakete"
@@ -5339,7 +5341,7 @@ msgid "Provider"
 msgstr "Provider"
 
 msgid "Proxy"
-msgstr "Proxy"
+msgstr "Vermittlungsserver"
 
 msgid ""
 "Puts the disk into standby mode when the selected amount of time after the "
@@ -5399,7 +5401,7 @@ msgid "RSYNC"
 msgstr "RSYNC"
 
 msgid "RSYNC - Client"
-msgstr "RSYNC - Client"
+msgstr "RSYNC-Programm"
 
 msgid "RSYNC - Local"
 msgstr "RSYNC - Lokal"
@@ -5408,10 +5410,10 @@ msgid "RSYNC - Server"
 msgstr "RSYNC - Server"
 
 msgid "RSYNC Client"
-msgstr "RSYNC Client"
+msgstr "RSYNC-Programm"
 
 msgid "RSYNC Client Information & Status"
-msgstr "RSYNC Client Zustandsinformation"
+msgstr "RSYNC-Programm – Information & Zustand"
 
 msgid "RSYNC events"
 msgstr "RSYNC Ereignisse"
