@@ -16,17 +16,6 @@
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
 
-	3. Products derived from this software may not be called "NAS4Free"  
-	   nor may "NAS4Free" appear in their names without prior written  
-	   permission of the NAS4Free Project. For written permission, please 
-	   contact info@nas4free.org
-
-	4. Redistributions of any form whatsoever must retain the following  
-	   acknowledgment:
-
-	   "This product includes software developed by the NAS4Free Project
-	   for use in the NAS4Free Software Distribution (http://www.nas4free.org).
-
 	THIS SOFTWARE IS PROVIDED BY THE NAS4Free PROJECT ``AS IS'' AND ANY
 	EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
 	WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -148,14 +137,14 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
         The authors of NAS4Free would like to thank the authors of these software
         for their efforts.</p>
       <p> FreeBSD (<a href="http://www.freebsd.org" target="_blank">http://www.freebsd.org</a>)<br />
-        Copyright &copy; 1995-2015 The FreeBSD Project. All Rights Reserved.</p>
+        Copyright &copy; 1995-2016 The FreeBSD Project. All Rights Reserved.</p>
 
       <p> GEOM RAID5 module (<a href="http://www.wgboome.org/geom_raid5-html" target="_blank">http://www.wgboome.org/geom_raid5-html</a> & (<a href="http://lev.serebryakov.spb.ru/download/graid5/" target="_blank">http://lev.serebryakov.spb.ru/download/graid5/</a>)<br />
         Copyright &copy; 2006-2010 Originally written by Arne Woerner (<a href="mailto:graid5@wgboome.org">graid5@wgboome.org</a>).<br />
 	 Copyright &copy; 2010-2014 Now maintained by Lev Serebryakov	(<a href="mailto:lev@FreeBSD.org">lev@FreeBSD.org</a>).</p>
 
       <p> PHP (<a href="http://www.php.net" target="_blank">http://www.php.net</a>)<br />
-        Copyright &copy; 1999-2014 The PHP Group. All Rights Reserved.</p>
+        Copyright &copy; 1999-2016 The PHP Group. All Rights Reserved.</p>
 
       <p> jQuery (<a href="http://jquery.com" target="_blank">http://jquery.com</a>).<br />
         Copyright &copy; 2015 jQuery Foundation. All Rights Reserved.</p>
@@ -170,13 +159,13 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
         Copyright &copy; 2007 Free Software Foundation. All Rights Reserved.</p>
 
       <p> Python (<a href="http://www.python.org" target="_blank">http://www.python.org</a>)<br />
-        Copyright &copy; 2001-2014 Python Software Foundation. All Rights Reserved.</p>
+        Copyright &copy; 2001-2016 Python Software Foundation. All Rights Reserved.</p>
 
       <p> Rsync (<a href="http://www.samba.org/rsync" target="_blank">http://www.samba.org/rsync</a>)<br />
         Copyright &copy; 2007 Free Software Foundation. All Rights Reserved.</p>
 
       <p> ProFTPD - Highly configurable FTP server (<a href="http://www.proftpd.org" target="_blank">http://www.proftpd.org</a>)<br />
-        Copyright &copy; 1999, 2000-2014 The ProFTPD Project. All Rights Reserved.</p>
+        Copyright &copy; 1999, 2000-2016 The ProFTPD Project. All Rights Reserved.</p>
 
       <p>tftp-hpa (<a href="http://www.kernel.org/pub/software/network/tftp" target="_blank">http://www.kernel.org/pub/software/network/tftp</a>)<br />
        Copyright &copy; 1999, 2000-2009 The tftp-hpa series is maintained by H. Peter Anvin. <hpa@zytor.com>All Rights Reserved.</p>
@@ -200,7 +189,7 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
         Copyright &copy; 2005-2011 Daniel Braniss (<a href="mailto:danny@cs.huji.ac.il">danny@cs.huji.ac.il</a>). All Rights Reserved.</p>
 
       <p>istgt - iSCSI target for FreeBSD (<a href="http://shell.peach.ne.jp/aoyama" target="_blank">http://shell.peach.ne.jp/aoyama</a>)<br />
-        Copyright &copy; 2008-2015 Daisuke Aoyama (<a href="mailto:aoyama@peach.ne.jp">aoyama@peach.ne.jp</a>). All Rights Reserved.</p>
+        Copyright &copy; 2008-2016 Daisuke Aoyama (<a href="mailto:aoyama@peach.ne.jp">aoyama@peach.ne.jp</a>). All Rights Reserved.</p>
 
       <p>FUPPES - Free UPnP Entertainment Service (<a href="http://fuppes.ulrich-voelkel.de" target="_blank">http://fuppes.ulrich-voelkel.de</a>)<br />
         Copyright &copy; 2005 - 2011 Ulrich V&ouml;lkel (<a href="mailto:mail@ulrich-voelkel.de">mail@ulrich-voelkel.de</a>). All Rights Reserved.</p>
@@ -271,7 +260,7 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
 	 Copyright &copy; 1994-1996, 1998-2015 Todd C. Miller. All Rights Reserved.</p>
 
       <p>syncthing (<a href="https://syncthing.net" target="_blank">https://syncthing.net</a>)<br />
-      </p>
+      Copyright &copy; 2016. All Rights Reserved.</p></p>
 
       <p>Some of the software used for NAS4Free are under the <a href="gpl-license.txt">GNU General Public License</a> (<a href="gpl-license.txt">GPLv2</a>, <a href="gpl3-license.txt">GPLv3</a>), <a href="lgpl-license.txt">GNU Lesser General Public License (LGPL)</a>, <a href="apple-license.txt">Apple Public Source License</a> and <a href="php-license.txt">PHP License</a>.</p>
 
