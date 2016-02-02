@@ -1,10 +1,9 @@
 PORTNAME=		netatalk
-PORTVERSION=	 3.1.7
-PORTREVISION=	 1
-PORTEPOCH=	 1
+PORTVERSION=	 3.1.8
+PORTREVISION=	 0
 CATEGORIES=	 net
 MASTER_SITES=	 SF
-PKGNAMESUFFIX= 3
+PKGNAMESUFFIX=   3
 
 MAINTAINER=	aoyama@nas4free.org
 COMMENT=	File server for Mac OS X
@@ -71,7 +70,7 @@ post-install:
 	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/sbin/cnid_metad ${NAS4FREE_ROOTFS}/usr/local/sbin
 	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/sbin/cnid_dbd ${NAS4FREE_ROOTFS}/usr/local/sbin
 	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/sbin/netatalk ${NAS4FREE_ROOTFS}/usr/local/sbin
-	@${INSTALL_LIB} -v ${STAGEDIR}${PREFIX}/lib/libatalk.so.16 ${NAS4FREE_ROOTFS}/usr/local/lib
+	@${INSTALL_LIB} -v ${STAGEDIR}${PREFIX}/lib/libatalk.so.17 ${NAS4FREE_ROOTFS}/usr/local/lib
 	@${INSTALL_DATA} -v ${STAGEDIR}${PREFIX}/etc/extmap.conf.dist ${NAS4FREE_ROOTFS}/usr/local/etc/extmap.conf
 
 	@${MKDIR} -v ${NAS4FREE_ROOTFS}/etc/uams
