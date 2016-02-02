@@ -1,5 +1,5 @@
 PORTNAME=		rsync
-PORTVERSION=	3.1.1
+PORTVERSION=	3.1.2
 PORTREVISION=	0
 CATEGORIES=		net
 COMMENT=		A network file distribution/sync utility
