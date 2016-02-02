@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-21 22:28+0000\n"
-"PO-Revision-Date: 2016-01-13 10:10+0000\n"
+"PO-Revision-Date: 2016-02-01 16:58+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-29 07:53+0000\n"
+"X-Launchpad-Export-Date: 2016-02-02 15:28+0000\n"
 "X-Generator: Launchpad (build 17908)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -1860,7 +1860,7 @@ msgid "Default"
 msgstr "Implicit"
 
 msgid "Default Device Settings"
-msgstr ""
+msgstr "Setări implicite dispozitiv"
 
 #, php-format
 msgid "Default is %s."
@@ -2624,6 +2624,8 @@ msgid ""
 "Enable S.M.A.R.T. monitoring of S.M.A.R.T. capable devices when they are "
 "added to the configuration."
 msgstr ""
+"Activare monitorizare S.M.A.R.T. pentru dispozitivele compatibile S.M.A.R.T. "
+"la adăugarea la sistem."
 
 msgid "Enable SMTP authentication."
 msgstr "Activare autentificare SMTP."
@@ -4054,10 +4056,10 @@ msgid "Level 192 - Intermediate Power Usage without Standby"
 msgstr "Nivel 192 - Nivel intermediar de consum fără mod standby"
 
 msgid "Level 254 - Maximum Performance, Maximum Power Usage"
-msgstr ""
+msgstr "Nivel 254 - Performanță maximă, consum maxim"
 
 msgid "Level 64 - Intermediate Power Usage with Standby"
-msgstr ""
+msgstr "Nivel 64 - Nivel intermediar de consum cu Standby"
 
 #, php-format
 msgid "Levels (MHz/mW): %s"
@@ -4226,7 +4228,7 @@ msgid "Logical Unit Controller IP address (%s by default)"
 msgstr "Adresă IP Controler Logic (implicit %s)"
 
 msgid "Logical Unit Controller Login Information"
-msgstr ""
+msgstr "Informații logare Controler Unitate Logică"
 
 #, php-format
 msgid "Logical Unit Controller TCP port (%d by default)"
@@ -4289,7 +4291,7 @@ msgid "MS Active Directory"
 msgstr "MS Active Directory"
 
 msgid "MS Active Directory Information & Status"
-msgstr ""
+msgstr "Informații & Stare MS Active Directory"
 
 msgid "MS Domain"
 msgstr "Domeniu MS"
@@ -4383,7 +4385,7 @@ msgid "MaxRecvDataSegmentLength"
 msgstr "MaxRecvDataSegmentLength"
 
 msgid "Maximum Performance, Maximum Acoustic Output"
-msgstr ""
+msgstr "Performanță maximă, nivel acustic maxim"
 
 msgid "Maximum connections"
 msgstr "Număr maxim conexiuni"
@@ -4442,7 +4444,7 @@ msgid "Media library"
 msgstr "Bibliotecă media"
 
 msgid "Medium Acoustic Output"
-msgstr ""
+msgstr "Nivel mediu acustic"
 
 msgid "Mem"
 msgstr "Mem"
@@ -4454,7 +4456,7 @@ msgid "Memory (MiB)"
 msgstr "Memorie (MiB)"
 
 msgid "Memory Usage"
-msgstr ""
+msgstr "Utilizare memorie"
 
 msgid "Memory usage"
 msgstr "Utilizare memorie"
@@ -4491,7 +4493,7 @@ msgid "Minimum"
 msgstr "Minim"
 
 msgid "Minimum Performance, Minimum Acoustic Output"
-msgstr ""
+msgstr "Performanță minimă, nivel acustic minim"
 
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr ""
@@ -4532,10 +4534,10 @@ msgid "Model"
 msgstr "Model"
 
 msgid "Model Extra"
-msgstr ""
+msgstr "Model Extra"
 
 msgid "Model Name"
-msgstr ""
+msgstr "Nume model"
 
 msgid "Modified"
 msgstr "Modificat"
@@ -4649,7 +4651,7 @@ msgid "Name of the variable."
 msgstr "Numele variabilei."
 
 msgid "Nested HVM"
-msgstr ""
+msgstr "Nested HVM"
 
 msgid "NetBIOS domain"
 msgstr "Domeniu NetBIOS"
@@ -4664,7 +4666,7 @@ msgid "Network"
 msgstr "Rețea"
 
 msgid "Network Adapter"
-msgstr ""
+msgstr "Adaptor rețea"
 
 msgid "Network File System"
 msgstr "Sistem Fișiere Rețea"
@@ -4689,7 +4691,7 @@ msgid "Networks"
 msgstr "Rețele"
 
 msgid "Never - (Default)"
-msgstr ""
+msgstr "Niciodata - (Implicit)"
 
 msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
@@ -4758,6 +4760,8 @@ msgid ""
 "No configured bridge interfaces. Please add new <a href='%s'>bridge "
 "interface</a> first."
 msgstr ""
+"Nu există nicio interfață tip bridge configurată. Adăugați acum o interfață "
+"<a href='%s'>interfață bridge</a>."
 
 #, php-format
 msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
@@ -4806,13 +4810,13 @@ msgid "Node A IP address"
 msgstr "Adresă IP nod A"
 
 msgid "Node A Settings"
-msgstr ""
+msgstr "Setări Nod A"
 
 msgid "Node B IP address"
 msgstr "Adresă IP nod B"
 
 msgid "Node B Settings"
-msgstr ""
+msgstr "Setări Nod B"
 
 msgid "Node Base"
 msgstr "Nod de Bază"
@@ -4947,7 +4951,7 @@ msgid "ONLINE"
 msgstr "ONLINE"
 
 msgid "OPT Only"
-msgstr ""
+msgstr "Doar OPT"
 
 msgid "Object name"
 msgstr "Nume obiect"
@@ -4976,7 +4980,7 @@ msgstr ""
 "virtuale existente."
 
 msgid "Online"
-msgstr ""
+msgstr "Activ"
 
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
@@ -5073,7 +5077,7 @@ msgid "PSK"
 msgstr "PSK"
 
 msgid "PV Guest"
-msgstr ""
+msgstr "PV Guest"
 
 msgid "Package Name"
 msgstr "Nume Pachet"
@@ -5213,7 +5217,7 @@ msgid "Permit to do SSH Tunneling."
 msgstr "Permite SSH Tunneling."
 
 msgid "Physical Interface"
-msgstr ""
+msgstr "Interfață fizică"
 
 msgid "Physical interface"
 msgstr "Interfață fizică"
@@ -5260,7 +5264,7 @@ msgid "Pool"
 msgstr "Structură"
 
 msgid "Pool Information & Status"
-msgstr ""
+msgstr "Informații & Stare Pool"
 
 msgid "Pools"
 msgstr "Structuri"
@@ -5327,7 +5331,7 @@ msgid "Power Mode"
 msgstr "Mod Energetic"
 
 msgid "Power management"
-msgstr ""
+msgstr "Gestionare consum"
 
 msgid "Power mode"
 msgstr "Mod energetic"
@@ -5347,7 +5351,7 @@ msgstr "PreInițializare"
 
 #, php-format
 msgid "Predefined Groups"
-msgstr ""
+msgstr "Grupuri predefinite"
 
 msgid "Preferred"
 msgstr "Preferat"
@@ -5395,7 +5399,7 @@ msgid "Processes"
 msgstr "Procese"
 
 msgid "Processes Information"
-msgstr ""
+msgstr "Informații procese"
 
 msgid "Product ID"
 msgstr "ID produs"
@@ -5418,7 +5422,7 @@ msgstr "Proxy"
 msgid ""
 "Puts the disk into standby mode when the selected amount of time after the "
 "last disk access has been elapsed."
-msgstr ""
+msgstr "Discul este pus în modul standby la scurgerea timpului selectat."
 
 msgid "Queue Depth"
 msgstr "Lungime Listă"
@@ -5433,25 +5437,25 @@ msgid "RAID 0"
 msgstr "RAID 0"
 
 msgid "RAID 0 Information & Status"
-msgstr ""
+msgstr "Informații & Stare RAID 0"
 
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
-msgstr ""
+msgstr "Informații & Stare RAID 0/1/5"
 
 msgid "RAID 1"
 msgstr "RAID 1"
 
 msgid "RAID 1 Information & Status"
-msgstr ""
+msgstr "Informații & Stare RAID 1"
 
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
-msgstr ""
+msgstr "Informații & Stare RAID 5"
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -5484,7 +5488,7 @@ msgid "RSYNC Client"
 msgstr "Client RSYNC"
 
 msgid "RSYNC Client Information & Status"
-msgstr ""
+msgstr "Informații client & Stare RSYNC"
 
 msgid "RSYNC events"
 msgstr "Evenimente RSYNC"
@@ -5496,7 +5500,7 @@ msgid "Raid name"
 msgstr "Nume Raid"
 
 msgid "Ramdisk"
-msgstr ""
+msgstr "Ramdisk"
 
 msgid "Read"
 msgstr "Citire"
@@ -5584,10 +5588,10 @@ msgid "Remaining battery runtime"
 msgstr "Timp rămas acumulator"
 
 msgid "Remote Address"
-msgstr ""
+msgstr "Adresă sistem remote"
 
 msgid "Remote Module (Source)"
-msgstr ""
+msgstr "Modul remote (sursă)"
 
 msgid "Remote Rsync Server"
 msgstr "Server Rsync Destinație"
@@ -5643,7 +5647,7 @@ msgid "Required"
 msgstr "Necesar"
 
 msgid "Rescan Disks"
-msgstr ""
+msgstr "Rescanare discuri"
 
 msgid "Rescan database in progress"
 msgstr "Se rescanează baza de date"
@@ -5674,7 +5678,7 @@ msgid "Resources"
 msgstr "Resurse"
 
 msgid "Restore Configuration"
-msgstr ""
+msgstr "Restaurare configurație"
 
 msgid "Restore metadata from the given file to the given provider."
 msgstr "Restaurare metadata de la fișierul dat la providerul specificat."
@@ -5716,7 +5720,7 @@ msgid "Root bind password"
 msgstr "Parolă Root bind"
 
 msgid "Rotation Rate"
-msgstr ""
+msgstr "Viteză de rotație"
 
 msgid "Round-robin read"
 msgstr "Citire Round-robin"
@@ -5737,7 +5741,7 @@ msgid "Rsync"
 msgstr "Rsync"
 
 msgid "Rsync Job"
-msgstr ""
+msgstr "Rsync Job"
 
 msgid "Rule"
 msgstr "Regulă"
@@ -5767,7 +5771,7 @@ msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
 
 msgid "S.M.A.R.T. Monitoring"
-msgstr ""
+msgstr "Monitorizare S.M.A.R.T."
 
 msgid "S.M.A.R.T. events"
 msgstr "Evenimente S.M.A.R.T."
@@ -5835,7 +5839,7 @@ msgid "Save"
 msgstr "Salvare"
 
 msgid "Save & Restart"
-msgstr ""
+msgstr "Salvare & Repornire"
 
 msgid "Save and Restart"
 msgstr "Salvare și Repornire"
@@ -5864,7 +5868,7 @@ msgid "Scan type"
 msgstr "Tip scanare"
 
 msgid "Schedule Time"
-msgstr ""
+msgstr "Timp programat"
 
 msgid "Schedule time"
 msgstr "Program"
@@ -5873,16 +5877,16 @@ msgid "Scheduled"
 msgstr "Programat"
 
 msgid "Scheduled Reboot"
-msgstr ""
+msgstr "Repornire programată"
 
 msgid "Scheduled Self-Test"
 msgstr "Auto-Test Programat"
 
 msgid "Scheduled Shutdown"
-msgstr ""
+msgstr "Oprire programată"
 
 msgid "Scheduled tests"
-msgstr ""
+msgstr "Teste programate"
 
 msgid "Secondary"
 msgstr "Secundar"
@@ -5900,7 +5904,7 @@ msgid "See attribute E8."
 msgstr "Vezi valoarea E8."
 
 msgid "Select"
-msgstr ""
+msgstr "Selectare"
 
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
@@ -5914,7 +5918,7 @@ msgstr ""
 "Selectați un disc care are activată opțiunea de monitorizare S.M.A.R.T."
 
 msgid "Select firmware:"
-msgstr ""
+msgstr "Selectare firmware:"
 
 msgid "Select item to remove from the list"
 msgstr "Selectați un element din listă pentru eliminare"
@@ -5958,10 +5962,10 @@ msgid "Selected file isn't an valid ISO file."
 msgstr "Fișierul selectat nu este un fișier ISO valid."
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
-msgstr ""
+msgstr "Tehnologie de auto-monitorizare, analiză și raportare"
 
 msgid "Self-tests Management"
-msgstr ""
+msgstr "Gestionare auto-teste"
 
 msgid "Send Buffer Size"
 msgstr "Mărime Buffer Ieșire"
@@ -5970,10 +5974,10 @@ msgid "Send Command!"
 msgstr "Trimitere Comandă!"
 
 msgid "Send Now"
-msgstr ""
+msgstr "Trimite acum"
 
 msgid "Send Test Email"
-msgstr ""
+msgstr "Trimitere email de test"
 
 msgid "Send a TEST warning email on startup."
 msgstr "Trimitere email de avertizare TEST la pornire."
@@ -5991,7 +5995,7 @@ msgid "Serial Console"
 msgstr "Consolă serială"
 
 msgid "Serial Number"
-msgstr ""
+msgstr "Număr serial"
 
 msgid "Serial number"
 msgstr "Număr de serie"
@@ -6117,13 +6121,13 @@ msgid "Shock During Write."
 msgstr "Șoc în timpul operației de scriere."
 
 msgid "Show Process Information"
-msgstr ""
+msgstr "Afișare informații procese"
 
 msgid "Show RAW UPS Info"
 msgstr "Afișare informații (neprelucrate) UPS"
 
 msgid "Show UPS Information"
-msgstr ""
+msgstr "Afișare informații UPS"
 
 msgid "Show log entries in reverse order (newest entries on top)"
 msgstr ""
@@ -6209,7 +6213,7 @@ msgid "Source"
 msgstr "Sursă"
 
 msgid "Source Share"
-msgstr ""
+msgstr "Partajare sursă"
 
 msgid "Source directory to be synchronized."
 msgstr "Directorul sursă pentru sincronizare."
@@ -6221,7 +6225,7 @@ msgid "Source share"
 msgstr "Sursă Partajare"
 
 msgid "Space Usage"
-msgstr ""
+msgstr "Utilizare spațiu"
 
 msgid "Space Used"
 msgstr "Spațiu Utilizat"
@@ -6264,6 +6268,7 @@ msgstr "Specifică câte servere vor fi create."
 
 msgid "Specifies how the volume should be exposed to the OS."
 msgstr ""
+"Specifică modul în care volumul este prezentat sistemului de operare."
 
 msgid "Specifies that the file system should be exported read-only."
 msgstr ""
@@ -6321,7 +6326,7 @@ msgid "Standard"
 msgstr "Standard"
 
 msgid "Standby"
-msgstr ""
+msgstr "În așteptare"
 
 msgid ""
 "Standby - Check the device unless it is in SLEEP or STANDBY mode. In these "
@@ -6420,10 +6425,10 @@ msgid "Swap"
 msgstr "Swap"
 
 msgid "Swap Information & Status"
-msgstr ""
+msgstr "Informații & Stare swap"
 
 msgid "Swap Memory"
-msgstr ""
+msgstr "Memorie swap"
 
 msgid "Swap disabled"
 msgstr "Swap dezactivat"
@@ -6479,10 +6484,10 @@ msgid "System Beep"
 msgstr "Sunet Sistem"
 
 msgid "System Information"
-msgstr ""
+msgstr "Informații sistem"
 
 msgid "System Load"
-msgstr ""
+msgstr "Încărcare sistem"
 
 msgid "System bios"
 msgstr "Bios sistem"
@@ -6494,7 +6499,7 @@ msgid "System info"
 msgstr "Informații Sistem"
 
 msgid "System last config change"
-msgstr ""
+msgstr "Modifică ultima configurație sistem"
 
 msgid "System log"
 msgstr "Jurnal Sistem"
@@ -6518,7 +6523,7 @@ msgid "TCP port"
 msgstr "Port TCP"
 
 msgid "TCP port is 5900+N, where N is VNC display number."
-msgstr ""
+msgstr "Portul TCP este 5900+N, unde N reprezintă numărul ecranului VNC."
 
 msgid "TCP port to bind the server to."
 msgstr "Port utilizat de server pentru legătură."
@@ -6603,7 +6608,7 @@ msgid "Temperature"
 msgstr "Temperatură"
 
 msgid "Temperature Monitoring"
-msgstr ""
+msgstr "Monitorizare temperatură"
 
 msgid "Temperature alarm (enabled/disabled)"
 msgstr "Alarmă temperatură (activat/dezactivat)"
@@ -6712,7 +6717,7 @@ msgstr "Fișierele MIB asociate pot fi găsite la %s."
 
 #, php-format
 msgid "The attribute '%s' already exists."
-msgstr ""
+msgstr "Parametrul '%s' există deja."
 
 #, c-format
 msgid ""
@@ -7083,10 +7088,10 @@ msgid "The extent name already exists."
 msgstr "Numele extins există deja."
 
 msgid "The file you try to flash is not for this platform"
-msgstr ""
+msgstr "Fișierul firmware selectat nu corespunde acestei platforme"
 
 msgid "The firmware file is corrupt"
-msgstr ""
+msgstr "Fișierul firmware este corupt"
 
 #, php-format
 msgid ""
@@ -7592,7 +7597,7 @@ msgstr ""
 msgid ""
 "This allows you to lower the power consumption of the disk, at the expense "
 "of performance."
-msgstr ""
+msgstr "Permite modificarea consumului de energie cu afectarea performanței."
 
 msgid "This allows you to set how loud the drive is while it's operating."
 msgstr ""
@@ -7606,7 +7611,7 @@ msgstr ""
 "care conțin deja date."
 
 msgid "This allows you to set the transfer mode for ATA/IDE disks."
-msgstr ""
+msgstr "Puteți defini aici modul de transfer pentru discurile ATA/IDE."
 
 msgid ""
 "This attribute indicates the count of full hard disk power on/off cycles."
@@ -7683,7 +7688,7 @@ msgid "This group already exists in the group list."
 msgstr "Acest grup există deja în lista grupurilor."
 
 msgid "This is a very powerful tool. Use it on your own risk!"
-msgstr ""
+msgstr "Aceasta este o unealtă foarte puternică. Folosiți-o cu mare atenție!"
 
 msgid ""
 "This is a way to take an existing insecure connection, and upgrade it to a "
@@ -7710,6 +7715,12 @@ msgid ""
 "the firmware has not been tampered with.<br /><br />Do you want to install "
 "this firmware anyway (on your own risk)?"
 msgstr ""
+"Acest lucru înseamnă că versiunea de firmware pe care ați încărcat-o nu este "
+"o versiune oficială/suportată, acest lucru putând conduce la probleme de "
+"funcționare ale sistemului. Instalați versiuni firmware doar din surse "
+"sigure și asigurați-vă că acestea nu au fost modificate în mod intenționat "
+"de terțe persoane.<br /><br />Doriți să instalați totuși acestă versiune "
+"firmware, pe riscul dumneavoastră?"
 
 msgid "This name already exists in the disk list."
 msgstr "Acest nume există deja în lista discurilor."
@@ -8177,7 +8188,7 @@ msgid "Transcoding"
 msgstr "Transcodare"
 
 msgid "Transfer Rate"
-msgstr ""
+msgstr "Rata de transfer"
 
 msgid "Transfer mode"
 msgstr "Mod transfer"
@@ -8242,6 +8253,9 @@ msgid ""
 "filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
 "unpredictable results, file corruption and the loss of data!"
 msgstr ""
+"UFS și ZFS sunt formatele NATIVE pentru %s. Utilizarea altor sisteme de "
+"fișiere ca EXT2, EXT3, EXT4, FAT, FAT32 sau NTFS poate duce la rezultate "
+"impredictibile, corupere de fișiere cu chiar pierderi de date!"
 
 #, php-format
 msgid ""
@@ -8262,7 +8276,7 @@ msgid "UPS"
 msgstr "UPS"
 
 msgid "UPS Information & Status"
-msgstr ""
+msgstr "Informații & Stare UPS"
 
 msgid "UPS Off Line"
 msgstr "UPS deconectat"
@@ -8394,7 +8408,7 @@ msgid "Updating in 5 seconds."
 msgstr "Actualizare în 5 secunde."
 
 msgid "Upgrade Firmware"
-msgstr ""
+msgstr "Upgrade firmware"
 
 msgid "Upload"
 msgstr "Încărcare"
@@ -8496,7 +8510,7 @@ msgstr "Utilizator"
 
 #, php-format
 msgid "User Defined Groups"
-msgstr ""
+msgstr "Grupuri definite de utilizator"
 
 msgid "User ID"
 msgstr "ID Utilizator"
@@ -8538,14 +8552,14 @@ msgid "Users"
 msgstr "Utilizatori"
 
 msgid "Users & Groups"
-msgstr ""
+msgstr "Utilizatori & Grupuri"
 
 #, c-format
 msgid "Using %s bytes fragment size."
 msgstr "Utilizare fragmente de %s octeți."
 
 msgid "VCPUs"
-msgstr ""
+msgstr "VCPUs"
 
 msgid "VHID"
 msgstr "VHID"
@@ -8554,7 +8568,7 @@ msgid "VLAN"
 msgstr "VLAN"
 
 msgid "VLAN Tag"
-msgstr ""
+msgstr "Tag VLAN"
 
 msgid "VLAN tag"
 msgstr "Eticheta VLAN"
@@ -8563,13 +8577,13 @@ msgid "VM"
 msgstr "VM"
 
 msgid "VM Type"
-msgstr ""
+msgstr "Tip VM"
 
 msgid "VNC Display"
-msgstr ""
+msgstr "Ecran VNC"
 
 msgid "VNC Password"
-msgstr ""
+msgstr "Parolă VNC"
 
 msgid "Value"
 msgstr "Valoare"
@@ -8598,22 +8612,22 @@ msgid "Video"
 msgstr "Video"
 
 msgid "Virtual Device"
-msgstr ""
+msgstr "Dispozitiv virtual"
 
 msgid "Virtual Devices"
-msgstr ""
+msgstr "Dispozitive virtual"
 
 msgid "Virtual Host ID"
 msgstr "ID Sistem Virtual"
 
 msgid "Virtual IP Address"
-msgstr ""
+msgstr "Adresă IP virtuală"
 
 msgid "Virtual IP address"
 msgstr "Adresă IP Virtuală"
 
 msgid "Virtual Interface"
-msgstr ""
+msgstr "Interfață virtuală"
 
 msgid "Virtual Machine"
 msgstr "Mașină virtuală"
@@ -8640,7 +8654,7 @@ msgid "Volume label of the new file system."
 msgstr "Eticheta de volum a noului sistem de fișiere."
 
 msgid "Volume mode"
-msgstr ""
+msgstr "Mod volum"
 
 msgid "Volumes"
 msgstr "Volume"
@@ -8805,10 +8819,10 @@ msgid "Wrong permission on %s."
 msgstr "Permisiune greșită în %s."
 
 msgid "Xen"
-msgstr ""
+msgstr "Xen"
 
 msgid "Xen Virtual Machine"
-msgstr ""
+msgstr "Mașină virtuală Xen"
 
 msgid "Yes"
 msgstr "Da"
@@ -8911,22 +8925,22 @@ msgid "ZFS ACL"
 msgstr "ACL ZFS"
 
 msgid "ZFS Dataset Information & Status"
-msgstr ""
+msgstr "Informații & Stare sistem ZFS"
 
 msgid "ZFS Dataset Properties"
-msgstr ""
+msgstr "Proprietăți sistem ZFS"
 
 msgid "ZFS Snapshot Information & Status"
-msgstr ""
+msgstr "Informații & Stare imagine ZFS"
 
 msgid "ZFS Snapshot Properties"
-msgstr ""
+msgstr "Proprietăți imagine ZFS"
 
 msgid "ZFS Volume Information & Status"
-msgstr ""
+msgstr "Informații & Stare volum ZFS"
 
 msgid "ZFS Volume Properties"
-msgstr ""
+msgstr "Proprietăți volum ZFS"
 
 msgid "ZFS volume"
 msgstr "Volum ZFS"
@@ -8935,6 +8949,8 @@ msgid ""
 "ZFS volume block size. This value can not be changed after creation. Empty "
 "as default."
 msgstr ""
+"Dimensiune bloc volum ZFS. Această valoare nu poate fi modificată după "
+"crearea volumului. Lăsați câmpul gol pentru valoarea implicită."
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
@@ -9009,7 +9025,7 @@ msgid "iSCSI Target Logical Unit Controller"
 msgstr "Controler Logic Destinație iSCSI"
 
 msgid "iSCSI Targets Information & Status"
-msgstr ""
+msgstr "Informații & Stare destinații iSCSI"
 
 #, php-format
 msgid "iSCSI initial parameter (%d by default)."
