@@ -35,6 +35,7 @@ Changes:
 - Add accept remote syslog message.
 - Add disable compress same syslog message.
 - Add gpart show on Diagnostics|Information|Partitions.
+- Add function to enable SMART Monitoring of SMART capable & enabled devices on import.
 - Remove usesendfile on CIFS/SMB.
 - Remove legacy disk aliases such as /dev/ad0.
 - Change some WebGUI menus and update text strings.
@@ -64,6 +65,7 @@ Changes:
 - Upgrade iperf3 to 3.1.2.
 - Upgrade samba to 4.2.8.
 - Upgrade netatalk to 3.1.8.
+- Upgrade rsync to 3.1.2.
 
 Fixes:
 - Fix typo (ticket #260)
