@@ -40,9 +40,22 @@ require_once("globals.inc");
 define("UPDATENOTIFY_MODE_NEW", 0);
 define("UPDATENOTIFY_MODE_MODIFIED", 1);
 define("UPDATENOTIFY_MODE_DIRTY", 2);
+define("UPDATENOTIFY_MODE_DIRTY_CONFIG", 22);
 define("UPDATENOTIFY_MODE_UNKNOWN", 3);
 
 define("UPDATENOTIFY_DB", "{$g['vardb_path']}/updatenotify.db");
+
+// Config parameter constants to determine the mode of a parameter / array of parameters
+define("RECORD_ERROR", 0);
+define("RECORD_NEW", 1);
+define("RECORD_NEW_MODIFY", 12);
+define("RECORD_NEW_DELETE", 13);
+define("RECORD_MODIFY", 2);
+define("RECORD_MODIFY_MODIFY", 22);
+define("RECORD_MODIFY_DELETE", 23);
+define("RECORD_DELETE", 3);
+define("RECORD_DELETE_MODIFY", 32);
+define("RECORD_DELETE_DELETE", 33);
 
 // Create database object and create tables if necessary.
 try {
