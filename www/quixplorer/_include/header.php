@@ -361,7 +361,7 @@ function show_header($title, $additional_header_content = null)
 	echo "<tbody>\n";
 	echo "<tr>\n";
 	echo "<td class=\"title\" aligh=\"left\">\n";
-	if($GLOBALS["require_login"] && isset($GLOBALS['__SESSION']["s_user"])) 
+	if($GLOBALS["require_login"] && isset($GLOBALS['__SESSION']["s_user"]))
 	echo "[".$GLOBALS['__SESSION']["s_user"]."] "; echo $title;
 	echo "</td>\n";
 	echo "<td class=\"title_version\" align=\"right\">\n";
