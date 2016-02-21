@@ -170,14 +170,12 @@ function _get_used_mime_info ($item)
     {
         list($desc, $img, $ext, $type) = $mime;
         if (@eregi($ext, $item))
-            return array($mime_type, $image, $type);
+            return array($mime, $img, $type);
     }
 
     return array(NULL, NULL, NULL);
 }
 
-/**
-// Bug used_mime_types not displayed! needs fix!
 function get_mime_type ($dir, $item, $query)
 {
     switch (filetype(get_abs_item($dir, $item)))
@@ -193,7 +191,10 @@ function get_mime_type ($dir, $item, $query)
         default:
             list($mime_type, $image, $type) = _get_used_mime_info($item);
             if ($mime_type != NULL)
+            {  
+                _debug("found mime type $mime_type");  
                 break;
+            }
 
             if ((function_exists("is_executable") && @is_executable(get_abs_item($dir,$item)))
             || @eregi($GLOBALS["super_mimes"]["exe"][2], $item))
@@ -204,6 +205,7 @@ function get_mime_type ($dir, $item, $query)
             else
             {
                 // unknown file
+                _debug("unknown file type ");
                 $mime_type	= $GLOBALS["super_mimes"]["file"][0];
                 $image		= $GLOBALS["super_mimes"]["file"][1];
             }
@@ -216,46 +218,6 @@ function get_mime_type ($dir, $item, $query)
         default:    return $mime_type;
     }
 }
- */
-// End Bug code
-
-// Start older code
-/**
-  determine the mime type of an item
- */
-function get_mime_type($dir, $item, $query) {	// get file's mimetype
-	if(get_is_dir($dir, $item)) {
-		$mime_type	= $GLOBALS["super_mimes"]["dir"][0];
-		$image		= $GLOBALS["super_mimes"]["dir"][1];
-		
-		if($query=="img") return $image;
-		else return $mime_type;
-	}
-				// mime_type
-	foreach($GLOBALS["used_mime_types"] as $mime) {
-		list($desc,$img,$ext)	= $mime;
-		if(@eregi($ext,$item)) {
-			$mime_type	= $desc;
-			$image		= $img;
-			if($query=="img") return $image;
-			else return $mime_type;
-		}
-	}
-	
-	if((function_exists("is_executable") && @is_executable(get_abs_item($dir,$item))) 
-	|| @eregi($GLOBALS["super_mimes"]["exe"][2],$item))		
-	{						// executable
-		$mime_type	= $GLOBALS["super_mimes"]["exe"][0];
-		$image		= $GLOBALS["super_mimes"]["exe"][1];
-	} else {					// unknown file
-		$mime_type	= $GLOBALS["super_mimes"]["file"][0];
-		$image		= $GLOBALS["super_mimes"]["file"][1];
-	}
-	
-	if($query=="img") return $image;
-	else return $mime_type;
-}
-// End older code
 
 /**
     Check if user is allowed to access $file in $directory

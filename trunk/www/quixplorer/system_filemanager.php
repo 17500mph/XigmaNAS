@@ -35,7 +35,7 @@
 	either expressed or implied, of the NAS4Free Project.
 */
 /*------------------------------------------------------------------------------
-			QuiXplorer v2.5.7 Modified for NAS4Free
+			QuiXplorer v2.5.8 Modified for NAS4Free
 ------------------------------------------------------------------------------*/
 
 umask(002); // Added to make created files/dirs group writable
