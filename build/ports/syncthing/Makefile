@@ -28,7 +28,7 @@ post-patch:
 	@cd ${WRKSRC} ; ${MKDIR} src/github.com/${PORTNAME}/${PORTNAME} ; \
 		${MV} .gitattributes .gitignore .mailmap AUTHORS CONDUCT.md \
 		CONTRIBUTING.md Godeps LICENSE NICKS README.md assets build.go \
-		build.sh cmd etc gui lib man protocol script test \
+		build.sh cmd etc gui lib man script test \
 		src/github.com/${PORTNAME}/${PORTNAME}
 # NAS4Free
 .if ${ARCH} == "i386"
