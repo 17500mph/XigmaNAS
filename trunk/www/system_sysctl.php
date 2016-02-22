@@ -37,16 +37,14 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("System"), gettext("Advanced"), gettext("sysctl.conf"));
-
-if (false === (isset($config['system']['sysctl']['param']) && is_array($config['system']['sysctl']['param']))) {
-	$config['system']['sysctl']['param'] = array();
+if (!(isset($config['system']['sysctl']['param']) && is_array($config['system']['sysctl']['param']))) {
+	$config['system']['sysctl']['param'] = [];
 }
-$a_sysctlvar = &$config['system']['sysctl']['param'];
-if (!empty($a_sysctlvar)) {
-	$key1 = array_column($a_sysctlvar, "name");
-	$key2 = array_column($a_sysctlvar, "uuid");
-	array_multisort($key1, SORT_ASC, SORT_NATURAL | SORT_FLAG_CASE, $key2, SORT_ASC, SORT_STRING | SORT_FLAG_CASE, $a_sysctlvar);
+$a_sysctl = &$config['system']['sysctl']['param'];
+if (!empty($a_sysctl)) {
+	$key1 = array_column($a_sysctl, "name");
+	$key2 = array_column($a_sysctl, "uuid");
+	array_multisort($key1, SORT_ASC, SORT_NATURAL | SORT_FLAG_CASE, $key2, SORT_ASC, SORT_STRING | SORT_FLAG_CASE, $a_sysctl);
 }
 
 if ($_POST) {
@@ -62,124 +60,98 @@ if ($_POST) {
 		if ($retval == 0) {
 			updatenotify_delete("sysctl");
 		}
-		header('Location: system_sysctl.php');
+		header("Location: system_sysctl.php");
 		exit;
 	}
 	if (isset($_POST['enable_selected_rows']) && $_POST['enable_selected_rows']) {
-		$members = isset($_POST['members']) ? $_POST['members'] : array();
+		$members = isset($_POST['members']) ? $_POST['members'] : [];
 		$updateconfig = false;
 		foreach ($members as $member) {
-			if (false !== ($index = array_search_ex($member, $a_sysctlvar, "uuid"))) {
-				if (false === isset($a_sysctlvar[$index]['enable'])) {
-					$a_sysctlvar[$index]['enable'] = true;
+			if (false !== ($index = array_search_ex($member, $a_sysctl, "uuid"))) {
+				if (!(isset($a_sysctl[$index]['enable']))) {
+					$a_sysctl[$index]['enable'] = true;
 					$updateconfig = true;
-					$updatenotifymode = updatenotify_get_mode("sysctl", $a_sysctlvar[$index]['uuid']);
-					switch ($updatenotifymode) {
-						case UPDATENOTIFY_MODE_NEW:  
-							break;
-						case UPDATENOTIFY_MODE_MODIFIED:
-							break;
-						case UPDATENOTIFY_MODE_DIRTY:
-							break;
-						default:
-							updatenotify_set("sysctl", UPDATENOTIFY_MODE_MODIFIED, $a_sysctlvar[$index]['uuid']);
-							break;
+					$mode_updatenotify = updatenotify_get_mode("sysctl", $a_sysctl[$index]['uuid']);
+					if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
+						updatenotify_set("sysctl", UPDATENOTIFY_MODE_MODIFIED, $a_sysctl[$index]['uuid']);
 					}
 				}
 			}
 		}
-		if (true === $updateconfig) {
+		if ($updateconfig) {
 			write_config();
 			$updateconfig = false;
 		}
-		header('Location: system_sysctl.php');
+		header("Location: system_sysctl.php");
 		exit;
 	}
 	if (isset($_POST['disable_selected_rows']) && $_POST['disable_selected_rows']) {
-		$members = isset($_POST['members']) ? $_POST['members'] : array();
+		$members = isset($_POST['members']) ? $_POST['members'] : [];
 		$updateconfig = false;
 		foreach ($members as $member) {
-			if (false !== ($index = array_search_ex($member, $a_sysctlvar, "uuid"))) {
-				if (true === isset($a_sysctlvar[$index]['enable'])) {
-					unset($a_sysctlvar[$index]['enable']);
+			if (false !== ($index = array_search_ex($member, $a_sysctl, "uuid"))) {
+				if (isset($a_sysctl[$index]['enable'])) {
+					unset($a_sysctl[$index]['enable']);
 					$updateconfig = true;
-					$updatenotifymode = updatenotify_get_mode("sysctl", $a_sysctlvar[$index]['uuid']);
-					switch ($updatenotifymode) {
-						case UPDATENOTIFY_MODE_NEW:  
-							break;
-						case UPDATENOTIFY_MODE_MODIFIED:
-							break;
-						case UPDATENOTIFY_MODE_DIRTY:
-							break;
-						default:
-							updatenotify_set("sysctl", UPDATENOTIFY_MODE_MODIFIED, $a_sysctlvar[$index]['uuid']);
-							break;
+					$mode_updatenotify = updatenotify_get_mode("sysctl", $a_sysctl[$index]['uuid']);
+					if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
+						updatenotify_set("sysctl", UPDATENOTIFY_MODE_MODIFIED, $a_sysctl[$index]['uuid']);
 					}
 				}	
 			}	
 		}
-		if (true === $updateconfig) {
+		if ($updateconfig) {
 			write_config();
 			$updateconfig = false;
 		}
-		header('Location: system_sysctl.php');
+		header("Location: system_sysctl.php");
 		exit;
 	}
 	if (isset($_POST['toggle_selected_rows']) && $_POST['toggle_selected_rows']) {
-		$members = isset($_POST['members']) ? $_POST['members'] : array();
+		$members = isset($_POST['members']) ? $_POST['members'] : [];
 		$updateconfig = false;
 		foreach ($members as $member) {
-			if (false !== ($index = array_search_ex($member, $a_sysctlvar, "uuid"))) {
-				if (true === isset($a_sysctlvar[$index]['enable'])) {
-					unset($a_sysctlvar[$index]['enable']);
+			if (false !== ($index = array_search_ex($member, $a_sysctl, "uuid"))) {
+				if (isset($a_sysctl[$index]['enable'])) {
+					unset($a_sysctl[$index]['enable']);
 				} else {
-					$a_sysctlvar[$index]['enable'] = true;					
+					$a_sysctl[$index]['enable'] = true;					
 				}
 				$updateconfig = true;
-				$updatenotifymode = updatenotify_get_mode("sysctl", $a_sysctlvar[$index]['uuid']);
-				switch ($updatenotifymode) {
-					case UPDATENOTIFY_MODE_NEW:  
-						break;
-					case UPDATENOTIFY_MODE_MODIFIED:
-						break;
-					case UPDATENOTIFY_MODE_DIRTY:
-						break;
-					default:
-						updatenotify_set("sysctl", UPDATENOTIFY_MODE_MODIFIED, $a_sysctlvar[$index]['uuid']);
-						break;
+				$mode_updatenotify = updatenotify_get_mode("sysctl", $a_sysctl[$index]['uuid']);
+				if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
+					updatenotify_set("sysctl", UPDATENOTIFY_MODE_MODIFIED, $a_sysctl[$index]['uuid']);
 				}
 			}	
 		}
-		if (true === $updateconfig) {
+		if ($updateconfig) {
 			write_config();
 			$updateconfig = false;
 		}
-		header('Location: system_sysctl.php');
+		header("Location: system_sysctl.php");
 		exit;
 	}
 	if (isset($_POST['delete_selected_rows']) && $_POST['delete_selected_rows']) {
-		$members = isset($_POST['members']) ? $_POST['members'] : array();
+		$members = isset($_POST['members']) ? $_POST['members'] : [];
 		foreach ($members as $member) {
-			if (false !== ($index = array_search_ex($member, $a_sysctlvar, "uuid"))) {
-				$updatenotifymode = updatenotify_get_mode("sysctl", $a_sysctlvar[$index]['uuid']);
-				switch ($updatenotifymode) {
+			if (false !== ($index = array_search_ex($member, $a_sysctl, "uuid"))) {
+				$mode_updatenotify = updatenotify_get_mode("sysctl", $a_sysctl[$index]['uuid']);
+				switch ($mode_updatenotify) {
 					case UPDATENOTIFY_MODE_NEW:  
-						updatenotify_clear("sysctl", $a_sysctlvar[$index]['uuid']);
-						updatenotify_set("sysctl", UPDATENOTIFY_MODE_DIRTY, $a_sysctlvar[$index]['uuid']);
+						updatenotify_clear("sysctl", $a_sysctl[$index]['uuid']);
+						updatenotify_set("sysctl", UPDATENOTIFY_MODE_DIRTY_CONFIG, $a_sysctl[$index]['uuid']);
 						break;
 					case UPDATENOTIFY_MODE_MODIFIED:
-						updatenotify_clear("sysctl", $a_sysctlvar[$index]['uuid']);
-						updatenotify_set("sysctl", UPDATENOTIFY_MODE_DIRTY, $a_sysctlvar[$index]['uuid']);
+						updatenotify_clear("sysctl", $a_sysctl[$index]['uuid']);
+						updatenotify_set("sysctl", UPDATENOTIFY_MODE_DIRTY, $a_sysctl[$index]['uuid']);
 						break;
-					case UPDATENOTIFY_MODE_DIRTY:
-						break;
-					default:
-						updatenotify_set("sysctl", UPDATENOTIFY_MODE_DIRTY, $a_sysctlvar[$index]['uuid']);
+					case UPDATENOTIFY_MODE_UNKNOWN:
+						updatenotify_set("sysctl", UPDATENOTIFY_MODE_DIRTY, $a_sysctl[$index]['uuid']);
 						break;
 				}
 			}
 		}
-		header('Location: system_sysctl.php');
+		header("Location: system_sysctl.php");
 		exit;
 	}
 }
@@ -194,6 +166,7 @@ function sysctl_process_updatenotification($mode, $data) {
 		case UPDATENOTIFY_MODE_MODIFIED:
 			break;
 		case UPDATENOTIFY_MODE_DIRTY:
+		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
 			if (is_array($config['system']['sysctl']['param'])) {
 				$index = array_search_ex($data, $config['system']['sysctl']['param'], "uuid");
 				if (false !== $index) {
@@ -205,14 +178,17 @@ function sysctl_process_updatenotification($mode, $data) {
 	}
 	return $retval;
 }
+
+$pgtitle = array(gettext("System"), gettext("Advanced"), gettext("sysctl.conf"));
 ?>
 <?php include("fbegin.inc");?>
 <script type="text/javascript">
 <!-- Begin JavaScript
 function togglecheckboxesbyname(ego, byname) {
 	var a_members = document.getElementsByName(byname);
-	var i;
-	for (i = 0; i < a_members.length; i++) {
+	var numberofmembers = a_members.length;
+	var i = 0;
+	for (; i < numberofmembers; i++) {
 		if (a_members[i].type === 'checkbox') {
 			if (a_members[i].disabled == false) {
 				a_members[i].checked = !a_members[i].checked;
@@ -254,59 +230,66 @@ function togglecheckboxesbyname(ego, byname) {
 					}
 				?>
 				<?php if (updatenotify_exists("sysctl")) print_config_change_box();?>
-				<div id="submit">
+				<div id="submit" style="margin-bottom:10px">
 					<input name="enable_selected_rows" type="submit" class="formbtn" value="<?=gettext("Enable Selected Options");?>" onclick="return confirm('<?=gettext("Do you want to enable selected options?");?>')" />
 					<input name="disable_selected_rows" type="submit" class="formbtn" value="<?=gettext("Disable Selected Options");?>" onclick="return confirm('<?=gettext("Do you want to disable selected options?");?>')" />
 					<input name="toggle_selected_rows" type="submit" class="formbtn" value="<?=gettext("Toggle Selected Options");?>" onclick="return confirm('<?=gettext("Do you want to toggle selected options?");?>')" />
 					<input name="delete_selected_rows" type="submit" class="formbtn" value="<?=gettext("Delete Selected Options");?>" onclick="return confirm('<?=gettext("Do you want to delete selected options?");?>')" />
 				</div>
-				<br />
-				<br />
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-					<tr>
-						<td width="1%" class="listhdrlr"><input type="checkbox" name="togglemembers" onclick="javascript:togglecheckboxesbyname(this,'members[]')"/></td>
-						<td width="34%" class="listhdrlr"><?=gettext("MIB");?></td>
-						<td width="20%" class="listhdrr"><?=gettext("Value");?></td>
-						<td width="5%" class="listhdrr"><?=gettext("Status");?></td>
-						<td width="30%" class="listhdrr"><?=gettext("Comment");?></td>
-						<td width="10%" class="list"></td>
-					</tr>
-					<?php foreach($a_sysctlvar as $r_sysctlvar):?>
+					<colgroup>
+						<col style="width:1%">
+						<col style="width:34%">
+						<col style="width:20%">
+						<col style="width:5%">
+						<col style="width:30%">
+						<col style="width:10%">
+					</colgroup>
+					<thead>
 						<tr>
-							<?php $notificationmode = updatenotify_get_mode("sysctl", $r_sysctlvar['uuid']);?>
-							<?php $enable = isset($r_sysctlvar['enable']);?>
-							<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
-								<td class="<?=$enable?"listlr":"listlrd";?>"><input type="checkbox" name="members[]" value="<?=$r_sysctlvar['uuid'];?>" id="<?=$r_sysctlvar['uuid'];?>"/></td>
-							<?php else:?>
-								<td class="<?=$enable?"listlr":"listlrd";?>"><input type="checkbox" name="members[]" value="<?=$r_sysctlvar['uuid'];?>" id="<?=$r_sysctlvar['uuid'];?>" disabled="disabled"/></td>
-							<?php endif;?>
-							<td class="<?=$enable?"listlr":"listlrd";?>"><?=htmlspecialchars($r_sysctlvar['name']);?>&nbsp;</td>
-							<td class="<?=$enable?"listr":"listrd";?>"><?=htmlspecialchars($r_sysctlvar['value']);?>&nbsp;</td>
-							<td class="<?=$enable?"listr":"listrd";?>">
-								<?php if ($enable):?>
-									<a title="<?=gettext("Enabled");?>"><img src="status_enabled.png" border="0" alt=""/></a>
-								<?php else:?>
-									<a title="<?=gettext("Disabled");?>"><img src="status_disabled.png" border="0" alt=""/></a>
-								<?php endif;?>
-							</td>
-							<td class="listbg"><?=htmlspecialchars($r_sysctlvar['comment']);?>&nbsp;</td>
-							<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
-								<td valign="middle" nowrap="nowrap" class="list">
-									<a href="system_sysctl_edit.php?uuid=<?=$r_sysctlvar['uuid'];?>"><img src="e.gif" title="<?=gettext("Edit MIB");?>" border="0" alt="<?=gettext("Edit MIB");?>" /></a>
-								</td>
-							<?php else:?>
-								<td valign="middle" nowrap="nowrap" class="list">
-									<img src="del.gif" border="0" alt="" />
-								</td>
-							<?php endif;?>
+							<td class="listhdrlr"><input type="checkbox" name="togglemembers" onclick="javascript:togglecheckboxesbyname(this,'members[]')"/></td>
+							<td class="listhdrr"><?=gettext("MIB");?></td>
+							<td class="listhdrr"><?=gettext("Value");?></td>
+							<td class="listhdrr"><?=gettext("Status");?></td>
+							<td class="listhdrr"><?=gettext("Comment");?></td>
+							<td class="list"></td>
 						</tr>
-					<?php endforeach;?>
-					<tr>
-						<td class="list" colspan="5"></td>
-						<td class="list">
-							<a href="system_sysctl_edit.php"><img src="plus.gif" title="<?=gettext("Add MIB");?>" border="0" alt="<?=gettext("Add MIB");?>" /></a>
-						</td>
-					</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td class="list" colspan="5"></td>
+							<td class="list"><a href="system_sysctl_edit.php"><img src="plus.gif" title="<?=gettext("Add MIB");?>" border="0" alt="<?=gettext("Add MIB");?>" /></a></td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<?php foreach($a_sysctl as $r_sysctl):?>
+							<tr>
+								<?php $notificationmode = updatenotify_get_mode("sysctl", $r_sysctl['uuid']);?>
+								<?php $notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);?>
+								<?php $enable = isset($r_sysctl['enable']);?>
+								<?php if ($notdirty):?>
+									<td class="<?=$enable?"listlr":"listlrd";?>"><input type="checkbox" name="members[]" value="<?=$r_sysctl['uuid'];?>" id="<?=$r_sysctl['uuid'];?>"/></td>
+								<?php else:?>
+									<td class="<?=$enable?"listlr":"listlrd";?>"><input type="checkbox" name="members[]" value="<?=$r_sysctl['uuid'];?>" id="<?=$r_sysctl['uuid'];?>" disabled="disabled"/></td>
+								<?php endif;?>
+								<td class="<?=$enable?"listr":"listrd";?>"><?=htmlspecialchars($r_sysctl['name']);?>&nbsp;</td>
+								<td class="<?=$enable?"listr":"listrd";?>"><?=htmlspecialchars($r_sysctl['value']);?>&nbsp;</td>
+								<td class="<?=$enable?"listr":"listrd";?>">
+									<?php if ($enable):?>
+										<a title="<?=gettext("Enabled");?>"><img src="status_enabled.png" border="0" alt=""/></a>
+									<?php else:?>
+										<a title="<?=gettext("Disabled");?>"><img src="status_disabled.png" border="0" alt=""/></a>
+									<?php endif;?>
+								</td>
+								<td class="listbg"><?=htmlspecialchars($r_sysctl['comment']);?>&nbsp;</td>
+								<?php if ($notdirty):?>
+									<td valign="middle" nowrap="nowrap" class="list"><a href="system_sysctl_edit.php?uuid=<?=$r_sysctl['uuid'];?>"><img src="e.gif" title="<?=gettext("Edit MIB");?>" border="0" alt="<?=gettext("Edit MIB");?>" /></a></td>
+								<?php else:?>
+									<td valign="middle" nowrap="nowrap" class="list"><img src="del.gif" border="0" alt=""/></td>
+								<?php endif;?>
+							</tr>
+						<?php endforeach;?>
+					</tbody>
 				</table>
 				<div id="remarks">
 					<?php html_remark("note", gettext("Note"), gettext("These MIBs will be added to /etc/sysctl.conf. This allow you to make changes to a running system."));?>

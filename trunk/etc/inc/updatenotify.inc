@@ -57,6 +57,11 @@ define("RECORD_DELETE", 3);
 define("RECORD_DELETE_MODIFY", 32);
 define("RECORD_DELETE_DELETE", 33);
 
+// Parameter to define the mode of a page
+define("PAGE_MODE_ADD", 1);
+define("PAGE_MODE_EDIT", 2);
+define("PAGE_MODE_POST", 3);
+
 // Create database object and create tables if necessary.
 try {
 	$createdb = !file_exists(UPDATENOTIFY_DB);
@@ -264,10 +269,12 @@ function updatenotify_process($key, $function) {
 		return 0;
 
 	foreach ($a_notification as $notificationv) {
-		if (0 != call_user_func($function, $notificationv['mode'], $notificationv['data']))
+		if (0 != call_user_func($function, $notificationv['mode'], $notificationv['data'])) {
 			return 1;
+		} else {
+			updatenotify_clear($key, $notificationv['data']);
+		}
 	}
-
 	return 0;
 }
 ?>
