@@ -38,20 +38,15 @@ require("auth.inc");
 require("guiconfig.inc");
 require("zfs.inc");
 
-$pgtitle = array(gettext("Disks"), gettext("ZFS"), gettext("Datasets"), gettext("Dataset"));
-
-if (!isset($config['zfs']['datasets']['dataset']) || !is_array($config['zfs']['datasets']['dataset']))
-	$config['zfs']['datasets']['dataset'] = array();
-
+if (!(isset($config['zfs']['datasets']['dataset']) && is_array($config['zfs']['datasets']['dataset']))) {
+	$config['zfs']['datasets']['dataset'] = [];
+}
 array_sort_key($config['zfs']['datasets']['dataset'], "name");
 $a_dataset = &$config['zfs']['datasets']['dataset'];
 
 if ($_POST) {
-	$pconfig = $_POST;
-
 	if (isset($_POST['apply']) && $_POST['apply']) {
 		$retval = 0;
-
 		if (!file_exists($d_sysrebootreqd_path)) {
 			// Process notifications
 			$retval |= updatenotify_process("zfsdataset", "zfsdataset_process_updatenotification");
@@ -63,12 +58,29 @@ if ($_POST) {
 		header("Location: disks_zfs_dataset.php");
 		exit;
 	}
-}
-
-if (isset($_GET['act']) && $_GET['act'] === "del") {
-	updatenotify_set("zfsdataset", UPDATENOTIFY_MODE_DIRTY, $_GET['uuid']);
-	header("Location: disks_zfs_dataset.php");
-	exit;
+	if (isset($_POST['delete_selected_rows']) && $_POST['delete_selected_rows']) {
+		$members = isset($_POST['members']) ? $_POST['members'] : array();
+		foreach ($members as $member) {
+			if (false !== ($index = array_search_ex($member, $a_dataset, "uuid"))) {
+				$mode_updatenotify = updatenotify_get_mode("zfsdataset", $a_dataset[$index]['uuid']);
+				switch ($mode_updatenotify) {
+					case UPDATENOTIFY_MODE_NEW:  
+						updatenotify_clear("zfsdataset", $a_dataset[$index]['uuid']);
+						updatenotify_set("zfsdataset", UPDATENOTIFY_MODE_DIRTY_CONFIG, $a_dataset[$index]['uuid']);
+						break;
+					case UPDATENOTIFY_MODE_MODIFIED:
+						updatenotify_clear("zfsdataset", $a_dataset[$index]['uuid']);
+						updatenotify_set("zfsdataset", UPDATENOTIFY_MODE_DIRTY, $a_dataset[$index]['uuid']);
+						break;
+					case UPDATENOTIFY_MODE_UNKNOWN:
+						updatenotify_set("zfsdataset", UPDATENOTIFY_MODE_DIRTY, $a_dataset[$index]['uuid']);
+						break;
+				}
+			}
+		}
+		header("Location: disks_zfs_dataset.php");
+		exit;
+	}	
 }
 
 function zfsdataset_process_updatenotification($mode, $data) {
@@ -87,18 +99,43 @@ function zfsdataset_process_updatenotification($mode, $data) {
 
 		case UPDATENOTIFY_MODE_DIRTY:
 			zfs_dataset_destroy($data);
-			$cnid = array_search_ex($data, $config['zfs']['datasets']['dataset'], "uuid");
-			if (FALSE !== $cnid) {
+			if (false !== ($cnid = array_search_ex($data, $config['zfs']['datasets']['dataset'], "uuid"))) {
+				unset($config['zfs']['datasets']['dataset'][$cnid]);
+				write_config();
+			}
+			break;
+		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
+			if (false !== ($cnid = array_search_ex($data, $config['zfs']['datasets']['dataset'], "uuid"))) {
 				unset($config['zfs']['datasets']['dataset'][$cnid]);
 				write_config();
 			}
 			break;
 	}
-
 	return $retval;
 }
+
+$pgtitle = array(gettext("Disks"), gettext("ZFS"), gettext("Datasets"), gettext("Dataset"));
 ?>
 <?php include("fbegin.inc");?>
+<script type="text/javascript">
+<!-- Begin JavaScript
+function togglecheckboxesbyname(ego, byname) {
+	var a_members = document.getElementsByName(byname);
+	var numberofmembers = a_members.length;
+	var i = 0;
+	for (; i < numberofmembers; i++) {
+		if (a_members[i].type === 'checkbox') {
+			if (a_members[i].disabled == false) {
+				a_members[i].checked = !a_members[i].checked;
+			}
+		}
+	}
+	if (ego.type == 'checkbox') {
+		ego.checked = false;
+	}
+}
+// End JavaScript -->
+</script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabnavtbl">
@@ -122,41 +159,66 @@ function zfsdataset_process_updatenotification($mode, $data) {
 	<tr>
 		<td class="tabcont">
 			<form action="disks_zfs_dataset.php" method="post">
-				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
-				<?php if (updatenotify_exists("zfsdataset")) print_config_change_box();?>
+				<?php
+					if (!empty($savemsg)) {
+						print_info_box($savemsg);
+					} else {
+						if (file_exists($d_sysrebootreqd_path)) {
+							print_info_box(get_std_save_message(0));
+						}
+					}
+				?>
+				<?php if (updatenotify_exists("zfsdataset")) { print_config_change_box(); }?>
+				<div id="submit" style="margin-bottom:10px">
+					<input name="delete_selected_rows" type="submit" class="formbtn" value="<?=gettext("Delete Selected Datasets");?>" onclick="return confirm('<?=gettext("Do you want to delete selected datasets?");?>')" />
+				</div>
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-					<tr>
-						<td width="20%" class="listhdrlr"><?=gettext("Pool");?></td>
-						<td width="25%" class="listhdrr"><?=gettext("Name");?></td>
-						<td width="8%" class="listhdrr"><?=gettext("Compression");?></td>
-						<td width="32%" class="listhdrr"><?=gettext("Description");?></td>
-						<td width="10%" class="list"></td>
-					</tr>
-					<?php foreach ($a_dataset as $datasetv):?>
-					<?php $notificationmode = updatenotify_get_mode("zfsdataset", $datasetv['uuid']);?>
-					<tr>
-						<td class="listlr"><?=htmlspecialchars($datasetv['pool'][0]);?>&nbsp;</td>
-						<td class="listr"><?=htmlspecialchars($datasetv['name']);?>&nbsp;</td>
-						<td class="listr"><?=htmlspecialchars($datasetv['compression']);?>&nbsp;</td>
-						<td class="listbg"><?=htmlspecialchars($datasetv['desc']);?>&nbsp;</td>
-						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
-						<td valign="middle" nowrap="nowrap" class="list">
-							<a href="disks_zfs_dataset_edit.php?uuid=<?=$datasetv['uuid'];?>"><img src="e.gif" title="<?=gettext("Edit dataset");?>" border="0" alt="<?=gettext("Edit dataset");?>" /></a>&nbsp;
-							<a href="disks_zfs_dataset.php?act=del&amp;uuid=<?=$datasetv['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this dataset?");?>')"><img src="x.gif" title="<?=gettext("Delete dataset");?>" border="0" alt="<?=gettext("Delete dataset");?>" /></a>
-						</td>
-						<?php else:?>
-						<td valign="middle" nowrap="nowrap" class="list">
-							<img src="del.gif" border="0" alt="" />
-						</td>
-						<?php endif;?>
-					</tr>
-					<?php endforeach;?>
-					<tr>
-						<td class="list" colspan="4"></td>
-						<td class="list">
-							<a href="disks_zfs_dataset_edit.php"><img src="plus.gif" title="<?=gettext("Add dataset");?>" border="0" alt="<?=gettext("Add dataset");?>" /></a>
-						</td>
-					</tr>
+					<colgroup>
+						<col style="width:1%">
+						<col style="width:19%">
+						<col style="width:25%">
+						<col style="width:8%">
+						<col style="width:32%">
+						<col style="width:10%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td class="listhdrlr"><input type="checkbox" name="togglemembers" onclick="javascript:togglecheckboxesbyname(this,'members[]')"/></td>
+							<td class="listhdrr"><?=gettext("Pool");?></td>
+							<td class="listhdrr"><?=gettext("Name");?></td>
+							<td class="listhdrr"><?=gettext("Compression");?></td>
+							<td class="listhdrr"><?=gettext("Description");?></td>
+							<td class="list"></td>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td class="list" colspan="5"></td>
+							<td class="list"><a href="disks_zfs_dataset_edit.php"><img src="plus.gif" title="<?=gettext("Add Dataset");?>" border="0" alt="<?=gettext("Add Dataset");?>" /></a></td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<?php foreach ($a_dataset as $r_dataset):?>
+							<?php $notificationmode = updatenotify_get_mode("zfsdataset", $r_dataset['uuid']);?>
+							<?php $notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);?>
+							<tr>
+								<?php if ($notdirty):?>
+									<td class="listlr"><input type="checkbox" name="members[]" value="<?=$r_dataset['uuid'];?>" id="<?=$r_dataset['uuid'];?>"/></td>
+								<?php else:?>
+									<td class="listlr"><input type="checkbox" name="members[]" value="<?=$r_dataset['uuid'];?>" id="<?=$r_dataset['uuid'];?>" disabled="disabled"/></td>
+								<?php endif;?>
+								<td class="listr"><?=htmlspecialchars($r_dataset['pool'][0]);?>&nbsp;</td>
+								<td class="listr"><?=htmlspecialchars($r_dataset['name']);?>&nbsp;</td>
+								<td class="listr"><?=htmlspecialchars($r_dataset['compression']);?>&nbsp;</td>
+								<td class="listbg"><?=htmlspecialchars($r_dataset['desc']);?>&nbsp;</td>
+								<?php if ($notdirty):?>
+									<td valign="middle" nowrap="nowrap" class="list"><a href="disks_zfs_dataset_edit.php?uuid=<?=$r_dataset['uuid'];?>"><img src="e.gif" title="<?=gettext("Edit dataset");?>" border="0" alt="<?=gettext("Edit dataset");?>" /></a>&nbsp;</td>
+								<?php else:?>
+									<td valign="middle" nowrap="nowrap" class="list"><img src="del.gif" border="0" alt="" /></td>
+								<?php endif;?>
+							</tr>
+						<?php endforeach;?>
+					</tbody>
 				</table>
 				<?php include("formend.inc");?>
 			</form>

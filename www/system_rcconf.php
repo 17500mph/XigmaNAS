@@ -37,16 +37,14 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("System"), gettext("Advanced"), gettext("rc.conf"));
-
-if (false === (isset($config['system']['rcconf']['param']) && is_array($config['system']['rcconf']['param']))) {
-	$config['system']['rcconf']['param'] = array();
+if (!(isset($config['system']['rcconf']['param']) && is_array($config['system']['rcconf']['param']))) {
+	$config['system']['rcconf']['param'] = [];
 }
-$a_rcvar = &$config['system']['rcconf']['param'];
-if (!empty($a_rcvar)) {
-	$key1 = array_column($a_rcvar, "name");
-	$key2 = array_column($a_rcvar, "uuid");
-	array_multisort($key1, SORT_ASC, SORT_NATURAL | SORT_FLAG_CASE, $key2, SORT_ASC, SORT_STRING | SORT_FLAG_CASE, $a_rcvar);
+$a_rcconf = &$config['system']['rcconf']['param'];
+if (!empty($a_rcconf)) {
+	$key1 = array_column($a_rcconf, "name");
+	$key2 = array_column($a_rcconf, "uuid");
+	array_multisort($key1, SORT_ASC, SORT_NATURAL | SORT_FLAG_CASE, $key2, SORT_ASC, SORT_STRING | SORT_FLAG_CASE, $a_rcconf);
 }
 
 if ($_POST) {
@@ -62,124 +60,98 @@ if ($_POST) {
 		if ($retval == 0) {
 			updatenotify_delete("rcconf");
 		}
-		header('Location: system_rcconf.php');
+		header("Location: system_rcconf.php");
 		exit;
 	}
 	if (isset($_POST['enable_selected_rows']) && $_POST['enable_selected_rows']) {
-		$members = isset($_POST['members']) ? $_POST['members'] : array();
+		$members = isset($_POST['members']) ? $_POST['members'] : [];
 		$updateconfig = false;
 		foreach ($members as $member) {
-			if (false !== ($index = array_search_ex($member, $a_rcvar, "uuid"))) {
-				if (false === isset($a_rcvar[$index]['enable'])) {
-					$a_rcvar[$index]['enable'] = true;
+			if (false !== ($index = array_search_ex($member, $a_rcconf, "uuid"))) {
+				if (!(isset($a_rcconf[$index]['enable']))) {
+					$a_rcconf[$index]['enable'] = true;
 					$updateconfig = true;
-					$updatenotifymode = updatenotify_get_mode("rcconf", $a_rcvar[$index]['uuid']);
-					switch ($updatenotifymode) {
-						case UPDATENOTIFY_MODE_NEW:  
-							break;
-						case UPDATENOTIFY_MODE_MODIFIED:
-							break;
-						case UPDATENOTIFY_MODE_DIRTY:
-							break;
-						default:
-							updatenotify_set("rcconf", UPDATENOTIFY_MODE_MODIFIED, $a_rcvar[$index]['uuid']);
-							break;
+					$mode_updatenotify = updatenotify_get_mode("rcconf", $a_rcconf[$index]['uuid']);
+					if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
+						updatenotify_set("rcconf", UPDATENOTIFY_MODE_MODIFIED, $a_rcconf[$index]['uuid']);
 					}
 				}
 			}
 		}
-		if (true === $updateconfig) {
+		if ($updateconfig) {
 			write_config();
 			$updateconfig = false;
 		}
-		header('Location: system_rcconf.php');
+		header("Location: system_rcconf.php");
 		exit;
 	}
 	if (isset($_POST['disable_selected_rows']) && $_POST['disable_selected_rows']) {
-		$members = isset($_POST['members']) ? $_POST['members'] : array();
+		$members = isset($_POST['members']) ? $_POST['members'] : [];
 		$updateconfig = false;
 		foreach ($members as $member) {
-			if (false !== ($index = array_search_ex($member, $a_rcvar, "uuid"))) {
-				if (true === isset($a_rcvar[$index]['enable'])) {
-					unset($a_rcvar[$index]['enable']);
+			if (false !== ($index = array_search_ex($member, $a_rcconf, "uuid"))) {
+				if (isset($a_rcconf[$index]['enable'])) {
+					unset($a_rcconf[$index]['enable']);
 					$updateconfig = true;
-					$updatenotifymode = updatenotify_get_mode("rcconf", $a_rcvar[$index]['uuid']);
-					switch ($updatenotifymode) {
-						case UPDATENOTIFY_MODE_NEW:  
-							break;
-						case UPDATENOTIFY_MODE_MODIFIED:
-							break;
-						case UPDATENOTIFY_MODE_DIRTY:
-							break;
-						default:
-							updatenotify_set("rcconf", UPDATENOTIFY_MODE_MODIFIED, $a_rcvar[$index]['uuid']);
-							break;
+					$mode_updatenotify = updatenotify_get_mode("rcconf", $a_rcconf[$index]['uuid']);
+					if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
+						updatenotify_set("rcconf", UPDATENOTIFY_MODE_MODIFIED, $a_rcconf[$index]['uuid']);
 					}
 				}
 			}
 		}
-		if (true === $updateconfig) {
+		if ($updateconfig) {
 			write_config();
 			$updateconfig = false;
 		}
-		header('Location: system_rcconf.php');
+		header("Location: system_rcconf.php");
 		exit;
 	}
 	if (isset($_POST['toggle_selected_rows']) && $_POST['toggle_selected_rows']) {
-		$members = isset($_POST['members']) ? $_POST['members'] : array();
+		$members = isset($_POST['members']) ? $_POST['members'] : [];
 		$updateconfig = false;
 		foreach ($members as $member) {
-			if (false !== ($index = array_search_ex($member, $a_rcvar, "uuid"))) {
-				if (true === isset($a_rcvar[$index]['enable'])) {
-					unset($a_rcvar[$index]['enable']);
+			if (false !== ($index = array_search_ex($member, $a_rcconf, "uuid"))) {
+				if (isset($a_rcconf[$index]['enable'])) {
+					unset($a_rcconf[$index]['enable']);
 				} else {
-					$a_rcvar[$index]['enable'] = true;
+					$a_rcconf[$index]['enable'] = true;
 				}
 				$updateconfig = true;
-				$updatenotifymode = updatenotify_get_mode("rcconf", $a_rcvar[$index]['uuid']);
-				switch ($updatenotifymode) {
-					case UPDATENOTIFY_MODE_NEW:
-						break;
-					case UPDATENOTIFY_MODE_MODIFIED:
-						break;
-					case UPDATENOTIFY_MODE_DIRTY:
-						break;
-					default:
-						updatenotify_set("rcconf", UPDATENOTIFY_MODE_MODIFIED, $a_rcvar[$index]['uuid']);
-						break;
+				$mode_updatenotify = updatenotify_get_mode("rcconf", $a_rcconf[$index]['uuid']);
+				if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
+					updatenotify_set("rcconf", UPDATENOTIFY_MODE_MODIFIED, $a_rcconf[$index]['uuid']);
 				}
 			}
 		}
-		if (true === $updateconfig) {
+		if ($updateconfig) {
 			write_config();
 			$updateconfig = false;
 		}
-		header('Location: system_rcconf.php');
+		header("Location: system_rcconf.php");
 		exit;
 	}
 	if (isset($_POST['delete_selected_rows']) && $_POST['delete_selected_rows']) {
-		$members = isset($_POST['members']) ? $_POST['members'] : array();
+		$members = isset($_POST['members']) ? $_POST['members'] : [];
 		foreach ($members as $member) {
-			if (false !== ($index = array_search_ex($member, $a_rcvar, "uuid"))) {
-				$updatenotifymode = updatenotify_get_mode("rcconf", $a_rcvar[$index]['uuid']);
-				switch ($updatenotifymode) {
+			if (false !== ($index = array_search_ex($member, $a_rcconf, "uuid"))) {
+				$mode_updatenotify = updatenotify_get_mode("rcconf", $a_rcconf[$index]['uuid']);
+				switch ($mode_updatenotify) {
 					case UPDATENOTIFY_MODE_NEW:  
-						updatenotify_clear("rcconf", $a_rcvar[$index]['uuid']);
-						updatenotify_set("rcconf", UPDATENOTIFY_MODE_DIRTY, $a_rcvar[$index]['uuid']);
+						updatenotify_clear("rcconf", $a_rcconf[$index]['uuid']);
+						updatenotify_set("rcconf", UPDATENOTIFY_MODE_DIRTY_CONFIG, $a_rcconf[$index]['uuid']);
 						break;
 					case UPDATENOTIFY_MODE_MODIFIED:
-						updatenotify_clear("rcconf", $a_rcvar[$index]['uuid']);
-						updatenotify_set("rcconf", UPDATENOTIFY_MODE_DIRTY, $a_rcvar[$index]['uuid']);
+						updatenotify_clear("rcconf", $a_rcconf[$index]['uuid']);
+						updatenotify_set("rcconf", UPDATENOTIFY_MODE_DIRTY, $a_rcconf[$index]['uuid']);
 						break;
-					case UPDATENOTIFY_MODE_DIRTY:
-						break;
-					default:
-						updatenotify_set("rcconf", UPDATENOTIFY_MODE_DIRTY, $a_rcvar[$index]['uuid']);
+					case UPDATENOTIFY_MODE_UNKNOWN:
+						updatenotify_set("rcconf", UPDATENOTIFY_MODE_DIRTY, $a_rcconf[$index]['uuid']);
 						break;
 				}
 			}
 		}
-		header('Location: system_rcconf.php');
+		header("Location: system_rcconf.php");
 		exit;
 	}
 }
@@ -203,17 +175,29 @@ function rcconf_process_updatenotification($mode, $data) {
 				}
 			}
 			break;
+		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
+			if (is_array($config['system']['rcconf']['param'])) {
+				$index = array_search_ex($data, $config['system']['rcconf']['param'], "uuid");
+				if (false !== $index) {
+					unset($config['system']['rcconf']['param'][$index]);
+					write_config();
+				}
+			}
+			break;
 	}
 	return $retval;
 }
+
+$pgtitle = array(gettext("System"), gettext("Advanced"), gettext("rc.conf"));
 ?>
 <?php include("fbegin.inc");?>
 <script type="text/javascript">
 <!-- Begin JavaScript
 function togglecheckboxesbyname(ego, byname) {
 	var a_members = document.getElementsByName(byname);
-	var i;
-	for (i = 0; i < a_members.length; i++) {
+	var numberofmembers = a_members.length;
+	var i = 0;
+	for (; i < numberofmembers; i++) {
 		if (a_members[i].type === 'checkbox') {
 			if (a_members[i].disabled == false) {
 				a_members[i].checked = !a_members[i].checked;
@@ -255,59 +239,66 @@ function togglecheckboxesbyname(ego, byname) {
 					}
 				?>
 				<?php if (updatenotify_exists("rcconf")) { print_config_change_box(); }?>
-				<div id="submit">
+				<div id="submit" style="margin-bottom:10px">
 					<input name="enable_selected_rows" type="submit" class="formbtn" value="<?=gettext("Enable Selected Options");?>" onclick="return confirm('<?=gettext("Do you want to enable selected options?"); ?>')" />
 					<input name="disable_selected_rows" type="submit" class="formbtn" value="<?=gettext("Disable Selected Options");?>" onclick="return confirm('<?= gettext("Do you want to disable selected options?"); ?>')" />
 					<input name="toggle_selected_rows" type="submit" class="formbtn" value="<?=gettext("Toggle Selected Options");?>" onclick="return confirm('<?= gettext("Do you want to toggle selected options?"); ?>')" />
 					<input name="delete_selected_rows" type="submit" class="formbtn" value="<?=gettext("Delete Selected Options");?>" onclick="return confirm('<?= gettext("Do you want to delete selected options?"); ?>')" />
 				</div>
-				<br />
-				<br />
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-					<tr>
-					<td width="1%" class="listhdrlr"><input type="checkbox" name="togglemembers" onclick="javascript:togglecheckboxesbyname(this,'members[]')"/></td>
-						<td width="34%" class="listhdrlr"><?=gettext("Variable");?></td>
-						<td width="20%" class="listhdrr"><?=gettext("Value");?></td>
-						<td width="5%" class="listhdrr"><?=gettext("Status");?></td>
-						<td width="30%" class="listhdrr"><?=gettext("Comment");?></td>
-						<td width="10%" class="list"></td>
-					</tr>
-					<?php foreach ($a_rcvar as $r_rcvar):?>
+					<colgroup>
+						<col style="width:1%">
+						<col style="width:34%">
+						<col style="width:20%">
+						<col style="width:5%">
+						<col style="width:30%">
+						<col style="width:10%">
+					</colgroup>
+					<thead>
 						<tr>
-							<?php $notificationmode = updatenotify_get_mode("rcconf", $r_rcvar['uuid']);?>
-							<?php $enable = isset($r_rcvar['enable']);?>
-							<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
-								<td class="<?=$enable ? "listlr" : "listlrd";?>"><input type="checkbox" name="members[]" value="<?=$r_rcvar['uuid'];?>" id="<?=$r_rcvar['uuid'];?>"/></td>
-							<?php else:?>
-								<td class="<?=$enable ? "listlr" : "listlrd";?>"><input type="checkbox" name="members[]" value="<?=$r_rcvar['uuid'];?>" id="<?=$r_rcvar['uuid'];?>" disabled="disabled"/></td>
-							<?php endif;?>
-							<td class="<?=$enable ? "listlr" : "listlrd";?>"><?=htmlspecialchars($r_rcvar['name']);?>&nbsp;</td>
-							<td class="<?=$enable ? "listr" : "listrd";?>"><?=htmlspecialchars($r_rcvar['value']);?>&nbsp;</td>
-							<td class="<?=$enable ? "listr" : "listrd";?>">
-							<?php if ($enable): ?>
-								<a title="<?=gettext("Enabled");?>"><img src="status_enabled.png" border="0" alt=""/></a>
-							<?php else:?>
-								<a title="<?=gettext("Disabled");?>"><img src="status_disabled.png" border="0" alt=""/></a>
-							<?php endif;?>
-							</td>
-							<td class="listbg"><?= htmlspecialchars($r_rcvar['comment']);?>&nbsp;</td>
-							<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
-								<td valign="middle" nowrap="nowrap" class="list">
-									<a href="system_rcconf_edit.php?uuid=<?=$r_rcvar['uuid'];?>"><img src="e.gif" title="<?=gettext("Edit option");?>" border="0" alt="<?=gettext("Edit option");?>" /></a>
-								</td>
-							<?php else:?>
-								<td valign="middle" nowrap="nowrap" class="list">
-									<img src="del.gif" border="0" alt="" />
-								</td>
-							<?php endif;?>
+							<td class="listhdrlr"><input type="checkbox" name="togglemembers" onclick="javascript:togglecheckboxesbyname(this,'members[]')"/></td>
+							<td class="listhdrr"><?=gettext("Variable");?></td>
+							<td class="listhdrr"><?=gettext("Value");?></td>
+							<td class="listhdrr"><?=gettext("Status");?></td>
+							<td class="listhdrr"><?=gettext("Comment");?></td>
+							<td class="list"></td>
 						</tr>
-					<?php endforeach;?>
+					</thead>
+					<tfoot>
 					<tr>
 						<td class="list" colspan="5"></td>
-						<td class="list">
-							<a href="system_rcconf_edit.php"><img src="plus.gif" title="<?=gettext("Add option");?>" border="0" alt="<?=gettext("Add option");?>" /></a>
-						</td>
+						<td class="list"><a href="system_rcconf_edit.php"><img src="plus.gif" title="<?=gettext("Add option");?>" border="0" alt="<?=gettext("Add option");?>" /></a></td>
 					</tr>
+					</tfoot>
+					<tbody>
+						<?php foreach ($a_rcconf as $r_rcconf):?>
+							<tr>
+								<?php $notificationmode = updatenotify_get_mode("rcconf", $r_rcconf['uuid']);?>
+								<?php $notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);?>
+								<?php $enable = isset($r_rcconf['enable']);?>
+								<?php if ($notdirty):?>
+									<td class="<?=$enable ? "listlr" : "listlrd";?>"><input type="checkbox" name="members[]" value="<?=$r_rcconf['uuid'];?>" id="<?=$r_rcconf['uuid'];?>"/></td>
+								<?php else:?>
+									<td class="<?=$enable ? "listlr" : "listlrd";?>"><input type="checkbox" name="members[]" value="<?=$r_rcconf['uuid'];?>" id="<?=$r_rcconf['uuid'];?>" disabled="disabled"/></td>
+								<?php endif;?>
+								<td class="<?=$enable ? "listr" : "listrd";?>"><?=htmlspecialchars($r_rcconf['name']);?>&nbsp;</td>
+								<td class="<?=$enable ? "listr" : "listrd";?>"><?=htmlspecialchars($r_rcconf['value']);?>&nbsp;</td>
+								<td class="<?=$enable ? "listr" : "listrd";?>">
+								<?php if ($enable): ?>
+									<a title="<?=gettext("Enabled");?>"><img src="status_enabled.png" border="0" alt=""/></a>
+								<?php else:?>
+									<a title="<?=gettext("Disabled");?>"><img src="status_disabled.png" border="0" alt=""/></a>
+								<?php endif;?>
+								</td>
+								<td class="listbg"><?= htmlspecialchars($r_rcconf['comment']);?>&nbsp;</td>
+								<?php if ($notdirty):?>
+									<td valign="middle" nowrap="nowrap" class="list"><a href="system_rcconf_edit.php?uuid=<?=$r_rcconf['uuid'];?>"><img src="e.gif" title="<?=gettext("Edit option");?>" border="0" alt="<?=gettext("Edit option");?>" /></a></td>
+								<?php else:?>
+									<td valign="middle" nowrap="nowrap" class="list"><img src="del.gif" border="0" alt=""/></td>
+								<?php endif;?>
+							</tr>
+						<?php endforeach;?>
+					</tbody>
 				</table>
 				<div id="remarks">
 					<?php html_remark("note", gettext("Note"), gettext("These option(s) will be added to /etc/rc.conf. This allow you to overwrite options used by various generic startup scripts."));?>

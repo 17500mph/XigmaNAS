@@ -37,10 +37,8 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("System"), gettext("Advanced"), gettext("Cron"));
-
-if (false === (isset($config['cron']['job']) && is_array($config['cron']['job']))) {
-	$config['cron']['job'] = array();
+if (!(isset($config['cron']['job']) && is_array($config['cron']['job']))) {
+	$config['cron']['job'] = [];
 }
 $a_cronjob = &$config['cron']['job'];
 
@@ -61,29 +59,21 @@ if ($_POST) {
 		exit;
 	}
 	if (isset($_POST['enable_selected_rows']) && $_POST['enable_selected_rows']) {
-		$members = isset($_POST['members']) ? $_POST['members'] : array();
+		$members = isset($_POST['members']) ? $_POST['members'] : [];
 		$updateconfigfile = false;
 		foreach ($members as $member) {
 			if (false !== ($index = array_search_ex($member, $a_cronjob, "uuid"))) {
-				if (false === isset($a_cronjob[$index]['enable'])) {
+				if (!(isset($a_cronjob[$index]['enable']))) {
 					$a_cronjob[$index]['enable'] = true;
 					$updateconfigfile = true;
-					$updatenotifymode = updatenotify_get_mode("cronjob", $a_cronjob[$index]['uuid']);
-					switch ($updatenotifymode) {
-						case UPDATENOTIFY_MODE_NEW:
-							break;
-						case UPDATENOTIFY_MODE_MODIFIED:
-							break;
-						case UPDATENOTIFY_MODE_DIRTY:
-							break;
-						default:
-							updatenotify_set("cronjob", UPDATENOTIFY_MODE_MODIFIED, $a_cronjob[$index]['uuid']);
-							break;
+					$mode_updatenotify = updatenotify_get_mode("cronjob", $a_cronjob[$index]['uuid']);
+					if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
+						updatenotify_set("cronjob", UPDATENOTIFY_MODE_MODIFIED, $a_cronjob[$index]['uuid']);
 					}
 				}
 			}
 		}
-		if (true === $updateconfigfile) {
+		if ($updateconfigfile) {
 			write_config();
 			$updateconfigfile = false;
 		}
@@ -91,29 +81,21 @@ if ($_POST) {
 		exit;
 	}
 	if (isset($_POST['disable_selected_rows']) && $_POST['disable_selected_rows']) {
-		$members = isset($_POST['members']) ? $_POST['members'] : array();
+		$members = isset($_POST['members']) ? $_POST['members'] : [];
 		$updateconfigfile = false;
 		foreach ($members as $member) {
 			if (false !== ($index = array_search_ex($member, $a_cronjob, "uuid"))) {
-				if (true === isset($a_cronjob[$index]['enable'])) {
+				if (isset($a_cronjob[$index]['enable'])) {
 					unset($a_cronjob[$index]['enable']);
 					$updateconfigfile = true;
-					$updatenotifymode = updatenotify_get_mode("cronjob", $a_cronjob[$index]['uuid']);
-					switch ($updatenotifymode) {
-						case UPDATENOTIFY_MODE_NEW:
-							break;
-						case UPDATENOTIFY_MODE_MODIFIED:
-							break;
-						case UPDATENOTIFY_MODE_DIRTY:
-							break;
-						default:
-							updatenotify_set("cronjob", UPDATENOTIFY_MODE_MODIFIED, $a_cronjob[$index]['uuid']);
-							break;
+					$mode_updatenotify = updatenotify_get_mode("cronjob", $a_cronjob[$index]['uuid']);
+					if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
+						updatenotify_set("cronjob", UPDATENOTIFY_MODE_MODIFIED, $a_cronjob[$index]['uuid']);
 					}
 				}
 			}
 		}
-		if (true === $updateconfigfile) {
+		if ($updateconfigfile) {
 			write_config();
 			$updateconfigfile = false;
 		}
@@ -121,31 +103,23 @@ if ($_POST) {
 		exit;
 	}
 	if (isset($_POST['toggle_selected_rows']) && $_POST['toggle_selected_rows']) {
-		$members = isset($_POST['members']) ? $_POST['members'] : array();
+		$members = isset($_POST['members']) ? $_POST['members'] : [];
 		$updateconfigfile = false;
 		foreach ($members as $member) {
 			if (false !== ($index = array_search_ex($member, $a_cronjob, "uuid"))) {
-				if (true === isset($a_cronjob[$index]['enable'])) {
+				if (isset($a_cronjob[$index]['enable'])) {
 					unset($a_cronjob[$index]['enable']);
 				} else {
 					$a_cronjob[$index]['enable'] = true;
 				}
 				$updateconfigfile = true;
-				$updatenotifymode = updatenotify_get_mode("cronjob", $a_cronjob[$index]['uuid']);
-				switch ($updatenotifymode) {
-					case UPDATENOTIFY_MODE_NEW:
-						break;
-					case UPDATENOTIFY_MODE_MODIFIED:
-						break;
-					case UPDATENOTIFY_MODE_DIRTY:
-						break;
-					default:
-						updatenotify_set("cronjob", UPDATENOTIFY_MODE_MODIFIED, $a_cronjob[$index]['uuid']);
-						break;
+				$mode_updatenotify = updatenotify_get_mode("cronjob", $a_cronjob[$index]['uuid']);
+				if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
+					updatenotify_set("cronjob", UPDATENOTIFY_MODE_MODIFIED, $a_cronjob[$index]['uuid']);
 				}
 			}
 		}
-		if (true === $updateconfigfile) {
+		if ($updateconfigfile) {
 			write_config();
 			$updateconfigfile = false;
 		}
@@ -153,24 +127,21 @@ if ($_POST) {
 		exit;
 	}
 	if (isset($_POST['delete_selected_rows']) && $_POST['delete_selected_rows']) {
-		$members = isset($_POST['members']) ? $_POST['members'] : array();
+		$members = isset($_POST['members']) ? $_POST['members'] : [];
 		foreach ($members as $member) {
 			if (false !== ($index = array_search_ex($member, $a_cronjob, "uuid"))) {
-				$updatenotifymode = updatenotify_get_mode("cronjob", $a_cronjob[$index]['uuid']);
-				switch ($updatenotifymode) {
+				$mode_updatenotify = updatenotify_get_mode("cronjob", $a_cronjob[$index]['uuid']);
+				switch ($mode_updatenotify) {
 					case UPDATENOTIFY_MODE_NEW:
 						updatenotify_clear("cronjob", $a_cronjob[$index]['uuid']);
-						updatenotify_set("cronjob", UPDATENOTIFY_MODE_DIRTY, $a_cronjob[$index]['uuid']);
+						updatenotify_set("cronjob", UPDATENOTIFY_MODE_DIRTY_CONFIG, $a_cronjob[$index]['uuid']);
 						break;
 					case UPDATENOTIFY_MODE_MODIFIED:
 						updatenotify_clear("cronjob", $a_cronjob[$index]['uuid']);
 						updatenotify_set("cronjob", UPDATENOTIFY_MODE_DIRTY, $a_cronjob[$index]['uuid']);
 						break;
-					case UPDATENOTIFY_MODE_DIRTY:
-						break;
-					default:
+					case UPDATENOTIFY_MODE_UNKNOWN:
 						updatenotify_set("cronjob", UPDATENOTIFY_MODE_DIRTY, $a_cronjob[$index]['uuid']);
-						break;
 				}
 			}
 		}
@@ -189,6 +160,7 @@ function cronjob_process_updatenotification($mode, $data) {
 		case UPDATENOTIFY_MODE_MODIFIED:
 			break;
 		case UPDATENOTIFY_MODE_DIRTY:
+		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
 			if (is_array($config['cron']['job'])) {
 				$index = array_search_ex($data, $config['cron']['job'], "uuid");
 				if (false !== $index) {
@@ -200,14 +172,17 @@ function cronjob_process_updatenotification($mode, $data) {
 	}
 	return $retval;
 }
+
+$pgtitle = array(gettext("System"), gettext("Advanced"), gettext("Cron"));
 ?>
 <?php include("fbegin.inc");?>
 <script type="text/javascript">
 <!-- Begin JavaScript
 function togglecheckboxesbyname(ego, byname) {
 	var a_members = document.getElementsByName(byname);
-	var i;
-	for (i = 0; i < a_members.length; i++) {
+	var numberofmembers = a_members.length;
+	var i = 0;
+	for (; i < numberofmembers; i++) {
 		if (a_members[i].type === 'checkbox') {
 			if (a_members[i].disabled == false) {
 				a_members[i].checked = !a_members[i].checked;
@@ -249,60 +224,66 @@ function togglecheckboxesbyname(ego, byname) {
 					}
 				?>
 				<?php if (updatenotify_exists("cronjob")) { print_config_change_box(); } ?>
-				<div id="submit">
+				<div id="submit" style="margin-bottom:10px">
 					<input name="enable_selected_rows" type="submit" class="formbtn" value="<?=gettext("Enable Selected Jobs");?>" onclick="return confirm('<?=gettext("Do you want to enable selected jobs?");?>')" />
 					<input name="disable_selected_rows" type="submit" class="formbtn" value="<?=gettext("Disable Selected Jobs");?>" onclick="return confirm('<?=gettext("Do you want to disable selected jobs?");?>')" />
 					<input name="toggle_selected_rows" type="submit" class="formbtn" value="<?=gettext("Toggle Selected Jobs");?>" onclick="return confirm('<?=gettext("Do you really to toggle selected jobs?");?>')" />
 					<input name="delete_selected_rows" type="submit" class="formbtn" value="<?=gettext("Delete Selected Jobs");?>" onclick="return confirm('<?=gettext("Do you want to delete selected jobs?");?>')" />
 				</div>
-				<br />
-				<br />
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-					<tr>
-						<td width="1%" class="listhdrlr"><input type="checkbox" name="togglemembers" onclick="javascript:togglecheckboxesbyname(this,'members[]')"/></td>
-						<td width="39%" class="listhdrlr"><?=gettext("Command");?></td>
-						<td width="10%" class="listhdrr"><?=gettext("Who");?></td>
-						<td width="5%" class="listhdrr"><?=gettext("Status");?></td>
-						<td width="35%" class="listhdrr"><?=gettext("Description");?></td>
-						<td width="10%" class="list"></td>
-					</tr>
-					<?php foreach($a_cronjob as $r_cronjob):?>
-						<?php $notificationmode = updatenotify_get_mode("cronjob", $r_cronjob['uuid']);?>
+					<colgroup>
+						<col style="width:1%">
+						<col style="width:39%">
+						<col style="width:10%">
+						<col style="width:5%">
+						<col style="width:35%">
+						<col style="width:10%">
+					</colgroup>
+					<thead>
 						<tr>
-							<?php $notificationmode = updatenotify_get_mode("cronjob", $r_cronjob['uuid']);?>
-							<?php $enable = isset($r_cronjob['enable']);?>
-							<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
-								<td class="<?=$enable ? "listlr" : "listlrd";?>"><input type="checkbox" name="members[]" value="<?=$r_cronjob['uuid'];?>" id="<?=$r_cronjob['uuid'];?>"/></td>
-							<?php else:?>
-								<td class="<?=$enable ? "listlr" : "listlrd";?>"><input type="checkbox" name="members[]" value="<?=$r_cronjob['uuid'];?>" id="<?=$r_cronjob['uuid'];?>" disabled="disabled"/></td>
-							<?php endif;?>
-							<td class="<?=$enable?"listlr":"listlrd";?>"><?=htmlspecialchars($r_cronjob['command']);?>&nbsp;</td>
-							<td class="<?=$enable?"listr":"listrd";?>"><?=htmlspecialchars($r_cronjob['who']);?>&nbsp;</td>
-							<td class="<?=$enable ? "listr" : "listrd";?>">
-								<?php if ($enable):?>
-									<a title="<?=gettext("Enabled");?>"><img src="status_enabled.png" border="0" alt="" /></a>
-								<?php else:?>
-									<a title="<?=gettext("Disabled");?>"><img src="status_disabled.png" border="0" alt="" /></a>
-								<?php endif;?>
-							</td>
-							<td class="listbg"><?=htmlspecialchars($r_cronjob['desc']);?>&nbsp;</td>
-							<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
-								<td valign="middle" nowrap="nowrap" class="list">
-									<a href="system_cron_edit.php?uuid=<?=$r_cronjob['uuid'];?>"><img src="e.gif" title="<?=gettext("Edit job");?>" border="0" alt="<?=gettext("Edit job");?>" /></a>
-								</td>
-							<?php else:?>
-								<td valign="middle" nowrap="nowrap" class="list">
-									<img src="del.gif" border="0" alt="" />
-								</td>
-							<?php endif;?>
+							<td class="listhdrlr"><input type="checkbox" name="togglemembers" onclick="javascript:togglecheckboxesbyname(this,'members[]')"/></td>
+							<td class="listhdrr"><?=gettext("Command");?></td>
+							<td class="listhdrr"><?=gettext("Who");?></td>
+							<td class="listhdrr"><?=gettext("Status");?></td>
+							<td class="listhdrr"><?=gettext("Description");?></td>
+							<td class="list"></td>
 						</tr>
-					<?php endforeach;?>
-					<tr>
-						<td class="list" colspan="5"></td>
-						<td class="list">
-							<a href="system_cron_edit.php"><img src="plus.gif" title="<?=gettext("Add job");?>" border="0" alt="<?=gettext("Add job");?>" /></a>
-						</td>
-					</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td class="list" colspan="5"></td>
+							<td class="list"><a href="system_cron_edit.php"><img src="plus.gif" title="<?=gettext("Add job");?>" border="0" alt="<?=gettext("Add job");?>" /></a></td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<?php foreach($a_cronjob as $r_cronjob):?>
+							<tr>
+								<?php $notificationmode = updatenotify_get_mode("cronjob", $r_cronjob['uuid']);?>
+								<?php $notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);?>
+								<?php $enable = isset($r_cronjob['enable']);?>
+								<?php if ($notdirty):?>
+									<td class="<?=$enable ? "listlr" : "listlrd";?>"><input type="checkbox" name="members[]" value="<?=$r_cronjob['uuid'];?>" id="<?=$r_cronjob['uuid'];?>"/></td>
+								<?php else:?>
+									<td class="<?=$enable ? "listlr" : "listlrd";?>"><input type="checkbox" name="members[]" value="<?=$r_cronjob['uuid'];?>" id="<?=$r_cronjob['uuid'];?>" disabled="disabled"/></td>
+								<?php endif;?>
+								<td class="<?=$enable?"listr":"listrd";?>"><?=htmlspecialchars($r_cronjob['command']);?>&nbsp;</td>
+								<td class="<?=$enable?"listr":"listrd";?>"><?=htmlspecialchars($r_cronjob['who']);?>&nbsp;</td>
+								<td class="<?=$enable ? "listr" : "listrd";?>">
+									<?php if ($enable):?>
+										<a title="<?=gettext("Enabled");?>"><img src="status_enabled.png" border="0" alt="" /></a>
+									<?php else:?>
+										<a title="<?=gettext("Disabled");?>"><img src="status_disabled.png" border="0" alt="" /></a>
+									<?php endif;?>
+								</td>
+								<td class="listbg"><?=htmlspecialchars($r_cronjob['desc']);?>&nbsp;</td>
+								<?php if ($notdirty):?>
+									<td valign="middle" nowrap="nowrap" class="list"><a href="system_cron_edit.php?uuid=<?=$r_cronjob['uuid'];?>"><img src="e.gif" title="<?=gettext("Edit job");?>" border="0" alt="<?=gettext("Edit job");?>" /></a></td>
+								<?php else:?>
+									<td valign="middle" nowrap="nowrap" class="list"><img src="del.gif" border="0" alt=""/></td>
+								<?php endif;?>
+							</tr>
+						<?php endforeach;?>
+					</tbody>
 				</table>
 				<?php include("formend.inc");?>
 			</form>
