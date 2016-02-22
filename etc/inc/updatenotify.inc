@@ -271,8 +271,6 @@ function updatenotify_process($key, $function) {
 	foreach ($a_notification as $notificationv) {
 		if (0 != call_user_func($function, $notificationv['mode'], $notificationv['data'])) {
 			return 1;
-		} else {
-			updatenotify_clear($key, $notificationv['data']);
 		}
 	}
 	return 0;
