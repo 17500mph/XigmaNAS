@@ -15,7 +15,7 @@ DEPENDS_TARGET=	clean build stage
 
 BUILD_DEPENDS=		${NONEXISTENT}:${PORTSDIR}/databases/rrdtool
 DEP_STAGEDIR=		${PORTSDIR}/databases/rrdtool/work/stage
-#PANGO_MODULES=		${PREFIX}/lib/pango/1.8.0/modules
+PANGO_MODULES=		${PREFIX}/lib/pango/1.8.0/modules
 
 do-install:
 # NAS4Free install
@@ -40,27 +40,27 @@ do-install:
 	@${MKDIR} -p ${NAS4FREE_ROOTFS}${PYTHON_SITELIBDIR}
 	@${CP} -pv ${DEP_STAGEDIR}${PYTHON_SITELIBDIR}/rrdtool.so ${NAS4FREE_ROOTFS}${PYTHON_SITELIBDIR}/
 # pango
-	#@${MKDIR} -p ${NAS4FREE_ROOTFS}${PANGO_MODULES}
-	#@${MKDIR} -p ${NAS4FREE_ROOTFS}${PREFIX}/etc/pango
-	#@${CP} -pv ${PANGO_MODULES}/pango-arabic-lang.so ${NAS4FREE_ROOTFS}${PANGO_MODULES}
-	#@${CP} -pv ${PANGO_MODULES}/pango-basic-fc.so ${NAS4FREE_ROOTFS}${PANGO_MODULES}
-	#@${CP} -pv ${PANGO_MODULES}/pango-indic-lang.so ${NAS4FREE_ROOTFS}${PANGO_MODULES}
-	#@${CP} -pv ${PANGO_MODULES}/../modules.cache ${NAS4FREE_ROOTFS}${PANGO_MODULES}/../
-	#@${CP} -pv ${PANGO_MODULES}/../modules.cache ${NAS4FREE_ROOTFS}${PREFIX}/etc/pango/pango.modules
+	@${MKDIR} -p ${NAS4FREE_ROOTFS}${PANGO_MODULES}
+	@${MKDIR} -p ${NAS4FREE_ROOTFS}${PREFIX}/etc/pango
+	@${CP} -pv ${PANGO_MODULES}/pango-arabic-lang.so ${NAS4FREE_ROOTFS}${PANGO_MODULES}
+	@${CP} -pv ${PANGO_MODULES}/pango-basic-fc.so ${NAS4FREE_ROOTFS}${PANGO_MODULES}
+	@${CP} -pv ${PANGO_MODULES}/pango-indic-lang.so ${NAS4FREE_ROOTFS}${PANGO_MODULES}
+	@${CP} -pv ${PANGO_MODULES}/../modules.cache ${NAS4FREE_ROOTFS}${PANGO_MODULES}/../
+	@${CP} -pv ${PANGO_MODULES}/../modules.cache ${NAS4FREE_ROOTFS}${PREFIX}/etc/pango/pango.modules
 # fonts
-	#@${MKDIR} -p ${NAS4FREE_ROOTFS}${PREFIX}/share/fonts
-	#@${MKDIR} -p ${NAS4FREE_ROOTFS}${PREFIX}/etc/fonts/conf.avail
-	#@${MKDIR} -p ${NAS4FREE_ROOTFS}${PREFIX}/etc/fonts/conf.d
-	#@${RM} -rf ${NAS4FREE_ROOTFS}${PREFIX}/share/fonts/dejavu
-	#@${CP} -Rpv ${PREFIX}/share/fonts/dejavu ${NAS4FREE_ROOTFS}${PREFIX}/share/fonts
-	#@${CP} -pv ${PREFIX}/etc/fonts/fonts.conf ${NAS4FREE_ROOTFS}${PREFIX}/etc/fonts
-	#@${CP} -pv ${PREFIX}/etc/fonts/fonts.dtd ${NAS4FREE_ROOTFS}${PREFIX}/etc/fonts
+	@${MKDIR} -p ${NAS4FREE_ROOTFS}${PREFIX}/share/fonts
+	@${MKDIR} -p ${NAS4FREE_ROOTFS}${PREFIX}/etc/fonts/conf.avail
+	@${MKDIR} -p ${NAS4FREE_ROOTFS}${PREFIX}/etc/fonts/conf.d
+	@${RM} -rf ${NAS4FREE_ROOTFS}${PREFIX}/share/fonts/dejavu
+	@${CP} -Rpv ${PREFIX}/share/fonts/dejavu ${NAS4FREE_ROOTFS}${PREFIX}/share/fonts
+	@${CP} -pv ${PREFIX}/etc/fonts/fonts.conf ${NAS4FREE_ROOTFS}${PREFIX}/etc/fonts
+	@${CP} -pv ${PREFIX}/etc/fonts/fonts.dtd ${NAS4FREE_ROOTFS}${PREFIX}/etc/fonts
 
-	#@${CP} -pv ${PREFIX}/etc/fonts/conf.avail/57-dejavu-sans-mono.conf ${NAS4FREE_ROOTFS}${PREFIX}/etc/fonts/conf.avail
-	#@${CP} -pv ${PREFIX}/etc/fonts/conf.avail/57-dejavu-sans.conf ${NAS4FREE_ROOTFS}${PREFIX}/etc/fonts/conf.avail
-	#@${CP} -pv ${PREFIX}/etc/fonts/conf.avail/57-dejavu-serif.conf ${NAS4FREE_ROOTFS}${PREFIX}/etc/fonts/conf.avail
-	#@${LN} -fsv ${PREFIX}/etc/fonts/conf.avail/57-dejavu-sans-mono.conf ${NAS4FREE_ROOTFS}/usr/local/etc/fonts/conf.d/
-	#@${LN} -fsv ${PREFIX}/etc/fonts/conf.avail/57-dejavu-sans.conf ${NAS4FREE_ROOTFS}/usr/local/etc/fonts/conf.d/
-	#@${LN} -fsv ${PREFIX}/etc/fonts/conf.avail/57-dejavu-serif.conf ${NAS4FREE_ROOTFS}/usr/local/etc/fonts/conf.d/
+	@${CP} -pv ${PREFIX}/etc/fonts/conf.avail/57-dejavu-sans-mono.conf ${NAS4FREE_ROOTFS}${PREFIX}/etc/fonts/conf.avail
+	@${CP} -pv ${PREFIX}/etc/fonts/conf.avail/57-dejavu-sans.conf ${NAS4FREE_ROOTFS}${PREFIX}/etc/fonts/conf.avail
+	@${CP} -pv ${PREFIX}/etc/fonts/conf.avail/57-dejavu-serif.conf ${NAS4FREE_ROOTFS}${PREFIX}/etc/fonts/conf.avail
+	@${LN} -fsv ${PREFIX}/etc/fonts/conf.avail/57-dejavu-sans-mono.conf ${NAS4FREE_ROOTFS}/usr/local/etc/fonts/conf.d/
+	@${LN} -fsv ${PREFIX}/etc/fonts/conf.avail/57-dejavu-sans.conf ${NAS4FREE_ROOTFS}/usr/local/etc/fonts/conf.d/
+	@${LN} -fsv ${PREFIX}/etc/fonts/conf.avail/57-dejavu-serif.conf ${NAS4FREE_ROOTFS}/usr/local/etc/fonts/conf.d/
 
 .include <bsd.port.mk>
