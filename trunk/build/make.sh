@@ -1815,8 +1815,8 @@ build_ports() {
 
 	# Choose what to do.
 	$DIALOG --title "$NAS4FREE_PRODUCTNAME - Build/Install Ports" --menu "Please select whether you want to build or install ports." 10 45 2 \
-		"build" "Build ports" \
-		"install" "Install ports" 2> $tempfile
+		"Build" "Build ports" \
+		"Install" "Install ports" 2> $tempfile
 	if [ 0 != $? ]; then # successful?
 		rm $tempfile
 		return 1
@@ -1873,7 +1873,7 @@ $DIALOG --title \"$NAS4FREE_PRODUCTNAME - Ports\" \\
 	rm $tempfile
 
 	case ${choice} in
-		build)
+		Build)
 			# Set ports options
 			echo;
 			echo "--------------------------------------------------------------";
@@ -1889,6 +1889,21 @@ $DIALOG --title \"$NAS4FREE_PRODUCTNAME - Ports\" \\
 				cd ${NAS4FREE_SVNDIR}/build/ports/${port};
 				make clean;
 			done;
+			# workaround copy ports to FreeBSD for downgrade/upgrade to OS
+			echo;
+			echo "--------------------------------------------------------------";
+			echo ">>> Copy new files to ports FreeBSD.";
+			echo "--------------------------------------------------------------";
+			cd ${NAS4FREE_SVNDIR}/build/ports/copy-ports;
+			# Copy port files.
+			cp -f ${NAS4FREE_SVNDIR}/build/ports/copy-ports/files/pango/distinfo /usr/ports/x11-toolkits/pango/distinfo
+			echo "===> Overwrite /usr/ports/x11-toolkits/pango/distinfo"
+			cp -f ${NAS4FREE_SVNDIR}/build/ports/copy-ports/files/pango/Makefile /usr/ports/x11-toolkits/pango/Makefile
+			echo "===> Overwrite /usr/ports/x11-toolkits/pango/Makefile"
+			cp -f ${NAS4FREE_SVNDIR}/build/ports/copy-ports/files/pango/pkg-descr /usr/ports/x11-toolkits/pango/pkg-descr
+			echo "===> Overwrite /usr/ports/x11-toolkits/pango/pkg-descr"
+			cp -f ${NAS4FREE_SVNDIR}/build/ports/copy-ports/files/pango/pkg-plist /usr/ports/x11-toolkits/pango/pkg-plist
+			echo "===> Overwrite /usr/ports/x11-toolkits/pango/pkg-plist"
 			if [ "i386" = ${NAS4FREE_ARCH} ]; then
 				# workaround patch
 				cp ${NAS4FREE_SVNDIR}/build/ports/vbox/files/extra-patch-src-VBox-Devices-Graphics-DevVGA.h /usr/ports/emulators/virtualbox-ose/files/patch-src-VBox-Devices-Graphics-DevVGA.h
@@ -1904,7 +1919,7 @@ $DIALOG --title \"$NAS4FREE_PRODUCTNAME - Ports\" \\
 				[ 0 != $? ] && return 1; # successful?
 			done;
 			;;
-		install)
+		Install)
 			if [ -f /var/db/pkg/local.sqlite ]; then
 				cp -p /var/db/pkg/local.sqlite $NAS4FREE_WORKINGDIR/pkg
 			fi
