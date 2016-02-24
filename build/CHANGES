@@ -86,6 +86,7 @@ Fixes:
 - Fix NFS share network. (ticket #238)
 - Fix boot time ntpdate fail when AD DC enabled.
 - Fix wrong path in Samba AD. (ticket #228, #232)
+- Fix rsync does not start/restart on WebGUI.
 - Undefined symbol "av_find_stream_info" in fuppes/libmetadata_libavformat.so.
 - AFP share is not advised.
 - Fix webserver user logins.
