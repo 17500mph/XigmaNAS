@@ -485,4 +485,42 @@ function html_minidlnabox($ctrlname, $title, $value, $desc, $path, $required = f
 	$ctrl->SetPath($path);
 	$ctrl->Render();
 }
+
+function get_weekday_names($long = NULL, $english = NULL) {
+	$actioncode = (is_null($long) ? 0 : 1) || (is_null($english) ? 0 : 2);
+	switch ($actioncode) {
+		case 0: // short, locale 
+			$retval = [gettext('Mon'), gettext('Tue'), gettext('Wed'), gettext('Thu'), gettext('Fri'), gettext('Sat'), gettext('Sun')];
+			break;
+		case 1: // long, locale
+			$retval = [gettext('Monday'),gettext('Tuesday'),gettext('Wednesday'),gettext('Thursday'),gettext('Friday'),gettext('Saturday'),gettext('Sunday')];
+			break;
+		case 2: // short, english
+			$retval = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+			break;
+		case 3: // long, english
+			$retval = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+			break;
+	}
+	return $retval;
+}
+
+function get_month_names($long = NULL, $english = NULL) {
+	$actioncode = (is_null($long) ? 0 : 1) || (is_null($english) ? 0 : 2);
+	switch ($actioncode) {
+		case 0: // short, locale 
+			$retval = [gettext('Jan'), gettext('Feb'), gettext('Mar'), gettext('Apr'), gettext('May'), gettext('Jun'), gettext('Jul'), gettext('Aug'), gettext('Sep'), gettext('Oct'), gettext('Nov'), gettext('Dec')];
+			break;
+		case 1: // long, locale
+			$retval = [gettext('January'),gettext('February'),gettext('March'),gettext('April'),gettext('May'),gettext('June'),gettext('July'),gettext('August'),gettext('September'),gettext('October'),gettext('November'),gettext('December')];
+			break;
+		case 2: // short, english
+			$retval = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+			break;
+		case 3: // long, english
+			$retval = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+			break;
+	}
+	return $retval;
+}
 ?>
