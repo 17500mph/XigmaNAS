@@ -2395,10 +2395,16 @@ function get_product_revision() {
 	return chop(file_get_contents("{$g['etc_path']}/prd.revision"));
 }
 
-/* Get the product version */
+/* Get the product build time (formatted) */
 function get_product_buildtime() {
 	global $g;
 	return chop(file_get_contents("{$g['etc_path']}/prd.version.buildtime"));
+}
+
+/* Get the product build timestamp */
+function get_product_buildtimestamp() {
+	global $g;
+	return chop(file_get_contents("{$g['etc_path']}/prd.version.buildtimestamp"));
 }
 
 /* Get the product version name */

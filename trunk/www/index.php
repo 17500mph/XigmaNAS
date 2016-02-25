@@ -312,7 +312,7 @@ $(document).ready(function(){
 					$('#diskusage_'+du.id+'_capacity').text(du.capacity);
 					$('#diskusage_'+du.id+'_total').text(du.size);
 					$('#diskusage_'+du.id+'_used').text(du.used);
-					$('#diskusage_'+du.id+'_free').text(du.avail);
+					$('#diskusage_'+du.id+'_avail').text(du.avail);
 				}
 			}
 		}
@@ -412,7 +412,7 @@ $(document).ready(function(){
 	<?php endif;?>
 	<?php html_textinfo("hostname", gettext("Hostname"), system_get_hostname());?>
 	<?php html_textinfo("version", gettext("Version"), sprintf("<strong>%s %s</strong> (%s %s)", get_product_version(), get_product_versionname(), gettext("revision"), get_product_revision()));?>
-	<?php html_textinfo("builddate", gettext("Compiled"), get_product_buildtime());?>
+	<?php html_textinfo("builddate", gettext("Compiled"), get_date_locale_from_timestamp(get_product_buildtimestamp()));?>
 	<?php
 		exec("/sbin/sysctl -n kern.osrevision", $osrevision);
 		exec("/sbin/sysctl -n kern.version", $osversion);
@@ -427,11 +427,11 @@ $(document).ready(function(){
 		}
 	?>
 	<?php html_textinfo("system_bios", gettext("System bios"), sprintf("%s %s %s %s", htmlspecialchars($smbios['bios']['vendor']), gettext("version:"), htmlspecialchars($smbios['bios']['version']), htmlspecialchars($smbios['bios']['reldate'])));?>
-	<?php html_textinfo("system_datetime", gettext("System time"), htmlspecialchars(shell_exec("date")));?>
+	<?php html_textinfo("system_datetime", gettext("System time"), htmlspecialchars(get_systemdate_locale()));?>
 	<?php html_textinfo("system_uptime", gettext("System uptime"), htmlspecialchars(system_get_uptime()));?>
 	<?php if (Session::isAdmin()):?>
 		<?php if ($config['lastchange']):?>
-			<?php html_textinfo("last_config_change", gettext("System last config change"), htmlspecialchars(date("D M j G:i:s T Y", $config['lastchange'])));?>
+			<?php html_textinfo("last_config_change", gettext("System last config change"), htmlspecialchars(get_date_locale_from_timestamp($config['lastchange'])));?>
 		<?php endif;?>
 		<?php if (!empty($cpuinfo['temperature2'])):
 			echo "<tr>";
@@ -586,7 +586,7 @@ $(document).ready(function(){
 						echo sprintf(gettext("Total: %s | Used: %s | Free: %s"),
 							"<span name='diskusage_{$ctrlid}_total' id='diskusage_{$ctrlid}_total' class='total'>{$diskusagev['size']}</span>",
 							"<span name='diskusage_{$ctrlid}_used' id='diskusage_{$ctrlid}_used' class='used'>{$diskusagev['used']}</span>",
-							"<span name='diskusage_{$ctrlid}_free' id='diskusage_{$ctrlid}_free' class='free'>{$diskusagev['avail']}</span>");
+							"<span name='diskusage_{$ctrlid}_avail' id='diskusage_{$ctrlid}_avail' class='avail'>{$diskusagev['avail']}</span>");
 						echo "</div></td></tr>";
 
 						if (++$index < count($diskusage))
@@ -621,7 +621,7 @@ $(document).ready(function(){
 						echo "<br />";
 						echo sprintf(gettext("Total: %s | Alloc: %s | Free: %s | State: %s"),
 							"<span name='diskusage_{$ctrlid}_total' id='diskusage_{$ctrlid}_total' class='total'>{$poolv['size']}</span>",
-							"<span name='diskusage_{$ctrlid}_used' id='diskusage_{$ctrlid}_used' class='used'>{$poolv['alloc']}</span>",
+							"<span name='diskusage_{$ctrlid}_alloc' id='diskusage_{$ctrlid}_alloc' class='alloc'>{$poolv['alloc']}</span>",
 							"<span name='diskusage_{$ctrlid}_free' id='diskusage_{$ctrlid}_free' class='free'>{$poolv['free']}</span>",
 							"<span name='diskusage_{$ctrlid}_state' id='diskusage_{$ctrlid}_state' class='state'><a href='disks_zfs_zpool_info.php?pool={$poolv['name']}'>{$poolv['health']}</a></span>");
 						echo "</div></td></tr>";
