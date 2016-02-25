@@ -656,6 +656,7 @@ create_image() {
 
 	# Set build time.
 	date > ${NAS4FREE_ROOTFS}/etc/prd.version.buildtime
+	date "+%s" > ${NAS4FREE_ROOTFS}/etc/prd.version.buildtimestamp
 
 	# Set revision.
 	echo ${NAS4FREE_REVISION} > ${NAS4FREE_ROOTFS}/etc/prd.revision
@@ -1346,6 +1347,7 @@ create_arm_image() {
 
 	# Set build time.
 	date > ${NAS4FREE_ROOTFS}/etc/prd.version.buildtime
+	date "+%s" > ${NAS4FREE_ROOTFS}/etc/prd.version.buildtimestamp
 
 	# Set Revision.
 	echo ${NAS4FREE_REVISION} > ${NAS4FREE_ROOTFS}/etc/prd.revision
@@ -1815,8 +1817,8 @@ build_ports() {
 
 	# Choose what to do.
 	$DIALOG --title "$NAS4FREE_PRODUCTNAME - Build/Install Ports" --menu "Please select whether you want to build or install ports." 10 45 2 \
-		"Build" "Build ports" \
-		"Install" "Install ports" 2> $tempfile
+		"build" "Build ports" \
+		"install" "Install ports" 2> $tempfile
 	if [ 0 != $? ]; then # successful?
 		rm $tempfile
 		return 1
@@ -1873,7 +1875,7 @@ $DIALOG --title \"$NAS4FREE_PRODUCTNAME - Ports\" \\
 	rm $tempfile
 
 	case ${choice} in
-		Build)
+		build)
 			# Set ports options
 			echo;
 			echo "--------------------------------------------------------------";
@@ -1919,7 +1921,7 @@ $DIALOG --title \"$NAS4FREE_PRODUCTNAME - Ports\" \\
 				[ 0 != $? ] && return 1; # successful?
 			done;
 			;;
-		Install)
+		install)
 			if [ -f /var/db/pkg/local.sqlite ]; then
 				cp -p /var/db/pkg/local.sqlite $NAS4FREE_WORKINGDIR/pkg
 			fi

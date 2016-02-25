@@ -759,7 +759,7 @@ function system_get_sysinfo() {
 
 	// Get uptime and date.
 	$value['uptime'] = system_get_uptime();
-	$value['date'] = trim(shell_exec("date"));
+	$value['date'] = get_systemdate_locale();
 
 	// Get RAM usage.
 	$raminfo = system_get_ram_info();
@@ -820,8 +820,8 @@ function system_get_sysinfo() {
 			$poolinfo['capacity'] = $poolv['cap'];
 			$poolinfo['percentage'] = rtrim($poolv['cap'], "%");
 			$poolinfo['size'] = $poolv['size'];
-			$poolinfo['used'] = $poolv['alloc'];
-			$poolinfo['avail'] = $poolv['free'];
+			$poolinfo['alloc'] = $poolv['alloc'];
+			$poolinfo['free'] = $poolv['free'];
 			$poolinfo['health'] = $poolv['health'];
 			$poolinfo['tooltip']['used'] = sprintf(gettext("%sB used of %sB"), $poolv['alloc'], $poolv['size']);
 			$poolinfo['tooltip']['available'] = sprintf(gettext("%sB available of %sB"), $poolv['free'], $poolv['size']);
@@ -850,5 +850,64 @@ function system_get_sysinfo() {
 	}
 
 	return $value;
+}
+
+function convert_date_string_to_locale($data) {
+// date string format: "%Y.%m.%d.%H.%I.%p.%M.%S.%A.%a.%B.%b.%Z.%z"
+	$a = explode('.', $data);
+	// a[ 0]  =  %1$s: Year (4 digits)
+	// a[ 1]  =  %2$s: Month (2 digits)
+	// a[ 2]  =  %3$s: Day (2 digits)
+	// a[ 3]  =  %4$s: Hour.24 (2 digits)
+	// a[ 4]  =  %5$s: Hour.12 (2 digits)
+	// a[ 5]  =  %6$s: AM/PM (Capital letters)
+	// a[ 6]  =  %7$s: Minute (2 digits)
+	// a[ 7]  =  %8$s: Second (2 digits)
+	// a[ 8]* =  %9$s: Day of the week long (can be localised via gettext)
+	// a[ 9]* = %10$s: Day of the week short (can be localised via gettext)
+	// a[10]* = %11$s: Name of the month long (can be localised via gettext)
+	// a[11]* = %12$s: Name of the month short (can be localised via gettext)
+	// a[12]  = %13$s: Time zone
+	// a[13]  = %14$s: Time zone offset (+/- followed by 4 digits)
+	$retval = sprintf(gettext('%10$s %12$s %3$s %4$s:%7$s:%8$s %13$s %1$s'),$a[0],$a[1],$a[2],$a[3],$a[4],$a[5],$a[6],$a[7],gettext($a[8]),gettext($a[9]),gettext($a[10]),gettext($a[11]),$a[12],$a[13]);
+	return $retval;
+}
+
+function get_systemdate_locale() {
+	// %Y = Year (4 digits)
+	// %m = Month (2 digits)
+	// %d = Day (2 digits)
+	// %H = Hour.24 (2 digits)
+	// %I = Hour.12 (2 digits)
+	// %p = AM/PM (Capital letters)
+	// %M = Minute (2 digits)
+	// %S = Second (2 digits)
+	// %A = Day of the week long (can be localised via gettext)
+	// %a = Day of the week short (can be localised via gettext)
+	// %B = Name of the month long (can be localised via gettext)
+	// %b = Name of the month short (can be localised via gettext)
+	// %Z = Time zone
+	// %z = Time zone offset (+/- followed by 4 digits)
+	$retval = convert_date_string_to_locale(shell_exec('date "+%Y.%m.%d.%H.%I.%p.%M.%S.%A.%a.%B.%b.%Z.%z"'));
+	return $retval;
+}
+
+function get_date_locale_from_timestamp($timestamp) {
+	// Y = Year (4 digits)
+	// m = Month (2 digits)
+	// d = Day (2 digits)
+	// H = Hour.24 (2 digits)
+	// h = Hour.12 (2 digits)
+	// A = AM/PM (Capital letters)
+	// i = Minute (2 digits)
+	// s = Second (2 digits)
+	// l = Day of the week long (can be localised via gettext)
+	// D = Day of the week short (can be localised via gettext)
+	// F = Name of the month long (can be localised via gettext)
+	// M = Name of the month short (can be localised via gettext)
+	// T = Time zone
+	// O = Time zone offset (+/- followed by 4 digits)
+	$retval = convert_date_string_to_locale(date('Y.m.d.H.h.A.i.s.l.D.F.M.T.O', $timestamp));
+	return $retval;
 }
 ?>
