@@ -14,7 +14,7 @@ NAS4FREE_PRODUCTNAME=$(cat ${NAS4FREE_SVNDIR}/etc/prd.name)
 
 OUTPUT="$(echo ${NAS4FREE_PRODUCTNAME} | tr '[:upper:]' '[:lower:]').pot"
 OUTPUTDIR="${NAS4FREE_SVNDIR}/locale"
-PARAMETERS="--output-dir=${OUTPUTDIR} --output=${OUTPUT} \
+PARAMETERS="--output-dir=${OUTPUTDIR} --output=${OUTPUT} --language=PHP \
 --force-po --no-location --no-wrap --sort-output --omit-header"
 
 cd ${NAS4FREE_SVNDIR}/www
@@ -28,9 +28,6 @@ xgettext ${PARAMETERS} --join-existing *.*
 
 cd ${NAS4FREE_SVNDIR}/etc/inc
 xgettext ${PARAMETERS} --join-existing *.*
-
-#cd ${NAS4FREE_SVNDIR}/build/checkversion
-#xgettext ${PARAMETERS} --join-existing *.*
 
 DATE="$(date "+%Y-%m-%d %H:%M")+0000"
 echo "msgid \"\"
