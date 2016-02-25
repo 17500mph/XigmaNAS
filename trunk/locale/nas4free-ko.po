@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-02-25 16:05+0000\n"
+"POT-Creation-Date: 2016-02-25 21:53+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-25 15:21+0000\n"
+"X-Launchpad-Export-Date: 2016-02-25 21:05+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -42,7 +42,7 @@ msgstr ""
 msgid "%d years"
 msgstr ""
 
-#, c-format, php-format
+#, php-format
 msgid "%d%% of %dMiB"
 msgstr "%d%% 전체(%dMiB)"
 
@@ -94,11 +94,11 @@ msgstr "%s%d %s은(는) %s%d에 의해 사용중입니다."
 msgid "%s: cannot get mirror name."
 msgstr ""
 
-#, c-format, php-format
+#, php-format
 msgid "%sB available of %sB"
 msgstr "%sB 중 %sB 사용 가능."
 
-#, c-format, php-format
+#, php-format
 msgid "%sB used of %sB"
 msgstr "%sB 중 %sB 사용됨."
 
@@ -745,6 +745,12 @@ msgstr ""
 msgid "Apply changes"
 msgstr "변경 사항 적용"
 
+msgid "Apr"
+msgstr ""
+
+msgid "April"
+msgstr ""
+
 msgid "Archive"
 msgstr "아카이브"
 
@@ -776,6 +782,12 @@ msgid "Attaching provider '%s'."
 msgstr "제공자 '%s' 부착 중."
 
 msgid "Audio"
+msgstr ""
+
+msgid "Aug"
+msgstr ""
+
+msgid "August"
 msgstr ""
 
 msgid "Auth Group"
@@ -1653,6 +1665,12 @@ msgstr "일"
 
 msgid "Debug"
 msgstr "디버그"
+
+msgid "Dec"
+msgstr ""
+
+msgid "December"
+msgstr ""
 
 msgid ""
 "Decoded as: byte 0-1-2 = average erase count (big endian) and byte 3-4-5 = "
@@ -2654,7 +2672,7 @@ msgstr "트랩 호스트 명을 입력하십시오."
 msgid "Error"
 msgstr "에러"
 
-#, c-format
+#, php-format
 msgid "Error: The changes could not be applied (error code %s)."
 msgstr "에러: 변경 내용이 적용될 수 없습니다(에러 코드 %s)."
 
@@ -2792,7 +2810,7 @@ msgstr "cron 작업 실행에 실패함."
 msgid "Failed to remove: %s"
 msgstr ""
 
-#, c-format
+#, php-format
 msgid "Failed to send status report to: %s."
 msgstr "%s에 상태 보고서를 전송하는 데에 실패했습니다."
 
@@ -2826,6 +2844,12 @@ msgid "Failover"
 msgstr "장애 조치"
 
 msgid "Fatal"
+msgstr ""
+
+msgid "Feb"
+msgstr ""
+
+msgid "February"
 msgstr ""
 
 msgid "File"
@@ -2948,6 +2972,12 @@ msgstr "프랑스어"
 
 msgid "Frequency"
 msgstr "빈도"
+
+msgid "Fri"
+msgstr ""
+
+msgid "Friday"
+msgstr ""
 
 msgid "From email"
 msgstr "전자우편 주소"
@@ -3605,6 +3635,12 @@ msgstr "JBOD"
 msgid "JBOD Information & Status"
 msgstr ""
 
+msgid "Jan"
+msgstr ""
+
+msgid "January"
+msgstr ""
+
 msgid ""
 "January February March April May June July August September October November "
 "December"
@@ -3612,6 +3648,18 @@ msgstr "1월 2월 3월 4월 5월 6월 7월 8월 9월 10월 11월 12월"
 
 msgid "Japanese"
 msgstr "일본어"
+
+msgid "Jul"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
+msgid "Jun"
+msgstr ""
+
+msgid "June"
+msgstr ""
 
 msgid "Kernel"
 msgstr ""
@@ -3990,6 +4038,12 @@ msgstr "사용자로 mapping"
 msgid "Mapping DOS attributes"
 msgstr ""
 
+msgid "Mar"
+msgstr ""
+
+msgid "March"
+msgstr ""
+
 msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
 "not specified."
@@ -4083,6 +4137,9 @@ msgid "Maximum relative humidity seen (percent)"
 msgstr ""
 
 msgid "Maximum temperature seen (degrees C)"
+msgstr ""
+
+msgid "May"
 msgstr ""
 
 msgid "Media"
@@ -4197,6 +4254,12 @@ msgstr "모듈"
 
 msgid "Modules"
 msgstr "모듈"
+
+msgid "Mon"
+msgstr ""
+
+msgid "Monday"
+msgstr ""
 
 msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
 msgstr ""
@@ -4524,6 +4587,12 @@ msgstr "동기화 할 것이 없습니다"
 msgid "Notification email from host: %s"
 msgstr "호스트 %s에서의 공지 전자우편"
 
+msgid "Nov"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
 msgid "Now"
 msgstr "지금"
 
@@ -4573,6 +4642,12 @@ msgstr "객체 명"
 
 msgid "Occurrence"
 msgstr "발생"
+
+msgid "Oct"
+msgstr ""
+
+msgid "October"
+msgstr ""
 
 msgid "Off"
 msgstr "오프"
@@ -4674,7 +4749,6 @@ msgstr "PPTP"
 msgid "PPTP clients"
 msgstr "PPTP 클라이언트"
 
-#, c-format
 msgid "PSK"
 msgstr "PSK"
 
@@ -5410,6 +5484,12 @@ msgid ""
 "this value. (%d by default)"
 msgstr "요청된 크기가 이 값보다 클 때 삼바는 파일을 비동기적으로 기록할 것입니다. (기본 값은 %d)"
 
+msgid "Sat"
+msgstr ""
+
+msgid "Saturday"
+msgstr ""
+
 msgid "Save"
 msgstr "저장"
 
@@ -5555,8 +5635,14 @@ msgstr "지금 보내기"
 msgid "Send test email"
 msgstr "테스트 전자우편 보내기"
 
+msgid "Sep"
+msgstr ""
+
 msgid "Separate email addresses by semi-colon."
 msgstr "전자우편 주소들을 세미콜론 문자로 분리하십시오."
+
+msgid "September"
+msgstr ""
 
 msgid "Serial Console"
 msgstr "직렬 콘솔"
@@ -5880,7 +5966,7 @@ msgstr "스태틱 라우트"
 msgid "Status"
 msgstr "상태"
 
-#, c-format
+#, php-format
 msgid "Status report successfully sent to: %s."
 msgstr "상태 보고서가 %s로(으로) 성공적으로 전송되었습니다."
 
@@ -5944,6 +6030,12 @@ msgstr "성공적"
 
 msgid "Successful."
 msgstr "성공적."
+
+msgid "Sun"
+msgstr ""
+
+msgid "Sunday"
+msgstr ""
 
 msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
 msgstr "일요일 월요일 화요일 수요일 목요일 금요일 토요일"
@@ -6232,85 +6324,85 @@ msgstr "연관된 MIB 파일들은 %s에서 발견할 수 있습니다."
 msgid "The attribute '%s' already exists."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains invalid characters and is not a valid NetBIOS "
 "name."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains invalid characters and is not a valid domain "
 "name."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains invalid characters and is not a valid host name."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains invalid characters and is not a valid workgroup "
 "name."
 msgstr ""
 
-#, c-format, php-format
+#, php-format
 msgid "The attribute '%s' contains invalid characters."
 msgstr "속성 '%s'은(는) 무효한 문자를 포함하고 있습니다."
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains the illegal character ':' and is not a valid "
 "password."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' does not appear to be a valid certificate."
 msgstr "속성 '%s'은(는) 유효한 인증서로 보이지 않습니다."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' does not appear to be a valid private %s key."
 msgstr "속성 '%s'은(는) 유효한 개인 %s 키로 보이지 않습니다."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' does not appear to be a valid private key."
 msgstr "속성 '%s'은(는) 유효한 개인 키로 보이지 않습니다."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is an invalid port number."
 msgstr "속성 '%s'은(는) 무효한 포트 번호입니다."
 
-#, c-format, php-format
+#, php-format
 msgid "The attribute '%s' is invalid."
 msgstr "속성 '%s'은(는) 무효합니다."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid IP address."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid MAC address."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid file mode mask."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid subnet mask."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid time value."
 msgstr ""
 
-#, c-format, php-format
+#, php-format
 msgid ""
 "The attribute '%s' is required within %d or more characters to %d characters."
 msgstr ""
 
-#, c-format, php-format
+#, php-format
 msgid "The attribute '%s' is required."
 msgstr "속성 '%s'이(가) 필요합니다."
 
@@ -6319,15 +6411,15 @@ msgid ""
 "The attribute '%s' may only consist of the characters a-z, A-Z, 0-9, _ , -."
 msgstr "속성 '%s'은(는) a-z, A-Z, 0-9, _, - 문자만 포함할 수 있습니다."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' may only consist of the characters a-z, A-Z, 0-9."
 msgstr "속성 '%s'은(는) a-z, A-Z, 0-9 문자만 포함할 수 있습니다."
 
-#, c-format, php-format
+#, php-format
 msgid "The attribute '%s' must be a number."
 msgstr "속성 '%s'은(는) 숫자여야 합니다."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' must be a string."
 msgstr "속성 '%s'은(는) 문자열이어야 합니다."
 
@@ -6339,7 +6431,7 @@ msgstr "속성 '%s'은(는) %d와 %d의 범위에 있어야 합니다."
 msgid "The attribute '%s' must be less than '%s'."
 msgstr "속성 '%s'은(는) '%s'보다 작아야 합니다."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' must contain at least one entry."
 msgstr "속성 '%s'은(는) 최소 한 개 이상의 항목을 포함해야 합니다."
 
@@ -6375,7 +6467,7 @@ msgstr ""
 msgid "The changes have been applied successfully."
 msgstr "변경 내용들이 성공적으로 적용되었습니다."
 
-#, c-format
+#, php-format
 msgid ""
 "The changes have been saved. You have to <a href='%s'>reboot</a> the system "
 "for the changes to take effect."
@@ -6398,7 +6490,7 @@ msgstr "설정이 복원되지 못했습니다. %s"
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr ""
 
-#, c-format
+#, php-format
 msgid ""
 "The configuration has been changed.<br />You must apply the changes in order "
 "for them to take effect.<br /><b>If this message persist take a look at the "
@@ -7292,6 +7384,12 @@ msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
 msgstr ""
 
+msgid "Thu"
+msgstr ""
+
+msgid "Thursday"
+msgstr ""
+
 msgid "TiB"
 msgstr "TiB"
 
@@ -7510,6 +7608,12 @@ msgstr "강제로 import를 하려고 시도합니다."
 
 msgid "Try to import from on-disk ZFS config."
 msgstr "온-디스크 ZFS 설정에서 가져오기를 시도하십시오."
+
+msgid "Tue"
+msgstr ""
+
+msgid "Tuesday"
+msgstr ""
 
 msgid "Tuning"
 msgstr "미세 조정"
@@ -7817,7 +7921,7 @@ msgstr "사용자"
 msgid "Users & Groups"
 msgstr ""
 
-#, c-format
+#, php-format
 msgid "Using %s bytes fragment size."
 msgstr ""
 
@@ -7934,7 +8038,6 @@ msgstr "WINS 서버 IP 주소(예컨대 MS 액티브 디렉터리 서버에서).
 msgid "WLAN"
 msgstr ""
 
-#, c-format
 msgid "WPA"
 msgstr "WPA"
 
@@ -7980,6 +8083,12 @@ msgstr "웹서버"
 
 msgid "Webserver document root is missing."
 msgstr "웹 서버 문서 루트가 없습니다."
+
+msgid "Wed"
+msgstr ""
+
+msgid "Wednesday"
+msgstr ""
 
 msgid "Week days"
 msgstr "요일"
@@ -8094,7 +8203,7 @@ msgid ""
 "service to clients."
 msgstr "이 서비스를 클라이언트에게 공지하려면 <a href='%s'>Zeroconf/Bonjour</a>를 활성화해야 합니다."
 
-#, c-format
+#, php-format
 msgid "You have to select at least one item for '%s'."
 msgstr "'%s'에 대해 최소 한 개의 항목을 선택해야 합니다."
 

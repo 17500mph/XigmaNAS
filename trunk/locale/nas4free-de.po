@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-02-25 16:05+0000\n"
+"POT-Creation-Date: 2016-02-25 21:53+0000\n"
 "PO-Revision-Date: 2016-02-12 00:48+0000\n"
 "Last-Translator: Tobias Bannert <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-25 15:21+0000\n"
+"X-Launchpad-Export-Date: 2016-02-25 21:05+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -45,7 +45,7 @@ msgstr "%d Jahr"
 msgid "%d years"
 msgstr "%d Jahre"
 
-#, c-format, php-format
+#, php-format
 msgid "%d%% of %dMiB"
 msgstr "%d%% von %dMiB"
 
@@ -97,11 +97,11 @@ msgstr "%s%d %s wird bereits von %s%d verwendet."
 msgid "%s: cannot get mirror name."
 msgstr "%s: Mirror Name kann nicht abgerufen werden."
 
-#, c-format, php-format
+#, php-format
 msgid "%sB available of %sB"
 msgstr "%sB verfügbar von %sB"
 
-#, c-format, php-format
+#, php-format
 msgid "%sB used of %sB"
 msgstr "%sB von %sB verwendet"
 
@@ -825,6 +825,12 @@ msgstr "Anwenden"
 msgid "Apply changes"
 msgstr "Änderung übernehmen"
 
+msgid "Apr"
+msgstr ""
+
+msgid "April"
+msgstr ""
+
 msgid "Archive"
 msgstr "Archiv"
 
@@ -859,6 +865,12 @@ msgstr "Binde Provider '%s' ein."
 
 msgid "Audio"
 msgstr "Ton"
+
+msgid "Aug"
+msgstr ""
+
+msgid "August"
+msgstr ""
 
 msgid "Auth Group"
 msgstr "Authentifizierungsgruppe"
@@ -1801,6 +1813,12 @@ msgstr "Tage"
 
 msgid "Debug"
 msgstr "Debug"
+
+msgid "Dec"
+msgstr ""
+
+msgid "December"
+msgstr ""
 
 msgid ""
 "Decoded as: byte 0-1-2 = average erase count (big endian) and byte 3-4-5 = "
@@ -2852,7 +2870,7 @@ msgstr "Geben Sie den Trap Hostnamen an."
 msgid "Error"
 msgstr "Fehler"
 
-#, c-format
+#, php-format
 msgid "Error: The changes could not be applied (error code %s)."
 msgstr ""
 "Fehler: Die Änderungen konnten nicht durchgeführt werden (Fehlercode %s)."
@@ -2997,7 +3015,7 @@ msgstr "cron Job wurde nicht ausgeführt."
 msgid "Failed to remove: %s"
 msgstr "%s kann nicht entfernt werden"
 
-#, c-format
+#, php-format
 msgid "Failed to send status report to: %s."
 msgstr "Konnte keine Statusreport an %s senden."
 
@@ -3036,6 +3054,12 @@ msgstr "Failover"
 
 msgid "Fatal"
 msgstr "Fataler Fehler"
+
+msgid "Feb"
+msgstr ""
+
+msgid "February"
+msgstr ""
 
 msgid "File"
 msgstr "Datei"
@@ -3161,6 +3185,12 @@ msgstr "Französisch"
 
 msgid "Frequency"
 msgstr "Frequenz"
+
+msgid "Fri"
+msgstr ""
+
+msgid "Friday"
+msgstr ""
 
 msgid "From email"
 msgstr "E-Mail-Adresse des Absenders"
@@ -3880,6 +3910,12 @@ msgstr "JBOD"
 msgid "JBOD Information & Status"
 msgstr "JBOD Information & Status"
 
+msgid "Jan"
+msgstr ""
+
+msgid "January"
+msgstr ""
+
 msgid ""
 "January February March April May June July August September October November "
 "December"
@@ -3889,6 +3925,18 @@ msgstr ""
 
 msgid "Japanese"
 msgstr "Japanisch"
+
+msgid "Jul"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
+msgid "Jun"
+msgstr ""
+
+msgid "June"
+msgstr ""
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -4290,6 +4338,12 @@ msgstr "Bilde auf den Benutzer ab"
 msgid "Mapping DOS attributes"
 msgstr "Maping der DOS-Datei Attribute"
 
+msgid "Mar"
+msgstr ""
+
+msgid "March"
+msgstr ""
+
 msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
 "not specified."
@@ -4393,6 +4447,9 @@ msgstr "maximal gemessene Luftfeuchte"
 
 msgid "Maximum temperature seen (degrees C)"
 msgstr "Maximal gemessene Temperatur (in C)"
+
+msgid "May"
+msgstr ""
 
 msgid "Media"
 msgstr "Media"
@@ -4507,6 +4564,12 @@ msgstr "Modul"
 
 msgid "Modules"
 msgstr "Module"
+
+msgid "Mon"
+msgstr ""
+
+msgid "Monday"
+msgstr ""
 
 msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
 msgstr "Montag Dienstag Mittwoch Donnerstag Freitag Samstag Sonntag"
@@ -4867,6 +4930,12 @@ msgstr "Nichts wurde synchronisiert"
 msgid "Notification email from host: %s"
 msgstr "Mitteilungsemail von Host: %s"
 
+msgid "Nov"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
 msgid "Now"
 msgstr "Jetzt"
 
@@ -4919,6 +4988,12 @@ msgstr "Objektname"
 
 msgid "Occurrence"
 msgstr "Ereignis"
+
+msgid "Oct"
+msgstr ""
+
+msgid "October"
+msgstr ""
 
 msgid "Off"
 msgstr "Deaktiviert"
@@ -5028,7 +5103,6 @@ msgstr "PPTP"
 msgid "PPTP clients"
 msgstr "PPTP-Programm"
 
-#, c-format
 msgid "PSK"
 msgstr "PSK"
 
@@ -5793,6 +5867,12 @@ msgstr ""
 "Samba wird asynchron schreiben, wenn die Größe der Anfrage größer ist als "
 "diese Variable. (Standard: %d)"
 
+msgid "Sat"
+msgstr ""
+
+msgid "Saturday"
+msgstr ""
+
 msgid "Save"
 msgstr "Speichern"
 
@@ -5947,8 +6027,14 @@ msgstr "Jetzt senden"
 msgid "Send test email"
 msgstr "Test-E-Mail senden"
 
+msgid "Sep"
+msgstr ""
+
 msgid "Separate email addresses by semi-colon."
 msgstr "Semikolon getrennte Liste von E-Mail Adressen."
+
+msgid "September"
+msgstr ""
 
 msgid "Serial Console"
 msgstr "Serial Console"
@@ -6308,7 +6394,7 @@ msgstr "Statische Route"
 msgid "Status"
 msgstr "Status"
 
-#, c-format
+#, php-format
 msgid "Status report successfully sent to: %s."
 msgstr "Statusbericht erfolgreich versendet an: %s."
 
@@ -6373,6 +6459,12 @@ msgstr "Erfolgreich"
 
 msgid "Successful."
 msgstr "Erfolgreich"
+
+msgid "Sun"
+msgstr ""
+
+msgid "Sunday"
+msgstr ""
 
 msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
 msgstr "Sonntag Montag Dienstag Mittwoch Donnerstag Freitag Samstag"
@@ -6675,7 +6767,7 @@ msgstr "Die dazugehörigen MIB Dateien können unter %s gefunden werden."
 msgid "The attribute '%s' already exists."
 msgstr "Das Attribut '%s' existiert bereits !"
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains invalid characters and is not a valid NetBIOS "
 "name."
@@ -6683,7 +6775,7 @@ msgstr ""
 "Das Eingabefeld '%s' enthält ungültige Buchstaben und ist kein gültiger "
 "NETBIOS Name."
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains invalid characters and is not a valid domain "
 "name."
@@ -6691,14 +6783,14 @@ msgstr ""
 "Das Eingabefeld '%s' enthält ungültige Buchstaben und ist kein gültiger "
 "Domain Name eines Netzwerks"
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains invalid characters and is not a valid host name."
 msgstr ""
 "Das Eingabefeld '%s' enthält ungültige Buchstaben und ist kein gültiger Host "
 "Name ."
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains invalid characters and is not a valid workgroup "
 "name."
@@ -6706,11 +6798,11 @@ msgstr ""
 "Das Eingabefeld '%s' enthält ungültige Buchstaben und ist kein gültiger Name "
 "einer Arbeitsgruppe ."
 
-#, c-format, php-format
+#, php-format
 msgid "The attribute '%s' contains invalid characters."
 msgstr "Das Attribut '%s' enthält ungültige Zeichen."
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains the illegal character ':' and is not a valid "
 "password."
@@ -6718,54 +6810,54 @@ msgstr ""
 "Das Eingabefeld '%s' enthält ungültige Buchstaben und ist kein gültiges "
 "Passwort."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' does not appear to be a valid certificate."
 msgstr "Das Attribut '%s' scheint kein gültiges Zertifikat zu sein."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' does not appear to be a valid private %s key."
 msgstr "Das Attribut '%s' scheint kein gültiger Privat %s Schlüssel zu sein."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' does not appear to be a valid private key."
 msgstr "Das Attribut '%s' ist anscheinend kein gültiger privater Schlüssel."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is an invalid port number."
 msgstr "Der Wert '%s' ist eine ungültige Portnummer"
 
-#, c-format, php-format
+#, php-format
 msgid "The attribute '%s' is invalid."
 msgstr "Das Attribut '%s' ist ungültig."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid IP address."
 msgstr "Das Eingabefeld '%s' enthält keine gültige IP Adresse."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid MAC address."
 msgstr ""
 "Das Eingabefeld '%s' enthält keine gültige MAC Adresse eine Netzwerkkarte."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid file mode mask."
 msgstr "Das Attribut '%s' ist keine gültige File-Mode Maske."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid subnet mask."
 msgstr "Das Attribut '%s' ist keine gültige Subnet Maske."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid time value."
 msgstr "Das Eingabefeld '%s' enthält eine ungültige Zeitangabe"
 
-#, c-format, php-format
+#, php-format
 msgid ""
 "The attribute '%s' is required within %d or more characters to %d characters."
 msgstr ""
 "Das Attribut '%s' muss zwischen %d oder mehr bis zu %d Zeichen aufweisen."
 
-#, c-format, php-format
+#, php-format
 msgid "The attribute '%s' is required."
 msgstr "Das Attribut '%s' wird benötigt."
 
@@ -6776,16 +6868,16 @@ msgstr ""
 "Das Attribut '%s' darf nur aus folgenden Zeichen bestehen: a-z, A-Z, 0-9, _ "
 ", -."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' may only consist of the characters a-z, A-Z, 0-9."
 msgstr ""
 "Das Attribut '%s' darf nur aus folgenden Zeichen bestehen: a-z, A-Z, 0-9."
 
-#, c-format, php-format
+#, php-format
 msgid "The attribute '%s' must be a number."
 msgstr "Das Attribut '%s' muss eine Zahl sein."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' must be a string."
 msgstr "Der Wert '%s' muss eine Zeichenfolge sein."
 
@@ -6797,7 +6889,7 @@ msgstr "Das Attribut '%s' muss im Bereich von %d und %d liegen."
 msgid "The attribute '%s' must be less than '%s'."
 msgstr "Das Attribut '%s' muss kleiner als '%s' sein."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' must contain at least one entry."
 msgstr "Das Attribut '%s' muss mindestens einen Eintrag enthalten."
 
@@ -6841,7 +6933,7 @@ msgstr ""
 msgid "The changes have been applied successfully."
 msgstr "Die Änderungen wurden übernommen."
 
-#, c-format
+#, php-format
 msgid ""
 "The changes have been saved. You have to <a href='%s'>reboot</a> the system "
 "for the changes to take effect."
@@ -6868,7 +6960,7 @@ msgstr ""
 "Die Konfiguration konnte nicht wiederhergestellt werden. Es wurde keine "
 "Datei hochgeladen!"
 
-#, c-format
+#, php-format
 msgid ""
 "The configuration has been changed.<br />You must apply the changes in order "
 "for them to take effect.<br /><b>If this message persist take a look at the "
@@ -7963,6 +8055,12 @@ msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
 msgstr ""
 
+msgid "Thu"
+msgstr ""
+
+msgid "Thursday"
+msgstr ""
+
 msgid "TiB"
 msgstr "TiB"
 
@@ -8192,6 +8290,12 @@ msgstr "Versuche die Importierung zu erzwingen."
 
 msgid "Try to import from on-disk ZFS config."
 msgstr "Versuche ZFS Konfiguration von der Festplatte zu importieren."
+
+msgid "Tue"
+msgstr ""
+
+msgid "Tuesday"
+msgstr ""
 
 msgid "Tuning"
 msgstr "Feineinstellungen"
@@ -8516,7 +8620,7 @@ msgstr "Benutzer"
 msgid "Users & Groups"
 msgstr "Benutzer & Gruppen"
 
-#, c-format
+#, php-format
 msgid "Using %s bytes fragment size."
 msgstr "Nutze %s Bytes Fragmentgröße."
 
@@ -8633,7 +8737,6 @@ msgstr "WINS Server IP-Adresse (z.B. vom MS Active Directory Server)."
 msgid "WLAN"
 msgstr "WLAN"
 
-#, c-format
 msgid "WPA"
 msgstr "WPA"
 
@@ -8683,6 +8786,12 @@ msgstr "Webserver"
 
 msgid "Webserver document root is missing."
 msgstr "Das oberste Dokumentenverzeichnis des Webservers fehlt."
+
+msgid "Wed"
+msgstr ""
+
+msgid "Wednesday"
+msgstr ""
 
 msgid "Week days"
 msgstr "Wochentage"
@@ -8819,7 +8928,7 @@ msgstr ""
 "Sie müssen <a href='%s'>Zeroconf/Bonjour</a> aktivieren um diesen Service "
 "den Clients bekannt zu machen."
 
-#, c-format
+#, php-format
 msgid "You have to select at least one item for '%s'."
 msgstr "Sie müssen mindestens einen Eintrag für '%s' auswählen."
 

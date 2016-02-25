@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-02-25 16:05+0000\n"
+"POT-Creation-Date: 2016-02-25 21:53+0000\n"
 "PO-Revision-Date: 2015-06-15 08:06+0000\n"
 "Last-Translator: Carsten Matzon <carsten@matzon.dk>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-25 15:21+0000\n"
+"X-Launchpad-Export-Date: 2016-02-25 21:05+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
@@ -42,7 +42,7 @@ msgstr "%d år"
 msgid "%d years"
 msgstr "%d år"
 
-#, c-format, php-format
+#, php-format
 msgid "%d%% of %dMiB"
 msgstr "%d%% af %dMiB"
 
@@ -94,11 +94,11 @@ msgstr "%s%d %s er allerede brugt af %s%d."
 msgid "%s: cannot get mirror name."
 msgstr "%s: kan ikke få navn på spejl."
 
-#, c-format, php-format
+#, php-format
 msgid "%sB available of %sB"
 msgstr "%sB tilgængelig af %sB"
 
-#, c-format, php-format
+#, php-format
 msgid "%sB used of %sB"
 msgstr "%sB brugt af %sB"
 
@@ -770,6 +770,12 @@ msgstr "Anvend"
 msgid "Apply changes"
 msgstr "Anvend ændringer"
 
+msgid "Apr"
+msgstr ""
+
+msgid "April"
+msgstr ""
+
 msgid "Archive"
 msgstr "Arkiv"
 
@@ -803,6 +809,12 @@ msgid "Attaching provider '%s'."
 msgstr "Vedhæfter provider '%s'."
 
 msgid "Audio"
+msgstr ""
+
+msgid "Aug"
+msgstr ""
+
+msgid "August"
 msgstr ""
 
 msgid "Auth Group"
@@ -1705,6 +1717,12 @@ msgstr "Dage"
 
 msgid "Debug"
 msgstr "Fejlsøgning"
+
+msgid "Dec"
+msgstr ""
+
+msgid "December"
+msgstr ""
 
 msgid ""
 "Decoded as: byte 0-1-2 = average erase count (big endian) and byte 3-4-5 = "
@@ -2731,7 +2749,7 @@ msgstr "Indtast trap værtsnavn"
 msgid "Error"
 msgstr "Fejl"
 
-#, c-format
+#, php-format
 msgid "Error: The changes could not be applied (error code %s)."
 msgstr "Fejl: Ændringerne kunne ikke anvendes (fejl kode %s)."
 
@@ -2873,7 +2891,7 @@ msgstr "Kunne ikke udføre cron opgaven."
 msgid "Failed to remove: %s"
 msgstr "Fejlet ved at fjerne: %s"
 
-#, c-format
+#, php-format
 msgid "Failed to send status report to: %s."
 msgstr "Kunne ikke sende status rapport til: %s."
 
@@ -2911,6 +2929,12 @@ msgid "Failover"
 msgstr "Failover"
 
 msgid "Fatal"
+msgstr ""
+
+msgid "Feb"
+msgstr ""
+
+msgid "February"
 msgstr ""
 
 msgid "File"
@@ -3036,6 +3060,12 @@ msgstr "Fransk"
 
 msgid "Frequency"
 msgstr "Frekvens"
+
+msgid "Fri"
+msgstr ""
+
+msgid "Friday"
+msgstr ""
 
 msgid "From email"
 msgstr "Fra email"
@@ -3716,6 +3746,12 @@ msgstr "JBOD"
 msgid "JBOD Information & Status"
 msgstr ""
 
+msgid "Jan"
+msgstr ""
+
+msgid "January"
+msgstr ""
+
 msgid ""
 "January February March April May June July August September October November "
 "December"
@@ -3725,6 +3761,18 @@ msgstr ""
 
 msgid "Japanese"
 msgstr "Japansk"
+
+msgid "Jul"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
+msgid "Jun"
+msgstr ""
+
+msgid "June"
+msgstr ""
 
 msgid "Kernel"
 msgstr ""
@@ -4114,6 +4162,12 @@ msgstr "Kortlæg til bruger"
 msgid "Mapping DOS attributes"
 msgstr ""
 
+msgid "Mar"
+msgstr ""
+
+msgid "March"
+msgstr ""
+
 msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
 "not specified."
@@ -4210,6 +4264,9 @@ msgstr ""
 
 msgid "Maximum temperature seen (degrees C)"
 msgstr "Maksimum temperatur detekteret (grader C)"
+
+msgid "May"
+msgstr ""
 
 msgid "Media"
 msgstr "Medie"
@@ -4323,6 +4380,12 @@ msgstr "Modul"
 
 msgid "Modules"
 msgstr "Moduler"
+
+msgid "Mon"
+msgstr ""
+
+msgid "Monday"
+msgstr ""
 
 msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
 msgstr "Mandag Tirsdag Onsdag Torsdag Fredag Lørdag Søndag"
@@ -4678,6 +4741,12 @@ msgstr "Intet at synkronisere"
 msgid "Notification email from host: %s"
 msgstr "Anmeldelse e-mail fra host: %s"
 
+msgid "Nov"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
 msgid "Now"
 msgstr "Nu"
 
@@ -4728,6 +4797,12 @@ msgstr "Objekt navn"
 
 msgid "Occurrence"
 msgstr "Frekvens"
+
+msgid "Oct"
+msgstr ""
+
+msgid "October"
+msgstr ""
 
 msgid "Off"
 msgstr "Fra"
@@ -4835,7 +4910,6 @@ msgstr "PPTP"
 msgid "PPTP clients"
 msgstr "PPTP klienter"
 
-#, c-format
 msgid "PSK"
 msgstr "PSK"
 
@@ -5593,6 +5667,12 @@ msgstr ""
 "Samba vil skrive asynkront til filen, når størrelse på forespørgslen er mere "
 "end denne værdi. (%d som standard)"
 
+msgid "Sat"
+msgstr ""
+
+msgid "Saturday"
+msgstr ""
+
 msgid "Save"
 msgstr "Gem"
 
@@ -5743,8 +5823,14 @@ msgstr "Afsend nu"
 msgid "Send test email"
 msgstr "Afsend test email"
 
+msgid "Sep"
+msgstr ""
+
 msgid "Separate email addresses by semi-colon."
 msgstr "Adskil email adresser med semikolon."
+
+msgid "September"
+msgstr ""
 
 msgid "Serial Console"
 msgstr "Seriel konsol"
@@ -6086,7 +6172,7 @@ msgstr "Statiske ruter"
 msgid "Status"
 msgstr "Status"
 
-#, c-format
+#, php-format
 msgid "Status report successfully sent to: %s."
 msgstr "Status rapporten blev succesfuldt sendt til: %s"
 
@@ -6150,6 +6236,12 @@ msgstr "Succesfuld"
 
 msgid "Successful."
 msgstr "Succesfuld."
+
+msgid "Sun"
+msgstr ""
+
+msgid "Sunday"
+msgstr ""
 
 msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
 msgstr "Søndag Mandag Tirsdag Onsdag Torsdag Fredag Lørdag"
@@ -6443,7 +6535,7 @@ msgstr "De associerede MIB filer kan findes i %s."
 msgid "The attribute '%s' already exists."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains invalid characters and is not a valid NetBIOS "
 "name."
@@ -6451,7 +6543,7 @@ msgstr ""
 "Beskrivelsen '%s' indeholder ugyldige tegn, og er ikke et gyldigt NetBIOS "
 "navn."
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains invalid characters and is not a valid domain "
 "name."
@@ -6459,12 +6551,12 @@ msgstr ""
 "Beskrivelsen '%s' indeholder ugyldige tegn, og er ikke et gyldigt domæne "
 "navn."
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains invalid characters and is not a valid host name."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains invalid characters and is not a valid workgroup "
 "name."
@@ -6472,11 +6564,11 @@ msgstr ""
 "Beskrivelsen '%s' indeholder ugyldige tegn, og er ikke et gyldigt "
 "Arbejdsgruppe navn."
 
-#, c-format, php-format
+#, php-format
 msgid "The attribute '%s' contains invalid characters."
 msgstr "Attributten '%s' indeholder ugyldige tegn."
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains the illegal character ':' and is not a valid "
 "password."
@@ -6484,52 +6576,52 @@ msgstr ""
 "Beskrivelsen '%s' indeholder ugyldigt tegn ':', og er ikke en gyldig "
 "adgangskode."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' does not appear to be a valid certificate."
 msgstr "Attributten '%s' ser ikke ud til at være et gyldigt certifikat."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' does not appear to be a valid private %s key."
 msgstr "Attributten '%s' ser ikke ud til at være en gyldig privat %s nøgle."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' does not appear to be a valid private key."
 msgstr "Attributten '%s' ser ikke ud til at være en gyldig privat nøgle."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is an invalid port number."
 msgstr "Attributten '%s' er et ugyldigt port nummer."
 
-#, c-format, php-format
+#, php-format
 msgid "The attribute '%s' is invalid."
 msgstr "Attributten '%s' er ugyldig."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid IP address."
 msgstr "Beskrivelsen '%s' er ikke en gyldig IP adresse."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid MAC address."
 msgstr "Beskrivelsen '%s' er ikke en gyldig MAC adresse."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid file mode mask."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid subnet mask."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid time value."
 msgstr "Atribut '%s' er ikke en gyldig tids værdi"
 
-#, c-format, php-format
+#, php-format
 msgid ""
 "The attribute '%s' is required within %d or more characters to %d characters."
 msgstr ""
 
-#, c-format, php-format
+#, php-format
 msgid "The attribute '%s' is required."
 msgstr "Attributten '%s' er påkrævet."
 
@@ -6538,15 +6630,15 @@ msgid ""
 "The attribute '%s' may only consist of the characters a-z, A-Z, 0-9, _ , -."
 msgstr "Attributten '%s' må kun bestå af tegnene a-z, A-Z, 0-9, _ og -."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' may only consist of the characters a-z, A-Z, 0-9."
 msgstr "Attributten '%s' må kun bestå af tegnene a-z, A-Z og 0-9."
 
-#, c-format, php-format
+#, php-format
 msgid "The attribute '%s' must be a number."
 msgstr "Attributten '%s' skal være et tal."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' must be a string."
 msgstr "Attributten '%s' skal være en tekststreng."
 
@@ -6558,7 +6650,7 @@ msgstr "Attributten '%s' skal være i området fra %d til %d."
 msgid "The attribute '%s' must be less than '%s'."
 msgstr "Attributten '%s' skal være mindre end '%s'."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' must contain at least one entry."
 msgstr "Attributten '%s' skal indeholde mindst en postering."
 
@@ -6599,7 +6691,7 @@ msgstr ""
 msgid "The changes have been applied successfully."
 msgstr "Ændringerne blev succesfuldt anvendt."
 
-#, c-format
+#, php-format
 msgid ""
 "The changes have been saved. You have to <a href='%s'>reboot</a> the system "
 "for the changes to take effect."
@@ -6624,7 +6716,7 @@ msgstr "Konfigurationen kunne ikke gendannes. %s."
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr "Konfigurationen kunne ikke gendannes. Ingen fil var gemt!"
 
-#, c-format
+#, php-format
 msgid ""
 "The configuration has been changed.<br />You must apply the changes in order "
 "for them to take effect.<br /><b>If this message persist take a look at the "
@@ -7632,6 +7724,12 @@ msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
 msgstr ""
 
+msgid "Thu"
+msgstr ""
+
+msgid "Thursday"
+msgstr ""
+
 msgid "TiB"
 msgstr "TiB"
 
@@ -7859,6 +7957,12 @@ msgstr "Prøv at gennemtvinge import."
 
 msgid "Try to import from on-disk ZFS config."
 msgstr "Forsøg at importere fra on-disk ZFS konfigurationen."
+
+msgid "Tue"
+msgstr ""
+
+msgid "Tuesday"
+msgstr ""
 
 msgid "Tuning"
 msgstr "Finjustering"
@@ -8179,7 +8283,7 @@ msgstr "Brugere"
 msgid "Users & Groups"
 msgstr ""
 
-#, c-format
+#, php-format
 msgid "Using %s bytes fragment size."
 msgstr "Bruger %s bytes fragment størrelse."
 
@@ -8296,7 +8400,6 @@ msgstr "WINS server IP-adresse (f.eks. fra en MS Active Directory server)."
 msgid "WLAN"
 msgstr "WLAN"
 
-#, c-format
 msgid "WPA"
 msgstr "WPA"
 
@@ -8346,6 +8449,12 @@ msgstr "Webserver"
 
 msgid "Webserver document root is missing."
 msgstr "Webserver dokument-rod mangler."
+
+msgid "Wed"
+msgstr ""
+
+msgid "Wednesday"
+msgstr ""
 
 msgid "Week days"
 msgstr "Ugedage"
@@ -8469,7 +8578,7 @@ msgstr ""
 "Du er nødt til at aktivere <a href='%s'>Zeroconf/Bonjour</a> for at oplyse "
 "klienter om denne tjeneste."
 
-#, c-format
+#, php-format
 msgid "You have to select at least one item for '%s'."
 msgstr "Du skal vælge mindst et element til '%s'."
 

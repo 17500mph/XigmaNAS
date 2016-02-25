@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-02-25 16:05+0000\n"
+"POT-Creation-Date: 2016-02-25 21:53+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: Jānis Marks Gailis <jm-gailis@fai-vianet.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-25 15:21+0000\n"
+"X-Launchpad-Export-Date: 2016-02-25 21:05+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: LATVIA\n"
 "Language: \n"
@@ -42,7 +42,7 @@ msgstr "%d gads"
 msgid "%d years"
 msgstr "%d gadi"
 
-#, c-format, php-format
+#, php-format
 msgid "%d%% of %dMiB"
 msgstr "%d%% no %dMiB"
 
@@ -94,11 +94,11 @@ msgstr "%s%d %s jau tiek izmantots pēc %s%d."
 msgid "%s: cannot get mirror name."
 msgstr ""
 
-#, c-format, php-format
+#, php-format
 msgid "%sB available of %sB"
 msgstr "%sB pieejams no %sB"
 
-#, c-format, php-format
+#, php-format
 msgid "%sB used of %sB"
 msgstr "%sB lietots no %sB"
 
@@ -772,6 +772,12 @@ msgstr "Apstiprināt"
 msgid "Apply changes"
 msgstr "Pielietot izmaiņas"
 
+msgid "Apr"
+msgstr ""
+
+msgid "April"
+msgstr ""
+
 msgid "Archive"
 msgstr "Arhīvs"
 
@@ -805,6 +811,12 @@ msgid "Attaching provider '%s'."
 msgstr "Pievienojam sniedzēju '%s'."
 
 msgid "Audio"
+msgstr ""
+
+msgid "Aug"
+msgstr ""
+
+msgid "August"
 msgstr ""
 
 msgid "Auth Group"
@@ -1692,6 +1704,12 @@ msgstr "Dienas"
 
 msgid "Debug"
 msgstr "Atkļūdot"
+
+msgid "Dec"
+msgstr ""
+
+msgid "December"
+msgstr ""
 
 msgid ""
 "Decoded as: byte 0-1-2 = average erase count (big endian) and byte 3-4-5 = "
@@ -2714,7 +2732,7 @@ msgstr "Ievadi slazda saimniekdatora nosaukumu."
 msgid "Error"
 msgstr "Kļūda"
 
-#, c-format
+#, php-format
 msgid "Error: The changes could not be applied (error code %s)."
 msgstr "Kļūda: Izmaiņas nevar tikt veiktas (kļūdas kods %s)."
 
@@ -2856,7 +2874,7 @@ msgstr "Neizdevās izpildīt cron job."
 msgid "Failed to remove: %s"
 msgstr ""
 
-#, c-format
+#, php-format
 msgid "Failed to send status report to: %s."
 msgstr "Neizdevās nosūtīt pārskatu uz: %s."
 
@@ -2894,6 +2912,12 @@ msgid "Failover"
 msgstr "Kļūmjpārlēce"
 
 msgid "Fatal"
+msgstr ""
+
+msgid "Feb"
+msgstr ""
+
+msgid "February"
 msgstr ""
 
 msgid "File"
@@ -3016,6 +3040,12 @@ msgstr "Franču"
 
 msgid "Frequency"
 msgstr "Frekvence"
+
+msgid "Fri"
+msgstr ""
+
+msgid "Friday"
+msgstr ""
 
 msgid "From email"
 msgstr "No e-pasta"
@@ -3692,6 +3722,12 @@ msgstr "JBOD"
 msgid "JBOD Information & Status"
 msgstr ""
 
+msgid "Jan"
+msgstr ""
+
+msgid "January"
+msgstr ""
+
 msgid ""
 "January February March April May June July August September October November "
 "December"
@@ -3701,6 +3737,18 @@ msgstr ""
 
 msgid "Japanese"
 msgstr "Japāņu"
+
+msgid "Jul"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
+msgid "Jun"
+msgstr ""
+
+msgid "June"
+msgstr ""
 
 msgid "Kernel"
 msgstr ""
@@ -4093,6 +4141,12 @@ msgstr "Kartēt uz lietotāju"
 msgid "Mapping DOS attributes"
 msgstr ""
 
+msgid "Mar"
+msgstr ""
+
+msgid "March"
+msgstr ""
+
 msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
 "not specified."
@@ -4190,6 +4244,9 @@ msgid "Maximum relative humidity seen (percent)"
 msgstr ""
 
 msgid "Maximum temperature seen (degrees C)"
+msgstr ""
+
+msgid "May"
 msgstr ""
 
 msgid "Media"
@@ -4304,6 +4361,12 @@ msgstr "Modulis"
 
 msgid "Modules"
 msgstr "Moduļi"
+
+msgid "Mon"
+msgstr ""
+
+msgid "Monday"
+msgstr ""
 
 msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
 msgstr ""
@@ -4657,6 +4720,12 @@ msgstr "Nav ko sinhronizēt"
 msgid "Notification email from host: %s"
 msgstr "Paziņojuma e-pasts no siamniekdatora: %s"
 
+msgid "Nov"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
 msgid "Now"
 msgstr "Tagad"
 
@@ -4706,6 +4775,12 @@ msgstr "Objekta nosaukums"
 
 msgid "Occurrence"
 msgstr "Notikums"
+
+msgid "Oct"
+msgstr ""
+
+msgid "October"
+msgstr ""
 
 msgid "Off"
 msgstr "Izslēgts"
@@ -4812,7 +4887,6 @@ msgstr "PPTP"
 msgid "PPTP clients"
 msgstr "PPTP klienti"
 
-#, c-format
 msgid "PSK"
 msgstr "PSK"
 
@@ -5567,6 +5641,12 @@ msgstr ""
 "Samba rakstīs datnē asinhroni, kad pieprasījuma lielums ir lielāks nekā šī "
 "vērtība. (%d pēc noklusējuma)"
 
+msgid "Sat"
+msgstr ""
+
+msgid "Saturday"
+msgstr ""
+
 msgid "Save"
 msgstr "Saglabāt"
 
@@ -5714,8 +5794,14 @@ msgstr "Sūtīt tagad"
 msgid "Send test email"
 msgstr "Sūtīt testa e-pastu"
 
+msgid "Sep"
+msgstr ""
+
 msgid "Separate email addresses by semi-colon."
 msgstr "Atdalīt e-pasta adreses ar semikolu."
+
+msgid "September"
+msgstr ""
 
 msgid "Serial Console"
 msgstr "Seriālā Konsole"
@@ -6058,7 +6144,7 @@ msgstr "Statiskie ceļi"
 msgid "Status"
 msgstr "Statuss"
 
-#, c-format
+#, php-format
 msgid "Status report successfully sent to: %s."
 msgstr "Statusa pārskats veiksmīgi nosūtīts uz: %s."
 
@@ -6122,6 +6208,12 @@ msgstr "Veiksmīgi"
 
 msgid "Successful."
 msgstr "Veiksmīgi."
+
+msgid "Sun"
+msgstr ""
+
+msgid "Sunday"
+msgstr ""
 
 msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
 msgstr ""
@@ -6418,85 +6510,85 @@ msgstr "Asociētās MIB datnes var tikt atrastas iekš %s."
 msgid "The attribute '%s' already exists."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains invalid characters and is not a valid NetBIOS "
 "name."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains invalid characters and is not a valid domain "
 "name."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains invalid characters and is not a valid host name."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains invalid characters and is not a valid workgroup "
 "name."
 msgstr ""
 
-#, c-format, php-format
+#, php-format
 msgid "The attribute '%s' contains invalid characters."
 msgstr "Atribūts '%s' satur nederīgus simbolus."
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains the illegal character ':' and is not a valid "
 "password."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' does not appear to be a valid certificate."
 msgstr "Atribūts '%s' neizskatās pēc derīga sertifikāta."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' does not appear to be a valid private %s key."
 msgstr "Atribūts '%s' neizskatās pēc derīgas privātās %s atslēgas."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' does not appear to be a valid private key."
 msgstr "Atribūts '%s' neizskatās pēc derīgas privātās atslēgas."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is an invalid port number."
 msgstr "Atribūts '%s' ir nederīgs porta numurs."
 
-#, c-format, php-format
+#, php-format
 msgid "The attribute '%s' is invalid."
 msgstr "Atribūts '%s' ir nederīgs."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid IP address."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid MAC address."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid file mode mask."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid subnet mask."
 msgstr ""
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid time value."
 msgstr ""
 
-#, c-format, php-format
+#, php-format
 msgid ""
 "The attribute '%s' is required within %d or more characters to %d characters."
 msgstr ""
 
-#, c-format, php-format
+#, php-format
 msgid "The attribute '%s' is required."
 msgstr "Atribūts '%s' ir obligāts."
 
@@ -6506,15 +6598,15 @@ msgid ""
 msgstr ""
 "Atribūts '%s' var satstātvēt tikai no simboliem a-z, A-Z, 0-9, _ , -.."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' may only consist of the characters a-z, A-Z, 0-9."
 msgstr "Atribūts '%s' var satstātvēt tikai no simboliem a-z, A-Z, 0-9."
 
-#, c-format, php-format
+#, php-format
 msgid "The attribute '%s' must be a number."
 msgstr "Atribūtam '%s' vajag būt numuram."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' must be a string."
 msgstr "Atribūtam '%s' jābūt rindai."
 
@@ -6526,7 +6618,7 @@ msgstr "Atribūtam '%s' jābūt diapozonā no %d līdz %d."
 msgid "The attribute '%s' must be less than '%s'."
 msgstr "Atribūtam '%s' jābūt mazākam nekā '%s'."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' must contain at least one entry."
 msgstr "Atribūtam '%s' jāsatur vismaz vienu ierakstu."
 
@@ -6568,7 +6660,7 @@ msgstr ""
 msgid "The changes have been applied successfully."
 msgstr "Izmaiņas ir veiktas veiksmīgi."
 
-#, c-format
+#, php-format
 msgid ""
 "The changes have been saved. You have to <a href='%s'>reboot</a> the system "
 "for the changes to take effect."
@@ -6593,7 +6685,7 @@ msgstr "Konfigurāciju nevar atjaunot. %s"
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr ""
 
-#, c-format
+#, php-format
 msgid ""
 "The configuration has been changed.<br />You must apply the changes in order "
 "for them to take effect.<br /><b>If this message persist take a look at the "
@@ -7584,6 +7676,12 @@ msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
 msgstr ""
 
+msgid "Thu"
+msgstr ""
+
+msgid "Thursday"
+msgstr ""
+
 msgid "TiB"
 msgstr "TiB"
 
@@ -7808,6 +7906,12 @@ msgstr "Mēģināt piespiedu importu."
 
 msgid "Try to import from on-disk ZFS config."
 msgstr "Mēģināt importēt no uz-diska ZFS konfigurāciju."
+
+msgid "Tue"
+msgstr ""
+
+msgid "Tuesday"
+msgstr ""
 
 msgid "Tuning"
 msgstr "Pielāgošana"
@@ -8130,7 +8234,7 @@ msgstr "Lietotāji"
 msgid "Users & Groups"
 msgstr ""
 
-#, c-format
+#, php-format
 msgid "Using %s bytes fragment size."
 msgstr ""
 
@@ -8247,7 +8351,6 @@ msgstr "WINS servera IP adrese (piem. no MS Aktīvās Direktorijas servera)."
 msgid "WLAN"
 msgstr ""
 
-#, c-format
 msgid "WPA"
 msgstr "WPA"
 
@@ -8297,6 +8400,12 @@ msgstr "Webserveris"
 
 msgid "Webserver document root is missing."
 msgstr "Web servera dokumentu sakne ir pazudusi"
+
+msgid "Wed"
+msgstr ""
+
+msgid "Wednesday"
+msgstr ""
 
 msgid "Week days"
 msgstr "Nedēļas dienas"
@@ -8420,7 +8529,7 @@ msgstr ""
 "Tev vajag aktivizēt <a href='%s'>Zeroconf/Bonjour</a> lai reklamētu šo "
 "servisu lietotājiem."
 
-#, c-format
+#, php-format
 msgid "You have to select at least one item for '%s'."
 msgstr "Tev vajag izvēlēties vismaz vienu vienumu priekš '%s'."
 
