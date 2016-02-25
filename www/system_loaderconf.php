@@ -228,7 +228,7 @@ function togglecheckboxesbyname(ego, byname) {
 				<div id="submit" style="margin-bottom:10px">
 					<input name="enable_selected_rows" type="submit" class="formbtn" value="<?=gettext("Enable Selected Options");?>" onclick="return confirm('<?=gettext("Do you want to enable selected options?");?>')" />
 					<input name="disable_selected_rows" type="submit" class="formbtn" value="<?=gettext("Disable Selected Options");?>" onclick="return confirm('<?=gettext("Do you want to disable selected options?");?>')" />
-					<input name="toggle_selected_rows" type="submit" class="formbtn" value="<?=gettext("Toggle Selected Options");?>" onclick="return confirm('<?=gettext("Do you really to toggle selected options?");?>')" />
+					<input name="toggle_selected_rows" type="submit" class="formbtn" value="<?=gettext("Toggle Selected Options");?>" onclick="return confirm('<?=gettext("Do you want to toggle selected options?");?>')" />
 					<input name="delete_selected_rows" type="submit" class="formbtn" value="<?=gettext("Delete Selected Options");?>" onclick="return confirm('<?=gettext("Do you want to delete selected options?");?>')" />
 				</div>
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
