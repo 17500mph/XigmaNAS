@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-01-21 22:28+0000\n"
+"POT-Creation-Date: 2016-02-25 16:05+0000\n"
 "PO-Revision-Date: 2016-01-29 15:25+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-31 12:24+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-25 15:21+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -57,6 +57,18 @@ msgstr "%dB / blokk"
 #, php-format
 msgid "%s Interface"
 msgstr "%s interfész"
+
+#, php-format
+msgid "%s already exists as a %s."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a filesystem."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a volume."
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -444,6 +456,9 @@ msgstr "Aktív felhasználók"
 msgid "Add"
 msgstr "Hozzáadás"
 
+msgid "Add Dataset"
+msgstr ""
+
 msgid "Add Host"
 msgstr "Állomás hozzáadása"
 
@@ -462,6 +477,9 @@ msgstr "Rsync feladat hozzáadása"
 msgid "Add URL"
 msgstr "URL hozzáadása"
 
+msgid "Add Volume"
+msgstr ""
+
 msgid "Add additional scheduled self-test."
 msgstr "További időzített öntesztek hozzáadása"
 
@@ -473,9 +491,6 @@ msgstr "Automatikus pillanatkép hozzáadása"
 
 msgid "Add command"
 msgstr "Parancs hozzáadása"
-
-msgid "Add dataset"
-msgstr "Adattár hozzáadása"
 
 msgid "Add device"
 msgstr "Eszköz hozzáadása"
@@ -536,9 +551,6 @@ msgstr "Cél hozzáadása"
 
 msgid "Add user"
 msgstr "Felhasználó hozzáadása"
-
-msgid "Add volume"
-msgstr "Kötet hozzáadása"
 
 msgid "Additional Network"
 msgstr "Kiegészítő hálózat"
@@ -1004,6 +1016,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "Üres idő"
+
+msgid "Block Size"
+msgstr ""
 
 msgid "Block size"
 msgstr "Blokkméret"
@@ -1852,9 +1867,6 @@ msgstr "Állomás törlése"
 msgid "Delete Login Info"
 msgstr "Törlés Belépés Információk"
 
-msgid "Delete MIB"
-msgstr "MIB törlése"
-
 msgid "Delete RAID"
 msgstr "RAID törlése"
 
@@ -1864,6 +1876,18 @@ msgstr "Útvonal törlése"
 msgid "Delete Rsync job"
 msgstr "Rsync feladat törlése"
 
+msgid "Delete Selected Datasets"
+msgstr ""
+
+msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected Options"
+msgstr ""
+
+msgid "Delete Selected Volumes"
+msgstr ""
+
 msgid "Delete URL"
 msgstr "URL törlése"
 
@@ -1872,12 +1896,6 @@ msgstr "VM törlése"
 
 msgid "Delete algorithm"
 msgstr "Algoritmus törlése"
-
-msgid "Delete all MIBs"
-msgstr "Összes MIB törlése"
-
-msgid "Delete all options"
-msgstr "Minden beállítás törlése"
 
 msgid "Delete all rules"
 msgstr "Minden szabály törlése"
@@ -1896,9 +1914,6 @@ msgstr "Clone törlése"
 
 msgid "Delete command"
 msgstr "Parancs törlése"
-
-msgid "Delete dataset"
-msgstr "Adattár törlése"
 
 msgid "Delete device"
 msgstr "Eszköz törlése"
@@ -1924,17 +1939,11 @@ msgstr "Kezdeményező csoport törlése"
 msgid "Delete interface"
 msgstr "Interfész törlése"
 
-msgid "Delete job"
-msgstr "Feladat törlése"
-
 msgid "Delete module"
 msgstr "Modul törlése"
 
 msgid "Delete mount point"
 msgstr "Csatolási pont törlése"
-
-msgid "Delete option"
-msgstr "Beállítás törlése"
 
 msgid "Delete pool"
 msgstr "Tároló törlése"
@@ -1962,9 +1971,6 @@ msgstr "Cél törlése"
 
 msgid "Delete user"
 msgstr "Felhasználó törlése"
-
-msgid "Delete volume"
-msgstr "Kötet törlése"
 
 msgid "Deletes the recursive snapshot."
 msgstr "Rekurzív snapshot törlése."
@@ -2121,6 +2127,12 @@ msgstr "Fájlkezelő tiltása"
 msgid "Disable Firmware Update"
 msgstr "Firmware feltöltés tiltása"
 
+msgid "Disable Selected Jobs"
+msgstr ""
+
+msgid "Disable Selected Options"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "TCP wrapper tiltása(mod_wrap module)."
 
@@ -2184,20 +2196,11 @@ msgstr ""
 "Biztos törölsz és importálsz?\\nA meglévő beállítások törlődnek és "
 "felülíródnak."
 
-msgid "Do you really want to delete all MIBs?"
-msgstr "Valóban törölni szeretnéd az összes MIB-et?"
-
-msgid "Do you really want to delete all options?"
-msgstr "Biztos, hogy minden beállítást töröl?"
-
 msgid "Do you really want to delete all rules?"
 msgstr "Biztos, hogy minden szabályt töröl?"
 
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "Biztos, hogy törli az összes ütemezett öntesztet?"
-
-msgid "Do you really want to delete this MIB?"
-msgstr "Biztos, hogy törli ezt a MIB-et?"
 
 msgid "Do you really want to delete this Rsync job?"
 msgstr "Biztos, hogy törli ezt az Rsync feladatot?"
@@ -2219,12 +2222,6 @@ msgstr "Valóban törölni kívánja ezt a clone-t?"
 
 msgid "Do you really want to delete this command?"
 msgstr "Biztos, hogy törlöd ezt a parancsot?"
-
-msgid "Do you really want to delete this cron job?"
-msgstr "Valóban törölni akarja ezt az ütemezett feladatot?"
-
-msgid "Do you really want to delete this dataset?"
-msgstr "Valóban törölni kívánja ezt az adattárat?"
 
 msgid "Do you really want to delete this device?"
 msgstr "Valóban törölni akarja ezt az eszközt?"
@@ -2268,9 +2265,6 @@ msgstr ""
 "Biztos, hogy törlöd ezt a csatolási pontot? Minden erre hivatkozó elem "
 "érvénytelenné válik (pl. megosztás)!"
 
-msgid "Do you really want to delete this option?"
-msgstr "Biztos, hogy törlöd ezt a beállítást?"
-
 msgid "Do you really want to delete this pool?"
 msgstr "Biztos, hogy törlöd ezt a tárolót?"
 
@@ -2301,9 +2295,6 @@ msgstr "Valóban törölni akarja ezt a célt?"
 msgid "Do you really want to delete this user?"
 msgstr "Valóban törölni akarja ezt a felhasználót?"
 
-msgid "Do you really want to delete this volume?"
-msgstr "Biztos, hogy törlöd ezt a kötetet?"
-
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
 "and can not be recovered. !!!"
@@ -2323,6 +2314,36 @@ msgstr "Biztos eltávolítod a kiválasztott elemet a listából?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Valóban el akarja távolítani ezt a csomagot?"
+
+msgid "Do you want to delete selected datasets?"
+msgstr ""
+
+msgid "Do you want to delete selected jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected options?"
+msgstr ""
+
+msgid "Do you want to delete selected volumes?"
+msgstr ""
+
+msgid "Do you want to disable selected jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected options?"
+msgstr ""
+
+msgid "Do you want to enable selected jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected options?"
+msgstr ""
+
+msgid "Do you want to toggle selected jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected options?"
+msgstr ""
 
 msgid "Document root"
 msgstr "Dokumentum főkönyvtár"
@@ -2463,6 +2484,9 @@ msgstr "URL szerkesztése"
 msgid "Edit VM"
 msgstr "VM módosítása"
 
+msgid "Edit Volume"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "Auth csoport szerkesztése"
 
@@ -2535,9 +2559,6 @@ msgstr "Cél szerkesztése"
 msgid "Edit user"
 msgstr "Felhasználó szerkesztése"
 
-msgid "Edit volume"
-msgstr "Kötet szerkesztése"
-
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
 msgstr "Az UPS hatékonysága (kimeneti áram és bemeneti áram aránya)"
@@ -2591,6 +2612,12 @@ msgid ""
 msgstr ""
 "STARTTLS titkosítás engedélyezése. Ez nem azt jelenti, hogy TLS-t kell "
 "használni, lehet SSL-t is."
+
+msgid "Enable Selected Jobs"
+msgstr ""
+
+msgid "Enable Selected Options"
+msgstr ""
 
 msgid "Enable TLS connections."
 msgstr "TLS kapcsolat engedélyezése."
@@ -2963,6 +2990,9 @@ msgstr "Hibás"
 
 msgid "Failed to create in-memory file system."
 msgstr "Memória fájlrendszer létrehozása sikertelen."
+
+msgid "Failed to execute command zfs."
+msgstr ""
 
 msgid "Failed to execute cron job."
 msgstr "Hiba az ütemezett feladat végrehajtása közben."
@@ -8034,6 +8064,12 @@ msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
 msgstr ""
 "Alkönyvtárak használatához minden könyvtárat be kell csatolni (pl. %s)."
 
+msgid "Toggle Selected Jobs"
+msgstr ""
+
+msgid "Toggle Selected Options"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "Hibajavított"
 
@@ -8845,12 +8881,8 @@ msgstr "ZFS kötet tulajdonságok"
 msgid "ZFS volume"
 msgstr "ZFS kötet"
 
-msgid ""
-"ZFS volume block size. This value can not be changed after creation. Empty "
-"as default."
+msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
-"ZFS kötet blokkmérete. Létrehozás után nem módosítható. Alapértelmezetten "
-"üres."
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
@@ -9024,3 +9056,61 @@ msgstr "leválasztás"
 
 msgid "version:"
 msgstr "verzió:"
+
+#~ msgid "Delete MIB"
+#~ msgstr "MIB törlése"
+
+#~ msgid "Delete all MIBs"
+#~ msgstr "Összes MIB törlése"
+
+#~ msgid "Delete all options"
+#~ msgstr "Minden beállítás törlése"
+
+#~ msgid "Delete job"
+#~ msgstr "Feladat törlése"
+
+#~ msgid "Delete option"
+#~ msgstr "Beállítás törlése"
+
+#~ msgid "Do you really want to delete all options?"
+#~ msgstr "Biztos, hogy minden beállítást töröl?"
+
+#~ msgid "Do you really want to delete this option?"
+#~ msgstr "Biztos, hogy törlöd ezt a beállítást?"
+
+#~ msgid "Add volume"
+#~ msgstr "Kötet hozzáadása"
+
+#~ msgid "Delete volume"
+#~ msgstr "Kötet törlése"
+
+#~ msgid "Do you really want to delete all MIBs?"
+#~ msgstr "Valóban törölni szeretnéd az összes MIB-et?"
+
+#~ msgid "Do you really want to delete this MIB?"
+#~ msgstr "Biztos, hogy törli ezt a MIB-et?"
+
+#~ msgid "Do you really want to delete this volume?"
+#~ msgstr "Biztos, hogy törlöd ezt a kötetet?"
+
+#~ msgid "Edit volume"
+#~ msgstr "Kötet szerkesztése"
+
+#~ msgid "Add dataset"
+#~ msgstr "Adattár hozzáadása"
+
+#~ msgid "Delete dataset"
+#~ msgstr "Adattár törlése"
+
+#~ msgid "Do you really want to delete this cron job?"
+#~ msgstr "Valóban törölni akarja ezt az ütemezett feladatot?"
+
+#~ msgid "Do you really want to delete this dataset?"
+#~ msgstr "Valóban törölni kívánja ezt az adattárat?"
+
+#~ msgid ""
+#~ "ZFS volume block size. This value can not be changed after creation. Empty "
+#~ "as default."
+#~ msgstr ""
+#~ "ZFS kötet blokkmérete. Létrehozás után nem módosítható. Alapértelmezetten "
+#~ "üres."

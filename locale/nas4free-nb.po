@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-01-21 22:28+0000\n"
+"POT-Creation-Date: 2016-02-25 16:05+0000\n"
 "PO-Revision-Date: 2016-01-15 13:01+0000\n"
 "Last-Translator: Åka Sikrom <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-29 07:53+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-25 15:21+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: NORWAY\n"
 "Language: \n"
 "X-Poedit-Language: Norwegian Bokmal\n"
@@ -52,6 +52,18 @@ msgstr "%dB / blokk"
 
 #, php-format
 msgid "%s Interface"
+msgstr ""
+
+#, php-format
+msgid "%s already exists as a %s."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a filesystem."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a volume."
 msgstr ""
 
 #, php-format
@@ -419,6 +431,9 @@ msgstr "Aktive brukere"
 msgid "Add"
 msgstr "Tilføy"
 
+msgid "Add Dataset"
+msgstr ""
+
 msgid "Add Host"
 msgstr "Legg til vert"
 
@@ -437,6 +452,9 @@ msgstr "Legg til Rsync jobb"
 msgid "Add URL"
 msgstr "Legg til URL"
 
+msgid "Add Volume"
+msgstr ""
+
 msgid "Add additional scheduled self-test."
 msgstr "Legg til en planlagt selv-test."
 
@@ -448,9 +466,6 @@ msgstr "Legg til automatisk øyeblikksbilde"
 
 msgid "Add command"
 msgstr "Legg til kommando"
-
-msgid "Add dataset"
-msgstr "Legg til datasett"
 
 msgid "Add device"
 msgstr "Legg til enhet"
@@ -511,9 +526,6 @@ msgstr "Legg til mål"
 
 msgid "Add user"
 msgstr "Legg til bruker"
-
-msgid "Add volume"
-msgstr "Legg til volum"
 
 msgid "Additional Network"
 msgstr ""
@@ -959,6 +971,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "Blank tid"
+
+msgid "Block Size"
+msgstr ""
 
 msgid "Block size"
 msgstr ""
@@ -1742,9 +1757,6 @@ msgstr "Slett vert"
 msgid "Delete Login Info"
 msgstr "Slett innlogginsinformasjon"
 
-msgid "Delete MIB"
-msgstr "Slett MIB"
-
 msgid "Delete RAID"
 msgstr "Slett RAID"
 
@@ -1754,6 +1766,18 @@ msgstr "Slett rute"
 msgid "Delete Rsync job"
 msgstr "Slett Rsync jobb"
 
+msgid "Delete Selected Datasets"
+msgstr ""
+
+msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected Options"
+msgstr ""
+
+msgid "Delete Selected Volumes"
+msgstr ""
+
 msgid "Delete URL"
 msgstr "Slett URL"
 
@@ -1762,12 +1786,6 @@ msgstr ""
 
 msgid "Delete algorithm"
 msgstr "Slett algoritme"
-
-msgid "Delete all MIBs"
-msgstr "Slett alle MIB"
-
-msgid "Delete all options"
-msgstr "Slett alle alternativer"
 
 msgid "Delete all rules"
 msgstr "Slett alle regler"
@@ -1786,9 +1804,6 @@ msgstr "Slett klone"
 
 msgid "Delete command"
 msgstr "Slett kommando"
-
-msgid "Delete dataset"
-msgstr "Slett datasett"
 
 msgid "Delete device"
 msgstr "Slett enhet"
@@ -1814,17 +1829,11 @@ msgstr "Slett initiativgruppe"
 msgid "Delete interface"
 msgstr "Slett grensesnitt"
 
-msgid "Delete job"
-msgstr "Slett jobb"
-
 msgid "Delete module"
 msgstr "Slett modul"
 
 msgid "Delete mount point"
 msgstr "Slett monteringspunkt"
-
-msgid "Delete option"
-msgstr "Slett alternativ"
 
 msgid "Delete pool"
 msgstr ""
@@ -1852,9 +1861,6 @@ msgstr "Slett mål"
 
 msgid "Delete user"
 msgstr "Slett bruker"
-
-msgid "Delete volume"
-msgstr "Slett volum"
 
 msgid "Deletes the recursive snapshot."
 msgstr ""
@@ -2007,6 +2013,12 @@ msgstr "Deaktiver filordner"
 msgid "Disable Firmware Update"
 msgstr ""
 
+msgid "Disable Selected Jobs"
+msgstr ""
+
+msgid "Disable Selected Options"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
@@ -2066,20 +2078,11 @@ msgid ""
 "cleared and overwritten."
 msgstr ""
 
-msgid "Do you really want to delete all MIBs?"
-msgstr "Vil du virkelig slette alle MIB's?"
-
-msgid "Do you really want to delete all options?"
-msgstr "Vil du virkelig slette alle alternativer?"
-
 msgid "Do you really want to delete all rules?"
 msgstr "Vil du virkelig slette alle reglene?"
 
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "Vil du virkelig slette alle planlagte selv-tester?"
-
-msgid "Do you really want to delete this MIB?"
-msgstr "Vil du virkelig slette denne MIB?"
 
 msgid "Do you really want to delete this Rsync job?"
 msgstr "Vil du virkelig slette denne Rsync jobben?"
@@ -2101,12 +2104,6 @@ msgstr "Vil du virkelig slette denne klonen?"
 
 msgid "Do you really want to delete this command?"
 msgstr "Vil du virkelig slette denne kommandoen?"
-
-msgid "Do you really want to delete this cron job?"
-msgstr "Vil du virkelig slette denne cron jobben?"
-
-msgid "Do you really want to delete this dataset?"
-msgstr "Vil du virkelig slette dette datasettet?"
 
 msgid "Do you really want to delete this device?"
 msgstr "Vil du virkelig slette denne enheten?"
@@ -2150,9 +2147,6 @@ msgstr ""
 "Vil du virkelig slette dette monterings punktet? Alle elementer som "
 "fremdeles bruker denne vil i invalide (f.eks. delinger)!"
 
-msgid "Do you really want to delete this option?"
-msgstr "Vil du virkelig slette dette alternativet?"
-
 msgid "Do you really want to delete this pool?"
 msgstr ""
 
@@ -2183,9 +2177,6 @@ msgstr "Vil du virkelig slette dette målet?"
 msgid "Do you really want to delete this user?"
 msgstr "Vil du virkelig slette denne brukeren?"
 
-msgid "Do you really want to delete this volume?"
-msgstr "Vil du virkelig slette dette volumet?"
-
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
 "and can not be recovered. !!!"
@@ -2205,6 +2196,36 @@ msgstr "Vil du virkelig fjerne det valgte objektet fra listen?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Vil du virkelig avinstallere denne pakken?"
+
+msgid "Do you want to delete selected datasets?"
+msgstr ""
+
+msgid "Do you want to delete selected jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected options?"
+msgstr ""
+
+msgid "Do you want to delete selected volumes?"
+msgstr ""
+
+msgid "Do you want to disable selected jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected options?"
+msgstr ""
+
+msgid "Do you want to enable selected jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected options?"
+msgstr ""
+
+msgid "Do you want to toggle selected jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected options?"
+msgstr ""
 
 msgid "Document root"
 msgstr "Dokument rot"
@@ -2344,6 +2365,9 @@ msgstr "Endre URL"
 msgid "Edit VM"
 msgstr ""
 
+msgid "Edit Volume"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "Endre auth-gruppe"
 
@@ -2416,9 +2440,6 @@ msgstr "Endre mål"
 msgid "Edit user"
 msgstr "Endre bruker"
 
-msgid "Edit volume"
-msgstr ""
-
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
 msgstr ""
@@ -2467,6 +2488,12 @@ msgstr "Slå på SMTP autentisering"
 msgid ""
 "Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can "
 "use SSL."
+msgstr ""
+
+msgid "Enable Selected Jobs"
+msgstr ""
+
+msgid "Enable Selected Options"
 msgstr ""
 
 msgid "Enable TLS connections."
@@ -2831,6 +2858,9 @@ msgstr "Feilet"
 
 msgid "Failed to create in-memory file system."
 msgstr "Feilet med å lage i-minne filsystem."
+
+msgid "Failed to execute command zfs."
+msgstr ""
 
 msgid "Failed to execute cron job."
 msgstr "Kunne ikke kjøre cron jobb."
@@ -7450,6 +7480,12 @@ msgstr ""
 msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
 msgstr ""
 
+msgid "Toggle Selected Jobs"
+msgstr ""
+
+msgid "Toggle Selected Options"
+msgstr ""
+
 msgid "Tolerated"
 msgstr ""
 
@@ -8207,9 +8243,7 @@ msgstr ""
 msgid "ZFS volume"
 msgstr ""
 
-msgid ""
-"ZFS volume block size. This value can not be changed after creation. Empty "
-"as default."
+msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
 
 msgid ""
@@ -8380,3 +8414,51 @@ msgstr "avmontér"
 
 msgid "version:"
 msgstr ""
+
+#~ msgid "Add dataset"
+#~ msgstr "Legg til datasett"
+
+#~ msgid "Delete MIB"
+#~ msgstr "Slett MIB"
+
+#~ msgid "Delete all MIBs"
+#~ msgstr "Slett alle MIB"
+
+#~ msgid "Delete all options"
+#~ msgstr "Slett alle alternativer"
+
+#~ msgid "Delete dataset"
+#~ msgstr "Slett datasett"
+
+#~ msgid "Delete job"
+#~ msgstr "Slett jobb"
+
+#~ msgid "Delete option"
+#~ msgstr "Slett alternativ"
+
+#~ msgid "Do you really want to delete all MIBs?"
+#~ msgstr "Vil du virkelig slette alle MIB's?"
+
+#~ msgid "Do you really want to delete all options?"
+#~ msgstr "Vil du virkelig slette alle alternativer?"
+
+#~ msgid "Do you really want to delete this MIB?"
+#~ msgstr "Vil du virkelig slette denne MIB?"
+
+#~ msgid "Do you really want to delete this cron job?"
+#~ msgstr "Vil du virkelig slette denne cron jobben?"
+
+#~ msgid "Do you really want to delete this dataset?"
+#~ msgstr "Vil du virkelig slette dette datasettet?"
+
+#~ msgid "Do you really want to delete this option?"
+#~ msgstr "Vil du virkelig slette dette alternativet?"
+
+#~ msgid "Add volume"
+#~ msgstr "Legg til volum"
+
+#~ msgid "Delete volume"
+#~ msgstr "Slett volum"
+
+#~ msgid "Do you really want to delete this volume?"
+#~ msgstr "Vil du virkelig slette dette volumet?"

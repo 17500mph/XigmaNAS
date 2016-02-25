@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-01-21 22:28+0000\n"
+"POT-Creation-Date: 2016-02-25 16:05+0000\n"
 "PO-Revision-Date: 2014-11-17 04:09+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-29 07:53+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-25 15:21+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: ALBANIA\n"
 "Language: \n"
 "X-Poedit-Language: Albanian\n"
@@ -52,6 +52,18 @@ msgstr "%dB / bllokuar"
 
 #, php-format
 msgid "%s Interface"
+msgstr ""
+
+#, php-format
+msgid "%s already exists as a %s."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a filesystem."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a volume."
 msgstr ""
 
 #, php-format
@@ -411,6 +423,9 @@ msgstr "Perdorues Aktiv"
 msgid "Add"
 msgstr "Shto"
 
+msgid "Add Dataset"
+msgstr ""
+
 msgid "Add Host"
 msgstr "Shto host"
 
@@ -429,6 +444,9 @@ msgstr "Shto Rsync job"
 msgid "Add URL"
 msgstr "Shto URL"
 
+msgid "Add Volume"
+msgstr ""
+
 msgid "Add additional scheduled self-test."
 msgstr "Shto nje testim automatik te programuar."
 
@@ -440,9 +458,6 @@ msgstr ""
 
 msgid "Add command"
 msgstr "Shto nje komande"
-
-msgid "Add dataset"
-msgstr "Shto dataset"
 
 msgid "Add device"
 msgstr "Shto paisje"
@@ -503,9 +518,6 @@ msgstr "Shto nje objektiv"
 
 msgid "Add user"
 msgstr "Shto perdorues"
-
-msgid "Add volume"
-msgstr ""
 
 msgid "Additional Network"
 msgstr ""
@@ -947,6 +959,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "Ler kohen bosh"
+
+msgid "Block Size"
+msgstr ""
 
 msgid "Block size"
 msgstr ""
@@ -1722,9 +1737,6 @@ msgstr "Fshij Host"
 msgid "Delete Login Info"
 msgstr "Fshij informacionet  e hyrjes"
 
-msgid "Delete MIB"
-msgstr "Fshij MIB"
-
 msgid "Delete RAID"
 msgstr "Fshij RAID"
 
@@ -1734,6 +1746,18 @@ msgstr "Fshij kete rruge"
 msgid "Delete Rsync job"
 msgstr "Fshij urdhrin Rsync"
 
+msgid "Delete Selected Datasets"
+msgstr ""
+
+msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected Options"
+msgstr ""
+
+msgid "Delete Selected Volumes"
+msgstr ""
+
 msgid "Delete URL"
 msgstr "Fshij URL"
 
@@ -1742,12 +1766,6 @@ msgstr ""
 
 msgid "Delete algorithm"
 msgstr "Fshij alogaritmin"
-
-msgid "Delete all MIBs"
-msgstr "Fshij te gjitha MIBs"
-
-msgid "Delete all options"
-msgstr "Fshij te gjitha opcionet"
 
 msgid "Delete all rules"
 msgstr "Fshij te ghitha regullat"
@@ -1766,9 +1784,6 @@ msgstr ""
 
 msgid "Delete command"
 msgstr "Fshij komanden"
-
-msgid "Delete dataset"
-msgstr "Fshij dataset"
 
 msgid "Delete device"
 msgstr "Fhij paisjen"
@@ -1794,17 +1809,11 @@ msgstr "Fshij gruoin iniciator"
 msgid "Delete interface"
 msgstr "Fshij nderfaqen"
 
-msgid "Delete job"
-msgstr "Fshij urdherin"
-
 msgid "Delete module"
 msgstr "Fshij Modulin"
 
 msgid "Delete mount point"
 msgstr "Fshij piken e montimit"
-
-msgid "Delete option"
-msgstr "Fshij opcionin"
 
 msgid "Delete pool"
 msgstr "Fshij pool"
@@ -1832,9 +1841,6 @@ msgstr "Fshij obkjektivin"
 
 msgid "Delete user"
 msgstr "Fshij perdorues"
-
-msgid "Delete volume"
-msgstr ""
 
 msgid "Deletes the recursive snapshot."
 msgstr ""
@@ -1981,6 +1987,12 @@ msgstr "Dizaktivizo Menaxherin e Dosjeve"
 msgid "Disable Firmware Update"
 msgstr ""
 
+msgid "Disable Selected Jobs"
+msgstr ""
+
+msgid "Disable Selected Options"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
@@ -2040,21 +2052,12 @@ msgid ""
 "cleared and overwritten."
 msgstr ""
 
-msgid "Do you really want to delete all MIBs?"
-msgstr "Doni te fshini me te vertete te gjitha MIBs?"
-
-msgid "Do you really want to delete all options?"
-msgstr "Doni te fshini me te vertete te gjitha opcionet?"
-
 msgid "Do you really want to delete all rules?"
 msgstr "Doni te fshini me te vertete te gjitha rregullat?"
 
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr ""
 "Me te vertete doni te fshini te gjitha testimet automatike te programuara?"
-
-msgid "Do you really want to delete this MIB?"
-msgstr "Doni te fshini me te vertete kete MIB?"
 
 msgid "Do you really want to delete this Rsync job?"
 msgstr "Me te vertete doni te fshini kete udher Rsync?"
@@ -2076,12 +2079,6 @@ msgstr ""
 
 msgid "Do you really want to delete this command?"
 msgstr "Doni te fshini me te vertete kete komande?"
-
-msgid "Do you really want to delete this cron job?"
-msgstr "Me te vertete deshironi ta fshini kete pune cronologjie?"
-
-msgid "Do you really want to delete this dataset?"
-msgstr "Me te vertete deshironi ta fshini kete dataset?"
 
 msgid "Do you really want to delete this device?"
 msgstr "Doni te fshini me te vertete kete paisje?"
@@ -2125,9 +2122,6 @@ msgstr ""
 "Me te vertete doni te fshini kete pike montimi? Te gjithe elementet qe "
 "perdorin kete element do te invalidohen (p.sh shperndarja|)"
 
-msgid "Do you really want to delete this option?"
-msgstr "Doni te fshini me te vertete kete opcion?"
-
 msgid "Do you really want to delete this pool?"
 msgstr "Me te vertete deshironi ta fshini kete pool?"
 
@@ -2158,9 +2152,6 @@ msgstr "Me te vertete doni te fshini kete objektiv?"
 msgid "Do you really want to delete this user?"
 msgstr "Doni te fshini me te vertete kete perdorues?"
 
-msgid "Do you really want to delete this volume?"
-msgstr ""
-
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
 "and can not be recovered. !!!"
@@ -2182,6 +2173,36 @@ msgstr "Doni te hiqni me te vertete kete artikull nga lista ?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Doni te disinstaloni me te vertete kete pakete?"
+
+msgid "Do you want to delete selected datasets?"
+msgstr ""
+
+msgid "Do you want to delete selected jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected options?"
+msgstr ""
+
+msgid "Do you want to delete selected volumes?"
+msgstr ""
+
+msgid "Do you want to disable selected jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected options?"
+msgstr ""
+
+msgid "Do you want to enable selected jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected options?"
+msgstr ""
+
+msgid "Do you want to toggle selected jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected options?"
+msgstr ""
 
 msgid "Document root"
 msgstr "Dokument rrenje"
@@ -2321,6 +2342,9 @@ msgstr "Modifiko URL-ne"
 msgid "Edit VM"
 msgstr ""
 
+msgid "Edit Volume"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "Modifiko grupin e autorizuar"
 
@@ -2393,9 +2417,6 @@ msgstr "Modifiko objektivin"
 msgid "Edit user"
 msgstr "Modifiko perdoruesin"
 
-msgid "Edit volume"
-msgstr ""
-
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
 msgstr ""
@@ -2444,6 +2465,12 @@ msgstr "Aktivo autntikimin SMTP"
 msgid ""
 "Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can "
 "use SSL."
+msgstr ""
+
+msgid "Enable Selected Jobs"
+msgstr ""
+
+msgid "Enable Selected Options"
 msgstr ""
 
 msgid "Enable TLS connections."
@@ -2800,6 +2827,9 @@ msgstr "Dështoi"
 
 msgid "Failed to create in-memory file system."
 msgstr "Krijimi ne-memorie te skedarit te sistemit deshtoi."
+
+msgid "Failed to execute command zfs."
+msgstr ""
 
 msgid "Failed to execute cron job."
 msgstr "Ekzekutimi i cron job deshtoi."
@@ -7381,6 +7411,12 @@ msgstr ""
 msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
 msgstr ""
 
+msgid "Toggle Selected Jobs"
+msgstr ""
+
+msgid "Toggle Selected Options"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "E toleruar"
 
@@ -8135,9 +8171,7 @@ msgstr ""
 msgid "ZFS volume"
 msgstr "Volumi ZFS"
 
-msgid ""
-"ZFS volume block size. This value can not be changed after creation. Empty "
-"as default."
+msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
 
 msgid ""
@@ -8308,3 +8342,42 @@ msgstr "zmonto"
 
 msgid "version:"
 msgstr ""
+
+#~ msgid "Add dataset"
+#~ msgstr "Shto dataset"
+
+#~ msgid "Delete MIB"
+#~ msgstr "Fshij MIB"
+
+#~ msgid "Delete all MIBs"
+#~ msgstr "Fshij te gjitha MIBs"
+
+#~ msgid "Delete all options"
+#~ msgstr "Fshij te gjitha opcionet"
+
+#~ msgid "Delete dataset"
+#~ msgstr "Fshij dataset"
+
+#~ msgid "Delete job"
+#~ msgstr "Fshij urdherin"
+
+#~ msgid "Delete option"
+#~ msgstr "Fshij opcionin"
+
+#~ msgid "Do you really want to delete all MIBs?"
+#~ msgstr "Doni te fshini me te vertete te gjitha MIBs?"
+
+#~ msgid "Do you really want to delete all options?"
+#~ msgstr "Doni te fshini me te vertete te gjitha opcionet?"
+
+#~ msgid "Do you really want to delete this MIB?"
+#~ msgstr "Doni te fshini me te vertete kete MIB?"
+
+#~ msgid "Do you really want to delete this cron job?"
+#~ msgstr "Me te vertete deshironi ta fshini kete pune cronologjie?"
+
+#~ msgid "Do you really want to delete this dataset?"
+#~ msgstr "Me te vertete deshironi ta fshini kete dataset?"
+
+#~ msgid "Do you really want to delete this option?"
+#~ msgstr "Doni te fshini me te vertete kete opcion?"

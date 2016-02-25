@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-01-21 22:28+0000\n"
+"POT-Creation-Date: 2016-02-25 16:05+0000\n"
 "PO-Revision-Date: 2016-01-24 06:30+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-29 07:53+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-25 15:21+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -53,6 +53,18 @@ msgstr "%dB / block"
 #, php-format
 msgid "%s Interface"
 msgstr "%s gränssnitt"
+
+#, php-format
+msgid "%s already exists as a %s."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a filesystem."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a volume."
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -434,6 +446,9 @@ msgstr "Aktiva användare"
 msgid "Add"
 msgstr "Lägg till"
 
+msgid "Add Dataset"
+msgstr ""
+
 msgid "Add Host"
 msgstr "Lägg till värd"
 
@@ -452,6 +467,9 @@ msgstr "Lägg till Rsync jobb"
 msgid "Add URL"
 msgstr "Lägg till url"
 
+msgid "Add Volume"
+msgstr ""
+
 msgid "Add additional scheduled self-test."
 msgstr "Lägg till ytterligare schemalagda självtest."
 
@@ -463,9 +481,6 @@ msgstr "Lägg till automatisk avbildning"
 
 msgid "Add command"
 msgstr "Lägg till kommando"
-
-msgid "Add dataset"
-msgstr "Lägg till ett dataset."
 
 msgid "Add device"
 msgstr "Lägg till enhet"
@@ -526,9 +541,6 @@ msgstr "Lägg till mål"
 
 msgid "Add user"
 msgstr "Lägg till användare"
-
-msgid "Add volume"
-msgstr "Lägg till volym"
 
 msgid "Additional Network"
 msgstr "Extra nätverk"
@@ -989,6 +1001,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "Blank tid"
+
+msgid "Block Size"
+msgstr ""
 
 msgid "Block size"
 msgstr "Blockstorlek"
@@ -1838,9 +1853,6 @@ msgstr "Ta bort värd"
 msgid "Delete Login Info"
 msgstr "Radera Inloggnings Information"
 
-msgid "Delete MIB"
-msgstr "Radera MIB"
-
 msgid "Delete RAID"
 msgstr "Ta bort RAID"
 
@@ -1850,6 +1862,18 @@ msgstr "Ta bort väg"
 msgid "Delete Rsync job"
 msgstr "Radera Rsync jobb"
 
+msgid "Delete Selected Datasets"
+msgstr ""
+
+msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected Options"
+msgstr ""
+
+msgid "Delete Selected Volumes"
+msgstr ""
+
 msgid "Delete URL"
 msgstr "Radera URL"
 
@@ -1858,12 +1882,6 @@ msgstr "Ta bort VM"
 
 msgid "Delete algorithm"
 msgstr "Radera algoritm"
-
-msgid "Delete all MIBs"
-msgstr "Radera all MIB:er"
-
-msgid "Delete all options"
-msgstr "Radera alla alternativ"
 
 msgid "Delete all rules"
 msgstr "Raderar alla regler"
@@ -1882,9 +1900,6 @@ msgstr "Ta bort klon"
 
 msgid "Delete command"
 msgstr "Ta bort kommando"
-
-msgid "Delete dataset"
-msgstr "Radera dataset"
 
 msgid "Delete device"
 msgstr "Ta bort enhet"
@@ -1910,17 +1925,11 @@ msgstr "Radera initiatorgrupp"
 msgid "Delete interface"
 msgstr "Ta bort gränssnitt"
 
-msgid "Delete job"
-msgstr "Ta bort jobb"
-
 msgid "Delete module"
 msgstr "Radera modul"
 
 msgid "Delete mount point"
 msgstr "Radera monteringspunkt"
-
-msgid "Delete option"
-msgstr "Radera altenativ"
 
 msgid "Delete pool"
 msgstr "Ta bort pool"
@@ -1948,9 +1957,6 @@ msgstr "Ta bort mål"
 
 msgid "Delete user"
 msgstr "Ta bort användare"
-
-msgid "Delete volume"
-msgstr "Ta bort volym"
 
 msgid "Deletes the recursive snapshot."
 msgstr "Ta bort den rekursiva avbilden."
@@ -2106,6 +2112,12 @@ msgstr "Avaktivera Filhanterare"
 msgid "Disable Firmware Update"
 msgstr "Inaktivera mjukvaruuppdatering"
 
+msgid "Disable Selected Jobs"
+msgstr ""
+
+msgid "Disable Selected Options"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Inaktivera TCP-wrapper (mod_wrap module)."
 
@@ -2169,20 +2181,11 @@ msgstr ""
 "Vill du verkligen radera och importera?\\n Aktuella inställningar kommer att "
 "raderas."
 
-msgid "Do you really want to delete all MIBs?"
-msgstr "Vill du verkligen radera all MIB:er?"
-
-msgid "Do you really want to delete all options?"
-msgstr "Vill du verkligen radera alla alternativ?"
-
 msgid "Do you really want to delete all rules?"
 msgstr "Vill du verkligen radera alla regler?"
 
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "Vill du verkligen ta bort alla schemalagda självtester?"
-
-msgid "Do you really want to delete this MIB?"
-msgstr "Vill du verkligen radera denna MIB?"
 
 msgid "Do you really want to delete this Rsync job?"
 msgstr "Vill du verkligen ta bort detta Rsync jobb?"
@@ -2204,12 +2207,6 @@ msgstr "Vill Du verkligen ta bort den här klonen?"
 
 msgid "Do you really want to delete this command?"
 msgstr "Vill du verkligen ta bort det här kommandot?"
-
-msgid "Do you really want to delete this cron job?"
-msgstr "Vill du verkligen ta bort detta cron-jobb?"
-
-msgid "Do you really want to delete this dataset?"
-msgstr "Vill du verkligen ta bort detta dataset?"
 
 msgid "Do you really want to delete this device?"
 msgstr "Vill du verkligen ta bort denna enhet?"
@@ -2253,9 +2250,6 @@ msgstr ""
 "Vill du verkligen ta bort den här monteringspunkten? Alla element som "
 "fortfarande använder den kommer att bli ogiltiga (t.ex. utdelningen)!"
 
-msgid "Do you really want to delete this option?"
-msgstr "Vill du verkligen radera detta alternativ?"
-
 msgid "Do you really want to delete this pool?"
 msgstr "Vill du verkligen ta bort denna pool?"
 
@@ -2286,9 +2280,6 @@ msgstr "Vill du verkligen ta bort det här målet?"
 msgid "Do you really want to delete this user?"
 msgstr "Vill du verkligen ta bort denna användare?"
 
-msgid "Do you really want to delete this volume?"
-msgstr "Vill Du verkligen ta bort den här volymen?"
-
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
 "and can not be recovered. !!!"
@@ -2310,6 +2301,36 @@ msgstr "Vill du verkligen ta bort det valda föremålet från listan?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Vill du verkligen avinstallera detta paketet?"
+
+msgid "Do you want to delete selected datasets?"
+msgstr ""
+
+msgid "Do you want to delete selected jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected options?"
+msgstr ""
+
+msgid "Do you want to delete selected volumes?"
+msgstr ""
+
+msgid "Do you want to disable selected jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected options?"
+msgstr ""
+
+msgid "Do you want to enable selected jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected options?"
+msgstr ""
+
+msgid "Do you want to toggle selected jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected options?"
+msgstr ""
 
 msgid "Document root"
 msgstr "Dokumentrot"
@@ -2449,6 +2470,9 @@ msgstr "Redigera URL"
 msgid "Edit VM"
 msgstr "Editera VM"
 
+msgid "Edit Volume"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "Editera auth gruppen"
 
@@ -2521,9 +2545,6 @@ msgstr "Redigera mål"
 msgid "Edit user"
 msgstr "Redigera användare"
 
-msgid "Edit volume"
-msgstr "Redigera volym"
-
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
 msgstr "Verkningsgrad på UPS (Utgående ström i förhållande till inkommande)."
@@ -2577,6 +2598,12 @@ msgid ""
 msgstr ""
 "Aktivera STARTTLS kryptering. Detta innebär inte att du måste använda TLS, "
 "du kan använda SSL."
+
+msgid "Enable Selected Jobs"
+msgstr ""
+
+msgid "Enable Selected Options"
+msgstr ""
 
 msgid "Enable TLS connections."
 msgstr "Aktivera TLS-anslutningar."
@@ -2951,6 +2978,9 @@ msgstr "Misslyckades"
 
 msgid "Failed to create in-memory file system."
 msgstr "Misslyckades att skapa filsystemet i minnet."
+
+msgid "Failed to execute command zfs."
+msgstr ""
 
 msgid "Failed to execute cron job."
 msgstr "Misslyckades med att köra cron-jobb."
@@ -7983,6 +8013,12 @@ msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
 msgstr ""
 "För att använda underbibliotek måste du montera varje katalog. (ex. %s)"
 
+msgid "Toggle Selected Jobs"
+msgstr ""
+
+msgid "Toggle Selected Options"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "Tolererat"
 
@@ -8797,12 +8833,8 @@ msgstr "ZFS Volym Egenskaper"
 msgid "ZFS volume"
 msgstr "ZFS volym"
 
-msgid ""
-"ZFS volume block size. This value can not be changed after creation. Empty "
-"as default."
+msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
-"ZFS volym blockstorlek. Detta värde kan inte ändras efter att volymen "
-"skapats. Normalt tomt."
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
@@ -8976,3 +9008,61 @@ msgstr "umount"
 
 msgid "version:"
 msgstr "version:"
+
+#~ msgid "Add dataset"
+#~ msgstr "Lägg till ett dataset."
+
+#~ msgid "Delete MIB"
+#~ msgstr "Radera MIB"
+
+#~ msgid "Delete all MIBs"
+#~ msgstr "Radera all MIB:er"
+
+#~ msgid "Delete all options"
+#~ msgstr "Radera alla alternativ"
+
+#~ msgid "Delete dataset"
+#~ msgstr "Radera dataset"
+
+#~ msgid "Delete job"
+#~ msgstr "Ta bort jobb"
+
+#~ msgid "Delete option"
+#~ msgstr "Radera altenativ"
+
+#~ msgid "Do you really want to delete all MIBs?"
+#~ msgstr "Vill du verkligen radera all MIB:er?"
+
+#~ msgid "Do you really want to delete all options?"
+#~ msgstr "Vill du verkligen radera alla alternativ?"
+
+#~ msgid "Do you really want to delete this MIB?"
+#~ msgstr "Vill du verkligen radera denna MIB?"
+
+#~ msgid "Do you really want to delete this cron job?"
+#~ msgstr "Vill du verkligen ta bort detta cron-jobb?"
+
+#~ msgid "Do you really want to delete this dataset?"
+#~ msgstr "Vill du verkligen ta bort detta dataset?"
+
+#~ msgid "Do you really want to delete this option?"
+#~ msgstr "Vill du verkligen radera detta alternativ?"
+
+#~ msgid "Add volume"
+#~ msgstr "Lägg till volym"
+
+#~ msgid "Delete volume"
+#~ msgstr "Ta bort volym"
+
+#~ msgid "Do you really want to delete this volume?"
+#~ msgstr "Vill Du verkligen ta bort den här volymen?"
+
+#~ msgid "Edit volume"
+#~ msgstr "Redigera volym"
+
+#~ msgid ""
+#~ "ZFS volume block size. This value can not be changed after creation. Empty "
+#~ "as default."
+#~ msgstr ""
+#~ "ZFS volym blockstorlek. Detta värde kan inte ändras efter att volymen "
+#~ "skapats. Normalt tomt."

@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-01-21 22:28+0000\n"
-"PO-Revision-Date: 2016-02-01 12:10+0000\n"
-"Last-Translator: apollo567 <apollo567@hotmail.de>\n"
+"POT-Creation-Date: 2016-02-25 16:05+0000\n"
+"PO-Revision-Date: 2016-02-12 00:48+0000\n"
+"Last-Translator: Tobias Bannert <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-02 15:28+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-25 15:21+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
 "X-Poedit-Language: German\n"
@@ -58,12 +58,24 @@ msgid "%s Interface"
 msgstr "%s Schnittstelle"
 
 #, php-format
+msgid "%s already exists as a %s."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a filesystem."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a volume."
+msgstr ""
+
+#, php-format
 msgid "%s is too long."
 msgstr "%s ist zu lang."
 
 #, php-format
 msgid "%s is used to create %s volumes."
-msgstr "%s wird benutzt um %s Volumes zu erzeugen."
+msgstr "%s wird benutzt, um %s Datenträger zu erstellen."
 
 #, php-format
 msgid "%s of %sB"
@@ -446,6 +458,9 @@ msgstr "Aktive Benutzer"
 msgid "Add"
 msgstr "Hinzufügen"
 
+msgid "Add Dataset"
+msgstr ""
+
 msgid "Add Host"
 msgstr "Host hinzufügen"
 
@@ -464,6 +479,9 @@ msgstr "Rsync-Job hinzufügen"
 msgid "Add URL"
 msgstr "URL hinzufügen"
 
+msgid "Add Volume"
+msgstr ""
+
 msgid "Add additional scheduled self-test."
 msgstr "Zusätzliche planmäßige Selbsttests hinzufügen."
 
@@ -471,13 +489,10 @@ msgid "Add auth group"
 msgstr "Authentifizierungsgruppe hinzufügen"
 
 msgid "Add auto snapshot"
-msgstr "Automatischen Snapshot hinzufügen"
+msgstr "Automatischen Schnappschuss hinzufügen"
 
 msgid "Add command"
 msgstr "Befehl hinzufügen"
-
-msgid "Add dataset"
-msgstr "Datensatz hinzufügen"
 
 msgid "Add device"
 msgstr "Gerät hinzufügen"
@@ -531,16 +546,13 @@ msgid "Add share"
 msgstr "Eine Freigabe hinzufügen"
 
 msgid "Add snapshot"
-msgstr "Snapshot erstellen"
+msgstr "Schnappschuss hinzufügen"
 
 msgid "Add target"
 msgstr "Füge target hinzu"
 
 msgid "Add user"
 msgstr "Lege Benutzer an"
-
-msgid "Add volume"
-msgstr "Datenträger hinzufügen"
 
 msgid "Additional Network"
 msgstr "zusätzliches Netzwerk"
@@ -879,7 +891,7 @@ msgid "Auto"
 msgstr "Auto"
 
 msgid "Auto Snapshot"
-msgstr "Automatischer Snapshot"
+msgstr "Automatischer Schnappschuss"
 
 msgid "Auto size"
 msgstr "Automatisches Anpassen"
@@ -1004,6 +1016,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "untätig"
+
+msgid "Block Size"
+msgstr ""
 
 msgid "Block size"
 msgstr "Blockgröße"
@@ -1152,10 +1167,10 @@ msgid "CPU usage"
 msgstr "Prozessorauslastung"
 
 msgid "Cache"
-msgstr "Cache"
+msgstr "Puffer"
 
 msgid "Cache Device"
-msgstr "Puffer"
+msgstr "Puffergerät"
 
 msgid "Calibration Battery"
 msgstr "Akku Calibration"
@@ -1631,10 +1646,10 @@ msgid "Creates the pool with an alternate root."
 msgstr "Erstellt den Pool mit alternativem Root-Verzeichis."
 
 msgid "Creates the recursive snapshot."
-msgstr "Erstellt einen rekursiven Snapshot"
+msgstr "Erstellt einen rekursiven Schnappschuss."
 
 msgid "Creating filesystem"
-msgstr "Erstelle Dateisystem"
+msgstr "Dateisystem wird erstellt"
 
 msgid "Creating filesystem with 'Soft Updates'"
 msgstr "Erstelle Dateisystem samt 'Soft Updates'"
@@ -1796,7 +1811,7 @@ msgid "Decrypt password"
 msgstr "Passwort entschlüsseln"
 
 msgid "Dedup"
-msgstr "Deduplizieren"
+msgstr "Deduplikation"
 
 msgid "Default"
 msgstr "Vorgaben"
@@ -1838,9 +1853,6 @@ msgstr "Lösche Host"
 msgid "Delete Login Info"
 msgstr "Lösche Login Information"
 
-msgid "Delete MIB"
-msgstr "MIB löschen"
-
 msgid "Delete RAID"
 msgstr "Lösche RAID"
 
@@ -1850,6 +1862,18 @@ msgstr "Lösche Route"
 msgid "Delete Rsync job"
 msgstr "Lösche Rsync-Job"
 
+msgid "Delete Selected Datasets"
+msgstr ""
+
+msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected Options"
+msgstr ""
+
+msgid "Delete Selected Volumes"
+msgstr ""
+
 msgid "Delete URL"
 msgstr "URL löschen"
 
@@ -1858,12 +1882,6 @@ msgstr "VM löschen"
 
 msgid "Delete algorithm"
 msgstr "Löschalgorithmus."
-
-msgid "Delete all MIBs"
-msgstr "Alle MIB's löschen"
-
-msgid "Delete all options"
-msgstr "Alle Optionen löschen"
 
 msgid "Delete all rules"
 msgstr "Lösche alle Regeln"
@@ -1875,16 +1893,13 @@ msgid "Delete auth group"
 msgstr "Authetifikationsgruppe löschen"
 
 msgid "Delete auto snapshot"
-msgstr "Automatischen Snapshot löschen"
+msgstr "Automatischen Schnappschuss löschen"
 
 msgid "Delete clone"
 msgstr "Clone löschen"
 
 msgid "Delete command"
 msgstr "Lösche Befehl"
-
-msgid "Delete dataset"
-msgstr "Datensatz löschen"
 
 msgid "Delete device"
 msgstr "Lösche Gerät"
@@ -1911,17 +1926,11 @@ msgstr "Lösche Initiatorgruppe"
 msgid "Delete interface"
 msgstr "Lösche Schnittstelle"
 
-msgid "Delete job"
-msgstr "Lösche Job"
-
 msgid "Delete module"
 msgstr "Modul löschen"
 
 msgid "Delete mount point"
 msgstr "Einhängepunkt löschen"
-
-msgid "Delete option"
-msgstr "Option löschen"
 
 msgid "Delete pool"
 msgstr "Lösche Pool"
@@ -1942,7 +1951,7 @@ msgid "Delete share"
 msgstr "Freigabe löschen"
 
 msgid "Delete snapshot"
-msgstr "Snapshot löschen"
+msgstr "Schnappschuss löschen"
 
 msgid "Delete target"
 msgstr "Lösche Target"
@@ -1950,11 +1959,8 @@ msgstr "Lösche Target"
 msgid "Delete user"
 msgstr "Lösche Benutzer"
 
-msgid "Delete volume"
-msgstr "Datenträger löschen"
-
 msgid "Deletes the recursive snapshot."
-msgstr "Rekursiven Snapshot löschen"
+msgstr "Rekursiven Schnappschuss löschen"
 
 msgid "Deleting"
 msgstr "Lösche"
@@ -2108,6 +2114,12 @@ msgstr "deaktiviere Dateimanager"
 msgid "Disable Firmware Update"
 msgstr "Firmware Update deaktivieren"
 
+msgid "Disable Selected Jobs"
+msgstr ""
+
+msgid "Disable Selected Options"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Deaktivieren des TCP Wrapper (mod_wrap Modul)"
 
@@ -2169,20 +2181,11 @@ msgstr ""
 "Wollen Sie wirklich l&ouml;schen und importieren?\\nDie bestehende "
 "Konfiguration wird entfernt und &uuml;berschrieben"
 
-msgid "Do you really want to delete all MIBs?"
-msgstr "Wollen Sie wirklich sämtliche MIBs löschen?"
-
-msgid "Do you really want to delete all options?"
-msgstr "Wollen Sie wirklich sämtliche MIBs löschen?"
-
 msgid "Do you really want to delete all rules?"
 msgstr "Wollen Sie wirklich alle Regeln löschen?"
 
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "Wollen Sie wirklich sämtliche geplanten Selbsttests löschen?"
-
-msgid "Do you really want to delete this MIB?"
-msgstr "Wollen Sie wirklich diese MIB löschen?"
 
 msgid "Do you really want to delete this Rsync job?"
 msgstr "Wollen Sie wirklich diesen Rsync-Job löschen?"
@@ -2197,19 +2200,13 @@ msgid "Do you really want to delete this auth group?"
 msgstr "Möchten sie diese Authentifikationsgruppe wirklich löschen?"
 
 msgid "Do you really want to delete this auto snapshot?"
-msgstr "Wollen sie diesen Automatischen Snapshot wirklich löschen?"
+msgstr "Wollen sie diesen automatischen Schnappschuss wirklich löschen?"
 
 msgid "Do you really want to delete this clone?"
 msgstr "Möchten Sie diesen Clone wirklich löschen"
 
 msgid "Do you really want to delete this command?"
 msgstr "Wollen Sie wirklich diesen Befehl löschen?"
-
-msgid "Do you really want to delete this cron job?"
-msgstr "Wollen Sie den Cronjob wirklich löschen?"
-
-msgid "Do you really want to delete this dataset?"
-msgstr "Möchten sie diesen Datensatz löschen?"
 
 msgid "Do you really want to delete this device?"
 msgstr "Wollen Sie dieses Gerät wirklich löschen?"
@@ -2253,9 +2250,6 @@ msgstr ""
 "Wollen Sie diesen Einhängepunkt wirklich löschen? Alle Elemente, die gerade "
 "darauf zugreifen, werden ungültig werden (z.B. Freigaben)."
 
-msgid "Do you really want to delete this option?"
-msgstr "Wollen Sie wirklich diese Einstellung löschen?"
-
 msgid "Do you really want to delete this pool?"
 msgstr "Möchten Sie wirklich diesen Pool löschen?"
 
@@ -2278,16 +2272,13 @@ msgid "Do you really want to delete this share?"
 msgstr "Soll diese Freigabe wirklich gelöscht werden?"
 
 msgid "Do you really want to delete this snapshot?"
-msgstr "Wollen sie diesen Snapshot wirklich löschen?"
+msgstr "Wollen sie diesen Schnappschuss wirklich löschen?"
 
 msgid "Do you really want to delete this target?"
 msgstr "Wollen Sie wirklich dieses iSCSI-target löschen?"
 
 msgid "Do you really want to delete this user?"
 msgstr "Benutzer wirklich löschen?"
-
-msgid "Do you really want to delete this volume?"
-msgstr "Wollen sie diesen Datenträger wirklich löschen?"
 
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
@@ -2313,6 +2304,36 @@ msgstr ""
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Soll das Paket wirklich deinstalliert werden?"
+
+msgid "Do you want to delete selected datasets?"
+msgstr ""
+
+msgid "Do you want to delete selected jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected options?"
+msgstr ""
+
+msgid "Do you want to delete selected volumes?"
+msgstr ""
+
+msgid "Do you want to disable selected jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected options?"
+msgstr ""
+
+msgid "Do you want to enable selected jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected options?"
+msgstr ""
+
+msgid "Do you want to toggle selected jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected options?"
+msgstr ""
 
 msgid "Document root"
 msgstr "Stammverzeichnis"
@@ -2455,11 +2476,14 @@ msgstr "URL bearbeiten"
 msgid "Edit VM"
 msgstr "VM bearbeiten"
 
+msgid "Edit Volume"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "Editiere Authentifikationsgruppe"
 
 msgid "Edit auto snapshot"
-msgstr "Auto-Snapshot bearbeiten"
+msgstr "Automatischen Schnappschuss bearbeiten"
 
 msgid "Edit command"
 msgstr "Befehl bearbeiten"
@@ -2519,16 +2543,13 @@ msgid "Edit share"
 msgstr "Bearbeite Freigabe"
 
 msgid "Edit snapshot"
-msgstr "Snapshot bearbeiten"
+msgstr "Schnappschuss bearbeiten"
 
 msgid "Edit target"
 msgstr "Target bearbeiten"
 
 msgid "Edit user"
 msgstr "Bearbeite Benutzer"
-
-msgid "Edit volume"
-msgstr "Datenträger bearbeiten"
 
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
@@ -2582,6 +2603,12 @@ msgid ""
 msgstr ""
 "STARTTLS Verschlüsselung aktivieren. TLS muss nicht benutzt werden,  SSL ist "
 "weiterhin möglich."
+
+msgid "Enable Selected Jobs"
+msgstr ""
+
+msgid "Enable Selected Options"
+msgstr ""
 
 msgid "Enable TLS connections."
 msgstr "SSL-Verbindungen aktivieren."
@@ -2728,7 +2755,7 @@ msgid "Enable tuning of some kernel variables"
 msgstr "Das Anpassen einiger Kernel-Variablen zulassen."
 
 msgid "Enable write cache mode."
-msgstr "Schreib-Cache Modus aktivieren."
+msgstr "Schreibpuffermodus aktivieren."
 
 msgid "Enabled"
 msgstr "Aktiviert"
@@ -2959,6 +2986,9 @@ msgstr "Fehlgeschlagen"
 
 msgid "Failed to create in-memory file system."
 msgstr "Das Erstellen des RAM-Dateisystem ist fehlgeschlagen"
+
+msgid "Failed to execute command zfs."
+msgstr ""
 
 msgid "Failed to execute cron job."
 msgstr "cron Job wurde nicht ausgeführt."
@@ -3254,7 +3284,7 @@ msgid "HAST disabled"
 msgstr "HAST deaktiviert"
 
 msgid "HAST volume"
-msgstr "HAST Volumen"
+msgstr "HAST-Datenträger"
 
 msgid "HAST volume can be use with GPT/UFS only."
 msgstr ""
@@ -3559,7 +3589,7 @@ msgstr ""
 msgid ""
 "If this property is enabled, the snapshots are displayed into .zfs directory."
 msgstr ""
-"Wenn diese Einstellung aktiviert ist, werden die Snapshots im .zfs-"
+"Wenn diese Einstellung aktiviert ist, werden die Schnappschüsse im .zfs-"
 "Verzeichnis angezeigt."
 
 #, php-format
@@ -3956,10 +3986,10 @@ msgstr ""
 "href='%s'>Formatieren</a> Menü."
 
 msgid "Leave already configured auto snapshots."
-msgstr "Verlassen der Autoshapshot Konfiguration"
+msgstr "Bereits konfigurierte Schnappschüsse verlassen."
 
 msgid "Leave auto snapshot configuration"
-msgstr "Verlassen der Autoshapshot Konfiguration"
+msgstr "Konfiguration der automatischen Schnappschüsse verlassen."
 
 msgid "Leave this field empty to use default settings."
 msgstr "Dieses Feld leer lassen, um die Standardeinstellungen zu nutzen."
@@ -4013,12 +4043,12 @@ msgid ""
 "specify the size use the following human-readable suffixes (for example, "
 "'k', 'KB', 'M', 'Gb', etc.)."
 msgstr ""
-"Beschränkt die Höhe an Speicherplatz eines Datensatzes und seine Nachkommen "
-"die genutzt werden können. Diese Eigenschaft setzt eine hartes Limit bei der "
-"Höhe des genutzten Speicherplatzes durch. Dieses beinhaltet sämtlichen "
-"Speicher die von den Nachkommen genutzt werden, inklusive Dateisystem und "
-"Snapshots. Um den Größe einzustellen benutze die Suffixe 'k', 'KB', 'M', "
-"'Gb', etc.)."
+"Beschränkt die Höhe des Speicherplatzes eines Datensatzes und seiner "
+"Nachkommen die genutzt werden können. Diese Eigenschaft setzt eine harte "
+"Grenze bei der Höhe des genutzten Speicherplatzes durch. Das beinhaltet "
+"sämtlichen Speicher die von den Nachkommen genutzt werden, inklusive "
+"Dateisystem und Schnappschüsse. Um die Größe einzustellen bitte die "
+"folgenden Suffixe benutzen: »k«, »KB«, »M«, »Gb«, usw."
 
 msgid "Link Aggregation and Failover"
 msgstr "Link Aggregation und Failover"
@@ -6121,10 +6151,10 @@ msgid "Snapshot"
 msgstr "Schnappschuss"
 
 msgid "Snapshot Visibility"
-msgstr "Snapshot Sichtbarkeit"
+msgstr "Schnappschusssichtbarkeit"
 
 msgid "Snapshots"
-msgstr "Snapshots"
+msgstr "Schnappschüsse"
 
 msgid "Sockets"
 msgstr "Sockets"
@@ -6921,7 +6951,7 @@ msgid ""
 "The default format is %s used for ZFS auto snapshot."
 msgstr ""
 "Das  Format für das Abbild der Schattenkopie kann individuelle konfiguriert "
-"werden. Voreinstellung ist %s ZFS Auto Snapshot."
+"werden. Das vorgegebene Format für ZFS-atomatischer-Schnappschuss ist %s."
 
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr "Der Standardport für den SMTP-Mailserver, z.B. 25 oder 587."
@@ -7926,8 +7956,8 @@ msgstr "Dies wird ZFS ACL-Unterstützung bereitstellen. (Nur ZFS)"
 
 msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
 msgstr ""
-"Dies ermöglicht die Erstellung von Schattenkopien durch Auto-Snapshot. (Nur "
-"ZFS)"
+"Das ermöglicht die Erstellung von Schattenkopien durch automatische "
+"Schnappschüsse. (Nur ZFS)"
 
 msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
@@ -8059,6 +8089,12 @@ msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
 msgstr ""
 "Um Unterverzeichnisse zu nutzen,  müssen diese einzeln verbunden (mounted) "
 "werden (z.B. %s)"
+
+msgid "Toggle Selected Jobs"
+msgstr ""
+
+msgid "Toggle Selected Options"
+msgstr ""
 
 msgid "Tolerated"
 msgstr "Toleriert"
@@ -8547,10 +8583,10 @@ msgid "Virtual IP Address"
 msgstr ""
 
 msgid "Virtual IP address"
-msgstr "Virtuelle IP Adresse"
+msgstr "Virtuelle IP-Adresse"
 
 msgid "Virtual Interface"
-msgstr ""
+msgstr "Virtuelle Schnittstelle"
 
 msgid "Virtual Machine"
 msgstr "Virtuelle Maschine"
@@ -8565,7 +8601,7 @@ msgid "Volume"
 msgstr "Datenträger"
 
 msgid "Volume Name"
-msgstr "Volume Name"
+msgstr "Datenträgername"
 
 msgid "Volume Size Limit"
 msgstr "Datenträger Größenbegrenzung"
@@ -8730,7 +8766,7 @@ msgid "Write"
 msgstr "Schreiben"
 
 msgid "Write Cache"
-msgstr "Schreib-Zwischenspeicher"
+msgstr "Schreibpuffer"
 
 msgid "Write only"
 msgstr "Nur-schreib-Zugriff"
@@ -8855,10 +8891,10 @@ msgid "ZFS Dataset Properties"
 msgstr ""
 
 msgid "ZFS Snapshot Information & Status"
-msgstr ""
+msgstr "ZFS-Schnappschussinformationen & -status"
 
 msgid "ZFS Snapshot Properties"
-msgstr ""
+msgstr "ZFS-Schnappschusseigenschaften"
 
 msgid "ZFS Volume Information & Status"
 msgstr ""
@@ -8869,9 +8905,7 @@ msgstr ""
 msgid "ZFS volume"
 msgstr "ZFS Volume"
 
-msgid ""
-"ZFS volume block size. This value can not be changed after creation. Empty "
-"as default."
+msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
 
 msgid ""
@@ -9044,3 +9078,54 @@ msgstr "Aushängen"
 
 msgid "version:"
 msgstr "Version:"
+
+#~ msgid "Add dataset"
+#~ msgstr "Datensatz hinzufügen"
+
+#~ msgid "Add volume"
+#~ msgstr "Datenträger hinzufügen"
+
+#~ msgid "Delete MIB"
+#~ msgstr "MIB löschen"
+
+#~ msgid "Delete all MIBs"
+#~ msgstr "Alle MIB's löschen"
+
+#~ msgid "Delete all options"
+#~ msgstr "Alle Optionen löschen"
+
+#~ msgid "Delete dataset"
+#~ msgstr "Datensatz löschen"
+
+#~ msgid "Delete job"
+#~ msgstr "Lösche Job"
+
+#~ msgid "Delete option"
+#~ msgstr "Option löschen"
+
+#~ msgid "Delete volume"
+#~ msgstr "Datenträger löschen"
+
+#~ msgid "Do you really want to delete all MIBs?"
+#~ msgstr "Wollen Sie wirklich sämtliche MIBs löschen?"
+
+#~ msgid "Do you really want to delete all options?"
+#~ msgstr "Wollen Sie wirklich sämtliche MIBs löschen?"
+
+#~ msgid "Do you really want to delete this MIB?"
+#~ msgstr "Wollen Sie wirklich diese MIB löschen?"
+
+#~ msgid "Do you really want to delete this cron job?"
+#~ msgstr "Wollen Sie den Cronjob wirklich löschen?"
+
+#~ msgid "Do you really want to delete this dataset?"
+#~ msgstr "Möchten sie diesen Datensatz löschen?"
+
+#~ msgid "Do you really want to delete this option?"
+#~ msgstr "Wollen Sie wirklich diese Einstellung löschen?"
+
+#~ msgid "Do you really want to delete this volume?"
+#~ msgstr "Wollen sie diesen Datenträger wirklich löschen?"
+
+#~ msgid "Edit volume"
+#~ msgstr "Datenträger bearbeiten"

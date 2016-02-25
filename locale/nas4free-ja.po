@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-01-21 22:28+0000\n"
+"POT-Creation-Date: 2016-02-25 16:05+0000\n"
 "PO-Revision-Date: 2015-12-19 13:07+0000\n"
 "Last-Translator: Daisuke Aoyama <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-29 07:53+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-25 15:21+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
 "X-Poedit-Language: Japanese\n"
@@ -53,6 +53,18 @@ msgstr "%dバイト / ブロック"
 #, php-format
 msgid "%s Interface"
 msgstr "%s インタフェース"
+
+#, php-format
+msgid "%s already exists as a %s."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a filesystem."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a volume."
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -409,6 +421,9 @@ msgstr "アクティブなユーザ"
 msgid "Add"
 msgstr "追加"
 
+msgid "Add Dataset"
+msgstr ""
+
 msgid "Add Host"
 msgstr "ホストを追加"
 
@@ -427,6 +442,9 @@ msgstr "Rsync ジョブの追加"
 msgid "Add URL"
 msgstr "URLを追加"
 
+msgid "Add Volume"
+msgstr ""
+
 msgid "Add additional scheduled self-test."
 msgstr "スケジュールされたセルフテスト項目を追加します。"
 
@@ -438,9 +456,6 @@ msgstr "自動スナップショットの追加"
 
 msgid "Add command"
 msgstr "コマンドを追加"
-
-msgid "Add dataset"
-msgstr "データセットの追加"
 
 msgid "Add device"
 msgstr "デバイスを追加"
@@ -501,9 +516,6 @@ msgstr "ターゲットの追加"
 
 msgid "Add user"
 msgstr "ユーザの追加"
-
-msgid "Add volume"
-msgstr "ボリュームの追加"
 
 msgid "Additional Network"
 msgstr "追加のネットワーク"
@@ -940,6 +952,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "待機時間"
+
+msgid "Block Size"
+msgstr ""
 
 msgid "Block size"
 msgstr "ブロックサイズ"
@@ -1737,9 +1752,6 @@ msgstr "ホストを削除"
 msgid "Delete Login Info"
 msgstr "ログイン情報の削除"
 
-msgid "Delete MIB"
-msgstr "MIB を削除"
-
 msgid "Delete RAID"
 msgstr "RAID の削除"
 
@@ -1749,6 +1761,18 @@ msgstr "ルートの削除"
 msgid "Delete Rsync job"
 msgstr "Rsync ジョブを削除"
 
+msgid "Delete Selected Datasets"
+msgstr ""
+
+msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected Options"
+msgstr ""
+
+msgid "Delete Selected Volumes"
+msgstr ""
+
 msgid "Delete URL"
 msgstr "URL を削除"
 
@@ -1757,12 +1781,6 @@ msgstr "VM 削除"
 
 msgid "Delete algorithm"
 msgstr "アルゴリズムを削除"
-
-msgid "Delete all MIBs"
-msgstr "全ての MIB を削除"
-
-msgid "Delete all options"
-msgstr "全てのオプションを削除"
 
 msgid "Delete all rules"
 msgstr "全てのルールを削除"
@@ -1781,9 +1799,6 @@ msgstr "クローンを削除"
 
 msgid "Delete command"
 msgstr "コマンドを削除"
-
-msgid "Delete dataset"
-msgstr "データセットの削除"
 
 msgid "Delete device"
 msgstr "デバイスを削除"
@@ -1809,17 +1824,11 @@ msgstr "イニシエータグループの削除"
 msgid "Delete interface"
 msgstr "インタフェースの削除"
 
-msgid "Delete job"
-msgstr "ジョブを削除"
-
 msgid "Delete module"
 msgstr "モジュールを削除"
 
 msgid "Delete mount point"
 msgstr "マウントポイントを削除"
-
-msgid "Delete option"
-msgstr "オプションを削除"
 
 msgid "Delete pool"
 msgstr "プールの削除"
@@ -1847,9 +1856,6 @@ msgstr "ターゲットの削除"
 
 msgid "Delete user"
 msgstr "ユーザの削除"
-
-msgid "Delete volume"
-msgstr "ボリュームの削除"
 
 msgid "Deletes the recursive snapshot."
 msgstr "再帰的にスナップショットを削除する。"
@@ -1997,6 +2003,12 @@ msgstr "ファイルマネージャを無効にする"
 msgid "Disable Firmware Update"
 msgstr "ファームウェアアップデートを無効化"
 
+msgid "Disable Selected Jobs"
+msgstr ""
+
+msgid "Disable Selected Options"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "TCP wrapper (mod_wrapモジュール) を無効にします。"
 
@@ -2056,20 +2068,11 @@ msgid ""
 "cleared and overwritten."
 msgstr "本当に消去およびインポートしてもよろしいですか？\\n既存コンフィグは消去されて上書きされます。"
 
-msgid "Do you really want to delete all MIBs?"
-msgstr "全ての MIB を削除してもよろしいですか?"
-
-msgid "Do you really want to delete all options?"
-msgstr "全てのオプションを削除してもよろしいですか?"
-
 msgid "Do you really want to delete all rules?"
 msgstr "全てのルールを削除してもよろしいですか?"
 
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "全てのスケジュールされたセルフテストを削除してもよろしいですか？"
-
-msgid "Do you really want to delete this MIB?"
-msgstr "この MIB を削除してもよろしいですか?"
 
 msgid "Do you really want to delete this Rsync job?"
 msgstr "この Rsync ジョブを削除してもよろしいですか?"
@@ -2091,12 +2094,6 @@ msgstr "このクローンを削除してもよろしいですか?"
 
 msgid "Do you really want to delete this command?"
 msgstr "このコマンドを削除してもよろしいですか?"
-
-msgid "Do you really want to delete this cron job?"
-msgstr "この Cron ジョブを削除してもよろしいですか?"
-
-msgid "Do you really want to delete this dataset?"
-msgstr "このデータセットを削除してもよろしいですか？"
 
 msgid "Do you really want to delete this device?"
 msgstr "このデバイスを削除してもよろしいですか?"
@@ -2134,9 +2131,6 @@ msgid ""
 "it will become invalid (e.g. share)!"
 msgstr "のマウントポイントを削除しても宜しいですか? これを使用する全ての要素 (例: share) は無効になります!"
 
-msgid "Do you really want to delete this option?"
-msgstr "このオプションを削除してもよろしいですか?"
-
 msgid "Do you really want to delete this pool?"
 msgstr "このプールを削除してもよろしいですか？"
 
@@ -2167,9 +2161,6 @@ msgstr "このターゲットを削除してもよろしいですか?"
 msgid "Do you really want to delete this user?"
 msgstr "このユーザを削除してもよろしいですか?"
 
-msgid "Do you really want to delete this volume?"
-msgstr "このボリュームを削除してもよろしいですか?"
-
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
 "and can not be recovered. !!!"
@@ -2189,6 +2180,36 @@ msgstr "リストから選択された項目を削除してもよろしいです
 
 msgid "Do you really want to uninstall this package?"
 msgstr "このパッケージをアンインストールしてもよろしいですか?"
+
+msgid "Do you want to delete selected datasets?"
+msgstr ""
+
+msgid "Do you want to delete selected jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected options?"
+msgstr ""
+
+msgid "Do you want to delete selected volumes?"
+msgstr ""
+
+msgid "Do you want to disable selected jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected options?"
+msgstr ""
+
+msgid "Do you want to enable selected jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected options?"
+msgstr ""
+
+msgid "Do you want to toggle selected jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected options?"
+msgstr ""
 
 msgid "Document root"
 msgstr "ドキュメントルート"
@@ -2328,6 +2349,9 @@ msgstr "URL を編集"
 msgid "Edit VM"
 msgstr "VM 編集"
 
+msgid "Edit Volume"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "認証グループの編集"
 
@@ -2400,9 +2424,6 @@ msgstr "ターゲットを編集"
 msgid "Edit user"
 msgstr "ユーザを編集"
 
-msgid "Edit volume"
-msgstr "ボリュームを編集"
-
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
 msgstr "UPS効率(入出力電流の比率)"
@@ -2452,6 +2473,12 @@ msgid ""
 "Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can "
 "use SSL."
 msgstr "STARTTLS暗号化を有効にします。これはTLSを必ず利用しなければいけないわけではなく、SSLを利用できます。"
+
+msgid "Enable Selected Jobs"
+msgstr ""
+
+msgid "Enable Selected Options"
+msgstr ""
 
 msgid "Enable TLS connections."
 msgstr "TLS 接続を有効にします。"
@@ -2801,6 +2828,9 @@ msgstr "失敗"
 
 msgid "Failed to create in-memory file system."
 msgstr "インメモリファイルシステムの作成に失敗しました。"
+
+msgid "Failed to execute command zfs."
+msgstr ""
 
 msgid "Failed to execute cron job."
 msgstr "Cron ジョブの実行に失敗しました。"
@@ -7484,6 +7514,12 @@ msgstr ""
 msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
 msgstr "サブディレクトリを使用するには、各ディレクトリーをマウントしなければいけません。(例 %s)"
 
+msgid "Toggle Selected Jobs"
+msgstr ""
+
+msgid "Toggle Selected Options"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "許容"
 
@@ -8246,10 +8282,8 @@ msgstr "ZFS ボリュームプロパティ"
 msgid "ZFS volume"
 msgstr "ZFS ボリューム"
 
-msgid ""
-"ZFS volume block size. This value can not be changed after creation. Empty "
-"as default."
-msgstr "ZFSボリュームのブロックサイズ。この値は作成後に変更することはできません。デフォルトは空欄。"
+msgid "ZFS volume block size. This value can not be changed after creation."
+msgstr ""
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
@@ -8419,3 +8453,59 @@ msgstr "アンマウント"
 
 msgid "version:"
 msgstr "バージョン:"
+
+#~ msgid "Add dataset"
+#~ msgstr "データセットの追加"
+
+#~ msgid "Add volume"
+#~ msgstr "ボリュームの追加"
+
+#~ msgid "Delete MIB"
+#~ msgstr "MIB を削除"
+
+#~ msgid "Delete all MIBs"
+#~ msgstr "全ての MIB を削除"
+
+#~ msgid "Delete all options"
+#~ msgstr "全てのオプションを削除"
+
+#~ msgid "Delete dataset"
+#~ msgstr "データセットの削除"
+
+#~ msgid "Delete job"
+#~ msgstr "ジョブを削除"
+
+#~ msgid "Delete option"
+#~ msgstr "オプションを削除"
+
+#~ msgid "Delete volume"
+#~ msgstr "ボリュームの削除"
+
+#~ msgid "Do you really want to delete all MIBs?"
+#~ msgstr "全ての MIB を削除してもよろしいですか?"
+
+#~ msgid "Do you really want to delete all options?"
+#~ msgstr "全てのオプションを削除してもよろしいですか?"
+
+#~ msgid "Do you really want to delete this MIB?"
+#~ msgstr "この MIB を削除してもよろしいですか?"
+
+#~ msgid "Do you really want to delete this cron job?"
+#~ msgstr "この Cron ジョブを削除してもよろしいですか?"
+
+#~ msgid "Do you really want to delete this dataset?"
+#~ msgstr "このデータセットを削除してもよろしいですか？"
+
+#~ msgid "Do you really want to delete this option?"
+#~ msgstr "このオプションを削除してもよろしいですか?"
+
+#~ msgid "Do you really want to delete this volume?"
+#~ msgstr "このボリュームを削除してもよろしいですか?"
+
+#~ msgid "Edit volume"
+#~ msgstr "ボリュームを編集"
+
+#~ msgid ""
+#~ "ZFS volume block size. This value can not be changed after creation. Empty "
+#~ "as default."
+#~ msgstr "ZFSボリュームのブロックサイズ。この値は作成後に変更することはできません。デフォルトは空欄。"
