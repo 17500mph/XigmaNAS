@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-02-25 16:05+0000\n"
-"PO-Revision-Date: 2016-02-25 15:14+0000\n"
+"POT-Creation-Date: 2016-02-25 21:53+0000\n"
+"PO-Revision-Date: 2016-02-25 20:55+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-25 15:20+0000\n"
+"X-Launchpad-Export-Date: 2016-02-25 21:05+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -42,7 +42,7 @@ msgstr "%d jaar"
 msgid "%d years"
 msgstr "%d jaren"
 
-#, c-format, php-format
+#, php-format
 msgid "%d%% of %dMiB"
 msgstr "%d%% van %dMiB"
 
@@ -94,11 +94,11 @@ msgstr "%s%d %s is reeds gebruikt door %s%d."
 msgid "%s: cannot get mirror name."
 msgstr "%s: kan mirror naam niet krijgen."
 
-#, c-format, php-format
+#, php-format
 msgid "%sB available of %sB"
 msgstr "%sB beschikbaar van %sB"
 
-#, c-format, php-format
+#, php-format
 msgid "%sB used of %sB"
 msgstr "%sB gebruikt van %sB"
 
@@ -844,6 +844,12 @@ msgstr "Toepassen"
 msgid "Apply changes"
 msgstr "Wijzigingen toepassen"
 
+msgid "Apr"
+msgstr "Apr"
+
+msgid "April"
+msgstr "April"
+
 msgid "Archive"
 msgstr "Archief"
 
@@ -878,6 +884,12 @@ msgstr "Verbindings provider '%s'."
 
 msgid "Audio"
 msgstr "Audio"
+
+msgid "Aug"
+msgstr "Aug"
+
+msgid "August"
+msgstr "Augustus"
 
 msgid "Auth Group"
 msgstr "Auth Groep"
@@ -1863,6 +1875,12 @@ msgstr "Dagen"
 msgid "Debug"
 msgstr "Debug"
 
+msgid "Dec"
+msgstr "Dec"
+
+msgid "December"
+msgstr "December"
+
 msgid ""
 "Decoded as: byte 0-1-2 = average erase count (big endian) and byte 3-4-5 = "
 "max erase count (big endian)."
@@ -2676,10 +2694,10 @@ msgstr ""
 "kunt ook SSL gebruiken."
 
 msgid "Enable Selected Jobs"
-msgstr "Inschakelen Geselecteerde Taken"
+msgstr "Geselecteerde Taken Inschakelen"
 
 msgid "Enable Selected Options"
-msgstr "Inschakelen Geselecteerde Opties"
+msgstr "Geselecteerde Opties Inschakelen"
 
 msgid "Enable TLS connections."
 msgstr "Inschakelen TLS verbindingen."
@@ -2926,7 +2944,7 @@ msgstr "Vul de trap host naam in."
 msgid "Error"
 msgstr "Fout"
 
-#, c-format
+#, php-format
 msgid "Error: The changes could not be applied (error code %s)."
 msgstr "Fout: wijzigingen kunnen niet worden doorgevoerd (fout code %s)."
 
@@ -3070,7 +3088,7 @@ msgstr "Mislukt om de cron taak uit te voeren."
 msgid "Failed to remove: %s"
 msgstr "Mislukt te verwijderen: %s"
 
-#, c-format
+#, php-format
 msgid "Failed to send status report to: %s."
 msgstr "Mislukt om het statusrapport te verzenden naar: %s."
 
@@ -3109,6 +3127,12 @@ msgstr "Failover (Overname bij storing)"
 
 msgid "Fatal"
 msgstr "Fataal"
+
+msgid "Feb"
+msgstr "Feb"
+
+msgid "February"
+msgstr "Februari"
 
 msgid "File"
 msgstr "Bestand"
@@ -3234,6 +3258,12 @@ msgstr "Frans"
 
 msgid "Frequency"
 msgstr "Frequentie"
+
+msgid "Fri"
+msgstr "Vr"
+
+msgid "Friday"
+msgstr "Vrijdag"
 
 msgid "From email"
 msgstr "E-mailadres"
@@ -3958,6 +3988,12 @@ msgstr "JBOD"
 msgid "JBOD Information & Status"
 msgstr "JBOD Informatie & Status"
 
+msgid "Jan"
+msgstr "Jan"
+
+msgid "January"
+msgstr "Januari"
+
 msgid ""
 "January February March April May June July August September October November "
 "December"
@@ -3967,6 +4003,18 @@ msgstr ""
 
 msgid "Japanese"
 msgstr "Japans"
+
+msgid "Jul"
+msgstr "Jul"
+
+msgid "July"
+msgstr "Juli"
+
+msgid "Jun"
+msgstr "Jun"
+
+msgid "June"
+msgstr "Juni"
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -4381,6 +4429,12 @@ msgstr "Aan gebruiker toewijzen"
 msgid "Mapping DOS attributes"
 msgstr "Mapping DOS attributen"
 
+msgid "Mar"
+msgstr "Mrt"
+
+msgid "March"
+msgstr "Maart"
+
 msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
 "not specified."
@@ -4485,6 +4539,9 @@ msgstr "Maximum relatieve luchtvochtigheid gezien (procent)"
 
 msgid "Maximum temperature seen (degrees C)"
 msgstr "Maximum temperatuur gezien (graden C)"
+
+msgid "May"
+msgstr "Mei"
 
 msgid "Media"
 msgstr "Media"
@@ -4600,6 +4657,12 @@ msgstr "Module"
 
 msgid "Modules"
 msgstr "Ban Module"
+
+msgid "Mon"
+msgstr "Ma"
+
+msgid "Monday"
+msgstr "Maandag"
 
 msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
 msgstr "Maandag Dinsdag Woensdag Donderdag Vrijdag Zaterdag Zondag"
@@ -4963,6 +5026,12 @@ msgstr "Er is niets om te synchroniseren"
 msgid "Notification email from host: %s"
 msgstr "E-mail Bericht van host: %s"
 
+msgid "Nov"
+msgstr "Nov"
+
+msgid "November"
+msgstr "November"
+
 msgid "Now"
 msgstr "Nu"
 
@@ -5015,6 +5084,12 @@ msgstr "Object naam"
 
 msgid "Occurrence"
 msgstr "Overtredingen"
+
+msgid "Oct"
+msgstr "Okt"
+
+msgid "October"
+msgstr "Oktober"
 
 msgid "Off"
 msgstr "Uit"
@@ -5127,7 +5202,6 @@ msgstr "PPTP"
 msgid "PPTP clients"
 msgstr "PPTP werkstations"
 
-#, c-format
 msgid "PSK"
 msgstr "PSK"
 
@@ -5892,6 +5966,12 @@ msgstr ""
 "Samba zal het bestand asynchroon schrijven als de grootte van aanvraag "
 "groter is dan deze waarde. (standaard %d)"
 
+msgid "Sat"
+msgstr "Za"
+
+msgid "Saturday"
+msgstr "Zaterdag"
+
 msgid "Save"
 msgstr "Opslaan"
 
@@ -6050,9 +6130,15 @@ msgstr "Nu versturen"
 msgid "Send test email"
 msgstr "Verstuur test e-mail"
 
+msgid "Sep"
+msgstr "Sep"
+
 msgid "Separate email addresses by semi-colon."
 msgstr ""
 "Verscheidene e-mailadressen scheiden door punt-komma. (gebruik de ; toets)"
+
+msgid "September"
+msgstr "September"
 
 msgid "Serial Console"
 msgstr "Serial Console"
@@ -6412,7 +6498,7 @@ msgstr "Statische routes"
 msgid "Status"
 msgstr "Status"
 
-#, c-format
+#, php-format
 msgid "Status report successfully sent to: %s."
 msgstr "Het statusrapport is met succes verzonden naar: %s."
 
@@ -6478,6 +6564,12 @@ msgstr "Succesvol"
 
 msgid "Successful."
 msgstr "Succesvol."
+
+msgid "Sun"
+msgstr "Zo"
+
+msgid "Sunday"
+msgstr "Zondag"
 
 msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
 msgstr "Zondag Maandag Dinsdag Woensdag Donderdag Vrijdag Zaterdag"
@@ -6786,38 +6878,38 @@ msgstr "De geassocieerde MIB bestanden kunnen gevonden worden op %s."
 msgid "The attribute '%s' already exists."
 msgstr "De attribuut '%s' bestaat reeds."
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains invalid characters and is not a valid NetBIOS "
 "name."
 msgstr ""
 "Het attribuut '%s' bevat ongeldige karakters en is geen geldig Netbios naam."
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains invalid characters and is not a valid domain "
 "name."
 msgstr ""
 "Het attribuut '%s' bevat ongeldige karakters en is geen geldig domeinnaam."
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains invalid characters and is not a valid host name."
 msgstr ""
 "Het attribuut '%s' bevat ongeldige karakters en is geen geldig hostnaam."
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains invalid characters and is not a valid workgroup "
 "name."
 msgstr ""
 "Het attribuut '%s' bevat ongeldige karakters en is geen geldig werkgroepnaam."
 
-#, c-format, php-format
+#, php-format
 msgid "The attribute '%s' contains invalid characters."
 msgstr "Het atrubuut bevat '%s' ongeldige karakters."
 
-#, c-format
+#, php-format
 msgid ""
 "The attribute '%s' contains the illegal character ':' and is not a valid "
 "password."
@@ -6825,53 +6917,53 @@ msgstr ""
 "Het attribuut '%s' bevat het ongeldige karakter ':' en is geen geldig "
 "wachtwoord."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' does not appear to be a valid certificate."
 msgstr "Het attribuut '%s' schijnt geen geldig certificaat te zijn."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' does not appear to be a valid private %s key."
 msgstr "Het attribuut '%s' schijnt geen geldige privé sleutel %s te zijn."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' does not appear to be a valid private key."
 msgstr "Het attribuut '%s' schijnt geen geldige privé sleutel te zijn."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is an invalid port number."
 msgstr "Het attribuut '%s' is een ongeldig poortnummer."
 
-#, c-format, php-format
+#, php-format
 msgid "The attribute '%s' is invalid."
 msgstr "Het attribuut '%s' is ongeldig."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid IP address."
 msgstr "Het attribuut '%s' is geen geldig IP-adres."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid MAC address."
 msgstr "Het attribuut '%s' is geen geldig MAC-adres."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid file mode mask."
 msgstr "Het attribuut '%s' is geen geldig bestandmode masker."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid subnet mask."
 msgstr "Het attribuut '%s' is geen geldig subnetmasker."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' is not a valid time value."
 msgstr "De attribuut '%s' is geen geldige tijd."
 
-#, c-format, php-format
+#, php-format
 msgid ""
 "The attribute '%s' is required within %d or more characters to %d characters."
 msgstr ""
 "Het attribuut '%s' is vereist binnen %d of meer karakters naar %d karakters."
 
-#, c-format, php-format
+#, php-format
 msgid "The attribute '%s' is required."
 msgstr "Het kenmerk '%s' is vereist."
 
@@ -6881,16 +6973,16 @@ msgid ""
 msgstr ""
 "De attribuut '%s' kan alleen bestaan uit de karakters a-z, A-Z, 0-9, _ , -."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' may only consist of the characters a-z, A-Z, 0-9."
 msgstr ""
 "De attribuut '%s' kan alleen bestaan uit de karakters van a-z, A-Z, 0-9."
 
-#, c-format, php-format
+#, php-format
 msgid "The attribute '%s' must be a number."
 msgstr "Het attribuut '%s' moet een nummer zijn."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' must be a string."
 msgstr "Het attribuut '%s' moet een tekenreeks zijn."
 
@@ -6902,7 +6994,7 @@ msgstr "De attribuut '%s' dient een bereik te hebben van %d tot %d."
 msgid "The attribute '%s' must be less than '%s'."
 msgstr "De attribuut '%s' dient lager te zijn dan '%s'."
 
-#, c-format
+#, php-format
 msgid "The attribute '%s' must contain at least one entry."
 msgstr "Het attribuut '%s' moet tenmiste één invulling bevatten."
 
@@ -6946,7 +7038,7 @@ msgstr ""
 msgid "The changes have been applied successfully."
 msgstr "De wijzigingen zijn succesvol uitgevoerd."
 
-#, c-format
+#, php-format
 msgid ""
 "The changes have been saved. You have to <a href='%s'>reboot</a> the system "
 "for the changes to take effect."
@@ -6972,7 +7064,7 @@ msgid "The configuration could not be restored. No file was uploaded!"
 msgstr ""
 "De configuratie kan niet worden hersteld. Er is geen bestand geupload!"
 
-#, c-format
+#, php-format
 msgid ""
 "The configuration has been changed.<br />You must apply the changes in order "
 "for them to take effect.<br /><b>If this message persist take a look at the "
@@ -8076,6 +8168,12 @@ msgstr ""
 "Dit zal streaming ondersteunen van .jpg en .mp3 bestanden naar een TiVo "
 "ondersteunende HMO."
 
+msgid "Thu"
+msgstr "Do"
+
+msgid "Thursday"
+msgstr "Donderdag"
+
 msgid "TiB"
 msgstr "TiB"
 
@@ -8315,6 +8413,12 @@ msgstr "Probeer geforceerd te importeren."
 
 msgid "Try to import from on-disk ZFS config."
 msgstr "Probeer te importeren van op-schijf ZFS config."
+
+msgid "Tue"
+msgstr "Di"
+
+msgid "Tuesday"
+msgstr "Dinsdag"
 
 msgid "Tuning"
 msgstr "Optimalisatie"
@@ -8644,7 +8748,7 @@ msgstr "Gebruikers"
 msgid "Users & Groups"
 msgstr "Gebruikers & Groepen"
 
-#, c-format
+#, php-format
 msgid "Using %s bytes fragment size."
 msgstr "%s fragment groote gebruiken"
 
@@ -8763,7 +8867,6 @@ msgstr "WINS server IP-adres (bijv. van de MS Active Directory server)."
 msgid "WLAN"
 msgstr "WLAN"
 
-#, c-format
 msgid "WPA"
 msgstr "WPA"
 
@@ -8813,6 +8916,12 @@ msgstr "Webserver"
 
 msgid "Webserver document root is missing."
 msgstr "De webserver documentmap ontbreekt."
+
+msgid "Wed"
+msgstr "Wo"
+
+msgid "Wednesday"
+msgstr "Woensdag"
 
 msgid "Week days"
 msgstr "Week dagen"
@@ -8950,7 +9059,7 @@ msgstr ""
 "U dient <a href='%s'>Zeroconf/Bonjour</a> in te schakelen om deze service "
 "kenbaar te maken aan de werkstations."
 
-#, c-format
+#, php-format
 msgid "You have to select at least one item for '%s'."
 msgstr "U moet tenminste 1 item selecteren voor '%s'."
 
