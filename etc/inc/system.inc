@@ -887,7 +887,7 @@ function convert_date_string_to_locale($data) {
 	// a[11]* = %12$s: Name of the month short (can be localised via gettext)
 	// a[12]  = %13$s: Time zone
 	// a[13]  = %14$s: Time zone offset (+/- followed by 4 digits)
-	$retval = sprintf(gettext('%10$s %12$s %3$s %4$s:%7$s:%8$s %13$s %1$s'),$a[0],$a[1],$a[2],$a[3],$a[4],$a[5],$a[6],$a[7],gettext($a[8]),gettext($a[9]),gettext($a[10]),gettext($a[11]),$a[12],$a[13]);
+	$retval = sprintf('%10$s %12$s %3$s %4$s:%7$s:%8$s %13$s %1$s',$a[0],$a[1],$a[2],$a[3],$a[4],$a[5],$a[6],$a[7],gettext($a[8]),gettext($a[9]),gettext($a[10]),gettext($a[11]),$a[12],$a[13]);
 	return $retval;
 }
 
