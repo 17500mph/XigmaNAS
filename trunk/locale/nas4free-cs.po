@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-01-21 22:28+0000\n"
+"POT-Creation-Date: 2016-02-25 16:05+0000\n"
 "PO-Revision-Date: 2016-01-23 19:50+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-29 07:52+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-25 15:20+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
 "X-Poedit-Language: Czech\n"
@@ -53,6 +53,18 @@ msgstr "%dB / blok"
 #, php-format
 msgid "%s Interface"
 msgstr "%s rozhraní"
+
+#, php-format
+msgid "%s already exists as a %s."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a filesystem."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a volume."
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -451,6 +463,9 @@ msgstr "Aktivní uživatelé"
 msgid "Add"
 msgstr "Přidat"
 
+msgid "Add Dataset"
+msgstr ""
+
 msgid "Add Host"
 msgstr "Přidat stroj"
 
@@ -469,6 +484,9 @@ msgstr "Přidat Rsync úlohu"
 msgid "Add URL"
 msgstr "Přidat URL adresu"
 
+msgid "Add Volume"
+msgstr ""
+
 msgid "Add additional scheduled self-test."
 msgstr "Přidat další naplánovaný samotest."
 
@@ -480,9 +498,6 @@ msgstr "Přidat automatické zachycování stavu"
 
 msgid "Add command"
 msgstr "Přidat příkaz"
-
-msgid "Add dataset"
-msgstr "Přidat datovou sadu"
 
 msgid "Add device"
 msgstr "Přidat zařízení"
@@ -543,9 +558,6 @@ msgstr "Přidat cíl"
 
 msgid "Add user"
 msgstr "Přidat uživatele"
-
-msgid "Add volume"
-msgstr "Přidat svazek"
 
 msgid "Additional Network"
 msgstr "Další síť"
@@ -1024,6 +1036,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "Prodleva potemnění obrazovky"
+
+msgid "Block Size"
+msgstr ""
 
 msgid "Block size"
 msgstr "Velikost bloku"
@@ -1909,9 +1924,6 @@ msgstr "Smazat záznam pro stroj"
 msgid "Delete Login Info"
 msgstr "Smazat údaje o přihlášení"
 
-msgid "Delete MIB"
-msgstr "Smazat MIB"
-
 msgid "Delete RAID"
 msgstr "Odstranit RAID pole"
 
@@ -1921,6 +1933,18 @@ msgstr "Smazat trasu"
 msgid "Delete Rsync job"
 msgstr "Smazat Rsync úlohu"
 
+msgid "Delete Selected Datasets"
+msgstr ""
+
+msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected Options"
+msgstr ""
+
+msgid "Delete Selected Volumes"
+msgstr ""
+
 msgid "Delete URL"
 msgstr "Odstranit URL adresu"
 
@@ -1929,12 +1953,6 @@ msgstr "Smazat virt. stroj"
 
 msgid "Delete algorithm"
 msgstr "Odstranit algoritmus"
-
-msgid "Delete all MIBs"
-msgstr "Smazat všechna MIB data"
-
-msgid "Delete all options"
-msgstr "Smazat všechny předvolby"
 
 msgid "Delete all rules"
 msgstr "Smazat všechna pravidla"
@@ -1953,9 +1971,6 @@ msgstr "Smazat klon"
 
 msgid "Delete command"
 msgstr "Odstranit příkaz"
-
-msgid "Delete dataset"
-msgstr "Odstranit datovou sadu"
 
 msgid "Delete device"
 msgstr "Odstranit zařízení"
@@ -1983,17 +1998,11 @@ msgstr "Odstranit skupinu iniciátorů"
 msgid "Delete interface"
 msgstr "Odstranit rozhraní"
 
-msgid "Delete job"
-msgstr "Smazat úlohu"
-
 msgid "Delete module"
 msgstr "Odstranit modul"
 
 msgid "Delete mount point"
 msgstr "Odstranit přípojný bod"
-
-msgid "Delete option"
-msgstr "Smazat předvolbu"
 
 msgid "Delete pool"
 msgstr "Odstranit fond"
@@ -2021,9 +2030,6 @@ msgstr "Odstranit cíl"
 
 msgid "Delete user"
 msgstr "Zrušit uživatelský účet"
-
-msgid "Delete volume"
-msgstr "Odstranit svazek"
 
 msgid "Deletes the recursive snapshot."
 msgstr "Smaže vnořený zachycený stav."
@@ -2179,6 +2185,12 @@ msgstr "Vypnout webového správce souborů"
 msgid "Disable Firmware Update"
 msgstr "Vypnout aktualizaci firmware"
 
+msgid "Disable Selected Jobs"
+msgstr ""
+
+msgid "Disable Selected Options"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Vypnout TCP zprostředkovávající službu (modul mod_wrap)."
 
@@ -2242,20 +2254,11 @@ msgstr ""
 "Opravdu chcete vyčistit a importovat?\\nExistující nastavení budou smazána a "
 "přepsána."
 
-msgid "Do you really want to delete all MIBs?"
-msgstr "Opravdu chcete odstranit všechna MIB data?"
-
-msgid "Do you really want to delete all options?"
-msgstr "Opravdu chcete odstranit všechny předvolby?"
-
 msgid "Do you really want to delete all rules?"
 msgstr "Opravdu chcete smazat všechna pravidla?"
 
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "Opravdu chcete smazat všechny naplánované samotesty?"
-
-msgid "Do you really want to delete this MIB?"
-msgstr "Opravdu chcete odstranit tento MIB?"
 
 msgid "Do you really want to delete this Rsync job?"
 msgstr "Opravdu chcete smazat tuto Rsync úlohu?"
@@ -2277,12 +2280,6 @@ msgstr "Opravdu chcete smazat tento klon?"
 
 msgid "Do you really want to delete this command?"
 msgstr "Opravdu chcete smazat tento příkaz?"
-
-msgid "Do you really want to delete this cron job?"
-msgstr "Opravdu chcete smazat tuto naplánovanou (cron) úlohu?"
-
-msgid "Do you really want to delete this dataset?"
-msgstr "Chcete opravdu odstranit tuto datovou sadu?"
 
 msgid "Do you really want to delete this device?"
 msgstr "Opravdu chcete odstranit toto zařízení?"
@@ -2326,9 +2323,6 @@ msgstr ""
 "Opravdu chcete smazat tento přípojný bod? Veškeré prvky, které ho využívají, "
 "přestanou fungovat (např. sdílení)!"
 
-msgid "Do you really want to delete this option?"
-msgstr "Opravdu chcete smazat tuto předvolbu?"
-
 msgid "Do you really want to delete this pool?"
 msgstr "Opravdu chcete smazat tento fond?"
 
@@ -2359,9 +2353,6 @@ msgstr "Opravdu chcete odstranit tento cíl?"
 msgid "Do you really want to delete this user?"
 msgstr "Opravdu chcete zrušit účet tohoto uživatele?"
 
-msgid "Do you really want to delete this volume?"
-msgstr "Opravdu chcete odstranit tento svazek?"
-
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
 "and can not be recovered. !!!"
@@ -2383,6 +2374,36 @@ msgstr "Opravdu chcete odebrat vybranou položku ze seznamu?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Opravdu chcete odinstalovat tento balíček?"
+
+msgid "Do you want to delete selected datasets?"
+msgstr ""
+
+msgid "Do you want to delete selected jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected options?"
+msgstr ""
+
+msgid "Do you want to delete selected volumes?"
+msgstr ""
+
+msgid "Do you want to disable selected jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected options?"
+msgstr ""
+
+msgid "Do you want to enable selected jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected options?"
+msgstr ""
+
+msgid "Do you want to toggle selected jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected options?"
+msgstr ""
 
 msgid "Document root"
 msgstr "Kořen dokumentu"
@@ -2523,6 +2544,9 @@ msgstr "Upravit URL adresu"
 msgid "Edit VM"
 msgstr "Upravit virt. stroj"
 
+msgid "Edit Volume"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "Upravit skupinu pověřených"
 
@@ -2595,9 +2619,6 @@ msgstr "Upravit cíl"
 msgid "Edit user"
 msgstr "Upravit účet uživatele"
 
-msgid "Edit volume"
-msgstr "Upravit svazek"
-
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
 msgstr "Účinnost UPS zdroje (poměr výstupního a vstupního proudu)"
@@ -2651,6 +2672,12 @@ msgid ""
 msgstr ""
 "Zapnout STARTTLS šifrování. Toto ovšem neznamená, že je zapotřebí používat "
 "TLS, použít je možné i SSL."
+
+msgid "Enable Selected Jobs"
+msgstr ""
+
+msgid "Enable Selected Options"
+msgstr ""
 
 msgid "Enable TLS connections."
 msgstr "Zapnout TLS spojení."
@@ -3029,6 +3056,9 @@ msgstr "Nezdařilo se"
 
 msgid "Failed to create in-memory file system."
 msgstr "Nezdařilo se vytvořit souborový systém v operační paměti."
+
+msgid "Failed to execute command zfs."
+msgstr ""
 
 msgid "Failed to execute cron job."
 msgstr "Nezdařilo se vykonat naplánovanou (cron) úlohu."
@@ -8165,6 +8195,12 @@ msgstr ""
 "Aby bylo možné používat podsložky, je třeba připojit (mount) každou ze "
 "složek. (např. %s)"
 
+msgid "Toggle Selected Jobs"
+msgstr ""
+
+msgid "Toggle Selected Options"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "Tolerováno"
 
@@ -8994,12 +9030,8 @@ msgstr "Vlastnosti ZFS svazku"
 msgid "ZFS volume"
 msgstr "ZFS svazek"
 
-msgid ""
-"ZFS volume block size. This value can not be changed after creation. Empty "
-"as default."
+msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
-"Velikost bloku ZFS svazku. Jakmile je vytvořen, nemůže už být změněna. "
-"Nevyplněno znamená použít výchozí hodnotu."
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
@@ -9181,3 +9213,61 @@ msgstr "odpojit (umount)"
 
 msgid "version:"
 msgstr "verze:"
+
+#~ msgid "Do you really want to delete this MIB?"
+#~ msgstr "Opravdu chcete odstranit tento MIB?"
+
+#~ msgid "Add volume"
+#~ msgstr "Přidat svazek"
+
+#~ msgid "Edit volume"
+#~ msgstr "Upravit svazek"
+
+#~ msgid "Delete job"
+#~ msgstr "Smazat úlohu"
+
+#~ msgid "Do you really want to delete all MIBs?"
+#~ msgstr "Opravdu chcete odstranit všechna MIB data?"
+
+#~ msgid "Add dataset"
+#~ msgstr "Přidat datovou sadu"
+
+#~ msgid "Delete MIB"
+#~ msgstr "Smazat MIB"
+
+#~ msgid "Delete all MIBs"
+#~ msgstr "Smazat všechna MIB data"
+
+#~ msgid "Delete all options"
+#~ msgstr "Smazat všechny předvolby"
+
+#~ msgid "Delete dataset"
+#~ msgstr "Odstranit datovou sadu"
+
+#~ msgid "Delete option"
+#~ msgstr "Smazat předvolbu"
+
+#~ msgid "Delete volume"
+#~ msgstr "Odstranit svazek"
+
+#~ msgid "Do you really want to delete all options?"
+#~ msgstr "Opravdu chcete odstranit všechny předvolby?"
+
+#~ msgid "Do you really want to delete this cron job?"
+#~ msgstr "Opravdu chcete smazat tuto naplánovanou (cron) úlohu?"
+
+#~ msgid "Do you really want to delete this dataset?"
+#~ msgstr "Chcete opravdu odstranit tuto datovou sadu?"
+
+#~ msgid "Do you really want to delete this option?"
+#~ msgstr "Opravdu chcete smazat tuto předvolbu?"
+
+#~ msgid "Do you really want to delete this volume?"
+#~ msgstr "Opravdu chcete odstranit tento svazek?"
+
+#~ msgid ""
+#~ "ZFS volume block size. This value can not be changed after creation. Empty "
+#~ "as default."
+#~ msgstr ""
+#~ "Velikost bloku ZFS svazku. Jakmile je vytvořen, nemůže už být změněna. "
+#~ "Nevyplněno znamená použít výchozí hodnotu."

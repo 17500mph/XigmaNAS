@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-01-21 22:28+0000\n"
+"POT-Creation-Date: 2016-02-25 16:05+0000\n"
 "PO-Revision-Date: 2015-12-27 22:10+0000\n"
 "Last-Translator: Alex Lin <linuxant@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-29 07:53+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-25 15:21+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -52,6 +52,18 @@ msgstr "%dB / 塊"
 #, php-format
 msgid "%s Interface"
 msgstr "%s 介面"
+
+#, php-format
+msgid "%s already exists as a %s."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a filesystem."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a volume."
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -386,6 +398,9 @@ msgstr "啟用的使用者"
 msgid "Add"
 msgstr "新增"
 
+msgid "Add Dataset"
+msgstr ""
+
 msgid "Add Host"
 msgstr "新增主機"
 
@@ -404,6 +419,9 @@ msgstr "新增 Rsync 工作"
 msgid "Add URL"
 msgstr "新增 URL"
 
+msgid "Add Volume"
+msgstr ""
+
 msgid "Add additional scheduled self-test."
 msgstr "新增自動化的自我監測"
 
@@ -415,9 +433,6 @@ msgstr "新增自動快照"
 
 msgid "Add command"
 msgstr "新增指令"
-
-msgid "Add dataset"
-msgstr "新增數據集"
 
 msgid "Add device"
 msgstr "新增裝置"
@@ -478,9 +493,6 @@ msgstr "新增目標"
 
 msgid "Add user"
 msgstr "新增用戶"
-
-msgid "Add volume"
-msgstr "新增卷"
 
 msgid "Additional Network"
 msgstr "其他網絡"
@@ -911,6 +923,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "空白時間"
+
+msgid "Block Size"
+msgstr ""
 
 msgid "Block size"
 msgstr "區塊大小"
@@ -1691,9 +1706,6 @@ msgstr "刪除主機"
 msgid "Delete Login Info"
 msgstr "刪除登入資訊"
 
-msgid "Delete MIB"
-msgstr "刪除 MIB"
-
 msgid "Delete RAID"
 msgstr "刪除RAID"
 
@@ -1703,6 +1715,18 @@ msgstr "刪除路由"
 msgid "Delete Rsync job"
 msgstr "刪除 Rsync 任務"
 
+msgid "Delete Selected Datasets"
+msgstr ""
+
+msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected Options"
+msgstr ""
+
+msgid "Delete Selected Volumes"
+msgstr ""
+
 msgid "Delete URL"
 msgstr "刪除 URL"
 
@@ -1711,12 +1735,6 @@ msgstr "刪除 VM"
 
 msgid "Delete algorithm"
 msgstr "刪除演算法"
-
-msgid "Delete all MIBs"
-msgstr "刪除所有的 MIB"
-
-msgid "Delete all options"
-msgstr "刪除所有選項"
 
 msgid "Delete all rules"
 msgstr "刪除所有規則"
@@ -1735,9 +1753,6 @@ msgstr "刪除克隆"
 
 msgid "Delete command"
 msgstr "刪除指令"
-
-msgid "Delete dataset"
-msgstr "刪除數據集"
 
 msgid "Delete device"
 msgstr "刪除裝置"
@@ -1763,17 +1778,11 @@ msgstr "刪除啟動器組"
 msgid "Delete interface"
 msgstr "刪除介面"
 
-msgid "Delete job"
-msgstr "刪除任務"
-
 msgid "Delete module"
 msgstr "刪除模組"
 
 msgid "Delete mount point"
 msgstr "刪除掛載點"
-
-msgid "Delete option"
-msgstr "刪除選項"
 
 msgid "Delete pool"
 msgstr "刪除存儲池"
@@ -1801,9 +1810,6 @@ msgstr "刪除目標"
 
 msgid "Delete user"
 msgstr "刪除用戶"
-
-msgid "Delete volume"
-msgstr "刪除卷"
 
 msgid "Deletes the recursive snapshot."
 msgstr "刪除遞歸快照"
@@ -1950,6 +1956,12 @@ msgstr "關閉檔案管理程式"
 msgid "Disable Firmware Update"
 msgstr "關閉固件更新"
 
+msgid "Disable Selected Jobs"
+msgstr ""
+
+msgid "Disable Selected Options"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "關閉 TCP Wrapper（mod_wrap 模塊）。"
 
@@ -2009,20 +2021,11 @@ msgid ""
 "cleared and overwritten."
 msgstr "您確定要清除並導入嗎？\\n現有的配置將被清除和覆蓋。"
 
-msgid "Do you really want to delete all MIBs?"
-msgstr "您確定要刪除所有的 MIB 嗎？"
-
-msgid "Do you really want to delete all options?"
-msgstr "您確定要刪除所有的選項嗎？"
-
 msgid "Do you really want to delete all rules?"
 msgstr "您確定要刪除所有規則嗎？"
 
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "您確定要刪除所有自我測試任務嗎?"
-
-msgid "Do you really want to delete this MIB?"
-msgstr "您確定要刪除這個 MIB嗎？"
 
 msgid "Do you really want to delete this Rsync job?"
 msgstr "您確定要刪除這個 Rsync 任務嗎？"
@@ -2044,12 +2047,6 @@ msgstr "您確認要刪除這個克隆嗎？"
 
 msgid "Do you really want to delete this command?"
 msgstr "您確認要刪除這個指令嗎？"
-
-msgid "Do you really want to delete this cron job?"
-msgstr "您確定要刪除這項 cron 任務嗎？"
-
-msgid "Do you really want to delete this dataset?"
-msgstr "您確定要刪除這項數據集嗎？"
 
 msgid "Do you really want to delete this device?"
 msgstr "您確定要刪除這個裝置嗎？"
@@ -2087,9 +2084,6 @@ msgid ""
 "it will become invalid (e.g. share)!"
 msgstr "您確定要刪除這個掛載點嗎？所有使用此掛載點的元件都會失效！ (例如：分享區)"
 
-msgid "Do you really want to delete this option?"
-msgstr "您確定要刪除這個選項嗎？"
-
 msgid "Do you really want to delete this pool?"
 msgstr "您確定要刪除這個池嗎？"
 
@@ -2120,9 +2114,6 @@ msgstr "您確定要刪除這個iSCSI目標嗎？"
 msgid "Do you really want to delete this user?"
 msgstr "您確定要刪除這個用戶嗎？"
 
-msgid "Do you really want to delete this volume?"
-msgstr "您確定要刪除這個卷嗎？"
-
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
 "and can not be recovered. !!!"
@@ -2140,6 +2131,36 @@ msgstr "您確定從列表中刪除所選項目嗎？"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "您確定要卸載這個套件嗎？"
+
+msgid "Do you want to delete selected datasets?"
+msgstr ""
+
+msgid "Do you want to delete selected jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected options?"
+msgstr ""
+
+msgid "Do you want to delete selected volumes?"
+msgstr ""
+
+msgid "Do you want to disable selected jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected options?"
+msgstr ""
+
+msgid "Do you want to enable selected jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected options?"
+msgstr ""
+
+msgid "Do you want to toggle selected jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected options?"
+msgstr ""
 
 msgid "Document root"
 msgstr "檔案根目錄"
@@ -2279,6 +2300,9 @@ msgstr "編輯 URL"
 msgid "Edit VM"
 msgstr "編輯 VM"
 
+msgid "Edit Volume"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "編輯認證組"
 
@@ -2351,9 +2375,6 @@ msgstr "編輯目標"
 msgid "Edit user"
 msgstr "編輯用戶"
 
-msgid "Edit volume"
-msgstr "編輯卷"
-
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
 msgstr "UPS的效率（輸入電流的輸出電流的對比率）"
@@ -2403,6 +2424,12 @@ msgid ""
 "Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can "
 "use SSL."
 msgstr "啟用STARTTLS加密。這並不意味著您必須使用TLS，您可以使用SSL。"
+
+msgid "Enable Selected Jobs"
+msgstr ""
+
+msgid "Enable Selected Options"
+msgstr ""
 
 msgid "Enable TLS connections."
 msgstr "啟用TLS連接。"
@@ -2748,6 +2775,9 @@ msgstr "失敗"
 
 msgid "Failed to create in-memory file system."
 msgstr "無法建立 RAM Disk"
+
+msgid "Failed to execute command zfs."
+msgstr ""
 
 msgid "Failed to execute cron job."
 msgstr "執行定時任務失敗。"
@@ -7342,6 +7372,12 @@ msgstr ""
 msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
 msgstr "您必須裝載每個目錄才能使用子目錄。（如 %s）"
 
+msgid "Toggle Selected Jobs"
+msgstr ""
+
+msgid "Toggle Selected Options"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "容許"
 
@@ -8092,9 +8128,7 @@ msgstr "ZFS卷屬性"
 msgid "ZFS volume"
 msgstr "ZFS 卷（volume）"
 
-msgid ""
-"ZFS volume block size. This value can not be changed after creation. Empty "
-"as default."
+msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
 
 msgid ""
@@ -8265,3 +8299,54 @@ msgstr "卸載"
 
 msgid "version:"
 msgstr "版本："
+
+#~ msgid "Delete MIB"
+#~ msgstr "刪除 MIB"
+
+#~ msgid "Delete all MIBs"
+#~ msgstr "刪除所有的 MIB"
+
+#~ msgid "Delete option"
+#~ msgstr "刪除選項"
+
+#~ msgid "Add dataset"
+#~ msgstr "新增數據集"
+
+#~ msgid "Add volume"
+#~ msgstr "新增卷"
+
+#~ msgid "Delete dataset"
+#~ msgstr "刪除數據集"
+
+#~ msgid "Delete volume"
+#~ msgstr "刪除卷"
+
+#~ msgid "Do you really want to delete this MIB?"
+#~ msgstr "您確定要刪除這個 MIB嗎？"
+
+#~ msgid "Do you really want to delete all MIBs?"
+#~ msgstr "您確定要刪除所有的 MIB 嗎？"
+
+#~ msgid "Do you really want to delete all options?"
+#~ msgstr "您確定要刪除所有的選項嗎？"
+
+#~ msgid "Do you really want to delete this volume?"
+#~ msgstr "您確定要刪除這個卷嗎？"
+
+#~ msgid "Edit volume"
+#~ msgstr "編輯卷"
+
+#~ msgid "Delete all options"
+#~ msgstr "刪除所有選項"
+
+#~ msgid "Delete job"
+#~ msgstr "刪除任務"
+
+#~ msgid "Do you really want to delete this dataset?"
+#~ msgstr "您確定要刪除這項數據集嗎？"
+
+#~ msgid "Do you really want to delete this cron job?"
+#~ msgstr "您確定要刪除這項 cron 任務嗎？"
+
+#~ msgid "Do you really want to delete this option?"
+#~ msgstr "您確定要刪除這個選項嗎？"

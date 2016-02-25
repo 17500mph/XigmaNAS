@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-01-21 22:28+0000\n"
+"POT-Creation-Date: 2016-02-25 16:05+0000\n"
 "PO-Revision-Date: 2014-11-17 04:08+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-29 07:53+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-25 15:21+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: SLOVAKIA\n"
 "Language: \n"
 "X-Poedit-Language: Slovak\n"
@@ -52,6 +52,18 @@ msgstr ""
 
 #, php-format
 msgid "%s Interface"
+msgstr ""
+
+#, php-format
+msgid "%s already exists as a %s."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a filesystem."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a volume."
 msgstr ""
 
 #, php-format
@@ -404,6 +416,9 @@ msgstr ""
 msgid "Add"
 msgstr "Pridať"
 
+msgid "Add Dataset"
+msgstr ""
+
 msgid "Add Host"
 msgstr "Pridať hostiteľa"
 
@@ -422,6 +437,9 @@ msgstr "Pridať úlohu rsync"
 msgid "Add URL"
 msgstr "Pridať odkaz"
 
+msgid "Add Volume"
+msgstr ""
+
 msgid "Add additional scheduled self-test."
 msgstr "Pridať ďalší plánovaný automatický test tohto zariadenia."
 
@@ -433,9 +451,6 @@ msgstr ""
 
 msgid "Add command"
 msgstr "Pridať príkaz"
-
-msgid "Add dataset"
-msgstr "Pridať množinu dát"
 
 msgid "Add device"
 msgstr "Pridať zariadenie"
@@ -496,9 +511,6 @@ msgstr "Pridať cieľ"
 
 msgid "Add user"
 msgstr "Pridať používateľa"
-
-msgid "Add volume"
-msgstr ""
 
 msgid "Additional Network"
 msgstr ""
@@ -938,6 +950,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "Čas čiernej obrazovky"
+
+msgid "Block Size"
+msgstr ""
 
 msgid "Block size"
 msgstr ""
@@ -1721,9 +1736,6 @@ msgstr "Zmazať stroj"
 msgid "Delete Login Info"
 msgstr ""
 
-msgid "Delete MIB"
-msgstr "Zmazať MIB"
-
 msgid "Delete RAID"
 msgstr "Zmazať RAID"
 
@@ -1733,6 +1745,18 @@ msgstr "Zmazať cestu"
 msgid "Delete Rsync job"
 msgstr "Zmazať úlohu rsync"
 
+msgid "Delete Selected Datasets"
+msgstr ""
+
+msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected Options"
+msgstr ""
+
+msgid "Delete Selected Volumes"
+msgstr ""
+
 msgid "Delete URL"
 msgstr "Zmazať URL"
 
@@ -1741,12 +1765,6 @@ msgstr ""
 
 msgid "Delete algorithm"
 msgstr "Algoritmus mazania"
-
-msgid "Delete all MIBs"
-msgstr "Zmazať všetky MIB"
-
-msgid "Delete all options"
-msgstr "Zmazať všetky voľby"
 
 msgid "Delete all rules"
 msgstr "Zmazať všetky pravidlá"
@@ -1765,9 +1783,6 @@ msgstr ""
 
 msgid "Delete command"
 msgstr "Zmazať príkaz"
-
-msgid "Delete dataset"
-msgstr "Zmazať množinu dát"
 
 msgid "Delete device"
 msgstr "Zmazať zariadenie"
@@ -1794,17 +1809,11 @@ msgstr "Zmazať skupinu iniciátora"
 msgid "Delete interface"
 msgstr "Zmazať rozhranie"
 
-msgid "Delete job"
-msgstr "Zmazať úlohu"
-
 msgid "Delete module"
 msgstr "Zmazať modul"
 
 msgid "Delete mount point"
 msgstr "Zmazať prípojný bod"
-
-msgid "Delete option"
-msgstr "Zmazať voľbu"
 
 msgid "Delete pool"
 msgstr "Zmazať pool"
@@ -1832,9 +1841,6 @@ msgstr "Zmazať cieľ"
 
 msgid "Delete user"
 msgstr "Zmazať používateľa"
-
-msgid "Delete volume"
-msgstr ""
 
 msgid "Deletes the recursive snapshot."
 msgstr ""
@@ -1986,6 +1992,12 @@ msgstr ""
 msgid "Disable Firmware Update"
 msgstr ""
 
+msgid "Disable Selected Jobs"
+msgstr ""
+
+msgid "Disable Selected Options"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
@@ -2045,20 +2057,11 @@ msgid ""
 "cleared and overwritten."
 msgstr ""
 
-msgid "Do you really want to delete all MIBs?"
-msgstr "Skutočne chcete zmazať všetky MIB?"
-
-msgid "Do you really want to delete all options?"
-msgstr "Skutočne chcete zmazať všetky voľby?"
-
 msgid "Do you really want to delete all rules?"
 msgstr "Skutočne chcete zmazať všetky pravidlá?"
 
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "Skutočne chcete zmazať všetky testy funkčnosti?"
-
-msgid "Do you really want to delete this MIB?"
-msgstr "Skutočne chcete zmazať túto MIB?"
 
 msgid "Do you really want to delete this Rsync job?"
 msgstr "Skutočne chcete zmazať túto úlohu rsync?"
@@ -2080,12 +2083,6 @@ msgstr ""
 
 msgid "Do you really want to delete this command?"
 msgstr "Naozaj chcete zmazať tento príkaz?"
-
-msgid "Do you really want to delete this cron job?"
-msgstr "Naozaj chcete zmazať túto úlohu cron?"
-
-msgid "Do you really want to delete this dataset?"
-msgstr "Skutočne chcete zmazať túto množinu dát?"
 
 msgid "Do you really want to delete this device?"
 msgstr "Naozaj chcete zmazať toto zariadenie?"
@@ -2129,9 +2126,6 @@ msgstr ""
 "Naozaj chcete zmazať toto miesto pripojenia? Všetky prvky, ktoré ho "
 "používajú budú zneplatnené (napr. zdieľané priečinky)!"
 
-msgid "Do you really want to delete this option?"
-msgstr "Skutočne chcete zmazať túto voľbu?"
-
 msgid "Do you really want to delete this pool?"
 msgstr "Skutočne chcete zmazať tento pool?"
 
@@ -2162,9 +2156,6 @@ msgstr "Naozaj chcete zmazať tento cieľ?"
 msgid "Do you really want to delete this user?"
 msgstr "Naozaj chcete zmazať tohto používateľa?"
 
-msgid "Do you really want to delete this volume?"
-msgstr ""
-
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
 "and can not be recovered. !!!"
@@ -2184,6 +2175,36 @@ msgstr "Skutočne chcete odstrániť vybranú položku zo zoznamu?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Naozaj chcete odinštalovať tento balík?"
+
+msgid "Do you want to delete selected datasets?"
+msgstr ""
+
+msgid "Do you want to delete selected jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected options?"
+msgstr ""
+
+msgid "Do you want to delete selected volumes?"
+msgstr ""
+
+msgid "Do you want to disable selected jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected options?"
+msgstr ""
+
+msgid "Do you want to enable selected jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected options?"
+msgstr ""
+
+msgid "Do you want to toggle selected jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected options?"
+msgstr ""
 
 msgid "Document root"
 msgstr "Koreňový adresár webu"
@@ -2324,6 +2345,9 @@ msgstr "Upraviť URL"
 msgid "Edit VM"
 msgstr ""
 
+msgid "Edit Volume"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "Upraviť autentif. skupinu"
 
@@ -2396,9 +2420,6 @@ msgstr "Upraviť cieľ"
 msgid "Edit user"
 msgstr "Upraviť používateľa"
 
-msgid "Edit volume"
-msgstr ""
-
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
 msgstr ""
@@ -2447,6 +2468,12 @@ msgstr "Zapnúť overovanie SMTP."
 msgid ""
 "Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can "
 "use SSL."
+msgstr ""
+
+msgid "Enable Selected Jobs"
+msgstr ""
+
+msgid "Enable Selected Options"
 msgstr ""
 
 msgid "Enable TLS connections."
@@ -2811,6 +2838,9 @@ msgstr "Neúspešné"
 
 msgid "Failed to create in-memory file system."
 msgstr "Nepodarilo sa vytvoriť pamäťový súborový systém."
+
+msgid "Failed to execute command zfs."
+msgstr ""
 
 msgid "Failed to execute cron job."
 msgstr "Nepodarilo sa vykonať cron úlohu"
@@ -7567,6 +7597,12 @@ msgstr ""
 msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
 msgstr ""
 
+msgid "Toggle Selected Jobs"
+msgstr ""
+
+msgid "Toggle Selected Options"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "Tolerované"
 
@@ -8341,9 +8377,7 @@ msgstr ""
 msgid "ZFS volume"
 msgstr ""
 
-msgid ""
-"ZFS volume block size. This value can not be changed after creation. Empty "
-"as default."
+msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
 
 msgid ""
@@ -8514,3 +8548,42 @@ msgstr "odpojiť"
 
 msgid "version:"
 msgstr ""
+
+#~ msgid "Add dataset"
+#~ msgstr "Pridať množinu dát"
+
+#~ msgid "Delete MIB"
+#~ msgstr "Zmazať MIB"
+
+#~ msgid "Delete all MIBs"
+#~ msgstr "Zmazať všetky MIB"
+
+#~ msgid "Delete all options"
+#~ msgstr "Zmazať všetky voľby"
+
+#~ msgid "Delete dataset"
+#~ msgstr "Zmazať množinu dát"
+
+#~ msgid "Delete job"
+#~ msgstr "Zmazať úlohu"
+
+#~ msgid "Delete option"
+#~ msgstr "Zmazať voľbu"
+
+#~ msgid "Do you really want to delete all MIBs?"
+#~ msgstr "Skutočne chcete zmazať všetky MIB?"
+
+#~ msgid "Do you really want to delete all options?"
+#~ msgstr "Skutočne chcete zmazať všetky voľby?"
+
+#~ msgid "Do you really want to delete this MIB?"
+#~ msgstr "Skutočne chcete zmazať túto MIB?"
+
+#~ msgid "Do you really want to delete this cron job?"
+#~ msgstr "Naozaj chcete zmazať túto úlohu cron?"
+
+#~ msgid "Do you really want to delete this dataset?"
+#~ msgstr "Skutočne chcete zmazať túto množinu dát?"
+
+#~ msgid "Do you really want to delete this option?"
+#~ msgstr "Skutočne chcete zmazať túto voľbu?"

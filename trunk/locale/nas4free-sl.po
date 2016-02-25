@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-01-21 22:28+0000\n"
+"POT-Creation-Date: 2016-02-25 16:05+0000\n"
 "PO-Revision-Date: 2014-11-17 04:08+0000\n"
 "Last-Translator: jure <jure.medved@amis.net>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-29 07:53+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-25 15:21+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
 "X-Poedit-Language: Slovenian\n"
@@ -52,6 +52,18 @@ msgstr "%dB / blok"
 
 #, php-format
 msgid "%s Interface"
+msgstr ""
+
+#, php-format
+msgid "%s already exists as a %s."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a filesystem."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a volume."
 msgstr ""
 
 #, php-format
@@ -408,6 +420,9 @@ msgstr "Aktivni uporabniki"
 msgid "Add"
 msgstr "Dodaj"
 
+msgid "Add Dataset"
+msgstr ""
+
 msgid "Add Host"
 msgstr "Dodaj gostitelja"
 
@@ -426,6 +441,9 @@ msgstr "Doday Rsync opravilo"
 msgid "Add URL"
 msgstr "Dodaj URL"
 
+msgid "Add Volume"
+msgstr ""
+
 msgid "Add additional scheduled self-test."
 msgstr "Dodaj načrtovan self-test."
 
@@ -437,9 +455,6 @@ msgstr ""
 
 msgid "Add command"
 msgstr "Dodaj ukaz"
-
-msgid "Add dataset"
-msgstr "Dodaj dataset"
 
 msgid "Add device"
 msgstr "Dodaj napravo"
@@ -500,9 +515,6 @@ msgstr "Dodaj cilj"
 
 msgid "Add user"
 msgstr "Dodaj uporabnika"
-
-msgid "Add volume"
-msgstr ""
 
 msgid "Additional Network"
 msgstr ""
@@ -936,6 +948,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "Brez časa"
+
+msgid "Block Size"
+msgstr ""
 
 msgid "Block size"
 msgstr ""
@@ -1717,9 +1732,6 @@ msgstr "Odstrani gostitelja"
 msgid "Delete Login Info"
 msgstr "Pobriši informacije o prijavi"
 
-msgid "Delete MIB"
-msgstr "Pobriši MIB"
-
 msgid "Delete RAID"
 msgstr "Odstrani RAID"
 
@@ -1729,6 +1741,18 @@ msgstr "Odstrani pot"
 msgid "Delete Rsync job"
 msgstr "Pobriši Rsync delo"
 
+msgid "Delete Selected Datasets"
+msgstr ""
+
+msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected Options"
+msgstr ""
+
+msgid "Delete Selected Volumes"
+msgstr ""
+
 msgid "Delete URL"
 msgstr "Izbriši URL"
 
@@ -1737,12 +1761,6 @@ msgstr ""
 
 msgid "Delete algorithm"
 msgstr "Pobriši algoritem"
-
-msgid "Delete all MIBs"
-msgstr "Pobriši vse MIB"
-
-msgid "Delete all options"
-msgstr "Izbriši vse možnosti"
 
 msgid "Delete all rules"
 msgstr "Pobriši vsa pravila"
@@ -1761,9 +1779,6 @@ msgstr ""
 
 msgid "Delete command"
 msgstr "Odstrani ukaz"
-
-msgid "Delete dataset"
-msgstr "Pobriši vse datasete"
 
 msgid "Delete device"
 msgstr "Izbriši napravo"
@@ -1789,17 +1804,11 @@ msgstr "Pobriši skupino sprožitelja"
 msgid "Delete interface"
 msgstr "Odstrani vnesnik"
 
-msgid "Delete job"
-msgstr "Izbriši opravilo"
-
 msgid "Delete module"
 msgstr "Izbriši modul"
 
 msgid "Delete mount point"
 msgstr "Izbriši priklopno točko"
-
-msgid "Delete option"
-msgstr "Izbrišite izbiro"
 
 msgid "Delete pool"
 msgstr "Izbriši bazen"
@@ -1827,9 +1836,6 @@ msgstr "Odstrani cilj"
 
 msgid "Delete user"
 msgstr "Odstrani uporabnika"
-
-msgid "Delete volume"
-msgstr ""
 
 msgid "Deletes the recursive snapshot."
 msgstr ""
@@ -1981,6 +1987,12 @@ msgstr "Onemogoči nadzornika datotek"
 msgid "Disable Firmware Update"
 msgstr ""
 
+msgid "Disable Selected Jobs"
+msgstr ""
+
+msgid "Disable Selected Options"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
@@ -2040,20 +2052,11 @@ msgid ""
 "cleared and overwritten."
 msgstr ""
 
-msgid "Do you really want to delete all MIBs?"
-msgstr "Res želite odstraniti vse MIB-e?"
-
-msgid "Do you really want to delete all options?"
-msgstr "Ali res želite izbrisati vse možnosti?"
-
 msgid "Do you really want to delete all rules?"
 msgstr "Res želite odstraniti vsa pravila?"
 
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "Res želite odstraniti vse self-teste?"
-
-msgid "Do you really want to delete this MIB?"
-msgstr "Res želite odstraniti MIB?"
 
 msgid "Do you really want to delete this Rsync job?"
 msgstr "Res želite odstraniti to Rsync pravilo?"
@@ -2075,12 +2078,6 @@ msgstr ""
 
 msgid "Do you really want to delete this command?"
 msgstr "Res želite odstraniti ta ukaz?"
-
-msgid "Do you really want to delete this cron job?"
-msgstr "Ali res želite izbrisati to cron opravilo?"
-
-msgid "Do you really want to delete this dataset?"
-msgstr "Res želite izbrisati ta dataset?"
 
 msgid "Do you really want to delete this device?"
 msgstr "Ali res želite izbrisati to napravo?"
@@ -2124,9 +2121,6 @@ msgstr ""
 "ALi res želite odstraniti to točko priklopa? Vsi elementi, ki jo "
 "uporabljajo, ne bodo več veljavni (npr. deljene mape)!"
 
-msgid "Do you really want to delete this option?"
-msgstr "Ali res želite izbrisati to možnost?"
-
 msgid "Do you really want to delete this pool?"
 msgstr "Res želite izbrisati ta bazen?"
 
@@ -2157,9 +2151,6 @@ msgstr "Res želite odstraniti ta cilj?"
 msgid "Do you really want to delete this user?"
 msgstr "Ali res želite izbrisati tega uporabnika?"
 
-msgid "Do you really want to delete this volume?"
-msgstr ""
-
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
 "and can not be recovered. !!!"
@@ -2179,6 +2170,36 @@ msgstr "Res želite izbrisati izbrano iz seznama?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Res želite odstraniti ta paket?"
+
+msgid "Do you want to delete selected datasets?"
+msgstr ""
+
+msgid "Do you want to delete selected jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected options?"
+msgstr ""
+
+msgid "Do you want to delete selected volumes?"
+msgstr ""
+
+msgid "Do you want to disable selected jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected options?"
+msgstr ""
+
+msgid "Do you want to enable selected jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected options?"
+msgstr ""
+
+msgid "Do you want to toggle selected jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected options?"
+msgstr ""
 
 msgid "Document root"
 msgstr "Root dokument"
@@ -2318,6 +2339,9 @@ msgstr "Uredi URL"
 msgid "Edit VM"
 msgstr ""
 
+msgid "Edit Volume"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "Uredi skupino dovoljenj"
 
@@ -2390,9 +2414,6 @@ msgstr "Uredi cilj"
 msgid "Edit user"
 msgstr "Uredi uporabnika"
 
-msgid "Edit volume"
-msgstr ""
-
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
 msgstr ""
@@ -2441,6 +2462,12 @@ msgstr "Omogoči SMTP prijavo."
 msgid ""
 "Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can "
 "use SSL."
+msgstr ""
+
+msgid "Enable Selected Jobs"
+msgstr ""
+
+msgid "Enable Selected Options"
 msgstr ""
 
 msgid "Enable TLS connections."
@@ -2803,6 +2830,9 @@ msgstr "Spodletelo"
 
 msgid "Failed to create in-memory file system."
 msgstr "Ne morem ustvariti datotečnega sistema v spominu."
+
+msgid "Failed to execute command zfs."
+msgstr ""
 
 msgid "Failed to execute cron job."
 msgstr "Ne morem zagnati časovnega opravila."
@@ -7477,6 +7507,12 @@ msgstr ""
 msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
 msgstr ""
 
+msgid "Toggle Selected Jobs"
+msgstr ""
+
+msgid "Toggle Selected Options"
+msgstr ""
+
 msgid "Tolerated"
 msgstr ""
 
@@ -8227,9 +8263,7 @@ msgstr ""
 msgid "ZFS volume"
 msgstr ""
 
-msgid ""
-"ZFS volume block size. This value can not be changed after creation. Empty "
-"as default."
+msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
 
 msgid ""
@@ -8400,3 +8434,42 @@ msgstr "izvrzi"
 
 msgid "version:"
 msgstr ""
+
+#~ msgid "Add dataset"
+#~ msgstr "Dodaj dataset"
+
+#~ msgid "Delete MIB"
+#~ msgstr "Pobriši MIB"
+
+#~ msgid "Delete all MIBs"
+#~ msgstr "Pobriši vse MIB"
+
+#~ msgid "Delete all options"
+#~ msgstr "Izbriši vse možnosti"
+
+#~ msgid "Delete dataset"
+#~ msgstr "Pobriši vse datasete"
+
+#~ msgid "Delete job"
+#~ msgstr "Izbriši opravilo"
+
+#~ msgid "Delete option"
+#~ msgstr "Izbrišite izbiro"
+
+#~ msgid "Do you really want to delete all MIBs?"
+#~ msgstr "Res želite odstraniti vse MIB-e?"
+
+#~ msgid "Do you really want to delete all options?"
+#~ msgstr "Ali res želite izbrisati vse možnosti?"
+
+#~ msgid "Do you really want to delete this MIB?"
+#~ msgstr "Res želite odstraniti MIB?"
+
+#~ msgid "Do you really want to delete this cron job?"
+#~ msgstr "Ali res želite izbrisati to cron opravilo?"
+
+#~ msgid "Do you really want to delete this dataset?"
+#~ msgstr "Res želite izbrisati ta dataset?"
+
+#~ msgid "Do you really want to delete this option?"
+#~ msgstr "Ali res želite izbrisati to možnost?"

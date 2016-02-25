@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-01-21 22:28+0000\n"
-"PO-Revision-Date: 2016-01-22 05:56+0000\n"
+"POT-Creation-Date: 2016-02-25 16:05+0000\n"
+"PO-Revision-Date: 2016-02-25 04:18+0000\n"
 "Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-29 07:53+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-25 15:21+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
 "X-Poedit-Language: Russian\n"
@@ -53,6 +53,18 @@ msgstr "%d байт на блок"
 #, php-format
 msgid "%s Interface"
 msgstr "%s интерфейс"
+
+#, php-format
+msgid "%s already exists as a %s."
+msgstr "%s уже существует в виде %s."
+
+#, php-format
+msgid "%s is already configured as a filesystem."
+msgstr "%s уже настроен как файловая система."
+
+#, php-format
+msgid "%s is already configured as a volume."
+msgstr "%s уже настроен как раздел."
 
 #, php-format
 msgid "%s is too long."
@@ -443,6 +455,9 @@ msgstr "Активные пользователи"
 msgid "Add"
 msgstr "Добавить"
 
+msgid "Add Dataset"
+msgstr "Добавить Dataset"
+
 msgid "Add Host"
 msgstr "Добавить хост"
 
@@ -461,6 +476,9 @@ msgstr "Добавить задание Rsync"
 msgid "Add URL"
 msgstr "Добавить URL"
 
+msgid "Add Volume"
+msgstr "Добавить раздел"
+
 msgid "Add additional scheduled self-test."
 msgstr "Добавить запланированное самотестирование."
 
@@ -472,9 +490,6 @@ msgstr "Добавить автоматический слепок"
 
 msgid "Add command"
 msgstr "Добавить команду"
-
-msgid "Add dataset"
-msgstr "Добавить dataset"
 
 msgid "Add device"
 msgstr "Добавить устройство"
@@ -535,9 +550,6 @@ msgstr "Добавить цель"
 
 msgid "Add user"
 msgstr "Добавить пользователя"
-
-msgid "Add volume"
-msgstr "Добавить раздел"
 
 msgid "Additional Network"
 msgstr "Дополнительная сеть"
@@ -1009,6 +1021,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "Время простоя"
+
+msgid "Block Size"
+msgstr "Размер блока"
 
 msgid "Block size"
 msgstr "Размер блока"
@@ -1874,9 +1889,6 @@ msgstr "Удалить хост"
 msgid "Delete Login Info"
 msgstr "Удалить сведения входа"
 
-msgid "Delete MIB"
-msgstr "Удалить MIB"
-
 msgid "Delete RAID"
 msgstr "Удалить RAID-массив"
 
@@ -1886,6 +1898,18 @@ msgstr "Удалить маршрут"
 msgid "Delete Rsync job"
 msgstr "Удалить задание Rsync"
 
+msgid "Delete Selected Datasets"
+msgstr "Удалить выбранные Dataset'ы"
+
+msgid "Delete Selected Jobs"
+msgstr "Удалить выбранные задания"
+
+msgid "Delete Selected Options"
+msgstr "Удалить выбранные опции"
+
+msgid "Delete Selected Volumes"
+msgstr "Удалить выбранные разделы"
+
 msgid "Delete URL"
 msgstr "Удалить URL"
 
@@ -1894,12 +1918,6 @@ msgstr "Удалить ВМ"
 
 msgid "Delete algorithm"
 msgstr "Алгоритм удаления"
-
-msgid "Delete all MIBs"
-msgstr "Удалить все MIB"
-
-msgid "Delete all options"
-msgstr "Удалить все настройки"
 
 msgid "Delete all rules"
 msgstr "Удалить все правила"
@@ -1918,9 +1936,6 @@ msgstr "Удалить копию"
 
 msgid "Delete command"
 msgstr "Удалить команду"
-
-msgid "Delete dataset"
-msgstr "Удалить dataset"
 
 msgid "Delete device"
 msgstr "Удалить устройство"
@@ -1947,17 +1962,11 @@ msgstr "Удалить группу инициаторов"
 msgid "Delete interface"
 msgstr "Удалить интерфейс"
 
-msgid "Delete job"
-msgstr "Удалить задание"
-
 msgid "Delete module"
 msgstr "Удалить модуль"
 
 msgid "Delete mount point"
 msgstr "Удалить точку монтирования"
-
-msgid "Delete option"
-msgstr "Удалить настройку"
 
 msgid "Delete pool"
 msgstr "Удалить пул"
@@ -1985,9 +1994,6 @@ msgstr "Удалить цель"
 
 msgid "Delete user"
 msgstr "Удалить пользователя"
-
-msgid "Delete volume"
-msgstr "Удалить раздел"
 
 msgid "Deletes the recursive snapshot."
 msgstr "Удалить ркурсивный слепок"
@@ -2145,6 +2151,12 @@ msgstr "Отключить файловый менеджер"
 msgid "Disable Firmware Update"
 msgstr "Отключить обновление прошивки"
 
+msgid "Disable Selected Jobs"
+msgstr "Отключить выбранные задания"
+
+msgid "Disable Selected Options"
+msgstr "Отключить выбранные опции"
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Отключить TCP wrapper (mod_wrap module)."
 
@@ -2208,21 +2220,12 @@ msgstr ""
 "Вы действительно хотите очистить и импортировать?\\nСуществующая "
 "конфигурация будет очищена и перезаписана."
 
-msgid "Do you really want to delete all MIBs?"
-msgstr "Вы действительно хотите удалить все MIB?"
-
-msgid "Do you really want to delete all options?"
-msgstr "Вы действительно хотите удалить все настройки?"
-
 msgid "Do you really want to delete all rules?"
 msgstr "Вы действительно хотите удалить все правила?"
 
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr ""
 "Вы действительно хотите удалить все запланированные самотестирования?"
-
-msgid "Do you really want to delete this MIB?"
-msgstr "Вы действительно хотите удалить этот MIB?"
 
 msgid "Do you really want to delete this Rsync job?"
 msgstr "Вы действительно хотите удалить это задание Rsync?"
@@ -2244,12 +2247,6 @@ msgstr "Вы действительно хотите удалить эту ко�
 
 msgid "Do you really want to delete this command?"
 msgstr "Вы действительно хотите удалить эту команду?"
-
-msgid "Do you really want to delete this cron job?"
-msgstr "Вы действительно хотите удалить это задание?"
-
-msgid "Do you really want to delete this dataset?"
-msgstr "Вы действительно хотите удалить этот dataset?"
 
 msgid "Do you really want to delete this device?"
 msgstr "Вы действительно хотите удалить это устройство?"
@@ -2293,9 +2290,6 @@ msgstr ""
 "Вы действительно хотите удалить эту точку монтирования? Все объекты, "
 "использующие её, станут недоступны (например, общие ресурсы)!"
 
-msgid "Do you really want to delete this option?"
-msgstr "Вы действительно хотите удалить эту настройку?"
-
 msgid "Do you really want to delete this pool?"
 msgstr "Вы действительно хотите удалить этот пул?"
 
@@ -2326,9 +2320,6 @@ msgstr "Вы действительно хотите удалить эту це�
 msgid "Do you really want to delete this user?"
 msgstr "Вы действительно хотите удалить этого пользователя?"
 
-msgid "Do you really want to delete this volume?"
-msgstr "Вы действительно хотите удалить этот раздел?"
-
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
 "and can not be recovered. !!!"
@@ -2352,6 +2343,36 @@ msgstr "Вы действительно хотите удалить выбран
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Вы действительно хотите удалить этот пакет?"
+
+msgid "Do you want to delete selected datasets?"
+msgstr "Вы действительно желаете удалить выбранные Dataset'ы?"
+
+msgid "Do you want to delete selected jobs?"
+msgstr "Вы действительно желаете удалить выбранные задания?"
+
+msgid "Do you want to delete selected options?"
+msgstr "Вы действительно желаете удалить выбранные опции?"
+
+msgid "Do you want to delete selected volumes?"
+msgstr "Вы действительно желаете удалить выбранные разделы?"
+
+msgid "Do you want to disable selected jobs?"
+msgstr "Вы действительно желаете отключить выбранные задания?"
+
+msgid "Do you want to disable selected options?"
+msgstr "Вы действительно желаете отключить выбранные опции?"
+
+msgid "Do you want to enable selected jobs?"
+msgstr "Вы действительно желаете включить выбранные задания?"
+
+msgid "Do you want to enable selected options?"
+msgstr "Вы действительно желаете включить выбранные опции?"
+
+msgid "Do you want to toggle selected jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected options?"
+msgstr "Вы действительно желаете изменить выбранные опции?"
 
 msgid "Document root"
 msgstr "Корневая директория"
@@ -2494,6 +2515,9 @@ msgstr "Редактировать URL"
 msgid "Edit VM"
 msgstr "Редактировать ВМ"
 
+msgid "Edit Volume"
+msgstr "Редактирование раздела"
+
 msgid "Edit auth group"
 msgstr "Изменить группу аутентификации"
 
@@ -2566,9 +2590,6 @@ msgstr "Изменить цель"
 msgid "Edit user"
 msgstr "Изменить пользователя"
 
-msgid "Edit volume"
-msgstr "Редактировать раздел"
-
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
 msgstr "Эффективность ИБП (соотношение значения выходного тока к входному)"
@@ -2622,6 +2643,12 @@ msgid ""
 msgstr ""
 "Включить шифрование STARTTLS. Это не означает, что Вы должны использовать "
 "TLS, Вы можете использовать SSL."
+
+msgid "Enable Selected Jobs"
+msgstr "Включить выбранные задания"
+
+msgid "Enable Selected Options"
+msgstr "Включить выбранные опции"
 
 msgid "Enable TLS connections."
 msgstr "Включить TLS соединения."
@@ -2999,6 +3026,9 @@ msgstr "Неудачно"
 
 msgid "Failed to create in-memory file system."
 msgstr "Сбой при создании файловой системы в памяти."
+
+msgid "Failed to execute command zfs."
+msgstr "Не удалось выполнить команду ZFS."
 
 msgid "Failed to execute cron job."
 msgstr "Сбой при выполнении задания Сron'а."
@@ -8086,6 +8116,12 @@ msgstr ""
 "Чтобы использовать подкаталоги, вы должны монтировать каждый каталог. "
 "(например, %s)"
 
+msgid "Toggle Selected Jobs"
+msgstr "Изменить выбранные задания"
+
+msgid "Toggle Selected Options"
+msgstr "Изменить выбранные опции"
+
 msgid "Tolerated"
 msgstr "Допускается"
 
@@ -8917,12 +8953,9 @@ msgstr "Свойства ZFS разделов"
 msgid "ZFS volume"
 msgstr "ZFS-том"
 
-msgid ""
-"ZFS volume block size. This value can not be changed after creation. Empty "
-"as default."
+msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
-"Размер блока тома ZFS . Это значение не может быть изменено после создания. "
-"Пусто по умолчанию."
+"Размер блока раздела ZFS. Это значение не может быть изменено после создания."
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
@@ -9100,3 +9133,67 @@ msgstr "размонтировать"
 
 msgid "version:"
 msgstr "версия:"
+
+#~ msgid "Add dataset"
+#~ msgstr "Добавить dataset"
+
+#~ msgid "Delete MIB"
+#~ msgstr "Удалить MIB"
+
+#~ msgid "Delete all MIBs"
+#~ msgstr "Удалить все MIB"
+
+#~ msgid "Delete all options"
+#~ msgstr "Удалить все настройки"
+
+#~ msgid "Delete dataset"
+#~ msgstr "Удалить dataset"
+
+#~ msgid "Delete job"
+#~ msgstr "Удалить задание"
+
+#~ msgid "Delete option"
+#~ msgstr "Удалить настройку"
+
+#~ msgid "Do you really want to delete all MIBs?"
+#~ msgstr "Вы действительно хотите удалить все MIB?"
+
+#~ msgid "Do you really want to delete all options?"
+#~ msgstr "Вы действительно хотите удалить все настройки?"
+
+#~ msgid "Do you really want to delete this MIB?"
+#~ msgstr "Вы действительно хотите удалить этот MIB?"
+
+#~ msgid "Do you really want to delete this cron job?"
+#~ msgstr "Вы действительно хотите удалить это задание?"
+
+#~ msgid "Do you really want to delete this dataset?"
+#~ msgstr "Вы действительно хотите удалить этот dataset?"
+
+#~ msgid "Do you really want to delete this option?"
+#~ msgstr "Вы действительно хотите удалить эту настройку?"
+
+#~ msgid "Do you really want to delete this volume?"
+#~ msgstr "Вы действительно хотите удалить этот раздел?"
+
+#~ msgid "Delete volume"
+#~ msgstr "Удалить раздел"
+
+#~ msgid "Edit volume"
+#~ msgstr "Редактировать раздел"
+
+#~ msgid "Add volume"
+#~ msgstr "Добавить раздел"
+
+#~ msgid ""
+#~ "ZFS volume block size. This value can not be changed after creation. Empty "
+#~ "as default."
+#~ msgstr ""
+#~ "Размер блока тома ZFS . Это значение не может быть изменено после создания. "
+#~ "Пусто по умолчанию."
+
+#~ msgid "Do you really to toggle selected jobs?"
+#~ msgstr "Вы действительно желаете изменить выбранные задания?"
+
+#~ msgid "Do you really to toggle selected options?"
+#~ msgstr "Вы действительно желаете изменить выбранные опции?"

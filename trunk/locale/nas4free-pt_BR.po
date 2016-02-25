@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-01-21 22:28+0000\n"
+"POT-Creation-Date: 2016-02-25 16:05+0000\n"
 "PO-Revision-Date: 2015-06-11 17:41+0000\n"
 "Last-Translator: Flavio Peinado <flavio@peinado.com.br>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-29 07:53+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-25 15:21+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: Brazilian Portuguese\n"
 "Language: \n"
 "X-Poedit-Language: Brazilian Portuguese\n"
@@ -52,6 +52,18 @@ msgstr "%dB / bloco"
 
 #, php-format
 msgid "%s Interface"
+msgstr ""
+
+#, php-format
+msgid "%s already exists as a %s."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a filesystem."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a volume."
 msgstr ""
 
 #, php-format
@@ -426,6 +438,9 @@ msgstr "Usuários Ativos"
 msgid "Add"
 msgstr "Adicionar"
 
+msgid "Add Dataset"
+msgstr ""
+
 msgid "Add Host"
 msgstr "Adicionar máquina"
 
@@ -444,6 +459,9 @@ msgstr "Adicionar tarefa de Rsync"
 msgid "Add URL"
 msgstr "Adicionar URL"
 
+msgid "Add Volume"
+msgstr ""
+
 msgid "Add additional scheduled self-test."
 msgstr "Adicionar novo agendamento de auto-teste."
 
@@ -455,9 +473,6 @@ msgstr "Adicionar imagem automática"
 
 msgid "Add command"
 msgstr "Adicionar comando"
-
-msgid "Add dataset"
-msgstr "Adicionar conjunto de dados"
 
 msgid "Add device"
 msgstr "Adicionar dispositivo"
@@ -518,9 +533,6 @@ msgstr "Adicionar destino"
 
 msgid "Add user"
 msgstr "Adicionar usuário"
-
-msgid "Add volume"
-msgstr "Adicionar volume"
 
 msgid "Additional Network"
 msgstr ""
@@ -977,6 +989,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "Tempo em branco"
+
+msgid "Block Size"
+msgstr ""
 
 msgid "Block size"
 msgstr ""
@@ -1784,9 +1799,6 @@ msgstr "Excluir host"
 msgid "Delete Login Info"
 msgstr "Excluir informações de login"
 
-msgid "Delete MIB"
-msgstr "Excluir MIB"
-
 msgid "Delete RAID"
 msgstr "Excluir RAID"
 
@@ -1796,6 +1808,18 @@ msgstr "Ecluir rota"
 msgid "Delete Rsync job"
 msgstr "Excluir tarefa do Rsync"
 
+msgid "Delete Selected Datasets"
+msgstr ""
+
+msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected Options"
+msgstr ""
+
+msgid "Delete Selected Volumes"
+msgstr ""
+
 msgid "Delete URL"
 msgstr "Excluir URL"
 
@@ -1804,12 +1828,6 @@ msgstr ""
 
 msgid "Delete algorithm"
 msgstr "Excluir algoritmo"
-
-msgid "Delete all MIBs"
-msgstr "Excluir todas as MIBs"
-
-msgid "Delete all options"
-msgstr "Excluir todas as opções"
 
 msgid "Delete all rules"
 msgstr "Excluir todas as regras"
@@ -1828,9 +1846,6 @@ msgstr "Excluir réplica"
 
 msgid "Delete command"
 msgstr "Excluir comando"
-
-msgid "Delete dataset"
-msgstr "Excluir conjunto de dados"
 
 msgid "Delete device"
 msgstr "Excluir dispositivo"
@@ -1856,17 +1871,11 @@ msgstr "Excluir grupo iniciador"
 msgid "Delete interface"
 msgstr "Excluir interface"
 
-msgid "Delete job"
-msgstr "Excluir tarefa"
-
 msgid "Delete module"
 msgstr "Excluir módulo"
 
 msgid "Delete mount point"
 msgstr "Excluir ponto de montagem"
-
-msgid "Delete option"
-msgstr "Excluir opção"
 
 msgid "Delete pool"
 msgstr "Excluir 'pool'"
@@ -1894,9 +1903,6 @@ msgstr "Excluir alvo"
 
 msgid "Delete user"
 msgstr "Excluir usuário"
-
-msgid "Delete volume"
-msgstr "Excluir volume"
 
 msgid "Deletes the recursive snapshot."
 msgstr "Excluir a imagem recursiva."
@@ -2049,6 +2055,12 @@ msgstr "Desativar o Gerenciador de Arquivos"
 msgid "Disable Firmware Update"
 msgstr ""
 
+msgid "Disable Selected Jobs"
+msgstr ""
+
+msgid "Disable Selected Options"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Desativar o envelopador TCP (módulo mod_wrap)"
 
@@ -2110,20 +2122,11 @@ msgstr ""
 "Deseja realmente apagar e importar? \\n A configuração existente será "
 "apagada e sobrescrita."
 
-msgid "Do you really want to delete all MIBs?"
-msgstr "Deseja realmente excluir todas as MIBs?"
-
-msgid "Do you really want to delete all options?"
-msgstr "Deseja realmente excluir todas as opções?"
-
 msgid "Do you really want to delete all rules?"
 msgstr "Deseja realmente excluir todas as regras?"
 
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "Deseja realmente excluir todos os auto-teste agendados?"
-
-msgid "Do you really want to delete this MIB?"
-msgstr "Deseja realmente excluir esta MIB?"
 
 msgid "Do you really want to delete this Rsync job?"
 msgstr "Deseja realmente excluir esta tarefa de Rsync?"
@@ -2145,12 +2148,6 @@ msgstr "Deseja realmente excluir esta réplica?"
 
 msgid "Do you really want to delete this command?"
 msgstr "Deseja realmente excluir este comando?"
-
-msgid "Do you really want to delete this cron job?"
-msgstr "Deseja realmente excluir esta tarefa da cron?"
-
-msgid "Do you really want to delete this dataset?"
-msgstr "Deseja realmente excluir este conjunto de dados?"
 
 msgid "Do you really want to delete this device?"
 msgstr "Deseja realmente excluir este dispositivo?"
@@ -2194,9 +2191,6 @@ msgstr ""
 "Deseja realmente excluir este ponto de montagem? Todos os elementos que o "
 "utilizam tornar-se-ão inválidos (ex: compartilhamentos)!"
 
-msgid "Do you really want to delete this option?"
-msgstr "Deseja realmente excluir esta opção?"
-
 msgid "Do you really want to delete this pool?"
 msgstr "Deseja realmente excluir este 'pool'?"
 
@@ -2227,9 +2221,6 @@ msgstr "Deseja realmente excluir este destino?"
 msgid "Do you really want to delete this user?"
 msgstr "Deseja realmente excluir este usuário?"
 
-msgid "Do you really want to delete this volume?"
-msgstr "Deseja realmente excluir este volume?"
-
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
 "and can not be recovered. !!!"
@@ -2250,6 +2241,36 @@ msgstr "Deseja realmente remover o item selecionado da lista?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Deseja realmente desinstalar este pacote?"
+
+msgid "Do you want to delete selected datasets?"
+msgstr ""
+
+msgid "Do you want to delete selected jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected options?"
+msgstr ""
+
+msgid "Do you want to delete selected volumes?"
+msgstr ""
+
+msgid "Do you want to disable selected jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected options?"
+msgstr ""
+
+msgid "Do you want to enable selected jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected options?"
+msgstr ""
+
+msgid "Do you want to toggle selected jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected options?"
+msgstr ""
 
 msgid "Document root"
 msgstr "Raiz do documento"
@@ -2391,6 +2412,9 @@ msgstr "Editar URL"
 msgid "Edit VM"
 msgstr ""
 
+msgid "Edit Volume"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "Editar grupo de autenticação"
 
@@ -2463,9 +2487,6 @@ msgstr "Editar alvo"
 msgid "Edit user"
 msgstr "Editar usuário"
 
-msgid "Edit volume"
-msgstr "Editar volume"
-
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
 msgstr ""
@@ -2518,6 +2539,12 @@ msgid ""
 msgstr ""
 "Habilitar criptografia STARTTLS. Não é obrigatório o uso de TLS, pois pode-"
 "se usar SSL."
+
+msgid "Enable Selected Jobs"
+msgstr ""
+
+msgid "Enable Selected Options"
+msgstr ""
 
 msgid "Enable TLS connections."
 msgstr ""
@@ -2886,6 +2913,9 @@ msgstr "Falhou"
 
 msgid "Failed to create in-memory file system."
 msgstr "Falha ao criar o sistema de arquivos em memória."
+
+msgid "Failed to execute command zfs."
+msgstr ""
 
 msgid "Failed to execute cron job."
 msgstr "Falha ao executar a tarefa da cron."
@@ -7870,6 +7900,12 @@ msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
 msgstr ""
 "Para usar subdiretórios, você deve montar cada um dos diretórios. (ex.: %s)"
 
+msgid "Toggle Selected Jobs"
+msgstr ""
+
+msgid "Toggle Selected Options"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "Tolerado"
 
@@ -8668,9 +8704,7 @@ msgstr ""
 msgid "ZFS volume"
 msgstr "Volume ZFS"
 
-msgid ""
-"ZFS volume block size. This value can not be changed after creation. Empty "
-"as default."
+msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
 
 msgid ""
@@ -8843,3 +8877,54 @@ msgstr "desmontar"
 
 msgid "version:"
 msgstr "versão:"
+
+#~ msgid "Delete MIB"
+#~ msgstr "Excluir MIB"
+
+#~ msgid "Delete all MIBs"
+#~ msgstr "Excluir todas as MIBs"
+
+#~ msgid "Delete all options"
+#~ msgstr "Excluir todas as opções"
+
+#~ msgid "Delete job"
+#~ msgstr "Excluir tarefa"
+
+#~ msgid "Delete option"
+#~ msgstr "Excluir opção"
+
+#~ msgid "Do you really want to delete all options?"
+#~ msgstr "Deseja realmente excluir todas as opções?"
+
+#~ msgid "Do you really want to delete this cron job?"
+#~ msgstr "Deseja realmente excluir esta tarefa da cron?"
+
+#~ msgid "Do you really want to delete this option?"
+#~ msgstr "Deseja realmente excluir esta opção?"
+
+#~ msgid "Add dataset"
+#~ msgstr "Adicionar conjunto de dados"
+
+#~ msgid "Add volume"
+#~ msgstr "Adicionar volume"
+
+#~ msgid "Delete dataset"
+#~ msgstr "Excluir conjunto de dados"
+
+#~ msgid "Delete volume"
+#~ msgstr "Excluir volume"
+
+#~ msgid "Do you really want to delete all MIBs?"
+#~ msgstr "Deseja realmente excluir todas as MIBs?"
+
+#~ msgid "Do you really want to delete this MIB?"
+#~ msgstr "Deseja realmente excluir esta MIB?"
+
+#~ msgid "Do you really want to delete this dataset?"
+#~ msgstr "Deseja realmente excluir este conjunto de dados?"
+
+#~ msgid "Do you really want to delete this volume?"
+#~ msgstr "Deseja realmente excluir este volume?"
+
+#~ msgid "Edit volume"
+#~ msgstr "Editar volume"

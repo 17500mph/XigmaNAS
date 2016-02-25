@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-01-21 22:28+0000\n"
+"POT-Creation-Date: 2016-02-25 16:05+0000\n"
 "PO-Revision-Date: 2015-11-23 15:03+0000\n"
 "Last-Translator: rainland <reino.kinner@aalto.fi>\n"
 "Language-Team: NAS4Free <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-29 07:53+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-25 15:21+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: FINLAND\n"
 "X-Poedit-Language: Finnish\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -56,6 +56,18 @@ msgstr "%dB / lohko"
 
 #, php-format
 msgid "%s Interface"
+msgstr ""
+
+#, php-format
+msgid "%s already exists as a %s."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a filesystem."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a volume."
 msgstr ""
 
 #, php-format
@@ -430,6 +442,9 @@ msgstr ""
 msgid "Add"
 msgstr "Lisää"
 
+msgid "Add Dataset"
+msgstr ""
+
 msgid "Add Host"
 msgstr "Lisää palvelin"
 
@@ -448,6 +463,9 @@ msgstr "Lisää Rsync työ"
 msgid "Add URL"
 msgstr "Lisää URL"
 
+msgid "Add Volume"
+msgstr ""
+
 msgid "Add additional scheduled self-test."
 msgstr "Lisää ylimääräinen ajastettu itsetestaus"
 
@@ -459,9 +477,6 @@ msgstr ""
 
 msgid "Add command"
 msgstr "Lisää komento"
-
-msgid "Add dataset"
-msgstr ""
 
 msgid "Add device"
 msgstr "Lisää laite"
@@ -522,9 +537,6 @@ msgstr "Lisää kohde"
 
 msgid "Add user"
 msgstr "Lisää käytttäjä"
-
-msgid "Add volume"
-msgstr ""
 
 msgid "Additional Network"
 msgstr ""
@@ -952,6 +964,9 @@ msgid "BitTorrent"
 msgstr "BitTorrent"
 
 msgid "Blank time"
+msgstr ""
+
+msgid "Block Size"
 msgstr ""
 
 msgid "Block size"
@@ -1722,9 +1737,6 @@ msgstr "Poista palvelin"
 msgid "Delete Login Info"
 msgstr ""
 
-msgid "Delete MIB"
-msgstr "Poista MIB"
-
 msgid "Delete RAID"
 msgstr "Poista RAID"
 
@@ -1734,6 +1746,18 @@ msgstr "Poista reitti"
 msgid "Delete Rsync job"
 msgstr "Poista Rsync työ"
 
+msgid "Delete Selected Datasets"
+msgstr ""
+
+msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected Options"
+msgstr ""
+
+msgid "Delete Selected Volumes"
+msgstr ""
+
 msgid "Delete URL"
 msgstr "Poista URL"
 
@@ -1742,12 +1766,6 @@ msgstr ""
 
 msgid "Delete algorithm"
 msgstr "Poista algoritmi"
-
-msgid "Delete all MIBs"
-msgstr "Poista kaiikki MIBit"
-
-msgid "Delete all options"
-msgstr "Poista kaikki valinnat"
 
 msgid "Delete all rules"
 msgstr "Poista kaikki säännöt"
@@ -1766,9 +1784,6 @@ msgstr ""
 
 msgid "Delete command"
 msgstr "Poista komento"
-
-msgid "Delete dataset"
-msgstr ""
 
 msgid "Delete device"
 msgstr "Poista laite"
@@ -1794,17 +1809,11 @@ msgstr ""
 msgid "Delete interface"
 msgstr "Poista liitäntä"
 
-msgid "Delete job"
-msgstr "Poista työ"
-
 msgid "Delete module"
 msgstr "Poista moduli"
 
 msgid "Delete mount point"
 msgstr "Poista liitoskohta"
-
-msgid "Delete option"
-msgstr ""
 
 msgid "Delete pool"
 msgstr ""
@@ -1832,9 +1841,6 @@ msgstr "Poista kohde"
 
 msgid "Delete user"
 msgstr "Poista käyttäjä"
-
-msgid "Delete volume"
-msgstr ""
 
 msgid "Deletes the recursive snapshot."
 msgstr ""
@@ -1979,6 +1985,12 @@ msgstr ""
 msgid "Disable Firmware Update"
 msgstr ""
 
+msgid "Disable Selected Jobs"
+msgstr ""
+
+msgid "Disable Selected Options"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
@@ -2038,19 +2050,10 @@ msgid ""
 "cleared and overwritten."
 msgstr ""
 
-msgid "Do you really want to delete all MIBs?"
-msgstr "Oletko varma, että haluat poistaa kaiikki MIB:it?"
-
-msgid "Do you really want to delete all options?"
-msgstr ""
-
 msgid "Do you really want to delete all rules?"
 msgstr ""
 
 msgid "Do you really want to delete all scheduled self-tests?"
-msgstr ""
-
-msgid "Do you really want to delete this MIB?"
 msgstr ""
 
 msgid "Do you really want to delete this Rsync job?"
@@ -2073,12 +2076,6 @@ msgstr ""
 
 msgid "Do you really want to delete this command?"
 msgstr "Haluatko varmasti poistaa komennon?"
-
-msgid "Do you really want to delete this cron job?"
-msgstr ""
-
-msgid "Do you really want to delete this dataset?"
-msgstr ""
 
 msgid "Do you really want to delete this device?"
 msgstr ""
@@ -2116,9 +2113,6 @@ msgid ""
 "it will become invalid (e.g. share)!"
 msgstr ""
 
-msgid "Do you really want to delete this option?"
-msgstr ""
-
 msgid "Do you really want to delete this pool?"
 msgstr ""
 
@@ -2149,9 +2143,6 @@ msgstr ""
 msgid "Do you really want to delete this user?"
 msgstr ""
 
-msgid "Do you really want to delete this volume?"
-msgstr ""
-
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
 "and can not be recovered. !!!"
@@ -2170,6 +2161,36 @@ msgid "Do you really want to remove the selected item from the list?"
 msgstr ""
 
 msgid "Do you really want to uninstall this package?"
+msgstr ""
+
+msgid "Do you want to delete selected datasets?"
+msgstr ""
+
+msgid "Do you want to delete selected jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected options?"
+msgstr ""
+
+msgid "Do you want to delete selected volumes?"
+msgstr ""
+
+msgid "Do you want to disable selected jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected options?"
+msgstr ""
+
+msgid "Do you want to enable selected jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected options?"
+msgstr ""
+
+msgid "Do you want to toggle selected jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected options?"
 msgstr ""
 
 msgid "Document root"
@@ -2310,6 +2331,9 @@ msgstr "URL:n muokkaus"
 msgid "Edit VM"
 msgstr ""
 
+msgid "Edit Volume"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr ""
 
@@ -2382,9 +2406,6 @@ msgstr "Kohteen muokkaus"
 msgid "Edit user"
 msgstr "Käyttäjän muokkaus"
 
-msgid "Edit volume"
-msgstr ""
-
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
 msgstr ""
@@ -2433,6 +2454,12 @@ msgstr "SMTP todennus käytössä."
 msgid ""
 "Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can "
 "use SSL."
+msgstr ""
+
+msgid "Enable Selected Jobs"
+msgstr ""
+
+msgid "Enable Selected Options"
 msgstr ""
 
 msgid "Enable TLS connections."
@@ -2780,6 +2807,9 @@ msgid "Failed"
 msgstr "Epäonnistui"
 
 msgid "Failed to create in-memory file system."
+msgstr ""
+
+msgid "Failed to execute command zfs."
 msgstr ""
 
 msgid "Failed to execute cron job."
@@ -7334,6 +7364,12 @@ msgstr ""
 msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
 msgstr ""
 
+msgid "Toggle Selected Jobs"
+msgstr ""
+
+msgid "Toggle Selected Options"
+msgstr ""
+
 msgid "Tolerated"
 msgstr ""
 
@@ -8082,9 +8118,7 @@ msgstr ""
 msgid "ZFS volume"
 msgstr ""
 
-msgid ""
-"ZFS volume block size. This value can not be changed after creation. Empty "
-"as default."
+msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
 
 msgid ""
@@ -8255,3 +8289,18 @@ msgstr ""
 
 msgid "version:"
 msgstr ""
+
+#~ msgid "Delete MIB"
+#~ msgstr "Poista MIB"
+
+#~ msgid "Delete all MIBs"
+#~ msgstr "Poista kaiikki MIBit"
+
+#~ msgid "Delete all options"
+#~ msgstr "Poista kaikki valinnat"
+
+#~ msgid "Delete job"
+#~ msgstr "Poista työ"
+
+#~ msgid "Do you really want to delete all MIBs?"
+#~ msgstr "Oletko varma, että haluat poistaa kaiikki MIB:it?"

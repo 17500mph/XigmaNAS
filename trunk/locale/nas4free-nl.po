@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-01-21 22:28+0000\n"
-"PO-Revision-Date: 2016-01-22 23:44+0000\n"
+"POT-Creation-Date: 2016-02-25 16:05+0000\n"
+"PO-Revision-Date: 2016-02-25 15:14+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-29 07:52+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-25 15:20+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
 "X-Poedit-Language: Dutch\n"
@@ -53,6 +53,18 @@ msgstr "%dB / blok"
 #, php-format
 msgid "%s Interface"
 msgstr "%s Netwerk"
+
+#, php-format
+msgid "%s already exists as a %s."
+msgstr "%s bestaat reeds als %s."
+
+#, php-format
+msgid "%s is already configured as a filesystem."
+msgstr "%s is al geconfigureerd als bestandssysteem."
+
+#, php-format
+msgid "%s is already configured as a volume."
+msgstr "%s is al geconfigureerd als volume."
 
 #, php-format
 msgid "%s is too long."
@@ -457,6 +469,9 @@ msgstr "Actieve Gebruikers"
 msgid "Add"
 msgstr "Toevoegen"
 
+msgid "Add Dataset"
+msgstr "Add Dataset"
+
 msgid "Add Host"
 msgstr "Host Toevoegen"
 
@@ -475,6 +490,9 @@ msgstr "Rsync taak toevoegen"
 msgid "Add URL"
 msgstr "URL Toevoegen"
 
+msgid "Add Volume"
+msgstr "Volume Toevoegen"
+
 msgid "Add additional scheduled self-test."
 msgstr "Een geplande zelf-test toevoegen."
 
@@ -486,9 +504,6 @@ msgstr "Voeg automatisch snaphot toe"
 
 msgid "Add command"
 msgstr "Opdracht toevoegen"
-
-msgid "Add dataset"
-msgstr "Dataset toevoegen"
 
 msgid "Add device"
 msgstr "Apparaat toevoegen"
@@ -549,9 +564,6 @@ msgstr "Doel toevoegen"
 
 msgid "Add user"
 msgstr "Gebruiker toevoegen"
-
-msgid "Add volume"
-msgstr "Voeg Volume toe"
 
 msgid "Additional Network"
 msgstr "Bijkomend Netwerk"
@@ -1024,6 +1036,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "Wachttijd Schermbeveiliging"
+
+msgid "Block Size"
+msgstr "Blokgrootte"
 
 msgid "Block size"
 msgstr "Blokgrootte"
@@ -1901,9 +1916,6 @@ msgstr "Host verwijderen"
 msgid "Delete Login Info"
 msgstr "Verwijder Inlog Info"
 
-msgid "Delete MIB"
-msgstr "MIB verwijderen"
-
 msgid "Delete RAID"
 msgstr "RAID verwijderen"
 
@@ -1913,6 +1925,18 @@ msgstr "Route verwijderen"
 msgid "Delete Rsync job"
 msgstr "Rsync taak verwijderen"
 
+msgid "Delete Selected Datasets"
+msgstr "Verwijder Geselecteerde Datasets"
+
+msgid "Delete Selected Jobs"
+msgstr "Verwijder Geselecteerde Taken"
+
+msgid "Delete Selected Options"
+msgstr "Verwijder Geselecteerde Opties"
+
+msgid "Delete Selected Volumes"
+msgstr "Verwijder Geselecteerde Volumes"
+
 msgid "Delete URL"
 msgstr "URL verwijderen"
 
@@ -1921,12 +1945,6 @@ msgstr "Verwijder VM"
 
 msgid "Delete algorithm"
 msgstr "Algoritme verwijderen"
-
-msgid "Delete all MIBs"
-msgstr "Alle MIBs verwijderen"
-
-msgid "Delete all options"
-msgstr "Alle opties verwijderen"
 
 msgid "Delete all rules"
 msgstr "Alle regels verwijderen"
@@ -1945,9 +1963,6 @@ msgstr "Verwijder kloon"
 
 msgid "Delete command"
 msgstr "Opdracht verwijderen"
-
-msgid "Delete dataset"
-msgstr "Dataset verwijderen"
 
 msgid "Delete device"
 msgstr "Verwijder apparaat"
@@ -1974,17 +1989,11 @@ msgstr "Initiator groep verwijderen"
 msgid "Delete interface"
 msgstr "Netwerk verwijderen"
 
-msgid "Delete job"
-msgstr "Taak verwijderen"
-
 msgid "Delete module"
 msgstr "Module verwijderen"
 
 msgid "Delete mount point"
 msgstr "Koppelpunt verwijderen"
-
-msgid "Delete option"
-msgstr "Optie verwijderen"
 
 msgid "Delete pool"
 msgstr "Pool verwijderen"
@@ -2012,9 +2021,6 @@ msgstr "Doel verwijderen"
 
 msgid "Delete user"
 msgstr "Gebruiker verwijderen"
-
-msgid "Delete volume"
-msgstr "Verwijder volume"
 
 msgid "Deletes the recursive snapshot."
 msgstr "Verwijdert het recursieve snapshot"
@@ -2172,6 +2178,12 @@ msgstr "Bestands Manager Uitschakelen"
 msgid "Disable Firmware Update"
 msgstr "Uitschakelen Firmware Update"
 
+msgid "Disable Selected Jobs"
+msgstr "Geselecteerde Taken Uitschakelen"
+
+msgid "Disable Selected Options"
+msgstr "Geselecteerde Opties Uitschakelen"
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Uitschakelen TCP wrapper (mod_wrap module)."
 
@@ -2235,20 +2247,11 @@ msgstr ""
 "Weet u zeker dat u wilt leegmaken en importeren?\\nDe huidige config zal "
 "worden leeggemaakt en overschreven."
 
-msgid "Do you really want to delete all MIBs?"
-msgstr "Weet u zeker dat u alle MIBs wilt verwijderen?"
-
-msgid "Do you really want to delete all options?"
-msgstr "Weet u zeker dat u alle optie's wilt verwijderen?"
-
 msgid "Do you really want to delete all rules?"
 msgstr "Weet u zeker dat alle regels wilt verwijderen?"
 
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "Weet u zeker dat u alle geplande zelf-testen wilt verwijderen?"
-
-msgid "Do you really want to delete this MIB?"
-msgstr "Weet u zeker dat u deze MIB wiltverwijderen?"
 
 msgid "Do you really want to delete this Rsync job?"
 msgstr "Weet u zeker dat u deze Rsync taak wilt verwijderen?"
@@ -2270,12 +2273,6 @@ msgstr "Weet u zeker dat u deze kloon wilt verwijderen?"
 
 msgid "Do you really want to delete this command?"
 msgstr "Weet u zeker dat u deze opdracht wilt verwijderen?"
-
-msgid "Do you really want to delete this cron job?"
-msgstr "Weet u zeker dat u deze cron-taak wilt verwijderen?"
-
-msgid "Do you really want to delete this dataset?"
-msgstr "Weet u zeker dat u deze dataset wilt verwijderen?"
 
 msgid "Do you really want to delete this device?"
 msgstr "Weet u zeker dat u dit apparaat wilt verwijderen?"
@@ -2319,9 +2316,6 @@ msgstr ""
 "Weet u zeker dat u dit koppelpunt wilt verwijderen? Alle elementen die er "
 "gebruik van maken zullen ongeldig worden (bijv. gedeelde mappen)!"
 
-msgid "Do you really want to delete this option?"
-msgstr "Weet u zeker dat u deze optie wilt verwijderen?"
-
 msgid "Do you really want to delete this pool?"
 msgstr "Weet u zeker dat u deze pool wilt verwijderen?"
 
@@ -2352,9 +2346,6 @@ msgstr "Weet  u zeker dat u dit doel wilt verwijderen?"
 msgid "Do you really want to delete this user?"
 msgstr "Weet u zeker dat u deze gebruiker wilt verwijderen?"
 
-msgid "Do you really want to delete this volume?"
-msgstr "Weet u zeker dat u dit volume wilt verwijderen?"
-
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
 "and can not be recovered. !!!"
@@ -2379,6 +2370,36 @@ msgstr ""
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Weet u zeker dat u dit pakket wilt deïnstalleren?"
+
+msgid "Do you want to delete selected datasets?"
+msgstr "Wilt u de geselecteerde datasets verwijderen?"
+
+msgid "Do you want to delete selected jobs?"
+msgstr "Wilt u de geselecteerde taken verwijderen?"
+
+msgid "Do you want to delete selected options?"
+msgstr "Wilt u de geselecteerde opties verwijderen?"
+
+msgid "Do you want to delete selected volumes?"
+msgstr "Wilt u de geselecteerde volumes verwijderen?"
+
+msgid "Do you want to disable selected jobs?"
+msgstr "Wilt u geselecteerde taken uitschakelen?"
+
+msgid "Do you want to disable selected options?"
+msgstr "Wilt u geselecteerde opties uitschakelen?"
+
+msgid "Do you want to enable selected jobs?"
+msgstr "Wilt u geselecteerde taken inschakelen?"
+
+msgid "Do you want to enable selected options?"
+msgstr "Wilt u geselecteerde opties inschakelen?"
+
+msgid "Do you want to toggle selected jobs?"
+msgstr "Wilt u geselecteerde taken omschakelen?"
+
+msgid "Do you want to toggle selected options?"
+msgstr "Wilt u geselecteerde opties omschakelen?"
 
 msgid "Document root"
 msgstr "Documentenmap"
@@ -2524,6 +2545,9 @@ msgstr "Bewerk URL"
 msgid "Edit VM"
 msgstr "Bewerk VM"
 
+msgid "Edit Volume"
+msgstr "Volume Bewerken"
+
 msgid "Edit auth group"
 msgstr "Auth groep bewerken"
 
@@ -2596,9 +2620,6 @@ msgstr "Doel bewerken"
 msgid "Edit user"
 msgstr "Gebruiker bewerken"
 
-msgid "Edit volume"
-msgstr "Bewerk volume"
-
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
 msgstr ""
@@ -2653,6 +2674,12 @@ msgid ""
 msgstr ""
 "Inschakelen STARTTLS encryptie. Dit betekent niet dat u TLS moet gebruikt, u "
 "kunt ook SSL gebruiken."
+
+msgid "Enable Selected Jobs"
+msgstr "Inschakelen Geselecteerde Taken"
+
+msgid "Enable Selected Options"
+msgstr "Inschakelen Geselecteerde Opties"
 
 msgid "Enable TLS connections."
 msgstr "Inschakelen TLS verbindingen."
@@ -3032,6 +3059,9 @@ msgstr "Mislukt"
 
 msgid "Failed to create in-memory file system."
 msgstr "Mislukt om het in-geheugen bestandsysteem te maken."
+
+msgid "Failed to execute command zfs."
+msgstr "Commando uitvoeren naar zfs mislukt."
 
 msgid "Failed to execute cron job."
 msgstr "Mislukt om de cron taak uit te voeren."
@@ -8176,6 +8206,12 @@ msgstr ""
 msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
 msgstr "Voor het gebruik van submappen, moet u elke map koppelen. (e.g. %s)"
 
+msgid "Toggle Selected Jobs"
+msgstr "Schakel Geselecteerde Taken"
+
+msgid "Toggle Selected Options"
+msgstr "Schakel Geselecteerde Opties"
+
 msgid "Tolerated"
 msgstr "Toelaten"
 
@@ -8999,12 +9035,10 @@ msgstr "ZFS Volume Eigenschappen"
 msgid "ZFS volume"
 msgstr "ZFS volume"
 
-msgid ""
-"ZFS volume block size. This value can not be changed after creation. Empty "
-"as default."
+msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
 "ZFS volume blok grootte. Deze waarde kan niet worden gewijzigd na het "
-"creëren. Standaard leeg."
+"creëren."
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
@@ -9178,3 +9212,61 @@ msgstr "loskoppelen"
 
 msgid "version:"
 msgstr "versie:"
+
+#~ msgid "Add dataset"
+#~ msgstr "Dataset toevoegen"
+
+#~ msgid "Add volume"
+#~ msgstr "Voeg Volume toe"
+
+#~ msgid "Delete MIB"
+#~ msgstr "MIB verwijderen"
+
+#~ msgid "Delete all MIBs"
+#~ msgstr "Alle MIBs verwijderen"
+
+#~ msgid "Delete all options"
+#~ msgstr "Alle opties verwijderen"
+
+#~ msgid "Delete dataset"
+#~ msgstr "Dataset verwijderen"
+
+#~ msgid "Delete job"
+#~ msgstr "Taak verwijderen"
+
+#~ msgid "Delete option"
+#~ msgstr "Optie verwijderen"
+
+#~ msgid "Delete volume"
+#~ msgstr "Verwijder volume"
+
+#~ msgid "Do you really want to delete all MIBs?"
+#~ msgstr "Weet u zeker dat u alle MIBs wilt verwijderen?"
+
+#~ msgid "Do you really want to delete all options?"
+#~ msgstr "Weet u zeker dat u alle optie's wilt verwijderen?"
+
+#~ msgid "Do you really want to delete this MIB?"
+#~ msgstr "Weet u zeker dat u deze MIB wiltverwijderen?"
+
+#~ msgid "Do you really want to delete this cron job?"
+#~ msgstr "Weet u zeker dat u deze cron-taak wilt verwijderen?"
+
+#~ msgid "Do you really want to delete this dataset?"
+#~ msgstr "Weet u zeker dat u deze dataset wilt verwijderen?"
+
+#~ msgid "Do you really want to delete this option?"
+#~ msgstr "Weet u zeker dat u deze optie wilt verwijderen?"
+
+#~ msgid "Do you really want to delete this volume?"
+#~ msgstr "Weet u zeker dat u dit volume wilt verwijderen?"
+
+#~ msgid "Edit volume"
+#~ msgstr "Bewerk volume"
+
+#~ msgid ""
+#~ "ZFS volume block size. This value can not be changed after creation. Empty "
+#~ "as default."
+#~ msgstr ""
+#~ "ZFS volume blok grootte. Deze waarde kan niet worden gewijzigd na het "
+#~ "creëren. Standaard leeg."

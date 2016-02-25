@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-01-21 22:28+0000\n"
+"POT-Creation-Date: 2016-02-25 16:05+0000\n"
 "PO-Revision-Date: 2015-10-13 18:26+0000\n"
 "Last-Translator: Hasan Yılmaz <iletisim@hasanyilmaz.net>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-29 07:53+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-25 15:21+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -56,6 +56,18 @@ msgstr "%dB / bloğu"
 
 #, php-format
 msgid "%s Interface"
+msgstr ""
+
+#, php-format
+msgid "%s already exists as a %s."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a filesystem."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a volume."
 msgstr ""
 
 #, php-format
@@ -397,6 +409,9 @@ msgstr "Aktif Kullanıcılar"
 msgid "Add"
 msgstr "Ekle"
 
+msgid "Add Dataset"
+msgstr ""
+
 msgid "Add Host"
 msgstr "Bilgisayar Ekle"
 
@@ -415,6 +430,9 @@ msgstr "Rsync görevi ekle"
 msgid "Add URL"
 msgstr "URL ekle"
 
+msgid "Add Volume"
+msgstr ""
+
 msgid "Add additional scheduled self-test."
 msgstr "Rutin olarak self-test ekle"
 
@@ -426,9 +444,6 @@ msgstr ""
 
 msgid "Add command"
 msgstr "Komut Ekle"
-
-msgid "Add dataset"
-msgstr "Veriseti ekle"
 
 msgid "Add device"
 msgstr "Aygıt Ekle"
@@ -489,9 +504,6 @@ msgstr "Hedef Ekle"
 
 msgid "Add user"
 msgstr "Kullanıcı Ekle"
-
-msgid "Add volume"
-msgstr ""
 
 msgid "Additional Network"
 msgstr ""
@@ -924,6 +936,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "Belirsiz zaman"
+
+msgid "Block Size"
+msgstr ""
 
 msgid "Block size"
 msgstr ""
@@ -1693,9 +1708,6 @@ msgstr "Bilgisayarı Sil"
 msgid "Delete Login Info"
 msgstr "Oturum açma bilgisini sil"
 
-msgid "Delete MIB"
-msgstr "MIB'yi sil"
-
 msgid "Delete RAID"
 msgstr "RAID Sil"
 
@@ -1705,6 +1717,18 @@ msgstr "Route Sil"
 msgid "Delete Rsync job"
 msgstr "Rsync Görevini Sil"
 
+msgid "Delete Selected Datasets"
+msgstr ""
+
+msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected Options"
+msgstr ""
+
+msgid "Delete Selected Volumes"
+msgstr ""
+
 msgid "Delete URL"
 msgstr "URL sil"
 
@@ -1713,12 +1737,6 @@ msgstr ""
 
 msgid "Delete algorithm"
 msgstr "Algoritmayı sil"
-
-msgid "Delete all MIBs"
-msgstr "Tüm MIB'leri sil"
-
-msgid "Delete all options"
-msgstr "Tüm ayarları sil"
 
 msgid "Delete all rules"
 msgstr "Tüm kuralları sil"
@@ -1737,9 +1755,6 @@ msgstr ""
 
 msgid "Delete command"
 msgstr "Komut Sil"
-
-msgid "Delete dataset"
-msgstr "Verisetini sil"
 
 msgid "Delete device"
 msgstr "Aygıt Sil"
@@ -1765,17 +1780,11 @@ msgstr "Başlatıcı grubunu sil"
 msgid "Delete interface"
 msgstr "Arayüz Sil"
 
-msgid "Delete job"
-msgstr "Görev Sil"
-
 msgid "Delete module"
 msgstr "Modül Sil"
 
 msgid "Delete mount point"
 msgstr "Disk bağlantı noktasını sil"
-
-msgid "Delete option"
-msgstr "Seçeneği sil"
 
 msgid "Delete pool"
 msgstr ""
@@ -1803,9 +1812,6 @@ msgstr "Hedef Sil"
 
 msgid "Delete user"
 msgstr "Kullanıcı sil"
-
-msgid "Delete volume"
-msgstr ""
 
 msgid "Deletes the recursive snapshot."
 msgstr ""
@@ -1952,6 +1958,12 @@ msgstr "Dosya Yöneticisini Devredışı Bırak"
 msgid "Disable Firmware Update"
 msgstr ""
 
+msgid "Disable Selected Jobs"
+msgstr ""
+
+msgid "Disable Selected Options"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
@@ -2011,20 +2023,11 @@ msgid ""
 "cleared and overwritten."
 msgstr ""
 
-msgid "Do you really want to delete all MIBs?"
-msgstr "Tüm MIB'ları silmek istediğinden emin misin?"
-
-msgid "Do you really want to delete all options?"
-msgstr "Tüm ayarlarları silmek istediğinden emin misin?"
-
 msgid "Do you really want to delete all rules?"
 msgstr "Tüm kuralları silmek istediğinden emin misin?"
 
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "Tüm zamanlanmış self-test'leri silmek istediğinden emin misin?"
-
-msgid "Do you really want to delete this MIB?"
-msgstr "Bu MIB silmek istediğinden emin misin?"
 
 msgid "Do you really want to delete this Rsync job?"
 msgstr "Bu Rsync görevini silmek istediğinden emin misin?"
@@ -2046,12 +2049,6 @@ msgstr ""
 
 msgid "Do you really want to delete this command?"
 msgstr "Bu komutu gerçekten silmek istediğinize emin misiniz?"
-
-msgid "Do you really want to delete this cron job?"
-msgstr "Bu Cron görevini gerçekten silmek istediğinize emin misiniz?"
-
-msgid "Do you really want to delete this dataset?"
-msgstr "Bu verisetini silmek istediğinden emin misin?"
 
 msgid "Do you really want to delete this device?"
 msgstr "Bu aygıtı gerçekten silmek istediğinize emin misiniz?"
@@ -2094,9 +2091,6 @@ msgstr ""
 "Fazladan yaratılmış bu noktayı silmek istiyor musunuz?Kullanılan öğeler "
 "geçersiz kılınacak"
 
-msgid "Do you really want to delete this option?"
-msgstr "Bu seçeneği kaldırmak istediğinden emin misin?"
-
 msgid "Do you really want to delete this pool?"
 msgstr "Bu MIB silmek istediğinden emin misin?"
 
@@ -2127,9 +2121,6 @@ msgstr "Bu hedefi gerçekten silmek istediğinize emin misiniz?"
 msgid "Do you really want to delete this user?"
 msgstr "Bu kullanıcıyı gerçekten silmek istediğinize emin misiniz?"
 
-msgid "Do you really want to delete this volume?"
-msgstr ""
-
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
 "and can not be recovered. !!!"
@@ -2151,6 +2142,36 @@ msgstr "Seçilen öğeyi listeden kaldırmak istediğinden emin misin?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Bu paketi gerçekten kaldırmak istediğinize emin misiniz?"
+
+msgid "Do you want to delete selected datasets?"
+msgstr ""
+
+msgid "Do you want to delete selected jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected options?"
+msgstr ""
+
+msgid "Do you want to delete selected volumes?"
+msgstr ""
+
+msgid "Do you want to disable selected jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected options?"
+msgstr ""
+
+msgid "Do you want to enable selected jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected options?"
+msgstr ""
+
+msgid "Do you want to toggle selected jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected options?"
+msgstr ""
 
 msgid "Document root"
 msgstr ""
@@ -2290,6 +2311,9 @@ msgstr "URL'yi Düzenle"
 msgid "Edit VM"
 msgstr ""
 
+msgid "Edit Volume"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "Doğrulama grubunu Düzenle"
 
@@ -2362,9 +2386,6 @@ msgstr "Hedef Düzenle"
 msgid "Edit user"
 msgstr "Kullanıcı düzenle"
 
-msgid "Edit volume"
-msgstr ""
-
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
 msgstr ""
@@ -2413,6 +2434,12 @@ msgstr "SMTP kimlik doğrulamasını etkinleştir."
 msgid ""
 "Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can "
 "use SSL."
+msgstr ""
+
+msgid "Enable Selected Jobs"
+msgstr ""
+
+msgid "Enable Selected Options"
 msgstr ""
 
 msgid "Enable TLS connections."
@@ -2764,6 +2791,9 @@ msgstr "Başarısız"
 
 msgid "Failed to create in-memory file system."
 msgstr "in-memory dosya sistemi oşuturmada başarısız oldu"
+
+msgid "Failed to execute command zfs."
+msgstr ""
 
 msgid "Failed to execute cron job."
 msgstr ""
@@ -7325,6 +7355,12 @@ msgstr ""
 msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
 msgstr ""
 
+msgid "Toggle Selected Jobs"
+msgstr ""
+
+msgid "Toggle Selected Options"
+msgstr ""
+
 msgid "Tolerated"
 msgstr ""
 
@@ -8070,9 +8106,7 @@ msgstr ""
 msgid "ZFS volume"
 msgstr "ZFS birimi"
 
-msgid ""
-"ZFS volume block size. This value can not be changed after creation. Empty "
-"as default."
+msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
 
 msgid ""
@@ -8243,3 +8277,42 @@ msgstr "umount"
 
 msgid "version:"
 msgstr ""
+
+#~ msgid "Add dataset"
+#~ msgstr "Veriseti ekle"
+
+#~ msgid "Delete MIB"
+#~ msgstr "MIB'yi sil"
+
+#~ msgid "Delete all MIBs"
+#~ msgstr "Tüm MIB'leri sil"
+
+#~ msgid "Delete all options"
+#~ msgstr "Tüm ayarları sil"
+
+#~ msgid "Delete dataset"
+#~ msgstr "Verisetini sil"
+
+#~ msgid "Delete job"
+#~ msgstr "Görev Sil"
+
+#~ msgid "Delete option"
+#~ msgstr "Seçeneği sil"
+
+#~ msgid "Do you really want to delete all MIBs?"
+#~ msgstr "Tüm MIB'ları silmek istediğinden emin misin?"
+
+#~ msgid "Do you really want to delete all options?"
+#~ msgstr "Tüm ayarlarları silmek istediğinden emin misin?"
+
+#~ msgid "Do you really want to delete this MIB?"
+#~ msgstr "Bu MIB silmek istediğinden emin misin?"
+
+#~ msgid "Do you really want to delete this cron job?"
+#~ msgstr "Bu Cron görevini gerçekten silmek istediğinize emin misiniz?"
+
+#~ msgid "Do you really want to delete this dataset?"
+#~ msgstr "Bu verisetini silmek istediğinden emin misin?"
+
+#~ msgid "Do you really want to delete this option?"
+#~ msgstr "Bu seçeneği kaldırmak istediğinden emin misin?"

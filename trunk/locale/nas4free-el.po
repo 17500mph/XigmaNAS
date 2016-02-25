@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-01-21 22:28+0000\n"
-"PO-Revision-Date: 2016-01-22 11:55+0000\n"
+"POT-Creation-Date: 2016-02-25 16:05+0000\n"
+"PO-Revision-Date: 2016-02-25 08:24+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-29 07:52+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-25 15:21+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
 "X-Poedit-Language: Greek\n"
@@ -53,6 +53,18 @@ msgstr "%dB / μπλοκ"
 #, php-format
 msgid "%s Interface"
 msgstr "Διεπαφή %s"
+
+#, php-format
+msgid "%s already exists as a %s."
+msgstr "Το %s υπάρχει ήδη σαν %s."
+
+#, php-format
+msgid "%s is already configured as a filesystem."
+msgstr "Το %s είναι ήδη ρυθμισμένο σαν σύστημα αρχείων."
+
+#, php-format
+msgid "%s is already configured as a volume."
+msgstr "Το %s είναι ήδη ρυθμισμένο σαν τόμος."
 
 #, php-format
 msgid "%s is too long."
@@ -454,6 +466,9 @@ msgstr "Ενεργοί χρήστες"
 msgid "Add"
 msgstr "Προσθήκη"
 
+msgid "Add Dataset"
+msgstr "Προσθήκη Dataset"
+
 msgid "Add Host"
 msgstr "Προσθήκη Υπολογιστή"
 
@@ -472,6 +487,9 @@ msgstr "Προσθήκη εργασίας Rsync"
 msgid "Add URL"
 msgstr "Προσθήκη URL"
 
+msgid "Add Volume"
+msgstr "Προσθήκη Τόμου"
+
 msgid "Add additional scheduled self-test."
 msgstr "Προσθήκη επιπλέον προγραμματισμένης αυτοεξέτασης."
 
@@ -483,9 +501,6 @@ msgstr "Προσθήκη αυτόματου στιγμιότυπου"
 
 msgid "Add command"
 msgstr "Προσθήκη εντολής"
-
-msgid "Add dataset"
-msgstr "Προσθήκη dataset"
 
 msgid "Add device"
 msgstr "Προσθήκη συσκευής"
@@ -546,9 +561,6 @@ msgstr "Προσθήκη προορισμού"
 
 msgid "Add user"
 msgstr "Προσθήκη χρήστη"
-
-msgid "Add volume"
-msgstr "Προσθήκη τόμου"
 
 msgid "Additional Network"
 msgstr "Πρόσθετο Δίκτυο"
@@ -1031,6 +1043,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "Κενός χρόνος"
+
+msgid "Block Size"
+msgstr "Μέγεθος μπλοκ"
 
 msgid "Block size"
 msgstr "Μέγεθος μπλοκ"
@@ -1919,9 +1934,6 @@ msgstr "Διαγραφή υπολογιστή"
 msgid "Delete Login Info"
 msgstr "Διαγραφή πληροφοριών εισόδου"
 
-msgid "Delete MIB"
-msgstr "Διαγραφή MIB"
-
 msgid "Delete RAID"
 msgstr "Διαγραφή RAID"
 
@@ -1931,6 +1943,18 @@ msgstr "Διαγραφή Διαδρομής"
 msgid "Delete Rsync job"
 msgstr "Διαγραφή εργασίας Rsync"
 
+msgid "Delete Selected Datasets"
+msgstr "Διαγραφή Επιλεγμένων Dataset"
+
+msgid "Delete Selected Jobs"
+msgstr "Διαγραφή Επιλεγμένων Εργασιών"
+
+msgid "Delete Selected Options"
+msgstr "Διαγραφή Επιλεγμένων Επιλογών"
+
+msgid "Delete Selected Volumes"
+msgstr "Διαγραφή Επιλεγμένων Τόμων"
+
 msgid "Delete URL"
 msgstr "Διαγραφή URL"
 
@@ -1939,12 +1963,6 @@ msgstr "Διαγραφή VM"
 
 msgid "Delete algorithm"
 msgstr "Διαγραφή αλγόριθμου"
-
-msgid "Delete all MIBs"
-msgstr "Διαγραφή όλων των MIB"
-
-msgid "Delete all options"
-msgstr "Διαγραφή όλων των επιλογών"
 
 msgid "Delete all rules"
 msgstr "Διαγραφή όλων των κανόνων"
@@ -1963,9 +1981,6 @@ msgstr "Διαγραφή κλώνου"
 
 msgid "Delete command"
 msgstr "Διαγραφή εντολής"
-
-msgid "Delete dataset"
-msgstr "Διαγραφή dataset"
 
 msgid "Delete device"
 msgstr "Διαγραφή συσκευής"
@@ -1993,17 +2008,11 @@ msgstr "Διαγραφή ομάδας εκκινητή"
 msgid "Delete interface"
 msgstr "Διαγραφή διεπαφής"
 
-msgid "Delete job"
-msgstr "Διαγραφή εργασίας"
-
 msgid "Delete module"
 msgstr "Διαγραφή αρθρώματος"
 
 msgid "Delete mount point"
 msgstr "Διαγραφή σημείου προσάρτησης"
-
-msgid "Delete option"
-msgstr "Διαγραφής επιλογής"
 
 msgid "Delete pool"
 msgstr "Διαγραφή pool"
@@ -2031,9 +2040,6 @@ msgstr "Διαγραφή προορισμού"
 
 msgid "Delete user"
 msgstr "Διαγραφή χρήστη"
-
-msgid "Delete volume"
-msgstr "Διαγραφή τόμου"
 
 msgid "Deletes the recursive snapshot."
 msgstr "Διαγράφει το αναδρομικό στιγμιότυπο."
@@ -2190,6 +2196,12 @@ msgstr "Απενεργοποίηση διαχειριστή αρχείων"
 msgid "Disable Firmware Update"
 msgstr "Απενεργοποίηση αποστολής firmware"
 
+msgid "Disable Selected Jobs"
+msgstr "Απενεργοποίηση Επιλεγμένων Εργασιών"
+
+msgid "Disable Selected Options"
+msgstr "Απενεργοποίηση Επιλεγμένων Επιλογών"
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Απενεργοποίηση TCP wrapper (άρθρωμα mod_wrap)."
 
@@ -2256,20 +2268,11 @@ msgstr ""
 "Θέλετε πραγματικά να κάνετε εκκαθάριση και εισαγωγή;\\nΤο υπάρχον αρχείο "
 "ρυθμίσεων θα εκκαθαριστεί και θα αντικατασταθεί."
 
-msgid "Do you really want to delete all MIBs?"
-msgstr "Θέλετε σίγουρα να διαγράψετε όλα τα MIB;"
-
-msgid "Do you really want to delete all options?"
-msgstr "Θέλετε σίγουρα να διαγράψετε όλες τις επιλογές;"
-
 msgid "Do you really want to delete all rules?"
 msgstr "Θέλετε σίγουρα να διαγράψετε όλους τους κανόνες;"
 
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "Θέλετε σίγουρα να διαγράψετε όλους τους προγραμματισμένους ελέγχους;"
-
-msgid "Do you really want to delete this MIB?"
-msgstr "Θέλετε σίγουρα να διαγράψετε αυτό το MIB;"
 
 msgid "Do you really want to delete this Rsync job?"
 msgstr "Θέλετε πραγματικά να διαγραφεί αυτή η Rsync εργασία;"
@@ -2291,12 +2294,6 @@ msgstr "Θέλετε σίγουρα να διαγραφεί αυτός ο κλώ
 
 msgid "Do you really want to delete this command?"
 msgstr "Θέλετε σίγουρα να διαγράψετε αυτή την εντολή;"
-
-msgid "Do you really want to delete this cron job?"
-msgstr "Θέλετε σίγουρα να διαγράψετε αυτήν την προγραμματισμένη εργασία;"
-
-msgid "Do you really want to delete this dataset?"
-msgstr "Θέλετε σίγουρα να διαγράψετε αυτό το dataset;"
 
 msgid "Do you really want to delete this device?"
 msgstr "Θέλετε σίγουρα να διαγράψετε αυτήν την συσκευή;"
@@ -2340,9 +2337,6 @@ msgstr ""
 "Θέλετε σίγουρα να διαγράψετε αυτό το σημείο προσάρτησης; Όλα τα στοιχεία που "
 "το χρησιμοποιούν ακόμα θα μετατραπούν σε μη έγκυρα (πχ. κοινόχρηστα)!"
 
-msgid "Do you really want to delete this option?"
-msgstr "Θέλετε σίγουρα να διαγράψετε αυτή την επιλογή;"
-
 msgid "Do you really want to delete this pool?"
 msgstr "Θέλετε σίγουρα να διαγράψετε αυτό το pool;"
 
@@ -2373,9 +2367,6 @@ msgstr "Θέλετε σίγουρα να διαγράψετε αυτόν τον 
 msgid "Do you really want to delete this user?"
 msgstr "Θέλετε πράγματι να διαγράψετε αυτό τον χρήστη;"
 
-msgid "Do you really want to delete this volume?"
-msgstr "Θέλετε σίγουρα να διαγραφεί αυτός ο τόμος;"
-
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
 "and can not be recovered. !!!"
@@ -2398,6 +2389,36 @@ msgstr "Θέλετε σίγουρα να αφαιρέσετε το επιλεγ�
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Θέλετε σίγουρα να απεγκαταστήσετε αυτό το πακέτο;"
+
+msgid "Do you want to delete selected datasets?"
+msgstr "Θέλετε να διαγράψετε τα επιλεγμένα dataset;"
+
+msgid "Do you want to delete selected jobs?"
+msgstr "Θέλετε να διαγράψετε τις επιλεγμένες εργασίες;"
+
+msgid "Do you want to delete selected options?"
+msgstr "Θέλετε να διαγράψετε τις επιλεγμένες επιλογές;"
+
+msgid "Do you want to delete selected volumes?"
+msgstr "Θέλετε να διαγράψετε τους επιλεγμένους τόμους;"
+
+msgid "Do you want to disable selected jobs?"
+msgstr "Θέλετε να απενεργοποιήσετε τις επιλεγμένες εργασίες;"
+
+msgid "Do you want to disable selected options?"
+msgstr "Θέλετε να απενεργοποιήσετε τις επιλεγμένες επιλογές;"
+
+msgid "Do you want to enable selected jobs?"
+msgstr "Θέλετε να ενεργοποιήσετε τις επιλεγμένες εργασίες;"
+
+msgid "Do you want to enable selected options?"
+msgstr "Θέλετε να ενεργοποιήσετε τις επιλεγμένες επιλογές;"
+
+msgid "Do you want to toggle selected jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected options?"
+msgstr "Θέλετε να εναλλάξετε τις επιλεγμένες επιλογές;"
 
 msgid "Document root"
 msgstr "Ριζικός κατάλογος εγγράφων"
@@ -2541,6 +2562,9 @@ msgstr "Επεξεργασία URL"
 msgid "Edit VM"
 msgstr "Επεξεργασία VM"
 
+msgid "Edit Volume"
+msgstr "Επεξεργασία Τόμου"
+
 msgid "Edit auth group"
 msgstr "Επεξεργασία ομάδας πιστοποίησης"
 
@@ -2613,9 +2637,6 @@ msgstr "Επεξεργασία προορισμού"
 msgid "Edit user"
 msgstr "Επεξεργασία χρήστη"
 
-msgid "Edit volume"
-msgstr "Επεξεργασία τόμου"
-
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
 msgstr "Απόδοση UPS (Αναλογία του ρεύματος εξόδου προς το ρεύμα εισόδου)"
@@ -2669,6 +2690,12 @@ msgid ""
 msgstr ""
 "Ενεργοποίηση κρυπτογράφησης STARTTLS. Αυτό δεν σημαίνει ότι είναι "
 "υποχρεωτικό να χρησιμοποιήσετε TLS, μπορείτε να χρησιμοποιήσετε SSL."
+
+msgid "Enable Selected Jobs"
+msgstr "Ενεργοποίηση Επιλεγμένων Εργασιών"
+
+msgid "Enable Selected Options"
+msgstr "Ενεργοποίηση Επιλεγμένων Επιλογών"
 
 msgid "Enable TLS connections."
 msgstr "Ενεργοποίηση συνδέσεων TLS."
@@ -3052,6 +3079,9 @@ msgstr "Αποτυχία"
 
 msgid "Failed to create in-memory file system."
 msgstr "Αποτυχία δημιουργίας συστήματος αρχείων στη μνήμη."
+
+msgid "Failed to execute command zfs."
+msgstr "Αποτυχία εκτέλεσης εντολής zfs."
 
 msgid "Failed to execute cron job."
 msgstr "Αποτυχία εκτέλεσης προγραμματισμένης εργασίας."
@@ -5912,7 +5942,7 @@ msgid "Save"
 msgstr "Αποθήκευση"
 
 msgid "Save & Restart"
-msgstr "Αποθληκευση & Επανεκκίνηση"
+msgstr "Αποθήκευση & Επανεκκίνηση"
 
 msgid "Save and Restart"
 msgstr "Αποθήκευση και Επανεκκίνηση"
@@ -8272,6 +8302,12 @@ msgstr ""
 "Για να χρησιμοποιήσετε υποφακέλους, θα πρέπει να προσαρτήσετε τον κάθε "
 "φάκελο. (π.χ. %s)"
 
+msgid "Toggle Selected Jobs"
+msgstr "Εναλλαγή Επιλεγμένων Εργασιών"
+
+msgid "Toggle Selected Options"
+msgstr "Εναλλαγή Επιλεγμένων Επιλογών"
+
 msgid "Tolerated"
 msgstr "Ανεκτή"
 
@@ -9112,12 +9148,10 @@ msgstr "Ιδιότητες του ZFS Τόμου"
 msgid "ZFS volume"
 msgstr "Τόμος ZFS"
 
-msgid ""
-"ZFS volume block size. This value can not be changed after creation. Empty "
-"as default."
+msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
-"Μέγεθος μπλοκ του ZFS Τόμου. Αυτή η τιμή δεν μπορεί να αλλαχτεί μετά τη "
-"δημιουργία. Κενό από προεπιλογή."
+"Μέγεθος μπλοκ του τόμου ZFS. Αυτή η τιμή δεν μπορεί να αλλάξει μετά την "
+"δημιουργία."
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
@@ -9237,7 +9271,7 @@ msgid "no new encrypted disk found."
 msgstr "δεν βρέθηκε κάποιος νέος κρυπτογραφημένος δίσκος"
 
 msgid "noVNC"
-msgstr "όχιVNC"
+msgstr "noVNC"
 
 msgid "none"
 msgstr "κανένα"
@@ -9292,3 +9326,67 @@ msgstr "αποπροσάρτηση"
 
 msgid "version:"
 msgstr "έκδοση:"
+
+#~ msgid "Delete MIB"
+#~ msgstr "Διαγραφή MIB"
+
+#~ msgid "Delete all MIBs"
+#~ msgstr "Διαγραφή όλων των MIB"
+
+#~ msgid "Delete all options"
+#~ msgstr "Διαγραφή όλων των επιλογών"
+
+#~ msgid "Delete job"
+#~ msgstr "Διαγραφή εργασίας"
+
+#~ msgid "Delete option"
+#~ msgstr "Διαγραφής επιλογής"
+
+#~ msgid "Do you really want to delete all MIBs?"
+#~ msgstr "Θέλετε σίγουρα να διαγράψετε όλα τα MIB;"
+
+#~ msgid "Do you really want to delete all options?"
+#~ msgstr "Θέλετε σίγουρα να διαγράψετε όλες τις επιλογές;"
+
+#~ msgid "Do you really want to delete this MIB?"
+#~ msgstr "Θέλετε σίγουρα να διαγράψετε αυτό το MIB;"
+
+#~ msgid "Do you really want to delete this option?"
+#~ msgstr "Θέλετε σίγουρα να διαγράψετε αυτή την επιλογή;"
+
+#~ msgid "Add dataset"
+#~ msgstr "Προσθήκη dataset"
+
+#~ msgid "Add volume"
+#~ msgstr "Προσθήκη τόμου"
+
+#~ msgid "Delete dataset"
+#~ msgstr "Διαγραφή dataset"
+
+#~ msgid "Delete volume"
+#~ msgstr "Διαγραφή τόμου"
+
+#~ msgid "Do you really want to delete this volume?"
+#~ msgstr "Θέλετε σίγουρα να διαγραφεί αυτός ο τόμος;"
+
+#~ msgid "Edit volume"
+#~ msgstr "Επεξεργασία τόμου"
+
+#~ msgid "Do you really want to delete this dataset?"
+#~ msgstr "Θέλετε σίγουρα να διαγράψετε αυτό το dataset;"
+
+#~ msgid "Do you really want to delete this cron job?"
+#~ msgstr "Θέλετε σίγουρα να διαγράψετε αυτήν την προγραμματισμένη εργασία;"
+
+#~ msgid ""
+#~ "ZFS volume block size. This value can not be changed after creation. Empty "
+#~ "as default."
+#~ msgstr ""
+#~ "Μέγεθος μπλοκ του ZFS Τόμου. Αυτή η τιμή δεν μπορεί να αλλαχτεί μετά τη "
+#~ "δημιουργία. Κενό από προεπιλογή."
+
+#~ msgid "Do you really to toggle selected jobs?"
+#~ msgstr "Θέλετε πραγματικά την εναλλαγή των επιλεγμένων εργασιών;"
+
+#~ msgid "Do you really to toggle selected options?"
+#~ msgstr "Θέλετε πραγματικά την εναλλαγή των επιλεγμένων επιλογών;"

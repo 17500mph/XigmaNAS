@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-01-21 22:28+0000\n"
-"PO-Revision-Date: 2016-02-01 11:34+0000\n"
+"POT-Creation-Date: 2016-02-25 16:05+0000\n"
+"PO-Revision-Date: 2016-02-20 09:08+0000\n"
 "Last-Translator: Balabuha <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-02 15:28+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-25 15:21+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "Language: uk\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -51,6 +51,18 @@ msgstr "%dбайт / блок"
 #, php-format
 msgid "%s Interface"
 msgstr "Інтерфейс %s"
+
+#, php-format
+msgid "%s already exists as a %s."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a filesystem."
+msgstr ""
+
+#, php-format
+msgid "%s is already configured as a volume."
+msgstr ""
 
 #, php-format
 msgid "%s is too long."
@@ -420,6 +432,9 @@ msgstr "Активні користувачі"
 msgid "Add"
 msgstr "Додати"
 
+msgid "Add Dataset"
+msgstr ""
+
 msgid "Add Host"
 msgstr "Додати вузол"
 
@@ -438,6 +453,9 @@ msgstr "Додати Rsync завдання"
 msgid "Add URL"
 msgstr "Додати посилання"
 
+msgid "Add Volume"
+msgstr ""
+
 msgid "Add additional scheduled self-test."
 msgstr "Додати заплановане самотестування."
 
@@ -449,9 +467,6 @@ msgstr "Додати автоматичний знімок"
 
 msgid "Add command"
 msgstr "Додати команду"
-
-msgid "Add dataset"
-msgstr "Додати датасет"
 
 msgid "Add device"
 msgstr "Додати пристрій"
@@ -512,9 +527,6 @@ msgstr "Додати ціль"
 
 msgid "Add user"
 msgstr "Додати користувача"
-
-msgid "Add volume"
-msgstr "Додати том"
 
 msgid "Additional Network"
 msgstr "Додаткова мережа"
@@ -603,6 +615,9 @@ msgid ""
 "Airflow temperature on Western Digital HDs (Same as temp. , but current "
 "value is 50 less for some models. Marked as obsolete.)"
 msgstr ""
+"Температура повітряного потоку у жорстких дисках Western Digital (Те саме що "
+"температура, але поточне значення на 50 менше  у деяких моделях. Помічено як "
+"застаріле.)"
 
 msgid "Albanian"
 msgstr "Албанська"
@@ -614,6 +629,8 @@ msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
 "empty UFS directory is recommended."
 msgstr ""
+"Всі дані за цим шляхом переписано. Для уникнення помилок даних чи прав "
+"доступу, радимо використовувати пусту UFS директорію."
 
 msgid "All dirs"
 msgstr "Усі каталоги"
@@ -729,7 +746,7 @@ msgid "Ambient temperature (degrees C)"
 msgstr "Зовнішня температура (градуси С)"
 
 msgid "Amount of surge current used to spin up the drive."
-msgstr ""
+msgstr "Піковий струм, потрібний для розкручування шпінделя."
 
 msgid ""
 "Amplitude of 'thrashing' (distance of repetitive forward/reverse head "
@@ -967,6 +984,9 @@ msgstr "BitTorrent"
 
 msgid "Blank time"
 msgstr "Пусте значення часу"
+
+msgid "Block Size"
+msgstr ""
 
 msgid "Block size"
 msgstr "Розмір блоку"
@@ -1441,12 +1461,14 @@ msgid ""
 "Convert DOS attributes to UNIX execution bits when Store DOS attributes is "
 "disabled."
 msgstr ""
+"Перетворити DOS атрибути у виконавчі біти UNIX при вимкненні зберігання DOS "
+"атрибутів."
 
 msgid "Count"
 msgstr "Кількість"
 
 msgid "Count of 'Free Fall Events' detected."
-msgstr ""
+msgstr "Кількість зафіксованих 'вільних падінь'."
 
 msgid ""
 "Count of 'unstable' sectors (waiting to be remapped, because of "
@@ -1470,7 +1492,7 @@ msgid "Count of Data Address Mark errors (or vendor-specific)."
 msgstr ""
 
 msgid "Count of attempts to compensate for platter speed variations."
-msgstr ""
+msgstr "Кількість спроб компенсувати нерівномірність обертання пластини."
 
 msgid ""
 "Count of buzz routines needed to spin up the drive due to insufficient power."
@@ -1490,12 +1512,15 @@ msgid ""
 "total count of hours (or minutes, or seconds, depending on manufacturer) in "
 "power-on state."
 msgstr ""
+"Кількість годин у включеному стані. \"Сире\" значення атрибута це загальна "
+"кількість годин (або хвилин, або секунд, залежить від виробника) у "
+"включеному стані."
 
 msgid "Count of load/unload cycles into head landing zone position."
 msgstr "Лічильник циклів паркування головок диску в зоні паркування."
 
 msgid "Count of off-track errors."
-msgstr ""
+msgstr "Кількість помилок позиціонування на доріжці."
 
 msgid ""
 "Count of reallocated sectors. When the hard drive finds a "
@@ -1637,7 +1662,7 @@ msgid "Custom"
 msgstr "Користувацький"
 
 msgid "Custom device"
-msgstr ""
+msgstr "Спеціальний пристрій."
 
 msgid "Custom script"
 msgstr "Користувацький скрипт"
@@ -1661,7 +1686,7 @@ msgid "DHCP"
 msgstr "DHCP"
 
 msgid "DHCP cannot be used for LAN interface."
-msgstr ""
+msgstr "Не можна використовувати DHCP на LAN інтерфейсі."
 
 msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
@@ -1682,7 +1707,7 @@ msgid "DNS forwarder"
 msgstr ""
 
 msgid "DNS server is empty."
-msgstr ""
+msgstr "DNS сервер не вказано."
 
 #, php-format
 msgid ""
@@ -1691,6 +1716,9 @@ msgid ""
 "/>It is recommended that you <a href='%s'>Backup</a> the server "
 "configuration before doing a upgrade."
 msgstr ""
+"НЕ переривайте розпочатий процес оновлення.<br />НЕ намагайтеся прошити інші "
+"файли крім правильного '%s-%s-embedded.img.xz'.<br />Рекомендується зробити "
+"<a href='%s'>резервну копію</a> конфігурації сервера до початку оновлення."
 
 msgid "DVD"
 msgstr "DVD"
@@ -1782,9 +1810,6 @@ msgstr "Видалити хост"
 msgid "Delete Login Info"
 msgstr "Видалити інформацію про вхід"
 
-msgid "Delete MIB"
-msgstr "Видалити MIB"
-
 msgid "Delete RAID"
 msgstr "Видалити RAID"
 
@@ -1794,6 +1819,18 @@ msgstr "Вилучити маршрут"
 msgid "Delete Rsync job"
 msgstr "Видалити завдання Rsync"
 
+msgid "Delete Selected Datasets"
+msgstr ""
+
+msgid "Delete Selected Jobs"
+msgstr ""
+
+msgid "Delete Selected Options"
+msgstr ""
+
+msgid "Delete Selected Volumes"
+msgstr ""
+
 msgid "Delete URL"
 msgstr "Видалити URL"
 
@@ -1802,12 +1839,6 @@ msgstr "Видалити VM (віртуальну машину)"
 
 msgid "Delete algorithm"
 msgstr "Видалити алгоритм"
-
-msgid "Delete all MIBs"
-msgstr "Видалити всі MIB"
-
-msgid "Delete all options"
-msgstr "Видалити всі налаштування"
 
 msgid "Delete all rules"
 msgstr "Видалити всі правила"
@@ -1826,9 +1857,6 @@ msgstr "Видалити клон"
 
 msgid "Delete command"
 msgstr "Видалити команду"
-
-msgid "Delete dataset"
-msgstr "Видалити набір даних"
 
 msgid "Delete device"
 msgstr "Видалити пристрій"
@@ -1855,17 +1883,11 @@ msgstr "Видалити групу ініціаторів"
 msgid "Delete interface"
 msgstr "Видалити інтерфейс"
 
-msgid "Delete job"
-msgstr "Видалити завдання"
-
 msgid "Delete module"
 msgstr "Видалити модуль"
 
 msgid "Delete mount point"
 msgstr "Видалити точку монтування"
-
-msgid "Delete option"
-msgstr "Видалити налаштування"
 
 msgid "Delete pool"
 msgstr "Видалити пул"
@@ -1893,9 +1915,6 @@ msgstr "Видалити ціль"
 
 msgid "Delete user"
 msgstr "Видалити користувача"
-
-msgid "Delete volume"
-msgstr "Видалити розділ"
 
 msgid "Deletes the recursive snapshot."
 msgstr "Видаляє рекурсивний знімок."
@@ -2048,6 +2067,12 @@ msgstr "Вимкнути файловий менеджер"
 msgid "Disable Firmware Update"
 msgstr "Заборонити оновлення прошивки"
 
+msgid "Disable Selected Jobs"
+msgstr ""
+
+msgid "Disable Selected Options"
+msgstr ""
+
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Вимкнути обгортку TCP (модуль mod_wrap)."
 
@@ -2109,20 +2134,11 @@ msgstr ""
 "Ви дійсно хочете виконати очистку та імпорт?\\nІснуюча конфігурацію буде "
 "очищено і перезаписано."
 
-msgid "Do you really want to delete all MIBs?"
-msgstr "Ви дійсно хочете видалити всі MIBи?"
-
-msgid "Do you really want to delete all options?"
-msgstr "Ви дійсно хочете видалити всі налаштування?"
-
 msgid "Do you really want to delete all rules?"
 msgstr "Ви дійсно хочете видалити всі правила?"
 
 msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "Ви дійсно хочете видалити всі заплановані самотестування?"
-
-msgid "Do you really want to delete this MIB?"
-msgstr "Ви дійсно хочете видалити цей MIB?"
 
 msgid "Do you really want to delete this Rsync job?"
 msgstr "Ви дійсно хочете видалити це завдання Rsync?"
@@ -2144,12 +2160,6 @@ msgstr "Ви дійсно хочете видалити цей клон?"
 
 msgid "Do you really want to delete this command?"
 msgstr "Ви дійсно хочете видалити цю команду?"
-
-msgid "Do you really want to delete this cron job?"
-msgstr "Ви дійсно хочете видалити це завдання cron?"
-
-msgid "Do you really want to delete this dataset?"
-msgstr "Ви дійсно хочете видалити цей набір даних?"
 
 msgid "Do you really want to delete this device?"
 msgstr "Ви дійсно хочете видалити цей пристрій?"
@@ -2193,9 +2203,6 @@ msgstr ""
 "Ви дійсно хочете видалити цю точку монтування? Всі елементи, що досі "
 "використовуються стануть недоступними (напр. директорії спільного доступу)!"
 
-msgid "Do you really want to delete this option?"
-msgstr "Ви дійсно хочете видалити це налаштування?"
-
 msgid "Do you really want to delete this pool?"
 msgstr "Ви дійсно хочете видалити цей пул?"
 
@@ -2226,9 +2233,6 @@ msgstr "Ви дійсно хочете видалити цей об'єкт?"
 msgid "Do you really want to delete this user?"
 msgstr "Ви дійсно хочете видалити цього користуваача?"
 
-msgid "Do you really want to delete this volume?"
-msgstr "Ви дійсно хочете видалити цей диск?"
-
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
 "and can not be recovered. !!!"
@@ -2250,6 +2254,36 @@ msgstr "Ви дійсно хочете видалити вибраний еле�
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Ви дійсно хочете деінсталювати цей пакет?"
+
+msgid "Do you want to delete selected datasets?"
+msgstr ""
+
+msgid "Do you want to delete selected jobs?"
+msgstr ""
+
+msgid "Do you want to delete selected options?"
+msgstr ""
+
+msgid "Do you want to delete selected volumes?"
+msgstr ""
+
+msgid "Do you want to disable selected jobs?"
+msgstr ""
+
+msgid "Do you want to disable selected options?"
+msgstr ""
+
+msgid "Do you want to enable selected jobs?"
+msgstr ""
+
+msgid "Do you want to enable selected options?"
+msgstr ""
+
+msgid "Do you want to toggle selected jobs?"
+msgstr ""
+
+msgid "Do you want to toggle selected options?"
+msgstr ""
 
 msgid "Document root"
 msgstr "Кореневий документ"
@@ -2390,6 +2424,9 @@ msgstr "Редагувати посилання"
 msgid "Edit VM"
 msgstr "Редагувати віртуальну машину"
 
+msgid "Edit Volume"
+msgstr ""
+
 msgid "Edit auth group"
 msgstr "Редагувати авторизаційну групу"
 
@@ -2462,9 +2499,6 @@ msgstr "Редагувати ціль"
 msgid "Edit user"
 msgstr "Редагувати користувача"
 
-msgid "Edit volume"
-msgstr "Редагувати розділ"
-
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
 msgstr "Ефективність ДБЖ (Рівень вихідного струму відносно вхідного)"
@@ -2506,6 +2540,8 @@ msgid ""
 "Enable S.M.A.R.T. monitoring of S.M.A.R.T. capable devices when they are "
 "added to the configuration."
 msgstr ""
+"Дозволити моніторити S.M.A.R.T. атрибути на пристроях де це підтримується "
+"коли вони додаються до конфігурації."
 
 msgid "Enable SMTP authentication."
 msgstr "Дозволити SMTP аутентифікацію"
@@ -2517,11 +2553,17 @@ msgstr ""
 "Дозволити шифрування STARTTLS. Це не вимагає обов'язкового використання TLS, "
 "можна використовувати і SSL."
 
+msgid "Enable Selected Jobs"
+msgstr ""
+
+msgid "Enable Selected Options"
+msgstr ""
+
 msgid "Enable TLS connections."
 msgstr "Дозволити TLS з'єднання."
 
 msgid "Enable TiVo support."
-msgstr ""
+msgstr "Увімкнути підтримку TiVo."
 
 msgid "Enable Time Machine support"
 msgstr "Увімкнути підтримку Time Machine"
@@ -2648,7 +2690,7 @@ msgid "Enable the system power control utility"
 msgstr "Увімкнути утиліту контролю системного живлення"
 
 msgid "Enable to strictly adhere to DLNA standards."
-msgstr ""
+msgstr "Увімкнути строге дотримання DLNA стандартів."
 
 msgid "Enable transcoding."
 msgstr "Дозволити перекодування."
@@ -2879,6 +2921,9 @@ msgstr "Помилка"
 msgid "Failed to create in-memory file system."
 msgstr "Не вдалося створити файлову систему в пам'яті"
 
+msgid "Failed to execute command zfs."
+msgstr ""
+
 msgid "Failed to execute cron job."
 msgstr "Помилка виконання завдання cron."
 
@@ -3004,7 +3049,7 @@ msgid "Firmware version check"
 msgstr "Перевірка версії прошивки"
 
 msgid "FirstBurstLength"
-msgstr ""
+msgstr "FirstBurstLength"
 
 msgid "Flag xxx (ups.conf or cmdline -x) status"
 msgstr ""
@@ -3025,6 +3070,8 @@ msgid ""
 "Forces use of vdevs, even if they appear in use or specify different size. "
 "(This is not recommended.)"
 msgstr ""
+"Примусове використання vdevs, навіть якщо вони вже використовуються або "
+"визначають інший розмір. (Не рекомендується.)"
 
 msgid "Format"
 msgstr "Формат"
@@ -3278,7 +3325,7 @@ msgid "Hosts deny"
 msgstr "Заборонені хости"
 
 msgid "Hot Spare"
-msgstr ""
+msgstr "Гарячий резерв"
 
 msgid "Hours"
 msgstr "Годин"
@@ -3291,6 +3338,8 @@ msgid ""
 "How often the IP is updated even if it is not changed. The period is in "
 "seconds (max. is 10 days)."
 msgstr ""
+"Як часто поновлювати ІР адресу, навіть, якщо вона не мінялася. Значення в "
+"секундах (макс. 10 днів)."
 
 msgid "Hungarian"
 msgstr "Венгерський"
@@ -3328,6 +3377,8 @@ msgid ""
 "IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
 "addresses to hostnames&quot;</a> is enabled."
 msgstr ""
+"ІР адреси перетворюються в імена хостів якщо увімкнено <a "
+"href='%s'>&quot;Перетворювати ІР в імена хостів&quot;</a>."
 
 msgid "IP or FQDN address of remote Rsync server."
 msgstr ""
@@ -3404,11 +3455,17 @@ msgid ""
 "mode.<br />Service disruption to users accessing this mount will occur "
 "during this process."
 msgstr ""
+"Якщо вибраний диск/розділ примонтовано, він буде тимчасово відмонтований для "
+"виконання вибраної команди, інакше команди працюють в режимі тільки-для-"
+"читання.<br />Протягом цього можливе відключення користувачів, що мають "
+"доступ до цього ресурсу."
 
 msgid ""
 "If the server is behind a proxy set these parameters to give local services "
 "access to the internet via proxy."
 msgstr ""
+"Якщо сервер знаходиться за проксі, увімкніть цей параметр, щоб дати "
+"локальним сервісам доступ до інтернету через проксі."
 
 msgid ""
 "If this parameter is set, Samba attempts to first read DOS attributes "
@@ -3545,7 +3602,7 @@ msgid "Initiator Group"
 msgstr ""
 
 msgid "Initiator Groups"
-msgstr ""
+msgstr "Групи ініціаторів"
 
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
@@ -3553,19 +3610,20 @@ msgid ""
 msgstr ""
 
 msgid "Initiator name"
-msgstr ""
+msgstr "Ім'я ініціатора"
 
 msgid "Initiator side secret. (for mutual CHAP authentication)"
-msgstr ""
+msgstr "Код на стороні ініціатора. (для взаємної CHAP аутентифікації)"
 
 msgid "Initiator side user name. (for mutual CHAP authentication)"
 msgstr ""
+"Ім'я користувача на стороні ініціатора. (для взаємної CHAP аутентифікації)"
 
 msgid "Initiators"
 msgstr "Ініціатори"
 
 msgid "Inotify"
-msgstr ""
+msgstr "Inotify"
 
 msgid "Input current (A)"
 msgstr "Вхідний струм (A)"
@@ -3592,7 +3650,7 @@ msgid "Input voltage"
 msgstr "Вхідна напруга"
 
 msgid "Inquiry Product"
-msgstr ""
+msgstr "Запитати продукт"
 
 msgid "Inquiry Revision"
 msgstr "Запит ревізії"
@@ -3706,7 +3764,7 @@ msgid "JBOD"
 msgstr "JBOD"
 
 msgid "JBOD Information & Status"
-msgstr ""
+msgstr "Статус та інформація про JBOD"
 
 msgid ""
 "January February March April May June July August September October November "
@@ -3822,21 +3880,24 @@ msgstr "Залишіть це поле пустим для використан�
 
 msgid "Level 1 - Minimum Power Usage with Standby (Spindown)"
 msgstr ""
+"Рівень 1 - Мінімальне споживання енергії із засинанням і зупинкою шпинделя"
 
 msgid "Level 127 - Intermediate Power Usage with Standby"
-msgstr ""
+msgstr "Рівень 127 - Середнє споживання енергії із засинанням"
 
 msgid "Level 128 - Minimum Power Usage without Standby (No Spindown)"
 msgstr ""
+"Рівень 128 - Мінімальне споживання енергії без засинання і зупинки шпинделя."
 
 msgid "Level 192 - Intermediate Power Usage without Standby"
-msgstr ""
+msgstr "Рівень 192 - Середнє споживання енергії без засинання"
 
 msgid "Level 254 - Maximum Performance, Maximum Power Usage"
 msgstr ""
+"Рівень 254 - Максимальна продуктивність, максимальне споживання енергії"
 
 msgid "Level 64 - Intermediate Power Usage with Standby"
-msgstr ""
+msgstr "Рівень 64 - Середнє споживання енергії із засинанням"
 
 #, php-format
 msgid "Levels (MHz/mW): %s"
@@ -3849,7 +3910,7 @@ msgid "License & Credits"
 msgstr "Ліцензія і список розробників"
 
 msgid "Life Time"
-msgstr ""
+msgstr "Час життя"
 
 msgid "Life time"
 msgstr "Пожиттєвий"
@@ -3866,7 +3927,7 @@ msgid ""
 msgstr ""
 
 msgid "Link Aggregation and Failover"
-msgstr ""
+msgstr "Об'єднання каналів та відновлення при помилці"
 
 msgid "Link down action"
 msgstr "Дія при деактиваціїінтерфейса"
@@ -3878,13 +3939,13 @@ msgid "List"
 msgstr "Список"
 
 msgid "List Detected Disks"
-msgstr ""
+msgstr "Показати виявлені диски"
 
 msgid "List Imported Users"
-msgstr ""
+msgstr "Показати імпортованих користувачів"
 
 msgid "List Mount Points"
-msgstr ""
+msgstr "Показати точки монтування"
 
 msgid ""
 "List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP "
@@ -3976,7 +4037,7 @@ msgid "Log Level"
 msgstr "Рівень запису до журналу"
 
 msgid "Log level"
-msgstr ""
+msgstr "Рівень журналу"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Записувати пакети, оброблені цим правилом до журналу syslog."
@@ -4026,13 +4087,13 @@ msgid ""
 msgstr ""
 
 msgid "MAC Address"
-msgstr ""
+msgstr "MAC адреса"
 
 msgid "MAC address"
 msgstr "MAC-адреса"
 
 msgid "MBR Erase"
-msgstr ""
+msgstr "Витерти MBR"
 
 msgid "MBR partition"
 msgstr "MBR розділ"
@@ -4053,10 +4114,10 @@ msgid "MS Active Directory"
 msgstr "MS Active Directory"
 
 msgid "MS Active Directory Information & Status"
-msgstr ""
+msgstr "Статус та інформація MS Active Directory"
 
 msgid "MS Domain"
-msgstr ""
+msgstr "MS домен"
 
 msgid "MTU"
 msgstr "MTU"
@@ -4083,7 +4144,7 @@ msgid "Manufacturing date"
 msgstr "Дата виробництва"
 
 msgid "Map all users to root"
-msgstr ""
+msgstr "Переназначити всіх користувачів на root"
 
 msgid "Map to guest"
 msgstr "Як гість"
@@ -4143,7 +4204,7 @@ msgid "MaxRecvDataSegmentLength"
 msgstr "MaxRecvDataSegmentLength"
 
 msgid "Maximum Performance, Maximum Acoustic Output"
-msgstr ""
+msgstr "Максимальна продуктивність, максимальний рівень шуму"
 
 msgid "Maximum connections"
 msgstr "Максимальна кількість з'єднань"
@@ -4200,19 +4261,19 @@ msgid "Media library"
 msgstr "Медіа бібліотека"
 
 msgid "Medium Acoustic Output"
-msgstr ""
+msgstr "Середній рівень шуму"
 
 msgid "Mem"
-msgstr ""
+msgstr "Пам'ять"
 
 msgid "Member Interface"
 msgstr ""
 
 msgid "Memory (MiB)"
-msgstr ""
+msgstr "Пам'ять (MiB)"
 
 msgid "Memory Usage"
-msgstr ""
+msgstr "Використання пам'яті"
 
 msgid "Memory usage"
 msgstr "Використання пам'яті"
@@ -4230,24 +4291,25 @@ msgid "Min. passive port"
 msgstr "Мінімальний пасивний порт"
 
 msgid "MiniDLNA"
-msgstr ""
+msgstr "MiniDLNA"
 
 msgid "MiniDLNA A/V Media Server"
-msgstr ""
+msgstr "MiniDLNA аудіо/відео медіа сервер"
 
 msgid ""
 "MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
 "MiniDLNA first."
 msgstr ""
+"MiniDLNA увімкнено. Для використання Fuppes потрібно вимкнути MiniDLNA."
 
 msgid "Minidlna configuration has been updated."
-msgstr ""
+msgstr "Налаштування MiniDLNA оновлено."
 
 msgid "Minimum"
 msgstr "Мінімум"
 
 msgid "Minimum Performance, Minimum Acoustic Output"
-msgstr ""
+msgstr "Мінімальна продуктивність, мінімальний рівень шуму"
 
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr ""
@@ -4290,7 +4352,7 @@ msgid "Model Extra"
 msgstr ""
 
 msgid "Model Name"
-msgstr ""
+msgstr "Назва моделі"
 
 msgid "Modified"
 msgstr "Змінений"
@@ -4335,7 +4397,7 @@ msgid "Mounts"
 msgstr "Примонтовані пристрої"
 
 msgid "Music"
-msgstr ""
+msgstr "Музика"
 
 msgid "Must choose one"
 msgstr "Треба вибрати один з варіантів"
@@ -4404,7 +4466,7 @@ msgid "Name of the variable."
 msgstr "Ім'я змінної."
 
 msgid "Nested HVM"
-msgstr ""
+msgstr "Вкладені HVM"
 
 msgid "NetBIOS domain"
 msgstr "NetBIOS domain"
@@ -4419,7 +4481,7 @@ msgid "Network"
 msgstr "Мережа"
 
 msgid "Network Adapter"
-msgstr ""
+msgstr "Мережевий адаптер"
 
 msgid "Network File System"
 msgstr "Мережева файлова система"
@@ -4442,12 +4504,15 @@ msgid "Networks"
 msgstr "Мережі"
 
 msgid "Never - (Default)"
-msgstr ""
+msgstr "Ніколи (за замовчуванням)"
 
 msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
 "a disk which is spun-down to be spun-up when it is checked."
 msgstr ""
+"Ніколи - Опитувати (перевіряти) пристрій не залежно від його стану "
+"енергоспоживання. Це може спричинити повторну розкрутку шпинделя диска, який "
+"зупинився."
 
 msgid "New Device"
 msgstr "Новий пристрій"
@@ -4511,6 +4576,8 @@ msgid ""
 "No configured virtual devices. Please add new <a href='%s'>virtual "
 "device</a> first."
 msgstr ""
+"Нема налаштованих віртуальних пристроїв. Будь ласка спочатку додайте новий "
+"<a href='%s'>віртуальний пристрій</a>."
 
 msgid "No device selected."
 msgstr "Не вибрано пристрій."
@@ -4532,28 +4599,28 @@ msgstr ""
 "діагностичну інформацію про диски."
 
 msgid "No file was uploaded."
-msgstr ""
+msgstr "Файл не завантажено."
 
 msgid "No new disk found."
 msgstr "Нових дисків не знайдено."
 
 msgid "No new software raid disk found."
-msgstr ""
+msgstr "Нових дисків для програмного RAID не знайдено."
 
 msgid "No pool was found."
-msgstr ""
+msgstr "Жодного пула не знайдено."
 
 msgid "Node A IP address"
 msgstr "IP адреса вузла А."
 
 msgid "Node A Settings"
-msgstr ""
+msgstr "Налаштування вузла А"
 
 msgid "Node B IP address"
 msgstr "IP адреса вузла В."
 
 msgid "Node B Settings"
-msgstr ""
+msgstr "Налаштування Вузла Б"
 
 msgid "Node Base"
 msgstr ""
@@ -4655,7 +4722,7 @@ msgid "Number of clients"
 msgstr "Кількість клієнтів"
 
 msgid "Number of hours elapsed in the power-on state."
-msgstr ""
+msgstr "Кількість годин у включеному стані."
 
 msgid "Number of log entries to show"
 msgstr "Кількість записів журналу, яку показувати"
@@ -4667,12 +4734,14 @@ msgid ""
 "Number of physical erase cycles completed on the drive as a percentage of "
 "the maximum physical erase cycles the drive is designed to endure."
 msgstr ""
+"Кількість використаних циклів стирання як відсоток від максимального ресурсу "
+"для цього пристрою."
 
 msgid "Number of servers"
 msgstr "Кількість серверів"
 
 msgid "Numeric identifier of the group."
-msgstr ""
+msgstr "Цифровий ідентифікатор групи."
 
 msgid "OK"
 msgstr "OK"
@@ -4705,9 +4774,11 @@ msgid ""
 "Once you add the virtual device, it becomes impossible to delete again. It "
 "recommends adding the same number of drives as the existing virtual device."
 msgstr ""
+"Доданий віртуальний пристрій неможливо видалити. Рекомендується додавати "
+"кількість дисків рівну кількості віртуальних пристроїв."
 
 msgid "Online"
-msgstr ""
+msgstr "Онлайн"
 
 msgid ""
 "Only allow anonymous users. Use this on a public FTP site with no remote FTP "
@@ -4930,13 +5001,13 @@ msgid "Permit to do SSH Tunneling."
 msgstr "Дозволити SSH тунелі"
 
 msgid "Physical Interface"
-msgstr ""
+msgstr "Фізичний інтерфейс"
 
 msgid "Physical interface"
 msgstr "Фізичний інтерфейс"
 
 msgid "Pictures"
-msgstr ""
+msgstr "Зображення"
 
 msgid "Ping"
 msgstr "Пінг"
@@ -4956,9 +5027,10 @@ msgstr "ОС платформи"
 #, php-format
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr ""
+"Будь ласка зверніться до <a href='%s' target='_blank'>документації</a>."
 
 msgid "Please define the Database directory location."
-msgstr ""
+msgstr "Будь ласка влажіть директорію де знаходиться база даних."
 
 msgid "Please define the Media library location."
 msgstr ""
@@ -4976,7 +5048,7 @@ msgid "Pool"
 msgstr "Список"
 
 msgid "Pool Information & Status"
-msgstr ""
+msgstr "Статус та інформація про пул"
 
 msgid "Pools"
 msgstr "Списки"
@@ -5039,7 +5111,7 @@ msgid "Power Mode"
 msgstr "Режим живлення"
 
 msgid "Power management"
-msgstr ""
+msgstr "Керування живленням"
 
 msgid "Power mode"
 msgstr "Режим живлення"
@@ -5055,7 +5127,7 @@ msgstr "Попередня ініціалізація"
 
 #, php-format
 msgid "Predefined Groups"
-msgstr ""
+msgstr "Попередньо визначені групи"
 
 msgid "Preferred"
 msgstr "Бажаний"
@@ -5126,7 +5198,7 @@ msgstr "Проксі"
 msgid ""
 "Puts the disk into standby mode when the selected amount of time after the "
 "last disk access has been elapsed."
-msgstr ""
+msgstr "Переводить диски в сплячий режим після вказаного часу."
 
 msgid "Queue Depth"
 msgstr "глибина запитів"
@@ -5141,25 +5213,25 @@ msgid "RAID 0"
 msgstr "RAID 0"
 
 msgid "RAID 0 Information & Status"
-msgstr ""
+msgstr "Інформація та статус RAID 0"
 
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
-msgstr ""
+msgstr "Інформація та статус RAID 0/1/5"
 
 msgid "RAID 1"
 msgstr "RAID 1"
 
 msgid "RAID 1 Information & Status"
-msgstr ""
+msgstr "Інформація та статус RAID 1"
 
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
-msgstr ""
+msgstr "Інформація та статус RAID 5"
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -5204,7 +5276,7 @@ msgid "Raid name"
 msgstr "Ім'я RAID масиву"
 
 msgid "Ramdisk"
-msgstr ""
+msgstr "Ramdisk"
 
 msgid "Read"
 msgstr "Читати"
@@ -5353,7 +5425,7 @@ msgid "Required"
 msgstr "Вимагається"
 
 msgid "Rescan Disks"
-msgstr ""
+msgstr "Пересканувати диски"
 
 msgid "Rescan database in progress"
 msgstr ""
@@ -5383,7 +5455,7 @@ msgid "Resources"
 msgstr "Ресурси"
 
 msgid "Restore Configuration"
-msgstr ""
+msgstr "Відновити конфігурацію"
 
 msgid "Restore metadata from the given file to the given provider."
 msgstr ""
@@ -5452,7 +5524,7 @@ msgid "Rule"
 msgstr "Правило"
 
 msgid "Rule number"
-msgstr ""
+msgstr "Номер правила"
 
 msgid "Rules"
 msgstr "Правила"
@@ -5476,7 +5548,7 @@ msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
 
 msgid "S.M.A.R.T. Monitoring"
-msgstr ""
+msgstr "Моніторинг параметрів S.M.A.R.T."
 
 msgid "S.M.A.R.T. events"
 msgstr "Події S.M.A.R.T."
@@ -5485,7 +5557,7 @@ msgid "S.M.A.R.T. extra options"
 msgstr "Додаткові налаштування S.M.A.R.T."
 
 msgid "S.M.A.R.T. log"
-msgstr ""
+msgstr "Журнал S.M.A.R.T."
 
 msgid "SMB2"
 msgstr "SMB2"
@@ -5502,7 +5574,7 @@ msgid "SNMP"
 msgstr "SNMP"
 
 msgid "SNMP Modules"
-msgstr ""
+msgstr "Модулі SNMP"
 
 msgid "SSH"
 msgstr "SSH"
@@ -5517,7 +5589,7 @@ msgid "SSID"
 msgstr "SSID"
 
 msgid "Samba AD"
-msgstr ""
+msgstr "Samba AD"
 
 msgid "Samba Active Directory Domain Controller"
 msgstr ""
@@ -5538,7 +5610,7 @@ msgid "Save"
 msgstr "Зберегти"
 
 msgid "Save & Restart"
-msgstr ""
+msgstr "Зберегти і перезапустити"
 
 msgid "Save and Restart"
 msgstr "Зберегти і перезавантажити"
@@ -5550,7 +5622,7 @@ msgid "Saved file to"
 msgstr ""
 
 msgid "Scan Targets"
-msgstr ""
+msgstr "Об'єкти сканування"
 
 msgid ""
 "Scan file system every N seconds to see if any files have been added or "
@@ -5558,6 +5630,10 @@ msgid ""
 "is disabled, a scan can still be forced from the status page of the "
 "administrative web interface."
 msgstr ""
+"Сканувати файлову систему кожні N секунд для виявити доданих чи видалених "
+"файлів. Встановіть в 0 для відміни періодичного фонового сканування. Навіть "
+"якщо постійне фонове сканування відмінено, одноразове сканування можна "
+"запустити із сторінки статуса у веб інтерфейсі."
 
 msgid "Scan type"
 msgstr "Тип сканування"
@@ -5572,16 +5648,16 @@ msgid "Scheduled"
 msgstr "Заплановано"
 
 msgid "Scheduled Reboot"
-msgstr ""
+msgstr "Заплановане перезавантаження"
 
 msgid "Scheduled Self-Test"
 msgstr "Заплановане самотестування"
 
 msgid "Scheduled Shutdown"
-msgstr ""
+msgstr "Заплановане вимкнення"
 
 msgid "Scheduled tests"
-msgstr ""
+msgstr "Заплановані тести"
 
 msgid "Secondary"
 msgstr "Вторинний"
@@ -5590,16 +5666,16 @@ msgid "Secret"
 msgstr ""
 
 msgid "Secure Shell"
-msgstr ""
+msgstr "Secure Shell"
 
 msgid "Security"
 msgstr "Безпека"
 
 msgid "See attribute E8."
-msgstr ""
+msgstr "Переглянути атрибут E8."
 
 msgid "Select"
-msgstr ""
+msgstr "Вибрати"
 
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
@@ -5610,7 +5686,7 @@ msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Виберіть диск для якого дозволено моніторинг S.M.A.R.T."
 
 msgid "Select firmware:"
-msgstr ""
+msgstr "Виберіть прошивку:"
 
 msgid "Select item to remove from the list"
 msgstr "Виберіть елемент для видалення із списку"
@@ -5625,7 +5701,7 @@ msgid "Select the language of the WebGUI."
 msgstr "Виберіть мову для WebGUI."
 
 msgid "Select the location closest to you."
-msgstr ""
+msgstr "Виберіть місце найближче до вас."
 
 #, php-format
 msgid ""
@@ -7501,6 +7577,12 @@ msgstr ""
 "Щоб використовувати піддиректорії, ви повинні змонтувати кожну директорію. "
 "(напр. %s)"
 
+msgid "Toggle Selected Jobs"
+msgstr ""
+
+msgid "Toggle Selected Options"
+msgstr ""
+
 msgid "Tolerated"
 msgstr "Припустимо"
 
@@ -8250,9 +8332,7 @@ msgstr ""
 msgid "ZFS volume"
 msgstr "Том ZFS"
 
-msgid ""
-"ZFS volume block size. This value can not be changed after creation. Empty "
-"as default."
+msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
 
 msgid ""
@@ -8425,3 +8505,54 @@ msgstr "umount"
 
 msgid "version:"
 msgstr "версія:"
+
+#~ msgid "Add volume"
+#~ msgstr "Додати том"
+
+#~ msgid "Delete MIB"
+#~ msgstr "Видалити MIB"
+
+#~ msgid "Delete dataset"
+#~ msgstr "Видалити набір даних"
+
+#~ msgid "Delete job"
+#~ msgstr "Видалити завдання"
+
+#~ msgid "Add dataset"
+#~ msgstr "Додати датасет"
+
+#~ msgid "Do you really want to delete all MIBs?"
+#~ msgstr "Ви дійсно хочете видалити всі MIBи?"
+
+#~ msgid "Do you really want to delete all options?"
+#~ msgstr "Ви дійсно хочете видалити всі налаштування?"
+
+#~ msgid "Do you really want to delete this MIB?"
+#~ msgstr "Ви дійсно хочете видалити цей MIB?"
+
+#~ msgid "Do you really want to delete this cron job?"
+#~ msgstr "Ви дійсно хочете видалити це завдання cron?"
+
+#~ msgid "Do you really want to delete this dataset?"
+#~ msgstr "Ви дійсно хочете видалити цей набір даних?"
+
+#~ msgid "Do you really want to delete this option?"
+#~ msgstr "Ви дійсно хочете видалити це налаштування?"
+
+#~ msgid "Do you really want to delete this volume?"
+#~ msgstr "Ви дійсно хочете видалити цей диск?"
+
+#~ msgid "Delete all options"
+#~ msgstr "Видалити всі налаштування"
+
+#~ msgid "Delete all MIBs"
+#~ msgstr "Видалити всі MIB"
+
+#~ msgid "Delete option"
+#~ msgstr "Видалити налаштування"
+
+#~ msgid "Delete volume"
+#~ msgstr "Видалити розділ"
+
+#~ msgid "Edit volume"
+#~ msgstr "Редагувати розділ"
