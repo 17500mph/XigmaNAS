@@ -70,6 +70,7 @@ Changes:
 Fixes:
 - Fix typo (ticket #260)
 - Fix ZFS volume is not shown in filechooser.
+- Fix System status pages shows wrong free space for zfs pools (ticket #271)
 - Fix AFP compatibility don't work if you didn't enable Samaba AD.
 - Fix run now on cron don't use Who field.
 - Fix duplicate syncthing account when fresh install by 2067.
@@ -90,7 +91,7 @@ Fixes:
 - Undefined symbol "av_find_stream_info" in fuppes/libmetadata_libavformat.so.
 - AFP share is not advised.
 - Fix webserver user logins.
-- Fix wrong path ticket 228.
+- Fix wrong path (ticket #228).
 
 Note:
 - iperf2 has been replaced for iperf3 because of inconsistent results for UDP above 2Gbps.
