@@ -308,9 +308,9 @@ $(document).ready(function(){
 					$('#diskusage_'+du.id+'_bar_used').attr('width', du.percentage + 'px');
 					$('#diskusage_'+du.id+'_bar_used').attr('title', du['tooltip'].used);
 					$('#diskusage_'+du.id+'_bar_free').attr('width', (100 - du.percentage) + 'px');
-					$('#diskusage_'+du.id+'_bar_free').attr('title', du['tooltip'].available);
+					$('#diskusage_'+du.id+'_bar_free').attr('title', du['tooltip'].avail);
 					$('#diskusage_'+du.id+'_capacity').text(du.capacity);
-					$('#diskusage_'+du.id+'_total').text(du.size);
+					$('#diskusage_'+du.id+'_size').text(du.size);
 					$('#diskusage_'+du.id+'_used').text(du.used);
 					$('#diskusage_'+du.id+'_avail').text(du.avail);
 				}
@@ -319,17 +319,17 @@ $(document).ready(function(){
 		if (typeof(data.poolusage) != 'undefined') {
 			for (var idx = 0; idx < data.poolusage.length; idx++) {
 				var pu = data.poolusage[idx];
-				if ($('#diskusage_'+pu.id+'_bar_used').size() > 0) {
-					$('#diskusage_'+pu.id+'_name').text(pu.name);
-					$('#diskusage_'+pu.id+'_bar_used').attr('width', pu.percentage + 'px');
-					$('#diskusage_'+pu.id+'_bar_used').attr('title', pu['tooltip'].used);
-					$('#diskusage_'+pu.id+'_bar_free').attr('width', (100 - pu.percentage) + 'px');
-					$('#diskusage_'+pu.id+'_bar_free').attr('title', pu['tooltip'].available);
-					$('#diskusage_'+pu.id+'_capacity').text(pu.capacity);
-					$('#diskusage_'+pu.id+'_total').text(pu.size);
-					$('#diskusage_'+pu.id+'_used').text(pu.alloc);
-					$('#diskusage_'+pu.id+'_free').text(pu.free);
-					$('#diskusage_'+pu.id+'_state').children().text(pu.health);
+				if ($('#poolusage_'+pu.id+'_bar_used').size() > 0) {
+					$('#poolusage_'+pu.id+'_name').text(pu.name);
+					$('#poolusage_'+pu.id+'_bar_used').attr('width', pu.percentage + 'px');
+					$('#poolusage_'+pu.id+'_bar_used').attr('title', pu['tooltip'].used);
+					$('#poolusage_'+pu.id+'_bar_free').attr('width', (100 - pu.percentage) + 'px');
+					$('#poolusage_'+pu.id+'_bar_free').attr('title', pu['tooltip'].avail);
+					$('#poolusage_'+pu.id+'_capacity').text(pu.capacity);
+					$('#poolusage_'+pu.id+'_size').text(pu.size);
+					$('#poolusage_'+pu.id+'_used').text(pu.used);
+					$('#poolusage_'+pu.id+'_avail').text(pu.avail);
+					$('#poolusage_'+pu.id+'_state').children().text(pu.health);
 				}
 			}
 		}
@@ -337,14 +337,15 @@ $(document).ready(function(){
 			for (var idx = 0; idx < data.swapusage.length; idx++) {
 				var su = data.swapusage[idx];
 				if ($('#swapusage_'+su.id+'_bar_used').size() > 0) {
+					$('#swapusage_'+su.id+'_name').text(su.name);
 					$('#swapusage_'+su.id+'_bar_used').attr('width', su.percentage + 'px');
 					$('#swapusage_'+su.id+'_bar_used').attr('title', su['tooltip'].used);
 					$('#swapusage_'+su.id+'_bar_free').attr('width', (100 - su.percentage) + 'px');
-					$('#swapusage_'+su.id+'_bar_free').attr('title', su['tooltip'].available);
+					$('#swapusage_'+su.id+'_bar_free').attr('title', su['tooltip'].avail);
 					$('#swapusage_'+su.id+'_capacity').text(su.capacity);
-					$('#swapusage_'+su.id+'_total').text(su.total);
+					$('#swapusage_'+su.id+'_size').text(su.size);
 					$('#swapusage_'+su.id+'_used').text(su.used);
-					$('#swapusage_'+su.id+'_free').text(su.avail);
+					$('#swapusage_'+su.id+'_avail').text(su.avail);
 				}
 			}
 		}
@@ -510,37 +511,36 @@ $(document).ready(function(){
 			<input style="padding: 0; border: 0; background-color:#FCFCFC;" size="30" name="memusage" id="memusage" value="<?=sprintf(gettext("%d%% of %dMiB"), $percentage, round($raminfo['physical'] / 1024 / 1024));?>" />
 			</td>
 		</tr>
-		<?php $swapinfo = system_get_swap_info(); if (!empty($swapinfo)):?>
+		<?php $a_swapusage = get_swap_usage(); if (!empty($a_swapusage)):?>
 		<tr>
 			<td width="25%" class="vncellt"><?=gettext("Swap usage");?></td>
 			<td width="75%" class="listr">
 			<table width="100%" border="0" cellspacing="0" cellpadding="1">
 			<?php
-				array_sort_key($swapinfo, "device");
-				$ctrlid = 0;
-				foreach ($swapinfo as $swapk => $swapv) {
-					$percent_used = rtrim($swapv['capacity'], "%");
-					$tooltip_used = sprintf(gettext("%sB used of %sB"), $swapv['used'], $swapv['total']);
-					$tooltip_available = sprintf(gettext("%sB available of %sB"), $swapv['avail'], $swapv['total']);
+				$index = 0;
+				foreach ($a_swapusage as $r_swapusage) {
+					$ctrlid = $r_swapusage['id'];
+					$percent_used = $r_swapusage['percentage'];
+					$tooltip_used = $r_swapusage['tooltip']['used'];
+					$tooltip_avail = $r_swapusage['tooltip']['avail'];
 
 					echo "<tr><td><div id='swapusage'>";
 					echo "<img src='bar_left.gif' class='progbarl' alt='' />";
 					echo "<img src='bar_blue.gif' name='swapusage_{$ctrlid}_bar_used' id='swapusage_{$ctrlid}_bar_used' width='{$percent_used}' class='progbarcf' title='{$tooltip_used}' alt='' />";
-					echo "<img src='bar_gray.gif' name='swapusage_{$ctrlid}_bar_free' id='swapusage_{$ctrlid}_bar_free' width='" . (100 - $percent_used) . "' class='progbarc' title='{$tooltip_available}' alt='' />";
+					echo "<img src='bar_gray.gif' name='swapusage_{$ctrlid}_bar_free' id='swapusage_{$ctrlid}_bar_free' width='" . (100 - $percent_used) . "' class='progbarc' title='{$tooltip_avail}' alt='' />";
 					echo "<img src='bar_right.gif' class='progbarr' alt='' /> ";
 					echo sprintf(gettext("%s of %sB"),
-						"<span name='swapusage_{$ctrlid}_capacity' id='swapusage_{$ctrlid}_capacity' class='capacity'>{$swapv['capacity']}</span>",
-						$swapv['total']);
+						"<span name='swapusage_{$ctrlid}_capacity' id='swapusage_{$ctrlid}_capacity' class='capacity'>{$r_swapusage['capacity']}</span>",
+						$r_swapusage['total']);
 					echo "<br />";
 					echo sprintf(gettext("Device: %s | Total: %s | Used: %s | Free: %s"),
-						"<span name='swapusage_{$ctrlid}_device' id='swapusage_{$ctrlid}_device' class='device'>{$swapv['device']}</span>",
-						"<span name='swapusage_{$ctrlid}_total' id='swapusage_{$ctrlid}_total' class='total'>{$swapv['total']}</span>",
-						"<span name='swapusage_{$ctrlid}_used' id='swapusage_{$ctrlid}_used' class='used'>{$swapv['used']}</span>",
-						"<span name='swapusage_{$ctrlid}_free' id='swapusage_{$ctrlid}_free' class='free'>{$swapv['avail']}</span>");
+						"<span name='swapusage_{$ctrlid}_name' id='swapusage_{$ctrlid}_name' class='name'>{$r_swapusage['name']}</span>",
+						"<span name='swapusage_{$ctrlid}_size' id='swapusage_{$ctrlid}_size' class='total'>{$r_swapusage['size']}</span>",
+						"<span name='swapusage_{$ctrlid}_used' id='swapusage_{$ctrlid}_used' class='used'>{$r_swapusage['used']}</span>",
+						"<span name='swapusage_{$ctrlid}_avail' id='swapusage_{$ctrlid}_avail' class='avail'>{$r_swapusage['avail']}</span>");
 					echo "</div></td></tr>";
 
-					$ctrlid++;
-					if ($ctrlid < count($swapinfo))
+					if (++$index < count($a_swapusage))
 						echo "<tr><td><hr size='1' /></td></tr>\n";
 				}
 			?>
@@ -563,75 +563,70 @@ $(document).ready(function(){
 			<td width="75%" class="listr">
 			<table width="100%" border="0" cellspacing="0" cellpadding="1">
 			<?php
-				$diskusage = system_get_mount_usage();
-				if (!empty($diskusage)) {
-					array_sort_key($diskusage, "name");
+				$a_diskusage = get_disk_usage();
+				if (!empty($a_diskusage)) {
 					$index = 0;
-					foreach ($diskusage as $diskusagek => $diskusagev) {
-						$ctrlid = get_mount_fsid($diskusagev['filesystem'], $diskusagek);
-						$percent_used = rtrim($diskusagev['capacity'],"%");
-						$tooltip_used = sprintf(gettext("%sB used of %sB"), $diskusagev['used'], $diskusagev['size']);
-						$tooltip_available = sprintf(gettext("%sB available of %sB"), $diskusagev['avail'], $diskusagev['size']);
+					foreach ($a_diskusage as $r_diskusage) {
+						$ctrlid = $r_diskusage['id'];
+						$percent_used = $r_diskusage['percentage'];
+						$tooltip_used = $r_diskusage['tooltip']['used'];
+						$tooltip_avail = $r_diskusage['tooltip']['avail'];
 
 						echo "<tr><td><div id='diskusage'>";
-						echo "<span name='diskusage_{$ctrlid}_name' id='diskusage_{$ctrlid}_name' class='name'>{$diskusagev['name']}</span><br />";
+						echo "<span name='diskusage_{$ctrlid}_name' id='diskusage_{$ctrlid}_name' class='name'>{$r_diskusage['name']}</span><br />";
 						echo "<img src='bar_left.gif' class='progbarl' alt='' />";
 						echo "<img src='bar_blue.gif' name='diskusage_{$ctrlid}_bar_used' id='diskusage_{$ctrlid}_bar_used' width='{$percent_used}' class='progbarcf' title='{$tooltip_used}' alt='' />";
-						echo "<img src='bar_gray.gif' name='diskusage_{$ctrlid}_bar_free' id='diskusage_{$ctrlid}_bar_free' width='" . (100 - $percent_used) . "' class='progbarc' title='{$tooltip_available}' alt='' />";
+						echo "<img src='bar_gray.gif' name='diskusage_{$ctrlid}_bar_free' id='diskusage_{$ctrlid}_bar_free' width='" . (100 - $percent_used) . "' class='progbarc' title='{$tooltip_avail}' alt='' />";
 						echo "<img src='bar_right.gif' class='progbarr' alt='' /> ";
 						echo sprintf(gettext("%s of %sB"),
-							"<span name='diskusage_{$ctrlid}_capacity' id='diskusage_{$ctrlid}_capacity' class='capacity'>{$diskusagev['capacity']}</span>",
-							$diskusagev['size']);
+							"<span name='diskusage_{$ctrlid}_capacity' id='diskusage_{$ctrlid}_capacity' class='capacity'>{$r_diskusage['capacity']}</span>",
+							$r_diskusage['size']);
 						echo "<br />";
 						echo sprintf(gettext("Total: %s | Used: %s | Free: %s"),
-							"<span name='diskusage_{$ctrlid}_total' id='diskusage_{$ctrlid}_total' class='total'>{$diskusagev['size']}</span>",
-							"<span name='diskusage_{$ctrlid}_used' id='diskusage_{$ctrlid}_used' class='used'>{$diskusagev['used']}</span>",
-							"<span name='diskusage_{$ctrlid}_avail' id='diskusage_{$ctrlid}_avail' class='avail'>{$diskusagev['avail']}</span>");
+							"<span name='diskusage_{$ctrlid}_size' id='diskusage_{$ctrlid}_size' class='size'>{$r_diskusage['size']}</span>",
+							"<span name='diskusage_{$ctrlid}_used' id='diskusage_{$ctrlid}_used' class='used'>{$r_diskusage['used']}</span>",
+							"<span name='diskusage_{$ctrlid}_avail' id='diskusage_{$ctrlid}_avail' class='avail'>{$r_diskusage['avail']}</span>");
 						echo "</div></td></tr>";
 
-						if (++$index < count($diskusage))
+						if (++$index < count($a_diskusage))
 							echo "<tr><td><hr size='1' /></td></tr>\n";
 					}
 				}
 
-				$zfspools = zfs_get_pool_list();
-				if (!empty($zfspools)) {
-					array_sort_key($zfspools, "name");
+				$a_poolusage = get_pool_usage();
+				if (!empty($a_poolusage)) {
 					$index = 0;
-
-					if (!empty($diskusage))
+					if (!empty($a_diskusage))
 						echo "<tr><td><hr size='1' /></td></tr>\n";
+					foreach ($a_poolusage as $r_poolusage) {
+						$ctrlid = $r_poolusage['id'];
+						$percent_used = $r_poolusage['percentage'];
+						$tooltip_used = $r_poolusage['tooltip']['used'];
+						$tooltip_avail = $r_poolusage['tooltip']['avail'];
 
-					foreach ($zfspools as $poolk => $poolv) {
-						$ctrlid = $poolv['name'];
-						$ctrlid = preg_replace('/[-\.: ]/', '_', $ctrlid);
-						$percent_used = rtrim($poolv['cap'],"%");
-						$tooltip_used = sprintf(gettext("%sB used of %sB"), $poolv['alloc'], $poolv['size']);
-						$tooltip_available = sprintf(gettext("%sB available of %sB"), $poolv['free'], $poolv['size']);
-
-						echo "<tr><td><div id='diskusage'>";
-						echo "<span name='diskusage_{$ctrlid}_name' id='diskusage_{$ctrlid}_name' class='name'>{$poolv['name']}</span><br />";
+						echo "<tr><td><div id='poolusage'>";
+						echo "<span name='poolusage_{$ctrlid}_name' id='poolusage_{$ctrlid}_name' class='name'>{$r_poolusage['name']}</span><br />";
 						echo "<img src='bar_left.gif' class='progbarl' alt='' />";
-						echo "<img src='bar_blue.gif' name='diskusage_{$ctrlid}_bar_used' id='diskusage_{$ctrlid}_bar_used' width='{$percent_used}' class='progbarcf' title='{$tooltip_used}' alt='' />";
-						echo "<img src='bar_gray.gif' name='diskusage_{$ctrlid}_bar_free' id='diskusage_{$ctrlid}_bar_free' width='" . (100 - $percent_used) . "' class='progbarc' title='{$tooltip_available}' alt='' />";
+						echo "<img src='bar_blue.gif' name='poolusage_{$ctrlid}_bar_used' id='poolusage_{$ctrlid}_bar_used' width='{$percent_used}' class='progbarcf' title='{$tooltip_used}' alt='' />";
+						echo "<img src='bar_gray.gif' name='poolusage_{$ctrlid}_bar_free' id='poolusage_{$ctrlid}_bar_free' width='" . (100 - $percent_used) . "' class='progbarc' title='{$tooltip_avail}' alt='' />";
 						echo "<img src='bar_right.gif' class='progbarr' alt='' /> ";
 						echo sprintf(gettext("%s of %sB"),
-							"<span name='diskusage_{$ctrlid}_capacity' id='diskusage_{$ctrlid}_capacity' class='capacity'>{$poolv['cap']}</span>",
-							$poolv['size']);
+							"<span name='poolusage_{$ctrlid}_capacity' id='poolusage_{$ctrlid}_capacity' class='capacity'>{$r_poolusage['capacity']}</span>",
+							$r_poolusage['size']);
 						echo "<br />";
 						echo sprintf(gettext("Total: %s | Alloc: %s | Free: %s | State: %s"),
-							"<span name='diskusage_{$ctrlid}_total' id='diskusage_{$ctrlid}_total' class='total'>{$poolv['size']}</span>",
-							"<span name='diskusage_{$ctrlid}_alloc' id='diskusage_{$ctrlid}_alloc' class='alloc'>{$poolv['alloc']}</span>",
-							"<span name='diskusage_{$ctrlid}_free' id='diskusage_{$ctrlid}_free' class='free'>{$poolv['free']}</span>",
-							"<span name='diskusage_{$ctrlid}_state' id='diskusage_{$ctrlid}_state' class='state'><a href='disks_zfs_zpool_info.php?pool={$poolv['name']}'>{$poolv['health']}</a></span>");
+							"<span name='poolusage_{$ctrlid}_size' id='poolusage_{$ctrlid}_size' class='size'>{$r_poolusage['size']}</span>",
+							"<span name='poolusage_{$ctrlid}_used' id='poolusage_{$ctrlid}_used' class='used'>{$r_poolusage['used']}</span>",
+							"<span name='poolusage_{$ctrlid}_avail' id='poolusage_{$ctrlid}_avail' class='avail'>{$r_poolusage['avail']}</span>",
+							"<span name='poolusage_{$ctrlid}_state' id='poolusage_{$ctrlid}_state' class='state'><a href='disks_zfs_zpool_info.php?pool={$r_poolusage['name']}'>{$r_poolusage['health']}</a></span>");
 						echo "</div></td></tr>";
 
-						if (++$index < count($zfspools))
+						if (++$index < count($a_poolusage))
 							echo "<tr><td><hr size='1' /></td></tr>\n";
 					}
 				}
 
-				if (empty($diskusage) && empty($zfspools)) {
+				if (empty($a_diskusage) && empty($a_poolusage)) {
 					echo "<tr><td>";
 					echo gettext("No disk configured");
 					echo "</td></tr>";

@@ -746,6 +746,84 @@ function system_get_mount_usage() {
 	return $result;
 }
 
+function get_disk_usage() {
+	$retval = [];
+	$a_diskusage = [];
+	$a_diskinfo = system_get_mount_usage();
+	if (!empty($a_diskinfo)) {
+		foreach ($a_diskinfo as $diskk => $diskv) {
+			$id = get_mount_fsid($diskv['filesystem'], $diskk);
+			$r_diskusage = [];
+			$r_diskusage['id'] = $id;
+			$r_diskusage['mountpoint'] = $diskv['mountpoint'];
+			$r_diskusage['name'] = $diskv['name'];
+			$r_diskusage['capacity'] = $diskv['capacity'];
+			$r_diskusage['percentage'] = rtrim($diskv['capacity'], "%");
+			$r_diskusage['size'] = $diskv['size'];
+			$r_diskusage['used'] = $diskv['used'];
+			$r_diskusage['avail'] = $diskv['avail'];
+			$r_diskusage['tooltip']['used'] = sprintf(gettext("%sB used of %sB"), $r_diskusage['used'], $r_diskusage['size']);
+			$r_diskusage['tooltip']['avail'] = sprintf(gettext("%sB available of %sB"), $r_diskusage['avail'], $r_diskusage['size']);
+			$a_diskusage[] = $r_diskusage;
+		}
+		array_sort_key($a_diskusage, 'name');
+		$retval = $a_diskusage;
+	}
+	return $retval;
+}
+
+function get_pool_usage() {
+ 	$retval = [];
+	$a_poolusage = [];
+	$a_poolinfo = zfs_get_pool_list();
+	if (!empty($a_poolinfo)) {
+		foreach ($a_poolinfo as $poolk => $poolv) {
+			$id = $poolv['name'];
+			$id = preg_replace('/[-\.: ]/', '_', $id);
+			$r_poolusage = [];
+			$r_poolusage['id'] = $id;
+			$r_poolusage['name'] = $poolv['name'];
+			$r_poolusage['capacity'] = $poolv['cap'];
+			$r_poolusage['percentage'] = rtrim($poolv['cap'], "%");
+			$r_poolusage['size'] = $poolv['size'];
+			$r_poolusage['used'] = $poolv['alloc']; // mapped to alloc to show the same information as in Disks|ZFS|Pools|Management
+			$r_poolusage['avail'] = $poolv['free']; // mapped to free to show the same information as in Disks|ZFS|Pools|Management
+			$r_poolusage['health'] = $poolv['health'];
+			$r_poolusage['tooltip']['used'] = sprintf(gettext("%sB used of %sB"), $r_poolusage['used'], $r_poolusage['size']);
+			$r_poolusage['tooltip']['avail'] = sprintf(gettext("%sB available of %sB"), $r_poolusage['avail'], $r_poolusage['size']);
+			$a_poolusage[] = $r_poolusage;
+		}
+		array_sort_key($a_poolusage, 'name');
+		$retval = $a_poolusage;
+	}
+	return $retval;
+}
+
+function get_swap_usage() {
+	$retval = [];
+	$a_swapusage = [];
+	$a_swapinfo= system_get_swap_info();
+	if (!empty($a_swapinfo)) {
+		$id = 0;
+		foreach ($a_swapinfo as $swapk => $swapv) {
+			$r_swapusage = [];
+			$r_swapusage['id'] = $id++;
+			$r_swapusage['name'] = $swapv['device'];
+			$r_swapusage['capacity'] = $swapv['capacity'];
+			$r_swapusage['percentage'] = rtrim($swapv['capacity'], "%");
+			$r_swapusage['size'] = $swapv['total'];
+			$r_swapusage['used'] = $swapv['used'];
+			$r_swapusage['avail'] = $swapv['avail'];
+			$r_swapusage['tooltip']['used'] = sprintf(gettext("%sB used of %sB"), $r_swapusage['used'], $r_swapusage['size']);
+			$r_swapusage['tooltip']['avail']  = sprintf(gettext("%sB available of %sB"), $r_swapusage['avail'], $r_swapusage['size']);
+			$a_swapusage[]= $r_swapusage;
+		}
+		array_sort_key($a_swapusage, 'name');
+		$retval = $a_swapusage;
+	}
+	return $retval;
+}
+
 /**
  * Get various system informations.
  * @return An array containing the system informations.
@@ -786,69 +864,9 @@ function system_get_sysinfo() {
 		$value['cpuusage'] = system_get_cpu_usage();
 		$value['cpuusage2'] = array($value['cpuusage']);
 	}
-
-	// Get disk usage.
-	$a_diskusage = system_get_mount_usage();
-	if (is_array($a_diskusage) && (0 < count($a_diskusage))) {
-		foreach ($a_diskusage as $diskusagek => $diskusagev) {
-			$fsid = get_mount_fsid($diskusagev['filesystem'], $diskusagek);
-			$diskinfo = array();
-			$diskinfo['id'] = $fsid;
-			$diskinfo['mountpoint'] = $diskusagev['mountpoint'];
-			$diskinfo['name'] = $diskusagev['name'];
-			$diskinfo['capacity'] = $diskusagev['capacity'];
-			$diskinfo['percentage'] = rtrim($diskusagev['capacity'], "%");
-			$diskinfo['size'] = $diskusagev['size'];
-			$diskinfo['used'] = $diskusagev['used'];
-			$diskinfo['avail'] = $diskusagev['avail'];
-			$diskinfo['tooltip']['used'] = sprintf(gettext("%sB used of %sB"), $diskusagev['used'], $diskusagev['size']);
-			$diskinfo['tooltip']['available'] = sprintf(gettext("%sB available of %sB"), $diskusagev['avail'], $diskusagev['size']);
-
-			$value['diskusage'][] = $diskinfo;
-		}
-	}
-
-	// Get pool info.
-	$zfspools = zfs_get_pool_list();
-	if (!empty($zfspools)) {
-		foreach ($zfspools as $poolk => $poolv) {
-			$id = $poolv['name'];
-			$id = preg_replace('/[-\.: ]/', '_', $id);
-			$poolinfo = array();
-			$poolinfo['id'] = $id;
-			$poolinfo['name'] = $poolv['name'];
-			$poolinfo['capacity'] = $poolv['cap'];
-			$poolinfo['percentage'] = rtrim($poolv['cap'], "%");
-			$poolinfo['size'] = $poolv['size'];
-			$poolinfo['alloc'] = $poolv['alloc'];
-			$poolinfo['free'] = $poolv['free'];
-			$poolinfo['health'] = $poolv['health'];
-			$poolinfo['tooltip']['used'] = sprintf(gettext("%sB used of %sB"), $poolv['alloc'], $poolv['size']);
-			$poolinfo['tooltip']['available'] = sprintf(gettext("%sB available of %sB"), $poolv['free'], $poolv['size']);
-			$value['poolusage'][] = $poolinfo;
-		}
-	}
-
-	// Get swap info.
-	$swapinfo = system_get_swap_info();
-	if (is_array($swapinfo) && (0 < count($swapinfo))) {
-		$id = 0;
-		foreach ($swapinfo as $swapv) {
-			$swapinfo = array();
-			$swapinfo['id'] = $id++;
-			$swapinfo['device'] = $swapv['device'];
-			$swapinfo['capacity'] = $swapv['capacity'];
-			$swapinfo['percentage'] = rtrim($swapv['capacity'], "%");
-			$swapinfo['total'] = $swapv['total'];
-			$swapinfo['used'] = $swapv['used'];
-			$swapinfo['avail'] = $swapv['avail'];
-			$swapinfo['tooltip']['used'] = sprintf(gettext("%sB used of %sB"), $swapv['used'], $swapv['total']);
-			$swapinfo['tooltip']['available']  = sprintf(gettext("%sB available of %sB"), $swapv['avail'], $swapv['total']);
-
-			$value['swapusage'][]= $swapinfo;
-		}
-	}
-
+	$value['diskusage'] = get_disk_usage(); // Get disk usage.
+	$value['poolusage'] = get_pool_usage(); // Get pool info.
+	$value['swapusage'] = get_swap_usage(); // Get swap info.
 	return $value;
 }
 
