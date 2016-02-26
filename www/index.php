@@ -310,6 +310,7 @@ $(document).ready(function(){
 					$('#diskusage_'+du.id+'_bar_free').attr('width', (100 - du.percentage) + 'px');
 					$('#diskusage_'+du.id+'_bar_free').attr('title', du['tooltip'].avail);
 					$('#diskusage_'+du.id+'_capacity').text(du.capacity);
+					$('#diskusage_'+du.id+'_capofsize').text(du.capofsize);
 					$('#diskusage_'+du.id+'_size').text(du.size);
 					$('#diskusage_'+du.id+'_used').text(du.used);
 					$('#diskusage_'+du.id+'_avail').text(du.avail);
@@ -326,6 +327,7 @@ $(document).ready(function(){
 					$('#poolusage_'+pu.id+'_bar_free').attr('width', (100 - pu.percentage) + 'px');
 					$('#poolusage_'+pu.id+'_bar_free').attr('title', pu['tooltip'].avail);
 					$('#poolusage_'+pu.id+'_capacity').text(pu.capacity);
+					$('#poolusage_'+pu.id+'_capofsize').text(pu.capofsize);
 					$('#poolusage_'+pu.id+'_size').text(pu.size);
 					$('#poolusage_'+pu.id+'_used').text(pu.used);
 					$('#poolusage_'+pu.id+'_avail').text(pu.avail);
@@ -343,6 +345,7 @@ $(document).ready(function(){
 					$('#swapusage_'+su.id+'_bar_free').attr('width', (100 - su.percentage) + 'px');
 					$('#swapusage_'+su.id+'_bar_free').attr('title', su['tooltip'].avail);
 					$('#swapusage_'+su.id+'_capacity').text(su.capacity);
+					$('#swapusage_'+su.id+'_capofsize').text(su.capofsize);
 					$('#swapusage_'+su.id+'_size').text(su.size);
 					$('#swapusage_'+su.id+'_used').text(su.used);
 					$('#swapusage_'+su.id+'_avail').text(su.avail);
@@ -529,9 +532,7 @@ $(document).ready(function(){
 					echo "<img src='bar_blue.gif' name='swapusage_{$ctrlid}_bar_used' id='swapusage_{$ctrlid}_bar_used' width='{$percent_used}' class='progbarcf' title='{$tooltip_used}' alt='' />";
 					echo "<img src='bar_gray.gif' name='swapusage_{$ctrlid}_bar_free' id='swapusage_{$ctrlid}_bar_free' width='" . (100 - $percent_used) . "' class='progbarc' title='{$tooltip_avail}' alt='' />";
 					echo "<img src='bar_right.gif' class='progbarr' alt='' /> ";
-					echo sprintf(gettext("%s of %sB"),
-						"<span name='swapusage_{$ctrlid}_capacity' id='swapusage_{$ctrlid}_capacity' class='capacity'>{$r_swapusage['capacity']}</span>",
-						$r_swapusage['size']);
+					echo "<span name='swapusage_{$ctrlid}_capofsize' id='swapusage_{$ctrlid}_capofsize' class='capofsize'>{$r_swapusage['capofsize']}</span>";
 					echo "<br />";
 					echo sprintf(gettext("Device: %s | Total: %s | Used: %s | Free: %s"),
 						"<span name='swapusage_{$ctrlid}_name' id='swapusage_{$ctrlid}_name' class='name'>{$r_swapusage['name']}</span>",
@@ -578,9 +579,7 @@ $(document).ready(function(){
 						echo "<img src='bar_blue.gif' name='diskusage_{$ctrlid}_bar_used' id='diskusage_{$ctrlid}_bar_used' width='{$percent_used}' class='progbarcf' title='{$tooltip_used}' alt='' />";
 						echo "<img src='bar_gray.gif' name='diskusage_{$ctrlid}_bar_free' id='diskusage_{$ctrlid}_bar_free' width='" . (100 - $percent_used) . "' class='progbarc' title='{$tooltip_avail}' alt='' />";
 						echo "<img src='bar_right.gif' class='progbarr' alt='' /> ";
-						echo sprintf(gettext("%s of %sB"),
-							"<span name='diskusage_{$ctrlid}_capacity' id='diskusage_{$ctrlid}_capacity' class='capacity'>{$r_diskusage['capacity']}</span>",
-							$r_diskusage['size']);
+						echo "<span name='diskusage_{$ctrlid}_capofsize' id='diskusage_{$ctrlid}_capofsize' class='capofsize'>{$r_diskusage['capofsize']}</span>";
 						echo "<br />";
 						echo sprintf(gettext("Total: %s | Used: %s | Free: %s"),
 							"<span name='diskusage_{$ctrlid}_size' id='diskusage_{$ctrlid}_size' class='size'>{$r_diskusage['size']}</span>",
@@ -610,9 +609,7 @@ $(document).ready(function(){
 						echo "<img src='bar_blue.gif' name='poolusage_{$ctrlid}_bar_used' id='poolusage_{$ctrlid}_bar_used' width='{$percent_used}' class='progbarcf' title='{$tooltip_used}' alt='' />";
 						echo "<img src='bar_gray.gif' name='poolusage_{$ctrlid}_bar_free' id='poolusage_{$ctrlid}_bar_free' width='" . (100 - $percent_used) . "' class='progbarc' title='{$tooltip_avail}' alt='' />";
 						echo "<img src='bar_right.gif' class='progbarr' alt='' /> ";
-						echo sprintf(gettext("%s of %sB"),
-							"<span name='poolusage_{$ctrlid}_capacity' id='poolusage_{$ctrlid}_capacity' class='capacity'>{$r_poolusage['capacity']}</span>",
-							$r_poolusage['size']);
+						echo "<span name='poolusage_{$ctrlid}_capofsize' id='poolusage_{$ctrlid}_capofsize' class='capofsize'>{$r_poolusage['capofsize']}</span>";
 						echo "<br />";
 						echo sprintf(gettext("Total: %s | Alloc: %s | Free: %s | State: %s"),
 							"<span name='poolusage_{$ctrlid}_size' id='poolusage_{$ctrlid}_size' class='size'>{$r_poolusage['size']}</span>",

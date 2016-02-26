@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-02-26 03:11+0000\n"
-"PO-Revision-Date: 2016-01-29 15:25+0000\n"
+"PO-Revision-Date: 2016-02-26 18:04+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-26 02:36+0000\n"
+"X-Launchpad-Export-Date: 2016-02-26 23:21+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -60,15 +60,15 @@ msgstr "%s interfész"
 
 #, php-format
 msgid "%s already exists as a %s."
-msgstr ""
+msgstr "%s már létezik, mint %s."
 
 #, php-format
 msgid "%s is already configured as a filesystem."
-msgstr ""
+msgstr "%s már fájlrendszernek be lett állítva."
 
 #, php-format
 msgid "%s is already configured as a volume."
-msgstr ""
+msgstr "%s már kötetnek be lett állítva."
 
 #, php-format
 msgid "%s is too long."
@@ -457,7 +457,7 @@ msgid "Add"
 msgstr "Hozzáadás"
 
 msgid "Add Dataset"
-msgstr ""
+msgstr "Adattár hozzáadása"
 
 msgid "Add Host"
 msgstr "Állomás hozzáadása"
@@ -478,7 +478,7 @@ msgid "Add URL"
 msgstr "URL hozzáadása"
 
 msgid "Add Volume"
-msgstr ""
+msgstr "Kötet hozzáadása"
 
 msgid "Add additional scheduled self-test."
 msgstr "További időzített öntesztek hozzáadása"
@@ -826,10 +826,10 @@ msgid "Apply changes"
 msgstr "Módosítások alkalmazása"
 
 msgid "Apr"
-msgstr ""
+msgstr "Ápr"
 
 msgid "April"
-msgstr ""
+msgstr "Április"
 
 msgid "Archive"
 msgstr "Archív"
@@ -867,10 +867,10 @@ msgid "Audio"
 msgstr "audió"
 
 msgid "Aug"
-msgstr ""
+msgstr "Aug"
 
 msgid "August"
-msgstr ""
+msgstr "Augusztus"
 
 msgid "Auth Group"
 msgstr "Auth csoport"
@@ -1030,7 +1030,7 @@ msgid "Blank time"
 msgstr "Üres idő"
 
 msgid "Block Size"
-msgstr ""
+msgstr "Blokkméret"
 
 msgid "Block size"
 msgstr "Blokkméret"
@@ -1821,7 +1821,7 @@ msgid "Date & Time"
 msgstr "Dátum & idő"
 
 msgid "Date format"
-msgstr ""
+msgstr "Dátumformátum"
 
 msgid "Days"
 msgstr "Nap"
@@ -1830,10 +1830,10 @@ msgid "Debug"
 msgstr "Hibakeresés"
 
 msgid "Dec"
-msgstr ""
+msgstr "Dec"
 
 msgid "December"
-msgstr ""
+msgstr "December"
 
 msgid ""
 "Decoded as: byte 0-1-2 = average erase count (big endian) and byte 3-4-5 = "
@@ -1898,16 +1898,16 @@ msgid "Delete Rsync job"
 msgstr "Rsync feladat törlése"
 
 msgid "Delete Selected Datasets"
-msgstr ""
+msgstr "Kiválasztott kötetek törlése"
 
 msgid "Delete Selected Jobs"
-msgstr ""
+msgstr "Kiválasztott feladatok törlése"
 
 msgid "Delete Selected Options"
-msgstr ""
+msgstr "Kiválasztott beállítások törlése"
 
 msgid "Delete Selected Volumes"
-msgstr ""
+msgstr "Kiválasztott kötetek törlése"
 
 msgid "Delete URL"
 msgstr "URL törlése"
@@ -2149,10 +2149,10 @@ msgid "Disable Firmware Update"
 msgstr "Firmware feltöltés tiltása"
 
 msgid "Disable Selected Jobs"
-msgstr ""
+msgstr "Kiválasztott feladatok tiltása"
 
 msgid "Disable Selected Options"
-msgstr ""
+msgstr "Kiválasztott beállítások tiltása"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "TCP wrapper tiltása(mod_wrap module)."
@@ -2337,34 +2337,34 @@ msgid "Do you really want to uninstall this package?"
 msgstr "Valóban el akarja távolítani ezt a csomagot?"
 
 msgid "Do you want to delete selected datasets?"
-msgstr ""
+msgstr "Biztos, hogy törlöd a kiválasztott adattárakat?"
 
 msgid "Do you want to delete selected jobs?"
-msgstr ""
+msgstr "Biztos, hogy törlöd a kiválasztott feladatokat?"
 
 msgid "Do you want to delete selected options?"
-msgstr ""
+msgstr "Biztos, hogy törlöd a kiválasztott beállításokat?"
 
 msgid "Do you want to delete selected volumes?"
-msgstr ""
+msgstr "Biztos, hogy törli a kiválasztott köteteket?"
 
 msgid "Do you want to disable selected jobs?"
-msgstr ""
+msgstr "Biztos, hogy tiltod a kiválasztott feladatokat?"
 
 msgid "Do you want to disable selected options?"
-msgstr ""
+msgstr "Biztos, hogy tiltod a kiválasztott beállításokat?"
 
 msgid "Do you want to enable selected jobs?"
-msgstr ""
+msgstr "Biztos, hogy engedélyezed a kiválasztott feladatokat?"
 
 msgid "Do you want to enable selected options?"
-msgstr ""
+msgstr "Biztos, hogy engedélyezed a kiválasztott beállításokat?"
 
 msgid "Do you want to toggle selected jobs?"
-msgstr ""
+msgstr "Biztos, hogy átkapcsolod a kiválasztott feladatokat?"
 
 msgid "Do you want to toggle selected options?"
-msgstr ""
+msgstr "Biztos, hogy átkapcsolod a kiválasztott beállításokat?"
 
 msgid "Document root"
 msgstr "Dokumentum főkönyvtár"
@@ -2506,7 +2506,7 @@ msgid "Edit VM"
 msgstr "VM módosítása"
 
 msgid "Edit Volume"
-msgstr ""
+msgstr "Kötet módosítása"
 
 msgid "Edit auth group"
 msgstr "Auth csoport szerkesztése"
@@ -2635,10 +2635,10 @@ msgstr ""
 "használni, lehet SSL-t is."
 
 msgid "Enable Selected Jobs"
-msgstr ""
+msgstr "Kiválasztott feladatok engedélyezése"
 
 msgid "Enable Selected Options"
-msgstr ""
+msgstr "Kiválasztott beállítások engedélyezése"
 
 msgid "Enable TLS connections."
 msgstr "TLS kapcsolat engedélyezése."
@@ -3013,7 +3013,7 @@ msgid "Failed to create in-memory file system."
 msgstr "Memória fájlrendszer létrehozása sikertelen."
 
 msgid "Failed to execute command zfs."
-msgstr ""
+msgstr "ZFS-parancs futása sikertelen."
 
 msgid "Failed to execute cron job."
 msgstr "Hiba az ütemezett feladat végrehajtása közben."
@@ -3063,10 +3063,10 @@ msgid "Fatal"
 msgstr "Végzetes"
 
 msgid "Feb"
-msgstr ""
+msgstr "Febr"
 
 msgid "February"
-msgstr ""
+msgstr "Február"
 
 msgid "File"
 msgstr "Fájl"
@@ -3192,10 +3192,10 @@ msgid "Frequency"
 msgstr "Gyakoriság"
 
 msgid "Fri"
-msgstr ""
+msgstr "P"
 
 msgid "Friday"
-msgstr ""
+msgstr "Péntek"
 
 msgid "From email"
 msgstr "Küldő email"
@@ -3906,10 +3906,10 @@ msgid "JBOD Information & Status"
 msgstr "JBOD információ & állapot"
 
 msgid "Jan"
-msgstr ""
+msgstr "Jan"
 
 msgid "January"
-msgstr ""
+msgstr "Január"
 
 msgid ""
 "January February March April May June July August September October November "
@@ -3922,16 +3922,16 @@ msgid "Japanese"
 msgstr "Japán"
 
 msgid "Jul"
-msgstr ""
+msgstr "Júl"
 
 msgid "July"
-msgstr ""
+msgstr "Július"
 
 msgid "Jun"
-msgstr ""
+msgstr "Jún"
 
 msgid "June"
-msgstr ""
+msgstr "Június"
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -4340,10 +4340,10 @@ msgid "Mapping DOS attributes"
 msgstr "DOS attribútumok leképezése"
 
 msgid "Mar"
-msgstr ""
+msgstr "Márc"
 
 msgid "March"
-msgstr ""
+msgstr "Március"
 
 msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
@@ -4447,7 +4447,7 @@ msgid "Maximum temperature seen (degrees C)"
 msgstr "Valaha mért maximális hőmérséklet (fok Celsius)"
 
 msgid "May"
-msgstr ""
+msgstr "Május"
 
 msgid "Media"
 msgstr "Adathordozó"
@@ -4567,10 +4567,10 @@ msgid "Modules"
 msgstr "Modulok"
 
 msgid "Mon"
-msgstr ""
+msgstr "H"
 
 msgid "Monday"
-msgstr ""
+msgstr "Hétfő"
 
 msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
 msgstr "Hétfő Kedd Szerda Csütörtök Péntek Szombat Vasárnap"
@@ -4933,10 +4933,10 @@ msgid "Notification email from host: %s"
 msgstr "Emlékeztető levél innen: %s"
 
 msgid "Nov"
-msgstr ""
+msgstr "Nov"
 
 msgid "November"
-msgstr ""
+msgstr "November"
 
 msgid "Now"
 msgstr "Most"
@@ -4993,10 +4993,10 @@ msgid "Occurrence"
 msgstr "Előfordulás"
 
 msgid "Oct"
-msgstr ""
+msgstr "Okt"
 
 msgid "October"
-msgstr ""
+msgstr "Október"
 
 msgid "Off"
 msgstr "Ki"
@@ -5877,10 +5877,10 @@ msgstr ""
 "érték (%d alapértelmezetten)"
 
 msgid "Sat"
-msgstr ""
+msgstr "Szo"
 
 msgid "Saturday"
-msgstr ""
+msgstr "Szombat"
 
 msgid "Save"
 msgstr "Mentés"
@@ -5976,7 +5976,7 @@ msgid "Select the FreeBSD package to be installed."
 msgstr "Válaszd ki a telepítendő FreeBSD csomagot."
 
 msgid "Select the date format."
-msgstr ""
+msgstr "Válassz dátumformátumot"
 
 msgid "Select the language of the WebGUI."
 msgstr "Válaszd ki a WebGUI nyelvét."
@@ -6039,13 +6039,13 @@ msgid "Send test email"
 msgstr "Próba e-mail küldése"
 
 msgid "Sep"
-msgstr ""
+msgstr "Szept"
 
 msgid "Separate email addresses by semi-colon."
 msgstr "Több e-mailcímet pontosvesszővel elválasztva adj meg."
 
 msgid "September"
-msgstr ""
+msgstr "Szeptember"
 
 msgid "Serial Console"
 msgstr "Soros konzol"
@@ -6473,10 +6473,10 @@ msgid "Successful."
 msgstr "Sikeres."
 
 msgid "Sun"
-msgstr ""
+msgstr "V"
 
 msgid "Sunday"
-msgstr ""
+msgstr "Vasárnap"
 
 msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
 msgstr "Vasárnap Hétfő Kedd Szerda Csütörtök Péntek Szombat"
@@ -8035,10 +8035,10 @@ msgstr ""
 "felé."
 
 msgid "Thu"
-msgstr ""
+msgstr "Cs"
 
 msgid "Thursday"
-msgstr ""
+msgstr "Csütörtök"
 
 msgid "TiB"
 msgstr "TiB"
@@ -8169,10 +8169,10 @@ msgstr ""
 "Alkönyvtárak használatához minden könyvtárat be kell csatolni (pl. %s)."
 
 msgid "Toggle Selected Jobs"
-msgstr ""
+msgstr "Kiválasztott feladatok átkapcsolása"
 
 msgid "Toggle Selected Options"
-msgstr ""
+msgstr "Kiválasztott beállítások átkapcsolása"
 
 msgid "Tolerated"
 msgstr "Hibajavított"
@@ -8278,10 +8278,10 @@ msgid "Try to import from on-disk ZFS config."
 msgstr "Próbáld importálni a lemezen lévő ZFS beállításokat."
 
 msgid "Tue"
-msgstr ""
+msgstr "K"
 
 msgid "Tuesday"
-msgstr ""
+msgstr "Kedd"
 
 msgid "Tuning"
 msgstr "Finomhangolás"
@@ -8775,10 +8775,10 @@ msgid "Webserver document root is missing."
 msgstr "Webszerver dokumentroot hiányzik"
 
 msgid "Wed"
-msgstr ""
+msgstr "Sz"
 
 msgid "Wednesday"
-msgstr ""
+msgstr "Szerda"
 
 msgid "Week days"
 msgstr "Hét napjai"
@@ -8997,7 +8997,7 @@ msgid "ZFS volume"
 msgstr "ZFS kötet"
 
 msgid "ZFS volume block size. This value can not be changed after creation."
-msgstr ""
+msgstr "ZFS kötet blokkmérete. Létrehozás után érteke már nem módosítható."
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
