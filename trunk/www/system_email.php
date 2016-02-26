@@ -54,6 +54,9 @@ $pconfig['password'] = $config['system']['email']['password'];
 $pconfig['passwordconf'] = $pconfig['password'];
 $pconfig['from'] = $config['system']['email']['from'];
 
+//assure that POST Submit and Input Button use the same string
+$sendtestemailbuttonvalue = gettext('Send Test Email');
+
 if ($_POST) {
 	unset($input_errors);
 	$pconfig = $_POST;
@@ -97,7 +100,7 @@ if ($_POST) {
 		}
 
 		// Send test email.
-		if (stristr($_POST['Submit'], gettext("Send test email"))) {
+		if (stristr($_POST['Submit'], $sendtestemailbuttonvalue)) {
 			$subject = sprintf(gettext("Test email from host: %s"), system_get_hostname());
 			$message = gettext("This email has been sent to validate your email configuration.");
 
@@ -173,7 +176,7 @@ function enable_change(enable_change) {
 			  </table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save");?>" />
-					<input name="Submit" id="sendnow" type="submit" class="formbtn" value="<?=gettext("Send Test Email");?>" />
+					<input name="Submit" id="sendnow" type="submit" class="formbtn" value="<?=$sendtestemailbuttonvalue;?>" />
 			  </div>
 			  <?php include("formend.inc");?>
 			</form>
