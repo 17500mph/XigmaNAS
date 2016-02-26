@@ -762,6 +762,7 @@ function get_disk_usage() {
 			$r_diskusage['size'] = $diskv['size'];
 			$r_diskusage['used'] = $diskv['used'];
 			$r_diskusage['avail'] = $diskv['avail'];
+			$r_diskusage['capofsize'] = sprintf(gettext("%s of %sB"), $r_diskusage['capacity'], $r_diskusage['size']);
 			$r_diskusage['tooltip']['used'] = sprintf(gettext("%sB used of %sB"), $r_diskusage['used'], $r_diskusage['size']);
 			$r_diskusage['tooltip']['avail'] = sprintf(gettext("%sB available of %sB"), $r_diskusage['avail'], $r_diskusage['size']);
 			$a_diskusage[] = $r_diskusage;
@@ -789,6 +790,7 @@ function get_pool_usage() {
 			$r_poolusage['used'] = $poolv['alloc']; // mapped to alloc to show the same information as in Disks|ZFS|Pools|Management
 			$r_poolusage['avail'] = $poolv['free']; // mapped to free to show the same information as in Disks|ZFS|Pools|Management
 			$r_poolusage['health'] = $poolv['health'];
+			$r_poolusage['capofsize'] = sprintf(gettext("%s of %sB"), $r_poolusage['capacity'], $r_poolusage['size']);
 			$r_poolusage['tooltip']['used'] = sprintf(gettext("%sB used of %sB"), $r_poolusage['used'], $r_poolusage['size']);
 			$r_poolusage['tooltip']['avail'] = sprintf(gettext("%sB available of %sB"), $r_poolusage['avail'], $r_poolusage['size']);
 			$a_poolusage[] = $r_poolusage;
@@ -814,6 +816,7 @@ function get_swap_usage() {
 			$r_swapusage['size'] = $swapv['total'];
 			$r_swapusage['used'] = $swapv['used'];
 			$r_swapusage['avail'] = $swapv['avail'];
+			$r_swapusage['capofsize'] = sprintf(gettext("%s of %sB"), $r_swapusage['capacity'], $r_swapusage['size']);
 			$r_swapusage['tooltip']['used'] = sprintf(gettext("%sB used of %sB"), $r_swapusage['used'], $r_swapusage['size']);
 			$r_swapusage['tooltip']['avail']  = sprintf(gettext("%sB available of %sB"), $r_swapusage['avail'], $r_swapusage['size']);
 			$a_swapusage[]= $r_swapusage;
