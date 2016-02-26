@@ -871,6 +871,7 @@ function system_get_sysinfo() {
 }
 
 function convert_date_string_to_locale($data) {
+	global $config;
 // date string format: "%Y.%m.%d.%H.%I.%p.%M.%S.%A.%a.%B.%b.%Z.%z"
 	$a = explode('.', $data);
 	// a[ 0]  =  %1$s: Year (4 digits)
@@ -887,7 +888,39 @@ function convert_date_string_to_locale($data) {
 	// a[11]* = %12$s: Name of the month short (can be localised via gettext)
 	// a[12]  = %13$s: Time zone
 	// a[13]  = %14$s: Time zone offset (+/- followed by 4 digits)
-	$retval = sprintf('%10$s %12$s %3$s %4$s:%7$s:%8$s %13$s %1$s',$a[0],$a[1],$a[2],$a[3],$a[4],$a[5],$a[6],$a[7],gettext($a[8]),gettext($a[9]),gettext($a[10]),gettext($a[11]),$a[12],$a[13]);
+	$a_datetimeformat = get_datetime_formats();
+	$format_id = isset($config['system']['datetimeformatid']) ? $config['system']['datetimeformatid'] : 0;
+	if (!(($format_id >= 0) && ($format_id < count($a_datetimeformat)))) {
+		$format_id = 0;
+	}
+	$retval = sprintf($a_datetimeformat[$format_id],$a[0],$a[1],$a[2],$a[3],$a[4],$a[5],$a[6],$a[7],gettext($a[8]),gettext($a[9]),gettext($a[10]),gettext($a[11]),$a[12],$a[13]);
+	return $retval;
+}
+
+function get_datetime_samples() {
+	$retval = [];
+	$data = shell_exec('date "+%Y.%m.%d.%H.%I.%p.%M.%S.%A.%a.%B.%b.%Z.%z"');
+	$a = explode('.', $data);
+	$a_datetimeformat = get_datetime_formats();
+	for($format_id = 0; $format_id < count($a_datetimeformat); $format_id++) {
+		$retval[$format_id] = sprintf($a_datetimeformat[$format_id],$a[0],$a[1],$a[2],$a[3],$a[4],$a[5],$a[6],$a[7],gettext($a[8]),gettext($a[9]),gettext($a[10]),gettext($a[11]),$a[12],$a[13]);
+	}
+	return $retval;
+}
+
+function get_datetime_formats() {
+	$retval = [
+		'%10$s %12$s %3$s %4$s:%7$s:%8$s %13$s %1$s', // Thu Feb 25 22:52:29 CET 2016
+		'%10$s %12$s %3$s %5$s:%7$s:%8$s %6$s %13$s %1$s', // Thu Feb 25 10:52:29 PM PT 2016
+		'%9$s %11$s %3$s %4$s:%7$s:%8$s %13$s %1$s', // Thursday February 25 22:52:29 BST 2016
+		'%9$s %11$s %3$s %5$s:%7$s:%8$s %6$s %13$s %1$s', // Thursday February 25 10:52:29 PM BST 2016
+		'%3$s.%2$s.%1$s %4$s:%7$s:%8$s', // 25.02.2016 22:31:42
+		'%3$s/%2$s/%1$s %4$s:%7$s:%8$s', // 25/02/2016 22:31:42
+		'%3$s/%2$s/%1$s %5$s:%7$s:%8$s %6$s', // 25/02/2016 10:31:42 PM
+		'%2$s/%3$s/%1$s %4$s:%7$s:%8$s', // 02/25/2016 22:31:42
+		'%2$s/%3$s/%1$s %5$s:%7$s:%8$s %6$s', // 02/25/2016 10:31:42 PM
+		'%1$s-%2$s-%3$s %4$s:%7$s:%8$s' // 2016-02-02 22:31:42
+	];
 	return $retval;
 }
 
