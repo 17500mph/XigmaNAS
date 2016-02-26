@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-02-25 21:53+0000\n"
+"POT-Creation-Date: 2016-02-26 03:11+0000\n"
 "PO-Revision-Date: 2015-12-19 13:07+0000\n"
 "Last-Translator: Daisuke Aoyama <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-25 21:05+0000\n"
+"X-Launchpad-Export-Date: 2016-02-26 02:36+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -1706,6 +1706,9 @@ msgstr "データセット"
 
 msgid "Date & Time"
 msgstr "日付と時間"
+
+msgid "Date format"
+msgstr ""
 
 msgid "Days"
 msgstr "日"
@@ -5651,6 +5654,9 @@ msgstr "スワップファイルを作成するディレクトリを選択して
 msgid "Select the FreeBSD package to be installed."
 msgstr "インストールする FreeBSD のパッケージを選択してください。"
 
+msgid "Select the date format."
+msgstr ""
+
 msgid "Select the language of the WebGUI."
 msgstr "WebGUIで利用する言語を選択してください。"
 
@@ -8562,59 +8568,3 @@ msgstr "アンマウント"
 
 msgid "version:"
 msgstr "バージョン:"
-
-#~ msgid "Add dataset"
-#~ msgstr "データセットの追加"
-
-#~ msgid "Add volume"
-#~ msgstr "ボリュームの追加"
-
-#~ msgid "Delete MIB"
-#~ msgstr "MIB を削除"
-
-#~ msgid "Delete all MIBs"
-#~ msgstr "全ての MIB を削除"
-
-#~ msgid "Delete all options"
-#~ msgstr "全てのオプションを削除"
-
-#~ msgid "Delete dataset"
-#~ msgstr "データセットの削除"
-
-#~ msgid "Delete job"
-#~ msgstr "ジョブを削除"
-
-#~ msgid "Delete option"
-#~ msgstr "オプションを削除"
-
-#~ msgid "Delete volume"
-#~ msgstr "ボリュームの削除"
-
-#~ msgid "Do you really want to delete all MIBs?"
-#~ msgstr "全ての MIB を削除してもよろしいですか?"
-
-#~ msgid "Do you really want to delete all options?"
-#~ msgstr "全てのオプションを削除してもよろしいですか?"
-
-#~ msgid "Do you really want to delete this MIB?"
-#~ msgstr "この MIB を削除してもよろしいですか?"
-
-#~ msgid "Do you really want to delete this cron job?"
-#~ msgstr "この Cron ジョブを削除してもよろしいですか?"
-
-#~ msgid "Do you really want to delete this dataset?"
-#~ msgstr "このデータセットを削除してもよろしいですか？"
-
-#~ msgid "Do you really want to delete this option?"
-#~ msgstr "このオプションを削除してもよろしいですか?"
-
-#~ msgid "Do you really want to delete this volume?"
-#~ msgstr "このボリュームを削除してもよろしいですか?"
-
-#~ msgid "Edit volume"
-#~ msgstr "ボリュームを編集"
-
-#~ msgid ""
-#~ "ZFS volume block size. This value can not be changed after creation. Empty "
-#~ "as default."
-#~ msgstr "ZFSボリュームのブロックサイズ。この値は作成後に変更することはできません。デフォルトは空欄。"
