@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-26 03:11+0000\n"
-"PO-Revision-Date: 2016-02-01 16:58+0000\n"
+"PO-Revision-Date: 2016-02-26 07:03+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-26 02:37+0000\n"
+"X-Launchpad-Export-Date: 2016-02-26 15:41+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -57,15 +57,15 @@ msgstr "%s Interfața"
 
 #, php-format
 msgid "%s already exists as a %s."
-msgstr ""
+msgstr "%s există deja ca %s."
 
 #, php-format
 msgid "%s is already configured as a filesystem."
-msgstr ""
+msgstr "%s este deja configurat ca sistem de fișiere."
 
 #, php-format
 msgid "%s is already configured as a volume."
-msgstr ""
+msgstr "%s este deja configurat ca volum."
 
 #, php-format
 msgid "%s is too long."
@@ -464,7 +464,7 @@ msgid "Add"
 msgstr "Adăugare"
 
 msgid "Add Dataset"
-msgstr ""
+msgstr "Adăugare set date"
 
 msgid "Add Host"
 msgstr "Adăugare sistem"
@@ -485,7 +485,7 @@ msgid "Add URL"
 msgstr "Adăugare URL"
 
 msgid "Add Volume"
-msgstr ""
+msgstr "Adăugare volum"
 
 msgid "Add additional scheduled self-test."
 msgstr "Adăugare auto-test suplimentar programat."
@@ -836,10 +836,10 @@ msgid "Apply changes"
 msgstr "Aplicare modificări"
 
 msgid "Apr"
-msgstr ""
+msgstr "Apr"
 
 msgid "April"
-msgstr ""
+msgstr "Aprilie"
 
 msgid "Archive"
 msgstr "Arhivă"
@@ -877,10 +877,10 @@ msgid "Audio"
 msgstr "Audio"
 
 msgid "Aug"
-msgstr ""
+msgstr "Aug"
 
 msgid "August"
-msgstr ""
+msgstr "August"
 
 msgid "Auth Group"
 msgstr "Grup Auth"
@@ -1042,7 +1042,7 @@ msgid "Blank time"
 msgstr "Timp nul"
 
 msgid "Block Size"
-msgstr ""
+msgstr "Dimensiune bloc"
 
 msgid "Block size"
 msgstr "Dimensiune bloc"
@@ -1865,7 +1865,7 @@ msgid "Date & Time"
 msgstr "Data şi Ora"
 
 msgid "Date format"
-msgstr ""
+msgstr "Format dată"
 
 msgid "Days"
 msgstr "Zile"
@@ -1874,10 +1874,10 @@ msgid "Debug"
 msgstr "Depanare"
 
 msgid "Dec"
-msgstr ""
+msgstr "Dec"
 
 msgid "December"
-msgstr ""
+msgstr "Decembrie"
 
 msgid ""
 "Decoded as: byte 0-1-2 = average erase count (big endian) and byte 3-4-5 = "
@@ -1942,16 +1942,16 @@ msgid "Delete Rsync job"
 msgstr "Ștergere activitate Rsync"
 
 msgid "Delete Selected Datasets"
-msgstr ""
+msgstr "Ștergere seturi de date selectate"
 
 msgid "Delete Selected Jobs"
-msgstr ""
+msgstr "Ștergere activități selectate"
 
 msgid "Delete Selected Options"
-msgstr ""
+msgstr "Ștergere opțiuni selectate"
 
 msgid "Delete Selected Volumes"
-msgstr ""
+msgstr "Ștergere volume selectate"
 
 msgid "Delete URL"
 msgstr "Ștergere URL"
@@ -2194,10 +2194,10 @@ msgid "Disable Firmware Update"
 msgstr "Dezactivare actualizare firmware"
 
 msgid "Disable Selected Jobs"
-msgstr ""
+msgstr "Dezactivare activitîți selectate"
 
 msgid "Disable Selected Options"
-msgstr ""
+msgstr "Dezactivare opțiuni selectate"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Dezactivare wrapper TCP (modul mod_wrap)."
@@ -2382,34 +2382,34 @@ msgid "Do you really want to uninstall this package?"
 msgstr "Doriți să ștergeți acest pachet?"
 
 msgid "Do you want to delete selected datasets?"
-msgstr ""
+msgstr "Ștergeți seturile de date selectate?"
 
 msgid "Do you want to delete selected jobs?"
-msgstr ""
+msgstr "Ștergeți activitățile selectate?"
 
 msgid "Do you want to delete selected options?"
-msgstr ""
+msgstr "Ștergeți opțiunile selectate?"
 
 msgid "Do you want to delete selected volumes?"
-msgstr ""
+msgstr "Ștergeți volumele selectate?"
 
 msgid "Do you want to disable selected jobs?"
-msgstr ""
+msgstr "Dezactivați activitățile selectate?"
 
 msgid "Do you want to disable selected options?"
-msgstr ""
+msgstr "Dezactivați opțiunile selectate?"
 
 msgid "Do you want to enable selected jobs?"
-msgstr ""
+msgstr "Activați activitățile selectate?"
 
 msgid "Do you want to enable selected options?"
-msgstr ""
+msgstr "Activați opțiunile selectate?"
 
 msgid "Do you want to toggle selected jobs?"
-msgstr ""
+msgstr "Inversați activitățile selectate?"
 
 msgid "Do you want to toggle selected options?"
-msgstr ""
+msgstr "Inversați opțiunile selectate?"
 
 msgid "Document root"
 msgstr "Folderul rădăcină"
@@ -2551,7 +2551,7 @@ msgid "Edit VM"
 msgstr "Editare VM"
 
 msgid "Edit Volume"
-msgstr ""
+msgstr "Editare volum"
 
 msgid "Edit auth group"
 msgstr "Editare Grup Auth"
@@ -2680,10 +2680,10 @@ msgstr ""
 "și SSL."
 
 msgid "Enable Selected Jobs"
-msgstr ""
+msgstr "Activare activități selectate"
 
 msgid "Enable Selected Options"
-msgstr ""
+msgstr "Activare opțiuni selectate"
 
 msgid "Enable TLS connections."
 msgstr "Activare conexiuni TLS."
@@ -3063,7 +3063,7 @@ msgid "Failed to create in-memory file system."
 msgstr "Eroare la crearea sistemului de fișiere în memorie."
 
 msgid "Failed to execute command zfs."
-msgstr ""
+msgstr "Eroare execuție comandă zfs."
 
 msgid "Failed to execute cron job."
 msgstr "Eroare execuție acțiune din lista cron."
@@ -3113,10 +3113,10 @@ msgid "Fatal"
 msgstr "Eroare fatală"
 
 msgid "Feb"
-msgstr ""
+msgstr "Feb"
 
 msgid "February"
-msgstr ""
+msgstr "Februarie"
 
 msgid "File"
 msgstr "Fișier"
@@ -3243,10 +3243,10 @@ msgid "Frequency"
 msgstr "Frecvență"
 
 msgid "Fri"
-msgstr ""
+msgstr "Vin"
 
 msgid "Friday"
-msgstr ""
+msgstr "Vineri"
 
 msgid "From email"
 msgstr "Adresă email expeditor"
@@ -3981,10 +3981,10 @@ msgid "JBOD Information & Status"
 msgstr "Informații & Stare JBOD"
 
 msgid "Jan"
-msgstr ""
+msgstr "Ian"
 
 msgid "January"
-msgstr ""
+msgstr "Ianuarie"
 
 msgid ""
 "January February March April May June July August September October November "
@@ -3997,16 +3997,16 @@ msgid "Japanese"
 msgstr "Japoneză"
 
 msgid "Jul"
-msgstr ""
+msgstr "Iul"
 
 msgid "July"
-msgstr ""
+msgstr "Iulie"
 
 msgid "Jun"
-msgstr ""
+msgstr "Iun"
 
 msgid "June"
-msgstr ""
+msgstr "Iunie"
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -4414,10 +4414,10 @@ msgid "Mapping DOS attributes"
 msgstr "Mapare atribute DOS"
 
 msgid "Mar"
-msgstr ""
+msgstr "Mar"
 
 msgid "March"
-msgstr ""
+msgstr "Martie"
 
 msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
@@ -4522,7 +4522,7 @@ msgid "Maximum temperature seen (degrees C)"
 msgstr "Temperatură maximă (grade C)"
 
 msgid "May"
-msgstr ""
+msgstr "Mai"
 
 msgid "Media"
 msgstr "Media"
@@ -4642,10 +4642,10 @@ msgid "Modules"
 msgstr "Module"
 
 msgid "Mon"
-msgstr ""
+msgstr "Lun"
 
 msgid "Monday"
-msgstr ""
+msgstr "Luni"
 
 msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
 msgstr "Luni Marţi Miercuri Joi Vineri Sîmbătă Duminică"
@@ -5004,10 +5004,10 @@ msgid "Notification email from host: %s"
 msgstr "Email de autentificare de la: %s"
 
 msgid "Nov"
-msgstr ""
+msgstr "Noi"
 
 msgid "November"
-msgstr ""
+msgstr "Noiembrie"
 
 msgid "Now"
 msgstr "Acum"
@@ -5062,10 +5062,10 @@ msgid "Occurrence"
 msgstr "Apariții"
 
 msgid "Oct"
-msgstr ""
+msgstr "Oct"
 
 msgid "October"
-msgstr ""
+msgstr "Octombrie"
 
 msgid "Off"
 msgstr "Oprit"
@@ -5943,10 +5943,10 @@ msgstr ""
 "această valoare. (implicit %d)"
 
 msgid "Sat"
-msgstr ""
+msgstr "Sâm"
 
 msgid "Saturday"
-msgstr ""
+msgstr "Sâmbătă"
 
 msgid "Save"
 msgstr "Salvare"
@@ -6043,7 +6043,7 @@ msgid "Select the FreeBSD package to be installed."
 msgstr "Selectați pachetul FreeBSD de instalat."
 
 msgid "Select the date format."
-msgstr ""
+msgstr "Selectare format dată."
 
 msgid "Select the language of the WebGUI."
 msgstr "Selectați limba folosită pentru Interfața Grafică."
@@ -6105,13 +6105,13 @@ msgid "Send test email"
 msgstr "Trimitere email de test"
 
 msgid "Sep"
-msgstr ""
+msgstr "Sep"
 
 msgid "Separate email addresses by semi-colon."
 msgstr "Separați adresele de email prin punct şi virgulă ';'"
 
 msgid "September"
-msgstr ""
+msgstr "Septembrie"
 
 msgid "Serial Console"
 msgstr "Consolă serială"
@@ -6538,10 +6538,10 @@ msgid "Successful."
 msgstr "Operație terminată cu succes."
 
 msgid "Sun"
-msgstr ""
+msgstr "Dum"
 
 msgid "Sunday"
-msgstr ""
+msgstr "Duminică"
 
 msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
 msgstr "Duminică Luni Marți Miercuri Joi Vineri Sîmbătă"
@@ -8117,10 +8117,10 @@ msgstr ""
 "TiVo care au suport HMO."
 
 msgid "Thu"
-msgstr ""
+msgstr "Joi"
 
 msgid "Thursday"
-msgstr ""
+msgstr "Joi"
 
 msgid "TiB"
 msgstr "TiB"
@@ -8254,10 +8254,10 @@ msgstr ""
 "Pentru a utiliza subdirectoare va trebui să montați fiecare director (ex. %s)"
 
 msgid "Toggle Selected Jobs"
-msgstr ""
+msgstr "Inversare activități selectate."
 
 msgid "Toggle Selected Options"
-msgstr ""
+msgstr "Inversare opțiuni selectate."
 
 msgid "Tolerated"
 msgstr "Tolerat"
@@ -8364,10 +8364,10 @@ msgid "Try to import from on-disk ZFS config."
 msgstr "Se poate încerca importarea configurației ZFS de pe disc."
 
 msgid "Tue"
-msgstr ""
+msgstr "Mar"
 
 msgid "Tuesday"
-msgstr ""
+msgstr "Marți"
 
 msgid "Tuning"
 msgstr "Optimizări"
@@ -8872,10 +8872,10 @@ msgid "Webserver document root is missing."
 msgstr "Folderul de bază pentru documente lipsește."
 
 msgid "Wed"
-msgstr ""
+msgstr "Mie"
 
 msgid "Wednesday"
-msgstr ""
+msgstr "Miercuri"
 
 msgid "Week days"
 msgstr "Zilele săptămînii"
@@ -9098,6 +9098,8 @@ msgstr "Volum ZFS"
 
 msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
+"Dimensiune bloc volum ZFS. Această valoare nu mai poate fi modificată după "
+"crearea volumului."
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
