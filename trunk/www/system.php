@@ -50,6 +50,7 @@ $pconfig['webguiport'] = !empty($config['system']['webgui']['port']) ? $config['
 $pconfig['webguihostsallow'] = !empty($config['system']['webgui']['hostsallow']) ? $config['system']['webgui']['hostsallow'] : "";
 $pconfig['language'] = $config['system']['language'];
 $pconfig['timezone'] = $config['system']['timezone'];
+$pconfig['datetimeformatid'] = isset($config['system']['datetimeformatid']) ? $config['system']['datetimeformatid]'] : "0"; 
 $pconfig['ntp_enable'] = isset($config['system']['ntp']['enable']);
 $pconfig['ntp_timeservers'] = $config['system']['ntp']['timeservers'];
 $pconfig['ntp_updateinterval'] = $config['system']['ntp']['updateinterval'];
@@ -165,6 +166,7 @@ if ($_POST) {
 		$config['system']['webgui']['hostsallow'] = $_POST['webguihostsallow'];
 		$config['system']['language'] = $_POST['language'];
 		$config['system']['timezone'] = $_POST['timezone'];
+		$config['system']['datetimeformatid'] = $_POST['datetimeformatid'];
 		$config['system']['ntp']['enable'] = isset($_POST['ntp_enable']) ? true : false;
 		$config['system']['ntp']['timeservers'] = strtolower($_POST['ntp_timeservers']);
 		$config['system']['ntp']['updateinterval'] = $_POST['ntp_updateinterval'];
@@ -343,11 +345,12 @@ function webguiproto_change() {
 			    <?php html_separator();?>
 					<?php html_titleline(gettext("Time"));?>
 					<?php html_timezonecombobox("timezone", gettext("Time zone"), $pconfig['timezone'], gettext("Select the location closest to you."), false);?>
-			    <tr>
+					<?php html_combobox("datetimeformatid", gettext("Date format"), $pconfig['datetimeformatid'], get_datetime_samples(), gettext("Select the date format."), false);?>
+				<tr>
 						<td width="22%" valign="top" class="vncell"><?=gettext("System time");?></td>
 						<td width="78%" class="vtable">
 							<input id="systime" size="20" maxlength="20" name="systime" type="text" value="" />
-							<img src="cal.gif" onclick="showChooser(this, 'systime', 'chooserSpan', 1950, 2020, Date.patterns.Default, true);" alt="" />
+							<img src="cal.gif" onclick="showChooser(this, 'systime', 'chooserSpan', 2000, 2050, Date.patterns.Default, true);" alt="" />							
 							<div id="chooserSpan" class="dateChooser select-free" style="display: none; visibility: hidden; width: 160px;"></div><br />
 							<span class="vexpl"><?=gettext("Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to select it.");?></span>
 						</td>
