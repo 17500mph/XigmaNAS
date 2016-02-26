@@ -531,11 +531,11 @@ $(document).ready(function(){
 					echo "<img src='bar_right.gif' class='progbarr' alt='' /> ";
 					echo sprintf(gettext("%s of %sB"),
 						"<span name='swapusage_{$ctrlid}_capacity' id='swapusage_{$ctrlid}_capacity' class='capacity'>{$r_swapusage['capacity']}</span>",
-						$r_swapusage['total']);
+						$r_swapusage['size']);
 					echo "<br />";
 					echo sprintf(gettext("Device: %s | Total: %s | Used: %s | Free: %s"),
 						"<span name='swapusage_{$ctrlid}_name' id='swapusage_{$ctrlid}_name' class='name'>{$r_swapusage['name']}</span>",
-						"<span name='swapusage_{$ctrlid}_size' id='swapusage_{$ctrlid}_size' class='total'>{$r_swapusage['size']}</span>",
+						"<span name='swapusage_{$ctrlid}_size' id='swapusage_{$ctrlid}_size' class='size'>{$r_swapusage['size']}</span>",
 						"<span name='swapusage_{$ctrlid}_used' id='swapusage_{$ctrlid}_used' class='used'>{$r_swapusage['used']}</span>",
 						"<span name='swapusage_{$ctrlid}_avail' id='swapusage_{$ctrlid}_avail' class='avail'>{$r_swapusage['avail']}</span>");
 					echo "</div></td></tr>";
