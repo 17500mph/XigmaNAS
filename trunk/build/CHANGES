@@ -58,7 +58,6 @@ Changes:
 - Upgrade e2fsprogs to 1.42.13.
 - Upgrade inadyn-mt to 02.24.49.
 - Upgrade zoneinfo to 2016a.
-- Upgrade msmtp to 1.6.3.
 - Upgrade iperf3 to 3.1.2.
 - Upgrade samba to 4.2.8.
 - Upgrade netatalk to 3.1.8.
@@ -67,6 +66,7 @@ Changes:
 - Upgrade nano to 2.5.2.
 - Upgrade syncthing to 0.12.19.
 - Upgrade jQuery to v1.12.1.
+- Upgrade msmtp to 1.6.4.
 
 Fixes:
 - Fix typo (ticket #260)
@@ -89,6 +89,7 @@ Fixes:
 - Fix boot time ntpdate fail when AD DC enabled.
 - Fix wrong path in Samba AD. (ticket #228, #232)
 - Fix rsync does not start/restart on WebGUI.
+- Fix send test email when language was changed other than english.
 - Undefined symbol "av_find_stream_info" in fuppes/libmetadata_libavformat.so.
 - AFP share is not advised.
 - Fix webserver user logins.
