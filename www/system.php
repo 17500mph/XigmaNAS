@@ -50,7 +50,7 @@ $pconfig['webguiport'] = !empty($config['system']['webgui']['port']) ? $config['
 $pconfig['webguihostsallow'] = !empty($config['system']['webgui']['hostsallow']) ? $config['system']['webgui']['hostsallow'] : "";
 $pconfig['language'] = $config['system']['language'];
 $pconfig['timezone'] = $config['system']['timezone'];
-$pconfig['datetimeformatid'] = isset($config['system']['datetimeformatid']) ? $config['system']['datetimeformatid]'] : "0"; 
+$pconfig['datetimeformatid'] = !empty($config['system']['datetimeformatid']) ? $config['system']['datetimeformatid'] : 'default';
 $pconfig['ntp_enable'] = isset($config['system']['ntp']['enable']);
 $pconfig['ntp_timeservers'] = $config['system']['ntp']['timeservers'];
 $pconfig['ntp_updateinterval'] = $config['system']['ntp']['updateinterval'];
@@ -345,7 +345,7 @@ function webguiproto_change() {
 			    <?php html_separator();?>
 					<?php html_titleline(gettext("Time"));?>
 					<?php html_timezonecombobox("timezone", gettext("Time zone"), $pconfig['timezone'], gettext("Select the location closest to you."), false);?>
-					<?php html_combobox("datetimeformatid", gettext("Date format"), $pconfig['datetimeformatid'], get_datetime_samples(), gettext("Select the date format."), false);?>
+					<?php html_combobox("datetimeformatid", gettext("Date format"), $pconfig['datetimeformatid'], get_datetime_samples(), gettext("Select a date format."), false);?>
 				<tr>
 						<td width="22%" valign="top" class="vncell"><?=gettext("System time");?></td>
 						<td width="78%" class="vtable">
