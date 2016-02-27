@@ -378,15 +378,41 @@ div#enumeration ul {
 	margin: 0;
 	padding-left: 15px;
 }
-div#swapusage .device, div#swapusage .total, div#swapusage .used,
-div#swapusage .free, div#diskusage .name, div#diskusage .total,
-div#diskusage .used, div#diskusage .free {
+div#diskusage .name,
+div#diskusage .device,
+div#diskusage .size,
+div#diskusage .total,
+div#diskusage .used,
+div#diskusage .avail,
+div#diskusage .free,
+div#poolusage .name,
+div#poolusage .device,
+div#poolusage .size,
+div#poolusage .total,
+div#poolusage .used,
+div#poolusage .avail,
+div#poolusage .free,
+div#swapusage .name,
+div#swapusage .device,
+div#swapusage .size,
+div#swapusage .total,
+div#swapusage .used,
+div#swapusage .avail,
+div#swapusage .free {
 	font-weight: bold;
 }
-div#diskusage .name {
+div#diskusage .name,
+div#diskusage .device,
+div#poolusage .name,
+div#poolusage .device {
 	font-size: 12px;
 }
-div#diskusage .capacity {
+div#diskusage .capacity,
+div#diskusage .capofsize,
+div#poolusage .capacity,
+div#poolusage .capofsize,
+div#swapusage .capacity,
+div#swapusage .capofsize {
 	margin-left: 2px;
 }
 .progbarl, .progbarc, .progbarcf, .progbarr {
