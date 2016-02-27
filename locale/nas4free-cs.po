@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-02-26 03:11+0000\n"
-"PO-Revision-Date: 2016-01-23 19:50+0000\n"
+"PO-Revision-Date: 2016-02-27 13:30+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-26 02:36+0000\n"
+"X-Launchpad-Export-Date: 2016-02-27 18:04+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -56,15 +56,15 @@ msgstr "%s rozhraní"
 
 #, php-format
 msgid "%s already exists as a %s."
-msgstr ""
+msgstr "%s už existuje jako %s."
 
 #, php-format
 msgid "%s is already configured as a filesystem."
-msgstr ""
+msgstr "%s je už nastaveno jako souborový systém."
 
 #, php-format
 msgid "%s is already configured as a volume."
-msgstr ""
+msgstr "%s je už nastaveno jako svazek."
 
 #, php-format
 msgid "%s is too long."
@@ -464,7 +464,7 @@ msgid "Add"
 msgstr "Přidat"
 
 msgid "Add Dataset"
-msgstr ""
+msgstr "Přidat datovou sadu"
 
 msgid "Add Host"
 msgstr "Přidat stroj"
@@ -485,7 +485,7 @@ msgid "Add URL"
 msgstr "Přidat URL adresu"
 
 msgid "Add Volume"
-msgstr ""
+msgstr "Přidat svazek"
 
 msgid "Add additional scheduled self-test."
 msgstr "Přidat další naplánovaný samotest."
@@ -842,10 +842,10 @@ msgid "Apply changes"
 msgstr "Provést změny"
 
 msgid "Apr"
-msgstr ""
+msgstr "dub"
 
 msgid "April"
-msgstr ""
+msgstr "duben"
 
 msgid "Archive"
 msgstr "Archivace"
@@ -883,10 +883,10 @@ msgid "Audio"
 msgstr "Zvuk"
 
 msgid "Aug"
-msgstr ""
+msgstr "srp"
 
 msgid "August"
-msgstr ""
+msgstr "srpen"
 
 msgid "Auth Group"
 msgstr "Skupina pověřených"
@@ -1050,7 +1050,7 @@ msgid "Blank time"
 msgstr "Prodleva potemnění obrazovky"
 
 msgid "Block Size"
-msgstr ""
+msgstr "Velikost bloku"
 
 msgid "Block size"
 msgstr "Velikost bloku"
@@ -1878,7 +1878,7 @@ msgid "Date & Time"
 msgstr "Datum a čas"
 
 msgid "Date format"
-msgstr ""
+msgstr "Formát datumu"
 
 msgid "Days"
 msgstr "Dny"
@@ -1887,10 +1887,10 @@ msgid "Debug"
 msgstr "Režim ladění"
 
 msgid "Dec"
-msgstr ""
+msgstr "pro"
 
 msgid "December"
-msgstr ""
+msgstr "prosinec"
 
 msgid ""
 "Decoded as: byte 0-1-2 = average erase count (big endian) and byte 3-4-5 = "
@@ -1955,16 +1955,16 @@ msgid "Delete Rsync job"
 msgstr "Smazat Rsync úlohu"
 
 msgid "Delete Selected Datasets"
-msgstr ""
+msgstr "Smazat označené datové sady"
 
 msgid "Delete Selected Jobs"
-msgstr ""
+msgstr "Smazat označené úlohy"
 
 msgid "Delete Selected Options"
-msgstr ""
+msgstr "Smazat označené předvolby"
 
 msgid "Delete Selected Volumes"
-msgstr ""
+msgstr "Smazat označené svazky"
 
 msgid "Delete URL"
 msgstr "Odstranit URL adresu"
@@ -2207,10 +2207,10 @@ msgid "Disable Firmware Update"
 msgstr "Vypnout aktualizaci firmware"
 
 msgid "Disable Selected Jobs"
-msgstr ""
+msgstr "Smazat označené úlohy"
 
 msgid "Disable Selected Options"
-msgstr ""
+msgstr "Vypnout označené předvolby"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Vypnout TCP zprostředkovávající službu (modul mod_wrap)."
@@ -2397,34 +2397,34 @@ msgid "Do you really want to uninstall this package?"
 msgstr "Opravdu chcete odinstalovat tento balíček?"
 
 msgid "Do you want to delete selected datasets?"
-msgstr ""
+msgstr "Opravdu smazat označené datové sady?"
 
 msgid "Do you want to delete selected jobs?"
-msgstr ""
+msgstr "Opravdu smazat označené úlohy?"
 
 msgid "Do you want to delete selected options?"
-msgstr ""
+msgstr "Opravdu smazat označené předvolby?"
 
 msgid "Do you want to delete selected volumes?"
-msgstr ""
+msgstr "Opravdu smazat označené svazky?"
 
 msgid "Do you want to disable selected jobs?"
-msgstr ""
+msgstr "Opravdu vypnout označené úlohy?"
 
 msgid "Do you want to disable selected options?"
-msgstr ""
+msgstr "Opravdu vypnout označené předvolby?"
 
 msgid "Do you want to enable selected jobs?"
-msgstr ""
+msgstr "Opravdu zapnout označené úlohy?"
 
 msgid "Do you want to enable selected options?"
-msgstr ""
+msgstr "Opravdu zapnout označené předvolby?"
 
 msgid "Do you want to toggle selected jobs?"
-msgstr ""
+msgstr "Opravdu přepnout označené úlohy?"
 
 msgid "Do you want to toggle selected options?"
-msgstr ""
+msgstr "Opravdu přepnout označené předvolby?"
 
 msgid "Document root"
 msgstr "Kořen dokumentu"
@@ -2566,7 +2566,7 @@ msgid "Edit VM"
 msgstr "Upravit virt. stroj"
 
 msgid "Edit Volume"
-msgstr ""
+msgstr "Upravit svazek"
 
 msgid "Edit auth group"
 msgstr "Upravit skupinu pověřených"
@@ -2695,10 +2695,10 @@ msgstr ""
 "TLS, použít je možné i SSL."
 
 msgid "Enable Selected Jobs"
-msgstr ""
+msgstr "Zapnout označené úlohy"
 
 msgid "Enable Selected Options"
-msgstr ""
+msgstr "Zapnout označené předvolby"
 
 msgid "Enable TLS connections."
 msgstr "Zapnout TLS spojení."
@@ -3079,7 +3079,7 @@ msgid "Failed to create in-memory file system."
 msgstr "Nezdařilo se vytvořit souborový systém v operační paměti."
 
 msgid "Failed to execute command zfs."
-msgstr ""
+msgstr "Nezdařilo se vykonat příkaz zfs."
 
 msgid "Failed to execute cron job."
 msgstr "Nezdařilo se vykonat naplánovanou (cron) úlohu."
@@ -3129,10 +3129,10 @@ msgid "Fatal"
 msgstr "Fatální"
 
 msgid "Feb"
-msgstr ""
+msgstr "úno"
 
 msgid "February"
-msgstr ""
+msgstr "únor"
 
 msgid "File"
 msgstr "Soubor"
@@ -3262,10 +3262,10 @@ msgid "Frequency"
 msgstr "Frekvence"
 
 msgid "Fri"
-msgstr ""
+msgstr "pá"
 
 msgid "Friday"
-msgstr ""
+msgstr "pátek"
 
 msgid "From email"
 msgstr "Z e-mailu"
@@ -3993,10 +3993,10 @@ msgid "JBOD Information & Status"
 msgstr "JBOD – informace a stav"
 
 msgid "Jan"
-msgstr ""
+msgstr "led"
 
 msgid "January"
-msgstr ""
+msgstr "leden"
 
 msgid ""
 "January February March April May June July August September October November "
@@ -4009,16 +4009,16 @@ msgid "Japanese"
 msgstr "japonština"
 
 msgid "Jul"
-msgstr ""
+msgstr "čec"
 
 msgid "July"
-msgstr ""
+msgstr "červenec"
 
 msgid "Jun"
-msgstr ""
+msgstr "čer"
 
 msgid "June"
-msgstr ""
+msgstr "červen"
 
 msgid "Kernel"
 msgstr "Jádro systému"
@@ -4439,10 +4439,10 @@ msgid "Mapping DOS attributes"
 msgstr "Mapování atributů ze systému DOS"
 
 msgid "Mar"
-msgstr ""
+msgstr "bře"
 
 msgid "March"
-msgstr ""
+msgstr "březen"
 
 msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
@@ -4552,7 +4552,7 @@ msgid "Maximum temperature seen (degrees C)"
 msgstr "Nejvyšší zaznamenaná teplota (stupně Celsia)"
 
 msgid "May"
-msgstr ""
+msgstr "květen"
 
 msgid "Media"
 msgstr "Média"
@@ -4672,10 +4672,10 @@ msgid "Modules"
 msgstr "Moduly"
 
 msgid "Mon"
-msgstr ""
+msgstr "po"
 
 msgid "Monday"
-msgstr ""
+msgstr "pondělí"
 
 msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
 msgstr "pondělí úterý středa čtvrtek pátek sobota neděle"
@@ -5039,10 +5039,10 @@ msgid "Notification email from host: %s"
 msgstr "E-mail s upozorněním ze stroje: %s"
 
 msgid "Nov"
-msgstr ""
+msgstr "lis"
 
 msgid "November"
-msgstr ""
+msgstr "listopad"
 
 msgid "Now"
 msgstr "Nyní"
@@ -5100,10 +5100,10 @@ msgid "Occurrence"
 msgstr "Výskyt"
 
 msgid "Oct"
-msgstr ""
+msgstr "říj"
 
 msgid "October"
-msgstr ""
+msgstr "říjen"
 
 msgid "Off"
 msgstr "Vypnuto"
@@ -5983,10 +5983,10 @@ msgstr ""
 "do souboru asynchronně. (výchozí hodnota je %d)"
 
 msgid "Sat"
-msgstr ""
+msgstr "so"
 
 msgid "Saturday"
-msgstr ""
+msgstr "sobota"
 
 msgid "Save"
 msgstr "Uložit"
@@ -6084,7 +6084,7 @@ msgid "Select the FreeBSD package to be installed."
 msgstr "Zvolte FreeBSD balíček, který má být nainstalován."
 
 msgid "Select the date format."
-msgstr ""
+msgstr "Vyberte formát datumu."
 
 msgid "Select the language of the WebGUI."
 msgstr "Vyberte jazyk pro webové rozhraní."
@@ -6148,13 +6148,13 @@ msgid "Send test email"
 msgstr "Odeslat zkušební e-mail"
 
 msgid "Sep"
-msgstr ""
+msgstr "zář"
 
 msgid "Separate email addresses by semi-colon."
 msgstr "E-mailové adresy oddělujte pomocí středníku."
 
 msgid "September"
-msgstr ""
+msgstr "září"
 
 msgid "Serial Console"
 msgstr "Sériová konzole"
@@ -6581,10 +6581,10 @@ msgid "Successful."
 msgstr "Úspešné."
 
 msgid "Sun"
-msgstr ""
+msgstr "ne"
 
 msgid "Sunday"
-msgstr ""
+msgstr "neděle"
 
 msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
 msgstr "neděle pondělí úterý středa čtvrtek pátek sobota"
@@ -8163,10 +8163,10 @@ msgstr ""
 "Umožní vysílání .jpg a .mp3 souborů na TiVo zařízení, podporující HMO."
 
 msgid "Thu"
-msgstr ""
+msgstr "čt"
 
 msgid "Thursday"
-msgstr ""
+msgstr "čtvrtek"
 
 msgid "TiB"
 msgstr "TiB"
@@ -8300,10 +8300,10 @@ msgstr ""
 "složek. (např. %s)"
 
 msgid "Toggle Selected Jobs"
-msgstr ""
+msgstr "Přepnout označené úlohy"
 
 msgid "Toggle Selected Options"
-msgstr ""
+msgstr "Přepnout označené předvolby"
 
 msgid "Tolerated"
 msgstr "Tolerováno"
@@ -8412,10 +8412,10 @@ msgid "Try to import from on-disk ZFS config."
 msgstr "Pokusit se o import nastavení ZFS, uloženého přímo na discích."
 
 msgid "Tue"
-msgstr ""
+msgstr "út"
 
 msgid "Tuesday"
-msgstr ""
+msgstr "úterý"
 
 msgid "Tuning"
 msgstr "Ladění"
@@ -8917,10 +8917,10 @@ msgid "Webserver document root is missing."
 msgstr "Chybí kořen dokumentů webového serveru."
 
 msgid "Wed"
-msgstr ""
+msgstr "st"
 
 msgid "Wednesday"
-msgstr ""
+msgstr "středa"
 
 msgid "Week days"
 msgstr "Dny v týdnu"
@@ -9147,6 +9147,7 @@ msgstr "ZFS svazek"
 
 msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
+"Velikost bloku ZFS svazku. Po vytvoření už nebude možné tuto hodnotu změnit."
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "

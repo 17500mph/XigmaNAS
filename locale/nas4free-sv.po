@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-02-26 03:11+0000\n"
-"PO-Revision-Date: 2016-01-24 06:30+0000\n"
+"PO-Revision-Date: 2016-02-27 10:02+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-26 02:37+0000\n"
+"X-Launchpad-Export-Date: 2016-02-27 18:04+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -56,15 +56,15 @@ msgstr "%s gränssnitt"
 
 #, php-format
 msgid "%s already exists as a %s."
-msgstr ""
+msgstr "%s existerar redan som %s."
 
 #, php-format
 msgid "%s is already configured as a filesystem."
-msgstr ""
+msgstr "%s är redan konfigurerat som ett filsystem."
 
 #, php-format
 msgid "%s is already configured as a volume."
-msgstr ""
+msgstr "%s är redan konfigurerad som en volym."
 
 #, php-format
 msgid "%s is too long."
@@ -447,7 +447,7 @@ msgid "Add"
 msgstr "Lägg till"
 
 msgid "Add Dataset"
-msgstr ""
+msgstr "Lägg till Dataset"
 
 msgid "Add Host"
 msgstr "Lägg till värd"
@@ -468,7 +468,7 @@ msgid "Add URL"
 msgstr "Lägg till url"
 
 msgid "Add Volume"
-msgstr ""
+msgstr "Lägg till Volym"
 
 msgid "Add additional scheduled self-test."
 msgstr "Lägg till ytterligare schemalagda självtest."
@@ -814,10 +814,10 @@ msgid "Apply changes"
 msgstr "Verkställ ändringar"
 
 msgid "Apr"
-msgstr ""
+msgstr "apr"
 
 msgid "April"
-msgstr ""
+msgstr "april"
 
 msgid "Archive"
 msgstr "Arkivera"
@@ -855,10 +855,10 @@ msgid "Audio"
 msgstr "Ljud"
 
 msgid "Aug"
-msgstr ""
+msgstr "aug"
 
 msgid "August"
-msgstr ""
+msgstr "augusti"
 
 msgid "Auth Group"
 msgstr "Auktoriserad grupp"
@@ -1015,7 +1015,7 @@ msgid "Blank time"
 msgstr "Blank tid"
 
 msgid "Block Size"
-msgstr ""
+msgstr "Blockstorlek"
 
 msgid "Block size"
 msgstr "Blockstorlek"
@@ -1405,22 +1405,22 @@ msgid "Controller Auth Group"
 msgstr "Kontrollant för Auktorisationsgruppen"
 
 msgid "Controller Auth Method"
-msgstr "Typ av auktorisering för kontrollant"
+msgstr "Typ av auktorisering för hanterare"
 
 msgid "Controller Authorised network"
 msgstr "Auktoriserat nätverk för kontrollant"
 
 msgid "Controller IP Address"
-msgstr ""
+msgstr "IP adress för hanterare"
 
 msgid "Controller IP address"
-msgstr "IP Adress för kontrollant"
+msgstr "IP Adress för hanterare"
 
 msgid "Controller Model"
 msgstr "Diskkontrollermodell"
 
 msgid "Controller TCP Port"
-msgstr "TCP Port för kontrollant"
+msgstr "TCP Port för hanterare"
 
 msgid "Controls power consumption."
 msgstr "Styr effektförbrukningen"
@@ -1807,7 +1807,7 @@ msgid "Date & Time"
 msgstr "Datum och tid"
 
 msgid "Date format"
-msgstr ""
+msgstr "Datumformat"
 
 msgid "Days"
 msgstr "Dagar"
@@ -1816,10 +1816,10 @@ msgid "Debug"
 msgstr "Felsök"
 
 msgid "Dec"
-msgstr ""
+msgstr "dec"
 
 msgid "December"
-msgstr ""
+msgstr "december"
 
 msgid ""
 "Decoded as: byte 0-1-2 = average erase count (big endian) and byte 3-4-5 = "
@@ -1884,16 +1884,16 @@ msgid "Delete Rsync job"
 msgstr "Radera Rsync jobb"
 
 msgid "Delete Selected Datasets"
-msgstr ""
+msgstr "Ta bort valda Dataset"
 
 msgid "Delete Selected Jobs"
-msgstr ""
+msgstr "Ta bort valda jobb"
 
 msgid "Delete Selected Options"
-msgstr ""
+msgstr "Ta bort valda optioner"
 
 msgid "Delete Selected Volumes"
-msgstr ""
+msgstr "Ta bort valda Volymer"
 
 msgid "Delete URL"
 msgstr "Radera URL"
@@ -2134,10 +2134,10 @@ msgid "Disable Firmware Update"
 msgstr "Inaktivera mjukvaruuppdatering"
 
 msgid "Disable Selected Jobs"
-msgstr ""
+msgstr "Inaktivera valda jobb"
 
 msgid "Disable Selected Options"
-msgstr ""
+msgstr "Inaktivera valda optioner"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Inaktivera TCP-wrapper (mod_wrap module)."
@@ -2324,34 +2324,34 @@ msgid "Do you really want to uninstall this package?"
 msgstr "Vill du verkligen avinstallera detta paketet?"
 
 msgid "Do you want to delete selected datasets?"
-msgstr ""
+msgstr "Vill du ta bort valda dataset?"
 
 msgid "Do you want to delete selected jobs?"
-msgstr ""
+msgstr "Vill du radera valda jobb?"
 
 msgid "Do you want to delete selected options?"
-msgstr ""
+msgstr "Vill du ta bort valda optioner?"
 
 msgid "Do you want to delete selected volumes?"
-msgstr ""
+msgstr "Vill du ta bort valda volymer?"
 
 msgid "Do you want to disable selected jobs?"
-msgstr ""
+msgstr "Vill du inaktivera valda jobb?"
 
 msgid "Do you want to disable selected options?"
-msgstr ""
+msgstr "Vill du inaktivera valda optioner?"
 
 msgid "Do you want to enable selected jobs?"
-msgstr ""
+msgstr "Vill du aktivera valda jobb?"
 
 msgid "Do you want to enable selected options?"
-msgstr ""
+msgstr "Vill du aktivera valda optioner?"
 
 msgid "Do you want to toggle selected jobs?"
-msgstr ""
+msgstr "Vill du ändra status på valda jobb?"
 
 msgid "Do you want to toggle selected options?"
-msgstr ""
+msgstr "Vill du ändra status på valda optioner?"
 
 msgid "Document root"
 msgstr "Dokumentrot"
@@ -2492,7 +2492,7 @@ msgid "Edit VM"
 msgstr "Editera VM"
 
 msgid "Edit Volume"
-msgstr ""
+msgstr "Ändra Volym"
 
 msgid "Edit auth group"
 msgstr "Editera auth gruppen"
@@ -2574,7 +2574,7 @@ msgid "Email"
 msgstr "E-post"
 
 msgid "Email Report"
-msgstr "E-posta Rapport"
+msgstr "E-postrapport"
 
 msgid "Empty as default."
 msgstr "Tom som standard"
@@ -2621,10 +2621,10 @@ msgstr ""
 "du kan använda SSL."
 
 msgid "Enable Selected Jobs"
-msgstr ""
+msgstr "Aktivera valda jobb"
 
 msgid "Enable Selected Options"
-msgstr ""
+msgstr "Aktivera valda optioner"
 
 msgid "Enable TLS connections."
 msgstr "Aktivera TLS-anslutningar."
@@ -2920,7 +2920,7 @@ msgid "Extent"
 msgstr "Extent"
 
 msgid "Extent Name"
-msgstr "Utökelsename"
+msgstr "Namn på utökning"
 
 msgid "Extent name"
 msgstr "Extent namn"
@@ -3001,7 +3001,7 @@ msgid "Failed to create in-memory file system."
 msgstr "Misslyckades att skapa filsystemet i minnet."
 
 msgid "Failed to execute command zfs."
-msgstr ""
+msgstr "Misslyckades köra kommando zfs."
 
 msgid "Failed to execute cron job."
 msgstr "Misslyckades med att köra cron-jobb."
@@ -3050,10 +3050,10 @@ msgid "Fatal"
 msgstr "Ödesdiger"
 
 msgid "Feb"
-msgstr ""
+msgstr "feb"
 
 msgid "February"
-msgstr ""
+msgstr "februari"
 
 msgid "File"
 msgstr "Fil"
@@ -3180,10 +3180,10 @@ msgid "Frequency"
 msgstr "Frekvens"
 
 msgid "Fri"
-msgstr ""
+msgstr "fre"
 
 msgid "Friday"
-msgstr ""
+msgstr "fredag"
 
 msgid "From email"
 msgstr "Från e-post"
@@ -3900,10 +3900,10 @@ msgid "JBOD Information & Status"
 msgstr "JBOD Information & Status"
 
 msgid "Jan"
-msgstr ""
+msgstr "jan"
 
 msgid "January"
-msgstr ""
+msgstr "januari"
 
 msgid ""
 "January February March April May June July August September October November "
@@ -3916,16 +3916,16 @@ msgid "Japanese"
 msgstr "Japanska"
 
 msgid "Jul"
-msgstr ""
+msgstr "jul"
 
 msgid "July"
-msgstr ""
+msgstr "juli"
 
 msgid "Jun"
-msgstr ""
+msgstr "Jun"
 
 msgid "June"
-msgstr ""
+msgstr "juni"
 
 msgid "Kernel"
 msgstr "Kärna"
@@ -4205,18 +4205,18 @@ msgstr "Logisk Blocklängd"
 
 #, php-format
 msgid "Logical Unit Controller Authorised network (%s by default)"
-msgstr "Logisk enhetskontrollant för auktoriserat nätverk (%s som standard)"
+msgstr "Logisk enhetshanterare för auktoriserat nätverk (%s som standard)"
 
 #, php-format
 msgid "Logical Unit Controller IP address (%s by default)"
-msgstr "Logisk enhetskontrollant för IP-adress (%s som standard)"
+msgstr "Logisk enhetshanterare för IP-adress (%s som standard)"
 
 msgid "Logical Unit Controller Login Information"
-msgstr ""
+msgstr "Logisk enhetshanterare, inloggningsinformation"
 
 #, php-format
 msgid "Logical Unit Controller TCP port (%d by default)"
-msgstr "Logisk enhetskontrollant för TCP-port (%d som standard)"
+msgstr "Logisk enhetshanterare för TCP-port (%d som standard)"
 
 msgid "Logical Unit Type mapped to LUN."
 msgstr "Logisk enhetstyp mappad till LUN"
@@ -4317,10 +4317,10 @@ msgid "Mapping DOS attributes"
 msgstr "Översätt DOS-attribut"
 
 msgid "Mar"
-msgstr ""
+msgstr "mar"
 
 msgid "March"
-msgstr ""
+msgstr "mars"
 
 msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
@@ -4422,7 +4422,7 @@ msgid "Maximum temperature seen (degrees C)"
 msgstr "Högsta uppmätta temperatur (grader C)"
 
 msgid "May"
-msgstr ""
+msgstr "maj"
 
 msgid "Media"
 msgstr "Media"
@@ -4540,10 +4540,10 @@ msgid "Modules"
 msgstr "Moduler"
 
 msgid "Mon"
-msgstr ""
+msgstr "mån"
 
 msgid "Monday"
-msgstr ""
+msgstr "måndag"
 
 msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
 msgstr "Måndag Tisdag Onsdag Torsdag Fredag Lördag Söndag"
@@ -4903,10 +4903,10 @@ msgid "Notification email from host: %s"
 msgstr "Notifikationse-post från värd: %s"
 
 msgid "Nov"
-msgstr ""
+msgstr "nov"
 
 msgid "November"
-msgstr ""
+msgstr "november"
 
 msgid "Now"
 msgstr "Nu"
@@ -4961,10 +4961,10 @@ msgid "Occurrence"
 msgstr "Förekomst"
 
 msgid "Oct"
-msgstr ""
+msgstr "okt"
 
 msgid "October"
-msgstr ""
+msgstr "oktober"
 
 msgid "Off"
 msgstr "Av"
@@ -5159,7 +5159,7 @@ msgid "Password encryption"
 msgstr "Lösenordskryptering"
 
 msgid "Password for the administrative pages."
-msgstr "Lösenord för dom administrativa sidorna."
+msgstr "Lösenord för de administrativa sidorna."
 
 msgid "Password of domain administrator account."
 msgstr "Lösenord för domänadministratörskonto."
@@ -5738,7 +5738,7 @@ msgid "Rsync"
 msgstr "Rsync"
 
 msgid "Rsync Job"
-msgstr ""
+msgstr "Rsync jobb"
 
 msgid "Rule"
 msgstr "Regel"
@@ -5833,10 +5833,10 @@ msgstr ""
 "större än detta värde. (%d som standard)"
 
 msgid "Sat"
-msgstr ""
+msgstr "lör"
 
 msgid "Saturday"
-msgstr ""
+msgstr "lördag"
 
 msgid "Save"
 msgstr "Spara"
@@ -5932,7 +5932,7 @@ msgid "Select the FreeBSD package to be installed."
 msgstr "Välj FreeBSD-paket som ska installeras."
 
 msgid "Select the date format."
-msgstr ""
+msgstr "Välj datumformat."
 
 msgid "Select the language of the WebGUI."
 msgstr "Välj språk för webgränssnittet."
@@ -5995,13 +5995,13 @@ msgid "Send test email"
 msgstr "Sänd test-epost."
 
 msgid "Sep"
-msgstr ""
+msgstr "sep"
 
 msgid "Separate email addresses by semi-colon."
 msgstr "Separerar e-postadresser med semikolon."
 
 msgid "September"
-msgstr ""
+msgstr "september"
 
 msgid "Serial Console"
 msgstr "Seriell Konsol"
@@ -6205,7 +6205,7 @@ msgid "Snapshots"
 msgstr "Avbilder"
 
 msgid "Sockets"
-msgstr "Uttag (sockets)"
+msgstr "Anslutningar (sockets)"
 
 msgid "SoftRaid"
 msgstr "MjukvaruRaid"
@@ -6220,7 +6220,7 @@ msgid "Source"
 msgstr "Källa"
 
 msgid "Source Share"
-msgstr ""
+msgstr "Utdelad källa"
 
 msgid "Source directory to be synchronized."
 msgstr "Källkatalog som ska synkroniseras."
@@ -6427,10 +6427,10 @@ msgid "Successful."
 msgstr "Lyckat resultat."
 
 msgid "Sun"
-msgstr ""
+msgstr "sön"
 
 msgid "Sunday"
-msgstr ""
+msgstr "söndag"
 
 msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
 msgstr "Söndag Måndag Tisdag Onsdag Torsdag Fredag Lördag"
@@ -6439,13 +6439,13 @@ msgid "Suppress non-error messages."
 msgstr "Uteslut korrekta meddelanden"
 
 msgid "Swap"
-msgstr "Växling"
+msgstr "Växlingsfil"
 
 msgid "Swap Information & Status"
-msgstr "Swap Information & Status"
+msgstr "Växlingsfil Information & Status"
 
 msgid "Swap Memory"
-msgstr "Växlingsminne"
+msgstr "Växlingsfil"
 
 msgid "Swap disabled"
 msgstr "Växlingsutrymme inaktiverat"
@@ -6564,7 +6564,7 @@ msgid "TLS only"
 msgstr "Endast TLS"
 
 msgid "Tag"
-msgstr "Ettikett"
+msgstr "Etikett"
 
 msgid "Tag number"
 msgstr "Etikettnummer"
@@ -6578,7 +6578,7 @@ msgid "Tag%d (%s)"
 msgstr "Etikett%d (%s)"
 
 msgid "Tap device"
-msgstr ""
+msgstr "Anslutningsenhet"
 
 msgid "Tape"
 msgstr "Band"
@@ -7077,8 +7077,8 @@ msgid ""
 "The driver used to communicate with your UPS. Get the list of available <a "
 "href='%s' target='_blank'>drivers</a>."
 msgstr ""
-"Den här disken brukade komunicera med Din UPS. Lista tillgängliga <a "
-"href='%s' target='_blank'>diskar</a>."
+"Den här drivrutinen brukade komunicera med din UPS. Lista tillgängliga <a "
+"href='%s' target='_blank'>drivrutiner</a>."
 
 #, php-format
 msgid ""
@@ -7097,7 +7097,7 @@ msgstr ""
 "disken innan Du fortsätter."
 
 msgid "The extent name already exists."
-msgstr "Utökelsenamnet finns redan."
+msgstr "Namnet på utökningen finns redan"
 
 msgid "The file you try to flash is not for this platform"
 msgstr "Filen du försöker använda är inte för denna plattform"
@@ -7872,8 +7872,8 @@ msgid ""
 "This parameter says that if N occurrences of the event happen within the "
 "given time interval, then a ban is automatically added."
 msgstr ""
-"Den här parametern säger att om n förekomster av händelsen ske inom det "
-"givna tidsintervallet, då kommer ett förbud automatiskt läggas in."
+"Den här parametern anger antal förekomster av händelsen inom det givna "
+"tidsintervallet som skall aktivera en utelåsning."
 
 #, php-format
 msgid ""
@@ -7914,7 +7914,7 @@ msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr "Denna regel utlöses när den valda händelsens direktiv inträffar."
 
 msgid "This server uses default swap."
-msgstr "Servern använder default swap."
+msgstr "Servern använder standardväxlingsfil."
 
 msgid "This tag already exists."
 msgstr "Etiketten finns redan."
@@ -7968,7 +7968,7 @@ msgstr ""
 "vill lägga till en existerande krypterad disk."
 
 msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
-msgstr "Detta vill ge NTFS acls utan ZFS ACL stöd som UFS."
+msgstr "Detta ger NTFS acls utan ZFS ACL stöd som UFS."
 
 msgid "This will provide ZFS ACL support. (ZFS only)"
 msgstr "Detta aktiverar tillgång till ZFS ACL support. (endast ZFS)"
@@ -7981,12 +7981,13 @@ msgstr ""
 msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
 msgstr ""
+"Detta stödjer strömning av .jpg och .mp3 filer en TiVo som stödjer HMO."
 
 msgid "Thu"
-msgstr ""
+msgstr "tor"
 
 msgid "Thursday"
-msgstr ""
+msgstr "torsdag"
 
 msgid "TiB"
 msgstr "TiB"
@@ -8036,7 +8037,7 @@ msgid "Times"
 msgstr "Tider"
 
 msgid "TitleSpeed"
-msgstr "TitleSpeed"
+msgstr "Rullhastighet"
 
 msgid ""
 "To configure the target, you must add at least Portal Group and Initiator "
@@ -8118,10 +8119,10 @@ msgstr ""
 "För att använda underbibliotek måste du montera varje katalog. (ex. %s)"
 
 msgid "Toggle Selected Jobs"
-msgstr ""
+msgstr "Ändra status på valda jobb"
 
 msgid "Toggle Selected Options"
-msgstr ""
+msgstr "Ändra status på valda optioner"
 
 msgid "Tolerated"
 msgstr "Tolererat"
@@ -8226,10 +8227,10 @@ msgid "Try to import from on-disk ZFS config."
 msgstr "Försök att importera från diskbaserad ZFS konfiguration."
 
 msgid "Tue"
-msgstr ""
+msgstr "tis"
 
 msgid "Tuesday"
-msgstr ""
+msgstr "tisdag"
 
 msgid "Tuning"
 msgstr "Justering (Tuning)"
@@ -8261,9 +8262,9 @@ msgid ""
 "filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
 "unpredictable results, file corruption and the loss of data!"
 msgstr ""
-"UFS och ZFS are STANDARD filsystem för %s. Försök att använda andra "
-"filsystem som EXT2, EXT3, EXT4, FAT, FAT32, eller NTFS kan resultera i "
-"oförutsägbara resultat, filskador och förlust av data!"
+"UFS och ZFS är STANDARD filsystem för %s. Försök att använda andra filsystem "
+"som EXT2, EXT3, EXT4, FAT, FAT32, eller NTFS kan resultera i oförutsägbara "
+"resultat, filskador och förlust av data!"
 
 #, php-format
 msgid ""
@@ -8272,10 +8273,10 @@ msgid ""
 "or NTFS can result in unpredictable results, file corruption, and loss of "
 "data!"
 msgstr ""
-"UFS och varianter är det inhemska filformatet för FreeBSD (den underliggande "
-"OS för %s). Försök att använda andra filformat, till exempel FAT, FAT32, "
-"EXT2, EXT3 eller NTFS kan resultera i oförutsägbara resultat, skadade filer, "
-"och förlust av data!"
+"UFS och varianter är standardfilformatet för FreeBSD (det underliggande OS "
+"för %s). Försök att använda andra filformat, till exempel FAT, FAT32, EXT2, "
+"EXT3 eller NTFS kan resultera i oförutsägbara resultat, skadade filer, och "
+"förlust av data!"
 
 msgid "UID"
 msgstr "UID"
@@ -8314,7 +8315,7 @@ msgid "UPS coldstarts from battery"
 msgstr "UPS kallstartar från batteri"
 
 msgid "UPS disabled"
-msgstr "UPS-enhet avaktiverad"
+msgstr "UPS-enhet inaktiverad"
 
 msgid "UPS external contact sensors"
 msgstr "UPS externa sensorer"
@@ -8446,6 +8447,7 @@ msgstr ""
 
 msgid "Use inotify monitoring to automatically discover new files."
 msgstr ""
+"Använd \"inotiy\" övervakning för att automatiskt upptäcka nya filer."
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -8727,10 +8729,10 @@ msgid "Webserver document root is missing."
 msgstr "Webbserver dokumentrot saknas."
 
 msgid "Wed"
-msgstr ""
+msgstr "ons"
 
 msgid "Wednesday"
-msgstr ""
+msgstr "onsdag"
 
 msgid "Week days"
 msgstr "Veckodagar"
@@ -8950,6 +8952,8 @@ msgstr "ZFS volym"
 
 msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
+"Blockstorlek för ZFS volym. Detta värde kan ej ändras efter att volymen "
+"skapats."
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
