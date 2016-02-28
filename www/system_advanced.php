@@ -43,6 +43,7 @@ $pconfig['disableconsolemenu'] = isset($config['system']['disableconsolemenu']);
 $pconfig['disablefm'] = isset($config['system']['disablefm']);
 $pconfig['disablefirmwarecheck'] = isset($config['system']['disablefirmwarecheck']);
 $pconfig['disablebeep'] = isset($config['system']['disablebeep']);
+$pconfig['enabletogglemode'] = isset($config['system']['enabletogglemode']);
 $pconfig['tune_enable'] = isset($config['system']['tune']);
 $pconfig['zeroconf'] = isset($config['system']['zeroconf']);
 $pconfig['powerd'] = isset($config['system']['powerd']);
@@ -137,6 +138,7 @@ if ($_POST) {
 		$config['system']['disableconsolemenu'] = isset($_POST['disableconsolemenu']) ? true : false;
 		$config['system']['disablefm'] = isset($_POST['disablefm']) ? true : false;
 		$config['system']['disablefirmwarecheck'] = isset($_POST['disablefirmwarecheck']) ? true : false;
+		$config['system']['enabletogglemode'] = isset($_POST['enabletogglemode']) ? true : false;
 		$config['system']['webgui']['noantilockout'] = isset($_POST['noantilockout']) ? true : false;
 		$config['system']['disablebeep'] = isset($_POST['disablebeep']) ? true : false;
 		$config['system']['tune'] = isset($_POST['tune_enable']) ? true : false;
@@ -323,6 +325,7 @@ function powerd_change() {
 					<?php html_checkbox("disablefirmwarecheck", gettext("Firmware version check"), !empty($pconfig['disablefirmwarecheck']) ? true : false, gettext("Disable firmware version check"), sprintf(gettext("This will cause %s not to check for newer firmware versions when the <a href='%s'>%s</a> page is viewed."), get_product_name(), "system_firmware.php", gettext("System").": ".gettext("Firmware")));?>
 					<?php endif;?>
 					<?php html_checkbox("disablebeep", gettext("System Beep"), !empty($pconfig['disablebeep']) ? true : false, gettext("Disable speaker beep on startup and shutdown"));?>
+					<?php html_checkbox("enabletogglemode", gettext("Toggle Mode"), !empty($pconfig['enabletogglemode']) ? true : false, gettext("Use toggle button or separate enable/disable buttons."));?>
 					<?php html_checkbox("tune_enable", gettext("Tuning"), !empty($pconfig['tune_enable']) ? true : false, gettext("Enable tuning of some kernel variables"));?>
 					<?php html_checkbox("powerd", gettext("Power Daemon"), !empty($pconfig['powerd']) ? true : false, gettext("Enable the system power control utility"), gettext("The powerd utility monitors the system state and sets various power control options accordingly."), false, "powerd_change()");?>
 					<?php $a_pwmode = array("maximum" => gettext("maximum (highest performance)"), "hiadaptive" => gettext("hiadaptive (high performance)"), "adaptive" => gettext("adaptive (low power consumption)"), "minimum" => gettext("minimum (power saving)")); ?>

@@ -173,6 +173,7 @@ function cronjob_process_updatenotification($mode, $data) {
 	return $retval;
 }
 
+$enabletogglemode = isset($config['system']['enabletogglemode']);
 $pgtitle = array(gettext("System"), gettext("Advanced"), gettext("Cron"));
 ?>
 <?php include("fbegin.inc");?>
@@ -225,9 +226,12 @@ function togglecheckboxesbyname(ego, byname) {
 				?>
 				<?php if (updatenotify_exists("cronjob")) { print_config_change_box(); } ?>
 				<div id="submit" style="margin-bottom:10px">
-					<input name="enable_selected_rows" type="submit" class="formbtn" value="<?=gettext("Enable Selected Jobs");?>" onclick="return confirm('<?=gettext("Do you want to enable selected jobs?");?>')" />
-					<input name="disable_selected_rows" type="submit" class="formbtn" value="<?=gettext("Disable Selected Jobs");?>" onclick="return confirm('<?=gettext("Do you want to disable selected jobs?");?>')" />
-					<input name="toggle_selected_rows" type="submit" class="formbtn" value="<?=gettext("Toggle Selected Jobs");?>" onclick="return confirm('<?=gettext("Do you want to toggle selected jobs?");?>')" />
+					<?php if($enabletogglemode):?>
+						<input name="toggle_selected_rows" type="submit" class="formbtn" value="<?=gettext("Toggle Selected Jobs");?>" onclick="return confirm('<?=gettext("Do you want to toggle selected jobs?");?>')" />
+					<?php else:?>
+						<input name="enable_selected_rows" type="submit" class="formbtn" value="<?=gettext("Enable Selected Jobs");?>" onclick="return confirm('<?=gettext("Do you want to enable selected jobs?");?>')" />
+						<input name="disable_selected_rows" type="submit" class="formbtn" value="<?=gettext("Disable Selected Jobs");?>" onclick="return confirm('<?=gettext("Do you want to disable selected jobs?");?>')" />
+					<?php endif;?>
 					<input name="delete_selected_rows" type="submit" class="formbtn" value="<?=gettext("Delete Selected Jobs");?>" onclick="return confirm('<?=gettext("Do you want to delete selected jobs?");?>')" />
 				</div>
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
@@ -241,7 +245,7 @@ function togglecheckboxesbyname(ego, byname) {
 					</colgroup>
 					<thead>
 						<tr>
-							<td class="listhdrlr"><input type="checkbox" name="togglemembers" onclick="javascript:togglecheckboxesbyname(this,'members[]')"/></td>
+							<td class="listhdrlr"><input type="checkbox" name="togglemembers" onclick="javascript:togglecheckboxesbyname(this,'members[]')" title="<?=gettext('Invert Selection');?>"/></td>
 							<td class="listhdrr"><?=gettext("Command");?></td>
 							<td class="listhdrr"><?=gettext("Who");?></td>
 							<td class="listhdrr"><?=gettext("Status");?></td>
