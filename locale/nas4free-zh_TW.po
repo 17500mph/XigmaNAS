@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-02-26 03:11+0000\n"
+"POT-Creation-Date: 2016-02-28 07:30+0000\n"
 "PO-Revision-Date: 2015-12-27 22:10+0000\n"
 "Last-Translator: Alex Lin <linuxant@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-26 02:37+0000\n"
+"X-Launchpad-Export-Date: 2016-02-28 14:16+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -3597,6 +3597,9 @@ msgstr "数据块的最大值無效！它必須是從 %d 到 %d 的範圍。"
 msgid "Invalid username or password. Please try again."
 msgstr "用戶名或密碼無效。請再試一次。"
 
+msgid "Invert Selection"
+msgstr ""
+
 msgid ""
 "It can be changed from the client side by standard SCSI mode page at any "
 "time."
@@ -5553,6 +5556,9 @@ msgid ""
 "Secure (HTTPS) for the WebGUI."
 msgstr "請在網頁界面中選擇超文本傳輸協議（HTTP）或安全超文本傳輸協議（HTTPS）。"
 
+msgid "Select a date format."
+msgstr ""
+
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "選擇要開啟 S.M.A.R.T. 監測的磁碟。"
 
@@ -5567,9 +5573,6 @@ msgstr "請選擇欲創建 Swap 檔的掛載點。"
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "請選擇要安裝的 FreeBSD 套件。"
-
-msgid "Select the date format."
-msgstr ""
 
 msgid "Select the language of the WebGUI."
 msgstr "請選擇網頁界面的語言。"
@@ -5623,9 +5626,6 @@ msgstr "啟動時傳送測試警示電郵。"
 
 msgid "Send now"
 msgstr "立刻傳送"
-
-msgid "Send test email"
-msgstr "傳送測試電郵"
 
 msgid "Sep"
 msgstr ""
@@ -7476,6 +7476,9 @@ msgstr ""
 msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
 msgstr "您必須裝載每個目錄才能使用子目錄。（如 %s）"
 
+msgid "Toggle Mode"
+msgstr ""
+
 msgid "Toggle Selected Jobs"
 msgstr ""
 
@@ -7830,6 +7833,9 @@ msgid ""
 msgstr ""
 "使用此選項覆蓋此用戶名（預設為'ftp'），預設權限為guest。此用戶所擁有的權限也會套用在使用客戶端服務的任何客戶端。此用戶必須存在於密碼檔中，但並不"
 "需要一個有效的登入帳戶。"
+
+msgid "Use toggle button or separate enable/disable buttons."
+msgstr ""
 
 msgid "Used"
 msgstr "已用空間"
@@ -8414,3 +8420,6 @@ msgstr "卸載"
 
 msgid "version:"
 msgstr "版本："
+
+#~ msgid "Send test email"
+#~ msgstr "傳送測試電郵"

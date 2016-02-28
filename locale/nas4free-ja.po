@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-02-26 03:11+0000\n"
+"POT-Creation-Date: 2016-02-28 07:30+0000\n"
 "PO-Revision-Date: 2015-12-19 13:07+0000\n"
 "Last-Translator: Daisuke Aoyama <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-26 02:36+0000\n"
+"X-Launchpad-Export-Date: 2016-02-28 14:17+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -3662,6 +3662,9 @@ msgstr "無効なブロックサイズの最大値です! %d から %d の範囲
 msgid "Invalid username or password. Please try again."
 msgstr "ユーザー名またはパスワードが無効です。再入力してください。"
 
+msgid "Invert Selection"
+msgstr ""
+
 msgid ""
 "It can be changed from the client side by standard SCSI mode page at any "
 "time."
@@ -5639,6 +5642,9 @@ msgstr ""
 "WebGUIに利用するプロトコルを HTTP(Hypertext Transfer Protocol) もしくは HTTPS(Hypertext "
 "Transfer Protocol Secure) から選択してください。"
 
+msgid "Select a date format."
+msgstr ""
+
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "S.M.A.R.T. を有効にするディスクを選択してください。"
 
@@ -5653,9 +5659,6 @@ msgstr "スワップファイルを作成するディレクトリを選択して
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "インストールする FreeBSD のパッケージを選択してください。"
-
-msgid "Select the date format."
-msgstr ""
 
 msgid "Select the language of the WebGUI."
 msgstr "WebGUIで利用する言語を選択してください。"
@@ -5709,9 +5712,6 @@ msgstr "起動時にテストとして警告メールを送信します。"
 
 msgid "Send now"
 msgstr "今すぐ送信"
-
-msgid "Send test email"
-msgstr "テストメールの送信"
 
 msgid "Sep"
 msgstr ""
@@ -7618,6 +7618,9 @@ msgstr ""
 msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
 msgstr "サブディレクトリを使用するには、各ディレクトリーをマウントしなければいけません。(例 %s)"
 
+msgid "Toggle Mode"
+msgstr ""
+
 msgid "Toggle Selected Jobs"
 msgstr ""
 
@@ -7978,6 +7981,9 @@ msgstr ""
 "ゲストとして指定されたサービスへのアクセスを行った際に使用されるユーザ名 (デフォルトは 'ftp') "
 "を変更したい場合はこのオプションを使用して下さい。このユーザが持つ権限をゲストサービスとして接続している全てのクライアントは使用可能になります。このユーザ"
 "はパスワードファイル内に存在している必要がありますが、ログイン可能である必要はありません。"
+
+msgid "Use toggle button or separate enable/disable buttons."
+msgstr ""
 
 msgid "Used"
 msgstr "使用量"
@@ -8568,3 +8574,6 @@ msgstr "アンマウント"
 
 msgid "version:"
 msgstr "バージョン:"
+
+#~ msgid "Send test email"
+#~ msgstr "テストメールの送信"
