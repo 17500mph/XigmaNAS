@@ -173,7 +173,7 @@ function loaderconf_process_updatenotification($mode, $data) {
 	}
 	return $retval;
 }
-
+$enabletogglemode = isset($config['system']['enabletogglemode']);
 $pgtitle = array(gettext("System"), gettext("Advanced"), gettext("loader.conf"));
 ?>
 <?php include("fbegin.inc");?>
@@ -226,9 +226,12 @@ function togglecheckboxesbyname(ego, byname) {
 				?>
 				<?php if (updatenotify_exists("loaderconf")) { print_config_change_box(); } ?>
 				<div id="submit" style="margin-bottom:10px">
-					<input name="enable_selected_rows" type="submit" class="formbtn" value="<?=gettext("Enable Selected Options");?>" onclick="return confirm('<?=gettext("Do you want to enable selected options?");?>')" />
-					<input name="disable_selected_rows" type="submit" class="formbtn" value="<?=gettext("Disable Selected Options");?>" onclick="return confirm('<?=gettext("Do you want to disable selected options?");?>')" />
-					<input name="toggle_selected_rows" type="submit" class="formbtn" value="<?=gettext("Toggle Selected Options");?>" onclick="return confirm('<?=gettext("Do you want to toggle selected options?");?>')" />
+					<?php if($enabletogglemode):?>
+						<input name="toggle_selected_rows" type="submit" class="formbtn" value="<?=gettext("Toggle Selected Options");?>" onclick="return confirm('<?=gettext("Do you want to toggle selected options?");?>')" />
+					<?php else:?>
+						<input name="enable_selected_rows" type="submit" class="formbtn" value="<?=gettext("Enable Selected Options");?>" onclick="return confirm('<?=gettext("Do you want to enable selected options?");?>')" />
+						<input name="disable_selected_rows" type="submit" class="formbtn" value="<?=gettext("Disable Selected Options");?>" onclick="return confirm('<?=gettext("Do you want to disable selected options?");?>')" />
+					<?php endif;?>
 					<input name="delete_selected_rows" type="submit" class="formbtn" value="<?=gettext("Delete Selected Options");?>" onclick="return confirm('<?=gettext("Do you want to delete selected options?");?>')" />
 				</div>
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
@@ -242,7 +245,7 @@ function togglecheckboxesbyname(ego, byname) {
 					</colgroup>
 					<thead>
 						<tr>
-							<td class="listhdrlr"><input type="checkbox" name="togglemembers" onclick="javascript:togglecheckboxesbyname(this,'members[]')"/></td>
+							<td class="listhdrlr"><input type="checkbox" name="togglemembers" onclick="javascript:togglecheckboxesbyname(this,'members[]')" title="<?=gettext('Invert Selection');?>"/></td>
 							<td class="listhdrr"><?=gettext("Variable");?></td>
 							<td class="listhdrr"><?=gettext("Value");?></td>
 							<td class="listhdrr"><?=gettext("Status");?></td>
