@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-02-26 03:11+0000\n"
-"PO-Revision-Date: 2016-02-27 06:51+0000\n"
+"POT-Creation-Date: 2016-02-28 07:30+0000\n"
+"PO-Revision-Date: 2016-02-28 10:47+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-27 18:04+0000\n"
+"X-Launchpad-Export-Date: 2016-02-28 14:17+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -3865,6 +3865,9 @@ msgstr "Érvénytelen max. blokk méret! A blokk méret %d-tól %d-ig terjedhet.
 msgid "Invalid username or password. Please try again."
 msgstr "Hibás felhasználónév illetve jelszó. Próbáld újra."
 
+msgid "Invert Selection"
+msgstr "Kijelölés megfordítása"
+
 msgid ""
 "It can be changed from the client side by standard SCSI mode page at any "
 "time."
@@ -5960,6 +5963,9 @@ msgstr ""
 "Válassz a WebGUI-hoz Hypertext Transfer Protokoll (HTTP) vagy Biztonságos "
 "Hypertext Transfer Protokoll (HTTPS) közül."
 
+msgid "Select a date format."
+msgstr "Válassz dátumformátumot"
+
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Válassza ki a monitorozandó lemezt."
 
@@ -5974,9 +5980,6 @@ msgstr "Válassz csatolást, ahová a cserefájl létrehozható."
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "Válaszd ki a telepítendő FreeBSD csomagot."
-
-msgid "Select the date format."
-msgstr "Válassz dátumformátumot"
 
 msgid "Select the language of the WebGUI."
 msgstr "Válaszd ki a WebGUI nyelvét."
@@ -6034,9 +6037,6 @@ msgstr "A rendszer indulásakor figyelmeztető TESZT email küldése."
 
 msgid "Send now"
 msgstr "Küldés most"
-
-msgid "Send test email"
-msgstr "Próba e-mail küldése"
 
 msgid "Sep"
 msgstr "Szept"
@@ -8168,6 +8168,9 @@ msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
 msgstr ""
 "Alkönyvtárak használatához minden könyvtárat be kell csatolni (pl. %s)."
 
+msgid "Toggle Mode"
+msgstr "Átkapcsolási mód"
+
 msgid "Toggle Selected Jobs"
 msgstr "Kiválasztott feladatok átkapcsolása"
 
@@ -8551,6 +8554,11 @@ msgstr ""
 "bír ez a felhasználó, azokkal fog csatlakozni a kliens a szolgáltatáshoz. "
 "Ennek a felhasználónak léteznie kell a jelszó fájlban, de nem szükséges, "
 "hogy legyen neki érvényes login-ja."
+
+msgid "Use toggle button or separate enable/disable buttons."
+msgstr ""
+"Használd az átkapcsolás gombot vagy külön-külön az engedélyezés/tiltás "
+"gombokat."
 
 msgid "Used"
 msgstr "Felhasznált"
@@ -9171,3 +9179,9 @@ msgstr "leválasztás"
 
 msgid "version:"
 msgstr "verzió:"
+
+#~ msgid "Send test email"
+#~ msgstr "Próba e-mail küldése"
+
+#~ msgid "Select the date format."
+#~ msgstr "Válassz dátumformátumot"
