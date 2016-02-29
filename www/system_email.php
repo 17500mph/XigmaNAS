@@ -147,7 +147,6 @@ function enable_change(enable_change) {
       <ul id="tabnav">
       	<li class="tabinact"><a href="system_advanced.php"><span><?=gettext("Advanced");?></span></a></li>
       	<li class="tabact"><a href="system_email.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Email");?></span></a></li>
-      	<li class="tabinact"><a href="system_proxy.php"><span><?=gettext("Proxy");?></span></a></li>
       	<li class="tabinact"><a href="system_swap.php"><span><?=gettext("Swap");?></span></a></li>
       	<li class="tabinact"><a href="system_rc.php"><span><?=gettext("Command scripts");?></span></a></li>
         <li class="tabinact"><a href="system_cron.php"><span><?=gettext("Cron");?></span></a></li>
@@ -163,10 +162,11 @@ function enable_change(enable_change) {
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<?php if (!empty($failmsg)) print_error_box($failmsg);?>
-			  <table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_inputbox("from", gettext("From email"), $pconfig['from'], gettext("Your own email address."), true, 40);?>
-					<?php html_inputbox("server", gettext("Outgoing mail server"), $pconfig['server'], gettext("Outgoing SMTP mail server address, e.g. smtp.mycorp.com."), true, 40);?>
-					<?php html_inputbox("port", gettext("Port"), $pconfig['port'], gettext("The default SMTP mail server port, e.g. 25 or 587."), true, 10);?>
+				<table width="100%" border="0" cellpadding="6" cellspacing="0">
+			    		<?php html_titleline(gettext("Email"));?>
+					<?php html_inputbox("from", gettext("Email Address"), $pconfig['from'], gettext("Set the email address for receiving system messages."), true, 60);?>
+					<?php html_inputbox("server", gettext("SMTP Server"), $pconfig['server'], gettext("Outgoing SMTP mail server address."), true, 60);?>
+					<?php html_inputbox("port", gettext("Port"), $pconfig['port'], gettext("The default SMTP mail server port, e.g. 25 or 587."), true, 5);?>
 					<?php html_combobox("security", gettext("Security"), $pconfig['security'], array("none" => gettext("None"), "ssl" => "SSL", "tls" => "TLS"), "", true);?>
 					<?php html_checkbox("starttls", gettext("TLS mode"), !empty($pconfig['starttls']) ? true : false, gettext("Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can use SSL."), gettext("This is a way to take an existing insecure connection, and upgrade it to a secure connection using SSL/TLS."), false);?>
 					<?php html_checkbox("auth", gettext("Authentication"), !empty($pconfig['auth']) ? true : false, gettext("Enable SMTP authentication."), "", false, "auth_change()");?>
