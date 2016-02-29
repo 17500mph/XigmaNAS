@@ -81,6 +81,8 @@ for ($i = 1; isset($config['interfaces']['opt' . $i]); $i++) {
 $menu['network']['menuitem'][] = array("type" => "separator", "visible" => TRUE);
 $menu['network']['menuitem'][] = array("desc" => gettext("Hosts"), "link" => "system_hosts.php", "visible" => TRUE);
 $menu['network']['menuitem'][] = array("desc" => gettext("Static Routes"), "link" => "system_routes.php", "visible" => TRUE);
+$menu['network']['menuitem'][] = array("type" => "separator", "visible" => TRUE);
+$menu['network']['menuitem'][] = array("desc" => gettext("Proxy"), "link" => "system_proxy.php", "visible" => TRUE);
 $menu['network']['menuitem'][] = array("desc" => gettext("Firewall"), "link" => "system_firewall.php", "visible" => TRUE);
 
 // Disks
