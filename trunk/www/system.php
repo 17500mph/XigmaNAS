@@ -307,7 +307,6 @@ function webguiproto_change() {
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 			  <table width="100%" border="0" cellpadding="6" cellspacing="0">
-			    <?php html_separator();?>
 			    <?php html_titleline(gettext("WebGUI"));?>
 					<?php html_inputbox("username", gettext("Username"), $pconfig['username'], gettext("It's recommended to change the default username and password for accessing the WebGUI, enter the username here."), false, 21);?>
 					<?php html_combobox("webguiproto", gettext("Protocol"), $pconfig['webguiproto'], array("http" => "HTTP", "https" => "HTTPS"), gettext("Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol Secure (HTTPS) for the WebGUI."), false, false, "webguiproto_change()");?>
