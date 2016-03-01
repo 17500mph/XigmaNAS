@@ -37,7 +37,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("System"),gettext("Advanced"),gettext("Command scripts"));
+$pgtitle = array(gettext("System"),gettext("Advanced"),gettext("Command Scripts"));
 
 if (!isset($config['rc']['preinit']['cmd']) || !is_array($config['rc']['preinit']['cmd']))
 	$config['rc']['preinit']['cmd'] = array();
@@ -78,7 +78,7 @@ if (isset($_GET['act']) && $_GET['act'] == "del")
       	<li class="tabinact"><a href="system_advanced.php"><span><?=gettext("Advanced");?></span></a></li>
       	<li class="tabinact"><a href="system_email.php"><span><?=gettext("Email");?></span></a></li>
       	<li class="tabinact"><a href="system_swap.php"><span><?=gettext("Swap");?></span></a></li>
-        <li class="tabact"><a href="system_rc.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Command scripts");?></span></a></li>
+        <li class="tabact"><a href="system_rc.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Command Scripts");?></span></a></li>
         <li class="tabinact"><a href="system_cron.php"><span><?=gettext("Cron");?></span></a></li>
 		<li class="tabinact"><a href="system_loaderconf.php"><span><?=gettext("loader.conf");?></span></a></li>
         <li class="tabinact"><a href="system_rcconf.php"><span><?=gettext("rc.conf");?></span></a></li>

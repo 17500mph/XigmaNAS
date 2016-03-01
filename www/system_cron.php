@@ -246,7 +246,7 @@ function controlactionbuttons(ego, triggerbyname) {
 				<li class="tabinact"><a href="system_advanced.php"><span><?=gettext('Advanced');?></span></a></li>
 				<li class="tabinact"><a href="system_email.php"><span><?=gettext('Email');?></span></a></li>
 				<li class="tabinact"><a href="system_swap.php"><span><?=gettext('Swap');?></span></a></li>
-				<li class="tabinact"><a href="system_rc.php"><span><?=gettext('Command scripts');?></span></a></li>
+				<li class="tabinact"><a href="system_rc.php"><span><?=gettext('Command Scripts');?></span></a></li>
 				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gettext('Reload page');?>"><span><?=gettext('Cron');?></span></a></li>
 				<li class="tabinact"><a href="system_loaderconf.php"><span><?=gettext('loader.conf');?></span></a></li>
 				<li class="tabinact"><a href="system_rcconf.php"><span><?=gettext('rc.conf');?></span></a></li>
