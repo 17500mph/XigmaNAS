@@ -45,13 +45,13 @@ $pconfig['mountpoint'] = !empty($config['system']['swap']['mountpoint']) ? $conf
 $pconfig['devicespecialfile'] = !empty($config['system']['swap']['devicespecialfile']) ? $config['system']['swap']['devicespecialfile'] : "";
 $pconfig['size'] = !empty($config['system']['swap']['size']) ? $config['system']['swap']['size'] : "";
 
-$swapdevice = "NONE";
-if (file_exists("{$g['etc_path']}/swapdevice"))
-	$swapdevice = trim(file_get_contents("{$g['etc_path']}/swapdevice"));
-if (empty($_POST) && (empty($pconfig['enable']) || $pconfig['enable'] === false)) {
-	if ($swapdevice != "NONE")
-		$infomsg = sprintf("%s (%s)", gettext("This server uses default swap."), $swapdevice);
-}
+//$swapdevice = "NONE";
+//if (file_exists("{$g['etc_path']}/swapdevice"))
+//	$swapdevice = trim(file_get_contents("{$g['etc_path']}/swapdevice"));
+//if (empty($_POST) && (empty($pconfig['enable']) || $pconfig['enable'] === false)) {
+//	if ($swapdevice != "NONE")
+//		$infomsg = sprintf("%s (%s)", gettext("This server uses default swap."), $swapdevice);
+//}
 
 if ($_POST) {
 	unset($input_errors);
@@ -148,10 +148,48 @@ function type_change() {
 				<?php if (!empty($savemsg)) print_info_box($savemsg); ?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_titleline_checkbox("enable", gettext("Swap Memory"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "enable_change(false)");?>
+					<?php $swapinfo = system_get_swap_info(); if (!empty($swapinfo)):?>
+					<tr>
+					<td width="25%" class="vncellt"><?=gettext("This server uses default swap!");?></td>
+					<td width="75%" style="background-color:#EEEEEE;" class="listr">
+						<table width="100%" border="0" cellspacing="10" cellpadding="1">
+							<?php
+							array_sort_key($swapinfo, "device");
+							$ctrlid = 0;
+							foreach ($swapinfo as $swapk => $swapv) {
+								$ctrlid++;
+								$percent_used = rtrim($swapv['capacity'], "%");
+								$tooltip_used = sprintf(gettext("%sB used of %sB"), $swapv['used'], $swapv['total']);
+								$tooltip_available = sprintf(gettext("%sB available of %sB"), $swapv['avail'], $swapv['total']);
+
+								echo "<tr><td><div id='swapusage'>";
+								echo "<img src='bar_left.gif' class='progbarl' alt='' />";
+								echo "<img src='bar_blue.gif' name='swapusage_{$ctrlid}_bar_used' id='swapusage_{$ctrlid}_bar_used' width='{$percent_used}' class='progbarcf' title='{$tooltip_used}' alt='' />";
+								echo "<img src='bar_gray.gif' name='swapusage_{$ctrlid}_bar_free' id='swapusage_{$ctrlid}_bar_free' width='" . (100 - $percent_used) . "' class='progbarc' title='{$tooltip_available}' alt='' />";
+								echo "<img src='bar_right.gif' class='progbarr' alt='' /> ";
+								echo sprintf(gettext("%s of %sB"),
+									"<span name='swapusage_{$ctrlid}_capacity' id='swapusage_{$ctrlid}_capacity' class='capacity'>{$swapv['capacity']}</span>",
+									$swapv['total']);
+								echo "<br />";
+								echo sprintf(gettext("Device: %s | Total: %s | Used: %s | Free: %s"),
+									"<span name='swapusage_{$ctrlid}_device' id='swapusage_{$ctrlid}_device' class='device'>{$swapv['device']}</span>",
+									"<span name='swapusage_{$ctrlid}_total' id='swapusage_{$ctrlid}_total' class='total'>{$swapv['total']}</span>",
+									"<span name='swapusage_{$ctrlid}_used' id='swapusage_{$ctrlid}_used' class='used'>{$swapv['used']}</span>",
+									"<span name='swapusage_{$ctrlid}_free' id='swapusage_{$ctrlid}_free' class='free'>{$swapv['avail']}</span>");
+								echo "</div></td></tr>";
+
+								if ($ctrlid < count($swapinfo))
+										echo "<tr><td><hr size='1' /></td></tr>";
+							}?>
+						</table>
+					</td>
+				</tr>
+				<?php endif;?>
+				<tr>
 					<?php html_combobox("type", gettext("Type"), $pconfig['type'], array("file" => gettext("File"), "device" => gettext("Device")), "", true, false, "type_change()");?>
 					<?php html_mountcombobox("mountpoint", gettext("Mount point"), $pconfig['mountpoint'], gettext("Select mount point where to create the swap file."), true);?>
 					<?php html_inputbox("size", gettext("Size"), $pconfig['size'], gettext("The size of the swap file in MB."), true, 10);?>
-					<?php html_inputbox("devicespecialfile", gettext("Device"), $pconfig['devicespecialfile'], sprintf(gettext("Name of the device to use as swap device, e.g. %s."), "/dev/ada0s2b"), true, 20);?>
+					<?php html_inputbox("devicespecialfile", gettext("Device"), $pconfig['devicespecialfile'], sprintf(gettext("Name of the device to use as swap device, e.g. %s."), "/dev/da0s2b"), true, 20);?>
 				</table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save");?>" onclick="enable_change(true)" />
