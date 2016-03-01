@@ -37,7 +37,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("System"), gettext("Advanced"));
+$pgtitle = array(gettext("System"), gettext("Advanced Setup"));
 
 $pconfig['disableconsolemenu'] = isset($config['system']['disableconsolemenu']);
 $pconfig['disablefm'] = isset($config['system']['disablefm']);
