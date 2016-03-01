@@ -416,7 +416,7 @@ $(document).ready(function(){
 	<?php endif;?>
 	<?php html_textinfo("hostname", gettext("Hostname"), system_get_hostname());?>
 	<?php html_textinfo("version", gettext("Version"), sprintf("<strong>%s %s</strong> (%s %s)", get_product_version(), get_product_versionname(), gettext("revision"), get_product_revision()));?>
-	<?php html_textinfo("builddate", gettext("Compiled"), get_date_locale_from_timestamp(get_product_buildtimestamp()));?>
+	<?php html_textinfo("builddate", gettext("Compiled"), htmlspecialchars(get_datetime_locale(get_product_buildtimestamp())));?>
 	<?php
 		exec("/sbin/sysctl -n kern.osrevision", $osrevision);
 		exec("/sbin/sysctl -n kern.version", $osversion);
@@ -431,11 +431,11 @@ $(document).ready(function(){
 		}
 	?>
 	<?php html_textinfo("system_bios", gettext("System bios"), sprintf("%s %s %s %s", htmlspecialchars($smbios['bios']['vendor']), gettext("version:"), htmlspecialchars($smbios['bios']['version']), htmlspecialchars($smbios['bios']['reldate'])));?>
-	<?php html_textinfo("system_datetime", gettext("System time"), htmlspecialchars(get_systemdate_locale()));?>
+	<?php html_textinfo("system_datetime", gettext("System time"), htmlspecialchars(get_datetime_locale()));?>
 	<?php html_textinfo("system_uptime", gettext("System uptime"), htmlspecialchars(system_get_uptime()));?>
 	<?php if (Session::isAdmin()):?>
 		<?php if ($config['lastchange']):?>
-			<?php html_textinfo("last_config_change", gettext("System last config change"), htmlspecialchars(get_date_locale_from_timestamp($config['lastchange'])));?>
+			<?php html_textinfo("last_config_change", gettext("System last config change"), htmlspecialchars(get_datetime_locale($config['lastchange'])));?>
 		<?php endif;?>
 		<?php if (!empty($cpuinfo['temperature2'])):
 			echo "<tr>";

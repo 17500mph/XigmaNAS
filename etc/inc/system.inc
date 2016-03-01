@@ -840,7 +840,7 @@ function system_get_sysinfo() {
 
 	// Get uptime and date.
 	$value['uptime'] = system_get_uptime();
-	$value['date'] = get_systemdate_locale();
+	$value['date'] = get_datetime_locale();
 
 	// Get RAM usage.
 	$raminfo = system_get_ram_info();
@@ -873,95 +873,49 @@ function system_get_sysinfo() {
 	return $value;
 }
 
-function convert_date_string_to_locale($data) {
-	global $config;
-// date string format: "%Y.%m.%d.%H.%I.%p.%M.%S.%A.%a.%B.%b.%Z.%z"
-	$a = explode('.', $data);
-	// a[ 0]  =  %1$s: Year (4 digits)
-	// a[ 1]  =  %2$s: Month (2 digits)
-	// a[ 2]  =  %3$s: Day (2 digits)
-	// a[ 3]  =  %4$s: Hour.24 (2 digits)
-	// a[ 4]  =  %5$s: Hour.12 (2 digits)
-	// a[ 5]  =  %6$s: AM/PM (Capital letters)
-	// a[ 6]  =  %7$s: Minute (2 digits)
-	// a[ 7]  =  %8$s: Second (2 digits)
-	// a[ 8]* =  %9$s: Day of the week long (can be localised via gettext)
-	// a[ 9]* = %10$s: Day of the week short (can be localised via gettext)
-	// a[10]* = %11$s: Name of the month long (can be localised via gettext)
-	// a[11]* = %12$s: Name of the month short (can be localised via gettext)
-	// a[12]  = %13$s: Time zone
-	// a[13]  = %14$s: Time zone offset (+/- followed by 4 digits)
-	$a_datetimeformat = get_datetime_formats();
-	$format_id = !empty($config['system']['datetimeformatid']) ? $config['system']['datetimeformatid'] : 'default';
-	if (!isset($a_datetimeformat[$format_id])) {
-		$a_datetimeformat[$format_id] = '%10$s %12$s %3$s %4$s:%7$s:%8$s %13$s %1$s';
-	}
-	$retval = sprintf($a_datetimeformat[$format_id],$a[0],$a[1],$a[2],$a[3],$a[4],$a[5],$a[6],$a[7],gettext($a[8]),gettext($a[9]),gettext($a[10]),gettext($a[11]),$a[12],$a[13]);
-	return $retval;
-}
-
-function get_datetime_samples() {
+function get_datetime_locale_samples() {
 	$retval = [];
-	$data = shell_exec('date "+%Y.%m.%d.%H.%I.%p.%M.%S.%A.%a.%B.%b.%Z.%z"');
-	$a = explode('.', $data);
-	$a_datetimeformat = get_datetime_formats();
-	foreach($a_datetimeformat as $r_key => $r_val) {
-		$retval[$r_key] = sprintf($r_val,$a[0],$a[1],$a[2],$a[3],$a[4],$a[5],$a[6],$a[7],gettext($a[8]),gettext($a[9]),gettext($a[10]),gettext($a[11]),$a[12],$a[13]);
+	$sphere_array = [
+		'D M d H:i:s T Y',    // Thu Feb 25 22:52:29 CET 2016
+		'D d M Y H:i:s',      // Thu 25 Feb 2016 22:52:29
+		'D d M Y H:i:s T',    // Thu 25 Feb 2016 22:52:29 CET
+		'D d M Y H:i:s T O',  // Thu 25 Feb 2016 22:52:29 CET +0100
+		'l F d H:i:s T Y',    // Thursday February 25 22:52:29 BST 2016
+		'l d F Y H:i:s',      // Thursday 25 February 2016 22:52:29
+		'l d F Y H:i:s T',    // Thursday 25 February 2016 22:52:29 BST
+		'l d F Y H:i:s T O',  // Thursday 25 February 2016 22:52:29 BST +0100
+		'D M d h:i:s A T Y',  // Thu Feb 25 10:52:29 PM PT 2016
+		'l F d h:i:s A T Y',  // Thursday February 25 10:52:29 PM BST 2016
+		'd.m.Y H:i:s',        // 25.02.2016 22:31:42
+		'd/m/Y H:i:s',        // 25/02/2016 22:31:42
+		'd/m/Y h:i:s A',      // 25/02/2016 10:31:42 PM
+		'm/d/Y H:i:s',        // 02/25/2016 22:31:42
+		'm/d/Y h:i:s A',      // 02/25/2016 10:31:42 PM
+		'Y-m-d H:i:s'         // 2016-02-02 22:31:42
+	];
+	$now = shell_exec('date "+%s"');
+	foreach ($sphere_array as $sphere_record) {
+		$retval[$sphere_record] = get_datetime_locale($now, $sphere_record);
 	}
 	return $retval;
 }
 
-function get_datetime_formats() {
-	$retval = [
-		"default" => '%10$s %12$s %3$s %4$s:%7$s:%8$s %13$s %1$s', // Thu Feb 25 22:52:29 CET 2016
-		"format_sham" => '%10$s %12$s %3$s %5$s:%7$s:%8$s %6$s %13$s %1$s', // Thu Feb 25 10:52:29 PM PT 2016
-		"format_lo24" => '%9$s %11$s %3$s %4$s:%7$s:%8$s %13$s %1$s', // Thursday February 25 22:52:29 BST 2016
-		"format_loam" => '%9$s %11$s %3$s %5$s:%7$s:%8$s %6$s %13$s %1$s', // Thursday February 25 10:52:29 PM BST 2016
-		"format_deat" => '%3$s.%2$s.%1$s %4$s:%7$s:%8$s', // 25.02.2016 22:31:42
-		"format_gb24" => '%3$s/%2$s/%1$s %4$s:%7$s:%8$s', // 25/02/2016 22:31:42
-		"format_gbam" => '%3$s/%2$s/%1$s %5$s:%7$s:%8$s %6$s', // 25/02/2016 10:31:42 PM
-		"format_us24" => '%2$s/%3$s/%1$s %4$s:%7$s:%8$s', // 02/25/2016 22:31:42
-		"format_usam" => '%2$s/%3$s/%1$s %5$s:%7$s:%8$s %6$s', // 02/25/2016 10:31:42 PM
-		"format_iso" => '%1$s-%2$s-%3$s %4$s:%7$s:%8$s' // 2016-02-02 22:31:42
+function get_datetime_locale($timestamp = null, $format = null) {
+	global $config;
+	$retval = '';
+	$timestamp = ($timestamp === null) ? shell_exec('date "+%s"') : $timestamp;
+	$format = ($format === null) ? (isset($config['system']['datetimeformat']) ? $config['system']['datetimeformat'] : 'D M d H:m:i T Y') : $format;
+	$datetime_object = new DateTime();
+	$datetime_object->setTimestamp($timestamp);
+	$format_symbols = ['D','l','M','F'];
+	$replacement_symbols = ['%1','%2','%3','%4'];
+	$localised_names = [
+		gettext($datetime_object->format($format_symbols[0])),
+		gettext($datetime_object->format($format_symbols[1])),
+		gettext($datetime_object->format($format_symbols[2])),
+		gettext($datetime_object->format($format_symbols[3]))
 	];
-	return $retval;
-}
-
-function get_systemdate_locale() {
-	// %Y = Year (4 digits)
-	// %m = Month (2 digits)
-	// %d = Day (2 digits)
-	// %H = Hour.24 (2 digits)
-	// %I = Hour.12 (2 digits)
-	// %p = AM/PM (Capital letters)
-	// %M = Minute (2 digits)
-	// %S = Second (2 digits)
-	// %A = Day of the week long (can be localised via gettext)
-	// %a = Day of the week short (can be localised via gettext)
-	// %B = Name of the month long (can be localised via gettext)
-	// %b = Name of the month short (can be localised via gettext)
-	// %Z = Time zone
-	// %z = Time zone offset (+/- followed by 4 digits)
-	$retval = convert_date_string_to_locale(shell_exec('date "+%Y.%m.%d.%H.%I.%p.%M.%S.%A.%a.%B.%b.%Z.%z"'));
-	return $retval;
-}
-
-function get_date_locale_from_timestamp($timestamp) {
-	// Y = Year (4 digits)
-	// m = Month (2 digits)
-	// d = Day (2 digits)
-	// H = Hour.24 (2 digits)
-	// h = Hour.12 (2 digits)
-	// A = AM/PM (Capital letters)
-	// i = Minute (2 digits)
-	// s = Second (2 digits)
-	// l = Day of the week long (can be localised via gettext)
-	// D = Day of the week short (can be localised via gettext)
-	// F = Name of the month long (can be localised via gettext)
-	// M = Name of the month short (can be localised via gettext)
-	// T = Time zone
-	// O = Time zone offset (+/- followed by 4 digits)
-	$retval = convert_date_string_to_locale(date('Y.m.d.H.h.A.i.s.l.D.F.M.T.O', $timestamp));
+	$retval = str_replace($replacement_symbols, $localised_names, $datetime_object->format(str_replace($format_symbols, $replacement_symbols, $format))); // Do the whole thing in one go
 	return $retval;
 }
 ?>
