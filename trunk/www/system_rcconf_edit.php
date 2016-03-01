@@ -152,7 +152,7 @@ $pgtitle = array(gettext("System"), gettext("Advanced"), gettext("rc.conf"), (RE
 				<li class="tabinact"><a href="system_email.php"><span><?=gettext("Email");?></span></a></li>
 				<li class="tabinact"><a href="system_proxy.php"><span><?=gettext("Proxy");?></span></a></li>
 				<li class="tabinact"><a href="system_swap.php"><span><?=gettext("Swap");?></span></a></li>
-				<li class="tabinact"><a href="system_rc.php"><span><?=gettext("Command scripts");?></span></a></li>
+				<li class="tabinact"><a href="system_rc.php"><span><?=gettext("Command Scripts");?></span></a></li>
 				<li class="tabinact"><a href="system_cron.php"><span><?=gettext("Cron");?></span></a></li>
 				<li class="tabinact"><a href="system_loaderconf.php"><span><?=gettext("loader.conf");?></span></a></li>
 				<li class="tabact"><a href="system_rcconf.php" title="<?=gettext("Reload page");?>"><span><?=gettext("rc.conf");?></span></a></li>

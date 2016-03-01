@@ -148,7 +148,7 @@ function enable_change(enable_change) {
       	<li class="tabinact"><a href="system_advanced.php"><span><?=gettext("Advanced");?></span></a></li>
       	<li class="tabact"><a href="system_email.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Email");?></span></a></li>
       	<li class="tabinact"><a href="system_swap.php"><span><?=gettext("Swap");?></span></a></li>
-      	<li class="tabinact"><a href="system_rc.php"><span><?=gettext("Command scripts");?></span></a></li>
+      	<li class="tabinact"><a href="system_rc.php"><span><?=gettext("Command Scripts");?></span></a></li>
         <li class="tabinact"><a href="system_cron.php"><span><?=gettext("Cron");?></span></a></li>
 		<li class="tabinact"><a href="system_loaderconf.php"><span><?=gettext("loader.conf");?></span></a></li>
         <li class="tabinact"><a href="system_rcconf.php"><span><?=gettext("rc.conf");?></span></a></li>
@@ -164,7 +164,7 @@ function enable_change(enable_change) {
 				<?php if (!empty($failmsg)) print_error_box($failmsg);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 			    		<?php html_titleline(gettext("Email"));?>
-					<?php html_inputbox("from", gettext("Email Address"), $pconfig['from'], gettext("Set the email address for receiving system messages."), true, 60);?>
+					<?php html_inputbox("from", gettext("Email Address"), $pconfig['from'], gettext("Email address for sending system messages."), true, 60);?>
 					<?php html_inputbox("server", gettext("SMTP Server"), $pconfig['server'], gettext("Outgoing SMTP mail server address."), true, 60);?>
 					<?php html_inputbox("port", gettext("Port"), $pconfig['port'], gettext("The default SMTP mail server port, e.g. 25 or 587."), true, 5);?>
 					<?php html_combobox("security", gettext("Security"), $pconfig['security'], array("none" => gettext("None"), "ssl" => "SSL", "tls" => "TLS"), "", true);?>
@@ -173,7 +173,7 @@ function enable_change(enable_change) {
 					<?php html_inputbox("username", gettext("Username"), $pconfig['username'], "", true, 40);?>
 					<?php html_passwordconfbox("password", "passwordconf", gettext("Password"), $pconfig['password'], $pconfig['passwordconf'], "", true);?>
 					<?php html_combobox("authmethod", gettext("Authentication method"), $pconfig['authmethod'], array("plain" => "Plain", "cram-md5" => "Cram-MD5", "digest-md5" => "Digest-MD5", "gssapi" => "GSSAPI", "external" => "External", "login" => "Login", "ntlm" => "NTLM", "on" => gettext("Best available")), "", true);?>
-			  </table>
+				</table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save");?>" />
 					<input name="Submit" id="sendnow" type="submit" class="formbtn" value="<?=$sendtestemailbuttonvalue;?>" />

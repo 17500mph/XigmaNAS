@@ -47,7 +47,7 @@ if (isset($_GET['type']))
 if (isset($_POST['type']))
 	$type = $_POST['type'];
 
-$pgtitle = array(gettext("System"), gettext("Advanced"), gettext("Command scripts"), isset($id) ? gettext("Edit") : gettext("Add"));
+$pgtitle = array(gettext("System"), gettext("Advanced"), gettext("Command Scripts"), isset($id) ? gettext("Edit") : gettext("Add"));
 
 if (!isset($config['rc']['preinit']['cmd']) || !is_array($config['rc']['preinit']['cmd']))
 	$config['rc']['preinit']['cmd'] = array();
@@ -126,7 +126,7 @@ if ($_POST) {
       	<li class="tabinact"><a href="system_advanced.php"><span><?=gettext("Advanced");?></span></a></li>
       	<li class="tabinact"><a href="system_email.php"><span><?=gettext("Email");?></span></a></li>
       	<li class="tabinact"><a href="system_swap.php"><span><?=gettext("Swap");?></span></a></li>
-        <li class="tabact"><a href="system_rc.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Command scripts");?></span></a></li>
+        <li class="tabact"><a href="system_rc.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Command Scripts");?></span></a></li>
         <li class="tabinact"><a href="system_cron.php"><span><?=gettext("Cron");?></span></a></li>
 		<li class="tabinact"><a href="system_loaderconf.php"><span><?=gettext("loader.conf");?></span></a></li>
         <li class="tabinact"><a href="system_rcconf.php"><span><?=gettext("rc.conf");?></span></a></li>
