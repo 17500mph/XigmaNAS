@@ -69,7 +69,10 @@ pre {
 	font-weight: bold;
 }
 .vncellbg, .vncell, .vncellreq, .vncellt {
-	background: #D6D6D6 url("vncell_bg.png") repeat-x scroll left top;
+	background-color: #D6D6D6;
+/*
+	background: #DCDCDC url("vncell_bg.png") repeat-x scroll left top;
+*/
 	padding-right: 20px;
 	padding-left: 8px;
 }
