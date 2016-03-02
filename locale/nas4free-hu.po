@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-03-02 06:26+0000\n"
-"PO-Revision-Date: 2016-02-28 10:47+0000\n"
+"PO-Revision-Date: 2016-03-02 07:15+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-02 06:37+0000\n"
+"X-Launchpad-Export-Date: 2016-03-02 19:05+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -598,7 +598,7 @@ msgid "Advanced Settings"
 msgstr "Haladó beállítások"
 
 msgid "Advanced Setup"
-msgstr ""
+msgstr "Speciális beállítás"
 
 msgid "Advanced settings"
 msgstr "Speciális beállítások"
@@ -1328,7 +1328,7 @@ msgid "Command"
 msgstr "Parancs"
 
 msgid "Command Scripts"
-msgstr ""
+msgstr "Parancsszkript"
 
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
@@ -1399,7 +1399,7 @@ msgid "Console Menu"
 msgstr "Konzol menü"
 
 msgid "Console Settings"
-msgstr ""
+msgstr "Konzolbeállítások"
 
 msgid "Console screensaver"
 msgstr "Konzol képernyőkímélő"
@@ -1821,10 +1821,10 @@ msgid "Dataset"
 msgstr "Adattár"
 
 msgid "Dataset is locked"
-msgstr ""
+msgstr "Adattár zárolt"
 
 msgid "Dataset is marked for deletion"
-msgstr ""
+msgstr "Adattár törlésre megjelölve"
 
 msgid "Datasets"
 msgstr "Adattárak (datasets)"
@@ -2167,16 +2167,16 @@ msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "TCP wrapper tiltása(mod_wrap module)."
 
 msgid "Disable console menu."
-msgstr ""
+msgstr "Konzolmenü tiltása"
 
 msgid "Disable file manager completely."
-msgstr ""
+msgstr "Fájlkezelő teljes tiltása."
 
 msgid "Disable firmware version check."
-msgstr ""
+msgstr "Firmware-verzió ellenőrzésének tiltása."
 
 msgid "Disable speaker beep on startup and shutdown."
-msgstr ""
+msgstr "Hangszóró sípolásának kikapcsolása induláskor és leállításkor."
 
 msgid "Disable the compression of repeated line"
 msgstr "Ismétlődő sor tömörítésének tiltása"
@@ -2497,7 +2497,7 @@ msgid "Edit"
 msgstr "Szerkesztés"
 
 msgid "Edit Dataset"
-msgstr ""
+msgstr "Adattár módosítása"
 
 msgid "Edit Host"
 msgstr "Állomásnév módosítása"
@@ -2600,13 +2600,13 @@ msgid "Email"
 msgstr "E-mail"
 
 msgid "Email Address"
-msgstr ""
+msgstr "E-mail cím"
 
 msgid "Email Report"
 msgstr "E-mail jelentés"
 
 msgid "Email address for sending system messages."
-msgstr ""
+msgstr "Rendszerüzenetek küldésére használt e-mail cím."
 
 msgid "Empty as default."
 msgstr "Alapértelmezetten üres"
@@ -2671,7 +2671,7 @@ msgid "Enable ZFS ACL"
 msgstr "ZFS ACL engedélyezése"
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
-msgstr ""
+msgstr "Az eszköz szolgáltatásait közzétevő Zeroconf/Bonjour engedélyezése."
 
 msgid "Enable anonymous bind."
 msgstr "Névtelen csatlakozás engedélyezése"
@@ -2683,7 +2683,7 @@ msgid "Enable compression."
 msgstr "Tömörítés engedélyezése."
 
 msgid "Enable console screensaver."
-msgstr ""
+msgstr "Konzol-képernyővédő engedélyezése."
 
 msgid "Enable device polling"
 msgstr "Eszköz szavaztatás (device polling) engedélyezése"
@@ -2769,7 +2769,7 @@ msgid "Enable reverse DNS lookup."
 msgstr "Fordított DNS keresés engedélyezése"
 
 msgid "Enable serial console."
-msgstr ""
+msgstr "Speciális konzol engedélyezése."
 
 msgid "Enable shadow copy"
 msgstr "Árnyékmásolat engedélyezése"
@@ -2784,7 +2784,7 @@ msgid "Enable the ident protocol (RFC1413)."
 msgstr "Ident protocol (RFC1413) engedélyezése"
 
 msgid "Enable the system power control utility."
-msgstr ""
+msgstr "Rendszer teljesítményét szabályozó segédprogram engedélyezése."
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "DLNA-szabványok szigorú betartásának engedélyezése."
@@ -2796,7 +2796,7 @@ msgid "Enable traps."
 msgstr "Csapdák engedélyezése."
 
 msgid "Enable tuning of some kernel variables."
-msgstr ""
+msgstr "Néhány kernelváltozó hangolásának engedélyezése"
 
 msgid "Enable write cache mode."
 msgstr "Írás cache engedélyezése."
@@ -3152,7 +3152,7 @@ msgid "Firmware"
 msgstr "Firmware"
 
 msgid "Firmware Check"
-msgstr ""
+msgstr "Firmware ellenőrzése"
 
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Firmware feltöltése meghiúsult (elfogyott a memória?)"
@@ -3940,10 +3940,10 @@ msgid "Japanese"
 msgstr "Japán"
 
 msgid "Job is locked"
-msgstr ""
+msgstr "Feladat zárolva"
 
 msgid "Job is marked for deletion"
-msgstr ""
+msgstr "Feladat törlésre megjelölve."
 
 msgid "Jul"
 msgstr "Júl"
@@ -4309,10 +4309,10 @@ msgid "MIB"
 msgstr "Változó (MIB)"
 
 msgid "MIB is locked"
-msgstr ""
+msgstr "MIB zárolva"
 
 msgid "MIB is marked for deletion"
-msgstr ""
+msgstr "MIB törlésre megjelölve"
 
 msgid "MISSING"
 msgstr "HIÁNYZIK"
@@ -4632,10 +4632,10 @@ msgid "Mounts"
 msgstr "Csatolások (mounts)"
 
 msgid "Move down"
-msgstr ""
+msgstr "Mozgatás le"
 
 msgid "Move up"
-msgstr ""
+msgstr "Mozgatás fel"
 
 msgid "Music"
 msgstr "Zene"
@@ -5073,10 +5073,10 @@ msgid "Option"
 msgstr "Beállítás"
 
 msgid "Option is locked"
-msgstr ""
+msgstr "Beállítás zárolva"
 
 msgid "Option is marked for deletion"
-msgstr ""
+msgstr "Beállítás törlésre megjelölve"
 
 msgid "Optional user-friendly string of the target."
 msgstr "A cél opcionális felhasználóbarát sztringje."
@@ -5097,7 +5097,7 @@ msgid "Outgoing Power/Inverter Information"
 msgstr "Kimenő teljesítmény/Inverter Information"
 
 msgid "Outgoing SMTP mail server address."
-msgstr ""
+msgstr "Kimenő SMTP levelezőszerver címe."
 
 msgid "Output current (A)"
 msgstr "Kimeneti áram (A)"
@@ -5283,7 +5283,7 @@ msgid "Peer port"
 msgstr "Peer port"
 
 msgid "Performance Settings"
-msgstr ""
+msgstr "Teljesítmény beállítások"
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
@@ -5879,7 +5879,7 @@ msgstr ""
 "operációs rendszer számára, mint például az XP."
 
 msgid "SMTP Server"
-msgstr ""
+msgstr "SMTP szerver"
 
 msgid "SNMP"
 msgstr "SNMP"
@@ -6303,7 +6303,7 @@ msgid "Software RAID"
 msgstr "Szoftveres RAID"
 
 msgid "Software Used"
-msgstr ""
+msgstr "Felhasznált szoftver"
 
 msgid "Source"
 msgstr "Forrás"
@@ -6343,7 +6343,7 @@ msgid "Sparse Volume"
 msgstr "Szórványos kötet"
 
 msgid "Speaker Beep"
-msgstr ""
+msgstr "Hangszóró sípolása"
 
 msgid ""
 "Specific to He8 drives from HGST. The Helium, so says the literature, allows "
@@ -8006,7 +8006,7 @@ msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr "A kiválasztott esemény bekövetkezésekor ezt a szabály hívjuk meg."
 
 msgid "This server uses default swap!"
-msgstr ""
+msgstr "Ez a szerver az alapértelmezett cserehelyet használja!"
 
 msgid "This tag already exists."
 msgstr "Ez az elem már létezik."
@@ -8598,7 +8598,7 @@ msgstr ""
 "hogy legyen neki érvényes login-ja."
 
 msgid "Use toggle button instead of enable/disable buttons."
-msgstr ""
+msgstr "Átkapcsoló gomb használata az engedélyezés/tiltás helyett."
 
 msgid "Used"
 msgstr "Felhasznált"
@@ -8746,10 +8746,10 @@ msgid "Volume Size Limit"
 msgstr "Kötet méretének korlátja"
 
 msgid "Volume is locked"
-msgstr ""
+msgstr "Kötet zárolva"
 
 msgid "Volume is marked for deletion"
-msgstr ""
+msgstr "Kötet törlésre megjelölve"
 
 msgid "Volume label"
 msgstr "Címke"
