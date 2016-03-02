@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-02-28 07:30+0000\n"
-"PO-Revision-Date: 2015-12-27 22:09+0000\n"
-"Last-Translator: Alex Lin <linuxant@gmail.com>\n"
+"POT-Creation-Date: 2016-03-02 06:26+0000\n"
+"PO-Revision-Date: 2016-02-28 23:26+0000\n"
+"Last-Translator: Wei Chen <javabus@yahoo.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-28 14:16+0000\n"
+"X-Launchpad-Export-Date: 2016-03-02 06:37+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -55,15 +55,15 @@ msgstr "%s 介面"
 
 #, php-format
 msgid "%s already exists as a %s."
-msgstr ""
+msgstr "%s 类似存在 %s。"
 
 #, php-format
 msgid "%s is already configured as a filesystem."
-msgstr ""
+msgstr "%s 文件系统配置文件已存在。"
 
 #, php-format
 msgid "%s is already configured as a volume."
-msgstr ""
+msgstr "%s 卷已存在。"
 
 #, php-format
 msgid "%s is too long."
@@ -334,7 +334,7 @@ msgid "AIO write size"
 msgstr "AIO写入大小"
 
 msgid "ALL Interfaces"
-msgstr ""
+msgstr "全部接口"
 
 msgid "AP mode"
 msgstr "AP 模式"
@@ -355,7 +355,7 @@ msgid "Access"
 msgstr "权限"
 
 msgid "Access Mode"
-msgstr ""
+msgstr "访问方式"
 
 msgid "Access Restrictions"
 msgstr "存取权限"
@@ -399,7 +399,7 @@ msgid "Add"
 msgstr "添加"
 
 msgid "Add Dataset"
-msgstr ""
+msgstr "添加数据集"
 
 msgid "Add Host"
 msgstr "添加主机"
@@ -420,7 +420,7 @@ msgid "Add URL"
 msgstr "添加 URL"
 
 msgid "Add Volume"
-msgstr ""
+msgstr "添加卷"
 
 msgid "Add additional scheduled self-test."
 msgstr "添加附加的计划自我检测"
@@ -498,7 +498,7 @@ msgid "Additional Network"
 msgstr "其他网络"
 
 msgid "Additional Storage"
-msgstr ""
+msgstr "额外的存储"
 
 msgid "Additional group"
 msgstr "其他群组"
@@ -539,6 +539,9 @@ msgstr "高级选项"
 msgid "Advanced Settings"
 msgstr "高级设置"
 
+msgid "Advanced Setup"
+msgstr ""
+
 msgid "Advanced settings"
 msgstr "高级设置"
 
@@ -576,7 +579,7 @@ msgstr "积极模式"
 msgid ""
 "Airflow temperature on Western Digital HDs (Same as temp. , but current "
 "value is 50 less for some models. Marked as obsolete.)"
-msgstr ""
+msgstr "西部数据硬盘气流温度 (等同于温度，但是有些硬盘次项温度读数偏低50度。标记为过期参数。 )"
 
 msgid "Albanian"
 msgstr "阿尔巴尼亚文"
@@ -1217,6 +1220,9 @@ msgstr ""
 msgid "Command"
 msgstr "指令"
 
+msgid "Command Scripts"
+msgstr ""
+
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
 msgstr "LINK_DOWN 事件的指令（例如 %s）。"
@@ -1227,9 +1233,6 @@ msgstr "LINK_UP 事件的指令（例如 %s）。"
 
 msgid "Command output:"
 msgstr "指令输出："
-
-msgid "Command scripts"
-msgstr "指令脚本（Command scripts）"
 
 msgid "Comment"
 msgstr "注释"
@@ -1284,6 +1287,9 @@ msgstr "考虑更换此驱动器"
 
 msgid "Console Menu"
 msgstr "控制台菜单"
+
+msgid "Console Settings"
+msgstr ""
 
 msgid "Console screensaver"
 msgstr "控制台屏幕保护程序"
@@ -1654,6 +1660,12 @@ msgstr "数据库目录"
 msgid "Dataset"
 msgstr "数据集"
 
+msgid "Dataset is locked"
+msgstr ""
+
+msgid "Dataset is marked for deletion"
+msgstr ""
+
 msgid "Datasets"
 msgstr "数据集（Datasets）"
 
@@ -1970,9 +1982,6 @@ msgstr "含有可移动媒体的目录。 （例如 /mnt/iscsi/）"
 msgid "Directory to watch for new .torrent files."
 msgstr "监视新 .torrent 文件的目录。"
 
-msgid "Disable File Manager"
-msgstr "关闭文件管理程式"
-
 msgid "Disable Firmware Update"
 msgstr "关闭固件更新"
 
@@ -1985,14 +1994,17 @@ msgstr ""
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "关闭 TCP Wrapper（mod_wrap 模块）。"
 
-msgid "Disable console menu"
-msgstr "关闭控制台选单"
+msgid "Disable console menu."
+msgstr ""
 
-msgid "Disable firmware version check"
-msgstr "关闭固件版本检查功能"
+msgid "Disable file manager completely."
+msgstr ""
 
-msgid "Disable speaker beep on startup and shutdown"
-msgstr "关闭开/关机时的提示声响"
+msgid "Disable firmware version check."
+msgstr ""
+
+msgid "Disable speaker beep on startup and shutdown."
+msgstr ""
 
 msgid "Disable the compression of repeated line"
 msgstr ""
@@ -2299,6 +2311,9 @@ msgstr "错误："
 msgid "Edit"
 msgstr "编辑"
 
+msgid "Edit Dataset"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "编辑主机资讯"
 
@@ -2331,9 +2346,6 @@ msgstr "编辑自动快照"
 
 msgid "Edit command"
 msgstr "编辑指令"
-
-msgid "Edit dataset"
-msgstr "编辑数据集"
 
 msgid "Edit device"
 msgstr "编辑设备"
@@ -2402,8 +2414,14 @@ msgstr "UPS的效率（输入电流的输出电流的对比率）"
 msgid "Email"
 msgstr "电子邮件"
 
+msgid "Email Address"
+msgstr ""
+
 msgid "Email Report"
 msgstr "电邮报告"
+
+msgid "Email address for sending system messages."
+msgstr ""
 
 msgid "Empty as default."
 msgstr "默认值为空白。"
@@ -2463,8 +2481,8 @@ msgstr "启用Time Machine的支持"
 msgid "Enable ZFS ACL"
 msgstr "启用ZFS存取控制清单（ACL）"
 
-msgid "Enable Zeroconf/Bonjour to advertise services of this device"
-msgstr "启用的 Zeroconf/Bonjour 来宣传这个装置的服务"
+msgid "Enable Zeroconf/Bonjour to advertise services of this device."
+msgstr ""
 
 msgid "Enable anonymous bind."
 msgstr "启用匿名绑定。"
@@ -2475,8 +2493,8 @@ msgstr "启用认证。"
 msgid "Enable compression."
 msgstr "启用资料压缩。"
 
-msgid "Enable console screensaver"
-msgstr "启用控制台的屏幕保护程序"
+msgid "Enable console screensaver."
+msgstr ""
 
 msgid "Enable device polling"
 msgstr "启用设备轮询"
@@ -2558,8 +2576,8 @@ msgstr "启用反向DNS来查找传入远程主机IP位址的主动模式数据�
 msgid "Enable reverse DNS lookup."
 msgstr "啟用反向DNS查找。"
 
-msgid "Enable serial console"
-msgstr "启用串行控制台"
+msgid "Enable serial console."
+msgstr ""
 
 msgid "Enable shadow copy"
 msgstr "启用阴影复制"
@@ -2573,8 +2591,8 @@ msgstr "开启 syslog'ing 写入远端 syslog 伺服器"
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "启用 ident 协议（RFC1413）。"
 
-msgid "Enable the system power control utility"
-msgstr "启用电源监控程序。"
+msgid "Enable the system power control utility."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr ""
@@ -2585,8 +2603,8 @@ msgstr "启用转码功能。"
 msgid "Enable traps."
 msgstr "启用 traps。"
 
-msgid "Enable tuning of some kernel variables"
-msgstr "开启系统核心的参数微调"
+msgid "Enable tuning of some kernel variables."
+msgstr ""
 
 msgid "Enable write cache mode."
 msgstr "开启写入缓存模式。"
@@ -2913,6 +2931,9 @@ msgstr "防火墙规则设置"
 msgid "Firmware"
 msgstr "固件"
 
+msgid "Firmware Check"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr "固件上传失败（内存不足？）"
 
@@ -2921,9 +2942,6 @@ msgstr "此系统并不支持固件上传功能。."
 
 msgid "Firmware version"
 msgstr "固件版本"
-
-msgid "Firmware version check"
-msgstr "固件版本检查"
 
 msgid "FirstBurstLength"
 msgstr "FirstBurstLength"
@@ -2974,9 +2992,6 @@ msgstr ""
 
 msgid "Friday"
 msgstr ""
-
-msgid "From email"
-msgstr "发信人"
 
 msgid "Fsck"
 msgstr "Fsck"
@@ -3644,6 +3659,12 @@ msgstr "一月 二月 三月 四月 五月 六月 七月 八月 九月 十月 �
 msgid "Japanese"
 msgstr "日文"
 
+msgid "Job is locked"
+msgstr ""
+
+msgid "Job is marked for deletion"
+msgstr ""
+
 msgid "Jul"
 msgstr ""
 
@@ -3978,6 +3999,12 @@ msgstr "MBR 分区"
 msgid "MIB"
 msgstr "管理信息库（MIB）"
 
+msgid "MIB is locked"
+msgstr ""
+
+msgid "MIB is marked for deletion"
+msgstr ""
+
 msgid "MISSING"
 msgstr "遗失"
 
@@ -4281,6 +4308,12 @@ msgstr "挂载中..."
 
 msgid "Mounts"
 msgstr "挂载点"
+
+msgid "Move down"
+msgstr ""
+
+msgid "Move up"
+msgstr ""
 
 msgid "Music"
 msgstr "音乐"
@@ -4671,6 +4704,12 @@ msgstr "只允许授权用户，匿名用户无法登录。"
 msgid "Option"
 msgstr "选项"
 
+msgid "Option is locked"
+msgstr ""
+
+msgid "Option is marked for deletion"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr "自选易用的目标字符串。"
 
@@ -4689,11 +4728,8 @@ msgstr "出"
 msgid "Outgoing Power/Inverter Information"
 msgstr "输出电力/逆变器的信息"
 
-msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
-msgstr "邮件发送（SMTP）伺服器的地址，例如：smtp.mycorp.com"
-
-msgid "Outgoing mail server"
-msgstr "邮件发送伺服器"
+msgid "Outgoing SMTP mail server address."
+msgstr ""
 
 msgid "Output current (A)"
 msgstr "输出电流（A）"
@@ -4867,6 +4903,9 @@ msgstr "对等交流（Peer exchange）"
 
 msgid "Peer port"
 msgstr "对等端口（Peer port）"
+
+msgid "Performance Settings"
+msgstr ""
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
@@ -5439,6 +5478,9 @@ msgstr ""
 "最近的操作系统，如Windows 8， 支援 SMB3 (Windows平台标准文件共享协议) 。Windows 7 和 Vista 支援 "
 "SMB2。像XP的旧版操作系统支援NT1。"
 
+msgid "SMTP Server"
+msgstr ""
+
 msgid "SNMP"
 msgstr "SNMP"
 
@@ -5832,8 +5874,8 @@ msgstr "软体RAID"
 msgid "Software RAID"
 msgstr "软体RAID"
 
-msgid "Software used"
-msgstr "使用软RAID"
+msgid "Software Used"
+msgstr ""
 
 msgid "Source"
 msgstr "来源位置"
@@ -5869,6 +5911,9 @@ msgstr "稀疏"
 
 msgid "Sparse Volume"
 msgstr "稀疏卷（Sparse Volume）"
+
+msgid "Speaker Beep"
+msgstr ""
 
 msgid ""
 "Specific to He8 drives from HGST. The Helium, so says the literature, allows "
@@ -6088,9 +6133,6 @@ msgstr ""
 
 msgid "System"
 msgstr "系统"
-
-msgid "System Beep"
-msgstr "声音提示"
 
 msgid "System Information"
 msgstr "系统资料"
@@ -7292,8 +7334,8 @@ msgstr "此池（pool）名称已经存在"
 msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr "此规则在选定的事件发生时会被触发。"
 
-msgid "This server uses default swap."
-msgstr "这个服务器使用预设置换空间。"
+msgid "This server uses default swap!"
+msgstr ""
 
 msgid "This tag already exists."
 msgstr "此标签已经存在。"
@@ -7831,7 +7873,7 @@ msgstr ""
 "使用此选项覆盖此用户名（预设为'ftp'），预设权限为guest。此用户所拥有的权限也会套用在使用客户端服务的任何客户端。此用户必须存在于密码档中，但并不"
 "需要一个有效的登入帐户。"
 
-msgid "Use toggle button or separate enable/disable buttons."
+msgid "Use toggle button instead of enable/disable buttons."
 msgstr ""
 
 msgid "Used"
@@ -7975,6 +8017,12 @@ msgstr "卷名"
 
 msgid "Volume Size Limit"
 msgstr "卷大小限制"
+
+msgid "Volume is locked"
+msgstr ""
+
+msgid "Volume is marked for deletion"
+msgstr ""
 
 msgid "Volume label"
 msgstr "磁盘卷标签（Volume label）"
@@ -8216,9 +8264,6 @@ msgstr "建议您使用HTTPS 作为网页界面协议来传送密码短语。"
 msgid "Your ZFS system is not healthy."
 msgstr "您的ZFS系统有问题。"
 
-msgid "Your own email address."
-msgstr "您的电邮地址。"
-
 msgid "ZFS"
 msgstr "ZFS"
 
@@ -8418,5 +8463,59 @@ msgstr "卸载"
 msgid "version:"
 msgstr "版本："
 
-#~ msgid "Send test email"
-#~ msgstr "发送测试邮件"
+#~ msgid "Disable firmware version check"
+#~ msgstr "关闭固件版本检查功能"
+
+#~ msgid "Disable speaker beep on startup and shutdown"
+#~ msgstr "关闭开/关机时的提示声响"
+
+#~ msgid "Edit dataset"
+#~ msgstr "编辑数据集"
+
+#~ msgid "Enable tuning of some kernel variables"
+#~ msgstr "开启系统核心的参数微调"
+
+#~ msgid "Firmware version check"
+#~ msgstr "固件版本检查"
+
+#~ msgid "Software used"
+#~ msgstr "使用软RAID"
+
+#~ msgid "System Beep"
+#~ msgstr "声音提示"
+
+#~ msgid "Command scripts"
+#~ msgstr "指令脚本（Command scripts）"
+
+#~ msgid "Disable console menu"
+#~ msgstr "关闭控制台选单"
+
+#~ msgid "Disable File Manager"
+#~ msgstr "关闭文件管理程式"
+
+#~ msgid "Enable Zeroconf/Bonjour to advertise services of this device"
+#~ msgstr "启用的 Zeroconf/Bonjour 来宣传这个装置的服务"
+
+#~ msgid "Enable console screensaver"
+#~ msgstr "启用控制台的屏幕保护程序"
+
+#~ msgid "Enable serial console"
+#~ msgstr "启用串行控制台"
+
+#~ msgid "Enable the system power control utility"
+#~ msgstr "启用电源监控程序。"
+
+#~ msgid "From email"
+#~ msgstr "发信人"
+
+#~ msgid "Your own email address."
+#~ msgstr "您的电邮地址。"
+
+#~ msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
+#~ msgstr "邮件发送（SMTP）伺服器的地址，例如：smtp.mycorp.com"
+
+#~ msgid "Outgoing mail server"
+#~ msgstr "邮件发送伺服器"
+
+#~ msgid "This server uses default swap."
+#~ msgstr "这个服务器使用预设置换空间。"

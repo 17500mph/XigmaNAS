@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-02-28 07:30+0000\n"
+"POT-Creation-Date: 2016-03-02 06:26+0000\n"
 "PO-Revision-Date: 2015-06-15 08:06+0000\n"
 "Last-Translator: Carsten Matzon <carsten@matzon.dk>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-28 14:17+0000\n"
+"X-Launchpad-Export-Date: 2016-03-02 06:38+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
@@ -564,6 +564,9 @@ msgid "Advanced Options"
 msgstr "Advancerede valgmuligheder"
 
 msgid "Advanced Settings"
+msgstr ""
+
+msgid "Advanced Setup"
 msgstr ""
 
 msgid "Advanced settings"
@@ -1257,6 +1260,9 @@ msgstr ""
 msgid "Command"
 msgstr "Kommando"
 
+msgid "Command Scripts"
+msgstr ""
+
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
 msgstr "Kommando for LINK_DOWN situation (f. eks. %s)."
@@ -1267,9 +1273,6 @@ msgstr "Kommando for LINK_UP situation (f. eks. %s)."
 
 msgid "Command output:"
 msgstr "Kommando resultat."
-
-msgid "Command scripts"
-msgstr "Kommando scripts"
 
 msgid "Comment"
 msgstr "Kommentar"
@@ -1327,6 +1330,9 @@ msgstr ""
 
 msgid "Console Menu"
 msgstr "Konsol Menu"
+
+msgid "Console Settings"
+msgstr ""
 
 msgid "Console screensaver"
 msgstr "Konsol pauseskærm"
@@ -1706,6 +1712,12 @@ msgstr "Database mappe"
 msgid "Dataset"
 msgstr "Datasæt"
 
+msgid "Dataset is locked"
+msgstr ""
+
+msgid "Dataset is marked for deletion"
+msgstr ""
+
 msgid "Datasets"
 msgstr "Datasæt"
 
@@ -2028,9 +2040,6 @@ msgstr "Mappe der indeholder flytbare medier. (F.eks. /mnt/iscsi/)"
 msgid "Directory to watch for new .torrent files."
 msgstr "Mappe der skal overvåges for nye .torrent-filer."
 
-msgid "Disable File Manager"
-msgstr "Deaktiver Filhåndtering"
-
 msgid "Disable Firmware Update"
 msgstr ""
 
@@ -2043,14 +2052,17 @@ msgstr ""
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "TCP wrapper anvendes ikke (mod_wrap module)."
 
-msgid "Disable console menu"
-msgstr "Deaktiver konsol menuen"
+msgid "Disable console menu."
+msgstr ""
 
-msgid "Disable firmware version check"
-msgstr "Deaktiver firmware versions kontrol"
+msgid "Disable file manager completely."
+msgstr ""
 
-msgid "Disable speaker beep on startup and shutdown"
-msgstr "Deaktiver højttaler bip ved opstart og nedlukning"
+msgid "Disable firmware version check."
+msgstr ""
+
+msgid "Disable speaker beep on startup and shutdown."
+msgstr ""
 
 msgid "Disable the compression of repeated line"
 msgstr ""
@@ -2368,6 +2380,9 @@ msgstr "FEJL:"
 msgid "Edit"
 msgstr "Rediger"
 
+msgid "Edit Dataset"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "Rediger vært"
 
@@ -2400,9 +2415,6 @@ msgstr "Rediger auto snapshot"
 
 msgid "Edit command"
 msgstr "Rediger kommando"
-
-msgid "Edit dataset"
-msgstr "Rediger datasæt"
 
 msgid "Edit device"
 msgstr "Rediger enhed"
@@ -2471,8 +2483,14 @@ msgstr "UPS effektivitet (udgangsstrøm i forhold til indgangsstrøm)"
 msgid "Email"
 msgstr "Email"
 
+msgid "Email Address"
+msgstr ""
+
 msgid "Email Report"
 msgstr "Email Rapport"
+
+msgid "Email address for sending system messages."
+msgstr ""
 
 msgid "Empty as default."
 msgstr "Normalt tom."
@@ -2533,8 +2551,8 @@ msgstr "Time Machine understøttelse"
 msgid "Enable ZFS ACL"
 msgstr "Aktiver ZFS ACL"
 
-msgid "Enable Zeroconf/Bonjour to advertise services of this device"
-msgstr "Aktiver Zeroconf/Bonjour til at proklamere denne enheds tjenester"
+msgid "Enable Zeroconf/Bonjour to advertise services of this device."
+msgstr ""
 
 msgid "Enable anonymous bind."
 msgstr "Aktiver anonym bind."
@@ -2545,8 +2563,8 @@ msgstr "Aktiver godkendelse."
 msgid "Enable compression."
 msgstr "Aktiver komprimering."
 
-msgid "Enable console screensaver"
-msgstr "Aktiver konsol pauseskærm"
+msgid "Enable console screensaver."
+msgstr ""
 
 msgid "Enable device polling"
 msgstr "Aktiver enheds polling"
@@ -2630,8 +2648,8 @@ msgstr ""
 msgid "Enable reverse DNS lookup."
 msgstr "Aktiver omvendt DNS opslag."
 
-msgid "Enable serial console"
-msgstr "Aktiver seriel konsol"
+msgid "Enable serial console."
+msgstr ""
 
 msgid "Enable shadow copy"
 msgstr "Aktiver shadow kopi"
@@ -2645,8 +2663,8 @@ msgstr "Aktiver syslog'ning til fjern syslog server"
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Aktiver ident protokollen (RFC1413)."
 
-msgid "Enable the system power control utility"
-msgstr "Aktiver systemets strømstyrings værktøj"
+msgid "Enable the system power control utility."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr ""
@@ -2657,8 +2675,8 @@ msgstr "Aktiver omkodning"
 msgid "Enable traps."
 msgstr "Aktiver traps."
 
-msgid "Enable tuning of some kernel variables"
-msgstr "Aktiver finjustering af nogle kernel variabler"
+msgid "Enable tuning of some kernel variables."
+msgstr ""
 
 msgid "Enable write cache mode."
 msgstr "Anvend skrive cache."
@@ -3006,6 +3024,9 @@ msgstr ""
 msgid "Firmware"
 msgstr "Firmware"
 
+msgid "Firmware Check"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr ""
 
@@ -3014,9 +3035,6 @@ msgstr "Upload af firmware er ikke understøttet på denne platform."
 
 msgid "Firmware version"
 msgstr "Firmware version"
-
-msgid "Firmware version check"
-msgstr "Firmware versions kontrol"
 
 msgid "FirstBurstLength"
 msgstr "FirstBurstLængde"
@@ -3069,9 +3087,6 @@ msgstr ""
 
 msgid "Friday"
 msgstr ""
-
-msgid "From email"
-msgstr "Fra email"
 
 msgid "Fsck"
 msgstr "Fsck"
@@ -3768,6 +3783,12 @@ msgstr ""
 msgid "Japanese"
 msgstr "Japansk"
 
+msgid "Job is locked"
+msgstr ""
+
+msgid "Job is marked for deletion"
+msgstr ""
+
 msgid "Jul"
 msgstr ""
 
@@ -4113,6 +4134,12 @@ msgstr "MBR partition"
 msgid "MIB"
 msgstr "MIB"
 
+msgid "MIB is locked"
+msgstr ""
+
+msgid "MIB is marked for deletion"
+msgstr ""
+
 msgid "MISSING"
 msgstr "MANGLER"
 
@@ -4422,6 +4449,12 @@ msgstr "Monterer..."
 
 msgid "Mounts"
 msgstr "Montager"
+
+msgid "Move down"
+msgstr ""
+
+msgid "Move up"
+msgstr ""
 
 msgid "Music"
 msgstr ""
@@ -4846,6 +4879,12 @@ msgstr "Tillad kun godkendte brugere. Anonyme logins er forbudte."
 msgid "Option"
 msgstr "Indstilling"
 
+msgid "Option is locked"
+msgstr ""
+
+msgid "Option is marked for deletion"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr "Valgfri brugervenlig streng om målet."
 
@@ -4864,11 +4903,8 @@ msgstr "Ud"
 msgid "Outgoing Power/Inverter Information"
 msgstr "Udgående Strøm/Inverter information"
 
-msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
-msgstr "Udgående SMTP mailserver adresse, f.eks. smtp.mycorp.com."
-
-msgid "Outgoing mail server"
-msgstr "Udgående mailserver"
+msgid "Outgoing SMTP mail server address."
+msgstr ""
 
 msgid "Output current (A)"
 msgstr "Udgangsstrøm (A)"
@@ -5048,6 +5084,9 @@ msgstr "Peer exchange"
 
 msgid "Peer port"
 msgstr "Peer port"
+
+msgid "Performance Settings"
+msgstr ""
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
@@ -5633,6 +5672,9 @@ msgstr ""
 "operativsystemer som Windows 7 og Vista. NT1 er for ældre operativsystemer "
 "som Windows XP."
 
+msgid "SMTP Server"
+msgstr ""
+
 msgid "SNMP"
 msgstr "SNMP"
 
@@ -6044,8 +6086,8 @@ msgstr "SoftRaid"
 msgid "Software RAID"
 msgstr "Software-RAID"
 
-msgid "Software used"
-msgstr "Benyttet software"
+msgid "Software Used"
+msgstr ""
 
 msgid "Source"
 msgstr "Kilde"
@@ -6080,6 +6122,9 @@ msgid "Sparse"
 msgstr "Spredt"
 
 msgid "Sparse Volume"
+msgstr ""
+
+msgid "Speaker Beep"
 msgstr ""
 
 msgid ""
@@ -6310,9 +6355,6 @@ msgstr ""
 
 msgid "System"
 msgstr "System"
-
-msgid "System Beep"
-msgstr "Systembip"
 
 msgid "System Information"
 msgstr ""
@@ -7666,8 +7708,8 @@ msgstr "Pulje navnet eksisterer allerede."
 msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr "Denne regel aktiveres når det valgte hændelses direktiv opstår."
 
-msgid "This server uses default swap."
-msgstr "Denne server anvender standard swap."
+msgid "This server uses default swap!"
+msgstr ""
 
 msgid "This tag already exists."
 msgstr "Mærkatet eksisterer allerede."
@@ -8240,7 +8282,7 @@ msgstr ""
 "tjenesten. Denne bruger skal eksistere i kodeords filen, men kræver ikke et "
 "gyldigt login."
 
-msgid "Use toggle button or separate enable/disable buttons."
+msgid "Use toggle button instead of enable/disable buttons."
 msgstr ""
 
 msgid "Used"
@@ -8383,6 +8425,12 @@ msgid "Volume Name"
 msgstr "Volume navn"
 
 msgid "Volume Size Limit"
+msgstr ""
+
+msgid "Volume is locked"
+msgstr ""
+
+msgid "Volume is marked for deletion"
 msgstr ""
 
 msgid "Volume label"
@@ -8639,9 +8687,6 @@ msgstr "Du bør bruge HTTPS som WebGUI protokol for at sende adgangskoden."
 msgid "Your ZFS system is not healthy."
 msgstr "Dit ZFS system er ikke sundt."
 
-msgid "Your own email address."
-msgstr "Din egen email adresse."
-
 msgid "ZFS"
 msgstr "ZFS"
 
@@ -8843,5 +8888,59 @@ msgstr "umount"
 msgid "version:"
 msgstr "version:"
 
-#~ msgid "Send test email"
-#~ msgstr "Afsend test email"
+#~ msgid "Command scripts"
+#~ msgstr "Kommando scripts"
+
+#~ msgid "Disable File Manager"
+#~ msgstr "Deaktiver Filhåndtering"
+
+#~ msgid "Disable console menu"
+#~ msgstr "Deaktiver konsol menuen"
+
+#~ msgid "Disable firmware version check"
+#~ msgstr "Deaktiver firmware versions kontrol"
+
+#~ msgid "Disable speaker beep on startup and shutdown"
+#~ msgstr "Deaktiver højttaler bip ved opstart og nedlukning"
+
+#~ msgid "Edit dataset"
+#~ msgstr "Rediger datasæt"
+
+#~ msgid "Enable Zeroconf/Bonjour to advertise services of this device"
+#~ msgstr "Aktiver Zeroconf/Bonjour til at proklamere denne enheds tjenester"
+
+#~ msgid "Enable console screensaver"
+#~ msgstr "Aktiver konsol pauseskærm"
+
+#~ msgid "Enable serial console"
+#~ msgstr "Aktiver seriel konsol"
+
+#~ msgid "Enable the system power control utility"
+#~ msgstr "Aktiver systemets strømstyrings værktøj"
+
+#~ msgid "Enable tuning of some kernel variables"
+#~ msgstr "Aktiver finjustering af nogle kernel variabler"
+
+#~ msgid "Firmware version check"
+#~ msgstr "Firmware versions kontrol"
+
+#~ msgid "From email"
+#~ msgstr "Fra email"
+
+#~ msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
+#~ msgstr "Udgående SMTP mailserver adresse, f.eks. smtp.mycorp.com."
+
+#~ msgid "Outgoing mail server"
+#~ msgstr "Udgående mailserver"
+
+#~ msgid "Software used"
+#~ msgstr "Benyttet software"
+
+#~ msgid "System Beep"
+#~ msgstr "Systembip"
+
+#~ msgid "Your own email address."
+#~ msgstr "Din egen email adresse."
+
+#~ msgid "This server uses default swap."
+#~ msgstr "Denne server anvender standard swap."

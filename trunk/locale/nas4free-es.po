@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-02-28 07:30+0000\n"
-"PO-Revision-Date: 2016-02-20 09:30+0000\n"
+"POT-Creation-Date: 2016-03-02 06:26+0000\n"
+"PO-Revision-Date: 2016-03-01 19:38+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-28 14:17+0000\n"
+"X-Launchpad-Export-Date: 2016-03-02 06:38+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: SPAIN\n"
 "Language: \n"
@@ -56,15 +56,15 @@ msgstr "%s Interface"
 
 #, php-format
 msgid "%s already exists as a %s."
-msgstr ""
+msgstr "%s ya existe como %s."
 
 #, php-format
 msgid "%s is already configured as a filesystem."
-msgstr ""
+msgstr "%s Ya está configurado como un sistema de archivos."
 
 #, php-format
 msgid "%s is already configured as a volume."
-msgstr ""
+msgstr "%s Ya está configurado como un volumen."
 
 #, php-format
 msgid "%s is too long."
@@ -451,7 +451,7 @@ msgid "Add"
 msgstr "Añadir"
 
 msgid "Add Dataset"
-msgstr ""
+msgstr "Añadir Dataset"
 
 msgid "Add Host"
 msgstr "Añadir equipo"
@@ -472,7 +472,7 @@ msgid "Add URL"
 msgstr "Añadir URL"
 
 msgid "Add Volume"
-msgstr ""
+msgstr "Añadir Volumen"
 
 msgid "Add additional scheduled self-test."
 msgstr "Añadir autocomprobación planeada adicional."
@@ -591,6 +591,9 @@ msgstr "Opciones avanzadas"
 
 msgid "Advanced Settings"
 msgstr "Configuración avanzada"
+
+msgid "Advanced Setup"
+msgstr ""
 
 msgid "Advanced settings"
 msgstr "Ajustes avanzados"
@@ -822,10 +825,10 @@ msgid "Apply changes"
 msgstr "Aplicar Cambios"
 
 msgid "Apr"
-msgstr ""
+msgstr "Apr"
 
 msgid "April"
-msgstr ""
+msgstr "Abril"
 
 msgid "Archive"
 msgstr "Archivo"
@@ -863,10 +866,10 @@ msgid "Audio"
 msgstr "Audio"
 
 msgid "Aug"
-msgstr ""
+msgstr "Agosto"
 
 msgid "August"
-msgstr ""
+msgstr "Agosto"
 
 msgid "Auth Group"
 msgstr "Grupo de Autenticacion"
@@ -1028,7 +1031,7 @@ msgid "Blank time"
 msgstr "Tiempo en blanco"
 
 msgid "Block Size"
-msgstr ""
+msgstr "Tamaño de bloque"
 
 msgid "Block size"
 msgstr "Tamaño de bloque"
@@ -1323,6 +1326,9 @@ msgstr ""
 msgid "Command"
 msgstr "Comando"
 
+msgid "Command Scripts"
+msgstr ""
+
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
 msgstr "Comando para evento LINK_DOWN (ej: %s)."
@@ -1333,9 +1339,6 @@ msgstr "Comando para evento LINK_UP (ej: %s)."
 
 msgid "Command output:"
 msgstr "Salida del comando:"
-
-msgid "Command scripts"
-msgstr "Scripts de comando"
 
 msgid "Comment"
 msgstr "Comentario"
@@ -1393,6 +1396,9 @@ msgstr "Considere el remplazar este Disco"
 
 msgid "Console Menu"
 msgstr "Menú de consola"
+
+msgid "Console Settings"
+msgstr ""
 
 msgid "Console screensaver"
 msgstr "Salvapantallas de consola"
@@ -1776,6 +1782,11 @@ msgid ""
 "/>It is recommended that you <a href='%s'>Backup</a> the server "
 "configuration before doing a upgrade."
 msgstr ""
+"NO INTERRUMPIR el proceso de actualización del Firmware una vez "
+"iniciado..<br /> NO INTENTAR cargar otro Firmware que el oficial '%s-%s-"
+"embedded.img.xz'  <br /> Se recomienda que realice un <a "
+"href='%s'>Backup</a> de la configuración del N4F antes de hacer una "
+"actualización."
 
 msgid "DVD"
 msgstr "DVD"
@@ -1804,6 +1815,12 @@ msgstr "Directorio de la base de datos"
 msgid "Dataset"
 msgstr "Conjunto de datos"
 
+msgid "Dataset is locked"
+msgstr ""
+
+msgid "Dataset is marked for deletion"
+msgstr ""
+
 msgid "Datasets"
 msgstr "Conjuntos de datos"
 
@@ -1811,7 +1828,7 @@ msgid "Date & Time"
 msgstr "Fecha y hora"
 
 msgid "Date format"
-msgstr ""
+msgstr "Formato de Fecha"
 
 msgid "Days"
 msgstr "Días"
@@ -1820,10 +1837,10 @@ msgid "Debug"
 msgstr "Depurar"
 
 msgid "Dec"
-msgstr ""
+msgstr "dic."
 
 msgid "December"
-msgstr ""
+msgstr "Diciembre"
 
 msgid ""
 "Decoded as: byte 0-1-2 = average erase count (big endian) and byte 3-4-5 = "
@@ -1842,7 +1859,7 @@ msgid "Default"
 msgstr "Predeterminada"
 
 msgid "Default Device Settings"
-msgstr ""
+msgstr "Opciones por defecto del dispositivo"
 
 #, php-format
 msgid "Default is %s."
@@ -1888,16 +1905,16 @@ msgid "Delete Rsync job"
 msgstr "Eliminar tarea Rsync"
 
 msgid "Delete Selected Datasets"
-msgstr ""
+msgstr "Borrar los Dataset seleccionados"
 
 msgid "Delete Selected Jobs"
-msgstr ""
+msgstr "Borrar los trabajos seleccionados"
 
 msgid "Delete Selected Options"
-msgstr ""
+msgstr "Borrar las opciones seleccionadas"
 
 msgid "Delete Selected Volumes"
-msgstr ""
+msgstr "Borrar los volumenes seleccionadas"
 
 msgid "Delete URL"
 msgstr "Borrar URL"
@@ -2130,29 +2147,29 @@ msgstr "Directorio que contiene dispositivos removibles (Ej: /mnt/usb)"
 msgid "Directory to watch for new .torrent files."
 msgstr "Directorio a vigilar para nuevos archivos .torrent"
 
-msgid "Disable File Manager"
-msgstr "Deshabilitar el gestor de archivos"
-
 msgid "Disable Firmware Update"
 msgstr "Deshabilitar actualización del firmware"
 
 msgid "Disable Selected Jobs"
-msgstr ""
+msgstr "Deshabilitar los trabajos seleccionados"
 
 msgid "Disable Selected Options"
-msgstr ""
+msgstr "Deshabilitar las opciones seleccionadas"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Deshabilitar TCP wrapper (mod_wrap )."
 
-msgid "Disable console menu"
-msgstr "Desactivar el menu de consola"
+msgid "Disable console menu."
+msgstr ""
 
-msgid "Disable firmware version check"
-msgstr "Desactivar la comprobacion de la version del Sistema Base"
+msgid "Disable file manager completely."
+msgstr ""
 
-msgid "Disable speaker beep on startup and shutdown"
-msgstr "Desactivar el pitido del altavoz al iniciar y apagar"
+msgid "Disable firmware version check."
+msgstr ""
+
+msgid "Disable speaker beep on startup and shutdown."
+msgstr ""
 
 msgid "Disable the compression of repeated line"
 msgstr "Deshabilita la compresión de lineas repetidas"
@@ -2328,34 +2345,34 @@ msgid "Do you really want to uninstall this package?"
 msgstr "¿Realmente quiere eliminar este paquete?"
 
 msgid "Do you want to delete selected datasets?"
-msgstr ""
+msgstr "Desea borrar los Dataset seleccionados?"
 
 msgid "Do you want to delete selected jobs?"
-msgstr ""
+msgstr "Desea borrar los trabajos seleccionados?"
 
 msgid "Do you want to delete selected options?"
-msgstr ""
+msgstr "Desea borrar las opciones seleccionadas?"
 
 msgid "Do you want to delete selected volumes?"
-msgstr ""
+msgstr "Desea borrar los volumenes seleccionados?"
 
 msgid "Do you want to disable selected jobs?"
-msgstr ""
+msgstr "Desea deshabilitar los trabajos seleccionados?"
 
 msgid "Do you want to disable selected options?"
-msgstr ""
+msgstr "Desea deshabilitar las opciones marcadas?"
 
 msgid "Do you want to enable selected jobs?"
-msgstr ""
+msgstr "Desea habilitar los trabajos marcados?"
 
 msgid "Do you want to enable selected options?"
-msgstr ""
+msgstr "Desea habilitar las opcionmes marcadas?"
 
 msgid "Do you want to toggle selected jobs?"
-msgstr ""
+msgstr "Desea intercambiar los trabajos marcados?"
 
 msgid "Do you want to toggle selected options?"
-msgstr ""
+msgstr "Desea intercambiar las opciones marcadas?"
 
 msgid "Document root"
 msgstr "Raíz de documentos"
@@ -2476,6 +2493,9 @@ msgstr "ERROR:"
 msgid "Edit"
 msgstr "Editar"
 
+msgid "Edit Dataset"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "Editar Host"
 
@@ -2498,7 +2518,7 @@ msgid "Edit VM"
 msgstr "Editar VM"
 
 msgid "Edit Volume"
-msgstr ""
+msgstr "Editar Volumen"
 
 msgid "Edit auth group"
 msgstr "Editar grupo autorizador"
@@ -2508,9 +2528,6 @@ msgstr "Editar snapshot automatico"
 
 msgid "Edit command"
 msgstr "Editar comando"
-
-msgid "Edit dataset"
-msgstr "Editar conjunto de datos"
 
 msgid "Edit device"
 msgstr "Editar dispositivo"
@@ -2581,8 +2598,14 @@ msgstr ""
 msgid "Email"
 msgstr "Correo electrónico (e-mail)"
 
+msgid "Email Address"
+msgstr ""
+
 msgid "Email Report"
 msgstr "Informe por correo electrónico"
+
+msgid "Email address for sending system messages."
+msgstr ""
 
 msgid "Empty as default."
 msgstr "Vacío por defecto"
@@ -2615,6 +2638,8 @@ msgid ""
 "Enable S.M.A.R.T. monitoring of S.M.A.R.T. capable devices when they are "
 "added to the configuration."
 msgstr ""
+"Habilitar monitorización S.M.A.R.T. en los discos que dispongan de esta "
+"tecnología cuando se añadan a la configuración."
 
 msgid "Enable SMTP authentication."
 msgstr "Activar autentificación SMTP."
@@ -2627,10 +2652,10 @@ msgstr ""
 "puede seguir usando SSL."
 
 msgid "Enable Selected Jobs"
-msgstr ""
+msgstr "Habilitar los trabajos marcados"
 
 msgid "Enable Selected Options"
-msgstr ""
+msgstr "Habilitar las opciones marcadas"
 
 msgid "Enable TLS connections."
 msgstr "Habilitar conexiones TSL"
@@ -2644,9 +2669,8 @@ msgstr "Activar soporte para Time Machine"
 msgid "Enable ZFS ACL"
 msgstr "Habilitar ACL ZFS"
 
-msgid "Enable Zeroconf/Bonjour to advertise services of this device"
+msgid "Enable Zeroconf/Bonjour to advertise services of this device."
 msgstr ""
-"Habilitar Zeroconf/Bonjour para advertir servicios en éste dispositivo"
 
 msgid "Enable anonymous bind."
 msgstr "Permitir enlace anónimo"
@@ -2657,8 +2681,8 @@ msgstr "Activar autentificacion."
 msgid "Enable compression."
 msgstr "Habilitar compresion"
 
-msgid "Enable console screensaver"
-msgstr "Activar salvapantallas de consola"
+msgid "Enable console screensaver."
+msgstr ""
 
 msgid "Enable device polling"
 msgstr "Permitir comprobacion de los dispositivos"
@@ -2745,8 +2769,8 @@ msgstr ""
 msgid "Enable reverse DNS lookup."
 msgstr "Permitir busqueda DNS a la inversa."
 
-msgid "Enable serial console"
-msgstr "Habilitar la consola por puerto serie"
+msgid "Enable serial console."
+msgstr ""
 
 msgid "Enable shadow copy"
 msgstr "Habilitar copia oculta"
@@ -2760,8 +2784,8 @@ msgstr "Activar el registro en un servidor syslog remoto"
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Activar el protocolo de identificación (RFC1413)."
 
-msgid "Enable the system power control utility"
-msgstr "Activar la utilidad de control de alimentacion electrica del sistema"
+msgid "Enable the system power control utility."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Activar estandares estrictos de DLNA"
@@ -2772,8 +2796,8 @@ msgstr "Permitir transcodificación"
 msgid "Enable traps."
 msgstr "Activar traps"
 
-msgid "Enable tuning of some kernel variables"
-msgstr "Permitir ajustar algunas variables del kernel"
+msgid "Enable tuning of some kernel variables."
+msgstr ""
 
 msgid "Enable write cache mode."
 msgstr "Habilitar Write Cache"
@@ -3011,7 +3035,7 @@ msgid "Failed to create in-memory file system."
 msgstr "Falló al crear un sistema de archivos en memoria."
 
 msgid "Failed to execute command zfs."
-msgstr ""
+msgstr "Error al ejecutar el comando ZFS"
 
 msgid "Failed to execute cron job."
 msgstr "Fallo al ejecutar el proceso cron."
@@ -3061,10 +3085,10 @@ msgid "Fatal"
 msgstr "Fatal"
 
 msgid "Feb"
-msgstr ""
+msgstr "feb."
 
 msgid "February"
-msgstr ""
+msgstr "Febrero"
 
 msgid "File"
 msgstr "Archivo"
@@ -3132,6 +3156,9 @@ msgstr "Configurar reglas del firewall"
 msgid "Firmware"
 msgstr "Firmware"
 
+msgid "Firmware Check"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Error al actualizar el firmware (falta de RAM)"
 
@@ -3140,9 +3167,6 @@ msgstr "El envio del Firmware no está soportado en esta plataforma."
 
 msgid "Firmware version"
 msgstr "Versión de Firmware"
-
-msgid "Firmware version check"
-msgstr "Comprobacion del Firmware"
 
 msgid "FirstBurstLength"
 msgstr "FirstBurstLength"
@@ -3191,13 +3215,10 @@ msgid "Frequency"
 msgstr "Frecuencia"
 
 msgid "Fri"
-msgstr ""
+msgstr "vie."
 
 msgid "Friday"
-msgstr ""
-
-msgid "From email"
-msgstr "e-mail que aparecera en el campo \"De\""
+msgstr "Viernes"
 
 msgid "Fsck"
 msgstr "Fsck"
@@ -3871,7 +3892,7 @@ msgid "Invalid username or password. Please try again."
 msgstr "Contraseña o usuario invalido. Por favor intentelo de nuevo."
 
 msgid "Invert Selection"
-msgstr ""
+msgstr "Invertir Selección"
 
 msgid ""
 "It can be changed from the client side by standard SCSI mode page at any "
@@ -3914,10 +3935,10 @@ msgid "JBOD Information & Status"
 msgstr "Imformación y estado del JBOD"
 
 msgid "Jan"
-msgstr ""
+msgstr "ene."
 
 msgid "January"
-msgstr ""
+msgstr "Enero"
 
 msgid ""
 "January February March April May June July August September October November "
@@ -3929,17 +3950,23 @@ msgstr ""
 msgid "Japanese"
 msgstr "Japonés"
 
-msgid "Jul"
+msgid "Job is locked"
 msgstr ""
+
+msgid "Job is marked for deletion"
+msgstr ""
+
+msgid "Jul"
+msgstr "jul."
 
 msgid "July"
-msgstr ""
+msgstr "Julio"
 
 msgid "Jun"
-msgstr ""
+msgstr "jun."
 
 msgid "June"
-msgstr ""
+msgstr "Junio"
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -4148,7 +4175,7 @@ msgid "Local Master Browser"
 msgstr "Local Master Browser"
 
 msgid "Local Share (Destination)"
-msgstr ""
+msgstr "Compartido local (Destino)"
 
 msgid "Local User"
 msgstr "Usuario Local"
@@ -4280,6 +4307,12 @@ msgstr "Partición MBR"
 msgid "MIB"
 msgstr "MIB"
 
+msgid "MIB is locked"
+msgstr ""
+
+msgid "MIB is marked for deletion"
+msgstr ""
+
 msgid "MISSING"
 msgstr "DESAPARECIDO"
 
@@ -4335,10 +4368,10 @@ msgid "Mapping DOS attributes"
 msgstr "Mapeando Atributos DOS"
 
 msgid "Mar"
-msgstr ""
+msgstr "mar."
 
 msgid "March"
-msgstr ""
+msgstr "Marzo"
 
 msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
@@ -4446,7 +4479,7 @@ msgid "Maximum temperature seen (degrees C)"
 msgstr "Temperatura max. vista (ºC)"
 
 msgid "May"
-msgstr ""
+msgstr "Mayo"
 
 msgid "Media"
 msgstr "Medios"
@@ -4565,10 +4598,10 @@ msgid "Modules"
 msgstr "Módulos"
 
 msgid "Mon"
-msgstr ""
+msgstr "lun."
 
 msgid "Monday"
-msgstr ""
+msgstr "Lunes"
 
 msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
 msgstr "Lunes Martes Miercoles Jueves Viernes Sabado Domingo"
@@ -4599,6 +4632,12 @@ msgstr "Montando..."
 
 msgid "Mounts"
 msgstr "Puntos de Montaje"
+
+msgid "Move down"
+msgstr ""
+
+msgid "Move up"
+msgstr ""
 
 msgid "Music"
 msgstr "Música"
@@ -4711,7 +4750,7 @@ msgid "Networks"
 msgstr "Redes"
 
 msgid "Never - (Default)"
-msgstr ""
+msgstr "Nunca - (Por defecto)"
 
 msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
@@ -4778,6 +4817,8 @@ msgid ""
 "No configured bridge interfaces. Please add new <a href='%s'>bridge "
 "interface</a> first."
 msgstr ""
+"No hay configurado ningún Puente / bridge.  Por favor añada primero un <a "
+"href='%s'>Puente / bridge </a>"
 
 #, php-format
 msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
@@ -4926,10 +4967,10 @@ msgid "Notification email from host: %s"
 msgstr "Notificación de correo desde el equipo: %s"
 
 msgid "Nov"
-msgstr ""
+msgstr "nov."
 
 msgid "November"
-msgstr ""
+msgstr "Noviembre"
 
 msgid "Now"
 msgstr "Ahora"
@@ -4975,7 +5016,7 @@ msgid "ONLINE"
 msgstr "CONECTADO"
 
 msgid "OPT Only"
-msgstr ""
+msgstr "Solo OPT"
 
 msgid "Object name"
 msgstr "Nombre del objeto"
@@ -4984,10 +5025,10 @@ msgid "Occurrence"
 msgstr "Ocurrencia"
 
 msgid "Oct"
-msgstr ""
+msgstr "oct."
 
 msgid "October"
-msgstr ""
+msgstr "Octubre"
 
 msgid "Off"
 msgstr "Apagado"
@@ -5026,6 +5067,12 @@ msgstr ""
 msgid "Option"
 msgstr "Opcion"
 
+msgid "Option is locked"
+msgstr ""
+
+msgid "Option is marked for deletion"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr "Cadena de el objetivo opcional amistoso al usuario."
 
@@ -5044,12 +5091,8 @@ msgstr "Salientes"
 msgid "Outgoing Power/Inverter Information"
 msgstr "Información de salida"
 
-msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
+msgid "Outgoing SMTP mail server address."
 msgstr ""
-"Direccion del servidor de salida de correos SMTP, Ej: smtp.miCorp.com"
-
-msgid "Outgoing mail server"
-msgstr "Servidor de correos salientes"
 
 msgid "Output current (A)"
 msgstr "Corriente de salida (A)"
@@ -5236,6 +5279,9 @@ msgstr "Intercambio de pares"
 
 msgid "Peer port"
 msgstr "Puerto escucha Peer"
+
+msgid "Performance Settings"
+msgstr ""
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
@@ -5803,7 +5849,7 @@ msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
 
 msgid "S.M.A.R.T. Monitoring"
-msgstr ""
+msgstr "S.M.A.R.T."
 
 msgid "S.M.A.R.T. events"
 msgstr "eventos S.M.A.R.T."
@@ -5826,6 +5872,9 @@ msgid ""
 msgstr ""
 "SMB3 está indicada en OS recientes como Windows 8.x  SMB2 es para OS como "
 "Windows 7 y Vista.  NT1 es para OS antiguos como XP."
+
+msgid "SMTP Server"
+msgstr ""
 
 msgid "SNMP"
 msgstr "SNMP"
@@ -5868,10 +5917,10 @@ msgstr ""
 "que este valor (%d por defecto)"
 
 msgid "Sat"
-msgstr ""
+msgstr "sáb."
 
 msgid "Saturday"
-msgstr ""
+msgstr "Sábado"
 
 msgid "Save"
 msgstr "Guardar"
@@ -5954,7 +6003,7 @@ msgstr ""
 "Secure (HTTPS) para el acceso a la WebGUI."
 
 msgid "Select a date format."
-msgstr ""
+msgstr "Seleccione un formato de fecha"
 
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Seleccionar un disco habilitado para monitoreo S.M.A.R.T."
@@ -6028,13 +6077,13 @@ msgid "Send now"
 msgstr "Enviar ahora"
 
 msgid "Sep"
-msgstr ""
+msgstr "sept."
 
 msgid "Separate email addresses by semi-colon."
 msgstr "Separe direcciones de e-mail con punto y coma \";\""
 
 msgid "September"
-msgstr ""
+msgstr "Septiembre"
 
 msgid "Serial Console"
 msgstr "Consola (RS-232)"
@@ -6254,8 +6303,8 @@ msgstr "SoftRaid"
 msgid "Software RAID"
 msgstr "Software RAID"
 
-msgid "Software used"
-msgstr "Software usado"
+msgid "Software Used"
+msgstr ""
 
 msgid "Source"
 msgstr "Origen"
@@ -6294,6 +6343,9 @@ msgstr "Sparse (Esparcido)"
 
 msgid "Sparse Volume"
 msgstr "Volumen esparcido"
+
+msgid "Speaker Beep"
+msgstr ""
 
 msgid ""
 "Specific to He8 drives from HGST. The Helium, so says the literature, allows "
@@ -6465,10 +6517,10 @@ msgid "Successful."
 msgstr "Correcto"
 
 msgid "Sun"
-msgstr ""
+msgstr "dom."
 
 msgid "Sunday"
-msgstr ""
+msgstr "Domingo"
 
 msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
 msgstr "Domingo Lunes Martes Miercoles Jueves Viernes Sabado"
@@ -6533,9 +6585,6 @@ msgstr ""
 
 msgid "System"
 msgstr "Sistema"
-
-msgid "System Beep"
-msgstr "Pitido de Sistema"
 
 msgid "System Information"
 msgstr "Información del sistema"
@@ -7763,6 +7812,10 @@ msgid ""
 "the firmware has not been tampered with.<br /><br />Do you want to install "
 "this firmware anyway (on your own risk)?"
 msgstr ""
+"Esto significa que el Firmware que ha instalado no es un firmware oficial y "
+"que puede tener comportamientos herraticos o brechas de seguridad. Instale "
+"SOLO firmware que se haya descargado de fuentes de confianza . ¿ Desea a "
+"pesar de todo instalar este firmware bajo su responsabilidad?"
 
 msgid "This name already exists in the disk list."
 msgstr "Este nombre ya existe en la lista del disco."
@@ -7960,8 +8013,8 @@ msgstr ""
 "Esta regla es desencadenada cuando ocurre la directiva de evento "
 "seleccionada."
 
-msgid "This server uses default swap."
-msgstr "Este servidor usa la swap por defecto"
+msgid "This server uses default swap!"
+msgstr ""
 
 msgid "This tag already exists."
 msgstr "Esta etiqueta ya existe."
@@ -7985,6 +8038,9 @@ msgid ""
 "This will allow server-side downscaling of very large JPEG images, it can "
 "hurt JPEG serving performance on (at least) Sony DLNA products."
 msgstr ""
+"Esto permite reducir el tamaño de imagenes JPEG muy grandes en el lado "
+"servidor, y permite reducir el ancho de banda (al menos) en los productos "
+"certificados DLNA de SONY."
 
 #, php-format
 msgid ""
@@ -8029,10 +8085,10 @@ msgstr ""
 "Esto permitirá visualizar jpg y mp3 en dispositivos TiVo que soporten HMO."
 
 msgid "Thu"
-msgstr ""
+msgstr "jue."
 
 msgid "Thursday"
-msgstr ""
+msgstr "Jueves"
 
 msgid "TiB"
 msgstr "TiB"
@@ -8164,13 +8220,13 @@ msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
 msgstr "Para usar subdirectorios, Debe montar cada directorio. (Ej: %s)"
 
 msgid "Toggle Mode"
-msgstr ""
+msgstr "Modo intercambio"
 
 msgid "Toggle Selected Jobs"
-msgstr ""
+msgstr "Intercambiar los trabajos marcados"
 
 msgid "Toggle Selected Options"
-msgstr ""
+msgstr "Intercambiar las opciones marcadas"
 
 msgid "Tolerated"
 msgstr "Tolerado"
@@ -8270,10 +8326,10 @@ msgid "Try to import from on-disk ZFS config."
 msgstr "Intentar importar desde la configuración en-disco de ZFS."
 
 msgid "Tue"
-msgstr ""
+msgstr "mar."
 
 msgid "Tuesday"
-msgstr ""
+msgstr "Martes"
 
 msgid "Tuning"
 msgstr "Ajuste"
@@ -8552,7 +8608,7 @@ msgstr ""
 "cliente conectandose al servicio huesped. Este usuario debe existir en el "
 "archivo de contraseñas, pero no requiere un ingreso (login)  valido."
 
-msgid "Use toggle button or separate enable/disable buttons."
+msgid "Use toggle button instead of enable/disable buttons."
 msgstr ""
 
 msgid "Used"
@@ -8697,6 +8753,12 @@ msgstr "Nombre del Volumen"
 msgid "Volume Size Limit"
 msgstr "Limite tamano del volumen"
 
+msgid "Volume is locked"
+msgstr ""
+
+msgid "Volume is marked for deletion"
+msgstr ""
+
 msgid "Volume label"
 msgstr "Etiqueta del volumen"
 
@@ -8777,10 +8839,10 @@ msgid "Webserver document root is missing."
 msgstr "Servidor web no encuentra el directorio raiz"
 
 msgid "Wed"
-msgstr ""
+msgstr "mié."
 
 msgid "Wednesday"
-msgstr ""
+msgstr "Miércoles"
 
 msgid "Week days"
 msgstr "Dias de la semana"
@@ -8969,9 +9031,6 @@ msgstr ""
 msgid "Your ZFS system is not healthy."
 msgstr "Su sistema ZFS esta dañado"
 
-msgid "Your own email address."
-msgstr "Tu direccion de e-mail"
-
 msgid "ZFS"
 msgstr "ZFS"
 
@@ -9001,6 +9060,8 @@ msgstr "Volumen ZFS"
 
 msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
+"Tamaño de Bloque del volumen ZFS. Este valor NO PUEDE ser cambiado a "
+"posteriori."
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
@@ -9074,7 +9135,7 @@ msgid "iSCSI Target Logical Unit Controller"
 msgstr "Controlador de unidad lógica objetivo iSCSI"
 
 msgid "iSCSI Targets Information & Status"
-msgstr ""
+msgstr "Información y Estado de los targets iSCSI"
 
 #, php-format
 msgid "iSCSI initial parameter (%d by default)."
@@ -9173,5 +9234,65 @@ msgstr "Desmontar"
 msgid "version:"
 msgstr "versión:"
 
-#~ msgid "Send test email"
-#~ msgstr "Enviar e-mail de prueba"
+#~ msgid "Command scripts"
+#~ msgstr "Scripts de comando"
+
+#~ msgid "Disable File Manager"
+#~ msgstr "Deshabilitar el gestor de archivos"
+
+#~ msgid "Disable console menu"
+#~ msgstr "Desactivar el menu de consola"
+
+#~ msgid "Disable firmware version check"
+#~ msgstr "Desactivar la comprobacion de la version del Sistema Base"
+
+#~ msgid "Disable speaker beep on startup and shutdown"
+#~ msgstr "Desactivar el pitido del altavoz al iniciar y apagar"
+
+#~ msgid "Edit dataset"
+#~ msgstr "Editar conjunto de datos"
+
+#~ msgid "Enable Zeroconf/Bonjour to advertise services of this device"
+#~ msgstr ""
+#~ "Habilitar Zeroconf/Bonjour para advertir servicios en éste dispositivo"
+
+#~ msgid "Enable console screensaver"
+#~ msgstr "Activar salvapantallas de consola"
+
+#~ msgid "Enable serial console"
+#~ msgstr "Habilitar la consola por puerto serie"
+
+#~ msgid "Enable the system power control utility"
+#~ msgstr "Activar la utilidad de control de alimentacion electrica del sistema"
+
+#~ msgid "Enable tuning of some kernel variables"
+#~ msgstr "Permitir ajustar algunas variables del kernel"
+
+#~ msgid "Firmware version check"
+#~ msgstr "Comprobacion del Firmware"
+
+#~ msgid "From email"
+#~ msgstr "e-mail que aparecera en el campo \"De\""
+
+#~ msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
+#~ msgstr ""
+#~ "Direccion del servidor de salida de correos SMTP, Ej: smtp.miCorp.com"
+
+#~ msgid "Outgoing mail server"
+#~ msgstr "Servidor de correos salientes"
+
+#~ msgid "Software used"
+#~ msgstr "Software usado"
+
+#~ msgid "System Beep"
+#~ msgstr "Pitido de Sistema"
+
+#~ msgid "Your own email address."
+#~ msgstr "Tu direccion de e-mail"
+
+#~ msgid "This server uses default swap."
+#~ msgstr "Este servidor usa la swap por defecto"
+
+#~ msgid "Use toggle button or separate enable/disable buttons."
+#~ msgstr ""
+#~ "Use el botón de intercambio o los botónes de habilitar / deshabilitar"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-02-28 07:30+0000\n"
+"POT-Creation-Date: 2016-03-02 06:26+0000\n"
 "PO-Revision-Date: 2016-02-20 09:08+0000\n"
 "Last-Translator: Balabuha <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-28 14:16+0000\n"
+"X-Launchpad-Export-Date: 2016-03-02 06:37+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "Language: uk\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -572,6 +572,9 @@ msgstr "Додаткові параметри"
 
 msgid "Advanced Settings"
 msgstr "Розширені параметри:"
+
+msgid "Advanced Setup"
+msgstr ""
 
 msgid "Advanced settings"
 msgstr "Додаткові налаштування"
@@ -1290,6 +1293,9 @@ msgstr ""
 msgid "Command"
 msgstr "Команда"
 
+msgid "Command Scripts"
+msgstr ""
+
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
 msgstr "Команда для події LINK_DOWN (наприклад, %s)."
@@ -1300,9 +1306,6 @@ msgstr "Команда для події LINK_UP (наприклад, %s)."
 
 msgid "Command output:"
 msgstr "Вивід команди:"
-
-msgid "Command scripts"
-msgstr "Командні сценарії"
 
 msgid "Comment"
 msgstr "Примітка"
@@ -1360,6 +1363,9 @@ msgstr "Розгляньте можливість заміни цього дис
 
 msgid "Console Menu"
 msgstr "Консольне меню"
+
+msgid "Console Settings"
+msgstr ""
 
 msgid "Console screensaver"
 msgstr "Консольний скрін-сейвер"
@@ -1759,6 +1765,12 @@ msgstr "Каталог бази даних"
 msgid "Dataset"
 msgstr "Набір даних"
 
+msgid "Dataset is locked"
+msgstr ""
+
+msgid "Dataset is marked for deletion"
+msgstr ""
+
 msgid "Datasets"
 msgstr "Набір даних"
 
@@ -2082,9 +2094,6 @@ msgstr "Директорія, що містить змінний носій. (e.
 msgid "Directory to watch for new .torrent files."
 msgstr "Директорія де слідкувати за новими .torrent-файлами."
 
-msgid "Disable File Manager"
-msgstr "Вимкнути файловий менеджер"
-
 msgid "Disable Firmware Update"
 msgstr "Заборонити оновлення прошивки"
 
@@ -2097,14 +2106,17 @@ msgstr ""
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Вимкнути обгортку TCP (модуль mod_wrap)."
 
-msgid "Disable console menu"
-msgstr "Заборонити консольне меню"
+msgid "Disable console menu."
+msgstr ""
 
-msgid "Disable firmware version check"
-msgstr "Вимкнути перевірку версії прошивки"
+msgid "Disable file manager completely."
+msgstr ""
 
-msgid "Disable speaker beep on startup and shutdown"
-msgstr "Вимкнити звуковий сигнал при включенні і виключенні"
+msgid "Disable firmware version check."
+msgstr ""
+
+msgid "Disable speaker beep on startup and shutdown."
+msgstr ""
 
 msgid "Disable the compression of repeated line"
 msgstr ""
@@ -2424,6 +2436,9 @@ msgstr "ПОМИЛКА:"
 msgid "Edit"
 msgstr "Редагувати"
 
+msgid "Edit Dataset"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "Редагувати хост"
 
@@ -2456,9 +2471,6 @@ msgstr "Редагувати автоматичний знімок"
 
 msgid "Edit command"
 msgstr "Редагувати команду"
-
-msgid "Edit dataset"
-msgstr "Редагувати набір даних"
 
 msgid "Edit device"
 msgstr "Редагувати пристрій"
@@ -2527,8 +2539,14 @@ msgstr "Ефективність ДБЖ (Рівень вихідного стр�
 msgid "Email"
 msgstr "Електронна пошта"
 
+msgid "Email Address"
+msgstr ""
+
 msgid "Email Report"
 msgstr "Звіт електронною поштою"
+
+msgid "Email address for sending system messages."
+msgstr ""
 
 msgid "Empty as default."
 msgstr "Пустий типово"
@@ -2592,8 +2610,8 @@ msgstr "Увімкнути підтримку Time Machine"
 msgid "Enable ZFS ACL"
 msgstr "Увімкнути ZFS ACL"
 
-msgid "Enable Zeroconf/Bonjour to advertise services of this device"
-msgstr "Увімкнути Zeroconf/Bonjour для оповіщення сервісів  цього пристрою"
+msgid "Enable Zeroconf/Bonjour to advertise services of this device."
+msgstr ""
 
 msgid "Enable anonymous bind."
 msgstr "Дозволити анонімний доступ."
@@ -2604,8 +2622,8 @@ msgstr "Увімкнути автентифікацію."
 msgid "Enable compression."
 msgstr "Увімкнути стиснення."
 
-msgid "Enable console screensaver"
-msgstr "Активувати консольну екранну заставку"
+msgid "Enable console screensaver."
+msgstr ""
 
 msgid "Enable device polling"
 msgstr "Дозволити опитування пристроїв"
@@ -2692,8 +2710,8 @@ msgstr ""
 msgid "Enable reverse DNS lookup."
 msgstr "Увімкнути зворотній пошук  DNS."
 
-msgid "Enable serial console"
-msgstr "Увімкнути серійну консоль"
+msgid "Enable serial console."
+msgstr ""
 
 msgid "Enable shadow copy"
 msgstr "Увімкнути shadow copy"
@@ -2707,8 +2725,8 @@ msgstr "Увімкнути логування через syslog на відда�
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Увімкнути протокол ідентифікації (RFC1413)."
 
-msgid "Enable the system power control utility"
-msgstr "Увімкнути утиліту контролю системного живлення"
+msgid "Enable the system power control utility."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Увімкнути строге дотримання DLNA стандартів."
@@ -2719,8 +2737,8 @@ msgstr "Дозволити перекодування."
 msgid "Enable traps."
 msgstr ""
 
-msgid "Enable tuning of some kernel variables"
-msgstr "Дозволити налаштування деяких параметрів ядра"
+msgid "Enable tuning of some kernel variables."
+msgstr ""
 
 msgid "Enable write cache mode."
 msgstr "Увімкнути режим кешування запису."
@@ -3063,6 +3081,9 @@ msgstr "Налаштування правил фаєрвола"
 msgid "Firmware"
 msgstr "Прошивка"
 
+msgid "Firmware Check"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Не вдалося завантажити прошивку (недостатньо пам'яті?)"
 
@@ -3071,9 +3092,6 @@ msgstr "Ця платформа не підтримує завантаження
 
 msgid "Firmware version"
 msgstr "Версія прошивки"
-
-msgid "Firmware version check"
-msgstr "Перевірка версії прошивки"
 
 msgid "FirstBurstLength"
 msgstr "FirstBurstLength"
@@ -3126,9 +3144,6 @@ msgstr ""
 
 msgid "Friday"
 msgstr ""
-
-msgid "From email"
-msgstr "З пошти"
 
 msgid "Fsck"
 msgstr "Fsck"
@@ -3818,6 +3833,12 @@ msgstr ""
 msgid "Japanese"
 msgstr "Японська"
 
+msgid "Job is locked"
+msgstr ""
+
+msgid "Job is marked for deletion"
+msgstr ""
+
 msgid "Jul"
 msgstr ""
 
@@ -4155,6 +4176,12 @@ msgstr "MBR розділ"
 msgid "MIB"
 msgstr "MIB"
 
+msgid "MIB is locked"
+msgstr ""
+
+msgid "MIB is marked for deletion"
+msgstr ""
+
 msgid "MISSING"
 msgstr "ВІДСУТНІЙ"
 
@@ -4464,6 +4491,12 @@ msgstr "Монтую..."
 
 msgid "Mounts"
 msgstr "Примонтовані пристрої"
+
+msgid "Move down"
+msgstr ""
+
+msgid "Move up"
+msgstr ""
 
 msgid "Music"
 msgstr "Музика"
@@ -4875,6 +4908,12 @@ msgstr ""
 msgid "Option"
 msgstr "Опція"
 
+msgid "Option is locked"
+msgstr ""
+
+msgid "Option is marked for deletion"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr ""
 
@@ -4893,11 +4932,8 @@ msgstr "Вихід"
 msgid "Outgoing Power/Inverter Information"
 msgstr "Інформація про вихідну лінію/інвертор"
 
-msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
+msgid "Outgoing SMTP mail server address."
 msgstr ""
-
-msgid "Outgoing mail server"
-msgstr "Сервер вихідної пошти"
 
 msgid "Output current (A)"
 msgstr "Вихідний струм (А)"
@@ -5069,6 +5105,9 @@ msgstr "Обмін вузлами"
 
 msgid "Peer port"
 msgstr "Порт вузла"
+
+msgid "Performance Settings"
+msgstr ""
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
@@ -5650,6 +5689,9 @@ msgid ""
 "Vista. NT1 is for legacy OS like XP."
 msgstr ""
 
+msgid "SMTP Server"
+msgstr ""
+
 msgid "SNMP"
 msgstr "SNMP"
 
@@ -6043,8 +6085,8 @@ msgstr "Програмний RAID"
 msgid "Software RAID"
 msgstr "Програмний RAID"
 
-msgid "Software used"
-msgstr "Використовуване ПЗ"
+msgid "Software Used"
+msgstr ""
 
 msgid "Source"
 msgstr "Джерело"
@@ -6079,6 +6121,9 @@ msgid "Sparse"
 msgstr ""
 
 msgid "Sparse Volume"
+msgstr ""
+
+msgid "Speaker Beep"
 msgstr ""
 
 msgid ""
@@ -6297,9 +6342,6 @@ msgstr ""
 
 msgid "System"
 msgstr "Система"
-
-msgid "System Beep"
-msgstr "Системний сигнал"
 
 msgid "System Information"
 msgstr ""
@@ -7506,8 +7548,8 @@ msgstr "Pool з таким ім'ям вже існує."
 msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr ""
 
-msgid "This server uses default swap."
-msgstr "Цей сервер типово використовує файл підкачки."
+msgid "This server uses default swap!"
+msgstr ""
 
 msgid "This tag already exists."
 msgstr "Така мітка вже існує."
@@ -8037,7 +8079,7 @@ msgid ""
 "require a valid login."
 msgstr ""
 
-msgid "Use toggle button or separate enable/disable buttons."
+msgid "Use toggle button instead of enable/disable buttons."
 msgstr ""
 
 msgid "Used"
@@ -8180,6 +8222,12 @@ msgid "Volume Name"
 msgstr ""
 
 msgid "Volume Size Limit"
+msgstr ""
+
+msgid "Volume is locked"
+msgstr ""
+
+msgid "Volume is marked for deletion"
 msgstr ""
 
 msgid "Volume label"
@@ -8423,9 +8471,6 @@ msgstr ""
 msgid "Your ZFS system is not healthy."
 msgstr "Ваша система ZFS дещо не здорова."
 
-msgid "Your own email address."
-msgstr "Ваша власна адреса електроної пошти."
-
 msgid "ZFS"
 msgstr "ZFS"
 
@@ -8627,5 +8672,56 @@ msgstr "umount"
 msgid "version:"
 msgstr "версія:"
 
-#~ msgid "Send test email"
-#~ msgstr "Надіслати тестове повідомлення"
+#~ msgid "Your own email address."
+#~ msgstr "Ваша власна адреса електроної пошти."
+
+#~ msgid "Command scripts"
+#~ msgstr "Командні сценарії"
+
+#~ msgid "Disable File Manager"
+#~ msgstr "Вимкнути файловий менеджер"
+
+#~ msgid "Disable console menu"
+#~ msgstr "Заборонити консольне меню"
+
+#~ msgid "Disable firmware version check"
+#~ msgstr "Вимкнути перевірку версії прошивки"
+
+#~ msgid "Disable speaker beep on startup and shutdown"
+#~ msgstr "Вимкнити звуковий сигнал при включенні і виключенні"
+
+#~ msgid "Enable Zeroconf/Bonjour to advertise services of this device"
+#~ msgstr "Увімкнути Zeroconf/Bonjour для оповіщення сервісів  цього пристрою"
+
+#~ msgid "Enable console screensaver"
+#~ msgstr "Активувати консольну екранну заставку"
+
+#~ msgid "Edit dataset"
+#~ msgstr "Редагувати набір даних"
+
+#~ msgid "Enable serial console"
+#~ msgstr "Увімкнути серійну консоль"
+
+#~ msgid "Enable the system power control utility"
+#~ msgstr "Увімкнути утиліту контролю системного живлення"
+
+#~ msgid "Enable tuning of some kernel variables"
+#~ msgstr "Дозволити налаштування деяких параметрів ядра"
+
+#~ msgid "Firmware version check"
+#~ msgstr "Перевірка версії прошивки"
+
+#~ msgid "Software used"
+#~ msgstr "Використовуване ПЗ"
+
+#~ msgid "From email"
+#~ msgstr "З пошти"
+
+#~ msgid "This server uses default swap."
+#~ msgstr "Цей сервер типово використовує файл підкачки."
+
+#~ msgid "System Beep"
+#~ msgstr "Системний сигнал"
+
+#~ msgid "Outgoing mail server"
+#~ msgstr "Сервер вихідної пошти"

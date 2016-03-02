@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-02-28 07:30+0000\n"
-"PO-Revision-Date: 2016-02-27 13:30+0000\n"
+"POT-Creation-Date: 2016-03-02 06:26+0000\n"
+"PO-Revision-Date: 2016-02-29 19:39+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-28 14:17+0000\n"
+"X-Launchpad-Export-Date: 2016-03-02 06:38+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -607,6 +607,9 @@ msgstr "Pokročilé předvolby"
 
 msgid "Advanced Settings"
 msgstr "Pokročilá nastavení"
+
+msgid "Advanced Setup"
+msgstr ""
 
 msgid "Advanced settings"
 msgstr "Pokročilá nastavení"
@@ -1353,6 +1356,9 @@ msgstr ""
 msgid "Command"
 msgstr "Příkaz"
 
+msgid "Command Scripts"
+msgstr ""
+
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
 msgstr ""
@@ -1367,9 +1373,6 @@ msgstr ""
 
 msgid "Command output:"
 msgstr "Výstup z příkazu:"
-
-msgid "Command scripts"
-msgstr "Ovládací skripty"
 
 msgid "Comment"
 msgstr "Komentář"
@@ -1427,6 +1430,9 @@ msgstr "Zvažte výměnu této jednotky (disku, SSD)"
 
 msgid "Console Menu"
 msgstr "Nabídka v textové konzoli"
+
+msgid "Console Settings"
+msgstr ""
 
 msgid "Console screensaver"
 msgstr "Šetřič obrazovky v textové konzoli"
@@ -1871,6 +1877,12 @@ msgstr "Složka s databází"
 msgid "Dataset"
 msgstr "Datové sada"
 
+msgid "Dataset is locked"
+msgstr ""
+
+msgid "Dataset is marked for deletion"
+msgstr ""
+
 msgid "Datasets"
 msgstr "Datové sady"
 
@@ -2200,9 +2212,6 @@ msgstr "Složka, která obsahuje vyjímatelná média. (např. /mnt/iscsi/)"
 msgid "Directory to watch for new .torrent files."
 msgstr "Složka, ve které sledovat výskyt nových .torrent souborů."
 
-msgid "Disable File Manager"
-msgstr "Vypnout webového správce souborů"
-
 msgid "Disable Firmware Update"
 msgstr "Vypnout aktualizaci firmware"
 
@@ -2215,14 +2224,17 @@ msgstr "Vypnout označené předvolby"
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Vypnout TCP zprostředkovávající službu (modul mod_wrap)."
 
-msgid "Disable console menu"
-msgstr "Nezobrazovat nabídku v textové konzoli"
+msgid "Disable console menu."
+msgstr ""
 
-msgid "Disable firmware version check"
-msgstr "Vypnout zjišťování novějších verzí firmwaru"
+msgid "Disable file manager completely."
+msgstr ""
 
-msgid "Disable speaker beep on startup and shutdown"
-msgstr "Vypnout pípnutí při spouštění a vypínání systému"
+msgid "Disable firmware version check."
+msgstr ""
+
+msgid "Disable speaker beep on startup and shutdown."
+msgstr ""
 
 msgid "Disable the compression of repeated line"
 msgstr "Vypnout kompresi opakovaného řádku"
@@ -2544,6 +2556,9 @@ msgstr "CHYBA:"
 msgid "Edit"
 msgstr "Upravit"
 
+msgid "Edit Dataset"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "Upravit záznam o stroji"
 
@@ -2576,9 +2591,6 @@ msgstr "Upravit automatické zachycování stavu"
 
 msgid "Edit command"
 msgstr "Upravit příkaz"
-
-msgid "Edit dataset"
-msgstr "Upravit datovou sadu"
 
 msgid "Edit device"
 msgstr "Upravit zařízení"
@@ -2647,8 +2659,14 @@ msgstr "Účinnost UPS zdroje (poměr výstupního a vstupního proudu)"
 msgid "Email"
 msgstr "E-mail"
 
+msgid "Email Address"
+msgstr ""
+
 msgid "Email Report"
 msgstr "Hlášení e-mailem"
+
+msgid "Email address for sending system messages."
+msgstr ""
 
 msgid "Empty as default."
 msgstr "Ve výchozím stavu nevyplněno."
@@ -2712,10 +2730,8 @@ msgstr "Zapnout podporu pro aplikaci Apple Time Machine"
 msgid "Enable ZFS ACL"
 msgstr "Zapnout ACL seznamy pro ZFS"
 
-msgid "Enable Zeroconf/Bonjour to advertise services of this device"
+msgid "Enable Zeroconf/Bonjour to advertise services of this device."
 msgstr ""
-"Zapnout propagování služeb tohoto zařízení prostřednictvím protokolu "
-"Zeroconf/Bonjour."
 
 msgid "Enable anonymous bind."
 msgstr "Umožnit anonymní spojení."
@@ -2726,8 +2742,8 @@ msgstr "Zapnout ověřování."
 msgid "Enable compression."
 msgstr "Zapnout kompresi."
 
-msgid "Enable console screensaver"
-msgstr "Zapnout šetřič obrazovky pro konzoli"
+msgid "Enable console screensaver."
+msgstr ""
 
 msgid "Enable device polling"
 msgstr "Zapnout dotazování zařízení"
@@ -2816,8 +2832,8 @@ msgstr ""
 msgid "Enable reverse DNS lookup."
 msgstr "Zapnout zpětný DNS překlad."
 
-msgid "Enable serial console"
-msgstr "Zapnout sériovou konzoli (RS232)."
+msgid "Enable serial console."
+msgstr ""
 
 msgid "Enable shadow copy"
 msgstr "Zapnout funkci stínové kopie"
@@ -2831,8 +2847,8 @@ msgstr "Zapnout zaznamenávání událostí na vzdálený syslog server"
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Používat protokol ident (norma RFC1413)"
 
-msgid "Enable the system power control utility"
-msgstr "Zapnout systémový nástroj pro správu napájení"
+msgid "Enable the system power control utility."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Zapnutím budou striktně dodržovány standardy pro DLNA."
@@ -2843,8 +2859,8 @@ msgstr "Zapnout převod kódování znaků"
 msgid "Enable traps."
 msgstr "Zapnout SNMP hlášení."
 
-msgid "Enable tuning of some kernel variables"
-msgstr "Zapnout ladění některých proměnných jádra systému"
+msgid "Enable tuning of some kernel variables."
+msgstr ""
 
 msgid "Enable write cache mode."
 msgstr "Zapnout režim zápisu s mezipamětí."
@@ -3203,6 +3219,9 @@ msgstr "Nastavení pravidla brány firewall"
 msgid "Firmware"
 msgstr "Firmware"
 
+msgid "Firmware Check"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Nahrání firmware se nezdařilo (nedostatek paměti?)"
 
@@ -3211,9 +3230,6 @@ msgstr "Nahrávání firmware není na této platformě podporováno."
 
 msgid "Firmware version"
 msgstr "Verze firmware"
-
-msgid "Firmware version check"
-msgstr "Kontrola verze firmwaru"
 
 msgid "FirstBurstLength"
 msgstr "Délka první dávky (FirstBurstLength)"
@@ -3266,9 +3282,6 @@ msgstr "pá"
 
 msgid "Friday"
 msgstr "pátek"
-
-msgid "From email"
-msgstr "Z e-mailu"
 
 msgid "Fsck"
 msgstr "Kontrola souborového systému (fsck)"
@@ -3953,7 +3966,7 @@ msgid "Invalid username or password. Please try again."
 msgstr "Neplatné uživatelské jméno a/nebo heslo. Zkuste to znovu."
 
 msgid "Invert Selection"
-msgstr ""
+msgstr "Obrátit výběr"
 
 msgid ""
 "It can be changed from the client side by standard SCSI mode page at any "
@@ -4010,6 +4023,12 @@ msgstr ""
 
 msgid "Japanese"
 msgstr "japonština"
+
+msgid "Job is locked"
+msgstr ""
+
+msgid "Job is marked for deletion"
+msgstr ""
 
 msgid "Jul"
 msgstr "čec"
@@ -4388,6 +4407,12 @@ msgstr "MBR diskový oddíl"
 msgid "MIB"
 msgstr "MIB"
 
+msgid "MIB is locked"
+msgstr ""
+
+msgid "MIB is marked for deletion"
+msgstr ""
+
 msgid "MISSING"
 msgstr "CHYBĚJÍCÍ"
 
@@ -4709,6 +4734,12 @@ msgstr "Připojování…"
 
 msgid "Mounts"
 msgstr "Připojení"
+
+msgid "Move down"
+msgstr ""
+
+msgid "Move up"
+msgstr ""
 
 msgid "Music"
 msgstr "Hudba"
@@ -5146,6 +5177,12 @@ msgstr ""
 msgid "Option"
 msgstr "Předvolba"
 
+msgid "Option is locked"
+msgstr ""
+
+msgid "Option is marked for deletion"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr "Nepoviný, uživateli srozumitelný název cíle."
 
@@ -5164,11 +5201,8 @@ msgstr "Výstup"
 msgid "Outgoing Power/Inverter Information"
 msgstr "Informace o výstupu napájení / střídači"
 
-msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
-msgstr "Adresa serveru pro odchozí poštu (SMTP), např.: smtp.example.com."
-
-msgid "Outgoing mail server"
-msgstr "Server odchozí pošty"
+msgid "Outgoing SMTP mail server address."
+msgstr ""
 
 msgid "Output current (A)"
 msgstr "Výstupní proud (A)"
@@ -5349,6 +5383,9 @@ msgstr "Výměna stran"
 
 msgid "Peer port"
 msgstr "Port na protějšku"
+
+msgid "Performance Settings"
+msgstr ""
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
@@ -5945,6 +5982,9 @@ msgstr ""
 "8. SMB2 je pro systémy jako jsou Windows 7 a Vista. NT1 je pro staré systémy "
 "jako je Windows XP."
 
+msgid "SMTP Server"
+msgstr ""
+
 msgid "SNMP"
 msgstr "SNMP"
 
@@ -6072,7 +6112,7 @@ msgstr ""
 "zabezpečené)."
 
 msgid "Select a date format."
-msgstr ""
+msgstr "Vyberte formát datumu."
 
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Vyberte disk, který má zapnuté dohledování hodnot SMART diagnostiky."
@@ -6368,8 +6408,8 @@ msgstr "SoftwarovyRAID"
 msgid "Software RAID"
 msgstr "Softwarový RAID"
 
-msgid "Software used"
-msgstr "Použitý software"
+msgid "Software Used"
+msgstr ""
 
 msgid "Source"
 msgstr "Zdroj"
@@ -6408,6 +6448,9 @@ msgstr "Řídké"
 
 msgid "Sparse Volume"
 msgstr "Řídký svazek"
+
+msgid "Speaker Beep"
+msgstr ""
 
 msgid ""
 "Specific to He8 drives from HGST. The Helium, so says the literature, allows "
@@ -6650,9 +6693,6 @@ msgstr ""
 
 msgid "System"
 msgstr "Systém"
-
-msgid "System Beep"
-msgstr "Systémové zvukové znamení"
 
 msgid "System Information"
 msgstr "Informace o systému"
@@ -8090,9 +8130,8 @@ msgstr ""
 "Toto pravidlo je dotčeno kdykoli nastane událost, odpovídající zvolené "
 "směrnici."
 
-msgid "This server uses default swap."
+msgid "This server uses default swap!"
 msgstr ""
-"Tento server používá výchozí prostor pro odkládání stránek paměti (swap)."
 
 msgid "This tag already exists."
 msgstr "Tento štítek už existuje."
@@ -8300,7 +8339,7 @@ msgstr ""
 "složek. (např. %s)"
 
 msgid "Toggle Mode"
-msgstr ""
+msgstr "Přepnout režim"
 
 msgid "Toggle Selected Jobs"
 msgstr "Přepnout označené úlohy"
@@ -8698,7 +8737,7 @@ msgstr ""
 "službě připojí jako hosté. Je třeba, aby zmíněný uživatel existoval v "
 "souboru passwd, platné přihlášení však není vyžadováno."
 
-msgid "Use toggle button or separate enable/disable buttons."
+msgid "Use toggle button instead of enable/disable buttons."
 msgstr ""
 
 msgid "Used"
@@ -8844,6 +8883,12 @@ msgstr "Název svazku"
 
 msgid "Volume Size Limit"
 msgstr "Omezení velikosti svazku"
+
+msgid "Volume is locked"
+msgstr ""
+
+msgid "Volume is marked for deletion"
+msgstr ""
 
 msgid "Volume label"
 msgstr "Štítek svazku"
@@ -9121,9 +9166,6 @@ msgstr ""
 msgid "Your ZFS system is not healthy."
 msgstr "Tento souborový systém ZFS není v pořádku."
 
-msgid "Your own email address."
-msgstr "Vaše vlastní e-mailová adresa"
-
 msgid "ZFS"
 msgstr "ZFS"
 
@@ -9336,8 +9378,66 @@ msgstr "odpojit (umount)"
 msgid "version:"
 msgstr "verze:"
 
-#~ msgid "Send test email"
-#~ msgstr "Odeslat zkušební e-mail"
+#~ msgid "Firmware version check"
+#~ msgstr "Kontrola verze firmwaru"
 
-#~ msgid "Select the date format."
-#~ msgstr "Vyberte formát datumu."
+#~ msgid "Software used"
+#~ msgstr "Použitý software"
+
+#~ msgid "From email"
+#~ msgstr "Z e-mailu"
+
+#~ msgid "Disable firmware version check"
+#~ msgstr "Vypnout zjišťování novějších verzí firmwaru"
+
+#~ msgid "Enable console screensaver"
+#~ msgstr "Zapnout šetřič obrazovky pro konzoli"
+
+#~ msgid "Outgoing mail server"
+#~ msgstr "Server odchozí pošty"
+
+#~ msgid "System Beep"
+#~ msgstr "Systémové zvukové znamení"
+
+#~ msgid "Command scripts"
+#~ msgstr "Ovládací skripty"
+
+#~ msgid "Disable speaker beep on startup and shutdown"
+#~ msgstr "Vypnout pípnutí při spouštění a vypínání systému"
+
+#~ msgid "Enable Zeroconf/Bonjour to advertise services of this device"
+#~ msgstr ""
+#~ "Zapnout propagování služeb tohoto zařízení prostřednictvím protokolu "
+#~ "Zeroconf/Bonjour."
+
+#~ msgid "Enable serial console"
+#~ msgstr "Zapnout sériovou konzoli (RS232)."
+
+#~ msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
+#~ msgstr "Adresa serveru pro odchozí poštu (SMTP), např.: smtp.example.com."
+
+#~ msgid "Your own email address."
+#~ msgstr "Vaše vlastní e-mailová adresa"
+
+#~ msgid "Disable File Manager"
+#~ msgstr "Vypnout webového správce souborů"
+
+#~ msgid "Disable console menu"
+#~ msgstr "Nezobrazovat nabídku v textové konzoli"
+
+#~ msgid "Edit dataset"
+#~ msgstr "Upravit datovou sadu"
+
+#~ msgid "Enable the system power control utility"
+#~ msgstr "Zapnout systémový nástroj pro správu napájení"
+
+#~ msgid "Enable tuning of some kernel variables"
+#~ msgstr "Zapnout ladění některých proměnných jádra systému"
+
+#~ msgid "This server uses default swap."
+#~ msgstr ""
+#~ "Tento server používá výchozí prostor pro odkládání stránek paměti (swap)."
+
+#~ msgid "Use toggle button or separate enable/disable buttons."
+#~ msgstr ""
+#~ "Použijte přepínací tlačítko nebo oddělená tlačítka pro vypnoutí a zapnoutí"

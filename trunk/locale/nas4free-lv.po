@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-02-28 07:30+0000\n"
+"POT-Creation-Date: 2016-03-02 06:26+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: Jānis Marks Gailis <jm-gailis@fai-vianet.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-28 14:17+0000\n"
+"X-Launchpad-Export-Date: 2016-03-02 06:37+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: LATVIA\n"
 "Language: \n"
@@ -564,6 +564,9 @@ msgid "Advanced Options"
 msgstr "Paplašinātās iespējas"
 
 msgid "Advanced Settings"
+msgstr ""
+
+msgid "Advanced Setup"
 msgstr ""
 
 msgid "Advanced settings"
@@ -1257,6 +1260,9 @@ msgstr ""
 msgid "Command"
 msgstr "Komanda"
 
+msgid "Command Scripts"
+msgstr ""
+
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
 msgstr ""
@@ -1267,9 +1273,6 @@ msgstr ""
 
 msgid "Command output:"
 msgstr "Komandas izvade:"
-
-msgid "Command scripts"
-msgstr "Komandas skripti"
 
 msgid "Comment"
 msgstr "Komentārs"
@@ -1326,6 +1329,9 @@ msgid "Consider replacing this drive"
 msgstr ""
 
 msgid "Console Menu"
+msgstr ""
+
+msgid "Console Settings"
 msgstr ""
 
 msgid "Console screensaver"
@@ -1693,6 +1699,12 @@ msgstr "Datubāzes mape"
 msgid "Dataset"
 msgstr "Datu sējums"
 
+msgid "Dataset is locked"
+msgstr ""
+
+msgid "Dataset is marked for deletion"
+msgstr ""
+
 msgid "Datasets"
 msgstr "Datu sējumi"
 
@@ -2014,9 +2026,6 @@ msgstr "Mape, kura satur noņemamos multimedijus (piem. /mnt/iscsi/)"
 msgid "Directory to watch for new .torrent files."
 msgstr "Mape, kurā skatīties pēc jaunām .torrent datnem."
 
-msgid "Disable File Manager"
-msgstr "Atspējot Datņu Menedžeri"
-
 msgid "Disable Firmware Update"
 msgstr ""
 
@@ -2029,14 +2038,17 @@ msgstr ""
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
-msgid "Disable console menu"
-msgstr "Atspējot konsoles izvēlni"
+msgid "Disable console menu."
+msgstr ""
 
-msgid "Disable firmware version check"
-msgstr "Atspējot programmatūras versijas pārbaudi"
+msgid "Disable file manager completely."
+msgstr ""
 
-msgid "Disable speaker beep on startup and shutdown"
-msgstr "Atspējot skaņas signālu startā un izslēgšanā"
+msgid "Disable firmware version check."
+msgstr ""
+
+msgid "Disable speaker beep on startup and shutdown."
+msgstr ""
 
 msgid "Disable the compression of repeated line"
 msgstr ""
@@ -2351,6 +2363,9 @@ msgstr ""
 msgid "Edit"
 msgstr "Labot"
 
+msgid "Edit Dataset"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "Labot saimniekdatoru"
 
@@ -2383,9 +2398,6 @@ msgstr ""
 
 msgid "Edit command"
 msgstr "Labot komandu"
-
-msgid "Edit dataset"
-msgstr "Labot datu sējumu"
 
 msgid "Edit device"
 msgstr "Labot ierīci"
@@ -2454,8 +2466,14 @@ msgstr ""
 msgid "Email"
 msgstr "E-pasts"
 
+msgid "Email Address"
+msgstr ""
+
 msgid "Email Report"
 msgstr "E-pasta pārskats"
+
+msgid "Email address for sending system messages."
+msgstr ""
 
 msgid "Empty as default."
 msgstr ""
@@ -2515,8 +2533,8 @@ msgstr ""
 msgid "Enable ZFS ACL"
 msgstr ""
 
-msgid "Enable Zeroconf/Bonjour to advertise services of this device"
-msgstr "Iespējot Zeroconf/Bonjour, lai reklamētu šīs ierīces servisus"
+msgid "Enable Zeroconf/Bonjour to advertise services of this device."
+msgstr ""
 
 msgid "Enable anonymous bind."
 msgstr "Iespējot anonīmo bindi."
@@ -2527,8 +2545,8 @@ msgstr "Iespējot autentifikāciju."
 msgid "Enable compression."
 msgstr "Iespējot kompresiju"
 
-msgid "Enable console screensaver"
-msgstr "Iespējot konsoles ekrānsaudzētāju"
+msgid "Enable console screensaver."
+msgstr ""
 
 msgid "Enable device polling"
 msgstr "Iespējot ierīces aptauju"
@@ -2615,8 +2633,8 @@ msgstr ""
 msgid "Enable reverse DNS lookup."
 msgstr "Iespējot atpakaļēju DNS pārlūkošanu."
 
-msgid "Enable serial console"
-msgstr "Iespējot seriālo konsoli"
+msgid "Enable serial console."
+msgstr ""
 
 msgid "Enable shadow copy"
 msgstr ""
@@ -2630,8 +2648,8 @@ msgstr "Iespējot syslogošanu uz atāla syslog servera."
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Iespējot identitātes protokolu (RFC1413)"
 
-msgid "Enable the system power control utility"
-msgstr "Iespējot sistēmas barošanas kontroles utilītu"
+msgid "Enable the system power control utility."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr ""
@@ -2642,8 +2660,8 @@ msgstr "Iespējot transkodēšanu."
 msgid "Enable traps."
 msgstr "Iespējot slazdus."
 
-msgid "Enable tuning of some kernel variables"
-msgstr "Pieļaut dažu kodola mainīgo tūnēšanu"
+msgid "Enable tuning of some kernel variables."
+msgstr ""
 
 msgid "Enable write cache mode."
 msgstr ""
@@ -2988,6 +3006,9 @@ msgstr ""
 msgid "Firmware"
 msgstr "Programmaparatūra"
 
+msgid "Firmware Check"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr ""
 
@@ -2996,9 +3017,6 @@ msgstr "Programmatūras augšupielāde nav atbalstīta uz šīs platformas."
 
 msgid "Firmware version"
 msgstr ""
-
-msgid "Firmware version check"
-msgstr "Programmatūras versijas pārbaude"
 
 msgid "FirstBurstLength"
 msgstr "FirstBurstLength"
@@ -3049,9 +3067,6 @@ msgstr ""
 
 msgid "Friday"
 msgstr ""
-
-msgid "From email"
-msgstr "No e-pasta"
 
 msgid "Fsck"
 msgstr "Fsck"
@@ -3744,6 +3759,12 @@ msgstr ""
 msgid "Japanese"
 msgstr "Japāņu"
 
+msgid "Job is locked"
+msgstr ""
+
+msgid "Job is marked for deletion"
+msgstr ""
+
 msgid "Jul"
 msgstr ""
 
@@ -4092,6 +4113,12 @@ msgstr "MBR partīcija"
 msgid "MIB"
 msgstr "MIB"
 
+msgid "MIB is locked"
+msgstr ""
+
+msgid "MIB is marked for deletion"
+msgstr ""
+
 msgid "MISSING"
 msgstr "PAZUDIS"
 
@@ -4403,6 +4430,12 @@ msgstr "Montē..."
 
 msgid "Mounts"
 msgstr "Samontētie"
+
+msgid "Move down"
+msgstr ""
+
+msgid "Move up"
+msgstr ""
 
 msgid "Music"
 msgstr ""
@@ -4823,6 +4856,12 @@ msgstr ""
 msgid "Option"
 msgstr "Iespēja"
 
+msgid "Option is locked"
+msgstr ""
+
+msgid "Option is marked for deletion"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr "Neobligāta lietotājam-draudzīga rinda ar mērķi."
 
@@ -4841,11 +4880,8 @@ msgstr "Ārā"
 msgid "Outgoing Power/Inverter Information"
 msgstr ""
 
-msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
-msgstr "Izejošā SMTP vēstuļu servera adrese, piem. smtp.manafirma.com"
-
-msgid "Outgoing mail server"
-msgstr "Izejošais vēstuļu serveris"
+msgid "Outgoing SMTP mail server address."
+msgstr ""
 
 msgid "Output current (A)"
 msgstr ""
@@ -5025,6 +5061,9 @@ msgstr "Vienranga apmaiņa"
 
 msgid "Peer port"
 msgstr "Pēra ports"
+
+msgid "Performance Settings"
+msgstr ""
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
@@ -5607,6 +5646,9 @@ msgid ""
 "Vista. NT1 is for legacy OS like XP."
 msgstr ""
 
+msgid "SMTP Server"
+msgstr ""
+
 msgid "SNMP"
 msgstr "SNMP"
 
@@ -6016,8 +6058,8 @@ msgstr "ProgRaid"
 msgid "Software RAID"
 msgstr "Programmatūras RAID"
 
-msgid "Software used"
-msgstr "Lietotā programmatūra"
+msgid "Software Used"
+msgstr ""
 
 msgid "Source"
 msgstr "Avots"
@@ -6052,6 +6094,9 @@ msgid "Sparse"
 msgstr ""
 
 msgid "Sparse Volume"
+msgstr ""
+
+msgid "Speaker Beep"
 msgstr ""
 
 msgid ""
@@ -6283,9 +6328,6 @@ msgstr ""
 
 msgid "System"
 msgstr "Sistēma"
-
-msgid "System Beep"
-msgstr "Sistēmas pīkstiens"
 
 msgid "System Information"
 msgstr ""
@@ -7618,7 +7660,7 @@ msgstr "Šis pūla nosaukums jau eksistē."
 msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr "Šis noteikums tiek izpildīts, kad noteiktais notikums notiek."
 
-msgid "This server uses default swap."
+msgid "This server uses default swap!"
 msgstr ""
 
 msgid "This tag already exists."
@@ -8191,7 +8233,7 @@ msgstr ""
 "pieslēdzoties caur ciemiņu servisu. Šim lietotājam ir jāeksistē paroļu "
 "datnē, bet nevajag derīgu autorizāciju."
 
-msgid "Use toggle button or separate enable/disable buttons."
+msgid "Use toggle button instead of enable/disable buttons."
 msgstr ""
 
 msgid "Used"
@@ -8334,6 +8376,12 @@ msgid "Volume Name"
 msgstr "Sējuma nosaukums"
 
 msgid "Volume Size Limit"
+msgstr ""
+
+msgid "Volume is locked"
+msgstr ""
+
+msgid "Volume is marked for deletion"
 msgstr ""
 
 msgid "Volume label"
@@ -8592,9 +8640,6 @@ msgstr ""
 msgid "Your ZFS system is not healthy."
 msgstr "Tava ZFS sistēma nav vesela."
 
-msgid "Your own email address."
-msgstr "Tava e-pasta adrese."
-
 msgid "ZFS"
 msgstr "ZFS"
 
@@ -8794,5 +8839,56 @@ msgstr "aitsaistīt"
 msgid "version:"
 msgstr ""
 
-#~ msgid "Send test email"
-#~ msgstr "Sūtīt testa e-pastu"
+#~ msgid "Command scripts"
+#~ msgstr "Komandas skripti"
+
+#~ msgid "Disable File Manager"
+#~ msgstr "Atspējot Datņu Menedžeri"
+
+#~ msgid "Disable console menu"
+#~ msgstr "Atspējot konsoles izvēlni"
+
+#~ msgid "Disable firmware version check"
+#~ msgstr "Atspējot programmatūras versijas pārbaudi"
+
+#~ msgid "Disable speaker beep on startup and shutdown"
+#~ msgstr "Atspējot skaņas signālu startā un izslēgšanā"
+
+#~ msgid "Edit dataset"
+#~ msgstr "Labot datu sējumu"
+
+#~ msgid "Enable Zeroconf/Bonjour to advertise services of this device"
+#~ msgstr "Iespējot Zeroconf/Bonjour, lai reklamētu šīs ierīces servisus"
+
+#~ msgid "Enable console screensaver"
+#~ msgstr "Iespējot konsoles ekrānsaudzētāju"
+
+#~ msgid "Enable serial console"
+#~ msgstr "Iespējot seriālo konsoli"
+
+#~ msgid "Enable the system power control utility"
+#~ msgstr "Iespējot sistēmas barošanas kontroles utilītu"
+
+#~ msgid "Enable tuning of some kernel variables"
+#~ msgstr "Pieļaut dažu kodola mainīgo tūnēšanu"
+
+#~ msgid "Firmware version check"
+#~ msgstr "Programmatūras versijas pārbaude"
+
+#~ msgid "From email"
+#~ msgstr "No e-pasta"
+
+#~ msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
+#~ msgstr "Izejošā SMTP vēstuļu servera adrese, piem. smtp.manafirma.com"
+
+#~ msgid "Outgoing mail server"
+#~ msgstr "Izejošais vēstuļu serveris"
+
+#~ msgid "Software used"
+#~ msgstr "Lietotā programmatūra"
+
+#~ msgid "System Beep"
+#~ msgstr "Sistēmas pīkstiens"
+
+#~ msgid "Your own email address."
+#~ msgstr "Tava e-pasta adrese."
