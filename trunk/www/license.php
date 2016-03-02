@@ -129,7 +129,7 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
               &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">User guide and Live support on irc #nas4free|IRC Freenode <a href="http://webchat.freenode.net/?channels=#nas4free">http://webchat.freenode.net</a></font></em></div><br />
 						</td></tr>
             <?php html_separator();?>
-            <?php html_titleline(gettext("Software used"));?>
+            <?php html_titleline(gettext("Software Used"));?>
             <tr>
             	<td class="listt">
       <p>NAS4Free is based upon/includes various free software packages, listed
