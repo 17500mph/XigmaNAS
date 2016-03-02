@@ -264,7 +264,7 @@ function enable_change(enable_change) {
 									<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 				          <td valign="middle" nowrap="nowrap" class="list">
 				          	<a href="disks_manage_smart_edit.php?uuid=<?=$selftest['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit self-test");?>" border="0" alt="<?=gettext("Edit self-test");?>" /></a>
-				            <a href="disks_manage_smart.php?act=del&amp;uuid=<?=$selftest['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this scheduled self-test?");?>')"><img src="x.gif" title="<?=gettext("Delete self-test");?>" border="0" alt="<?=gettext("Delete self-test");?>" /></a>
+				            <a href="disks_manage_smart.php?act=del&amp;uuid=<?=$selftest['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this scheduled self-test?");?>')"><img src="delete.png" title="<?=gettext("Delete self-test");?>" border="0" alt="<?=gettext("Delete self-test");?>" /></a>
 				          </td>
 				          <?php else:?>
 									<td valign="middle" nowrap="nowrap" class="list">
@@ -278,7 +278,7 @@ function enable_change(enable_change) {
 				          <td class="list">
 										<a href="disks_manage_smart_edit.php"><img src="add.png" title="<?=gettext("Add self-test");?>" border="0" alt="<?=gettext("Add self-test");?>" /></a>
 										<?php if (!empty($a_selftest)):?>
-										<a href="disks_manage_smart.php?act=del&amp;uuid=all" onclick="return confirm('<?=gettext("Do you really want to delete all scheduled self-tests?");?>')"><img src="x.gif" title="<?=gettext("Delete all self-tests");?>" border="0" alt="<?=gettext("Delete all self-tests");?>" /></a>
+										<a href="disks_manage_smart.php?act=del&amp;uuid=all" onclick="return confirm('<?=gettext("Do you really want to delete all scheduled self-tests?");?>')"><img src="delete.png" title="<?=gettext("Delete all self-tests");?>" border="0" alt="<?=gettext("Delete all self-tests");?>" /></a>
 										<?php endif;?>
 									</td>
 						    </tr>
