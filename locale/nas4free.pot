@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-02-28 07:30+0000\n"
+"POT-Creation-Date: 2016-03-02 06:26+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -461,6 +461,9 @@ msgid "Advanced Options"
 msgstr ""
 
 msgid "Advanced Settings"
+msgstr ""
+
+msgid "Advanced Setup"
 msgstr ""
 
 msgid "Advanced settings"
@@ -1088,6 +1091,9 @@ msgstr ""
 msgid "Command"
 msgstr ""
 
+msgid "Command Scripts"
+msgstr ""
+
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
 msgstr ""
@@ -1097,9 +1103,6 @@ msgid "Command for LINK_UP event (e.g. %s)."
 msgstr ""
 
 msgid "Command output:"
-msgstr ""
-
-msgid "Command scripts"
 msgstr ""
 
 msgid "Comment"
@@ -1151,6 +1154,9 @@ msgid "Consider replacing this drive"
 msgstr ""
 
 msgid "Console Menu"
+msgstr ""
+
+msgid "Console Settings"
 msgstr ""
 
 msgid "Console screensaver"
@@ -1434,6 +1440,12 @@ msgid "Database directory"
 msgstr ""
 
 msgid "Dataset"
+msgstr ""
+
+msgid "Dataset is locked"
+msgstr ""
+
+msgid "Dataset is marked for deletion"
 msgstr ""
 
 msgid "Datasets"
@@ -1739,9 +1751,6 @@ msgstr ""
 msgid "Directory to watch for new .torrent files."
 msgstr ""
 
-msgid "Disable File Manager"
-msgstr ""
-
 msgid "Disable Firmware Update"
 msgstr ""
 
@@ -1754,13 +1763,16 @@ msgstr ""
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
-msgid "Disable console menu"
+msgid "Disable console menu."
 msgstr ""
 
-msgid "Disable firmware version check"
+msgid "Disable file manager completely."
 msgstr ""
 
-msgid "Disable speaker beep on startup and shutdown"
+msgid "Disable firmware version check."
+msgstr ""
+
+msgid "Disable speaker beep on startup and shutdown."
 msgstr ""
 
 msgid "Disable the compression of repeated line"
@@ -2055,6 +2067,9 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
+msgid "Edit Dataset"
+msgstr ""
+
 msgid "Edit Host"
 msgstr ""
 
@@ -2086,9 +2101,6 @@ msgid "Edit auto snapshot"
 msgstr ""
 
 msgid "Edit command"
-msgstr ""
-
-msgid "Edit dataset"
 msgstr ""
 
 msgid "Edit device"
@@ -2157,7 +2169,13 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
+msgid "Email Address"
+msgstr ""
+
 msgid "Email Report"
+msgstr ""
+
+msgid "Email address for sending system messages."
 msgstr ""
 
 msgid "Empty as default."
@@ -2214,7 +2232,7 @@ msgstr ""
 msgid "Enable ZFS ACL"
 msgstr ""
 
-msgid "Enable Zeroconf/Bonjour to advertise services of this device"
+msgid "Enable Zeroconf/Bonjour to advertise services of this device."
 msgstr ""
 
 msgid "Enable anonymous bind."
@@ -2226,7 +2244,7 @@ msgstr ""
 msgid "Enable compression."
 msgstr ""
 
-msgid "Enable console screensaver"
+msgid "Enable console screensaver."
 msgstr ""
 
 msgid "Enable device polling"
@@ -2304,7 +2322,7 @@ msgstr ""
 msgid "Enable reverse DNS lookup."
 msgstr ""
 
-msgid "Enable serial console"
+msgid "Enable serial console."
 msgstr ""
 
 msgid "Enable shadow copy"
@@ -2319,7 +2337,7 @@ msgstr ""
 msgid "Enable the ident protocol (RFC1413)."
 msgstr ""
 
-msgid "Enable the system power control utility"
+msgid "Enable the system power control utility."
 msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
@@ -2331,7 +2349,7 @@ msgstr ""
 msgid "Enable traps."
 msgstr ""
 
-msgid "Enable tuning of some kernel variables"
+msgid "Enable tuning of some kernel variables."
 msgstr ""
 
 msgid "Enable write cache mode."
@@ -2634,6 +2652,9 @@ msgstr ""
 msgid "Firmware"
 msgstr ""
 
+msgid "Firmware Check"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr ""
 
@@ -2641,9 +2662,6 @@ msgid "Firmware uploading is not supported on this platform."
 msgstr ""
 
 msgid "Firmware version"
-msgstr ""
-
-msgid "Firmware version check"
 msgstr ""
 
 msgid "FirstBurstLength"
@@ -2692,9 +2710,6 @@ msgid "Fri"
 msgstr ""
 
 msgid "Friday"
-msgstr ""
-
-msgid "From email"
 msgstr ""
 
 msgid "Fsck"
@@ -3292,6 +3307,12 @@ msgstr ""
 msgid "Japanese"
 msgstr ""
 
+msgid "Job is locked"
+msgstr ""
+
+msgid "Job is marked for deletion"
+msgstr ""
+
 msgid "Jul"
 msgstr ""
 
@@ -3598,6 +3619,12 @@ msgstr ""
 msgid "MIB"
 msgstr ""
 
+msgid "MIB is locked"
+msgstr ""
+
+msgid "MIB is marked for deletion"
+msgstr ""
+
 msgid "MISSING"
 msgstr ""
 
@@ -3891,6 +3918,12 @@ msgid "Mounting..."
 msgstr ""
 
 msgid "Mounts"
+msgstr ""
+
+msgid "Move down"
+msgstr ""
+
+msgid "Move up"
 msgstr ""
 
 msgid "Music"
@@ -4248,6 +4281,12 @@ msgstr ""
 msgid "Option"
 msgstr ""
 
+msgid "Option is locked"
+msgstr ""
+
+msgid "Option is marked for deletion"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr ""
 
@@ -4266,10 +4305,7 @@ msgstr ""
 msgid "Outgoing Power/Inverter Information"
 msgstr ""
 
-msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
-msgstr ""
-
-msgid "Outgoing mail server"
+msgid "Outgoing SMTP mail server address."
 msgstr ""
 
 msgid "Output current (A)"
@@ -4430,6 +4466,9 @@ msgid "Peer exchange"
 msgstr ""
 
 msgid "Peer port"
+msgstr ""
+
+msgid "Performance Settings"
 msgstr ""
 
 #, php-format
@@ -4988,6 +5027,9 @@ msgstr ""
 msgid "SMB3 is for recent OS like Windows 8. SMB2 is for OS like Windows 7 and Vista. NT1 is for legacy OS like XP."
 msgstr ""
 
+msgid "SMTP Server"
+msgstr ""
+
 msgid "SNMP"
 msgstr ""
 
@@ -5350,7 +5392,7 @@ msgstr ""
 msgid "Software RAID"
 msgstr ""
 
-msgid "Software used"
+msgid "Software Used"
 msgstr ""
 
 msgid "Source"
@@ -5384,6 +5426,9 @@ msgid "Sparse"
 msgstr ""
 
 msgid "Sparse Volume"
+msgstr ""
+
+msgid "Speaker Beep"
 msgstr ""
 
 msgid "Specific to He8 drives from HGST. The Helium, so says the literature, allows the drives to run cooler and quieter, and reduces power consumption. This is the status of the Helium in the drive. It is a pre-fail attribute that trips once the drive detects that the internal environment is out of specification."
@@ -5579,9 +5624,6 @@ msgid "Syslog sends UDP datagrams to port 514 on the specified remote syslog ser
 msgstr ""
 
 msgid "System"
-msgstr ""
-
-msgid "System Beep"
 msgstr ""
 
 msgid "System Information"
@@ -6540,7 +6582,7 @@ msgstr ""
 msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr ""
 
-msgid "This server uses default swap."
+msgid "This server uses default swap!"
 msgstr ""
 
 msgid "This tag already exists."
@@ -6999,7 +7041,7 @@ msgstr ""
 msgid "Use this option to override the username ('ftp' by default) which will be used for access to services which are specified as guest. Whatever privileges this user has will be available to any client connecting to the guest service. This user must exist in the password file, but does not require a valid login."
 msgstr ""
 
-msgid "Use toggle button or separate enable/disable buttons."
+msgid "Use toggle button instead of enable/disable buttons."
 msgstr ""
 
 msgid "Used"
@@ -7140,6 +7182,12 @@ msgid "Volume Name"
 msgstr ""
 
 msgid "Volume Size Limit"
+msgstr ""
+
+msgid "Volume is locked"
+msgstr ""
+
+msgid "Volume is marked for deletion"
 msgstr ""
 
 msgid "Volume label"
@@ -7352,9 +7400,6 @@ msgid "You should use HTTPS as WebGUI protocol for sending passphrase."
 msgstr ""
 
 msgid "Your ZFS system is not healthy."
-msgstr ""
-
-msgid "Your own email address."
 msgstr ""
 
 msgid "ZFS"
