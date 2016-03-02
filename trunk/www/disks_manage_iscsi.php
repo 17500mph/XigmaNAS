@@ -125,7 +125,7 @@ function iscsiinitiator_process_updatenotification($mode, $data) {
             <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
             <td valign="middle" nowrap="nowrap" class="list">
 							<a href="disks_manage_iscsi_edit.php?uuid=<?=$iscsiinit['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit initiator");?>" border="0" alt="<?=gettext("Edit initiator");?>" /></a>
-							<a href="disks_manage_iscsi.php?act=del&amp;uuid=<?=$iscsiinit['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this initiator? All elements that still use it will become invalid (e.g. share)!");?>')"><img src="x.gif" title="<?=gettext("Delete initiator"); ?>" border="0" alt="<?=gettext("Delete initiator"); ?>" /></a>
+							<a href="disks_manage_iscsi.php?act=del&amp;uuid=<?=$iscsiinit['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this initiator? All elements that still use it will become invalid (e.g. share)!");?>')"><img src="delete.png" title="<?=gettext("Delete initiator"); ?>" border="0" alt="<?=gettext("Delete initiator"); ?>" /></a>
             </td>
             <?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">

@@ -172,7 +172,7 @@ function graid5_process_updatenotification($mode, $data) {
             <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
             <td valign="middle" nowrap="nowrap" class="list">
 							<a href="disks_raid_graid5_edit.php?id=<?=$i;?>"><img src="edit.png" title="<?=gettext("Edit RAID"); ?>" border="0" alt="<?=gettext("Edit RAID"); ?>" /></a>&nbsp;
-							<a href="disks_raid_graid5.php?act=del&amp;id=<?=$i;?>" onclick="return confirm('<?=gettext("Do you really want to delete this volume?\\n!!! Note, all data will get lost and can not be recovered. !!!") ;?>')"><img src="x.gif" title="<?=gettext("Delete RAID") ;?>" border="0" alt="<?=gettext("Delete RAID") ;?>" /></a>
+							<a href="disks_raid_graid5.php?act=del&amp;id=<?=$i;?>" onclick="return confirm('<?=gettext("Do you really want to delete this volume?\\n!!! Note, all data will get lost and can not be recovered. !!!") ;?>')"><img src="delete.png" title="<?=gettext("Delete RAID") ;?>" border="0" alt="<?=gettext("Delete RAID") ;?>" /></a>
 						</td>
 						<?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">

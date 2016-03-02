@@ -135,7 +135,7 @@ function userdbuser_process_updatenotification($mode, $data) {
 						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 						<td valign="middle" nowrap="nowrap" class="list">
 							<a href="access_users_edit.php?uuid=<?=$userv['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit user");?>" border="0" alt="<?=gettext("Edit user");?>" /></a>&nbsp;
-							<a href="access_users.php?act=del&amp;uuid=<?=$userv['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this user?");?>')"><img src="x.gif" title="<?=gettext("Delete user");?>" border="0" alt="<?=gettext("Delete user");?>" /></a>
+							<a href="access_users.php?act=del&amp;uuid=<?=$userv['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this user?");?>')"><img src="delete.png" title="<?=gettext("Delete user");?>" border="0" alt="<?=gettext("Delete user");?>" /></a>
 						</td>
 						<?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">

@@ -126,7 +126,7 @@ function hastresource_process_updatenotification($mode, $data) {
 	    <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 	    <td valign="middle" nowrap="nowrap" class="list">
 	      <a href="services_hast_resource_edit.php?uuid=<?=$resourcev['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit resource");?>" border="0" alt="<?=gettext("Edit resource");?>" /></a>
-	      <a href="services_hast_resource.php?act=del&amp;uuid=<?=$resourcev['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this resource?");?>')"><img src="x.gif" title="<?=gettext("Delete resource");?>" border="0" alt="<?=gettext("Delete resource");?>" /></a>
+	      <a href="services_hast_resource.php?act=del&amp;uuid=<?=$resourcev['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this resource?");?>')"><img src="delete.png" title="<?=gettext("Delete resource");?>" border="0" alt="<?=gettext("Delete resource");?>" /></a>
 	    </td>
 	    <?php else:?>
 	    <td valign="middle" nowrap="nowrap" class="list">

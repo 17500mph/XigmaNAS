@@ -125,7 +125,7 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 						<td class="listbg"><?=htmlspecialchars($vlan['desc']);?>&nbsp;</td>
 						<td valign="middle" nowrap="nowrap" class="list">
 							<a href="interfaces_vlan_edit.php?uuid=<?=$vlan['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit interface");?>" border="0" alt="<?=gettext("Edit interface");?>" /></a>&nbsp;
-							<a href="interfaces_vlan.php?act=del&amp;uuid=<?=$vlan['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this interface?");?>')"><img src="x.gif" title="<?=gettext("Delete interface");?>" border="0" alt="<?=gettext("Delete interface");?>" /></a>
+							<a href="interfaces_vlan.php?act=del&amp;uuid=<?=$vlan['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this interface?");?>')"><img src="delete.png" title="<?=gettext("Delete interface");?>" border="0" alt="<?=gettext("Delete interface");?>" /></a>
 						</td>
 					</tr>
 					<?php endforeach;?>

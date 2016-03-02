@@ -133,7 +133,7 @@ function rsyncclient_process_updatenotification($mode, $data) {
 						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
             <td valign="middle" nowrap="nowrap" class="list">
 							<a href="services_rsyncd_client_edit.php?uuid=<?=$rsyncclient['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit Rsync job");?>" border="0" alt="<?=gettext("Edit Rsync job");?>" /></a>&nbsp;
-              <a href="services_rsyncd_client.php?act=del&amp;uuid=<?=$rsyncclient['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this Rsync job?");?>')"><img src="x.gif" title="<?=gettext("Delete Rsync job"); ?>" border="0" alt="<?=gettext("Delete Rsync job"); ?>" /></a>
+              <a href="services_rsyncd_client.php?act=del&amp;uuid=<?=$rsyncclient['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this Rsync job?");?>')"><img src="delete.png" title="<?=gettext("Delete Rsync job"); ?>" border="0" alt="<?=gettext("Delete Rsync job"); ?>" /></a>
             </td>
             <?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">

@@ -137,7 +137,7 @@ function ftpd_mod_ban_process_updatenotification($mode, $data) {
 									<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 									<td valign="middle" nowrap="nowrap" class="list">
 										<a href="services_ftp_mod_ban_edit.php?uuid=<?=$rule['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit rule");?>" border="0" alt="<?=gettext("Edit rule");?>" /></a>
-										<a href="services_ftp_mod.php?act=del&amp;mod=mod_ban&amp;uuid=<?=$rule['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this rule?");?>')"><img src="x.gif" title="<?=gettext("Delete rule");?>" border="0" alt="<?=gettext("Delete rule");?>" /></a>
+										<a href="services_ftp_mod.php?act=del&amp;mod=mod_ban&amp;uuid=<?=$rule['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this rule?");?>')"><img src="delete.png" title="<?=gettext("Delete rule");?>" border="0" alt="<?=gettext("Delete rule");?>" /></a>
 									</td>
 									<?php else:?>
 									<td valign="middle" nowrap="nowrap" class="list">
@@ -151,7 +151,7 @@ function ftpd_mod_ban_process_updatenotification($mode, $data) {
 									<td class="list">
 										<a href="services_ftp_mod_ban_edit.php"><img src="add.png" title="<?=gettext("Add rule");?>" border="0" alt="<?=gettext("Add rule");?>" /></a>
 										<?php if (!empty($a_rule)):?>
-										<a href="services_ftp_mod.php?act=del&amp;mod=mod_ban&amp;uuid=all" onclick="return confirm('<?=gettext("Do you really want to delete all rules?");?>')"><img src="x.gif" title="<?=gettext("Delete all rules");?>" border="0" alt="<?=gettext("Delete all rules");?>" /></a>
+										<a href="services_ftp_mod.php?act=del&amp;mod=mod_ban&amp;uuid=all" onclick="return confirm('<?=gettext("Do you really want to delete all rules?");?>')"><img src="delete.png" title="<?=gettext("Delete all rules");?>" border="0" alt="<?=gettext("Delete all rules");?>" /></a>
 										<?php endif;?>
 									</td>
 								</tr>

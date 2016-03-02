@@ -168,7 +168,7 @@ function zfsclone_process_updatenotification($mode, $data) {
 						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 						<td valign="middle" nowrap="nowrap" class="list">
 							&nbsp; &nbsp; &nbsp;
-							<a href="disks_zfs_snapshot_clone.php?act=del&amp;path=<?=urlencode($clonev['path']);?>" onclick="return confirm('<?=gettext("Do you really want to delete this clone?");?>')"><img src="x.gif" title="<?=gettext("Delete clone");?>" border="0" alt="<?=gettext("Delete clone");?>" /></a>
+							<a href="disks_zfs_snapshot_clone.php?act=del&amp;path=<?=urlencode($clonev['path']);?>" onclick="return confirm('<?=gettext("Do you really want to delete this clone?");?>')"><img src="delete.png" title="<?=gettext("Delete clone");?>" border="0" alt="<?=gettext("Delete clone");?>" /></a>
 						</td>
 						<?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">

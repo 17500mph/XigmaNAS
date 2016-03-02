@@ -160,7 +160,7 @@ function iscsitargetpg_process_updatenotification($mode, $data) {
           <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
           <td valign="middle" nowrap="nowrap" class="list">
             <a href="services_iscsitarget_pg_edit.php?uuid=<?=$pg['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit portal group");?>" border="0" alt="<?=gettext("Edit portal group");?>" /></a>
-            <a href="services_iscsitarget_pg.php?act=del&amp;type=pg&amp;uuid=<?=$pg['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this portal group?");?>')"><img src="x.gif" title="<?=gettext("Delete portal group");?>" border="0" alt="<?=gettext("Delete portal group");?>" /></a>
+            <a href="services_iscsitarget_pg.php?act=del&amp;type=pg&amp;uuid=<?=$pg['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this portal group?");?>')"><img src="delete.png" title="<?=gettext("Delete portal group");?>" border="0" alt="<?=gettext("Delete portal group");?>" /></a>
           </td>
           <?php else:?>
           <td valign="middle" nowrap="nowrap" class="list">

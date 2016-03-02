@@ -141,7 +141,7 @@ function zfsvdev_process_updatenotification($mode, $data) {
 						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 						<td valign="middle" nowrap="nowrap" class="list">
 							<a href="disks_zfs_zpool_vdevice_edit.php?uuid=<?=$vdevicev['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit device");?>" border="0" alt="<?=gettext("Edit device");?>" /></a>&nbsp;
-							<a href="disks_zfs_zpool_vdevice.php?act=del&amp;uuid=<?=$vdevicev['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this device?");?>')"><img src="x.gif" title="<?=gettext("Delete device");?>" border="0" alt="<?=gettext("Delete device");?>" /></a>
+							<a href="disks_zfs_zpool_vdevice.php?act=del&amp;uuid=<?=$vdevicev['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this device?");?>')"><img src="delete.png" title="<?=gettext("Delete device");?>" border="0" alt="<?=gettext("Delete device");?>" /></a>
 						</td>
 						<?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
