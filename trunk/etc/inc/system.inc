@@ -424,6 +424,56 @@ function system_get_uptime() {
 	return htmlspecialchars($uptime);
 }
 
+/**
+ * Get the system date/time for conversion strings.
+ * @return The current uptime as string.
+ */
+function get_datetime_locale_samples() {
+	$retval = [];
+	$sphere_array = [
+		'D M d H:i:s T Y',    // Thu Feb 25 22:52:29 CET 2016
+		'D d M Y H:i:s',      // Thu 25 Feb 2016 22:52:29
+		'D d M Y H:i:s T',    // Thu 25 Feb 2016 22:52:29 CET
+		'D d M Y H:i:s T O',  // Thu 25 Feb 2016 22:52:29 CET +0100
+		'l F d H:i:s T Y',    // Thursday February 25 22:52:29 BST 2016
+		'l d F Y H:i:s',      // Thursday 25 February 2016 22:52:29
+		'l d F Y H:i:s T',    // Thursday 25 February 2016 22:52:29 BST
+		'l d F Y H:i:s T O',  // Thursday 25 February 2016 22:52:29 BST +0100
+		'D M d h:i:s A T Y',  // Thu Feb 25 10:52:29 PM PT 2016
+		'l F d h:i:s A T Y',  // Thursday February 25 10:52:29 PM BST 2016
+		'd.m.Y H:i:s',        // 25.02.2016 22:31:42
+		'd/m/Y H:i:s',        // 25/02/2016 22:31:42
+		'd/m/Y h:i:s A',      // 25/02/2016 10:31:42 PM
+		'm/d/Y H:i:s',        // 02/25/2016 22:31:42
+		'm/d/Y h:i:s A',      // 02/25/2016 10:31:42 PM
+		'Y-m-d H:i:s'         // 2016-02-02 22:31:42
+	];
+	$now = shell_exec('date "+%s"');
+	foreach ($sphere_array as $sphere_record) {
+		$retval[$sphere_record] = get_datetime_locale($now, $sphere_record);
+	}
+	return $retval;
+}
+
+function get_datetime_locale($timestamp = null, $format = null) {
+	global $config;
+	$retval = '';
+	$timestamp = ($timestamp === null) ? shell_exec('date "+%s"') : $timestamp;
+	$format = ($format === null) ? (isset($config['system']['datetimeformat']) ? $config['system']['datetimeformat'] : 'D M d H:m:i T Y') : $format;
+	$datetime_object = new DateTime();
+	$datetime_object->setTimestamp($timestamp);
+	$format_symbols = ['D','l','M','F'];
+	$replacement_symbols = ['%1','%2','%3','%4'];
+	$localised_names = [
+		gettext($datetime_object->format($format_symbols[0])),
+		gettext($datetime_object->format($format_symbols[1])),
+		gettext($datetime_object->format($format_symbols[2])),
+		gettext($datetime_object->format($format_symbols[3]))
+	];
+	$retval = str_replace($replacement_symbols, $localised_names, $datetime_object->format(str_replace($format_symbols, $replacement_symbols, $format))); // Do the whole thing in one go
+	return $retval;
+}
+
 // Get the current RAM information.
 // Returns an array listing the amount of memory installed in the hardware.
 function system_get_ram_info() {
@@ -871,51 +921,5 @@ function system_get_sysinfo() {
 	$value['poolusage'] = get_pool_usage(); // Get pool info.
 	$value['swapusage'] = get_swap_usage(); // Get swap info.
 	return $value;
-}
-
-function get_datetime_locale_samples() {
-	$retval = [];
-	$sphere_array = [
-		'D M d H:i:s T Y',    // Thu Feb 25 22:52:29 CET 2016
-		'D d M Y H:i:s',      // Thu 25 Feb 2016 22:52:29
-		'D d M Y H:i:s T',    // Thu 25 Feb 2016 22:52:29 CET
-		'D d M Y H:i:s T O',  // Thu 25 Feb 2016 22:52:29 CET +0100
-		'l F d H:i:s T Y',    // Thursday February 25 22:52:29 BST 2016
-		'l d F Y H:i:s',      // Thursday 25 February 2016 22:52:29
-		'l d F Y H:i:s T',    // Thursday 25 February 2016 22:52:29 BST
-		'l d F Y H:i:s T O',  // Thursday 25 February 2016 22:52:29 BST +0100
-		'D M d h:i:s A T Y',  // Thu Feb 25 10:52:29 PM PT 2016
-		'l F d h:i:s A T Y',  // Thursday February 25 10:52:29 PM BST 2016
-		'd.m.Y H:i:s',        // 25.02.2016 22:31:42
-		'd/m/Y H:i:s',        // 25/02/2016 22:31:42
-		'd/m/Y h:i:s A',      // 25/02/2016 10:31:42 PM
-		'm/d/Y H:i:s',        // 02/25/2016 22:31:42
-		'm/d/Y h:i:s A',      // 02/25/2016 10:31:42 PM
-		'Y-m-d H:i:s'         // 2016-02-02 22:31:42
-	];
-	$now = shell_exec('date "+%s"');
-	foreach ($sphere_array as $sphere_record) {
-		$retval[$sphere_record] = get_datetime_locale($now, $sphere_record);
-	}
-	return $retval;
-}
-
-function get_datetime_locale($timestamp = null, $format = null) {
-	global $config;
-	$retval = '';
-	$timestamp = ($timestamp === null) ? shell_exec('date "+%s"') : $timestamp;
-	$format = ($format === null) ? (isset($config['system']['datetimeformat']) ? $config['system']['datetimeformat'] : 'D M d H:m:i T Y') : $format;
-	$datetime_object = new DateTime();
-	$datetime_object->setTimestamp($timestamp);
-	$format_symbols = ['D','l','M','F'];
-	$replacement_symbols = ['%1','%2','%3','%4'];
-	$localised_names = [
-		gettext($datetime_object->format($format_symbols[0])),
-		gettext($datetime_object->format($format_symbols[1])),
-		gettext($datetime_object->format($format_symbols[2])),
-		gettext($datetime_object->format($format_symbols[3]))
-	];
-	$retval = str_replace($replacement_symbols, $localised_names, $datetime_object->format(str_replace($format_symbols, $replacement_symbols, $format))); // Do the whole thing in one go
-	return $retval;
 }
 ?>
