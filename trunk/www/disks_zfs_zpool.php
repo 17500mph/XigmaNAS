@@ -179,7 +179,7 @@ $a_poolstatus = zfs_get_pool_list();
 						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 						<td valign="middle" nowrap="nowrap" class="list">
 							<a href="disks_zfs_zpool_edit.php?uuid=<?=$poolv['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit pool");?>" border="0" alt="<?=gettext("Edit pool");?>" /></a>&nbsp;
-							<a href="disks_zfs_zpool.php?act=del&amp;uuid=<?=$poolv['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this pool?");?>')"><img src="x.gif" title="<?=gettext("Delete pool");?>" border="0" alt="<?=gettext("Delete pool");?>" /></a>
+							<a href="disks_zfs_zpool.php?act=del&amp;uuid=<?=$poolv['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this pool?");?>')"><img src="delete.png" title="<?=gettext("Delete pool");?>" border="0" alt="<?=gettext("Delete pool");?>" /></a>
 						</td>
 						<?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
