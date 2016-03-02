@@ -72,6 +72,7 @@ Fixes:
 - Fix typo (ticket #260)
 - Fix ZFS volume is not shown in filechooser.
 - Fix System status pages shows wrong free space for zfs pools (ticket #271)
+- Fix 5000ms page refresh. (took more time than set)
 - Fix AFP compatibility don't work if you didn't enable Samaba AD.
 - Fix run now on cron don't use Who field.
 - Fix duplicate syncthing account when fresh install by 2067.
@@ -90,8 +91,8 @@ Fixes:
 - Fix wrong path in Samba AD. (ticket #228, #232)
 - Fix rsync does not start/restart on WebGUI.
 - Fix send test email when language was changed other than english.
-- Undefined symbol "av_find_stream_info" in fuppes/libmetadata_libavformat.so.
-- AFP share is not advised.
+- Fix Undefined symbol "av_find_stream_info" in fuppes/libmetadata_libavformat.so.
+- Fix AFP share is not advised.
 - Fix webserver user logins.
 - Fix wrong path (ticket #228).
 
