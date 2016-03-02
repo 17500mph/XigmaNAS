@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-03-02 06:26+0000\n"
-"PO-Revision-Date: 2016-02-29 08:16+0000\n"
+"PO-Revision-Date: 2016-03-02 15:02+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-02 06:38+0000\n"
+"X-Launchpad-Export-Date: 2016-03-02 19:04+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -611,7 +611,7 @@ msgid "Advanced Settings"
 msgstr "Προχωρημένες Ρυθμίσεις"
 
 msgid "Advanced Setup"
-msgstr ""
+msgstr "Εγκατάσταση για προχωρημένους"
 
 msgid "Advanced settings"
 msgstr "Ρυθμίσεις για προχωρημένους"
@@ -1361,7 +1361,7 @@ msgid "Command"
 msgstr "Εκτέλεση εντολής"
 
 msgid "Command Scripts"
-msgstr ""
+msgstr "Αρχεία εντολών"
 
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
@@ -1432,7 +1432,7 @@ msgid "Console Menu"
 msgstr "Μενού κονσόλας"
 
 msgid "Console Settings"
-msgstr ""
+msgstr "Ρυθμίσεις Κονσόλας"
 
 msgid "Console screensaver"
 msgstr "Προφύλαξη οθόνης κονσόλας"
@@ -1888,10 +1888,10 @@ msgid "Dataset"
 msgstr "Dataset"
 
 msgid "Dataset is locked"
-msgstr ""
+msgstr "To dataset είναι κλειδωμένο"
 
 msgid "Dataset is marked for deletion"
-msgstr ""
+msgstr "Το dataset έχει σημειωθεί προς διαγραφή"
 
 msgid "Datasets"
 msgstr "Datasets"
@@ -2236,16 +2236,18 @@ msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Απενεργοποίηση TCP wrapper (άρθρωμα mod_wrap)."
 
 msgid "Disable console menu."
-msgstr ""
+msgstr "Απενεργοποίηση μενού κονσόλας"
 
 msgid "Disable file manager completely."
-msgstr ""
+msgstr "Απενεργοποίηση εντελώς του διαχειριστή αρχείων"
 
 msgid "Disable firmware version check."
-msgstr ""
+msgstr "Απενεργοποίηση ελέγχου έκδοσης υλικολογισμικού"
 
 msgid "Disable speaker beep on startup and shutdown."
 msgstr ""
+"Απενεργοποίηση ηχητικής ειδοποίησης συστήματος κατά την έναρξη και τον "
+"τερματισμό."
 
 msgid "Disable the compression of repeated line"
 msgstr "Απενεργοποίση της συμπίεσης της επαναλαμβανόμενης γραμμής"
@@ -2573,7 +2575,7 @@ msgid "Edit"
 msgstr "Επεξεργασία"
 
 msgid "Edit Dataset"
-msgstr ""
+msgstr "Επεξεργασία dataset"
 
 msgid "Edit Host"
 msgstr "Επεξεργασία Υπολογιστή"
@@ -2676,13 +2678,14 @@ msgid "Email"
 msgstr "Ηλεκτρονικό ταχυδρομείο"
 
 msgid "Email Address"
-msgstr ""
+msgstr "Διεύθυνση ηλεκτρονικού ταχυδρομείου"
 
 msgid "Email Report"
 msgstr "Αναφορά Ηλ.Ταχυδρομείου"
 
 msgid "Email address for sending system messages."
 msgstr ""
+"Διεύθυνση ηλεκτρονικού ταχυδρομείου για αποστολή μυνημάτων συστήματος"
 
 msgid "Empty as default."
 msgstr "Κενό από προεπιλογή."
@@ -2748,6 +2751,8 @@ msgstr "Ενεργοποίηση ZFS ACL"
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
 msgstr ""
+"Ενεργοποίηση του Zeroconf/Bonjour για τη διαφήμιση των υπηρεσιών αυτής της "
+"συσκευής"
 
 msgid "Enable anonymous bind."
 msgstr "Ενεργοποίηση ανώνυμου bind."
@@ -2759,7 +2764,7 @@ msgid "Enable compression."
 msgstr "Ενεργοποίηση συμπίεσης."
 
 msgid "Enable console screensaver."
-msgstr ""
+msgstr "Ενεργοποίηση προφύλαξης οθόνης κονσόλας."
 
 msgid "Enable device polling"
 msgstr "Ενεργοποίηση ελέγχου συσκευής"
@@ -2849,7 +2854,7 @@ msgid "Enable reverse DNS lookup."
 msgstr "Ενεργοποίηση αντίστροφης αναζήτησης DNS."
 
 msgid "Enable serial console."
-msgstr ""
+msgstr "Ενεργοποίηση σειριακής κονσόλας"
 
 msgid "Enable shadow copy"
 msgstr "Ενεργοποίηση σκιώδους αντιγράφου"
@@ -2864,7 +2869,7 @@ msgid "Enable the ident protocol (RFC1413)."
 msgstr "Ενεργοποιήση του πρωτοκόλλου ταυτοποίησης (RFC1413)."
 
 msgid "Enable the system power control utility."
-msgstr ""
+msgstr "Ενεργοποίηση του εργαλείου ελέγχου ενέργειας του συστήματος"
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Ενεργοποίηση αυστηρής τήρησης των πρότυπων DLNA."
@@ -2876,7 +2881,7 @@ msgid "Enable traps."
 msgstr "Ενεργοποίηση παγίδων."
 
 msgid "Enable tuning of some kernel variables."
-msgstr ""
+msgstr "Ενεργοποίηση βελτιστοποίησης για κάποιες μεταβλητές του πυρήνα"
 
 msgid "Enable write cache mode."
 msgstr "Ενεργοποίηση προσωρινής μνήμης για την εγγραφή."
@@ -3242,7 +3247,7 @@ msgid "Firmware"
 msgstr "Firmware"
 
 msgid "Firmware Check"
-msgstr ""
+msgstr "Έλεγχος για υλικολογισμικό"
 
 msgid "Firmware upload failed (out of memory?)"
 msgstr ""
@@ -4060,10 +4065,10 @@ msgid "Japanese"
 msgstr "Ιαπωνικά"
 
 msgid "Job is locked"
-msgstr ""
+msgstr "Η εργασία είναι κλειδωμένη"
 
 msgid "Job is marked for deletion"
-msgstr ""
+msgstr "Η εργασία έχει σημειωθεί προς διαγραφή"
 
 msgid "Jul"
 msgstr "Ιούλ."
@@ -4434,10 +4439,10 @@ msgid "MIB"
 msgstr "MIB"
 
 msgid "MIB is locked"
-msgstr ""
+msgstr "Το ΜΙΒ είναι κλειδωμένο"
 
 msgid "MIB is marked for deletion"
-msgstr ""
+msgstr "To MIB έχει σημειωθεί προς διαγραφή"
 
 msgid "MISSING"
 msgstr "ΛΕΙΠΕΙ"
@@ -4759,10 +4764,10 @@ msgid "Mounts"
 msgstr "Προσαρτήσεις"
 
 msgid "Move down"
-msgstr ""
+msgstr "Μετακίνηση κάτω"
 
 msgid "Move up"
-msgstr ""
+msgstr "Μετακίνηση πάνω"
 
 msgid "Music"
 msgstr "Μουσική"
@@ -5201,10 +5206,10 @@ msgid "Option"
 msgstr "Επιλογή"
 
 msgid "Option is locked"
-msgstr ""
+msgstr "Η επιλογή είναι κλειδωμένη"
 
 msgid "Option is marked for deletion"
-msgstr ""
+msgstr "Η επιλογή έχει σημειωθεί προς διαγραφή"
 
 msgid "Optional user-friendly string of the target."
 msgstr "Προαιρετικό, φιλικό προς το χρήστη, όνομα του προορισμού."
@@ -5225,7 +5230,7 @@ msgid "Outgoing Power/Inverter Information"
 msgstr "Πληροφορίες εξερχόμενης ισχύος/αναστροφέα"
 
 msgid "Outgoing SMTP mail server address."
-msgstr ""
+msgstr "Διεύθυνση SMTP του διακομιστή εξερχόμενης αλληλογραφίας."
 
 msgid "Output current (A)"
 msgstr "Ένταση ρεύματος εξόδου (A)"
@@ -5414,7 +5419,7 @@ msgid "Peer port"
 msgstr "Θύρα σύνδεσης ομότιμων χρηστών"
 
 msgid "Performance Settings"
-msgstr ""
+msgstr "Ρυθμίσεις Επιδόσεων"
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
@@ -6012,7 +6017,7 @@ msgstr ""
 "για παλιά λειτουργικά, όπως τα XP."
 
 msgid "SMTP Server"
-msgstr ""
+msgstr "Διακομιστής SMTP"
 
 msgid "SNMP"
 msgstr "SNMP"
@@ -6448,7 +6453,7 @@ msgid "Software RAID"
 msgstr "RAID μέσω λογισμικού"
 
 msgid "Software Used"
-msgstr ""
+msgstr "Λογισμικό που χρησιμοποιείται"
 
 msgid "Source"
 msgstr "Προέλευση"
@@ -6489,7 +6494,7 @@ msgid "Sparse Volume"
 msgstr "Sparse Volume"
 
 msgid "Speaker Beep"
-msgstr ""
+msgstr "Ηχητική Ειδοποίηση"
 
 msgid ""
 "Specific to He8 drives from HGST. The Helium, so says the literature, allows "
@@ -8230,7 +8235,7 @@ msgstr ""
 "Ο κανόνας αυτός ενεργοποιείται κάθε φορά που συμβαίνει η επιλεγμένη οδηγία."
 
 msgid "This server uses default swap!"
-msgstr ""
+msgstr "Αυτός ο διακομιστής χρησιμοποιεί την προεπιλεγμένη swap!"
 
 msgid "This tag already exists."
 msgstr "Αυτή η ετικέτα υπάρχει ήδη."
@@ -8848,6 +8853,8 @@ msgstr ""
 
 msgid "Use toggle button instead of enable/disable buttons."
 msgstr ""
+"Χρήση του κουμπιού εναλλαγής αντί για τα κουμπιά "
+"ενεργοποίησης/απενεργοποίησης."
 
 msgid "Used"
 msgstr "Χρησιμοποιείται"
@@ -8994,10 +9001,10 @@ msgid "Volume Size Limit"
 msgstr "Όριο μεγέθους τόμου"
 
 msgid "Volume is locked"
-msgstr ""
+msgstr "Ο τόμος είναι κλειδωμένος"
 
 msgid "Volume is marked for deletion"
-msgstr ""
+msgstr "Ο τόμος έχει σημειωθεί προς διαγραφή"
 
 msgid "Volume label"
 msgstr "Ετικέτα τόμου"
