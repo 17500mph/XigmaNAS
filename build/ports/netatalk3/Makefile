@@ -1,6 +1,6 @@
 PORTNAME=		netatalk
 PORTVERSION=	 3.1.8
-PORTREVISION=	 0
+PORTREVISION=	 1
 CATEGORIES=	 net
 MASTER_SITES=	 SF
 PKGNAMESUFFIX=   3
@@ -66,6 +66,7 @@ post-install:
 # NAS4Free install
 	@echo "install for ${NAS4FREE_ROOTFS}"
 
+	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/bin/dbd ${NAS4FREE_ROOTFS}/usr/local/bin
 	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/sbin/afpd ${NAS4FREE_ROOTFS}/usr/local/sbin
 	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/sbin/cnid_metad ${NAS4FREE_ROOTFS}/usr/local/sbin
 	@${INSTALL_PROGRAM} -v ${STAGEDIR}${PREFIX}/sbin/cnid_dbd ${NAS4FREE_ROOTFS}/usr/local/sbin
