@@ -182,12 +182,12 @@ function zfsautosnapshot_process_updatenotification($mode, $data) {
 						<td class="listr"><?=htmlspecialchars($a_lifetime[$autosnapshotv['lifetime']]);?>&nbsp;</td>
 						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 						<td valign="middle" nowrap="nowrap" class="list">
-							<a href="disks_zfs_snapshot_auto_edit.php?uuid=<?=$autosnapshotv['uuid'];?>"><img src="e.gif" title="<?=gettext("Edit auto snapshot");?>" border="0" alt="<?=gettext("Edit auto snapshot");?>" /></a>&nbsp;
+							<a href="disks_zfs_snapshot_auto_edit.php?uuid=<?=$autosnapshotv['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit auto snapshot");?>" border="0" alt="<?=gettext("Edit auto snapshot");?>" /></a>&nbsp;
 							<a href="disks_zfs_snapshot_auto.php?act=del&amp;uuid=<?=$autosnapshotv['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this auto snapshot?");?>')"><img src="x.gif" title="<?=gettext("Delete auto snapshot");?>" border="0" alt="<?=gettext("Delete auto snapshot");?>" /></a>
 						</td>
 						<?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
-							<img src="del.gif" border="0" alt="" />
+							<img src="delete.png" border="0" alt="" />
 						</td>
 						<?php endif;?>
 					</tr>
@@ -195,7 +195,7 @@ function zfsautosnapshot_process_updatenotification($mode, $data) {
 					<tr>
 						<td class="list" colspan="6"></td>
 						<td class="list">
-							<a href="disks_zfs_snapshot_auto_edit.php"><img src="plus.gif" title="<?=gettext("Add auto snapshot");?>" border="0" alt="<?=gettext("Add auto snapshot");?>" /></a>
+							<a href="disks_zfs_snapshot_auto_edit.php"><img src="add.png" title="<?=gettext("Add auto snapshot");?>" border="0" alt="<?=gettext("Add auto snapshot");?>" /></a>
 						</td>
 					</tr>
 				</table>

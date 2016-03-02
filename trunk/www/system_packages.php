@@ -80,7 +80,7 @@ if (isset($_GET['act']) && $_GET['act'] == "del") {
 			    <?php $i++; endforeach; ?>
 			    <tr>
 						<td class="list" colspan="2"></td>
-						<td class="list"> <a href="system_packages_edit.php"><img src="plus.gif" title="<?=gettext("Install package"); ?>" border="0" alt="<?=gettext("Install package"); ?>" /></a></td>
+						<td class="list"> <a href="system_packages_edit.php"><img src="add.png" title="<?=gettext("Install package"); ?>" border="0" alt="<?=gettext("Install package"); ?>" /></a></td>
 					</tr>
 			  </table>
 			  <?php include("formend.inc");?>
