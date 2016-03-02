@@ -248,19 +248,19 @@ function iscsitargettarget_process_updatenotification($mode, $data) {
           <td class="listr"><?=htmlspecialchars($extent['size']);?><?=htmlspecialchars($psizeunit)?>&nbsp;</td>
           <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
           <td valign="middle" nowrap="nowrap" class="list">
-            <a href="services_iscsitarget_extent_edit.php?uuid=<?=$extent['uuid'];?>"><img src="e.gif" title="<?=gettext("Edit extent");?>" border="0" alt="<?=gettext("Edit extent");?>" /></a>
-            <a href="services_iscsitarget_target.php?act=del&amp;type=extent&amp;uuid=<?=$extent['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this extent?");?>')"><img src="x.gif" title="<?=gettext("Delete extent");?>" border="0" alt="<?=gettext("Delete extent");?>" /></a>
+            <a href="services_iscsitarget_extent_edit.php?uuid=<?=$extent['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit extent");?>" border="0" alt="<?=gettext("Edit extent");?>" /></a>
+            <a href="services_iscsitarget_target.php?act=del&amp;type=extent&amp;uuid=<?=$extent['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this extent?");?>')"><img src="delete.png" title="<?=gettext("Delete extent");?>" border="0" alt="<?=gettext("Delete extent");?>" /></a>
           </td>
           <?php else:?>
           <td valign="middle" nowrap="nowrap" class="list">
-            <img src="del.gif" border="0" alt="" />
+            <img src="delete.png" border="0" alt="" />
           </td>
           <?php endif;?>
         </tr>
         <?php endforeach;?>
         <tr>
           <td class="list" colspan="3"></td>
-          <td class="list"><a href="services_iscsitarget_extent_edit.php"><img src="plus.gif" title="<?=gettext("Add extent");?>" border="0" alt="<?=gettext("Add extent");?>" /></a></td>
+          <td class="list"><a href="services_iscsitarget_extent_edit.php"><img src="add.png" title="<?=gettext("Add extent");?>" border="0" alt="<?=gettext("Add extent");?>" /></a></td>
         </tr>
         </table>
         <?=gettext("Extents must be defined before they can be used, and extents cannot be used more than once.");?>
@@ -363,19 +363,19 @@ function iscsitargettarget_process_updatenotification($mode, $data) {
           </td>
           <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
           <td valign="middle" nowrap="nowrap" class="list">
-            <a href="services_iscsitarget_target_edit.php?uuid=<?=$target['uuid'];?>"><img src="e.gif" title="<?=gettext("Edit target");?>" border="0" alt="<?=gettext("Edit target");?>" /></a>
-            <a href="services_iscsitarget_target.php?act=del&amp;type=target&amp;uuid=<?=$target['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this target?");?>')"><img src="x.gif" title="<?=gettext("Delete target");?>" border="0" alt="<?=gettext("Delete target");?>" /></a>
+            <a href="services_iscsitarget_target_edit.php?uuid=<?=$target['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit target");?>" border="0" alt="<?=gettext("Edit target");?>" /></a>
+            <a href="services_iscsitarget_target.php?act=del&amp;type=target&amp;uuid=<?=$target['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this target?");?>')"><img src="delete.png" title="<?=gettext("Delete target");?>" border="0" alt="<?=gettext("Delete target");?>" /></a>
           </td>
           <?php else:?>
           <td valign="middle" nowrap="nowrap" class="list">
-            <img src="del.gif" border="0" alt="" />
+            <img src="delete.png" border="0" alt="" />
           </td>
           <?php endif;?>
         </tr>
         <?php endforeach;?>
         <tr>
           <td class="list" colspan="6"></td>
-          <td class="list"><a href="services_iscsitarget_target_edit.php"><img src="plus.gif" title="<?=gettext("Add target");?>" border="0" alt="<?=gettext("Add target");?>" /></a></td>
+          <td class="list"><a href="services_iscsitarget_target_edit.php"><img src="add.png" title="<?=gettext("Add target");?>" border="0" alt="<?=gettext("Add target");?>" /></a></td>
         </tr>
         </table>
         <?=gettext("At the highest level, a target is what is presented to the initiator, and is made up of one or more extents.");?>
