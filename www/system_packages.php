@@ -75,7 +75,7 @@ if (isset($_GET['act']) && $_GET['act'] == "del") {
 			    <tr>
 			      <td class="listr"><?=htmlspecialchars($packagev['name']);?>&nbsp;</td>
 			      <td class="listbg"><?=htmlspecialchars($packagev['desc']);?>&nbsp;</td>
-			      <td valign="middle" nowrap="nowrap" class="list"> <a href="system_packages.php?act=del&amp;id=<?=$i;?>" onclick="return confirm('<?=gettext("Do you really want to uninstall this package?"); ?>')"><img src="x.gif" title="<?=gettext("Uninstall package"); ?>" border="0" alt="<?=gettext("Uninstall package"); ?>" /></a></td>
+			      <td valign="middle" nowrap="nowrap" class="list"> <a href="system_packages.php?act=del&amp;id=<?=$i;?>" onclick="return confirm('<?=gettext("Do you really want to uninstall this package?"); ?>')"><img src="delete.png" title="<?=gettext("Uninstall package"); ?>" border="0" alt="<?=gettext("Uninstall package"); ?>" /></a></td>
 			    </tr>
 			    <?php $i++; endforeach; ?>
 			    <tr>

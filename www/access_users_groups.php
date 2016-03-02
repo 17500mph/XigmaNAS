@@ -131,7 +131,7 @@ function userdbgroup_process_updatenotification($mode, $data) {
 									<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 										<td valign="middle" nowrap="nowrap" class="list">
 											<a href="access_users_groups_edit.php?uuid=<?=$groupv['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit group");?>" border="0" alt="<?=gettext("Edit group");?>" /></a>&nbsp;
-											<a href="access_users_groups.php?act=del&amp;uuid=<?=$groupv["uuid"];?>" onclick="return confirm('<?=gettext("Do you really want to delete this group?");?>')"><img src="x.gif" title="<?=gettext("Delete group");?>" border="0" alt="<?=gettext("Delete group");?>" /></a>
+											<a href="access_users_groups.php?act=del&amp;uuid=<?=$groupv["uuid"];?>" onclick="return confirm('<?=gettext("Do you really want to delete this group?");?>')"><img src="delete.png" title="<?=gettext("Delete group");?>" border="0" alt="<?=gettext("Delete group");?>" /></a>
 										</td>
 									<?php else: ?>
 										<td valign="middle" nowrap="nowrap" class="list">

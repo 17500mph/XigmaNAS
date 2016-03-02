@@ -120,7 +120,7 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 				<td class="listbg"><?=htmlspecialchars($carp['desc']);?>&nbsp;</td>
 				<td valign="middle" nowrap="nowrap" class="list">
 					<a href="interfaces_carp_edit.php?uuid=<?=$carp['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit interface");?>" border="0" alt="<?=gettext("Edit interface");?>" /></a>&nbsp;
-					<a href="interfaces_carp.php?act=del&amp;uuid=<?=$carp['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this interface?");?>')"><img src="x.gif" title="<?=gettext("Delete interface");?>" border="0" alt="<?=gettext("Delete interface");?>" /></a>
+					<a href="interfaces_carp.php?act=del&amp;uuid=<?=$carp['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this interface?");?>')"><img src="delete.png" title="<?=gettext("Delete interface");?>" border="0" alt="<?=gettext("Delete interface");?>" /></a>
 				</td>
 			</tr>
 			<?php endforeach;?>

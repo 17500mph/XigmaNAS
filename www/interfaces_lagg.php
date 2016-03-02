@@ -124,7 +124,7 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 						<td class="listbg"><?=htmlspecialchars($lagg['desc']);?>&nbsp;</td>
 						<td valign="middle" nowrap="nowrap" class="list">
 							<a href="interfaces_lagg_edit.php?uuid=<?=$lagg['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit interface");?>" border="0" alt="<?=gettext("Edit interface");?>" /></a>&nbsp;
-							<a href="interfaces_lagg.php?act=del&amp;uuid=<?=$lagg['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this interface?");?>')"><img src="x.gif" title="<?=gettext("Delete interface");?>" border="0" alt="<?=gettext("Delete interface");?>" /></a>
+							<a href="interfaces_lagg.php?act=del&amp;uuid=<?=$lagg['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this interface?");?>')"><img src="delete.png" title="<?=gettext("Delete interface");?>" border="0" alt="<?=gettext("Delete interface");?>" /></a>
 						</td>
 					</tr>
 					<?php endforeach;?>

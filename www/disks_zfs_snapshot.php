@@ -233,7 +233,7 @@ function zfssnapshot_process_updatenotification($mode, $data) {
 						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 						<td valign="middle" nowrap="nowrap" class="list">
 							<a href="disks_zfs_snapshot_edit.php?snapshot=<?=urlencode($snapshotv['snapshot']);?>"><img src="edit.png" title="<?=gettext("Edit snapshot");?>" border="0" alt="<?=gettext("Edit snapshot");?>" /></a>&nbsp;
-							<a href="disks_zfs_snapshot.php?act=del&amp;snapshot=<?=urlencode($snapshotv['snapshot']);?>" onclick="return confirm('<?=gettext("Do you really want to delete this snapshot?");?>')"><img src="x.gif" title="<?=gettext("Delete snapshot");?>" border="0" alt="<?=gettext("Delete snapshot");?>" /></a>
+							<a href="disks_zfs_snapshot.php?act=del&amp;snapshot=<?=urlencode($snapshotv['snapshot']);?>" onclick="return confirm('<?=gettext("Do you really want to delete this snapshot?");?>')"><img src="delete.png" title="<?=gettext("Delete snapshot");?>" border="0" alt="<?=gettext("Delete snapshot");?>" /></a>
 						</td>
 						<?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
