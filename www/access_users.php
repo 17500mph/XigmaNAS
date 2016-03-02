@@ -134,12 +134,12 @@ function userdbuser_process_updatenotification($mode, $data) {
 							}?>&nbsp;</td>
 						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 						<td valign="middle" nowrap="nowrap" class="list">
-							<a href="access_users_edit.php?uuid=<?=$userv['uuid'];?>"><img src="e.gif" title="<?=gettext("Edit user");?>" border="0" alt="<?=gettext("Edit user");?>" /></a>&nbsp;
+							<a href="access_users_edit.php?uuid=<?=$userv['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit user");?>" border="0" alt="<?=gettext("Edit user");?>" /></a>&nbsp;
 							<a href="access_users.php?act=del&amp;uuid=<?=$userv['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this user?");?>')"><img src="x.gif" title="<?=gettext("Delete user");?>" border="0" alt="<?=gettext("Delete user");?>" /></a>
 						</td>
 						<?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
-							<img src="del.gif" border="0" alt="" />
+							<img src="delete.png" border="0" alt="" />
 						</td>
 						<?php endif;?>
 					</tr>
@@ -147,7 +147,7 @@ function userdbuser_process_updatenotification($mode, $data) {
 					<tr>
 						<td class="list" colspan="4"></td>
 						<td class="list">
-							<a href="access_users_edit.php"><img src="plus.gif" title="<?=gettext("Add user");?>" border="0" alt="<?=gettext("Add user");?>" /></a>
+							<a href="access_users_edit.php"><img src="add.png" title="<?=gettext("Add user");?>" border="0" alt="<?=gettext("Add user");?>" /></a>
 						</td>
 					</tr>
 				</table>

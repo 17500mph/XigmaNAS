@@ -269,7 +269,7 @@ function diskmanagement_process_updatenotification($mode, $data) {
 						</td>
 						<?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
-							<img src="del.gif" border="0" alt="" />
+							<img src="delete.png" border="0" alt="" />
 						</td>
 						<?php endif;?>
 					</tr>

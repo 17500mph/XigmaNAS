@@ -238,13 +238,13 @@ function authentication_change() {
 									<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 									<td valign="middle" nowrap="nowrap" class="list">
 										<?php if (isset($config['websrv']['enable'])):?>
-										<a href="services_websrv_authurl.php?uuid=<?=$urlv['uuid'];?>"><img src="e.gif" title="<?=gettext("Edit URL");?>" border="0" alt="<?=gettext("Edit URL");?>" /></a>&nbsp;
+										<a href="services_websrv_authurl.php?uuid=<?=$urlv['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit URL");?>" border="0" alt="<?=gettext("Edit URL");?>" /></a>&nbsp;
 										<a href="services_websrv.php?act=del&amp;uuid=<?=$urlv['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this URL?");?>')"><img src="x.gif" title="<?=gettext("Delete URL");?>" border="0" alt="<?=gettext("Delete URL");?>" /></a>
 										<?php endif;?>
 									</td>
 									<?php else:?>
 									<td valign="middle" nowrap="nowrap" class="list">
-										<img src="del.gif" border="0" alt="" />
+										<img src="delete.png" border="0" alt="" />
 									</td>
 									<?php endif;?>
 								</tr>
@@ -252,7 +252,7 @@ function authentication_change() {
 								<tr>
 									<td class="list" colspan="2"></td>
 									<td class="list">
-										<a href="services_websrv_authurl.php"><img src="plus.gif" title="<?=gettext("Add URL");?>" border="0" alt="<?=gettext("Add URL");?>" /></a>
+										<a href="services_websrv_authurl.php"><img src="add.png" title="<?=gettext("Add URL");?>" border="0" alt="<?=gettext("Add URL");?>" /></a>
 									</td>
 								</tr>
 							</table>

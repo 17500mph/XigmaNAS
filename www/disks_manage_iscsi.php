@@ -124,19 +124,19 @@ function iscsiinitiator_process_updatenotification($mode, $data) {
             <td class="listr"><?=htmlspecialchars($iscsiinit['targetaddress']);?>&nbsp;</td>
             <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
             <td valign="middle" nowrap="nowrap" class="list">
-							<a href="disks_manage_iscsi_edit.php?uuid=<?=$iscsiinit['uuid'];?>"><img src="e.gif" title="<?=gettext("Edit initiator");?>" border="0" alt="<?=gettext("Edit initiator");?>" /></a>
+							<a href="disks_manage_iscsi_edit.php?uuid=<?=$iscsiinit['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit initiator");?>" border="0" alt="<?=gettext("Edit initiator");?>" /></a>
 							<a href="disks_manage_iscsi.php?act=del&amp;uuid=<?=$iscsiinit['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this initiator? All elements that still use it will become invalid (e.g. share)!");?>')"><img src="x.gif" title="<?=gettext("Delete initiator"); ?>" border="0" alt="<?=gettext("Delete initiator"); ?>" /></a>
             </td>
             <?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
-							<img src="del.gif" border="0" alt="" />
+							<img src="delete.png" border="0" alt="" />
 						</td>
 						<?php endif;?>
           </tr>
           <?php endforeach;?>
           <tr> 
             <td class="list" colspan="3"></td>
-            <td class="list"><a href="disks_manage_iscsi_edit.php"><img src="plus.gif" title="<?=gettext("Add initiator");?>" border="0" alt="<?=gettext("Add initiator");?>" /></a></td>
+            <td class="list"><a href="disks_manage_iscsi_edit.php"><img src="add.png" title="<?=gettext("Add initiator");?>" border="0" alt="<?=gettext("Add initiator");?>" /></a></td>
 			    </tr>
         </table>
         <?php include("formend.inc");?>

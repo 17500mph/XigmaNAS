@@ -174,19 +174,19 @@ function iscsitargetag_process_updatenotification($mode, $data) {
           <td class="listr"><?=htmlspecialchars($ag['comment']);?>&nbsp;</td>
           <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
           <td valign="middle" nowrap="nowrap" class="list">
-            <a href="services_iscsitarget_ag_edit.php?uuid=<?=$ag['uuid'];?>"><img src="e.gif" title="<?=gettext("Edit auth group");?>" border="0" alt="<?=gettext("Edit auth group");?>" /></a>
+            <a href="services_iscsitarget_ag_edit.php?uuid=<?=$ag['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit auth group");?>" border="0" alt="<?=gettext("Edit auth group");?>" /></a>
             <a href="services_iscsitarget_ag.php?act=del&amp;type=ag&amp;uuid=<?=$ag['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this auth group?");?>')"><img src="x.gif" title="<?=gettext("Delete auth group");?>" border="0" alt="<?=gettext("Delete auth group");?>" /></a>
           </td>
           <?php else:?>
           <td valign="middle" nowrap="nowrap" class="list">
-            <img src="del.gif" border="0" alt="" />
+            <img src="delete.png" border="0" alt="" />
           </td>
           <?php endif;?>
         </tr>
         <?php endforeach;?>
         <tr>
           <td class="list" colspan="4"></td>
-          <td class="list"><a href="services_iscsitarget_ag_edit.php"><img src="plus.gif" title="<?=gettext("Add auth group");?>" border="0" alt="<?=gettext("Add auth group");?>" /></a></td>
+          <td class="list"><a href="services_iscsitarget_ag_edit.php"><img src="add.png" title="<?=gettext("Add auth group");?>" border="0" alt="<?=gettext("Add auth group");?>" /></a></td>
         </tr>
         </table>
         <?=gettext("A Auth Group contains authorised users and secrets for additional security.");?>

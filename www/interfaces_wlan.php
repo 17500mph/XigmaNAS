@@ -114,7 +114,7 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 				<td class="listr"><?=htmlspecialchars($wlan['wlandev']);?></td>
 				<td class="listbg"><?=htmlspecialchars($wlan['desc']);?>&nbsp;</td>
 				<td valign="middle" nowrap="nowrap" class="list">
-					<a href="interfaces_wlan_edit.php?uuid=<?=$wlan['uuid'];?>"><img src="e.gif" title="<?=gettext("Edit interface");?>" border="0" alt="<?=gettext("Edit interface");?>" /></a>&nbsp;
+					<a href="interfaces_wlan_edit.php?uuid=<?=$wlan['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit interface");?>" border="0" alt="<?=gettext("Edit interface");?>" /></a>&nbsp;
 					<a href="interfaces_wlan.php?act=del&amp;uuid=<?=$wlan['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this interface?");?>')"><img src="x.gif" title="<?=gettext("Delete interface");?>" border="0" alt="<?=gettext("Delete interface");?>" /></a>
 				</td>
 			</tr>
@@ -122,7 +122,7 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 			<tr>
 				<td class="list" colspan="3">&nbsp;</td>
 				<td class="list">
-					<a href="interfaces_wlan_edit.php"><img src="plus.gif" title="<?=gettext("Add interface");?>" border="0" alt="<?=gettext("Add interface");?>" /></a>
+					<a href="interfaces_wlan_edit.php"><img src="add.png" title="<?=gettext("Add interface");?>" border="0" alt="<?=gettext("Add interface");?>" /></a>
 				</td>
 			</tr>
 			</table>

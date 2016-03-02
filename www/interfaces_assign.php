@@ -267,7 +267,7 @@ if (isset($_GET['act']) && $_GET['act'] == "add") {
 				  <tr>
 						<td class="list" colspan="2"></td>
 						<td class="list" nowrap="nowrap">
-							<a href="interfaces_assign.php?act=add"><img src="plus.gif" title="<?=gettext("Add interface");?>" border="0" alt="<?=gettext("Add interface");?>" /></a>
+							<a href="interfaces_assign.php?act=add"><img src="add.png" title="<?=gettext("Add interface");?>" border="0" alt="<?=gettext("Add interface");?>" /></a>
 						</td>
 				  </tr>
 				  <?php else:?>

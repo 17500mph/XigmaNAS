@@ -134,19 +134,19 @@ function rsyncd_process_updatenotification($mode, $data) {
             <td class="listbg"><?=htmlspecialchars($modulev['rwmode']);?>&nbsp;</td>
             <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
             <td valign="middle" nowrap="nowrap" class="list">
-              <a href="services_rsyncd_module_edit.php?uuid=<?=$modulev['uuid'];?>"><img src="e.gif" title="<?=gettext("Edit module");?>" border="0" alt="<?=gettext("Edit module");?>" /></a>
+              <a href="services_rsyncd_module_edit.php?uuid=<?=$modulev['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit module");?>" border="0" alt="<?=gettext("Edit module");?>" /></a>
               <a href="services_rsyncd_module.php?act=del&amp;uuid=<?=$modulev['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this module?");?>')"><img src="x.gif" title="<?=gettext("Delete module");?>" border="0" alt="<?=gettext("Delete module");?>" /></a>
             </td>
 						<?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
-							<img src="del.gif" border="0" alt="" />
+							<img src="delete.png" border="0" alt="" />
 						</td>
 						<?php endif;?>
           </tr>
           <?php endforeach;?>
           <tr>
             <td class="list" colspan="5"></td>
-            <td class="list"><a href="services_rsyncd_module_edit.php"><img src="plus.gif" title="<?=gettext("Add module");?>" border="0" alt="<?=gettext("Add module");?>" /></a></td>
+            <td class="list"><a href="services_rsyncd_module_edit.php"><img src="add.png" title="<?=gettext("Add module");?>" border="0" alt="<?=gettext("Add module");?>" /></a></td>
           </tr>
         </table>
         <?php include("formend.inc");?>
