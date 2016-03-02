@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-02-28 07:30+0000\n"
+"POT-Creation-Date: 2016-03-02 06:26+0000\n"
 "PO-Revision-Date: 2015-11-23 15:03+0000\n"
 "Last-Translator: rainland <reino.kinner@aalto.fi>\n"
 "Language-Team: NAS4Free <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-28 14:16+0000\n"
+"X-Launchpad-Export-Date: 2016-03-02 06:37+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: FINLAND\n"
 "X-Poedit-Language: Finnish\n"
@@ -581,6 +581,9 @@ msgid "Advanced Options"
 msgstr "Lisäasetusten valinnat"
 
 msgid "Advanced Settings"
+msgstr ""
+
+msgid "Advanced Setup"
 msgstr ""
 
 msgid "Advanced settings"
@@ -1259,6 +1262,9 @@ msgstr ""
 msgid "Command"
 msgstr "Komento"
 
+msgid "Command Scripts"
+msgstr ""
+
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
 msgstr ""
@@ -1269,9 +1275,6 @@ msgstr ""
 
 msgid "Command output:"
 msgstr "Komennon tuloste:"
-
-msgid "Command scripts"
-msgstr "Komento  skriptit"
 
 msgid "Comment"
 msgstr "Kommentti"
@@ -1325,6 +1328,9 @@ msgid "Consider replacing this drive"
 msgstr ""
 
 msgid "Console Menu"
+msgstr ""
+
+msgid "Console Settings"
 msgstr ""
 
 msgid "Console screensaver"
@@ -1686,6 +1692,12 @@ msgstr "Tietokannan hakemisto"
 msgid "Dataset"
 msgstr ""
 
+msgid "Dataset is locked"
+msgstr ""
+
+msgid "Dataset is marked for deletion"
+msgstr ""
+
 msgid "Datasets"
 msgstr ""
 
@@ -2000,9 +2012,6 @@ msgstr ""
 msgid "Directory to watch for new .torrent files."
 msgstr ""
 
-msgid "Disable File Manager"
-msgstr ""
-
 msgid "Disable Firmware Update"
 msgstr ""
 
@@ -2015,14 +2024,17 @@ msgstr ""
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
-msgid "Disable console menu"
-msgstr "Poista komentotila käytöstä"
+msgid "Disable console menu."
+msgstr ""
 
-msgid "Disable firmware version check"
-msgstr "Poista Firmwaren version tarkastus käytöstä"
+msgid "Disable file manager completely."
+msgstr ""
 
-msgid "Disable speaker beep on startup and shutdown"
-msgstr "Poista kaiuttimen äänimerkki käynnistyksessä ja sammutuksessa"
+msgid "Disable firmware version check."
+msgstr ""
+
+msgid "Disable speaker beep on startup and shutdown."
+msgstr ""
 
 msgid "Disable the compression of repeated line"
 msgstr ""
@@ -2331,6 +2343,9 @@ msgstr ""
 msgid "Edit"
 msgstr "Muokkaus"
 
+msgid "Edit Dataset"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "Palvelimen muokkaus"
 
@@ -2363,9 +2378,6 @@ msgstr ""
 
 msgid "Edit command"
 msgstr "Komennon muokkaus"
-
-msgid "Edit dataset"
-msgstr ""
 
 msgid "Edit device"
 msgstr "Laitteen muokkaus"
@@ -2434,8 +2446,14 @@ msgstr ""
 msgid "Email"
 msgstr "Sähköposti"
 
+msgid "Email Address"
+msgstr ""
+
 msgid "Email Report"
 msgstr "Sähköposti raportti"
+
+msgid "Email address for sending system messages."
+msgstr ""
 
 msgid "Empty as default."
 msgstr ""
@@ -2495,7 +2513,7 @@ msgstr ""
 msgid "Enable ZFS ACL"
 msgstr ""
 
-msgid "Enable Zeroconf/Bonjour to advertise services of this device"
+msgid "Enable Zeroconf/Bonjour to advertise services of this device."
 msgstr ""
 
 msgid "Enable anonymous bind."
@@ -2507,7 +2525,7 @@ msgstr "Ota todennus käyttöön."
 msgid "Enable compression."
 msgstr "Ota pakkaus käyttöön."
 
-msgid "Enable console screensaver"
+msgid "Enable console screensaver."
 msgstr ""
 
 msgid "Enable device polling"
@@ -2590,7 +2608,7 @@ msgstr ""
 msgid "Enable reverse DNS lookup."
 msgstr ""
 
-msgid "Enable serial console"
+msgid "Enable serial console."
 msgstr ""
 
 msgid "Enable shadow copy"
@@ -2605,8 +2623,8 @@ msgstr ""
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Ota yksityisyys protokolla käyttöön (RFC1413)."
 
-msgid "Enable the system power control utility"
-msgstr "Ota järjestelmän virranhallinta käyttöön."
+msgid "Enable the system power control utility."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr ""
@@ -2617,8 +2635,8 @@ msgstr ""
 msgid "Enable traps."
 msgstr ""
 
-msgid "Enable tuning of some kernel variables"
-msgstr "Käytä hienosäädössä joitakin kernel muuttujia"
+msgid "Enable tuning of some kernel variables."
+msgstr ""
 
 msgid "Enable write cache mode."
 msgstr ""
@@ -2949,6 +2967,9 @@ msgstr ""
 msgid "Firmware"
 msgstr "Firmware"
 
+msgid "Firmware Check"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr ""
 
@@ -2957,9 +2978,6 @@ msgstr "Firmwaren siirto ei ole tuettu tällä sovellusalustalla."
 
 msgid "Firmware version"
 msgstr ""
-
-msgid "Firmware version check"
-msgstr "Firmware version tarkastus"
 
 msgid "FirstBurstLength"
 msgstr ""
@@ -3010,9 +3028,6 @@ msgstr ""
 
 msgid "Friday"
 msgstr ""
-
-msgid "From email"
-msgstr "Sähköpostista"
 
 msgid "Fsck"
 msgstr "Fsck"
@@ -3677,6 +3692,12 @@ msgstr ""
 msgid "Japanese"
 msgstr "Japani"
 
+msgid "Job is locked"
+msgstr ""
+
+msgid "Job is marked for deletion"
+msgstr ""
+
 msgid "Jul"
 msgstr ""
 
@@ -4013,6 +4034,12 @@ msgstr ""
 msgid "MIB"
 msgstr "MIB"
 
+msgid "MIB is locked"
+msgstr ""
+
+msgid "MIB is marked for deletion"
+msgstr ""
+
 msgid "MISSING"
 msgstr ""
 
@@ -4318,6 +4345,12 @@ msgstr "Liitetään..."
 
 msgid "Mounts"
 msgstr "Liitokset"
+
+msgid "Move down"
+msgstr ""
+
+msgid "Move up"
+msgstr ""
 
 msgid "Music"
 msgstr ""
@@ -4708,6 +4741,12 @@ msgstr "Vain todennetut käyttäjät. Anonyymit  kirjautumiset on estetty."
 msgid "Option"
 msgstr "Valinta"
 
+msgid "Option is locked"
+msgstr ""
+
+msgid "Option is marked for deletion"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr ""
 
@@ -4726,11 +4765,8 @@ msgstr "Ulospäin"
 msgid "Outgoing Power/Inverter Information"
 msgstr ""
 
-msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
+msgid "Outgoing SMTP mail server address."
 msgstr ""
-
-msgid "Outgoing mail server"
-msgstr "Lähtevän postin palvelin"
 
 msgid "Output current (A)"
 msgstr ""
@@ -4901,6 +4937,9 @@ msgid "Peer exchange"
 msgstr ""
 
 msgid "Peer port"
+msgstr ""
+
+msgid "Performance Settings"
 msgstr ""
 
 #, php-format
@@ -5472,6 +5511,9 @@ msgid ""
 "Vista. NT1 is for legacy OS like XP."
 msgstr ""
 
+msgid "SMTP Server"
+msgstr ""
+
 msgid "SNMP"
 msgstr "SNMP"
 
@@ -5861,7 +5903,7 @@ msgstr ""
 msgid "Software RAID"
 msgstr ""
 
-msgid "Software used"
+msgid "Software Used"
 msgstr ""
 
 msgid "Source"
@@ -5897,6 +5939,9 @@ msgid "Sparse"
 msgstr ""
 
 msgid "Sparse Volume"
+msgstr ""
+
+msgid "Speaker Beep"
 msgstr ""
 
 msgid ""
@@ -6114,9 +6159,6 @@ msgstr ""
 
 msgid "System"
 msgstr "Järjestelmä"
-
-msgid "System Beep"
-msgstr "Järjestelmän äänimerkki"
 
 msgid "System Information"
 msgstr ""
@@ -7299,7 +7341,7 @@ msgstr ""
 msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr ""
 
-msgid "This server uses default swap."
+msgid "This server uses default swap!"
 msgstr ""
 
 msgid "This tag already exists."
@@ -7822,7 +7864,7 @@ msgid ""
 "require a valid login."
 msgstr ""
 
-msgid "Use toggle button or separate enable/disable buttons."
+msgid "Use toggle button instead of enable/disable buttons."
 msgstr ""
 
 msgid "Used"
@@ -7965,6 +8007,12 @@ msgid "Volume Name"
 msgstr "Levyn nimi"
 
 msgid "Volume Size Limit"
+msgstr ""
+
+msgid "Volume is locked"
+msgstr ""
+
+msgid "Volume is marked for deletion"
 msgstr ""
 
 msgid "Volume label"
@@ -8209,9 +8257,6 @@ msgstr ""
 msgid "Your ZFS system is not healthy."
 msgstr ""
 
-msgid "Your own email address."
-msgstr "Sinun oma sähköpostiosoite."
-
 msgid "ZFS"
 msgstr ""
 
@@ -8411,5 +8456,35 @@ msgstr ""
 msgid "version:"
 msgstr ""
 
-#~ msgid "Send test email"
-#~ msgstr "Lähetä testi sähköposti"
+#~ msgid "Command scripts"
+#~ msgstr "Komento  skriptit"
+
+#~ msgid "Disable console menu"
+#~ msgstr "Poista komentotila käytöstä"
+
+#~ msgid "Disable firmware version check"
+#~ msgstr "Poista Firmwaren version tarkastus käytöstä"
+
+#~ msgid "Disable speaker beep on startup and shutdown"
+#~ msgstr "Poista kaiuttimen äänimerkki käynnistyksessä ja sammutuksessa"
+
+#~ msgid "Enable the system power control utility"
+#~ msgstr "Ota järjestelmän virranhallinta käyttöön."
+
+#~ msgid "Enable tuning of some kernel variables"
+#~ msgstr "Käytä hienosäädössä joitakin kernel muuttujia"
+
+#~ msgid "Firmware version check"
+#~ msgstr "Firmware version tarkastus"
+
+#~ msgid "From email"
+#~ msgstr "Sähköpostista"
+
+#~ msgid "Outgoing mail server"
+#~ msgstr "Lähtevän postin palvelin"
+
+#~ msgid "System Beep"
+#~ msgstr "Järjestelmän äänimerkki"
+
+#~ msgid "Your own email address."
+#~ msgstr "Sinun oma sähköpostiosoite."

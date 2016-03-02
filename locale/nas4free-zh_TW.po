@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-02-28 07:30+0000\n"
+"POT-Creation-Date: 2016-03-02 06:26+0000\n"
 "PO-Revision-Date: 2015-12-27 22:10+0000\n"
 "Last-Translator: Alex Lin <linuxant@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-28 14:16+0000\n"
+"X-Launchpad-Export-Date: 2016-03-02 06:37+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -538,6 +538,9 @@ msgstr "進階選項"
 
 msgid "Advanced Settings"
 msgstr "進階设置"
+
+msgid "Advanced Setup"
+msgstr ""
 
 msgid "Advanced settings"
 msgstr "進階设置"
@@ -1217,6 +1220,9 @@ msgstr ""
 msgid "Command"
 msgstr "指令"
 
+msgid "Command Scripts"
+msgstr ""
+
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
 msgstr "LINK_DOWN 事件的指令（例如 %s）。"
@@ -1227,9 +1233,6 @@ msgstr "LINK_UP 事件的指令（例如 %s）。"
 
 msgid "Command output:"
 msgstr "指令輸出："
-
-msgid "Command scripts"
-msgstr "指令腳本（Command scripts）"
 
 msgid "Comment"
 msgstr "註解"
@@ -1284,6 +1287,9 @@ msgstr "考慮更換此驅動器"
 
 msgid "Console Menu"
 msgstr "控制台菜單"
+
+msgid "Console Settings"
+msgstr ""
 
 msgid "Console screensaver"
 msgstr "控制台螢幕保護程式"
@@ -1655,6 +1661,12 @@ msgstr "數據庫目錄"
 msgid "Dataset"
 msgstr "數據集"
 
+msgid "Dataset is locked"
+msgstr ""
+
+msgid "Dataset is marked for deletion"
+msgstr ""
+
 msgid "Datasets"
 msgstr "數據集（Datasets）"
 
@@ -1971,9 +1983,6 @@ msgstr "含有可移動媒體的目錄。（例如 /mnt/iscsi/）"
 msgid "Directory to watch for new .torrent files."
 msgstr "監視新 .torrent 檔案的目錄。"
 
-msgid "Disable File Manager"
-msgstr "關閉檔案管理程式"
-
 msgid "Disable Firmware Update"
 msgstr "關閉固件更新"
 
@@ -1986,14 +1995,17 @@ msgstr ""
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "關閉 TCP Wrapper（mod_wrap 模塊）。"
 
-msgid "Disable console menu"
-msgstr "關閉控制台選單"
+msgid "Disable console menu."
+msgstr ""
 
-msgid "Disable firmware version check"
-msgstr "關閉韌體版本檢查功能"
+msgid "Disable file manager completely."
+msgstr ""
 
-msgid "Disable speaker beep on startup and shutdown"
-msgstr "關閉開/關機時的提示聲響"
+msgid "Disable firmware version check."
+msgstr ""
+
+msgid "Disable speaker beep on startup and shutdown."
+msgstr ""
 
 msgid "Disable the compression of repeated line"
 msgstr ""
@@ -2300,6 +2312,9 @@ msgstr "錯誤："
 msgid "Edit"
 msgstr "編輯"
 
+msgid "Edit Dataset"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "編輯主機資訊"
 
@@ -2332,9 +2347,6 @@ msgstr "編輯自動快照"
 
 msgid "Edit command"
 msgstr "編輯指令"
-
-msgid "Edit dataset"
-msgstr "編輯數據集"
 
 msgid "Edit device"
 msgstr "編輯裝置"
@@ -2403,8 +2415,14 @@ msgstr "UPS的效率（輸入電流的輸出電流的對比率）"
 msgid "Email"
 msgstr "電子郵件"
 
+msgid "Email Address"
+msgstr ""
+
 msgid "Email Report"
 msgstr "電郵報告"
+
+msgid "Email address for sending system messages."
+msgstr ""
 
 msgid "Empty as default."
 msgstr "默認值為空白。"
@@ -2464,8 +2482,8 @@ msgstr "啟用Time Machine的支持"
 msgid "Enable ZFS ACL"
 msgstr "啟用 ZFS 存取控制清單 (ACL)"
 
-msgid "Enable Zeroconf/Bonjour to advertise services of this device"
-msgstr "啟用 Zeroconf/ Bonjour 來宣傳這個裝置的服務"
+msgid "Enable Zeroconf/Bonjour to advertise services of this device."
+msgstr ""
 
 msgid "Enable anonymous bind."
 msgstr "啟用匿名綁定。"
@@ -2476,8 +2494,8 @@ msgstr "啟用認證。"
 msgid "Enable compression."
 msgstr "啟用資料壓縮。"
 
-msgid "Enable console screensaver"
-msgstr "啟用控制台的屏幕保護程序"
+msgid "Enable console screensaver."
+msgstr ""
 
 msgid "Enable device polling"
 msgstr "啟用裝置輪詢"
@@ -2559,8 +2577,8 @@ msgstr "啟用反向DNS來查找傳入遠程主機IP位址的主動模式數據�
 msgid "Enable reverse DNS lookup."
 msgstr "啟用反向DNS查找。"
 
-msgid "Enable serial console"
-msgstr "啟用串行控制台"
+msgid "Enable serial console."
+msgstr ""
 
 msgid "Enable shadow copy"
 msgstr "啟用陰影複製"
@@ -2574,8 +2592,8 @@ msgstr "開啟 syslog'ing 寫入遠端 syslog 伺服器"
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "啟用 ident 協議（RFC1413）。"
 
-msgid "Enable the system power control utility"
-msgstr "啟用電源監控程序。"
+msgid "Enable the system power control utility."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr ""
@@ -2586,8 +2604,8 @@ msgstr "啟用轉碼。"
 msgid "Enable traps."
 msgstr "啟用 traps。"
 
-msgid "Enable tuning of some kernel variables"
-msgstr "開啟系統核心的參數微調"
+msgid "Enable tuning of some kernel variables."
+msgstr ""
 
 msgid "Enable write cache mode."
 msgstr "開啟寫入緩存模式。"
@@ -2914,6 +2932,9 @@ msgstr "防火牆規則設置"
 msgid "Firmware"
 msgstr "韌體"
 
+msgid "Firmware Check"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr "固件上傳失敗（內存不足？）"
 
@@ -2922,9 +2943,6 @@ msgstr "此系統並不支援韌體上傳功能。."
 
 msgid "Firmware version"
 msgstr "韌體版本"
-
-msgid "Firmware version check"
-msgstr "韌體版本檢查"
 
 msgid "FirstBurstLength"
 msgstr "FirstBurstLength"
@@ -2975,9 +2993,6 @@ msgstr ""
 
 msgid "Friday"
 msgstr ""
-
-msgid "From email"
-msgstr "發信人"
 
 msgid "Fsck"
 msgstr "Fsck"
@@ -3646,6 +3661,12 @@ msgstr "一月 二月 三月 四月 五月 六月 七月 八月 九月 十月 �
 msgid "Japanese"
 msgstr "日文"
 
+msgid "Job is locked"
+msgstr ""
+
+msgid "Job is marked for deletion"
+msgstr ""
+
 msgid "Jul"
 msgstr ""
 
@@ -3980,6 +4001,12 @@ msgstr "MBR 分區"
 msgid "MIB"
 msgstr "管理信息庫（MIB）"
 
+msgid "MIB is locked"
+msgstr ""
+
+msgid "MIB is marked for deletion"
+msgstr ""
+
 msgid "MISSING"
 msgstr "遺失"
 
@@ -4283,6 +4310,12 @@ msgstr "掛載中..."
 
 msgid "Mounts"
 msgstr "掛載點"
+
+msgid "Move down"
+msgstr ""
+
+msgid "Move up"
+msgstr ""
 
 msgid "Music"
 msgstr "音樂"
@@ -4673,6 +4706,12 @@ msgstr "只允許授權用戶，匿名用戶無法登入。"
 msgid "Option"
 msgstr "選項"
 
+msgid "Option is locked"
+msgstr ""
+
+msgid "Option is marked for deletion"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr "自選易用的目標字符串。"
 
@@ -4691,11 +4730,8 @@ msgstr "出"
 msgid "Outgoing Power/Inverter Information"
 msgstr "輸出電力/逆變器的信息"
 
-msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
-msgstr "郵件發送（SMTP）伺服器的地址，例如：smtp.mycorp.com"
-
-msgid "Outgoing mail server"
-msgstr "郵件發送伺服器"
+msgid "Outgoing SMTP mail server address."
+msgstr ""
 
 msgid "Output current (A)"
 msgstr "輸出電流（A）"
@@ -4869,6 +4905,9 @@ msgstr "對等交流（Peer exchange）"
 
 msgid "Peer port"
 msgstr "對等端口（Peer port）"
+
+msgid "Performance Settings"
+msgstr ""
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
@@ -5441,6 +5480,9 @@ msgstr ""
 "最近的操作系統，如Windows 8， 支援SMB3 (Windows平台標准文件共享協議) 。 Windows 7 和 Vista 支援 "
 "SMB2。像XP的舊版操作系統支援NT1。"
 
+msgid "SMTP Server"
+msgstr ""
+
 msgid "SNMP"
 msgstr "SNMP"
 
@@ -5834,8 +5876,8 @@ msgstr "軟體RAID"
 msgid "Software RAID"
 msgstr "軟體RAID"
 
-msgid "Software used"
-msgstr "使用的軟體"
+msgid "Software Used"
+msgstr ""
 
 msgid "Source"
 msgstr "來源位置"
@@ -5871,6 +5913,9 @@ msgstr "稀疏"
 
 msgid "Sparse Volume"
 msgstr "稀疏卷（Sparse Volume）"
+
+msgid "Speaker Beep"
+msgstr ""
 
 msgid ""
 "Specific to He8 drives from HGST. The Helium, so says the literature, allows "
@@ -6090,9 +6135,6 @@ msgstr ""
 
 msgid "System"
 msgstr "系統"
-
-msgid "System Beep"
-msgstr "提示聲響"
 
 msgid "System Information"
 msgstr "系統資料"
@@ -7295,8 +7337,8 @@ msgstr "此池（pool）名稱已經存在"
 msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr "此規則在選定的事件發生時會被觸發。"
 
-msgid "This server uses default swap."
-msgstr "這伺服器使用預設置換空間。"
+msgid "This server uses default swap!"
+msgstr ""
 
 msgid "This tag already exists."
 msgstr "此標籤已經存在。"
@@ -7834,7 +7876,7 @@ msgstr ""
 "使用此選項覆蓋此用戶名（預設為'ftp'），預設權限為guest。此用戶所擁有的權限也會套用在使用客戶端服務的任何客戶端。此用戶必須存在於密碼檔中，但並不"
 "需要一個有效的登入帳戶。"
 
-msgid "Use toggle button or separate enable/disable buttons."
+msgid "Use toggle button instead of enable/disable buttons."
 msgstr ""
 
 msgid "Used"
@@ -7978,6 +8020,12 @@ msgstr "卷名"
 
 msgid "Volume Size Limit"
 msgstr "卷大小限制"
+
+msgid "Volume is locked"
+msgstr ""
+
+msgid "Volume is marked for deletion"
+msgstr ""
 
 msgid "Volume label"
 msgstr "磁盤卷標籤（Volume label）"
@@ -8219,9 +8267,6 @@ msgstr "建議您使用 HTTPS 作為網頁界面協議來傳送密碼短語。"
 msgid "Your ZFS system is not healthy."
 msgstr "您的ZFS系統有問題。"
 
-msgid "Your own email address."
-msgstr "您的電郵地址。"
-
 msgid "ZFS"
 msgstr "ZFS"
 
@@ -8421,5 +8466,59 @@ msgstr "卸載"
 msgid "version:"
 msgstr "版本："
 
-#~ msgid "Send test email"
-#~ msgstr "傳送測試電郵"
+#~ msgid "Disable firmware version check"
+#~ msgstr "關閉韌體版本檢查功能"
+
+#~ msgid "Enable tuning of some kernel variables"
+#~ msgstr "開啟系統核心的參數微調"
+
+#~ msgid "Firmware version check"
+#~ msgstr "韌體版本檢查"
+
+#~ msgid "Software used"
+#~ msgstr "使用的軟體"
+
+#~ msgid "System Beep"
+#~ msgstr "提示聲響"
+
+#~ msgid "Edit dataset"
+#~ msgstr "編輯數據集"
+
+#~ msgid "Enable Zeroconf/Bonjour to advertise services of this device"
+#~ msgstr "啟用 Zeroconf/ Bonjour 來宣傳這個裝置的服務"
+
+#~ msgid "Enable serial console"
+#~ msgstr "啟用串行控制台"
+
+#~ msgid "Your own email address."
+#~ msgstr "您的電郵地址。"
+
+#~ msgid "From email"
+#~ msgstr "發信人"
+
+#~ msgid "Command scripts"
+#~ msgstr "指令腳本（Command scripts）"
+
+#~ msgid "Disable console menu"
+#~ msgstr "關閉控制台選單"
+
+#~ msgid "Disable File Manager"
+#~ msgstr "關閉檔案管理程式"
+
+#~ msgid "Disable speaker beep on startup and shutdown"
+#~ msgstr "關閉開/關機時的提示聲響"
+
+#~ msgid "Enable console screensaver"
+#~ msgstr "啟用控制台的屏幕保護程序"
+
+#~ msgid "Enable the system power control utility"
+#~ msgstr "啟用電源監控程序。"
+
+#~ msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
+#~ msgstr "郵件發送（SMTP）伺服器的地址，例如：smtp.mycorp.com"
+
+#~ msgid "Outgoing mail server"
+#~ msgstr "郵件發送伺服器"
+
+#~ msgid "This server uses default swap."
+#~ msgstr "這伺服器使用預設置換空間。"

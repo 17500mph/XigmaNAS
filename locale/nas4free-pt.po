@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-02-28 07:30+0000\n"
+"POT-Creation-Date: 2016-03-02 06:26+0000\n"
 "PO-Revision-Date: 2014-11-17 04:07+0000\n"
 "Last-Translator: Luís Vilhena Santos <LuisVilhenaSantos@Hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-28 14:17+0000\n"
+"X-Launchpad-Export-Date: 2016-03-02 06:37+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: PORTUGAL\n"
 "Language: \n"
@@ -569,6 +569,9 @@ msgid "Advanced Options"
 msgstr "Opções Avançadas"
 
 msgid "Advanced Settings"
+msgstr ""
+
+msgid "Advanced Setup"
 msgstr ""
 
 msgid "Advanced settings"
@@ -1267,6 +1270,9 @@ msgstr ""
 msgid "Command"
 msgstr "Executar comandos"
 
+msgid "Command Scripts"
+msgstr ""
+
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
 msgstr ""
@@ -1277,9 +1283,6 @@ msgstr ""
 
 msgid "Command output:"
 msgstr "Comandos de saída:"
-
-msgid "Command scripts"
-msgstr "Scripts de Arranque/Encerramento"
 
 msgid "Comment"
 msgstr "Comentário"
@@ -1336,6 +1339,9 @@ msgid "Consider replacing this drive"
 msgstr ""
 
 msgid "Console Menu"
+msgstr ""
+
+msgid "Console Settings"
 msgstr ""
 
 msgid "Console screensaver"
@@ -1710,6 +1716,12 @@ msgstr "Directoria da base de dados"
 msgid "Dataset"
 msgstr "Conjunto de dados"
 
+msgid "Dataset is locked"
+msgstr ""
+
+msgid "Dataset is marked for deletion"
+msgstr ""
+
 msgid "Datasets"
 msgstr "Datasets"
 
@@ -2034,9 +2046,6 @@ msgstr "Directoria que contém os media removíveis. (e.g /mnt/iscsi/)"
 msgid "Directory to watch for new .torrent files."
 msgstr "Directorio onde procurar novos ficheiros .torrent."
 
-msgid "Disable File Manager"
-msgstr "Desactivar Gestor de Ficheiros"
-
 msgid "Disable Firmware Update"
 msgstr ""
 
@@ -2049,14 +2058,17 @@ msgstr ""
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
-msgid "Disable console menu"
-msgstr "Desactivar o menu da consola"
+msgid "Disable console menu."
+msgstr ""
 
-msgid "Disable firmware version check"
-msgstr "Desactivar a verificação da versão do firmware"
+msgid "Disable file manager completely."
+msgstr ""
 
-msgid "Disable speaker beep on startup and shutdown"
-msgstr "Desactivar os avisos sonoros ao arrancar e desligar"
+msgid "Disable firmware version check."
+msgstr ""
+
+msgid "Disable speaker beep on startup and shutdown."
+msgstr ""
 
 msgid "Disable the compression of repeated line"
 msgstr ""
@@ -2376,6 +2388,9 @@ msgstr ""
 msgid "Edit"
 msgstr "Editar"
 
+msgid "Edit Dataset"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "Editar anfitrião"
 
@@ -2408,9 +2423,6 @@ msgstr "Editar snapshot automático"
 
 msgid "Edit command"
 msgstr "Editar comando"
-
-msgid "Edit dataset"
-msgstr "Editar conjunto de dados (dataset)"
 
 msgid "Edit device"
 msgstr "Editar dispositivo"
@@ -2479,8 +2491,14 @@ msgstr ""
 msgid "Email"
 msgstr "Correio Electrónico"
 
+msgid "Email Address"
+msgstr ""
+
 msgid "Email Report"
 msgstr "Relatórios via email"
+
+msgid "Email address for sending system messages."
+msgstr ""
 
 msgid "Empty as default."
 msgstr ""
@@ -2540,9 +2558,8 @@ msgstr ""
 msgid "Enable ZFS ACL"
 msgstr "Permitir ZFS ACL"
 
-msgid "Enable Zeroconf/Bonjour to advertise services of this device"
+msgid "Enable Zeroconf/Bonjour to advertise services of this device."
 msgstr ""
-"Permitir Zeroconf/Bonjour para informar sobre os serviços deste dispositivo"
 
 msgid "Enable anonymous bind."
 msgstr "Permitir ligação anónima."
@@ -2553,8 +2570,8 @@ msgstr "Activar autenticação"
 msgid "Enable compression."
 msgstr "Activar compressão"
 
-msgid "Enable console screensaver"
-msgstr "Permitir a protecção de ecrã de consola"
+msgid "Enable console screensaver."
+msgstr ""
 
 msgid "Enable device polling"
 msgstr "Activar consulta a dispositívos"
@@ -2641,8 +2658,8 @@ msgstr ""
 msgid "Enable reverse DNS lookup."
 msgstr "Permitir a procura por DNS reverse."
 
-msgid "Enable serial console"
-msgstr "Permitir consola do sistema"
+msgid "Enable serial console."
+msgstr ""
 
 msgid "Enable shadow copy"
 msgstr "permitir shadow copy"
@@ -2656,8 +2673,8 @@ msgstr "Activar o envio de registros syslog para um servidor syslog remoto"
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Permitir o protocolo de identidade (RFC1413)."
 
-msgid "Enable the system power control utility"
-msgstr "Activar o utilitário de controlo de energia"
+msgid "Enable the system power control utility."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr ""
@@ -2668,8 +2685,8 @@ msgstr "Permitir codificação."
 msgid "Enable traps."
 msgstr "Permitir instruções."
 
-msgid "Enable tuning of some kernel variables"
-msgstr "Permitir afinação de algumas variáveis do KERNEL"
+msgid "Enable tuning of some kernel variables."
+msgstr ""
 
 msgid "Enable write cache mode."
 msgstr ""
@@ -3016,6 +3033,9 @@ msgstr ""
 msgid "Firmware"
 msgstr "Firmware"
 
+msgid "Firmware Check"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr ""
 
@@ -3024,9 +3044,6 @@ msgstr "O envio (upload) de firmware não é suportado nesta plataforma."
 
 msgid "Firmware version"
 msgstr ""
-
-msgid "Firmware version check"
-msgstr "Verificação da versão do firmware"
 
 msgid "FirstBurstLength"
 msgstr "Comprimento de FirstBurst"
@@ -3077,9 +3094,6 @@ msgstr ""
 
 msgid "Friday"
 msgstr ""
-
-msgid "From email"
-msgstr "Endereço do remetente"
 
 msgid "Fsck"
 msgstr "Fsck"
@@ -3782,6 +3796,12 @@ msgstr ""
 msgid "Japanese"
 msgstr "Japonês"
 
+msgid "Job is locked"
+msgstr ""
+
+msgid "Job is marked for deletion"
+msgstr ""
+
 msgid "Jul"
 msgstr ""
 
@@ -4132,6 +4152,12 @@ msgstr "Partição MBR"
 msgid "MIB"
 msgstr "MIB"
 
+msgid "MIB is locked"
+msgstr ""
+
+msgid "MIB is marked for deletion"
+msgstr ""
+
 msgid "MISSING"
 msgstr "EM FALTA"
 
@@ -4439,6 +4465,12 @@ msgstr "A montar..."
 
 msgid "Mounts"
 msgstr "Pontos de montagem"
+
+msgid "Move down"
+msgstr ""
+
+msgid "Move up"
+msgstr ""
 
 msgid "Music"
 msgstr ""
@@ -4865,6 +4897,12 @@ msgstr ""
 msgid "Option"
 msgstr "Opção"
 
+msgid "Option is locked"
+msgstr ""
+
+msgid "Option is marked for deletion"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr "Opcional string de destino amiga do utilizador."
 
@@ -4883,11 +4921,8 @@ msgstr "Saída"
 msgid "Outgoing Power/Inverter Information"
 msgstr ""
 
-msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
-msgstr "Endereço do servidor de envio SMTP, e.g. smtp.exemplo.com"
-
-msgid "Outgoing mail server"
-msgstr "Servidor de envio"
+msgid "Outgoing SMTP mail server address."
+msgstr ""
 
 msgid "Output current (A)"
 msgstr ""
@@ -5069,6 +5104,9 @@ msgstr "Troca de Peer"
 
 msgid "Peer port"
 msgstr "Porto Peer"
+
+msgid "Performance Settings"
+msgstr ""
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
@@ -5651,6 +5689,9 @@ msgid ""
 "Vista. NT1 is for legacy OS like XP."
 msgstr ""
 
+msgid "SMTP Server"
+msgstr ""
+
 msgid "SNMP"
 msgstr "SNMP"
 
@@ -6067,8 +6108,8 @@ msgstr "SoftRaid"
 msgid "Software RAID"
 msgstr "RAID por Software"
 
-msgid "Software used"
-msgstr "Programa utilizado"
+msgid "Software Used"
+msgstr ""
 
 msgid "Source"
 msgstr "Origem"
@@ -6103,6 +6144,9 @@ msgid "Sparse"
 msgstr ""
 
 msgid "Sparse Volume"
+msgstr ""
+
+msgid "Speaker Beep"
 msgstr ""
 
 msgid ""
@@ -6338,9 +6382,6 @@ msgstr ""
 
 msgid "System"
 msgstr "Sistema"
-
-msgid "System Beep"
-msgstr "Avisos sonoros"
 
 msgid "System Information"
 msgstr ""
@@ -7687,7 +7728,7 @@ msgstr ""
 "Esta regra é accionada sempre que ocorre uma directiva do evento "
 "seleccionado."
 
-msgid "This server uses default swap."
+msgid "This server uses default swap!"
 msgstr ""
 
 msgid "This tag already exists."
@@ -8263,7 +8304,7 @@ msgstr ""
 "utilizador deve existir no ficheiro de palavras-passe, mas não requere um "
 "acesso válido."
 
-msgid "Use toggle button or separate enable/disable buttons."
+msgid "Use toggle button instead of enable/disable buttons."
 msgstr ""
 
 msgid "Used"
@@ -8406,6 +8447,12 @@ msgid "Volume Name"
 msgstr "Nome do Volume"
 
 msgid "Volume Size Limit"
+msgstr ""
+
+msgid "Volume is locked"
+msgstr ""
+
+msgid "Volume is marked for deletion"
 msgstr ""
 
 msgid "Volume label"
@@ -8667,9 +8714,6 @@ msgstr ""
 msgid "Your ZFS system is not healthy."
 msgstr "O seu sistema ZFS não está saudável."
 
-msgid "Your own email address."
-msgstr "O seu endereço de email."
-
 msgid "ZFS"
 msgstr "ZFS"
 
@@ -8870,5 +8914,57 @@ msgstr "umount"
 msgid "version:"
 msgstr ""
 
-#~ msgid "Send test email"
-#~ msgstr "Enviar email de teste"
+#~ msgid "Command scripts"
+#~ msgstr "Scripts de Arranque/Encerramento"
+
+#~ msgid "Disable File Manager"
+#~ msgstr "Desactivar Gestor de Ficheiros"
+
+#~ msgid "Disable console menu"
+#~ msgstr "Desactivar o menu da consola"
+
+#~ msgid "Disable firmware version check"
+#~ msgstr "Desactivar a verificação da versão do firmware"
+
+#~ msgid "Disable speaker beep on startup and shutdown"
+#~ msgstr "Desactivar os avisos sonoros ao arrancar e desligar"
+
+#~ msgid "Edit dataset"
+#~ msgstr "Editar conjunto de dados (dataset)"
+
+#~ msgid "Enable Zeroconf/Bonjour to advertise services of this device"
+#~ msgstr ""
+#~ "Permitir Zeroconf/Bonjour para informar sobre os serviços deste dispositivo"
+
+#~ msgid "Enable console screensaver"
+#~ msgstr "Permitir a protecção de ecrã de consola"
+
+#~ msgid "Enable serial console"
+#~ msgstr "Permitir consola do sistema"
+
+#~ msgid "Enable the system power control utility"
+#~ msgstr "Activar o utilitário de controlo de energia"
+
+#~ msgid "Enable tuning of some kernel variables"
+#~ msgstr "Permitir afinação de algumas variáveis do KERNEL"
+
+#~ msgid "Firmware version check"
+#~ msgstr "Verificação da versão do firmware"
+
+#~ msgid "From email"
+#~ msgstr "Endereço do remetente"
+
+#~ msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
+#~ msgstr "Endereço do servidor de envio SMTP, e.g. smtp.exemplo.com"
+
+#~ msgid "Outgoing mail server"
+#~ msgstr "Servidor de envio"
+
+#~ msgid "Software used"
+#~ msgstr "Programa utilizado"
+
+#~ msgid "System Beep"
+#~ msgstr "Avisos sonoros"
+
+#~ msgid "Your own email address."
+#~ msgstr "O seu endereço de email."

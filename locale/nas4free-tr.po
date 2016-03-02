@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-02-28 07:30+0000\n"
+"POT-Creation-Date: 2016-03-02 06:26+0000\n"
 "PO-Revision-Date: 2015-10-13 18:26+0000\n"
 "Last-Translator: Hasan Yılmaz <iletisim@hasanyilmaz.net>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-28 14:16+0000\n"
+"X-Launchpad-Export-Date: 2016-03-02 06:37+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
@@ -548,6 +548,9 @@ msgid "Advanced Options"
 msgstr "Gelişmiş Seçenekler"
 
 msgid "Advanced Settings"
+msgstr ""
+
+msgid "Advanced Setup"
 msgstr ""
 
 msgid "Advanced settings"
@@ -1230,6 +1233,9 @@ msgstr ""
 msgid "Command"
 msgstr "Komut"
 
+msgid "Command Scripts"
+msgstr ""
+
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
 msgstr ""
@@ -1240,9 +1246,6 @@ msgstr ""
 
 msgid "Command output:"
 msgstr "Komut Çıktısı"
-
-msgid "Command scripts"
-msgstr "Komut Scripti"
 
 msgid "Comment"
 msgstr "Açıklama"
@@ -1296,6 +1299,9 @@ msgid "Consider replacing this drive"
 msgstr ""
 
 msgid "Console Menu"
+msgstr ""
+
+msgid "Console Settings"
 msgstr ""
 
 msgid "Console screensaver"
@@ -1657,6 +1663,12 @@ msgstr "Veritabanı Dizini"
 msgid "Dataset"
 msgstr "Veriseti"
 
+msgid "Dataset is locked"
+msgstr ""
+
+msgid "Dataset is marked for deletion"
+msgstr ""
+
 msgid "Datasets"
 msgstr "Verisetleri"
 
@@ -1973,9 +1985,6 @@ msgstr "Dizin çıkartılabilir aygıtlar içeriyor. (örn /mnt/iscsi/)"
 msgid "Directory to watch for new .torrent files."
 msgstr ""
 
-msgid "Disable File Manager"
-msgstr "Dosya Yöneticisini Devredışı Bırak"
-
 msgid "Disable Firmware Update"
 msgstr ""
 
@@ -1988,14 +1997,17 @@ msgstr ""
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
-msgid "Disable console menu"
-msgstr "Konsol menüsünü Devre Dışı bırak"
+msgid "Disable console menu."
+msgstr ""
 
-msgid "Disable firmware version check"
-msgstr "Firmware versiyon kontrolünü Devre Dışı bırak"
+msgid "Disable file manager completely."
+msgstr ""
 
-msgid "Disable speaker beep on startup and shutdown"
-msgstr "Kapanırken ve Açılırken hoparler Bip sesini Devre Dışı bırak"
+msgid "Disable firmware version check."
+msgstr ""
+
+msgid "Disable speaker beep on startup and shutdown."
+msgstr ""
 
 msgid "Disable the compression of repeated line"
 msgstr ""
@@ -2311,6 +2323,9 @@ msgstr ""
 msgid "Edit"
 msgstr "Düzenle"
 
+msgid "Edit Dataset"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "Host'u Düzenle"
 
@@ -2343,9 +2358,6 @@ msgstr ""
 
 msgid "Edit command"
 msgstr "Komutu düzenle"
-
-msgid "Edit dataset"
-msgstr "Verisetini düzenle"
 
 msgid "Edit device"
 msgstr "Aygıt Düzenle"
@@ -2414,8 +2426,14 @@ msgstr ""
 msgid "Email"
 msgstr "E-posta"
 
+msgid "Email Address"
+msgstr ""
+
 msgid "Email Report"
 msgstr "Email Raporu"
+
+msgid "Email address for sending system messages."
+msgstr ""
 
 msgid "Empty as default."
 msgstr ""
@@ -2475,9 +2493,8 @@ msgstr ""
 msgid "Enable ZFS ACL"
 msgstr ""
 
-msgid "Enable Zeroconf/Bonjour to advertise services of this device"
+msgid "Enable Zeroconf/Bonjour to advertise services of this device."
 msgstr ""
-"Zeroconf/Bonjour hizmetleri bu aygıt üzerinde yayın yapmasını etkinleştir"
 
 msgid "Enable anonymous bind."
 msgstr ""
@@ -2488,8 +2505,8 @@ msgstr "Kimlik doğrulamasını etkinleştir."
 msgid "Enable compression."
 msgstr "Sıkıştırmayı Aktifleştir"
 
-msgid "Enable console screensaver"
-msgstr "Konsol ekran koruyucusunu etkinleştir"
+msgid "Enable console screensaver."
+msgstr ""
 
 msgid "Enable device polling"
 msgstr "Aygıt seçimini Aktifleştir"
@@ -2573,7 +2590,7 @@ msgstr ""
 msgid "Enable reverse DNS lookup."
 msgstr ""
 
-msgid "Enable serial console"
+msgid "Enable serial console."
 msgstr ""
 
 msgid "Enable shadow copy"
@@ -2588,8 +2605,8 @@ msgstr "uzaktan erişimde syslog sunucusuna sysloging ile etkin kıl"
 msgid "Enable the ident protocol (RFC1413)."
 msgstr ""
 
-msgid "Enable the system power control utility"
-msgstr "Sistem güç kontrol aracından faydalan"
+msgid "Enable the system power control utility."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr ""
@@ -2600,8 +2617,8 @@ msgstr ""
 msgid "Enable traps."
 msgstr ""
 
-msgid "Enable tuning of some kernel variables"
-msgstr "bazı kernel değişkenlerinde değişiklik yapmayı etkin kıl"
+msgid "Enable tuning of some kernel variables."
+msgstr ""
 
 msgid "Enable write cache mode."
 msgstr ""
@@ -2934,6 +2951,9 @@ msgstr ""
 msgid "Firmware"
 msgstr "Firmware"
 
+msgid "Firmware Check"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr ""
 
@@ -2942,9 +2962,6 @@ msgstr "Firmware yükleme bu platform üstünde desteklenmez"
 
 msgid "Firmware version"
 msgstr ""
-
-msgid "Firmware version check"
-msgstr "Firmware versiyon kontrolü"
 
 msgid "FirstBurstLength"
 msgstr ""
@@ -2995,9 +3012,6 @@ msgstr ""
 
 msgid "Friday"
 msgstr ""
-
-msgid "From email"
-msgstr "E-mail'den"
 
 msgid "Fsck"
 msgstr "Fsck"
@@ -3665,6 +3679,12 @@ msgstr ""
 msgid "Japanese"
 msgstr "Japonca"
 
+msgid "Job is locked"
+msgstr ""
+
+msgid "Job is marked for deletion"
+msgstr ""
+
 msgid "Jul"
 msgstr ""
 
@@ -3997,6 +4017,12 @@ msgstr "MBR disk bölümü"
 msgid "MIB"
 msgstr "MIB"
 
+msgid "MIB is locked"
+msgstr ""
+
+msgid "MIB is marked for deletion"
+msgstr ""
+
 msgid "MISSING"
 msgstr "MISSING"
 
@@ -4299,6 +4325,12 @@ msgid "Mounting..."
 msgstr "Bağlanıyor"
 
 msgid "Mounts"
+msgstr ""
+
+msgid "Move down"
+msgstr ""
+
+msgid "Move up"
 msgstr ""
 
 msgid "Music"
@@ -4695,6 +4727,12 @@ msgstr ""
 msgid "Option"
 msgstr ""
 
+msgid "Option is locked"
+msgstr ""
+
+msgid "Option is marked for deletion"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr ""
 
@@ -4713,11 +4751,8 @@ msgstr "Dışarı"
 msgid "Outgoing Power/Inverter Information"
 msgstr ""
 
-msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
-msgstr "giden SMTP mail server adresi, örn. smtp.mycorp.com"
-
-msgid "Outgoing mail server"
-msgstr "giden mail sunucusu"
+msgid "Outgoing SMTP mail server address."
+msgstr ""
 
 msgid "Output current (A)"
 msgstr ""
@@ -4889,6 +4924,9 @@ msgstr ""
 
 msgid "Peer port"
 msgstr "Kaynak portu"
+
+msgid "Performance Settings"
+msgstr ""
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
@@ -5459,6 +5497,9 @@ msgid ""
 "Vista. NT1 is for legacy OS like XP."
 msgstr ""
 
+msgid "SMTP Server"
+msgstr ""
+
 msgid "SNMP"
 msgstr "SNMP"
 
@@ -5848,7 +5889,7 @@ msgstr ""
 msgid "Software RAID"
 msgstr "RAID programı"
 
-msgid "Software used"
+msgid "Software Used"
 msgstr ""
 
 msgid "Source"
@@ -5884,6 +5925,9 @@ msgid "Sparse"
 msgstr ""
 
 msgid "Sparse Volume"
+msgstr ""
+
+msgid "Speaker Beep"
 msgstr ""
 
 msgid ""
@@ -6101,9 +6145,6 @@ msgstr ""
 
 msgid "System"
 msgstr "Sistem"
-
-msgid "System Beep"
-msgstr "Sistem Uyarısı"
 
 msgid "System Information"
 msgstr ""
@@ -7290,7 +7331,7 @@ msgstr ""
 msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr ""
 
-msgid "This server uses default swap."
+msgid "This server uses default swap!"
 msgstr ""
 
 msgid "This tag already exists."
@@ -7813,7 +7854,7 @@ msgid ""
 "require a valid login."
 msgstr ""
 
-msgid "Use toggle button or separate enable/disable buttons."
+msgid "Use toggle button instead of enable/disable buttons."
 msgstr ""
 
 msgid "Used"
@@ -7956,6 +7997,12 @@ msgid "Volume Name"
 msgstr "Birim İsmi"
 
 msgid "Volume Size Limit"
+msgstr ""
+
+msgid "Volume is locked"
+msgstr ""
+
+msgid "Volume is marked for deletion"
 msgstr ""
 
 msgid "Volume label"
@@ -8197,9 +8244,6 @@ msgstr ""
 msgid "Your ZFS system is not healthy."
 msgstr ""
 
-msgid "Your own email address."
-msgstr "E-posta adresin"
-
 msgid "ZFS"
 msgstr "ZFS"
 
@@ -8399,5 +8443,51 @@ msgstr "umount"
 msgid "version:"
 msgstr ""
 
-#~ msgid "Send test email"
-#~ msgstr "Test maili gönder"
+#~ msgid "Command scripts"
+#~ msgstr "Komut Scripti"
+
+#~ msgid "Disable File Manager"
+#~ msgstr "Dosya Yöneticisini Devredışı Bırak"
+
+#~ msgid "Disable console menu"
+#~ msgstr "Konsol menüsünü Devre Dışı bırak"
+
+#~ msgid "Disable firmware version check"
+#~ msgstr "Firmware versiyon kontrolünü Devre Dışı bırak"
+
+#~ msgid "Disable speaker beep on startup and shutdown"
+#~ msgstr "Kapanırken ve Açılırken hoparler Bip sesini Devre Dışı bırak"
+
+#~ msgid "Edit dataset"
+#~ msgstr "Verisetini düzenle"
+
+#~ msgid "Enable Zeroconf/Bonjour to advertise services of this device"
+#~ msgstr ""
+#~ "Zeroconf/Bonjour hizmetleri bu aygıt üzerinde yayın yapmasını etkinleştir"
+
+#~ msgid "Enable console screensaver"
+#~ msgstr "Konsol ekran koruyucusunu etkinleştir"
+
+#~ msgid "Enable the system power control utility"
+#~ msgstr "Sistem güç kontrol aracından faydalan"
+
+#~ msgid "Enable tuning of some kernel variables"
+#~ msgstr "bazı kernel değişkenlerinde değişiklik yapmayı etkin kıl"
+
+#~ msgid "Firmware version check"
+#~ msgstr "Firmware versiyon kontrolü"
+
+#~ msgid "From email"
+#~ msgstr "E-mail'den"
+
+#~ msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
+#~ msgstr "giden SMTP mail server adresi, örn. smtp.mycorp.com"
+
+#~ msgid "Outgoing mail server"
+#~ msgstr "giden mail sunucusu"
+
+#~ msgid "System Beep"
+#~ msgstr "Sistem Uyarısı"
+
+#~ msgid "Your own email address."
+#~ msgstr "E-posta adresin"

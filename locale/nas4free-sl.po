@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-02-28 07:30+0000\n"
+"POT-Creation-Date: 2016-03-02 06:26+0000\n"
 "PO-Revision-Date: 2014-11-17 04:08+0000\n"
 "Last-Translator: jure <jure.medved@amis.net>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-28 14:16+0000\n"
+"X-Launchpad-Export-Date: 2016-03-02 06:37+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
@@ -559,6 +559,9 @@ msgid "Advanced Options"
 msgstr "Napredne možnosti"
 
 msgid "Advanced Settings"
+msgstr ""
+
+msgid "Advanced Setup"
 msgstr ""
 
 msgid "Advanced settings"
@@ -1247,6 +1250,9 @@ msgstr ""
 msgid "Command"
 msgstr "Ukaz"
 
+msgid "Command Scripts"
+msgstr ""
+
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
 msgstr ""
@@ -1257,9 +1263,6 @@ msgstr ""
 
 msgid "Command output:"
 msgstr "Izpis ukaza:"
-
-msgid "Command scripts"
-msgstr "Ukazne skripte"
 
 msgid "Comment"
 msgstr "Opomba"
@@ -1316,6 +1319,9 @@ msgid "Consider replacing this drive"
 msgstr ""
 
 msgid "Console Menu"
+msgstr ""
+
+msgid "Console Settings"
 msgstr ""
 
 msgid "Console screensaver"
@@ -1681,6 +1687,12 @@ msgstr "Direktorij baze podatkov"
 msgid "Dataset"
 msgstr "Dataset"
 
+msgid "Dataset is locked"
+msgstr ""
+
+msgid "Dataset is marked for deletion"
+msgstr ""
+
 msgid "Datasets"
 msgstr "Dataseti"
 
@@ -2002,9 +2014,6 @@ msgstr "Mapa, ki vsebuje odstranljiv medij. (npr. /mnt/iscsi/)"
 msgid "Directory to watch for new .torrent files."
 msgstr "Direktorij za spremljanje za novimi .torrent datotekami."
 
-msgid "Disable File Manager"
-msgstr "Onemogoči nadzornika datotek"
-
 msgid "Disable Firmware Update"
 msgstr ""
 
@@ -2017,14 +2026,17 @@ msgstr ""
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
-msgid "Disable console menu"
-msgstr "Onemogoči menu konzole"
+msgid "Disable console menu."
+msgstr ""
 
-msgid "Disable firmware version check"
-msgstr "Onemogoči preverjanje Firmware verzije"
+msgid "Disable file manager completely."
+msgstr ""
 
-msgid "Disable speaker beep on startup and shutdown"
-msgstr "Onemogoči sistemski zvok ob zagonu in izklopu"
+msgid "Disable firmware version check."
+msgstr ""
+
+msgid "Disable speaker beep on startup and shutdown."
+msgstr ""
 
 msgid "Disable the compression of repeated line"
 msgstr ""
@@ -2339,6 +2351,9 @@ msgstr ""
 msgid "Edit"
 msgstr "Uredi"
 
+msgid "Edit Dataset"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "Uredi gostitelja"
 
@@ -2371,9 +2386,6 @@ msgstr ""
 
 msgid "Edit command"
 msgstr "Uredi ukaz"
-
-msgid "Edit dataset"
-msgstr "Uredi dataset"
 
 msgid "Edit device"
 msgstr "Uredi napravo"
@@ -2442,8 +2454,14 @@ msgstr ""
 msgid "Email"
 msgstr "E-pošta"
 
+msgid "Email Address"
+msgstr ""
+
 msgid "Email Report"
 msgstr "E-poštno poročilo"
+
+msgid "Email address for sending system messages."
+msgstr ""
 
 msgid "Empty as default."
 msgstr ""
@@ -2503,8 +2521,8 @@ msgstr ""
 msgid "Enable ZFS ACL"
 msgstr ""
 
-msgid "Enable Zeroconf/Bonjour to advertise services of this device"
-msgstr "Omogoči Zeroconf/Bonjour za oglaševanje te naprave"
+msgid "Enable Zeroconf/Bonjour to advertise services of this device."
+msgstr ""
 
 msgid "Enable anonymous bind."
 msgstr "Omogoči anonimen priklop."
@@ -2515,8 +2533,8 @@ msgstr "Omogoči prijavo."
 msgid "Enable compression."
 msgstr "Omogoči stiskanje."
 
-msgid "Enable console screensaver"
-msgstr "Omogoči ohranjevalnik zaslona konzole."
+msgid "Enable console screensaver."
+msgstr ""
 
 msgid "Enable device polling"
 msgstr "Omogoči polling naprav"
@@ -2600,8 +2618,8 @@ msgstr ""
 msgid "Enable reverse DNS lookup."
 msgstr "Omogoči reverse DNS vpoglede."
 
-msgid "Enable serial console"
-msgstr "Omogoči serijsko povezavo"
+msgid "Enable serial console."
+msgstr ""
 
 msgid "Enable shadow copy"
 msgstr ""
@@ -2615,8 +2633,8 @@ msgstr "Omogoči sistemski dnevnik na oddaljeni syslog strežnik"
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Omogoči ident protokol (RFC1413)."
 
-msgid "Enable the system power control utility"
-msgstr "Omogoči sistemsko kontrolo nad električno porabo"
+msgid "Enable the system power control utility."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr ""
@@ -2627,8 +2645,8 @@ msgstr "Omogoči transkodiranje."
 msgid "Enable traps."
 msgstr "Omogoči pasti."
 
-msgid "Enable tuning of some kernel variables"
-msgstr "Omogoči uravnavanje nekaterih spremenljivk jedra."
+msgid "Enable tuning of some kernel variables."
+msgstr ""
 
 msgid "Enable write cache mode."
 msgstr ""
@@ -2971,6 +2989,9 @@ msgstr ""
 msgid "Firmware"
 msgstr "Strojna programska oprema"
 
+msgid "Firmware Check"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr ""
 
@@ -2979,9 +3000,6 @@ msgstr "Na tej platformi nalaganje Firmware-a ni mogoče."
 
 msgid "Firmware version"
 msgstr ""
-
-msgid "Firmware version check"
-msgstr "Preverjanje Firmware verzije"
 
 msgid "FirstBurstLength"
 msgstr "FirstBurstLength"
@@ -3032,9 +3050,6 @@ msgstr ""
 
 msgid "Friday"
 msgstr ""
-
-msgid "From email"
-msgstr "E-pošta od"
 
 msgid "Fsck"
 msgstr "Fsck"
@@ -3725,6 +3740,12 @@ msgstr ""
 msgid "Japanese"
 msgstr "Japonščina"
 
+msgid "Job is locked"
+msgstr ""
+
+msgid "Job is marked for deletion"
+msgstr ""
+
 msgid "Jul"
 msgstr ""
 
@@ -4069,6 +4090,12 @@ msgstr "MBR particija"
 msgid "MIB"
 msgstr "MIB"
 
+msgid "MIB is locked"
+msgstr ""
+
+msgid "MIB is marked for deletion"
+msgstr ""
+
 msgid "MISSING"
 msgstr "MISSING"
 
@@ -4379,6 +4406,12 @@ msgstr "Priklapljanje..."
 
 msgid "Mounts"
 msgstr "Priklopi"
+
+msgid "Move down"
+msgstr ""
+
+msgid "Move up"
+msgstr ""
 
 msgid "Music"
 msgstr ""
@@ -4788,6 +4821,12 @@ msgstr "Dovoli samo prijavljene uporabnike. Anonimne prijave niso omogočene."
 msgid "Option"
 msgstr "Možnost"
 
+msgid "Option is locked"
+msgstr ""
+
+msgid "Option is marked for deletion"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr "Uporabnikov opis cilja."
 
@@ -4806,11 +4845,8 @@ msgstr "Ven"
 msgid "Outgoing Power/Inverter Information"
 msgstr ""
 
-msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
-msgstr "Naslov odhodnega SMTP strežnika"
-
-msgid "Outgoing mail server"
-msgstr "Odhodni SMTP strežnik"
+msgid "Outgoing SMTP mail server address."
+msgstr ""
 
 msgid "Output current (A)"
 msgstr ""
@@ -4987,6 +5023,9 @@ msgstr "Izmenjava pijavk"
 
 msgid "Peer port"
 msgstr "Peer port"
+
+msgid "Performance Settings"
+msgstr ""
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
@@ -5567,6 +5606,9 @@ msgid ""
 "Vista. NT1 is for legacy OS like XP."
 msgstr ""
 
+msgid "SMTP Server"
+msgstr ""
+
 msgid "SNMP"
 msgstr "SNMP"
 
@@ -5975,8 +6017,8 @@ msgstr "SoftRaid"
 msgid "Software RAID"
 msgstr "Programski RAID"
 
-msgid "Software used"
-msgstr "Uporabljena programska oprema"
+msgid "Software Used"
+msgstr ""
 
 msgid "Source"
 msgstr "Vir"
@@ -6011,6 +6053,9 @@ msgid "Sparse"
 msgstr ""
 
 msgid "Sparse Volume"
+msgstr ""
+
+msgid "Speaker Beep"
 msgstr ""
 
 msgid ""
@@ -6239,9 +6284,6 @@ msgstr ""
 
 msgid "System"
 msgstr "Sistem"
-
-msgid "System Beep"
-msgstr "Sistemski zvok"
 
 msgid "System Information"
 msgstr ""
@@ -7442,7 +7484,7 @@ msgstr ""
 msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr ""
 
-msgid "This server uses default swap."
+msgid "This server uses default swap!"
 msgstr ""
 
 msgid "This tag already exists."
@@ -7969,7 +8011,7 @@ msgid ""
 "require a valid login."
 msgstr ""
 
-msgid "Use toggle button or separate enable/disable buttons."
+msgid "Use toggle button instead of enable/disable buttons."
 msgstr ""
 
 msgid "Used"
@@ -8112,6 +8154,12 @@ msgid "Volume Name"
 msgstr "Ime polja"
 
 msgid "Volume Size Limit"
+msgstr ""
+
+msgid "Volume is locked"
+msgstr ""
+
+msgid "Volume is marked for deletion"
 msgstr ""
 
 msgid "Volume label"
@@ -8354,9 +8402,6 @@ msgstr ""
 msgid "Your ZFS system is not healthy."
 msgstr ""
 
-msgid "Your own email address."
-msgstr ""
-
 msgid "ZFS"
 msgstr ""
 
@@ -8556,5 +8601,53 @@ msgstr "izvrzi"
 msgid "version:"
 msgstr ""
 
-#~ msgid "Send test email"
-#~ msgstr "Pošlji testno e-pošto"
+#~ msgid "Command scripts"
+#~ msgstr "Ukazne skripte"
+
+#~ msgid "Disable File Manager"
+#~ msgstr "Onemogoči nadzornika datotek"
+
+#~ msgid "Disable console menu"
+#~ msgstr "Onemogoči menu konzole"
+
+#~ msgid "Disable firmware version check"
+#~ msgstr "Onemogoči preverjanje Firmware verzije"
+
+#~ msgid "Disable speaker beep on startup and shutdown"
+#~ msgstr "Onemogoči sistemski zvok ob zagonu in izklopu"
+
+#~ msgid "Edit dataset"
+#~ msgstr "Uredi dataset"
+
+#~ msgid "Enable Zeroconf/Bonjour to advertise services of this device"
+#~ msgstr "Omogoči Zeroconf/Bonjour za oglaševanje te naprave"
+
+#~ msgid "Enable console screensaver"
+#~ msgstr "Omogoči ohranjevalnik zaslona konzole."
+
+#~ msgid "Enable serial console"
+#~ msgstr "Omogoči serijsko povezavo"
+
+#~ msgid "Enable the system power control utility"
+#~ msgstr "Omogoči sistemsko kontrolo nad električno porabo"
+
+#~ msgid "Enable tuning of some kernel variables"
+#~ msgstr "Omogoči uravnavanje nekaterih spremenljivk jedra."
+
+#~ msgid "Firmware version check"
+#~ msgstr "Preverjanje Firmware verzije"
+
+#~ msgid "From email"
+#~ msgstr "E-pošta od"
+
+#~ msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
+#~ msgstr "Naslov odhodnega SMTP strežnika"
+
+#~ msgid "Outgoing mail server"
+#~ msgstr "Odhodni SMTP strežnik"
+
+#~ msgid "Software used"
+#~ msgstr "Uporabljena programska oprema"
+
+#~ msgid "System Beep"
+#~ msgstr "Sistemski zvok"

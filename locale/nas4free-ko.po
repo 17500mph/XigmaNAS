@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-02-28 07:30+0000\n"
+"POT-Creation-Date: 2016-03-02 06:26+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-28 14:17+0000\n"
+"X-Launchpad-Export-Date: 2016-03-02 06:37+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -546,6 +546,9 @@ msgid "Advanced Options"
 msgstr "고급 옵션"
 
 msgid "Advanced Settings"
+msgstr ""
+
+msgid "Advanced Setup"
 msgstr ""
 
 msgid "Advanced settings"
@@ -1225,6 +1228,9 @@ msgstr ""
 msgid "Command"
 msgstr "명령"
 
+msgid "Command Scripts"
+msgstr ""
+
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
 msgstr ""
@@ -1235,9 +1241,6 @@ msgstr ""
 
 msgid "Command output:"
 msgstr "명령 출력:"
-
-msgid "Command scripts"
-msgstr "명령 스크립트"
 
 msgid "Comment"
 msgstr "주석"
@@ -1292,6 +1295,9 @@ msgid "Consider replacing this drive"
 msgstr ""
 
 msgid "Console Menu"
+msgstr ""
+
+msgid "Console Settings"
 msgstr ""
 
 msgid "Console screensaver"
@@ -1654,6 +1660,12 @@ msgstr "데이터베이스 디렉터리"
 msgid "Dataset"
 msgstr "데이터 셋"
 
+msgid "Dataset is locked"
+msgstr ""
+
+msgid "Dataset is marked for deletion"
+msgstr ""
+
 msgid "Datasets"
 msgstr "데이터 셋"
 
@@ -1972,9 +1984,6 @@ msgstr "이동식 미디어를 포함하는 디렉터리.(예 /mnt/iscsi/)"
 msgid "Directory to watch for new .torrent files."
 msgstr "새 .torrent 파일들을 감시할 디렉터리"
 
-msgid "Disable File Manager"
-msgstr "파일 관리자 비활성화"
-
 msgid "Disable Firmware Update"
 msgstr ""
 
@@ -1987,14 +1996,17 @@ msgstr ""
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr ""
 
-msgid "Disable console menu"
-msgstr "콘솔 메뉴 비활성화"
+msgid "Disable console menu."
+msgstr ""
 
-msgid "Disable firmware version check"
-msgstr "펌웨어 버전 체크 비활성화"
+msgid "Disable file manager completely."
+msgstr ""
 
-msgid "Disable speaker beep on startup and shutdown"
-msgstr "기동 시와 끌 때 스피커 울림을 비활성화"
+msgid "Disable firmware version check."
+msgstr ""
+
+msgid "Disable speaker beep on startup and shutdown."
+msgstr ""
 
 msgid "Disable the compression of repeated line"
 msgstr ""
@@ -2301,6 +2313,9 @@ msgstr ""
 msgid "Edit"
 msgstr "편집"
 
+msgid "Edit Dataset"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "호스트 편집"
 
@@ -2333,9 +2348,6 @@ msgstr ""
 
 msgid "Edit command"
 msgstr "명령 편집"
-
-msgid "Edit dataset"
-msgstr "데이터 셋 편집"
 
 msgid "Edit device"
 msgstr "장치 편집"
@@ -2404,8 +2416,14 @@ msgstr ""
 msgid "Email"
 msgstr "전자우편"
 
+msgid "Email Address"
+msgstr ""
+
 msgid "Email Report"
 msgstr "전자우편 보고"
+
+msgid "Email address for sending system messages."
+msgstr ""
 
 msgid "Empty as default."
 msgstr ""
@@ -2465,8 +2483,8 @@ msgstr ""
 msgid "Enable ZFS ACL"
 msgstr ""
 
-msgid "Enable Zeroconf/Bonjour to advertise services of this device"
-msgstr "이 장치의 서비스를 공지하기 위해 Zeroconf/Bonjour 활성화"
+msgid "Enable Zeroconf/Bonjour to advertise services of this device."
+msgstr ""
 
 msgid "Enable anonymous bind."
 msgstr "익명 bind 활성화."
@@ -2477,8 +2495,8 @@ msgstr "인증 활성화."
 msgid "Enable compression."
 msgstr "압축 활성화."
 
-msgid "Enable console screensaver"
-msgstr "콘솔 스크린세이버 활성화"
+msgid "Enable console screensaver."
+msgstr ""
 
 msgid "Enable device polling"
 msgstr "장치 polling 활성화"
@@ -2561,8 +2579,8 @@ msgstr ""
 msgid "Enable reverse DNS lookup."
 msgstr "DNS 역 방향 조회 활성화."
 
-msgid "Enable serial console"
-msgstr "직렬 콘솔 활성화"
+msgid "Enable serial console."
+msgstr ""
 
 msgid "Enable shadow copy"
 msgstr ""
@@ -2576,8 +2594,8 @@ msgstr "원격 syslog 서버에 대한 시스템 로깅 활성화"
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "ident 프로토콜(RFC1413) 활성화."
 
-msgid "Enable the system power control utility"
-msgstr "시스템 전원 제어 유틸리티 활성화"
+msgid "Enable the system power control utility."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr ""
@@ -2588,8 +2606,8 @@ msgstr "트랜스코딩 활성화."
 msgid "Enable traps."
 msgstr "트랩 활성화."
 
-msgid "Enable tuning of some kernel variables"
-msgstr "몇몇 커널 변수들의 미세 조정 활성화"
+msgid "Enable tuning of some kernel variables."
+msgstr ""
 
 msgid "Enable write cache mode."
 msgstr ""
@@ -2920,6 +2938,9 @@ msgstr ""
 msgid "Firmware"
 msgstr "펌웨어"
 
+msgid "Firmware Check"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr ""
 
@@ -2928,9 +2949,6 @@ msgstr "이 플랫폼에서는 펌웨어 업로드가 지원되지 않습니다.
 
 msgid "Firmware version"
 msgstr ""
-
-msgid "Firmware version check"
-msgstr "펌웨어 버전 체크"
 
 msgid "FirstBurstLength"
 msgstr "FirstBurstLength"
@@ -2981,9 +2999,6 @@ msgstr ""
 
 msgid "Friday"
 msgstr ""
-
-msgid "From email"
-msgstr "전자우편 주소"
 
 msgid "Fsck"
 msgstr "Fsck"
@@ -3655,6 +3670,12 @@ msgstr "1월 2월 3월 4월 5월 6월 7월 8월 9월 10월 11월 12월"
 msgid "Japanese"
 msgstr "일본어"
 
+msgid "Job is locked"
+msgstr ""
+
+msgid "Job is marked for deletion"
+msgstr ""
+
 msgid "Jul"
 msgstr ""
 
@@ -3991,6 +4012,12 @@ msgstr "MBR 파티션"
 msgid "MIB"
 msgstr "MIB"
 
+msgid "MIB is locked"
+msgstr ""
+
+msgid "MIB is marked for deletion"
+msgstr ""
+
 msgid "MISSING"
 msgstr "없음"
 
@@ -4294,6 +4321,12 @@ msgstr "마운트 중..."
 
 msgid "Mounts"
 msgstr "마운트"
+
+msgid "Move down"
+msgstr ""
+
+msgid "Move up"
+msgstr ""
 
 msgid "Music"
 msgstr ""
@@ -4686,6 +4719,12 @@ msgstr "인증된 사용자만 허용. 익명 로그인이 금지됩니다."
 msgid "Option"
 msgstr "옵션"
 
+msgid "Option is locked"
+msgstr ""
+
+msgid "Option is marked for deletion"
+msgstr ""
+
 msgid "Optional user-friendly string of the target."
 msgstr "타젯의 사용자 친화형 문자열(옵션)."
 
@@ -4704,11 +4743,8 @@ msgstr "밖"
 msgid "Outgoing Power/Inverter Information"
 msgstr ""
 
-msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
-msgstr "나가는 SMTP 메일 서버 주소. 예. smtp.mycorp.com."
-
-msgid "Outgoing mail server"
-msgstr "나가는 메일 서버"
+msgid "Outgoing SMTP mail server address."
+msgstr ""
 
 msgid "Output current (A)"
 msgstr ""
@@ -4884,6 +4920,9 @@ msgstr "피어 교환"
 
 msgid "Peer port"
 msgstr "피어 포트"
+
+msgid "Performance Settings"
+msgstr ""
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
@@ -5454,6 +5493,9 @@ msgid ""
 "Vista. NT1 is for legacy OS like XP."
 msgstr ""
 
+msgid "SMTP Server"
+msgstr ""
+
 msgid "SNMP"
 msgstr "SNMP"
 
@@ -5847,8 +5889,8 @@ msgstr "소프트웨어 Raid"
 msgid "Software RAID"
 msgstr "소프트웨어 RAID"
 
-msgid "Software used"
-msgstr "이용된 소프트웨어"
+msgid "Software Used"
+msgstr ""
 
 msgid "Source"
 msgstr "소스"
@@ -5883,6 +5925,9 @@ msgid "Sparse"
 msgstr ""
 
 msgid "Sparse Volume"
+msgstr ""
+
+msgid "Speaker Beep"
 msgstr ""
 
 msgid ""
@@ -6104,9 +6149,6 @@ msgstr ""
 
 msgid "System"
 msgstr "시스템"
-
-msgid "System Beep"
-msgstr "시스템 beep 음"
 
 msgid "System Information"
 msgstr ""
@@ -7330,7 +7372,7 @@ msgstr "이 풀 이름은 이미 존재합니다."
 msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr "선택된 이벤트 지시자가 발생할 때마다 이 규칙이 작동합니다."
 
-msgid "This server uses default swap."
+msgid "This server uses default swap!"
 msgstr ""
 
 msgid "This tag already exists."
@@ -7878,7 +7920,7 @@ msgstr ""
 "권한들은 게스트 서비스에 연결한 클라이언트가 그대로 이용할 수 있게 될 것입니다. 이 사용자는 비밀번호 파일에는 존재해야 하지만 유효한 "
 "로그인을 필요로 하지는 않습니다."
 
-msgid "Use toggle button or separate enable/disable buttons."
+msgid "Use toggle button instead of enable/disable buttons."
 msgstr ""
 
 msgid "Used"
@@ -8021,6 +8063,12 @@ msgid "Volume Name"
 msgstr "볼륨 명"
 
 msgid "Volume Size Limit"
+msgstr ""
+
+msgid "Volume is locked"
+msgstr ""
+
+msgid "Volume is marked for deletion"
 msgstr ""
 
 msgid "Volume label"
@@ -8263,9 +8311,6 @@ msgstr "암호를 전송하려면 WebGUI 프로토콜로서 HTTPS를 이용해�
 msgid "Your ZFS system is not healthy."
 msgstr "ZFS 시스템이 건강하지 않습니다."
 
-msgid "Your own email address."
-msgstr "당신의 전자우편 주소."
-
 msgid "ZFS"
 msgstr "ZFS"
 
@@ -8465,5 +8510,56 @@ msgstr "마운트 해제"
 msgid "version:"
 msgstr ""
 
-#~ msgid "Send test email"
-#~ msgstr "테스트 전자우편 보내기"
+#~ msgid "Command scripts"
+#~ msgstr "명령 스크립트"
+
+#~ msgid "Disable File Manager"
+#~ msgstr "파일 관리자 비활성화"
+
+#~ msgid "Disable console menu"
+#~ msgstr "콘솔 메뉴 비활성화"
+
+#~ msgid "Disable firmware version check"
+#~ msgstr "펌웨어 버전 체크 비활성화"
+
+#~ msgid "Disable speaker beep on startup and shutdown"
+#~ msgstr "기동 시와 끌 때 스피커 울림을 비활성화"
+
+#~ msgid "Edit dataset"
+#~ msgstr "데이터 셋 편집"
+
+#~ msgid "Enable Zeroconf/Bonjour to advertise services of this device"
+#~ msgstr "이 장치의 서비스를 공지하기 위해 Zeroconf/Bonjour 활성화"
+
+#~ msgid "Enable console screensaver"
+#~ msgstr "콘솔 스크린세이버 활성화"
+
+#~ msgid "Enable serial console"
+#~ msgstr "직렬 콘솔 활성화"
+
+#~ msgid "Enable the system power control utility"
+#~ msgstr "시스템 전원 제어 유틸리티 활성화"
+
+#~ msgid "Enable tuning of some kernel variables"
+#~ msgstr "몇몇 커널 변수들의 미세 조정 활성화"
+
+#~ msgid "Firmware version check"
+#~ msgstr "펌웨어 버전 체크"
+
+#~ msgid "From email"
+#~ msgstr "전자우편 주소"
+
+#~ msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
+#~ msgstr "나가는 SMTP 메일 서버 주소. 예. smtp.mycorp.com."
+
+#~ msgid "Outgoing mail server"
+#~ msgstr "나가는 메일 서버"
+
+#~ msgid "Software used"
+#~ msgstr "이용된 소프트웨어"
+
+#~ msgid "System Beep"
+#~ msgstr "시스템 beep 음"
+
+#~ msgid "Your own email address."
+#~ msgstr "당신의 전자우편 주소."

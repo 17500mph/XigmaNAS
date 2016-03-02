@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-02-28 07:30+0000\n"
-"PO-Revision-Date: 2016-02-28 07:12+0000\n"
+"POT-Creation-Date: 2016-03-02 06:26+0000\n"
+"PO-Revision-Date: 2016-03-02 06:02+0000\n"
 "Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-28 14:17+0000\n"
+"X-Launchpad-Export-Date: 2016-03-02 06:37+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -595,6 +595,9 @@ msgstr "Дополнительные параметры"
 
 msgid "Advanced Settings"
 msgstr "Расширенные настройки"
+
+msgid "Advanced Setup"
+msgstr "Дополнительные настройки"
 
 msgid "Advanced settings"
 msgstr "Расширенные настройки"
@@ -1329,6 +1332,9 @@ msgstr ""
 msgid "Command"
 msgstr "Команда"
 
+msgid "Command Scripts"
+msgstr "Командные скрипты"
+
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
 msgstr "Команда для события LINK_DOWN (например %s)."
@@ -1339,9 +1345,6 @@ msgstr "Команда для события LINK_UP (например %s)."
 
 msgid "Command output:"
 msgstr "Результат выполнения:"
-
-msgid "Command scripts"
-msgstr "Командные скрипты"
 
 msgid "Comment"
 msgstr "Комментарий"
@@ -1399,6 +1402,9 @@ msgstr "Рассмотрите возможность замены диска"
 
 msgid "Console Menu"
 msgstr "Консольное меню"
+
+msgid "Console Settings"
+msgstr "Настройки консоли"
 
 msgid "Console screensaver"
 msgstr "Консольный хранитель экрана"
@@ -1836,6 +1842,12 @@ msgstr "Каталог базы данных"
 msgid "Dataset"
 msgstr "Dataset"
 
+msgid "Dataset is locked"
+msgstr "Dataset заблокирован"
+
+msgid "Dataset is marked for deletion"
+msgstr "Dataset помечен для удаления"
+
 msgid "Datasets"
 msgstr "Dataset'ы"
 
@@ -2166,9 +2178,6 @@ msgstr "Каталог, содержащий съемные носители (н
 msgid "Directory to watch for new .torrent files."
 msgstr "Каталог для отслеживания новых .torrent-файлов."
 
-msgid "Disable File Manager"
-msgstr "Отключить файловый менеджер"
-
 msgid "Disable Firmware Update"
 msgstr "Отключить обновление прошивки"
 
@@ -2181,14 +2190,17 @@ msgstr "Отключить выбранные опции"
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Отключить TCP wrapper (mod_wrap module)."
 
-msgid "Disable console menu"
-msgstr "Запретить консольное меню"
+msgid "Disable console menu."
+msgstr "Отключить меню консоли."
 
-msgid "Disable firmware version check"
-msgstr "Запретить проверку версии прошивки"
+msgid "Disable file manager completely."
+msgstr "Отключить файловый менеджер полностью."
 
-msgid "Disable speaker beep on startup and shutdown"
-msgstr "Запретить звуковой сигнал при включении и выключении"
+msgid "Disable firmware version check."
+msgstr "Отключить проверку версии прошивки."
+
+msgid "Disable speaker beep on startup and shutdown."
+msgstr "Отключить звуковой сигнал при запуске и выключении."
 
 msgid "Disable the compression of repeated line"
 msgstr "Отключить сжатие повторяющихся строк"
@@ -2515,6 +2527,9 @@ msgstr "ОШИБКА:"
 msgid "Edit"
 msgstr "Редактировать"
 
+msgid "Edit Dataset"
+msgstr "Редактирование Dataset"
+
 msgid "Edit Host"
 msgstr "Изменить хост"
 
@@ -2547,9 +2562,6 @@ msgstr "Редактировать автоматический слепок"
 
 msgid "Edit command"
 msgstr "Редактировать команду"
-
-msgid "Edit dataset"
-msgstr "Изменить dataset"
 
 msgid "Edit device"
 msgstr "Изменить устройство"
@@ -2618,8 +2630,14 @@ msgstr "Эффективность ИБП (соотношение значени
 msgid "Email"
 msgstr "Электронная почта"
 
+msgid "Email Address"
+msgstr "Адрес электронной почты"
+
 msgid "Email Report"
 msgstr "Отчет по электронной почте"
+
+msgid "Email address for sending system messages."
+msgstr "Адрес электронной почты для отправки системных сообщений."
 
 msgid "Empty as default."
 msgstr "Пустое по умолчанию"
@@ -2683,7 +2701,7 @@ msgstr "Включить поддержку Time Machine"
 msgid "Enable ZFS ACL"
 msgstr "Включить ZFS ACL"
 
-msgid "Enable Zeroconf/Bonjour to advertise services of this device"
+msgid "Enable Zeroconf/Bonjour to advertise services of this device."
 msgstr "Включить Zeroconf/Bonjour для объявления служб этого устройства"
 
 msgid "Enable anonymous bind."
@@ -2695,8 +2713,8 @@ msgstr "Включить аутентификацию."
 msgid "Enable compression."
 msgstr "Включить сжатие"
 
-msgid "Enable console screensaver"
-msgstr "Разрешить консольный хранитель экрана"
+msgid "Enable console screensaver."
+msgstr "Включить хранитель экрана консоли."
 
 msgid "Enable device polling"
 msgstr "Разрешить опрос устройств"
@@ -2785,8 +2803,8 @@ msgstr ""
 msgid "Enable reverse DNS lookup."
 msgstr "Разрешить обратный поиск DNS"
 
-msgid "Enable serial console"
-msgstr "Включить консольный доступ по последовательному интерфейсу"
+msgid "Enable serial console."
+msgstr "Включить доступ к консоли по последовательному интерфейсу."
 
 msgid "Enable shadow copy"
 msgstr "Включить теневое копирование"
@@ -2800,8 +2818,8 @@ msgstr "Разрешить отправку журналов на удаленн
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Разрешить протокол идентификации (RFC1413)"
 
-msgid "Enable the system power control utility"
-msgstr "Включить утилиту контроля системного питания"
+msgid "Enable the system power control utility."
+msgstr "Включение утилиты управления питанием системы."
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Включить строгое придерживание стандартов DLNA."
@@ -2812,8 +2830,8 @@ msgstr "Включить транскодирование"
 msgid "Enable traps."
 msgstr "Разрешить отправку сообщений (traps)"
 
-msgid "Enable tuning of some kernel variables"
-msgstr "Включить возможность настройки некоторых переменных ядра"
+msgid "Enable tuning of some kernel variables."
+msgstr "Включить настройку некоторых переменных ядра."
 
 msgid "Enable write cache mode."
 msgstr "Включить кеширование записи."
@@ -3172,6 +3190,9 @@ msgstr "Настройки правил брандмауэра"
 msgid "Firmware"
 msgstr "Прошивка"
 
+msgid "Firmware Check"
+msgstr "Проверка прошивки"
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Загрузка прошивки не удалась (закончилась память?)"
 
@@ -3180,9 +3201,6 @@ msgstr "Загрузка прошивки не поддерживается эт
 
 msgid "Firmware version"
 msgstr "Версия прошивки"
-
-msgid "Firmware version check"
-msgstr "Проверка версии прошивки"
 
 msgid "FirstBurstLength"
 msgstr "FirstBurstLength"
@@ -3235,9 +3253,6 @@ msgstr "пт."
 
 msgid "Friday"
 msgstr "пятница"
-
-msgid "From email"
-msgstr "Адрес отправителя e-mail"
 
 msgid "Fsck"
 msgstr "Утилита fsck"
@@ -3972,6 +3987,12 @@ msgstr ""
 msgid "Japanese"
 msgstr "Японский"
 
+msgid "Job is locked"
+msgstr "Задание заблокировано"
+
+msgid "Job is marked for deletion"
+msgstr "Задание помечено для удаления"
+
 msgid "Jul"
 msgstr "июл."
 
@@ -4337,6 +4358,12 @@ msgstr "Раздел MBR"
 msgid "MIB"
 msgstr "MIB"
 
+msgid "MIB is locked"
+msgstr "MIB заблокирован"
+
+msgid "MIB is marked for deletion"
+msgstr "MIB помечен для удаления"
+
 msgid "MISSING"
 msgstr "Отсутствует"
 
@@ -4654,6 +4681,12 @@ msgstr "Монтируется..."
 
 msgid "Mounts"
 msgstr "Точки монтирования"
+
+msgid "Move down"
+msgstr "Переместить вниз"
+
+msgid "Move up"
+msgstr "Переместить вверх"
 
 msgid "Music"
 msgstr "Музыка"
@@ -5087,6 +5120,12 @@ msgstr ""
 msgid "Option"
 msgstr "Параметр"
 
+msgid "Option is locked"
+msgstr "Опция заблокирована"
+
+msgid "Option is marked for deletion"
+msgstr "Опция помечена для удаления"
+
 msgid "Optional user-friendly string of the target."
 msgstr "Удобное для восприятия описание цели (необязательно)."
 
@@ -5105,11 +5144,8 @@ msgstr "Исходящий"
 msgid "Outgoing Power/Inverter Information"
 msgstr "Информация о выходной линии/инверторе"
 
-msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
-msgstr "Адрес SMTP-сервера исходящей почты, например, smtp.mycorp.com"
-
-msgid "Outgoing mail server"
-msgstr "Сервер исходящей почты"
+msgid "Outgoing SMTP mail server address."
+msgstr "Адрес SMTP-сервера исходящей почты"
 
 msgid "Output current (A)"
 msgstr "Выходной ток"
@@ -5295,6 +5331,9 @@ msgstr "Обмен списками участников"
 
 msgid "Peer port"
 msgstr "Порт входящих соединений"
+
+msgid "Performance Settings"
+msgstr "Настройки производительности"
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
@@ -5881,6 +5920,9 @@ msgstr ""
 "SMB3 для новейших ОС таких, как Windows 8. SMB2 для Windows 7 и Vista. NT1 "
 "для устаревших ОС, таких как XP."
 
+msgid "SMTP Server"
+msgstr "Сервер SMTP"
+
 msgid "SNMP"
 msgstr "SNMP"
 
@@ -6301,7 +6343,7 @@ msgstr "SoftRaid"
 msgid "Software RAID"
 msgstr "Программный RAID"
 
-msgid "Software used"
+msgid "Software Used"
 msgstr "Используемое программное обеспечение"
 
 msgid "Source"
@@ -6341,6 +6383,9 @@ msgstr "Разряженный том"
 
 msgid "Sparse Volume"
 msgstr "Разреженный том (Sparse Volume)"
+
+msgid "Speaker Beep"
+msgstr "Звуковой сигнал"
 
 msgid ""
 "Specific to He8 drives from HGST. The Helium, so says the literature, allows "
@@ -6579,9 +6624,6 @@ msgstr ""
 
 msgid "System"
 msgstr "Система"
-
-msgid "System Beep"
-msgstr "Звуковой сигнал"
 
 msgid "System Information"
 msgstr "Информация о системе"
@@ -8013,8 +8055,8 @@ msgstr "Задано существующее имя пула."
 msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr "Правило, которое срабатывает при наступлении выбранного события."
 
-msgid "This server uses default swap."
-msgstr "Этот сервер использует устройство подкачки по умолчанию."
+msgid "This server uses default swap!"
+msgstr "Этот сервер использует swap по умолчанию!"
 
 msgid "This tag already exists."
 msgstr "Такая метка уже существует."
@@ -8622,8 +8664,8 @@ msgstr ""
 "пользователя будут как у гостевого. Этот пользователь должен существовать в "
 "файле паролей, но от него не требуется корректного входа."
 
-msgid "Use toggle button or separate enable/disable buttons."
-msgstr "Используйте кнопку переключения или отдельные кнопки вкл./выкл."
+msgid "Use toggle button instead of enable/disable buttons."
+msgstr "Используйте кнопки переключения вместо кнопок вкл./откл."
 
 msgid "Used"
 msgstr "Занято"
@@ -8769,6 +8811,12 @@ msgstr "Имя тома"
 
 msgid "Volume Size Limit"
 msgstr "Лимит размера тома"
+
+msgid "Volume is locked"
+msgstr "Раздел заблокирован"
+
+msgid "Volume is marked for deletion"
+msgstr "Раздел помечен для удаления"
 
 msgid "Volume label"
 msgstr "Метка тома"
@@ -9044,9 +9092,6 @@ msgstr ""
 msgid "Your ZFS system is not healthy."
 msgstr "Ваша система ZFS повреждена."
 
-msgid "Your own email address."
-msgstr "Ваш собственный адрес e-mail."
-
 msgid "ZFS"
 msgstr "ZFS (Zettabyte File System)"
 
@@ -9255,8 +9300,62 @@ msgstr "размонтировать"
 msgid "version:"
 msgstr "версия:"
 
-#~ msgid "Send test email"
-#~ msgstr "Отправить тестовый e-mail"
+#~ msgid "Command scripts"
+#~ msgstr "Командные скрипты"
 
-#~ msgid "Select the date format."
-#~ msgstr "Выберите формат даты"
+#~ msgid "Disable File Manager"
+#~ msgstr "Отключить файловый менеджер"
+
+#~ msgid "Disable console menu"
+#~ msgstr "Запретить консольное меню"
+
+#~ msgid "Disable firmware version check"
+#~ msgstr "Запретить проверку версии прошивки"
+
+#~ msgid "Disable speaker beep on startup and shutdown"
+#~ msgstr "Запретить звуковой сигнал при включении и выключении"
+
+#~ msgid "Edit dataset"
+#~ msgstr "Изменить dataset"
+
+#~ msgid "Enable Zeroconf/Bonjour to advertise services of this device"
+#~ msgstr "Включить Zeroconf/Bonjour для объявления служб этого устройства"
+
+#~ msgid "Enable console screensaver"
+#~ msgstr "Разрешить консольный хранитель экрана"
+
+#~ msgid "Enable serial console"
+#~ msgstr "Включить консольный доступ по последовательному интерфейсу"
+
+#~ msgid "Enable the system power control utility"
+#~ msgstr "Включить утилиту контроля системного питания"
+
+#~ msgid "Enable tuning of some kernel variables"
+#~ msgstr "Включить возможность настройки некоторых переменных ядра"
+
+#~ msgid "Firmware version check"
+#~ msgstr "Проверка версии прошивки"
+
+#~ msgid "From email"
+#~ msgstr "Адрес отправителя e-mail"
+
+#~ msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
+#~ msgstr "Адрес SMTP-сервера исходящей почты, например, smtp.mycorp.com"
+
+#~ msgid "Outgoing mail server"
+#~ msgstr "Сервер исходящей почты"
+
+#~ msgid "Software used"
+#~ msgstr "Используемое программное обеспечение"
+
+#~ msgid "System Beep"
+#~ msgstr "Звуковой сигнал"
+
+#~ msgid "Your own email address."
+#~ msgstr "Ваш собственный адрес e-mail."
+
+#~ msgid "This server uses default swap."
+#~ msgstr "Этот сервер использует устройство подкачки по умолчанию."
+
+#~ msgid "Use toggle button or separate enable/disable buttons."
+#~ msgstr "Используйте кнопку переключения или отдельные кнопки вкл./выкл."
