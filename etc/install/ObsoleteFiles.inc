@@ -81,6 +81,11 @@ usr/local/www/sajax/sajax.php
 usr/local/www/sajax
 usr/local/www/javascript/navbar.js
 usr/local/www/javascript
+usr/local/www/check.gif
+usr/local/www/del.gif
+usr/local/www/e.gif
+usr/local/www/plus.gif
+usr/local/www/x.gif
 etc/uam
 etc/inc/XML
 usr/local/www/services_upnp.php
