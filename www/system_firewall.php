@@ -229,13 +229,13 @@ function enable_change(enable_change) {
 									<?php $enable = isset($rule['enable']);
 									switch ($rule['action']) {
 										case "allow":
-											$actionimg = "fw_action_allow.gif";
+											$actionimg = "fw_action_allow.png";
 											break;
 										case "deny":
-											$actionimg = "fw_action_deny.gif";
+											$actionimg = "fw_action_deny.png";
 											break;
 										case "unreach host":
-											$actionimg = "fw_action_reject.gif";
+											$actionimg = "fw_action_reject.png";
 											break;
 									}
 									?>
