@@ -1,6 +1,6 @@
---- web/javascript/torrent-row.js.orig	2012-10-24 15:01:17.689690000 +0200
-+++ web/javascript/torrent-row.js	2012-10-24 22:00:25.000000000 +0200
-@@ -254,7 +254,7 @@
+--- web/javascript/torrent-row.js.orig	2015-05-07 08:40:50.622380000 +0200
++++ web/javascript/torrent-row.js	2016-03-03 01:07:08.000000000 +0100
+@@ -266,7 +266,7 @@
  	render: function(controller, t, root)
  	{
  		// name
@@ -9,7 +9,7 @@
  
  		// progressbar
  		TorrentRendererHelper.renderProgressbar(controller, t, root._progressbar);
-@@ -263,11 +263,11 @@
+@@ -275,11 +275,11 @@
  		var has_error = t.getError() !== Torrent._ErrNone;
  		var e = root._peer_details_container;
  		$(e).toggleClass('error',has_error);
@@ -23,7 +23,7 @@
  
  		// pause/resume button
  		var is_stopped = t.isStopped();
-@@ -343,13 +343,13 @@
+@@ -355,13 +355,13 @@
  		var is_stopped = t.isStopped();
  		var e = root._name_container;
  		$(e).toggleClass('paused', is_stopped);
