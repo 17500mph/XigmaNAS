@@ -135,25 +135,28 @@ $(document).ready(function(){
 	<?php if (!empty($errormsg)) print_error_box($errormsg);?>
 	<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 	<?php if (!empty($savemsg)) print_info_box($savemsg);?>
+	<?php $enabled = isset($config['vbox']['enable']);?>
 	<table width="100%" border="0" cellpadding="6" cellspacing="0">
 	<?php html_titleline_checkbox("enable", gettext("VirtualBox"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "");?>
 	<?php html_filechooser("homedir", gettext("Home directory"), $pconfig['homedir'], gettext("Enter the path to the home directory of VirtualBox. VM config and HDD image will be created under the specified directory."), $g['media_path'], false, 60);?>
-	<?php html_separator();?>
-	<?php html_titleline(sprintf("%s (%s)", gettext("Administrative WebGUI"), gettext("phpVirtualBox")));?>
-	<?php
-		$if = get_ifname($config['interfaces']['lan']['if']);
-		$ipaddr = get_ipaddr($if);
-		$url = htmlspecialchars("/phpvirtualbox/index.html");
-		$text = "<a href='${url}' id='a_url1' target='_blank'>{$url}</a>";
-	?>
-	<?php html_text("url1", gettext("URL"), $text);?>
-	<?php html_separator();?>
-	<?php html_titleline(sprintf("%s (%s)", gettext("Administrative WebGUI"), gettext("noVNC")));?>
-	<?php
-		$url = htmlspecialchars("/novnc/vnc.html");
-		$text = "<a href='${url}?host=$ipaddr' id='a_url2' target='_blank'>{$url}</a>";
-	?>
-	<?php html_text("url2", gettext("URL"), $text);?>
+	<?php if ($enabled):?>
+		<?php html_separator();?>
+		<?php html_titleline(sprintf("%s (%s)", gettext("Administrative WebGUI"), gettext("phpVirtualBox")));?>
+		<?php
+			$if = get_ifname($config['interfaces']['lan']['if']);
+			$ipaddr = get_ipaddr($if);
+			$url = htmlspecialchars("/phpvirtualbox/index.html");
+			$text = "<a href='${url}' id='a_url1' target='_blank'>{$url}</a>";
+		?>
+		<?php html_text("url1", gettext("URL"), $text);?>
+		<?php html_separator();?>
+		<?php html_titleline(sprintf("%s (%s)", gettext("Administrative WebGUI"), gettext("noVNC")));?>
+		<?php
+			$url = htmlspecialchars("/novnc/vnc.html");
+			$text = "<a href='${url}?host=$ipaddr' id='a_url2' target='_blank'>{$url}</a>";
+		?>
+		<?php html_text("url2", gettext("URL"), $text);?>
+	<?php endif;?>
 	</table>
 	<div id="submit">
 	  <input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" />
