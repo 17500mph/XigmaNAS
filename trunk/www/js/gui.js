@@ -124,7 +124,7 @@ GUI.prototype = {
 	},
 	recall: function(firstTime, nextTime, url, data, callback) {
 		var self = this;
-		self.timer = setInterval(function ajaxFunc() {
+		self.timer = setTimeout(function ajaxFunc() {
 			jQuery.when(
 				jQuery.ajax({
 					type: 'GET',
@@ -134,8 +134,9 @@ GUI.prototype = {
 				})
 			).then(function(data, textStatus, jqXHR) {
 				callback(data, textStatus, jqXHR);
+				self.timer = setTimeout(ajaxFunc, nextTime);
 			}, function(jqXHR, textStatus, errorThrown) {
-				clearInterval(self.timer);
+				clearTimeout(self.timer);
 			});
 		}, firstTime);
 		return self;
