@@ -125,6 +125,7 @@ GUI.prototype = {
 	recall: function(firstTime, nextTime, url, data, callback) {
 		var self = this;
 		self.timer = setTimeout(function ajaxFunc() {
+			var timerStarted = new Date().getTime(), timeElapsed;
 			jQuery.when(
 				jQuery.ajax({
 					type: 'GET',
@@ -134,7 +135,12 @@ GUI.prototype = {
 				})
 			).then(function(data, textStatus, jqXHR) {
 				callback(data, textStatus, jqXHR);
-				self.timer = setTimeout(ajaxFunc, nextTime);
+				timeElapsed = new Date().getTime() - timerStarted;
+				if ((timeElapsed > nextTime) || (timeElapsed < 0)) { // platform is too slow / a DeLorean
+					self.timer = setTimeout(ajaxFunc, nextTime);
+				} else { // all ok, adjust next schedule
+					self.timer = setTimeout(ajaxFunc, nextTime - timeElapsed);
+				}
 			}, function(jqXHR, textStatus, errorThrown) {
 				clearTimeout(self.timer);
 			});
