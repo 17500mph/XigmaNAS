@@ -41,6 +41,7 @@
     SUBDIR += pam_ldap
     SUBDIR += pam_mkhomedir
     SUBDIR += php56
+    SUBDIR += php70
     SUBDIR += phpvirtualbox
     SUBDIR += proftpd
     SUBDIR += python2
