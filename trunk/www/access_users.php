@@ -115,9 +115,9 @@ function userdbuser_process_updatenotification($mode, $data) {
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
 					<tr>
 						<td width="20%" class="listhdrlr"><?=gettext("User");?></td>
-						<td width="35%" class="listhdrr"><?=gettext("Full Name");?></td>
+						<td width="25%" class="listhdrr"><?=gettext("Full Name");?></td>
 						<td width="5%" class="listhdrr"><?=gettext("UID");?></td>
-						<td width="30%" class="listhdrr"><?=gettext("Group");?></td>
+						<td width="40%" class="listhdrr"><?=gettext("Group");?></td>
 						<td width="10%" class="list"></td>
 					</tr>
 					<?php foreach ($a_user as $userv):?>
