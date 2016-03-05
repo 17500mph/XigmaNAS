@@ -1013,9 +1013,9 @@ function install_bsdlabel($disk, $fstype, $startsector, $slicesize, $alignsector
 	$fd = fopen("{$g['tmp_path']}/label.tmp", 'w');
 
 	while(list(,$val) = each($label)) {
-		if (ereg ("unused",$val) && !ereg ("c:",$val)) {
+		if ((false !== strpos('unused', $val)) && (false === strpos('c:', $val))) {
 			// Replace 'unused' with '$fstype'
-			$val = ereg_replace("unused", $fstype, $val);
+			$val = str_replace("unused", $fstype, $val);
 			// Replace with aligned size
 			$val = preg_replace("/([a-z]:)\s+\d+\s+\d+/",
 				"\\1 {$aligned_counts} {$aligned_start}",
@@ -1086,7 +1086,7 @@ function install_detect_installation($mode, &$devinfo) {
 	$adisk = explode(" ", trim(preg_replace("/kern.disks: /", "", exec("/sbin/sysctl kern.disks"))));
 	foreach ($adisk as $diskv) {
 		// Skip mfs-mounted filesystems
-		if (0 < ereg("md[0-9]*", $diskv))
+		if (false != preg_match('/md[\d]/', $diskv))
 			continue;
 
 		// Search on slice 1 for OS installed on disk with install script
@@ -1111,7 +1111,7 @@ function install_detect_installation($mode, &$devinfo) {
 
 					case 'full':
 						$platform = chop(@file_get_contents("{$mnt_cf_disk}{$g['etc_path']}/platform"));
-						if (FALSE !== ereg("^.*-full", $platform)) {
+						if (false !== strpos('-full', $platform)) {
 							$result = 0;
 						}
 						break;
@@ -1147,7 +1147,7 @@ function install_detect_installation($mode, &$devinfo) {
 
 					case 'full':
 						$platform = chop(@file_get_contents("{$mnt_cf_disk}{$g['etc_path']}/platform"));
-						if (FALSE !== ereg("^.*-full", $platform)) {
+						if (false !== strpos('-full', $platform)) {
 							$result = 0;
 						}
 						break;
@@ -1183,7 +1183,7 @@ function install_detect_installation($mode, &$devinfo) {
 
 					case 'full':
 						$platform = chop(@file_get_contents("{$mnt_cf_disk}{$g['etc_path']}/platform"));
-						if (FALSE !== ereg("^.*-full", $platform)) {
+						if (false !== strpos('-full', $platform)) {
 							$result = 0;
 						}
 						break;

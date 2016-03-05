@@ -84,7 +84,7 @@ if (is_booting()) {
 				$found = false;
 
 				// Skip non USB (SCSI) device. The filesystem type must be MSDOS
-				if (FALSE === ereg("da[0-9]*", $disk))
+				if (FALSE == preg_match('/da[\d]/', $disk))
 					continue;
 
 				// Display progress...
@@ -115,7 +115,7 @@ if (is_booting()) {
 			// Probe kernel known disks until we find one with config.xml
 			foreach ($disks as $disk) {
 				// Skip mfs-mounted filesystems
-				if (TRUE === ereg("md[0-9]*", $disk))
+				if (FALSE != preg_match('/md[\d]/', $disk))
 					continue;
 
 				// Display progress...
@@ -166,7 +166,7 @@ if (is_booting()) {
 				// Check if there is any USB device that can be used
 				foreach ($disks as $disk) {
 					// Skip non USB (SCSI) device. The filesystem type must be MSDOS
-					if (FALSE === ereg("da[0-9]*", $disk))
+					if (FALSE == preg_match('/da[\d]/', $disk))
 						continue;
 
 					// Display progress...
