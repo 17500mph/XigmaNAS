@@ -824,6 +824,7 @@ function get_disk_usage() {
 }
 
 function get_pool_usage() {
+	global $config;
  	$retval = [];
 	$a_poolusage = [];
 	$a_poolinfo = zfs_get_pool_list();
@@ -837,8 +838,13 @@ function get_pool_usage() {
 			$r_poolusage['capacity'] = $poolv['cap'];
 			$r_poolusage['percentage'] = rtrim($poolv['cap'], "%");
 			$r_poolusage['size'] = $poolv['size'];
-			$r_poolusage['used'] = $poolv['alloc']; // mapped to alloc to show the same information as in Disks|ZFS|Pools|Management
-			$r_poolusage['avail'] = $poolv['free']; // mapped to free to show the same information as in Disks|ZFS|Pools|Management
+			if (isset($config['zfs']['settings']['showusedavail'])) {
+				$r_poolusage['used'] = $poolv['used'];
+				$r_poolusage['avail'] = $poolv['avail'];
+			} else { // this is the default setting
+				$r_poolusage['used'] = $poolv['alloc'];
+				$r_poolusage['avail'] = $poolv['free'];
+			}
 			$r_poolusage['health'] = $poolv['health'];
 			$r_poolusage['capofsize'] = sprintf(gettext("%s of %sB"), $r_poolusage['capacity'], $r_poolusage['size']);
 			$r_poolusage['tooltip']['used'] = sprintf(gettext("%sB used of %sB"), $r_poolusage['used'], $r_poolusage['size']);
@@ -888,10 +894,6 @@ function system_get_sysinfo() {
 	$cpus = system_get_cpus();
 	$value['cpus'] = $cpus;
 
-	// Get uptime and date.
-	$value['uptime'] = system_get_uptime();
-	$value['date'] = get_datetime_locale();
-
 	// Get RAM usage.
 	$raminfo = system_get_ram_info();
 	$percentage = round(($raminfo['used'] * 100) / $raminfo['total'], 0);
@@ -920,6 +922,10 @@ function system_get_sysinfo() {
 	$value['diskusage'] = get_disk_usage(); // Get disk usage.
 	$value['poolusage'] = get_pool_usage(); // Get pool info.
 	$value['swapusage'] = get_swap_usage(); // Get swap info.
+
+	// Get uptime and date.
+	$value['uptime'] = system_get_uptime();
+	$value['date'] = get_datetime_locale();
 	return $value;
 }
 ?>
