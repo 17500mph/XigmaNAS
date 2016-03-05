@@ -124,8 +124,8 @@ GUI.prototype = {
 	},
 	recall: function(firstTime, nextTime, url, data, callback) {
 		var self = this;
+		var nextTick = new Date().getTime() + firstTime + nextTime;
 		self.timer = setTimeout(function ajaxFunc() {
-			var timerStarted = new Date().getTime(), timeElapsed;
 			jQuery.when(
 				jQuery.ajax({
 					type: 'GET',
@@ -134,13 +134,13 @@ GUI.prototype = {
 					data: data,
 				})
 			).then(function(data, textStatus, jqXHR) {
+				var timeToSleep;
 				callback(data, textStatus, jqXHR);
-				timeElapsed = new Date().getTime() - timerStarted;
-				if ((timeElapsed > nextTime) || (timeElapsed < 0)) { // platform is too slow / a DeLorean
-					self.timer = setTimeout(ajaxFunc, nextTime);
-				} else { // all ok, adjust next schedule
-					self.timer = setTimeout(ajaxFunc, nextTime - timeElapsed);
-				}
+				do { // calculate next tick
+					timeToSleep = nextTick - new Date().getTime();
+					nextTick += nextTime; 
+				} while (timeToSleep < 200); // skip to next tick if system is too slow
+				self.timer = setTimeout(ajaxFunc, timeToSleep);
 			}, function(jqXHR, textStatus, errorThrown) {
 				clearTimeout(self.timer);
 			});
