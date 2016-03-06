@@ -51,7 +51,35 @@ if ($_POST) {
 			// Restart services
 			config_lock();
 			$retval |= rc_update_service("samba");
-			$retval |= rc_update_service("rsyncd");
+// WORKAROUND CAUSE
+//			$retval |= rc_update_service("rsyncd");
+// WORKARAOUND START
+			$name = 'rsyncd';
+			$running = rc_is_service_running($name); // Check if service is running
+			$enabled = rc_is_service_enabled($name); // Check if service is enabled
+
+			// Update rc.conf and execute rc script
+			if (0 == $enabled) {
+				rc_update_rcconf($name, "enable");
+				switch ($running) {
+					case 0:
+						mwexec2("nohup /etc/rc.d/rsyncd restart >/dev/null 2>&1 &", $output, $retval);
+//						$retval = rc_restart_service($name);
+						break;
+					case 1:
+						mwexec2("nohup /etc/rc.d/rsyncd start >/dev/null 2>&1 &", $output, $retval);
+//						$retval = rc_exec_script_async();
+//						$retval = rc_start_service($name);
+						break;
+				}
+			} else {
+				// Stop service if necessary
+				if (0 == $running) {
+					$retval |= rc_stop_service($name);
+				}
+				rc_update_rcconf($name, "disable");
+			}
+// WORKAROUND END
 			$retval |= rc_update_service("netatalk");
 			$retval |= rc_update_service("rpcbind"); // !!! Do
 			$retval |= rc_update_service("mountd");  // !!! not
@@ -97,7 +125,35 @@ if (isset($_GET['act']) && $_GET['act'] === "retry") {
 	if (false !== $index) {
 		if (0 == disks_mount($config['mounts']['mount'][$index])) {
 			rc_update_service("samba");
-			rc_update_service("rsyncd");
+// WORKAROUND CAUSE
+//			$retval |= rc_update_service("rsyncd");
+// WORKARAOUND START
+			$name = 'rsyncd';
+			$running = rc_is_service_running($name); // Check if service is running
+			$enabled = rc_is_service_enabled($name); // Check if service is enabled
+
+			// Update rc.conf and execute rc script
+			if (0 == $enabled) {
+				rc_update_rcconf($name, "enable");
+				switch ($running) {
+					case 0:
+						mwexec2("nohup /etc/rc.d/rsyncd restart >/dev/null 2>&1 &", $output, $retval);
+//						$retval = rc_restart_service($name);
+						break;
+					case 1:
+						mwexec2("nohup /etc/rc.d/rsyncd start >/dev/null 2>&1 &", $output, $retval);
+//						$retval = rc_exec_script_async();
+//						$retval = rc_start_service($name);
+						break;
+				}
+			} else {
+				// Stop service if necessary
+				if (0 == $running) {
+					$retval |= rc_stop_service($name);
+				}
+				rc_update_rcconf($name, "disable");
+			}
+// WORKAROUND END
 			rc_update_service("netatalk");
 			rc_update_service("rpcbind"); // !!! Do
 			rc_update_service("mountd");  // !!! not
