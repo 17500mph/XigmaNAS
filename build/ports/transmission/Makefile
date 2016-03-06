@@ -1,5 +1,5 @@
 PORTNAME=		transmission
-PORTVERSION=	2.90
+PORTVERSION=	2.92
 PORTREVISION?=	0
 CATEGORIES?=		net-p2p
 COMMENT=		Fast and lightweight CLI BitTorrent client
@@ -88,11 +88,11 @@ do-install:
 	@${MKDIR} -pv ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/images/
 	@${MKDIR} -pv ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/javascript/jquery
 	@${MKDIR} -pv ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/jqueryui
+	@${MKDIR} -pv ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission
 	@${MKDIR} -pv ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images
 	@${MKDIR} -pv ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/style/transmission/images/buttons
 
 	@${INSTALL_DATA} -v ${WRKSRC}/web/index.html ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web
-	@${INSTALL_DATA} -v ${WRKSRC}/web/LICENSE ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web
 	@${INSTALL_DATA} -v ${WRKSRC}/web/images/favicon.ico ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/images
 	@${INSTALL_DATA} -v ${WRKSRC}/web/images/favicon.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/images
 	@${INSTALL_DATA} -v ${WRKSRC}/web/images/webclip-icon.png ${NAS4FREE_ROOTFS}/usr/local/share/${PORTNAME}/web/images
