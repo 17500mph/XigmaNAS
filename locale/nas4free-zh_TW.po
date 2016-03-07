@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-03-02 06:26+0000\n"
-"PO-Revision-Date: 2015-12-27 22:10+0000\n"
-"Last-Translator: Alex Lin <linuxant@gmail.com>\n"
+"PO-Revision-Date: 2016-03-03 17:10+0000\n"
+"Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-02 06:37+0000\n"
-"X-Generator: Launchpad (build 17925)\n"
+"X-Launchpad-Export-Date: 2016-03-07 16:52+0000\n"
+"X-Generator: Launchpad (build 17936)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -55,15 +55,15 @@ msgstr "%s 介面"
 
 #, php-format
 msgid "%s already exists as a %s."
-msgstr ""
+msgstr "%s 類似存在 %s。"
 
 #, php-format
 msgid "%s is already configured as a filesystem."
-msgstr ""
+msgstr "%s 檔案系統配置檔案已存在。"
 
 #, php-format
 msgid "%s is already configured as a volume."
-msgstr ""
+msgstr "%s 卷已存在。"
 
 #, php-format
 msgid "%s is too long."
@@ -334,7 +334,7 @@ msgid "AIO write size"
 msgstr "AIO寫入大小"
 
 msgid "ALL Interfaces"
-msgstr ""
+msgstr "全部介面"
 
 msgid "AP mode"
 msgstr "AP 模式"
@@ -355,7 +355,7 @@ msgid "Access"
 msgstr "權限"
 
 msgid "Access Mode"
-msgstr ""
+msgstr "訪問方式"
 
 msgid "Access Restrictions"
 msgstr "存取權限"
@@ -399,7 +399,7 @@ msgid "Add"
 msgstr "新增"
 
 msgid "Add Dataset"
-msgstr ""
+msgstr "添加資料集"
 
 msgid "Add Host"
 msgstr "新增主機"
@@ -420,7 +420,7 @@ msgid "Add URL"
 msgstr "新增 URL"
 
 msgid "Add Volume"
-msgstr ""
+msgstr "添加卷"
 
 msgid "Add additional scheduled self-test."
 msgstr "新增自動化的自我監測"
@@ -498,7 +498,7 @@ msgid "Additional Network"
 msgstr "其他網絡"
 
 msgid "Additional Storage"
-msgstr ""
+msgstr "額外的存儲"
 
 msgid "Additional group"
 msgstr "其他群組"
@@ -579,7 +579,7 @@ msgstr "積極模式"
 msgid ""
 "Airflow temperature on Western Digital HDs (Same as temp. , but current "
 "value is 50 less for some models. Marked as obsolete.)"
-msgstr ""
+msgstr "西部資料硬碟氣流溫度 (等同於溫度，但是有些硬碟次項溫度讀數偏低 50 度。標記為過期參數。 )"
 
 msgid "Albanian"
 msgstr "阿爾巴尼亞文"
@@ -614,7 +614,7 @@ msgid "All users will have the root privilege."
 msgstr "讓所有的使用者都有 root 權限。"
 
 msgid "Alloc"
-msgstr ""
+msgstr "清算"
 
 msgid "Allow"
 msgstr "允許"
@@ -743,10 +743,10 @@ msgid "Apply changes"
 msgstr "套用變更"
 
 msgid "Apr"
-msgstr ""
+msgstr "四"
 
 msgid "April"
-msgstr ""
+msgstr "四月"
 
 msgid "Archive"
 msgstr "歸檔"
@@ -782,10 +782,10 @@ msgid "Audio"
 msgstr "音頻"
 
 msgid "Aug"
-msgstr ""
+msgstr "八"
 
 msgid "August"
-msgstr ""
+msgstr "八月"
 
 msgid "Auth Group"
 msgstr "驗證群組"
@@ -940,7 +940,7 @@ msgid "Blank time"
 msgstr "空白時間"
 
 msgid "Block Size"
-msgstr ""
+msgstr "區塊大小"
 
 msgid "Block size"
 msgstr "區塊大小"
@@ -1247,7 +1247,7 @@ msgid "Compilations directories"
 msgstr ""
 
 msgid "Compiled"
-msgstr ""
+msgstr "已編譯"
 
 msgid "Compliant profile to be used."
 msgstr "使用符合的設定檔。"
@@ -1303,7 +1303,7 @@ msgid ""
 msgstr "聯絡人資訊，例如系統管理員的姓名或是電子郵件：admin@email.address。"
 
 msgid "Container"
-msgstr ""
+msgstr "容器"
 
 msgid "Content"
 msgstr "內容"
@@ -8465,60 +8465,3 @@ msgstr "卸載"
 
 msgid "version:"
 msgstr "版本："
-
-#~ msgid "Disable firmware version check"
-#~ msgstr "關閉韌體版本檢查功能"
-
-#~ msgid "Enable tuning of some kernel variables"
-#~ msgstr "開啟系統核心的參數微調"
-
-#~ msgid "Firmware version check"
-#~ msgstr "韌體版本檢查"
-
-#~ msgid "Software used"
-#~ msgstr "使用的軟體"
-
-#~ msgid "System Beep"
-#~ msgstr "提示聲響"
-
-#~ msgid "Edit dataset"
-#~ msgstr "編輯數據集"
-
-#~ msgid "Enable Zeroconf/Bonjour to advertise services of this device"
-#~ msgstr "啟用 Zeroconf/ Bonjour 來宣傳這個裝置的服務"
-
-#~ msgid "Enable serial console"
-#~ msgstr "啟用串行控制台"
-
-#~ msgid "Your own email address."
-#~ msgstr "您的電郵地址。"
-
-#~ msgid "From email"
-#~ msgstr "發信人"
-
-#~ msgid "Command scripts"
-#~ msgstr "指令腳本（Command scripts）"
-
-#~ msgid "Disable console menu"
-#~ msgstr "關閉控制台選單"
-
-#~ msgid "Disable File Manager"
-#~ msgstr "關閉檔案管理程式"
-
-#~ msgid "Disable speaker beep on startup and shutdown"
-#~ msgstr "關閉開/關機時的提示聲響"
-
-#~ msgid "Enable console screensaver"
-#~ msgstr "啟用控制台的屏幕保護程序"
-
-#~ msgid "Enable the system power control utility"
-#~ msgstr "啟用電源監控程序。"
-
-#~ msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
-#~ msgstr "郵件發送（SMTP）伺服器的地址，例如：smtp.mycorp.com"
-
-#~ msgid "Outgoing mail server"
-#~ msgstr "郵件發送伺服器"
-
-#~ msgid "This server uses default swap."
-#~ msgstr "這伺服器使用預設置換空間。"
