@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-03-02 06:26+0000\n"
-"PO-Revision-Date: 2016-02-29 19:39+0000\n"
+"PO-Revision-Date: 2016-03-03 16:28+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-02 06:38+0000\n"
-"X-Generator: Launchpad (build 17925)\n"
+"X-Launchpad-Export-Date: 2016-03-07 16:53+0000\n"
+"X-Generator: Launchpad (build 17936)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
 "X-Poedit-Language: Czech\n"
@@ -609,7 +609,7 @@ msgid "Advanced Settings"
 msgstr "Pokročilá nastavení"
 
 msgid "Advanced Setup"
-msgstr ""
+msgstr "Pokročilá nastavení"
 
 msgid "Advanced settings"
 msgstr "Pokročilá nastavení"
@@ -1357,7 +1357,7 @@ msgid "Command"
 msgstr "Příkaz"
 
 msgid "Command Scripts"
-msgstr ""
+msgstr "Skripty příkazu"
 
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
@@ -1432,7 +1432,7 @@ msgid "Console Menu"
 msgstr "Nabídka v textové konzoli"
 
 msgid "Console Settings"
-msgstr ""
+msgstr "Nastavení konzole"
 
 msgid "Console screensaver"
 msgstr "Šetřič obrazovky v textové konzoli"
@@ -1878,10 +1878,10 @@ msgid "Dataset"
 msgstr "Datové sada"
 
 msgid "Dataset is locked"
-msgstr ""
+msgstr "Datová sada je uzamčena"
 
 msgid "Dataset is marked for deletion"
-msgstr ""
+msgstr "Datová sada je označena ke smazání"
 
 msgid "Datasets"
 msgstr "Datové sady"
@@ -2225,16 +2225,16 @@ msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Vypnout TCP zprostředkovávající službu (modul mod_wrap)."
 
 msgid "Disable console menu."
-msgstr ""
+msgstr "Vypnout nabídku na konzoli."
 
 msgid "Disable file manager completely."
-msgstr ""
+msgstr "Úplně vypnout správce souborů."
 
 msgid "Disable firmware version check."
-msgstr ""
+msgstr "Vypnout kontrolu verze firmware."
 
 msgid "Disable speaker beep on startup and shutdown."
-msgstr ""
+msgstr "Vypnout pípnutí při spouštění a vypínání."
 
 msgid "Disable the compression of repeated line"
 msgstr "Vypnout kompresi opakovaného řádku"
@@ -2557,7 +2557,7 @@ msgid "Edit"
 msgstr "Upravit"
 
 msgid "Edit Dataset"
-msgstr ""
+msgstr "Upravit datovou sadu"
 
 msgid "Edit Host"
 msgstr "Upravit záznam o stroji"
@@ -2660,13 +2660,13 @@ msgid "Email"
 msgstr "E-mail"
 
 msgid "Email Address"
-msgstr ""
+msgstr "E-mailová adresa"
 
 msgid "Email Report"
 msgstr "Hlášení e-mailem"
 
 msgid "Email address for sending system messages."
-msgstr ""
+msgstr "E-mailová adresa, na kterou posílat zprávy ze systému."
 
 msgid "Empty as default."
 msgstr "Ve výchozím stavu nevyplněno."
@@ -2732,6 +2732,7 @@ msgstr "Zapnout ACL seznamy pro ZFS"
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
 msgstr ""
+"Zapnout propagování služeb tohoto zařízení protokolem Zeroconf/Bonjour"
 
 msgid "Enable anonymous bind."
 msgstr "Umožnit anonymní spojení."
@@ -2743,7 +2744,7 @@ msgid "Enable compression."
 msgstr "Zapnout kompresi."
 
 msgid "Enable console screensaver."
-msgstr ""
+msgstr "Zapnout šetřič obrazovky pro konzoli."
 
 msgid "Enable device polling"
 msgstr "Zapnout dotazování zařízení"
@@ -2833,7 +2834,7 @@ msgid "Enable reverse DNS lookup."
 msgstr "Zapnout zpětný DNS překlad."
 
 msgid "Enable serial console."
-msgstr ""
+msgstr "Zapnout sériovou konzoli."
 
 msgid "Enable shadow copy"
 msgstr "Zapnout funkci stínové kopie"
@@ -2848,7 +2849,7 @@ msgid "Enable the ident protocol (RFC1413)."
 msgstr "Používat protokol ident (norma RFC1413)"
 
 msgid "Enable the system power control utility."
-msgstr ""
+msgstr "Zapnout systémový nástroj pro řízení napájení."
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Zapnutím budou striktně dodržovány standardy pro DLNA."
@@ -2860,7 +2861,7 @@ msgid "Enable traps."
 msgstr "Zapnout SNMP hlášení."
 
 msgid "Enable tuning of some kernel variables."
-msgstr ""
+msgstr "Umožnit ladění některých proměnných jádra systému."
 
 msgid "Enable write cache mode."
 msgstr "Zapnout režim zápisu s mezipamětí."
@@ -3220,7 +3221,7 @@ msgid "Firmware"
 msgstr "Firmware"
 
 msgid "Firmware Check"
-msgstr ""
+msgstr "Kontrola firmware"
 
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Nahrání firmware se nezdařilo (nedostatek paměti?)"
@@ -4025,10 +4026,10 @@ msgid "Japanese"
 msgstr "japonština"
 
 msgid "Job is locked"
-msgstr ""
+msgstr "Úloha je uzamčena."
 
 msgid "Job is marked for deletion"
-msgstr ""
+msgstr "Úloha je označena ke smazání"
 
 msgid "Jul"
 msgstr "čec"
@@ -4408,10 +4409,10 @@ msgid "MIB"
 msgstr "MIB"
 
 msgid "MIB is locked"
-msgstr ""
+msgstr "MIB soubor je uzamčený"
 
 msgid "MIB is marked for deletion"
-msgstr ""
+msgstr "MIB soubor je označen ke smazání"
 
 msgid "MISSING"
 msgstr "CHYBĚJÍCÍ"
@@ -4736,10 +4737,10 @@ msgid "Mounts"
 msgstr "Připojení"
 
 msgid "Move down"
-msgstr ""
+msgstr "Přesunout dolů"
 
 msgid "Move up"
-msgstr ""
+msgstr "Přesunout nahoru"
 
 msgid "Music"
 msgstr "Hudba"
@@ -5178,10 +5179,10 @@ msgid "Option"
 msgstr "Předvolba"
 
 msgid "Option is locked"
-msgstr ""
+msgstr "Předvolba je uzamčena"
 
 msgid "Option is marked for deletion"
-msgstr ""
+msgstr "Předvolba je označena k vymazání"
 
 msgid "Optional user-friendly string of the target."
 msgstr "Nepoviný, uživateli srozumitelný název cíle."
@@ -5202,7 +5203,7 @@ msgid "Outgoing Power/Inverter Information"
 msgstr "Informace o výstupu napájení / střídači"
 
 msgid "Outgoing SMTP mail server address."
-msgstr ""
+msgstr "Adresa odchozího SMTP serveru."
 
 msgid "Output current (A)"
 msgstr "Výstupní proud (A)"
@@ -5385,7 +5386,7 @@ msgid "Peer port"
 msgstr "Port na protějšku"
 
 msgid "Performance Settings"
-msgstr ""
+msgstr "Nastavení výkonu"
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
@@ -5983,7 +5984,7 @@ msgstr ""
 "jako je Windows XP."
 
 msgid "SMTP Server"
-msgstr ""
+msgstr "SMTP server"
 
 msgid "SNMP"
 msgstr "SNMP"
@@ -6409,7 +6410,7 @@ msgid "Software RAID"
 msgstr "Softwarový RAID"
 
 msgid "Software Used"
-msgstr ""
+msgstr "Použitý software"
 
 msgid "Source"
 msgstr "Zdroj"
@@ -6450,7 +6451,7 @@ msgid "Sparse Volume"
 msgstr "Řídký svazek"
 
 msgid "Speaker Beep"
-msgstr ""
+msgstr "Pípání vestavěným reproduktorem"
 
 msgid ""
 "Specific to He8 drives from HGST. The Helium, so says the literature, allows "
@@ -8131,7 +8132,7 @@ msgstr ""
 "směrnici."
 
 msgid "This server uses default swap!"
-msgstr ""
+msgstr "Tento server využívá výchozí odkládací prostor!"
 
 msgid "This tag already exists."
 msgstr "Tento štítek už existuje."
@@ -8738,7 +8739,7 @@ msgstr ""
 "souboru passwd, platné přihlášení však není vyžadováno."
 
 msgid "Use toggle button instead of enable/disable buttons."
-msgstr ""
+msgstr "Použít přepínací tlačítko namísto tlačítek zapnout/vypnout."
 
 msgid "Used"
 msgstr "Použito"
@@ -8885,10 +8886,10 @@ msgid "Volume Size Limit"
 msgstr "Omezení velikosti svazku"
 
 msgid "Volume is locked"
-msgstr ""
+msgstr "Svazek je uzamčen"
 
 msgid "Volume is marked for deletion"
-msgstr ""
+msgstr "Svazek je označen ke smazání"
 
 msgid "Volume label"
 msgstr "Štítek svazku"
@@ -9377,67 +9378,3 @@ msgstr "odpojit (umount)"
 
 msgid "version:"
 msgstr "verze:"
-
-#~ msgid "Firmware version check"
-#~ msgstr "Kontrola verze firmwaru"
-
-#~ msgid "Software used"
-#~ msgstr "Použitý software"
-
-#~ msgid "From email"
-#~ msgstr "Z e-mailu"
-
-#~ msgid "Disable firmware version check"
-#~ msgstr "Vypnout zjišťování novějších verzí firmwaru"
-
-#~ msgid "Enable console screensaver"
-#~ msgstr "Zapnout šetřič obrazovky pro konzoli"
-
-#~ msgid "Outgoing mail server"
-#~ msgstr "Server odchozí pošty"
-
-#~ msgid "System Beep"
-#~ msgstr "Systémové zvukové znamení"
-
-#~ msgid "Command scripts"
-#~ msgstr "Ovládací skripty"
-
-#~ msgid "Disable speaker beep on startup and shutdown"
-#~ msgstr "Vypnout pípnutí při spouštění a vypínání systému"
-
-#~ msgid "Enable Zeroconf/Bonjour to advertise services of this device"
-#~ msgstr ""
-#~ "Zapnout propagování služeb tohoto zařízení prostřednictvím protokolu "
-#~ "Zeroconf/Bonjour."
-
-#~ msgid "Enable serial console"
-#~ msgstr "Zapnout sériovou konzoli (RS232)."
-
-#~ msgid "Outgoing SMTP mail server address, e.g. smtp.mycorp.com."
-#~ msgstr "Adresa serveru pro odchozí poštu (SMTP), např.: smtp.example.com."
-
-#~ msgid "Your own email address."
-#~ msgstr "Vaše vlastní e-mailová adresa"
-
-#~ msgid "Disable File Manager"
-#~ msgstr "Vypnout webového správce souborů"
-
-#~ msgid "Disable console menu"
-#~ msgstr "Nezobrazovat nabídku v textové konzoli"
-
-#~ msgid "Edit dataset"
-#~ msgstr "Upravit datovou sadu"
-
-#~ msgid "Enable the system power control utility"
-#~ msgstr "Zapnout systémový nástroj pro správu napájení"
-
-#~ msgid "Enable tuning of some kernel variables"
-#~ msgstr "Zapnout ladění některých proměnných jádra systému"
-
-#~ msgid "This server uses default swap."
-#~ msgstr ""
-#~ "Tento server používá výchozí prostor pro odkládání stránek paměti (swap)."
-
-#~ msgid "Use toggle button or separate enable/disable buttons."
-#~ msgstr ""
-#~ "Použijte přepínací tlačítko nebo oddělená tlačítka pro vypnoutí a zapnoutí"
