@@ -404,6 +404,10 @@ function zfs_dataset_configure($uuid) {
 
 	if (!empty($dataset['aclmode']))
 		$param .= "-o aclmode={$dataset['aclmode']} ";
+		
+	if (!empty($dataset['casesensitivity'])) {
+		$param .= "-o casesensitivity={$dataset['casesensitivity']} ";
+	}
 
 	if (!isset($dataset['canmount']))
 		$param .= "-o canmount=off ";
@@ -995,26 +999,72 @@ function zfs_updatenotify_process($key, $function) {
 	return $result;
 }
 
-// Returns true if $poolname is valid.
-function zfs_is_valid_poolname($poolname) {
-	if (!is_string($poolname))
+// Returns true if $name is valid.
+function zfs_is_valid_poolname($name) {
+	// Only strings allowed
+	if (!is_string($name)) {
 		return false;
-
+	}
+	
 	// Empty pool names are not allowed.
-	if (empty($poolname))
+	if (empty($name)) {
 		return false;
+	}
 
-	// The pool names "mirror", "raidz" and "spare" are reserved, as are
+	// Pool names beginning with "mirror", "raidz" and "spare" are not allowed, as are
 	// names beginning with the pattern "c[0-9]".
-	if (preg_match("/^(mirror|raidz|spare|c[0-9]).*$/", $poolname))
+	if (preg_match('/^(mirror|raidz|spare|c[0-9])/', $name)) {
 		return false;
+	}
+
+	// log is a reserved word
+	if (0 == strcmp('log', $name)) {
+		return false;
+	} 
 
 	// The pool name must begin with a letter, and can only contain
 	// alphanumeric characters as well as underscore ("_"), dash ("-") and
 	// period (".").
-	if (preg_match("/^[a-zA-Z]([a-zA-Z0-9\_\-\.\s])*$/", $poolname))
-		return true;
+	$helpinghand = preg_quote('.-_', '/');
+	if (false == preg_match('/^[a-z][a-z\d'.$helpinghand.']*$/i', $name)) {
+		return false;
+	}
+	return true;
+}
 
-	return false;
+function zfs_is_valid_dataset_name($name) {
+	// Only strings allowed
+	if (!is_string($name)) {
+		return false;
+	}
+	
+	// Empty pool names are not allowed.
+	if (empty($name)) {
+		return false;
+	}
+
+	$helpinghand = preg_quote('.-_', '/');
+	if (false ==  preg_match('/^[a-z\d][a-z\d'.$helpinghand.']*(?:\/[a-z\d][a-z\d'.$helpinghand.']*)*$/i', $name)) {
+		return false;
+	}
+	return true;
+}
+
+function zfs_is_valid_volume_name($name) {
+	// Only strings allowed
+	if (!is_string($name)) {
+		return false;
+	}
+	
+	// Empty pool names are not allowed.
+	if (empty($name)) {
+		return false;
+	}
+
+	$helpinghand = preg_quote('.-_', '/');
+	if (false ==  preg_match('/^[a-z\d][a-z\d'.$helpinghand.']*(?:\/[a-z\d][a-z\d'.$helpinghand.']*)*$/i', $name)) {
+		return false;
+	}
+	return true;
 }
 ?>
