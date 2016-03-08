@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-02 06:26+0000\n"
+"POT-Creation-Date: 2016-03-08 02:32+0000\n"
 "PO-Revision-Date: 2016-03-02 07:15+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-07 16:53+0000\n"
+"X-Launchpad-Export-Date: 2016-03-08 02:13+0000\n"
 "X-Generator: Launchpad (build 17936)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -1217,6 +1217,9 @@ msgstr "LAN interfészhez nem használható DHCP."
 msgid "Capacity"
 msgstr "Kapacitás"
 
+msgid "Case Sensitivity"
+msgstr ""
+
 msgid ""
 "Causes the server to display the network information for the specified IP "
 "address or DNS hostname to the client, on the assumption that that IP "
@@ -2040,6 +2043,9 @@ msgstr "Célmegosztás"
 msgid "Destination email address."
 msgstr "Cél e-mailcím."
 
+msgid "Destination email address. Separate email addresses by semi-colon."
+msgstr ""
+
 msgid "Destination host name or IP number."
 msgstr "Cél gépnév vagy IP cím."
 
@@ -2599,14 +2605,8 @@ msgstr "Az UPS hatékonysága (kimeneti áram és bemeneti áram aránya)"
 msgid "Email"
 msgstr "E-mail"
 
-msgid "Email Address"
-msgstr "E-mail cím"
-
 msgid "Email Report"
 msgstr "E-mail jelentés"
-
-msgid "Email address for sending system messages."
-msgstr "Rendszerüzenetek küldésére használt e-mail cím."
 
 msgid "Empty as default."
 msgstr "Alapértelmezetten üres"
@@ -3215,6 +3215,12 @@ msgstr "P"
 msgid "Friday"
 msgstr "Péntek"
 
+msgid "From Email Address"
+msgstr ""
+
+msgid "From Email address for sending system messages."
+msgstr ""
+
 msgid "Fsck"
 msgstr "Fsck"
 
@@ -3808,6 +3814,9 @@ msgstr "Vizsgáló sorozatszáma"
 
 msgid "Inquiry Vendor"
 msgstr "Gyártó közleménye"
+
+msgid "Insensitive"
+msgstr ""
 
 msgid "Install"
 msgstr "Telepítés"
@@ -4572,6 +4581,9 @@ msgstr "Tükör"
 msgid "Missing a temporary folder."
 msgstr "Hiányzik az átmeneti könyvtár."
 
+msgid "Mixed"
+msgstr ""
+
 msgid "Mode"
 msgstr "Mód"
 
@@ -5312,6 +5324,9 @@ msgstr "winbindd pingelése, hogy elérhető-e"
 
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
+
+msgid "Plain-text"
+msgstr ""
 
 msgid "Platform"
 msgstr "Platform"
@@ -6079,6 +6094,9 @@ msgstr "A rendszer indulásakor figyelmeztető TESZT email küldése."
 
 msgid "Send now"
 msgstr "Küldés most"
+
+msgid "Sensitive"
+msgstr ""
 
 msgid "Sep"
 msgstr "Szept"
@@ -8002,6 +8020,12 @@ msgstr ""
 msgid "This pool name already exists."
 msgstr "Ilyen tárolónév már létezik."
 
+msgid ""
+"This property indicates whether the file name matching algorithm used by the "
+"file system should be casesensitive, caseinsensitive, or allow a combination "
+"of both styles of matching"
+msgstr ""
+
 msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr "A kiválasztott esemény bekövetkezésekor ezt a szabály hívjuk meg."
 
@@ -8130,6 +8154,9 @@ msgstr "Idő"
 
 msgid "TitleSpeed"
 msgstr "Címgyorsaság"
+
+msgid "To Email Address"
+msgstr ""
 
 msgid ""
 "To configure the target, you must add at least Portal Group and Initiator "
@@ -9222,3 +9249,9 @@ msgstr "leválasztás"
 
 msgid "version:"
 msgstr "verzió:"
+
+#~ msgid "Email Address"
+#~ msgstr "E-mail cím"
+
+#~ msgid "Email address for sending system messages."
+#~ msgstr "Rendszerüzenetek küldésére használt e-mail cím."

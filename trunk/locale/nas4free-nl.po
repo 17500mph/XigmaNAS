@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-02 06:26+0000\n"
-"PO-Revision-Date: 2016-03-04 15:36+0000\n"
+"POT-Creation-Date: 2016-03-08 02:32+0000\n"
+"PO-Revision-Date: 2016-03-08 02:09+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-07 16:53+0000\n"
+"X-Launchpad-Export-Date: 2016-03-08 02:13+0000\n"
 "X-Generator: Launchpad (build 17936)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -1038,7 +1038,7 @@ msgid "Battery voltage"
 msgstr "Batterij  voltage"
 
 msgid "Best available"
-msgstr "Beste beschikbaar"
+msgstr "Best beschikbaar"
 
 msgid "Bind DN"
 msgstr "Koppel DN"
@@ -1238,6 +1238,9 @@ msgstr "Kan DHCP niet gebruiken voor de LAN-interface."
 
 msgid "Capacity"
 msgstr "Capaciteit"
+
+msgid "Case Sensitivity"
+msgstr "Hoofdlettergevoeligheid"
 
 msgid ""
 "Causes the server to display the network information for the specified IP "
@@ -2090,6 +2093,11 @@ msgstr "Gedeelde Bestemmingsmap"
 msgid "Destination email address."
 msgstr "Bestemmings e-mail adres."
 
+msgid "Destination email address. Separate email addresses by semi-colon."
+msgstr ""
+"Bestemmings e-mail adres. Verscheidene e-mailadressen scheiden door punt-"
+"komma."
+
 msgid "Destination host name or IP number."
 msgstr "Bestemmings hostnaam of IP-nummer."
 
@@ -2661,14 +2669,8 @@ msgstr ""
 msgid "Email"
 msgstr "E-mail"
 
-msgid "Email Address"
-msgstr "E-mailadres"
-
 msgid "Email Report"
 msgstr "E-mail Rapportage"
-
-msgid "Email address for sending system messages."
-msgstr "E-mailadres voor het verzenden van systeem berichten."
 
 msgid "Empty as default."
 msgstr "Standaard leeg."
@@ -3286,6 +3288,12 @@ msgstr "Vr"
 msgid "Friday"
 msgstr "Vrijdag"
 
+msgid "From Email Address"
+msgstr "Van E-mail Addres"
+
+msgid "From Email address for sending system messages."
+msgstr "Het e-mailadres voor het verzenden van systeemberichten."
+
 msgid "Fsck"
 msgstr "Fsck"
 
@@ -3895,6 +3903,9 @@ msgstr "Onderzoek Serial"
 msgid "Inquiry Vendor"
 msgstr "Onderzoek Verkoper"
 
+msgid "Insensitive"
+msgstr "Ongevoelig"
+
 msgid "Install"
 msgstr "Installeren"
 
@@ -4361,7 +4372,7 @@ msgid "Logical Unit Type mapped to LUN."
 msgstr "Logical Unit Type in kaart gebracht aan LUN."
 
 msgid "Login"
-msgstr "Inloggen"
+msgstr "Aanmelden"
 
 msgid "Login name of user."
 msgstr "Aanmeldnaam van de gebruiker."
@@ -4666,6 +4677,9 @@ msgstr "Mirror"
 
 msgid "Missing a temporary folder."
 msgstr "Een tijdelijke map ontbreekt."
+
+msgid "Mixed"
+msgstr "Gemengd"
 
 msgid "Mode"
 msgstr "Mode"
@@ -5012,7 +5026,7 @@ msgid "Nominal value of real power (Watts)"
 msgstr "Stroomcapaciteit (watt)"
 
 msgid "None"
-msgstr "None (Geen)"
+msgstr "Geen"
 
 msgid "Normal"
 msgstr "Normaal"
@@ -5410,6 +5424,9 @@ msgstr "Ping winbindd om te kijken of deze leeft:"
 
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceer Routes"
+
+msgid "Plain-text"
+msgstr "Platte-text"
 
 msgid "Platform"
 msgstr "Platform"
@@ -6178,6 +6195,9 @@ msgstr ""
 msgid "Send now"
 msgstr "Nu versturen"
 
+msgid "Sensitive"
+msgstr "Gevoelig"
+
 msgid "Sep"
 msgstr "Sep"
 
@@ -6503,7 +6523,7 @@ msgstr "Geef de gebruikersnaam op waaronder deze service gaat draaien."
 msgid ""
 "Specifies whether it is allowed to login as superuser (root) directly."
 msgstr ""
-"Sta toe of gebruikers mogen inloggen als supergebruiker, dit geeft een "
+"Sta toe of gebruikers mogen aanmelden als supergebruiker, dit geeft een "
 "directe toegang tot de (root)."
 
 msgid ""
@@ -8140,6 +8160,15 @@ msgstr ""
 msgid "This pool name already exists."
 msgstr "Deze pool naam bestaat reeds."
 
+msgid ""
+"This property indicates whether the file name matching algorithm used by the "
+"file system should be casesensitive, caseinsensitive, or allow a combination "
+"of both styles of matching"
+msgstr ""
+"Deze eigenschap geeft aan of de bestandsnaam overeenkomstige algoritme "
+"gebruikt door het bestandssysteem hoofdlettergevoelig, ongevoelig is, of dat "
+"een combinatie van beide stijlen is toegestaan."
+
 msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr ""
 "Deze regel wordt toegepast wanneer de geselecteerde gebeurtenis voorkomt."
@@ -8271,6 +8300,9 @@ msgstr "Aantal keer"
 
 msgid "TitleSpeed"
 msgstr "Scroll snelheid"
+
+msgid "To Email Address"
+msgstr "Naar E-mail Addres"
 
 msgid ""
 "To configure the target, you must add at least Portal Group and Initiator "
@@ -9378,3 +9410,9 @@ msgstr "loskoppelen"
 
 msgid "version:"
 msgstr "versie:"
+
+#~ msgid "Email Address"
+#~ msgstr "E-mailadres"
+
+#~ msgid "Email address for sending system messages."
+#~ msgstr "E-mailadres voor het verzenden van systeem berichten."
