@@ -1958,7 +1958,7 @@ ${NAS4FREE_PRODUCTNAME} Build Environment
 
 1  - Update NAS4FREE Source Files to CURRENT.
 2  - NAS4Free Compile Menu.
-10 - Create 'Embedded.img.xz' File. (Firmware Update for Embedded Systems)
+10 - Create 'Embedded.img.xz' File. (Firmware Update)
 11 - Create 'LiveUSB.img.gz' File. (Rawrite to USB Key)
 12 - Create 'LiveCD' (ISO) File.
 13 - Create 'LiveCD-Tin' (ISO) without 'Embedded' File.
