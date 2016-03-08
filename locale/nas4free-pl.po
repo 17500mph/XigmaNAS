@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-02 06:26+0000\n"
-"PO-Revision-Date: 2015-12-17 19:22+0000\n"
-"Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
+"POT-Creation-Date: 2016-03-08 02:32+0000\n"
+"PO-Revision-Date: 2016-03-07 21:43+0000\n"
+"Last-Translator: Dominik Papierok <dominik.papierok@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-07 16:53+0000\n"
+"X-Launchpad-Export-Date: 2016-03-08 02:13+0000\n"
 "X-Generator: Launchpad (build 17936)\n"
 "X-Poedit-Country: POLAND\n"
 "Language: \n"
@@ -52,19 +52,19 @@ msgstr "%dB / blok"
 
 #, php-format
 msgid "%s Interface"
-msgstr ""
+msgstr "%s interfejs"
 
 #, php-format
 msgid "%s already exists as a %s."
-msgstr ""
+msgstr "%s już istnieje jako %s"
 
 #, php-format
 msgid "%s is already configured as a filesystem."
-msgstr ""
+msgstr "%s jest już skonfigurowany jako system plików."
 
 #, php-format
 msgid "%s is already configured as a volume."
-msgstr ""
+msgstr "%s jest już skonfigurowany jako partycja."
 
 #, php-format
 msgid "%s is too long."
@@ -131,6 +131,12 @@ msgid ""
 "different structure for different vendors and is often not meaningful as a "
 "decimal number."
 msgstr ""
+"(Surowa wartość określona przez producenta.) Częstość pojawiania się błędów "
+"głowic magnetycznych. Jeżeli system mechanicznego pozycjonowania jest "
+"uszkodzony, wartość ta będzie narastać. Takie uszkodzenie może być "
+"spowodowane wieloma czynnikami, takimi jak uszkodzenie serwomechanizmu lub "
+"rozszerzenie cieplne dysku. Wartość ta ma inną strukturę dla różnych "
+"producentów i często nie jest rzetelna w postaci liczby dziesiętnej."
 
 msgid ""
 "(Vendor specific raw value.) Stores data related to the rate of hardware "
@@ -138,11 +144,18 @@ msgid ""
 "value has different structure for different vendors and is often not "
 "meaningful as a decimal number."
 msgstr ""
+"(Surowa wartość określona przez producenta.) Przechowuje informacje związane "
+"z częstością pojawiania się błędów odczytu, powstałych podczas odczytu "
+"danych z powierzchni dysku. Wartość ta ma inną strukturę dla różnych "
+"producentów i często nie jest rzetelna w postaci liczby dziesiętnej."
 
 msgid ""
 "(Vendor-specific raw value.) The raw value has different structure for "
 "different vendors and is often not meaningful as a decimal number."
 msgstr ""
+"(Surowa wartość określona przez producenta.) Wartość ta ma inną strukturę "
+"dla różnych producentów i często nie jest rzetelna w postaci liczby "
+"dziesiętnej."
 
 msgid "*** Imported duplicate ***"
 msgstr "*** Zaimportowane duplikaty ***"
@@ -282,6 +295,10 @@ msgid ""
 "been turned entirely off (disconnected from power source) and when the hard "
 "disk returns from having previously been put to sleep mode."
 msgstr ""
+"Ilość cykli start/stop. Wartość rośnie przy każdym uruchomieniu dysku "
+"twardego, nawet wtedy kiedy dysk został uruchomiony po niewłaściwym "
+"wyłączeniu (odłączony od źródła zasilania), oraz gdy dysk wybudza się z "
+"uśpienia."
 
 msgid "A valid IP address must be specified."
 msgstr "Należy podać prawidłowy adres IP."
@@ -335,10 +352,10 @@ msgid "A valid systctl MIB value."
 msgstr "Prawidłowa wartość MIB dla systctl."
 
 msgid "ACL Inherit"
-msgstr ""
+msgstr "Dziedziczenie ACL"
 
 msgid "ACL Mode"
-msgstr ""
+msgstr "Tryb ACL"
 
 msgid "ACL inherit"
 msgstr "dziedziczenie ACL"
@@ -356,7 +373,7 @@ msgid "AFP"
 msgstr "AFP"
 
 msgid "AFP compatibility"
-msgstr ""
+msgstr "Kompatybilność z AFP"
 
 msgid "AG"
 msgstr "AG"
@@ -371,7 +388,7 @@ msgid "AIO write size"
 msgstr "Rozmiar dla zapisu AIO"
 
 msgid "ALL Interfaces"
-msgstr ""
+msgstr "Wszystkie interfejsy"
 
 msgid "AP mode"
 msgstr "Tryb Access pointa"
@@ -386,7 +403,7 @@ msgid "ATTRIBUTE NAME"
 msgstr "ATRYBUT"
 
 msgid "Accept remote syslog messages"
-msgstr ""
+msgstr "Zezwalaj na zdalne logi systemowe"
 
 msgid "Access"
 msgstr "Dostęp"
@@ -439,7 +456,7 @@ msgid "Add"
 msgstr "Dodaj"
 
 msgid "Add Dataset"
-msgstr ""
+msgstr "Dodaj zestaw danych"
 
 msgid "Add Host"
 msgstr "Dodaj hosta"
@@ -460,7 +477,7 @@ msgid "Add URL"
 msgstr "Dodaj URL"
 
 msgid "Add Volume"
-msgstr ""
+msgstr "Dodaj partycję"
 
 msgid "Add additional scheduled self-test."
 msgstr "Dodaj dodatkowy zaplanowany test wewnetrzny."
@@ -535,10 +552,10 @@ msgid "Add user"
 msgstr "Dodaj użytkownika"
 
 msgid "Additional Network"
-msgstr ""
+msgstr "Dodatkowa sieć"
 
 msgid "Additional Storage"
-msgstr ""
+msgstr "Dodatkowa pamięć"
 
 msgid "Additional group"
 msgstr "Dodatkowa grupa"
@@ -581,7 +598,7 @@ msgid "Advanced Settings"
 msgstr "Ustawienia zaawansowane"
 
 msgid "Advanced Setup"
-msgstr ""
+msgstr "Zaawansowane ustawienia"
 
 msgid "Advanced settings"
 msgstr "Ustawienia zaawansowane"
@@ -666,7 +683,7 @@ msgid "All users will have the root privilege."
 msgstr "Wszyscy użytkownicy będą mieli pełne uprawnienia (root'a)."
 
 msgid "Alloc"
-msgstr ""
+msgstr "Przydzielenie"
 
 msgid "Allow"
 msgstr "Zezwól"
@@ -686,7 +703,7 @@ msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "Zezwalaj klientom na wznowienie przerwanych transferów."
 
 msgid "Allow group"
-msgstr ""
+msgstr "Zezwól grupie"
 
 msgid "Allow new files"
 msgstr "Zezwalaj na tworzenie nowych plików"
@@ -725,6 +742,10 @@ msgid ""
 "STANDBY IMMEDIATE as the last command (regardless of PLI activity using "
 "capacitor power). Normalized value is always 100."
 msgstr ""
+"Znany również jako 'Power-off Retract Count' dla konwencjonalnych dysków "
+"twardych. Surowa wartość określa ilość nieczystych postojów, przez całe "
+"życie dysku SSD, gdzie 'nieczyste postoje' oznaczają odłączenie zasilanie "
+"bez wysłania komendy 'STANDBY IMMEDIATE'. Wartość standardowa wynosi 100."
 
 msgid "AltRoot"
 msgstr "Alt. kat. główny"
@@ -755,12 +776,12 @@ msgid "Ambient temperature (degrees C)"
 msgstr "Temperatura otoczenia (stopnie C)"
 
 msgid "Amount of surge current used to spin up the drive."
-msgstr ""
+msgstr "Szczytowa wartość prądu pobierana przy rozkręcaniu talerzy dysku."
 
 msgid ""
 "Amplitude of 'thrashing' (distance of repetitive forward/reverse head "
 "motion)."
-msgstr ""
+msgstr "Amplituda drgań głowic  w czasie pracy."
 
 msgid "An host with this name already exists."
 msgstr "Host o tej nazwie już istnieje."
@@ -805,10 +826,10 @@ msgid "Apply changes"
 msgstr "Zastosuj zmiany"
 
 msgid "Apr"
-msgstr ""
+msgstr "Kwi"
 
 msgid "April"
-msgstr ""
+msgstr "Kwiecień"
 
 msgid "Archive"
 msgstr "Archiwum"
@@ -846,10 +867,10 @@ msgid "Audio"
 msgstr "Dźwięk"
 
 msgid "Aug"
-msgstr ""
+msgstr "Sie"
 
 msgid "August"
-msgstr ""
+msgstr "Sierpień"
 
 msgid "Auth Group"
 msgstr "Grupa zabezpieczeń"
@@ -864,7 +885,7 @@ msgid "Authenticate URL"
 msgstr "URL Autentykacji"
 
 msgid "Authenticate path & realm"
-msgstr ""
+msgstr "Uwierzytelnienie ścieżki oraz obszaru"
 
 msgid "Authentication"
 msgstr "Uwierzytelnianie"
@@ -916,7 +937,7 @@ msgstr ""
 "Średni czas startu dysku (Od zera obrotów do pełnej prędkości operacyjnej"
 
 msgid "Backup Configuration"
-msgstr ""
+msgstr "Konfiguracja kopii zapasowej"
 
 msgid "Backup file"
 msgstr "Plik kopii zapasowej"
@@ -925,13 +946,13 @@ msgid "Backup/Restore"
 msgstr "Backup/Przywróć"
 
 msgid "Bad User - (Non Existing Users)"
-msgstr ""
+msgstr "Zły użytkownik - (Użytkownik nie istnieje)"
 
 msgid "Balance algorithm"
 msgstr "Algorytm integralności danych"
 
 msgid "Ban List"
-msgstr ""
+msgstr "Lista zablokowanych"
 
 msgid "Ban list rule"
 msgstr "Zasady czarnej listy"
@@ -1010,23 +1031,23 @@ msgid "Blank time"
 msgstr "Opóźnienie"
 
 msgid "Block Size"
-msgstr ""
+msgstr "Rozmiar bloku"
 
 msgid "Block size"
-msgstr ""
+msgstr "Rozmiar bloku"
 
 msgid "Blocksize"
 msgstr "Rozmiar bloku"
 
 msgid "Boot Arguments"
-msgstr ""
+msgstr "Argumenty startowe"
 
 msgid "Boot Loader"
 msgstr "Program rozruchowy"
 
 #, php-format
 msgid "Boot argument (e.g. %s)."
-msgstr ""
+msgstr "Argumenty startowe (np. %s)."
 
 #, php-format
 msgid "Boot loader (e.g. %s)."
@@ -1048,13 +1069,13 @@ msgid "Bridge"
 msgstr "Mostek"
 
 msgid "Broadcast interval"
-msgstr ""
+msgstr "Interwał nadawania"
 
 #, php-format
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
 "seconds)"
-msgstr ""
+msgstr "Nadawanie dostępności w sieci co N sekund. (Domyślnie 300 sekund)"
 
 msgid "Browse Directory"
 msgstr "Przeglądaj katalog"
@@ -1063,7 +1084,7 @@ msgid "Browseable"
 msgstr "Widoczny"
 
 msgid "Building database in progress"
-msgstr ""
+msgstr "Budowanie bazy danych w trakcie"
 
 msgid "Bulgarian"
 msgstr "Bułgarski"
@@ -1114,7 +1135,7 @@ msgid "CP1251 (Cyrillic)"
 msgstr "CP1251 (Cyrilica)"
 
 msgid "CP1252 (Latin 1)"
-msgstr ""
+msgstr "CP1252"
 
 msgid "CP437 (Latin US)"
 msgstr "CP437 (Latin US)"
@@ -1194,6 +1215,9 @@ msgstr "Nie można użyć DHCP dla interfejsu LAN."
 msgid "Capacity"
 msgstr "Pojemność"
 
+msgid "Case Sensitivity"
+msgstr ""
+
 msgid ""
 "Causes the server to display the network information for the specified IP "
 "address or DNS hostname to the client, on the assumption that that IP "
@@ -1261,10 +1285,10 @@ msgid "Clear"
 msgstr "Wyczyść"
 
 msgid "Clear Config & Import Disks"
-msgstr ""
+msgstr "Wyczyść konfigurację i zaimportuj dyski"
 
 msgid "Clear Config & Import Software Raid Disks"
-msgstr ""
+msgstr "Wyczyść konfigurację i zaimportuj programowe macierze RAID"
 
 msgid "Clear config and Import disks"
 msgstr "Wyczyść konfiguracje i zaimportuj dyski"
@@ -1295,12 +1319,14 @@ msgid ""
 "Comma-separated list of group names that are permitted to login to the FTP "
 "server. (empty is ftp group)"
 msgstr ""
+"Oddzielona przecinkami lista grup które mają dostęp do serwera FTP. (puste "
+"dla grupy 'ftp')"
 
 msgid "Command"
 msgstr "Polecenie"
 
 msgid "Command Scripts"
-msgstr ""
+msgstr "Skrypty poleceń"
 
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
@@ -1362,7 +1388,7 @@ msgid "Confirmation"
 msgstr "Potwierdzenie"
 
 msgid "Connected FTP Users & Status"
-msgstr ""
+msgstr "Status FTP i połączeni użytkownicy"
 
 msgid "Consider replacing this drive"
 msgstr "Należy się zastanowić nad wymianą tego dysku (napędu)"
@@ -1371,7 +1397,7 @@ msgid "Console Menu"
 msgstr "Menu konsoli"
 
 msgid "Console Settings"
-msgstr ""
+msgstr "Ustawienia konsoli"
 
 msgid "Console screensaver"
 msgstr "Wygaszacz ekranu konsoli"
@@ -1405,13 +1431,13 @@ msgid "Controller Authorised network"
 msgstr "Autoryzaowana sieć kontrolera"
 
 msgid "Controller IP Address"
-msgstr ""
+msgstr "Adres IP kontrolera"
 
 msgid "Controller IP address"
 msgstr "Adres IP kontrolera"
 
 msgid "Controller Model"
-msgstr ""
+msgstr "Model kontrolera"
 
 msgid "Controller TCP Port"
 msgstr "Port TCP kontrolera"
@@ -1484,12 +1510,14 @@ msgid ""
 "Convert DOS attributes to UNIX execution bits when Store DOS attributes is "
 "disabled."
 msgstr ""
+"Konwertuj atrybuty DOS na UNIXowe bity wykonania, kiedy przechowywanie "
+"atrybutów DOS jest wyłaczone."
 
 msgid "Count"
 msgstr "Montowania"
 
 msgid "Count of 'Free Fall Events' detected."
-msgstr ""
+msgstr "Liczba wykrytych zdarzeń swobodnego spadania."
 
 msgid ""
 "Count of 'unstable' sectors (waiting to be remapped, because of "
@@ -1969,6 +1997,9 @@ msgstr ""
 
 msgid "Destination email address."
 msgstr "Docelowy adres e-mail."
+
+msgid "Destination email address. Separate email addresses by semi-colon."
+msgstr ""
 
 msgid "Destination host name or IP number."
 msgstr "Nazwa lub adres IP hosta docelowego."
@@ -2530,14 +2561,8 @@ msgstr ""
 msgid "Email"
 msgstr "E-mail"
 
-msgid "Email Address"
-msgstr ""
-
 msgid "Email Report"
 msgstr "Prześlij raport e-mailem"
-
-msgid "Email address for sending system messages."
-msgstr ""
 
 msgid "Empty as default."
 msgstr "Domyślnie pusty"
@@ -3141,6 +3166,12 @@ msgstr ""
 msgid "Friday"
 msgstr ""
 
+msgid "From Email Address"
+msgstr ""
+
+msgid "From Email address for sending system messages."
+msgstr ""
+
 msgid "Fsck"
 msgstr "Fsck"
 
@@ -3724,6 +3755,9 @@ msgstr "Odpytaj o numer seryjny"
 
 msgid "Inquiry Vendor"
 msgstr "Odpytaj o producenta"
+
+msgid "Insensitive"
+msgstr ""
 
 msgid "Install"
 msgstr "Instaluj"
@@ -4456,6 +4490,9 @@ msgstr "Mirror"
 msgid "Missing a temporary folder."
 msgstr "Brak folderu tymczasowego."
 
+msgid "Mixed"
+msgstr ""
+
 msgid "Mode"
 msgstr "Tryb"
 
@@ -5180,6 +5217,9 @@ msgstr "Odpytaj winbindd aby sprawdzić czy działa:"
 
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
+
+msgid "Plain-text"
+msgstr ""
 
 msgid "Platform"
 msgstr "Platforma"
@@ -5931,6 +5971,9 @@ msgstr "Wyślij podczas uruchamiania testowy mail ostrzegawczy."
 
 msgid "Send now"
 msgstr "Wyślij teraz"
+
+msgid "Sensitive"
+msgstr ""
 
 msgid "Sep"
 msgstr ""
@@ -7732,6 +7775,12 @@ msgstr ""
 msgid "This pool name already exists."
 msgstr "Ta nazwa puli już istnieje."
 
+msgid ""
+"This property indicates whether the file name matching algorithm used by the "
+"file system should be casesensitive, caseinsensitive, or allow a combination "
+"of both styles of matching"
+msgstr ""
+
 msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr ""
 
@@ -7850,6 +7899,9 @@ msgid "Times"
 msgstr "Czasy"
 
 msgid "TitleSpeed"
+msgstr ""
+
+msgid "To Email Address"
 msgstr ""
 
 msgid ""
@@ -8769,7 +8821,7 @@ msgid "day(s)"
 msgstr "dzień(dni)"
 
 msgid "debug"
-msgstr ""
+msgstr "diagnostyka"
 
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
@@ -8863,7 +8915,7 @@ msgid "phpBB"
 msgstr "phpBB"
 
 msgid "phpVirtualBox"
-msgstr ""
+msgstr "phpVirtualBox"
 
 msgid "rc.conf"
 msgstr "rc.conf"

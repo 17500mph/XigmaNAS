@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-02 06:26+0000\n"
+"POT-Creation-Date: 2016-03-08 02:32+0000\n"
 "PO-Revision-Date: 2016-03-03 16:28+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-07 16:53+0000\n"
+"X-Launchpad-Export-Date: 2016-03-08 02:13+0000\n"
 "X-Generator: Launchpad (build 17936)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -1246,6 +1246,9 @@ msgstr ""
 msgid "Capacity"
 msgstr "Kapacita"
 
+msgid "Case Sensitivity"
+msgstr ""
+
 msgid ""
 "Causes the server to display the network information for the specified IP "
 "address or DNS hostname to the client, on the assumption that that IP "
@@ -2099,6 +2102,9 @@ msgstr "Cílové sdílení"
 msgid "Destination email address."
 msgstr "Cílová e-mailové adresa."
 
+msgid "Destination email address. Separate email addresses by semi-colon."
+msgstr ""
+
 msgid "Destination host name or IP number."
 msgstr "Cílový stroj (název nebo IP adresa)."
 
@@ -2659,14 +2665,8 @@ msgstr "Účinnost UPS zdroje (poměr výstupního a vstupního proudu)"
 msgid "Email"
 msgstr "E-mail"
 
-msgid "Email Address"
-msgstr "E-mailová adresa"
-
 msgid "Email Report"
 msgstr "Hlášení e-mailem"
-
-msgid "Email address for sending system messages."
-msgstr "E-mailová adresa, na kterou posílat zprávy ze systému."
 
 msgid "Empty as default."
 msgstr "Ve výchozím stavu nevyplněno."
@@ -3284,6 +3284,12 @@ msgstr "pá"
 msgid "Friday"
 msgstr "pátek"
 
+msgid "From Email Address"
+msgstr ""
+
+msgid "From Email address for sending system messages."
+msgstr ""
+
 msgid "Fsck"
 msgstr "Kontrola souborového systému (fsck)"
 
@@ -3891,6 +3897,9 @@ msgstr "Zjistit sériové číslo"
 
 msgid "Inquiry Vendor"
 msgstr "Zjistit výrobce"
+
+msgid "Insensitive"
+msgstr ""
 
 msgid "Install"
 msgstr "Nainstalovat"
@@ -4676,6 +4685,9 @@ msgstr "Zrcadlo"
 msgid "Missing a temporary folder."
 msgstr "Chybí dočasná složka."
 
+msgid "Mixed"
+msgstr ""
+
 msgid "Mode"
 msgstr "Režim"
 
@@ -5415,6 +5427,9 @@ msgstr "Ověřit dostupnost procesu služby winbind:"
 
 msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
+
+msgid "Plain-text"
+msgstr ""
 
 msgid "Platform"
 msgstr "Platforma"
@@ -6187,6 +6202,9 @@ msgstr "Při startu poslat ZKUŠEBNÍ varovný e-mail."
 
 msgid "Send now"
 msgstr "Odeslat nyní"
+
+msgid "Sensitive"
+msgstr ""
 
 msgid "Sep"
 msgstr "zář"
@@ -8126,6 +8144,12 @@ msgstr ""
 msgid "This pool name already exists."
 msgstr "Takto nazvaný fond už v systému existuje."
 
+msgid ""
+"This property indicates whether the file name matching algorithm used by the "
+"file system should be casesensitive, caseinsensitive, or allow a combination "
+"of both styles of matching"
+msgstr ""
+
 msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr ""
 "Toto pravidlo je dotčeno kdykoli nastane událost, odpovídající zvolené "
@@ -8256,6 +8280,9 @@ msgstr "Časy"
 
 msgid "TitleSpeed"
 msgstr "RychlostTitulku"
+
+msgid "To Email Address"
+msgstr ""
 
 msgid ""
 "To configure the target, you must add at least Portal Group and Initiator "
@@ -9378,3 +9405,9 @@ msgstr "odpojit (umount)"
 
 msgid "version:"
 msgstr "verze:"
+
+#~ msgid "Email Address"
+#~ msgstr "E-mailová adresa"
+
+#~ msgid "Email address for sending system messages."
+#~ msgstr "E-mailová adresa, na kterou posílat zprávy ze systému."
