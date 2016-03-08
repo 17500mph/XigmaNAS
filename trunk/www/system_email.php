@@ -53,6 +53,7 @@ $pconfig['username'] = $config['system']['email']['username'];
 $pconfig['password'] = $config['system']['email']['password'];
 $pconfig['passwordconf'] = $pconfig['password'];
 $pconfig['from'] = $config['system']['email']['from'];
+$pconfig['sendto'] = isset($config['system']['email']['sendto']) ? $config['system']['email']['sendto'] : $config['system']['email']['from'];
 
 //assure that POST Submit and Input Button use the same string
 $sendtestemailbuttonvalue = gettext('Send Test Email');
@@ -89,6 +90,7 @@ if ($_POST) {
 		$config['system']['email']['username'] = $_POST['username'];
 		$config['system']['email']['password'] = $_POST['password'];
 		$config['system']['email']['from'] = $_POST['from'];
+		$config['system']['email']['sendto'] = $_POST['sendto'];
 
 		write_config();
 
@@ -104,13 +106,13 @@ if ($_POST) {
 			$subject = sprintf(gettext("Test email from host: %s"), system_get_hostname());
 			$message = gettext("This email has been sent to validate your email configuration.");
 
-			$retval = @email_send($config['system']['email']['from'], $subject, $message, $error);
+			$retval = @email_send($config['system']['email']['sendto'], $subject, $message, $error);
 			if (0 == $retval) {
 				$savemsg = gettext("Test email successfully sent.");
-				write_log(sprintf(gettext("Test email successfully sent to: %s."), $config['system']['email']['from']));
+				write_log(sprintf(gettext("Test email successfully sent to: %s."), $config['system']['email']['sendto']));
 			} else {
 				$failmsg = sprintf(gettext("Failed to send test email. Please check the <a href='%s'>log</a> files."), "diag_log.php");
-				write_log(sprintf(gettext("Failed to send test email to: %s."), $config['system']['email']['from']));
+				write_log(sprintf(gettext("Failed to send test email to: %s."), $config['system']['email']['sendto']));
 			}
 		} else {
 			$savemsg = get_std_save_message($retval);
@@ -164,7 +166,8 @@ function enable_change(enable_change) {
 				<?php if (!empty($failmsg)) print_error_box($failmsg);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 			    		<?php html_titleline(gettext("Email"));?>
-					<?php html_inputbox("from", gettext("Email Address"), $pconfig['from'], gettext("Email address for sending system messages."), true, 60);?>
+					<?php html_inputbox("from", gettext("From Email Address"), $pconfig['from'], gettext("From Email address for sending system messages."), true, 62);?>
+					<?php html_inputbox("sendto", gettext("To Email Address"), $pconfig['sendto'], gettext("Destination email address. Separate email addresses by semi-colon."), true, 62);?>
 					<?php html_inputbox("server", gettext("SMTP Server"), $pconfig['server'], gettext("Outgoing SMTP mail server address."), true, 60);?>
 					<?php html_inputbox("port", gettext("Port"), $pconfig['port'], gettext("The default SMTP mail server port, e.g. 25 or 587."), true, 5);?>
 					<?php html_combobox("security", gettext("Security"), $pconfig['security'], array("none" => gettext("None"), "ssl" => "SSL", "tls" => "TLS"), "", true);?>
@@ -172,7 +175,7 @@ function enable_change(enable_change) {
 					<?php html_checkbox("auth", gettext("Authentication"), !empty($pconfig['auth']) ? true : false, gettext("Enable SMTP authentication."), "", false, "auth_change()");?>
 					<?php html_inputbox("username", gettext("Username"), $pconfig['username'], "", true, 40);?>
 					<?php html_passwordconfbox("password", "passwordconf", gettext("Password"), $pconfig['password'], $pconfig['passwordconf'], "", true);?>
-					<?php html_combobox("authmethod", gettext("Authentication method"), $pconfig['authmethod'], array("plain" => "Plain", "cram-md5" => "Cram-MD5", "digest-md5" => "Digest-MD5", "gssapi" => "GSSAPI", "external" => "External", "login" => "Login", "ntlm" => "NTLM", "on" => gettext("Best available")), "", true);?>
+					<?php html_combobox("authmethod", gettext("Authentication method"), $pconfig['authmethod'], array("plain" => gettext("Plain-text"), "cram-md5" => "Cram-MD5", "digest-md5" => "Digest-MD5", "gssapi" => "GSSAPI", "external" => "External", "login" => gettext("Login"), "ntlm" => "NTLM", "on" => gettext("Best available")), "", true);?>
 				</table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save");?>" />
