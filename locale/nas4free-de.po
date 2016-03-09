@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-08 02:32+0000\n"
-"PO-Revision-Date: 2016-02-12 00:48+0000\n"
-"Last-Translator: Tobias Bannert <Unknown>\n"
+"POT-Creation-Date: 2016-03-09 14:34+0000\n"
+"PO-Revision-Date: 2016-03-09 09:27+0000\n"
+"Last-Translator: Billi <dbl99@gmx.de>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-08 02:13+0000\n"
+"X-Launchpad-Export-Date: 2016-03-09 14:16+0000\n"
 "X-Generator: Launchpad (build 17936)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -59,15 +59,15 @@ msgstr "%s Schnittstelle"
 
 #, php-format
 msgid "%s already exists as a %s."
-msgstr ""
+msgstr "%s ist bereits als ein %s vorhanden."
 
 #, php-format
 msgid "%s is already configured as a filesystem."
-msgstr ""
+msgstr "%s ist bereits als Dateisystem konfiguriert."
 
 #, php-format
 msgid "%s is already configured as a volume."
-msgstr ""
+msgstr "%s ist bereits als Datenträger konfiguriert."
 
 #, php-format
 msgid "%s is too long."
@@ -106,15 +106,17 @@ msgid "%sB used of %sB"
 msgstr "%sB von %sB verwendet"
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
-msgstr "(findet sich in 6B200M0 200GB and Maxtor 2R015H1 15GB Festplatten)"
+msgstr ""
+"(Gefunden in einer Maxtor 6B200M0 200GB und Maxtor 2R015H1 15GB Festplatten)."
 
 msgid ""
 "(Kingston)Counts the number of flash erase failures. This Attribute returns "
 "the total number of Flash erase operation failures since the drive was "
 "deployed. This Attribute is identical to Attribute 182."
 msgstr ""
-"Anzahl der Löschfehler des Flashspeichers (seit Nutzungsbeginn, entspricht "
-"attribut 182)"
+"(Kingston). Anzahl der Löschfehler des Flash-Speichers seit der "
+"Inbetriebnahme des Laufwerkes. Dieses Attribut ist identisch mit Attribut "
+"182."
 
 msgid ""
 "(Kingston)Counts the number of flash program failures. This Attribute "
@@ -132,10 +134,12 @@ msgid ""
 "different structure for different vendors and is often not meaningful as a "
 "decimal number."
 msgstr ""
-"Suchfehler der Magnetleseköpfe. Bei einem teilweisen Ausfahl der "
-"Positionierungsmechanik steigen die Lesefehler an. Der Rohwert ist "
-"herstellerspezifisch und Bedarf der individuellen Interpretation durch "
-"Festplattenhersteller."
+"(Herstellerspezifischer Rohwert). Anzahl der Lesefehler der Schreib-"
+"/Leseköpfe. Bei einer Störung der Positionierungsmechanik treten Lesefehler "
+"auf. Solche Fehler können eine Vielzahl von Ursachen haben, z.B. einen "
+"beschädigten Servomotor oder eine wärmebedingte Ausdehnung der Festplatte. "
+"Der Aufbau des Rohwertes ist nicht standardisiert, sondern "
+"herstellerabhängig und muss daher jeweils im Einzelfall interpretiert werden."
 
 msgid ""
 "(Vendor specific raw value.) Stores data related to the rate of hardware "
@@ -143,15 +147,18 @@ msgid ""
 "value has different structure for different vendors and is often not "
 "meaningful as a decimal number."
 msgstr ""
-"Herstellerspezifische Rohdaten für Hardwarelesefehler einer Festplatte. "
-"Dieser Wert bedarf häufig der korrekten Inerpretation !"
+"(Herstellerspezifischer Rohwert). Enthält Informationen über die Anzahl der "
+"Lesefehler der Festplatte. Der Aufbau des Rohwertes ist nicht "
+"standardisiert, sondern herstellerabhängig und muss daher jeweils im "
+"Einzelfall interpretiert werden."
 
 msgid ""
 "(Vendor-specific raw value.) The raw value has different structure for "
 "different vendors and is often not meaningful as a decimal number."
 msgstr ""
-"Herstellerspezifische Rohdaten  Dieser Wert bedarf häufig der korrekten "
-"Inerpretation !"
+"(Herstellerspezifischer Rohwert). Der Aufbau des Rohwertes ist nicht "
+"standardisiert, sondern herstellerabhängig und muss daher jeweils im "
+"Einzelfall interpretiert werden."
 
 msgid "*** Imported duplicate ***"
 msgstr "*** Importierte Duplikate ***"
@@ -173,7 +180,7 @@ msgid "4KB wrapper"
 msgstr "4k Anpassung"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
-msgstr "802.1Q VLAN tag (zwischen 1 und 4094)."
+msgstr "802.1Q VLAN ID (Tag) (1 - 4094)"
 
 msgid "<->"
 msgstr "<->"
@@ -299,6 +306,10 @@ msgid ""
 "been turned entirely off (disconnected from power source) and when the hard "
 "disk returns from having previously been put to sleep mode."
 msgstr ""
+"Ein Zähler für die Start-/Stop-Zyklen einer Laufwerksspindel. Die Anzahl "
+"wird sowohl beim vollständigen Einschalten der Festplatte (nachdem sie "
+"vorher vollständig von der Stromversorgung getrennt war), als auch bei ihrem "
+"Aufwachen aus dem Energiesparmodus erhöht."
 
 msgid "A valid IP address must be specified."
 msgstr "Es muss eine gültige IP-Adresse angegeben sein."
@@ -459,7 +470,7 @@ msgid "Add"
 msgstr "Hinzufügen"
 
 msgid "Add Dataset"
-msgstr ""
+msgstr "Datensatz hinzufügen"
 
 msgid "Add Host"
 msgstr "Host hinzufügen"
@@ -480,7 +491,7 @@ msgid "Add URL"
 msgstr "URL hinzufügen"
 
 msgid "Add Volume"
-msgstr ""
+msgstr "Datenträger hinzufügen"
 
 msgid "Add additional scheduled self-test."
 msgstr "Zusätzliche planmäßige Selbsttests hinzufügen."
@@ -601,7 +612,7 @@ msgid "Advanced Settings"
 msgstr "Erweiterte Einstellungen"
 
 msgid "Advanced Setup"
-msgstr ""
+msgstr "Erweiterte Einrichtung"
 
 msgid "Advanced settings"
 msgstr "Erweiterte Einstellungen"
@@ -747,6 +758,13 @@ msgid ""
 "STANDBY IMMEDIATE as the last command (regardless of PLI activity using "
 "capacitor power). Normalized value is always 100."
 msgstr ""
+"Auch bekannt als \"Power-off Retract Count\" in der konventionellen "
+"Festplattenterminologie. Dieser Rohwert gibt die kumulierte Anzahl der "
+"unsauberen Ausschaltvorgänge während des gesamten Lebenszyklus einer SSD an. "
+"Dabei ist ein unsauberer Ausschaltvorgang definiert als Verlust der "
+"Stromversorgung ohne \"STANDBY IMMEDIATE\" als letztem ATA-Kommando "
+"(unabhängig von PLI-Aktivitäten (PLI = Power Loss Imminent) mit Hilfe von "
+"Kondensatoren). Der normalisierte Wert ist immer 100."
 
 msgid "AltRoot"
 msgstr "AltRoot"
@@ -829,10 +847,10 @@ msgid "Apply changes"
 msgstr "Änderung übernehmen"
 
 msgid "Apr"
-msgstr ""
+msgstr "Apr."
 
 msgid "April"
-msgstr ""
+msgstr "April"
 
 msgid "Archive"
 msgstr "Archiv"
@@ -870,10 +888,10 @@ msgid "Audio"
 msgstr "Ton"
 
 msgid "Aug"
-msgstr ""
+msgstr "Aug."
 
 msgid "August"
-msgstr ""
+msgstr "August"
 
 msgid "Auth Group"
 msgstr "Authentifizierungsgruppe"
@@ -888,7 +906,7 @@ msgid "Authenticate URL"
 msgstr "URL bestätigen"
 
 msgid "Authenticate path & realm"
-msgstr ""
+msgstr "Authentifiziere Pfad und Bereich"
 
 msgid "Authentication"
 msgstr "Authentifizierung"
@@ -1033,7 +1051,7 @@ msgid "Blank time"
 msgstr "untätig"
 
 msgid "Block Size"
-msgstr ""
+msgstr "Blockgröße"
 
 msgid "Block size"
 msgstr "Blockgröße"
@@ -1222,7 +1240,7 @@ msgid "Capacity"
 msgstr "Kapazität"
 
 msgid "Case Sensitivity"
-msgstr ""
+msgstr "Groß-/Kleinschreibung beachten"
 
 msgid ""
 "Causes the server to display the network information for the specified IP "
@@ -1336,7 +1354,7 @@ msgid "Command"
 msgstr "Befehl"
 
 msgid "Command Scripts"
-msgstr ""
+msgstr "Befehlsskripte"
 
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
@@ -1407,7 +1425,7 @@ msgid "Console Menu"
 msgstr "Konsolenmenü"
 
 msgid "Console Settings"
-msgstr ""
+msgstr "Konsoleneinstellungen"
 
 msgid "Console screensaver"
 msgstr "Konsolen Bildschirmschoner"
@@ -1551,6 +1569,8 @@ msgstr "Anzahl 'instabiler' Sektoren."
 
 msgid "Count of Data Address Mark errors (or vendor-specific)."
 msgstr ""
+"Entweder die Anzahl der Datenadressmarkierungsfehler oder "
+"herstellerspezifische Bedeutung (S.M.A.R.T.-Attribut 202)."
 
 msgid "Count of attempts to compensate for platter speed variations."
 msgstr ""
@@ -1629,21 +1649,23 @@ msgid ""
 "Count of times the heads are loaded off the media. Heads can be unloaded "
 "without actually powering off."
 msgstr ""
+"Anzahl der Parkvorgänge der Schreib-/Leseköpfe. Die Köpfe können auch "
+"geparkt werden, ohne dass die Festplatte tatsächlich ausgeschaltet wird."
 
 msgid "Count of times the link is reset during a data transfer."
 msgstr "Anzahl der 'Verbindungsresets während des Datentransfers."
 
 msgid "Counts the maximum worst erase count on any block."
-msgstr ""
+msgstr "Ermittelt die schlechteste (also höchste) Löschanzahl aller Blöcke."
 
 msgid "Create 4KB wrapper (nop device)."
 msgstr "4k Anpassung erstellen (nop Laufwerk)"
 
 msgid "Create HVM Guest"
-msgstr ""
+msgstr "HVM-Gast erstellen"
 
 msgid "Create PV Guest"
-msgstr ""
+msgstr "PV-Gast erstellen"
 
 msgid "Create ZFS on GPT partition"
 msgstr "ZFS in GPT Partition erstellen"
@@ -1812,10 +1834,10 @@ msgid "Dataset"
 msgstr "Datensatz"
 
 msgid "Dataset is locked"
-msgstr ""
+msgstr "Datensatz ist gesperrt"
 
 msgid "Dataset is marked for deletion"
-msgstr ""
+msgstr "Datensatz ist zum Löschen markiert"
 
 msgid "Datasets"
 msgstr "Datensätze"
@@ -1824,7 +1846,7 @@ msgid "Date & Time"
 msgstr "Datum & Zeit"
 
 msgid "Date format"
-msgstr ""
+msgstr "Datumsformat"
 
 msgid "Days"
 msgstr "Tage"
@@ -1833,15 +1855,17 @@ msgid "Debug"
 msgstr "Debug"
 
 msgid "Dec"
-msgstr ""
+msgstr "Dez."
 
 msgid "December"
-msgstr ""
+msgstr "Dezember"
 
 msgid ""
 "Decoded as: byte 0-1-2 = average erase count (big endian) and byte 3-4-5 = "
 "max erase count (big endian)."
 msgstr ""
+"Dekodiert als: Bytes 0-1-2 = Durchschnittliche Löschanzahl (Big Endian) und "
+"Bytes 3-4-5 = Maximale Löschanzahl (Big Endian)."
 
 msgid "Decrypt password"
 msgstr "Passwort entschlüsseln"
@@ -1899,16 +1923,16 @@ msgid "Delete Rsync job"
 msgstr "Lösche Rsync-Job"
 
 msgid "Delete Selected Datasets"
-msgstr ""
+msgstr "Ausgewählte Datensätze löschen"
 
 msgid "Delete Selected Jobs"
-msgstr ""
+msgstr "Ausgewählte Aufträge löschen"
 
 msgid "Delete Selected Options"
-msgstr ""
+msgstr "Ausgewählte Optionen löschen"
 
 msgid "Delete Selected Volumes"
-msgstr ""
+msgstr "Ausgewählte Datenträger löschen"
 
 msgid "Delete URL"
 msgstr "URL löschen"
@@ -2031,7 +2055,7 @@ msgid "Destination email address."
 msgstr "E-Mail Adresse des Empfängers."
 
 msgid "Destination email address. Separate email addresses by semi-colon."
-msgstr ""
+msgstr "Ziel-E-Mail-Adresse. Trennen Sie mehrere Adressen durch Semikolons."
 
 msgid "Destination host name or IP number."
 msgstr "Host-Name des Ziels oder IP Nummer."
@@ -2151,25 +2175,25 @@ msgid "Disable Firmware Update"
 msgstr "Firmware Update deaktivieren"
 
 msgid "Disable Selected Jobs"
-msgstr ""
+msgstr "Ausgewählte Aufträge deaktivieren"
 
 msgid "Disable Selected Options"
-msgstr ""
+msgstr "Ausgewählte Optionen deaktivieren"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Deaktivieren des TCP Wrapper (mod_wrap Modul)"
 
 msgid "Disable console menu."
-msgstr ""
+msgstr "Konsolenmenü deaktivieren."
 
 msgid "Disable file manager completely."
-msgstr ""
+msgstr "Datei-Manager vollständig deaktivieren."
 
 msgid "Disable firmware version check."
-msgstr ""
+msgstr "Überprüfung der Firmware-Version deaktivieren."
 
 msgid "Disable speaker beep on startup and shutdown."
-msgstr ""
+msgstr "Lautsprecher beim Starten und Herunterfahren deaktivieren."
 
 msgid "Disable the compression of repeated line"
 msgstr "Kompression der wiederholten Zeile deaktivieren"
@@ -2209,6 +2233,8 @@ msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
 msgstr ""
+"Entfernung, die die Festplatte sich relativ zur Spindel verschoben hat "
+"(üblicherweise durch Sturz oder Temperaturveränderung). Maßeinheit unbekannt."
 
 msgid "Distributed hash table"
 msgstr "Verteilte Hashtabelle"
@@ -2345,34 +2371,34 @@ msgid "Do you really want to uninstall this package?"
 msgstr "Soll das Paket wirklich deinstalliert werden?"
 
 msgid "Do you want to delete selected datasets?"
-msgstr ""
+msgstr "Wollen Sie die ausgewählten Datensätze löschen?"
 
 msgid "Do you want to delete selected jobs?"
-msgstr ""
+msgstr "Wollen Sie die ausgewählten Aufträge löschen?"
 
 msgid "Do you want to delete selected options?"
-msgstr ""
+msgstr "Wollen Sie die ausgewählten Einstellungen löschen?"
 
 msgid "Do you want to delete selected volumes?"
-msgstr ""
+msgstr "Wollen Sie die ausgewählten Datenträger löschen?"
 
 msgid "Do you want to disable selected jobs?"
-msgstr ""
+msgstr "Wollen Sie die ausgewählten Aufträge deaktivieren?"
 
 msgid "Do you want to disable selected options?"
-msgstr ""
+msgstr "Wollen Sie die ausgewählten Einstellungen deaktivieren?"
 
 msgid "Do you want to enable selected jobs?"
-msgstr ""
+msgstr "Wollen Sie die ausgewählten Aufträge aktivieren?"
 
 msgid "Do you want to enable selected options?"
-msgstr ""
+msgstr "Wollen Sie die ausgewählten Einstellungen aktivieren?"
 
 msgid "Do you want to toggle selected jobs?"
-msgstr ""
+msgstr "Wollen Sie die ausgewählten Aufträge umschalten?"
 
 msgid "Do you want to toggle selected options?"
-msgstr ""
+msgstr "Wollen Sie die ausgewählten Einstellungen umschalten?"
 
 msgid "Document root"
 msgstr "Stammverzeichnis"
@@ -2495,7 +2521,7 @@ msgid "Edit"
 msgstr "Ändern"
 
 msgid "Edit Dataset"
-msgstr ""
+msgstr "Datensatz bearbeiten"
 
 msgid "Edit Host"
 msgstr "Host bearbeiten"
@@ -2519,7 +2545,7 @@ msgid "Edit VM"
 msgstr "VM bearbeiten"
 
 msgid "Edit Volume"
-msgstr ""
+msgstr "Datenträger bearbeiten"
 
 msgid "Edit auth group"
 msgstr "Editiere Authentifikationsgruppe"
@@ -2644,10 +2670,10 @@ msgstr ""
 "weiterhin möglich."
 
 msgid "Enable Selected Jobs"
-msgstr ""
+msgstr "Ausgewählte Aufträge aktivieren"
 
 msgid "Enable Selected Options"
-msgstr ""
+msgstr "Ausgewählte Einstellungen aktivieren"
 
 msgid "Enable TLS connections."
 msgstr "SSL-Verbindungen aktivieren."
@@ -2663,6 +2689,7 @@ msgstr "Aktivierung von ZFS ACL"
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
 msgstr ""
+"Zeroconf/Bonjour aktivieren, um Dienste dieses Gerätes bekannt zu machen."
 
 msgid "Enable anonymous bind."
 msgstr "Anomymes Bind einschalten"
@@ -2674,7 +2701,7 @@ msgid "Enable compression."
 msgstr "Datenkomprimierung einschalten."
 
 msgid "Enable console screensaver."
-msgstr ""
+msgstr "Konsolen-Bildschirmschoner aktivieren"
 
 msgid "Enable device polling"
 msgstr "Aktiviere 'Device polling'"
@@ -2762,7 +2789,7 @@ msgid "Enable reverse DNS lookup."
 msgstr "Aktiviert umgekehrte DNS Auflösung."
 
 msgid "Enable serial console."
-msgstr ""
+msgstr "Serielle Konsole aktivieren."
 
 msgid "Enable shadow copy"
 msgstr "Aktiviere Schattenkopie"
@@ -2779,7 +2806,7 @@ msgid "Enable the ident protocol (RFC1413)."
 msgstr "Aktiviere das Ident Protokoll (RFC1413)."
 
 msgid "Enable the system power control utility."
-msgstr ""
+msgstr "Hilfsprogramm zur Steuerung des Systemstromverbrauchs aktivieren."
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "strikte Einhaltung von DLNA Standards erzwingen"
@@ -2791,7 +2818,7 @@ msgid "Enable traps."
 msgstr "Traps aktivieren."
 
 msgid "Enable tuning of some kernel variables."
-msgstr ""
+msgstr "Einstellung einiger Kernel-Variablen aktivieren."
 
 msgid "Enable write cache mode."
 msgstr "Schreibpuffermodus aktivieren."
@@ -3027,7 +3054,7 @@ msgid "Failed to create in-memory file system."
 msgstr "Das Erstellen des RAM-Dateisystem ist fehlgeschlagen"
 
 msgid "Failed to execute command zfs."
-msgstr ""
+msgstr "Ausführung des Kommandos zfs fehlgeschlagen."
 
 msgid "Failed to execute cron job."
 msgstr "cron Job wurde nicht ausgeführt."
@@ -3077,10 +3104,10 @@ msgid "Fatal"
 msgstr "Fataler Fehler"
 
 msgid "Feb"
-msgstr ""
+msgstr "Feb."
 
 msgid "February"
-msgstr ""
+msgstr "Februar"
 
 msgid "File"
 msgstr "Datei"
@@ -3148,7 +3175,7 @@ msgid "Firmware"
 msgstr "Firmware"
 
 msgid "Firmware Check"
-msgstr ""
+msgstr "Firmware-Überprüfung"
 
 msgid "Firmware upload failed (out of memory?)"
 msgstr ""
@@ -3196,7 +3223,7 @@ msgid "Forum"
 msgstr "Forum"
 
 msgid "Frag"
-msgstr ""
+msgstr "Fragment"
 
 msgid "Free"
 msgstr "Frei"
@@ -3208,15 +3235,15 @@ msgid "Frequency"
 msgstr "Frequenz"
 
 msgid "Fri"
-msgstr ""
+msgstr "Fr."
 
 msgid "Friday"
-msgstr ""
+msgstr "Freitag"
 
 msgid "From Email Address"
-msgstr ""
+msgstr "Absender-E-Mail-Adresse"
 
-msgid "From Email address for sending system messages."
+msgid "From email address for sending system messages."
 msgstr ""
 
 msgid "Fsck"
@@ -3825,7 +3852,7 @@ msgid "Inquiry Vendor"
 msgstr "Abfragehersteller"
 
 msgid "Insensitive"
-msgstr ""
+msgstr "Unempfindlich"
 
 msgid "Install"
 msgstr "Installieren"
@@ -3898,7 +3925,7 @@ msgstr ""
 "Ungülter Benutzername oder falsches Passwort. Bitte nochmals korrekt eingeben"
 
 msgid "Invert Selection"
-msgstr ""
+msgstr "Auswahl umkehren"
 
 msgid ""
 "It can be changed from the client side by standard SCSI mode page at any "
@@ -3941,10 +3968,10 @@ msgid "JBOD Information & Status"
 msgstr "JBOD Information & Status"
 
 msgid "Jan"
-msgstr ""
+msgstr "Jan."
 
 msgid "January"
-msgstr ""
+msgstr "Januar"
 
 msgid ""
 "January February March April May June July August September October November "
@@ -3957,22 +3984,22 @@ msgid "Japanese"
 msgstr "Japanisch"
 
 msgid "Job is locked"
-msgstr ""
+msgstr "Auftrag ist gesperrt"
 
 msgid "Job is marked for deletion"
-msgstr ""
+msgstr "Auftrag ist zum Löschen markiert"
 
 msgid "Jul"
-msgstr ""
+msgstr "Jul."
 
 msgid "July"
-msgstr ""
+msgstr "Juli"
 
 msgid "Jun"
-msgstr ""
+msgstr "Jun."
 
 msgid "June"
-msgstr ""
+msgstr "Juni"
 
 msgid "Kernel"
 msgstr "Kernel"
@@ -4049,6 +4076,18 @@ msgid ""
 "Normalized value is set to one on test failure or 11 if the capacitor has "
 "been tested in an excessive temperature condition, otherwise 100."
 msgstr ""
+"Letztes Testergebnis für die Kondensatorentladung in Millisekunden, "
+"saturiert beim Maximalwert. Protokolliert ebenfalls die Minuten seit dem "
+"letzten Test und die Testgesamtanzahl. Der Rohwert enthält die folgenden "
+"Daten: Bytes 0-1: Letztes Testergebnis der Kondensatorentladung in "
+"Millisekunden, saturiert beim Maximalwert. Testergebnis sollte im Bereich 25 "
+"<= <Resultat> <= 5.000.000 liegen, ein niedrigerer Wert deutet auf einen "
+"spezifischen Fehlercode hin. Bytes 2-3: Minuten seit dem letzten Test, "
+"saturiert beim Maximalwert. Bytes 4-5: Gesamtanzahl der Tests während des "
+"Lebenszyklus. Wird beim Ein-/Ausschalten nicht hochgezählt, saturiert beim "
+"Maximalwert. Der normalisierte Wert wird auf 1 (Testfehler) oder 11 "
+"(Kondensator wurde unter exzessiven Temperaturbedingungen getestet) gesetzt, "
+"ansonsten auf 100."
 
 #, php-format
 msgid "Latest Beta Build: %s"
@@ -4320,10 +4359,10 @@ msgid "MIB"
 msgstr "MIB"
 
 msgid "MIB is locked"
-msgstr ""
+msgstr "MIB ist gesperrt"
 
 msgid "MIB is marked for deletion"
-msgstr ""
+msgstr "MIB ist zum Löschen markiert"
 
 msgid "MISSING"
 msgstr "FEHLT"
@@ -4381,15 +4420,17 @@ msgid "Mapping DOS attributes"
 msgstr "Maping der DOS-Datei Attribute"
 
 msgid "Mar"
-msgstr ""
+msgstr "Mrz."
 
 msgid "March"
-msgstr ""
+msgstr "März"
 
 msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
 "not specified."
 msgstr ""
+"Grenze eines Kanales beim Lesen von Daten. Die Funktion dieses Attributes "
+"ist nicht spezifiziert."
 
 msgid "Masquerade address"
 msgstr "Masquerade Adresse"
@@ -4491,7 +4532,7 @@ msgid "Maximum temperature seen (degrees C)"
 msgstr "Maximal gemessene Temperatur (in C)"
 
 msgid "May"
-msgstr ""
+msgstr "Mai"
 
 msgid "Media"
 msgstr "Media"
@@ -4584,7 +4625,7 @@ msgid "Missing a temporary folder."
 msgstr "Es fehlt ein tempor&auml;rer Ordner."
 
 msgid "Mixed"
-msgstr ""
+msgstr "Gemischt"
 
 msgid "Mode"
 msgstr "Modus"
@@ -4593,7 +4634,7 @@ msgid "Model"
 msgstr "Modell"
 
 msgid "Model Extra"
-msgstr ""
+msgstr "Modell Extra"
 
 msgid "Model Name"
 msgstr "Modell-Bezeichnung"
@@ -4611,10 +4652,10 @@ msgid "Modules"
 msgstr "Module"
 
 msgid "Mon"
-msgstr ""
+msgstr "Mo."
 
 msgid "Monday"
-msgstr ""
+msgstr "Montag"
 
 msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
 msgstr "Montag Dienstag Mittwoch Donnerstag Freitag Samstag Sonntag"
@@ -4647,10 +4688,10 @@ msgid "Mounts"
 msgstr "Einhängepunkte"
 
 msgid "Move down"
-msgstr ""
+msgstr "Nach unten verschieben"
 
 msgid "Move up"
-msgstr ""
+msgstr "Nach oben verschieben"
 
 msgid "Music"
 msgstr "Musik"
@@ -4982,10 +5023,10 @@ msgid "Notification email from host: %s"
 msgstr "Mitteilungsemail von Host: %s"
 
 msgid "Nov"
-msgstr ""
+msgstr "Nov."
 
 msgid "November"
-msgstr ""
+msgstr "November"
 
 msgid "Now"
 msgstr "Jetzt"
@@ -5041,10 +5082,10 @@ msgid "Occurrence"
 msgstr "Ereignis"
 
 msgid "Oct"
-msgstr ""
+msgstr "Okt."
 
 msgid "October"
-msgstr ""
+msgstr "Oktober"
 
 msgid "Off"
 msgstr "Deaktiviert"
@@ -5085,10 +5126,10 @@ msgid "Option"
 msgstr "Einstellung"
 
 msgid "Option is locked"
-msgstr ""
+msgstr "Einstellung ist gesperrt"
 
 msgid "Option is marked for deletion"
-msgstr ""
+msgstr "Einstellung ist zum Löschen markiert"
 
 msgid "Optional user-friendly string of the target."
 msgstr "Optionaler benutzerfreundlicher String für das Ziel."
@@ -5109,7 +5150,7 @@ msgid "Outgoing Power/Inverter Information"
 msgstr "Ausgangsleistungs/Gleichspannungsinformationen"
 
 msgid "Outgoing SMTP mail server address."
-msgstr ""
+msgstr "Ausgehende SMTP Mail-Server-Adresse."
 
 msgid "Output current (A)"
 msgstr "ausgansseitige Stromstärke (in A)"
@@ -5294,7 +5335,7 @@ msgid "Peer port"
 msgstr "Peer-Port"
 
 msgid "Performance Settings"
-msgstr ""
+msgstr "Leistungseinstellungen"
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
@@ -5325,7 +5366,7 @@ msgid "Ping/Traceroute"
 msgstr "Ping / Traceroute"
 
 msgid "Plain-text"
-msgstr ""
+msgstr "Nur-Text"
 
 msgid "Platform"
 msgstr "Plattform"
@@ -5429,10 +5470,10 @@ msgid "Power mode"
 msgstr "Expertenmodus"
 
 msgid "Pre-Fail' Attribute used at least in HP devices."
-msgstr ""
+msgstr "\"Pre-Fail\"-Attribut (zumindest bei HP-Geräten genutzt)"
 
 msgid "Pre-Fail' Attribute used at least in Samsung devices."
-msgstr ""
+msgstr "\"Pre-Fail\"-Attribut (zumindest bei Samsung-Geräten genutzt)"
 
 msgid "PreInit"
 msgstr "PreInit"
@@ -5680,7 +5721,7 @@ msgid "Remote Address"
 msgstr "Fernadresse"
 
 msgid "Remote Module (Source)"
-msgstr ""
+msgstr "Remote-Modul (Quelle)"
 
 msgid "Remote Rsync Server"
 msgstr "entfernter Rsync Server"
@@ -5888,7 +5929,7 @@ msgstr ""
 "Betriebssysteme(z.B. Windows XP)."
 
 msgid "SMTP Server"
-msgstr ""
+msgstr "SMTP-Server"
 
 msgid "SNMP"
 msgstr "SNMP"
@@ -5931,10 +5972,10 @@ msgstr ""
 "diese Variable. (Standard: %d)"
 
 msgid "Sat"
-msgstr ""
+msgstr "Sa."
 
 msgid "Saturday"
-msgstr ""
+msgstr "Samstag"
 
 msgid "Save"
 msgstr "Speichern"
@@ -6015,7 +6056,7 @@ msgstr ""
 "HTTPS)."
 
 msgid "Select a date format."
-msgstr ""
+msgstr "Datumsformat auswählen"
 
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr ""
@@ -6091,16 +6132,16 @@ msgid "Send now"
 msgstr "Jetzt senden"
 
 msgid "Sensitive"
-msgstr ""
+msgstr "Empfindlich"
 
 msgid "Sep"
-msgstr ""
+msgstr "Sep."
 
 msgid "Separate email addresses by semi-colon."
 msgstr "Semikolon getrennte Liste von E-Mail Adressen."
 
 msgid "September"
-msgstr ""
+msgstr "September"
 
 msgid "Serial Console"
 msgstr "Serial Console"
@@ -6318,7 +6359,7 @@ msgid "Software RAID"
 msgstr "Software RAID"
 
 msgid "Software Used"
-msgstr ""
+msgstr "Verwendete Software"
 
 msgid "Source"
 msgstr "Quelle"
@@ -6359,7 +6400,7 @@ msgid "Sparse Volume"
 msgstr "Karger Datentr&auml;ger"
 
 msgid "Speaker Beep"
-msgstr ""
+msgstr "Lautsprecherton"
 
 msgid ""
 "Specific to He8 drives from HGST. The Helium, so says the literature, allows "
@@ -6530,10 +6571,10 @@ msgid "Successful."
 msgstr "Erfolgreich"
 
 msgid "Sun"
-msgstr ""
+msgstr "So."
 
 msgid "Sunday"
-msgstr ""
+msgstr "Sonntag"
 
 msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
 msgstr "Sonntag Montag Dienstag Mittwoch Donnerstag Freitag Samstag"
@@ -6678,7 +6719,7 @@ msgid "Tag%d (%s)"
 msgstr "Tag%d (%s)"
 
 msgid "Tap device"
-msgstr ""
+msgstr "TAP-Gerät"
 
 msgid "Tape"
 msgstr "Band"
@@ -6794,6 +6835,9 @@ msgid ""
 "The Minimum Spares Remaining attribute indicates the number of remaining "
 "spare blocks as a percentage of the total number of spare blocks available."
 msgstr ""
+"Das \"Minimum Spares Remaining\"-Attribut (Minimal verbleibende "
+"Ersatzblöcke) zeigt die Anzahl der noch freien Blöcke als Prozentsatz der "
+"Gesamtanzahl verfügbarer Ersatzblöcke an."
 
 msgid ""
 "The Newly Added Bad Flash Block attribute indicates the total number of bad "
@@ -7093,6 +7137,8 @@ msgid ""
 "The count of times the magnetic armature was retracted automatically as a "
 "result of cutting power."
 msgstr ""
+"Die Anzahl, die der Magnetanker als Folge eines Stromverlustes automatisch "
+"zurückgezogen wurden."
 
 msgid "The credentials with which to bind."
 msgstr "Die Referenzen, auf die verwiesen werden soll."
@@ -7758,6 +7804,15 @@ msgstr ""
 "Die Konfigurationsoption legt der Transfermodus für ATA/IDE Festplatten fest"
 
 msgid ""
+"This attribute controls the ACL behavior when a file is created or whenever "
+"the mode of a file or a directory is modified."
+msgstr ""
+
+msgid ""
+"This attribute determines the behavior of Access Control List inheritance."
+msgstr ""
+
+msgid ""
 "This attribute indicates the count of full hard disk power on/off cycles."
 msgstr "Gesamtzahl vollständiger An-und Ausschaltzyklen."
 
@@ -7766,6 +7821,9 @@ msgid ""
 "the condition that the first attempt was unsuccessful). An increase of this "
 "attribute value is a sign of problems in the hard disk mechanical subsystem."
 msgstr ""
+"Dieses Attribut zeigt die Anzahl der Rekalibrierungsanforderungen an (unter "
+"der Bedingung, dass der erste Versuch erfolglos war). Ein Anstieg dieses "
+"Wertes ist ein Zeichen für Probleme des mechanischen Festplattensubsytems."
 
 msgid ""
 "This attribute is a part of Hewlett-Packard's SMART IV technology, as well "
@@ -7773,6 +7831,11 @@ msgid ""
 "contains a count of parity errors which occur in the data path to the media "
 "via the drive's cache RAM."
 msgstr ""
+"Dieses Attribut ist sowohl ein Bestandteil von Hewlett-Packard's SMART IV "
+"Technologie, als auch der I/O-Fehlerentdeckung- und -korrektur-Schemata "
+"anderer Hersteller. Es enthält einen Zähler für Paritätsfehler, die auf dem "
+"Datenpfad zwischen Host-Schnittstelle, über den Cache-Speicher des "
+"Laufwerkes, und Medium auftreten."
 
 #, php-format
 msgid ""
@@ -7857,6 +7920,12 @@ msgid ""
 "the firmware has not been tampered with.<br /><br />Do you want to install "
 "this firmware anyway (on your own risk)?"
 msgstr ""
+"Das bedeutet, dass die von Ihnen aufgespielte Firmware keine "
+"offizielle/unterstützte Version ist und zu unerwartetem Verhalten oder "
+"Sicherheitsrisiken führen kann. Installieren Sie nur Firmware-Versionen aus "
+"Quellen, denen Sie vertrauen, und stellen Sie sicher, dass die Firmware "
+"nicht manipuliert wurde.<br /><br />Wollen Sie diese Firmware trotzdem "
+"installieren (auf eigenes Risiko)?"
 
 msgid "This name already exists in the disk list."
 msgstr "Der Name kommt in der Platten-Liste bereits vor."
@@ -8053,13 +8122,16 @@ msgid ""
 "file system should be casesensitive, caseinsensitive, or allow a combination "
 "of both styles of matching"
 msgstr ""
+"Diese Eigenschaft zeigt an, ob der vom Dateisystem verwendete "
+"Abgleichalgorithmus für Dateinamen die Groß-/Kleinschreibung beachtet oder "
+"nicht, bzw. ob eine Kombination beider Möglichkeiten erlaubt ist."
 
 msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr ""
 "Diese Regel wird ausgelöst, wenn das ausgelöste Richtlinienereignis eintritt"
 
 msgid "This server uses default swap!"
-msgstr ""
+msgstr "Dieser Server benutzt Standardeinstellungen für die Auslagerung!"
 
 msgid "This tag already exists."
 msgstr "Diese Bezeichnung existiert bereits !"
@@ -8083,6 +8155,9 @@ msgid ""
 "This will allow server-side downscaling of very large JPEG images, it can "
 "hurt JPEG serving performance on (at least) Sony DLNA products."
 msgstr ""
+"Dadurch wird das serverseitige Herunterskalieren sehr großer JPEG-Bilder "
+"eingeschaltet, das ihre Bereitstellungsgeschwindigkeit (zumindest) bei Sony "
+"DLNA-Produkten beeinträchtigen kann."
 
 #, php-format
 msgid ""
@@ -8126,12 +8201,14 @@ msgstr ""
 msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
 msgstr ""
+"Dadurch wird das Streamen von .jpg und .mp3 Dateien zu einem TiVo "
+"(Festplattenrekorder) mit HMO (Home Media Option) ermöglicht."
 
 msgid "Thu"
-msgstr ""
+msgstr "Do."
 
 msgid "Thursday"
-msgstr ""
+msgstr "Donnerstag"
 
 msgid "TiB"
 msgstr "TiB"
@@ -8165,7 +8242,7 @@ msgstr "Zeitdauer zur Positionierung der Festplattenleseköpfe."
 
 msgid ""
 "Time spent operating under data load (movement of magnetic head armature)."
-msgstr ""
+msgstr "Betriebszeit unter Datenlast (Bewegung des Magnetkopfarmes)."
 
 msgid "Time update interval"
 msgstr "NTP Update Intervall"
@@ -8183,7 +8260,7 @@ msgid "TitleSpeed"
 msgstr "Titel-Geschwindigkeit"
 
 msgid "To Email Address"
-msgstr ""
+msgstr "Empfänger-E-Mail-Adresse"
 
 msgid ""
 "To configure the target, you must add at least Portal Group and Initiator "
@@ -8264,13 +8341,13 @@ msgstr ""
 "werden (z.B. %s)"
 
 msgid "Toggle Mode"
-msgstr ""
+msgstr "Modus umschalten"
 
 msgid "Toggle Selected Jobs"
-msgstr ""
+msgstr "Ausgewählte Aufträge umschalten"
 
 msgid "Toggle Selected Options"
-msgstr ""
+msgstr "Ausgewählte Einstellungen umschalten"
 
 msgid "Tolerated"
 msgstr "Toleriert"
@@ -8287,6 +8364,9 @@ msgid ""
 "Total count of LBAs read. Some S.M.A.R.T. utilities will report a negative "
 "number for the raw value since in reality it has 48 bits rather than 32."
 msgstr ""
+"Gesamtanzahl der LBA-Lesevorgänge. Einige S.M.A.R.T.-Hilfsprogramme zeigen "
+"für den Rohwert eine negative Zahl an, da er in Wirklichkeit 48 statt 32 Bit "
+"lang ist."
 
 msgid "Total count of LBAs written."
 msgstr "gesamte Anzahl  geschriebener LBAs"
@@ -8303,6 +8383,8 @@ msgid ""
 "Total time of loading on the magnetic heads actuator (time not spent in "
 "parking area)."
 msgstr ""
+"Gesamtbelastungsdauer des Verstellmotors der Schreib-/Leseköpfe (Zeit der "
+"Köpfe außerhalb der Parkzone)."
 
 #, php-format
 msgid "Total: %s | Alloc: %s | Free: %s | State: %s"
@@ -8370,10 +8452,10 @@ msgid "Try to import from on-disk ZFS config."
 msgstr "Versuche ZFS Konfiguration von der Festplatte zu importieren."
 
 msgid "Tue"
-msgstr ""
+msgstr "Di."
 
 msgid "Tuesday"
-msgstr ""
+msgstr "Dienstag"
 
 msgid "Tuning"
 msgstr "Feineinstellungen"
@@ -8405,6 +8487,10 @@ msgid ""
 "filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
 "unpredictable results, file corruption and the loss of data!"
 msgstr ""
+"UFS und ZFS sind NATIVE Dateisysteme von %s. Die Verwendung anderer "
+"Dateisysteme, wie z.B. EXT2, EXT3, EXT4, FAT, FAT32 oder NTFS, kann zu "
+"unvorhersehbaren Ergebnissen, Dateibeschädigungen oder sogar Datenverlust "
+"führen!"
 
 #, php-format
 msgid ""
@@ -8585,10 +8671,12 @@ msgid "Use as sparse volume. (thin provisioning)"
 msgstr "Verwende karge Datenträger. (magere Bereitstellung)"
 
 msgid "Use different container as root of the tree."
-msgstr ""
+msgstr "Verwenden Sie einen anderen Container als Wurzel des Baums."
 
 msgid "Use inotify monitoring to automatically discover new files."
 msgstr ""
+"Verwenden Sie die inotify-Überwachung, um automatisch neue Dateien zu "
+"entdecken."
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -8648,6 +8736,7 @@ msgstr ""
 
 msgid "Use toggle button instead of enable/disable buttons."
 msgstr ""
+"Verwenden Sie den Umschaltknopf anstelle der Aktivieren-/Deaktivieren-Knöpfe."
 
 msgid "Used"
 msgstr "Benutzt"
@@ -8657,7 +8746,7 @@ msgstr "Benutzer"
 
 #, php-format
 msgid "User Defined Groups"
-msgstr ""
+msgstr "Benutzerdefinierte Gruppen"
 
 msgid "User ID"
 msgstr "Benutzerkennung"
@@ -8706,7 +8795,7 @@ msgid "Using %s bytes fragment size."
 msgstr "Nutze %s Bytes Fragmentgröße."
 
 msgid "VCPUs"
-msgstr ""
+msgstr "VCPUs"
 
 msgid "VHID"
 msgstr "VHID"
@@ -8715,19 +8804,19 @@ msgid "VLAN"
 msgstr "VLAN"
 
 msgid "VLAN Tag"
-msgstr ""
+msgstr "VLAN ID"
 
 msgid "VLAN tag"
 msgstr "VLAN Tag"
 
 msgid "VM"
-msgstr ""
+msgstr "VM"
 
 msgid "VM Type"
-msgstr ""
+msgstr "VM-Typ"
 
 msgid "VNC Display"
-msgstr ""
+msgstr "VNC-Anzeige"
 
 msgid "VNC Password"
 msgstr "VNC-Passwort"
@@ -8739,6 +8828,8 @@ msgid ""
 "Value is equal to (100-temp. &deg;C), allowing manufacturer to set a minimum "
 "threshold which corresponds to a maximum temperature."
 msgstr ""
+"Der Wert ist gleich (100-temp. &deg;C) und erlaubt Herstellern einen unteren "
+"Grenzwert zu setzen, der einer Maximaltemperatur entspricht."
 
 msgid "Variable"
 msgstr "Variable"
@@ -8756,16 +8847,16 @@ msgid "Video"
 msgstr "Video"
 
 msgid "Virtual Device"
-msgstr ""
+msgstr "Virtuelles Gerät"
 
 msgid "Virtual Devices"
-msgstr ""
+msgstr "Virtuelle Geräte"
 
 msgid "Virtual Host ID"
 msgstr "Virtuelle Host ID"
 
 msgid "Virtual IP Address"
-msgstr ""
+msgstr "Virtuelle IP-Adresse"
 
 msgid "Virtual IP address"
 msgstr "Virtuelle IP-Adresse"
@@ -8780,7 +8871,7 @@ msgid "Virtual devices"
 msgstr "Virtuelle Geräte"
 
 msgid "VirtualBox"
-msgstr ""
+msgstr "VirtualBox"
 
 msgid "Volume"
 msgstr "Datenträger"
@@ -8792,10 +8883,10 @@ msgid "Volume Size Limit"
 msgstr "Datenträger Größenbegrenzung"
 
 msgid "Volume is locked"
-msgstr ""
+msgstr "Datenträger ist gesperrt"
 
 msgid "Volume is marked for deletion"
-msgstr ""
+msgstr "Datenträger ist zum Löschen markiert"
 
 msgid "Volume label"
 msgstr "Datenträgeretikett (Volume label)"
@@ -8804,7 +8895,7 @@ msgid "Volume label of the new file system."
 msgstr "Datenträgeretikett (Volume label) des neuen Dateisystems."
 
 msgid "Volume mode"
-msgstr ""
+msgstr "Datenträgermodus"
 
 msgid "Volumes"
 msgstr "Datenträger"
@@ -8875,10 +8966,10 @@ msgid "Webserver document root is missing."
 msgstr "Das oberste Dokumentenverzeichnis des Webservers fehlt."
 
 msgid "Wed"
-msgstr ""
+msgstr "Mi."
 
 msgid "Wednesday"
-msgstr ""
+msgstr "Mittwoch"
 
 msgid "Week days"
 msgstr "Wochentage"
@@ -8890,6 +8981,8 @@ msgid ""
 "Western Digital, Samsung or Seagate attribute: Total number of data blocks "
 "with detected, uncorrectable errors encountered during normal operation."
 msgstr ""
+"Western Digital, Samsung oder Seagate Attribut: Gesamtanzahl der Datenblöcke "
+"mit entdeckten, unkorrigierbaren Fehlern während des Normalbetriebes."
 
 msgid ""
 "When HAST is enabled, the local devices, the local services and the "
@@ -8975,10 +9068,10 @@ msgid "Wrong permission on %s."
 msgstr "Falsche Berechtigung auf %s."
 
 msgid "Xen"
-msgstr ""
+msgstr "Xen"
 
 msgid "Xen Virtual Machine"
-msgstr ""
+msgstr "Xen Virtuelle Maschine"
 
 msgid "Yes"
 msgstr "Ja"
@@ -9078,10 +9171,10 @@ msgid "ZFS ACL"
 msgstr "ZFS ACL"
 
 msgid "ZFS Dataset Information & Status"
-msgstr ""
+msgstr "ZFS Datensatzinformation und -status"
 
 msgid "ZFS Dataset Properties"
-msgstr ""
+msgstr "ZFS Datensatz Eigenschaften"
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "ZFS-Schnappschussinformationen & -status"
@@ -9090,16 +9183,18 @@ msgid "ZFS Snapshot Properties"
 msgstr "ZFS-Schnappschusseigenschaften"
 
 msgid "ZFS Volume Information & Status"
-msgstr ""
+msgstr "ZFS Datenträgerinformationen und -status"
 
 msgid "ZFS Volume Properties"
-msgstr ""
+msgstr "ZFS Datenträgereigenschaften"
 
 msgid "ZFS volume"
 msgstr "ZFS Volume"
 
 msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
+"ZFS Datenträgerblockgröße. Dieser Wert kann nach der Erstellung nicht mehr "
+"geändert werden."
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
@@ -9131,12 +9226,14 @@ msgid "day(s)"
 msgstr "Tag(e)"
 
 msgid "debug"
-msgstr ""
+msgstr "Fehlersuche"
 
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
 msgstr ""
+"Dekodiert as: Bytes 0-1-2 = Anzahl fehlerfreier Blöcke (Big Endian) und "
+"Bytes 3-4 = Anzahl der Systemblöcke (frei)."
 
 msgid "detected an error while importing."
 msgstr "Fehler beim Importieren festgestellt."
@@ -9173,7 +9270,7 @@ msgid "iSCSI Target Logical Unit Controller"
 msgstr "iSCSI -logische ZFS-Partition"
 
 msgid "iSCSI Targets Information & Status"
-msgstr ""
+msgstr "iSCSI Zielinformationen und -status"
 
 #, php-format
 msgid "iSCSI initial parameter (%d by default)."
@@ -9216,7 +9313,7 @@ msgid "no new encrypted disk found."
 msgstr "keine neuen verschl&uuml;sselten Platten gefunden."
 
 msgid "noVNC"
-msgstr ""
+msgstr "noVNC"
 
 msgid "none"
 msgstr "keine"
@@ -9271,3 +9368,6 @@ msgstr "Aushängen"
 
 msgid "version:"
 msgstr "Version:"
+
+#~ msgid "From Email address for sending system messages."
+#~ msgstr "Absender-E-Mail-Adresse für den Versand von Systemnachrichten."
