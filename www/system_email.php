@@ -53,7 +53,7 @@ $pconfig['username'] = $config['system']['email']['username'];
 $pconfig['password'] = $config['system']['email']['password'];
 $pconfig['passwordconf'] = $pconfig['password'];
 $pconfig['from'] = $config['system']['email']['from'];
-$pconfig['sendto'] = isset($config['system']['email']['sendto']) ? $config['system']['email']['sendto'] : $config['system']['email']['from'];
+$pconfig['sendto'] = isset($config['system']['email']['sendto']) ? $config['system']['email']['sendto'] : (isset($config['system']['email']['from']) ? $config['system']['email']['from'] : '');
 
 //assure that POST Submit and Input Button use the same string
 $sendtestemailbuttonvalue = gettext('Send Test Email');
@@ -166,9 +166,9 @@ function enable_change(enable_change) {
 				<?php if (!empty($failmsg)) print_error_box($failmsg);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 			    		<?php html_titleline(gettext("Email"));?>
-					<?php html_inputbox("from", gettext("From Email Address"), $pconfig['from'], gettext("From Email address for sending system messages."), true, 62);?>
-					<?php html_inputbox("sendto", gettext("To Email Address"), $pconfig['sendto'], gettext("Destination email address. Separate email addresses by semi-colon."), true, 62);?>
-					<?php html_inputbox("server", gettext("SMTP Server"), $pconfig['server'], gettext("Outgoing SMTP mail server address."), true, 60);?>
+					<?php html_inputbox("from", gettext("From Email Address"), $pconfig['from'], gettext("From email address for sending system messages."), true, 62);?>
+					<?php html_inputbox("sendto", gettext("To Email Address"), $pconfig['sendto'], gettext("Destination email address. Separate email addresses by semi-colon. "), true, 62);?>
+					<?php html_inputbox("server", gettext("SMTP Server"), $pconfig['server'], gettext("Outgoing SMTP mail server address."), true, 62);?>
 					<?php html_inputbox("port", gettext("Port"), $pconfig['port'], gettext("The default SMTP mail server port, e.g. 25 or 587."), true, 5);?>
 					<?php html_combobox("security", gettext("Security"), $pconfig['security'], array("none" => gettext("None"), "ssl" => "SSL", "tls" => "TLS"), "", true);?>
 					<?php html_checkbox("starttls", gettext("TLS mode"), !empty($pconfig['starttls']) ? true : false, gettext("Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can use SSL."), gettext("This is a way to take an existing insecure connection, and upgrade it to a secure connection using SSL/TLS."), false);?>
