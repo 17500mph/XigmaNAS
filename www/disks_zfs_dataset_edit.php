@@ -45,6 +45,7 @@ $sphere_notifier = 'zfsdataset';
 $sphere_array = [];
 $sphere_record = [];
 $prerequisites_ok = true;
+$pconfig = []; // prepare default array
 
 $mode_page = ($_POST) ? PAGE_MODE_POST : (($_GET) ? PAGE_MODE_EDIT : PAGE_MODE_ADD); // detect page mode
 
@@ -54,9 +55,6 @@ if (PAGE_MODE_POST == $mode_page) { // POST is Cancel or not Submit => cleanup
 		exit;
 	}
 }
-
-$pconfig = []; // prepare default array
-$prerequisites_ok = true;
 
 if ((PAGE_MODE_POST == $mode_page) && isset($_POST['uuid']) && is_uuid_v4($_POST['uuid'])) {
 	$pconfig['uuid'] = $_POST['uuid'];
@@ -83,7 +81,7 @@ $a_volume = &$config['zfs']['volumes']['volume'];
 
 if (!(isset($config['zfs']['pools']['pool']) && is_array($config['zfs']['pools']['pool']))) {
 	$config['zfs']['pools']['pool'] = [];
-	$errormsg = sprintf(gettext("No configured pools. Please add new <a href='%s'>pools</a> first."), "disks_zfs_zpool.php");
+	$errormsg = sprintf(gettext("No configured pools. Please add new <a href='%s'>pools</a> first."), 'disks_zfs_zpool.php');
 	$prerequisites_ok = false;
 }
 array_sort_key($config['zfs']['pools']['pool'], 'name');
@@ -128,7 +126,9 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 	$pconfig['atime'] = $_POST['atime'];
 	$pconfig['aclinherit'] = $_POST['aclinherit'];
 	$pconfig['aclmode'] = $_POST['aclmode'];
-	$pconfig['casesensitivity'] = $_POST['casesensitivity'];
+	if ((RECORD_NEW == $mode_record) || (RECORD_NEW_MODIFY == $mode_record)) {
+		$pconfig['casesensitivity'] = $_POST['casesensitivity'];
+	}
 	$pconfig['canmount'] = isset($_POST['canmount']) ? true : false;
 	$pconfig['readonly'] = isset($_POST['readonly']) ? true : false;
 	$pconfig['xattr'] = isset($_POST['xattr']) ? true : false;
@@ -147,14 +147,14 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 	$pconfig['accessrestrictions']['mode'] = sprintf( "%04o", $helpinghand);
 	
 	// Input validation
-	$reqdfields = explode(" ", "pool name");
+	$reqdfields = explode(' ', 'pool name');
 	$reqdfieldsn = [gettext('Pool'), gettext('Name')];
-	$reqdfieldst = explode(" ", "string string");
+	$reqdfieldst = explode(' ', 'string string');
 
 	do_input_validation($pconfig, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($pconfig, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
-	if (empty($input_errors)) { // check for a valid name with format name[/name], blanks are excluded.
+	if ($prerequisites_ok && empty($input_errors)) { // check for a valid name with format name[/name], blanks are excluded.
 		if (false === zfs_is_valid_dataset_name($pconfig['name'])) {
 			$input_errors[] = sprintf(gettext("The attribute '%s' contains invalid characters."), gettext('Name'));
 		}
@@ -166,13 +166,13 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 	// 4. RECORD_MODIFY: if posted name is different from configured name: pool/posted name must not exist in configuration or live.
 	// 
 	// 1.
-	if (empty($input_errors)) {
+	if ($prerequisites_ok && empty($input_errors)) {
 		if ((RECORD_MODIFY == $mode_record) && (0 !== strcmp($a_dataset[$cnid]['pool'][0], $pconfig['pool']))) {
 			$input_errors[] = 'Pool cannot be changed.';
 		}
 	}
 	// 2., 3., 4.
-	if (empty($input_errors)) {
+	if ($prerequisites_ok && empty($input_errors)) {
 		$poolslashname = escapeshellarg($pconfig['pool']."/".$pconfig['name']); // create quoted full dataset name
 		if ((RECORD_NEW == $mode_record) || ((RECORD_NEW != $mode_record) && (0 !== strcmp(escapeshellarg($a_dataset[$cnid]['pool'][0]."/".$a_dataset[$cnid]['name']), $poolslashname)))) {
 			// throw error when pool/name already exists in live
@@ -185,7 +185,7 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 						$input_errors[] = sprintf(gettext('%s already exists as a %s.'), $poolslashname, $retdat[0]);
 						break;
  					case 2: // Invalid command line options were specified.
-						$input_errors[] = gettext("Failed to execute command zfs.");
+						$input_errors[] = gettext('Failed to execute command zfs.');
 						break;
 				}
 			}
@@ -254,6 +254,7 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 			$pconfig['accessrestrictions']['mode'] = '0777';
 			break;
 		case RECORD_NEW_MODIFY:
+			$pconfig['casesensitivity'] = isset($a_dataset[$cnid]['casesensitivity']) ? $a_dataset[$cnid]['casesensitivity'] : 'sensitive';
 		case RECORD_MODIFY:
 			$pconfig['name'] = $a_dataset[$cnid]['name'];
 			$pconfig['pool'] = $a_dataset[$cnid]['pool'][0];
@@ -263,7 +264,6 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 			$pconfig['atime'] = $a_dataset[$cnid]['atime'];	
 			$pconfig['aclinherit'] = $a_dataset[$cnid]['aclinherit'];
 			$pconfig['aclmode'] = $a_dataset[$cnid]['aclmode'];
-			$pconfig['casesensitivity'] = isset($a_dataset[$cnid]['casesensitivity']) ? $a_dataset[$cnid]['casesensitivity'] : 'sensitive';
 			$pconfig['canmount'] = isset($a_dataset[$cnid]['canmount']);
 			$pconfig['readonly'] = isset($a_dataset[$cnid]['readonly']);
 			$pconfig['xattr'] = isset($a_dataset[$cnid]['xattr']);
@@ -322,7 +322,6 @@ $pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Datasets'), gettext(
 function enable_change(enable_change) {
 	document.iform.name.disabled = !enable_change;
 	document.iform.pool.disabled = !enable_change;
-	document.iform.casesensitivity.disabled = !enable_change;
 }
 // -->
 </script>
@@ -349,36 +348,42 @@ function enable_change(enable_change) {
 	<tr>
 		<td class="tabcont">
 			<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-				<?php if (!empty($errormsg)) print_error_box($errormsg);?>
-				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-				<?php if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));?>
+				<?php
+					if (!empty($errormsg)) { print_error_box($errormsg); }
+					if (!empty($input_errors)) { print_input_errors($input_errors); }
+					if (file_exists($d_sysrebootreqd_path)) { print_info_box(get_std_save_message(0)); }
+				?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<thead>
 						<?php html_titleline(gettext('Settings'));?>
 					</thead>
 					<tbody>
-						<?php html_inputbox("name", gettext('Name'), $pconfig['name'], "", true, 20);?>
-						<?php html_combobox("pool", gettext('Pool'), $pconfig['pool'], $l_poollist, "", true);?>
-						<?php html_combobox("compression", gettext('Compression'), $pconfig['compression'], $l_compressionmode, gettext("Controls the compression algorithm used for this dataset. The 'lzjb' compression algorithm is optimized for performance while providing decent data compression. Setting compression to 'On' uses the 'lzjb' compression algorithm. You can specify the 'gzip' level by using the value 'gzip-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'gzip' is equivalent to 'gzip-6'."), true);?>
-						<?php html_combobox("dedup", gettext('Dedup'), $pconfig['dedup'], $l_dedup, gettext("Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See <a href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide:disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & deduplication</a> wiki article BEFORE using this feature.</b></br>"), true);?>
-						<?php html_combobox("sync", gettext('Sync'), $pconfig['sync'], $l_sync, gettext("Controls the behavior of synchronous requests."), true);?>
-						<?php html_combobox("atime", gettext('Access Time (atime)'), $pconfig['atime'], $l_atime, gettext("Turn access time on or off for this dataset."), true);?>
-						<?php html_combobox("aclinherit", gettext('ACL inherit'), $pconfig['aclinherit'], $l_aclinherit, "", true);?>
-						<?php html_combobox("aclmode", gettext('ACL mode'), $pconfig['aclmode'], $l_aclmode, "", true);?>
-						<?php html_combobox("casesensitivity", gettext('Case Sensitivity'), $pconfig['casesensitivity'], $l_casesensitivity, gettext('This property indicates whether the file name matching algorithm used by the file system should be casesensitive, caseinsensitive, or allow a combination of both styles of matching'), false);?>
-						<?php html_checkbox("canmount", gettext('Canmount'), !empty($pconfig['canmount']) ? true : false, gettext("If this property is disabled, the file system cannot be mounted."), "", false);?>
-						<?php html_checkbox("readonly", gettext('Readonly'), !empty($pconfig['readonly']) ? true : false, gettext("Controls whether this dataset can be modified."), "", false);?>
-						<?php html_checkbox("xattr", gettext('Extended attributes'), !empty($pconfig['xattr']) ? true : false, gettext("Enable extended attributes for this file system."), "", false);?>
-						<?php html_checkbox("snapdir", gettext('Snapshot Visibility'), !empty($pconfig['snapdir']) ? true : false, gettext("If this property is enabled, the snapshots are displayed into .zfs directory."), "", false);?>
-						<?php html_inputbox("reservation", gettext('Reservation'), $pconfig['reservation'], gettext("The minimum amount of space guaranteed to a dataset (usually empty). To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."), false, 10);?>
-						<?php html_inputbox("quota", gettext('Quota'), $pconfig['quota'], gettext("Limits the amount of space a dataset and its descendants can consume. This property enforces a hard limit on the amount of space used. This includes all space consumed by descendants, including file systems and snapshots. To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."), false, 10);?>
-						<?php html_inputbox("desc", gettext('Description'), $pconfig['desc'], gettext("You may enter a description here for your reference."), false, 40);?>
-						<?php html_separator();?>
-						<?php html_titleline(gettext('Access Restrictions'));?>
-						<?php html_combobox("owner", gettext('Owner'), $pconfig['accessrestrictions']['owner'], $l_users, "", false);?>
-						<?php html_combobox("group", gettext('Group'), $pconfig['accessrestrictions']['group'], $l_groups, "", false);?>
+						<?php
+							html_inputbox("name", gettext('Name'), $pconfig['name'], '', true, 20);
+							html_combobox("pool", gettext('Pool'), $pconfig['pool'], $l_poollist, '', true);
+							html_combobox("compression", gettext('Compression'), $pconfig['compression'], $l_compressionmode, gettext("Controls the compression algorithm used for this dataset. The 'lzjb' compression algorithm is optimized for performance while providing decent data compression. Setting compression to 'On' uses the 'lzjb' compression algorithm. You can specify the 'gzip' level by using the value 'gzip-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'gzip' is equivalent to 'gzip-6'."), true);
+							html_combobox("dedup", gettext('Dedup'), $pconfig['dedup'], $l_dedup, gettext("Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See <a href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide:disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & deduplication</a> wiki article BEFORE using this feature.</b></br>"), true);
+							html_combobox("sync", gettext('Sync'), $pconfig['sync'], $l_sync, gettext('Controls the behavior of synchronous requests.'), true);
+							html_combobox("atime", gettext('Access Time (atime)'), $pconfig['atime'], $l_atime, gettext('Turn access time on or off for this dataset.'), true);
+							html_combobox("aclinherit", gettext('ACL inherit'), $pconfig['aclinherit'], $l_aclinherit, gettext('This attribute determines the behavior of Access Control List inheritance.'), true);
+							html_combobox("aclmode", gettext('ACL mode'), $pconfig['aclmode'], $l_aclmode, gettext('This attribute controls the ACL behavior when a file is created or whenever the mode of a file or a directory is modified.'), true);
+							if ((RECORD_NEW == $mode_record) || (RECORD_NEW_MODIFY == $mode_record)) {
+								html_combobox("casesensitivity", gettext('Case Sensitivity'), $pconfig['casesensitivity'], $l_casesensitivity, gettext('This property indicates whether the file name matching algorithm used by the file system should be casesensitive, caseinsensitive, or allow a combination of both styles of matching'), false);
+							}
+							html_checkbox("canmount", gettext('Canmount'), !empty($pconfig['canmount']) ? true : false, gettext('If this property is disabled, the file system cannot be mounted.'), '', false);
+							html_checkbox("readonly", gettext('Readonly'), !empty($pconfig['readonly']) ? true : false, gettext('Controls whether this dataset can be modified.'), '', false);
+							html_checkbox("xattr", gettext('Extended attributes'), !empty($pconfig['xattr']) ? true : false, gettext('Enable extended attributes for this file system.'), '', false);
+							html_checkbox("snapdir", gettext('Snapshot Visibility'), !empty($pconfig['snapdir']) ? true : false, gettext('If this property is enabled, the snapshots are displayed into .zfs directory.'), '', false);
+							html_inputbox("reservation", gettext('Reservation'), $pconfig['reservation'], gettext("The minimum amount of space guaranteed to a dataset (usually empty). To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."), false, 10);
+							html_inputbox("quota", gettext('Quota'), $pconfig['quota'], gettext("Limits the amount of space a dataset and its descendants can consume. This property enforces a hard limit on the amount of space used. This includes all space consumed by descendants, including file systems and snapshots. To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."), false, 10);
+							html_inputbox("desc", gettext('Description'), $pconfig['desc'], gettext('You may enter a description here for your reference.'), false, 40);
+							html_separator();
+							html_titleline(gettext('Access Restrictions'));
+							html_combobox("owner", gettext('Owner'), $pconfig['accessrestrictions']['owner'], $l_users, '', false);
+							html_combobox("group", gettext('Group'), $pconfig['accessrestrictions']['group'], $l_groups, '', false);
+						?>
 						<tr>
-							<td style="width:22%" valign="top" class="vncell"><?=gettext("Mode");?></td>
+							<td style="width:22%" valign="top" class="vncell"><?=gettext('Mode');?></td>
 							<td style="width:78%" class="vtable">
 								<table width="100%" border="0" cellpadding="0" cellspacing="0">
 									<colgroup>
