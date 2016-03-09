@@ -167,7 +167,7 @@ function enable_change(enable_change) {
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 			    		<?php html_titleline(gettext("Email"));?>
 					<?php html_inputbox("from", gettext("From Email Address"), $pconfig['from'], gettext("From email address for sending system messages."), true, 62);?>
-					<?php html_inputbox("sendto", gettext("To Email Address"), $pconfig['sendto'], gettext("Destination email address. Separate email addresses by semi-colon. "), true, 62);?>
+					<?php html_inputbox("sendto", gettext("To Email Address"), $pconfig['sendto'], gettext("Destination email address. Separate email addresses by semi-colon."), true, 62);?>
 					<?php html_inputbox("server", gettext("SMTP Server"), $pconfig['server'], gettext("Outgoing SMTP mail server address."), true, 62);?>
 					<?php html_inputbox("port", gettext("Port"), $pconfig['port'], gettext("The default SMTP mail server port, e.g. 25 or 587."), true, 5);?>
 					<?php html_combobox("security", gettext("Security"), $pconfig['security'], array("none" => gettext("None"), "ssl" => "SSL", "tls" => "TLS"), "", true);?>
