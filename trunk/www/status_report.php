@@ -191,14 +191,14 @@ function enable_change(enable_change) {
 					<tr>
 						<td width="22%" valign="top" class="vncellreq"><?=gettext("To email");?></td>
 						<td width="78%" class="vtable">
-							<input name="to" type="text" class="formfld" id="to" size="40" value="<?=htmlspecialchars($pconfig['to']);?>" /><br />
+							<input name="to" type="text" class="formfld" id="to" size="74" value="<?=htmlspecialchars($pconfig['to']);?>" /><br />
 							<span class="vexpl"><?=gettext("Destination email address.");?> <?=gettext("Separate email addresses by semi-colon.");?></span>
 						</td>
 					</tr>
 					<tr>
 						<td width="22%" valign="top" class="vncell"><?=gettext("Subject");?></td>
 						<td width="78%" class="vtable">
-							<input name="subject" type="text" class="formfld" id="subject" size="60" value="<?=htmlspecialchars($pconfig['subject']);?>" /><br />
+							<input name="subject" type="text" class="formfld" id="subject" size="74" value="<?=htmlspecialchars($pconfig['subject']);?>" /><br />
 							<span class="vexpl"><?=gettext("The subject of the email.") . " " . gettext("You can use the following parameters for substitution:");?></span><?=gettext("<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>");?>
 						</td>
 					</tr>
@@ -219,7 +219,7 @@ function enable_change(enable_change) {
 <?php
 	$scriptname = $pconfig['report_scriptname'];
 	$scriptpath = "/mnt";
-	$ctrl = new HTMLFileChooser("report_scriptname", "", "$scriptname", "", 60);
+	$ctrl = new HTMLFileChooser("report_scriptname", "", "$scriptname", "", 65);
 	$ctrl->SetRequired(false);
 	$ctrl->SetReadOnly(false);
 	$ctrl->SetPath($scriptpath);
