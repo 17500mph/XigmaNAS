@@ -1,5 +1,5 @@
 PORTNAME=		proftpd
-PORTVERSION=	1.3.5a
+PORTVERSION=	1.3.5b
 PORTREVISION?=  0
 CATEGORIES=		ftp
 COMMENT=		Highly configurable FTP daemon
