@@ -280,7 +280,7 @@ CONFIGURE_ARGS+=	--disable-dnssd
 .endif
 
 .if ${PORT_OPTIONS:MCUPS}
-LIB_DEPENDS+=		libcups.so:${PORTSDIR}/print/cups-client
+LIB_DEPENDS+=		libcups.so:${PORTSDIR}/print/cups
 CONFIGURE_ARGS+=	--enable-cups --enable-iprint
 .else
 CONFIGURE_ARGS+=	--disable-cups --disable-iprint
