@@ -118,6 +118,9 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
 	    <div>Dominik Plaszewski (<a href="mailto:domme555@gmx.net">domme555@gmx.net</a>)<br />
 	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">German translator of the WebGUI</font></em></div><br />
 
+	    <div>Chris Kanatas (<a href="mailto:ckanatas@gmail.com">ckanatas@gmail.com</a>)<br />
+	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">Greek translator of the WebGUI</font></em></div><br />
+
 	    <div>Petros Kyladitis (<a href="mailto:petros.kyladitis@gmail.com">petros.kyladitis@gmail.com</a>)<br />
 	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">Greek translator of the WebGUI</font></em></div><br />
 
