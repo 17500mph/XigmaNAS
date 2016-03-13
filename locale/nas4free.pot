@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-03-09 14:34+0000\n"
+"POT-Creation-Date: 2016-03-13 01:20+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -964,6 +964,9 @@ msgstr ""
 msgid "CPU usage"
 msgstr ""
 
+msgid "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC error)."
+msgstr ""
+
 msgid "Cache"
 msgstr ""
 
@@ -1280,6 +1283,9 @@ msgid "Count of times the link is reset during a data transfer."
 msgstr ""
 
 msgid "Counts the maximum worst erase count on any block."
+msgstr ""
+
+msgid "Counts the number of SATA PHY errors. This value includes all PHY error counts, ex data FIS CRC , code errors, disparity errors, command FIS crc. Value clears upon system power-down."
 msgstr ""
 
 msgid "Create 4KB wrapper (nop device)."
@@ -2417,6 +2423,9 @@ msgid "Enter the port to send the traps to (default 162)."
 msgstr ""
 
 msgid "Enter trap host name."
+msgstr ""
+
+msgid "Erase Fail Count (chip). This parameter indicates a number of flash erase command failures."
 msgstr ""
 
 msgid "Error"
@@ -6763,6 +6772,12 @@ msgid "Tolerated"
 msgstr ""
 
 msgid "Tools"
+msgstr ""
+
+msgid "Total LBAs Read Expanded. The upper 5 bytes of the 12-byte total number of LBAs read from the device. The lower 7 byte value is located at attribute 0xF2."
+msgstr ""
+
+msgid "Total LBAs Written Expanded. The upper 5 bytes of the 12-byte total number of LBAs written to the device. The lower 7 byte value is located at attribute 0xF1."
 msgstr ""
 
 msgid "Total NAND Writes. Raw value reports the number of writes to NAND in 1GB increments."
