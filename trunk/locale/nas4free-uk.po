@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-09 14:34+0000\n"
-"PO-Revision-Date: 2016-02-20 09:08+0000\n"
-"Last-Translator: Balabuha <Unknown>\n"
+"POT-Creation-Date: 2016-03-13 01:20+0000\n"
+"PO-Revision-Date: 2016-03-13 12:31+0000\n"
+"Last-Translator: AndriyM <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-09 14:17+0000\n"
-"X-Generator: Launchpad (build 17936)\n"
+"X-Launchpad-Export-Date: 2016-03-15 18:23+0000\n"
+"X-Generator: Launchpad (build 17939)\n"
 "Language: uk\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -54,15 +54,15 @@ msgstr "Інтерфейс %s"
 
 #, php-format
 msgid "%s already exists as a %s."
-msgstr ""
+msgstr "%s вже існує як %s."
 
 #, php-format
 msgid "%s is already configured as a filesystem."
-msgstr ""
+msgstr "%s вже налаштовано як файлова система."
 
 #, php-format
 msgid "%s is already configured as a volume."
-msgstr ""
+msgstr "%s вже налаштовано як файлова том."
 
 #, php-format
 msgid "%s is too long."
@@ -330,7 +330,7 @@ msgid "A valid systctl MIB value."
 msgstr "правильне значення systctl MIB."
 
 msgid "ACL Inherit"
-msgstr ""
+msgstr "Успадкування ACL"
 
 msgid "ACL Mode"
 msgstr "ACL режим"
@@ -1150,6 +1150,11 @@ msgstr "Температура ЦП"
 msgid "CPU usage"
 msgstr "Використання ЦП"
 
+msgid ""
+"CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
+"error)."
+msgstr ""
+
 msgid "Cache"
 msgstr "Кеш"
 
@@ -1595,6 +1600,12 @@ msgid "Count of times the link is reset during a data transfer."
 msgstr "Кількість обривів зв'язку під час передачі даних."
 
 msgid "Counts the maximum worst erase count on any block."
+msgstr ""
+
+msgid ""
+"Counts the number of SATA PHY errors. This value includes all PHY error "
+"counts, ex data FIS CRC , code errors, disparity errors, command FIS crc. "
+"Value clears upon system power-down."
 msgstr ""
 
 msgid "Create 4KB wrapper (nop device)."
@@ -2827,6 +2838,11 @@ msgstr ""
 msgid "Enter trap host name."
 msgstr ""
 
+msgid ""
+"Erase Fail Count (chip). This parameter indicates a number of flash erase "
+"command failures."
+msgstr ""
+
 msgid "Error"
 msgstr "Помилка"
 
@@ -3608,6 +3624,8 @@ msgid ""
 "Indicates the approximate SSD life left, in terms of program/erase cycles or "
 "Flash blocks currently available for use."
 msgstr ""
+"Вказує на приблизну тривалість життя SSD, що залишилася базуючись на "
+"кількості доступних циклів стирання або доступних блоків флеш пам'яті."
 
 msgid "Info"
 msgstr "Інформація"
@@ -3786,7 +3804,7 @@ msgid "Invalid username or password. Please try again."
 msgstr "Неправильне ім'я користувача або пароль. Спробуйте ще раз."
 
 msgid "Invert Selection"
-msgstr ""
+msgstr "Інвертувати обране"
 
 msgid ""
 "It can be changed from the client side by standard SCSI mode page at any "
@@ -3827,10 +3845,10 @@ msgid "JBOD Information & Status"
 msgstr "Статус та інформація про JBOD"
 
 msgid "Jan"
-msgstr ""
+msgstr "Січ."
 
 msgid "January"
-msgstr ""
+msgstr "Січень"
 
 msgid ""
 "January February March April May June July August September October November "
@@ -3843,22 +3861,22 @@ msgid "Japanese"
 msgstr "Японська"
 
 msgid "Job is locked"
-msgstr ""
+msgstr "Завдання заблоковане"
 
 msgid "Job is marked for deletion"
-msgstr ""
+msgstr "Завдання помічено для видалення"
 
 msgid "Jul"
-msgstr ""
+msgstr "Лип."
 
 msgid "July"
-msgstr ""
+msgstr "Липень"
 
 msgid "Jun"
-msgstr ""
+msgstr "Чер."
 
 msgid "June"
-msgstr ""
+msgstr "Червень"
 
 msgid "Kernel"
 msgstr "Ядро"
@@ -4186,10 +4204,10 @@ msgid "MIB"
 msgstr "MIB"
 
 msgid "MIB is locked"
-msgstr ""
+msgstr "MIB заблоковано"
 
 msgid "MIB is marked for deletion"
-msgstr ""
+msgstr "MIB помічено для видалення"
 
 msgid "MISSING"
 msgstr "ВІДСУТНІЙ"
@@ -4246,10 +4264,10 @@ msgid "Mapping DOS attributes"
 msgstr ""
 
 msgid "Mar"
-msgstr ""
+msgstr "Бер."
 
 msgid "March"
-msgstr ""
+msgstr "Березень"
 
 msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
@@ -4348,7 +4366,7 @@ msgid "Maximum temperature seen (degrees C)"
 msgstr "Максимальне зафіксоване значення температури (градуси Цельсія)"
 
 msgid "May"
-msgstr ""
+msgstr "Травень"
 
 msgid "Media"
 msgstr "Медіа"
@@ -4442,7 +4460,7 @@ msgid "Missing a temporary folder."
 msgstr "Тимчасова директорія відсутня."
 
 msgid "Mixed"
-msgstr ""
+msgstr "Змішаний"
 
 msgid "Mode"
 msgstr "Режим"
@@ -4469,10 +4487,10 @@ msgid "Modules"
 msgstr "Модулі"
 
 msgid "Mon"
-msgstr ""
+msgstr "Пн"
 
 msgid "Monday"
-msgstr ""
+msgstr "Понеділок"
 
 msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
 msgstr "Понеділок Вівторок Середа Четвер П'ятниця Субота Неділя"
@@ -4505,10 +4523,10 @@ msgid "Mounts"
 msgstr "Примонтовані пристрої"
 
 msgid "Move down"
-msgstr ""
+msgstr "Перемістити вниз"
 
 msgid "Move up"
-msgstr ""
+msgstr "Перемістити вгору"
 
 msgid "Music"
 msgstr "Музика"
@@ -4680,10 +4698,14 @@ msgid ""
 "No configured bridge interfaces. Please add new <a href='%s'>bridge "
 "interface</a> first."
 msgstr ""
+"Немає налаштованих bridge-інтерфейсів. Будь ласка спочатку додайте новий <a "
+"href='%s'>bridge-інтерфейс</a>."
 
 #, php-format
 msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
 msgstr ""
+"Немає налаштованих пулів. Будь ласка спочатку додайте нові <a "
+"href='%s'>пули</a>."
 
 #, php-format
 msgid ""
@@ -4821,10 +4843,10 @@ msgid "Notification email from host: %s"
 msgstr "Поштове повідомлення  від хоста: %s"
 
 msgid "Nov"
-msgstr ""
+msgstr "Лист."
 
 msgid "November"
-msgstr ""
+msgstr "Листопад"
 
 msgid "Now"
 msgstr "Зараз"
@@ -4879,10 +4901,10 @@ msgid "Occurrence"
 msgstr "Поява"
 
 msgid "Oct"
-msgstr ""
+msgstr "Жов."
 
 msgid "October"
-msgstr ""
+msgstr "Жовтень"
 
 msgid "Off"
 msgstr "Вимкнено"
@@ -5072,7 +5094,7 @@ msgid "Password for the administrative pages."
 msgstr "Пароль для адміністративних сторінок"
 
 msgid "Password of domain administrator account."
-msgstr ""
+msgstr "Пароль адміністратора домену."
 
 msgid "Password server"
 msgstr "Сервер паролів"
@@ -5085,13 +5107,13 @@ msgid "Password suffix"
 msgstr "Суфікс пароля"
 
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
-msgstr ""
+msgstr "Вставте тут приватний ключ RSA в PEM форматі."
 
 msgid "Paste a signed certificate in X.509 PEM format here."
 msgstr ""
 
 msgid "Paste an private key in PEM format here."
-msgstr ""
+msgstr "Вставте тут приватний ключ в PEM форматі."
 
 msgid "Path"
 msgstr "Шлях"
@@ -5119,7 +5141,7 @@ msgid "Peer port"
 msgstr "Порт вузла"
 
 msgid "Performance Settings"
-msgstr ""
+msgstr "Налаштування продуктивності"
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
@@ -5150,7 +5172,7 @@ msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
 
 msgid "Plain-text"
-msgstr ""
+msgstr "Простий текст"
 
 msgid "Platform"
 msgstr "Платформа"
@@ -5167,7 +5189,7 @@ msgid "Please define the Database directory location."
 msgstr "Будь ласка влажіть директорію де знаходиться база даних."
 
 msgid "Please define the Media library location."
-msgstr ""
+msgstr "Будь ласка вкажіть шлях до медіа-бібліотеки."
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr "Зауважте, що пробіли в іменах шляхів не дозволені."
@@ -5309,7 +5331,7 @@ msgid "Processes"
 msgstr "Процеси"
 
 msgid "Processes Information"
-msgstr ""
+msgstr "Інформація про процес"
 
 msgid "Product ID"
 msgstr "ІД виробу"
@@ -5398,7 +5420,7 @@ msgid "RSYNC Client"
 msgstr "Клієнт RSYNC"
 
 msgid "RSYNC Client Information & Status"
-msgstr ""
+msgstr "Інформація та статус RSYNC клієнта."
 
 msgid "RSYNC events"
 msgstr "Події RSYNC"
@@ -5499,7 +5521,7 @@ msgid "Remaining battery runtime"
 msgstr "Залишок роботи від батареї"
 
 msgid "Remote Address"
-msgstr ""
+msgstr "Віддалена адреса"
 
 msgid "Remote Module (Source)"
 msgstr ""
@@ -5562,7 +5584,7 @@ msgid "Rescan Disks"
 msgstr "Пересканувати диски"
 
 msgid "Rescan database in progress"
-msgstr ""
+msgstr "Триває оновлення бази даних"
 
 msgid "Rescan interval"
 msgstr "Інтервал пересканування"
@@ -5631,7 +5653,7 @@ msgid "Root bind password"
 msgstr ""
 
 msgid "Rotation Rate"
-msgstr ""
+msgstr "Період ротації"
 
 msgid "Round-robin read"
 msgstr "Почергове читання"
@@ -5705,7 +5727,7 @@ msgid ""
 msgstr ""
 
 msgid "SMTP Server"
-msgstr ""
+msgstr "Сервер SMTP"
 
 msgid "SNMP"
 msgstr "SNMP"
@@ -5744,10 +5766,10 @@ msgid ""
 msgstr ""
 
 msgid "Sat"
-msgstr ""
+msgstr "Сб"
 
 msgid "Saturday"
-msgstr ""
+msgstr "Субота"
 
 msgid "Save"
 msgstr "Зберегти"
@@ -5759,7 +5781,7 @@ msgid "Save and Restart"
 msgstr "Зберегти і перезавантажити"
 
 msgid "Save login information in configuration file."
-msgstr ""
+msgstr "Зберегти інформацію для входу в конфігураційному файлі."
 
 msgid "Saved file to"
 msgstr ""
@@ -5826,7 +5848,7 @@ msgid ""
 msgstr ""
 
 msgid "Select a date format."
-msgstr ""
+msgstr "Виберіть формат дати."
 
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Виберіть диск для якого дозволено моніторинг S.M.A.R.T."
@@ -5870,25 +5892,25 @@ msgid "Selected device or label does not exist."
 msgstr ""
 
 msgid "Selected file isn't an valid ISO file."
-msgstr ""
+msgstr "Вибраний файл не є коректним ISO-образом."
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr ""
 
 msgid "Self-tests Management"
-msgstr ""
+msgstr "Керування самотестуванням"
 
 msgid "Send Buffer Size"
-msgstr ""
+msgstr "Розмір вихідного буфера"
 
 msgid "Send Command!"
 msgstr "Надіслати команду!"
 
 msgid "Send Now"
-msgstr ""
+msgstr "Надіслати зараз"
 
 msgid "Send Test Email"
-msgstr ""
+msgstr "Надіслати Тестовий Лист"
 
 msgid "Send a TEST warning email on startup."
 msgstr ""
@@ -5897,22 +5919,22 @@ msgid "Send now"
 msgstr "Надіслати зараз"
 
 msgid "Sensitive"
-msgstr ""
+msgstr "Чутливий"
 
 msgid "Sep"
-msgstr ""
+msgstr "Вер."
 
 msgid "Separate email addresses by semi-colon."
-msgstr ""
+msgstr "Розділяйте емейл адреси символом \";\""
 
 msgid "September"
-msgstr ""
+msgstr "Вересень"
 
 msgid "Serial Console"
 msgstr "Серійна консоль"
 
 msgid "Serial Number"
-msgstr ""
+msgstr "Серійний номер"
 
 msgid "Serial number"
 msgstr "Серійний номер"
@@ -5945,13 +5967,13 @@ msgid "Set additional group memberships for this account."
 msgstr ""
 
 msgid "Set browseable"
-msgstr ""
+msgstr "Доступний для переглядання"
 
 msgid "Set read only"
-msgstr ""
+msgstr "Лише для читання"
 
 msgid "Set share password."
-msgstr ""
+msgstr "Пароль на ресурс"
 
 msgid "Set the account's primary group to the given group."
 msgstr ""
@@ -5970,7 +5992,7 @@ msgid ""
 msgstr ""
 
 msgid "Set title scrolling speed between 0-10 (default 10)."
-msgstr ""
+msgstr "Встановіть швидкість прокрутки заголовка 0-10 (10 за замовчуванням)."
 
 msgid ""
 "Set what user the service will run as (www by default). <br><b><font "
@@ -6007,10 +6029,10 @@ msgid "Share Character Set"
 msgstr ""
 
 msgid "Share Password"
-msgstr ""
+msgstr "Пароль ресурса"
 
 msgid "Share passwords can not be more than 8 characters."
-msgstr ""
+msgstr "Паролі на ресурс не можуть бути довшими за 8 символів."
 
 msgid "Shares"
 msgstr "Спільне"
@@ -6019,10 +6041,10 @@ msgid "Shell"
 msgstr "Командна оболонка"
 
 msgid "Shock During Write."
-msgstr ""
+msgstr "Струс під час запису."
 
 msgid "Show Process Information"
-msgstr ""
+msgstr "Показати інформацію про процес"
 
 msgid "Show RAW UPS Info"
 msgstr "Показати необроблену інформацію БДЖ"
@@ -6122,10 +6144,10 @@ msgid "Source share"
 msgstr ""
 
 msgid "Space Usage"
-msgstr ""
+msgstr "Використання простору"
 
 msgid "Space Used"
-msgstr ""
+msgstr "Простору використано"
 
 msgid ""
 "Space delimited set of IP or CIDR notation that permitted to access the "
@@ -6205,7 +6227,7 @@ msgid "Standard"
 msgstr "Стандартний"
 
 msgid "Standby"
-msgstr ""
+msgstr "Режим очікування"
 
 msgid ""
 "Standby - Check the device unless it is in SLEEP or STANDBY mode. In these "
@@ -6257,7 +6279,7 @@ msgid "Store NTFS acls in Extended Attributes"
 msgstr ""
 
 msgid "Store alternate data streams"
-msgstr ""
+msgstr "Зберігати альтернативні потоки даних"
 
 msgid "Store alternate data streams in Extended Attributes"
 msgstr ""
@@ -6294,10 +6316,10 @@ msgid "Successful."
 msgstr "Успішно."
 
 msgid "Sun"
-msgstr ""
+msgstr "Нд"
 
 msgid "Sunday"
-msgstr ""
+msgstr "Неділя"
 
 msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
 msgstr "Неділя Понеділок Вівторок Середа Четвер П'ятниця Субота"
@@ -6312,7 +6334,7 @@ msgid "Swap Information & Status"
 msgstr ""
 
 msgid "Swap Memory"
-msgstr ""
+msgstr "Пам'ять для свопінгу"
 
 msgid "Swap disabled"
 msgstr "Swap вимкнено"
@@ -6331,22 +6353,23 @@ msgstr "Перемкнути VIP на MASTER"
 
 msgid "Switch off when running on battery and no/low load"
 msgstr ""
+"Вимикати при роботі від батареї, якщо навантаження низьке чи відсутнє"
 
 msgid "Switch to"
 msgstr ""
 
 #, php-format
 msgid "Switch to %s/s"
-msgstr ""
+msgstr "Перемкнути на %s/s"
 
 msgid "Sync"
-msgstr ""
+msgstr "Синхронізувати"
 
 msgid "Synchronization time"
-msgstr ""
+msgstr "Час синхронізації"
 
 msgid "Synchronize"
-msgstr ""
+msgstr "Синхронізувати"
 
 msgid "Syncthing"
 msgstr ""
@@ -6362,10 +6385,10 @@ msgid "System"
 msgstr "Система"
 
 msgid "System Information"
-msgstr ""
+msgstr "Системна інформація"
 
 msgid "System Load"
-msgstr ""
+msgstr "Завантаження системи"
 
 msgid "System bios"
 msgstr "BIOS"
@@ -6383,7 +6406,7 @@ msgid "System log"
 msgstr "Журнал системи"
 
 msgid "System message buffer"
-msgstr ""
+msgstr "Буфер системних повідомлень"
 
 msgid "System time"
 msgstr "Системний час"
@@ -6416,13 +6439,13 @@ msgid "TKIP"
 msgstr "TKIP"
 
 msgid "TLS"
-msgstr ""
+msgstr "TLS"
 
 msgid "TLS mode"
 msgstr "TLS режим"
 
 msgid "TLS only"
-msgstr ""
+msgstr "Лише TLS"
 
 msgid "Tag"
 msgstr "Мітка"
@@ -6439,7 +6462,7 @@ msgid "Tag%d (%s)"
 msgstr "Мітка%d (%s)"
 
 msgid "Tap device"
-msgstr ""
+msgstr "Tap пристрій"
 
 msgid "Tape"
 msgstr "Стрічка"
@@ -6484,7 +6507,7 @@ msgid "Temperature"
 msgstr "Температура"
 
 msgid "Temperature Monitoring"
-msgstr ""
+msgstr "Моніторинг температури"
 
 msgid "Temperature alarm (enabled/disabled)"
 msgstr "Сигналізація перегріву (увімкнено/вимкнено)"
@@ -6533,7 +6556,7 @@ msgid "The IP address of the UPS master."
 msgstr "IP адреса контролера БДЖ."
 
 msgid "The IP address that this hostname represents."
-msgstr ""
+msgstr "IP адреса цього хоста."
 
 #, php-format
 msgid "The MIB '%s' already exist."
@@ -6580,7 +6603,7 @@ msgstr ""
 
 #, php-format
 msgid "The attribute '%s' already exists."
-msgstr ""
+msgstr "Атрибут '%s' вже існує."
 
 #, php-format
 msgid ""
@@ -7773,6 +7796,18 @@ msgstr "Припустимо"
 
 msgid "Tools"
 msgstr "Інструменти"
+
+msgid ""
+"Total LBAs Read Expanded. The upper 5 bytes of the 12-byte total number of "
+"LBAs read from the device. The lower 7 byte value is located at attribute "
+"0xF2."
+msgstr ""
+
+msgid ""
+"Total LBAs Written Expanded. The upper 5 bytes of the 12-byte total number "
+"of LBAs written to the device. The lower 7 byte value is located at "
+"attribute 0xF1."
+msgstr ""
 
 msgid ""
 "Total NAND Writes. Raw value reports the number of writes to NAND in 1GB "
