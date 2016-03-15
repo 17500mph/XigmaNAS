@@ -43,6 +43,7 @@ $sphere_scriptname_child = 'disks_zfs_dataset_edit.php';
 $sphere_header = 'Location: '.$sphere_scriptname;
 $sphere_header_parent = $sphere_header;
 $sphere_notifier = 'zfsdataset';
+$sphere_notifier_processor = 'zfsdataset_process_updatenotification';
 $sphere_array = [];
 $sphere_record = [];
 $checkbox_member_name = 'checkbox_member_array';
@@ -51,9 +52,7 @@ $checkbox_member_record = [];
 $gt_record_add = gettext('Add Dataset');
 $gt_record_mod = gettext('Edit Dataset');
 $gt_record_del = gettext('Dataset is marked for deletion');
-$gt_record_loc = gettext('Dataset is locked');
-$gt_record_mup = gettext('Move up');
-$gt_record_mdn = gettext('Move down');
+$gt_record_loc = gettext('Dataset is protected');
 
 // sunrise: verify if setting exists, otherwise run init tasks
 if (!(isset($config['zfs']['datasets']['dataset']) && is_array($config['zfs']['datasets']['dataset']))) {
@@ -67,7 +66,7 @@ if ($_POST) {
 		$retval = 0;
 		if (!file_exists($d_sysrebootreqd_path)) {
 			// Process notifications
-			$retval |= updatenotify_process($sphere_notifier, 'zfsdataset_process_updatenotification');
+			$retval |= updatenotify_process($sphere_notifier, $sphere_notifier_processor);
 		}
 		$savemsg = get_std_save_message($retval);
 		if ($retval == 0) {
@@ -98,7 +97,51 @@ if ($_POST) {
 		}
 		header($sphere_header);
 		exit;
-	}	
+	}
+	if (isset($_POST['protect_selected_rows']) && $_POST['protect_selected_rows']) {
+		$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
+		$updateconfigfile = false;
+		foreach ($checkbox_member_array as $checkbox_member_record) {
+			if (false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
+				if (!(isset($sphere_array[$index]['protected']))) {
+					$sphere_array[$index]['protected'] = true;
+					$updateconfigfile = true;
+					$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index]['uuid']);
+					if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
+						updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_array[$index]['uuid']);
+					}
+				}
+			}
+		}
+		if ($updateconfigfile) {
+			write_config();
+			$updateconfigfile = false;
+		}
+		header($sphere_header);
+		exit;
+	}
+	if (isset($_POST['unprotect_selected_rows']) && $_POST['unprotect_selected_rows']) {
+		$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
+		$updateconfigfile = false;
+		foreach ($checkbox_member_array as $checkbox_member_record) {
+			if (false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
+				if (isset($sphere_array[$index]['protected'])) {
+					unset($sphere_array[$index]['protected']);
+					$updateconfigfile = true;
+					$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index]['uuid']);
+					if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
+						updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_array[$index]['uuid']);
+					}
+				}
+			}
+		}
+		if ($updateconfigfile) {
+			write_config();
+			$updateconfigfile = false;
+		}
+		header($sphere_header);
+		exit;
+	}
 }
 
 function zfsdataset_process_updatenotification($mode, $data) {
@@ -143,6 +186,8 @@ function disableactionbuttons(ab_disable) {
 	ab_element = document.getElementById('enable_selected_rows'); if ((ab_element != null) && (ab_element.disabled != ab_disable)) { ab_element.disabled = ab_disable; }
 	ab_element = document.getElementById('disable_selected_rows'); if ((ab_element != null) && (ab_element.disabled != ab_disable)) { ab_element.disabled = ab_disable; }
 	ab_element = document.getElementById('delete_selected_rows'); if ((ab_element != null) && (ab_element.disabled != ab_disable)) { ab_element.disabled = ab_disable; }
+	ab_element = document.getElementById('protect_selected_rows'); if ((ab_element != null) && (ab_element.disabled != ab_disable)) { ab_element.disabled = ab_disable; }
+	ab_element = document.getElementById('unprotect_selected_rows'); if ((ab_element != null) && (ab_element.disabled != ab_disable)) { ab_element.disabled = ab_disable; }
 }
 function togglecheckboxesbyname(ego, triggerbyname) {
 	var a_trigger = document.getElementsByName(triggerbyname);
@@ -213,6 +258,8 @@ function controlactionbuttons(ego, triggerbyname) {
 				?>
 				<?php if (updatenotify_exists($sphere_notifier)) { print_config_change_box(); }?>
 				<div id="submit" style="margin-bottom:10px">
+					<input name="protect_selected_rows" id="protect_selected_rows" type="submit" class="formbtn" value="<?=gettext('Protect Selected Datasets');?>" onclick="return confirm('<?=gettext('Do you want to protect selected datasets?');?>')" />
+					<input name="unprotect_selected_rows" id="unprotect_selected_rows" type="submit" class="formbtn" value="<?=gettext('Unprotect Selected Datasets');?>" onclick="return confirm('<?=gettext('Do you want to unprotect selected datasets?');?>')" />
 					<input name="delete_selected_rows" id="delete_selected_rows" type="submit" class="formbtn" value="<?=gettext('Delete Selected Datasets');?>" onclick="return confirm('<?=gettext('Do you want to delete selected datasets?');?>')" />
 				</div>
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
