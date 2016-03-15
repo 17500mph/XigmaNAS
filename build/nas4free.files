@@ -1053,46 +1053,41 @@ etc/defaults/devfs.rules
 etc/defaults/rc.conf
 
 ####### contents of /etc/rc.d
-etc/rc.d/LOGIN
-etc/rc.d/local
-#etc/rc.d/early.sh
 etc/rc.d/adjkerntz
-etc/rc.d/securelevel
-etc/rc.d/dhclient
-etc/rc.d/netoptions
-etc/rc.d/power_profile
-#etc/rc.d/network_ipv6
-#etc/rc.d/auto_linklocal
-etc/rc.d/FILESYSTEMS
-etc/rc.d/ip6addrctl
-etc/rc.d/random
-etc/rc.d/postrandom
-etc/rc.d/swap
-#etc/rc.d/swaplate
-#etc/rc.d/ip6fw
 etc/rc.d/devd
 etc/rc.d/devfs
+etc/rc.d/dhclient
 etc/rc.d/dmesg
+etc/rc.d/FILESYSTEMS
 etc/rc.d/hostid
+etc/rc.d/ip6addrctl
 etc/rc.d/jail
+etc/rc.d/local
+etc/rc.d/LOGIN
 etc/rc.d/netif
+etc/rc.d/netoptions
 etc/rc.d/netwait
 etc/rc.d/nfscbd
 etc/rc.d/nfsuserd
+etc/rc.d/postrandom
+etc/rc.d/power_profile
+etc/rc.d/random
+etc/rc.d/securelevel
+etc/rc.d/swap
 
 ####### contents of /usr/share/snmp/defs
 usr/share/snmp/defs/atm_freebsd.def
-usr/share/snmp/defs/bridge_tree.def
-usr/share/snmp/defs/mibII_tree.def
-usr/share/snmp/defs/pf_tree.def
 usr/share/snmp/defs/atm_tree.def
+usr/share/snmp/defs/bridge_tree.def
 usr/share/snmp/defs/hostres_tree.def
+usr/share/snmp/defs/mibII_tree.def
 usr/share/snmp/defs/netgraph_tree.def
+usr/share/snmp/defs/pf_tree.def
 usr/share/snmp/defs/tree.def
 
 ####### contents of /usr/share/snmp/mibs
-usr/share/snmp/mibs/BEGEMOT-ATM-FREEBSD-MIB.txt
 usr/share/snmp/mibs/BEGEMOT-ATM.txt
+usr/share/snmp/mibs/BEGEMOT-ATM-FREEBSD-MIB.txt
 usr/share/snmp/mibs/BEGEMOT-BRIDGE-MIB.txt
 usr/share/snmp/mibs/BEGEMOT-HOSTRES-MIB.txt
 usr/share/snmp/mibs/BEGEMOT-IP-MIB.txt
