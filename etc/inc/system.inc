@@ -459,7 +459,7 @@ function get_datetime_locale($timestamp = null, $format = null) {
 	global $config;
 	$retval = '';
 	$timestamp = ($timestamp === null) ? shell_exec('date "+%s"') : $timestamp;
-	$format = ($format === null) ? (isset($config['system']['datetimeformat']) ? $config['system']['datetimeformat'] : 'D M d H:m:i T Y') : $format;
+	$format = ($format === null) ? (isset($config['system']['datetimeformat']) ? $config['system']['datetimeformat'] : 'D M d H:i:s T Y') : $format;
 	$datetime_object = new DateTime();
 	$datetime_object->setTimestamp($timestamp);
 	$format_symbols = ['D','l','M','F'];
