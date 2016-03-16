@@ -112,6 +112,30 @@ function check_firmware_version($locale) {
 	return null;
 }
 
+function simplexml_load_file_from_url($url, $timeout = 15) {
+	if (false !== ($ch = curl_init($url))) { // get handle
+		curl_setopt_array($ch, [
+			CURLOPT_HEADER => false,
+			CURLOPT_FOLLOWLOCATION => true, // follow location
+			CURLOPT_RETURNTRANSFER => true, // return content
+			CURLOPT_SSL_VERIFYPEER => false, // do not verify certificate of peer XXX this should be changed
+			CURLOPT_CONNECTTIMEOUT => (int)$timeout // set connection and read timeout
+		]);
+		$data = curl_exec($ch);
+		if (curl_errno($ch)) {
+//			write_log('CURL error: '.curl_error($ch)); // write error to log
+		} else {
+			curl_close($ch);
+			if (false !== $data) { // just to be on the safe side
+				return simplexml_load_string($data); // return xml structure
+			}
+		}
+	} else {
+//		write_log('CURL failed to get handle.'); // write error to log
+	}
+	return false;
+}
+
 function get_path_version($rss) {
 	$version = get_product_version();
 
@@ -124,24 +148,21 @@ function get_path_version($rss) {
 		return $resp;
 	}
 
-	$xml = @simplexml_load_file($rss);
+	$xml = simplexml_load_file_from_url($rss);
 	if (empty($xml)) return $resp;
 	if (empty($xml->channel)) return $resp;
 	foreach ($xml->channel->item as $item) {
 		$title = $item->title;
 		$parts = pathinfo($title);
 		if ($parts['dirname'] === "/") {
-			if (preg_match("/^.*(\d+)\.(\d+)\.(\d)\.(\d).*$/",
-			    $parts['basename'], $m)) {
-			    	$os_ver2 = $m[1] * 1000 + $m[2];
+			if (preg_match("/^.*(\d+)\.(\d+)\.(\d)\.(\d).*$/", $parts['basename'], $m)) {
+				$os_ver2 = $m[1] * 1000 + $m[2];
 				$pd_ver2 = $m[3] * 1000 + $m[4];
-				$rss_version = sprintf("%d.%d.%d.%d",
-				    $m[1], $m[2], $m[3], $m[4]);
+				$rss_version = sprintf("%d.%d.%d.%d", $m[1], $m[2], $m[3], $m[4]);
 				// Compare with rss version, equal or greater?
-				if ($os_ver2 > $os_ver
-				    || ($os_ver2 == $os_ver && $pd_ver2 >= $pd_ver)) {
-				    $resp = $rss_version;
-				    break;
+				if ($os_ver2 > $os_ver || ($os_ver2 == $os_ver && $pd_ver2 >= $pd_ver)) {
+					$resp = $rss_version;
+					break;
 				}
 			}
 		}
@@ -162,7 +183,7 @@ function get_latest_file($rss) {
 	$ext2 = "xz";
 
 	$resp = "";
-	$xml = @simplexml_load_file($rss);
+	$xml = simplexml_load_file_from_url($rss); // @simplexml_load_file($rss);
 	if (empty($xml)) return $resp;
 	if (empty($xml->channel)) return $resp;
 	foreach ($xml->channel->item as $item) {
@@ -183,8 +204,7 @@ function get_latest_file($rss) {
 
 		if (empty($parts['extension']))
 			continue;
-		if (strcasecmp($parts['extension'], $ext) != 0
-		    && strcasecmp($parts['extension'], $ext2) != 0)
+		if (strcasecmp($parts['extension'], $ext) != 0 && strcasecmp($parts['extension'], $ext2) != 0)
 			continue;
 		$filename = $parts['filename'];
 		$fullname = $parts['filename'].".".$parts['extension'];
@@ -192,14 +212,10 @@ function get_latest_file($rss) {
 		if (preg_match("/^{$product}-{$platform}-(.*?)\.(\d+)(\.img)?$/", $filename, $m)) {
 			$filever = $m[1];
 			$filerev = $m[2];
-			if ($version < $filever
-			    || ($version == $filever && $revision < $filerev)) {
-				$resp .= sprintf("<a href=\"%s\" title=\"%s\" target=\"_blank\">%s</a> (%s)",
-					htmlspecialchars($link), htmlspecialchars($title),
-					htmlspecialchars($fullname), htmlspecialchars($date));
+			if ($version < $filever || ($version == $filever && $revision < $filerev)) {
+				$resp .= sprintf("<a href=\"%s\" title=\"%s\" target=\"_blank\">%s</a> (%s)", htmlspecialchars($link), htmlspecialchars($title), htmlspecialchars($fullname), htmlspecialchars($date));
 			} else {
-				$resp .= sprintf("%s (%s)", htmlspecialchars($fullname),
-					htmlspecialchars($date));
+				$resp .= sprintf("%s (%s)", htmlspecialchars($fullname), htmlspecialchars($date));
 			}
 			break;
 		}
@@ -340,67 +356,68 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 ?>
 <?php include("fbegin.inc");?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td class="tabcont">
+	<tr>
+		<td class="tabcont">
 			<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
 			<?php if (!empty($errormsg)) print_error_box($errormsg); ?>
 			<?php if (!empty($savemsg)) print_info_box($savemsg); ?>
 			<table width="100%" border="0" cellpadding="6" cellspacing="0">
-			<?php html_titleline(gettext("Firmware"));?>
-			<?php html_text("Current version", gettext("Current Version:"), sprintf("%s %s (%s)", get_product_name(), get_product_version(), get_product_revision()));?>
-			<?php html_separator();?>
-			<?php if (isset($fwinfo) && $fwinfo) {
-				html_titleline(gettext("Online"));
-				echo "<tr id='fwinfo'><td class='vtable' colspan='2'>";
-				echo "{$fwinfo}";
-				echo "</td></tr>\n";
-				html_separator();
-			      }
-			?>
+				<?php html_titleline(gettext("Firmware"));?>
+				<?php html_text("Current version", gettext("Current Version:"), sprintf("%s %s (%s)", get_product_name(), get_product_version(), get_product_revision()));?>
+				<?php html_separator();?>
+				<?php if (isset($fwinfo) && $fwinfo) {
+						html_titleline(gettext("Online"));
+						echo "<tr id='fwinfo'><td class='vtable' colspan='2'>";
+						echo "{$fwinfo}";
+						echo "</td></tr>\n";
+						html_separator();
+					}
+				?>
 			</table>
 			<?php if (!in_array($g['platform'], $fwupplatforms)): ?>
-			<?php print_error_box(gettext("Firmware uploading is not supported on this platform."));?>
+				<?php print_error_box(gettext("Firmware uploading is not supported on this platform."));?>
 			<?php elseif (!empty($sig_warning) && empty($input_errors)): ?>
-			<form action="system_firmware.php" method="post">
-			<?php
-			$sig_warning = "<strong>" . $sig_warning . "</strong><br />".gettext("This means that the firmware you flashed is not an official/supported firmware and may lead to unexpected behavior or security compromises. Only install firmwares that come from sources that you trust, and make sure that the firmware has not been tampered with.<br /><br />Do you want to install this firmware anyway (on your own risk)?");
-			print_info_box($sig_warning);
-			?>
-			<input name="sig_override" type="submit" class="formbtn" id="sig_override" value=" Yes ">
-			<input name="sig_no" type="submit" class="formbtn" id="sig_no" value=" No ">
-			<?php include("formend.inc");?>
-			</form>
+				<form action="system_firmware.php" method="post">
+					<?php
+						$sig_warning = "<strong>" . $sig_warning . "</strong><br />".gettext("This means that the firmware you flashed is not an official/supported firmware and may lead to unexpected behavior or security compromises. Only install firmwares that come from sources that you trust, and make sure that the firmware has not been tampered with.<br /><br />Do you want to install this firmware anyway (on your own risk)?");
+						print_info_box($sig_warning);
+					?>
+					<input name="sig_override" type="submit" class="formbtn" id="sig_override" value=" Yes ">
+					<input name="sig_no" type="submit" class="formbtn" id="sig_no" value=" No ">
+					<?php include("formend.inc");?>
+				</form>
 			<?php else:?>
-			<?php if ($part1ok): ?>
-			<?php if (!file_exists($d_firmwarelock_path)):?>
-			<form action="system_firmware.php" method="post" enctype="multipart/form-data">
-				<?php if (!file_exists($d_sysrebootreqd_path)):?>
-					<?php if (!file_exists($d_fwupenabled_path)):?>
-					<div id="submit">
-					<input name="Submit" id="Enable" type="submit" class="formbtn" value="<?=gettext("Enable Firmware Update");?>" />
-					</div>
-					<?php else:?>
-					<div id="submit">
-					<input name="Submit" id="Disable" type="submit" class="formbtn" value="<?=gettext("Disable Firmware Update");?>" />
-					</div>
-					<div id="submit">
-					<strong><?=gettext("Select firmware:");?> </strong>&nbsp;<input name="ulfile" type="file" class="formfld" size="40" />
-					</div>
-					<div id="submit">
-					<input name="Submit" id="Upgrade" type="submit" class="formbtn" value="<?=gettext("Upgrade Firmware");?>" />
-					</div>
-					<br />
-					<div id="remarks">
-					<?php html_remark("warning", gettext("Warning"), sprintf(gettext("DO NOT abort the firmware upgrade process once it has started.<br />DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br />It is recommended that you <a href='%s'>Backup</a> the server configuration before doing a upgrade."), get_product_name(), $g['arch'], "system_backup.php"));?>
-					</div>
+				<?php if ($part1ok): ?>
+					<?php if (!file_exists($d_firmwarelock_path)):?>
+					<form action="system_firmware.php" method="post" enctype="multipart/form-data">
+						<?php if (!file_exists($d_sysrebootreqd_path)):?>
+								<?php if (!file_exists($d_fwupenabled_path)):?>
+									<div id="submit">
+										<input name="Submit" id="Enable" type="submit" class="formbtn" value="<?=gettext("Enable Firmware Update");?>" />
+									</div>
+								<?php else:?>
+									<div id="submit">
+										<input name="Submit" id="Disable" type="submit" class="formbtn" value="<?=gettext("Disable Firmware Update");?>" />
+									</div>
+									<div id="submit">
+										<strong><?=gettext("Select firmware:");?> </strong>&nbsp;<input name="ulfile" type="file" class="formfld" size="40" />
+									</div>
+									<div id="submit">
+										<input name="Submit" id="Upgrade" type="submit" class="formbtn" value="<?=gettext("Upgrade Firmware");?>" />
+									</div>
+									<br />
+									<div id="remarks">
+										<?php html_remark("warning", gettext("Warning"), sprintf(gettext("DO NOT abort the firmware upgrade process once it has started.<br />DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br />It is recommended that you <a href='%s'>Backup</a> the server configuration before doing a upgrade."), get_product_name(), $g['arch'], "system_backup.php"));?>
+									</div>
+								<?php endif;?>
+							<?php else:?>
+								<strong><?=sprintf(gettext("You must <a href='%s'>reboot</a> the system before you can upgrade the firmware."), "reboot.php");?></strong>
+							<?php endif;?>
+							<?php include("formend.inc");?>
+						</form>
 					<?php endif;?>
-				<?php else:?>
-				<strong><?=sprintf(gettext("You must <a href='%s'>reboot</a> the system before you can upgrade the firmware."), "reboot.php");?></strong>
 				<?php endif;?>
-				<?php include("formend.inc");?>
-			</form>
 			<?php endif;?>
-			<?php endif; endif;?>
 		</td>
 	</tr>
 </table>
