@@ -46,6 +46,7 @@ proftpd_maxinstances=${proftpd_maxinstances:-"none"}
 proftpd_defaulttransfermode=${proftpd_defaulttransfermode:-"ascii"}
 proftpd_deferwelcome=${proftpd_deferwelcome:-"off"}
 proftpd_anonymousrootdir=${proftpd_anonymousrootdir:-"/mnt"}
+proftpd_sysloglevel=${proftpd_sysloglevel:-"notice"}
 proftpd_multilinerfc2228=${proftpd_multilinerfc2228:-"off"}
 proftpd_timeoutlogin=${proftpd_timeoutlogin:-"300"}
 proftpd_timeoutnotransfer=${proftpd_timeoutnotransfer:-"300"}
@@ -140,6 +141,7 @@ proftpd_mkconf()
 		-i "string-length(filemask) = 0 and string-length(directorymask) > 0" -v "concat('Umask ${proftpd_umaskfile} ',directorymask)" -n -b \
 		-i "string-length(filemask) = 0 and string-length(directorymask) = 0" -o "Umask ${proftpd_umaskfile} ${proftpd_umaskdirectory}" -n -b \
 		-o "SyslogFacility ftp" -n \
+		-o "SyslogLevel ${proftpd_sysloglevel}" -n \
 		-o "MultilineRFC2228 ${proftpd_multilinerfc2228}" -n \
 		-o "DisplayLogin ${proftpd_displaylogin}" -n \
 		-o "DeferWelcome ${proftpd_deferwelcome}" -n \
