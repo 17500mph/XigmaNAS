@@ -2,7 +2,7 @@ NAS4Free 10.2.0.2 - Prester
 ---------------------------
 
 Changes:
-- Upgrade to FreeBSD 10.2-RELEASE-P13.
+- Upgrade to FreeBSD 10.2-RELEASE-P14.
 - Add Mellanox ConnectX-2 EN driver module. (x64 only)
 - Add Auxiliary parameters in Samba AD.
 - Add bhyve and related files. (CLI only)
@@ -99,6 +99,7 @@ Fixes:
 - Fix AFP share is not advised.
 - Fix webserver user logins.
 - Fix wrong path (ticket #228).
+- Fix index.php shows wrong time. (ticket 279)
 
 Note:
 - iperf2 has been replaced for iperf3 because of inconsistent results for UDP above 2Gbps.
