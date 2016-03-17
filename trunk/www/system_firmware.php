@@ -112,26 +112,26 @@ function check_firmware_version($locale) {
 	return null;
 }
 
-function simplexml_load_file_from_url($url, $timeout = 15) {
+function simplexml_load_file_from_url($url, $timeout = 5) {
 	if (false !== ($ch = curl_init($url))) { // get handle
 		curl_setopt_array($ch, [
 			CURLOPT_HEADER => false,
 			CURLOPT_FOLLOWLOCATION => true, // follow location
 			CURLOPT_RETURNTRANSFER => true, // return content
-			CURLOPT_SSL_VERIFYPEER => false, // do not verify certificate of peer XXX this should be changed
+			CURLOPT_SSL_VERIFYPEER => true, // verify certificate of peer
+			CURLOPT_CAPATH => '/etc/ssl', // certificate directory
+			CURLOPT_CAINFO => '/etc/ssl/cert.pem', // root certificates from the Mozilla project
 			CURLOPT_CONNECTTIMEOUT => (int)$timeout // set connection and read timeout
 		]);
 		$data = curl_exec($ch);
 		if (curl_errno($ch)) {
-//			write_log('CURL error: '.curl_error($ch)); // write error to log
+			write_log('CURL error: '.curl_error($ch)); // write error to log
 		} else {
 			curl_close($ch);
 			if (false !== $data) { // just to be on the safe side
 				return simplexml_load_string($data); // return xml structure
 			}
 		}
-	} else {
-//		write_log('CURL failed to get handle.'); // write error to log
 	}
 	return false;
 }
