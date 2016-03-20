@@ -315,7 +315,7 @@ function powerd_change() {
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-			    		<?php html_titleline(gettext("WebGUI"));?>
+			    		<?php html_titleline(gettext("System Settings"));?>
 					<?php html_checkbox("zeroconf", gettext("Zeroconf/Bonjour"), !empty($pconfig['zeroconf']) ? true : false, gettext("Enable Zeroconf/Bonjour to advertise services of this device."));?>
 					<?php html_checkbox("disablefm", gettext("File Manager"), !empty($pconfig['disablefm']) ? true : false, gettext("Disable file manager completely."));?>
 					<?php if ("full" !== $g['platform']):?>
