@@ -12,6 +12,7 @@
 		<username>admin</username>
 		<password>$6$HXPTA2l3EVGgRSvw$s6iifSRgYcHBTi5MzmjGRS6wE1N.NyoIDVVCcxnE0QnlLJXisGffnwTNON/l1P6rYpFoISriJrFvh.aEhfEo3.</password>
 		<timezone>Etc/UTC</timezone>
+		<datetimeformat>l F d H:i:s T Y</datetimeformat>
 		<language>en_US</language>
 		<ntp>
 			<!-- <enable/> -->
@@ -90,6 +91,13 @@
 		<loaderconf>
 			<param>
 				<!-- <enable/> -->
+				<uuid>1f7c3fcd-402a-437f-bdab-cd3cb3511ef6</uuid>
+				<name>arcsas_load</name>
+				<value>YES</value>
+				<comment>Areca non-RAID HBAs ARC-1300/ARC-1320 series Driver</comment>
+			</param>		
+			<param>
+				<!-- <enable/> -->
 				<uuid>d68b8192-ca70-45ad-b312-c61715ac1c27</uuid>
 				<name>ipmi_load</name>
 				<value>YES</value>
@@ -108,6 +116,13 @@
 				<name>vfs.zfs.arc_min</name>
 				<value>1G</value>
 				<comment>ZFS minimum ARC size</comment>
+			</param>
+			<param>
+				<!-- <enable/> -->
+				<uuid>c527bec2-7829-49d8-9ca8-7c2e62842db1</uuid>
+				<name>vfs.zfs.l2arc_noprefetch</name>
+				<value>0</value>
+				<comment>Allow streaming/sequential reads to be cached</comment>
 			</param>
 			<param>
 				<!-- <enable/> -->
