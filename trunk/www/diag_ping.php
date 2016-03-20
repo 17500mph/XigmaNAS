@@ -9,10 +9,6 @@
 	Portions of freenas (http://www.freenas.org).
 	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
 	All rights reserved.
-	
-	Portions of m0n0wall (http://m0n0.ch/wall).
-	Copyright (c) 2003-2006 Manuel Kasper <mk@neon1.net>.
-	All rights reserved.
 
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
@@ -91,6 +87,7 @@ function get_interface_addr($ifdescr) {
 			<form action="diag_ping.php" method="post" name="iform" id="iform">
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
+					<?php html_titleline(gettext("Ping Test"));?>
 					<?php html_inputbox("host", gettext("Host"), $host, gettext("Destination host name or IP number."), true, 20);?>
 					<?php html_interfacecombobox("interface", gettext("Interface"), !empty($interface) ? $interface : "", gettext("Use the following IP address as the source address in outgoing packets."), true);?>
 					<?php $a_count = array(); for ($i = 1; $i <= 10; $i++) { $a_count[$i] = $i; }?>

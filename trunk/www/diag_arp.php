@@ -10,10 +10,6 @@
 	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
 	All rights reserved.
 
-	Portions of m0n0wall (http://m0n0.ch/wall).
-	Copyright (c) 2003-2006 Manuel Kasper <mk@neon1.net>.
-	All rights reserved.
-
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
@@ -41,7 +37,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Diagnostics"), gettext("ARP tables"));
+$pgtitle = array(gettext("Diagnostics"), gettext("ARP Tables"));
 
 if (isset($_GET['id']))
   $id = $_GET['id'];
@@ -210,7 +206,11 @@ function get_HostName($mac, $ip) {
   <tr>
     <td class="tabcont">
 			<table width="100%" border="0" cellpadding="0" cellspacing="0">
-			  <tr>
+				<?php html_titleline(gettext("ARP Tables List"));?>
+				<tr>
+			     <td>
+			<tr>
+			<table width="100%" border="0" cellpadding="0" cellspacing="0"></br>
 			    <td class="listhdrlr"><?=gettext("IP address");?></td>
 			    <td class="listhdrr"><?=gettext("MAC address");?></td>
 			    <td class="listhdrr"><?=gettext("Hostname");?></td>
