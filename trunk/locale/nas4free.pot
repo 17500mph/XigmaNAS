@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-03-13 01:20+0000\n"
+"POT-Creation-Date: 2016-03-21 10:27+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -268,13 +268,13 @@ msgstr ""
 msgid "ARP Tables"
 msgstr ""
 
-msgid "ARP tables"
+msgid "ARP Tables List"
 msgstr ""
 
 msgid "ATTRIBUTE NAME"
 msgstr ""
 
-msgid "Accept remote syslog messages"
+msgid "Accept remote syslog messages."
 msgstr ""
 
 msgid "Access"
@@ -490,6 +490,9 @@ msgid "Airflow temperature on Western Digital HDs (Same as temp. , but current v
 msgstr ""
 
 msgid "Albanian"
+msgstr ""
+
+msgid "Alert Level"
 msgstr ""
 
 msgid "All"
@@ -1339,6 +1342,9 @@ msgstr ""
 msgid "Critical"
 msgstr ""
 
+msgid "Critical Error Level"
+msgstr ""
+
 msgid "Cron"
 msgstr ""
 
@@ -1451,10 +1457,10 @@ msgstr ""
 msgid "Dataset"
 msgstr ""
 
-msgid "Dataset is locked"
+msgid "Dataset is marked for deletion"
 msgstr ""
 
-msgid "Dataset is marked for deletion"
+msgid "Dataset is protected"
 msgstr ""
 
 msgid "Datasets"
@@ -1470,6 +1476,9 @@ msgid "Days"
 msgstr ""
 
 msgid "Debug"
+msgstr ""
+
+msgid "Debug Level"
 msgstr ""
 
 msgid "Dec"
@@ -1787,7 +1796,7 @@ msgstr ""
 msgid "Disable speaker beep on startup and shutdown."
 msgstr ""
 
-msgid "Disable the compression of repeated line"
+msgid "Disable the compression of repeated line."
 msgstr ""
 
 msgid "Disabled"
@@ -2184,6 +2193,9 @@ msgstr ""
 msgid "Email Report"
 msgstr ""
 
+msgid "Emergency Level"
+msgstr ""
+
 msgid "Empty as default."
 msgstr ""
 
@@ -2337,9 +2349,6 @@ msgstr ""
 msgid "Enable store DOS attributes"
 msgstr ""
 
-msgid "Enable syslog'ing to remote syslog server"
-msgstr ""
-
 msgid "Enable the ident protocol (RFC1413)."
 msgstr ""
 
@@ -2431,11 +2440,17 @@ msgstr ""
 msgid "Error"
 msgstr ""
 
+msgid "Error Level"
+msgstr ""
+
 #, php-format
 msgid "Error: The changes could not be applied (error code %s)."
 msgstr ""
 
 msgid "Event"
+msgstr ""
+
+msgid "Event selection"
 msgstr ""
 
 msgid "Execute"
@@ -2978,7 +2993,7 @@ msgstr ""
 msgid "IP address"
 msgstr ""
 
-msgid "IP address of remote syslog server"
+msgid "IP address of remote syslog server."
 msgstr ""
 
 #, php-format
@@ -3120,6 +3135,9 @@ msgid "Indicates the approximate SSD life left, in terms of program/erase cycles
 msgstr ""
 
 msgid "Info"
+msgstr ""
+
+msgid "Info Level"
 msgstr ""
 
 msgid "Informal"
@@ -3574,7 +3592,13 @@ msgstr ""
 msgid "Log Level"
 msgstr ""
 
+msgid "Log Settings"
+msgstr ""
+
 msgid "Log level"
+msgstr ""
+
+msgid "Log order"
 msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
@@ -3708,6 +3732,9 @@ msgid "Masquerade address"
 msgstr ""
 
 msgid "Max Protocol"
+msgstr ""
+
+msgid "Max entries"
 msgstr ""
 
 msgid "Max. TTL"
@@ -4211,6 +4238,9 @@ msgstr ""
 msgid "Nothing to synchronize"
 msgstr ""
 
+msgid "Notice Level"
+msgstr ""
+
 #, php-format
 msgid "Notification email from host: %s"
 msgstr ""
@@ -4512,6 +4542,9 @@ msgid "Pictures"
 msgstr ""
 
 msgid "Ping"
+msgstr ""
+
+msgid "Ping Test"
 msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
@@ -4865,6 +4898,9 @@ msgstr ""
 msgid "Remote Rsync Server"
 msgstr ""
 
+msgid "Remote Syslog Server"
+msgstr ""
+
 msgid "Remote module (source)"
 msgstr ""
 
@@ -4877,7 +4913,7 @@ msgstr ""
 msgid "Remote rsync daemon"
 msgstr ""
 
-msgid "Remote syslog server"
+msgid "Remote syslog messages"
 msgstr ""
 
 msgid "Removable"
@@ -4925,7 +4961,13 @@ msgstr ""
 msgid "Resolve"
 msgstr ""
 
+msgid "Resolve IP"
+msgstr ""
+
 msgid "Resolve IP addresses to hostnames"
+msgstr ""
+
+msgid "Resolve IP addresses to hostnames."
 msgstr ""
 
 msgid "Resource"
@@ -5348,7 +5390,7 @@ msgstr ""
 msgid "Show UPS Information"
 msgstr ""
 
-msgid "Show log entries in reverse order (newest entries on top)"
+msgid "Show log entries in reverse order (newest entries on top)."
 msgstr ""
 
 msgid "Shutdown"
@@ -5646,6 +5688,9 @@ msgstr ""
 msgid "Syncthing"
 msgstr ""
 
+msgid "Syslog Level"
+msgstr ""
+
 #, php-format
 msgid "Syslog sends UDP datagrams to port 514 on the specified remote syslog server. Be sure to set syslogd on the remote server to accept syslog messages from this server."
 msgstr ""
@@ -5657,6 +5702,9 @@ msgid "System Information"
 msgstr ""
 
 msgid "System Load"
+msgstr ""
+
+msgid "System Settings"
 msgstr ""
 
 msgid "System bios"
@@ -6809,6 +6857,9 @@ msgstr ""
 msgid "Traceroute"
 msgstr ""
 
+msgid "Traceroute Test"
+msgstr ""
+
 msgid "Traceroute may take a while to complete. You may hit the Stop button on your browser at any time to see the progress of failed traceroutes."
 msgstr ""
 
@@ -7284,6 +7335,9 @@ msgid "Wake On LAN"
 msgstr ""
 
 msgid "Warning"
+msgstr ""
+
+msgid "Warning Level"
 msgstr ""
 
 msgid "Warning: You are going to delete a RAID volume. All data will get lost and can not be recovered."
