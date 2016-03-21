@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-13 01:20+0000\n"
+"POT-Creation-Date: 2016-03-21 10:27+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: Jānis Marks Gailis <jm-gailis@fai-vianet.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-15 18:22+0000\n"
-"X-Generator: Launchpad (build 17939)\n"
+"X-Launchpad-Export-Date: 2016-03-21 14:08+0000\n"
+"X-Generator: Launchpad (build 17947)\n"
 "X-Poedit-Country: LATVIA\n"
 "Language: \n"
 "X-Poedit-Language: Latvian\n"
@@ -367,13 +367,13 @@ msgstr ""
 msgid "ARP Tables"
 msgstr "ARP Tabulas"
 
-msgid "ARP tables"
-msgstr "ARP Tabulas"
+msgid "ARP Tables List"
+msgstr ""
 
 msgid "ATTRIBUTE NAME"
 msgstr ""
 
-msgid "Accept remote syslog messages"
+msgid "Accept remote syslog messages."
 msgstr ""
 
 msgid "Access"
@@ -605,6 +605,9 @@ msgstr ""
 
 msgid "Albanian"
 msgstr "Albāņu"
+
+msgid "Alert Level"
+msgstr ""
 
 msgid "All"
 msgstr "Viss"
@@ -1596,6 +1599,9 @@ msgstr "Veidotāji"
 msgid "Critical"
 msgstr "Kritisks"
 
+msgid "Critical Error Level"
+msgstr ""
+
 msgid "Cron"
 msgstr "Cron"
 
@@ -1713,10 +1719,10 @@ msgstr "Datubāzes mape"
 msgid "Dataset"
 msgstr "Datu sējums"
 
-msgid "Dataset is locked"
+msgid "Dataset is marked for deletion"
 msgstr ""
 
-msgid "Dataset is marked for deletion"
+msgid "Dataset is protected"
 msgstr ""
 
 msgid "Datasets"
@@ -1733,6 +1739,9 @@ msgstr "Dienas"
 
 msgid "Debug"
 msgstr "Atkļūdot"
+
+msgid "Debug Level"
+msgstr ""
 
 msgid "Dec"
 msgstr ""
@@ -2067,7 +2076,7 @@ msgstr ""
 msgid "Disable speaker beep on startup and shutdown."
 msgstr ""
 
-msgid "Disable the compression of repeated line"
+msgid "Disable the compression of repeated line."
 msgstr ""
 
 msgid "Disabled"
@@ -2486,6 +2495,9 @@ msgstr "E-pasts"
 msgid "Email Report"
 msgstr "E-pasta pārskats"
 
+msgid "Emergency Level"
+msgstr ""
+
 msgid "Empty as default."
 msgstr ""
 
@@ -2653,9 +2665,6 @@ msgstr ""
 msgid "Enable store DOS attributes"
 msgstr "Iespējot DOS atribūtu glabāšanu"
 
-msgid "Enable syslog'ing to remote syslog server"
-msgstr "Iespējot syslogošanu uz atāla syslog servera."
-
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Iespējot identitātes protokolu (RFC1413)"
 
@@ -2769,12 +2778,18 @@ msgstr ""
 msgid "Error"
 msgstr "Kļūda"
 
+msgid "Error Level"
+msgstr ""
+
 #, php-format
 msgid "Error: The changes could not be applied (error code %s)."
 msgstr "Kļūda: Izmaiņas nevar tikt veiktas (kļūdas kods %s)."
 
 msgid "Event"
 msgstr "Notikums"
+
+msgid "Event selection"
+msgstr ""
 
 msgid "Execute"
 msgstr "Izpildīt"
@@ -3363,8 +3378,8 @@ msgstr ""
 msgid "IP address"
 msgstr "IP adrese"
 
-msgid "IP address of remote syslog server"
-msgstr "Attālinātā syslog servera IP adrese"
+msgid "IP address of remote syslog server."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -3555,6 +3570,9 @@ msgstr ""
 
 msgid "Info"
 msgstr "Informācija"
+
+msgid "Info Level"
+msgstr ""
 
 msgid "Informal"
 msgstr "Neformāls"
@@ -4073,7 +4091,13 @@ msgstr ""
 msgid "Log Level"
 msgstr "Žurnalēšanas līmenis"
 
+msgid "Log Settings"
+msgstr ""
+
 msgid "Log level"
+msgstr ""
+
+msgid "Log order"
 msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
@@ -4214,6 +4238,9 @@ msgid "Masquerade address"
 msgstr "Maskēšanās adrese"
 
 msgid "Max Protocol"
+msgstr ""
+
+msgid "Max entries"
 msgstr ""
 
 msgid "Max. TTL"
@@ -4783,6 +4810,9 @@ msgstr ""
 msgid "Nothing to synchronize"
 msgstr "Nav ko sinhronizēt"
 
+msgid "Notice Level"
+msgstr ""
+
 #, php-format
 msgid "Notification email from host: %s"
 msgstr "Paziņojuma e-pasts no siamniekdatora: %s"
@@ -5114,6 +5144,9 @@ msgstr ""
 
 msgid "Ping"
 msgstr "Ehotests"
+
+msgid "Ping Test"
+msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Ehotestēt winbindd, lai pārbaudītu vai tas ir dzīvs:"
@@ -5481,6 +5514,9 @@ msgstr ""
 msgid "Remote Rsync Server"
 msgstr "Attālināts Rsync Serveris"
 
+msgid "Remote Syslog Server"
+msgstr ""
+
 msgid "Remote module (source)"
 msgstr "Attālināts modulis (avots)"
 
@@ -5493,8 +5529,8 @@ msgstr "Attālinātā pārraudzība"
 msgid "Remote rsync daemon"
 msgstr ""
 
-msgid "Remote syslog server"
-msgstr "Attālināts syslog serveris"
+msgid "Remote syslog messages"
+msgstr ""
 
 msgid "Removable"
 msgstr "Noņemams"
@@ -5549,8 +5585,14 @@ msgstr ""
 msgid "Resolve"
 msgstr "Atrisināt"
 
+msgid "Resolve IP"
+msgstr ""
+
 msgid "Resolve IP addresses to hostnames"
 msgstr "Atrisināt IP adreses uz saimniekdatoru nosaukumiem"
+
+msgid "Resolve IP addresses to hostnames."
+msgstr ""
 
 msgid "Resource"
 msgstr ""
@@ -6017,8 +6059,8 @@ msgstr ""
 msgid "Show UPS Information"
 msgstr ""
 
-msgid "Show log entries in reverse order (newest entries on top)"
-msgstr "Rādīt žurnāla ierakstus pretējā secībā (jaunākie ieraksti augšā)"
+msgid "Show log entries in reverse order (newest entries on top)."
+msgstr ""
 
 msgid "Shutdown"
 msgstr "Izslēgt"
@@ -6353,6 +6395,9 @@ msgstr "Sinhronizēt"
 msgid "Syncthing"
 msgstr ""
 
+msgid "Syslog Level"
+msgstr ""
+
 #, php-format
 msgid ""
 "Syslog sends UDP datagrams to port 514 on the specified remote syslog "
@@ -6367,6 +6412,9 @@ msgid "System Information"
 msgstr ""
 
 msgid "System Load"
+msgstr ""
+
+msgid "System Settings"
 msgstr ""
 
 msgid "System bios"
@@ -7971,6 +8019,9 @@ msgstr "Kopā: %s | Lietots: %s | Brīvs: %s"
 msgid "Traceroute"
 msgstr "Izsekot maršutu"
 
+msgid "Traceroute Test"
+msgstr ""
+
 msgid ""
 "Traceroute may take a while to complete. You may hit the Stop button on your "
 "browser at any time to see the progress of failed traceroutes."
@@ -8499,6 +8550,9 @@ msgstr "Pamodināt caur LAN"
 msgid "Warning"
 msgstr "Brīdinājums"
 
+msgid "Warning Level"
+msgstr ""
+
 msgid ""
 "Warning: You are going to delete a RAID volume. All data will get lost and "
 "can not be recovered."
@@ -8902,3 +8956,18 @@ msgstr "aitsaistīt"
 
 msgid "version:"
 msgstr ""
+
+#~ msgid "ARP tables"
+#~ msgstr "ARP Tabulas"
+
+#~ msgid "Enable syslog'ing to remote syslog server"
+#~ msgstr "Iespējot syslogošanu uz atāla syslog servera."
+
+#~ msgid "IP address of remote syslog server"
+#~ msgstr "Attālinātā syslog servera IP adrese"
+
+#~ msgid "Remote syslog server"
+#~ msgstr "Attālināts syslog serveris"
+
+#~ msgid "Show log entries in reverse order (newest entries on top)"
+#~ msgstr "Rādīt žurnāla ierakstus pretējā secībā (jaunākie ieraksti augšā)"

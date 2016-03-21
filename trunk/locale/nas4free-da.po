@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-13 01:20+0000\n"
+"POT-Creation-Date: 2016-03-21 10:27+0000\n"
 "PO-Revision-Date: 2015-06-15 08:06+0000\n"
 "Last-Translator: Carsten Matzon <carsten@matzon.dk>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-15 18:21+0000\n"
-"X-Generator: Launchpad (build 17939)\n"
+"X-Launchpad-Export-Date: 2016-03-21 14:08+0000\n"
+"X-Generator: Launchpad (build 17947)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
 "X-Poedit-Language: Danish\n"
@@ -367,13 +367,13 @@ msgstr "AP tilstand"
 msgid "ARP Tables"
 msgstr "ARP Tabeller"
 
-msgid "ARP tables"
-msgstr "ARP tabeller"
+msgid "ARP Tables List"
+msgstr ""
 
 msgid "ATTRIBUTE NAME"
 msgstr ""
 
-msgid "Accept remote syslog messages"
+msgid "Accept remote syslog messages."
 msgstr ""
 
 msgid "Access"
@@ -605,6 +605,9 @@ msgstr ""
 
 msgid "Albanian"
 msgstr "Albansk"
+
+msgid "Alert Level"
+msgstr ""
 
 msgid "All"
 msgstr "Alle"
@@ -1607,6 +1610,9 @@ msgstr "Anerkendelser"
 msgid "Critical"
 msgstr "Kritisk"
 
+msgid "Critical Error Level"
+msgstr ""
+
 msgid "Cron"
 msgstr "Cron"
 
@@ -1726,10 +1732,10 @@ msgstr "Database mappe"
 msgid "Dataset"
 msgstr "Datasæt"
 
-msgid "Dataset is locked"
+msgid "Dataset is marked for deletion"
 msgstr ""
 
-msgid "Dataset is marked for deletion"
+msgid "Dataset is protected"
 msgstr ""
 
 msgid "Datasets"
@@ -1746,6 +1752,9 @@ msgstr "Dage"
 
 msgid "Debug"
 msgstr "Fejlsøgning"
+
+msgid "Debug Level"
+msgstr ""
 
 msgid "Dec"
 msgstr ""
@@ -2081,7 +2090,7 @@ msgstr ""
 msgid "Disable speaker beep on startup and shutdown."
 msgstr ""
 
-msgid "Disable the compression of repeated line"
+msgid "Disable the compression of repeated line."
 msgstr ""
 
 msgid "Disabled"
@@ -2503,6 +2512,9 @@ msgstr "Email"
 msgid "Email Report"
 msgstr "Email Rapport"
 
+msgid "Emergency Level"
+msgstr ""
+
 msgid "Empty as default."
 msgstr "Normalt tom."
 
@@ -2668,9 +2680,6 @@ msgstr "Aktiver shadow kopi"
 msgid "Enable store DOS attributes"
 msgstr "Aktiver lagring af DOS attributter"
 
-msgid "Enable syslog'ing to remote syslog server"
-msgstr "Aktiver syslog'ning til fjern syslog server"
-
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Aktiver ident protokollen (RFC1413)."
 
@@ -2786,12 +2795,18 @@ msgstr ""
 msgid "Error"
 msgstr "Fejl"
 
+msgid "Error Level"
+msgstr ""
+
 #, php-format
 msgid "Error: The changes could not be applied (error code %s)."
 msgstr "Fejl: Ændringerne kunne ikke anvendes (fejl kode %s)."
 
 msgid "Event"
 msgstr "Hændelse"
+
+msgid "Event selection"
+msgstr ""
 
 msgid "Execute"
 msgstr "Kør"
@@ -3385,8 +3400,8 @@ msgstr ""
 msgid "IP address"
 msgstr "IP-adresse"
 
-msgid "IP address of remote syslog server"
-msgstr "IP-adressen til fjern syslog server"
+msgid "IP address of remote syslog server."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -3580,6 +3595,9 @@ msgstr ""
 
 msgid "Info"
 msgstr "Info"
+
+msgid "Info Level"
+msgstr ""
 
 msgid "Informal"
 msgstr "Uformel"
@@ -4092,7 +4110,13 @@ msgstr "Log enhed"
 msgid "Log Level"
 msgstr "Log niveau"
 
+msgid "Log Settings"
+msgstr ""
+
 msgid "Log level"
+msgstr ""
+
+msgid "Log order"
 msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
@@ -4236,6 +4260,9 @@ msgstr "Masquerade adresse"
 
 msgid "Max Protocol"
 msgstr "Max protokol"
+
+msgid "Max entries"
+msgstr ""
 
 msgid "Max. TTL"
 msgstr "Maks. TTL"
@@ -4804,6 +4831,9 @@ msgstr ""
 msgid "Nothing to synchronize"
 msgstr "Intet at synkronisere"
 
+msgid "Notice Level"
+msgstr ""
+
 #, php-format
 msgid "Notification email from host: %s"
 msgstr "Anmeldelse e-mail fra host: %s"
@@ -5137,6 +5167,9 @@ msgstr ""
 
 msgid "Ping"
 msgstr "Ping"
+
+msgid "Ping Test"
+msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Ping winbindd for at se om den er i live:"
@@ -5504,6 +5537,9 @@ msgstr ""
 msgid "Remote Rsync Server"
 msgstr "Remote Rsync server"
 
+msgid "Remote Syslog Server"
+msgstr ""
+
 msgid "Remote module (source)"
 msgstr "Fjern-modul (kilden)"
 
@@ -5516,8 +5552,8 @@ msgstr "Fjern-overvågning"
 msgid "Remote rsync daemon"
 msgstr ""
 
-msgid "Remote syslog server"
-msgstr "Fjern-syslog server"
+msgid "Remote syslog messages"
+msgstr ""
 
 msgid "Removable"
 msgstr "Flytbar"
@@ -5572,8 +5608,14 @@ msgstr ""
 msgid "Resolve"
 msgstr "Løs"
 
+msgid "Resolve IP"
+msgstr ""
+
 msgid "Resolve IP addresses to hostnames"
 msgstr "Løs IP-adresser til værtsnavne"
+
+msgid "Resolve IP addresses to hostnames."
+msgstr ""
 
 msgid "Resource"
 msgstr "Ressource"
@@ -6045,8 +6087,8 @@ msgstr "Vis RAW UPS information"
 msgid "Show UPS Information"
 msgstr ""
 
-msgid "Show log entries in reverse order (newest entries on top)"
-msgstr "Vis log posteringer i omvendt rækkefølge (nyeste posteringer øverst)"
+msgid "Show log entries in reverse order (newest entries on top)."
+msgstr ""
 
 msgid "Shutdown"
 msgstr "Luk ned"
@@ -6380,6 +6422,9 @@ msgstr "Synkroniser"
 msgid "Syncthing"
 msgstr ""
 
+msgid "Syslog Level"
+msgstr ""
+
 #, php-format
 msgid ""
 "Syslog sends UDP datagrams to port 514 on the specified remote syslog "
@@ -6394,6 +6439,9 @@ msgid "System Information"
 msgstr ""
 
 msgid "System Load"
+msgstr ""
+
+msgid "System Settings"
 msgstr ""
 
 msgid "System bios"
@@ -8022,6 +8070,9 @@ msgstr "Ialt: %s | Brugt: %s | Ledigt: %s"
 msgid "Traceroute"
 msgstr "Traceroute"
 
+msgid "Traceroute Test"
+msgstr ""
+
 msgid ""
 "Traceroute may take a while to complete. You may hit the Stop button on your "
 "browser at any time to see the progress of failed traceroutes."
@@ -8548,6 +8599,9 @@ msgstr "Wake On LAN"
 msgid "Warning"
 msgstr "Advarsel"
 
+msgid "Warning Level"
+msgstr ""
+
 msgid ""
 "Warning: You are going to delete a RAID volume. All data will get lost and "
 "can not be recovered."
@@ -8951,3 +9005,18 @@ msgstr "umount"
 
 msgid "version:"
 msgstr "version:"
+
+#~ msgid "ARP tables"
+#~ msgstr "ARP tabeller"
+
+#~ msgid "Enable syslog'ing to remote syslog server"
+#~ msgstr "Aktiver syslog'ning til fjern syslog server"
+
+#~ msgid "IP address of remote syslog server"
+#~ msgstr "IP-adressen til fjern syslog server"
+
+#~ msgid "Remote syslog server"
+#~ msgstr "Fjern-syslog server"
+
+#~ msgid "Show log entries in reverse order (newest entries on top)"
+#~ msgstr "Vis log posteringer i omvendt rækkefølge (nyeste posteringer øverst)"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-13 01:20+0000\n"
+"POT-Creation-Date: 2016-03-21 10:27+0000\n"
 "PO-Revision-Date: 2016-03-13 05:13+0000\n"
 "Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-17 13:56+0000\n"
+"X-Launchpad-Export-Date: 2016-03-21 14:09+0000\n"
 "X-Generator: Launchpad (build 17947)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -397,14 +397,14 @@ msgstr "Режим точки доступа (AP mode)"
 msgid "ARP Tables"
 msgstr "Таблицы ARP"
 
-msgid "ARP tables"
-msgstr "Таблицы ARP"
+msgid "ARP Tables List"
+msgstr ""
 
 msgid "ATTRIBUTE NAME"
 msgstr "ИМЯ АТРИБУТА"
 
-msgid "Accept remote syslog messages"
-msgstr "Принимать дистанционные системные сообщения"
+msgid "Accept remote syslog messages."
+msgstr ""
 
 msgid "Access"
 msgstr "Доступ"
@@ -648,6 +648,9 @@ msgstr ""
 
 msgid "Albanian"
 msgstr "Албанский"
+
+msgid "Alert Level"
+msgstr ""
 
 msgid "All"
 msgstr "Все"
@@ -1739,6 +1742,9 @@ msgstr "Список разработчиков"
 msgid "Critical"
 msgstr "Критический уровень"
 
+msgid "Critical Error Level"
+msgstr ""
+
 msgid "Cron"
 msgstr "Cron"
 
@@ -1861,11 +1867,11 @@ msgstr "Каталог базы данных"
 msgid "Dataset"
 msgstr "Dataset"
 
-msgid "Dataset is locked"
-msgstr "Dataset заблокирован"
-
 msgid "Dataset is marked for deletion"
 msgstr "Dataset помечен для удаления"
+
+msgid "Dataset is protected"
+msgstr ""
 
 msgid "Datasets"
 msgstr "Dataset'ы"
@@ -1881,6 +1887,9 @@ msgstr "Дни"
 
 msgid "Debug"
 msgstr "Отладочный режим (Debug)"
+
+msgid "Debug Level"
+msgstr ""
 
 msgid "Dec"
 msgstr "дек."
@@ -2224,8 +2233,8 @@ msgstr "Отключить проверку версии прошивки."
 msgid "Disable speaker beep on startup and shutdown."
 msgstr "Отключить звуковой сигнал при запуске и выключении."
 
-msgid "Disable the compression of repeated line"
-msgstr "Отключить сжатие повторяющихся строк"
+msgid "Disable the compression of repeated line."
+msgstr ""
 
 msgid "Disabled"
 msgstr "Запрещено"
@@ -2655,6 +2664,9 @@ msgstr "Электронная почта"
 msgid "Email Report"
 msgstr "Отчет по электронной почте"
 
+msgid "Emergency Level"
+msgstr ""
+
 msgid "Empty as default."
 msgstr "Пустое по умолчанию"
 
@@ -2828,9 +2840,6 @@ msgstr "Включить теневое копирование"
 msgid "Enable store DOS attributes"
 msgstr "Включить хранение атрибутов DOS"
 
-msgid "Enable syslog'ing to remote syslog server"
-msgstr "Разрешить отправку журналов на удаленный syslog-сервер"
-
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Разрешить протокол идентификации (RFC1413)"
 
@@ -2954,12 +2963,18 @@ msgstr ""
 msgid "Error"
 msgstr "Ошибка"
 
+msgid "Error Level"
+msgstr ""
+
 #, php-format
 msgid "Error: The changes could not be applied (error code %s)."
 msgstr "Ошибка: Изменения не могут быть применены (код ошибки %s)."
 
 msgid "Event"
 msgstr "Событие"
+
+msgid "Event selection"
+msgstr ""
 
 msgid "Execute"
 msgstr "Выполнение"
@@ -3571,8 +3586,8 @@ msgstr "IP-адрес"
 msgid "IP address"
 msgstr "IP-адрес"
 
-msgid "IP address of remote syslog server"
-msgstr "IP-адрес удаленного syslog-сервера"
+msgid "IP address of remote syslog server."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -3774,6 +3789,9 @@ msgstr ""
 
 msgid "Info"
 msgstr "Сведения"
+
+msgid "Info Level"
+msgstr ""
 
 msgid "Informal"
 msgstr "Информирование"
@@ -4321,8 +4339,14 @@ msgstr "Устройство журнала событий"
 msgid "Log Level"
 msgstr "Уровень журналирования"
 
+msgid "Log Settings"
+msgstr ""
+
 msgid "Log level"
 msgstr "Уровень журналирования"
+
+msgid "Log order"
+msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr ""
@@ -4467,6 +4491,9 @@ msgstr "Маскарадный адрес"
 
 msgid "Max Protocol"
 msgstr "Максимальный протокол"
+
+msgid "Max entries"
+msgstr ""
 
 msgid "Max. TTL"
 msgstr "Максимальный TTL"
@@ -5050,6 +5077,9 @@ msgstr ""
 msgid "Nothing to synchronize"
 msgstr "Отсутствуют данные для синхронизации"
 
+msgid "Notice Level"
+msgstr ""
+
 #, php-format
 msgid "Notification email from host: %s"
 msgstr "Уведомление по электронной почте от хоста %s"
@@ -5391,6 +5421,9 @@ msgstr "Изображения"
 
 msgid "Ping"
 msgstr "Команда ping"
+
+msgid "Ping Test"
+msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Убедитесь, что winbindd функционирует:"
@@ -5760,6 +5793,9 @@ msgstr "Удаленный модуль (источник)"
 msgid "Remote Rsync Server"
 msgstr "Удаленный Rsync-сервер"
 
+msgid "Remote Syslog Server"
+msgstr ""
+
 msgid "Remote module (source)"
 msgstr "Удаленный модуль (источник)"
 
@@ -5772,8 +5808,8 @@ msgstr "Удаленный мониторинг"
 msgid "Remote rsync daemon"
 msgstr "Удаленный rsync"
 
-msgid "Remote syslog server"
-msgstr "Удаленный syslog-сервер"
+msgid "Remote syslog messages"
+msgstr ""
 
 msgid "Removable"
 msgstr "Сменный носитель"
@@ -5828,8 +5864,14 @@ msgstr "Сопротивление вызвано трением в механи
 msgid "Resolve"
 msgstr "Преобразование"
 
+msgid "Resolve IP"
+msgstr ""
+
 msgid "Resolve IP addresses to hostnames"
 msgstr "Преобразовывать IP-адреса в имена хостов"
+
+msgid "Resolve IP addresses to hostnames."
+msgstr ""
 
 msgid "Resource"
 msgstr "Ресурс"
@@ -6309,8 +6351,8 @@ msgstr "Показать исходные данные о ИБП (RAW data)"
 msgid "Show UPS Information"
 msgstr "Показать информацию ИБП"
 
-msgid "Show log entries in reverse order (newest entries on top)"
-msgstr "Показать записи журнала в обратном порядке (новые записи сверху)"
+msgid "Show log entries in reverse order (newest entries on top)."
+msgstr ""
 
 msgid "Shutdown"
 msgstr "Выключение"
@@ -6653,6 +6695,9 @@ msgstr "Синхронизация"
 msgid "Syncthing"
 msgstr "Syncthing"
 
+msgid "Syslog Level"
+msgstr ""
+
 #, php-format
 msgid ""
 "Syslog sends UDP datagrams to port 514 on the specified remote syslog "
@@ -6671,6 +6716,9 @@ msgstr "Информация о системе"
 
 msgid "System Load"
 msgstr "Загрузка системы"
+
+msgid "System Settings"
+msgstr ""
 
 msgid "System bios"
 msgstr "BIOS системы"
@@ -8402,6 +8450,9 @@ msgstr "Всего: %s | Занято: %s | Свободно: %s"
 msgid "Traceroute"
 msgstr "Команда traceroute"
 
+msgid "Traceroute Test"
+msgstr ""
+
 msgid ""
 "Traceroute may take a while to complete. You may hit the Stop button on your "
 "browser at any time to see the progress of failed traceroutes."
@@ -8951,6 +9002,9 @@ msgstr "Wake On LAN"
 msgid "Warning"
 msgstr "Внимание"
 
+msgid "Warning Level"
+msgstr ""
+
 msgid ""
 "Warning: You are going to delete a RAID volume. All data will get lost and "
 "can not be recovered."
@@ -9380,3 +9434,27 @@ msgstr "размонтировать"
 
 msgid "version:"
 msgstr "версия:"
+
+#~ msgid "ARP tables"
+#~ msgstr "Таблицы ARP"
+
+#~ msgid "Enable syslog'ing to remote syslog server"
+#~ msgstr "Разрешить отправку журналов на удаленный syslog-сервер"
+
+#~ msgid "IP address of remote syslog server"
+#~ msgstr "IP-адрес удаленного syslog-сервера"
+
+#~ msgid "Remote syslog server"
+#~ msgstr "Удаленный syslog-сервер"
+
+#~ msgid "Show log entries in reverse order (newest entries on top)"
+#~ msgstr "Показать записи журнала в обратном порядке (новые записи сверху)"
+
+#~ msgid "Accept remote syslog messages"
+#~ msgstr "Принимать дистанционные системные сообщения"
+
+#~ msgid "Disable the compression of repeated line"
+#~ msgstr "Отключить сжатие повторяющихся строк"
+
+#~ msgid "Dataset is locked"
+#~ msgstr "Dataset заблокирован"

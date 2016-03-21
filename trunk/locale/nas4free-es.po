@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-13 01:20+0000\n"
+"POT-Creation-Date: 2016-03-21 10:27+0000\n"
 "PO-Revision-Date: 2016-03-14 15:31+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-17 14:16+0000\n"
+"X-Launchpad-Export-Date: 2016-03-21 14:08+0000\n"
 "X-Generator: Launchpad (build 17947)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -401,14 +401,14 @@ msgstr "Modo AP"
 msgid "ARP Tables"
 msgstr "Tablas ARP"
 
-msgid "ARP tables"
-msgstr "tablas ARP"
+msgid "ARP Tables List"
+msgstr ""
 
 msgid "ATTRIBUTE NAME"
 msgstr "Nombre del Atributo"
 
-msgid "Accept remote syslog messages"
-msgstr "Aceptar mensajes remotos Syslog"
+msgid "Accept remote syslog messages."
+msgstr ""
 
 msgid "Access"
 msgstr "Acceso"
@@ -652,6 +652,9 @@ msgstr ""
 
 msgid "Albanian"
 msgstr "Albanés"
+
+msgid "Alert Level"
+msgstr ""
 
 msgid "All"
 msgstr "Todos"
@@ -1714,6 +1717,9 @@ msgstr "Créditos"
 msgid "Critical"
 msgstr "Valor Max."
 
+msgid "Critical Error Level"
+msgstr ""
+
 msgid "Cron"
 msgstr "Cron"
 
@@ -1839,11 +1845,11 @@ msgstr "Directorio de la base de datos"
 msgid "Dataset"
 msgstr "Conjunto de datos"
 
-msgid "Dataset is locked"
-msgstr "Dataset bloqueado"
-
 msgid "Dataset is marked for deletion"
 msgstr "El Dataset ha sido marcado para borrado"
+
+msgid "Dataset is protected"
+msgstr ""
 
 msgid "Datasets"
 msgstr "Conjuntos de datos"
@@ -1859,6 +1865,9 @@ msgstr "Días"
 
 msgid "Debug"
 msgstr "Depurar"
+
+msgid "Debug Level"
+msgstr ""
 
 msgid "Dec"
 msgstr "dic."
@@ -2200,8 +2209,8 @@ msgstr "Deshabilitar el revisar si hay un nuevo firmware"
 msgid "Disable speaker beep on startup and shutdown."
 msgstr "Deshabilitar el beep del altavoz en el arranque y la parada."
 
-msgid "Disable the compression of repeated line"
-msgstr "Deshabilita la compresión de lineas repetidas"
+msgid "Disable the compression of repeated line."
+msgstr ""
 
 msgid "Disabled"
 msgstr "Desactivado"
@@ -2630,6 +2639,9 @@ msgstr "Correo electrónico (e-mail)"
 msgid "Email Report"
 msgstr "Informe por correo electrónico"
 
+msgid "Emergency Level"
+msgstr ""
+
 msgid "Empty as default."
 msgstr "Vacío por defecto"
 
@@ -2801,9 +2813,6 @@ msgstr "Habilitar copia oculta"
 msgid "Enable store DOS attributes"
 msgstr "Activar almacenamiento de atributos DOS"
 
-msgid "Enable syslog'ing to remote syslog server"
-msgstr "Activar el registro en un servidor syslog remoto"
-
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Activar el protocolo de identificación (RFC1413)."
 
@@ -2927,12 +2936,18 @@ msgstr ""
 msgid "Error"
 msgstr "Error"
 
+msgid "Error Level"
+msgstr ""
+
 #, php-format
 msgid "Error: The changes could not be applied (error code %s)."
 msgstr "Error. Los cambios no han podido ser aplicados (código de error %s)."
 
 msgid "Event"
 msgstr "Evento"
+
+msgid "Event selection"
+msgstr ""
 
 msgid "Execute"
 msgstr "Ejecutar"
@@ -3536,8 +3551,8 @@ msgstr "Dirección IP"
 msgid "IP address"
 msgstr "Dirección IP"
 
-msgid "IP address of remote syslog server"
-msgstr "Dirección IP del servidor syslog remoto"
+msgid "IP address of remote syslog server."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -3747,6 +3762,9 @@ msgstr ""
 
 msgid "Info"
 msgstr "Info"
+
+msgid "Info Level"
+msgstr ""
 
 msgid "Informal"
 msgstr "Incremental"
@@ -4281,8 +4299,14 @@ msgstr "Dispositivo de Log"
 msgid "Log Level"
 msgstr "Nivel de registro"
 
+msgid "Log Settings"
+msgstr ""
+
 msgid "Log level"
 msgstr "Nivel de registro"
+
+msgid "Log order"
+msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Paquetes de Log que se trataran por esta regla al syslog."
@@ -4426,6 +4450,9 @@ msgstr "Direccion enmascarada"
 
 msgid "Max Protocol"
 msgstr "Protocolo Max."
+
+msgid "Max entries"
+msgstr ""
 
 msgid "Max. TTL"
 msgstr "Max. TTL"
@@ -5006,6 +5033,9 @@ msgstr ""
 msgid "Nothing to synchronize"
 msgstr "Nada que sincronizar"
 
+msgid "Notice Level"
+msgstr ""
+
 #, php-format
 msgid "Notification email from host: %s"
 msgstr "Notificación de correo desde el equipo: %s"
@@ -5348,6 +5378,9 @@ msgstr "Imágenes"
 
 msgid "Ping"
 msgstr "Ping"
+
+msgid "Ping Test"
+msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Ping winbindd para ver si sigue vivo:"
@@ -5718,6 +5751,9 @@ msgstr ""
 msgid "Remote Rsync Server"
 msgstr "Servidor Rsync remoto"
 
+msgid "Remote Syslog Server"
+msgstr ""
+
 msgid "Remote module (source)"
 msgstr "Módulo remoto (fuente)"
 
@@ -5730,8 +5766,8 @@ msgstr "Monitorización remota"
 msgid "Remote rsync daemon"
 msgstr "Demonio remoto de rsync"
 
-msgid "Remote syslog server"
-msgstr "Servidor syslog remoto"
+msgid "Remote syslog messages"
+msgstr ""
 
 msgid "Removable"
 msgstr "Extraíble"
@@ -5788,8 +5824,14 @@ msgstr ""
 msgid "Resolve"
 msgstr "Resolver"
 
+msgid "Resolve IP"
+msgstr ""
+
 msgid "Resolve IP addresses to hostnames"
 msgstr "Resolver direcciones IP a nombres de maquina"
+
+msgid "Resolve IP addresses to hostnames."
+msgstr ""
 
 msgid "Resource"
 msgstr "Recurso"
@@ -6277,9 +6319,8 @@ msgstr "Mostrar info. de SAI"
 msgid "Show UPS Information"
 msgstr "Mostrar info. dela SAI"
 
-msgid "Show log entries in reverse order (newest entries on top)"
+msgid "Show log entries in reverse order (newest entries on top)."
 msgstr ""
-"Mostrar las entradas de registro en orden inverso (las más nuevas arriba)"
 
 msgid "Shutdown"
 msgstr "Apagar"
@@ -6624,6 +6665,9 @@ msgstr "Sincronizar"
 msgid "Syncthing"
 msgstr "Syncthing"
 
+msgid "Syslog Level"
+msgstr ""
+
 #, php-format
 msgid ""
 "Syslog sends UDP datagrams to port 514 on the specified remote syslog "
@@ -6641,6 +6685,9 @@ msgstr "Información del sistema"
 
 msgid "System Load"
 msgstr "Carga del sistema"
+
+msgid "System Settings"
+msgstr ""
 
 msgid "System bios"
 msgstr "BIOS del sistema"
@@ -8351,6 +8398,9 @@ msgstr "Total: %s | Usado: %s | Libre: %s"
 msgid "Traceroute"
 msgstr "Rastrear ruta (treceroute)"
 
+msgid "Traceroute Test"
+msgstr ""
+
 msgid ""
 "Traceroute may take a while to complete. You may hit the Stop button on your "
 "browser at any time to see the progress of failed traceroutes."
@@ -8892,6 +8942,9 @@ msgstr "Encender por medio de la LAN. (Wake On LAN)"
 msgid "Warning"
 msgstr "Precaución"
 
+msgid "Warning Level"
+msgstr ""
+
 msgid ""
 "Warning: You are going to delete a RAID volume. All data will get lost and "
 "can not be recovered."
@@ -9313,3 +9366,28 @@ msgstr "Desmontar"
 
 msgid "version:"
 msgstr "versión:"
+
+#~ msgid "ARP tables"
+#~ msgstr "tablas ARP"
+
+#~ msgid "Enable syslog'ing to remote syslog server"
+#~ msgstr "Activar el registro en un servidor syslog remoto"
+
+#~ msgid "IP address of remote syslog server"
+#~ msgstr "Dirección IP del servidor syslog remoto"
+
+#~ msgid "Remote syslog server"
+#~ msgstr "Servidor syslog remoto"
+
+#~ msgid "Show log entries in reverse order (newest entries on top)"
+#~ msgstr ""
+#~ "Mostrar las entradas de registro en orden inverso (las más nuevas arriba)"
+
+#~ msgid "Accept remote syslog messages"
+#~ msgstr "Aceptar mensajes remotos Syslog"
+
+#~ msgid "Disable the compression of repeated line"
+#~ msgstr "Deshabilita la compresión de lineas repetidas"
+
+#~ msgid "Dataset is locked"
+#~ msgstr "Dataset bloqueado"

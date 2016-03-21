@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-13 01:20+0000\n"
+"POT-Creation-Date: 2016-03-21 10:27+0000\n"
 "PO-Revision-Date: 2014-11-17 04:08+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-15 18:22+0000\n"
-"X-Generator: Launchpad (build 17939)\n"
+"X-Launchpad-Export-Date: 2016-03-21 14:09+0000\n"
+"X-Generator: Launchpad (build 17947)\n"
 "X-Poedit-Country: SLOVAKIA\n"
 "Language: \n"
 "X-Poedit-Language: Slovak\n"
@@ -358,13 +358,13 @@ msgstr ""
 msgid "ARP Tables"
 msgstr "ARP tabuľky"
 
-msgid "ARP tables"
-msgstr "ARP tabuľky"
+msgid "ARP Tables List"
+msgstr ""
 
 msgid "ATTRIBUTE NAME"
 msgstr ""
 
-msgid "Accept remote syslog messages"
+msgid "Accept remote syslog messages."
 msgstr ""
 
 msgid "Access"
@@ -596,6 +596,9 @@ msgstr ""
 
 msgid "Albanian"
 msgstr "Albánske"
+
+msgid "Alert Level"
+msgstr ""
 
 msgid "All"
 msgstr "Všetko:"
@@ -1588,6 +1591,9 @@ msgstr "Autori"
 msgid "Critical"
 msgstr "Kritické"
 
+msgid "Critical Error Level"
+msgstr ""
+
 msgid "Cron"
 msgstr "Cron"
 
@@ -1705,10 +1711,10 @@ msgstr "Adresár databázy"
 msgid "Dataset"
 msgstr "Množina dát"
 
-msgid "Dataset is locked"
+msgid "Dataset is marked for deletion"
 msgstr ""
 
-msgid "Dataset is marked for deletion"
+msgid "Dataset is protected"
 msgstr ""
 
 msgid "Datasets"
@@ -1725,6 +1731,9 @@ msgstr "Dní"
 
 msgid "Debug"
 msgstr "Ladenie"
+
+msgid "Debug Level"
+msgstr ""
 
 msgid "Dec"
 msgstr ""
@@ -2060,7 +2069,7 @@ msgstr ""
 msgid "Disable speaker beep on startup and shutdown."
 msgstr ""
 
-msgid "Disable the compression of repeated line"
+msgid "Disable the compression of repeated line."
 msgstr ""
 
 msgid "Disabled"
@@ -2480,6 +2489,9 @@ msgstr "Email"
 msgid "Email Report"
 msgstr "Správa emailom"
 
+msgid "Emergency Level"
+msgstr ""
+
 msgid "Empty as default."
 msgstr ""
 
@@ -2646,9 +2658,6 @@ msgstr ""
 msgid "Enable store DOS attributes"
 msgstr "Zapnúť ukladanie DOS atribútov."
 
-msgid "Enable syslog'ing to remote syslog server"
-msgstr "Zapnúť odosielanie záznamov na vzdialený syslog server"
-
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Zapnúť protokol ident (RFC1413)."
 
@@ -2762,12 +2771,18 @@ msgstr ""
 msgid "Error"
 msgstr "Chyba"
 
+msgid "Error Level"
+msgstr ""
+
 #, php-format
 msgid "Error: The changes could not be applied (error code %s)."
 msgstr "Chyba: Zmeny nebolo možné použiť (chybový kód %s)."
 
 msgid "Event"
 msgstr "Udalosť"
+
+msgid "Event selection"
+msgstr ""
 
 msgid "Execute"
 msgstr "Vykonať"
@@ -3356,8 +3371,8 @@ msgstr ""
 msgid "IP address"
 msgstr "IP adresa"
 
-msgid "IP address of remote syslog server"
-msgstr "IP adresa vzdialeného syslog servera"
+msgid "IP address of remote syslog server."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -3542,6 +3557,9 @@ msgstr ""
 
 msgid "Info"
 msgstr "Informácie"
+
+msgid "Info Level"
+msgstr ""
 
 msgid "Informal"
 msgstr "Neformálne"
@@ -4048,7 +4066,13 @@ msgstr ""
 msgid "Log Level"
 msgstr "Úroveň podrobnosti záznamov"
 
+msgid "Log Settings"
+msgstr ""
+
 msgid "Log level"
+msgstr ""
+
+msgid "Log order"
 msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
@@ -4189,6 +4213,9 @@ msgid "Masquerade address"
 msgstr "Verejná adresa"
 
 msgid "Max Protocol"
+msgstr ""
+
+msgid "Max entries"
 msgstr ""
 
 msgid "Max. TTL"
@@ -4741,6 +4768,9 @@ msgstr ""
 msgid "Nothing to synchronize"
 msgstr ""
 
+msgid "Notice Level"
+msgstr ""
+
 #, php-format
 msgid "Notification email from host: %s"
 msgstr ""
@@ -5070,6 +5100,9 @@ msgstr ""
 
 msgid "Ping"
 msgstr "Ping"
+
+msgid "Ping Test"
+msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Vykonať ping na winbindd kvôli overeniu, či žije:"
@@ -5433,6 +5466,9 @@ msgstr ""
 msgid "Remote Rsync Server"
 msgstr "Vzdialený rsync server"
 
+msgid "Remote Syslog Server"
+msgstr ""
+
 msgid "Remote module (source)"
 msgstr "Vzdialený modul (zdroj)"
 
@@ -5445,8 +5481,8 @@ msgstr "Vzdialené monitorovanie"
 msgid "Remote rsync daemon"
 msgstr ""
 
-msgid "Remote syslog server"
-msgstr "Vzdialený syslog server"
+msgid "Remote syslog messages"
+msgstr ""
 
 msgid "Removable"
 msgstr ""
@@ -5501,8 +5537,14 @@ msgstr ""
 msgid "Resolve"
 msgstr "Prekladať"
 
+msgid "Resolve IP"
+msgstr ""
+
 msgid "Resolve IP addresses to hostnames"
 msgstr "Prekladať IP adresy na názvy strojov"
+
+msgid "Resolve IP addresses to hostnames."
+msgstr ""
 
 msgid "Resource"
 msgstr ""
@@ -5964,8 +6006,8 @@ msgstr ""
 msgid "Show UPS Information"
 msgstr ""
 
-msgid "Show log entries in reverse order (newest entries on top)"
-msgstr "Zobrazovať položky záznamu v opačnom poradí (najnovšie navrchu)"
+msgid "Show log entries in reverse order (newest entries on top)."
+msgstr ""
 
 msgid "Shutdown"
 msgstr "Vypnúť"
@@ -6297,6 +6339,9 @@ msgstr ""
 msgid "Syncthing"
 msgstr ""
 
+msgid "Syslog Level"
+msgstr ""
+
 #, php-format
 msgid ""
 "Syslog sends UDP datagrams to port 514 on the specified remote syslog "
@@ -6311,6 +6356,9 @@ msgid "System Information"
 msgstr ""
 
 msgid "System Load"
+msgstr ""
+
+msgid "System Settings"
 msgstr ""
 
 msgid "System bios"
@@ -7859,6 +7907,9 @@ msgstr "Celkom: %s | Využité: %s | Voľné: %s"
 msgid "Traceroute"
 msgstr "Traceroute"
 
+msgid "Traceroute Test"
+msgstr ""
+
 msgid ""
 "Traceroute may take a while to complete. You may hit the Stop button on your "
 "browser at any time to see the progress of failed traceroutes."
@@ -8382,6 +8433,9 @@ msgstr "Wake On LAN"
 msgid "Warning"
 msgstr "Upozornenie"
 
+msgid "Warning Level"
+msgstr ""
+
 msgid ""
 "Warning: You are going to delete a RAID volume. All data will get lost and "
 "can not be recovered."
@@ -8778,3 +8832,18 @@ msgstr "odpojiť"
 
 msgid "version:"
 msgstr ""
+
+#~ msgid "ARP tables"
+#~ msgstr "ARP tabuľky"
+
+#~ msgid "Enable syslog'ing to remote syslog server"
+#~ msgstr "Zapnúť odosielanie záznamov na vzdialený syslog server"
+
+#~ msgid "IP address of remote syslog server"
+#~ msgstr "IP adresa vzdialeného syslog servera"
+
+#~ msgid "Remote syslog server"
+#~ msgstr "Vzdialený syslog server"
+
+#~ msgid "Show log entries in reverse order (newest entries on top)"
+#~ msgstr "Zobrazovať položky záznamu v opačnom poradí (najnovšie navrchu)"

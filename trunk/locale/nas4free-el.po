@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-13 01:20+0000\n"
-"PO-Revision-Date: 2016-03-13 19:04+0000\n"
+"POT-Creation-Date: 2016-03-21 10:27+0000\n"
+"PO-Revision-Date: 2016-03-21 10:48+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-17 13:57+0000\n"
+"X-Launchpad-Export-Date: 2016-03-21 14:08+0000\n"
 "X-Generator: Launchpad (build 17947)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -407,14 +407,14 @@ msgstr "Λειτουργία AP"
 msgid "ARP Tables"
 msgstr "Πίνακες ARP"
 
-msgid "ARP tables"
-msgstr "Πίνακες ARP"
+msgid "ARP Tables List"
+msgstr "Λίστα Πινάκων ARP"
 
 msgid "ATTRIBUTE NAME"
 msgstr "ΟΝΟΜΑ ΧΑΡΑΚΤΗΡΙΣΤΙΚΟΥ"
 
-msgid "Accept remote syslog messages"
-msgstr "Αποδοχή μηνυμάτων από απομακρυσμένο syslog"
+msgid "Accept remote syslog messages."
+msgstr "Αποδοχή απομακρυσμένων μηνυμάτων syslog."
 
 msgid "Access"
 msgstr "Πρόσβαση"
@@ -663,6 +663,9 @@ msgstr ""
 
 msgid "Albanian"
 msgstr "Αλβανικά"
+
+msgid "Alert Level"
+msgstr "Επίπεδο Ειδοποιήσεων"
 
 msgid "All"
 msgstr "Όλα"
@@ -1781,6 +1784,9 @@ msgstr "Συντελεστές"
 msgid "Critical"
 msgstr "Κρίσιμο"
 
+msgid "Critical Error Level"
+msgstr "Επίπεδο Κρίσιμου Σφάλματος"
+
 msgid "Cron"
 msgstr "Προγραμματισμένες εργασίες"
 
@@ -1906,11 +1912,11 @@ msgstr "Φάκελος βάσης δεδομένων"
 msgid "Dataset"
 msgstr "Dataset"
 
-msgid "Dataset is locked"
-msgstr "To dataset είναι κλειδωμένο"
-
 msgid "Dataset is marked for deletion"
 msgstr "Το dataset έχει σημειωθεί προς διαγραφή"
+
+msgid "Dataset is protected"
+msgstr "Το Dataset είναι προστατευμένο"
 
 msgid "Datasets"
 msgstr "Datasets"
@@ -1926,6 +1932,9 @@ msgstr "Ημέρες"
 
 msgid "Debug"
 msgstr "Αποσφαλμάτωση"
+
+msgid "Debug Level"
+msgstr "Επίπεδο Αποσφαλμάτωσης"
 
 msgid "Dec"
 msgstr "Δεκ."
@@ -2273,8 +2282,8 @@ msgstr ""
 "Απενεργοποίηση ηχητικής ειδοποίησης συστήματος κατά την έναρξη και τον "
 "τερματισμό."
 
-msgid "Disable the compression of repeated line"
-msgstr "Απενεργοποίση της συμπίεσης της επαναλαμβανόμενης γραμμής"
+msgid "Disable the compression of repeated line."
+msgstr "Απενεργοποίηση συμπίεσης της επαναλαμβανόμενης γραμμής."
 
 msgid "Disabled"
 msgstr "Απενεργοποιημένο"
@@ -2704,6 +2713,9 @@ msgstr "Ηλεκτρονικό ταχυδρομείο"
 msgid "Email Report"
 msgstr "Αναφορά Ηλ.Ταχυδρομείου"
 
+msgid "Emergency Level"
+msgstr "Επίπεδο Επείγοντος"
+
 msgid "Empty as default."
 msgstr "Κενό από προεπιλογή."
 
@@ -2879,9 +2891,6 @@ msgstr "Ενεργοποίηση σκιώδους αντιγράφου"
 msgid "Enable store DOS attributes"
 msgstr "Ενεργοποίηση αποθήκευσης ιδιοτήτων DOS"
 
-msgid "Enable syslog'ing to remote syslog server"
-msgstr "Ενεργοποίηση του syslog'ing σε απομακρυσμένο διακομιστή syslog"
-
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Ενεργοποιήση του πρωτοκόλλου ταυτοποίησης (RFC1413)."
 
@@ -3008,6 +3017,9 @@ msgstr ""
 msgid "Error"
 msgstr "Σφάλμα"
 
+msgid "Error Level"
+msgstr "Επίπεδο Σφαλμάτων"
+
 #, php-format
 msgid "Error: The changes could not be applied (error code %s)."
 msgstr ""
@@ -3015,6 +3027,9 @@ msgstr ""
 
 msgid "Event"
 msgstr "Συμβάν"
+
+msgid "Event selection"
+msgstr "Επιλογή συμβάντων"
 
 msgid "Execute"
 msgstr "Εκτέλεση"
@@ -3636,8 +3651,8 @@ msgstr "Διεύθυνση IP"
 msgid "IP address"
 msgstr "Διεύθυνση IP"
 
-msgid "IP address of remote syslog server"
-msgstr "Διεύθυνση IP του απομακρυσμένου διακομιστή syslog"
+msgid "IP address of remote syslog server."
+msgstr "Διεύθυνση IP του απομακρυσμένου διακομιστή syslog."
 
 #, php-format
 msgid ""
@@ -3853,6 +3868,9 @@ msgstr ""
 
 msgid "Info"
 msgstr "Πληροφορίες"
+
+msgid "Info Level"
+msgstr "Επίπεδο Πληροφόρησης"
 
 msgid "Informal"
 msgstr "Ανεπίσημος"
@@ -4405,8 +4423,14 @@ msgstr "Συσκευή log."
 msgid "Log Level"
 msgstr "Επίπεδο Καταγραφής"
 
+msgid "Log Settings"
+msgstr "Ρυθμίσεις καταγραφής"
+
 msgid "Log level"
 msgstr "Επίπεδο καταγραφής"
+
+msgid "Log order"
+msgstr "Ταξινόμηση καταγραφής"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Καταγραφή των πακέτων που χειρίζεται αυτός ο κανόνας στο syslog."
@@ -4551,6 +4575,9 @@ msgstr "Μεταμφίεση διεύθυνσης"
 
 msgid "Max Protocol"
 msgstr "Max Πρωτόκολλο"
+
+msgid "Max entries"
+msgstr "Μέγιστος αριθμός καταχωρήσεων"
 
 msgid "Max. TTL"
 msgstr "Μέγιστος χρόνος αναπηδήσεων"
@@ -5134,6 +5161,9 @@ msgstr ""
 msgid "Nothing to synchronize"
 msgstr "Τίποτα προς συγχρονισμό"
 
+msgid "Notice Level"
+msgstr "Επίπεδο Ειδοποίησης"
+
 #, php-format
 msgid "Notification email from host: %s"
 msgstr ""
@@ -5480,6 +5510,9 @@ msgstr "Φωτογραφίες"
 
 msgid "Ping"
 msgstr "Ping"
+
+msgid "Ping Test"
+msgstr "Δοκιμή Ping"
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Εκτελέστε ping winbindd για να δείτε αν είναι σε λειτουργία:"
@@ -5854,6 +5887,9 @@ msgstr "Απομακρυσμένο Άρθρωμα (Πηγή)"
 msgid "Remote Rsync Server"
 msgstr "Απομακρυσμένος διακομιστής Rsync"
 
+msgid "Remote Syslog Server"
+msgstr "Απομακρυσμένος Διακομιστής Syslog"
+
 msgid "Remote module (source)"
 msgstr "Απομακρυσμένο άρθρωμα (πηγή)"
 
@@ -5866,8 +5902,8 @@ msgstr "Απομακρυσμένη παρακολούθηση"
 msgid "Remote rsync daemon"
 msgstr "Δαίμονας απομακρυσμένου rsync"
 
-msgid "Remote syslog server"
-msgstr "Απομακρυσμένος διακομιστής syslog"
+msgid "Remote syslog messages"
+msgstr "Απομακρυσμένα μηνύματα syslog"
 
 msgid "Removable"
 msgstr "Αφαιρούμενο μέσο"
@@ -5924,8 +5960,14 @@ msgstr ""
 msgid "Resolve"
 msgstr "Ανάλυση"
 
+msgid "Resolve IP"
+msgstr "Ανάλυση IP"
+
 msgid "Resolve IP addresses to hostnames"
 msgstr "Ανάλυση διεύθυνσεων IP σε ονόματα υπολογιστών"
+
+msgid "Resolve IP addresses to hostnames."
+msgstr "Ανάλυση διευθύνσεων IP σε ονόματα διακομιστή."
 
 msgid "Resource"
 msgstr "Πόρος"
@@ -6418,10 +6460,9 @@ msgstr "Προβολή ακατέργαστων πληροφοριών UPS"
 msgid "Show UPS Information"
 msgstr "Προβολή πληροφοριών UPS"
 
-msgid "Show log entries in reverse order (newest entries on top)"
+msgid "Show log entries in reverse order (newest entries on top)."
 msgstr ""
-"Προβολή των καταχωρήσεων του καταγραφέα με αντίστροφη ταξινόμηση (νεότερες "
-"καταχωρήσεις στην κορυφή)"
+"Εμφάνιση των καταχωρήσεων καταγραφής (νεώτερες καταχωρήσεις στην κορυφή)."
 
 msgid "Shutdown"
 msgstr "Τερματισμός"
@@ -6768,6 +6809,9 @@ msgstr "Συγχρονισμός"
 msgid "Syncthing"
 msgstr "Syncthing"
 
+msgid "Syslog Level"
+msgstr "Επίπεδο Syslog"
+
 #, php-format
 msgid ""
 "Syslog sends UDP datagrams to port 514 on the specified remote syslog "
@@ -6786,6 +6830,9 @@ msgstr "Πληροφορίες Συστήματος"
 
 msgid "System Load"
 msgstr "Φόρτος Συστήματος"
+
+msgid "System Settings"
+msgstr "Ρυθμίσεις συστήματος"
 
 msgid "System bios"
 msgstr "BIOS συστήματος"
@@ -8594,6 +8641,9 @@ msgstr "Συνολικά: %s | Σε χρήση: %s | Ελεύθερα: %s"
 msgid "Traceroute"
 msgstr "Traceroute"
 
+msgid "Traceroute Test"
+msgstr "Δοκιμή Traceroute"
+
 msgid ""
 "Traceroute may take a while to complete. You may hit the Stop button on your "
 "browser at any time to see the progress of failed traceroutes."
@@ -9145,6 +9195,9 @@ msgstr "Αφύπνιση μέσω τοπικού δικτύου (Wake On Lan)"
 msgid "Warning"
 msgstr "Προειδοποίηση"
 
+msgid "Warning Level"
+msgstr "Επίπεδο Προειδοποίησης"
+
 msgid ""
 "Warning: You are going to delete a RAID volume. All data will get lost and "
 "can not be recovered."
@@ -9579,3 +9632,29 @@ msgstr "αποπροσάρτηση"
 
 msgid "version:"
 msgstr "έκδοση:"
+
+#~ msgid "ARP tables"
+#~ msgstr "Πίνακες ARP"
+
+#~ msgid "Enable syslog'ing to remote syslog server"
+#~ msgstr "Ενεργοποίηση του syslog'ing σε απομακρυσμένο διακομιστή syslog"
+
+#~ msgid "Remote syslog server"
+#~ msgstr "Απομακρυσμένος διακομιστής syslog"
+
+#~ msgid "IP address of remote syslog server"
+#~ msgstr "Διεύθυνση IP του απομακρυσμένου διακομιστή syslog"
+
+#~ msgid "Show log entries in reverse order (newest entries on top)"
+#~ msgstr ""
+#~ "Προβολή των καταχωρήσεων του καταγραφέα με αντίστροφη ταξινόμηση (νεότερες "
+#~ "καταχωρήσεις στην κορυφή)"
+
+#~ msgid "Disable the compression of repeated line"
+#~ msgstr "Απενεργοποίση της συμπίεσης της επαναλαμβανόμενης γραμμής"
+
+#~ msgid "Accept remote syslog messages"
+#~ msgstr "Αποδοχή μηνυμάτων από απομακρυσμένο syslog"
+
+#~ msgid "Dataset is locked"
+#~ msgstr "To dataset είναι κλειδωμένο"

@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-13 01:20+0000\n"
-"PO-Revision-Date: 2016-03-03 16:28+0000\n"
+"POT-Creation-Date: 2016-03-21 10:27+0000\n"
+"PO-Revision-Date: 2016-03-16 11:53+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-15 18:21+0000\n"
-"X-Generator: Launchpad (build 17939)\n"
+"X-Launchpad-Export-Date: 2016-03-21 14:08+0000\n"
+"X-Generator: Launchpad (build 17947)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
 "X-Poedit-Language: Czech\n"
@@ -404,14 +404,14 @@ msgstr "Režim přístupového bodu (AP)"
 msgid "ARP Tables"
 msgstr "ARP tabulky"
 
-msgid "ARP tables"
-msgstr "ARP tabulky"
+msgid "ARP Tables List"
+msgstr ""
 
 msgid "ATTRIBUTE NAME"
 msgstr "NÁZEV ATRIBUTU"
 
-msgid "Accept remote syslog messages"
-msgstr "Přijímat syslog zprávy z protějšku"
+msgid "Accept remote syslog messages."
+msgstr ""
 
 msgid "Access"
 msgstr "Přístup"
@@ -659,6 +659,9 @@ msgstr ""
 
 msgid "Albanian"
 msgstr "albánština"
+
+msgid "Alert Level"
+msgstr ""
 
 msgid "All"
 msgstr "Vše"
@@ -1207,7 +1210,7 @@ msgstr "Využití procesoru"
 msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
 "error)."
-msgstr ""
+msgstr "Počet CRC chyb. Počítá CRC chyby (FIS CRC při čtení/zápisu dat)."
 
 msgid "Cache"
 msgstr "Mezipaměť"
@@ -1252,7 +1255,7 @@ msgid "Capacity"
 msgstr "Kapacita"
 
 msgid "Case Sensitivity"
-msgstr ""
+msgstr "Rozlišování velkých/malých písmen"
 
 msgid ""
 "Causes the server to display the network information for the specified IP "
@@ -1710,6 +1713,9 @@ msgid ""
 "counts, ex data FIS CRC , code errors, disparity errors, command FIS crc. "
 "Value clears upon system power-down."
 msgstr ""
+"Počítá chyby na fyzickém SATA rozhraní. Tato hodnota zahrnuje veškeré chyby "
+"– FIS CRC, chyby kódu, chyby parity, FIS CRC příkazu. Hodnoty přetrvávají "
+"pouze do okamžiku vypnutí stroje."
 
 msgid "Create 4KB wrapper (nop device)."
 msgstr "Vytvořit 4KB obal (nop zařízení)."
@@ -1762,6 +1768,9 @@ msgstr "Zásluhy"
 
 msgid "Critical"
 msgstr "Kritické"
+
+msgid "Critical Error Level"
+msgstr ""
 
 msgid "Cron"
 msgstr "Naplánované úlohy (Cron)"
@@ -1891,11 +1900,11 @@ msgstr "Složka s databází"
 msgid "Dataset"
 msgstr "Datové sada"
 
-msgid "Dataset is locked"
-msgstr "Datová sada je uzamčena"
-
 msgid "Dataset is marked for deletion"
 msgstr "Datová sada je označena ke smazání"
+
+msgid "Dataset is protected"
+msgstr ""
 
 msgid "Datasets"
 msgstr "Datové sady"
@@ -1911,6 +1920,9 @@ msgstr "Dny"
 
 msgid "Debug"
 msgstr "Režim ladění"
+
+msgid "Debug Level"
+msgstr ""
 
 msgid "Dec"
 msgstr "pro"
@@ -2115,6 +2127,8 @@ msgstr "Cílová e-mailové adresa."
 
 msgid "Destination email address. Separate email addresses by semi-colon."
 msgstr ""
+"Cílová e-mailová adresa. V případě vícero položek oddělujte znakem středník "
+"(;)"
 
 msgid "Destination host name or IP number."
 msgstr "Cílový stroj (název nebo IP adresa)."
@@ -2253,8 +2267,8 @@ msgstr "Vypnout kontrolu verze firmware."
 msgid "Disable speaker beep on startup and shutdown."
 msgstr "Vypnout pípnutí při spouštění a vypínání."
 
-msgid "Disable the compression of repeated line"
-msgstr "Vypnout kompresi opakovaného řádku"
+msgid "Disable the compression of repeated line."
+msgstr ""
 
 msgid "Disabled"
 msgstr "Vypnuto"
@@ -2679,6 +2693,9 @@ msgstr "E-mail"
 msgid "Email Report"
 msgstr "Hlášení e-mailem"
 
+msgid "Emergency Level"
+msgstr ""
+
 msgid "Empty as default."
 msgstr "Ve výchozím stavu nevyplněno."
 
@@ -2853,9 +2870,6 @@ msgstr "Zapnout funkci stínové kopie"
 msgid "Enable store DOS attributes"
 msgstr "Umožnit ukládání atributů systému DOS"
 
-msgid "Enable syslog'ing to remote syslog server"
-msgstr "Zapnout zaznamenávání událostí na vzdálený syslog server"
-
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Používat protokol ident (norma RFC1413)"
 
@@ -2973,9 +2987,14 @@ msgid ""
 "Erase Fail Count (chip). This parameter indicates a number of flash erase "
 "command failures."
 msgstr ""
+"Počet nepodařených výmazů (čip). Tento parametr značí počet nezdařilých "
+"příkazů vymazání flash paměti."
 
 msgid "Error"
 msgstr "Chyba"
+
+msgid "Error Level"
+msgstr ""
 
 #, php-format
 msgid "Error: The changes could not be applied (error code %s)."
@@ -2983,6 +3002,9 @@ msgstr "Chyba: Změny nemohly být provedeny (kód chyby %s)."
 
 msgid "Event"
 msgstr "Událost"
+
+msgid "Event selection"
+msgstr ""
 
 msgid "Execute"
 msgstr "Spustit"
@@ -3301,10 +3323,10 @@ msgid "Friday"
 msgstr "pátek"
 
 msgid "From Email Address"
-msgstr ""
+msgstr "Z e-mailové adresy"
 
 msgid "From email address for sending system messages."
-msgstr ""
+msgstr "Z e-mailové adresy pro posílání systémových zpráv."
 
 msgid "Fsck"
 msgstr "Kontrola souborového systému (fsck)"
@@ -3601,8 +3623,8 @@ msgstr "IP adresa"
 msgid "IP address"
 msgstr "IP adresa"
 
-msgid "IP address of remote syslog server"
-msgstr "IP adresa vzdáleného syslog serveru"
+msgid "IP address of remote syslog server."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -3809,6 +3831,9 @@ msgstr ""
 msgid "Info"
 msgstr "Info"
 
+msgid "Info Level"
+msgstr ""
+
 msgid "Informal"
 msgstr "Pro informaci"
 
@@ -3915,7 +3940,7 @@ msgid "Inquiry Vendor"
 msgstr "Zjistit výrobce"
 
 msgid "Insensitive"
-msgstr ""
+msgstr "Nerozlišovat"
 
 msgid "Install"
 msgstr "Nainstalovat"
@@ -4359,8 +4384,14 @@ msgstr "Zařízení, na které zaznamenávat události"
 msgid "Log Level"
 msgstr "Podrobnost protokolování"
 
+msgid "Log Settings"
+msgstr ""
+
 msgid "Log level"
 msgstr "Úroveň podrobností zaznamenávání událostí"
+
+msgid "Log order"
+msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Zaznamenávat pakety, odpovídající tomuto pravidlu, do syslog."
@@ -4508,6 +4539,9 @@ msgstr "Vnější (veřejná) adresa"
 
 msgid "Max Protocol"
 msgstr "Komunikovat protokolem verze nanejvýš"
+
+msgid "Max entries"
+msgstr ""
 
 msgid "Max. TTL"
 msgstr "Nejvyšší umožněný počet skoků (TTL)"
@@ -4702,7 +4736,7 @@ msgid "Missing a temporary folder."
 msgstr "Chybí dočasná složka."
 
 msgid "Mixed"
-msgstr ""
+msgstr "Smíšené"
 
 msgid "Mode"
 msgstr "Režim"
@@ -5097,6 +5131,9 @@ msgstr ""
 msgid "Nothing to synchronize"
 msgstr "Nic k synchronizaci"
 
+msgid "Notice Level"
+msgstr ""
+
 #, php-format
 msgid "Notification email from host: %s"
 msgstr "E-mail s upozorněním ze stroje: %s"
@@ -5438,6 +5475,9 @@ msgstr "Obrázky"
 msgid "Ping"
 msgstr "Ping"
 
+msgid "Ping Test"
+msgstr ""
+
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Ověřit dostupnost procesu služby winbind:"
 
@@ -5445,7 +5485,7 @@ msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
 
 msgid "Plain-text"
-msgstr ""
+msgstr "Neformátovaný text"
 
 msgid "Platform"
 msgstr "Platforma"
@@ -5813,6 +5853,9 @@ msgstr "Modul na protějšku (zdroj)"
 msgid "Remote Rsync Server"
 msgstr "Rsync server na protějšku"
 
+msgid "Remote Syslog Server"
+msgstr ""
+
 msgid "Remote module (source)"
 msgstr "modul na protějšku (zdroj)"
 
@@ -5825,8 +5868,8 @@ msgstr "Dohledování na protějšku"
 msgid "Remote rsync daemon"
 msgstr "Proces služby rsync na protějšku"
 
-msgid "Remote syslog server"
-msgstr "Server se službou záznamu událostí (syslog)"
+msgid "Remote syslog messages"
+msgstr ""
 
 msgid "Removable"
 msgstr "Vyjímatelné"
@@ -5881,8 +5924,14 @@ msgstr "Zvýšený třecí odpor mezi mechanickými částmi během provozu."
 msgid "Resolve"
 msgstr "Překládat"
 
+msgid "Resolve IP"
+msgstr ""
+
 msgid "Resolve IP addresses to hostnames"
 msgstr "Překládat IP adresy na názvy strojů"
+
+msgid "Resolve IP addresses to hostnames."
+msgstr ""
 
 msgid "Resource"
 msgstr "Prostředek"
@@ -6220,7 +6269,7 @@ msgid "Send now"
 msgstr "Odeslat nyní"
 
 msgid "Sensitive"
-msgstr ""
+msgstr "Rozlišovat"
 
 msgid "Sep"
 msgstr "zář"
@@ -6367,9 +6416,8 @@ msgstr "Zobrazit informace z UPS v nezpracované podobě"
 msgid "Show UPS Information"
 msgstr "Zobrazit informace o UPS zdroji"
 
-msgid "Show log entries in reverse order (newest entries on top)"
+msgid "Show log entries in reverse order (newest entries on top)."
 msgstr ""
-"Zobrazit položky záznamu událostí v opačném pořadí (nejnovější na začátku)."
 
 msgid "Shutdown"
 msgstr "Vypnout"
@@ -6716,6 +6764,9 @@ msgstr "Synchronizovat"
 msgid "Syncthing"
 msgstr "Syncthing"
 
+msgid "Syslog Level"
+msgstr ""
+
 #, php-format
 msgid ""
 "Syslog sends UDP datagrams to port 514 on the specified remote syslog "
@@ -6734,6 +6785,9 @@ msgstr "Informace o systému"
 
 msgid "System Load"
 msgstr "Vytížení systému"
+
+msgid "System Settings"
+msgstr ""
 
 msgid "System bios"
 msgstr "Systémový BIOS"
@@ -7868,10 +7922,12 @@ msgid ""
 "This attribute controls the ACL behavior when a file is created or whenever "
 "the mode of a file or a directory is modified."
 msgstr ""
+"Tento atribut řídí chování ACL seznamů, když je vytvořen soubor nebo kdykoli "
+"je změněn režim přístupu k souboru nebo složce."
 
 msgid ""
 "This attribute determines the behavior of Access Control List inheritance."
-msgstr ""
+msgstr "Tento atribut určuje chování dědičnosti seznamu řízení přístupu."
 
 msgid ""
 "This attribute indicates the count of full hard disk power on/off cycles."
@@ -8174,6 +8230,9 @@ msgid ""
 "file system should be casesensitive, caseinsensitive, or allow a combination "
 "of both styles of matching"
 msgstr ""
+"Tato vlastnost značí, zda má algoritmus pro hledání shody v názvu, používaný "
+"souborovým systémem, rozlišovat velká/malá písmena nebo použít kombinaci "
+"obou stylů"
 
 msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr ""
@@ -8307,7 +8366,7 @@ msgid "TitleSpeed"
 msgstr "RychlostTitulku"
 
 msgid "To Email Address"
-msgstr ""
+msgstr "Na e-mailovou adresu"
 
 msgid ""
 "To configure the target, you must add at least Portal Group and Initiator "
@@ -8411,12 +8470,18 @@ msgid ""
 "LBAs read from the device. The lower 7 byte value is located at attribute "
 "0xF2."
 msgstr ""
+"Rozšířený celkový součet načtených logických adresních bloků (LBA). Horních "
+"5 bajtů z 12 bajtového celkového počtu LBA, načtených ze zařízení. Hodnota "
+"spodních 7 bajtů se nachází na atributu 0xF2."
 
 msgid ""
 "Total LBAs Written Expanded. The upper 5 bytes of the 12-byte total number "
 "of LBAs written to the device. The lower 7 byte value is located at "
 "attribute 0xF1."
 msgstr ""
+"Rozšířený celkový součet zapsaných logických adresních bloků (LBA). Horních "
+"5 bajtů z 12 bajtového celkového počtu LBA, zapsaných na zařízení. Hodnota "
+"spodních 7 bajtů se nachází na atributu 0xF2."
 
 msgid ""
 "Total NAND Writes. Raw value reports the number of writes to NAND in 1GB "
@@ -8463,6 +8528,9 @@ msgstr "Celkem: %s | Použito: %s | Volno: %s"
 
 msgid "Traceroute"
 msgstr "Sledování směrování na síti (traceroute)"
+
+msgid "Traceroute Test"
+msgstr ""
 
 msgid ""
 "Traceroute may take a while to complete. You may hit the Stop button on your "
@@ -9006,6 +9074,9 @@ msgstr "Probouzení po síti (WoL)"
 msgid "Warning"
 msgstr "Varování"
 
+msgid "Warning Level"
+msgstr ""
+
 msgid ""
 "Warning: You are going to delete a RAID volume. All data will get lost and "
 "can not be recovered."
@@ -9442,3 +9513,28 @@ msgstr "odpojit (umount)"
 
 msgid "version:"
 msgstr "verze:"
+
+#~ msgid "ARP tables"
+#~ msgstr "ARP tabulky"
+
+#~ msgid "IP address of remote syslog server"
+#~ msgstr "IP adresa vzdáleného syslog serveru"
+
+#~ msgid "Enable syslog'ing to remote syslog server"
+#~ msgstr "Zapnout zaznamenávání událostí na vzdálený syslog server"
+
+#~ msgid "Remote syslog server"
+#~ msgstr "Server se službou záznamu událostí (syslog)"
+
+#~ msgid "Show log entries in reverse order (newest entries on top)"
+#~ msgstr ""
+#~ "Zobrazit položky záznamu událostí v opačném pořadí (nejnovější na začátku)."
+
+#~ msgid "Accept remote syslog messages"
+#~ msgstr "Přijímat syslog zprávy z protějšku"
+
+#~ msgid "Disable the compression of repeated line"
+#~ msgstr "Vypnout kompresi opakovaného řádku"
+
+#~ msgid "Dataset is locked"
+#~ msgstr "Datová sada je uzamčena"
