@@ -256,8 +256,8 @@ if ($_POST) {
 }
 
 $pglocalheader = <<< EOD
-<link rel="stylesheet" type="text/css" href="datechooser.css" />
-<script type="text/javascript" src="datechooser.js"></script>
+<link rel="stylesheet" type="text/css" href="js/datechooser.css" />
+<script type="text/javascript" src="js/datechooser.js"></script>
 EOD;
 ?>
 <?php include("fbegin.inc");?>

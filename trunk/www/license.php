@@ -296,7 +296,7 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
 	    <p> Syncthing - Syncthing replaces proprietary sync and cloud services with something open, trustworthy and decentralized. (<a href="https://syncthing.net" target="_blank">https://syncthing.net</a>)<br />
 	    Copyright &copy; Syncthing Development Team. All Rights Reserved.</p></p>
 
-	    <p>Some of the software used for NAS4Free are under the <a href="gpl-license.txt">GNU General Public License</a> (<a href="gpl-license.txt">GPLv2</a>, <a href="gpl3-license.txt">GPLv3</a>), <a href="lgpl-license.txt">GNU Lesser General Public License (LGPL)</a>, <a href="mpl2-license.txt">Mozilla Public License Version 2.0 (MPLv2)</a>, <a href="apple-license.txt">Apple Public Source License</a> and <a href="php-license.txt">PHP License</a>.</p>
+	    <p>Some of the software used for NAS4Free are under the <a href="third-party_licenses/gpl-license.txt">GNU General Public License</a> (<a href="third-party_licenses/gpl-license.txt">GPLv2</a>, <a href="third-party_licenses/gpl3-license.txt">GPLv3</a>), <a href="third-party_licenses/lgpl-license.txt">GNU Lesser General Public License (LGPL)</a>, <a href="third-party_licenses/mpl2-license.txt">Mozilla Public License Version 2.0 (MPLv2)</a>, <a href="third-party_licenses/apple-license.txt">Apple Public Source License</a> and <a href="third-party_licenses/php-license.txt">PHP License</a>.</p>
 	</td>
       </tr>
    </table>
