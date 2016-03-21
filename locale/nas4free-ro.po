@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-13 01:20+0000\n"
-"PO-Revision-Date: 2016-02-29 11:22+0000\n"
+"POT-Creation-Date: 2016-03-21 10:27+0000\n"
+"PO-Revision-Date: 2016-03-19 10:14+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-15 18:22+0000\n"
-"X-Generator: Launchpad (build 17939)\n"
+"X-Launchpad-Export-Date: 2016-03-21 14:08+0000\n"
+"X-Generator: Launchpad (build 17947)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -405,14 +405,14 @@ msgstr "Mod punct de acces"
 msgid "ARP Tables"
 msgstr "Tabele ARP"
 
-msgid "ARP tables"
-msgstr "Tabele ARP"
+msgid "ARP Tables List"
+msgstr ""
 
 msgid "ATTRIBUTE NAME"
 msgstr "NUME ATRIBUT"
 
-msgid "Accept remote syslog messages"
-msgstr "Aceptare mesaje syslog remote"
+msgid "Accept remote syslog messages."
+msgstr ""
 
 msgid "Access"
 msgstr "Acces"
@@ -605,7 +605,7 @@ msgid "Advanced Settings"
 msgstr "Setări avansate"
 
 msgid "Advanced Setup"
-msgstr ""
+msgstr "Setări avansate"
 
 msgid "Advanced settings"
 msgstr "Setări Avansate"
@@ -656,6 +656,9 @@ msgstr ""
 
 msgid "Albanian"
 msgstr "Albaneza"
+
+msgid "Alert Level"
+msgstr ""
 
 msgid "All"
 msgstr "Toate"
@@ -1198,6 +1201,8 @@ msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
 "error)."
 msgstr ""
+"Număr erori CRC. Contorizează numărul erorilor CRC (erori FIS CRC la "
+"citire/scriere)."
 
 msgid "Cache"
 msgstr "Cache"
@@ -1237,7 +1242,7 @@ msgid "Capacity"
 msgstr "Capacitate"
 
 msgid "Case Sensitivity"
-msgstr ""
+msgstr "Diferențiere literă mare/mică"
 
 msgid ""
 "Causes the server to display the network information for the specified IP "
@@ -1351,7 +1356,7 @@ msgid "Command"
 msgstr "Comandă"
 
 msgid "Command Scripts"
-msgstr ""
+msgstr "Scripturi comenzi"
 
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
@@ -1422,7 +1427,7 @@ msgid "Console Menu"
 msgstr "Meniu consolă"
 
 msgid "Console Settings"
-msgstr ""
+msgstr "Setări consolă"
 
 msgid "Console screensaver"
 msgstr "Screensaver consolă"
@@ -1703,6 +1708,9 @@ msgid ""
 "counts, ex data FIS CRC , code errors, disparity errors, command FIS crc. "
 "Value clears upon system power-down."
 msgstr ""
+"Contorizează numărul erorilor SATA PHY. Include toate erorile PHY, ex. FIS "
+"CRC, coduri eroare, erori de paritate, crc comenzi FIS. Contorul este "
+"resetat la oprirea sistemului."
 
 msgid "Create 4KB wrapper (nop device)."
 msgstr "Creare wrapper 4KB (dispozitiv nop)."
@@ -1754,6 +1762,9 @@ msgstr "Credite"
 
 msgid "Critical"
 msgstr "Critic"
+
+msgid "Critical Error Level"
+msgstr ""
 
 msgid "Cron"
 msgstr "Cron"
@@ -1878,10 +1889,10 @@ msgstr "Folderul bazei de date"
 msgid "Dataset"
 msgstr "Set de date"
 
-msgid "Dataset is locked"
-msgstr ""
-
 msgid "Dataset is marked for deletion"
+msgstr "Setul de date este marcat pentru ștergere"
+
+msgid "Dataset is protected"
 msgstr ""
 
 msgid "Datasets"
@@ -1898,6 +1909,9 @@ msgstr "Zile"
 
 msgid "Debug"
 msgstr "Depanare"
+
+msgid "Debug Level"
+msgstr ""
 
 msgid "Dec"
 msgstr "Dec"
@@ -2100,6 +2114,7 @@ msgstr "Adresă email destinație."
 
 msgid "Destination email address. Separate email addresses by semi-colon."
 msgstr ""
+"Adrese de email destinație. Adresele trebuie separate prin punct și virgulă."
 
 msgid "Destination host name or IP number."
 msgstr "Nume sau IP destinație."
@@ -2229,19 +2244,19 @@ msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "Dezactivare wrapper TCP (modul mod_wrap)."
 
 msgid "Disable console menu."
-msgstr ""
+msgstr "Dezactivare meniu consolă."
 
 msgid "Disable file manager completely."
-msgstr ""
+msgstr "Dezactivare completă manager fișiere."
 
 msgid "Disable firmware version check."
-msgstr ""
+msgstr "Dezactivare verificare versiune firmware."
 
 msgid "Disable speaker beep on startup and shutdown."
-msgstr ""
+msgstr "Dezactivare beep la pornire/oprire sistem."
 
-msgid "Disable the compression of repeated line"
-msgstr "Dezactivare compresie linii repetitive"
+msgid "Disable the compression of repeated line."
+msgstr ""
 
 msgid "Disabled"
 msgstr "Dezactivat"
@@ -2559,7 +2574,7 @@ msgid "Edit"
 msgstr "Editare"
 
 msgid "Edit Dataset"
-msgstr ""
+msgstr "Editare set de date"
 
 msgid "Edit Host"
 msgstr "Editare sistem"
@@ -2664,6 +2679,9 @@ msgstr "Email"
 msgid "Email Report"
 msgstr "Raport Email"
 
+msgid "Emergency Level"
+msgstr ""
+
 msgid "Empty as default."
 msgstr "Pentru valoarea implicită lasați cîmpul necompletat."
 
@@ -2727,7 +2745,7 @@ msgid "Enable ZFS ACL"
 msgstr "Activare ACL ZFS."
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
-msgstr ""
+msgstr "Activare Zeroconf/Bonjour pentru promovarea serviciilor sistemului."
 
 msgid "Enable anonymous bind."
 msgstr "Activare legătură anonimă."
@@ -2739,7 +2757,7 @@ msgid "Enable compression."
 msgstr "Activare compresie."
 
 msgid "Enable console screensaver."
-msgstr ""
+msgstr "Activare screen-saver consolă."
 
 msgid "Enable device polling"
 msgstr "Activare Device Polling"
@@ -2827,7 +2845,7 @@ msgid "Enable reverse DNS lookup."
 msgstr "Activare căutare inversă în DNS."
 
 msgid "Enable serial console."
-msgstr ""
+msgstr "Activare consolă serială."
 
 msgid "Enable shadow copy"
 msgstr "Activare copie de rezervă"
@@ -2835,14 +2853,11 @@ msgstr "Activare copie de rezervă"
 msgid "Enable store DOS attributes"
 msgstr "Activare salvare atribute DOS"
 
-msgid "Enable syslog'ing to remote syslog server"
-msgstr "Activare trimitere mesaje syslog către serverul remote syslog"
-
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Activare protocol identificare (RFC1413)."
 
 msgid "Enable the system power control utility."
-msgstr ""
+msgstr "Activare sistem control alimentare."
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Activare suport strict pentru standardul DLNA."
@@ -2854,7 +2869,7 @@ msgid "Enable traps."
 msgstr "Activare capcane software (traps)."
 
 msgid "Enable tuning of some kernel variables."
-msgstr ""
+msgstr "Activare optimizare variabile kernel."
 
 msgid "Enable write cache mode."
 msgstr "Activare mod cache la scriere."
@@ -2956,9 +2971,14 @@ msgid ""
 "Erase Fail Count (chip). This parameter indicates a number of flash erase "
 "command failures."
 msgstr ""
+"Contor erori ștergere (cip). Indică numărul de erori la comenzile de "
+"ștergere a memorie firmware."
 
 msgid "Error"
 msgstr "Eroare"
+
+msgid "Error Level"
+msgstr ""
 
 #, php-format
 msgid "Error: The changes could not be applied (error code %s)."
@@ -2966,6 +2986,9 @@ msgstr "Eroare: Modificările nu pot fi aplicate (cod de eroare %s)."
 
 msgid "Event"
 msgstr "Eveniment"
+
+msgid "Event selection"
+msgstr ""
 
 msgid "Execute"
 msgstr "Executare"
@@ -3217,7 +3240,7 @@ msgid "Firmware"
 msgstr "Firmware"
 
 msgid "Firmware Check"
-msgstr ""
+msgstr "Verificare firmware"
 
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Eroare încărcare firmware (memorie insuficientă?)"
@@ -3281,10 +3304,10 @@ msgid "Friday"
 msgstr "Vineri"
 
 msgid "From Email Address"
-msgstr ""
+msgstr "Adresa de email expeditor"
 
 msgid "From email address for sending system messages."
-msgstr ""
+msgstr "Adresa de email a expeditor pentru trimiterea mesajelor."
 
 msgid "Fsck"
 msgstr "Fsck"
@@ -3582,8 +3605,8 @@ msgstr "Adresă IP"
 msgid "IP address"
 msgstr "Adresa IP"
 
-msgid "IP address of remote syslog server"
-msgstr "Adresa IP a serverului pentru syslog"
+msgid "IP address of remote syslog server."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -3793,6 +3816,9 @@ msgstr ""
 msgid "Info"
 msgstr "Info"
 
+msgid "Info Level"
+msgstr ""
+
 msgid "Informal"
 msgstr "Informare"
 
@@ -3900,7 +3926,7 @@ msgid "Inquiry Vendor"
 msgstr "Informații Vînzător"
 
 msgid "Insensitive"
-msgstr ""
+msgstr "Insenzitiv"
 
 msgid "Install"
 msgstr "Instalare"
@@ -4038,10 +4064,10 @@ msgid "Japanese"
 msgstr "Japoneză"
 
 msgid "Job is locked"
-msgstr ""
+msgstr "Activitate blocată"
 
 msgid "Job is marked for deletion"
-msgstr ""
+msgstr "Activitate marcată pentru ștergere"
 
 msgid "Jul"
 msgstr "Iul"
@@ -4338,8 +4364,14 @@ msgstr "Dispozitiv pentru jurnal"
 msgid "Log Level"
 msgstr "Nivel Jurnal"
 
+msgid "Log Settings"
+msgstr ""
+
 msgid "Log level"
 msgstr "Nivel jurnal"
+
+msgid "Log order"
+msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Memorare pachete gestionate de această regulă în syslog."
@@ -4407,10 +4439,10 @@ msgid "MIB"
 msgstr "MIB"
 
 msgid "MIB is locked"
-msgstr ""
+msgstr "MIB blocat"
 
 msgid "MIB is marked for deletion"
-msgstr ""
+msgstr "MIB marcat pentru ștergere"
 
 msgid "MISSING"
 msgstr "LIPSĂ"
@@ -4484,6 +4516,9 @@ msgstr "Adresă de masguerade"
 
 msgid "Max Protocol"
 msgstr "Protocol Max"
+
+msgid "Max entries"
+msgstr ""
 
 msgid "Max. TTL"
 msgstr "TTL max."
@@ -4671,7 +4706,7 @@ msgid "Missing a temporary folder."
 msgstr "Lipsește un folder temporar."
 
 msgid "Mixed"
-msgstr ""
+msgstr "Amestecate"
 
 msgid "Mode"
 msgstr "Mod"
@@ -4732,10 +4767,10 @@ msgid "Mounts"
 msgstr "Montări"
 
 msgid "Move down"
-msgstr ""
+msgstr "Mută în jos"
 
 msgid "Move up"
-msgstr ""
+msgstr "Mută în sus"
 
 msgid "Music"
 msgstr "Muzică"
@@ -5061,6 +5096,9 @@ msgstr ""
 msgid "Nothing to synchronize"
 msgstr "Nimic de sincronizat"
 
+msgid "Notice Level"
+msgstr ""
+
 #, php-format
 msgid "Notification email from host: %s"
 msgstr "Email de autentificare de la: %s"
@@ -5168,10 +5206,10 @@ msgid "Option"
 msgstr "Opțiune"
 
 msgid "Option is locked"
-msgstr ""
+msgstr "Opțiune blocată"
 
 msgid "Option is marked for deletion"
-msgstr ""
+msgstr "Opțiune marcată pentru ștergere"
 
 msgid "Optional user-friendly string of the target."
 msgstr "Text opțional pentru destinație."
@@ -5192,7 +5230,7 @@ msgid "Outgoing Power/Inverter Information"
 msgstr "Puterea de ieșire/Informații Invertor"
 
 msgid "Outgoing SMTP mail server address."
-msgstr ""
+msgstr "Adresă server email pentru trimitere"
 
 msgid "Output current (A)"
 msgstr "Curentul de ieșire (A)"
@@ -5377,7 +5415,7 @@ msgid "Peer port"
 msgstr "Port grup"
 
 msgid "Performance Settings"
-msgstr ""
+msgstr "Setări de performanță"
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
@@ -5401,6 +5439,9 @@ msgstr "Imagini"
 msgid "Ping"
 msgstr "Ping"
 
+msgid "Ping Test"
+msgstr ""
+
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Verificare (Ping) winbindd:"
 
@@ -5408,7 +5449,7 @@ msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
 
 msgid "Plain-text"
-msgstr ""
+msgstr "Text simplu"
 
 msgid "Platform"
 msgstr "Platformă"
@@ -5772,6 +5813,9 @@ msgstr "Modul remote (sursă)"
 msgid "Remote Rsync Server"
 msgstr "Server Rsync Destinație"
 
+msgid "Remote Syslog Server"
+msgstr ""
+
 msgid "Remote module (source)"
 msgstr "Modul destinație (sursă)"
 
@@ -5784,8 +5828,8 @@ msgstr "Monitorizare destinație"
 msgid "Remote rsync daemon"
 msgstr "Daemon reomote sync"
 
-msgid "Remote syslog server"
-msgstr "Serverul Remote syslog"
+msgid "Remote syslog messages"
+msgstr ""
 
 msgid "Removable"
 msgstr "Detașabil"
@@ -5841,8 +5885,14 @@ msgstr ""
 msgid "Resolve"
 msgstr "Rezolvare"
 
+msgid "Resolve IP"
+msgstr ""
+
 msgid "Resolve IP addresses to hostnames"
 msgstr "Conversie adresă IP în nume de sistem"
+
+msgid "Resolve IP addresses to hostnames."
+msgstr ""
 
 msgid "Resource"
 msgstr "Resursă"
@@ -5972,7 +6022,7 @@ msgstr ""
 "este pentru sisteme desactualizate (windows XP)."
 
 msgid "SMTP Server"
-msgstr ""
+msgstr "Server SMTP"
 
 msgid "SNMP"
 msgstr "SNMP"
@@ -6174,7 +6224,7 @@ msgid "Send now"
 msgstr "Trimite acum"
 
 msgid "Sensitive"
-msgstr ""
+msgstr "Senzitiv"
 
 msgid "Sep"
 msgstr "Sep"
@@ -6323,10 +6373,8 @@ msgstr "Afișare informații (neprelucrate) UPS"
 msgid "Show UPS Information"
 msgstr "Afișare informații UPS"
 
-msgid "Show log entries in reverse order (newest entries on top)"
+msgid "Show log entries in reverse order (newest entries on top)."
 msgstr ""
-"Afișare jurnal în ordine cronologică inversă (ultimele înregistrări sînt "
-"afișate primele)"
 
 msgid "Shutdown"
 msgstr "Oprire"
@@ -6401,7 +6449,7 @@ msgid "Software RAID"
 msgstr "RAID Software"
 
 msgid "Software Used"
-msgstr ""
+msgstr "Software utilizat"
 
 msgid "Source"
 msgstr "Sursă"
@@ -6443,7 +6491,7 @@ msgid "Sparse Volume"
 msgstr "Volum Imagine"
 
 msgid "Speaker Beep"
-msgstr ""
+msgstr "Bip difuzor"
 
 msgid ""
 "Specific to He8 drives from HGST. The Helium, so says the literature, allows "
@@ -6670,6 +6718,9 @@ msgstr "Sincronizare"
 msgid "Syncthing"
 msgstr "Syncthing"
 
+msgid "Syslog Level"
+msgstr ""
+
 #, php-format
 msgid ""
 "Syslog sends UDP datagrams to port 514 on the specified remote syslog "
@@ -6688,6 +6739,9 @@ msgstr "Informații sistem"
 
 msgid "System Load"
 msgstr "Încărcare sistem"
+
+msgid "System Settings"
+msgstr ""
 
 msgid "System bios"
 msgstr "Bios sistem"
@@ -7817,10 +7871,14 @@ msgid ""
 "This attribute controls the ACL behavior when a file is created or whenever "
 "the mode of a file or a directory is modified."
 msgstr ""
+"Acest parametru controlează comportamentul ACL atunci când se crează un "
+"fișier sau ori de câte ori un fișier sau un director este modificat."
 
 msgid ""
 "This attribute determines the behavior of Access Control List inheritance."
 msgstr ""
+"Acest parametru determină comportamentul propagării Listei de Control Acces "
+"(ACL)."
 
 msgid ""
 "This attribute indicates the count of full hard disk power on/off cycles."
@@ -8123,13 +8181,16 @@ msgid ""
 "file system should be casesensitive, caseinsensitive, or allow a combination "
 "of both styles of matching"
 msgstr ""
+"Acest parametru indică dacă aalgoritmul de căutare folosit de către sistem "
+"trebuie să țină cont de tipul literei sau să permită o combinație a celor "
+"două variante (literă mică/mare)."
 
 msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr ""
 "Această regulă este activată ori de cîte ori apare evenimentul selectat."
 
 msgid "This server uses default swap!"
-msgstr ""
+msgstr "Acest server utilizează fișierul swap implicit!"
 
 msgid "This tag already exists."
 msgstr "Această etichetă există deja."
@@ -8261,7 +8322,7 @@ msgid "TitleSpeed"
 msgstr "Viteză Text"
 
 msgid "To Email Address"
-msgstr ""
+msgstr "Adresă de email destinație"
 
 msgid ""
 "To configure the target, you must add at least Portal Group and Initiator "
@@ -8363,12 +8424,16 @@ msgid ""
 "LBAs read from the device. The lower 7 byte value is located at attribute "
 "0xF2."
 msgstr ""
+"Număr total citiri LBA.Primii 5 octeți din cei 12 sunt preluați de la "
+"dispozitiv iar restul de 7 sunt preluați din atributul 0xF2."
 
 msgid ""
 "Total LBAs Written Expanded. The upper 5 bytes of the 12-byte total number "
 "of LBAs written to the device. The lower 7 byte value is located at "
 "attribute 0xF1."
 msgstr ""
+"Număr total scrieri LBA.Primii 5 octeți din cei 12 sunt preluați de la "
+"dispozitiv iar restul de 7 sunt preluați din atributul 0xF1."
 
 msgid ""
 "Total NAND Writes. Raw value reports the number of writes to NAND in 1GB "
@@ -8413,6 +8478,9 @@ msgstr "Total: %s | Utilizat: %s | Liber: %s"
 
 msgid "Traceroute"
 msgstr "Trasare Ruta"
+
+msgid "Traceroute Test"
+msgstr ""
 
 msgid ""
 "Traceroute may take a while to complete. You may hit the Stop button on your "
@@ -8755,6 +8823,7 @@ msgstr ""
 
 msgid "Use toggle button instead of enable/disable buttons."
 msgstr ""
+"Folosiți butonul de comutare în locul butoanelor de activare/dezactivare."
 
 msgid "Used"
 msgstr "Utilizat"
@@ -8902,10 +8971,10 @@ msgid "Volume Size Limit"
 msgstr "Capacitate limita a volumului"
 
 msgid "Volume is locked"
-msgstr ""
+msgstr "Volumul este blocat"
 
 msgid "Volume is marked for deletion"
-msgstr ""
+msgstr "Volumul este marcat pentru ștergere"
 
 msgid "Volume label"
 msgstr "Etichetă volum"
@@ -8958,6 +9027,9 @@ msgstr "Pornire prin LAN (WOL)"
 
 msgid "Warning"
 msgstr "Atenție"
+
+msgid "Warning Level"
+msgstr ""
 
 msgid ""
 "Warning: You are going to delete a RAID volume. All data will get lost and "
@@ -9383,3 +9455,29 @@ msgstr "demontare"
 
 msgid "version:"
 msgstr "versiune:"
+
+#~ msgid "ARP tables"
+#~ msgstr "Tabele ARP"
+
+#~ msgid "Enable syslog'ing to remote syslog server"
+#~ msgstr "Activare trimitere mesaje syslog către serverul remote syslog"
+
+#~ msgid "IP address of remote syslog server"
+#~ msgstr "Adresa IP a serverului pentru syslog"
+
+#~ msgid "Remote syslog server"
+#~ msgstr "Serverul Remote syslog"
+
+#~ msgid "Show log entries in reverse order (newest entries on top)"
+#~ msgstr ""
+#~ "Afișare jurnal în ordine cronologică inversă (ultimele înregistrări sînt "
+#~ "afișate primele)"
+
+#~ msgid "Accept remote syslog messages"
+#~ msgstr "Aceptare mesaje syslog remote"
+
+#~ msgid "Disable the compression of repeated line"
+#~ msgstr "Dezactivare compresie linii repetitive"
+
+#~ msgid "Dataset is locked"
+#~ msgstr "Setul de date este blocat"

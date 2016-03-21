@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-13 01:20+0000\n"
+"POT-Creation-Date: 2016-03-21 10:27+0000\n"
 "PO-Revision-Date: 2016-03-13 11:32+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-17 13:56+0000\n"
+"X-Launchpad-Export-Date: 2016-03-21 14:09+0000\n"
 "X-Generator: Launchpad (build 17947)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -387,14 +387,14 @@ msgstr "AP läge"
 msgid "ARP Tables"
 msgstr "ARP Tabeller"
 
-msgid "ARP tables"
-msgstr "ARP Tabeller"
+msgid "ARP Tables List"
+msgstr ""
 
 msgid "ATTRIBUTE NAME"
 msgstr "ATTRIBUTNAMN"
 
-msgid "Accept remote syslog messages"
-msgstr "Acceptera externa syslogmeddelanden"
+msgid "Accept remote syslog messages."
+msgstr ""
 
 msgid "Access"
 msgstr "Åtkomst"
@@ -637,6 +637,9 @@ msgstr ""
 
 msgid "Albanian"
 msgstr "Albanien"
+
+msgid "Alert Level"
+msgstr ""
 
 msgid "All"
 msgstr "Alla"
@@ -1701,6 +1704,9 @@ msgstr "Tack till"
 msgid "Critical"
 msgstr "Kritiskt"
 
+msgid "Critical Error Level"
+msgstr ""
+
 msgid "Cron"
 msgstr "Cron"
 
@@ -1823,11 +1829,11 @@ msgstr "Databaskatalog"
 msgid "Dataset"
 msgstr "Dataset"
 
-msgid "Dataset is locked"
-msgstr "Datasetet är låst"
-
 msgid "Dataset is marked for deletion"
 msgstr "Datasetet är markerat för borttagning"
+
+msgid "Dataset is protected"
+msgstr ""
 
 msgid "Datasets"
 msgstr "Dataseten"
@@ -1843,6 +1849,9 @@ msgstr "Dagar"
 
 msgid "Debug"
 msgstr "Felsök"
+
+msgid "Debug Level"
+msgstr ""
 
 msgid "Dec"
 msgstr "dec"
@@ -2183,8 +2192,8 @@ msgstr "Inaktivera versionskontroll av systemmjukvara."
 msgid "Disable speaker beep on startup and shutdown."
 msgstr "Inaktivera högtalarpip vid start och stopp."
 
-msgid "Disable the compression of repeated line"
-msgstr "Inaktivera sammanslagning av upprepade rader"
+msgid "Disable the compression of repeated line."
+msgstr ""
 
 msgid "Disabled"
 msgstr "Inaktiverad"
@@ -2608,6 +2617,9 @@ msgstr "E-post"
 msgid "Email Report"
 msgstr "E-postrapport"
 
+msgid "Emergency Level"
+msgstr ""
+
 msgid "Empty as default."
 msgstr "Tom som standard"
 
@@ -2779,9 +2791,6 @@ msgstr "Aktivera skuggkopia"
 msgid "Enable store DOS attributes"
 msgstr "Möjliggör lagring av DOS attribut"
 
-msgid "Enable syslog'ing to remote syslog server"
-msgstr "Aktivera loggning till fjärrliggande syslog-server"
-
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Aktivera identifieringsprotokoll (RFC1413)."
 
@@ -2905,12 +2914,18 @@ msgstr ""
 msgid "Error"
 msgstr "Fel"
 
+msgid "Error Level"
+msgstr ""
+
 #, php-format
 msgid "Error: The changes could not be applied (error code %s)."
 msgstr "Fel: Ändringarna kunde inte verkställas (felkod %s)."
 
 msgid "Event"
 msgstr "Händelse"
+
+msgid "Event selection"
+msgstr ""
 
 msgid "Execute"
 msgstr "Kör"
@@ -3517,8 +3532,8 @@ msgstr "IP adress"
 msgid "IP address"
 msgstr "IP-adress"
 
-msgid "IP address of remote syslog server"
-msgstr "IP-adress till fjärrsyslogserver"
+msgid "IP address of remote syslog server."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -3720,6 +3735,9 @@ msgstr ""
 
 msgid "Info"
 msgstr "Info"
+
+msgid "Info Level"
+msgstr ""
 
 msgid "Informal"
 msgstr "Informell"
@@ -4249,8 +4267,14 @@ msgstr "Logga enhet"
 msgid "Log Level"
 msgstr "Loggnivå"
 
+msgid "Log Settings"
+msgstr ""
+
 msgid "Log level"
 msgstr "Loggningsnivå"
+
+msgid "Log order"
+msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Logga paket som hanteras av denna regel till syslog."
@@ -4393,6 +4417,9 @@ msgstr "Maskerad adress"
 
 msgid "Max Protocol"
 msgstr "Max Protocol"
+
+msgid "Max entries"
+msgstr ""
 
 msgid "Max. TTL"
 msgstr "Max. TTL"
@@ -4968,6 +4995,9 @@ msgstr ""
 msgid "Nothing to synchronize"
 msgstr "Inget att synkronisera"
 
+msgid "Notice Level"
+msgstr ""
+
 #, php-format
 msgid "Notification email from host: %s"
 msgstr "Notifikationse-post från värd: %s"
@@ -5306,6 +5336,9 @@ msgstr "Bilder"
 
 msgid "Ping"
 msgstr "Ping"
+
+msgid "Ping Test"
+msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Pinga 'winbindd' (winbind-demonen) för att se om den lever:"
@@ -5673,6 +5706,9 @@ msgstr "Remote Module (Källa)"
 msgid "Remote Rsync Server"
 msgstr "Fjärr-server för Rsync"
 
+msgid "Remote Syslog Server"
+msgstr ""
+
 msgid "Remote module (source)"
 msgstr "Fjärr-modul (källa)"
 
@@ -5685,8 +5721,8 @@ msgstr "Fjärrövervakning"
 msgid "Remote rsync daemon"
 msgstr "Fjärr rsync demon"
 
-msgid "Remote syslog server"
-msgstr "Fjärrsyslogserver"
+msgid "Remote syslog messages"
+msgstr ""
 
 msgid "Removable"
 msgstr "Flyttbar"
@@ -5741,8 +5777,14 @@ msgstr "Motstånd orsakat av friktion i mekaniska delar vid drift."
 msgid "Resolve"
 msgstr "Åtgärda"
 
+msgid "Resolve IP"
+msgstr ""
+
 msgid "Resolve IP addresses to hostnames"
 msgstr "Slå upp IP-adresser till värdnamn"
+
+msgid "Resolve IP addresses to hostnames."
+msgstr ""
 
 msgid "Resource"
 msgstr "Resurs"
@@ -6219,8 +6261,8 @@ msgstr "Visa UPS-info i råformat"
 msgid "Show UPS Information"
 msgstr "Visa UPS information"
 
-msgid "Show log entries in reverse order (newest entries on top)"
-msgstr "Visa loggposter i omvänd ordning (senaste posterna överst)"
+msgid "Show log entries in reverse order (newest entries on top)."
+msgstr ""
 
 msgid "Shutdown"
 msgstr "Stäng av"
@@ -6569,6 +6611,9 @@ msgstr "Synkronisera"
 msgid "Syncthing"
 msgstr "Syncthing"
 
+msgid "Syslog Level"
+msgstr ""
+
 #, php-format
 msgid ""
 "Syslog sends UDP datagrams to port 514 on the specified remote syslog "
@@ -6587,6 +6632,9 @@ msgstr "Systeminformation"
 
 msgid "System Load"
 msgstr "Systembelastning"
+
+msgid "System Settings"
+msgstr ""
 
 msgid "System bios"
 msgstr "Systembios"
@@ -8298,6 +8346,9 @@ msgstr "Totalt: %s | Använt: %s | Ledigt: %s"
 msgid "Traceroute"
 msgstr "Traceroute"
 
+msgid "Traceroute Test"
+msgstr ""
+
 msgid ""
 "Traceroute may take a while to complete. You may hit the Stop button on your "
 "browser at any time to see the progress of failed traceroutes."
@@ -8836,6 +8887,9 @@ msgstr "Wake On LAN"
 msgid "Warning"
 msgstr "Varning"
 
+msgid "Warning Level"
+msgstr ""
+
 msgid ""
 "Warning: You are going to delete a RAID volume. All data will get lost and "
 "can not be recovered."
@@ -9258,3 +9312,27 @@ msgstr "umount"
 
 msgid "version:"
 msgstr "version:"
+
+#~ msgid "ARP tables"
+#~ msgstr "ARP Tabeller"
+
+#~ msgid "Enable syslog'ing to remote syslog server"
+#~ msgstr "Aktivera loggning till fjärrliggande syslog-server"
+
+#~ msgid "IP address of remote syslog server"
+#~ msgstr "IP-adress till fjärrsyslogserver"
+
+#~ msgid "Remote syslog server"
+#~ msgstr "Fjärrsyslogserver"
+
+#~ msgid "Show log entries in reverse order (newest entries on top)"
+#~ msgstr "Visa loggposter i omvänd ordning (senaste posterna överst)"
+
+#~ msgid "Disable the compression of repeated line"
+#~ msgstr "Inaktivera sammanslagning av upprepade rader"
+
+#~ msgid "Dataset is locked"
+#~ msgstr "Datasetet är låst"
+
+#~ msgid "Accept remote syslog messages"
+#~ msgstr "Acceptera externa syslogmeddelanden"

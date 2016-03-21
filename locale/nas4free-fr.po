@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-13 01:20+0000\n"
-"PO-Revision-Date: 2016-02-28 21:48+0000\n"
-"Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
+"POT-Creation-Date: 2016-03-21 10:27+0000\n"
+"PO-Revision-Date: 2016-03-20 10:04+0000\n"
+"Last-Translator: Jean-Marc <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-15 18:21+0000\n"
-"X-Generator: Launchpad (build 17939)\n"
+"X-Launchpad-Export-Date: 2016-03-21 14:08+0000\n"
+"X-Generator: Launchpad (build 17947)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
 "X-Poedit-Language: French\n"
@@ -57,15 +57,15 @@ msgstr "Interface %s"
 
 #, php-format
 msgid "%s already exists as a %s."
-msgstr ""
+msgstr "%s existe déjà en tant que %s"
 
 #, php-format
 msgid "%s is already configured as a filesystem."
-msgstr ""
+msgstr "%s est déjà configuré comme système de fichier"
 
 #, php-format
 msgid "%s is already configured as a volume."
-msgstr ""
+msgstr "%s est déjà configuré comme volume"
 
 #, php-format
 msgid "%s is too long."
@@ -404,14 +404,14 @@ msgstr "mode AP"
 msgid "ARP Tables"
 msgstr "Tables ARP"
 
-msgid "ARP tables"
-msgstr "tables ARP"
+msgid "ARP Tables List"
+msgstr ""
 
 msgid "ATTRIBUTE NAME"
 msgstr "NOM ATTRIBUT"
 
-msgid "Accept remote syslog messages"
-msgstr "Accepter les messages syslog distant"
+msgid "Accept remote syslog messages."
+msgstr ""
 
 msgid "Access"
 msgstr "Accès"
@@ -605,7 +605,7 @@ msgid "Advanced Settings"
 msgstr "Configuration avancée"
 
 msgid "Advanced Setup"
-msgstr ""
+msgstr "Configuration Avancée"
 
 msgid "Advanced settings"
 msgstr "Paramètres avancés"
@@ -657,6 +657,9 @@ msgstr ""
 
 msgid "Albanian"
 msgstr "Albanais"
+
+msgid "Alert Level"
+msgstr ""
 
 msgid "All"
 msgstr "Tous"
@@ -1201,6 +1204,8 @@ msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
 "error)."
 msgstr ""
+"Décompte d'Erreurs CRC. Compte le nombre d'erreurs CRC (erreur FIS CRC à la "
+"lecture/écriture de données)."
 
 msgid "Cache"
 msgstr "Cache"
@@ -1241,7 +1246,7 @@ msgid "Capacity"
 msgstr "Capacité"
 
 msgid "Case Sensitivity"
-msgstr ""
+msgstr "Sensibilité à la casse"
 
 msgid ""
 "Causes the server to display the network information for the specified IP "
@@ -1353,7 +1358,7 @@ msgid "Command"
 msgstr "Commande"
 
 msgid "Command Scripts"
-msgstr ""
+msgstr "Scripts de commande"
 
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
@@ -1424,7 +1429,7 @@ msgid "Console Menu"
 msgstr "Menu de la Console"
 
 msgid "Console Settings"
-msgstr ""
+msgstr "Paramètres de la console"
 
 msgid "Console screensaver"
 msgstr "Veille de la console"
@@ -1697,6 +1702,10 @@ msgid ""
 "counts, ex data FIS CRC , code errors, disparity errors, command FIS crc. "
 "Value clears upon system power-down."
 msgstr ""
+"Compte le nombre d'erreurs SATA PHY. Cette valeur inclus tous les décomptes "
+"d'erreurs PHY, ex FIS CRC de données, erreurs de code, erreurs de disparité, "
+"FIS CRC de commande. Cette valeur est remise à zéro à la mise hors-tension "
+"du système."
 
 msgid "Create 4KB wrapper (nop device)."
 msgstr "Crée un wrapper de 4Ko (partition nop)."
@@ -1748,6 +1757,9 @@ msgstr "Crédits"
 
 msgid "Critical"
 msgstr "Critique"
+
+msgid "Critical Error Level"
+msgstr ""
 
 msgid "Cron"
 msgstr "Cron"
@@ -1873,10 +1885,10 @@ msgstr "Répertoire de base de données"
 msgid "Dataset"
 msgstr "Jeu de données"
 
-msgid "Dataset is locked"
-msgstr ""
-
 msgid "Dataset is marked for deletion"
+msgstr "Dataset est marqué pour suppression"
+
+msgid "Dataset is protected"
 msgstr ""
 
 msgid "Datasets"
@@ -1893,6 +1905,9 @@ msgstr "Jours"
 
 msgid "Debug"
 msgstr "Débogage"
+
+msgid "Debug Level"
+msgstr ""
 
 msgid "Dec"
 msgstr "Déc."
@@ -1917,7 +1932,7 @@ msgid "Default"
 msgstr "Standard"
 
 msgid "Default Device Settings"
-msgstr ""
+msgstr "Paramètres par défaut du dispositif"
 
 #, php-format
 msgid "Default is %s."
@@ -2096,6 +2111,8 @@ msgstr "Adresse e-mail de destination."
 
 msgid "Destination email address. Separate email addresses by semi-colon."
 msgstr ""
+"Adresse email de destination. Séparer les adresses emails avec des point-"
+"virgules."
 
 msgid "Destination host name or IP number."
 msgstr "Nom d'hôte ou adresse IP de destination."
@@ -2226,18 +2243,18 @@ msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "D&eacute;sactiver le wrapper TCP (module mod_wrap)."
 
 msgid "Disable console menu."
-msgstr ""
+msgstr "Désactiver le menu console"
 
 msgid "Disable file manager completely."
-msgstr ""
+msgstr "Désactiver entièrement le gestionnaire de fichiers"
 
 msgid "Disable firmware version check."
-msgstr ""
+msgstr "Désactiver la vérification de la version du firmware"
 
 msgid "Disable speaker beep on startup and shutdown."
-msgstr ""
+msgstr "Désactiver le bip du haut-parleur au démarrage et à l'arrêt"
 
-msgid "Disable the compression of repeated line"
+msgid "Disable the compression of repeated line."
 msgstr ""
 
 msgid "Disabled"
@@ -2664,6 +2681,9 @@ msgstr "Email"
 msgid "Email Report"
 msgstr "Rapport par e-mail"
 
+msgid "Emergency Level"
+msgstr ""
+
 msgid "Empty as default."
 msgstr "Vide par défaut"
 
@@ -2727,7 +2747,7 @@ msgid "Enable ZFS ACL"
 msgstr "Activer ZFS ACL"
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
-msgstr ""
+msgstr "Activer Zeroconf/Bonjour pour annoncer les services de la machine."
 
 msgid "Enable anonymous bind."
 msgstr "Autoriser le bind anonyme."
@@ -2739,7 +2759,7 @@ msgid "Enable compression."
 msgstr "Active la compression."
 
 msgid "Enable console screensaver."
-msgstr ""
+msgstr "Activer l'écran de veille de la console."
 
 msgid "Enable device polling"
 msgstr "Activer le sondage de périphérique (device polling)"
@@ -2835,14 +2855,11 @@ msgstr "Activer le cliché instantané"
 msgid "Enable store DOS attributes"
 msgstr "Activer les attributs de stockage DOS"
 
-msgid "Enable syslog'ing to remote syslog server"
-msgstr "Activer l'enregistrement des journaux sur un serveur distant"
-
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Activer le protocole d'identification (RFC1413)."
 
 msgid "Enable the system power control utility."
-msgstr ""
+msgstr "Activer l'utilitaire de contrôle de l'alimentation du système."
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Permettre de se conformer strictement aux standards DLNA"
@@ -2854,7 +2871,7 @@ msgid "Enable traps."
 msgstr "Activer les traps."
 
 msgid "Enable tuning of some kernel variables."
-msgstr ""
+msgstr "Activer le réglage de certaines variables du noyau."
 
 msgid "Enable write cache mode."
 msgstr "Activer le mode cache en écriture."
@@ -2960,12 +2977,18 @@ msgstr ""
 msgid "Error"
 msgstr "Erreur"
 
+msgid "Error Level"
+msgstr ""
+
 #, php-format
 msgid "Error: The changes could not be applied (error code %s)."
 msgstr "Erreur: Ce changement ne peut être appliqué (code erreur %s)."
 
 msgid "Event"
 msgstr "Evénement"
+
+msgid "Event selection"
+msgstr ""
 
 msgid "Execute"
 msgstr "Exécuter"
@@ -3171,6 +3194,8 @@ msgstr "Fichier non trouvé"
 #, php-format
 msgid "File path (e.g. %s) or ZFS volume (e.g. %s) used as Hard disk image."
 msgstr ""
+"Chemin de fichier (par ex. %s) ou volume ZFS (par ex. %s) utilisé comme "
+"image de disque dur."
 
 #, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
@@ -3217,7 +3242,7 @@ msgid "Firmware"
 msgstr "Logiciel"
 
 msgid "Firmware Check"
-msgstr ""
+msgstr "Vérification du Firmware"
 
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Televerssement du Firmware échoué (dépassement de la memoire ?)"
@@ -3412,7 +3437,7 @@ msgid "HAST volume can be use with GPT/UFS only."
 msgstr "HAST volume ne peut être utilisé qu'avec GPT/UFS"
 
 msgid "HDD Format"
-msgstr ""
+msgstr "Format de Disque Dur"
 
 msgid "HDD Management"
 msgstr "Gestion des disques"
@@ -3576,8 +3601,8 @@ msgstr "Adresse IP"
 msgid "IP address"
 msgstr "Adresse IP"
 
-msgid "IP address of remote syslog server"
-msgstr "Adresse IP du serveur syslog distant"
+msgid "IP address of remote syslog server."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -3626,7 +3651,7 @@ msgstr "Aide en ligne via IRC"
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
-msgstr ""
+msgstr "Chemin de fichier ISO (par ex. %s) utilisé comme lecteur de CD/DVD."
 
 msgid "ISO file to be mounted."
 msgstr "Fichier ISO à monter."
@@ -3789,6 +3814,9 @@ msgstr ""
 
 msgid "Info"
 msgstr "Info"
+
+msgid "Info Level"
+msgstr ""
 
 msgid "Informal"
 msgstr "Informel"
@@ -4097,7 +4125,7 @@ msgid "LCDproc"
 msgstr "LCDproc"
 
 msgid "LCDproc (Client)"
-msgstr ""
+msgstr "LCDproc (Client)"
 
 msgid "LDAP"
 msgstr "LDAP"
@@ -4196,7 +4224,7 @@ msgid "License & Credits"
 msgstr "Licence & Crédits"
 
 msgid "Life Time"
-msgstr ""
+msgstr "Durée de Vie"
 
 msgid "Life time"
 msgstr "Durée de vie"
@@ -4336,8 +4364,14 @@ msgstr "La partition du log."
 msgid "Log Level"
 msgstr "Niveau de journalisation"
 
+msgid "Log Settings"
+msgstr ""
+
 msgid "Log level"
 msgstr "Niveau de journalisation"
+
+msgid "Log order"
+msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Journaliser dans syslog les paquets gérés par cette règle."
@@ -4483,6 +4517,9 @@ msgstr "Adresse de masquerading"
 
 msgid "Max Protocol"
 msgstr "Protocole Maximum"
+
+msgid "Max entries"
+msgstr ""
 
 msgid "Max. TTL"
 msgstr "Max. TTL"
@@ -4732,10 +4769,10 @@ msgid "Mounts"
 msgstr "Montages"
 
 msgid "Move down"
-msgstr ""
+msgstr "Déplacer vers le bas"
 
 msgid "Move up"
-msgstr ""
+msgstr "Déplacer vers le haut"
 
 msgid "Music"
 msgstr "Musique"
@@ -4823,7 +4860,7 @@ msgid "Network"
 msgstr "Réseau"
 
 msgid "Network Adapter"
-msgstr ""
+msgstr "Adaptateur Réseau"
 
 msgid "Network File System"
 msgstr "Network File System (NFS)"
@@ -5060,6 +5097,9 @@ msgstr ""
 msgid "Nothing to synchronize"
 msgstr "Rien à synchroniser"
 
+msgid "Notice Level"
+msgstr ""
+
 #, php-format
 msgid "Notification email from host: %s"
 msgstr "Email de notification du hôte: %s"
@@ -5167,10 +5207,10 @@ msgid "Option"
 msgstr "Option"
 
 msgid "Option is locked"
-msgstr ""
+msgstr "L'option est verrouillée"
 
 msgid "Option is marked for deletion"
-msgstr ""
+msgstr "L'option est marquée pour suppression"
 
 msgid "Optional user-friendly string of the target."
 msgstr "Un nom pour identifier facilement la cible (optionnel)"
@@ -5191,7 +5231,7 @@ msgid "Outgoing Power/Inverter Information"
 msgstr "Information de la Puissance/Inversion sortante"
 
 msgid "Outgoing SMTP mail server address."
-msgstr ""
+msgstr "Adresse du serveur SMTP d'envoi d'e-mail."
 
 msgid "Output current (A)"
 msgstr "Courant en sortie (A)"
@@ -5378,7 +5418,7 @@ msgid "Peer port"
 msgstr "Peer port"
 
 msgid "Performance Settings"
-msgstr ""
+msgstr "Paramètres de performance"
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
@@ -5401,6 +5441,9 @@ msgstr "Images"
 
 msgid "Ping"
 msgstr "Ping"
+
+msgid "Ping Test"
+msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Ping winbindd pour vérifier s'il est en ligne:"
@@ -5579,7 +5622,7 @@ msgid "Processes"
 msgstr "Processus"
 
 msgid "Processes Information"
-msgstr ""
+msgstr "Information des Processus"
 
 msgid "Product ID"
 msgstr "ID du produit"
@@ -5603,6 +5646,8 @@ msgid ""
 "Puts the disk into standby mode when the selected amount of time after the "
 "last disk access has been elapsed."
 msgstr ""
+"Met le disque en mode veille lorsque le temps sélectionné depuis le dernier "
+"accès au disque est écoulé."
 
 msgid "Queue Depth"
 msgstr "Profondeur de queue"
@@ -5777,6 +5822,9 @@ msgstr ""
 msgid "Remote Rsync Server"
 msgstr "Serveur Rsync distant"
 
+msgid "Remote Syslog Server"
+msgstr ""
+
 msgid "Remote module (source)"
 msgstr "Module distant (source)"
 
@@ -5789,8 +5837,8 @@ msgstr "Contrôle à distance"
 msgid "Remote rsync daemon"
 msgstr "Démon rsync distant."
 
-msgid "Remote syslog server"
-msgstr "Serveur syslog distant"
+msgid "Remote syslog messages"
+msgstr ""
 
 msgid "Removable"
 msgstr "Amovible"
@@ -5845,8 +5893,14 @@ msgstr "Résistance due à la friction des pièces mécaniques en opération."
 msgid "Resolve"
 msgstr "Résoudre"
 
+msgid "Resolve IP"
+msgstr ""
+
 msgid "Resolve IP addresses to hostnames"
 msgstr "Résoudre les adresses IP en noms d'hôtes"
+
+msgid "Resolve IP addresses to hostnames."
+msgstr ""
 
 msgid "Resource"
 msgstr "Ressource"
@@ -5979,7 +6033,7 @@ msgstr ""
 "pour  les anciens systèmes d'exploitation tel que XP."
 
 msgid "SMTP Server"
-msgstr ""
+msgstr "Serveur SMTP"
 
 msgid "SNMP"
 msgstr "SNMP"
@@ -6114,7 +6168,7 @@ msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Sélectionnez un disque configuré pour le pilotage S.M.A.R.T."
 
 msgid "Select firmware:"
-msgstr ""
+msgstr "Choisir le firmware:"
 
 msgid "Select item to remove from the list"
 msgstr "Sélectionner l'item à supprimer de la liste"
@@ -6163,7 +6217,7 @@ msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr ""
 
 msgid "Self-tests Management"
-msgstr ""
+msgstr "Gestion des auto-tests"
 
 msgid "Send Buffer Size"
 msgstr "Taille du tampon d'envoi"
@@ -6325,18 +6379,16 @@ msgid "Shock During Write."
 msgstr "Choc pendant l'écriture"
 
 msgid "Show Process Information"
-msgstr ""
+msgstr "Afficher les information du processus"
 
 msgid "Show RAW UPS Info"
 msgstr "Voir les informations RAW de UPS"
 
 msgid "Show UPS Information"
-msgstr ""
+msgstr "Afficher les information de l'UPS"
 
-msgid "Show log entries in reverse order (newest entries on top)"
+msgid "Show log entries in reverse order (newest entries on top)."
 msgstr ""
-"Montrer les entrées du journal en ordre inverse (entrées les plus récentes "
-"en haut)"
 
 msgid "Shutdown"
 msgstr "Arrêt"
@@ -6429,7 +6481,7 @@ msgid "Source share"
 msgstr "Partage source"
 
 msgid "Space Usage"
-msgstr ""
+msgstr "Utilisation de l'espace"
 
 msgid "Space Used"
 msgstr "Occupation des disques"
@@ -6452,7 +6504,7 @@ msgid "Sparse Volume"
 msgstr "Volume vide."
 
 msgid "Speaker Beep"
-msgstr ""
+msgstr "Bip du haut-parleur"
 
 msgid ""
 "Specific to He8 drives from HGST. The Helium, so says the literature, allows "
@@ -6593,7 +6645,7 @@ msgid "Store alternate data streams in Extended Attributes"
 msgstr "Mémoriser les flux de données alternativs dans les attributs étendus"
 
 msgid "Strict DLNA"
-msgstr ""
+msgstr "DLAN Strict"
 
 msgid ""
 "String displayed in the dialog presented to the user when accessing the URL."
@@ -6641,7 +6693,7 @@ msgid "Swap"
 msgstr "Pagination"
 
 msgid "Swap Information & Status"
-msgstr ""
+msgstr "Informations et Etat du Swap"
 
 msgid "Swap Memory"
 msgstr "Mémoire d'échange"
@@ -6684,6 +6736,9 @@ msgstr "Synchroniser"
 msgid "Syncthing"
 msgstr "Syncthing"
 
+msgid "Syslog Level"
+msgstr ""
+
 #, php-format
 msgid ""
 "Syslog sends UDP datagrams to port 514 on the specified remote syslog "
@@ -6698,10 +6753,13 @@ msgid "System"
 msgstr "Système"
 
 msgid "System Information"
-msgstr "Information Système"
+msgstr "Informations système"
 
 msgid "System Load"
 msgstr "Charge système"
+
+msgid "System Settings"
+msgstr ""
 
 msgid "System bios"
 msgstr "Le syst&egrave;me BIOS"
@@ -6933,7 +6991,7 @@ msgstr "Les fichiers de MIB associés sont disponibles sur %s."
 
 #, php-format
 msgid "The attribute '%s' already exists."
-msgstr ""
+msgstr "L'attribut '%s' existe déjà."
 
 #, php-format
 msgid ""
@@ -7837,6 +7895,8 @@ msgid ""
 "This allows you to lower the power consumption of the disk, at the expense "
 "of performance."
 msgstr ""
+"Ceci vous permet de baisser la consommation électrique du disque, aux dépens "
+"de la performance."
 
 msgid "This allows you to set how loud the drive is while it's operating."
 msgstr ""
@@ -7858,10 +7918,12 @@ msgid ""
 "This attribute controls the ACL behavior when a file is created or whenever "
 "the mode of a file or a directory is modified."
 msgstr ""
+"Cet attribut contrôle le comportement des ACL lorsqu'un fichier est créé ou "
+"quand le mode d'un fichier ou d'un dossier est modifié."
 
 msgid ""
 "This attribute determines the behavior of Access Control List inheritance."
-msgstr ""
+msgstr "Cet attribut détermine le comportement d'héritage des ACL."
 
 msgid ""
 "This attribute indicates the count of full hard disk power on/off cycles."
@@ -7967,6 +8029,12 @@ msgid ""
 "the firmware has not been tampered with.<br /><br />Do you want to install "
 "this firmware anyway (on your own risk)?"
 msgstr ""
+"Ceci signifie que le firmware que vous avez voulez installer n'est pas "
+"officiel/supporté et peut conduire à un comportement inattendu ou "
+"compromettre la sécurité. Installez uniquement des firmwares qui proviennent "
+"de sources auxquelles vous faîtes confiance, et assurez-vous que le firmware "
+"n'ait pas été altéré.<br /><br />Voulez-vous quand même installer ce "
+"firmware (à vos propres risques)?"
 
 msgid "This name already exists in the disk list."
 msgstr "Ce nom existe déjà dans la liste des disques."
@@ -8156,6 +8224,10 @@ msgid ""
 "file system should be casesensitive, caseinsensitive, or allow a combination "
 "of both styles of matching"
 msgstr ""
+"Cette propriété indique si l'algorithme de correspondance de nom de fichier "
+"utilisé par le système de fichiers doit être sensible à la casse, non "
+"sensible à la casse, ou permettre une combinaison des deux styles de "
+"correspondance."
 
 msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr ""
@@ -8186,6 +8258,9 @@ msgid ""
 "This will allow server-side downscaling of very large JPEG images, it can "
 "hurt JPEG serving performance on (at least) Sony DLNA products."
 msgstr ""
+"Ceci permettra la réduction d'échelle de très grosses images JPEG côté "
+"serveur. Peut nuire aux performances de service JPEG sur (entre autres) les "
+"produits DLNA Sony."
 
 #, php-format
 msgid ""
@@ -8440,6 +8515,9 @@ msgstr "Total: %s | Utilisé: %s | Disponible: %s"
 msgid "Traceroute"
 msgstr "Traceroute"
 
+msgid "Traceroute Test"
+msgstr ""
+
 msgid ""
 "Traceroute may take a while to complete. You may hit the Stop button on your "
 "browser at any time to see the progress of failed traceroutes."
@@ -8552,7 +8630,7 @@ msgid "UPS"
 msgstr "UPS"
 
 msgid "UPS Information & Status"
-msgstr ""
+msgstr "Informations & Etat de l'UPS"
 
 msgid "UPS Off Line"
 msgstr "L'UPS est hors-ligne"
@@ -8684,7 +8762,7 @@ msgid "Updating in 5 seconds."
 msgstr "Mise à jour dans 5 secondes."
 
 msgid "Upgrade Firmware"
-msgstr ""
+msgstr "Mise à jour du Firmware"
 
 msgid "Upload"
 msgstr "Transfert de fichiers"
@@ -8714,6 +8792,7 @@ msgstr ""
 
 msgid "Use inotify monitoring to automatically discover new files."
 msgstr ""
+"Utiliser la surveillance inotify pour découvrir les nouveaux fichiers."
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -8784,7 +8863,7 @@ msgstr "Utilisateur"
 
 #, php-format
 msgid "User Defined Groups"
-msgstr ""
+msgstr "Groupes Définis par l'Utilisateur"
 
 msgid "User ID"
 msgstr "Identifiant de l'utilisateur"
@@ -8885,10 +8964,10 @@ msgid "Video"
 msgstr "Vidéo"
 
 msgid "Virtual Device"
-msgstr ""
+msgstr "Périphérique Virtuel"
 
 msgid "Virtual Devices"
-msgstr ""
+msgstr "Périphériques Virtuels"
 
 msgid "Virtual Host ID"
 msgstr "ID de l'hôte virtuel"
@@ -8921,10 +9000,10 @@ msgid "Volume Size Limit"
 msgstr "Limite de la taille du volume"
 
 msgid "Volume is locked"
-msgstr ""
+msgstr "Le Volume est verrouillé"
 
 msgid "Volume is marked for deletion"
-msgstr ""
+msgstr "Le Volume est marqué pour suppression"
 
 msgid "Volume label"
 msgstr "Étiquette de volume"
@@ -8977,6 +9056,9 @@ msgstr "Wake On LAN"
 
 msgid "Warning"
 msgstr "Avertissement"
+
+msgid "Warning Level"
+msgstr ""
 
 msgid ""
 "Warning: You are going to delete a RAID volume. All data will get lost and "
@@ -9407,3 +9489,29 @@ msgstr "démontage"
 
 msgid "version:"
 msgstr "version:"
+
+#~ msgid "ARP tables"
+#~ msgstr "tables ARP"
+
+#~ msgid "Enable syslog'ing to remote syslog server"
+#~ msgstr "Activer l'enregistrement des journaux sur un serveur distant"
+
+#~ msgid "IP address of remote syslog server"
+#~ msgstr "Adresse IP du serveur syslog distant"
+
+#~ msgid "Remote syslog server"
+#~ msgstr "Serveur syslog distant"
+
+#~ msgid "Show log entries in reverse order (newest entries on top)"
+#~ msgstr ""
+#~ "Montrer les entrées du journal en ordre inverse (entrées les plus récentes "
+#~ "en haut)"
+
+#~ msgid "Accept remote syslog messages"
+#~ msgstr "Accepter les messages syslog distant"
+
+#~ msgid "Dataset is locked"
+#~ msgstr "Dataset verrouillé"
+
+#~ msgid "Disable the compression of repeated line"
+#~ msgstr "Désactiver la compression de répétition de lignes"

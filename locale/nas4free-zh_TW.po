@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-13 01:20+0000\n"
+"POT-Creation-Date: 2016-03-21 10:27+0000\n"
 "PO-Revision-Date: 2016-03-03 17:10+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-15 18:22+0000\n"
-"X-Generator: Launchpad (build 17939)\n"
+"X-Launchpad-Export-Date: 2016-03-21 14:09+0000\n"
+"X-Generator: Launchpad (build 17947)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -342,14 +342,14 @@ msgstr "AP 模式"
 msgid "ARP Tables"
 msgstr "ARP 表"
 
-msgid "ARP tables"
-msgstr "ARP 表"
+msgid "ARP Tables List"
+msgstr ""
 
 msgid "ATTRIBUTE NAME"
 msgstr "屬性名"
 
-msgid "Accept remote syslog messages"
-msgstr "接受遠程syslog信息"
+msgid "Accept remote syslog messages."
+msgstr ""
 
 msgid "Access"
 msgstr "權限"
@@ -583,6 +583,9 @@ msgstr "西部資料硬碟氣流溫度 (等同於溫度，但是有些硬碟次�
 
 msgid "Albanian"
 msgstr "阿爾巴尼亞文"
+
+msgid "Alert Level"
+msgstr ""
 
 msgid "All"
 msgstr "全部"
@@ -1558,6 +1561,9 @@ msgstr "鳴謝"
 msgid "Critical"
 msgstr "嚴重"
 
+msgid "Critical Error Level"
+msgstr ""
+
 msgid "Cron"
 msgstr "定時任務（Cron）"
 
@@ -1675,10 +1681,10 @@ msgstr "數據庫目錄"
 msgid "Dataset"
 msgstr "數據集"
 
-msgid "Dataset is locked"
+msgid "Dataset is marked for deletion"
 msgstr ""
 
-msgid "Dataset is marked for deletion"
+msgid "Dataset is protected"
 msgstr ""
 
 msgid "Datasets"
@@ -1695,6 +1701,9 @@ msgstr "天"
 
 msgid "Debug"
 msgstr "調試"
+
+msgid "Debug Level"
+msgstr ""
 
 msgid "Dec"
 msgstr ""
@@ -2024,7 +2033,7 @@ msgstr ""
 msgid "Disable speaker beep on startup and shutdown."
 msgstr ""
 
-msgid "Disable the compression of repeated line"
+msgid "Disable the compression of repeated line."
 msgstr ""
 
 msgid "Disabled"
@@ -2435,6 +2444,9 @@ msgstr "電子郵件"
 msgid "Email Report"
 msgstr "電郵報告"
 
+msgid "Emergency Level"
+msgstr ""
+
 msgid "Empty as default."
 msgstr "默認值為空白。"
 
@@ -2597,9 +2609,6 @@ msgstr "啟用陰影複製"
 msgid "Enable store DOS attributes"
 msgstr "啟用 DOS 屬性儲存"
 
-msgid "Enable syslog'ing to remote syslog server"
-msgstr "開啟 syslog'ing 寫入遠端 syslog 伺服器"
-
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "啟用 ident 協議（RFC1413）。"
 
@@ -2707,12 +2716,18 @@ msgstr ""
 msgid "Error"
 msgstr "錯誤"
 
+msgid "Error Level"
+msgstr ""
+
 #, php-format
 msgid "Error: The changes could not be applied (error code %s)."
 msgstr "錯誤：變更無法套用（Error Code %s）。"
 
 msgid "Event"
 msgstr "項目"
+
+msgid "Event selection"
+msgstr ""
 
 msgid "Execute"
 msgstr "執行"
@@ -3287,8 +3302,8 @@ msgstr "IP 地址"
 msgid "IP address"
 msgstr "IP 地址"
 
-msgid "IP address of remote syslog server"
-msgstr "遠端 syslog 伺服器的 IP 地址"
+msgid "IP address of remote syslog server."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -3465,6 +3480,9 @@ msgstr ""
 
 msgid "Info"
 msgstr "資訊"
+
+msgid "Info Level"
+msgstr ""
 
 msgid "Informal"
 msgstr "資訊"
@@ -3961,8 +3979,14 @@ msgstr "记录设备"
 msgid "Log Level"
 msgstr "記錄檔層級"
 
+msgid "Log Settings"
+msgstr ""
+
 msgid "Log level"
 msgstr "記錄檔層級"
+
+msgid "Log order"
+msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "這條規則所處理的記錄檔到syslog。"
@@ -4101,6 +4125,9 @@ msgstr "偽裝位址"
 
 msgid "Max Protocol"
 msgstr "最高協議"
+
+msgid "Max entries"
+msgstr ""
 
 msgid "Max. TTL"
 msgstr "最大TTL (生存時間)值"
@@ -4637,6 +4664,9 @@ msgstr "注意：按住Ctrl鍵（或在Mac上單擊命令）可以選擇和取�
 msgid "Nothing to synchronize"
 msgstr "沒有同步"
 
+msgid "Notice Level"
+msgstr ""
+
 #, php-format
 msgid "Notification email from host: %s"
 msgstr "主機的電子郵件通知：%s"
@@ -4958,6 +4988,9 @@ msgstr "圖片"
 
 msgid "Ping"
 msgstr "Ping"
+
+msgid "Ping Test"
+msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Ping winbindd 看看是否 alive :"
@@ -5317,6 +5350,9 @@ msgstr ""
 msgid "Remote Rsync Server"
 msgstr "遠端 Rsync 伺服器"
 
+msgid "Remote Syslog Server"
+msgstr ""
+
 msgid "Remote module (source)"
 msgstr "遠端模組（來源）"
 
@@ -5329,8 +5365,8 @@ msgstr "遠端監控"
 msgid "Remote rsync daemon"
 msgstr "遠程rsync的進程"
 
-msgid "Remote syslog server"
-msgstr "遠端 syslog 伺服器"
+msgid "Remote syslog messages"
+msgstr ""
 
 msgid "Removable"
 msgstr "可移除"
@@ -5381,8 +5417,14 @@ msgstr ""
 msgid "Resolve"
 msgstr "解析"
 
+msgid "Resolve IP"
+msgstr ""
+
 msgid "Resolve IP addresses to hostnames"
 msgstr "將 IP 解析成主機名稱"
+
+msgid "Resolve IP addresses to hostnames."
+msgstr ""
 
 msgid "Resource"
 msgstr "資源"
@@ -5837,8 +5879,8 @@ msgstr "顯示RAW UPS的信息"
 msgid "Show UPS Information"
 msgstr "顯示UPS信息"
 
-msgid "Show log entries in reverse order (newest entries on top)"
-msgstr "以相反的次序顯示記錄（先顯示最新記錄）"
+msgid "Show log entries in reverse order (newest entries on top)."
+msgstr ""
 
 msgid "Shutdown"
 msgstr "關機"
@@ -6158,6 +6200,9 @@ msgstr "同步"
 msgid "Syncthing"
 msgstr "Syncthing"
 
+msgid "Syslog Level"
+msgstr ""
+
 #, php-format
 msgid ""
 "Syslog sends UDP datagrams to port 514 on the specified remote syslog "
@@ -6175,6 +6220,9 @@ msgstr "系統資料"
 
 msgid "System Load"
 msgstr "系統負載"
+
+msgid "System Settings"
+msgstr ""
 
 msgid "System bios"
 msgstr "系統BIOS"
@@ -7634,6 +7682,9 @@ msgstr "總共: %s | 已使用: %s | 剩餘: %s"
 msgid "Traceroute"
 msgstr "路由追蹤（Traceroute）"
 
+msgid "Traceroute Test"
+msgstr ""
+
 msgid ""
 "Traceroute may take a while to complete. You may hit the Stop button on your "
 "browser at any time to see the progress of failed traceroutes."
@@ -8142,6 +8193,9 @@ msgstr "Wake On LAN 網路喚醒"
 msgid "Warning"
 msgstr "警告"
 
+msgid "Warning Level"
+msgstr ""
+
 msgid ""
 "Warning: You are going to delete a RAID volume. All data will get lost and "
 "can not be recovered."
@@ -8529,3 +8583,21 @@ msgstr "卸載"
 
 msgid "version:"
 msgstr "版本："
+
+#~ msgid "Enable syslog'ing to remote syslog server"
+#~ msgstr "開啟 syslog'ing 寫入遠端 syslog 伺服器"
+
+#~ msgid "Remote syslog server"
+#~ msgstr "遠端 syslog 伺服器"
+
+#~ msgid "Show log entries in reverse order (newest entries on top)"
+#~ msgstr "以相反的次序顯示記錄（先顯示最新記錄）"
+
+#~ msgid "ARP tables"
+#~ msgstr "ARP 表"
+
+#~ msgid "IP address of remote syslog server"
+#~ msgstr "遠端 syslog 伺服器的 IP 地址"
+
+#~ msgid "Accept remote syslog messages"
+#~ msgstr "接受遠程syslog信息"

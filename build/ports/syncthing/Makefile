@@ -27,8 +27,8 @@ NO_PKG_REGISTER= yes
 post-patch:
 	@cd ${WRKSRC} ; ${MKDIR} src/github.com/${PORTNAME}/${PORTNAME} ; \
 		${MV} .gitattributes .gitignore .mailmap AUTHORS CONDUCT.md \
-		CONTRIBUTING.md Godeps LICENSE NICKS README.md assets build.go \
-		build.sh cmd etc gui lib man script test \
+		CONTRIBUTING.md Godeps LICENSE NICKS README.md appveyor.yaml \
+		assets build.go build.sh cmd debian etc gui lib man script test \
 		src/github.com/${PORTNAME}/${PORTNAME}
 # NAS4Free
 .if ${ARCH} == "i386"

@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-13 01:20+0000\n"
+"POT-Creation-Date: 2016-03-21 10:27+0000\n"
 "PO-Revision-Date: 2015-12-19 13:07+0000\n"
 "Last-Translator: Daisuke Aoyama <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-15 18:21+0000\n"
-"X-Generator: Launchpad (build 17939)\n"
+"X-Launchpad-Export-Date: 2016-03-21 14:08+0000\n"
+"X-Generator: Launchpad (build 17947)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
 "X-Poedit-Language: Japanese\n"
@@ -363,14 +363,14 @@ msgstr "AP モード"
 msgid "ARP Tables"
 msgstr "ARP テーブル"
 
-msgid "ARP tables"
-msgstr "ARP テーブル"
+msgid "ARP Tables List"
+msgstr ""
 
 msgid "ATTRIBUTE NAME"
 msgstr "属性名"
 
-msgid "Accept remote syslog messages"
-msgstr "リモートsyslogメッセージを受け入れます"
+msgid "Accept remote syslog messages."
+msgstr ""
 
 msgid "Access"
 msgstr "アクセス"
@@ -608,6 +608,9 @@ msgstr "ウエスタンデジタルHDDの気流温度。(温度と同じです�
 
 msgid "Albanian"
 msgstr "アルバニア語"
+
+msgid "Alert Level"
+msgstr ""
 
 msgid "All"
 msgstr "全て"
@@ -1601,6 +1604,9 @@ msgstr "クレジット"
 msgid "Critical"
 msgstr "クリティカル"
 
+msgid "Critical Error Level"
+msgstr ""
+
 msgid "Cron"
 msgstr "Cron"
 
@@ -1721,10 +1727,10 @@ msgstr "データベース ディレクトリ"
 msgid "Dataset"
 msgstr "データセット"
 
-msgid "Dataset is locked"
+msgid "Dataset is marked for deletion"
 msgstr ""
 
-msgid "Dataset is marked for deletion"
+msgid "Dataset is protected"
 msgstr ""
 
 msgid "Datasets"
@@ -1741,6 +1747,9 @@ msgstr "日"
 
 msgid "Debug"
 msgstr "デバッグ"
+
+msgid "Debug Level"
+msgstr ""
 
 msgid "Dec"
 msgstr ""
@@ -2071,8 +2080,8 @@ msgstr ""
 msgid "Disable speaker beep on startup and shutdown."
 msgstr ""
 
-msgid "Disable the compression of repeated line"
-msgstr "繰り返し行の圧縮を無効にします"
+msgid "Disable the compression of repeated line."
+msgstr ""
 
 msgid "Disabled"
 msgstr "無効"
@@ -2484,6 +2493,9 @@ msgstr "メール"
 msgid "Email Report"
 msgstr "レポートメール"
 
+msgid "Emergency Level"
+msgstr ""
+
 msgid "Empty as default."
 msgstr "デフォルトは空です。"
 
@@ -2647,9 +2659,6 @@ msgstr "シャドウコピーを有効にします。"
 msgid "Enable store DOS attributes"
 msgstr "DOS 属性の保存を有効にします"
 
-msgid "Enable syslog'ing to remote syslog server"
-msgstr "リモートの syslog サーバへのロギングを有効にする"
-
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Ident プロトコル (RFC1413) を有効にします。"
 
@@ -2757,12 +2766,18 @@ msgstr ""
 msgid "Error"
 msgstr "エラー"
 
+msgid "Error Level"
+msgstr ""
+
 #, php-format
 msgid "Error: The changes could not be applied (error code %s)."
 msgstr "エラー: 変更は適用されませんでした (エラーコード %s)。"
 
 msgid "Event"
 msgstr "イベント"
+
+msgid "Event selection"
+msgstr ""
 
 msgid "Execute"
 msgstr "実行"
@@ -3343,8 +3358,8 @@ msgstr "IP アドレス"
 msgid "IP address"
 msgstr "IP アドレス"
 
-msgid "IP address of remote syslog server"
-msgstr "リモート syslog サーバの IP アドレス"
+msgid "IP address of remote syslog server."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -3528,6 +3543,9 @@ msgstr "書き込み・消去サイクルまたは現在使用可能なフラッ
 
 msgid "Info"
 msgstr "情報"
+
+msgid "Info Level"
+msgstr ""
 
 msgid "Informal"
 msgstr "インフォーマル"
@@ -4035,8 +4053,14 @@ msgstr "ログ デバイス"
 msgid "Log Level"
 msgstr "ログレベル"
 
+msgid "Log Settings"
+msgstr ""
+
 msgid "Log level"
 msgstr "ログレベル"
+
+msgid "Log order"
+msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "このルールによって処理されたパケットを syslog に記録します。"
@@ -4177,6 +4201,9 @@ msgstr "マスカレードアドレス"
 
 msgid "Max Protocol"
 msgstr "最大プロトコル"
+
+msgid "Max entries"
+msgstr ""
 
 msgid "Max. TTL"
 msgstr "最大 TTL"
@@ -4715,6 +4742,9 @@ msgstr "注意: Ctrl (Mac は command)を押しながらクリックすれば複
 msgid "Nothing to synchronize"
 msgstr "同期を取るものがありません"
 
+msgid "Notice Level"
+msgstr ""
+
 #, php-format
 msgid "Notification email from host: %s"
 msgstr "ホスト: %s からのお知らせメール"
@@ -5040,6 +5070,9 @@ msgstr "画像"
 
 msgid "Ping"
 msgstr "Ping"
+
+msgid "Ping Test"
+msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Pingによる winbindd の生存確認:"
@@ -5399,6 +5432,9 @@ msgstr "リモートモジュール (ソース)"
 msgid "Remote Rsync Server"
 msgstr "リモート Rsync サーバ"
 
+msgid "Remote Syslog Server"
+msgstr ""
+
 msgid "Remote module (source)"
 msgstr "リモートモジュール (ソース)"
 
@@ -5411,8 +5447,8 @@ msgstr "リモートモニタリング"
 msgid "Remote rsync daemon"
 msgstr "リモート rsync デーモン"
 
-msgid "Remote syslog server"
-msgstr "リモート syslog サーバ"
+msgid "Remote syslog messages"
+msgstr ""
 
 msgid "Removable"
 msgstr "リムーバブル"
@@ -5463,8 +5499,14 @@ msgstr "操作中の機械的な部分で摩擦によって生じた抵抗。"
 msgid "Resolve"
 msgstr "逆引き"
 
+msgid "Resolve IP"
+msgstr ""
+
 msgid "Resolve IP addresses to hostnames"
 msgstr "IP アドレスからホスト名を解決する"
+
+msgid "Resolve IP addresses to hostnames."
+msgstr ""
 
 msgid "Resource"
 msgstr "リソース"
@@ -5925,8 +5967,8 @@ msgstr "無加工UPS情報の表示"
 msgid "Show UPS Information"
 msgstr "UPS情報の表示"
 
-msgid "Show log entries in reverse order (newest entries on top)"
-msgstr "逆順でログエントリを表示する (もっとも新しいエントリがトップ)"
+msgid "Show log entries in reverse order (newest entries on top)."
+msgstr ""
 
 msgid "Shutdown"
 msgstr "シャットダウン"
@@ -6253,6 +6295,9 @@ msgstr "同期"
 msgid "Syncthing"
 msgstr "Syncthing"
 
+msgid "Syslog Level"
+msgstr ""
+
 #, php-format
 msgid ""
 "Syslog sends UDP datagrams to port 514 on the specified remote syslog "
@@ -6270,6 +6315,9 @@ msgstr "システム情報"
 
 msgid "System Load"
 msgstr "システム負荷"
+
+msgid "System Settings"
+msgstr ""
 
 msgid "System bios"
 msgstr "システムBIOS"
@@ -7776,6 +7824,9 @@ msgstr "合計: %s | 使用中: %s | 未使用: %s"
 msgid "Traceroute"
 msgstr "Traceroute"
 
+msgid "Traceroute Test"
+msgstr ""
+
 msgid ""
 "Traceroute may take a while to complete. You may hit the Stop button on your "
 "browser at any time to see the progress of failed traceroutes."
@@ -8290,6 +8341,9 @@ msgstr "Wake On LAN"
 msgid "Warning"
 msgstr "警告"
 
+msgid "Warning Level"
+msgstr ""
+
 msgid ""
 "Warning: You are going to delete a RAID volume. All data will get lost and "
 "can not be recovered."
@@ -8683,3 +8737,24 @@ msgstr "アンマウント"
 
 msgid "version:"
 msgstr "バージョン:"
+
+#~ msgid "ARP tables"
+#~ msgstr "ARP テーブル"
+
+#~ msgid "Enable syslog'ing to remote syslog server"
+#~ msgstr "リモートの syslog サーバへのロギングを有効にする"
+
+#~ msgid "IP address of remote syslog server"
+#~ msgstr "リモート syslog サーバの IP アドレス"
+
+#~ msgid "Remote syslog server"
+#~ msgstr "リモート syslog サーバ"
+
+#~ msgid "Show log entries in reverse order (newest entries on top)"
+#~ msgstr "逆順でログエントリを表示する (もっとも新しいエントリがトップ)"
+
+#~ msgid "Accept remote syslog messages"
+#~ msgstr "リモートsyslogメッセージを受け入れます"
+
+#~ msgid "Disable the compression of repeated line"
+#~ msgstr "繰り返し行の圧縮を無効にします"

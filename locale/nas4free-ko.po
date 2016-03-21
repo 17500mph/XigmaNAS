@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-13 01:20+0000\n"
+"POT-Creation-Date: 2016-03-21 10:27+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-15 18:22+0000\n"
-"X-Generator: Launchpad (build 17939)\n"
+"X-Launchpad-Export-Date: 2016-03-21 14:08+0000\n"
+"X-Generator: Launchpad (build 17947)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
 "X-Poedit-Language: Korean\n"
@@ -349,13 +349,13 @@ msgstr ""
 msgid "ARP Tables"
 msgstr "ARP 테이블"
 
-msgid "ARP tables"
-msgstr "ARP 테이블"
+msgid "ARP Tables List"
+msgstr ""
 
 msgid "ATTRIBUTE NAME"
 msgstr ""
 
-msgid "Accept remote syslog messages"
+msgid "Accept remote syslog messages."
 msgstr ""
 
 msgid "Access"
@@ -587,6 +587,9 @@ msgstr ""
 
 msgid "Albanian"
 msgstr "알바니아어"
+
+msgid "Alert Level"
+msgstr ""
 
 msgid "All"
 msgstr "모두"
@@ -1557,6 +1560,9 @@ msgstr "제작자"
 msgid "Critical"
 msgstr "치명적"
 
+msgid "Critical Error Level"
+msgstr ""
+
 msgid "Cron"
 msgstr "Cron"
 
@@ -1674,10 +1680,10 @@ msgstr "데이터베이스 디렉터리"
 msgid "Dataset"
 msgstr "데이터 셋"
 
-msgid "Dataset is locked"
+msgid "Dataset is marked for deletion"
 msgstr ""
 
-msgid "Dataset is marked for deletion"
+msgid "Dataset is protected"
 msgstr ""
 
 msgid "Datasets"
@@ -1694,6 +1700,9 @@ msgstr "일"
 
 msgid "Debug"
 msgstr "디버그"
+
+msgid "Debug Level"
+msgstr ""
 
 msgid "Dec"
 msgstr ""
@@ -2025,7 +2034,7 @@ msgstr ""
 msgid "Disable speaker beep on startup and shutdown."
 msgstr ""
 
-msgid "Disable the compression of repeated line"
+msgid "Disable the compression of repeated line."
 msgstr ""
 
 msgid "Disabled"
@@ -2436,6 +2445,9 @@ msgstr "전자우편"
 msgid "Email Report"
 msgstr "전자우편 보고"
 
+msgid "Emergency Level"
+msgstr ""
+
 msgid "Empty as default."
 msgstr ""
 
@@ -2599,9 +2611,6 @@ msgstr ""
 msgid "Enable store DOS attributes"
 msgstr "도스 속성 저장 활성화"
 
-msgid "Enable syslog'ing to remote syslog server"
-msgstr "원격 syslog 서버에 대한 시스템 로깅 활성화"
-
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "ident 프로토콜(RFC1413) 활성화."
 
@@ -2709,12 +2718,18 @@ msgstr ""
 msgid "Error"
 msgstr "에러"
 
+msgid "Error Level"
+msgstr ""
+
 #, php-format
 msgid "Error: The changes could not be applied (error code %s)."
 msgstr "에러: 변경 내용이 적용될 수 없습니다(에러 코드 %s)."
 
 msgid "Event"
 msgstr "이벤트"
+
+msgid "Event selection"
+msgstr ""
 
 msgid "Execute"
 msgstr "실행"
@@ -3291,8 +3306,8 @@ msgstr ""
 msgid "IP address"
 msgstr "IP 주소"
 
-msgid "IP address of remote syslog server"
-msgstr "원격 syslog 서버의 IP 주소"
+msgid "IP address of remote syslog server."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -3474,6 +3489,9 @@ msgstr ""
 
 msgid "Info"
 msgstr "정보"
+
+msgid "Info Level"
+msgstr ""
 
 msgid "Informal"
 msgstr "주의"
@@ -3972,7 +3990,13 @@ msgstr ""
 msgid "Log Level"
 msgstr "로그 수준"
 
+msgid "Log Settings"
+msgstr ""
+
 msgid "Log level"
+msgstr ""
+
+msgid "Log order"
 msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
@@ -4111,6 +4135,9 @@ msgid "Masquerade address"
 msgstr "매스커레이드 주소"
 
 msgid "Max Protocol"
+msgstr ""
+
+msgid "Max entries"
 msgstr ""
 
 msgid "Max. TTL"
@@ -4650,6 +4677,9 @@ msgstr "참조: Ctrl-클릭(맥의 경우에는 command-클릭)을 하여 다중
 msgid "Nothing to synchronize"
 msgstr "동기화 할 것이 없습니다"
 
+msgid "Notice Level"
+msgstr ""
+
 #, php-format
 msgid "Notification email from host: %s"
 msgstr "호스트 %s에서의 공지 전자우편"
@@ -4973,6 +5003,9 @@ msgstr ""
 
 msgid "Ping"
 msgstr "ping"
+
+msgid "Ping Test"
+msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "살아 있는지 보기 위해 winbindd에 ping:"
@@ -5332,6 +5365,9 @@ msgstr ""
 msgid "Remote Rsync Server"
 msgstr "원격 Rsync 서버"
 
+msgid "Remote Syslog Server"
+msgstr ""
+
 msgid "Remote module (source)"
 msgstr "원격 모듈(소스)"
 
@@ -5344,8 +5380,8 @@ msgstr "원격 모니터링"
 msgid "Remote rsync daemon"
 msgstr ""
 
-msgid "Remote syslog server"
-msgstr "원격 syslog 서버"
+msgid "Remote syslog messages"
+msgstr ""
 
 msgid "Removable"
 msgstr "이동식"
@@ -5396,8 +5432,14 @@ msgstr ""
 msgid "Resolve"
 msgstr "resolve"
 
+msgid "Resolve IP"
+msgstr ""
+
 msgid "Resolve IP addresses to hostnames"
 msgstr "IP 주소를 호스트 명으로 resolve"
+
+msgid "Resolve IP addresses to hostnames."
+msgstr ""
 
 msgid "Resource"
 msgstr ""
@@ -5850,8 +5892,8 @@ msgstr ""
 msgid "Show UPS Information"
 msgstr ""
 
-msgid "Show log entries in reverse order (newest entries on top)"
-msgstr "로그 항목을 역순(새 항목이 위쪽)으로 보이기"
+msgid "Show log entries in reverse order (newest entries on top)."
+msgstr ""
 
 msgid "Shutdown"
 msgstr "끄기"
@@ -6174,6 +6216,9 @@ msgstr "동기화"
 msgid "Syncthing"
 msgstr ""
 
+msgid "Syslog Level"
+msgstr ""
+
 #, php-format
 msgid ""
 "Syslog sends UDP datagrams to port 514 on the specified remote syslog "
@@ -6188,6 +6233,9 @@ msgid "System Information"
 msgstr ""
 
 msgid "System Load"
+msgstr ""
+
+msgid "System Settings"
 msgstr ""
 
 msgid "System bios"
@@ -7673,6 +7721,9 @@ msgstr "전체: %s | 사용: %s | 여유: %s"
 msgid "Traceroute"
 msgstr "traceroute"
 
+msgid "Traceroute Test"
+msgstr ""
+
 msgid ""
 "Traceroute may take a while to complete. You may hit the Stop button on your "
 "browser at any time to see the progress of failed traceroutes."
@@ -8186,6 +8237,9 @@ msgstr "랜으로 깨우기"
 msgid "Warning"
 msgstr "경고"
 
+msgid "Warning Level"
+msgstr ""
+
 msgid ""
 "Warning: You are going to delete a RAID volume. All data will get lost and "
 "can not be recovered."
@@ -8573,3 +8627,18 @@ msgstr "마운트 해제"
 
 msgid "version:"
 msgstr ""
+
+#~ msgid "ARP tables"
+#~ msgstr "ARP 테이블"
+
+#~ msgid "Enable syslog'ing to remote syslog server"
+#~ msgstr "원격 syslog 서버에 대한 시스템 로깅 활성화"
+
+#~ msgid "IP address of remote syslog server"
+#~ msgstr "원격 syslog 서버의 IP 주소"
+
+#~ msgid "Remote syslog server"
+#~ msgstr "원격 syslog 서버"
+
+#~ msgid "Show log entries in reverse order (newest entries on top)"
+#~ msgstr "로그 항목을 역순(새 항목이 위쪽)으로 보이기"

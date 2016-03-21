@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-13 01:20+0000\n"
-"PO-Revision-Date: 2014-11-17 04:08+0000\n"
-"Last-Translator: jure <jure.medved@amis.net>\n"
+"POT-Creation-Date: 2016-03-21 10:27+0000\n"
+"PO-Revision-Date: 2016-03-19 20:21+0000\n"
+"Last-Translator: Matjaz Skraba <skraba@live.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-15 18:22+0000\n"
-"X-Generator: Launchpad (build 17939)\n"
+"X-Launchpad-Export-Date: 2016-03-21 14:09+0000\n"
+"X-Generator: Launchpad (build 17947)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
 "X-Poedit-Language: Slovenian\n"
@@ -52,7 +52,7 @@ msgstr "%dB / blok"
 
 #, php-format
 msgid "%s Interface"
-msgstr ""
+msgstr "%s vmesnik"
 
 #, php-format
 msgid "%s already exists as a %s."
@@ -362,13 +362,13 @@ msgstr ""
 msgid "ARP Tables"
 msgstr "ARP tabele"
 
-msgid "ARP tables"
-msgstr "ARP tabele"
+msgid "ARP Tables List"
+msgstr ""
 
 msgid "ATTRIBUTE NAME"
 msgstr ""
 
-msgid "Accept remote syslog messages"
+msgid "Accept remote syslog messages."
 msgstr ""
 
 msgid "Access"
@@ -600,6 +600,9 @@ msgstr ""
 
 msgid "Albanian"
 msgstr "Albanščina"
+
+msgid "Alert Level"
+msgstr ""
 
 msgid "All"
 msgstr "Vse"
@@ -1584,6 +1587,9 @@ msgstr "Zasluge"
 msgid "Critical"
 msgstr "Kritično"
 
+msgid "Critical Error Level"
+msgstr ""
+
 msgid "Cron"
 msgstr "Samodejna opravila"
 
@@ -1701,10 +1707,10 @@ msgstr "Direktorij baze podatkov"
 msgid "Dataset"
 msgstr "Dataset"
 
-msgid "Dataset is locked"
+msgid "Dataset is marked for deletion"
 msgstr ""
 
-msgid "Dataset is marked for deletion"
+msgid "Dataset is protected"
 msgstr ""
 
 msgid "Datasets"
@@ -1721,6 +1727,9 @@ msgstr "dnevi"
 
 msgid "Debug"
 msgstr "Razhroščevanje"
+
+msgid "Debug Level"
+msgstr ""
 
 msgid "Dec"
 msgstr ""
@@ -2055,7 +2064,7 @@ msgstr ""
 msgid "Disable speaker beep on startup and shutdown."
 msgstr ""
 
-msgid "Disable the compression of repeated line"
+msgid "Disable the compression of repeated line."
 msgstr ""
 
 msgid "Disabled"
@@ -2474,6 +2483,9 @@ msgstr "E-pošta"
 msgid "Email Report"
 msgstr "E-poštno poročilo"
 
+msgid "Emergency Level"
+msgstr ""
+
 msgid "Empty as default."
 msgstr ""
 
@@ -2638,9 +2650,6 @@ msgstr ""
 msgid "Enable store DOS attributes"
 msgstr "Omogoči shranjevanje DOS atributov"
 
-msgid "Enable syslog'ing to remote syslog server"
-msgstr "Omogoči sistemski dnevnik na oddaljeni syslog strežnik"
-
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Omogoči ident protokol (RFC1413)."
 
@@ -2754,12 +2763,18 @@ msgstr ""
 msgid "Error"
 msgstr "Napaka"
 
+msgid "Error Level"
+msgstr ""
+
 #, php-format
 msgid "Error: The changes could not be applied (error code %s)."
 msgstr "Napaka: Spremembe ne morejo biti uveljavljene (koda napake %s)."
 
 msgid "Event"
 msgstr "Dogodek"
+
+msgid "Event selection"
+msgstr ""
 
 msgid "Execute"
 msgstr "Izvedi"
@@ -3346,8 +3361,8 @@ msgstr ""
 msgid "IP address"
 msgstr "IP naslov"
 
-msgid "IP address of remote syslog server"
-msgstr "IP naslov oddaljenega syslog strežnika"
+msgid "IP address of remote syslog server."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -3538,6 +3553,9 @@ msgstr ""
 
 msgid "Info"
 msgstr "Podatki"
+
+msgid "Info Level"
+msgstr ""
 
 msgid "Informal"
 msgstr "Informativno"
@@ -4050,7 +4068,13 @@ msgstr ""
 msgid "Log Level"
 msgstr "Nivo dnevnika"
 
+msgid "Log Settings"
+msgstr ""
+
 msgid "Log level"
+msgstr ""
+
+msgid "Log order"
 msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
@@ -4191,6 +4215,9 @@ msgid "Masquerade address"
 msgstr "Prikrij naslove"
 
 msgid "Max Protocol"
+msgstr ""
+
+msgid "Max entries"
 msgstr ""
 
 msgid "Max. TTL"
@@ -4750,6 +4777,9 @@ msgstr ""
 msgid "Nothing to synchronize"
 msgstr "Ničesar za sinhronizacijo"
 
+msgid "Notice Level"
+msgstr ""
+
 #, php-format
 msgid "Notification email from host: %s"
 msgstr "Obvestilo od: %s"
@@ -5076,6 +5106,9 @@ msgstr ""
 
 msgid "Ping"
 msgstr "Ping"
+
+msgid "Ping Test"
+msgstr ""
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Ping winbindd, da vidimo, če deluje:"
@@ -5441,6 +5474,9 @@ msgstr ""
 msgid "Remote Rsync Server"
 msgstr "Oddaljen Rsync strežnik"
 
+msgid "Remote Syslog Server"
+msgstr ""
+
 msgid "Remote module (source)"
 msgstr "Oddaljen modul (vir)"
 
@@ -5453,8 +5489,8 @@ msgstr "Oddaljen nadzor"
 msgid "Remote rsync daemon"
 msgstr ""
 
-msgid "Remote syslog server"
-msgstr "Oddaljeni syslog strežnik"
+msgid "Remote syslog messages"
+msgstr ""
 
 msgid "Removable"
 msgstr "Odstranljivo"
@@ -5509,8 +5545,14 @@ msgstr ""
 msgid "Resolve"
 msgstr "Razreši"
 
+msgid "Resolve IP"
+msgstr ""
+
 msgid "Resolve IP addresses to hostnames"
 msgstr "Zamenjaj IP naslove v imena gostiteljev"
+
+msgid "Resolve IP addresses to hostnames."
+msgstr ""
 
 msgid "Resource"
 msgstr ""
@@ -5976,8 +6018,8 @@ msgstr ""
 msgid "Show UPS Information"
 msgstr ""
 
-msgid "Show log entries in reverse order (newest entries on top)"
-msgstr "Prikaži dnevniške vnose v obratnem vrstnem redu (novejši na vrhu)"
+msgid "Show log entries in reverse order (newest entries on top)."
+msgstr ""
 
 msgid "Shutdown"
 msgstr "Izklop"
@@ -6309,6 +6351,9 @@ msgstr "Sinhronizacija"
 msgid "Syncthing"
 msgstr ""
 
+msgid "Syslog Level"
+msgstr ""
+
 #, php-format
 msgid ""
 "Syslog sends UDP datagrams to port 514 on the specified remote syslog "
@@ -6323,6 +6368,9 @@ msgid "System Information"
 msgstr ""
 
 msgid "System Load"
+msgstr ""
+
+msgid "System Settings"
 msgstr ""
 
 msgid "System bios"
@@ -7769,6 +7817,9 @@ msgstr ""
 msgid "Traceroute"
 msgstr ""
 
+msgid "Traceroute Test"
+msgstr ""
+
 msgid ""
 "Traceroute may take a while to complete. You may hit the Stop button on your "
 "browser at any time to see the progress of failed traceroutes."
@@ -8277,6 +8328,9 @@ msgstr ""
 msgid "Warning"
 msgstr "Opozorilo"
 
+msgid "Warning Level"
+msgstr ""
+
 msgid ""
 "Warning: You are going to delete a RAID volume. All data will get lost and "
 "can not be recovered."
@@ -8664,3 +8718,18 @@ msgstr "izvrzi"
 
 msgid "version:"
 msgstr ""
+
+#~ msgid "ARP tables"
+#~ msgstr "ARP tabele"
+
+#~ msgid "Enable syslog'ing to remote syslog server"
+#~ msgstr "Omogoči sistemski dnevnik na oddaljeni syslog strežnik"
+
+#~ msgid "IP address of remote syslog server"
+#~ msgstr "IP naslov oddaljenega syslog strežnika"
+
+#~ msgid "Remote syslog server"
+#~ msgstr "Oddaljeni syslog strežnik"
+
+#~ msgid "Show log entries in reverse order (newest entries on top)"
+#~ msgstr "Prikaži dnevniške vnose v obratnem vrstnem redu (novejši na vrhu)"

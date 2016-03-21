@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-13 01:20+0000\n"
-"PO-Revision-Date: 2016-03-13 01:04+0000\n"
+"POT-Creation-Date: 2016-03-21 10:27+0000\n"
+"PO-Revision-Date: 2016-03-21 14:04+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-15 18:21+0000\n"
-"X-Generator: Launchpad (build 17939)\n"
+"X-Launchpad-Export-Date: 2016-03-21 14:08+0000\n"
+"X-Generator: Launchpad (build 17947)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
 "X-Poedit-Language: Dutch\n"
@@ -132,13 +132,12 @@ msgid ""
 "different structure for different vendors and is often not meaningful as a "
 "decimal number."
 msgstr ""
-"(Leverancier specifieke ruwe waarde.) Aantal zoek fouten van de "
-"magneetkoppen. Als er een gedeeltelijke fout in het mechanische "
-"positionering system is, dan zullen zoek fouten ontstaan. Een dergelijk "
-"gebrek kan worden veroorzaakt door talrijke factoren, zoals schade aan een "
-"servo, of thermische verbreding van de harde schijf. De ruwe waarde heeft "
-"een verschillende structuur voor verschillende leveranciers en is vaak van "
-"weinig betekenis als decimaal getal."
+"(Fabrikant specifieke ruwe waarde.) Aantal zoek fouten van de magneetkoppen. "
+"Als er een gedeeltelijke fout in het mechanische positionering system is, "
+"dan zullen zoek fouten ontstaan. Een dergelijk gebrek kan worden veroorzaakt "
+"door talrijke factoren, zoals schade aan een servo, of thermische verbreding "
+"van de harde schijf. De ruwe waarde heeft een verschillende structuur voor "
+"verschillende fabrikanten en is vaak van weinig betekenis als decimaal getal."
 
 msgid ""
 "(Vendor specific raw value.) Stores data related to the rate of hardware "
@@ -146,19 +145,19 @@ msgid ""
 "value has different structure for different vendors and is often not "
 "meaningful as a decimal number."
 msgstr ""
-"(Leverancier specifieke ruwe waarde.) Slaat data op met betrekking tot het "
+"(Fabrikant specifieke ruwe waarde.) Slaat data op met betrekking tot het "
 "aantal hardware gelezen fouten die zijn opgetreden tijdens het lezen van "
 "data van een schijfoppervlakte. De ruwe waarde heeft een verschillende "
-"structuur voor verschillende leveranciers en is vaak van weinig betekenis "
-"als decimaal getal."
+"structuur voor verschillende fabrikanten en is vaak van weinig betekenis als "
+"decimaal getal."
 
 msgid ""
 "(Vendor-specific raw value.) The raw value has different structure for "
 "different vendors and is often not meaningful as a decimal number."
 msgstr ""
-"(Leverancier specifieke ruwe waarde.) De ruwe waarde heeft een verschillende "
-"structuur voor verschillende leveranciers en is vaak van weinig betekenis "
-"als decimaal getal."
+"(Fabrikant specifieke ruwe waarde.) De ruwe waarde heeft een verschillende "
+"structuur voor verschillende fabrikanten en is vaak van weinig betekenis als "
+"decimaal getal."
 
 msgid "*** Imported duplicate ***"
 msgstr "*** Geïmporteerde duplicaat ***"
@@ -410,14 +409,14 @@ msgstr "AP modus"
 msgid "ARP Tables"
 msgstr "ARP Tabel"
 
-msgid "ARP tables"
-msgstr "ARP tabel"
+msgid "ARP Tables List"
+msgstr "ARP tabel lijst"
 
 msgid "ATTRIBUTE NAME"
 msgstr "ATTRIBUUT NAAM"
 
-msgid "Accept remote syslog messages"
-msgstr "Accepteer remote syslog berichten"
+msgid "Accept remote syslog messages."
+msgstr "Accepteer remote syslog berichten."
 
 msgid "Access"
 msgstr "Toegang"
@@ -663,6 +662,9 @@ msgstr ""
 
 msgid "Albanian"
 msgstr "Albanees"
+
+msgid "Alert Level"
+msgstr "Waarschuwings niveau"
 
 msgid "All"
 msgstr "Alle"
@@ -1618,9 +1620,9 @@ msgid ""
 "total count of hours (or minutes, or seconds, depending on manufacturer) in "
 "power-on state."
 msgstr ""
-"Aantal uren in power-on staat. De ruwe waarde van dit attribuut toont het "
-"totaal aantal uur (of minuten, of seconden, afhankelijk van fabrikant) in "
-"power-on staat."
+"Telling van uren in power-on staat. De ruwe waarde van dit attribuut toont "
+"het totaal aantal uur (minuten, of seconden, afhankelijk van de fabrikant) "
+"in power-on staat."
 
 msgid "Count of load/unload cycles into head landing zone position."
 msgstr "Aantal laad/ontlaad cycli leeskop rustzone positie."
@@ -1764,6 +1766,9 @@ msgstr "Met dank aan"
 msgid "Critical"
 msgstr "Kritiek"
 
+msgid "Critical Error Level"
+msgstr "Kritieke fout niveau"
+
 msgid "Cron"
 msgstr "Cron"
 
@@ -1888,11 +1893,11 @@ msgstr "Locatie database"
 msgid "Dataset"
 msgstr "Dataset"
 
-msgid "Dataset is locked"
-msgstr "Dataset is vergrendeld"
-
 msgid "Dataset is marked for deletion"
 msgstr "Dataset is gemarkeerd voor verwijdering"
+
+msgid "Dataset is protected"
+msgstr "Dataset wordt beschermd"
 
 msgid "Datasets"
 msgstr "Datasets"
@@ -1908,6 +1913,9 @@ msgstr "Dagen"
 
 msgid "Debug"
 msgstr "Debug"
+
+msgid "Debug Level"
+msgstr "Debug niveau"
 
 msgid "Dec"
 msgstr "Dec"
@@ -2253,8 +2261,8 @@ msgstr "Uitschakelen firmware versie controle."
 msgid "Disable speaker beep on startup and shutdown."
 msgstr "Uitschakelen luidspreker piep tijdens het opstarten en afsluiten."
 
-msgid "Disable the compression of repeated line"
-msgstr "Uitschakelen compressie van herhaalde lijn"
+msgid "Disable the compression of repeated line."
+msgstr "Uitschakelen compressie van herhaalde lijn."
 
 msgid "Disabled"
 msgstr "Uitgeschakeld"
@@ -2688,6 +2696,9 @@ msgstr "E-mail"
 msgid "Email Report"
 msgstr "E-mail Rapportage"
 
+msgid "Emergency Level"
+msgstr "Noodgevallen niveau"
+
 msgid "Empty as default."
 msgstr "Standaard leeg."
 
@@ -2752,8 +2763,8 @@ msgstr "Activeer ZFS ACL"
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
 msgstr ""
-"Inschakelen Zeroconf/Bonjour om deze service kenbaar te maken van dit "
-"apparaat."
+"Inschakelen Zeroconf/Bonjour netwerkprotocol om zijn services kenbaar te "
+"maken vanaf deze server."
 
 msgid "Enable anonymous bind."
 msgstr "Inschakelen anonieme koppeling."
@@ -2862,9 +2873,6 @@ msgstr "Activeer schaduw kopie"
 
 msgid "Enable store DOS attributes"
 msgstr "Inschakelen opslaan van DOS attributen"
-
-msgid "Enable syslog'ing to remote syslog server"
-msgstr "Inschakelen syslog'ing naar een externe syslog server"
 
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Inschakelen van de ident protocol (RFC1413)."
@@ -2990,12 +2998,18 @@ msgstr ""
 msgid "Error"
 msgstr "Fout"
 
+msgid "Error Level"
+msgstr "Fout niveau"
+
 #, php-format
 msgid "Error: The changes could not be applied (error code %s)."
 msgstr "Fout: wijzigingen kunnen niet worden doorgevoerd (fout code %s)."
 
 msgid "Event"
 msgstr "Gebeurtenis"
+
+msgid "Event selection"
+msgstr "Gebeurtenis selectie"
 
 msgid "Execute"
 msgstr "Uitvoeren"
@@ -3609,8 +3623,8 @@ msgstr "IP-adres"
 msgid "IP address"
 msgstr "IP-adres"
 
-msgid "IP address of remote syslog server"
-msgstr "Vul hier het IP-adres in van de externe syslog server"
+msgid "IP address of remote syslog server."
+msgstr "Vul hier het IP-adres in van de externe syslog server."
 
 #, php-format
 msgid ""
@@ -3821,6 +3835,9 @@ msgstr ""
 
 msgid "Info"
 msgstr "Info"
+
+msgid "Info Level"
+msgstr "Info niveau"
 
 msgid "Informal"
 msgstr "Informeel"
@@ -4364,10 +4381,16 @@ msgid "Log Device"
 msgstr "Log-device"
 
 msgid "Log Level"
-msgstr "Log Niveau"
+msgstr "Log niveau"
+
+msgid "Log Settings"
+msgstr "Log Instellingen"
 
 msgid "Log level"
 msgstr "Log niveau"
+
+msgid "Log order"
+msgstr "Log volgorde"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr ""
@@ -4514,6 +4537,9 @@ msgstr "Masquerade adres"
 
 msgid "Max Protocol"
 msgstr "Max Protocol"
+
+msgid "Max entries"
+msgstr "Max logboekregels"
 
 msgid "Max. TTL"
 msgstr "Max. TTL"
@@ -5098,6 +5124,9 @@ msgstr ""
 msgid "Nothing to synchronize"
 msgstr "Er is niets om te synchroniseren"
 
+msgid "Notice Level"
+msgstr "Opmerking niveau"
+
 #, php-format
 msgid "Notification email from host: %s"
 msgstr "E-mail Bericht van host: %s"
@@ -5441,6 +5470,9 @@ msgstr "Afbeeldingen"
 
 msgid "Ping"
 msgstr "Ping"
+
+msgid "Ping Test"
+msgstr "Ping Test"
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Ping winbindd om te kijken of deze leeft:"
@@ -5810,6 +5842,9 @@ msgstr "Remote Module (Bron)"
 msgid "Remote Rsync Server"
 msgstr "Remote Rsync Server"
 
+msgid "Remote Syslog Server"
+msgstr "Externe Syslog Server"
+
 msgid "Remote module (source)"
 msgstr "Remote module (bron)"
 
@@ -5822,8 +5857,8 @@ msgstr "Remote monitoring"
 msgid "Remote rsync daemon"
 msgstr "Remote rsync daemon"
 
-msgid "Remote syslog server"
-msgstr "Externe syslog server"
+msgid "Remote syslog messages"
+msgstr "Externe syslog berichten"
 
 msgid "Removable"
 msgstr "Verwijderbaar"
@@ -5879,8 +5914,14 @@ msgstr ""
 msgid "Resolve"
 msgstr "Omzetten"
 
+msgid "Resolve IP"
+msgstr "Omzetten IP"
+
 msgid "Resolve IP addresses to hostnames"
 msgstr "Omzetten van IP-adressen naar hostnamen"
+
+msgid "Resolve IP addresses to hostnames."
+msgstr "IP-adressen naar hostnamen omzetten"
 
 msgid "Resource"
 msgstr "Bron"
@@ -6367,9 +6408,9 @@ msgstr "Toon ruwe UPS Info"
 msgid "Show UPS Information"
 msgstr "UPS Informatie Weergeven"
 
-msgid "Show log entries in reverse order (newest entries on top)"
+msgid "Show log entries in reverse order (newest entries on top)."
 msgstr ""
-"Logboek in omgekeerde volgorde weergeven (nieuwste logregels bovenaan)"
+"Logboek in omgekeerde volgorde weergeven (nieuwste logregels bovenaan)."
 
 msgid "Shutdown"
 msgstr "Uitschakelen"
@@ -6717,6 +6758,9 @@ msgstr "Synchronisatie"
 msgid "Syncthing"
 msgstr "Syncthing"
 
+msgid "Syslog Level"
+msgstr "Syslog niveau"
+
 #, php-format
 msgid ""
 "Syslog sends UDP datagrams to port 514 on the specified remote syslog "
@@ -6736,6 +6780,9 @@ msgstr "Systeemoverzicht"
 msgid "System Load"
 msgstr "Systeembelasting"
 
+msgid "System Settings"
+msgstr "Systeem Instellingen"
+
 msgid "System bios"
 msgstr "Systeem bios"
 
@@ -6746,7 +6793,7 @@ msgid "System info"
 msgstr "Systeem-info"
 
 msgid "System last config change"
-msgstr "Systeem laatste configuratiewijziging"
+msgstr "Systeem configuratiewijziging"
 
 msgid "System log"
 msgstr "Systeem log"
@@ -8496,6 +8543,9 @@ msgstr "Totaal: %s | Gebruikt: %s | Vrij: %s"
 msgid "Traceroute"
 msgstr "Traceer route"
 
+msgid "Traceroute Test"
+msgstr "Traceroute Test"
+
 msgid ""
 "Traceroute may take a while to complete. You may hit the Stop button on your "
 "browser at any time to see the progress of failed traceroutes."
@@ -9036,6 +9086,9 @@ msgstr "Wake-on-LAN"
 msgid "Warning"
 msgstr "Waarschuwing"
 
+msgid "Warning Level"
+msgstr "Waarschuwingsniveau"
+
 msgid ""
 "Warning: You are going to delete a RAID volume. All data will get lost and "
 "can not be recovered."
@@ -9463,3 +9516,28 @@ msgstr "loskoppelen"
 
 msgid "version:"
 msgstr "versie:"
+
+#~ msgid "ARP tables"
+#~ msgstr "ARP tabel"
+
+#~ msgid "Enable syslog'ing to remote syslog server"
+#~ msgstr "Inschakelen syslog'ing naar een externe syslog server"
+
+#~ msgid "IP address of remote syslog server"
+#~ msgstr "Vul hier het IP-adres in van de externe syslog server"
+
+#~ msgid "Remote syslog server"
+#~ msgstr "Externe syslog server"
+
+#~ msgid "Show log entries in reverse order (newest entries on top)"
+#~ msgstr ""
+#~ "Logboek in omgekeerde volgorde weergeven (nieuwste logregels bovenaan)"
+
+#~ msgid "Accept remote syslog messages"
+#~ msgstr "Accepteer remote syslog berichten"
+
+#~ msgid "Disable the compression of repeated line"
+#~ msgstr "Uitschakelen compressie van herhaalde lijn"
+
+#~ msgid "Dataset is locked"
+#~ msgstr "Dataset is vergrendeld"
