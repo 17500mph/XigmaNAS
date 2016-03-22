@@ -141,7 +141,7 @@ a {
 .listtopic {
 	border-right: 1px solid #999999;
 	font-size: 11px;
-	background-image: url("listtopic_bg.png");
+	background-image: url("images/listtopic_bg.png");
 	background-color: #95A7C0;
 	padding-right: 16px;
 	padding-left: 6px;
