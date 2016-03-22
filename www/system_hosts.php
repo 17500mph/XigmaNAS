@@ -139,19 +139,19 @@ function hosts_process_updatenotification($mode, $data) {
 									<td class="listbg"><?=htmlspecialchars($host['descr']);?>&nbsp;</td>
 									<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 									<td valign="middle" nowrap="nowrap" class="list">
-										<a href="system_hosts_edit.php?uuid=<?=$host['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit Host");?>" border="0" alt="<?=gettext("Edit Host");?>" /></a>
-										<a href="system_hosts.php?act=del&amp;uuid=<?=$host['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this host?");?>')"><img src="delete.png" title="<?=gettext("Delete Host");?>" border="0" alt="<?=gettext("Delete Host");?>" /></a>
+										<a href="system_hosts_edit.php?uuid=<?=$host['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit Host");?>" border="0" alt="<?=gettext("Edit Host");?>" /></a>
+										<a href="system_hosts.php?act=del&amp;uuid=<?=$host['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this host?");?>')"><img src="images/delete.png" title="<?=gettext("Delete Host");?>" border="0" alt="<?=gettext("Delete Host");?>" /></a>
 									</td>
 									<?php else:?>
 									<td valign="middle" nowrap="nowrap" class="list">
-										<img src="delete.png" border="0" alt="" />
+										<img src="images/delete.png" border="0" alt="" />
 									</td>
 									<?php endif;?>
 								</tr>
 								<?php endforeach;?>
 								<tr>
 									<td class="list" colspan="3"></td>
-									<td class="list"><a href="system_hosts_edit.php"><img src="add.png" title="<?=gettext("Add Host");?>" border="0" alt="<?=gettext("Add Host");?>" /></a></td>
+									<td class="list"><a href="system_hosts_edit.php"><img src="images/add.png" title="<?=gettext("Add Host");?>" border="0" alt="<?=gettext("Add Host");?>" /></a></td>
 								</tr>
 							</table>
 						</td>

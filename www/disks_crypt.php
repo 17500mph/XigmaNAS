@@ -174,12 +174,12 @@ function geli_process_updatenotification($mode, $data) {
             </td>
             <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
             <td valign="middle" nowrap="nowrap" class="list">
-							<a href="disks_crypt_tools.php?disk=<?=$geli['devicespecialfile'];?>&amp;action=setkey"><img src="edit.png" title="<?=gettext("Change password"); ?>" border="0" alt="<?=gettext("Change password"); ?>" /></a>&nbsp;
-              <a href="disks_crypt.php?act=del&amp;uuid=<?=$geli['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this volume?\\n!!! Note, all data will get lost and can not be recovered. !!!");?>')"><img src="delete.png" title="<?=gettext("Kill encrypted volume"); ?>" border="0" alt="<?=gettext("Kill encrypted volume"); ?>" /></a>
+							<a href="disks_crypt_tools.php?disk=<?=$geli['devicespecialfile'];?>&amp;action=setkey"><img src="images/edit.png" title="<?=gettext("Change password"); ?>" border="0" alt="<?=gettext("Change password"); ?>" /></a>&nbsp;
+              <a href="disks_crypt.php?act=del&amp;uuid=<?=$geli['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this volume?\\n!!! Note, all data will get lost and can not be recovered. !!!");?>')"><img src="images/delete.png" title="<?=gettext("Kill encrypted volume"); ?>" border="0" alt="<?=gettext("Kill encrypted volume"); ?>" /></a>
             </td>
             <?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
-							<img src="delete.png" border="0" alt="" />
+							<img src="images/delete.png" border="0" alt="" />
 						</td>
 						<?php endif;?>
           </tr>
@@ -187,7 +187,7 @@ function geli_process_updatenotification($mode, $data) {
           <tr>
             <td class="list" colspan="4"></td>
             <td class="list">
-							<a href="disks_crypt_edit.php"><img src="add.png" title="<?=gettext("Create encrypted volume");?>" border="0" alt="<?=gettext("Create encrypted volume");?>" /></a>
+							<a href="disks_crypt_edit.php"><img src="images/add.png" title="<?=gettext("Create encrypted volume");?>" border="0" alt="<?=gettext("Create encrypted volume");?>" /></a>
 						</td>
 			    </tr>
         </table>

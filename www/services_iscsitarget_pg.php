@@ -159,19 +159,19 @@ function iscsitargetpg_process_updatenotification($mode, $data) {
           <td class="listr"><?=htmlspecialchars($pg['comment']);?>&nbsp;</td>
           <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
           <td valign="middle" nowrap="nowrap" class="list">
-            <a href="services_iscsitarget_pg_edit.php?uuid=<?=$pg['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit portal group");?>" border="0" alt="<?=gettext("Edit portal group");?>" /></a>
-            <a href="services_iscsitarget_pg.php?act=del&amp;type=pg&amp;uuid=<?=$pg['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this portal group?");?>')"><img src="delete.png" title="<?=gettext("Delete portal group");?>" border="0" alt="<?=gettext("Delete portal group");?>" /></a>
+            <a href="services_iscsitarget_pg_edit.php?uuid=<?=$pg['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit portal group");?>" border="0" alt="<?=gettext("Edit portal group");?>" /></a>
+            <a href="services_iscsitarget_pg.php?act=del&amp;type=pg&amp;uuid=<?=$pg['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this portal group?");?>')"><img src="images/delete.png" title="<?=gettext("Delete portal group");?>" border="0" alt="<?=gettext("Delete portal group");?>" /></a>
           </td>
           <?php else:?>
           <td valign="middle" nowrap="nowrap" class="list">
-            <img src="delete.png" border="0" alt="" />
+            <img src="images/delete.png" border="0" alt="" />
           </td>
           <?php endif;?>
         </tr>
         <?php endforeach;?>
         <tr>
           <td class="list" colspan="3"></td>
-          <td class="list"><a href="services_iscsitarget_pg_edit.php"><img src="add.png" title="<?=gettext("Add portal group");?>" border="0" alt="<?=gettext("Add portal group");?>" /></a></td>
+          <td class="list"><a href="services_iscsitarget_pg_edit.php"><img src="images/add.png" title="<?=gettext("Add portal group");?>" border="0" alt="<?=gettext("Add portal group");?>" /></a></td>
         </tr>
         </table>
         <?=gettext("A Portal Group contains IP addresses and listening TCP ports to connect the target from the initiator.");?>

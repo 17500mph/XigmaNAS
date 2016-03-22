@@ -290,9 +290,9 @@ function show_header($title, $additional_header_content = null)
 		echo "<meta http-equiv='refresh' content=\"".$pgrefresh."\"/>\n";
 	endif;
 	echo "<link href=\"./_style/style.css\" rel=\"stylesheet\"	type=\"text/css\">\n";
-	echo "<link href=\"../gui.css\" rel=\"stylesheet\" type=\"text/css\">\n";
-	echo "<link href=\"../navbar.css\" rel=\"stylesheet\" type=\"text/css\">\n";
-	echo "<link href=\"../tabs.css\" rel=\"stylesheet\" type=\"text/css\">\n";	
+	echo "<link href=\"../css/gui.css\" rel=\"stylesheet\" type=\"text/css\">\n";
+	echo "<link href=\"../css/navbar.css\" rel=\"stylesheet\" type=\"text/css\">\n";
+	echo "<link href=\"../css/tabs.css\" rel=\"stylesheet\" type=\"text/css\">\n";	
 	echo "<script type=\"text/javascript\" src=\"../js/jquery.min.js\"></script>\n";
 	echo "<script type=\"text/javascript\" src=\"../js/gui.js\"></script>\n";
 	if (isset($pglocalheader) && !empty($pglocalheader)) {
@@ -311,7 +311,7 @@ function show_header($title, $additional_header_content = null)
 	echo "<body>\n";
 	echo "<div id=\"header\">\n";
 	echo "<div id=\"headerlogo\">\n";
-	echo "<a title=\"www.".get_product_url()."\" href=\"http://".get_product_url()."\" target='_blank'><img src='../header_logo.png' alt='logo' /></a>\n";
+	echo "<a title=\"www.".get_product_url()."\" href=\"http://".get_product_url()."\" target='_blank'><img src='../images/header_logo.png' alt='logo' /></a>\n";
 	echo "</div>\n";
 	echo "<div id=\"headerrlogo\">\n";
 	echo "<div class=\"hostname\">\n";

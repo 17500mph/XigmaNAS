@@ -349,7 +349,7 @@ function webguiproto_change() {
 						<td width="22%" valign="top" class="vncell"><?=gettext("System time");?></td>
 						<td width="78%" class="vtable">
 							<input id="systime" size="20" maxlength="20" name="systime" type="text" value="" />
-							<img src="cal.gif" onclick="showChooser(this, 'systime', 'chooserSpan', 2000, 2050, Date.patterns.Default, true);" alt="" />							
+							<img src="images/cal.gif" onclick="showChooser(this, 'systime', 'chooserSpan', 2000, 2050, Date.patterns.Default, true);" alt="" />							
 							<div id="chooserSpan" class="dateChooser select-free" style="display: none; visibility: hidden; width: 160px;"></div><br />
 							<span class="vexpl"><?=gettext("Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to select it.");?></span>
 						</td>

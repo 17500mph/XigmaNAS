@@ -101,17 +101,17 @@ $a_service[] = array("desc" => gettext("UPS"), "link" => "services_ups.php", "co
 						<td class="<?=$enable?"listrc":"listrcd";?>">
 							<a href="<?=$servicev['link'];?>">
 								<?php if ($enable):?>
-								<img src="status_enabled.png" border="0" alt="" />
+								<img src="images/status_enabled.png" border="0" alt="" />
 								<?php else:?>
-								<img src="status_disabled.png" border="0" alt="" />
+								<img src="images/status_disabled.png" border="0" alt="" />
 								<?php endif;?>
 							</a>
 						</td>
 						<td class="<?=$enable?"listrc":"listrcd";?>">
 							<?php if (0 === $status):?>
-							<a title="<?=gettext("Running");?>"><img src="status_enabled.png" border="0" alt="" /></a>
+							<a title="<?=gettext("Running");?>"><img src="images/status_enabled.png" border="0" alt="" /></a>
 							<?php else:?>
-							<a title="<?=gettext("Stopped");?>"><img src="status_disabled.png" border="0" alt="" /></a>
+							<a title="<?=gettext("Stopped");?>"><img src="images/status_disabled.png" border="0" alt="" /></a>
 							<?php endif;?>
 						</td>
 					</tr>

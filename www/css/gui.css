@@ -71,7 +71,7 @@ pre {
 .vncellbg, .vncell, .vncellreq, .vncellt {
 	background-color: #D6D6D6;
 /*
-	background: #DCDCDC url("vncell_bg.png") repeat-x scroll left top;
+	background: #DCDCDC url("/images/vncell_bg.png") repeat-x scroll left top;
 */
 	padding-right: 20px;
 	padding-left: 8px;
@@ -162,7 +162,7 @@ a {
 	background-color: #D9DEE8;
 }
 .listhdr, .listhdrlr, .listhdrr, .listhdrc {
-	background: #BBBBBB url("gradient_listhdr.png") repeat-x scroll left top;
+	background: #BBBBBB url("/images/gradient_listhdr.png") repeat-x scroll left top;
 	padding-right: 16px;
 	padding-left: 6px;
 	font-weight: bold;
@@ -236,7 +236,7 @@ a {
 }
 .listtopic {
 	font-size: 11px;
-	background-image: url("listtopic_bg.png");
+	background-image: url("/images/listtopic_bg.png");
 	background-color: #95A7C0;
 	padding-right: 16px;
 	padding-left: 6px;
@@ -253,7 +253,7 @@ a {
 	font-size: 9pt;
 }
 .optsect_t {
-	background-image: url("listtopic_bg.png");
+	background-image: url("/images/listtopic_bg.png");
 	background-color: #95A7C0;
 	padding-right: 6px;
 	padding-left: 6px;
@@ -301,7 +301,7 @@ div#header {
 	min-width: 880px;
 	height: 80px;
 	width: 100%;
-	background: #171717 url("header_bg.png") top left no-repeat;
+	background: #171717 url("/images/header_bg.png") top left no-repeat;
 	position: fixed;
 	top: 0;
 }
@@ -319,7 +319,7 @@ div#headerrlogo {
 	float: right;
 	height: 100%;
 	width: 400px;
-	background-image: url("header_rlogo.png");
+	background-image: url("/images/header_rlogo.png");
 }
 div#headerrlogo .hostname {
 	font-size: 11px;
@@ -331,7 +331,7 @@ div#headerrlogo .hostname {
 div#pagefooter {
 	margin: 0px 0px 0px 0px;
 	text-align: center;
-	background: url(navbar_default.gif);
+	background: url("/images/navbar_default.gif");
 	height: 20px;
 	position: fixed;
 	bottom: 0;
@@ -357,7 +357,7 @@ div#loginfooter {
 div#headernavbar {
 	min-width: 900px;
 	width: 100%;
-	background: black url(navbar_default.gif) center center repeat-x;
+	background: black url("/images/navbar_default.gif") center center repeat-x;
 	position: fixed;
 	top: 78px;
 }
@@ -434,7 +434,7 @@ div#loginpage {
 }
 
 div#loginboxheader {
-	background-image: url(./tablebg.png);
+	background-image: url("/images/tablebg.png");
 	height: 20px;
 	text-align: left;
 	padding: 5px 0px 0px 10px;
@@ -444,7 +444,7 @@ div#loginboxheader {
 }
 
 div#loginbox {
-	background-image: url(vncell_bg.png);
+	background-image: url("/images/vncell_bg.png");
 	border-left: 1px solid #000000;
 	border-right: 1px solid #000000;
 	border-bottom: 1px solid #000000;

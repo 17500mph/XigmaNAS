@@ -15,6 +15,7 @@
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -261,15 +262,15 @@ function print_core_box($type, $msg) {
 	switch ($type) {
 		case "info":
 			$id = "infobox";
-			$img = "exclam.png";
+			$img = "images/info_box.png";
 			break;
 		case "warning":
 			$id = "warningbox";
-			$img = "warn.png";
+			$img = "images/warn_box.png";
 			break;
 		case "error":
 			$id = "errorbox";
-			$img = "err.png";
+			$img = "images/error_box.png";
 			break;
 	}
 

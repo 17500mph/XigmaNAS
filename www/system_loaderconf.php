@@ -298,7 +298,7 @@ function controlactionbuttons(ego, triggerbyname) {
 					<tfoot>
 						<tr>
 							<td class="list" colspan="5"></td>
-							<td class="list"><a href="<?=$sphere_scriptname_child;?>"><img src="add.png" title="<?=$gt_record_add;?>" border="0" alt="<?=$gt_record_add;?>" /></a></td>
+							<td class="list"><a href="<?=$sphere_scriptname_child;?>"><img src="images/add.png" title="<?=$gt_record_add;?>" border="0" alt="<?=$gt_record_add;?>" /></a></td>
 						</tr>
 					</tfoot>
 					<tbody>
@@ -319,20 +319,20 @@ function controlactionbuttons(ego, triggerbyname) {
 								<td class="<?=$enabled ? "listr" : "listrd";?>"><?=htmlspecialchars($sphere_record['value']);?>&nbsp;</td>
 								<td class="<?=$enabled ? "listr" : "listrd";?>">
 									<?php if ($enabled):?>
-										<a title="<?=gettext('Enabled');?>"><img src="status_enabled.png" border="0" alt=""/></a>
+										<a title="<?=gettext('Enabled');?>"><img src="images/status_enabled.png" border="0" alt=""/></a>
 									<?php else:?>
-										<a title="<?=gettext('Disabled');?>"><img src="status_disabled.png" border="0" alt=""/></a>
+										<a title="<?=gettext('Disabled');?>"><img src="images/status_disabled.png" border="0" alt=""/></a>
 									<?php endif;?>
 								</td>
 								<td class="listbg"><?=htmlspecialchars($sphere_record['comment']);?>&nbsp;</td>
 								<td valign="middle" nowrap="nowrap" class="list">
 									<?php if ($notdirty && $notprotected):?>
-										<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="edit.png" title="<?=$gt_record_mod;?>" border="0" alt="<?=$gt_record_mod;?>" /></a>
+										<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="images/edit.png" title="<?=$gt_record_mod;?>" border="0" alt="<?=$gt_record_mod;?>" /></a>
 									<?php else:?>
 										<?php if ($notprotected):?>
-											<img src="delete.png" title="<?=gettext($gt_record_del);?>" border="0" alt="<?=gettext($gt_record_del);?>" />
+											<img src="images/delete.png" title="<?=gettext($gt_record_del);?>" border="0" alt="<?=gettext($gt_record_del);?>" />
 										<?php else:?>
-											<img src="locked.png" title="<?=gettext($gt_record_loc);?>" border="0" alt="<?=gettext($gt_record_loc);?>" />
+											<img src="images/locked.png" title="<?=gettext($gt_record_loc);?>" border="0" alt="<?=gettext($gt_record_loc);?>" />
 										<?php endif;?>
 									<?php endif;?>
 								</td>
