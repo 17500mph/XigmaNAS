@@ -492,12 +492,12 @@ $(document).ready(function(){
 	  <?php $notificationmode = updatenotify_get_mode(($vmv['type'] == "pv") ? "vm_xen_pv" : "vm_xen_hvm", $vmv['uuid']);?>
 	  <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 	  <td valign="middle" nowrap="nowrap" class="list">
-	    <a href="<?=($vmv['type'] == "pv") ? "vm_xen_pv.php" : "vm_xen_hvm.php";?>?uuid=<?=$vmv['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit VM");?>" border="0" alt="<?=gettext("Edit VM");?>" /></a>
-	    <a href="vm_xen.php?act=del&amp;uuid=<?=$vmv['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this VM?");?>')"><img src="delete.png" title="<?=gettext("Delete VM");?>" border="0" alt="<?=gettext("Delete VM");?>" /></a>
+	    <a href="<?=($vmv['type'] == "pv") ? "vm_xen_pv.php" : "vm_xen_hvm.php";?>?uuid=<?=$vmv['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit VM");?>" border="0" alt="<?=gettext("Edit VM");?>" /></a>
+	    <a href="vm_xen.php?act=del&amp;uuid=<?=$vmv['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this VM?");?>')"><img src="images/delete.png" title="<?=gettext("Delete VM");?>" border="0" alt="<?=gettext("Delete VM");?>" /></a>
 	  </td>
 	  <?php else:?>
 	  <td valign="middle" nowrap="nowrap" class="list">
-	    <img src="delete.png" border="0" alt="" />
+	    <img src="images/delete.png" border="0" alt="" />
 	  </td>
 	  <?php endif;?>
 	</tr>

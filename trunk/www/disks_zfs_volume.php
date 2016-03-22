@@ -258,7 +258,7 @@ function controlactionbuttons(ego, triggerbyname) {
 					<tfoot>
 						<tr>
 							<td class="list" colspan="8"></td>
-							<td class="list"><a href="<?=$sphere_scriptname_child;?>"><img src="add.png" title="<?=$gt_record_add;?>" border="0" alt="<?=$gt_record_add;?>" /></a></td>
+							<td class="list"><a href="<?=$sphere_scriptname_child;?>"><img src="images/add.png" title="<?=$gt_record_add;?>" border="0" alt="<?=$gt_record_add;?>" /></a></td>
 						</tr>
 					</tfoot>
 					<tbody>
@@ -290,12 +290,12 @@ function controlactionbuttons(ego, triggerbyname) {
 								<td class="listbg"><?=htmlspecialchars($sphere_record['desc']);?>&nbsp;</td>
 								<td valign="middle" nowrap="nowrap" class="list">
 									<?php if ($notdirty && $notprotected):?>
-										<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="edit.png" title="<?=$gt_record_mod;?>" border="0" alt="<?=$gt_record_mdn;?>" /></a>
+										<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="images/edit.png" title="<?=$gt_record_mod;?>" border="0" alt="<?=$gt_record_mdn;?>" /></a>
 									<?php else:?>
 										<?php if ($notprotected):?>
-											<img src="delete.png" title="<?=gettext($gt_record_del);?>" border="0" alt="<?=gettext($gt_record_del);?>" />
+											<img src="images/delete.png" title="<?=gettext($gt_record_del);?>" border="0" alt="<?=gettext($gt_record_del);?>" />
 										<?php else:?>
-											<img src="locked.png" title="<?=gettext($gt_record_loc);?>" border="0" alt="<?=gettext($gt_record_loc);?>" />
+											<img src="images/locked.png" title="<?=gettext($gt_record_loc);?>" border="0" alt="<?=gettext($gt_record_loc);?>" />
 										<?php endif;?>
 									<?php endif;?>
 								</td>

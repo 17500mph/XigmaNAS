@@ -229,13 +229,13 @@ function enable_change(enable_change) {
 									<?php $enable = isset($rule['enable']);
 									switch ($rule['action']) {
 										case "allow":
-											$actionimg = "fw_action_allow.png";
+											$actionimg = "images/fw_action_allow.png";
 											break;
 										case "deny":
-											$actionimg = "fw_action_deny.png";
+											$actionimg = "images/fw_action_deny.png";
 											break;
 										case "unreach host":
-											$actionimg = "fw_action_reject.png";
+											$actionimg = "images/fw_action_reject.png";
 											break;
 									}
 									?>
@@ -249,12 +249,12 @@ function enable_change(enable_change) {
 									<td class="listbg"><?=htmlspecialchars($rule['desc']);?>&nbsp;</td>
 									<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 									<td valign="middle" nowrap="nowrap" class="list">
-										<a href="system_firewall_edit.php?uuid=<?=$rule['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit rule");?>" border="0" alt="<?=gettext("Edit rule");?>" /></a>
-										<a href="system_firewall.php?act=del&amp;uuid=<?=$rule['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this rule?");?>')"><img src="delete.png" title="<?=gettext("Delete rule");?>" border="0" alt="<?=gettext("Delete rule");?>" /></a>
+										<a href="system_firewall_edit.php?uuid=<?=$rule['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit rule");?>" border="0" alt="<?=gettext("Edit rule");?>" /></a>
+										<a href="system_firewall.php?act=del&amp;uuid=<?=$rule['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this rule?");?>')"><img src="images/delete.png" title="<?=gettext("Delete rule");?>" border="0" alt="<?=gettext("Delete rule");?>" /></a>
 									</td>
 									<?php else:?>
 									<td valign="middle" nowrap="nowrap" class="list">
-										<img src="delete.png" border="0" alt="" />
+										<img src="images/delete.png" border="0" alt="" />
 									</td>
 									<?php endif;?>
 								</tr>
@@ -262,9 +262,9 @@ function enable_change(enable_change) {
 								<tr>
 									<td class="list" colspan="8"></td>
 									<td class="list">
-										<a href="system_firewall_edit.php"><img src="add.png" title="<?=gettext("Add rule");?>" border="0" alt="<?=gettext("Add rule");?>" /></a>
+										<a href="system_firewall_edit.php"><img src="images/add.png" title="<?=gettext("Add rule");?>" border="0" alt="<?=gettext("Add rule");?>" /></a>
 										<?php if (!empty($a_rule)):?>
-										<a href="system_firewall.php?act=del&amp;uuid=all" onclick="return confirm('<?=gettext("Do you really want to delete all rules?");?>')"><img src="delete.png" title="<?=gettext("Delete all rules");?>" border="0" alt="<?=gettext("Delete all rules");?>" /></a>
+										<a href="system_firewall.php?act=del&amp;uuid=all" onclick="return confirm('<?=gettext("Do you really want to delete all rules?");?>')"><img src="images/delete.png" title="<?=gettext("Delete all rules");?>" border="0" alt="<?=gettext("Delete all rules");?>" /></a>
 										<?php endif;?>
 									</td>
 								</tr>

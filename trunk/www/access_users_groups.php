@@ -130,12 +130,12 @@ function userdbgroup_process_updatenotification($mode, $data) {
 									<td class="listr"><?=htmlspecialchars($groupv['desc']);?>&nbsp;</td>
 									<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 										<td valign="middle" nowrap="nowrap" class="list">
-											<a href="access_users_groups_edit.php?uuid=<?=$groupv['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit group");?>" border="0" alt="<?=gettext("Edit group");?>" /></a>&nbsp;
-											<a href="access_users_groups.php?act=del&amp;uuid=<?=$groupv["uuid"];?>" onclick="return confirm('<?=gettext("Do you really want to delete this group?");?>')"><img src="delete.png" title="<?=gettext("Delete group");?>" border="0" alt="<?=gettext("Delete group");?>" /></a>
+											<a href="access_users_groups_edit.php?uuid=<?=$groupv['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit group");?>" border="0" alt="<?=gettext("Edit group");?>" /></a>&nbsp;
+											<a href="access_users_groups.php?act=del&amp;uuid=<?=$groupv["uuid"];?>" onclick="return confirm('<?=gettext("Do you really want to delete this group?");?>')"><img src="images/delete.png" title="<?=gettext("Delete group");?>" border="0" alt="<?=gettext("Delete group");?>" /></a>
 										</td>
 									<?php else: ?>
 										<td valign="middle" nowrap="nowrap" class="list">
-											<img src="delete.png" border="0" alt="" />
+											<img src="images/delete.png" border="0" alt="" />
 										</td>
 									<?php endif; ?>
 								</tr>
@@ -143,7 +143,7 @@ function userdbgroup_process_updatenotification($mode, $data) {
 								<tr>
 									<td class="list" colspan="3"></td>
 									<td class="list">
-										<a href="access_users_groups_edit.php"><img src="add.png" title="<?=gettext("Add group");?>" border="0" alt="<?=gettext("Add group");?>" /></a>
+										<a href="access_users_groups_edit.php"><img src="images/add.png" title="<?=gettext("Add group");?>" border="0" alt="<?=gettext("Add group");?>" /></a>
 									</td	>
 								</tr>
 							</table>

@@ -161,9 +161,9 @@ function display_menu($menuid) {
 	<?php if (isset($pgrefresh) && $pgrefresh):?>
 	<meta http-equiv="refresh" content="<?=$pgrefresh;?>" />
 	<?php endif;?>
-	<link href="gui.css" rel="stylesheet" type="text/css" />
-	<link href="navbar.css" rel="stylesheet" type="text/css" />
-	<link href="tabs.css" rel="stylesheet" type="text/css" />
+	<link href="css/gui.css" rel="stylesheet" type="text/css" />
+	<link href="css/navbar.css" rel="stylesheet" type="text/css" />
+	<link href="css/tabs.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/gui.js"></script>
 <?php
@@ -183,7 +183,7 @@ function display_menu($menuid) {
 <body onload='document.iform.username.focus();'>
 <div id="header">
 	<div id="headerlogo">
-		<a title="www.<?=get_product_url();?>" href="http://<?=get_product_url();?>" target="_blank"><img src="header_logo.png" alt="logo" /></a>
+		<a title="www.<?=get_product_url();?>" href="http://<?=get_product_url();?>" target="_blank"><img src="images/header_logo.png" alt="logo" /></a>
 	</div>
 	<div id="headerrlogo">
 		<div class="hostname">
@@ -239,7 +239,7 @@ function display_menu($menuid) {
 												<div class="shadow">
 													<div id="loginboxheader"><b><?=gettext("NAS4Free WebGUI Login");?></b></div>
 													<div id="loginbox">
-														<table background="vncell_bg.png">
+														<table background="images/vncell_bg.png">
 															<tbody>
 																<tr>
 																	<td><b><?=gettext("Username");?>:</b></td>

@@ -99,8 +99,8 @@ if (isset($_GET['act']) && $_GET['act'] == "del")
           <td class="listlr"><?=htmlspecialchars($cmd);?>&nbsp;</td>
           <td class="listbg"><?php echo(gettext("PreInit"));?>&nbsp;</td>
           <td valign="middle" nowrap="nowrap" class="list">
-            <a href="system_rc_edit.php?id=<?=$i;?>&amp;type=PREINIT"><img src="edit.png" title="<?=gettext("Edit command");?>" border="0" alt="<?=gettext("Edit command");?>" /></a>&nbsp;
-            <a href="system_rc.php?act=del&amp;id=<?=$i;?>&amp;type=PREINIT" onclick="return confirm('<?=gettext("Do you really want to delete this command?");?>')"><img src="delete.png" title="<?=gettext("Delete command");?>" border="0" alt="<?=gettext("Delete command");?>" /></a>
+            <a href="system_rc_edit.php?id=<?=$i;?>&amp;type=PREINIT"><img src="images/edit.png" title="<?=gettext("Edit command");?>" border="0" alt="<?=gettext("Edit command");?>" /></a>&nbsp;
+            <a href="system_rc.php?act=del&amp;id=<?=$i;?>&amp;type=PREINIT" onclick="return confirm('<?=gettext("Do you really want to delete this command?");?>')"><img src="images/delete.png" title="<?=gettext("Delete command");?>" border="0" alt="<?=gettext("Delete command");?>" /></a>
           </td>
         </tr>
         <?php $i++; endforeach;?>
@@ -109,8 +109,8 @@ if (isset($_GET['act']) && $_GET['act'] == "del")
           <td class="listlr"><?=htmlspecialchars($cmd);?>&nbsp;</td>
           <td class="listbg"><?php echo(gettext("PostInit"));?>&nbsp;</td>
           <td valign="middle" nowrap="nowrap" class="list">
-            <a href="system_rc_edit.php?id=<?=$i;?>&amp;type=POSTINIT"><img src="edit.png" title="<?=gettext("Edit command");?>" border="0" alt="<?=gettext("Edit command");?>" /></a>&nbsp;
-            <a href="system_rc.php?act=del&amp;id=<?=$i;?>&amp;type=POSTINIT" onclick="return confirm('<?=gettext("Do you really want to delete this command?");?>')"><img src="delete.png" title="<?=gettext("Delete command");?>" border="0" alt="<?=gettext("Delete command");?>" /></a>
+            <a href="system_rc_edit.php?id=<?=$i;?>&amp;type=POSTINIT"><img src="images/edit.png" title="<?=gettext("Edit command");?>" border="0" alt="<?=gettext("Edit command");?>" /></a>&nbsp;
+            <a href="system_rc.php?act=del&amp;id=<?=$i;?>&amp;type=POSTINIT" onclick="return confirm('<?=gettext("Do you really want to delete this command?");?>')"><img src="images/delete.png" title="<?=gettext("Delete command");?>" border="0" alt="<?=gettext("Delete command");?>" /></a>
           </td>
         </tr>
         <?php $i++; endforeach;?>
@@ -119,14 +119,14 @@ if (isset($_GET['act']) && $_GET['act'] == "del")
           <td class="listlr"><?=htmlspecialchars($cmd);?>&nbsp;</td>
           <td class="listbg"><?php echo(gettext("Shutdown"));?>&nbsp;</td>
           <td valign="middle" nowrap="nowrap" class="list">
-            <a href="system_rc_edit.php?id=<?=$i;?>&amp;type=SHUTDOWN"><img src="edit.png" title="<?=gettext("Edit command");?>" border="0" alt="<?=gettext("Edit command");?>" /></a>&nbsp;
-            <a href="system_rc.php?act=del&amp;id=<?=$i;?>&amp;type=SHUTDOWN" onclick="return confirm('<?=gettext("Do you really want to delete this command?");?>')"><img src="delete.png" title="<?=gettext("Delete command");?>" border="0" alt="<?=gettext("Delete command");?>" /></a>
+            <a href="system_rc_edit.php?id=<?=$i;?>&amp;type=SHUTDOWN"><img src="images/edit.png" title="<?=gettext("Edit command");?>" border="0" alt="<?=gettext("Edit command");?>" /></a>&nbsp;
+            <a href="system_rc.php?act=del&amp;id=<?=$i;?>&amp;type=SHUTDOWN" onclick="return confirm('<?=gettext("Do you really want to delete this command?");?>')"><img src="images/delete.png" title="<?=gettext("Delete command");?>" border="0" alt="<?=gettext("Delete command");?>" /></a>
           </td>
         </tr>
         <?php $i++; endforeach;?>
         <tr>
           <td class="list" colspan="2"></td>
-          <td class="list"><a href="system_rc_edit.php"><img src="add.png" title="<?=gettext("Add command");?>" border="0" alt="<?=gettext("Add command");?>" /></a></td>
+          <td class="list"><a href="system_rc_edit.php"><img src="images/add.png" title="<?=gettext("Add command");?>" border="0" alt="<?=gettext("Add command");?>" /></a></td>
         </tr>
       </table>
       <div id="remarks">

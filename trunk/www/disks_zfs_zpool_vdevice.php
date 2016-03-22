@@ -140,12 +140,12 @@ function zfsvdev_process_updatenotification($mode, $data) {
 						<td class="listbg"><?=htmlspecialchars($vdevicev['desc']);?>&nbsp;</td>
 						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 						<td valign="middle" nowrap="nowrap" class="list">
-							<a href="disks_zfs_zpool_vdevice_edit.php?uuid=<?=$vdevicev['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit device");?>" border="0" alt="<?=gettext("Edit device");?>" /></a>&nbsp;
-							<a href="disks_zfs_zpool_vdevice.php?act=del&amp;uuid=<?=$vdevicev['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this device?");?>')"><img src="delete.png" title="<?=gettext("Delete device");?>" border="0" alt="<?=gettext("Delete device");?>" /></a>
+							<a href="disks_zfs_zpool_vdevice_edit.php?uuid=<?=$vdevicev['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit device");?>" border="0" alt="<?=gettext("Edit device");?>" /></a>&nbsp;
+							<a href="disks_zfs_zpool_vdevice.php?act=del&amp;uuid=<?=$vdevicev['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this device?");?>')"><img src="images/delete.png" title="<?=gettext("Delete device");?>" border="0" alt="<?=gettext("Delete device");?>" /></a>
 						</td>
 						<?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
-							<img src="delete.png" border="0" alt="" />
+							<img src="images/delete.png" border="0" alt="" />
 						</td>
 						<?php endif;?>
 					</tr>
@@ -153,7 +153,7 @@ function zfsvdev_process_updatenotification($mode, $data) {
 					<tr>
 						<td class="list" colspan="3"></td>
 						<td class="list">
-							<a href="disks_zfs_zpool_vdevice_edit.php"><img src="add.png" title="<?=gettext("Add device");?>" border="0" alt="<?=gettext("Add device");?>" /></a>
+							<a href="disks_zfs_zpool_vdevice_edit.php"><img src="images/add.png" title="<?=gettext("Add device");?>" border="0" alt="<?=gettext("Add device");?>" /></a>
 						</td>
 					</tr>
 				</table>

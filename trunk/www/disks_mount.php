@@ -258,19 +258,19 @@ function mountmanagement_process_updatenotification($mode, $data) {
             <td class="listbg"><?=$status;?>&nbsp;</td>
             <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
             <td valign="middle" nowrap="nowrap" class="list">
-              <a href="disks_mount_edit.php?uuid=<?=$mount['uuid'];?>"><img src="edit.png" title="<?=gettext("Edit mount point");?>" border="0" alt="<?=gettext("Edit mount point");?>" /></a>&nbsp;
-              <a href="disks_mount.php?act=del&amp;uuid=<?=$mount['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this mount point? All elements that still use it will become invalid (e.g. share)!");?>')"><img src="delete.png" title="<?=gettext("Delete mount point");?>" border="0" alt="<?=gettext("Delete mount point");?>" /></a>
+              <a href="disks_mount_edit.php?uuid=<?=$mount['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit mount point");?>" border="0" alt="<?=gettext("Edit mount point");?>" /></a>&nbsp;
+              <a href="disks_mount.php?act=del&amp;uuid=<?=$mount['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this mount point? All elements that still use it will become invalid (e.g. share)!");?>')"><img src="images/delete.png" title="<?=gettext("Delete mount point");?>" border="0" alt="<?=gettext("Delete mount point");?>" /></a>
             </td>
             <?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
-							<img src="delete.png" border="0" alt="" />
+							<img src="images/delete.png" border="0" alt="" />
 						</td>
 						<?php endif;?>
           </tr>
           <?php endforeach;?>
           <tr>
             <td class="list" colspan="5"></td>
-            <td class="list"><a href="disks_mount_edit.php"><img src="add.png" title="<?=gettext("Add mount point");?>" border="0" alt="<?=gettext("Add mount point");?>" /></a></td>
+            <td class="list"><a href="disks_mount_edit.php"><img src="images/add.png" title="<?=gettext("Add mount point");?>" border="0" alt="<?=gettext("Add mount point");?>" /></a></td>
           </tr>
         </table>
         <div id="remarks">

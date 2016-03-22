@@ -536,7 +536,7 @@ EOD;
 	<meta http-equiv="Content-Type" content="text/html; charset=<?=system_get_language_codeset();?>">
 	<meta http-equiv="Content-Script-Type" content="text/javascript">
 	<meta http-equiv="Content-Style-Type" content="text/css">
-  	<link href="gui.css" rel="stylesheet" type="text/css">
+  	<link href="css/gui.css" rel="stylesheet" type="text/css">
 		<script type="text/javascript" src="niftycube/niftycube.js"></script>
 		<script type="text/javascript" src="niftycube/niftylayout.js"></script>
 		<style type="text/css">
@@ -563,7 +563,7 @@ EOD;
 			.filechooser .filelist table tr.sort a:hover { text-decoration:underline; }
 			/* parent row */
 			.filechooser .filelist table tr.parent { font-weight:bold; }
-			.filechooser .filelist table tr.parent td { height: 18px; border-bottom: 1px solid #eee; text-color: #ffffff; background: #435370 url(listtopic_bg.png); }
+			.filechooser .filelist table tr.parent td { height: 18px; border-bottom: 1px solid #eee; text-color: #ffffff; background: #435370 url(images/listtopic_bg.png); }
 			.filechooser .filelist table tr.parent a { text-decoration:none; color:#ffffff; }
 			.filechooser .filelist table tr.parent a:hover { text-decoration:underline; }
 			/* filelist rows */
