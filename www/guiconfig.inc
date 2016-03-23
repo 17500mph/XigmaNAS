@@ -227,7 +227,7 @@ function print_input_errors($input_errors) {
 	echo "  <div id='errorbox'>\n";
 	echo "    <table border=\"0\" cellspacing=\"0\" cellpadding=\"1\" width=\"100%\">\n";
 	echo "      <tr>\n";
-	echo "        <td class=\"icon\" align=\"center\" valign=\"center\"><img src=\"err.png\" alt=\"\" /></td>\n";
+	echo "        <td class=\"icon\" align=\"center\" valign=\"center\"><img src=\"images/error_box.png\" alt=\"\" /></td>\n";
 	echo "        <td class=\"message\">\n";
 	echo "          <div>" . gettext("The following input errors were detected").":\n";
 	echo "            <ul>\n";
