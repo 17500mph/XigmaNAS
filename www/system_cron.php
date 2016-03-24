@@ -15,6 +15,7 @@
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+	   
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -319,9 +320,9 @@ function controlactionbuttons(ego, triggerbyname) {
 								<td class="<?=$enabled ? "listr" : "listrd";?>"><?=htmlspecialchars($sphere_record['who']);?>&nbsp;</td>
 								<td class="<?=$enabled ? "listr" : "listrd";?>">
 									<?php if ($enabled):?>
-										<a title="<?=gettext('Enabled');?>"><img src="images/status_enabled.png" border="0" alt="" /></a>
+										<a title="<?=gettext('Enabled');?>"><center><img src="images/status_enabled.png" border="0" alt="" /></center></a>
 									<?php else:?>
-										<a title="<?=gettext('Disabled');?>"><img src="images/status_disabled.png" border="0" alt="" /></a>
+										<a title="<?=gettext('Disabled');?>"><center><img src="images/status_disabled.png" border="0" alt="" /></center></a>
 									<?php endif;?>
 								</td>
 								<td class="listbg"><?=htmlspecialchars($sphere_record['desc']);?>&nbsp;</td>
