@@ -40,7 +40,7 @@ require_once("util.inc");
 // Execute rc script.
 // Return 0 if successful, otherwise 1.
 function rc_exec_script($scriptname) {
-	mwexec2("{$scriptname} >/dev/null 2>&1", $output, $retval);
+	mwexec2("{$scriptname} >/dev/null 2>&1 </dev/null", $output, $retval);
 	return $retval;
 }
 
