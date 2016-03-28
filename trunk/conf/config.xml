@@ -119,13 +119,6 @@
 			</param>
 			<param>
 				<!-- <enable/> -->
-				<uuid>c527bec2-7829-49d8-9ca8-7c2e62842db1</uuid>
-				<name>vfs.zfs.l2arc_noprefetch</name>
-				<value>0</value>
-				<comment>Allow streaming/sequential reads to be cached</comment>
-			</param>
-			<param>
-				<!-- <enable/> -->
 				<uuid>e1583f30-44da-4fc3-b726-b650dad74aee</uuid>
 				<name>vfs.zfs.prefetch_disable</name>
 				<value>1</value>
@@ -397,6 +390,13 @@
 				<value>9000</value>
 				<comment>System tuning</comment>
 				<enable/>
+			</param>
+			<param>
+				<!-- <enable/> -->
+				<uuid>c527bec2-7829-49d8-9ca8-7c2e62842db1</uuid>
+				<name>vfs.zfs.l2arc_noprefetch</name>
+				<value>0</value>
+				<comment>Allow streaming/sequential reads to be cached</comment>
 			</param>
 			<!--
 			<param>
