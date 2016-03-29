@@ -129,7 +129,11 @@ function simplexml_load_file_from_url($url, $timeout = 5) {
 		} else {
 			curl_close($ch);
 			if (false !== $data) { // just to be on the safe side
-				return simplexml_load_string($data); // return xml structure
+				$previous_value = libxml_use_internal_errors(true);
+				$xml_data = simplexml_load_string($data); // get xml structure
+				libxml_clear_errors();
+				libxml_use_internal_errors($previous_value); // revert to previous setting
+				return $xml_data;
 			}
 		}
 	}
