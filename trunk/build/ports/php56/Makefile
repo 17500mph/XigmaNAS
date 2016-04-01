@@ -1,5 +1,5 @@
 PORTNAME=		php56
-PORTVERSION=	5.6.19
+PORTVERSION=	5.6.20
 PORTREVISION?=  0
 CATEGORIES=		lang
 COMMENT=		PHP5 Scripting Language
@@ -12,7 +12,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX}:release
 USES=			tar:bzip2 cpe iconv
 
 BUILD_DEPENDS=		sqlite3>=3.0:${PORTSDIR}/databases/sqlite3
-LIB_DEPENDS=		libpcre.so:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=		libpcre.so:devel/pcre
 LIB_DEPENDS+=		libcurl.so:${PORTSDIR}/ftp/curl
 LIB_DEPENDS+=		libmcrypt.so:${PORTSDIR}/security/libmcrypt
 LIB_DEPENDS+=		libonig.so:${PORTSDIR}/devel/oniguruma5
