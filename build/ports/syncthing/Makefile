@@ -1,12 +1,13 @@
 PORTNAME=	syncthing
 PORTVERSION=	0.12.21
+PORTREVISION=	1
 DISTVERSIONPREFIX= v
 CATEGORIES=	net
 
 MAINTAINER=	aoyama@nas4free.org
 COMMENT=	Encrypted file sync tool
 
-BUILD_DEPENDS=	${LOCALBASE}/bin/go:${PORTSDIR}/lang/go
+BUILD_DEPENDS=	${LOCALBASE}/bin/go:lang/go
 
 USE_GITHUB=	yes
 USE_RC_SUBR=	syncthing

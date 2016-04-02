@@ -1,6 +1,6 @@
 PORTNAME=		transmission
 PORTVERSION=	2.92
-PORTREVISION?=	0
+PORTREVISION=	1
 CATEGORIES?=		net-p2p
 COMMENT=		Fast and lightweight CLI BitTorrent client
 MAINTAINER=		zoon01@nas4free.org
@@ -8,15 +8,15 @@ MAINTAINER=		zoon01@nas4free.org
 MASTER_SITES=   	http://download-origin.transmissionbt.com/files/ \
 			http://transmission.cachefly.net/
 
-LIB_DEPENDS=		libb64.so:${PORTSDIR}/converters/libb64 \
-					libcurl.so:${PORTSDIR}/ftp/curl \
-					libdht.so:${PORTSDIR}/devel/jech-dht \
-					libminiupnpc.so:${PORTSDIR}/net/miniupnpc \
-					libnatpmp.so:${PORTSDIR}/net/libnatpmp \
-					libutp.so:${PORTSDIR}/net/libutp \
-					libevent.so:${PORTSDIR}/devel/libevent2
+LIB_DEPENDS=		libb64.so:converters/libb64 \
+					libcurl.so:ftp/curl \
+					libdht.so:devel/jech-dht \
+					libminiupnpc.so:net/miniupnpc \
+					libnatpmp.so:net/libnatpmp \
+					libutp.so:net/libutp \
+					libevent.so:devel/libevent2
 
-GEN_RUN_DEPENDS=${LOCALBASE}/share/transmission/web/index.html:${PORTSDIR}/www/transmission-web
+GEN_RUN_DEPENDS=${LOCALBASE}/share/transmission/web/index.html:www/transmission-web
 
 USES+=		gmake iconv libtool pkgconfig
 USE_OPENSSL=	yes
