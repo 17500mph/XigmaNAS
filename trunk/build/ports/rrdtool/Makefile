@@ -1,6 +1,6 @@
 PORTNAME=		rrdtool
 PORTVERSION=		1.5.5
-PORTREVISION=		1
+PORTREVISION=		2
 CATEGORIES=		databases graphics
 
 COMMENT=		Round Robin Database Tools
@@ -13,7 +13,7 @@ NO_BUILD=		yes
 NO_PKG_REGISTER=	yes
 DEPENDS_TARGET=	clean build stage
 
-BUILD_DEPENDS=		${NONEXISTENT}:${PORTSDIR}/databases/rrdtool
+BUILD_DEPENDS=		${NONEXISTENT}:databases/rrdtool
 DEP_STAGEDIR=		${PORTSDIR}/databases/rrdtool/work/stage
 PANGO_MODULES=		${PREFIX}/lib/pango/1.8.0/modules
 

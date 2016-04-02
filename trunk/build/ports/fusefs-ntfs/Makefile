@@ -16,15 +16,15 @@ NO_PKG_REGISTER?=	yes
 #ALWAYS_BUILD_DEPENDS=	yes
 DEPENDS_TARGET=	clean build stage
 
-BUILD_DEPENDS=	${NONEXISTENT}:${PORTSDIR}/sysutils/fusefs-ntfs
+BUILD_DEPENDS=	${NONEXISTENT}:sysutils/fusefs-ntfs
 
 .include <bsd.port.pre.mk>
 .if ${OSVERSION} < 1000000
-BUILD_DEPENDS+=	${NONEXISTENT}:${PORTSDIR}/sysutils/fusefs-kmod
+BUILD_DEPENDS+=	${NONEXISTENT}:sysutils/fusefs-kmod
 .endif
 
-BUILD_DEPENDS+=	${NONEXISTENT}:${PORTSDIR}/sysutils/fusefs-libs \
-		${NONEXISTENT}:${PORTSDIR}/devel/libublio
+BUILD_DEPENDS+=	${NONEXISTENT}:sysutils/fusefs-libs \
+		${NONEXISTENT}:devel/libublio
 
 do-install:
 	@${INSTALL_SCRIPT} -v ${FILESDIR}/fusefs.in ${NAS4FREE_ROOTFS}/etc/rc.d/fusefs

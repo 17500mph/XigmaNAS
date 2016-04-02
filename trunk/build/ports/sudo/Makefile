@@ -1,6 +1,6 @@
 PORTNAME=		sudo
 PORTVERSION=		1.0
-PORTREVISION=		0
+PORTREVISION=		1
 CATEGORIES=		security
 
 COMMENT=		Allow others to run commands as root
@@ -13,7 +13,7 @@ NO_PKG_REGISTER=	yes
 #DISABLE_VULNERABILITIES=yes
 DEPENDS_TARGET=	clean build stage
 
-BUILD_DEPENDS=		${NONEXISTENT}:${PORTSDIR}/security/sudo
+BUILD_DEPENDS=		${NONEXISTENT}:security/sudo
 DEP_STAGEDIR=		${PORTSDIR}/security/sudo/work/stage
 
 do-install:

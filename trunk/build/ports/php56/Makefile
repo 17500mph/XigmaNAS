@@ -1,6 +1,6 @@
 PORTNAME=		php56
 PORTVERSION=	5.6.20
-PORTREVISION?=  0
+PORTREVISION=	1
 CATEGORIES=		lang
 COMMENT=		PHP5 Scripting Language
 MAINTAINER=		zoon01@nas4free.org
@@ -11,17 +11,17 @@ DISTNAME=		php-${PORTVERSION:S/.r/RC/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}:release
 USES=			tar:bzip2 cpe iconv
 
-BUILD_DEPENDS=		sqlite3>=3.0:${PORTSDIR}/databases/sqlite3
+BUILD_DEPENDS=		sqlite3>=3.0:databases/sqlite3
 LIB_DEPENDS=		libpcre.so:devel/pcre
-LIB_DEPENDS+=		libcurl.so:${PORTSDIR}/ftp/curl
-LIB_DEPENDS+=		libmcrypt.so:${PORTSDIR}/security/libmcrypt
-LIB_DEPENDS+=		libonig.so:${PORTSDIR}/devel/oniguruma5
-LIB_DEPENDS+=		libfreetype.so:${PORTSDIR}/print/freetype2
-LIB_DEPENDS+=		libpng16.so:${PORTSDIR}/graphics/png
-LIB_DEPENDS+=		libjpeg.so:${PORTSDIR}/graphics/jpeg
-LIB_DEPENDS+=		libvpx.so:${PORTSDIR}/multimedia/libvpx
-LIB_DEPENDS+=		libgmp.so:${PORTSDIR}/math/gmp
-LIB_DEPENDS+=		libc-client4.so.9:${PORTSDIR}/mail/cclient
+LIB_DEPENDS+=		libcurl.so:ftp/curl
+LIB_DEPENDS+=		libmcrypt.so:security/libmcrypt
+LIB_DEPENDS+=		libonig.so:devel/oniguruma5
+LIB_DEPENDS+=		libfreetype.so:print/freetype2
+LIB_DEPENDS+=		libpng16.so:graphics/png
+LIB_DEPENDS+=		libjpeg.so:graphics/jpeg
+LIB_DEPENDS+=		libvpx.so:multimedia/libvpx
+LIB_DEPENDS+=		libgmp.so:math/gmp
+LIB_DEPENDS+=		libc-client4.so.9:mail/cclient
 
 USE_AUTOTOOLS=	 autoconf
 AUTOTOOLSFILES=	 scripts/phpize.in

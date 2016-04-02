@@ -1,6 +1,6 @@
 PORTNAME=		netatalk
 PORTVERSION=	 3.1.8
-PORTREVISION=	 1
+PORTREVISION=	 2
 CATEGORIES=	 net
 MASTER_SITES=	 SF
 PKGNAMESUFFIX=   3
@@ -10,8 +10,8 @@ COMMENT=	File server for Mac OS X
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	libgcrypt.so:${PORTSDIR}/security/libgcrypt \
-		libevent.so:${PORTSDIR}/devel/libevent2
+LIB_DEPENDS=	libgcrypt.so:security/libgcrypt \
+		libevent.so:devel/libevent2
 
 USE_BDB=	5+
 USES=		iconv gmake pkgconfig perl5 libtool tar:bzip2
@@ -30,7 +30,8 @@ CONFIGURE_ARGS+=	--with-pkgconfdir=${PREFIX}/etc \
 			--with-libevent-header=${LOCALBASE}/include \
 			--with-libevent-lib=${LOCALBASE}/lib
 
-LIB_DEPENDS+=	libsunacl.so:${PORTSDIR}/sysutils/libsunacl
+LIB_DEPENDS+=	libsunacl.so:sysutils/libsunacl
+
 CONFIGURE_ARGS+= 	--without-dtrace \
 			--without-kerberos \
 			--with-pam \

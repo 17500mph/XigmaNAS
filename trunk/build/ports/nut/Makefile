@@ -1,6 +1,6 @@
 PORTNAME=		nut
 PORTVERSION=	2.7.4
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=		sysutils
 COMMENT=		Network UPS tools
 MAINTAINER=		zoon01@nas4free.org
@@ -45,11 +45,11 @@ CONFIGURE_ARGS+=	--sysconfdir=${NUT_SYSCONFDIR} \
 
 .include <bsd.port.pre.mk>
 
-LIB_DEPENDS+=	libnetsnmp.so:${PORTSDIR}/net-mgmt/net-snmp
-LIB_DEPENDS+=   libneon.so:${PORTSDIR}/www/neon
-LIB_DEPENDS+=	libpowerman.so:${PORTSDIR}/sysutils/powerman
+LIB_DEPENDS+=	libnetsnmp.so:net-mgmt/net-snmp
+LIB_DEPENDS+=   libneon.so:www/neon
+LIB_DEPENDS+=	libpowerman.so:sysutils/powerman
 .if (${ARCH} == "amd64" || ${ARCH} == "i386")
-LIB_DEPENDS+=	libfreeipmi.so:${PORTSDIR}/sysutils/freeipmi
+LIB_DEPENDS+=	libfreeipmi.so:sysutils/freeipmi
 CONFIGURE_ARGS+=--with-ipmi \
 		--with-freeipmi
 .endif
