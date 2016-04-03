@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-03-21 10:27+0000\n"
-"PO-Revision-Date: 2016-03-13 11:32+0000\n"
+"PO-Revision-Date: 2016-03-27 11:55+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-23 23:48+0000\n"
-"X-Generator: Launchpad (build 17958)\n"
+"X-Launchpad-Export-Date: 2016-04-03 11:06+0000\n"
+"X-Generator: Launchpad (build 17972)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -168,7 +168,7 @@ msgstr ""
 "RAID-volymen genom att använde denna menyn (den startar automatiskt)."
 
 msgid "4KB wrapper"
-msgstr ""
+msgstr "4KB paket"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN tag (mellan 1 och 4094)."
@@ -343,10 +343,10 @@ msgid "A valid systctl MIB value."
 msgstr "Ett giltigt systctl MIB värde."
 
 msgid "ACL Inherit"
-msgstr ""
+msgstr "Ärv ACL"
 
 msgid "ACL Mode"
-msgstr ""
+msgstr "ACL Mod"
 
 msgid "ACL inherit"
 msgstr "Ärv ACL"
@@ -394,7 +394,7 @@ msgid "ATTRIBUTE NAME"
 msgstr "ATTRIBUTNAMN"
 
 msgid "Accept remote syslog messages."
-msgstr ""
+msgstr "Acceptera externa syslogmeddelanden"
 
 msgid "Access"
 msgstr "Åtkomst"
@@ -639,7 +639,7 @@ msgid "Albanian"
 msgstr "Albanien"
 
 msgid "Alert Level"
-msgstr ""
+msgstr "Varningsnivå"
 
 msgid "All"
 msgstr "Alla"
@@ -879,7 +879,7 @@ msgid "Authenticate URL"
 msgstr "Autentisera URL"
 
 msgid "Authenticate path & realm"
-msgstr ""
+msgstr "Autentisera sökväg och omgivning"
 
 msgid "Authentication"
 msgstr "Autentisering"
@@ -1068,7 +1068,7 @@ msgstr ""
 "Annonserar sin tillgänglighet på nätverket var N sekund. (standard 300 s)"
 
 msgid "Browse Directory"
-msgstr ""
+msgstr "Bläddra i katalog"
 
 msgid "Browseable"
 msgstr "Bläddringsbar"
@@ -1705,7 +1705,7 @@ msgid "Critical"
 msgstr "Kritiskt"
 
 msgid "Critical Error Level"
-msgstr ""
+msgstr "Kritiskt felnivå"
 
 msgid "Cron"
 msgstr "Cron"
@@ -1833,7 +1833,7 @@ msgid "Dataset is marked for deletion"
 msgstr "Datasetet är markerat för borttagning"
 
 msgid "Dataset is protected"
-msgstr ""
+msgstr "Datasetet är skyddat"
 
 msgid "Datasets"
 msgstr "Dataseten"
@@ -1851,7 +1851,7 @@ msgid "Debug"
 msgstr "Felsök"
 
 msgid "Debug Level"
-msgstr ""
+msgstr "Felsökningsnivå"
 
 msgid "Dec"
 msgstr "dec"
@@ -2193,7 +2193,7 @@ msgid "Disable speaker beep on startup and shutdown."
 msgstr "Inaktivera högtalarpip vid start och stopp."
 
 msgid "Disable the compression of repeated line."
-msgstr ""
+msgstr "Inaktivera komprimering av upprepade rader."
 
 msgid "Disabled"
 msgstr "Inaktiverad"
@@ -2618,7 +2618,7 @@ msgid "Email Report"
 msgstr "E-postrapport"
 
 msgid "Emergency Level"
-msgstr ""
+msgstr "Nödnivå"
 
 msgid "Empty as default."
 msgstr "Tom som standard"
@@ -2751,7 +2751,7 @@ msgid "Enable module listing."
 msgstr "Aktivera modullistning"
 
 msgid "Enable nested virtualization"
-msgstr ""
+msgstr "Aktivera inbäddad virtualisering"
 
 msgid "Enable peer exchange (PEX)."
 msgstr "Aktivera peer exchange (PEX)."
@@ -2915,7 +2915,7 @@ msgid "Error"
 msgstr "Fel"
 
 msgid "Error Level"
-msgstr ""
+msgstr "Felnivå"
 
 #, php-format
 msgid "Error: The changes could not be applied (error code %s)."
@@ -2925,7 +2925,7 @@ msgid "Event"
 msgstr "Händelse"
 
 msgid "Event selection"
-msgstr ""
+msgstr "Val av händelse"
 
 msgid "Execute"
 msgstr "Kör"
@@ -3533,7 +3533,7 @@ msgid "IP address"
 msgstr "IP-adress"
 
 msgid "IP address of remote syslog server."
-msgstr ""
+msgstr "IP-adress till extern syslogserver."
 
 #, php-format
 msgid ""
@@ -3737,7 +3737,7 @@ msgid "Info"
 msgstr "Info"
 
 msgid "Info Level"
-msgstr ""
+msgstr "Informationsnivå"
 
 msgid "Informal"
 msgstr "Informell"
@@ -4268,13 +4268,13 @@ msgid "Log Level"
 msgstr "Loggnivå"
 
 msgid "Log Settings"
-msgstr ""
+msgstr "Logginställningar"
 
 msgid "Log level"
 msgstr "Loggningsnivå"
 
 msgid "Log order"
-msgstr ""
+msgstr "Loggordning"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Logga paket som hanteras av denna regel till syslog."
@@ -4411,6 +4411,8 @@ msgid ""
 "Margin of a channel while reading data. The function of this attribute is "
 "not specified."
 msgstr ""
+"Marginal för en kanal vid läsning av data. Funktionen av attributet är inte "
+"specificerad."
 
 msgid "Masquerade address"
 msgstr "Maskerad adress"
@@ -4419,7 +4421,7 @@ msgid "Max Protocol"
 msgstr "Max Protocol"
 
 msgid "Max entries"
-msgstr ""
+msgstr "Max antal poster"
 
 msgid "Max. TTL"
 msgstr "Max. TTL"
@@ -4525,7 +4527,7 @@ msgid "Medium Acoustic Output"
 msgstr "Medel ljudnivå"
 
 msgid "Mem"
-msgstr ""
+msgstr "Minne"
 
 msgid "Member Interface"
 msgstr "Medlemsinterface"
@@ -4996,7 +4998,7 @@ msgid "Nothing to synchronize"
 msgstr "Inget att synkronisera"
 
 msgid "Notice Level"
-msgstr ""
+msgstr "Noteringsnivå"
 
 #, php-format
 msgid "Notification email from host: %s"
@@ -5338,7 +5340,7 @@ msgid "Ping"
 msgstr "Ping"
 
 msgid "Ping Test"
-msgstr ""
+msgstr "Ping Test"
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Pinga 'winbindd' (winbind-demonen) för att se om den lever:"
@@ -5707,7 +5709,7 @@ msgid "Remote Rsync Server"
 msgstr "Fjärr-server för Rsync"
 
 msgid "Remote Syslog Server"
-msgstr ""
+msgstr "Extern syslogserver"
 
 msgid "Remote module (source)"
 msgstr "Fjärr-modul (källa)"
@@ -5722,7 +5724,7 @@ msgid "Remote rsync daemon"
 msgstr "Fjärr rsync demon"
 
 msgid "Remote syslog messages"
-msgstr ""
+msgstr "Externa syslogmeddelanden"
 
 msgid "Removable"
 msgstr "Flyttbar"
@@ -5778,13 +5780,13 @@ msgid "Resolve"
 msgstr "Åtgärda"
 
 msgid "Resolve IP"
-msgstr ""
+msgstr "Lös upp IP"
 
 msgid "Resolve IP addresses to hostnames"
 msgstr "Slå upp IP-adresser till värdnamn"
 
 msgid "Resolve IP addresses to hostnames."
-msgstr ""
+msgstr "Lös upp IP-adresser till värdnamn"
 
 msgid "Resource"
 msgstr "Resurs"
@@ -6262,7 +6264,7 @@ msgid "Show UPS Information"
 msgstr "Visa UPS information"
 
 msgid "Show log entries in reverse order (newest entries on top)."
-msgstr ""
+msgstr "Visa loggposter i omvänd ordning (senaste högst upp)."
 
 msgid "Shutdown"
 msgstr "Stäng av"
@@ -6612,7 +6614,7 @@ msgid "Syncthing"
 msgstr "Syncthing"
 
 msgid "Syslog Level"
-msgstr ""
+msgstr "Syslognivå"
 
 #, php-format
 msgid ""
@@ -6634,7 +6636,7 @@ msgid "System Load"
 msgstr "Systembelastning"
 
 msgid "System Settings"
-msgstr ""
+msgstr "Systeminställningar"
 
 msgid "System bios"
 msgstr "Systembios"
@@ -8843,7 +8845,7 @@ msgid "Volume label of the new file system."
 msgstr "Volymetikett för det nya filesystemet."
 
 msgid "Volume mode"
-msgstr ""
+msgstr "Volymmod"
 
 msgid "Volumes"
 msgstr "Volymer"
@@ -8888,7 +8890,7 @@ msgid "Warning"
 msgstr "Varning"
 
 msgid "Warning Level"
-msgstr ""
+msgstr "Varningsnivåer"
 
 msgid ""
 "Warning: You are going to delete a RAID volume. All data will get lost and "
@@ -9170,7 +9172,7 @@ msgid "day(s)"
 msgstr "dag(ar)"
 
 msgid "debug"
-msgstr ""
+msgstr "felsök"
 
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
