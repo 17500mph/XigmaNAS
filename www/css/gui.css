@@ -111,7 +111,7 @@ pre {
 .gray {
 	color: #A0A0A0;
 }
-.vexpl {
+.vexpl, .listbgc {
 	font-size: 11px;
 }
 a {
@@ -134,7 +134,7 @@ a {
 	padding-top: 4px;
 	padding-bottom: 4px;
 }
-.listrc, .listrcd {
+.listrc, .listrcd, .listbgc {
 	text-align: center;
 }
 .listrpad {
@@ -153,10 +153,14 @@ a {
 	padding-top: 4px;
 	padding-bottom: 4px;
 }
-.listbg {
+.listbg, .listbgc {
 	border-right: 1px solid #999999;
 	border-bottom: 1px solid #999999;
 	background-color: #D9DEE8;
+}
+.listbgc {
+	padding-top: 4px;
+	padding-bottom: 4px;
 }
 .listhdr, .listhdrlr, .listhdrr, .listhdrc {
 	background: #BBBBBB url("/images/gradient_listhdr.png") repeat-x scroll left top;
@@ -193,7 +197,7 @@ a {
 	padding-top: 4px;
 	padding-bottom: 4px;
 }
-.listlr, .listlrd {
+.listlr, .listlrd, .listbgc {
 	padding-right: 6px;
 	padding-left: 6px;
 }
