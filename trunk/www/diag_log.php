@@ -6,10 +6,6 @@
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
-	Portions of freenas (http://www.freenas.org).
-	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
-	All rights reserved.
-
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
@@ -93,6 +89,9 @@ function log_change() {
 				<input name="clear" type="submit" class="formbtn" value="<?=gettext("Clear");?>" />
 				<input name="download" type="submit" class="formbtn" value="<?=gettext("Download");?>" />
 				<input name="refresh" type="submit" class="formbtn" value="<?=gettext("Refresh");?>" />
+				<span class="label">&nbsp;&nbsp;&nbsp;<?=gettext("Search string");?></span>
+				<input size="30" id="searchstring" name="searchstring" value="<?=$searchstring;?>" />
+				<input name="search" type="submit" class="formbtn" value="<?=gettext("Search");?>" />
 				<br /><br />
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
 				  <?php log_display($loginfo[$log]);?>

@@ -6,10 +6,6 @@
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
-	Portions of freenas (http://www.freenas.org).
-	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
-	All rights reserved.
-
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
@@ -19,17 +15,6 @@
 	2. Redistributions in binary form must reproduce the above copyright
 	   notice, this list of conditions and the following disclaimer in the
 	   documentation and/or other materials provided with the distribution.
-
-	3. Products derived from this software may not be called "NAS4Free"
-	   nor may "NAS4Free" appear in their names without prior written
-	   permission of the NAS4Free Project. For written permission, please
-	   contact info@nas4free.org
-
-	4. Redistributions of any form whatsoever must retain the following
-	   acknowledgment:
-
-	   "This product includes software developed by the NAS4Free Project
-	   for use in the NAS4Free Software Distribution (http://www.nas4free.org)".
 
 	THIS SOFTWARE IS PROVIDED BY THE NAS4FREE PROJECT ``AS IS'' AND ANY
 	EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
@@ -230,11 +215,13 @@ function log_get_contents($logfile, $type) {
 
 	switch ($type) {
 		case "clog":
-			exec("/usr/sbin/clog {$logfile} | /usr/bin/tail {$param}", $content);
+		    $filter_str = ($_POST['searchstring'] == '') ? "" : "| grep -i \"".htmlspecialchars($_POST['searchstring'])."\"";
+			exec("/usr/sbin/clog {$logfile} | /usr/bin/tail {$param} {$filter_str}", $content);
 			break;
 
 		case "plain":
-			exec("/bin/cat {$logfile} | /usr/bin/tail {$param}", $content);
+		    $filter_str = ($_POST['searchstring'] == '') ? "" : "| grep -i \"".htmlspecialchars($_POST['searchstring'])."\"";
+			exec("/bin/cat {$logfile} | /usr/bin/tail {$param} {$filter_str}", $content);
 	}
 
 	return $content;
