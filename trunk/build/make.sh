@@ -97,7 +97,7 @@ echo "NAS4FREE_TMPDIR=${NAS4FREE_TMPDIR}" >> ${NAS4FREE_MK}
 # Local variables
 NAS4FREE_URL=$(cat $NAS4FREE_SVNDIR/etc/prd.url)
 NAS4FREE_SVNURL="https://svn.code.sf.net/p/nas4free/code/trunk"
-NAS4FREE_SVN_SRCTREE="svn://svn.FreeBSD.org/base/releng/10.2"
+NAS4FREE_SVN_SRCTREE="svn://svn.FreeBSD.org/base/releng/10.3"
 
 # Size in MB of the MFS Root filesystem that will include all FreeBSD binary
 # and NAS4FREE WEbGUI/Scripts. Keep this file very small! This file is unzipped
@@ -895,9 +895,9 @@ create_iso () {
 	mkisofs -b "boot/cdboot" -no-emul-boot -r -J -A "${NAS4FREE_PRODUCTNAME} CD-ROM image" -publisher "${NAS4FREE_URL}" -V "${VOLUMEID}" -o "${NAS4FREE_ROOTDIR}/${LABEL}.iso" ${NAS4FREE_TMPDIR}
 	[ 0 != $? ] && return 1 # successful?
 
-	echo "Generating SHA256 CHECKSUM File"
+	echo "Generating SHA512 CHECKSUM File"
 	NAS4FREE_CHECKSUMFILENAME="${NAS4FREE_PRODUCTNAME}-${NAS4FREE_XARCH}-${NAS4FREE_VERSION}.${NAS4FREE_REVISION}.checksum"
-	cd ${NAS4FREE_ROOTDIR} && sha256 *.img.gz *.xz *.iso > ${NAS4FREE_ROOTDIR}/${NAS4FREE_CHECKSUMFILENAME}
+	cd ${NAS4FREE_ROOTDIR} && sha512 *.img.gz *.xz *.iso > ${NAS4FREE_ROOTDIR}/${NAS4FREE_CHECKSUMFILENAME}
 
 	# Cleanup.
 	[ -d $NAS4FREE_TMPDIR ] && rm -rf $NAS4FREE_TMPDIR
@@ -1137,9 +1137,9 @@ create_usb () {
 	echo "Compress LiveUSB.img to LiveUSB.img.gz"
 	gzip -9n $NAS4FREE_ROOTDIR/$IMGFILENAME
 
-	echo "Generating SHA256 CHECKSUM File"
+	echo "Generating SHA512 CHECKSUM File"
 	NAS4FREE_CHECKSUMFILENAME="${NAS4FREE_PRODUCTNAME}-${NAS4FREE_XARCH}-${NAS4FREE_VERSION}.${NAS4FREE_REVISION}.checksum"
-	cd ${NAS4FREE_ROOTDIR} && sha256 *.img.gz *.xz > ${NAS4FREE_ROOTDIR}/${NAS4FREE_CHECKSUMFILENAME}
+	cd ${NAS4FREE_ROOTDIR} && sha512 *.img.gz *.xz > ${NAS4FREE_ROOTDIR}/${NAS4FREE_CHECKSUMFILENAME}
 
 	# Cleanup.
 	[ -d $NAS4FREE_TMPDIR ] && rm -rf $NAS4FREE_TMPDIR
@@ -1271,9 +1271,9 @@ create_full() {
 	echo "Cleaning temp .o file(s)"
 	[ -d $NAS4FREE_TMPDIR ] && rm -rf $NAS4FREE_TMPDIR
 
-	echo "Generating SHA256 CHECKSUM File"
+	echo "Generating SHA512 CHECKSUM File"
 	NAS4FREE_CHECKSUMFILENAME="${NAS4FREE_PRODUCTNAME}-${NAS4FREE_XARCH}-${NAS4FREE_VERSION}.${NAS4FREE_REVISION}.checksum"
-	cd ${NAS4FREE_ROOTDIR} && sha256 *.img.gz *.xz *.iso *.tgz > ${NAS4FREE_ROOTDIR}/${NAS4FREE_CHECKSUMFILENAME}
+	cd ${NAS4FREE_ROOTDIR} && sha512 *.img.gz *.xz *.iso *.tgz > ${NAS4FREE_ROOTDIR}/${NAS4FREE_CHECKSUMFILENAME}
 
 	return 0
 }
@@ -1570,9 +1570,9 @@ create_rpisd() {
 	echo "RPISD: Copy SD image"
 	cp $NAS4FREE_WORKINGDIR/sd-image.bin $NAS4FREE_ROOTDIR/${IMGFILENAME}
 
-	echo "Generating SHA256 CHECKSUM File"
+	echo "Generating SHA512 CHECKSUM File"
 	NAS4FREE_CHECKSUMFILENAME="${NAS4FREE_PRODUCTNAME}-${NAS4FREE_XARCH}-${NAS4FREE_VERSION}.${NAS4FREE_REVISION}.checksum"
-	cd ${NAS4FREE_ROOTDIR} && sha256 *.img *.xz *.iso > ${NAS4FREE_ROOTDIR}/${NAS4FREE_CHECKSUMFILENAME}
+	cd ${NAS4FREE_ROOTDIR} && sha512 *.img *.xz *.iso > ${NAS4FREE_ROOTDIR}/${NAS4FREE_CHECKSUMFILENAME}
 
 	# Cleanup.
 	[ -d $NAS4FREE_TMPDIR ] && rm -rf $NAS4FREE_TMPDIR
@@ -1705,9 +1705,9 @@ create_rpi2sd() {
 	echo "RPISD: Copy SD image"
 	cp $NAS4FREE_WORKINGDIR/sd-image.bin $NAS4FREE_ROOTDIR/${IMGFILENAME}
 
-	echo "Generating SHA256 CHECKSUM File"
+	echo "Generating SHA512 CHECKSUM File"
 	NAS4FREE_CHECKSUMFILENAME="${NAS4FREE_PRODUCTNAME}-${NAS4FREE_XARCH}-${NAS4FREE_VERSION}.${NAS4FREE_REVISION}.checksum"
-	cd ${NAS4FREE_ROOTDIR} && sha256 *.img *.xz *.iso > ${NAS4FREE_ROOTDIR}/${NAS4FREE_CHECKSUMFILENAME}
+	cd ${NAS4FREE_ROOTDIR} && sha512 *.img *.xz *.iso > ${NAS4FREE_ROOTDIR}/${NAS4FREE_CHECKSUMFILENAME}
 
 	# Cleanup.
 	[ -d $NAS4FREE_TMPDIR ] && rm -rf $NAS4FREE_TMPDIR

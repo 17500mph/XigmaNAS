@@ -1,5 +1,5 @@
---- bge/if_bge.c.orig	2015-04-20 10:28:13.000000000 +0900
-+++ bge/if_bge.c	2015-04-20 18:22:11.000000000 +0900
+--- bge/if_bge.c.orig	2016-03-13 20:04:30.283949000 +0100
++++ bge/if_bge.c	2016-03-13 21:37:31.000000000 +0100
 @@ -485,6 +485,7 @@
  static void bge_stop_fw(struct bge_softc *);
  static int bge_reset(struct bge_softc *);
@@ -8,7 +8,7 @@
  
  static void bge_ape_lock_init(struct bge_softc *);
  static void bge_ape_read_fw_ver(struct bge_softc *);
-@@ -3737,7 +3738,7 @@
+@@ -3735,7 +3736,7 @@
  	IFQ_SET_READY(&ifp->if_snd);
  	ifp->if_hwassist = sc->bge_csum_features;
  	ifp->if_capabilities = IFCAP_HWCSUM | IFCAP_VLAN_HWTAGGING |
@@ -17,7 +17,7 @@
  	if ((sc->bge_flags & (BGE_FLAG_TSO | BGE_FLAG_TSO3)) != 0) {
  		ifp->if_hwassist |= CSUM_TSO;
  		ifp->if_capabilities |= IFCAP_TSO4 | IFCAP_VLAN_HWTSO;
-@@ -6075,6 +6076,7 @@
+@@ -6073,6 +6074,7 @@
  	sc = device_get_softc(dev);
  	BGE_LOCK(sc);
  	bge_stop(sc);
@@ -25,7 +25,7 @@
  	BGE_UNLOCK(sc);
  
  	return (0);
-@@ -6773,3 +6775,32 @@
+@@ -6771,3 +6773,32 @@
  	}
  	return (*func == NULL ? ENXIO : 0);
  }
