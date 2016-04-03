@@ -148,19 +148,33 @@ function parse_file_date($date) {
 }
 // is this file an image?
 function get_is_image($dir, $item) {
-	if(!get_is_file($dir, $item)) return false;
-	return @eregi($GLOBALS["images_ext"], $item);
+	if(!get_is_file($dir, $item)) {
+		return false;
+	}
+	return preg_match('/'.$GLOBALS['images_ext'].'/i', $item);
 }
 // is this file editable?
 function get_is_editable($dir, $item) {
-	if(!get_is_file($dir, $item)) return false;
-	foreach($GLOBALS["editable_ext"] as $pat) if(@eregi($pat,$item)) return true;
+	if(!get_is_file($dir, $item)) {
+		return false;
+	}
+	foreach($GLOBALS["editable_ext"] as $pat) {
+		if (preg_match('/'.$pat.'/i',$item)) {
+			return true;
+		}
+	}
 	return false;
 }
 // is this file editable?
 function get_is_unzipable($dir, $item) {
-	if(!get_is_file($dir, $item)) return false;
-	foreach($GLOBALS["unzipable_ext"] as $pat) if(@eregi($pat,$item)) return true;
+	if(!get_is_file($dir, $item)) {
+		return false;
+	}
+	foreach($GLOBALS["unzipable_ext"] as $pat) {
+		if (preg_match('/'.$pat.'/i',$item)) {
+			return true;
+		}
+	}
 	return false;
 }
 
@@ -169,8 +183,9 @@ function _get_used_mime_info ($item)
     foreach ($GLOBALS["used_mime_types"] as $mime)
     {
         list($desc, $img, $ext, $type) = $mime;
-        if (@eregi($ext, $item))
+		if (preg_match('/'.$ext.'/i',$item)) {
             return array($mime, $img, $type);
+		}
     }
 
     return array(NULL, NULL, NULL);
@@ -178,45 +193,36 @@ function _get_used_mime_info ($item)
 
 function get_mime_type ($dir, $item, $query)
 {
-    switch (filetype(get_abs_item($dir, $item)))
-    {
-        case "dir":
-            $mime_type	= $GLOBALS["super_mimes"]["dir"][0];
-            $image		= $GLOBALS["super_mimes"]["dir"][1];
-            break;
-        case "link":
-            $mime_type	= $GLOBALS["super_mimes"]["link"][0];
-            $image		= $GLOBALS["super_mimes"]["link"][1];
-            break;
-        default:
-            list($mime_type, $image, $type) = _get_used_mime_info($item);
-            if ($mime_type != NULL)
-            {  
-                _debug("found mime type $mime_type");  
-                break;
-            }
-
-            if ((function_exists("is_executable") && @is_executable(get_abs_item($dir,$item)))
-            || @eregi($GLOBALS["super_mimes"]["exe"][2], $item))
-            {
-                $mime_type	= $GLOBALS["super_mimes"]["exe"][0];
-                $image		= $GLOBALS["super_mimes"]["exe"][1];
-            }
-            else
-            {
-                // unknown file
-                _debug("unknown file type ");
-                $mime_type	= $GLOBALS["super_mimes"]["file"][0];
-                $image		= $GLOBALS["super_mimes"]["file"][1];
-            }
-    }
-
-    switch ($query)
-    {
-        case "img": return $image;
-        case "ext": return $type;
-        default:    return $mime_type;
-    }
+	switch (filetype(get_abs_item($dir, $item))) {
+		case "dir":
+			$mime_type	= $GLOBALS["super_mimes"]["dir"][0];
+			$image		= $GLOBALS["super_mimes"]["dir"][1];
+			break;
+		case "link":
+			$mime_type	= $GLOBALS["super_mimes"]["link"][0];
+			$image		= $GLOBALS["super_mimes"]["link"][1];
+			break;
+		default:
+			list($mime_type, $image, $type) = _get_used_mime_info($item);
+			if ($mime_type != NULL) {
+				_debug("found mime type $mime_type");  
+				break;
+			}
+		if ((function_exists("is_executable") && @is_executable(get_abs_item($dir,$item))) || preg_match('/'.$GLOBALS["super_mimes"]["exe"][2].'/i',$item)) {
+				$mime_type	= $GLOBALS["super_mimes"]["exe"][0];
+				$image		= $GLOBALS["super_mimes"]["exe"][1];
+			} else {
+				// unknown file
+				_debug("unknown file type ");
+				$mime_type	= $GLOBALS["super_mimes"]["file"][0];
+				$image		= $GLOBALS["super_mimes"]["file"][1];
+			}
+	}
+	switch ($query) {
+		case "img":	return $image;
+		case "ext":	return $type;
+		default:	return $mime_type;
+	}
 }
 
 /**
@@ -325,13 +331,13 @@ function remove ( $item )
 // get php max_upload_file_size
 function get_max_file_size() {
 	$max = get_cfg_var("upload_max_filesize");
-	if(@eregi("G$",$max)) {
+	if (preg_match('/G$/i',$max)) {
 		$max = substr($max,0,-1);
 		$max = round($max*1073741824);
-	} elseif(@eregi("M$",$max)) {
+	} elseif(preg_match('/M$/i',$max)) {
 		$max = substr($max,0,-1);
 		$max = round($max*1048576);
-	} elseif(@eregi("K$",$max)) {
+	} elseif(preg_match('/K$/i',$max)) {
 		$max = substr($max,0,-1);
 		$max = round($max*1024);
 	}
@@ -344,7 +350,9 @@ function down_home($abs_dir) {
 	$real_dir = @realpath($abs_dir);
 
 	if($real_home===false || $real_dir===false) {
-		if(@eregi("\\.\\.",$abs_dir)) return false;
+		if(preg_match('/\\.\\./i',$abs_dir)) {
+			return false;
+		}
 	} else if(strcmp($real_home,@substr($real_dir,0,strlen($real_home)))) {
 		return false;
 	}
