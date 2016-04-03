@@ -1693,7 +1693,8 @@ function disks_try_exfat($file) {
 	return "EXFAT";
 }
 
-function disks_import_try_allfs($dev) {
+function disks_import_try_allfs($dev, &$additional_fs_info) {
+	$additional_fs_info = false;
 	$mntpath = "/tmp/disks_import";
 
 	// direct device
@@ -1726,8 +1727,10 @@ function disks_import_try_allfs($dev) {
 			if (!empty($ufsid))
 				return "ufsgpt";
 			$zfs = disks_try_zfs($file);
-			if (!empty($zfs))
+			if (!empty($zfs)) {
+				$additional_fs_info = ['tag' => 'zfsgpt', 'val' => str_replace($dev, '', $file)];
 				return "zfs";
+			}
 			$ntfs = disks_try_ntfs($file);
 			if (!empty($ntfs))
 				return "ntfs";
@@ -1825,7 +1828,7 @@ function disks_import_try_allfs($dev) {
 	return "";
 }
 
-function disks_import_get_fstype($dev) {
+function disks_import_get_fstype($dev, &$additional_fs_info) {
 	global $config;
 
 	if (!preg_match("/^\/dev\//", $dev, $m))
@@ -1843,7 +1846,7 @@ function disks_import_get_fstype($dev) {
 	if (1 == mwexec("/bin/mkdir -p {$mntpath}"))
 		return "";
 
-	$fstype = disks_import_try_allfs($dev);
+	$fstype = disks_import_try_allfs($dev, $additional_fs_info);
 
 	@rmdir($mntpath);
 
@@ -1871,7 +1874,6 @@ function disks_import_all_disks($clean_import) {
 	if (!empty($clean_import)) {
 		$config['disks']['disk'] = array();
 	}
-
 	foreach ($disks as $diskv) {
 		$type = $diskv['type'];
 		$dev = $diskv['devicespecialfile'];
@@ -1902,7 +1904,10 @@ function disks_import_all_disks($clean_import) {
 				$pdisk['acoustic'] = "0";
 				$pdisk['apm'] = "0";
 				$pdisk['transfermode'] = "auto";
-				$pdisk['fstype'] = disks_import_get_fstype($dev);
+				$pdisk['fstype'] = disks_import_get_fstype($dev, $additional_fs_info);
+				if (false !== $additional_fs_info) {
+					$pdisk[$additional_fs_info['tag']] = $additional_fs_info['val'];
+				}
 				$pdisk['controller'] = $diskv['controller'];
 				$pdisk['controller_id'] =  $diskv['controller_id'];
 				$pdisk['controller_desc'] = $diskv['controller_desc'];
