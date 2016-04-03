@@ -1,5 +1,5 @@
---- sys/dev/usb/controller/uhci.c.orig	2015-04-20 10:28:19.000000000 +0900
-+++ sys/dev/usb/controller/uhci.c	2015-05-11 05:52:58.000000000 +0900
+--- sys/dev/usb/controller/uhci.c.orig	2016-03-13 20:04:25.527262000 +0100
++++ sys/dev/usb/controller/uhci.c	2016-03-13 22:24:56.000000000 +0100
 @@ -1478,7 +1478,8 @@
  	    UHCI_STS_USBEI |
  	    UHCI_STS_RD |
