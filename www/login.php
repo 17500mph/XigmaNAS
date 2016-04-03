@@ -6,15 +6,12 @@
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
-	Portions of freenas (http://www.freenas.org).
-	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
-	All rights reserved.
-
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -66,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		}
 
 		write_log(gettext("Authentication error for illegal user : {$_POST['username']} from {$_SERVER['REMOTE_ADDR']}"));
-		$input_errors = gettext("Invalid username or password. Please try again.");
+		$input_errors = gettext("Invalid username or password.</br> Please try again.");
 	}
 	else {
 		write_log(gettext('Username contains invalid character(s) : '.escapeshellarg(escapeshellcmd( htmlspecialchars($_POST['username'],ENT_QUOTES))).' from '.$_SERVER['REMOTE_ADDR']));		
@@ -97,7 +94,7 @@ $menu['forum']['link'] = "http://forums.nas4free.org";
 $menu['forum']['visible'] = TRUE;
 $menu['forum']['menuitem']['visible'] = FALSE;
 // IRC
-$menu['irc']['desc'] = gettext("IRC Live Support");
+$menu['irc']['desc'] = gettext("IRC NAS4Free");
 $menu['irc']['visible'] = TRUE;
 $menu['irc']['link'] = "http://webchat.freenode.net/?channels=#nas4free";
 $menu['irc']['menuitem']['visible'] = FALSE;
@@ -164,6 +161,7 @@ function display_menu($menuid) {
 	<link href="css/gui.css" rel="stylesheet" type="text/css" />
 	<link href="css/navbar.css" rel="stylesheet" type="text/css" />
 	<link href="css/tabs.css" rel="stylesheet" type="text/css" />
+	<link href="css/login.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/gui.js"></script>
 <?php
@@ -180,19 +178,31 @@ function display_menu($menuid) {
 	}
 ?>
 </head>
-<body onload='document.iform.username.focus();'>
-<div id="header">
-	<div id="headerlogo">
-		<a title="www.<?=get_product_url();?>" href="http://<?=get_product_url();?>" target="_blank"><img src="images/header_logo.png" alt="logo" /></a>
-	</div>
-	<div id="headerrlogo">
-		<div class="hostname">
-			<span><?=system_get_hostname();?>&nbsp;</span>
-		</div>
-	</div>
-</div>
-<div id="headernavbar">
-	<ul id="navbarmenu">
+<script type="text/javascript">
+<!--
+window.onload=function() {
+	document.loginform.username.focus();
+}
+//-->
+</script>
+<body>
+     <div class="loginwrapper">
+		 <div class="tabcont" style="border-radius:4px;">
+    <div class="loginwrap">
+	<h1 class="logintitle"><span class="iconfa-lock"><img src="images/lock.png"></span><a title="www.<?=get_product_url();?>" href="http://<?=get_product_url();?>" target="_blank"><img src="images/header_logo.png" alt="logo" /></a>
+	<span class="subtitle">
+	<?=system_get_hostname();?>&nbsp;
+	</span></h1>
+        <div class="loginwrapperinner">
+            <form id="loginform" action="" method="post" name="loginform">
+                <p class="allocate"><input type="text" id="username" name="username" onFocus="value=''" placeholder="<?=gettext("Username");?>" value="<?=gettext("Username");?>"></p>
+                <p class="allocate"><input type="password" id="password" name="password" onFocus="value=''" placeholder="<?=gettext("Password");?>" value="password"></p>
+                <p class="allocate"><input class="btn formbtn" type="submit" value="<?=gettext("Login");?>" /></p>
+            </form>
+            </div>
+             <br>
+            <div id="all_links">
+	<ul>
 		<?=display_menu("system");?>
 		<?=display_menu("network");?>
 		<?=display_menu("disks");?>
@@ -215,59 +225,29 @@ function display_menu($menuid) {
 			</div>
 		</li>
 		<?php endif;?>
+		<left>
 		<!-- End extension section -->
-		<?=display_menu("forum");?>
-		<?=display_menu("info");?>
-		<?=display_menu("irc");?>
+		<?=display_menu("forum");?> - 
+		<?=display_menu("info");?> - 
+		<?=display_menu("irc");?> - 
 		<?=display_menu("donate");?>
+		</left>
 	</ul>
-	<div style="clear:both"></div>
-</div>
-        <br /><br /><br /><br /><br /><br /><br /><br />
-		<?php if (!empty($input_errors)) print_error_box($input_errors);?>
-        <br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <div id="loginpage">
-            <table height="100%" width="100%" cellspacing="0" cellpadding="0" border="0">
-				<tbody>
-					<tr>
-						<td align="center">
-							<form name="iform" id="iform" action="login.php" method="post">
-								<table>
-									<tbody>
-										<tr>
-											<td align="center">
-												<div class="shadow">
-													<div id="loginboxheader"><b><?=gettext("NAS4Free WebGUI Login");?></b></div>
-													<div id="loginbox">
-														<table background="images/vncell_bg.png">
-															<tbody>
-																<tr>
-																	<td><b><?=gettext("Username");?>:</b></td>
-																	<td><input class="formfld" type="text" name="username" value="" /></td>
-																</tr>
-																<tr>
-																	<td><b><?=gettext("Password");?>:</b></td>
-																	<td><input class="formfld" type="password" name="password" value="" /></td>
-																</tr>
-																<tr>
-																	<td align="right" colspan="2"><input class="formbtn" type="submit" value="<?=gettext("Login");?>" /></td>
-																</tr>
-															</tbody>
-														</table>
-													</div>
-												</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</form>
-						</td>
-					</tr>
-				</tbody>
-			</table>
         </div>
+	<div id="loginerror">
+		<?php 
+			if (!empty($input_errors)) {
+				echo $input_errors;
+				echo "\n";
+			}
+		?>
+	</div>
+    </div>
+     </div>
+        </div>
+           </div>
         <div id="pagefooter">
-			<span><p><a title="www.<?=get_product_url();?>" href="http://<?=get_product_url();?>" target="_blank"></a> <?=str_replace("Copyright (C)","&copy;",get_product_copyright());?></p></span>
-		</div>
-    </body>
+		<span><p><a title="www.<?=get_product_url();?>" href="http://<?=get_product_url();?>" target="_blank"></a> <?=str_replace("Copyright (C)","&copy;",get_product_copyright());?></p></span>
+	</div>
+	</body>
 </html>
