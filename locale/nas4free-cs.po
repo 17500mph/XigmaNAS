@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-03-21 10:27+0000\n"
-"PO-Revision-Date: 2016-03-16 11:53+0000\n"
+"PO-Revision-Date: 2016-03-28 09:26+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-23 23:49+0000\n"
-"X-Generator: Launchpad (build 17958)\n"
+"X-Launchpad-Export-Date: 2016-04-03 11:04+0000\n"
+"X-Generator: Launchpad (build 17972)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
 "X-Poedit-Language: Czech\n"
@@ -405,13 +405,13 @@ msgid "ARP Tables"
 msgstr "ARP tabulky"
 
 msgid "ARP Tables List"
-msgstr ""
+msgstr "Seznam ARP tabulek"
 
 msgid "ATTRIBUTE NAME"
 msgstr "NÁZEV ATRIBUTU"
 
 msgid "Accept remote syslog messages."
-msgstr ""
+msgstr "Přijímat syslog zprávy z ostatních systémů."
 
 msgid "Access"
 msgstr "Přístup"
@@ -661,7 +661,7 @@ msgid "Albanian"
 msgstr "albánština"
 
 msgid "Alert Level"
-msgstr ""
+msgstr "Výstražná úroveň"
 
 msgid "All"
 msgstr "Vše"
@@ -1770,7 +1770,7 @@ msgid "Critical"
 msgstr "Kritické"
 
 msgid "Critical Error Level"
-msgstr ""
+msgstr "Úroveň kritické chyby"
 
 msgid "Cron"
 msgstr "Naplánované úlohy (Cron)"
@@ -1904,7 +1904,7 @@ msgid "Dataset is marked for deletion"
 msgstr "Datová sada je označena ke smazání"
 
 msgid "Dataset is protected"
-msgstr ""
+msgstr "Datová sada je chráněna"
 
 msgid "Datasets"
 msgstr "Datové sady"
@@ -1922,7 +1922,7 @@ msgid "Debug"
 msgstr "Režim ladění"
 
 msgid "Debug Level"
-msgstr ""
+msgstr "Úroveň ladění"
 
 msgid "Dec"
 msgstr "pro"
@@ -2268,7 +2268,7 @@ msgid "Disable speaker beep on startup and shutdown."
 msgstr "Vypnout pípnutí při spouštění a vypínání."
 
 msgid "Disable the compression of repeated line."
-msgstr ""
+msgstr "Vypnout vynechání opakujících se řádek"
 
 msgid "Disabled"
 msgstr "Vypnuto"
@@ -2694,7 +2694,7 @@ msgid "Email Report"
 msgstr "Hlášení e-mailem"
 
 msgid "Emergency Level"
-msgstr ""
+msgstr "Úroveň nouze"
 
 msgid "Empty as default."
 msgstr "Ve výchozím stavu nevyplněno."
@@ -2994,7 +2994,7 @@ msgid "Error"
 msgstr "Chyba"
 
 msgid "Error Level"
-msgstr ""
+msgstr "Úroveň chybových stavů"
 
 #, php-format
 msgid "Error: The changes could not be applied (error code %s)."
@@ -3004,7 +3004,7 @@ msgid "Event"
 msgstr "Událost"
 
 msgid "Event selection"
-msgstr ""
+msgstr "Výběr události"
 
 msgid "Execute"
 msgstr "Spustit"
@@ -3624,7 +3624,7 @@ msgid "IP address"
 msgstr "IP adresa"
 
 msgid "IP address of remote syslog server."
-msgstr ""
+msgstr "IP adresa vzdáleného syslog serveru."
 
 #, php-format
 msgid ""
@@ -3832,7 +3832,7 @@ msgid "Info"
 msgstr "Info"
 
 msgid "Info Level"
-msgstr ""
+msgstr "Úroveň pro informaci"
 
 msgid "Informal"
 msgstr "Pro informaci"
@@ -4385,13 +4385,13 @@ msgid "Log Level"
 msgstr "Podrobnost protokolování"
 
 msgid "Log Settings"
-msgstr ""
+msgstr "Nastavení zaznamenávání událostí"
 
 msgid "Log level"
 msgstr "Úroveň podrobností zaznamenávání událostí"
 
 msgid "Log order"
-msgstr ""
+msgstr "Pořadí záznamů"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Zaznamenávat pakety, odpovídající tomuto pravidlu, do syslog."
@@ -4541,7 +4541,7 @@ msgid "Max Protocol"
 msgstr "Komunikovat protokolem verze nanejvýš"
 
 msgid "Max entries"
-msgstr ""
+msgstr "Nanejvýš položek"
 
 msgid "Max. TTL"
 msgstr "Nejvyšší umožněný počet skoků (TTL)"
@@ -5132,7 +5132,7 @@ msgid "Nothing to synchronize"
 msgstr "Nic k synchronizaci"
 
 msgid "Notice Level"
-msgstr ""
+msgstr "Oznámení"
 
 #, php-format
 msgid "Notification email from host: %s"
@@ -5476,7 +5476,7 @@ msgid "Ping"
 msgstr "Ping"
 
 msgid "Ping Test"
-msgstr ""
+msgstr "Test nástrojem ping"
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Ověřit dostupnost procesu služby winbind:"
@@ -5854,7 +5854,7 @@ msgid "Remote Rsync Server"
 msgstr "Rsync server na protějšku"
 
 msgid "Remote Syslog Server"
-msgstr ""
+msgstr "Vzdálený syslog server"
 
 msgid "Remote module (source)"
 msgstr "modul na protějšku (zdroj)"
@@ -5869,7 +5869,7 @@ msgid "Remote rsync daemon"
 msgstr "Proces služby rsync na protějšku"
 
 msgid "Remote syslog messages"
-msgstr ""
+msgstr "Zprávy vzdáleného syslog"
 
 msgid "Removable"
 msgstr "Vyjímatelné"
@@ -5925,13 +5925,13 @@ msgid "Resolve"
 msgstr "Překládat"
 
 msgid "Resolve IP"
-msgstr ""
+msgstr "Zjistit název k IP adrese"
 
 msgid "Resolve IP addresses to hostnames"
 msgstr "Překládat IP adresy na názvy strojů"
 
 msgid "Resolve IP addresses to hostnames."
-msgstr ""
+msgstr "(zpětně) přeložit IP adresy na DNS názvy strojů"
 
 msgid "Resource"
 msgstr "Prostředek"
@@ -6418,6 +6418,7 @@ msgstr "Zobrazit informace o UPS zdroji"
 
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr ""
+"Zobrazit položky záznamu událostí v obráceném pořadí (nejnovější navrchu)."
 
 msgid "Shutdown"
 msgstr "Vypnout"
@@ -6765,7 +6766,7 @@ msgid "Syncthing"
 msgstr "Syncthing"
 
 msgid "Syslog Level"
-msgstr ""
+msgstr "Úroveň podrobností pro syslog"
 
 #, php-format
 msgid ""
@@ -6787,7 +6788,7 @@ msgid "System Load"
 msgstr "Vytížení systému"
 
 msgid "System Settings"
-msgstr ""
+msgstr "Nastavení systému"
 
 msgid "System bios"
 msgstr "Systémový BIOS"
@@ -8530,7 +8531,7 @@ msgid "Traceroute"
 msgstr "Sledování směrování na síti (traceroute)"
 
 msgid "Traceroute Test"
-msgstr ""
+msgstr "Test nástrojem traceroute"
 
 msgid ""
 "Traceroute may take a while to complete. You may hit the Stop button on your "
@@ -9075,7 +9076,7 @@ msgid "Warning"
 msgstr "Varování"
 
 msgid "Warning Level"
-msgstr ""
+msgstr "Úroveň varování"
 
 msgid ""
 "Warning: You are going to delete a RAID volume. All data will get lost and "
