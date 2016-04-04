@@ -1,0 +1,23 @@
+--- src/VBox/Devices/Makefile.kmk.orig	2015-06-01 13:54:08.000000000 -0400
++++ src/VBox/Devices/Makefile.kmk	2015-06-04 12:39:13.903173000 -0400
+@@ -560,12 +560,20 @@
+  ifeq ($(KBUILD_TARGET),freebsd)
+   VBoxDD_SOURCES  += \
+    	Audio/DrvHostOSSAudio.cpp
++
+   ifdef VBOX_WITH_PULSE
+    VBoxDD_DEFS    += VBOX_WITH_PULSE
+    VBoxDD_SOURCES += \
+    Audio/DrvHostPulseAudio.cpp \
+    Audio/pulse_stubs.c
+   endif
++
++  ifdef VBOX_WITH_ALSA
++   VBoxDD_DEFS    += VBOX_WITH_ALSA
++   VBoxDD_SOURCES += \
++   	Audio/DrvHostALSAAudio.cpp \
++   	Audio/alsa_stubs.c
++  endif
+  endif
+ 
+  ifeq ($(KBUILD_TARGET),solaris)
