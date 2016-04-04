@@ -1836,6 +1836,24 @@ copy_files() {
 			cp -Rpv ${NAS4FREE_SVNDIR}/build/ports/copy-ports/files/pango /usr/ports/x11-toolkits/pango
 			echo "===> Replace /usr/ports/x11-toolkits/pango done!"
 
+			echo "===> Delete virtualbox-ose from ports"
+			rm -rf /usr/ports/emulators/virtualbox-ose
+			echo "===> Start copy new virtualbox-ose files to ports/emulators"
+			cp -Rpv ${NAS4FREE_SVNDIR}/build/ports/copy-ports/files/virtualbox-ose /usr/ports/emulators/virtualbox-ose
+			echo "===> Replace /usr/ports/emulators/virtualbox-ose done!"
+
+			echo "===> Delete virtualbox-ose-additions from ports"
+			rm -rf /usr/ports/emulators/virtualbox-ose-additions
+			echo "===> Start copy new virtualbox-ose-additions files to ports/emulators"
+			cp -Rpv ${NAS4FREE_SVNDIR}/build/ports/copy-ports/files/virtualbox-ose-additions /usr/ports/emulators/virtualbox-ose-additions
+			echo "===> Replace /usr/ports/emulators/virtualbox-ose-additions done!"
+
+			echo "===> Delete virtualbox-ose-kmod from ports"
+			rm -rf /usr/ports/emulators/virtualbox-ose-kmod
+			echo "===> Start copy new virtualbox-ose-kmod files to ports/emulators"
+			cp -Rpv ${NAS4FREE_SVNDIR}/build/ports/copy-ports/files/virtualbox-ose-kmod /usr/ports/emulators/virtualbox-ose-kmod
+			echo "===> Replace /usr/ports/emulators/virtualbox-ose-kmod done!"
+
 	return 0
 }
 build_ports() {
