@@ -1,0 +1,19 @@
+--- usb/controller/ehci_pci.c.orig	2016-04-04 09:18:38.629195000 +0200
++++ usb/controller/ehci_pci.c	2016-04-04 10:13:18.000000000 +0200
+@@ -168,9 +168,15 @@
+ 		return ("Intel Wildcat Point USB 2.0 controller USB-A");
+ 	case 0x8cad8086:
+ 		return ("Intel Wildcat Point USB 2.0 controller USB-B");
++	case 0x8d268086:
++		return ("Intel Wellsburg USB 2.0 controller");
++	case 0x8d2d8086:
++		return ("Intel Wellsburg USB 2.0 controller");
++	case 0x9c268086:
++		return ("Intel Lynx Point LP USB 2.0 controller USB");
+ 
+ 	case 0x00e01033:
+-		return ("NEC uPD 720100 USB 2.0 controller");
++		return ("NEC uPD 72010x USB 2.0 controller");
+ 
+ 	case 0x006810de:
+ 		return "NVIDIA nForce2 USB 2.0 controller";
