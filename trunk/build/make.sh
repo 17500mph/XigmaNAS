@@ -1777,10 +1777,11 @@ Compile NAS4FREE from Scratch
 2 - Create Filesystem Structure.
 3 - Build/Install the Kernel.
 4 - Build World.
-5 - Build Ports.
-6 - Build Bootloader.
-7 - Add Necessary Libraries.
-8 - Modify File Permissions.
+5 - Copy Files/Ports to their locations.
+6 - Build Ports.
+7 - Build Bootloader.
+8 - Add Necessary Libraries.
+9 - Modify File Permissions.
 * - Exit.
 
 Press # '
@@ -1790,8 +1791,9 @@ Press # '
 			2)	create_rootfs;;
 			3)	build_kernel;;
 			4)	build_world;;
-			5)	build_ports;;
-			6)	opt="-f";
+			5)	copy_files;;
+			6)	build_ports;;
+			7)	opt="-f";
 					if [ 0 != $OPT_BOOTMENU ]; then
 						opt="$opt -m"
 					fi;
@@ -1802,21 +1804,46 @@ Press # '
 						opt="$opt -s"
 					fi;
 					$NAS4FREE_SVNDIR/build/nas4free-create-bootdir.sh $opt $NAS4FREE_BOOTDIR;;
-			7)	add_libs;;
-			8)	$NAS4FREE_SVNDIR/build/nas4free-modify-permissions.sh $NAS4FREE_ROOTFS;;
+			8)	add_libs;;
+			9)	$NAS4FREE_SVNDIR/build/nas4free-modify-permissions.sh $NAS4FREE_ROOTFS;;
 			*)	main; return $?;;
 		esac
 		[ 0 == $? ] && echo "=> Successfully done <=" || echo "=> Failed!"
 		sleep 1
   done
 }
+# Copy files/ports. Copying required files from 'distfiles & copy-ports'.
+copy_files() {
+			# Copy required sources to FreeBSD distfiles directory.
+			echo;
+			echo "-------------------------------------------------------------------";
+			echo ">>> Copy needed sources to distfiles directory usr/ports/distfiles.";
+			echo "-------------------------------------------------------------------";
+			echo "===> Start copy sources"
+			cp -f ${NAS4FREE_SVNDIR}/build/ports/distfiles/CLI_freebsd-from_the_10.2.2.1_9.5.5.1_codesets.zip /usr/ports/distfiles
+			echo "===> Copy CLI_freebsd-from_the_10.2.2.1_9.5.5.1_codesets.zip done!"
+			cp -f ${NAS4FREE_SVNDIR}/build/ports/distfiles/fuppes-0.692.tar.gz /usr/ports/distfiles
+			echo "===> Copy fuppes-0.692.tar.gz done!"
 
+			# Copy required ports to FreeBSD ports directory.
+			echo;
+			echo "----------------------------------------------------------";
+			echo ">>> Copy new files to ports directory FreeBSD usr/ports/*.";
+			echo "----------------------------------------------------------";
+			echo "===> Delete pango from ports"
+			rm -rf /usr/ports/x11-toolkits/pango
+			echo "===> Start copy new pango files to ports/x11-toolkits"
+			cp -Rpv ${NAS4FREE_SVNDIR}/build/ports/copy-ports/files/pango /usr/ports/x11-toolkits/pango
+			echo "===> Replace /usr/ports/x11-toolkits/pango done!"
+
+	return 0
+}
 build_ports() {
 	tempfile=$NAS4FREE_WORKINGDIR/tmp$$
 	ports=$NAS4FREE_WORKINGDIR/ports$$
 
 	# Choose what to do.
-	$DIALOG --title "$NAS4FREE_PRODUCTNAME - Build/Install Ports" --menu "Please select whether you want to build or install ports." 10 45 2 \
+	$DIALOG --title "$NAS4FREE_PRODUCTNAME - Build/Install Ports" --menu "Please select whether you want to build or install ports." 10 45 3 \
 		"build" "Build ports" \
 		"install" "Install ports" 2> $tempfile
 	if [ 0 != $? ]; then # successful?
@@ -1891,21 +1918,6 @@ $DIALOG --title \"$NAS4FREE_PRODUCTNAME - Ports\" \\
 				cd ${NAS4FREE_SVNDIR}/build/ports/${port};
 				make clean;
 			done;
-			# workaround copy ports to FreeBSD for downgrade/upgrade to OS
-			echo;
-			echo "--------------------------------------------------------------";
-			echo ">>> Copy new files to ports FreeBSD.";
-			echo "--------------------------------------------------------------";
-			cd ${NAS4FREE_SVNDIR}/build/ports/copy-ports;
-			# Copy port files.
-			cp -f ${NAS4FREE_SVNDIR}/build/ports/copy-ports/files/pango/distinfo /usr/ports/x11-toolkits/pango/distinfo
-			echo "===> Overwrite /usr/ports/x11-toolkits/pango/distinfo"
-			cp -f ${NAS4FREE_SVNDIR}/build/ports/copy-ports/files/pango/Makefile /usr/ports/x11-toolkits/pango/Makefile
-			echo "===> Overwrite /usr/ports/x11-toolkits/pango/Makefile"
-			cp -f ${NAS4FREE_SVNDIR}/build/ports/copy-ports/files/pango/pkg-descr /usr/ports/x11-toolkits/pango/pkg-descr
-			echo "===> Overwrite /usr/ports/x11-toolkits/pango/pkg-descr"
-			cp -f ${NAS4FREE_SVNDIR}/build/ports/copy-ports/files/pango/pkg-plist /usr/ports/x11-toolkits/pango/pkg-plist
-			echo "===> Overwrite /usr/ports/x11-toolkits/pango/pkg-plist"
 			if [ "i386" = ${NAS4FREE_ARCH} ]; then
 				# workaround patch
 				cp ${NAS4FREE_SVNDIR}/build/ports/vbox/files/extra-patch-src-VBox-Devices-Graphics-DevVGA.h /usr/ports/emulators/virtualbox-ose/files/patch-src-VBox-Devices-Graphics-DevVGA.h
