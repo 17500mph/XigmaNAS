@@ -1,10 +1,11 @@
 PORTNAME=	phpvirtualbox
-DISTVERSION=	4.3-3
+DISTVERSION=	5.0-5
+PORTREVISION=	0
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}
 
-MAINTAINER=	aoyama@nas4free.org
-COMMENT=	AJAX Web Interface for VirtualBox
+MAINTAINER=	zoon01@nas4free.org
+COMMENT=	Web Interface for VirtualBox
 
 LICENSE=	GPLv3
 
