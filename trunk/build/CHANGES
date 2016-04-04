@@ -3,12 +3,16 @@ NAS4Free 10.3.0.3 - Pilingitam
 
 Changes:
 - Upgrade to FreeBSD 10.3-RELEASE-P0.
+- Refactoring Webgui and update php code.
+- Add search function to Diagnostics|Log.
+- Upgrade zoneinfo to 2016c.
+- Upgrade exfat to 1.2.3.
 - Upgrade php to 7.0.5.
 - Upgrade virtualbox-ose to 5.0.16.
 - Upgrade phpvirtualbox to 5.0-5.
 
 Fixes:
--
+- prevent deletion of mounted gconcat softraid.
 
 Note:
 - iperf2 has been replaced for iperf3 because of inconsistent results for UDP above 2Gbps.
