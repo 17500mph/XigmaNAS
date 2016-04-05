@@ -74,6 +74,9 @@ if (is_ajax()) {
 // Advanced Format
 $pconfig['aft4k'] = false;
 
+// ZFS on GPT
+$pconfig['zfsgpt'] = false;
+
 if ($_POST) {
 	unset($input_errors);
 	unset($errormsg);

@@ -1333,30 +1333,30 @@ function disks_get_admap() {
 // Return array containing diskinfo.
 function disks_get_diskinfo($disk)
 {
+	$result = [];
 	exec("/usr/sbin/diskinfo {$disk}", $rawdata);
+	if (isset($rawdata[0])) {
+		$diskinfo = preg_split("/\s+/", $rawdata[0]);
 
-	$diskinfo = preg_split("/\s+/", $rawdata[0]);
-
-	$result = array();
-	$result['name'] = chop($diskinfo[0]);
-	$result['sectorsize'] = chop($diskinfo[1]);
-	$result['mediasize_bytes'] = chop($diskinfo[2]);
-	$result['mediasize_mbytes'] = ceil(chop($diskinfo[2]) / 1024 / 1024);
-	$result['mediasize_sectors'] = chop($diskinfo[3]);
-	$result['stripesize'] = chop($diskinfo[4]);
-	$result['stripeoffset'] = chop($diskinfo[5]);
-	if (isset($diskinfo[6]) && isset($diskinfo[7]) && isset($diskinfo[8])) {
-		$result['cylinders'] = chop($diskinfo[6]);
-		$result['heads'] = chop($diskinfo[7]);
-		$result['sectors'] = chop($diskinfo[8]);
-	} else {
-		/* XXX
-		$result['heads'] = 16;
-		$result['sectors'] = 63;
-		$result['cylinders'] = ceil($result['mediasize_sectors'] / ($result['heads'] * $result['sectors']));
-		*/
+		$result['name'] = chop($diskinfo[0]);
+		$result['sectorsize'] = chop($diskinfo[1]);
+		$result['mediasize_bytes'] = chop($diskinfo[2]);
+		$result['mediasize_mbytes'] = ceil(chop($diskinfo[2]) / 1024 / 1024);
+		$result['mediasize_sectors'] = chop($diskinfo[3]);
+		$result['stripesize'] = chop($diskinfo[4]);
+		$result['stripeoffset'] = chop($diskinfo[5]);
+		if (isset($diskinfo[6]) && isset($diskinfo[7]) && isset($diskinfo[8])) {
+			$result['cylinders'] = chop($diskinfo[6]);
+			$result['heads'] = chop($diskinfo[7]);
+			$result['sectors'] = chop($diskinfo[8]);
+		} else {
+			/* XXX
+			$result['heads'] = 16;
+			$result['sectors'] = 63;
+			$result['cylinders'] = ceil($result['mediasize_sectors'] / ($result['heads'] * $result['sectors']));
+			*/
+		}
 	}
-
 	return $result;
 }
 

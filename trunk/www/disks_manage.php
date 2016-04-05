@@ -201,33 +201,37 @@ function diskmanagement_process_updatenotification($mode, $data) {
 								$status = sprintf("%s (%s)", (0 == disks_exists($disk['devicespecialfile'])) ? gettext("ONLINE") : gettext("MISSING"), $role);
 								$disk['size'] = $a_phy_disk[$disk['name']]['size'];
 							} else {
-								switch ( $verify_errors[$disk['name']]['error'] ){
-									case 1:
-										$status = sprintf("%s : %s", gettext('MOVED TO') , $verify_errors[$disk['name']]['new_devicespecialfile']);
-										break;
-									case 2:
-										if(empty($verify_errors[$disk['name']]['old_serial']) === FALSE){
-											$old_serial = htmlspecialchars($verify_errors[$disk['name']]['old_serial']);
-										} else {
-											$old_serial = htmlspecialchars(gettext("n/a"));
-										};
+								if (isset($verify_errors[$disk['name']]) && is_array($verify_errors[$disk['name']])) {
+									switch ( $verify_errors[$disk['name']]['error'] ){
+										case 1:
+											$status = sprintf("%s : %s", gettext('MOVED TO') , $verify_errors[$disk['name']]['new_devicespecialfile']);
+											break;
+										case 2:
+											if(empty($verify_errors[$disk['name']]['old_serial']) === FALSE){
+												$old_serial = htmlspecialchars($verify_errors[$disk['name']]['old_serial']);
+											} else {
+												$old_serial = htmlspecialchars(gettext("n/a"));
+											};
 
-										if(empty($verify_errors[$disk['name']]['new_serial']) === FALSE){
-											$new_serial = htmlspecialchars($verify_errors[$disk['name']]['new_serial']);
-										} else {
-											$new_serial = htmlspecialchars(gettext("n/a"));
-										};
-										$status = sprintf("%s (%s : '%s' %s '%s')", gettext('CHANGED'), gettext('Device Serial'), $old_serial, gettext('to'), $new_serial);
-										break;
-									case 4:
-										$status = sprintf("%s (%s : '%s' %s '%s')", gettext('CHANGED'), gettext('Controller'), htmlspecialchars($verify_errors[$disk['name']]['config_controller']), gettext('to'), htmlspecialchars($verify_errors[$disk['name']]['new_controller']) );
-										break;
-									case 8:
-										$status = sprintf("%s (%s)", gettext("MISSING"), $disk['devicespecialfile']);
-										break;
-									default:
-										$status = gettext("ONLINE");
+											if(empty($verify_errors[$disk['name']]['new_serial']) === FALSE){
+												$new_serial = htmlspecialchars($verify_errors[$disk['name']]['new_serial']);
+											} else {
+												$new_serial = htmlspecialchars(gettext("n/a"));
+											};
+											$status = sprintf("%s (%s : '%s' %s '%s')", gettext('CHANGED'), gettext('Device Serial'), $old_serial, gettext('to'), $new_serial);
+											break;
+										case 4:
+											$status = sprintf("%s (%s : '%s' %s '%s')", gettext('CHANGED'), gettext('Controller'), htmlspecialchars($verify_errors[$disk['name']]['config_controller']), gettext('to'), htmlspecialchars($verify_errors[$disk['name']]['new_controller']) );
+											break;
+										case 8:
+											$status = sprintf("%s (%s)", gettext("MISSING"), $disk['devicespecialfile']);
+											break;
+										default:
+											$status = gettext("ONLINE");
 									}
+								} else {
+									$status = gettext("ONLINE");
+								}
 							}
 							break;
 					}
@@ -239,16 +243,20 @@ function diskmanagement_process_updatenotification($mode, $data) {
 						$status_start_tag = '<td class="listbg">';
 						$status_end_tag = $end_tag;
 
-						if ($verify_errors[$disk['name']]['error'] >0){
-							$start_tag = $start_tag . '<span style="color: #ff0000;font-weight:bold;">';
-							$end_tag = '</span>&nbsp;' . $end_tag;
-							$status_start_tag = $status_start_tag . '<span style="color: #ff0000;font-weight:bold;">';
-							$status_end_tag = '</span>&nbsp;'. $end_tag;
+						if (isset($verify_errors[$disk['name']]) && is_array($verify_errors[$disk['name']])) {
+							if ($verify_errors[$disk['name']]['error'] > 0){
+								$start_tag = $start_tag . '<span style="color: #ff0000;font-weight:bold;">';
+								$end_tag = '</span>&nbsp;' . $end_tag;
+								$status_start_tag = $status_start_tag . '<span style="color: #ff0000;font-weight:bold;">';
+								$status_end_tag = '</span>&nbsp;'. $end_tag;
+							}
 						}
 
-						if($verify_errors[$disk['name']]['error'] == 8){
-							$start_tag = $start_tag . '<del>';
-							$end_tag = '</del>'. $end_tag;
+						if (isset($verify_errors[$disk['name']]) && is_array($verify_errors[$disk['name']])) {
+							if($verify_errors[$disk['name']]['error'] == 8){
+								$start_tag = $start_tag . '<del>';
+								$end_tag = '</del>'. $end_tag;
+							}
 						}
 
 						print $start_tag . htmlspecialchars($disk['name']) . $end_tag;
