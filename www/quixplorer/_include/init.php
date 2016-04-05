@@ -52,7 +52,7 @@ if(isset($_SERVER)) {
 	"You need at least PHP 4.0.0 to run QuiXplorer; preferably PHP 4.3.1 or higher.");
 }
 
-_debug("xxx3 action: " . $GLOBALS['__GET']["action"] . "/" . $GLOBALS["__GET"]["do_action"] . "/" . (isset($GLOBALS['__GET']['action']) ? "true" : "false"));
+_debug("xxx3 action: " . (isset($GLOBALS['__GET']["action"]) ? $GLOBALS['__GET']["action"] : "") . "/" . (isset($GLOBALS["__GET"]["do_action"])? $GLOBALS["__GET"]["do_action"]: "") . "/" . (isset($GLOBALS['__GET']['action']) ? "true" : "false"));
 if (isset($GLOBALS['__GET']["action"]))
 {
     $GLOBALS["action"]=$GLOBALS['__GET']["action"];
@@ -66,7 +66,7 @@ if($GLOBALS["action"]=="post" && isset($GLOBALS['__POST']["do_action"])) {
 }
 if($GLOBALS["action"]=="") $GLOBALS["action"]="list";
 $GLOBALS["action"]=$GLOBALS["action"];
-_debug("xxx3 action: " . $GLOBALS['__GET']["action"] . "/" . $GLOBALS["__GET"]["do_action"] . "/" . (isset($GLOBALS['__GET']['action']) ? "true" : "false"));
+_debug("xxx3 action: " . (isset($GLOBALS['__GET']["action"]) ? $GLOBALS['__GET']["action"] : "") . "/" . (isset($GLOBALS["__GET"]["do_action"])? $GLOBALS["__GET"]["do_action"]: "") . "/" . (isset($GLOBALS['__GET']['action']) ? "true" : "false"));
 
 
 // Get Item
