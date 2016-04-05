@@ -250,7 +250,26 @@ $pgtitle = array(gettext('Disks'), gettext('Software RAID'), gettext('JBOD'), (R
 ?>
 <?php include("fbegin.inc"); ?>
 <script type="text/javascript">
-<!--
+//<![CDATA[
+// Disable submit button and give its control to checkbox array.
+$(window).on("load", function() {
+	// disable type field
+	$("#type").prop("disabled", true);
+	// Init submit button
+	controlsubmitbutton(this,'<?=$checkbox_member_name;?>[]');
+	// Init toggle checkbox
+	$("#togglemembers").click(function() {
+		togglecheckboxesbyname(this, "<?=$checkbox_member_name;?>[]");
+	});
+	// Init member checkboxes
+	$("input[name='<?=$checkbox_member_name;?>[]").click(function() {
+		controlsubmitbutton(this, '<?=$checkbox_member_name;?>[]');
+	});
+	<?php if (RECORD_MODIFY == $mode_record):?>
+		// Disable controls that should not be modified anymore in edit mode.
+		enable_change(false);
+	<?php endif;?>
+});
 function enable_change(enable_change) {
 	document.iform.name.disabled = !enable_change;
 	document.iform.type.disabled = !enable_change;
@@ -260,7 +279,6 @@ function enable_change(enable_change) {
 function togglecheckboxesbyname(ego, triggerbyname) {
 	var a_trigger = document.getElementsByName(triggerbyname);
 	var n_trigger = a_trigger.length;
-	var sb_element;
 	var sb_disable = true;
 	var i = 0;
 	var n = 0;
@@ -275,13 +293,12 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 	if (n > 1) {
 		sb_disable = false;
 	}
-	sb_element = document.getElementById('submit_button'); if ((sb_element !== null) && (sb_element.disabled !== sb_disable)) { sb_element.disabled = sb_disable; }
+	$("#submit_button").prop("disabled", sb_disable);
 	if (ego.type == 'checkbox') { ego.checked = false; }
 }
 function controlsubmitbutton(ego, triggerbyname) {
 	var a_trigger = document.getElementsByName(triggerbyname);
 	var n_trigger = a_trigger.length;
-	var sb_element;
 	var sb_disable = true;
 	var i = 0;
 	var n = 0;
@@ -293,11 +310,11 @@ function controlsubmitbutton(ego, triggerbyname) {
 	if (n > 1) {
 		sb_disable = false;
 	}
-	sb_element = document.getElementById('submit_button'); if ((sb_element !== null) && (sb_element.disabled !== sb_disable)) { sb_element.disabled = sb_disable; }
+	$("#submit_button").prop("disabled", sb_disable);
 }
-// -->
+//]]>
 </script>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<table class="table_pad_none">
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
@@ -318,6 +335,8 @@ function controlsubmitbutton(ego, triggerbyname) {
 			</ul>
 		</td>
 	</tr>
+</table>
+<table id="table_pad_large">
 	<tr>
 		<td class="tabcont">
 			<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
@@ -326,26 +345,21 @@ function controlsubmitbutton(ego, triggerbyname) {
 					if (!empty($input_errors)) { print_input_errors($input_errors); }
 					if (file_exists($d_sysrebootreqd_path)) { print_info_box(get_std_save_message(0)); }
 				?>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
+				<table id="table_pad_medium">
 					<thead>
 						<?php html_titleline(gettext('Settings'));?>
 					</thead>
 					<tbody>
 						<?php
 							html_inputbox('name', gettext('Raid name'), $sphere_record['name'], '', false, 15); // readonly on modify
-							html_inputbox('type', gettext('Type'), $sphere_record['type'], '', false, 4); // fixed text 'JBOD', no modification at all
+							html_inputbox('type', gettext('Type'), $sphere_record['type'], '', false, 4, true); // fixed text 'JBOD', no modification at all
 							html_checkbox('init', gettext('Initialize'), !empty($sphere_record['init']) ? true : false, gettext('Create and initialize RAID. This will erase ALL data on the selected disks! Do not use this option if you want to add an already existing RAID again.'), '', false);
 							html_inputbox('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 40);
 							html_separator();
 						?>
 					</tbody>
 				</table>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<thead>
-						<?php html_titleline(gettext('Device List'));?>
-					</thead>
-				</table>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
+				<table id="table_pad_medium">
 					<colgroup>
 						<col style="width:1%"> <!--// checkbox -->
 						<col style="width:10%"><!--// Device -->
@@ -358,12 +372,13 @@ function controlsubmitbutton(ego, triggerbyname) {
 						<col style="width:5%"> <!--// Icons -->
 					</colgroup>
 					<thead>
+						<?php html_titleline(gettext('Device List'), 9);?>
 						<tr>
 							<td class="listhdrlr">
 								<?php if ((RECORD_NEW === $mode_record) || (RECORD_NEW_MODIFY === $mode_record)):?>
-									<input type="checkbox" name="togglemembers" onclick="javascript:togglecheckboxesbyname(this,'<?=$checkbox_member_name;?>[]')" title="<?=gettext('Invert Selection');?>"/>
+									<input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gettext('Invert Selection');?>"/>
 								<?php else:?>
-									<input type="checkbox" name="togglemembers" disabled="disabled"/>
+									<input type="checkbox" id="togglemembers" name="togglemembers" disabled="disabled"/>
 								<?php endif;?>
 							</td>
 							<td class="listhdrr"><?=gettext('Device');?></td>
@@ -384,9 +399,9 @@ function controlsubmitbutton(ego, triggerbyname) {
 								<tr>
 									<td class="listlr">
 										<?php if ($ismemberofthissraid):?>
-											<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>" onclick="javascript:controlsubmitbutton(this,'<?=$checkbox_member_name;?>[]')" checked="checked"/>
+											<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>" checked="checked"/>
 										<?php else:?>
-											<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>" onclick="javascript:controlsubmitbutton(this,'<?=$checkbox_member_name;?>[]')"/>
+											<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>"/>
 										<?php endif;?>	
 									</td>
 									<td class="listr"><?=htmlspecialchars($r_device['name']);?>&nbsp;</td>
@@ -435,17 +450,4 @@ function controlsubmitbutton(ego, triggerbyname) {
 		</td>
 	</tr>
 </table>
-<script type="text/javascript">
-<!--
-<?php if (RECORD_MODIFY == $mode_record):?>
-<!-- Disable controls that should not be modified anymore in edit mode. -->
-enable_change(false);
-<?php endif;?>
-<!-- Disable submit button and give its control to checkbox array. -->
-window.onload=function() {
-	controlsubmitbutton(this,'<?=$checkbox_member_name;?>[]');
-}
-$("#type").attr("disabled", "true");
-//-->
-</script>
 <?php include("fend.inc");?>

@@ -49,6 +49,8 @@ $gt_record_add = gettext('Add RAID');
 $gt_record_mod = gettext('Edit RAID');
 $gt_record_del = gettext('RAID is marked for removal');
 $gt_record_loc = gettext('RAID is protected');
+$gt_selection_delete = gettext('Delete Selected RAID Volumes');
+$gt_selection_delete_confirm = gettext('Do you want to delete selected RAID volumes?');
 
 // sunrise: verify if setting exists, otherwise run init tasks
 if (!(isset($config['gconcat']['vdisk']) && is_array($config['gconcat']['vdisk']))) {
@@ -139,7 +141,6 @@ function is_gconcat_mounted($nameofdevice, &$arrayofmounts) {
 	foreach ($arrayofmounts as $mount) {
 		if (0 === strpos($mount, $nameofdevice)) {
 			return true;
-			break;
 		}
 	}
 	return false;
@@ -149,10 +150,21 @@ $pgtitle = array(gettext('Disks'), gettext('Software RAID'), gettext('JBOD'), ge
 ?>
 <?php include("fbegin.inc"); ?>
 <script type="text/javascript">
-<!-- Begin JavaScript
+//<![CDATA[
+$(window).on("load", function() {
+	// Disable action buttons.
+	disableactionbuttons(true);
+	// Init toggle checkbox
+	$("#togglemembers").click(function() {
+		togglecheckboxesbyname(this, "<?=$checkbox_member_name;?>[]");
+	});
+	// Init member checkboxes
+	$("input[name='<?=$checkbox_member_name;?>[]").click(function() {
+		controlactionbuttons(this, '<?=$checkbox_member_name;?>[]');
+	});
+}); 
 function disableactionbuttons(ab_disable) {
-	var ab_element;
-	ab_element = document.getElementById('delete_selected_rows'); if ((ab_element != null) && (ab_element.disabled != ab_disable)) { ab_element.disabled = ab_disable; }
+	$("#delete_selected_rows").prop("disabled", ab_disable);
 }
 function togglecheckboxesbyname(ego, triggerbyname) {
 	var a_trigger = document.getElementsByName(triggerbyname);
@@ -160,7 +172,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 	var ab_disable = true;
 	var i = 0;
 	for (; i < n_trigger; i++) {
-		if (a_trigger[i].type == 'checkbox') {
+		if (a_trigger[i].type === 'checkbox') {
 			if (!a_trigger[i].disabled) {
 				a_trigger[i].checked = !a_trigger[i].checked;
 				if (a_trigger[i].checked) {
@@ -169,7 +181,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 			}
 		}
 	}
-	if (ego.type == 'checkbox') { ego.checked = false; }
+	if (ego.type === 'checkbox') { ego.checked = false; }
 	disableactionbuttons(ab_disable);
 }
 function controlactionbuttons(ego, triggerbyname) {
@@ -178,7 +190,7 @@ function controlactionbuttons(ego, triggerbyname) {
 	var ab_disable = true;
 	var i = 0;
 	for (; i < n_trigger; i++) {
-		if (a_trigger[i].type == 'checkbox') {
+		if (a_trigger[i].type === 'checkbox') {
 			if (a_trigger[i].checked) {
 				ab_disable = false;
 				break;
@@ -187,9 +199,9 @@ function controlactionbuttons(ego, triggerbyname) {
 	}
 	disableactionbuttons(ab_disable);
 }
-// End JavaScript -->
+//]]>
 </script>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<table id="table_pad_none">
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
@@ -210,6 +222,8 @@ function controlactionbuttons(ego, triggerbyname) {
 			</ul>
 		</td>
 	</tr>
+</table>
+<table id="table_pad_large">
 	<tr>
 		<td class="tabcont">
 			<form action="<?=$sphere_scriptname;?>" method="post">
@@ -218,10 +232,7 @@ function controlactionbuttons(ego, triggerbyname) {
 					if (!empty($savemsg)) { print_info_box($savemsg); }
 					if (updatenotify_exists($sphere_notifier)) { print_config_change_box(); }
 				?>
-				<div id="submit" style="margin-bottom:10px">
-					<input name="delete_selected_rows" id="delete_selected_rows" type="submit" class="formbtn" value="<?=gettext('Delete Selected RAID Volumes');?>" onclick="return confirm('<?=gettext('Do you want to delete selected RAID volumes?');?>')"/>
-				</div>
-				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<table id="table_pad_medium">
 					<colgroup>
 						<col style="width:1%"><!-- checkbox -->
 						<col style="width:24%"><!-- Volume Name -->
@@ -231,19 +242,20 @@ function controlactionbuttons(ego, triggerbyname) {
 						<col style="width:10%"><!-- Icons -->
 					</colgroup>
 					<thead>
+						<?php html_titleline(gettext('Overview'), 6);?>
 						<tr>
-							<td class="listhdrlr"><input type="checkbox" name="togglemembers" onclick="javascript:togglecheckboxesbyname(this,'<?=$checkbox_member_name;?>[]')" title="<?php gettext('Invert Selection');?>"/></td>
+							<td class="listhdrlr"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?php gettext('Invert Selection');?>"/></td>
 							<td class="listhdrr"><?=gettext('Volume Name');?></td>
 							<td class="listhdrr"><?=gettext('Type');?></td>
 							<td class="listhdrr"><?=gettext('Size');?></td>
 							<td class="listhdrr"><?=gettext('Status');?></td>
-							<td class="list"></td>
+							<td class="listhdrr"><?=gettext('Toolbox');?></td>
 						</tr>
 					</thead>
 					<tfoot>
 						<tr>
 							<td class="list" colspan="5"></td>
-							<td class="list"> <a href="<?=$sphere_scriptname_child;?>"><img src="images/add.png" title="<?=$gt_record_add;?>" border="0" alt="<?=$gt_record_add;?>"/></a></td>
+							<td class="listlrd"><a href="<?=$sphere_scriptname_child;?>"><img src="images/add.png" title="<?=$gt_record_add;?>" alt="<?=$gt_record_add;?>"/></a></td>
 						</tr>
 					</tfoot>
 					<tbody>
@@ -272,20 +284,21 @@ function controlactionbuttons(ego, triggerbyname) {
 								$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
 								$notprotected = !isset($sphere_record['protected']);
 								$notmounted = !is_gconcat_mounted($sphere_record['devicespecialfile'], $a_mount);
+								$normaloperation = $notprotected && $notmounted;
 							?>
 							<tr>
-								<td class="listlr">
+								<td class="<?=$normaloperation ? "listlr" : "listlrd";?>">
 									<?php if ($notdirty && $notprotected && $notmounted):?>
-										<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" onclick="javascript:controlactionbuttons(this,'<?=$checkbox_member_name;?>[]')"/>
+										<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
 									<?php else:?>
 										<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" disabled="disabled"/>
 									<?php endif;?>
 								</td>
-								<td class="listr"><?=htmlspecialchars($sphere_record['name']);?></td>
-								<td class="listr"><?=htmlspecialchars($sphere_record['type']);?></td>
-								<td class="listr"><?=$size;?>&nbsp;</td>
+								<td class="<?=$normaloperation ? "listr" : "listrd";?>"><?=htmlspecialchars($sphere_record['name']);?></td>
+								<td class="<?=$normaloperation ? "listr" : "listrd";?>"><?=htmlspecialchars($sphere_record['type']);?></td>
+								<td class="<?=$normaloperation ? "listr" : "listrd";?>"><?=$size;?>&nbsp;</td>
 								<td class="listbg"><?=$status;?>&nbsp;</td>
-								<td class="list" valign="middle" nowrap="nowrap">
+								<td class="listrd">
 									<?php if ($notdirty && $notprotected):?>
 										<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="images/edit.png" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
 									<?php else:?>
@@ -300,19 +313,26 @@ function controlactionbuttons(ego, triggerbyname) {
 						<?php endforeach; ?>
 					</tbody>
 				</table>
-				<div id="remarks">
-					<?php html_remark("info", gettext('Info'), sprintf(gettext('%s is used to create %s volumes.'), 'GEOM Concat', 'JBOD'));?>
-					<?php html_remark("warning", gettext('Warning'), sprintf(gettext("A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount point</a> first before proceeding."), 'disks_mount.php'));?>
+				<div id="submit">
+					<input name="delete_selected_rows" id="delete_selected_rows" type="submit" class="formbtn" value="<?=$gt_selection_delete;?>" onclick="return confirm('<?=$gt_selection_delete_confirm;?>')"/>
 				</div>
+				<table id="table_pad_medium">
+					<thead>
+						<?php
+							html_separator();
+							html_titleline(gettext('Messages'));
+						?>
+					</thead>
+					<tbody>
+						<?php
+							html_textinfo("info", gettext('Info'), sprintf(gettext('%s is used to create %s volumes.'), 'GEOM Concat', 'JBOD'));
+							html_textinfo("warning", gettext('Warning'), sprintf(gettext("A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount point</a> first before proceeding."), 'disks_mount.php'));
+						?>
+					</tbody>
+				</table>
 				<?php include("formend.inc"); ?>
 			</form>
 		</td>
 	</tr>
 </table>
-<script type="text/javascript">
-<!-- Disable action buttons and give their control to checkbox array. -->
-window.onload=function() {
-	disableactionbuttons(true);
-}
-</script>
 <?php include("fend.inc"); ?>
