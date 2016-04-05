@@ -1088,7 +1088,7 @@ function parse_camcontrol_info($devtype){
 
 					// Get diskinfo to get disk size
 					$diskinfo = disks_get_diskinfo($devlist["$device[0]$device[1]"]['devicespecialfile']);
-					$devlist["$device[0]$device[1]"]['size'] = $diskinfo['mediasize_mbytes'] . "MB";					
+					$devlist["$device[0]$device[1]"]['size'] = isset($diskinfo['mediasize_mbytes']) ? $diskinfo['mediasize_mbytes'] . "MB" : gettext('Unknown');					
 
 					$devlist["$device[0]$device[1]"]['controller'] = $controller[0];
 					$devlist["$device[0]$device[1]"]['controller_id'] = $controller[1];
@@ -1123,7 +1123,7 @@ function parse_controller_config(&$devlist){
 
 	foreach($devlist as &$device){
 		$devtype = '';
-		$device['desc'] = $config_disks[$device['name']]['desc'];
+		$device['desc'] = isset($config_disks[$device['name']]['desc']) ? $config_disks[$device['name']]['desc'] : '';
 		switch( $device['controller']){
 		// Experimental : requires arcmsr to add enclosure support
 		// Areca SATA[/SAS] RAID controller
@@ -1234,7 +1234,7 @@ function parse_controller_config(&$devlist){
 
 		// if S.M.A.R.T. is not available, get transfer speed from dmesg
 		if(empty($smartctl_info['transfer_rate'])){
-			mwexec2("dmesg | grep \"".$device['name'].": \"", $lines);
+			mwexec2("dmesg | grep \"".$device['name'].": \" | grep \"transfers\"", $lines);
 
 			foreach($lines as $line){
 				$matches = preg_split("/[\s\:]+/",$line);
@@ -1372,9 +1372,9 @@ function get_smartctl_info($device){
 		$smartctl_info['model'] = trim($vendor.' '.$product.' '.$revision);
  	}
 	// final fixup
-	$smartctl_info['model'] = str_replace('"', '', $smartctl_info['model']);
-	$smartctl_info['desc'] = str_replace('"', '', $smartctl_info['desc']);
-	$smartctl_info['serial'] = str_replace('"', '', $smartctl_info['serial']);
+	$smartctl_info['model'] = str_replace('"', '', isset($smartctl_info['model']) ? $smartctl_info['model'] : '');
+	$smartctl_info['desc'] = str_replace('"', '', isset($smartctl_info['desc']) ? $smartctl_info['desc'] : '');
+	$smartctl_info['serial'] = str_replace('"', '', isset($smartctl_info['serial']) ? $smartctl_info['serial'] : '');
 	return $smartctl_info;
 }
 

@@ -41,7 +41,7 @@ class Session {
 	private static function _init() {
 		session_regenerate_id(true);
 		$_SESSION['login'] = TRUE;
-		$_SESSION['authtoken'] = crypt(session_id());
+		$_SESSION['authtoken'] = password_hash(session_id(), PASSWORD_DEFAULT);
 		$_SESSION['ts'] = time();
 	}
 
