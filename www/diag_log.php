@@ -58,6 +58,7 @@ if (isset($_POST['refresh']) && $_POST['refresh']) {
 	header("Location: diag_log.php?log={$log}");
 	exit;
 }
+$searchstring = isset($_POST['searchstring']) ? $_POST['searchstring'] : '';
 ?>
 <?php include("fbegin.inc");?>
 <script type="text/javascript">
