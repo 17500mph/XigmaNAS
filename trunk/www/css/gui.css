@@ -271,6 +271,25 @@ a {
 	padding: 20px;
 	border: 1px solid #DEDBD1;
 }
+table.table_pad_zero {
+	width: 100%;
+	border: 0;
+	border-spacing: 0px; 
+	border-collapse: collapse;
+}
+table.table_pad_zero th, td {
+	padding: 0px;
+}
+table.table_pad_six {
+	width: 100%;
+	border: 0;
+	border-spacing: 0px; 
+	border-collapse: collapse;
+}
+table.table_pad_six th, td {
+	padding: 6px;
+}
+
 .label {
 	font-family: tahoma, verdana, arial, helvetica;
 	font-size: 11px;
