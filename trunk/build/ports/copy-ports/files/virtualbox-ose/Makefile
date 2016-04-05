@@ -196,7 +196,7 @@ KMK_FLAGS+=	-j${MAKE_JOBS_NUMBER}
 .include <bsd.port.pre.mk>
 
 .if ${COMPILER_TYPE} == clang
-PATCH_DEPENDS+=	${LOCALBASE}/share/kBuild/tools/GXX3.kmk:${PORTSDIR}/devel/kBuild
+PATCH_DEPENDS+=	${LOCALBASE}/share/kBuild/tools/GXX3.kmk:devel/kBuild
 EXTRA_PATCHES+=	${PATCHDIR}/extrapatch-Config.kmk \
 		${PATCHDIR}/extrapatch-src-VBox-Devices-PC-ipxe-Makefile.kmk \
 		${PATCHDIR}/extrapatch-src-recompiler-Makefile.kmk
