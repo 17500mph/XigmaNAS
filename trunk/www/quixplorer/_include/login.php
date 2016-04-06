@@ -39,7 +39,10 @@ require_once "./_include/debug.php";
 
 user_load();
 
-session_start();
+if(!isset($_SESSION))
+    {
+        session_start();
+    }
 
 function login_check ()
 {
