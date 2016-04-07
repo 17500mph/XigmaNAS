@@ -39,15 +39,18 @@ require("guiconfig.inc");
 
 $pgtitle = array(gettext("Services"),gettext("AFP"));
 
-if (!isset($config['afp']) || !is_array($config['afp']))
-	$config['afp'] = array();
+if (!(isset($config['afp']) && is_array($config['afp']))) {
+	$config['afp'] = [];
+}
+if (!(isset($config['afp']['auxparam']) && is_array($config['afp']['auxparam']))) {
+	$config['afp']['auxparam'] = [];
+}
 
 $pconfig['enable'] = isset($config['afp']['enable']);
 $pconfig['afpname'] = !empty($config['afp']['afpname']) ? $config['afp']['afpname'] : "";
 $pconfig['guest'] = isset($config['afp']['guest']);
 $pconfig['local'] = isset($config['afp']['local']);
-if (is_array($config['afp']['auxparam']))
-	$pconfig['auxparam'] = implode("\n", $config['afp']['auxparam']);
+$pconfig['auxparam'] = implode("\n", $config['afp']['auxparam']);
 
 if ($_POST) {
 	unset($input_errors);
