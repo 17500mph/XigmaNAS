@@ -71,7 +71,7 @@ if (!(isset($config['system']['loaderconf']['param']) && is_array($config['syste
 array_sort_key($config['system']['loaderconf']['param'], "name");
 $sphere_array = &$config['system']['loaderconf']['param'];
 
-$cnid = array_search_ex($sphere_record['uuid'], $a_loaderconf, "uuid"); // find index of uuid
+$cnid = array_search_ex($sphere_record['uuid'], $sphere_array, "uuid"); // find index of uuid
 $mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']); // get updatenotify mode for uuid
 $mode_record = RECORD_ERROR;
 if (false !== $cnid) { // uuid found
