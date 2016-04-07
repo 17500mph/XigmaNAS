@@ -458,7 +458,7 @@ function get_datetime_locale_samples() {
 function get_datetime_locale($timestamp = null, $format = null) {
 	global $config;
 	$retval = '';
-	$timestamp = ($timestamp === null) ? shell_exec('date "+%s"') : $timestamp;
+	$timestamp = (int)(($timestamp === null) ? shell_exec('date "+%s"') : $timestamp);
 	$format = ($format === null) ? (isset($config['system']['datetimeformat']) ? $config['system']['datetimeformat'] : 'D M d H:i:s T Y') : $format;
 	$datetime_object = new DateTime();
 	$datetime_object->setTimestamp($timestamp);
