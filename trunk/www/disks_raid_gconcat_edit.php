@@ -314,7 +314,7 @@ function controlsubmitbutton(ego, triggerbyname) {
 }
 //]]>
 </script>
-<table class="table_pad_none">
+<table id="area_navigator">
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
@@ -336,30 +336,34 @@ function controlsubmitbutton(ego, triggerbyname) {
 		</td>
 	</tr>
 </table>
-<table id="table_pad_large">
+<table id="area_data">
 	<tr>
-		<td class="tabcont">
+		<td id="area_data_frame">
 			<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
 				<?php 
 					if (!empty($errormsg)) { print_error_box($errormsg); }
 					if (!empty($input_errors)) { print_input_errors($input_errors); }
 					if (file_exists($d_sysrebootreqd_path)) { print_info_box(get_std_save_message(0)); }
 				?>
-				<table id="table_pad_medium">
+				<table id="area_data_settings">
+					<colgroup>
+						<col id="area_data_settings_col_tag">
+						<col id="area_data_settings_col_data">
+					</colgroup>
 					<thead>
 						<?php html_titleline(gettext('Settings'));?>
 					</thead>
 					<tbody>
 						<?php
-							html_inputbox('name', gettext('Raid name'), $sphere_record['name'], '', false, 15); // readonly on modify
-							html_inputbox('type', gettext('Type'), $sphere_record['type'], '', false, 4, true); // fixed text 'JBOD', no modification at all
-							html_checkbox('init', gettext('Initialize'), !empty($sphere_record['init']) ? true : false, gettext('Create and initialize RAID. This will erase ALL data on the selected disks! Do not use this option if you want to add an already existing RAID again.'), '', false);
-							html_inputbox('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 40);
+							html_inputbox2('name', gettext('Raid name'), $sphere_record['name'], '', true, 15); // readonly on modify
+							html_inputbox2('type', gettext('Type'), $sphere_record['type'], '', false, 4, true); // fixed text 'JBOD', no modification at all
+							html_checkbox2('init', gettext('Initialize'), !empty($sphere_record['init']) ? true : false, gettext('Create and initialize RAID. This will erase ALL data on the selected disks! Do not use this option if you want to add an already existing RAID again.'), '', false);
+							html_inputbox2('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 40);
 							html_separator();
 						?>
 					</tbody>
 				</table>
-				<table id="table_pad_medium">
+				<table id="area_data_selection">
 					<colgroup>
 						<col style="width:1%"> <!--// checkbox -->
 						<col style="width:10%"><!--// Device -->

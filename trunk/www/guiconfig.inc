@@ -36,8 +36,9 @@
 	either expressed or implied, of the NAS4Free Project.
 */
 
-if(function_exists("date_default_timezone_set") and function_exists("date_default_timezone_get"))
-     @date_default_timezone_set(@date_default_timezone_get());
+if(function_exists("date_default_timezone_set") and function_exists("date_default_timezone_get")) {
+	@date_default_timezone_set(@date_default_timezone_get());
+}
 
 /* make sure nothing is cached */
 if (isset($omit_nocacheheaders) && $omit_nocacheheaders) {
@@ -53,6 +54,7 @@ require_once("config.inc");
 require_once("functions.inc");
 require_once("rc.inc");
 require_once("wui.inc");
+require_once('wui2.php');
 require_once("updatenotify.inc");
 require_once("session.inc");
 
@@ -340,6 +342,14 @@ function html_inputbox($ctrlname, $title, $value, $desc, $required = false, $siz
 	$ctrl->Render();
 }
 
+function html_inputbox2($ctrlname, $title, $value, $desc, $required = false, $size = 40, $readonly = false, $smallpadding = false) {
+	$ctrl = new HTMLEditBox2($ctrlname, $title, $value, $desc, $size);
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->SetSmallPadding($smallpadding);
+	$ctrl->Render();
+}
+
 function html_passwordbox($ctrlname, $title, $value, $desc, $required = false, $size = 25, $readonly = false) {
 	$ctrl = new HTMLPasswordBox($ctrlname, $title, $value, $desc, $size);
 	$ctrl->SetRequired($required);
@@ -409,6 +419,14 @@ function html_interfacecombobox($ctrlname, $title, $value, $desc, $required = fa
 function html_checkbox($ctrlname, $title, $checked, $caption = "", $desc = "", $required = false, $onclick = "") {
 	$ctrl = new HTMLCheckBox($ctrlname, $title, $checked, $caption, $desc);
 	$ctrl->SetRequired($required);
+	$ctrl->SetJSonClick($onclick);
+	$ctrl->Render();
+}
+
+function html_checkbox2($ctrlname, $title, $checked, $caption = "", $desc = "", $required = false, $onclick = "", $smallpadding = false) {
+	$ctrl = new HTMLCheckBox2($ctrlname, $title, $checked, $caption, $desc);
+	$ctrl->SetRequired($required);
+	$ctrl->SetSmallPadding($smallpadding);
 	$ctrl->SetJSonClick($onclick);
 	$ctrl->Render();
 }
