@@ -62,3 +62,5 @@ usr/local/www/unlocked.png
 usr/local/www/up.png
 usr/local/www/vncell_bg.png
 usr/local/www/warn.png
+usr/local/www/images/navbar_active.gif
+usr/local/www/images/navbar_default.gif
