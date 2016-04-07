@@ -201,7 +201,7 @@ function controlactionbuttons(ego, triggerbyname) {
 }
 //]]>
 </script>
-<table id="table_pad_none">
+<table id="area_navigator">
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
@@ -223,16 +223,16 @@ function controlactionbuttons(ego, triggerbyname) {
 		</td>
 	</tr>
 </table>
-<table id="table_pad_large">
+<table id="area_data">
 	<tr>
-		<td class="tabcont">
+		<td id="area_data_frame">
 			<form action="<?=$sphere_scriptname;?>" method="post">
 				<?php
 					if (!empty($errormsg)) { print_error_box($errormsg); }
 					if (!empty($savemsg)) { print_info_box($savemsg); }
 					if (updatenotify_exists($sphere_notifier)) { print_config_change_box(); }
 				?>
-				<table id="table_pad_medium">
+				<table id="area_data_selection">
 					<colgroup>
 						<col style="width:1%"><!-- checkbox -->
 						<col style="width:24%"><!-- Volume Name -->
@@ -316,7 +316,7 @@ function controlactionbuttons(ego, triggerbyname) {
 				<div id="submit">
 					<input name="delete_selected_rows" id="delete_selected_rows" type="submit" class="formbtn" value="<?=$gt_selection_delete;?>" onclick="return confirm('<?=$gt_selection_delete_confirm;?>')"/>
 				</div>
-				<table id="table_pad_medium">
+				<table id="area_data_settings">
 					<thead>
 						<?php
 							html_separator();

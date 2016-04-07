@@ -83,6 +83,65 @@ pre {
 	padding-top: 4px;
 	padding-bottom: 4px;
 }
+.celltagpadnormal {
+	border-bottom: 1px solid #999999;
+	background-color: #D6D6D6;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	padding-right: 20px;
+	font-weight: normal;
+	vertical-align: top;
+}
+.celltagrequiredpadnormal {
+	border-bottom: 1px solid #999999;
+	background-color: #D6D6D6;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	padding-right: 20px;
+	font-weight: bold;
+	vertical-align: top;
+}
+.celltagpadsmall {
+	border-bottom: 1px solid #999999;
+	background-color: #D6D6D6;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 8px;
+	padding-right: 20px;
+	font-weight: normal;
+	vertical-align: top;
+}
+.celltagrequiredpadsmall {
+	border-bottom: 1px solid #999999;
+	background-color: #D6D6D6;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 8px;
+	padding-right: 20px;
+	font-weight: bold;
+	vertical-align: top;
+}
+.celldata {
+	border-bottom: 1px solid #999999;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	padding-right: 20px;
+	vertical-align: top;
+}
+.cellabout {
+	font-size: 11px;
+}
+.celldatacheckbox input {
+	float: left; 
+}
+.celldatacheckbox label {
+	margin-left: 24px;
+	font-size: 11px;
+	display: block;
+}
 .formfld {
 }
 .formfld[type=file] {
@@ -178,6 +237,7 @@ a {
 }
 .listhdrlr {
 	border-left: 1px solid #BBBBBB;
+	margin-left: 1px;
 }
 .listhdrc {
 	text-align: center;
@@ -271,41 +331,51 @@ a {
 	padding: 20px;
 	border: 1px solid #DEDBD1;
 }
-table#table_pad_none {
+table#area_navigator {
 	width: 100%;
 	border: 0;
 	border-spacing: 0px; 
 	border-collapse: collapse;
+	margin: 0px;
 }
-table#table_pad_none td, table#table_pad_none th {
-	padding: 0px;
+table#area_data {
+	width: 100%;
+	border: 0px;
+	border-spacing: 0px; 
+	border-collapse: separate;
+	margin: 0px;
 }
-table#table_pad_large {
+table#area_data_settings {
 	width: 100%;
 	border: 0;
 	border-spacing: 0px; 
-	border-collapse: collapse;
+	border-collapse: separate;
+	margin: 0px;
 }
-table#table_pad_large td, table#table_pad_large th {
-	padding: 20px;	
-}
-table#table_pad_small {
+table#area_data_settings_submit {
 	width: 100%;
 	border: 0;
 	border-spacing: 0px; 
-	border-collapse: collapse;
+	border-collapse: separate;
+	margin: 0px;
 }
-table#table_pad_small td, table#table_pad_small th {
-	padding: 2px;
-}
-table#table_pad_medium {
+table#area_data_selection {
 	width: 100%;
 	border: 0;
 	border-spacing: 0px; 
-	border-collapse: collapse;
+	border-collapse: separate;
+	margin: 0px;
 }
-table#table_pad_medium td, table#table_pad_medium th {
-	padding: 6px;
+col#area_data_settings_col_tag {
+	width: 22%;
+}
+col#area_data_settings_col_data {
+	width: 78%;
+}
+td#area_data_frame {
+	border: 0px;
+	padding: 20px;
+	background-color: #EEEEEE;
 }
 .label {
 	font-family: tahoma, verdana, arial, helvetica;
