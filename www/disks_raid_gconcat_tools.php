@@ -6,15 +6,12 @@
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
-	Portions of freenas (http://www.freenas.org).
-	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
-	All rights reserved.
-
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -34,6 +31,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
+error_reporting(E_ALL);
+ini_set('display_errors', TRUE);
+ini_set('display_startup_errors', TRUE);
+
 require("auth.inc");
 require("guiconfig.inc");
 
@@ -55,11 +56,11 @@ if ($_POST) {
 	$reqdfieldsn = array(gettext("Command"),gettext("Volume Name"),gettext("Disk"));
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
-	if (empty($input_errors)) {
-		$do_action = true;
-		$action = $_POST['action'];
-		$raid = $_POST['raid'];
-		$disk = $_POST['disk'];
+if (empty($input_errors)) {
+	$do_action = true;
+	$action = $_POST['action'];
+	$raid = $_POST['raid'];
+	$disk = $_POST['disk'];
 	}
 }
 
@@ -95,71 +96,71 @@ function raid_change() {
 // -->
 </script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td class="tabnavtbl">
+	<tr><td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabact"><a href="disks_raid_gconcat.php" title="<?=gettext("Reload page");?>"><span><?=gettext("JBOD");?></span></a></li>
-				<li class="tabinact"><a href="disks_raid_gstripe.php"><span><?=gettext("RAID 0");?></span></a></li>
-				<li class="tabinact"><a href="disks_raid_gmirror.php"><span><?=gettext("RAID 1");?></span></a></li>
-				<li class="tabinact"><a href="disks_raid_graid5.php"><span><?=gettext("RAID 5");?></span></a></li>
-				<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?=gettext("RAID 0/1/5");?></span></a></li>
-			</ul>
-  	</td>
-	</tr>
-  <tr>
-		<td class="tabnavtbl">
-		  <ul id="tabnav2">
-				<li class="tabinact"><a href="disks_raid_gconcat.php"><span><?=gettext("Management"); ?></span></a></li>
-				<li class="tabact"><a href="disks_raid_gconcat_tools.php" title="<?=gettext("Reload page");?>" ><span><?=gettext("Tools");?></span></a></li>
-				<li class="tabinact"><a href="disks_raid_gconcat_info.php"><span><?=gettext("Information"); ?></span></a></li>
+			<li class="tabact"><a href="disks_raid_gconcat.php" title="<?=gettext("Reload page");?>"><span><?=gettext("JBOD");?></span></a></li>
+			<li class="tabinact"><a href="disks_raid_gstripe.php"><span><?=gettext("RAID 0");?></span></a></li>
+			<li class="tabinact"><a href="disks_raid_gmirror.php"><span><?=gettext("RAID 1");?></span></a></li>
+			<li class="tabinact"><a href="disks_raid_graid5.php"><span><?=gettext("RAID 5");?></span></a></li>
+			<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?=gettext("RAID 0/1/5");?></span></a></li>
 		  </ul>
-		</td>
-	</tr>
-  <tr>
-    <td class="tabcont">
+	</td>
+ </tr>
+	<tr><td class="tabnavtbl">
+  			<ul id="tabnav2">
+			<li class="tabinact"><a href="disks_raid_gconcat.php"><span><?=gettext("Management"); ?></span></a></li>
+			<li class="tabact"><a href="disks_raid_gconcat_tools.php" title="<?=gettext("Reload page");?>" ><span><?=gettext("Tools");?></span></a></li>
+			<li class="tabinact"><a href="disks_raid_gconcat_info.php"><span><?=gettext("Information"); ?></span></a></li>
+		  </ul>
+  	</td>
+ </tr>
+	<tr><td class="tabcont">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	    		<?php html_titleline(gettext("JBOD Tools"));?>
+	    	<tr>
 			<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
 			<form action="disks_raid_gconcat_tools.php" method="post" name="iform" id="iform">
-			  <table width="100%" border="0" cellpadding="6" cellspacing="0">
-				<tr>
-		      <td width="22%" valign="top" class="vncellreq"><?=gettext("Volume Name");?></td>
-          <td width="78%" class="vtable">
-						<select name="raid" class="formfld" id="raid" onchange="raid_change()">
-		    	 		<option value=""><?=gettext("Must choose one");?></option>
-		    	  	<?php foreach ($a_raid as $raidv): ?>
-	    				<option value="<?=$raidv['name'];?>" <?php if ($raid === $raidv['name']) echo "selected=\"selected\"";?>>
-	    				<?php echo htmlspecialchars($raidv['name']);	?>
-	    				</option>
-		    		  <?php endforeach;?>
-		    		</select>
-		      </td>
-		    </tr>
-				<tr>
-          <td width="22%" valign="top" class="vncellreq"><?=gettext("Disk");?></td>
-          <td width="78%" class="vtable">
-           <select name="disk" class="formfld" id="disk"></select>
-           </td>
-        </tr>
-				<tr>
-					<td width="22%" valign="top" class="vncellreq"><?=gettext("Command");?></td>
-            <td width="78%" class="vtable">
-              <select name="action" class="formfld" id="action">
-                <option value="list" <?php if ($action == "list") echo "selected=\"selected\""; ?>>list</option>
-                <option value="status" <?php if ($action == "status") echo "selected=\"selected\""; ?>>status</option>
-                <option value="clear" <?php if ($action == "clear") echo "selected=\"selected\""; ?>>clear</option>
-                <option value="stop" <?php if ($action == "stop") echo "selected=\"selected\""; ?>>stop</option>
-								<option value="dump" <?php if ($action == "dump") echo "selected=\"selected\""; ?>>dump</option>
-               </select>
-            </td>
+			<table width="100%" border="0" cellpadding="6" cellspacing="0">
+		<tr>
+			<td width="22%" valign="top" class="vncellreq"><?=gettext("Volume Name");?></td>
+			<td width="78%" class="vtable">
+			<select name="raid" class="formfld" id="raid" onchange="raid_change()">
+			<option value=""><?=gettext("Must choose one");?></option>
+			<?php foreach ($a_raid as $raidv): ?>
+			<option value="<?=$raidv['name'];?>" <?php if ($raid === $raidv['name']) echo "selected=\"selected\"";?>>
+			<?php echo htmlspecialchars($raidv['name']);	?>
+		</option>
+<?php endforeach;?>
+		</select>
+	    </td>
+	  </tr>
+	    <tr>
+		<td width="22%" valign="top" class="vncellreq"><?=gettext("Disk");?></td>
+		<td width="78%" class="vtable">
+		<select name="disk" class="formfld" id="disk"></select>
+	    </td>
+	  </tr>
+	  <tr>
+		<td width="22%" valign="top" class="vncellreq"><?=gettext("Command");?></td>
+            	<td width="78%" class="vtable">
+			<select name="action" class="formfld" id="action">
+                	<option value="list" <?php if ($action == "list") echo "selected=\"selected\""; ?>>list</option>
+                	<option value="status" <?php if ($action == "status") echo "selected=\"selected\""; ?>>status</option>
+                	<option value="clear" <?php if ($action == "clear") echo "selected=\"selected\""; ?>>clear</option>
+                	<option value="stop" <?php if ($action == "stop") echo "selected=\"selected\""; ?>>stop</option>
+			<option value="dump" <?php if ($action == "dump") echo "selected=\"selected\""; ?>>dump</option>
+			</select>
+            	</td>
           </tr>
-				</table>
-				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Send Command!");?>" />
-				</div>
-				<?php if ($do_action) {
-				echo(sprintf("<div id='cmdoutput'>%s</div>", gettext("Command output:")));
-				echo('<pre class="cmdoutput">');
-				//ob_end_flush();
+	   </table>
+		<div id="submit">
+			<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Send Command!");?>" />
+			</div>
+			<?php if ($do_action) {
+			echo(sprintf("<div id='cmdoutput'>%s</div>", gettext("Command output:")));
+			echo('<pre class="cmdoutput">');
 
+				//ob_end_flush();
 				switch ($action) {
 					case "list":
 						disks_geom_cmd("concat", "list", $raid, true);
