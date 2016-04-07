@@ -46,13 +46,13 @@
 #navbarmenu li a {
 	display: block;
 	padding: 2px 11px;
-	background: black url(/images/navbar_default.gif) center center repeat-x;
+	background: black url(/images/navbar_default.png) center center repeat-x;
 	text-align: center;
 	text-decoration: none;
 	color: white;
 }
 #navbarmenu li a:hover {
-	background: transparent url(/images/navbar_active.gif) center center repeat-x;
+	background: transparent url(/images/navbar_active.png) center center repeat-x;
 	color: black;
 }
 #navbarmenu div {
@@ -65,7 +65,7 @@
 	border-left: 1px solid black;
 	border-right: 1px solid black;
 	border-bottom: 1px solid black;
-	width: 205px;
+	width: 180px;
 	line-height: 12px;
 }
 #navbarmenu div a {
@@ -78,13 +78,13 @@
 	text-align: left;
 	text-decoration: none;
 	text-indent: 5px;
-	background: #000000;
+	background: #101010;
 	font-size: 11px;
 	font-weight: normal;
 	color: white;
 }
 #navbarmenu div a:hover {
-	background: transparent url(/images/navbar_active.gif) center center repeat-x;
+	background: transparent url(/images/navbar_active.png) center center repeat-x;
 }
 #navbarmenu div span.tabseparator {
 	background: #AAAAAA;
