@@ -46,6 +46,13 @@ $checkbox_member_record = [];
 $gt_record_loc = gettext('RAID device is already in use.');
 $gt_record_opn = gettext('RAID device can be removed.');
 $prerequisites_ok = true;
+$img_path = [
+	'add' => 'images/add.png',
+	'mod' => 'images/edit.png',
+	'del' => 'images/delete.png',
+	'loc' => 'images/locked.png',
+	'unl' => 'images/unlocked.png'
+];
 
 $mode_page = ($_POST) ? PAGE_MODE_POST : (($_GET) ? PAGE_MODE_EDIT : PAGE_MODE_ADD); // detect page mode
 if (PAGE_MODE_POST == $mode_page) { // POST is Cancel or not Submit => cleanup
@@ -132,7 +139,7 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 			if (!isset($_POST[$checkbox_member_name])) { $_POST[$checkbox_member_name] = []; }
 			$sphere_record['name'] = substr($_POST['name'], 0, 15); // Make sure name is only 15 chars long (GEOM limitation).
 			$sphere_record['type'] = 'JBOD';
-			$sphere_record['init'] = $_POST['init'];
+			$sphere_record['init'] = isset($_POST['init']);
 			$sphere_record['device'] = $_POST[$checkbox_member_name];
 			$sphere_record['devicespecialfile'] = "/dev/concat/{$sphere_record['name']}";
 			$sphere_record['desc'] = $_POST['desc'];
@@ -257,13 +264,17 @@ $(window).on("load", function() {
 	$("#type").prop("disabled", true);
 	// Init submit button
 	controlsubmitbutton(this,'<?=$checkbox_member_name;?>[]');
-	// Init toggle checkbox
+	// set event on member checkboxes
+	$("input[name='<?=$checkbox_member_name;?>[]").click(function() {
+		controlsubmitbutton(this, '<?=$checkbox_member_name;?>[]');
+	});
+	// set event on toggle checkbox
 	$("#togglemembers").click(function() {
 		togglecheckboxesbyname(this, "<?=$checkbox_member_name;?>[]");
 	});
-	// Init member checkboxes
-	$("input[name='<?=$checkbox_member_name;?>[]").click(function() {
-		controlsubmitbutton(this, '<?=$checkbox_member_name;?>[]');
+	// set event on submit button
+	$("#submit_button").click(function() {
+		enable_change(true);
 	});
 	<?php if (RECORD_MODIFY == $mode_record):?>
 		// Disable controls that should not be modified anymore in edit mode.
@@ -274,7 +285,6 @@ function enable_change(enable_change) {
 	document.iform.name.disabled = !enable_change;
 	document.iform.type.disabled = !enable_change;
 	document.iform.init.disabled = !enable_change;
-	document.iform.devicespecialfile.disabled = !enable_change;
 }
 function togglecheckboxesbyname(ego, triggerbyname) {
 	var a_trigger = document.getElementsByName(triggerbyname);
@@ -303,7 +313,7 @@ function controlsubmitbutton(ego, triggerbyname) {
 	var i = 0;
 	var n = 0;
 	for (; i < n_trigger; i++) {
-		if ((a_trigger[i].type === 'checkbox') && !a_trigger[i].disabled && a_trigger[i].checked) {
+		if ((a_trigger[i].type === 'checkbox') && a_trigger[i].checked) {
 			n++;
 		}
 	}
@@ -351,48 +361,48 @@ function controlsubmitbutton(ego, triggerbyname) {
 						<col id="area_data_settings_col_data">
 					</colgroup>
 					<thead>
-						<?php html_titleline(gettext('Settings'));?>
+						<?php html_titleline2(gettext('Settings'));?>
 					</thead>
 					<tbody>
 						<?php
-							html_inputbox2('name', gettext('Raid name'), $sphere_record['name'], '', true, 15); // readonly on modify
+							html_inputbox2('name', gettext('Raid Name'), $sphere_record['name'], '', true, 15); // readonly on modify
 							html_inputbox2('type', gettext('Type'), $sphere_record['type'], '', false, 4, true); // fixed text 'JBOD', no modification at all
 							html_checkbox2('init', gettext('Initialize'), !empty($sphere_record['init']) ? true : false, gettext('Create and initialize RAID. This will erase ALL data on the selected disks! Do not use this option if you want to add an already existing RAID again.'), '', false);
 							html_inputbox2('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 40);
-							html_separator();
+							html_separator2();
 						?>
 					</tbody>
 				</table>
 				<table id="area_data_selection">
 					<colgroup>
-						<col style="width:1%"> <!--// checkbox -->
+						<col style="width:5%"> <!--// checkbox -->
 						<col style="width:10%"><!--// Device -->
 						<col style="width:10%"><!--// Partition -->
 						<col style="width:15%"><!--// Model -->
-						<col style="width:12%"><!--// Serial -->
-						<col style="width:12%"><!--// Size -->
+						<col style="width:10%"><!--// Serial -->
+						<col style="width:10%"><!--// Size -->
 						<col style="width:20%"><!--// Controller -->
 						<col style="width:15%"><!--// Description -->
 						<col style="width:5%"> <!--// Icons -->
 					</colgroup>
 					<thead>
-						<?php html_titleline(gettext('Device List'), 9);?>
+						<?php html_titleline2(gettext('Device List'), 9);?>
 						<tr>
-							<td class="listhdrlr">
+							<td class="lhelc">
 								<?php if ((RECORD_NEW === $mode_record) || (RECORD_NEW_MODIFY === $mode_record)):?>
 									<input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gettext('Invert Selection');?>"/>
 								<?php else:?>
 									<input type="checkbox" id="togglemembers" name="togglemembers" disabled="disabled"/>
 								<?php endif;?>
 							</td>
-							<td class="listhdrr"><?=gettext('Device');?></td>
-							<td class="listhdrr"><?=gettext('Partition');?></td>
-							<td class="listhdrr"><?=gettext('Model');?></td>
-							<td class="listhdrr"><?=gettext('Serial Number');?></td>
-							<td class="listhdrr"><?=gettext('Size');?></td>
-							<td class="listhdrr"><?=gettext('Controller');?></td>
-							<td class="listhdrr"><?=gettext('Name');?></td>
-							<td class="listhdrr">&nbsp;</td>
+							<td class="lhell"><?=gettext('Device');?></td>
+							<td class="lhell"><?=gettext('Partition');?></td>
+							<td class="lhell"><?=gettext('Model');?></td>
+							<td class="lhell"><?=gettext('Serial Number');?></td>
+							<td class="lhell"><?=gettext('Size');?></td>
+							<td class="lhell"><?=gettext('Controller');?></td>
+							<td class="lhell"><?=gettext('Name');?></td>
+							<td class="lhebl">&nbsp;</td>
 						</tr>
 					</thead>
 					<tbody>
@@ -401,23 +411,23 @@ function controlsubmitbutton(ego, triggerbyname) {
 							<?php $ismemberofthissraid = (isset($sphere_record['device']) && is_array($sphere_record['device']) && in_array($r_device['devicespecialfile'], $sphere_record['device']));?>
 							<?php if (($isnotmemberofasraid || $ismemberofthissraid) && ((RECORD_NEW == $mode_record) || (RECORD_NEW_MODIFY == $mode_record))):?>
 								<tr>
-									<td class="listlr">
+									<td class="lcelc">
 										<?php if ($ismemberofthissraid):?>
 											<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>" checked="checked"/>
 										<?php else:?>
 											<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>"/>
 										<?php endif;?>	
 									</td>
-									<td class="listr"><?=htmlspecialchars($r_device['name']);?>&nbsp;</td>
-									<td class="listr"><?=htmlspecialchars($r_device['partition']);?>&nbsp;</td>
-									<td class="listr"><?=htmlspecialchars($r_device['model']);?>&nbsp;</td>
-									<td class="listr"><?=htmlspecialchars($r_device['serial']);?>&nbsp;</td>
-									<td class="listr"><?=htmlspecialchars($r_device['size']);?>&nbsp;</td>
-									<td class="listr"><?=htmlspecialchars($r_device['controller']);?>&nbsp;</td>
-									<td class="listr"><?=htmlspecialchars($r_device['desc']);?>&nbsp;</td>
-									<td valign="middle" nowrap="nowrap" class="listbgc">
+									<td class="lcell"><?=htmlspecialchars($r_device['name']);?>&nbsp;</td>
+									<td class="lcell"><?=htmlspecialchars($r_device['partition']);?>&nbsp;</td>
+									<td class="lcell"><?=htmlspecialchars($r_device['model']);?>&nbsp;</td>
+									<td class="lcell"><?=htmlspecialchars($r_device['serial']);?>&nbsp;</td>
+									<td class="lcell"><?=htmlspecialchars($r_device['size']);?>&nbsp;</td>
+									<td class="lcell"><?=htmlspecialchars($r_device['controller']);?>&nbsp;</td>
+									<td class="lcell"><?=htmlspecialchars($r_device['desc']);?>&nbsp;</td>
+									<td class="lcebcd">
 										<?php if ($ismemberofthissraid):?>
-											<img src="images/unlocked.png" title="<?=gettext($gt_record_opn);?>" border="0" alt="<?=gettext($gt_record_opn);?>" />
+											<img src="<?=$img_path['unl'];?>" title="<?=gettext($gt_record_opn);?>" alt="<?=gettext($gt_record_opn);?>" />
 										<?php else:?>
 											&nbsp;
 										<?php endif;?>
@@ -426,18 +436,18 @@ function controlsubmitbutton(ego, triggerbyname) {
 							<?php endif;?>
 							<?php if ($ismemberofthissraid && (RECORD_MODIFY == $mode_record)):?>
 								<tr>
-									<td class="<?=!$ismemberofthissraid ? "listlr" : "listlrd";?>">
+									<td class="<?=!$ismemberofthissraid ? "lcelc" : "lcelcd";?>">
 										<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>" checked="checked" disabled="disabled"/>
 									</td>
-									<td class="<?=!$ismemberofthissraid ? "listr" : "listrd";?>"><?=htmlspecialchars($r_device['name']);?>&nbsp;</td>
-									<td class="<?=!$ismemberofthissraid ? "listr" : "listrd";?>"><?=htmlspecialchars($r_device['partition']);?>&nbsp;</td>
-									<td class="<?=!$ismemberofthissraid ? "listr" : "listrd";?>"><?=htmlspecialchars($r_device['model']);?>&nbsp;</td>
-									<td class="<?=!$ismemberofthissraid ? "listr" : "listrd";?>"><?=htmlspecialchars($r_device['serial']);?>&nbsp;</td>
-									<td class="<?=!$ismemberofthissraid ? "listr" : "listrd";?>"><?=htmlspecialchars($r_device['size']);?>&nbsp;</td>
-									<td class="<?=!$ismemberofthissraid ? "listr" : "listrd";?>"><?=htmlspecialchars($r_device['controller']);?>&nbsp;</td>
-									<td class="<?=!$ismemberofthissraid ? "listr" : "listrd";?>"><?=htmlspecialchars($r_device['desc']);?>&nbsp;</td>
-									<td valign="middle" nowrap="nowrap" class="listbgc">
-										<img src="images/locked.png" title="<?=gettext($gt_record_loc);?>" border="0" alt="<?=gettext($gt_record_loc);?>" />
+									<td class="<?=!$ismemberofthissraid ? "lcell" : "lcelld";?>"><?=htmlspecialchars($r_device['name']);?>&nbsp;</td>
+									<td class="<?=!$ismemberofthissraid ? "lcell" : "lcelld";?>"><?=htmlspecialchars($r_device['partition']);?>&nbsp;</td>
+									<td class="<?=!$ismemberofthissraid ? "lcell" : "lcelld";?>"><?=htmlspecialchars($r_device['model']);?>&nbsp;</td>
+									<td class="<?=!$ismemberofthissraid ? "lcell" : "lcelld";?>"><?=htmlspecialchars($r_device['serial']);?>&nbsp;</td>
+									<td class="<?=!$ismemberofthissraid ? "lcell" : "lcelld";?>"><?=htmlspecialchars($r_device['size']);?>&nbsp;</td>
+									<td class="<?=!$ismemberofthissraid ? "lcell" : "lcelld";?>"><?=htmlspecialchars($r_device['controller']);?>&nbsp;</td>
+									<td class="<?=!$ismemberofthissraid ? "lcell" : "lcelld";?>"><?=htmlspecialchars($r_device['desc']);?>&nbsp;</td>
+									<td valign="middle" nowrap="nowrap" class="lcebcd">
+										<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gettext($gt_record_loc);?>" />
 									</td>
 								</tr>
 							<?php endif;?>
@@ -445,7 +455,7 @@ function controlsubmitbutton(ego, triggerbyname) {
 					</tbody>
 				</table>
 				<div id="submit">
-					<input name="Submit" id="submit_button" type="submit" class="formbtn" value="<?=(RECORD_NEW != $mode_record) ? gettext('Save') : gettext('Add');?>" onclick="enable_change(true)" />
+					<input name="Submit" id="submit_button" type="submit" class="formbtn" value="<?=(RECORD_NEW != $mode_record) ? gettext('Save') : gettext('Add');?>"/>
 					<input name="Cancel" id="cancel_button" type="submit" class="formbtn" value="<?=gettext('Cancel');?>" />
 					<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>" />
 				</div>

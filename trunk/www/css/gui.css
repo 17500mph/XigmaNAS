@@ -83,7 +83,7 @@ pre {
 	padding-top: 4px;
 	padding-bottom: 4px;
 }
-.celltagpadnormal {
+.celltag {
 	border-bottom: 1px solid #999999;
 	background-color: #D6D6D6;
 	padding-top: 4px;
@@ -93,7 +93,7 @@ pre {
 	font-weight: normal;
 	vertical-align: top;
 }
-.celltagrequiredpadnormal {
+.celltagreq {
 	border-bottom: 1px solid #999999;
 	background-color: #D6D6D6;
 	padding-top: 4px;
@@ -103,7 +103,7 @@ pre {
 	font-weight: bold;
 	vertical-align: top;
 }
-.celltagpadsmall {
+.celltagalt {
 	border-bottom: 1px solid #999999;
 	background-color: #D6D6D6;
 	padding-top: 1px;
@@ -113,7 +113,7 @@ pre {
 	font-weight: normal;
 	vertical-align: top;
 }
-.celltagrequiredpadsmall {
+.celltagreqalt {
 	border-bottom: 1px solid #999999;
 	background-color: #D6D6D6;
 	padding-top: 1px;
@@ -131,14 +131,39 @@ pre {
 	padding-right: 20px;
 	vertical-align: top;
 }
+.celldatareq {
+	border-bottom: 1px solid #999999;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	padding-right: 20px;
+	vertical-align: top;
+}
+.celldataalt {
+	border-bottom: 1px solid #999999;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 8px;
+	padding-right: 20px;
+	vertical-align: top;
+}
+.celldatareqalt {
+	border-bottom: 1px solid #999999;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 8px;
+	padding-right: 20px;
+	vertical-align: top;
+}
 .cellabout {
 	font-size: 11px;
 }
 .celldatacheckbox input {
-	float: left; 
+	float: left;
+	margin: 0px;
 }
 .celldatacheckbox label {
-	margin-left: 24px;
+	margin-left: 20px;
 	font-size: 11px;
 	display: block;
 }
@@ -345,26 +370,19 @@ table#area_data {
 	border-collapse: separate;
 	margin: 0px;
 }
+
+td#area_data_frame {
+	border: 0px;
+	padding: 20px;
+	background-color: #EEEEEE;
+}
+
 table#area_data_settings {
-	width: 100%;
 	border: 0;
 	border-spacing: 0px; 
 	border-collapse: separate;
 	margin: 0px;
-}
-table#area_data_settings_submit {
 	width: 100%;
-	border: 0;
-	border-spacing: 0px; 
-	border-collapse: separate;
-	margin: 0px;
-}
-table#area_data_selection {
-	width: 100%;
-	border: 0;
-	border-spacing: 0px; 
-	border-collapse: separate;
-	margin: 0px;
 }
 col#area_data_settings_col_tag {
 	width: 22%;
@@ -372,11 +390,40 @@ col#area_data_settings_col_tag {
 col#area_data_settings_col_data {
 	width: 78%;
 }
-td#area_data_frame {
-	border: 0px;
-	padding: 20px;
-	background-color: #EEEEEE;
+table#area_data_selection {
+	margin: 0;
+	border: 0;
+	border-spacing: 0px; 
+	border-collapse: separate;
+	width: 100%;
+	table-layout: fixed;
 }
+/*
+table#area_data_selection tr:hover td {
+	background-color:#CCCCCC;
+}
+*/
+table#area_data_settings_submit {
+	margin: 0;
+	border: 0;
+	border-spacing: 0px; 
+	border-collapse: separate;
+	width: 100%;
+}
+table#area_data_messages {
+	margin: 0;
+	border: 0;
+	border-spacing: 0px; 
+	border-collapse: separate;
+	width: 100%;
+}
+col#area_data_messages_col_tag {
+	width: 10%;
+}
+col#area_data_messages_col_data {
+	width: 90%;
+}
+
 .label {
 	font-family: tahoma, verdana, arial, helvetica;
 	font-size: 11px;
@@ -589,4 +636,98 @@ pre.cmdoutput {
 .errortext{
 	color: red;
 	font-weight: bold;
+}
+
+/*
+	1-3 element
+		lhe: list header element
+		lce: list cell element
+	4 - border
+		l: left border only
+		b: both left and right border
+		r: right border only
+		n: no border
+	5 - horizontal alignment
+		l: left
+		c: center
+		r: right
+	6 - background
+		_: normal
+		d: dark
+
+	special classes
+	.lhetop: header topic element
+	.lceadd: cell containing the add icon, default .lcebld
+*/
+
+.lhell, .lhebl, .lhelc, .lhebc {
+	margin: 0;
+	border-top-width: 0;
+	border-bottom: 1px solid #999999;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 6px;
+	padding-left: 6px;
+	background: #BBBBBB url("/images/gradient_listhdr.png") repeat-x scroll left top;
+	font-size: 11px;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.lcenl, .lcell, .lcebl, .lcelc, .lcebc, .lcelld, .lcebld, .lceadd, .lcelcd, .lcebcd {
+	margin: 0;
+	border-top-width: 0;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 6px;
+	padding-right: 6px;
+	vertical-align: middle;
+	font-size: 11px;
+	font-weight: normal;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.lcell, .lcebl, .lcelc, .lcebc, .lcelld, .lcebld, .lceadd, .lcelcd, .lcebcd {
+	border-bottom: 1px solid #999999;
+}
+.lcenl {
+	border-bottom-width: 0;
+}
+.lhell, .lhebl, .lhelc, .lhebc, .lcell, .lcebl, .lcelc, .lcebc, .lcelld, .lcebld, .lceadd, .lcelcd, .lcebcd {
+	border-left: 1px solid #999999;
+}
+.lhebl, .lhebc, .lcebl, .lcebc, .lcebld, .lceadd, .lcebcd {
+	border-right: 1px solid #999999;
+}
+.lhell, .lhebl, .lcell, .lcebl, .lcelld, .lcebld, .lceadd {
+	text-align: left;
+}
+.lhelc, .lhebc, .lcelc, lcebc, .lcelcd, .lcebcd {
+	text-align: center;
+}
+.lcell, .lcebl, .lcelc, .lcebc {
+	background-color: #FCFCFC;
+}
+.lcelld, .lcebld, .lceadd, .lcelcd, .lcebcd {
+	background-color: #E0E0E0;
+}
+.lhetop {
+	margin: 0;
+	border: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 6px;
+	padding-right: 16px;
+	background-image: url("/images/listtopic_bg.png");
+	background-color: #95A7C0;
+	vertical-align: middle;
+	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #FFFFFF;
 }

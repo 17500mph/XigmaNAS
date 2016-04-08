@@ -342,14 +342,6 @@ function html_inputbox($ctrlname, $title, $value, $desc, $required = false, $siz
 	$ctrl->Render();
 }
 
-function html_inputbox2($ctrlname, $title, $value, $desc, $required = false, $size = 40, $readonly = false, $smallpadding = false) {
-	$ctrl = new HTMLEditBox2($ctrlname, $title, $value, $desc, $size);
-	$ctrl->SetRequired($required);
-	$ctrl->SetReadOnly($readonly);
-	$ctrl->SetSmallPadding($smallpadding);
-	$ctrl->Render();
-}
-
 function html_passwordbox($ctrlname, $title, $value, $desc, $required = false, $size = 25, $readonly = false) {
 	$ctrl = new HTMLPasswordBox($ctrlname, $title, $value, $desc, $size);
 	$ctrl->SetRequired($required);
@@ -423,14 +415,6 @@ function html_checkbox($ctrlname, $title, $checked, $caption = "", $desc = "", $
 	$ctrl->Render();
 }
 
-function html_checkbox2($ctrlname, $title, $checked, $caption = "", $desc = "", $required = false, $onclick = "", $smallpadding = false) {
-	$ctrl = new HTMLCheckBox2($ctrlname, $title, $checked, $caption, $desc);
-	$ctrl->SetRequired($required);
-	$ctrl->SetSmallPadding($smallpadding);
-	$ctrl->SetJSonClick($onclick);
-	$ctrl->Render();
-}
-
 function html_separator($colspan = 2, $idname = '') {
 	$ctrl = new HTMLSeparator();
 	$ctrl->SetColSpan($colspan);
@@ -499,6 +483,162 @@ function html_folderbox($ctrlname, $title, $value, $desc, $path, $required = fal
 
 function html_minidlnabox($ctrlname, $title, $value, $desc, $path, $required = false, $readonly = false) {
 	$ctrl = new HTMLFolderBox1($ctrlname, $title, $value, $desc);
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->SetPath($path);
+	$ctrl->Render();
+}
+
+function html_inputbox2($ctrlname, $title, $value, $desc, $required = false, $size = 40, $readonly = false, $altpadding = false) {
+	$ctrl = new HTMLEditBox2($ctrlname, $title, $value, $desc, $size);
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->SetAltPadding($altpadding);
+	$ctrl->Render();
+}
+
+function html_passwordbox2($ctrlname, $title, $value, $desc, $required = false, $size = 25, $readonly = false) {
+	$ctrl = new HTMLPasswordBox2($ctrlname, $title, $value, $desc, $size);
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->Render();
+}
+
+function html_passwordconfbox2($ctrlname, $ctrlnameconf, $title, $value, $valueconf, $desc, $required = false, $size = 25, $readonly = false) {
+	$ctrl = new HTMLPasswordConfBox2($ctrlname, $ctrlnameconf, $title, $value, $valueconf, $desc, $size);
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->Render();
+}
+
+function html_textarea2($ctrlname, $title, $value, $desc, $required = false, $columns = 40, $rows = 5, $readonly = false, $wrap = true) {
+	$ctrl = new HTMLTextArea2($ctrlname, $title, $value, $desc, $columns, $rows);
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->SetWrap($wrap);
+	$ctrl->Render();
+}
+
+function html_filechooser2($ctrlname, $title, $value, $desc, $path, $required = false, $size = 67, $readonly = false) {
+	$ctrl = new HTMLFileChooser2($ctrlname, $title, $value, $desc, $size);
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->SetPath($path);
+	$ctrl->Render();
+}
+
+function html_combobox2($ctrlname, $title, $value, $options, $desc, $required = false, $readonly = false, $onclick = "") {
+	$ctrl = new HTMLComboBox2($ctrlname, $title, $value, $options, $desc);
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->SetJSonClick($onclick);
+	$ctrl->Render();
+}
+
+function html_mountcombobox2($ctrlname, $title, $value, $desc, $required = false, $readonly = false) {
+	$ctrl = new HTMLMountComboBox2($ctrlname, $title, $value, $desc);
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->Render();
+}
+
+function html_timezonecombobox2($ctrlname, $title, $value, $desc, $required = false, $readonly = false) {
+	$ctrl = new HTMLTimeZoneComboBox2($ctrlname, $title, $value, $desc);
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->Render();
+}
+
+function html_languagecombobox2($ctrlname, $title, $value, $desc, $required = false, $readonly = false) {
+	$ctrl = new HTMLLanguageComboBox2($ctrlname, $title, $value, $desc);
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->Render();
+}
+
+function html_interfacecombobox2($ctrlname, $title, $value, $desc, $required = false, $readonly = false) {
+	$ctrl = new HTMLInterfaceComboBox2($ctrlname, $title, $value, $desc);
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->Render();
+}
+
+function html_checkbox2($ctrlname, $title, $checked, $caption = "", $desc = "", $required = false, $onclick = "", $altpadding = false) {
+	$ctrl = new HTMLCheckBox2($ctrlname, $title, $checked, $caption, $desc);
+	$ctrl->SetRequired($required);
+	$ctrl->SetAltPadding($altpadding);
+	$ctrl->SetJSonClick($onclick);
+	$ctrl->Render();
+}
+
+function html_separator2($colspan = 2, $idname = '') {
+	$ctrl = new HTMLSeparator2();
+	$ctrl->SetColSpan($colspan);
+	$ctrl->SetIdName($idname);
+	$ctrl->Render();
+}
+
+function html_titleline2($title, $colspan = 2, $idname = '') {
+	$ctrl = new HTMLTitleLine2($title);
+	$ctrl->SetColSpan($colspan);
+	$ctrl->SetIdName($idname);
+	$ctrl->Render();
+}
+
+function html_titleline_checkbox2($ctrlname, $title, $value, $caption, $onclick = "", $colspan = 2) {
+	$ctrl = new HTMLTitleLineCheckBox2($ctrlname, $title, $value, $caption);
+	$ctrl->SetColSpan($colspan);
+	$ctrl->SetJSonClick($onclick);
+	$ctrl->Render();
+}
+
+function html_text2($ctrlname, $title, $text) {
+	$ctrl = new HTMLText2($ctrlname, $title, $text);
+	$ctrl->Render();
+}
+
+function html_textinfo2($ctrlname, $title, $text) {
+	$ctrl = new HTMLTextInfo2($ctrlname, $title, $text);
+	$ctrl->Render();
+}
+
+function html_remark2($ctrlname, $title, $text) {
+	$ctrl = new HTMLRemark2($ctrlname, $title, $text);
+	$ctrl->Render();
+}
+
+function html_listbox2($ctrlname, $title, $value, $options, $desc, $required = false, $readonly = false, $onclick = "") {
+	$ctrl = new HTMLListBox2($ctrlname, $title, $value, $options, $desc);
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->SetJSonClick($onclick);
+	$ctrl->Render();
+}
+
+function html_ipv4addrbox2($ctrlname, $ctrlnamenetmask, $title, $value, $valuenetmask, $desc, $required = false, $readonly = false) {
+	$ctrl = new HTMLIPv4AddressBox2($ctrlname, $ctrlnamenetmask, $title, $value, $valuenetmask, $desc);
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->Render();
+}
+
+function html_ipv6addrbox2($ctrlname, $ctrlnamenetmask, $title, $value, $valuenetmask, $desc, $required = false, $readonly = false) {
+	$ctrl = new HTMLIPv6AddressBox2($ctrlname, $ctrlnamenetmask, $title, $value, $valuenetmask, $desc);
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->Render();
+}
+
+function html_folderbox2($ctrlname, $title, $value, $desc, $path, $required = false, $readonly = false) {
+	$ctrl = new HTMLFolderBox2($ctrlname, $title, $value, $desc);
+	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
+	$ctrl->SetPath($path);
+	$ctrl->Render();
+}
+
+function html_minidlnabox2($ctrlname, $title, $value, $desc, $path, $required = false, $readonly = false) {
+	$ctrl = new HTMLFolderBox12($ctrlname, $title, $value, $desc);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetPath($path);
