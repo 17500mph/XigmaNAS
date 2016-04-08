@@ -6,10 +6,6 @@
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
-	Portions of freenas (http://www.freenas.org).
-	Copyright (c) 2005-2011 by Olivier Cochard (olivier@freenas.org).
-	All rights reserved.
-
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
@@ -45,147 +41,121 @@ class HTMLBaseControl2 {
 	var $_value;
 	var $_required = false;
 	var $_readonly = false;
-	var $_smallpadding = false;
-
+	var $_altpadding = false;
+	var $_classtag = 'celltag';
+	var $_classdata = 'celldata';
+	var $_classaddonrequired = 'req';
+	var $_classaddonpadalt = 'alt';
+	// constructor method
 	public function __construct($ctrlname, $title, $value, $description = "") {
 		$this->SetCtrlName($ctrlname);
 		$this->SetTitle($title);
 		$this->SetDescription($description);
 		$this->SetValue($value);
 	}
-	
-	function IsSmallPadding() {
-		return $this->_smallpadding;
-	}
-	
-	function SetSmallPadding($bool) {
-		$this->_smallpadding = $bool;
-	}
-
-	function IsReadOnly() {
-		return $this->_readonly;
-	}
-
-	function SetReadOnly($bool) {
-		$this->_readonly = $bool;
-	}
-
-	function IsRequired() {
-		return $this->_required;
-	}
-
-	function SetRequired($bool) {
-		$this->_required = $bool;
-	}
-
-	function GetValue() {
-		return $this->_value;
-	}
-
-	function SetValue($value) {
-		$this->_value = $value;
-	}
-
-	function GetDescription() {
-		return $this->_description;
-	}
-
-	function SetDescription($description) {
-		$this->_description = $description;
-	}
-
-	function GetTitle() {
-		return $this->_title;
-	}
-
-	function SetTitle($title) {
-		$this->_title = $title;
-	}
-
-	function GetCtrlName() {
-		return $this->_ctrlname;
-	}
-
-	function SetCtrlName($name) {
-		$this->_ctrlname = $name;
-	}
-
-	function GetClass() {
-		$class = 'celltag';
-		if (true === $this->IsRequired()) {
-			$class .= 'required';
-		}
-		if (true === $this->IsSmallPadding()) {
-			$class .= 'padsmall';
-		} else {
-			$class .= 'padnormal';
-		}
+	// get methods
+	function GetCtrlName() { return $this->_ctrlname; }
+	function GetTitle() { return $this->_title; }
+	function GetDescription() { return $this->_description; }
+	function GetValue() { return $this->_value; }
+	function IsRequired() { return $this->_required; }
+	function IsReadOnly() { return $this->_readonly; }
+	function IsAltPadding() { return $this->_altpadding; }
+	function GetClassTag() { return $this->_classtag; }
+	function GetClassData() { return $this->_classdata; }
+	function GetClassAddonRequired() { return $this->_classaddonrequired; }
+	function GetClassAddonPadAlt() { return $this->_classaddonpadalt; }
+	// set methods
+	function SetCtrlName($name) { $this->_ctrlname = $name; }
+	function SetTitle($title) { $this->_title = $title; }
+	function SetDescription($description) { $this->_description = $description; }
+	function SetValue($value) { $this->_value = $value; }
+	function SetRequired($bool) { $this->_required = $bool; }
+	function SetReadOnly($bool) { $this->_readonly = $bool; 	}
+	function SetAltPadding($bool) { $this->_altpadding = $bool; }
+	function SetClassTag($cssclass) { $this ->_classtag = $cssclass; }
+	function SetClassData($cssclass) { $this->_classdata = $cssclass; }
+	function SetClassAddonRequired($cssclass) { $this->_classaddonrequired = $cssclass; }
+	function SetClassAddonPadAlt($cssclass) { $this->_classaddonpadalt = $cssclass; }
+	// support methods
+	function GetClassOfTag() {
+		$class = $this->GetClassTag();
+		if (true === $this->IsRequired()) { $class .= $this->GetClassAddonRequired(); }
+		if (true === $this->IsAltPadding()) { $class .= $this->GetClassAddonPadAlt(); }
 		return $class;
 	}
-
+	function GetClassOfData() {
+		$class = $this->GetClassData();
+		if (true === $this->IsRequired()) { $class .= $this->GetClassAddonRequired(); }
+		if (true === $this->IsAltPadding()) { $class .= $this->GetClassAddonPadAlt(); }
+		return $class;
+	}
 	function Render() {
 		$ctrlname = $this->GetCtrlName();
 		$title = $this->GetTitle();
-		$class = $this->GetClass();
+		$classtag = $this->GetClassOfTag();
+		$classdata = $this->GetClassOfData();
 		$description = $this->GetDescription();
 
 		echo "<tr id='{$ctrlname}_tr'>\n";
-		echo "	<td valign='top' class='{$class}'><label for='$ctrlname'>{$title}</label></td>\n";
-		echo "	<td class='celldata'>\n";
+		echo "	<td class='{$classtag}'><label for='$ctrlname'>{$title}</label></td>\n";
+		echo "	<td class='{$classdata}'>\n";
 		$this->RenderCtrl();
 		if (!empty($description))
 			echo "		<br /><span class='tagabout'>{$description}</span>\n";
 		echo "	</td>\n";
 		echo "</tr>\n";
 	}
-
 	function RenderCtrl() {
 	}
 }
 class HTMLBaseControlJS2 extends HTMLBaseControl2 {
 	var $_onclick = "";
-
-	function SetJSonClick($code) {
-		$this->_onclick = $code;
-	}
-
-	function GetJSonClick() {
-		return $this->_onclick;
-	}
+	// get methods
+	function GetJSonClick() { return $this->_onclick; }
+	// set methods
+	function SetJSonClick($code) { $this->_onclick = $code; }
 }
 class HTMLEditBox2 extends HTMLBaseControl2 {
 	var $_size = 40;
-
+	var $_classinputtext = 'formfld';
+	var $_classinputtextro = 'formfld';
+	
+	// constructor method
 	function __construct($ctrlname, $title, $value, $description, $size) {
 		parent::__construct($ctrlname, $title, $value, $description);
 		$this->SetSize($size);
 	}
-
-	function GetSize() {
-		return $this->_size;
-	}
-
-	function SetSize($size) {
-		$this->_size = $size;
-	}
-
+	// get methods
+	function GetSize() { return $this->_size; }
+	function GetClassInputText() { return $this->_classinputtext; }
+	function GetClassInputTextRO() { return $this->_classinputtextro; }	
+	// set methods
+	function SetSize($size) { $this->_size = $size; }
+	function SetClassInputText($param) { $this->_classinputtext = $param; }
+	function SetClassInputTextRO($param) { $this->_classinputtextro = $param; }
+	// support functions
 	function GetParam() {
 		$param = "";
 		if (true === $this->IsReadOnly())
 			$param .= "readonly=\"readonly\" ";
 		return $param;
 	}
-
+	function GetClassOfInputText() {
+		return ($this->IsReadOnly() ? $this->GetClassInputTextRO() : $this->GetClassInputText());
+	}
 	function RenderCtrl() {
 		$ctrlname = $this->GetCtrlName();
 		$value = htmlspecialchars($this->GetValue(), ENT_QUOTES);
 		$size = $this->GetSize();
 		$param = $this->GetParam();
-
-		echo "		<input name='{$ctrlname}' type='text' class='formfld' id='{$ctrlname}' size='{$size}' value=\"{$value}\" {$param} />\n";
+		$classinputtext = $this->GetClassOfInputText();
+		echo "		<input name='{$ctrlname}' type='text' class='{$classinputtext}' id='{$ctrlname}' size='{$size}' maxlength='{$size}' value=\"{$value}\" {$param} />\n";
 	}
 }
 class HTMLPasswordBox2 extends HTMLEditBox2 {
+	var $_classinputpassword = 'formfld';
+	// constructor method
 	function __construct($ctrlname, $title, $value, $description, $size) {
 		$this->SetCtrlName($ctrlname);
 		$this->SetTitle($title);
@@ -193,20 +163,28 @@ class HTMLPasswordBox2 extends HTMLEditBox2 {
 		$this->SetDescription($description);
 		$this->SetSize($size);
 	}
-
+	// get methods
+	function GetClassInputPassword() { return $this->_classinputpassword; }
+	// set methods
+	function SetClassInputPassword($cssclass) { $this->_classinputpassword = $cssclass; }
+	// support methods
+	function GetClassOfInputPassword() {
+		return $this->GetClassInputPassword();
+	}
 	function RenderCtrl() {
 		$ctrlname = $this->GetCtrlName();
 		$value = htmlspecialchars($this->GetValue(), ENT_QUOTES);
 		$size = $this->GetSize();
 		$param = $this->GetParam();
-
-		echo "		<input name='{$ctrlname}' type='password' class='formfld' id='{$ctrlname}' size='{$size}' value='{$value}' {$param} />\n";
+		$classinputpassword = $this->GetClassOfInputPassword();
+		echo "		<input name='{$ctrlname}' type='password' class='{$classinputpassword}' id='{$ctrlname}' size='{$size}' value='{$value}' {$param} />\n";
 	}
 }
 class HTMLPasswordConfBox2 extends HTMLEditBox2 {
 	var $_ctrlnameconf = "";
 	var $_valueconf = "";
-
+	var $_classinputpassword = 'formfld';
+	// constructor method
 	function __construct($ctrlname, $ctrlnameconf, $title, $value, $valueconf, $description, $size) {
 		$this->SetCtrlName($ctrlname);
 		$this->SetCtrlNameConf($ctrlnameconf);
@@ -216,23 +194,18 @@ class HTMLPasswordConfBox2 extends HTMLEditBox2 {
 		$this->SetDescription($description);
 		$this->SetSize($size);
 	}
-
-	function GetCtrlNameConf() {
-		return $this->_ctrlnameconf;
+	// get methods
+	function GetCtrlNameConf() { return $this->_ctrlnameconf; }
+	function GetValueConf() { return $this->_valueconf; }
+	function GetClassInputPassword() { return $this->_classinputpassword; }
+	// set methods
+	function SetCtrlNameConf($name) { $this->_ctrlnameconf = $name; }
+	function SetValueConf($value) { $this->_valueconf = $value; }
+	function SetClassInputPassword($cssclass) { $this->_classinputpassword = $cssclass; }
+	// support methods
+	function GetClassOfInputPassword() {
+		return $this->GetClassInputPassword();
 	}
-
-	function SetCtrlNameConf($name) {
-		$this->_ctrlnameconf = $name;
-	}
-
-	function GetValueConf() {
-		return $this->_valueconf;
-	}
-
-	function SetValueConf($value) {
-		$this->_valueconf = $value;
-	}
-
 	function RenderCtrl() {
 		$ctrlname = $this->GetCtrlName();
 		$ctrlnameconf = $this->GetCtrlNameConf();
@@ -241,16 +214,18 @@ class HTMLPasswordConfBox2 extends HTMLEditBox2 {
 		$size = $this->GetSize();
 		$param = $this->GetParam();
 		$caption = htmlspecialchars(gettext("Confirmation"), ENT_QUOTES);
-
-		echo "		<input name='{$ctrlname}' type='password' class='formfld' id='{$ctrlname}' size='{$size}' value='{$value}' {$param} /><br />\n";
-		echo "    <input name='{$ctrlnameconf}' type='password' class='formfld' id='{$ctrlnameconf}' size='{$size}' value='{$valueconf}' {$param} />&nbsp;({$caption})\n";
+		$classinputpassword = $this->GetClassOfInputPassword();
+		echo "		<input name='{$ctrlname}' type='password' class='{$classinputpassword}' id='{$ctrlname}' size='{$size}' value='{$value}' {$param} /><br />\n";
+		echo "		<input name='{$ctrlnameconf}' type='password' class='{$classinputpassword}' id='{$ctrlnameconf}' size='{$size}' value='{$valueconf}' {$param} />&nbsp;({$caption})\n";
 	}
 }
 class HTMLTextArea2 extends HTMLEditBox2 {
 	var $_columns = 40;
 	var $_rows = 5;
 	var $_wrap = true;
-
+	var $_classtextarea = 'formpre';
+	var $_classtextarearo = 'formpre';
+	// constructor method
 	function __construct($ctrlname, $title, $value, $description, $columns, $rows) {
 		$this->SetCtrlName($ctrlname);
 		$this->SetTitle($title);
@@ -259,46 +234,36 @@ class HTMLTextArea2 extends HTMLEditBox2 {
 		$this->SetColumns($columns);
 		$this->SetRows($rows);
 	}
-
-	function GetColumns() {
-		return $this->_columns;
-	}
-
-	function SetColumns($columns) {
-		$this->_columns = $columns;
-	}
-
-	function GetRows() {
-		return $this->_rows;
-	}
-
-	function SetRows($rows) {
-		$this->_rows = $rows;
-	}
-
-	function IsWrap() {
-		return $this->_wrap;
-	}
-
-	function SetWrap($bool) {
-		$this->_wrap = $bool;
-	}
-
+	// get methods
+	function GetColumns() { return $this->_columns; }
+	function GetRows() { return $this->_rows; }
+	function IsWrap() { return $this->_wrap; }
+	function GetClassTextarea() { return $this->_classtextarea; }
+	function GetClassTextareaRO() { return $this->_classtextarearo; }
+	// set methods
+	function SetColumns($columns) { $this->_columns = $columns; }
+	function SetRows($rows) { $this->_rows = $rows; }
+	function SetWrap($bool) { $this->_wrap = $bool; }
+	function SetClasstextarea($cssclass) { $this->_classtextarea = $cssclass; }
+	function SetClasstextareaRO($cssclass) { $this->_classtextarearo = $cssclass; }
+	// support methods
 	function GetParam() {
 		$param = parent::GetParam();
 		if (false === $this->IsWrap())
 			$param .= " wrap='off'";
 		return $param;
 	}
-
+	function GetClassOfTextarea() {
+		return ($this->IsReadOnly() ? $this->GetClassTextareaRO() : $this->GetClassTextarea());
+	}
 	function RenderCtrl() {
 		$ctrlname = $this->GetCtrlName();
 		$value = htmlspecialchars($this->GetValue(), ENT_QUOTES);
 		$columns = $this->GetColumns();
 		$rows = $this->GetRows();
 		$param = $this->GetParam();
-
-		echo "		<textarea name='{$ctrlname}' cols='{$columns}' rows='{$rows}' id='{$ctrlname}' class='formpre' {$param}>{$value}</textarea>\n";
+		$classtextarea = $this->GetClassOfTextarea();
+		echo "		<textarea name='{$ctrlname}' cols='{$columns}' rows='{$rows}' id='{$ctrlname}' class='{$classtextarea}' {$param}>{$value}</textarea>\n";
 	}
 }
 class HTMLFileChooser2 extends HTMLEditBox2 {
@@ -405,28 +370,24 @@ class HTMLIPv6AddressBox2 extends HTMLIPAddressBox2 {
 }
 class HTMLCheckBox2 extends HTMLBaseControlJS2 {
 	var $_caption = "";
-
+	var $_classcheckbox = 'celldatacheckbox';
+	var $_classcheckboxro = 'celldatacheckbox';
+	// constructor method
 	function __construct($ctrlname, $title, $value, $caption, $description = "") {
 		parent::__construct($ctrlname, $title, $value, $description);
 		$this->SetCaption($caption);
 	}
-
-	function GetCaption() {
-		return $this->_caption;
-	}
-
-	function SetCaption($caption) {
-		$this->_caption = $caption;
-	}
-
-	function IsChecked() {
-		return $this->GetValue();
-	}
-
-	function SetChecked($bool) {
-		$this->SetValue($bool);
-	}
-
+	// get methods
+	function IsChecked() { return $this->GetValue(); }
+	function GetCaption() { return $this->_caption; }
+	function GetClassCheckbox() { return $this->_classcheckbox; }
+	function GetClassCheckboxRO() { return $this->_classcheckboxro; }
+	// set methods
+	function SetChecked($bool) { $this->SetValue($bool); }
+	function SetCaption($caption) { $this->_caption = $caption; }
+	function SetClassCheckbox($cssclass) { $this->_classcheckbox = $cssclass; }
+	function SetClassCheckboxRO($cssclass) { $this->_classcheckboxro = $cssclass; }
+	// support methods
 	function GetParam() {
 		$param = "";
 		if (true === $this->IsChecked())
@@ -436,16 +397,18 @@ class HTMLCheckBox2 extends HTMLBaseControlJS2 {
 			$param .= "onclick='{$onclick}' ";
 		return $param;
 	}
-
+	function GetClassOfCheckbox() {
+		return ($this->IsReadOnly() ? $this->GetClassCheckboxRO() : $this->GetClassCheckbox());
+	}
 	function RenderCtrl() {
 		$ctrlname = $this->GetCtrlName();
 		$caption = $this->GetCaption();
 		$description = $this->GetDescription();
 		$param = $this->GetParam();
-
-		echo "<div class='celldatacheckbox'>";
-		echo "<input name='{$ctrlname}' type='checkbox' id='{$ctrlname}' value='yes' {$param} />";
-		echo "<label for='{$ctrlname}'>{$caption}</label>";
+		$classcheckbox = $this->GetClassOfCheckbox();
+		echo "<div class='{$classcheckbox}'>";
+		echo "	<input name='{$ctrlname}' type='checkbox' id='{$ctrlname}' value='yes' {$param} />";
+		echo "	<label for='{$ctrlname}'>{$caption}</label>";
 		echo "</div>";
 	}
 }
@@ -627,57 +590,54 @@ class HTMLListBox2 extends HTMLMultiSelectControl2 {
 class HTMLSeparator2 extends HTMLBaseControl2 {
 	var $_colspan = 2;
 	var $_idname = '';
-
+	var $_classseparator = 'list';
+	// constructor method
 	function __construct() {
-		// Nothing to do here...
 	}
-
-	function GetColSpan() {
-		return $this->_colspan;
+	// get methods
+	function GetColSpan() { return $this->_colspan; }
+	function GetClassSeparator() { return $this->_classseparator; }
+	// set methods
+	function SetColSpan($colspan) { $this->_colspan = $colspan; }
+	function SetIdName($idname) { $this->_idname = $idname; }
+	function SetClassSeparator($cssclass) { $this->_classseparator = $cssclass; }
+	// support methods
+	function GetClassOfSeparator() {
+		return $this->GetClassSeparator();
 	}
-
-	function SetColSpan($colspan) {
-		$this->_colspan = $colspan;
-	}
-
-	function SetIdName($idname) {
-		$this->_idname = $idname;
-	}
-
 	function Render() {
 		$colspan = $this->GetColSpan();
-
+		$classseparator = $this->GetClassOfSeparator();
 		echo ($this->_idname != '') ? "<tr id='{$this->_idname}'>\n" : "<tr>\n";
-		echo "	<td colspan='{$colspan}' class='list' height='12'></td>\n";
+		echo "	<td colspan='{$colspan}' class='{$classseparator}' height='12'></td>\n";
 		echo "</tr>\n";
 	}
 }
 class HTMLTitleLine2 extends HTMLBaseControl2 {
 	var $_colspan = 2;
 	var $_idname = '';
-
+	var $_classtopic = 'lhetop';
+	// constructor method
 	function __construct($title) {
 		$this->SetTitle($title);
 	}
-
-	function GetColSpan() {
-		return $this->_colspan;
+	// get methods
+	function GetColSpan() { return $this->_colspan; }
+	function GetClassTopic() { return $this->_classtopic; }
+	// set methods
+	function SetColSpan($colspan) { $this->_colspan = $colspan; }
+	function SetIdName($idname) { $this->_idname = $idname; }
+	function SetClassTopic($cssclass) { $this->_classtopic = $cssclass; }
+	// support functions
+	function GetClassOfTopic() {
+		return $this->GetClassTopic();
 	}
-
-	function SetColSpan($colspan) {
-		$this->_colspan = $colspan;
-	}
-
-	function SetIdName($idname) {
-		$this->_idname = $idname;
-	}
-
 	function Render() {
 		$title = $this->GetTitle();
 		$colspan = $this->GetColSpan();
-
+		$classtopic = $this->GetClassOfTopic();
 		echo ($this->_idname != '') ? "<tr id='{$this->_idname}'>\n" : "<tr>\n";
-		echo "	<td colspan='{$colspan}' valign='top' class='listtopic'>{$title}</td>\n";
+		echo "	<td colspan='{$colspan}' class='{$classtopic}'>{$title}</td>\n";
 		echo "</tr>\n";
 	}
 }
@@ -687,15 +647,12 @@ class HTMLTitleLineCheckBox2 extends HTMLCheckBox2 {
 	function __construct($ctrlname, $title, $value, $caption) {
 		parent::__construct($ctrlname, $title, $value, $caption);
 	}
-
 	function GetColSpan() {
 		return $this->_colspan;
 	}
-
 	function SetColSpan($colspan) {
 		$this->_colspan = $colspan;
 	}
-
 	function Render() {
 		$ctrlname = $this->GetCtrlName();
 		$caption = $this->GetCaption();
@@ -736,17 +693,15 @@ class HTMLTextInfo2 extends HTMLBaseControl2 {
 		$this->SetTitle($title);
 		$this->SetValue($text);
 	}
-
 	function Render() {
 		$ctrlname = $this->GetCtrlName();
 		$title = $this->GetTitle();
-		$class1 = "vncellt";
-		$class2 = "listr";
+		$classtag = $this->GetClassOfTag();
+		$classdata = $this->GetClassOfData();
 		$text = $this->GetValue();
-
 		echo "<tr id='{$ctrlname}_tr'>\n";
-		echo "	<td width='22%' class='{$class1}'>{$title}</td>\n";
-		echo "	<td width='78%' class='{$class2}'><span id='{$ctrlname}'>{$text}</span></td>\n";
+		echo "	<td class='{$classtag}'>{$title}</td>\n";
+		echo "	<td class='{$classdata}'><span id='{$ctrlname}'>{$text}</span></td>\n";
 		echo "</tr>\n";
 	}
 }

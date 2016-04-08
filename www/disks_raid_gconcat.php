@@ -51,6 +51,13 @@ $gt_record_del = gettext('RAID is marked for removal');
 $gt_record_loc = gettext('RAID is protected');
 $gt_selection_delete = gettext('Delete Selected RAID Volumes');
 $gt_selection_delete_confirm = gettext('Do you want to delete selected RAID volumes?');
+$img_path = [
+	'add' => 'images/add.png',
+	'mod' => 'images/edit.png',
+	'del' => 'images/delete.png',
+	'loc' => 'images/locked.png',
+	'unl' => 'images/unlocked.png'
+];
 
 // sunrise: verify if setting exists, otherwise run init tasks
 if (!(isset($config['gconcat']['vdisk']) && is_array($config['gconcat']['vdisk']))) {
@@ -152,6 +159,10 @@ $pgtitle = array(gettext('Disks'), gettext('Software RAID'), gettext('JBOD'), ge
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
+	// Init action buttons
+	$("#delete_selected_rows").click(function () {
+		return confirm('<?=$gt_selection_delete_confirm;?>');
+	});
 	// Disable action buttons.
 	disableactionbuttons(true);
 	// Init toggle checkbox
@@ -223,116 +234,117 @@ function controlactionbuttons(ego, triggerbyname) {
 		</td>
 	</tr>
 </table>
-<table id="area_data">
-	<tr>
-		<td id="area_data_frame">
-			<form action="<?=$sphere_scriptname;?>" method="post">
+<table id="area_data"><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
+	<?php
+		if (!empty($errormsg)) { print_error_box($errormsg); }
+		if (!empty($savemsg)) { print_info_box($savemsg); }
+		if (updatenotify_exists($sphere_notifier)) { print_config_change_box(); }
+	?>
+	<table id="area_data_selection">
+		<colgroup>
+			<col style="width:5%"><!-- checkbox -->
+			<col style="width:20%"><!-- Volume Name -->
+			<col style="width:10%"><!-- Type -->
+			<col style="width:15%"><!-- Size -->
+			<col style="width:30%"><!-- Description -->
+			<col style="width:10%"><!-- Status -->
+			<col style="width:10%"><!-- Icons -->
+		</colgroup>
+		<thead>
+			<?php html_titleline2(gettext('Overview'), 7);?>
+			<tr>
+				<td class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?php gettext('Invert Selection');?>"/></td>
+				<td class="lhell"><?=gettext('Volume Name');?></td>
+				<td class="lhell"><?=gettext('Type');?></td>
+				<td class="lhell"><?=gettext('Size');?></td>
+				<td class="lhell"><?=gettext('Description');?></td>
+				<td class="lhelc"><?=gettext('Status');?></td>
+				<td class="lhebl"><?=gettext('Toolbox');?></td>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th class="lcenl" colspan="6"></th>
+				<th class="lceadd"><a href="<?=$sphere_scriptname_child;?>"><img src="<?=$img_path['add'];?>" title="<?=$gt_record_add;?>" alt="<?=$gt_record_add;?>"/></a></th>
+			</tr>
+		</tfoot>
+		<tbody>
+			<?php $raidstatus = get_gconcat_disks_list(); ?>
+			<?php foreach ($sphere_array as $sphere_record): ?>
 				<?php
-					if (!empty($errormsg)) { print_error_box($errormsg); }
-					if (!empty($savemsg)) { print_info_box($savemsg); }
-					if (updatenotify_exists($sphere_notifier)) { print_config_change_box(); }
+					$size = gettext('Unknown');
+					$status = gettext('Stopped');
+					if (is_array($raidstatus) && array_key_exists($sphere_record['name'], $raidstatus)) {
+						$size = $raidstatus[$sphere_record['name']]['size'];
+						$status = $raidstatus[$sphere_record['name']]['state'];
+					}
+					$notificationmode = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']);
+					switch ($notificationmode) {
+						case UPDATENOTIFY_MODE_NEW:
+							$status = $size = gettext('Initializing');
+							break;
+						case UPDATENOTIFY_MODE_MODIFIED:
+							$status = $size = gettext('Modifying');
+							break;
+						case UPDATENOTIFY_MODE_DIRTY:
+						case UPDATENOTIFY_MODE_DIRTY_CONFIG:
+							$status = gettext('Deleting');
+							break;
+					}
+					$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
+					$notprotected = !isset($sphere_record['protected']);
+					$notmounted = !is_gconcat_mounted($sphere_record['devicespecialfile'], $a_mount);
+					$normaloperation = $notprotected && $notmounted;
 				?>
-				<table id="area_data_selection">
-					<colgroup>
-						<col style="width:1%"><!-- checkbox -->
-						<col style="width:24%"><!-- Volume Name -->
-						<col style="width:25%"><!-- Type -->
-						<col style="width:20%"><!-- Size -->
-						<col style="width:20%"><!-- Status -->
-						<col style="width:10%"><!-- Icons -->
-					</colgroup>
-					<thead>
-						<?php html_titleline(gettext('Overview'), 6);?>
-						<tr>
-							<td class="listhdrlr"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?php gettext('Invert Selection');?>"/></td>
-							<td class="listhdrr"><?=gettext('Volume Name');?></td>
-							<td class="listhdrr"><?=gettext('Type');?></td>
-							<td class="listhdrr"><?=gettext('Size');?></td>
-							<td class="listhdrr"><?=gettext('Status');?></td>
-							<td class="listhdrr"><?=gettext('Toolbox');?></td>
-						</tr>
-					</thead>
-					<tfoot>
-						<tr>
-							<td class="list" colspan="5"></td>
-							<td class="listlrd"><a href="<?=$sphere_scriptname_child;?>"><img src="images/add.png" title="<?=$gt_record_add;?>" alt="<?=$gt_record_add;?>"/></a></td>
-						</tr>
-					</tfoot>
-					<tbody>
-						<?php $raidstatus = get_gconcat_disks_list(); ?>
-						<?php foreach ($sphere_array as $sphere_record): ?>
-							<?php
-								$size = gettext('Unknown');
-								$status = gettext('Stopped');
-								if (is_array($raidstatus) && array_key_exists($sphere_record['name'], $raidstatus)) {
-									$size = $raidstatus[$sphere_record['name']]['size'];
-									$status = $raidstatus[$sphere_record['name']]['state'];
-								}
-								$notificationmode = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']);
-								switch ($notificationmode) {
-									case UPDATENOTIFY_MODE_NEW:
-										$status = $size = gettext('Initializing');
-										break;
-									case UPDATENOTIFY_MODE_MODIFIED:
-										$status = $size = gettext('Modifying');
-										break;
-									case UPDATENOTIFY_MODE_DIRTY:
-									case UPDATENOTIFY_MODE_DIRTY_CONFIG:
-										$status = gettext('Deleting');
-										break;
-								}
-								$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
-								$notprotected = !isset($sphere_record['protected']);
-								$notmounted = !is_gconcat_mounted($sphere_record['devicespecialfile'], $a_mount);
-								$normaloperation = $notprotected && $notmounted;
-							?>
-							<tr>
-								<td class="<?=$normaloperation ? "listlr" : "listlrd";?>">
-									<?php if ($notdirty && $notprotected && $notmounted):?>
-										<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
-									<?php else:?>
-										<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" disabled="disabled"/>
-									<?php endif;?>
-								</td>
-								<td class="<?=$normaloperation ? "listr" : "listrd";?>"><?=htmlspecialchars($sphere_record['name']);?></td>
-								<td class="<?=$normaloperation ? "listr" : "listrd";?>"><?=htmlspecialchars($sphere_record['type']);?></td>
-								<td class="<?=$normaloperation ? "listr" : "listrd";?>"><?=$size;?>&nbsp;</td>
-								<td class="listbg"><?=$status;?>&nbsp;</td>
-								<td class="listrd">
-									<?php if ($notdirty && $notprotected):?>
-										<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="images/edit.png" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
-									<?php else:?>
-										<?php if ($notprotected && $notmounted):?>
-											<img src="images/delete.png" title="<?=gettext($gt_record_del);?>" alt="<?=gettext($gt_record_del);?>"/>
-										<?php else:?>
-											<img src="images/locked.png" title="<?=gettext($gt_record_loc);?>" alt="<?=gettext($gt_record_loc);?>"/>
-										<?php endif;?>
-									<?php endif;?>
-								</td>
-							</tr>
-						<?php endforeach; ?>
-					</tbody>
-				</table>
-				<div id="submit">
-					<input name="delete_selected_rows" id="delete_selected_rows" type="submit" class="formbtn" value="<?=$gt_selection_delete;?>" onclick="return confirm('<?=$gt_selection_delete_confirm;?>')"/>
-				</div>
-				<table id="area_data_settings">
-					<thead>
-						<?php
-							html_separator();
-							html_titleline(gettext('Messages'));
-						?>
-					</thead>
-					<tbody>
-						<?php
-							html_textinfo("info", gettext('Info'), sprintf(gettext('%s is used to create %s volumes.'), 'GEOM Concat', 'JBOD'));
-							html_textinfo("warning", gettext('Warning'), sprintf(gettext("A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount point</a> first before proceeding."), 'disks_mount.php'));
-						?>
-					</tbody>
-				</table>
-				<?php include("formend.inc"); ?>
-			</form>
-		</td>
-	</tr>
-</table>
+				<tr>
+					<td class="<?=$normaloperation ? "lcelc" : "lcelcd";?>">
+						<?php if ($notdirty && $notprotected && $notmounted):?>
+							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
+						<?php else:?>
+							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" disabled="disabled"/>
+						<?php endif;?>
+					</td>
+					<td class="<?=$normaloperation ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['name']);?></td>
+					<td class="<?=$normaloperation ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['type']);?></td>
+					<td class="<?=$normaloperation ? "lcell" : "lcelld";?>"><?=$size;?>&nbsp;</td>
+					<td class="<?=$normaloperation ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['desc']);?></td>
+					<td class="lcelcd"><?=$status;?>&nbsp;</td>
+					<td class="lcebld">
+						<?php if ($notdirty && $notprotected):?>
+							<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
+						<?php else:?>
+							<?php if ($notprotected && $notmounted):?>
+								<img src="<?=$img_path['del'];?>" title="<?=gettext($gt_record_del);?>" alt="<?=gettext($gt_record_del);?>"/>
+							<?php else:?>
+								<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gettext($gt_record_loc);?>"/>
+							<?php endif;?>
+						<?php endif;?>
+					</td>
+				</tr>
+			<?php endforeach; ?>
+		</tbody>
+	</table>
+	<div id="submit">
+		<input name="delete_selected_rows" id="delete_selected_rows" type="submit" class="formbtn" value="<?=$gt_selection_delete;?>"/>
+	</div>
+	<table id="area_data_messages">
+		<colgroup>
+			<col id="area_data_messages_col_tag">
+			<col id="area_data_messages_col_data">
+		</colgroup>
+		<thead>
+			<?php
+				html_separator2();
+				html_titleline2(gettext('Message Board'));
+			?>
+		</thead>
+		<tbody>
+			<?php
+				html_textinfo2("info", gettext('Info'), sprintf(gettext('%s is used to create %s volumes.'), 'GEOM Concat', 'JBOD'));
+				html_textinfo2("warning", gettext('Warning'), sprintf(gettext("A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount point</a> first before proceeding."), 'disks_mount.php'));
+			?>
+		</tbody>
+	</table>
+	<?php include("formend.inc"); ?>
+</form></td></tr></table>
 <?php include("fend.inc"); ?>
