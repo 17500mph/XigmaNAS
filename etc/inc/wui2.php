@@ -119,7 +119,7 @@ class HTMLBaseControlJS2 extends HTMLBaseControl2 {
 class HTMLEditBox2 extends HTMLBaseControl2 {
 	var $_size = 40;
 	var $_classinputtext = 'formfld';
-	var $_classinputtextro = 'formfld';
+	var $_classinputtextro = 'formfldro';
 	
 	// constructor method
 	function __construct($ctrlname, $title, $value, $description, $size) {
@@ -142,7 +142,11 @@ class HTMLEditBox2 extends HTMLBaseControl2 {
 		return $param;
 	}
 	function GetClassOfInputText() {
-		return ($this->IsReadOnly() ? $this->GetClassInputTextRO() : $this->GetClassInputText());
+		if (true === $this->IsReadOnly()) {
+			return $this->GetClassInputTextRO();
+		} else {
+			return $this->GetClassInputText();
+		}
 	}
 	function RenderCtrl() {
 		$ctrlname = $this->GetCtrlName();
