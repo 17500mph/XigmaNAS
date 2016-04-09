@@ -586,8 +586,8 @@ function get_mounts_list()
 		$mountpath = chop($aline[2]);
 
 		// Ignore various mountpoints
-		if (("/" === $mountpath) || ("devfs" === $devicespecialfile) || ("/var" === $mountpath) ||
-				("/dev/fd0" === $devicespecialfile) || ($g['cf_path'] === $mountpath))
+		if (("/" === $mountpath) || ("devfs" === $devicespecialfile) || ("procfs" === $devicespecialfile) || ("tmpfs" === $devicespecialfile) || 
+			("/var" === $mountpath) || ("/dev/fd0" === $devicespecialfile) || ($g['cf_path'] === $mountpath))
 			continue;
 
 		// Get the complete name /dev/devicename
