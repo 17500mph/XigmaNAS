@@ -365,7 +365,7 @@ function controlsubmitbutton(ego, triggerbyname) {
 					</thead>
 					<tbody>
 						<?php
-							html_inputbox2('name', gettext('Raid Name'), $sphere_record['name'], '', true, 15); // readonly on modify
+							html_inputbox2('name', gettext('Raid Name'), $sphere_record['name'], '', true, 15, (RECORD_NEW !== $mode_record) && (RECORD_NEW_MODIFY !== $mode_record)); // readonly on modify
 							html_inputbox2('type', gettext('Type'), $sphere_record['type'], '', false, 4, true); // fixed text 'JBOD', no modification at all
 							html_checkbox2('init', gettext('Initialize'), !empty($sphere_record['init']) ? true : false, gettext('Create and initialize RAID. This will erase ALL data on the selected disks! Do not use this option if you want to add an already existing RAID again.'), '', false);
 							html_inputbox2('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 40);
