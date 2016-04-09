@@ -291,6 +291,7 @@ function controlactionbuttons(ego, triggerbyname) {
 							$status = gettext('Deleting');
 							break;
 					}
+					$status = strtoupper($status);
 					$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
 					$notprotected = !isset($sphere_record['protected']);
 					$notmounted = !is_gconcat_mounted($sphere_record['devicespecialfile'], $a_mount);
