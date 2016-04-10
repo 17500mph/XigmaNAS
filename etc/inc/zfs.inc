@@ -37,76 +37,150 @@
 require_once("config.inc");
 require_once("util.inc");
 
-/**
+/*
  * Get list of available zpools
  * @return An array containg the requested informations:
  * @code
  * [poolname] => array(
  *   [name] => pool
  *   [size] => 4.66G
- *   [used] => 112K
- *   [avail] => 4.66G
+ *   [alloc]
+ *   [free]
+ *   [expandsz]
  *   [frag] => 0%
  *   [cap] => 0%
  *   [dedup] => 1.00x
  *   [health] => ONLINE
  *   [altroot] => -)
+ *   [used] => 112K
+ *   [avail] => 4.66G
  * @endcode
  */
 function zfs_get_pool_list() {
-	$result = array();
-
-	$osver = @exec("/usr/bin/uname -U");
-	mwexec2("zpool list -H", $rawdata);
-	foreach ($rawdata as $line) {
-		$aline = preg_split("/\s+/", $line);
-		if (7 > count($aline)) // Ensure we process the correct line data
-			continue;
-
-		$poolname = $aline[0];
-
-		$result[$poolname] = array();
-		$result[$poolname]['name'] = $aline[0];
-		$result[$poolname]['size'] = $aline[1];
-		$result[$poolname]['alloc'] = $aline[2];
-		$result[$poolname]['free'] = $aline[3];
-		if ($osver >= 1000000) {
-			if ($osver >= 1100000) {
-                                $result[$poolname]['expandsz'] = $aline[4];
-                                $result[$poolname]['frag'] = $aline[5];
-			} else if ($osver >= 1002000) {
-                                $result[$poolname]['expandsz'] = $aline[4];
-                                $result[$poolname]['frag'] = $aline[5];
-			} else {
-                                $result[$poolname]['frag'] = $aline[4];
-                                $result[$poolname]['expandsz'] = $aline[5];
+	$a_result = [];
+	$r_poolinfo = [];
+	$a_zpool = [];
+	$a_zfs = [];
+	
+	$a_zpool = cli_zpool_list('', 'name,size,alloc,free,expandsz,frag,cap,dedup,health,altroot');
+	if (!empty($a_zpool)) {
+		foreach ($a_zpool as $r_pool) {
+			// map names of zpool list -o options to local options
+			$poolname = $r_pool['NAME'];
+			$r_poolinfo = [];
+			$r_poolinfo['name'] = $poolname;
+			$r_poolinfo['size'] = $r_pool['SIZE'];
+			$r_poolinfo['alloc'] = $r_pool['ALLOC'];
+			$r_poolinfo['free'] = $r_pool['FREE'];
+			$r_poolinfo['expandsz'] = $r_pool['EXPANDSZ'];
+			$r_poolinfo['frag'] = $r_pool['FRAG'];
+			$r_poolinfo['cap'] = $r_pool['CAP'];
+			$r_poolinfo['dedup'] = $r_pool['DEDUP'];
+			$r_poolinfo['health'] = $r_pool['HEALTH'];
+			$r_poolinfo['altroot'] = $r_pool['ALTROOT'];
+			$a_zfs = cli_zfs_list($poolname, 'used,avail');
+			if (!empty(a_zfs)) {
+				$r_poolinfo['used'] = $a_zfs['USED'];
+				$r_poolinfo['avail'] = $a_zfs['AVAIL'];
+			} else { // populate a complete set
+				$r_poolinfo['used'] = 'UNKNOWN';
+				$r_poolinfo['avail'] = 'UNKNOWN';
 			}
-                        $result[$poolname]['cap'] = $aline[6];
-                        $result[$poolname]['dedup'] = $aline[7];
-                        $result[$poolname]['health'] = $aline[8];
-                        $result[$poolname]['altroot'] = $aline[9];
-		} else {
-			$result[$poolname]['cap'] = $aline[4];
-			$result[$poolname]['dedup'] = $aline[5];		
-			$result[$poolname]['health'] = $aline[6];
-			$result[$poolname]['altroot'] = $aline[7];
-			//$result[$poolname]['atime'] = $aline[8];
+			$a_result[$poolname] = $r_poolinfo;
 		}
-
-		// Get correct used/available disk space.
-		// See http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6308817
-		mwexec2("zfs list -H -o used,available {$poolname}", $rawdata2);
-		if (preg_match("/^(\S+)\s+(\S+)$/", $rawdata2[0], $matches)) {
-			$result[$poolname]['used'] = $matches[1];
-			$result[$poolname]['avail'] = $matches[2];
-		}
-		// Unset variable, otherwise data will be attached next loop.
-		unset($rawdata2);
 	}
-
-	return $result;
+	return $a_result;
 }
 
+/*
+ * Get zpool option information via cli
+ * If you don't specify a zpool the option information of all known zpools is returned.
+ * If you don't specify options all available options will be returned. ZPOOL option keys are uppercase.
+ * The function returns an empty array on error or when no zpools are known to zfs.
+ */
+function cli_zpool_list($poolname = '', $options = 'all') {
+	$this_name = 'cli_zpool_list_poolname';
+	$a_return = [];
+	unset($a_line);
+	$r_line = '';
+	$a_key = [];
+	$a_val = [];
+	$is_row_with_option_name = true; // the first row od the call contains the option names
+	$cmd = sprintf('zpool list -o %s %s', $options, $poolname);
+	mwexec2($cmd, $a_line, $exitcode);
+	switch ($exitcode) {
+		case 0:
+			if (1 < count($a_line)) {  // at least 2 lines must be returned, one for header names and the others containing data
+				foreach ($a_line as $r_line) {
+					if ($is_row_with_option_name) {
+						$a_key = preg_split('/[\s]/', $r_line, NULL, PREG_SPLIT_NO_EMPTY);
+						$is_row_with_option_name = false;
+					} else {
+						$a_val = preg_split('/[\s]/', $r_line, NULL, PREG_SPLIT_NO_EMPTY);
+						$a_return[] = array_combine($a_key, $a_val);
+					}
+				}
+			} else {
+				write_log(sprintf('%s: did not return expected number of lines.', $this_name));
+			}
+			break;
+/*
+		case 1:
+			write_log(sprintf('%s: an error occurred.', $this_name));
+			break;
+		case 2:
+			write_log(sprintf('%s: invalid command line options were specified.', $this_name));
+			break;
+*/
+	}
+	unset($a_line);
+	return $a_return;
+}
+
+/*
+ * Get zfs option information via cli
+ * If you don't specify a zpool the option information of all known zpools is returned.
+ * If you don't specify options all available options will be returned. ZFS option keys are uppercase.
+ * Function returns an empty array on error or when no zpools are known to zfs.
+ */
+function cli_zfs_list($poolname = '', $options = 'all') {
+	$this_name = 'cli_zfs_list_poolname';
+	$a_return = [];
+	unset($a_line);
+	$r_line = '';
+	$a_key = [];
+	$a_val = [];
+	$is_row_with_option_name = true; // the first row od the call contains the option names
+	$cmd = sprintf('zfs list -o %s %s', $options, $poolname);
+	mwexec2($cmd, $a_line, $exitcode);
+	switch ($exitcode) {
+		case 0:
+			if (1 < count($a_line)) { // at least 2 lines must be returned, one for header names and the others containing data
+				foreach ($a_line as $r_line) {
+					if ($is_row_with_option_name) {
+						$a_key = preg_split('/[\s]/', $r_line, NULL, PREG_SPLIT_NO_EMPTY);
+						$is_row_with_option_name = false;
+					} else {
+						$a_val = preg_split('/[\s]/', $r_line, NULL, PREG_SPLIT_NO_EMPTY);
+						$a_return[] = array_combine($a_key, $a_val);
+					}
+				}
+			} else {
+				write_log(sprintf('%s: did not return expected number of lines.', $this_name));
+			}
+			break;
+/*
+		case 1:
+			write_log(sprintf('%s: an error occurred.', $this_name));
+			break;
+		case 2:
+			write_log(sprintf('%s: invalid command line options were specified.', $this_name));
+			break;
+*/
+	}
+	unset($a_line);
+	return $a_return;
+}
 /**
  * Configure, create and start a zpool.
  * @param[in] uuid	The UUID of the zpool.
