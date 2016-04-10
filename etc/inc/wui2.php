@@ -137,8 +137,7 @@ class HTMLEditBox2 extends HTMLBaseControl2 {
 	// support functions
 	function GetParam() {
 		$param = "";
-		if (true === $this->IsReadOnly())
-			$param .= "readonly=\"readonly\" ";
+		if (true === $this->IsReadOnly()) { $param .= "readonly=\"readonly\" "; }
 		return $param;
 	}
 	function GetClassOfInputText() {
@@ -394,8 +393,8 @@ class HTMLCheckBox2 extends HTMLBaseControlJS2 {
 	// support methods
 	function GetParam() {
 		$param = "";
-		if (true === $this->IsChecked())
-			$param .= "checked=\"checked\" ";
+		if (true === $this->IsChecked()) { $param .= "checked=\"checked\" "; }
+		if (true === $this->IsReadOnly()) { $param .= "disabled=\"disabled\" "; }
 		$onclick = $this->GetJSonClick();
 		if (!empty($onclick))
 			$param .= "onclick='{$onclick}' ";
