@@ -563,9 +563,10 @@ function html_interfacecombobox2($ctrlname, $title, $value, $desc, $required = f
 	$ctrl->Render();
 }
 
-function html_checkbox2($ctrlname, $title, $checked, $caption = "", $desc = "", $required = false, $onclick = "", $altpadding = false) {
+function html_checkbox2($ctrlname, $title, $checked, $caption = "", $desc = "", $required = false, $readonly = false, $onclick = "", $altpadding = false) {
 	$ctrl = new HTMLCheckBox2($ctrlname, $title, $checked, $caption, $desc);
 	$ctrl->SetRequired($required);
+	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetAltPadding($altpadding);
 	$ctrl->SetJSonClick($onclick);
 	$ctrl->Render();
