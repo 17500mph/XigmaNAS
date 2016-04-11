@@ -79,7 +79,7 @@ function zfs_get_pool_list() {
 			$r_poolinfo['health'] = $r_pool['HEALTH'];
 			$r_poolinfo['altroot'] = $r_pool['ALTROOT'];
 			$a_zfs = cli_zfs_list($poolname, 'used,avail');
-			if (!empty(a_zfs)) {
+			if (!empty($a_zfs)) {
 				$r_poolinfo['used'] = $a_zfs['USED'];
 				$r_poolinfo['avail'] = $a_zfs['AVAIL'];
 			} else { // populate a complete set
