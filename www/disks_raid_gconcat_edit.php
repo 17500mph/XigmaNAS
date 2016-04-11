@@ -133,90 +133,102 @@ foreach ($a_sdisk as $r_sdisk) {
 
 if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 	unset($input_errors);
+
+	// populate everything that is valid for all $mode_record (pre)
+	$sphere_record['desc'] = (isset($_POST['desc']) ? $_POST['desc'] : '');
+	// populate based on $mode_record
 	switch ($mode_record) {
 		case RECORD_NEW:
-		case RECORD_NEW_MODIFY:
-			if (!isset($_POST[$checkbox_member_name])) { $_POST[$checkbox_member_name] = []; }
-			$sphere_record['name'] = substr($_POST['name'], 0, 15); // Make sure name is only 15 chars long (GEOM limitation).
+			$sphere_record['name'] = (isset($_POST['name']) ? substr($_POST['name'], 0, 15) : ''); // Make sure name is only 15 chars long (GEOM limitation).
 			$sphere_record['type'] = 'JBOD';
 			$sphere_record['init'] = isset($_POST['init']);
-			$sphere_record['device'] = $_POST[$checkbox_member_name];
-			$sphere_record['devicespecialfile'] = "/dev/concat/{$sphere_record['name']}";
-			$sphere_record['desc'] = $_POST['desc'];
+			$sphere_record['device'] = (isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : []);
+			break;
+		case RECORD_NEW_MODIFY:
+			$sphere_record['name'] = (isset($_POST['name']) ? substr($_POST['name'], 0, 15) : ''); // Make sure name is only 15 chars long (GEOM limitation).
+			$sphere_record['type'] = 'JBOD';
+			$sphere_record['init'] = isset($_POST['init']);
+			$sphere_record['device'] = (isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : []);
 			break;
 		case RECORD_MODIFY:
 			$sphere_record['name'] = $sphere_array[$index]['name'];
 			$sphere_record['type'] = $sphere_array[$index]['type'];
 			$sphere_record['init'] = false;
 			$sphere_record['device'] = $sphere_array[$index]['device'];
-			$sphere_record['devicespecialfile'] = "/dev/concat/{$sphere_record['name']}";
-			$sphere_record['desc'] = $_POST['desc'];
 			break;
 	}
-	// Input validation
-	$reqdfields = explode(' ', 'name');
-	$reqdfieldsn = array(gettext('Raid name'));
+	// populate everything that is valid for all $mode_record (post)
+	$sphere_record['devicespecialfile'] = "/dev/concat/{$sphere_record['name']}";
 
-	do_input_validation($sphere_record, $reqdfields, $reqdfieldsn, $input_errors);
+	// input validation
+	$reqdfields = ['name'];
+	$reqdfieldsn = [gettext('Raid Name')];
+	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
+	// logic validation
 	if ($prerequisites_ok && empty($input_errors)) { // check for a valid RAID name.
 		if (($sphere_record['name'] && !is_validaliasname($sphere_record['name']))) {
 			$input_errors[] = gettext('The name of the RAID may only consist of the characters a-z, A-Z, 0-9.');
 		}
 	}
-
-	if ($prerequisites_ok && empty($input_errors)) {
+	if ($prerequisites_ok && empty($input_errors)) { // check for existing RAID names
 		switch ($mode_record) { // verify config
-			case RECORD_NEW: // RAID name must not exist in config at all
-				foreach ($a_sraid as $r_sraid) {
+			case RECORD_NEW:
+				foreach ($a_sraid as $r_sraid) { // RAID name must not exist in config at all
 					if ($r_sraid['name'] === $sphere_record['name']) {
-						$input_errors[] = gettext('This device already exists in the raid volume list.');
+						$input_errors[] = gettext('The name of the RAID is already in use.');
 						break; // break loop
 					}
 				}
 				break;
-			case RECORD_NEW_MODIFY: // if the RAID name has changed it shouldn't be found in config
-				if ($sphere_record['name'] !== $sphere_array[$index]['name']) { // RAID name has changed
+			case RECORD_NEW_MODIFY: 
+				if ($sphere_record['name'] !== $sphere_array[$index]['name']) { // if the RAID name has changed it shouldn't be found in config
 					foreach ($a_sraid as $r_sraid) {
 						if ($r_sraid['name'] === $sphere_record['name']) {
-							$input_errors[] = gettext('This device already exists in the raid volume list.');
+							$input_errors[] = gettext('The name of the RAID is already in use.');
 							break; // break loop
 						}
 					}
 				}
 				break;
-			case RECORD_MODIFY: // should never happen because sphere_record['name'] should be set to $sphere_array[$index]['name']
-				if ($sphere_record['name'] !== $sphere_array[$index]['name']) {
+			case RECORD_MODIFY: 
+				if ($sphere_record['name'] !== $sphere_array[$index]['name']) { // should never happen because sphere_record['name'] should be set to $sphere_array[$index]['name']
 					$input_errors[] = gettext('The name of the RAID cannot be changed.');
 				}
 				break;
 		}
 	}
-	
-	if ($prerequisites_ok && empty($input_errors)) {
-		/* check the number of RAID disk for volume */
-		if (empty($sphere_record['device']) || count($sphere_record['device']) < 2) {
-			$input_errors[] = gettext('There must be a minimum of 2 disks in a JBOD.');
+	if ($prerequisites_ok && empty($input_errors)) { // check the number of disk for RAID volume
+		if (count($sphere_record['device']) < 2) {
+			$input_errors[] = gettext('A minimum of 2 disks is required to build a JBOD.');
 		}
 	}
-	
+	// process POST
 	if ($prerequisites_ok && empty($input_errors)) {
 		switch ($mode_record) {
 			case RECORD_NEW:
-			case RECORD_NEW_MODIFY:
-				if (false !== $sphere_record['init']) {
+				if ($sphere_record['init']) { // create new RAID
 					updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_NEW, $sphere_record['uuid']);
-				} else {
+				} else { // existing RAID
 					updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_record['uuid']);
 				}
-				$sphere_record['init'] = false;
+				unset($sphere_record['init']); // lifetime ends here
 				$sphere_array[] = $sphere_record;
+				break;
+			case RECORD_NEW_MODIFY:
+				if ($sphere_record['init']) { // create new RAID
+				} else { // existing RAID
+					updatenotify_clear($sphere_notifier, $sphere_record['uuid']); // clear NEW
+					updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_record['uuid']);
+				}
+				unset($sphere_record['init']); // lifetime ends here
+				$sphere_array[$index] = $sphere_record;
 				break;
 			case RECORD_MODIFY:
 				if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
 					updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_record['uuid']);
 				}
-				$sphere_record['init'] = false;
+				unset($sphere_record['init']); // lifetime ends here
 				$sphere_array[$index] = $sphere_record;
 				break;
 		}
@@ -237,18 +249,18 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 		case RECORD_NEW_MODIFY:
 			$sphere_record['name'] = $sphere_array[$index]['name'];
 			$sphere_record['type'] = $sphere_array[$index]['type'];
-			$sphere_record['init'] = $sphere_array[$index]['init'];
+			$sphere_record['init'] = true; // it must have been set because the previous status of RECORD_NEW_MODIFY can only be RECOD_NEW.
 			$sphere_record['device'] = $sphere_array[$index]['device'];
 			$sphere_record['devicespecialfile'] = $sphere_array[$index]['devicespecialfile'];
 			$sphere_record['desc'] = $sphere_array[$index]['desc'];
 			break;
 		case RECORD_MODIFY:
-			$sphere_record['name'] = $sphere_array[$index]['name'];
-			$sphere_record['type'] = $sphere_array[$index]['type'];
+			$sphere_record['name'] = (isset($sphere_array[$index]['name']) ? $sphere_array[$index]['name'] : '');
+			$sphere_record['type'] = (isset($sphere_array[$index]['type']) ? $sphere_array[$index]['type'] : '');;
 			$sphere_record['init'] = false;
-			$sphere_record['device'] = $sphere_array[$index]['device'];
+			$sphere_record['device'] = (isset($sphere_array[$index]['device']) ? $sphere_array[$index]['device'] : []);
 			$sphere_record['devicespecialfile'] = $sphere_array[$index]['devicespecialfile'];
-			$sphere_record['desc'] = $sphere_array[$index]['desc'];
+			$sphere_record['desc'] = (isset($sphere_array[$index]['desc']) ? $sphere_array[$index]['desc'] : '');
 			break;
 	}
 }
@@ -260,25 +272,19 @@ $pgtitle = array(gettext('Disks'), gettext('Software RAID'), gettext('JBOD'), (R
 //<![CDATA[
 // Disable submit button and give its control to checkbox array.
 $(window).on("load", function() {
-	// disable type field
-	$("#type").prop("disabled", true);
-	// Init submit button
-	controlsubmitbutton(this,'<?=$checkbox_member_name;?>[]');
-	// set event on member checkboxes
-	$("input[name='<?=$checkbox_member_name;?>[]").click(function() {
+	$("#type").prop("disabled", true); 	// disable type field
+	controlsubmitbutton(this,'<?=$checkbox_member_name;?>[]'); // Init submit button
+	$("input[name='<?=$checkbox_member_name;?>[]").click(function() { // set event on member checkboxes
 		controlsubmitbutton(this, '<?=$checkbox_member_name;?>[]');
 	});
-	// set event on toggle checkbox
-	$("#togglemembers").click(function() {
+	$("#togglemembers").click(function() { // set event on toggle checkbox
 		togglecheckboxesbyname(this, "<?=$checkbox_member_name;?>[]");
 	});
-	// set event on submit button
-	$("#submit_button").click(function() {
+	$("#submit_button").click(function() { // set event on submit button
 		enable_change(true);
 	});
 	<?php if (RECORD_MODIFY == $mode_record):?>
-		// Disable controls that should not be modified anymore in edit mode.
-		enable_change(false);
+		enable_change(false); // Disable controls that should not be modified anymore in edit mode.
 	<?php endif;?>
 });
 function enable_change(enable_change) {
@@ -365,10 +371,15 @@ function controlsubmitbutton(ego, triggerbyname) {
 					</thead>
 					<tbody>
 						<?php
-							html_inputbox2('name', gettext('Raid Name'), $sphere_record['name'], '', true, 15, (RECORD_NEW !== $mode_record) && (RECORD_NEW_MODIFY !== $mode_record)); // readonly on modify
+							$notnewandnotnewmodify = !((RECORD_NEW === $mode_record) || (RECORD_NEW_MODIFY === $mode_record));
+							html_inputbox2('name', gettext('Raid Name'), $sphere_record['name'], '', true, 15, $notnewandnotnewmodify); // readonly if not new and not new-modify
 							html_inputbox2('type', gettext('Type'), $sphere_record['type'], '', false, 4, true); // fixed text 'JBOD', no modification at all
-							html_checkbox2('init', gettext('Initialize'), !empty($sphere_record['init']) ? true : false, gettext('Create and initialize RAID. This will erase ALL data on the selected disks! Do not use this option if you want to add an already existing RAID again.'), '', false);
-							html_inputbox2('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 40);
+							$helpinghand = [
+								[gettext('Do not activate this option if you want to add an already existing RAID again.')],
+								[gettext('All data will be lost when you activate this option!'), 'red']
+							];
+							html_checkbox2('init', gettext('Initialize'), !empty($sphere_record['init']) ? true : false, gettext('Create and initialize RAID.'), $helpinghand, false, $notnewandnotnewmodify);
+							html_inputbox2('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 48);
 							html_separator2();
 						?>
 					</tbody>

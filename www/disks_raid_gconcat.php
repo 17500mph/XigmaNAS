@@ -66,8 +66,10 @@ if (!(isset($config['gconcat']['vdisk']) && is_array($config['gconcat']['vdisk']
 array_sort_key($config['gconcat']['vdisk'], 'name');
 $sphere_array = &$config['gconcat']['vdisk'];
 
-// get active mounts
-mwexec2("mount | awk '{print $1}'", $a_mount);
+if (!(isset($config['mounts']['mount']) && is_array($config['mounts']['mount']))) {
+	$config['mounts']['mount'] = [];
+}
+$a_mount = &$config['mounts']['mount'];
 
 if ($_POST) {
 	if (isset($_POST['apply']) && $_POST['apply']) {
@@ -144,13 +146,8 @@ function gconcat_process_updatenotification($mode, $data) {
 	return $retval;
 }
 
-function is_gconcat_mounted($nameofdevice, &$arrayofmounts) {
-	foreach ($arrayofmounts as $mount) {
-		if (0 === strpos($mount, $nameofdevice)) {
-			return true;
-		}
-	}
-	return false;
+function is_gconcat_mounted($devicespecialfile, &$a_mount) {
+	return (false !== array_search_ex($devicespecialfile, $a_mount, 'mdisk'));
 }
 
 $pgtitle = array(gettext('Disks'), gettext('Software RAID'), gettext('JBOD'), gettext('Management'));
@@ -212,7 +209,7 @@ function controlactionbuttons(ego, triggerbyname) {
 }
 //]]>
 </script>
-<table id="area_navigator">
+<table id="area_navigator"><tbody>
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
@@ -233,8 +230,8 @@ function controlactionbuttons(ego, triggerbyname) {
 			</ul>
 		</td>
 	</tr>
-</table>
-<table id="area_data"><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
+</tbody></table>
+<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
 	<?php
 		if (!empty($errormsg)) { print_error_box($errormsg); }
 		if (!empty($savemsg)) { print_info_box($savemsg); }
@@ -253,7 +250,7 @@ function controlactionbuttons(ego, triggerbyname) {
 		<thead>
 			<?php html_titleline2(gettext('Overview'), 7);?>
 			<tr>
-				<td class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?php gettext('Invert Selection');?>"/></td>
+				<td class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gettext('Invert Selection');?>"/></td>
 				<td class="lhell"><?=gettext('Volume Name');?></td>
 				<td class="lhell"><?=gettext('Type');?></td>
 				<td class="lhell"><?=gettext('Size');?></td>
@@ -309,7 +306,7 @@ function controlactionbuttons(ego, triggerbyname) {
 					<td class="<?=$normaloperation ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['type']);?></td>
 					<td class="<?=$normaloperation ? "lcell" : "lcelld";?>"><?=$size;?>&nbsp;</td>
 					<td class="<?=$normaloperation ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['desc']);?></td>
-					<td class="lcelcd"><?=$status;?>&nbsp;</td>
+					<td class="<?=$normaloperation ? "lcelc" : "lcelcd";?>"><?=$status;?>&nbsp;</td>
 					<td class="lcebld">
 						<?php if ($notdirty && $notprotected):?>
 							<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
@@ -347,5 +344,5 @@ function controlactionbuttons(ego, triggerbyname) {
 		</tbody>
 	</table>
 	<?php include("formend.inc"); ?>
-</form></td></tr></table>
+</form></td></tr></tbody></table>
 <?php include("fend.inc"); ?>
