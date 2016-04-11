@@ -58,10 +58,6 @@ require_once("util.inc");
  */
 function zfs_get_pool_list() {
 	$a_result = [];
-	$r_poolinfo = [];
-	$a_zpool = [];
-	$a_zfs = [];
-	
 	$a_zpool = cli_zpool_list('', 'name,size,alloc,free,expandsz,frag,cap,dedup,health,altroot');
 	if (!empty($a_zpool)) {
 		foreach ($a_zpool as $r_pool) {
@@ -80,8 +76,10 @@ function zfs_get_pool_list() {
 			$r_poolinfo['altroot'] = $r_pool['ALTROOT'];
 			$a_zfs = cli_zfs_list($poolname, 'used,avail');
 			if (!empty($a_zfs)) {
-				$r_poolinfo['used'] = $a_zfs['USED'];
-				$r_poolinfo['avail'] = $a_zfs['AVAIL'];
+				foreach ($a_zfs as $r_zfs) { // there should be only one
+					$r_poolinfo['used'] = $r_zfs['USED'];
+					$r_poolinfo['avail'] = $r_zfs['AVAIL'];
+				}
 			} else { // populate a complete set
 				$r_poolinfo['used'] = 'UNKNOWN';
 				$r_poolinfo['avail'] = 'UNKNOWN';
