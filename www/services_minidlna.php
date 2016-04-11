@@ -86,12 +86,13 @@ if ($_POST) {
 
 	if (empty($input_errors)) {
 		if (isset ($config['minidlna']['content']) || is_array ($config['minidlna']['content'])) $currentconfig = $config['minidlna']; else unset($currentconfig);
-		if ($config['minidlna']['home'] !== $_POST['home'] ) {
+
+		if (!isset($config['minidlna']['home']) || ($config['minidlna']['home'] !== $_POST['home'])) {
 			$homechanged = 1;
 			chown($_POST['home'], "dlna");
 			chmod ($_POST['home'], 0755);
 			unlink_if_exists ($_POST['home']."/files.db");
-			}
+		}
 		$config['minidlna']['enable'] = isset($_POST['enable']) ? true : false;
 		$config['minidlna']['name'] = $_POST['name'];
 		$config['minidlna']['if'] = $_POST['if'];
