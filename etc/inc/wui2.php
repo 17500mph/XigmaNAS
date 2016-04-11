@@ -90,12 +90,59 @@ class HTMLBaseControl2 {
 		if (true === $this->IsAltPadding()) { $class .= $this->GetClassAddonPadAlt(); }
 		return $class;
 	}
+	function GetDescriptionOutput() {
+		$description = $this->GetDescription();
+		$description_output = '';
+		$suppressbr = true;
+		if (!empty($description)) { // string or array
+			if (is_string($description)) {
+				$description_output = $description;
+			} elseif (is_array($description)) {
+				foreach ($description as $description_row) {
+					if (is_string($description_row)) {
+						if ($suppressbr) {
+							$description_output .= $description_row;
+							$suppressbr = false;
+						} else {
+							$description_output .= ('<br />' . $description_row);
+						}
+					} elseif (is_array($description_row)) {
+						switch (count($description_row)) {
+							case 1:
+								if ($suppressbr) {
+									$suppressbr = false;
+								} else {
+									$description_output .= '<br />';
+								}
+								$description_output .= $description_row[0];
+								break;
+							case 3: // allow not to break
+								$suppressbr = (is_bool($description_row[2])) ? $description_row[2] : $suppressbr;
+							case 2:
+								if ($suppressbr) {
+									$suppressbr = false;
+								} else {
+									$description_output .= '<br />';
+								}
+								if (is_null($description_row[1])) {
+									$description_output .= $description_row[0];
+								} else {
+									$description_output .= '<font color="' . $description_row[1] . '">' . $description_row[0] . '</font>';
+								}
+								break;
+						}
+					}
+				}
+			}
+		}
+		return $description_output;
+	}
 	function Render() {
 		$ctrlname = $this->GetCtrlName();
 		$title = $this->GetTitle();
 		$classtag = $this->GetClassOfTag();
 		$classdata = $this->GetClassOfData();
-		$description = $this->GetDescription();
+		$description = $this->GetDescriptionOutput();
 
 		echo "<tr id='{$ctrlname}_tr'>\n";
 		echo "	<td class='{$classtag}'><label for='$ctrlname'>{$title}</label></td>\n";
@@ -406,7 +453,6 @@ class HTMLCheckBox2 extends HTMLBaseControlJS2 {
 	function RenderCtrl() {
 		$ctrlname = $this->GetCtrlName();
 		$caption = $this->GetCaption();
-		$description = $this->GetDescription();
 		$param = $this->GetParam();
 		$classcheckbox = $this->GetClassOfCheckbox();
 		echo "<div class='{$classcheckbox}'>";
