@@ -418,10 +418,9 @@ $(document).ready(function(){
 	<?php html_textinfo("version", gettext("Version"), sprintf("<strong>%s %s</strong> (%s %s)", get_product_version(), get_product_versionname(), gettext("revision"), get_product_revision()));?>
 	<?php html_textinfo("builddate", gettext("Compiled"), htmlspecialchars(get_datetime_locale(get_product_buildtimestamp())));?>
 	<?php
-		exec("/sbin/sysctl -n kern.osrevision", $osrevision);
 		exec("/sbin/sysctl -n kern.version", $osversion);
 	?>
-	<?php html_textinfo("platform_os", gettext("Platform OS"), sprintf("FreeBSD Revision: %s<br/>%s",  $osrevision[0], $osversion[0]));?>
+	<?php html_textinfo("platform_os", gettext("Platform OS"), sprintf("%s", $osversion[0]));?>
 	<?php html_textinfo("platform", gettext("Platform"), sprintf(gettext("%s on %s"), $g['fullplatform'], $cpuinfo['model']));?>
 	<?php
 		if (!empty($smbios['planar'])) {
