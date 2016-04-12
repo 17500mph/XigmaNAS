@@ -640,7 +640,9 @@ function pool_change() {
   </tr>
   <tr>
     <td class="tabcont">
-      <form action="disks_zfs_zpool_tools.php" method="post" name="iform" id="iform">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<?php html_titleline(gettext("Pool Tools"));?>
+	<form action="disks_zfs_zpool_tools.php" method="post" name="iform" id="iform">
 	<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 	<?php if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));?>
 	<?php if (!$do_action) { ?>
