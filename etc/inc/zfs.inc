@@ -58,125 +58,128 @@ require_once("util.inc");
  */
 function zfs_get_pool_list() {
 	$a_result = [];
-	$a_zpool = cli_zpool_list('', 'name,size,alloc,free,expandsz,frag,cap,dedup,health,altroot');
+	$a_zpool = cli_zpool_info('', 'name,size,alloc,free,expandsz,frag,cap,dedup,health,altroot');
 	if (!empty($a_zpool)) {
 		foreach ($a_zpool as $r_pool) {
 			// map names of zpool list -o options to local options
-			$poolname = $r_pool['NAME'];
+			$poolname = $r_pool['name'];
 			$r_poolinfo = [];
 			$r_poolinfo['name'] = $poolname;
-			$r_poolinfo['size'] = $r_pool['SIZE'];
-			$r_poolinfo['alloc'] = $r_pool['ALLOC'];
-			$r_poolinfo['free'] = $r_pool['FREE'];
-			$r_poolinfo['expandsz'] = $r_pool['EXPANDSZ'];
-			$r_poolinfo['frag'] = $r_pool['FRAG'];
-			$r_poolinfo['cap'] = $r_pool['CAP'];
-			$r_poolinfo['dedup'] = $r_pool['DEDUP'];
-			$r_poolinfo['health'] = $r_pool['HEALTH'];
-			$r_poolinfo['altroot'] = $r_pool['ALTROOT'];
-			$a_zfs = cli_zfs_list($poolname, 'used,avail');
+			$r_poolinfo['size'] = $r_pool['size'];
+			$r_poolinfo['alloc'] = $r_pool['alloc'];
+			$r_poolinfo['free'] = $r_pool['free'];
+			$r_poolinfo['expandsz'] = $r_pool['expandsz'];
+			$r_poolinfo['frag'] = $r_pool['frag'];
+			$r_poolinfo['cap'] = $r_pool['cap'];
+			$r_poolinfo['dedup'] = $r_pool['dedup'];
+			$r_poolinfo['health'] = $r_pool['health'];
+			$r_poolinfo['altroot'] = $r_pool['altroot'];
+			$a_zfs = cli_zfs_info($poolname, 'used,avail');
 			if (!empty($a_zfs)) {
-				foreach ($a_zfs as $r_zfs) { // there should be only one
-					$r_poolinfo['used'] = $r_zfs['USED'];
-					$r_poolinfo['avail'] = $r_zfs['AVAIL'];
+				foreach ($a_zfs as $r_zfs) { // there should be only one row
+					$r_poolinfo['used'] = $r_zfs['used'];
+					$r_poolinfo['avail'] = $r_zfs['avail'];
 				}
 			} else { // populate a complete set
-				$r_poolinfo['used'] = 'UNKNOWN';
-				$r_poolinfo['avail'] = 'UNKNOWN';
+				$r_poolinfo['used'] = 'Unknown';
+				$r_poolinfo['avail'] = 'Unknown';
 			}
 			$a_result[$poolname] = $r_poolinfo;
 		}
 	}
 	return $a_result;
 }
-
 /*
- * Get zpool option information via cli
- * If you don't specify a zpool the option information of all known zpools is returned.
- * If you don't specify options all available options will be returned. ZPOOL option keys are uppercase.
- * The function returns an empty array on error or when no zpools are known to zfs.
+ * Get zpool information via cli
+ * If you don't specify options all available options will be returned.
+ * Option keys are lowercase.
+ * If you specify options they must be separated with a comma.
+ * The function returns an empty array on error or when the zpool is unknown to zfs.
  */
-function cli_zpool_list($poolname = '', $options = 'all') {
-	$this_name = 'cli_zpool_list_poolname';
+function cli_zpool_info($name = '', $clioptions = 'name') {
 	$a_return = [];
-	unset($a_line);
-	$r_line = '';
 	$a_key = [];
 	$a_val = [];
-	$is_row_with_option_name = true; // the first row od the call contains the option names
-	$cmd = sprintf('zpool list -o %s %s', $options, $poolname);
-	mwexec2($cmd, $a_line, $exitcode);
-	switch ($exitcode) {
-		case 0:
-			if (1 < count($a_line)) {  // at least 2 lines must be returned, one for header names and the others containing data
-				foreach ($a_line as $r_line) {
-					if ($is_row_with_option_name) {
-						$a_key = preg_split('/[\s]/', $r_line, NULL, PREG_SPLIT_NO_EMPTY);
-						$is_row_with_option_name = false;
-					} else {
-						$a_val = preg_split('/[\s]/', $r_line, NULL, PREG_SPLIT_NO_EMPTY);
-						$a_return[] = array_combine($a_key, $a_val);
-					}
-				}
-			} else {
-				write_log(sprintf('%s: did not return expected number of lines.', $this_name));
-			}
-			break;
-/*
-		case 1:
-			write_log(sprintf('%s: an error occurred.', $this_name));
-			break;
-		case 2:
-			write_log(sprintf('%s: invalid command line options were specified.', $this_name));
-			break;
-*/
+	$cliname = '';
+	if (!empty($name) && is_string($name)) {
+		$name = ltrim($name);
+		$cliname = escapeshellarg($name);
 	}
-	unset($a_line);
+	if (isset($clioptions) && is_string($clioptions)) { // deal with $clioptions
+		$clioptions = preg_replace('/\s+/', '', $clioptions); // remove all whitespaces
+		$a_key = preg_split('/,/', $clioptions); // get the key fields
+	}
+	if (false !== array_search('all', $a_key)) { // has the all option been selected?
+		$clioptions = 'all'; // reset other options, they are included in 'all'
+		$a_key = []; // undetermined
+		$clicmd = sprintf('zpool list -o %1$s %2$s', $clioptions, $cliname);
+		if (isset($a_line)) { unset($a_line); }
+		mwexec2($clicmd, $a_line, $exitcode);
+		if ((0 == $exitcode) && (0 < count($a_line))) {  // we need the first line to collect the header names
+			preg_match_all('/S+/', $a_line[0], $a_key);
+		}	
+	}	
+	if (!empty($a_key)) {
+		$a_key = array_map('strtolower', $a_key); // $a_key to lowercase
+		$clicmd = sprintf('zpool list -H -o %1$s %2$s', $clioptions, $cliname);
+		if (isset($a_line)) { unset($a_line); }
+		mwexec2($clicmd, $a_line, $exitcode);
+		if ((0 == $exitcode) && (0 < count($a_line))) {  // at least 1 line must be returned
+			foreach ($a_line as $r_line) {
+				$a_val = preg_split('/\t/', $r_line);
+				if (count($a_key) === count($a_val)) {
+					$a_return[] = array_combine($a_key, $a_val);
+				}
+			}
+		}
+	}
 	return $a_return;
 }
 
 /*
  * Get zfs option information via cli
- * If you don't specify a zpool the option information of all known zpools is returned.
- * If you don't specify options all available options will be returned. ZFS option keys are uppercase.
- * Function returns an empty array on error or when no zpools are known to zfs.
+ * If you don't specify options all available options will be returned.
+ * Option keys are lowercase.
+ * If you specify options they must be separated with a comma.
+ * The function returns an empty array on error or when the zpool is unknown to zfs.
  */
-function cli_zfs_list($poolname = '', $options = 'all') {
-	$this_name = 'cli_zfs_list_poolname';
+function cli_zfs_info($name = '', $clioptions = 'name') {
 	$a_return = [];
-	unset($a_line);
-	$r_line = '';
 	$a_key = [];
 	$a_val = [];
-	$is_row_with_option_name = true; // the first row od the call contains the option names
-	$cmd = sprintf('zfs list -o %s %s', $options, $poolname);
-	mwexec2($cmd, $a_line, $exitcode);
-	switch ($exitcode) {
-		case 0:
-			if (1 < count($a_line)) { // at least 2 lines must be returned, one for header names and the others containing data
-				foreach ($a_line as $r_line) {
-					if ($is_row_with_option_name) {
-						$a_key = preg_split('/[\s]/', $r_line, NULL, PREG_SPLIT_NO_EMPTY);
-						$is_row_with_option_name = false;
-					} else {
-						$a_val = preg_split('/[\s]/', $r_line, NULL, PREG_SPLIT_NO_EMPTY);
-						$a_return[] = array_combine($a_key, $a_val);
-					}
-				}
-			} else {
-				write_log(sprintf('%s: did not return expected number of lines.', $this_name));
-			}
-			break;
-/*
-		case 1:
-			write_log(sprintf('%s: an error occurred.', $this_name));
-			break;
-		case 2:
-			write_log(sprintf('%s: invalid command line options were specified.', $this_name));
-			break;
-*/
+	$cliname = '';
+	if (!empty($name) && is_string($name)) {
+		$name = ltrim($name);
+		$cliname = escapeshellarg($name);
 	}
-	unset($a_line);
+	if (isset($clioptions) && is_string($clioptions)) { // deal with $clioptions
+		$clioptions = preg_replace('/\s+/', '', $clioptions); // remove all whitespaces
+		$a_key = preg_split('/,/', $clioptions); // get the key fields
+	}
+	if (false !== array_search('all', $a_key)) { // has the all option been selected?
+		$clioptions = 'all'; // reset other options, they are included in 'all'
+		$a_key = []; // undetermined
+		$clicmd = sprintf('zfs list -o %1$s %2$s', $clioptions, $cliname);
+		if (isset($a_line)) { unset($a_line); }
+		mwexec2($clicmd, $a_line, $exitcode);
+		if ((0 == $exitcode) && (0 < count($a_line))) {  // we need the first line to collect the header names
+			preg_match_all('/S+/', $a_line[0], $a_key);
+		}	
+	}	
+	if (!empty($a_key)) {
+		$a_key = array_map('strtolower', $a_key); // $a_key to lowercase
+		$clicmd = sprintf('zfs list -H -o %1$s %2$s', $clioptions, $cliname);
+		if (isset($a_line)) { unset($a_line); }
+		mwexec2($clicmd, $a_line, $exitcode);
+		if ((0 == $exitcode) && (0 < count($a_line))) {  // at least 1 line must be returned
+			foreach ($a_line as $r_line) {
+				$a_val = preg_split('/\t/', $r_line);
+				if (count($a_key) === count($a_val)) {
+					$a_return[] = array_combine($a_key, $a_val);
+				}
+			}
+		}
+	}
 	return $a_return;
 }
 /**
