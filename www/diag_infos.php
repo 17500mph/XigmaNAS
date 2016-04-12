@@ -116,23 +116,24 @@ $a_phy_disk = array_merge((array)get_physical_disks_list());
 					<td class="listr"><?=(empty($disk['rotation_rate']) ) === FALSE ? htmlspecialchars($disk['rotation_rate']) : htmlspecialchars(gettext("Unknown"));?>&nbsp;</td>
 					<td class="listr"><?=(empty($disk['transfer_rate']) ) === FALSE ? htmlspecialchars($disk['transfer_rate']) : htmlspecialchars(gettext("n/a"));?>&nbsp;</td>
 				<?php
-					$matches = preg_split("/[\s\,]+/",$disk['smart']['smart_support']);
-					if(strcmp($matches[0], "Available") == 0){
-						$matches[0] = gettext("Available");
-						if(strcmp($matches[1], "Enabled") == 0){
-							$matches[0] = $matches[0].', ';
-							$matches[1] = gettext("Enabled");
-						} else if(strcmp($matches[1], "Disabled") == 0){
-							$matches[0] = $matches[0].', ';
-							$matches[1] = gettext("Disabled");
+					$matches = preg_split("/[\s\,]+/", $disk['smart']['smart_support']);
+					$smartsupport = '';
+					if (isset($matches[0])) {
+						if (0 == strcasecmp($matches[0], 'available')) {
+							$smartsupport .= gettext('Available');
+							if (isset($matches[1])) {
+								if (0 == strcasecmp($matches[1], 'enabled')) {
+									$smartsupport .= (', ' . gettext('Enabled'));
+								} elseif (0 ==  strcasecmp($matches[1], 'disabled')) {
+									$smartsupport .= (', ' . gettext('Disabled'));
+								}
+							}
+						} elseif (0 == strcasecmp($matches[0], 'unavailable')) {
+							$smartsupport .= gettext('Unavailable');
 						}
 					}
-					else if(strcmp($matches[0], "Unavailable") == 0){
-						$matches[0] = gettext("Unavailable");
-					}
 				?>
-					<td class="listr"><?=htmlspecialchars($matches[0].$matches[1]);?>&nbsp;</td>
-					<!--<td class="listr"><?=htmlspecialchars($disk['smart']['smart_support']);?>&nbsp;</td> -->
+					<td class="listr"><?=htmlspecialchars($smartsupport);?>&nbsp;</td>
 					<td class="listr"><?=htmlspecialchars($disk['controller'].$disk['controller_id']);?>&nbsp;</td>
 					<td class="listr"><?=htmlspecialchars($disk['controller_desc']);?>&nbsp;</td>
 					<td class="listr"><?=$temp;?>&nbsp;</td>
