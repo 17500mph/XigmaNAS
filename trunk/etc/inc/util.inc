@@ -1411,7 +1411,7 @@ function parse_device_desc($device){
 			return $matches[0];
 		}
 	}
-	return $matches[0];
+	return '';
 }
 
 function parse_ata_ahci_controller_desc($controller){
