@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-03-21 10:27+0000\n"
-"PO-Revision-Date: 2016-03-14 15:31+0000\n"
+"PO-Revision-Date: 2016-04-10 17:41+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-03 11:05+0000\n"
-"X-Generator: Launchpad (build 17972)\n"
+"X-Launchpad-Export-Date: 2016-04-13 00:49+0000\n"
+"X-Generator: Launchpad (build 17990)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -402,13 +402,13 @@ msgid "ARP Tables"
 msgstr "Tablas ARP"
 
 msgid "ARP Tables List"
-msgstr ""
+msgstr "Tabla ARP"
 
 msgid "ATTRIBUTE NAME"
 msgstr "Nombre del Atributo"
 
 msgid "Accept remote syslog messages."
-msgstr ""
+msgstr "Aceptar mensajes remotos syslog."
 
 msgid "Access"
 msgstr "Acceso"
@@ -654,7 +654,7 @@ msgid "Albanian"
 msgstr "Albanés"
 
 msgid "Alert Level"
-msgstr ""
+msgstr "Nivel de alerta"
 
 msgid "All"
 msgstr "Todos"
@@ -1196,6 +1196,8 @@ msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
 "error)."
 msgstr ""
+"Cuenta de errores CRC. Cuenta el numero de errores CRC en lectura o "
+"escritura."
 
 msgid "Cache"
 msgstr "Caché"
@@ -1718,7 +1720,7 @@ msgid "Critical"
 msgstr "Valor Max."
 
 msgid "Critical Error Level"
-msgstr ""
+msgstr "Nivel de error crítico"
 
 msgid "Cron"
 msgstr "Cron"
@@ -1849,7 +1851,7 @@ msgid "Dataset is marked for deletion"
 msgstr "El Dataset ha sido marcado para borrado"
 
 msgid "Dataset is protected"
-msgstr ""
+msgstr "El Dataset está protegido"
 
 msgid "Datasets"
 msgstr "Conjuntos de datos"
@@ -1867,7 +1869,7 @@ msgid "Debug"
 msgstr "Depurar"
 
 msgid "Debug Level"
-msgstr ""
+msgstr "Nivel de Debug"
 
 msgid "Dec"
 msgstr "dic."
@@ -2210,7 +2212,7 @@ msgid "Disable speaker beep on startup and shutdown."
 msgstr "Deshabilitar el beep del altavoz en el arranque y la parada."
 
 msgid "Disable the compression of repeated line."
-msgstr ""
+msgstr "Deshabilitar el eliminar las lineas repetidas."
 
 msgid "Disabled"
 msgstr "Desactivado"
@@ -2640,7 +2642,7 @@ msgid "Email Report"
 msgstr "Informe por correo electrónico"
 
 msgid "Emergency Level"
-msgstr ""
+msgstr "Nivel de Emergencia"
 
 msgid "Empty as default."
 msgstr "Vacío por defecto"
@@ -2937,7 +2939,7 @@ msgid "Error"
 msgstr "Error"
 
 msgid "Error Level"
-msgstr ""
+msgstr "Nivel de Error"
 
 #, php-format
 msgid "Error: The changes could not be applied (error code %s)."
@@ -2947,7 +2949,7 @@ msgid "Event"
 msgstr "Evento"
 
 msgid "Event selection"
-msgstr ""
+msgstr "Selecionar eventos"
 
 msgid "Execute"
 msgstr "Ejecutar"
@@ -3552,7 +3554,7 @@ msgid "IP address"
 msgstr "Dirección IP"
 
 msgid "IP address of remote syslog server."
-msgstr ""
+msgstr "IP del servidor syslog remoto."
 
 #, php-format
 msgid ""
@@ -3764,7 +3766,7 @@ msgid "Info"
 msgstr "Info"
 
 msgid "Info Level"
-msgstr ""
+msgstr "Nivel Informativo"
 
 msgid "Informal"
 msgstr "Incremental"
@@ -4300,13 +4302,13 @@ msgid "Log Level"
 msgstr "Nivel de registro"
 
 msgid "Log Settings"
-msgstr ""
+msgstr "Opciones del log"
 
 msgid "Log level"
 msgstr "Nivel de registro"
 
 msgid "Log order"
-msgstr ""
+msgstr "Orden (ascendente/descendente)"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Paquetes de Log que se trataran por esta regla al syslog."
@@ -4452,7 +4454,7 @@ msgid "Max Protocol"
 msgstr "Protocolo Max."
 
 msgid "Max entries"
-msgstr ""
+msgstr "Nº Max de entradas"
 
 msgid "Max. TTL"
 msgstr "Max. TTL"
@@ -4651,7 +4653,7 @@ msgid "Model"
 msgstr "Modelo"
 
 msgid "Model Extra"
-msgstr ""
+msgstr "Model Extra"
 
 msgid "Model Name"
 msgstr "Nombre del modelo"
@@ -5034,7 +5036,7 @@ msgid "Nothing to synchronize"
 msgstr "Nada que sincronizar"
 
 msgid "Notice Level"
-msgstr ""
+msgstr "Nivel de Aviso"
 
 #, php-format
 msgid "Notification email from host: %s"
@@ -5166,7 +5168,7 @@ msgid "Outgoing Power/Inverter Information"
 msgstr "Información de salida"
 
 msgid "Outgoing SMTP mail server address."
-msgstr ""
+msgstr "Dirección del servidor de salida SMTP."
 
 msgid "Output current (A)"
 msgstr "Corriente de salida (A)"
@@ -5380,7 +5382,7 @@ msgid "Ping"
 msgstr "Ping"
 
 msgid "Ping Test"
-msgstr ""
+msgstr "Comprobar Ping"
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Ping winbindd para ver si sigue vivo:"
@@ -5752,7 +5754,7 @@ msgid "Remote Rsync Server"
 msgstr "Servidor Rsync remoto"
 
 msgid "Remote Syslog Server"
-msgstr ""
+msgstr "Servidor syslog remoto"
 
 msgid "Remote module (source)"
 msgstr "Módulo remoto (fuente)"
@@ -5767,7 +5769,7 @@ msgid "Remote rsync daemon"
 msgstr "Demonio remoto de rsync"
 
 msgid "Remote syslog messages"
-msgstr ""
+msgstr "Mensajes del servidor syslog remoto"
 
 msgid "Removable"
 msgstr "Extraíble"
@@ -5825,13 +5827,13 @@ msgid "Resolve"
 msgstr "Resolver"
 
 msgid "Resolve IP"
-msgstr ""
+msgstr "Resolver la IP"
 
 msgid "Resolve IP addresses to hostnames"
 msgstr "Resolver direcciones IP a nombres de maquina"
 
 msgid "Resolve IP addresses to hostnames."
-msgstr ""
+msgstr "Resolver la IP a nombredeHost"
 
 msgid "Resource"
 msgstr "Recurso"
@@ -6320,7 +6322,7 @@ msgid "Show UPS Information"
 msgstr "Mostrar info. dela SAI"
 
 msgid "Show log entries in reverse order (newest entries on top)."
-msgstr ""
+msgstr "Mostrar el log en orden inverso (entradas nuevas arriba)"
 
 msgid "Shutdown"
 msgstr "Apagar"
@@ -6666,7 +6668,7 @@ msgid "Syncthing"
 msgstr "Syncthing"
 
 msgid "Syslog Level"
-msgstr ""
+msgstr "Nivel de syslog"
 
 #, php-format
 msgid ""
@@ -6687,7 +6689,7 @@ msgid "System Load"
 msgstr "Carga del sistema"
 
 msgid "System Settings"
-msgstr ""
+msgstr "Configuración del sistema"
 
 msgid "System bios"
 msgstr "BIOS del sistema"
@@ -8884,10 +8886,10 @@ msgid "Volume Size Limit"
 msgstr "Limite tamano del volumen"
 
 msgid "Volume is locked"
-msgstr ""
+msgstr "El volumen está bloqueado"
 
 msgid "Volume is marked for deletion"
-msgstr ""
+msgstr "El Volumen está marcado para borrado"
 
 msgid "Volume label"
 msgstr "Etiqueta del volumen"
@@ -8943,7 +8945,7 @@ msgid "Warning"
 msgstr "Precaución"
 
 msgid "Warning Level"
-msgstr ""
+msgstr "Nivel de Aviso"
 
 msgid ""
 "Warning: You are going to delete a RAID volume. All data will get lost and "
