@@ -1,6 +1,6 @@
 PORTNAME=		sudo
-PORTVERSION=		1.0
-PORTREVISION=		1
+PORTVERSION=		1.8.16
+PORTREVISION=		0
 CATEGORIES=		security
 
 COMMENT=		Allow others to run commands as root
