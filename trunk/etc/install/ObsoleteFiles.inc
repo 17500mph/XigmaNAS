@@ -1,4 +1,6 @@
 etc/uam
+etc/bash_completion.d/tmux
+etc/bash_completion.d
 etc/inc/interfaces.inc
 etc/inc/XML
 usr/local/bin/php
