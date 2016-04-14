@@ -11,6 +11,7 @@
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -58,7 +59,7 @@ if (isset($_POST['refresh']) && $_POST['refresh']) {
 	header("Location: diag_log.php?log={$log}");
 	exit;
 }
-$searchstring = isset($_POST['searchstring']) ? $_POST['searchstring'] : '';
+$searchlog = isset($_POST['searchlog']) ? $_POST['searchlog'] : '';
 ?>
 <?php include("fbegin.inc");?>
 <script type="text/javascript">
@@ -90,8 +91,8 @@ function log_change() {
 				<input name="clear" type="submit" class="formbtn" value="<?=gettext("Clear");?>" />
 				<input name="download" type="submit" class="formbtn" value="<?=gettext("Download");?>" />
 				<input name="refresh" type="submit" class="formbtn" value="<?=gettext("Refresh");?>" />
-				<span class="label">&nbsp;&nbsp;&nbsp;<?=gettext("Search string");?></span>
-				<input size="30" id="searchstring" name="searchstring" value="<?=$searchstring;?>" />
+				<span class="label">&nbsp;&nbsp;&nbsp;<?=gettext("Search event");?></span>
+				<input size="30" id="searchlog" name="searchlog" value="<?=$searchlog;?>" />
 				<input name="search" type="submit" class="formbtn" value="<?=gettext("Search");?>" />
 				<br /><br />
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">

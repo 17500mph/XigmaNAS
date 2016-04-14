@@ -215,14 +215,14 @@ function log_get_contents($logfile, $type) {
 
 	switch ($type) {
 		case "clog":
-			$searchstring = isset($_POST['searchstring']) ? $_POST['searchstring'] : '';
-		    $filter_str = ($searchstring == '') ? "" : "| grep -i \"".htmlspecialchars($searchstring)."\"";
+			$searchlog = isset($_POST['searchlog']) ? $_POST['searchlog'] : '';
+		    $filter_str = ($searchlog == '') ? "" : "| grep -i \"".htmlspecialchars($searchlog)."\"";
 			exec("/usr/sbin/clog {$logfile} | /usr/bin/tail {$param} {$filter_str}", $content);
 			break;
 
 		case "plain":
-			$searchstring = isset($_POST['searchstring']) ? $_POST['searchstring'] : '';
-		    $filter_str = ($searchstring == '') ? "" : "| grep -i \"".htmlspecialchars($searchstring)."\"";
+			$searchlog = isset($_POST['searchlog']) ? $_POST['searchlog'] : '';
+		    $filter_str = ($searchlog == '') ? "" : "| grep -i \"".htmlspecialchars($searchlog)."\"";
 			exec("/bin/cat {$logfile} | /usr/bin/tail {$param} {$filter_str}", $content);
 	}
 
