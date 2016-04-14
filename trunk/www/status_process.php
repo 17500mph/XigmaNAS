@@ -40,7 +40,7 @@ require("guiconfig.inc");
 $pgtitle = array(gettext("Status"), gettext("Processes"));
 
 function get_process_info() {
-	exec("top -b 20", $result);
+	exec("top -b 23", $result);
 	return implode("\n", $result);
 }
 
@@ -66,7 +66,7 @@ $(document).ready(function(){
 				<?php html_titleline(gettext("Processes Information"));?>
 			  <tr>
 			    <td class="listt">
-			    	<pre><textarea style="width: 98%;" id="procinfo" name="procinfo" class="listcontent" cols="95" rows="30" readonly="readonly"></textarea></pre>
+			    	<pre><textarea style="width: 98%;" id="procinfo" name="procinfo" class="listcontent" cols="95" rows="34" readonly="readonly"></textarea></pre>
 			    </td>
 			  </tr>
 			</table>
