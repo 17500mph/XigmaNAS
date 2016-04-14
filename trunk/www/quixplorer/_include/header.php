@@ -100,8 +100,9 @@ $menu['disks']['link'] = "../index.php";
 $menu['disks']['menuitem'] = array();
 $menu['disks']['menuitem'][] = array("desc" => gettext("Management"), "link" => "../disks_manage.php", "visible" => TRUE);
 $menu['disks']['menuitem'][] = array("desc" => gettext("Software RAID"), "link" => "../disks_raid_gmirror.php", "visible" => TRUE);
-$menu['disks']['menuitem'][] = array("desc" => gettext("Encryption"), "link" => "../disks_crypt.php", "visible" => TRUE);
 $menu['disks']['menuitem'][] = array("desc" => gettext("ZFS"), "link" => "../disks_zfs_zpool.php", "visible" => TRUE);
+$menu['disks']['menuitem'][] = array("type" => "separator", "visible" => TRUE);
+$menu['disks']['menuitem'][] = array("desc" => gettext("Encryption"), "link" => "../disks_crypt.php", "visible" => TRUE);
 $menu['disks']['menuitem'][] = array("desc" => gettext("Mount Point"), "link" => "../disks_mount.php", "visible" => TRUE);
 
 // Services
@@ -203,7 +204,6 @@ $menu['help']['desc'] = gettext("Help");
 $menu['help']['visible'] = TRUE;
 $menu['help']['link'] = "../index.php";
 $menu['help']['menuitem'] = array();
-$menu['help']['menuitem'][] = array("desc" => gettext("Report Generator"), "link" => "../report_generator.php", "visible" => TRUE);
 $menu['help']['menuitem'][] = array("type" => "separator", "visible" => TRUE);
 $menu['help']['menuitem'][] = array("desc" => gettext("Forum"), "link" => "http://forums.nas4free.org", "visible" => TRUE, "target" => "_blank");
 $menu['help']['menuitem'][] = array("desc" => gettext("Information & Manual"), "link" => "http://wiki.nas4free.org", "visible" => TRUE, "target" => "_blank");
