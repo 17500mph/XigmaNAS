@@ -198,7 +198,6 @@ samba_mkconf_cmd()
 		-o "printcap cache time = 0" -n \
 		-o "printcap name = /dev/null" -n \
 		-o "disable spoolss = yes" -n \
-		-v "concat('log level = ',//samba/loglevel)" -n \
 		-v "concat('dos charset = ',//samba/doscharset)" -n \
 		-o "smb passwd file = /var/etc/private/smbpasswd" -n \
 		-o "private dir = /var/etc/private" -n \
