@@ -342,6 +342,7 @@ samba_mkconf_cmd()
 					-v "concat('shadow:format = ', shadowformat)" -n \
 				-b \
 				-o "shadow:snapdir = .zfs/snapshot" -n \
+				-o "shadow:snapdirseverywhere = yes" -n \
 				-o "shadow:sort = desc" -n \
 				-o "shadow:localtime = yes" -n \
 			-b \
@@ -494,6 +495,7 @@ sambaad_mkconf_cmd()
 						-v "concat('shadow:format = ', shadowformat)" -n \
 					-b \
 					-o "shadow:snapdir = .zfs/snapshot" -n \
+					-o "shadow:snapdirseverywhere = yes" -n \
 					-o "shadow:sort = desc" -n \
 					-o "shadow:localtime = yes" -n \
 				-b \

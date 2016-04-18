@@ -14,7 +14,8 @@ Changes:
 - Upgrade syncthing to 0.12.22.
 
 Fixes:
-- prevent deletion of mounted gconcat softraid.
+- Prevent deletion of mounted gconcat softraid.
+- Fix broken shadow copy.
 
 Note:
 - iperf2 has been replaced for iperf3 because of inconsistent results for UDP above 2Gbps.
