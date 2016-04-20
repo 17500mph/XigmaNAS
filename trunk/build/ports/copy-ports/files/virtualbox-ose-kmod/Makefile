@@ -1,11 +1,11 @@
 PORTNAME=	virtualbox-ose
-PORTVERSION=	5.0.16
+PORTVERSION=	5.0.18
 CATEGORIES=	emulators
 MASTER_SITES=	http://download.virtualbox.org/virtualbox/${PORTVERSION}/
 PKGNAMESUFFIX=	-kmod
 DISTNAME=	VirtualBox-${PORTVERSION}
 
-MAINTAINER=	zoon01@nas4free
+MAINTAINER=	zoon01@nas4free.org
 COMMENT=	VirtualBox kernel module for FreeBSD
 
 LICENSE=	GPLv2

@@ -1,0 +1,10 @@
+--- src/VBox/Additions/freebsd/Makefile.kmk.orig	2015-04-14 15:38:08.000000000 -0400
++++ src/VBox/Additions/freebsd/Makefile.kmk	2015-04-28 18:38:42.600405000 -0400
+@@ -67,6 +67,7 @@
+ 	vboxvideo_drv_15.so \
+ 	vboxvideo_drv_16.so \
+ 	vboxvideo_drv_17.so \
++	$(if $(VBOX_WITH_PAM),pam_vbox.so,) \
+ 	VBoxOGLarrayspu.so \
+ 	VBoxOGLcrutil.so \
+ 	VBoxOGLerrorspu.so \

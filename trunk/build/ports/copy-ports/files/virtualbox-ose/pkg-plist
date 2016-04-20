@@ -393,6 +393,7 @@ lib/virtualbox/VBoxHostChannel.so
 lib/virtualbox/VBoxManage
 @(root,%%VBOXGROUP%%,4510) lib/virtualbox/VBoxNetAdpCtl
 @(root,%%VBOXGROUP%%,4510) lib/virtualbox/VBoxNetDHCP
+@(root,%%VBOXGROUP%%,4510) lib/virtualbox/VBoxNetNAT
 lib/virtualbox/VBoxNetDHCP.so
 lib/virtualbox/VBoxNetNAT.so
 %%X11%%lib/virtualbox/VBoxOGLhostcrutil.so
@@ -537,6 +538,7 @@ lib/virtualbox/components/VirtualBox_XPCOM.xpt
 %%NLS%%%%DATADIR%%/nls/VirtualBox_cs.qm
 %%NLS%%%%DATADIR%%/nls/VirtualBox_da.qm
 %%NLS%%%%DATADIR%%/nls/VirtualBox_de.qm
+%%NLS%%%%DATADIR%%/nls/VirtualBox_el.qm
 %%NLS%%%%DATADIR%%/nls/VirtualBox_en.qm
 %%NLS%%%%DATADIR%%/nls/VirtualBox_es.qm
 %%NLS%%%%DATADIR%%/nls/VirtualBox_eu.qm
@@ -558,6 +560,7 @@ lib/virtualbox/components/VirtualBox_XPCOM.xpt
 %%NLS%%%%DATADIR%%/nls/VirtualBox_ro.qm
 %%NLS%%%%DATADIR%%/nls/VirtualBox_ru.qm
 %%NLS%%%%DATADIR%%/nls/VirtualBox_sk.qm
+%%NLS%%%%DATADIR%%/nls/VirtualBox_sl.qm
 %%NLS%%%%DATADIR%%/nls/VirtualBox_sr.qm
 %%NLS%%%%DATADIR%%/nls/VirtualBox_sv.qm
 %%NLS%%%%DATADIR%%/nls/VirtualBox_tr.qm
@@ -570,6 +573,7 @@ lib/virtualbox/components/VirtualBox_XPCOM.xpt
 %%NLS%%%%DATADIR%%/nls/qt_cs.qm
 %%NLS%%%%DATADIR%%/nls/qt_da.qm
 %%NLS%%%%DATADIR%%/nls/qt_de.qm
+%%NLS%%%%DATADIR%%/nls/qt_el.qm
 %%NLS%%%%DATADIR%%/nls/qt_en.qm
 %%NLS%%%%DATADIR%%/nls/qt_es.qm
 %%NLS%%%%DATADIR%%/nls/qt_eu.qm
@@ -591,6 +595,7 @@ lib/virtualbox/components/VirtualBox_XPCOM.xpt
 %%NLS%%%%DATADIR%%/nls/qt_ro.qm
 %%NLS%%%%DATADIR%%/nls/qt_ru.qm
 %%NLS%%%%DATADIR%%/nls/qt_sk.qm
+%%NLS%%%%DATADIR%%/nls/qt_sl.qm
 %%NLS%%%%DATADIR%%/nls/qt_sr.qm
 %%NLS%%%%DATADIR%%/nls/qt_sv.qm
 %%NLS%%%%DATADIR%%/nls/qt_tr.qm
