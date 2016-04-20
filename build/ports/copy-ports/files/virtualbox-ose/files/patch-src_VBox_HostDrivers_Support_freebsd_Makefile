@@ -1,0 +1,19 @@
+--- src/VBox/HostDrivers/Support/freebsd/Makefile.orig	2016-04-18 15:24:43 UTC
++++ src/VBox/HostDrivers/Support/freebsd/Makefile
+@@ -92,13 +92,14 @@ SRCS += \
+ 	RTStrCopy.c \
+ 	RTStrCopyEx.c \
+ 	RTStrCopyP.c \
++	memchr.c \
+ 	strformat.c \
+ 	strformatrt.c \
+ 	strformattype.c \
++	stringalloc.c \
+ 	strprintf.c \
+ 	strtonum.c \
+-	memchr.c \
+-	stringalloc.c
++	utf-8.c
+ 
+ .PATH:	${.CURDIR}/common/rand
+ SRCS += \

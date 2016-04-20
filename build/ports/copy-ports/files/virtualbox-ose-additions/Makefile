@@ -1,11 +1,11 @@
 PORTNAME=	virtualbox-ose
-PORTVERSION=	5.0.16
+PORTVERSION=	5.0.18
 CATEGORIES=	emulators
 MASTER_SITES=	http://download.virtualbox.org/virtualbox/${PORTVERSION}/
 PKGNAMESUFFIX=	-additions
 DISTNAME=	VirtualBox-${PORTVERSION}
 
-MAINTAINER=	zoon01@nas4free
+MAINTAINER=	zoon01@nas4free.org
 COMMENT=	VirtualBox additions for FreeBSD guests
 
 LICENSE=	GPLv2
@@ -44,7 +44,7 @@ OPTIONS_DEFAULT=	DBUS X11
 OPTIONS_SUB=	yes
 
 DBUS_CONFIGURE_OFF=	--disable-dbus
-DBUS_LIB_DEPENDS=	libdbus-1.so:devel/dbus
+DBUS_LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus
 OPENGL_CONFIGURE_OFF=	--disable-opengl
 
 .include <bsd.port.options.mk>
@@ -106,14 +106,6 @@ EXTRA_PATCHES=	${PATCHDIR}/extrapatch-Config.kmk \
 .if ${COMPILER_FEATURES:Mlibc++}
 EXTRA_PATCHES+=	${PATCHDIR}/extrapatch-src-VBox-Additions-x11-VBoxClient-Makefile.kmk
 .endif
-.endif
-
-.if ${OSVERSION} < 1100066
-EXTRA_PATCHES+=	${PATCHDIR}/extrapatch-src-VBox-Additions-x11-vboxvideo-Makefile.kmk.dri
-.else
-EXTRA_PATCHES+=	${PATCHDIR}/extrapatch-src-VBox-Additions-freebsd-drm-Makefile
-EXTRA_PATCHES+=	${PATCHDIR}/extrapatch-src-VBox-Additions-freebsd-drm-Makefile.kmk
-EXTRA_PATCHES+=	${PATCHDIR}/extrapatch-src-VBox-Additions-x11-vboxvideo-Makefile.kmk.dri2
 .endif
 
 SUB_LIST+=	KMODDIR=${KMODDIR}
