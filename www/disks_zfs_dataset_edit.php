@@ -296,8 +296,8 @@ for ($n = 1; $n <= 9; $n++) {
 $l_dedup = ['on' => gettext('On'), 'off' => gettext('Off'), 'verify' => gettext('Verify'), 'sha256' => 'SHA256', 'sha256,verify' => gettext('SHA256, Verify')];		
 $l_sync = ['standard' => gettext('Standard'), 'always' => gettext('Always'), 'disabled' => gettext('Disabled')];
 $l_atime = ['on' => gettext('On'), 'off' => gettext('Off')];
-$l_aclinherit = ['discard' => gettext('Discard'), 'noallow' => gettext('Noallow'), 'restricted' => gettext('Restricted'), 'passthrough' => gettext('Passthrough'), 'passthrough-x' => gettext('Passthrough-X')];
-$l_aclmode = ['discard' => gettext('Discard'), 'groupmask' => gettext('Groupmask'), 'passthrough' => gettext('Passthrough'), 'restricted' => gettext('Restricted')];
+$l_aclinherit = ['discard' => gettext('Discard - Do not inherit entries'), 'noallow' => gettext('Noallow - Only inherit deny entries'), 'restricted' => gettext('Restricted - Inherit all but "write ACL" and "change owner"'), 'passthrough' => gettext('Passthrough - Inherit all entries'), 'passthrough-x' => gettext('Passthrough-X - Inherit all but "execute" when not specified')];
+$l_aclmode = ['discard' => gettext('Discard - Discard ACL'), 'groupmask' => gettext('Groupmask - Mask ACL with mode'), 'passthrough' => gettext('Passthrough - Do not change ACL'), 'restricted' => gettext('Restricted')];
 $l_casesensitivity = ['sensitive' => gettext('Sensitive'), 'insensitive' => gettext('Insensitive'), 'mixed' => gettext('Mixed')];
 $l_users = [];
 foreach (system_get_user_list() as $r_key => $r_value) {
