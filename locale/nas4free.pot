@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-04-22 14:41+0000\n"
+"POT-Creation-Date: 2016-04-22 16:23+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -1821,7 +1821,10 @@ msgstr ""
 msgid "Disabled"
 msgstr ""
 
-msgid "Discard"
+msgid "Discard - Discard ACL"
+msgstr ""
+
+msgid "Discard - Do not inherit entries"
 msgstr ""
 
 #, php-format
@@ -2863,7 +2866,7 @@ msgstr ""
 msgid "Group suffix"
 msgstr ""
 
-msgid "Groupmask"
+msgid "Groupmask - Mask ACL with mode"
 msgstr ""
 
 msgid "Groups"
@@ -4197,7 +4200,7 @@ msgstr ""
 msgid "No pool was found."
 msgstr ""
 
-msgid "Noallow"
+msgid "Noallow - Only inherit deny entries"
 msgstr ""
 
 msgid "Node A IP address"
@@ -4504,10 +4507,13 @@ msgstr ""
 msgid "Passphrase don't match."
 msgstr ""
 
-msgid "Passthrough"
+msgid "Passthrough - Do not change ACL"
 msgstr ""
 
-msgid "Passthrough-X"
+msgid "Passthrough - Inherit all entries"
+msgstr ""
+
+msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
 msgstr ""
 
 msgid "Password"
@@ -5071,6 +5077,9 @@ msgid "Restore metadata from the given file to the given provider."
 msgstr ""
 
 msgid "Restricted"
+msgstr ""
+
+msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
 
 msgid "Results for net rpc testjoin:"
