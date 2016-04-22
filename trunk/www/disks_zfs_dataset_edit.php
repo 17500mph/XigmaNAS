@@ -293,11 +293,11 @@ for ($n = 1; $n <= 9; $n++) {
 	$helpinghand = sprintf('gzip-%d',$n);
 	$l_compressionmode[$helpinghand] = $helpinghand;
 }
-$l_dedup = ['on' => gettext('On'), 'off' => gettext('Off'), 'verify' => 'verify', 'sha256' => 'sha256', 'sha256,verify' => 'sha256,verify'];		
-$l_sync = ['standard' => 'standard', 'always' => 'always', 'disabled' => 'disabled'];
+$l_dedup = ['on' => gettext('On'), 'off' => gettext('Off'), 'verify' => gettext('Verify'), 'sha256' => 'SHA256', 'sha256,verify' => gettext('SHA256, Verify')];		
+$l_sync = ['standard' => gettext('Standard'), 'always' => gettext('Always'), 'disabled' => gettext('Disabled')];
 $l_atime = ['on' => gettext('On'), 'off' => gettext('Off')];
-$l_aclinherit = ['discard' => 'discard', 'noallow' => 'noallow', 'restricted' => 'restricted', 'passthrough' => 'passthrough', 'passthrough-x' => 'passthrough-x'];
-$l_aclmode = ['discard' => 'discard', 'groupmask' => 'groupmask', 'passthrough' => 'passthrough', 'restricted' => 'restricted'];
+$l_aclinherit = ['discard' => gettext('Discard'), 'noallow' => gettext('Noallow'), 'restricted' => gettext('Restricted'), 'passthrough' => gettext('Passthrough'), 'passthrough-x' => gettext('Passthrough-X')];
+$l_aclmode = ['discard' => gettext('Discard'), 'groupmask' => gettext('Groupmask'), 'passthrough' => gettext('Passthrough'), 'restricted' => gettext('Restricted')];
 $l_casesensitivity = ['sensitive' => gettext('Sensitive'), 'insensitive' => gettext('Insensitive'), 'mixed' => gettext('Mixed')];
 $l_users = [];
 foreach (system_get_user_list() as $r_key => $r_value) {
