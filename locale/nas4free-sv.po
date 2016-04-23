@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-21 10:27+0000\n"
-"PO-Revision-Date: 2016-03-27 11:55+0000\n"
+"POT-Creation-Date: 2016-04-22 16:23+0000\n"
+"PO-Revision-Date: 2016-04-16 07:38+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-13 00:49+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-04-23 08:09+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -171,7 +171,7 @@ msgid "4KB wrapper"
 msgstr "4KB paket"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
-msgstr "802.1Q VLAN tag (mellan 1 och 4094)."
+msgstr "802.1Q VLAN etikett (mellan 1 och 4094)."
 
 msgid "<->"
 msgstr "<->"
@@ -235,8 +235,8 @@ msgid ""
 "A Initiator Group contains authorised initiator names and networks to access "
 "the target."
 msgstr ""
-"En initiator grupp innehåller tillåtna initiator namn och nätverk för "
-"åtkomst till destinationen."
+"En initiatorgrupp innehåller tillåtna initiator namn och nätverk för åtkomst "
+"till destinationen."
 
 msgid ""
 "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
@@ -246,7 +246,7 @@ msgid ""
 "A Portal Group contains IP addresses and listening TCP ports to connect the "
 "target from the initiator."
 msgstr ""
-"En portal grupp innehåller IP adresser och lyssnar på TCP portar för att "
+"En portalgrupp innehåller IP adresser och lyssnar på TCP portar för att "
 "ansluta till målet från initiatorn."
 
 #, php-format
@@ -279,6 +279,15 @@ msgstr ""
 "En nyckel innehåller 5 eller 13 tecken (40 eller 104 bitar) beroende på det "
 "lokala nätverket och nätverksadapterns egenskaper. Nyckeln kan specificeras "
 "i klartext eller som en sträng av ett hexadecimalt värde inlett med '0x'."
+
+msgid "A minimum of 2 disks is required to build a JBOD."
+msgstr ""
+
+#, php-format
+msgid ""
+"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
+"point</a> first before proceeding."
+msgstr ""
 
 msgid "A route to this destination network already exists."
 msgstr "Nätverks destinationen finns redan."
@@ -388,7 +397,7 @@ msgid "ARP Tables"
 msgstr "ARP Tabeller"
 
 msgid "ARP Tables List"
-msgstr ""
+msgstr "Lista ARP Tabell"
 
 msgid "ATTRIBUTE NAME"
 msgstr "ATTRIBUTNAMN"
@@ -498,7 +507,7 @@ msgid "Add initiator"
 msgstr "Lägg till initiator"
 
 msgid "Add initiator group"
-msgstr "Lägg till en initiator grupp."
+msgstr "Lägg till en initiatorgrupp."
 
 msgid "Add interface"
 msgstr "Lägg till gränssnitt"
@@ -519,7 +528,7 @@ msgid "Add pool"
 msgstr "Lägg till pool"
 
 msgid "Add portal group"
-msgstr "Lägg till Portal grupp"
+msgstr "Lägg till Portalgrupp"
 
 msgid "Add resource"
 msgstr "Lägg till resurs"
@@ -568,7 +577,7 @@ msgid "Administration password"
 msgstr "Administratörslösenord"
 
 msgid "Administrative WebGUI"
-msgstr "Anministrativt webbgränssnitt"
+msgstr "Administrativt webbgränssnitt"
 
 msgid "Administrator name"
 msgstr "Administratörens namn"
@@ -650,6 +659,9 @@ msgid ""
 msgstr ""
 "Alla data i sökvägen skrivs över. För att undvika felaktiga data/rättigheter "
 "rekommenderas att en tom UFS katalog används."
+
+msgid "All data will be lost when you activate this option!"
+msgstr ""
 
 msgid "All dirs"
 msgstr "Alla kataloger"
@@ -751,6 +763,9 @@ msgstr "Alternativ TCP port. Standard är 873."
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr "Alternativ konfigurationskatalog (vanligtvis tom)."
+
+msgid "Always"
+msgstr ""
 
 msgid "Always On"
 msgstr "Alltid på"
@@ -1254,7 +1269,7 @@ msgid "Check and replace cable"
 msgstr "Kontrollera och byt kabel"
 
 msgid "Check interval"
-msgstr "Kontrollera intervall"
+msgstr "Kontrollintervall"
 
 msgid "Check shared secret:"
 msgstr "Kontrollera delad hemlighet:"
@@ -1443,7 +1458,7 @@ msgid "Controls power consumption."
 msgstr "Styr effektförbrukningen"
 
 msgid "Controls the behavior of synchronous requests."
-msgstr "Styr uppförandet för synkrona begäran"
+msgstr "Styr uppförandet för synkroniseringsbegäran"
 
 msgid ""
 "Controls the compression algorithm used for this dataset. The 'lzjb' "
@@ -1484,7 +1499,7 @@ msgstr ""
 "Styr dedup metod. <br><b><font color='red'>NOTERING/VARNING</font>: Se <a "
 "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
 ":disks-zfs-volumes-volume' target='_blank'>ZFS volymer & deduplikation</a> "
-"wiki artikel FÖRE användning av denna funktion.</b></br>"
+"wikiartikel FÖRE användning av denna funktion.</b></br>"
 
 msgid ""
 "Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
@@ -1496,7 +1511,7 @@ msgstr ""
 "Styr dedup metod. <br><b><font color='red'>NOTERING/VARNING</font>: Se <a "
 "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
 ":disks_zfs_datasets_dataset' target='_blank'>ZFS dataset & deduplikation</a> "
-"wiki article FÖRE användande av denna funktion.</b></br>"
+"wikiartikel FÖRE användande av denna funktion.</b></br>"
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Kontrollerar huruvida detta Dataset kan modifieras"
@@ -1930,6 +1945,9 @@ msgstr "Ta bort valda jobb"
 msgid "Delete Selected Options"
 msgstr "Ta bort valda optioner"
 
+msgid "Delete Selected RAID Volumes"
+msgstr ""
+
 msgid "Delete Selected Volumes"
 msgstr "Ta bort valda Volymer"
 
@@ -2104,6 +2122,9 @@ msgstr "Enhet /dev/%s - %s"
 msgid "Device IP"
 msgstr "Enhetens IP"
 
+msgid "Device List"
+msgstr ""
+
 msgid "Device Model"
 msgstr "Enhetstyp"
 
@@ -2198,6 +2219,12 @@ msgstr "Inaktivera komprimering av upprepade rader."
 msgid "Disabled"
 msgstr "Inaktiverad"
 
+msgid "Discard - Discard ACL"
+msgstr ""
+
+msgid "Discard - Do not inherit entries"
+msgstr ""
+
 #, php-format
 msgid "Discovered iSCSI target for %s"
 msgstr "Upptäckte iSCSI mål för %s"
@@ -2235,6 +2262,11 @@ msgstr ""
 
 msgid "Distributed hash table"
 msgstr "Distribuerad hashtabell"
+
+msgid ""
+"Do not activate this option if you want to add an already existing RAID "
+"again."
+msgstr ""
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2290,7 +2322,7 @@ msgid "Do you really want to delete this host?"
 msgstr "Vill du verkligen ta bort denna värd?"
 
 msgid "Do you really want to delete this initiator group?"
-msgstr "Vill du verkligen ta bort denna initiator grupp?"
+msgstr "Vill du verkligen ta bort denna initiatorgrupp?"
 
 msgid ""
 "Do you really want to delete this initiator? All elements that still use it "
@@ -2316,7 +2348,7 @@ msgid "Do you really want to delete this pool?"
 msgstr "Vill du verkligen ta bort denna pool?"
 
 msgid "Do you really want to delete this portal group?"
-msgstr "Vill du verkligen ta bort denna portal grupp?"
+msgstr "Vill du verkligen ta bort denna portalgrupp?"
 
 msgid "Do you really want to delete this resource?"
 msgstr "Vill du verkligen ta bort resursen?"
@@ -2363,6 +2395,9 @@ msgstr "Vill du verkligen ta bort det valda föremålet från listan?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Vill du verkligen avinstallera detta paketet?"
+
+msgid "Do you want to delete selected RAID volumes?"
+msgstr ""
 
 msgid "Do you want to delete selected datasets?"
 msgstr "Vill du ta bort valda dataset?"
@@ -2867,7 +2902,7 @@ msgid ""
 "Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to "
 "select it."
 msgstr ""
-"Mata in önskad systemtid direkt (format mm/dd/yyyy hh:mm) eller använd "
+"Mata in önskad systemtid direkt (format mm/dd/åååå hh:mm) eller använd "
 "ikonen för att välja."
 
 msgid ""
@@ -2903,6 +2938,9 @@ msgstr "Ange port att sända fällor (traps) (standard 162)."
 
 msgid "Enter trap host name."
 msgstr "Skriv in \"fällans\" värdnamn."
+
+msgid "Entire Device"
+msgstr ""
 
 msgid ""
 "Erase Fail Count (chip). This parameter indicates a number of flash erase "
@@ -3339,6 +3377,9 @@ msgstr "Numeriskt ID för gruppen."
 msgid "Group suffix"
 msgstr "Gruppändelse"
 
+msgid "Groupmask - Mask ACL with mode"
+msgstr ""
+
 msgid "Groups"
 msgstr "Grupper"
 
@@ -3579,6 +3620,9 @@ msgstr "IPv6-adresser"
 msgid "IRC Live Support"
 msgstr "IRC Live-support"
 
+msgid "IRC NAS4Free"
+msgstr ""
+
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
 msgstr "ISO filsökväg (ex. %s) använd som en CD/DVD spelare."
@@ -3600,9 +3644,9 @@ msgid ""
 "IDLE state, most disks are still spinning, so this is probably not what you "
 "want."
 msgstr ""
-"Vänteläge - Kontrollera enheten om det inte är i viloläge, vänteläge eller "
-"viloläge. I viloläge snurrar de flesta diskar fortfarande , så detta är "
-"antagligen inte vad du vill."
+"Idle (Vänteläge) - Kontrollera enheten om det inte är i viloläge, vänteläge "
+"eller viloläge. I viloläge snurrar de flesta diskar fortfarande , så detta "
+"är antagligen inte vad du vill."
 
 msgid "If allowed, a user of the trusted domains can access the share."
 msgstr ""
@@ -3785,7 +3829,7 @@ msgid "Initiator Group"
 msgstr "Initieringsgruppen"
 
 msgid "Initiator Groups"
-msgstr "Initierar-Grupper"
+msgstr "Initierargrupper"
 
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
@@ -3917,8 +3961,8 @@ msgid "Invalid max. block size! It must be in the range from %d to %d."
 msgstr ""
 "Ogiltig max. blockstorlek! Det måste vara i intervallet från %d till %d."
 
-msgid "Invalid username or password. Please try again."
-msgstr "Felaktigt användarnamn eller lösenord. Försök igen."
+msgid "Invalid username or password.</br> Please try again."
+msgstr ""
 
 msgid "Invert Selection"
 msgstr "Invertera markering"
@@ -3964,6 +4008,9 @@ msgstr "JBOD"
 
 msgid "JBOD Information & Status"
 msgstr "JBOD Information & Status"
+
+msgid "JBOD Tools"
+msgstr ""
 
 msgid "Jan"
 msgstr "jan"
@@ -4541,6 +4588,9 @@ msgstr "Minnesanvändning"
 msgid "Memory usage"
 msgstr "Minnesanvändning"
 
+msgid "Message Board"
+msgstr ""
+
 msgid "Message of the day."
 msgstr "Dagens meddelande."
 
@@ -4666,7 +4716,7 @@ msgid "Mounting..."
 msgstr "Monterar..."
 
 msgid "Mounts"
-msgstr "Monteringar"
+msgstr "Monteringspunkter"
 
 msgid "Move down"
 msgstr "Flytta ner"
@@ -4685,9 +4735,6 @@ msgstr "Gemensam CHAP"
 
 msgid "Mutual CHAP Users"
 msgstr "Gemensamma CHAP-användare"
-
-msgid "NAS4Free WebGUI Login"
-msgstr "NAS4Free WebGUI Inlogning"
 
 msgid "NFS"
 msgstr "NFS"
@@ -4791,9 +4838,9 @@ msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
 "a disk which is spun-down to be spun-up when it is checked."
 msgstr ""
-"Aldrig - kontrollera enheten oavsett dess strömförbrukningsinställning. "
-"Detta kan komma att orsaka att en disk i vilolåge spinner igång när den blir "
-"kontrollerad."
+"Never (Aldrig) - kontrollera enheten oavsett dess "
+"strömförbrukningsinställning. Detta kan komma att medföra att en disk i "
+"vilolåge spinner igång när den blir kontrollerad."
 
 msgid "New Device"
 msgstr "Ny Enhet"
@@ -4900,6 +4947,9 @@ msgstr "Inga nya mjukvaroraid hårddiskar hittades."
 
 msgid "No pool was found."
 msgstr "Ingen pool finns."
+
+msgid "Noallow - Only inherit deny entries"
+msgstr ""
 
 msgid "Node A IP address"
 msgstr "Nod A IP-adress"
@@ -5155,6 +5205,9 @@ msgstr ""
 msgid "Overload"
 msgstr "Överlast"
 
+msgid "Overview"
+msgstr ""
+
 msgid "Overwrite already configured disks (only affects filesystem value)."
 msgstr ""
 "Skriv över redan konfigurerade diskar (gäller enbart filsystemvärden)."
@@ -5213,6 +5266,9 @@ msgstr "Parameter xxx (ups.conf eller cmdline -x) inställning"
 msgid "Parent Directory"
 msgstr "Överliggande katalog"
 
+msgid "Partition"
+msgstr ""
+
 msgid "Partition number"
 msgstr "Partitionsnummer"
 
@@ -5247,6 +5303,15 @@ msgstr "Lösenordsfras"
 
 msgid "Passphrase don't match."
 msgstr "Lösenordsfrasen stämmer ej överens."
+
+msgid "Passthrough - Do not change ACL"
+msgstr ""
+
+msgid "Passthrough - Inherit all entries"
+msgstr ""
+
+msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
+msgstr ""
 
 msgid "Password"
 msgstr "Lösenord"
@@ -5382,6 +5447,9 @@ msgstr "Pool"
 
 msgid "Pool Information & Status"
 msgstr "Pool Information & Status"
+
+msgid "Pool Tools"
+msgstr ""
 
 msgid "Pools"
 msgstr "Pooler"
@@ -5551,11 +5619,17 @@ msgstr "RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr "RAID 0 Information & Status"
 
+msgid "RAID 0 Tools"
+msgstr ""
+
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
 msgstr "RAID 0/1/5 Information & Status"
+
+msgid "RAID 0/1/5 Tools"
+msgstr ""
 
 msgid "RAID 1"
 msgstr "RAID 1"
@@ -5563,11 +5637,29 @@ msgstr "RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr "RAID 1 Information & Status"
 
+msgid "RAID 1 Tools"
+msgstr ""
+
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
 msgstr "RAID 5 Information & Status"
+
+msgid "RAID 5 Tools"
+msgstr ""
+
+msgid "RAID device can be removed."
+msgstr ""
+
+msgid "RAID device is already in use."
+msgstr ""
+
+msgid "RAID is marked for removal"
+msgstr ""
+
+msgid "RAID is protected"
+msgstr ""
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -5579,7 +5671,7 @@ msgid "RAID5"
 msgstr "RAID5"
 
 msgid "RAW VALUE"
-msgstr "Råvärde"
+msgstr "RÅVÄRDE"
 
 msgid "RAW info"
 msgstr "RAW information"
@@ -5607,6 +5699,9 @@ msgstr "RSYNC-händelser"
 
 msgid "RSYNC log"
 msgstr "RSYNC logg"
+
+msgid "Raid Name"
+msgstr ""
 
 msgid "Raid name"
 msgstr "RAID-namn"
@@ -5703,7 +5798,7 @@ msgid "Remote Address"
 msgstr "Fjärradress"
 
 msgid "Remote Module (Source)"
-msgstr "Remote Module (Källa)"
+msgstr "Fjärrmodul (Källa)"
 
 msgid "Remote Rsync Server"
 msgstr "Fjärr-server för Rsync"
@@ -5712,7 +5807,7 @@ msgid "Remote Syslog Server"
 msgstr "Extern syslogserver"
 
 msgid "Remote module (source)"
-msgstr "Fjärr-modul (källa)"
+msgstr "Fjärrmodul (källa)"
 
 msgid "Remote module name"
 msgstr "Namn för fjärrmodul"
@@ -5802,6 +5897,12 @@ msgstr "Återställ konfiguration"
 
 msgid "Restore metadata from the given file to the given provider."
 msgstr "Återställ metadata från en given fil till en given leverantör"
+
+msgid "Restricted"
+msgstr ""
+
+msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
+msgstr ""
 
 msgid "Results for net rpc testjoin:"
 msgstr "Resultat för 'net rpc' testanslutning:"
@@ -5901,6 +6002,9 @@ msgstr "S.M.A.R.T. extraval"
 
 msgid "S.M.A.R.T. log"
 msgstr "S.M.A.R.T.-logg"
+
+msgid "SHA256, Verify"
+msgstr ""
 
 msgid "SMB2"
 msgstr "SMB2"
@@ -6016,6 +6120,12 @@ msgstr "Schemalagd avstängning"
 
 msgid "Scheduled tests"
 msgstr "Schemalagda tester"
+
+msgid "Search"
+msgstr ""
+
+msgid "Search event"
+msgstr ""
 
 msgid "Secondary"
 msgstr "Sekundär"
@@ -6307,7 +6417,7 @@ msgstr "Hoppa över första skanningen"
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr ""
-"Vila - Kontrollera enheten, om den inte är i vilo-läge ('SLEEP'-läge)"
+"Sleep (Vila) - Kontrollera enheten, om den inte är i vilo-läge ('SLEEP'-läge)"
 
 msgid "Slovak"
 msgstr "Slovakiska"
@@ -6341,6 +6451,9 @@ msgstr "Mjukvaru-RAID"
 
 msgid "Software Used"
 msgstr "Använd programvara"
+
+msgid "Software gconcat JBOD"
+msgstr ""
 
 msgid "Source"
 msgstr "Källa"
@@ -6468,10 +6581,10 @@ msgid ""
 "modes most disks are not spinning, so if you want to prevent a laptop disk "
 "from spinning up each poll, this is probably what you want."
 msgstr ""
-"Väntläge - Kontrollera enheten om det inte är i vilo-eller vänteläge. I "
-"dessa lägen snurrar de flesta diskar inte, så om du vill förhindra en laptop "
-"disk från att snurra igång vid varje pollning, detta är antagligen vad du "
-"vill."
+"Standby (Väntläge) - Kontrollera enheten om det inte är i vilo-eller "
+"vänteläge. I dessa lägen snurrar de flesta diskar inte, så om du vill "
+"förhindra en laptop disk från att snurra igång vid varje pollning, detta är "
+"antagligen vad du vill."
 
 msgid "Start"
 msgstr "Starta"
@@ -7371,6 +7484,16 @@ msgstr ""
 "eller klass, från att logga in på servern, men det hindrar inte avstängd "
 "användare, värd, eller klass från att ansluta till servern."
 
+msgid "The name of the RAID cannot be changed."
+msgstr ""
+
+msgid "The name of the RAID is already in use."
+msgstr ""
+
+msgid ""
+"The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
+msgstr ""
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "Nätverket '%s' är ogiltigt."
@@ -7606,9 +7729,6 @@ msgstr "Inget fel inträffade, filen laddades upp med lyckat resultat."
 
 msgid "There must be 2 disks in a RAID 1 volume."
 msgstr "Det måste finnas 2 diskar i en RAID 1-volym."
-
-msgid "There must be a minimum of 2 disks in a JBOD."
-msgstr "Åtminstone 2 diskar krävs för JBOD."
 
 msgid "There must be a minimum of 2 disks in a RAID 0 volume."
 msgstr "Det måste minst finnas 2 diskar i en RAID 0-volym."
@@ -7901,7 +8021,7 @@ msgid ""
 "same as the local ones."
 msgstr ""
 "Denna funktion gör att rsync uppdaterar de utökade attributen på målet så "
-"att dom överensstämmer med dom lokala."
+"att de överensstämmer med de lokala."
 
 msgid ""
 "This option causes the receiving rsync to set the destination permissions to "
@@ -7916,8 +8036,8 @@ msgid ""
 "hidden modules."
 msgstr ""
 "Det här alternativet avgör om denna modul ska anges när klienten ber om en "
-"lista på tillgängliga moduler. Genom att ställa denna till falsk (false) kan "
-"du skapa dolda moduler."
+"lista på tillgängliga moduler. Genom att inaktivera denna kan du skapa dolda "
+"moduler."
 
 msgid ""
 "This option is a comma, space, or tab delimited set of host which are NOT "
@@ -7927,11 +8047,11 @@ msgid ""
 "to the hosts allow parameter those hosts that should be permitted access. "
 "Leave this field empty to use default settings."
 msgstr ""
-"Detta alternativ är ett kommatecken, mellanslag, eller tabb avgränsad "
-"uppsättning värd som INTE har rätt att få tillgång till denna modul. Om det "
-"finns konflikter i listningen har Tillåt-listan företräde. I händelse av att "
-"det är nödvändigt att förneka alla som standard, använder du nyckelordet ALL "
-"(eller nätmasken 0.0.0.0 / 0) och sedan uttryckligen anges till tillåt-"
+"Detta alternativ är en kommatecken, mellanslag, eller tabb avgränsad "
+"uppsättning värdar som INTE har rätt att få tillgång till denna modul. Om "
+"det finns konflikter i listningen har Tillåt-listan företräde. I händelse av "
+"att det är nödvändigt att förneka alla som standard, använder du nyckelordet "
+"ALL (eller nätmasken 0.0.0.0 / 0) och sedan uttryckligen anges till tillåt-"
 "värdar parametern de datorer som ska ges tillträde. Lämna detta fält tomt "
 "för att använda standardinställningarna."
 
@@ -7943,8 +8063,8 @@ msgid ""
 "to the hosts allow parameter those hosts that should be permitted access. "
 "Leave this field empty to use default settings."
 msgstr ""
-"Detta alternativ är ett kommatecken, mellanslag, eller tabb avgränsad "
-"uppsättning värd som INTE har rätt att få tillgång till denna delning. Om "
+"Detta alternativ är en kommatecken, mellanslag, eller tabb avgränsad "
+"uppsättning värdar som INTE har rätt att få tillgång till denna delning. Om "
 "det finns konflikter i listningen har Tillåt-listan företräde. I händelse av "
 "att det är nödvändigt att förneka alla som standard, använder du nyckelordet "
 "ALL (eller nätmasken 0.0.0.0 / 0) och sedan uttryckligen anges till tillåt-"
@@ -7956,7 +8076,7 @@ msgid ""
 "permitted to access this module. You can specify the hosts by name or IP "
 "number. Leave this field empty to use default settings."
 msgstr ""
-"Detta alternativ är ett kommatecken, mellanslag, eller tabb avgränsad "
+"Detta alternativ är en kommatecken, mellanslag, eller tabb avgränsad "
 "uppsättning värdar som får tillgång till denna modul. Du kan ange värdar "
 "efter namn eller IP-nummer. Lämna detta fält tomt för att använda "
 "standardinställningarna."
@@ -7966,7 +8086,7 @@ msgid ""
 "permitted to access this share. You can specify the hosts by name or IP "
 "number. Leave this field empty to use default settings."
 msgstr ""
-"Detta alternativ är ett kommatecken, mellanslag, eller tabb avgränsad "
+"Detta alternativ är en kommatecken, mellanslag, eller tabb avgränsad "
 "uppsättning värdar som får tillgång till denna delning. Du kan ange värdar "
 "efter namn eller IP-nummer. Lämna detta fält tomt för att använda "
 "standardinställningarna."
@@ -7988,9 +8108,9 @@ msgid ""
 "use default settings."
 msgstr ""
 "Det här alternativet anger användarnamn eller användar-ID som filöverföring "
-"till och från den modul bör äga rum. I kombination med '%s' option bestämmer "
-"vilka filrättigheter som är tillgängliga. Lämna detta fält tomt för att "
-"använda standardinställningarna."
+"till och från den modul bör äga rum. I kombination med '%s' bestämms vilka "
+"filrättigheter som är tillgängliga. Lämna detta fält tomt för att använda "
+"standardinställningarna."
 
 msgid ""
 "This page reflects the configuration that has been created with the WebGUI."
@@ -8098,8 +8218,9 @@ msgid ""
 "This will cause %s not to check for newer firmware versions when the <a "
 "href='%s'>%s</a> page is viewed."
 msgstr ""
-"Detta kommer att orsaka att %s är ​​inte kommer att kontrollera om det finns "
-"en nyare version av systemprogramvara när <a href='%s'>% s </ a> sidan visas."
+"Detta kommer att medföra att %s är ​​inte kommer att kontrollera om det "
+"finns en nyare version av systemprogramvara när <a href='%s'>% s </ a> sidan "
+"visas."
 
 msgid "This will create a recycle bin on the share."
 msgstr "Detta kommer skapa en papperskorg i delningen."
@@ -8202,14 +8323,14 @@ msgid ""
 "does not use CHAP authentication defines authorised users and secrets for "
 "additional security.<br />Extent defines the storage area of the target."
 msgstr ""
-"För att konfigurera målet, måste du lägga minst Portal gruppen och Initiator "
-"gruppen och omfattning. <br /> Portal gruppen som identifieras av id-numret "
-"definierar IP-adresser och lyssnande TCP-portar. <br /> Initiator gruppen "
-"som har identifierats genom tag-nummer definierar godkända Initiator namn "
-"och nätverk. <br /> Auth Group som identifieras av id-numret och är valbar "
-"om målet inte använder CHAP-autentisering som definierar behöriga användare "
-"och hemligheter för ytterligare säkerhet. <br /> Extent avser det "
-"lagerutrymme som finns på målet."
+"För att konfigurera målet, måste du lägga till minst Portalgruppen, "
+"Initiatorgruppen och omfattning. <br /> Portalgruppen som identifieras av id-"
+"numret definierar IP-adresser och lyssnande TCP-portar. <br /> "
+"Initiatorgruppen som har identifierats genom tag-nummer definierar godkända "
+"Initiator namn och nätverk. <br /> Autentiseringsgruppen som identifieras av "
+"id-numret och är valbar om målet inte använder CHAP-autentisering som "
+"definierar behöriga användare och hemligheter för ytterligare säkerhet. <br "
+"/> Extent avser det lagerutrymme som finns på målet."
 
 msgid "To e-mail"
 msgstr "Till e-post"
@@ -8283,6 +8404,9 @@ msgstr "Ändra status på valda optioner"
 
 msgid "Tolerated"
 msgstr "Tolererat"
+
+msgid "Toolbox"
+msgstr ""
 
 msgid "Tools"
 msgstr "Verktyg"
@@ -8366,7 +8490,7 @@ msgstr ""
 "textsträngar kommer behandlas som samlingar"
 
 msgid "Transcoding"
-msgstr "Omkodar"
+msgstr "Omkodning"
 
 msgid "Transfer Rate"
 msgstr "Överföringshastighet"
@@ -8757,7 +8881,7 @@ msgid "VLAN Tag"
 msgstr "VLAN etikett"
 
 msgid "VLAN tag"
-msgstr "VLAN-tagg"
+msgstr "VLAN-etikett"
 
 msgid "VM"
 msgstr "VM"
@@ -8786,6 +8910,9 @@ msgstr "Variabel"
 
 msgid "Vendor ID"
 msgstr "Leverantörs-id"
+
+msgid "Verify"
+msgstr ""
 
 msgid "Version"
 msgstr "Version"

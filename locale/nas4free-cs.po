@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-21 10:27+0000\n"
+"POT-Creation-Date: 2016-04-22 16:23+0000\n"
 "PO-Revision-Date: 2016-03-28 09:26+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-13 00:49+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-04-23 08:08+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
 "X-Poedit-Language: Czech\n"
@@ -293,6 +293,15 @@ msgstr ""
 "používá tato síť a jaké jsou schopnosti tohoto bezdrátového síťového "
 "rozhraní. Může být zadáno buď jako řetězec textu nebo osmičkových číslic (ve "
 "druhém případě předeslaný „0x“ – nula a malé písmeno iks)."
+
+msgid "A minimum of 2 disks is required to build a JBOD."
+msgstr ""
+
+#, php-format
+msgid ""
+"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
+"point</a> first before proceeding."
+msgstr ""
 
 msgid "A route to this destination network already exists."
 msgstr "Trasa do této cílové sítě už existuje."
@@ -673,6 +682,9 @@ msgstr ""
 "Veškerá data v zadaném umístění jsou přepsána. Je doporučeno použít prázdnou "
 "UFS složku a vyhnout se tak neplatným datům / přístupovým právům."
 
+msgid "All data will be lost when you activate this option!"
+msgstr ""
+
 msgid "All dirs"
 msgstr "Všechny složky"
 
@@ -781,6 +793,9 @@ msgstr "Alternativní TCP port. Výchozí je 873"
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr "Alternativní složka s nastaveními (obvykle nevyplněno)"
+
+msgid "Always"
+msgstr ""
 
 msgid "Always On"
 msgstr "Vždy zapnuto"
@@ -2001,6 +2016,9 @@ msgstr "Smazat označené úlohy"
 msgid "Delete Selected Options"
 msgstr "Smazat označené předvolby"
 
+msgid "Delete Selected RAID Volumes"
+msgstr ""
+
 msgid "Delete Selected Volumes"
 msgstr "Smazat označené svazky"
 
@@ -2180,6 +2198,9 @@ msgstr "Zařízení /dev/%s – %s"
 msgid "Device IP"
 msgstr "IP adresa zařízení"
 
+msgid "Device List"
+msgstr ""
+
 msgid "Device Model"
 msgstr "Model zařízení"
 
@@ -2273,6 +2294,12 @@ msgstr "Vypnout vynechání opakujících se řádek"
 msgid "Disabled"
 msgstr "Vypnuto"
 
+msgid "Discard - Discard ACL"
+msgstr ""
+
+msgid "Discard - Do not inherit entries"
+msgstr ""
+
 #, php-format
 msgid "Discovered iSCSI target for %s"
 msgstr "Zjištěn iSCSI cíl pro %s"
@@ -2310,6 +2337,11 @@ msgstr ""
 
 msgid "Distributed hash table"
 msgstr "Distribuovaná tabulka otisků (hash)"
+
+msgid ""
+"Do not activate this option if you want to add an already existing RAID "
+"again."
+msgstr ""
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2438,6 +2470,9 @@ msgstr "Opravdu chcete odebrat vybranou položku ze seznamu?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Opravdu chcete odinstalovat tento balíček?"
+
+msgid "Do you want to delete selected RAID volumes?"
+msgstr ""
 
 msgid "Do you want to delete selected datasets?"
 msgstr "Opravdu smazat označené datové sady?"
@@ -2983,6 +3018,9 @@ msgstr ""
 msgid "Enter trap host name."
 msgstr "Zadejte název stroje, na který budou SNMP upozornění zasílána."
 
+msgid "Entire Device"
+msgstr ""
+
 msgid ""
 "Erase Fail Count (chip). This parameter indicates a number of flash erase "
 "command failures."
@@ -3424,6 +3462,9 @@ msgstr "Číselný identifikátor skupiny"
 msgid "Group suffix"
 msgstr "Přípona skupiny"
 
+msgid "Groupmask - Mask ACL with mode"
+msgstr ""
+
 msgid "Groups"
 msgstr "Skupiny"
 
@@ -3669,6 +3710,9 @@ msgstr "IPv6 adresy"
 
 msgid "IRC Live Support"
 msgstr "Bezprostřední podpora prostřednictvím IRC"
+
+msgid "IRC NAS4Free"
+msgstr ""
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
@@ -4013,8 +4057,8 @@ msgstr ""
 "Neplatné zadání nejvyšší umožněné velikosti bloku! Je třeba, aby bylo v "
 "rozsahu od %d do %d."
 
-msgid "Invalid username or password. Please try again."
-msgstr "Neplatné uživatelské jméno a/nebo heslo. Zkuste to znovu."
+msgid "Invalid username or password.</br> Please try again."
+msgstr ""
 
 msgid "Invert Selection"
 msgstr "Obrátit výběr"
@@ -4058,6 +4102,9 @@ msgstr "JBOD"
 
 msgid "JBOD Information & Status"
 msgstr "JBOD – informace a stav"
+
+msgid "JBOD Tools"
+msgstr ""
 
 msgid "Jan"
 msgstr "led"
@@ -4669,6 +4716,9 @@ msgstr "Využití operační paměti"
 msgid "Memory usage"
 msgstr "Využití operační paměti"
 
+msgid "Message Board"
+msgstr ""
+
 msgid "Message of the day."
 msgstr "Zpráva dne."
 
@@ -4815,9 +4865,6 @@ msgstr "Vzájemné ověření CHAP"
 
 msgid "Mutual CHAP Users"
 msgstr "Uživatelé, ověřovaní vzájemně protokolem CHAP"
-
-msgid "NAS4Free WebGUI Login"
-msgstr "Přihlášení do webového rozhraní NAS4Free"
 
 msgid "NFS"
 msgstr "NFS"
@@ -5032,6 +5079,9 @@ msgstr "Nebyly nalezeny žádné nové disky softwarového raid pole."
 
 msgid "No pool was found."
 msgstr "Nebyl nalezen žádný fond."
+
+msgid "Noallow - Only inherit deny entries"
+msgstr ""
 
 msgid "Node A IP address"
 msgstr "IP adresa uzlu A"
@@ -5293,6 +5343,9 @@ msgstr ""
 msgid "Overload"
 msgstr "Přetížení"
 
+msgid "Overview"
+msgstr ""
+
 msgid "Overwrite already configured disks (only affects filesystem value)."
 msgstr ""
 "Přepsat užnastavené disky (ovlivňuje pouze hodnotu „Souborový systém“)."
@@ -5351,6 +5404,9 @@ msgstr "Nastavení parametru xxx (ups.conf nebo cmdline -x)"
 msgid "Parent Directory"
 msgstr "Nadřazená složka"
 
+msgid "Partition"
+msgstr ""
+
 msgid "Partition number"
 msgstr "Číslo diskového oddílu"
 
@@ -5383,6 +5439,15 @@ msgstr "Heslová fráze"
 
 msgid "Passphrase don't match."
 msgstr "Heslová fráze nesouhlasí."
+
+msgid "Passthrough - Do not change ACL"
+msgstr ""
+
+msgid "Passthrough - Inherit all entries"
+msgstr ""
+
+msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
+msgstr ""
 
 msgid "Password"
 msgstr "Heslo"
@@ -5519,6 +5584,9 @@ msgstr "Fond"
 
 msgid "Pool Information & Status"
 msgstr "Fond – informace a stav"
+
+msgid "Pool Tools"
+msgstr ""
 
 msgid "Pools"
 msgstr "Fondy"
@@ -5695,11 +5763,17 @@ msgstr "RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr "RAID 0 – informace a stav"
 
+msgid "RAID 0 Tools"
+msgstr ""
+
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
 msgstr "RAID 0/1/5 – informace a stav"
+
+msgid "RAID 0/1/5 Tools"
+msgstr ""
 
 msgid "RAID 1"
 msgstr "RAID 1"
@@ -5707,11 +5781,29 @@ msgstr "RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr "RAID 1 – informace a stav"
 
+msgid "RAID 1 Tools"
+msgstr ""
+
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
 msgstr "RAID 5 – informace a stav"
+
+msgid "RAID 5 Tools"
+msgstr ""
+
+msgid "RAID device can be removed."
+msgstr ""
+
+msgid "RAID device is already in use."
+msgstr ""
+
+msgid "RAID is marked for removal"
+msgstr ""
+
+msgid "RAID is protected"
+msgstr ""
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -5751,6 +5843,9 @@ msgstr "Události v RSYNC"
 
 msgid "RSYNC log"
 msgstr "RSYNC – záznam událostí"
+
+msgid "Raid Name"
+msgstr ""
 
 msgid "Raid name"
 msgstr "Název RAID pole"
@@ -5948,6 +6043,12 @@ msgstr "Obnovit nastavení"
 msgid "Restore metadata from the given file to the given provider."
 msgstr "Obnovit metadata z daného souboru danému poskytovateli."
 
+msgid "Restricted"
+msgstr ""
+
+msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
+msgstr ""
+
 msgid "Results for net rpc testjoin:"
 msgstr "Výsledek operace net rpc testjoin:"
 
@@ -6048,6 +6149,9 @@ msgstr "SMART další předvolby"
 
 msgid "S.M.A.R.T. log"
 msgstr "Události SMART diagnostiky"
+
+msgid "SHA256, Verify"
+msgstr ""
 
 msgid "SMB2"
 msgstr "SMB2"
@@ -6165,6 +6269,12 @@ msgstr "Naplánované vypnutí"
 
 msgid "Scheduled tests"
 msgstr "Naplánované testy"
+
+msgid "Search"
+msgstr ""
+
+msgid "Search event"
+msgstr ""
 
 msgid "Secondary"
 msgstr "Vedlejší"
@@ -6494,6 +6604,9 @@ msgstr "Softwarový RAID"
 
 msgid "Software Used"
 msgstr "Použitý software"
+
+msgid "Software gconcat JBOD"
+msgstr ""
 
 msgid "Source"
 msgstr "Zdroj"
@@ -7537,6 +7650,16 @@ msgstr ""
 "pravidel. Odepření přístupu brání uživateli, stroji nebo třídě objektů v "
 "přihlášení, nikoli navázání spojení se serverem, jak takovému."
 
+msgid "The name of the RAID cannot be changed."
+msgstr ""
+
+msgid "The name of the RAID is already in use."
+msgstr ""
+
+msgid ""
+"The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
+msgstr ""
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "%s není platným zadáním pro sít."
@@ -7784,9 +7907,6 @@ msgstr "Soubor byl serverem úspěšně přijat."
 
 msgid "There must be 2 disks in a RAID 1 volume."
 msgstr "Pro RAID pole typu 1 jsou třeba dva disky."
-
-msgid "There must be a minimum of 2 disks in a JBOD."
-msgstr "Pro JBOD pole jsou třeba alespoň dva disky."
 
 msgid "There must be a minimum of 2 disks in a RAID 0 volume."
 msgstr "Pro RAID pole typu 0 jsou třeba alespoň dva disky."
@@ -8463,6 +8583,9 @@ msgstr "Přepnout označené předvolby"
 msgid "Tolerated"
 msgstr "Tolerováno"
 
+msgid "Toolbox"
+msgstr ""
+
 msgid "Tools"
 msgstr "Nástroje"
 
@@ -8972,6 +9095,9 @@ msgstr "Proměnná"
 
 msgid "Vendor ID"
 msgstr "Identifikátor výrobce"
+
+msgid "Verify"
+msgstr ""
 
 msgid "Version"
 msgstr "Verze"

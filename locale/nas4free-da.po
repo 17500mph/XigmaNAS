@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-21 10:27+0000\n"
+"POT-Creation-Date: 2016-04-22 16:23+0000\n"
 "PO-Revision-Date: 2015-06-15 08:06+0000\n"
 "Last-Translator: Carsten Matzon <carsten@matzon.dk>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-13 00:49+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-04-23 08:08+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
 "X-Poedit-Language: Danish\n"
@@ -259,6 +259,15 @@ msgstr ""
 "En nøgle vil være på enten 5 eller 13 tegn (40 eller 104 bits), afhængig af "
 "det lokale netværk og adapterens funktionalitet. Den kan angives enten som "
 "normal tekst, eller som en række hexdecimale cifre der starter med '0x'."
+
+msgid "A minimum of 2 disks is required to build a JBOD."
+msgstr ""
+
+#, php-format
+msgid ""
+"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
+"point</a> first before proceeding."
+msgstr ""
 
 msgid "A route to this destination network already exists."
 msgstr "En rute til dette destinationens netværk eksisterer allerede."
@@ -617,6 +626,9 @@ msgid ""
 "empty UFS directory is recommended."
 msgstr ""
 
+msgid "All data will be lost when you activate this option!"
+msgstr ""
+
 msgid "All dirs"
 msgstr "Alle mapper"
 
@@ -712,6 +724,9 @@ msgstr "Alternativ TCP port. Standard er 873"
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr "Alternativ konfigurations mappe (som regel tom)."
+
+msgid "Always"
+msgstr ""
 
 msgid "Always On"
 msgstr ""
@@ -1831,6 +1846,9 @@ msgstr ""
 msgid "Delete Selected Options"
 msgstr ""
 
+msgid "Delete Selected RAID Volumes"
+msgstr ""
+
 msgid "Delete Selected Volumes"
 msgstr ""
 
@@ -2004,6 +2022,9 @@ msgstr "Enhed /dev/%s - %s"
 msgid "Device IP"
 msgstr "Enheds IP"
 
+msgid "Device List"
+msgstr ""
+
 msgid "Device Model"
 msgstr ""
 
@@ -2096,6 +2117,12 @@ msgstr ""
 msgid "Disabled"
 msgstr "Deaktiveret"
 
+msgid "Discard - Discard ACL"
+msgstr ""
+
+msgid "Discard - Do not inherit entries"
+msgstr ""
+
 #, php-format
 msgid "Discovered iSCSI target for %s"
 msgstr "Fandt iSCSI mål for %s"
@@ -2131,6 +2158,11 @@ msgstr ""
 
 msgid "Distributed hash table"
 msgstr "Distribueret hash tabel"
+
+msgid ""
+"Do not activate this option if you want to add an already existing RAID "
+"again."
+msgstr ""
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2258,6 +2290,9 @@ msgstr "Vil du virkelig fjerne det valgte element fra listen?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Vil du virkelig afinstallere denne pakke?"
+
+msgid "Do you want to delete selected RAID volumes?"
+msgstr ""
 
 msgid "Do you want to delete selected datasets?"
 msgstr ""
@@ -2787,6 +2822,9 @@ msgstr "Indtast porten der skal sendes traps til (standard 162)."
 msgid "Enter trap host name."
 msgstr "Indtast trap værtsnavn"
 
+msgid "Entire Device"
+msgstr ""
+
 msgid ""
 "Erase Fail Count (chip). This parameter indicates a number of flash erase "
 "command failures."
@@ -3219,6 +3257,9 @@ msgstr "Gruppe numerisk id."
 msgid "Group suffix"
 msgstr "Gruppe endelse"
 
+msgid "Groupmask - Mask ACL with mode"
+msgstr ""
+
 msgid "Groups"
 msgstr "Grupper"
 
@@ -3446,6 +3487,9 @@ msgstr "IPv6 adresser"
 
 msgid "IRC Live Support"
 msgstr "IRC Live Support"
+
+msgid "IRC NAS4Free"
+msgstr ""
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
@@ -3770,8 +3814,8 @@ msgstr "Ugyldigt fil format."
 msgid "Invalid max. block size! It must be in the range from %d to %d."
 msgstr "Ugyldig maks. blok størrelse! Den skal være i området fra %d til %d."
 
-msgid "Invalid username or password. Please try again."
-msgstr "Ugyldigt brugernavn eller adgangskode. Prøv igen."
+msgid "Invalid username or password.</br> Please try again."
+msgstr ""
 
 msgid "Invert Selection"
 msgstr ""
@@ -3808,6 +3852,9 @@ msgid "JBOD"
 msgstr "JBOD"
 
 msgid "JBOD Information & Status"
+msgstr ""
+
+msgid "JBOD Tools"
 msgstr ""
 
 msgid "Jan"
@@ -4380,6 +4427,9 @@ msgstr ""
 msgid "Memory usage"
 msgstr "Hukommelsesforbrug"
 
+msgid "Message Board"
+msgstr ""
+
 msgid "Message of the day."
 msgstr "Dagens besked"
 
@@ -4522,9 +4572,6 @@ msgstr "Mutual CHAP"
 
 msgid "Mutual CHAP Users"
 msgstr "Mutual CHAP brugere"
-
-msgid "NAS4Free WebGUI Login"
-msgstr "Nas4Free WebGUI Adgang"
 
 msgid "NFS"
 msgstr "NFS"
@@ -4734,6 +4781,9 @@ msgstr "Ingen nye software raid disk fundet."
 
 msgid "No pool was found."
 msgstr "Ingen pulje fundet."
+
+msgid "Noallow - Only inherit deny entries"
+msgstr ""
 
 msgid "Node A IP address"
 msgstr "Node A IP adresse"
@@ -4985,6 +5035,9 @@ msgstr ""
 msgid "Overload"
 msgstr "Overbelastning"
 
+msgid "Overview"
+msgstr ""
+
 msgid "Overwrite already configured disks (only affects filesystem value)."
 msgstr ""
 "Overskriv allerede konfigurerede diske (påvirker kun filsystem værdien)."
@@ -5043,6 +5096,9 @@ msgstr ""
 msgid "Parent Directory"
 msgstr "Overmappe"
 
+msgid "Partition"
+msgstr ""
+
 msgid "Partition number"
 msgstr "Partitions nummer"
 
@@ -5077,6 +5133,15 @@ msgstr "Adgangskode"
 
 msgid "Passphrase don't match."
 msgstr "Adgangskoderne passer ikke sammen."
+
+msgid "Passthrough - Do not change ACL"
+msgstr ""
+
+msgid "Passthrough - Inherit all entries"
+msgstr ""
+
+msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
+msgstr ""
 
 msgid "Password"
 msgstr "Kodeord"
@@ -5209,6 +5274,9 @@ msgid "Pool"
 msgstr "Pulje"
 
 msgid "Pool Information & Status"
+msgstr ""
+
+msgid "Pool Tools"
 msgstr ""
 
 msgid "Pools"
@@ -5380,10 +5448,16 @@ msgstr "RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr ""
 
+msgid "RAID 0 Tools"
+msgstr ""
+
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
+msgstr ""
+
+msgid "RAID 0/1/5 Tools"
 msgstr ""
 
 msgid "RAID 1"
@@ -5392,10 +5466,28 @@ msgstr "RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr ""
 
+msgid "RAID 1 Tools"
+msgstr ""
+
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
+msgstr ""
+
+msgid "RAID 5 Tools"
+msgstr ""
+
+msgid "RAID device can be removed."
+msgstr ""
+
+msgid "RAID device is already in use."
+msgstr ""
+
+msgid "RAID is marked for removal"
+msgstr ""
+
+msgid "RAID is protected"
 msgstr ""
 
 msgid "RAID0"
@@ -5436,6 +5528,9 @@ msgstr "RSYNC hændelser"
 
 msgid "RSYNC log"
 msgstr "RSYNC log"
+
+msgid "Raid Name"
+msgstr ""
 
 msgid "Raid name"
 msgstr "Raid navn"
@@ -5632,6 +5727,12 @@ msgstr ""
 msgid "Restore metadata from the given file to the given provider."
 msgstr "Gendan metadata fra den givne fil til den givne udbyder."
 
+msgid "Restricted"
+msgstr ""
+
+msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
+msgstr ""
+
 msgid "Results for net rpc testjoin:"
 msgstr "Resultat fra net rpc testjoin:"
 
@@ -5730,6 +5831,9 @@ msgstr "S.M.A.R.T. ekstra indstillinger"
 
 msgid "S.M.A.R.T. log"
 msgstr "S.M.A.R.T. log"
+
+msgid "SHA256, Verify"
+msgstr ""
 
 msgid "SMB2"
 msgstr "SMB2"
@@ -5846,6 +5950,12 @@ msgid "Scheduled Shutdown"
 msgstr ""
 
 msgid "Scheduled tests"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Search event"
 msgstr ""
 
 msgid "Secondary"
@@ -6163,6 +6273,9 @@ msgid "Software RAID"
 msgstr "Software-RAID"
 
 msgid "Software Used"
+msgstr ""
+
+msgid "Software gconcat JBOD"
 msgstr ""
 
 msgid "Source"
@@ -7144,6 +7257,16 @@ msgstr ""
 "vært eller klasse fra at logge ind på server. Den forhindrer ikke den "
 "udelukkede bruger, vært eller klasse i at oprette forbindelse til serveren."
 
+msgid "The name of the RAID cannot be changed."
+msgstr ""
+
+msgid "The name of the RAID is already in use."
+msgstr ""
+
+msgid ""
+"The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
+msgstr ""
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "Netværket '%s' er ugyldigt."
@@ -7372,9 +7495,6 @@ msgstr "Der opstod ingen fejl, filen blev succesfuldt uploaded."
 
 msgid "There must be 2 disks in a RAID 1 volume."
 msgstr "Der skal være 2 diske i et RAID 1 volume."
-
-msgid "There must be a minimum of 2 disks in a JBOD."
-msgstr "Der skal mindst være 2 diske i et JBOD."
 
 msgid "There must be a minimum of 2 disks in a RAID 0 volume."
 msgstr "Der skal være mindst 2 diske i et RAID 0 volume."
@@ -8018,6 +8138,9 @@ msgstr ""
 msgid "Tolerated"
 msgstr "Tolereret"
 
+msgid "Toolbox"
+msgstr ""
+
 msgid "Tools"
 msgstr "Værktøjer"
 
@@ -8496,6 +8619,9 @@ msgstr "Variabel"
 
 msgid "Vendor ID"
 msgstr "Fabrikant ID"
+
+msgid "Verify"
+msgstr ""
 
 msgid "Version"
 msgstr "Version"

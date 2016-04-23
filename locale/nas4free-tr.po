@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-03-21 10:27+0000\n"
+"POT-Creation-Date: 2016-04-22 16:23+0000\n"
 "PO-Revision-Date: 2015-10-13 18:26+0000\n"
 "Last-Translator: Hasan Yılmaz <iletisim@hasanyilmaz.net>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-13 00:48+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-04-23 08:09+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -245,6 +245,15 @@ msgid ""
 "local network and the capabilities of the adaptor. It may be specified "
 "either as a plain string or as a string of hexadecimal digits preceded by "
 "'0x'."
+msgstr ""
+
+msgid "A minimum of 2 disks is required to build a JBOD."
+msgstr ""
+
+#, php-format
+msgid ""
+"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
+"point</a> first before proceeding."
 msgstr ""
 
 msgid "A route to this destination network already exists."
@@ -601,6 +610,9 @@ msgid ""
 "empty UFS directory is recommended."
 msgstr ""
 
+msgid "All data will be lost when you activate this option!"
+msgstr ""
+
 msgid "All dirs"
 msgstr "Tüm Dizinler"
 
@@ -694,6 +706,9 @@ msgstr "Varsayılan Alternatif TCP port 873'tür."
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr "Alternaif yapılandırma dizini (genelde boştur)"
+
+msgid "Always"
+msgstr ""
 
 msgid "Always On"
 msgstr ""
@@ -1782,6 +1797,9 @@ msgstr ""
 msgid "Delete Selected Options"
 msgstr ""
 
+msgid "Delete Selected RAID Volumes"
+msgstr ""
+
 msgid "Delete Selected Volumes"
 msgstr ""
 
@@ -1954,6 +1972,9 @@ msgstr "Aygıt /dev/%s - %s"
 msgid "Device IP"
 msgstr "Aygıt IP"
 
+msgid "Device List"
+msgstr ""
+
 msgid "Device Model"
 msgstr ""
 
@@ -2041,6 +2062,12 @@ msgstr ""
 msgid "Disabled"
 msgstr "Devre Dışı bırak"
 
+msgid "Discard - Discard ACL"
+msgstr ""
+
+msgid "Discard - Do not inherit entries"
+msgstr ""
+
 #, php-format
 msgid "Discovered iSCSI target for %s"
 msgstr ""
@@ -2075,6 +2102,11 @@ msgid ""
 msgstr ""
 
 msgid "Distributed hash table"
+msgstr ""
+
+msgid ""
+"Do not activate this option if you want to add an already existing RAID "
+"again."
 msgstr ""
 
 msgid ""
@@ -2201,6 +2233,9 @@ msgstr "Seçilen öğeyi listeden kaldırmak istediğinden emin misin?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Bu paketi gerçekten kaldırmak istediğinize emin misiniz?"
+
+msgid "Do you want to delete selected RAID volumes?"
+msgstr ""
 
 msgid "Do you want to delete selected datasets?"
 msgstr ""
@@ -2721,6 +2756,9 @@ msgstr "Tuzakları (varsayılan 162) göndermek için port numarasını girin"
 msgid "Enter trap host name."
 msgstr "Uzak bilgşsayar adını gir."
 
+msgid "Entire Device"
+msgstr ""
+
 msgid ""
 "Erase Fail Count (chip). This parameter indicates a number of flash erase "
 "command failures."
@@ -3142,6 +3180,9 @@ msgstr "Grup sayı kimliği"
 msgid "Group suffix"
 msgstr "Grup soneki"
 
+msgid "Groupmask - Mask ACL with mode"
+msgstr ""
+
 msgid "Groups"
 msgstr "Gruplar"
 
@@ -3364,6 +3405,9 @@ msgstr "IPv6 adresleri"
 
 msgid "IRC Live Support"
 msgstr "IRC Canlı Destek"
+
+msgid "IRC NAS4Free"
+msgstr ""
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
@@ -3667,7 +3711,7 @@ msgstr ""
 msgid "Invalid max. block size! It must be in the range from %d to %d."
 msgstr ""
 
-msgid "Invalid username or password. Please try again."
+msgid "Invalid username or password.</br> Please try again."
 msgstr ""
 
 msgid "Invert Selection"
@@ -3705,6 +3749,9 @@ msgid "JBOD"
 msgstr "JBOD"
 
 msgid "JBOD Information & Status"
+msgstr ""
+
+msgid "JBOD Tools"
 msgstr ""
 
 msgid "Jan"
@@ -4259,6 +4306,9 @@ msgstr ""
 msgid "Memory usage"
 msgstr "Bellek kullanımı"
 
+msgid "Message Board"
+msgstr ""
+
 msgid "Message of the day."
 msgstr "Günün mesajı"
 
@@ -4398,9 +4448,6 @@ msgid "Mutual CHAP"
 msgstr ""
 
 msgid "Mutual CHAP Users"
-msgstr ""
-
-msgid "NAS4Free WebGUI Login"
 msgstr ""
 
 msgid "NFS"
@@ -4595,6 +4642,9 @@ msgid "No new software raid disk found."
 msgstr ""
 
 msgid "No pool was found."
+msgstr ""
+
+msgid "Noallow - Only inherit deny entries"
 msgstr ""
 
 msgid "Node A IP address"
@@ -4833,6 +4883,9 @@ msgstr ""
 msgid "Overload"
 msgstr ""
 
+msgid "Overview"
+msgstr ""
+
 msgid "Overwrite already configured disks (only affects filesystem value)."
 msgstr ""
 
@@ -4890,6 +4943,9 @@ msgstr ""
 msgid "Parent Directory"
 msgstr ""
 
+msgid "Partition"
+msgstr ""
+
 msgid "Partition number"
 msgstr "Birim numarası"
 
@@ -4916,6 +4972,15 @@ msgid "Passphrase"
 msgstr ""
 
 msgid "Passphrase don't match."
+msgstr ""
+
+msgid "Passthrough - Do not change ACL"
+msgstr ""
+
+msgid "Passthrough - Inherit all entries"
+msgstr ""
+
+msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
 msgstr ""
 
 msgid "Password"
@@ -5049,6 +5114,9 @@ msgid "Pool"
 msgstr ""
 
 msgid "Pool Information & Status"
+msgstr ""
+
+msgid "Pool Tools"
 msgstr ""
 
 msgid "Pools"
@@ -5216,10 +5284,16 @@ msgstr "RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr ""
 
+msgid "RAID 0 Tools"
+msgstr ""
+
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
+msgstr ""
+
+msgid "RAID 0/1/5 Tools"
 msgstr ""
 
 msgid "RAID 1"
@@ -5228,10 +5302,28 @@ msgstr "RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr ""
 
+msgid "RAID 1 Tools"
+msgstr ""
+
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
+msgstr ""
+
+msgid "RAID 5 Tools"
+msgstr ""
+
+msgid "RAID device can be removed."
+msgstr ""
+
+msgid "RAID device is already in use."
+msgstr ""
+
+msgid "RAID is marked for removal"
+msgstr ""
+
+msgid "RAID is protected"
 msgstr ""
 
 msgid "RAID0"
@@ -5272,6 +5364,9 @@ msgstr "RSYNC olayları"
 
 msgid "RSYNC log"
 msgstr "RSYNC günlüğü"
+
+msgid "Raid Name"
+msgstr ""
 
 msgid "Raid name"
 msgstr "Raid adı"
@@ -5460,6 +5555,12 @@ msgstr ""
 msgid "Restore metadata from the given file to the given provider."
 msgstr ""
 
+msgid "Restricted"
+msgstr ""
+
+msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
+msgstr ""
+
 msgid "Results for net rpc testjoin:"
 msgstr ""
 
@@ -5558,6 +5659,9 @@ msgstr "S.M.A.R.T. extra ayarlar"
 
 msgid "S.M.A.R.T. log"
 msgstr "S.M.A.R.T. günlüğü"
+
+msgid "SHA256, Verify"
+msgstr ""
 
 msgid "SMB2"
 msgstr ""
@@ -5662,6 +5766,12 @@ msgid "Scheduled Shutdown"
 msgstr ""
 
 msgid "Scheduled tests"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Search event"
 msgstr ""
 
 msgid "Secondary"
@@ -5966,6 +6076,9 @@ msgid "Software RAID"
 msgstr "RAID programı"
 
 msgid "Software Used"
+msgstr ""
+
+msgid "Software gconcat JBOD"
 msgstr ""
 
 msgid "Source"
@@ -6872,6 +6985,16 @@ msgid ""
 "connecting to the server."
 msgstr ""
 
+msgid "The name of the RAID cannot be changed."
+msgstr ""
+
+msgid "The name of the RAID is already in use."
+msgstr ""
+
+msgid ""
+"The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
+msgstr ""
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "'%s'ağı geçersiz."
@@ -7079,9 +7202,6 @@ msgstr "Herhangi bir hata olmadı, dosya başarıyla yüklendi."
 
 msgid "There must be 2 disks in a RAID 1 volume."
 msgstr "RAID 1 Biriminde en az 2 disk olmalı."
-
-msgid "There must be a minimum of 2 disks in a JBOD."
-msgstr "JBOD en az iki disk bulunmalı."
 
 msgid "There must be a minimum of 2 disks in a RAID 0 volume."
 msgstr "RAID 0 biriminde en az iki disk olmalı."
@@ -7612,6 +7732,9 @@ msgstr ""
 msgid "Tolerated"
 msgstr ""
 
+msgid "Toolbox"
+msgstr ""
+
 msgid "Tools"
 msgstr "Araçlar"
 
@@ -8067,6 +8190,9 @@ msgid "Variable"
 msgstr "Değişken"
 
 msgid "Vendor ID"
+msgstr ""
+
+msgid "Verify"
 msgstr ""
 
 msgid "Version"
