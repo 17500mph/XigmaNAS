@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-21 10:27+0000\n"
-"PO-Revision-Date: 2016-03-28 18:02+0000\n"
+"POT-Creation-Date: 2016-04-22 16:23+0000\n"
+"PO-Revision-Date: 2016-04-22 16:28+0000\n"
 "Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-13 00:49+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-04-23 08:09+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
 "X-Poedit-Language: Russian\n"
@@ -286,6 +286,17 @@ msgstr ""
 "Ключ должен быть длиной 5 или 13 символов (40 или 104 бита), в зависимости "
 "от сети и возможностей адаптера. Может быть задан либо как текстовая строка, "
 "либо в шестнадцатеричном формате (начиная с '0x')."
+
+msgid "A minimum of 2 disks is required to build a JBOD."
+msgstr "Для построения JBOD требуются минимум 2 диска."
+
+#, php-format
+msgid ""
+"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
+"point</a> first before proceeding."
+msgstr ""
+"Подключенный том RAID не может быть удален. Удалите <a href='%s'> точку "
+"монтирования </a>, прежде чем продолжить."
 
 msgid "A route to this destination network already exists."
 msgstr "Маршрут к этой сети уже существует."
@@ -663,6 +674,9 @@ msgstr ""
 "неправильных данных/разрешений, рекомендуется использовать пустой каталог "
 "UFS."
 
+msgid "All data will be lost when you activate this option!"
+msgstr "Все данные будут потеряны при активации этой опции!"
+
 msgid "All dirs"
 msgstr "Все каталоги"
 
@@ -764,6 +778,9 @@ msgstr "Другой TCP-порт, по умолчанию 873-й."
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr "Другой каталог конфигурации (обычно пусто)."
+
+msgid "Always"
+msgstr "Всегда"
 
 msgid "Always On"
 msgstr "Всегда включено"
@@ -1968,6 +1985,9 @@ msgstr "Удалить выбранные задания"
 msgid "Delete Selected Options"
 msgstr "Удалить выбранные опции"
 
+msgid "Delete Selected RAID Volumes"
+msgstr "Удалить выбранные RAID тома"
+
 msgid "Delete Selected Volumes"
 msgstr "Удалить выбранные разделы"
 
@@ -2144,6 +2164,9 @@ msgstr "Устройство /dev/%s - %s"
 msgid "Device IP"
 msgstr "IP-адрес устройства"
 
+msgid "Device List"
+msgstr "Список устройств"
+
 msgid "Device Model"
 msgstr "Модель устройства"
 
@@ -2239,6 +2262,12 @@ msgstr "Отключить сжатие повторяющихся строк."
 msgid "Disabled"
 msgstr "Запрещено"
 
+msgid "Discard - Discard ACL"
+msgstr "Сброс - Сбрасывание ACL"
+
+msgid "Discard - Do not inherit entries"
+msgstr "Сброс - Не наследовать записи"
+
 #, php-format
 msgid "Discovered iSCSI target for %s"
 msgstr "Обнаруженные цели iSCSI для %s"
@@ -2276,6 +2305,12 @@ msgstr ""
 
 msgid "Distributed hash table"
 msgstr "DHT"
+
+msgid ""
+"Do not activate this option if you want to add an already existing RAID "
+"again."
+msgstr ""
+"Не включайте эту опцию, если вы хотите добавить уже существующий RAID снова."
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2407,6 +2442,9 @@ msgstr "Вы действительно хотите удалить выбран
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Вы действительно хотите удалить этот пакет?"
+
+msgid "Do you want to delete selected RAID volumes?"
+msgstr "Вы действительно хотите удалить выбранные тома RAID?"
 
 msgid "Do you want to delete selected datasets?"
 msgstr "Вы действительно желаете удалить выбранные Dataset'ы?"
@@ -2953,6 +2991,9 @@ msgstr "Порт, на который будут отправляться соо
 msgid "Enter trap host name."
 msgstr "Имя сервера, ведущего мониторинг и прием сообщений."
 
+msgid "Entire Device"
+msgstr "Все устройства"
+
 msgid ""
 "Erase Fail Count (chip). This parameter indicates a number of flash erase "
 "command failures."
@@ -3392,6 +3433,9 @@ msgstr "Цифровой индентификатор группы."
 msgid "Group suffix"
 msgstr "Суффикс группы"
 
+msgid "Groupmask - Mask ACL with mode"
+msgstr "Groupmask  - Маска ACL с режимом"
+
 msgid "Groups"
 msgstr "Группы"
 
@@ -3632,6 +3676,9 @@ msgstr "Адреса IPv6."
 
 msgid "IRC Live Support"
 msgstr "Поддержка в чате IRC"
+
+msgid "IRC NAS4Free"
+msgstr "IRC NAS4Free"
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
@@ -3974,9 +4021,9 @@ msgstr ""
 "Некорректный максимальный размер блока. Он должен быть в диапазоне от %d до "
 "%d."
 
-msgid "Invalid username or password. Please try again."
+msgid "Invalid username or password.</br> Please try again."
 msgstr ""
-"Неверное имя пользователя или пароль. Пожалуйста, повторите ввод еще раз."
+"Неверное имя пользователя или пароль. </br> Пожалуйста, повторите попытку."
 
 msgid "Invert Selection"
 msgstr "Инвертировать выделение"
@@ -4020,6 +4067,9 @@ msgstr "JBOD (простой массив дисков)"
 
 msgid "JBOD Information & Status"
 msgstr "Информация и статус JBOD"
+
+msgid "JBOD Tools"
+msgstr "Инструменты JBOD"
 
 msgid "Jan"
 msgstr "янв."
@@ -4616,6 +4666,9 @@ msgstr "Использование памяти"
 msgid "Memory usage"
 msgstr "Использование памяти"
 
+msgid "Message Board"
+msgstr "Доска объявлений"
+
 msgid "Message of the day."
 msgstr "Сообщение дня."
 
@@ -4761,9 +4814,6 @@ msgstr "Взаимный CHAP"
 
 msgid "Mutual CHAP Users"
 msgstr "Пользователи взаимного CHAP"
-
-msgid "NAS4Free WebGUI Login"
-msgstr "Логин доступа к Web-интерфейсу Nas4Free"
 
 msgid "NFS"
 msgstr "NFS"
@@ -4979,6 +5029,9 @@ msgstr "Не найдено нового диска программного RAI
 
 msgid "No pool was found."
 msgstr "Пул не обнаружен."
+
+msgid "Noallow - Only inherit deny entries"
+msgstr "Noallow - Наследовать только запрет записи"
 
 msgid "Node A IP address"
 msgstr "IP-адрес узла (нода) А"
@@ -5236,6 +5289,9 @@ msgstr ""
 msgid "Overload"
 msgstr "Перегрузка"
 
+msgid "Overview"
+msgstr "Обзор"
+
 msgid "Overwrite already configured disks (only affects filesystem value)."
 msgstr ""
 "Перезаписывать настройки уже сконфигурированных дисков (затрагивает только "
@@ -5295,6 +5351,9 @@ msgstr "Установка параметра xxx (ups.conf или cmdline -x)"
 msgid "Parent Directory"
 msgstr "Родительский каталог"
 
+msgid "Partition"
+msgstr "Раздел"
+
 msgid "Partition number"
 msgstr "Номер раздела"
 
@@ -5329,6 +5388,15 @@ msgstr "Парольная фраза"
 
 msgid "Passphrase don't match."
 msgstr "Парольные фразы не совпадают."
+
+msgid "Passthrough - Do not change ACL"
+msgstr "Passthrough - Не изменять ACL"
+
+msgid "Passthrough - Inherit all entries"
+msgstr "Passthrough - Наследовать все записи"
+
+msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
+msgstr "Passthrough-X - Наследовать все, но \"выполнить\", когда не указано"
 
 msgid "Password"
 msgstr "Пароль"
@@ -5466,6 +5534,9 @@ msgstr "Пул"
 
 msgid "Pool Information & Status"
 msgstr "Информация и статус пулов"
+
+msgid "Pool Tools"
+msgstr "Инструменты Pool"
 
 msgid "Pools"
 msgstr "Пулы"
@@ -5636,11 +5707,17 @@ msgstr "Массив RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr "Информация и статус RAID 0"
 
+msgid "RAID 0 Tools"
+msgstr "Инструменты RAID 0"
+
 msgid "RAID 0/1/5"
 msgstr "Массив RAID 0/1/5 (Vinum)"
 
 msgid "RAID 0/1/5 Information & Status"
 msgstr "Информация и статус RAID 0/1/5"
+
+msgid "RAID 0/1/5 Tools"
+msgstr "Инструменты RAID 0/1/5"
 
 msgid "RAID 1"
 msgstr "Массив RAID 1"
@@ -5648,11 +5725,29 @@ msgstr "Массив RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr "Информация и статус RAID 1"
 
+msgid "RAID 1 Tools"
+msgstr "Инструменты RAID 1"
+
 msgid "RAID 5"
 msgstr "Массив RAID 5"
 
 msgid "RAID 5 Information & Status"
 msgstr "Информация и статус RAID 5"
+
+msgid "RAID 5 Tools"
+msgstr "Инструменты RAID 5"
+
+msgid "RAID device can be removed."
+msgstr "RAID-устройства могут быть удалены."
+
+msgid "RAID device is already in use."
+msgstr "RAID-устройство уже используется."
+
+msgid "RAID is marked for removal"
+msgstr "RAID помечен для удаления"
+
+msgid "RAID is protected"
+msgstr "RAID защищен"
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -5692,6 +5787,9 @@ msgstr "События Rsync"
 
 msgid "RSYNC log"
 msgstr "Журнал Rsync"
+
+msgid "Raid Name"
+msgstr "Имя RAID"
 
 msgid "Raid name"
 msgstr "Имя RAID-массива"
@@ -5888,6 +5986,13 @@ msgstr "Восстановление конфигурации"
 msgid "Restore metadata from the given file to the given provider."
 msgstr "Восстановить метаданные из выбранного файла в выбранное место."
 
+msgid "Restricted"
+msgstr "Restricted"
+
+msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
+msgstr ""
+"Restricted - Наследовать все, кроме \"записать ACL\" и \"изменить владельца\""
+
 msgid "Results for net rpc testjoin:"
 msgstr "Результаты команды net rpc testjoin:"
 
@@ -5986,6 +6091,9 @@ msgstr "Дополнительные параметры S.M.A.R.T."
 
 msgid "S.M.A.R.T. log"
 msgstr "Журнал S.M.A.R.T."
+
+msgid "SHA256, Verify"
+msgstr "SHA256, проверка"
 
 msgid "SMB2"
 msgstr "SMB2"
@@ -6100,6 +6208,12 @@ msgstr "Выключение по расписанию"
 
 msgid "Scheduled tests"
 msgstr "Тест по расписанию"
+
+msgid "Search"
+msgstr "Найти"
+
+msgid "Search event"
+msgstr "Искать событие"
 
 msgid "Secondary"
 msgstr "Вторичный (Secondary)"
@@ -6428,6 +6542,9 @@ msgstr "Программный RAID"
 
 msgid "Software Used"
 msgstr "Используемое программное обеспечение"
+
+msgid "Software gconcat JBOD"
+msgstr "Программный gconcat JBOD"
 
 msgid "Source"
 msgstr "Источник"
@@ -7469,6 +7586,16 @@ msgstr ""
 "невозможность работы с сервером, но не запрещает соединение с ним и может "
 "применяться к пользователям, хостам, или классам."
 
+msgid "The name of the RAID cannot be changed."
+msgstr "Имя RAID не может быть изменено."
+
+msgid "The name of the RAID is already in use."
+msgstr "Имя RAID уже используется."
+
+msgid ""
+"The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
+msgstr "Имя RAID может состоять только из символов A-Z, A-Z, 0-9."
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "Сеть '%s' задана некорректно."
@@ -7708,9 +7835,6 @@ msgstr "&=&Загрузка файлов произошла успешно, ош
 
 msgid "There must be 2 disks in a RAID 1 volume."
 msgstr "В массиве типа RAID1 должно быть 2 диска."
-
-msgid "There must be a minimum of 2 disks in a JBOD."
-msgstr "В массиве типа JBOD должно быть минимум 2 диска."
 
 msgid "There must be a minimum of 2 disks in a RAID 0 volume."
 msgstr "В массиве типа RAID0 должно быть минимум 2 диска."
@@ -8386,6 +8510,9 @@ msgstr "Вкл./откл. выбранные опции"
 msgid "Tolerated"
 msgstr "Допускается"
 
+msgid "Toolbox"
+msgstr "Инструменты"
+
 msgid "Tools"
 msgstr "Инструменты"
 
@@ -8898,6 +9025,9 @@ msgstr "Переменная"
 
 msgid "Vendor ID"
 msgstr "ID поставщика"
+
+msgid "Verify"
+msgstr "Проверить"
 
 msgid "Version"
 msgstr "Версия"

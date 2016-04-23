@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-21 10:27+0000\n"
+"POT-Creation-Date: 2016-04-22 16:23+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: Jānis Marks Gailis <jm-gailis@fai-vianet.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-13 00:49+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-04-23 08:09+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: LATVIA\n"
 "Language: \n"
 "X-Poedit-Language: Latvian\n"
@@ -263,6 +263,15 @@ msgstr ""
 "Atslēga būs 5 vai 13 simboli (40 vai 104 biti) atkarībā no vietējā tīkla un "
 "adaptera iespējām. Tas var tikt norādīts kā tīra rinda vai kā heksadecimāla "
 "rinda."
+
+msgid "A minimum of 2 disks is required to build a JBOD."
+msgstr ""
+
+#, php-format
+msgid ""
+"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
+"point</a> first before proceeding."
+msgstr ""
 
 msgid "A route to this destination network already exists."
 msgstr "Ceļš uz mērķa tīklu jau eksistē."
@@ -617,6 +626,9 @@ msgid ""
 "empty UFS directory is recommended."
 msgstr ""
 
+msgid "All data will be lost when you activate this option!"
+msgstr ""
+
 msgid "All dirs"
 msgstr "Visas direktorijas"
 
@@ -712,6 +724,9 @@ msgstr "Mainīt TCP portu. Noklusējumā ir 873"
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr "Alternatīva konfigurācijas direktorija (parasti tukša)."
+
+msgid "Always"
+msgstr ""
 
 msgid "Always On"
 msgstr ""
@@ -1818,6 +1833,9 @@ msgstr ""
 msgid "Delete Selected Options"
 msgstr ""
 
+msgid "Delete Selected RAID Volumes"
+msgstr ""
+
 msgid "Delete Selected Volumes"
 msgstr ""
 
@@ -1990,6 +2008,9 @@ msgstr "Ierīce /dev/%s - %s"
 msgid "Device IP"
 msgstr "Ierīces IP"
 
+msgid "Device List"
+msgstr ""
+
 msgid "Device Model"
 msgstr ""
 
@@ -2082,6 +2103,12 @@ msgstr ""
 msgid "Disabled"
 msgstr "Atspējots"
 
+msgid "Discard - Discard ACL"
+msgstr ""
+
+msgid "Discard - Do not inherit entries"
+msgstr ""
+
 #, php-format
 msgid "Discovered iSCSI target for %s"
 msgstr "Atklāts iSCSI mērķis priekš %s"
@@ -2117,6 +2144,11 @@ msgstr ""
 
 msgid "Distributed hash table"
 msgstr "Dalīta jaucējtabula"
+
+msgid ""
+"Do not activate this option if you want to add an already existing RAID "
+"again."
+msgstr ""
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2241,6 +2273,9 @@ msgstr "Vai Tu patiešām vēlies noņemt izvēlēto lietu no saraksta?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Vai Tu patiešām vēlies atinstalēt šo paku?"
+
+msgid "Do you want to delete selected RAID volumes?"
+msgstr ""
 
 msgid "Do you want to delete selected datasets?"
 msgstr ""
@@ -2770,6 +2805,9 @@ msgstr "Ievadi portu, uz kuru sūtīt slazdus (noklusējumā 162)."
 msgid "Enter trap host name."
 msgstr "Ievadi slazda saimniekdatora nosaukumu."
 
+msgid "Entire Device"
+msgstr ""
+
 msgid ""
 "Erase Fail Count (chip). This parameter indicates a number of flash erase "
 "command failures."
@@ -3198,6 +3236,9 @@ msgstr "Grupas numeriskais id."
 msgid "Group suffix"
 msgstr "Grupas sufikss"
 
+msgid "Groupmask - Mask ACL with mode"
+msgstr ""
+
 msgid "Groups"
 msgstr "Grupas"
 
@@ -3425,6 +3466,9 @@ msgstr "IPv6 adreses"
 
 msgid "IRC Live Support"
 msgstr "IRC Tiešsaistes Palīdzība"
+
+msgid "IRC NAS4Free"
+msgstr ""
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
@@ -3746,7 +3790,7 @@ msgstr "Nederīgs datņu formāts."
 msgid "Invalid max. block size! It must be in the range from %d to %d."
 msgstr "Nederīks maksimālais bloku lielums! Tam vajag būt starp %d un %d."
 
-msgid "Invalid username or password. Please try again."
+msgid "Invalid username or password.</br> Please try again."
 msgstr ""
 
 msgid "Invert Selection"
@@ -3784,6 +3828,9 @@ msgid "JBOD"
 msgstr "JBOD"
 
 msgid "JBOD Information & Status"
+msgstr ""
+
+msgid "JBOD Tools"
 msgstr ""
 
 msgid "Jan"
@@ -4361,6 +4408,9 @@ msgstr ""
 msgid "Memory usage"
 msgstr "Atmiņas lietojums"
 
+msgid "Message Board"
+msgstr ""
+
 msgid "Message of the day."
 msgstr "Dienas vēstule"
 
@@ -4503,9 +4553,6 @@ msgstr "Savstarpējs CHAP"
 
 msgid "Mutual CHAP Users"
 msgstr "Savstarpējie CHAP Lietotāji"
-
-msgid "NAS4Free WebGUI Login"
-msgstr ""
 
 msgid "NFS"
 msgstr "NFS"
@@ -4712,6 +4759,9 @@ msgstr ""
 
 msgid "No pool was found."
 msgstr "Neviens pūls netika atrasts."
+
+msgid "Noallow - Only inherit deny entries"
+msgstr ""
 
 msgid "Node A IP address"
 msgstr ""
@@ -4962,6 +5012,9 @@ msgstr ""
 msgid "Overload"
 msgstr ""
 
+msgid "Overview"
+msgstr ""
+
 msgid "Overwrite already configured disks (only affects filesystem value)."
 msgstr ""
 "Pārrakstīt jau konfigurētus diskus (skar tikai datņu sistēmas vērtību)."
@@ -5020,6 +5073,9 @@ msgstr ""
 msgid "Parent Directory"
 msgstr ""
 
+msgid "Partition"
+msgstr ""
+
 msgid "Partition number"
 msgstr "Partīcijas numurs"
 
@@ -5054,6 +5110,15 @@ msgstr "Paroles frāze"
 
 msgid "Passphrase don't match."
 msgstr "Paroles frāzes nesakrīt."
+
+msgid "Passthrough - Do not change ACL"
+msgstr ""
+
+msgid "Passthrough - Inherit all entries"
+msgstr ""
+
+msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
+msgstr ""
 
 msgid "Password"
 msgstr "Parole"
@@ -5186,6 +5251,9 @@ msgid "Pool"
 msgstr "Pūls"
 
 msgid "Pool Information & Status"
+msgstr ""
+
+msgid "Pool Tools"
 msgstr ""
 
 msgid "Pools"
@@ -5357,10 +5425,16 @@ msgstr "RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr ""
 
+msgid "RAID 0 Tools"
+msgstr ""
+
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
+msgstr ""
+
+msgid "RAID 0/1/5 Tools"
 msgstr ""
 
 msgid "RAID 1"
@@ -5369,10 +5443,28 @@ msgstr "RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr ""
 
+msgid "RAID 1 Tools"
+msgstr ""
+
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
+msgstr ""
+
+msgid "RAID 5 Tools"
+msgstr ""
+
+msgid "RAID device can be removed."
+msgstr ""
+
+msgid "RAID device is already in use."
+msgstr ""
+
+msgid "RAID is marked for removal"
+msgstr ""
+
+msgid "RAID is protected"
 msgstr ""
 
 msgid "RAID0"
@@ -5413,6 +5505,9 @@ msgstr "RSYNC notikumi"
 
 msgid "RSYNC log"
 msgstr "RSYNC žurnāls"
+
+msgid "Raid Name"
+msgstr ""
 
 msgid "Raid name"
 msgstr "Raid nosaukums"
@@ -5609,6 +5704,12 @@ msgstr ""
 msgid "Restore metadata from the given file to the given provider."
 msgstr "Restaurēt metadatus no dotās datnes uz doto piegādātāju."
 
+msgid "Restricted"
+msgstr ""
+
+msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
+msgstr ""
+
 msgid "Results for net rpc testjoin:"
 msgstr "Rezultāti priekš net testjoin:"
 
@@ -5707,6 +5808,9 @@ msgstr "S.M.A.R.T. papildus iespējas"
 
 msgid "S.M.A.R.T. log"
 msgstr "S.M.A.R.T. žurnāls"
+
+msgid "SHA256, Verify"
+msgstr ""
 
 msgid "SMB2"
 msgstr ""
@@ -5819,6 +5923,12 @@ msgid "Scheduled Shutdown"
 msgstr ""
 
 msgid "Scheduled tests"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Search event"
 msgstr ""
 
 msgid "Secondary"
@@ -6135,6 +6245,9 @@ msgid "Software RAID"
 msgstr "Programmatūras RAID"
 
 msgid "Software Used"
+msgstr ""
+
+msgid "Software gconcat JBOD"
 msgstr ""
 
 msgid "Source"
@@ -7109,6 +7222,16 @@ msgstr ""
 "saimniekdatoram, vai klasei autorizēties serverī, tas neliedz iespēju "
 "aizliegtajam lietotājam, saimniekdatoram, vai klasei pieslēgties serverim."
 
+msgid "The name of the RAID cannot be changed."
+msgstr ""
+
+msgid "The name of the RAID is already in use."
+msgstr ""
+
+msgid ""
+"The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
+msgstr ""
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "Tīkls '%s' ir nederīgs."
@@ -7333,9 +7456,6 @@ msgstr "Šeit nav kļūdas, datne veiksmīgi augšupielādējās."
 
 msgid "There must be 2 disks in a RAID 1 volume."
 msgstr "Priekš RAID 1 sējuma vahag 2 diskus."
-
-msgid "There must be a minimum of 2 disks in a JBOD."
-msgstr "Priekš JBOD vajag vismaz 2 diskus."
 
 msgid "There must be a minimum of 2 disks in a RAID 0 volume."
 msgstr "Priekš RAID 0 sējuma vajag vismaz 2 diskus."
@@ -7967,6 +8087,9 @@ msgstr ""
 msgid "Tolerated"
 msgstr "Pieļauts"
 
+msgid "Toolbox"
+msgstr ""
+
 msgid "Tools"
 msgstr "Rīki"
 
@@ -8446,6 +8569,9 @@ msgid "Variable"
 msgstr "Mainīgais"
 
 msgid "Vendor ID"
+msgstr ""
+
+msgid "Verify"
 msgstr ""
 
 msgid "Version"

@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-21 10:27+0000\n"
+"POT-Creation-Date: 2016-04-22 16:23+0000\n"
 "PO-Revision-Date: 2016-03-03 17:10+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-13 00:49+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-04-23 08:09+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -238,6 +238,15 @@ msgid ""
 "either as a plain string or as a string of hexadecimal digits preceded by "
 "'0x'."
 msgstr "密鑰可能是5或13個字符（40或104位），這取決於本地網路卡的性能。設置可使用普通的字符串或以 '0x' 開頭的十六進制數字。"
+
+msgid "A minimum of 2 disks is required to build a JBOD."
+msgstr ""
+
+#, php-format
+msgid ""
+"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
+"point</a> first before proceeding."
+msgstr ""
 
 msgid "A route to this destination network already exists."
 msgstr "到目標網段的路由設置已經存在。"
@@ -595,6 +604,9 @@ msgid ""
 "empty UFS directory is recommended."
 msgstr "在路徑上的所有數據將被覆蓋。為了避免無效的數據/權限，建議使用空的UFS目錄。"
 
+msgid "All data will be lost when you activate this option!"
+msgstr ""
+
 msgid "All dirs"
 msgstr "所有目錄"
 
@@ -683,6 +695,9 @@ msgstr "另外指定TCP連接埠，預設為 873。"
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr "另外的組態目錄(通常為空白)。"
+
+msgid "Always"
+msgstr ""
 
 msgid "Always On"
 msgstr "永遠開機"
@@ -1780,6 +1795,9 @@ msgstr ""
 msgid "Delete Selected Options"
 msgstr ""
 
+msgid "Delete Selected RAID Volumes"
+msgstr ""
+
 msgid "Delete Selected Volumes"
 msgstr ""
 
@@ -1950,6 +1968,9 @@ msgstr "裝置 /dev/%s - %s"
 msgid "Device IP"
 msgstr "裝置 IP"
 
+msgid "Device List"
+msgstr ""
+
 msgid "Device Model"
 msgstr "設備型號"
 
@@ -2039,6 +2060,12 @@ msgstr ""
 msgid "Disabled"
 msgstr "關閉"
 
+msgid "Discard - Discard ACL"
+msgstr ""
+
+msgid "Discard - Do not inherit entries"
+msgstr ""
+
 #, php-format
 msgid "Discovered iSCSI target for %s"
 msgstr "搜尋到 %s 的 iSCSI 目標。"
@@ -2074,6 +2101,11 @@ msgstr ""
 
 msgid "Distributed hash table"
 msgstr "分佈式雜湊表"
+
+msgid ""
+"Do not activate this option if you want to add an already existing RAID "
+"again."
+msgstr ""
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2190,6 +2222,9 @@ msgstr "您確定從列表中刪除所選項目嗎？"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "您確定要卸載這個套件嗎？"
+
+msgid "Do you want to delete selected RAID volumes?"
+msgstr ""
 
 msgid "Do you want to delete selected datasets?"
 msgstr ""
@@ -2708,6 +2743,9 @@ msgstr "請輸入 Traps 傳送端口（預設為 162）。"
 msgid "Enter trap host name."
 msgstr "請輸入 Trap 主機名稱。"
 
+msgid "Entire Device"
+msgstr ""
+
 msgid ""
 "Erase Fail Count (chip). This parameter indicates a number of flash erase "
 "command failures."
@@ -3123,6 +3161,9 @@ msgstr "群組的數字 id。"
 msgid "Group suffix"
 msgstr "群組後綴"
 
+msgid "Groupmask - Mask ACL with mode"
+msgstr ""
+
 msgid "Groups"
 msgstr "群組"
 
@@ -3346,6 +3387,9 @@ msgstr "IPv6 位址"
 
 msgid "IRC Live Support"
 msgstr "IRC 在線支援"
+
+msgid "IRC NAS4Free"
+msgstr ""
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
@@ -3652,8 +3696,8 @@ msgstr "檔案格式無效。"
 msgid "Invalid max. block size! It must be in the range from %d to %d."
 msgstr "数据块的最大值無效！它必須是從 %d 到 %d 的範圍。"
 
-msgid "Invalid username or password. Please try again."
-msgstr "用戶名或密碼無效。請再試一次。"
+msgid "Invalid username or password.</br> Please try again."
+msgstr ""
 
 msgid "Invert Selection"
 msgstr ""
@@ -3689,6 +3733,9 @@ msgstr "JBOD"
 
 msgid "JBOD Information & Status"
 msgstr "JBOD 信息和狀態"
+
+msgid "JBOD Tools"
+msgstr ""
 
 msgid "Jan"
 msgstr ""
@@ -4243,6 +4290,9 @@ msgstr "內存使用情況"
 msgid "Memory usage"
 msgstr "內存使用情況"
 
+msgid "Message Board"
+msgstr ""
+
 msgid "Message of the day."
 msgstr "每日訊息（每次登入時顯示）。"
 
@@ -4383,9 +4433,6 @@ msgstr "CHAP 相互驗證"
 
 msgid "Mutual CHAP Users"
 msgstr "CHAP 相互驗證用戶"
-
-msgid "NAS4Free WebGUI Login"
-msgstr "NAS4Free 網頁界面登入"
 
 msgid "NFS"
 msgstr "NFS"
@@ -4573,6 +4620,9 @@ msgstr "沒有發現新的軟體RAID的硬盤。"
 
 msgid "No pool was found."
 msgstr "找不到池。"
+
+msgid "Noallow - Only inherit deny entries"
+msgstr ""
 
 msgid "Node A IP address"
 msgstr "A 節點的 IP 位址"
@@ -4812,6 +4862,9 @@ msgstr ""
 msgid "Overload"
 msgstr "負載"
 
+msgid "Overview"
+msgstr ""
+
 msgid "Overwrite already configured disks (only affects filesystem value)."
 msgstr "覆蓋已設定的磁碟 (只影響檔案系統值)。"
 
@@ -4869,6 +4922,9 @@ msgstr "參數xxx（ups.conf 或 cmdline -x）的設置"
 msgid "Parent Directory"
 msgstr "上層目錄"
 
+msgid "Partition"
+msgstr ""
+
 msgid "Partition number"
 msgstr "分割區編號"
 
@@ -4898,6 +4954,15 @@ msgstr "密碼短語"
 
 msgid "Passphrase don't match."
 msgstr "密碼短語不符合。"
+
+msgid "Passthrough - Do not change ACL"
+msgstr ""
+
+msgid "Passthrough - Inherit all entries"
+msgstr ""
+
+msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
+msgstr ""
 
 msgid "Password"
 msgstr "密碼"
@@ -5031,6 +5096,9 @@ msgstr "存儲池"
 
 msgid "Pool Information & Status"
 msgstr "存儲池信息和狀態"
+
+msgid "Pool Tools"
+msgstr ""
 
 msgid "Pools"
 msgstr "存儲池（Pool）"
@@ -5197,11 +5265,17 @@ msgstr "RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr "RAID 0 信息和狀態"
 
+msgid "RAID 0 Tools"
+msgstr ""
+
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
 msgstr "RAID 0/1/5 信息和狀態"
+
+msgid "RAID 0/1/5 Tools"
+msgstr ""
 
 msgid "RAID 1"
 msgstr "RAID 1"
@@ -5209,11 +5283,29 @@ msgstr "RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr "RAID 1 信息和狀態"
 
+msgid "RAID 1 Tools"
+msgstr ""
+
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
 msgstr "RAID 5 信息和狀態"
+
+msgid "RAID 5 Tools"
+msgstr ""
+
+msgid "RAID device can be removed."
+msgstr ""
+
+msgid "RAID device is already in use."
+msgstr ""
+
+msgid "RAID is marked for removal"
+msgstr ""
+
+msgid "RAID is protected"
+msgstr ""
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -5253,6 +5345,9 @@ msgstr "RSYNC 事件"
 
 msgid "RSYNC log"
 msgstr "RSYNC 記錄"
+
+msgid "Raid Name"
+msgstr ""
 
 msgid "Raid name"
 msgstr "RAID 名稱"
@@ -5441,6 +5536,12 @@ msgstr "還原配置"
 msgid "Restore metadata from the given file to the given provider."
 msgstr "從文件還原元數據給指定提供者。"
 
+msgid "Restricted"
+msgstr ""
+
+msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
+msgstr ""
+
 msgid "Results for net rpc testjoin:"
 msgstr "Net rpc testjoin 結果："
 
@@ -5539,6 +5640,9 @@ msgstr "S.M.A.R.T. 額外選項"
 
 msgid "S.M.A.R.T. log"
 msgstr "S.M.A.R.T. 記錄"
+
+msgid "SHA256, Verify"
+msgstr ""
 
 msgid "SMB2"
 msgstr "SMB2"
@@ -5647,6 +5751,12 @@ msgstr "定時關機"
 
 msgid "Scheduled tests"
 msgstr "定時測試"
+
+msgid "Search"
+msgstr ""
+
+msgid "Search event"
+msgstr ""
 
 msgid "Secondary"
 msgstr "次要"
@@ -5953,6 +6063,9 @@ msgid "Software RAID"
 msgstr "軟體RAID"
 
 msgid "Software Used"
+msgstr ""
+
+msgid "Software gconcat JBOD"
 msgstr ""
 
 msgid "Source"
@@ -6864,6 +6977,16 @@ msgstr ""
 "該模塊（module）按照所觸發的配置標準來提供自動配封禁（ban）。禁令防止被禁止的用戶，主機或登錄到伺服器，它並不能阻止被禁止的用戶，主機或類連接到伺"
 "服器。"
 
+msgid "The name of the RAID cannot be changed."
+msgstr ""
+
+msgid "The name of the RAID is already in use."
+msgstr ""
+
+msgid ""
+"The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
+msgstr ""
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "網路 '%s' 是無效的。"
@@ -7076,9 +7199,6 @@ msgstr "檔案上傳成功，沒有任何錯誤。"
 
 msgid "There must be 2 disks in a RAID 1 volume."
 msgstr "RAID 1 模式最少要有 2 個磁盘。"
-
-msgid "There must be a minimum of 2 disks in a JBOD."
-msgstr "JBOD 模式必需有至少 2 個磁盘。"
 
 msgid "There must be a minimum of 2 disks in a RAID 0 volume."
 msgstr "RAID 0 模式最少要有 2 個磁盘。"
@@ -7630,6 +7750,9 @@ msgstr ""
 msgid "Tolerated"
 msgstr "容許"
 
+msgid "Toolbox"
+msgstr ""
+
 msgid "Tools"
 msgstr "工具"
 
@@ -8090,6 +8213,9 @@ msgstr "變數"
 
 msgid "Vendor ID"
 msgstr "供應商 ID"
+
+msgid "Verify"
+msgstr ""
 
 msgid "Version"
 msgstr "版本"

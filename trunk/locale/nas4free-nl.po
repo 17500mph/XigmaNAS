@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-21 10:27+0000\n"
-"PO-Revision-Date: 2016-03-23 13:26+0000\n"
+"POT-Creation-Date: 2016-04-22 16:23+0000\n"
+"PO-Revision-Date: 2016-04-22 15:52+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-13 00:49+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-04-23 08:08+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
 "X-Poedit-Language: Dutch\n"
@@ -294,6 +294,17 @@ msgstr ""
 "van het lokaal netwerk en de mogelijkheden van de adaptor. Het kan "
 "gespecificeerd worden als gewone text of als een text van hexadecimale "
 "cijfers voorafgegaan met '0x'."
+
+msgid "A minimum of 2 disks is required to build a JBOD."
+msgstr "Er moeten minimaal 2 schijven zijn om een JBOD te bouwen."
+
+#, php-format
+msgid ""
+"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
+"point</a> first before proceeding."
+msgstr ""
+"Een gekoppelde RAID volume kan niet worden verwijderd. Verwijder het <a "
+"href='%s'>koppelpunt</a> eerst voor u verder gaat."
 
 msgid "A route to this destination network already exists."
 msgstr "Een route naar dit bestemmingsnetwerk bestaat reeds."
@@ -676,6 +687,9 @@ msgstr ""
 "Alle data in de locatie wordt overschreven. Om ongeldige data/permissies te "
 "vermijden, gebruik van een lege UFS bestand is ten sterkste aanbevolen."
 
+msgid "All data will be lost when you activate this option!"
+msgstr "Alle gegevens zullen verloren gaan wanneer u deze optie activeert!"
+
 msgid "All dirs"
 msgstr "Alle mappen"
 
@@ -781,6 +795,9 @@ msgstr "Alternatieve TCP-poort. Standaard 873"
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr "Alternatieve configuratiemap (normaal leeg)."
+
+msgid "Always"
+msgstr "Altijd"
 
 msgid "Always On"
 msgstr "Altijd Aan"
@@ -927,7 +944,7 @@ msgid "Auto"
 msgstr "Automatisch"
 
 msgid "Auto Snapshot"
-msgstr "Automatisch snapshot"
+msgstr "Auto Snapshots"
 
 msgid "Auto size"
 msgstr "Auto grootte"
@@ -1994,6 +2011,9 @@ msgstr "Verwijder Geselecteerde Taken"
 msgid "Delete Selected Options"
 msgstr "Verwijder Geselecteerde Opties"
 
+msgid "Delete Selected RAID Volumes"
+msgstr "Verwijder geselecteerde RAID Volumes"
+
 msgid "Delete Selected Volumes"
 msgstr "Verwijder Geselecteerde Volumes"
 
@@ -2172,6 +2192,9 @@ msgstr "Schijf /dev/%s - %s"
 msgid "Device IP"
 msgstr "IP apparaat"
 
+msgid "Device List"
+msgstr "Lijst schijven"
+
 msgid "Device Model"
 msgstr "Modelnaam"
 
@@ -2267,6 +2290,12 @@ msgstr "Uitschakelen compressie van herhaalde lijn."
 msgid "Disabled"
 msgstr "Uitgeschakeld"
 
+msgid "Discard - Discard ACL"
+msgstr "Discard - Negeer ACL"
+
+msgid "Discard - Do not inherit entries"
+msgstr "Discard - entries niet overnemen"
+
 #, php-format
 msgid "Discovered iSCSI target for %s"
 msgstr "Gevonden iSCSI doel voor %s"
@@ -2304,6 +2333,12 @@ msgstr ""
 
 msgid "Distributed hash table"
 msgstr "Distributed hash table"
+
+msgid ""
+"Do not activate this option if you want to add an already existing RAID "
+"again."
+msgstr ""
+"Gebruik deze optie niet als u een bestaande RAID opnieuw wil toevoegen."
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2435,6 +2470,9 @@ msgstr ""
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Weet u zeker dat u dit pakket wilt deïnstalleren?"
+
+msgid "Do you want to delete selected RAID volumes?"
+msgstr "Wilt u de geselecteerde RAID volumes verwijderen?"
 
 msgid "Do you want to delete selected datasets?"
 msgstr "Wilt u de geselecteerde datasets verwijderen?"
@@ -2988,6 +3026,9 @@ msgstr ""
 msgid "Enter trap host name."
 msgstr "Vul de trap host naam in."
 
+msgid "Entire Device"
+msgstr "Volledige Schijf"
+
 msgid ""
 "Erase Fail Count (chip). This parameter indicates a number of flash erase "
 "command failures."
@@ -3427,6 +3468,9 @@ msgstr "Numerieke groep id."
 msgid "Group suffix"
 msgstr "Groep achtervoegsel"
 
+msgid "Groupmask - Mask ACL with mode"
+msgstr "Groupmask - Markeer ACL met modus"
+
 msgid "Groups"
 msgstr "Groepen"
 
@@ -3669,6 +3713,9 @@ msgstr "IPv6 adressen"
 
 msgid "IRC Live Support"
 msgstr "IRC Live Ondersteuning"
+
+msgid "IRC NAS4Free"
+msgstr "IRC NAS4Free"
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
@@ -4014,7 +4061,7 @@ msgstr "Ongeldig bestandsformaat."
 msgid "Invalid max. block size! It must be in the range from %d to %d."
 msgstr "Ongeldige blokgrootte! Het dient in het bereik %d tot %d te zijn."
 
-msgid "Invalid username or password. Please try again."
+msgid "Invalid username or password.</br> Please try again."
 msgstr "Gebruikersnaam of wachtwoord onjuist. Probeer het opnieuw."
 
 msgid "Invert Selection"
@@ -4059,6 +4106,9 @@ msgstr "JBOD"
 
 msgid "JBOD Information & Status"
 msgstr "JBOD Informatie & Status"
+
+msgid "JBOD Tools"
+msgstr "JBOD Hulpmiddelen"
 
 msgid "Jan"
 msgstr "Jan"
@@ -4663,6 +4713,9 @@ msgstr "Geheugen Gebruik"
 msgid "Memory usage"
 msgstr "Geheugen gebruik"
 
+msgid "Message Board"
+msgstr "Berichten"
+
 msgid "Message of the day."
 msgstr "Bericht van de dag"
 
@@ -4807,9 +4860,6 @@ msgstr "Mutual CHAP"
 
 msgid "Mutual CHAP Users"
 msgstr "Mutual CHAP Gebruikers"
-
-msgid "NAS4Free WebGUI Login"
-msgstr "NAS4Free WebGUI Login"
 
 msgid "NFS"
 msgstr "NFS"
@@ -5025,6 +5075,9 @@ msgstr "Geen nieuwe software raid schijven gevonden."
 
 msgid "No pool was found."
 msgstr "Er is geen pool gevonden."
+
+msgid "Noallow - Only inherit deny entries"
+msgstr "Noallow - Alleen overnemen wijger entries"
 
 msgid "Node A IP address"
 msgstr "Node A IP adres"
@@ -5284,6 +5337,9 @@ msgstr ""
 msgid "Overload"
 msgstr "Overbelasting"
 
+msgid "Overview"
+msgstr "Overzicht"
+
 msgid "Overwrite already configured disks (only affects filesystem value)."
 msgstr ""
 "Overschrijf reeds geconfigureerde schijven (heeft alleen effect op de "
@@ -5343,6 +5399,9 @@ msgstr "Parameter xxx (ups.conf of cmdline -x) instelling"
 msgid "Parent Directory"
 msgstr "Bovenliggende Map"
 
+msgid "Partition"
+msgstr "Partitie"
+
 msgid "Partition number"
 msgstr "Partitie nummer"
 
@@ -5378,6 +5437,16 @@ msgstr "Wachtwoordzin"
 
 msgid "Passphrase don't match."
 msgstr "Het wachtwoordzin komt niet overeen."
+
+msgid "Passthrough - Do not change ACL"
+msgstr "Passthrough - Wijzig de ACL niet"
+
+msgid "Passthrough - Inherit all entries"
+msgstr "Passthrough - Erven van alle entries"
+
+msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
+msgstr ""
+"Passthrough-X - Erven alles behalve \"uitvoeren\" wanneer niet gespecificeerd"
 
 msgid "Password"
 msgstr "Wachtwoord"
@@ -5513,6 +5582,9 @@ msgstr "Pool"
 
 msgid "Pool Information & Status"
 msgstr "Pool Informatie & Status"
+
+msgid "Pool Tools"
+msgstr "Pool Hulpmiddelen"
 
 msgid "Pools"
 msgstr "Pools"
@@ -5684,11 +5756,17 @@ msgstr "RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr "RAID 0 Informatie & Status"
 
+msgid "RAID 0 Tools"
+msgstr "RAID 0 Hulpmiddelen"
+
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
 msgstr "RAID 0/1/5 Informatie & Status"
+
+msgid "RAID 0/1/5 Tools"
+msgstr "RAID 0/1/5 Hulpmiddelen"
 
 msgid "RAID 1"
 msgstr "RAID 1"
@@ -5696,11 +5774,29 @@ msgstr "RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr "RAID 1 Informatie & Status"
 
+msgid "RAID 1 Tools"
+msgstr "RAID 1 Hulpmiddelen"
+
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
 msgstr "RAID 5 Informatie & Status"
+
+msgid "RAID 5 Tools"
+msgstr "RAID 5 Hulpmiddelen"
+
+msgid "RAID device can be removed."
+msgstr "RAID schijf kan worden verwijderd."
+
+msgid "RAID device is already in use."
+msgstr "RAID schijf is al in gebruik."
+
+msgid "RAID is marked for removal"
+msgstr "RAID is gemarkeerd voor verwijdering"
+
+msgid "RAID is protected"
+msgstr "RAID is beveiligd"
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -5740,6 +5836,9 @@ msgstr "RSYNC gebeurtenissen"
 
 msgid "RSYNC log"
 msgstr "RSYNC log"
+
+msgid "Raid Name"
+msgstr "Raid Naam"
 
 msgid "Raid name"
 msgstr "RAID naam"
@@ -5939,6 +6038,13 @@ msgid "Restore metadata from the given file to the given provider."
 msgstr ""
 "Herstellen metadata van het opgegeven bestand naar de opgegeven provider."
 
+msgid "Restricted"
+msgstr "Beperkt"
+
+msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
+msgstr ""
+"Restricted - Alle overnemen maar \"ACL schrijven\" en \"eigenaar veranderen\""
+
 msgid "Results for net rpc testjoin:"
 msgstr "Resultaten voor net rpc testjoin:"
 
@@ -6038,6 +6144,9 @@ msgstr "S.M.A.R.T. extra opties"
 
 msgid "S.M.A.R.T. log"
 msgstr "S.M.A.R.T. log"
+
+msgid "SHA256, Verify"
+msgstr "SHA256, Verifiëren"
 
 msgid "SMB2"
 msgstr "SMB2"
@@ -6154,6 +6263,12 @@ msgstr "Gepland Uitschakelen"
 
 msgid "Scheduled tests"
 msgstr "Gepland testen"
+
+msgid "Search"
+msgstr "Zoeken"
+
+msgid "Search event"
+msgstr "Zoek gebeurtenis"
 
 msgid "Secondary"
 msgstr "Secundair"
@@ -6487,6 +6602,9 @@ msgstr "Software RAID"
 
 msgid "Software Used"
 msgstr "Gebruikte Software"
+
+msgid "Software gconcat JBOD"
+msgstr "Software gconcat JBOD"
 
 msgid "Source"
 msgstr "Bron"
@@ -7531,6 +7649,17 @@ msgstr ""
 "groep om in te loggen op de server, het verhindert niet dat een verbannen "
 "gebruiker, gastheer, of groep met de server kan verbinden."
 
+msgid "The name of the RAID cannot be changed."
+msgstr "De naam van de RAID kan niet veranderd worden."
+
+msgid "The name of the RAID is already in use."
+msgstr "De naam van de RAID is reeds in gebruik."
+
+msgid ""
+"The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
+msgstr ""
+"De naam van de RAID mag alleen bestaan uit de karakters a-z, A-Z, 0-9."
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "Het network '%s' is ongeldig."
@@ -7776,9 +7905,6 @@ msgstr "Er is geen fout ontdekt, het bestand is met succes geupload."
 
 msgid "There must be 2 disks in a RAID 1 volume."
 msgstr "Er moeten minimaal 2 schijven zijn in een RAID 1 volume."
-
-msgid "There must be a minimum of 2 disks in a JBOD."
-msgstr "Er moeten minimaal 2 schijven zijn in een JBOD."
 
 msgid "There must be a minimum of 2 disks in a RAID 0 volume."
 msgstr "Er moeten minimaal 2 schijven zijn in een RAID 0 volume."
@@ -8478,6 +8604,9 @@ msgstr "Schakel Geselecteerde Opties"
 msgid "Tolerated"
 msgstr "Toelaten"
 
+msgid "Toolbox"
+msgstr "Toolbox"
+
 msgid "Tools"
 msgstr "Hulpmiddelen"
 
@@ -8983,6 +9112,9 @@ msgstr "Variabele"
 
 msgid "Vendor ID"
 msgstr "Vendor ID"
+
+msgid "Verify"
+msgstr "Verifiëren"
 
 msgid "Version"
 msgstr "Versie"

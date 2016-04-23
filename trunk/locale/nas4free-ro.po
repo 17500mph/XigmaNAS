@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-21 10:27+0000\n"
+"POT-Creation-Date: 2016-04-22 16:23+0000\n"
 "PO-Revision-Date: 2016-03-23 12:38+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-13 00:49+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-04-23 08:09+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -293,6 +293,15 @@ msgstr ""
 "rețelei locale și de posibilitățile cartelei de rețea. Poate fi introdusă "
 "fie ca text în clar fie ca un șir de caractere hexazecimale precedate de "
 "șirul '0x'."
+
+msgid "A minimum of 2 disks is required to build a JBOD."
+msgstr ""
+
+#, php-format
+msgid ""
+"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
+"point</a> first before proceeding."
+msgstr ""
 
 msgid "A route to this destination network already exists."
 msgstr "Exista deja o rută către această destinație."
@@ -670,6 +679,9 @@ msgstr ""
 "Toate datele din calea specificată vor fi suprascrise. Pentru a evita "
 "date/permisiuni invalide se recomandă utilizarea folderelor UFS goale."
 
+msgid "All data will be lost when you activate this option!"
+msgstr ""
+
 msgid "All dirs"
 msgstr "Toate directoarele"
 
@@ -773,6 +785,9 @@ msgstr "Port TCP Alternativ. Portul implicit este 873"
 msgid "Alternative configuration directory (usually empty)."
 msgstr ""
 "Folder de configurare alternativ (cîmpul se lasă necompletat de obicei)."
+
+msgid "Always"
+msgstr ""
 
 msgid "Always On"
 msgstr "Pornit permanent"
@@ -1990,6 +2005,9 @@ msgstr "Ștergere activități selectate"
 msgid "Delete Selected Options"
 msgstr "Ștergere opțiuni selectate"
 
+msgid "Delete Selected RAID Volumes"
+msgstr ""
+
 msgid "Delete Selected Volumes"
 msgstr "Ștergere volume selectate"
 
@@ -2166,6 +2184,9 @@ msgstr "Dispozitiv /dev/%s - %s"
 msgid "Device IP"
 msgstr "Dispozitiv IP"
 
+msgid "Device List"
+msgstr ""
+
 msgid "Device Model"
 msgstr "Model dispozitiv"
 
@@ -2261,6 +2282,12 @@ msgstr "Dezactivare compresie pentru linile repetate."
 msgid "Disabled"
 msgstr "Dezactivat"
 
+msgid "Discard - Discard ACL"
+msgstr ""
+
+msgid "Discard - Do not inherit entries"
+msgstr ""
+
 #, php-format
 msgid "Discovered iSCSI target for %s"
 msgstr "Destinații iSCSI descoperite pentru %s"
@@ -2298,6 +2325,11 @@ msgstr ""
 
 msgid "Distributed hash table"
 msgstr "Tabela distribuită de asocieri (hash table)"
+
+msgid ""
+"Do not activate this option if you want to add an already existing RAID "
+"again."
+msgstr ""
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2424,6 +2456,9 @@ msgstr "Doriți să ștergeți elementul selectat din listă?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Doriți să ștergeți acest pachet?"
+
+msgid "Do you want to delete selected RAID volumes?"
+msgstr ""
 
 msgid "Do you want to delete selected datasets?"
 msgstr "Ștergeți seturile de date selectate?"
@@ -2967,6 +3002,9 @@ msgstr "Introduceți portul pentru capcane software (implicit 162)."
 msgid "Enter trap host name."
 msgstr "Introduceți numele sistemului pentru capcane software"
 
+msgid "Entire Device"
+msgstr ""
+
 msgid ""
 "Erase Fail Count (chip). This parameter indicates a number of flash erase "
 "command failures."
@@ -3405,6 +3443,9 @@ msgstr "Id numeric grup."
 msgid "Group suffix"
 msgstr "Sufix grup"
 
+msgid "Groupmask - Mask ACL with mode"
+msgstr ""
+
 msgid "Groups"
 msgstr "Grupuri"
 
@@ -3651,6 +3692,9 @@ msgstr "Adrese IPv6"
 
 msgid "IRC Live Support"
 msgstr "Suport Live IRC"
+
+msgid "IRC NAS4Free"
+msgstr ""
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
@@ -3999,8 +4043,8 @@ msgstr ""
 "Dimensiune maximă bloc incorectă! Valoarea trebuie să fie în intervalul %d - "
 "%d."
 
-msgid "Invalid username or password. Please try again."
-msgstr "Nume utilizator sau parolă invalide. Reîncercaţi."
+msgid "Invalid username or password.</br> Please try again."
+msgstr ""
 
 msgid "Invert Selection"
 msgstr "Inversare selecție"
@@ -4046,6 +4090,9 @@ msgstr "JBOD"
 
 msgid "JBOD Information & Status"
 msgstr "Informații & Stare JBOD"
+
+msgid "JBOD Tools"
+msgstr ""
 
 msgid "Jan"
 msgstr "Ian"
@@ -4639,6 +4686,9 @@ msgstr "Utilizare memorie"
 msgid "Memory usage"
 msgstr "Utilizare memorie"
 
+msgid "Message Board"
+msgstr ""
+
 msgid "Message of the day."
 msgstr "Mesajul Zilei."
 
@@ -4783,9 +4833,6 @@ msgstr "CHAP mutual"
 
 msgid "Mutual CHAP Users"
 msgstr "Utilizatori CHAP mutual"
-
-msgid "NAS4Free WebGUI Login"
-msgstr "Autentificare Interfață Grafică"
 
 msgid "NFS"
 msgstr "NFS"
@@ -4998,6 +5045,9 @@ msgstr "Nu exista dispozitive RAID-Soft  noi."
 
 msgid "No pool was found."
 msgstr "Nu a fost găsită nicio structură (pool)."
+
+msgid "Noallow - Only inherit deny entries"
+msgstr ""
 
 msgid "Node A IP address"
 msgstr "Adresă IP nod A"
@@ -5256,6 +5306,9 @@ msgstr ""
 msgid "Overload"
 msgstr "Supraîncărcare"
 
+msgid "Overview"
+msgstr ""
+
 msgid "Overwrite already configured disks (only affects filesystem value)."
 msgstr ""
 "Suprascriere discuri deja configurate (afectează doar sistemul de fișiere)."
@@ -5314,6 +5367,9 @@ msgstr "Setările pentru parametrul xxx (ups.conf sau cmdline -x)"
 msgid "Parent Directory"
 msgstr "Director principal"
 
+msgid "Partition"
+msgstr ""
+
 msgid "Partition number"
 msgstr "Numărul partiției"
 
@@ -5348,6 +5404,15 @@ msgstr "Frază Parolă"
 
 msgid "Passphrase don't match."
 msgstr "Frazele parolă nu coincid."
+
+msgid "Passthrough - Do not change ACL"
+msgstr ""
+
+msgid "Passthrough - Inherit all entries"
+msgstr ""
+
+msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
+msgstr ""
 
 msgid "Password"
 msgstr "Parola"
@@ -5482,6 +5547,9 @@ msgstr "Structură"
 
 msgid "Pool Information & Status"
 msgstr "Informații & Stare Pool"
+
+msgid "Pool Tools"
+msgstr ""
 
 msgid "Pools"
 msgstr "Structuri"
@@ -5656,11 +5724,17 @@ msgstr "RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr "Informații & Stare RAID 0"
 
+msgid "RAID 0 Tools"
+msgstr ""
+
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
 msgstr "Informații & Stare RAID 0/1/5"
+
+msgid "RAID 0/1/5 Tools"
+msgstr ""
 
 msgid "RAID 1"
 msgstr "RAID 1"
@@ -5668,11 +5742,29 @@ msgstr "RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr "Informații & Stare RAID 1"
 
+msgid "RAID 1 Tools"
+msgstr ""
+
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
 msgstr "Informații & Stare RAID 5"
+
+msgid "RAID 5 Tools"
+msgstr ""
+
+msgid "RAID device can be removed."
+msgstr ""
+
+msgid "RAID device is already in use."
+msgstr ""
+
+msgid "RAID is marked for removal"
+msgstr ""
+
+msgid "RAID is protected"
+msgstr ""
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -5712,6 +5804,9 @@ msgstr "Evenimente RSYNC"
 
 msgid "RSYNC log"
 msgstr "Jurnal RSYNC"
+
+msgid "Raid Name"
+msgstr ""
 
 msgid "Raid name"
 msgstr "Nume Raid"
@@ -5909,6 +6004,12 @@ msgstr "Restaurare configurație"
 msgid "Restore metadata from the given file to the given provider."
 msgstr "Restaurare metadata de la fișierul dat la providerul specificat."
 
+msgid "Restricted"
+msgstr ""
+
+msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
+msgstr ""
+
 msgid "Results for net rpc testjoin:"
 msgstr "Rezultat testjoin net rpc:"
 
@@ -6007,6 +6108,9 @@ msgstr "Extra opțiuni S.M.A.R.T."
 
 msgid "S.M.A.R.T. log"
 msgstr "Jurnal S.M.A.R.T."
+
+msgid "SHA256, Verify"
+msgstr ""
 
 msgid "SMB2"
 msgstr "SMB2"
@@ -6122,6 +6226,12 @@ msgstr "Oprire programată"
 
 msgid "Scheduled tests"
 msgstr "Teste programate"
+
+msgid "Search"
+msgstr ""
+
+msgid "Search event"
+msgstr ""
 
 msgid "Secondary"
 msgstr "Secundar"
@@ -6451,6 +6561,9 @@ msgstr "RAID Software"
 
 msgid "Software Used"
 msgstr "Software utilizat"
+
+msgid "Software gconcat JBOD"
+msgstr ""
 
 msgid "Source"
 msgstr "Sursă"
@@ -7486,6 +7599,16 @@ msgstr ""
 "utilizatori/sisteme să se autentifice în server, fără a bloca efectiv "
 "conexiunea acestora la el."
 
+msgid "The name of the RAID cannot be changed."
+msgstr ""
+
+msgid "The name of the RAID is already in use."
+msgstr ""
+
+msgid ""
+"The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
+msgstr ""
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "Rețeau '%s' nu este validă."
@@ -7726,9 +7849,6 @@ msgstr "Fișierul a fost încărcat cu succes, fără eroare."
 
 msgid "There must be 2 disks in a RAID 1 volume."
 msgstr "Sunt necesare cel puțin 2 discuri pentru un volum RAID 1."
-
-msgid "There must be a minimum of 2 disks in a JBOD."
-msgstr "Sunt necesare cel puțin 2 discuri pentru un JBOD."
 
 msgid "There must be a minimum of 2 disks in a RAID 0 volume."
 msgstr "Sunt necesare cel puțin 2 discuri pentru un volum RAID 0."
@@ -8417,6 +8537,9 @@ msgstr "Inversare opțiuni selectate."
 msgid "Tolerated"
 msgstr "Tolerat"
 
+msgid "Toolbox"
+msgstr ""
+
 msgid "Tools"
 msgstr "Unelte"
 
@@ -8925,6 +9048,9 @@ msgstr "Variabilă"
 
 msgid "Vendor ID"
 msgstr "ID vînzător"
+
+msgid "Verify"
+msgstr ""
 
 msgid "Version"
 msgstr "Versiune"

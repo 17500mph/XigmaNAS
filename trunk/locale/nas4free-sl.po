@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-21 10:27+0000\n"
+"POT-Creation-Date: 2016-04-22 16:23+0000\n"
 "PO-Revision-Date: 2016-03-28 06:18+0000\n"
 "Last-Translator: Matic Gradišer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-13 00:49+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-04-23 08:09+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
 "X-Poedit-Language: Slovenian\n"
@@ -259,6 +259,15 @@ msgstr ""
 "Ključ je lahko dolg 5, ali 13 znakov (40, ali 104 bite). Odvisno od "
 "lokalnega omrežja in zmožnosti adaptorja. Lahko je določen kot samo "
 "besedilo, ali kot heksadecimalno število, ki se začne z '0x'."
+
+msgid "A minimum of 2 disks is required to build a JBOD."
+msgstr ""
+
+#, php-format
+msgid ""
+"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
+"point</a> first before proceeding."
+msgstr ""
 
 msgid "A route to this destination network already exists."
 msgstr "Pot do ciljnega omrežja že obstaja."
@@ -615,6 +624,9 @@ msgid ""
 "empty UFS directory is recommended."
 msgstr ""
 
+msgid "All data will be lost when you activate this option!"
+msgstr ""
+
 msgid "All dirs"
 msgstr "Vse mape"
 
@@ -705,6 +717,9 @@ msgstr "Alternativna TCP vrata. Privzeta so 873."
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr "Drugačno mesto konfiguracij (po navadi prazno)."
+
+msgid "Always"
+msgstr ""
 
 msgid "Always On"
 msgstr ""
@@ -1809,6 +1824,9 @@ msgstr ""
 msgid "Delete Selected Options"
 msgstr ""
 
+msgid "Delete Selected RAID Volumes"
+msgstr ""
+
 msgid "Delete Selected Volumes"
 msgstr ""
 
@@ -1981,6 +1999,9 @@ msgstr "Naprava /dev/%s - %s"
 msgid "Device IP"
 msgstr "IP naprave"
 
+msgid "Device List"
+msgstr ""
+
 msgid "Device Model"
 msgstr ""
 
@@ -2073,6 +2094,12 @@ msgstr ""
 msgid "Disabled"
 msgstr "Onemogočen"
 
+msgid "Discard - Discard ACL"
+msgstr ""
+
+msgid "Discard - Do not inherit entries"
+msgstr ""
+
 #, php-format
 msgid "Discovered iSCSI target for %s"
 msgstr "Zaznani iSCSI cilji za %s"
@@ -2108,6 +2135,11 @@ msgstr ""
 
 msgid "Distributed hash table"
 msgstr "Razdeljena hash tabela"
+
+msgid ""
+"Do not activate this option if you want to add an already existing RAID "
+"again."
+msgstr ""
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2232,6 +2264,9 @@ msgstr "Res želite izbrisati izbrano iz seznama?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Res želite odstraniti ta paket?"
+
+msgid "Do you want to delete selected RAID volumes?"
+msgstr ""
 
 msgid "Do you want to delete selected datasets?"
 msgstr ""
@@ -2758,6 +2793,9 @@ msgstr "Vpišite vrata za pošiljanje pasti (privzeto 162)."
 msgid "Enter trap host name."
 msgstr "Vpišite ime pasi"
 
+msgid "Entire Device"
+msgstr ""
+
 msgid ""
 "Erase Fail Count (chip). This parameter indicates a number of flash erase "
 "command failures."
@@ -3184,6 +3222,9 @@ msgstr "Numerični identifikator skupine"
 msgid "Group suffix"
 msgstr "Pripona skupine"
 
+msgid "Groupmask - Mask ACL with mode"
+msgstr ""
+
 msgid "Groups"
 msgstr "Skupine"
 
@@ -3410,6 +3451,9 @@ msgstr "IPv6 naslovi"
 
 msgid "IRC Live Support"
 msgstr "IRC podpora"
+
+msgid "IRC NAS4Free"
+msgstr ""
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
@@ -3730,7 +3774,7 @@ msgstr "Napačen format datoteke."
 msgid "Invalid max. block size! It must be in the range from %d to %d."
 msgstr "Napačna velikost bloka. Biti more med %d in %d."
 
-msgid "Invalid username or password. Please try again."
+msgid "Invalid username or password.</br> Please try again."
 msgstr ""
 
 msgid "Invert Selection"
@@ -3768,6 +3812,9 @@ msgid "JBOD"
 msgstr "JBOD"
 
 msgid "JBOD Information & Status"
+msgstr ""
+
+msgid "JBOD Tools"
 msgstr ""
 
 msgid "Jan"
@@ -4340,6 +4387,9 @@ msgstr ""
 msgid "Memory usage"
 msgstr "Poraba spomina"
 
+msgid "Message Board"
+msgstr ""
+
 msgid "Message of the day."
 msgstr "Sporočilo dneva."
 
@@ -4482,9 +4532,6 @@ msgstr "Skupen CHAP"
 
 msgid "Mutual CHAP Users"
 msgstr "Skupni CHAP uporabniki"
-
-msgid "NAS4Free WebGUI Login"
-msgstr ""
 
 msgid "NFS"
 msgstr "NFS"
@@ -4684,6 +4731,9 @@ msgstr ""
 
 msgid "No pool was found."
 msgstr "Bazen ni najden."
+
+msgid "Noallow - Only inherit deny entries"
+msgstr ""
 
 msgid "Node A IP address"
 msgstr ""
@@ -4930,6 +4980,9 @@ msgstr ""
 msgid "Overload"
 msgstr ""
 
+msgid "Overview"
+msgstr ""
+
 msgid "Overwrite already configured disks (only affects filesystem value)."
 msgstr "Prepiši že konfigurirane diske (samo vrednosti datotečnih sistemov)."
 
@@ -4987,6 +5040,9 @@ msgstr ""
 msgid "Parent Directory"
 msgstr ""
 
+msgid "Partition"
+msgstr ""
+
 msgid "Partition number"
 msgstr "Številka razdelka"
 
@@ -5019,6 +5075,15 @@ msgstr "Geslo"
 
 msgid "Passphrase don't match."
 msgstr "Gesli se ne ujemata."
+
+msgid "Passthrough - Do not change ACL"
+msgstr ""
+
+msgid "Passthrough - Inherit all entries"
+msgstr ""
+
+msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
+msgstr ""
 
 msgid "Password"
 msgstr "Geslo"
@@ -5151,6 +5216,9 @@ msgid "Pool"
 msgstr "Preverjanje"
 
 msgid "Pool Information & Status"
+msgstr ""
+
+msgid "Pool Tools"
 msgstr ""
 
 msgid "Pools"
@@ -5320,10 +5388,16 @@ msgstr "RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr ""
 
+msgid "RAID 0 Tools"
+msgstr ""
+
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
+msgstr ""
+
+msgid "RAID 0/1/5 Tools"
 msgstr ""
 
 msgid "RAID 1"
@@ -5332,10 +5406,28 @@ msgstr "RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr ""
 
+msgid "RAID 1 Tools"
+msgstr ""
+
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
+msgstr ""
+
+msgid "RAID 5 Tools"
+msgstr ""
+
+msgid "RAID device can be removed."
+msgstr ""
+
+msgid "RAID device is already in use."
+msgstr ""
+
+msgid "RAID is marked for removal"
+msgstr ""
+
+msgid "RAID is protected"
 msgstr ""
 
 msgid "RAID0"
@@ -5376,6 +5468,9 @@ msgstr "RSYNC dogodki"
 
 msgid "RSYNC log"
 msgstr "RSYNC dnevnik"
+
+msgid "Raid Name"
+msgstr ""
 
 msgid "Raid name"
 msgstr "RAID ime"
@@ -5572,6 +5667,12 @@ msgstr ""
 msgid "Restore metadata from the given file to the given provider."
 msgstr "Obnovi meta podatke iz dane datoteke, podanemu ponudniku."
 
+msgid "Restricted"
+msgstr ""
+
+msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
+msgstr ""
+
 msgid "Results for net rpc testjoin:"
 msgstr "Rezultati net rpc testnega priklopa:"
 
@@ -5670,6 +5771,9 @@ msgstr "S.M.A.R.T. dodatne možnosti"
 
 msgid "S.M.A.R.T. log"
 msgstr "S.M.A.R.T. dnevnik"
+
+msgid "SHA256, Verify"
+msgstr ""
 
 msgid "SMB2"
 msgstr ""
@@ -5782,6 +5886,12 @@ msgid "Scheduled Shutdown"
 msgstr ""
 
 msgid "Scheduled tests"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Search event"
 msgstr ""
 
 msgid "Secondary"
@@ -6097,6 +6207,9 @@ msgid "Software RAID"
 msgstr "Programski RAID"
 
 msgid "Software Used"
+msgstr ""
+
+msgid "Software gconcat JBOD"
 msgstr ""
 
 msgid "Source"
@@ -7025,6 +7138,16 @@ msgid ""
 "connecting to the server."
 msgstr ""
 
+msgid "The name of the RAID cannot be changed."
+msgstr ""
+
+msgid "The name of the RAID is already in use."
+msgstr ""
+
+msgid ""
+"The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
+msgstr ""
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr ""
@@ -7234,9 +7357,6 @@ msgstr ""
 
 msgid "There must be 2 disks in a RAID 1 volume."
 msgstr "Za RAID 1 polje, morata biti na voljo 2 pogona."
-
-msgid "There must be a minimum of 2 disks in a JBOD."
-msgstr ""
 
 msgid "There must be a minimum of 2 disks in a RAID 0 volume."
 msgstr "Za RAID 0 polje, morata biti na voljo vsaj 2 pogona."
@@ -7768,6 +7888,9 @@ msgstr ""
 msgid "Tolerated"
 msgstr ""
 
+msgid "Toolbox"
+msgstr ""
+
 msgid "Tools"
 msgstr "Orodja"
 
@@ -8227,6 +8350,9 @@ msgid "Variable"
 msgstr ""
 
 msgid "Vendor ID"
+msgstr ""
+
+msgid "Verify"
 msgstr ""
 
 msgid "Version"

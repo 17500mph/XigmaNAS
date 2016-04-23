@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-21 10:27+0000\n"
-"PO-Revision-Date: 2016-04-04 15:52+0000\n"
+"POT-Creation-Date: 2016-04-22 16:23+0000\n"
+"PO-Revision-Date: 2016-04-19 17:20+0000\n"
 "Last-Translator: AndriyM <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-13 00:48+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-04-23 08:09+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "Language: uk\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -264,6 +264,15 @@ msgstr ""
 "Ключ повинен містити 5 або 13 символів (40 або 104 біт) залежно від "
 "локальної мережі та можливості адаптера. Його можна  ввести простим текстом "
 "або у вигляді рядка шістнадцяткових цифр, перед якими стоїть \"0x\"."
+
+msgid "A minimum of 2 disks is required to build a JBOD."
+msgstr ""
+
+#, php-format
+msgid ""
+"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
+"point</a> first before proceeding."
+msgstr ""
 
 msgid "A route to this destination network already exists."
 msgstr "Маршрут до цієї підмережі вже існує."
@@ -638,6 +647,9 @@ msgstr ""
 "Всі дані за цим шляхом переписано. Для уникнення помилок даних чи прав "
 "доступу, радимо використовувати пусту UFS директорію."
 
+msgid "All data will be lost when you activate this option!"
+msgstr ""
+
 msgid "All dirs"
 msgstr "Усі каталоги"
 
@@ -735,6 +747,9 @@ msgstr "Альтернативний TCP порт. За умовчанням 873
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr "Альтернативна дикекторія для конфігурації (зазвичай пуста)"
+
+msgid "Always"
+msgstr ""
 
 msgid "Always On"
 msgstr "Завжди увімкнено"
@@ -1884,6 +1899,9 @@ msgstr "Видалити вибрані завдання"
 msgid "Delete Selected Options"
 msgstr "Видалити вибрані опції"
 
+msgid "Delete Selected RAID Volumes"
+msgstr ""
+
 msgid "Delete Selected Volumes"
 msgstr "Видалити вибрані диски"
 
@@ -2057,6 +2075,9 @@ msgstr "Пристрій /dev/%s - %s"
 msgid "Device IP"
 msgstr "IP адреса пристрою"
 
+msgid "Device List"
+msgstr ""
+
 msgid "Device Model"
 msgstr "Модель пристрою"
 
@@ -2139,16 +2160,22 @@ msgid "Disable file manager completely."
 msgstr "Повністю деактивувати файловий менеджер"
 
 msgid "Disable firmware version check."
-msgstr ""
+msgstr "Вимкнути перевірку версії прошивки."
 
 msgid "Disable speaker beep on startup and shutdown."
-msgstr ""
+msgstr "Вимкнути сигнал спікера при старті і завершенні."
 
 msgid "Disable the compression of repeated line."
 msgstr ""
 
 msgid "Disabled"
 msgstr "Вимкнено"
+
+msgid "Discard - Discard ACL"
+msgstr ""
+
+msgid "Discard - Do not inherit entries"
+msgstr ""
 
 #, php-format
 msgid "Discovered iSCSI target for %s"
@@ -2182,9 +2209,16 @@ msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
 msgstr ""
+"Відстань, на яку зрушився диск відносно шпинделя (зазвичай через поштовх або "
+"температуру). Одиниці виміру - невідомі."
 
 msgid "Distributed hash table"
 msgstr "Розподілена таблиця хешування"
+
+msgid ""
+"Do not activate this option if you want to add an already existing RAID "
+"again."
+msgstr ""
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2314,11 +2348,14 @@ msgstr "Ви дійсно хочете видалити вибраний еле�
 msgid "Do you really want to uninstall this package?"
 msgstr "Ви дійсно хочете деінсталювати цей пакет?"
 
+msgid "Do you want to delete selected RAID volumes?"
+msgstr ""
+
 msgid "Do you want to delete selected datasets?"
 msgstr ""
 
 msgid "Do you want to delete selected jobs?"
-msgstr ""
+msgstr "Видалити вибрані завдання?"
 
 msgid "Do you want to delete selected options?"
 msgstr ""
@@ -2327,19 +2364,19 @@ msgid "Do you want to delete selected volumes?"
 msgstr ""
 
 msgid "Do you want to disable selected jobs?"
-msgstr ""
+msgstr "Вимкнути вибрані завдання?"
 
 msgid "Do you want to disable selected options?"
 msgstr ""
 
 msgid "Do you want to enable selected jobs?"
-msgstr ""
+msgstr "Увімкнути вибрані завдання?"
 
 msgid "Do you want to enable selected options?"
 msgstr ""
 
 msgid "Do you want to toggle selected jobs?"
-msgstr ""
+msgstr "Перемкнути вибрані завдання?"
 
 msgid "Do you want to toggle selected options?"
 msgstr ""
@@ -2616,7 +2653,7 @@ msgstr ""
 "можна використовувати і SSL."
 
 msgid "Enable Selected Jobs"
-msgstr ""
+msgstr "Увімкнути вибрані завдання"
 
 msgid "Enable Selected Options"
 msgstr ""
@@ -2646,7 +2683,7 @@ msgid "Enable compression."
 msgstr "Увімкнути стиснення."
 
 msgid "Enable console screensaver."
-msgstr ""
+msgstr "Увімкнути консольний скрінсейвер."
 
 msgid "Enable device polling"
 msgstr "Дозволити опитування пристроїв"
@@ -2734,7 +2771,7 @@ msgid "Enable reverse DNS lookup."
 msgstr "Увімкнути зворотній пошук  DNS."
 
 msgid "Enable serial console."
-msgstr ""
+msgstr "Увімкнути консоль на послідовному порті."
 
 msgid "Enable shadow copy"
 msgstr "Увімкнути shadow copy"
@@ -2758,7 +2795,7 @@ msgid "Enable traps."
 msgstr ""
 
 msgid "Enable tuning of some kernel variables."
-msgstr ""
+msgstr "Увімкнути деякі налаштування ядра."
 
 msgid "Enable write cache mode."
 msgstr "Увімкнути режим кешування запису."
@@ -2845,6 +2882,9 @@ msgid "Enter the port to send the traps to (default 162)."
 msgstr ""
 
 msgid "Enter trap host name."
+msgstr ""
+
+msgid "Entire Device"
 msgstr ""
 
 msgid ""
@@ -3275,6 +3315,9 @@ msgstr "Цифровий ідентифікатор групи."
 msgid "Group suffix"
 msgstr "Суфікс групи"
 
+msgid "Groupmask - Mask ACL with mode"
+msgstr ""
+
 msgid "Groups"
 msgstr "Групи"
 
@@ -3499,6 +3542,9 @@ msgid "IPv6 addresses"
 msgstr "IPv6 адреси"
 
 msgid "IRC Live Support"
+msgstr ""
+
+msgid "IRC NAS4Free"
 msgstr ""
 
 #, php-format
@@ -3818,8 +3864,8 @@ msgid "Invalid max. block size! It must be in the range from %d to %d."
 msgstr ""
 "Неправильний макс. розмір блоку! Повинен бути в діапазоні від %d до %d."
 
-msgid "Invalid username or password. Please try again."
-msgstr "Неправильне ім'я користувача або пароль. Спробуйте ще раз."
+msgid "Invalid username or password.</br> Please try again."
+msgstr ""
 
 msgid "Invert Selection"
 msgstr "Інвертувати обране"
@@ -3861,6 +3907,9 @@ msgstr "JBOD"
 
 msgid "JBOD Information & Status"
 msgstr "Статус та інформація про JBOD"
+
+msgid "JBOD Tools"
+msgstr ""
 
 msgid "Jan"
 msgstr "Січ."
@@ -4422,6 +4471,9 @@ msgstr "Використання пам'яті"
 msgid "Memory usage"
 msgstr "Використання пам'яті"
 
+msgid "Message Board"
+msgstr ""
+
 msgid "Message of the day."
 msgstr "Фраза дня"
 
@@ -4566,9 +4618,6 @@ msgstr "Взаємна CHAP"
 
 msgid "Mutual CHAP Users"
 msgstr "Користувачі взаємного CHAP"
-
-msgid "NAS4Free WebGUI Login"
-msgstr "Логін до веб-інтерфейсу NAS4Free"
 
 msgid "NFS"
 msgstr "NFS"
@@ -4772,6 +4821,9 @@ msgstr "Нових дисків для програмного RAID не знай
 
 msgid "No pool was found."
 msgstr "Жодного пула не знайдено."
+
+msgid "Noallow - Only inherit deny entries"
+msgstr ""
 
 msgid "Node A IP address"
 msgstr "IP адреса вузла А."
@@ -5020,6 +5072,9 @@ msgstr ""
 msgid "Overload"
 msgstr "Перевантаження"
 
+msgid "Overview"
+msgstr ""
+
 msgid "Overwrite already configured disks (only affects filesystem value)."
 msgstr ""
 
@@ -5077,6 +5132,9 @@ msgstr ""
 msgid "Parent Directory"
 msgstr "Батьківська директорія"
 
+msgid "Partition"
+msgstr ""
+
 msgid "Partition number"
 msgstr "Номер розділу"
 
@@ -5104,6 +5162,15 @@ msgstr "Парольна фраза"
 
 msgid "Passphrase don't match."
 msgstr "Парольні фрази не однакові"
+
+msgid "Passthrough - Do not change ACL"
+msgstr ""
+
+msgid "Passthrough - Inherit all entries"
+msgstr ""
+
+msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
+msgstr ""
 
 msgid "Password"
 msgstr "Пароль"
@@ -5238,6 +5305,9 @@ msgstr "Список"
 
 msgid "Pool Information & Status"
 msgstr "Статус та інформація про пул"
+
+msgid "Pool Tools"
+msgstr ""
 
 msgid "Pools"
 msgstr "Списки"
@@ -5404,11 +5474,17 @@ msgstr "RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr "Інформація та статус RAID 0"
 
+msgid "RAID 0 Tools"
+msgstr ""
+
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
 msgstr "Інформація та статус RAID 0/1/5"
+
+msgid "RAID 0/1/5 Tools"
+msgstr ""
 
 msgid "RAID 1"
 msgstr "RAID 1"
@@ -5416,11 +5492,29 @@ msgstr "RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr "Інформація та статус RAID 1"
 
+msgid "RAID 1 Tools"
+msgstr ""
+
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
 msgstr "Інформація та статус RAID 5"
+
+msgid "RAID 5 Tools"
+msgstr ""
+
+msgid "RAID device can be removed."
+msgstr ""
+
+msgid "RAID device is already in use."
+msgstr ""
+
+msgid "RAID is marked for removal"
+msgstr ""
+
+msgid "RAID is protected"
+msgstr ""
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -5460,6 +5554,9 @@ msgstr "Події RSYNC"
 
 msgid "RSYNC log"
 msgstr "Протокол RSYNC"
+
+msgid "Raid Name"
+msgstr ""
 
 msgid "Raid name"
 msgstr "Ім'я RAID масиву"
@@ -5658,6 +5755,12 @@ msgstr "Відновити конфігурацію"
 msgid "Restore metadata from the given file to the given provider."
 msgstr ""
 
+msgid "Restricted"
+msgstr ""
+
+msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
+msgstr ""
+
 msgid "Results for net rpc testjoin:"
 msgstr ""
 
@@ -5756,6 +5859,9 @@ msgstr "Додаткові налаштування S.M.A.R.T."
 
 msgid "S.M.A.R.T. log"
 msgstr "Журнал S.M.A.R.T."
+
+msgid "SHA256, Verify"
+msgstr ""
 
 msgid "SMB2"
 msgstr "SMB2"
@@ -5865,6 +5971,12 @@ msgstr "Заплановане вимкнення"
 
 msgid "Scheduled tests"
 msgstr "Заплановані тести"
+
+msgid "Search"
+msgstr ""
+
+msgid "Search event"
+msgstr ""
 
 msgid "Secondary"
 msgstr "Вторинний"
@@ -6168,6 +6280,9 @@ msgid "Software RAID"
 msgstr "Програмний RAID"
 
 msgid "Software Used"
+msgstr ""
+
+msgid "Software gconcat JBOD"
 msgstr ""
 
 msgid "Source"
@@ -7082,6 +7197,16 @@ msgid ""
 "connecting to the server."
 msgstr ""
 
+msgid "The name of the RAID cannot be changed."
+msgstr ""
+
+msgid "The name of the RAID is already in use."
+msgstr ""
+
+msgid ""
+"The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
+msgstr ""
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "Неправильна мережа '%s'."
@@ -7294,9 +7419,6 @@ msgstr "Файл завантажено без помилок."
 
 msgid "There must be 2 disks in a RAID 1 volume."
 msgstr "Повинно бути 2 диски в масиві RAID 1."
-
-msgid "There must be a minimum of 2 disks in a JBOD."
-msgstr "Повинно бути принаймні 2 диски в JBOD."
 
 msgid "There must be a minimum of 2 disks in a RAID 0 volume."
 msgstr "Повинно бути принаймні 2 диски в масиві RAID 0."
@@ -7842,6 +7964,9 @@ msgstr ""
 msgid "Tolerated"
 msgstr "Припустимо"
 
+msgid "Toolbox"
+msgstr ""
+
 msgid "Tools"
 msgstr "Інструменти"
 
@@ -8299,6 +8424,9 @@ msgid "Variable"
 msgstr ""
 
 msgid "Vendor ID"
+msgstr ""
+
+msgid "Verify"
 msgstr ""
 
 msgid "Version"

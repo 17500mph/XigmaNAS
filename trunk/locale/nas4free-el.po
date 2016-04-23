@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-21 10:27+0000\n"
+"POT-Creation-Date: 2016-04-22 16:23+0000\n"
 "PO-Revision-Date: 2016-03-21 19:46+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-13 00:49+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-04-23 08:08+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
 "X-Poedit-Language: Greek\n"
@@ -292,6 +292,15 @@ msgstr ""
 "ανάλογα με το τοπικό σας δίκτυο και τις δυνατότητες του προσαρμογέα δικτύου "
 "σας. Είναι δυνατό να προσδιορισθεί είτε ως απλή συμβολοσειρά ή ως μια σειρά "
 "από δεκαεξαδικά ψηφία στα οποία θα προηγείται το '0x'."
+
+msgid "A minimum of 2 disks is required to build a JBOD."
+msgstr ""
+
+#, php-format
+msgid ""
+"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
+"point</a> first before proceeding."
+msgstr ""
 
 msgid "A route to this destination network already exists."
 msgstr "Υπάρχει ήδη μια διαδρομή προς αυτόν τον προορισμό δικτύου."
@@ -677,6 +686,9 @@ msgstr ""
 "Όλα τα δεδομένα στη διαδρομή θα αντικατασταθούν. Για να αποφύγετε μη έγκυρα "
 "δεδομένα/δικαιώματα, συνιστάται να χρησιμοποιήσετε έναν άδειο κατάλογο UFS."
 
+msgid "All data will be lost when you activate this option!"
+msgstr ""
+
 msgid "All dirs"
 msgstr "Όλοι οι κατάλογοι"
 
@@ -788,6 +800,9 @@ msgstr "Εναλλακτική θύρα TCP. Η προεπιλεγμένη εί�
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr "Εναλλακτικός κατάλογος ρυθμίσεων (συνήθως κενό)."
+
+msgid "Always"
+msgstr ""
 
 msgid "Always On"
 msgstr "Συνέχεια ενεργό"
@@ -2013,6 +2028,9 @@ msgstr "Διαγραφή Επιλεγμένων Εργασιών"
 msgid "Delete Selected Options"
 msgstr "Διαγραφή Επιλεγμένων Επιλογών"
 
+msgid "Delete Selected RAID Volumes"
+msgstr ""
+
 msgid "Delete Selected Volumes"
 msgstr "Διαγραφή Επιλεγμένων Τόμων"
 
@@ -2192,6 +2210,9 @@ msgstr "Συσκευή /dev/%s - %s"
 msgid "Device IP"
 msgstr "IP συσκευής"
 
+msgid "Device List"
+msgstr ""
+
 msgid "Device Model"
 msgstr "Μοντέλο Συσκευής"
 
@@ -2288,6 +2309,12 @@ msgstr "Απενεργοποίηση συμπίεσης της επαναλαμ�
 msgid "Disabled"
 msgstr "Απενεργοποιημένο"
 
+msgid "Discard - Discard ACL"
+msgstr ""
+
+msgid "Discard - Do not inherit entries"
+msgstr ""
+
 #, php-format
 msgid "Discovered iSCSI target for %s"
 msgstr "Βρέθηκε iSCSI προορισμός για %s"
@@ -2326,6 +2353,11 @@ msgstr ""
 
 msgid "Distributed hash table"
 msgstr "Διανεμημένος πίνακας κατακερματισμού"
+
+msgid ""
+"Do not activate this option if you want to add an already existing RAID "
+"again."
+msgstr ""
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2455,6 +2487,9 @@ msgstr "Θέλετε σίγουρα να αφαιρέσετε το επιλεγ�
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Θέλετε σίγουρα να απεγκαταστήσετε αυτό το πακέτο;"
+
+msgid "Do you want to delete selected RAID volumes?"
+msgstr ""
 
 msgid "Do you want to delete selected datasets?"
 msgstr "Θέλετε να διαγράψετε τα επιλεγμένα dataset;"
@@ -3007,6 +3042,9 @@ msgstr ""
 msgid "Enter trap host name."
 msgstr "Εισάγετε το όνομα του κεντρικού υπολογιστή παγίδα."
 
+msgid "Entire Device"
+msgstr ""
+
 msgid ""
 "Erase Fail Count (chip). This parameter indicates a number of flash erase "
 "command failures."
@@ -3454,6 +3492,9 @@ msgstr "Αριθμητική ταυτότητα ομάδας."
 msgid "Group suffix"
 msgstr "Επίθεμα ομάδας"
 
+msgid "Groupmask - Mask ACL with mode"
+msgstr ""
+
 msgid "Groups"
 msgstr "Ομάδες"
 
@@ -3699,6 +3740,9 @@ msgstr "Διευθύνσεις IPv6"
 
 msgid "IRC Live Support"
 msgstr "Ζωντανή υποστήριξη μέσω IRC"
+
+msgid "IRC NAS4Free"
+msgstr ""
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
@@ -4053,8 +4097,8 @@ msgstr "Άκυρη μορφή αρχείου."
 msgid "Invalid max. block size! It must be in the range from %d to %d."
 msgstr "Μη έγκυρο μέγιστο μέγεθος μπλοκ! Πρέπει να είναι μεταξύ %d και %d."
 
-msgid "Invalid username or password. Please try again."
-msgstr "Μη έγκυρα όνομα χρήστη ή κωδικός. Παρακαλώ προσπαθήστε ξανά."
+msgid "Invalid username or password.</br> Please try again."
+msgstr ""
 
 msgid "Invert Selection"
 msgstr "Αντιστροφή Επιλογής"
@@ -4100,6 +4144,9 @@ msgstr "JBOD"
 
 msgid "JBOD Information & Status"
 msgstr "Πληροφορίες JBOD & Κατάσταση"
+
+msgid "JBOD Tools"
+msgstr ""
 
 msgid "Jan"
 msgstr "Ιαν."
@@ -4700,6 +4747,9 @@ msgstr "Χρήση μνήμης"
 msgid "Memory usage"
 msgstr "Χρήση μνήμης"
 
+msgid "Message Board"
+msgstr ""
+
 msgid "Message of the day."
 msgstr "Μήνυμα Της Ημέρας"
 
@@ -4845,9 +4895,6 @@ msgstr "Αμοιβαίο CHAP"
 
 msgid "Mutual CHAP Users"
 msgstr "Χρήστες αμοιβαίου CHAP"
-
-msgid "NAS4Free WebGUI Login"
-msgstr "Σύνδεση στο Web περιβάλλον του NAS4Free"
 
 msgid "NFS"
 msgstr "NFS"
@@ -5062,6 +5109,9 @@ msgstr "Δεν βρέθηκαν νέοι δίσκοι σε raid μέσω λογ�
 
 msgid "No pool was found."
 msgstr "Κανένα pool δεν βρέθηκε."
+
+msgid "Noallow - Only inherit deny entries"
+msgstr ""
 
 msgid "Node A IP address"
 msgstr "Διεύθυνση IP κόμβου Α"
@@ -5324,6 +5374,9 @@ msgstr ""
 msgid "Overload"
 msgstr "Υπερφόρτωση"
 
+msgid "Overview"
+msgstr ""
+
 msgid "Overwrite already configured disks (only affects filesystem value)."
 msgstr ""
 "Αντικατάσταση των ήδη ρυθμισμένων δίσκων (επηρεάζει μόνο την ιδιότητα του "
@@ -5383,6 +5436,9 @@ msgstr "Ρύθμιση παραμέτρου xxx (ups.conf ή cmdline -x)"
 msgid "Parent Directory"
 msgstr "Γονικός κατάλογος"
 
+msgid "Partition"
+msgstr ""
+
 msgid "Partition number"
 msgstr "Αριθμός κατάτμησης"
 
@@ -5418,6 +5474,15 @@ msgstr "Συνθηματική φράση"
 
 msgid "Passphrase don't match."
 msgstr "Οι συνθηματικές φράσεις δεν ταιριάζουν"
+
+msgid "Passthrough - Do not change ACL"
+msgstr ""
+
+msgid "Passthrough - Inherit all entries"
+msgstr ""
+
+msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
+msgstr ""
 
 msgid "Password"
 msgstr "Κωδικός"
@@ -5554,6 +5619,9 @@ msgstr "Pool"
 
 msgid "Pool Information & Status"
 msgstr "Πληροφορίες και Κατάσταση του Pool"
+
+msgid "Pool Tools"
+msgstr ""
 
 msgid "Pools"
 msgstr "Pools"
@@ -5729,11 +5797,17 @@ msgstr "RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr "Πληροφορίες & Κατάσταση RAID 0"
 
+msgid "RAID 0 Tools"
+msgstr ""
+
 msgid "RAID 0/1/5"
 msgstr "Συστοιχία RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
 msgstr "Πληροφορίες & Κατάσταση RAID 0/1/5"
+
+msgid "RAID 0/1/5 Tools"
+msgstr ""
 
 msgid "RAID 1"
 msgstr "RAID 1"
@@ -5741,11 +5815,29 @@ msgstr "RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr "Πληροφορίες & Κατάσταση RAID 1"
 
+msgid "RAID 1 Tools"
+msgstr ""
+
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
 msgstr "Πληροφορίες & Κατάσταση RAID 5"
+
+msgid "RAID 5 Tools"
+msgstr ""
+
+msgid "RAID device can be removed."
+msgstr ""
+
+msgid "RAID device is already in use."
+msgstr ""
+
+msgid "RAID is marked for removal"
+msgstr ""
+
+msgid "RAID is protected"
+msgstr ""
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -5785,6 +5877,9 @@ msgstr "Συμβάντα RSYNC"
 
 msgid "RSYNC log"
 msgstr "Καταγραφή RSYNC"
+
+msgid "Raid Name"
+msgstr ""
 
 msgid "Raid name"
 msgstr "Όνομα RAID"
@@ -5984,6 +6079,12 @@ msgstr "Επαναφορά Ρυθμίσεων"
 msgid "Restore metadata from the given file to the given provider."
 msgstr "Επαναφορά των μεταδεδομένων από το δοθέν αρχείο στο δοθέντα πάροχο."
 
+msgid "Restricted"
+msgstr ""
+
+msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
+msgstr ""
+
 msgid "Results for net rpc testjoin:"
 msgstr "Αποτελέσματα του net rpc testjoin:"
 
@@ -6084,6 +6185,9 @@ msgstr "Επιπλέον επιλογές S.M.A.R.T."
 
 msgid "S.M.A.R.T. log"
 msgstr "Αρχείο καταγραφής S.M.A.R.T."
+
+msgid "SHA256, Verify"
+msgstr ""
 
 msgid "SMB2"
 msgstr "SMB2"
@@ -6201,6 +6305,12 @@ msgstr "Προγραμματισμένος Τερματισμός Υπολογι
 
 msgid "Scheduled tests"
 msgstr "Προγραμματισμένες εξετάσεις"
+
+msgid "Search"
+msgstr ""
+
+msgid "Search event"
+msgstr ""
 
 msgid "Secondary"
 msgstr "Δευτερεύων"
@@ -6540,6 +6650,9 @@ msgstr "RAID μέσω λογισμικού"
 
 msgid "Software Used"
 msgstr "Λογισμικό που χρησιμοποιείται"
+
+msgid "Software gconcat JBOD"
+msgstr ""
 
 msgid "Source"
 msgstr "Προέλευση"
@@ -7609,6 +7722,16 @@ msgstr ""
 "εμποδίζει τον αποκλεισμένο χρήστη, υπολογιστή, ή κατηγορία από τη σύνδεση με "
 "το διακομιστή."
 
+msgid "The name of the RAID cannot be changed."
+msgstr ""
+
+msgid "The name of the RAID is already in use."
+msgstr ""
+
+msgid ""
+"The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
+msgstr ""
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "Το δίκτυο '%s' δεν είναι έγκυρο."
@@ -7853,9 +7976,6 @@ msgstr "Δεν υπάρχει σφάλμα, το αρχείο ανέβηκε μ�
 
 msgid "There must be 2 disks in a RAID 1 volume."
 msgstr "Πρέπει να υπάρχουν 2 δίσκοι σε έναν τόμο RAID 1."
-
-msgid "There must be a minimum of 2 disks in a JBOD."
-msgstr "Πρέπει να υπάρχουν το ελάχιστο 2 δίσκοι σε ένα JBOD."
 
 msgid "There must be a minimum of 2 disks in a RAID 0 volume."
 msgstr "Πρέπει να υπάρχουν τουλάχιστον 2 δίσκοι σε έναν τόμο RAID 0."
@@ -8575,6 +8695,9 @@ msgstr "Εναλλαγή Επιλεγμένων Επιλογών"
 msgid "Tolerated"
 msgstr "Ανεκτή"
 
+msgid "Toolbox"
+msgstr ""
+
 msgid "Tools"
 msgstr "Εργαλεία"
 
@@ -9091,6 +9214,9 @@ msgstr "Μεταβλητή"
 
 msgid "Vendor ID"
 msgstr "ID Προμηθευτή"
+
+msgid "Verify"
+msgstr ""
 
 msgid "Version"
 msgstr "Έκδοση"

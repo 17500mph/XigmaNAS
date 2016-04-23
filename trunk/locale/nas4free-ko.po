@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-03-21 10:27+0000\n"
+"POT-Creation-Date: 2016-04-22 16:23+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-13 00:49+0000\n"
-"X-Generator: Launchpad (build 17990)\n"
+"X-Launchpad-Export-Date: 2016-04-23 08:09+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
 "X-Poedit-Language: Korean\n"
@@ -245,6 +245,15 @@ msgid ""
 msgstr ""
 "키는 로컬 네트워크와 어댑터의 능력에 따라 5자나 13자(40비트나 104비트)의 문자일 것입니다. 이것은 일반 문자열 혹은 '0x'에 "
 "뒤따라오는 16진 숫자의 문자열로 분류합니다."
+
+msgid "A minimum of 2 disks is required to build a JBOD."
+msgstr ""
+
+#, php-format
+msgid ""
+"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
+"point</a> first before proceeding."
+msgstr ""
 
 msgid "A route to this destination network already exists."
 msgstr "이동하려고 하는 네트워크로의 경로가 이미 존재합니다."
@@ -599,6 +608,9 @@ msgid ""
 "empty UFS directory is recommended."
 msgstr ""
 
+msgid "All data will be lost when you activate this option!"
+msgstr ""
+
 msgid "All dirs"
 msgstr "모든 디렉터리"
 
@@ -689,6 +701,9 @@ msgstr "다른 TCP 포트. 기본 값은 873"
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr "다른 설정 디렉터리(보통은 비워 둠)."
+
+msgid "Always"
+msgstr ""
 
 msgid "Always On"
 msgstr ""
@@ -1779,6 +1794,9 @@ msgstr ""
 msgid "Delete Selected Options"
 msgstr ""
 
+msgid "Delete Selected RAID Volumes"
+msgstr ""
+
 msgid "Delete Selected Volumes"
 msgstr ""
 
@@ -1950,6 +1968,9 @@ msgstr "장치 /dev/%s - %s"
 msgid "Device IP"
 msgstr "장치 IP"
 
+msgid "Device List"
+msgstr ""
+
 msgid "Device Model"
 msgstr ""
 
@@ -2040,6 +2061,12 @@ msgstr ""
 msgid "Disabled"
 msgstr "비활성화됨"
 
+msgid "Discard - Discard ACL"
+msgstr ""
+
+msgid "Discard - Do not inherit entries"
+msgstr ""
+
 #, php-format
 msgid "Discovered iSCSI target for %s"
 msgstr "%s을(를) 위한 발견된 iSCSI 타젯"
@@ -2075,6 +2102,11 @@ msgstr ""
 
 msgid "Distributed hash table"
 msgstr "분산 해쉬 테이블"
+
+msgid ""
+"Do not activate this option if you want to add an already existing RAID "
+"again."
+msgstr ""
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2191,6 +2223,9 @@ msgstr "리스트에서 선택된 항목을 정말로 삭제하시겠습니까?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "정말로 이 패키지를 설치 해제하시겠습니까?"
+
+msgid "Do you want to delete selected RAID volumes?"
+msgstr ""
 
 msgid "Do you want to delete selected datasets?"
 msgstr ""
@@ -2710,6 +2745,9 @@ msgstr "트랩을 전송할 포트를 입력하십시오9기본 값은 162)."
 msgid "Enter trap host name."
 msgstr "트랩 호스트 명을 입력하십시오."
 
+msgid "Entire Device"
+msgstr ""
+
 msgid ""
 "Erase Fail Count (chip). This parameter indicates a number of flash erase "
 "command failures."
@@ -3129,6 +3167,9 @@ msgstr "그룹 숫자 id."
 msgid "Group suffix"
 msgstr "그룹 접미사"
 
+msgid "Groupmask - Mask ACL with mode"
+msgstr ""
+
 msgid "Groups"
 msgstr "그룹"
 
@@ -3352,6 +3393,9 @@ msgstr "IPv6 주소"
 
 msgid "IRC Live Support"
 msgstr "IRC 라이브 지원"
+
+msgid "IRC NAS4Free"
+msgstr ""
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
@@ -3661,7 +3705,7 @@ msgstr "무효한 파일 포맷."
 msgid "Invalid max. block size! It must be in the range from %d to %d."
 msgstr "무효한 최대 블록 크기! %d에서 %d의 범위에 있어야 합니다."
 
-msgid "Invalid username or password. Please try again."
+msgid "Invalid username or password.</br> Please try again."
 msgstr ""
 
 msgid "Invert Selection"
@@ -3697,6 +3741,9 @@ msgid "JBOD"
 msgstr "JBOD"
 
 msgid "JBOD Information & Status"
+msgstr ""
+
+msgid "JBOD Tools"
 msgstr ""
 
 msgid "Jan"
@@ -4254,6 +4301,9 @@ msgstr ""
 msgid "Memory usage"
 msgstr "메모리 사용량"
 
+msgid "Message Board"
+msgstr ""
+
 msgid "Message of the day."
 msgstr "오늘의 메시지."
 
@@ -4394,9 +4444,6 @@ msgstr "상호 CHAP"
 
 msgid "Mutual CHAP Users"
 msgstr "상호 CHAP 사용자"
-
-msgid "NAS4Free WebGUI Login"
-msgstr ""
 
 msgid "NFS"
 msgstr "NFS"
@@ -4586,6 +4633,9 @@ msgstr ""
 
 msgid "No pool was found."
 msgstr "풀을 찾을 수 없습니다."
+
+msgid "Noallow - Only inherit deny entries"
+msgstr ""
 
 msgid "Node A IP address"
 msgstr ""
@@ -4825,6 +4875,9 @@ msgstr ""
 msgid "Overload"
 msgstr ""
 
+msgid "Overview"
+msgstr ""
+
 msgid "Overwrite already configured disks (only affects filesystem value)."
 msgstr "이미 설정된 디스크를 덮어씁니다(파일 시스템 값만 영향을 미침)."
 
@@ -4882,6 +4935,9 @@ msgstr ""
 msgid "Parent Directory"
 msgstr ""
 
+msgid "Partition"
+msgstr ""
+
 msgid "Partition number"
 msgstr "파티션 번호"
 
@@ -4913,6 +4969,15 @@ msgstr "암호"
 
 msgid "Passphrase don't match."
 msgstr "암호가 맞지 않습니다."
+
+msgid "Passthrough - Do not change ACL"
+msgstr ""
+
+msgid "Passthrough - Inherit all entries"
+msgstr ""
+
+msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
+msgstr ""
 
 msgid "Password"
 msgstr "비밀번호"
@@ -5045,6 +5110,9 @@ msgid "Pool"
 msgstr "풀"
 
 msgid "Pool Information & Status"
+msgstr ""
+
+msgid "Pool Tools"
 msgstr ""
 
 msgid "Pools"
@@ -5212,10 +5280,16 @@ msgstr "RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr ""
 
+msgid "RAID 0 Tools"
+msgstr ""
+
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
+msgstr ""
+
+msgid "RAID 0/1/5 Tools"
 msgstr ""
 
 msgid "RAID 1"
@@ -5224,10 +5298,28 @@ msgstr "RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr ""
 
+msgid "RAID 1 Tools"
+msgstr ""
+
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
+msgstr ""
+
+msgid "RAID 5 Tools"
+msgstr ""
+
+msgid "RAID device can be removed."
+msgstr ""
+
+msgid "RAID device is already in use."
+msgstr ""
+
+msgid "RAID is marked for removal"
+msgstr ""
+
+msgid "RAID is protected"
 msgstr ""
 
 msgid "RAID0"
@@ -5268,6 +5360,9 @@ msgstr "RSYNC 이벤트"
 
 msgid "RSYNC log"
 msgstr "RSYNC 로그"
+
+msgid "Raid Name"
+msgstr ""
 
 msgid "Raid name"
 msgstr "Raid 명"
@@ -5456,6 +5551,12 @@ msgstr ""
 msgid "Restore metadata from the given file to the given provider."
 msgstr "주어진 파일의 메타 데이터를 주어진 제공자에게 복구합니다."
 
+msgid "Restricted"
+msgstr ""
+
+msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
+msgstr ""
+
 msgid "Results for net rpc testjoin:"
 msgstr "net rpc testjoin의 결과:"
 
@@ -5554,6 +5655,9 @@ msgstr "S.M.A.R.T. 추가 옵션"
 
 msgid "S.M.A.R.T. log"
 msgstr "S.M.A.R.T. 로그"
+
+msgid "SHA256, Verify"
+msgstr ""
 
 msgid "SMB2"
 msgstr ""
@@ -5660,6 +5764,12 @@ msgid "Scheduled Shutdown"
 msgstr ""
 
 msgid "Scheduled tests"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Search event"
 msgstr ""
 
 msgid "Secondary"
@@ -5966,6 +6076,9 @@ msgid "Software RAID"
 msgstr "소프트웨어 RAID"
 
 msgid "Software Used"
+msgstr ""
+
+msgid "Software gconcat JBOD"
 msgstr ""
 
 msgid "Source"
@@ -6882,6 +6995,16 @@ msgstr ""
 "이 모듈은 설정 가능한 기준에 근거해서 유발되는 자동 추방을 제공합니다. 추방은 추방된 사용자, 호스트나 클래스가 서버에 로그인 하는 "
 "것을 방지하지만, 추방된 사용자, 호스트나 클래스가 서버에 연결하는 것은 방지하지 않습니다."
 
+msgid "The name of the RAID cannot be changed."
+msgstr ""
+
+msgid "The name of the RAID is already in use."
+msgstr ""
+
+msgid ""
+"The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
+msgstr ""
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "네트워크 '%s'은(는) 무효합니다."
@@ -7094,9 +7217,6 @@ msgstr "에러가 없습니다. 파일이 성공적으로 업로드 되었습니
 
 msgid "There must be 2 disks in a RAID 1 volume."
 msgstr "RAID 1 볼륨에는 2개의 디스크가 존재해야 합니다."
-
-msgid "There must be a minimum of 2 disks in a JBOD."
-msgstr "JBOD에는 최소 2개의 디스크가 존재해야 합니다."
 
 msgid "There must be a minimum of 2 disks in a RAID 0 volume."
 msgstr "RAID 볼륨에는 최소 2개의 디스크가 존재해야 합니다."
@@ -7669,6 +7789,9 @@ msgstr ""
 msgid "Tolerated"
 msgstr "용인됨"
 
+msgid "Toolbox"
+msgstr ""
+
 msgid "Tools"
 msgstr "도구"
 
@@ -8133,6 +8256,9 @@ msgid "Variable"
 msgstr "변수"
 
 msgid "Vendor ID"
+msgstr ""
+
+msgid "Verify"
 msgstr ""
 
 msgid "Version"
