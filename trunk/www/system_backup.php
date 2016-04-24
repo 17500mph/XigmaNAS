@@ -55,7 +55,7 @@ if (strcmp($current_password, $g['default_passwd']) === 0
 if ($_POST) {
 	unset($errormsg);
 	unset($input_errors);
-	$pconfig['encryption'] = $_POST['encryption'];
+	$pconfig['encryption'] = isset($_POST['encryption']) ? $_POST['encryption'] : '';
 
 	$encryption = 0;
 	if (!empty($_POST['encryption']))
