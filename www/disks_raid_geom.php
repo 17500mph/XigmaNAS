@@ -33,7 +33,7 @@
 */
 require('auth.inc');
 require('guiconfig.inc');
-require 'disks_raid_geom_fun.php';
+require 'disks_raid_geom_fun.inc';
 
 $sphere_scriptname = basename(__FILE__);
 $sphere_scriptname_child = 'disks_raid_geom_edit.php';
