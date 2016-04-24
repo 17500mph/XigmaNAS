@@ -601,7 +601,7 @@ function disks_raid_gmirror_configure($uuid) {
 			$vdisk = $config[$sphere]['vdisk'][$index];
 			if (is_array($vdisk)) {
 				// Create volume
-				$cmd = sprintf('/sbin/gmirror label -b %1$s &2$s ', $vdisk['balance'], escapeshellarg($vdisk['name'])); 
+				$cmd = sprintf('/sbin/gmirror label -b %1$s %2$s ', $vdisk['balance'], escapeshellarg($vdisk['name'])); 
 				foreach ($vdisk['device'] as $devicek => $devicev) {
 					$cmd .= sprintf('%1$s ', $devicev);
 				}
