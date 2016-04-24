@@ -44,8 +44,7 @@ function geomraid_processinfo_get() {
 		'x-processor' => 'gmirror_process_updatenotification',
 		'x-page-maintenance' => 'disks_raid_gmirror_tools.php',
 		'x-page-information' => 'disks_raid_gmirror_info.php',
-		'lv-type' => 'Mirror',
-		'gt-type' => gettext('Mirror')
+		'gt-type' => gettext('RAID-1')
 	];
 	$a_return['5'] = [
 		'type' =>  '5',
@@ -54,8 +53,7 @@ function geomraid_processinfo_get() {
 		'x-processor' => 'graid5_process_updatenotification',
 		'x-page-maintenance' => 'disks_raid_graid5_tools.php',
 		'x-page-information' => 'disks_raid_graid5_info.php',
-		'lv-type' => 'RAID5',
-		'gt-type' => gettext('RAID5')
+		'gt-type' => gettext('RAID-5')
 	];
 	$a_return['0'] = [
 		'type' =>  '0',
@@ -64,8 +62,7 @@ function geomraid_processinfo_get() {
 		'x-processor' => 'gstripe_process_updatenotification',
 		'x-page-maintenance' => 'disks_raid_gstripe_tools.php',
 		'x-page-information' => 'disks_raid_gstripe_info.php',
-		'lv-type' => 'Stripe',
-		'gt-type' => gettext('Stripe')
+		'gt-type' => gettext('RAID-0')
 	];
 	$a_return['JBOD'] = [
 		'type' => 'JBOD',
@@ -74,7 +71,6 @@ function geomraid_processinfo_get() {
 		'x-processor' => 'gconcat_process_updatenotification',
 		'x-page-maintenance' => 'disks_raid_gconcat_tools.php',
 		'x-page-information' => 'disks_raid_gconcat_info.php',
-		'lv-type' => 'JBOD',
 		'gt-type' => gettext('JBOD')
 	];
 	return $a_return;
