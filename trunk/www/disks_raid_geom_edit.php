@@ -46,9 +46,9 @@ $checkbox_member_array = [];
 $checkbox_member_record = [];
 $gt_record_loc = gettext('RAID device is already in use.');
 $gt_record_opn = gettext('RAID device can be removed.');
-$gt_confirm_mirror = gettext('Do you want to create a Mirror from selected disks?');
-$gt_confirm_raid5 = gettext('Do you want to create a RAID5 from selected disks?');
-$gt_confirm_stripe = gettext('Do you want to create a Stripe from selected disks?');
+$gt_confirm_mirror = gettext('Do you want to create a RAID-1 from selected disks?');
+$gt_confirm_raid5 = gettext('Do you want to create a RAID-5 from selected disks?');
+$gt_confirm_stripe = gettext('Do you want to create a RAID-0 from selected disks?');
 $gt_confirm_concat = gettext('Do you want to create a JBOD from selected disks?');
 $prerequisites_ok = true; // flag to indicate lack of information / resources
 $img_path = [
@@ -195,9 +195,9 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit" or "Action", alr
 		$helpinghand = count($sphere_record['device']);
 		switch ($sphere_record['type']) {
 			case 'JBOD': if ($helpinghand < 1) { $input_errors[] = gettext('1 or more disks are required to build a JBOD volume.'); } break;
-			case '1'   : if ($helpinghand < 1) { $input_errors[] = gettext('1 or more disks are required to build a RAID1 volume.'); } break;
-			case '5'   : if ($helpinghand < 3) { $input_errors[] = gettext('3 or more disks are required to build a RAID5 volume.'); } break;
-			case '0'   : if ($helpinghand < 2) { $input_errors[] = gettext('2 or more disks are required to build a Stripe volume.'); } break;
+			case '1'   : if ($helpinghand < 1) { $input_errors[] = gettext('1 or more disks are required to build a RAID-1 volume.'); } break;
+			case '5'   : if ($helpinghand < 3) { $input_errors[] = gettext('3 or more disks are required to build a RAID-5 volume.'); } break;
+			case '0'   : if ($helpinghand < 2) { $input_errors[] = gettext('2 or more disks are required to build a RAID-0 volume.'); } break;
 		}
 	}
 	// process POST
@@ -397,7 +397,7 @@ function toggleselection(ego, triggerbyname) {
 				html_inputbox2('name', gettext('Raid Name'), $sphere_record['name'], '', true, 15, $notnewandnotnewmodify); // readonly if not new and not new-modify
 				$helpinghand = [
 					[gettext('Select read balance algorithm.')],
-					[gettext('This option applies to GEOM Mirror only.')]
+					[gettext('This option applies to GEOM RAID-1 only.')]
 				];
 				html_combobox2('balance', gettext('Balance Algorithm'), $sphere_record['balance'], $l_balance, $helpinghand, false, $notnewandnotnewmodify);
 				$helpinghand = [
