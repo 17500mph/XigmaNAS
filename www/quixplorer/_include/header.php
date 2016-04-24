@@ -99,7 +99,7 @@ $menu['disks']['visible'] = Session::isAdmin();
 $menu['disks']['link'] = "../index.php";
 $menu['disks']['menuitem'] = array();
 $menu['disks']['menuitem'][] = array("desc" => gettext("Management"), "link" => "../disks_manage.php", "visible" => TRUE);
-$menu['disks']['menuitem'][] = array("desc" => gettext("Software RAID"), "link" => "../disks_raid_gmirror.php", "visible" => TRUE);
+$menu['disks']['menuitem'][] = array("desc" => gettext("Software RAID"), "link" => "../disks_raid_geom.php", "visible" => TRUE);
 $menu['disks']['menuitem'][] = array("desc" => gettext("ZFS"), "link" => "../disks_zfs_zpool.php", "visible" => TRUE);
 $menu['disks']['menuitem'][] = array("type" => "separator", "visible" => TRUE);
 $menu['disks']['menuitem'][] = array("desc" => gettext("Encryption"), "link" => "../disks_crypt.php", "visible" => TRUE);

@@ -40,7 +40,7 @@ require("guiconfig.inc");
 $pgtitle = array(gettext("Disks"), gettext("Software RAID"), gettext("RAID0"), gettext("Information"));
 
 function get_raidinfo() {
-	exec("/sbin/gstripe list",$rawdata);
+	exec("/sbin/gstripe list", $rawdata);
 	return implode("\n", $rawdata);
 }
 
@@ -49,8 +49,9 @@ if (is_ajax()) {
 	render_ajax($raidinfo);
 }
 ?>
-<?php include("fbegin.inc");?>
-<script type="text/javascript">//<![CDATA[
+<?php include("fbegin.inc"); ?>
+<script type="text/javascript">
+//<![CDATA[
 $(document).ready(function(){
 	var gui = new GUI;
 	gui.recall(0, 5000, 'disks_raid_gstripe_info.php', null, function(data) {
@@ -60,33 +61,34 @@ $(document).ready(function(){
 //]]>
 </script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr><td class="tabnavtbl">
-  <ul id="tabnav">
-	<li class="tabinact"><a href="disks_raid_gconcat.php"><span><?=gettext("JBOD");?></span></a></li>
-	<li class="tabact"><a href="disks_raid_gstripe.php" title="<?=gettext("Reload page");?>"><span><?=gettext("RAID 0");?></span></a></li>
-	<li class="tabinact"><a href="disks_raid_gmirror.php"><span><?=gettext("RAID 1");?></span></a></li>
-	<li class="tabinact"><a href="disks_raid_graid5.php"><span><?=gettext("RAID 5");?></span></a></li>
-	<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?=gettext("RAID 0/1/5");?></span></a></li>
-  </ul>
-  </td></tr>
-  <tr><td class="tabnavtbl">
-  <ul id="tabnav2">
-	<li class="tabinact"><a href="disks_raid_gstripe.php"><span><?=gettext("Management"); ?></span></a></li>
-	<li class="tabinact"><a href="disks_raid_gstripe_tools.php"><span><?=gettext("Tools"); ?></span></a></li>
-	<li class="tabact"><a href="disks_raid_gstripe_info.php" title="<?=gettext("Reload page");?>" ><span><?=gettext("Information");?></span></a></li>
-  </ul>
-  </td></tr>
-  <tr> 
-    <td class="tabcont">
-	<table width="100%" border="0" cellspacing="0" cellpadding="0">
-	    <?php html_titleline(gettext("RAID 0 Information & Status"));?>
-	    <tr>
-		<td class="listt">
-		    <pre><span id="raidinfo"></span></pre>
+	<tr>
+		<td class="tabnavtbl">
+			<ul id="tabnav">
+				<li class="tabact"><a href="disks_raid_geom.php" title="<?= gettext('Reload page'); ?>"><span><?= gettext('GEOM'); ?></span></a></li>
+				<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?= gettext('RAID 0/1/5'); ?></span></a></li>
+			</ul>
 		</td>
-	    </tr>
-    	</table>
-    </td>
-  </tr>
+	</tr>
+	<tr>
+		<td class="tabnavtbl">
+			<ul id="tabnav2">
+				<li class="tabinact"><a href="disks_raid_geom.php"><span><?= gettext('Management'); ?></span></a></li>
+				<li class="tabinact"><a href="disks_raid_gstripe_tools.php"><span><?= gettext('Maintenance'); ?></span></a></li>
+				<li class="tabact"><a href="disks_raid_gstripe_info.php" title="<?= gettext('Reload page'); ?>" ><span><?= gettext('Information'); ?></span></a></li>
+			</ul>
+		</td>
+	</tr>
+	<tr> 
+		<td class="tabcont">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<?php html_titleline(gettext("RAID 0 Information & Status")); ?>
+				<tr>
+					<td class="listt">
+						<pre><span id="raidinfo"></span></pre>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
 </table>
-<?php include("fend.inc");?>
+<?php include("fend.inc"); ?>
