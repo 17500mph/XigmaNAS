@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-22 16:23+0000\n"
-"PO-Revision-Date: 2016-04-10 17:41+0000\n"
+"POT-Creation-Date: 2016-04-25 17:17+0000\n"
+"PO-Revision-Date: 2016-04-23 17:09+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-23 08:09+0000\n"
+"X-Launchpad-Export-Date: 2016-04-25 15:29+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -19,6 +19,10 @@ msgstr " interfaces:"
 
 msgid " was assigned to "
 msgstr " fue asignada a "
+
+#, php-format
+msgid "%1$s is used to create %2$s volumes."
+msgstr ""
 
 #, php-format
 msgid "%d days"
@@ -163,6 +167,12 @@ msgstr ""
 "0=deshabilitado, 1-255=habilitado, comando de encolado con profundidad "
 "especificada"
 
+msgid "1 or more disks are required to build a JBOD volume."
+msgstr ""
+
+msgid "1 or more disks are required to build a RAID-1 volume."
+msgstr ""
+
 msgid ""
 "1. Use these specials actions for debugging only!<br />2. There is no need "
 "of using this menu for starting a RAID volume (start automaticaly)."
@@ -170,6 +180,12 @@ msgstr ""
 "¡Use estas acciones especiales sólo para detección de errores!<br />2. No "
 "hay necesidad de usar este menú para iniciar un volúmen RAID (iniciado "
 "automáticamente)."
+
+msgid "2 or more disks are required to build a RAID-0 volume."
+msgstr ""
+
+msgid "3 or more disks are required to build a RAID-5 volume."
+msgstr ""
 
 msgid "4KB wrapper"
 msgstr "4KB wrapper"
@@ -288,13 +304,15 @@ msgstr ""
 "'0x'."
 
 msgid "A minimum of 2 disks is required to build a JBOD."
-msgstr ""
+msgstr "Se requiere 2 discos como mínimo para construir un JBOD."
 
 #, php-format
 msgid ""
 "A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
 "point</a> first before proceeding."
 msgstr ""
+"Un volumen RAID montado no puede ser borrado. Elimine el punto de montaje <a "
+"href='%s'>mount point</a> antes de proceder a borrarlo."
 
 msgid "A route to this destination network already exists."
 msgstr "Ya existe una ruta a esta red de destino."
@@ -676,7 +694,7 @@ msgstr ""
 "permisos, use un directorio UFS vacio."
 
 msgid "All data will be lost when you activate this option!"
-msgstr ""
+msgstr "¡Todos los datos se perderan si activa está opción!"
 
 msgid "All dirs"
 msgstr "Todos los directorios"
@@ -783,7 +801,7 @@ msgid "Alternative configuration directory (usually empty)."
 msgstr "Directorio de configuración alternativo (normalmente vacío)."
 
 msgid "Always"
-msgstr ""
+msgstr "Siempre"
 
 msgid "Always On"
 msgstr "Siempre activo"
@@ -974,6 +992,9 @@ msgstr "Guardar/Restaurar"
 
 msgid "Bad User - (Non Existing Users)"
 msgstr "Usuario erroneo - (No existe el usuario)"
+
+msgid "Balance Algorithm"
+msgstr ""
 
 msgid "Balance algorithm"
 msgstr "Algoritmo de balanceo"
@@ -1964,7 +1985,7 @@ msgid "Delete Selected Options"
 msgstr "Borrar las opciones seleccionadas"
 
 msgid "Delete Selected RAID Volumes"
-msgstr ""
+msgstr "Borrar los volúmenes RAID seleccionados"
 
 msgid "Delete Selected Volumes"
 msgstr "Borrar los volumenes seleccionadas"
@@ -2143,7 +2164,7 @@ msgid "Device IP"
 msgstr "Dispositivo IP"
 
 msgid "Device List"
-msgstr ""
+msgstr "Lista de dispositivos"
 
 msgid "Device Model"
 msgstr "Modelo del dispositivo"
@@ -2239,10 +2260,10 @@ msgid "Disabled"
 msgstr "Desactivado"
 
 msgid "Discard - Discard ACL"
-msgstr ""
+msgstr "Descartar ACL"
 
 msgid "Discard - Do not inherit entries"
-msgstr ""
+msgstr "Descartar - No se heredan las propiedades"
 
 #, php-format
 msgid "Discovered iSCSI target for %s"
@@ -2285,6 +2306,9 @@ msgstr "Tabla de hash distribuida"
 msgid ""
 "Do not activate this option if you want to add an already existing RAID "
 "again."
+msgstr "NO activar esta opción si desea añadirun RAID existente de nuevo."
+
+msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
 
 msgid ""
@@ -2416,8 +2440,20 @@ msgstr "¿Realmente quieres borrar los items seleccionados de la lista?"
 msgid "Do you really want to uninstall this package?"
 msgstr "¿Realmente quiere eliminar este paquete?"
 
-msgid "Do you want to delete selected RAID volumes?"
+msgid "Do you want to create a JBOD from selected disks?"
 msgstr ""
+
+msgid "Do you want to create a RAID-0 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-1 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-5 from selected disks?"
+msgstr ""
+
+msgid "Do you want to delete selected RAID volumes?"
+msgstr "¿Realmente desea borrar los volumenes RAID seleccionados?"
 
 msgid "Do you want to delete selected datasets?"
 msgstr "Desea borrar los Dataset seleccionados?"
@@ -2966,12 +3002,14 @@ msgid "Enter trap host name."
 msgstr "Ingrese el nombre de equipo trampa."
 
 msgid "Entire Device"
-msgstr ""
+msgstr "Todo el dispositivo"
 
 msgid ""
 "Erase Fail Count (chip). This parameter indicates a number of flash erase "
 "command failures."
 msgstr ""
+"Cuenta de borrados fallidos. Este parametro indica el numero de comandos de "
+"borrado fallidos de la flash."
 
 msgid "Error"
 msgstr "Error"
@@ -3332,6 +3370,12 @@ msgstr ""
 "Fuppes está habilitado. Si desea usar MiniDLNA, primero debe deshabilitar "
 "Fuppes."
 
+msgid "GEOM"
+msgstr ""
+
+msgid "GEOM Software RAID"
+msgstr ""
+
 msgid "GID"
 msgstr "GID"
 
@@ -3406,7 +3450,7 @@ msgid "Group suffix"
 msgstr "Sufijo de grupo"
 
 msgid "Groupmask - Mask ACL with mode"
-msgstr ""
+msgstr "Mascara de grupo - Máscara ACL"
 
 msgid "Groups"
 msgstr "Grupos"
@@ -3643,7 +3687,7 @@ msgid "IRC Live Support"
 msgstr "Soporte IRC"
 
 msgid "IRC NAS4Free"
-msgstr ""
+msgstr "Canal IRC de N4F"
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
@@ -3991,7 +4035,7 @@ msgid "Invalid max. block size! It must be in the range from %d to %d."
 msgstr "¡Tamaño de bloque máximo no válido! Debe estar en %d a %d."
 
 msgid "Invalid username or password.</br> Please try again."
-msgstr ""
+msgstr "Usuario o contraseña inválidos. </br> Intentelo de nuevo."
 
 msgid "Invert Selection"
 msgstr "Invertir Selección"
@@ -4036,7 +4080,7 @@ msgstr "JBOD"
 msgid "JBOD Information & Status"
 msgstr "Imformación y estado del JBOD"
 
-msgid "JBOD Tools"
+msgid "JBOD Maintenance"
 msgstr ""
 
 msgid "Jan"
@@ -4451,6 +4495,9 @@ msgstr "MTU"
 msgid "Machine suffix"
 msgstr "Sufijos de máquinas"
 
+msgid "Maintenance"
+msgstr ""
+
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Asegúrese de haber activado S.M.A.R.T. para todos sus dispositivos."
 
@@ -4626,7 +4673,7 @@ msgid "Memory usage"
 msgstr "Uso de memoria"
 
 msgid "Message Board"
-msgstr ""
+msgstr "Tablero de Mensajes"
 
 msgid "Message of the day."
 msgstr "Mensaje del dia."
@@ -4985,8 +5032,11 @@ msgstr "No se han encontrado nuevos Discos RAID"
 msgid "No pool was found."
 msgstr "Ningun poll fue encontrado."
 
-msgid "Noallow - Only inherit deny entries"
+msgid "No softraid-formatted disks available."
 msgstr ""
+
+msgid "Noallow - Only inherit deny entries"
+msgstr "No Permitir - Solo se heredan denegadas"
 
 msgid "Node A IP address"
 msgstr "Dirección Ip del nodo"
@@ -5245,7 +5295,7 @@ msgid "Overload"
 msgstr "Sobrecarga"
 
 msgid "Overview"
-msgstr ""
+msgstr "Información General"
 
 msgid "Overwrite already configured disks (only affects filesystem value)."
 msgstr ""
@@ -5307,7 +5357,7 @@ msgid "Parent Directory"
 msgstr "Directorio superior"
 
 msgid "Partition"
-msgstr ""
+msgstr "Partición"
 
 msgid "Partition number"
 msgstr "Numero de particion"
@@ -5346,10 +5396,10 @@ msgid "Passphrase don't match."
 msgstr "La contraseña no coincide."
 
 msgid "Passthrough - Do not change ACL"
-msgstr ""
+msgstr "Passthtough - No se cambia ACL"
 
 msgid "Passthrough - Inherit all entries"
-msgstr ""
+msgstr "Passthrough - Se hereda todo"
 
 msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
 msgstr ""
@@ -5492,7 +5542,7 @@ msgid "Pool Information & Status"
 msgstr "Información y estado del Pool"
 
 msgid "Pool Tools"
-msgstr ""
+msgstr "Herramientas de Pool"
 
 msgid "Pools"
 msgstr "Pools"
@@ -5663,16 +5713,13 @@ msgstr "RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr "Info y estado RAID 0"
 
-msgid "RAID 0 Tools"
-msgstr ""
-
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
 msgstr "Info y estado RAID 0/1/5"
 
-msgid "RAID 0/1/5 Tools"
+msgid "RAID 0/1/5 Maintenance"
 msgstr ""
 
 msgid "RAID 1"
@@ -5681,28 +5728,43 @@ msgstr "RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr "Info y estado RAID 1"
 
-msgid "RAID 1 Tools"
-msgstr ""
-
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
 msgstr "Info y estado RAID 5"
 
-msgid "RAID 5 Tools"
-msgstr ""
-
 msgid "RAID device can be removed."
-msgstr ""
+msgstr "El RAID no puede ser eliminado."
 
 msgid "RAID device is already in use."
-msgstr ""
+msgstr "El RAID está en uso."
 
 msgid "RAID is marked for removal"
-msgstr ""
+msgstr "El RAID se ha marcado para eliminación."
 
 msgid "RAID is protected"
+msgstr "El RAID está protegido"
+
+msgid "RAID is unlocked"
+msgstr ""
+
+msgid "RAID-0"
+msgstr ""
+
+msgid "RAID-0 Maintenance"
+msgstr ""
+
+msgid "RAID-1"
+msgstr ""
+
+msgid "RAID-1 Maintenance"
+msgstr ""
+
+msgid "RAID-5"
+msgstr ""
+
+msgid "RAID-5 Maintenance"
 msgstr ""
 
 msgid "RAID0"
@@ -5745,7 +5807,7 @@ msgid "RSYNC log"
 msgstr "Log RSYNC"
 
 msgid "Raid Name"
-msgstr ""
+msgstr "Nombre del RAID"
 
 msgid "Raid name"
 msgstr "Nombre RAID"
@@ -5946,7 +6008,7 @@ msgid "Restore metadata from the given file to the given provider."
 msgstr "Restaurar metadata desde el archivo otorgado al proveedor otorgado."
 
 msgid "Restricted"
-msgstr ""
+msgstr "Restringido"
 
 msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
@@ -6053,7 +6115,7 @@ msgid "S.M.A.R.T. log"
 msgstr "registro S.M.A.R.T."
 
 msgid "SHA256, Verify"
-msgstr ""
+msgstr "SHA256, Verificar"
 
 msgid "SMB2"
 msgstr "SMB2"
@@ -6173,7 +6235,7 @@ msgid "Scheduled tests"
 msgstr "Test programado"
 
 msgid "Search"
-msgstr ""
+msgstr "Buscar..."
 
 msgid "Search event"
 msgstr ""
@@ -6217,6 +6279,9 @@ msgstr "Selecionar el ítem a remover de la lista"
 
 msgid "Select mount point where to create the swap file."
 msgstr "Seleccione el punto de montaje donde crear el archivo de swap."
+
+msgid "Select read balance algorithm."
+msgstr ""
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "Seleccionar el paquete FreeBSD para ser Instalado."
@@ -8068,6 +8133,9 @@ msgstr ""
 "compartido sean especificados. Los usuarios y grupos son especificados y "
 "delimitados por comas \",\". Los grupos son declarados por el prefijo \"@\"."
 
+msgid "This option applies to GEOM RAID-1 only."
+msgstr ""
+
 msgid "This option causes rsync to copy the local data to the remote server."
 msgstr ""
 "Esta opción hace que rsync copie los datos locales en el servidor remoto"
@@ -9494,3 +9562,18 @@ msgstr "Desmontar"
 
 msgid "version:"
 msgstr "versión:"
+
+#~ msgid "JBOD Tools"
+#~ msgstr "Herramientas JBOD"
+
+#~ msgid "RAID 1 Tools"
+#~ msgstr "Herramientas RAID 1"
+
+#~ msgid "RAID 5 Tools"
+#~ msgstr "Herramientas RAID 5"
+
+#~ msgid "RAID 0 Tools"
+#~ msgstr "Herramientas RAID 0"
+
+#~ msgid "RAID 0/1/5 Tools"
+#~ msgstr "Herramientas RAID 0/1/5"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-22 16:23+0000\n"
+"POT-Creation-Date: 2016-04-25 17:17+0000\n"
 "PO-Revision-Date: 2016-03-03 17:10+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-23 08:09+0000\n"
+"X-Launchpad-Export-Date: 2016-04-25 15:28+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -20,6 +20,10 @@ msgstr " 介面:"
 
 msgid " was assigned to "
 msgstr " 被指派為 "
+
+#, php-format
+msgid "%1$s is used to create %2$s volumes."
+msgstr ""
 
 #, php-format
 msgid "%d days"
@@ -143,10 +147,22 @@ msgstr "*** 重複導入 ***"
 msgid "0=disabled, 1-255=enabled command queuing with specified depth."
 msgstr "0 =禁用，1-255= 指令排序的深度。"
 
+msgid "1 or more disks are required to build a JBOD volume."
+msgstr ""
+
+msgid "1 or more disks are required to build a RAID-1 volume."
+msgstr ""
+
 msgid ""
 "1. Use these specials actions for debugging only!<br />2. There is no need "
 "of using this menu for starting a RAID volume (start automaticaly)."
 msgstr "1. 這些特殊操作僅適用於調試（debuging）！<br />2. 無需操作此選單來啟動RAID卷(系統自動啟動)。"
+
+msgid "2 or more disks are required to build a RAID-0 volume."
+msgstr ""
+
+msgid "3 or more disks are required to build a RAID-5 volume."
+msgstr ""
 
 msgid "4KB wrapper"
 msgstr "4KB封套"
@@ -876,6 +892,9 @@ msgstr "備份/還原"
 
 msgid "Bad User - (Non Existing Users)"
 msgstr "不良用戶 - （非現有用戶）"
+
+msgid "Balance Algorithm"
+msgstr ""
 
 msgid "Balance algorithm"
 msgstr "平衡演算法"
@@ -2107,6 +2126,9 @@ msgid ""
 "again."
 msgstr ""
 
+msgid "Do not activate this option if you want to add an existing RAID."
+msgstr ""
+
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
@@ -2222,6 +2244,18 @@ msgstr "您確定從列表中刪除所選項目嗎？"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "您確定要卸載這個套件嗎？"
+
+msgid "Do you want to create a JBOD from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-0 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-1 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-5 from selected disks?"
+msgstr ""
 
 msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
@@ -3089,6 +3123,12 @@ msgid ""
 "Fuppes first."
 msgstr ""
 
+msgid "GEOM"
+msgstr ""
+
+msgid "GEOM Software RAID"
+msgstr ""
+
 msgid "GID"
 msgstr "GID"
 
@@ -3734,7 +3774,7 @@ msgstr "JBOD"
 msgid "JBOD Information & Status"
 msgstr "JBOD 信息和狀態"
 
-msgid "JBOD Tools"
+msgid "JBOD Maintenance"
 msgstr ""
 
 msgid "Jan"
@@ -4126,6 +4166,9 @@ msgstr "最大傳輸單元(MTU)"
 
 msgid "Machine suffix"
 msgstr "電腦後綴"
+
+msgid "Maintenance"
+msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "請確定您已經啟用裝置的 S.M.A.R.T.。"
@@ -4620,6 +4663,9 @@ msgstr "沒有發現新的軟體RAID的硬盤。"
 
 msgid "No pool was found."
 msgstr "找不到池。"
+
+msgid "No softraid-formatted disks available."
+msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
 msgstr ""
@@ -5265,16 +5311,13 @@ msgstr "RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr "RAID 0 信息和狀態"
 
-msgid "RAID 0 Tools"
-msgstr ""
-
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
 msgstr "RAID 0/1/5 信息和狀態"
 
-msgid "RAID 0/1/5 Tools"
+msgid "RAID 0/1/5 Maintenance"
 msgstr ""
 
 msgid "RAID 1"
@@ -5283,17 +5326,11 @@ msgstr "RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr "RAID 1 信息和狀態"
 
-msgid "RAID 1 Tools"
-msgstr ""
-
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
 msgstr "RAID 5 信息和狀態"
-
-msgid "RAID 5 Tools"
-msgstr ""
 
 msgid "RAID device can be removed."
 msgstr ""
@@ -5305,6 +5342,27 @@ msgid "RAID is marked for removal"
 msgstr ""
 
 msgid "RAID is protected"
+msgstr ""
+
+msgid "RAID is unlocked"
+msgstr ""
+
+msgid "RAID-0"
+msgstr ""
+
+msgid "RAID-0 Maintenance"
+msgstr ""
+
+msgid "RAID-1"
+msgstr ""
+
+msgid "RAID-1 Maintenance"
+msgstr ""
+
+msgid "RAID-5"
+msgstr ""
+
+msgid "RAID-5 Maintenance"
 msgstr ""
 
 msgid "RAID0"
@@ -5795,6 +5853,9 @@ msgstr "請從列表中選擇要刪除的項目"
 
 msgid "Select mount point where to create the swap file."
 msgstr "請選擇欲創建 Swap 檔的掛載點。"
+
+msgid "Select read balance algorithm."
+msgstr ""
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "請選擇要安裝的 FreeBSD 套件。"
@@ -7427,6 +7488,9 @@ msgid ""
 "Users and groups are specified, delimited by commas. Groups are designated "
 "by a @ prefix."
 msgstr "此選項允許指定的用戶和群組訪問分享區。指定用戶和群組以逗號 \",\" 分隔 。指定群組則有 @ 前綴。"
+
+msgid "This option applies to GEOM RAID-1 only."
+msgstr ""
 
 msgid "This option causes rsync to copy the local data to the remote server."
 msgstr "此選項會導致 rsync 以本地的數據複製到遠程伺服器。"

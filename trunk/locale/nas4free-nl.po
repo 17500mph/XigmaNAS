@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-22 16:23+0000\n"
-"PO-Revision-Date: 2016-04-22 15:52+0000\n"
+"POT-Creation-Date: 2016-04-25 17:17+0000\n"
+"PO-Revision-Date: 2016-04-25 15:24+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-23 08:08+0000\n"
+"X-Launchpad-Export-Date: 2016-04-25 15:30+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -21,6 +21,10 @@ msgstr " netwerken"
 
 msgid " was assigned to "
 msgstr " werd toegewezen aan "
+
+#, php-format
+msgid "%1$s is used to create %2$s volumes."
+msgstr "%1$s wordt gebruikt om %2$s volumes te maken."
 
 #, php-format
 msgid "%d days"
@@ -167,6 +171,14 @@ msgstr ""
 "0=uitgeschakeld, 1-255=ingeschakelde command queuing met de gespecificeerde "
 "diepte."
 
+msgid "1 or more disks are required to build a JBOD volume."
+msgstr ""
+"1 of meer schijven zijn vereist voor het creëren van een JBOD volume."
+
+msgid "1 or more disks are required to build a RAID-1 volume."
+msgstr ""
+"1 of meer schijven zijn vereist voor het creëren van een RAID-1 volume."
+
 msgid ""
 "1. Use these specials actions for debugging only!<br />2. There is no need "
 "of using this menu for starting a RAID volume (start automaticaly)."
@@ -174,6 +186,14 @@ msgstr ""
 "1. Gebruik deze speciale opdrachten alléén voor fout opsporing!<br />2. Het "
 "is niet nodig om dit menu te gebruiken om een RAID volume te starten. (start "
 "automatisch)."
+
+msgid "2 or more disks are required to build a RAID-0 volume."
+msgstr ""
+"2 of meer schijven zijn vereist voor het creëren van een RAID-0 volume."
+
+msgid "3 or more disks are required to build a RAID-5 volume."
+msgstr ""
+"3 of meer schijven zijn vereist voor het creëren van een RAID-5 volume."
 
 msgid "4KB wrapper"
 msgstr "4KB wrapper"
@@ -987,6 +1007,9 @@ msgstr "Backup/Herstellen"
 
 msgid "Bad User - (Non Existing Users)"
 msgstr "Foutieve gebruiker - (Gebruiker Bestaat Niet)"
+
+msgid "Balance Algorithm"
+msgstr "Balans Algoritme"
 
 msgid "Balance algorithm"
 msgstr "Balanceer algoritme"
@@ -2340,6 +2363,9 @@ msgid ""
 msgstr ""
 "Gebruik deze optie niet als u een bestaande RAID opnieuw wil toevoegen."
 
+msgid "Do not activate this option if you want to add an existing RAID."
+msgstr "Activeer deze optie niet als u een bestaande RAID wilt toevoegen."
+
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
@@ -2470,6 +2496,18 @@ msgstr ""
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Weet u zeker dat u dit pakket wilt deïnstalleren?"
+
+msgid "Do you want to create a JBOD from selected disks?"
+msgstr "Wilt u een JBOD maken op basis van de geselecteerde schijven?"
+
+msgid "Do you want to create a RAID-0 from selected disks?"
+msgstr "Wilt u een RAID-0 van geselecteerde schijven maken?"
+
+msgid "Do you want to create a RAID-1 from selected disks?"
+msgstr "Wilt u een RAID-1 maken op basis van de geselecteerde schijven?"
+
+msgid "Do you want to create a RAID-5 from selected disks?"
+msgstr "Wilt u een RAID-5 maken op basis van de geselecteerde schijven?"
 
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Wilt u de geselecteerde RAID volumes verwijderen?"
@@ -3394,6 +3432,12 @@ msgstr ""
 "Fuppes is ingeschakeld. Wilt u MiniDLNA gebruiken, moet u Fuppes eerst "
 "uitschakelen."
 
+msgid "GEOM"
+msgstr "GEOM"
+
+msgid "GEOM Software RAID"
+msgstr "GEOM Software RAID"
+
 msgid "GID"
 msgstr "GID"
 
@@ -4107,8 +4151,8 @@ msgstr "JBOD"
 msgid "JBOD Information & Status"
 msgstr "JBOD Informatie & Status"
 
-msgid "JBOD Tools"
-msgstr "JBOD Hulpmiddelen"
+msgid "JBOD Maintenance"
+msgstr "JBOD onderhoud"
 
 msgid "Jan"
 msgstr "Jan"
@@ -4536,6 +4580,9 @@ msgstr "MTU grootte"
 
 msgid "Machine suffix"
 msgstr "Machine achtervoegsel"
+
+msgid "Maintenance"
+msgstr "Onderhoud"
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr ""
@@ -5075,6 +5122,9 @@ msgstr "Geen nieuwe software raid schijven gevonden."
 
 msgid "No pool was found."
 msgstr "Er is geen pool gevonden."
+
+msgid "No softraid-formatted disks available."
+msgstr "Geen softraid-geformatteerde schijven beschikbaar."
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Alleen overnemen wijger entries"
@@ -5756,17 +5806,14 @@ msgstr "RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr "RAID 0 Informatie & Status"
 
-msgid "RAID 0 Tools"
-msgstr "RAID 0 Hulpmiddelen"
-
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
 msgstr "RAID 0/1/5 Informatie & Status"
 
-msgid "RAID 0/1/5 Tools"
-msgstr "RAID 0/1/5 Hulpmiddelen"
+msgid "RAID 0/1/5 Maintenance"
+msgstr "RAID 0/1/5 Onderhoud"
 
 msgid "RAID 1"
 msgstr "RAID 1"
@@ -5774,17 +5821,11 @@ msgstr "RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr "RAID 1 Informatie & Status"
 
-msgid "RAID 1 Tools"
-msgstr "RAID 1 Hulpmiddelen"
-
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
 msgstr "RAID 5 Informatie & Status"
-
-msgid "RAID 5 Tools"
-msgstr "RAID 5 Hulpmiddelen"
 
 msgid "RAID device can be removed."
 msgstr "RAID schijf kan worden verwijderd."
@@ -5797,6 +5838,27 @@ msgstr "RAID is gemarkeerd voor verwijdering"
 
 msgid "RAID is protected"
 msgstr "RAID is beveiligd"
+
+msgid "RAID is unlocked"
+msgstr "RAID is ontgrendeld"
+
+msgid "RAID-0"
+msgstr "RAID-0"
+
+msgid "RAID-0 Maintenance"
+msgstr "RAID-0 Onderhoud"
+
+msgid "RAID-1"
+msgstr "RAID-1"
+
+msgid "RAID-1 Maintenance"
+msgstr "RAID-1 Onderhoud"
+
+msgid "RAID-5"
+msgstr "RAID-5"
+
+msgid "RAID-5 Maintenance"
+msgstr "RAID-5 Onderhoud"
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -6311,6 +6373,9 @@ msgid "Select mount point where to create the swap file."
 msgstr ""
 "Selecteer het koppelpunt waar het wisselbestand op aangemaakt dient te "
 "worden."
+
+msgid "Select read balance algorithm."
+msgstr "Selecteer lees balans algoritme."
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "Selecteer het FreeBSD pakket om te installeren."
@@ -8204,6 +8269,9 @@ msgstr ""
 "deling toegang hebben. De gebruikers en de groepen worden gespecificeerd, "
 "afgebakend door komma's. De groepen worden aangewezen door een @ voorvoegsel."
 
+msgid "This option applies to GEOM RAID-1 only."
+msgstr "Deze optie is alleen van toepassing op GEOM RAID-1."
+
 msgid "This option causes rsync to copy the local data to the remote server."
 msgstr ""
 "Deze optie zorgt ervoor dat rsync de lokale data naar de server kopieert."
@@ -9648,3 +9716,18 @@ msgstr "loskoppelen"
 
 msgid "version:"
 msgstr "versie:"
+
+#~ msgid "RAID 1 Tools"
+#~ msgstr "RAID 1 Hulpmiddelen"
+
+#~ msgid "RAID 5 Tools"
+#~ msgstr "RAID 5 Hulpmiddelen"
+
+#~ msgid "RAID 0 Tools"
+#~ msgstr "RAID 0 Hulpmiddelen"
+
+#~ msgid "RAID 0/1/5 Tools"
+#~ msgstr "RAID 0/1/5 Hulpmiddelen"
+
+#~ msgid "JBOD Tools"
+#~ msgstr "JBOD Hulpmiddelen"

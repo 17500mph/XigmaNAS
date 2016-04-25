@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-04-22 16:23+0000\n"
+"POT-Creation-Date: 2016-04-25 17:17+0000\n"
 "PO-Revision-Date: 2016-04-18 12:54+0000\n"
 "Last-Translator: raspi <Unknown>\n"
 "Language-Team: NAS4Free <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-23 08:09+0000\n"
+"X-Launchpad-Export-Date: 2016-04-25 15:28+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: FINLAND\n"
 "X-Poedit-Language: Finnish\n"
@@ -25,6 +25,10 @@ msgstr " liitännät:"
 
 msgid " was assigned to "
 msgstr " siirretty "
+
+#, php-format
+msgid "%1$s is used to create %2$s volumes."
+msgstr ""
 
 #, php-format
 msgid "%d days"
@@ -161,6 +165,12 @@ msgstr "*** Tuotu kaksoiskappale ***"
 msgid "0=disabled, 1-255=enabled command queuing with specified depth."
 msgstr "0=ei käytössa, 1-255=käytä komentojonoa määritellyllä syvyydellä."
 
+msgid "1 or more disks are required to build a JBOD volume."
+msgstr ""
+
+msgid "1 or more disks are required to build a RAID-1 volume."
+msgstr ""
+
 msgid ""
 "1. Use these specials actions for debugging only!<br />2. There is no need "
 "of using this menu for starting a RAID volume (start automaticaly)."
@@ -168,6 +178,12 @@ msgstr ""
 "1. Käytä nämä erikoisominaisuudet ainoastaan ohjelmavirheiden jäljitystä "
 "varten!<br />2. Tätä valikkoa ei ole tarpeen käyttää RAID taltion "
 "käynnistämiseksi (käynnistyy automaattisesti)"
+
+msgid "2 or more disks are required to build a RAID-0 volume."
+msgstr ""
+
+msgid "3 or more disks are required to build a RAID-5 volume."
+msgstr ""
 
 msgid "4KB wrapper"
 msgstr ""
@@ -917,6 +933,9 @@ msgid "Backup/Restore"
 msgstr "Varmuuskopioi/Palauta"
 
 msgid "Bad User - (Non Existing Users)"
+msgstr ""
+
+msgid "Balance Algorithm"
 msgstr ""
 
 msgid "Balance algorithm"
@@ -2136,6 +2155,9 @@ msgid ""
 "again."
 msgstr ""
 
+msgid "Do not activate this option if you want to add an existing RAID."
+msgstr ""
+
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
@@ -2252,6 +2274,18 @@ msgid "Do you really want to remove the selected item from the list?"
 msgstr ""
 
 msgid "Do you really want to uninstall this package?"
+msgstr ""
+
+msgid "Do you want to create a JBOD from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-0 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-1 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-5 from selected disks?"
 msgstr ""
 
 msgid "Do you want to delete selected RAID volumes?"
@@ -3124,6 +3158,12 @@ msgid ""
 "Fuppes first."
 msgstr ""
 
+msgid "GEOM"
+msgstr ""
+
+msgid "GEOM Software RAID"
+msgstr ""
+
 msgid "GID"
 msgstr "Ryhmä-ID (GID)"
 
@@ -3763,7 +3803,7 @@ msgstr "JBOD"
 msgid "JBOD Information & Status"
 msgstr ""
 
-msgid "JBOD Tools"
+msgid "JBOD Maintenance"
 msgstr ""
 
 msgid "Jan"
@@ -4159,6 +4199,9 @@ msgstr "MTU"
 
 msgid "Machine suffix"
 msgstr "Koneen lopputunniste"
+
+msgid "Maintenance"
+msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr ""
@@ -4654,6 +4697,9 @@ msgid "No new software raid disk found."
 msgstr ""
 
 msgid "No pool was found."
+msgstr ""
+
+msgid "No softraid-formatted disks available."
 msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
@@ -5298,16 +5344,13 @@ msgstr "RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr ""
 
-msgid "RAID 0 Tools"
-msgstr ""
-
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
 msgstr ""
 
-msgid "RAID 0/1/5 Tools"
+msgid "RAID 0/1/5 Maintenance"
 msgstr ""
 
 msgid "RAID 1"
@@ -5316,16 +5359,10 @@ msgstr "RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr ""
 
-msgid "RAID 1 Tools"
-msgstr ""
-
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
-msgstr ""
-
-msgid "RAID 5 Tools"
 msgstr ""
 
 msgid "RAID device can be removed."
@@ -5338,6 +5375,27 @@ msgid "RAID is marked for removal"
 msgstr ""
 
 msgid "RAID is protected"
+msgstr ""
+
+msgid "RAID is unlocked"
+msgstr ""
+
+msgid "RAID-0"
+msgstr ""
+
+msgid "RAID-0 Maintenance"
+msgstr ""
+
+msgid "RAID-1"
+msgstr ""
+
+msgid "RAID-1 Maintenance"
+msgstr ""
+
+msgid "RAID-5"
+msgstr ""
+
+msgid "RAID-5 Maintenance"
 msgstr ""
 
 msgid "RAID0"
@@ -5825,6 +5883,9 @@ msgstr ""
 
 msgid "Select mount point where to create the swap file."
 msgstr "Valitse liitoskohta jonne luodaan swap-tiedosto."
+
+msgid "Select read balance algorithm."
+msgstr ""
 
 msgid "Select the FreeBSD package to be installed."
 msgstr ""
@@ -7437,6 +7498,9 @@ msgid ""
 "This option allows the users and groups that access a share to be specified. "
 "Users and groups are specified, delimited by commas. Groups are designated "
 "by a @ prefix."
+msgstr ""
+
+msgid "This option applies to GEOM RAID-1 only."
 msgstr ""
 
 msgid "This option causes rsync to copy the local data to the remote server."

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-22 16:23+0000\n"
-"PO-Revision-Date: 2016-04-07 11:30+0000\n"
-"Last-Translator: zoon01 <Unknown>\n"
+"POT-Creation-Date: 2016-04-25 17:17+0000\n"
+"PO-Revision-Date: 2016-04-23 20:33+0000\n"
+"Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-23 08:09+0000\n"
+"X-Launchpad-Export-Date: 2016-04-25 15:29+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -25,6 +25,10 @@ msgstr " interfészek:"
 
 msgid " was assigned to "
 msgstr " ki lett jelölve a "
+
+#, php-format
+msgid "%1$s is used to create %2$s volumes."
+msgstr ""
 
 #, php-format
 msgid "%d days"
@@ -166,6 +170,12 @@ msgstr ""
 "0=nem engedélyezett, 1-255=parancsok sorba fűzésének engedélyezése "
 "meghatározott mélységgel."
 
+msgid "1 or more disks are required to build a JBOD volume."
+msgstr ""
+
+msgid "1 or more disks are required to build a RAID-1 volume."
+msgstr ""
+
 msgid ""
 "1. Use these specials actions for debugging only!<br />2. There is no need "
 "of using this menu for starting a RAID volume (start automaticaly)."
@@ -173,6 +183,12 @@ msgstr ""
 "1. Ezeket a speciális műveleteket csak hibakeresésre használd!<br />2. Nincs "
 "szükség ennek a menünek a használatára RAID-kötet indításához (az "
 "automatikusan elindul)."
+
+msgid "2 or more disks are required to build a RAID-0 volume."
+msgstr ""
+
+msgid "3 or more disks are required to build a RAID-5 volume."
+msgstr ""
 
 msgid "4KB wrapper"
 msgstr "4KB wrapper"
@@ -289,13 +305,15 @@ msgstr ""
 "megadható ('0x')."
 
 msgid "A minimum of 2 disks is required to build a JBOD."
-msgstr ""
+msgstr "Legalább 2 lemez szükséges JBOD építéséhez."
 
 #, php-format
 msgid ""
 "A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
 "point</a> first before proceeding."
 msgstr ""
+"Csatolt RAID kötet nem törölhető.  Folytatás előtt távolítsa el a <a "
+"href='%s'>csatolási pontot</a>."
 
 msgid "A route to this destination network already exists."
 msgstr "Az útvonal ehhez a célhálózathoz már létezik."
@@ -671,7 +689,7 @@ msgstr ""
 "elkerülés érdekében üres UFS könyvtár használat ajánlott."
 
 msgid "All data will be lost when you activate this option!"
-msgstr ""
+msgstr "Az opció aktiválásakor az összes adat el fog veszni!"
 
 msgid "All dirs"
 msgstr "Minden könyvtár"
@@ -779,7 +797,7 @@ msgid "Alternative configuration directory (usually empty)."
 msgstr "Alternatív konfigurációs mappa (általában üresen hagyandó)."
 
 msgid "Always"
-msgstr ""
+msgstr "Mindig"
 
 msgid "Always On"
 msgstr "Mindig bekapcsolva"
@@ -968,6 +986,9 @@ msgstr "Mentés/Visszaállítás"
 
 msgid "Bad User - (Non Existing Users)"
 msgstr "Rossz felhasználó - (nem létező felhasználók)"
+
+msgid "Balance Algorithm"
+msgstr ""
 
 msgid "Balance algorithm"
 msgstr "Kiegyensúlyozó algoritmus"
@@ -1961,7 +1982,7 @@ msgid "Delete Selected Options"
 msgstr "Kiválasztott beállítások törlése"
 
 msgid "Delete Selected RAID Volumes"
-msgstr ""
+msgstr "Kiválasztott RAID kötetek törlése"
 
 msgid "Delete Selected Volumes"
 msgstr "Kiválasztott kötetek törlése"
@@ -2140,7 +2161,7 @@ msgid "Device IP"
 msgstr "Eszköz IP"
 
 msgid "Device List"
-msgstr ""
+msgstr "Eszközlista"
 
 msgid "Device Model"
 msgstr "Eszköz modell"
@@ -2236,10 +2257,10 @@ msgid "Disabled"
 msgstr "Tiltva"
 
 msgid "Discard - Discard ACL"
-msgstr ""
+msgstr "Elvetés - ACL elvetése"
 
 msgid "Discard - Do not inherit entries"
-msgstr ""
+msgstr "Elvetés - Bejegyzések ne öröklődjenek"
 
 #, php-format
 msgid "Discovered iSCSI target for %s"
@@ -2282,6 +2303,9 @@ msgstr "Elosztott hash tábla"
 msgid ""
 "Do not activate this option if you want to add an already existing RAID "
 "again."
+msgstr "Ne aktiváld ezt az opciót, ha már létező RAID-et adsz újra hozzá."
+
+msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
 
 msgid ""
@@ -2410,8 +2434,20 @@ msgstr "Biztos eltávolítod a kiválasztott elemet a listából?"
 msgid "Do you really want to uninstall this package?"
 msgstr "Valóban el akarja távolítani ezt a csomagot?"
 
-msgid "Do you want to delete selected RAID volumes?"
+msgid "Do you want to create a JBOD from selected disks?"
 msgstr ""
+
+msgid "Do you want to create a RAID-0 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-1 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-5 from selected disks?"
+msgstr ""
+
+msgid "Do you want to delete selected RAID volumes?"
+msgstr "Biztos, hogy törli a kiválasztott RAID köteteket?"
 
 msgid "Do you want to delete selected datasets?"
 msgstr "Biztos, hogy törlöd a kiválasztott adattárakat?"
@@ -2953,7 +2989,7 @@ msgid "Enter trap host name."
 msgstr "Add meg a csapda állomás nevét."
 
 msgid "Entire Device"
-msgstr ""
+msgstr "Egész eszköz"
 
 msgid ""
 "Erase Fail Count (chip). This parameter indicates a number of flash erase "
@@ -3317,6 +3353,12 @@ msgid ""
 msgstr ""
 "Fuppes engedélyezve van. A MiniDLNA használatához a Fuppes-t le kell tiltani."
 
+msgid "GEOM"
+msgstr ""
+
+msgid "GEOM Software RAID"
+msgstr ""
+
 msgid "GID"
 msgstr "GID"
 
@@ -3390,7 +3432,7 @@ msgid "Group suffix"
 msgstr "Csoport utótag"
 
 msgid "Groupmask - Mask ACL with mode"
-msgstr ""
+msgstr "Csoportmaszk - ACL maszk móddal"
 
 msgid "Groups"
 msgstr "Csoportok"
@@ -3635,7 +3677,7 @@ msgid "IRC Live Support"
 msgstr "IRC elő támogatás"
 
 msgid "IRC NAS4Free"
-msgstr ""
+msgstr "IRC NAS4Free"
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
@@ -3971,7 +4013,7 @@ msgid "Invalid max. block size! It must be in the range from %d to %d."
 msgstr "Érvénytelen max. blokk méret! A blokk méret %d-tól %d-ig terjedhet."
 
 msgid "Invalid username or password.</br> Please try again."
-msgstr ""
+msgstr "Hibás felhasználónév, illetve jelszó.</br>Próbáld újra."
 
 msgid "Invert Selection"
 msgstr "Kijelölés megfordítása"
@@ -4016,7 +4058,7 @@ msgstr "JBOD"
 msgid "JBOD Information & Status"
 msgstr "JBOD információ & állapot"
 
-msgid "JBOD Tools"
+msgid "JBOD Maintenance"
 msgstr ""
 
 msgid "Jan"
@@ -4440,6 +4482,9 @@ msgstr "MTU"
 msgid "Machine suffix"
 msgstr "Gép utótag"
 
+msgid "Maintenance"
+msgstr ""
+
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Bizonyosodjon meg róla, hogy a S.M.A.R.T.-ot aktiválta eszközein."
 
@@ -4612,7 +4657,7 @@ msgid "Memory usage"
 msgstr "Memóriahasználat"
 
 msgid "Message Board"
-msgstr ""
+msgstr "Üzenőfal"
 
 msgid "Message of the day."
 msgstr "A nap üzenete."
@@ -4974,8 +5019,11 @@ msgstr "Nincs új szoftveres raid lemez."
 msgid "No pool was found."
 msgstr "Nincs tároló"
 
-msgid "Noallow - Only inherit deny entries"
+msgid "No softraid-formatted disks available."
 msgstr ""
+
+msgid "Noallow - Only inherit deny entries"
+msgstr "Nemmegengedő - Csak tiltó bejegyzése öröklődjenek"
 
 msgid "Node A IP address"
 msgstr "Node A IP cím"
@@ -5237,7 +5285,7 @@ msgid "Overload"
 msgstr "Túltöltöttség"
 
 msgid "Overview"
-msgstr ""
+msgstr "Áttekintés"
 
 msgid "Overwrite already configured disks (only affects filesystem value)."
 msgstr ""
@@ -5298,7 +5346,7 @@ msgid "Parent Directory"
 msgstr "Szülőkönyvtár"
 
 msgid "Partition"
-msgstr ""
+msgstr "Partíció"
 
 msgid "Partition number"
 msgstr "Partíciószám"
@@ -5337,13 +5385,14 @@ msgid "Passphrase don't match."
 msgstr "A jelszó nem megfelelő."
 
 msgid "Passthrough - Do not change ACL"
-msgstr ""
+msgstr "Átmenő - ACL ne módosuljon"
 
 msgid "Passthrough - Inherit all entries"
-msgstr ""
+msgstr "Átmenő - Összes bejegyzés örökítése"
 
 msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
 msgstr ""
+"Átmenő-X - Összes örökítése, kivéve 'Futtatás', ha nincs meghatározva"
 
 msgid "Password"
 msgstr "Jelszó"
@@ -5482,7 +5531,7 @@ msgid "Pool Information & Status"
 msgstr "Tároló információ & állapot"
 
 msgid "Pool Tools"
-msgstr ""
+msgstr "Tároló eszközök"
 
 msgid "Pools"
 msgstr "Tárolók (pools)"
@@ -5654,16 +5703,13 @@ msgstr "RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr "RAID 0 információ & állapot"
 
-msgid "RAID 0 Tools"
-msgstr ""
-
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
 msgstr "RAID 0/1/5 információ & állapot"
 
-msgid "RAID 0/1/5 Tools"
+msgid "RAID 0/1/5 Maintenance"
 msgstr ""
 
 msgid "RAID 1"
@@ -5672,28 +5718,43 @@ msgstr "RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr "RAID 1 információ & állapot"
 
-msgid "RAID 1 Tools"
-msgstr ""
-
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
 msgstr "RAID 5 információ & állapot"
 
-msgid "RAID 5 Tools"
-msgstr ""
-
 msgid "RAID device can be removed."
-msgstr ""
+msgstr "RAID eszköz nem távolítható el."
 
 msgid "RAID device is already in use."
-msgstr ""
+msgstr "RAID eszköz már használatban van."
 
 msgid "RAID is marked for removal"
-msgstr ""
+msgstr "RAID eszköz eltávolításra megjelölve."
 
 msgid "RAID is protected"
+msgstr "RAID védett"
+
+msgid "RAID is unlocked"
+msgstr ""
+
+msgid "RAID-0"
+msgstr ""
+
+msgid "RAID-0 Maintenance"
+msgstr ""
+
+msgid "RAID-1"
+msgstr ""
+
+msgid "RAID-1 Maintenance"
+msgstr ""
+
+msgid "RAID-5"
+msgstr ""
+
+msgid "RAID-5 Maintenance"
 msgstr ""
 
 msgid "RAID0"
@@ -5736,7 +5797,7 @@ msgid "RSYNC log"
 msgstr "RSYNC napló"
 
 msgid "Raid Name"
-msgstr ""
+msgstr "RAID neve"
 
 msgid "Raid name"
 msgstr "RAID neve"
@@ -5938,10 +5999,11 @@ msgstr ""
 "Metaadatok visszaállítása a megadott szolgáltatótól kapott fájl alapján."
 
 msgid "Restricted"
-msgstr ""
+msgstr "Korlátozott"
 
 msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
+"Korlátozott - Összes örökítése, kivéve 'ACL írása' és 'tulajdonos módosítása'"
 
 msgid "Results for net rpc testjoin:"
 msgstr "Hálózati net rpc tesztcsatlakozás eredményei:"
@@ -6045,7 +6107,7 @@ msgid "S.M.A.R.T. log"
 msgstr "S.M.A.R.T. napló"
 
 msgid "SHA256, Verify"
-msgstr ""
+msgstr "SHA256, ellenőrzés"
 
 msgid "SMB2"
 msgstr "SMB2"
@@ -6164,10 +6226,10 @@ msgid "Scheduled tests"
 msgstr "Ütemezett tesztek"
 
 msgid "Search"
-msgstr ""
+msgstr "Keresés"
 
 msgid "Search event"
-msgstr ""
+msgstr "Esemény keresése"
 
 msgid "Secondary"
 msgstr "Másodlagos"
@@ -6208,6 +6270,9 @@ msgstr "Válaszd ki a listáról eltávolítandó elemet."
 
 msgid "Select mount point where to create the swap file."
 msgstr "Válassz csatolást, ahová a cserefájl létrehozható."
+
+msgid "Select read balance algorithm."
+msgstr ""
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "Válaszd ki a telepítendő FreeBSD csomagot."
@@ -6498,7 +6563,7 @@ msgid "Software Used"
 msgstr "Felhasznált szoftver"
 
 msgid "Software gconcat JBOD"
-msgstr ""
+msgstr "Szoftver gconcat JBOD"
 
 msgid "Source"
 msgstr "Forrás"
@@ -7535,14 +7600,15 @@ msgstr ""
 "a szerverre a tiltott felhasználó, host vagy osztály."
 
 msgid "The name of the RAID cannot be changed."
-msgstr ""
+msgstr "A RAID nevét nem lehet megváltoztatni."
 
 msgid "The name of the RAID is already in use."
-msgstr ""
+msgstr "A RAID neve már használatban van."
 
 msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr ""
+"RAID neve csak a következő karaktereket tartalmazhatja:  a-z, A-Z, 0-9."
 
 #, php-format
 msgid "The network '%s' is invalid."
@@ -8059,6 +8125,9 @@ msgstr ""
 "megosztáshoz hozzáférésnek. A felhasználókat és a csoportokat vesszővel "
 "elválasztva kell megadni. A csoportok @ előtag vannak megkülönböztetve."
 
+msgid "This option applies to GEOM RAID-1 only."
+msgstr ""
+
 msgid "This option causes rsync to copy the local data to the remote server."
 msgstr ""
 "Ezen opció hatására másolja az rsync a helyi adatokat a távoli szerverre."
@@ -8454,7 +8523,7 @@ msgid "Tolerated"
 msgstr "Hibajavított"
 
 msgid "Toolbox"
-msgstr ""
+msgstr "Eszköztár"
 
 msgid "Tools"
 msgstr "Eszközök"
@@ -8954,7 +9023,7 @@ msgid "Vendor ID"
 msgstr "Gyártóazonosító"
 
 msgid "Verify"
-msgstr ""
+msgstr "Ellenőrzés"
 
 msgid "Version"
 msgstr "Verzió"
@@ -9481,3 +9550,18 @@ msgstr "leválasztás"
 
 msgid "version:"
 msgstr "verzió:"
+
+#~ msgid "RAID 1 Tools"
+#~ msgstr "RAID 1 eszközök"
+
+#~ msgid "RAID 5 Tools"
+#~ msgstr "RAID 5 eszközök"
+
+#~ msgid "RAID 0 Tools"
+#~ msgstr "RAID 0 eszközök"
+
+#~ msgid "RAID 0/1/5 Tools"
+#~ msgstr "RAID 0/1/5 eszközök"
+
+#~ msgid "JBOD Tools"
+#~ msgstr "JBOD eszközök"
