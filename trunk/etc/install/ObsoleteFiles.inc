@@ -39,6 +39,14 @@ usr/local/www/bar_left.gif
 usr/local/www/bar_right.gif
 usr/local/www/cal.gif
 usr/local/www/delete.png
+usr/local/www/disks_raid_gconcat.php
+usr/local/www/disks_raid_gconcat_edit.php
+usr/local/www/disks_raid_gmirror.php
+usr/local/www/disks_raid_gmirror_edit.php
+usr/local/www/disks_raid_graid5.php
+usr/local/www/disks_raid_graid5_edit.php
+usr/local/www/disks_raid_gstripe.php
+usr/local/www/disks_raid_gstripe_edit.php
 usr/local/www/down.png
 usr/local/www/edit.png
 usr/local/www/err.png
