@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-22 16:23+0000\n"
+"POT-Creation-Date: 2016-04-25 17:17+0000\n"
 "PO-Revision-Date: 2016-03-28 09:26+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-23 08:08+0000\n"
+"X-Launchpad-Export-Date: 2016-04-25 15:29+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -21,6 +21,10 @@ msgstr " rozhraní:"
 
 msgid " was assigned to "
 msgstr " bylo přiřazeno k "
+
+#, php-format
+msgid "%1$s is used to create %2$s volumes."
+msgstr ""
 
 #, php-format
 msgid "%d days"
@@ -167,12 +171,24 @@ msgstr ""
 "0=vypnuto, 1-255=zapnuto řazení příkazů do fronty, která bude mít tuto "
 "zadanou délku."
 
+msgid "1 or more disks are required to build a JBOD volume."
+msgstr ""
+
+msgid "1 or more disks are required to build a RAID-1 volume."
+msgstr ""
+
 msgid ""
 "1. Use these specials actions for debugging only!<br />2. There is no need "
 "of using this menu for starting a RAID volume (start automaticaly)."
 msgstr ""
 "1. Tyto zvláštní akce používejte pouze pro účely ladění!<br />2. Tuto "
 "nabídku není třeba používat pro spouštění RAID svazku (děje se automaticky)."
+
+msgid "2 or more disks are required to build a RAID-0 volume."
+msgstr ""
+
+msgid "3 or more disks are required to build a RAID-5 volume."
+msgstr ""
 
 msgid "4KB wrapper"
 msgstr "4KB obálka (wrapper)"
@@ -984,6 +1000,9 @@ msgstr "Zálohovat/obnovit"
 
 msgid "Bad User - (Non Existing Users)"
 msgstr "Chybný uživatel – (neexistují uživatelé)"
+
+msgid "Balance Algorithm"
+msgstr ""
 
 msgid "Balance algorithm"
 msgstr "Vyvažovací algoritmus"
@@ -2343,6 +2362,9 @@ msgid ""
 "again."
 msgstr ""
 
+msgid "Do not activate this option if you want to add an existing RAID."
+msgstr ""
+
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
@@ -2470,6 +2492,18 @@ msgstr "Opravdu chcete odebrat vybranou položku ze seznamu?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Opravdu chcete odinstalovat tento balíček?"
+
+msgid "Do you want to create a JBOD from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-0 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-1 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-5 from selected disks?"
+msgstr ""
 
 msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
@@ -3388,6 +3422,12 @@ msgstr ""
 "Je zapnuto Fuppes. Pokud namísto něj chcete používat MiniDLNA, je třeba "
 "Fuppes nejprve vypnout."
 
+msgid "GEOM"
+msgstr ""
+
+msgid "GEOM Software RAID"
+msgstr ""
+
 msgid "GID"
 msgstr "Identifikátor skupiny (GID)"
 
@@ -4103,7 +4143,7 @@ msgstr "JBOD"
 msgid "JBOD Information & Status"
 msgstr "JBOD – informace a stav"
 
-msgid "JBOD Tools"
+msgid "JBOD Maintenance"
 msgstr ""
 
 msgid "Jan"
@@ -4540,6 +4580,9 @@ msgstr "MTU"
 
 msgid "Machine suffix"
 msgstr "Přípona stroje"
+
+msgid "Maintenance"
+msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Zkontrolujte, zda máte zapnuté SMART dohledování u svých zařízení."
@@ -5079,6 +5122,9 @@ msgstr "Nebyly nalezeny žádné nové disky softwarového raid pole."
 
 msgid "No pool was found."
 msgstr "Nebyl nalezen žádný fond."
+
+msgid "No softraid-formatted disks available."
+msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
 msgstr ""
@@ -5763,16 +5809,13 @@ msgstr "RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr "RAID 0 – informace a stav"
 
-msgid "RAID 0 Tools"
-msgstr ""
-
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
 msgstr "RAID 0/1/5 – informace a stav"
 
-msgid "RAID 0/1/5 Tools"
+msgid "RAID 0/1/5 Maintenance"
 msgstr ""
 
 msgid "RAID 1"
@@ -5781,17 +5824,11 @@ msgstr "RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr "RAID 1 – informace a stav"
 
-msgid "RAID 1 Tools"
-msgstr ""
-
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
 msgstr "RAID 5 – informace a stav"
-
-msgid "RAID 5 Tools"
-msgstr ""
 
 msgid "RAID device can be removed."
 msgstr ""
@@ -5803,6 +5840,27 @@ msgid "RAID is marked for removal"
 msgstr ""
 
 msgid "RAID is protected"
+msgstr ""
+
+msgid "RAID is unlocked"
+msgstr ""
+
+msgid "RAID-0"
+msgstr ""
+
+msgid "RAID-0 Maintenance"
+msgstr ""
+
+msgid "RAID-1"
+msgstr ""
+
+msgid "RAID-1 Maintenance"
+msgstr ""
+
+msgid "RAID-5"
+msgstr ""
+
+msgid "RAID-5 Maintenance"
 msgstr ""
 
 msgid "RAID0"
@@ -6316,6 +6374,9 @@ msgstr "Vyberte položku, kterou chcete ze seznamu odstranit"
 
 msgid "Select mount point where to create the swap file."
 msgstr "Vyberte přípojný bod, ve kterém má být vytvořen odkládací soubor."
+
+msgid "Select read balance algorithm."
+msgstr ""
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "Zvolte FreeBSD balíček, který má být nainstalován."
@@ -8180,6 +8241,9 @@ msgstr ""
 "Zde je možné zadat uživatele a skupiny, kterým umožnit přístup ke sdílení. "
 "Uživatele a skupiny uvádějte oddělené čárkou. Před názvy supin uvádějte "
 "předponu @ (znak „zavináč“)."
+
+msgid "This option applies to GEOM RAID-1 only."
+msgstr ""
 
 msgid "This option causes rsync to copy the local data to the remote server."
 msgstr ""

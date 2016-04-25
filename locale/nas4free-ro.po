@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-22 16:23+0000\n"
+"POT-Creation-Date: 2016-04-25 17:17+0000\n"
 "PO-Revision-Date: 2016-03-23 12:38+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-23 08:09+0000\n"
+"X-Launchpad-Export-Date: 2016-04-25 15:29+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -22,6 +22,10 @@ msgstr " interfețe:"
 
 msgid " was assigned to "
 msgstr " a fost alocat la "
+
+#, php-format
+msgid "%1$s is used to create %2$s volumes."
+msgstr ""
 
 #, php-format
 msgid "%d days"
@@ -168,6 +172,12 @@ msgstr "*** Duplicat importat ***"
 msgid "0=disabled, 1-255=enabled command queuing with specified depth."
 msgstr "0=dezactivat, 1-255=listă activă de comenzi cu lungimea specificată."
 
+msgid "1 or more disks are required to build a JBOD volume."
+msgstr ""
+
+msgid "1 or more disks are required to build a RAID-1 volume."
+msgstr ""
+
 msgid ""
 "1. Use these specials actions for debugging only!<br />2. There is no need "
 "of using this menu for starting a RAID volume (start automaticaly)."
@@ -175,6 +185,12 @@ msgstr ""
 "1. Folosiți aceste comenzi speciale doar pentru depanare!<br />2. Nu este "
 "nevoie să folosiți acest meniu pentru pornirea volumului RAID (volumul este "
 "pornit automat)"
+
+msgid "2 or more disks are required to build a RAID-0 volume."
+msgstr ""
+
+msgid "3 or more disks are required to build a RAID-5 volume."
+msgstr ""
 
 msgid "4KB wrapper"
 msgstr "4KB wrapper"
@@ -978,6 +994,9 @@ msgstr "Salvare/Restaurare"
 
 msgid "Bad User - (Non Existing Users)"
 msgstr "Eroare utilizator - (utilizator inexistent)"
+
+msgid "Balance Algorithm"
+msgstr ""
 
 msgid "Balance algorithm"
 msgstr "Algoritm Balans"
@@ -2331,6 +2350,9 @@ msgid ""
 "again."
 msgstr ""
 
+msgid "Do not activate this option if you want to add an existing RAID."
+msgstr ""
+
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
@@ -2456,6 +2478,18 @@ msgstr "Doriți să ștergeți elementul selectat din listă?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Doriți să ștergeți acest pachet?"
+
+msgid "Do you want to create a JBOD from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-0 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-1 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-5 from selected disks?"
+msgstr ""
 
 msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
@@ -3369,6 +3403,12 @@ msgstr ""
 "Serverul Fuppes este activ. Dacă doriți să folosiți MiniDLNA va trebui să "
 "dezactivați mai întâi serverul Fuppes."
 
+msgid "GEOM"
+msgstr ""
+
+msgid "GEOM Software RAID"
+msgstr ""
+
 msgid "GID"
 msgstr "GID"
 
@@ -4091,7 +4131,7 @@ msgstr "JBOD"
 msgid "JBOD Information & Status"
 msgstr "Informații & Stare JBOD"
 
-msgid "JBOD Tools"
+msgid "JBOD Maintenance"
 msgstr ""
 
 msgid "Jan"
@@ -4514,6 +4554,9 @@ msgstr "MTU"
 
 msgid "Machine suffix"
 msgstr "Sufix Sistem"
+
+msgid "Maintenance"
+msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Verificați dacă ați activat S.M.A.R.T."
@@ -5045,6 +5088,9 @@ msgstr "Nu exista dispozitive RAID-Soft  noi."
 
 msgid "No pool was found."
 msgstr "Nu a fost găsită nicio structură (pool)."
+
+msgid "No softraid-formatted disks available."
+msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
 msgstr ""
@@ -5724,16 +5770,13 @@ msgstr "RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr "Informații & Stare RAID 0"
 
-msgid "RAID 0 Tools"
-msgstr ""
-
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
 msgstr "Informații & Stare RAID 0/1/5"
 
-msgid "RAID 0/1/5 Tools"
+msgid "RAID 0/1/5 Maintenance"
 msgstr ""
 
 msgid "RAID 1"
@@ -5742,17 +5785,11 @@ msgstr "RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr "Informații & Stare RAID 1"
 
-msgid "RAID 1 Tools"
-msgstr ""
-
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
 msgstr "Informații & Stare RAID 5"
-
-msgid "RAID 5 Tools"
-msgstr ""
 
 msgid "RAID device can be removed."
 msgstr ""
@@ -5764,6 +5801,27 @@ msgid "RAID is marked for removal"
 msgstr ""
 
 msgid "RAID is protected"
+msgstr ""
+
+msgid "RAID is unlocked"
+msgstr ""
+
+msgid "RAID-0"
+msgstr ""
+
+msgid "RAID-0 Maintenance"
+msgstr ""
+
+msgid "RAID-1"
+msgstr ""
+
+msgid "RAID-1 Maintenance"
+msgstr ""
+
+msgid "RAID-5"
+msgstr ""
+
+msgid "RAID-5 Maintenance"
 msgstr ""
 
 msgid "RAID0"
@@ -6273,6 +6331,9 @@ msgstr "Selectați un element din listă pentru eliminare"
 
 msgid "Select mount point where to create the swap file."
 msgstr "Selectați un punct de montare unde va fi creat fișierul 'swap'."
+
+msgid "Select read balance algorithm."
+msgstr ""
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "Selectați pachetul FreeBSD de instalat."
@@ -8133,6 +8194,9 @@ msgstr ""
 "Această opțiune permite specificarea utilizatorilor și grupurilor care pot "
 "accesa o partajare. Utilizatorii și grupurile pot fi delimitați prin "
 "virgulă. Grupurile sînt desemnate prin prefixul @."
+
+msgid "This option applies to GEOM RAID-1 only."
+msgstr ""
 
 msgid "This option causes rsync to copy the local data to the remote server."
 msgstr ""

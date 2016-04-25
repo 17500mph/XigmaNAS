@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-22 16:23+0000\n"
-"PO-Revision-Date: 2016-04-22 16:28+0000\n"
+"POT-Creation-Date: 2016-04-25 17:17+0000\n"
+"PO-Revision-Date: 2016-04-23 11:03+0000\n"
 "Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-23 08:09+0000\n"
+"X-Launchpad-Export-Date: 2016-04-25 15:29+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -21,6 +21,10 @@ msgstr " интерфейсы:"
 
 msgid " was assigned to "
 msgstr " был присвоен "
+
+#, php-format
+msgid "%1$s is used to create %2$s volumes."
+msgstr ""
 
 #, php-format
 msgid "%d days"
@@ -164,12 +168,24 @@ msgid "0=disabled, 1-255=enabled command queuing with specified depth."
 msgstr ""
 "Очередь команд. [0] - отключена, [1;255] - включена с заданной глубиной."
 
+msgid "1 or more disks are required to build a JBOD volume."
+msgstr ""
+
+msgid "1 or more disks are required to build a RAID-1 volume."
+msgstr ""
+
 msgid ""
 "1. Use these specials actions for debugging only!<br />2. There is no need "
 "of using this menu for starting a RAID volume (start automaticaly)."
 msgstr ""
 "1. Используйте эти действия только с целью отладки!<br />2. Чтобы запустить "
 "RAID-массив, данное меню не требуется (старт происходит автоматически)."
+
+msgid "2 or more disks are required to build a RAID-0 volume."
+msgstr ""
+
+msgid "3 or more disks are required to build a RAID-5 volume."
+msgstr ""
 
 msgid "4KB wrapper"
 msgstr "4KB wrapper (оболочка)"
@@ -971,6 +987,9 @@ msgstr "Сохранение/восстановление"
 
 msgid "Bad User - (Non Existing Users)"
 msgstr "Неверный пользователь - (не существующий пользователь)"
+
+msgid "Balance Algorithm"
+msgstr ""
 
 msgid "Balance algorithm"
 msgstr "Алгоритм балансировки"
@@ -2263,10 +2282,10 @@ msgid "Disabled"
 msgstr "Запрещено"
 
 msgid "Discard - Discard ACL"
-msgstr "Сброс - Сбрасывание ACL"
+msgstr "Discard - Сбрасывание ACL"
 
 msgid "Discard - Do not inherit entries"
-msgstr "Сброс - Не наследовать записи"
+msgstr "Discard - Не наследовать записи"
 
 #, php-format
 msgid "Discovered iSCSI target for %s"
@@ -2311,6 +2330,9 @@ msgid ""
 "again."
 msgstr ""
 "Не включайте эту опцию, если вы хотите добавить уже существующий RAID снова."
+
+msgid "Do not activate this option if you want to add an existing RAID."
+msgstr ""
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2442,6 +2464,18 @@ msgstr "Вы действительно хотите удалить выбран
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Вы действительно хотите удалить этот пакет?"
+
+msgid "Do you want to create a JBOD from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-0 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-1 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-5 from selected disks?"
+msgstr ""
 
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Вы действительно хотите удалить выбранные тома RAID?"
@@ -3361,6 +3395,12 @@ msgstr ""
 "Задействован Fuppes. Если вы желаете использовать MiniDLNA, вам следует "
 "сначала отключить Fuppes."
 
+msgid "GEOM"
+msgstr ""
+
+msgid "GEOM Software RAID"
+msgstr ""
+
 msgid "GID"
 msgstr "GID"
 
@@ -4068,8 +4108,8 @@ msgstr "JBOD (простой массив дисков)"
 msgid "JBOD Information & Status"
 msgstr "Информация и статус JBOD"
 
-msgid "JBOD Tools"
-msgstr "Инструменты JBOD"
+msgid "JBOD Maintenance"
+msgstr ""
 
 msgid "Jan"
 msgstr "янв."
@@ -4493,6 +4533,9 @@ msgstr "Размер MTU"
 
 msgid "Machine suffix"
 msgstr "Суффикс компьютера"
+
+msgid "Maintenance"
+msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Убедитесь, что S.M.A.R.T. на вашем устройстве включен."
@@ -5029,6 +5072,9 @@ msgstr "Не найдено нового диска программного RAI
 
 msgid "No pool was found."
 msgstr "Пул не обнаружен."
+
+msgid "No softraid-formatted disks available."
+msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Наследовать только запрет записи"
@@ -5707,17 +5753,14 @@ msgstr "Массив RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr "Информация и статус RAID 0"
 
-msgid "RAID 0 Tools"
-msgstr "Инструменты RAID 0"
-
 msgid "RAID 0/1/5"
 msgstr "Массив RAID 0/1/5 (Vinum)"
 
 msgid "RAID 0/1/5 Information & Status"
 msgstr "Информация и статус RAID 0/1/5"
 
-msgid "RAID 0/1/5 Tools"
-msgstr "Инструменты RAID 0/1/5"
+msgid "RAID 0/1/5 Maintenance"
+msgstr ""
 
 msgid "RAID 1"
 msgstr "Массив RAID 1"
@@ -5725,17 +5768,11 @@ msgstr "Массив RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr "Информация и статус RAID 1"
 
-msgid "RAID 1 Tools"
-msgstr "Инструменты RAID 1"
-
 msgid "RAID 5"
 msgstr "Массив RAID 5"
 
 msgid "RAID 5 Information & Status"
 msgstr "Информация и статус RAID 5"
-
-msgid "RAID 5 Tools"
-msgstr "Инструменты RAID 5"
 
 msgid "RAID device can be removed."
 msgstr "RAID-устройства могут быть удалены."
@@ -5748,6 +5785,27 @@ msgstr "RAID помечен для удаления"
 
 msgid "RAID is protected"
 msgstr "RAID защищен"
+
+msgid "RAID is unlocked"
+msgstr ""
+
+msgid "RAID-0"
+msgstr ""
+
+msgid "RAID-0 Maintenance"
+msgstr ""
+
+msgid "RAID-1"
+msgstr ""
+
+msgid "RAID-1 Maintenance"
+msgstr ""
+
+msgid "RAID-5"
+msgstr ""
+
+msgid "RAID-5 Maintenance"
+msgstr ""
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -6252,6 +6310,9 @@ msgstr "Выберите пункт для удаления из списка"
 
 msgid "Select mount point where to create the swap file."
 msgstr "Точка монтирования для создания файла подкачки."
+
+msgid "Select read balance algorithm."
+msgstr ""
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "Выберите пакет FreeBSD для установки."
@@ -8114,6 +8175,9 @@ msgstr ""
 "ресурсу. Указывать пользователей и группы следует через запятую, группы "
 "определяются префиксом @."
 
+msgid "This option applies to GEOM RAID-1 only."
+msgstr ""
+
 msgid "This option causes rsync to copy the local data to the remote server."
 msgstr ""
 "Эта опция заставляет rsync копировать локальную информацию на удаленный "
@@ -9564,3 +9628,18 @@ msgstr "размонтировать"
 
 msgid "version:"
 msgstr "версия:"
+
+#~ msgid "JBOD Tools"
+#~ msgstr "Инструменты JBOD"
+
+#~ msgid "RAID 0/1/5 Tools"
+#~ msgstr "Инструменты RAID 0/1/5"
+
+#~ msgid "RAID 1 Tools"
+#~ msgstr "Инструменты RAID 1"
+
+#~ msgid "RAID 5 Tools"
+#~ msgstr "Инструменты RAID 5"
+
+#~ msgid "RAID 0 Tools"
+#~ msgstr "Инструменты RAID 0"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-22 16:23+0000\n"
+"POT-Creation-Date: 2016-04-25 17:17+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-23 08:09+0000\n"
+"X-Launchpad-Export-Date: 2016-04-25 15:29+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -21,6 +21,10 @@ msgstr " 인터페이스:"
 
 msgid " was assigned to "
 msgstr " 가 할당된 "
+
+#, php-format
+msgid "%1$s is used to create %2$s volumes."
+msgstr ""
 
 #, php-format
 msgid "%d days"
@@ -144,12 +148,24 @@ msgstr "*** 불러들인 복사본 ***"
 msgid "0=disabled, 1-255=enabled command queuing with specified depth."
 msgstr "0=비활성화, 1-255=명세 된 깊이 내에서 command queue 활성화."
 
+msgid "1 or more disks are required to build a JBOD volume."
+msgstr ""
+
+msgid "1 or more disks are required to build a RAID-1 volume."
+msgstr ""
+
 msgid ""
 "1. Use these specials actions for debugging only!<br />2. There is no need "
 "of using this menu for starting a RAID volume (start automaticaly)."
 msgstr ""
 "1. 이 특수 기능은 디버깅 목적으로만 이용하십시오!<br />2. RAID 볼륨을 사용하기 위해 이 메뉴를 사용할 필요는 "
 "없습니다(자동으로 시작됩니다)."
+
+msgid "2 or more disks are required to build a RAID-0 volume."
+msgstr ""
+
+msgid "3 or more disks are required to build a RAID-5 volume."
+msgstr ""
 
 msgid "4KB wrapper"
 msgstr ""
@@ -881,6 +897,9 @@ msgid "Backup/Restore"
 msgstr "백업/복원"
 
 msgid "Bad User - (Non Existing Users)"
+msgstr ""
+
+msgid "Balance Algorithm"
 msgstr ""
 
 msgid "Balance algorithm"
@@ -2108,6 +2127,9 @@ msgid ""
 "again."
 msgstr ""
 
+msgid "Do not activate this option if you want to add an existing RAID."
+msgstr ""
+
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
@@ -2223,6 +2245,18 @@ msgstr "리스트에서 선택된 항목을 정말로 삭제하시겠습니까?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "정말로 이 패키지를 설치 해제하시겠습니까?"
+
+msgid "Do you want to create a JBOD from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-0 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-1 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-5 from selected disks?"
+msgstr ""
 
 msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
@@ -3095,6 +3129,12 @@ msgid ""
 "Fuppes first."
 msgstr ""
 
+msgid "GEOM"
+msgstr ""
+
+msgid "GEOM Software RAID"
+msgstr ""
+
 msgid "GID"
 msgstr "GID"
 
@@ -3743,7 +3783,7 @@ msgstr "JBOD"
 msgid "JBOD Information & Status"
 msgstr ""
 
-msgid "JBOD Tools"
+msgid "JBOD Maintenance"
 msgstr ""
 
 msgid "Jan"
@@ -4137,6 +4177,9 @@ msgstr "MTU"
 
 msgid "Machine suffix"
 msgstr "머신 접미사"
+
+msgid "Maintenance"
+msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "장치의 S.M.A.R.T.를 활성화했는지 확인하십시오."
@@ -4633,6 +4676,9 @@ msgstr ""
 
 msgid "No pool was found."
 msgstr "풀을 찾을 수 없습니다."
+
+msgid "No softraid-formatted disks available."
+msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
 msgstr ""
@@ -5280,16 +5326,13 @@ msgstr "RAID 0"
 msgid "RAID 0 Information & Status"
 msgstr ""
 
-msgid "RAID 0 Tools"
-msgstr ""
-
 msgid "RAID 0/1/5"
 msgstr "RAID 0/1/5"
 
 msgid "RAID 0/1/5 Information & Status"
 msgstr ""
 
-msgid "RAID 0/1/5 Tools"
+msgid "RAID 0/1/5 Maintenance"
 msgstr ""
 
 msgid "RAID 1"
@@ -5298,16 +5341,10 @@ msgstr "RAID 1"
 msgid "RAID 1 Information & Status"
 msgstr ""
 
-msgid "RAID 1 Tools"
-msgstr ""
-
 msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
-msgstr ""
-
-msgid "RAID 5 Tools"
 msgstr ""
 
 msgid "RAID device can be removed."
@@ -5320,6 +5357,27 @@ msgid "RAID is marked for removal"
 msgstr ""
 
 msgid "RAID is protected"
+msgstr ""
+
+msgid "RAID is unlocked"
+msgstr ""
+
+msgid "RAID-0"
+msgstr ""
+
+msgid "RAID-0 Maintenance"
+msgstr ""
+
+msgid "RAID-1"
+msgstr ""
+
+msgid "RAID-1 Maintenance"
+msgstr ""
+
+msgid "RAID-5"
+msgstr ""
+
+msgid "RAID-5 Maintenance"
 msgstr ""
 
 msgid "RAID0"
@@ -5809,6 +5867,9 @@ msgstr "리스트에서 지울 항목을 선택하십시오"
 
 msgid "Select mount point where to create the swap file."
 msgstr "스왑 파일을 생성할 마운트 지점을 선택하십시오."
+
+msgid "Select read balance algorithm."
+msgstr ""
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "설치할 FreeBSD 패키지를 선택하십시오."
@@ -7452,6 +7513,9 @@ msgid ""
 msgstr ""
 "이 옵션은 공유를 접근할 사용자와 그룹을 명세 하도록 해줍니다. 사용자와 그룹은 콤마로 분리해서 명세 됩니다. 그룹은 @ 접미사를 붙여서 "
 "표기됩니다."
+
+msgid "This option applies to GEOM RAID-1 only."
+msgstr ""
 
 msgid "This option causes rsync to copy the local data to the remote server."
 msgstr ""
