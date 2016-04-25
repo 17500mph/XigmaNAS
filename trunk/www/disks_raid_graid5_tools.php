@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Disks"), gettext("Software RAID"), gettext("RAID5"), gettext("Maintenance"));
+$pgtitle = array(gettext("Disks"), gettext("Software RAID"), gettext("RAID-5"), gettext("Maintenance"));
 
 if (!isset($config['graid5']['vdisk']) || !is_array($config['graid5']['vdisk']))
 	$config['graid5']['vdisk'] = array();
