@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Disks"), gettext("Software RAID"), gettext("RAID 0/1/5"), gettext("Tools"));
+$pgtitle = array(gettext("Disks"), gettext("Software RAID"), gettext("RAID 0/1/5"), gettext("Maintenance"));
 
 if ($_POST) {
 	unset($input_errors);
@@ -78,7 +78,7 @@ if (!isset($do_action)) {
 </tr>
 	<tr><td class="tabcont">
 			<table width="100%" border="0" cellspacing="0" cellpadding="0">
-	    		<?php html_titleline(gettext("RAID 0/1/5 Tools"));?>
+	    		<?php html_titleline(gettext("RAID 0/1/5 Maintenance"));?>
 	    	<tr>
 			<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 			<form action="disks_raid_gvinum_tools.php" method="post" name="iform" id="iform">
