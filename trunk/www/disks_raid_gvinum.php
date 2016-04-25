@@ -221,7 +221,7 @@ function controlactionbuttons(ego, triggerbyname) {
 		<td class="tabnavtbl">
 			<ul id="tabnav2">
 				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gettext('Reload page');?>" ><span><?=gettext('Management');?></span></a></li>
-				<li class="tabinact"><a href="disks_raid_gvinum_tools.php"><span><?=gettext('Tools'); ?></span></a></li>
+				<li class="tabinact"><a href="disks_raid_gvinum_tools.php"><span><?=gettext('Maintenance'); ?></span></a></li>
 				<li class="tabinact"><a href="disks_raid_gvinum_info.php"><span><?=gettext('Information'); ?></span></a></li>
 			</ul>
 		</td>
