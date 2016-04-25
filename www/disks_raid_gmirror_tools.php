@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Disks"), gettext("Software RAID"), gettext("RAID1"), gettext("Maintenance"));
+$pgtitle = array(gettext("Disks"), gettext("Software RAID"), gettext("RAID-1"), gettext("Maintenance"));
 
 if (!isset($config['gmirror']['vdisk']) || !is_array($config['gmirror']['vdisk']))
 	$config['gmirror']['vdisk'] = array();
