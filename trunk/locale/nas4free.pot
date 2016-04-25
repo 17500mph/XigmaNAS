@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-04-22 16:23+0000\n"
+"POT-Creation-Date: 2016-04-25 16:01+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -13,6 +13,10 @@ msgid " interfaces:"
 msgstr ""
 
 msgid " was assigned to "
+msgstr ""
+
+#, php-format
+msgid "%1$s is used to create %2$s volumes."
 msgstr ""
 
 #, php-format
@@ -119,7 +123,19 @@ msgstr ""
 msgid "0=disabled, 1-255=enabled command queuing with specified depth."
 msgstr ""
 
+msgid "1 or more disks are required to build a JBOD volume."
+msgstr ""
+
+msgid "1 or more disks are required to build a RAID-1 volume."
+msgstr ""
+
 msgid "1. Use these specials actions for debugging only!<br />2. There is no need of using this menu for starting a RAID volume (start automaticaly)."
+msgstr ""
+
+msgid "2 or more disks are required to build a RAID-0 volume."
+msgstr ""
+
+msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr ""
 
 msgid "4KB wrapper"
@@ -758,6 +774,9 @@ msgid "Backup/Restore"
 msgstr ""
 
 msgid "Bad User - (Non Existing Users)"
+msgstr ""
+
+msgid "Balance Algorithm"
 msgstr ""
 
 msgid "Balance algorithm"
@@ -1864,6 +1883,9 @@ msgstr ""
 msgid "Do not activate this option if you want to add an already existing RAID again."
 msgstr ""
 
+msgid "Do not activate this option if you want to add an existing RAID."
+msgstr ""
+
 msgid "Do you really want to clear and import?\\nThe existing config will be cleared and overwritten."
 msgstr ""
 
@@ -1967,6 +1989,18 @@ msgid "Do you really want to remove the selected item from the list?"
 msgstr ""
 
 msgid "Do you really want to uninstall this package?"
+msgstr ""
+
+msgid "Do you want to create a JBOD from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-0 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-1 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-5 from selected disks?"
 msgstr ""
 
 msgid "Do you want to delete selected RAID volumes?"
@@ -2794,6 +2828,12 @@ msgstr ""
 msgid "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable Fuppes first."
 msgstr ""
 
+msgid "GEOM"
+msgstr ""
+
+msgid "GEOM Software RAID"
+msgstr ""
+
 msgid "GID"
 msgstr ""
 
@@ -3371,7 +3411,7 @@ msgstr ""
 msgid "JBOD Information & Status"
 msgstr ""
 
-msgid "JBOD Tools"
+msgid "JBOD Maintenance"
 msgstr ""
 
 msgid "Jan"
@@ -3732,6 +3772,9 @@ msgid "MTU"
 msgstr ""
 
 msgid "Machine suffix"
+msgstr ""
+
+msgid "Maintenance"
 msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
@@ -4198,6 +4241,9 @@ msgid "No new software raid disk found."
 msgstr ""
 
 msgid "No pool was found."
+msgstr ""
+
+msgid "No softraid-formatted disks available."
 msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
@@ -4812,7 +4858,7 @@ msgstr ""
 msgid "RAID 0 Information & Status"
 msgstr ""
 
-msgid "RAID 0 Tools"
+msgid "RAID 0 Maintenance"
 msgstr ""
 
 msgid "RAID 0/1/5"
@@ -4852,6 +4898,18 @@ msgid "RAID is marked for removal"
 msgstr ""
 
 msgid "RAID is protected"
+msgstr ""
+
+msgid "RAID is unlocked"
+msgstr ""
+
+msgid "RAID-0"
+msgstr ""
+
+msgid "RAID-1"
+msgstr ""
+
+msgid "RAID-5"
 msgstr ""
 
 msgid "RAID0"
@@ -5319,6 +5377,9 @@ msgid "Select item to remove from the list"
 msgstr ""
 
 msgid "Select mount point where to create the swap file."
+msgstr ""
+
+msgid "Select read balance algorithm."
 msgstr ""
 
 msgid "Select the FreeBSD package to be installed."
@@ -6711,6 +6772,9 @@ msgid "This name is used to uniquely identify your UPS on this system."
 msgstr ""
 
 msgid "This option allows the users and groups that access a share to be specified. Users and groups are specified, delimited by commas. Groups are designated by a @ prefix."
+msgstr ""
+
+msgid "This option applies to GEOM RAID-1 only."
 msgstr ""
 
 msgid "This option causes rsync to copy the local data to the remote server."
