@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Disks"), gettext("Software RAID"), gettext("RAID1"), gettext("Tools"));
+$pgtitle = array(gettext("Disks"), gettext("Software RAID"), gettext("RAID1"), gettext("Maintenance"));
 
 if (!isset($config['gmirror']['vdisk']) || !is_array($config['gmirror']['vdisk']))
 	$config['gmirror']['vdisk'] = array();
@@ -112,7 +112,7 @@ function raid_change() {
 	<tr>
 		<td class="tabcont">
 			<table width="100%" border="0" cellspacing="0" cellpadding="0">
-				<?php html_titleline(gettext("RAID 1 Tools"));?>
+				<?php html_titleline(gettext("RAID-1 Maintenance"));?>
 				<tr>
 					<td>
 						<?php if (!empty($input_errors)) print_input_errors($input_errors);?>

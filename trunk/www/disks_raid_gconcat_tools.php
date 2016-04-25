@@ -38,7 +38,7 @@ ini_set('display_startup_errors', TRUE);
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Disks"), gettext("Software RAID"), gettext("JBOD"), gettext("Tools"));
+$pgtitle = array(gettext("Disks"), gettext("Software RAID"), gettext("JBOD"), gettext("Maintenance"));
 
 if (!isset($config['gconcat']['vdisk']) || !is_array($config['gconcat']['vdisk']))
 	$config['gconcat']['vdisk'] = array();

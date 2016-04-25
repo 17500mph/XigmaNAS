@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Disks"), gettext("Software RAID"), gettext("RAID5"), gettext("Tools"));
+$pgtitle = array(gettext("Disks"), gettext("Software RAID"), gettext("RAID5"), gettext("Maintenance"));
 
 if (!isset($config['graid5']['vdisk']) || !is_array($config['graid5']['vdisk']))
 	$config['graid5']['vdisk'] = array();
@@ -111,7 +111,7 @@ function raid_change() {
 	<tr>
 		<td class="tabcont">
 			<table width="100%" border="0" cellspacing="0" cellpadding="0">
-				<?php html_titleline(gettext("RAID 5 Tools")); ?>
+				<?php html_titleline(gettext("RAID-5 Maintenance")); ?>
 				<tr>
 					<td>
 						<?php if ($input_errors) print_input_errors($input_errors); ?>
