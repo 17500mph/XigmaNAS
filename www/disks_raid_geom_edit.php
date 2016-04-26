@@ -394,7 +394,10 @@ function toggleselection(ego, triggerbyname) {
 		<tbody>
 			<?php
 				$notnewandnotnewmodify = !((RECORD_NEW === $mode_record) || (RECORD_NEW_MODIFY === $mode_record));
-				html_inputbox2('name', gettext('Raid Name'), $sphere_record['name'], '', true, 15, $notnewandnotnewmodify); // readonly if not new and not new-modify
+				html_inputbox2('name', gettext('RAID Name'), $sphere_record['name'], '', true, 15, $notnewandnotnewmodify); // readonly if not new and not new-modify
+				if (RECORD_MODIFY === $mode_record) {
+					html_inputbox2('type', gettext('RAID Type'), $a_process[$sphere_record['type']]['gt-type'], '', false, 40, true);
+				}
 				$helpinghand = [
 					[gettext('Select read balance algorithm.')],
 					[gettext('This option applies to GEOM RAID-1 only.')]
