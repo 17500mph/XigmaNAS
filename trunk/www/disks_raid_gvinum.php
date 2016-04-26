@@ -33,6 +33,7 @@
 */
 require("auth.inc");
 require("guiconfig.inc");
+require 'disks_raid_gvinum_fun.inc';
 
 $sphere_scriptname = basename(__FILE__);
 $sphere_scriptname_child = 'disks_raid_gvinum_edit.php';
@@ -65,11 +66,13 @@ if (!(isset($config['gvinum']['vdisk']) && is_array($config['gvinum']['vdisk']))
 }
 array_sort_key($config['gvinum']['vdisk'], 'name');
 $sphere_array = &$config['gvinum']['vdisk'];
-
+// get mounts from config
 if (!(isset($config['mounts']['mount']) && is_array($config['mounts']['mount']))) {
 	$config['mounts']['mount'] = [];
 }
-$a_mount = &$config['mounts']['mount'];
+$a_config_mount = &$config['mounts']['mount'];
+// collect geom additional information
+$a_process = gvinum_processinfo_get();
 
 if ($_POST) {
 	if (isset($_POST['apply']) && $_POST['apply']) {
@@ -110,43 +113,6 @@ if ($_POST) {
 		header($sphere_header);
 		exit;
 	}
-}
-
-function gvinum_process_updatenotification($mode, $data) {
-	global $config;
-	$retval = 0;
-	switch ($mode) {
-		case UPDATENOTIFY_MODE_NEW:
-			$retval |= disks_raid_gvinum_configure($data);
-			break;
-		case UPDATENOTIFY_MODE_MODIFIED:
-			$retval |= rc_exec_service('geom start vinum');
-			break;
-		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
-			if (is_array($config['gvinum']['vdisk'])) {
-				$index = array_search_ex($data, $config['gvinum']['vdisk'], 'uuid');
-				if (false !== $index) {
-					unset($config['gvinum']['vdisk'][$index]);
-					write_config();
-				}
-			}
-			break;
-		case UPDATENOTIFY_MODE_DIRTY:
-			$retval |= disks_raid_gvinum_delete($data);
-			if (is_array($config['gvinum']['vdisk'])) {
-				$index = array_search_ex($data, $config['gvinum']['vdisk'], 'uuid');
-				if (false !== $index) {
-					unset($config['gvinum']['vdisk'][$index]);
-					write_config();
-				}
-			}
-			break;
-	}
-	return $retval;
-}
-
-function is_gvinum_mounted($devicespecialfile, &$a_mount) {
-	return (false !== array_search_ex($devicespecialfile, $a_mount, 'mdisk'));
 }
 
 $pgtitle = array(gettext('Disks'), gettext('Software RAID'), gettext('RAID 0/1/5'), gettext('Management'));
@@ -287,7 +253,7 @@ function controlactionbuttons(ego, triggerbyname) {
 					$status = strtoupper($status);
 					$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
 					$notprotected = !isset($sphere_record['protected']);
-					$notmounted = !is_gconcat_mounted($sphere_record['devicespecialfile'], $a_mount);
+					$notmounted = !is_gvinum_mounted($sphere_record['devicespecialfile'], $a_config_mount);
 					$normaloperation = $notprotected && $notmounted;
 				?>
 				<tr>
@@ -299,22 +265,28 @@ function controlactionbuttons(ego, triggerbyname) {
 						<?php endif;?>
 					</td>
 					<td class="<?=$normaloperation ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['name']);?></td>
-					<td class="<?=$normaloperation ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['type']);?></td>
+					<td class="<?=$normaloperation ? "lcell" : "lcelld";?>"><?=htmlspecialchars($a_process[$sphere_record['type']]['gt-type']);?></td>
 					<td class="<?=$normaloperation ? "lcell" : "lcelld";?>"><?=$size;?>&nbsp;</td>
 					<td class="<?=$normaloperation ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['desc']);?></td>
 					<td class="<?=$normaloperation ? "lcelc" : "lcelcd";?>"><?=$status;?>&nbsp;</td>
 					<td class="lcebld">
-						<?php if ($notdirty && $notprotected):?>
-							<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
-						<?php else:?>
-							<?php if ($notprotected && $notmounted):?>
-								<img src="<?=$img_path['del'];?>" title="<?=gettext($gt_record_del);?>" alt="<?=gettext($gt_record_del);?>"/>
-							<?php else:?>
-								<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gettext($gt_record_loc);?>"/>
-						<?php endif;?>
-						<?php endif;?>
-						</td>
-					</tr>
+						<table id="area_data_selection_toolbox"><tbody><tr>
+							<td>
+								<?php if ($notdirty && $notprotected):?>
+									<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
+								<?php else:?>
+									<?php if ($notprotected && $notmounted):?>
+										<img src="<?=$img_path['del'];?>" title="<?=gettext($gt_record_del);?>" alt="<?=gettext($gt_record_del);?>"/>
+									<?php else:?>
+										<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gettext($gt_record_loc);?>"/>
+									<?php endif;?>
+								<?php endif;?>
+							</td>
+							<td><a href="<?=$a_process[$sphere_record['type']]['x-page-maintenance'];?>"><img src="<?=$img_path['mai'];?>" title="<?=$gt_record_mai;?>" alt="<?=$gt_record_mai;?>" /></a></td>
+							<td><a href="<?=$a_process[$sphere_record['type']]['x-page-information'];?>"><img src="<?=$img_path['inf'];?>" title="<?=$gt_record_inf?>" alt="<?=$gt_record_inf?>" /></a></td>
+						</tr></tbody></table>
+					</td>
+				</tr>
 			<?php endforeach; ?>
 		</tbody>
 	</table>
