@@ -156,8 +156,8 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit" or "Action", alr
 	unset($input_errors);
 	// input validation
 	$reqdfields = ['name'];
-	$reqdfieldsn = [gettext('Raid Name')];
-	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
+	$reqdfieldsn = [gettext('RAID Name')];
+	do_input_validation($sphere_record, $reqdfields, $reqdfieldsn, $input_errors);
 	// logic validation
 	if ($prerequisites_ok && empty($input_errors)) { // check for a valid RAID name.
 		if (($sphere_record['name'] && !is_validaliasname($sphere_record['name']))) {
@@ -308,10 +308,10 @@ $(window).on("load", function() {
 	$("#togglebox").click(function() {
 		toggleselection($(this)[0], "<?=$checkbox_member_name;?>[]");
 	});
-	$("#raid_gmirror").click(function () { return confirm('<?=$gt_confirm_mirror;?>'); });
-	$("#raid_graid5").click(function () { return confirm('<?=$gt_confirm_raid5;?>'); });
-	$("#raid_gstripe").click(function () { return confirm('<?=$gt_confirm_stripe;?>'); });
-	$("#raid_gconcat").click(function () { return confirm('<?=$gt_confirm_concat;?>'); });
+	$("#button_raid1").click(function () { return confirm('<?=$gt_confirm_mirror;?>'); });
+	$("#button_raid5").click(function () { return confirm('<?=$gt_confirm_raid5;?>'); });
+	$("#button_raid0").click(function () { return confirm('<?=$gt_confirm_stripe;?>'); });
+	$("#button_jbod").click(function () { return confirm('<?=$gt_confirm_concat;?>'); });
 	controlactionbuttons(this,'<?=$checkbox_member_name;?>[]');
 });
 function disableactionbuttons(n) {
@@ -324,10 +324,10 @@ function disableactionbuttons(n) {
 		case  2: ab_disable = [false , true  , false , false]; break;
 		default: ab_disable = [false , false , false , false]; break; // setting for 3 or more disks
 	}		
-	ab_element = document.getElementById('raid_gmirror'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable[0])) { ab_element.disabled = ab_disable[0]; }
-	ab_element = document.getElementById('raid_graid5') ; if ((ab_element !== null) && (ab_element.disabled !== ab_disable[1])) { ab_element.disabled = ab_disable[1]; }
-	ab_element = document.getElementById('raid_gstripe'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable[2])) { ab_element.disabled = ab_disable[2]; }
-	ab_element = document.getElementById('raid_gconcat'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable[3])) { ab_element.disabled = ab_disable[3]; }
+	ab_element = document.getElementById('button_raid1'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable[0])) { ab_element.disabled = ab_disable[0]; }
+	ab_element = document.getElementById('button_raid5'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable[1])) { ab_element.disabled = ab_disable[1]; }
+	ab_element = document.getElementById('button_raid0'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable[2])) { ab_element.disabled = ab_disable[2]; }
+	ab_element = document.getElementById('button_jbod'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable[3])) { ab_element.disabled = ab_disable[3]; }
 }
 function controlactionbuttons(ego, triggerbyname) {
 	var a_trigger = document.getElementsByName(triggerbyname);
@@ -379,7 +379,7 @@ function toggleselection(ego, triggerbyname) {
 	<?php if ((RECORD_NEW === $mode_record) || (RECORD_NEW_MODIFY === $mode_record)):?>
 		<div id="submit" style="margin-bottom:10px">
 			<?php foreach ($a_process as $r_process):?>
-				<button name="Action" id="<?=$r_process['x-notifier'];?>" type="submit" class="formbtn" value="<?=$r_process['type'];?>"><?=$r_process['gt-type'];?></button>
+				<button name="Action" id="<?=$r_process['x-button'];?>" type="submit" class="formbtn" value="<?=$r_process['type'];?>"><?=$r_process['gt-type'];?></button>
 			<?php endforeach;?>
 		</div>
 	<?php endif;?>

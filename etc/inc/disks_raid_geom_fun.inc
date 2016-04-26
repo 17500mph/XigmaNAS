@@ -1,6 +1,6 @@
 <?php
 /*
-	disks_raid_geom_fun.php
+	disks_raid_geom_fun.inc
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
@@ -44,6 +44,7 @@ function geomraid_processinfo_get() {
 		'x-processor' => 'gmirror_process_updatenotification',
 		'x-page-maintenance' => 'disks_raid_gmirror_tools.php',
 		'x-page-information' => 'disks_raid_gmirror_info.php',
+		'x-button' => 'button_raid1',
 		'gt-type' => gettext('RAID-1')
 	];
 	$a_return['5'] = [
@@ -53,6 +54,7 @@ function geomraid_processinfo_get() {
 		'x-processor' => 'graid5_process_updatenotification',
 		'x-page-maintenance' => 'disks_raid_graid5_tools.php',
 		'x-page-information' => 'disks_raid_graid5_info.php',
+		'x-button' => 'button_raid5',
 		'gt-type' => gettext('RAID-5')
 	];
 	$a_return['0'] = [
@@ -62,6 +64,7 @@ function geomraid_processinfo_get() {
 		'x-processor' => 'gstripe_process_updatenotification',
 		'x-page-maintenance' => 'disks_raid_gstripe_tools.php',
 		'x-page-information' => 'disks_raid_gstripe_info.php',
+		'x-button' => 'button_raid0',
 		'gt-type' => gettext('RAID-0')
 	];
 	$a_return['JBOD'] = [
@@ -71,6 +74,7 @@ function geomraid_processinfo_get() {
 		'x-processor' => 'gconcat_process_updatenotification',
 		'x-page-maintenance' => 'disks_raid_gconcat_tools.php',
 		'x-page-information' => 'disks_raid_gconcat_info.php',
+		'x-button' => 'button_jbod',
 		'gt-type' => gettext('JBOD')
 	];
 	return $a_return;
