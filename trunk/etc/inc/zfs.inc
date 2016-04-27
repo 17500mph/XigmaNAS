@@ -537,7 +537,7 @@ function zfs_dataset_destroy($uuid) {
 	$datasetname = ltrim($dataset['name']);
 	$relpath = sprintf('%1$s/%2$s', $poolname, $datasetname);
 	// destroy dataset
-	$cmd = sprintf('zfs destroy %1$s', escapeshellarg($relpath));
+	$cmd = sprintf('zfs destroy -f %1$s', escapeshellarg($relpath));
 	write_log($cmd);
 	return mwexec($cmd, true);
 }
