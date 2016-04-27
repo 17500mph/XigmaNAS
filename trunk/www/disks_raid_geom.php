@@ -324,7 +324,7 @@ function controlactionbuttons(ego, triggerbyname) {
 				html_textinfo2("warning", gettext('Warning'), sprintf(gettext("A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount point</a> first before proceeding."), 'disks_mount.php'));
 			?>
 		</tbody>
-</table>
+	</table>
 	<?php include("formend.inc"); ?>
 </form></td></tr></tbody></table>
 <?php include("fend.inc"); ?>
