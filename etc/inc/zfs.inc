@@ -524,6 +524,7 @@ function zfs_dataset_configure($uuid) {
  */
 function zfs_dataset_destroy($uuid) {
 	global $config;
+	$result = 0;
 	// get dataset
 	if (!(isset($config['zfs']) && isset($config['zfs']['datasets']) && isset($config['zfs']['datasets']['dataset']) && is_array($config['zfs']['datasets']['dataset']))) { return 1; }
 	if (false === ($index = array_search_ex($uuid, $config['zfs']['datasets']['dataset'], "uuid"))) { return 1; }
@@ -537,9 +538,13 @@ function zfs_dataset_destroy($uuid) {
 	$datasetname = ltrim($dataset['name']);
 	$relpath = sprintf('%1$s/%2$s', $poolname, $datasetname);
 	// destroy dataset
-	$cmd = sprintf('zfs destroy -f %1$s', escapeshellarg($relpath));
+	$cmd = sprintf('zfs destroy %1$s', escapeshellarg($relpath));
 	write_log($cmd);
-	return mwexec($cmd, true);
+	$result |= mwexec($cmd, true);
+	if ($result != 0) {
+		write_log(sprintf('Error: Failed to destroy dataset %1$s', escapeshellarg($relpath)));
+	}
+	return $result;
 }
 
 /**
@@ -738,6 +743,7 @@ function zfs_volume_configure($uuid) {
  */
 function zfs_volume_destroy($uuid) {
 	global $config;
+	$result = 0;
 	// get volume
 	if (!(isset($config['zfs']) && isset($config['zfs']['volumes']) && isset($config['zfs']['volumes']['volume']) && is_array($config['zfs']['volumes']['volume']))) { return 1; }
 	if (false === ($index = array_search_ex($uuid, $config['zfs']['volumes']['volume'], 'uuid'))) { return 1; }
@@ -753,7 +759,11 @@ function zfs_volume_destroy($uuid) {
 	// Destroy the volume
 	$cmd = sprintf('zfs destroy %1$s', escapeshellarg($relpath));
 	write_log($cmd);
-	return mwexec($cmd, true);
+	$result |= mwexec($cmd, true);
+	if ($result != 0) {
+		write_log(sprintf('Error: Failed to destroy volume %1$s', escapeshellarg($relpath)));
+	}
+	return $result;
 }
 
 function zfs_get_volume_reservation($volsize) {

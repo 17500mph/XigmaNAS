@@ -148,8 +148,7 @@ class HTMLBaseControl2 {
 		echo "	<td class='{$classtag}'><label for='$ctrlname'>{$title}</label></td>\n";
 		echo "	<td class='{$classdata}'>\n";
 		$this->RenderCtrl();
-		if (!empty($description))
-			echo "		<br /><span class='tagabout'>{$description}</span>\n";
+		if (!empty($description)) {	echo "		<br /><span class='tagabout'>{$description}</span>\n"; }
 		echo "	</td>\n";
 		echo "</tr>\n";
 	}

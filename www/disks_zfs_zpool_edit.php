@@ -6,15 +6,12 @@
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
-	Portions of freenas (http://www.freenas.org).
-	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
-	All rights reserved.
-
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -38,145 +35,224 @@ require("auth.inc");
 require("guiconfig.inc");
 require("zfs.inc");
 
-if (isset($_GET['uuid']))
-	$uuid = $_GET['uuid'];
-if (isset($_POST['uuid']))
-	$uuid = $_POST['uuid'];
+$sphere_scriptname = basename(__FILE__);
+$sphere_header = 'Location: '.$sphere_scriptname;
+$sphere_header_parent = 'Location: disks_zfs_zpool.php';
+$sphere_notifier = 'zfspool';
+$sphere_array = [];
+$sphere_record = [];
+$gt_record_loc = gettext('Virtual device is already in use.');
+$gt_record_opn = gettext('Virtual device can be removed.');
+$prerequisites_ok = true;
 
-$pgtitle = array(gettext("Disks"), gettext("ZFS"), gettext("Pools"), gettext("Management"), isset($uuid) ? gettext("Edit") : gettext("Add"));
+$mode_page = ($_POST) ? PAGE_MODE_POST : (($_GET) ? PAGE_MODE_EDIT : PAGE_MODE_ADD); // detect page mode
+if (PAGE_MODE_POST == $mode_page) { // POST is Cancel or not Submit => cleanup
+	if ((isset($_POST['Cancel']) && $_POST['Cancel']) || !(isset($_POST['Submit']) && $_POST['Submit'])) {
+		header($sphere_header_parent);
+		exit;
+	}
+}
 
-if (!isset($config['zfs']['pools']['pool']) || !is_array($config['zfs']['pools']['pool']))
-	$config['zfs']['pools']['pool'] = array();
+if ((PAGE_MODE_POST == $mode_page) && isset($_POST['uuid']) && is_uuid_v4($_POST['uuid'])) {
+	$sphere_record['uuid'] = $_POST['uuid'];
+} else {
+	if ((PAGE_MODE_EDIT == $mode_page) && isset($_GET['uuid']) && is_uuid_v4($_GET['uuid'])) {
+		$sphere_record['uuid'] = $_GET['uuid'];
+	} else {
+		$mode_page = PAGE_MODE_ADD; // Force ADD
+		$sphere_record['uuid'] = uuid();
+	}
+}
 
-if (!isset($config['zfs']['vdevices']['vdevice']) || !is_array($config['zfs']['vdevices']['vdevice']))
-	$config['zfs']['vdevices']['vdevice'] = array();
+if (!(isset($config['zfs']['pools']['pool']) && is_array($config['zfs']['pools']['pool']))) {
+	$config['zfs']['pools']['pool'] = [];
+}
+array_sort_key($config['zfs']['pools']['pool'], 'name');
+$sphere_array = &$config['zfs']['pools']['pool'];
 
-array_sort_key($config['zfs']['pools']['pool'], "name");
-array_sort_key($config['zfs']['vdevices']['vdevice'], "name");
+$index = array_search_ex($sphere_record['uuid'], $sphere_array, 'uuid'); // find index of uuid
+$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']); // get updatenotify mode for uuid
+$mode_record = RECORD_ERROR;
+if (false !== $index) { // uuid found
+	if ((PAGE_MODE_POST == $mode_page || (PAGE_MODE_EDIT == $mode_page))) { // POST or EDIT
+		switch ($mode_updatenotify) {
+			case UPDATENOTIFY_MODE_NEW:
+				$mode_record = RECORD_NEW_MODIFY;
+				break;
+			case UPDATENOTIFY_MODE_MODIFIED:
+			case UPDATENOTIFY_MODE_UNKNOWN:
+				$mode_record = RECORD_MODIFY;
+				break;
+		}
+	}
+} else { // uuid not found
+	if ((PAGE_MODE_POST == $mode_page) || (PAGE_MODE_ADD == $mode_page)) { // POST or ADD
+		switch ($mode_updatenotify) {
+			case UPDATENOTIFY_MODE_UNKNOWN:
+				$mode_record = RECORD_NEW;
+				break;
+		}
+	}
+}
+if (RECORD_ERROR == $mode_record) { // oops, someone tries to cheat, over and out
+	header($sphere_header_parent);
+	exit;
+}
 
-$a_pool = &$config['zfs']['pools']['pool'];
+if (!(isset($config['zfs']['vdevices']['vdevice']) && is_array($config['zfs']['vdevices']['vdevice']))) {
+	$config['zfs']['vdevices']['vdevice'] = [];
+	$errormsg = sprintf(gettext('No configured virtual devices. Please add new <a href="%s">virtual device</a> first.'), 'disks_zfs_zpool_vdevice.php');
+	$prerequisites_ok = false;
+}
+array_sort_key($config['zfs']['vdevices']['vdevice'], 'name');
 $a_vdevice = &$config['zfs']['vdevices']['vdevice'];
 
-if (!isset($uuid) && (!sizeof($a_vdevice))) {
-	$errormsg = sprintf(gettext("No configured virtual devices. Please add new <a href='%s'>virtual device</a> first."), "disks_zfs_zpool_vdevice.php");
-}
-
-if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_pool, "uuid")))) {
-	$pconfig['uuid'] = $a_pool[$cnid]['uuid'];
-	$pconfig['name'] = $a_pool[$cnid]['name'];
-	$pconfig['vdevice'] = $a_pool[$cnid]['vdevice'];
-	$pconfig['root'] = $a_pool[$cnid]['root'];
-	$pconfig['mountpoint'] = $a_pool[$cnid]['mountpoint'];
-	$pconfig['force'] = isset($a_dataset[$cnid]['force']);
-	$pconfig['desc'] = $a_pool[$cnid]['desc'];	
-} else {
-	$pconfig['uuid'] = uuid();
-	$pconfig['name'] = "";
-	$pconfig['root'] = "";
-	$pconfig['mountpoint'] = "";
-	$pconfig['force'] = false;
-	$pconfig['desc'] = "";	
-}
-
-if ($_POST) {
+if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 	unset($input_errors);
-	$pconfig = $_POST;
-
-	if (isset($_POST['Cancel']) && $_POST['Cancel']) {
-		header("Location: disks_zfs_zpool.php");
-		exit;
+	switch ($mode_record) {
+		case RECORD_NEW:
+		case RECORD_NEW_MODIFY:
+			$sphere_record['name'] = $_POST['name'];
+			$sphere_record['vdevice'] = $_POST['vdevice'];
+			$sphere_record['root'] = $_POST['root'];
+			$sphere_record['mountpoint'] = $_POST['mountpoint'];
+			$sphere_record['force'] = isset($_POST['force']) ? true : false;
+			$sphere_record['desc'] = $_POST['desc'];
+			break;
+		case RECORD_MODIFY:
+			$sphere_record['name'] = $sphere_array[$index]['name'];
+			$sphere_record['vdevice'] = $sphere_array[$index]['vdevice'];
+			$sphere_record['root'] = $sphere_array['root'];
+			$sphere_record['mountpoint'] = $_POST['mountpoint'];
+			$sphere_record['force'] = (isset($sphere_array['force']) ? true : false);
+			$sphere_record['desc'] = $_POST['desc'];
+			break;
 	}
 
 	// Input validation
-	$reqdfields = explode(" ", "name vdevice");
-	$reqdfieldsn = array(gettext("Name"), gettext("Virtual devices"));
+	$reqdfields = explode(' ', 'name vdevice');
+	$reqdfieldsn = [gettext('Name'), gettext('Virtual devices')];
 
-	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
+	do_input_validation($sphere_record, $reqdfields, $reqdfieldsn, $input_errors);
 
-	// Validate pool name
-	if (!zfs_is_valid_poolname($_POST['name'])) {
-		$input_errors[] = gettext("The pool name does not match the naming rules.");
+	if ($prerequisites_ok && empty($input_errors)) { // check for a valid pool name.
+		if (!zfs_is_valid_poolname($sphere_record['name'])) {
+			$input_errors[] = sprintf(gettext("The attribute '%s' contains invalid characters."), gettext('Name'));
+		}
 	}
 
-    	// Checks if pool name contains spaces
-	$indexOfSpace = strrpos($_POST['name'], ' ');
-    	if($indexOfSpace)
-    	{
-            $input_errors[] = gettext("The pool name is invalid: contains spaces.");
-    	}
-
-	// Check for duplicate name
-	if (!isset($cnid) || $cnid === FALSE || !($_POST['name'] === $a_pool[$cnid]['name'])) {
-		if (false !== array_search_ex($_POST['name'], $a_pool, "name")) {
-			$input_errors[] = gettext("This pool name already exists.");
+	if ($prerequisites_ok && empty($input_errors)) {
+		switch ($mode_record) { // check if the new pool name or a renamed pool on new_modify already exists
+			case RECORD_NEW:
+			case RECORD_NEW_MODIFY:
+				$helpinghand = escapeshellarg($sphere_record['name']); // create quoted pool name
+				// throw error when pool name already exists in live.
+				mwexec2(sprintf("zpool list -H -o name %s 2>&1", $helpinghand), $retdat, $retval);
+				switch ($retval) {
+					case 1: // An error occured. => pool doesn't exist
+						break;
+					case 0: // Successful completion. => pool found
+						$input_errors[] = sprintf(gettext('%s already exists.'), $sphere_record['name']);
+						break;
+					case 2: // Invalid command line options were specified.
+						$input_errors[] = gettext('Failed to execute command zpool.');
+						break;
+				}
+		}
+	}
+			
+	if ($prerequisites_ok && empty($input_errors)) {
+		switch ($mode_record) { // verify config
+			case RECORD_NEW: // pool name must not exist in config at all
+				if (false !== array_search_ex($sphere_record['name'], $sphere_array, 'name')) {
+					$input_errors[] = gettext('This pool name already exists.');
+				}
+				break;
+			case RECORD_NEW_MODIFY: // if the pool name has changed it shouldn't be found in config
+				if ($sphere_record['name'] !== $sphere_array[$index]['name']) { // pool name has changed
+					if (false !== array_search_ex($sphere_record['name'], $sphere_array, 'name')) {
+						$input_errors[] = gettext('This pool name already exists.');
+					}
+				}
+				break;
+			case RECORD_MODIFY: // should never happen because sphere_record['name'] should be set to $sphere_array[$index]['name']
+				if ($sphere_record['name'] !== $sphere_array[$index]['name']) {
+					$input_errors[] = gettext('The name of the pool cannot be changed.');
+				}
+				break;
 		}
 	}
 
 	// Check vdevices
 	$hastpool = false;
-	if (isset($_POST['vdevice']) && is_array($_POST['vdevice'])) {
+	if (isset($sphere_record['vdevice']) && is_array($sphere_record['vdevice'])) {
 		$n = 0;
-		foreach ($_POST['vdevice'] as $vdev) {
-			$index = array_search_ex($vdev, $a_vdevice, "name");
-			if ($index !== false) {
-				$vdevice = $a_vdevice[$index];
-				foreach ($vdevice['device'] as $device) {
+		foreach ($sphere_record['vdevice'] as $vdevice_name) {
+			$i = array_search_ex($vdevice_name, $a_vdevice, 'name');
+			if ($i !== false) {
+				$r_vdevice = $a_vdevice[$i];
+				// flag if hast devices have been selected
+				foreach ($r_vdevice['device'] as $device) {
 					if (preg_match('/^\/dev\/hast\//', $device)) {
 						$hastpool = true;
 					}
 				}
-				if ($vdevice['type'] == 'spare'
-				    || $vdevice['type'] == 'cache'
-				    || $vdevice['type'] == 'log') {
+				// don't count spare, cache and log devices
+				if (preg_match('/^(spare|cache|log)$/', $r_vdevice['type'])) {
 					continue;
 				}
-				/*
-				if ($vdevice['type'] == 'disk') {
-					// sync disk
-					continue;
-				}
-				*/
 			}
+			// count disk, file, mirror and raidz. They are allowed
 			$n++;
 		}
 		if ($n == 0) {
-			$input_errors[] = sprintf(gettext("The attribute '%s' is required."), gettext("Virtual devices"));
+			$input_errors[] = sprintf(gettext("The attribute '%s' is required."), gettext('Virtual devices'));
 		}
 	}
+	$sphere_record['hastpool'] = $hastpool;
 
-	if (empty($input_errors)) {
-		$pooldata = array();
-		$pooldata['uuid'] = $_POST['uuid'];
-		$pooldata['name'] = $_POST['name'];
-		$pooldata['vdevice'] = $_POST['vdevice'];
-		$pooldata['root'] = $_POST['root'];
-		$pooldata['mountpoint'] = $_POST['mountpoint'];
-		$pooldata['force'] = isset($_POST['force']) ? true : false;
-		$pooldata['hastpool'] = !empty($hastpool) ? true : false;
-		$pooldata['desc'] = $_POST['desc'];
-
-		if (isset($uuid) && (FALSE !== $cnid)) {
-			$mode = UPDATENOTIFY_MODE_MODIFIED;
-			$a_pool[$cnid] = $pooldata;
+	if ($prerequisites_ok && empty($input_errors)) {
+		if (RECORD_NEW == $mode_record) {
+			$sphere_array[] = $sphere_record;
+			updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_NEW, $sphere_record['uuid']);
 		} else {
-			$mode = UPDATENOTIFY_MODE_NEW;
-			$a_pool[] = $pooldata;
+			$sphere_array[$index] = $sphere_record;
+			if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
+				updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_record['uuid']);
+			}
 		}
-
-		updatenotify_set("zfszpool", $mode, $pooldata['uuid']);
 		write_config();
-
-		header("Location: disks_zfs_zpool.php");
+		header($sphere_header_parent);
 		exit;
 	}
+} else { // EDIT / ADD
+	switch ($mode_record) {
+		case RECORD_NEW:
+			$sphere_record['name'] = '';
+			$sphere_record['root'] = '';
+			$sphere_record['mountpoint'] = '';
+			$sphere_record['force'] = false;
+			$sphere_record['desc'] = '';	
+			break;
+		case RECORD_NEW_MODIFY:
+		case RECORD_MODIFY:
+			$sphere_record['name'] = $sphere_array[$index]['name'];
+			$sphere_record['vdevice'] = $sphere_array[$index]['vdevice'];
+			$sphere_record['root'] = $sphere_array[$index]['root'];
+			$sphere_record['mountpoint'] = $sphere_array[$index]['mountpoint'];
+			$sphere_record['force'] = isset($a_dataset[$index]['force']);
+			$sphere_record['desc'] = $sphere_array[$index]['desc'];	
+			break;
+	}
 }
+
+$pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Pools'), gettext('Management'), (RECORD_NEW !== $mode_record) ? gettext('Edit') : gettext('Add'));
 ?>
 <?php include("fbegin.inc");?>
 <script type="text/javascript">
 <!--
 function enable_change(enable_change) {
 	document.iform.name.disabled = !enable_change;
-	document.iform.vdevice.disabled = !enable_change;
 	document.iform.root.disabled = !enable_change;
 	//document.iform.mountpoint.disabled = !enable_change;
 	document.iform.force.disabled = !enable_change;
@@ -187,44 +263,115 @@ function enable_change(enable_change) {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Pools");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gettext("Datasets");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gettext("Volumes");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gettext("Snapshots");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gettext("Configuration");?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gettext('Reload page');?>"><span><?=gettext('Pools');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gettext('Datasets');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gettext('Volumes');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gettext('Snapshots');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gettext('Configuration');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav2">
-				<li class="tabinact"><a href="disks_zfs_zpool_vdevice.php"><span><?=gettext("Virtual Device");?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Management");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_zpool_tools.php"><span><?=gettext("Tools");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_zpool_info.php"><span><?=gettext("Information");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gettext("I/O Statistics");?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool_vdevice.php"><span><?=gettext('Virtual Device');?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gettext('Reload page');?>"><span><?=gettext('Management');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool_tools.php"><span><?=gettext('Tools');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool_info.php"><span><?=gettext('Information');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gettext('I/O Statistics');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabcont">
-			<form action="disks_zfs_zpool_edit.php" method="post" name="iform" id="iform">
-				<?php if (!empty($errormsg)) print_error_box($errormsg);?>
-				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-				<?php if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));?>
+			<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
+				<?php 
+					if (!empty($errormsg)) { print_error_box($errormsg); }
+					if (!empty($input_errors)) { print_input_errors($input_errors); }
+					if (file_exists($d_sysrebootreqd_path)) { print_info_box(get_std_save_message(0)); }
+				?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_inputbox("name", gettext("Name"), $pconfig['name'], "", true, 20);?>
-					<?php $a_device = array(); foreach ($a_vdevice as $vdevicev) { if (isset($uuid) && false !== $cnid && !(isset($pconfig['vdevice']) && is_array($pconfig['vdevice']) && in_array($vdevicev['name'], $pconfig['vdevice']))) { continue; } if ((!isset($uuid) || isset($uuid) && false === $cnid) && false !== array_search_ex($vdevicev['name'], $a_pool, "vdevice")) { continue; } $a_device[$vdevicev['name']] = htmlspecialchars("{$vdevicev['name']} ({$vdevicev['type']}" . (!empty($vdevicev['desc']) ? ", {$vdevicev['desc']})" : ")")); }?>
-					<?php html_listbox("vdevice", gettext("Virtual devices"), !empty($pconfig['vdevice']) ? $pconfig['vdevice'] : array(), $a_device, "", true);?>
-					<?php html_inputbox("root", gettext("Root"), $pconfig['root'], gettext("Creates the pool with an alternate root."), false, 40);?>
-					<?php html_inputbox("mountpoint", gettext("Mount point"), $pconfig['mountpoint'], gettext("Sets an alternate mount point for the root dataset. Default is /mnt."), false, 40);?>
-					<?php html_checkbox("force", gettext("Force use"), !empty($pconfig['force']) ? true : false, gettext("Forces use of vdevs, even if they appear in use or specify different size. (This is not recommended.)"), "", false);?>
-					<?php html_inputbox("desc", gettext("Description"), $pconfig['desc'], gettext("You may enter a description here for your reference."), false, 40);?>
+					<thead>
+						<?php html_titleline(gettext('Settings'));?>
+					</thead>
+					<tbody>
+						<?php
+							html_inputbox('name', gettext('Name'), $sphere_record['name'], '', false, 20);
+							html_inputbox('root', gettext('Root'), $sphere_record['root'], gettext('Creates the pool with an alternate root.'), false, 40);
+							html_inputbox('mountpoint', gettext('Mount point'), $sphere_record['mountpoint'], gettext('Sets an alternate mount point for the root dataset. Default is /mnt.'), false, 40);
+							html_checkbox('force', gettext('Force use'), !empty($sphere_record['force']) ? true : false, gettext('Forces use of vdevs, even if they appear in use or specify different size. (This is not recommended.)'), '', false);
+							html_inputbox('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 40);
+							html_separator();
+						?>
+					</tbody>
+				</table>
+				<table width="100%" border="0" cellpadding="6" cellspacing="0">
+					<thead>
+						<?php html_titleline(gettext('Virtual Device List'));?>
+					</thead>
+				</table>
+				<table width="100%" border="0" cellpadding="6" cellspacing="0">
+					<colgroup>
+						<col style="width:1%"> <!--// checkbox -->
+						<col style="width:20%"><!--// Name -->
+						<col style="width:20%"><!--// Type -->
+						<col style="width:54%"><!--// Description -->
+						<col style="width:5%"> <!--// Icons -->
+					</colgroup>
+					<thead>
+						<tr>
+							<td class="listhdrlr"><input type="checkbox" name="togglemembers" disabled="disabled"/></td>
+							<td class="listhdrr"><?=gettext('Name');?></td>
+							<td class="listhdrr"><?=gettext('Type');?></td>
+							<td class="listhdrr"><?=gettext('Description');?></td>
+							<td class="listhdrr">&nbsp;</td>
+						</tr>
+					</thead>
+					<tbody>
+						<?php foreach ($a_vdevice as $r_vdevice):?>
+							<?php $isnotmemberofapool = (false === array_search_ex($r_vdevice['name'], $sphere_array, 'vdevice'));?>
+							<?php $ismemberofthispool = (isset($sphere_record['vdevice']) && is_array($sphere_record['vdevice']) && in_array($r_vdevice['name'], $sphere_record['vdevice']));?>
+							<?php if (($isnotmemberofapool || $ismemberofthispool) && ((RECORD_NEW == $mode_record) || (RECORD_NEW_MODIFY == $mode_record))):?>
+								<tr>
+									<td class="listlr">
+										<?php if ($ismemberofthispool):?>
+											<input type="checkbox" name="vdevice[]" value="<?=$r_vdevice['name'];?>" id="<?=$r_vdevice['uuid'];?>" checked="checked"/>
+										<?php else:?>
+											<input type="checkbox" name="vdevice[]" value="<?=$r_vdevice['name'];?>" id="<?=$r_vdevice['uuid'];?>"/>
+										<?php endif;?>	
+									</td>
+									<td class="listr"><?=htmlspecialchars($r_vdevice['name']);?>&nbsp;</td>
+									<td class="listr"><?=htmlspecialchars($r_vdevice['type']);?>&nbsp;</td>
+									<td class="listr"><?=htmlspecialchars($r_vdevice['desc']);?>&nbsp;</td>
+									<td valign="middle" nowrap="nowrap" class="listbgc">
+										<?php if ($ismemberofthispool):?>
+											<img src="images/unlocked.png" title="<?=gettext($gt_record_opn);?>" border="0" alt="<?=gettext($gt_record_opn);?>" />
+										<?php else:?>
+											&nbsp;
+										<?php endif;?>
+									</td>
+								</tr>
+							<?php endif;?>
+							<?php if ($ismemberofthispool && (RECORD_MODIFY == $mode_record)):?>
+								<tr>
+									<td class="<?=!$ismemberofthispool ? "listlr" : "listlrd";?>">
+										<input type="checkbox" name="vdevice[]" value="<?=$r_vdevice['name'];?>" id="<?=$r_vdevice['uuid'];?>" checked="checked" disabled="disabled"/>
+									</td>
+									<td class="<?=!$ismemberofthispool ? "listr" : "listrd";?>"><?=htmlspecialchars($r_vdevice['name']);?>&nbsp;</td>
+									<td class="<?=!$ismemberofthispool ? "listr" : "listrd";?>"><?=htmlspecialchars($r_vdevice['type']);?>&nbsp;</td>
+									<td class="<?=!$ismemberofthispool ? "listr" : "listrd";?>"><?=htmlspecialchars($r_vdevice['desc']);?>&nbsp;</td>
+									<td valign="middle" nowrap="nowrap" class="listbgc">
+										<img src="images/locked.png" title="<?=gettext($gt_record_loc);?>" border="0" alt="<?=gettext($gt_record_loc);?>" />
+									</td>
+								</tr>
+							<?php endif;?>
+						<?php endforeach;?>
+					</tbody>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=((isset($uuid) && (FALSE !== $cnid))) ? gettext("Save") : gettext("Add");?>" onclick="enable_change(true)" />
-					<input name="Cancel" type="submit" class="formbtn" value="<?=gettext("Cancel");?>" />
-					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=(RECORD_NEW != $mode_record) ? gettext('Save') : gettext('Add');?>" onclick="enable_change(true)" />
+					<input name="Cancel" type="submit" class="formbtn" value="<?=gettext('Cancel');?>" />
+					<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>" />
 				</div>
 				<?php include("formend.inc");?>
 			</form>
@@ -233,7 +380,7 @@ function enable_change(enable_change) {
 </table>
 <script type="text/javascript">
 <!--
-<?php if (isset($uuid) && (false !== $cnid)):?>
+<?php if (RECORD_MODIFY == $mode_record):?>
 <!-- Disable controls that should not be modified anymore in edit mode. -->
 enable_change(false);
 <?php endif;?>

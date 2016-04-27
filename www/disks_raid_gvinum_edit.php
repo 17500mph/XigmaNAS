@@ -288,7 +288,7 @@ foreach ($a_sdisk as $r_sdisk) {
 	$a_device[$helpinghand] = $r_device;
 }
 
-$pgtitle = array(gettext('Disks'), gettext('Software RAID'), gettext('RAID 0/1/5'), isset($id) ? gettext('Edit') : gettext('Add'));
+$pgtitle = array(gettext('Disks'), gettext('Software RAID'), gettext('RAID 0/1/5'), (RECORD_NEW !== $mode_record) ? gettext('Edit') : gettext('Add'));
 ?>
 <?php include("fbegin.inc"); ?>
 <?php if ((RECORD_NEW === $mode_record) || (RECORD_NEW_MODIFY === $mode_record)):?>
