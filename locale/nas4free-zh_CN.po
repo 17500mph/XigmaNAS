@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-25 17:17+0000\n"
+"POT-Creation-Date: 2016-04-28 02:12+0000\n"
 "PO-Revision-Date: 2016-03-03 17:16+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-25 15:28+0000\n"
+"X-Launchpad-Export-Date: 2016-04-28 00:30+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -62,6 +62,10 @@ msgid "%s already exists as a %s."
 msgstr "%s 类似存在 %s。"
 
 #, php-format
+msgid "%s already exists."
+msgstr ""
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr "%s 文件系统配置文件已存在。"
 
@@ -72,10 +76,6 @@ msgstr "%s 卷已存在。"
 #, php-format
 msgid "%s is too long."
 msgstr "%s 太长了。"
-
-#, php-format
-msgid "%s is used to create %s volumes."
-msgstr "%s 用來創建 %s 的卷。"
 
 #, php-format
 msgid "%s of %sB"
@@ -159,6 +159,9 @@ msgid ""
 msgstr "1.这些特殊操作仅适用于调试（debugging）！<br />2.无需操作此选单来启动RAID卷（系统自动启动）。"
 
 msgid "2 or more disks are required to build a RAID-0 volume."
+msgstr ""
+
+msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr ""
 
 msgid "3 or more disks are required to build a RAID-5 volume."
@@ -254,9 +257,6 @@ msgid ""
 "either as a plain string or as a string of hexadecimal digits preceded by "
 "'0x'."
 msgstr "密钥可能是5或13个字符（40或104位），这取决于本地网络适配器的性能。设置可使用普通的字符串或以'0x' 开头的十六进制数字。"
-
-msgid "A minimum of 2 disks is required to build a JBOD."
-msgstr ""
 
 #, php-format
 msgid ""
@@ -444,6 +444,9 @@ msgstr "添加 Rsync 任务"
 msgid "Add URL"
 msgstr "添加 URL"
 
+msgid "Add Virtual Device"
+msgstr ""
+
 msgid "Add Volume"
 msgstr "添加卷"
 
@@ -458,9 +461,6 @@ msgstr "添加自动快照"
 
 msgid "Add command"
 msgstr "添加命令"
-
-msgid "Add device"
-msgstr "添加设备"
 
 msgid "Add disk"
 msgstr "添加磁盘"
@@ -869,6 +869,9 @@ msgstr "辅助设备固件"
 msgid "Auxiliary parameters"
 msgstr "辅助参数"
 
+msgid "Avail"
+msgstr ""
+
 msgid "Available"
 msgstr "可用"
 
@@ -895,9 +898,6 @@ msgstr "不良用户 - （非现有用户）"
 
 msgid "Balance Algorithm"
 msgstr ""
-
-msgid "Balance algorithm"
-msgstr "平衡演算法"
 
 msgid "Ban List"
 msgstr "封禁名单"
@@ -1035,6 +1035,9 @@ msgstr "保加利亚文"
 msgid "By default, only already existing files can be uploaded."
 msgstr "默认是只有已经存在的文件可以上传。"
 
+msgid "CACHE"
+msgstr ""
+
 msgid "CARP"
 msgstr "CARP"
 
@@ -1126,9 +1129,6 @@ msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
 "error)."
 msgstr ""
-
-msgid "Cache"
-msgstr "缓存"
 
 msgid "Cache Device"
 msgstr "缓存设备"
@@ -1720,6 +1720,9 @@ msgstr ""
 msgid "Dataset is protected"
 msgstr ""
 
+msgid "Dataset is unlocked"
+msgstr ""
+
 msgid "Datasets"
 msgstr "数据集（Datasets）"
 
@@ -1795,9 +1798,6 @@ msgstr "删除主机"
 msgid "Delete Login Info"
 msgstr "删除登入资讯"
 
-msgid "Delete RAID"
-msgstr "删除RAID"
-
 msgid "Delete Route"
 msgstr "删除路由"
 
@@ -1813,7 +1813,13 @@ msgstr ""
 msgid "Delete Selected Options"
 msgstr ""
 
+msgid "Delete Selected Pools"
+msgstr ""
+
 msgid "Delete Selected RAID Volumes"
+msgstr ""
+
+msgid "Delete Selected Virtual Devices"
 msgstr ""
 
 msgid "Delete Selected Volumes"
@@ -1846,9 +1852,6 @@ msgstr "删除克隆"
 msgid "Delete command"
 msgstr "删除指令"
 
-msgid "Delete device"
-msgstr "删除装置"
-
 msgid "Delete disk"
 msgstr "删除硬盘"
 
@@ -1875,9 +1878,6 @@ msgstr "删除模组"
 
 msgid "Delete mount point"
 msgstr "删除挂载点"
-
-msgid "Delete pool"
-msgstr "删除池"
 
 msgid "Delete portal group"
 msgstr "删除门户组"
@@ -2120,11 +2120,6 @@ msgstr ""
 msgid "Distributed hash table"
 msgstr "分布式杂凑表"
 
-msgid ""
-"Do not activate this option if you want to add an already existing RAID "
-"again."
-msgstr ""
-
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
 
@@ -2160,9 +2155,6 @@ msgstr "您确认要删除这个克隆吗？"
 msgid "Do you really want to delete this command?"
 msgstr "您确认要删除这个指令吗？"
 
-msgid "Do you really want to delete this device?"
-msgstr "您确定要删除这个装置吗？"
-
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
 "become invalid (e.g. share)!"
@@ -2195,9 +2187,6 @@ msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
 msgstr "您确定要删除这个挂载点吗？所有使用此挂载点的元件都会失效！ (例如：分享区)"
-
-msgid "Do you really want to delete this pool?"
-msgstr "您确定要删除这个池吗？"
 
 msgid "Do you really want to delete this portal group?"
 msgstr "您确定要删除这个门户组吗？"
@@ -2256,6 +2245,33 @@ msgstr ""
 msgid "Do you want to create a RAID-5 from selected disks?"
 msgstr ""
 
+msgid "Do you want to create a RAID-Z1 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-Z2 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-Z3 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a cache device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a hot spare device from selected disk?"
+msgstr ""
+
+msgid "Do you want to create a log device from selected disk?"
+msgstr ""
+
+msgid "Do you want to create a mirrored log device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a mirrored virtual device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a striped virtual device from selected disks?"
+msgstr ""
+
 msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
@@ -2266,6 +2282,12 @@ msgid "Do you want to delete selected jobs?"
 msgstr ""
 
 msgid "Do you want to delete selected options?"
+msgstr ""
+
+msgid "Do you want to delete selected pools?"
+msgstr ""
+
+msgid "Do you want to delete selected virtual devices?"
 msgstr ""
 
 msgid "Do you want to delete selected volumes?"
@@ -2336,9 +2358,6 @@ msgstr "完成。"
 
 msgid "Dos charset"
 msgstr "DOS 字符集"
-
-msgid "Double-parity RAID-Z"
-msgstr "双奇偶校验容错性（RAID-Z2）"
 
 msgid "Download"
 msgstr "下载"
@@ -2430,6 +2449,9 @@ msgstr "编辑 URL"
 msgid "Edit VM"
 msgstr "编辑 VM"
 
+msgid "Edit Virtual Device"
+msgstr ""
+
 msgid "Edit Volume"
 msgstr ""
 
@@ -2441,9 +2463,6 @@ msgstr "编辑自动快照"
 
 msgid "Edit command"
 msgstr "编辑指令"
-
-msgid "Edit device"
-msgstr "编辑设备"
 
 msgid "Edit disk"
 msgstr "编辑硬盘"
@@ -2920,6 +2939,9 @@ msgstr "无法创建 RAM Disk"
 msgid "Failed to execute command zfs."
 msgstr ""
 
+msgid "Failed to execute command zpool."
+msgstr ""
+
 msgid "Failed to execute cron job."
 msgstr "执行定时任务失败。"
 
@@ -3128,6 +3150,9 @@ msgstr ""
 msgid "GEOM Software RAID"
 msgstr ""
 
+msgid "GEOM VINUM Software RAID"
+msgstr ""
+
 msgid "GID"
 msgstr "GID"
 
@@ -3251,6 +3276,9 @@ msgstr ""
 
 msgid "HDD standby time"
 msgstr "HDD 待机时间"
+
+msgid "HOT SPARE"
+msgstr ""
 
 msgid "HTTP Proxy"
 msgstr "HTTP 代理伺服器"
@@ -3758,6 +3786,12 @@ msgid ""
 "are part of a non healthy pool."
 msgstr "不建议导入运行状况不良的存储池或是属于运行不良的存储池的虚拟设备。"
 
+#, php-format
+msgid ""
+"It is recommended to use encryption before you store the backup in a safe "
+"location."
+msgstr ""
+
 msgid ""
 "It's recommended to change the default username and password for accessing "
 "the WebGUI, enter the username here."
@@ -3855,6 +3889,12 @@ msgstr "LCDproc （客户端）"
 
 msgid "LDAP"
 msgstr "LDAP"
+
+msgid "LOG"
+msgstr ""
+
+msgid "LOG (Mirror)"
+msgstr ""
 
 msgid "LUN"
 msgstr "LUN"
@@ -4055,9 +4095,6 @@ msgstr "存储使用文件的位置，例如：%s/backup/.unison"
 msgid "Log"
 msgstr "记录档"
 
-msgid "Log (mirror)"
-msgstr "记录档（镜像）"
-
 msgid "Log Device"
 msgstr "记录设备"
 
@@ -4141,6 +4178,9 @@ msgstr ""
 msgid "MIB is marked for deletion"
 msgstr ""
 
+msgid "MIRROR"
+msgstr ""
+
 msgid "MISSING"
 msgstr "遗失"
 
@@ -4166,6 +4206,14 @@ msgid "Machine suffix"
 msgstr "电脑后缀"
 
 msgid "Maintenance"
+msgstr ""
+
+#, php-format
+msgid ""
+"Make sure to select the correct number of devices:<div "
+"id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each "
+"vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
+"Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
 msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
@@ -4389,9 +4437,6 @@ msgstr "分钟"
 
 msgid "Minutes between network time sync."
 msgstr "多少分钟进行一次网络时间同步。"
-
-msgid "Mirror"
-msgstr "镜像"
 
 msgid "Missing a temporary folder."
 msgstr "遗失了一个暂存文件夹。"
@@ -4631,9 +4676,9 @@ msgstr "尚未配置存储池。请先添加新的 <a href='%s'>存储池</a>。
 
 #, php-format
 msgid ""
-"No configured virtual devices. Please add new <a href='%s'>virtual "
+"No configured virtual devices. Please add new <a href=\"%s\">virtual "
 "device</a> first."
-msgstr "尚未配置虚拟设备。请先添加新的 <a href='%s'>虚拟设备</a>。"
+msgstr ""
 
 msgid "No device selected."
 msgstr "没有选择设备。"
@@ -5144,6 +5189,15 @@ msgstr "存储池信息和状态"
 msgid "Pool Tools"
 msgstr ""
 
+msgid "Pool is marked for removal"
+msgstr ""
+
+msgid "Pool is protected"
+msgstr ""
+
+msgid "Pool is unlocked"
+msgstr ""
+
 msgid "Pools"
 msgstr "存储池（Pool）"
 
@@ -5303,9 +5357,6 @@ msgstr "静音"
 msgid "Quota"
 msgstr "配额"
 
-msgid "RAID 0"
-msgstr "RAID 0"
-
 msgid "RAID 0 Information & Status"
 msgstr "RAID 0 信息和状态"
 
@@ -5318,9 +5369,6 @@ msgstr "RAID 0/1/5 信息和状态"
 msgid "RAID 0/1/5 Maintenance"
 msgstr ""
 
-msgid "RAID 1"
-msgstr "RAID 1"
-
 msgid "RAID 1 Information & Status"
 msgstr "RAID 1 信息和状态"
 
@@ -5329,6 +5377,12 @@ msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
 msgstr "RAID 5 信息和状态"
+
+msgid "RAID Name"
+msgstr ""
+
+msgid "RAID Type"
+msgstr ""
 
 msgid "RAID device can be removed."
 msgstr ""
@@ -5361,6 +5415,15 @@ msgid "RAID-5"
 msgstr ""
 
 msgid "RAID-5 Maintenance"
+msgstr ""
+
+msgid "RAID-Z1"
+msgstr ""
+
+msgid "RAID-Z2"
+msgstr ""
+
+msgid "RAID-Z3"
 msgstr ""
 
 msgid "RAID0"
@@ -5401,12 +5464,6 @@ msgstr "RSYNC 事件"
 
 msgid "RSYNC log"
 msgstr "RSYNC 记录"
-
-msgid "Raid Name"
-msgstr ""
-
-msgid "Raid name"
-msgstr "RAID 名"
 
 msgid "Ramdisk"
 msgstr ""
@@ -5734,6 +5791,9 @@ msgstr "SSHD 记录"
 msgid "SSID"
 msgstr "SSID"
 
+msgid "STRIPE"
+msgstr ""
+
 msgid "Samba AD"
 msgstr "Samba AD"
 
@@ -5874,9 +5934,6 @@ msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
-
-msgid "Select your read balance algorithm."
-msgstr "请选择您的阅览平衡演算法。"
 
 msgid "Selected"
 msgstr "已选择"
@@ -6063,9 +6120,6 @@ msgstr "关机倒数"
 msgid "Simple Network Management Protocol"
 msgstr "简单网络管理协议"
 
-msgid "Single-parity RAID-Z"
-msgstr "单奇偶校验容错性 （RAID-Z）"
-
 msgid "Size"
 msgstr "容量"
 
@@ -6122,9 +6176,6 @@ msgid "Software RAID"
 msgstr "软体RAID"
 
 msgid "Software Used"
-msgstr ""
-
-msgid "Software gconcat JBOD"
 msgstr ""
 
 msgid "Source"
@@ -6292,9 +6343,6 @@ msgstr "当用户访问该URL时，在对话框中显示的字符串。"
 
 msgid "String identifier of the extent."
 msgstr "Extent 的字符串标识符。"
-
-msgid "Stripe"
-msgstr "条带（Stripe）"
 
 msgid "Subject"
 msgstr "主题"
@@ -6583,12 +6631,6 @@ msgid ""
 "manufacturing."
 msgstr ""
 
-#, php-format
-msgid ""
-"The RAID volume is currently mounted! Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
-msgstr "目前正在挂载此RAID卷！继续前请卸载 <a href='%s'>挂载点</a> 。"
-
 msgid "The TCP port must be a valid port number."
 msgstr "请输入一个有效的连接端口号码。"
 
@@ -6858,9 +6900,6 @@ msgstr "预设的密钥长度是：AES 为128，Blowfish 为128，Camellia 为12
 msgid "The default time in seconds to display a screen."
 msgstr "显示在屏幕的时间的默认值（秒）。"
 
-msgid "The device name may only consist of the characters a-z, A-Z, 0-9."
-msgstr "设备名称只可以由az , AZ , 0-9 的字元组成。"
-
 msgid "The device's IP address."
 msgstr "设备的IP地址。"
 
@@ -7045,6 +7084,12 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr ""
 
+msgid "The name of the pool cannot be changed."
+msgstr ""
+
+msgid "The name of this virtual device cannot be changed."
+msgstr ""
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "'%s' 网络无效。"
@@ -7096,12 +7141,6 @@ msgid ""
 msgstr ""
 "新文件和目录的权限通常是由创建掩码（create mask）和目录面具（directory mask）参数管辖，但继承权限参数覆盖这些参数。\r\n"
 "这在多用户的系统上特别有用，让每个用户灵活的使用分享区。"
-
-msgid "The pool name does not match the naming rules."
-msgstr "池（pool）名称不符合命名规则。"
-
-msgid "The pool name is invalid: contains spaces."
-msgstr "池名称无效：有空格。"
 
 msgid ""
 "The port to listen to. The default is to listen to the tftp port specified "
@@ -7254,15 +7293,6 @@ msgstr "有太多的附加组。"
 
 msgid "There is no error, the file uploaded with success."
 msgstr "文件上传成功，没有任何错误。"
-
-msgid "There must be 2 disks in a RAID 1 volume."
-msgstr "RAID 1 模式最少要有 2 个硬盘。"
-
-msgid "There must be a minimum of 2 disks in a RAID 0 volume."
-msgstr "JBOD 模式必需有至少 2 個硬盘。"
-
-msgid "There must be a minimum of 3 disks in a RAID 5 volume."
-msgstr "RAID 5 模式必需有最少 3 个硬盘。"
 
 msgid "There must be at least 1 disks selected."
 msgstr "至少要选择 1 个硬盘。"
@@ -7427,9 +7457,6 @@ msgstr "控制此分享区会否列在网络列表（net view）和浏览列表�
 
 msgid "This couple targetname/targetaddress already exists in the disk list."
 msgstr "这组 targetname/targetaddress 已存在磁盘列表中。"
-
-msgid "This device already exists in the raid volume list."
-msgstr "此装置已存在RAID 卷列表中。"
 
 msgid "This disk already exists in the disk list."
 msgstr "此硬盘已存在硬盘列表中。"
@@ -7649,11 +7676,6 @@ msgstr "这将导致 %s 查看 <a href='%s'>%s</a> 页时不检查新的固件�
 
 msgid "This will create a recycle bin on the share."
 msgstr "在分享区创建回收站。"
-
-msgid ""
-"This will erase ALL data on the selected disks! Do not use this option if "
-"you want to add an already existing RAID again."
-msgstr "这将删除所选磁盘上的所有数据！如果您想再次添加已存在的RAID 的话，请不要使用这个选项。"
 
 msgid ""
 "This will erase ALL data on your disk! Do not use this option if you want to "
@@ -7902,9 +7924,6 @@ msgstr "Trap 字符串。"
 
 msgid "Traps"
 msgstr "Traps"
-
-msgid "Triple-parity RAID-Z"
-msgstr "三奇偶校验容错性（RAID-Z3）"
 
 msgid "Trivial File Transfer Protocol"
 msgstr "简单文件传输传输协议（TFTP）"
@@ -8290,6 +8309,18 @@ msgstr "视频"
 msgid "Virtual Device"
 msgstr "虚拟设备"
 
+msgid "Virtual Device List"
+msgstr ""
+
+msgid "Virtual Device is marked for removal"
+msgstr ""
+
+msgid "Virtual Device is protected"
+msgstr ""
+
+msgid "Virtual Device is unlocked"
+msgstr ""
+
 msgid "Virtual Devices"
 msgstr "虚拟设备"
 
@@ -8308,6 +8339,12 @@ msgstr "虚拟介面"
 msgid "Virtual Machine"
 msgstr "虚拟机"
 
+msgid "Virtual device can be removed."
+msgstr ""
+
+msgid "Virtual device is already in use."
+msgstr ""
+
 msgid "Virtual devices"
 msgstr "虚拟设备"
 
@@ -8323,10 +8360,13 @@ msgstr "卷名"
 msgid "Volume Size Limit"
 msgstr "卷大小限制"
 
-msgid "Volume is locked"
+msgid "Volume is marked for deletion"
 msgstr ""
 
-msgid "Volume is marked for deletion"
+msgid "Volume is protected"
+msgstr ""
+
+msgid "Volume is unlocked"
 msgstr ""
 
 msgid "Volume label"
@@ -8382,11 +8422,6 @@ msgstr "警告"
 
 msgid "Warning Level"
 msgstr ""
-
-msgid ""
-"Warning: You are going to delete a RAID volume. All data will get lost and "
-"can not be recovered."
-msgstr "警告：您即将删除一个 RAID 卷。所有资料将会遗失，而且无法恢复。"
 
 msgid ""
 "Warning: You are going to delete an encrypted volume. All data will get lost "
@@ -8702,9 +8737,6 @@ msgstr "最低（省电）"
 msgid "minute(s)"
 msgstr "分"
 
-msgid "mirroring"
-msgstr "镜像"
-
 msgid "mount"
 msgstr "挂载"
 
@@ -8732,9 +8764,6 @@ msgstr "rc.conf"
 msgid "revision"
 msgstr "修订版本"
 
-msgid "rotated block-interleaved parity"
-msgstr "单奇偶校验容错性"
-
 msgid "scan target failed."
 msgstr "扫描目标失败"
 
@@ -8746,9 +8775,6 @@ msgstr "最小可设定高电压转换点"
 
 msgid "smallest settable low voltage transfer point"
 msgstr "最小可设定的低电压转换点"
-
-msgid "striping"
-msgstr "条带化（striping）"
 
 msgid "successfully."
 msgstr "成功。"
@@ -8770,3 +8796,12 @@ msgstr "卸载"
 
 msgid "version:"
 msgstr "版本："
+
+#~ msgid "Cache"
+#~ msgstr "缓存"
+
+#~ msgid "Mirror"
+#~ msgstr "镜像"
+
+#~ msgid "Stripe"
+#~ msgstr "条带（Stripe）"

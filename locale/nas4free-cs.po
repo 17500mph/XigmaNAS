@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-25 17:17+0000\n"
+"POT-Creation-Date: 2016-04-28 02:12+0000\n"
 "PO-Revision-Date: 2016-03-28 09:26+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-25 15:29+0000\n"
+"X-Launchpad-Export-Date: 2016-04-28 00:28+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -63,6 +63,10 @@ msgid "%s already exists as a %s."
 msgstr "%s už existuje jako %s."
 
 #, php-format
+msgid "%s already exists."
+msgstr ""
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr "%s je už nastaveno jako souborový systém."
 
@@ -73,10 +77,6 @@ msgstr "%s je už nastaveno jako svazek."
 #, php-format
 msgid "%s is too long."
 msgstr "%s je příliš dlouhé."
-
-#, php-format
-msgid "%s is used to create %s volumes."
-msgstr "%s je použito pro vytvoření %s svazků."
 
 #, php-format
 msgid "%s of %sB"
@@ -185,6 +185,9 @@ msgstr ""
 "nabídku není třeba používat pro spouštění RAID svazku (děje se automaticky)."
 
 msgid "2 or more disks are required to build a RAID-0 volume."
+msgstr ""
+
+msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr ""
 
 msgid "3 or more disks are required to build a RAID-5 volume."
@@ -309,9 +312,6 @@ msgstr ""
 "používá tato síť a jaké jsou schopnosti tohoto bezdrátového síťového "
 "rozhraní. Může být zadáno buď jako řetězec textu nebo osmičkových číslic (ve "
 "druhém případě předeslaný „0x“ – nula a malé písmeno iks)."
-
-msgid "A minimum of 2 disks is required to build a JBOD."
-msgstr ""
 
 #, php-format
 msgid ""
@@ -509,6 +509,9 @@ msgstr "Přidat Rsync úlohu"
 msgid "Add URL"
 msgstr "Přidat URL adresu"
 
+msgid "Add Virtual Device"
+msgstr ""
+
 msgid "Add Volume"
 msgstr "Přidat svazek"
 
@@ -523,9 +526,6 @@ msgstr "Přidat automatické zachycování stavu"
 
 msgid "Add command"
 msgstr "Přidat příkaz"
-
-msgid "Add device"
-msgstr "Přidat zařízení"
 
 msgid "Add disk"
 msgstr "Přidat disk"
@@ -973,6 +973,9 @@ msgstr "Pomocný firmware zařízení"
 msgid "Auxiliary parameters"
 msgstr "Pomocné parametry"
 
+msgid "Avail"
+msgstr ""
+
 msgid "Available"
 msgstr "K dispozici"
 
@@ -1003,9 +1006,6 @@ msgstr "Chybný uživatel – (neexistují uživatelé)"
 
 msgid "Balance Algorithm"
 msgstr ""
-
-msgid "Balance algorithm"
-msgstr "Vyvažovací algoritmus"
 
 msgid "Ban List"
 msgstr "Seznam vykázaných"
@@ -1154,6 +1154,9 @@ msgstr ""
 "Ve výchozím nastavení je umožněno nahrávat pouze soubory, které jsou nazvané "
 "stejně, jako ty už přítomné."
 
+msgid "CACHE"
+msgstr ""
+
 msgid "CARP"
 msgstr "CARP"
 
@@ -1245,9 +1248,6 @@ msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
 "error)."
 msgstr "Počet CRC chyb. Počítá CRC chyby (FIS CRC při čtení/zápisu dat)."
-
-msgid "Cache"
-msgstr "Mezipaměť"
 
 msgid "Cache Device"
 msgstr "Zařízení mezipaměti"
@@ -1940,6 +1940,9 @@ msgstr "Datová sada je označena ke smazání"
 msgid "Dataset is protected"
 msgstr "Datová sada je chráněna"
 
+msgid "Dataset is unlocked"
+msgstr ""
+
 msgid "Datasets"
 msgstr "Datové sady"
 
@@ -2017,9 +2020,6 @@ msgstr "Smazat záznam pro stroj"
 msgid "Delete Login Info"
 msgstr "Smazat údaje o přihlášení"
 
-msgid "Delete RAID"
-msgstr "Odstranit RAID pole"
-
 msgid "Delete Route"
 msgstr "Smazat trasu"
 
@@ -2035,7 +2035,13 @@ msgstr "Smazat označené úlohy"
 msgid "Delete Selected Options"
 msgstr "Smazat označené předvolby"
 
+msgid "Delete Selected Pools"
+msgstr ""
+
 msgid "Delete Selected RAID Volumes"
+msgstr ""
+
+msgid "Delete Selected Virtual Devices"
 msgstr ""
 
 msgid "Delete Selected Volumes"
@@ -2068,9 +2074,6 @@ msgstr "Smazat klon"
 msgid "Delete command"
 msgstr "Odstranit příkaz"
 
-msgid "Delete device"
-msgstr "Odstranit zařízení"
-
 msgid "Delete disk"
 msgstr "Odstranit disk"
 
@@ -2099,9 +2102,6 @@ msgstr "Odstranit modul"
 
 msgid "Delete mount point"
 msgstr "Odstranit přípojný bod"
-
-msgid "Delete pool"
-msgstr "Odstranit fond"
 
 msgid "Delete portal group"
 msgstr "Odstranit skupinu portálů"
@@ -2357,11 +2357,6 @@ msgstr ""
 msgid "Distributed hash table"
 msgstr "Distribuovaná tabulka otisků (hash)"
 
-msgid ""
-"Do not activate this option if you want to add an already existing RAID "
-"again."
-msgstr ""
-
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
 
@@ -2398,9 +2393,6 @@ msgstr "Opravdu chcete smazat tento klon?"
 
 msgid "Do you really want to delete this command?"
 msgstr "Opravdu chcete smazat tento příkaz?"
-
-msgid "Do you really want to delete this device?"
-msgstr "Opravdu chcete odstranit toto zařízení?"
 
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
@@ -2440,9 +2432,6 @@ msgid ""
 msgstr ""
 "Opravdu chcete smazat tento přípojný bod? Veškeré prvky, které ho využívají, "
 "přestanou fungovat (např. sdílení)!"
-
-msgid "Do you really want to delete this pool?"
-msgstr "Opravdu chcete smazat tento fond?"
 
 msgid "Do you really want to delete this portal group?"
 msgstr "Opravdu chcete smazat tuto skupinu portálů?"
@@ -2505,6 +2494,33 @@ msgstr ""
 msgid "Do you want to create a RAID-5 from selected disks?"
 msgstr ""
 
+msgid "Do you want to create a RAID-Z1 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-Z2 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-Z3 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a cache device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a hot spare device from selected disk?"
+msgstr ""
+
+msgid "Do you want to create a log device from selected disk?"
+msgstr ""
+
+msgid "Do you want to create a mirrored log device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a mirrored virtual device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a striped virtual device from selected disks?"
+msgstr ""
+
 msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
@@ -2516,6 +2532,12 @@ msgstr "Opravdu smazat označené úlohy?"
 
 msgid "Do you want to delete selected options?"
 msgstr "Opravdu smazat označené předvolby?"
+
+msgid "Do you want to delete selected pools?"
+msgstr ""
+
+msgid "Do you want to delete selected virtual devices?"
+msgstr ""
 
 msgid "Do you want to delete selected volumes?"
 msgstr "Opravdu smazat označené svazky?"
@@ -2586,9 +2608,6 @@ msgstr "Dokončeno."
 
 msgid "Dos charset"
 msgstr "Znaková sada pro DOS"
-
-msgid "Double-parity RAID-Z"
-msgstr "RAID-Z s dvojitou detekcí chyb"
 
 msgid "Download"
 msgstr "Stáhnout"
@@ -2680,6 +2699,9 @@ msgstr "Upravit URL adresu"
 msgid "Edit VM"
 msgstr "Upravit virt. stroj"
 
+msgid "Edit Virtual Device"
+msgstr ""
+
 msgid "Edit Volume"
 msgstr "Upravit svazek"
 
@@ -2691,9 +2713,6 @@ msgstr "Upravit automatické zachycování stavu"
 
 msgid "Edit command"
 msgstr "Upravit příkaz"
-
-msgid "Edit device"
-msgstr "Upravit zařízení"
 
 msgid "Edit disk"
 msgstr "Upravit disk"
@@ -3208,6 +3227,9 @@ msgstr "Nezdařilo se vytvořit souborový systém v operační paměti."
 msgid "Failed to execute command zfs."
 msgstr "Nezdařilo se vykonat příkaz zfs."
 
+msgid "Failed to execute command zpool."
+msgstr ""
+
 msgid "Failed to execute cron job."
 msgstr "Nezdařilo se vykonat naplánovanou (cron) úlohu."
 
@@ -3428,6 +3450,9 @@ msgstr ""
 msgid "GEOM Software RAID"
 msgstr ""
 
+msgid "GEOM VINUM Software RAID"
+msgstr ""
+
 msgid "GID"
 msgstr "Identifikátor skupiny (GID)"
 
@@ -3560,6 +3585,9 @@ msgstr ""
 
 msgid "HDD standby time"
 msgstr "prodleva přechodu HDD do pohotovostního režimu"
+
+msgid "HOT SPARE"
+msgstr ""
 
 msgid "HTTP Proxy"
 msgstr "HTTP Proxy"
@@ -4127,6 +4155,12 @@ msgstr ""
 "Nedoporučuje se importovat fondy, které nejsou v pořádku či virtuální "
 "zařízení, která jsou součástí takových fondů."
 
+#, php-format
+msgid ""
+"It is recommended to use encryption before you store the backup in a safe "
+"location."
+msgstr ""
+
 msgid ""
 "It's recommended to change the default username and password for accessing "
 "the WebGUI, enter the username here."
@@ -4230,6 +4264,12 @@ msgstr "LCDproc (klient)"
 
 msgid "LDAP"
 msgstr "LDAP"
+
+msgid "LOG"
+msgstr ""
+
+msgid "LOG (Mirror)"
+msgstr ""
 
 msgid "LUN"
 msgstr "Číslo logické jednotky (LUN)"
@@ -4462,9 +4502,6 @@ msgstr "Umístění pracovních souborů, např. %s/backup/.unison"
 msgid "Log"
 msgstr "Záznam událostí"
 
-msgid "Log (mirror)"
-msgstr "Protokol (zrcadlová kopie)"
-
 msgid "Log Device"
 msgstr "Zařízení, na které zaznamenávat události"
 
@@ -4557,6 +4594,9 @@ msgstr "MIB soubor je uzamčený"
 msgid "MIB is marked for deletion"
 msgstr "MIB soubor je označen ke smazání"
 
+msgid "MIRROR"
+msgstr ""
+
 msgid "MISSING"
 msgstr "CHYBĚJÍCÍ"
 
@@ -4582,6 +4622,14 @@ msgid "Machine suffix"
 msgstr "Přípona stroje"
 
 msgid "Maintenance"
+msgstr ""
+
+#, php-format
+msgid ""
+"Make sure to select the correct number of devices:<div "
+"id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each "
+"vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
+"Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
 msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
@@ -4821,9 +4869,6 @@ msgstr "Minuty"
 
 msgid "Minutes between network time sync."
 msgstr "Perioda synchronizace času ze sítě (v minutách)."
-
-msgid "Mirror"
-msgstr "Zrcadlo"
 
 msgid "Missing a temporary folder."
 msgstr "Chybí dočasná složka."
@@ -5087,11 +5132,9 @@ msgstr ""
 
 #, php-format
 msgid ""
-"No configured virtual devices. Please add new <a href='%s'>virtual "
+"No configured virtual devices. Please add new <a href=\"%s\">virtual "
 "device</a> first."
 msgstr ""
-"Nejsou nastavená virtuální zařízení. Nejprve nějaké <a href='%s'>virtuální "
-"zařízení</a> přidejte."
 
 msgid "No device selected."
 msgstr "Není vybráno žádné zařízení."
@@ -5634,6 +5677,15 @@ msgstr "Fond – informace a stav"
 msgid "Pool Tools"
 msgstr ""
 
+msgid "Pool is marked for removal"
+msgstr ""
+
+msgid "Pool is protected"
+msgstr ""
+
+msgid "Pool is unlocked"
+msgstr ""
+
 msgid "Pools"
 msgstr "Fondy"
 
@@ -5803,9 +5855,6 @@ msgstr "Tiché"
 msgid "Quota"
 msgstr "Kvóta"
 
-msgid "RAID 0"
-msgstr "RAID 0"
-
 msgid "RAID 0 Information & Status"
 msgstr "RAID 0 – informace a stav"
 
@@ -5818,9 +5867,6 @@ msgstr "RAID 0/1/5 – informace a stav"
 msgid "RAID 0/1/5 Maintenance"
 msgstr ""
 
-msgid "RAID 1"
-msgstr "RAID 1"
-
 msgid "RAID 1 Information & Status"
 msgstr "RAID 1 – informace a stav"
 
@@ -5829,6 +5875,12 @@ msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
 msgstr "RAID 5 – informace a stav"
+
+msgid "RAID Name"
+msgstr ""
+
+msgid "RAID Type"
+msgstr ""
 
 msgid "RAID device can be removed."
 msgstr ""
@@ -5861,6 +5913,15 @@ msgid "RAID-5"
 msgstr ""
 
 msgid "RAID-5 Maintenance"
+msgstr ""
+
+msgid "RAID-Z1"
+msgstr ""
+
+msgid "RAID-Z2"
+msgstr ""
+
+msgid "RAID-Z3"
 msgstr ""
 
 msgid "RAID0"
@@ -5901,12 +5962,6 @@ msgstr "Události v RSYNC"
 
 msgid "RSYNC log"
 msgstr "RSYNC – záznam událostí"
-
-msgid "Raid Name"
-msgstr ""
-
-msgid "Raid name"
-msgstr "Název RAID pole"
 
 msgid "Ramdisk"
 msgstr "Disk v operační paměti"
@@ -6246,6 +6301,9 @@ msgstr "Protokol událostí služby ssh"
 msgid "SSID"
 msgstr "Název bezdrátové sítě (SSID)"
 
+msgid "STRIPE"
+msgstr ""
+
 msgid "Samba AD"
 msgstr "Samba AD"
 
@@ -6402,9 +6460,6 @@ msgid ""
 msgstr ""
 "Vyberte, které síťové rozhraní použít (k dispozici pouze v případě, že tento "
 "server disponuje více než jedním)."
-
-msgid "Select your read balance algorithm."
-msgstr "Vyberte algoritmus vyvažování čtení."
 
 msgid "Selected"
 msgstr "Vybráno"
@@ -6603,9 +6658,6 @@ msgstr "Časovač vypnutí"
 msgid "Simple Network Management Protocol"
 msgstr "Jednoduchý protokol správy sítě"
 
-msgid "Single-parity RAID-Z"
-msgstr "RAID-Z s jednoduchou paritou"
-
 msgid "Size"
 msgstr "Velikost"
 
@@ -6665,9 +6717,6 @@ msgstr "Softwarový RAID"
 
 msgid "Software Used"
 msgstr "Použitý software"
-
-msgid "Software gconcat JBOD"
-msgstr ""
 
 msgid "Source"
 msgstr "Zdroj"
@@ -6859,9 +6908,6 @@ msgstr ""
 
 msgid "String identifier of the extent."
 msgstr "Znakové označení úložné jednotky."
-
-msgid "Stripe"
-msgstr "Prokládat"
 
 msgid "Subject"
 msgstr "Předmět"
@@ -7163,14 +7209,6 @@ msgstr ""
 "Atribut „Nově projevené vadné bloky flash paměti“ značí celkový počet "
 "vadných bloků flash paměti, které jednotka zjistila od doby své prvotní "
 "inicializace při výrobě."
-
-#, php-format
-msgid ""
-"The RAID volume is currently mounted! Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
-msgstr ""
-"Tento RAID svazek je v tuto chvíli připojen! Pokračujte až po odebrání <a "
-"href='%s'>přípojného bodu</a>."
 
 msgid "The TCP port must be a valid port number."
 msgstr "Je třeba, aby číslo TCP portu bylo platné."
@@ -7489,9 +7527,6 @@ msgstr ""
 msgid "The default time in seconds to display a screen."
 msgstr "Výchozí doba pro zobrazení."
 
-msgid "The device name may only consist of the characters a-z, A-Z, 0-9."
-msgstr "Název zařízení může obsahovat pouze znaky a-z, A-Z a 0-9."
-
 msgid "The device's IP address."
 msgstr "IP adresa zařízení."
 
@@ -7721,6 +7756,12 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr ""
 
+msgid "The name of the pool cannot be changed."
+msgstr ""
+
+msgid "The name of this virtual device cannot be changed."
+msgstr ""
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "%s není platným zadáním pro sít."
@@ -7777,12 +7818,6 @@ msgstr ""
 "maskou vytváření a složek, ale parametr přebírat oprávnění toto přebíjí. "
 "Může být užitečné zemnéna na systémech s mnoha uživateli, kdy umožní pružné "
 "používání sdílení každým z uživatelů."
-
-msgid "The pool name does not match the naming rules."
-msgstr "Název fondu neodpovídá pravidlům pro nazývání."
-
-msgid "The pool name is invalid: contains spaces."
-msgstr "Neplatný název fondu: obsahuje mezery."
 
 msgid ""
 "The port to listen to. The default is to listen to the tftp port specified "
@@ -7965,15 +8000,6 @@ msgstr "Příliš mnoho dalších skupin."
 
 msgid "There is no error, the file uploaded with success."
 msgstr "Soubor byl serverem úspěšně přijat."
-
-msgid "There must be 2 disks in a RAID 1 volume."
-msgstr "Pro RAID pole typu 1 jsou třeba dva disky."
-
-msgid "There must be a minimum of 2 disks in a RAID 0 volume."
-msgstr "Pro RAID pole typu 0 jsou třeba alespoň dva disky."
-
-msgid "There must be a minimum of 3 disks in a RAID 5 volume."
-msgstr "Pro RAID pole typu 5 jsou třeba alespoň tři disky."
 
 msgid "There must be at least 1 disks selected."
 msgstr "Je třeba vybrat alespoň jeden disk."
@@ -8166,9 +8192,6 @@ msgstr ""
 
 msgid "This couple targetname/targetaddress already exists in the disk list."
 msgstr "Tato dvojice nazevcile/adresacile už v seznamu disků existuje."
-
-msgid "This device already exists in the raid volume list."
-msgstr "Toto zařízení už v seznamu RAID svazků existuje."
 
 msgid "This disk already exists in the disk list."
 msgstr "Tento disk už seznamu disků existuje."
@@ -8464,13 +8487,6 @@ msgid "This will create a recycle bin on the share."
 msgstr "Toto na sdílení vytvoří objekt Koš."
 
 msgid ""
-"This will erase ALL data on the selected disks! Do not use this option if "
-"you want to add an already existing RAID again."
-msgstr ""
-"Toto smaže VEŠKERÁ data na vybraných discích! Nepoužívejte tuto volbu pokud "
-"chcete znovu přidat existující RAID."
-
-msgid ""
 "This will erase ALL data on your disk! Do not use this option if you want to "
 "add an existing encrypted disk."
 msgstr ""
@@ -8758,9 +8774,6 @@ msgstr "Obsah upozornění"
 
 msgid "Traps"
 msgstr "Upozorňování (trap)"
-
-msgid "Triple-parity RAID-Z"
-msgstr "RAID-Z pole s trojtou paritou"
 
 msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol (Jednoduchý protokol přenosu souborů)"
@@ -9175,6 +9188,18 @@ msgstr "Video"
 msgid "Virtual Device"
 msgstr "Virtuální zařízení"
 
+msgid "Virtual Device List"
+msgstr ""
+
+msgid "Virtual Device is marked for removal"
+msgstr ""
+
+msgid "Virtual Device is protected"
+msgstr ""
+
+msgid "Virtual Device is unlocked"
+msgstr ""
+
 msgid "Virtual Devices"
 msgstr "Virtuální zařízení"
 
@@ -9193,6 +9218,12 @@ msgstr "Virtuální rozhraní"
 msgid "Virtual Machine"
 msgstr "Virtuální stroj"
 
+msgid "Virtual device can be removed."
+msgstr ""
+
+msgid "Virtual device is already in use."
+msgstr ""
+
 msgid "Virtual devices"
 msgstr "Virtuální zařízení"
 
@@ -9208,11 +9239,14 @@ msgstr "Název svazku"
 msgid "Volume Size Limit"
 msgstr "Omezení velikosti svazku"
 
-msgid "Volume is locked"
-msgstr "Svazek je uzamčen"
-
 msgid "Volume is marked for deletion"
 msgstr "Svazek je označen ke smazání"
+
+msgid "Volume is protected"
+msgstr ""
+
+msgid "Volume is unlocked"
+msgstr ""
 
 msgid "Volume label"
 msgstr "Štítek svazku"
@@ -9267,13 +9301,6 @@ msgstr "Varování"
 
 msgid "Warning Level"
 msgstr "Úroveň varování"
-
-msgid ""
-"Warning: You are going to delete a RAID volume. All data will get lost and "
-"can not be recovered."
-msgstr ""
-"Varování: Chystáte se smazat RAID svazek. Veškerá data budou ztracena a "
-"nebude možné je obnovit."
 
 msgid ""
 "Warning: You are going to delete an encrypted volume. All data will get lost "
@@ -9632,9 +9659,6 @@ msgstr "co nejméně (úspora energie)"
 msgid "minute(s)"
 msgstr "minut"
 
-msgid "mirroring"
-msgstr "zrcadlení"
-
 msgid "mount"
 msgstr "připojit (mount)"
 
@@ -9662,9 +9686,6 @@ msgstr "rc.conf"
 msgid "revision"
 msgstr "revize"
 
-msgid "rotated block-interleaved parity"
-msgstr "rotovaná parita s prokládanými bloky"
-
 msgid "scan target failed."
 msgstr "skenování cíle se nezdařilo."
 
@@ -9680,9 +9701,6 @@ msgid "smallest settable low voltage transfer point"
 msgstr ""
 "až jak nízko lze nastavit hranici podpětí, při poklesu pod kterou přepnout "
 "na akumulátory"
-
-msgid "striping"
-msgstr "prokládání"
 
 msgid "successfully."
 msgstr "úspěšně."
@@ -9704,3 +9722,12 @@ msgstr "odpojit (umount)"
 
 msgid "version:"
 msgstr "verze:"
+
+#~ msgid "Mirror"
+#~ msgstr "Zrcadlo"
+
+#~ msgid "Cache"
+#~ msgstr "Mezipaměť"
+
+#~ msgid "Stripe"
+#~ msgstr "Prokládat"

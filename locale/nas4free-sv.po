@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-25 17:17+0000\n"
-"PO-Revision-Date: 2016-04-24 10:07+0000\n"
+"POT-Creation-Date: 2016-04-28 02:12+0000\n"
+"PO-Revision-Date: 2016-04-26 15:29+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-25 15:29+0000\n"
+"X-Launchpad-Export-Date: 2016-04-28 00:30+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -24,7 +24,7 @@ msgstr " tilldelades "
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
-msgstr ""
+msgstr "%1$s används för att skapa %2$s volumer."
 
 #, php-format
 msgid "%d days"
@@ -63,6 +63,10 @@ msgid "%s already exists as a %s."
 msgstr "%s existerar redan som %s."
 
 #, php-format
+msgid "%s already exists."
+msgstr ""
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr "%s är redan konfigurerat som ett filsystem."
 
@@ -73,10 +77,6 @@ msgstr "%s är redan konfigurerad som en volym."
 #, php-format
 msgid "%s is too long."
 msgstr "%s är för lång."
-
-#, php-format
-msgid "%s is used to create %s volumes."
-msgstr "%s används för att skapa %s volymer."
 
 #, php-format
 msgid "%s of %sB"
@@ -165,10 +165,10 @@ msgid "0=disabled, 1-255=enabled command queuing with specified depth."
 msgstr "0=Avstängd, 1-255= Kommandokö med angivet djup"
 
 msgid "1 or more disks are required to build a JBOD volume."
-msgstr ""
+msgstr "1 eller fler diskar behövs för att skapa en JBOD volym."
 
 msgid "1 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "1 eller fler diskar behövs för att skapa en RAID-1 volym."
 
 msgid ""
 "1. Use these specials actions for debugging only!<br />2. There is no need "
@@ -178,10 +178,13 @@ msgstr ""
 "RAID-volymen genom att använde denna menyn (den startar automatiskt)."
 
 msgid "2 or more disks are required to build a RAID-0 volume."
+msgstr "2 eller fler diskar behövs för att skapa en RAID-0 volym."
+
+msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr ""
 
 msgid "3 or more disks are required to build a RAID-5 volume."
-msgstr ""
+msgstr "3 eller fler diskar behövs för att skapa en RAID-5 volym."
 
 msgid "4KB wrapper"
 msgstr "4KB paket"
@@ -295,9 +298,6 @@ msgstr ""
 "En nyckel innehåller 5 eller 13 tecken (40 eller 104 bitar) beroende på det "
 "lokala nätverket och nätverksadapterns egenskaper. Nyckeln kan specificeras "
 "i klartext eller som en sträng av ett hexadecimalt värde inlett med '0x'."
-
-msgid "A minimum of 2 disks is required to build a JBOD."
-msgstr "Minst två diskar krävs för att bygga en JBOD."
 
 #, php-format
 msgid ""
@@ -494,6 +494,9 @@ msgstr "Lägg till Rsync jobb"
 msgid "Add URL"
 msgstr "Lägg till url"
 
+msgid "Add Virtual Device"
+msgstr ""
+
 msgid "Add Volume"
 msgstr "Lägg till Volym"
 
@@ -508,9 +511,6 @@ msgstr "Lägg till automatisk avbildning"
 
 msgid "Add command"
 msgstr "Lägg till kommando"
-
-msgid "Add device"
-msgstr "Lägg till enhet"
 
 msgid "Add disk"
 msgstr "Lägg till disk"
@@ -947,6 +947,9 @@ msgstr "Auxiliary firmware"
 msgid "Auxiliary parameters"
 msgstr "Yttre parametrar"
 
+msgid "Avail"
+msgstr ""
+
 msgid "Available"
 msgstr "Tillgänglig"
 
@@ -974,9 +977,6 @@ msgid "Bad User - (Non Existing Users)"
 msgstr "Felaktig användare - (Icke existerande)"
 
 msgid "Balance Algorithm"
-msgstr ""
-
-msgid "Balance algorithm"
 msgstr "Balanseringsalgoritm"
 
 msgid "Ban List"
@@ -1118,6 +1118,9 @@ msgstr "Bulgariska"
 msgid "By default, only already existing files can be uploaded."
 msgstr "Som standard kan bara redan existerande filer laddas upp."
 
+msgid "CACHE"
+msgstr ""
+
 msgid "CARP"
 msgstr "CARP"
 
@@ -1209,9 +1212,6 @@ msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
 "error)."
 msgstr "CRC felräknare. Räknar antal CRC fel (läs/skriv data FIS CRC fel)."
-
-msgid "Cache"
-msgstr "Buffert"
 
 msgid "Cache Device"
 msgstr "Buffertenhet"
@@ -1871,6 +1871,9 @@ msgstr "Datasetet är markerat för borttagning"
 msgid "Dataset is protected"
 msgstr "Datasetet är skyddat"
 
+msgid "Dataset is unlocked"
+msgstr ""
+
 msgid "Datasets"
 msgstr "Dataseten"
 
@@ -1948,9 +1951,6 @@ msgstr "Ta bort värd"
 msgid "Delete Login Info"
 msgstr "Radera Inloggnings Information"
 
-msgid "Delete RAID"
-msgstr "Ta bort RAID"
-
 msgid "Delete Route"
 msgstr "Ta bort väg"
 
@@ -1966,8 +1966,14 @@ msgstr "Ta bort valda jobb"
 msgid "Delete Selected Options"
 msgstr "Ta bort valda optioner"
 
+msgid "Delete Selected Pools"
+msgstr ""
+
 msgid "Delete Selected RAID Volumes"
 msgstr "Ta bort valda RAID volymer"
+
+msgid "Delete Selected Virtual Devices"
+msgstr ""
 
 msgid "Delete Selected Volumes"
 msgstr "Ta bort valda Volymer"
@@ -1999,9 +2005,6 @@ msgstr "Ta bort klon"
 msgid "Delete command"
 msgstr "Ta bort kommando"
 
-msgid "Delete device"
-msgstr "Ta bort enhet"
-
 msgid "Delete disk"
 msgstr "Ta bort disk"
 
@@ -2028,9 +2031,6 @@ msgstr "Radera modul"
 
 msgid "Delete mount point"
 msgstr "Radera monteringspunkt"
-
-msgid "Delete pool"
-msgstr "Ta bort pool"
 
 msgid "Delete portal group"
 msgstr "Radera portalgrupp"
@@ -2284,14 +2284,9 @@ msgstr ""
 msgid "Distributed hash table"
 msgstr "Distribuerad hashtabell"
 
-msgid ""
-"Do not activate this option if you want to add an already existing RAID "
-"again."
-msgstr ""
-"Aktivera inte detta alternativ om du vill lägga till en befintlig RAID igen."
-
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
+"Aktivera inte detta alternativ om du vill lägga till en existerande RAID."
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2326,9 +2321,6 @@ msgstr "Vill Du verkligen ta bort den här klonen?"
 
 msgid "Do you really want to delete this command?"
 msgstr "Vill du verkligen ta bort det här kommandot?"
-
-msgid "Do you really want to delete this device?"
-msgstr "Vill du verkligen ta bort denna enhet?"
 
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
@@ -2368,9 +2360,6 @@ msgid ""
 msgstr ""
 "Vill du verkligen ta bort den här monteringspunkten? Alla element som "
 "fortfarande använder den kommer att bli ogiltiga (t.ex. utdelningen)!"
-
-msgid "Do you really want to delete this pool?"
-msgstr "Vill du verkligen ta bort denna pool?"
 
 msgid "Do you really want to delete this portal group?"
 msgstr "Vill du verkligen ta bort denna portalgrupp?"
@@ -2422,15 +2411,42 @@ msgid "Do you really want to uninstall this package?"
 msgstr "Vill du verkligen avinstallera detta paketet?"
 
 msgid "Do you want to create a JBOD from selected disks?"
-msgstr ""
+msgstr "Vill du skapa en JBOD från valda diskar?"
 
 msgid "Do you want to create a RAID-0 from selected disks?"
-msgstr ""
+msgstr "Vill du skapa en RAID-0 från valda diskar?"
 
 msgid "Do you want to create a RAID-1 from selected disks?"
-msgstr ""
+msgstr "Vill du skapa en RAID-1 från valda diskar?"
 
 msgid "Do you want to create a RAID-5 from selected disks?"
+msgstr "Vill du skapa en RAID-5 från valda diskar?"
+
+msgid "Do you want to create a RAID-Z1 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-Z2 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-Z3 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a cache device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a hot spare device from selected disk?"
+msgstr ""
+
+msgid "Do you want to create a log device from selected disk?"
+msgstr ""
+
+msgid "Do you want to create a mirrored log device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a mirrored virtual device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
 
 msgid "Do you want to delete selected RAID volumes?"
@@ -2444,6 +2460,12 @@ msgstr "Vill du radera valda jobb?"
 
 msgid "Do you want to delete selected options?"
 msgstr "Vill du ta bort valda optioner?"
+
+msgid "Do you want to delete selected pools?"
+msgstr ""
+
+msgid "Do you want to delete selected virtual devices?"
+msgstr ""
 
 msgid "Do you want to delete selected volumes?"
 msgstr "Vill du ta bort valda volymer?"
@@ -2473,7 +2495,7 @@ msgid "Document root of the webserver. Home of the web page files."
 msgstr "Dokumentrot för webbservern. Hem till filerna för webbsidorna."
 
 msgid "DomID"
-msgstr ""
+msgstr "DomID"
 
 msgid "Domain"
 msgstr "Domän"
@@ -2513,9 +2535,6 @@ msgstr "Klart."
 
 msgid "Dos charset"
 msgstr "Dos-teckenuppsättning"
-
-msgid "Double-parity RAID-Z"
-msgstr "Dubbelparitets RAID-Z"
 
 msgid "Download"
 msgstr "Ladda ner"
@@ -2607,6 +2626,9 @@ msgstr "Redigera URL"
 msgid "Edit VM"
 msgstr "Editera VM"
 
+msgid "Edit Virtual Device"
+msgstr ""
+
 msgid "Edit Volume"
 msgstr "Ändra Volym"
 
@@ -2618,9 +2640,6 @@ msgstr "Redigera automatisk avbildning"
 
 msgid "Edit command"
 msgstr "Redigera kommando"
-
-msgid "Edit device"
-msgstr "Redigera enhet"
 
 msgid "Edit disk"
 msgstr "Redigera disk"
@@ -3019,7 +3038,7 @@ msgid "Execute now"
 msgstr "Kör nu"
 
 msgid "Expandsz"
-msgstr ""
+msgstr "Expandsz"
 
 msgid "Expire"
 msgstr "Upphör"
@@ -3131,6 +3150,9 @@ msgstr "Misslyckades att skapa filsystemet i minnet."
 
 msgid "Failed to execute command zfs."
 msgstr "Misslyckades köra kommando zfs."
+
+msgid "Failed to execute command zpool."
+msgstr ""
 
 msgid "Failed to execute cron job."
 msgstr "Misslyckades med att köra cron-jobb."
@@ -3342,9 +3364,12 @@ msgstr ""
 "Fuppes är aktiverat. Om du vill använda MiniDLNA måste du inaktivera Fuppes."
 
 msgid "GEOM"
-msgstr ""
+msgstr "GEOM"
 
 msgid "GEOM Software RAID"
+msgstr "GEOM mjukvaru RAID"
+
+msgid "GEOM VINUM Software RAID"
 msgstr ""
 
 msgid "GID"
@@ -3477,6 +3502,9 @@ msgstr ""
 
 msgid "HDD standby time"
 msgstr "HDD standbytid"
+
+msgid "HOT SPARE"
+msgstr ""
 
 msgid "HTTP Proxy"
 msgstr "HTTP-proxy"
@@ -3664,7 +3692,7 @@ msgid "IRC Live Support"
 msgstr "IRC Live-support"
 
 msgid "IRC NAS4Free"
-msgstr ""
+msgstr "IRC NAS4Free"
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
@@ -4036,6 +4064,12 @@ msgstr ""
 "Det är inte rekommenderat att importera felaktiga pooler eller virtuella "
 "enheter som är en del av en felaktig pool."
 
+#, php-format
+msgid ""
+"It is recommended to use encryption before you store the backup in a safe "
+"location."
+msgstr ""
+
 msgid ""
 "It's recommended to change the default username and password for accessing "
 "the WebGUI, enter the username here."
@@ -4053,7 +4087,7 @@ msgid "JBOD Information & Status"
 msgstr "JBOD Information & Status"
 
 msgid "JBOD Maintenance"
-msgstr ""
+msgstr "JBOD Underhåll"
 
 msgid "Jan"
 msgstr "jan"
@@ -4137,6 +4171,12 @@ msgstr "LCDproc (Klient)"
 
 msgid "LDAP"
 msgstr "LDAP"
+
+msgid "LOG"
+msgstr ""
+
+msgid "LOG (Mirror)"
+msgstr ""
 
 msgid "LUN"
 msgstr "LUN"
@@ -4348,9 +4388,6 @@ msgstr "Platsen där arbetsfilerna ska lagras, t.ex. %s/backup/.unison"
 msgid "Log"
 msgstr "Logg"
 
-msgid "Log (mirror)"
-msgstr "Logg (spegel)"
-
 msgid "Log Device"
 msgstr "Logga enhet"
 
@@ -4436,6 +4473,9 @@ msgstr "MIB är låst"
 msgid "MIB is marked for deletion"
 msgstr "MIB är markerad för borttagning"
 
+msgid "MIRROR"
+msgstr ""
+
 msgid "MISSING"
 msgstr "SAKNAS"
 
@@ -4461,6 +4501,14 @@ msgid "Machine suffix"
 msgstr "Maskinändelse"
 
 msgid "Maintenance"
+msgstr "Underhåll"
+
+#, php-format
+msgid ""
+"Make sure to select the correct number of devices:<div "
+"id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each "
+"vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
+"Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
 msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
@@ -4694,9 +4742,6 @@ msgstr "Minuter"
 
 msgid "Minutes between network time sync."
 msgstr "Minuter mellan tidssynkronisering genom nätverket."
-
-msgid "Mirror"
-msgstr "Spegling"
 
 msgid "Missing a temporary folder."
 msgstr "Saknar en temporär mapp."
@@ -4957,11 +5002,9 @@ msgstr ""
 
 #, php-format
 msgid ""
-"No configured virtual devices. Please add new <a href='%s'>virtual "
+"No configured virtual devices. Please add new <a href=\"%s\">virtual "
 "device</a> first."
 msgstr ""
-"Inga konfigurerade virtuella enheter. Var god lägg till <a href='%s'>virtual "
-"device</a> först."
 
 msgid "No device selected."
 msgstr "Ingen enhet vald."
@@ -4995,7 +5038,7 @@ msgid "No pool was found."
 msgstr "Ingen pool finns."
 
 msgid "No softraid-formatted disks available."
-msgstr ""
+msgstr "Inga mjukvaruraidformaterade diskar tillgängliga."
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Ärv bara nekande egenskaper"
@@ -5501,6 +5544,15 @@ msgstr "Pool Information & Status"
 msgid "Pool Tools"
 msgstr "Pool verktyg"
 
+msgid "Pool is marked for removal"
+msgstr ""
+
+msgid "Pool is protected"
+msgstr ""
+
+msgid "Pool is unlocked"
+msgstr ""
+
 msgid "Pools"
 msgstr "Pooler"
 
@@ -5663,9 +5715,6 @@ msgstr "Tyst"
 msgid "Quota"
 msgstr "Kvot"
 
-msgid "RAID 0"
-msgstr "RAID 0"
-
 msgid "RAID 0 Information & Status"
 msgstr "RAID 0 Information & Status"
 
@@ -5676,10 +5725,7 @@ msgid "RAID 0/1/5 Information & Status"
 msgstr "RAID 0/1/5 Information & Status"
 
 msgid "RAID 0/1/5 Maintenance"
-msgstr ""
-
-msgid "RAID 1"
-msgstr "RAID 1"
+msgstr "RAID 0/1/5 Underhåll"
 
 msgid "RAID 1 Information & Status"
 msgstr "RAID 1 Information & Status"
@@ -5689,6 +5735,12 @@ msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
 msgstr "RAID 5 Information & Status"
+
+msgid "RAID Name"
+msgstr ""
+
+msgid "RAID Type"
+msgstr ""
 
 msgid "RAID device can be removed."
 msgstr "RAID enhet kan tas bort."
@@ -5703,24 +5755,33 @@ msgid "RAID is protected"
 msgstr "RAID är skyddad."
 
 msgid "RAID is unlocked"
-msgstr ""
+msgstr "RAID är olåst"
 
 msgid "RAID-0"
-msgstr ""
+msgstr "RAID-0"
 
 msgid "RAID-0 Maintenance"
-msgstr ""
+msgstr "RAID-o Underhåll"
 
 msgid "RAID-1"
-msgstr ""
+msgstr "RAID-1"
 
 msgid "RAID-1 Maintenance"
-msgstr ""
+msgstr "RAID-1 Underhåll"
 
 msgid "RAID-5"
-msgstr ""
+msgstr "RAID-5"
 
 msgid "RAID-5 Maintenance"
+msgstr "RAID-5 Underhåll"
+
+msgid "RAID-Z1"
+msgstr ""
+
+msgid "RAID-Z2"
+msgstr ""
+
+msgid "RAID-Z3"
 msgstr ""
 
 msgid "RAID0"
@@ -5761,12 +5822,6 @@ msgstr "RSYNC-händelser"
 
 msgid "RSYNC log"
 msgstr "RSYNC logg"
-
-msgid "Raid Name"
-msgstr "Raidnamn"
-
-msgid "Raid name"
-msgstr "RAID-namn"
 
 msgid "Ramdisk"
 msgstr "Minnesdisk"
@@ -6103,6 +6158,9 @@ msgstr "SSHD logg"
 msgid "SSID"
 msgstr "SSID"
 
+msgid "STRIPE"
+msgstr ""
+
 msgid "Samba AD"
 msgstr "Samba AD"
 
@@ -6231,7 +6289,7 @@ msgid "Select mount point where to create the swap file."
 msgstr "Välj monteringspunkt där växlingsfilen ska skapas."
 
 msgid "Select read balance algorithm."
-msgstr ""
+msgstr "Välj läsbalanseringsalgoritm"
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "Välj FreeBSD-paket som ska installeras."
@@ -6256,9 +6314,6 @@ msgid ""
 msgstr ""
 "Välj vilket gränssnitt som skall användas: (Endast valbart om servern har "
 "fler än ett)"
-
-msgid "Select your read balance algorithm."
-msgstr "Välj balanseringsalgoritm för läsning."
 
 msgid "Selected"
 msgstr "Markerade"
@@ -6454,9 +6509,6 @@ msgstr "Avstängningstimer"
 msgid "Simple Network Management Protocol"
 msgstr "Simple Network Management Protocol"
 
-msgid "Single-parity RAID-Z"
-msgstr "Enkelparitets RAID-Z"
-
 msgid "Size"
 msgstr "Storlek"
 
@@ -6517,9 +6569,6 @@ msgstr "Mjukvaru-RAID"
 
 msgid "Software Used"
 msgstr "Använd programvara"
-
-msgid "Software gconcat JBOD"
-msgstr ""
 
 msgid "Source"
 msgstr "Källa"
@@ -6712,9 +6761,6 @@ msgstr ""
 
 msgid "String identifier of the extent."
 msgstr "Textidentifierare för innehållet."
-
-msgid "Stripe"
-msgstr "Strimma"
 
 msgid "Subject"
 msgstr "Ämne"
@@ -7010,14 +7056,6 @@ msgid ""
 msgstr ""
 "Det nyligen tillagda \"Bad Flash Block\" attributet visar totala antalet "
 "dåliga flashblock sedan disken först initierades."
-
-#, php-format
-msgid ""
-"The RAID volume is currently mounted! Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
-msgstr ""
-"RAID volymen är nu monterad! Ta bort <a href='%s'>mount point</a> först, "
-"innan du fortsätter."
 
 msgid "The TCP port must be a valid port number."
 msgstr "TCP-porten måste vara ett giltigt portnummer."
@@ -7331,9 +7369,6 @@ msgstr ""
 msgid "The default time in seconds to display a screen."
 msgstr "Grundinställning för tid i sekunder att visa skärmbild."
 
-msgid "The device name may only consist of the characters a-z, A-Z, 0-9."
-msgstr "Enhetsnamnet får endast innehålla tecknen a-z, A-Z, 0-9."
-
 msgid "The device's IP address."
 msgstr "Enhetens IP-adress."
 
@@ -7560,6 +7595,12 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr "Namnet på RAID enheten kan bestå av tecknen a-z, A-Z, 0-9."
 
+msgid "The name of the pool cannot be changed."
+msgstr ""
+
+msgid "The name of this virtual device cannot be changed."
+msgstr ""
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "Nätverket '%s' är ogiltigt."
@@ -7614,12 +7655,6 @@ msgstr ""
 "och katalogmask men ärvda behörigheter åsidosätter detta. Detta kan vara "
 "särskilt användbart på system med många användare för att möjliggöra en enda "
 "delning som kan användas flexibelt av varje användare."
-
-msgid "The pool name does not match the naming rules."
-msgstr "Poolnamnet överensstämmer inte med namngivningsreglerna."
-
-msgid "The pool name is invalid: contains spaces."
-msgstr "Poolnamnet är felaktigt: innehåller mellanslag"
 
 msgid ""
 "The port to listen to. The default is to listen to the tftp port specified "
@@ -7792,15 +7827,6 @@ msgstr "Det finns för många extragrupper."
 
 msgid "There is no error, the file uploaded with success."
 msgstr "Inget fel inträffade, filen laddades upp med lyckat resultat."
-
-msgid "There must be 2 disks in a RAID 1 volume."
-msgstr "Det måste finnas 2 diskar i en RAID 1-volym."
-
-msgid "There must be a minimum of 2 disks in a RAID 0 volume."
-msgstr "Det måste minst finnas 2 diskar i en RAID 0-volym."
-
-msgid "There must be a minimum of 3 disks in a RAID 5 volume."
-msgstr "Åtminstone 3 diskar krävs för en RAID5-volym."
 
 msgid "There must be at least 1 disks selected."
 msgstr "Åtminstone 1 disk måste vara vald."
@@ -8004,9 +8030,6 @@ msgstr ""
 msgid "This couple targetname/targetaddress already exists in the disk list."
 msgstr "Denna koppling målnamn/måladress finns redan i disklistan."
 
-msgid "This device already exists in the raid volume list."
-msgstr "Den här enheten finns redan i listan över RAID-volymer."
-
 msgid "This disk already exists in the disk list."
 msgstr "Den här disken finns redan i disklistan."
 
@@ -8078,7 +8101,7 @@ msgstr ""
 "kommatecken. Grupper utses genom ett @ prefix."
 
 msgid "This option applies to GEOM RAID-1 only."
-msgstr ""
+msgstr "Detta alternativ gäller endast GEOM RAID-1."
 
 msgid "This option causes rsync to copy the local data to the remote server."
 msgstr ""
@@ -8293,13 +8316,6 @@ msgstr ""
 
 msgid "This will create a recycle bin on the share."
 msgstr "Detta kommer skapa en papperskorg i delningen."
-
-msgid ""
-"This will erase ALL data on the selected disks! Do not use this option if "
-"you want to add an already existing RAID again."
-msgstr ""
-"Detta kommer att radera ALL data på de valda diskarna! Använd inte detta val "
-"om du vill lägga till en redan existerande RAID igen."
 
 msgid ""
 "This will erase ALL data on your disk! Do not use this option if you want to "
@@ -8582,9 +8598,6 @@ msgstr "Strängfälla (Trap string)"
 msgid "Traps"
 msgstr "Fällor"
 
-msgid "Triple-parity RAID-Z"
-msgstr "Trippelparitets RAID-Z"
-
 msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol"
 
@@ -8814,7 +8827,7 @@ msgid "Use as sparse volume. (thin provisioning)"
 msgstr "Använd som reservvolym. (thin provisioning)"
 
 msgid "Use different container as root of the tree."
-msgstr ""
+msgstr "Använd en annan plats som rot fär trädet."
 
 msgid "Use inotify monitoring to automatically discover new files."
 msgstr ""
@@ -8995,6 +9008,18 @@ msgstr "Video"
 msgid "Virtual Device"
 msgstr "Virtuell enhet"
 
+msgid "Virtual Device List"
+msgstr ""
+
+msgid "Virtual Device is marked for removal"
+msgstr ""
+
+msgid "Virtual Device is protected"
+msgstr ""
+
+msgid "Virtual Device is unlocked"
+msgstr ""
+
 msgid "Virtual Devices"
 msgstr "Virtuella enheter"
 
@@ -9013,6 +9038,12 @@ msgstr "Virtuellt gränssnitt"
 msgid "Virtual Machine"
 msgstr "Virtuell maskin"
 
+msgid "Virtual device can be removed."
+msgstr ""
+
+msgid "Virtual device is already in use."
+msgstr ""
+
 msgid "Virtual devices"
 msgstr "Virtuella enheter"
 
@@ -9028,11 +9059,14 @@ msgstr "Volymnamn"
 msgid "Volume Size Limit"
 msgstr "Storleksgräns för volym"
 
-msgid "Volume is locked"
-msgstr "Volymen är låst"
-
 msgid "Volume is marked for deletion"
 msgstr "Volymen är markerad för borttagning."
+
+msgid "Volume is protected"
+msgstr ""
+
+msgid "Volume is unlocked"
+msgstr ""
 
 msgid "Volume label"
 msgstr "Volymetikett"
@@ -9087,13 +9121,6 @@ msgstr "Varning"
 
 msgid "Warning Level"
 msgstr "Varningsnivåer"
-
-msgid ""
-"Warning: You are going to delete a RAID volume. All data will get lost and "
-"can not be recovered."
-msgstr ""
-"Varning: Du är på väg att radera en RAID-volym. Alla data kommer att "
-"förloras och kommer inte kunna återskapas."
 
 msgid ""
 "Warning: You are going to delete an encrypted volume. All data will get lost "
@@ -9442,9 +9469,6 @@ msgstr "minimal (effektbesparing)"
 msgid "minute(s)"
 msgstr "minut(er)"
 
-msgid "mirroring"
-msgstr "spegling"
-
 msgid "mount"
 msgstr "montera"
 
@@ -9455,7 +9479,7 @@ msgid "no new encrypted disk found."
 msgstr "inga nya krypterade diskar hittades"
 
 msgid "noVNC"
-msgstr ""
+msgstr "noVNC"
 
 msgid "none"
 msgstr "ingen"
@@ -9472,9 +9496,6 @@ msgstr "rc.conf"
 msgid "revision"
 msgstr "revision"
 
-msgid "rotated block-interleaved parity"
-msgstr "roterad block-interfolierad paritet"
-
 msgid "scan target failed."
 msgstr "skanning av målet misslyckades."
 
@@ -9486,9 +9507,6 @@ msgstr "Minsta inställningen för hög spänning till överförings punkt."
 
 msgid "smallest settable low voltage transfer point"
 msgstr "Minsta inställningen till låg spänning till överförings punkten."
-
-msgid "striping"
-msgstr "skalning"
 
 msgid "successfully."
 msgstr "lyckades"
@@ -9511,17 +9529,11 @@ msgstr "umount"
 msgid "version:"
 msgstr "version:"
 
-#~ msgid "JBOD Tools"
-#~ msgstr "JBOD verktyg"
+#~ msgid "Cache"
+#~ msgstr "Buffert"
 
-#~ msgid "RAID 0 Tools"
-#~ msgstr "Raid 0 verktyg"
+#~ msgid "Mirror"
+#~ msgstr "Spegling"
 
-#~ msgid "RAID 1 Tools"
-#~ msgstr "RAID 1 verktyg"
-
-#~ msgid "RAID 5 Tools"
-#~ msgstr "RAID 5 verktyg"
-
-#~ msgid "RAID 0/1/5 Tools"
-#~ msgstr "RAID 0/1/5 verktyg"
+#~ msgid "Stripe"
+#~ msgstr "Strimma"

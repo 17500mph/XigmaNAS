@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-25 17:17+0000\n"
+"POT-Creation-Date: 2016-04-28 02:12+0000\n"
 "PO-Revision-Date: 2016-04-19 17:20+0000\n"
 "Last-Translator: AndriyM <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-25 15:28+0000\n"
+"X-Launchpad-Export-Date: 2016-04-28 00:31+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "Language: uk\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -61,6 +61,10 @@ msgid "%s already exists as a %s."
 msgstr "%s вже існує як %s."
 
 #, php-format
+msgid "%s already exists."
+msgstr ""
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr "%s вже налаштовано як файлова система."
 
@@ -71,10 +75,6 @@ msgstr "%s вже налаштовано як файлова том."
 #, php-format
 msgid "%s is too long."
 msgstr "%s занадто довге."
-
-#, php-format
-msgid "%s is used to create %s volumes."
-msgstr "%s використовується для створення %s розділів."
 
 #, php-format
 msgid "%s of %sB"
@@ -161,6 +161,9 @@ msgstr ""
 "автоматично)."
 
 msgid "2 or more disks are required to build a RAID-0 volume."
+msgstr ""
+
+msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr ""
 
 msgid "3 or more disks are required to build a RAID-5 volume."
@@ -280,9 +283,6 @@ msgstr ""
 "Ключ повинен містити 5 або 13 символів (40 або 104 біт) залежно від "
 "локальної мережі та можливості адаптера. Його можна  ввести простим текстом "
 "або у вигляді рядка шістнадцяткових цифр, перед якими стоїть \"0x\"."
-
-msgid "A minimum of 2 disks is required to build a JBOD."
-msgstr ""
 
 #, php-format
 msgid ""
@@ -478,6 +478,9 @@ msgstr "Додати Rsync завдання"
 msgid "Add URL"
 msgstr "Додати посилання"
 
+msgid "Add Virtual Device"
+msgstr ""
+
 msgid "Add Volume"
 msgstr ""
 
@@ -492,9 +495,6 @@ msgstr "Додати автоматичний знімок"
 
 msgid "Add command"
 msgstr "Додати команду"
-
-msgid "Add device"
-msgstr "Додати пристрій"
 
 msgid "Add disk"
 msgstr "Додати диск"
@@ -927,6 +927,9 @@ msgstr "Прошивка допоміжного пристрою"
 msgid "Auxiliary parameters"
 msgstr "Допоміжні параметри"
 
+msgid "Avail"
+msgstr ""
+
 msgid "Available"
 msgstr "Доступний"
 
@@ -953,9 +956,6 @@ msgstr "Невірний користувач (неіснуючий корист
 
 msgid "Balance Algorithm"
 msgstr ""
-
-msgid "Balance algorithm"
-msgstr "Алгоритм балансування"
 
 msgid "Ban List"
 msgstr "Список заборон"
@@ -1100,6 +1100,9 @@ msgstr "Болгарська"
 msgid "By default, only already existing files can be uploaded."
 msgstr "За замовчуванням, тільки вже існуючі файли можуть бути завантажені."
 
+msgid "CACHE"
+msgstr ""
+
 msgid "CARP"
 msgstr "CARP"
 
@@ -1191,9 +1194,6 @@ msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
 "error)."
 msgstr ""
-
-msgid "Cache"
-msgstr "Кеш"
 
 msgid "Cache Device"
 msgstr "Кеш пристрою"
@@ -1825,6 +1825,9 @@ msgstr ""
 msgid "Dataset is protected"
 msgstr ""
 
+msgid "Dataset is unlocked"
+msgstr ""
+
 msgid "Datasets"
 msgstr "Набір даних"
 
@@ -1900,9 +1903,6 @@ msgstr "Видалити хост"
 msgid "Delete Login Info"
 msgstr "Видалити інформацію про вхід"
 
-msgid "Delete RAID"
-msgstr "Видалити RAID"
-
 msgid "Delete Route"
 msgstr "Вилучити маршрут"
 
@@ -1918,7 +1918,13 @@ msgstr "Видалити вибрані завдання"
 msgid "Delete Selected Options"
 msgstr "Видалити вибрані опції"
 
+msgid "Delete Selected Pools"
+msgstr ""
+
 msgid "Delete Selected RAID Volumes"
+msgstr ""
+
+msgid "Delete Selected Virtual Devices"
 msgstr ""
 
 msgid "Delete Selected Volumes"
@@ -1951,9 +1957,6 @@ msgstr "Видалити клон"
 msgid "Delete command"
 msgstr "Видалити команду"
 
-msgid "Delete device"
-msgstr "Видалити пристрій"
-
 msgid "Delete disk"
 msgstr "Видалити диск"
 
@@ -1981,9 +1984,6 @@ msgstr "Видалити модуль"
 
 msgid "Delete mount point"
 msgstr "Видалити точку монтування"
-
-msgid "Delete pool"
-msgstr "Видалити пул"
 
 msgid "Delete portal group"
 msgstr "Видалити групу порталів"
@@ -2234,11 +2234,6 @@ msgstr ""
 msgid "Distributed hash table"
 msgstr "Розподілена таблиця хешування"
 
-msgid ""
-"Do not activate this option if you want to add an already existing RAID "
-"again."
-msgstr ""
-
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
 
@@ -2275,9 +2270,6 @@ msgstr "Ви дійсно хочете видалити цей клон?"
 
 msgid "Do you really want to delete this command?"
 msgstr "Ви дійсно хочете видалити цю команду?"
-
-msgid "Do you really want to delete this device?"
-msgstr "Ви дійсно хочете видалити цей пристрій?"
 
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
@@ -2317,9 +2309,6 @@ msgid ""
 msgstr ""
 "Ви дійсно хочете видалити цю точку монтування? Всі елементи, що досі "
 "використовуються стануть недоступними (напр. директорії спільного доступу)!"
-
-msgid "Do you really want to delete this pool?"
-msgstr "Ви дійсно хочете видалити цей пул?"
 
 msgid "Do you really want to delete this portal group?"
 msgstr "Ви дійсно хочете видалити цю групу порталів?"
@@ -2382,6 +2371,33 @@ msgstr ""
 msgid "Do you want to create a RAID-5 from selected disks?"
 msgstr ""
 
+msgid "Do you want to create a RAID-Z1 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-Z2 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-Z3 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a cache device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a hot spare device from selected disk?"
+msgstr ""
+
+msgid "Do you want to create a log device from selected disk?"
+msgstr ""
+
+msgid "Do you want to create a mirrored log device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a mirrored virtual device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a striped virtual device from selected disks?"
+msgstr ""
+
 msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
@@ -2392,6 +2408,12 @@ msgid "Do you want to delete selected jobs?"
 msgstr "Видалити вибрані завдання?"
 
 msgid "Do you want to delete selected options?"
+msgstr ""
+
+msgid "Do you want to delete selected pools?"
+msgstr ""
+
+msgid "Do you want to delete selected virtual devices?"
 msgstr ""
 
 msgid "Do you want to delete selected volumes?"
@@ -2463,9 +2485,6 @@ msgstr "Готово."
 
 msgid "Dos charset"
 msgstr "Набір символів DOS"
-
-msgid "Double-parity RAID-Z"
-msgstr "Подвійний контроль парності RAID-Z"
 
 msgid "Download"
 msgstr "Завантажити"
@@ -2557,6 +2576,9 @@ msgstr "Редагувати посилання"
 msgid "Edit VM"
 msgstr "Редагувати віртуальну машину"
 
+msgid "Edit Virtual Device"
+msgstr ""
+
 msgid "Edit Volume"
 msgstr ""
 
@@ -2568,9 +2590,6 @@ msgstr "Редагувати автоматичний знімок"
 
 msgid "Edit command"
 msgstr "Редагувати команду"
-
-msgid "Edit device"
-msgstr "Редагувати пристрій"
 
 msgid "Edit disk"
 msgstr "Редагувати диск"
@@ -3068,6 +3087,9 @@ msgstr "Не вдалося створити файлову систему в п
 msgid "Failed to execute command zfs."
 msgstr ""
 
+msgid "Failed to execute command zpool."
+msgstr ""
+
 msgid "Failed to execute cron job."
 msgstr "Помилка виконання завдання cron."
 
@@ -3282,6 +3304,9 @@ msgstr ""
 msgid "GEOM Software RAID"
 msgstr ""
 
+msgid "GEOM VINUM Software RAID"
+msgstr ""
+
 msgid "GID"
 msgstr "GID"
 
@@ -3406,6 +3431,9 @@ msgstr ""
 
 msgid "HDD standby time"
 msgstr "Час засинання жорсткого диска"
+
+msgid "HOT SPARE"
+msgstr ""
 
 msgid "HTTP Proxy"
 msgstr "HTTP проксі"
@@ -3932,6 +3960,12 @@ msgstr ""
 "Не рекомендується імпортувати пошкоджені пули або пристрої, що є частиною "
 "таких пулів."
 
+#, php-format
+msgid ""
+"It is recommended to use encryption before you store the backup in a safe "
+"location."
+msgstr ""
+
 msgid ""
 "It's recommended to change the default username and password for accessing "
 "the WebGUI, enter the username here."
@@ -4033,6 +4067,12 @@ msgstr ""
 
 msgid "LDAP"
 msgstr "LDAP"
+
+msgid "LOG"
+msgstr ""
+
+msgid "LOG (Mirror)"
+msgstr ""
 
 msgid "LUN"
 msgstr "LUN"
@@ -4236,9 +4276,6 @@ msgstr ""
 msgid "Log"
 msgstr "Журнал"
 
-msgid "Log (mirror)"
-msgstr "Журнал (копія)"
-
 msgid "Log Device"
 msgstr "Пристрій для журналу"
 
@@ -4322,6 +4359,9 @@ msgstr "MIB заблоковано"
 msgid "MIB is marked for deletion"
 msgstr "MIB помічено для видалення"
 
+msgid "MIRROR"
+msgstr ""
+
 msgid "MISSING"
 msgstr "ВІДСУТНІЙ"
 
@@ -4347,6 +4387,14 @@ msgid "Machine suffix"
 msgstr "Суфікс комп'ютера"
 
 msgid "Maintenance"
+msgstr ""
+
+#, php-format
+msgid ""
+"Make sure to select the correct number of devices:<div "
+"id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each "
+"vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
+"Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
 msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
@@ -4574,9 +4622,6 @@ msgstr "Хвилин"
 
 msgid "Minutes between network time sync."
 msgstr "Хвилин між синхронізаціями часу"
-
-msgid "Mirror"
-msgstr "Дзеркало"
 
 msgid "Missing a temporary folder."
 msgstr "Тимчасова директорія відсутня."
@@ -4828,11 +4873,9 @@ msgstr ""
 
 #, php-format
 msgid ""
-"No configured virtual devices. Please add new <a href='%s'>virtual "
+"No configured virtual devices. Please add new <a href=\"%s\">virtual "
 "device</a> first."
 msgstr ""
-"Нема налаштованих віртуальних пристроїв. Будь ласка спочатку додайте новий "
-"<a href='%s'>віртуальний пристрій</a>."
 
 msgid "No device selected."
 msgstr "Не вибрано пристрій."
@@ -5355,6 +5398,15 @@ msgstr "Статус та інформація про пул"
 msgid "Pool Tools"
 msgstr ""
 
+msgid "Pool is marked for removal"
+msgstr ""
+
+msgid "Pool is protected"
+msgstr ""
+
+msgid "Pool is unlocked"
+msgstr ""
+
 msgid "Pools"
 msgstr "Списки"
 
@@ -5514,9 +5566,6 @@ msgstr "Тихий"
 msgid "Quota"
 msgstr "Квота"
 
-msgid "RAID 0"
-msgstr "RAID 0"
-
 msgid "RAID 0 Information & Status"
 msgstr "Інформація та статус RAID 0"
 
@@ -5529,9 +5578,6 @@ msgstr "Інформація та статус RAID 0/1/5"
 msgid "RAID 0/1/5 Maintenance"
 msgstr ""
 
-msgid "RAID 1"
-msgstr "RAID 1"
-
 msgid "RAID 1 Information & Status"
 msgstr "Інформація та статус RAID 1"
 
@@ -5540,6 +5586,12 @@ msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
 msgstr "Інформація та статус RAID 5"
+
+msgid "RAID Name"
+msgstr ""
+
+msgid "RAID Type"
+msgstr ""
 
 msgid "RAID device can be removed."
 msgstr ""
@@ -5572,6 +5624,15 @@ msgid "RAID-5"
 msgstr ""
 
 msgid "RAID-5 Maintenance"
+msgstr ""
+
+msgid "RAID-Z1"
+msgstr ""
+
+msgid "RAID-Z2"
+msgstr ""
+
+msgid "RAID-Z3"
 msgstr ""
 
 msgid "RAID0"
@@ -5612,12 +5673,6 @@ msgstr "Події RSYNC"
 
 msgid "RSYNC log"
 msgstr "Протокол RSYNC"
-
-msgid "Raid Name"
-msgstr ""
-
-msgid "Raid name"
-msgstr "Ім'я RAID масиву"
 
 msgid "Ramdisk"
 msgstr "Ramdisk"
@@ -5953,6 +6008,9 @@ msgstr "Журнал SSHD"
 msgid "SSID"
 msgstr "SSID"
 
+msgid "STRIPE"
+msgstr ""
+
 msgid "Samba AD"
 msgstr "Samba AD"
 
@@ -6095,9 +6153,6 @@ msgstr ""
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one)"
-msgstr ""
-
-msgid "Select your read balance algorithm."
 msgstr ""
 
 msgid "Selected"
@@ -6282,9 +6337,6 @@ msgstr "Таймер завершення роботи"
 msgid "Simple Network Management Protocol"
 msgstr "Simple Network Management Protocol"
 
-msgid "Single-parity RAID-Z"
-msgstr ""
-
 msgid "Size"
 msgstr "Розмір"
 
@@ -6341,9 +6393,6 @@ msgid "Software RAID"
 msgstr "Програмний RAID"
 
 msgid "Software Used"
-msgstr ""
-
-msgid "Software gconcat JBOD"
 msgstr ""
 
 msgid "Source"
@@ -6511,9 +6560,6 @@ msgstr ""
 
 msgid "String identifier of the extent."
 msgstr ""
-
-msgid "Stripe"
-msgstr "Смуга"
 
 msgid "Subject"
 msgstr "Тема"
@@ -6801,12 +6847,6 @@ msgid ""
 "manufacturing."
 msgstr ""
 
-#, php-format
-msgid ""
-"The RAID volume is currently mounted! Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
-msgstr ""
-
 msgid "The TCP port must be a valid port number."
 msgstr "Значення TCP порта має бути коректним номером порта."
 
@@ -7077,9 +7117,6 @@ msgstr ""
 msgid "The default time in seconds to display a screen."
 msgstr "Час, протягом якого показавати екран типово."
 
-msgid "The device name may only consist of the characters a-z, A-Z, 0-9."
-msgstr "Ім'я пристрою може містити лише символи a-z, A-Z, 0-9."
-
 msgid "The device's IP address."
 msgstr "ІР адреса пристрою."
 
@@ -7268,6 +7305,12 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr ""
 
+msgid "The name of the pool cannot be changed."
+msgstr ""
+
+msgid "The name of this virtual device cannot be changed."
+msgstr ""
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "Неправильна мережа '%s'."
@@ -7318,12 +7361,6 @@ msgid ""
 "this. This can be particularly useful on systems with many users to allow a "
 "single share to be used flexibly by each user."
 msgstr ""
-
-msgid "The pool name does not match the naming rules."
-msgstr ""
-
-msgid "The pool name is invalid: contains spaces."
-msgstr "Заборонене ім'я пула: містить пробіли."
 
 msgid ""
 "The port to listen to. The default is to listen to the tftp port specified "
@@ -7477,15 +7514,6 @@ msgstr "Забагато додаткових груп."
 
 msgid "There is no error, the file uploaded with success."
 msgstr "Файл завантажено без помилок."
-
-msgid "There must be 2 disks in a RAID 1 volume."
-msgstr "Повинно бути 2 диски в масиві RAID 1."
-
-msgid "There must be a minimum of 2 disks in a RAID 0 volume."
-msgstr "Повинно бути принаймні 2 диски в масиві RAID 0."
-
-msgid "There must be a minimum of 3 disks in a RAID 5 volume."
-msgstr "Повинно бути принаймні 3 диски в масиві RAID 5."
 
 msgid "There must be at least 1 disks selected."
 msgstr "Потрібно вибрати принаймні 1 диск."
@@ -7654,9 +7682,6 @@ msgstr ""
 
 msgid "This couple targetname/targetaddress already exists in the disk list."
 msgstr "Ця пара ім'я/адреса призначення вже існує в списку дисків."
-
-msgid "This device already exists in the raid volume list."
-msgstr "Цей пристрій вже присутній в списку рейд масивів."
 
 msgid "This disk already exists in the disk list."
 msgstr "Цей диск вде присутній в списку дисків."
@@ -7871,11 +7896,6 @@ msgid ""
 msgstr ""
 
 msgid "This will create a recycle bin on the share."
-msgstr ""
-
-msgid ""
-"This will erase ALL data on the selected disks! Do not use this option if "
-"you want to add an already existing RAID again."
 msgstr ""
 
 msgid ""
@@ -8121,9 +8141,6 @@ msgstr ""
 
 msgid "Traps"
 msgstr "Пастки"
-
-msgid "Triple-parity RAID-Z"
-msgstr "RAID-Z потрійної парності"
 
 msgid "Trivial File Transfer Protocol"
 msgstr "Тривіальний протокол передавання файлів"
@@ -8505,6 +8522,18 @@ msgstr ""
 msgid "Virtual Device"
 msgstr ""
 
+msgid "Virtual Device List"
+msgstr ""
+
+msgid "Virtual Device is marked for removal"
+msgstr ""
+
+msgid "Virtual Device is protected"
+msgstr ""
+
+msgid "Virtual Device is unlocked"
+msgstr ""
+
 msgid "Virtual Devices"
 msgstr ""
 
@@ -8523,6 +8552,12 @@ msgstr ""
 msgid "Virtual Machine"
 msgstr ""
 
+msgid "Virtual device can be removed."
+msgstr ""
+
+msgid "Virtual device is already in use."
+msgstr ""
+
 msgid "Virtual devices"
 msgstr ""
 
@@ -8538,10 +8573,13 @@ msgstr ""
 msgid "Volume Size Limit"
 msgstr ""
 
-msgid "Volume is locked"
+msgid "Volume is marked for deletion"
 msgstr ""
 
-msgid "Volume is marked for deletion"
+msgid "Volume is protected"
+msgstr ""
+
+msgid "Volume is unlocked"
 msgstr ""
 
 msgid "Volume label"
@@ -8596,11 +8634,6 @@ msgid "Warning"
 msgstr "Попередження"
 
 msgid "Warning Level"
-msgstr ""
-
-msgid ""
-"Warning: You are going to delete a RAID volume. All data will get lost and "
-"can not be recovered."
 msgstr ""
 
 msgid ""
@@ -8920,9 +8953,6 @@ msgstr "мінімальна (збереження енергії)"
 msgid "minute(s)"
 msgstr "хвилин"
 
-msgid "mirroring"
-msgstr "дзеркалювання"
-
 msgid "mount"
 msgstr "монтування"
 
@@ -8950,9 +8980,6 @@ msgstr "rc.conf"
 msgid "revision"
 msgstr "перегляд"
 
-msgid "rotated block-interleaved parity"
-msgstr ""
-
 msgid "scan target failed."
 msgstr "збій сканування об'єкта."
 
@@ -8964,9 +8991,6 @@ msgstr ""
 
 msgid "smallest settable low voltage transfer point"
 msgstr ""
-
-msgid "striping"
-msgstr "чергування"
 
 msgid "successfully."
 msgstr "успішно."
@@ -8988,3 +9012,12 @@ msgstr "umount"
 
 msgid "version:"
 msgstr "версія:"
+
+#~ msgid "Cache"
+#~ msgstr "Кеш"
+
+#~ msgid "Mirror"
+#~ msgstr "Дзеркало"
+
+#~ msgid "Stripe"
+#~ msgstr "Смуга"

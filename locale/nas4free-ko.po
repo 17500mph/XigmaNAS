@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-25 17:17+0000\n"
+"POT-Creation-Date: 2016-04-28 02:12+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-25 15:29+0000\n"
+"X-Launchpad-Export-Date: 2016-04-28 00:29+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -63,6 +63,10 @@ msgid "%s already exists as a %s."
 msgstr ""
 
 #, php-format
+msgid "%s already exists."
+msgstr ""
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr ""
 
@@ -73,10 +77,6 @@ msgstr ""
 #, php-format
 msgid "%s is too long."
 msgstr "%s은(는) 너무 깁니다."
-
-#, php-format
-msgid "%s is used to create %s volumes."
-msgstr "%s 이(가) %s 볼륨을 만드는 데에 이용됩니다."
 
 #, php-format
 msgid "%s of %sB"
@@ -162,6 +162,9 @@ msgstr ""
 "없습니다(자동으로 시작됩니다)."
 
 msgid "2 or more disks are required to build a RAID-0 volume."
+msgstr ""
+
+msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr ""
 
 msgid "3 or more disks are required to build a RAID-5 volume."
@@ -261,9 +264,6 @@ msgid ""
 msgstr ""
 "키는 로컬 네트워크와 어댑터의 능력에 따라 5자나 13자(40비트나 104비트)의 문자일 것입니다. 이것은 일반 문자열 혹은 '0x'에 "
 "뒤따라오는 16진 숫자의 문자열로 분류합니다."
-
-msgid "A minimum of 2 disks is required to build a JBOD."
-msgstr ""
 
 #, php-format
 msgid ""
@@ -453,6 +453,9 @@ msgstr "Rsync 작업 추가"
 msgid "Add URL"
 msgstr "URL 추가"
 
+msgid "Add Virtual Device"
+msgstr ""
+
 msgid "Add Volume"
 msgstr ""
 
@@ -467,9 +470,6 @@ msgstr ""
 
 msgid "Add command"
 msgstr "명령어 추가"
-
-msgid "Add device"
-msgstr "장치 추가"
 
 msgid "Add disk"
 msgstr "디스크 추가"
@@ -875,6 +875,9 @@ msgstr ""
 msgid "Auxiliary parameters"
 msgstr "보조 인자들"
 
+msgid "Avail"
+msgstr ""
+
 msgid "Available"
 msgstr ""
 
@@ -901,9 +904,6 @@ msgstr ""
 
 msgid "Balance Algorithm"
 msgstr ""
-
-msgid "Balance algorithm"
-msgstr "밸런스 알고리즘"
 
 msgid "Ban List"
 msgstr ""
@@ -1041,6 +1041,9 @@ msgstr "불가리아어"
 msgid "By default, only already existing files can be uploaded."
 msgstr "기본 값으로 이미 존재하는 파일들만 업로드 될 수 있습니다."
 
+msgid "CACHE"
+msgstr ""
+
 msgid "CARP"
 msgstr ""
 
@@ -1132,9 +1135,6 @@ msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
 "error)."
 msgstr ""
-
-msgid "Cache"
-msgstr "캐시"
 
 msgid "Cache Device"
 msgstr "장치 캐시"
@@ -1720,6 +1720,9 @@ msgstr ""
 msgid "Dataset is protected"
 msgstr ""
 
+msgid "Dataset is unlocked"
+msgstr ""
+
 msgid "Datasets"
 msgstr "데이터 셋"
 
@@ -1795,9 +1798,6 @@ msgstr "Host 삭제"
 msgid "Delete Login Info"
 msgstr "로그인 정보 삭제"
 
-msgid "Delete RAID"
-msgstr "RAID 삭제"
-
 msgid "Delete Route"
 msgstr "라우트 삭제"
 
@@ -1813,7 +1813,13 @@ msgstr ""
 msgid "Delete Selected Options"
 msgstr ""
 
+msgid "Delete Selected Pools"
+msgstr ""
+
 msgid "Delete Selected RAID Volumes"
+msgstr ""
+
+msgid "Delete Selected Virtual Devices"
 msgstr ""
 
 msgid "Delete Selected Volumes"
@@ -1846,9 +1852,6 @@ msgstr ""
 msgid "Delete command"
 msgstr "명령 삭제"
 
-msgid "Delete device"
-msgstr "장치 삭제"
-
 msgid "Delete disk"
 msgstr "디스크 삭제"
 
@@ -1875,9 +1878,6 @@ msgstr "모듈 삭제"
 
 msgid "Delete mount point"
 msgstr "마운트 지점 삭제"
-
-msgid "Delete pool"
-msgstr "풀 삭제"
 
 msgid "Delete portal group"
 msgstr "포털 그룹 삭제"
@@ -2122,11 +2122,6 @@ msgstr ""
 msgid "Distributed hash table"
 msgstr "분산 해쉬 테이블"
 
-msgid ""
-"Do not activate this option if you want to add an already existing RAID "
-"again."
-msgstr ""
-
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
 
@@ -2162,9 +2157,6 @@ msgstr ""
 msgid "Do you really want to delete this command?"
 msgstr "정말로 이 명령을 지우시겠습니까?"
 
-msgid "Do you really want to delete this device?"
-msgstr "정말로 이 장치를 삭제하시겠습니까?"
-
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
 "become invalid (e.g. share)!"
@@ -2197,9 +2189,6 @@ msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
 msgstr "정말로 이 마운트 지점을 삭제하시겠습니까? 아직도 이것을 이용하는 모든 요소들은 무효화될 것입니다(예. 공유)!"
-
-msgid "Do you really want to delete this pool?"
-msgstr "정말로 이 풀을 삭제하시겠습니까?"
 
 msgid "Do you really want to delete this portal group?"
 msgstr "정말로 이 포털 그룹을 삭제하시겠습니까?"
@@ -2258,6 +2247,33 @@ msgstr ""
 msgid "Do you want to create a RAID-5 from selected disks?"
 msgstr ""
 
+msgid "Do you want to create a RAID-Z1 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-Z2 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-Z3 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a cache device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a hot spare device from selected disk?"
+msgstr ""
+
+msgid "Do you want to create a log device from selected disk?"
+msgstr ""
+
+msgid "Do you want to create a mirrored log device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a mirrored virtual device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a striped virtual device from selected disks?"
+msgstr ""
+
 msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
@@ -2268,6 +2284,12 @@ msgid "Do you want to delete selected jobs?"
 msgstr ""
 
 msgid "Do you want to delete selected options?"
+msgstr ""
+
+msgid "Do you want to delete selected pools?"
+msgstr ""
+
+msgid "Do you want to delete selected virtual devices?"
 msgstr ""
 
 msgid "Do you want to delete selected volumes?"
@@ -2338,9 +2360,6 @@ msgstr "완료."
 
 msgid "Dos charset"
 msgstr "도스 문자 셋"
-
-msgid "Double-parity RAID-Z"
-msgstr ""
 
 msgid "Download"
 msgstr "다운로드"
@@ -2432,6 +2451,9 @@ msgstr "URL 편집"
 msgid "Edit VM"
 msgstr ""
 
+msgid "Edit Virtual Device"
+msgstr ""
+
 msgid "Edit Volume"
 msgstr ""
 
@@ -2443,9 +2465,6 @@ msgstr ""
 
 msgid "Edit command"
 msgstr "명령 편집"
-
-msgid "Edit device"
-msgstr "장치 편집"
 
 msgid "Edit disk"
 msgstr "디스크 편집"
@@ -2927,6 +2946,9 @@ msgstr "in-memory 파일 시스템을 생성하는 데에 실패했습니다."
 msgid "Failed to execute command zfs."
 msgstr ""
 
+msgid "Failed to execute command zpool."
+msgstr ""
+
 msgid "Failed to execute cron job."
 msgstr "cron 작업 실행에 실패함."
 
@@ -3135,6 +3157,9 @@ msgstr ""
 msgid "GEOM Software RAID"
 msgstr ""
 
+msgid "GEOM VINUM Software RAID"
+msgstr ""
+
 msgid "GID"
 msgstr "GID"
 
@@ -3257,6 +3282,9 @@ msgid ""
 msgstr ""
 
 msgid "HDD standby time"
+msgstr ""
+
+msgid "HOT SPARE"
 msgstr ""
 
 msgid "HTTP Proxy"
@@ -3769,6 +3797,12 @@ msgid ""
 "are part of a non healthy pool."
 msgstr ""
 
+#, php-format
+msgid ""
+"It is recommended to use encryption before you store the backup in a safe "
+"location."
+msgstr ""
+
 msgid ""
 "It's recommended to change the default username and password for accessing "
 "the WebGUI, enter the username here."
@@ -3866,6 +3900,12 @@ msgstr ""
 
 msgid "LDAP"
 msgstr "LDAP"
+
+msgid "LOG"
+msgstr ""
+
+msgid "LOG (Mirror)"
+msgstr ""
 
 msgid "LUN"
 msgstr "LUN"
@@ -4068,9 +4108,6 @@ msgstr "작업 파일들이 저장될 장소. 예. %s/backup/.unison"
 msgid "Log"
 msgstr "로그"
 
-msgid "Log (mirror)"
-msgstr "로그(미러)"
-
 msgid "Log Device"
 msgstr ""
 
@@ -4154,6 +4191,9 @@ msgstr ""
 msgid "MIB is marked for deletion"
 msgstr ""
 
+msgid "MIRROR"
+msgstr ""
+
 msgid "MISSING"
 msgstr "없음"
 
@@ -4179,6 +4219,14 @@ msgid "Machine suffix"
 msgstr "머신 접미사"
 
 msgid "Maintenance"
+msgstr ""
+
+#, php-format
+msgid ""
+"Make sure to select the correct number of devices:<div "
+"id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each "
+"vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
+"Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
 msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
@@ -4402,9 +4450,6 @@ msgstr "분"
 
 msgid "Minutes between network time sync."
 msgstr "네트워크 시간 동기화 사이의 분들(시간)."
-
-msgid "Mirror"
-msgstr "미러"
 
 msgid "Missing a temporary folder."
 msgstr "임시 폴더를 찾을 수 없습니다."
@@ -4646,9 +4691,9 @@ msgstr "풀이 구성되지 않았음. 먼저 <a href='%s'>풀</a>을 새로 추
 
 #, php-format
 msgid ""
-"No configured virtual devices. Please add new <a href='%s'>virtual "
+"No configured virtual devices. Please add new <a href=\"%s\">virtual "
 "device</a> first."
-msgstr "가상 장치가 구성되지 않았음. 먼저 <a href='%s'> 가상 장치</a>를 새로 추가하십시오."
+msgstr ""
 
 msgid "No device selected."
 msgstr "장치가 선택되지 않았습니다."
@@ -5161,6 +5206,15 @@ msgstr ""
 msgid "Pool Tools"
 msgstr ""
 
+msgid "Pool is marked for removal"
+msgstr ""
+
+msgid "Pool is protected"
+msgstr ""
+
+msgid "Pool is unlocked"
+msgstr ""
+
 msgid "Pools"
 msgstr "풀"
 
@@ -5320,9 +5374,6 @@ msgstr "조용히"
 msgid "Quota"
 msgstr "할당량"
 
-msgid "RAID 0"
-msgstr "RAID 0"
-
 msgid "RAID 0 Information & Status"
 msgstr ""
 
@@ -5335,9 +5386,6 @@ msgstr ""
 msgid "RAID 0/1/5 Maintenance"
 msgstr ""
 
-msgid "RAID 1"
-msgstr "RAID 1"
-
 msgid "RAID 1 Information & Status"
 msgstr ""
 
@@ -5345,6 +5393,12 @@ msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
+msgstr ""
+
+msgid "RAID Name"
+msgstr ""
+
+msgid "RAID Type"
 msgstr ""
 
 msgid "RAID device can be removed."
@@ -5378,6 +5432,15 @@ msgid "RAID-5"
 msgstr ""
 
 msgid "RAID-5 Maintenance"
+msgstr ""
+
+msgid "RAID-Z1"
+msgstr ""
+
+msgid "RAID-Z2"
+msgstr ""
+
+msgid "RAID-Z3"
 msgstr ""
 
 msgid "RAID0"
@@ -5418,12 +5481,6 @@ msgstr "RSYNC 이벤트"
 
 msgid "RSYNC log"
 msgstr "RSYNC 로그"
-
-msgid "Raid Name"
-msgstr ""
-
-msgid "Raid name"
-msgstr "Raid 명"
 
 msgid "Ramdisk"
 msgstr ""
@@ -5749,6 +5806,9 @@ msgstr "SSHD 로그"
 msgid "SSID"
 msgstr "SSID"
 
+msgid "STRIPE"
+msgstr ""
+
 msgid "Samba AD"
 msgstr ""
 
@@ -5890,9 +5950,6 @@ msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
-
-msgid "Select your read balance algorithm."
-msgstr "읽기 밸런스 알고리즘을 선택하십시오."
 
 msgid "Selected"
 msgstr "선택됨"
@@ -6078,9 +6135,6 @@ msgstr "끄기 타이머"
 msgid "Simple Network Management Protocol"
 msgstr "Simple 네트워크 관리 프로토콜"
 
-msgid "Single-parity RAID-Z"
-msgstr ""
-
 msgid "Size"
 msgstr "크기"
 
@@ -6137,9 +6191,6 @@ msgid "Software RAID"
 msgstr "소프트웨어 RAID"
 
 msgid "Software Used"
-msgstr ""
-
-msgid "Software gconcat JBOD"
 msgstr ""
 
 msgid "Source"
@@ -6310,9 +6361,6 @@ msgstr "대화 박스에 표시된 문자열은 사용자가 URL을 접근할 �
 
 msgid "String identifier of the extent."
 msgstr "범위의 문자열 식별자."
-
-msgid "Stripe"
-msgstr "Stripe"
 
 msgid "Subject"
 msgstr "제목"
@@ -6599,13 +6647,6 @@ msgid ""
 "manufacturing."
 msgstr ""
 
-#, php-format
-msgid ""
-"The RAID volume is currently mounted! Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
-msgstr ""
-"RAID 볼륨이 현재 마운트 되어 있습니다! 계속 진행하기 전에 먼저 <a href='%s'>마운트 지점</a>을 제거하십시오."
-
 msgid "The TCP port must be a valid port number."
 msgstr "TCP 포트는 유효한 포트 번호여야 합니다."
 
@@ -6876,9 +6917,6 @@ msgstr "기본 키 길이는 다음과 같습니다. AES 128, Blowfish 128, Came
 msgid "The default time in seconds to display a screen."
 msgstr ""
 
-msgid "The device name may only consist of the characters a-z, A-Z, 0-9."
-msgstr "장치 명은 a-z, A-Z, 0-9 문자만 포함할 수 있습니다."
-
 msgid "The device's IP address."
 msgstr "장치의 IP 주소."
 
@@ -7066,6 +7104,12 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr ""
 
+msgid "The name of the pool cannot be changed."
+msgstr ""
+
+msgid "The name of this virtual device cannot be changed."
+msgstr ""
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "네트워크 '%s'은(는) 무효합니다."
@@ -7117,12 +7161,6 @@ msgid ""
 msgstr ""
 "새 파일과 디렉터리에 관한 권한은 보통 생성 마스크와 디렉터리 마스크에 의해 통제되지만 권한 상속 인자는 이것에 우선합니다. 이것은 많은 "
 "사용자를 가진 시스템에서 하나의 공유가 각 사용자에게 유연성 있게 이용되도록 허용하려고 할 때 특히 유용할 수 있습니다."
-
-msgid "The pool name does not match the naming rules."
-msgstr "풀 이름이 명명 규칙에 맞지 않습니다."
-
-msgid "The pool name is invalid: contains spaces."
-msgstr ""
 
 msgid ""
 "The port to listen to. The default is to listen to the tftp port specified "
@@ -7275,15 +7313,6 @@ msgstr "추가적인 그룹이 너무 많이 존재합니다."
 
 msgid "There is no error, the file uploaded with success."
 msgstr "에러가 없습니다. 파일이 성공적으로 업로드 되었습니다."
-
-msgid "There must be 2 disks in a RAID 1 volume."
-msgstr "RAID 1 볼륨에는 2개의 디스크가 존재해야 합니다."
-
-msgid "There must be a minimum of 2 disks in a RAID 0 volume."
-msgstr "RAID 볼륨에는 최소 2개의 디스크가 존재해야 합니다."
-
-msgid "There must be a minimum of 3 disks in a RAID 5 volume."
-msgstr "RAID 5 볼륨에는 최소 3개의 디스크가 존재해야 합니다."
 
 msgid "There must be at least 1 disks selected."
 msgstr "최소 1개 이상의 디스크가 선택되어야 합니다."
@@ -7451,9 +7480,6 @@ msgstr "이것은 이 공유가 네트워크 보기와 브라우저 목록에 �
 
 msgid "This couple targetname/targetaddress already exists in the disk list."
 msgstr "이 타젯 명/타젯 주소 쌍은 디스크 목록에 이미 존재합니다."
-
-msgid "This device already exists in the raid volume list."
-msgstr "이 장치는 raid 볼륨 리스트에 이미 존재합니다."
 
 msgid "This disk already exists in the disk list."
 msgstr "이 디스크는 이미 디스크 리스트에 존재합니다."
@@ -7688,12 +7714,6 @@ msgstr ""
 
 msgid "This will create a recycle bin on the share."
 msgstr "이것은 공유에 휴지통을 생성할 것입니다."
-
-msgid ""
-"This will erase ALL data on the selected disks! Do not use this option if "
-"you want to add an already existing RAID again."
-msgstr ""
-"이것은 선택된 디스크의 모든 데이터를 삭제할 것입니다! 이미 존재하는 RAID를 다시 추가하고 싶다면 이 옵션을 이용하지 마십시오."
 
 msgid ""
 "This will erase ALL data on your disk! Do not use this option if you want to "
@@ -7946,9 +7966,6 @@ msgstr "트랩 문자열."
 
 msgid "Traps"
 msgstr "트랩"
-
-msgid "Triple-parity RAID-Z"
-msgstr ""
 
 msgid "Trivial File Transfer Protocol"
 msgstr "Trivial 파일 전송 프로토콜"
@@ -8337,6 +8354,18 @@ msgstr ""
 msgid "Virtual Device"
 msgstr ""
 
+msgid "Virtual Device List"
+msgstr ""
+
+msgid "Virtual Device is marked for removal"
+msgstr ""
+
+msgid "Virtual Device is protected"
+msgstr ""
+
+msgid "Virtual Device is unlocked"
+msgstr ""
+
 msgid "Virtual Devices"
 msgstr ""
 
@@ -8355,6 +8384,12 @@ msgstr ""
 msgid "Virtual Machine"
 msgstr ""
 
+msgid "Virtual device can be removed."
+msgstr ""
+
+msgid "Virtual device is already in use."
+msgstr ""
+
 msgid "Virtual devices"
 msgstr "가상 장치"
 
@@ -8370,10 +8405,13 @@ msgstr "볼륨 명"
 msgid "Volume Size Limit"
 msgstr ""
 
-msgid "Volume is locked"
+msgid "Volume is marked for deletion"
 msgstr ""
 
-msgid "Volume is marked for deletion"
+msgid "Volume is protected"
+msgstr ""
+
+msgid "Volume is unlocked"
 msgstr ""
 
 msgid "Volume label"
@@ -8429,11 +8467,6 @@ msgstr "경고"
 
 msgid "Warning Level"
 msgstr ""
-
-msgid ""
-"Warning: You are going to delete a RAID volume. All data will get lost and "
-"can not be recovered."
-msgstr "경고: RAID 볼륨을 삭제하려고 합니다. 모든 데이터들을 잃게 될 것이며 복구할 수 없습니다."
 
 msgid ""
 "Warning: You are going to delete an encrypted volume. All data will get lost "
@@ -8749,9 +8782,6 @@ msgstr ""
 msgid "minute(s)"
 msgstr "분"
 
-msgid "mirroring"
-msgstr "mirroring"
-
 msgid "mount"
 msgstr "마운트"
 
@@ -8779,9 +8809,6 @@ msgstr "rc.conf"
 msgid "revision"
 msgstr "개정판"
 
-msgid "rotated block-interleaved parity"
-msgstr "rotated block-interleaved parity"
-
 msgid "scan target failed."
 msgstr "타젯 스캔이 실패했습니다."
 
@@ -8793,9 +8820,6 @@ msgstr ""
 
 msgid "smallest settable low voltage transfer point"
 msgstr ""
-
-msgid "striping"
-msgstr "striping"
 
 msgid "successfully."
 msgstr "성공적으로."
@@ -8817,3 +8841,12 @@ msgstr "마운트 해제"
 
 msgid "version:"
 msgstr ""
+
+#~ msgid "Cache"
+#~ msgstr "캐시"
+
+#~ msgid "Mirror"
+#~ msgstr "미러"
+
+#~ msgid "Stripe"
+#~ msgstr "Stripe"
