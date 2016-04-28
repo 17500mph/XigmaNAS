@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-25 17:17+0000\n"
+"POT-Creation-Date: 2016-04-28 02:12+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: Jānis Marks Gailis <jm-gailis@fai-vianet.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-25 15:29+0000\n"
+"X-Launchpad-Export-Date: 2016-04-28 00:29+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: LATVIA\n"
 "Language: \n"
@@ -63,6 +63,10 @@ msgid "%s already exists as a %s."
 msgstr ""
 
 #, php-format
+msgid "%s already exists."
+msgstr ""
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr ""
 
@@ -73,10 +77,6 @@ msgstr ""
 #, php-format
 msgid "%s is too long."
 msgstr "%s ir pārāk garš."
-
-#, php-format
-msgid "%s is used to create %s volumes."
-msgstr "%s tiek lietots, lai veidotu %s sējumus."
 
 #, php-format
 msgid "%s of %sB"
@@ -162,6 +162,9 @@ msgstr ""
 "izmantot šo izvēlni, lai uzsāktu RAID sējumu (iespēkojas automātiski)."
 
 msgid "2 or more disks are required to build a RAID-0 volume."
+msgstr ""
+
+msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr ""
 
 msgid "3 or more disks are required to build a RAID-5 volume."
@@ -279,9 +282,6 @@ msgstr ""
 "Atslēga būs 5 vai 13 simboli (40 vai 104 biti) atkarībā no vietējā tīkla un "
 "adaptera iespējām. Tas var tikt norādīts kā tīra rinda vai kā heksadecimāla "
 "rinda."
-
-msgid "A minimum of 2 disks is required to build a JBOD."
-msgstr ""
 
 #, php-format
 msgid ""
@@ -471,6 +471,9 @@ msgstr "Pievienot Rsync darbu"
 msgid "Add URL"
 msgstr "Pievienot URL"
 
+msgid "Add Virtual Device"
+msgstr ""
+
 msgid "Add Volume"
 msgstr ""
 
@@ -485,9 +488,6 @@ msgstr "Pievienot automatisku momentuzņēmumu"
 
 msgid "Add command"
 msgstr "Pievienot komandu"
-
-msgid "Add device"
-msgstr "Pievienot ierīci"
 
 msgid "Add disk"
 msgstr "Pievienot disku"
@@ -904,6 +904,9 @@ msgstr ""
 msgid "Auxiliary parameters"
 msgstr "Palīgu parametri"
 
+msgid "Avail"
+msgstr ""
+
 msgid "Available"
 msgstr ""
 
@@ -930,9 +933,6 @@ msgstr ""
 
 msgid "Balance Algorithm"
 msgstr ""
-
-msgid "Balance algorithm"
-msgstr "Balancēt algoritmu"
 
 msgid "Ban List"
 msgstr ""
@@ -1071,6 +1071,9 @@ msgid "By default, only already existing files can be uploaded."
 msgstr ""
 "Pēc noklusējuma, tikai jau eksistējošas datnes var tikt augšupielādētas."
 
+msgid "CACHE"
+msgstr ""
+
 msgid "CARP"
 msgstr ""
 
@@ -1162,9 +1165,6 @@ msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
 "error)."
 msgstr ""
-
-msgid "Cache"
-msgstr "Kešatmiņa"
 
 msgid "Cache Device"
 msgstr "Kešatmiņas ierīce"
@@ -1759,6 +1759,9 @@ msgstr ""
 msgid "Dataset is protected"
 msgstr ""
 
+msgid "Dataset is unlocked"
+msgstr ""
+
 msgid "Datasets"
 msgstr "Datu sējumi"
 
@@ -1834,9 +1837,6 @@ msgstr "Dzēst saimniekdatoru"
 msgid "Delete Login Info"
 msgstr "Dzēst Autorizācijas Informāciju"
 
-msgid "Delete RAID"
-msgstr "Dzēst RAID"
-
 msgid "Delete Route"
 msgstr "Dzēst Ceļu"
 
@@ -1852,7 +1852,13 @@ msgstr ""
 msgid "Delete Selected Options"
 msgstr ""
 
+msgid "Delete Selected Pools"
+msgstr ""
+
 msgid "Delete Selected RAID Volumes"
+msgstr ""
+
+msgid "Delete Selected Virtual Devices"
 msgstr ""
 
 msgid "Delete Selected Volumes"
@@ -1885,9 +1891,6 @@ msgstr ""
 msgid "Delete command"
 msgstr "Dzēst komandu"
 
-msgid "Delete device"
-msgstr "Dzēst ierīci"
-
 msgid "Delete disk"
 msgstr "Dzēst disku"
 
@@ -1914,9 +1917,6 @@ msgstr "Dzēst moduli"
 
 msgid "Delete mount point"
 msgstr "Dzēst montēšanas punktu"
-
-msgid "Delete pool"
-msgstr "Dzēst pūlu"
 
 msgid "Delete portal group"
 msgstr "Dzēst portāla grupu"
@@ -2164,11 +2164,6 @@ msgstr ""
 msgid "Distributed hash table"
 msgstr "Dalīta jaucējtabula"
 
-msgid ""
-"Do not activate this option if you want to add an already existing RAID "
-"again."
-msgstr ""
-
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
 
@@ -2203,9 +2198,6 @@ msgstr ""
 
 msgid "Do you really want to delete this command?"
 msgstr "Vai Tu patiešām vēlies dzēst šo komandu?"
-
-msgid "Do you really want to delete this device?"
-msgstr "Vai Tu patiešām vēlies dzēst šo ierīci?"
 
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
@@ -2245,9 +2237,6 @@ msgid ""
 msgstr ""
 "Vai Tu patiešām vēlies dzēst šo piemontēšanas punktu? Visi elementi, kas to "
 "lieto, paliks nederīgi (piem. kopīgojums)!"
-
-msgid "Do you really want to delete this pool?"
-msgstr "Vai Tu patiešām vēlies dzēst so pūlu?"
 
 msgid "Do you really want to delete this portal group?"
 msgstr "Vai Tu patiešām vēlies dzēst šo portāla grupu?"
@@ -2308,6 +2297,33 @@ msgstr ""
 msgid "Do you want to create a RAID-5 from selected disks?"
 msgstr ""
 
+msgid "Do you want to create a RAID-Z1 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-Z2 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-Z3 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a cache device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a hot spare device from selected disk?"
+msgstr ""
+
+msgid "Do you want to create a log device from selected disk?"
+msgstr ""
+
+msgid "Do you want to create a mirrored log device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a mirrored virtual device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a striped virtual device from selected disks?"
+msgstr ""
+
 msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
@@ -2318,6 +2334,12 @@ msgid "Do you want to delete selected jobs?"
 msgstr ""
 
 msgid "Do you want to delete selected options?"
+msgstr ""
+
+msgid "Do you want to delete selected pools?"
+msgstr ""
+
+msgid "Do you want to delete selected virtual devices?"
 msgstr ""
 
 msgid "Do you want to delete selected volumes?"
@@ -2388,9 +2410,6 @@ msgstr "Pabeigts."
 
 msgid "Dos charset"
 msgstr "Dos zīmju kopa"
-
-msgid "Double-parity RAID-Z"
-msgstr ""
 
 msgid "Download"
 msgstr "Lejupielāde"
@@ -2482,6 +2501,9 @@ msgstr "Labot URL"
 msgid "Edit VM"
 msgstr ""
 
+msgid "Edit Virtual Device"
+msgstr ""
+
 msgid "Edit Volume"
 msgstr ""
 
@@ -2493,9 +2515,6 @@ msgstr ""
 
 msgid "Edit command"
 msgstr "Labot komandu"
-
-msgid "Edit device"
-msgstr "Labot ierīci"
 
 msgid "Edit disk"
 msgstr "Labot disku"
@@ -2991,6 +3010,9 @@ msgstr "Neizdevās izveidot iekš-atmiņas datņu sistēmu."
 msgid "Failed to execute command zfs."
 msgstr ""
 
+msgid "Failed to execute command zpool."
+msgstr ""
+
 msgid "Failed to execute cron job."
 msgstr "Neizdevās izpildīt cron job."
 
@@ -3203,6 +3225,9 @@ msgstr ""
 msgid "GEOM Software RAID"
 msgstr ""
 
+msgid "GEOM VINUM Software RAID"
+msgstr ""
+
 msgid "GID"
 msgstr "GID"
 
@@ -3326,6 +3351,9 @@ msgid ""
 msgstr ""
 
 msgid "HDD standby time"
+msgstr ""
+
+msgid "HOT SPARE"
 msgstr ""
 
 msgid "HTTP Proxy"
@@ -3856,6 +3884,12 @@ msgid ""
 "are part of a non healthy pool."
 msgstr ""
 
+#, php-format
+msgid ""
+"It is recommended to use encryption before you store the backup in a safe "
+"location."
+msgstr ""
+
 msgid ""
 "It's recommended to change the default username and password for accessing "
 "the WebGUI, enter the username here."
@@ -3956,6 +3990,12 @@ msgstr ""
 
 msgid "LDAP"
 msgstr "LDAP"
+
+msgid "LOG"
+msgstr ""
+
+msgid "LOG (Mirror)"
+msgstr ""
 
 msgid "LUN"
 msgstr "LUN"
@@ -4169,9 +4209,6 @@ msgstr "Vieta, kur darbojošās datnes tiks glabātas, piem. %s/backup/.unison"
 msgid "Log"
 msgstr "Žurnāls"
 
-msgid "Log (mirror)"
-msgstr "Žurnāls (spogulis)"
-
 msgid "Log Device"
 msgstr ""
 
@@ -4255,6 +4292,9 @@ msgstr ""
 msgid "MIB is marked for deletion"
 msgstr ""
 
+msgid "MIRROR"
+msgstr ""
+
 msgid "MISSING"
 msgstr "PAZUDIS"
 
@@ -4280,6 +4320,14 @@ msgid "Machine suffix"
 msgstr "Mašīnas sufikss"
 
 msgid "Maintenance"
+msgstr ""
+
+#, php-format
+msgid ""
+"Make sure to select the correct number of devices:<div "
+"id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each "
+"vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
+"Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
 msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
@@ -4509,9 +4557,6 @@ msgstr "Minūtes"
 
 msgid "Minutes between network time sync."
 msgstr "Minūtes starp tīkla laika sinhronizāciju."
-
-msgid "Mirror"
-msgstr "Spogulis"
 
 msgid "Missing a temporary folder."
 msgstr "Pazudusi pagaidu mape."
@@ -4769,11 +4814,9 @@ msgstr ""
 
 #, php-format
 msgid ""
-"No configured virtual devices. Please add new <a href='%s'>virtual "
+"No configured virtual devices. Please add new <a href=\"%s\">virtual "
 "device</a> first."
 msgstr ""
-"Nav konfigurētas virtuālās ierīces. Lūdzu pievieno jaunu <a "
-"href='%s'>virtuālo ierīci</a> vispirms."
 
 msgid "No device selected."
 msgstr "Nav izvēlēta neviena ierīce."
@@ -5302,6 +5345,15 @@ msgstr ""
 msgid "Pool Tools"
 msgstr ""
 
+msgid "Pool is marked for removal"
+msgstr ""
+
+msgid "Pool is protected"
+msgstr ""
+
+msgid "Pool is unlocked"
+msgstr ""
+
 msgid "Pools"
 msgstr "Pūli"
 
@@ -5465,9 +5517,6 @@ msgstr "Klusums"
 msgid "Quota"
 msgstr "Kvota"
 
-msgid "RAID 0"
-msgstr "RAID 0"
-
 msgid "RAID 0 Information & Status"
 msgstr ""
 
@@ -5480,9 +5529,6 @@ msgstr ""
 msgid "RAID 0/1/5 Maintenance"
 msgstr ""
 
-msgid "RAID 1"
-msgstr "RAID 1"
-
 msgid "RAID 1 Information & Status"
 msgstr ""
 
@@ -5490,6 +5536,12 @@ msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
+msgstr ""
+
+msgid "RAID Name"
+msgstr ""
+
+msgid "RAID Type"
 msgstr ""
 
 msgid "RAID device can be removed."
@@ -5523,6 +5575,15 @@ msgid "RAID-5"
 msgstr ""
 
 msgid "RAID-5 Maintenance"
+msgstr ""
+
+msgid "RAID-Z1"
+msgstr ""
+
+msgid "RAID-Z2"
+msgstr ""
+
+msgid "RAID-Z3"
 msgstr ""
 
 msgid "RAID0"
@@ -5563,12 +5624,6 @@ msgstr "RSYNC notikumi"
 
 msgid "RSYNC log"
 msgstr "RSYNC žurnāls"
-
-msgid "Raid Name"
-msgstr ""
-
-msgid "Raid name"
-msgstr "Raid nosaukums"
 
 msgid "Ramdisk"
 msgstr ""
@@ -5902,6 +5957,9 @@ msgstr "SSHD žurnāls"
 msgid "SSID"
 msgstr "SSID"
 
+msgid "STRIPE"
+msgstr ""
+
 msgid "Samba AD"
 msgstr ""
 
@@ -6049,9 +6107,6 @@ msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
-
-msgid "Select your read balance algorithm."
-msgstr "Izvēlies savu lasīšanas balancēšanas algoritmu."
 
 msgid "Selected"
 msgstr "Izvēlēts"
@@ -6245,9 +6300,6 @@ msgstr "Izslēgšanās taimeris"
 msgid "Simple Network Management Protocol"
 msgstr "Vienkāršs Tīkla Menedžmenta Protokols"
 
-msgid "Single-parity RAID-Z"
-msgstr ""
-
 msgid "Size"
 msgstr "Izmērs"
 
@@ -6306,9 +6358,6 @@ msgid "Software RAID"
 msgstr "Programmatūras RAID"
 
 msgid "Software Used"
-msgstr ""
-
-msgid "Software gconcat JBOD"
 msgstr ""
 
 msgid "Source"
@@ -6488,9 +6537,6 @@ msgstr "Rinda, kuru parāda dialogā un prezentē lietotājam, kad piekļūst UR
 
 msgid "String identifier of the extent."
 msgstr "Rindas identifikators apjomam."
-
-msgid "Stripe"
-msgstr "Strīpa"
 
 msgid "Subject"
 msgstr "Temats"
@@ -6782,14 +6828,6 @@ msgid ""
 "manufacturing."
 msgstr ""
 
-#, php-format
-msgid ""
-"The RAID volume is currently mounted! Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
-msgstr ""
-"RAID sējums pašlaik ir piemontēts! Noņem <a href='%s'>montēšanas punktu</a> "
-"pirms turpini."
-
 msgid "The TCP port must be a valid port number."
 msgstr "TCP portam jābūt derīgam numuram."
 
@@ -7074,9 +7112,6 @@ msgstr ""
 msgid "The default time in seconds to display a screen."
 msgstr ""
 
-msgid "The device name may only consist of the characters a-z, A-Z, 0-9."
-msgstr "Ierīces nosaukums var saturēt tikai simbolus a-z, A-Z, 0-9."
-
 msgid "The device's IP address."
 msgstr "Ierīces IP adrese."
 
@@ -7293,6 +7328,12 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr ""
 
+msgid "The name of the pool cannot be changed."
+msgstr ""
+
+msgid "The name of this virtual device cannot be changed."
+msgstr ""
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "Tīkls '%s' ir nederīgs."
@@ -7346,12 +7387,6 @@ msgstr ""
 "un mapju maskas, bet mantošanas atļaujas parametrs ignorē to. Šis var būt "
 "daļēji noderīgs uz sistēmām ar daudz lietotājiem, lai atļautu vienu datni "
 "koplietot ar visiem."
-
-msgid "The pool name does not match the naming rules."
-msgstr "Pūla nosaukums nav vienāds ar vārdošanas noteikumiem."
-
-msgid "The pool name is invalid: contains spaces."
-msgstr ""
 
 msgid ""
 "The port to listen to. The default is to listen to the tftp port specified "
@@ -7514,15 +7549,6 @@ msgstr "Š"
 
 msgid "There is no error, the file uploaded with success."
 msgstr "Šeit nav kļūdas, datne veiksmīgi augšupielādējās."
-
-msgid "There must be 2 disks in a RAID 1 volume."
-msgstr "Priekš RAID 1 sējuma vahag 2 diskus."
-
-msgid "There must be a minimum of 2 disks in a RAID 0 volume."
-msgstr "Priekš RAID 0 sējuma vajag vismaz 2 diskus."
-
-msgid "There must be a minimum of 3 disks in a RAID 5 volume."
-msgstr "Ir jābūt vismaz 3 diskiem priekš RAID5 sējuma."
 
 msgid "There must be at least 1 disks selected."
 msgstr "Ir jābūt izvēlētam vismaz vienam diskam."
@@ -7704,9 +7730,6 @@ msgstr ""
 
 msgid "This couple targetname/targetaddress already exists in the disk list."
 msgstr "Šis pāris mērķa nosaukums/mērķa adrese jau eksistē disku sarakstā."
-
-msgid "This device already exists in the raid volume list."
-msgstr "Šī ierīce jau eksistē raid sējumu sarakstā."
 
 msgid "This disk already exists in the disk list."
 msgstr "Disks jau eksistē disku sarakstā."
@@ -7979,13 +8002,6 @@ msgid "This will create a recycle bin on the share."
 msgstr "Šis izveidois miskasti iekš kopīgojuma."
 
 msgid ""
-"This will erase ALL data on the selected disks! Do not use this option if "
-"you want to add an already existing RAID again."
-msgstr ""
-"Šis izdzēsīs VISU informāciju uz izvēlētajiem diskiem! Neizmantojiet šo "
-"iespēju, ja vēlaties pievienot jau eksistējošu RAID atkal."
-
-msgid ""
 "This will erase ALL data on your disk! Do not use this option if you want to "
 "add an existing encrypted disk."
 msgstr ""
@@ -8244,9 +8260,6 @@ msgstr "Slazda virkne."
 
 msgid "Traps"
 msgstr "Slazdi"
-
-msgid "Triple-parity RAID-Z"
-msgstr ""
 
 msgid "Trivial File Transfer Protocol"
 msgstr "Triviāls Datņu Transfēra Protokols"
@@ -8650,6 +8663,18 @@ msgstr ""
 msgid "Virtual Device"
 msgstr ""
 
+msgid "Virtual Device List"
+msgstr ""
+
+msgid "Virtual Device is marked for removal"
+msgstr ""
+
+msgid "Virtual Device is protected"
+msgstr ""
+
+msgid "Virtual Device is unlocked"
+msgstr ""
+
 msgid "Virtual Devices"
 msgstr ""
 
@@ -8668,6 +8693,12 @@ msgstr ""
 msgid "Virtual Machine"
 msgstr ""
 
+msgid "Virtual device can be removed."
+msgstr ""
+
+msgid "Virtual device is already in use."
+msgstr ""
+
 msgid "Virtual devices"
 msgstr "Virtuālās ierīces"
 
@@ -8683,10 +8714,13 @@ msgstr "Sējuma nosaukums"
 msgid "Volume Size Limit"
 msgstr ""
 
-msgid "Volume is locked"
+msgid "Volume is marked for deletion"
 msgstr ""
 
-msgid "Volume is marked for deletion"
+msgid "Volume is protected"
+msgstr ""
+
+msgid "Volume is unlocked"
 msgstr ""
 
 msgid "Volume label"
@@ -8742,13 +8776,6 @@ msgstr "Brīdinājums"
 
 msgid "Warning Level"
 msgstr ""
-
-msgid ""
-"Warning: You are going to delete a RAID volume. All data will get lost and "
-"can not be recovered."
-msgstr ""
-"Brīdinājums: Tu vēlies dzēst RAID sējumu. Visi dati pazudīs un nevarēs tikt "
-"atjaunoti."
 
 msgid ""
 "Warning: You are going to delete an encrypted volume. All data will get lost "
@@ -9078,9 +9105,6 @@ msgstr ""
 msgid "minute(s)"
 msgstr "minūte(es)"
 
-msgid "mirroring"
-msgstr "spoguļošana"
-
 msgid "mount"
 msgstr "piemontēt"
 
@@ -9108,9 +9132,6 @@ msgstr "rc.conf"
 msgid "revision"
 msgstr "revīzija"
 
-msgid "rotated block-interleaved parity"
-msgstr "rotēts bloka-mijas paritāte"
-
 msgid "scan target failed."
 msgstr "mērķa skanēšana neizdevās"
 
@@ -9122,9 +9143,6 @@ msgstr ""
 
 msgid "smallest settable low voltage transfer point"
 msgstr ""
-
-msgid "striping"
-msgstr "svītrošana"
 
 msgid "successfully."
 msgstr "veiksmīgi."
@@ -9146,3 +9164,12 @@ msgstr "aitsaistīt"
 
 msgid "version:"
 msgstr ""
+
+#~ msgid "Cache"
+#~ msgstr "Kešatmiņa"
+
+#~ msgid "Mirror"
+#~ msgstr "Spogulis"
+
+#~ msgid "Stripe"
+#~ msgstr "Strīpa"

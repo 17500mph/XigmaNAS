@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-25 17:17+0000\n"
+"POT-Creation-Date: 2016-04-28 02:12+0000\n"
 "PO-Revision-Date: 2016-04-01 21:58+0000\n"
 "Last-Translator: Enrico Pierazzi <enrico.pierazzi@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-25 15:29+0000\n"
+"X-Launchpad-Export-Date: 2016-04-28 00:29+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
@@ -63,6 +63,10 @@ msgid "%s already exists as a %s."
 msgstr "%s esiste già come %s"
 
 #, php-format
+msgid "%s already exists."
+msgstr ""
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr "%s è già configurato come filsystem"
 
@@ -73,10 +77,6 @@ msgstr "%s è già configurato come volume"
 #, php-format
 msgid "%s is too long."
 msgstr "%s è troppo lungo"
-
-#, php-format
-msgid "%s is used to create %s volumes."
-msgstr "%s è usato per creare %s volumi."
 
 #, php-format
 msgid "%s of %sB"
@@ -186,6 +186,9 @@ msgstr ""
 "automaticamente)."
 
 msgid "2 or more disks are required to build a RAID-0 volume."
+msgstr ""
+
+msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr ""
 
 msgid "3 or more disks are required to build a RAID-5 volume."
@@ -305,9 +308,6 @@ msgstr ""
 "La chiave può essere di 5 o 13 caratteri (40 o 104 bit) in base alla "
 "capacità della rete locale e delle schede di rete e può essere espressa  sia "
 "in chiaro che in una sequenza di valori esadecimali preceduti da '0x'."
-
-msgid "A minimum of 2 disks is required to build a JBOD."
-msgstr ""
 
 #, php-format
 msgid ""
@@ -501,6 +501,9 @@ msgstr "Aggiungi lavoro di Rsync"
 msgid "Add URL"
 msgstr "Aggiungi URL"
 
+msgid "Add Virtual Device"
+msgstr ""
+
 msgid "Add Volume"
 msgstr "Aggiungi Volume"
 
@@ -515,9 +518,6 @@ msgstr "Aggiungi auto snapshot"
 
 msgid "Add command"
 msgstr "Aggiungi comando"
-
-msgid "Add device"
-msgstr "Aggiungere dispositivo"
 
 msgid "Add disk"
 msgstr "Aggiungi disco"
@@ -954,6 +954,9 @@ msgstr "Firmware della periferica ausiliaria"
 msgid "Auxiliary parameters"
 msgstr "Parametri ausiliari"
 
+msgid "Avail"
+msgstr ""
+
 msgid "Available"
 msgstr "Disponibile"
 
@@ -982,9 +985,6 @@ msgstr "Utente sbagliato - (Utente non esiste)"
 
 msgid "Balance Algorithm"
 msgstr ""
-
-msgid "Balance algorithm"
-msgstr "Algoritmo di bilanciamento"
 
 msgid "Ban List"
 msgstr "Lista utenti bloccati"
@@ -1131,6 +1131,9 @@ msgstr ""
 "Come impostazione predefinita, solo files già esistenti possono essere "
 "caricati."
 
+msgid "CACHE"
+msgstr ""
+
 msgid "CARP"
 msgstr "CARP"
 
@@ -1224,9 +1227,6 @@ msgid ""
 msgstr ""
 "CRC Error Count. Conta il numero di errori CRC (leggere / scrivere dati "
 "errore FIS CRC)."
-
-msgid "Cache"
-msgstr "Cache"
 
 msgid "Cache Device"
 msgstr "Dispositivo cache"
@@ -1880,6 +1880,9 @@ msgstr "Insieme di dati è contrassegnato per l'eliminazione"
 msgid "Dataset is protected"
 msgstr "Insieme di dati è protetto"
 
+msgid "Dataset is unlocked"
+msgstr ""
+
 msgid "Datasets"
 msgstr "Dataset"
 
@@ -1957,9 +1960,6 @@ msgstr "Cancella host"
 msgid "Delete Login Info"
 msgstr "Elimina le informazioni di login"
 
-msgid "Delete RAID"
-msgstr "Cancella RAID"
-
 msgid "Delete Route"
 msgstr "Cancella Route"
 
@@ -1975,7 +1975,13 @@ msgstr "Cancella l'attività selezionata"
 msgid "Delete Selected Options"
 msgstr "Cancella le opzioni selezionate"
 
+msgid "Delete Selected Pools"
+msgstr ""
+
 msgid "Delete Selected RAID Volumes"
+msgstr ""
+
+msgid "Delete Selected Virtual Devices"
 msgstr ""
 
 msgid "Delete Selected Volumes"
@@ -2008,9 +2014,6 @@ msgstr "Elimina clone"
 msgid "Delete command"
 msgstr "Cancella comando"
 
-msgid "Delete device"
-msgstr "Elimina dispositivo"
-
 msgid "Delete disk"
 msgstr "Cancella disco"
 
@@ -2039,9 +2042,6 @@ msgstr "Elimina modulo"
 
 msgid "Delete mount point"
 msgstr "Cancella punto di montaggio"
-
-msgid "Delete pool"
-msgstr "Elimina pool."
 
 msgid "Delete portal group"
 msgstr "elimina un gruppo portale"
@@ -2298,11 +2298,6 @@ msgstr ""
 msgid "Distributed hash table"
 msgstr "Tabella hash distribuita"
 
-msgid ""
-"Do not activate this option if you want to add an already existing RAID "
-"again."
-msgstr ""
-
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
 
@@ -2339,9 +2334,6 @@ msgstr "Vuoi davvero eliminare questo clone?"
 
 msgid "Do you really want to delete this command?"
 msgstr "Si vuole realmente cancellare questo comando?"
-
-msgid "Do you really want to delete this device?"
-msgstr "Si desidera realmente cancellare questo dispositivo?"
 
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
@@ -2381,9 +2373,6 @@ msgid ""
 msgstr ""
 "Si vuole realmente cancellare questo punto di mount? Tutti gli elementi che "
 "ancora lo utilizzano non saranno piu' validi (es. condivisioni)!"
-
-msgid "Do you really want to delete this pool?"
-msgstr "Vuoi davvero cancellare questo pool?"
 
 msgid "Do you really want to delete this portal group?"
 msgstr "Vuoi davvero cancellare questo portal group?"
@@ -2447,6 +2436,33 @@ msgstr ""
 msgid "Do you want to create a RAID-5 from selected disks?"
 msgstr ""
 
+msgid "Do you want to create a RAID-Z1 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-Z2 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-Z3 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a cache device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a hot spare device from selected disk?"
+msgstr ""
+
+msgid "Do you want to create a log device from selected disk?"
+msgstr ""
+
+msgid "Do you want to create a mirrored log device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a mirrored virtual device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a striped virtual device from selected disks?"
+msgstr ""
+
 msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
@@ -2458,6 +2474,12 @@ msgstr "Vuoi cancellare le attività selezionate?"
 
 msgid "Do you want to delete selected options?"
 msgstr "Vuoi cancellare le opzioni selezionate?"
+
+msgid "Do you want to delete selected pools?"
+msgstr ""
+
+msgid "Do you want to delete selected virtual devices?"
+msgstr ""
 
 msgid "Do you want to delete selected volumes?"
 msgstr "Vuoi cancellare i volumi selezionati?"
@@ -2530,9 +2552,6 @@ msgstr "Finito."
 
 msgid "Dos charset"
 msgstr "Set caratteri Dos"
-
-msgid "Double-parity RAID-Z"
-msgstr "Double-parity RAID-Z"
 
 msgid "Download"
 msgstr "Download"
@@ -2624,6 +2643,9 @@ msgstr "Modifica URL"
 msgid "Edit VM"
 msgstr "Edita VM"
 
+msgid "Edit Virtual Device"
+msgstr ""
+
 msgid "Edit Volume"
 msgstr "Edita Volume"
 
@@ -2635,9 +2657,6 @@ msgstr "Modifica snapshot automatico"
 
 msgid "Edit command"
 msgstr "Modifica comando"
-
-msgid "Edit device"
-msgstr "Modifica dispositivo"
 
 msgid "Edit disk"
 msgstr "Edita disco"
@@ -3147,6 +3166,9 @@ msgstr "Creazione del file system in memoria fallita."
 msgid "Failed to execute command zfs."
 msgstr "Impossibile eseguire comando zfs."
 
+msgid "Failed to execute command zpool."
+msgstr ""
+
 msgid "Failed to execute cron job."
 msgstr "Esecuzione del job di cron fallita."
 
@@ -3362,6 +3384,9 @@ msgstr ""
 msgid "GEOM Software RAID"
 msgstr ""
 
+msgid "GEOM VINUM Software RAID"
+msgstr ""
+
 msgid "GID"
 msgstr "GID"
 
@@ -3486,6 +3511,9 @@ msgstr ""
 
 msgid "HDD standby time"
 msgstr "HDD standby time"
+
+msgid "HOT SPARE"
+msgstr ""
 
 msgid "HTTP Proxy"
 msgstr "Proxy HTTP"
@@ -4043,6 +4071,12 @@ msgstr ""
 "L'importazione di pool non sani (non healthy) o di virtual device che sono "
 "parte di un pool non sano (non healthy) è sconsigliata."
 
+#, php-format
+msgid ""
+"It is recommended to use encryption before you store the backup in a safe "
+"location."
+msgstr ""
+
 msgid ""
 "It's recommended to change the default username and password for accessing "
 "the WebGUI, enter the username here."
@@ -4145,6 +4179,12 @@ msgstr "LCDproc (Client)"
 
 msgid "LDAP"
 msgstr "LDAP"
+
+msgid "LOG"
+msgstr ""
+
+msgid "LOG (Mirror)"
+msgstr ""
 
 msgid "LUN"
 msgstr "LUN"
@@ -4358,9 +4398,6 @@ msgstr "Luogo dove salvare i file di lavoro, ad esempio %s/backup/.unison"
 msgid "Log"
 msgstr "Log"
 
-msgid "Log (mirror)"
-msgstr "Log (mirror)"
-
 msgid "Log Device"
 msgstr "Dispositivo di log"
 
@@ -4446,6 +4483,9 @@ msgstr "MIB è bloccato"
 msgid "MIB is marked for deletion"
 msgstr "Mib è selezionato per cancellazione"
 
+msgid "MIRROR"
+msgstr ""
+
 msgid "MISSING"
 msgstr "MANCANTE"
 
@@ -4471,6 +4511,14 @@ msgid "Machine suffix"
 msgstr "Suffisso della macchina"
 
 msgid "Maintenance"
+msgstr ""
+
+#, php-format
+msgid ""
+"Make sure to select the correct number of devices:<div "
+"id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each "
+"vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
+"Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
 msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
@@ -4703,9 +4751,6 @@ msgstr "Minuti"
 
 msgid "Minutes between network time sync."
 msgstr "Minuti tra le sincronizzazioni NTP."
-
-msgid "Mirror"
-msgstr "Mirror"
 
 msgid "Missing a temporary folder."
 msgstr "Manca una directory temporanea."
@@ -4964,11 +5009,9 @@ msgstr ""
 
 #, php-format
 msgid ""
-"No configured virtual devices. Please add new <a href='%s'>virtual "
+"No configured virtual devices. Please add new <a href=\"%s\">virtual "
 "device</a> first."
 msgstr ""
-"Nessuna periferica virtuale configurata. Prego prima aggiungere una nuova <a "
-"href='%s'>periferica virtuale</a>."
 
 msgid "No device selected."
 msgstr "Nessuna periferica selezionata."
@@ -5506,6 +5549,15 @@ msgstr ""
 msgid "Pool Tools"
 msgstr ""
 
+msgid "Pool is marked for removal"
+msgstr ""
+
+msgid "Pool is protected"
+msgstr ""
+
+msgid "Pool is unlocked"
+msgstr ""
+
 msgid "Pools"
 msgstr "Pools"
 
@@ -5669,9 +5721,6 @@ msgstr "Silenzioso"
 msgid "Quota"
 msgstr "Quota"
 
-msgid "RAID 0"
-msgstr "RAID 0"
-
 msgid "RAID 0 Information & Status"
 msgstr ""
 
@@ -5684,9 +5733,6 @@ msgstr ""
 msgid "RAID 0/1/5 Maintenance"
 msgstr ""
 
-msgid "RAID 1"
-msgstr "RAID 1"
-
 msgid "RAID 1 Information & Status"
 msgstr ""
 
@@ -5694,6 +5740,12 @@ msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
+msgstr ""
+
+msgid "RAID Name"
+msgstr ""
+
+msgid "RAID Type"
 msgstr ""
 
 msgid "RAID device can be removed."
@@ -5727,6 +5779,15 @@ msgid "RAID-5"
 msgstr ""
 
 msgid "RAID-5 Maintenance"
+msgstr ""
+
+msgid "RAID-Z1"
+msgstr ""
+
+msgid "RAID-Z2"
+msgstr ""
+
+msgid "RAID-Z3"
 msgstr ""
 
 msgid "RAID0"
@@ -5767,12 +5828,6 @@ msgstr "Eventi RSYNC"
 
 msgid "RSYNC log"
 msgstr "Log di RSYNC"
-
-msgid "Raid Name"
-msgstr ""
-
-msgid "Raid name"
-msgstr "Nome raid"
 
 msgid "Ramdisk"
 msgstr "Ramdisk"
@@ -6109,6 +6164,9 @@ msgstr "Log di SSHD"
 msgid "SSID"
 msgstr "SSID"
 
+msgid "STRIPE"
+msgstr ""
+
 msgid "Samba AD"
 msgstr "AD samba"
 
@@ -6263,9 +6321,6 @@ msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
-
-msgid "Select your read balance algorithm."
-msgstr "Selezionare un algoritmo di bilanciamento."
 
 msgid "Selected"
 msgstr "Selezionato"
@@ -6468,9 +6523,6 @@ msgstr "Timer di spegnimento"
 msgid "Simple Network Management Protocol"
 msgstr "Simple Network Management Protocol"
 
-msgid "Single-parity RAID-Z"
-msgstr "RAID-Z parità singola"
-
 msgid "Size"
 msgstr "Dimensione"
 
@@ -6531,9 +6583,6 @@ msgstr "Software RAID"
 
 msgid "Software Used"
 msgstr "Software Usato"
-
-msgid "Software gconcat JBOD"
-msgstr ""
 
 msgid "Source"
 msgstr "Sorgente"
@@ -6720,9 +6769,6 @@ msgstr ""
 
 msgid "String identifier of the extent."
 msgstr "Stringa di caratteri che identificano l'estensione."
-
-msgid "Stripe"
-msgstr "Stripe"
 
 msgid "Subject"
 msgstr "Soggetto"
@@ -7019,14 +7065,6 @@ msgid ""
 "flash blocks the drive detected since it was first initialized in "
 "manufacturing."
 msgstr ""
-
-#, php-format
-msgid ""
-"The RAID volume is currently mounted! Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
-msgstr ""
-"Il volume RAID è montato! Rimuovi il <a href='%s'>punto di mount</a> prima "
-"di procedere."
 
 msgid "The TCP port must be a valid port number."
 msgstr "La porta TCP deve essere un numero valido."
@@ -7340,10 +7378,6 @@ msgstr ""
 msgid "The default time in seconds to display a screen."
 msgstr "Il tempo in secondi per visualizzare una schermata."
 
-msgid "The device name may only consist of the characters a-z, A-Z, 0-9."
-msgstr ""
-"Il nome della device puo' essere formato solo dai caratteri a-z, A-Z, 0-9."
-
 msgid "The device's IP address."
 msgstr "L'indirizzo IP del dispositivo."
 
@@ -7574,6 +7608,12 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr ""
 
+msgid "The name of the pool cannot be changed."
+msgstr ""
+
+msgid "The name of this virtual device cannot be changed."
+msgstr ""
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "La rete '%s' non è valida."
@@ -7630,12 +7670,6 @@ msgstr ""
 "ereditati li sovrascrivono. Questo puo' essere particolarmente utile nei "
 "sistemi con molti utenti per consentire a una singola condivisione di essere "
 "utilizzata in modo flessibile da ogni utente."
-
-msgid "The pool name does not match the naming rules."
-msgstr "Il nome del pool non è compatibile con le regole."
-
-msgid "The pool name is invalid: contains spaces."
-msgstr "Nome del pool invalido: contiene spazi"
 
 msgid ""
 "The port to listen to. The default is to listen to the tftp port specified "
@@ -7807,15 +7841,6 @@ msgstr "Ci sono troppi gruppi aggiuntivi."
 
 msgid "There is no error, the file uploaded with success."
 msgstr "Non ci sono errori, il file è stato trasmesso con successo."
-
-msgid "There must be 2 disks in a RAID 1 volume."
-msgstr "Un volume RAID 1 è composto da minimo 2 dischi."
-
-msgid "There must be a minimum of 2 disks in a RAID 0 volume."
-msgstr "Un volume RAID 0 deve essere composto da un minimo di 2 dischi."
-
-msgid "There must be a minimum of 3 disks in a RAID 5 volume."
-msgstr "Un volume RAID 5 deve essere composto da un minimo di 3 dischi."
 
 msgid "There must be at least 1 disks selected."
 msgstr "Devi selezionare almeno 1 disco."
@@ -8014,9 +8039,6 @@ msgid "This couple targetname/targetaddress already exists in the disk list."
 msgstr ""
 "Questa coppia nome target/indirizzo target gia' esiste nella lista dei "
 "dischi."
-
-msgid "This device already exists in the raid volume list."
-msgstr "Questo dispositivo esiste gia' nella lista dei volumi raid."
 
 msgid "This disk already exists in the disk list."
 msgstr "Questo disco esiste già nella lista dei dischi."
@@ -8300,13 +8322,6 @@ msgid "This will create a recycle bin on the share."
 msgstr "Questo creera' un cestino nella condivisione."
 
 msgid ""
-"This will erase ALL data on the selected disks! Do not use this option if "
-"you want to add an already existing RAID again."
-msgstr ""
-"Questo cancellera' tutti i dati sui dischi selezionati! Non utilizzare "
-"questa opzione se si desidera aggiungere ancora un RAID già esistente."
-
-msgid ""
 "This will erase ALL data on your disk! Do not use this option if you want to "
 "add an existing encrypted disk."
 msgstr ""
@@ -8577,9 +8592,6 @@ msgstr "Trap string."
 
 msgid "Traps"
 msgstr "Traps"
-
-msgid "Triple-parity RAID-Z"
-msgstr "RAID_Z a parità tripla"
 
 msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol (TFTP)"
@@ -8993,6 +9005,18 @@ msgstr "Video"
 msgid "Virtual Device"
 msgstr "Periferica Virtuale"
 
+msgid "Virtual Device List"
+msgstr ""
+
+msgid "Virtual Device is marked for removal"
+msgstr ""
+
+msgid "Virtual Device is protected"
+msgstr ""
+
+msgid "Virtual Device is unlocked"
+msgstr ""
+
 msgid "Virtual Devices"
 msgstr "Perifewriche Virtuali"
 
@@ -9011,6 +9035,12 @@ msgstr "Interfaccia Virtuale"
 msgid "Virtual Machine"
 msgstr "Macchina Virtuale"
 
+msgid "Virtual device can be removed."
+msgstr ""
+
+msgid "Virtual device is already in use."
+msgstr ""
+
 msgid "Virtual devices"
 msgstr "Periferiche virtuali"
 
@@ -9026,11 +9056,14 @@ msgstr "Nome volume"
 msgid "Volume Size Limit"
 msgstr "Dimensione massima del Volume"
 
-msgid "Volume is locked"
-msgstr "Il Volume è Bloccato"
-
 msgid "Volume is marked for deletion"
 msgstr "Il volume è selezionato per la cancellazione"
+
+msgid "Volume is protected"
+msgstr ""
+
+msgid "Volume is unlocked"
+msgstr ""
 
 msgid "Volume label"
 msgstr "Etichetta di volume"
@@ -9086,13 +9119,6 @@ msgstr "Attenzione"
 
 msgid "Warning Level"
 msgstr "Livello di richiamo"
-
-msgid ""
-"Warning: You are going to delete a RAID volume. All data will get lost and "
-"can not be recovered."
-msgstr ""
-"Attenzione: Sta per essere cancellato un volume RAID. Tutti i dati saranno "
-"persi e non sarà possibile recuperarli."
 
 msgid ""
 "Warning: You are going to delete an encrypted volume. All data will get lost "
@@ -9445,9 +9471,6 @@ msgstr "Minimo (risparmio energetico)"
 msgid "minute(s)"
 msgstr "minuto/i"
 
-msgid "mirroring"
-msgstr "mirroring"
-
 msgid "mount"
 msgstr "mount"
 
@@ -9475,9 +9498,6 @@ msgstr "rc.conf"
 msgid "revision"
 msgstr "revisione"
 
-msgid "rotated block-interleaved parity"
-msgstr "rotated block-interleaved parity"
-
 msgid "scan target failed."
 msgstr "Scansione del target fallita."
 
@@ -9489,9 +9509,6 @@ msgstr "valore minimo impostabile del punto di trasferimento alta tensione"
 
 msgid "smallest settable low voltage transfer point"
 msgstr "valore minimo impostabile del punto di trasferimento bassa tensione"
-
-msgid "striping"
-msgstr "striping"
 
 msgid "successfully."
 msgstr "con successo."
@@ -9513,3 +9530,12 @@ msgstr "smonta"
 
 msgid "version:"
 msgstr "versione:"
+
+#~ msgid "Cache"
+#~ msgstr "Cache"
+
+#~ msgid "Mirror"
+#~ msgstr "Mirror"
+
+#~ msgid "Stripe"
+#~ msgstr "Stripe"

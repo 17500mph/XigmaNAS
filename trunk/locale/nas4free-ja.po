@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-25 17:17+0000\n"
+"POT-Creation-Date: 2016-04-28 02:12+0000\n"
 "PO-Revision-Date: 2015-12-19 13:07+0000\n"
 "Last-Translator: Daisuke Aoyama <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-25 15:29+0000\n"
+"X-Launchpad-Export-Date: 2016-04-28 00:29+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -63,6 +63,10 @@ msgid "%s already exists as a %s."
 msgstr ""
 
 #, php-format
+msgid "%s already exists."
+msgstr ""
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr ""
 
@@ -73,10 +77,6 @@ msgstr ""
 #, php-format
 msgid "%s is too long."
 msgstr "%s は長すぎます。"
-
-#, php-format
-msgid "%s is used to create %s volumes."
-msgstr "%s は %s ボリュームを作成して使用します。"
 
 #, php-format
 msgid "%s of %sB"
@@ -170,6 +170,9 @@ msgstr ""
 "RAIDボリュームの使用を開始する為にこのメニューを使用する必要はありません。(自動的に開始されます)"
 
 msgid "2 or more disks are required to build a RAID-0 volume."
+msgstr ""
+
+msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr ""
 
 msgid "3 or more disks are required to build a RAID-5 volume."
@@ -275,9 +278,6 @@ msgstr ""
 "鍵は 5文字または 13文字 (40bit または 104bit) "
 "で指定しますが、ローカルネットワークおよびアダプタに依存します。普通の文字列としてもしくは'0x' をプレフィックスとして付与した "
 "16進数として指定する事が可能です。"
-
-msgid "A minimum of 2 disks is required to build a JBOD."
-msgstr ""
 
 #, php-format
 msgid ""
@@ -467,6 +467,9 @@ msgstr "Rsync ジョブの追加"
 msgid "Add URL"
 msgstr "URLを追加"
 
+msgid "Add Virtual Device"
+msgstr ""
+
 msgid "Add Volume"
 msgstr ""
 
@@ -481,9 +484,6 @@ msgstr "自動スナップショットの追加"
 
 msgid "Add command"
 msgstr "コマンドを追加"
-
-msgid "Add device"
-msgstr "デバイスを追加"
 
 msgid "Add disk"
 msgstr "ディスクの追加"
@@ -898,6 +898,9 @@ msgstr "予備デバイスファームウェア"
 msgid "Auxiliary parameters"
 msgstr "補助パラメータ"
 
+msgid "Avail"
+msgstr ""
+
 msgid "Available"
 msgstr "利用可能"
 
@@ -924,9 +927,6 @@ msgstr "Bad User - (存在しないユーザ)"
 
 msgid "Balance Algorithm"
 msgstr ""
-
-msgid "Balance algorithm"
-msgstr "負荷分散アルゴリズム"
 
 msgid "Ban List"
 msgstr "接続拒否リスト"
@@ -1066,6 +1066,9 @@ msgstr "ブルガリア語"
 msgid "By default, only already existing files can be uploaded."
 msgstr "デフォルトでは、既に存在しているファイルのみアップロードする事が出来ます。"
 
+msgid "CACHE"
+msgstr ""
+
 msgid "CARP"
 msgstr "CARP"
 
@@ -1157,9 +1160,6 @@ msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
 "error)."
 msgstr ""
-
-msgid "Cache"
-msgstr "キャッシュ"
 
 msgid "Cache Device"
 msgstr "キャッシュ デバイス"
@@ -1767,6 +1767,9 @@ msgstr ""
 msgid "Dataset is protected"
 msgstr ""
 
+msgid "Dataset is unlocked"
+msgstr ""
+
 msgid "Datasets"
 msgstr "データセット"
 
@@ -1842,9 +1845,6 @@ msgstr "ホストを削除"
 msgid "Delete Login Info"
 msgstr "ログイン情報の削除"
 
-msgid "Delete RAID"
-msgstr "RAID の削除"
-
 msgid "Delete Route"
 msgstr "ルートの削除"
 
@@ -1860,7 +1860,13 @@ msgstr ""
 msgid "Delete Selected Options"
 msgstr ""
 
+msgid "Delete Selected Pools"
+msgstr ""
+
 msgid "Delete Selected RAID Volumes"
+msgstr ""
+
+msgid "Delete Selected Virtual Devices"
 msgstr ""
 
 msgid "Delete Selected Volumes"
@@ -1893,9 +1899,6 @@ msgstr "クローンを削除"
 msgid "Delete command"
 msgstr "コマンドを削除"
 
-msgid "Delete device"
-msgstr "デバイスを削除"
-
 msgid "Delete disk"
 msgstr "ディスクの削除"
 
@@ -1922,9 +1925,6 @@ msgstr "モジュールを削除"
 
 msgid "Delete mount point"
 msgstr "マウントポイントを削除"
-
-msgid "Delete pool"
-msgstr "プールの削除"
 
 msgid "Delete portal group"
 msgstr "ポータルグループの削除"
@@ -2168,11 +2168,6 @@ msgstr "ディスクが（通常は原因衝撃や温度により）スピンド
 msgid "Distributed hash table"
 msgstr "分散ハッシュテーブル"
 
-msgid ""
-"Do not activate this option if you want to add an already existing RAID "
-"again."
-msgstr ""
-
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
 
@@ -2208,9 +2203,6 @@ msgstr "このクローンを削除してもよろしいですか?"
 msgid "Do you really want to delete this command?"
 msgstr "このコマンドを削除してもよろしいですか?"
 
-msgid "Do you really want to delete this device?"
-msgstr "このデバイスを削除してもよろしいですか?"
-
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
 "become invalid (e.g. share)!"
@@ -2243,9 +2235,6 @@ msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
 msgstr "のマウントポイントを削除しても宜しいですか? これを使用する全ての要素 (例: share) は無効になります!"
-
-msgid "Do you really want to delete this pool?"
-msgstr "このプールを削除してもよろしいですか？"
 
 msgid "Do you really want to delete this portal group?"
 msgstr "このポータルグループを削除してもよろしいですか？"
@@ -2306,6 +2295,33 @@ msgstr ""
 msgid "Do you want to create a RAID-5 from selected disks?"
 msgstr ""
 
+msgid "Do you want to create a RAID-Z1 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-Z2 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-Z3 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a cache device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a hot spare device from selected disk?"
+msgstr ""
+
+msgid "Do you want to create a log device from selected disk?"
+msgstr ""
+
+msgid "Do you want to create a mirrored log device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a mirrored virtual device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a striped virtual device from selected disks?"
+msgstr ""
+
 msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
@@ -2316,6 +2332,12 @@ msgid "Do you want to delete selected jobs?"
 msgstr ""
 
 msgid "Do you want to delete selected options?"
+msgstr ""
+
+msgid "Do you want to delete selected pools?"
+msgstr ""
+
+msgid "Do you want to delete selected virtual devices?"
 msgstr ""
 
 msgid "Do you want to delete selected volumes?"
@@ -2386,9 +2408,6 @@ msgstr "完了"
 
 msgid "Dos charset"
 msgstr "Dos 文字セット"
-
-msgid "Double-parity RAID-Z"
-msgstr "ダブルパリティ RAID-Z (RAID 6)"
 
 msgid "Download"
 msgstr "ダウンロード"
@@ -2480,6 +2499,9 @@ msgstr "URL を編集"
 msgid "Edit VM"
 msgstr "VM 編集"
 
+msgid "Edit Virtual Device"
+msgstr ""
+
 msgid "Edit Volume"
 msgstr ""
 
@@ -2491,9 +2513,6 @@ msgstr "自動スナップショットを編集"
 
 msgid "Edit command"
 msgstr "コマンドを編集"
-
-msgid "Edit device"
-msgstr "デバイスを編集"
 
 msgid "Edit disk"
 msgstr "ディスクを編集"
@@ -2974,6 +2993,9 @@ msgstr "インメモリファイルシステムの作成に失敗しました。
 msgid "Failed to execute command zfs."
 msgstr ""
 
+msgid "Failed to execute command zpool."
+msgstr ""
+
 msgid "Failed to execute cron job."
 msgstr "Cron ジョブの実行に失敗しました。"
 
@@ -3182,6 +3204,9 @@ msgstr ""
 msgid "GEOM Software RAID"
 msgstr ""
 
+msgid "GEOM VINUM Software RAID"
+msgstr ""
+
 msgid "GID"
 msgstr "グループ ID"
 
@@ -3308,6 +3333,9 @@ msgstr ""
 
 msgid "HDD standby time"
 msgstr "HDDスタンバイ時間"
+
+msgid "HOT SPARE"
+msgstr ""
 
 msgid "HTTP Proxy"
 msgstr "HTTP プロキシ"
@@ -3825,6 +3853,12 @@ msgid ""
 "are part of a non healthy pool."
 msgstr "良好な状態でないプールまたはそれらに含まれる仮想デバイスをインポートする事は推奨しません。"
 
+#, php-format
+msgid ""
+"It is recommended to use encryption before you store the backup in a safe "
+"location."
+msgstr ""
+
 msgid ""
 "It's recommended to change the default username and password for accessing "
 "the WebGUI, enter the username here."
@@ -3922,6 +3956,12 @@ msgstr "LCDproc (クライアント)"
 
 msgid "LDAP"
 msgstr "LDAP"
+
+msgid "LOG"
+msgstr ""
+
+msgid "LOG (Mirror)"
+msgstr ""
 
 msgid "LUN"
 msgstr "LUN"
@@ -4131,9 +4171,6 @@ msgstr "作業ファイルが保存される場所を指定します。例) %s/b
 msgid "Log"
 msgstr "ログ"
 
-msgid "Log (mirror)"
-msgstr "ログ (ミラー)"
-
 msgid "Log Device"
 msgstr "ログ デバイス"
 
@@ -4219,6 +4256,9 @@ msgstr ""
 msgid "MIB is marked for deletion"
 msgstr ""
 
+msgid "MIRROR"
+msgstr ""
+
 msgid "MISSING"
 msgstr "失敗"
 
@@ -4244,6 +4284,14 @@ msgid "Machine suffix"
 msgstr "マシンサフィックス"
 
 msgid "Maintenance"
+msgstr ""
+
+#, php-format
+msgid ""
+"Make sure to select the correct number of devices:<div "
+"id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each "
+"vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
+"Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
 msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
@@ -4467,9 +4515,6 @@ msgstr "分"
 
 msgid "Minutes between network time sync."
 msgstr "NTP の時間更新間隔を指定して下さい。"
-
-msgid "Mirror"
-msgstr "ミラー"
 
 msgid "Missing a temporary folder."
 msgstr "テンポラリフォルダがありません。"
@@ -4711,9 +4756,9 @@ msgstr "プールがありません。まず最初に新しい <a href='%s'>プ�
 
 #, php-format
 msgid ""
-"No configured virtual devices. Please add new <a href='%s'>virtual "
+"No configured virtual devices. Please add new <a href=\"%s\">virtual "
 "device</a> first."
-msgstr "仮想デバイスがありません。まず最初に新しい <a href='%s'>仮想デバイス</a> を追加してください。"
+msgstr ""
 
 msgid "No device selected."
 msgstr "デバイスが選択されていませんでした。"
@@ -5228,6 +5273,15 @@ msgstr "プール情報とステータス"
 msgid "Pool Tools"
 msgstr ""
 
+msgid "Pool is marked for removal"
+msgstr ""
+
+msgid "Pool is protected"
+msgstr ""
+
+msgid "Pool is unlocked"
+msgstr ""
+
 msgid "Pools"
 msgstr "プール"
 
@@ -5387,9 +5441,6 @@ msgstr "寡黙モード"
 msgid "Quota"
 msgstr "クォータ"
 
-msgid "RAID 0"
-msgstr "RAID 0"
-
 msgid "RAID 0 Information & Status"
 msgstr "RAID 0 情報とステータス"
 
@@ -5402,9 +5453,6 @@ msgstr "RAID 0/1/5 情報とステータス"
 msgid "RAID 0/1/5 Maintenance"
 msgstr ""
 
-msgid "RAID 1"
-msgstr "RAID 1"
-
 msgid "RAID 1 Information & Status"
 msgstr "RAID 1 情報とステータス"
 
@@ -5413,6 +5461,12 @@ msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
 msgstr "RAID 5 情報とステータス"
+
+msgid "RAID Name"
+msgstr ""
+
+msgid "RAID Type"
+msgstr ""
 
 msgid "RAID device can be removed."
 msgstr ""
@@ -5445,6 +5499,15 @@ msgid "RAID-5"
 msgstr ""
 
 msgid "RAID-5 Maintenance"
+msgstr ""
+
+msgid "RAID-Z1"
+msgstr ""
+
+msgid "RAID-Z2"
+msgstr ""
+
+msgid "RAID-Z3"
 msgstr ""
 
 msgid "RAID0"
@@ -5485,12 +5548,6 @@ msgstr "RSYNC のイベント"
 
 msgid "RSYNC log"
 msgstr "RSYNC のログ"
-
-msgid "Raid Name"
-msgstr ""
-
-msgid "Raid name"
-msgstr "Raid 名"
 
 msgid "Ramdisk"
 msgstr "RAMディスク"
@@ -5818,6 +5875,9 @@ msgstr "SSHDのログ"
 msgid "SSID"
 msgstr "SSID"
 
+msgid "STRIPE"
+msgstr ""
+
 msgid "Samba AD"
 msgstr "Samba AD"
 
@@ -5962,9 +6022,6 @@ msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr "利用するインターフェースを選択してください。(2個以上サーバーに装着してある場合にのみ選択可能)"
-
-msgid "Select your read balance algorithm."
-msgstr "読込み時のバランスアルゴリズムを選択して下さい。"
 
 msgid "Selected"
 msgstr "選択"
@@ -6153,9 +6210,6 @@ msgstr "シャットダウンタイマ"
 msgid "Simple Network Management Protocol"
 msgstr "簡易ネットワーク管理プロトコル (SNMP)"
 
-msgid "Single-parity RAID-Z"
-msgstr "シングルパリティ RAID-Z (RAID 5)"
-
 msgid "Size"
 msgstr "サイズ"
 
@@ -6212,9 +6266,6 @@ msgid "Software RAID"
 msgstr "ソフトウェア RAID"
 
 msgid "Software Used"
-msgstr ""
-
-msgid "Software gconcat JBOD"
 msgstr ""
 
 msgid "Source"
@@ -6389,9 +6440,6 @@ msgstr "URL へアクセスする際のダイアログボックスにここで�
 
 msgid "String identifier of the extent."
 msgstr "このエクステントを識別する文字列を入力して下さい。"
-
-msgid "Stripe"
-msgstr "ストライプ"
 
 msgid "Subject"
 msgstr "件名"
@@ -6680,13 +6728,6 @@ msgid ""
 "manufacturing."
 msgstr "新しく追加された不良フラッシュブロック属性は、製造時の初期化以降にドライブが検出した不良フラッシュブロックの合計数を示します。"
 
-#, php-format
-msgid ""
-"The RAID volume is currently mounted! Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
-msgstr ""
-"RAID ボリュームは既にマウントされています! 処理を行う前に、はじめに <a href='%s'>マウントポイント</a> を削除して下さい。"
-
 msgid "The TCP port must be a valid port number."
 msgstr "有効な TCP ポート番号を指定して下さい。"
 
@@ -6962,9 +7003,6 @@ msgstr "デフォルトの鍵長は次の通りです: AES 128、Blowfish 128、
 msgid "The default time in seconds to display a screen."
 msgstr "スクリーンを表示するデフォルトの秒数。"
 
-msgid "The device name may only consist of the characters a-z, A-Z, 0-9."
-msgstr "デバイス名には a-z, A-Z, 0-9 の文字のみが利用出来ます。"
-
 msgid "The device's IP address."
 msgstr "デバイスの IP アドレス"
 
@@ -7158,6 +7196,12 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr ""
 
+msgid "The name of the pool cannot be changed."
+msgstr ""
+
+msgid "The name of this virtual device cannot be changed."
+msgstr ""
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "ネットワーク名 '%s' は無効です。"
@@ -7210,12 +7254,6 @@ msgstr ""
 "新しいファイルとディレクトリのパーミッションは通常、Create mask と Directorymask "
 "によって制御されていますが、継承許可パラメータはこれを無効にします。これは、1つの共有が各ユーザによって柔軟に利用される事を可能にし、多くのユーザとシステ"
 "ムにで有益です。"
-
-msgid "The pool name does not match the naming rules."
-msgstr "このプール名は命名規則に合致していません。"
-
-msgid "The pool name is invalid: contains spaces."
-msgstr "プール名が無効です。空白を含んでいます。"
 
 msgid ""
 "The port to listen to. The default is to listen to the tftp port specified "
@@ -7370,15 +7408,6 @@ msgstr "追加グループが多すぎます。"
 
 msgid "There is no error, the file uploaded with success."
 msgstr "ファイルのアップロードに成功しました。"
-
-msgid "There must be 2 disks in a RAID 1 volume."
-msgstr "RAID1 ボリュームは 2つのディスクが必要です。"
-
-msgid "There must be a minimum of 2 disks in a RAID 0 volume."
-msgstr "RAID0 ボリュームは最低でも 2つのディスクが必要です。"
-
-msgid "There must be a minimum of 3 disks in a RAID 5 volume."
-msgstr "RAID5 ボリュームは最低でも 3つのディスクが必要です。"
 
 msgid "There must be at least 1 disks selected."
 msgstr "最低1個のディスクを選択する必要があります。"
@@ -7550,9 +7579,6 @@ msgstr "共有が net view とブラウズリスト内の使用可能な共有�
 
 msgid "This couple targetname/targetaddress already exists in the disk list."
 msgstr "この ターゲット名/ターゲットアドレスは既にディスクリストに存在します。"
-
-msgid "This device already exists in the raid volume list."
-msgstr "指定されたデバイスは既に RAID ボリュームリストに存在します。"
 
 msgid "This disk already exists in the disk list."
 msgstr "このディスクは既にディスクリストに存在しています。"
@@ -7789,11 +7815,6 @@ msgstr "%s が <a href='%s'>%s</a> において、新しいファームウェア
 
 msgid "This will create a recycle bin on the share."
 msgstr "共有領域にごみ箱が作成されます。"
-
-msgid ""
-"This will erase ALL data on the selected disks! Do not use this option if "
-"you want to add an already existing RAID again."
-msgstr "選択したディスクのデータをすべて消去します! 既存の RAID ボリュームを追加するのにこのオプションを使用しないでください。"
 
 msgid ""
 "This will erase ALL data on your disk! Do not use this option if you want to "
@@ -8049,9 +8070,6 @@ msgstr "トラップ文字列。"
 
 msgid "Traps"
 msgstr "トラップ"
-
-msgid "Triple-parity RAID-Z"
-msgstr "トリプルパリティ RAID-Z"
 
 msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol"
@@ -8441,6 +8459,18 @@ msgstr "動画"
 msgid "Virtual Device"
 msgstr "仮想デバイス"
 
+msgid "Virtual Device List"
+msgstr ""
+
+msgid "Virtual Device is marked for removal"
+msgstr ""
+
+msgid "Virtual Device is protected"
+msgstr ""
+
+msgid "Virtual Device is unlocked"
+msgstr ""
+
 msgid "Virtual Devices"
 msgstr "仮想デバイス"
 
@@ -8459,6 +8489,12 @@ msgstr "仮想インタフェース"
 msgid "Virtual Machine"
 msgstr "仮想マシン"
 
+msgid "Virtual device can be removed."
+msgstr ""
+
+msgid "Virtual device is already in use."
+msgstr ""
+
 msgid "Virtual devices"
 msgstr "仮想デバイス"
 
@@ -8474,10 +8510,13 @@ msgstr "ボリューム名"
 msgid "Volume Size Limit"
 msgstr "ボリュームサイズ制限"
 
-msgid "Volume is locked"
+msgid "Volume is marked for deletion"
 msgstr ""
 
-msgid "Volume is marked for deletion"
+msgid "Volume is protected"
+msgstr ""
+
+msgid "Volume is unlocked"
 msgstr ""
 
 msgid "Volume label"
@@ -8533,11 +8572,6 @@ msgstr "警告"
 
 msgid "Warning Level"
 msgstr ""
-
-msgid ""
-"Warning: You are going to delete a RAID volume. All data will get lost and "
-"can not be recovered."
-msgstr "警告: RAID ボリュームを削除しようとしています。このボリュームを削除すると含まれているデータはすべて消え復旧できなくなります。"
 
 msgid ""
 "Warning: You are going to delete an encrypted volume. All data will get lost "
@@ -8859,9 +8893,6 @@ msgstr "minimum (省電力)"
 msgid "minute(s)"
 msgstr "分"
 
-msgid "mirroring"
-msgstr "ミラーリング"
-
 msgid "mount"
 msgstr "マウント"
 
@@ -8889,9 +8920,6 @@ msgstr "rc.conf"
 msgid "revision"
 msgstr "revision"
 
-msgid "rotated block-interleaved parity"
-msgstr "ブロックインタリーブパリティのローテーション"
-
 msgid "scan target failed."
 msgstr "ターゲットスキャンに失敗しました。"
 
@@ -8903,9 +8931,6 @@ msgstr "設定可能な最少切り替え電圧上限値"
 
 msgid "smallest settable low voltage transfer point"
 msgstr "設定可能な最少切り替え電圧下限値"
-
-msgid "striping"
-msgstr "ストライピング"
 
 msgid "successfully."
 msgstr "成功しました。"
@@ -8927,3 +8952,12 @@ msgstr "アンマウント"
 
 msgid "version:"
 msgstr "バージョン:"
+
+#~ msgid "Cache"
+#~ msgstr "キャッシュ"
+
+#~ msgid "Mirror"
+#~ msgstr "ミラー"
+
+#~ msgid "Stripe"
+#~ msgstr "ストライプ"

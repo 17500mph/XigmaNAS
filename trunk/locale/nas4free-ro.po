@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-25 17:17+0000\n"
+"POT-Creation-Date: 2016-04-28 02:12+0000\n"
 "PO-Revision-Date: 2016-03-23 12:38+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-25 15:29+0000\n"
+"X-Launchpad-Export-Date: 2016-04-28 00:30+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -64,6 +64,10 @@ msgid "%s already exists as a %s."
 msgstr "%s există deja ca %s."
 
 #, php-format
+msgid "%s already exists."
+msgstr ""
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr "%s este deja configurat ca sistem de fișiere."
 
@@ -74,10 +78,6 @@ msgstr "%s este deja configurat ca volum."
 #, php-format
 msgid "%s is too long."
 msgstr "%s este prea lung."
-
-#, php-format
-msgid "%s is used to create %s volumes."
-msgstr "%s este utilizat pentru a creea volumul %s."
 
 #, php-format
 msgid "%s of %sB"
@@ -187,6 +187,9 @@ msgstr ""
 "pornit automat)"
 
 msgid "2 or more disks are required to build a RAID-0 volume."
+msgstr ""
+
+msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr ""
 
 msgid "3 or more disks are required to build a RAID-5 volume."
@@ -309,9 +312,6 @@ msgstr ""
 "rețelei locale și de posibilitățile cartelei de rețea. Poate fi introdusă "
 "fie ca text în clar fie ca un șir de caractere hexazecimale precedate de "
 "șirul '0x'."
-
-msgid "A minimum of 2 disks is required to build a JBOD."
-msgstr ""
 
 #, php-format
 msgid ""
@@ -509,6 +509,9 @@ msgstr "Adăugare sarcină Rsync"
 msgid "Add URL"
 msgstr "Adăugare URL"
 
+msgid "Add Virtual Device"
+msgstr ""
+
 msgid "Add Volume"
 msgstr "Adăugare volum"
 
@@ -523,9 +526,6 @@ msgstr "Adăugare imagine automată"
 
 msgid "Add command"
 msgstr "Adăugare comandă"
-
-msgid "Add device"
-msgstr "Adăugare dispozitiv"
 
 msgid "Add disk"
 msgstr "Adăugare disc"
@@ -967,6 +967,9 @@ msgstr "Firmware dispozitiv auxiliar"
 msgid "Auxiliary parameters"
 msgstr "Parametri auxiliari"
 
+msgid "Avail"
+msgstr ""
+
 msgid "Available"
 msgstr "Disponibil"
 
@@ -997,9 +1000,6 @@ msgstr "Eroare utilizator - (utilizator inexistent)"
 
 msgid "Balance Algorithm"
 msgstr ""
-
-msgid "Balance algorithm"
-msgstr "Algoritm Balans"
 
 msgid "Ban List"
 msgstr "Listă interdicţii"
@@ -1144,6 +1144,9 @@ msgstr "Bulgară"
 msgid "By default, only already existing files can be uploaded."
 msgstr "Implicit, doar fișierele existente deja pot fi încărcate."
 
+msgid "CACHE"
+msgstr ""
+
 msgid "CARP"
 msgstr "CARP"
 
@@ -1237,9 +1240,6 @@ msgid ""
 msgstr ""
 "Număr erori CRC. Contorizează numărul erorilor CRC (erori FIS CRC la "
 "citire/scriere)."
-
-msgid "Cache"
-msgstr "Cache"
 
 msgid "Cache Device"
 msgstr "Dispozitiv Cache"
@@ -1929,6 +1929,9 @@ msgstr "Setul de date este marcat pentru ștergere"
 msgid "Dataset is protected"
 msgstr "Setul de date este protejat"
 
+msgid "Dataset is unlocked"
+msgstr ""
+
 msgid "Datasets"
 msgstr "Seturi de date"
 
@@ -2006,9 +2009,6 @@ msgstr "Ștergere Sistem"
 msgid "Delete Login Info"
 msgstr "Ștergere date de autentificare"
 
-msgid "Delete RAID"
-msgstr "Ștergere RAID"
-
 msgid "Delete Route"
 msgstr "Ștergere Rută"
 
@@ -2024,7 +2024,13 @@ msgstr "Ștergere activități selectate"
 msgid "Delete Selected Options"
 msgstr "Ștergere opțiuni selectate"
 
+msgid "Delete Selected Pools"
+msgstr ""
+
 msgid "Delete Selected RAID Volumes"
+msgstr ""
+
+msgid "Delete Selected Virtual Devices"
 msgstr ""
 
 msgid "Delete Selected Volumes"
@@ -2057,9 +2063,6 @@ msgstr "Ștergere clonă"
 msgid "Delete command"
 msgstr "Ștergere comandă"
 
-msgid "Delete device"
-msgstr "Ștergere dispozitiv"
-
 msgid "Delete disk"
 msgstr "Ștergere disc"
 
@@ -2086,9 +2089,6 @@ msgstr "Ștergere modul"
 
 msgid "Delete mount point"
 msgstr "Ștergere punct de montare"
-
-msgid "Delete pool"
-msgstr "Ștergere structură"
 
 msgid "Delete portal group"
 msgstr "Ștergere grup portal"
@@ -2345,11 +2345,6 @@ msgstr ""
 msgid "Distributed hash table"
 msgstr "Tabela distribuită de asocieri (hash table)"
 
-msgid ""
-"Do not activate this option if you want to add an already existing RAID "
-"again."
-msgstr ""
-
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
 
@@ -2384,9 +2379,6 @@ msgstr "Doriți să ștergeți această clonă?"
 
 msgid "Do you really want to delete this command?"
 msgstr "Doriți să ștergeți această comandă?"
-
-msgid "Do you really want to delete this device?"
-msgstr "Doriți să ștergeți acest dispozitiv?"
 
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
@@ -2426,9 +2418,6 @@ msgid ""
 msgstr ""
 "Doriți să ștergeți acest punct de montare? Toate elementele asociate, chiar "
 "active, vor fi șterse (inclusiv partajările)!"
-
-msgid "Do you really want to delete this pool?"
-msgstr "Doriți să ștergeți această structură?"
 
 msgid "Do you really want to delete this portal group?"
 msgstr "Doriți să ștergeți acest grup portal?"
@@ -2491,6 +2480,33 @@ msgstr ""
 msgid "Do you want to create a RAID-5 from selected disks?"
 msgstr ""
 
+msgid "Do you want to create a RAID-Z1 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-Z2 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-Z3 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a cache device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a hot spare device from selected disk?"
+msgstr ""
+
+msgid "Do you want to create a log device from selected disk?"
+msgstr ""
+
+msgid "Do you want to create a mirrored log device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a mirrored virtual device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a striped virtual device from selected disks?"
+msgstr ""
+
 msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
@@ -2502,6 +2518,12 @@ msgstr "Ștergeți activitățile selectate?"
 
 msgid "Do you want to delete selected options?"
 msgstr "Ștergeți opțiunile selectate?"
+
+msgid "Do you want to delete selected pools?"
+msgstr ""
+
+msgid "Do you want to delete selected virtual devices?"
+msgstr ""
 
 msgid "Do you want to delete selected volumes?"
 msgstr "Ștergeți volumele selectate?"
@@ -2572,9 +2594,6 @@ msgstr "Gata."
 
 msgid "Dos charset"
 msgstr "Caractere Dos"
-
-msgid "Double-parity RAID-Z"
-msgstr "RAID-Z dublă paritate"
 
 msgid "Download"
 msgstr "Descărcare"
@@ -2666,6 +2685,9 @@ msgstr "Editare URL"
 msgid "Edit VM"
 msgstr "Editare VM"
 
+msgid "Edit Virtual Device"
+msgstr ""
+
 msgid "Edit Volume"
 msgstr "Editare volum"
 
@@ -2677,9 +2699,6 @@ msgstr "Editare imaginea automată (snapshot)"
 
 msgid "Edit command"
 msgstr "Editare comandă"
-
-msgid "Edit device"
-msgstr "Editare dispozitiv"
 
 msgid "Edit disk"
 msgstr "Editare disc"
@@ -3192,6 +3211,9 @@ msgstr "Eroare la crearea sistemului de fișiere în memorie."
 msgid "Failed to execute command zfs."
 msgstr "Eroare execuție comandă zfs."
 
+msgid "Failed to execute command zpool."
+msgstr ""
+
 msgid "Failed to execute cron job."
 msgstr "Eroare execuție acțiune din lista cron."
 
@@ -3409,6 +3431,9 @@ msgstr ""
 msgid "GEOM Software RAID"
 msgstr ""
 
+msgid "GEOM VINUM Software RAID"
+msgstr ""
+
 msgid "GID"
 msgstr "GID"
 
@@ -3543,6 +3568,9 @@ msgstr ""
 
 msgid "HDD standby time"
 msgstr "Timp oprire HDD"
+
+msgid "HOT SPARE"
+msgstr ""
 
 msgid "HTTP Proxy"
 msgstr "Proxy HTTP"
@@ -4114,6 +4142,12 @@ msgstr ""
 "NU este recomandat importul structurilor cu erori sau dispozitivelor "
 "virtuale care fac parte dintr-o structură cu erori."
 
+#, php-format
+msgid ""
+"It is recommended to use encryption before you store the backup in a safe "
+"location."
+msgstr ""
+
 msgid ""
 "It's recommended to change the default username and password for accessing "
 "the WebGUI, enter the username here."
@@ -4216,6 +4250,12 @@ msgstr "LCDproc (Client)"
 
 msgid "LDAP"
 msgstr "LDAP"
+
+msgid "LOG"
+msgstr ""
+
+msgid "LOG (Mirror)"
+msgstr ""
 
 msgid "LUN"
 msgstr "LUN"
@@ -4442,9 +4482,6 @@ msgstr ""
 msgid "Log"
 msgstr "Jurnal"
 
-msgid "Log (mirror)"
-msgstr "Jurnal (rezervă)"
-
 msgid "Log Device"
 msgstr "Dispozitiv pentru jurnal"
 
@@ -4531,6 +4568,9 @@ msgstr "MIB blocat"
 msgid "MIB is marked for deletion"
 msgstr "MIB marcat pentru ștergere"
 
+msgid "MIRROR"
+msgstr ""
+
 msgid "MISSING"
 msgstr "LIPSĂ"
 
@@ -4556,6 +4596,14 @@ msgid "Machine suffix"
 msgstr "Sufix Sistem"
 
 msgid "Maintenance"
+msgstr ""
+
+#, php-format
+msgid ""
+"Make sure to select the correct number of devices:<div "
+"id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each "
+"vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
+"Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
 msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
@@ -4791,9 +4839,6 @@ msgstr "Minute"
 
 msgid "Minutes between network time sync."
 msgstr "Minute între două sincronizări ale ceasului de rețea."
-
-msgid "Mirror"
-msgstr "Oglindă"
 
 msgid "Missing a temporary folder."
 msgstr "Lipsește un folder temporar."
@@ -5054,11 +5099,9 @@ msgstr ""
 
 #, php-format
 msgid ""
-"No configured virtual devices. Please add new <a href='%s'>virtual "
+"No configured virtual devices. Please add new <a href=\"%s\">virtual "
 "device</a> first."
 msgstr ""
-"Niciun dispozitiv virtual configurat. Adăugați mai întîi un <a "
-"href='%s'>dispozitiv virtual</a>"
 
 msgid "No device selected."
 msgstr "Niciun dispozitiv selectat."
@@ -5597,6 +5640,15 @@ msgstr "Informații & Stare Pool"
 msgid "Pool Tools"
 msgstr ""
 
+msgid "Pool is marked for removal"
+msgstr ""
+
+msgid "Pool is protected"
+msgstr ""
+
+msgid "Pool is unlocked"
+msgstr ""
+
 msgid "Pools"
 msgstr "Structuri"
 
@@ -5764,9 +5816,6 @@ msgstr "Liniște"
 msgid "Quota"
 msgstr "Cotă"
 
-msgid "RAID 0"
-msgstr "RAID 0"
-
 msgid "RAID 0 Information & Status"
 msgstr "Informații & Stare RAID 0"
 
@@ -5779,9 +5828,6 @@ msgstr "Informații & Stare RAID 0/1/5"
 msgid "RAID 0/1/5 Maintenance"
 msgstr ""
 
-msgid "RAID 1"
-msgstr "RAID 1"
-
 msgid "RAID 1 Information & Status"
 msgstr "Informații & Stare RAID 1"
 
@@ -5790,6 +5836,12 @@ msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
 msgstr "Informații & Stare RAID 5"
+
+msgid "RAID Name"
+msgstr ""
+
+msgid "RAID Type"
+msgstr ""
 
 msgid "RAID device can be removed."
 msgstr ""
@@ -5822,6 +5874,15 @@ msgid "RAID-5"
 msgstr ""
 
 msgid "RAID-5 Maintenance"
+msgstr ""
+
+msgid "RAID-Z1"
+msgstr ""
+
+msgid "RAID-Z2"
+msgstr ""
+
+msgid "RAID-Z3"
 msgstr ""
 
 msgid "RAID0"
@@ -5862,12 +5923,6 @@ msgstr "Evenimente RSYNC"
 
 msgid "RSYNC log"
 msgstr "Jurnal RSYNC"
-
-msgid "Raid Name"
-msgstr ""
-
-msgid "Raid name"
-msgstr "Nume Raid"
 
 msgid "Ramdisk"
 msgstr "Ramdisk"
@@ -6204,6 +6259,9 @@ msgstr "Jurnal SSHD"
 msgid "SSID"
 msgstr "SSID"
 
+msgid "STRIPE"
+msgstr ""
+
 msgid "Samba AD"
 msgstr "Samba AD"
 
@@ -6357,9 +6415,6 @@ msgid ""
 "one)"
 msgstr ""
 "Selectați interfața. (Opțiune valabilă doar dacă aveți mai multe interfețe)"
-
-msgid "Select your read balance algorithm."
-msgstr "Selectați algoritmul de echilibrare la citire."
 
 msgid "Selected"
 msgstr "Selectat"
@@ -6560,9 +6615,6 @@ msgstr "Cronometru oprire"
 msgid "Simple Network Management Protocol"
 msgstr "Protocol Elementar de Management Rețea"
 
-msgid "Single-parity RAID-Z"
-msgstr "RAID-Z cu paritate simplă"
-
 msgid "Size"
 msgstr "Dimensiune"
 
@@ -6622,9 +6674,6 @@ msgstr "RAID Software"
 
 msgid "Software Used"
 msgstr "Software utilizat"
-
-msgid "Software gconcat JBOD"
-msgstr ""
 
 msgid "Source"
 msgstr "Sursă"
@@ -6813,9 +6862,6 @@ msgstr "Textul afișat utilizatorului cînd accesează URL-ul."
 
 msgid "String identifier of the extent."
 msgstr "Textul de identificare al extensiei."
-
-msgid "Stripe"
-msgstr "Stripe"
 
 msgid "Subject"
 msgstr "Subiect"
@@ -7113,14 +7159,6 @@ msgid ""
 msgstr ""
 "Noul contor Bad Flash Block indică numărul total e blocuri defecte ale "
 "memoriei flash apărute din m omentul fabricației."
-
-#, php-format
-msgid ""
-"The RAID volume is currently mounted! Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
-msgstr ""
-"Voluml RAID este montat în acest moment! Ştergeți mai întâi <a "
-"href='%s'>punctul de montare</a>."
 
 msgid "The TCP port must be a valid port number."
 msgstr "Trebuie să introduceți un port TCP valid."
@@ -7438,9 +7476,6 @@ msgstr ""
 msgid "The default time in seconds to display a screen."
 msgstr "Timpul implicit în secunde folosit pentru a afișa un ecran."
 
-msgid "The device name may only consist of the characters a-z, A-Z, 0-9."
-msgstr "Numele dispozitivului poate conține doar caracterele  a-z, A-Z, 0-9."
-
 msgid "The device's IP address."
 msgstr "Adresa IP a dispozitivului."
 
@@ -7670,6 +7705,12 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr ""
 
+msgid "The name of the pool cannot be changed."
+msgstr ""
+
+msgid "The name of this virtual device cannot be changed."
+msgstr ""
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "Rețeau '%s' nu este validă."
@@ -7726,12 +7767,6 @@ msgstr ""
 "normal de masca definită, cu observația că permisiunile ierarhice au "
 "prioritate. Acest mod este util atunci cînd se dorește un mod flexibil de "
 "acces a unei partajări de către utilizatori multipli."
-
-msgid "The pool name does not match the naming rules."
-msgstr "Numele structurii nu respectă regulile de denumire."
-
-msgid "The pool name is invalid: contains spaces."
-msgstr "Nume de structură invalid: conține spații."
 
 msgid ""
 "The port to listen to. The default is to listen to the tftp port specified "
@@ -7907,15 +7942,6 @@ msgstr "Sînt prea multe grupuri adiționale."
 
 msgid "There is no error, the file uploaded with success."
 msgstr "Fișierul a fost încărcat cu succes, fără eroare."
-
-msgid "There must be 2 disks in a RAID 1 volume."
-msgstr "Sunt necesare cel puțin 2 discuri pentru un volum RAID 1."
-
-msgid "There must be a minimum of 2 disks in a RAID 0 volume."
-msgstr "Sunt necesare cel puțin 2 discuri pentru un volum RAID 0."
-
-msgid "There must be a minimum of 3 disks in a RAID 5 volume."
-msgstr "Sunt necesare cel puțin 3 discuri pentru un volum RAID 5"
 
 msgid "There must be at least 1 disks selected."
 msgstr "Trebuie să selectați cel puțin un disc."
@@ -8118,9 +8144,6 @@ msgid "This couple targetname/targetaddress already exists in the disk list."
 msgstr ""
 "Acest cuplu nume destinație/adresă destinație există deja în lista "
 "discurilor."
-
-msgid "This device already exists in the raid volume list."
-msgstr "Discul este deja în lista volumului RAID."
 
 msgid "This disk already exists in the disk list."
 msgstr "Acest disc este deja în lista discurilor."
@@ -8416,14 +8439,6 @@ msgstr ""
 "partajare."
 
 msgid ""
-"This will erase ALL data on the selected disks! Do not use this option if "
-"you want to add an already existing RAID again."
-msgstr ""
-"Această opțiune determină ștergerea TUTUROR datelor din discul selectat! Nu "
-"utilizați această opțiune dacă doriți să adăugați din nou un sistem RAID "
-"existent."
-
-msgid ""
 "This will erase ALL data on your disk! Do not use this option if you want to "
 "add an existing encrypted disk."
 msgstr ""
@@ -8708,9 +8723,6 @@ msgstr "Captură text."
 
 msgid "Traps"
 msgstr "Capturi"
-
-msgid "Triple-parity RAID-Z"
-msgstr "RAID-Z triplă paritate"
 
 msgid "Trivial File Transfer Protocol"
 msgstr "Protocol Trivial pentru Transfer Fișiere"
@@ -9128,6 +9140,18 @@ msgstr "Video"
 msgid "Virtual Device"
 msgstr "Dispozitiv virtual"
 
+msgid "Virtual Device List"
+msgstr ""
+
+msgid "Virtual Device is marked for removal"
+msgstr ""
+
+msgid "Virtual Device is protected"
+msgstr ""
+
+msgid "Virtual Device is unlocked"
+msgstr ""
+
 msgid "Virtual Devices"
 msgstr "Dispozitive virtual"
 
@@ -9146,6 +9170,12 @@ msgstr "Interfață virtuală"
 msgid "Virtual Machine"
 msgstr "Mașină virtuală"
 
+msgid "Virtual device can be removed."
+msgstr ""
+
+msgid "Virtual device is already in use."
+msgstr ""
+
 msgid "Virtual devices"
 msgstr "Dispozitive virtuale"
 
@@ -9161,11 +9191,14 @@ msgstr "Nume Volum"
 msgid "Volume Size Limit"
 msgstr "Capacitate limita a volumului"
 
-msgid "Volume is locked"
-msgstr "Volumul este blocat"
-
 msgid "Volume is marked for deletion"
 msgstr "Volumul este marcat pentru ștergere"
+
+msgid "Volume is protected"
+msgstr ""
+
+msgid "Volume is unlocked"
+msgstr ""
 
 msgid "Volume label"
 msgstr "Etichetă volum"
@@ -9221,13 +9254,6 @@ msgstr "Atenție"
 
 msgid "Warning Level"
 msgstr "NIvel avertizare"
-
-msgid ""
-"Warning: You are going to delete a RAID volume. All data will get lost and "
-"can not be recovered."
-msgstr ""
-"Atenție: Sînteți pe cale să ștergeți un volum RAID. Toate datele vor fi "
-"șterse fără posibilitate de recuperare."
 
 msgid ""
 "Warning: You are going to delete an encrypted volume. All data will get lost "
@@ -9578,9 +9604,6 @@ msgstr "minim (conservarea energiei)"
 msgid "minute(s)"
 msgstr "minut(e)"
 
-msgid "mirroring"
-msgstr "oglindire"
-
 msgid "mount"
 msgstr "montare"
 
@@ -9608,9 +9631,6 @@ msgstr "rc.conf"
 msgid "revision"
 msgstr "revizie"
 
-msgid "rotated block-interleaved parity"
-msgstr "paritate întrețesere blocuri rotită"
-
 msgid "scan target failed."
 msgstr "eroare scanare destinație."
 
@@ -9622,9 +9642,6 @@ msgstr "valoarea minimă pentru punctul de transfer tensiune înaltă"
 
 msgid "smallest settable low voltage transfer point"
 msgstr "valoarea minimă punct de transfer tensiune joasă"
-
-msgid "striping"
-msgstr "striping"
 
 msgid "successfully."
 msgstr "cu succes."
@@ -9646,3 +9663,12 @@ msgstr "demontare"
 
 msgid "version:"
 msgstr "versiune:"
+
+#~ msgid "Cache"
+#~ msgstr "Cache"
+
+#~ msgid "Stripe"
+#~ msgstr "Stripe"
+
+#~ msgid "Mirror"
+#~ msgstr "Oglindă"

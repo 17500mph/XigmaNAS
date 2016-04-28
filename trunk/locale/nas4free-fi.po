@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-04-25 17:17+0000\n"
+"POT-Creation-Date: 2016-04-28 02:12+0000\n"
 "PO-Revision-Date: 2016-04-18 12:54+0000\n"
 "Last-Translator: raspi <Unknown>\n"
 "Language-Team: NAS4Free <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-25 15:28+0000\n"
+"X-Launchpad-Export-Date: 2016-04-28 00:31+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: FINLAND\n"
 "X-Poedit-Language: Finnish\n"
@@ -67,6 +67,10 @@ msgid "%s already exists as a %s."
 msgstr ""
 
 #, php-format
+msgid "%s already exists."
+msgstr ""
+
+#, php-format
 msgid "%s is already configured as a filesystem."
 msgstr ""
 
@@ -77,10 +81,6 @@ msgstr ""
 #, php-format
 msgid "%s is too long."
 msgstr "%s on liian pitkä"
-
-#, php-format
-msgid "%s is used to create %s volumes."
-msgstr "%s on käytetty %s aseman luomiseen."
 
 #, php-format
 msgid "%s of %sB"
@@ -180,6 +180,9 @@ msgstr ""
 "käynnistämiseksi (käynnistyy automaattisesti)"
 
 msgid "2 or more disks are required to build a RAID-0 volume."
+msgstr ""
+
+msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr ""
 
 msgid "3 or more disks are required to build a RAID-5 volume."
@@ -292,9 +295,6 @@ msgstr ""
 "paikallisverkosta ja liitynnän suorituskyvystä . Avain voidaan määritellä "
 "joko tavallisena merkkirivinä tai heksadesimaalisena merkkirivinä, jolloin "
 "avain aloitetaan merkeillä '0x'."
-
-msgid "A minimum of 2 disks is required to build a JBOD."
-msgstr ""
 
 #, php-format
 msgid ""
@@ -488,6 +488,9 @@ msgstr "Lisää Rsync työ"
 msgid "Add URL"
 msgstr "Lisää URL"
 
+msgid "Add Virtual Device"
+msgstr ""
+
 msgid "Add Volume"
 msgstr ""
 
@@ -502,9 +505,6 @@ msgstr ""
 
 msgid "Add command"
 msgstr "Lisää komento"
-
-msgid "Add device"
-msgstr "Lisää laite"
 
 msgid "Add disk"
 msgstr "Lisää levy"
@@ -911,6 +911,9 @@ msgstr ""
 msgid "Auxiliary parameters"
 msgstr "Lisäparametrit"
 
+msgid "Avail"
+msgstr ""
+
 msgid "Available"
 msgstr "Käytettävissä"
 
@@ -937,9 +940,6 @@ msgstr ""
 
 msgid "Balance Algorithm"
 msgstr ""
-
-msgid "Balance algorithm"
-msgstr "Balanssialgoritmi"
 
 msgid "Ban List"
 msgstr "Kieltolista"
@@ -1077,6 +1077,9 @@ msgstr "Bulgarialainen"
 msgid "By default, only already existing files can be uploaded."
 msgstr ""
 
+msgid "CACHE"
+msgstr ""
+
 msgid "CARP"
 msgstr ""
 
@@ -1168,9 +1171,6 @@ msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
 "error)."
 msgstr ""
-
-msgid "Cache"
-msgstr "Välimuisti"
 
 msgid "Cache Device"
 msgstr ""
@@ -1752,6 +1752,9 @@ msgstr ""
 msgid "Dataset is protected"
 msgstr ""
 
+msgid "Dataset is unlocked"
+msgstr ""
+
 msgid "Datasets"
 msgstr ""
 
@@ -1827,9 +1830,6 @@ msgstr "Poista palvelin"
 msgid "Delete Login Info"
 msgstr ""
 
-msgid "Delete RAID"
-msgstr "Poista RAID"
-
 msgid "Delete Route"
 msgstr "Poista reitti"
 
@@ -1845,7 +1845,13 @@ msgstr ""
 msgid "Delete Selected Options"
 msgstr ""
 
+msgid "Delete Selected Pools"
+msgstr ""
+
 msgid "Delete Selected RAID Volumes"
+msgstr ""
+
+msgid "Delete Selected Virtual Devices"
 msgstr ""
 
 msgid "Delete Selected Volumes"
@@ -1878,9 +1884,6 @@ msgstr "Poista klooni"
 msgid "Delete command"
 msgstr "Poista komento"
 
-msgid "Delete device"
-msgstr "Poista laite"
-
 msgid "Delete disk"
 msgstr "Poista levy"
 
@@ -1907,9 +1910,6 @@ msgstr "Poista moduli"
 
 msgid "Delete mount point"
 msgstr "Poista liitoskohta"
-
-msgid "Delete pool"
-msgstr ""
 
 msgid "Delete portal group"
 msgstr ""
@@ -2150,11 +2150,6 @@ msgstr ""
 msgid "Distributed hash table"
 msgstr ""
 
-msgid ""
-"Do not activate this option if you want to add an already existing RAID "
-"again."
-msgstr ""
-
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
 
@@ -2190,9 +2185,6 @@ msgstr ""
 msgid "Do you really want to delete this command?"
 msgstr "Haluatko varmasti poistaa komennon?"
 
-msgid "Do you really want to delete this device?"
-msgstr ""
-
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
 "become invalid (e.g. share)!"
@@ -2224,9 +2216,6 @@ msgstr "Haluatko todellakin poistaa tämän moduulin?"
 msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
-msgstr ""
-
-msgid "Do you really want to delete this pool?"
 msgstr ""
 
 msgid "Do you really want to delete this portal group?"
@@ -2288,6 +2277,33 @@ msgstr ""
 msgid "Do you want to create a RAID-5 from selected disks?"
 msgstr ""
 
+msgid "Do you want to create a RAID-Z1 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-Z2 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a RAID-Z3 from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a cache device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a hot spare device from selected disk?"
+msgstr ""
+
+msgid "Do you want to create a log device from selected disk?"
+msgstr ""
+
+msgid "Do you want to create a mirrored log device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a mirrored virtual device from selected disks?"
+msgstr ""
+
+msgid "Do you want to create a striped virtual device from selected disks?"
+msgstr ""
+
 msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
@@ -2298,6 +2314,12 @@ msgid "Do you want to delete selected jobs?"
 msgstr ""
 
 msgid "Do you want to delete selected options?"
+msgstr ""
+
+msgid "Do you want to delete selected pools?"
+msgstr ""
+
+msgid "Do you want to delete selected virtual devices?"
 msgstr ""
 
 msgid "Do you want to delete selected volumes?"
@@ -2368,9 +2390,6 @@ msgstr "Valmis."
 
 msgid "Dos charset"
 msgstr "Dos merkistö"
-
-msgid "Double-parity RAID-Z"
-msgstr ""
 
 msgid "Download"
 msgstr "Lataukset"
@@ -2462,6 +2481,9 @@ msgstr "URL:n muokkaus"
 msgid "Edit VM"
 msgstr ""
 
+msgid "Edit Virtual Device"
+msgstr ""
+
 msgid "Edit Volume"
 msgstr ""
 
@@ -2473,9 +2495,6 @@ msgstr ""
 
 msgid "Edit command"
 msgstr "Komennon muokkaus"
-
-msgid "Edit device"
-msgstr "Laitteen muokkaus"
 
 msgid "Edit disk"
 msgstr "Levyn muokkaus"
@@ -2954,6 +2973,9 @@ msgstr ""
 msgid "Failed to execute command zfs."
 msgstr ""
 
+msgid "Failed to execute command zpool."
+msgstr ""
+
 msgid "Failed to execute cron job."
 msgstr ""
 
@@ -3164,6 +3186,9 @@ msgstr ""
 msgid "GEOM Software RAID"
 msgstr ""
 
+msgid "GEOM VINUM Software RAID"
+msgstr ""
+
 msgid "GID"
 msgstr "Ryhmä-ID (GID)"
 
@@ -3286,6 +3311,9 @@ msgid ""
 msgstr ""
 
 msgid "HDD standby time"
+msgstr ""
+
+msgid "HOT SPARE"
 msgstr ""
 
 msgid "HTTP Proxy"
@@ -3789,6 +3817,12 @@ msgid ""
 "are part of a non healthy pool."
 msgstr ""
 
+#, php-format
+msgid ""
+"It is recommended to use encryption before you store the backup in a safe "
+"location."
+msgstr ""
+
 msgid ""
 "It's recommended to change the default username and password for accessing "
 "the WebGUI, enter the username here."
@@ -3888,6 +3922,12 @@ msgstr ""
 
 msgid "LDAP"
 msgstr "LDAP"
+
+msgid "LOG"
+msgstr ""
+
+msgid "LOG (Mirror)"
+msgstr ""
 
 msgid "LUN"
 msgstr ""
@@ -4090,9 +4130,6 @@ msgstr ""
 msgid "Log"
 msgstr "Loki"
 
-msgid "Log (mirror)"
-msgstr ""
-
 msgid "Log Device"
 msgstr ""
 
@@ -4176,6 +4213,9 @@ msgstr ""
 msgid "MIB is marked for deletion"
 msgstr ""
 
+msgid "MIRROR"
+msgstr ""
+
 msgid "MISSING"
 msgstr "PUUTTUU"
 
@@ -4201,6 +4241,14 @@ msgid "Machine suffix"
 msgstr "Koneen lopputunniste"
 
 msgid "Maintenance"
+msgstr ""
+
+#, php-format
+msgid ""
+"Make sure to select the correct number of devices:<div "
+"id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each "
+"vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
+"Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
 msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
@@ -4426,9 +4474,6 @@ msgstr "Minuuttia"
 
 msgid "Minutes between network time sync."
 msgstr "Verkon tahdistuksen välinen aika (min)."
-
-msgid "Mirror"
-msgstr "Peili"
 
 msgid "Missing a temporary folder."
 msgstr "Väliaikainen hakemisto puuttuu."
@@ -4668,7 +4713,7 @@ msgstr ""
 
 #, php-format
 msgid ""
-"No configured virtual devices. Please add new <a href='%s'>virtual "
+"No configured virtual devices. Please add new <a href=\"%s\">virtual "
 "device</a> first."
 msgstr ""
 
@@ -5179,6 +5224,15 @@ msgstr ""
 msgid "Pool Tools"
 msgstr ""
 
+msgid "Pool is marked for removal"
+msgstr ""
+
+msgid "Pool is protected"
+msgstr ""
+
+msgid "Pool is unlocked"
+msgstr ""
+
 msgid "Pools"
 msgstr ""
 
@@ -5338,9 +5392,6 @@ msgstr "Hiljainen"
 msgid "Quota"
 msgstr "Tilaraja"
 
-msgid "RAID 0"
-msgstr "RAID 0"
-
 msgid "RAID 0 Information & Status"
 msgstr ""
 
@@ -5353,9 +5404,6 @@ msgstr ""
 msgid "RAID 0/1/5 Maintenance"
 msgstr ""
 
-msgid "RAID 1"
-msgstr "RAID 1"
-
 msgid "RAID 1 Information & Status"
 msgstr ""
 
@@ -5363,6 +5411,12 @@ msgid "RAID 5"
 msgstr "RAID 5"
 
 msgid "RAID 5 Information & Status"
+msgstr ""
+
+msgid "RAID Name"
+msgstr ""
+
+msgid "RAID Type"
 msgstr ""
 
 msgid "RAID device can be removed."
@@ -5396,6 +5450,15 @@ msgid "RAID-5"
 msgstr ""
 
 msgid "RAID-5 Maintenance"
+msgstr ""
+
+msgid "RAID-Z1"
+msgstr ""
+
+msgid "RAID-Z2"
+msgstr ""
+
+msgid "RAID-Z3"
 msgstr ""
 
 msgid "RAID0"
@@ -5436,12 +5499,6 @@ msgstr ""
 
 msgid "RSYNC log"
 msgstr "RSYNC loki"
-
-msgid "Raid Name"
-msgstr ""
-
-msgid "Raid name"
-msgstr "Raid nimi"
 
 msgid "Ramdisk"
 msgstr ""
@@ -5767,6 +5824,9 @@ msgstr "SSHD loki"
 msgid "SSID"
 msgstr "SSID"
 
+msgid "STRIPE"
+msgstr ""
+
 msgid "Samba AD"
 msgstr ""
 
@@ -5905,9 +5965,6 @@ msgstr ""
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one)"
-msgstr ""
-
-msgid "Select your read balance algorithm."
 msgstr ""
 
 msgid "Selected"
@@ -6092,9 +6149,6 @@ msgstr "Sammutus ajastin"
 msgid "Simple Network Management Protocol"
 msgstr ""
 
-msgid "Single-parity RAID-Z"
-msgstr ""
-
 msgid "Size"
 msgstr "Koko"
 
@@ -6151,9 +6205,6 @@ msgid "Software RAID"
 msgstr ""
 
 msgid "Software Used"
-msgstr ""
-
-msgid "Software gconcat JBOD"
 msgstr ""
 
 msgid "Source"
@@ -6319,9 +6370,6 @@ msgid ""
 msgstr ""
 
 msgid "String identifier of the extent."
-msgstr ""
-
-msgid "Stripe"
 msgstr ""
 
 msgid "Subject"
@@ -6609,12 +6657,6 @@ msgid ""
 "manufacturing."
 msgstr ""
 
-#, php-format
-msgid ""
-"The RAID volume is currently mounted! Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
-msgstr ""
-
 msgid "The TCP port must be a valid port number."
 msgstr ""
 
@@ -6880,9 +6922,6 @@ msgstr ""
 msgid "The default time in seconds to display a screen."
 msgstr ""
 
-msgid "The device name may only consist of the characters a-z, A-Z, 0-9."
-msgstr "Laitteen nimi voi sisältää ainostaan merkkejä a-z, A-Z, 0-9."
-
 msgid "The device's IP address."
 msgstr "Laitteen IP osoite."
 
@@ -7066,6 +7105,12 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr ""
 
+msgid "The name of the pool cannot be changed."
+msgstr ""
+
+msgid "The name of this virtual device cannot be changed."
+msgstr ""
+
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr ""
@@ -7114,12 +7159,6 @@ msgid ""
 "mask and directory mask but the inherit permissions parameter overrides "
 "this. This can be particularly useful on systems with many users to allow a "
 "single share to be used flexibly by each user."
-msgstr ""
-
-msgid "The pool name does not match the naming rules."
-msgstr ""
-
-msgid "The pool name is invalid: contains spaces."
 msgstr ""
 
 msgid ""
@@ -7270,15 +7309,6 @@ msgstr ""
 
 msgid "There is no error, the file uploaded with success."
 msgstr ""
-
-msgid "There must be 2 disks in a RAID 1 volume."
-msgstr "RAID 1 levylle täytyy olla käytettävissä 2 levyä."
-
-msgid "There must be a minimum of 2 disks in a RAID 0 volume."
-msgstr "RAID 0 levylle täytyy olla käytettävissä vähintään 2 levyä."
-
-msgid "There must be a minimum of 3 disks in a RAID 5 volume."
-msgstr "RAID 5 levylle täytyy olla käytettävissä vähintään 3 levyä."
 
 msgid "There must be at least 1 disks selected."
 msgstr ""
@@ -7441,9 +7471,6 @@ msgstr ""
 
 msgid "This couple targetname/targetaddress already exists in the disk list."
 msgstr ""
-
-msgid "This device already exists in the raid volume list."
-msgstr "Laite on jo RAID levy luettelossa."
 
 msgid "This disk already exists in the disk list."
 msgstr "Levy on jo olemassa levyluettelossa."
@@ -7656,11 +7683,6 @@ msgstr ""
 
 msgid "This will create a recycle bin on the share."
 msgstr "Tämä luo jakoon roskakorin."
-
-msgid ""
-"This will erase ALL data on the selected disks! Do not use this option if "
-"you want to add an already existing RAID again."
-msgstr ""
 
 msgid ""
 "This will erase ALL data on your disk! Do not use this option if you want to "
@@ -7897,9 +7919,6 @@ msgstr "Merkkijonon loukku."
 
 msgid "Traps"
 msgstr "Loukut"
-
-msgid "Triple-parity RAID-Z"
-msgstr ""
 
 msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol"
@@ -8281,6 +8300,18 @@ msgstr ""
 msgid "Virtual Device"
 msgstr ""
 
+msgid "Virtual Device List"
+msgstr ""
+
+msgid "Virtual Device is marked for removal"
+msgstr ""
+
+msgid "Virtual Device is protected"
+msgstr ""
+
+msgid "Virtual Device is unlocked"
+msgstr ""
+
 msgid "Virtual Devices"
 msgstr ""
 
@@ -8299,6 +8330,12 @@ msgstr ""
 msgid "Virtual Machine"
 msgstr ""
 
+msgid "Virtual device can be removed."
+msgstr ""
+
+msgid "Virtual device is already in use."
+msgstr ""
+
 msgid "Virtual devices"
 msgstr ""
 
@@ -8314,10 +8351,13 @@ msgstr "Levyn nimi"
 msgid "Volume Size Limit"
 msgstr ""
 
-msgid "Volume is locked"
+msgid "Volume is marked for deletion"
 msgstr ""
 
-msgid "Volume is marked for deletion"
+msgid "Volume is protected"
+msgstr ""
+
+msgid "Volume is unlocked"
 msgstr ""
 
 msgid "Volume label"
@@ -8372,11 +8412,6 @@ msgid "Warning"
 msgstr "Varoitus"
 
 msgid "Warning Level"
-msgstr ""
-
-msgid ""
-"Warning: You are going to delete a RAID volume. All data will get lost and "
-"can not be recovered."
 msgstr ""
 
 msgid ""
@@ -8695,9 +8730,6 @@ msgstr ""
 msgid "minute(s)"
 msgstr ""
 
-msgid "mirroring"
-msgstr "Peilaus"
-
 msgid "mount"
 msgstr ""
 
@@ -8725,9 +8757,6 @@ msgstr ""
 msgid "revision"
 msgstr ""
 
-msgid "rotated block-interleaved parity"
-msgstr ""
-
 msgid "scan target failed."
 msgstr ""
 
@@ -8739,9 +8768,6 @@ msgstr ""
 
 msgid "smallest settable low voltage transfer point"
 msgstr ""
-
-msgid "striping"
-msgstr "tiedon hajautus"
 
 msgid "successfully."
 msgstr ""
@@ -8763,3 +8789,9 @@ msgstr ""
 
 msgid "version:"
 msgstr ""
+
+#~ msgid "Cache"
+#~ msgstr "Välimuisti"
+
+#~ msgid "Mirror"
+#~ msgstr "Peili"
