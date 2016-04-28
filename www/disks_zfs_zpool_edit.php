@@ -43,7 +43,16 @@ $sphere_array = [];
 $sphere_record = [];
 $gt_record_loc = gettext('Virtual device is already in use.');
 $gt_record_opn = gettext('Virtual device can be removed.');
-$prerequisites_ok = true;
+$prerequisites_ok = true; // flag to indicate lack of information / resources
+$img_path = [
+	'add' => 'images/add.png',
+	'mod' => 'images/edit.png',
+	'del' => 'images/delete.png',
+	'loc' => 'images/locked.png',
+	'unl' => 'images/unlocked.png',
+	'mai' => 'images/maintain.png',
+	'inf' => 'images/info.png'
+];
 
 $mode_page = ($_POST) ? PAGE_MODE_POST : (($_GET) ? PAGE_MODE_EDIT : PAGE_MODE_ADD); // detect page mode
 if (PAGE_MODE_POST == $mode_page) { // POST is Cancel or not Submit => cleanup
@@ -98,6 +107,10 @@ if (RECORD_ERROR == $mode_record) { // oops, someone tries to cheat, over and ou
 	header($sphere_header_parent);
 	exit;
 }
+$isrecordnew = (RECORD_NEW === $mode_record);
+$isrecordnewmodify = (RECORD_NEW_MODIFY == $mode_record);
+$isrecordmodify = (RECORD_MODIFY === $mode_record);
+$isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
 
 if (!(isset($config['zfs']['vdevices']['vdevice']) && is_array($config['zfs']['vdevices']['vdevice']))) {
 	$config['zfs']['vdevices']['vdevice'] = [];
@@ -212,7 +225,7 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 	$sphere_record['hastpool'] = $hastpool;
 
 	if ($prerequisites_ok && empty($input_errors)) {
-		if (RECORD_NEW == $mode_record) {
+		if ($isrecordnew) {
 			$sphere_array[] = $sphere_record;
 			updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_NEW, $sphere_record['uuid']);
 		} else {
@@ -246,20 +259,10 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 	}
 }
 
-$pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Pools'), gettext('Management'), (RECORD_NEW !== $mode_record) ? gettext('Edit') : gettext('Add'));
+$pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Pools'), gettext('Management'), (!$isrecordnew) ? gettext('Edit') : gettext('Add'));
 ?>
 <?php include("fbegin.inc");?>
-<script type="text/javascript">
-<!--
-function enable_change(enable_change) {
-	document.iform.name.disabled = !enable_change;
-	document.iform.root.disabled = !enable_change;
-	//document.iform.mountpoint.disabled = !enable_change;
-	document.iform.force.disabled = !enable_change;
-}
-// -->
-</script>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<table id="area_navigator">
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
@@ -282,108 +285,102 @@ function enable_change(enable_change) {
 			</ul>
 		</td>
 	</tr>
-	<tr>
-		<td class="tabcont">
-			<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-				<?php 
-					if (!empty($errormsg)) { print_error_box($errormsg); }
-					if (!empty($input_errors)) { print_input_errors($input_errors); }
-					if (file_exists($d_sysrebootreqd_path)) { print_info_box(get_std_save_message(0)); }
-				?>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<thead>
-						<?php html_titleline(gettext('Settings'));?>
-					</thead>
-					<tbody>
-						<?php
-							html_inputbox('name', gettext('Name'), $sphere_record['name'], '', false, 20);
-							html_inputbox('root', gettext('Root'), $sphere_record['root'], gettext('Creates the pool with an alternate root.'), false, 40);
-							html_inputbox('mountpoint', gettext('Mount point'), $sphere_record['mountpoint'], gettext('Sets an alternate mount point for the root dataset. Default is /mnt.'), false, 40);
-							html_checkbox('force', gettext('Force use'), !empty($sphere_record['force']) ? true : false, gettext('Forces use of vdevs, even if they appear in use or specify different size. (This is not recommended.)'), '', false);
-							html_inputbox('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 40);
-							html_separator();
-						?>
-					</tbody>
-				</table>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<thead>
-						<?php html_titleline(gettext('Virtual Device List'));?>
-					</thead>
-				</table>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<colgroup>
-						<col style="width:1%"> <!--// checkbox -->
-						<col style="width:20%"><!--// Name -->
-						<col style="width:20%"><!--// Type -->
-						<col style="width:54%"><!--// Description -->
-						<col style="width:5%"> <!--// Icons -->
-					</colgroup>
-					<thead>
-						<tr>
-							<td class="listhdrlr"><input type="checkbox" name="togglemembers" disabled="disabled"/></td>
-							<td class="listhdrr"><?=gettext('Name');?></td>
-							<td class="listhdrr"><?=gettext('Type');?></td>
-							<td class="listhdrr"><?=gettext('Description');?></td>
-							<td class="listhdrr">&nbsp;</td>
-						</tr>
-					</thead>
-					<tbody>
-						<?php foreach ($a_vdevice as $r_vdevice):?>
-							<?php $isnotmemberofapool = (false === array_search_ex($r_vdevice['name'], $sphere_array, 'vdevice'));?>
-							<?php $ismemberofthispool = (isset($sphere_record['vdevice']) && is_array($sphere_record['vdevice']) && in_array($r_vdevice['name'], $sphere_record['vdevice']));?>
-							<?php if (($isnotmemberofapool || $ismemberofthispool) && ((RECORD_NEW == $mode_record) || (RECORD_NEW_MODIFY == $mode_record))):?>
-								<tr>
-									<td class="listlr">
-										<?php if ($ismemberofthispool):?>
-											<input type="checkbox" name="vdevice[]" value="<?=$r_vdevice['name'];?>" id="<?=$r_vdevice['uuid'];?>" checked="checked"/>
-										<?php else:?>
-											<input type="checkbox" name="vdevice[]" value="<?=$r_vdevice['name'];?>" id="<?=$r_vdevice['uuid'];?>"/>
-										<?php endif;?>	
-									</td>
-									<td class="listr"><?=htmlspecialchars($r_vdevice['name']);?>&nbsp;</td>
-									<td class="listr"><?=htmlspecialchars($r_vdevice['type']);?>&nbsp;</td>
-									<td class="listr"><?=htmlspecialchars($r_vdevice['desc']);?>&nbsp;</td>
-									<td valign="middle" nowrap="nowrap" class="listbgc">
-										<?php if ($ismemberofthispool):?>
-											<img src="images/unlocked.png" title="<?=gettext($gt_record_opn);?>" border="0" alt="<?=gettext($gt_record_opn);?>" />
-										<?php else:?>
-											&nbsp;
-										<?php endif;?>
-									</td>
-								</tr>
-							<?php endif;?>
-							<?php if ($ismemberofthispool && (RECORD_MODIFY == $mode_record)):?>
-								<tr>
-									<td class="<?=!$ismemberofthispool ? "listlr" : "listlrd";?>">
-										<input type="checkbox" name="vdevice[]" value="<?=$r_vdevice['name'];?>" id="<?=$r_vdevice['uuid'];?>" checked="checked" disabled="disabled"/>
-									</td>
-									<td class="<?=!$ismemberofthispool ? "listr" : "listrd";?>"><?=htmlspecialchars($r_vdevice['name']);?>&nbsp;</td>
-									<td class="<?=!$ismemberofthispool ? "listr" : "listrd";?>"><?=htmlspecialchars($r_vdevice['type']);?>&nbsp;</td>
-									<td class="<?=!$ismemberofthispool ? "listr" : "listrd";?>"><?=htmlspecialchars($r_vdevice['desc']);?>&nbsp;</td>
-									<td valign="middle" nowrap="nowrap" class="listbgc">
-										<img src="images/locked.png" title="<?=gettext($gt_record_loc);?>" border="0" alt="<?=gettext($gt_record_loc);?>" />
-									</td>
-								</tr>
-							<?php endif;?>
-						<?php endforeach;?>
-					</tbody>
-				</table>
-				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=(RECORD_NEW != $mode_record) ? gettext('Save') : gettext('Add');?>" onclick="enable_change(true)" />
-					<input name="Cancel" type="submit" class="formbtn" value="<?=gettext('Cancel');?>" />
-					<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>" />
-				</div>
-				<?php include("formend.inc");?>
-			</form>
-		</td>
-	</tr>
 </table>
-<script type="text/javascript">
-<!--
-<?php if (RECORD_MODIFY == $mode_record):?>
-<!-- Disable controls that should not be modified anymore in edit mode. -->
-enable_change(false);
-<?php endif;?>
-//-->
-</script>
+<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
+	<?php 
+		if (!empty($errormsg)) { print_error_box($errormsg); }
+		if (!empty($input_errors)) { print_input_errors($input_errors); }
+		if (file_exists($d_sysrebootreqd_path)) { print_info_box(get_std_save_message(0)); }
+	?>
+	<table id="area_data_settings">
+		<colgroup>
+			<col id="area_data_settings_col_tag">
+			<col id="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+			<?php html_titleline2(gettext('Settings'));?>
+		</thead>
+		<tbody>
+			<?php
+				html_inputbox2('name', gettext('Name'), $sphere_record['name'], '', false, 20, $isrecordmodify);
+				html_inputbox2('root', gettext('Root'), $sphere_record['root'], gettext('Creates the pool with an alternate root.'), false, 40, $isrecordmodify);
+				html_inputbox2('mountpoint', gettext('Mount point'), $sphere_record['mountpoint'], gettext('Sets an alternate mount point for the root dataset. Default is /mnt.'), false, 40);
+				html_checkbox2('force', gettext('Force use'), $sphere_record['force'], gettext('Forces use of vdevs, even if they appear in use or specify different size. (This is not recommended.)'), '', false, $isrecordmodify);
+				html_inputbox2('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 40);
+				html_separator2();
+			?>
+		</tbody>
+	</table>
+	<table id="area_data_selection">
+		<colgroup>
+			<col style="width:5%"> <!--// checkbox -->
+			<col style="width:20%"><!--// Name -->
+			<col style="width:20%"><!--// Type -->
+			<col style="width:50%"><!--// Description -->
+			<col style="width:5%"> <!--// Icons -->
+		</colgroup>
+		<thead>
+			<?php html_titleline2(gettext('Virtual Device List'), 5);?>
+			<tr>
+				<td class="lhelc"><input type="checkbox" name="togglemembers" disabled="disabled"/></td>
+				<td class="lhell"><?=gettext('Name');?></td>
+				<td class="lhell"><?=gettext('Type');?></td>
+				<td class="lhell"><?=gettext('Description');?></td>
+				<td class="lhebl">&nbsp;</td>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach ($a_vdevice as $r_vdevice):?>
+				<?php
+					$isnotmemberofapool = (false === array_search_ex($r_vdevice['name'], $sphere_array, 'vdevice'));
+					$ismemberofthispool = (isset($sphere_record['vdevice']) && is_array($sphere_record['vdevice']) && in_array($r_vdevice['name'], $sphere_record['vdevice']));
+				?>
+				<?php if ($isrecordnewornewmodify):?>
+					<?php if ($isnotmemberofapool || $ismemberofthispool):?>
+						<tr>
+							<td class="lcelc">
+								<?php if ($ismemberofthispool):?>
+									<input type="checkbox" name="vdevice[]" value="<?=$r_vdevice['name'];?>" id="<?=$r_vdevice['uuid'];?>" checked="checked"/>
+								<?php else:?>
+									<input type="checkbox" name="vdevice[]" value="<?=$r_vdevice['name'];?>" id="<?=$r_vdevice['uuid'];?>"/>
+								<?php endif;?>	
+							</td>
+							<td class="lcell"><?=htmlspecialchars($r_vdevice['name']);?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars($r_vdevice['type']);?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars($r_vdevice['desc']);?>&nbsp;</td>
+							<td class="lcebcd">
+								<?php if ($ismemberofthispool):?>
+									<img src="<?=$img_path['unl'];?>" title="<?=gettext($gt_record_opn);?>" alt="<?=gettext($gt_record_opn);?>" />
+								<?php else:?>
+									&nbsp;
+								<?php endif;?>
+							</td>
+						</tr>
+					<?php endif;?>
+				<?php endif;?>
+				<?php if ($isrecordmodify):?>
+					<?php if ($ismemberofthispool):?>
+						<tr>
+							<td class="lcelcd">
+								<input type="checkbox" name="vdevice[]" value="<?=$r_vdevice['name'];?>" id="<?=$r_vdevice['uuid'];?>" checked="checked" disabled="disabled"/>
+							</td>
+							<td class="lcelld"><?=htmlspecialchars($r_vdevice['name']);?>&nbsp;</td>
+							<td class="lcelld"><?=htmlspecialchars($r_vdevice['type']);?>&nbsp;</td>
+							<td class="lcelld"><?=htmlspecialchars($r_vdevice['desc']);?>&nbsp;</td>
+							<td class="lcebcd">
+								<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gettext($gt_record_loc);?>" />
+							</td>
+						</tr>
+					<?php endif;?>
+				<?php endif;?>
+			<?php endforeach;?>
+		</tbody>
+	</table>
+	<div id="submit">
+		<input name="Submit" type="submit" class="formbtn" value="<?=($isrecordnew) ? gettext('Add') : gettext('Save');?>"/>
+		<input name="Cancel" type="submit" class="formbtn" value="<?=gettext('Cancel');?>" />
+		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>" />
+	</div>
+	<?php include("formend.inc");?>
+</form></td></tr></tbody></table>
 <?php include("fend.inc");?>

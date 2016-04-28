@@ -43,7 +43,27 @@ $sphere_record = [];
 $checkbox_member_name = 'checkbox_member_array';
 $checkbox_member_array = [];
 $checkbox_member_record = [];
+$gt_confirm_stripe = gettext('Do you want to create a striped virtual device from selected disks?');
+$gt_confirm_mirror = gettext('Do you want to create a mirrored virtual device from selected disks?');
+$gt_confirm_raidz1 = gettext('Do you want to create a RAID-Z1 from selected disks?');
+$gt_confirm_raidz2 = gettext('Do you want to create a RAID-Z2 from selected disks?');
+$gt_confirm_raidz3 = gettext('Do you want to create a RAID-Z3 from selected disks?');
+$gt_confirm_spare = gettext('Do you want to create a hot spare device from selected disk?');
+$gt_confirm_cache = gettext('Do you want to create a cache device from selected disks?');
+$gt_confirm_log = gettext('Do you want to create a log device from selected disk?');
+$gt_confirm_logmir = gettext('Do you want to create a mirrored log device from selected disks?');
+$gt_record_loc = gettext('Virtual device is already in use.');
+$gt_record_opn = gettext('Virtual device can be removed.');
 $prerequisites_ok = true;
+$img_path = [
+	'add' => 'images/add.png',
+	'mod' => 'images/edit.png',
+	'del' => 'images/delete.png',
+	'loc' => 'images/locked.png',
+	'unl' => 'images/unlocked.png',
+	'mai' => 'images/maintain.png',
+	'inf' => 'images/info.png'
+];
 
 $mode_page = ($_POST) ? PAGE_MODE_POST : (($_GET) ? PAGE_MODE_EDIT : PAGE_MODE_ADD); // detect page mode
 if (PAGE_MODE_POST == $mode_page) { // POST is Cancel
@@ -98,46 +118,46 @@ if (RECORD_ERROR == $mode_record) { // oops, someone tries to cheat, over and ou
 	header($sphere_header_parent);
 	exit;
 }
+$isrecordnew = (RECORD_NEW === $mode_record);
+$isrecordnewmodify = (RECORD_NEW_MODIFY == $mode_record);
+$isrecordmodify = (RECORD_MODIFY === $mode_record);
+$isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
 
 function strip_dev($device) {
 	// returns the device name that follows after '/dev/' , i.e. ada0, ada0p1 or otherwise returns an empty array 
-	if (preg_match("/^\/dev\/(.+)$/", $device, $m)) {
+	if (preg_match('/^\/dev\/(.+)$/', $device, $m)) {
 		$device = $m[1];
 	}
 	return $device;
 }
 function strip_partition($device) {
 	// returns the device name without partition information, .e. /dev/ada0p1 -> /dev/ada0 or an empty array 
-	if (preg_match("/^(.*)p\d+$/", $device, $m)) {
+	if (preg_match('/^(.*)p\d+$/', $device, $m)) {
 		$device = $m[1];
 	}
 	return $device;
 }
 function strip_exists($device, &$sphere_array) {
-	if (false !== array_search_ex($diskv['devicespecialfile'], $sphere_array, "device"))
-		return true;
+	if (false !== array_search_ex($diskv['devicespecialfile'], $sphere_array, 'device')) { return true; }
 	foreach ($sphere_array as $vdevs) {
 		foreach ($vdevs['device'] as $dev) {
 			// label
 			$tmp = disks_label_to_device($dev);
-			if (strcmp($tmp, $device) == 0)
-				return true;
+			if (strcmp($tmp, $device) == 0) { return true; }
 			// label+partition
 			$tmp = strip_partition($tmp);
-			if (strcmp($tmp, $device) == 0)
-				return true;
+			if (strcmp($tmp, $device) == 0) { return true; }
 			// partition
 			$tmp = strip_partition($dev);
-			if (strcmp($tmp, $device) == 0)
-				return true;
+			if (strcmp($tmp, $device) == 0) { return true; }
 		}
 	}
 	return false;
 }
 
 $a_disk = get_conf_disks_filtered_ex('fstype', 'zfs');
-if (((RECORD_NEW == $mode_record) || (RECORD_NEW_MODIFY == $mode_record)) && (empty($a_disk)) && (empty($a_encrypteddisk))) {
-	$errormsg = sprintf(gettext("No disks available. Please add new <a href='%s'>disk</a> first."), "disks_manage.php");
+if ($isrecordnewornewmodify && (empty($a_disk)) && (empty($a_encrypteddisk))) {
+	$errormsg = sprintf(gettext("No disks available. Please add new <a href='%s'>disk</a> first."), 'disks_manage.php');
 	$prerequisites_ok = false;
 }
 
@@ -157,7 +177,7 @@ foreach ($a_disk as $r_disk) {
 	];
 }
 
-if (PAGE_MODE_POST == $mode_page) { // at this point we know it's a POST but (except Cancel) we don't know which one
+if (PAGE_MODE_POST === $mode_page) { // at this point we know it's a POST but (except Cancel) we don't know which one
 	unset($input_errors);
 	if (isset($_POST['Submit']) && $_POST['Submit']) { // Submit is coming from Save button which is only shown when an existing vdevice is modified (RECORD_MODIFY)
 		$sphere_record['name'] = $sphere_array[$index]['name'];
@@ -239,7 +259,7 @@ if (PAGE_MODE_POST == $mode_page) { // at this point we know it's a POST but (ex
 		}
 	}
 	if ($prerequisites_ok && empty($input_errors)) {
-		if (RECORD_NEW == $mode_record) {
+		if ($isrecordnew) {
 			$sphere_array[] = $sphere_record;
 			updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_NEW, $sphere_record['uuid']);
 		} else {
@@ -272,16 +292,29 @@ if (PAGE_MODE_POST == $mode_page) { // at this point we know it's a POST but (ex
 	}
 }
 
-$pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Pools'), gettext('Virtual Device'), (RECORD_NEW !== $mode_record) ? gettext('Edit') : gettext('Add'));
+$pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Pools'), gettext('Virtual Device'), (!$isrecordnew) ? gettext('Edit') : gettext('Add'));
 ?>
 <?php include("fbegin.inc");?>
 <script type="text/javascript">
-<!-- Begin JavaScript
-function enable_change(enable_change) {
-	document.iform.name.disabled = !enable_change;
-	document.iform.type.disabled = !enable_change;
-	document.iform.aft4k.disabled = !enable_change;
-}
+//<![CDATA[
+$(window).on("load", function() {
+	$("input[name='<?=$checkbox_member_name;?>[]").click(function() {
+		controlactionbuttons(this, '<?=$checkbox_member_name;?>[]');
+	});
+	$("#togglebox").click(function() {
+		toggleselection($(this)[0], "<?=$checkbox_member_name;?>[]");
+	});
+	$("#button_stripe").click(function () { return confirm('<?=$gt_confirm_stripe;?>'); });
+	$("#button_mirror").click(function () { return confirm('<?=$gt_confirm_mirror;?>'); });
+	$("#button_raidz1").click(function () { return confirm('<?=$gt_confirm_raidz1;?>'); });
+	$("#button_raidz2").click(function () { return confirm('<?=$gt_confirm_raidz2;?>'); });
+	$("#button_raidz3").click(function () { return confirm('<?=$gt_confirm_raidz3;?>'); });
+	$("#button_spare").click(function () { return confirm('<?=$gt_confirm_spare;?>'); });
+	$("#button_cache").click(function () { return confirm('<?=$gt_confirm_cache;?>'); });
+	$("#button_log").click(function () { return confirm('<?=$gt_confirm_log;?>'); });
+	$("#button_logmir").click(function () { return confirm('<?=$gt_confirm_logmir;?>'); });
+	controlactionbuttons(this,'<?=$checkbox_member_name;?>[]');
+});
 function disableactionbuttons(n) {
 	var ab_element;
 	var ab_disable = [];
@@ -294,15 +327,15 @@ function disableactionbuttons(n) {
 		case  4: ab_disable = [false , false , false , false , true  , true  , true  , true  , false ]; break;
 		default: ab_disable = [false , false , false , false , false , true  , true  , true  , false ]; break; // setting for 5 or more disks
 	}		
-	ab_element = document.getElementById('disk_stripe'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable[0])) { ab_element.disabled = ab_disable[0]; }
-	ab_element = document.getElementById('disk_mirror'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable[1])) { ab_element.disabled = ab_disable[1]; }
-	ab_element = document.getElementById('disk_raidz1'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable[2])) { ab_element.disabled = ab_disable[2]; }
-	ab_element = document.getElementById('disk_raidz2'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable[3])) { ab_element.disabled = ab_disable[3]; }
-	ab_element = document.getElementById('disk_raidz3'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable[4])) { ab_element.disabled = ab_disable[4]; }
-	ab_element = document.getElementById('disk_spare') ; if ((ab_element !== null) && (ab_element.disabled !== ab_disable[5])) { ab_element.disabled = ab_disable[5]; }
-	ab_element = document.getElementById('disk_cache') ; if ((ab_element !== null) && (ab_element.disabled !== ab_disable[6])) { ab_element.disabled = ab_disable[6]; }
-	ab_element = document.getElementById('disk_log')   ; if ((ab_element !== null) && (ab_element.disabled !== ab_disable[7])) { ab_element.disabled = ab_disable[7]; }
-	ab_element = document.getElementById('disk_logmir'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable[8])) { ab_element.disabled = ab_disable[8]; }
+	ab_element = document.getElementById('button_stripe'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable[0])) { ab_element.disabled = ab_disable[0]; }
+	ab_element = document.getElementById('button_mirror'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable[1])) { ab_element.disabled = ab_disable[1]; }
+	ab_element = document.getElementById('button_raidz1'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable[2])) { ab_element.disabled = ab_disable[2]; }
+	ab_element = document.getElementById('button_raidz2'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable[3])) { ab_element.disabled = ab_disable[3]; }
+	ab_element = document.getElementById('button_raidz3'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable[4])) { ab_element.disabled = ab_disable[4]; }
+	ab_element = document.getElementById('button_spare') ; if ((ab_element !== null) && (ab_element.disabled !== ab_disable[5])) { ab_element.disabled = ab_disable[5]; }
+	ab_element = document.getElementById('button_cache') ; if ((ab_element !== null) && (ab_element.disabled !== ab_disable[6])) { ab_element.disabled = ab_disable[6]; }
+	ab_element = document.getElementById('button_log')   ; if ((ab_element !== null) && (ab_element.disabled !== ab_disable[7])) { ab_element.disabled = ab_disable[7]; }
+	ab_element = document.getElementById('button_logmir'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable[8])) { ab_element.disabled = ab_disable[8]; }
 }
 function controlactionbuttons(ego, triggerbyname) {
 	var a_trigger = document.getElementsByName(triggerbyname);
@@ -316,9 +349,25 @@ function controlactionbuttons(ego, triggerbyname) {
 	}
 	disableactionbuttons(n);
 }
-// End JavaScript -->
+function toggleselection(ego, triggerbyname) {
+	var a_trigger = document.getElementsByName(triggerbyname);
+	var n_trigger = a_trigger.length;
+	var i = 0;
+	var n = 0;
+	for (; i < n_trigger; i++) {
+		if ((a_trigger[i].type === 'checkbox') && !a_trigger[i].disabled) {
+			a_trigger[i].checked = !a_trigger[i].checked;
+			if (a_trigger[i].checked) {
+				n++;
+			}
+		}
+	}
+	disableactionbuttons(n);
+	$("#togglebox").prop("checked", false);
+}
+//]]>
 </script>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<table id="area_navigator">
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
@@ -341,146 +390,145 @@ function controlactionbuttons(ego, triggerbyname) {
 			</ul>
 		</td>
 	</tr>
-	<tr>
-		<td class="tabcont">
-			<form action="<?php $sphere_scriptname;?>" method="post" name="iform" id="iform">
-				<?php
-					if (!empty($errormsg)) print_error_box($errormsg);
-					if (!empty($input_errors)) print_input_errors($input_errors);
-					if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));
-				?>
-				<div id="submit" style="margin-bottom:10px">
-					<button name="Action" id="disk_stripe" type="submit" class="formbtn" value="stripe"     onclick="return confirm('<?=gettext('Do you want to create a striped virtual device from selected disks?') ;?>')"><?=gettext('STRIPE')      ;?></button>
-					<button name="Action" id="disk_mirror" type="submit" class="formbtn" value="mirror"     onclick="return confirm('<?=gettext('Do you want to create a mirrored virtual device from selected disks?');?>')"><?=gettext('MIRROR')      ;?></button>
-					<button name="Action" id="disk_raidz1" type="submit" class="formbtn" value="raidz1"     onclick="return confirm('<?=gettext('Do you want to create a RAID-Z1 from selected disks?')                ;?>')"><?=gettext('RAID-Z1')     ;?></button>
-					<button name="Action" id="disk_raidz2" type="submit" class="formbtn" value="raidz2"     onclick="return confirm('<?=gettext('Do you want to create a RAID-Z2 from selected disks?')                ;?>')"><?=gettext('RAID-Z2')     ;?></button>
-					<button name="Action" id="disk_raidz3" type="submit" class="formbtn" value="raidz3"     onclick="return confirm('<?=gettext('Do you want to create a RAID-Z3 from selected disks?')                ;?>')"><?=gettext('RAID-Z3')     ;?></button>
-					<button name="Action" id="disk_spare"  type="submit" class="formbtn" value="spare"      onclick="return confirm('<?=gettext('Do you want to create a hot spare device from selected disk?')        ;?>')"><?=gettext('HOT SPARE')   ;?></button>
-					<button name="Action" id="disk_cache"  type="submit" class="formbtn" value="cache"      onclick="return confirm('<?=gettext('Do you want to create a cache device from selected disks?')           ;?>')"><?=gettext('CACHE')       ;?></button>
-					<button name="Action" id="disk_log"    type="submit" class="formbtn" value="log"        onclick="return confirm('<?=gettext('Do you want to create a log device from selected disk?')              ;?>')"><?=gettext('LOG')         ;?></button>
-					<button name="Action" id="disk_logmir" type="submit" class="formbtn" value="log-mirror" onclick="return confirm('<?=gettext('Do you want to create a mirrored log device from selected disks?')    ;?>')"><?=gettext('LOG (Mirror)');?></button>
-				</div>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<thead>
-						<?php html_titleline(gettext('Settings'));?>
-					</thead>
-					<tbody>
-						<?php
-							html_inputbox('name', gettext('Name'), $sphere_record['name'], '', true, 20, RECORD_MODIFY == $mode_record);
-							if (RECORD_MODIFY == $mode_record) {
-								html_inputbox('type', gettext('Type'), $sphere_record['type'], '', true, 20, true);
-							} 
-							html_checkbox('aft4k', gettext('4KB wrapper'), !empty($sphere_record['aft4k']) ? true : false, gettext('Create 4KB wrapper (nop device).'), '', false, '');
-							html_inputbox('desc', gettext("Description"), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 40);
-							html_separator();
-						?>
-					</tbody>
-				</table>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<thead>
-						<?php html_titleline(gettext('Device List'));?>
-					</thead>
-				</table>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<colgroup>
-						<col style="width:1%"> <!--// checkbox -->
-						<col style="width:10%"><!--// Device -->
-						<col style="width:10%"><!--// Partition -->
-						<col style="width:15%"><!--// Model -->
-						<col style="width:12%"><!--// Serial -->
-						<col style="width:12%"><!--// Size -->
-						<col style="width:20%"><!--// Controller -->
-						<col style="width:15%"><!--// Description -->
-						<col style="width:5%"> <!--// Icons -->
-					</colgroup>
-					<thead>
-						<tr>
-							<td class="listhdrlr"><input type="checkbox" name="togglemembers" disabled="disabled"/></td>
-							<td class="listhdrr"><?=gettext('Device');?></td>
-							<td class="listhdrr"><?=gettext('Partition');?></td>
-							<td class="listhdrr"><?=gettext('Model');?></td>
-							<td class="listhdrr"><?=gettext('Serial Number');?></td>
-							<td class="listhdrr"><?=gettext('Size');?></td>
-							<td class="listhdrr"><?=gettext('Controller');?></td>
-							<td class="listhdrr"><?=gettext('Name');?></td>
-							<td class="listhdrr">&nbsp;</td>
-						</tr>
-					</thead>
-					<tbody>
-						<?php foreach ($a_device as $r_device):?>
-							<?php $isnotmemberofavdev = (false === array_search_ex($r_device['devicespecialfile'], $sphere_array, 'device'));?>
-							<?php $ismemberofthisvdev = (isset($sphere_record['device']) && is_array($sphere_record['device']) && in_array($r_device['devicespecialfile'], $sphere_record['device']));?>
-							<?php if (($isnotmemberofavdev || $ismemberofthisvdev) && ((RECORD_NEW == $mode_record) || (RECORD_NEW_MODIFY == $mode_record))):?>
-								<tr>
-									<td class="listlr">
-										<?php if ($ismemberofthisvdev):?>
-											<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>" onclick="javascript:controlactionbuttons(this,'<?=$checkbox_member_name;?>[]')" checked="checked"/>
-										<?php else:?>
-											<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>" onclick="javascript:controlactionbuttons(this,'<?=$checkbox_member_name;?>[]')"/>
-										<?php endif;?>	
-									</td>
-									<td class="listr"><?=htmlspecialchars($r_device['name']);?>&nbsp;</td>
-									<td class="listr"><?=htmlspecialchars($r_device['partition']);?>&nbsp;</td>
-									<td class="listr"><?=htmlspecialchars($r_device['model']);?>&nbsp;</td>
-									<td class="listr"><?=htmlspecialchars($r_device['serial']);?>&nbsp;</td>
-									<td class="listr"><?=htmlspecialchars($r_device['size']);?>&nbsp;</td>
-									<td class="listr"><?=htmlspecialchars($r_device['controller']);?>&nbsp;</td>
-									<td class="listr"><?=htmlspecialchars($r_device['desc']);?>&nbsp;</td>
-									<td valign="middle" nowrap="nowrap" class="listbgc">
-										<?php if ($ismemberofthisvdev):?>
-											<img src="images/unlocked.png" title="<?=gettext($gt_record_opn);?>" border="0" alt="<?=gettext($gt_record_opn);?>" />
-										<?php else:?>
-											&nbsp;
-										<?php endif;?>
-									</td>
-								</tr>
-							<?php endif;?>
-							<?php if ($ismemberofthisvdev && (RECORD_MODIFY == $mode_record)):?>
-								<tr>
-									<td class="<?=!$ismemberofthisvdev ? "listlr" : "listlrd";?>">
-										<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>" checked="checked" disabled="disabled"/>
-									</td>
-									<td class="<?=!$ismemberofthisvdev ? "listr" : "listrd";?>"><?=htmlspecialchars($r_device['name']);?>&nbsp;</td>
-									<td class="<?=!$ismemberofthisvdev ? "listr" : "listrd";?>"><?=htmlspecialchars($r_device['partition']);?>&nbsp;</td>
-									<td class="<?=!$ismemberofthisvdev ? "listr" : "listrd";?>"><?=htmlspecialchars($r_device['model']);?>&nbsp;</td>
-									<td class="<?=!$ismemberofthisvdev ? "listr" : "listrd";?>"><?=htmlspecialchars($r_device['serial']);?>&nbsp;</td>
-									<td class="<?=!$ismemberofthisvdev ? "listr" : "listrd";?>"><?=htmlspecialchars($r_device['size']);?>&nbsp;</td>
-									<td class="<?=!$ismemberofthisvdev ? "listr" : "listrd";?>"><?=htmlspecialchars($r_device['controller']);?>&nbsp;</td>
-									<td class="<?=!$ismemberofthisvdev ? "listr" : "listrd";?>"><?=htmlspecialchars($r_device['desc']);?>&nbsp;</td>
-									<td valign="middle" nowrap="nowrap" class="listbgc">
-										<img src="images/locked.png" title="<?=gettext($gt_record_loc);?>" border="0" alt="<?=gettext($gt_record_loc);?>" />
-									</td>
-								</tr>
-							<?php endif;?>
-						<?php endforeach;?>
-					</tbody>
-				</table>
-				
-				<div id="submit">
-					<?php if (RECORD_MODIFY === $mode_record):?>
-						<input name="Submit" type="submit" class="formbtn" value="<?=gettext('Save');?>" onclick="enable_change(true)"/>
-					<?php endif;?>
-					<input name="Cancel" type="submit" class="formbtn" value="<?=gettext('Cancel');?>" />
-					<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>" />
-				</div>
-				<div id="remarks">
-					<?php html_remark("note", gettext("Note"), sprintf(gettext("Make sure to select the correct number of devices:<div id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"), ""));?>
-				</div>
-				<?php include("formend.inc");?>
-			</form>
-		</td>
-	</tr>
 </table>
-<script type="text/javascript">
-<!--
-<?php if (RECORD_MODIFY == $mode_record):?>
-<!-- Disable controls that should not be modified anymore in edit mode. -->
-enable_change(false);
-<?php endif;?>
-<!-- Disable action buttons and give their control to checkbox array. -->
-window.onload=function() {
-	controlactionbuttons(this,'<?=$checkbox_member_name;?>[]');
-}
-//-->
-</script>
+<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
+	<?php
+		if (!empty($errormsg)) print_error_box($errormsg);
+		if (!empty($input_errors)) print_input_errors($input_errors);
+		if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));
+	?>
+	<?php if ($isrecordnewornewmodify):?>
+		<div id="submit" style="margin-bottom:10px">
+			<button name="Action" id="button_stripe" type="submit" class="formbtn" value="stripe"><?=gettext('STRIPE');?></button>
+			<button name="Action" id="button_mirror" type="submit" class="formbtn" value="mirror"><?=gettext('MIRROR');?></button>
+			<button name="Action" id="button_raidz1" type="submit" class="formbtn" value="raidz1"><?=gettext('RAID-Z1');?></button>
+			<button name="Action" id="button_raidz2" type="submit" class="formbtn" value="raidz2"><?=gettext('RAID-Z2');?></button>
+			<button name="Action" id="button_raidz3" type="submit" class="formbtn" value="raidz3"><?=gettext('RAID-Z3');?></button>
+			<button name="Action" id="button_spare"  type="submit" class="formbtn" value="spare"><?=gettext('HOT SPARE');?></button>
+			<button name="Action" id="button_cache"  type="submit" class="formbtn" value="cache"><?=gettext('CACHE');?></button>
+			<button name="Action" id="button_log"    type="submit" class="formbtn" value="log"><?=gettext('LOG');?></button>
+			<button name="Action" id="button_logmir" type="submit" class="formbtn" value="log-mirror"><?=gettext('LOG (Mirror)');?></button>
+		</div>
+	<?php endif;?>
+	<table id="area_data_settings">
+		<colgroup>
+			<col id="area_data_settings_col_tag">
+			<col id="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+			<?php html_titleline2(gettext('Settings'));?>
+		</thead>
+		<tbody>
+			<?php
+				html_inputbox2('name', gettext('Name'), $sphere_record['name'], '', true, 20, $isrecordmodify);
+				if ($isrecordmodify) {
+					html_inputbox2('type', gettext('Type'), $sphere_record['type'], '', true, 20, true);
+				} 
+				html_checkbox2('aft4k', gettext('4KB wrapper'), !empty($sphere_record['aft4k']) ? true : false, gettext('Create 4KB wrapper (nop device).'), '', false, '');
+				html_inputbox2('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 40);
+				html_separator2();
+			?>
+		</tbody>
+	</table>
+	<table id="area_data_selection">
+		<colgroup>
+			<col style="width:5%"> <!--// checkbox -->
+			<col style="width:10%"><!--// Device -->
+			<col style="width:10%"><!--// Partition -->
+			<col style="width:15%"><!--// Model -->
+			<col style="width:10%"><!--// Serial -->
+			<col style="width:10%"><!--// Size -->
+			<col style="width:20%"><!--// Controller -->
+			<col style="width:15%"><!--// Description -->
+			<col style="width:5%"> <!--// Icons -->
+		</colgroup>
+		<thead>
+			<?php html_titleline2(gettext('Device List'), 9);?>
+			<tr>
+				<td class="lhelc">
+					<?php if ($isrecordnewornewmodify):?>
+						<input type="checkbox" id="togglebox" name="togglebox" title="<?=gettext('Invert Selection');?>"/>
+					<?php else:?>
+						<input type="checkbox" id="togglebox" name="togglebox" disabled="disabled"/>
+					<?php endif;?>
+				</td>
+				<td class="lhell"><?=gettext('Device');?></td>
+				<td class="lhell"><?=gettext('Partition');?></td>
+				<td class="lhell"><?=gettext('Model');?></td>
+				<td class="lhell"><?=gettext('Serial Number');?></td>
+				<td class="lhell"><?=gettext('Size');?></td>
+				<td class="lhell"><?=gettext('Controller');?></td>
+				<td class="lhell"><?=gettext('Name');?></td>
+				<td class="lhebl">&nbsp;</td>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach ($a_device as $r_device):?>
+				<?php
+					$isnotmemberofavdev = (false === array_search_ex($r_device['devicespecialfile'], $sphere_array, 'device'));
+					$ismemberofthisvdev = (isset($sphere_record['device']) && is_array($sphere_record['device']) && in_array($r_device['devicespecialfile'], $sphere_record['device']));
+				?>
+				<?php if ($isrecordnewornewmodify):?>
+					<?php if ($isnotmemberofavdev || $ismemberofthisvdev):?>
+						<tr>
+							<td class="lcelc">
+								<?php if ($ismemberofthisvdev):?>
+									<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>" checked="checked"/>
+								<?php else:?>
+									<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>"/>
+								<?php endif;?>	
+							</td>
+							<td class="lcell"><?=htmlspecialchars($r_device['name']);?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars($r_device['partition']);?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars($r_device['model']);?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars($r_device['serial']);?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars($r_device['size']);?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars($r_device['controller']);?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars($r_device['desc']);?>&nbsp;</td>
+							<td class="lcebcd">
+								<?php if ($ismemberofthisvdev):?>
+									<img src="<?=$img_path['unl'];?>" title="<?=gettext($gt_record_opn);?>" alt="<?=gettext($gt_record_opn);?>"/>
+								<?php else:?>
+									&nbsp;
+								<?php endif;?>
+							</td>
+						</tr>
+					<?php endif;?>
+				<?php endif;?>
+				<?php if ($isrecordmodify):?>
+					<?php if ($ismemberofthisvdev):?>
+						<tr>
+							<td class="lcelcd">
+								<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>" checked="checked" disabled="disabled"/>
+							</td>
+							<td class="lcelld"><?=htmlspecialchars($r_device['name']);?>&nbsp;</td>
+							<td class="lcelld"><?=htmlspecialchars($r_device['partition']);?>&nbsp;</td>
+							<td class="lcelld"><?=htmlspecialchars($r_device['model']);?>&nbsp;</td>
+							<td class="lcelld"><?=htmlspecialchars($r_device['serial']);?>&nbsp;</td>
+							<td class="lcelld"><?=htmlspecialchars($r_device['size']);?>&nbsp;</td>
+							<td class="lcelld"><?=htmlspecialchars($r_device['controller']);?>&nbsp;</td>
+							<td class="lcelld"><?=htmlspecialchars($r_device['desc']);?>&nbsp;</td>
+							<td class="lcebcd">
+								<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gettext($gt_record_loc);?>"/>
+							</td>
+						</tr>
+					<?php endif;?>
+				<?php endif;?>
+			<?php endforeach;?>
+		</tbody>
+	</table>
+	<div id="submit">
+		<?php if ($isrecordmodify):?>
+			<input name="Submit" type="submit" class="formbtn" value="<?=gettext('Save');?>"/>
+		<?php endif;?>
+		<input name="Cancel" type="submit" class="formbtn" value="<?=gettext('Cancel');?>"/>
+		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>"/>
+	</div>
+	<div id="remarks">
+		<?php
+			html_remark2('note', gettext('Note'), sprintf(gettext("Make sure to select the correct number of devices:<div id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"), ''));
+		?>
+	</div>
+	<?php include("formend.inc");?>
+</form></td></tr></tbody></table>
 <?php include("fend.inc");?>
