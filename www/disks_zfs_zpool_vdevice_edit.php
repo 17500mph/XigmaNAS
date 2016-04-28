@@ -350,15 +350,15 @@ function controlactionbuttons(ego, triggerbyname) {
 					if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));
 				?>
 				<div id="submit" style="margin-bottom:10px">
-					<button name="Action" id="disk_stripe" type="submit" class="formbtn" value="stripe"     onclick="return confirm('<?=gettext('Do you want to create a striped virtual device from selected disks?') ;?>')"><?=gettext('Stripe')      ;?></button>
-					<button name="Action" id="disk_mirror" type="submit" class="formbtn" value="mirror"     onclick="return confirm('<?=gettext('Do you want to create a mirrored virtual device from selected disks?');?>')"><?=gettext('Mirror')      ;?></button>
+					<button name="Action" id="disk_stripe" type="submit" class="formbtn" value="stripe"     onclick="return confirm('<?=gettext('Do you want to create a striped virtual device from selected disks?') ;?>')"><?=gettext('STRIPE')      ;?></button>
+					<button name="Action" id="disk_mirror" type="submit" class="formbtn" value="mirror"     onclick="return confirm('<?=gettext('Do you want to create a mirrored virtual device from selected disks?');?>')"><?=gettext('MIRROR')      ;?></button>
 					<button name="Action" id="disk_raidz1" type="submit" class="formbtn" value="raidz1"     onclick="return confirm('<?=gettext('Do you want to create a RAID-Z1 from selected disks?')                ;?>')"><?=gettext('RAID-Z1')     ;?></button>
 					<button name="Action" id="disk_raidz2" type="submit" class="formbtn" value="raidz2"     onclick="return confirm('<?=gettext('Do you want to create a RAID-Z2 from selected disks?')                ;?>')"><?=gettext('RAID-Z2')     ;?></button>
 					<button name="Action" id="disk_raidz3" type="submit" class="formbtn" value="raidz3"     onclick="return confirm('<?=gettext('Do you want to create a RAID-Z3 from selected disks?')                ;?>')"><?=gettext('RAID-Z3')     ;?></button>
-					<button name="Action" id="disk_spare"  type="submit" class="formbtn" value="spare"      onclick="return confirm('<?=gettext('Do you want to create a hot spare device from selected disk?')        ;?>')"><?=gettext('Hot Spare')   ;?></button>
-					<button name="Action" id="disk_cache"  type="submit" class="formbtn" value="cache"      onclick="return confirm('<?=gettext('Do you want to create a cache device from selected disks?')           ;?>')"><?=gettext('Cache')       ;?></button>
-					<button name="Action" id="disk_log"    type="submit" class="formbtn" value="log"        onclick="return confirm('<?=gettext('Do you want to create a log device from selected disk?')              ;?>')"><?=gettext('Log')         ;?></button>
-					<button name="Action" id="disk_logmir" type="submit" class="formbtn" value="log-mirror" onclick="return confirm('<?=gettext('Do you want to create a mirrored log device from selected disks?')    ;?>')"><?=gettext('Log (Mirror)');?></button>
+					<button name="Action" id="disk_spare"  type="submit" class="formbtn" value="spare"      onclick="return confirm('<?=gettext('Do you want to create a hot spare device from selected disk?')        ;?>')"><?=gettext('HOT SPARE')   ;?></button>
+					<button name="Action" id="disk_cache"  type="submit" class="formbtn" value="cache"      onclick="return confirm('<?=gettext('Do you want to create a cache device from selected disks?')           ;?>')"><?=gettext('CACHE')       ;?></button>
+					<button name="Action" id="disk_log"    type="submit" class="formbtn" value="log"        onclick="return confirm('<?=gettext('Do you want to create a log device from selected disk?')              ;?>')"><?=gettext('LOG')         ;?></button>
+					<button name="Action" id="disk_logmir" type="submit" class="formbtn" value="log-mirror" onclick="return confirm('<?=gettext('Do you want to create a mirrored log device from selected disks?')    ;?>')"><?=gettext('LOG (Mirror)');?></button>
 				</div>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<thead>
