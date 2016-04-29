@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-04-28 02:12+0000\n"
+"POT-Creation-Date: 2016-04-29 05:06+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -477,9 +477,6 @@ msgstr ""
 msgid "Advanced Configuration"
 msgstr ""
 
-msgid "Advanced Format"
-msgstr ""
-
 msgid "Advanced Options"
 msgstr ""
 
@@ -487,6 +484,9 @@ msgid "Advanced Settings"
 msgstr ""
 
 msgid "Advanced Setup"
+msgstr ""
+
+msgid "Advanced format"
 msgstr ""
 
 msgid "Advanced settings"
@@ -1011,9 +1011,6 @@ msgstr ""
 msgid "Calibration Battery"
 msgstr ""
 
-msgid "Can't format the OS origin disk!"
-msgstr ""
-
 msgid "Can't get UFS ID."
 msgstr ""
 
@@ -1141,6 +1138,10 @@ msgstr ""
 
 #, php-format
 msgid "Command for LINK_UP event (e.g. %s)."
+msgstr ""
+
+#, php-format
+msgid "Command output"
 msgstr ""
 
 msgid "Command output:"
@@ -1332,7 +1333,7 @@ msgstr ""
 msgid "Create PV Guest"
 msgstr ""
 
-msgid "Create ZFS on GPT partition"
+msgid "Create ZFS on GPT partition."
 msgstr ""
 
 msgid "Create and initialize RAID."
@@ -1859,6 +1860,9 @@ msgstr ""
 msgid "Disk"
 msgstr ""
 
+msgid "Disk Selection"
+msgstr ""
+
 msgid "Disk space usage"
 msgstr ""
 
@@ -2093,7 +2097,7 @@ msgstr ""
 msgid "Domain name, e.g. example.com."
 msgstr ""
 
-msgid "Don't erase the MBR (useful for some RAID controller cards)"
+msgid "Don't erase the Master Boot Record. (useful for some RAID controller cards)"
 msgstr ""
 
 msgid "Donate"
@@ -2291,7 +2295,7 @@ msgstr ""
 msgid "Enable ACL inheritance"
 msgstr ""
 
-msgid "Enable Advanced Format (4KB sector)"
+msgid "Enable Advanced Format. (4KB sector)"
 msgstr ""
 
 msgid "Enable Asynchronous I/O (AIO)"
@@ -2715,6 +2719,9 @@ msgstr ""
 msgid "File Path"
 msgstr ""
 
+msgid "File System"
+msgstr ""
+
 msgid "File Transfer Protocol"
 msgstr ""
 
@@ -2802,6 +2809,9 @@ msgid "Forces use of vdevs, even if they appear in use or specify different size
 msgstr ""
 
 msgid "Format"
+msgstr ""
+
+msgid "Format disk"
 msgstr ""
 
 msgid "Format the report for phpBB forum."
@@ -3763,6 +3773,10 @@ msgstr ""
 msgid "Low voltage trimming transfer point"
 msgstr ""
 
+#, php-format
+msgid "Lowering this threshold can adversely affect performance and auto-defragmentation."
+msgstr ""
+
 msgid "Lowest value is higher priority. For master node, use 0 or 1. If preempt is enabled, it is adjusted to 240 on failure."
 msgstr ""
 
@@ -3772,7 +3786,7 @@ msgstr ""
 msgid "MAC address"
 msgstr ""
 
-msgid "MBR Erase"
+msgid "MBR erase"
 msgstr ""
 
 msgid "MBR partition"
@@ -4357,6 +4371,10 @@ msgid "Not found path."
 msgstr ""
 
 msgid "Note"
+msgstr ""
+
+#, php-format
+msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
 msgstr ""
 
 msgid "Note: Ctrl-click (or command-click on the Mac) to select and de-select minutes, hours, days and months."
@@ -5414,9 +5432,6 @@ msgstr ""
 msgid "See attribute E8."
 msgstr ""
 
-msgid "Select"
-msgstr ""
-
 msgid "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol Secure (HTTPS) for the WebGUI."
 msgstr ""
 
@@ -5753,7 +5768,7 @@ msgstr ""
 msgid "Specifies whether it is allowed to login as superuser (root) directly."
 msgstr ""
 
-msgid "Specify the percentage of space held back from normal users. Note that lowering the threshold can adversely affect performance and auto-defragmentation."
+msgid "Specify the percentage of space held back from normal users."
 msgstr ""
 
 msgid "Split request"
@@ -7136,12 +7151,21 @@ msgstr ""
 msgid "UFS"
 msgstr ""
 
+msgid "UFS (GPT and Soft Updates)"
+msgstr ""
+
 #, php-format
 msgid "UFS and ZFS are NATIVE filesystems of %s. Attempting to use other filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in unpredictable results, file corruption and the loss of data!"
 msgstr ""
 
+msgid "UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in unpredictable results, file corruption and loss of data!"
+msgstr ""
+
 #, php-format
 msgid "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, or NTFS can result in unpredictable results, file corruption, and loss of data!"
+msgstr ""
+
+msgid "UFS with Soft Updates"
 msgstr ""
 
 msgid "UID"
@@ -7496,6 +7520,9 @@ msgstr ""
 msgid "Volume"
 msgstr ""
 
+msgid "Volume Label"
+msgstr ""
+
 msgid "Volume Name"
 msgstr ""
 
@@ -7514,7 +7541,7 @@ msgstr ""
 msgid "Volume label"
 msgstr ""
 
-msgid "Volume label of the new file system."
+msgid "Volume label of the new file system. Use a space to separate multiple labels. (if only one specified next will be auto increment)"
 msgstr ""
 
 msgid "Volume mode"
@@ -7646,6 +7673,9 @@ msgstr ""
 msgid "Write only"
 msgstr ""
 
+msgid "Wrong number of count for Volume Label"
+msgstr ""
+
 msgid "Wrong partition type or partition number."
 msgstr ""
 
@@ -7666,6 +7696,9 @@ msgid "You can also install a package via SSH or console using the the pkg add c
 msgstr ""
 
 msgid "You can use the following parameters for substitution:"
+msgstr ""
+
+msgid "You can't format the OS origin disk!"
 msgstr ""
 
 #, php-format
