@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-28 02:12+0000\n"
+"POT-Creation-Date: 2016-04-29 05:06+0000\n"
 "PO-Revision-Date: 2015-12-19 13:07+0000\n"
 "Last-Translator: Daisuke Aoyama <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-28 00:29+0000\n"
+"X-Launchpad-Export-Date: 2016-04-29 03:48+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -578,9 +578,6 @@ msgstr "高度な設定"
 msgid "Advanced Configuration"
 msgstr "高度な設定"
 
-msgid "Advanced Format"
-msgstr "Advanced Format"
-
 msgid "Advanced Options"
 msgstr "高度なオプション"
 
@@ -588,6 +585,9 @@ msgid "Advanced Settings"
 msgstr "高度な設定"
 
 msgid "Advanced Setup"
+msgstr ""
+
+msgid "Advanced format"
 msgstr ""
 
 msgid "Advanced settings"
@@ -1167,9 +1167,6 @@ msgstr "キャッシュ デバイス"
 msgid "Calibration Battery"
 msgstr "バッテリーキャリブレーション"
 
-msgid "Can't format the OS origin disk!"
-msgstr "OS がインストールされているディスクはフォーマットする事が出来ません!"
-
 msgid "Can't get UFS ID."
 msgstr "UFS ID が取得できません。"
 
@@ -1308,6 +1305,10 @@ msgstr "リンクダウンイベント用のコマンド (例: %s)"
 #, php-format
 msgid "Command for LINK_UP event (e.g. %s)."
 msgstr "リンクアップイベント用のコマンド (例: %s)"
+
+#, php-format
+msgid "Command output"
+msgstr ""
 
 msgid "Command output:"
 msgstr "コマンド出力:"
@@ -1596,8 +1597,8 @@ msgstr "HVM ゲスト作成"
 msgid "Create PV Guest"
 msgstr "PV ゲスト作成"
 
-msgid "Create ZFS on GPT partition"
-msgstr "GPTパーティション上にZFSを作成する"
+msgid "Create ZFS on GPT partition."
+msgstr ""
 
 msgid "Create and initialize RAID."
 msgstr "RAIDの作成と初期化"
@@ -2145,6 +2146,9 @@ msgstr "探索 認証方法"
 msgid "Disk"
 msgstr "ディスク"
 
+msgid "Disk Selection"
+msgstr ""
+
 msgid "Disk space usage"
 msgstr "ディスク使用率"
 
@@ -2394,8 +2398,9 @@ msgstr "古い形式のドメイン名 例.EXAMPLE"
 msgid "Domain name, e.g. example.com."
 msgstr "ドメイン名 (例: example.com)"
 
-msgid "Don't erase the MBR (useful for some RAID controller cards)"
-msgstr "MBR を消去しない (いくつかの RAID コントローラカードで有用です)"
+msgid ""
+"Don't erase the Master Boot Record. (useful for some RAID controller cards)"
+msgstr ""
 
 msgid "Donate"
 msgstr "寄附"
@@ -2593,8 +2598,8 @@ msgstr "有効"
 msgid "Enable ACL inheritance"
 msgstr "ACL継承を有効化"
 
-msgid "Enable Advanced Format (4KB sector)"
-msgstr "Advanced Format を有効にする (4KB セクタ)"
+msgid "Enable Advanced Format. (4KB sector)"
+msgstr ""
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "非同期I/O (AIO)を有効にします。"
@@ -3057,6 +3062,9 @@ msgstr "ファイルマネージャ"
 msgid "File Path"
 msgstr "ファイルパス"
 
+msgid "File System"
+msgstr ""
+
 msgid "File Transfer Protocol"
 msgstr "ファイル転送プロトコル"
 
@@ -3147,6 +3155,9 @@ msgstr "仮想デバイスが使用中でも異なるサイズを指定しても
 
 msgid "Format"
 msgstr "フォーマット"
+
+msgid "Format disk"
+msgstr ""
 
 msgid "Format the report for phpBB forum."
 msgstr "phpBB フォーラムのフォーマットでレポートを生成します。"
@@ -4228,6 +4239,12 @@ msgstr "切替電圧下限値"
 msgid "Low voltage trimming transfer point"
 msgstr "電圧下降補正の戻り値"
 
+#, php-format
+msgid ""
+"Lowering this threshold can adversely affect performance and auto-"
+"defragmentation."
+msgstr ""
+
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4241,8 +4258,8 @@ msgstr "MAC アドレス"
 msgid "MAC address"
 msgstr "MAC アドレス"
 
-msgid "MBR Erase"
-msgstr "MBR 消去"
+msgid "MBR erase"
+msgstr ""
 
 msgid "MBR partition"
 msgstr "MBR パーティション"
@@ -4866,6 +4883,10 @@ msgstr "パスが見つかりません。"
 
 msgid "Note"
 msgstr "注意"
+
+#, php-format
+msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
+msgstr ""
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -5975,9 +5996,6 @@ msgstr "セキュリティー"
 msgid "See attribute E8."
 msgstr "E8属性を参照してください。"
 
-msgid "Select"
-msgstr "選択"
-
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
 "Secure (HTTPS) for the WebGUI."
@@ -6357,12 +6375,8 @@ msgid ""
 "Specifies whether it is allowed to login as superuser (root) directly."
 msgstr "直接スーパユーザ (root) がログイン出来るかを選択します。"
 
-msgid ""
-"Specify the percentage of space held back from normal users. Note that "
-"lowering the threshold can adversely affect performance and auto-"
-"defragmentation."
+msgid "Specify the percentage of space held back from normal users."
 msgstr ""
-"通常のユーザが利用できない領域をパーセントで指定して下さい。しきい値を下げた場合、性能とフラグメント解消に悪影響が出る場合がある事に注意して下さい。"
 
 msgid "Split request"
 msgstr "分割リクエスト"
@@ -8113,6 +8127,9 @@ msgstr "UCD-SNMP-MIB"
 msgid "UFS"
 msgstr "UFS"
 
+msgid "UFS (GPT and Soft Updates)"
+msgstr ""
+
 #, php-format
 msgid ""
 "UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
@@ -8121,6 +8138,12 @@ msgid ""
 msgstr ""
 "UFS と ZFS は %s のネイティブなファイルフォーマットです。EXT2, EXT3, EXT4, FAT, FAT32 又は NTFS "
 "等の他ファイルフォーマットを使う場合、予期せぬ結果、ファイルの破損及びデータの紛失が起こる恐れがあります！"
+
+msgid ""
+"UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
+"filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
+"unpredictable results, file corruption and loss of data!"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -8131,6 +8154,9 @@ msgid ""
 msgstr ""
 "UFS とその派生は FreeBSD  (%s のベース OS) のネイティブなファイルフォーマットです。FAT、FAT32、EXT2、EXT3 又は "
 "NTFS 等、他のファイルフォーマットを使う場合、予期せぬ結果、ファイルの破損及びデータの紛失が起こる恐れがあります!"
+
+msgid "UFS with Soft Updates"
+msgstr ""
 
 msgid "UID"
 msgstr "UID"
@@ -8504,6 +8530,9 @@ msgstr "VirtualBox"
 msgid "Volume"
 msgstr "ボリューム"
 
+msgid "Volume Label"
+msgstr ""
+
 msgid "Volume Name"
 msgstr "ボリューム名"
 
@@ -8522,8 +8551,10 @@ msgstr ""
 msgid "Volume label"
 msgstr "ボリュームラベル"
 
-msgid "Volume label of the new file system."
-msgstr "新しいファイルシステムのボリュームラベル"
+msgid ""
+"Volume label of the new file system. Use a space to separate multiple "
+"labels. (if only one specified next will be auto increment)"
+msgstr ""
 
 msgid "Volume mode"
 msgstr "ボリュームモード"
@@ -8672,6 +8703,9 @@ msgstr "書き込みキャッシュ"
 msgid "Write only"
 msgstr "書込みのみ"
 
+msgid "Wrong number of count for Volume Label"
+msgstr ""
+
 msgid "Wrong partition type or partition number."
 msgstr "パーティションタイプまたはパーティション番号が間違っています。"
 
@@ -8697,6 +8731,9 @@ msgstr ""
 
 msgid "You can use the following parameters for substitution:"
 msgstr "以下のパラメータを埋め込みできます:"
+
+msgid "You can't format the OS origin disk!"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -8953,11 +8990,33 @@ msgstr "アンマウント"
 msgid "version:"
 msgstr "バージョン:"
 
-#~ msgid "Cache"
-#~ msgstr "キャッシュ"
+#~ msgid "Advanced Format"
+#~ msgstr "Advanced Format"
 
-#~ msgid "Mirror"
-#~ msgstr "ミラー"
+#~ msgid "Can't format the OS origin disk!"
+#~ msgstr "OS がインストールされているディスクはフォーマットする事が出来ません!"
 
-#~ msgid "Stripe"
-#~ msgstr "ストライプ"
+#~ msgid "Don't erase the MBR (useful for some RAID controller cards)"
+#~ msgstr "MBR を消去しない (いくつかの RAID コントローラカードで有用です)"
+
+#~ msgid "Enable Advanced Format (4KB sector)"
+#~ msgstr "Advanced Format を有効にする (4KB セクタ)"
+
+#~ msgid ""
+#~ "Specify the percentage of space held back from normal users. Note that "
+#~ "lowering the threshold can adversely affect performance and auto-"
+#~ "defragmentation."
+#~ msgstr ""
+#~ "通常のユーザが利用できない領域をパーセントで指定して下さい。しきい値を下げた場合、性能とフラグメント解消に悪影響が出る場合がある事に注意して下さい。"
+
+#~ msgid "Volume label of the new file system."
+#~ msgstr "新しいファイルシステムのボリュームラベル"
+
+#~ msgid "Create ZFS on GPT partition"
+#~ msgstr "GPTパーティション上にZFSを作成する"
+
+#~ msgid "MBR Erase"
+#~ msgstr "MBR 消去"
+
+#~ msgid "Select"
+#~ msgstr "選択"

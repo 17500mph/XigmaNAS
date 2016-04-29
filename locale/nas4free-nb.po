@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-28 02:12+0000\n"
+"POT-Creation-Date: 2016-04-29 05:06+0000\n"
 "PO-Revision-Date: 2016-01-15 13:01+0000\n"
 "Last-Translator: Åka Sikrom <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-28 00:29+0000\n"
+"X-Launchpad-Export-Date: 2016-04-29 03:49+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: NORWAY\n"
 "Language: \n"
@@ -588,9 +588,6 @@ msgstr "Avansert"
 msgid "Advanced Configuration"
 msgstr "Avansert konfigurasjon"
 
-msgid "Advanced Format"
-msgstr "Avansert Format"
-
 msgid "Advanced Options"
 msgstr "Avanserte innstillinger"
 
@@ -598,6 +595,9 @@ msgid "Advanced Settings"
 msgstr ""
 
 msgid "Advanced Setup"
+msgstr ""
+
+msgid "Advanced format"
 msgstr ""
 
 msgid "Advanced settings"
@@ -1184,9 +1184,6 @@ msgstr "Mellomlager medium"
 msgid "Calibration Battery"
 msgstr ""
 
-msgid "Can't format the OS origin disk!"
-msgstr "Kan ikke formatere OS disken!"
-
 msgid "Can't get UFS ID."
 msgstr ""
 
@@ -1327,6 +1324,10 @@ msgstr ""
 
 #, php-format
 msgid "Command for LINK_UP event (e.g. %s)."
+msgstr ""
+
+#, php-format
+msgid "Command output"
 msgstr ""
 
 msgid "Command output:"
@@ -1603,7 +1604,7 @@ msgstr ""
 msgid "Create PV Guest"
 msgstr ""
 
-msgid "Create ZFS on GPT partition"
+msgid "Create ZFS on GPT partition."
 msgstr ""
 
 msgid "Create and initialize RAID."
@@ -2155,6 +2156,9 @@ msgstr "Oppdag Auth metode"
 msgid "Disk"
 msgstr "Disk"
 
+msgid "Disk Selection"
+msgstr ""
+
 msgid "Disk space usage"
 msgstr "Bruk av diskplass"
 
@@ -2410,8 +2414,9 @@ msgstr "Domenenavn i gammelt format; f.eks. EKSEMPEL."
 msgid "Domain name, e.g. example.com."
 msgstr "Domenenavn; f.eks. eksempel.no"
 
-msgid "Don't erase the MBR (useful for some RAID controller cards)"
-msgstr "Ikke slett MBR (nyttig for noen RAID kontroller kort)"
+msgid ""
+"Don't erase the Master Boot Record. (useful for some RAID controller cards)"
+msgstr ""
 
 msgid "Donate"
 msgstr "Doner"
@@ -2609,8 +2614,8 @@ msgstr "Aktiver"
 msgid "Enable ACL inheritance"
 msgstr ""
 
-msgid "Enable Advanced Format (4KB sector)"
-msgstr "Aktiver avansert formatering (4KB sector)"
+msgid "Enable Advanced Format. (4KB sector)"
+msgstr ""
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Aktiver Asynkron I/O (AIO)"
@@ -3087,6 +3092,9 @@ msgstr "Filhåndterer"
 msgid "File Path"
 msgstr ""
 
+msgid "File System"
+msgstr ""
+
 msgid "File Transfer Protocol"
 msgstr "File Transfer Protocol"
 
@@ -3177,6 +3185,9 @@ msgstr ""
 
 msgid "Format"
 msgstr "Format"
+
+msgid "Format disk"
+msgstr ""
 
 msgid "Format the report for phpBB forum."
 msgstr "Formater rapporten for phpBB forum."
@@ -4249,6 +4260,12 @@ msgstr ""
 msgid "Low voltage trimming transfer point"
 msgstr ""
 
+#, php-format
+msgid ""
+"Lowering this threshold can adversely affect performance and auto-"
+"defragmentation."
+msgstr ""
+
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4260,7 +4277,7 @@ msgstr ""
 msgid "MAC address"
 msgstr "MAC adresse"
 
-msgid "MBR Erase"
+msgid "MBR erase"
 msgstr ""
 
 msgid "MBR partition"
@@ -4892,6 +4909,10 @@ msgstr ""
 
 msgid "Note"
 msgstr "Notat"
+
+#, php-format
+msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
+msgstr ""
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -6009,9 +6030,6 @@ msgstr "Sikkerhet"
 msgid "See attribute E8."
 msgstr ""
 
-msgid "Select"
-msgstr ""
-
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
 "Secure (HTTPS) for the WebGUI."
@@ -6386,14 +6404,8 @@ msgstr ""
 "Spesifiserer hvorvidt det er tillatt å logge inn som superbruker (root) "
 "direkte."
 
-msgid ""
-"Specify the percentage of space held back from normal users. Note that "
-"lowering the threshold can adversely affect performance and auto-"
-"defragmentation."
+msgid "Specify the percentage of space held back from normal users."
 msgstr ""
-"Spesifiser prosenten av plass hold unne fra normale brukere. Legg merke til "
-"at ved å senke denne kan man negativt påvirke ytelsen og auto-"
-"defragmenteringen."
 
 msgid "Split request"
 msgstr ""
@@ -8076,11 +8088,20 @@ msgstr ""
 msgid "UFS"
 msgstr ""
 
+msgid "UFS (GPT and Soft Updates)"
+msgstr ""
+
 #, php-format
 msgid ""
 "UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
 "filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
 "unpredictable results, file corruption and the loss of data!"
+msgstr ""
+
+msgid ""
+"UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
+"filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
+"unpredictable results, file corruption and loss of data!"
 msgstr ""
 
 #, php-format
@@ -8089,6 +8110,9 @@ msgid ""
 "of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
 "or NTFS can result in unpredictable results, file corruption, and loss of "
 "data!"
+msgstr ""
+
+msgid "UFS with Soft Updates"
 msgstr ""
 
 msgid "UID"
@@ -8461,6 +8485,9 @@ msgstr ""
 msgid "Volume"
 msgstr ""
 
+msgid "Volume Label"
+msgstr ""
+
 msgid "Volume Name"
 msgstr "Volum navn"
 
@@ -8479,8 +8506,10 @@ msgstr ""
 msgid "Volume label"
 msgstr "Volumnavn"
 
-msgid "Volume label of the new file system."
-msgstr "Volumnavnet til det nye filsystemet."
+msgid ""
+"Volume label of the new file system. Use a space to separate multiple "
+"labels. (if only one specified next will be auto increment)"
+msgstr ""
 
 msgid "Volume mode"
 msgstr ""
@@ -8629,6 +8658,9 @@ msgstr ""
 msgid "Write only"
 msgstr "Kun skriving"
 
+msgid "Wrong number of count for Volume Label"
+msgstr ""
+
 msgid "Wrong partition type or partition number."
 msgstr ""
 
@@ -8651,6 +8683,9 @@ msgid ""
 msgstr ""
 
 msgid "You can use the following parameters for substitution:"
+msgstr ""
+
+msgid "You can't format the OS origin disk!"
 msgstr ""
 
 #, php-format
@@ -8909,11 +8944,26 @@ msgstr "avmontér"
 msgid "version:"
 msgstr ""
 
-#~ msgid "Cache"
-#~ msgstr "Mellomlager"
+#~ msgid "Advanced Format"
+#~ msgstr "Avansert Format"
 
-#~ msgid "Mirror"
-#~ msgstr "Speil"
+#~ msgid "Can't format the OS origin disk!"
+#~ msgstr "Kan ikke formatere OS disken!"
 
-#~ msgid "Stripe"
-#~ msgstr "Stripe"
+#~ msgid "Don't erase the MBR (useful for some RAID controller cards)"
+#~ msgstr "Ikke slett MBR (nyttig for noen RAID kontroller kort)"
+
+#~ msgid "Enable Advanced Format (4KB sector)"
+#~ msgstr "Aktiver avansert formatering (4KB sector)"
+
+#~ msgid ""
+#~ "Specify the percentage of space held back from normal users. Note that "
+#~ "lowering the threshold can adversely affect performance and auto-"
+#~ "defragmentation."
+#~ msgstr ""
+#~ "Spesifiser prosenten av plass hold unne fra normale brukere. Legg merke til "
+#~ "at ved å senke denne kan man negativt påvirke ytelsen og auto-"
+#~ "defragmenteringen."
+
+#~ msgid "Volume label of the new file system."
+#~ msgstr "Volumnavnet til det nye filsystemet."

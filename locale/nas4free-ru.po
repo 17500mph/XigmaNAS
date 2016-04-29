@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-28 02:12+0000\n"
-"PO-Revision-Date: 2016-04-26 15:55+0000\n"
-"Last-Translator: sea1150 <sea1.150@gmail.com>\n"
+"POT-Creation-Date: 2016-04-29 05:06+0000\n"
+"PO-Revision-Date: 2016-04-28 19:36+0000\n"
+"Last-Translator: MikeMac <mikhail.kuvshinov@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-28 00:30+0000\n"
+"X-Launchpad-Export-Date: 2016-04-29 03:49+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -64,7 +64,7 @@ msgstr "%s уже существует в виде %s."
 
 #, php-format
 msgid "%s already exists."
-msgstr ""
+msgstr "%s уже существует."
 
 #, php-format
 msgid "%s is already configured as a filesystem."
@@ -185,7 +185,7 @@ msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "2 или более дисков требуется для создания тома RAID-0."
 
 msgid "2 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "2 или более дисков требуется для создания RAID-1 тома."
 
 msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr "3 или более дисков, необходимых для создания тома RAID-5."
@@ -504,7 +504,7 @@ msgid "Add URL"
 msgstr "Добавить URL"
 
 msgid "Add Virtual Device"
-msgstr ""
+msgstr "Добавить Виртуальное Устройство"
 
 msgid "Add Volume"
 msgstr "Добавить раздел"
@@ -614,9 +614,6 @@ msgstr "Дополнительно"
 msgid "Advanced Configuration"
 msgstr "Дополнительные настройки"
 
-msgid "Advanced Format"
-msgstr "Расширенное форматирование"
-
 msgid "Advanced Options"
 msgstr "Дополнительные параметры"
 
@@ -625,6 +622,9 @@ msgstr "Расширенные настройки"
 
 msgid "Advanced Setup"
 msgstr "Дополнительные настройки"
+
+msgid "Advanced format"
+msgstr ""
 
 msgid "Advanced settings"
 msgstr "Расширенные настройки"
@@ -962,7 +962,7 @@ msgid "Auxiliary parameters"
 msgstr "Дополнительные параметры"
 
 msgid "Avail"
-msgstr ""
+msgstr "Доступно"
 
 msgid "Available"
 msgstr "Доступно"
@@ -1140,7 +1140,7 @@ msgid "By default, only already existing files can be uploaded."
 msgstr "По умолчанию могут быть загружены только уже существующие файлы."
 
 msgid "CACHE"
-msgstr ""
+msgstr "КЭШ"
 
 msgid "CARP"
 msgstr "CARP"
@@ -1241,9 +1241,6 @@ msgstr "Кэш-устройство"
 
 msgid "Calibration Battery"
 msgstr "Калибровка батареи"
-
-msgid "Can't format the OS origin disk!"
-msgstr "Диск с операционной системой не может быть отформатирован!"
 
 msgid "Can't get UFS ID."
 msgstr "Невозможно получить UFS ID"
@@ -1391,6 +1388,10 @@ msgstr "Команда для события LINK_DOWN (например %s)."
 #, php-format
 msgid "Command for LINK_UP event (e.g. %s)."
 msgstr "Команда для события LINK_UP (например %s)."
+
+#, php-format
+msgid "Command output"
+msgstr ""
 
 msgid "Command output:"
 msgstr "Результат выполнения:"
@@ -1736,8 +1737,8 @@ msgstr "Создать гостевую систему HVM"
 msgid "Create PV Guest"
 msgstr "Создать гостевую систему PV"
 
-msgid "Create ZFS on GPT partition"
-msgstr "Создать ZFS на GPT разделах"
+msgid "Create ZFS on GPT partition."
+msgstr ""
 
 msgid "Create and initialize RAID."
 msgstr "Создать и инициализировать RAID"
@@ -1910,7 +1911,7 @@ msgid "Dataset is protected"
 msgstr "Dataset защищен"
 
 msgid "Dataset is unlocked"
-msgstr ""
+msgstr "Датасет разблокирован"
 
 msgid "Datasets"
 msgstr "Dataset'ы"
@@ -2005,13 +2006,13 @@ msgid "Delete Selected Options"
 msgstr "Удалить выбранные опции"
 
 msgid "Delete Selected Pools"
-msgstr ""
+msgstr "Удалить Выбранные Пулы"
 
 msgid "Delete Selected RAID Volumes"
 msgstr "Удалить выбранные RAID тома"
 
 msgid "Delete Selected Virtual Devices"
-msgstr ""
+msgstr "Удалить Выбранные Виртуальные Устройства"
 
 msgid "Delete Selected Volumes"
 msgstr "Удалить выбранные разделы"
@@ -2300,6 +2301,9 @@ msgstr "Способ аутентификации при обнаружении"
 msgid "Disk"
 msgstr "Диск"
 
+msgid "Disk Selection"
+msgstr ""
+
 msgid "Disk space usage"
 msgstr "Использование дискового пространства"
 
@@ -2466,31 +2470,35 @@ msgid "Do you want to create a RAID-5 from selected disks?"
 msgstr "Вы хотите создать RAID-5 из выбранных дисков?"
 
 msgid "Do you want to create a RAID-Z1 from selected disks?"
-msgstr ""
+msgstr "Хотите ли вы создать RAID-Z1 из выбранных дисков?"
 
 msgid "Do you want to create a RAID-Z2 from selected disks?"
-msgstr ""
+msgstr "Хотите ли вы создать RAID-Z2 из выбранных дисков?"
 
 msgid "Do you want to create a RAID-Z3 from selected disks?"
-msgstr ""
+msgstr "Хотите ли вы создать RAID-Z3 из выбранных дисков?"
 
 msgid "Do you want to create a cache device from selected disks?"
-msgstr ""
+msgstr "Хотите ли вы создать кэширующее устройство из выбранных дисков?"
 
 msgid "Do you want to create a hot spare device from selected disk?"
-msgstr ""
+msgstr "Хотите ли вы создать устройство горячей замены из выбранного диска?"
 
 msgid "Do you want to create a log device from selected disk?"
-msgstr ""
+msgstr "Хотите ли вы создать устройство журналирования из выбранного диска?"
 
 msgid "Do you want to create a mirrored log device from selected disks?"
 msgstr ""
+"Хотите ли вы создать зеркальное устройство журналирования из выбранных "
+"дисков?"
 
 msgid "Do you want to create a mirrored virtual device from selected disks?"
 msgstr ""
+"Хотите ли вы создать зеркальное виртуальное устройство из выбранных дисков?"
 
 msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
+"Хотите ли вы создать страйп виртуальное устройство из выбранных дисков?"
 
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Вы действительно хотите удалить выбранные тома RAID?"
@@ -2505,10 +2513,10 @@ msgid "Do you want to delete selected options?"
 msgstr "Вы действительно желаете удалить выбранные опции?"
 
 msgid "Do you want to delete selected pools?"
-msgstr ""
+msgstr "Хотите ли вы удалить выбранные пулы?"
 
 msgid "Do you want to delete selected virtual devices?"
-msgstr ""
+msgstr "Хотите ли вы удалить выбранные виртуальные устройства?"
 
 msgid "Do you want to delete selected volumes?"
 msgstr "Вы действительно желаете удалить выбранные разделы?"
@@ -2566,8 +2574,9 @@ msgstr "Доменное имя в старом формате, например
 msgid "Domain name, e.g. example.com."
 msgstr "Доменное имя, например <i>example.com</i>"
 
-msgid "Don't erase the MBR (useful for some RAID controller cards)"
-msgstr "Не стирать MBR (полезно для некоторых контроллеров RAID)"
+msgid ""
+"Don't erase the Master Boot Record. (useful for some RAID controller cards)"
+msgstr ""
 
 msgid "Donate"
 msgstr "Пожертвования"
@@ -2673,7 +2682,7 @@ msgid "Edit VM"
 msgstr "Редактировать ВМ"
 
 msgid "Edit Virtual Device"
-msgstr ""
+msgstr "Редактировать  Виртуальное Устройство"
 
 msgid "Edit Volume"
 msgstr "Редактирование раздела"
@@ -2766,8 +2775,8 @@ msgstr "Включить"
 msgid "Enable ACL inheritance"
 msgstr "Включить наследование ACL"
 
-msgid "Enable Advanced Format (4KB sector)"
-msgstr "Произвести расширенное форматирование (размер сектора 4кб)"
+msgid "Enable Advanced Format. (4KB sector)"
+msgstr ""
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Включить асинхронный ввод/вывод (AIO)"
@@ -3201,7 +3210,7 @@ msgid "Failed to execute command zfs."
 msgstr "Не удалось выполнить команду ZFS."
 
 msgid "Failed to execute command zpool."
-msgstr ""
+msgstr "Не удалось выполнить команду zpool."
 
 msgid "Failed to execute cron job."
 msgstr "Сбой при выполнении задания Сron'а."
@@ -3267,6 +3276,9 @@ msgstr "Файловый менеджер"
 
 msgid "File Path"
 msgstr "Путь к файлу"
+
+msgid "File System"
+msgstr ""
 
 msgid "File Transfer Protocol"
 msgstr "File Transfer Protocol (FTP)"
@@ -3364,6 +3376,9 @@ msgstr ""
 msgid "Format"
 msgstr "Форматирование"
 
+msgid "Format disk"
+msgstr ""
+
 msgid "Format the report for phpBB forum."
 msgstr "Сформировать отчет для форума phpBB."
 
@@ -3423,7 +3438,7 @@ msgid "GEOM Software RAID"
 msgstr "GEOM Software RAID"
 
 msgid "GEOM VINUM Software RAID"
-msgstr ""
+msgstr "Программный RAID GEOM VINUM"
 
 msgid "GID"
 msgstr "GID"
@@ -3558,7 +3573,7 @@ msgid "HDD standby time"
 msgstr "HDD в режиме ожидания"
 
 msgid "HOT SPARE"
-msgstr ""
+msgstr "ГОРЯЧАЯ ЗАМЕНА"
 
 msgid "HTTP Proxy"
 msgstr "HTTP Proxy"
@@ -4124,6 +4139,8 @@ msgid ""
 "It is recommended to use encryption before you store the backup in a safe "
 "location."
 msgstr ""
+"Рекомендуется использовать шифрование, а затем сохранить бекап в надёжном "
+"месте."
 
 msgid ""
 "It's recommended to change the default username and password for accessing "
@@ -4228,10 +4245,10 @@ msgid "LDAP"
 msgstr "Протокол LDAP"
 
 msgid "LOG"
-msgstr ""
+msgstr "LOG"
 
 msgid "LOG (Mirror)"
-msgstr ""
+msgstr "LOG (зеркальный)"
 
 msgid "LUN"
 msgstr "Логический номер устройства LUN"
@@ -4517,6 +4534,12 @@ msgstr "Нижняя граница напряжения для переключ
 msgid "Low voltage trimming transfer point"
 msgstr "Нижняя граница напряжения для режима понижения (trimming)"
 
+#, php-format
+msgid ""
+"Lowering this threshold can adversely affect performance and auto-"
+"defragmentation."
+msgstr ""
+
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4531,8 +4554,8 @@ msgstr "MAC-адрес"
 msgid "MAC address"
 msgstr "MAC-адрес"
 
-msgid "MBR Erase"
-msgstr "Удалить MBR"
+msgid "MBR erase"
+msgstr ""
 
 msgid "MBR partition"
 msgstr "Раздел MBR"
@@ -4547,7 +4570,7 @@ msgid "MIB is marked for deletion"
 msgstr "MIB помечен для удаления"
 
 msgid "MIRROR"
-msgstr ""
+msgstr "ЗЕРКАЛО"
 
 msgid "MISSING"
 msgstr "Отсутствует"
@@ -4583,6 +4606,10 @@ msgid ""
 "vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
 "Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
 msgstr ""
+"Выберите корректное число устройств:<div id='enumeration'><ul><li>RAID-Z1 "
+"должен иметь 3, 5 или 9 дисков на vdev</li><li>RAID-Z2 должен иметь 4, 6 или "
+"10 дисков на vdev</li><li>RAID-Z3 должен иметь 5, 7 или 11 дисков на "
+"vdev</li></ul></div>"
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Убедитесь, что S.M.A.R.T. на вашем устройстве включен."
@@ -5083,6 +5110,8 @@ msgid ""
 "No configured virtual devices. Please add new <a href=\"%s\">virtual "
 "device</a> first."
 msgstr ""
+"Не сконфигурированных виртуальных устройств. Пожалуйста, сначала добавьте "
+"новое <a href=\"%s\">virtual device</a>."
 
 msgid "No device selected."
 msgstr "Выбранные устройства отсутствуют."
@@ -5195,6 +5224,10 @@ msgstr "Путь не найден."
 
 msgid "Note"
 msgstr "Примечание"
+
+#, php-format
+msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
+msgstr ""
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -5627,13 +5660,13 @@ msgid "Pool Tools"
 msgstr "Инструменты Pool"
 
 msgid "Pool is marked for removal"
-msgstr ""
+msgstr "Пул отмечен для удаления"
 
 msgid "Pool is protected"
-msgstr ""
+msgstr "Пул защищён"
 
 msgid "Pool is unlocked"
-msgstr ""
+msgstr "Пул разблокирован"
 
 msgid "Pools"
 msgstr "Пулы"
@@ -5820,10 +5853,10 @@ msgid "RAID 5 Information & Status"
 msgstr "Информация и статус RAID 5"
 
 msgid "RAID Name"
-msgstr ""
+msgstr "Имя RAID"
 
 msgid "RAID Type"
-msgstr ""
+msgstr "Тип RAID"
 
 msgid "RAID device can be removed."
 msgstr "RAID-устройства могут быть удалены."
@@ -5859,13 +5892,13 @@ msgid "RAID-5 Maintenance"
 msgstr "Обслуживание RAID-5"
 
 msgid "RAID-Z1"
-msgstr ""
+msgstr "RAID-Z1"
 
 msgid "RAID-Z2"
-msgstr ""
+msgstr "RAID-Z2"
 
 msgid "RAID-Z3"
-msgstr ""
+msgstr "RAID-Z3"
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -6242,7 +6275,7 @@ msgid "SSID"
 msgstr "SSID"
 
 msgid "STRIPE"
-msgstr ""
+msgstr "СТРАЙП"
 
 msgid "Samba AD"
 msgstr "Samba AD"
@@ -6344,9 +6377,6 @@ msgstr "Безопасность"
 
 msgid "See attribute E8."
 msgstr "Смотри атрибут E8."
-
-msgid "Select"
-msgstr "Выбрать"
 
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
@@ -6754,14 +6784,8 @@ msgid ""
 "Specifies whether it is allowed to login as superuser (root) directly."
 msgstr "Указывает, позволен ли вход от имени суперпользователя (root)"
 
-msgid ""
-"Specify the percentage of space held back from normal users. Note that "
-"lowering the threshold can adversely affect performance and auto-"
-"defragmentation."
+msgid "Specify the percentage of space held back from normal users."
 msgstr ""
-"Задайте процент дискового пространства, недоступного обычным пользователям. "
-"Учтите, что занижение этого предела может негативно отразиться на "
-"производительности и возможностях автоматической дефрагментации."
 
 msgid "Split request"
 msgstr "Разделение запросов (split request)"
@@ -7692,10 +7716,10 @@ msgid ""
 msgstr "Имя RAID может состоять только из символов A-Z, A-Z, 0-9."
 
 msgid "The name of the pool cannot be changed."
-msgstr ""
+msgstr "Имя пула не может быть изменено."
 
 msgid "The name of this virtual device cannot be changed."
-msgstr ""
+msgstr "Имя этого виртуального устройства не может быть изменено."
 
 #, php-format
 msgid "The network '%s' is invalid."
@@ -8742,6 +8766,9 @@ msgstr "UCD-SNMP-MIB"
 msgid "UFS"
 msgstr "UFS"
 
+msgid "UFS (GPT and Soft Updates)"
+msgstr ""
+
 #, php-format
 msgid ""
 "UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
@@ -8751,6 +8778,12 @@ msgstr ""
 "UFS и ZFS являются родными файловыми системами %s. Попытка использовать "
 "другие файловые системы такие как ext2, ext3, EXT4, FAT, FAT32 или NTFS "
 "может привести к непредсказуемым результатам, порче файлов и потере данных!"
+
+msgid ""
+"UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
+"filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
+"unpredictable results, file corruption and loss of data!"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -8763,6 +8796,9 @@ msgstr ""
 "%s). Попытка использования других файловых систем, таких как FAT, FAT32, "
 "EXT2, EXT3 или NTFS может привести к непредсказуемым результатам, "
 "повреждению файлов и потерям данных!"
+
+msgid "UFS with Soft Updates"
+msgstr ""
 
 msgid "UID"
 msgstr "UID"
@@ -9118,16 +9154,16 @@ msgid "Virtual Device"
 msgstr "Виртуальное устройство"
 
 msgid "Virtual Device List"
-msgstr ""
+msgstr "Список Виртуальных Устройств"
 
 msgid "Virtual Device is marked for removal"
-msgstr ""
+msgstr "Виртуальное Устройство отмечено для удаления"
 
 msgid "Virtual Device is protected"
-msgstr ""
+msgstr "Виртуальное Устройство защищено"
 
 msgid "Virtual Device is unlocked"
-msgstr ""
+msgstr "Виртуальное Устройство разблокировано"
 
 msgid "Virtual Devices"
 msgstr "Виртуальные устройства"
@@ -9148,10 +9184,10 @@ msgid "Virtual Machine"
 msgstr "Виртуальная машина"
 
 msgid "Virtual device can be removed."
-msgstr ""
+msgstr "Виртуальное Устройство может быть удалено"
 
 msgid "Virtual device is already in use."
-msgstr ""
+msgstr "Виртуальное Устройство уже используется"
 
 msgid "Virtual devices"
 msgstr "Виртуальные устройства"
@@ -9161,6 +9197,9 @@ msgstr "VirtualBox"
 
 msgid "Volume"
 msgstr "Раздел"
+
+msgid "Volume Label"
+msgstr ""
 
 msgid "Volume Name"
 msgstr "Имя тома"
@@ -9172,16 +9211,18 @@ msgid "Volume is marked for deletion"
 msgstr "Раздел помечен для удаления"
 
 msgid "Volume is protected"
-msgstr ""
+msgstr "Том защищён"
 
 msgid "Volume is unlocked"
-msgstr ""
+msgstr "Том разблокирован"
 
 msgid "Volume label"
 msgstr "Метка тома"
 
-msgid "Volume label of the new file system."
-msgstr "Метка тома для новой файловой системы."
+msgid ""
+"Volume label of the new file system. Use a space to separate multiple "
+"labels. (if only one specified next will be auto increment)"
+msgstr ""
 
 msgid "Volume mode"
 msgstr "Режим раздела"
@@ -9344,6 +9385,9 @@ msgstr "Кэширование записи"
 msgid "Write only"
 msgstr "Только запись"
 
+msgid "Wrong number of count for Volume Label"
+msgstr ""
+
 msgid "Wrong partition type or partition number."
 msgstr "Неверный номер или тип раздела."
 
@@ -9369,6 +9413,9 @@ msgstr ""
 
 msgid "You can use the following parameters for substitution:"
 msgstr "Вы можете использовать следующие параметры для подстановки:"
+
+msgid "You can't format the OS origin disk!"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -9646,11 +9693,35 @@ msgstr "размонтировать"
 msgid "version:"
 msgstr "версия:"
 
-#~ msgid "Cache"
-#~ msgstr "Кэш"
+#~ msgid "Advanced Format"
+#~ msgstr "Расширенное форматирование"
 
-#~ msgid "Mirror"
-#~ msgstr "Зеркалирование данных (Mirror)"
+#~ msgid "Can't format the OS origin disk!"
+#~ msgstr "Диск с операционной системой не может быть отформатирован!"
 
-#~ msgid "Stripe"
-#~ msgstr "Чередование данных (Stripe)"
+#~ msgid "Don't erase the MBR (useful for some RAID controller cards)"
+#~ msgstr "Не стирать MBR (полезно для некоторых контроллеров RAID)"
+
+#~ msgid "Enable Advanced Format (4KB sector)"
+#~ msgstr "Произвести расширенное форматирование (размер сектора 4кб)"
+
+#~ msgid ""
+#~ "Specify the percentage of space held back from normal users. Note that "
+#~ "lowering the threshold can adversely affect performance and auto-"
+#~ "defragmentation."
+#~ msgstr ""
+#~ "Задайте процент дискового пространства, недоступного обычным пользователям. "
+#~ "Учтите, что занижение этого предела может негативно отразиться на "
+#~ "производительности и возможностях автоматической дефрагментации."
+
+#~ msgid "Volume label of the new file system."
+#~ msgstr "Метка тома для новой файловой системы."
+
+#~ msgid "Create ZFS on GPT partition"
+#~ msgstr "Создать ZFS на GPT разделах"
+
+#~ msgid "MBR Erase"
+#~ msgstr "Удалить MBR"
+
+#~ msgid "Select"
+#~ msgstr "Выбрать"

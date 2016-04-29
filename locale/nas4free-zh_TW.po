@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-28 02:12+0000\n"
+"POT-Creation-Date: 2016-04-29 05:06+0000\n"
 "PO-Revision-Date: 2016-03-03 17:10+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-28 00:30+0000\n"
+"X-Launchpad-Export-Date: 2016-04-29 03:49+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -555,9 +555,6 @@ msgstr "進階"
 msgid "Advanced Configuration"
 msgstr "進階設定"
 
-msgid "Advanced Format"
-msgstr "先進格式化（Advanced Format）"
-
 msgid "Advanced Options"
 msgstr "進階選項"
 
@@ -565,6 +562,9 @@ msgid "Advanced Settings"
 msgstr "進階设置"
 
 msgid "Advanced Setup"
+msgstr ""
+
+msgid "Advanced format"
 msgstr ""
 
 msgid "Advanced settings"
@@ -1136,9 +1136,6 @@ msgstr "快取裝置"
 msgid "Calibration Battery"
 msgstr "電池校正"
 
-msgid "Can't format the OS origin disk!"
-msgstr "不能格式化已安裝作業系統的磁碟!"
-
 msgid "Can't get UFS ID."
 msgstr "無法取得 UFS ID。"
 
@@ -1275,6 +1272,10 @@ msgstr "LINK_DOWN 事件的指令（例如 %s）。"
 #, php-format
 msgid "Command for LINK_UP event (e.g. %s)."
 msgstr "LINK_UP 事件的指令（例如 %s）。"
+
+#, php-format
+msgid "Command output"
+msgstr ""
 
 msgid "Command output:"
 msgstr "指令輸出："
@@ -1553,8 +1554,8 @@ msgstr ""
 msgid "Create PV Guest"
 msgstr ""
 
-msgid "Create ZFS on GPT partition"
-msgstr "在GPT分區上創建ZFS"
+msgid "Create ZFS on GPT partition."
+msgstr ""
 
 msgid "Create and initialize RAID."
 msgstr "建立並初始 RAID。"
@@ -2098,6 +2099,9 @@ msgstr "目標搜索認證方法"
 msgid "Disk"
 msgstr "磁碟"
 
+msgid "Disk Selection"
+msgstr ""
+
 msgid "Disk space usage"
 msgstr "磁碟使用狀況"
 
@@ -2345,8 +2349,9 @@ msgstr "舊式網域名稱，例如：DOMAIN"
 msgid "Domain name, e.g. example.com."
 msgstr "網域名稱，例如：domain.com"
 
-msgid "Don't erase the MBR (useful for some RAID controller cards)"
-msgstr "不刪除 MBR (對某些RAID控制卡有用)"
+msgid ""
+"Don't erase the Master Boot Record. (useful for some RAID controller cards)"
+msgstr ""
 
 msgid "Donate"
 msgstr "捐贈"
@@ -2544,8 +2549,8 @@ msgstr "啟動"
 msgid "Enable ACL inheritance"
 msgstr "啟用ACL繼承"
 
-msgid "Enable Advanced Format (4KB sector)"
-msgstr "啟用先進格式化（4KB扇區）"
+msgid "Enable Advanced Format. (4KB sector)"
+msgstr ""
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "啟用異步 I/O（AIO）"
@@ -3004,6 +3009,9 @@ msgstr "檔案管理程式"
 msgid "File Path"
 msgstr "檔案路徑"
 
+msgid "File System"
+msgstr ""
+
 msgid "File Transfer Protocol"
 msgstr "檔案傳輸協議（File Transfer Protocol）"
 
@@ -3094,6 +3102,9 @@ msgstr "強制使用 vdevs，即使它們在使用中或指定容量大小有所
 
 msgid "Format"
 msgstr "格式化"
+
+msgid "Format disk"
+msgstr ""
 
 msgid "Format the report for phpBB forum."
 msgstr "將報告格式化成適合 phpBB 的論壇的形式。"
@@ -4154,6 +4165,12 @@ msgstr "低電壓轉換點"
 msgid "Low voltage trimming transfer point"
 msgstr "低電壓微調換乘點"
 
+#, php-format
+msgid ""
+"Lowering this threshold can adversely affect performance and auto-"
+"defragmentation."
+msgstr ""
+
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4165,7 +4182,7 @@ msgstr "MAC 位址"
 msgid "MAC address"
 msgstr "MAC 位址"
 
-msgid "MBR Erase"
+msgid "MBR erase"
 msgstr ""
 
 msgid "MBR partition"
@@ -4788,6 +4805,10 @@ msgstr "找不到路徑。"
 
 msgid "Note"
 msgstr "提示"
+
+#, php-format
+msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
+msgstr ""
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -5891,9 +5912,6 @@ msgstr "安全選項"
 msgid "See attribute E8."
 msgstr ""
 
-msgid "Select"
-msgstr "選擇"
-
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
 "Secure (HTTPS) for the WebGUI."
@@ -6265,11 +6283,8 @@ msgid ""
 "Specifies whether it is allowed to login as superuser (root) directly."
 msgstr "指定超級用戶 (root)是否可以透過SSH直接登入。"
 
-msgid ""
-"Specify the percentage of space held back from normal users. Note that "
-"lowering the threshold can adversely affect performance and auto-"
-"defragmentation."
-msgstr "從普通用戶的空間預留指定的百分比。注意將配額降低會影響到磁碟效能和自動碎片整理。"
+msgid "Specify the percentage of space held back from normal users."
+msgstr ""
 
 msgid "Split request"
 msgstr "Split request"
@@ -7970,11 +7985,20 @@ msgstr "UCD-SNMP-MIB"
 msgid "UFS"
 msgstr "UFS"
 
+msgid "UFS (GPT and Soft Updates)"
+msgstr ""
+
 #, php-format
 msgid ""
 "UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
 "filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
 "unpredictable results, file corruption and the loss of data!"
+msgstr ""
+
+msgid ""
+"UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
+"filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
+"unpredictable results, file corruption and loss of data!"
 msgstr ""
 
 #, php-format
@@ -7986,6 +8010,9 @@ msgid ""
 msgstr ""
 "UFS 檔案系統格式是 FreeBSD 原生檔案格式 (%s的OS)。 如果使用FAT, FAT32, EXT2, EXT3, 或是 NTFS "
 "可能會導致檔案損毀等不可預期的效果或錯誤！"
+
+msgid "UFS with Soft Updates"
+msgstr ""
 
 msgid "UID"
 msgstr "UID"
@@ -8357,6 +8384,9 @@ msgstr "VirtualBox"
 msgid "Volume"
 msgstr "卷（Volume）"
 
+msgid "Volume Label"
+msgstr ""
+
 msgid "Volume Name"
 msgstr "卷名"
 
@@ -8375,8 +8405,10 @@ msgstr ""
 msgid "Volume label"
 msgstr "磁盤卷標籤（Volume label）"
 
-msgid "Volume label of the new file system."
-msgstr "新檔案系統的磁盤卷標籤"
+msgid ""
+"Volume label of the new file system. Use a space to separate multiple "
+"labels. (if only one specified next will be auto increment)"
+msgstr ""
 
 msgid "Volume mode"
 msgstr ""
@@ -8521,6 +8553,9 @@ msgstr "寫入緩存"
 msgid "Write only"
 msgstr "唯寫"
 
+msgid "Wrong number of count for Volume Label"
+msgstr ""
+
 msgid "Wrong partition type or partition number."
 msgstr "錯誤的分區格式或分區編號。"
 
@@ -8545,6 +8580,9 @@ msgstr ""
 
 msgid "You can use the following parameters for substitution:"
 msgstr "您可以使用以下的參數替代："
+
+msgid "You can't format the OS origin disk!"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -8800,11 +8838,29 @@ msgstr "卸載"
 msgid "version:"
 msgstr "版本："
 
-#~ msgid "Mirror"
-#~ msgstr "鏡像"
+#~ msgid "Volume label of the new file system."
+#~ msgstr "新檔案系統的磁盤卷標籤"
 
-#~ msgid "Stripe"
-#~ msgstr "条带（Stripe）"
+#~ msgid "Enable Advanced Format (4KB sector)"
+#~ msgstr "啟用先進格式化（4KB扇區）"
 
-#~ msgid "Cache"
-#~ msgstr "快取"
+#~ msgid "Advanced Format"
+#~ msgstr "先進格式化（Advanced Format）"
+
+#~ msgid "Don't erase the MBR (useful for some RAID controller cards)"
+#~ msgstr "不刪除 MBR (對某些RAID控制卡有用)"
+
+#~ msgid ""
+#~ "Specify the percentage of space held back from normal users. Note that "
+#~ "lowering the threshold can adversely affect performance and auto-"
+#~ "defragmentation."
+#~ msgstr "從普通用戶的空間預留指定的百分比。注意將配額降低會影響到磁碟效能和自動碎片整理。"
+
+#~ msgid "Can't format the OS origin disk!"
+#~ msgstr "不能格式化已安裝作業系統的磁碟!"
+
+#~ msgid "Create ZFS on GPT partition"
+#~ msgstr "在GPT分區上創建ZFS"
+
+#~ msgid "Select"
+#~ msgstr "選擇"
