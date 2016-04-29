@@ -18,6 +18,9 @@ Changes:
 Fixes:
 - Prevent deletion of mounted gconcat softraid.
 - Fix broken shadow copy.
+- Fix for rsync over ssh (without deamon).
+- Fix dataset did not always get destroyed on webgui if a share is in usage.
+- Fix missing mimes (translation files) for File Manager.
 
 Note:
 - iperf2 has been replaced for iperf3 because of inconsistent results for UDP above 2Gbps.
