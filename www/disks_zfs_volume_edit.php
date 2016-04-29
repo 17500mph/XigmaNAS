@@ -35,11 +35,18 @@ require("auth.inc");
 require("guiconfig.inc");
 require("zfs.inc");
 
-$mode_page = ($_POST) ? PAGE_MODE_POST : (($_GET) ? PAGE_MODE_EDIT : PAGE_MODE_ADD); // detect page mode
+$sphere_scriptname = basename(__FILE__);
+$sphere_header = 'Location: '.$sphere_scriptname;
+$sphere_header_parent = 'Location: disks_zfs_volume.php';
+$sphere_notifier = 'zfsvolume';
+$sphere_array = [];
+$sphere_record = [];
+$prerequisites_ok = true;
 
+$mode_page = ($_POST) ? PAGE_MODE_POST : (($_GET) ? PAGE_MODE_EDIT : PAGE_MODE_ADD); // detect page mode
 if (PAGE_MODE_POST == $mode_page) { // POST is Cancel or not Submit => cleanup
 	if ((isset($_POST['Cancel']) && $_POST['Cancel']) || !(isset($_POST['Submit']) && $_POST['Submit'])) {
-		header("Location: disks_zfs_volume.php");
+		header($sphere_header_parent);
 		exit;
 	}
 }
@@ -49,47 +56,44 @@ function get_volblocksize($pool, $name) {
 	return $rawdata[0];
 }
 
-$pconfig = [];
-$prerequisites_ok = true;
-
 if ((PAGE_MODE_POST == $mode_page) && isset($_POST['uuid']) && is_uuid_v4($_POST['uuid'])) {
-	$pconfig['uuid'] = $_POST['uuid'];
+	$sphere_record['uuid'] = $_POST['uuid'];
 } else {
 	if ((PAGE_MODE_EDIT == $mode_page) && isset($_GET['uuid']) && is_uuid_v4($_GET['uuid'])) {
-		$pconfig['uuid'] = $_GET['uuid'];
+		$sphere_record['uuid'] = $_GET['uuid'];
 	} else {
 		$mode_page = PAGE_MODE_ADD; // Force ADD
-		$pconfig['uuid'] = uuid();
+		$sphere_record['uuid'] = uuid();
 	}
 }
 
 if (!(isset($config['zfs']['datasets']['dataset']) && is_array($config['zfs']['datasets']['dataset']))) {
 	$config['zfs']['datasets']['dataset'] = [];
 }
-array_sort_key($config['zfs']['datasets']['dataset'], "name");
+array_sort_key($config['zfs']['datasets']['dataset'], 'name');
 $a_dataset = &$config['zfs']['datasets']['dataset'];
 
 if (!(isset($config['zfs']['volumes']['volume']) && is_array($config['zfs']['volumes']['volume']))) {
 	$config['zfs']['volumes']['volume'] = [];
 }
-array_sort_key($config['zfs']['volumes']['volume'], "name");
-$a_volume = &$config['zfs']['volumes']['volume'];
+array_sort_key($config['zfs']['volumes']['volume'], 'name');
+$sphere_array = &$config['zfs']['volumes']['volume'];
 
 if (!(isset($config['zfs']['pools']['pool']) && is_array($config['zfs']['pools']['pool']))) {
 	$config['zfs']['pools']['pool'] = [];
 }
-array_sort_key($config['zfs']['pools']['pool'], "name");
+array_sort_key($config['zfs']['pools']['pool'], 'name');
 $a_pool = &$config['zfs']['pools']['pool'];
 
 if (empty($a_pool)) { // Throw error message if no pool exists
-	$errormsg = sprintf(gettext("No configured pools. Please add new <a href='%s'>pools</a> first."), "disks_zfs_zpool.php");
+	$errormsg = sprintf(gettext("No configured pools. Please add new <a href='%s'>pools</a> first."), 'disks_zfs_zpool.php');
 	$prerequisites_ok = false;
 }
 
-$cnid = array_search_ex($pconfig['uuid'], $a_volume, "uuid"); // get index from config for volume by looking up uuid
-$mode_updatenotify = updatenotify_get_mode("zfsvolume", $pconfig['uuid']); // get updatenotify mode for uuid
+$index = array_search_ex($sphere_record['uuid'], $sphere_array, 'uuid'); // get index from config for volume by looking up uuid
+$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']); // get updatenotify mode for uuid
 $mode_record = RECORD_ERROR;
-if (false !== $cnid) { // uuid found
+if (false !== $index) { // uuid found
 	if ((PAGE_MODE_POST == $mode_page || (PAGE_MODE_EDIT == $mode_page))) { // POST or EDIT
 		switch ($mode_updatenotify) {
 			case UPDATENOTIFY_MODE_NEW:
@@ -111,35 +115,50 @@ if (false !== $cnid) { // uuid found
 	}
 }
 if (RECORD_ERROR == $mode_record) { // oops, someone tries to cheat, over and out
-	header("Location: disks_zfs_volume.php");
+	header($sphere_header_parent);
 	exit;
 }
+$isrecordnew = (RECORD_NEW === $mode_record);
+$isrecordnewmodify = (RECORD_NEW_MODIFY == $mode_record);
+$isrecordmodify = (RECORD_MODIFY === $mode_record);
+$isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
 
 if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 	unset($input_errors);
-	$pconfig['name'] = $_POST['name'];
-	$pconfig['pool'] = $_POST['pool'];
-	$pconfig['volsize'] = $_POST['volsize'];
-	$pconfig['volmode'] = $_POST['volmode'];
-	$pconfig['volblocksize'] = $_POST['volblocksize'];
-	$pconfig['compression'] = $_POST['compression'];
-	$pconfig['dedup'] = $_POST['dedup'];
-	$pconfig['sync'] = $_POST['sync'];
-	$pconfig['sparse'] = isset($_POST['sparse']) ? true : false;
-	$pconfig['desc'] = $_POST['desc'];
+	// apply post values that are applicable for all record modes
+	$sphere_record['volsize'] = isset($_POST['volsize']) ? $_POST['volsize'] : '';
+	$sphere_record['volmode'] = isset($_POST['volmode']) ? $_POST['volmode'] : '';
+	$sphere_record['compression'] = isset($_POST['compression']) ? $_POST['compression'] : '';
+	$sphere_record['dedup'] = isset($_POST['dedup']) ? $_POST['dedup'] : '';
+	$sphere_record['sync'] = isset($_POST['sync']) ? $_POST['sync'] : '';
+	$sphere_record['sparse'] = isset($_POST['sparse']);
+	$sphere_record['desc'] = isset($_POST['desc']) ? $_POST['desc'] : '';
+	switch ($mode_record) {
+		case RECORD_NEW:
+		case RECORD_NEW_MODIFY:
+			$sphere_record['name'] = isset($_POST['name']) ? $_POST['name'] : '';
+			$sphere_record['pool'] = isset($_POST['pool']) ? $_POST['pool'] : '';
+			$sphere_record['volblocksize'] = isset($_POST['volblocksize']) ? $_POST['volblocksize'] : '';
+			break;
+		case RECORD_MODIFY:
+			$sphere_record['name'] = $sphere_array[$index]['name'];
+			$sphere_record['pool'] = $sphere_array[$index]['pool'][0];
+			$sphere_record['volblocksize'] = $sphere_array[$index]['volblocksize'];
+			break;
+	}
 
 	// Input validation
-	$reqdfields = explode(" ", "pool name volsize");
-	$reqdfieldsn = array(gettext("Pool"), gettext("Name"), gettext("Size"));
-	$reqdfieldst = explode(" ", "string string string");
+	$reqdfields = ['pool', 'name', 'volsize'];
+	$reqdfieldsn = [gettext('Pool'), gettext('Name'), gettext('Size')];
+	$reqdfieldst = ['string', 'string', 'string'];
 
-	do_input_validation($pconfig, $reqdfields, $reqdfieldsn, $input_errors);
-	do_input_validation_type($pconfig, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
+	do_input_validation($sphere_record, $reqdfields, $reqdfieldsn, $input_errors);
+	do_input_validation_type($sphere_record, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
 	if (empty($input_errors)) {
 		// check for a valid name with the format name[/name], blanks are not supported.
 		$helpinghand = preg_quote('.:-_', '/');
-		if (!(preg_match('/^[a-z\d][a-z\d'.$helpinghand.']*(?:\/[a-z\d][a-z\d'.$helpinghand.']*)*$/i', $pconfig['name']))) {
+		if (!(preg_match('/^[a-z\d][a-z\d'.$helpinghand.']*(?:\/[a-z\d][a-z\d'.$helpinghand.']*)*$/i', $sphere_record['name']))) {
 			$input_errors[] = sprintf(gettext("The attribute '%s' contains invalid characters."), gettext('Name'));
 		}
 	}
@@ -151,14 +170,14 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 	// 
 	// 1.
 	if (empty($input_errors)) {
-		if ((RECORD_MODIFY == $mode_record) && (0 !== strcmp($a_volume[$cnid]['pool'][0], $pconfig['pool']))) {
-			$input_errors[] = 'pool cannot be changed.';
+		if ($isrecordmodify && (0 !== strcmp($sphere_array[$index]['pool'][0], $sphere_record['pool']))) {
+			$input_errors[] = gettext('Pool cannot be changed.');
 		}
 	}
 	// 2., 3., 4.
 	if (empty($input_errors)) {
-		$poolslashname = escapeshellarg($pconfig['pool']."/".$pconfig['name']); // create quoted full dataset name
-		if ((RECORD_NEW == $mode_record) || ((RECORD_NEW != $mode_record) && (0 !== strcmp(escapeshellarg($a_volume[$cnid]['pool'][0]."/".$a_volume[$cnid]['name']), $poolslashname)))) {
+		$poolslashname = escapeshellarg($sphere_record['pool']."/".$sphere_record['name']); // create quoted full dataset name
+		if ($isrecordnew || (!$isrecordnew && (0 !== strcmp(escapeshellarg($sphere_array[$index]['pool'][0]."/".$sphere_array[$index]['name']), $poolslashname)))) {
 			// throw error when pool/name already exists in live
 			if (empty($input_errors)) {
 				mwexec2(sprintf("zfs get -H -o value type %s 2>&1", $poolslashname), $retdat, $retval);
@@ -169,14 +188,14 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 						$input_errors[] = sprintf(gettext('%s already exists as a %s.'), $poolslashname, $retdat[0]);
 						break;
  					case 2: // Invalid command line options were specified.
-						$input_errors[] = gettext("Failed to execute command zfs.");
+						$input_errors[] = gettext('Failed to execute command zfs.');
 						break;
 				}
 			}
 			// throw error when pool/name exists in configuration file, zfs->volumes->volume[]
 			if (empty($input_errors)) {
-				foreach ($a_volume as $r_volume) {
-					if (0 === strcmp(escapeshellarg($r_volume['pool'][0]."/".$r_volume['name']), $poolslashname)) {
+				foreach ($sphere_array as $r_volume) {
+					if (0 === strcmp(escapeshellarg($r_volume['pool'][0].'/'.$r_volume['name']), $poolslashname)) {
 						$input_errors[] = sprintf(gettext('%s is already configured as a volume.'), $poolslashname);
 						break;
 					}
@@ -185,7 +204,7 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 			// throw error when pool/name exists in configuration file, zfs->datasets->dataset[] 
 			if (empty($input_errors)) {
 				foreach ($a_dataset as $r_dataset) {
-					if (0 === strcmp(escapeshellarg($r_dataset['pool'][0]."/".$r_dataset['name']), $poolslashname)) {
+					if (0 === strcmp(escapeshellarg($r_dataset['pool'][0].'/'.$r_dataset['name']), $poolslashname)) {
 						$input_errors[] = sprintf(gettext('%s is already configured as a filesystem.'), $poolslashname);
 						break;
 					}
@@ -196,58 +215,58 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 	
 	if ($prerequisites_ok && empty($input_errors)) {
 		// convert listtags to arrays
-		$helpinghand = $pconfig['pool'];
-		$pconfig['pool'] = [$helpinghand];
-		if (RECORD_NEW == $mode_record) {
-			$a_volume[] = $pconfig;
-			updatenotify_set("zfsvolume", UPDATENOTIFY_MODE_NEW, $pconfig['uuid']);
+		$helpinghand = $sphere_record['pool'];
+		$sphere_record['pool'] = [$helpinghand];
+		if ($isrecordnew) {
+			$sphere_array[] = $sphere_record;
+			updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_NEW, $sphere_record['uuid']);
 		} else {
-			$a_volume[$cnid] = $pconfig;
+			$sphere_array[$index] = $sphere_record;
 			if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
-				updatenotify_set("zfsvolume", UPDATENOTIFY_MODE_MODIFIED, $pconfig['uuid']);
+				updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_record['uuid']);
 			}
 		}
 		write_config();
-		header("Location: disks_zfs_volume.php"); // cleanup
+		header($sphere_header_parent); // cleanup
 		exit;
 	}
 } else {
 	switch ($mode_record) {
 		case RECORD_NEW:
-			$pconfig['name'] = "";
-			$pconfig['pool'] = "";
-			$pconfig['volsize'] = "";
-			$pconfig['volmode'] = "default";
-			$pconfig['volblocksize'] = "";
-			$pconfig['compression'] = "off";
-			$pconfig['dedup'] = "off";
-			$pconfig['sync'] = "standard";
-			$pconfig['sparse'] = false;
-			$pconfig['desc'] = "";
+			$sphere_record['name'] = '';
+			$sphere_record['pool'] = '';
+			$sphere_record['volsize'] = '';
+			$sphere_record['volmode'] = 'default';
+			$sphere_record['volblocksize'] = '';
+			$sphere_record['compression'] = 'off';
+			$sphere_record['dedup'] = 'off';
+			$sphere_record['sync'] = 'standard';
+			$sphere_record['sparse'] = false;
+			$sphere_record['desc'] = '';
 			break;
 		case RECORD_NEW_MODIFY: // get from config only
-			$pconfig['name'] = $a_volume[$cnid]['name'];
-			$pconfig['pool'] = $a_volume[$cnid]['pool'][0];
-			$pconfig['volsize'] = $a_volume[$cnid]['volsize'];
-			$pconfig['volmode'] = $a_volume[$cnid]['volmode'];
-			$pconfig['volblocksize'] = $a_volume[$cnid]['volblocksize'];
-			$pconfig['compression'] = $a_volume[$cnid]['compression'];
-			$pconfig['dedup'] = $a_volume[$cnid]['dedup'];
-			$pconfig['sync'] = $a_volume[$cnid]['sync'];
-			$pconfig['sparse'] = isset($a_volume[$cnid]['sparse']);
-			$pconfig['desc'] = $a_volume[$cnid]['desc'];
+			$sphere_record['name'] = $sphere_array[$index]['name'];
+			$sphere_record['pool'] = $sphere_array[$index]['pool'][0];
+			$sphere_record['volsize'] = $sphere_array[$index]['volsize'];
+			$sphere_record['volmode'] = $sphere_array[$index]['volmode'];
+			$sphere_record['volblocksize'] = $sphere_array[$index]['volblocksize'];
+			$sphere_record['compression'] = $sphere_array[$index]['compression'];
+			$sphere_record['dedup'] = $sphere_array[$index]['dedup'];
+			$sphere_record['sync'] = $sphere_array[$index]['sync'];
+			$sphere_record['sparse'] = isset($sphere_array[$index]['sparse']);
+			$sphere_record['desc'] = $sphere_array[$index]['desc'];
 			break;
 		case RECORD_MODIFY: // get from config or system
-			$pconfig['name'] = $a_volume[$cnid]['name'];
-			$pconfig['pool'] = $a_volume[$cnid]['pool'][0];
-			$pconfig['volsize'] = $a_volume[$cnid]['volsize'];
-			$pconfig['volmode'] = $a_volume[$cnid]['volmode'];
-			$pconfig['volblocksize'] = get_volblocksize($pconfig['pool'], $pconfig['name']);
-			$pconfig['compression'] = $a_volume[$cnid]['compression'];
-			$pconfig['dedup'] = $a_volume[$cnid]['dedup'];
-			$pconfig['sync'] = $a_volume[$cnid]['sync'];
-			$pconfig['sparse'] = isset($a_volume[$cnid]['sparse']);
-			$pconfig['desc'] = $a_volume[$cnid]['desc'];
+			$sphere_record['name'] = $sphere_array[$index]['name'];
+			$sphere_record['pool'] = $sphere_array[$index]['pool'][0];
+			$sphere_record['volsize'] = $sphere_array[$index]['volsize'];
+			$sphere_record['volmode'] = $sphere_array[$index]['volmode'];
+			$sphere_record['volblocksize'] = get_volblocksize($sphere_record['pool'], $sphere_record['name']);
+			$sphere_record['compression'] = $sphere_array[$index]['compression'];
+			$sphere_record['dedup'] = $sphere_array[$index]['dedup'];
+			$sphere_record['sync'] = $sphere_array[$index]['sync'];
+			$sphere_record['sparse'] = isset($sphere_array[$index]['sparse']);
+			$sphere_record['desc'] = $sphere_array[$index]['desc'];
 			break;
 	}
 }
@@ -261,87 +280,111 @@ foreach ($a_pool as $r_pool) {
 	} 
 	$l_poollist[$r_pool['name']] = htmlspecialchars($helpinghand);
 }
-$l_volmode = ["default" => gettext("Default"), "geom" => "geom", "dev" => "dev", "none" => "none"];
-$l_compressionmode = ["on" => gettext("On"), "off" => gettext("Off"), "lz4" => "lz4", "lzjb" => "lzjb", "gzip" => "gzip", "zle" => "zle"];
-for ($n = 1; $n <= 9; $n++) {
-	$helpinghand = sprintf('gzip-%d',$n);
-	$l_compressionmode[$helpinghand] = $helpinghand;
-}
-$l_dedup = ["on" => gettext("On"), "off" => gettext("Off"), "verify" => "verify", "sha256" => "sha256", "sha256,verify" => "sha256,verify"];
-$l_sync = ["standard" => "standard", "always" => "always", "disabled" => "disabled"];
-$l_volblocksize = ["" => gettext("Default"), "512B" => "512B", "1K" => "1K", "2K" => "2K", "4K" => "4K", "8K" => "8K", "16K" => "16K", "32K" => "32K", "64K" => "64K", "128K" => "128K"];
+$l_volmode = [
+	'default' => gettext('Default'),
+	'geom' => 'geom',
+	'dev' => 'dev',
+	'none' => 'none'
+];
+$l_compressionmode = [
+	'on' => gettext('On'),
+	'off' => gettext('Off'),
+	'lz4' => 'lz4',
+	'lzjb' => 'lzjb',
+	'gzip' => 'gzip',
+	'gzip-1' => 'gzip-1',
+	'gzip-2' => 'gzip-2',
+	'gzip-3' => 'gzip-3',
+	'gzip-4' => 'gzip-4',
+	'gzip-5' => 'gzip-5',
+	'gzip-6' => 'gzip-6',
+	'gzip-7' => 'gzip-7',
+	'gzip-8' => 'gzip-8',
+	'gzip-9' => 'gzip-9',
+	'zle' => 'zle'
+];
+$l_dedup = [
+	'on' => gettext('On'),
+	'off' => gettext('Off'),
+	'verify' => gettext('Verify'),
+	'sha256' => 'SHA256',
+	'sha256,verify' => gettext('SHA256, Verify')
+];
+$l_sync = [
+	'standard' => gettext('Standard'),
+	'always' => gettext('Always'),
+	'disabled' => gettext('Disabled')
+];
+$l_volblocksize = [
+	'' => gettext('Default'),
+	'512B' => '512B',
+	'1K' => '1K',
+	'2K' => '2K',
+	'4K' => '4K',
+	'8K' => '8K',
+	'16K' => '16K',
+	'32K' => '32K',
+	'64K' => '64K',
+	'128K' => '128K'
+];
 
-$pgtitle = array(gettext("Disks"), gettext("ZFS"), gettext("Volumes"), gettext("Volume"), (RECORD_NEW !== $mode_record) ? gettext("Edit") : gettext("Add"));
+$pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Volumes'), gettext('Volume'), ($isrecordnew) ? gettext('Add') : gettext('Edit'));
 ?>
 <?php include("fbegin.inc");?>
-<script type="text/javascript">
-<!--
-function enable_change(enable_change) {
-	document.iform.name.disabled = !enable_change;
-	document.iform.pool.disabled = !enable_change;
-	document.iform.volblocksize.disabled = !enable_change;
-}
-// -->
-</script>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<table id="area_navigator">
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gettext("Pools");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gettext("Datasets");?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_volume.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Volumes");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gettext("Snapshots");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gettext("Configuration");?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gettext('Pools');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gettext('Datasets');?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_volume.php" title="<?=gettext('Reload page');?>"><span><?=gettext('Volumes');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gettext('Snapshots');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gettext('Configuration');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav2">
-				<li class="tabact"><a href="disks_zfs_volume.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Volume");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_volume_info.php"><span><?=gettext("Information");?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_volume.php" title="<?=gettext('Reload page');?>"><span><?=gettext('Volume');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_volume_info.php"><span><?=gettext('Information');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
-	<tr>
-		<td class="tabcont">
-			<form action="disks_zfs_volume_edit.php" method="post" name="iform" id="iform">
-				<?php if (!empty($errormsg)) print_error_box($errormsg);?>
-				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-				<?php if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));?>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<thead>
-						<?php html_titleline(gettext("Settings"));?>
-					</thead>
-					<tbody>
-						<?php html_inputbox("name", gettext("Name"), $pconfig['name'], "", true, 20);?>
-						<?php html_combobox("pool", gettext("Pool"), $pconfig['pool'], $l_poollist, "", true);?>
-						<?php html_inputbox("volsize", gettext("Size"), $pconfig['volsize'], gettext("ZFS volume size. To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."), true, 10);?>
-						<?php html_combobox("volmode", gettext("Volume mode"), $pconfig['volmode'], $l_volmode, gettext("Specifies how the volume should be exposed to the OS."), true);?>
-						<?php html_combobox("compression", gettext("Compression"), $pconfig['compression'], $l_compressionmode, gettext("Controls the compression algorithm used for this volume. The 'lzjb' compression algorithm is optimized for performance while providing decent data compression. Setting compression to 'On' uses the 'lzjb' compression algorithm. You can specify the 'gzip' level by using the value 'gzip-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'gzip' is equivalent to 'gzip-6'."), true);?>
-						<?php html_combobox("dedup", gettext("Dedup"), $pconfig['dedup'], $l_dedup, gettext("Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See <a href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide:disks-zfs-volumes-volume' target='_blank'>ZFS volumes & deduplication</a> wiki article BEFORE using this feature.</b></br>"), true);?>
-						<?php html_combobox("sync", gettext("Sync"), $pconfig['sync'], $l_sync, gettext("Controls the behavior of synchronous requests."), true);?>
-						<?php html_checkbox("sparse", gettext("Sparse Volume"), !empty($pconfig['sparse']) ? true : false, gettext("Use as sparse volume. (thin provisioning)"), "", false);?>
-						<?php html_combobox("volblocksize", gettext("Block size"), $pconfig['volblocksize'], $l_volblocksize, gettext("ZFS volume block size. This value can not be changed after creation."), true);?>
-						<?php html_inputbox("desc", gettext("Description"), $pconfig['desc'], gettext("You may enter a description here for your reference."), false, 40);?>
-					</tbody>
-				</table>
-				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=(RECORD_NEW != $mode_record) ? gettext("Save") : gettext("Add");?>" onclick="enable_change(true)" />
-					<input name="Cancel" type="submit" class="formbtn" value="<?=gettext("Cancel");?>" />
-					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
-				</div>
-				<?php include("formend.inc");?>
-			</form>
-		</td>
-	</tr>
 </table>
-<script type="text/javascript">
-<!--
-<?php if (RECORD_MODIFY == $mode_record):?>
-<!-- Disable controls that should not be modified anymore in edit mode. -->
-enable_change(false);
-<?php endif;?>
-//-->
-</script>
+<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
+	<?php
+		if (!empty($errormsg)) print_error_box($errormsg);
+		if (!empty($input_errors)) print_input_errors($input_errors);
+		if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));
+	?>
+	<table id="area_data_settings">
+		<colgroup>
+			<col id="area_data_settings_col_tag">
+			<col id="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+			<?php html_titleline2(gettext('Settings'));?>
+		</thead>
+		<tbody>
+			<?php
+				html_inputbox2('name', gettext('Name'), $sphere_record['name'], '', true, 20, $isrecordmodify);
+				html_combobox2('pool', gettext('Pool'), $sphere_record['pool'], $l_poollist, '', true, $isrecordmodify);
+				html_inputbox2('volsize', gettext('Size'), $sphere_record['volsize'], gettext("ZFS volume size. To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."), true, 10);
+				html_combobox2('volmode', gettext('Volume mode'), $sphere_record['volmode'], $l_volmode, gettext('Specifies how the volume should be exposed to the OS.'), true);
+				html_combobox2('compression', gettext('Compression'), $sphere_record['compression'], $l_compressionmode, gettext("Controls the compression algorithm used for this volume. The 'lzjb' compression algorithm is optimized for performance while providing decent data compression. Setting compression to 'On' uses the 'lzjb' compression algorithm. You can specify the 'gzip' level by using the value 'gzip-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'gzip' is equivalent to 'gzip-6'."), true);
+				html_combobox2('dedup', gettext('Dedup'), $sphere_record['dedup'], $l_dedup, gettext("Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See <a href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide:disks-zfs-volumes-volume' target='_blank'>ZFS volumes & deduplication</a> wiki article BEFORE using this feature.</b></br>"), true);
+				html_combobox2('sync', gettext('Sync'), $sphere_record['sync'], $l_sync, gettext('Controls the behavior of synchronous requests.'), true);
+				html_checkbox2('sparse', gettext('Sparse Volume'), !empty($sphere_record['sparse']) ? true : false, gettext('Use as sparse volume. (thin provisioning)'), '', false);
+				html_combobox2('volblocksize', gettext('Block size'), $sphere_record['volblocksize'], $l_volblocksize, gettext('ZFS volume block size. This value can not be changed after creation.'), false, $isrecordmodify);
+				html_inputbox2('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 40);?>
+		</tbody>
+	</table>
+	<div id="submit">
+		<input name="Submit" type="submit" class="formbtn" value="<?=($isrecordnew) ? gettext('Add') : gettext('Save');?>"/>
+		<input name="Cancel" type="submit" class="formbtn" value="<?=gettext("Cancel");?>"/>
+		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>"/>
+	</div>
+	<?php include("formend.inc");?>
+</form></td></tr></tbody></table>
 <?php include("fend.inc");?>
