@@ -117,26 +117,22 @@ $isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
 
 if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 	unset($input_errors);
-	$sphere_record['name'] = $_POST['name'];
-	$sphere_record['pool'] = $_POST['pool'];
-	$sphere_record['compression'] = $_POST['compression'];
-	$sphere_record['dedup'] = $_POST['dedup'];
-	$sphere_record['sync'] = $_POST['sync'];
-	$sphere_record['atime'] = $_POST['atime'];
-	$sphere_record['aclinherit'] = $_POST['aclinherit'];
-	$sphere_record['aclmode'] = $_POST['aclmode'];
-	if ($isrecordnewornewmodify) {
-		$sphere_record['casesensitivity'] = $_POST['casesensitivity'];
-	}
+	// apply post values that are applicable for all record modes
+	$sphere_record['compression'] = isset($_POST['compression']) ? $_POST['compression'] : '';
+	$sphere_record['dedup'] = isset($_POST['dedup']) ? $_POST['dedup'] : '';
+	$sphere_record['sync'] = isset($_POST['sync']) ? $_POST['sync'] : '';
+	$sphere_record['atime'] = isset($_POST['atime']) ? $_POST['atime'] : '';
+	$sphere_record['aclinherit'] = isset($_POST['aclinherit']) ? $_POST['aclinherit'] : '';
+	$sphere_record['aclmode'] = isset($_POST['aclmode']) ? $_POST['aclmode'] : '';
 	$sphere_record['canmount'] = isset($_POST['canmount']) ? true : false;
 	$sphere_record['readonly'] = isset($_POST['readonly']) ? true : false;
 	$sphere_record['xattr'] = isset($_POST['xattr']) ? true : false;
 	$sphere_record['snapdir'] = isset($_POST['snapdir']) ? true : false;
-	$sphere_record['quota'] = $_POST['quota'];
-	$sphere_record['reservation'] = $_POST['reservation'];
-	$sphere_record['desc'] = $_POST['desc'];
-	$sphere_record['accessrestrictions']['owner'] = $_POST['owner'];
-	$sphere_record['accessrestrictions']['group'] = $_POST['group'];
+	$sphere_record['quota'] = isset($_POST['quota']) ? $_POST['quota'] : '';
+	$sphere_record['reservation'] = isset($_POST['reservation']) ? $_POST['reservation'] : '';
+	$sphere_record['desc'] = isset($_POST['desc']) ? $_POST['desc'] : '';
+	$sphere_record['accessrestrictions']['owner'] = isset($_POST['owner']) ? $_POST['owner'] : '';
+	$sphere_record['accessrestrictions']['group'] = isset($_POST['group']) ? $_POST['group'] : '';
 	$helpinghand = 0;
 	if (isset($_POST['mode_access']) && is_array($_POST['mode_access']) && count($_POST['mode_access'] < 10)) {
 		foreach ($_POST['mode_access'] as $r_mode_access) {
@@ -144,6 +140,18 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 		}
 	}
 	$sphere_record['accessrestrictions']['mode'] = sprintf( "%04o", $helpinghand);
+	switch ($mode_record) {
+		case RECORD_NEW:
+		case RECORD_NEW_MODIFY:
+			$sphere_record['name'] = isset($_POST['name']) ? $_POST['name'] : '';
+			$sphere_record['pool'] = isset($_POST['pool']) ? $_POST['pool'] : '';
+			$sphere_record['casesensitivity'] = isset($_POST['casesensitivity']) ? $_POST['casesensitivity'] : '';
+			break;
+		case RECORD_MODIFY:
+			$sphere_record['name'] = $sphere_array[$index]['name'];
+			$sphere_record['pool'] = $sphere_array[$index]['pool'][0];
+			break;
+	}
 	
 	// Input validation
 	$reqdfields = ['pool', 'name'];
