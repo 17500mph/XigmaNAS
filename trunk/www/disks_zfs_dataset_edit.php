@@ -42,7 +42,6 @@ $sphere_notifier = 'zfsdataset';
 $sphere_array = [];
 $sphere_record = [];
 $prerequisites_ok = true;
-$pconfig = []; // prepare default array
 
 $mode_page = ($_POST) ? PAGE_MODE_POST : (($_GET) ? PAGE_MODE_EDIT : PAGE_MODE_ADD); // detect page mode
 
@@ -54,13 +53,13 @@ if (PAGE_MODE_POST == $mode_page) { // POST is Cancel or not Submit => cleanup
 }
 
 if ((PAGE_MODE_POST == $mode_page) && isset($_POST['uuid']) && is_uuid_v4($_POST['uuid'])) {
-	$pconfig['uuid'] = $_POST['uuid'];
+	$sphere_record['uuid'] = $_POST['uuid'];
 } else {
 	if ((PAGE_MODE_EDIT == $mode_page) && isset($_GET['uuid']) && is_uuid_v4($_GET['uuid'])) {
-		$pconfig['uuid'] = $_GET['uuid'];
+		$sphere_record['uuid'] = $_GET['uuid'];
 	} else {
 		$mode_page = PAGE_MODE_ADD; // Force ADD
-		$pconfig['uuid'] = uuid();
+		$sphere_record['uuid'] = uuid();
 	}
 }
 
@@ -68,7 +67,7 @@ if (!(isset($config['zfs']['datasets']['dataset']) && is_array($config['zfs']['d
 	$config['zfs']['datasets']['dataset'] = [];
 }
 array_sort_key($config['zfs']['datasets']['dataset'], 'name');
-$a_dataset = &$config['zfs']['datasets']['dataset'];
+$sphere_array = &$config['zfs']['datasets']['dataset'];
 
 if (!(isset($config['zfs']['volumes']['volume']) && is_array($config['zfs']['volumes']['volume']))) {
 	$config['zfs']['volumes']['volume'] = [];
@@ -84,10 +83,10 @@ if (!(isset($config['zfs']['pools']['pool']) && is_array($config['zfs']['pools']
 array_sort_key($config['zfs']['pools']['pool'], 'name');
 $a_pool = &$config['zfs']['pools']['pool'];
 
-$cnid = array_search_ex($pconfig['uuid'], $a_dataset, 'uuid'); // get index from config for dataset by looking up uuid
-$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $pconfig['uuid']); // get updatenotify mode for uuid
+$index = array_search_ex($sphere_record['uuid'], $sphere_array, 'uuid'); // get index from config for dataset by looking up uuid
+$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']); // get updatenotify mode for uuid
 $mode_record = RECORD_ERROR;
-if (false !== $cnid) { // uuid found
+if (false !== $index) { // uuid found
 	if ((PAGE_MODE_POST == $mode_page || (PAGE_MODE_EDIT == $mode_page))) { // POST or EDIT
 		switch ($mode_updatenotify) {
 			case UPDATENOTIFY_MODE_NEW:
@@ -112,47 +111,51 @@ if (RECORD_ERROR == $mode_record) { // oops, someone tries to cheat, over and ou
 	header($sphere_header_parent);
 	exit;
 }
+$isrecordnew = (RECORD_NEW === $mode_record);
+$isrecordnewmodify = (RECORD_NEW_MODIFY == $mode_record);
+$isrecordmodify = (RECORD_MODIFY === $mode_record);
+$isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
 
 if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 	unset($input_errors);
-	$pconfig['name'] = $_POST['name'];
-	$pconfig['pool'] = $_POST['pool'];
-	$pconfig['compression'] = $_POST['compression'];
-	$pconfig['dedup'] = $_POST['dedup'];
-	$pconfig['sync'] = $_POST['sync'];
-	$pconfig['atime'] = $_POST['atime'];
-	$pconfig['aclinherit'] = $_POST['aclinherit'];
-	$pconfig['aclmode'] = $_POST['aclmode'];
-	if ((RECORD_NEW == $mode_record) || (RECORD_NEW_MODIFY == $mode_record)) {
-		$pconfig['casesensitivity'] = $_POST['casesensitivity'];
+	$sphere_record['name'] = $_POST['name'];
+	$sphere_record['pool'] = $_POST['pool'];
+	$sphere_record['compression'] = $_POST['compression'];
+	$sphere_record['dedup'] = $_POST['dedup'];
+	$sphere_record['sync'] = $_POST['sync'];
+	$sphere_record['atime'] = $_POST['atime'];
+	$sphere_record['aclinherit'] = $_POST['aclinherit'];
+	$sphere_record['aclmode'] = $_POST['aclmode'];
+	if ($isrecordnewornewmodify) {
+		$sphere_record['casesensitivity'] = $_POST['casesensitivity'];
 	}
-	$pconfig['canmount'] = isset($_POST['canmount']) ? true : false;
-	$pconfig['readonly'] = isset($_POST['readonly']) ? true : false;
-	$pconfig['xattr'] = isset($_POST['xattr']) ? true : false;
-	$pconfig['snapdir'] = isset($_POST['snapdir']) ? true : false;
-	$pconfig['quota'] = $_POST['quota'];
-	$pconfig['reservation'] = $_POST['reservation'];
-	$pconfig['desc'] = $_POST['desc'];
-	$pconfig['accessrestrictions']['owner'] = $_POST['owner'];
-	$pconfig['accessrestrictions']['group'] = $_POST['group'];
+	$sphere_record['canmount'] = isset($_POST['canmount']) ? true : false;
+	$sphere_record['readonly'] = isset($_POST['readonly']) ? true : false;
+	$sphere_record['xattr'] = isset($_POST['xattr']) ? true : false;
+	$sphere_record['snapdir'] = isset($_POST['snapdir']) ? true : false;
+	$sphere_record['quota'] = $_POST['quota'];
+	$sphere_record['reservation'] = $_POST['reservation'];
+	$sphere_record['desc'] = $_POST['desc'];
+	$sphere_record['accessrestrictions']['owner'] = $_POST['owner'];
+	$sphere_record['accessrestrictions']['group'] = $_POST['group'];
 	$helpinghand = 0;
 	if (isset($_POST['mode_access']) && is_array($_POST['mode_access']) && count($_POST['mode_access'] < 10)) {
 		foreach ($_POST['mode_access'] as $r_mode_access) {
 			$helpinghand |= (257 > $r_mode_access) ? $r_mode_access : 0;
 		}
 	}
-	$pconfig['accessrestrictions']['mode'] = sprintf( "%04o", $helpinghand);
+	$sphere_record['accessrestrictions']['mode'] = sprintf( "%04o", $helpinghand);
 	
 	// Input validation
 	$reqdfields = explode(' ', 'pool name');
 	$reqdfieldsn = [gettext('Pool'), gettext('Name')];
 	$reqdfieldst = explode(' ', 'string string');
 
-	do_input_validation($pconfig, $reqdfields, $reqdfieldsn, $input_errors);
-	do_input_validation_type($pconfig, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
+	do_input_validation($sphere_record, $reqdfields, $reqdfieldsn, $input_errors);
+	do_input_validation_type($sphere_record, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
 	if ($prerequisites_ok && empty($input_errors)) { // check for a valid name with format name[/name], blanks are excluded.
-		if (false === zfs_is_valid_dataset_name($pconfig['name'])) {
+		if (false === zfs_is_valid_dataset_name($sphere_record['name'])) {
 			$input_errors[] = sprintf(gettext("The attribute '%s' contains invalid characters."), gettext('Name'));
 		}
 	}
@@ -164,14 +167,14 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 	// 
 	// 1.
 	if ($prerequisites_ok && empty($input_errors)) {
-		if ((RECORD_MODIFY == $mode_record) && (0 !== strcmp($a_dataset[$cnid]['pool'][0], $pconfig['pool']))) {
+		if ($isrecordmodify && (0 !== strcmp($sphere_array[$index]['pool'][0], $sphere_record['pool']))) {
 			$input_errors[] = 'Pool cannot be changed.';
 		}
 	}
 	// 2., 3., 4.
 	if ($prerequisites_ok && empty($input_errors)) {
-		$poolslashname = escapeshellarg($pconfig['pool']."/".$pconfig['name']); // create quoted full dataset name
-		if ((RECORD_NEW == $mode_record) || ((RECORD_NEW != $mode_record) && (0 !== strcmp(escapeshellarg($a_dataset[$cnid]['pool'][0]."/".$a_dataset[$cnid]['name']), $poolslashname)))) {
+		$poolslashname = escapeshellarg($sphere_record['pool']."/".$sphere_record['name']); // create quoted full dataset name
+		if ($isrecordnew || (!$isrecordnew && (0 !== strcmp(escapeshellarg($sphere_array[$index]['pool'][0]."/".$sphere_array[$index]['name']), $poolslashname)))) {
 			// throw error when pool/name already exists in live
 			if (empty($input_errors)) {
 				mwexec2(sprintf("zfs get -H -o value type %s 2>&1", $poolslashname), $retdat, $retval);
@@ -197,7 +200,7 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 			}
 			// throw error when  pool/name exists in configuration file, zfs->datasets->dataset[] 
 			if (empty($input_errors)) {
-				foreach ($a_dataset as $r_dataset) {
+				foreach ($sphere_array as $r_dataset) {
 					if (0 === strcmp(escapeshellarg($r_dataset['pool'][0]."/".$r_dataset['name']), $poolslashname)) {
 						$input_errors[] = sprintf(gettext('%s is already configured as a filesystem.'), $poolslashname);
 						break;
@@ -209,18 +212,18 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 
 	if ($prerequisites_ok && empty($input_errors)) {
 		// convert listtags to arrays
-		$helpinghand = $pconfig['pool'];
-		$pconfig['pool'] = [$helpinghand]; 
-		$helpinghand = $pconfig['accessrestrictions']['group'];
-		$pconfig['accessrestrictions']['group'] = [$helpinghand];
-		if (RECORD_NEW == $mode_record) {
-			$a_dataset[] = $pconfig;
-			updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_NEW, $pconfig['uuid']);
+		$helpinghand = $sphere_record['pool'];
+		$sphere_record['pool'] = [$helpinghand]; 
+		$helpinghand = $sphere_record['accessrestrictions']['group'];
+		$sphere_record['accessrestrictions']['group'] = [$helpinghand];
+		if ($isrecordnew) {
+			$sphere_array[] = $sphere_record;
+			updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_NEW, $sphere_record['uuid']);
 		} else {
-			$a_dataset[$cnid] = $pconfig;
+			$sphere_array[$index] = $sphere_record;
 			// avoid unnecessary notifications, avoid mode modify if mode new already exists
 			if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
-				updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $pconfig['uuid']);
+				updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_record['uuid']);
 			}
 		}
 		write_config();
@@ -230,47 +233,47 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 } else { // EDIT / ADD
 	switch ($mode_record) {
 		case RECORD_NEW:
-			$pconfig['name'] = '';
-			$pconfig['pool'] = '';
-			$pconfig['compression'] = 'off';
-			$pconfig['dedup'] = 'off';
-			$pconfig['sync'] = 'standard';
-			$pconfig['atime'] = 'off';
-			$pconfig['aclinherit'] = 'restricted';
-			$pconfig['aclmode'] = 'discard';
-			$pconfig['casesensitivity'] = 'sensitive';
-			$pconfig['canmount'] = true;
-			$pconfig['readonly'] = false;
-			$pconfig['xattr'] = true;
-			$pconfig['snapdir'] = false;
-			$pconfig['quota'] = '';
-			$pconfig['reservation'] = '';
-			$pconfig['desc'] = '';
-			$pconfig['accessrestrictions']['owner'] = 'root';
-			$pconfig['accessrestrictions']['group'] = 'wheel';
-			$pconfig['accessrestrictions']['mode'] = '0777';
+			$sphere_record['name'] = '';
+			$sphere_record['pool'] = '';
+			$sphere_record['compression'] = 'off';
+			$sphere_record['dedup'] = 'off';
+			$sphere_record['sync'] = 'standard';
+			$sphere_record['atime'] = 'off';
+			$sphere_record['aclinherit'] = 'restricted';
+			$sphere_record['aclmode'] = 'discard';
+			$sphere_record['casesensitivity'] = 'sensitive';
+			$sphere_record['canmount'] = true;
+			$sphere_record['readonly'] = false;
+			$sphere_record['xattr'] = true;
+			$sphere_record['snapdir'] = false;
+			$sphere_record['quota'] = '';
+			$sphere_record['reservation'] = '';
+			$sphere_record['desc'] = '';
+			$sphere_record['accessrestrictions']['owner'] = 'root';
+			$sphere_record['accessrestrictions']['group'] = 'wheel';
+			$sphere_record['accessrestrictions']['mode'] = '0777';
 			break;
 		case RECORD_NEW_MODIFY:
-			$pconfig['casesensitivity'] = isset($a_dataset[$cnid]['casesensitivity']) ? $a_dataset[$cnid]['casesensitivity'] : 'sensitive';
+			$sphere_record['casesensitivity'] = isset($sphere_array[$index]['casesensitivity']) ? $sphere_array[$index]['casesensitivity'] : 'sensitive';
 		case RECORD_MODIFY:
-			$pconfig['name'] = $a_dataset[$cnid]['name'];
-			$pconfig['pool'] = $a_dataset[$cnid]['pool'][0];
-			$pconfig['compression'] = $a_dataset[$cnid]['compression'];
-			$pconfig['dedup'] = $a_dataset[$cnid]['dedup'];
-			$pconfig['sync'] = $a_dataset[$cnid]['sync'];
-			$pconfig['atime'] = $a_dataset[$cnid]['atime'];	
-			$pconfig['aclinherit'] = $a_dataset[$cnid]['aclinherit'];
-			$pconfig['aclmode'] = $a_dataset[$cnid]['aclmode'];
-			$pconfig['canmount'] = isset($a_dataset[$cnid]['canmount']);
-			$pconfig['readonly'] = isset($a_dataset[$cnid]['readonly']);
-			$pconfig['xattr'] = isset($a_dataset[$cnid]['xattr']);
-			$pconfig['snapdir'] = isset($a_dataset[$cnid]['snapdir']);
-			$pconfig['quota'] = $a_dataset[$cnid]['quota'];
-			$pconfig['reservation'] = $a_dataset[$cnid]['reservation'];
-			$pconfig['desc'] = $a_dataset[$cnid]['desc'];
-			$pconfig['accessrestrictions']['owner'] = $a_dataset[$cnid]['accessrestrictions']['owner'];
-			$pconfig['accessrestrictions']['group'] = $a_dataset[$cnid]['accessrestrictions']['group'][0];
-			$pconfig['accessrestrictions']['mode'] = $a_dataset[$cnid]['accessrestrictions']['mode'];
+			$sphere_record['name'] = $sphere_array[$index]['name'];
+			$sphere_record['pool'] = $sphere_array[$index]['pool'][0];
+			$sphere_record['compression'] = $sphere_array[$index]['compression'];
+			$sphere_record['dedup'] = $sphere_array[$index]['dedup'];
+			$sphere_record['sync'] = $sphere_array[$index]['sync'];
+			$sphere_record['atime'] = $sphere_array[$index]['atime'];	
+			$sphere_record['aclinherit'] = $sphere_array[$index]['aclinherit'];
+			$sphere_record['aclmode'] = $sphere_array[$index]['aclmode'];
+			$sphere_record['canmount'] = isset($sphere_array[$index]['canmount']);
+			$sphere_record['readonly'] = isset($sphere_array[$index]['readonly']);
+			$sphere_record['xattr'] = isset($sphere_array[$index]['xattr']);
+			$sphere_record['snapdir'] = isset($sphere_array[$index]['snapdir']);
+			$sphere_record['quota'] = $sphere_array[$index]['quota'];
+			$sphere_record['reservation'] = $sphere_array[$index]['reservation'];
+			$sphere_record['desc'] = $sphere_array[$index]['desc'];
+			$sphere_record['accessrestrictions']['owner'] = $sphere_array[$index]['accessrestrictions']['owner'];
+			$sphere_record['accessrestrictions']['group'] = $sphere_array[$index]['accessrestrictions']['group'][0];
+			$sphere_record['accessrestrictions']['mode'] = $sphere_array[$index]['accessrestrictions']['mode'];
 			break;
 	}					
 }
@@ -306,7 +309,7 @@ foreach (system_get_group_list() as $r_key => $r_value) {
 }
 // Calculate value of access right checkboxes, contains a) 0 for not checked or b) the required bit mask value
 $mode_access = [];
-$helpinghand = octdec($pconfig['accessrestrictions']['mode']);
+$helpinghand = octdec($sphere_record['accessrestrictions']['mode']);
 for ($i = 0; $i < 9; $i++) {
 	$mode_access[$i] = $helpinghand & (1 << $i);
 }
@@ -314,15 +317,7 @@ for ($i = 0; $i < 9; $i++) {
 $pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Datasets'), gettext('Dataset'), (RECORD_NEW !== $mode_record) ? gettext('Edit') : gettext('Add'));
 ?>
 <?php include("fbegin.inc");?>
-<script type="text/javascript">
-<!--
-function enable_change(enable_change) {
-	document.iform.name.disabled = !enable_change;
-	document.iform.pool.disabled = !enable_change;
-}
-// -->
-</script>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<table id="area_navigator">
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
@@ -342,104 +337,94 @@ function enable_change(enable_change) {
 			</ul>
 		</td>
 	</tr>
-	<tr>
-		<td class="tabcont">
-			<form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-				<?php
-					if (!empty($errormsg)) { print_error_box($errormsg); }
-					if (!empty($input_errors)) { print_input_errors($input_errors); }
-					if (file_exists($d_sysrebootreqd_path)) { print_info_box(get_std_save_message(0)); }
-				?>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<thead>
-						<?php html_titleline(gettext('Settings'));?>
-					</thead>
-					<tbody>
-						<?php
-							html_inputbox("name", gettext('Name'), $pconfig['name'], '', true, 20);
-							html_combobox("pool", gettext('Pool'), $pconfig['pool'], $l_poollist, '', true);
-							html_combobox("compression", gettext('Compression'), $pconfig['compression'], $l_compressionmode, gettext("Controls the compression algorithm used for this dataset. The 'lzjb' compression algorithm is optimized for performance while providing decent data compression. Setting compression to 'On' uses the 'lzjb' compression algorithm. You can specify the 'gzip' level by using the value 'gzip-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'gzip' is equivalent to 'gzip-6'."), true);
-							html_combobox("dedup", gettext('Dedup'), $pconfig['dedup'], $l_dedup, gettext("Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See <a href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide:disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & deduplication</a> wiki article BEFORE using this feature.</b></br>"), true);
-							html_combobox("sync", gettext('Sync'), $pconfig['sync'], $l_sync, gettext('Controls the behavior of synchronous requests.'), true);
-							html_combobox("atime", gettext('Access Time (atime)'), $pconfig['atime'], $l_atime, gettext('Turn access time on or off for this dataset.'), true);
-							html_combobox("aclinherit", gettext('ACL inherit'), $pconfig['aclinherit'], $l_aclinherit, gettext('This attribute determines the behavior of Access Control List inheritance.'), true);
-							html_combobox("aclmode", gettext('ACL mode'), $pconfig['aclmode'], $l_aclmode, gettext('This attribute controls the ACL behavior when a file is created or whenever the mode of a file or a directory is modified.'), true);
-							if ((RECORD_NEW == $mode_record) || (RECORD_NEW_MODIFY == $mode_record)) {
-								html_combobox("casesensitivity", gettext('Case Sensitivity'), $pconfig['casesensitivity'], $l_casesensitivity, gettext('This property indicates whether the file name matching algorithm used by the file system should be casesensitive, caseinsensitive, or allow a combination of both styles of matching'), false);
-							}
-							html_checkbox("canmount", gettext('Canmount'), !empty($pconfig['canmount']) ? true : false, gettext('If this property is disabled, the file system cannot be mounted.'), '', false);
-							html_checkbox("readonly", gettext('Readonly'), !empty($pconfig['readonly']) ? true : false, gettext('Controls whether this dataset can be modified.'), '', false);
-							html_checkbox("xattr", gettext('Extended attributes'), !empty($pconfig['xattr']) ? true : false, gettext('Enable extended attributes for this file system.'), '', false);
-							html_checkbox("snapdir", gettext('Snapshot Visibility'), !empty($pconfig['snapdir']) ? true : false, gettext('If this property is enabled, the snapshots are displayed into .zfs directory.'), '', false);
-							html_inputbox("reservation", gettext('Reservation'), $pconfig['reservation'], gettext("The minimum amount of space guaranteed to a dataset (usually empty). To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."), false, 10);
-							html_inputbox("quota", gettext('Quota'), $pconfig['quota'], gettext("Limits the amount of space a dataset and its descendants can consume. This property enforces a hard limit on the amount of space used. This includes all space consumed by descendants, including file systems and snapshots. To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."), false, 10);
-							html_inputbox("desc", gettext('Description'), $pconfig['desc'], gettext('You may enter a description here for your reference.'), false, 40);
-							html_separator();
-							html_titleline(gettext('Access Restrictions'));
-							html_combobox("owner", gettext('Owner'), $pconfig['accessrestrictions']['owner'], $l_users, '', false);
-							html_combobox("group", gettext('Group'), $pconfig['accessrestrictions']['group'], $l_groups, '', false);
-						?>
-						<tr>
-							<td style="width:22%" valign="top" class="vncell"><?=gettext('Mode');?></td>
-							<td style="width:78%" class="vtable">
-								<table width="100%" border="0" cellpadding="0" cellspacing="0">
-									<colgroup>
-										<col style="width:20%">
-										<col style="width:20%">
-										<col style="width:50%">
-										<col style="width:20%">
-										<col style="width:10%">
-									</colgroup>
-									<thead>
-										<tr>
-											<td class="listhdrlr">&nbsp;</td>
-											<td class="listhdrc"><?=gettext('Read');?></td>
-											<td class="listhdrc"><?=gettext('Write');?></td>
-											<td class="listhdrc"><?=gettext('Execute');?></td>
-											<td class="list"></td>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class="listlr"><?=gettext('Owner');?>&nbsp;</td>
-											<td class="listrc" align="center"><input type="checkbox" name="mode_access[]" id="owner_r" value="256" <?php if ($mode_access[8] > 0) echo "checked=\"checked\"";?> />&nbsp;</td>
-											<td class="listrc" align="center"><input type="checkbox" name="mode_access[]" id="owner_w" value="128" <?php if ($mode_access[7] > 0) echo "checked=\"checked\"";?> />&nbsp;</td>
-											<td class="listrc" align="center"><input type="checkbox" name="mode_access[]" id="owner_x" value= "64" <?php if ($mode_access[6] > 0) echo "checked=\"checked\"";?> />&nbsp;</td>
-										</tr>
-										<tr>
-											<td class="listlr"><?=gettext('Group');?>&nbsp;</td>
-											<td class="listrc" align="center"><input type="checkbox" name="mode_access[]" id="group_r" value= "32" <?php if ($mode_access[5] > 0) echo "checked=\"checked\"";?> />&nbsp;</td>
-											<td class="listrc" align="center"><input type="checkbox" name="mode_access[]" id="group_w" value= "16" <?php if ($mode_access[4] > 0) echo "checked=\"checked\"";?> />&nbsp;</td>
-											<td class="listrc" align="center"><input type="checkbox" name="mode_access[]" id="group_x" value=  "8" <?php if ($mode_access[3] > 0) echo "checked=\"checked\"";?> />&nbsp;</td>
-										</tr>
-										<tr>
-											<td class="listlr"><?=gettext('Others');?>&nbsp;</td>
-											<td class="listrc" align="center"><input type="checkbox" name="mode_access[]" id="other_r" value=  "4" <?php if ($mode_access[2] > 0) echo "checked=\"checked\"";?> />&nbsp;</td>
-											<td class="listrc" align="center"><input type="checkbox" name="mode_access[]" id="other_w" value=  "2" <?php if ($mode_access[1] > 0) echo "checked=\"checked\"";?> />&nbsp;</td>
-											<td class="listrc" align="center"><input type="checkbox" name="mode_access[]" id="other_x" value=  "1" <?php if ($mode_access[0] > 0) echo "checked=\"checked\"";?> />&nbsp;</td>
-										</tr>
-									</tbody>
-								</table>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=(RECORD_NEW != $mode_record) ? gettext('Save') : gettext('Add');?>" onclick="enable_change(true)" />
-					<input name="Cancel" type="submit" class="formbtn" value="<?=gettext('Cancel');?>" />
-					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
-				</div>
-				<?php include("formend.inc");?>
-			</form>
-		</td>
-	</tr>
 </table>
-<script type="text/javascript">
-<!--
-<?php if (RECORD_MODIFY == $mode_record):?>
-<!-- Disable controls that should not be modified anymore in edit mode. -->
-enable_change(false);
-<?php endif;?>
-//-->
-</script>
+<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
+	<?php
+		if (!empty($errormsg)) { print_error_box($errormsg); }
+		if (!empty($input_errors)) { print_input_errors($input_errors); }
+		if (file_exists($d_sysrebootreqd_path)) { print_info_box(get_std_save_message(0)); }
+	?>
+	<table id="area_data_settings">
+		<colgroup>
+			<col id="area_data_settings_col_tag">
+			<col id="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+			<?php html_titleline2(gettext('Settings'));?>
+		</thead>
+		<tbody>
+			<?php
+				html_inputbox2('name', gettext('Name'), $sphere_record['name'], '', true, 20, $isrecordmodify);
+				html_combobox2('pool', gettext('Pool'), $sphere_record['pool'], $l_poollist, '', true, $isrecordmodify);
+				html_combobox2('compression', gettext('Compression'), $sphere_record['compression'], $l_compressionmode, gettext("Controls the compression algorithm used for this dataset. The 'lzjb' compression algorithm is optimized for performance while providing decent data compression. Setting compression to 'On' uses the 'lzjb' compression algorithm. You can specify the 'gzip' level by using the value 'gzip-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'gzip' is equivalent to 'gzip-6'."), true);
+				html_combobox2('dedup', gettext('Dedup'), $sphere_record['dedup'], $l_dedup, gettext("Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See <a href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide:disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & deduplication</a> wiki article BEFORE using this feature.</b></br>"), true);
+				html_combobox2('sync', gettext('Sync'), $sphere_record['sync'], $l_sync, gettext('Controls the behavior of synchronous requests.'), true);
+				html_combobox2('atime', gettext('Access Time (atime)'), $sphere_record['atime'], $l_atime, gettext('Turn access time on or off for this dataset.'), true);
+				html_combobox2('aclinherit', gettext('ACL inherit'), $sphere_record['aclinherit'], $l_aclinherit, gettext('This attribute determines the behavior of Access Control List inheritance.'), true);
+				html_combobox2('aclmode', gettext('ACL mode'), $sphere_record['aclmode'], $l_aclmode, gettext('This attribute controls the ACL behavior when a file is created or whenever the mode of a file or a directory is modified.'), true);
+				if ($isrecordnewornewmodify) {
+					html_combobox2('casesensitivity', gettext('Case Sensitivity'), $sphere_record['casesensitivity'], $l_casesensitivity, gettext('This property indicates whether the file name matching algorithm used by the file system should be casesensitive, caseinsensitive, or allow a combination of both styles of matching'), false);
+				}
+				html_checkbox2('canmount', gettext('Canmount'), !empty($sphere_record['canmount']) ? true : false, gettext('If this property is disabled, the file system cannot be mounted.'), '', false);
+				html_checkbox2('readonly', gettext('Readonly'), !empty($sphere_record['readonly']) ? true : false, gettext('Controls whether this dataset can be modified.'), '', false);
+				html_checkbox2('xattr', gettext('Extended attributes'), !empty($sphere_record['xattr']) ? true : false, gettext('Enable extended attributes for this file system.'), '', false);
+				html_checkbox2('snapdir', gettext('Snapshot Visibility'), !empty($sphere_record['snapdir']) ? true : false, gettext('If this property is enabled, the snapshots are displayed into .zfs directory.'), '', false);
+				html_inputbox2('reservation', gettext('Reservation'), $sphere_record['reservation'], gettext("The minimum amount of space guaranteed to a dataset (usually empty). To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."), false, 10);
+				html_inputbox2('quota', gettext('Quota'), $sphere_record['quota'], gettext("Limits the amount of space a dataset and its descendants can consume. This property enforces a hard limit on the amount of space used. This includes all space consumed by descendants, including file systems and snapshots. To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."), false, 10);
+				html_inputbox2('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 40);
+				html_separator2();
+				html_titleline2(gettext('Access Restrictions'));
+				html_combobox2('owner', gettext('Owner'), $sphere_record['accessrestrictions']['owner'], $l_users, '', false);
+				html_combobox2('group', gettext('Group'), $sphere_record['accessrestrictions']['group'], $l_groups, '', false);
+			?>
+			<tr>
+				<td class="celltag"><?=gettext('Mode');?></td>
+				<td class="celldata">
+					<table id="area_data_selection">
+						<colgroup>
+							<col style="width:25%">
+							<col style="width:25%">
+							<col style="width:25%">
+							<col style="width:25%">
+						</colgroup>
+						<thead>
+							<tr>
+								<td class="lhell"><?=gettext('Who');?></td>
+								<td class="lhelc"><?=gettext('Read');?></td>
+								<td class="lhelc"><?=gettext('Write');?></td>
+								<td class="lhebc"><?=gettext('Execute');?></td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="lcell"><?=gettext('Owner');?>&nbsp;</td>
+								<td class="lcelc"><input type="checkbox" name="mode_access[]" id="owner_r" value="256" <?php if ($mode_access[8] > 0) echo "checked=\"checked\"";?>/></td>
+								<td class="lcelc"><input type="checkbox" name="mode_access[]" id="owner_w" value="128" <?php if ($mode_access[7] > 0) echo "checked=\"checked\"";?>/></td>
+								<td class="lcebc"><input type="checkbox" name="mode_access[]" id="owner_x" value= "64" <?php if ($mode_access[6] > 0) echo "checked=\"checked\"";?>/></td>
+							</tr>
+							<tr>
+								<td class="lcell"><?=gettext('Group');?>&nbsp;</td>
+								<td class="lcelc"><input type="checkbox" name="mode_access[]" id="group_r" value= "32" <?php if ($mode_access[5] > 0) echo "checked=\"checked\"";?>/></td>
+								<td class="lcelc"><input type="checkbox" name="mode_access[]" id="group_w" value= "16" <?php if ($mode_access[4] > 0) echo "checked=\"checked\"";?>/></td>
+								<td class="lcebc"><input type="checkbox" name="mode_access[]" id="group_x" value=  "8" <?php if ($mode_access[3] > 0) echo "checked=\"checked\"";?>/></td>
+							</tr>
+							<tr>
+								<td class="lcell"><?=gettext('Others');?>&nbsp;</td>
+								<td class="lcelc"><input type="checkbox" name="mode_access[]" id="other_r" value=  "4" <?php if ($mode_access[2] > 0) echo "checked=\"checked\"";?>/></td>
+								<td class="lcelc"><input type="checkbox" name="mode_access[]" id="other_w" value=  "2" <?php if ($mode_access[1] > 0) echo "checked=\"checked\"";?>/></td>
+								<td class="lcebc"><input type="checkbox" name="mode_access[]" id="other_x" value=  "1" <?php if ($mode_access[0] > 0) echo "checked=\"checked\"";?>/></td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div id="submit">
+		<input name="Submit" type="submit" class="formbtn" value="<?=($isrecordnew) ? gettext('Add') : gettext('Save');?>"/>
+		<input name="Cancel" type="submit" class="formbtn" value="<?=gettext('Cancel');?>" />
+		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>" />
+	</div>
+	<?php include("formend.inc");?>
+</form></td></tr></tbody></table>
 <?php include("fend.inc");?>
