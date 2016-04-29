@@ -248,7 +248,7 @@ if ($_POST) {
 												</option>
 											<?php endforeach; ?>
 										</select>
-										<br><?= sprintf(gettext("Note: Ctrl-click (command-click on the Mac) to select multiple drives.")); ?></br>
+										<br><?= sprintf(gettext("Note: Ctrl-click (command-click on the Mac) to select multiple disks.")); ?></br>
 									<?php else: ?>
 										<?= sprintf(gettext("No disks available. Please add new <a href='%s'>disk</a> first."), 'disks_manage.php'); ?>
 									<?php endif; ?>
