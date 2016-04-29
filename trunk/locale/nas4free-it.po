@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-28 02:12+0000\n"
+"POT-Creation-Date: 2016-04-29 05:06+0000\n"
 "PO-Revision-Date: 2016-04-01 21:58+0000\n"
 "Last-Translator: Enrico Pierazzi <enrico.pierazzi@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-28 00:29+0000\n"
+"X-Launchpad-Export-Date: 2016-04-29 03:48+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
@@ -613,9 +613,6 @@ msgstr "Avanzato"
 msgid "Advanced Configuration"
 msgstr "Configurazione avanzata"
 
-msgid "Advanced Format"
-msgstr "Formato Avanzato"
-
 msgid "Advanced Options"
 msgstr "Opzioni Avanzate"
 
@@ -624,6 +621,9 @@ msgstr "Impostazioni Avanzate"
 
 msgid "Advanced Setup"
 msgstr "Configurazione Avanzata"
+
+msgid "Advanced format"
+msgstr ""
 
 msgid "Advanced settings"
 msgstr "Impostazioni avanzate"
@@ -1234,9 +1234,6 @@ msgstr "Dispositivo cache"
 msgid "Calibration Battery"
 msgstr "Calibrazione batteria"
 
-msgid "Can't format the OS origin disk!"
-msgstr "Non posso formattare il disco dell'OS"
-
 msgid "Can't get UFS ID."
 msgstr "Impossibile ottenere UFS ID"
 
@@ -1383,6 +1380,10 @@ msgstr "Comando per l'evento LINK_DOWN (ad esempio %s)."
 #, php-format
 msgid "Command for LINK_UP event (e.g. %s)."
 msgstr "Comando per l'evento LINK_UP (ad esempio %s)."
+
+#, php-format
+msgid "Command output"
+msgstr ""
 
 msgid "Command output:"
 msgstr "Output del comando:"
@@ -1705,8 +1706,8 @@ msgstr ""
 msgid "Create PV Guest"
 msgstr ""
 
-msgid "Create ZFS on GPT partition"
-msgstr "Crea ZFS su partizione GPT"
+msgid "Create ZFS on GPT partition."
+msgstr ""
 
 msgid "Create and initialize RAID."
 msgstr "Crea e inizializza un RAID"
@@ -2273,6 +2274,9 @@ msgstr "Metodo di autenticazione per la scoperta"
 msgid "Disk"
 msgstr "Disco"
 
+msgid "Disk Selection"
+msgstr ""
+
 msgid "Disk space usage"
 msgstr "Spazio disco utilizzato"
 
@@ -2537,9 +2541,9 @@ msgstr "Domain name nel vecchio formato, e.g. ESEMPIO."
 msgid "Domain name, e.g. example.com."
 msgstr "Nome dominio, es. esempio.com."
 
-msgid "Don't erase the MBR (useful for some RAID controller cards)"
+msgid ""
+"Don't erase the Master Boot Record. (useful for some RAID controller cards)"
 msgstr ""
-"Non cancellare il MBR (utile nel caso si utilizzi dei controller RAID)"
 
 msgid "Donate"
 msgstr "Fai una donazione"
@@ -2738,8 +2742,8 @@ msgstr "Abilita"
 msgid "Enable ACL inheritance"
 msgstr "Attiva eredità ACL"
 
-msgid "Enable Advanced Format (4KB sector)"
-msgstr "Attivare il formato avanzato (settori da 4KB)"
+msgid "Enable Advanced Format. (4KB sector)"
+msgstr ""
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Attivare I/O asincrono (AIO)"
@@ -3233,6 +3237,9 @@ msgstr "Gestore file"
 msgid "File Path"
 msgstr "Percorso File"
 
+msgid "File System"
+msgstr ""
+
 msgid "File Transfer Protocol"
 msgstr "Protocollo di Trasferimento File"
 
@@ -3326,6 +3333,9 @@ msgstr ""
 
 msgid "Format"
 msgstr "Formatta"
+
+msgid "Format disk"
+msgstr ""
 
 msgid "Format the report for phpBB forum."
 msgstr "Formatta il report per forum phpBB."
@@ -4455,6 +4465,12 @@ msgstr "Punto di trasferimento bassa tensione"
 msgid "Low voltage trimming transfer point"
 msgstr "Punto di trasferimento trimming bassa tensione"
 
+#, php-format
+msgid ""
+"Lowering this threshold can adversely affect performance and auto-"
+"defragmentation."
+msgstr ""
+
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4468,8 +4484,8 @@ msgstr "Indirizzo MAC"
 msgid "MAC address"
 msgstr "Indirizzo MAC"
 
-msgid "MBR Erase"
-msgstr "Camcellazione MBR"
+msgid "MBR erase"
+msgstr ""
 
 msgid "MBR partition"
 msgstr "Partizione MBR"
@@ -5124,6 +5140,10 @@ msgstr "Percorso non trovato."
 
 msgid "Note"
 msgstr "Nota"
+
+#, php-format
+msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
+msgstr ""
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -6270,9 +6290,6 @@ msgstr "Sicurezza"
 msgid "See attribute E8."
 msgstr "Vedi attributo E8."
 
-msgid "Select"
-msgstr "Selezionare"
-
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
 "Secure (HTTPS) for the WebGUI."
@@ -6681,14 +6698,8 @@ msgstr ""
 "Specificare se deve essere consentito il login diretto come superutente "
 "(root)."
 
-msgid ""
-"Specify the percentage of space held back from normal users. Note that "
-"lowering the threshold can adversely affect performance and auto-"
-"defragmentation."
+msgid "Specify the percentage of space held back from normal users."
 msgstr ""
-"Specifica la percentuale di spazio tolta agli utenti normali. Si noti che "
-"diminuendo la soglia si possono avere effetti negativi su prestazioni e auto-"
-"deframmentazione."
 
 msgid "Split request"
 msgstr "DIstribuisci la richiesta (split)"
@@ -8635,6 +8646,9 @@ msgstr "UCD-SNMP-MIB"
 msgid "UFS"
 msgstr "UFS"
 
+msgid "UFS (GPT and Soft Updates)"
+msgstr ""
+
 #, php-format
 msgid ""
 "UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
@@ -8644,6 +8658,12 @@ msgstr ""
 "UFS e ZFS sono filesystem nativo di %s. Il tentativo di utilizzare altri "
 "file system, come ext2, ext3, EXT4, FAT, FAT32 o NTFS può portare a "
 "risultati imprevedibili, corruzione dei file e la perdita di dati!"
+
+msgid ""
+"UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
+"filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
+"unpredictable results, file corruption and loss of data!"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -8656,6 +8676,9 @@ msgstr ""
 "%s). Cercare di utilizzare altri filesystem come FAT, FAT32, EXT2, EXT3, o "
 "NTFS puo' portare a risultati imprevedibili, corruzione di file e perdita di "
 "dati!"
+
+msgid "UFS with Soft Updates"
+msgstr ""
 
 msgid "UID"
 msgstr "UID"
@@ -9050,6 +9073,9 @@ msgstr "VirtualBox"
 msgid "Volume"
 msgstr "Volume"
 
+msgid "Volume Label"
+msgstr ""
+
 msgid "Volume Name"
 msgstr "Nome volume"
 
@@ -9068,8 +9094,10 @@ msgstr ""
 msgid "Volume label"
 msgstr "Etichetta di volume"
 
-msgid "Volume label of the new file system."
-msgstr "Etichetta di volume del nuovo filesystem."
+msgid ""
+"Volume label of the new file system. Use a space to separate multiple "
+"labels. (if only one specified next will be auto increment)"
+msgstr ""
 
 msgid "Volume mode"
 msgstr "Volume mode"
@@ -9234,6 +9262,9 @@ msgstr "Write Cache"
 msgid "Write only"
 msgstr "Sola scrittura"
 
+msgid "Wrong number of count for Volume Label"
+msgstr ""
+
 msgid "Wrong partition type or partition number."
 msgstr "Tipo di partizione o numero di partizione errato."
 
@@ -9259,6 +9290,9 @@ msgstr ""
 
 msgid "You can use the following parameters for substitution:"
 msgstr "Puoi utilizzare i seguenti parametri per la sostituzione:"
+
+msgid "You can't format the OS origin disk!"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -9531,11 +9565,36 @@ msgstr "smonta"
 msgid "version:"
 msgstr "versione:"
 
-#~ msgid "Cache"
-#~ msgstr "Cache"
+#~ msgid "Advanced Format"
+#~ msgstr "Formato Avanzato"
 
-#~ msgid "Mirror"
-#~ msgstr "Mirror"
+#~ msgid "Can't format the OS origin disk!"
+#~ msgstr "Non posso formattare il disco dell'OS"
 
-#~ msgid "Stripe"
-#~ msgstr "Stripe"
+#~ msgid "Don't erase the MBR (useful for some RAID controller cards)"
+#~ msgstr ""
+#~ "Non cancellare il MBR (utile nel caso si utilizzi dei controller RAID)"
+
+#~ msgid "Enable Advanced Format (4KB sector)"
+#~ msgstr "Attivare il formato avanzato (settori da 4KB)"
+
+#~ msgid ""
+#~ "Specify the percentage of space held back from normal users. Note that "
+#~ "lowering the threshold can adversely affect performance and auto-"
+#~ "defragmentation."
+#~ msgstr ""
+#~ "Specifica la percentuale di spazio tolta agli utenti normali. Si noti che "
+#~ "diminuendo la soglia si possono avere effetti negativi su prestazioni e auto-"
+#~ "deframmentazione."
+
+#~ msgid "Volume label of the new file system."
+#~ msgstr "Etichetta di volume del nuovo filesystem."
+
+#~ msgid "Create ZFS on GPT partition"
+#~ msgstr "Crea ZFS su partizione GPT"
+
+#~ msgid "MBR Erase"
+#~ msgstr "Camcellazione MBR"
+
+#~ msgid "Select"
+#~ msgstr "Selezionare"

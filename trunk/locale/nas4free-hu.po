@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-28 02:12+0000\n"
+"POT-Creation-Date: 2016-04-29 05:06+0000\n"
 "PO-Revision-Date: 2016-04-23 20:33+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-28 00:29+0000\n"
+"X-Launchpad-Export-Date: 2016-04-29 03:48+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -615,9 +615,6 @@ msgstr "Haladó"
 msgid "Advanced Configuration"
 msgstr "Részletes beállítás"
 
-msgid "Advanced Format"
-msgstr "Fejlett formázás"
-
 msgid "Advanced Options"
 msgstr "Haladó beállítások"
 
@@ -626,6 +623,9 @@ msgstr "Haladó beállítások"
 
 msgid "Advanced Setup"
 msgstr "Speciális beállítás"
+
+msgid "Advanced format"
+msgstr ""
 
 msgid "Advanced settings"
 msgstr "Speciális beállítások"
@@ -1235,9 +1235,6 @@ msgstr "Cache eszköz"
 msgid "Calibration Battery"
 msgstr "Elem kalibrálása"
 
-msgid "Can't format the OS origin disk!"
-msgstr "Nem formázhatja az operációs rendszert tartalmazó partíciót!"
-
 msgid "Can't get UFS ID."
 msgstr "Nincs UFS ID."
 
@@ -1385,6 +1382,10 @@ msgstr "LINK_DOWN esemény utasítása (pl. %s)."
 #, php-format
 msgid "Command for LINK_UP event (e.g. %s)."
 msgstr "LINK_UP esemény utasítása (pl. %s)."
+
+#, php-format
+msgid "Command output"
+msgstr ""
 
 msgid "Command output:"
 msgstr "Parancs kimenet:"
@@ -1713,8 +1714,8 @@ msgstr "HVM vendég létrehozása"
 msgid "Create PV Guest"
 msgstr "PV vendég létrehozása"
 
-msgid "Create ZFS on GPT partition"
-msgstr "ZFS létrehozása GPT partíción"
+msgid "Create ZFS on GPT partition."
+msgstr ""
 
 msgid "Create and initialize RAID."
 msgstr "RAID létrehozása és inicializálása."
@@ -2275,6 +2276,9 @@ msgstr "Discovery Auth Eljárás"
 msgid "Disk"
 msgstr "Lemez"
 
+msgid "Disk Selection"
+msgstr ""
+
 msgid "Disk space usage"
 msgstr "Lemezhasználat"
 
@@ -2535,8 +2539,9 @@ msgstr "Tartomány régi formátumú neve, pl.: MINTA."
 msgid "Domain name, e.g. example.com."
 msgstr "Tartománynév, pl.: minta.hu."
 
-msgid "Don't erase the MBR (useful for some RAID controller cards)"
-msgstr "Ne töröld az MBR-t (néhány RAID vezérlő kártyánál lehet hasznos)"
+msgid ""
+"Don't erase the Master Boot Record. (useful for some RAID controller cards)"
+msgstr ""
 
 msgid "Donate"
 msgstr "Adományozás"
@@ -2734,8 +2739,8 @@ msgstr "Engedélyezés"
 msgid "Enable ACL inheritance"
 msgstr "ACL öröklődés engedélyezése"
 
-msgid "Enable Advanced Format (4KB sector)"
-msgstr "Fejlett formázás bekapcsolása (4KB-os szektor)"
+msgid "Enable Advanced Format. (4KB sector)"
+msgstr ""
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Aszinkron I/O (AIO) engedélyezése"
@@ -3231,6 +3236,9 @@ msgstr "Fájlkezelő"
 msgid "File Path"
 msgstr "Elérési út"
 
+msgid "File System"
+msgstr ""
+
 msgid "File Transfer Protocol"
 msgstr "File Transfer Protocol"
 
@@ -3323,6 +3331,9 @@ msgstr ""
 
 msgid "Format"
 msgstr "Formázás"
+
+msgid "Format disk"
+msgstr ""
 
 msgid "Format the report for phpBB forum."
 msgstr "Jelentés formázása phpBB fórumhoz."
@@ -4466,6 +4477,12 @@ msgstr "Kisfeszültségű pontot"
 msgid "Low voltage trimming transfer point"
 msgstr "Kisfeszültségű átkapcsolási pontot"
 
+#, php-format
+msgid ""
+"Lowering this threshold can adversely affect performance and auto-"
+"defragmentation."
+msgstr ""
+
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4480,8 +4497,8 @@ msgstr "MAC cím"
 msgid "MAC address"
 msgstr "Fizikai cím (MAC address)"
 
-msgid "MBR Erase"
-msgstr "MBR törlése"
+msgid "MBR erase"
+msgstr ""
 
 msgid "MBR partition"
 msgstr "MBR partíció"
@@ -5143,6 +5160,10 @@ msgstr "Útvonal nem található."
 
 msgid "Note"
 msgstr "Megjegyzés"
+
+#, php-format
+msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
+msgstr ""
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -6304,9 +6325,6 @@ msgstr "Biztonság"
 msgid "See attribute E8."
 msgstr "Lásd E8 attribútum."
 
-msgid "Select"
-msgstr "Kiválasztás"
-
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
 "Secure (HTTPS) for the WebGUI."
@@ -6716,14 +6734,8 @@ msgid ""
 msgstr ""
 "Meghatározza, hogy a szuperfelhasználó (root) közvetlenül bejelentkezhet-e."
 
-msgid ""
-"Specify the percentage of space held back from normal users. Note that "
-"lowering the threshold can adversely affect performance and auto-"
-"defragmentation."
+msgid "Specify the percentage of space held back from normal users."
 msgstr ""
-"Határozd meg a normál felhasználóktól visszatartott hely százalékát. A "
-"küszöbérték csökkentése hátrányosan befolyásolhatja a teljesítményt és az "
-"automatikus-töredezettségmentesítést."
 
 msgid "Split request"
 msgstr "Osztott kérés"
@@ -8686,6 +8698,9 @@ msgstr "UCD-SNMP-MIB"
 msgid "UFS"
 msgstr "UFS"
 
+msgid "UFS (GPT and Soft Updates)"
+msgstr ""
+
 #, php-format
 msgid ""
 "UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
@@ -8695,6 +8710,12 @@ msgstr ""
 "UFS és ZFS a(z) %s NATÍV fájlrendszerei. Más fájlrendszer használata, mint "
 "például az EXT2, EXT3, EXT4, FAT, FAT32 vagy az NTFS kiszámíthatatlan "
 "eseményeket, fájlok sérüléseit, és adatvesztést okozhat!"
+
+msgid ""
+"UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
+"filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
+"unpredictable results, file corruption and loss of data!"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -8707,6 +8728,9 @@ msgstr ""
 "operációs rendszer). Az egyéb - mint FAT, FAT32, EXT2, EXT3 vagy NTFS - "
 "fájlrendszerekkel való kísérletezés kiszámíthatatlan eredményhez, fájl "
 "sérüléshez és adatvesztéshez vezethet!"
+
+msgid "UFS with Soft Updates"
+msgstr ""
 
 msgid "UID"
 msgstr "UID"
@@ -9094,6 +9118,9 @@ msgstr "VirtualBox"
 msgid "Volume"
 msgstr "Kötet"
 
+msgid "Volume Label"
+msgstr ""
+
 msgid "Volume Name"
 msgstr "Kötetnév"
 
@@ -9112,8 +9139,10 @@ msgstr ""
 msgid "Volume label"
 msgstr "Címke"
 
-msgid "Volume label of the new file system."
-msgstr "Az új kötet címkéje"
+msgid ""
+"Volume label of the new file system. Use a space to separate multiple "
+"labels. (if only one specified next will be auto increment)"
+msgstr ""
 
 msgid "Volume mode"
 msgstr "Kötet mód"
@@ -9275,6 +9304,9 @@ msgstr "Írási cache"
 msgid "Write only"
 msgstr "Csak írás"
 
+msgid "Wrong number of count for Volume Label"
+msgstr ""
+
 msgid "Wrong partition type or partition number."
 msgstr "Hibás a partíció típusa vagy a partíció száma."
 
@@ -9300,6 +9332,9 @@ msgstr ""
 
 msgid "You can use the following parameters for substitution:"
 msgstr "A következő paramétereket használhatod helyettesítésre:"
+
+msgid "You can't format the OS origin disk!"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -9568,11 +9603,35 @@ msgstr "leválasztás"
 msgid "version:"
 msgstr "verzió:"
 
-#~ msgid "Mirror"
-#~ msgstr "Tükör"
+#~ msgid "Can't format the OS origin disk!"
+#~ msgstr "Nem formázhatja az operációs rendszert tartalmazó partíciót!"
 
-#~ msgid "Cache"
-#~ msgstr "Gyorsítótár"
+#~ msgid "Volume label of the new file system."
+#~ msgstr "Az új kötet címkéje"
 
-#~ msgid "Stripe"
-#~ msgstr "Csík"
+#~ msgid "Don't erase the MBR (useful for some RAID controller cards)"
+#~ msgstr "Ne töröld az MBR-t (néhány RAID vezérlő kártyánál lehet hasznos)"
+
+#~ msgid "Create ZFS on GPT partition"
+#~ msgstr "ZFS létrehozása GPT partíción"
+
+#~ msgid "Enable Advanced Format (4KB sector)"
+#~ msgstr "Fejlett formázás bekapcsolása (4KB-os szektor)"
+
+#~ msgid "Advanced Format"
+#~ msgstr "Fejlett formázás"
+
+#~ msgid ""
+#~ "Specify the percentage of space held back from normal users. Note that "
+#~ "lowering the threshold can adversely affect performance and auto-"
+#~ "defragmentation."
+#~ msgstr ""
+#~ "Határozd meg a normál felhasználóktól visszatartott hely százalékát. A "
+#~ "küszöbérték csökkentése hátrányosan befolyásolhatja a teljesítményt és az "
+#~ "automatikus-töredezettségmentesítést."
+
+#~ msgid "MBR Erase"
+#~ msgstr "MBR törlése"
+
+#~ msgid "Select"
+#~ msgstr "Kiválasztás"

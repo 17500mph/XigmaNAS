@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-28 02:12+0000\n"
+"POT-Creation-Date: 2016-04-29 05:06+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-28 00:29+0000\n"
+"X-Launchpad-Export-Date: 2016-04-29 03:49+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -564,9 +564,6 @@ msgstr "고급"
 msgid "Advanced Configuration"
 msgstr "고급 환경 설정"
 
-msgid "Advanced Format"
-msgstr "확장 포맷"
-
 msgid "Advanced Options"
 msgstr "고급 옵션"
 
@@ -574,6 +571,9 @@ msgid "Advanced Settings"
 msgstr ""
 
 msgid "Advanced Setup"
+msgstr ""
+
+msgid "Advanced format"
 msgstr ""
 
 msgid "Advanced settings"
@@ -1142,9 +1142,6 @@ msgstr "장치 캐시"
 msgid "Calibration Battery"
 msgstr ""
 
-msgid "Can't format the OS origin disk!"
-msgstr "OS가 있는 원본 디스크를 포맷 할 수 없습니다!"
-
 msgid "Can't get UFS ID."
 msgstr ""
 
@@ -1282,6 +1279,10 @@ msgstr ""
 
 #, php-format
 msgid "Command for LINK_UP event (e.g. %s)."
+msgstr ""
+
+#, php-format
+msgid "Command output"
 msgstr ""
 
 msgid "Command output:"
@@ -1552,7 +1553,7 @@ msgstr ""
 msgid "Create PV Guest"
 msgstr ""
 
-msgid "Create ZFS on GPT partition"
+msgid "Create ZFS on GPT partition."
 msgstr ""
 
 msgid "Create and initialize RAID."
@@ -2099,6 +2100,9 @@ msgstr "발견(Discovery) 인증 방법"
 msgid "Disk"
 msgstr "디스크"
 
+msgid "Disk Selection"
+msgstr ""
+
 msgid "Disk space usage"
 msgstr "디스크 공간 사용"
 
@@ -2346,8 +2350,9 @@ msgstr "기존 포맷의 도메인 명. 예. EXAMPLE."
 msgid "Domain name, e.g. example.com."
 msgstr "도메인 명. 예. example.com."
 
-msgid "Don't erase the MBR (useful for some RAID controller cards)"
-msgstr "MBR을 지우지 않습니다(몇몇 RAID 컨트롤러 카드에 유용)"
+msgid ""
+"Don't erase the Master Boot Record. (useful for some RAID controller cards)"
+msgstr ""
 
 msgid "Donate"
 msgstr "기증"
@@ -2545,8 +2550,8 @@ msgstr "활성화"
 msgid "Enable ACL inheritance"
 msgstr ""
 
-msgid "Enable Advanced Format (4KB sector)"
-msgstr "확장 포맷 활성화(4KB 섹터)"
+msgid "Enable Advanced Format. (4KB sector)"
+msgstr ""
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "비동기적 I/O 활성화(AIO)"
@@ -3010,6 +3015,9 @@ msgstr "파일 관리자"
 msgid "File Path"
 msgstr ""
 
+msgid "File System"
+msgstr ""
+
 msgid "File Transfer Protocol"
 msgstr "파일 전송 프로토콜"
 
@@ -3100,6 +3108,9 @@ msgstr ""
 
 msgid "Format"
 msgstr "포맷"
+
+msgid "Format disk"
+msgstr ""
 
 msgid "Format the report for phpBB forum."
 msgstr "phpBB 포럼에 대한 보고서 형식으로 포맷."
@@ -4165,6 +4176,12 @@ msgstr ""
 msgid "Low voltage trimming transfer point"
 msgstr ""
 
+#, php-format
+msgid ""
+"Lowering this threshold can adversely affect performance and auto-"
+"defragmentation."
+msgstr ""
+
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4176,7 +4193,7 @@ msgstr ""
 msgid "MAC address"
 msgstr "MAC 주소"
 
-msgid "MBR Erase"
+msgid "MBR erase"
 msgstr ""
 
 msgid "MBR partition"
@@ -4801,6 +4818,10 @@ msgstr ""
 
 msgid "Note"
 msgstr "참조"
+
+#, php-format
+msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
+msgstr ""
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -5905,9 +5926,6 @@ msgstr "보안"
 msgid "See attribute E8."
 msgstr ""
 
-msgid "Select"
-msgstr ""
-
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
 "Secure (HTTPS) for the WebGUI."
@@ -6278,13 +6296,8 @@ msgid ""
 "Specifies whether it is allowed to login as superuser (root) directly."
 msgstr "슈퍼유저(root)로 직접 로그인 하는 것을 허용하는지 여부를 명세 합니다."
 
-msgid ""
-"Specify the percentage of space held back from normal users. Note that "
-"lowering the threshold can adversely affect performance and auto-"
-"defragmentation."
+msgid "Specify the percentage of space held back from normal users."
 msgstr ""
-"일반 사용자로부터 되돌려 받을 공간의 비율을 명세 합니다. 이 값을 낮추는 것은 성능과 자동 조각 모음에 심각한 영향을 미칠 수도 있다는 "
-"것에 주의하십시오."
 
 msgid "Split request"
 msgstr "분할 요청"
@@ -8009,11 +8022,20 @@ msgstr "UCD-SNMP-MIB"
 msgid "UFS"
 msgstr ""
 
+msgid "UFS (GPT and Soft Updates)"
+msgstr ""
+
 #, php-format
 msgid ""
 "UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
 "filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
 "unpredictable results, file corruption and the loss of data!"
+msgstr ""
+
+msgid ""
+"UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
+"filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
+"unpredictable results, file corruption and loss of data!"
 msgstr ""
 
 #, php-format
@@ -8025,6 +8047,9 @@ msgid ""
 msgstr ""
 "UFS와 그 변종은 FreeBSD(%s의 기반 OS)의 기본 파일 포맷입니다. FAT, FAT32, EXT2, EXT3이나 NTFS와 "
 "같은 다른 파일 포맷을 이용하려고 하는 것은 파일 붕괴와 데이터 손실과 같은 예측할 수 없는 결과를 야기할 수 있습니다."
+
+msgid "UFS with Soft Updates"
+msgstr ""
 
 msgid "UID"
 msgstr "UID"
@@ -8399,6 +8424,9 @@ msgstr ""
 msgid "Volume"
 msgstr ""
 
+msgid "Volume Label"
+msgstr ""
+
 msgid "Volume Name"
 msgstr "볼륨 명"
 
@@ -8417,8 +8445,10 @@ msgstr ""
 msgid "Volume label"
 msgstr "볼륨 라벨"
 
-msgid "Volume label of the new file system."
-msgstr "새 파일 시스템의 볼륨 라벨."
+msgid ""
+"Volume label of the new file system. Use a space to separate multiple "
+"labels. (if only one specified next will be auto increment)"
+msgstr ""
 
 msgid "Volume mode"
 msgstr ""
@@ -8564,6 +8594,9 @@ msgstr ""
 msgid "Write only"
 msgstr "쓰기 전용"
 
+msgid "Wrong number of count for Volume Label"
+msgstr ""
+
 msgid "Wrong partition type or partition number."
 msgstr "잘못된 파티션 타입이나 파티션 번호."
 
@@ -8587,6 +8620,9 @@ msgstr ""
 
 msgid "You can use the following parameters for substitution:"
 msgstr "치환을 위해 아래의 인자들을 이용할 수 있습니다:"
+
+msgid "You can't format the OS origin disk!"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -8842,11 +8878,25 @@ msgstr "마운트 해제"
 msgid "version:"
 msgstr ""
 
-#~ msgid "Cache"
-#~ msgstr "캐시"
+#~ msgid "Advanced Format"
+#~ msgstr "확장 포맷"
 
-#~ msgid "Mirror"
-#~ msgstr "미러"
+#~ msgid "Can't format the OS origin disk!"
+#~ msgstr "OS가 있는 원본 디스크를 포맷 할 수 없습니다!"
 
-#~ msgid "Stripe"
-#~ msgstr "Stripe"
+#~ msgid "Don't erase the MBR (useful for some RAID controller cards)"
+#~ msgstr "MBR을 지우지 않습니다(몇몇 RAID 컨트롤러 카드에 유용)"
+
+#~ msgid "Enable Advanced Format (4KB sector)"
+#~ msgstr "확장 포맷 활성화(4KB 섹터)"
+
+#~ msgid ""
+#~ "Specify the percentage of space held back from normal users. Note that "
+#~ "lowering the threshold can adversely affect performance and auto-"
+#~ "defragmentation."
+#~ msgstr ""
+#~ "일반 사용자로부터 되돌려 받을 공간의 비율을 명세 합니다. 이 값을 낮추는 것은 성능과 자동 조각 모음에 심각한 영향을 미칠 수도 있다는 "
+#~ "것에 주의하십시오."
+
+#~ msgid "Volume label of the new file system."
+#~ msgstr "새 파일 시스템의 볼륨 라벨."

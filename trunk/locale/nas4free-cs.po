@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-04-28 02:12+0000\n"
+"POT-Creation-Date: 2016-04-29 05:06+0000\n"
 "PO-Revision-Date: 2016-03-28 09:26+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-28 00:28+0000\n"
+"X-Launchpad-Export-Date: 2016-04-29 03:48+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -624,9 +624,6 @@ msgstr "Pokročilé"
 msgid "Advanced Configuration"
 msgstr "Pokročilá nastavení"
 
-msgid "Advanced Format"
-msgstr "Pokročilý formát"
-
 msgid "Advanced Options"
 msgstr "Pokročilé předvolby"
 
@@ -635,6 +632,9 @@ msgstr "Pokročilá nastavení"
 
 msgid "Advanced Setup"
 msgstr "Pokročilá nastavení"
+
+msgid "Advanced format"
+msgstr ""
 
 msgid "Advanced settings"
 msgstr "Pokročilá nastavení"
@@ -1255,11 +1255,6 @@ msgstr "Zařízení mezipaměti"
 msgid "Calibration Battery"
 msgstr "Kalibrace akumulátorů"
 
-msgid "Can't format the OS origin disk!"
-msgstr ""
-"Není možné zformátovat disk, ze kterého je v tuto chvíli spuštěný operační "
-"systém!"
-
 msgid "Can't get UFS ID."
 msgstr "Nezdařilo se získat UFS identifikátor."
 
@@ -1415,6 +1410,10 @@ msgid "Command for LINK_UP event (e.g. %s)."
 msgstr ""
 "Příkaz, který vykonat v případě události LINK_UP (připojení do sítě) (např. "
 "%s)."
+
+#, php-format
+msgid "Command output"
+msgstr ""
 
 msgid "Command output:"
 msgstr "Výstup z příkazu:"
@@ -1760,8 +1759,8 @@ msgstr "Vytvořit virt. stroj (HVM)"
 msgid "Create PV Guest"
 msgstr "Vytvořit virtualizační kontejner (PV)"
 
-msgid "Create ZFS on GPT partition"
-msgstr "Vytvořit soub. systém ZFS na GPT oddílu"
+msgid "Create ZFS on GPT partition."
+msgstr ""
 
 msgid "Create and initialize RAID."
 msgstr "Vytvořit a inicializovat RAID pole."
@@ -2332,6 +2331,9 @@ msgstr "Ověřovací metoda pro zjišťování"
 msgid "Disk"
 msgstr "Disk"
 
+msgid "Disk Selection"
+msgstr ""
+
 msgid "Disk space usage"
 msgstr "Obsazený prostor"
 
@@ -2594,8 +2596,9 @@ msgstr "Název domény ve starém formátu, např. EXAMPLE."
 msgid "Domain name, e.g. example.com."
 msgstr "Název domény, např.: example.com."
 
-msgid "Don't erase the MBR (useful for some RAID controller cards)"
-msgstr "Nemazat MBR (užitečné v případě některých RAID řadičů)"
+msgid ""
+"Don't erase the Master Boot Record. (useful for some RAID controller cards)"
+msgstr ""
 
 msgid "Donate"
 msgstr "Podpořit vývoj finančně"
@@ -2793,8 +2796,8 @@ msgstr "Zapnout"
 msgid "Enable ACL inheritance"
 msgstr "Zapnout přebírání ACL seznamů."
 
-msgid "Enable Advanced Format (4KB sector)"
-msgstr "Zapnout pokročilý formát (4KB sektor)"
+msgid "Enable Advanced Format. (4KB sector)"
+msgstr ""
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Zapnout asynchronní vst./výst. (AIO)"
@@ -3295,6 +3298,9 @@ msgstr "Správce souborů"
 msgid "File Path"
 msgstr "Popis umístění souboru"
 
+msgid "File System"
+msgstr ""
+
 msgid "File Transfer Protocol"
 msgstr "File Transfer Protocol (protokol pro přenos souborů)"
 
@@ -3391,6 +3397,9 @@ msgstr ""
 
 msgid "Format"
 msgstr "Formátovat"
+
+msgid "Format disk"
+msgstr ""
 
 msgid "Format the report for phpBB forum."
 msgstr "Připravit výstup do podoby vhodné pro phpBB fórum."
@@ -4565,6 +4574,12 @@ msgstr ""
 "Úroveň podpětí, od které je pro napájená zařízení už přijatelné a není tedy "
 "třeba vyrovnávat a zatěžovat tak transformátor UPS zdroje"
 
+#, php-format
+msgid ""
+"Lowering this threshold can adversely affect performance and auto-"
+"defragmentation."
+msgstr ""
+
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4579,8 +4594,8 @@ msgstr "MAC adresa"
 msgid "MAC address"
 msgstr "MAC adresa"
 
-msgid "MBR Erase"
-msgstr "Vymazat hlavní zaváděcí záznam (MBR)"
+msgid "MBR erase"
+msgstr ""
 
 msgid "MBR partition"
 msgstr "MBR diskový oddíl"
@@ -5247,6 +5262,10 @@ msgstr "Umístění nebylo nalezeno."
 
 msgid "Note"
 msgstr "Poznámka"
+
+#, php-format
+msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
+msgstr ""
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -6407,9 +6426,6 @@ msgstr "Zabezpečení"
 msgid "See attribute E8."
 msgstr "Viz atribut E8"
 
-msgid "Select"
-msgstr "Vybrat"
-
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
 "Secure (HTTPS) for the WebGUI."
@@ -6818,14 +6834,8 @@ msgid ""
 msgstr ""
 "Určuje, zda bude možné se přihlásit  přímo jako správce systému (root)."
 
-msgid ""
-"Specify the percentage of space held back from normal users. Note that "
-"lowering the threshold can adversely affect performance and auto-"
-"defragmentation."
+msgid "Specify the percentage of space held back from normal users."
 msgstr ""
-"Určuje procento úložné kapacity, která bude držena jako rezerva stranou a "
-"neposkytována běžným uživatelům. Pozor, snížení této hranice může nepříznivě "
-"ovlivnit výkon a automatickou defragmentaci."
 
 msgid "Split request"
 msgstr "Rozdělit požadavek"
@@ -8818,6 +8828,9 @@ msgstr "UCD-SNMP-MIB"
 msgid "UFS"
 msgstr "UFS"
 
+msgid "UFS (GPT and Soft Updates)"
+msgstr ""
+
 #, php-format
 msgid ""
 "UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
@@ -8828,6 +8841,12 @@ msgstr ""
 "souborových systémů, jako třeba EXT2, EXT3, EXT4, FAT, FAT32, nebo NTFS může "
 "vést k neočekávaným výsledkům, poškození souborového systému a vůbec ke "
 "ztrátě dat!"
+
+msgid ""
+"UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
+"filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
+"unpredictable results, file corruption and loss of data!"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -8840,6 +8859,9 @@ msgstr ""
 "založený) PŘIROZENÝM souborovým systémem. Pokus o použití ostatních "
 "souborových systémů, jako např. FAT, FAT32, EXT2, EXT3, EXT4 nebo NTFS může "
 "vyústit v nečekané důsledky, poškození souborů a ztrátu dat!"
+
+msgid "UFS with Soft Updates"
+msgstr ""
 
 msgid "UID"
 msgstr "Jedinečný identifikátor"
@@ -9233,6 +9255,9 @@ msgstr "VirtualBox"
 msgid "Volume"
 msgstr "Svazek"
 
+msgid "Volume Label"
+msgstr ""
+
 msgid "Volume Name"
 msgstr "Název svazku"
 
@@ -9251,8 +9276,10 @@ msgstr ""
 msgid "Volume label"
 msgstr "Štítek svazku"
 
-msgid "Volume label of the new file system."
-msgstr "Štítek nového souborového systému"
+msgid ""
+"Volume label of the new file system. Use a space to separate multiple "
+"labels. (if only one specified next will be auto increment)"
+msgstr ""
 
 msgid "Volume mode"
 msgstr "Režim svazku"
@@ -9416,6 +9443,9 @@ msgstr "Mezipaměť zápisu"
 msgid "Write only"
 msgstr "Pouze zápis"
 
+msgid "Wrong number of count for Volume Label"
+msgstr ""
+
 msgid "Wrong partition type or partition number."
 msgstr "Chybný typ nebo číslo oddílu."
 
@@ -9441,6 +9471,9 @@ msgstr ""
 
 msgid "You can use the following parameters for substitution:"
 msgstr "Pro dosazování je možné použít následující parametry:"
+
+msgid "You can't format the OS origin disk!"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -9723,11 +9756,37 @@ msgstr "odpojit (umount)"
 msgid "version:"
 msgstr "verze:"
 
-#~ msgid "Mirror"
-#~ msgstr "Zrcadlo"
+#~ msgid "Don't erase the MBR (useful for some RAID controller cards)"
+#~ msgstr "Nemazat MBR (užitečné v případě některých RAID řadičů)"
 
-#~ msgid "Cache"
-#~ msgstr "Mezipaměť"
+#~ msgid "Advanced Format"
+#~ msgstr "Pokročilý formát"
 
-#~ msgid "Stripe"
-#~ msgstr "Prokládat"
+#~ msgid "Enable Advanced Format (4KB sector)"
+#~ msgstr "Zapnout pokročilý formát (4KB sektor)"
+
+#~ msgid ""
+#~ "Specify the percentage of space held back from normal users. Note that "
+#~ "lowering the threshold can adversely affect performance and auto-"
+#~ "defragmentation."
+#~ msgstr ""
+#~ "Určuje procento úložné kapacity, která bude držena jako rezerva stranou a "
+#~ "neposkytována běžným uživatelům. Pozor, snížení této hranice může nepříznivě "
+#~ "ovlivnit výkon a automatickou defragmentaci."
+
+#~ msgid "Can't format the OS origin disk!"
+#~ msgstr ""
+#~ "Není možné zformátovat disk, ze kterého je v tuto chvíli spuštěný operační "
+#~ "systém!"
+
+#~ msgid "Create ZFS on GPT partition"
+#~ msgstr "Vytvořit soub. systém ZFS na GPT oddílu"
+
+#~ msgid "Volume label of the new file system."
+#~ msgstr "Štítek nového souborového systému"
+
+#~ msgid "MBR Erase"
+#~ msgstr "Vymazat hlavní zaváděcí záznam (MBR)"
+
+#~ msgid "Select"
+#~ msgstr "Vybrat"

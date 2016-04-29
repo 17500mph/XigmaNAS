@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-28 02:12+0000\n"
+"POT-Creation-Date: 2016-04-29 05:06+0000\n"
 "PO-Revision-Date: 2016-03-23 12:38+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-28 00:30+0000\n"
+"X-Launchpad-Export-Date: 2016-04-29 03:49+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -620,9 +620,6 @@ msgstr "Setări Avansate"
 msgid "Advanced Configuration"
 msgstr "Configurare Avansată"
 
-msgid "Advanced Format"
-msgstr "Format Avansat"
-
 msgid "Advanced Options"
 msgstr "Opțiuni Avansate"
 
@@ -631,6 +628,9 @@ msgstr "Setări avansate"
 
 msgid "Advanced Setup"
 msgstr "Setări avansate"
+
+msgid "Advanced format"
+msgstr ""
 
 msgid "Advanced settings"
 msgstr "Setări Avansate"
@@ -1247,9 +1247,6 @@ msgstr "Dispozitiv Cache"
 msgid "Calibration Battery"
 msgstr "Calibrare acumulator"
 
-msgid "Can't format the OS origin disk!"
-msgstr "Nu se poate formata discul sistem!"
-
 msgid "Can't get UFS ID."
 msgstr "ID UFS inaccesibil."
 
@@ -1399,6 +1396,10 @@ msgstr "Comanda pentru LINK_DOWN (ex. %s)."
 #, php-format
 msgid "Command for LINK_UP event (e.g. %s)."
 msgstr "Comanda pentru LINK_UP (ex. %s)."
+
+#, php-format
+msgid "Command output"
+msgstr ""
 
 msgid "Command output:"
 msgstr "Rezultat comandă:"
@@ -1755,8 +1756,8 @@ msgstr "Creare cont HVM Guest"
 msgid "Create PV Guest"
 msgstr "Creare cont PV Guest"
 
-msgid "Create ZFS on GPT partition"
-msgstr "Creare ZFS în partiție GPT"
+msgid "Create ZFS on GPT partition."
+msgstr ""
 
 msgid "Create and initialize RAID."
 msgstr "Creare și inițializare RAID."
@@ -2320,6 +2321,9 @@ msgstr "Descoperire Metodă Autentificare"
 msgid "Disk"
 msgstr "Disc"
 
+msgid "Disk Selection"
+msgstr ""
+
 msgid "Disk space usage"
 msgstr "Utilizare spaţiu disc"
 
@@ -2579,9 +2583,9 @@ msgstr "Numele de Domeniu în formatul vechi, ex. EXEMPLU."
 msgid "Domain name, e.g. example.com."
 msgstr "Nume domeniu, ex. exemplu.com."
 
-msgid "Don't erase the MBR (useful for some RAID controller cards)"
+msgid ""
+"Don't erase the Master Boot Record. (useful for some RAID controller cards)"
 msgstr ""
-"MBR-ul nu va fi sters la formatare (util pentru unele controlere RAID)"
 
 msgid "Donate"
 msgstr "Donează"
@@ -2779,8 +2783,8 @@ msgstr "Activare"
 msgid "Enable ACL inheritance"
 msgstr "Activeaza mostenirea permiselor ACL"
 
-msgid "Enable Advanced Format (4KB sector)"
-msgstr "Activare Format Avansat (sector 4KB)"
+msgid "Enable Advanced Format. (4KB sector)"
+msgstr ""
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Activare mod I/O Asincron (AIO)"
@@ -3279,6 +3283,9 @@ msgstr "Manager de Fișiere"
 msgid "File Path"
 msgstr "Cale fișier"
 
+msgid "File System"
+msgstr ""
+
 msgid "File Transfer Protocol"
 msgstr "Protocol Transfer Fișiere"
 
@@ -3372,6 +3379,9 @@ msgstr ""
 
 msgid "Format"
 msgstr "Formatare"
+
+msgid "Format disk"
+msgstr ""
 
 msgid "Format the report for phpBB forum."
 msgstr "Format raport utilizat de forumul phpBB."
@@ -4539,6 +4549,12 @@ msgstr "Punct de transfer pentru tensiune minimă"
 msgid "Low voltage trimming transfer point"
 msgstr "Ajustare punct de transfer tensiune minimă"
 
+#, php-format
+msgid ""
+"Lowering this threshold can adversely affect performance and auto-"
+"defragmentation."
+msgstr ""
+
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4553,8 +4569,8 @@ msgstr "Adresă MAC"
 msgid "MAC address"
 msgstr "Adresa MAC"
 
-msgid "MBR Erase"
-msgstr "Ștergere MBR"
+msgid "MBR erase"
+msgstr ""
 
 msgid "MBR partition"
 msgstr "Partiție MBR"
@@ -5213,6 +5229,10 @@ msgstr "Calea nu a fost găsită."
 
 msgid "Note"
 msgstr "Obs."
+
+#, php-format
+msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
+msgstr ""
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -6364,9 +6384,6 @@ msgstr "Securitate"
 msgid "See attribute E8."
 msgstr "Vezi valoarea E8."
 
-msgid "Select"
-msgstr "Selectare"
-
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
 "Secure (HTTPS) for the WebGUI."
@@ -6779,14 +6796,8 @@ msgid ""
 msgstr ""
 "Specifică dacă vă puteți autentifica direct ca superutilizator (root)."
 
-msgid ""
-"Specify the percentage of space held back from normal users. Note that "
-"lowering the threshold can adversely affect performance and auto-"
-"defragmentation."
+msgid "Specify the percentage of space held back from normal users."
 msgstr ""
-"Specificați în procente spațiul păstrat liber, transparent pentru "
-"utilizatorii normali. Atenție: micșorarea limitei spațiului alocat poate "
-"afecta performanța globală a sistemului și procesul de auto-defragmentare."
 
 msgid "Split request"
 msgstr "Cerere splitare"
@@ -8766,6 +8777,9 @@ msgstr "UCD-SNMP-MIB"
 msgid "UFS"
 msgstr "UFS"
 
+msgid "UFS (GPT and Soft Updates)"
+msgstr ""
+
 #, php-format
 msgid ""
 "UFS and ZFS are NATIVE filesystems of %s. Attempting to use other "
@@ -8775,6 +8789,12 @@ msgstr ""
 "UFS și ZFS sunt formatele NATIVE pentru %s. Utilizarea altor sisteme de "
 "fișiere ca EXT2, EXT3, EXT4, FAT, FAT32 sau NTFS poate duce la rezultate "
 "impredictibile, corupere de fișiere cu chiar pierderi de date!"
+
+msgid ""
+"UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
+"filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
+"unpredictable results, file corruption and loss of data!"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -8787,6 +8807,9 @@ msgstr ""
 "FreeBSD (sistemul sursă al %s). Utilizarea altor sisteme de fișiere gen FAT, "
 "FAT32, EXT2, EXT3, sau NTFS poate produce rezultate nedorite (inclusiv "
 "pierderi de date)!"
+
+msgid "UFS with Soft Updates"
+msgstr ""
 
 msgid "UID"
 msgstr "UID"
@@ -9185,6 +9208,9 @@ msgstr "VirtualBox"
 msgid "Volume"
 msgstr "Volum"
 
+msgid "Volume Label"
+msgstr ""
+
 msgid "Volume Name"
 msgstr "Nume Volum"
 
@@ -9203,8 +9229,10 @@ msgstr ""
 msgid "Volume label"
 msgstr "Etichetă volum"
 
-msgid "Volume label of the new file system."
-msgstr "Eticheta de volum a noului sistem de fișiere."
+msgid ""
+"Volume label of the new file system. Use a space to separate multiple "
+"labels. (if only one specified next will be auto increment)"
+msgstr ""
 
 msgid "Volume mode"
 msgstr "Mod volum"
@@ -9365,6 +9393,9 @@ msgstr "Cache Scriere"
 msgid "Write only"
 msgstr "Doar scriere"
 
+msgid "Wrong number of count for Volume Label"
+msgstr ""
+
 msgid "Wrong partition type or partition number."
 msgstr "Tip partiție sau număr partiție eronat."
 
@@ -9390,6 +9421,9 @@ msgstr ""
 
 msgid "You can use the following parameters for substitution:"
 msgstr "Puteți folosi următorii parametri pentru substituție:"
+
+msgid "You can't format the OS origin disk!"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -9664,11 +9698,36 @@ msgstr "demontare"
 msgid "version:"
 msgstr "versiune:"
 
-#~ msgid "Cache"
-#~ msgstr "Cache"
+#~ msgid "Can't format the OS origin disk!"
+#~ msgstr "Nu se poate formata discul sistem!"
 
-#~ msgid "Stripe"
-#~ msgstr "Stripe"
+#~ msgid "Enable Advanced Format (4KB sector)"
+#~ msgstr "Activare Format Avansat (sector 4KB)"
 
-#~ msgid "Mirror"
-#~ msgstr "Oglindă"
+#~ msgid "Advanced Format"
+#~ msgstr "Format Avansat"
+
+#~ msgid "Don't erase the MBR (useful for some RAID controller cards)"
+#~ msgstr ""
+#~ "MBR-ul nu va fi sters la formatare (util pentru unele controlere RAID)"
+
+#~ msgid ""
+#~ "Specify the percentage of space held back from normal users. Note that "
+#~ "lowering the threshold can adversely affect performance and auto-"
+#~ "defragmentation."
+#~ msgstr ""
+#~ "Specificați în procente spațiul păstrat liber, transparent pentru "
+#~ "utilizatorii normali. Atenție: micșorarea limitei spațiului alocat poate "
+#~ "afecta performanța globală a sistemului și procesul de auto-defragmentare."
+
+#~ msgid "Create ZFS on GPT partition"
+#~ msgstr "Creare ZFS în partiție GPT"
+
+#~ msgid "Volume label of the new file system."
+#~ msgstr "Eticheta de volum a noului sistem de fișiere."
+
+#~ msgid "MBR Erase"
+#~ msgstr "Ștergere MBR"
+
+#~ msgid "Select"
+#~ msgstr "Selectare"
