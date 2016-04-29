@@ -140,7 +140,7 @@ if ($_POST) {
 					// Set new file system type attribute ('fstype') in configuration.
 					$opt = array();
 					$opt['zfsgpt'] = $zfsgpt ? "p1" : "";
-					set_conf_disk_fstype($disk, $type, $opt);
+					set_conf_disk_fstype_opt($disk, $type, $opt);
 
 					if (count($volumelabels) == 1 && count($disks) > 1) {
 						for ($i = 0; $i < count($disks); $i++) {
