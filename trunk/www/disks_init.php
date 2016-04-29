@@ -6,15 +6,12 @@
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
-	Portions of freenas (http://www.freenas.org).
-	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
-	All rights reserved.
-
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -33,7 +30,7 @@
 	The views and conclusions contained in the software and documentation are those
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
-*/
+ */
 require("auth.inc");
 require("guiconfig.inc");
 
@@ -49,7 +46,6 @@ unset($a_fst['ufs']); // Remove old UFS type: Now NAS4Free will impose only one 
 unset($a_fst['ufs_no_su']);
 unset($a_fst['ufsgpt_no_su']);
 unset($a_fst['exfat']); // Remove exFAT: need test
-
 // Load the /etc/cfdevice file to find out on which disk the OS is installed.
 $cfdevice = trim(file_get_contents("{$g['etc_path']}/cfdevice"));
 $cfdevice = "/dev/{$cfdevice}";
@@ -60,214 +56,274 @@ $a_disk = get_conf_all_disks_list_filtered();
 function get_fs_type($devicespecialfile) {
 	global $a_disk;
 	$index = array_search_ex($devicespecialfile, $a_disk, "devicespecialfile");
-	if (false === $index)
+	if (false === $index) {
 		return "";
+	}
 	return $a_disk[$index]['fstype'];
 }
 
 if (is_ajax()) {
 	$devfile = $_GET['devfile'];
-	$fstype = get_fs_type($devfile);
+	$fstype = \get_fs_type($devfile);
 	render_ajax($fstype);
 }
 
+function filter_disk($array) {
+	return array_filter($array, function($diskv) {
+		if (0 != strcmp($diskv['size'], "NA") && 1 != disks_exists($diskv['devicespecialfile'])) {
+			return $diskv;
+		}
+	});
+}
+
 // Advanced Format
-$pconfig['aft4k'] = false;
+$pconfig['aft4k'] = $aft4k = false;
 
 // ZFS on GPT
 $pconfig['zfsgpt'] = false;
+
+$do_format = array();
+$disks = array();
+$type = 'zfs';
+$minspace = '';
+$volumelabels = $_volumelabels = array();
 
 if ($_POST) {
 	unset($input_errors);
 	unset($errormsg);
 	unset($do_format);
 
+	$disks = $_POST['disks'];
+	$type = $_POST['type'];
+	$minspace = $_POST['minspace'];
+	$notinitmbr = isset($_POST['notinitmbr']) ? true : false;
+	$aft4k = isset($_POST['aft4k']) ? true : false;
+	$zfsgpt = isset($_POST['zfsgpt']) ? true : false;
+	$volumelabels = explode(" ", trim($_POST['volumelabels']));
+
 	// Input validation.
-	$reqdfields = explode(" ", "disk type");
-	$reqdfieldsn = array(gettext("Disk"),gettext("Type"));
+	$reqdfields = explode(" ", "disks type");
+	$reqdfieldsn = array(gettext("Disk"), gettext("Type"));
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
-	$reqdfields = explode(" ", "volumelabel");
-	$reqdfieldsn = array(gettext("Volume label"));
-	$reqdfieldst = explode(" ", "alias");
-	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
+	foreach ($volumelabels as $volumelabel) {
+		$reqdfields = explode(" ", "volumelabel");
+		$reqdfieldsn = array(gettext("Volume label"));
+		$reqdfieldst = explode(" ", "alias");
+		do_input_validation_type(array('volumelabel' => $volumelabel), $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
+	}
+
+	if (count($volumelabels) > 1 && count($volumelabels) > count($disks)) {
+		$input_errors[] = gettext("Wrong number of count for Volume Label");
+	}
 
 	if (empty($input_errors)) {
-		$do_format = true;
-		$disk = $_POST['disk'];
-		$type = $_POST['type'];
-		$minspace = $_POST['minspace'];
-		$notinitmbr = isset($_POST['notinitmbr']) ? true : false;
-		$volumelabel = $_POST['volumelabel'];
-		$aft4k = isset($_POST['aft4k']) ? true : false;
-		$zfsgpt = isset($_POST['zfsgpt']) ? true : false;
+		$do_format = array();
 
-		// Check whether disk is mounted.
-		if (disks_ismounted_ex($disk, "devicespecialfile")) {
-			$errormsg = sprintf(gettext("The disk is currently mounted! <a href='%s'>Unmount</a> this disk first before proceeding."), "disks_mount_tools.php?disk={$disk}&action=umount");
-			$do_format = false;
-		}
+		if (count($disks) > 0) {
 
-		// Check if user tries to format the OS disk.
-		if (preg_match("/" . preg_quote($disk, "/") . "\D+/", $cfdevice)) {
-			$input_errors[] = gettext("Can't format the OS origin disk!");
-		}
+			foreach ($disks as $key => $disk) {
+				$do_format[$key] = true;
+				// Check whether disk is mounted.
+				if (disks_ismounted_ex($disk, "devicespecialfile")) {
+					$errormsg = sprintf(gettext("The disk is currently mounted! <a href='%s'>Unmount</a> this disk first before proceeding."), "disks_mount_tools.php?disk={$disk}&action=umount");
+					$do_format[$key] = false;
+				}
 
-		if ($do_format) {
-			// Set new file system type attribute ('fstype') in configuration.
-			$opt = array();
-			$opt['zfsgpt'] = $zfsgpt ? "p1" : "";
-			set_conf_disk_fstype_opt($disk, $type, $opt);
+				// Check if user tries to format the OS disk.
+				if (preg_match("/" . preg_quote($disk, "/") . "\D+/", $cfdevice)) {
+					$input_errors[] = gettext("You can't format the OS origin disk!");
+					$do_format[$key] = false;
+				}
 
-			write_config();
+				if ($do_format[$key]) {
+					// Set new file system type attribute ('fstype') in configuration.
+					$opt = array();
+					$opt['zfsgpt'] = $zfsgpt ? "p1" : "";
+					set_conf_disk_fstype($disk, $type, $opt);
 
-			// Update list of configured disks.
-			$a_disk = get_conf_all_disks_list_filtered();
+					if (count($volumelabels) == 1 && count($disks) > 1) {
+						for ($i = 0; $i < count($disks); $i++) {
+							$_volumelabels[$i] = "${volumelabels[0]}${i}";
+						}
+					} elseif (count($volumelabels) == 1 && count($disks) == 1) {
+						$_volumelabels[0] = $volumelabels[0];
+					} else {
+						$_volumelabels = $volumelabels;
+					}
+					write_config();
+					// Update list of configured disks.
+					$a_disk = get_conf_all_disks_list_filtered();
+				}
+			}
 		}
 	}
 }
-
-if (!isset($do_format)) {
-	$do_format = false;
-	$disk = '';
-	$type = '';
-	$minspace = '';
-	$volumelabel = '';
-	$aft4k = false;
-	$zfsgpt = false;
-}
 ?>
-<?php include("fbegin.inc");?>
+<?php include("fbegin.inc"); ?>
 <script type="text/javascript">//<![CDATA[
-$(document).ready(function(){
-	var gui = new GUI;
-	$('#type').change(function(){
-		switch ($('#type').val()) {
-		case "ufsgpt":
-			$('#minspace_tr').show();
-			$('#volumelabel_tr').show();
-			$('#aft4k_tr').show();
-			$('#zfsgpt_tr').hide();
-			break;
-		case "ext2":
-		case "msdos":
-			$('#minspace_tr').hide();
-			$('#volumelabel_tr').show();
-			$('#aft4k_tr').hide();
-			$('#zfsgpt_tr').hide();
-			break;
-		case "zfs":
-			$('#minspace_tr').hide();
-			$('#volumelabel_tr').hide();
-			$('#aft4k_tr').hide();
-			$('#zfsgpt_tr').show();
-			break;
-		default:
-			$('#minspace_tr').hide();
-			$('#volumelabel_tr').hide();
-			$('#aft4k_tr').hide();
-			$('#zfsgpt_tr').hide();
-			break;
-		}
-	});
-	$('#disk').change(function(){
-		var devfile = $('#disk').val();
-		gui.ajax('', { devfile: devfile }, function(data){
-			$('#type').val(data.data).change();
+	$(document).ready(function () {
+		var gui = new GUI;
+		$('#type').change(function () {
+			switch ($('#type').val()) {
+				case "ufsgpt":
+					$('#minspace_tr').show();
+					$('#volumelabel_tr').show();
+					$('#aft4k_tr').show();
+					$('#zfsgpt_tr').hide();
+					break;
+				case "ext2":
+				case "msdos":
+					$('#minspace_tr').hide();
+					$('#volumelabel_tr').show();
+					$('#aft4k_tr').hide();
+					$('#zfsgpt_tr').hide();
+					break;
+				case "zfs":
+					$('#minspace_tr').hide();
+					$('#volumelabel_tr').hide();
+					$('#aft4k_tr').hide();
+					$('#zfsgpt_tr').show();
+					break;
+				default:
+					$('#minspace_tr').hide();
+					$('#volumelabel_tr').hide();
+					$('#aft4k_tr').hide();
+					$('#zfsgpt_tr').hide();
+					break;
+			}
 		});
+		$('#disk').change(function () {
+			var devfile = $('#disk').val();
+			gui.ajax('', {devfile: devfile}, function (data) {
+				$('#type').val(data.data).change();
+			});
+		});
+		$('#type').change();
 	});
-	$('#type').change();
-});
 //]]>
 </script>
 <form action="disks_init.php" method="post" name="iform" id="iform">
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-    <td class="tabnavtbl">
-	<ul id="tabnav">
-      		<li class="tabinact"><a href="disks_manage.php"><span><?=gettext("HDD Management");?></span></a></li>
-        	<li class="tabact"><a href="disks_init.php" title="<?=gettext("Reload page");?>" ><span><?=gettext("HDD Format");?></span></a></li>
-      		<li class="tabinact"><a href="disks_manage_smart.php"><span><?=gettext("S.M.A.R.T.");?></span></a></li>
-		<li class="tabinact"><a href="disks_manage_iscsi.php" title="<?=gettext("Reload page");?>"><span><?=gettext("iSCSI Initiator");?></span></a></li>
-	</ul>
-    </td>
-  </tr>
-  <tr>
-	    <td class="tabcont">
-				<?php if(!empty($input_errors)) print_input_errors($input_errors);?>
-				<?php if(!empty($errormsg)) print_error_box($errormsg);?>
-			  <table width="100%" border="0" cellpadding="6" cellspacing="0">
-			    <tr>
-			      <td valign="top" class="vncellreq"><?=gettext("Disk"); ?></td>
-			      <td class="vtable">
-			        <select name="disk" class="formfld" id="disk">
-								<option value=""><?=gettext("Select");?></option>
-								<?php foreach ($a_disk as $diskv):?>
-								<?php if (0 == strcmp($diskv['size'], "NA")) continue;?>
-								<?php if (1 == disks_exists($diskv['devicespecialfile'])) continue;?>
-								<option value="<?=$diskv['devicespecialfile'];?>" <?php if ($diskv['devicespecialfile'] === $disk) echo "selected=\"selected\"";?>>
-								<?php $diskinfo = disks_get_diskinfo($diskv['devicespecialfile']); echo htmlspecialchars("{$diskv['name']}: {$diskinfo['mediasize_mbytes']}MB ({$diskv['desc']})");?>
-								</option>
-								<?php endforeach;?>
-			        </select>
-			      </td>
-					</tr>
-					<tr>
-				    <td valign="top" class="vncellreq"><?=gettext("Filesystem");?></td>
-				    <td class="vtable">
-				      <select name="type" class="formfld" id="type">
-				        <?php foreach ($a_fst as $fstval => $fstname): ?>
-				        <option value="<?=$fstval;?>" <?php if($type == $fstval) echo 'selected="selected"';?>><?=htmlspecialchars($fstname);?></option>
-				        <?php endforeach; ?>
-				       </select>
-				    </td>
-					</tr>
-					<tr id="volumelabel_tr">
-						<td width="22%" valign="top" class="vncell"><?=gettext("Volume label");?></td>
-						<td width="78%" class="vtable">
-							<input name="volumelabel" type="text" class="formfld" id="volumelabel" size="20" value="<?=htmlspecialchars($volumelabel);?>" /><br />
-							<?=gettext("Volume label of the new file system.");?>
-						</td>
-					</tr>
-					<tr id="minspace_tr">
-						<td width="22%" valign="top" class="vncell"><?=gettext("Minimum free space");?></td>
-						<td width="78%" class="vtable">
-							<select name="minspace" class="formfld" id="minspace">
-							<?php $types = explode(",", "8,7,6,5,4,3,2,1"); $vals = explode(" ", "8 7 6 5 4 3 2 1");?>
-							<?php $j = 0; for ($j = 0; $j < count($vals); $j++): ?>
-								<option value="<?=$vals[$j];?>"><?=htmlspecialchars($types[$j]);?></option>
-							<?php endfor; ?>
-							</select>
-							<br /><?=gettext("Specify the percentage of space held back from normal users. Note that lowering the threshold can adversely affect performance and auto-defragmentation.") ;?>
-						</td>
-					</tr>
-			    <?php html_checkbox("aft4k", gettext("Advanced Format"), $pconfig['aft4k'] ? true : false, gettext("Enable Advanced Format (4KB sector)"), "", false, "");?>
-			    <?php html_checkbox("zfsgpt", gettext("GPT partition"), $pconfig['zfsgpt'] ? true : false, gettext("Create ZFS on GPT partition"), "", false, "");?>
-			    <tr>
-			      <td width="22%" valign="top" class="vncell"><?=gettext("MBR Erase");?></td>
-			      <td width="78%" class="vtable">
-			        <input name="notinitmbr" id="notinitmbr" type="checkbox" value="yes" />
-			        <?=gettext("Don't erase the MBR (useful for some RAID controller cards)");?>
-						</td>
-				  </tr>
-				</table>
-				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Format");?>" onclick="return confirm('<?=gettext("Do you really want to format this disk? All data will be lost!");?>')" />
-				</div>
-				<?php if ($do_format) {
-				echo(sprintf("<div id='cmdoutput'>%s</div>", gettext("Command output:")));
-				echo('<pre class="cmdoutput">');
-				//ob_end_flush();
-				disks_format($disk,$type,$notinitmbr,$minspace,$volumelabel, $aft4k, $zfsgpt);
-				echo('</pre>');
-				}
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td class="tabnavtbl">
+				<ul id="tabnav">
+					<li class="tabinact"><a href="disks_manage.php"><span><?= gettext("HDD Management"); ?></span></a></li>
+					<li class="tabact"><a href="disks_init.php" title="<?= gettext("Reload page"); ?>" ><span><?= gettext("HDD Format"); ?></span></a></li>
+					<li class="tabinact"><a href="disks_manage_smart.php"><span><?= gettext("S.M.A.R.T."); ?></span></a></li>
+					<li class="tabinact"><a href="disks_manage_iscsi.php" title="<?= gettext("Reload page"); ?>"><span><?= gettext("iSCSI Initiator"); ?></span></a></li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td class="tabcont">
+				<?php
+					if (!empty($input_errors)) {
+						print_input_errors($input_errors);
+					}
 				?>
-				<div id="remarks">
-					<?php html_remark("Warning", gettext("Warning"), sprintf(gettext("UFS and ZFS are NATIVE filesystems of %s. Attempting to use other filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in unpredictable results, file corruption and the loss of data!"), get_product_name()));?>
-				</div>
+				<?php
+					if (!empty($errormsg)) {
+						print_error_box($errormsg);
+					}
+				?>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<?php html_titleline(gettext("Format"));?>
+					<tr>
+						<td>
+						<table width="100%" border="0" cellpadding="6" cellspacing="0">
+							<tr>
+								<td valign="top" class="vncellreq"><?= gettext("Disk Selection"); ?></td>
+								<td class="vtable">
+									<?php if (count($a_disks_filter = filter_disk($a_disk)) > 0) : ?>
+										<select name="disks[]" class="formselect" id="disks" multiple size='10'>
+											<?php foreach ($a_disks_filter as $diskv): ?>
+												<option value="<?= $diskv['devicespecialfile']; ?>" <?php
+													if (in_array($diskv['devicespecialfile'], $disks)) {
+														echo "selected=\"selected\"";
+													}
+													?>>
+													<?php $diskinfo = disks_get_diskinfo($diskv['devicespecialfile']);
+													echo htmlspecialchars("{$diskv['name']}: {$diskinfo['mediasize_mbytes']}MB ({$diskv['desc']})"); ?>
+												</option>
+											<?php endforeach; ?>
+										</select>
+										<br><?= sprintf(gettext("Note: Ctrl-click (command-click on the Mac) to select multiple drives.")); ?></br>
+									<?php else: ?>
+										<?= sprintf(gettext("No disks available. Please add new <a href='%s'>disk</a> first."), 'disks_manage.php'); ?>
+									<?php endif; ?>
+								</td>
+							</tr>
+							<tr>
+								<td valign="top" class="vncellreq"><?= gettext("File System"); ?></td>
+								<td class="vtable">
+									<select name="type" class="formfld" id="type">
+										<?php foreach ($a_fst as $fstval => $fstname): ?>
+											<option value="<?= $fstval; ?>" <?php
+												if ($type == $fstval) { echo 'selected="selected"'; }
+												?>><?= htmlspecialchars($fstname); ?></option>
+										<?php endforeach; ?>
+									</select>
+								</td>
+							</tr>
+							<tr id="volumelabel_tr">
+								<td width="22%" valign="top" class="vncell"><?= gettext("Volume Label"); ?></td>
+								<td width="78%" class="vtable">
+									<input name="volumelabels" type="text" class="formfld" id="volumelabels" size="100" value="<?php echo!empty($volumelabels) ? htmlspecialchars(trim(implode(' ', $volumelabels))) : ''; ?>" /><br />
+									<?= gettext("Volume label of the new file system. Use a space to separate multiple labels. (if only one specified next will be auto increment)"); ?>
+								</td>
+							</tr>
+							<tr id="minspace_tr">
+								<td width="22%" valign="top" class="vncell"><?= gettext("Minimum free space"); ?></td>
+								<td width="78%" class="vtable">
+									<select name="minspace" class="formfld" id="minspace">
+										<?php $types = explode(",", "8,7,6,5,4,3,2,1");
+										$vals = explode(" ", "8 7 6 5 4 3 2 1"); ?>
+										<?php $j = 0;
+										for ($j = 0; $j < count($vals); $j++): ?>
+											<option value="<?= $vals[$j]; ?>"><?= htmlspecialchars($types[$j]); ?></option>
+										<?php endfor; ?>
+									</select>
+									<?= gettext("Specify the percentage of space held back from normal users.");?><br />
+									<div id="remarks">
+										<?php html_remark("note", gettext("Note"), sprintf(gettext("Lowering this threshold can adversely affect performance and auto-defragmentation.")));?>
+									</div>
+
+								</td>
+							</tr>
+							<?php html_checkbox("aft4k", gettext("Advanced format"), $pconfig['aft4k'] ? true : false, gettext("Enable Advanced Format. (4KB sector)"), "", false, ""); ?>
+							<?php html_checkbox("zfsgpt", gettext("GPT partition"), $pconfig['zfsgpt'] ? true : false, gettext("Create ZFS on GPT partition."), "", false, ""); ?>
+							<tr>
+								<td width="22%" valign="top" class="vncell"><?= gettext("MBR erase"); ?></td>
+								<td width="78%" class="vtable">
+									<input name="notinitmbr" id="notinitmbr" type="checkbox" value="yes" /><?= gettext("Don't erase the Master Boot Record. (useful for some RAID controller cards)"); ?>
+								</td>
+							</tr>
+						</table>
+						<div id="submit">
+							<input name="Submit" type="submit" class="formbtn" value="<?= gettext("Format disk"); ?>" onclick="return confirm('<?= gettext("Do you really want to format this disk? All data will be lost!"); ?>')" />
+						</div>
+						<?php
+							if (count($disks) > 0) {
+								foreach ($disks as $key => $disk) {
+									if ($do_format[$key]) {
+										echo(sprintf("<div id='cmdoutput'>%s</div>", sprintf(gettext("Command output") . " for disk %s :", $disk)));
+										echo('<pre class="cmdoutput">');
+										disks_format($disk, $type, $notinitmbr, $minspace, $_volumelabels[$key], $aft4k, $zfsgpt);
+										echo('</pre><br/>');
+									}
+								}
+							}
+						?>
+						<div id="remarks">
+							<?php html_remark("Warning", gettext("Warning"), gettext("UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in unpredictable results, file corruption and loss of data!")); ?>
+						</div>
+					</td>
+					</tr>
+				</table>
 			</td>
 		</tr>
 	</table>
-	<?php include("formend.inc");?>
+	<?php include("formend.inc"); ?>
 </form>
-<?php include("fend.inc");?>
+<?php include("fend.inc"); ?>
