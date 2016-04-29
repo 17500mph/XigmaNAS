@@ -44,7 +44,6 @@ $sphere_record = [];
 $prerequisites_ok = true;
 
 $mode_page = ($_POST) ? PAGE_MODE_POST : (($_GET) ? PAGE_MODE_EDIT : PAGE_MODE_ADD); // detect page mode
-
 if (PAGE_MODE_POST == $mode_page) { // POST is Cancel or not Submit => cleanup
 	if ((isset($_POST['Cancel']) && $_POST['Cancel']) || !(isset($_POST['Submit']) && $_POST['Submit'])) {
 		header($sphere_header_parent);
@@ -147,9 +146,9 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 	$sphere_record['accessrestrictions']['mode'] = sprintf( "%04o", $helpinghand);
 	
 	// Input validation
-	$reqdfields = explode(' ', 'pool name');
+	$reqdfields = ['pool', 'name'];
 	$reqdfieldsn = [gettext('Pool'), gettext('Name')];
-	$reqdfieldst = explode(' ', 'string string');
+	$reqdfieldst = ['string', 'string'];
 
 	do_input_validation($sphere_record, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($sphere_record, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
@@ -168,7 +167,7 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 	// 1.
 	if ($prerequisites_ok && empty($input_errors)) {
 		if ($isrecordmodify && (0 !== strcmp($sphere_array[$index]['pool'][0], $sphere_record['pool']))) {
-			$input_errors[] = 'Pool cannot be changed.';
+			$input_errors[] = gettext('Pool cannot be changed.');
 		}
 	}
 	// 2., 3., 4.
@@ -288,17 +287,57 @@ foreach ($a_pool as $r_pool) {
 	}
 	$l_poollist[$r_pool['name']] = htmlspecialchars($helpinghand);
 }
-$l_compressionmode = ['on' => gettext('On'), 'off' => gettext('Off'), 'lz4' => 'lz4', 'lzjb' => 'lzjb', 'gzip' => 'gzip', 'zle' => 'zle'];
-for ($n = 1; $n <= 9; $n++) {
-	$helpinghand = sprintf('gzip-%d',$n);
-	$l_compressionmode[$helpinghand] = $helpinghand;
-}
-$l_dedup = ['on' => gettext('On'), 'off' => gettext('Off'), 'verify' => gettext('Verify'), 'sha256' => 'SHA256', 'sha256,verify' => gettext('SHA256, Verify')];		
-$l_sync = ['standard' => gettext('Standard'), 'always' => gettext('Always'), 'disabled' => gettext('Disabled')];
-$l_atime = ['on' => gettext('On'), 'off' => gettext('Off')];
-$l_aclinherit = ['discard' => gettext('Discard - Do not inherit entries'), 'noallow' => gettext('Noallow - Only inherit deny entries'), 'restricted' => gettext('Restricted - Inherit all but "write ACL" and "change owner"'), 'passthrough' => gettext('Passthrough - Inherit all entries'), 'passthrough-x' => gettext('Passthrough-X - Inherit all but "execute" when not specified')];
-$l_aclmode = ['discard' => gettext('Discard - Discard ACL'), 'groupmask' => gettext('Groupmask - Mask ACL with mode'), 'passthrough' => gettext('Passthrough - Do not change ACL'), 'restricted' => gettext('Restricted')];
-$l_casesensitivity = ['sensitive' => gettext('Sensitive'), 'insensitive' => gettext('Insensitive'), 'mixed' => gettext('Mixed')];
+$l_compressionmode = [
+	'on' => gettext('On'),
+	'off' => gettext('Off'),
+	'lz4' => 'lz4',
+	'lzjb' => 'lzjb',
+	'gzip' => 'gzip',
+	'gzip-1' => 'gzip-1',
+	'gzip-2' => 'gzip-2',
+	'gzip-3' => 'gzip-3',
+	'gzip-4' => 'gzip-4',
+	'gzip-5' => 'gzip-5',
+	'gzip-6' => 'gzip-6',
+	'gzip-7' => 'gzip-7',
+	'gzip-8' => 'gzip-8',
+	'gzip-9' => 'gzip-9',
+	'zle' => 'zle'
+];
+$l_dedup = [
+	'on' => gettext('On'),
+	'off' => gettext('Off'),
+	'verify' => gettext('Verify'),
+	'sha256' => 'SHA256',
+	'sha256,verify' => gettext('SHA256, Verify')
+];		
+$l_sync = [
+	'standard' => gettext('Standard'),
+	'always' => gettext('Always'),
+	'disabled' => gettext('Disabled')
+];
+$l_atime = [
+	'on' => gettext('On'),
+	'off' => gettext('Off')
+];
+$l_aclinherit = [
+	'discard' => gettext('Discard - Do not inherit entries'),
+	'noallow' => gettext('Noallow - Only inherit deny entries'),
+	'restricted' => gettext('Restricted - Inherit all but "write ACL" and "change owner"'),
+	'passthrough' => gettext('Passthrough - Inherit all entries'),
+	'passthrough-x' => gettext('Passthrough-X - Inherit all but "execute" when not specified')
+];
+$l_aclmode = [
+	'discard' => gettext('Discard - Discard ACL'),
+	'groupmask' => gettext('Groupmask - Mask ACL with mode'),
+	'passthrough' => gettext('Passthrough - Do not change ACL'),
+	'restricted' => gettext('Restricted')
+];
+$l_casesensitivity = [
+	'sensitive' => gettext('Sensitive'),
+	'insensitive' => gettext('Insensitive'),
+	'mixed' => gettext('Mixed')
+];
 $l_users = [];
 foreach (system_get_user_list() as $r_key => $r_value) {
 	$l_users[$r_key] = htmlspecialchars($r_key);
@@ -314,7 +353,7 @@ for ($i = 0; $i < 9; $i++) {
 	$mode_access[$i] = $helpinghand & (1 << $i);
 }
 
-$pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Datasets'), gettext('Dataset'), (RECORD_NEW !== $mode_record) ? gettext('Edit') : gettext('Add'));
+$pgtitle = [gettext('Disks'), gettext('ZFS'), gettext('Datasets'), gettext('Dataset'), (RECORD_NEW !== $mode_record) ? gettext('Edit') : gettext('Add')];
 ?>
 <?php include("fbegin.inc");?>
 <table id="area_navigator">

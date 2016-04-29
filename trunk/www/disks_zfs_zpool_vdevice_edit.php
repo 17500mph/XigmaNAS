@@ -196,9 +196,9 @@ if (PAGE_MODE_POST === $mode_page) { // at this point we know it's a POST but (e
 	}
 
 	// Input validation
-	$reqdfields = explode(' ', 'name type');
-	$reqdfieldsn = array(gettext('Name'), gettext('Type'));
-	$reqdfieldst = explode(' ', 'string string');
+	$reqdfields = ['name', 'type'];
+	$reqdfieldsn = [gettext('Name'), gettext('Type')];
+	$reqdfieldst = ['string', 'string'];
 
 	do_input_validation($sphere_record, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($sphere_record, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
@@ -292,7 +292,7 @@ if (PAGE_MODE_POST === $mode_page) { // at this point we know it's a POST but (e
 	}
 }
 
-$pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Pools'), gettext('Virtual Device'), (!$isrecordnew) ? gettext('Edit') : gettext('Add'));
+$pgtitle = [gettext('Disks'), gettext('ZFS'), gettext('Pools'), gettext('Virtual Device'), (!$isrecordnew) ? gettext('Edit') : gettext('Add')];
 ?>
 <?php include("fbegin.inc");?>
 <script type="text/javascript">
