@@ -1,6 +1,6 @@
 <?php
 /*
-	en_US_mimes.php
+	uk_mimes.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
@@ -34,7 +34,7 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-// English Mimes Module
+// Ukrainian Mimes Module
 
 $GLOBALS["mimes"]=array(
 

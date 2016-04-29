@@ -1,6 +1,6 @@
 <?php
 /*
-	en_US.php
+	tr.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
@@ -34,7 +34,7 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-// English Language Module
+// Turkish Language Module
 
 $GLOBALS["charset"] = "UTF-8";
 $GLOBALS["text_dir"] = "ltr"; // ('ltr' for left to right, 'rtl' for right to left)
@@ -42,7 +42,7 @@ $GLOBALS["date_fmt"] = "Y/m/d H:i";
 $GLOBALS["error_msg"] = array(
 
 	// error
-	"error"		=> "ERROR(S)",
+	"error"			=> "ERROR(S)",
 	"back"			=> "Go Back",
 
 	// root
