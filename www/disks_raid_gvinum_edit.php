@@ -126,6 +126,11 @@ if (RECORD_ERROR == $mode_record) { // oops, someone tries to cheat, over and ou
 	header($sphere_header_parent);
 	exit;
 }
+$isrecordnew = (RECORD_NEW === $mode_record);
+$isrecordnewmodify = (RECORD_NEW_MODIFY == $mode_record);
+$isrecordmodify = (RECORD_MODIFY === $mode_record);
+$isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
+
 // get all known softraids (config)
 $a_config_sraid = get_conf_sraid_disks_list();
 // get all disks that are softraid-formatted 
@@ -233,7 +238,6 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit" or "Action", alr
 				$sphere_array[$index] = $sphere_record;
 				break;
 		}
-//		geomraid_config_set($sphere_array);
 		write_config();
 		header($sphere_header_parent);
 		exit;
@@ -271,27 +275,27 @@ $a_device = [];
 foreach ($a_sdisk as $r_sdisk) {
 	$helpinghand = $r_sdisk['devicespecialfile'] . (isset($r_sdisk['zfsgpt']) ? $r_sdisk['zfsgpt'] : '');
 	$r_device = [];
-	$r_device['name']              = isset($r_sdisk['name']) ? htmlspecialchars($r_sdisk['name']) : '';
-	$r_device['uuid']              = isset($r_sdisk['uuid']) ? $r_sdisk['uuid'] : '';
-	$r_device['model']             = isset($r_sdidk['model']) ? htmlspecialchars($r_sdisk['model']) : '';
+	$r_device['name'] = isset($r_sdisk['name']) ? htmlspecialchars($r_sdisk['name']) : '';
+	$r_device['uuid'] = isset($r_sdisk['uuid']) ? $r_sdisk['uuid'] : '';
+	$r_device['model'] = isset($r_sdidk['model']) ? htmlspecialchars($r_sdisk['model']) : '';
 	$r_device['devicespecialfile'] = htmlspecialchars($helpinghand);
-	$r_device['partition']         = ((isset($r_sdisk['zfsgpt']) && (!empty($r_sdisk['zfsgpt'])))? $r_sdisk['zfsgpt'] : gettext('Entire Device'));
-	$r_device['controller']        = (isset($r_sdisk['controller']) ? $r_sdisk['controller'] : '?') . (isset($r_sdisk['controller_id']) ?  $r_sdisk['controller_id'] : '');
+	$r_device['partition'] = ((isset($r_sdisk['zfsgpt']) && (!empty($r_sdisk['zfsgpt'])))? $r_sdisk['zfsgpt'] : gettext('Entire Device'));
+	$r_device['controller'] = (isset($r_sdisk['controller']) ? $r_sdisk['controller'] : '?') . (isset($r_sdisk['controller_id']) ?  $r_sdisk['controller_id'] : '');
 	if (isset($r_sdisk['controller_desc'])) {
-		$r_device['controller']   .= (' (' . $r_sdisk['controller_desc'] . ')');
+		$r_device['controller'] .= (' (' . $r_sdisk['controller_desc'] . ')');
 	}
-	$r_device['size']              = isset($r_sdisk['size']) ? $r_sdisk['size'] : '';
-	$r_device['serial']            = isset($r_sdisk['serial']) ? $r_sdisk['serial'] : '';
-	$r_device['desc']              = isset($r_sdisk['desc']) ? htmlspecialchars($r_sdisk['desc']) : '';
-	$r_device['isnotinasraid']     = (false === array_search_ex($r_device['devicespecialfile'], $a_config_sraid, 'device'));
-	$r_device['isinthissraid']     = (isset($sphere_record['device']) && is_array($sphere_record['device']) && in_array($r_device['devicespecialfile'], $sphere_record['device']));
+	$r_device['size'] = isset($r_sdisk['size']) ? $r_sdisk['size'] : '';
+	$r_device['serial'] = isset($r_sdisk['serial']) ? $r_sdisk['serial'] : '';
+	$r_device['desc'] = isset($r_sdisk['desc']) ? htmlspecialchars($r_sdisk['desc']) : '';
+	$r_device['isnotinasraid'] = (false === array_search_ex($r_device['devicespecialfile'], $a_config_sraid, 'device'));
+	$r_device['isinthissraid'] = (isset($sphere_record['device']) && is_array($sphere_record['device']) && in_array($r_device['devicespecialfile'], $sphere_record['device']));
 	$a_device[$helpinghand] = $r_device;
 }
 
-$pgtitle = array(gettext('Disks'), gettext('Software RAID'), gettext('RAID 0/1/5'), (RECORD_NEW !== $mode_record) ? gettext('Edit') : gettext('Add'));
+$pgtitle = [gettext('Disks'), gettext('Software RAID'), gettext('RAID 0/1/5'), ($isrecordnew) ? gettext('Add') : gettext('Edit')];
 ?>
 <?php include("fbegin.inc"); ?>
-<?php if ((RECORD_NEW === $mode_record) || (RECORD_NEW_MODIFY === $mode_record)):?>
+<?php if ($isrecordnewornewmodify):?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
@@ -376,7 +380,7 @@ function toggleselection(ego, triggerbyname) {
 		if (!empty($input_errors)) print_input_errors($input_errors);
 		if (file_exists($d_sysrebootreqd_path)) { print_info_box(get_std_save_message(0)); }
 	?>
-	<?php if ((RECORD_NEW === $mode_record) || (RECORD_NEW_MODIFY === $mode_record)):?>
+	<?php if ($isrecordnewornewmodify):?>
 		<div id="submit" style="margin-bottom:10px">
 			<?php foreach ($a_process as $r_process):?>
 				<button name="Action" id="<?=$r_process['x-button'];?>" type="submit" class="formbtn" value="<?=$r_process['type'];?>"><?=$r_process['gt-type'];?></button>
@@ -393,10 +397,9 @@ function toggleselection(ego, triggerbyname) {
 		</thead>
 		<tbody>
 			<?php
-				$notnewandnotnewmodify = !((RECORD_NEW === $mode_record) || (RECORD_NEW_MODIFY === $mode_record));
-				html_inputbox2('name', gettext('RAID Name'), $sphere_record['name'], '', true, 15, $notnewandnotnewmodify); // readonly if not new and not new-modify
-				if (RECORD_MODIFY === $mode_record) {
-					html_inputbox2('type', gettext('RAID Type'), $a_process[$sphere_record['type']]['gt-type'], '', false, 40, true);
+				html_inputbox2('name', gettext('RAID Name'), $sphere_record['name'], '', true, 15, $isrecordmodify); // readonly when in mode modify
+				if ($isrecordmodify) {
+					html_inputbox2('type', gettext('RAID Type'), $a_process[$sphere_record['type']]['gt-type'], '', false, 40, $isrecordmodify);
 				}
 			?>
 			<?php
@@ -404,7 +407,7 @@ function toggleselection(ego, triggerbyname) {
 					[gettext('Do not activate this option if you want to add an existing RAID.')],
 					[gettext('All data will be lost when you activate this option!'), 'red']
 				];
-				html_checkbox2('init', gettext('Initialize'), !empty($sphere_record['init']) ? true : false, gettext('Create and initialize RAID.'), $helpinghand, false, $notnewandnotnewmodify);
+				html_checkbox2('init', gettext('Initialize'), !empty($sphere_record['init']) ? true : false, gettext('Create and initialize RAID.'), $helpinghand, false, $isrecordmodify);
 				html_inputbox2('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 48);
 				html_separator2();
 			?>
@@ -426,7 +429,7 @@ function toggleselection(ego, triggerbyname) {
 			<?php html_titleline2(gettext('Device List'), 9);?>
 			<tr>
 				<td class="lhelc">
-					<?php if ((RECORD_NEW === $mode_record) || (RECORD_NEW_MODIFY === $mode_record)):?>
+					<?php if ($isrecordnewornewmodify):?>
 						<input type="checkbox" id="togglebox" name="togglebox" title="<?=gettext('Invert Selection');?>"/>
 					<?php else:?>
 						<input type="checkbox" id="togglebox" name="togglebox" disabled="disabled"/>
@@ -448,53 +451,57 @@ function toggleselection(ego, triggerbyname) {
 					$isnotinasraid = $r_device['isnotinasraid'];
 					$isinthissraid = $r_device['isinthissraid'];
 				?>
-				<?php if (($isnotinasraid || $isinthissraid) && ((RECORD_NEW == $mode_record) || (RECORD_NEW_MODIFY == $mode_record))):?>
-					<tr>
-						<td class="lcelc">
-							<?php if ($isinthissraid):?>
-								<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>" checked="checked"/>
-							<?php else:?>
-								<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>"/>
-							<?php endif;?>	
-						</td>
-						<td class="lcell"><?=htmlspecialchars($r_device['name']);?>&nbsp;</td>
-						<td class="lcell"><?=htmlspecialchars($r_device['partition']);?>&nbsp;</td>
-						<td class="lcell"><?=htmlspecialchars($r_device['model']);?>&nbsp;</td>
-						<td class="lcell"><?=htmlspecialchars($r_device['serial']);?>&nbsp;</td>
-						<td class="lcell"><?=htmlspecialchars($r_device['size']);?>&nbsp;</td>
-						<td class="lcell"><?=htmlspecialchars($r_device['controller']);?>&nbsp;</td>
-						<td class="lcell"><?=htmlspecialchars($r_device['desc']);?>&nbsp;</td>
-						<td class="lcebcd">
-							<?php if ($isinthissraid):?>
-								<img src="<?=$img_path['unl'];?>" title="<?=gettext($gt_record_opn);?>" alt="<?=gettext($gt_record_opn);?>" />
-							<?php else:?>
-								&nbsp;
-							<?php endif;?>
-						</td>
-					</tr>
+				<?php if ($isrecordnewornewmodify):?>
+					<?php if ($isnotinasraid || $isinthissraid):?>
+						<tr>
+							<td class="lcelc">
+								<?php if ($isinthissraid):?>
+									<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>" checked="checked"/>
+								<?php else:?>
+									<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>"/>
+								<?php endif;?>	
+							</td>
+							<td class="lcell"><?=htmlspecialchars($r_device['name']);?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars($r_device['partition']);?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars($r_device['model']);?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars($r_device['serial']);?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars($r_device['size']);?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars($r_device['controller']);?>&nbsp;</td>
+							<td class="lcell"><?=htmlspecialchars($r_device['desc']);?>&nbsp;</td>
+							<td class="lcebcd">
+								<?php if ($isinthissraid):?>
+									<img src="<?=$img_path['unl'];?>" title="<?=gettext($gt_record_opn);?>" alt="<?=gettext($gt_record_opn);?>" />
+								<?php else:?>
+									&nbsp;
+								<?php endif;?>
+							</td>
+						</tr>
+					<?php endif;?>
 				<?php endif;?>
-				<?php if ($isinthissraid && (RECORD_MODIFY == $mode_record)):?>
-					<tr>
-						<td class="<?=!$isinthissraid ? "lcelc" : "lcelcd";?>">
-							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>" checked="checked" disabled="disabled"/>
-						</td>
-						<td class="<?=!$isinthissraid ? "lcell" : "lcelld";?>"><?=htmlspecialchars($r_device['name']);?>&nbsp;</td>
-						<td class="<?=!$isinthissraid ? "lcell" : "lcelld";?>"><?=htmlspecialchars($r_device['partition']);?>&nbsp;</td>
-						<td class="<?=!$isinthissraid ? "lcell" : "lcelld";?>"><?=htmlspecialchars($r_device['model']);?>&nbsp;</td>
-						<td class="<?=!$isinthissraid ? "lcell" : "lcelld";?>"><?=htmlspecialchars($r_device['serial']);?>&nbsp;</td>
-						<td class="<?=!$isinthissraid ? "lcell" : "lcelld";?>"><?=htmlspecialchars($r_device['size']);?>&nbsp;</td>
-						<td class="<?=!$isinthissraid ? "lcell" : "lcelld";?>"><?=htmlspecialchars($r_device['controller']);?>&nbsp;</td>
-						<td class="<?=!$isinthissraid ? "lcell" : "lcelld";?>"><?=htmlspecialchars($r_device['desc']);?>&nbsp;</td>
-						<td class="lcebcd">
-							<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gettext($gt_record_loc);?>" />
-						</td>
-					</tr>
+				<?php if ($isrecordmodify):?>
+					<?php if ($isinthissraid):?>
+						<tr>
+							<td class="lcelcd"">
+								<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$r_device['devicespecialfile'];?>" id="<?=$r_device['uuid'];?>" checked="checked" disabled="disabled"/>
+							</td>
+							<td class="lcelld"><?=htmlspecialchars($r_device['name']);?>&nbsp;</td>
+							<td class="lcelld"><?=htmlspecialchars($r_device['partition']);?>&nbsp;</td>
+							<td class="lcelld"><?=htmlspecialchars($r_device['model']);?>&nbsp;</td>
+							<td class="lcelld"><?=htmlspecialchars($r_device['serial']);?>&nbsp;</td>
+							<td class="lcelld"><?=htmlspecialchars($r_device['size']);?>&nbsp;</td>
+							<td class="lcelld"><?=htmlspecialchars($r_device['controller']);?>&nbsp;</td>
+							<td class="lcelld"><?=htmlspecialchars($r_device['desc']);?>&nbsp;</td>
+							<td class="lcebcd">
+								<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gettext($gt_record_loc);?>" />
+							</td>
+						</tr>
+					<?php endif; ?>
 				<?php endif; ?>
 			<?php endforeach; ?>
 		</tbody>
 	</table>
 	<div id="submit">
-		<?php if (RECORD_MODIFY === $mode_record):?>
+		<?php if ($isrecordmodify):?>
 			<input name="Submit" id="submit_button" type="submit" class="formbtn" value="<?=gettext('Save');?>"/>
 		<?php endif;?>
 		<input name="Cancel" id="cancel_button" type="submit" class="formbtn" value="<?=gettext('Cancel');?>" />
