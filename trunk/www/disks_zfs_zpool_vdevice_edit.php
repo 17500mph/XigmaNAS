@@ -424,7 +424,7 @@ function toggleselection(ego, triggerbyname) {
 				if ($isrecordmodify) {
 					html_inputbox2('type', gettext('Type'), $sphere_record['type'], '', true, 20, true);
 				} 
-				html_checkbox2('aft4k', gettext('4KB wrapper'), !empty($sphere_record['aft4k']) ? true : false, gettext('Create 4KB wrapper (nop device).'), '', false, '');
+				html_checkbox2('aft4k', gettext('4KB wrapper'), !empty($sphere_record['aft4k']) ? true : false, gettext('Create 4KB wrapper (nop device).'), '', false, $isrecordmodify);
 				html_inputbox2('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 40);
 				html_separator2();
 			?>
