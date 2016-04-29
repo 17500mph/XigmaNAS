@@ -639,10 +639,9 @@ function pool_change() {
     </td>
   </tr>
   <tr>
-    <td class="tabcont">
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
-	<?php html_titleline(gettext("Pool Tools"));?>
 	<form action="disks_zfs_zpool_tools.php" method="post" name="iform" id="iform">
+	<td class="tabcont">
 	<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 	<?php if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));?>
 	<?php if (!$do_action) { ?>
@@ -651,6 +650,7 @@ function pool_change() {
 	<table width="100%" border="0" cellpadding="6" cellspacing="0" style="display:none;">
 	<?php } ?>
 	<tr>
+	  <?php html_titleline(gettext("Pool Tools"));?>
 	  <td width="22%" valign="top" class="vncellreq"><?=gettext("Command");?></td>
 	  <td width="78%" class="vtable">
 	  <select name="action" class="formfld" id="action" onchange="command_change()">
