@@ -56,7 +56,7 @@
 		'ru'		=> 'Russian',
 		'sk'		=> 'Slovak',
 		'sl'		=> 'Slovenian',
-		'sv'		=> 'Swedish',
+		'sv'		=> 'Svenska',
 		'tr'		=> 'Turkish',
 		'uk'		=> 'Ukrainian',
 		'zh_CN'	=> 'Chinese (Simplified)',
