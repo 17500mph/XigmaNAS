@@ -39,71 +39,71 @@
 $GLOBALS["mimes"]=array(
 
 	// dir, exe, file
-	"dir"		=> "Directory",
-	"exe"		=> "Executable File",
-	"file"		=> "File",
-	"link"		=> "Link",
+	"dir"		=> "Katalog",
+	"exe"		=> "Körbar Fil",
+	"file"		=> "Fil",
+	"link"		=> "Länk",
 
 	// text
-	"text"		=> "Text File",
+	"text"		=> "Textfil",
 
 	// programming
-	"php"		=> "PHP Script",
-	"sql"		=> "SQL File",
-	"perl"		=> "PERL Script",
-	"html"		=> "HTML Page",
-	"js"		=> "Javascript File",
-	"css"		=> "CSS File",
-	"cgi"		=> "CGI Script",
+	"php"		=> "PHP Skript",
+	"sql"		=> "SQL Fil",
+	"perl"		=> "PERL Skript",
+	"html"		=> "HTML Sida",
+	"js"		=> "Javascript Fil",
+	"css"		=> "CSS Fil",
+	"cgi"		=> "CGI Skript",
 
 	// C++
-	"cpps"		=> "C++ Source File",
-	"cpph"		=> "C++ Header File",
+	"cpps"		=> "C++ Källfil",
+	"cpph"		=> "C++ Header Fil",
 
 	// Java
-	"javas"		=> "Java Source File",
-	"javac"		=> "Java Class File",
+	"javas"		=> "Java Källfil",
+	"javac"		=> "Java Class fil",
 
 	// Pascal
-	"pas"		=> "Pascal File",
+	"pas"		=> "Pascal Fil",
 
 	// images
-	"gif"		=> "GIF Picture",
-	"jpg"		=> "JPG Picture",
-	"bmp"		=> "BMP Picture",
-	"png"		=> "PNG Picture",
+	"gif"		=> "GIF Bild",
+	"jpg"		=> "JPG Bild",
+	"bmp"		=> "BMP Bild",
+	"png"		=> "PNG Bild",
 
 	// compressed
-	"zip"		=> "ZIP Archive",
-	"tar"		=> "TAR Archive",
-	"gzip"		=> "GZIP Archive",
-	"bzip2"		=> "BZIP2 Archive",
-	"rar"		=> "RAR Archive",
-	"iso"		=> "ISO File",
-	"mds"		=> "MDS File",
+	"zip"		=> "ZIP Arkiv",
+	"tar"		=> "TAR Arkiv",
+	"gzip"		=> "GZIP Arkiv",
+	"bzip2"		=> "BZIP2 Arkiv",
+	"rar"		=> "RAR Arkiv",
+	"iso"		=> "ISO Fil",
+	"mds"		=> "MDS Fil",
 
 	// music
-	"mp3"		=> "MP3 Audio File",
-	"wav"		=> "WAV Audio File",
-	"midi"		=> "MIDI Audio File",
-	"real"		=> "RealAudio File",
-	"flac"		=> "FLAC Audio File",
+	"mp3"		=> "MP3 Ljudfil",
+	"wav"		=> "WAV Ljudfil",
+	"midi"		=> "MIDI Ljudfil",
+	"real"		=> "RealAudio Ljudfil",
+	"flac"		=> "FLAC Ljudfil",
 
 	// movie
-	"mpg"		=> "MPG File",
-	"mov"		=> "MOV File",
-	"avi"		=> "AVI File",
-	"flash"		=> "Flash File",
-	"mkv"		=> "MKV File",
-	"vob"		=> "VOB File",
+	"mpg"		=> "MPG Fil",
+	"mov"		=> "MOV Fil",
+	"avi"		=> "AVI Fil",
+	"flash"		=> "Flash Fil",
+	"mkv"		=> "MKV Fil",
+	"vob"		=> "VOB Fil",
 
 	// Micosoft / Adobe
-	"word"		=> "Word Document",
-	"excel"		=> "Excel Document",
-	"pdf"		=> "PDF File",
-	"xml"		=> "XML File",
-	"c"		=> "C File",
-	"psd"		=> "Photoshop File",
+	"word"		=> "Word Dokument",
+	"excel"		=> "Excel Dokument",
+	"pdf"		=> "PDF Fil",
+	"xml"		=> "XML Fil",
+	"c"		=> "C Fil",
+	"psd"		=> "Photoshop Fil",
 	"point"		=> "PowerPoint Presentation"
 );
 
