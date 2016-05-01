@@ -293,7 +293,7 @@ function zfs_zpool_configure($uuid) {
 	$result = mwexec($cmd, true);
 	if (0 != $result) { return 1; }
 	// Modify access restrictions.
-	@chmod(escapeshellarg($mountpoint), octdec(777));
+	@chmod($mountpoint, octdec(777));
 	return 0;
 }
 
@@ -317,12 +317,16 @@ function zfs_zpool_destroy($uuid) {
 	if (isset($pool['mountpoint']) && preg_match('/\S/', $pool['mountpoint'])) {
 		$mountpoint = ltrim($pool['mountpoint']);
 	}
+	// try to unmount first
+	// XXX
+	// XXX
+	// XXX
 	// destroy pool
 	$cmd = sprintf('zpool destroy %1$s', escapeshellarg($poolname));
 	write_log($cmd);
 	$result = mwexec($cmd, true);
 	// remove mount moint
-	@rmdir(escapeshellarg($mountpoint));
+	@rmdir($mountpoint);
 	// destroy gnop devices
 	if ($result == 0) {
 		foreach ($pool['vdevice'] as $vdevicev) {
@@ -506,9 +510,9 @@ function zfs_dataset_configure($uuid) {
 			$mode = $dataset['accessrestrictions']['mode'];
 			$owner = $dataset['accessrestrictions']['owner'];
 			$group = $dataset['accessrestrictions']['group'][0];
-			write_log(sprintf('%1$s %2$s %3$s %4$s', escapeshellarg($mountpoint), $mode, $owner, $group));
-			if (file_exists(escapeshellarg($mountpoint)) && is_writable(escapeshellarg($mountpoint))) {
-				if (!@chmod(escapeshellarg($mountpoint), octdec($mode)) || !@chown(escapeshellarg($mountpoint), $owner) || !@chgrp(escapeshellarg($mountpoint), $group)) {
+			write_log(sprintf('Access restrictions to be set: %1$s %2$s %3$s %4$s', escapeshellarg($mountpoint), $mode, $owner, $group));
+			if (file_exists($mountpoint) && is_writable($mountpoint)) {
+				if (!@chmod($mountpoint, octdec($mode)) || !@chown($mountpoint, $owner) || !@chgrp($mountpoint, $group)) {
 					write_log(sprintf('Error: Failed to set access restrictions on directory %1$s', escapeshellarg($mountpoint)));
 				}
 			}
@@ -678,9 +682,9 @@ function zfs_dataset_properties($uuid) {
 			$mode = $dataset['accessrestrictions']['mode'];
 			$owner = $dataset['accessrestrictions']['owner'];
 			$group = $dataset['accessrestrictions']['group'][0];
-			write_log(sprintf('%1$s %2$s %3$s %4$s', escapeshellarg($mountpoint), $mode, $owner, $group));
-			if (file_exists(escapeshellarg($mountpoint)) && is_writable(escapeshellarg($mountpoint))) {
-				if (!@chmod(escapeshellarg($mountpoint), octdec($mode)) || !@chown(escapeshellarg($mountpoint), $owner) || !@chgrp(escapeshellarg($mountpoint), $group)) {
+			write_log(sprintf('Access restrictions to be set: %1$s %2$s %3$s %4$s', escapeshellarg($mountpoint), $mode, $owner, $group));
+			if (file_exists($mountpoint) && is_writable($mountpoint)) {
+				if (!@chmod($mountpoint, octdec($mode)) || !@chown($mountpoint, $owner) || !@chgrp($mountpoint, $group)) {
 					write_log(sprintf('Error: Failed to set access restrictions on directory %1$s', escapeshellarg($mountpoint)));
 				}
 			}
