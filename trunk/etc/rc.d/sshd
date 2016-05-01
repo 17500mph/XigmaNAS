@@ -49,8 +49,9 @@ sshd_mkconf()
 		-o "UseDNS no" -n \
 		-i "string-length(//sshd/subsystem) > 0" -v "concat('Subsystem ', //sshd/subsystem)" -n -b \
 		-i "string-length(//sshd/subsystem) = 0" -v "concat('Subsystem ', 'sftp /usr/libexec/sftp-server')" -n -b \
-		-o "ChallengeResponseAuthentication no" -n \
 		-m "//sshd" \
+			-i "count(challengeresponseauthentication) = 0" -o "ChallengeResponseAuthentication no" -n -b \
+			-i "count(challengeresponseauthentication) > 0" -o "ChallengeResponseAuthentication yes" -n -b \
 			-i "count(port) > 0" -v "concat('Port ',port)" -n -b \
 			-i "count(permitrootlogin) > 0" -o "PermitRootLogin yes" -n -b \
 			-i "count(tcpforwarding) = 0" -o "AllowTcpForwarding no" -n -b \
