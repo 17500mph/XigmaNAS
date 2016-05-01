@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-04-29 05:06+0000\n"
-"PO-Revision-Date: 2016-04-28 19:36+0000\n"
-"Last-Translator: MikeMac <mikhail.kuvshinov@gmail.com>\n"
+"PO-Revision-Date: 2016-04-29 04:56+0000\n"
+"Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-29 03:49+0000\n"
+"X-Launchpad-Export-Date: 2016-05-01 23:01+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -624,7 +624,7 @@ msgid "Advanced Setup"
 msgstr "Дополнительные настройки"
 
 msgid "Advanced format"
-msgstr ""
+msgstr "Расширенное форматирование"
 
 msgid "Advanced settings"
 msgstr "Расширенные настройки"
@@ -1391,7 +1391,7 @@ msgstr "Команда для события LINK_UP (например %s)."
 
 #, php-format
 msgid "Command output"
-msgstr ""
+msgstr "Вывод команды"
 
 msgid "Command output:"
 msgstr "Результат выполнения:"
@@ -1738,7 +1738,7 @@ msgid "Create PV Guest"
 msgstr "Создать гостевую систему PV"
 
 msgid "Create ZFS on GPT partition."
-msgstr ""
+msgstr "Создать ZFS на GPT разделах."
 
 msgid "Create and initialize RAID."
 msgstr "Создать и инициализировать RAID"
@@ -2302,7 +2302,7 @@ msgid "Disk"
 msgstr "Диск"
 
 msgid "Disk Selection"
-msgstr ""
+msgstr "Выбор диска"
 
 msgid "Disk space usage"
 msgstr "Использование дискового пространства"
@@ -2577,6 +2577,7 @@ msgstr "Доменное имя, например <i>example.com</i>"
 msgid ""
 "Don't erase the Master Boot Record. (useful for some RAID controller cards)"
 msgstr ""
+"Не стирать Master Boot Record. (Полезно для некоторых контроллеров RAID)"
 
 msgid "Donate"
 msgstr "Пожертвования"
@@ -2776,7 +2777,7 @@ msgid "Enable ACL inheritance"
 msgstr "Включить наследование ACL"
 
 msgid "Enable Advanced Format. (4KB sector)"
-msgstr ""
+msgstr "Включить расширенное форматирование. (4KB сектор)"
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Включить асинхронный ввод/вывод (AIO)"
@@ -3278,7 +3279,7 @@ msgid "File Path"
 msgstr "Путь к файлу"
 
 msgid "File System"
-msgstr ""
+msgstr "Файловая система"
 
 msgid "File Transfer Protocol"
 msgstr "File Transfer Protocol (FTP)"
@@ -3377,7 +3378,7 @@ msgid "Format"
 msgstr "Форматирование"
 
 msgid "Format disk"
-msgstr ""
+msgstr "Форматировать диск"
 
 msgid "Format the report for phpBB forum."
 msgstr "Сформировать отчет для форума phpBB."
@@ -4539,6 +4540,8 @@ msgid ""
 "Lowering this threshold can adversely affect performance and auto-"
 "defragmentation."
 msgstr ""
+"Снижение этого порога может отрицательно повлиять на производительность и "
+"автоматическую дефрагментацию."
 
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
@@ -4555,7 +4558,7 @@ msgid "MAC address"
 msgstr "MAC-адрес"
 
 msgid "MBR erase"
-msgstr ""
+msgstr "Стирание MBR"
 
 msgid "MBR partition"
 msgstr "Раздел MBR"
@@ -5228,6 +5231,8 @@ msgstr "Примечание"
 #, php-format
 msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
 msgstr ""
+"Примечание: удерживайте Ctrl (или Command на Mac), чтобы выбрать несколько "
+"дисков."
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -6786,6 +6791,7 @@ msgstr "Указывает, позволен ли вход от имени су�
 
 msgid "Specify the percentage of space held back from normal users."
 msgstr ""
+"Задайте процент дискового пространства, недоступного обычным пользователям."
 
 msgid "Split request"
 msgstr "Разделение запросов (split request)"
@@ -8767,7 +8773,7 @@ msgid "UFS"
 msgstr "UFS"
 
 msgid "UFS (GPT and Soft Updates)"
-msgstr ""
+msgstr "UFS (GPT and Soft Updates)"
 
 #, php-format
 msgid ""
@@ -8784,6 +8790,10 @@ msgid ""
 "filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
 "unpredictable results, file corruption and loss of data!"
 msgstr ""
+"UFS и ZFS являются родными файловыми системами NAS4Free.  Попытка "
+"использовать другие файловые системы такие как ext2, ext3, EXT4, FAT, FAT32 "
+"или NTFS может привести к непредсказуемым результатам, порче файлов и потере "
+"данных!"
 
 #, php-format
 msgid ""
@@ -8798,7 +8808,7 @@ msgstr ""
 "повреждению файлов и потерям данных!"
 
 msgid "UFS with Soft Updates"
-msgstr ""
+msgstr "UFS with Soft Updates"
 
 msgid "UID"
 msgstr "UID"
@@ -9199,7 +9209,7 @@ msgid "Volume"
 msgstr "Раздел"
 
 msgid "Volume Label"
-msgstr ""
+msgstr "Метка тома"
 
 msgid "Volume Name"
 msgstr "Имя тома"
@@ -9223,6 +9233,9 @@ msgid ""
 "Volume label of the new file system. Use a space to separate multiple "
 "labels. (if only one specified next will be auto increment)"
 msgstr ""
+"Метка тома для новой файловой системы. Используйте пробел для разделения "
+"нескольких ярлыков. (Если указан только один  следующий будет автоматическое "
+"добавлен)"
 
 msgid "Volume mode"
 msgstr "Режим раздела"
@@ -9386,7 +9399,7 @@ msgid "Write only"
 msgstr "Только запись"
 
 msgid "Wrong number of count for Volume Label"
-msgstr ""
+msgstr "Неверное число счетчика для метки тома"
 
 msgid "Wrong partition type or partition number."
 msgstr "Неверный номер или тип раздела."
@@ -9415,7 +9428,7 @@ msgid "You can use the following parameters for substitution:"
 msgstr "Вы можете использовать следующие параметры для подстановки:"
 
 msgid "You can't format the OS origin disk!"
-msgstr ""
+msgstr "Вы не можете отформатировать диск с OS!"
 
 #, php-format
 msgid ""
@@ -9692,36 +9705,3 @@ msgstr "размонтировать"
 
 msgid "version:"
 msgstr "версия:"
-
-#~ msgid "Advanced Format"
-#~ msgstr "Расширенное форматирование"
-
-#~ msgid "Can't format the OS origin disk!"
-#~ msgstr "Диск с операционной системой не может быть отформатирован!"
-
-#~ msgid "Don't erase the MBR (useful for some RAID controller cards)"
-#~ msgstr "Не стирать MBR (полезно для некоторых контроллеров RAID)"
-
-#~ msgid "Enable Advanced Format (4KB sector)"
-#~ msgstr "Произвести расширенное форматирование (размер сектора 4кб)"
-
-#~ msgid ""
-#~ "Specify the percentage of space held back from normal users. Note that "
-#~ "lowering the threshold can adversely affect performance and auto-"
-#~ "defragmentation."
-#~ msgstr ""
-#~ "Задайте процент дискового пространства, недоступного обычным пользователям. "
-#~ "Учтите, что занижение этого предела может негативно отразиться на "
-#~ "производительности и возможностях автоматической дефрагментации."
-
-#~ msgid "Volume label of the new file system."
-#~ msgstr "Метка тома для новой файловой системы."
-
-#~ msgid "Create ZFS on GPT partition"
-#~ msgstr "Создать ZFS на GPT разделах"
-
-#~ msgid "MBR Erase"
-#~ msgstr "Удалить MBR"
-
-#~ msgid "Select"
-#~ msgstr "Выбрать"

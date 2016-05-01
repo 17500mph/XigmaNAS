@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-04-29 05:06+0000\n"
-"PO-Revision-Date: 2016-03-20 10:04+0000\n"
-"Last-Translator: Jean-Marc <Unknown>\n"
+"PO-Revision-Date: 2016-04-30 20:30+0000\n"
+"Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-29 03:48+0000\n"
+"X-Launchpad-Export-Date: 2016-05-01 23:01+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
@@ -25,7 +25,7 @@ msgstr " a été assignée à "
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
-msgstr ""
+msgstr "%1$s est utilisé pour créer %2$s volumes."
 
 #, php-format
 msgid "%d days"
@@ -65,7 +65,7 @@ msgstr "%s existe déjà en tant que %s"
 
 #, php-format
 msgid "%s already exists."
-msgstr ""
+msgstr "%s existe déjà."
 
 #, php-format
 msgid "%s is already configured as a filesystem."
@@ -172,9 +172,11 @@ msgstr ""
 
 msgid "1 or more disks are required to build a JBOD volume."
 msgstr ""
+"1 ou plusieurs disques sont nécessaires pour construire un volume JBOD."
 
 msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr ""
+"1 ou plusieurs disques sont nécessaires pour construire un volume RAID-1"
 
 msgid ""
 "1. Use these specials actions for debugging only!<br />2. There is no need "
@@ -186,12 +188,15 @@ msgstr ""
 
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr ""
+"2 ou plusieurs disques sont nécessaires pour construire un volume RAID-0"
 
 msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr ""
+"2 ou plusieurs disques sont nécessaires pour construire un volume RAID-1"
 
 msgid "3 or more disks are required to build a RAID-5 volume."
 msgstr ""
+"3 ou plusieurs disques sont nécessaires pour construire un volume RAID-5"
 
 msgid "4KB wrapper"
 msgstr "wrapper de 4 Ko"
@@ -315,6 +320,8 @@ msgid ""
 "A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
 "point</a> first before proceeding."
 msgstr ""
+"Un volume raid monté ne peut être supprimé. Retirez le  <a href='%s'>point "
+"de montage</a> avant de procéder."
 
 msgid "A route to this destination network already exists."
 msgstr "Une route pour cette destination existe déjà."
@@ -430,7 +437,7 @@ msgid "ARP Tables"
 msgstr "Tables ARP"
 
 msgid "ARP Tables List"
-msgstr ""
+msgstr "Liste des tables ARP"
 
 msgid "ATTRIBUTE NAME"
 msgstr "NOM ATTRIBUT"
@@ -510,7 +517,7 @@ msgid "Add URL"
 msgstr "Ajouter un URL"
 
 msgid "Add Virtual Device"
-msgstr ""
+msgstr "Ajouter un périphérique virtuel"
 
 msgid "Add Volume"
 msgstr "Ajouter un volume"
@@ -630,7 +637,7 @@ msgid "Advanced Setup"
 msgstr "Configuration Avancée"
 
 msgid "Advanced format"
-msgstr ""
+msgstr "Format avancé"
 
 msgid "Advanced settings"
 msgstr "Paramètres avancés"
@@ -684,7 +691,7 @@ msgid "Albanian"
 msgstr "Albanais"
 
 msgid "Alert Level"
-msgstr ""
+msgstr "Niveau d'alerte"
 
 msgid "All"
 msgstr "Tous"
@@ -697,7 +704,7 @@ msgstr ""
 "droits invalides, l'utilisation d'un répertoire vide UFS est recommandée."
 
 msgid "All data will be lost when you activate this option!"
-msgstr ""
+msgstr "Toutes les données sernt perdues quand vous activez cette option"
 
 msgid "All dirs"
 msgstr "Tous les répertoires"
@@ -805,7 +812,7 @@ msgid "Alternative configuration directory (usually empty)."
 msgstr "Répertoire de configuration alternatif (généralement vide)."
 
 msgid "Always"
-msgstr ""
+msgstr "Toujours"
 
 msgid "Always On"
 msgstr "Toujours activé"
@@ -970,7 +977,7 @@ msgid "Auxiliary parameters"
 msgstr "Paramètres auxiliaires"
 
 msgid "Avail"
-msgstr ""
+msgstr "Disponible"
 
 msgid "Available"
 msgstr "Disponible"
@@ -1001,7 +1008,7 @@ msgid "Bad User - (Non Existing Users)"
 msgstr "Mauvais utilisateur - (utilisateur inexistant)"
 
 msgid "Balance Algorithm"
-msgstr ""
+msgstr "Algeorithm de Balance"
 
 msgid "Ban List"
 msgstr "Liste des bannis"
@@ -1148,7 +1155,7 @@ msgstr ""
 "Par défault, seuls les fichiers déjà existant peuvent être téléchargés."
 
 msgid "CACHE"
-msgstr ""
+msgstr "CACHE"
 
 msgid "CARP"
 msgstr "CARP"
@@ -1401,7 +1408,7 @@ msgstr "Commande pour l'&eacute;v&egrave;nement LINK_UP (par ex. %s)."
 
 #, php-format
 msgid "Command output"
-msgstr ""
+msgstr "Résultat de la commande"
 
 msgid "Command output:"
 msgstr "Résultat de la commande:"
@@ -1752,7 +1759,7 @@ msgid "Create PV Guest"
 msgstr "creer un invite PV"
 
 msgid "Create ZFS on GPT partition."
-msgstr ""
+msgstr "Créer ZFS sur une partition GPT"
 
 msgid "Create and initialize RAID."
 msgstr "Créer et initialiser le RAID"
@@ -1924,10 +1931,10 @@ msgid "Dataset is marked for deletion"
 msgstr "Dataset est marqué pour suppression"
 
 msgid "Dataset is protected"
-msgstr ""
+msgstr "Le Dataset est protégé"
 
 msgid "Dataset is unlocked"
-msgstr ""
+msgstr "Le  Dataset est déprotégé"
 
 msgid "Datasets"
 msgstr "Jeux de données"
@@ -1945,7 +1952,7 @@ msgid "Debug"
 msgstr "Débogage"
 
 msgid "Debug Level"
-msgstr ""
+msgstr "Niveau de debogage"
 
 msgid "Dec"
 msgstr "Déc."
@@ -1961,7 +1968,7 @@ msgstr ""
 "taux d'effacement max  (big endian)."
 
 msgid "Decrypt password"
-msgstr "mot de passe décrypté"
+msgstr "mot de passe pour décrypter"
 
 msgid "Dedup"
 msgstr "Dedup"
@@ -2022,13 +2029,13 @@ msgid "Delete Selected Options"
 msgstr "Supprimer les options sélectionnées"
 
 msgid "Delete Selected Pools"
-msgstr ""
+msgstr "Efface le(s) pool(s) sélectionné(s)"
 
 msgid "Delete Selected RAID Volumes"
-msgstr ""
+msgstr "Efface le(s) volume(s) RAID sélectionné(s)"
 
 msgid "Delete Selected Virtual Devices"
-msgstr ""
+msgstr "Efface le(s) périphérique(s) virtuel(s)sélectionné(s)"
 
 msgid "Delete Selected Volumes"
 msgstr "Supprimer les volumes sélectionnés"
@@ -2203,7 +2210,7 @@ msgid "Device IP"
 msgstr "IP du périphérique"
 
 msgid "Device List"
-msgstr ""
+msgstr "Liste des périphériques"
 
 msgid "Device Model"
 msgstr "Moèle du peripherique"
@@ -2321,7 +2328,7 @@ msgid "Disk"
 msgstr "Disque"
 
 msgid "Disk Selection"
-msgstr ""
+msgstr "sélection du disque"
 
 msgid "Disk space usage"
 msgstr "Utilisation des disques"
@@ -2350,6 +2357,7 @@ msgstr "Table de hash distribuée"
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
+"Ne pas activer cette option si vous voulez l'ajouter à un RAID existant."
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2475,28 +2483,28 @@ msgid "Do you really want to uninstall this package?"
 msgstr "Voulez-vous vraiment désinstaller ce paquet?"
 
 msgid "Do you want to create a JBOD from selected disks?"
-msgstr ""
+msgstr "Voulez-vous créer un JBOD avec les disques sélectionnés?"
 
 msgid "Do you want to create a RAID-0 from selected disks?"
-msgstr ""
+msgstr "Voulez-vous créer un RAID-0 avec les disques sélectionnés?"
 
 msgid "Do you want to create a RAID-1 from selected disks?"
-msgstr ""
+msgstr "Voulez-vous créer un RAID-1 avec les disques sélectionnés?"
 
 msgid "Do you want to create a RAID-5 from selected disks?"
-msgstr ""
+msgstr "Voulez-vous créer unRAID-5 avec les disques sélectionnés?"
 
 msgid "Do you want to create a RAID-Z1 from selected disks?"
-msgstr ""
+msgstr "Voulez-vous créer unRAID-Z1 avec les disques sélectionnés?"
 
 msgid "Do you want to create a RAID-Z2 from selected disks?"
-msgstr ""
+msgstr "Voulez-vous créer unRAID-Z2 avec les disques sélectionnés?"
 
 msgid "Do you want to create a RAID-Z3 from selected disks?"
-msgstr ""
+msgstr "Voulez-vous créer unRAID-Z3 avec les disques sélectionnés?"
 
 msgid "Do you want to create a cache device from selected disks?"
-msgstr ""
+msgstr "Voulez-vous créer un cache avec les disques sélectionnés?"
 
 msgid "Do you want to create a hot spare device from selected disk?"
 msgstr ""
@@ -2514,7 +2522,7 @@ msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
 
 msgid "Do you want to delete selected RAID volumes?"
-msgstr ""
+msgstr "Voulez-vous supprimer le(s) volume(s) RAID sélectionné(s)"
 
 msgid "Do you want to delete selected datasets?"
 msgstr "Voulez-vous effacer les datasets sélectionnés"
@@ -2526,10 +2534,11 @@ msgid "Do you want to delete selected options?"
 msgstr "Voulez-vous effacer les optionss sélectionnées"
 
 msgid "Do you want to delete selected pools?"
-msgstr ""
+msgstr "Voulez-vous supprimer le(s) pool(s)  sélectionné(s)"
 
 msgid "Do you want to delete selected virtual devices?"
 msgstr ""
+"Voulez-vous supprimer le(s) périphérique(s) Virtuel(s) sélectionné(s)"
 
 msgid "Do you want to delete selected volumes?"
 msgstr "Voulez-vous effacer les volumess sélectionnés"
@@ -2588,6 +2597,8 @@ msgstr "Nom de domaine, e.g. exemple.com."
 msgid ""
 "Don't erase the Master Boot Record. (useful for some RAID controller cards)"
 msgstr ""
+"Ne pas effacer le  Master Boot Record. (utile pour certaines cartes "
+"contrôleur RAID)"
 
 msgid "Donate"
 msgstr "Faire un don"
@@ -2668,7 +2679,7 @@ msgid "Edit"
 msgstr "Editer"
 
 msgid "Edit Dataset"
-msgstr ""
+msgstr "Modifier le jeu de données"
 
 msgid "Edit Host"
 msgstr "Edition de l'hôte"
@@ -2692,7 +2703,7 @@ msgid "Edit VM"
 msgstr "Editer la VM"
 
 msgid "Edit Virtual Device"
-msgstr ""
+msgstr "MOdifier le périphérique virtuel"
 
 msgid "Edit Volume"
 msgstr "Editer le Volume"
@@ -2787,7 +2798,7 @@ msgid "Enable ACL inheritance"
 msgstr "Autoriser l'héritage d'ACL"
 
 msgid "Enable Advanced Format. (4KB sector)"
-msgstr ""
+msgstr "Activer le Format Avancé.(secteurs de 4k)"
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Activer les E/S asynchrones (AIO)"
@@ -2940,7 +2951,7 @@ msgid "Enable reverse DNS lookup."
 msgstr "Activer la recherche DNS inversée."
 
 msgid "Enable serial console."
-msgstr ""
+msgstr "Activer la console série"
 
 msgid "Enable shadow copy"
 msgstr "Activer le cliché instantané"
@@ -2973,10 +2984,10 @@ msgid "Enabled"
 msgstr "Activé"
 
 msgid "Encrypt password"
-msgstr "mot de passe crypté"
+msgstr "mot de passe pour crypter"
 
 msgid "Encrypt password (confirmed)"
-msgstr "mot de passe crypté (confirmé)"
+msgstr "mot de passe pour crypter (confirmé)"
 
 msgid "Encrypted"
 msgstr "Chiffré"
@@ -3068,7 +3079,7 @@ msgstr ""
 msgid ""
 "Erase Fail Count (chip). This parameter indicates a number of flash erase "
 "command failures."
-msgstr ""
+msgstr "périphérique entier"
 
 msgid "Error"
 msgstr "Erreur"
@@ -3084,7 +3095,7 @@ msgid "Event"
 msgstr "Evénement"
 
 msgid "Event selection"
-msgstr ""
+msgstr "Sélection d'évènement"
 
 msgid "Execute"
 msgstr "Exécuter"
@@ -3217,7 +3228,7 @@ msgid "Failed to execute command zfs."
 msgstr "Echec de l'exécution d'une commande zfs."
 
 msgid "Failed to execute command zpool."
-msgstr ""
+msgstr "Echec de l'exécution de la commande zpool."
 
 msgid "Failed to execute cron job."
 msgstr "Erreur à l'éxécution d'une tâche cron."
@@ -3285,7 +3296,7 @@ msgid "File Path"
 msgstr "Chemin d'accès au fichier"
 
 msgid "File System"
-msgstr ""
+msgstr "Système de fichiers"
 
 msgid "File Transfer Protocol"
 msgstr "File Transfer Protocol (FTP)"
@@ -3384,7 +3395,7 @@ msgid "Format"
 msgstr "Formater"
 
 msgid "Format disk"
-msgstr ""
+msgstr "Formater le disque"
 
 msgid "Format the report for phpBB forum."
 msgstr "Formater le rapport pour un forum phpBB."
@@ -3411,7 +3422,7 @@ msgid "Friday"
 msgstr "Vendredi"
 
 msgid "From Email Address"
-msgstr ""
+msgstr "Depuis cette adresse mail"
 
 msgid "From email address for sending system messages."
 msgstr ""
@@ -3770,7 +3781,7 @@ msgid "IRC Live Support"
 msgstr "Aide en ligne via IRC"
 
 msgid "IRC NAS4Free"
-msgstr ""
+msgstr "IRC NAS4Free"
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
@@ -3969,7 +3980,7 @@ msgstr "Digest initial"
 
 #, php-format
 msgid "Initial ramdisk (e.g. %s)."
-msgstr ""
+msgstr "Disque ram initial (e.g. %s)."
 
 msgid "Initialize"
 msgstr "Initialiser"
@@ -4051,7 +4062,7 @@ msgid "Inquiry Vendor"
 msgstr "Inquiry Vendor"
 
 msgid "Insensitive"
-msgstr ""
+msgstr "Insensible"
 
 msgid "Install"
 msgstr "Installation"
@@ -4125,6 +4136,8 @@ msgstr ""
 
 msgid "Invalid username or password.</br> Please try again."
 msgstr ""
+"Mauvais nom d'utilisateur ou mot de passe.</br>S'il vous plait essayez de "
+"nouveau."
 
 msgid "Invert Selection"
 msgstr "Inverser la sélection"
@@ -4248,7 +4261,7 @@ msgid "LAN Management"
 msgstr "Gestion du LAN"
 
 msgid "LAN Only"
-msgstr ""
+msgstr "LAN seulement"
 
 msgid "LAN net"
 msgstr "LAN net"
@@ -4263,10 +4276,10 @@ msgid "LDAP"
 msgstr "LDAP"
 
 msgid "LOG"
-msgstr ""
+msgstr "LOG"
 
 msgid "LOG (Mirror)"
-msgstr ""
+msgstr "LOG miroir"
 
 msgid "LUN"
 msgstr "LUN"
@@ -4586,7 +4599,7 @@ msgid "MIB is marked for deletion"
 msgstr ""
 
 msgid "MIRROR"
-msgstr ""
+msgstr "MIROIR"
 
 msgid "MISSING"
 msgstr "MANQUANT"
@@ -5417,7 +5430,7 @@ msgid "Overload"
 msgstr "Surcharge"
 
 msgid "Overview"
-msgstr ""
+msgstr "Vue d' Ensemble"
 
 msgid "Overwrite already configured disks (only affects filesystem value)."
 msgstr ""
@@ -5888,31 +5901,31 @@ msgid "RAID is unlocked"
 msgstr ""
 
 msgid "RAID-0"
-msgstr ""
+msgstr "RAID-0"
 
 msgid "RAID-0 Maintenance"
 msgstr ""
 
 msgid "RAID-1"
-msgstr ""
+msgstr "RAID-1"
 
 msgid "RAID-1 Maintenance"
 msgstr ""
 
 msgid "RAID-5"
-msgstr ""
+msgstr "RAID-5"
 
 msgid "RAID-5 Maintenance"
 msgstr ""
 
 msgid "RAID-Z1"
-msgstr ""
+msgstr "RAID-Z1"
 
 msgid "RAID-Z2"
-msgstr ""
+msgstr "RAID-Z2"
 
 msgid "RAID-Z3"
-msgstr ""
+msgstr "RAID-Z3"
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -6378,10 +6391,10 @@ msgid "Scheduled tests"
 msgstr "tests programmés"
 
 msgid "Search"
-msgstr ""
+msgstr "Chercher"
 
 msgid "Search event"
-msgstr ""
+msgstr "Recherche d'évènement"
 
 msgid "Secondary"
 msgstr "Secondaire"
@@ -6991,7 +7004,7 @@ msgid "System Load"
 msgstr "Charge système"
 
 msgid "System Settings"
-msgstr ""
+msgstr "Configuration du système"
 
 msgid "System bios"
 msgstr "Le syst&egrave;me BIOS"
@@ -7504,8 +7517,8 @@ msgstr "Le port par défaut du serveur mail SMTP, eq. 25 ou 587."
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
 msgstr ""
-"Le distinguished name (DN) de base à utiliser par défaut pour les "
-"recherches, e.g. %s"
+"Le Nom Distinctif (DN) de base à utiliser par défaut pour les recherches, "
+"e.g. %s"
 
 msgid ""
 "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
@@ -7740,20 +7753,20 @@ msgstr ""
 "serveur."
 
 msgid "The name of the RAID cannot be changed."
-msgstr ""
+msgstr "Le nom du RAID ne peut être changé"
 
 msgid "The name of the RAID is already in use."
-msgstr ""
+msgstr "Le nom du RAID est déja utilisé."
 
 msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
-msgstr ""
+msgstr "Le nom du RAID ne peut utiliser que les caractères  a-z, A-Z, 0-9."
 
 msgid "The name of the pool cannot be changed."
-msgstr ""
+msgstr "Le nom du pool ne peut être changé."
 
 msgid "The name of this virtual device cannot be changed."
-msgstr ""
+msgstr "Le nom du périphérique virtuel ne peut être changé."
 
 #, php-format
 msgid "The network '%s' is invalid."
@@ -8571,7 +8584,7 @@ msgid "TitleSpeed"
 msgstr "Vitesse de défilement du titre"
 
 msgid "To Email Address"
-msgstr ""
+msgstr "Vers cette adresse mail"
 
 msgid ""
 "To configure the target, you must add at least Portal Group and Initiator "
@@ -8666,7 +8679,7 @@ msgid "Tolerated"
 msgstr "Toléré"
 
 msgid "Toolbox"
-msgstr ""
+msgstr "Boîte à outils"
 
 msgid "Tools"
 msgstr "Outils"
@@ -8830,6 +8843,10 @@ msgid ""
 "filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
 "unpredictable results, file corruption and loss of data!"
 msgstr ""
+"UFS et ZFS sont les systèmes de fichiers natifs de NAS4Free. Essayer "
+"d'utiliser d'autres systèmes de fichiers tels que  FAT, FAT32, EXT2, EXT3, "
+"EXT4 ou NTFS peut produire des résultats imprévisibles, corruption de "
+"fichier et perte de données!"
 
 #, php-format
 msgid ""
@@ -9077,6 +9094,7 @@ msgstr ""
 
 msgid "Use toggle button instead of enable/disable buttons."
 msgstr ""
+"Utilisez le bouton de bascule au lieu des boutons d'activation/désactivation."
 
 msgid "Used"
 msgstr "Utilisé"
@@ -9193,16 +9211,16 @@ msgid "Virtual Device"
 msgstr "Périphérique Virtuel"
 
 msgid "Virtual Device List"
-msgstr ""
+msgstr "Liste des périphériques virtuels"
 
 msgid "Virtual Device is marked for removal"
-msgstr ""
+msgstr "Le périphérique virtuel est marqué pour supression"
 
 msgid "Virtual Device is protected"
-msgstr ""
+msgstr "Le périphérique virtuel est protégé"
 
 msgid "Virtual Device is unlocked"
-msgstr ""
+msgstr "Le périphérique virtuel est déprotégé"
 
 msgid "Virtual Devices"
 msgstr "Périphériques Virtuels"
@@ -9223,10 +9241,10 @@ msgid "Virtual Machine"
 msgstr "Machine virtuelle"
 
 msgid "Virtual device can be removed."
-msgstr ""
+msgstr "Le périphérique virtuel peut être supprimé"
 
 msgid "Virtual device is already in use."
-msgstr ""
+msgstr "Le périphérique virtuel est toujours utilisé"
 
 msgid "Virtual devices"
 msgstr "Périphériques virtuels"
@@ -9238,7 +9256,7 @@ msgid "Volume"
 msgstr "Volume"
 
 msgid "Volume Label"
-msgstr ""
+msgstr "Nom de volume"
 
 msgid "Volume Name"
 msgstr "Nom de volume"
@@ -9455,7 +9473,7 @@ msgid "You can use the following parameters for substitution:"
 msgstr "Vous pouvez utilisez les paramètres suivants pour substitution:"
 
 msgid "You can't format the OS origin disk!"
-msgstr ""
+msgstr "Vous ne pouvez pas formater le disque système(OS)!"
 
 #, php-format
 msgid ""
@@ -9731,36 +9749,3 @@ msgstr "démontage"
 
 msgid "version:"
 msgstr "version:"
-
-#~ msgid "Advanced Format"
-#~ msgstr "Format avancé"
-
-#~ msgid "Can't format the OS origin disk!"
-#~ msgstr "Impossible de formatter le disque de l'OS!"
-
-#~ msgid "Don't erase the MBR (useful for some RAID controller cards)"
-#~ msgstr "Conserver le MBR intact (utile avec certains contrôleurs RAID)"
-
-#~ msgid "Enable Advanced Format (4KB sector)"
-#~ msgstr "Activer le format avancé (secteur de 4 KOctets)"
-
-#~ msgid ""
-#~ "Specify the percentage of space held back from normal users. Note that "
-#~ "lowering the threshold can adversely affect performance and auto-"
-#~ "defragmentation."
-#~ msgstr ""
-#~ "Indiquez le pourcentage d'espace disque inaccessible aux utilisateurs "
-#~ "normaux. Notez qu'abaisser ce seuil peut nuire aux performances et à l'auto-"
-#~ "défragmentation."
-
-#~ msgid "Volume label of the new file system."
-#~ msgstr "Étiquette de volume du nouveau système de fichiers."
-
-#~ msgid "Create ZFS on GPT partition"
-#~ msgstr "Installe ZFS sur une partition GPT"
-
-#~ msgid "MBR Erase"
-#~ msgstr "effacement de la MBR"
-
-#~ msgid "Select"
-#~ msgstr "Sélectionner"

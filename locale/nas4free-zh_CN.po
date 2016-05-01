@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-04-29 05:06+0000\n"
-"PO-Revision-Date: 2016-03-03 17:16+0000\n"
-"Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
+"PO-Revision-Date: 2016-05-01 11:49+0000\n"
+"Last-Translator: Ken <magnet1215@msn.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-29 03:49+0000\n"
+"X-Launchpad-Export-Date: 2016-05-01 23:01+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -106,7 +106,7 @@ msgid "%sB used of %sB"
 msgstr "%sB 已用，于 %sB"
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
-msgstr ""
+msgstr "找到一个Maxtor 6B200M0 200GB 和一个Maxtor 2R015H1 15GB 硬盘"
 
 msgid ""
 "(Kingston)Counts the number of flash erase failures. This Attribute returns "
@@ -159,13 +159,13 @@ msgid ""
 msgstr "1.这些特殊操作仅适用于调试（debugging）！<br />2.无需操作此选单来启动RAID卷（系统自动启动）。"
 
 msgid "2 or more disks are required to build a RAID-0 volume."
-msgstr ""
+msgstr "创建一个Raid-0 分区需要2个或更多的磁盘"
 
 msgid "2 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "创建一个Raid-1 分区需要2个或更多的磁盘"
 
 msgid "3 or more disks are required to build a RAID-5 volume."
-msgstr ""
+msgstr "创建一个Raid-5 分区需要2个或更多的磁盘"
 
 msgid "4KB wrapper"
 msgstr "4KB封套"
@@ -262,7 +262,7 @@ msgstr "密钥可能是5或13个字符（40或104位），这取决于本地网�
 msgid ""
 "A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
 "point</a> first before proceeding."
-msgstr ""
+msgstr "一个已经挂载的分区无法被删除.  在行动前要先去除<a href='%s'>挂载点</a>"
 
 msgid "A route to this destination network already exists."
 msgstr "到目标网段的路由设置已经存在。"
@@ -445,7 +445,7 @@ msgid "Add URL"
 msgstr "添加 URL"
 
 msgid "Add Virtual Device"
-msgstr ""
+msgstr "添加虚拟设备"
 
 msgid "Add Volume"
 msgstr "添加卷"
@@ -565,7 +565,7 @@ msgid "Advanced Setup"
 msgstr "高级设置"
 
 msgid "Advanced format"
-msgstr ""
+msgstr "高级格式化"
 
 msgid "Advanced settings"
 msgstr "高级设置"
@@ -610,7 +610,7 @@ msgid "Albanian"
 msgstr "阿尔巴尼亚文"
 
 msgid "Alert Level"
-msgstr ""
+msgstr "警报等级"
 
 msgid "All"
 msgstr "全部"
@@ -621,7 +621,7 @@ msgid ""
 msgstr "在路径上的所有数据将被覆盖。为了避免无效的数据/权限，建议使用空的UFS目录。"
 
 msgid "All data will be lost when you activate this option!"
-msgstr ""
+msgstr "当你激活此选项所有的数据将会丢失"
 
 msgid "All dirs"
 msgstr "所有目录"
@@ -713,7 +713,7 @@ msgid "Alternative configuration directory (usually empty)."
 msgstr "备用配置目录（通常是空的） 。"
 
 msgid "Always"
-msgstr ""
+msgstr "总是"
 
 msgid "Always On"
 msgstr "永远开机"
@@ -1036,7 +1036,7 @@ msgid "By default, only already existing files can be uploaded."
 msgstr "默认是只有已经存在的文件可以上传。"
 
 msgid "CACHE"
-msgstr ""
+msgstr "缓存"
 
 msgid "CARP"
 msgstr "CARP"
@@ -8834,30 +8834,3 @@ msgstr "卸载"
 
 msgid "version:"
 msgstr "版本："
-
-#~ msgid "Advanced Format"
-#~ msgstr "先进格式化（Advanced Format）"
-
-#~ msgid "Can't format the OS origin disk!"
-#~ msgstr "不能夠格式化作業系統安裝磁碟！"
-
-#~ msgid "Don't erase the MBR (useful for some RAID controller cards)"
-#~ msgstr "不删除 MBR (对某些RAID控制卡有用)"
-
-#~ msgid "Enable Advanced Format (4KB sector)"
-#~ msgstr "启用先进格式化（4KB扇区）"
-
-#~ msgid ""
-#~ "Specify the percentage of space held back from normal users. Note that "
-#~ "lowering the threshold can adversely affect performance and auto-"
-#~ "defragmentation."
-#~ msgstr "从普通用户的空间预留指定的百分比。注意将配额降低会影响到磁碟效能和自动碎片整理。"
-
-#~ msgid "Volume label of the new file system."
-#~ msgstr "新文件系统的硬盘标签"
-
-#~ msgid "Create ZFS on GPT partition"
-#~ msgstr "在GPT分区上创建ZFS"
-
-#~ msgid "Select"
-#~ msgstr "选择"
