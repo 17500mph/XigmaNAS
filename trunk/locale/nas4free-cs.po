@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-04-29 05:06+0000\n"
-"PO-Revision-Date: 2016-03-28 09:26+0000\n"
+"PO-Revision-Date: 2016-05-01 19:11+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-29 03:48+0000\n"
+"X-Launchpad-Export-Date: 2016-05-01 23:02+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -64,7 +64,7 @@ msgstr "%s už existuje jako %s."
 
 #, php-format
 msgid "%s already exists."
-msgstr ""
+msgstr "%s už existuje."
 
 #, php-format
 msgid "%s is already configured as a filesystem."
@@ -172,10 +172,10 @@ msgstr ""
 "zadanou délku."
 
 msgid "1 or more disks are required to build a JBOD volume."
-msgstr ""
+msgstr "Pro vytvoření svazku JBOD je zapotřebí jednoho a více disků."
 
 msgid "1 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "Pro vytvoření svazku RAID-1 je zapotřebí jednoho a více disků."
 
 msgid ""
 "1. Use these specials actions for debugging only!<br />2. There is no need "
@@ -185,13 +185,13 @@ msgstr ""
 "nabídku není třeba používat pro spouštění RAID svazku (děje se automaticky)."
 
 msgid "2 or more disks are required to build a RAID-0 volume."
-msgstr ""
+msgstr "Pro vytvoření svazku RAID-0 je zapotřebí dvou a více disků."
 
 msgid "2 or more disks are required to build a RAID-1 volume."
 msgstr ""
 
 msgid "3 or more disks are required to build a RAID-5 volume."
-msgstr ""
+msgstr "Pro vytvoření svazku RAID-5 je zapotřebí třech a více disků."
 
 msgid "4KB wrapper"
 msgstr "4KB obálka (wrapper)"
@@ -510,7 +510,7 @@ msgid "Add URL"
 msgstr "Přidat URL adresu"
 
 msgid "Add Virtual Device"
-msgstr ""
+msgstr "Přidat virtuální zařízení"
 
 msgid "Add Volume"
 msgstr "Přidat svazek"
@@ -634,7 +634,7 @@ msgid "Advanced Setup"
 msgstr "Pokročilá nastavení"
 
 msgid "Advanced format"
-msgstr ""
+msgstr "Pokročilý formát"
 
 msgid "Advanced settings"
 msgstr "Pokročilá nastavení"
@@ -699,7 +699,7 @@ msgstr ""
 "UFS složku a vyhnout se tak neplatným datům / přístupovým právům."
 
 msgid "All data will be lost when you activate this option!"
-msgstr ""
+msgstr "Pokud zapnete tuto volbu, všechna data budou ztracena!"
 
 msgid "All dirs"
 msgstr "Všechny složky"
@@ -811,7 +811,7 @@ msgid "Alternative configuration directory (usually empty)."
 msgstr "Alternativní složka s nastaveními (obvykle nevyplněno)"
 
 msgid "Always"
-msgstr ""
+msgstr "Vždy"
 
 msgid "Always On"
 msgstr "Vždy zapnuto"
@@ -974,7 +974,7 @@ msgid "Auxiliary parameters"
 msgstr "Pomocné parametry"
 
 msgid "Avail"
-msgstr ""
+msgstr "Dostup."
 
 msgid "Available"
 msgstr "K dispozici"
@@ -1005,7 +1005,7 @@ msgid "Bad User - (Non Existing Users)"
 msgstr "Chybný uživatel – (neexistují uživatelé)"
 
 msgid "Balance Algorithm"
-msgstr ""
+msgstr "Algoritmus vyvažování"
 
 msgid "Ban List"
 msgstr "Seznam vykázaných"
@@ -1155,7 +1155,7 @@ msgstr ""
 "stejně, jako ty už přítomné."
 
 msgid "CACHE"
-msgstr ""
+msgstr "MEZIPAMĚŤ"
 
 msgid "CARP"
 msgstr "CARP"
@@ -1413,7 +1413,7 @@ msgstr ""
 
 #, php-format
 msgid "Command output"
-msgstr ""
+msgstr "Výstup z příkazu"
 
 msgid "Command output:"
 msgstr "Výstup z příkazu:"
@@ -2038,7 +2038,7 @@ msgid "Delete Selected Pools"
 msgstr ""
 
 msgid "Delete Selected RAID Volumes"
-msgstr ""
+msgstr "Smazat označené RAID svazky"
 
 msgid "Delete Selected Virtual Devices"
 msgstr ""
@@ -9755,38 +9755,3 @@ msgstr "odpojit (umount)"
 
 msgid "version:"
 msgstr "verze:"
-
-#~ msgid "Don't erase the MBR (useful for some RAID controller cards)"
-#~ msgstr "Nemazat MBR (užitečné v případě některých RAID řadičů)"
-
-#~ msgid "Advanced Format"
-#~ msgstr "Pokročilý formát"
-
-#~ msgid "Enable Advanced Format (4KB sector)"
-#~ msgstr "Zapnout pokročilý formát (4KB sektor)"
-
-#~ msgid ""
-#~ "Specify the percentage of space held back from normal users. Note that "
-#~ "lowering the threshold can adversely affect performance and auto-"
-#~ "defragmentation."
-#~ msgstr ""
-#~ "Určuje procento úložné kapacity, která bude držena jako rezerva stranou a "
-#~ "neposkytována běžným uživatelům. Pozor, snížení této hranice může nepříznivě "
-#~ "ovlivnit výkon a automatickou defragmentaci."
-
-#~ msgid "Can't format the OS origin disk!"
-#~ msgstr ""
-#~ "Není možné zformátovat disk, ze kterého je v tuto chvíli spuštěný operační "
-#~ "systém!"
-
-#~ msgid "Create ZFS on GPT partition"
-#~ msgstr "Vytvořit soub. systém ZFS na GPT oddílu"
-
-#~ msgid "Volume label of the new file system."
-#~ msgstr "Štítek nového souborového systému"
-
-#~ msgid "MBR Erase"
-#~ msgstr "Vymazat hlavní zaváděcí záznam (MBR)"
-
-#~ msgid "Select"
-#~ msgstr "Vybrat"

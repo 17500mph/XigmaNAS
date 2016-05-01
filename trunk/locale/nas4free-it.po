@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-04-29 05:06+0000\n"
-"PO-Revision-Date: 2016-04-01 21:58+0000\n"
-"Last-Translator: Enrico Pierazzi <enrico.pierazzi@gmail.com>\n"
+"PO-Revision-Date: 2016-04-29 09:07+0000\n"
+"Last-Translator: SebastianoPistore <sebastiano.pistore@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-29 03:48+0000\n"
+"X-Launchpad-Export-Date: 2016-05-01 23:01+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
@@ -64,7 +64,7 @@ msgstr "%s esiste già come %s"
 
 #, php-format
 msgid "%s already exists."
-msgstr ""
+msgstr "%s esiste già."
 
 #, php-format
 msgid "%s is already configured as a filesystem."
@@ -502,7 +502,7 @@ msgid "Add URL"
 msgstr "Aggiungi URL"
 
 msgid "Add Virtual Device"
-msgstr ""
+msgstr "Aggiungi Dispositivo virtuale"
 
 msgid "Add Volume"
 msgstr "Aggiungi Volume"
@@ -9564,37 +9564,3 @@ msgstr "smonta"
 
 msgid "version:"
 msgstr "versione:"
-
-#~ msgid "Advanced Format"
-#~ msgstr "Formato Avanzato"
-
-#~ msgid "Can't format the OS origin disk!"
-#~ msgstr "Non posso formattare il disco dell'OS"
-
-#~ msgid "Don't erase the MBR (useful for some RAID controller cards)"
-#~ msgstr ""
-#~ "Non cancellare il MBR (utile nel caso si utilizzi dei controller RAID)"
-
-#~ msgid "Enable Advanced Format (4KB sector)"
-#~ msgstr "Attivare il formato avanzato (settori da 4KB)"
-
-#~ msgid ""
-#~ "Specify the percentage of space held back from normal users. Note that "
-#~ "lowering the threshold can adversely affect performance and auto-"
-#~ "defragmentation."
-#~ msgstr ""
-#~ "Specifica la percentuale di spazio tolta agli utenti normali. Si noti che "
-#~ "diminuendo la soglia si possono avere effetti negativi su prestazioni e auto-"
-#~ "deframmentazione."
-
-#~ msgid "Volume label of the new file system."
-#~ msgstr "Etichetta di volume del nuovo filesystem."
-
-#~ msgid "Create ZFS on GPT partition"
-#~ msgstr "Crea ZFS su partizione GPT"
-
-#~ msgid "MBR Erase"
-#~ msgstr "Camcellazione MBR"
-
-#~ msgid "Select"
-#~ msgstr "Selezionare"

@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-04-29 05:06+0000\n"
-"PO-Revision-Date: 2016-04-25 13:58+0000\n"
-"Last-Translator: Robert Wildgruber <robert@wildgruber.com>\n"
+"PO-Revision-Date: 2016-05-01 17:19+0000\n"
+"Last-Translator: apollo567 <apollo567@hotmail.de>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-29 03:48+0000\n"
+"X-Launchpad-Export-Date: 2016-05-01 23:02+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -67,7 +67,7 @@ msgstr "%s ist bereits als ein %s vorhanden."
 
 #, php-format
 msgid "%s already exists."
-msgstr ""
+msgstr "%s existiert bereits."
 
 #, php-format
 msgid "%s is already configured as a filesystem."
@@ -174,6 +174,8 @@ msgstr ""
 
 msgid "1 or more disks are required to build a JBOD volume."
 msgstr ""
+"Mindestens eine Festplatte (oder mehr) werden für eine JBOD Konfiguration "
+"benötigt"
 
 msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr ""
@@ -187,13 +189,13 @@ msgstr ""
 "automatisch)."
 
 msgid "2 or more disks are required to build a RAID-0 volume."
-msgstr ""
+msgstr "Mindestens zwei Festplatten werden für ein RAID-0 Volume benötigt"
 
 msgid "2 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "Mindestens zwei Festplatten werden für ein RAID-1 Volume benötigt"
 
 msgid "3 or more disks are required to build a RAID-5 volume."
-msgstr ""
+msgstr "Mindestens dre Festplatten werden für ein RAID-5 Volume benötigt"
 
 msgid "4KB wrapper"
 msgstr "4k Anpassung"
@@ -519,7 +521,7 @@ msgid "Add URL"
 msgstr "URL hinzufügen"
 
 msgid "Add Virtual Device"
-msgstr ""
+msgstr "Virtual Device hinzufügen"
 
 msgid "Add Volume"
 msgstr "Datenträger hinzufügen"
@@ -979,7 +981,7 @@ msgid "Auxiliary parameters"
 msgstr "Zusätzliche Parameter"
 
 msgid "Avail"
-msgstr ""
+msgstr "Verfügbar"
 
 msgid "Available"
 msgstr "Verfügbar"
@@ -1153,7 +1155,7 @@ msgstr ""
 "Standardmäßig können nur bereits existierende Dateien hochgeladen werden."
 
 msgid "CACHE"
-msgstr ""
+msgstr "CACHE"
 
 msgid "CARP"
 msgstr "CARP"
@@ -1994,7 +1996,7 @@ msgid "Delete Selected Options"
 msgstr "Ausgewählte Optionen löschen"
 
 msgid "Delete Selected Pools"
-msgstr ""
+msgstr "Ausgewählte Pools löschen"
 
 msgid "Delete Selected RAID Volumes"
 msgstr "Lösche die ausgewählten RAID Laufwerke"
@@ -2289,7 +2291,7 @@ msgid "Disk"
 msgstr "Festplatte"
 
 msgid "Disk Selection"
-msgstr ""
+msgstr "Festpalttenauswahl"
 
 msgid "Disk space usage"
 msgstr "Festplattenauslastung"
@@ -2318,6 +2320,8 @@ msgstr "Verteilte Hashtabelle"
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
+"Die Option nicht aktivieren, wenn Sie ein bestehendes Raid-Array hinzufügen "
+"möchten !"
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2446,6 +2450,8 @@ msgstr "Soll das Paket wirklich deinstalliert werden?"
 
 msgid "Do you want to create a JBOD from selected disks?"
 msgstr ""
+"Möchten Sie eine JBOD-Konfiguration aus den ausgewählten Festplatten "
+"erstellen ?"
 
 msgid "Do you want to create a RAID-0 from selected disks?"
 msgstr ""
@@ -9696,39 +9702,3 @@ msgstr "Aushängen"
 
 msgid "version:"
 msgstr "Version:"
-
-#~ msgid "Advanced Format"
-#~ msgstr "Advanced Format (4K-Sektorgröße)"
-
-#~ msgid "Can't format the OS origin disk!"
-#~ msgstr ""
-#~ "Die Festplatte die das Betriebssystem beinhaltet kann nicht formatiert "
-#~ "werden."
-
-#~ msgid "Don't erase the MBR (useful for some RAID controller cards)"
-#~ msgstr ""
-#~ "MBR nicht löschen (bei einigen Hardware RAID Kontrollerkarten empfehlenswert)"
-
-#~ msgid "Enable Advanced Format (4KB sector)"
-#~ msgstr "Aktiviere Advanced Format (4K-Sektorgröße)"
-
-#~ msgid ""
-#~ "Specify the percentage of space held back from normal users. Note that "
-#~ "lowering the threshold can adversely affect performance and auto-"
-#~ "defragmentation."
-#~ msgstr ""
-#~ "Geben Sie die dem Nutzer vorbehaltene Speichermenge in Prozent an. Bedenken "
-#~ "Sie, dass das Absenken des Schwellenwertes sowohl die Performance als auch "
-#~ "die Auto-Defragmentation nachteilig beeinflussen kann."
-
-#~ msgid "Volume label of the new file system."
-#~ msgstr "Datenträgeretikett (Volume label) des neuen Dateisystems."
-
-#~ msgid "Create ZFS on GPT partition"
-#~ msgstr "ZFS in GPT Partition erstellen"
-
-#~ msgid "MBR Erase"
-#~ msgstr "MBR (Master Boot Record) löschen"
-
-#~ msgid "Select"
-#~ msgstr "Auswählen"

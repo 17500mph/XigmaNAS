@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-04-29 05:06+0000\n"
-"PO-Revision-Date: 2016-04-28 16:27+0000\n"
-"Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
+"PO-Revision-Date: 2016-04-30 23:06+0000\n"
+"Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-29 03:49+0000\n"
+"X-Launchpad-Export-Date: 2016-05-01 23:01+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -616,7 +616,7 @@ msgid "Advanced Setup"
 msgstr "Avancerad inställning"
 
 msgid "Advanced format"
-msgstr ""
+msgstr "Avancerat format"
 
 msgid "Advanced settings"
 msgstr "Avancerade inställningar"
@@ -1368,7 +1368,7 @@ msgstr "Kommando för LINK_UP händelse (ex. %s)."
 
 #, php-format
 msgid "Command output"
-msgstr ""
+msgstr "Kommandoutmatning"
 
 msgid "Command output:"
 msgstr "Kommandoutmatning:"
@@ -1700,7 +1700,7 @@ msgid "Create PV Guest"
 msgstr "Skapa PV gäst"
 
 msgid "Create ZFS on GPT partition."
-msgstr ""
+msgstr "Skapa ZFS på GPT partition."
 
 msgid "Create and initialize RAID."
 msgstr "Skapa och initialisera RAID."
@@ -2261,7 +2261,7 @@ msgid "Disk"
 msgstr "Disk"
 
 msgid "Disk Selection"
-msgstr ""
+msgstr "Diskval"
 
 msgid "Disk space usage"
 msgstr "Diskutrymmesanvändning"
@@ -2528,6 +2528,7 @@ msgstr "Domännamn, såsom exempel.com."
 msgid ""
 "Don't erase the Master Boot Record. (useful for some RAID controller cards)"
 msgstr ""
+"Radera inte Master Boot Record. (användbart för några RAID kontrollerkort)"
 
 msgid "Donate"
 msgstr "Donera"
@@ -2726,7 +2727,7 @@ msgid "Enable ACL inheritance"
 msgstr "Aktivera ärvning av ACL"
 
 msgid "Enable Advanced Format. (4KB sector)"
-msgstr ""
+msgstr "Akrivera avancerat format. (4KB sektorer)"
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Aktivera Asynkron I/O (AIO)"
@@ -3224,7 +3225,7 @@ msgid "File Path"
 msgstr "Filsökväg"
 
 msgid "File System"
-msgstr ""
+msgstr "Filsystem"
 
 msgid "File Transfer Protocol"
 msgstr "Fil Överförings Protokoll (FTP)"
@@ -3321,7 +3322,7 @@ msgid "Format"
 msgstr "Formatera"
 
 msgid "Format disk"
-msgstr ""
+msgstr "Formatera disk"
 
 msgid "Format the report for phpBB forum."
 msgstr "Formatera rapporten för phpBB-forum"
@@ -4463,6 +4464,7 @@ msgid ""
 "Lowering this threshold can adversely affect performance and auto-"
 "defragmentation."
 msgstr ""
+"Att sänka denna gräns kan påverka prestanda och automatisk defragmentering."
 
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
@@ -4478,7 +4480,7 @@ msgid "MAC address"
 msgstr "MAC-adress"
 
 msgid "MBR erase"
-msgstr ""
+msgstr "Radera MBR"
 
 msgid "MBR partition"
 msgstr "MBR partition"
@@ -4907,7 +4909,7 @@ msgid "Name of the variable."
 msgstr "Namn på variabeln."
 
 msgid "Nested HVM"
-msgstr ""
+msgstr "Nested HVM"
 
 msgid "NetBIOS domain"
 msgstr "NetBios domän"
@@ -5147,6 +5149,7 @@ msgstr "Observera"
 #, php-format
 msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
 msgstr ""
+"Notera: Ctrl-klick (command-klick på en MAC) för att välja flera diskar."
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -6702,6 +6705,8 @@ msgstr ""
 
 msgid "Specify the percentage of space held back from normal users."
 msgstr ""
+"Specificera procentiell andel av utrymmet som skall gömmas för normala "
+"användare."
 
 msgid "Split request"
 msgstr "Split begäran"
@@ -8662,7 +8667,7 @@ msgid "UFS"
 msgstr "UFS"
 
 msgid "UFS (GPT and Soft Updates)"
-msgstr ""
+msgstr "UFS (GPT och uppdateringar)"
 
 #, php-format
 msgid ""
@@ -8679,6 +8684,9 @@ msgid ""
 "filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
 "unpredictable results, file corruption and loss of data!"
 msgstr ""
+"UFS and ZFS är STANDARD filsystem för NAS4Free. Försök att använda andra "
+"filsystem som FAT, FAT32, EXT2, EXT3, EXT4 eller NTFS kan resultera i "
+"oförutsedda resultat, filskador och förlust av data!"
 
 #, php-format
 msgid ""
@@ -8693,7 +8701,7 @@ msgstr ""
 "förlust av data!"
 
 msgid "UFS with Soft Updates"
-msgstr ""
+msgstr "UFS med uppdateringar"
 
 msgid "UID"
 msgstr "UID"
@@ -9087,7 +9095,7 @@ msgid "Volume"
 msgstr "Volym"
 
 msgid "Volume Label"
-msgstr ""
+msgstr "Volymetikett"
 
 msgid "Volume Name"
 msgstr "Volymnamn"
@@ -9111,6 +9119,9 @@ msgid ""
 "Volume label of the new file system. Use a space to separate multiple "
 "labels. (if only one specified next will be auto increment)"
 msgstr ""
+"Volymetikett för det nya filsystemet. Använd mellanslag för att separera "
+"flera namn. (om endast ett specificeras kommer nästa att räknas upp "
+"automatiskt)"
 
 msgid "Volume mode"
 msgstr "Volymmod"
@@ -9271,7 +9282,7 @@ msgid "Write only"
 msgstr "Enbart skrivbar"
 
 msgid "Wrong number of count for Volume Label"
-msgstr ""
+msgstr "Felaktigt värde för volymetikettsräknare"
 
 msgid "Wrong partition type or partition number."
 msgstr "Felaktig partition eller partitionsnummer"
@@ -9300,7 +9311,7 @@ msgid "You can use the following parameters for substitution:"
 msgstr "Du kan använda följande parametrar för substitution(utbyte):"
 
 msgid "You can't format the OS origin disk!"
-msgstr ""
+msgstr "Du kan inte formatera operativsystemets källdisk."
 
 #, php-format
 msgid ""
@@ -9572,36 +9583,3 @@ msgstr "umount"
 
 msgid "version:"
 msgstr "version:"
-
-#~ msgid "Can't format the OS origin disk!"
-#~ msgstr "Kan ej formatera operativsystemets ursprungsdisk!"
-
-#~ msgid "Don't erase the MBR (useful for some RAID controller cards)"
-#~ msgstr "Radera inte MBR (användbart för vissa RAID-kontrollerkort)"
-
-#~ msgid "Enable Advanced Format (4KB sector)"
-#~ msgstr "Aktivera 'Advanced Format' (4KB sektor)"
-
-#~ msgid ""
-#~ "Specify the percentage of space held back from normal users. Note that "
-#~ "lowering the threshold can adversely affect performance and auto-"
-#~ "defragmentation."
-#~ msgstr ""
-#~ "Specificerar återhållet utrymme i procent för normalanvändare. Notera: Att "
-#~ "minska denna tröskel kan allvarligt påverka effektiviteten och den "
-#~ "automatiska defragmenteringen."
-
-#~ msgid "Volume label of the new file system."
-#~ msgstr "Volymetikett för det nya filesystemet."
-
-#~ msgid "Advanced Format"
-#~ msgstr "Avancerat format"
-
-#~ msgid "Create ZFS on GPT partition"
-#~ msgstr "Skapa ZFS på en GPT-partition"
-
-#~ msgid "Select"
-#~ msgstr "Välj"
-
-#~ msgid "MBR Erase"
-#~ msgstr "Radera MBR"
