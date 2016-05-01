@@ -44,6 +44,7 @@ if (!isset($config['sshd']) || !is_array($config['sshd']))
 
 $os_release = exec('uname -r | cut -d - -f1');
 
+$pconfig['challengeresponseauthentication'] = isset($config['sshd']['challengeresponseauthentication']);
 $pconfig['port'] = $config['sshd']['port'];
 $pconfig['permitrootlogin'] = isset($config['sshd']['permitrootlogin']);
 $pconfig['tcpforwarding'] = isset($config['sshd']['tcpforwarding']);
@@ -79,6 +80,7 @@ if ($_POST) {
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
 	if (empty($input_errors)) {
+		$config['sshd']['challengeresponseauthentication'] = isset($_POST['challengeresponseauthentication']);
 		$config['sshd']['port'] = $_POST['port'];
 		$config['sshd']['permitrootlogin'] = isset($_POST['permitrootlogin']) ? true : false;
 		$config['sshd']['tcpforwarding'] = isset($_POST['tcpforwarding']) ? true : false;
@@ -114,6 +116,7 @@ if ($_POST) {
 <!--
 function enable_change(enable_change) {
 	var endis = !(document.iform.enable.checked || enable_change);
+	document.iform.challengeresponseauthentication.disabled = endis;
 	document.iform.port.disabled = endis;
 	document.iform.key.disabled = endis;
 	document.iform.permitrootlogin.disabled = endis;
@@ -134,7 +137,13 @@ function enable_change(enable_change) {
 			  <table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_titleline_checkbox("enable", gettext("Secure Shell"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "enable_change(false)");?>
 			    <tr>
-			      <td width="22%" valign="top" class="vncellreq"><?=gettext("TCP port");?></td>
+			      <td width="22%" valign="top" class="vncellreq"><?=gettext("Enable Challenge-Response Authentication");?></td>
+			      <td width="78%" class="vtable">
+			        <input name="challengeresponseauthentication" type="checkbox" id="challengeresponseauthentication" value="yes" <?php if (!empty($pconfig['challengeresponseauthentication'])) echo "checked=\"checked\""; ?> />
+			        <?=gettext("Specifies the usage of Challenge-Response Authentication.");?></td>
+			    </tr>
+			    <tr>
+			      <td width="22%" valign="top" class="vncell"><?=gettext("TCP port");?></td>
 			      <td width="78%" class="vtable">
 							<input name="port" type="text" class="formfld" id="port" size="20" value="<?=htmlspecialchars($pconfig['port']);?>" />
 							<br /><?=gettext("Alternate TCP port. Default is 22");?></td>
