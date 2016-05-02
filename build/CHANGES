@@ -5,7 +5,7 @@ Changes:
 - Upgrade to FreeBSD 10.3-RELEASE-P0.
 - Add search function to Diagnostics|Log.
 - Refactoring Webgui parts and replace deprecated php code.
-- sshd Challenge-Response Authentication is now configurable
+- sshd Challenge-Response Authentication is now configurable.
 - Upgrade exfat to 1.2.3.
 - Upgrade phpvirtualbox to 5.0-5.
 - Upgrade samba to 4.3.8.
@@ -23,6 +23,8 @@ Fixes:
 - Fix dataset did not always get destroyed on webgui if a share is in usage.
 - Fix missing mimes (translation files) for File Manager.
 - Fix firewall rules cannot be moved into the preset rule area.
+- Fix multiple vulnerabilities of ntp.
+- Fix issue with zfs dataset permissions. (Introduced in Beta 2606)
 
 Note:
 - iperf2 has been replaced for iperf3 because of inconsistent results for UDP above 2Gbps.
