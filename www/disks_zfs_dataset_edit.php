@@ -45,7 +45,11 @@ $prerequisites_ok = true;
 
 $mode_page = ($_POST) ? PAGE_MODE_POST : (($_GET) ? PAGE_MODE_EDIT : PAGE_MODE_ADD); // detect page mode
 if (PAGE_MODE_POST == $mode_page) { // POST is Cancel or not Submit => cleanup
-	if ((isset($_POST['Cancel']) && $_POST['Cancel']) || !(isset($_POST['Submit']) && $_POST['Submit'])) {
+	if (isset($_POST['Cancel']) && $_POST['Cancel']) {
+		header($sphere_header_parent);
+		exit;
+	}
+	if (!(isset($_POST['Submit']) && $_POST['Submit'])) {
 		header($sphere_header_parent);
 		exit;
 	}
@@ -62,18 +66,30 @@ if ((PAGE_MODE_POST == $mode_page) && isset($_POST['uuid']) && is_uuid_v4($_POST
 	}
 }
 
+if (!(isset($config['zfs']) && is_array($config['zfs']))) {
+	$config['zfs'] = [];
+}
+if (!(isset($config['zfs']['datasets']) && is_array($config['zfs']['datasets']))) {
+	$config['zfs']['datasets'] = [];
+}
 if (!(isset($config['zfs']['datasets']['dataset']) && is_array($config['zfs']['datasets']['dataset']))) {
 	$config['zfs']['datasets']['dataset'] = [];
 }
 array_sort_key($config['zfs']['datasets']['dataset'], 'name');
 $sphere_array = &$config['zfs']['datasets']['dataset'];
 
+if (!(isset($config['zfs']['volumes']) && is_array($config['zfs']['volumes']))) {
+	$config['zfs']['volumes'] = [];
+}
 if (!(isset($config['zfs']['volumes']['volume']) && is_array($config['zfs']['volumes']['volume']))) {
 	$config['zfs']['volumes']['volume'] = [];
 }
 array_sort_key($config['zfs']['volumes']['volume'], 'name');
 $a_volume = &$config['zfs']['volumes']['volume'];
 
+if (!(isset($config['zfs']['pools']) && is_array($config['zfs']['pools']))) {
+	$config['zfs']['pools'] = [];
+}
 if (!(isset($config['zfs']['pools']['pool']) && is_array($config['zfs']['pools']['pool']))) {
 	$config['zfs']['pools']['pool'] = [];
 	$errormsg = sprintf(gettext("No configured pools. Please add new <a href='%s'>pools</a> first."), 'disks_zfs_zpool.php');
@@ -111,28 +127,28 @@ if (RECORD_ERROR == $mode_record) { // oops, someone tries to cheat, over and ou
 	exit;
 }
 $isrecordnew = (RECORD_NEW === $mode_record);
-$isrecordnewmodify = (RECORD_NEW_MODIFY == $mode_record);
+$isrecordnewmodify = (RECORD_NEW_MODIFY === $mode_record);
 $isrecordmodify = (RECORD_MODIFY === $mode_record);
 $isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
 
 if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 	unset($input_errors);
 	// apply post values that are applicable for all record modes
-	$sphere_record['compression'] = isset($_POST['compression']) ? $_POST['compression'] : '';
-	$sphere_record['dedup'] = isset($_POST['dedup']) ? $_POST['dedup'] : '';
-	$sphere_record['sync'] = isset($_POST['sync']) ? $_POST['sync'] : '';
-	$sphere_record['atime'] = isset($_POST['atime']) ? $_POST['atime'] : '';
-	$sphere_record['aclinherit'] = isset($_POST['aclinherit']) ? $_POST['aclinherit'] : '';
-	$sphere_record['aclmode'] = isset($_POST['aclmode']) ? $_POST['aclmode'] : '';
-	$sphere_record['canmount'] = isset($_POST['canmount']) ? true : false;
-	$sphere_record['readonly'] = isset($_POST['readonly']) ? true : false;
-	$sphere_record['xattr'] = isset($_POST['xattr']) ? true : false;
-	$sphere_record['snapdir'] = isset($_POST['snapdir']) ? true : false;
-	$sphere_record['quota'] = isset($_POST['quota']) ? $_POST['quota'] : '';
-	$sphere_record['reservation'] = isset($_POST['reservation']) ? $_POST['reservation'] : '';
-	$sphere_record['desc'] = isset($_POST['desc']) ? $_POST['desc'] : '';
-	$sphere_record['accessrestrictions']['owner'] = isset($_POST['owner']) ? $_POST['owner'] : '';
-	$sphere_record['accessrestrictions']['group'] = isset($_POST['group']) ? $_POST['group'] : '';
+	$sphere_record['compression'] = $_POST['compression'] ?? '';
+	$sphere_record['dedup'] = $_POST['dedup'] ?? '';
+	$sphere_record['sync'] = $_POST['sync'] ?? '';
+	$sphere_record['atime'] = $_POST['atime'] ?? '';
+	$sphere_record['aclinherit'] = $_POST['aclinherit'] ?? '';
+	$sphere_record['aclmode'] = $_POST['aclmode'] ?? '';
+	$sphere_record['canmount'] = isset($_POST['canmount']);
+	$sphere_record['readonly'] = isset($_POST['readonly']);
+	$sphere_record['xattr'] = isset($_POST['xattr']);
+	$sphere_record['snapdir'] = isset($_POST['snapdir']);
+	$sphere_record['quota'] = $_POST['quota'] ?? '';
+	$sphere_record['reservation'] = $_POST['reservation'] ?? '';
+	$sphere_record['desc'] = $_POST['desc'] ?? '';
+	$sphere_record['accessrestrictions']['owner'] = $_POST['owner'] ?? '';
+	$sphere_record['accessrestrictions']['group'] = $_POST['group'] ?? '';
 	$helpinghand = 0;
 	if (isset($_POST['mode_access']) && is_array($_POST['mode_access']) && count($_POST['mode_access'] < 10)) {
 		foreach ($_POST['mode_access'] as $r_mode_access) {
@@ -143,9 +159,9 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 	switch ($mode_record) {
 		case RECORD_NEW:
 		case RECORD_NEW_MODIFY:
-			$sphere_record['name'] = isset($_POST['name']) ? $_POST['name'] : '';
-			$sphere_record['pool'] = isset($_POST['pool']) ? $_POST['pool'] : '';
-			$sphere_record['casesensitivity'] = isset($_POST['casesensitivity']) ? $_POST['casesensitivity'] : '';
+			$sphere_record['name'] = $_POST['name'] ?? '';
+			$sphere_record['pool'] = $_POST['pool'] ?? '';
+			$sphere_record['casesensitivity'] = $_POST['casesensitivity'] ?? '';
 			break;
 		case RECORD_MODIFY:
 			$sphere_record['name'] = $sphere_array[$index]['name'];
@@ -261,7 +277,7 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 			$sphere_record['accessrestrictions']['mode'] = '0777';
 			break;
 		case RECORD_NEW_MODIFY:
-			$sphere_record['casesensitivity'] = isset($sphere_array[$index]['casesensitivity']) ? $sphere_array[$index]['casesensitivity'] : 'sensitive';
+			$sphere_record['casesensitivity'] = $sphere_array[$index]['casesensitivity'] ?? 'sensitive';
 		case RECORD_MODIFY:
 			$sphere_record['name'] = $sphere_array[$index]['name'];
 			$sphere_record['pool'] = $sphere_array[$index]['pool'][0];
@@ -361,7 +377,7 @@ for ($i = 0; $i < 9; $i++) {
 	$mode_access[$i] = $helpinghand & (1 << $i);
 }
 
-$pgtitle = [gettext('Disks'), gettext('ZFS'), gettext('Datasets'), gettext('Dataset'), (RECORD_NEW !== $mode_record) ? gettext('Edit') : gettext('Add')];
+$pgtitle = [gettext('Disks'), gettext('ZFS'), gettext('Datasets'), gettext('Dataset'), $isrecordnew ? gettext('Add') : gettext('Edit')];
 ?>
 <?php include("fbegin.inc");?>
 <table id="area_navigator">
@@ -468,7 +484,7 @@ $pgtitle = [gettext('Disks'), gettext('ZFS'), gettext('Datasets'), gettext('Data
 		</tbody>
 	</table>
 	<div id="submit">
-		<input name="Submit" type="submit" class="formbtn" value="<?=($isrecordnew) ? gettext('Add') : gettext('Save');?>"/>
+		<input name="Submit" type="submit" class="formbtn" value="<?=$isrecordnew ? gettext('Add') : gettext('Save');?>"/>
 		<input name="Cancel" type="submit" class="formbtn" value="<?=gettext('Cancel');?>" />
 		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>" />
 	</div>
