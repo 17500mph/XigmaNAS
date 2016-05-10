@@ -225,12 +225,16 @@ vbox_start()
 	if ! /sbin/kldstat -q -m if_tap; then
 		/sbin/kldload if_tap > /dev/null 2>&1
 	fi
+	echo "VBox start: set sysctl options..."
 	/sbin/sysctl -q net.link.tap.user_open=1 > /dev/null
 	/sbin/sysctl -q net.link.tap.up_on_open=1 > /dev/null
+	echo "VBox start: calling vboxnet onestart..."
 	/usr/local/etc/rc.d/vboxnet onestart
+	echo "VBox start: calling vboxwebsrv onestart..."
 	/usr/local/etc/rc.d/vboxwebsrv onestart
-
+	echo "VBox start: sleep a bit..."
 	/bin/sleep 3
+	echo "VBox start: starting virtual machines..."
 	vbox_vmstart
 }
 
