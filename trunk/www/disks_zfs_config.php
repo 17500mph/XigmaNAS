@@ -15,6 +15,7 @@
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+ * 
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -37,27 +38,16 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Configuration'), gettext('Detected'));
-
-$zfs = array(
-	'vdevices' => array(
-		'vdevice' => array()
-	),
-	'pools' => array(
-		'pool' => array()
-	),
-	'datasets' => array(
-		'dataset' => array()
-	),
-	'volumes' => array(
-		'volume' => array()
-	),
-);
+$zfs = [
+	'vdevices' => ['vdevice' => []],
+	'pools' => ['pool' => []],
+	'datasets' => ['dataset' => []],
+	'volumes' => ['volume' => []],
+];
 
 if (isset($_POST['import']))
 {
 	$cmd = 'zpool import -d /dev -a';
-
 	if (isset($_POST['import_force']))
 	{
 		$cmd .= ' -f';
@@ -72,22 +62,16 @@ if (isset($_POST['import']))
 }
 
 $rawdata = null;
-$spa = @exec("sysctl -q -n vfs.zfs.version.spa");
-if ($spa == '' || $spa < 21) {
-	mwexec2('zfs list -H -t filesystem -o name,mountpoint,compression,canmount,quota,used,available,xattr,snapdir,readonly,origin', $rawdata);
-} else {
-	mwexec2('zfs list -H -t filesystem -o name,mountpoint,compression,canmount,quota,used,available,xattr,snapdir,readonly,origin,reservation,dedup,sync,atime,aclinherit,aclmode,primarycache,secondarycache', $rawdata);
-}
-foreach($rawdata as $line)
-{
+mwexec2('zfs list -H -t filesystem -o name,mountpoint,compression,canmount,quota,used,available,xattr,snapdir,readonly,origin,reservation,dedup,sync,atime,aclinherit,aclmode,primarycache,secondarycache', $rawdata);
+foreach($rawdata as $line) {
+	$uuid = uuid();
 	if ($line == 'no datasets available') { continue; }
 	list($fname, $mpoint, $compress, $canmount, $quota, $used, $avail, $xattr, $snapdir, $readonly, $origin, $reservation, $dedup, $sync, $atime, $aclinherit, $aclmode, $primarycache, $secondarycache) = explode("\t", $line);
-	if (strpos($fname, '/') !== false) // dataset
-	{
+	if (strpos($fname, '/') !== false) { // dataset
 		if (empty($origin) || $origin != '-') continue;
 		list($pool, $name) = explode('/', $fname, 2);
-		$zfs['datasets']['dataset'][$name] = array(
-			'uuid' => uuid(),
+		$zfs['datasets']['dataset'][$uuid] = [
+			'uuid' => $uuid,
 			'name' => $name,
 			'pool' => $pool,
 			'compression' => $compress,
@@ -105,30 +89,32 @@ foreach($rawdata as $line)
 			'primarycache' => $primarycache,
 			'secondarycache' => $secondarycache,
 			'desc' => '',
-		);
+		];
 		list($mp_owner, $mp_group, $mp_mode) = array('root', 'wheel', 0777);
 		if ($canmount == 'on' && !empty($mpoint) && file_exists($mpoint)) {
 			$mp_uid = fileowner($mpoint);
 			$mp_gid = filegroup($mpoint);
 			$mp_perm = (fileperms($mpoint) & 0777);
 			$tmp = posix_getpwuid($mp_uid);
-			if (!empty($tmp) && !empty($tmp['name']))
+			if (!empty($tmp) && !empty($tmp['name'])) {
 				$mp_owner = $tmp['name'];
+			}
 			$tmp = posix_getgrgid($mp_gid);
-			if (!empty($tmp) && !empty($tmp['name']))
+			if (!empty($tmp) && !empty($tmp['name'])) {
 				$mp_group = $tmp['name'];
+			}
 			$mp_mode = sprintf("0%o", $mp_perm);
 		}
-		$zfs['datasets']['dataset'][$name]['accessrestrictions'] = array(
+		$zfs['datasets']['dataset'][$uuid]['accessrestrictions'] = [
 			'owner' => $mp_owner,
 			'group' => $mp_group,
 			'mode' => $mp_mode,
-		);
+		];
 	}
 	else // zpool
 	{
 		$zfs['pools']['pool'][$fname] = array(
-			'uuid' => uuid(),
+			'uuid' => $uuid,
 			'name' => $fname,
 			'vdevice' => array(),
 			'root' => null,
@@ -146,22 +132,16 @@ foreach($rawdata as $line)
 }
 
 $rawdata = null;
-$spa = @exec("sysctl -q -n vfs.zfs.version.spa");
-if ($spa == '' || $spa < 21) {
-	mwexec2('zfs list -H -t volume -o name,volsize,volblocksize,compression,origin', $rawdata);
-} else {
-	mwexec2('zfs list -H -t volume -o name,volsize,volblocksize,compression,origin,dedup,sync,refreservation', $rawdata);
-}
-foreach($rawdata as $line)
-{
+mwexec2('zfs list -H -t volume -o name,volsize,volblocksize,compression,origin,dedup,sync,refreservation', $rawdata);
+foreach($rawdata as $line) {
+	$uuid = uuid();
 	if ($line == 'no datasets available') { continue; }
 	list($fname, $volsize, $volblocksize, $compress, $origin, $dedup, $sync, $refreservation) = explode("\t", $line);
-	if (strpos($fname, '/') !== false) // volume
-	{
+	if (strpos($fname, '/') !== false) { // volume
 		if (empty($origin) || $origin != '-') continue;
 		list($pool, $name) = explode('/', $fname, 2);
-		$zfs['volumes']['volume'][$name] = array(
-			'uuid' => uuid(),
+		$zfs['volumes']['volume'][$uuid] = [
+			'uuid' => $uuid,
 			'name' => $name,
 			'pool' => $pool,
 			'volsize' => $volsize,
@@ -171,25 +151,18 @@ foreach($rawdata as $line)
 			'sync' => $sync,
 			'sparse' => ($refreservation == "none") ? true : false,
 			'desc' => '',
-		);
+		];
 	}
 }
 
 $rawdata = null;
-$spa = @exec("sysctl -q -n vfs.zfs.version.spa");
-if ($spa == '') {
-	mwexec2('zpool list -H -o name,root,size,allocated,free,capacity,health', $rawdata);
-} else if ($spa < 21) {
-	mwexec2("zpool list -H -o name,altroot,size,allocated,free,capacity,health", $rawdata);
-} else {
-	mwexec2("zpool list -H -o name,altroot,size,allocated,free,capacity,expandsz,frag,health,dedup", $rawdata);
-}
-foreach ($rawdata as $line)
-{
-	if ($line == 'no pools available') { continue; }
+mwexec2("zpool list -H -o name,altroot,size,allocated,free,capacity,expandsz,frag,health,dedup", $rawdata);
+foreach ($rawdata as $line) {
+	if ($line == 'no pools available') {
+		continue; 
+	}
 	list($pool, $root, $size, $alloc, $free, $cap, $expandsz, $frag, $health, $dedup) = explode("\t", $line);
-	if ($root != '-')
-	{
+	if ($root != '-') {
 		$zfs['pools']['pool'][$pool]['root'] = $root;
 	}
 	$zfs['extra']['pools']['pool'][$pool]['size'] = $size;
@@ -372,147 +345,225 @@ if (!$health)
 	$message_box_text = gettext('Your ZFS system is not healthy.');
 }
 
+$pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Configuration'), gettext('Detected'));
 ?>
 <?php include("fbegin.inc");?>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<table id="area_navigator"><tbody>
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gettext("Pools");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gettext("Datasets");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gettext("Volumes");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gettext("Snapshots");?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_config.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Configuration");?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gettext('Pools');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gettext('Datasets');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gettext('Volumes');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gettext('Snapshots');?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_config.php" title="<?=gettext('Reload page');?>"><span><?=gettext('Configuration');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav2">
-				<li class="tabinact"><a href="disks_zfs_config_current.php"><span><?=gettext("Current");?></span></a></li>
-				<li class="tabact" title="<?=gettext("Reload page");?>"><a href="disks_zfs_config.php"><span><?=gettext("Detected");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_config_sync.php"><span><?=gettext("Synchronize");?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_config_current.php"><span><?=gettext('Current');?></span></a></li>
+				<li class="tabact" title="<?=gettext('Reload page');?>"><a href="disks_zfs_config.php"><span><?=gettext('Detected');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_config_sync.php"><span><?=gettext('Synchronize');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
-	<tr>
-		<td class="tabcont">
-			<?php if (!empty($message_box_text)) print_core_box($message_box_type, $message_box_text);?>
-			<table width="100%" border="0" cellpadding="0" cellspacing="0">
-				<?php html_titleline(gettext('Pools').' ('.count($zfs['pools']['pool']).')', 10);?>
+</tbody></table>
+<table id="area_data"><tbody><tr><td id="area_data_frame">
+	<?php if (!empty($message_box_text)) print_core_box($message_box_type, $message_box_text);?>
+	<table id="area_data_selection">
+		<colgroup>
+			<col style="width:16%"><!-- // Name -->
+			<col style="width:10%"><!-- // Size -->
+			<col style="width:9%"><!-- // Alloc -->
+			<col style="width:9%"><!-- // Free -->
+			<col style="width:9%"><!-- // Expandsz -->
+			<col style="width:9%"><!-- // Frag -->
+			<col style="width:9%"><!-- // Dedup -->
+			<col style="width:9%"><!-- // Health -->
+			<col style="width:10%"><!-- // Mount Point -->
+			<col style="width:10%"><!-- // AltRoot -->
+		</colgroup>
+		<thead>
+			<?php html_titleline2(gettext('Pools').' ('.count($zfs['pools']['pool']).')', 10);?>
+			<tr>
+				<th class="lhell"><?=gettext('Name');?></th>
+				<th class="lhell"><?=gettext('Size');?></th>
+				<th class="lhell"><?=gettext('Alloc');?></th>
+				<th class="lhell"><?=gettext('Free');?></th>
+				<th class="lhell"><?=gettext('Expandsz');?></th>
+				<th class="lhell"><?=gettext('Frag');?></th>
+				<th class="lhell"><?=gettext('Dedup');?></th>
+				<th class="lhell"><?=gettext('Health');?></th>
+				<th class="lhell"><?=gettext('Mount Point');?></th>
+				<th class="lhebl"><?=gettext('AltRoot');?></th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th class="lcenl" colspan="10"></th>
+			</tr>
+		</tfoot>
+		<tbody>
+			<?php foreach ($zfs['pools']['pool'] as $key => $pool):?>
 				<tr>
-					<td width="16%" class="listhdrlr"><?=gettext("Name");?></td>
-					<td width="10%" class="listhdrr"><?=gettext("Size");?></td>
-					<td width="9%" class="listhdrr"><?=gettext("Alloc");?></td>
-					<td width="9%" class="listhdrr"><?=gettext("Free");?></td>
-					<td width="9%" class="listhdrr"><?=gettext("Expandsz");?></td>
-					<td width="9%" class="listhdrr"><?=gettext("Frag");?></td>
-					<td width="9%" class="listhdrr"><?=gettext("Dedup");?></td>
-					<td width="9%" class="listhdrr"><?=gettext("Health");?></td>
-					<td width="10%" class="listhdrr"><?=gettext("Mount Point");?></td>
-					<td width="10%" class="listhdrr"><?=gettext("AltRoot");?></td>
+					<td class="lcell"><?= $pool['name']; ?></td>
+					<td class="lcell"><?= $zfs['extra']['pools']['pool'][$key]['size']; ?></td>
+					<td class="lcell"><?= $zfs['extra']['pools']['pool'][$key]['alloc']; ?> (<?= $zfs['extra']['pools']['pool'][$key]['cap']; ?>)</td>
+					<td class="lcell"><?= $zfs['extra']['pools']['pool'][$key]['free']; ?></td>
+					<td class="lcell"><?= $zfs['extra']['pools']['pool'][$key]['expandsz']; ?></td>
+					<td class="lcell"><?= $zfs['extra']['pools']['pool'][$key]['frag']; ?></td>
+					<td class="lcell"><?= $zfs['extra']['pools']['pool'][$key]['dedup']; ?></td>
+					<td class="lcell"><?= $zfs['extra']['pools']['pool'][$key]['health']; ?></td>
+					<td class="lcell"><?= empty($pool['mountpoint']) ? "/mnt/{$pool['name']}" : $pool['mountpoint']; ?></td>
+					<td class="lcebl"><?= empty($pool['root']) ? '-' : $pool['root']; ?></td>
 				</tr>
-				<?php foreach ($zfs['pools']['pool'] as $key => $pool):?>
+			<?php endforeach; ?>
+		</tbody>
+	</table>
+	<table id="area_data_selection">
+		<colgroup>
+			<col style="width:16%"><!-- // Name -->
+			<col style="width:21%"><!-- // Type -->
+			<col style="width:21%"><!-- // Pool -->
+			<col style="width:42%"><!-- // Devices -->
+		</colgroup>
+		<thead>
+			<?php html_titleline2(gettext('Virtual Devices').' ('.count($zfs['vdevices']['vdevice']).')', 4);?>
+			<tr>
+				<th class="lhell"><?=gettext('Name');?></th>
+				<th class="lhell"><?=gettext('Type');?></th>
+				<th class="lhell"><?=gettext('Pool');?></th>
+				<th class="lhebl"><?=gettext('Devices');?></th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th class="lcenl" colspan="4"></th>
+			</tr>
+		</tfoot>
+		<tbody>
+			<?php foreach ($zfs['vdevices']['vdevice'] as $key => $vdevice):?>
 				<tr>
-					<td class="listlr"><?= $pool['name']; ?></td>
-					<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['size']; ?></td>
-					<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['alloc']; ?> (<?= $zfs['extra']['pools']['pool'][$key]['cap']; ?>)</td>
-					<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['free']; ?></td>
-					<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['expandsz']; ?></td>
-					<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['frag']; ?></td>
-					<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['dedup']; ?></td>
-					<td class="listr"><?= $zfs['extra']['pools']['pool'][$key]['health']; ?></td>
-					<td class="listr"><?= empty($pool['mountpoint']) ? "/mnt/{$pool['name']}" : $pool['mountpoint']; ?></td>
-					<td class="listr"><?= empty($pool['root']) ? '-' : $pool['root']; ?></td>
+					<td class="lcell"><?= $vdevice['name']; ?></td>
+					<td class="lcell"><?= $vdevice['type']; ?></td>
+					<td class="lcell"><?= $zfs['extra']['vdevices']['vdevice'][$key]['pool']; ?></td>
+					<td class="lcebl"><?= implode(', ', $vdevice['device']); ?></td>
 				</tr>
-				<?php endforeach; ?>
-			</table>
-			<br />
-			<table width="100%" border="0" cellpadding="0" cellspacing="0">
-				<?php html_titleline(gettext('Virtual Devices').' ('.count($zfs['vdevices']['vdevice']).')', 4);?>
-				<tr>
-					<td width="16%" class="listhdrlr"><?=gettext("Name");?></td>
-					<td width="21%" class="listhdrr"><?=gettext("Type");?></td>
-					<td width="21%" class="listhdrr"><?=gettext("Pool");?></td>
-					<td width="42%" class="listhdrr"><?=gettext("Devices");?></td>
-				</tr>
-				<?php foreach ($zfs['vdevices']['vdevice'] as $key => $vdevice):?>
-				<tr>
-					<td class="listlr"><?= $vdevice['name']; ?></td>
-					<td class="listr"><?= $vdevice['type']; ?></td>
-					<td class="listr"><?= $zfs['extra']['vdevices']['vdevice'][$key]['pool']; ?></td>
-					<td class="listr"><?= implode(', ', $vdevice['device']); ?></td>
-				</tr>
-				<?php endforeach; ?>
-			</table>
-			<br />
-			<table width="100%" border="0" cellpadding="0" cellspacing="0">
-				<?php html_titleline(gettext('Datasets').' ('.count($zfs['datasets']['dataset']).')', 11);?>
-				<tr>
-					<td width="14%" class="listhdrlr"><?=gettext("Name");?></td>
-					<td width="14%" class="listhdrr"><?=gettext("Pool");?></td>
-					<td width="7%" class="listhdrr"><?=gettext("Compression");?></td>
-					<td width="7%" class="listhdrr"><?=gettext("Dedup");?></td>
-					<td width="9%" class="listhdrr"><?=gettext("Sync");?></td>
-					<td width="9%" class="listhdrr"><?=gettext("ACL Inherit");?></td>
-					<td width="9%" class="listhdrr"><?=gettext("ACL Mode");?></td>
-					<td width="7%" class="listhdrr"><?=gettext("Canmount");?></td>
-					<td width="8%" class="listhdrr"><?=gettext("Quota");?></td>
+			<?php endforeach; ?>
+		</tbody>
+	</table>
+	<br />
+	<table id="area_data_selection">
+		<colgroup>
+			<col style="width:14%"><!-- // Name -->
+			<col style="width:14%"><!-- // Pool -->
+			<col style="width:7%"><!-- // Compression -->
+			<col style="width:7%"><!-- // Dedup -->
+			<col style="width:9%"><!-- // Sync -->
+			<col style="width:9%"><!-- // ACL Inherit -->
+			<col style="width:9%"><!-- // ACL Mode -->
+			<col style="width:7%"><!-- // Canmount -->
+			<col style="width:8%"><!-- // Quota -->
 <!--
-					<td width="8%" class="listhdrr"><?=gettext("Extended Attributes");?></td>
+			<col style="width:8%">
 -->
-					<td width="7%" class="listhdrr"><?=gettext("Readonly");?></td>
-					<td width="9%" class="listhdrr"><?=gettext("Snapshot Visibility");?></td>
-				</tr>
-				<?php foreach ($zfs['datasets']['dataset'] as $dataset):?>
-				<tr>
-					<td class="listlr"><?= $dataset['name']; ?></td>
-					<td class="listr"><?= $dataset['pool']; ?></td>
-					<td class="listr"><?= $dataset['compression']; ?></td>
-					<td class="listr"><?= $dataset['dedup']; ?></td>
-					<td class="listr"><?= $dataset['sync']; ?></td>
-					<td class="listr"><?= $dataset['aclinherit']; ?></td>
-					<td class="listr"><?= $dataset['aclmode']; ?></td>
-					<td class="listr"><?= empty($dataset['canmount']) ? 'on' : $dataset['canmount']; ?></td>
-					<td class="listr"><?= empty($dataset['quota']) ? 'none' : $dataset['quota']; ?></td>
+			<col style="width:7%"><!-- // Readonly -->
+			<col style="width:9%"><!-- // Snapshot Visibility -->
+		</colgroup>
+		<thead>
+			<?php html_titleline2(gettext('Datasets').' ('.count($zfs['datasets']['dataset']).')', 11);?>
+			<tr>
+				<th class="lhell"><?=gettext('Name');?></th>
+				<th class="lhell"><?=gettext('Pool');?></th>
+				<th class="lhell"><?=gettext('Compression');?></th>
+				<th class="lhell"><?=gettext('Dedup');?></th>
+				<th class="lhell"><?=gettext('Sync');?></th>
+				<th class="lhell"><?=gettext('ACL Inherit');?></th>
+				<th class="lhell"><?=gettext('ACL Mode');?></th>
+				<th class="lhell"><?=gettext('Canmount');?></th>
+				<th class="lhell"><?=gettext('Quota');?></th>
 <!--
-					<td class="listr"><?= empty($dataset['xattr']) ? 'off' : 'on'; ?></td>
+				<th class="lhell"><?=gettext('Extended Attributes');?></th>
 -->
-					<td class="listr"><?= empty($dataset['readonly']) ? 'off' : 'on'; ?></td>
-					<td class="listr"><?= empty($dataset['snapdir']) ? 'hidden' : 'visible'; ?></td>
-				</tr>
-				<?php endforeach; ?>
-			</table>
-			<br />
-			<table width="100%" border="0" cellpadding="0" cellspacing="0">
-				<?php html_titleline(gettext('Volumes').' ('.count($zfs['volumes']['volume']).')', 8);?>
+				<th class="lhell"><?=gettext('Readonly');?></th>
+				<th class="lhebl"><?=gettext('Snapshot Visibility');?></th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th class="lcenl" colspan="11"></th>
+			</tr>
+		</tfoot>
+		<tbody>
+			<?php foreach ($zfs['datasets']['dataset'] as $dataset):?>
 				<tr>
-					<td width="16%" class="listhdrlr"><?=gettext("Name");?></td>
-					<td width="12%" class="listhdrr"><?=gettext("Pool");?></td>
-					<td width="12%" class="listhdrr"><?=gettext("Size");?></td>
-					<td width="12%" class="listhdrr"><?=gettext("Blocksize");?></td>
-					<td width="12%" class="listhdrr"><?=gettext("Sparse");?></td>
-					<td width="12%" class="listhdrr"><?=gettext("Compression");?></td>
-					<td width="12%" class="listhdrr"><?=gettext("Dedup");?></td>
-					<td width="12%" class="listhdrr"><?=gettext("Sync");?></td>
+					<td class="lcell"><?= $dataset['name']; ?></td>
+					<td class="lcell"><?= $dataset['pool']; ?></td>
+					<td class="lcell"><?= $dataset['compression']; ?></td>
+					<td class="lcell"><?= $dataset['dedup']; ?></td>
+					<td class="lcell"><?= $dataset['sync']; ?></td>
+					<td class="lcell"><?= $dataset['aclinherit']; ?></td>
+					<td class="lcell"><?= $dataset['aclmode']; ?></td>
+					<td class="lcell"><?= empty($dataset['canmount']) ? 'on' : $dataset['canmount']; ?></td>
+					<td class="lcell"><?= empty($dataset['quota']) ? 'none' : $dataset['quota']; ?></td>
+<!--
+					<td class="lcell"><?= empty($dataset['xattr']) ? 'off' : 'on'; ?></td>
+-->
+					<td class="lcell"><?= empty($dataset['readonly']) ? 'off' : 'on'; ?></td>
+					<td class="lcebl"><?= empty($dataset['snapdir']) ? 'hidden' : 'visible'; ?></td>
 				</tr>
-				<?php foreach ($zfs['volumes']['volume'] as $volume):?>
+			<?php endforeach; ?>
+		</tbody>
+	</table>
+	<br />
+	<table id="area_data_selection">
+		<colgroup>
+			<col style="width:16%"><!-- // Name -->
+			<col style="width:12%"><!-- // Pool -->
+			<col style="width:12%"><!-- // Size -->
+			<col style="width:12%"><!-- // Blocksize -->
+			<col style="width:12%"><!-- // Sparse -->
+			<col style="width:12%"><!-- // Compression -->
+			<col style="width:12%"><!-- // Dedup -->
+			<col style="width:12%"><!-- // Sync -->
+		</colgroup>
+		<thead>
+			<?php html_titleline2(gettext('Volumes').' ('.count($zfs['volumes']['volume']).')', 8);?>
+			<tr>
+				<th class="lhell"><?=gettext('Name');?></th>
+				<th class="lhell"><?=gettext('Pool');?></th>
+				<th class="lhell"><?=gettext('Size');?></th>
+				<th class="lhell"><?=gettext('Blocksize');?></th>
+				<th class="lhell"><?=gettext('Sparse');?></th>
+				<th class="lhell"><?=gettext('Compression');?></th>
+				<th class="lhell"><?=gettext('Dedup');?></th>
+				<th class="lhebl"><?=gettext('Sync');?></th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th class="lcenl" colspan="8"></th>
+			</tr>
+		</tfoot>
+		<tbody>
+			<?php foreach ($zfs['volumes']['volume'] as $volume):?>
 				<tr>
-					<td class="listlr"><?= $volume['name']; ?></td>
-					<td class="listr"><?= $volume['pool']; ?></td>
-					<td class="listr"><?= $volume['volsize']; ?></td>
-					<td class="listr"><?= $volume['volblocksize']; ?></td>
-					<td class="listr"><?= empty($volume['sparse']) ? '-' : 'on'; ?></td>
-					<td class="listr"><?= $volume['compression']; ?></td>
-					<td class="listr"><?= $volume['dedup']; ?></td>
-					<td class="listr"><?= $volume['sync']; ?></td>
+					<td class="lcell"><?= $volume['name']; ?></td>
+					<td class="lcell"><?= $volume['pool']; ?></td>
+					<td class="lcell"><?= $volume['volsize']; ?></td>
+					<td class="lcell"><?= $volume['volblocksize']; ?></td>
+					<td class="lcell"><?= empty($volume['sparse']) ? '-' : 'on'; ?></td>
+					<td class="lcell"><?= $volume['compression']; ?></td>
+					<td class="lcell"><?= $volume['dedup']; ?></td>
+					<td class="lcebl"><?= $volume['sync']; ?></td>
 				</tr>
-				<?php endforeach;?>
-			</table>
-			<div id="remarks">
-				<?php html_remark("note", gettext("Note"), gettext("This page reflects the current system configuration. It may be different to the configuration which has been created with the WebGUI if changes has been done via command line."));?>
-			</div>
-		</td>
-	</tr>
-</table>
+			<?php endforeach;?>
+		</tbody>
+	</table>
+	<div id="remarks">
+		<?php html_remark2('note', gettext('Note'), gettext('This page reflects the current system configuration. It may be different to the configuration which has been created with the WebGUI if changes has been done via command line'));?>
+	</div>
+</td></tr></tbody></table>
 <?php include("fend.inc");?>
