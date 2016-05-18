@@ -217,7 +217,7 @@ function controlactionbuttons(ego, triggerbyname) {
 				<td class="lhell"><?=gettext('Type');?></td>
 				<td class="lhell"><?=gettext('Size');?></td>
 				<td class="lhell"><?=gettext('Description');?></td>
-				<td class="lhelc"><?=gettext('Status');?></td>
+				<td class="lhell"><?=gettext('Status');?></td>
 				<td class="lhebl"><?=gettext('Toolbox');?></td>
 			</tr>
 		</thead>
