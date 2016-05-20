@@ -1,7 +1,7 @@
 #!/usr/local/bin/php-cgi -f
 <?php
 /*
-	rc.initial.install2
+	rc.initial.install3gpt
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
@@ -39,14 +39,15 @@ require_once("util.inc");
 require_once("tui.inc");
 
 // Default size of slice/partition 1 (used for OS)
-$part1size = $g_install['part1size_embedded'];
+$minpart1size = $g_install['part1size_full'];
 $swapsize =  $g_install['default_swap'];
 
-// Default slice/partition layout
+// Default partition layout
 $partlayout = array(
-	array("slice" => 1, "fstype" => "4.2BSD", "size" => $part1size, "volname" => "root"),
-	array("slice" => 2, "fstype" => "swap", "size" => $swapsize, "volname" => "swap"),
- 	array("slice" => 3, "fstype" => "4.2BSD", "size" => "*", "volname" => "data")
+	array("partition" => 1, "fstype" => "boot", "size" => "512k", "volname" => "boot"),
+	array("partition" => 2, "fstype" => "ufs",  "size" => $minpart1size, "volname" => "root"),
+	array("partition" => 3, "fstype" => "swap", "size" => $swapsize, "volname" => "swap"),
+ 	array("partition" => 4, "fstype" => "ufs",  "size" => "*", "volname" => "data")
 );
 
 // Get product information
@@ -57,10 +58,10 @@ $text = <<<EOD
 
 {$productname} 'Embedded' installer for HDD, SSD, CF or USB flash drive.
 
-- Create MBR partition 1, using UFS, {$part1size}MB size for OS image
-- Create MBR partition 2, as SWAP, {$swapsize}MB or more
-- Create MBR partition 3, using UFS, for DATA
-- Uses a RAM disk to limit read/write access to the device
+- Create GPT partition 1, for bootcode
+- Create GPT partition 2, using UFS, customizable size for OS
+- Create GPT partition 3, as SWAP, {$swapsize}MB or more
+- Create GPT partition 4, using UFS, for DATA
 
 WARNING: There will be some limitations:
 1. This will erase ALL partitions and data on the destination disk
@@ -111,6 +112,18 @@ if (disks_ismounted_ex($harddrive, "mdisk")) {
 	exit(0);
 }
 
+// Get customized destination media size for root partition
+$text = sprintf("Enter the size for OS partition in MB (min %dMB): ", $minpart1size);
+do {
+	$part1size = $minpart1size;
+	$result = tui_display_input($text, 60, 8, $part1size);
+	if (0 != $result)
+		exit(0);
+} while (($minpart1size > $part1size) || !is_numeric($part1size));
+
+// Update the root slice/partition size.
+$partlayout[1]['size'] = $part1size;
+
 // Add swap partition?
 //$result = tui_display_yesno("Do you want to add a swap partition?", 40, 5, false);
 $result = 0; // always adding swap
@@ -131,8 +144,8 @@ if (0 == $result) {
 	} while (!is_numeric($swapsize) || $swapsize < 512);
 
 	// Add swap slice/partition to the partition layout.
-	//$partlayout[] = array("slice" => 3, "fstype" => "swap", "size" => $swapsize, "volname" => "");
-	$partlayout[1]['size'] = $swapsize;
+	//$partlayout[] = array("partition" => 3, "fstype" => "swap", "size" => $swapsize, "volname" => "");
+	$partlayout[2]['size'] = $swapsize;
 }
 
 if (install_mount_cd($cdlist[$cdrom])) {
@@ -140,20 +153,20 @@ if (install_mount_cd($cdlist[$cdrom])) {
 	exit(0);
 }
 
-if (install_init_disk($harddrive, $partlayout)) {
+if (install_init_gptdisk($harddrive, $partlayout)) {
 	install_unmount_cd();
 	tui_wait_keypress("There was a problem during initializing the destination disk.");
 	exit(0);
 }
 
-if (install_dd_image("{$harddrive}s1a")) {
+if (install_harddrive_image($harddrive)) {
 	install_unmount_cd();
 	tui_wait_keypress("There was a problem while copying files.");
 	exit(0);
 }
 
 /*
-if (add_default_swap("{$harddrive}s1")) {
+if (add_default_swap("{$harddrive}p3")) {
 	install_unmount_cd();
 	tui_wait_keypress("There was a problem while adding swap.");
 	exit(0);
@@ -165,7 +178,7 @@ install_unmount_cd();
 // Display final message
 $text = <<<EOD
 
-{$productname} has been installed on {$harddrive}s1.
+{$productname} has been installed on {$harddrive}p2.
 
 EOD;
 
@@ -191,7 +204,7 @@ To use the DATA partition:
 - Add the disk {$harddrive} on the 'Disks|Management' page.
 - Add the mount point on the 'Disks|Mount Point|Management' page.
   Use the following parameters:
-  Disk {$harddrive}, Partition 3, Partition type MBR, Filesystem UFS
+  Disk {$harddrive}, Partition 4, Partition type GPT, Filesystem UFS
 
 EOD;
 
@@ -202,7 +215,7 @@ if (0 < $swapsize) {
 To use the SWAP partition:
 - Enable swap space usage on the 'System|Advanced|Swap' page.
   Use the following parameters:
-  Type: Device, Device: /dev/{$harddrive}s2b
+  Type: Device, Device: /dev/{$harddrive}p3
 
 EOD;
 }

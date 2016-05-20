@@ -6,15 +6,12 @@
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
-	Portions of freenas (http://www.freenas.org).
-	Copyright (c) 2005-2011 by Olivier Cochard (olivier@freenas.org).
-	All rights reserved.
-
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -192,6 +189,12 @@ function install_dd_image($harddrive)
 function install_harddrive_image($harddrive)
 {
 	global $g;
+	
+	// Determine if target disk/partition is GPT or MBR
+	if (mwexec('gpart show | grep "GPT"') === 0 ) { 
+      $part = "p2";
+    } else
+	  $part = "s1a";
 
 	$boot_lowmem = trim(@file_get_contents("/etc/boot_lowmem"));
 	$platform = get_platform_type();
@@ -199,13 +202,13 @@ function install_harddrive_image($harddrive)
 
 	// Mount disk used to install OS.
 	mwexec("/bin/mkdir -p {$mntpath}");
-	if (1 == mwexec("/sbin/mount /dev/{$harddrive}s1a {$mntpath}")) {
-		write_console("Error: Failed to mount '/dev/{$harddrive}s1a'!\n");
+	if (1 == mwexec("/sbin/mount /dev/{$harddrive}$part {$mntpath}")) {
+		write_console("Error: Failed to mount '/dev/{$harddrive}$part'!\n");
 		return 1;
 	}
 
 	// Install system files.
-	write_console("Installing system files on device {$harddrive}s1a.\n");
+	write_console("Installing system files on device {$harddrive}$part.\n");
 	mwexec("/usr/bin/tar --exclude mnt/ --exclude dev/ --exclude var/ --exclude tmp/ --exclude {$g['cf_path']}/ -c -f - -C / . | tar -xvpf - -C {$mntpath}");
 	if ($boot_lowmem === "1" && preg_match('/-liveCD$/i', $platform)) {
 		// under lowmem version
@@ -278,7 +281,7 @@ EOD;
 	mwexec("(cd {$mntpath}/boot/kernel; for f in *.gz; do /usr/bin/gzip -d -f \$f; done)");
 
 	// Generate /etc/fstab.
-	$ufsid = disks_get_ufsid("/dev/{$harddrive}s1a");
+	$ufsid = disks_get_ufsid("/dev/{$harddrive}$part");
 	if (empty($ufsid)) {
 		write_console("Error: Failed to get UFS ID.\n");
 		return 1;
@@ -299,7 +302,7 @@ EOD;
 	// generated with 'liveCD' and 'embedded' during startup, but need to be
 	// created during install of 'full'.
 	$cfdevice = <<<EOD
-{$harddrive}s1a
+{$harddrive}$part
 
 EOD;
 
@@ -331,6 +334,12 @@ EOD;
 function install_upgrade_full($harddrive)
 {
 	global $g;
+	
+	// Determine if target disk/partition is GPT or MBR
+	if (mwexec('gpart show | grep "GPT"') === 0 ) { 
+      $part = "p2";
+    } else
+	  $part = "s1a";
 
 	$boot_lowmem = trim(@file_get_contents("/etc/boot_lowmem"));
 	$platform = get_platform_type();
@@ -339,8 +348,8 @@ function install_upgrade_full($harddrive)
 
 	// Mount disk used to install OS
 	mwexec("/bin/mkdir -p {$mntpath}");
-	if (1 == mwexec("/sbin/mount /dev/{$harddrive}s1a {$mntpath}")) {
-		write_console("Error: Failed to mount '/dev/{$harddrive}s1a'!\n");
+	if (1 == mwexec("/sbin/mount /dev/{$harddrive}$part {$mntpath}")) {
+		write_console("Error: Failed to mount '/dev/{$harddrive}$part'!\n");
 		return 1;
 	}
 
@@ -365,7 +374,7 @@ function install_upgrade_full($harddrive)
 	mwexec("/etc/install/upgrade.sh clean {$mntpath}");
 
 	// Install system files
-	write_console("Installing system files on device {$harddrive}s1a.\n");
+	write_console("Installing system files on device {$harddrive}$part.\n");
 	mwexec("/usr/bin/tar --exclude mnt/ --exclude dev/ --exclude var/ --exclude tmp/ --exclude {$g['cf_path']}/ -c -f - -C / . | tar -xvpf - -C {$mntpath}");
 	if ($boot_lowmem === "1" && preg_match('/-liveCD$/i', $platform)) {
 		// under lowmem version
@@ -1073,6 +1082,12 @@ function install_newfs($disk, $volname, $sector, $fsize, $bsize) {
 // Return 0 if successful, otherwise 1
 function install_detect_installation($mode, &$devinfo) {
 	global $g;
+	
+	// Determine if target disk/partition is GPT or MBR
+	if (mwexec('gpart show | grep "GPT"') === 0 ) { 
+      $part = "p2";
+    } else
+	  $part = "s1a";
 
 	$imgfile = get_product_name(). "-{$g['arch']}-embedded.xz";
 	$result = 1;
@@ -1093,11 +1108,11 @@ function install_detect_installation($mode, &$devinfo) {
 			continue;
 
 		// Search on slice 1 for OS installed on disk with install script
-		if (0 == mwexec("/sbin/mount -r /dev/{$diskv}s1a {$mnt_cf_disk}")) {
+		if (0 == mwexec("/sbin/mount -r /dev/{$diskv}$part {$mnt_cf_disk}")) {
 			// Check if configuration file exists
 			if (file_exists("{$mnt_cf_disk}/conf/config.xml")) {
 				$devinfo['device'] = $diskv;
-				$devinfo['partition'] = "s1a";
+				$devinfo['partition'] = "$part";
 
 				// Get partition information
 				$partinfo = disks_get_partition_info($diskv);
