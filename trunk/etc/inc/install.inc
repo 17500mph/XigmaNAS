@@ -35,7 +35,6 @@ require_once("functions.inc");
 require_once("util.inc");
 require_once("xmlparse.inc");
 
-
 // Check image file
 function check_install_image($dev, $pt, $img)
 {
@@ -191,10 +190,7 @@ function install_harddrive_image($harddrive)
 	global $g;
 	
 	// Determine if target disk/partition is GPT or MBR
-	if (mwexec('gpart show "$harddrive" | grep "GPT"') === 0 ) { 
-      $part = "p2";
-    } else
-	  $part = "s1a";
+	if (mwexec('/sbin/gpart show "'.$harddrive.'" | grep "GPT"') == false ){ $part = "p2"; } else { $part = "s1a"; }
 
 	$boot_lowmem = trim(@file_get_contents("/etc/boot_lowmem"));
 	$platform = get_platform_type();
@@ -336,10 +332,7 @@ function install_upgrade_full($harddrive)
 	global $g;
 	
 	// Determine if target disk/partition is GPT or MBR
-	if (mwexec('gpart show "$harddrive" | grep "GPT"') === 0 ) { 
-      $part = "p2";
-    } else
-	  $part = "s1a";
+	if (mwexec('/sbin/gpart show "'.$harddrive.'" | grep "GPT"') == false ){ $part = "p2"; } else { $part = "s1a"; }
 
 	$boot_lowmem = trim(@file_get_contents("/etc/boot_lowmem"));
 	$platform = get_platform_type();
@@ -1082,12 +1075,6 @@ function install_newfs($disk, $volname, $sector, $fsize, $bsize) {
 // Return 0 if successful, otherwise 1
 function install_detect_installation($mode, &$devinfo) {
 	global $g;
-	
-	// Determine if target disk/partition is GPT or MBR
-	if (mwexec('gpart show "$harddrive" | grep "GPT"') === 0 ) { 
-      $part = "p2";
-    } else
-	  $part = "s1a";
 
 	$imgfile = get_product_name(). "-{$g['arch']}-embedded.xz";
 	$result = 1;
@@ -1108,11 +1095,11 @@ function install_detect_installation($mode, &$devinfo) {
 			continue;
 
 		// Search on slice 1 for OS installed on disk with install script
-		if (0 == mwexec("/sbin/mount -r /dev/{$diskv}$part {$mnt_cf_disk}")) {
+		if (0 == mwexec("/sbin/mount -r /dev/{$diskv}s1a {$mnt_cf_disk}")) {
 			// Check if configuration file exists
 			if (file_exists("{$mnt_cf_disk}/conf/config.xml")) {
 				$devinfo['device'] = $diskv;
-				$devinfo['partition'] = "$part";
+				$devinfo['partition'] = "s1a";
 
 				// Get partition information
 				$partinfo = disks_get_partition_info($diskv);
