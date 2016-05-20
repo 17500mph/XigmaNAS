@@ -45,7 +45,7 @@ function wireless_config_init() {
 
 	$pconfig['standard'] = !empty($optcfg['wireless']['standard']) ? $optcfg['wireless']['standard'] : "";
 	$pconfig['ssid'] = !empty($optcfg['wireless']['ssid']) ? $optcfg['wireless']['ssid'] : "";
-	$pconfig['scan_ssid'] = !empty($optcfg['wireless']['scan_ssid']);
+	$pconfig['scan_ssid'] = isset($optcfg['wireless']['scan_ssid']) ? true : false;
 	$pconfig['channel'] = !empty($optcfg['wireless']['channel']) ? $optcfg['wireless']['channel'] : "";
 
 	$pconfig['encryption'] = "none";
