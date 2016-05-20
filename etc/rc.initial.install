@@ -17,16 +17,17 @@ trap "rm -f $tmpfile" 0 1 2 5 15
 # Endless loop
 while : ; do
     if [ "${XARCH}" != "dom0" ]; then
-	cdialog --clear --title "NAS4Free Install & Upgrade Options Menu" --cancel-label "Exit" --menu "" 15 74 9 \
+	cdialog --clear --title "NAS4Free Install & Upgrade Options Menu" --cancel-label "Exit" --menu "" 16 75 10 \
 		"1" "Install 'Embedded' OS/MBR on HDD/SSD/CF/USB (preferred)" \
 		"2" "Install 'Embedded' OS/GPT for over 2TB bootdisk" \
 		"3" "Upgrade 'Embedded' OS from LiveCD/LiveUSB" \
 		"-" "---------------------------------------------------------------" \
 		"4" "Install 'Embedded' OS/MBR without SWAP/DATA (for expert)" \
 		"5" "Install 'Embedded' OS/GPT without SWAP/DATA (for expert)" \
-		"6" "Install 'Full' OS on HDD/SSD + DATA + SWAP (for expert)" \
-		"7" "Upgrade 'Full' OS from LiveCD/LiveUSB" \
-		"8" "Upgrade and convert 'Full' OS to 'Embedded'" 2> $tmpfile
+		"6" "Install 'Full' OS/MBR on HDD/SSD + DATA + SWAP (for expert)" \
+		"7" "Install 'Full' OS/GPT on HDD/SSD + DATA + SWAP (for expert)" \
+		"8" "Upgrade 'Full' OS from LiveCD/LiveUSB" \
+		"9" "Upgrade and convert 'Full' OS to 'Embedded'" 2> $tmpfile
     else
 	cdialog --clear --title "NAS4Free Install & Upgrade Options Menu" --cancel-label "Exit" --menu "" 9 73 3 \
 		"1" "Install 'Embedded' OS/MBR on HDD/SSD/CF/USB (preferred)" \
@@ -59,9 +60,12 @@ while : ; do
 			/etc/rc.initial.install3
 			;;
 		7)
-			/etc/rc.initial.fullupgfromcdrom
+			/etc/rc.initial.install3gpt
 			;;
 		8)
+			/etc/rc.initial.fullupgfromcdrom
+			;;
+		9)
 			/etc/rc.initial.full2emb
 			;;
 	esac
