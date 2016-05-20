@@ -191,7 +191,7 @@ function install_harddrive_image($harddrive)
 	global $g;
 	
 	// Determine if target disk/partition is GPT or MBR
-	if (mwexec('gpart show | grep "GPT"') === 0 ) { 
+	if (mwexec('gpart show "$harddrive" | grep "GPT"') === 0 ) { 
       $part = "p2";
     } else
 	  $part = "s1a";
@@ -202,7 +202,7 @@ function install_harddrive_image($harddrive)
 
 	// Mount disk used to install OS.
 	mwexec("/bin/mkdir -p {$mntpath}");
-	if (1 == mwexec("/sbin/mount /dev/{$harddrive}$part {$mntpath}")) {
+	if (1 == mwexec("/sbin/mount /dev/{// Determine if target disk/partition is GPT or MBR}$part {$mntpath}")) {
 		write_console("Error: Failed to mount '/dev/{$harddrive}$part'!\n");
 		return 1;
 	}
@@ -336,7 +336,7 @@ function install_upgrade_full($harddrive)
 	global $g;
 	
 	// Determine if target disk/partition is GPT or MBR
-	if (mwexec('gpart show | grep "GPT"') === 0 ) { 
+	if (mwexec('gpart show "$harddrive" | grep "GPT"') === 0 ) { 
       $part = "p2";
     } else
 	  $part = "s1a";
@@ -1084,7 +1084,7 @@ function install_detect_installation($mode, &$devinfo) {
 	global $g;
 	
 	// Determine if target disk/partition is GPT or MBR
-	if (mwexec('gpart show | grep "GPT"') === 0 ) { 
+	if (mwexec('gpart show "$harddrive" | grep "GPT"') === 0 ) { 
       $part = "p2";
     } else
 	  $part = "s1a";
