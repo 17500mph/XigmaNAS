@@ -69,6 +69,9 @@ wpa_supplicant_mkconf()
 	/usr/local/bin/xml sel -t -m "//interfaces/*/wireless/wpa[enable]" \
 		-o "network={" -n \
 		-v "concat('ssid=\"',../ssid,'\"')" -n \
+		-i "count(scan_ssid) > 0" \
+			-o "scan_ssid=1" -n \
+		-b \
 		-v "concat('key_mgmt=',keymgmt)" -n \
 		-v "concat('pairwise=',pairwise)" -n \
 		-v "concat('group=',pairwise)" -n \

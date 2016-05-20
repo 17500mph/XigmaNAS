@@ -45,6 +45,7 @@ function wireless_config_init() {
 
 	$pconfig['standard'] = !empty($optcfg['wireless']['standard']) ? $optcfg['wireless']['standard'] : "";
 	$pconfig['ssid'] = !empty($optcfg['wireless']['ssid']) ? $optcfg['wireless']['ssid'] : "";
+	$pconfig['scan_ssid'] = !empty($optcfg['wireless']['scan_ssid']);
 	$pconfig['channel'] = !empty($optcfg['wireless']['channel']) ? $optcfg['wireless']['channel'] : "";
 
 	$pconfig['encryption'] = "none";
@@ -101,6 +102,7 @@ function wireless_config_post() {
 	if (!$input_errors) {
 		$optcfg['wireless']['standard'] = $_POST['standard'];
 		$optcfg['wireless']['ssid'] = $_POST['ssid'];
+		$optcfg['wireless']['scan_ssid'] = isset($_POST['scan_ssid']);
 		$optcfg['wireless']['channel'] = $_POST['channel'];
 		$optcfg['wireless']['wep']['key'] = $_POST['wep_key'];
 		$optcfg['wireless']['wpa']['keymgmt'] = $_POST['wpa_keymgmt'];
@@ -136,6 +138,7 @@ function wireless_config_print() {
 								<?php $a_standard = array(); foreach (interfaces_wireless_get_standards($optcfg['if']) as $standardv) { $a_standard[$standardv] = "802.{$standardv}"; }?>
 								<?php html_combobox("standard", gettext("Standard"), $pconfig['standard'], $a_standard, "", true);?>
 								<?php html_inputbox("ssid", gettext("SSID"), $pconfig['ssid'], gettext("Set the desired Service Set Identifier (aka network name)."), true, 20);?>
+								<?php html_checkbox('scan_ssid', gettext('Connect to hidden network'), $pconfig['scan_ssid'], gettext('Allows to connect to a hidden network'));?>
 								<tr>
 									<td valign="top" class="vncellreq"><?=gettext("Channel");?></td>
 									<td class="vtable">
