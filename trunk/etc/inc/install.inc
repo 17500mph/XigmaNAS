@@ -202,7 +202,7 @@ function install_harddrive_image($harddrive)
 
 	// Mount disk used to install OS.
 	mwexec("/bin/mkdir -p {$mntpath}");
-	if (1 == mwexec("/sbin/mount /dev/{// Determine if target disk/partition is GPT or MBR}$part {$mntpath}")) {
+	if (1 == mwexec("/sbin/mount /dev/{$harddrive}$part {$mntpath}")) {
 		write_console("Error: Failed to mount '/dev/{$harddrive}$part'!\n");
 		return 1;
 	}
