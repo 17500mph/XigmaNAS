@@ -203,6 +203,7 @@ function enable_change(enable_change) {
 <?php if (isset($optcfg['wireless'])):?>
 		document.iform.standard.disabled = endis;
 		document.iform.ssid.disabled = endis;
+		document.iform.scan_ssid.disabled = endis;
 		document.iform.channel.disabled = endis;
 		document.iform.encryption.disabled = endis;
 		document.iform.wep_key.disabled = endis;
