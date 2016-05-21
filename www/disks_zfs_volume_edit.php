@@ -328,7 +328,7 @@ $l_volblocksize = [
 	'128K' => '128K'
 ];
 
-$pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Volumes'), gettext('Volume'), ($isrecordnew) ? gettext('Add') : gettext('Edit'));
+$pgtitle = [gettext('Disks'), gettext('ZFS'), gettext('Volumes'), gettext('Volume'), ($isrecordnew) ? gettext('Add') : gettext('Edit')];
 ?>
 <?php include("fbegin.inc");?>
 <table id="area_navigator">
