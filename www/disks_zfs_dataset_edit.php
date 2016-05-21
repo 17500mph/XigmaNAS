@@ -298,7 +298,7 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 			$sphere_record['accessrestrictions']['group'] = $sphere_array[$index]['accessrestrictions']['group'][0];
 			$sphere_record['accessrestrictions']['mode'] = $sphere_array[$index]['accessrestrictions']['mode'];
 			break;
-	}					
+	}
 }
 
 $a_poollist = zfs_get_pool_list();
@@ -380,7 +380,7 @@ for ($i = 0; $i < 9; $i++) {
 $pgtitle = [gettext('Disks'), gettext('ZFS'), gettext('Datasets'), gettext('Dataset'), $isrecordnew ? gettext('Add') : gettext('Edit')];
 ?>
 <?php include("fbegin.inc");?>
-<table id="area_navigator">
+<table id="area_navigator"><tbody>
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
@@ -400,7 +400,7 @@ $pgtitle = [gettext('Disks'), gettext('ZFS'), gettext('Datasets'), gettext('Data
 			</ul>
 		</td>
 	</tr>
-</table>
+</tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
 	<?php
 		if (!empty($errormsg)) { print_error_box($errormsg); }
