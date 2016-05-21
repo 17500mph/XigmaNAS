@@ -65,6 +65,12 @@ $img_path = [
 	'inf' => 'images/info.png'
 ];
 // sunrise: verify if setting exists, otherwise run init tasks
+if (!(isset($config['zfs']) && is_array($config['zfs']))) {
+	$config['zfs'] = [];
+}
+if (!(isset($config['zfs']['datasets']) && is_array($config['zfs']['datasets']))) {
+	$config['zfs']['datasets'] = [];
+}
 if (!(isset($config['zfs']['datasets']['dataset']) && is_array($config['zfs']['datasets']['dataset']))) {
 	$config['zfs']['datasets']['dataset'] = [];
 }
