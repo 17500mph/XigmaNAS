@@ -50,8 +50,23 @@ $gt_record_del = gettext('Option is marked for deletion');
 $gt_record_loc = gettext('Option is locked');
 $gt_record_mup = gettext('Move up');
 $gt_record_mdn = gettext('Move down');
+$img_path = [
+	'add' => 'images/add.png',
+	'mod' => 'images/edit.png',
+	'del' => 'images/delete.png',
+	'loc' => 'images/locked.png',
+	'unl' => 'images/unlocked.png',
+	'mai' => 'images/maintain.png',
+	'inf' => 'images/info.png'
+];
 
 // sunrise: verify if setting exists, otherwise run init tasks
+if (!(isset($config['system']) && is_array($config['system']))) {
+	$config['system'] = [];
+}
+if (!(isset($config['system']['loaderconf']) && is_array($config['system']['loaderconf']))) {
+	$config['system']['loaderconf'] = [];
+}
 if (!(isset($config['system']['loaderconf']['param']) && is_array($config['system']['loaderconf']['param']))) {
 	$config['system']['loaderconf']['param'] = [];
 }
@@ -197,7 +212,19 @@ $pgtitle = array(gettext('System'), gettext('Advanced'), gettext('loader.conf'))
 ?>
 <?php include("fbegin.inc");?>
 <script type="text/javascript">
-<!-- Begin JavaScript
+//<![CDATA[
+$(window).on("load", function() {
+	// Disable action buttons.
+	disableactionbuttons(true);
+	// Init toggle checkbox
+	$("#togglemembers").click(function() {
+		togglecheckboxesbyname(this, "<?=$checkbox_member_name;?>[]");
+	});
+	// Init member checkboxes
+	$("input[name='<?=$checkbox_member_name;?>[]").click(function() {
+		controlactionbuttons(this, '<?=$checkbox_member_name;?>[]');
+	});
+}); 
 function disableactionbuttons(ab_disable) {
 	var ab_element;
 	ab_element = document.getElementById('toggle_selected_rows'); if ((ab_element != null) && (ab_element.disabled != ab_disable)) { ab_element.disabled = ab_disable; }
@@ -238,9 +265,9 @@ function controlactionbuttons(ego, triggerbyname) {
 	}
 	disableactionbuttons(ab_disable);
 }
-// End JavaScript -->
+//]]>
 </script>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<table id="area_navigator"><tbody>
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
@@ -255,104 +282,105 @@ function controlactionbuttons(ego, triggerbyname) {
 			</ul>
 		</td>
 	</tr>
-	<tr>
-		<td class="tabcont">
-			<form action="<?=$sphere_scriptname;?>" method="post">
-				<?php
-					if (!empty($savemsg)) {
-						print_info_box($savemsg);
-					} else {
-						if (file_exists($d_sysrebootreqd_path)) {
-							print_info_box(get_std_save_message(0));
-						}
-					}
-				?>
-				<?php if (updatenotify_exists($sphere_notifier)) { print_config_change_box(); } ?>
-				<div id="submit" style="margin-bottom:10px">
-					<?php if($enabletogglemode):?>
-						<input name="toggle_selected_rows" type="submit" id="toggle_selected_rows" class="formbtn" value="<?=gettext('Toggle Selected Options');?>" onclick="return confirm('<?=gettext('Do you want to toggle selected options?');?>')"/>
-					<?php else:?>
-						<input name="enable_selected_rows" type="submit" id="enable_selected_rows" class="formbtn" value="<?=gettext('Enable Selected Options');?>" onclick="return confirm('<?=gettext('Do you want to enable selected options?');?>')"/>
-						<input name="disable_selected_rows" type="submit" id="disable_selected_rows" class="formbtn" value="<?=gettext('Disable Selected Options');?>" onclick="return confirm('<?=gettext('Do you want to disable selected options?');?>')"/>
-					<?php endif;?>
-					<input name="delete_selected_rows" type="submit" id="delete_selected_rows" class="formbtn" value="<?=gettext('Delete Selected Options');?>" onclick="return confirm('<?=gettext('Do you want to delete selected options?');?>')"/>
-				</div>
-				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-					<colgroup>
-						<col style="width:1%">
-						<col style="width:34%">
-						<col style="width:20%">
-						<col style="width:5%">
-						<col style="width:30%">
-						<col style="width:10%">
-					</colgroup>
-					<thead>
-						<tr>
-							<td class="listhdrlr"><input type="checkbox" name="togglemembers" onclick="javascript:togglecheckboxesbyname(this,'<?=$checkbox_member_name;?>[]')" title="<?=gettext('Invert Selection');?>"/></td>
-							<td class="listhdrr"><?=gettext('Variable');?></td>
-							<td class="listhdrr"><?=gettext('Value');?></td>
-							<td class="listhdrr"><?=gettext('Status');?></td>
-							<td class="listhdrr"><?=gettext('Comment');?></td>
-							<td class="list"></td>
-						</tr>
-					</thead>
-					<tfoot>
-						<tr>
-							<td class="list" colspan="5"></td>
-							<td class="list"><a href="<?=$sphere_scriptname_child;?>"><img src="images/add.png" title="<?=$gt_record_add;?>" border="0" alt="<?=$gt_record_add;?>" /></a></td>
-						</tr>
-					</tfoot>
-					<tbody>
-						<?php foreach ($sphere_array as $sphere_record):?>
-							<tr>
-								<?php $notificationmode = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']);?>
-								<?php $notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);?>
-								<?php $enabled = isset($sphere_record['enable']);?>
-								<?php $notprotected = !isset($sphere_record['protected']);?>
-								<td class="<?=$enabled ? "listlr" : "listlrd";?>">
-									<?php if ($notdirty && $notprotected):?>
-										<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" onclick="javascript:controlactionbuttons(this,'<?=$checkbox_member_name;?>[]')"/>
+</tbody></table>
+<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iframe" name="iframe">
+	<?php
+		if (!empty($savemsg)) {
+			print_info_box($savemsg);
+		} else {
+			if (file_exists($d_sysrebootreqd_path)) {
+				print_info_box(get_std_save_message(0));
+			}
+		}
+		if (updatenotify_exists($sphere_notifier)) { 
+			print_config_change_box();
+		}
+	?>
+	<table id="area_data_selection">
+		<colgroup>
+			<col style="width:5%">
+			<col style="width:30%">
+			<col style="width:20%">
+			<col style="width:5%">
+			<col style="width:30%">
+			<col style="width:10%">
+		</colgroup>
+		<thead>
+			<?php html_titleline2(gettext('Overview'), 6);?>
+			<tr>
+				<th class="lhelc"><input type="checkbox" name="togglemembers" title="<?=gettext('Invert Selection');?>"/></th>
+				<th class="lhell"><?=gettext('Variable');?></th>
+				<th class="lhell"><?=gettext('Value');?></th>
+				<th class="lhell"><?=gettext('Status');?></th>
+				<th class="lhell"><?=gettext('Comment');?></th>
+				<th class="lhebl"><?=gettext('Toolbox');?></th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th class="lcenl" colspan="5"></th>
+				<th class="lceadd"><a href="<?=$sphere_scriptname_child;?>"><img src="images/add.png" title="<?=$gt_record_add;?>" border="0" alt="<?=$gt_record_add;?>" /></a></th>
+			</tr>
+		</tfoot>
+		<tbody>
+			<?php foreach ($sphere_array as $sphere_record):?>
+				<tr>
+					<?php 
+						$notificationmode = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']);
+						$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
+						$enabled = isset($sphere_record['enable']);
+						$notprotected = !isset($sphere_record['protected']);
+					?>
+					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
+						<?php if ($notdirty && $notprotected):?>
+							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
+						<?php else:?>
+							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" disabled="disabled"/>
+						<?php endif;?>
+					</td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['name']);?>&nbsp;</td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['value']);?>&nbsp;</td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>">
+						<?php if ($enabled):?>
+							<a title="<?=gettext('Enabled');?>"><center><img src="images/status_enabled.png" border="0" alt=""/></center></a>
+						<?php else:?>
+							<a title="<?=gettext('Disabled');?>"><center><img src="images/status_disabled.png" border="0" alt=""/></center></a>
+						<?php endif;?>
+					</td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['comment']);?>&nbsp;</td>
+					<td class="lcebld">
+						<table id="area_data_selection_toolbox"><tbody><tr>
+							<td>
+								<?php if ($notdirty && $notprotected):?>
+									<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
+								<?php else:?>
+									<?php if ($notprotected):?>
+										<img src="<?=$img_path['del'];?>" title="<?=gettext($gt_record_del);?>" alt="<?=gettext($gt_record_del);?>"/>
 									<?php else:?>
-										<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" disabled="disabled"/>
+										<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gettext($gt_record_loc);?>"/>
 									<?php endif;?>
-								</td>
-								<td class="<?=$enabled ? "listr" : "listrd";?>"><?=htmlspecialchars($sphere_record['name']);?>&nbsp;</td>
-								<td class="<?=$enabled ? "listr" : "listrd";?>"><?=htmlspecialchars($sphere_record['value']);?>&nbsp;</td>
-								<td class="<?=$enabled ? "listr" : "listrd";?>">
-									<?php if ($enabled):?>
-										<a title="<?=gettext('Enabled');?>"><center><img src="images/status_enabled.png" border="0" alt=""/></center></a>
-									<?php else:?>
-										<a title="<?=gettext('Disabled');?>"><center><img src="images/status_disabled.png" border="0" alt=""/></center></a>
-									<?php endif;?>
-								</td>
-								<td class="listbg"><?=htmlspecialchars($sphere_record['comment']);?>&nbsp;</td>
-								<td valign="middle" nowrap="nowrap" class="list">
-									<?php if ($notdirty && $notprotected):?>
-										<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="images/edit.png" title="<?=$gt_record_mod;?>" border="0" alt="<?=$gt_record_mod;?>" /></a>
-									<?php else:?>
-										<?php if ($notprotected):?>
-											<img src="images/delete.png" title="<?=gettext($gt_record_del);?>" border="0" alt="<?=gettext($gt_record_del);?>" />
-										<?php else:?>
-											<img src="images/locked.png" title="<?=gettext($gt_record_loc);?>" border="0" alt="<?=gettext($gt_record_loc);?>" />
-										<?php endif;?>
-									<?php endif;?>
-								</td>
-							</tr>
-						<?php endforeach;?>
-					</tbody>
-				</table>
-				<div id="remarks">
-					<?php html_remark("note", gettext('Note'), gettext('These option(s) will be added to /boot/loader.conf.local. This allows you to specify parameters to be passed to kernel, and additional modules to be loaded.'));?>
-				</div>
-				<?php include("formend.inc");?>
-			</form>
-		</td>
-	</tr>
-</table>
-<script type="text/javascript">
-<!-- Disable action buttons and give their control to checkbox array. -->
-window.onload=function() {
-	disableactionbuttons(true);
-}
-</script>
+								<?php endif;?>
+							</td>
+							<td></td>
+							<td></td>
+						</tr></tbody></table>
+					</td>
+				</tr>
+			<?php endforeach;?>
+		</tbody>
+	</table>
+	<div id="submit">
+		<?php if($enabletogglemode):?>
+			<input name="toggle_selected_rows" type="submit" id="toggle_selected_rows" class="formbtn" value="<?=gettext('Toggle Selected Options');?>" onclick="return confirm('<?=gettext('Do you want to toggle selected options?');?>')"/>
+		<?php else:?>
+			<input name="enable_selected_rows" type="submit" id="enable_selected_rows" class="formbtn" value="<?=gettext('Enable Selected Options');?>" onclick="return confirm('<?=gettext('Do you want to enable selected options?');?>')"/>
+			<input name="disable_selected_rows" type="submit" id="disable_selected_rows" class="formbtn" value="<?=gettext('Disable Selected Options');?>" onclick="return confirm('<?=gettext('Do you want to disable selected options?');?>')"/>
+		<?php endif;?>
+		<input name="delete_selected_rows" type="submit" id="delete_selected_rows" class="formbtn" value="<?=gettext('Delete Selected Options');?>" onclick="return confirm('<?=gettext('Do you want to delete selected options?');?>')"/>
+	</div>
+	<div id="remarks">
+		<?php html_remark("note", gettext('Note'), gettext('These option(s) will be added to /boot/loader.conf.local. This allows you to specify parameters to be passed to kernel, and additional modules to be loaded.'));?>
+	</div>
+	<?php include("formend.inc");?>
+</form></td></tr></tbody></table>
 <?php include("fend.inc");?>
