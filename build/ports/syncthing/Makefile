@@ -1,5 +1,5 @@
 PORTNAME=	syncthing
-PORTVERSION=	0.12.24
+PORTVERSION=	0.13.2
 PORTREVISION=	0
 DISTVERSIONPREFIX= v
 CATEGORIES=	net
@@ -28,8 +28,9 @@ NO_PKG_REGISTER= yes
 post-patch:
 	@cd ${WRKSRC} ; ${MKDIR} src/github.com/${PORTNAME}/${PORTNAME} ; \
 		${MV} .gitattributes .gitignore .mailmap AUTHORS CONDUCT.md \
-		CONTRIBUTING.md Godeps LICENSE NICKS README.md appveyor.yaml \
-		assets build.go build.sh cmd debian etc gui lib man script test \
+		CONTRIBUTING.md ISSUE_TEMPLATE.md LICENSE NICKS \
+		PULL_REQUEST_TEMPLATE.md README.md assets build.go build.sh cmd \
+		debian etc gui lib man script test vendor \
 		src/github.com/${PORTNAME}/${PORTNAME}
 # NAS4Free
 .if ${ARCH} == "i386"
