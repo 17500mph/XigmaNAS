@@ -56,7 +56,7 @@ $productname = get_product_name();
 // Display information
 $text = <<<EOD
 
-{$productname} 'Embedded' installer for HDD, SSD, CF or USB flash drive.
+{$productname} 'Full' installer for Hard Drives & Solid State Drives.
 
 - Create GPT partition 1, for bootcode
 - Create GPT partition 2, using UFS, customizable size for OS
