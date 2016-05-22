@@ -4,6 +4,7 @@ NAS4Free 10.3.0.3 - Pilingitam
 Changes:
 - Upgrade to FreeBSD 10.3-RELEASE-P3.
 - Add search function to Diagnostics|Log.
+- Update installer with full gpt support.
 - Refactoring Webgui parts and replace deprecated php code.
 - sshd Challenge-Response Authentication is now configurable.
 - Upgrade exfat to 1.2.3.
@@ -15,8 +16,8 @@ Changes:
 - Upgrade virtualbox-ose to 5.0.20.
 - Upgrade php to 7.0.6.
 - Upgrade samba to 4.3.9.
-- Upgrade syncthing to 0.12.24.
 - Upgrade jquery to 1.12.4.
+- Upgrade syncthing to 0.13.2.
 
 Fixes:
 - Prevent deletion of mounted gconcat softraid.
