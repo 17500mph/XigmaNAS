@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-05-02 01:39+0000\n"
-"PO-Revision-Date: 2016-05-02 16:11+0000\n"
+"PO-Revision-Date: 2016-05-04 22:34+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-04 07:05+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-23 11:08+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
 "X-Poedit-Language: Greek\n"
@@ -24,7 +24,7 @@ msgstr " έχει ανατεθεί σε "
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
-msgstr ""
+msgstr "Το %1$s χρησιμοποιείται για δημιουργία %2$s τόμων."
 
 #, php-format
 msgid "%d days"
@@ -2344,7 +2344,7 @@ msgid "Discard - Discard ACL"
 msgstr "Απόρριψη - Απόρριψη ACL"
 
 msgid "Discard - Do not inherit entries"
-msgstr ""
+msgstr "Απόρριψη - Μην κληρονομούνται καταχωρήσεις"
 
 #, php-format
 msgid "Discovered iSCSI target for %s"
@@ -2555,9 +2555,13 @@ msgstr ""
 
 msgid "Do you want to create a mirrored virtual device from selected disks?"
 msgstr ""
+"Θέλετε να δημιουργήσετε μια mirrored εικονική συσκευή με τους επιλεγμένους "
+"δίσκους;"
 
 msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
+"Θέλετε να δημιουργήσετε μια striped εικονική συσκευή με τους επιλεγμένους "
+"δίσκους;"
 
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Θέλετε να διαγράψετε τους επιλεγμένους τόμους RAID;"
@@ -2636,6 +2640,7 @@ msgstr "Όνομα τομέα, π.χ. example.com."
 msgid ""
 "Don't erase the Master Boot Record. (useful for some RAID controller cards)"
 msgstr ""
+"Να μην διαγραφεί το Master Boot Record. (Χρήσιμο για κάποιους ελεγκτές RAID)"
 
 msgid "Donate"
 msgstr "Δωρεά"
@@ -2842,7 +2847,7 @@ msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Ενεργοποίηση Ασύγχρονου Ι/Ο (είσοδος/έξοδος)"
 
 msgid "Enable Challenge-Response Authentication"
-msgstr ""
+msgstr "Ενεργοποίηση Πιστοποίησης Challenge-Response"
 
 msgid "Enable FXP protocol."
 msgstr "Ενεργοποίηση πρωτοκόλλου FXP."
@@ -3512,7 +3517,7 @@ msgid "GEOM Software RAID"
 msgstr "GEOM RAID μέσω λογισμικού"
 
 msgid "GEOM VINUM Software RAID"
-msgstr ""
+msgstr "RAID μέσω λογισμικού GEOM VINUM"
 
 msgid "GID"
 msgstr "ID Ομάδας"
@@ -3589,7 +3594,7 @@ msgid "Group suffix"
 msgstr "Επίθεμα ομάδας"
 
 msgid "Groupmask - Mask ACL with mode"
-msgstr ""
+msgstr "Groupmask - Μάσκα ACL με λειτουργία"
 
 msgid "Groups"
 msgstr "Ομάδες"
@@ -4637,6 +4642,8 @@ msgid ""
 "Lowering this threshold can adversely affect performance and auto-"
 "defragmentation."
 msgstr ""
+"Χαμηλώνοντας αυτό το όριο μπορεί να επηρεάσει αρνητικά την απόδοση και την "
+"αυτόματη ανασυγκρότηση."
 
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
@@ -4704,6 +4711,11 @@ msgid ""
 "vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
 "Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
 msgstr ""
+"Σιγουρευτείτε ότι επιλέξατε τον σωστό αριθμό συσκευών:<div "
+"id='enumeration'><ul><li>Τα RAID-Z1 πρέπει να έχουν 3, 5, ή 9 δίσκους σε "
+"κάθε vdev</li><li>Τα RAID-Z2 πρέπει να έχουν 4, 6, ή 10 δίσκους σε κάθε "
+"vdev</li><li>Τα RAID-Z3 πρέπει να έχουν 5, 7, ή 11 δίσκους σε κάθε "
+"vdev</li></ul></div>"
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Βεβαιωθείτε ότι έχετε ενεργοποιήσει το S.M.A.R.T. στις συσκευές σας."
@@ -5204,6 +5216,8 @@ msgid ""
 "No configured virtual devices. Please add new <a href=\"%s\">virtual "
 "device</a> first."
 msgstr ""
+"Δεν υπάρχουν ρυθμισμένες εικονικές συσκευές. Παρακαλώ προσθέστε πρώτα μια "
+"νέα <a href=\"%s\">εικονική συσκευή</a>."
 
 msgid "No device selected."
 msgstr "Δεν επιλέχθηκε συσκευή."
@@ -5237,10 +5251,10 @@ msgid "No pool was found."
 msgstr "Κανένα pool δεν βρέθηκε."
 
 msgid "No softraid-formatted disks available."
-msgstr ""
+msgstr "Δεν υπάρχουν διαθέσιμοι δίσκοι με διαμόρφωση raid μέσω λογισμικού."
 
 msgid "Noallow - Only inherit deny entries"
-msgstr ""
+msgstr "Noallow - Κληρονόμηση μόνο των καταχωρήσεων απαγόρευσης"
 
 msgid "Node A IP address"
 msgstr "Διεύθυνση IP κόμβου Α"
@@ -5610,13 +5624,15 @@ msgid "Passphrase don't match."
 msgstr "Οι συνθηματικές φράσεις δεν ταιριάζουν"
 
 msgid "Passthrough - Do not change ACL"
-msgstr ""
+msgstr "Passthrough - Μην αλλάζεις το ACL"
 
 msgid "Passthrough - Inherit all entries"
-msgstr ""
+msgstr "Passthrough - Κληρονόμηση όλων των καταχωρήσεων"
 
 msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
 msgstr ""
+"Passthrough-X - Κληρονόμησε τα πάντα εκτός από το \"execute\" όταν δεν "
+"προσδιορίζεται"
 
 msgid "Password"
 msgstr "Κωδικός"
@@ -5965,7 +5981,7 @@ msgid "RAID Type"
 msgstr "Τύπος RAID"
 
 msgid "RAID device can be removed."
-msgstr "Η συσκευή RAID δεν μπορεί να διαγραφεί."
+msgstr "Η συσκευή RAID μπορεί να διαγραφεί."
 
 msgid "RAID device is already in use."
 msgstr "Η συσκευή RAID χρησιμοποιείται ήδη."
@@ -6245,6 +6261,8 @@ msgstr "Περιορισμένο"
 
 msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
+"Restricted -Κληρονόμησε τα πάντα εκτός από τα \"write ACL\" και \"change "
+"owner\""
 
 msgid "Results for net rpc testjoin:"
 msgstr "Αποτελέσματα του net rpc testjoin:"
@@ -6903,7 +6921,7 @@ msgstr ""
 "περιστατικών που πρέπει να συμβούν για να προστεθεί η απαγόρευση."
 
 msgid "Specifies the usage of Challenge-Response Authentication."
-msgstr ""
+msgstr "Ορίζει τη χρήση της Πιστοποίησης Challenge-Response."
 
 msgid "Specifies the username which the service will run as."
 msgstr "Καθορίζει τον χρήστη που η υπηρεσία θα λειτουργεί στο όνομά του."
@@ -6915,6 +6933,7 @@ msgstr ""
 
 msgid "Specify the percentage of space held back from normal users."
 msgstr ""
+"Ορισμός του ποσοστού χώρου που θα παρακρατηθεί από τους κανονικούς χρήστες."
 
 msgid "Split request"
 msgstr "Αίτημα διαχωρισμού"
@@ -8973,7 +8992,7 @@ msgid "UFS"
 msgstr "UFS"
 
 msgid "UFS (GPT and Soft Updates)"
-msgstr ""
+msgstr "UFS (GPT και Soft Updates)"
 
 #, php-format
 msgid ""
@@ -8991,6 +9010,10 @@ msgid ""
 "filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
 "unpredictable results, file corruption and loss of data!"
 msgstr ""
+"Το UFS και το ZFS είναι τα ΕΓΓΕΝΗ συστήματα αρχείων του NAS4Free. Η απόπειρα "
+"χρήσης άλλων συστημάτων αρχείων, όπως FAT, FAT32, EXT2, EXT3, EXT4 ή NTFS "
+"μπορεί να αποφέρει απροσδόκητα αποτελέσματα, καταστροφή αρχείων και απώλεια "
+"δεδομένων!"
 
 #, php-format
 msgid ""
@@ -9006,7 +9029,7 @@ msgstr ""
 "και χάσιμο δεδομένων!"
 
 msgid "UFS with Soft Updates"
-msgstr ""
+msgstr "UFS με Soft Updates"
 
 msgid "UID"
 msgstr "UID"
@@ -9431,6 +9454,9 @@ msgid ""
 "Volume label of the new file system. Use a space to separate multiple "
 "labels. (if only one specified next will be auto increment)"
 msgstr ""
+"Ετικέτα τόμου του νέου συστήματος αρχείων. Χρησιμοποιήστε κενό για "
+"διαχωρισμό πολλαπλών ετικετών. (αν χρησιμοποιείται μόνο ένα, το επόμενο θα "
+"αυξηθεί αυτόματα)"
 
 msgid "Volume mode"
 msgstr "Λειτουργία τόμου"
@@ -9599,7 +9625,7 @@ msgid "Write only"
 msgstr "Μόνο εγγραφή"
 
 msgid "Wrong number of count for Volume Label"
-msgstr ""
+msgstr "Εσφαλμένος αύξων αριθμός της Ετικέτας Τόμου"
 
 msgid "Wrong partition type or partition number."
 msgstr "Εσφαλμένος τύπος ή αριθμός διαμερίσματος."
@@ -9630,6 +9656,8 @@ msgstr ""
 
 msgid "You can't format the OS origin disk!"
 msgstr ""
+"Δεν μπορείτε να διαμορφώσετε τον δίσκο προέλευσης του Λειτουργικού "
+"Συστήματος!"
 
 #, php-format
 msgid ""

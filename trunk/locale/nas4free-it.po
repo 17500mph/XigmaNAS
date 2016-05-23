@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-05-02 01:39+0000\n"
-"PO-Revision-Date: 2016-04-29 09:07+0000\n"
-"Last-Translator: SebastianoPistore <sebastiano.pistore@gmail.com>\n"
+"PO-Revision-Date: 2016-05-22 20:14+0000\n"
+"Last-Translator: Paolo Borla <p.borla@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-04 07:05+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-23 11:08+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
 "X-Poedit-Language: Italian\n"
@@ -24,7 +24,7 @@ msgstr " era assegnata a "
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
-msgstr ""
+msgstr "%1$s è usato per creare %2$s volumi."
 
 #, php-format
 msgid "%d days"
@@ -172,10 +172,10 @@ msgstr ""
 "specificata."
 
 msgid "1 or more disks are required to build a JBOD volume."
-msgstr ""
+msgstr "1 o più dischi sono richiesti per costruire un volume JBOD"
 
 msgid "1 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "1 o più dischi sono richiesti per costruire un volume RAID-1"
 
 msgid ""
 "1. Use these specials actions for debugging only!<br />2. There is no need "
@@ -186,13 +186,13 @@ msgstr ""
 "automaticamente)."
 
 msgid "2 or more disks are required to build a RAID-0 volume."
-msgstr ""
+msgstr "2 o più dischi sono richiesti per costruire un volume RAID-0"
 
 msgid "2 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "2 o più dischi sono richiesti per costruire un volume RAID-1"
 
 msgid "3 or more disks are required to build a RAID-5 volume."
-msgstr ""
+msgstr "3 o più dischi sono richiesti per costruire un volume RAID-5"
 
 msgid "4KB wrapper"
 msgstr "4KB wrapper"
@@ -314,6 +314,8 @@ msgid ""
 "A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
 "point</a> first before proceeding."
 msgstr ""
+"Un volume RAID montato non può essere eliminato. Rimuovere il <a "
+"href='%s'>punto di montaggio</a> prima di procedere"
 
 msgid "A route to this destination network already exists."
 msgstr "Un percorso per questa rete di destinazione esiste già."
@@ -623,7 +625,7 @@ msgid "Advanced Setup"
 msgstr "Configurazione Avanzata"
 
 msgid "Advanced format"
-msgstr ""
+msgstr "Formato avanzato"
 
 msgid "Advanced settings"
 msgstr "Impostazioni avanzate"
@@ -687,7 +689,7 @@ msgstr ""
 "dati e ai permessi si raccomanda l'utilizzo di una directory UFS vuota."
 
 msgid "All data will be lost when you activate this option!"
-msgstr ""
+msgstr "Tutti i dati saranno persi quando attivi questa opzione!"
 
 msgid "All dirs"
 msgstr "Tutte le directory"
@@ -790,7 +792,7 @@ msgid "Alternative configuration directory (usually empty)."
 msgstr "Directory alternativa per la configurazione (normalmente non usato)"
 
 msgid "Always"
-msgstr ""
+msgstr "Sempre"
 
 msgid "Always On"
 msgstr "Sempre attivi"
@@ -955,7 +957,7 @@ msgid "Auxiliary parameters"
 msgstr "Parametri ausiliari"
 
 msgid "Avail"
-msgstr ""
+msgstr "Dispon."
 
 msgid "Available"
 msgstr "Disponibile"
@@ -984,7 +986,7 @@ msgid "Bad User - (Non Existing Users)"
 msgstr "Utente sbagliato - (Utente non esiste)"
 
 msgid "Balance Algorithm"
-msgstr ""
+msgstr "Algoritmo di bilanciamento"
 
 msgid "Ban List"
 msgstr "Lista utenti bloccati"
@@ -1132,7 +1134,7 @@ msgstr ""
 "caricati."
 
 msgid "CACHE"
-msgstr ""
+msgstr "CACHE"
 
 msgid "CARP"
 msgstr "CARP"
@@ -1366,6 +1368,8 @@ msgid ""
 "Comma-separated list of group names that are permitted to login to the FTP "
 "server. (empty is ftp group)"
 msgstr ""
+"Lista separata da virgole di nomi di gruppo ai quali è permesso fare login "
+"al server FTP. (emtpy è il gruppo ftp)"
 
 msgid "Command"
 msgstr "Comando"
@@ -1383,7 +1387,7 @@ msgstr "Comando per l'evento LINK_UP (ad esempio %s)."
 
 #, php-format
 msgid "Command output"
-msgstr ""
+msgstr "Output del comando"
 
 msgid "Command output:"
 msgstr "Output del comando:"
@@ -1561,6 +1565,8 @@ msgid ""
 "Convert DOS attributes to UNIX execution bits when Store DOS attributes is "
 "disabled."
 msgstr ""
+"Converte l'attributo DOS in bit di esecuzione UNIX se l'attributo Store DOS "
+"è disabilitato."
 
 msgid "Count"
 msgstr "Quantita'"

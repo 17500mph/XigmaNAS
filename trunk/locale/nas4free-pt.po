@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-05-02 01:39+0000\n"
-"PO-Revision-Date: 2016-03-09 14:09+0000\n"
+"PO-Revision-Date: 2016-05-06 22:36+0000\n"
 "Last-Translator: Pedro Grave <pedro.grave.abt@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-04 07:06+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-23 11:09+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 "X-Poedit-Country: PORTUGAL\n"
 "Language: \n"
 "X-Poedit-Language: Portuguese\n"
@@ -24,7 +24,7 @@ msgstr " foi atribuído a "
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
-msgstr ""
+msgstr "%1$s usado para criar %2$s volumes."
 
 #, php-format
 msgid "%d days"
@@ -64,7 +64,7 @@ msgstr "%s já existe como %s."
 
 #, php-format
 msgid "%s already exists."
-msgstr ""
+msgstr "%s já existe."
 
 #, php-format
 msgid "%s is already configured as a filesystem."
@@ -170,10 +170,10 @@ msgstr ""
 "especificada"
 
 msgid "1 or more disks are required to build a JBOD volume."
-msgstr ""
+msgstr "1 ou mais discos necessários para montar um volume JBOD."
 
 msgid "1 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "1 ou mais discos necessários para montar um volume RAID-1."
 
 msgid ""
 "1. Use these specials actions for debugging only!<br />2. There is no need "
@@ -183,13 +183,13 @@ msgstr ""
 "usar este menu para iniciar um volume RAID (inicia-se automaticamente)."
 
 msgid "2 or more disks are required to build a RAID-0 volume."
-msgstr ""
+msgstr "2 ou mais discos necessários para montar um volume RAID-0."
 
 msgid "2 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "2 ou mais discos necessários para montar um volume RAID-1"
 
 msgid "3 or more disks are required to build a RAID-5 volume."
-msgstr ""
+msgstr "3 ou mais discos necessários para montar um volume RAID-5."
 
 msgid "4KB wrapper"
 msgstr "wrapper 4KB"
@@ -312,6 +312,8 @@ msgid ""
 "A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
 "point</a> first before proceeding."
 msgstr ""
+"Um volume RAID montado não pode ser apagado. Remova o <a href='%s'>mount "
+"point</a> antes de continuar."
 
 msgid "A route to this destination network already exists."
 msgstr "Já existe uma rota para esta rede de destino."
@@ -381,13 +383,13 @@ msgid "ACL Inherit"
 msgstr ""
 
 msgid "ACL Mode"
-msgstr ""
+msgstr "Modo ACL"
 
 msgid "ACL inherit"
 msgstr ""
 
 msgid "ACL mode"
-msgstr ""
+msgstr "Modo ACL"
 
 msgid "AD authentication disabled"
 msgstr "Autenticação AD desligada."
@@ -399,13 +401,13 @@ msgid "AFP"
 msgstr "AFP"
 
 msgid "AFP compatibility"
-msgstr ""
+msgstr "compatibilidade AFP"
 
 msgid "AG"
 msgstr "AG"
 
 msgid "AIO module"
-msgstr ""
+msgstr "modulo AIO"
 
 msgid "AIO read size"
 msgstr "Tamanho de leitura AIO"
@@ -414,19 +416,19 @@ msgid "AIO write size"
 msgstr "Tamanho de escrita AIO"
 
 msgid "ALL Interfaces"
-msgstr ""
+msgstr "Todas as Interfaces"
 
 msgid "AP mode"
-msgstr ""
+msgstr "modo AP"
 
 msgid "ARP Tables"
 msgstr "Tabelas ARP"
 
 msgid "ARP Tables List"
-msgstr ""
+msgstr "Lista Tabelas ARP"
 
 msgid "ATTRIBUTE NAME"
-msgstr ""
+msgstr "NOME ATRIBUTO"
 
 msgid "Accept remote syslog messages."
 msgstr ""
@@ -435,7 +437,7 @@ msgid "Access"
 msgstr "Acesso"
 
 msgid "Access Mode"
-msgstr ""
+msgstr "Modo de acesso"
 
 msgid "Access Restrictions"
 msgstr "Restrições de Acesso"
@@ -505,7 +507,7 @@ msgid "Add Virtual Device"
 msgstr ""
 
 msgid "Add Volume"
-msgstr ""
+msgstr "Adicionar Volume"
 
 msgid "Add additional scheduled self-test."
 msgstr "Adicionar um novo auto-teste calendarizado."
@@ -556,7 +558,7 @@ msgid "Add portal group"
 msgstr "Adicionar grupo portal"
 
 msgid "Add resource"
-msgstr ""
+msgstr "Adicionar recurso"
 
 msgid "Add rule"
 msgstr "Adicionar uma regra"
@@ -577,7 +579,7 @@ msgid "Add user"
 msgstr "Adicionar utilizador"
 
 msgid "Additional Network"
-msgstr ""
+msgstr "Rede Adicional"
 
 msgid "Additional Storage"
 msgstr ""
@@ -593,9 +595,10 @@ msgstr "Endereço"
 
 msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr ""
+"Endereço do hastd daemon remoto. Obrigatoriamente um endereço IP estático."
 
 msgid "Admin password"
-msgstr ""
+msgstr "Palavra passe do administrador"
 
 msgid "Administration password"
 msgstr "Palavra passe de administração"
@@ -616,13 +619,13 @@ msgid "Advanced Options"
 msgstr "Opções Avançadas"
 
 msgid "Advanced Settings"
-msgstr ""
+msgstr "Configurações Avançadas"
 
 msgid "Advanced Setup"
-msgstr ""
+msgstr "Configuração Avançada"
 
 msgid "Advanced format"
-msgstr ""
+msgstr "Formatação avançada"
 
 msgid "Advanced settings"
 msgstr "Configurações avançadas"
@@ -657,12 +660,14 @@ msgid ""
 "Airflow temperature on Western Digital HDs (Same as temp. , but current "
 "value is 50 less for some models. Marked as obsolete.)"
 msgstr ""
+"Temperatura de ar em discos Western Digital (Mesmo que 'Temperatura', mas o "
+"valor corrente é 50º inferior em alguns modelos. Marcado como obsoleto.)"
 
 msgid "Albanian"
 msgstr "Albanês"
 
 msgid "Alert Level"
-msgstr ""
+msgstr "Nivel de Alerta"
 
 msgid "All"
 msgstr "Todos"
