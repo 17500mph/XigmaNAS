@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-05-02 01:39+0000\n"
-"PO-Revision-Date: 2016-04-23 20:33+0000\n"
+"PO-Revision-Date: 2016-05-03 19:06+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-02 00:08+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-23 11:08+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -28,7 +28,7 @@ msgstr " ki lett jelölve a "
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
-msgstr ""
+msgstr "%1$s-t használunk %2$s kötet létrehozásához."
 
 #, php-format
 msgid "%d days"
@@ -68,7 +68,7 @@ msgstr "%s már létezik, mint %s."
 
 #, php-format
 msgid "%s already exists."
-msgstr ""
+msgstr "%s már létezik."
 
 #, php-format
 msgid "%s is already configured as a filesystem."
@@ -171,10 +171,10 @@ msgstr ""
 "meghatározott mélységgel."
 
 msgid "1 or more disks are required to build a JBOD volume."
-msgstr ""
+msgstr "1 vagy több lemez szükséges JBOD kötet létrehozásához."
 
 msgid "1 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "1 vagy több lemez szükséges RAID-1 kötet létrehozásához."
 
 msgid ""
 "1. Use these specials actions for debugging only!<br />2. There is no need "
@@ -185,13 +185,13 @@ msgstr ""
 "automatikusan elindul)."
 
 msgid "2 or more disks are required to build a RAID-0 volume."
-msgstr ""
+msgstr "2 vagy több lemez szükséges RAID-0 kötet létrehozásához."
 
 msgid "2 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "2 vagy több lemez szükséges RAID-1 kötet létrehozásához."
 
 msgid "3 or more disks are required to build a RAID-5 volume."
-msgstr ""
+msgstr "3 vagy több lemez szükséges RAID-5 kötet létrehozásához."
 
 msgid "4KB wrapper"
 msgstr "4KB wrapper"
@@ -505,7 +505,7 @@ msgid "Add URL"
 msgstr "URL hozzáadása"
 
 msgid "Add Virtual Device"
-msgstr ""
+msgstr "Virtuális eszköz hozzáadása"
 
 msgid "Add Volume"
 msgstr "Kötet hozzáadása"
@@ -625,7 +625,7 @@ msgid "Advanced Setup"
 msgstr "Speciális beállítás"
 
 msgid "Advanced format"
-msgstr ""
+msgstr "Haladó formázás"
 
 msgid "Advanced settings"
 msgstr "Speciális beállítások"
@@ -960,7 +960,7 @@ msgid "Auxiliary parameters"
 msgstr "Kiegészítő paraméterek"
 
 msgid "Avail"
-msgstr ""
+msgstr "Elérhető"
 
 msgid "Available"
 msgstr "Elérhető"
@@ -991,7 +991,7 @@ msgid "Bad User - (Non Existing Users)"
 msgstr "Rossz felhasználó - (nem létező felhasználók)"
 
 msgid "Balance Algorithm"
-msgstr ""
+msgstr "Egyensúly algoritmus"
 
 msgid "Ban List"
 msgstr "Kitiltási lista"
@@ -1134,7 +1134,7 @@ msgid "By default, only already existing files can be uploaded."
 msgstr "Alapértelmezetten csak már létező fájlok tölthetőek fel."
 
 msgid "CACHE"
-msgstr ""
+msgstr "GYORSÍTÓTÁRAZÁS"
 
 msgid "CARP"
 msgstr "CARP"
@@ -1385,7 +1385,7 @@ msgstr "LINK_UP esemény utasítása (pl. %s)."
 
 #, php-format
 msgid "Command output"
-msgstr ""
+msgstr "Parancskimenet"
 
 msgid "Command output:"
 msgstr "Parancs kimenet:"
@@ -1715,7 +1715,7 @@ msgid "Create PV Guest"
 msgstr "PV vendég létrehozása"
 
 msgid "Create ZFS on GPT partition."
-msgstr ""
+msgstr "ZFS létrehozása GPT partíción"
 
 msgid "Create and initialize RAID."
 msgstr "RAID létrehozása és inicializálása."
@@ -1888,7 +1888,7 @@ msgid "Dataset is protected"
 msgstr "Adattár védett"
 
 msgid "Dataset is unlocked"
-msgstr ""
+msgstr "Adattár zárolva van"
 
 msgid "Datasets"
 msgstr "Adattárak (datasets)"
@@ -1983,13 +1983,13 @@ msgid "Delete Selected Options"
 msgstr "Kiválasztott beállítások törlése"
 
 msgid "Delete Selected Pools"
-msgstr ""
+msgstr "Kiválasztott tárolók törlése"
 
 msgid "Delete Selected RAID Volumes"
 msgstr "Kiválasztott RAID kötetek törlése"
 
 msgid "Delete Selected Virtual Devices"
-msgstr ""
+msgstr "Kiválasztott virtuális eszközök törlése"
 
 msgid "Delete Selected Volumes"
 msgstr "Kiválasztott kötetek törlése"
@@ -2277,7 +2277,7 @@ msgid "Disk"
 msgstr "Lemez"
 
 msgid "Disk Selection"
-msgstr ""
+msgstr "Lemez kiválasztása"
 
 msgid "Disk space usage"
 msgstr "Lemezhasználat"
@@ -2306,6 +2306,7 @@ msgstr "Elosztott hash tábla"
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
+"Ne aktiváld ezt az opciót, ha már meglévő RAID-et szeretnél hozzáadni."
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2428,43 +2429,57 @@ msgid "Do you really want to uninstall this package?"
 msgstr "Valóban el akarja távolítani ezt a csomagot?"
 
 msgid "Do you want to create a JBOD from selected disks?"
-msgstr ""
+msgstr "Biztos, hogy létrehozol egy JBOD-ot a kiválasztott lemezekből?"
 
 msgid "Do you want to create a RAID-0 from selected disks?"
 msgstr ""
+"Biztos, hogy létrehozol egy RAID-0 kötetet a kiválasztott lemezekből?"
 
 msgid "Do you want to create a RAID-1 from selected disks?"
 msgstr ""
+"Biztos, hogy létrehozol egy RAID-1 kötetet a kiválasztott lemezekből?"
 
 msgid "Do you want to create a RAID-5 from selected disks?"
 msgstr ""
+"Biztos, hogy létrehozol egy RAID-5 kötetet a kiválasztott lemezekből?"
 
 msgid "Do you want to create a RAID-Z1 from selected disks?"
 msgstr ""
+"Biztos, hogy létrehozol egy RAID-Z1 kötetet a kiválasztott lemezekből?"
 
 msgid "Do you want to create a RAID-Z2 from selected disks?"
 msgstr ""
+"Biztos, hogy létrehozol egy RAID-Z2 kötetet a kiválasztott lemezekből?"
 
 msgid "Do you want to create a RAID-Z3 from selected disks?"
 msgstr ""
+"Biztos, hogy létrehozol egy RAID-Z3 kötetet a kiválasztott lemezekből?"
 
 msgid "Do you want to create a cache device from selected disks?"
 msgstr ""
+"Biztos, hogy létrehozol egy gyorsítótár eszközt a kiválasztott lemezekből?"
 
 msgid "Do you want to create a hot spare device from selected disk?"
-msgstr ""
+msgstr "Biztos, hogy gyors tartalékot hozol létre a kiválasztott lemezekből?"
 
 msgid "Do you want to create a log device from selected disk?"
 msgstr ""
+"Biztos, hogy létrehozol egy naplózó eszközt a kiválasztott lemezekből?"
 
 msgid "Do you want to create a mirrored log device from selected disks?"
 msgstr ""
+"Biztos, hogy létrehozol egy tükrözött naplózó eszközt a kiválasztott "
+"lemezekből?"
 
 msgid "Do you want to create a mirrored virtual device from selected disks?"
 msgstr ""
+"Biztos, hogy létrehozol egy tükrözött virtuális eszközt a kiválasztott "
+"lemezekből?"
 
 msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
+"Biztos, hogy létrehozol egy csíkozott virtuális eszközt a kiválasztott "
+"lemezekből?"
 
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Biztos, hogy törli a kiválasztott RAID köteteket?"
@@ -2479,10 +2494,10 @@ msgid "Do you want to delete selected options?"
 msgstr "Biztos, hogy törlöd a kiválasztott beállításokat?"
 
 msgid "Do you want to delete selected pools?"
-msgstr ""
+msgstr "Biztos, hogy törlöd a kiválasztott tárolókat?"
 
 msgid "Do you want to delete selected virtual devices?"
-msgstr ""
+msgstr "Biztos, hogy törlöd a kiválasztott virtuális eszközöket?"
 
 msgid "Do you want to delete selected volumes?"
 msgstr "Biztos, hogy törli a kiválasztott köteteket?"
@@ -2542,6 +2557,8 @@ msgstr "Tartománynév, pl.: minta.hu."
 msgid ""
 "Don't erase the Master Boot Record. (useful for some RAID controller cards)"
 msgstr ""
+"Ne törölje a Master Boot Rekord-ot (néhány RAID vezérlő kártyánál esetén "
+"hasznos)."
 
 msgid "Donate"
 msgstr "Adományozás"
@@ -2646,7 +2663,7 @@ msgid "Edit VM"
 msgstr "VM módosítása"
 
 msgid "Edit Virtual Device"
-msgstr ""
+msgstr "Virtuális eszköz módosítása"
 
 msgid "Edit Volume"
 msgstr "Kötet módosítása"
@@ -2740,13 +2757,13 @@ msgid "Enable ACL inheritance"
 msgstr "ACL öröklődés engedélyezése"
 
 msgid "Enable Advanced Format. (4KB sector)"
-msgstr ""
+msgstr "Fejlett formázás bekapcsolása (4KB-os szektor)."
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Aszinkron I/O (AIO) engedélyezése"
 
 msgid "Enable Challenge-Response Authentication"
-msgstr ""
+msgstr "Challenge-Response hitelesítés engedélyezése"
 
 msgid "Enable FXP protocol."
 msgstr "FXP protokoll engedélyezése."
@@ -3172,7 +3189,7 @@ msgid "Failed to execute command zfs."
 msgstr "ZFS-parancs futása sikertelen."
 
 msgid "Failed to execute command zpool."
-msgstr ""
+msgstr "Zpool parancs futtatása sikertelen."
 
 msgid "Failed to execute cron job."
 msgstr "Hiba az ütemezett feladat végrehajtása közben."
@@ -3240,7 +3257,7 @@ msgid "File Path"
 msgstr "Elérési út"
 
 msgid "File System"
-msgstr ""
+msgstr "Fájlrendszer"
 
 msgid "File Transfer Protocol"
 msgstr "File Transfer Protocol"
@@ -3336,7 +3353,7 @@ msgid "Format"
 msgstr "Formázás"
 
 msgid "Format disk"
-msgstr ""
+msgstr "Lemez formázása"
 
 msgid "Format the report for phpBB forum."
 msgstr "Jelentés formázása phpBB fórumhoz."
@@ -3390,13 +3407,13 @@ msgstr ""
 "Fuppes engedélyezve van. A MiniDLNA használatához a Fuppes-t le kell tiltani."
 
 msgid "GEOM"
-msgstr ""
+msgstr "GEOM"
 
 msgid "GEOM Software RAID"
-msgstr ""
+msgstr "GEOM szoftveres RAID"
 
 msgid "GEOM VINUM Software RAID"
-msgstr ""
+msgstr "GEOM VINUM szoftveres RAID"
 
 msgid "GID"
 msgstr "GID"
@@ -3531,7 +3548,7 @@ msgid "HDD standby time"
 msgstr "HDD készenléti idő"
 
 msgid "HOT SPARE"
-msgstr ""
+msgstr "GYORS TARTALÉK"
 
 msgid "HTTP Proxy"
 msgstr "HTTP proxy"
@@ -4089,6 +4106,8 @@ msgid ""
 "It is recommended to use encryption before you store the backup in a safe "
 "location."
 msgstr ""
+"Ajánlott kódolás használata, mielőtt biztos helyre menti a biztonsági "
+"másolatot."
 
 msgid ""
 "It's recommended to change the default username and password for accessing "
@@ -4107,7 +4126,7 @@ msgid "JBOD Information & Status"
 msgstr "JBOD információ & állapot"
 
 msgid "JBOD Maintenance"
-msgstr ""
+msgstr "JBOD karbantartás"
 
 msgid "Jan"
 msgstr "Jan"
@@ -4193,10 +4212,10 @@ msgid "LDAP"
 msgstr "LDAP"
 
 msgid "LOG"
-msgstr ""
+msgstr "NAPLÓZÁS"
 
 msgid "LOG (Mirror)"
-msgstr ""
+msgstr "NAPLÓZÁS (tükör)"
 
 msgid "LUN"
 msgstr "LUN"
@@ -4485,6 +4504,8 @@ msgid ""
 "Lowering this threshold can adversely affect performance and auto-"
 "defragmentation."
 msgstr ""
+"Ezen küszöbérték csökkentése negatívan befolyásolja a teljesítményt és az "
+"automatikus töredezettségmentesítés."
 
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
@@ -4501,7 +4522,7 @@ msgid "MAC address"
 msgstr "Fizikai cím (MAC address)"
 
 msgid "MBR erase"
-msgstr ""
+msgstr "MBR törlése"
 
 msgid "MBR partition"
 msgstr "MBR partíció"
@@ -4516,7 +4537,7 @@ msgid "MIB is marked for deletion"
 msgstr "MIB törlésre megjelölve"
 
 msgid "MIRROR"
-msgstr ""
+msgstr "TÜKÖR"
 
 msgid "MISSING"
 msgstr "HIÁNYZIK"
@@ -4543,7 +4564,7 @@ msgid "Machine suffix"
 msgstr "Gép utótag"
 
 msgid "Maintenance"
-msgstr ""
+msgstr "Karbantartás"
 
 #, php-format
 msgid ""
@@ -4552,6 +4573,10 @@ msgid ""
 "vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
 "Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
 msgstr ""
+"Győződj meg arról, hogy kellő számú eszközt választottál ki:<div "
+"id='enumeration'><ul><li>RAID-Z1 esetén 3, 5 vagy 9 lemez minden vdev-"
+"ben</li><li>RAID-Z2 esetén 4, 6 vagy 10 lemez minden vdev-ben</li><li>RAID-"
+"Z3 esetén 5, 7 vagy 11 lemez minden vdev-ben</li></ul></div>"
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Bizonyosodjon meg róla, hogy a S.M.A.R.T.-ot aktiválta eszközein."
@@ -5050,6 +5075,8 @@ msgid ""
 "No configured virtual devices. Please add new <a href=\"%s\">virtual "
 "device</a> first."
 msgstr ""
+"Egy konfigurált virtuális eszköz sincs. Először adj új <a "
+"href=\"%s\">virtuális eszközt</a>."
 
 msgid "No device selected."
 msgstr "Nem választott ki eszközt."
@@ -5083,7 +5110,7 @@ msgid "No pool was found."
 msgstr "Nincs tároló"
 
 msgid "No softraid-formatted disks available."
-msgstr ""
+msgstr "Egy softraid-formázott eszköz sincs."
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "Nemmegengedő - Csak tiltó bejegyzése öröklődjenek"
@@ -5167,6 +5194,8 @@ msgstr "Megjegyzés"
 #, php-format
 msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
 msgstr ""
+"Megjegyzés: Ctrl-kattintással (Mac-en futtatás-kattintással) jelölhetsz ki "
+"több lemezt."
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -5601,16 +5630,16 @@ msgid "Pool Tools"
 msgstr "Tároló eszközök"
 
 msgid "Pool cannot be changed."
-msgstr ""
+msgstr "Tárolót nem lehet módosítani."
 
 msgid "Pool is marked for removal"
-msgstr ""
+msgstr "Tároló eltávolításra megjelölve"
 
 msgid "Pool is protected"
-msgstr ""
+msgstr "Tároló védett"
 
 msgid "Pool is unlocked"
-msgstr ""
+msgstr "Tároló nincs zárolva"
 
 msgid "Pools"
 msgstr "Tárolók (pools)"
@@ -5786,7 +5815,7 @@ msgid "RAID 0/1/5 Information & Status"
 msgstr "RAID 0/1/5 információ & állapot"
 
 msgid "RAID 0/1/5 Maintenance"
-msgstr ""
+msgstr "RAID 0/1/5 karbantartás"
 
 msgid "RAID 1 Information & Status"
 msgstr "RAID 1 információ & állapot"
@@ -5798,10 +5827,10 @@ msgid "RAID 5 Information & Status"
 msgstr "RAID 5 információ & állapot"
 
 msgid "RAID Name"
-msgstr ""
+msgstr "RAID neve"
 
 msgid "RAID Type"
-msgstr ""
+msgstr "RAID típusa"
 
 msgid "RAID device can be removed."
 msgstr "RAID eszköz nem távolítható el."
@@ -5816,34 +5845,34 @@ msgid "RAID is protected"
 msgstr "RAID védett"
 
 msgid "RAID is unlocked"
-msgstr ""
+msgstr "RAID nincs zárolva"
 
 msgid "RAID-0"
-msgstr ""
+msgstr "RAID-0"
 
 msgid "RAID-0 Maintenance"
-msgstr ""
+msgstr "RAID-0 karbantartás"
 
 msgid "RAID-1"
-msgstr ""
+msgstr "RAID-1"
 
 msgid "RAID-1 Maintenance"
-msgstr ""
+msgstr "RAID-1 karbantartás"
 
 msgid "RAID-5"
-msgstr ""
+msgstr "RAID-5"
 
 msgid "RAID-5 Maintenance"
-msgstr ""
+msgstr "RAID-5 karbantartás"
 
 msgid "RAID-Z1"
-msgstr ""
+msgstr "RAID-Z1"
 
 msgid "RAID-Z2"
-msgstr ""
+msgstr "RAID-Z2"
 
 msgid "RAID-Z3"
-msgstr ""
+msgstr "RAID-Z3"
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -6227,7 +6256,7 @@ msgid "SSID"
 msgstr "SSID"
 
 msgid "STRIPE"
-msgstr ""
+msgstr "CSÍKOZÁS"
 
 msgid "Samba AD"
 msgstr "Samba AD"
@@ -6354,7 +6383,7 @@ msgid "Select mount point where to create the swap file."
 msgstr "Válassz csatolást, ahová a cserefájl létrehozható."
 
 msgid "Select read balance algorithm."
-msgstr ""
+msgstr "Olvasó egyensúly algoritmus kiválasztása"
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "Válaszd ki a telepítendő FreeBSD csomagot."
@@ -6733,7 +6762,7 @@ msgstr ""
 "a megadott számú előfordulás esetén az életbe lép."
 
 msgid "Specifies the usage of Challenge-Response Authentication."
-msgstr ""
+msgstr "Challenge-Response hitelesítés használatának meghatározása."
 
 msgid "Specifies the username which the service will run as."
 msgstr "A szolgáltatást futtató felhasználót határozza meg."
@@ -6745,6 +6774,7 @@ msgstr ""
 
 msgid "Specify the percentage of space held back from normal users."
 msgstr ""
+"Hely meghatározása százalékban, amit normál felhasználóknak megtartunk."
 
 msgid "Split request"
 msgstr "Osztott kérés"
@@ -7666,10 +7696,10 @@ msgstr ""
 "RAID neve csak a következő karaktereket tartalmazhatja:  a-z, A-Z, 0-9."
 
 msgid "The name of the pool cannot be changed."
-msgstr ""
+msgstr "Tárolók száma nem módosítható."
 
 msgid "The name of this virtual device cannot be changed."
-msgstr ""
+msgstr "Virtuális eszköz neve nem módosítható."
 
 #, php-format
 msgid "The network '%s' is invalid."
@@ -8169,7 +8199,7 @@ msgstr ""
 "elválasztva kell megadni. A csoportok @ előtag vannak megkülönböztetve."
 
 msgid "This option applies to GEOM RAID-1 only."
-msgstr ""
+msgstr "Ez a beállítás csak GEOM RAID-1-re van hatással."
 
 msgid "This option causes rsync to copy the local data to the remote server."
 msgstr ""
@@ -8708,7 +8738,7 @@ msgid "UFS"
 msgstr "UFS"
 
 msgid "UFS (GPT and Soft Updates)"
-msgstr ""
+msgstr "UFS (GPT és Puha Frissítések)"
 
 #, php-format
 msgid ""
@@ -8725,6 +8755,9 @@ msgid ""
 "filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
 "unpredictable results, file corruption and loss of data!"
 msgstr ""
+"UFS és ZFS a NAS4Free NATÍV fájlrendszerei. Más fájlrendszer használata, "
+"mint például FAT, FAT32, EXT2, EXT3, EXT4 vagy NTFS kiszámíthatatlan "
+"eseményeket, fájlok sérülését és adatvesztést okozhat!"
 
 #, php-format
 msgid ""
@@ -8739,7 +8772,7 @@ msgstr ""
 "sérüléshez és adatvesztéshez vezethet!"
 
 msgid "UFS with Soft Updates"
-msgstr ""
+msgstr "UFS Puha Frissítésekkel"
 
 msgid "UID"
 msgstr "UID"
@@ -9083,16 +9116,16 @@ msgid "Virtual Device"
 msgstr "Virtuális eszköz"
 
 msgid "Virtual Device List"
-msgstr ""
+msgstr "Virtuális eszközök listája"
 
 msgid "Virtual Device is marked for removal"
-msgstr ""
+msgstr "Virtuális eszköz eltávolításra megjelölve"
 
 msgid "Virtual Device is protected"
-msgstr ""
+msgstr "Virtuális eszköz védett"
 
 msgid "Virtual Device is unlocked"
-msgstr ""
+msgstr "Virtuális eszköz nincs zárolva."
 
 msgid "Virtual Devices"
 msgstr "Virtuális eszközök"
@@ -9113,10 +9146,10 @@ msgid "Virtual Machine"
 msgstr "Virtuális gép"
 
 msgid "Virtual device can be removed."
-msgstr ""
+msgstr "Virtuális eszköz eltávolítható."
 
 msgid "Virtual device is already in use."
-msgstr ""
+msgstr "Virtuális eszköz már használatban van."
 
 msgid "Virtual devices"
 msgstr "Virtuális eszközök"
@@ -9128,7 +9161,7 @@ msgid "Volume"
 msgstr "Kötet"
 
 msgid "Volume Label"
-msgstr ""
+msgstr "Kötet címkéje"
 
 msgid "Volume Name"
 msgstr "Kötetnév"
@@ -9140,10 +9173,10 @@ msgid "Volume is marked for deletion"
 msgstr "Kötet törlésre megjelölve"
 
 msgid "Volume is protected"
-msgstr ""
+msgstr "Kötet védett"
 
 msgid "Volume is unlocked"
-msgstr ""
+msgstr "Kötet nincs zárolva"
 
 msgid "Volume label"
 msgstr "Címke"
@@ -9152,6 +9185,8 @@ msgid ""
 "Volume label of the new file system. Use a space to separate multiple "
 "labels. (if only one specified next will be auto increment)"
 msgstr ""
+"Új fájlrendszer kötetcímkéje. Szóközt használj több címke elválasztásához "
+"(ha csak egyet adsz meg, a következő automatikus növekményes lesz)."
 
 msgid "Volume mode"
 msgstr "Kötet mód"
@@ -9314,7 +9349,7 @@ msgid "Write only"
 msgstr "Csak írás"
 
 msgid "Wrong number of count for Volume Label"
-msgstr ""
+msgstr "Kötetcímkéhez nem megfelelő számosság"
 
 msgid "Wrong partition type or partition number."
 msgstr "Hibás a partíció típusa vagy a partíció száma."
@@ -9343,7 +9378,7 @@ msgid "You can use the following parameters for substitution:"
 msgstr "A következő paramétereket használhatod helyettesítésre:"
 
 msgid "You can't format the OS origin disk!"
-msgstr ""
+msgstr "Operációs rendszer lemeze nem formázható!"
 
 #, php-format
 msgid ""

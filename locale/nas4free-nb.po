@@ -3,28 +3,28 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-05-02 01:39+0000\n"
-"PO-Revision-Date: 2016-01-15 13:01+0000\n"
-"Last-Translator: Åka Sikrom <Unknown>\n"
+"PO-Revision-Date: 2016-05-17 05:21+0000\n"
+"Last-Translator: Alf Gunnar Sørensen <alf-gunnar.sorensen@c2i.net>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-04 07:05+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-23 11:09+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 "X-Poedit-Country: NORWAY\n"
 "Language: \n"
 "X-Poedit-Language: Norwegian Bokmal\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 msgid " interfaces:"
-msgstr " nettverkskort"
+msgstr " grensesnitt:"
 
 msgid " was assigned to "
 msgstr " ble tildelt "
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
-msgstr ""
+msgstr "%1$s ble brukt til å opprette %2$s volum"
 
 #, php-format
 msgid "%d days"
@@ -60,19 +60,19 @@ msgstr ""
 
 #, php-format
 msgid "%s already exists as a %s."
-msgstr ""
+msgstr "%s eksisterer allerede som %s"
 
 #, php-format
 msgid "%s already exists."
-msgstr ""
+msgstr "%s eksisterer allerede."
 
 #, php-format
 msgid "%s is already configured as a filesystem."
-msgstr ""
+msgstr "%s er allerede konfigurert som et filsystem"
 
 #, php-format
 msgid "%s is already configured as a volume."
-msgstr ""
+msgstr "%s er allerede konfigurert som et volum"
 
 #, php-format
 msgid "%s is too long."
@@ -149,10 +149,10 @@ msgid "0=disabled, 1-255=enabled command queuing with specified depth."
 msgstr "0=deaktivert, 1-255= aktivert kommandokø med spesifisert dybde."
 
 msgid "1 or more disks are required to build a JBOD volume."
-msgstr ""
+msgstr "1 eller flere disker trengs for å lage et JBOD volum."
 
 msgid "1 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "1 eller flere disker trengs for å lage et RAID-1 volum."
 
 msgid ""
 "1. Use these specials actions for debugging only!<br />2. There is no need "
@@ -162,13 +162,13 @@ msgstr ""
 "ikke bruke denne menyen for å starte et RAID (starter automatisk)"
 
 msgid "2 or more disks are required to build a RAID-0 volume."
-msgstr ""
+msgstr "2  eller flere disker trengs for å lage et RAID-0 volum."
 
 msgid "2 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "2  eller flere disker trengs for å lage et RAID-1 volum."
 
 msgid "3 or more disks are required to build a RAID-5 volume."
-msgstr ""
+msgstr "3  eller flere disker trengs for å lage et RAID-5 volum."
 
 msgid "4KB wrapper"
 msgstr ""
@@ -262,8 +262,8 @@ msgid ""
 "file (index.php, index.html, index.htm or default.htm) was found in that "
 "directory."
 msgstr ""
-"En opplisting blir generert hvis en katalog blir hentet og ingen indeks fil "
-"(index.php, index.html, index.htm eller default.htm) ble funnet i katalogen."
+"En filliste blir laget dersom det i forespurte katalog ikke finnes en "
+"indeksfil (index.php, index.html, index.htm eller default.htm)."
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -288,6 +288,8 @@ msgid ""
 "A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
 "point</a> first before proceeding."
 msgstr ""
+"Et koblet RAID volum kan ikke slettes. Fjern <a href='%s'>mount point</a> "
+"først før du fortsetter."
 
 msgid "A route to this destination network already exists."
 msgstr "En rute til dette mottakernettverk eksisterer allerede."
@@ -354,13 +356,13 @@ msgid "A valid systctl MIB value."
 msgstr "En gyldig systctl MIB verdi."
 
 msgid "ACL Inherit"
-msgstr ""
+msgstr "ACL arv"
 
 msgid "ACL Mode"
-msgstr ""
+msgstr "ACL modus"
 
 msgid "ACL inherit"
-msgstr ""
+msgstr "ACL arv"
 
 msgid "ACL mode"
 msgstr "ACL modus"
@@ -375,7 +377,7 @@ msgid "AFP"
 msgstr "AFP"
 
 msgid "AFP compatibility"
-msgstr ""
+msgstr "AFP kompabilitet"
 
 msgid "AG"
 msgstr "AG"
@@ -390,7 +392,7 @@ msgid "AIO write size"
 msgstr "AIO skrivestørrelse"
 
 msgid "ALL Interfaces"
-msgstr ""
+msgstr "ALLE grensesnitt"
 
 msgid "AP mode"
 msgstr "AP modus"
@@ -402,7 +404,7 @@ msgid "ARP Tables List"
 msgstr ""
 
 msgid "ATTRIBUTE NAME"
-msgstr "ATTRIBUTE NAVN"
+msgstr "ATRIBUTT NAVN"
 
 msgid "Accept remote syslog messages."
 msgstr ""

@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-05-02 01:39+0000\n"
-"PO-Revision-Date: 2016-05-01 11:49+0000\n"
-"Last-Translator: Ken <magnet1215@msn.com>\n"
+"PO-Revision-Date: 2016-05-22 21:56+0000\n"
+"Last-Translator: Jieting Xu <xu.jieting@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-04 07:06+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-23 11:09+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -23,7 +23,7 @@ msgstr " 被指派为 "
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
-msgstr ""
+msgstr "%1$s已被用于创建%2$s卷"
 
 #, php-format
 msgid "%d days"
@@ -63,7 +63,7 @@ msgstr "%s 类似存在 %s。"
 
 #, php-format
 msgid "%s already exists."
-msgstr ""
+msgstr "%s 已经存在。"
 
 #, php-format
 msgid "%s is already configured as a filesystem."
@@ -148,10 +148,10 @@ msgid "0=disabled, 1-255=enabled command queuing with specified depth."
 msgstr "0=禁用, 1-255=指令排序的深度。"
 
 msgid "1 or more disks are required to build a JBOD volume."
-msgstr ""
+msgstr "一个或更多磁盘需要建立为JBOD卷"
 
 msgid "1 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "一个或更多磁盘需要建立为RAID-1卷"
 
 msgid ""
 "1. Use these specials actions for debugging only!<br />2. There is no need "
@@ -374,7 +374,7 @@ msgid "ATTRIBUTE NAME"
 msgstr "属性名"
 
 msgid "Accept remote syslog messages."
-msgstr ""
+msgstr "接受远程syslog消息。"
 
 msgid "Access"
 msgstr "权限"
@@ -897,7 +897,7 @@ msgid "Bad User - (Non Existing Users)"
 msgstr "不良用户 - （非现有用户）"
 
 msgid "Balance Algorithm"
-msgstr ""
+msgstr "均衡算法"
 
 msgid "Ban List"
 msgstr "封禁名单"
@@ -1128,7 +1128,7 @@ msgstr "CPU 使用率"
 msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
 "error)."
-msgstr ""
+msgstr "CRC错误计数。统计CRC错误数量（读写FIS数据CRC错误）。"
 
 msgid "Cache Device"
 msgstr "缓存设备"
@@ -1161,7 +1161,7 @@ msgid "Capacity"
 msgstr "容量"
 
 msgid "Case Sensitivity"
-msgstr ""
+msgstr "大小写敏感"
 
 msgid ""
 "Causes the server to display the network information for the specified IP "
@@ -1275,7 +1275,7 @@ msgstr "LINK_UP 事件的指令（例如 %s）。"
 
 #, php-format
 msgid "Command output"
-msgstr ""
+msgstr "命令输出"
 
 msgid "Command output:"
 msgstr "指令输出："
@@ -1473,13 +1473,13 @@ msgid ""
 msgstr ""
 
 msgid "Count of errors corrected by software ECC."
-msgstr ""
+msgstr "ECC软件纠正的错误数量。"
 
 msgid "Count of errors due to high temperature."
-msgstr ""
+msgstr "温度过高造成的错误数量。"
 
 msgid "Count of errors while reading from a disk."
-msgstr ""
+msgstr "读磁盘时的错误数量。"
 
 msgid ""
 "Count of hours in power-on state. The raw value of this attribute shows "
@@ -1525,7 +1525,7 @@ msgid ""
 msgstr ""
 
 msgid "Count of times head changes position."
-msgstr ""
+msgstr "磁头改变位置次数。"
 
 msgid ""
 "Count of times the heads are loaded off the media. Heads can be unloaded "
@@ -1533,7 +1533,7 @@ msgid ""
 msgstr ""
 
 msgid "Count of times the link is reset during a data transfer."
-msgstr ""
+msgstr "数据传输期间链接重置次数。"
 
 msgid "Counts the maximum worst erase count on any block."
 msgstr ""
@@ -1548,13 +1548,13 @@ msgid "Create 4KB wrapper (nop device)."
 msgstr "创建4KB封套（NOP装置）。"
 
 msgid "Create HVM Guest"
-msgstr ""
+msgstr "创建HVM客户机"
 
 msgid "Create PV Guest"
-msgstr ""
+msgstr "创建PV客户机"
 
 msgid "Create ZFS on GPT partition."
-msgstr ""
+msgstr "在GPT分区上创建ZFS。"
 
 msgid "Create and initialize RAID."
 msgstr "建立并初始 RAID。"
@@ -1716,13 +1716,13 @@ msgid "Dataset"
 msgstr "数据集"
 
 msgid "Dataset is marked for deletion"
-msgstr ""
+msgstr "数据集已标记为删除"
 
 msgid "Dataset is protected"
-msgstr ""
+msgstr "数据集已保护"
 
 msgid "Dataset is unlocked"
-msgstr ""
+msgstr "数据集未锁定"
 
 msgid "Datasets"
 msgstr "数据集（Datasets）"
@@ -1740,7 +1740,7 @@ msgid "Debug"
 msgstr "调试"
 
 msgid "Debug Level"
-msgstr ""
+msgstr "调试级别"
 
 msgid "Dec"
 msgstr "十二月"
@@ -1763,7 +1763,7 @@ msgid "Default"
 msgstr "默认值"
 
 msgid "Default Device Settings"
-msgstr ""
+msgstr "默认设备设置"
 
 #, php-format
 msgid "Default is %s."
@@ -1806,25 +1806,25 @@ msgid "Delete Rsync job"
 msgstr "删除 Rsync 任务"
 
 msgid "Delete Selected Datasets"
-msgstr ""
+msgstr "删除选中的数据集"
 
 msgid "Delete Selected Jobs"
-msgstr ""
+msgstr "删除选中的任务"
 
 msgid "Delete Selected Options"
-msgstr ""
+msgstr "删除选中的选项"
 
 msgid "Delete Selected Pools"
-msgstr ""
+msgstr "删除选中的池"
 
 msgid "Delete Selected RAID Volumes"
-msgstr ""
+msgstr "删除选中的RAID卷"
 
 msgid "Delete Selected Virtual Devices"
-msgstr ""
+msgstr "删除选中的虚拟设备"
 
 msgid "Delete Selected Volumes"
-msgstr ""
+msgstr "删除选中的卷"
 
 msgid "Delete URL"
 msgstr "删除 URL"
@@ -1937,7 +1937,7 @@ msgid "Destination email address."
 msgstr "电邮目的端。"
 
 msgid "Destination email address. Separate email addresses by semi-colon."
-msgstr ""
+msgstr "目的地邮件地址。多个邮件地址用分号分开。"
 
 msgid "Destination host name or IP number."
 msgstr "目的端主机名称或 IP 位址。"
@@ -1988,7 +1988,7 @@ msgid "Device IP"
 msgstr "设备 IP"
 
 msgid "Device List"
-msgstr ""
+msgstr "设备列表"
 
 msgid "Device Model"
 msgstr "设备型号"
@@ -2053,28 +2053,28 @@ msgid "Disable Firmware Update"
 msgstr "关闭固件更新"
 
 msgid "Disable Selected Jobs"
-msgstr ""
+msgstr "禁止选中的任务"
 
 msgid "Disable Selected Options"
-msgstr ""
+msgstr "禁止选中的选项"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
 msgstr "关闭 TCP Wrapper（mod_wrap 模块）。"
 
 msgid "Disable console menu."
-msgstr ""
+msgstr "禁止控制台菜单。"
 
 msgid "Disable file manager completely."
-msgstr ""
+msgstr "完全禁止文件管理器。"
 
 msgid "Disable firmware version check."
-msgstr ""
+msgstr "禁止固件版本检查。"
 
 msgid "Disable speaker beep on startup and shutdown."
-msgstr ""
+msgstr "禁止扬声器在开机和关机时发声。"
 
 msgid "Disable the compression of repeated line."
-msgstr ""
+msgstr "禁止对重复行压缩。"
 
 msgid "Disabled"
 msgstr "关闭"
@@ -2099,7 +2099,7 @@ msgid "Disk"
 msgstr "硬盘"
 
 msgid "Disk Selection"
-msgstr ""
+msgstr "选择磁盘"
 
 msgid "Disk space usage"
 msgstr "磁盘空间使用情况"
@@ -2238,7 +2238,7 @@ msgid "Do you really want to uninstall this package?"
 msgstr "您确定要卸载这个套件吗？"
 
 msgid "Do you want to create a JBOD from selected disks?"
-msgstr ""
+msgstr "是否从选中的磁盘创建JBOD？"
 
 msgid "Do you want to create a RAID-0 from selected disks?"
 msgstr ""

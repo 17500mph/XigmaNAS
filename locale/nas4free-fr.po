@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-05-02 01:39+0000\n"
-"PO-Revision-Date: 2016-05-02 04:59+0000\n"
-"Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
+"PO-Revision-Date: 2016-05-18 21:12+0000\n"
+"Last-Translator: Travel_ED <richard.edouard84@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-04 07:05+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-23 11:08+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
 "X-Poedit-Language: French\n"
@@ -443,7 +443,7 @@ msgid "ATTRIBUTE NAME"
 msgstr "NOM ATTRIBUT"
 
 msgid "Accept remote syslog messages."
-msgstr ""
+msgstr "Accepter les messages syslog distants."
 
 msgid "Access"
 msgstr "Accès"
@@ -1801,7 +1801,7 @@ msgid "Critical"
 msgstr "Critique"
 
 msgid "Critical Error Level"
-msgstr ""
+msgstr "Niveau d'erreur critique"
 
 msgid "Cron"
 msgstr "Cron"
@@ -2303,16 +2303,16 @@ msgid "Disable speaker beep on startup and shutdown."
 msgstr "Désactiver le bip du haut-parleur au démarrage et à l'arrêt"
 
 msgid "Disable the compression of repeated line."
-msgstr ""
+msgstr "Désactiver la compression des lignes redondantes."
 
 msgid "Disabled"
 msgstr "Désactivé"
 
 msgid "Discard - Discard ACL"
-msgstr ""
+msgstr "Désactivé - Désactive les ACL"
 
 msgid "Discard - Do not inherit entries"
-msgstr ""
+msgstr "Désactivé - Ne pas hériter les entrées"
 
 #, php-format
 msgid "Discovered iSCSI target for %s"
@@ -2508,18 +2508,28 @@ msgstr "Voulez-vous créer un cache avec les disques sélectionnés?"
 
 msgid "Do you want to create a hot spare device from selected disk?"
 msgstr ""
+"Voulez vous créer un périphérique de remplacment à chaud (hot spare) depuis "
+"le disque sélectionné."
 
 msgid "Do you want to create a log device from selected disk?"
 msgstr ""
+"Voulez vous créer un périphérique de journalisation depuis le disque "
+"sélectionné."
 
 msgid "Do you want to create a mirrored log device from selected disks?"
 msgstr ""
+"Voulez vous créer un périphérique de journalisation mirroré depuis le disque "
+"sélectionné."
 
 msgid "Do you want to create a mirrored virtual device from selected disks?"
 msgstr ""
+"Voulez vous créer un périphérique virtuel mirroré depuis le disque "
+"sélectionné."
 
 msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
+"Voulez vous créer un périphérique virtuel agrégé depuis le disque "
+"sélectionné."
 
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Voulez-vous supprimer le(s) volume(s) RAID sélectionné(s)"
@@ -2786,7 +2796,7 @@ msgid "Email Report"
 msgstr "Rapport par e-mail"
 
 msgid "Emergency Level"
-msgstr ""
+msgstr "Niveau d'urgence"
 
 msgid "Empty as default."
 msgstr "Vide par défaut"
@@ -2804,7 +2814,7 @@ msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Activer les E/S asynchrones (AIO)"
 
 msgid "Enable Challenge-Response Authentication"
-msgstr ""
+msgstr "Activer l'authentification Question-Réponse"
 
 msgid "Enable FXP protocol."
 msgstr "Activer le protocole FXP."
@@ -3077,7 +3087,7 @@ msgid "Enter trap host name."
 msgstr "Nom du hôte vers lequel envoyer les traps SNMP"
 
 msgid "Entire Device"
-msgstr ""
+msgstr "Totalité du périphérique"
 
 msgid ""
 "Erase Fail Count (chip). This parameter indicates a number of flash erase "
@@ -3088,7 +3098,7 @@ msgid "Error"
 msgstr "Erreur"
 
 msgid "Error Level"
-msgstr ""
+msgstr "Niveau d’erreur"
 
 #, php-format
 msgid "Error: The changes could not be applied (error code %s)."
@@ -3428,7 +3438,7 @@ msgid "From Email Address"
 msgstr "Depuis cette adresse mail"
 
 msgid "From email address for sending system messages."
-msgstr ""
+msgstr "Adresse e-mail pour l'envoi de messages système."
 
 msgid "Fsck"
 msgstr "Fsck"
@@ -3453,7 +3463,7 @@ msgstr ""
 "désactiver Fuppes."
 
 msgid "GEOM"
-msgstr ""
+msgstr "GEOM"
 
 msgid "GEOM Software RAID"
 msgstr "GEOM RAID Logiciel"
@@ -3591,16 +3601,16 @@ msgstr ""
 "fonctionnalité est implémentée sur la plupart des disques Seagate récents."
 
 msgid "HDD standby time"
-msgstr ""
+msgstr "Temps de mis en veille (standby) du disque."
 
 msgid "HOT SPARE"
-msgstr ""
+msgstr "HOT SPARE (disque de remplacement à chaud)"
 
 msgid "HTTP Proxy"
 msgstr "Proxy HTTP"
 
 msgid "HVM Guest"
-msgstr ""
+msgstr "Invité HVM"
 
 msgid "Hard Disk"
 msgstr "Disque dur"
@@ -3736,7 +3746,7 @@ msgid "IP address"
 msgstr "Adresse IP"
 
 msgid "IP address of remote syslog server."
-msgstr ""
+msgstr "Adresse IP du serveur syslog distant."
 
 #, php-format
 msgid ""
@@ -3953,7 +3963,7 @@ msgid "Info"
 msgstr "Info"
 
 msgid "Info Level"
-msgstr ""
+msgstr "Niveau d'information."
 
 msgid "Informal"
 msgstr "Informel"
@@ -4174,6 +4184,8 @@ msgid ""
 "It is recommended to use encryption before you store the backup in a safe "
 "location."
 msgstr ""
+"Il est recommandé d'utiliser l’encryptions avant de stoker la sauvegarde "
+"dans un emplacement sure."
 
 msgid ""
 "It's recommended to change the default username and password for accessing "
@@ -4190,10 +4202,10 @@ msgid "JBOD"
 msgstr "JBOD"
 
 msgid "JBOD Information & Status"
-msgstr ""
+msgstr "Informations et status JBOD"
 
 msgid "JBOD Maintenance"
-msgstr ""
+msgstr "Maintenance JBOD"
 
 msgid "Jan"
 msgstr "Janv"
@@ -4212,10 +4224,10 @@ msgid "Japanese"
 msgstr "Japonais"
 
 msgid "Job is locked"
-msgstr ""
+msgstr "La tâche est verrouillée"
 
 msgid "Job is marked for deletion"
-msgstr ""
+msgstr "La tâche est marquée pour suppression"
 
 msgid "Jul"
 msgstr "Juil"
@@ -4234,7 +4246,7 @@ msgstr "Noyau (kernel)"
 
 #, php-format
 msgid "Kernel file (e.g. %s)."
-msgstr ""
+msgstr "Fichier Noyau (e.g. %s)."
 
 msgid "Key"
 msgstr "Clef"
@@ -4516,13 +4528,13 @@ msgid "Log Level"
 msgstr "Niveau de journalisation"
 
 msgid "Log Settings"
-msgstr ""
+msgstr "Configurations du journal"
 
 msgid "Log level"
 msgstr "Niveau de journalisation"
 
 msgid "Log order"
-msgstr ""
+msgstr "Ordre des journaux"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Journaliser dans syslog les paquets gérés par cette règle."
@@ -4587,7 +4599,7 @@ msgid "MAC address"
 msgstr "Adresse MAC"
 
 msgid "MBR erase"
-msgstr ""
+msgstr "Effacer le MBR"
 
 msgid "MBR partition"
 msgstr "partition MBR"
@@ -4596,10 +4608,10 @@ msgid "MIB"
 msgstr "MIB"
 
 msgid "MIB is locked"
-msgstr ""
+msgstr "La MIB est verrouillée"
 
 msgid "MIB is marked for deletion"
-msgstr ""
+msgstr "MIB marquée pour suppression"
 
 msgid "MIRROR"
 msgstr "MIROIR"
@@ -4617,7 +4629,7 @@ msgid "MS Active Directory"
 msgstr "MS Active Directory"
 
 msgid "MS Active Directory Information & Status"
-msgstr ""
+msgstr "Informations et status Active Directory MS"
 
 msgid "MS Domain"
 msgstr "Domaine MS"
@@ -4629,7 +4641,7 @@ msgid "Machine suffix"
 msgstr "Suffixe de la machine"
 
 msgid "Maintenance"
-msgstr ""
+msgstr "Maintenance"
 
 #, php-format
 msgid ""
@@ -4690,7 +4702,7 @@ msgid "Max Protocol"
 msgstr "Protocole Maximum"
 
 msgid "Max entries"
-msgstr ""
+msgstr "Nombre maximum d'entrées"
 
 msgid "Max. TTL"
 msgstr "Max. TTL"
@@ -4877,7 +4889,7 @@ msgid "Missing a temporary folder."
 msgstr "Il manque un dossier temporaire."
 
 msgid "Mixed"
-msgstr ""
+msgstr "Mixte"
 
 msgid "Mode"
 msgstr "Mode"
@@ -5176,13 +5188,13 @@ msgid "Node A IP address"
 msgstr "Node A adresse ip"
 
 msgid "Node A Settings"
-msgstr ""
+msgstr "Paramètres du nœud A"
 
 msgid "Node B IP address"
 msgstr "Node B adresse IP"
 
 msgid "Node B Settings"
-msgstr ""
+msgstr "Paramètres du nœud B"
 
 msgid "Node Base"
 msgstr "Node Base"
@@ -5331,7 +5343,7 @@ msgid "ONLINE"
 msgstr "CONNECTE"
 
 msgid "OPT Only"
-msgstr ""
+msgstr "OPT seulement"
 
 msgid "Object name"
 msgstr "Nom de l'objet"
@@ -5465,7 +5477,7 @@ msgid "PSK"
 msgstr "PSK"
 
 msgid "PV Guest"
-msgstr ""
+msgstr "Invité PV"
 
 msgid "Package Name"
 msgstr "Nom du paquet"
@@ -5495,7 +5507,7 @@ msgid "Parent Directory"
 msgstr "Répertoire parent"
 
 msgid "Partition"
-msgstr ""
+msgstr "Partition"
 
 msgid "Partition number"
 msgstr "Numéro de partition"
@@ -5634,7 +5646,7 @@ msgid "Ping"
 msgstr "Ping"
 
 msgid "Ping Test"
-msgstr ""
+msgstr "Test ping"
 
 msgid "Ping winbindd to see if it is alive:"
 msgstr "Ping winbindd pour vérifier s'il est en ligne:"
@@ -5643,7 +5655,7 @@ msgid "Ping/Traceroute"
 msgstr "Ping/Traceroute"
 
 msgid "Plain-text"
-msgstr ""
+msgstr "Texte plein"
 
 msgid "Platform"
 msgstr "Plateforme"
@@ -5680,19 +5692,19 @@ msgid "Pool Information & Status"
 msgstr "Information & status du pool"
 
 msgid "Pool Tools"
-msgstr ""
+msgstr "Outils Pool"
 
 msgid "Pool cannot be changed."
-msgstr ""
+msgstr "Le Pool ne peux pas être changé."
 
 msgid "Pool is marked for removal"
-msgstr ""
+msgstr "Le pool est marqué pour suppression."
 
 msgid "Pool is protected"
-msgstr ""
+msgstr "Le Pool est protégé"
 
 msgid "Pool is unlocked"
-msgstr ""
+msgstr "Le Pool est déverrouillé"
 
 msgid "Pools"
 msgstr "Pools"
@@ -5886,25 +5898,25 @@ msgid "RAID 5 Information & Status"
 msgstr "RAID 5 Information & Status"
 
 msgid "RAID Name"
-msgstr ""
+msgstr "Nom RAID"
 
 msgid "RAID Type"
-msgstr ""
+msgstr "Type de RAID"
 
 msgid "RAID device can be removed."
-msgstr ""
+msgstr "Le périphérique RAID peut être supprimé."
 
 msgid "RAID device is already in use."
-msgstr ""
+msgstr "Le périphérique RAID est déjà utilisé."
 
 msgid "RAID is marked for removal"
-msgstr ""
+msgstr "Raid marqué pour suppression."
 
 msgid "RAID is protected"
-msgstr ""
+msgstr "RAID protégé"
 
 msgid "RAID is unlocked"
-msgstr ""
+msgstr "RAID  déverrouillé"
 
 msgid "RAID-0"
 msgstr "RAID-0"
@@ -6071,7 +6083,7 @@ msgid "Remote Rsync Server"
 msgstr "Serveur Rsync distant"
 
 msgid "Remote Syslog Server"
-msgstr ""
+msgstr "Serveur syslog distant"
 
 msgid "Remote module (source)"
 msgstr "Module distant (source)"
@@ -6086,7 +6098,7 @@ msgid "Remote rsync daemon"
 msgstr "Démon rsync distant."
 
 msgid "Remote syslog messages"
-msgstr ""
+msgstr "Messages syslog distants"
 
 msgid "Removable"
 msgstr "Amovible"
@@ -6142,13 +6154,13 @@ msgid "Resolve"
 msgstr "Résoudre"
 
 msgid "Resolve IP"
-msgstr ""
+msgstr "Resoudre l'IP"
 
 msgid "Resolve IP addresses to hostnames"
 msgstr "Résoudre les adresses IP en noms d'hôtes"
 
 msgid "Resolve IP addresses to hostnames."
-msgstr ""
+msgstr "Résoudre les adresses IP en noms d'hôtes."
 
 msgid "Resource"
 msgstr "Ressource"
@@ -6167,7 +6179,7 @@ msgstr ""
 "Restaurer les méta-données depuis le fichier donné vers le fournisseur donné."
 
 msgid "Restricted"
-msgstr ""
+msgstr "Restreint"
 
 msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
@@ -6273,7 +6285,7 @@ msgid "S.M.A.R.T. log"
 msgstr "Log S.M.A.R.T."
 
 msgid "SHA256, Verify"
-msgstr ""
+msgstr "Vérification SHA256"
 
 msgid "SMB2"
 msgstr "SMB2"
@@ -6501,7 +6513,7 @@ msgid "Send now"
 msgstr "Envoyer maintenant"
 
 msgid "Sensitive"
-msgstr ""
+msgstr "Sensible"
 
 msgid "Sep"
 msgstr "Sept"
@@ -6819,7 +6831,7 @@ msgstr ""
 "d'occurrences spécifié doit être atteint pour ajouter l'interdiction."
 
 msgid "Specifies the usage of Challenge-Response Authentication."
-msgstr ""
+msgstr "Spécifie l'utilisation de l'authentification par Question-Réponse"
 
 msgid "Specifies the username which the service will run as."
 msgstr "Spécifie le nom d'utilisateur sous lequel va fonctionner le service."
@@ -9337,7 +9349,7 @@ msgid "Warning"
 msgstr "Avertissement"
 
 msgid "Warning Level"
-msgstr ""
+msgstr "Niveau d'avertissement"
 
 msgid ""
 "Warning: You are going to delete an encrypted volume. All data will get lost "
