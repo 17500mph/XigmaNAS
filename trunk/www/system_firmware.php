@@ -19,6 +19,7 @@
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -272,15 +273,15 @@ if ($_POST && !file_exists($d_firmwarelock_path)) {
 	unset($input_errors);
 	unset($sig_warning);
 
-	if (stristr($_POST['Submit'], gettext("Enable Firmware Update")))
+	if (isset($_POST['EnableFirmwareUpdate'])) {
 		$mode = "enable";
-	else if (stristr($_POST['Submit'], gettext("Disable Firmware Update")))
+	} elseif (isset($_POST['DisableFirmwareUpdate'])) {
 		$mode = "disable";
-	else if (stristr($_POST['Submit'], gettext("Upgrade Firmware")) || $_POST['sig_override'])
+	} elseif (isset($_POST['PerformFirmwareUpdate'])) {
 		$mode = "upgrade";
-	else if ($_POST['sig_no'])
+	} elseif ($_POST['sig_no']) {
 		unlink("{$g['ftmp_path']}/firmware.img");
-
+	}
 	if ($mode) {
 		if ($mode === "enable") {
 			$retval = rc_exec_script("/etc/rc.firmware enable");
@@ -397,17 +398,17 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 						<?php if (!file_exists($d_sysrebootreqd_path)):?>
 								<?php if (!file_exists($d_fwupenabled_path)):?>
 									<div id="submit">
-										<input name="Submit" id="Enable" type="submit" class="formbtn" value="<?=gettext("Enable Firmware Update");?>" />
+										<input name="EnableFirmwareUpdate" id="Enable" type="submit" class="formbtn" value="<?=gettext("Enable Firmware Update");?>" />
 									</div>
 								<?php else:?>
 									<div id="submit">
-										<input name="Submit" id="Disable" type="submit" class="formbtn" value="<?=gettext("Disable Firmware Update");?>" />
+										<input name="DisableFirmwareUpdate" id="Disable" type="submit" class="formbtn" value="<?=gettext("Disable Firmware Update");?>" />
 									</div>
 									<div id="submit">
 										<strong><?=gettext("Select firmware:");?> </strong>&nbsp;<input name="ulfile" type="file" class="formfld" size="40" />
 									</div>
 									<div id="submit">
-										<input name="Submit" id="Upgrade" type="submit" class="formbtn" value="<?=gettext("Upgrade Firmware");?>" />
+										<input name="PerformFirmwareUpdate" id="Upgrade" type="submit" class="formbtn" value="<?=gettext("Upgrade Firmware");?>" />
 									</div>
 									<br />
 									<div id="remarks">
