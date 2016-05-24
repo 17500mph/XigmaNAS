@@ -28,6 +28,7 @@ Fixes:
 - Fix firewall rules cannot be moved into the preset rule area.
 - Fix multiple vulnerabilities of ntp.
 - Fix issue with zfs dataset permissions. (Introduced in Beta 2606)
+- Fix disable fw button not working under certain conditions.
 
 Note:
 - iperf2 has been replaced for iperf3 because of inconsistent results for UDP above 2Gbps.
