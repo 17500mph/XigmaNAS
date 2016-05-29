@@ -308,7 +308,7 @@ function controlactionbuttons(ego, triggerbyname) {
 		<thead>
 			<?php html_titleline2(gettext('Overview'), 6);?>
 			<tr>
-				<th class="lhelc"><input type="checkbox" name="togglemembers" title="<?=gettext('Invert Selection');?>"/></th>
+				<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gettext('Invert Selection');?>"/></th>
 				<th class="lhell"><?=gettext('Variable');?></th>
 				<th class="lhell"><?=gettext('Value');?></th>
 				<th class="lhell"><?=gettext('Status');?></th>
