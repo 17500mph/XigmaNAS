@@ -151,8 +151,8 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 		case RECORD_MODIFY:
 			$sphere_record['enable'] = isset($sphere_array[$index]['enable']);
 			$sphere_record['name'] = trim($sphere_array[$index]['name']);
-			$sphere_record['value'] = $sphere_array[$index]['value'];
-			$sphere_record['comment'] = $sphere_array[$index]['comment'];
+			$sphere_record['value'] = $sphere_array[$index]['value'] ?? '';
+			$sphere_record['comment'] = $sphere_array[$index]['comment'] ?? '';
 			break;
 	}
 }
@@ -178,9 +178,15 @@ $pgtitle = [gettext('System'), gettext('Advanced'), gettext('loader.conf'), $isr
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
 	<?php
-		if (!empty($errormsg)) print_error_box($errormsg);
-		if (!empty($input_errors)) print_input_errors($input_errors);
-		if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));
+		if (!empty($errormsg)) {
+			print_error_box($errormsg);
+		}
+		if (!empty($input_errors)) {
+			print_input_errors($input_errors);
+		}
+		if (file_exists($d_sysrebootreqd_path)) {
+			print_info_box(get_std_save_message(0));
+		}
 	?>
 	<table id="area_data_settings">
 		<thead>
