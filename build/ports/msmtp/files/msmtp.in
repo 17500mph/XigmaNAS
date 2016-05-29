@@ -4,10 +4,6 @@
 # Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
 # 
-# Portions of freenas (http://www.freenas.org).
-# Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
-# All rights reserved.
-#
 
 
 # PROVIDE: msmtp
@@ -27,6 +23,7 @@ msmtprc=${msmtprc:-"/usr/local/etc/msmtprc"}
 # Create msmtp.conf configuration
 /usr/local/bin/xml sel -t \
 	-o "account default" -n \
+	-v "concat('domain ',//system/domain)" -n \
 	-v "concat('host ',//system/email/server)" -n \
 	-v "concat('port ',//system/email/port)" -n \
 	-o "protocol smtp" -n \
