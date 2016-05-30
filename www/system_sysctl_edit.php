@@ -54,9 +54,6 @@ if (PAGE_MODE_POST == $mode_page) { // POST is Cancel or not Submit => cleanup
 	}
 }
 
-$pconfig = [];
-$prerequisites_ok = true;
-
 if ((PAGE_MODE_POST == $mode_page) && isset($_POST['uuid']) && is_uuid_v4($_POST['uuid'])) {
 	$sphere_record['uuid'] = $_POST['uuid'];
 } else {
