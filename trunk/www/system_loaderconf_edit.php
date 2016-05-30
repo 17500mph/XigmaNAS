@@ -150,7 +150,7 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 		case RECORD_NEW_MODIFY:
 		case RECORD_MODIFY:
 			$sphere_record['enable'] = isset($sphere_array[$index]['enable']);
-			$sphere_record['name'] = trim($sphere_array[$index]['name']);
+			$sphere_record['name'] = isset($sphere_array[$index]['name']) ? trim($sphere_array[$index]['name']) : '';
 			$sphere_record['value'] = $sphere_array[$index]['value'] ?? '';
 			$sphere_record['comment'] = $sphere_array[$index]['comment'] ?? '';
 			break;
@@ -160,21 +160,17 @@ $pgtitle = [gettext('System'), gettext('Advanced'), gettext('loader.conf'), $isr
 ?>
 <?php include("fbegin.inc");?>
 <table id="area_navigator"><tbody>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabinact"><a href="system_advanced.php"><span><?=gettext('Advanced');?></span></a></li>
-				<li class="tabinact"><a href="system_email.php"><span><?=gettext('Email');?></span></a></li>
-				<li class="tabinact"><a href="system_proxy.php"><span><?=gettext('Proxy');?></span></a></li>
-				<li class="tabinact"><a href="system_swap.php"><span><?=gettext('Swap');?></span></a></li>
-				<li class="tabinact"><a href="system_rc.php"><span><?=gettext('Command Scripts');?></span></a></li>
-				<li class="tabinact"><a href="system_cron.php"><span><?=gettext('Cron');?></span></a></li>
-				<li class="tabact"><a href="system_loaderconf.php" title="<?=gettext('Reload page');?>"><span><?=gettext('loader.conf');?></span></a></li>
-				<li class="tabinact"><a href="system_rcconf.php"><span><?=gettext('rc.conf');?></span></a></li>
-				<li class="tabinact"><a href="system_sysctl.php"><span><?=gettext('sysctl.conf');?></span></a></li>
-			</ul>
-		</td>
-	</tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabinact"><a href="system_advanced.php"><span><?=gettext('Advanced');?></span></a></li>
+		<li class="tabinact"><a href="system_email.php"><span><?=gettext('Email');?></span></a></li>
+		<li class="tabinact"><a href="system_proxy.php"><span><?=gettext('Proxy');?></span></a></li>
+		<li class="tabinact"><a href="system_swap.php"><span><?=gettext('Swap');?></span></a></li>
+		<li class="tabinact"><a href="system_rc.php"><span><?=gettext('Command Scripts');?></span></a></li>
+		<li class="tabinact"><a href="system_cron.php"><span><?=gettext('Cron');?></span></a></li>
+		<li class="tabact"><a href="system_loaderconf.php" title="<?=gettext('Reload page');?>"><span><?=gettext('loader.conf');?></span></a></li>
+		<li class="tabinact"><a href="system_rcconf.php"><span><?=gettext('rc.conf');?></span></a></li>
+		<li class="tabinact"><a href="system_sysctl.php"><span><?=gettext('sysctl.conf');?></span></a></li>
+	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
 	<?php

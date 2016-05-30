@@ -50,6 +50,14 @@ $gt_record_del = gettext('Option is marked for deletion');
 $gt_record_loc = gettext('Option is locked');
 $gt_record_mup = gettext('Move up');
 $gt_record_mdn = gettext('Move down');
+$gt_selection_toggle = gettext('Toggle Selected Options');
+$gt_selection_toggle_confirm = gettext('Do you want to toggle selected options?');
+$gt_selection_enable = gettext('Enable Selected Options');
+$gt_selection_enable_confirm = gettext('Do you want to enable selected options?');
+$gt_selection_disable = gettext('Disable Selected Options');
+$gt_selection_disable_confirm = gettext('Do you want to disable selected options?');
+$gt_selection_delete = gettext('Delete Selected Options');
+$gt_selection_delete_confirm = gettext('Do you want to delete selected options?');
 $img_path = [
 	'add' => 'images/add.png',
 	'mod' => 'images/edit.png',
@@ -57,7 +65,9 @@ $img_path = [
 	'loc' => 'images/locked.png',
 	'unl' => 'images/unlocked.png',
 	'mai' => 'images/maintain.png',
-	'inf' => 'images/info.png'
+	'inf' => 'images/info.png',
+	'ena' => 'images/status_enabled.png',
+	'dis' => 'images/status_disabled.png'
 ];
 
 // sunrise: verify if setting exists, otherwise run init tasks
@@ -214,6 +224,22 @@ $pgtitle = array(gettext('System'), gettext('Advanced'), gettext('loader.conf'))
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
+	// Init action buttons
+	<?php if ($enabletogglemode):?>
+		$("#toggle_selected_rows").click(function () {
+			return confirm('<?=$gt_selection_toggle_confirm;?>');
+		});
+	<?php else:?>
+		$("#enable_selected_rows").click(function () {
+			return confirm('<?=$gt_selection_enable_confirm;?>');
+		});
+		$("#disable_selected_rows").click(function () {
+			return confirm('<?=$gt_selection_disable_confirm;?>');
+		});
+	<?php endif;?>
+	$("#delete_selected_rows").click(function () {
+		return confirm('<?=$gt_selection_delete_confirm;?>');
+	});
 	// Disable action buttons.
 	disableactionbuttons(true);
 	// Init toggle checkbox
@@ -227,10 +253,13 @@ $(window).on("load", function() {
 }); 
 function disableactionbuttons(ab_disable) {
 	var ab_element;
-	ab_element = document.getElementById('toggle_selected_rows'); if ((ab_element != null) && (ab_element.disabled != ab_disable)) { ab_element.disabled = ab_disable; }
-	ab_element = document.getElementById('enable_selected_rows'); if ((ab_element != null) && (ab_element.disabled != ab_disable)) { ab_element.disabled = ab_disable; }
-	ab_element = document.getElementById('disable_selected_rows'); if ((ab_element != null) && (ab_element.disabled != ab_disable)) { ab_element.disabled = ab_disable; }
-	ab_element = document.getElementById('delete_selected_rows'); if ((ab_element != null) && (ab_element.disabled != ab_disable)) { ab_element.disabled = ab_disable; }
+	<?php if ($enabletogglemode):?>
+		ab_element = document.getElementById('toggle_selected_rows'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable)) { ab_element.disabled = ab_disable; }
+	<?php else:?>
+		ab_element = document.getElementById('enable_selected_rows'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable)) { ab_element.disabled = ab_disable; }
+		ab_element = document.getElementById('disable_selected_rows'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable)) { ab_element.disabled = ab_disable; }
+	<?php endif;?>
+	ab_element = document.getElementById('delete_selected_rows'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable)) { ab_element.disabled = ab_disable; }
 }
 function togglecheckboxesbyname(ego, triggerbyname) {
 	var a_trigger = document.getElementsByName(triggerbyname);
@@ -238,7 +267,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 	var ab_disable = true;
 	var i = 0;
 	for (; i < n_trigger; i++) {
-		if (a_trigger[i].type == 'checkbox') {
+		if (a_trigger[i].type === 'checkbox') {
 			if (!a_trigger[i].disabled) {
 				a_trigger[i].checked = !a_trigger[i].checked;
 				if (a_trigger[i].checked) {
@@ -247,7 +276,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 			}
 		}
 	}
-	if (ego.type == 'checkbox') { ego.checked = false; }
+	if (ego.type === 'checkbox') { ego.checked = false; }
 	disableactionbuttons(ab_disable);
 }
 function controlactionbuttons(ego, triggerbyname) {
@@ -256,7 +285,7 @@ function controlactionbuttons(ego, triggerbyname) {
 	var ab_disable = true;
 	var i = 0;
 	for (; i < n_trigger; i++) {
-		if (a_trigger[i].type == 'checkbox') {
+		if (a_trigger[i].type === 'checkbox') {
 			if (a_trigger[i].checked) {
 				ab_disable = false;
 				break;
@@ -268,20 +297,16 @@ function controlactionbuttons(ego, triggerbyname) {
 //]]>
 </script>
 <table id="area_navigator"><tbody>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabinact"><a href="system_advanced.php"><span><?=gettext('Advanced');?></span></a></li>
-				<li class="tabinact"><a href="system_email.php"><span><?=gettext('Email');?></span></a></li>
-				<li class="tabinact"><a href="system_swap.php"><span><?=gettext('Swap');?></span></a></li>
-				<li class="tabinact"><a href="system_rc.php"><span><?=gettext('Command Scripts');?></span></a></li>
-				<li class="tabinact"><a href="system_cron.php"><span><?=gettext('Cron');?></span></a></li>
-				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gettext('Reload page');?>"><span><?=gettext('loader.conf');?></span></a></li>
-				<li class="tabinact"><a href="system_rcconf.php"><span><?=gettext('rc.conf');?></span></a></li>
-				<li class="tabinact"><a href="system_sysctl.php"><span><?=gettext('sysctl.conf');?></span></a></li>
-			</ul>
-		</td>
-	</tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabinact"><a href="system_advanced.php"><span><?=gettext('Advanced');?></span></a></li>
+		<li class="tabinact"><a href="system_email.php"><span><?=gettext('Email');?></span></a></li>
+		<li class="tabinact"><a href="system_swap.php"><span><?=gettext('Swap');?></span></a></li>
+		<li class="tabinact"><a href="system_rc.php"><span><?=gettext('Command Scripts');?></span></a></li>
+		<li class="tabinact"><a href="system_cron.php"><span><?=gettext('Cron');?></span></a></li>
+		<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gettext('Reload page');?>"><span><?=gettext('loader.conf');?></span></a></li>
+		<li class="tabinact"><a href="system_rcconf.php"><span><?=gettext('rc.conf');?></span></a></li>
+		<li class="tabinact"><a href="system_sysctl.php"><span><?=gettext('sysctl.conf');?></span></a></li>
+	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iframe" name="iframe">
 	<?php
@@ -318,8 +343,8 @@ function controlactionbuttons(ego, triggerbyname) {
 		</thead>
 		<tfoot>
 			<tr>
-				<th class="lcenl" colspan="5"></th>
-				<th class="lceadd"><a href="<?=$sphere_scriptname_child;?>"><img src="images/add.png" title="<?=$gt_record_add;?>" border="0" alt="<?=$gt_record_add;?>" /></a></th>
+				<td class="lcenl" colspan="5"></td>
+				<td class="lceadd"><a href="<?=$sphere_scriptname_child;?>"><img src="<?=$img_path['add'];?>" title="<?=$gt_record_add;?>" border="0" alt="<?=$gt_record_add;?>"/></a></td>
 			</tr>
 		</tfoot>
 		<tbody>
@@ -342,9 +367,9 @@ function controlactionbuttons(ego, triggerbyname) {
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['value']);?>&nbsp;</td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>">
 						<?php if ($enabled):?>
-							<a title="<?=gettext('Enabled');?>"><center><img src="images/status_enabled.png" border="0" alt=""/></center></a>
+							<a title="<?=gettext('Enabled');?>"><center><img src="<?=$img_path['ena'];?>" border="0" alt=""/></center></a>
 						<?php else:?>
-							<a title="<?=gettext('Disabled');?>"><center><img src="images/status_disabled.png" border="0" alt=""/></center></a>
+							<a title="<?=gettext('Disabled');?>"><center><img src="<?=$img_path['dis'];?>" border="0" alt=""/></center></a>
 						<?php endif;?>
 					</td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['comment']);?>&nbsp;</td>
@@ -370,16 +395,16 @@ function controlactionbuttons(ego, triggerbyname) {
 		</tbody>
 	</table>
 	<div id="submit">
-		<?php if($enabletogglemode):?>
-			<input name="toggle_selected_rows" type="submit" id="toggle_selected_rows" class="formbtn" value="<?=gettext('Toggle Selected Options');?>" onclick="return confirm('<?=gettext('Do you want to toggle selected options?');?>')"/>
+		<?php if ($enabletogglemode):?>
+			<input type="submit" class="formbtn" name="toggle_selected_rows" id="toggle_selected_rows" value="<?=$gt_selection_toggle;?>"/>
 		<?php else:?>
-			<input name="enable_selected_rows" type="submit" id="enable_selected_rows" class="formbtn" value="<?=gettext('Enable Selected Options');?>" onclick="return confirm('<?=gettext('Do you want to enable selected options?');?>')"/>
-			<input name="disable_selected_rows" type="submit" id="disable_selected_rows" class="formbtn" value="<?=gettext('Disable Selected Options');?>" onclick="return confirm('<?=gettext('Do you want to disable selected options?');?>')"/>
+			<input type="submit" class="formbtn" name="enable_selected_rows" id="enable_selected_rows" value="<?=$gt_selection_enable;?>"/>
+			<input type="submit" class="formbtn" name="disable_selected_rows" id="disable_selected_rows" value="<?=$gt_selection_disable;?>"/>
 		<?php endif;?>
-		<input name="delete_selected_rows" type="submit" id="delete_selected_rows" class="formbtn" value="<?=gettext('Delete Selected Options');?>" onclick="return confirm('<?=gettext('Do you want to delete selected options?');?>')"/>
+		<input type="submit" class="formbtn" name="delete_selected_rows" id="delete_selected_rows" value="<?=$gt_selection_delete;?>"/>
 	</div>
 	<div id="remarks">
-		<?php html_remark("note", gettext('Note'), gettext('These option(s) will be added to /boot/loader.conf.local. This allows you to specify parameters to be passed to kernel, and additional modules to be loaded.'));?>
+		<?php html_remark2('note', gettext('Note'), gettext('These option(s) will be added to /boot/loader.conf.local. This allows you to specify parameters to be passed to kernel, and additional modules to be loaded.'));?>
 	</div>
 	<?php include("formend.inc");?>
 </form></td></tr></tbody></table>

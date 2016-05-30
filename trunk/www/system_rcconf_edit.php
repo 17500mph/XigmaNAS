@@ -34,39 +34,53 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$mode_page = ($_POST) ? PAGE_MODE_POST : (($_GET) ? PAGE_MODE_EDIT : PAGE_MODE_ADD); // detect page mode
+$sphere_scriptname = basename(__FILE__);
+$sphere_header = 'Location: '.$sphere_scriptname;
+$sphere_header_parent = 'Location: system_rcconf.php';
+$sphere_notifier = 'rcconf';
+$sphere_array = [];
+$sphere_record = [];
+$prerequisites_ok = true;
 
+$mode_page = ($_POST) ? PAGE_MODE_POST : (($_GET) ? PAGE_MODE_EDIT : PAGE_MODE_ADD); // detect page mode
 if (PAGE_MODE_POST == $mode_page) { // POST is Cancel or not Submit => cleanup
-	if ((isset($_POST['Cancel']) && $_POST['Cancel']) || !(isset($_POST['Submit']) && $_POST['Submit'])) {
-		header("Location: system_rcconf.php");
+	if (isset($_POST['Cancel']) && $_POST['Cancel']) {
+		header($sphere_header_parent);
+		exit;
+	}
+	if (!(isset($_POST['Submit']) && $_POST['Submit'])) {
+		header($sphere_header_parent);
 		exit;
 	}
 }
 
-$pconfig = [];
-$prerequisites_ok = true;
-
 if ((PAGE_MODE_POST == $mode_page) && isset($_POST['uuid']) && is_uuid_v4($_POST['uuid'])) {
-	$pconfig['uuid'] = $_POST['uuid'];
+	$sphere_record['uuid'] = $_POST['uuid'];
 } else {
 	if ((PAGE_MODE_EDIT == $mode_page) && isset($_GET['uuid']) && is_uuid_v4($_GET['uuid'])) {
-		$pconfig['uuid'] = $_GET['uuid'];
+		$sphere_record['uuid'] = $_GET['uuid'];
 	} else {
 		$mode_page = PAGE_MODE_ADD; // Force ADD
-		$pconfig['uuid'] = uuid();
+		$sphere_record['uuid'] = uuid();
 	}
 }
 
+if (!(isset($config['system']) && is_array($config['system']))) {
+	$config['system'] = [];
+}
+if (!(isset($config['system']['rcconf']) && is_array($config['system']['rcconf']))) {
+	$config['system']['rcconf'] = [];
+}
 if (!(isset($config['system']['rcconf']['param']) && is_array($config['system']['rcconf']['param']))) {
 	$config['system']['rcconf']['param'] = [];
 }
 array_sort_key($config['system']['rcconf']['param'], "name");
-$a_rcconf = &$config['system']['rcconf']['param'];
+$sphere_array = &$config['system']['rcconf']['param'];
 
-$cnid = array_search_ex($pconfig['uuid'], $a_rcconf, "uuid");
-$mode_updatenotify = updatenotify_get_mode("rcconf", $pconfig['uuid']); // get updatenotify mode for uuid
+$index = array_search_ex($sphere_record['uuid'], $sphere_array, "uuid");
+$mode_updatenotify = updatenotify_get_mode("rcconf", $sphere_record['uuid']); // get updatenotify mode for uuid
 $mode_record = RECORD_ERROR;
-if (false !== $cnid) { // uuid found
+if (false !== $index) { // uuid found
 	if ((PAGE_MODE_POST == $mode_page || (PAGE_MODE_EDIT == $mode_page))) { // POST or EDIT
 		switch ($mode_updatenotify) {
 			case UPDATENOTIFY_MODE_NEW:
@@ -88,95 +102,105 @@ if (false !== $cnid) { // uuid found
 	}
 }
 if (RECORD_ERROR == $mode_record) { // oops, someone tries to cheat, over and out
-	header("Location: system_rcconf.php");
+	header($sphere_header_parent);
 	exit;
 }
+$isrecordnew = (RECORD_NEW === $mode_record);
+$isrecordnewmodify = (RECORD_NEW_MODIFY === $mode_record);
+$isrecordmodify = (RECORD_MODIFY === $mode_record);
+$isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
 
 if (PAGE_MODE_POST == $mode_page) {  // We know POST is "Submit", already checked
 	unset($input_errors);
-	$pconfig['enable'] = isset($_POST['enable']) ? true : false;
-	$pconfig['name'] = trim($_POST['name']);
-	$pconfig['value'] = $_POST['value'];
-	$pconfig['comment'] = $_POST['comment'];
+	$sphere_record['enable'] = isset($_POST['enable']);
+	$sphere_record['name'] = isset($_POST['name']) ? trim($_POST['name']) : '';
+	$sphere_record['value'] = $_POST['value'] ?? '';
+	$sphere_record['comment'] = $_POST['comment'] ?? '';
 
 	// Input validation.
-	$reqdfields = explode(" ", "name value");
-	$reqdfieldsn = array(gettext("Name"), gettext("Value"));
-	$reqdfieldst = explode(" ", "string string");
+	$reqdfields = ['name', 'value'];
+	$reqdfieldsn = [gettext('Name'), gettext('Value')];
+	$reqdfieldst = ['string', 'string'];
 
-	do_input_validation($pconfig, $reqdfields, $reqdfieldsn, $input_errors);
-	do_input_validation_type($pconfig, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
+	do_input_validation($sphere_record, $reqdfields, $reqdfieldsn, $input_errors);
+	do_input_validation_type($sphere_record, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
 	if ($prerequisites_ok && empty($input_errors)) {
-		if (RECORD_NEW == $mode_record) {
-			$a_rcconf[] = $pconfig;
-			updatenotify_set("rcconf", UPDATENOTIFY_MODE_NEW, $pconfig['uuid']);
+		if ($isrecordnew) {
+			$sphere_array[] = $sphere_record;
+			updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_NEW, $sphere_record['uuid']);
 		} else {
-			$a_rcconf[$cnid] = $pconfig;
+			$sphere_array[$index] = $sphere_record;
 			if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
-				updatenotify_set("rcconf", UPDATENOTIFY_MODE_MODIFIED, $pconfig['uuid']);
+				updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_record['uuid']);
 			}
 		}
 		write_config();
-		header("Location: system_rcconf.php");
+		header($sphere_header_parent);
 		exit;
 	}
 } else { // EDIT / ADD
 	switch ($mode_record) {
 		case RECORD_NEW:
-			$pconfig['enable'] = true;
-			$pconfig['name'] = "";
-			$pconfig['value'] = "";
-			$pconfig['comment'] = "";
+			$sphere_record['enable'] = true;
+			$sphere_record['name'] = '';
+			$sphere_record['value'] = '';
+			$sphere_record['comment'] = '';
 			break;
 		case RECORD_NEW_MODIFY:
 		case RECORD_MODIFY:
-			$pconfig['enable'] = isset($a_rcconf[$cnid]['enable']);
-			$pconfig['name'] = trim($a_rcconf[$cnid]['name']);
-			$pconfig['value'] = $a_rcconf[$cnid]['value'];
-			$pconfig['comment'] = $a_rcconf[$cnid]['comment'];
+			$sphere_record['enable'] = isset($sphere_array[$index]['enable']);
+			$sphere_record['name'] = isset($sphere_array[$index]['name']) ? trim($sphere_array[$index]['name']) : '';
+			$sphere_record['value'] = $sphere_array[$index]['value'] ?? '';
+			$sphere_record['comment'] = $sphere_array[$index]['comment'] ?? '';
 			break;
 	}
 }
-$pgtitle = array(gettext("System"), gettext("Advanced"), gettext("rc.conf"), (RECORD_NEW !== $mode_record) ? gettext("Edit") : gettext("Add"));
+$pgtitle = array(gettext('System'), gettext('Advanced'), gettext('rc.conf'), $isrecordnew ? gettext('Add') : gettext('Edit'));
 ?>
 <?php include("fbegin.inc");?>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabinact"><a href="system_advanced.php"><span><?=gettext("Advanced");?></span></a></li>
-				<li class="tabinact"><a href="system_email.php"><span><?=gettext("Email");?></span></a></li>
-				<li class="tabinact"><a href="system_proxy.php"><span><?=gettext("Proxy");?></span></a></li>
-				<li class="tabinact"><a href="system_swap.php"><span><?=gettext("Swap");?></span></a></li>
-				<li class="tabinact"><a href="system_rc.php"><span><?=gettext("Command Scripts");?></span></a></li>
-				<li class="tabinact"><a href="system_cron.php"><span><?=gettext("Cron");?></span></a></li>
-				<li class="tabinact"><a href="system_loaderconf.php"><span><?=gettext("loader.conf");?></span></a></li>
-				<li class="tabact"><a href="system_rcconf.php" title="<?=gettext("Reload page");?>"><span><?=gettext("rc.conf");?></span></a></li>
-				<li class="tabinact"><a href="system_sysctl.php"><span><?=gettext("sysctl.conf");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td class="tabcont">
-			<form action="system_rcconf_edit.php" method="post" name="iform" id="iform">
-				<?php if (!empty($errormsg)) print_error_box($errormsg);?>
-				<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
-				<?php if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));?>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline_checkbox("enable", "", $pconfig['enable'] ? true : false, gettext("Enable"));?>
-					<?php html_inputbox("name", gettext("Name"), $pconfig['name'], gettext("Name of the variable."), true, 40);?>
-					<?php html_inputbox("value", gettext("Value"), $pconfig['value'], gettext("The value of the variable."), true);?>
-					<?php html_inputbox("comment", gettext("Comment"), $pconfig['comment'], gettext("You may enter a description here for your reference."), false, 40);?>
-				</table>
-				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=(RECORD_NEW != $mode_record) ? gettext("Save") : gettext("Add")?>" />
-					<input name="Cancel" type="submit" class="formbtn" value="<?=gettext("Cancel");?>" />
-					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
-				</div>
-				<?php include("formend.inc");?>
-			</form>
-		</td>
-	</tr>
-</table>
+<table id="area_navigator"><tbody>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabinact"><a href="system_advanced.php"><span><?=gettext("Advanced");?></span></a></li>
+		<li class="tabinact"><a href="system_email.php"><span><?=gettext("Email");?></span></a></li>
+		<li class="tabinact"><a href="system_proxy.php"><span><?=gettext("Proxy");?></span></a></li>
+		<li class="tabinact"><a href="system_swap.php"><span><?=gettext("Swap");?></span></a></li>
+		<li class="tabinact"><a href="system_rc.php"><span><?=gettext("Command Scripts");?></span></a></li>
+		<li class="tabinact"><a href="system_cron.php"><span><?=gettext("Cron");?></span></a></li>
+		<li class="tabinact"><a href="system_loaderconf.php"><span><?=gettext("loader.conf");?></span></a></li>
+		<li class="tabact"><a href="system_rcconf.php" title="<?=gettext("Reload page");?>"><span><?=gettext("rc.conf");?></span></a></li>
+		<li class="tabinact"><a href="system_sysctl.php"><span><?=gettext("sysctl.conf");?></span></a></li>
+	</ul></td></tr>
+</tbody></table>
+<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
+	<?php
+		if (!empty($errormsg)) {
+			print_error_box($errormsg);
+		}
+		if (!empty($input_errors)) {
+			print_input_errors($input_errors);
+		}
+		if (file_exists($d_sysrebootreqd_path)) {
+			print_info_box(get_std_save_message(0));
+		}
+	?>
+	<table id="area_data_settings">
+		<thead>
+			<?php html_titleline_checkbox2('enable', gettext('Configuration'), $sphere_record['enable'], gettext('Enable'));?>
+		</thead>
+		<tbody>
+			<?php
+				html_inputbox2('name', gettext('Name'), $sphere_record['name'], gettext('Name of the variable.'), true, 40);
+				html_inputbox2('value', gettext('Value'), $sphere_record['value'], gettext('The value of the variable.'), true);
+				html_inputbox2('comment', gettext('Comment'), $sphere_record['comment'], gettext('You may enter a description here for your reference.'), false, 40);
+			?>
+		</tbody>
+	</table>
+	<div id="submit">
+		<input name="Submit" type="submit" class="formbtn" value="<?=$isrecordnew ? gettext('Add') : gettext('Save')?>"/>
+		<input name="Cancel" type="submit" class="formbtn" value="<?=gettext('Cancel');?>"/>
+		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>"/>
+	</div>
+	<?php require("formend.inc");?>
+</form></td></tr></tbody></table>
 <?php include("fend.inc");?>
