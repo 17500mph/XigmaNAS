@@ -141,7 +141,7 @@ foreach($rawdata as $line) {
 		}
 		list($pool, $name) = explode('/', $fname, 2);
 		$zfs['volumes']['volume'][$fname] = [
-			'idenntifier' => $fname,
+			'identifier' => $fname,
 			'uuid' => uuid(),
 			'name' => $name,
 			'pool' => $pool,
@@ -310,8 +310,7 @@ if (isset($_POST['import_config'])) {
 		unset($tmp['volblocksize']); // not yet supported.
 		unset($tmp['identifier']); // no longer required
 		$cfg['zfs']['volumes']['volume'][] = $tmp;
-		if (!in_array($zfs['volumes']['volume'][$vol]['pool'], $_POST['pool']))
-		{
+		if (!in_array($zfs['volumes']['volume'][$vol]['pool'], $_POST['pool'])) {
 			$_POST['pool'][] = $zfs['volumes']['volume'][$vol]['pool'];
 		}
 	}
@@ -320,18 +319,15 @@ if (isset($_POST['import_config'])) {
 		$tmp = $zfs['datasets']['dataset'][$dset];
 		unset($tmp['identifier']); // no longer required
 		$cfg['zfs']['datasets']['dataset'][] = $tmp;
-		if (!in_array($zfs['datasets']['dataset'][$dset]['pool'], $_POST['pool']))
-		{
+		if (!in_array($zfs['datasets']['dataset'][$dset]['pool'], $_POST['pool'])) {
 			$_POST['pool'][] = $zfs['datasets']['dataset'][$dset]['pool'];
 		}
 	}
 	foreach ($_POST['pool'] as $pool) {
 		$import |= true;
 		$hastpool = false;
-		foreach ($zfs['pools']['pool'][$pool]['vdevice'] as $vdev)
-		{
-			if (!in_array($vdev, $_POST['vdev']))
-			{
+		foreach ($zfs['pools']['pool'][$pool]['vdevice'] as $vdev) {
+			if (!in_array($vdev, $_POST['vdev'])) {
 				$_POST['vdev'][] = $vdev;
 			}
 			foreach ($zfs['vdevices']['vdevice'][$vdev]['device'] as $device) {
