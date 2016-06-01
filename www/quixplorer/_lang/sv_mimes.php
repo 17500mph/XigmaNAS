@@ -42,7 +42,7 @@ $GLOBALS["mimes"]=array(
 	"dir"		=> "Katalog",
 	"exe"		=> "Körbar Fil",
 	"file"		=> "Fil",
-	"link"		=> "Länk",
+	"link"		=> "Link",
 
 	// text
 	"text"		=> "Textfil",
