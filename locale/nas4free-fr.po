@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-05-02 01:39+0000\n"
-"PO-Revision-Date: 2016-05-18 21:12+0000\n"
+"PO-Revision-Date: 2016-06-01 08:24+0000\n"
 "Last-Translator: Travel_ED <richard.edouard84@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-23 11:08+0000\n"
-"X-Generator: Launchpad (build 18025)\n"
+"X-Launchpad-Export-Date: 2016-06-01 14:41+0000\n"
+"X-Generator: Launchpad (build 18081)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
 "X-Poedit-Language: French\n"
@@ -2029,13 +2029,13 @@ msgid "Delete Selected Options"
 msgstr "Supprimer les options sélectionnées"
 
 msgid "Delete Selected Pools"
-msgstr "Efface le(s) pool(s) sélectionné(s)"
+msgstr "Effacer le(s) pool(s) sélectionné(s)"
 
 msgid "Delete Selected RAID Volumes"
-msgstr "Efface le(s) volume(s) RAID sélectionné(s)"
+msgstr "Effacer le(s) volume(s) RAID sélectionné(s)"
 
 msgid "Delete Selected Virtual Devices"
-msgstr "Efface le(s) périphérique(s) virtuel(s)sélectionné(s)"
+msgstr "Effacer le(s) périphérique(s) virtuel(s)sélectionné(s)"
 
 msgid "Delete Selected Volumes"
 msgstr "Supprimer les volumes sélectionnés"
@@ -2551,7 +2551,7 @@ msgstr ""
 "Voulez-vous supprimer le(s) périphérique(s) Virtuel(s) sélectionné(s)"
 
 msgid "Do you want to delete selected volumes?"
-msgstr "Voulez-vous effacer les volumess sélectionnés"
+msgstr "Voulez-vous effacer les volumes sélectionnés"
 
 msgid "Do you want to disable selected jobs?"
 msgstr "Voulez-vous désactiver les tâches sélectionnées"
@@ -4362,22 +4362,23 @@ msgid "Leave this field empty to use default settings."
 msgstr "Laissez ce champ vide pour utiliser les paramètres par défaut."
 
 msgid "Level 1 - Minimum Power Usage with Standby (Spindown)"
-msgstr ""
+msgstr "Niveau 1 - Puissance minimum avec Stand-by (arrêt rotation)"
 
 msgid "Level 127 - Intermediate Power Usage with Standby"
-msgstr ""
+msgstr "Niveau 127 - Puissance intermédiaire avec Stand-by (arrêt rotation)"
 
 msgid "Level 128 - Minimum Power Usage without Standby (No Spindown)"
-msgstr ""
+msgstr "Niveau 128 - Puissance minimum sans Stand-by (pas d'arrêt rotation)"
 
 msgid "Level 192 - Intermediate Power Usage without Standby"
 msgstr ""
+"Niveau 192 - Puissance intermédiaire sans Stand-by (pas d'arrêt rotation)"
 
 msgid "Level 254 - Maximum Performance, Maximum Power Usage"
-msgstr ""
+msgstr "Niveau 254 - Performance maximum , consommation puissance maximum"
 
 msgid "Level 64 - Intermediate Power Usage with Standby"
-msgstr ""
+msgstr "Niveau 64 - Puissance intermédiaire avec Stand-by (arrêt rotation)"
 
 #, php-format
 msgid "Levels (MHz/mW): %s"
@@ -4650,6 +4651,11 @@ msgid ""
 "vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
 "Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
 msgstr ""
+"Vérifiez bien que vous avez sélectionné le bon nombre de périphériques<div "
+"id='enumeration'><ul><li>RAID-Z1 doit comporter 3, 5, or 9 disques dans "
+"chaque vdev</li><li>RAID-Z2 doit comporter 4, 6, or 10 disques dans chaque "
+"vdev</li><li>RAID-Z3 doit comporter 5, 7, or 11 disques dans chaque "
+"vdev</li></ul></div>"
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Assurez-vous que vous avez activé S.M.A.R.T. pour vos périphériques."
@@ -5146,6 +5152,8 @@ msgid ""
 "No configured virtual devices. Please add new <a href=\"%s\">virtual "
 "device</a> first."
 msgstr ""
+"Pas de périphérique virtuel configuré. S'il vous plait ajoutez un nouveau<a "
+"href=\"%s\">périphérique virtuel</a> en premier."
 
 msgid "No device selected."
 msgstr "Aucun périphérique sélectionné."
@@ -5179,7 +5187,7 @@ msgid "No pool was found."
 msgstr "Aucun pool trouvé."
 
 msgid "No softraid-formatted disks available."
-msgstr ""
+msgstr "Pas de disque formaté pour du Raid Logiciel disponible"
 
 msgid "Noallow - Only inherit deny entries"
 msgstr ""
@@ -5262,6 +5270,8 @@ msgstr "Note"
 #, php-format
 msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
 msgstr ""
+"Note: Ctrl-click (commande-click sur le Mac) pour sélectionner de multiples "
+"disques."
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -5886,7 +5896,7 @@ msgid "RAID 0/1/5 Information & Status"
 msgstr "RAID 0/1/5 Information & Status"
 
 msgid "RAID 0/1/5 Maintenance"
-msgstr ""
+msgstr "Maintenance RAID 0/1/5"
 
 msgid "RAID 1 Information & Status"
 msgstr "RAID 1 Information & Status"
@@ -5922,19 +5932,19 @@ msgid "RAID-0"
 msgstr "RAID-0"
 
 msgid "RAID-0 Maintenance"
-msgstr ""
+msgstr "Maintenance RAID-0"
 
 msgid "RAID-1"
 msgstr "RAID-1"
 
 msgid "RAID-1 Maintenance"
-msgstr ""
+msgstr "Maintenance RAID-1"
 
 msgid "RAID-5"
 msgstr "RAID-5"
 
 msgid "RAID-5 Maintenance"
-msgstr ""
+msgstr "Maintenance RAID-5"
 
 msgid "RAID-Z1"
 msgstr "RAID-Z1"
@@ -6323,7 +6333,7 @@ msgid "SSID"
 msgstr "SSID"
 
 msgid "STRIPE"
-msgstr ""
+msgstr "STRIPE (Bande)"
 
 msgid "Samba AD"
 msgstr "Samba Active Directory"
@@ -6664,6 +6674,7 @@ msgstr "Afficher les information de l'UPS"
 
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr ""
+"Voir les entrées du journal en sens inverse (les plus récentes en haut)."
 
 msgid "Shutdown"
 msgstr "Arrêt"
@@ -6735,13 +6746,13 @@ msgid "Software RAID"
 msgstr "RAID logiciel"
 
 msgid "Software Used"
-msgstr ""
+msgstr "Logiciel utilisé"
 
 msgid "Source"
 msgstr "Source"
 
 msgid "Source Share"
-msgstr ""
+msgstr "Partage source"
 
 msgid "Source directory to be synchronized."
 msgstr "Répertoire source à synchroniser"
@@ -6798,6 +6809,7 @@ msgstr "Indique le nombre de serveurs à créer."
 
 msgid "Specifies how the volume should be exposed to the OS."
 msgstr ""
+"Spécifier comment le volume doit ce présenter au système d'exploitation."
 
 msgid "Specifies that the file system should be exported read-only."
 msgstr ""
@@ -7003,7 +7015,7 @@ msgid "Syncthing"
 msgstr "Syncthing"
 
 msgid "Syslog Level"
-msgstr ""
+msgstr "Niveau Syslog"
 
 #, php-format
 msgid ""
@@ -8486,7 +8498,7 @@ msgstr ""
 "Cette règle est déclenchée à chaque occurrence de l'événement sélectionné."
 
 msgid "This server uses default swap!"
-msgstr ""
+msgstr "Ce serveur utilise la swap par défaut !"
 
 msgid "This tag already exists."
 msgstr "Le tag existe déjà."
@@ -8764,7 +8776,7 @@ msgid "Traceroute"
 msgstr "Traceroute"
 
 msgid "Traceroute Test"
-msgstr ""
+msgstr "Test Traceroute"
 
 msgid ""
 "Traceroute may take a while to complete. You may hit the Stop button on your "
@@ -8847,7 +8859,7 @@ msgid "UFS"
 msgstr "UFS"
 
 msgid "UFS (GPT and Soft Updates)"
-msgstr ""
+msgstr "UFS (GPT et Soft Updates)"
 
 #, php-format
 msgid ""
@@ -8882,7 +8894,7 @@ msgstr ""
 "des corruptions de fichiers, et des pertes de données!"
 
 msgid "UFS with Soft Updates"
-msgstr ""
+msgstr "UFS avec  Soft Updates"
 
 msgid "UID"
 msgstr "UID"
@@ -9174,7 +9186,7 @@ msgid "Using %s bytes fragment size."
 msgstr "Utiliser %s  la taille du fragment octets."
 
 msgid "VCPUs"
-msgstr ""
+msgstr "VCPUs"
 
 msgid "VHID"
 msgstr "Identifiant de l'Hôte Virtuel (Virtual Host ID)"
@@ -9192,10 +9204,10 @@ msgid "VM"
 msgstr "VM"
 
 msgid "VM Type"
-msgstr ""
+msgstr "Type de machine virtuel"
 
 msgid "VNC Display"
-msgstr ""
+msgstr "Affichage VNC"
 
 msgid "VNC Password"
 msgstr "Mot de passe VNC"
@@ -9217,7 +9229,7 @@ msgid "Vendor ID"
 msgstr "ID du fournisseur"
 
 msgid "Verify"
-msgstr ""
+msgstr "Vérifiez"
 
 msgid "Version"
 msgstr "Version"
@@ -9289,10 +9301,10 @@ msgid "Volume is marked for deletion"
 msgstr "Le Volume est marqué pour suppression"
 
 msgid "Volume is protected"
-msgstr ""
+msgstr "Le Volume est protégé"
 
 msgid "Volume is unlocked"
-msgstr ""
+msgstr "Le Volume est déprotégé"
 
 msgid "Volume label"
 msgstr "Étiquette de volume"
