@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-05-02 01:39+0000\n"
-"PO-Revision-Date: 2016-05-17 07:03+0000\n"
-"Last-Translator: apollo567 <apollo567@hotmail.de>\n"
+"PO-Revision-Date: 2016-06-01 20:36+0000\n"
+"Last-Translator: thor123 <thorstenoesterle123@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-01 14:41+0000\n"
-"X-Generator: Launchpad (build 18081)\n"
+"X-Launchpad-Export-Date: 2016-06-01 20:41+0000\n"
+"X-Generator: Launchpad (build 18053)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
 "X-Poedit-Language: German\n"
@@ -2771,7 +2771,7 @@ msgid "Enable ACL inheritance"
 msgstr "ACL Vererbung aktivieren"
 
 msgid "Enable Advanced Format. (4KB sector)"
-msgstr ""
+msgstr "Erweiterte Formatierung aktivieren. (4KB Sektor)"
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Asynchrones I/O (AIO) aktivieren"
@@ -3049,7 +3049,7 @@ msgid "Enter trap host name."
 msgstr "Geben Sie den Trap Hostnamen an."
 
 msgid "Entire Device"
-msgstr ""
+msgstr "Gesamtes Laufwerk"
 
 msgid ""
 "Erase Fail Count (chip). This parameter indicates a number of flash erase "
@@ -3204,7 +3204,7 @@ msgid "Failed to execute command zfs."
 msgstr "Ausführung des Kommandos zfs fehlgeschlagen."
 
 msgid "Failed to execute command zpool."
-msgstr ""
+msgstr "Fehler beim Ausführen des Befehls zpool."
 
 msgid "Failed to execute cron job."
 msgstr "cron Job wurde nicht ausgeführt."
@@ -3272,7 +3272,7 @@ msgid "File Path"
 msgstr "Dateipfad"
 
 msgid "File System"
-msgstr ""
+msgstr "Dateisystem"
 
 msgid "File Transfer Protocol"
 msgstr "File Transfer Protocol"
@@ -3370,7 +3370,7 @@ msgid "Format"
 msgstr "Formatieren"
 
 msgid "Format disk"
-msgstr ""
+msgstr "Festplatte formatieren!"
 
 msgid "Format the report for phpBB forum."
 msgstr "Formatiere den Bericht für das phpBB Forum."
@@ -4132,6 +4132,8 @@ msgid ""
 "It is recommended to use encryption before you store the backup in a safe "
 "location."
 msgstr ""
+"Es wird empfohlen, Verschlüsselung zu verwenden, bevor Sie das Backup an "
+"einem sicheren Ort speichern."
 
 msgid ""
 "It's recommended to change the default username and password for accessing "
@@ -4550,7 +4552,7 @@ msgid "MAC address"
 msgstr "MAC-Adresse"
 
 msgid "MBR erase"
-msgstr ""
+msgstr "MBR löschen"
 
 msgid "MBR partition"
 msgstr "MBR Partition"
@@ -4592,7 +4594,7 @@ msgid "Machine suffix"
 msgstr "Suffix der Maschine"
 
 msgid "Maintenance"
-msgstr ""
+msgstr "Verwaltung"
 
 #, php-format
 msgid ""
@@ -5101,6 +5103,8 @@ msgid ""
 "No configured virtual devices. Please add new <a href=\"%s\">virtual "
 "device</a> first."
 msgstr ""
+"Keine virtuellen Geräte eingerichtet. Bitte vorher neues <a "
+"href=\"%s\">virtual device</a> hinzufügen."
 
 msgid "No device selected."
 msgstr "Kein Gerät ausgewählt."
@@ -5646,16 +5650,16 @@ msgid "Pool Tools"
 msgstr "Werkzeuge Pool"
 
 msgid "Pool cannot be changed."
-msgstr ""
+msgstr "Pool kann nicht verändert werden."
 
 msgid "Pool is marked for removal"
-msgstr ""
+msgstr "Pool wurde zum entfernen markiert."
 
 msgid "Pool is protected"
-msgstr ""
+msgstr "Pool ist geschützt."
 
 msgid "Pool is unlocked"
-msgstr ""
+msgstr "Pool ist freigegeben."
 
 msgid "Pools"
 msgstr "Pools"
@@ -5831,7 +5835,7 @@ msgid "RAID 0/1/5 Information & Status"
 msgstr "Raid 0/1/5 Zustandsinformation"
 
 msgid "RAID 0/1/5 Maintenance"
-msgstr ""
+msgstr "RAID 0/1/5 Verwaltung"
 
 msgid "RAID 1 Information & Status"
 msgstr "Raid 1 Zustandsinformation"
@@ -5846,7 +5850,7 @@ msgid "RAID Name"
 msgstr ""
 
 msgid "RAID Type"
-msgstr ""
+msgstr "RAID Typ"
 
 msgid "RAID device can be removed."
 msgstr "RAID Gerät kann entfernt werden"
@@ -5855,40 +5859,40 @@ msgid "RAID device is already in use."
 msgstr "RAID Gerät wird bereits benutzt"
 
 msgid "RAID is marked for removal"
-msgstr ""
+msgstr "RAID wurde zum entfernen markiert"
 
 msgid "RAID is protected"
 msgstr "RAID ist geschützt"
 
 msgid "RAID is unlocked"
-msgstr ""
+msgstr "RAID ist freigegeben"
 
 msgid "RAID-0"
-msgstr ""
+msgstr "RAID 0"
 
 msgid "RAID-0 Maintenance"
-msgstr ""
+msgstr "RAID-0 Verwaltung"
 
 msgid "RAID-1"
-msgstr ""
+msgstr "RAID 1"
 
 msgid "RAID-1 Maintenance"
-msgstr ""
+msgstr "RAID-1 Verwaltung"
 
 msgid "RAID-5"
-msgstr ""
+msgstr "RAID 5"
 
 msgid "RAID-5 Maintenance"
-msgstr ""
+msgstr "RAID-5 Verwaltung"
 
 msgid "RAID-Z1"
-msgstr ""
+msgstr "RAID-Z1"
 
 msgid "RAID-Z2"
-msgstr ""
+msgstr "RAID-Z2"
 
 msgid "RAID-Z3"
-msgstr ""
+msgstr "RAID-Z3"
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -6355,7 +6359,7 @@ msgid "Search"
 msgstr "Suchen"
 
 msgid "Search event"
-msgstr ""
+msgstr "Ereignis suchen"
 
 msgid "Secondary"
 msgstr "Sekundärer"
@@ -6785,6 +6789,8 @@ msgstr ""
 
 msgid "Specify the percentage of space held back from normal users."
 msgstr ""
+"Geben Sie den Prozentsatz des Platzes an, der von normalen Nutzern "
+"zurückgehalten werden soll."
 
 msgid "Split request"
 msgstr "Split request"
@@ -7717,17 +7723,18 @@ msgid "The name of the RAID cannot be changed."
 msgstr "Der Name des RAID kann nicht geändret werden"
 
 msgid "The name of the RAID is already in use."
-msgstr ""
+msgstr "Der Name dieses RAIDs wird bereits verwendet."
 
 msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr ""
+"Der Name des RAIDs darf nur aus den Zeichen a-z, A-Z und 0-9 bestehen."
 
 msgid "The name of the pool cannot be changed."
-msgstr ""
+msgstr "Der Name des Pools kann nicht geändert werden."
 
 msgid "The name of this virtual device cannot be changed."
-msgstr ""
+msgstr "Der Name des virtuellen Laufwerks kann nicht geändert werden."
 
 #, php-format
 msgid "The network '%s' is invalid."
@@ -8257,7 +8264,7 @@ msgstr ""
 "angegeben. Gruppen werden durch ein vorangestelltes @ gekennzeichnet."
 
 msgid "This option applies to GEOM RAID-1 only."
-msgstr ""
+msgstr "Diese Option ist nur in GEOM RAID-1 verfügbar."
 
 msgid "This option causes rsync to copy the local data to the remote server."
 msgstr ""
@@ -8816,6 +8823,10 @@ msgid ""
 "filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
 "unpredictable results, file corruption and loss of data!"
 msgstr ""
+"UFS und ZFS sind die systemeigenen Dateisysteme von NAS4Free. Der Versuch "
+"andere Dateisysteme, wie FAT, FAT32, EXT2, EXT3, EXT4 oder NTFS zu nutzen, "
+"kann unvorhersehbare Ergebnisse, wie Datenkorruption oder den Verlust von "
+"Daten, haben."
 
 #, php-format
 msgid ""
@@ -9184,13 +9195,13 @@ msgid "Virtual Device List"
 msgstr ""
 
 msgid "Virtual Device is marked for removal"
-msgstr ""
+msgstr "Virtuelles Laufwerk ist zum entfernen markiert"
 
 msgid "Virtual Device is protected"
-msgstr ""
+msgstr "Virtuelles Laufwerk ist geschützt"
 
 msgid "Virtual Device is unlocked"
-msgstr ""
+msgstr "Virtuelles Laufwerk ist freigegeben"
 
 msgid "Virtual Devices"
 msgstr "Virtuelle Geräte"
@@ -9211,10 +9222,10 @@ msgid "Virtual Machine"
 msgstr "Virtuelle Maschine"
 
 msgid "Virtual device can be removed."
-msgstr ""
+msgstr "Virtuelles Laufwerk kann entfernt werden."
 
 msgid "Virtual device is already in use."
-msgstr ""
+msgstr "Virtuelles Laufwerk wird bereits verwendet."
 
 msgid "Virtual devices"
 msgstr "Virtuelle Geräte"
@@ -9226,7 +9237,7 @@ msgid "Volume"
 msgstr "Datenträger"
 
 msgid "Volume Label"
-msgstr ""
+msgstr "Datenträgerbezeichnung"
 
 msgid "Volume Name"
 msgstr "Datenträgername"
@@ -9444,6 +9455,7 @@ msgstr "Die folgenden Parameter können für die Ersetzung genutzt werden"
 
 msgid "You can't format the OS origin disk!"
 msgstr ""
+"Das Ursprungslaufwerk des Betriebssytems kann nicht formattiert werden!"
 
 #, php-format
 msgid ""
