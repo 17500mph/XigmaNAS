@@ -40,9 +40,9 @@ $GLOBALS["mimes"]=array(
 
 	// dir, exe, file
 	"dir"		=> "Katalog",
-	"exe"		=> "Körbar Fil",
+	"exe"		=> "KÃ¶rbar Fil",
 	"file"		=> "Fil",
-	"link"		=> "Link",
+	"link"		=> "LÃ¤nk",
 
 	// text
 	"text"		=> "Textfil",
@@ -57,11 +57,11 @@ $GLOBALS["mimes"]=array(
 	"cgi"		=> "CGI Skript",
 
 	// C++
-	"cpps"		=> "C++ Källfil",
+	"cpps"		=> "C++ KÃ¤llfil",
 	"cpph"		=> "C++ Header Fil",
 
 	// Java
-	"javas"		=> "Java Källfil",
+	"javas"		=> "Java KÃ¤llfil",
 	"javac"		=> "Java Class fil",
 
 	// Pascal
