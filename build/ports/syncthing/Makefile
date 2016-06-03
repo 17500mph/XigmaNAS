@@ -1,5 +1,5 @@
 PORTNAME=	syncthing
-PORTVERSION=	0.13.4
+PORTVERSION=	0.13.5
 PORTREVISION=	0
 DISTVERSIONPREFIX= v
 CATEGORIES=	net
@@ -30,7 +30,7 @@ post-patch:
 		${MV} .gitattributes .gitignore .mailmap AUTHORS CONDUCT.md \
 		CONTRIBUTING.md ISSUE_TEMPLATE.md LICENSE NICKS \
 		PULL_REQUEST_TEMPLATE.md README.md assets build.go build.sh cmd \
-		debian etc gui lib man script test vendor \
+		etc gui lib man script test vendor \
 		src/github.com/${PORTNAME}/${PORTNAME}
 # NAS4Free
 .if ${ARCH} == "i386"
