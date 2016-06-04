@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-05-02 01:39+0000\n"
+"POT-Creation-Date: 2016-06-04 03:54+0000\n"
 "PO-Revision-Date: 2015-12-19 13:07+0000\n"
 "Last-Translator: Daisuke Aoyama <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-01 14:41+0000\n"
-"X-Generator: Launchpad (build 18081)\n"
+"X-Launchpad-Export-Date: 2016-06-04 14:04+0000\n"
+"X-Generator: Launchpad (build 18086)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
 "X-Poedit-Language: Japanese\n"
@@ -464,6 +464,9 @@ msgstr "ルーティングの追加"
 msgid "Add Rsync job"
 msgstr "Rsync ジョブの追加"
 
+msgid "Add Snapshot"
+msgstr ""
+
 msgid "Add URL"
 msgstr "URLを追加"
 
@@ -532,9 +535,6 @@ msgstr "セルフテストの追加"
 
 msgid "Add share"
 msgstr "共有の追加"
-
-msgid "Add snapshot"
-msgstr "スナップショットの追加"
 
 msgid "Add target"
 msgstr "ターゲットの追加"
@@ -619,6 +619,9 @@ msgstr ""
 "をクリックした後、変更を適用するにはサーバーをリブートしなければなりません。また、再度NASへアクセスする為に以下のステップを実行する必要があるかもしれま"
 "せん。<ul><li><span class='vexpl'>コンピュータの IPアドレスを変更して下さい</span></li><li><span "
 "class='vexpl'>新しい IP アドレスで WebGUIへアクセスして下さい</span></li></ul>"
+
+msgid "Age"
+msgstr ""
 
 msgid "Aggregation protocol"
 msgstr "アグリゲーションプロトコル"
@@ -718,6 +721,9 @@ msgstr "特定のユーザ、グループが共有への読取り専用アクセ
 msgid "Allows the server to try and become a local master browser."
 msgstr "このサーバがローカルマスタブラウザの選出に参加する事を可能にします。"
 
+msgid "Allows to connect to a hidden network"
+msgstr ""
+
 msgid ""
 "Also known as 'Power-off Retract Count' per conventional HDD terminology. "
 "Raw value reports the number of unclean shutdowns, cumulative over the life "
@@ -799,8 +805,8 @@ msgstr "ユーザー定義の共有を追加します"
 msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
 
-msgid "Apply"
-msgstr "適用"
+msgid "Apply Filter"
+msgstr ""
 
 msgid "Apply changes"
 msgstr "変更の適用"
@@ -1359,6 +1365,9 @@ msgstr "設定"
 msgid "Confirmation"
 msgstr "確認"
 
+msgid "Connect to hidden network"
+msgstr ""
+
 msgid "Connected FTP Users & Status"
 msgstr "FTP 接続中のユーザと状態"
 
@@ -1590,6 +1599,9 @@ msgstr ""
 
 msgid "Create 4KB wrapper (nop device)."
 msgstr "4KBラッパー (nop デバイス) を作成する"
+
+msgid "Create Date"
+msgstr ""
 
 msgid "Create HVM Guest"
 msgstr "HVM ゲスト作成"
@@ -1867,6 +1879,9 @@ msgstr ""
 msgid "Delete Selected RAID Volumes"
 msgstr ""
 
+msgid "Delete Selected Snapshots"
+msgstr ""
+
 msgid "Delete Selected Virtual Devices"
 msgstr ""
 
@@ -1941,9 +1956,6 @@ msgstr "セルフテストの削除"
 
 msgid "Delete share"
 msgstr "共有を削除"
-
-msgid "Delete snapshot"
-msgstr "スナップショットの削除"
 
 msgid "Delete target"
 msgstr "ターゲットの削除"
@@ -2258,9 +2270,6 @@ msgstr "このスケジュールされたセルフテストを削除してもよ
 msgid "Do you really want to delete this share?"
 msgstr "この共有を削除してもよろしいですか?"
 
-msgid "Do you really want to delete this snapshot?"
-msgstr "このスナップショットを削除してもよろしいですか?"
-
 msgid "Do you really want to delete this target?"
 msgstr "このターゲットを削除してもよろしいですか?"
 
@@ -2339,6 +2348,9 @@ msgid "Do you want to delete selected options?"
 msgstr ""
 
 msgid "Do you want to delete selected pools?"
+msgstr ""
+
+msgid "Do you want to delete selected snapshots?"
 msgstr ""
 
 msgid "Do you want to delete selected virtual devices?"
@@ -2498,6 +2510,9 @@ msgstr "ルーティングを編集"
 msgid "Edit Rsync job"
 msgstr "Rsync ジョブを編集"
 
+msgid "Edit Snapshot"
+msgstr ""
+
 msgid "Edit URL"
 msgstr "URL を編集"
 
@@ -2566,9 +2581,6 @@ msgstr "セルフテストを編集"
 
 msgid "Edit share"
 msgstr "共有を編集"
-
-msgid "Edit snapshot"
-msgstr "スナップショットを編集"
 
 msgid "Edit target"
 msgstr "ターゲットを編集"
@@ -6277,6 +6289,15 @@ msgstr "スナップショット"
 msgid "Snapshot Visibility"
 msgstr "スナップショット可視"
 
+msgid "Snapshot is locked"
+msgstr ""
+
+msgid "Snapshot is marked for deletion"
+msgstr ""
+
+msgid "Snapshot is unlocked"
+msgstr ""
+
 msgid "Snapshots"
 msgstr "スナップショット"
 
@@ -6733,8 +6754,8 @@ msgid "The IP address that this hostname represents."
 msgstr "このホストに割り当てられている IP アドレスを入力して下さい。"
 
 #, php-format
-msgid "The MIB '%s' already exist."
-msgstr "MIB '%s' は既に存在しています。"
+msgid "The MIB '%s' already exists."
+msgstr ""
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -7456,9 +7477,9 @@ msgid ""
 msgstr "クライアントからの最大レベルの同時実行の処理が十分に行えるべきで、一般的に 4 から 6 が設定されます。"
 
 msgid ""
-"These MIBs will be added to /etc/sysctl.conf. This allow you to make changes "
-"to a running system."
-msgstr "これらの MIB は /etc/sysctl.conf へ追加されます。これは、システムの動作に変更を加えることを可能にします。"
+"These MIBs will be added to /etc/sysctl.conf. This allows you to make "
+"changes to a running system."
+msgstr ""
 
 msgid ""
 "These commands will be executed pre or post system initialization (booting) "
@@ -7753,8 +7774,8 @@ msgstr "このページはWebGUIで作成された設定を反映しています
 msgid ""
 "This page reflects the current system configuration. It may be different to "
 "the configuration which has been created with the WebGUI if changes has been "
-"done via command line."
-msgstr "このページは現在のシステム設定を反映しています。コマンドラインで変更を行なっていると、WebGUIで作成された設定と違う場合があります。"
+"done via command line"
+msgstr ""
 
 msgid ""
 "This parameter controls whether files starting with a dot appear as hidden "
@@ -8998,3 +9019,33 @@ msgstr "アンマウント"
 
 msgid "version:"
 msgstr "バージョン:"
+
+#~ msgid "Add snapshot"
+#~ msgstr "スナップショットの追加"
+
+#~ msgid "Apply"
+#~ msgstr "適用"
+
+#~ msgid "Delete snapshot"
+#~ msgstr "スナップショットの削除"
+
+#~ msgid "Do you really want to delete this snapshot?"
+#~ msgstr "このスナップショットを削除してもよろしいですか?"
+
+#~ msgid "Edit snapshot"
+#~ msgstr "スナップショットを編集"
+
+#, php-format
+#~ msgid "The MIB '%s' already exist."
+#~ msgstr "MIB '%s' は既に存在しています。"
+
+#~ msgid ""
+#~ "These MIBs will be added to /etc/sysctl.conf. This allow you to make changes "
+#~ "to a running system."
+#~ msgstr "これらの MIB は /etc/sysctl.conf へ追加されます。これは、システムの動作に変更を加えることを可能にします。"
+
+#~ msgid ""
+#~ "This page reflects the current system configuration. It may be different to "
+#~ "the configuration which has been created with the WebGUI if changes has been "
+#~ "done via command line."
+#~ msgstr "このページは現在のシステム設定を反映しています。コマンドラインで変更を行なっていると、WebGUIで作成された設定と違う場合があります。"
