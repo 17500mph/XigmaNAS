@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-05-02 01:39+0000\n"
+"POT-Creation-Date: 2016-06-04 03:54+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -363,6 +363,9 @@ msgstr ""
 msgid "Add Rsync job"
 msgstr ""
 
+msgid "Add Snapshot"
+msgstr ""
+
 msgid "Add URL"
 msgstr ""
 
@@ -432,9 +435,6 @@ msgstr ""
 msgid "Add share"
 msgstr ""
 
-msgid "Add snapshot"
-msgstr ""
-
 msgid "Add target"
 msgstr ""
 
@@ -501,6 +501,9 @@ msgstr ""
 
 #, php-format
 msgid "After you click &quot;Save&quot;, you must reboot the server to make the changes take effect. You may also have to do one or more of the following steps before you can access your server again: <ul><li><span class='vexpl'>change the IP address of your server</span></li><li><span class='vexpl'>access the webGUI with the new IP address</span></li></ul>"
+msgstr ""
+
+msgid "Age"
 msgstr ""
 
 msgid "Aggregation protocol"
@@ -589,6 +592,9 @@ msgstr ""
 msgid "Allows the server to try and become a local master browser."
 msgstr ""
 
+msgid "Allows to connect to a hidden network"
+msgstr ""
+
 msgid "Also known as 'Power-off Retract Count' per conventional HDD terminology. Raw value reports the number of unclean shutdowns, cumulative over the life of an SSD, where an 'unclean shutdown' is the removal of power without STANDBY IMMEDIATE as the last command (regardless of PLI activity using capacitor power). Normalized value is always 100."
 msgstr ""
 
@@ -658,7 +664,7 @@ msgstr ""
 msgid "Apple Filing Protocol"
 msgstr ""
 
-msgid "Apply"
+msgid "Apply Filter"
 msgstr ""
 
 msgid "Apply changes"
@@ -1189,6 +1195,9 @@ msgstr ""
 msgid "Confirmation"
 msgstr ""
 
+msgid "Connect to hidden network"
+msgstr ""
+
 msgid "Connected FTP Users & Status"
 msgstr ""
 
@@ -1325,6 +1334,9 @@ msgid "Counts the number of SATA PHY errors. This value includes all PHY error c
 msgstr ""
 
 msgid "Create 4KB wrapper (nop device)."
+msgstr ""
+
+msgid "Create Date"
 msgstr ""
 
 msgid "Create HVM Guest"
@@ -1593,6 +1605,9 @@ msgstr ""
 msgid "Delete Selected RAID Volumes"
 msgstr ""
 
+msgid "Delete Selected Snapshots"
+msgstr ""
+
 msgid "Delete Selected Virtual Devices"
 msgstr ""
 
@@ -1666,9 +1681,6 @@ msgid "Delete self-test"
 msgstr ""
 
 msgid "Delete share"
-msgstr ""
-
-msgid "Delete snapshot"
 msgstr ""
 
 msgid "Delete target"
@@ -1962,9 +1974,6 @@ msgstr ""
 msgid "Do you really want to delete this share?"
 msgstr ""
 
-msgid "Do you really want to delete this snapshot?"
-msgstr ""
-
 msgid "Do you really want to delete this target?"
 msgstr ""
 
@@ -2038,6 +2047,9 @@ msgid "Do you want to delete selected options?"
 msgstr ""
 
 msgid "Do you want to delete selected pools?"
+msgstr ""
+
+msgid "Do you want to delete selected snapshots?"
 msgstr ""
 
 msgid "Do you want to delete selected virtual devices?"
@@ -2196,6 +2208,9 @@ msgstr ""
 msgid "Edit Rsync job"
 msgstr ""
 
+msgid "Edit Snapshot"
+msgstr ""
+
 msgid "Edit URL"
 msgstr ""
 
@@ -2263,9 +2278,6 @@ msgid "Edit self-test"
 msgstr ""
 
 msgid "Edit share"
-msgstr ""
-
-msgid "Edit snapshot"
 msgstr ""
 
 msgid "Edit target"
@@ -5687,6 +5699,15 @@ msgstr ""
 msgid "Snapshot Visibility"
 msgstr ""
 
+msgid "Snapshot is locked"
+msgstr ""
+
+msgid "Snapshot is marked for deletion"
+msgstr ""
+
+msgid "Snapshot is unlocked"
+msgstr ""
+
 msgid "Snapshots"
 msgstr ""
 
@@ -6112,7 +6133,7 @@ msgid "The IP address that this hostname represents."
 msgstr ""
 
 #, php-format
-msgid "The MIB '%s' already exist."
+msgid "The MIB '%s' already exists."
 msgstr ""
 
 #, php-format
@@ -6677,7 +6698,7 @@ msgstr ""
 msgid "There should be enough to handle the maximum level of concurrency from its clients, typically four to six."
 msgstr ""
 
-msgid "These MIBs will be added to /etc/sysctl.conf. This allow you to make changes to a running system."
+msgid "These MIBs will be added to /etc/sysctl.conf. This allows you to make changes to a running system."
 msgstr ""
 
 msgid "These commands will be executed pre or post system initialization (booting) or before system shutdown."
@@ -6860,7 +6881,7 @@ msgstr ""
 msgid "This page reflects the configuration that has been created with the WebGUI."
 msgstr ""
 
-msgid "This page reflects the current system configuration. It may be different to the configuration which has been created with the WebGUI if changes has been done via command line."
+msgid "This page reflects the current system configuration. It may be different to the configuration which has been created with the WebGUI if changes has been done via command line"
 msgstr ""
 
 msgid "This parameter controls whether files starting with a dot appear as hidden files."
