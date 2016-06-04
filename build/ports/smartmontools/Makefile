@@ -1,5 +1,6 @@
 PORTNAME=		smartmontools
-PORTVERSION=	6.4
+PORTVERSION=	6.5
+PORTREVISION?=	0
 CATEGORIES=		sysutils
 COMMENT=		S.M.A.R.T. disk monitoring tools
 MAINTAINER=		zoon01@nas4free.org
@@ -12,7 +13,7 @@ USE_GMAKE=		yes
 NO_PKG_REGISTER=yes
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-docdir=${DOCSDIR} --disable-sample \
+CONFIGURE_ARGS=	--docdir=${DOCSDIR} --disable-sample \
 			--disable-dependency-tracking
 
 
