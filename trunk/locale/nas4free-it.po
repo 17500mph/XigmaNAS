@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-05-02 01:39+0000\n"
+"POT-Creation-Date: 2016-06-04 03:54+0000\n"
 "PO-Revision-Date: 2016-05-22 20:14+0000\n"
 "Last-Translator: Paolo Borla <p.borla@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-01 14:41+0000\n"
-"X-Generator: Launchpad (build 18081)\n"
+"X-Launchpad-Export-Date: 2016-06-04 14:04+0000\n"
+"X-Generator: Launchpad (build 18086)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
 "X-Poedit-Language: Italian\n"
@@ -500,6 +500,9 @@ msgstr "Aggiungi Route"
 msgid "Add Rsync job"
 msgstr "Aggiungi lavoro di Rsync"
 
+msgid "Add Snapshot"
+msgstr ""
+
 msgid "Add URL"
 msgstr "Aggiungi URL"
 
@@ -568,9 +571,6 @@ msgstr "Aggiungi self-test"
 
 msgid "Add share"
 msgstr "Aggiungere condivisione"
-
-msgid "Add snapshot"
-msgstr "Aggiungi snapshot"
 
 msgid "Add target"
 msgstr "Aggiungi target"
@@ -658,6 +658,9 @@ msgstr ""
 "operazioni prima di poter accedere di nuovo al server: <ul><li><span "
 "class='vexpl'>modificare l'indirizzo IP del tuo server</span></li><li><span "
 "class='vexpl'>accedere alla webGUI con il nuovo indirizzo IP</span></li></ul>"
+
+msgid "Age"
+msgstr ""
 
 msgid "Aggregation protocol"
 msgstr "Protocollo di aggregazione"
@@ -771,6 +774,9 @@ msgstr ""
 msgid "Allows the server to try and become a local master browser."
 msgstr "Permetti al server di diventare local master browser."
 
+msgid "Allows to connect to a hidden network"
+msgstr ""
+
 msgid ""
 "Also known as 'Power-off Retract Count' per conventional HDD terminology. "
 "Raw value reports the number of unclean shutdowns, cumulative over the life "
@@ -855,8 +861,8 @@ msgstr "Aggiungi le condivisioni definite dall'utente."
 msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
 
-msgid "Apply"
-msgstr "Applica"
+msgid "Apply Filter"
+msgstr ""
 
 msgid "Apply changes"
 msgstr "Applica modifiche"
@@ -1440,6 +1446,9 @@ msgstr "Configurando"
 msgid "Confirmation"
 msgstr "Conferma"
 
+msgid "Connect to hidden network"
+msgstr ""
+
 msgid "Connected FTP Users & Status"
 msgstr "Utenti connessi via FTP e stato"
 
@@ -1705,6 +1714,9 @@ msgstr ""
 
 msgid "Create 4KB wrapper (nop device)."
 msgstr "Crea wrapper 4KB (dispositivo nop)."
+
+msgid "Create Date"
+msgstr ""
 
 msgid "Create HVM Guest"
 msgstr ""
@@ -1988,6 +2000,9 @@ msgstr ""
 msgid "Delete Selected RAID Volumes"
 msgstr ""
 
+msgid "Delete Selected Snapshots"
+msgstr ""
+
 msgid "Delete Selected Virtual Devices"
 msgstr ""
 
@@ -2064,9 +2079,6 @@ msgstr "Cancella self-test"
 
 msgid "Delete share"
 msgstr "Elimina condivisione"
-
-msgid "Delete snapshot"
-msgstr "Elimina snapshot"
 
 msgid "Delete target"
 msgstr "Cancella target"
@@ -2402,9 +2414,6 @@ msgstr "Volete veramente cancellare questo test automatico programmato?"
 msgid "Do you really want to delete this share?"
 msgstr "Si desidera realmente cancellare questa condivisone?"
 
-msgid "Do you really want to delete this snapshot?"
-msgstr "Vuoi davvero eliminare questo snapshot?"
-
 msgid "Do you really want to delete this target?"
 msgstr "Si vuole realmente cancellare questo target?"
 
@@ -2486,6 +2495,9 @@ msgid "Do you want to delete selected options?"
 msgstr "Vuoi cancellare le opzioni selezionate?"
 
 msgid "Do you want to delete selected pools?"
+msgstr ""
+
+msgid "Do you want to delete selected snapshots?"
 msgstr ""
 
 msgid "Do you want to delete selected virtual devices?"
@@ -2647,6 +2659,9 @@ msgstr "Modifica Route"
 msgid "Edit Rsync job"
 msgstr "Modifica job Rsync"
 
+msgid "Edit Snapshot"
+msgstr ""
+
 msgid "Edit URL"
 msgstr "Modifica URL"
 
@@ -2715,9 +2730,6 @@ msgstr "Modifica l'auto-test"
 
 msgid "Edit share"
 msgstr "Modifica condivisione"
-
-msgid "Edit snapshot"
-msgstr "Modifica snapshot"
 
 msgid "Edit target"
 msgstr "Modifica Target"
@@ -6598,6 +6610,15 @@ msgstr "Snapshot"
 msgid "Snapshot Visibility"
 msgstr "Visibilità snapshot"
 
+msgid "Snapshot is locked"
+msgstr ""
+
+msgid "Snapshot is marked for deletion"
+msgstr ""
+
+msgid "Snapshot is unlocked"
+msgstr ""
+
 msgid "Snapshots"
 msgstr "Snapshot"
 
@@ -7074,8 +7095,8 @@ msgid "The IP address that this hostname represents."
 msgstr "L'indirizzo IP che questo nome di host rappresenta."
 
 #, php-format
-msgid "The MIB '%s' already exist."
-msgstr "La MIB '%s' esiste già."
+msgid "The MIB '%s' already exists."
+msgstr ""
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -7894,11 +7915,9 @@ msgstr ""
 "dai clients, tipicamente da 4 a sei."
 
 msgid ""
-"These MIBs will be added to /etc/sysctl.conf. This allow you to make changes "
-"to a running system."
+"These MIBs will be added to /etc/sysctl.conf. This allows you to make "
+"changes to a running system."
 msgstr ""
-"Queste MIBs saranno aggiunte a /etc/sysctl.conf. Questo permette di fare "
-"delle modifiche ad un sistema in funzione."
 
 msgid ""
 "These commands will be executed pre or post system initialization (booting) "
@@ -8246,11 +8265,8 @@ msgstr ""
 msgid ""
 "This page reflects the current system configuration. It may be different to "
 "the configuration which has been created with the WebGUI if changes has been "
-"done via command line."
+"done via command line"
 msgstr ""
-"Questa pagina riflette la configurazione corrente del sistema. Potrebbe "
-"essere diversa dalla configurazione che è stata creata con il WebGUI se sono "
-"state apportate delle modifche dalla linea di comando."
 
 msgid ""
 "This parameter controls whether files starting with a dot appear as hidden "
@@ -9579,3 +9595,38 @@ msgstr "smonta"
 
 msgid "version:"
 msgstr "versione:"
+
+#~ msgid "Add snapshot"
+#~ msgstr "Aggiungi snapshot"
+
+#~ msgid "Apply"
+#~ msgstr "Applica"
+
+#~ msgid "Delete snapshot"
+#~ msgstr "Elimina snapshot"
+
+#~ msgid "Do you really want to delete this snapshot?"
+#~ msgstr "Vuoi davvero eliminare questo snapshot?"
+
+#~ msgid "Edit snapshot"
+#~ msgstr "Modifica snapshot"
+
+#, php-format
+#~ msgid "The MIB '%s' already exist."
+#~ msgstr "La MIB '%s' esiste già."
+
+#~ msgid ""
+#~ "These MIBs will be added to /etc/sysctl.conf. This allow you to make changes "
+#~ "to a running system."
+#~ msgstr ""
+#~ "Queste MIBs saranno aggiunte a /etc/sysctl.conf. Questo permette di fare "
+#~ "delle modifiche ad un sistema in funzione."
+
+#~ msgid ""
+#~ "This page reflects the current system configuration. It may be different to "
+#~ "the configuration which has been created with the WebGUI if changes has been "
+#~ "done via command line."
+#~ msgstr ""
+#~ "Questa pagina riflette la configurazione corrente del sistema. Potrebbe "
+#~ "essere diversa dalla configurazione che è stata creata con il WebGUI se sono "
+#~ "state apportate delle modifche dalla linea di comando."

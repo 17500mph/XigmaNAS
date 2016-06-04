@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-05-02 01:39+0000\n"
+"POT-Creation-Date: 2016-06-04 03:54+0000\n"
 "PO-Revision-Date: 2016-05-03 19:06+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-01 14:41+0000\n"
-"X-Generator: Launchpad (build 18081)\n"
+"X-Launchpad-Export-Date: 2016-06-04 14:04+0000\n"
+"X-Generator: Launchpad (build 18086)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -501,6 +501,9 @@ msgstr "Útvonal hozzáadása"
 msgid "Add Rsync job"
 msgstr "Rsync feladat hozzáadása"
 
+msgid "Add Snapshot"
+msgstr ""
+
 msgid "Add URL"
 msgstr "URL hozzáadása"
 
@@ -569,9 +572,6 @@ msgstr "Önteszt hozzáadása"
 
 msgid "Add share"
 msgstr "Megosztás hozzáadása"
-
-msgid "Add snapshot"
-msgstr "Pillanatkép hozzáadása"
 
 msgid "Add target"
 msgstr "Cél hozzáadása"
@@ -657,6 +657,9 @@ msgstr ""
 "lépést végre kell hajtani mielőtt a szervert újra eléred: <ul><li><span "
 "class='vexpl'>szervered IP címének megváltoztatása</span></li><li><span "
 "class='vexpl'>a WebGUI elérése az új IP címen</span></li></ul>"
+
+msgid "Age"
+msgstr ""
 
 msgid "Aggregation protocol"
 msgstr "Összesítés protokoll"
@@ -770,6 +773,9 @@ msgstr ""
 msgid "Allows the server to try and become a local master browser."
 msgstr "Megengedi, hogy a szerver megpróbáljon local master browser lenni."
 
+msgid "Allows to connect to a hidden network"
+msgstr ""
+
 msgid ""
 "Also known as 'Power-off Retract Count' per conventional HDD terminology. "
 "Raw value reports the number of unclean shutdowns, cumulative over the life "
@@ -858,8 +864,8 @@ msgstr "Felhasználó által létrehozott megosztás hozzáfűzése"
 msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protokoll"
 
-msgid "Apply"
-msgstr "Alkalmaz"
+msgid "Apply Filter"
+msgstr ""
 
 msgid "Apply changes"
 msgstr "Módosítások alkalmazása"
@@ -1438,6 +1444,9 @@ msgstr "Beállítás"
 msgid "Confirmation"
 msgstr "Megerősítés"
 
+msgid "Connect to hidden network"
+msgstr ""
+
 msgid "Connected FTP Users & Status"
 msgstr "Csatlakozott FTP-felhasználók és állapotuk"
 
@@ -1707,6 +1716,9 @@ msgstr ""
 
 msgid "Create 4KB wrapper (nop device)."
 msgstr "4KB wrapper létrehozása (nop eszköz)"
+
+msgid "Create Date"
+msgstr ""
 
 msgid "Create HVM Guest"
 msgstr "HVM vendég létrehozása"
@@ -1988,6 +2000,9 @@ msgstr "Kiválasztott tárolók törlése"
 msgid "Delete Selected RAID Volumes"
 msgstr "Kiválasztott RAID kötetek törlése"
 
+msgid "Delete Selected Snapshots"
+msgstr ""
+
 msgid "Delete Selected Virtual Devices"
 msgstr "Kiválasztott virtuális eszközök törlése"
 
@@ -2062,9 +2077,6 @@ msgstr "Önteszt törlése"
 
 msgid "Delete share"
 msgstr "Megosztás törlése"
-
-msgid "Delete snapshot"
-msgstr "Pillanatkép törlése"
 
 msgid "Delete target"
 msgstr "Cél törlése"
@@ -2399,9 +2411,6 @@ msgstr "Biztos, hogy törlöd ezt az időzített öntesztet?"
 msgid "Do you really want to delete this share?"
 msgstr "Valóban törölni akarja ezt a megosztást?"
 
-msgid "Do you really want to delete this snapshot?"
-msgstr "Biztos, hogy törlöd ezt a pillanatképet?"
-
 msgid "Do you really want to delete this target?"
 msgstr "Valóban törölni akarja ezt a célt?"
 
@@ -2495,6 +2504,9 @@ msgstr "Biztos, hogy törlöd a kiválasztott beállításokat?"
 
 msgid "Do you want to delete selected pools?"
 msgstr "Biztos, hogy törlöd a kiválasztott tárolókat?"
+
+msgid "Do you want to delete selected snapshots?"
+msgstr ""
 
 msgid "Do you want to delete selected virtual devices?"
 msgstr "Biztos, hogy törlöd a kiválasztott virtuális eszközöket?"
@@ -2656,6 +2668,9 @@ msgstr "Útvonal szerkesztése"
 msgid "Edit Rsync job"
 msgstr "Rsync feladat szerkesztése"
 
+msgid "Edit Snapshot"
+msgstr ""
+
 msgid "Edit URL"
 msgstr "URL szerkesztése"
 
@@ -2724,9 +2739,6 @@ msgstr "Önteszt szerkesztése"
 
 msgid "Edit share"
 msgstr "Magosztás szerkesztése"
-
-msgid "Edit snapshot"
-msgstr "Pillanatkép beállításai"
 
 msgid "Edit target"
 msgstr "Cél szerkesztése"
@@ -6652,6 +6664,15 @@ msgstr "Pillanatkép"
 msgid "Snapshot Visibility"
 msgstr "Pillanatkép láthatósága"
 
+msgid "Snapshot is locked"
+msgstr ""
+
+msgid "Snapshot is marked for deletion"
+msgstr ""
+
+msgid "Snapshot is unlocked"
+msgstr ""
+
 msgid "Snapshots"
 msgstr "Pillanatképek"
 
@@ -7131,8 +7152,8 @@ msgid "The IP address that this hostname represents."
 msgstr "Erre az állomásnévre mutató IP cím."
 
 #, php-format
-msgid "The MIB '%s' already exist."
-msgstr "A(z) '%s' MIB már létezik."
+msgid "The MIB '%s' already exists."
+msgstr ""
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -7955,11 +7976,9 @@ msgstr ""
 "A kliensek maximális szintű egyidejű kezeléséhez elegendő, jellemzően 4-6."
 
 msgid ""
-"These MIBs will be added to /etc/sysctl.conf. This allow you to make changes "
-"to a running system."
+"These MIBs will be added to /etc/sysctl.conf. This allows you to make "
+"changes to a running system."
 msgstr ""
-"Ezek az értékek a /etc/sysctl.conf-hoz adódnak hozzá. Ez lehetővé teszi a "
-"futó rendszer módosítást."
 
 msgid ""
 "These commands will be executed pre or post system initialization (booting) "
@@ -8308,11 +8327,8 @@ msgstr "Ez az oldal a WebGUI-val létrehozott beállításokat jeleníti meg."
 msgid ""
 "This page reflects the current system configuration. It may be different to "
 "the configuration which has been created with the WebGUI if changes has been "
-"done via command line."
+"done via command line"
 msgstr ""
-"Ez az oldal a pillanatnyi beállításokat jeleníti meg. Ez lehet, hogy eltér a "
-"WebGUI-val létrehozott beállításoktól, amennyiben parancssorból történt "
-"módosítás."
 
 msgid ""
 "This parameter controls whether files starting with a dot appear as hidden "
@@ -9646,3 +9662,38 @@ msgstr "leválasztás"
 
 msgid "version:"
 msgstr "verzió:"
+
+#, php-format
+#~ msgid "The MIB '%s' already exist."
+#~ msgstr "A(z) '%s' MIB már létezik."
+
+#~ msgid "Apply"
+#~ msgstr "Alkalmaz"
+
+#~ msgid "Add snapshot"
+#~ msgstr "Pillanatkép hozzáadása"
+
+#~ msgid ""
+#~ "These MIBs will be added to /etc/sysctl.conf. This allow you to make changes "
+#~ "to a running system."
+#~ msgstr ""
+#~ "Ezek az értékek a /etc/sysctl.conf-hoz adódnak hozzá. Ez lehetővé teszi a "
+#~ "futó rendszer módosítást."
+
+#~ msgid ""
+#~ "This page reflects the current system configuration. It may be different to "
+#~ "the configuration which has been created with the WebGUI if changes has been "
+#~ "done via command line."
+#~ msgstr ""
+#~ "Ez az oldal a pillanatnyi beállításokat jeleníti meg. Ez lehet, hogy eltér a "
+#~ "WebGUI-val létrehozott beállításoktól, amennyiben parancssorból történt "
+#~ "módosítás."
+
+#~ msgid "Do you really want to delete this snapshot?"
+#~ msgstr "Biztos, hogy törlöd ezt a pillanatképet?"
+
+#~ msgid "Delete snapshot"
+#~ msgstr "Pillanatkép törlése"
+
+#~ msgid "Edit snapshot"
+#~ msgstr "Pillanatkép beállításai"

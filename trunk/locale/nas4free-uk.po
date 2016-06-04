@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-05-02 01:39+0000\n"
+"POT-Creation-Date: 2016-06-04 03:54+0000\n"
 "PO-Revision-Date: 2016-05-21 12:04+0000\n"
 "Last-Translator: AndriyM <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-01 14:42+0000\n"
-"X-Generator: Launchpad (build 18081)\n"
+"X-Launchpad-Export-Date: 2016-06-04 14:05+0000\n"
+"X-Generator: Launchpad (build 18086)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -476,6 +476,9 @@ msgstr "Додати маршрут"
 msgid "Add Rsync job"
 msgstr "Додати Rsync завдання"
 
+msgid "Add Snapshot"
+msgstr ""
+
 msgid "Add URL"
 msgstr "Додати посилання"
 
@@ -544,9 +547,6 @@ msgstr "Додати самотест"
 
 msgid "Add share"
 msgstr "Додати загальний ресурс"
-
-msgid "Add snapshot"
-msgstr "Додати знімок"
 
 msgid "Add target"
 msgstr "Додати ціль"
@@ -633,6 +633,9 @@ msgstr ""
 "більше наступних дій, перш ніж ви зможете отримати доступ до цього сервера "
 "знов: <UL> <LI> змінити IP-адресу вашого комп'ютера </ LI> <LI> отримати "
 "доступ до web-інтерфейсу з нової IP-адреси </ LI> </ UL>"
+
+msgid "Age"
+msgstr ""
 
 msgid "Aggregation protocol"
 msgstr "Агрегаційний протокол"
@@ -745,6 +748,9 @@ msgid "Allows the server to try and become a local master browser."
 msgstr ""
 "Дозволяє серверу спробувати стати локальним головним браузером мережі"
 
+msgid "Allows to connect to a hidden network"
+msgstr ""
+
 msgid ""
 "Also known as 'Power-off Retract Count' per conventional HDD terminology. "
 "Raw value reports the number of unclean shutdowns, cumulative over the life "
@@ -827,8 +833,8 @@ msgstr "Додати визначені користувачем спільні 
 msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
 
-msgid "Apply"
-msgstr "Застосувати"
+msgid "Apply Filter"
+msgstr ""
 
 msgid "Apply changes"
 msgstr "Застосувати зміни"
@@ -1402,6 +1408,9 @@ msgstr "Налаштування"
 msgid "Confirmation"
 msgstr "Підтвердждення"
 
+msgid "Connect to hidden network"
+msgstr ""
+
 msgid "Connected FTP Users & Status"
 msgstr "Користувачі під'єднані до FTP і їх статус"
 
@@ -1649,6 +1658,9 @@ msgstr ""
 
 msgid "Create 4KB wrapper (nop device)."
 msgstr "створити 4KB оболонку (пристрій nop)"
+
+msgid "Create Date"
+msgstr ""
 
 msgid "Create HVM Guest"
 msgstr ""
@@ -1926,6 +1938,9 @@ msgstr ""
 msgid "Delete Selected RAID Volumes"
 msgstr ""
 
+msgid "Delete Selected Snapshots"
+msgstr ""
+
 msgid "Delete Selected Virtual Devices"
 msgstr ""
 
@@ -2001,9 +2016,6 @@ msgstr "Видалити тест самодіагностики"
 
 msgid "Delete share"
 msgstr "Видалити директорію спільного доступу"
-
-msgid "Delete snapshot"
-msgstr "Видалити знімок"
 
 msgid "Delete target"
 msgstr "Видалити ціль"
@@ -2333,9 +2345,6 @@ msgstr "Ви дійсно хочете видалити це запланова�
 msgid "Do you really want to delete this share?"
 msgstr "Ви дійсно хочете видалити цей ресурс для спільного доступу?"
 
-msgid "Do you really want to delete this snapshot?"
-msgstr "Ви дійсно хочете видалити цей знімок?"
-
 msgid "Do you really want to delete this target?"
 msgstr "Ви дійсно хочете видалити цей об'єкт?"
 
@@ -2419,6 +2428,9 @@ msgstr ""
 
 msgid "Do you want to delete selected pools?"
 msgstr "Бажаєте видалити вибрані пули?"
+
+msgid "Do you want to delete selected snapshots?"
+msgstr ""
 
 msgid "Do you want to delete selected virtual devices?"
 msgstr "Бажаєте видалити вибрані віртуальні пристрої?"
@@ -2578,6 +2590,9 @@ msgstr "Редагувати маршрут"
 msgid "Edit Rsync job"
 msgstr "Редагувати завдання Rsync"
 
+msgid "Edit Snapshot"
+msgstr ""
+
 msgid "Edit URL"
 msgstr "Редагувати посилання"
 
@@ -2646,9 +2661,6 @@ msgstr "Редагувати самотест"
 
 msgid "Edit share"
 msgstr "Редагувати ресурс спільного доступу"
-
-msgid "Edit snapshot"
-msgstr "Редагувати знімок"
 
 msgid "Edit target"
 msgstr "Редагувати ціль"
@@ -6407,6 +6419,15 @@ msgstr "Знімок"
 msgid "Snapshot Visibility"
 msgstr "Видимість знімка"
 
+msgid "Snapshot is locked"
+msgstr ""
+
+msgid "Snapshot is marked for deletion"
+msgstr ""
+
+msgid "Snapshot is unlocked"
+msgstr ""
+
 msgid "Snapshots"
 msgstr "Знімки"
 
@@ -6856,8 +6877,8 @@ msgid "The IP address that this hostname represents."
 msgstr "IP адреса цього хоста."
 
 #, php-format
-msgid "The MIB '%s' already exist."
-msgstr "MIB '%s' вже існує."
+msgid "The MIB '%s' already exists."
+msgstr ""
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -7566,8 +7587,8 @@ msgid ""
 msgstr ""
 
 msgid ""
-"These MIBs will be added to /etc/sysctl.conf. This allow you to make changes "
-"to a running system."
+"These MIBs will be added to /etc/sysctl.conf. This allows you to make "
+"changes to a running system."
 msgstr ""
 
 msgid ""
@@ -7841,7 +7862,7 @@ msgstr ""
 msgid ""
 "This page reflects the current system configuration. It may be different to "
 "the configuration which has been created with the WebGUI if changes has been "
-"done via command line."
+"done via command line"
 msgstr ""
 
 msgid ""
@@ -9062,3 +9083,22 @@ msgstr "umount"
 
 msgid "version:"
 msgstr "версія:"
+
+#~ msgid "Apply"
+#~ msgstr "Застосувати"
+
+#~ msgid "Add snapshot"
+#~ msgstr "Додати знімок"
+
+#~ msgid "Delete snapshot"
+#~ msgstr "Видалити знімок"
+
+#~ msgid "Do you really want to delete this snapshot?"
+#~ msgstr "Ви дійсно хочете видалити цей знімок?"
+
+#~ msgid "Edit snapshot"
+#~ msgstr "Редагувати знімок"
+
+#, php-format
+#~ msgid "The MIB '%s' already exist."
+#~ msgstr "MIB '%s' вже існує."

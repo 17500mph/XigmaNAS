@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-05-02 01:39+0000\n"
+"POT-Creation-Date: 2016-06-04 03:54+0000\n"
 "PO-Revision-Date: 2016-05-28 18:47+0000\n"
 "Last-Translator: Jieting Xu <xu.jieting@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-01 14:42+0000\n"
-"X-Generator: Launchpad (build 18081)\n"
+"X-Launchpad-Export-Date: 2016-06-04 14:04+0000\n"
+"X-Generator: Launchpad (build 18086)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -441,6 +441,9 @@ msgstr "添加路由"
 msgid "Add Rsync job"
 msgstr "添加 Rsync 任务"
 
+msgid "Add Snapshot"
+msgstr ""
+
 msgid "Add URL"
 msgstr "添加 URL"
 
@@ -509,9 +512,6 @@ msgstr "添加自我检测"
 
 msgid "Add share"
 msgstr "添加分享区"
-
-msgid "Add snapshot"
-msgstr "添加快照"
 
 msgid "Add target"
 msgstr "添加目标"
@@ -594,6 +594,9 @@ msgstr ""
 "当您单击&quot;储存&quot;后，您必须重新启动伺服器才能使更改生效。您可能还需要做以下一个或多个步骤才能再次访问您的伺服器： "
 "<ul><li><span class='vexpl'>变更伺服器的IP位址</span></li><li><span "
 "class='vexpl'>使用新的IP位址来连接网页界面</span></li></ul>"
+
+msgid "Age"
+msgstr ""
 
 msgid "Aggregation protocol"
 msgstr "聚合协议"
@@ -692,6 +695,9 @@ msgstr "允许特定用户与群组可唯读某个分享区。此选项和允许
 msgid "Allows the server to try and become a local master browser."
 msgstr "允许服务器尝试成为本局域网主浏览器（local master browser）。"
 
+msgid "Allows to connect to a hidden network"
+msgstr ""
+
 msgid ""
 "Also known as 'Power-off Retract Count' per conventional HDD terminology. "
 "Raw value reports the number of unclean shutdowns, cumulative over the life "
@@ -770,8 +776,8 @@ msgstr "追加用户自定义的用户共享"
 msgid "Apple Filing Protocol"
 msgstr "苹果文件协议（Apple Filing Protocol）"
 
-msgid "Apply"
-msgstr "套用"
+msgid "Apply Filter"
+msgstr ""
 
 msgid "Apply changes"
 msgstr "套用变更"
@@ -1325,6 +1331,9 @@ msgstr "设置中"
 msgid "Confirmation"
 msgstr "确认"
 
+msgid "Connect to hidden network"
+msgstr ""
+
 msgid "Connected FTP Users & Status"
 msgstr "FTP连接用户和状态"
 
@@ -1546,6 +1555,9 @@ msgstr ""
 
 msgid "Create 4KB wrapper (nop device)."
 msgstr "创建4KB封套（NOP装置）。"
+
+msgid "Create Date"
+msgstr ""
 
 msgid "Create HVM Guest"
 msgstr "创建HVM客户机"
@@ -1820,6 +1832,9 @@ msgstr "删除选中的池"
 msgid "Delete Selected RAID Volumes"
 msgstr "删除选中的RAID卷"
 
+msgid "Delete Selected Snapshots"
+msgstr ""
+
 msgid "Delete Selected Virtual Devices"
 msgstr "删除选中的虚拟设备"
 
@@ -1894,9 +1909,6 @@ msgstr "删除自我检测"
 
 msgid "Delete share"
 msgstr "删除共享区"
-
-msgid "Delete snapshot"
-msgstr "删除快照"
 
 msgid "Delete target"
 msgstr "删除目标"
@@ -2210,9 +2222,6 @@ msgstr "您确定要删除这项自我检测流程吗？"
 msgid "Do you really want to delete this share?"
 msgstr "您确定要删除这个分享区吗？"
 
-msgid "Do you really want to delete this snapshot?"
-msgstr "您确定要删除这个快照吗？"
-
 msgid "Do you really want to delete this target?"
 msgstr "您确定要删除这个iSCSI目标吗？"
 
@@ -2289,6 +2298,9 @@ msgid "Do you want to delete selected options?"
 msgstr ""
 
 msgid "Do you want to delete selected pools?"
+msgstr ""
+
+msgid "Do you want to delete selected snapshots?"
 msgstr ""
 
 msgid "Do you want to delete selected virtual devices?"
@@ -2448,6 +2460,9 @@ msgstr "编辑路由"
 msgid "Edit Rsync job"
 msgstr "编辑 Rsync 任务"
 
+msgid "Edit Snapshot"
+msgstr ""
+
 msgid "Edit URL"
 msgstr "编辑 URL"
 
@@ -2516,9 +2531,6 @@ msgstr "编辑自我检测流程"
 
 msgid "Edit share"
 msgstr "编辑分享区"
-
-msgid "Edit snapshot"
-msgstr "编辑快照"
 
 msgid "Edit target"
 msgstr "编辑目标"
@@ -6187,6 +6199,15 @@ msgstr "快照"
 msgid "Snapshot Visibility"
 msgstr "快照能见度"
 
+msgid "Snapshot is locked"
+msgstr ""
+
+msgid "Snapshot is marked for deletion"
+msgstr ""
+
+msgid "Snapshot is unlocked"
+msgstr ""
+
 msgid "Snapshots"
 msgstr "快照（Snapshots）"
 
@@ -6637,8 +6658,8 @@ msgid "The IP address that this hostname represents."
 msgstr "主机名称所代表的 IP 位址。"
 
 #, php-format
-msgid "The MIB '%s' already exist."
-msgstr "MIB '%s' 已经存在"
+msgid "The MIB '%s' already exists."
+msgstr ""
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -7342,9 +7363,9 @@ msgid ""
 msgstr "应该有足够处理最高的客户端并发，通常为4至6。"
 
 msgid ""
-"These MIBs will be added to /etc/sysctl.conf. This allow you to make changes "
-"to a running system."
-msgstr "这些 MIB 会加入 /etc/sysctl.conf。这样可以让您变更执行中的系统。"
+"These MIBs will be added to /etc/sysctl.conf. This allows you to make "
+"changes to a running system."
+msgstr ""
 
 msgid ""
 "These commands will be executed pre or post system initialization (booting) "
@@ -7617,8 +7638,8 @@ msgstr "本页反映在网页界面创建的配置。"
 msgid ""
 "This page reflects the current system configuration. It may be different to "
 "the configuration which has been created with the WebGUI if changes has been "
-"done via command line."
-msgstr "本页面反映了当前的系统配置。如果通过command line 更改配置则会与通过网页界面创建的设置不同。"
+"done via command line"
+msgstr ""
 
 msgid ""
 "This parameter controls whether files starting with a dot appear as hidden "
@@ -8843,3 +8864,33 @@ msgstr "卸载"
 
 msgid "version:"
 msgstr "版本："
+
+#, php-format
+#~ msgid "The MIB '%s' already exist."
+#~ msgstr "MIB '%s' 已经存在"
+
+#~ msgid "Add snapshot"
+#~ msgstr "添加快照"
+
+#~ msgid "Apply"
+#~ msgstr "套用"
+
+#~ msgid "Delete snapshot"
+#~ msgstr "删除快照"
+
+#~ msgid "Do you really want to delete this snapshot?"
+#~ msgstr "您确定要删除这个快照吗？"
+
+#~ msgid "Edit snapshot"
+#~ msgstr "编辑快照"
+
+#~ msgid ""
+#~ "These MIBs will be added to /etc/sysctl.conf. This allow you to make changes "
+#~ "to a running system."
+#~ msgstr "这些 MIB 会加入 /etc/sysctl.conf。这样可以让您变更执行中的系统。"
+
+#~ msgid ""
+#~ "This page reflects the current system configuration. It may be different to "
+#~ "the configuration which has been created with the WebGUI if changes has been "
+#~ "done via command line."
+#~ msgstr "本页面反映了当前的系统配置。如果通过command line 更改配置则会与通过网页界面创建的设置不同。"

@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-02 01:39+0000\n"
+"POT-Creation-Date: 2016-06-04 03:54+0000\n"
 "PO-Revision-Date: 2016-03-23 12:38+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-01 14:41+0000\n"
-"X-Generator: Launchpad (build 18081)\n"
+"X-Launchpad-Export-Date: 2016-06-04 14:04+0000\n"
+"X-Generator: Launchpad (build 18086)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -506,6 +506,9 @@ msgstr "Adăugare Rută"
 msgid "Add Rsync job"
 msgstr "Adăugare sarcină Rsync"
 
+msgid "Add Snapshot"
+msgstr ""
+
 msgid "Add URL"
 msgstr "Adăugare URL"
 
@@ -574,9 +577,6 @@ msgstr "Adăugare auto-test"
 
 msgid "Add share"
 msgstr "Adăugare partajare"
-
-msgid "Add snapshot"
-msgstr "Adăugare imagine sistem"
 
 msgid "Add target"
 msgstr "Adăugare destinație"
@@ -664,6 +664,9 @@ msgstr ""
 "class='vexpl'>modificați adresa IP a serverului "
 "dumneavoastră</span></li><li><span class='vexpl'>accesați Interfața Grafică "
 "folosind noua adresă IP</span></li></ul>"
+
+msgid "Age"
+msgstr ""
 
 msgid "Aggregation protocol"
 msgstr "Protocol de agregare"
@@ -775,6 +778,9 @@ msgstr ""
 msgid "Allows the server to try and become a local master browser."
 msgstr "Permite serverului să încerce să devină un Master Browser local."
 
+msgid "Allows to connect to a hidden network"
+msgstr ""
+
 msgid ""
 "Also known as 'Power-off Retract Count' per conventional HDD terminology. "
 "Raw value reports the number of unclean shutdowns, cumulative over the life "
@@ -866,8 +872,8 @@ msgstr "Adaugă partajările definite"
 msgid "Apple Filing Protocol"
 msgstr "Protocol Apple Filing"
 
-msgid "Apply"
-msgstr "Aplică"
+msgid "Apply Filter"
+msgstr ""
 
 msgid "Apply changes"
 msgstr "Aplicare modificări"
@@ -1452,6 +1458,9 @@ msgstr "Configurare"
 msgid "Confirmation"
 msgstr "Confirmare"
 
+msgid "Connect to hidden network"
+msgstr ""
+
 msgid "Connected FTP Users & Status"
 msgstr "Utilizatori conectați & Stare"
 
@@ -1750,6 +1759,9 @@ msgstr ""
 msgid "Create 4KB wrapper (nop device)."
 msgstr "Creare wrapper 4KB (dispozitiv nop)."
 
+msgid "Create Date"
+msgstr ""
+
 msgid "Create HVM Guest"
 msgstr "Creare cont HVM Guest"
 
@@ -2031,6 +2043,9 @@ msgstr ""
 msgid "Delete Selected RAID Volumes"
 msgstr ""
 
+msgid "Delete Selected Snapshots"
+msgstr ""
+
 msgid "Delete Selected Virtual Devices"
 msgstr ""
 
@@ -2105,9 +2120,6 @@ msgstr "Ștergere auto-test"
 
 msgid "Delete share"
 msgstr "Ștergere partajare"
-
-msgid "Delete snapshot"
-msgstr "Ștergere imagine sistem (snapshot)"
 
 msgid "Delete target"
 msgstr "Ștergere destinație"
@@ -2441,9 +2453,6 @@ msgstr "Doriți să ștergeți acest auto-test programat?"
 msgid "Do you really want to delete this share?"
 msgstr "Doriți să ștergeți această partajare?"
 
-msgid "Do you really want to delete this snapshot?"
-msgstr "Doriți să ștergeți această imagine sistem?"
-
 msgid "Do you really want to delete this target?"
 msgstr "Doriți să ștergeți această destinație?"
 
@@ -2524,6 +2533,9 @@ msgid "Do you want to delete selected options?"
 msgstr "Ștergeți opțiunile selectate?"
 
 msgid "Do you want to delete selected pools?"
+msgstr ""
+
+msgid "Do you want to delete selected snapshots?"
 msgstr ""
 
 msgid "Do you want to delete selected virtual devices?"
@@ -2683,6 +2695,9 @@ msgstr "Editare Rută"
 msgid "Edit Rsync job"
 msgstr "Editare activitate Rsync"
 
+msgid "Edit Snapshot"
+msgstr ""
+
 msgid "Edit URL"
 msgstr "Editare URL"
 
@@ -2751,9 +2766,6 @@ msgstr "Editare auto-test"
 
 msgid "Edit share"
 msgstr "Editare partajare"
-
-msgid "Edit snapshot"
-msgstr "Editare imaginea automată (snapshot)"
 
 msgid "Edit target"
 msgstr "Editare destinație"
@@ -6683,6 +6695,15 @@ msgstr "Imagine sistem"
 msgid "Snapshot Visibility"
 msgstr "Vizibilitate Imagine Sistem"
 
+msgid "Snapshot is locked"
+msgstr ""
+
+msgid "Snapshot is marked for deletion"
+msgstr ""
+
+msgid "Snapshot is unlocked"
+msgstr ""
+
 msgid "Snapshots"
 msgstr "Imagini Sistem"
 
@@ -7158,8 +7179,8 @@ msgid "The IP address that this hostname represents."
 msgstr "Adresa IP corespunzătoare sistemului."
 
 #, php-format
-msgid "The MIB '%s' already exist."
-msgstr "MIB-ul '%s' există deja."
+msgid "The MIB '%s' already exists."
+msgstr ""
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -7989,11 +8010,9 @@ msgstr ""
 "de concurență al clienților, de obicei se alege de la patru pînă la șase."
 
 msgid ""
-"These MIBs will be added to /etc/sysctl.conf. This allow you to make changes "
-"to a running system."
+"These MIBs will be added to /etc/sysctl.conf. This allows you to make "
+"changes to a running system."
 msgstr ""
-"Aceaste valori MIB vor fi adăugate în  /etc/sysctl.conf. Acest lucru vă "
-"permite să efectuați modificări la un sistem deja funcțional."
 
 msgid ""
 "These commands will be executed pre or post system initialization (booting) "
@@ -8349,11 +8368,8 @@ msgstr "Această pagină reflectă configurația creată prin Interfața Grafic�
 msgid ""
 "This page reflects the current system configuration. It may be different to "
 "the configuration which has been created with the WebGUI if changes has been "
-"done via command line."
+"done via command line"
 msgstr ""
-"Această pagină reflectă configurația curentă a sistemului. Poate fi diferită "
-"de configurația creată prin Interfața Grafică dacă modificările au fost "
-"făcute prin linia de comandă."
 
 msgid ""
 "This parameter controls whether files starting with a dot appear as hidden "
@@ -9706,3 +9722,38 @@ msgstr "demontare"
 
 msgid "version:"
 msgstr "versiune:"
+
+#~ msgid "Edit snapshot"
+#~ msgstr "Editare imaginea automată (snapshot)"
+
+#, php-format
+#~ msgid "The MIB '%s' already exist."
+#~ msgstr "MIB-ul '%s' există deja."
+
+#~ msgid "Apply"
+#~ msgstr "Aplică"
+
+#~ msgid "Add snapshot"
+#~ msgstr "Adăugare imagine sistem"
+
+#~ msgid "Delete snapshot"
+#~ msgstr "Ștergere imagine sistem (snapshot)"
+
+#~ msgid "Do you really want to delete this snapshot?"
+#~ msgstr "Doriți să ștergeți această imagine sistem?"
+
+#~ msgid ""
+#~ "These MIBs will be added to /etc/sysctl.conf. This allow you to make changes "
+#~ "to a running system."
+#~ msgstr ""
+#~ "Aceaste valori MIB vor fi adăugate în  /etc/sysctl.conf. Acest lucru vă "
+#~ "permite să efectuați modificări la un sistem deja funcțional."
+
+#~ msgid ""
+#~ "This page reflects the current system configuration. It may be different to "
+#~ "the configuration which has been created with the WebGUI if changes has been "
+#~ "done via command line."
+#~ msgstr ""
+#~ "Această pagină reflectă configurația curentă a sistemului. Poate fi diferită "
+#~ "de configurația creată prin Interfața Grafică dacă modificările au fost "
+#~ "făcute prin linia de comandă."
