@@ -222,7 +222,7 @@ include("fbegin.inc");
 						<?php unset($rawdata); ?>
 						<pre><?php
 						$devicetype_arg = (!empty($diskv['smart']['devicetypearg']))
-							? sprintf('-d sat -a',$diskv['smart']['devicetypearg'])
+							? sprintf('-d %s',$diskv['smart']['devicetypearg'])
 							: '';
 						exec("/usr/local/sbin/smartctl -AcH -l selftest -l error -l selective {$diskv['smart']['devicefilepath']} {$devicetype_arg}",$rawdata);
 						$rawdata = array_slice($rawdata, 3);
