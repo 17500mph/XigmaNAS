@@ -3,6 +3,7 @@ NAS4Free 10.3.0.3 - Pilingitam
 Changes:
 - Upgrade to FreeBSD 10.3-RELEASE-P5.
 - Add search function to Diagnostics|Log.
+- Add configuration option for second UPS system on webgui.
 - Update installer with full gpt support.
 - Refactoring Webgui parts and replace deprecated php code.
 - sshd Challenge-Response Authentication is now configurable.
@@ -32,6 +33,7 @@ Fixes:
 - Fix issue with zfs dataset permissions. (Introduced in Beta 2606)
 - Fix disable fw button not working under certain conditions.
 - Fix importing ZFS datasets and ZFS volumes from different ZFS pools.
+- Fix code format for Swedish file manager.
 
 Note:
 - iperf2 has been replaced for iperf3 because of inconsistent results for UDP above 2Gbps.
