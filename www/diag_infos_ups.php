@@ -11,6 +11,7 @@
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -196,8 +197,32 @@ function upsc_enable_change() {
 					</td>
 				</tr>
 				<?php else:?>
+                <?php 
+                    if (isset($config['ups']['ups2'])) { 
+                        echo(gettext("Selected UPS").":&nbsp;&nbsp;&nbsp"); ?>
+                        <form name="form2" action="diag_infos_ups.php" method="get">
+                        <select name="if" class="formfld" onchange="submit()">
+                        <?php
+                            $curif = $config['ups']['upsname'];
+                            if (isset($_GET['if']) && $_GET['if']) $curif = $_GET['if'];
+                            $ifnum = $curif;
+                            $ifdescrs = array($config['ups']['upsname'] => $config['ups']['upsname'], $config['ups']['ups2_upsname'] => $config['ups']['ups2_upsname']);
+                            foreach ($ifdescrs as $ifn => $ifd) {
+                                echo "<option value=\"$ifn\"";
+                                if ($ifn == $curif) echo " selected=\"selected\"";
+                                echo ">" . htmlspecialchars($ifd) . "</option>\n";
+                            }
+                        ?>
+                        </select>
+                        </form>
+                        <br><br>
+                        <?php 
+                    } 
+                    else $ifnum = $config['ups']['upsname']; 
+                    //echo($ifnum);
+                ?>
 				<?php
-					$cmd = "/usr/local/bin/upsc {$config['ups']['upsname']}@{$config['ups']['ip']}";
+					$cmd = "/usr/local/bin/upsc {$ifnum}@{$config['ups']['ip']}";
 					$handle = popen($cmd, 'r');
 					
 					if($handle) {

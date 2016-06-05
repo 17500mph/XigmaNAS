@@ -6,15 +6,12 @@
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
-	Portions of freenas (http://www.freenas.org).
-	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
-	All rights reserved.
-
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -144,6 +141,37 @@ function get_upsinfo() {
 	return $ups;
 }
 
+function get_upsinfo2() {
+	global $config;
+
+	if (!isset($config['ups']['enable']) || !isset($config['ups']['ups2']))
+		return NULL;
+	$ups = array();
+	$cmd = "/usr/local/bin/upsc {$config['ups']['ups2_upsname']}@{$config['ups']['ip']}";
+	exec($cmd,$rawdata);
+	foreach($rawdata as $line) {
+		$line = explode(':', $line);
+		$ups[$line[0]] = trim($line[1]);
+	}
+	$disp_status = get_ups_disp_status($ups['ups.status']);
+	$ups['disp_status'] = $disp_status;
+	$value = !empty($ups['ups.load']) ? $ups['ups.load'] : 0;
+	$ups['load'] = array(
+		"percentage" => $value,
+		"used" => sprintf("%.1f", $value),
+		"tooltip_used" => sprintf("%s%%", $value),
+		"tooltip_available" => sprintf(gettext("%s%% available"), 100 - $value),
+	);
+	$value = !empty($ups['battery.charge']) ? $ups['battery.charge'] : 0;
+	$ups['battery'] = array(
+		"percentage" => $value,
+		"used" => sprintf("%.1f", $value),
+		"tooltip_used" => sprintf("%s%%", $value),
+		"tooltip_available" => sprintf(gettext("%s%% available"), 100 - $value),
+	);
+	return $ups;
+}
+
 function get_vbox_vminfo($user, $uuid) {
 	$vminfo = array();
 	unset($rawdata);
@@ -197,7 +225,9 @@ if (is_ajax()) {
 	$vipstatus = get_vip_status();
 	$sysinfo['vipstatus'] = $vipstatus;
 	$upsinfo = get_upsinfo();
+	$upsinfo2 = get_upsinfo2();
 	$sysinfo['upsinfo'] = $upsinfo;
+	$sysinfo['upsinfo2'] = $upsinfo2;
 	render_ajax($sysinfo);
 }
 
@@ -366,6 +396,28 @@ $(document).ready(function(){
 			}
 			var ups_id = "battery";
 			var ui = data.upsinfo[ups_id];
+			if ($('#ups_status_'+ups_id+'_bar_used').size() > 0) {
+				$('#ups_status_'+ups_id+'_bar_used').attr('width', ui.percentage + 'px');
+				$('#ups_status_'+ups_id+'_bar_used').attr('title', ui.tooltip_used);
+				$('#ups_status_'+ups_id+'_bar_free').attr('width', (100 - ui.percentage) + 'px');
+				$('#ups_status_'+ups_id+'_bar_free').attr('title', ui.tooltip_available);
+				$('#ups_status_'+ups_id+'_used').text(ui.used);
+			}
+		}
+		if (typeof(data.upsinfo2) != 'undefined' && data.upsinfo2 !== null) {
+			if ($('#ups_status_disp_status2').size() > 0)
+				$('#ups_status_disp_status2').text(data.upsinfo2.disp_status);
+			var ups_id = "load2";
+			var ui = data.upsinfo2["load"];
+			if ($('#ups_status_'+ups_id+'_bar_used').size() > 0) {
+				$('#ups_status_'+ups_id+'_bar_used').attr('width', ui.percentage + 'px');
+				$('#ups_status_'+ups_id+'_bar_used').attr('title', ui.tooltip_used);
+				$('#ups_status_'+ups_id+'_bar_free').attr('width', (100 - ui.percentage) + 'px');
+				$('#ups_status_'+ups_id+'_bar_free').attr('title', ui.tooltip_available);
+				$('#ups_status_'+ups_id+'_used').text(ui.used);
+			}
+			var ups_id = "battery2";
+			var ui = data.upsinfo2["battery"];
 			if ($('#ups_status_'+ups_id+'_bar_used').size() > 0) {
 				$('#ups_status_'+ups_id+'_bar_used').attr('width', ui.percentage + 'px');
 				$('#ups_status_'+ups_id+'_bar_used').attr('title', ui.tooltip_used);
@@ -631,7 +683,7 @@ $(document).ready(function(){
 			</table></td>
 		</tr>
 		<tr>
-			<td width="25%" class="vncellt"><?=gettext("UPS Status");?></td>
+			<td width="25%" class="vncellt"><?=gettext("UPS Status")." ".$config["ups"]["upsname"];?></td>
 			<td width="75%" class="listr">
 			<table width="100%" border="0" cellspacing="0" cellpadding="2">
 			<?php if (!isset($config['ups']['enable'])):?>
@@ -676,6 +728,46 @@ $(document).ready(function(){
 			<?php endif;?>
 			</table></td>
 		</tr>
+		<?php
+        	if (isset($config['ups']['enable']) && isset($config['ups']['ups2'])) { ?>
+			<td width="25%" class="vncellt"><?=gettext("UPS Status")." ".$config["ups"]["ups2_upsname"];?></td>
+			<td width="75%" class="listr">
+			<table width="100%" border="0" cellspacing="0" cellpadding="2">
+		    <?php
+                $cmd = "/usr/local/bin/upsc {$config['ups']['ups2_upsname']}@{$config['ups']['ip']}";
+                $handle = popen($cmd, 'r');
+                
+                if ($handle) {
+                	$read = fread($handle, 4096);
+                	pclose($handle);
+                
+                	$lines = explode("\n", $read);
+                	$ups = array();
+                	foreach($lines as $line) {
+                		$line = explode(':', $line);
+                		$ups[$line[0]] = trim($line[1]);
+                	}
+                
+                	if (count($lines) == 1)
+                		tblrow('ERROR:', 'Data stale!');
+                
+                	$disp_status = get_ups_disp_status($ups['ups.status']);
+                	tblrow(gettext('Status'), '<span id="ups_status_disp_status2">'.$disp_status."</span>". "  <small>[<a href='diag_infos_ups.php'>" . gettext("Show UPS Information")."</a></small>]");
+                	tblrowbar("load2", gettext('Load'), $ups['ups.load'], '%', '100-80', '79-60', '59-0');
+                	tblrowbar("battery2", gettext('Battery Level'), $ups['battery.charge'], '%', '0-29' ,'30-79', '80-100');
+                }
+                
+                unset($handle);
+                unset($read);
+                unset($lines);
+                unset($status);
+                unset($disp_status);
+                unset($ups);
+                unset($cmd);
+                echo('</table></td>');
+	            echo('</tr>');
+            }
+        ?>
 		<?php
 			unset($vmlist);
 			mwexec2("/usr/bin/find /dev/vmm -type c", $vmlist);
