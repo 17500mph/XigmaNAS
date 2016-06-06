@@ -90,7 +90,7 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
 	    <div>Michael Schneider (<a href="mailto:ms49434@nas4free.org">ms49434@nas4free.org</a>)<br />
 	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">Developer</font></em></div><br />
 
-	    <div>Michael Zoon (<a href="mailto:zoon01@nas4free.org">zoon01@nas4free.org</a>)<br />
+	    <div>Michael Zoon (<a href="mailto:zoon1@nas4free.org">zoon1@nas4free.org</a>)<br />
 	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">Developer & Project leader</font></em></div><br />
 
 	    <hr size="1" />
