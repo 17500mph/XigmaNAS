@@ -1,6 +1,5 @@
-<?php
-/*
-	reboot.php
+<!--
+	spinner.inc
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
@@ -30,46 +29,34 @@
 	The views and conclusions contained in the software and documentation are those
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
-*/
-require("auth.inc");
-require("guiconfig.inc");
-
-$pgtitle = array(gettext("System"), gettext("Reboot"), gettext("Now"));
-
-if ($_POST) {
-	if ($_POST['Submit'] !== gettext("No")) {
-		$rebootmsg = gettext("The system is rebooting now. This may take one minute.");
-	} else {
-		header("Location: index.php");
-		exit;
-	}
+ -->
+<!-- attach spinner -->
+<script type="text/javascript">
+function spinner() {
+        var opts = {
+            lines: 10, // The number of lines to draw
+            length: 7, // The length of each line
+            width: 4, // The line thickness
+            radius: 10, // The radius of the inner circle
+            corners: 1, // Corner roundness (0..1)
+            rotate: 0, // The rotation offset
+            color: '#000', // #rgb or #rrggbb
+            opacity: 0.45, // Opacity of the lines
+            speed: 1, // Rounds per second
+            trail: 60, // Afterglow percentage
+            shadow: false, // Whether to render a shadow
+            hwaccel: false, // Whether to use hardware acceleration
+            className: 'spinner', // The CSS class to assign to the spinner
+            zIndex: 2e9, // The z-index (defaults to 2000000000)
+            top: '50%', // Top position relative to parent
+            left: '50%', // Left position relative to parent
+            position: 'fixed', // Element positioning
+        };
+        var target = document.getElementById('spinner_main');
+        var spinner = new Spinner(opts).spin(target);
+        $('#spinner_overlay').show();
 }
-?>
-<?php include("fbegin.inc");?>
-<?php include("js/spinner.inc");?>
-<script src="js/spin.min.js"></script>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td class="tabnavtbl">
-      <ul id="tabnav">
-        <li class="tabact"><a href="reboot.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Now");?></span></a></li>
-        <li class="tabinact"><a href="reboot_sched.php"><span><?=gettext("Scheduled");?></span></a></li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td class="tabcont">
-			<?php if (!empty($rebootmsg)): echo print_info_box($rebootmsg); sleep(1); system_reboot(); else:?>
-			<form action="reboot.php" method="post" onsubmit="spinner()">
-			  <strong><?=gettext("Are you sure you want to reboot the system?");?></strong>
-				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Yes");?>" />
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("No");?>" />
-				</div>
-				<?php include("formend.inc");?>
-			</form>
-			<?php endif;?>
-    </td>
-  </tr>
-</table>
-<?php include("fend.inc");?>
+</script>
+<div id="spinner_main"></div>
+<div id="spinner_overlay" style="display: none; background-color: white; position: fixed; left:0; top:0; height:100%; width:100%; opacity: 0.25;"></div>
+<!-- end of spinner -->
