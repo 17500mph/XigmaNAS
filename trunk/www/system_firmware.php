@@ -6,14 +6,6 @@
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
-	Portions of freenas (http://www.freenas.org).
-	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
-	All rights reserved.
-
-	Portions of m0n0wall (http://m0n0.ch/wall).
-	Copyright (c) 2003-2006 Manuel Kasper <mk@neon1.net>.
-	All rights reserved.
-
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
@@ -360,6 +352,8 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 }
 ?>
 <?php include("fbegin.inc");?>
+<?php include("js/spinner.inc");?>
+<script src="js/spin.min.js"></script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabcont">
@@ -394,7 +388,7 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 			<?php else:?>
 				<?php if ($part1ok): ?>
 					<?php if (!file_exists($d_firmwarelock_path)):?>
-					<form action="system_firmware.php" method="post" enctype="multipart/form-data">
+					<form action="system_firmware.php" method="post" enctype="multipart/form-data" onsubmit="spinner()">
 						<?php if (!file_exists($d_sysrebootreqd_path)):?>
 								<?php if (!file_exists($d_fwupenabled_path)):?>
 									<div id="submit">

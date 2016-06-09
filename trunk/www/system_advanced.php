@@ -6,10 +6,6 @@
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
-	Portions of freenas (http://www.freenas.org).
-	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
-	All rights reserved.
-
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
@@ -264,6 +260,8 @@ function sysctl_tune($mode) {
 }
 ?>
 <?php include("fbegin.inc");?>
+<?php include("js/spinner.inc");?>
+<script src="js/spin.min.js"></script>
 <script type="text/javascript">
 <!--
 function sysconsaver_change() {
@@ -311,7 +309,7 @@ function powerd_change() {
 	</tr>
 	<tr>
 		<td class="tabcont">
-			<form action="system_advanced.php" method="post" name="iform" id="iform">
+			<form action="system_advanced.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
