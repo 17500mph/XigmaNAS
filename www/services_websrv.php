@@ -207,7 +207,7 @@ function authentication_change() {
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td class="tabcont">
-    	<form action="services_websrv.php" method="post" name="iform" id="iform">
+    	<form action="services_websrv.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 	    	<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<?php if (updatenotify_exists("websrvauth")) print_config_change_box();?>

@@ -172,7 +172,7 @@ function set_selected(name) {
   </tr>
   <tr>
     <td class="tabcont">
-			<form action="system_cron_edit.php" method="post" name="iform" id="iform">
+			<form action="system_cron_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<?php if (!empty($execmsg)) print_info_box($execmsg);?>
 				<?php if (!empty($execfailmsg)) print_error_box($execfailmsg);?>

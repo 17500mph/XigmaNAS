@@ -11,6 +11,7 @@
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -99,7 +100,7 @@ function hastresource_process_updatenotification($mode, $data) {
   </tr>
   <tr>
     <td class="tabcont">
-      <form action="services_hast_resource.php" method="post">
+      <form action="services_hast_resource.php" method="post" onsubmit="spinner()">
 	<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 	<?php if (updatenotify_exists("hastresource")) print_config_change_box();?>
 	<table width="100%" border="0" cellpadding="0" cellspacing="0">

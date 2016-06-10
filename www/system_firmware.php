@@ -352,8 +352,6 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 }
 ?>
 <?php include("fbegin.inc");?>
-<?php include("js/spinner.inc");?>
-<script src="js/spin.min.js"></script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabcont">

@@ -136,7 +136,7 @@ if ($_POST) {
   </tr>
   <tr>
     <td class="tabcont">
-			<form action="system_rc_edit.php" method="post" name="iform" id="iform">
+			<form action="system_rc_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 				<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
 			  <table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_inputbox("command", gettext("Command"), $pconfig['command'], gettext("The command to be executed."), true, 60);?>

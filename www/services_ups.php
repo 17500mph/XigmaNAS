@@ -287,7 +287,7 @@ function ups2_change() {
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td class="tabcont">
-    	<form action="services_ups.php" method="post" name="iform" id="iform">
+    	<form action="services_ups.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 				<?php if (!empty($pconfig['enable']) && !empty($pconfig['email_enable']) && (0 !== email_validate_settings())) print_error_box(sprintf(gettext("Make sure you have already configured your <a href='%s'>Email</a> settings."), "system_email.php"));?>
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
