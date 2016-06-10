@@ -48,8 +48,6 @@ if ($_POST) {
 }
 ?>
 <?php include("fbegin.inc");?>
-<?php include("js/spinner.inc");?>
-<script src="js/spin.min.js"></script>
 <?php if (!empty($rebootmsg)): echo print_info_box($rebootmsg); else:?>
 <form action="system_defaults.php" method="post" onsubmit="spinner()">
 	<table width="100%" border="0" cellpadding="0" cellspacing="0">

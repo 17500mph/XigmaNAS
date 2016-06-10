@@ -11,6 +11,7 @@
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -131,7 +132,7 @@ $(document).ready(function(){
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td class="tabcont">
-      <form action="services_syncthing.php" method="post" name="iform" id="iform">
+      <form action="services_syncthing.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 	<?php if (!empty($errormsg)) print_error_box($errormsg);?>
 	<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 	<?php if (!empty($savemsg)) print_info_box($savemsg);?>

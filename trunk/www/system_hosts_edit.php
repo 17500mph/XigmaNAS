@@ -6,15 +6,12 @@
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
-	Portions of freenas (http://www.freenas.org).
-	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
-	All rights reserved.
-
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -119,7 +116,7 @@ if ($_POST) {
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td class="tabcont">
-      <form action="system_hosts_edit.php" method="post" name="iform" id="iform">
+      <form action="system_hosts_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
       	<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
         <table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_inputbox("name", gettext("Hostname"), $pconfig['name'], gettext("The host name may only consist of the characters a-z, A-Z and 0-9, - , _ and ."), true, 40);?>

@@ -260,8 +260,6 @@ function sysctl_tune($mode) {
 }
 ?>
 <?php include("fbegin.inc");?>
-<?php include("js/spinner.inc");?>
-<script src="js/spin.min.js"></script>
 <script type="text/javascript">
 <!--
 function sysconsaver_change() {

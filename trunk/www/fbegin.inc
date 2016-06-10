@@ -266,6 +266,8 @@ function display_menu($menuid) {
 	<link href="/css/tabs.css" rel="stylesheet" type="text/css" />	
 	<script type="text/javascript" src="/js/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/gui.js"></script>
+	<?php include("js/spinner.inc");?>
+	<script type="text/javascript" src="/js/spin.min.js"></script>
 <?php
 	if (isset($pglocalheader) && !empty($pglocalheader)) {
 		if (is_array($pglocalheader)) {

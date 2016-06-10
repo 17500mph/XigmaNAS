@@ -172,7 +172,7 @@ $pgtitle = array(gettext('System'), gettext('Advanced'), gettext('rc.conf'), $is
 		<li class="tabinact"><a href="system_sysctl.php"><span><?=gettext("sysctl.conf");?></span></a></li>
 	</ul></td></tr>
 </tbody></table>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
+<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform" onsubmit="spinner()">
 	<?php
 		if (!empty($errormsg)) {
 			print_error_box($errormsg);
