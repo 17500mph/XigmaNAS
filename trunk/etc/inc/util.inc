@@ -2919,4 +2919,8 @@ function decrypt_aes256cbc($password, $b64enc_data)
 		return FALSE;
 	return $dec;
 }
+
+function gettext_gen2($data) {
+	return htmlentities(strip_tags(gettext($data)));
+}
 ?>
