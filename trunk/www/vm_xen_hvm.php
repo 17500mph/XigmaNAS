@@ -278,7 +278,7 @@ $(document).ready(function(){
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td class="tabcont">
-      <form action="vm_xen_hvm.php" method="post" name="iform" id="iform">
+      <form action="vm_xen_hvm.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 	<?php if (!empty($errormsg)) print_error_box($errormsg);?>
 	<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 	<?php if (!empty($savemsg)) print_info_box($savemsg);?>
