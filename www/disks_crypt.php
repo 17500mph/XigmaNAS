@@ -6,15 +6,12 @@
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
-	Portions of freenas (http://www.freenas.org).
-	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
-	All rights reserved.
-
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -132,7 +129,7 @@ function geli_process_updatenotification($mode, $data) {
   </tr>
   <tr>
     <td class="tabcont">
-      <form action="disks_crypt.php" method="post">
+      <form action="disks_crypt.php" method="post" onsubmit="spinner()">
         <?php if (!empty($savemsg)) print_info_box($savemsg); ?>
 	<?php if (!empty($errormsg)) print_error_box($errormsg);?>
 	<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
