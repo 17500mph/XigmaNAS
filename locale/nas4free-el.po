@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-04 03:54+0000\n"
-"PO-Revision-Date: 2016-06-05 02:15+0000\n"
+"Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
+"POT-Creation-Date: 2016-06-06 10:52+0000\n"
+"PO-Revision-Date: 2016-06-06 12:13+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-05 04:32+0000\n"
-"X-Generator: Launchpad (build 18086)\n"
+"X-Launchpad-Export-Date: 2016-06-12 16:41+0000\n"
+"X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
 "X-Poedit-Language: Greek\n"
@@ -521,7 +521,7 @@ msgid "Add Rsync job"
 msgstr "Προσθήκη εργασίας Rsync"
 
 msgid "Add Snapshot"
-msgstr ""
+msgstr "Προσθήκη Στιγμιότυπου"
 
 msgid "Add URL"
 msgstr "Προσθήκη URL"
@@ -607,6 +607,13 @@ msgstr "Πρόσθετος Χώρος Αποθήκευσης"
 msgid "Additional group"
 msgstr "Επιπρόσθετη ομάδα"
 
+msgid ""
+"Additional parameters to the hardware-specific part of the driver for second "
+"UPS."
+msgstr ""
+"Πρόσθετες παράμετροι για το κομμάτι του οδηγού που εξειδικεύεται στο υλικό "
+"του δεύτερου UPS."
+
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr ""
 "Πρόσθετες παράμετροι για το κομμάτι του οδηγού που εξειδικεύεται στο υλικό."
@@ -665,7 +672,7 @@ msgstr ""
 "Αφού πατήσετε  &quot;Αποθήκευση&quot;, μπορεί να χρειαστεί να κάνετε ακόμα "
 "ένα ή περισσότερα από τα ακόλουθα βήματα πριν να μπορέσετε να έχετε ξανά "
 "πρόσβαση στον διακομιστή : <ul><li>Αλλαγή της διεύθυνσης IP του υπολογιστή "
-"σας</li><li>Πρόσβαση στο web περιβάλλον εργασίας με τη νέα διεύθυνση "
+"σας</li><li>Πρόσβαση στο web περιβάλλον διαχείρισης με τη νέα διεύθυνση "
 "IP</li></ul>"
 
 #, php-format
@@ -681,10 +688,10 @@ msgstr ""
 "κάνετε ένα ή περισσότερα από τα παρακάτω βήματα πριν μπορέσετε να έχετε ξανά "
 "πρόσβαση στον διακομιστή: <ul><li><span class='vexpl'>Αλλαγή της διεύθυνσης "
 "IP του διακομιστή σας</span></li><li><span class='vexpl'>Πρόσβαση στο web "
-"περιβάλλον εργασίας με τη νέα διεύθυνση IP</span></li></ul>"
+"περιβάλλον διαχείρισης με τη νέα διεύθυνση IP</span></li></ul>"
 
 msgid "Age"
-msgstr ""
+msgstr "Ηλικία"
 
 msgid "Aggregation protocol"
 msgstr "Πρωτόκολλο συνάθροισης"
@@ -805,7 +812,7 @@ msgstr ""
 "περιηγητής."
 
 msgid "Allows to connect to a hidden network"
-msgstr ""
+msgstr "Επιτρέπει τη σύνδεση σε κρυφό δίκτυο"
 
 msgid ""
 "Also known as 'Power-off Retract Count' per conventional HDD terminology. "
@@ -899,7 +906,7 @@ msgid "Apple Filing Protocol"
 msgstr "Πρωτοκόλλο Αρχειοθέτησης Apple"
 
 msgid "Apply Filter"
-msgstr ""
+msgstr "Εφαρμογή Φίλτρου"
 
 msgid "Apply changes"
 msgstr "Εφαρμογή αλλαγών"
@@ -2078,7 +2085,7 @@ msgid "Delete Selected RAID Volumes"
 msgstr "Διαγραφή Επιλεγμένων τόμων RAID"
 
 msgid "Delete Selected Snapshots"
-msgstr ""
+msgstr "Διαγραφή Επιλεγμένων Στιγμιότυπων"
 
 msgid "Delete Selected Virtual Devices"
 msgstr "Διαγραφή Επιλεγμένων Εικονικών Συσκευών"
@@ -2588,7 +2595,7 @@ msgid "Do you want to delete selected pools?"
 msgstr "Θέλετε να διαγράψετε τα επιλεγμένα pool;"
 
 msgid "Do you want to delete selected snapshots?"
-msgstr ""
+msgstr "Θέλετε να διαγράψετε τα επιλεγμένα στιγμιότυπα;"
 
 msgid "Do you want to delete selected virtual devices?"
 msgstr "Θέλετε να διαγράψετε τις επιλεγμένες εικονικές συσκευές;"
@@ -2753,7 +2760,7 @@ msgid "Edit Rsync job"
 msgstr "Επεξεργασία εργασίας Rsync"
 
 msgid "Edit Snapshot"
-msgstr ""
+msgstr "Επεξεργασία Στιγμιότυπου"
 
 msgid "Edit URL"
 msgstr "Επεξεργασία URL"
@@ -3012,6 +3019,9 @@ msgstr ""
 msgid "Enable reverse DNS lookup."
 msgstr "Ενεργοποίηση αντίστροφης αναζήτησης DNS."
 
+msgid "Enable second local connected UPS."
+msgstr "Επιτρέπει δεύτερο τοπικά συνδεμένο UPS."
+
 msgid "Enable serial console."
 msgstr "Ενεργοποίηση σειριακής κονσόλας"
 
@@ -3081,8 +3091,8 @@ msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr ""
-"Εισάγετε έναν προσαρμοσμένο αριθμό θύρας για το web περιβάλλον εργασίας αν "
-"θέλετε να υπερισχύσει του προεπιλεγμένου (80 για HTTP, 443 για HTTPS)."
+"Εισάγετε έναν προσαρμοσμένο αριθμό θύρας για το web περιβάλλον διαχείρισης "
+"αν θέλετε να υπερισχύσει του προεπιλεγμένου (80 για HTTP, 443 για HTTPS)."
 
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
@@ -4001,7 +4011,7 @@ msgstr "Στις περισσότερες περιπτώσεις, το 'Δημό
 
 msgid "In slave mode it is the UPS name (Identifier) at the UPS master."
 msgstr ""
-"Σε λειτουργία slave είναι το όνομα UPS (Αναγνωριστικό) κατά το master UPS."
+"Σε λειτουργία slave είναι το όνομα UPS (Αναγνωριστικό) του master UPS."
 
 msgid "In/Out errors"
 msgstr "Σφάλματα εισόδου/εξόδου"
@@ -6183,6 +6193,18 @@ msgstr "Όνομα απομακρυσμένου αρθρώματος"
 msgid "Remote monitoring"
 msgstr "Απομακρυσμένη παρακολούθηση"
 
+msgid ""
+"Remote monitoring password. Must be equal on both master and slave system."
+msgstr ""
+"Κωδικός πρόσβασης για απομακρυσμένη παρακολούθηση. Πρέπει να είναι το ίδιο "
+"στο master και στο slave σύστημα."
+
+msgid ""
+"Remote monitoring username. Must be equal on both master and slave system."
+msgstr ""
+"Όνομα χρήστη για απομακρυσμένη παρακολούθηση. Πρέπει να είναι το ίδιο στο "
+"master και στο slave σύστημα."
+
 msgid "Remote rsync daemon"
 msgstr "Δαίμονας απομακρυσμένου rsync"
 
@@ -6576,6 +6598,9 @@ msgstr ""
 msgid "Selected"
 msgstr "Επιλεγμένο"
 
+msgid "Selected UPS"
+msgstr "Επιλεγμένο UPS"
+
 msgid "Selected device or label does not exist."
 msgstr "Η επιλεγμένη συσκευή ή ετικέτα δεν υπάρχουν."
 
@@ -6825,13 +6850,13 @@ msgid "Snapshot Visibility"
 msgstr "Ορατότητα στιγμιότυπου"
 
 msgid "Snapshot is locked"
-msgstr ""
+msgstr "Το στιγμιότυπο είναι κλειδωμένο"
 
 msgid "Snapshot is marked for deletion"
-msgstr ""
+msgstr "Το στιγμιότυπο έχει σημειωθεί προς διαγραφή"
 
 msgid "Snapshot is unlocked"
-msgstr ""
+msgstr "Το στιγμιότυπο είναι ξεκλείδωτο"
 
 msgid "Snapshots"
 msgstr "Στιγμιότυπα"
@@ -6890,16 +6915,16 @@ msgid "Speaker Beep"
 msgstr "Ηχητική Ειδοποίηση"
 
 msgid ""
-"Specific to He8 drives from HGST. The Helium, so says the literature, allows "
-"the drives to run cooler and quieter, and reduces power consumption. This is "
-"the status of the Helium in the drive. It is a pre-fail attribute that trips "
-"once the drive detects that the internal environment is out of specification."
+"Specific Helium Level. The Helium, so says the literature, allows the drives "
+"to run cooler and quieter, and reduces power consumption. This is the status "
+"of the Helium in the drive. It is a pre-fail attribute that trips once the "
+"drive detects that the internal environment is out of specification."
 msgstr ""
-"Υπάρχει ειδικά σε  He8 δίσκους της  HGST. Το ήλιο, σύμφωνα με τις "
-"προδιαγραφές, επιτρέπει στους δίσκους πιο ψυχρή και πιο ήσυχη λειτουργία και "
-"μειώνει την κατανάλωση ρεύματος. Αυτή είναι η κατάσταση του ήλιου στον "
-"δίσκο. Είναι ένα pre-fail  χαρακτηριστικό που εμφανίζεται μόλις ο δίσκος "
-"ανιχνεύσει ότι το εσωτερικό περιβάλλον είναι εκτός προδιαγραφών."
+"Συγκεκριμένο Επίπεδο Ηλίου. Το Ήλιο, σύμφωνα με τη βιβλιογραφία, επιτρέπει "
+"στο δίσκο να δουλεύει πιο δροσερά και πιο ήσυχα, και μειώνει την κατανάλωση "
+"ρεύματος. Αυτή είναι η κατάσταση του Ήλιου στο δίσκο. Είναι ένα "
+"χαρακτηριστικό pre-fail που αλλάζει μόλις ο δίσκος ανιχνεύσει ότι το "
+"εσωτερικό περιβάλλον είναι εκτός προδιαγραφής."
 
 msgid "Specified path is NFSv4 root directory."
 msgstr "Η διαδρομή που ορίστηκε είναι ο ριζικός φάκελος του NFSv4."
@@ -7319,7 +7344,7 @@ msgstr "Η διεύθυνση IP που αντιπροσωπεύει αυτό τ
 
 #, php-format
 msgid "The MIB '%s' already exists."
-msgstr ""
+msgstr "To MIB '%s' υπάρχει ήδη."
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -7731,6 +7756,14 @@ msgstr ""
 
 #, php-format
 msgid ""
+"The driver used to communicate with your second UPS. Get the list of "
+"available <a href='%s' target='_blank'>drivers</a>."
+msgstr ""
+"Ο οδηγός που χρησιμοποιείται για την επικοινωνία με το δεύτερο UPS. Πατήστε "
+"για τη λίστα των διαθέσιμων <a href='%s' target='_blank'>οδηγών</a>."
+
+#, php-format
+msgid ""
 "The driver used to connect with the LCD. The list of available <a href='%s' "
 "target='_blank'>drivers</a>."
 msgstr ""
@@ -8034,6 +8067,9 @@ msgstr "Ο αριθμός του κανόνα καθορίζει τη σειρά
 msgid "The serial or USB port where your UPS is connected."
 msgstr "Η σειριακη θύρα ή θύρα USB στην οποία είναι συνδεδεμένο το UPS."
 
+msgid "The serial or USB port where your second UPS is connected."
+msgstr "Η σειριακή ή USB θύρα που είναι συνδεμένο το δεύτερο UPS."
+
 #, php-format
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr ""
@@ -8183,6 +8219,8 @@ msgid ""
 "These MIBs will be added to /etc/sysctl.conf. This allows you to make "
 "changes to a running system."
 msgstr ""
+"Αυτά τα MIB θα προστεθούν στο  /etc/sysctl.conf. Αυτό σας επιτρέπει να "
+"κάνετε αλλαγές σε ένα σύστημα που είναι σε λειτουργία."
 
 msgid ""
 "These commands will be executed pre or post system initialization (booting) "
@@ -8441,6 +8479,12 @@ msgstr ""
 "σύστημα."
 
 msgid ""
+"This name is used to uniquely identify your second UPS on this system."
+msgstr ""
+"Αυτό το όνομα χρησιμοποιείται για τη μοναδική αναγνώριση του δεύτερου UPS "
+"στο σύστημα"
+
+msgid ""
 "This option allows the users and groups that access a share to be specified. "
 "Users and groups are specified, delimited by commas. Groups are designated "
 "by a @ prefix."
@@ -8567,6 +8611,9 @@ msgid ""
 "the configuration which has been created with the WebGUI if changes has been "
 "done via command line"
 msgstr ""
+"Αυτή η σελίδα αντικατοπτρίζει τις τρέχουσες ρυθμίσεις του συστήματος. Μπορεί "
+"να είναι διαφορετικές από τις ρυθμίσεις που δημιουργήθηκαν με το web "
+"περιβάλλον διαχείρισης αν οι αλλαγές έγιναν με τη χρήση της γραμμής εντολών"
 
 msgid ""
 "This parameter controls whether files starting with a dot appear as hidden "

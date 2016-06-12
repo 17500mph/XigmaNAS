@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-04 03:54+0000\n"
-"PO-Revision-Date: 2016-06-04 14:50+0000\n"
+"Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
+"POT-Creation-Date: 2016-06-06 10:52+0000\n"
+"PO-Revision-Date: 2016-06-07 19:04+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-04 16:41+0000\n"
-"X-Generator: Launchpad (build 18086)\n"
+"X-Launchpad-Export-Date: 2016-06-12 16:41+0000\n"
+"X-Generator: Launchpad (build 18097)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -588,8 +588,15 @@ msgstr "Kiegészítő tároló"
 msgid "Additional group"
 msgstr "További csoport"
 
+msgid ""
+"Additional parameters to the hardware-specific part of the driver for second "
+"UPS."
+msgstr ""
+"Második szünetmentes illeszetőprogramjnak hardverfüggő részének további "
+"paraméterei."
+
 msgid "Additional parameters to the hardware-specific part of the driver."
-msgstr "További paraméterek a meghajtó hardver-specifikus részéhez."
+msgstr "További paraméterek az illesztőprogram hardver-specifikus részéhez."
 
 msgid "Address"
 msgstr "Cím"
@@ -2615,10 +2622,10 @@ msgid "Driver parameters"
 msgstr "Illesztőprogram paraméterek"
 
 msgid "Driver used"
-msgstr "Illesztőprogram"
+msgstr "Használatban lévő illesztőprogram"
 
 msgid "Driver version"
-msgstr "Illesztőprogram verzió"
+msgstr "Illesztőprogram verziója"
 
 msgid "Driver version internal"
 msgstr "Illesztőprogram belső verziója"
@@ -2921,6 +2928,9 @@ msgstr ""
 
 msgid "Enable reverse DNS lookup."
 msgstr "Fordított DNS keresés engedélyezése"
+
+msgid "Enable second local connected UPS."
+msgstr "Második helyi kapcsolatú szünetmentes engedélyezése."
 
 msgid "Enable serial console."
 msgstr "Speciális konzol engedélyezése."
@@ -4939,7 +4949,7 @@ msgid "NTP time server"
 msgstr "NTP-időkiszolgáló"
 
 msgid "NUT Internal Driver Information"
-msgstr "NUT Belső Meghajtó Információ"
+msgstr "NUT Belső Illesztőprogram Információ"
 
 msgid "Name"
 msgstr "Név"
@@ -5189,8 +5199,8 @@ msgid ""
 "not explicitly support it, VLAN tagging will still work, but the reduced MTU "
 "may cause problems."
 msgstr ""
-"Nem mindegyik meghajtó/hálózati kártya támogatja megfelelően a 802.1Q VLAN "
-"címkézést (tagging). A VLAN címkézés  továbbra is működik az azt "
+"Nem mindegyik illesztőprogram/hálózati kártya támogatja megfelelően a 802.1Q "
+"VLAN címkézést (tagging). A VLAN címkézés  továbbra is működik az azt "
 "kifejezetten nem támogató kártyákon, de a csökkentett MTU problémákat "
 "okozhat."
 
@@ -6035,6 +6045,18 @@ msgstr "Távoli modul neve"
 msgid "Remote monitoring"
 msgstr "Távoli megfigyelés"
 
+msgid ""
+"Remote monitoring password. Must be equal on both master and slave system."
+msgstr ""
+"Távoli felügyeleti jelszó. Ugyanannak kell lennie a mester és a szolga "
+"rendszeren."
+
+msgid ""
+"Remote monitoring username. Must be equal on both master and slave system."
+msgstr ""
+"Távoli felügyeleti felhasználónév. Ugyanannak kell lennie a mester és a "
+"szolga rendszeren."
+
 msgid "Remote rsync daemon"
 msgstr "Távoli rsync démon"
 
@@ -6424,6 +6446,9 @@ msgstr ""
 msgid "Selected"
 msgstr "Kiválasztott"
 
+msgid "Selected UPS"
+msgstr "Kiválasztott szünetmentes"
+
 msgid "Selected device or label does not exist."
 msgstr "A kiválasztott eszköz vagy címke nem létezik."
 
@@ -6729,16 +6754,16 @@ msgid "Speaker Beep"
 msgstr "Hangszóró sípolása"
 
 msgid ""
-"Specific to He8 drives from HGST. The Helium, so says the literature, allows "
-"the drives to run cooler and quieter, and reduces power consumption. This is "
-"the status of the Helium in the drive. It is a pre-fail attribute that trips "
-"once the drive detects that the internal environment is out of specification."
+"Specific Helium Level. The Helium, so says the literature, allows the drives "
+"to run cooler and quieter, and reduces power consumption. This is the status "
+"of the Helium in the drive. It is a pre-fail attribute that trips once the "
+"drive detects that the internal environment is out of specification."
 msgstr ""
-"HGST-től a He8 meghajtók jellemzője. A hélium, az irodalom szerint, "
-"alacsonyabb hőmérsékletű és halkabb működést teszt lehetővé a merevlemezek "
-"számára, és csökkenti az áramfogyasztást. Ez a merevlemezben lévő hélium "
-"állapotát írja le. Ez egy hiba-előrejelző attribútum, ami azt jelzi, hogy a "
-"merevlemez érzékeli, hogy a belső környezet az előírásnak nem felel meg."
+"Meghatározott Hélium szint. A Hélium, így szól az irodalom, lehetővé teszi a "
+"meghajtók számára a hűvösebb és csendesebb futást, és csökkenti az "
+"energiafogyasztást. Ez a Hélium állapota a meghajtóban. Ez egy hibát "
+"előrejelző attribútum, ami kiugrik amikor a meghajtó érzékeli, hogy a belső "
+"környezet a meghatározotton kívül esik."
 
 msgid "Specified path is NFSv4 root directory."
 msgstr "A megadott útvonal az NFSv4 gyökérkönyvtára."
@@ -7541,10 +7566,18 @@ msgstr ""
 
 #, php-format
 msgid ""
+"The driver used to communicate with your second UPS. Get the list of "
+"available <a href='%s' target='_blank'>drivers</a>."
+msgstr ""
+"Az illesztőprogram a második szünetmentessel kommunikál. Az elérhető <a "
+"href='%s' target='_blank'>illesztőprogramok</a> listája."
+
+#, php-format
+msgid ""
 "The driver used to connect with the LCD. The list of available <a href='%s' "
 "target='_blank'>drivers</a>."
 msgstr ""
-"A LCD-hez kapcsolódó illesztőprogram. Az elérhető <a href='%s' target "
+"Az LCD-hez kapcsolódó illesztőprogram. Az elérhető <a href='%s' target "
 "='_blank'>illesztőprogramok</a> listája."
 
 #, php-format
@@ -7837,6 +7870,9 @@ msgstr "A szabályok sorszámai határozzák meg a szabályok sorrendjét."
 
 msgid "The serial or USB port where your UPS is connected."
 msgstr "A szünetmentes csatlakozási pontja. (pl. soros, USB, auto, stb.)."
+
+msgid "The serial or USB port where your second UPS is connected."
+msgstr "Soros vagy USB port, ahová a második szünetmentes csatlakozik."
 
 #, php-format
 msgid "The server advertises itself as a time server to Windows clients."
@@ -8209,6 +8245,11 @@ msgstr "A név például: iqn.2005-01.il.ac.huji.cs:valaki."
 
 msgid "This name is used to uniquely identify your UPS on this system."
 msgstr "Ez a szünetmentes egyedi azonosító neve a rendszerben."
+
+msgid ""
+"This name is used to uniquely identify your second UPS on this system."
+msgstr ""
+"Ez a név egyedileg azonosítja a másik szünetmentest ezen a rendszeren."
 
 msgid ""
 "This option allows the users and groups that access a share to be specified. "
@@ -9666,38 +9707,3 @@ msgstr "leválasztás"
 
 msgid "version:"
 msgstr "verzió:"
-
-#, php-format
-#~ msgid "The MIB '%s' already exist."
-#~ msgstr "A(z) '%s' MIB már létezik."
-
-#~ msgid "Apply"
-#~ msgstr "Alkalmaz"
-
-#~ msgid "Add snapshot"
-#~ msgstr "Pillanatkép hozzáadása"
-
-#~ msgid ""
-#~ "These MIBs will be added to /etc/sysctl.conf. This allow you to make changes "
-#~ "to a running system."
-#~ msgstr ""
-#~ "Ezek az értékek a /etc/sysctl.conf-hoz adódnak hozzá. Ez lehetővé teszi a "
-#~ "futó rendszer módosítást."
-
-#~ msgid ""
-#~ "This page reflects the current system configuration. It may be different to "
-#~ "the configuration which has been created with the WebGUI if changes has been "
-#~ "done via command line."
-#~ msgstr ""
-#~ "Ez az oldal a pillanatnyi beállításokat jeleníti meg. Ez lehet, hogy eltér a "
-#~ "WebGUI-val létrehozott beállításoktól, amennyiben parancssorból történt "
-#~ "módosítás."
-
-#~ msgid "Do you really want to delete this snapshot?"
-#~ msgstr "Biztos, hogy törlöd ezt a pillanatképet?"
-
-#~ msgid "Delete snapshot"
-#~ msgstr "Pillanatkép törlése"
-
-#~ msgid "Edit snapshot"
-#~ msgstr "Pillanatkép beállításai"

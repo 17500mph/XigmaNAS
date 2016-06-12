@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-04 03:54+0000\n"
+"Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
+"POT-Creation-Date: 2016-06-06 10:52+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-04 14:04+0000\n"
-"X-Generator: Launchpad (build 18086)\n"
+"X-Launchpad-Export-Date: 2016-06-12 16:41+0000\n"
+"X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
 "X-Poedit-Language: Korean\n"
@@ -536,6 +536,11 @@ msgstr ""
 
 msgid "Additional group"
 msgstr "추가 그룹"
+
+msgid ""
+"Additional parameters to the hardware-specific part of the driver for second "
+"UPS."
+msgstr ""
 
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr "장치의 하드웨어 고유 부분에 대한 추가적인 인자들."
@@ -2709,6 +2714,9 @@ msgstr ""
 
 msgid "Enable reverse DNS lookup."
 msgstr "DNS 역 방향 조회 활성화."
+
+msgid "Enable second local connected UPS."
+msgstr ""
 
 msgid "Enable serial console."
 msgstr ""
@@ -5626,6 +5634,14 @@ msgstr "원격 모듈 명"
 msgid "Remote monitoring"
 msgstr "원격 모니터링"
 
+msgid ""
+"Remote monitoring password. Must be equal on both master and slave system."
+msgstr ""
+
+msgid ""
+"Remote monitoring username. Must be equal on both master and slave system."
+msgstr ""
+
 msgid "Remote rsync daemon"
 msgstr ""
 
@@ -5990,6 +6006,9 @@ msgstr ""
 msgid "Selected"
 msgstr "선택됨"
 
+msgid "Selected UPS"
+msgstr ""
+
 msgid "Selected device or label does not exist."
 msgstr ""
 
@@ -6277,10 +6296,10 @@ msgid "Speaker Beep"
 msgstr ""
 
 msgid ""
-"Specific to He8 drives from HGST. The Helium, so says the literature, allows "
-"the drives to run cooler and quieter, and reduces power consumption. This is "
-"the status of the Helium in the drive. It is a pre-fail attribute that trips "
-"once the drive detects that the internal environment is out of specification."
+"Specific Helium Level. The Helium, so says the literature, allows the drives "
+"to run cooler and quieter, and reduces power consumption. This is the status "
+"of the Helium in the drive. It is a pre-fail attribute that trips once the "
+"drive detects that the internal environment is out of specification."
 msgstr ""
 
 msgid "Specified path is NFSv4 root directory."
@@ -7006,6 +7025,12 @@ msgstr ""
 
 #, php-format
 msgid ""
+"The driver used to communicate with your second UPS. Get the list of "
+"available <a href='%s' target='_blank'>drivers</a>."
+msgstr ""
+
+#, php-format
+msgid ""
 "The driver used to connect with the LCD. The list of available <a href='%s' "
 "target='_blank'>drivers</a>."
 msgstr ""
@@ -7255,6 +7280,9 @@ msgstr "규칙 번호가 규칙의 순서를 결정합니다."
 
 msgid "The serial or USB port where your UPS is connected."
 msgstr "당신의 UPS가 연결된 직렬 포트나 USB 포트."
+
+msgid "The serial or USB port where your second UPS is connected."
+msgstr ""
 
 #, php-format
 msgid "The server advertises itself as a time server to Windows clients."
@@ -7574,6 +7602,10 @@ msgstr "이 이름은 예를 든 것입니다: iqn.2005-01.il.ac.huji.cs:somebod
 
 msgid "This name is used to uniquely identify your UPS on this system."
 msgstr "이 이름은 이 시스템에서 UPS를 유일하게 식별하기 위해서 이용됩니다."
+
+msgid ""
+"This name is used to uniquely identify your second UPS on this system."
+msgstr ""
 
 msgid ""
 "This option allows the users and groups that access a share to be specified. "
@@ -8906,19 +8938,3 @@ msgstr "마운트 해제"
 
 msgid "version:"
 msgstr ""
-
-#, php-format
-#~ msgid "The MIB '%s' already exist."
-#~ msgstr "이 MIB '%s'은(는) 이미 존재합니다."
-
-#~ msgid ""
-#~ "These MIBs will be added to /etc/sysctl.conf. This allow you to make changes "
-#~ "to a running system."
-#~ msgstr "이 MIB들은 /etc/sysctl.conf에 추가될 것입니다. 이것은 실행 시스템에 변경을 가할 수 있게 해줍니다."
-
-#~ msgid ""
-#~ "This page reflects the current system configuration. It may be different to "
-#~ "the configuration which has been created with the WebGUI if changes has been "
-#~ "done via command line."
-#~ msgstr ""
-#~ "이 페이지는 현재의 시스템 설정을 반영합니다. 명령 행을 통해서 변경이 이루어졌다면 WebGUI에 의해 생성된 설정과 다를 수도 있습니다."

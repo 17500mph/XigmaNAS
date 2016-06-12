@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-04 03:54+0000\n"
+"Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
+"POT-Creation-Date: 2016-06-06 10:52+0000\n"
 "PO-Revision-Date: 2016-05-22 20:14+0000\n"
 "Last-Translator: Paolo Borla <p.borla@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-04 14:04+0000\n"
-"X-Generator: Launchpad (build 18086)\n"
+"X-Launchpad-Export-Date: 2016-06-12 16:41+0000\n"
+"X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
 "X-Poedit-Language: Italian\n"
@@ -586,6 +586,11 @@ msgstr "Archiviazione supplementare"
 
 msgid "Additional group"
 msgstr "Gruppo addizionale"
+
+msgid ""
+"Additional parameters to the hardware-specific part of the driver for second "
+"UPS."
+msgstr ""
 
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr "Parametri aggiuntivi da passare al driver legati al hardware"
@@ -2914,6 +2919,9 @@ msgstr ""
 
 msgid "Enable reverse DNS lookup."
 msgstr "Abilita la risoluzione DNS inversa."
+
+msgid "Enable second local connected UPS."
+msgstr ""
 
 msgid "Enable serial console."
 msgstr "Abilita la console seriale"
@@ -5982,6 +5990,14 @@ msgstr "Mome del modulo remoto"
 msgid "Remote monitoring"
 msgstr "Monitoraggio remoto"
 
+msgid ""
+"Remote monitoring password. Must be equal on both master and slave system."
+msgstr ""
+
+msgid ""
+"Remote monitoring username. Must be equal on both master and slave system."
+msgstr ""
+
 msgid "Remote rsync daemon"
 msgstr "Daemon rsync remoto"
 
@@ -6366,6 +6382,9 @@ msgstr ""
 msgid "Selected"
 msgstr "Selezionato"
 
+msgid "Selected UPS"
+msgstr ""
+
 msgid "Selected device or label does not exist."
 msgstr "Il dispositivo o l'etichetta scelti non esistono."
 
@@ -6676,10 +6695,10 @@ msgid "Speaker Beep"
 msgstr "Speaker Beep"
 
 msgid ""
-"Specific to He8 drives from HGST. The Helium, so says the literature, allows "
-"the drives to run cooler and quieter, and reduces power consumption. This is "
-"the status of the Helium in the drive. It is a pre-fail attribute that trips "
-"once the drive detects that the internal environment is out of specification."
+"Specific Helium Level. The Helium, so says the literature, allows the drives "
+"to run cooler and quieter, and reduces power consumption. This is the status "
+"of the Helium in the drive. It is a pre-fail attribute that trips once the "
+"drive detects that the internal environment is out of specification."
 msgstr ""
 
 msgid "Specified path is NFSv4 root directory."
@@ -7481,6 +7500,12 @@ msgstr ""
 
 #, php-format
 msgid ""
+"The driver used to communicate with your second UPS. Get the list of "
+"available <a href='%s' target='_blank'>drivers</a>."
+msgstr ""
+
+#, php-format
+msgid ""
 "The driver used to connect with the LCD. The list of available <a href='%s' "
 "target='_blank'>drivers</a>."
 msgstr ""
@@ -7776,6 +7801,9 @@ msgstr "Il numero della regola ne determina l'ordine."
 
 msgid "The serial or USB port where your UPS is connected."
 msgstr "Porta seriale o USB alla quale è connesso l'UPS."
+
+msgid "The serial or USB port where your second UPS is connected."
+msgstr ""
 
 #, php-format
 msgid "The server advertises itself as a time server to Windows clients."
@@ -8142,6 +8170,10 @@ msgid "This name is used to uniquely identify your UPS on this system."
 msgstr ""
 "Questo nome è usato per identificare univocamente l'UPS in uso su questo "
 "sistema."
+
+msgid ""
+"This name is used to uniquely identify your second UPS on this system."
+msgstr ""
 
 msgid ""
 "This option allows the users and groups that access a share to be specified. "
@@ -9595,38 +9627,3 @@ msgstr "smonta"
 
 msgid "version:"
 msgstr "versione:"
-
-#~ msgid "Add snapshot"
-#~ msgstr "Aggiungi snapshot"
-
-#~ msgid "Apply"
-#~ msgstr "Applica"
-
-#~ msgid "Delete snapshot"
-#~ msgstr "Elimina snapshot"
-
-#~ msgid "Do you really want to delete this snapshot?"
-#~ msgstr "Vuoi davvero eliminare questo snapshot?"
-
-#~ msgid "Edit snapshot"
-#~ msgstr "Modifica snapshot"
-
-#, php-format
-#~ msgid "The MIB '%s' already exist."
-#~ msgstr "La MIB '%s' esiste già."
-
-#~ msgid ""
-#~ "These MIBs will be added to /etc/sysctl.conf. This allow you to make changes "
-#~ "to a running system."
-#~ msgstr ""
-#~ "Queste MIBs saranno aggiunte a /etc/sysctl.conf. Questo permette di fare "
-#~ "delle modifiche ad un sistema in funzione."
-
-#~ msgid ""
-#~ "This page reflects the current system configuration. It may be different to "
-#~ "the configuration which has been created with the WebGUI if changes has been "
-#~ "done via command line."
-#~ msgstr ""
-#~ "Questa pagina riflette la configurazione corrente del sistema. Potrebbe "
-#~ "essere diversa dalla configurazione che è stata creata con il WebGUI se sono "
-#~ "state apportate delle modifche dalla linea di comando."

@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-04 03:54+0000\n"
+"Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
+"POT-Creation-Date: 2016-06-06 10:52+0000\n"
 "PO-Revision-Date: 2014-11-17 04:08+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-04 14:04+0000\n"
-"X-Generator: Launchpad (build 18086)\n"
+"X-Launchpad-Export-Date: 2016-06-12 16:41+0000\n"
+"X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: SLOVAKIA\n"
 "Language: \n"
 "X-Poedit-Language: Slovak\n"
@@ -545,6 +545,11 @@ msgstr ""
 
 msgid "Additional group"
 msgstr "Ďalšia skupina"
+
+msgid ""
+"Additional parameters to the hardware-specific part of the driver for second "
+"UPS."
+msgstr ""
 
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr "Dodatočné parametre hardvérovej časti ovládača."
@@ -2756,6 +2761,9 @@ msgstr ""
 
 msgid "Enable reverse DNS lookup."
 msgstr "Zapnúť reverzný DNS preklad"
+
+msgid "Enable second local connected UPS."
+msgstr ""
 
 msgid "Enable serial console."
 msgstr ""
@@ -5727,6 +5735,14 @@ msgstr "Názov vzdialeného modulu"
 msgid "Remote monitoring"
 msgstr "Vzdialené monitorovanie"
 
+msgid ""
+"Remote monitoring password. Must be equal on both master and slave system."
+msgstr ""
+
+msgid ""
+"Remote monitoring username. Must be equal on both master and slave system."
+msgstr ""
+
 msgid "Remote rsync daemon"
 msgstr ""
 
@@ -6097,6 +6113,9 @@ msgstr ""
 msgid "Selected"
 msgstr "Zvolený"
 
+msgid "Selected UPS"
+msgstr ""
+
 msgid "Selected device or label does not exist."
 msgstr ""
 
@@ -6391,10 +6410,10 @@ msgid "Speaker Beep"
 msgstr ""
 
 msgid ""
-"Specific to He8 drives from HGST. The Helium, so says the literature, allows "
-"the drives to run cooler and quieter, and reduces power consumption. This is "
-"the status of the Helium in the drive. It is a pre-fail attribute that trips "
-"once the drive detects that the internal environment is out of specification."
+"Specific Helium Level. The Helium, so says the literature, allows the drives "
+"to run cooler and quieter, and reduces power consumption. This is the status "
+"of the Helium in the drive. It is a pre-fail attribute that trips once the "
+"drive detects that the internal environment is out of specification."
 msgstr ""
 
 msgid "Specified path is NFSv4 root directory."
@@ -7135,6 +7154,12 @@ msgstr ""
 
 #, php-format
 msgid ""
+"The driver used to communicate with your second UPS. Get the list of "
+"available <a href='%s' target='_blank'>drivers</a>."
+msgstr ""
+
+#, php-format
+msgid ""
 "The driver used to connect with the LCD. The list of available <a href='%s' "
 "target='_blank'>drivers</a>."
 msgstr ""
@@ -7394,6 +7419,9 @@ msgstr "Číslo pravidla určuje poradie pravidla."
 
 msgid "The serial or USB port where your UPS is connected."
 msgstr "Sériový alebo USB port, kde je pripojené vaše UPS."
+
+msgid "The serial or USB port where your second UPS is connected."
+msgstr ""
 
 #, php-format
 msgid "The server advertises itself as a time server to Windows clients."
@@ -7731,6 +7759,10 @@ msgid "This name is used to uniquely identify your UPS on this system."
 msgstr ""
 "Tento názov slúži je použitý na jednečnú identifikáciu vášho UPS v tomto "
 "systéme."
+
+msgid ""
+"This name is used to uniquely identify your second UPS on this system."
+msgstr ""
 
 msgid ""
 "This option allows the users and groups that access a share to be specified. "
@@ -9107,14 +9139,3 @@ msgstr "odpojiť"
 
 msgid "version:"
 msgstr ""
-
-#, php-format
-#~ msgid "The MIB '%s' already exist."
-#~ msgstr "MIB „%s” už existuje."
-
-#~ msgid ""
-#~ "These MIBs will be added to /etc/sysctl.conf. This allow you to make changes "
-#~ "to a running system."
-#~ msgstr ""
-#~ "Tieto MIB sa pridajú do /etc/sysctl.conf. To vám umožní vykonávať zmeny "
-#~ "bežiaceho systému."
