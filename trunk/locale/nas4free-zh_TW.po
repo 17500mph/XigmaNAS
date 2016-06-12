@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-04 03:54+0000\n"
+"Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
+"POT-Creation-Date: 2016-06-06 10:52+0000\n"
 "PO-Revision-Date: 2016-03-03 17:10+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-04 14:04+0000\n"
-"X-Generator: Launchpad (build 18086)\n"
+"X-Launchpad-Export-Date: 2016-06-12 16:41+0000\n"
+"X-Generator: Launchpad (build 18097)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -527,6 +527,11 @@ msgstr "額外的存儲"
 
 msgid "Additional group"
 msgstr "其他群組"
+
+msgid ""
+"Additional parameters to the hardware-specific part of the driver for second "
+"UPS."
+msgstr ""
 
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr "驅動程序中與硬件相關到附加參數。"
@@ -2707,6 +2712,9 @@ msgstr "啟用反向DNS來查找傳入遠程主機IP位址的主動模式數據�
 
 msgid "Enable reverse DNS lookup."
 msgstr "啟用反向DNS查找。"
+
+msgid "Enable second local connected UPS."
+msgstr ""
 
 msgid "Enable serial console."
 msgstr ""
@@ -5611,6 +5619,14 @@ msgstr "遠端模組名稱"
 msgid "Remote monitoring"
 msgstr "遠端監控"
 
+msgid ""
+"Remote monitoring password. Must be equal on both master and slave system."
+msgstr ""
+
+msgid ""
+"Remote monitoring username. Must be equal on both master and slave system."
+msgstr ""
+
 msgid "Remote rsync daemon"
 msgstr "遠程rsync的進程"
 
@@ -5976,6 +5992,9 @@ msgstr ""
 msgid "Selected"
 msgstr "已選擇"
 
+msgid "Selected UPS"
+msgstr ""
+
 msgid "Selected device or label does not exist."
 msgstr "選定的設備或標籤不存在。"
 
@@ -6264,10 +6283,10 @@ msgid "Speaker Beep"
 msgstr ""
 
 msgid ""
-"Specific to He8 drives from HGST. The Helium, so says the literature, allows "
-"the drives to run cooler and quieter, and reduces power consumption. This is "
-"the status of the Helium in the drive. It is a pre-fail attribute that trips "
-"once the drive detects that the internal environment is out of specification."
+"Specific Helium Level. The Helium, so says the literature, allows the drives "
+"to run cooler and quieter, and reduces power consumption. This is the status "
+"of the Helium in the drive. It is a pre-fail attribute that trips once the "
+"drive detects that the internal environment is out of specification."
 msgstr ""
 
 msgid "Specified path is NFSv4 root directory."
@@ -6992,6 +7011,12 @@ msgstr "用來與 UPS 通訊的驅動程式。取得可用的<a href='%s' target
 
 #, php-format
 msgid ""
+"The driver used to communicate with your second UPS. Get the list of "
+"available <a href='%s' target='_blank'>drivers</a>."
+msgstr ""
+
+#, php-format
+msgid ""
 "The driver used to connect with the LCD. The list of available <a href='%s' "
 "target='_blank'>drivers</a>."
 msgstr "用來與 LCD 通訊的驅動程式。取得可用的<a href='%s' target='_blank'>驅動程式</a> 清單。"
@@ -7240,6 +7265,9 @@ msgstr "規則號碼決定規則秩序。"
 
 msgid "The serial or USB port where your UPS is connected."
 msgstr "您的 UPS 連接的串行端口或 USB 端口。"
+
+msgid "The serial or USB port where your second UPS is connected."
+msgstr ""
 
 #, php-format
 msgid "The server advertises itself as a time server to Windows clients."
@@ -7554,6 +7582,10 @@ msgstr "名稱範例：iqn.2005-01.il.ac.huji.cs:somebody。"
 
 msgid "This name is used to uniquely identify your UPS on this system."
 msgstr "此名稱用來識別此系統的 UPS。"
+
+msgid ""
+"This name is used to uniquely identify your second UPS on this system."
+msgstr ""
 
 msgid ""
 "This option allows the users and groups that access a share to be specified. "
@@ -8867,33 +8899,3 @@ msgstr "卸載"
 
 msgid "version:"
 msgstr "版本："
-
-#, php-format
-#~ msgid "The MIB '%s' already exist."
-#~ msgstr "MIB '%s' 已經存在。"
-
-#~ msgid "Add snapshot"
-#~ msgstr "新增快照"
-
-#~ msgid "Apply"
-#~ msgstr "套用"
-
-#~ msgid "Do you really want to delete this snapshot?"
-#~ msgstr "您確定要刪除這個快照嗎？"
-
-#~ msgid "Edit snapshot"
-#~ msgstr "編輯快照"
-
-#~ msgid "Delete snapshot"
-#~ msgstr "刪除快照"
-
-#~ msgid ""
-#~ "These MIBs will be added to /etc/sysctl.conf. This allow you to make changes "
-#~ "to a running system."
-#~ msgstr "這些 MIB 會加入 /etc/sysctl.conf。這樣可以讓您變更執行中的系統。"
-
-#~ msgid ""
-#~ "This page reflects the current system configuration. It may be different to "
-#~ "the configuration which has been created with the WebGUI if changes has been "
-#~ "done via command line."
-#~ msgstr "本頁面反映了當前的系統配置。如果通过 command line 更改配置则会与通过網頁界面創建的设置不同。"

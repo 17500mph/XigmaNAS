@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-04 03:54+0000\n"
+"Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
+"POT-Creation-Date: 2016-06-06 10:52+0000\n"
 "PO-Revision-Date: 2015-06-11 17:41+0000\n"
 "Last-Translator: Flavio Peinado <flavio@peinado.com.br>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-04 14:04+0000\n"
-"X-Generator: Launchpad (build 18086)\n"
+"X-Launchpad-Export-Date: 2016-06-12 16:41+0000\n"
+"X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: Brazilian Portuguese\n"
 "Language: \n"
 "X-Poedit-Language: Brazilian Portuguese\n"
@@ -567,6 +567,11 @@ msgstr ""
 
 msgid "Additional group"
 msgstr "Grupo adicional"
+
+msgid ""
+"Additional parameters to the hardware-specific part of the driver for second "
+"UPS."
+msgstr ""
 
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr "Parâmetros adicionais para a parte específica de hardware do driver."
@@ -2826,6 +2831,9 @@ msgstr ""
 
 msgid "Enable reverse DNS lookup."
 msgstr "Habilitar pesquisa por DNS reverso."
+
+msgid "Enable second local connected UPS."
+msgstr ""
 
 msgid "Enable serial console."
 msgstr ""
@@ -5879,6 +5887,14 @@ msgstr "Nome do módulo remoto"
 msgid "Remote monitoring"
 msgstr "Monitoramento remoto"
 
+msgid ""
+"Remote monitoring password. Must be equal on both master and slave system."
+msgstr ""
+
+msgid ""
+"Remote monitoring username. Must be equal on both master and slave system."
+msgstr ""
+
 msgid "Remote rsync daemon"
 msgstr ""
 
@@ -6260,6 +6276,9 @@ msgstr ""
 msgid "Selected"
 msgstr "Selecionado"
 
+msgid "Selected UPS"
+msgstr ""
+
 msgid "Selected device or label does not exist."
 msgstr ""
 
@@ -6563,10 +6582,10 @@ msgid "Speaker Beep"
 msgstr ""
 
 msgid ""
-"Specific to He8 drives from HGST. The Helium, so says the literature, allows "
-"the drives to run cooler and quieter, and reduces power consumption. This is "
-"the status of the Helium in the drive. It is a pre-fail attribute that trips "
-"once the drive detects that the internal environment is out of specification."
+"Specific Helium Level. The Helium, so says the literature, allows the drives "
+"to run cooler and quieter, and reduces power consumption. This is the status "
+"of the Helium in the drive. It is a pre-fail attribute that trips once the "
+"drive detects that the internal environment is out of specification."
 msgstr ""
 
 msgid "Specified path is NFSv4 root directory."
@@ -7353,6 +7372,12 @@ msgstr ""
 
 #, php-format
 msgid ""
+"The driver used to communicate with your second UPS. Get the list of "
+"available <a href='%s' target='_blank'>drivers</a>."
+msgstr ""
+
+#, php-format
+msgid ""
 "The driver used to connect with the LCD. The list of available <a href='%s' "
 "target='_blank'>drivers</a>."
 msgstr ""
@@ -7645,6 +7670,9 @@ msgstr "O número da regra determina sua ordem."
 
 msgid "The serial or USB port where your UPS is connected."
 msgstr "A porta serial ou a porta USB onde o seu UPS está conectado."
+
+msgid "The serial or USB port where your second UPS is connected."
+msgstr ""
 
 #, php-format
 msgid "The server advertises itself as a time server to Windows clients."
@@ -8004,6 +8032,10 @@ msgstr "Este nome é, por exemplo: iqn.2005-01.il.ac.huji.cs:somebody."
 msgid "This name is used to uniquely identify your UPS on this system."
 msgstr ""
 "Este nome é usado para identificar de forma única a sua UPS no sistema."
+
+msgid ""
+"This name is used to uniquely identify your second UPS on this system."
+msgstr ""
 
 msgid ""
 "This option allows the users and groups that access a share to be specified. "
@@ -9427,38 +9459,3 @@ msgstr "desmontar"
 
 msgid "version:"
 msgstr "versão:"
-
-#, php-format
-#~ msgid "The MIB '%s' already exist."
-#~ msgstr "A MIB '%s'  já existe."
-
-#~ msgid ""
-#~ "These MIBs will be added to /etc/sysctl.conf. This allow you to make changes "
-#~ "to a running system."
-#~ msgstr ""
-#~ "Estes MIBs serão adicionados ao /etc/sysctl.conf. Isto permite-lhe fazer "
-#~ "alterações em um sistema em execução."
-
-#~ msgid ""
-#~ "This page reflects the current system configuration. It may be different to "
-#~ "the configuration which has been created with the WebGUI if changes has been "
-#~ "done via command line."
-#~ msgstr ""
-#~ "Esta página reflete a configuração atual do sistema. Pode ser diferente da "
-#~ "configuração que foi criada usando o WebGUI se as mudanças tiverem sido "
-#~ "feitas usando a linha de comandos."
-
-#~ msgid "Apply"
-#~ msgstr "Aplicar"
-
-#~ msgid "Add snapshot"
-#~ msgstr "Adicionar imagem"
-
-#~ msgid "Delete snapshot"
-#~ msgstr "Excluir imagem"
-
-#~ msgid "Do you really want to delete this snapshot?"
-#~ msgstr "Deseja realmente excluir esta imagem?"
-
-#~ msgid "Edit snapshot"
-#~ msgstr "Editar imagem"

@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-04 03:54+0000\n"
-"PO-Revision-Date: 2016-06-04 13:33+0000\n"
+"Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
+"POT-Creation-Date: 2016-06-06 10:52+0000\n"
+"PO-Revision-Date: 2016-06-07 15:21+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-04 14:04+0000\n"
-"X-Generator: Launchpad (build 18086)\n"
+"X-Launchpad-Export-Date: 2016-06-12 16:41+0000\n"
+"X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -577,6 +577,12 @@ msgstr "Extra lagringsutrymme"
 
 msgid "Additional group"
 msgstr "Ytterligare grupper"
+
+msgid ""
+"Additional parameters to the hardware-specific part of the driver for second "
+"UPS."
+msgstr ""
+"Extra parametrar för de hårdvaruspecifika delarna av drivrutinen för UPS två."
 
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr ""
@@ -2893,6 +2899,9 @@ msgstr ""
 
 msgid "Enable reverse DNS lookup."
 msgstr "Aktivera omvänd DNS uppslagning"
+
+msgid "Enable second local connected UPS."
+msgstr "Aktivera en andra lokalt ansluten UPS."
 
 msgid "Enable serial console."
 msgstr "Aktivera seriell konsol."
@@ -5983,6 +5992,16 @@ msgstr "Namn för fjärrmodul"
 msgid "Remote monitoring"
 msgstr "Fjärrövervakning"
 
+msgid ""
+"Remote monitoring password. Must be equal on both master and slave system."
+msgstr ""
+"Lösenord för fjärrövervakning. Måste vara lika på master och slavsystem."
+
+msgid ""
+"Remote monitoring username. Must be equal on both master and slave system."
+msgstr ""
+"Användarnamn för fjärrövervakning. Måste vara lika på master och slavsystem."
+
 msgid "Remote rsync daemon"
 msgstr "Fjärr rsync demon"
 
@@ -6366,6 +6385,9 @@ msgstr ""
 msgid "Selected"
 msgstr "Markerade"
 
+msgid "Selected UPS"
+msgstr "Vald UPS"
+
 msgid "Selected device or label does not exist."
 msgstr "Vald enhet eller etikett existerar inte."
 
@@ -6669,15 +6691,15 @@ msgid "Speaker Beep"
 msgstr "Högtalarpip"
 
 msgid ""
-"Specific to He8 drives from HGST. The Helium, so says the literature, allows "
-"the drives to run cooler and quieter, and reduces power consumption. This is "
-"the status of the Helium in the drive. It is a pre-fail attribute that trips "
-"once the drive detects that the internal environment is out of specification."
+"Specific Helium Level. The Helium, so says the literature, allows the drives "
+"to run cooler and quieter, and reduces power consumption. This is the status "
+"of the Helium in the drive. It is a pre-fail attribute that trips once the "
+"drive detects that the internal environment is out of specification."
 msgstr ""
-"Specifikt för He8 diskar från HGST. Heliumet skall enligt dokumentationen "
-"göra disken kallare och tystare och minska effektförbrukningen. Detta är "
-"statusen för Heliumet i disken. Det är en förvarning som utlöses när den "
-"interna miljön är utanför specifikationerna."
+"Specifik Heliumnivå. Heliumet låter hårddiskar köras svalare och tystare, "
+"och minskar energiförbrukningen. Detta är statusen på Heliumfyllningen i "
+"enheten. Detta är en varningsflagga som sätts när nivån är utanför "
+"specifikationerna."
 
 msgid "Specified path is NFSv4 root directory."
 msgstr "Angiven sökvög är NFSv4 rotkatalog."
@@ -7484,6 +7506,14 @@ msgstr ""
 
 #, php-format
 msgid ""
+"The driver used to communicate with your second UPS. Get the list of "
+"available <a href='%s' target='_blank'>drivers</a>."
+msgstr ""
+"Drivrutinen som används för att kommunicera med UPS två. Visa listan med "
+"tillgängliga <a href='%s' target='_blank'>drivrutiner<a>."
+
+#, php-format
+msgid ""
 "The driver used to connect with the LCD. The list of available <a href='%s' "
 "target='_blank'>drivers</a>."
 msgstr ""
@@ -7770,6 +7800,9 @@ msgstr "Regelnumret bestämmer sorteringsordningen för regeln."
 
 msgid "The serial or USB port where your UPS is connected."
 msgstr "Serie- eller USB-porten där UPS-enheten är inkopplad."
+
+msgid "The serial or USB port where your second UPS is connected."
+msgstr "Serie- eller USB-porten där UPS två är ansluten."
 
 #, php-format
 msgid "The server advertises itself as a time server to Windows clients."
@@ -8146,6 +8179,11 @@ msgid "This name is used to uniquely identify your UPS on this system."
 msgstr ""
 "Detta namnet används för att unikt identifiera din UPS-enhet, på det här "
 "systemet."
+
+msgid ""
+"This name is used to uniquely identify your second UPS on this system."
+msgstr ""
+"Detta namn används för att unikt identifiera UPS två på detta system."
 
 msgid ""
 "This option allows the users and groups that access a share to be specified. "
@@ -9613,38 +9651,3 @@ msgstr "umount"
 
 msgid "version:"
 msgstr "version:"
-
-#, php-format
-#~ msgid "The MIB '%s' already exist."
-#~ msgstr "MIB '%s' finns redan."
-
-#~ msgid ""
-#~ "These MIBs will be added to /etc/sysctl.conf. This allow you to make changes "
-#~ "to a running system."
-#~ msgstr ""
-#~ "Dessa MIB:ar kommer läggas till i /etc/sysctl.conf. Detta tillåter dig att "
-#~ "göra ändringar i systemet under körning."
-
-#~ msgid ""
-#~ "This page reflects the current system configuration. It may be different to "
-#~ "the configuration which has been created with the WebGUI if changes has been "
-#~ "done via command line."
-#~ msgstr ""
-#~ "Denna sida visar den aktuella systemkonfigurationen. Den kan vara annorlunda "
-#~ "jämfört med konfigurationen som har skapats med WebGUI om ändringar har "
-#~ "skett via kommandoraden."
-
-#~ msgid "Apply"
-#~ msgstr "Tillämpa"
-
-#~ msgid "Add snapshot"
-#~ msgstr "Lägg till avbildning"
-
-#~ msgid "Delete snapshot"
-#~ msgstr "Ta bort avbild"
-
-#~ msgid "Do you really want to delete this snapshot?"
-#~ msgstr "Vill Du verkligen ta bort den här avbilden?"
-
-#~ msgid "Edit snapshot"
-#~ msgstr "Redigera avbildning"

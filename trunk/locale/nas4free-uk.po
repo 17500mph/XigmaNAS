@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-04 03:54+0000\n"
-"PO-Revision-Date: 2016-05-21 12:04+0000\n"
+"POT-Creation-Date: 2016-06-06 10:52+0000\n"
+"PO-Revision-Date: 2016-06-09 18:10+0000\n"
 "Last-Translator: AndriyM <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-04 14:05+0000\n"
-"X-Generator: Launchpad (build 18086)\n"
+"X-Launchpad-Export-Date: 2016-06-12 16:41+0000\n"
+"X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -63,7 +63,7 @@ msgstr "%s вже існує як %s."
 
 #, php-format
 msgid "%s already exists."
-msgstr ""
+msgstr "%s вже існує"
 
 #, php-format
 msgid "%s is already configured as a filesystem."
@@ -148,10 +148,10 @@ msgid "0=disabled, 1-255=enabled command queuing with specified depth."
 msgstr "0=вимкнено, 1-255=увімкнено чергу команд із зазначеною глибиною."
 
 msgid "1 or more disks are required to build a JBOD volume."
-msgstr ""
+msgstr "Для побудови JBOD потрібно 1 чи більше дисків."
 
 msgid "1 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "Для побудови RAID-1 потрібно 1 чи більше дисків."
 
 msgid ""
 "1. Use these specials actions for debugging only!<br />2. There is no need "
@@ -162,13 +162,13 @@ msgstr ""
 "автоматично)."
 
 msgid "2 or more disks are required to build a RAID-0 volume."
-msgstr ""
+msgstr "Для побудови RAID-0 потрібно 2 чи більше дисків."
 
 msgid "2 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "Для побудови RAID-1 потрібно 2 чи більше дисків."
 
 msgid "3 or more disks are required to build a RAID-5 volume."
-msgstr ""
+msgstr "Для побудови RAID-5 потрібно 3 чи більше дисків."
 
 msgid "4KB wrapper"
 msgstr "4KB оболонка"
@@ -290,6 +290,8 @@ msgid ""
 "A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
 "point</a> first before proceeding."
 msgstr ""
+"Примонтований RAID масив не може бути видалений. Спочатку потрібно видалити "
+"<a href='%s'>точку монтування</a>."
 
 msgid "A route to this destination network already exists."
 msgstr "Маршрут до цієї підмережі вже існує."
@@ -483,7 +485,7 @@ msgid "Add URL"
 msgstr "Додати посилання"
 
 msgid "Add Virtual Device"
-msgstr ""
+msgstr "Додати віртуальний пристрій"
 
 msgid "Add Volume"
 msgstr ""
@@ -563,6 +565,11 @@ msgstr "Додаткова пам'ять"
 msgid "Additional group"
 msgstr "Додаткові групи"
 
+msgid ""
+"Additional parameters to the hardware-specific part of the driver for second "
+"UPS."
+msgstr ""
+
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr "Додаткові параметри апаратно-залежні частини драйверів."
 
@@ -635,7 +642,7 @@ msgstr ""
 "доступ до web-інтерфейсу з нової IP-адреси </ LI> </ UL>"
 
 msgid "Age"
-msgstr ""
+msgstr "Вік"
 
 msgid "Aggregation protocol"
 msgstr "Агрегаційний протокол"
@@ -772,7 +779,7 @@ msgid "Alternative configuration directory (usually empty)."
 msgstr "Альтернативна дикекторія для конфігурації (зазвичай пуста)"
 
 msgid "Always"
-msgstr ""
+msgstr "Завжди"
 
 msgid "Always On"
 msgstr "Завжди увімкнено"
@@ -834,7 +841,7 @@ msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
 
 msgid "Apply Filter"
-msgstr ""
+msgstr "Застосувати фільтр"
 
 msgid "Apply changes"
 msgstr "Застосувати зміни"
@@ -962,7 +969,7 @@ msgid "Bad User - (Non Existing Users)"
 msgstr "Невірний користувач (неіснуючий користувач)"
 
 msgid "Balance Algorithm"
-msgstr ""
+msgstr "Алгоритм балансування"
 
 msgid "Ban List"
 msgstr "Список заборон"
@@ -1108,7 +1115,7 @@ msgid "By default, only already existing files can be uploaded."
 msgstr "За замовчуванням, тільки вже існуючі файли можуть бути завантажені."
 
 msgid "CACHE"
-msgstr ""
+msgstr "КЕШ"
 
 msgid "CARP"
 msgstr "CARP"
@@ -1355,7 +1362,7 @@ msgstr "Команда для події LINK_UP (наприклад, %s)."
 
 #, php-format
 msgid "Command output"
-msgstr ""
+msgstr "Вивід команди"
 
 msgid "Command output:"
 msgstr "Вивід команди:"
@@ -1409,7 +1416,7 @@ msgid "Confirmation"
 msgstr "Підтвердждення"
 
 msgid "Connect to hidden network"
-msgstr ""
+msgstr "З’єднатися з прихованою мережею"
 
 msgid "Connected FTP Users & Status"
 msgstr "Користувачі під'єднані до FTP і їх статус"
@@ -1421,7 +1428,7 @@ msgid "Console Menu"
 msgstr "Консольне меню"
 
 msgid "Console Settings"
-msgstr ""
+msgstr "Налаштування консолі"
 
 msgid "Console screensaver"
 msgstr "Консольний скрін-сейвер"
@@ -1660,7 +1667,7 @@ msgid "Create 4KB wrapper (nop device)."
 msgstr "створити 4KB оболонку (пристрій nop)"
 
 msgid "Create Date"
-msgstr ""
+msgstr "Дата створення"
 
 msgid "Create HVM Guest"
 msgstr ""
@@ -1933,16 +1940,16 @@ msgid "Delete Selected Options"
 msgstr "Видалити вибрані опції"
 
 msgid "Delete Selected Pools"
-msgstr ""
+msgstr "Видалити вибраний пул"
 
 msgid "Delete Selected RAID Volumes"
-msgstr ""
+msgstr "Видалити вибраний RAID масив"
 
 msgid "Delete Selected Snapshots"
-msgstr ""
+msgstr "Видалити вибраний знімок"
 
 msgid "Delete Selected Virtual Devices"
-msgstr ""
+msgstr "Видалити вибраний віртуальний пристрій"
 
 msgid "Delete Selected Volumes"
 msgstr "Видалити вибрані диски"
@@ -2109,7 +2116,7 @@ msgid "Device IP"
 msgstr "IP адреса пристрою"
 
 msgid "Device List"
-msgstr ""
+msgstr "Список пристроїв"
 
 msgid "Device Model"
 msgstr "Модель пристрою"
@@ -2430,7 +2437,7 @@ msgid "Do you want to delete selected pools?"
 msgstr "Бажаєте видалити вибрані пули?"
 
 msgid "Do you want to delete selected snapshots?"
-msgstr ""
+msgstr "Ви дійсно хочете видалити вибрані знімки?"
 
 msgid "Do you want to delete selected virtual devices?"
 msgstr "Бажаєте видалити вибрані віртуальні пристрої?"
@@ -2600,7 +2607,7 @@ msgid "Edit VM"
 msgstr "Редагувати віртуальну машину"
 
 msgid "Edit Virtual Device"
-msgstr ""
+msgstr "Редагувати віртуальний пристрій"
 
 msgid "Edit Volume"
 msgstr ""
@@ -2846,6 +2853,9 @@ msgstr ""
 msgid "Enable reverse DNS lookup."
 msgstr "Увімкнути зворотній пошук  DNS."
 
+msgid "Enable second local connected UPS."
+msgstr ""
+
 msgid "Enable serial console."
 msgstr "Увімкнути консоль на послідовному порті."
 
@@ -2961,7 +2971,7 @@ msgid "Enter trap host name."
 msgstr ""
 
 msgid "Entire Device"
-msgstr ""
+msgstr "Весь пристрій"
 
 msgid ""
 "Erase Fail Count (chip). This parameter indicates a number of flash erase "
@@ -3235,7 +3245,7 @@ msgid "Firmware"
 msgstr "Прошивка"
 
 msgid "Firmware Check"
-msgstr ""
+msgstr "Перевірка прошивки"
 
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Не вдалося завантажити прошивку (недостатньо пам'яті?)"
@@ -5826,6 +5836,14 @@ msgstr "Ім'я віддаленого модулю"
 msgid "Remote monitoring"
 msgstr "Віддалене спостерігання"
 
+msgid ""
+"Remote monitoring password. Must be equal on both master and slave system."
+msgstr ""
+
+msgid ""
+"Remote monitoring username. Must be equal on both master and slave system."
+msgstr ""
+
 msgid "Remote rsync daemon"
 msgstr "Віддалений rsync демон"
 
@@ -6197,6 +6215,9 @@ msgstr ""
 msgid "Selected"
 msgstr "Вибрано"
 
+msgid "Selected UPS"
+msgstr ""
+
 msgid "Selected device or label does not exist."
 msgstr ""
 
@@ -6482,10 +6503,10 @@ msgid "Speaker Beep"
 msgstr ""
 
 msgid ""
-"Specific to He8 drives from HGST. The Helium, so says the literature, allows "
-"the drives to run cooler and quieter, and reduces power consumption. This is "
-"the status of the Helium in the drive. It is a pre-fail attribute that trips "
-"once the drive detects that the internal environment is out of specification."
+"Specific Helium Level. The Helium, so says the literature, allows the drives "
+"to run cooler and quieter, and reduces power consumption. This is the status "
+"of the Helium in the drive. It is a pre-fail attribute that trips once the "
+"drive detects that the internal environment is out of specification."
 msgstr ""
 
 msgid "Specified path is NFSv4 root directory."
@@ -7213,6 +7234,12 @@ msgstr ""
 
 #, php-format
 msgid ""
+"The driver used to communicate with your second UPS. Get the list of "
+"available <a href='%s' target='_blank'>drivers</a>."
+msgstr ""
+
+#, php-format
+msgid ""
 "The driver used to connect with the LCD. The list of available <a href='%s' "
 "target='_blank'>drivers</a>."
 msgstr ""
@@ -7459,6 +7486,9 @@ msgstr "Номер правила визначає також його поря�
 
 msgid "The serial or USB port where your UPS is connected."
 msgstr "Послідовний або USB порт куди підключено ДБЖ."
+
+msgid "The serial or USB port where your second UPS is connected."
+msgstr ""
 
 #, php-format
 msgid "The server advertises itself as a time server to Windows clients."
@@ -7781,6 +7811,10 @@ msgstr ""
 msgid "This name is used to uniquely identify your UPS on this system."
 msgstr ""
 "Це ім'я використовується для унікальної ідентифікації вашого ДБЖ в системі."
+
+msgid ""
+"This name is used to uniquely identify your second UPS on this system."
+msgstr ""
 
 msgid ""
 "This option allows the users and groups that access a share to be specified. "
@@ -9083,22 +9117,3 @@ msgstr "umount"
 
 msgid "version:"
 msgstr "версія:"
-
-#~ msgid "Apply"
-#~ msgstr "Застосувати"
-
-#~ msgid "Add snapshot"
-#~ msgstr "Додати знімок"
-
-#~ msgid "Delete snapshot"
-#~ msgstr "Видалити знімок"
-
-#~ msgid "Do you really want to delete this snapshot?"
-#~ msgstr "Ви дійсно хочете видалити цей знімок?"
-
-#~ msgid "Edit snapshot"
-#~ msgstr "Редагувати знімок"
-
-#, php-format
-#~ msgid "The MIB '%s' already exist."
-#~ msgstr "MIB '%s' вже існує."

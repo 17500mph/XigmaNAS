@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-04 03:54+0000\n"
-"PO-Revision-Date: 2016-06-01 19:00+0000\n"
+"Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
+"POT-Creation-Date: 2016-06-06 10:52+0000\n"
+"PO-Revision-Date: 2016-06-11 18:39+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-04 14:04+0000\n"
-"X-Generator: Launchpad (build 18086)\n"
+"X-Launchpad-Export-Date: 2016-06-12 16:41+0000\n"
+"X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
 "X-Poedit-Language: Czech\n"
@@ -511,7 +511,7 @@ msgid "Add Rsync job"
 msgstr "Přidat Rsync úlohu"
 
 msgid "Add Snapshot"
-msgstr ""
+msgstr "Přidat zachycený stav"
 
 msgid "Add URL"
 msgstr "Přidat URL adresu"
@@ -597,6 +597,11 @@ msgstr "Další úložiště"
 msgid "Additional group"
 msgstr "Doplňková skupina"
 
+msgid ""
+"Additional parameters to the hardware-specific part of the driver for second "
+"UPS."
+msgstr "Dodatečné parametry pro ovladač pro druhý UPS zdroj."
+
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr ""
 "Doplňkové parametry pro tu část ovladače, která je specifická danému "
@@ -673,7 +678,7 @@ msgstr ""
 "pro přístup do webového správního rozhraní</span></li></ul>"
 
 msgid "Age"
-msgstr ""
+msgstr "Stáří"
 
 msgid "Aggregation protocol"
 msgstr "Seskupovací protokol"
@@ -790,7 +795,7 @@ msgid "Allows the server to try and become a local master browser."
 msgstr "Umožní serveru pokusit se stát místním hlavním prohlížečem (WINS)."
 
 msgid "Allows to connect to a hidden network"
-msgstr ""
+msgstr "Umožnit připojení ke skryté síti"
 
 msgid ""
 "Also known as 'Power-off Retract Count' per conventional HDD terminology. "
@@ -883,7 +888,7 @@ msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
 
 msgid "Apply Filter"
-msgstr ""
+msgstr "Použít filtr"
 
 msgid "Apply changes"
 msgstr "Provést změny"
@@ -1477,7 +1482,7 @@ msgid "Confirmation"
 msgstr "Potvrzení"
 
 msgid "Connect to hidden network"
-msgstr ""
+msgstr "Připojit ke skryté síti"
 
 msgid "Connected FTP Users & Status"
 msgstr "Připojení FTP uživatelé – informace a stav"
@@ -1767,7 +1772,7 @@ msgid "Create 4KB wrapper (nop device)."
 msgstr "Vytvořit 4KB obal (nop zařízení)."
 
 msgid "Create Date"
-msgstr ""
+msgstr "Datum vytvoření"
 
 msgid "Create HVM Guest"
 msgstr "Vytvořit virt. stroj (HVM)"
@@ -2057,7 +2062,7 @@ msgid "Delete Selected RAID Volumes"
 msgstr "Smazat označené RAID svazky"
 
 msgid "Delete Selected Snapshots"
-msgstr ""
+msgstr "Smazat označené zachycené stavy"
 
 msgid "Delete Selected Virtual Devices"
 msgstr "Smazat označená virtuální zařízení"
@@ -2556,7 +2561,7 @@ msgid "Do you want to delete selected pools?"
 msgstr "Chcete smazat označené fondy úložišť?"
 
 msgid "Do you want to delete selected snapshots?"
-msgstr ""
+msgstr "Opravdu chcete smazat označené zachycené stavy?"
 
 msgid "Do you want to delete selected virtual devices?"
 msgstr "Opravdu chcete smazat označené virtuální zařízení?"
@@ -2719,7 +2724,7 @@ msgid "Edit Rsync job"
 msgstr "Upravit synchronizační (Rsync) úlohu"
 
 msgid "Edit Snapshot"
-msgstr ""
+msgstr "Upravit zachycený stav"
 
 msgid "Edit URL"
 msgstr "Upravit URL adresu"
@@ -2976,6 +2981,9 @@ msgstr ""
 
 msgid "Enable reverse DNS lookup."
 msgstr "Zapnout zpětný DNS překlad."
+
+msgid "Enable second local connected UPS."
+msgstr "Používat druhou, s tímto strojem přímo komunikující UPS zdroj."
 
 msgid "Enable serial console."
 msgstr "Zapnout sériovou konzoli."
@@ -4673,6 +4681,9 @@ msgid ""
 "vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
 "Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
 msgstr ""
+"Vždy vyberte správný počet zařízení:<div id='enumeration'><ul><li>pro RAID-"
+"Z1 je třeba 3, 5 nebo 9 disků</li><li>pro RAID-Z2 4, 6 nebo 10 "
+"disků</li><li>pro RAID-Z3 5, 7 nebo 11 disků</li></ul></div>"
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Zkontrolujte, zda máte zapnuté SMART dohledování u svých zařízení."
@@ -6126,6 +6137,18 @@ msgstr "Název modulu na protějšku"
 msgid "Remote monitoring"
 msgstr "Dohledování na protějšku"
 
+msgid ""
+"Remote monitoring password. Must be equal on both master and slave system."
+msgstr ""
+"Heslo pro přístup ke sledování stavu protějšku. Je třeba, aby bylo stejné na "
+"hlavním i záložním stroji."
+
+msgid ""
+"Remote monitoring username. Must be equal on both master and slave system."
+msgstr ""
+"Uživatelské jméno pro přístup ke sledování stavu protějšku. Je třeba, aby "
+"bylo stejné na hlavním i záložním stroji."
+
 msgid "Remote rsync daemon"
 msgstr "Proces služby rsync na protějšku"
 
@@ -6514,6 +6537,9 @@ msgstr ""
 msgid "Selected"
 msgstr "Vybráno"
 
+msgid "Selected UPS"
+msgstr "Vybraná UPS"
+
 msgid "Selected device or label does not exist."
 msgstr "Vybrané zařízení nebo označení neexistuje."
 
@@ -6754,13 +6780,13 @@ msgid "Snapshot Visibility"
 msgstr "Viditelnost zachyceného stavu"
 
 msgid "Snapshot is locked"
-msgstr ""
+msgstr "Zachycený stav je uzamčen"
 
 msgid "Snapshot is marked for deletion"
-msgstr ""
+msgstr "Zachycený stav je označen ke smazání"
 
 msgid "Snapshot is unlocked"
-msgstr ""
+msgstr "Zachycený stav je odemčen"
 
 msgid "Snapshots"
 msgstr "Zachycené stavy"
@@ -6819,16 +6845,11 @@ msgid "Speaker Beep"
 msgstr "Pípání vestavěným reproduktorem"
 
 msgid ""
-"Specific to He8 drives from HGST. The Helium, so says the literature, allows "
-"the drives to run cooler and quieter, and reduces power consumption. This is "
-"the status of the Helium in the drive. It is a pre-fail attribute that trips "
-"once the drive detects that the internal environment is out of specification."
+"Specific Helium Level. The Helium, so says the literature, allows the drives "
+"to run cooler and quieter, and reduces power consumption. This is the status "
+"of the Helium in the drive. It is a pre-fail attribute that trips once the "
+"drive detects that the internal environment is out of specification."
 msgstr ""
-"Specifické diskům řady He8 od HGST. Hélium dle dokumentace umožňuje těmto "
-"diskům tišší provoz, nižší zahřívání a spotřebu elektrické energie. Toto je "
-"stav plynné náplně uvnitř disku. Jedná se o atribut, značící blížící se "
-"selhání, který je trvale přepnut do výstrahy jakmile vnitřní prostředí disku "
-"přestane splňovat požadované parametry."
 
 msgid "Specified path is NFSv4 root directory."
 msgstr "Zadané umístění je NFSv4 kořenová složka."
@@ -7641,6 +7662,12 @@ msgstr ""
 
 #, php-format
 msgid ""
+"The driver used to communicate with your second UPS. Get the list of "
+"available <a href='%s' target='_blank'>drivers</a>."
+msgstr ""
+
+#, php-format
+msgid ""
 "The driver used to connect with the LCD. The list of available <a href='%s' "
 "target='_blank'>drivers</a>."
 msgstr ""
@@ -7936,6 +7963,9 @@ msgstr "Číslo pravidla určuje pozici v pořadí."
 
 msgid "The serial or USB port where your UPS is connected."
 msgstr "Sériový nebo USB port, ke kterému je UPS zdroj připojen."
+
+msgid "The serial or USB port where your second UPS is connected."
+msgstr "Sériový nebo USB port, ke kterému je druhý UPS zdroj připojený."
 
 #, php-format
 msgid "The server advertises itself as a time server to Windows clients."
@@ -8311,6 +8341,12 @@ msgstr "Příkladem takového názvu je: iqn.2005-01.il.ac.huji.cs:nekdo."
 msgid "This name is used to uniquely identify your UPS on this system."
 msgstr ""
 "Tento název slouží k jednoznačnému rozlišení UPS zdroje v rámci tohoto "
+"systému."
+
+msgid ""
+"This name is used to uniquely identify your second UPS on this system."
+msgstr ""
+"Tento název slouží k jedinečné identifikaci druhého UPS zdroje na tomto "
 "systému."
 
 msgid ""
@@ -9804,38 +9840,3 @@ msgstr "odpojit (umount)"
 
 msgid "version:"
 msgstr "verze:"
-
-#~ msgid "Apply"
-#~ msgstr "Použít"
-
-#~ msgid "Edit snapshot"
-#~ msgstr "Upravit zachycený stav"
-
-#~ msgid "Delete snapshot"
-#~ msgstr "Smazat zachycený stav"
-
-#~ msgid ""
-#~ "These MIBs will be added to /etc/sysctl.conf. This allow you to make changes "
-#~ "to a running system."
-#~ msgstr ""
-#~ "Tato MIB data budou přidána do /etc/sysctl.conf. Toto umožňuje dělat změny v "
-#~ "běžícím systému."
-
-#~ msgid ""
-#~ "This page reflects the current system configuration. It may be different to "
-#~ "the configuration which has been created with the WebGUI if changes has been "
-#~ "done via command line."
-#~ msgstr ""
-#~ "Tato stránka odráží stav stávajícího nastavení systému. Zde uvedený stav "
-#~ "nemusí odpovídat nastavením, provedeným prostřednictvím webového rozhraní, a "
-#~ "to v důsledku změn, provedených mimo něj, v příkazovém řádku."
-
-#~ msgid "Add snapshot"
-#~ msgstr "Přidat zachycování stavu"
-
-#~ msgid "Do you really want to delete this snapshot?"
-#~ msgstr "Opravdu chcete smazat tento zachycený stav?"
-
-#, php-format
-#~ msgid "The MIB '%s' already exist."
-#~ msgstr "MIB %s už existuje."

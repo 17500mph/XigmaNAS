@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-04 03:54+0000\n"
-"PO-Revision-Date: 2016-06-01 08:24+0000\n"
-"Last-Translator: Travel_ED <richard.edouard84@gmail.com>\n"
+"Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
+"POT-Creation-Date: 2016-06-06 10:52+0000\n"
+"PO-Revision-Date: 2016-06-12 14:03+0000\n"
+"Last-Translator: Anthony Gaschet <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-04 14:04+0000\n"
-"X-Generator: Launchpad (build 18086)\n"
+"X-Launchpad-Export-Date: 2016-06-12 16:41+0000\n"
+"X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
 "X-Poedit-Language: French\n"
@@ -514,7 +514,7 @@ msgid "Add Rsync job"
 msgstr "Ajouter une tâche Rsync"
 
 msgid "Add Snapshot"
-msgstr ""
+msgstr "Ajouter un instantané"
 
 msgid "Add URL"
 msgstr "Ajouter un URL"
@@ -600,6 +600,13 @@ msgstr "Stockage supplementaire"
 msgid "Additional group"
 msgstr "Groupe additionnel"
 
+msgid ""
+"Additional parameters to the hardware-specific part of the driver for second "
+"UPS."
+msgstr ""
+"Paramètres supplémentaires spécifique au matériel pour le pilote du second "
+"onduleur (UPS)."
+
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr "Paramètres additionnels du pilote spécifiques du matériel."
 
@@ -674,7 +681,7 @@ msgstr ""
 "avec la nouvelle adresse IP</span></li></ul>"
 
 msgid "Age"
-msgstr ""
+msgstr "Âge"
 
 msgid "Aggregation protocol"
 msgstr "Protocole d'agrégation"
@@ -790,7 +797,7 @@ msgstr ""
 "Permet au serveur d'essayer de s'enregistrer comme maître explorateur local."
 
 msgid "Allows to connect to a hidden network"
-msgstr ""
+msgstr "Permet de se connecter à un réseau caché"
 
 msgid ""
 "Also known as 'Power-off Retract Count' per conventional HDD terminology. "
@@ -882,7 +889,7 @@ msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol (AFP)"
 
 msgid "Apply Filter"
-msgstr ""
+msgstr "Appliquer le filtre"
 
 msgid "Apply changes"
 msgstr "Appliquer les modifications"
@@ -1468,7 +1475,7 @@ msgid "Confirmation"
 msgstr "Confirmation"
 
 msgid "Connect to hidden network"
-msgstr ""
+msgstr "Se connecter à un réseau caché"
 
 msgid "Connected FTP Users & Status"
 msgstr "status des utilisateurs FTP connectés"
@@ -1762,7 +1769,7 @@ msgid "Create 4KB wrapper (nop device)."
 msgstr "Crée un wrapper de 4Ko (partition nop)."
 
 msgid "Create Date"
-msgstr ""
+msgstr "Date de création"
 
 msgid "Create HVM Guest"
 msgstr "creer un invite HVM"
@@ -2047,7 +2054,7 @@ msgid "Delete Selected RAID Volumes"
 msgstr "Effacer le(s) volume(s) RAID sélectionné(s)"
 
 msgid "Delete Selected Snapshots"
-msgstr ""
+msgstr "Supprimer les instantanés sélectionnés"
 
 msgid "Delete Selected Virtual Devices"
 msgstr "Effacer le(s) périphérique(s) virtuel(s)sélectionné(s)"
@@ -2556,7 +2563,7 @@ msgid "Do you want to delete selected pools?"
 msgstr "Voulez-vous supprimer le(s) pool(s)  sélectionné(s)"
 
 msgid "Do you want to delete selected snapshots?"
-msgstr ""
+msgstr "Voulez-vous supprimer les instantanés sélectionnés ?"
 
 msgid "Do you want to delete selected virtual devices?"
 msgstr ""
@@ -2719,7 +2726,7 @@ msgid "Edit Rsync job"
 msgstr "Editer la tâche Rsync"
 
 msgid "Edit Snapshot"
-msgstr ""
+msgstr "Éditer l'instantané"
 
 msgid "Edit URL"
 msgstr "Editer URL"
@@ -2974,6 +2981,9 @@ msgstr ""
 
 msgid "Enable reverse DNS lookup."
 msgstr "Activer la recherche DNS inversée."
+
+msgid "Enable second local connected UPS."
+msgstr "Activer le second onduleur connecté."
 
 msgid "Enable serial console."
 msgstr "Activer la console série"
@@ -3481,7 +3491,7 @@ msgid "GEOM Software RAID"
 msgstr "GEOM RAID Logiciel"
 
 msgid "GEOM VINUM Software RAID"
-msgstr ""
+msgstr "RAID logiciel"
 
 msgid "GID"
 msgstr "GID"
@@ -3558,6 +3568,7 @@ msgstr "Suffixe groupe"
 
 msgid "Groupmask - Mask ACL with mode"
 msgstr ""
+"Masque de groupe - Masquer la liste de contrôle d'accès (ACL) avec mode"
 
 msgid "Groups"
 msgstr "Groupes"
@@ -4564,7 +4575,7 @@ msgid "Logical Unit Controller IP address (%s by default)"
 msgstr "Adresse IP du contrôleur d'unités logiques (%s par défaut)"
 
 msgid "Logical Unit Controller Login Information"
-msgstr ""
+msgstr "Contrôleur d'unité logique Informations de connexion"
 
 #, php-format
 msgid "Logical Unit Controller TCP port (%d by default)"
@@ -4596,6 +4607,7 @@ msgid ""
 "Lowering this threshold can adversely affect performance and auto-"
 "defragmentation."
 msgstr ""
+"Diminuer le seuil peut nuire à la performance et à l'auto-défragmentation."
 
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
@@ -4843,7 +4855,7 @@ msgid "Memory usage"
 msgstr "Utilisation de la mémoire"
 
 msgid "Message Board"
-msgstr ""
+msgstr "Forum"
 
 msgid "Message of the day."
 msgstr "Message du jour."
@@ -4916,7 +4928,7 @@ msgid "Model"
 msgstr "Modèle"
 
 msgid "Model Extra"
-msgstr ""
+msgstr "Modèle supplémentaire"
 
 msgid "Model Name"
 msgstr "Nom du modèle"
@@ -5043,7 +5055,7 @@ msgid "Name of the variable."
 msgstr "Nom de la variable."
 
 msgid "Nested HVM"
-msgstr ""
+msgstr "Nested HVM"
 
 msgid "NetBIOS domain"
 msgstr "Domaine NetBios"
@@ -5152,6 +5164,8 @@ msgid ""
 "No configured bridge interfaces. Please add new <a href='%s'>bridge "
 "interface</a> first."
 msgstr ""
+"Aucunes interfaces de pont configurés. Veuillez d'abord ajouter une nouvelle "
+"<a href='%s'>interface de pont</a>."
 
 #, php-format
 msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
@@ -5202,7 +5216,7 @@ msgid "No softraid-formatted disks available."
 msgstr "Pas de disque formaté pour du Raid Logiciel disponible"
 
 msgid "Noallow - Only inherit deny entries"
-msgstr ""
+msgstr "Noallow - Ne pas hériter des entrées refusées"
 
 msgid "Node A IP address"
 msgstr "Node A adresse ip"
@@ -5308,7 +5322,7 @@ msgid "Nothing to synchronize"
 msgstr "Rien à synchroniser"
 
 msgid "Notice Level"
-msgstr ""
+msgstr "Niveau d'information"
 
 #, php-format
 msgid "Notification email from host: %s"
@@ -5567,13 +5581,13 @@ msgid "Passphrase don't match."
 msgstr "Les phrases de passe ne correspondent pas"
 
 msgid "Passthrough - Do not change ACL"
-msgstr ""
+msgstr "Passthrough - Ne pas changer la liste de contrôle d'accès (ACL)"
 
 msgid "Passthrough - Inherit all entries"
-msgstr ""
+msgstr "Passthrough - Hériter de toutes les entrées"
 
 msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
-msgstr ""
+msgstr "Passthrough-X - Hériter tout mais \"exécuter\" lorsque non spécifié"
 
 msgid "Password"
 msgstr "Mot de passe"
@@ -5825,7 +5839,7 @@ msgid "Preformatted file system"
 msgstr "Système de fichiers préformaté"
 
 msgid "Presentation WebGUI"
-msgstr ""
+msgstr "Présentation de l'interface web"
 
 msgid "Preserve extended attributes"
 msgstr "Conserver les attributs étendus"
@@ -6099,7 +6113,7 @@ msgid "Remote Address"
 msgstr "Adresse distante"
 
 msgid "Remote Module (Source)"
-msgstr ""
+msgstr "Module à distance (Source)"
 
 msgid "Remote Rsync Server"
 msgstr "Serveur Rsync distant"
@@ -6115,6 +6129,18 @@ msgstr "Nom du module distant"
 
 msgid "Remote monitoring"
 msgstr "Contrôle à distance"
+
+msgid ""
+"Remote monitoring password. Must be equal on both master and slave system."
+msgstr ""
+"Mot de passe de contrôle à distance. Doit être le même sur le système maître "
+"et esclave."
+
+msgid ""
+"Remote monitoring username. Must be equal on both master and slave system."
+msgstr ""
+"Nom d'utilisateur de contrôle à distance. Doit être le même sur le système "
+"maître et esclave."
 
 msgid "Remote rsync daemon"
 msgstr "Démon rsync distant."
@@ -6205,6 +6231,8 @@ msgstr "Restreint"
 
 msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
+"Limité - Hériter tous, mais \"droit d'écrire \" et \"propriétaire du "
+"changement\""
 
 msgid "Results for net rpc testjoin:"
 msgstr "Résultat de la commande net rpc testjoin:"
@@ -6474,7 +6502,7 @@ msgid "Select mount point where to create the swap file."
 msgstr "Sélectionnez le point de montage où créer le fichier de pagination."
 
 msgid "Select read balance algorithm."
-msgstr ""
+msgstr "Sélectionnez l'algorithme d'équilibrage de lecture."
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "Sélectionner le paquet FreeBSD à installer"
@@ -6504,6 +6532,9 @@ msgstr ""
 msgid "Selected"
 msgstr "Sélectionné"
 
+msgid "Selected UPS"
+msgstr "Sélectionner l'onduleur (UPS)"
+
 msgid "Selected device or label does not exist."
 msgstr "Le périphérique ou le label sélectionné est inexistant"
 
@@ -6511,7 +6542,7 @@ msgid "Selected file isn't an valid ISO file."
 msgstr "Le fichier sélectionné n'est pas un fichier ISO valide."
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
-msgstr ""
+msgstr "Auto-surveillance, Analyse & Rapports"
 
 msgid "Self-tests Management"
 msgstr "Gestion des auto-tests"
@@ -6746,13 +6777,13 @@ msgid "Snapshot Visibility"
 msgstr "Visibilité de l'instantané"
 
 msgid "Snapshot is locked"
-msgstr ""
+msgstr "L'instantané est vérouillé"
 
 msgid "Snapshot is marked for deletion"
-msgstr ""
+msgstr "L'instantané est marqué pour la suppression"
 
 msgid "Snapshot is unlocked"
-msgstr ""
+msgstr "L'instantané est dévérouillé"
 
 msgid "Snapshots"
 msgstr "Instantanés"
@@ -6811,16 +6842,16 @@ msgid "Speaker Beep"
 msgstr "Bip du haut-parleur"
 
 msgid ""
-"Specific to He8 drives from HGST. The Helium, so says the literature, allows "
-"the drives to run cooler and quieter, and reduces power consumption. This is "
-"the status of the Helium in the drive. It is a pre-fail attribute that trips "
-"once the drive detects that the internal environment is out of specification."
+"Specific Helium Level. The Helium, so says the literature, allows the drives "
+"to run cooler and quieter, and reduces power consumption. This is the status "
+"of the Helium in the drive. It is a pre-fail attribute that trips once the "
+"drive detects that the internal environment is out of specification."
 msgstr ""
-"Spécifique aux disques He8 (Helium) de HGST. L'Hélium, d'après la "
-"littérature, permet aux disques de rester froid et silencieux, et réduit la "
-"consommation électrique. Cet attribut est le statut de l'hélium dans le "
-"disque. C'est un attribut pre-crash qui se déclenche sur détection de "
-"l'environnement interne hors spécification."
+"Specific Helium Level. Permet aux disques durs de fonctionner moins vites et "
+"d'être plus silencieux tout en réduisant la consommation d'énergie. Ceci est "
+"le statut de l'Helium dans le disque dur. Il est un attribut pré-échec qui "
+"se déclenche une fois que le disque dur détecte que l'environnement interne "
+"est hors spécifications."
 
 msgid "Specified path is NFSv4 root directory."
 msgstr "le chemin spécifié est le répertoire root NFSv4"
@@ -6877,6 +6908,7 @@ msgstr ""
 
 msgid "Specify the percentage of space held back from normal users."
 msgstr ""
+"Spécifiez le pourcentage d'espace retenu par les utilisateurs normaux."
 
 msgid "Split request"
 msgstr "Distribuer les requêtes (split)"
@@ -7094,7 +7126,7 @@ msgid "TCP port"
 msgstr "Port TCP"
 
 msgid "TCP port is 5900+N, where N is VNC display number."
-msgstr ""
+msgstr "Le port TCP est 5900+N, où N est le numéro de l'écran VNC."
 
 msgid "TCP port to bind the server to."
 msgstr "Port TCP d'écoute du serveur."
@@ -7238,7 +7270,7 @@ msgstr "L'adresse IP que ce nom d'hôte représente."
 
 #, php-format
 msgid "The MIB '%s' already exists."
-msgstr ""
+msgstr "La MIB '% s' existe déjà."
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -7641,6 +7673,14 @@ msgstr ""
 
 #, php-format
 msgid ""
+"The driver used to communicate with your second UPS. Get the list of "
+"available <a href='%s' target='_blank'>drivers</a>."
+msgstr ""
+"Le pilote est utilisé pour communiquer avec votre second onduleur (UPS). "
+"Obtenez la liste des <a href='%s' target='_blank'>pilotes disponibles</a>."
+
+#, php-format
+msgid ""
 "The driver used to connect with the LCD. The list of available <a href='%s' "
 "target='_blank'>drivers</a>."
 msgstr ""
@@ -7941,6 +7981,9 @@ msgstr "Le numéro de règle détermine l'ordre de la règle."
 msgid "The serial or USB port where your UPS is connected."
 msgstr "Le port série ou le port USB auquel est connecté votre UPS."
 
+msgid "The serial or USB port where your second UPS is connected."
+msgstr "Le port série ou USB où est connecté votre second onduleur."
+
 #, php-format
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr ""
@@ -8089,6 +8132,8 @@ msgid ""
 "These MIBs will be added to /etc/sysctl.conf. This allows you to make "
 "changes to a running system."
 msgstr ""
+"Ces MIBs seront ajoutés à /etc/sysctl.conf. Cela vous permet d'apporter des "
+"modifications à un système en cours d'exécution."
 
 msgid ""
 "These commands will be executed pre or post system initialization (booting) "
@@ -8331,6 +8376,12 @@ msgstr ""
 "Nom utilisé pour identifier de façon unique votre UPS sur ce système."
 
 msgid ""
+"This name is used to uniquely identify your second UPS on this system."
+msgstr ""
+"Ce nom est utilisé pour identifier de manière unique votre second UPS sur ce "
+"système."
+
+msgid ""
 "This option allows the users and groups that access a share to be specified. "
 "Users and groups are specified, delimited by commas. Groups are designated "
 "by a @ prefix."
@@ -8453,6 +8504,9 @@ msgid ""
 "the configuration which has been created with the WebGUI if changes has been "
 "done via command line"
 msgstr ""
+"Cette page reflète la configuration actuelle du système. Elle peut être "
+"différente de la configuration qui a été créé avec l'interface Web si des "
+"modifications ont été apportées via la ligne de commande"
 
 msgid ""
 "This parameter controls whether files starting with a dot appear as hidden "
@@ -8574,6 +8628,8 @@ msgstr ""
 msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
 msgstr ""
+"Cela permettra l'utilisation du streaming des fichiers .jpeg et .mp3 à un "
+"HMO soutenant TiVo."
 
 msgid "Thu"
 msgstr "Jeu"
@@ -8716,7 +8772,7 @@ msgstr ""
 "répertoires. (par ex. %s)"
 
 msgid "Toggle Mode"
-msgstr ""
+msgstr "Baculer le mode"
 
 msgid "Toggle Selected Jobs"
 msgstr "Inverse l'état des tâches sélectionnées"
@@ -8738,12 +8794,18 @@ msgid ""
 "LBAs read from the device. The lower 7 byte value is located at attribute "
 "0xF2."
 msgstr ""
+"Total des LBAs en lecture étendue. Les 5 premiers octets des 12 octets total "
+"du LBA lues à partir du disque. La valeur des 7 derniers octets est situé à "
+"l'attribut 0xF2."
 
 msgid ""
 "Total LBAs Written Expanded. The upper 5 bytes of the 12-byte total number "
 "of LBAs written to the device. The lower 7 byte value is located at "
 "attribute 0xF1."
 msgstr ""
+"Total des LBAs en écriture étendue. Les 5 premiers octets des 12 octets "
+"total du LBA lues à partir du disque. La valeur des 7 derniers octets est "
+"situé à l'attribut 0xF1."
 
 msgid ""
 "Total NAND Writes. Raw value reports the number of writes to NAND in 1GB "
@@ -9077,7 +9139,7 @@ msgid "Use as sparse volume. (thin provisioning)"
 msgstr "Utilisé comme volume parcellaire. (allocation parcellaire)."
 
 msgid "Use different container as root of the tree."
-msgstr ""
+msgstr "Utiliser un container différent comme racine de l'arborescence."
 
 msgid "Use inotify monitoring to automatically discover new files."
 msgstr ""
@@ -9211,7 +9273,7 @@ msgid "VLAN"
 msgstr "VLAN"
 
 msgid "VLAN Tag"
-msgstr ""
+msgstr "Tag VLAN"
 
 msgid "VLAN tag"
 msgstr "Étiquette VLAN"
@@ -9329,9 +9391,12 @@ msgid ""
 "Volume label of the new file system. Use a space to separate multiple "
 "labels. (if only one specified next will be auto increment)"
 msgstr ""
+"Nom de volume du nouveau système de fichiers. Séparer les différents nom par "
+"un espace. (si un seul nom est spécifié, les suivants seront incrémentés "
+"automatiquement)"
 
 msgid "Volume mode"
-msgstr ""
+msgstr "Mode du volume"
 
 msgid "Volumes"
 msgstr "Volumes"
@@ -9493,7 +9558,7 @@ msgid "Write only"
 msgstr "Écriture seule"
 
 msgid "Wrong number of count for Volume Label"
-msgstr ""
+msgstr "Mauvais numéro pour le nom du volume"
 
 msgid "Wrong partition type or partition number."
 msgstr "Type de partition ou numéro de partition erroné"
@@ -9798,38 +9863,3 @@ msgstr "démontage"
 
 msgid "version:"
 msgstr "version:"
-
-#~ msgid "Apply"
-#~ msgstr "Appliquer"
-
-#~ msgid "Delete snapshot"
-#~ msgstr "Supprimer l'instantané"
-
-#~ msgid "Do you really want to delete this snapshot?"
-#~ msgstr "Voulez-vous vraiment supprimer cet instantané?"
-
-#~ msgid "Edit snapshot"
-#~ msgstr "modifier l'aperçu"
-
-#, php-format
-#~ msgid "The MIB '%s' already exist."
-#~ msgstr "La MIB '%s' existe déjà."
-
-#~ msgid ""
-#~ "These MIBs will be added to /etc/sysctl.conf. This allow you to make changes "
-#~ "to a running system."
-#~ msgstr ""
-#~ "Ces MIBs seront ajoutées au fichier /etc/sysctl.conf. Permet de faire des "
-#~ "changements sur un système en cours de fonctionnement."
-
-#~ msgid ""
-#~ "This page reflects the current system configuration. It may be different to "
-#~ "the configuration which has been created with the WebGUI if changes has been "
-#~ "done via command line."
-#~ msgstr ""
-#~ "Cette page reflète la configuration courante du système. Elle peut être "
-#~ "différente de la configuration créée via l'interface web si des "
-#~ "modifications ont été réalisées par des commandes en ligne."
-
-#~ msgid "Add snapshot"
-#~ msgstr "Ajouter un instantané"
