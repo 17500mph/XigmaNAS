@@ -37,6 +37,7 @@ Fixes:
 - Fix importing ZFS datasets and ZFS volumes from different ZFS pools.
 - Fix code format for Swedish file manager.
 - Fix gettext protection against html code injections.
+- Fix issue when reformatting disks. 
 
 Note:
 - iperf2 has been replaced for iperf3 because of inconsistent results for UDP above 2Gbps.
