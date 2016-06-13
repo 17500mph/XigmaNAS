@@ -59,6 +59,14 @@ if (!isset($do_action)) {
 }
 ?>
 <?php include("fbegin.inc");?>
+<script type="text/javascript">
+//<![CDATA[
+$(window).on("load", function() {
+	// Init spinner onsubmit()
+	$("#iform").submit(function() { spinner(); });
+}); 
+//]]>
+</script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 	<td class="tabnavtbl">

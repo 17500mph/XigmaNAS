@@ -70,6 +70,10 @@ if (!isset($do_action)) {
 <?php include("fbegin.inc"); ?>
 <script type="text/javascript">
 //<![CDATA[
+$(window).on("load", function() {
+	// Init spinner onsubmit()
+	$("#iform").submit(function() { spinner(); });
+}); 
 function raid_change() {
 	var next = null;
 	// Remove all entries from partition combobox.
