@@ -117,7 +117,7 @@ $a_button_matrix = [
 $l_filesystem = [
 	'ufsgpt' => gettext_gen2('UFS (GPT and Soft Updates)'),
 	'msdos' => gettext_gen2('FAT32'),
-	'ext2' => gettext_gen2('EXT2'),
+//	'ext2' => gettext_gen2('EXT2'),
 	'softraid' => gettext_gen2('Software RAID'),
 	'zfs' => gettext_gen2('ZFS Storage Pool')
 ];
@@ -329,7 +329,6 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 			}
 		}
 		write_config();
-		var_dump($do_format);
 	}
 } elseif (isset($a_option['action4']) && $a_option['action4']) {
 //	$page_index = 1;

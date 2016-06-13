@@ -940,15 +940,20 @@ function disks_format($disk, $type, $notinitmbr, $minspace, $volumelabel, $aft4k
 
 	// Get disk information
 	$diskinfo = disks_get_diskinfo($disk);
-
 	set_kern_geom_debugflags(0x10);
 	if (!$notinitmbr) {
 		echo gettext("Deleting MBR and partition table")."...\n";
-		system("/sbin/gpart destroy -F {$disk} 1>/dev/null 2>&1");
-		$count = (1024*1024) / $diskinfo['sectorsize'];
-		system("/bin/dd if=/dev/zero of={$disk} bs={$diskinfo['sectorsize']} count={$count} 2>&1");
-		$oseek = $diskinfo['mediasize_sectors'] - $count;
-		system("/bin/dd if=/dev/zero of={$disk} bs={$diskinfo['sectorsize']} oseek={$oseek} count={$count} 2>&1");
+		$cmd =  sprintf('/sbin/gpart destroy -F %1$s 1>/dev/null 2>&1', $disk);
+		echo htmlspecialchars('#'), htmlspecialchars($cmd), "\n";
+		system($cmd);
+		$block_size = $diskinfo['sectorsize'];
+		$block_count = min(8192, $diskinfo['mediasize_sectors']); // delete 8192 blocks but prevent overflow. (8192 * 4K = 32MB)
+		$cmd = sprintf('/bin/dd if=/dev/zero of=%1$s bs=%2$d count=%3$d 2>&1', $disk, $block_size, $block_count);
+		echo htmlspecialchars('#'), htmlspecialchars($cmd), "\n";
+		system($cmd);
+		$cmd = sprintf('/bin/dd if=/dev/zero of=%1$s bs=%2$d count=%3$d oseek=%4$d 2>&1', $disk, $block_size, $block_count, $diskinfo['mediasize_sectors'] - $block_count);
+		echo htmlspecialchars('#'), htmlspecialchars($cmd), "\n";
+		system($cmd);
 	}
 	if ($aft4k) {
 		// Advanced Format 4KB (512 x 8)
