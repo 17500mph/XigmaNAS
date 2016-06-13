@@ -174,6 +174,8 @@ $(window).on("load", function() {
 	$("input[name='<?=$checkbox_member_name;?>[]").click(function() {
 		controlactionbuttons(this, '<?=$checkbox_member_name;?>[]');
 	});
+	// Init spinner onsubmit()
+	$("#iform").submit(function() { spinner(); });
 });
 function disableactionbuttons(ab_disable) {
 	$("#delete_selected_rows").prop("disabled", ab_disable);
