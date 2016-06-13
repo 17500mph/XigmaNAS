@@ -258,10 +258,17 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 			break;
 	}
 }
-
 $pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Pools'), gettext('Management'), (!$isrecordnew) ? gettext('Edit') : gettext('Add'));
 ?>
 <?php include("fbegin.inc");?>
+<script type="text/javascript">
+//<![CDATA[
+$(window).on("load", function() {
+	// Init spinner onsubmit()
+	$("#iform").submit(function() { spinner(); });
+}); 
+//]]>
+</script>
 <table id="area_navigator">
 	<tr>
 		<td class="tabnavtbl">

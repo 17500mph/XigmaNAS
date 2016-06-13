@@ -331,6 +331,14 @@ $l_volblocksize = [
 $pgtitle = [gettext('Disks'), gettext('ZFS'), gettext('Volumes'), gettext('Volume'), ($isrecordnew) ? gettext('Add') : gettext('Edit')];
 ?>
 <?php include("fbegin.inc");?>
+<script type="text/javascript">
+//<![CDATA[
+$(window).on("load", function() {
+	// Init spinner onsubmit()
+	$("#iform").submit(function() { spinner(); });
+}); 
+//]]>
+</script>
 <table id="area_navigator">
 	<tr>
 		<td class="tabnavtbl">

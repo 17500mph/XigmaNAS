@@ -314,6 +314,8 @@ $(window).on("load", function() {
 	$("#button_log").click(function () { return confirm('<?=$gt_confirm_log;?>'); });
 	$("#button_logmir").click(function () { return confirm('<?=$gt_confirm_logmir;?>'); });
 	controlactionbuttons(this,'<?=$checkbox_member_name;?>[]');
+	// Init spinner onsubmit()
+	$("#iform").submit(function() { spinner(); });
 });
 function disableactionbuttons(n) {
 	var ab_element;
