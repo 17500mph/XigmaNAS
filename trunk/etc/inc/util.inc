@@ -2663,8 +2663,12 @@ function set_conf_disk_fstype_opt($disk, $fstype, $opt)
 		$id = array_search_ex($disk, $config[$class][$val], "devicespecialfile");
 		if ($id !== false) {
 			$config[$class][$val][$id]['fstype'] = $fstype;
-			if (!empty($opt) && $fstype == "zfs" && isset($opt['zfsgpt']))
+			// add zfsgpt information if filesystem is zfs, remove when not
+			if (!empty($opt) && $fstype == "zfs" && isset($opt['zfsgpt'])) {
 				$config[$class][$val][$id]['zfsgpt'] = $opt['zfsgpt'];
+			} elseif (isset($config[$class][$val][$id]['zfsgpt'])) {
+				unset($config[$class][$val][$id]['zfsgpt']);
+			}
 			$result = 0;
 //		echo "Set \$config['$class']['$val'][$id]['fstype'] = $fstype\n";
 			break;
