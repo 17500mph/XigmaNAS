@@ -344,7 +344,7 @@ $(window).on("load", function() {
 	// Init toggle checkbox
 	$("#togglemembers").click(function() { togglecheckboxesbyname(this, "<?=$checkbox_member_name;?>[]"); });
 	// Init spinner onsubmit()
-	$("#iframe").submit(function() { spinner(); });
+	$("#iform").submit(function() { spinner(); });
 }); 
 function togglecheckboxesbyname(ego, triggerbyname) {
 	var a_trigger = document.getElementsByName(triggerbyname);
@@ -369,7 +369,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 		<li class="tabinact"><a href="disks_manage_iscsi.php"><span><?=gettext_gen2('iSCSI Initiator');?></span></a></li>
 	</ul></td></tr>
 </tbody></table>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iframe" name="iframe">
+<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iform" name="iform">
 	<?php
 	if (!empty($input_errors)) {
 		print_input_errors($input_errors);
@@ -520,16 +520,16 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 		}
 		?>
 	</div>
-		<?php
-		if (count($do_format) > 0) {
-			foreach ($do_format as $do_format_disk) {
-				echo(sprintf("<div id='cmdoutput'>%s</div>", sprintf(gettext("Command output") . " for disk %s :", $do_format_disk['devicespecialfile'])));
-				echo('<pre class="cmdoutput">');
-				disks_format($do_format_disk['devicespecialfile'], $do_format_disk['filesystem'], $do_format_disk['notinitmbr'], $do_format_disk['minspace'], $do_format_disk['volumelabel'], $do_format_disk['aft4k'], $do_format_disk['zfsgpt']);
-				echo('</pre><br/>');
-			}
+	<?php
+	if (count($do_format) > 0) {
+		foreach ($do_format as $do_format_disk) {
+			echo(sprintf("<div id='cmdoutput'>%s</div>", sprintf(gettext("Command output") . " for disk %s :", $do_format_disk['devicespecialfile'])));
+			echo('<pre class="cmdoutput">');
+			disks_format($do_format_disk['devicespecialfile'], $do_format_disk['filesystem'], $do_format_disk['notinitmbr'], $do_format_disk['minspace'], $do_format_disk['volumelabel'], $do_format_disk['aft4k'], $do_format_disk['zfsgpt']);
+			echo('</pre><br/>');
 		}
-		?>
+	}
+	?>
 	<?php include('formend.inc');?>
 </form></td></tr></tbody></table>
 <?php include('fend.inc');?>

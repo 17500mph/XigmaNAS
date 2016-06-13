@@ -320,6 +320,8 @@ $(window).on("load", function() {
 	$("#button_raid0").click(function () { return confirm('<?=$gt_confirm_stripe;?>'); });
 	$("#button_jbod").click(function () { return confirm('<?=$gt_confirm_concat;?>'); });
 	controlactionbuttons(this,'<?=$checkbox_member_name;?>[]');
+	// Init spinner onsubmit()
+	$("#iform").submit(function() { spinner(); });
 });
 function disableactionbuttons(n) {
 	var ab_element;
