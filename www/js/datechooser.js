@@ -4,10 +4,6 @@
  * 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
  * 	All rights reserved.
  * 
- * 	Portions of freenas (http://www.freenas.org).
- * 	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
- * 	All rights reserved.
- * 
  * 	Copyright (c) 2004 Baron Schwartz <baron at sequent dot org> 
  * 	http://www.xaprb.com/blog/2005/09/29/javascript-date-chooser
  *
