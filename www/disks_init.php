@@ -65,7 +65,7 @@ function verify_filesystem_name($arg) {
 		case 'zfs':
 		case 'softraid':
 		case 'ufsgpt':
-		case 'ext2':
+//		case 'ext2':
 		case 'msdos':
 			$returnvalue = true;
 			break;

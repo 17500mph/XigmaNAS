@@ -2570,9 +2570,11 @@ function get_conf_all_disks_list_filtered() {
 
 		// Check ZFS virtual devices
 		foreach ($a_zfsvdevice as $vdisk) {
-			if (false !== array_search($disk['devicespecialfile'], $vdisk['device'])) {
-				$unused = false;
-				break;
+			foreach ($vdisk['device'] as $vdevice) {
+				if (0 === strpos($vdevice, $disk['devicespecialfile'])) {
+					$unused = false;
+					break 2;
+				}
 			}
 		}
 
