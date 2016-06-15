@@ -15,6 +15,7 @@
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -2570,11 +2571,13 @@ function get_conf_all_disks_list_filtered() {
 
 		// Check ZFS virtual devices
 		foreach ($a_zfsvdevice as $vdisk) {
-			foreach ($vdisk['device'] as $vdevice) {
-				if (0 === strpos($vdevice, $disk['devicespecialfile'])) {
+			if (false !== array_search($disk['devicespecialfile'], $vdisk['device'])) {
 					$unused = false;
-					break 2;
-				}
+				break;
+			}
+			if (false !== array_search($disk['devicespecialfile'] . ($disk['zfsgpt'] ?? ''), $vdisk['device'])) {
+					$unused = false;
+				break;
 			}
 		}
 
