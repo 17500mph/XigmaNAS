@@ -406,7 +406,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 				case 0: echo '<input name="volumelabel" type="hidden" value="', $a_option['volumelabel'], '"/>', "\n"; break;
 			}
 			switch ($a_control['minspace']) {
-				case 2: html_combobox2('minspace', gettext_gen2('Minimum Free Space'), $a_option['minspace'], $l_minspace, gettext_gen2('Specifiy the percentage of disk space to be held back from normal usage'), true, false); break;
+				case 2: html_combobox2('minspace', gettext_gen2('Minimum Free Space'), $a_option['minspace'], $l_minspace, gettext_gen2('Specifiy the percentage of disk space to be held back from normal usage. Lowering this threshold can adversely affect performance and auto-defragmentation!'), true, false); break;
 				case 1: html_combobox2('minspace', gettext_gen2('Minimum Free Space'), $a_option['minspace'], $l_minspace, '', false, true);
 				case 0: echo '<input name="minspace" type="hidden" value="', $a_option['minspace'], '"/>', "\n"; break;
 			}
