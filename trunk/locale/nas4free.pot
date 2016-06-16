@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-06-06 10:52+0000\n"
+"POT-Creation-Date: 2016-06-16 21:18+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -480,6 +480,9 @@ msgstr ""
 msgid "Advanced Configuration"
 msgstr ""
 
+msgid "Advanced Format"
+msgstr ""
+
 msgid "Advanced Options"
 msgstr ""
 
@@ -487,9 +490,6 @@ msgid "Advanced Settings"
 msgstr ""
 
 msgid "Advanced Setup"
-msgstr ""
-
-msgid "Advanced format"
 msgstr ""
 
 msgid "Advanced settings"
@@ -774,6 +774,9 @@ msgid "Average performance of seek operations of the magnetic heads. If this att
 msgstr ""
 
 msgid "Average time of spindle spin up (from zero RPM to fully operational)."
+msgstr ""
+
+msgid "Back"
 msgstr ""
 
 msgid "Backup Configuration"
@@ -1348,7 +1351,7 @@ msgstr ""
 msgid "Create PV Guest"
 msgstr ""
 
-msgid "Create ZFS on GPT partition."
+msgid "Create ZFS on a GPT partition."
 msgstr ""
 
 msgid "Create and initialize RAID."
@@ -1777,10 +1780,25 @@ msgstr ""
 msgid "Device Model"
 msgstr ""
 
+msgid "Device Name"
+msgstr ""
+
 msgid "Device Pass-through"
 msgstr ""
 
+msgid "Device Path"
+msgstr ""
+
 msgid "Device Serial"
+msgstr ""
+
+msgid "Device contains boot partition"
+msgstr ""
+
+msgid "Device is mounted"
+msgstr ""
+
+msgid "Device not found"
 msgstr ""
 
 msgid "Device polling"
@@ -1902,6 +1920,9 @@ msgstr ""
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
 
+msgid "Do not erase the Master Boot Record (useful for some RAID controller cards)."
+msgstr ""
+
 msgid "Do you really want to clear and import?\\nThe existing config will be cleared and overwritten."
 msgstr ""
 
@@ -1984,9 +2005,6 @@ msgid "Do you really want to delete this user?"
 msgstr ""
 
 msgid "Do you really want to delete this volume?\\n!!! Note, all data will get lost and can not be recovered. !!!"
-msgstr ""
-
-msgid "Do you really want to format this disk? All data will be lost!"
 msgstr ""
 
 msgid "Do you really want to import?\\nThe existing config may be overwritten."
@@ -2110,9 +2128,6 @@ msgid "Domain name in old format, e.g. EXAMPLE."
 msgstr ""
 
 msgid "Domain name, e.g. example.com."
-msgstr ""
-
-msgid "Don't erase the Master Boot Record. (useful for some RAID controller cards)"
 msgstr ""
 
 msgid "Donate"
@@ -2310,7 +2325,7 @@ msgstr ""
 msgid "Enable ACL inheritance"
 msgstr ""
 
-msgid "Enable Advanced Format. (4KB sector)"
+msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr ""
 
 msgid "Enable Asynchronous I/O (AIO)"
@@ -2551,6 +2566,9 @@ msgstr ""
 msgid "Erase Fail Count (chip). This parameter indicates a number of flash erase command failures."
 msgstr ""
 
+msgid "Erase MBR"
+msgstr ""
+
 msgid "Error"
 msgstr ""
 
@@ -2634,6 +2652,9 @@ msgid "Extra options to pass over rpc using transmission-remote (usually empty).
 msgstr ""
 
 msgid "Extra options to rsync (usually empty)."
+msgstr ""
+
+msgid "FAT32"
 msgstr ""
 
 msgid "FEC (Fast EtherChannel)"
@@ -2832,7 +2853,7 @@ msgstr ""
 msgid "Format"
 msgstr ""
 
-msgid "Format disk"
+msgid "Format Options"
 msgstr ""
 
 msgid "Format the report for phpBB forum."
@@ -2893,6 +2914,9 @@ msgid "GEOM VINUM Software RAID"
 msgstr ""
 
 msgid "GID"
+msgstr ""
+
+msgid "GPT Partition"
 msgstr ""
 
 msgid "GPT partition"
@@ -3794,10 +3818,6 @@ msgstr ""
 msgid "Low voltage trimming transfer point"
 msgstr ""
 
-#, php-format
-msgid "Lowering this threshold can adversely affect performance and auto-defragmentation."
-msgstr ""
-
 msgid "Lowest value is higher priority. For master node, use 0 or 1. If preempt is enabled, it is adjusted to 240 on failure."
 msgstr ""
 
@@ -3805,9 +3825,6 @@ msgid "MAC Address"
 msgstr ""
 
 msgid "MAC address"
-msgstr ""
-
-msgid "MBR erase"
 msgstr ""
 
 msgid "MBR partition"
@@ -4043,13 +4060,13 @@ msgstr ""
 msgid "Minimum"
 msgstr ""
 
+msgid "Minimum Free Space"
+msgstr ""
+
 msgid "Minimum Performance, Minimum Acoustic Output"
 msgstr ""
 
 msgid "Minimum battery level for UPS restart after power-off"
-msgstr ""
-
-msgid "Minimum free space"
 msgstr ""
 
 msgid "Minimum frequency"
@@ -4250,6 +4267,9 @@ msgstr ""
 msgid "New password"
 msgstr ""
 
+msgid "Next"
+msgstr ""
+
 msgid "No"
 msgstr ""
 
@@ -4392,10 +4412,6 @@ msgid "Not found path."
 msgstr ""
 
 msgid "Note"
-msgstr ""
-
-#, php-format
-msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
 msgstr ""
 
 msgid "Note: Ctrl-click (or command-click on the Mac) to select and de-select minutes, hours, days and months."
@@ -4595,6 +4611,9 @@ msgid "Package upload failed (out of memory?)"
 msgstr ""
 
 msgid "Packages"
+msgstr ""
+
+msgid "Page"
 msgstr ""
 
 msgid "Painfully aggressive"
@@ -5094,6 +5113,9 @@ msgstr ""
 msgid "Realm"
 msgstr ""
 
+msgid "Reason Code"
+msgstr ""
+
 msgid "Reason for last transfer to battery (* opaque)"
 msgstr ""
 
@@ -5101,6 +5123,9 @@ msgid "Reboot"
 msgstr ""
 
 msgid "Receive Buffer Size"
+msgstr ""
+
+msgid "Record is locked"
 msgstr ""
 
 msgid "Recurse into directories."
@@ -5471,6 +5496,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr ""
 
+msgid "Select file system format."
+msgstr ""
+
 msgid "Select firmware:"
 msgstr ""
 
@@ -5813,7 +5841,7 @@ msgstr ""
 msgid "Specifies whether it is allowed to login as superuser (root) directly."
 msgstr ""
 
-msgid "Specify the percentage of space held back from normal users."
+msgid "Specifiy the percentage of disk space to be held back from normal usage. Lowering this threshold can adversely affect performance and auto-defragmentation!"
 msgstr ""
 
 msgid "Split request"
@@ -6251,6 +6279,10 @@ msgstr ""
 
 #, php-format
 msgid "The attribute '%s' is required."
+msgstr ""
+
+#, php-format
+msgid "The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
 msgstr ""
 
 #, php-format
@@ -7213,9 +7245,6 @@ msgstr ""
 msgid "UFS and ZFS are NATIVE filesystems of %s. Attempting to use other filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in unpredictable results, file corruption and the loss of data!"
 msgstr ""
 
-msgid "UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in unpredictable results, file corruption and loss of data!"
-msgstr ""
-
 #, php-format
 msgid "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, or NTFS can result in unpredictable results, file corruption, and loss of data!"
 msgstr ""
@@ -7341,6 +7370,9 @@ msgid "Unknown"
 msgstr ""
 
 msgid "Unknown or unformatted"
+msgstr ""
+
+msgid "Unknown size"
 msgstr ""
 
 msgid "Unload"
@@ -7593,10 +7625,7 @@ msgstr ""
 msgid "Volume is unlocked"
 msgstr ""
 
-msgid "Volume label"
-msgstr ""
-
-msgid "Volume label of the new file system. Use a space to separate multiple labels. (if only one specified next will be auto increment)"
+msgid "Volume label of the new file system. Use $ for device name, % for a counter or %[startvalue] for a counter starting at startvalue."
 msgstr ""
 
 msgid "Volume mode"
@@ -7728,9 +7757,6 @@ msgstr ""
 msgid "Write only"
 msgstr ""
 
-msgid "Wrong number of count for Volume Label"
-msgstr ""
-
 msgid "Wrong partition type or partition number."
 msgstr ""
 
@@ -7751,9 +7777,6 @@ msgid "You can also install a package via SSH or console using the the pkg add c
 msgstr ""
 
 msgid "You can use the following parameters for substitution:"
-msgstr ""
-
-msgid "You can't format the OS origin disk!"
 msgstr ""
 
 #, php-format
@@ -7827,6 +7850,9 @@ msgid "ZFS Snapshot Information & Status"
 msgstr ""
 
 msgid "ZFS Snapshot Properties"
+msgstr ""
+
+msgid "ZFS Storage Pool"
 msgstr ""
 
 msgid "ZFS Volume Information & Status"
