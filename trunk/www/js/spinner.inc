@@ -8,7 +8,7 @@ function spinner() {
             radius: 10, // The radius of the inner circle
             corners: 1, // Corner roundness (0..1)
             rotate: 0, // The rotation offset
-            color: '#000', // #rgb or #rrggbb
+            color: '#4D4D4D', // #rgb or #rrggbb
             opacity: 0.45, // Opacity of the lines
             speed: 1, // Rounds per second
             trail: 60, // Afterglow percentage
