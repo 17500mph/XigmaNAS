@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-06 10:52+0000\n"
+"POT-Creation-Date: 2016-06-16 21:18+0000\n"
 "PO-Revision-Date: 2014-11-17 04:09+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-12 16:41+0000\n"
+"X-Launchpad-Export-Date: 2016-06-16 20:37+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: ALBANIA\n"
 "Language: \n"
@@ -585,6 +585,9 @@ msgstr "Avancuar"
 msgid "Advanced Configuration"
 msgstr "Konfigurim i avancuar"
 
+msgid "Advanced Format"
+msgstr ""
+
 msgid "Advanced Options"
 msgstr "Opcione te avancuara"
 
@@ -592,9 +595,6 @@ msgid "Advanced Settings"
 msgstr ""
 
 msgid "Advanced Setup"
-msgstr ""
-
-msgid "Advanced format"
 msgstr ""
 
 msgid "Advanced settings"
@@ -929,6 +929,9 @@ msgid ""
 msgstr ""
 
 msgid "Average time of spindle spin up (from zero RPM to fully operational)."
+msgstr ""
+
+msgid "Back"
 msgstr ""
 
 msgid "Backup Configuration"
@@ -1602,7 +1605,7 @@ msgstr ""
 msgid "Create PV Guest"
 msgstr ""
 
-msgid "Create ZFS on GPT partition."
+msgid "Create ZFS on a GPT partition."
 msgstr ""
 
 msgid "Create and initialize RAID."
@@ -2044,10 +2047,25 @@ msgstr ""
 msgid "Device Model"
 msgstr ""
 
+msgid "Device Name"
+msgstr ""
+
 msgid "Device Pass-through"
 msgstr ""
 
+msgid "Device Path"
+msgstr ""
+
 msgid "Device Serial"
+msgstr ""
+
+msgid "Device contains boot partition"
+msgstr ""
+
+msgid "Device is mounted"
+msgstr ""
+
+msgid "Device not found"
 msgstr ""
 
 msgid "Device polling"
@@ -2177,6 +2195,10 @@ msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
 
 msgid ""
+"Do not erase the Master Boot Record (useful for some RAID controller cards)."
+msgstr ""
+
+msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
 msgstr ""
@@ -2278,11 +2300,6 @@ msgid ""
 msgstr ""
 "Me te vertete doni te fshini kete volum\\n!!! Kujdes, te gjitha te dhenat do "
 "te humbin dhe nuk mund te rekuperohen me. !!!"
-
-msgid "Do you really want to format this disk? All data will be lost!"
-msgstr ""
-"Dini me te vertete te formatoni kete disk? Te gjitha te dhenat qe ndodhen ne "
-"te do te humbin!"
 
 msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
@@ -2407,10 +2424,6 @@ msgstr "Emri i domain-it ne formatin e vjeter. p.sh. SHEMBULL."
 
 msgid "Domain name, e.g. example.com."
 msgstr "Emri i domain-it, p.sh. shembull.com."
-
-msgid ""
-"Don't erase the Master Boot Record. (useful for some RAID controller cards)"
-msgstr ""
 
 msgid "Donate"
 msgstr "Dhuro"
@@ -2608,7 +2621,7 @@ msgstr "Aktivo"
 msgid "Enable ACL inheritance"
 msgstr ""
 
-msgid "Enable Advanced Format. (4KB sector)"
+msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr ""
 
 msgid "Enable Asynchronous I/O (AIO)"
@@ -2878,6 +2891,9 @@ msgid ""
 "command failures."
 msgstr ""
 
+msgid "Erase MBR"
+msgstr ""
+
 msgid "Error"
 msgstr "Gabim"
 
@@ -2973,6 +2989,9 @@ msgstr ""
 
 msgid "Extra options to rsync (usually empty)."
 msgstr "Opcione extra per rsync (zakonisht bosh)"
+
+msgid "FAT32"
+msgstr ""
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
@@ -3182,7 +3201,7 @@ msgstr ""
 msgid "Format"
 msgstr "Formato"
 
-msgid "Format disk"
+msgid "Format Options"
 msgstr ""
 
 msgid "Format the report for phpBB forum."
@@ -3246,6 +3265,9 @@ msgstr ""
 
 msgid "GID"
 msgstr "GID"
+
+msgid "GPT Partition"
+msgstr ""
 
 msgid "GPT partition"
 msgstr "Particion GTP"
@@ -4253,12 +4275,6 @@ msgstr ""
 msgid "Low voltage trimming transfer point"
 msgstr ""
 
-#, php-format
-msgid ""
-"Lowering this threshold can adversely affect performance and auto-"
-"defragmentation."
-msgstr ""
-
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4269,9 +4285,6 @@ msgstr ""
 
 msgid "MAC address"
 msgstr "Adresa MAC"
-
-msgid "MBR erase"
-msgstr ""
 
 msgid "MBR partition"
 msgstr "Particioni MBR"
@@ -4520,14 +4533,14 @@ msgstr ""
 msgid "Minimum"
 msgstr "Minimum"
 
+msgid "Minimum Free Space"
+msgstr ""
+
 msgid "Minimum Performance, Minimum Acoustic Output"
 msgstr ""
 
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr ""
-
-msgid "Minimum free space"
-msgstr "Hapesira e lire minimale"
 
 msgid "Minimum frequency"
 msgstr ""
@@ -4740,6 +4753,9 @@ msgstr "Paisje e re"
 msgid "New password"
 msgstr ""
 
+msgid "Next"
+msgstr ""
+
 msgid "No"
 msgstr "Jo"
 
@@ -4902,10 +4918,6 @@ msgstr ""
 
 msgid "Note"
 msgstr "Shënim"
-
-#, php-format
-msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
-msgstr ""
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -5124,6 +5136,9 @@ msgstr "Ngarkimi i paketes deshtoi (mbaroi memoria?)"
 
 msgid "Packages"
 msgstr "Paketat"
+
+msgid "Page"
+msgstr ""
 
 msgid "Painfully aggressive"
 msgstr ""
@@ -5637,6 +5652,9 @@ msgstr ""
 msgid "Realm"
 msgstr ""
 
+msgid "Reason Code"
+msgstr ""
+
 msgid "Reason for last transfer to battery (* opaque)"
 msgstr ""
 
@@ -5644,6 +5662,9 @@ msgid "Reboot"
 msgstr ""
 
 msgid "Receive Buffer Size"
+msgstr ""
+
+msgid "Record is locked"
 msgstr ""
 
 msgid "Recurse into directories."
@@ -6032,6 +6053,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Zgjidh nje disk qe eshte i abilituar per monitorimin S.M.A.R.T."
 
+msgid "Select file system format."
+msgstr ""
+
 msgid "Select firmware:"
 msgstr ""
 
@@ -6404,7 +6428,10 @@ msgid ""
 "Specifies whether it is allowed to login as superuser (root) directly."
 msgstr ""
 
-msgid "Specify the percentage of space held back from normal users."
+msgid ""
+"Specifiy the percentage of disk space to be held back from normal usage. "
+"Lowering this threshold can adversely affect performance and auto-"
+"defragmentation!"
 msgstr ""
 
 msgid "Split request"
@@ -6868,6 +6895,11 @@ msgstr ""
 
 #, php-format
 msgid "The attribute '%s' is required."
+msgstr ""
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
 msgstr ""
 
 #, php-format
@@ -8095,12 +8127,6 @@ msgid ""
 "unpredictable results, file corruption and the loss of data!"
 msgstr ""
 
-msgid ""
-"UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
-"filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
-"unpredictable results, file corruption and loss of data!"
-msgstr ""
-
 #, php-format
 msgid ""
 "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
@@ -8231,6 +8257,9 @@ msgstr "I panjohur"
 
 msgid "Unknown or unformatted"
 msgstr "I panohur ose i pa formatuar"
+
+msgid "Unknown size"
+msgstr ""
 
 msgid "Unload"
 msgstr ""
@@ -8498,12 +8527,9 @@ msgstr ""
 msgid "Volume is unlocked"
 msgstr ""
 
-msgid "Volume label"
-msgstr "Emri i volumit"
-
 msgid ""
-"Volume label of the new file system. Use a space to separate multiple "
-"labels. (if only one specified next will be auto increment)"
+"Volume label of the new file system. Use $ for device name, % for a counter "
+"or %[startvalue] for a counter starting at startvalue."
 msgstr ""
 
 msgid "Volume mode"
@@ -8655,9 +8681,6 @@ msgstr ""
 msgid "Write only"
 msgstr "Vetem shkrim"
 
-msgid "Wrong number of count for Volume Label"
-msgstr ""
-
 msgid "Wrong partition type or partition number."
 msgstr "Numri i particionit ose tipi i particionit te gabuar."
 
@@ -8680,9 +8703,6 @@ msgid ""
 msgstr ""
 
 msgid "You can use the following parameters for substitution:"
-msgstr ""
-
-msgid "You can't format the OS origin disk!"
 msgstr ""
 
 #, php-format
@@ -8766,6 +8786,9 @@ msgid "ZFS Snapshot Information & Status"
 msgstr ""
 
 msgid "ZFS Snapshot Properties"
+msgstr ""
+
+msgid "ZFS Storage Pool"
 msgstr ""
 
 msgid "ZFS Volume Information & Status"
@@ -8939,3 +8962,14 @@ msgstr "zmonto"
 
 msgid "version:"
 msgstr ""
+
+#~ msgid "Do you really want to format this disk? All data will be lost!"
+#~ msgstr ""
+#~ "Dini me te vertete te formatoni kete disk? Te gjitha te dhenat qe ndodhen ne "
+#~ "te do te humbin!"
+
+#~ msgid "Minimum free space"
+#~ msgstr "Hapesira e lire minimale"
+
+#~ msgid "Volume label"
+#~ msgstr "Emri i volumit"

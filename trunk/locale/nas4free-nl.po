@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-06 10:52+0000\n"
-"PO-Revision-Date: 2016-06-06 09:15+0000\n"
+"POT-Creation-Date: 2016-06-16 21:18+0000\n"
+"PO-Revision-Date: 2016-06-16 20:32+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-12 16:41+0000\n"
+"X-Launchpad-Export-Date: 2016-06-16 20:38+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -641,6 +641,9 @@ msgstr "Geavanceerd"
 msgid "Advanced Configuration"
 msgstr "Geavanceerde Configuratie"
 
+msgid "Advanced Format"
+msgstr "Geavanceerd Formatteren"
+
 msgid "Advanced Options"
 msgstr "Geavanceerde Opties"
 
@@ -649,9 +652,6 @@ msgstr "Geavanceerde Instellingen"
 
 msgid "Advanced Setup"
 msgstr "Geavanceerde Setup"
-
-msgid "Advanced format"
-msgstr "Geavanceerd formatteren"
 
 msgid "Advanced settings"
 msgstr "Geavanceerde opties"
@@ -1012,6 +1012,9 @@ msgstr ""
 msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr ""
 "Gemiddelde tijd van spindle spin up (van nul TPM tot volledig operationeel)."
+
+msgid "Back"
+msgstr "Terug"
 
 msgid "Backup Configuration"
 msgstr "Backup Configuratie"
@@ -1785,8 +1788,8 @@ msgstr "Creëer HVM Gast"
 msgid "Create PV Guest"
 msgstr "Creëer PV Gast"
 
-msgid "Create ZFS on GPT partition."
-msgstr "Creëer ZFS op GPT-partitie."
+msgid "Create ZFS on a GPT partition."
+msgstr "Creëer ZFS op een GPT partitie."
 
 msgid "Create and initialize RAID."
 msgstr "Creëer en initialiseer de RAID."
@@ -2242,11 +2245,26 @@ msgstr "Lijst schijven"
 msgid "Device Model"
 msgstr "Modelnaam"
 
+msgid "Device Name"
+msgstr "Apparaatnaam"
+
 msgid "Device Pass-through"
 msgstr "Apparaat Pass-through"
 
+msgid "Device Path"
+msgstr "Apparaatpad"
+
 msgid "Device Serial"
 msgstr "Serienummer"
+
+msgid "Device contains boot partition"
+msgstr "Apparaat bevat de opstartpartitie"
+
+msgid "Device is mounted"
+msgstr "Apparaat is gekoppeld"
+
+msgid "Device not found"
+msgstr "Apparaat niet gevonden"
 
 msgid "Device polling"
 msgstr "Netwerk-polling"
@@ -2385,6 +2403,12 @@ msgid "Do not activate this option if you want to add an existing RAID."
 msgstr "Activeer deze optie niet als u een bestaande RAID wilt toevoegen."
 
 msgid ""
+"Do not erase the Master Boot Record (useful for some RAID controller cards)."
+msgstr ""
+"De Master Boot Record niet wissen (nuttig voor sommige RAID "
+"controllerkaarten)."
+
+msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
 msgstr ""
@@ -2487,11 +2511,6 @@ msgid ""
 msgstr ""
 "Weet u zeker dat u dit volume wilt verwijderen?\\n!!! Opmerking, alle data "
 "zal verloren gaan en kan niet meer hersteld worden. !!!"
-
-msgid "Do you really want to format this disk? All data will be lost!"
-msgstr ""
-"Weet u zeker dat u deze schijf wilt formatteren? Alle gegevens zullen "
-"verloren gaan!"
 
 msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
@@ -2627,12 +2646,6 @@ msgstr "Domeinnaam in oud formaat, bijv. VOORBEELD."
 
 msgid "Domain name, e.g. example.com."
 msgstr "Domeinnaam, bijv. voorbeeld.com."
-
-msgid ""
-"Don't erase the Master Boot Record. (useful for some RAID controller cards)"
-msgstr ""
-"MBR (Master Boot Record) niet wissen. (zinvol voor sommige RAID controller "
-"kaarten)."
 
 msgid "Donate"
 msgstr "Donatie"
@@ -2833,8 +2846,8 @@ msgstr "Inschakelen"
 msgid "Enable ACL inheritance"
 msgstr "ACL overnemen inschakelen"
 
-msgid "Enable Advanced Format. (4KB sector)"
-msgstr "Inschakelen Geavanceerd Formatteren. (4KB sectoren)"
+msgid "Enable Advanced Format (4KB Sector Size)."
+msgstr "Inschakelen Geavanceerd Formatteren (4KB sectorgrootte)."
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Inschakelen Asynchrone I/O (AIO)"
@@ -3129,6 +3142,9 @@ msgstr ""
 "Wis Fout Telling (chip). Deze parameter geeft het aantal flash wissen "
 "opdracht fouten aan."
 
+msgid "Erase MBR"
+msgstr "Wissen MBR"
+
 msgid "Error"
 msgstr "Fout"
 
@@ -3228,6 +3244,9 @@ msgstr ""
 
 msgid "Extra options to rsync (usually empty)."
 msgstr "Extra opties voor de rsync (normaal leeg)."
+
+msgid "FAT32"
+msgstr "FAT32"
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
@@ -3441,8 +3460,8 @@ msgstr ""
 msgid "Format"
 msgstr "Formatteren"
 
-msgid "Format disk"
-msgstr "Formatteer schijf"
+msgid "Format Options"
+msgstr "Formatteren Opties"
 
 msgid "Format the report for phpBB forum."
 msgstr "Rapportage indelen voor plaatsing op het NAS4Free forum."
@@ -3507,6 +3526,9 @@ msgstr "GEOM VINUM Software RAID"
 
 msgid "GID"
 msgstr "GID"
+
+msgid "GPT Partition"
+msgstr "GPT Partitie"
 
 msgid "GPT partition"
 msgstr "GPT partitie"
@@ -4610,14 +4632,6 @@ msgstr "Laag voltage overschakelpunt"
 msgid "Low voltage trimming transfer point"
 msgstr "Laag voltage trimming overschakelpunt"
 
-#, php-format
-msgid ""
-"Lowering this threshold can adversely affect performance and auto-"
-"defragmentation."
-msgstr ""
-"Het verlagen van deze drempel kan een nadelig effect hebben op de prestaties "
-"en auto-defragmentatie."
-
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4630,9 +4644,6 @@ msgstr "MAC-adres"
 
 msgid "MAC address"
 msgstr "MAC-adres"
-
-msgid "MBR erase"
-msgstr "MBR wissen"
 
 msgid "MBR partition"
 msgstr "MBR partitie"
@@ -4899,14 +4910,14 @@ msgstr "Minidlna configuratie is bijgewerkt."
 msgid "Minimum"
 msgstr "Minimaal"
 
+msgid "Minimum Free Space"
+msgstr "Minimale Vrije Ruimte"
+
 msgid "Minimum Performance, Minimum Acoustic Output"
 msgstr "Minimale Prestaties, Minimale Geluidsproductie"
 
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr "Minimum batterijniveau voor de UPS herstart na power-off"
-
-msgid "Minimum free space"
-msgstr "Minimale vrije ruimte"
 
 msgid "Minimum frequency"
 msgstr "Minimale frequentie"
@@ -5124,6 +5135,9 @@ msgstr "Nieuwe Schijf"
 msgid "New password"
 msgstr "Nieuw wachtwoord"
 
+msgid "Next"
+msgstr "Volgende"
+
 msgid "No"
 msgstr "Nee"
 
@@ -5306,11 +5320,6 @@ msgstr "Locatie niet gevonden."
 
 msgid "Note"
 msgstr "Opmerking"
-
-#, php-format
-msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
-msgstr ""
-"Tip: Ctrl-klik (command-klik op de Mac) om meerdere schijven te selecteren."
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -5543,6 +5552,9 @@ msgstr "Pakket uploaden is mislukt (niet genoeg geheugen?)"
 
 msgid "Packages"
 msgstr "Pakketten"
+
+msgid "Page"
+msgstr "Pagina"
 
 msgid "Painfully aggressive"
 msgstr "Moeizaam agressief"
@@ -6077,6 +6089,9 @@ msgstr "Alleen-lezen"
 msgid "Realm"
 msgstr "Realm"
 
+msgid "Reason Code"
+msgstr "Redencode"
+
 msgid "Reason for last transfer to battery (* opaque)"
 msgstr "Reden voor laatste overdracht naar batterij (* ondoorzichtig)"
 
@@ -6085,6 +6100,9 @@ msgstr "Herstarten"
 
 msgid "Receive Buffer Size"
 msgstr "Ontvangstbuffer Grootte"
+
+msgid "Record is locked"
+msgstr "Apparaat is vergrendeld"
 
 msgid "Recurse into directories."
 msgstr "Recursief naar mappen."
@@ -6496,6 +6514,9 @@ msgstr "Selecteer een datumnotatie."
 
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Selecteer een schijf dat is ingeschakeld voor S.M.A.R.T. controle."
+
+msgid "Select file system format."
+msgstr "Selecteer het bestandssysteem voor het formatteren."
 
 msgid "Select firmware:"
 msgstr "Selecteer firmware:"
@@ -6914,10 +6935,14 @@ msgstr ""
 "Sta toe of gebruikers mogen aanmelden als supergebruiker, dit geeft een "
 "directe toegang tot de (root)."
 
-msgid "Specify the percentage of space held back from normal users."
+msgid ""
+"Specifiy the percentage of disk space to be held back from normal usage. "
+"Lowering this threshold can adversely affect performance and auto-"
+"defragmentation!"
 msgstr ""
-"Selecteer het percentage van ruimte dat moet worden achtergehouden van "
-"normale gebruikers."
+"Specificeer het percentage schijfruimte dat achter wordt gehouden voor "
+"normaal gebruik. Het verlagen van deze drempel kan een nadelig effect hebben "
+"op de prestaties en auto-defragmentatie!"
 
 msgid "Split request"
 msgstr "Aanvragen opsplitsen"
@@ -7323,7 +7348,7 @@ msgstr "De geassocieerde MIB bestanden kunnen gevonden worden op %s."
 
 #, php-format
 msgid "The attribute '%s' already exists."
-msgstr "De attribuut '%s' bestaat reeds."
+msgstr "Het attribuut '%s' bestaat reeds."
 
 #, php-format
 msgid ""
@@ -7402,7 +7427,7 @@ msgstr "Het attribuut '%s' is geen geldig subnetmasker."
 
 #, php-format
 msgid "The attribute '%s' is not a valid time value."
-msgstr "De attribuut '%s' is geen geldige tijd."
+msgstr "Het attribuut '%s' is geen geldige tijd waarde."
 
 #, php-format
 msgid ""
@@ -7416,14 +7441,20 @@ msgstr "Het kenmerk '%s' is vereist."
 
 #, php-format
 msgid ""
+"The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
+msgstr ""
+"Het attribuut '%s' kan alleen bestaan uit de karakters a-z, A-Z and 0-9."
+
+#, php-format
+msgid ""
 "The attribute '%s' may only consist of the characters a-z, A-Z, 0-9, _ , -."
 msgstr ""
-"De attribuut '%s' kan alleen bestaan uit de karakters a-z, A-Z, 0-9, _ , -."
+"Het attribuut '%s' kan alleen bestaan uit de karakters a-z, A-Z, 0-9, _ , -."
 
 #, php-format
 msgid "The attribute '%s' may only consist of the characters a-z, A-Z, 0-9."
 msgstr ""
-"De attribuut '%s' kan alleen bestaan uit de karakters van a-z, A-Z, 0-9."
+"Het attribuut '%s' kan alleen bestaan uit de karakters a-z, A-Z, 0-9.."
 
 #, php-format
 msgid "The attribute '%s' must be a number."
@@ -7435,11 +7466,11 @@ msgstr "Het attribuut '%s' moet een tekenreeks zijn."
 
 #, php-format
 msgid "The attribute '%s' must be in the range from %d to %d."
-msgstr "De attribuut '%s' dient een bereik te hebben van %d tot %d."
+msgstr "Het attribuut '%s' dient een bereik te hebben van %d tot %d."
 
 #, php-format
 msgid "The attribute '%s' must be less than '%s'."
-msgstr "De attribuut '%s' dient lager te zijn dan '%s'."
+msgstr "Het attribuut '%s' moet lager zijn dan '%s'."
 
 #, php-format
 msgid "The attribute '%s' must contain at least one entry."
@@ -8960,16 +8991,6 @@ msgstr ""
 "onvoorspelbare resultaten opleveren zoals bestandsbeschadiging en verlies "
 "van data!"
 
-msgid ""
-"UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
-"filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
-"unpredictable results, file corruption and loss of data!"
-msgstr ""
-"UFS en ZFS zijn de NATIVE bestandssystemen van %s. Het gebruik van andere "
-"bestandssystemen zoals FAT, FAT32, EXT2, EXT3, EXT4 of NTFS kan "
-"onvoorspelbare resultaten opleveren zoals bestandsbeschadiging en verlies "
-"van data!"
-
 #, php-format
 msgid ""
 "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
@@ -9104,6 +9125,9 @@ msgstr "Onbekend"
 
 msgid "Unknown or unformatted"
 msgstr "Onbekend of nog niet geformatteerd"
+
+msgid "Unknown size"
+msgstr "Onbekende grootte"
 
 msgid "Unload"
 msgstr "Verwijder"
@@ -9394,16 +9418,12 @@ msgstr "Volume is beveiligd"
 msgid "Volume is unlocked"
 msgstr "Volume is ontgrendeld"
 
-msgid "Volume label"
-msgstr "Volume label"
-
 msgid ""
-"Volume label of the new file system. Use a space to separate multiple "
-"labels. (if only one specified next will be auto increment)"
+"Volume label of the new file system. Use $ for device name, % for a counter "
+"or %[startvalue] for a counter starting at startvalue."
 msgstr ""
-"De volumelabel van het nieuwe bestandssysteem. Gebruik een spatie om "
-"meerdere labels te scheiden. (Indien slechts één opgegeven wordt deze voor "
-"de volgende automatisch toegepast)"
+"De volumenaam van het nieuwe bestandssysteem. Gebruik $ voor apparaatnaam, % "
+"voor een nummer of %[startwaarde] voor een nummer startend bij startwaarde."
 
 msgid "Volume mode"
 msgstr "Volume mode"
@@ -9566,9 +9586,6 @@ msgstr "Schrijf Cache"
 msgid "Write only"
 msgstr "Alleen schrijven"
 
-msgid "Wrong number of count for Volume Label"
-msgstr "Onjuiste nummer telling voor de volumelabel"
-
 msgid "Wrong partition type or partition number."
 msgstr "Fout partitie type of partitie nummer."
 
@@ -9594,9 +9611,6 @@ msgstr ""
 
 msgid "You can use the following parameters for substitution:"
 msgstr "U kunt de volgende parameters gebruiken voor substitutie:"
-
-msgid "You can't format the OS origin disk!"
-msgstr "U kunt de schijf waarop het OS staat niet formatteren!"
 
 #, php-format
 msgid ""
@@ -9692,6 +9706,9 @@ msgstr "ZFS Snapshot Informatie & Status"
 
 msgid "ZFS Snapshot Properties"
 msgstr "ZFS Snapshot Eigenschappen"
+
+msgid "ZFS Storage Pool"
+msgstr "ZFS Storage Pool"
 
 msgid "ZFS Volume Information & Status"
 msgstr "ZFS Volume Informatie & Status"
@@ -9870,3 +9887,77 @@ msgstr "loskoppelen"
 
 msgid "version:"
 msgstr "versie:"
+
+#~ msgid "Do you really want to format this disk? All data will be lost!"
+#~ msgstr ""
+#~ "Weet u zeker dat u deze schijf wilt formatteren? Alle gegevens zullen "
+#~ "verloren gaan!"
+
+#~ msgid "Minimum free space"
+#~ msgstr "Minimale vrije ruimte"
+
+#~ msgid "Volume label"
+#~ msgstr "Volume label"
+
+#~ msgid "Create ZFS on GPT partition."
+#~ msgstr "Creëer ZFS op GPT-partitie."
+
+#~ msgid "Enable Advanced Format. (4KB sector)"
+#~ msgstr "Inschakelen Geavanceerd Formatteren. (4KB sectoren)"
+
+#~ msgid ""
+#~ "Don't erase the Master Boot Record. (useful for some RAID controller cards)"
+#~ msgstr ""
+#~ "MBR (Master Boot Record) niet wissen. (zinvol voor sommige RAID controller "
+#~ "kaarten)."
+
+#~ msgid "Format disk"
+#~ msgstr "Formatteer schijf"
+
+#~ msgid "MBR erase"
+#~ msgstr "MBR wissen"
+
+#, php-format
+#~ msgid ""
+#~ "Lowering this threshold can adversely affect performance and auto-"
+#~ "defragmentation."
+#~ msgstr ""
+#~ "Het verlagen van deze drempel kan een nadelig effect hebben op de prestaties "
+#~ "en auto-defragmentatie."
+
+#~ msgid "Advanced format"
+#~ msgstr "Geavanceerd formatteren"
+
+#~ msgid "Specify the percentage of space held back from normal users."
+#~ msgstr ""
+#~ "Selecteer het percentage van ruimte dat moet worden achtergehouden van "
+#~ "normale gebruikers."
+
+#, php-format
+#~ msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
+#~ msgstr ""
+#~ "Tip: Ctrl-klik (command-klik op de Mac) om meerdere schijven te selecteren."
+
+#~ msgid ""
+#~ "UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
+#~ "filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
+#~ "unpredictable results, file corruption and loss of data!"
+#~ msgstr ""
+#~ "UFS en ZFS zijn de NATIVE bestandssystemen van %s. Het gebruik van andere "
+#~ "bestandssystemen zoals FAT, FAT32, EXT2, EXT3, EXT4 of NTFS kan "
+#~ "onvoorspelbare resultaten opleveren zoals bestandsbeschadiging en verlies "
+#~ "van data!"
+
+#~ msgid "You can't format the OS origin disk!"
+#~ msgstr "U kunt de schijf waarop het OS staat niet formatteren!"
+
+#~ msgid "Wrong number of count for Volume Label"
+#~ msgstr "Onjuiste nummer telling voor de volumelabel"
+
+#~ msgid ""
+#~ "Volume label of the new file system. Use a space to separate multiple "
+#~ "labels. (if only one specified next will be auto increment)"
+#~ msgstr ""
+#~ "De volumelabel van het nieuwe bestandssysteem. Gebruik een spatie om "
+#~ "meerdere labels te scheiden. (Indien slechts één opgegeven wordt deze voor "
+#~ "de volgende automatisch toegepast)"

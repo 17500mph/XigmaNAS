@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-06 10:52+0000\n"
+"POT-Creation-Date: 2016-06-16 21:18+0000\n"
 "PO-Revision-Date: 2016-05-28 18:47+0000\n"
 "Last-Translator: Jieting Xu <xu.jieting@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-12 16:41+0000\n"
+"X-Launchpad-Export-Date: 2016-06-16 20:37+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -560,6 +560,9 @@ msgstr "高级设定"
 msgid "Advanced Configuration"
 msgstr "高级配置"
 
+msgid "Advanced Format"
+msgstr ""
+
 msgid "Advanced Options"
 msgstr "高级选项"
 
@@ -568,9 +571,6 @@ msgstr "高级设置"
 
 msgid "Advanced Setup"
 msgstr "高级设置"
-
-msgid "Advanced format"
-msgstr "高级格式化"
 
 msgid "Advanced settings"
 msgstr "高级设置"
@@ -893,6 +893,9 @@ msgid ""
 msgstr ""
 
 msgid "Average time of spindle spin up (from zero RPM to fully operational)."
+msgstr ""
+
+msgid "Back"
 msgstr ""
 
 msgid "Backup Configuration"
@@ -1570,8 +1573,8 @@ msgstr "创建HVM客户机"
 msgid "Create PV Guest"
 msgstr "创建PV客户机"
 
-msgid "Create ZFS on GPT partition."
-msgstr "在GPT分区上创建ZFS。"
+msgid "Create ZFS on a GPT partition."
+msgstr ""
 
 msgid "Create and initialize RAID."
 msgstr "建立并初始 RAID。"
@@ -2010,11 +2013,26 @@ msgstr "设备列表"
 msgid "Device Model"
 msgstr "设备型号"
 
+msgid "Device Name"
+msgstr ""
+
 msgid "Device Pass-through"
 msgstr "设备直通（Device Pass-through）"
 
+msgid "Device Path"
+msgstr ""
+
 msgid "Device Serial"
 msgstr "设备编号"
+
+msgid "Device contains boot partition"
+msgstr ""
+
+msgid "Device is mounted"
+msgstr ""
+
+msgid "Device not found"
+msgstr ""
 
 msgid "Device polling"
 msgstr "设备轮询"
@@ -2145,6 +2163,10 @@ msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
 
 msgid ""
+"Do not erase the Master Boot Record (useful for some RAID controller cards)."
+msgstr ""
+
+msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
 msgstr "您确定要清除并导入吗？\\n现有的配置将被清除和覆盖。"
@@ -2237,9 +2259,6 @@ msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
 "and can not be recovered. !!!"
 msgstr "您确定要删除这个卷吗？\\n！ ！ ！请注意，所有数据都将会消失，无法恢复。！ ！ ！"
-
-msgid "Do you really want to format this disk? All data will be lost!"
-msgstr "您确定要格式化这个硬盘吗？所有内部的资料都会消失！"
 
 msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
@@ -2364,10 +2383,6 @@ msgstr "旧式网域名称，例如：DOMAIN"
 
 msgid "Domain name, e.g. example.com."
 msgstr "网域名称，例如：domain.com"
-
-msgid ""
-"Don't erase the Master Boot Record. (useful for some RAID controller cards)"
-msgstr ""
 
 msgid "Donate"
 msgstr "捐赠"
@@ -2565,7 +2580,7 @@ msgstr "启动"
 msgid "Enable ACL inheritance"
 msgstr "启用ACL继承"
 
-msgid "Enable Advanced Format. (4KB sector)"
+msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr ""
 
 msgid "Enable Asynchronous I/O (AIO)"
@@ -2831,6 +2846,9 @@ msgid ""
 "command failures."
 msgstr ""
 
+msgid "Erase MBR"
+msgstr ""
+
 msgid "Error"
 msgstr "错误"
 
@@ -2922,6 +2940,9 @@ msgstr "额外的选项来使用 transmission-remote 传递的RPC（通常为空
 
 msgid "Extra options to rsync (usually empty)."
 msgstr "rsync 的额外选项（通常为空白）。"
+
+msgid "FAT32"
+msgstr ""
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
@@ -3125,7 +3146,7 @@ msgstr "强制使用 vdevs ，即使它们在使用中或指定容量大小有�
 msgid "Format"
 msgstr "格式化"
 
-msgid "Format disk"
+msgid "Format Options"
 msgstr ""
 
 msgid "Format the report for phpBB forum."
@@ -3189,6 +3210,9 @@ msgstr ""
 
 msgid "GID"
 msgstr "GID"
+
+msgid "GPT Partition"
+msgstr ""
 
 msgid "GPT partition"
 msgstr "GPT 分区"
@@ -4186,12 +4210,6 @@ msgstr "低电压转换点"
 msgid "Low voltage trimming transfer point"
 msgstr "低电压微调换乘点"
 
-#, php-format
-msgid ""
-"Lowering this threshold can adversely affect performance and auto-"
-"defragmentation."
-msgstr ""
-
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4202,9 +4220,6 @@ msgstr "MAC地址"
 
 msgid "MAC address"
 msgstr "MAC地址"
-
-msgid "MBR erase"
-msgstr ""
 
 msgid "MBR partition"
 msgstr "MBR 分区"
@@ -4451,14 +4466,14 @@ msgstr ""
 msgid "Minimum"
 msgstr "最小值"
 
+msgid "Minimum Free Space"
+msgstr ""
+
 msgid "Minimum Performance, Minimum Acoustic Output"
 msgstr ""
 
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr "断电后UPS重启的最小电池电量"
-
-msgid "Minimum free space"
-msgstr "最少需求空间"
 
 msgid "Minimum frequency"
 msgstr "最小频率"
@@ -4665,6 +4680,9 @@ msgstr "新设备"
 msgid "New password"
 msgstr "新密码"
 
+msgid "Next"
+msgstr ""
+
 msgid "No"
 msgstr "否"
 
@@ -4826,10 +4844,6 @@ msgstr "找不到路径。"
 
 msgid "Note"
 msgstr "提示"
-
-#, php-format
-msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
-msgstr ""
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -5042,6 +5056,9 @@ msgstr "套件上传失败（记忆体不足？）"
 
 msgid "Packages"
 msgstr "套件"
+
+msgid "Page"
+msgstr ""
 
 msgid "Painfully aggressive"
 msgstr "Painfully aggressive"
@@ -5557,6 +5574,9 @@ msgstr "只读"
 msgid "Realm"
 msgstr "Realm"
 
+msgid "Reason Code"
+msgstr ""
+
 msgid "Reason for last transfer to battery (* opaque)"
 msgstr "上次转移到电池的原因（*不透明）"
 
@@ -5565,6 +5585,9 @@ msgstr "重启"
 
 msgid "Receive Buffer Size"
 msgstr "接收缓冲区的大小"
+
+msgid "Record is locked"
+msgstr ""
 
 msgid "Recurse into directories."
 msgstr "递归入目录。"
@@ -5955,6 +5978,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "请选择已开启 S.M.A.R.T. 监测的硬盘。"
 
+msgid "Select file system format."
+msgstr ""
+
 msgid "Select firmware:"
 msgstr "选择固件："
 
@@ -6330,7 +6356,10 @@ msgid ""
 "Specifies whether it is allowed to login as superuser (root) directly."
 msgstr "指定超级用户(root)是否可以透过SSH直接登录。"
 
-msgid "Specify the percentage of space held back from normal users."
+msgid ""
+"Specifiy the percentage of disk space to be held back from normal usage. "
+"Lowering this threshold can adversely affect performance and auto-"
+"defragmentation!"
 msgstr ""
 
 msgid "Split request"
@@ -6798,6 +6827,11 @@ msgstr "属性 '%s' 是必要的。请确认最少必须输入比 %d 或比 %d �
 #, php-format
 msgid "The attribute '%s' is required."
 msgstr "'%s' 是必填栏位。"
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -8054,12 +8088,6 @@ msgid ""
 "unpredictable results, file corruption and the loss of data!"
 msgstr ""
 
-msgid ""
-"UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
-"filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
-"unpredictable results, file corruption and loss of data!"
-msgstr ""
-
 #, php-format
 msgid ""
 "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
@@ -8192,6 +8220,9 @@ msgstr "不详"
 
 msgid "Unknown or unformatted"
 msgstr "不详/未格式化"
+
+msgid "Unknown size"
+msgstr ""
 
 msgid "Unload"
 msgstr "卸载"
@@ -8461,12 +8492,9 @@ msgstr ""
 msgid "Volume is unlocked"
 msgstr ""
 
-msgid "Volume label"
-msgstr "磁盘卷标签（Volume label）"
-
 msgid ""
-"Volume label of the new file system. Use a space to separate multiple "
-"labels. (if only one specified next will be auto increment)"
+"Volume label of the new file system. Use $ for device name, % for a counter "
+"or %[startvalue] for a counter starting at startvalue."
 msgstr ""
 
 msgid "Volume mode"
@@ -8612,9 +8640,6 @@ msgstr "写入缓存"
 msgid "Write only"
 msgstr "唯写"
 
-msgid "Wrong number of count for Volume Label"
-msgstr ""
-
 msgid "Wrong partition type or partition number."
 msgstr "错误的分区格式或分区编号。"
 
@@ -8639,9 +8664,6 @@ msgstr ""
 
 msgid "You can use the following parameters for substitution:"
 msgstr "您可以使用以下的参数替代："
-
-msgid "You can't format the OS origin disk!"
-msgstr ""
 
 #, php-format
 msgid ""
@@ -8724,6 +8746,9 @@ msgstr "ZFS 快照信息和状态"
 
 msgid "ZFS Snapshot Properties"
 msgstr "ZFS 快照属性"
+
+msgid "ZFS Storage Pool"
+msgstr ""
 
 msgid "ZFS Volume Information & Status"
 msgstr "ZFS 卷信息和状态"
@@ -8896,3 +8921,18 @@ msgstr "卸载"
 
 msgid "version:"
 msgstr "版本："
+
+#~ msgid "Minimum free space"
+#~ msgstr "最少需求空间"
+
+#~ msgid "Do you really want to format this disk? All data will be lost!"
+#~ msgstr "您确定要格式化这个硬盘吗？所有内部的资料都会消失！"
+
+#~ msgid "Volume label"
+#~ msgstr "磁盘卷标签（Volume label）"
+
+#~ msgid "Advanced format"
+#~ msgstr "高级格式化"
+
+#~ msgid "Create ZFS on GPT partition."
+#~ msgstr "在GPT分区上创建ZFS。"

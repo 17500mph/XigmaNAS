@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-06 10:52+0000\n"
+"POT-Creation-Date: 2016-06-16 21:18+0000\n"
 "PO-Revision-Date: 2016-06-06 09:50+0000\n"
 "Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-12 16:41+0000\n"
+"X-Launchpad-Export-Date: 2016-06-16 20:37+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -620,6 +620,9 @@ msgstr "Дополнительно"
 msgid "Advanced Configuration"
 msgstr "Дополнительные настройки"
 
+msgid "Advanced Format"
+msgstr ""
+
 msgid "Advanced Options"
 msgstr "Дополнительные параметры"
 
@@ -628,9 +631,6 @@ msgstr "Расширенные настройки"
 
 msgid "Advanced Setup"
 msgstr "Дополнительные настройки"
-
-msgid "Advanced format"
-msgstr "Расширенное форматирование"
 
 msgid "Advanced settings"
 msgstr "Расширенные настройки"
@@ -990,6 +990,9 @@ msgstr ""
 msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr ""
 "Среднее время раскрутки шпинделя (от состояния покоя до полной раскрутки)."
+
+msgid "Back"
+msgstr ""
 
 msgid "Backup Configuration"
 msgstr "Сохранение конфигурации"
@@ -1755,8 +1758,8 @@ msgstr "Создать гостевую систему HVM"
 msgid "Create PV Guest"
 msgstr "Создать гостевую систему PV"
 
-msgid "Create ZFS on GPT partition."
-msgstr "Создать ZFS на GPT разделах."
+msgid "Create ZFS on a GPT partition."
+msgstr ""
 
 msgid "Create and initialize RAID."
 msgstr "Создать и инициализировать RAID"
@@ -2208,11 +2211,26 @@ msgstr "Список устройств"
 msgid "Device Model"
 msgstr "Модель устройства"
 
+msgid "Device Name"
+msgstr ""
+
 msgid "Device Pass-through"
 msgstr "Сквозное (pass-through) устройство"
 
+msgid "Device Path"
+msgstr ""
+
 msgid "Device Serial"
 msgstr "Серийный номер устройства"
+
+msgid "Device contains boot partition"
+msgstr ""
+
+msgid "Device is mounted"
+msgstr ""
+
+msgid "Device not found"
+msgstr ""
 
 msgid "Device polling"
 msgstr "Опрос устройств"
@@ -2351,6 +2369,10 @@ msgid "Do not activate this option if you want to add an existing RAID."
 msgstr "Не включайте эту опцию, если вы хотите добавить существующий RAID."
 
 msgid ""
+"Do not erase the Master Boot Record (useful for some RAID controller cards)."
+msgstr ""
+
+msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
 msgstr ""
@@ -2454,11 +2476,6 @@ msgid ""
 msgstr ""
 "Вы действительно хотите удалить этот раздел?\\n*** Внимание, все данные "
 "будут потеряны и не смогут быть восстановлены! ***"
-
-msgid "Do you really want to format this disk? All data will be lost!"
-msgstr ""
-"Вы действительно хотите отформатировать этот диск? Все данные на диске будут "
-"уничтожены!"
 
 msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
@@ -2591,11 +2608,6 @@ msgstr "Доменное имя в старом формате, например
 
 msgid "Domain name, e.g. example.com."
 msgstr "Доменное имя, например <i>example.com</i>"
-
-msgid ""
-"Don't erase the Master Boot Record. (useful for some RAID controller cards)"
-msgstr ""
-"Не стирать Master Boot Record. (Полезно для некоторых контроллеров RAID)"
 
 msgid "Donate"
 msgstr "Пожертвования"
@@ -2794,8 +2806,8 @@ msgstr "Включить"
 msgid "Enable ACL inheritance"
 msgstr "Включить наследование ACL"
 
-msgid "Enable Advanced Format. (4KB sector)"
-msgstr "Включить расширенное форматирование. (4KB сектор)"
+msgid "Enable Advanced Format (4KB Sector Size)."
+msgstr ""
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Включить асинхронный ввод/вывод (AIO)"
@@ -3087,6 +3099,9 @@ msgstr ""
 "Erase Fail Count (chip). Этот параметр указывает на количество отказов "
 "команд стирания флэш."
 
+msgid "Erase MBR"
+msgstr ""
+
 msgid "Error"
 msgstr "Ошибка"
 
@@ -3187,6 +3202,9 @@ msgstr ""
 
 msgid "Extra options to rsync (usually empty)."
 msgstr "Дополнительные настройки rsync (обычно пусто)."
+
+msgid "FAT32"
+msgstr ""
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
@@ -3401,8 +3419,8 @@ msgstr ""
 msgid "Format"
 msgstr "Форматирование"
 
-msgid "Format disk"
-msgstr "Форматировать диск"
+msgid "Format Options"
+msgstr ""
 
 msgid "Format the report for phpBB forum."
 msgstr "Сформировать отчет для форума phpBB."
@@ -3467,6 +3485,9 @@ msgstr "Программный RAID GEOM VINUM"
 
 msgid "GID"
 msgstr "GID"
+
+msgid "GPT Partition"
+msgstr ""
 
 msgid "GPT partition"
 msgstr "Раздел GPT"
@@ -4559,14 +4580,6 @@ msgstr "Нижняя граница напряжения для переключ
 msgid "Low voltage trimming transfer point"
 msgstr "Нижняя граница напряжения для режима понижения (trimming)"
 
-#, php-format
-msgid ""
-"Lowering this threshold can adversely affect performance and auto-"
-"defragmentation."
-msgstr ""
-"Снижение этого порога может отрицательно повлиять на производительность и "
-"автоматическую дефрагментацию."
-
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4580,9 +4593,6 @@ msgstr "MAC-адрес"
 
 msgid "MAC address"
 msgstr "MAC-адрес"
-
-msgid "MBR erase"
-msgstr "Стирание MBR"
 
 msgid "MBR partition"
 msgstr "Раздел MBR"
@@ -4844,14 +4854,14 @@ msgstr "Конфигурация Minidlna была обновлена."
 msgid "Minimum"
 msgstr "Минимальный"
 
+msgid "Minimum Free Space"
+msgstr ""
+
 msgid "Minimum Performance, Minimum Acoustic Output"
 msgstr "Минимальная производительность, минимальный уровень шума"
 
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr "Минимальный заряд батареи для перезапуска ИБП после отключения"
-
-msgid "Minimum free space"
-msgstr "Минимум свободного места"
 
 msgid "Minimum frequency"
 msgstr "Минимальная частота"
@@ -5069,6 +5079,9 @@ msgstr "Новое устройство"
 msgid "New password"
 msgstr "Новый пароль"
 
+msgid "Next"
+msgstr ""
+
 msgid "No"
 msgstr "Нет"
 
@@ -5251,12 +5264,6 @@ msgstr "Путь не найден."
 
 msgid "Note"
 msgstr "Примечание"
-
-#, php-format
-msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
-msgstr ""
-"Примечание: удерживайте Ctrl (или Command на Mac), чтобы выбрать несколько "
-"дисков."
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -5488,6 +5495,9 @@ msgstr "Загрузка пакета не удалась (возможно, н�
 
 msgid "Packages"
 msgstr "Пакеты"
+
+msgid "Page"
+msgstr ""
 
 msgid "Painfully aggressive"
 msgstr "Агрессивный"
@@ -6020,6 +6030,9 @@ msgstr "Только чтение"
 msgid "Realm"
 msgstr "Название области"
 
+msgid "Reason Code"
+msgstr ""
+
 msgid "Reason for last transfer to battery (* opaque)"
 msgstr "Причина последнего перехода на батарею"
 
@@ -6028,6 +6041,9 @@ msgstr "Перезагрузка"
 
 msgid "Receive Buffer Size"
 msgstr "Размер буфера приема"
+
+msgid "Record is locked"
+msgstr ""
 
 msgid "Recurse into directories."
 msgstr "Рекурсивно внутри каталогов"
@@ -6432,6 +6448,9 @@ msgstr "Выберите формат даты"
 
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Укажите диск с включенным S.M.A.R.T."
+
+msgid "Select file system format."
+msgstr ""
 
 msgid "Select firmware:"
 msgstr "Выберите прошивку:"
@@ -6844,9 +6863,11 @@ msgid ""
 "Specifies whether it is allowed to login as superuser (root) directly."
 msgstr "Указывает, позволен ли вход от имени суперпользователя (root)"
 
-msgid "Specify the percentage of space held back from normal users."
+msgid ""
+"Specifiy the percentage of disk space to be held back from normal usage. "
+"Lowering this threshold can adversely affect performance and auto-"
+"defragmentation!"
 msgstr ""
-"Задайте процент дискового пространства, недоступного обычным пользователям."
 
 msgid "Split request"
 msgstr "Разделение запросов (split request)"
@@ -7339,6 +7360,11 @@ msgstr "Атрибут '%s' должен состоять из %d или бол�
 #, php-format
 msgid "The attribute '%s' is required."
 msgstr "Атрибут '%s' обязателен."
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -8856,16 +8882,6 @@ msgstr ""
 "другие файловые системы такие как ext2, ext3, EXT4, FAT, FAT32 или NTFS "
 "может привести к непредсказуемым результатам, порче файлов и потере данных!"
 
-msgid ""
-"UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
-"filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
-"unpredictable results, file corruption and loss of data!"
-msgstr ""
-"UFS и ZFS являются родными файловыми системами NAS4Free.  Попытка "
-"использовать другие файловые системы такие как ext2, ext3, EXT4, FAT, FAT32 "
-"или NTFS может привести к непредсказуемым результатам, порче файлов и потере "
-"данных!"
-
 #, php-format
 msgid ""
 "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
@@ -9004,6 +9020,9 @@ msgstr "Неизвестно"
 
 msgid "Unknown or unformatted"
 msgstr "Неизвестно или не отформатировано"
+
+msgid "Unknown size"
+msgstr ""
 
 msgid "Unload"
 msgstr "Выгрузка"
@@ -9297,16 +9316,10 @@ msgstr "Том защищён"
 msgid "Volume is unlocked"
 msgstr "Том разблокирован"
 
-msgid "Volume label"
-msgstr "Метка тома"
-
 msgid ""
-"Volume label of the new file system. Use a space to separate multiple "
-"labels. (if only one specified next will be auto increment)"
+"Volume label of the new file system. Use $ for device name, % for a counter "
+"or %[startvalue] for a counter starting at startvalue."
 msgstr ""
-"Метка тома для новой файловой системы. Используйте пробел для разделения "
-"нескольких ярлыков. (Если указан только один  следующий будет автоматическое "
-"добавлен)"
 
 msgid "Volume mode"
 msgstr "Режим раздела"
@@ -9469,9 +9482,6 @@ msgstr "Кэширование записи"
 msgid "Write only"
 msgstr "Только запись"
 
-msgid "Wrong number of count for Volume Label"
-msgstr "Неверное число счетчика для метки тома"
-
 msgid "Wrong partition type or partition number."
 msgstr "Неверный номер или тип раздела."
 
@@ -9497,9 +9507,6 @@ msgstr ""
 
 msgid "You can use the following parameters for substitution:"
 msgstr "Вы можете использовать следующие параметры для подстановки:"
-
-msgid "You can't format the OS origin disk!"
-msgstr "Вы не можете отформатировать диск с OS!"
 
 #, php-format
 msgid ""
@@ -9595,6 +9602,9 @@ msgstr "Информация и статус ZFS слепков"
 
 msgid "ZFS Snapshot Properties"
 msgstr "Свойства ZFS слепков"
+
+msgid "ZFS Storage Pool"
+msgstr ""
 
 msgid "ZFS Volume Information & Status"
 msgstr "Информация и статус ZFS разделов"
@@ -9776,3 +9786,76 @@ msgstr "размонтировать"
 
 msgid "version:"
 msgstr "версия:"
+
+#~ msgid "Do you really want to format this disk? All data will be lost!"
+#~ msgstr ""
+#~ "Вы действительно хотите отформатировать этот диск? Все данные на диске будут "
+#~ "уничтожены!"
+
+#~ msgid "Minimum free space"
+#~ msgstr "Минимум свободного места"
+
+#~ msgid "Volume label"
+#~ msgstr "Метка тома"
+
+#~ msgid "Create ZFS on GPT partition."
+#~ msgstr "Создать ZFS на GPT разделах."
+
+#~ msgid "Enable Advanced Format. (4KB sector)"
+#~ msgstr "Включить расширенное форматирование. (4KB сектор)"
+
+#~ msgid ""
+#~ "Don't erase the Master Boot Record. (useful for some RAID controller cards)"
+#~ msgstr ""
+#~ "Не стирать Master Boot Record. (Полезно для некоторых контроллеров RAID)"
+
+#~ msgid "Format disk"
+#~ msgstr "Форматировать диск"
+
+#~ msgid "Advanced format"
+#~ msgstr "Расширенное форматирование"
+
+#~ msgid "MBR erase"
+#~ msgstr "Стирание MBR"
+
+#, php-format
+#~ msgid ""
+#~ "Lowering this threshold can adversely affect performance and auto-"
+#~ "defragmentation."
+#~ msgstr ""
+#~ "Снижение этого порога может отрицательно повлиять на производительность и "
+#~ "автоматическую дефрагментацию."
+
+#~ msgid "Specify the percentage of space held back from normal users."
+#~ msgstr ""
+#~ "Задайте процент дискового пространства, недоступного обычным пользователям."
+
+#, php-format
+#~ msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
+#~ msgstr ""
+#~ "Примечание: удерживайте Ctrl (или Command на Mac), чтобы выбрать несколько "
+#~ "дисков."
+
+#~ msgid ""
+#~ "UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
+#~ "filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
+#~ "unpredictable results, file corruption and loss of data!"
+#~ msgstr ""
+#~ "UFS и ZFS являются родными файловыми системами NAS4Free.  Попытка "
+#~ "использовать другие файловые системы такие как ext2, ext3, EXT4, FAT, FAT32 "
+#~ "или NTFS может привести к непредсказуемым результатам, порче файлов и потере "
+#~ "данных!"
+
+#~ msgid ""
+#~ "Volume label of the new file system. Use a space to separate multiple "
+#~ "labels. (if only one specified next will be auto increment)"
+#~ msgstr ""
+#~ "Метка тома для новой файловой системы. Используйте пробел для разделения "
+#~ "нескольких ярлыков. (Если указан только один  следующий будет автоматическое "
+#~ "добавлен)"
+
+#~ msgid "Wrong number of count for Volume Label"
+#~ msgstr "Неверное число счетчика для метки тома"
+
+#~ msgid "You can't format the OS origin disk!"
+#~ msgstr "Вы не можете отформатировать диск с OS!"

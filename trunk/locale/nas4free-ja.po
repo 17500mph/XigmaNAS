@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-06 10:52+0000\n"
+"POT-Creation-Date: 2016-06-16 21:18+0000\n"
 "PO-Revision-Date: 2015-12-19 13:07+0000\n"
 "Last-Translator: Daisuke Aoyama <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-12 16:41+0000\n"
+"X-Launchpad-Export-Date: 2016-06-16 20:37+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -583,6 +583,9 @@ msgstr "高度な設定"
 msgid "Advanced Configuration"
 msgstr "高度な設定"
 
+msgid "Advanced Format"
+msgstr ""
+
 msgid "Advanced Options"
 msgstr "高度なオプション"
 
@@ -590,9 +593,6 @@ msgid "Advanced Settings"
 msgstr "高度な設定"
 
 msgid "Advanced Setup"
-msgstr ""
-
-msgid "Advanced format"
 msgstr ""
 
 msgid "Advanced settings"
@@ -923,6 +923,9 @@ msgstr "磁気ヘッドのシーク動作の平均性能。この属性が減少
 
 msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr "スピンドルが停止状態から既定の回転数になるまでにかかった平均時間。"
+
+msgid "Back"
+msgstr ""
 
 msgid "Backup Configuration"
 msgstr "設定のバックアップ"
@@ -1614,7 +1617,7 @@ msgstr "HVM ゲスト作成"
 msgid "Create PV Guest"
 msgstr "PV ゲスト作成"
 
-msgid "Create ZFS on GPT partition."
+msgid "Create ZFS on a GPT partition."
 msgstr ""
 
 msgid "Create and initialize RAID."
@@ -2057,11 +2060,26 @@ msgstr ""
 msgid "Device Model"
 msgstr "デバイスモデル"
 
+msgid "Device Name"
+msgstr ""
+
 msgid "Device Pass-through"
 msgstr "SCSIデバイスパススルー"
 
+msgid "Device Path"
+msgstr ""
+
 msgid "Device Serial"
 msgstr "デバイスシリアル"
+
+msgid "Device contains boot partition"
+msgstr ""
+
+msgid "Device is mounted"
+msgstr ""
+
+msgid "Device not found"
+msgstr ""
 
 msgid "Device polling"
 msgstr "デバイスポーリング"
@@ -2193,6 +2211,10 @@ msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
 
 msgid ""
+"Do not erase the Master Boot Record (useful for some RAID controller cards)."
+msgstr ""
+
+msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
 msgstr "本当に消去およびインポートしてもよろしいですか？\\n既存コンフィグは消去されて上書きされます。"
@@ -2287,9 +2309,6 @@ msgid ""
 msgstr ""
 "このボリュームを削除してもよろしいですか?\n"
 "!!! 注意: 全てのデータは無くなってしまい、復旧する事ができません。"
-
-msgid "Do you really want to format this disk? All data will be lost!"
-msgstr "ディスクをフォーマットして宜しいですか? データは全て失われます!"
 
 msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
@@ -2414,10 +2433,6 @@ msgstr "古い形式のドメイン名 例.EXAMPLE"
 
 msgid "Domain name, e.g. example.com."
 msgstr "ドメイン名 (例: example.com)"
-
-msgid ""
-"Don't erase the Master Boot Record. (useful for some RAID controller cards)"
-msgstr ""
 
 msgid "Donate"
 msgstr "寄附"
@@ -2615,7 +2630,7 @@ msgstr "有効"
 msgid "Enable ACL inheritance"
 msgstr "ACL継承を有効化"
 
-msgid "Enable Advanced Format. (4KB sector)"
+msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr ""
 
 msgid "Enable Asynchronous I/O (AIO)"
@@ -2882,6 +2897,9 @@ msgid ""
 "command failures."
 msgstr ""
 
+msgid "Erase MBR"
+msgstr ""
+
 msgid "Error"
 msgstr "エラー"
 
@@ -2974,6 +2992,9 @@ msgstr "transmission-remote を使って設定する拡張オプション (通�
 
 msgid "Extra options to rsync (usually empty)."
 msgstr "rsync の拡張オプション (通常は空)"
+
+msgid "FAT32"
+msgstr ""
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (ファストイーサチャネル)"
@@ -3179,7 +3200,7 @@ msgstr "仮想デバイスが使用中でも異なるサイズを指定しても
 msgid "Format"
 msgstr "フォーマット"
 
-msgid "Format disk"
+msgid "Format Options"
 msgstr ""
 
 msgid "Format the report for phpBB forum."
@@ -3243,6 +3264,9 @@ msgstr ""
 
 msgid "GID"
 msgstr "グループ ID"
+
+msgid "GPT Partition"
+msgstr ""
 
 msgid "GPT partition"
 msgstr "GPT パーティション"
@@ -4262,12 +4286,6 @@ msgstr "切替電圧下限値"
 msgid "Low voltage trimming transfer point"
 msgstr "電圧下降補正の戻り値"
 
-#, php-format
-msgid ""
-"Lowering this threshold can adversely affect performance and auto-"
-"defragmentation."
-msgstr ""
-
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4280,9 +4298,6 @@ msgstr "MAC アドレス"
 
 msgid "MAC address"
 msgstr "MAC アドレス"
-
-msgid "MBR erase"
-msgstr ""
 
 msgid "MBR partition"
 msgstr "MBR パーティション"
@@ -4529,14 +4544,14 @@ msgstr "Minidlna構成が更新されました。"
 msgid "Minimum"
 msgstr "最小"
 
+msgid "Minimum Free Space"
+msgstr ""
+
 msgid "Minimum Performance, Minimum Acoustic Output"
 msgstr "最小のパフォーマンス、最小の音響出力"
 
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr "電源OFF後のUPS再起動の最少バッテリー残量"
-
-msgid "Minimum free space"
-msgstr "空き容量の最小値"
 
 msgid "Minimum frequency"
 msgstr "最少周波数"
@@ -4745,6 +4760,9 @@ msgstr "新しいデバイス"
 msgid "New password"
 msgstr "新しいパスワード"
 
+msgid "Next"
+msgstr ""
+
 msgid "No"
 msgstr "No"
 
@@ -4906,10 +4924,6 @@ msgstr "パスが見つかりません。"
 
 msgid "Note"
 msgstr "注意"
-
-#, php-format
-msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
-msgstr ""
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -5124,6 +5138,9 @@ msgstr "パッケージのアップロードに失敗しました。(メモリ�
 
 msgid "Packages"
 msgstr "パッケージ"
+
+msgid "Page"
+msgstr ""
 
 msgid "Painfully aggressive"
 msgstr "最高にアグレッシブ"
@@ -5641,6 +5658,9 @@ msgstr "読み込み専用"
 msgid "Realm"
 msgstr "レルム"
 
+msgid "Reason Code"
+msgstr ""
+
 msgid "Reason for last transfer to battery (* opaque)"
 msgstr "最新バッテリー切替理由"
 
@@ -5649,6 +5669,9 @@ msgstr "リブート"
 
 msgid "Receive Buffer Size"
 msgstr "受信バッファサイズ"
+
+msgid "Record is locked"
+msgstr ""
 
 msgid "Recurse into directories."
 msgstr "ディレクトリの再帰を行います。"
@@ -6043,6 +6066,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "S.M.A.R.T. を有効にするディスクを選択してください。"
 
+msgid "Select file system format."
+msgstr ""
+
 msgid "Select firmware:"
 msgstr "ファームウェア選択:"
 
@@ -6422,7 +6448,10 @@ msgid ""
 "Specifies whether it is allowed to login as superuser (root) directly."
 msgstr "直接スーパユーザ (root) がログイン出来るかを選択します。"
 
-msgid "Specify the percentage of space held back from normal users."
+msgid ""
+"Specifiy the percentage of disk space to be held back from normal usage. "
+"Lowering this threshold can adversely affect performance and auto-"
+"defragmentation!"
 msgstr ""
 
 msgid "Split request"
@@ -6892,6 +6921,11 @@ msgstr "属性 '%s' は %d 文字以上、%d 文字以内である必要があ�
 #, php-format
 msgid "The attribute '%s' is required."
 msgstr "属性 '%s' は必要とされています。"
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -8199,12 +8233,6 @@ msgstr ""
 "UFS と ZFS は %s のネイティブなファイルフォーマットです。EXT2, EXT3, EXT4, FAT, FAT32 又は NTFS "
 "等の他ファイルフォーマットを使う場合、予期せぬ結果、ファイルの破損及びデータの紛失が起こる恐れがあります！"
 
-msgid ""
-"UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
-"filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
-"unpredictable results, file corruption and loss of data!"
-msgstr ""
-
 #, php-format
 msgid ""
 "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
@@ -8337,6 +8365,9 @@ msgstr "不明"
 
 msgid "Unknown or unformatted"
 msgstr "不明又は未フォーマット"
+
+msgid "Unknown size"
+msgstr ""
 
 msgid "Unload"
 msgstr "アンロード"
@@ -8608,12 +8639,9 @@ msgstr ""
 msgid "Volume is unlocked"
 msgstr ""
 
-msgid "Volume label"
-msgstr "ボリュームラベル"
-
 msgid ""
-"Volume label of the new file system. Use a space to separate multiple "
-"labels. (if only one specified next will be auto increment)"
+"Volume label of the new file system. Use $ for device name, % for a counter "
+"or %[startvalue] for a counter starting at startvalue."
 msgstr ""
 
 msgid "Volume mode"
@@ -8763,9 +8791,6 @@ msgstr "書き込みキャッシュ"
 msgid "Write only"
 msgstr "書込みのみ"
 
-msgid "Wrong number of count for Volume Label"
-msgstr ""
-
 msgid "Wrong partition type or partition number."
 msgstr "パーティションタイプまたはパーティション番号が間違っています。"
 
@@ -8791,9 +8816,6 @@ msgstr ""
 
 msgid "You can use the following parameters for substitution:"
 msgstr "以下のパラメータを埋め込みできます:"
-
-msgid "You can't format the OS origin disk!"
-msgstr ""
 
 #, php-format
 msgid ""
@@ -8877,6 +8899,9 @@ msgstr "ZFS スナップショット情報と状態"
 
 msgid "ZFS Snapshot Properties"
 msgstr "ZFS スナップショットプロパティ"
+
+msgid "ZFS Storage Pool"
+msgstr ""
 
 msgid "ZFS Volume Information & Status"
 msgstr "ZFS ボリューム情報と状態"
@@ -9049,3 +9074,12 @@ msgstr "アンマウント"
 
 msgid "version:"
 msgstr "バージョン:"
+
+#~ msgid "Do you really want to format this disk? All data will be lost!"
+#~ msgstr "ディスクをフォーマットして宜しいですか? データは全て失われます!"
+
+#~ msgid "Minimum free space"
+#~ msgstr "空き容量の最小値"
+
+#~ msgid "Volume label"
+#~ msgstr "ボリュームラベル"
