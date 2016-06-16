@@ -1025,8 +1025,17 @@ function disks_format($disk, $type, $notinitmbr, $minspace, $volumelabel, $aft4k
 			system("/bin/dd if=/dev/zero of={$disk} bs={$diskinfo['sectorsize']} oseek={$oseek} count=1 2>&1");
 			if ($zfsgpt) {
 				echo gettext("Creating partition")."...\n";
-				system("/sbin/gpart create -s gpt {$disk} 2>&1");
-				system("/sbin/gpart add -a4m -t freebsd-zfs {$disk} 2>&1");
+				$param = ' -s gpt';
+				$cmd = sprintf('/sbin/gpart create %2$s %1$s 2>&1', $disk, $param);
+				echo htmlspecialchars('#'), htmlspecialchars($cmd), "\n";
+				system($cmd);
+				$param = ' -a 4m -t freebsd-zfs';
+				if (!empty($volumelabel)) {
+					$param .= ' -l ' . escapeshellarg($volumelabel);
+				}
+				$cmd = sprintf('/sbin/gpart add %2$s %1$s 2>&1', $disk, $param);
+				echo htmlspecialchars('#'), htmlspecialchars($cmd), "\n";
+				system($cmd);
 			}
 			break;
 
