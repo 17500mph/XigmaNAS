@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-06 10:52+0000\n"
-"PO-Revision-Date: 2016-05-22 20:14+0000\n"
-"Last-Translator: Paolo Borla <p.borla@gmail.com>\n"
+"POT-Creation-Date: 2016-06-16 21:18+0000\n"
+"PO-Revision-Date: 2016-06-16 15:49+0000\n"
+"Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-12 16:41+0000\n"
+"X-Launchpad-Export-Date: 2016-06-16 20:37+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
@@ -501,7 +501,7 @@ msgid "Add Rsync job"
 msgstr "Aggiungi lavoro di Rsync"
 
 msgid "Add Snapshot"
-msgstr ""
+msgstr "Aggiungi Snapshot"
 
 msgid "Add URL"
 msgstr "Aggiungi URL"
@@ -620,6 +620,9 @@ msgstr "Avanzato"
 msgid "Advanced Configuration"
 msgstr "Configurazione avanzata"
 
+msgid "Advanced Format"
+msgstr ""
+
 msgid "Advanced Options"
 msgstr "Opzioni Avanzate"
 
@@ -628,9 +631,6 @@ msgstr "Impostazioni Avanzate"
 
 msgid "Advanced Setup"
 msgstr "Configurazione Avanzata"
-
-msgid "Advanced format"
-msgstr "Formato avanzato"
 
 msgid "Advanced settings"
 msgstr "Impostazioni avanzate"
@@ -780,7 +780,7 @@ msgid "Allows the server to try and become a local master browser."
 msgstr "Permetti al server di diventare local master browser."
 
 msgid "Allows to connect to a hidden network"
-msgstr ""
+msgstr "Permette di collegarsi ad una network nascosta"
 
 msgid ""
 "Also known as 'Power-off Retract Count' per conventional HDD terminology. "
@@ -982,6 +982,9 @@ msgstr ""
 "cala, è il segnale di un problema nel sottosistema meccanico."
 
 msgid "Average time of spindle spin up (from zero RPM to fully operational)."
+msgstr "Tempo medio di spin up (da zero RPM fino a rotazione operativa)"
+
+msgid "Back"
 msgstr ""
 
 msgid "Backup Configuration"
@@ -1126,6 +1129,8 @@ msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
 "seconds)"
 msgstr ""
+"Trasmette la sua disponibilità ogni N secondi sulla rete. (Default 300 "
+"secondi)"
 
 msgid "Browse Directory"
 msgstr "Naviga nelle Cartelle"
@@ -1452,7 +1457,7 @@ msgid "Confirmation"
 msgstr "Conferma"
 
 msgid "Connect to hidden network"
-msgstr ""
+msgstr "Connetti a rete nascosta"
 
 msgid "Connected FTP Users & Status"
 msgstr "Utenti connessi via FTP e stato"
@@ -1586,7 +1591,7 @@ msgid "Count"
 msgstr "Quantita'"
 
 msgid "Count of 'Free Fall Events' detected."
-msgstr ""
+msgstr "Conteggio di 'Evento Caduta Libera' rilevati."
 
 msgid ""
 "Count of 'unstable' sectors (waiting to be remapped, because of "
@@ -1643,7 +1648,7 @@ msgstr ""
 "Conteggio di carico / scarico dei cicli nella posizione zona di riposo testa."
 
 msgid "Count of off-track errors."
-msgstr ""
+msgstr "Conteggio degli errori off-tracks."
 
 msgid ""
 "Count of reallocated sectors. When the hard drive finds a "
@@ -1707,29 +1712,34 @@ msgstr ""
 
 msgid "Count of times the link is reset during a data transfer."
 msgstr ""
+"Conteggio del numero di volte che il link si resetta durante un "
+"trasferimento dati."
 
 msgid "Counts the maximum worst erase count on any block."
-msgstr ""
+msgstr "Conteggio del peggior numero di cancellazioni di ogni blocco."
 
 msgid ""
 "Counts the number of SATA PHY errors. This value includes all PHY error "
 "counts, ex data FIS CRC , code errors, disparity errors, command FIS crc. "
 "Value clears upon system power-down."
 msgstr ""
+"Conteggio del numero di errori del tipo SATA PHY. Questo valore include "
+"tutti gli errori PHY, ex data FIS CRC, errori di codice, errori di parità, i "
+"comandi FIS crc. Il valore si resetta allo spegnimento del sistema"
 
 msgid "Create 4KB wrapper (nop device)."
 msgstr "Crea wrapper 4KB (dispositivo nop)."
 
 msgid "Create Date"
-msgstr ""
+msgstr "Data di Creazione"
 
 msgid "Create HVM Guest"
-msgstr ""
+msgstr "Crea HVM Guest"
 
 msgid "Create PV Guest"
-msgstr ""
+msgstr "Crea PV Guest"
 
-msgid "Create ZFS on GPT partition."
+msgid "Create ZFS on a GPT partition."
 msgstr ""
 
 msgid "Create and initialize RAID."
@@ -1905,7 +1915,7 @@ msgid "Dataset is protected"
 msgstr "Insieme di dati è protetto"
 
 msgid "Dataset is unlocked"
-msgstr ""
+msgstr "Il Dataset è bloccato"
 
 msgid "Datasets"
 msgstr "Dataset"
@@ -2000,16 +2010,16 @@ msgid "Delete Selected Options"
 msgstr "Cancella le opzioni selezionate"
 
 msgid "Delete Selected Pools"
-msgstr ""
+msgstr "Cancella i Pools selezionati"
 
 msgid "Delete Selected RAID Volumes"
-msgstr ""
+msgstr "Cancella i Volumi RAID selezionati"
 
 msgid "Delete Selected Snapshots"
-msgstr ""
+msgstr "Cancella gli Snapshot selezionati"
 
 msgid "Delete Selected Virtual Devices"
-msgstr ""
+msgstr "Cancella i Virtual Devices selezionati"
 
 msgid "Delete Selected Volumes"
 msgstr "Cancella i Volumi Selezionati"
@@ -2182,16 +2192,31 @@ msgid "Device IP"
 msgstr "Dispositivo IP"
 
 msgid "Device List"
-msgstr ""
+msgstr "Lista Device"
 
 msgid "Device Model"
 msgstr "Modello dispositivo"
 
+msgid "Device Name"
+msgstr ""
+
 msgid "Device Pass-through"
 msgstr "Dispositivo Pass-through"
 
+msgid "Device Path"
+msgstr ""
+
 msgid "Device Serial"
 msgstr "Numero di serie della periferica"
+
+msgid "Device contains boot partition"
+msgstr ""
+
+msgid "Device is mounted"
+msgstr ""
+
+msgid "Device not found"
+msgstr ""
 
 msgid "Device polling"
 msgstr "Device polling"
@@ -2298,7 +2323,7 @@ msgid "Disk"
 msgstr "Disco"
 
 msgid "Disk Selection"
-msgstr ""
+msgstr "Selezione Disco"
 
 msgid "Disk space usage"
 msgstr "Spazio disco utilizzato"
@@ -2326,6 +2351,10 @@ msgid "Distributed hash table"
 msgstr "Tabella hash distribuita"
 
 msgid "Do not activate this option if you want to add an existing RAID."
+msgstr "Non attivare questa opzione se vuoi aggiungere un RAID esistente"
+
+msgid ""
+"Do not erase the Master Boot Record (useful for some RAID controller cards)."
 msgstr ""
 
 msgid ""
@@ -2432,10 +2461,6 @@ msgstr ""
 "Volete veramente eliminare questo volume?\\n!!! Nota, tutti i dati andranno "
 "persi e non potranno essere recuperati!!!"
 
-msgid "Do you really want to format this disk? All data will be lost!"
-msgstr ""
-"Si vuole realmente formattare questo disco? Verranno persi tutti i dati!"
-
 msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
 msgstr ""
@@ -2449,46 +2474,47 @@ msgid "Do you really want to uninstall this package?"
 msgstr "Si desidera realmente disinstallare questo pacchetto?"
 
 msgid "Do you want to create a JBOD from selected disks?"
-msgstr ""
+msgstr "Vuoi creare un JBOD dai dischi selezionati?"
 
 msgid "Do you want to create a RAID-0 from selected disks?"
-msgstr ""
+msgstr "Vuoi creare un RAID-0 dai dischi selezionati?"
 
 msgid "Do you want to create a RAID-1 from selected disks?"
-msgstr ""
+msgstr "Vuoi creare un RAID-1 dai dischi selezionati?"
 
 msgid "Do you want to create a RAID-5 from selected disks?"
-msgstr ""
+msgstr "Vuoi creare un RAID-5 dai dischi selezionati?"
 
 msgid "Do you want to create a RAID-Z1 from selected disks?"
-msgstr ""
+msgstr "Vuoi creare un RAID-Z1 dai dischi selezionati?"
 
 msgid "Do you want to create a RAID-Z2 from selected disks?"
-msgstr ""
+msgstr "Vuoi creare un RAID-Z2 dai dischi selezionati?"
 
 msgid "Do you want to create a RAID-Z3 from selected disks?"
-msgstr ""
+msgstr "Vuoi creare un RAID-Z3 dai dischi selezionati?"
 
 msgid "Do you want to create a cache device from selected disks?"
-msgstr ""
+msgstr "Vuoi creare un dispositivo cache dai dischi selezionati?"
 
 msgid "Do you want to create a hot spare device from selected disk?"
-msgstr ""
+msgstr "Vuoi creare un dispositivo 'hot spare' dai dischi selezionati?"
 
 msgid "Do you want to create a log device from selected disk?"
-msgstr ""
+msgstr "Vuoi creare un dispositivo log dai dischi selezionati?"
 
 msgid "Do you want to create a mirrored log device from selected disks?"
-msgstr ""
+msgstr "Vuoi creare un dispositivo 'mirrored log' dai dischi selezionati?"
 
 msgid "Do you want to create a mirrored virtual device from selected disks?"
 msgstr ""
+"Vuoi creare un dispositivo 'mirrored virtual' dai dischi selezionati?"
 
 msgid "Do you want to create a striped virtual device from selected disks?"
-msgstr ""
+msgstr "Vuoi creare un dispositivo 'striped virtual' dai dischi selezionati?"
 
 msgid "Do you want to delete selected RAID volumes?"
-msgstr ""
+msgstr "Vuoi cancellare i volumi RAID selezionati?"
 
 msgid "Do you want to delete selected datasets?"
 msgstr "Vuoi dancellare i dataset selezionati?"
@@ -2500,13 +2526,13 @@ msgid "Do you want to delete selected options?"
 msgstr "Vuoi cancellare le opzioni selezionate?"
 
 msgid "Do you want to delete selected pools?"
-msgstr ""
+msgstr "Vuoi cancellare i Pools selezionati?"
 
 msgid "Do you want to delete selected snapshots?"
-msgstr ""
+msgstr "Vuoi cancellare gli Snapshots selezionati?"
 
 msgid "Do you want to delete selected virtual devices?"
-msgstr ""
+msgstr "Vuoi cancellare i dispositivi virtuali selezionati?"
 
 msgid "Do you want to delete selected volumes?"
 msgstr "Vuoi cancellare i volumi selezionati?"
@@ -2563,10 +2589,6 @@ msgstr "Domain name nel vecchio formato, e.g. ESEMPIO."
 
 msgid "Domain name, e.g. example.com."
 msgstr "Nome dominio, es. esempio.com."
-
-msgid ""
-"Don't erase the Master Boot Record. (useful for some RAID controller cards)"
-msgstr ""
 
 msgid "Donate"
 msgstr "Fai una donazione"
@@ -2647,7 +2669,7 @@ msgid "Edit"
 msgstr "Modifica"
 
 msgid "Edit Dataset"
-msgstr ""
+msgstr "Modifica il Dataset"
 
 msgid "Edit Host"
 msgstr "Modifica host"
@@ -2665,7 +2687,7 @@ msgid "Edit Rsync job"
 msgstr "Modifica job Rsync"
 
 msgid "Edit Snapshot"
-msgstr ""
+msgstr "Modifica lo Snapshot"
 
 msgid "Edit URL"
 msgstr "Modifica URL"
@@ -2674,7 +2696,7 @@ msgid "Edit VM"
 msgstr "Edita VM"
 
 msgid "Edit Virtual Device"
-msgstr ""
+msgstr "Modifica i 'Virtual Device'"
 
 msgid "Edit Volume"
 msgstr "Edita Volume"
@@ -2754,7 +2776,7 @@ msgid "Email Report"
 msgstr "Email Report"
 
 msgid "Emergency Level"
-msgstr ""
+msgstr "Livello Emergenza"
 
 msgid "Empty as default."
 msgstr "Vuoto di default."
@@ -2765,7 +2787,7 @@ msgstr "Abilita"
 msgid "Enable ACL inheritance"
 msgstr "Attiva eredità ACL"
 
-msgid "Enable Advanced Format. (4KB sector)"
+msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr ""
 
 msgid "Enable Asynchronous I/O (AIO)"
@@ -2790,6 +2812,8 @@ msgid ""
 "Enable S.M.A.R.T. monitoring of S.M.A.R.T. capable devices when they are "
 "added to the configuration."
 msgstr ""
+"Abilita monitoraggio S.M.A.R.T. di dispositivi che lo supportano, quando "
+"sono aggiunti alla configurazione."
 
 msgid "Enable SMTP authentication."
 msgstr "Attiva l'autenticazione SMTP."
@@ -2870,7 +2894,7 @@ msgid "Enable guest access."
 msgstr "Abilita accesso guest."
 
 msgid "Enable inotify."
-msgstr ""
+msgstr "Abilita inotify"
 
 msgid "Enable keyboard-interactive authentication."
 msgstr "Abilita la autenticazione interattiva da tastiera"
@@ -2882,7 +2906,7 @@ msgid "Enable local user authentication."
 msgstr "Abilita autenticazione utenti locali."
 
 msgid "Enable mapping DOS attributes"
-msgstr ""
+msgstr "Abilita mappatura attributi DOS"
 
 msgid "Enable module listing."
 msgstr "Abilita l'elenco dei moduli."
@@ -2921,7 +2945,7 @@ msgid "Enable reverse DNS lookup."
 msgstr "Abilita la risoluzione DNS inversa."
 
 msgid "Enable second local connected UPS."
-msgstr ""
+msgstr "Abilita il secondo UPS connesso localmente"
 
 msgid "Enable serial console."
 msgstr "Abilita la console seriale"
@@ -2939,7 +2963,7 @@ msgid "Enable the system power control utility."
 msgstr "Attivare l'utilità di controllo di alimentazione del sistema."
 
 msgid "Enable to strictly adhere to DLNA standards."
-msgstr ""
+msgstr "Abilita per aderire rigorosamente agli standard DLNA"
 
 msgid "Enable transcoding."
 msgstr "Abilita il transcoding"
@@ -2948,7 +2972,7 @@ msgid "Enable traps."
 msgstr "Attivare traps"
 
 msgid "Enable tuning of some kernel variables."
-msgstr ""
+msgstr "Abilita il tuning di alcune variabili del kernel"
 
 msgid "Enable write cache mode."
 msgstr "Abilità la modalità write cache."
@@ -2986,7 +3010,7 @@ msgid "English"
 msgstr "Inglese"
 
 msgid "Enhanced compatibility with Netatalk AFP server"
-msgstr ""
+msgstr "Compatibilità migliorata con Netatalk AFP server"
 
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
@@ -2999,6 +3023,8 @@ msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
 "automatically added it to the bridge."
 msgstr ""
+"Inserisci una lista separata da spazi di dispositivi tap. I dispositivi "
+"saranno creati automaticamente e aggiunti al bridge."
 
 msgid "Enter a valid sysctl MIB name."
 msgstr "Inserire un nome sysctl MIB valido."
@@ -3045,18 +3071,21 @@ msgid "Enter trap host name."
 msgstr "Inserire un nome di host per le trap"
 
 msgid "Entire Device"
-msgstr ""
+msgstr "Dispositivo intero"
 
 msgid ""
 "Erase Fail Count (chip). This parameter indicates a number of flash erase "
 "command failures."
 msgstr ""
 
+msgid "Erase MBR"
+msgstr ""
+
 msgid "Error"
 msgstr "Errore"
 
 msgid "Error Level"
-msgstr ""
+msgstr "Livello Errore"
 
 #, php-format
 msgid "Error: The changes could not be applied (error code %s)."
@@ -3067,7 +3096,7 @@ msgid "Event"
 msgstr "Evento"
 
 msgid "Event selection"
-msgstr ""
+msgstr "Selezione Evento"
 
 msgid "Execute"
 msgstr "Esegui"
@@ -3153,6 +3182,9 @@ msgstr ""
 msgid "Extra options to rsync (usually empty)."
 msgstr "Opzioni extra di rsync (normalmente vuoto)."
 
+msgid "FAT32"
+msgstr ""
+
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
 
@@ -3200,7 +3232,7 @@ msgid "Failed to execute command zfs."
 msgstr "Impossibile eseguire comando zfs."
 
 msgid "Failed to execute command zpool."
-msgstr ""
+msgstr "Fallita esecuzione del comando zpool."
 
 msgid "Failed to execute cron job."
 msgstr "Esecuzione del job di cron fallita."
@@ -3267,7 +3299,7 @@ msgid "File Path"
 msgstr "Percorso File"
 
 msgid "File System"
-msgstr ""
+msgstr "File System"
 
 msgid "File Transfer Protocol"
 msgstr "Protocollo di Trasferimento File"
@@ -3318,7 +3350,7 @@ msgid "Firewall"
 msgstr "Firewall"
 
 msgid "Firewall Rule Settings"
-msgstr ""
+msgstr "Impostazioni delle regole del Firewall"
 
 msgid "Firmware"
 msgstr "Firmware"
@@ -3327,7 +3359,7 @@ msgid "Firmware Check"
 msgstr "Controllo Firmware"
 
 msgid "Firmware upload failed (out of memory?)"
-msgstr ""
+msgstr "Upload Firmware fallito (rimasto senza memoria?)"
 
 msgid "Firmware uploading is not supported on this platform."
 msgstr "L'upload del firmware non è supportato su questa piattaforma."
@@ -3363,7 +3395,7 @@ msgstr ""
 msgid "Format"
 msgstr "Formatta"
 
-msgid "Format disk"
+msgid "Format Options"
 msgstr ""
 
 msgid "Format the report for phpBB forum."
@@ -3418,16 +3450,19 @@ msgid ""
 msgstr ""
 
 msgid "GEOM"
-msgstr ""
+msgstr "GEOM"
 
 msgid "GEOM Software RAID"
-msgstr ""
+msgstr "GEOM Software RAID"
 
 msgid "GEOM VINUM Software RAID"
-msgstr ""
+msgstr "GEOM VINUM Software RAID"
 
 msgid "GID"
 msgstr "GID"
+
+msgid "GPT Partition"
+msgstr ""
 
 msgid "GPT partition"
 msgstr "Partizione GPT"
@@ -3521,7 +3556,7 @@ msgid "HAST Information & Status Configured Resources"
 msgstr ""
 
 msgid "HAST Resource"
-msgstr ""
+msgstr "Risorse HAST"
 
 msgid "HAST disabled"
 msgstr "HAST disabilitato"
@@ -3552,7 +3587,7 @@ msgid "HDD standby time"
 msgstr "HDD standby time"
 
 msgid "HOT SPARE"
-msgstr ""
+msgstr "HOT SPARE"
 
 msgid "HTTP Proxy"
 msgstr "Proxy HTTP"
@@ -3738,7 +3773,7 @@ msgid "IRC Live Support"
 msgstr "Aiuto in linea tramite IRC"
 
 msgid "IRC NAS4Free"
-msgstr ""
+msgstr "IRC NAS4free"
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
@@ -3897,12 +3932,14 @@ msgid ""
 "Indicates the approximate SSD life left, in terms of program/erase cycles or "
 "Flash blocks currently available for use."
 msgstr ""
+"Indica approssimativamente la vita rimanente per l'SSD, in termini di cicli "
+"programma/cancella o di blocchi flash attualmente disponibili all'utilizzo."
 
 msgid "Info"
 msgstr "Informazioni"
 
 msgid "Info Level"
-msgstr ""
+msgstr "Livello informazioni"
 
 msgid "Informal"
 msgstr "Informale"
@@ -3932,7 +3969,7 @@ msgstr "Digest iniziale"
 
 #, php-format
 msgid "Initial ramdisk (e.g. %s)."
-msgstr ""
+msgstr "Ramdisk iniziale (es. %s)."
 
 msgid "Initialize"
 msgstr "Inizializza"
@@ -4025,6 +4062,9 @@ msgid ""
 "declines to a minimum value of 1. It decreases while the NAND erase cycles "
 "increase from 0 to the maximum-rated cycles."
 msgstr ""
+"Gli SSD Intel riportano un valore normalizzato di 100 (quando l'SSD è nuovo) "
+"che declina ad un valore minimo di 1. Decresce mentre i cicli di "
+"cancellazione NAND crescono, da 0 al ciclo massimo nominale."
 
 msgid ""
 "Intel SSD reports the number of available reserved space as a percentage of "
@@ -4081,7 +4121,7 @@ msgstr ""
 "Dimensione massima blocco non valida! Deve essere compresa tra %d e %d."
 
 msgid "Invalid username or password.</br> Please try again."
-msgstr ""
+msgstr "Username o password non valida. Riprova di nuovo."
 
 msgid "Invert Selection"
 msgstr "Inverti Selezione"
@@ -4115,6 +4155,8 @@ msgid ""
 "It is recommended to use encryption before you store the backup in a safe "
 "location."
 msgstr ""
+"E' consigliato l'utilizzo della criptazione prima che tu immagazzini il "
+"backup in una posizione sicura."
 
 msgid ""
 "It's recommended to change the default username and password for accessing "
@@ -4133,7 +4175,7 @@ msgid "JBOD Information & Status"
 msgstr "JBOD Informazioni e Stato"
 
 msgid "JBOD Maintenance"
-msgstr ""
+msgstr "JBOD Maintenance"
 
 msgid "Jan"
 msgstr "Gen"
@@ -4220,10 +4262,10 @@ msgid "LDAP"
 msgstr "LDAP"
 
 msgid "LOG"
-msgstr ""
+msgstr "LOG"
 
 msgid "LOG (Mirror)"
-msgstr ""
+msgstr "LOG (Mirror)"
 
 msgid "LUN"
 msgstr "LUN"
@@ -4494,12 +4536,6 @@ msgstr "Punto di trasferimento bassa tensione"
 msgid "Low voltage trimming transfer point"
 msgstr "Punto di trasferimento trimming bassa tensione"
 
-#, php-format
-msgid ""
-"Lowering this threshold can adversely affect performance and auto-"
-"defragmentation."
-msgstr ""
-
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4512,9 +4548,6 @@ msgstr "Indirizzo MAC"
 
 msgid "MAC address"
 msgstr "Indirizzo MAC"
-
-msgid "MBR erase"
-msgstr ""
 
 msgid "MBR partition"
 msgstr "Partizione MBR"
@@ -4769,15 +4802,15 @@ msgstr ""
 msgid "Minimum"
 msgstr "Minimo"
 
+msgid "Minimum Free Space"
+msgstr ""
+
 msgid "Minimum Performance, Minimum Acoustic Output"
 msgstr ""
 
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr ""
 "Livello minimo della batteria per il riavvio dell'UPS dopo lo spegnimento"
-
-msgid "Minimum free space"
-msgstr "Minimo spazio libero"
 
 msgid "Minimum frequency"
 msgstr "Frequenza minima"
@@ -4991,6 +5024,9 @@ msgstr "Nuova periferica"
 msgid "New password"
 msgstr "Nuova password"
 
+msgid "Next"
+msgstr ""
+
 msgid "No"
 msgstr "No"
 
@@ -5169,10 +5205,6 @@ msgstr "Percorso non trovato."
 
 msgid "Note"
 msgstr "Nota"
-
-#, php-format
-msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
-msgstr ""
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -5397,6 +5429,9 @@ msgstr "Package upload failed (out of memory?)"
 
 msgid "Packages"
 msgstr "Pacchetti"
+
+msgid "Page"
+msgstr ""
 
 msgid "Painfully aggressive"
 msgstr "Dolorosamente aggressivo"
@@ -5930,6 +5965,9 @@ msgstr "Sola lettura"
 msgid "Realm"
 msgstr "Dominio"
 
+msgid "Reason Code"
+msgstr ""
+
 msgid "Reason for last transfer to battery (* opaque)"
 msgstr "Motivo ultimo passaggio a batteria (* opaque)"
 
@@ -5938,6 +5976,9 @@ msgstr "Riavvia"
 
 msgid "Receive Buffer Size"
 msgstr "Dimensione Buffer Ricezione"
+
+msgid "Record is locked"
+msgstr ""
 
 msgid "Recurse into directories."
 msgstr "Ricorsione nelle directory."
@@ -6343,6 +6384,9 @@ msgstr "Seleziona formato data."
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr ""
 "Selezionare un disco che sia abilitato per il monitoraggio S.M.A.R.T."
+
+msgid "Select file system format."
+msgstr ""
 
 msgid "Select firmware:"
 msgstr "Seleziona Firmware:"
@@ -6753,7 +6797,10 @@ msgstr ""
 "Specificare se deve essere consentito il login diretto come superutente "
 "(root)."
 
-msgid "Specify the percentage of space held back from normal users."
+msgid ""
+"Specifiy the percentage of disk space to be held back from normal usage. "
+"Lowering this threshold can adversely affect performance and auto-"
+"defragmentation!"
 msgstr ""
 
 msgid "Split request"
@@ -7249,6 +7296,11 @@ msgstr ""
 #, php-format
 msgid "The attribute '%s' is required."
 msgstr "L'attributo '%s' è richiesto."
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -8722,12 +8774,6 @@ msgstr ""
 "file system, come ext2, ext3, EXT4, FAT, FAT32 o NTFS può portare a "
 "risultati imprevedibili, corruzione dei file e la perdita di dati!"
 
-msgid ""
-"UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
-"filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
-"unpredictable results, file corruption and loss of data!"
-msgstr ""
-
 #, php-format
 msgid ""
 "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
@@ -8862,6 +8908,9 @@ msgstr "Sconosciuto"
 
 msgid "Unknown or unformatted"
 msgstr "Sconosciuto o non formattato"
+
+msgid "Unknown size"
+msgstr ""
 
 msgid "Unload"
 msgstr "Scarica"
@@ -9154,12 +9203,9 @@ msgstr ""
 msgid "Volume is unlocked"
 msgstr ""
 
-msgid "Volume label"
-msgstr "Etichetta di volume"
-
 msgid ""
-"Volume label of the new file system. Use a space to separate multiple "
-"labels. (if only one specified next will be auto increment)"
+"Volume label of the new file system. Use $ for device name, % for a counter "
+"or %[startvalue] for a counter starting at startvalue."
 msgstr ""
 
 msgid "Volume mode"
@@ -9325,9 +9371,6 @@ msgstr "Write Cache"
 msgid "Write only"
 msgstr "Sola scrittura"
 
-msgid "Wrong number of count for Volume Label"
-msgstr ""
-
 msgid "Wrong partition type or partition number."
 msgstr "Tipo di partizione o numero di partizione errato."
 
@@ -9353,9 +9396,6 @@ msgstr ""
 
 msgid "You can use the following parameters for substitution:"
 msgstr "Puoi utilizzare i seguenti parametri per la sostituzione:"
-
-msgid "You can't format the OS origin disk!"
-msgstr ""
 
 #, php-format
 msgid ""
@@ -9453,6 +9493,9 @@ msgstr "ZFS snapshot Informazioni e Stato"
 
 msgid "ZFS Snapshot Properties"
 msgstr "ZFS Proprietà Snapshot"
+
+msgid "ZFS Storage Pool"
+msgstr ""
 
 msgid "ZFS Volume Information & Status"
 msgstr ""
@@ -9627,3 +9670,30 @@ msgstr "smonta"
 
 msgid "version:"
 msgstr "versione:"
+
+#~ msgid "Do you really want to format this disk? All data will be lost!"
+#~ msgstr ""
+#~ "Si vuole realmente formattare questo disco? Verranno persi tutti i dati!"
+
+#~ msgid "Minimum free space"
+#~ msgstr "Minimo spazio libero"
+
+#~ msgid "Volume label"
+#~ msgstr "Etichetta di volume"
+
+#~ msgid "Advanced format"
+#~ msgstr "Formato avanzato"
+
+#~ msgid "Create ZFS on GPT partition."
+#~ msgstr "Crea ZFS su una partizione GPT"
+
+#~ msgid "Enable Advanced Format. (4KB sector)"
+#~ msgstr "Abilita formattazione avanzata. (4KB sector)"
+
+#~ msgid ""
+#~ "Don't erase the Master Boot Record. (useful for some RAID controller cards)"
+#~ msgstr ""
+#~ "Non cancellare il Master Boot Record. (utile per alcuni controller RAID)"
+
+#~ msgid "Format disk"
+#~ msgstr "Formatta il disco"

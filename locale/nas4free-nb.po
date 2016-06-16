@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-06 10:52+0000\n"
+"POT-Creation-Date: 2016-06-16 21:18+0000\n"
 "PO-Revision-Date: 2016-05-17 05:21+0000\n"
 "Last-Translator: Alf Gunnar Sørensen <alf-gunnar.sorensen@c2i.net>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-12 16:41+0000\n"
+"X-Launchpad-Export-Date: 2016-06-16 20:37+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: NORWAY\n"
 "Language: \n"
@@ -595,6 +595,9 @@ msgstr "Avansert"
 msgid "Advanced Configuration"
 msgstr "Avansert konfigurasjon"
 
+msgid "Advanced Format"
+msgstr ""
+
 msgid "Advanced Options"
 msgstr "Avanserte innstillinger"
 
@@ -602,9 +605,6 @@ msgid "Advanced Settings"
 msgstr ""
 
 msgid "Advanced Setup"
-msgstr ""
-
-msgid "Advanced format"
 msgstr ""
 
 msgid "Advanced settings"
@@ -943,6 +943,9 @@ msgid ""
 msgstr ""
 
 msgid "Average time of spindle spin up (from zero RPM to fully operational)."
+msgstr ""
+
+msgid "Back"
 msgstr ""
 
 msgid "Backup Configuration"
@@ -1623,7 +1626,7 @@ msgstr ""
 msgid "Create PV Guest"
 msgstr ""
 
-msgid "Create ZFS on GPT partition."
+msgid "Create ZFS on a GPT partition."
 msgstr ""
 
 msgid "Create and initialize RAID."
@@ -2066,10 +2069,25 @@ msgstr ""
 msgid "Device Model"
 msgstr ""
 
+msgid "Device Name"
+msgstr ""
+
 msgid "Device Pass-through"
 msgstr "Transparent enhet"
 
+msgid "Device Path"
+msgstr ""
+
 msgid "Device Serial"
+msgstr ""
+
+msgid "Device contains boot partition"
+msgstr ""
+
+msgid "Device is mounted"
+msgstr ""
+
+msgid "Device not found"
 msgstr ""
 
 msgid "Device polling"
@@ -2205,6 +2223,10 @@ msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
 
 msgid ""
+"Do not erase the Master Boot Record (useful for some RAID controller cards)."
+msgstr ""
+
+msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
 msgstr ""
@@ -2305,9 +2327,6 @@ msgid ""
 msgstr ""
 "Vil du virkelig slette dette volumet?\\n!!! Obs, all data vil forsvinne og "
 "kan ikke bli gjenopprettet. !!!"
-
-msgid "Do you really want to format this disk? All data will be lost!"
-msgstr "Vil du virkelig slette denne disken? Alle data vil forsvinne!"
 
 msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
@@ -2432,10 +2451,6 @@ msgstr "Domenenavn i gammelt format; f.eks. EKSEMPEL."
 
 msgid "Domain name, e.g. example.com."
 msgstr "Domenenavn; f.eks. eksempel.no"
-
-msgid ""
-"Don't erase the Master Boot Record. (useful for some RAID controller cards)"
-msgstr ""
 
 msgid "Donate"
 msgstr "Doner"
@@ -2633,7 +2648,7 @@ msgstr "Aktiver"
 msgid "Enable ACL inheritance"
 msgstr ""
 
-msgid "Enable Advanced Format. (4KB sector)"
+msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr ""
 
 msgid "Enable Asynchronous I/O (AIO)"
@@ -2910,6 +2925,9 @@ msgid ""
 "command failures."
 msgstr ""
 
+msgid "Erase MBR"
+msgstr ""
+
 msgid "Error"
 msgstr "Feil"
 
@@ -3006,6 +3024,9 @@ msgstr ""
 
 msgid "Extra options to rsync (usually empty)."
 msgstr "Ekstra alternativer til rsync (vanligvis tomt)."
+
+msgid "FAT32"
+msgstr ""
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
@@ -3211,7 +3232,7 @@ msgstr ""
 msgid "Format"
 msgstr "Format"
 
-msgid "Format disk"
+msgid "Format Options"
 msgstr ""
 
 msgid "Format the report for phpBB forum."
@@ -3275,6 +3296,9 @@ msgstr ""
 
 msgid "GID"
 msgstr "GID"
+
+msgid "GPT Partition"
+msgstr ""
 
 msgid "GPT partition"
 msgstr "GPT partisjon"
@@ -4285,12 +4309,6 @@ msgstr ""
 msgid "Low voltage trimming transfer point"
 msgstr ""
 
-#, php-format
-msgid ""
-"Lowering this threshold can adversely affect performance and auto-"
-"defragmentation."
-msgstr ""
-
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4301,9 +4319,6 @@ msgstr ""
 
 msgid "MAC address"
 msgstr "MAC adresse"
-
-msgid "MBR erase"
-msgstr ""
 
 msgid "MBR partition"
 msgstr "MBT partisjon"
@@ -4552,14 +4567,14 @@ msgstr ""
 msgid "Minimum"
 msgstr "Minimum"
 
+msgid "Minimum Free Space"
+msgstr ""
+
 msgid "Minimum Performance, Minimum Acoustic Output"
 msgstr ""
 
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr ""
-
-msgid "Minimum free space"
-msgstr "Minimum ledig plass"
 
 msgid "Minimum frequency"
 msgstr ""
@@ -4770,6 +4785,9 @@ msgstr "Ny enhet"
 msgid "New password"
 msgstr ""
 
+msgid "Next"
+msgstr ""
+
 msgid "No"
 msgstr "Nei"
 
@@ -4934,10 +4952,6 @@ msgstr ""
 
 msgid "Note"
 msgstr "Notat"
-
-#, php-format
-msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
-msgstr ""
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -5156,6 +5170,9 @@ msgstr "Pakke opplasting feilet (tomt for minne?)"
 
 msgid "Packages"
 msgstr "Pakker"
+
+msgid "Page"
+msgstr ""
 
 msgid "Painfully aggressive"
 msgstr "Smertefullt aggressive"
@@ -5678,6 +5695,9 @@ msgstr ""
 msgid "Realm"
 msgstr "Realm"
 
+msgid "Reason Code"
+msgstr ""
+
 msgid "Reason for last transfer to battery (* opaque)"
 msgstr ""
 
@@ -5686,6 +5706,9 @@ msgstr "Omstart"
 
 msgid "Receive Buffer Size"
 msgstr "Motta Buffer størrelse"
+
+msgid "Record is locked"
+msgstr ""
 
 msgid "Recurse into directories."
 msgstr "Rekursivt i kataloger"
@@ -6077,6 +6100,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Velg en disk som er klar for S.M.A.R.T. overvåking."
 
+msgid "Select file system format."
+msgstr ""
+
 msgid "Select firmware:"
 msgstr ""
 
@@ -6455,7 +6481,10 @@ msgstr ""
 "Spesifiserer hvorvidt det er tillatt å logge inn som superbruker (root) "
 "direkte."
 
-msgid "Specify the percentage of space held back from normal users."
+msgid ""
+"Specifiy the percentage of disk space to be held back from normal usage. "
+"Lowering this threshold can adversely affect performance and auto-"
+"defragmentation!"
 msgstr ""
 
 msgid "Split request"
@@ -6920,6 +6949,11 @@ msgstr ""
 #, php-format
 msgid "The attribute '%s' is required."
 msgstr "'%s' attributten er påkrevd."
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -8160,12 +8194,6 @@ msgid ""
 "unpredictable results, file corruption and the loss of data!"
 msgstr ""
 
-msgid ""
-"UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
-"filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
-"unpredictable results, file corruption and loss of data!"
-msgstr ""
-
 #, php-format
 msgid ""
 "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
@@ -8296,6 +8324,9 @@ msgstr "Ukjent"
 
 msgid "Unknown or unformatted"
 msgstr "Ukjent eller uformatert"
+
+msgid "Unknown size"
+msgstr ""
 
 msgid "Unload"
 msgstr ""
@@ -8565,12 +8596,9 @@ msgstr ""
 msgid "Volume is unlocked"
 msgstr ""
 
-msgid "Volume label"
-msgstr "Volumnavn"
-
 msgid ""
-"Volume label of the new file system. Use a space to separate multiple "
-"labels. (if only one specified next will be auto increment)"
+"Volume label of the new file system. Use $ for device name, % for a counter "
+"or %[startvalue] for a counter starting at startvalue."
 msgstr ""
 
 msgid "Volume mode"
@@ -8720,9 +8748,6 @@ msgstr ""
 msgid "Write only"
 msgstr "Kun skriving"
 
-msgid "Wrong number of count for Volume Label"
-msgstr ""
-
 msgid "Wrong partition type or partition number."
 msgstr ""
 
@@ -8745,9 +8770,6 @@ msgid ""
 msgstr ""
 
 msgid "You can use the following parameters for substitution:"
-msgstr ""
-
-msgid "You can't format the OS origin disk!"
 msgstr ""
 
 #, php-format
@@ -8832,6 +8854,9 @@ msgid "ZFS Snapshot Information & Status"
 msgstr ""
 
 msgid "ZFS Snapshot Properties"
+msgstr ""
+
+msgid "ZFS Storage Pool"
 msgstr ""
 
 msgid "ZFS Volume Information & Status"
@@ -9005,3 +9030,12 @@ msgstr "avmontér"
 
 msgid "version:"
 msgstr ""
+
+#~ msgid "Do you really want to format this disk? All data will be lost!"
+#~ msgstr "Vil du virkelig slette denne disken? Alle data vil forsvinne!"
+
+#~ msgid "Minimum free space"
+#~ msgstr "Minimum ledig plass"
+
+#~ msgid "Volume label"
+#~ msgstr "Volumnavn"

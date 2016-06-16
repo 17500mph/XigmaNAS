@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-06 10:52+0000\n"
+"POT-Creation-Date: 2016-06-16 21:18+0000\n"
 "PO-Revision-Date: 2016-06-01 20:36+0000\n"
 "Last-Translator: thor123 <thorstenoesterle123@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-12 16:41+0000\n"
+"X-Launchpad-Export-Date: 2016-06-16 20:37+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -637,6 +637,9 @@ msgstr "Erweitert"
 msgid "Advanced Configuration"
 msgstr "Erweiterte Einstellungen"
 
+msgid "Advanced Format"
+msgstr ""
+
 msgid "Advanced Options"
 msgstr "Erweiterte Einstellungen"
 
@@ -645,9 +648,6 @@ msgstr "Erweiterte Einstellungen"
 
 msgid "Advanced Setup"
 msgstr "Erweiterte Einrichtung"
-
-msgid "Advanced format"
-msgstr "Advanced Format"
 
 msgid "Advanced settings"
 msgstr "Erweiterte Einstellungen"
@@ -1008,6 +1008,9 @@ msgstr ""
 
 msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr "Durchschnittliche Anlaufzeit der Festplatte"
+
+msgid "Back"
+msgstr ""
 
 msgid "Backup Configuration"
 msgstr "Backup-Konfiguration"
@@ -1742,8 +1745,8 @@ msgstr "HVM-Gast erstellen"
 msgid "Create PV Guest"
 msgstr "PV-Gast erstellen"
 
-msgid "Create ZFS on GPT partition."
-msgstr "Erzeuge ZFS auf GPT Partition"
+msgid "Create ZFS on a GPT partition."
+msgstr ""
 
 msgid "Create and initialize RAID."
 msgstr "RAID erstellen und initialisieren."
@@ -2197,11 +2200,26 @@ msgstr "Geräteliste"
 msgid "Device Model"
 msgstr "Modell"
 
+msgid "Device Name"
+msgstr ""
+
 msgid "Device Pass-through"
 msgstr "Gerät durchreichen"
 
+msgid "Device Path"
+msgstr ""
+
 msgid "Device Serial"
 msgstr "Seriennummer"
+
+msgid "Device contains boot partition"
+msgstr ""
+
+msgid "Device is mounted"
+msgstr ""
+
+msgid "Device not found"
+msgstr ""
 
 msgid "Device polling"
 msgstr "Device polling"
@@ -2341,6 +2359,10 @@ msgstr ""
 "möchten !"
 
 msgid ""
+"Do not erase the Master Boot Record (useful for some RAID controller cards)."
+msgstr ""
+
+msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
 msgstr ""
@@ -2443,11 +2465,6 @@ msgid ""
 msgstr ""
 "Wollen Sie diesen Datenträger wirklich löschen?\\n!!! Achtung, alle Daten "
 "gehen verloren und können nicht wieder hergestellt werden. !!!"
-
-msgid "Do you really want to format this disk? All data will be lost!"
-msgstr ""
-"Wollen Sie diese Festplatte wirklich formatieren? Alle Daten gehen dabei "
-"verloren!"
 
 msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
@@ -2583,12 +2600,6 @@ msgstr "Domain-Name im alten Format, z.B. BEISPIELNAME."
 
 msgid "Domain name, e.g. example.com."
 msgstr "Domain-Name, z.B. beispiel.de."
-
-msgid ""
-"Don't erase the Master Boot Record. (useful for some RAID controller cards)"
-msgstr ""
-"Löschen Sie den MBR (Master Boot Record) nicht ! (Dies ist nur für einige "
-"RAID-Controller Karten nützlich)"
 
 msgid "Donate"
 msgstr "Spenden"
@@ -2787,8 +2798,8 @@ msgstr "Freigeben"
 msgid "Enable ACL inheritance"
 msgstr "ACL Vererbung aktivieren"
 
-msgid "Enable Advanced Format. (4KB sector)"
-msgstr "Erweiterte Formatierung aktivieren. (4KB Sektor)"
+msgid "Enable Advanced Format (4KB Sector Size)."
+msgstr ""
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Asynchrones I/O (AIO) aktivieren"
@@ -3076,6 +3087,9 @@ msgid ""
 "command failures."
 msgstr "Anzahl der Flashspeicher Lösch-Fehlversuche"
 
+msgid "Erase MBR"
+msgstr ""
+
 msgid "Error"
 msgstr "Fehler"
 
@@ -3176,6 +3190,9 @@ msgstr ""
 
 msgid "Extra options to rsync (usually empty)."
 msgstr "Zusätzliche Optionen für rsync (normalerweise leer)."
+
+msgid "FAT32"
+msgstr ""
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
@@ -3389,8 +3406,8 @@ msgstr ""
 msgid "Format"
 msgstr "Formatieren"
 
-msgid "Format disk"
-msgstr "Festplatte formatieren!"
+msgid "Format Options"
+msgstr ""
 
 msgid "Format the report for phpBB forum."
 msgstr "Formatiere den Bericht für das phpBB Forum."
@@ -3454,6 +3471,9 @@ msgstr ""
 
 msgid "GID"
 msgstr "GID"
+
+msgid "GPT Partition"
+msgstr ""
 
 msgid "GPT partition"
 msgstr "GPT Partition"
@@ -4551,12 +4571,6 @@ msgstr "Minimale Eingangspannung"
 msgid "Low voltage trimming transfer point"
 msgstr "Maximale Eingangspannungsverringerung"
 
-#, php-format
-msgid ""
-"Lowering this threshold can adversely affect performance and auto-"
-"defragmentation."
-msgstr ""
-
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4570,9 +4584,6 @@ msgstr "MAC-Adresse"
 
 msgid "MAC address"
 msgstr "MAC-Adresse"
-
-msgid "MBR erase"
-msgstr "MBR löschen"
 
 msgid "MBR partition"
 msgstr "MBR Partition"
@@ -4833,14 +4844,14 @@ msgstr "Die MiniDLNA Konfiguration wurde aktualisiert"
 msgid "Minimum"
 msgstr "Minimum"
 
+msgid "Minimum Free Space"
+msgstr ""
+
 msgid "Minimum Performance, Minimum Acoustic Output"
 msgstr "Minimale Performance, geringste Geräuschkulisse"
 
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr "Minimaler Ladezustand für USV-Neustart nach Stromausfall"
-
-msgid "Minimum free space"
-msgstr "Unteres Limit für freien Speicherplatz"
 
 msgid "Minimum frequency"
 msgstr "Minimale Frequenz"
@@ -5055,6 +5066,9 @@ msgstr "Neues Gerät"
 msgid "New password"
 msgstr "Neues Passwort"
 
+msgid "Next"
+msgstr ""
+
 msgid "No"
 msgstr "Nein"
 
@@ -5237,10 +5251,6 @@ msgstr "PFad nicht gefunden"
 
 msgid "Note"
 msgstr "Hinweis"
-
-#, php-format
-msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
-msgstr ""
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -5470,6 +5480,9 @@ msgstr "Pakethochladen ist fehlgeschlagen. (Zu wenig Arbeitsspeicher?)"
 
 msgid "Packages"
 msgstr "Pakete"
+
+msgid "Page"
+msgstr ""
 
 msgid "Painfully aggressive"
 msgstr "Schmerzhaft aggressiv"
@@ -6002,6 +6015,9 @@ msgstr "Nur Lesen"
 msgid "Realm"
 msgstr "Bereich"
 
+msgid "Reason Code"
+msgstr ""
+
 msgid "Reason for last transfer to battery (* opaque)"
 msgstr "Grund für die Umschaltung auf Batteriebetrieb"
 
@@ -6010,6 +6026,9 @@ msgstr "Neustart"
 
 msgid "Receive Buffer Size"
 msgstr "Receive Buffer Size"
+
+msgid "Record is locked"
+msgstr ""
 
 msgid "Recurse into directories."
 msgstr "Unterordner einbeziehen."
@@ -6418,6 +6437,9 @@ msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr ""
 "Wähle ein Gerät welches für die S.M.A.R.T. Überwachung aktiviert wurde."
 
+msgid "Select file system format."
+msgstr ""
+
 msgid "Select firmware:"
 msgstr "Firmware Datei auswählen"
 
@@ -6825,10 +6847,11 @@ msgid ""
 msgstr ""
 "Gibt an, ob es dem Administrator (root) erlaubt ist, sich direkt einzuloggen."
 
-msgid "Specify the percentage of space held back from normal users."
+msgid ""
+"Specifiy the percentage of disk space to be held back from normal usage. "
+"Lowering this threshold can adversely affect performance and auto-"
+"defragmentation!"
 msgstr ""
-"Geben Sie den Prozentsatz des Platzes an, der von normalen Nutzern "
-"zurückgehalten werden soll."
 
 msgid "Split request"
 msgstr "Split request"
@@ -7326,6 +7349,11 @@ msgstr ""
 #, php-format
 msgid "The attribute '%s' is required."
 msgstr "Das Attribut '%s' wird benötigt."
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -8864,16 +8892,6 @@ msgstr ""
 "unvorhersehbaren Ergebnissen, Dateibeschädigungen oder sogar Datenverlust "
 "führen!"
 
-msgid ""
-"UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
-"filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
-"unpredictable results, file corruption and loss of data!"
-msgstr ""
-"UFS und ZFS sind die systemeigenen Dateisysteme von NAS4Free. Der Versuch "
-"andere Dateisysteme, wie FAT, FAT32, EXT2, EXT3, EXT4 oder NTFS zu nutzen, "
-"kann unvorhersehbare Ergebnisse, wie Datenkorruption oder den Verlust von "
-"Daten, haben."
-
 #, php-format
 msgid ""
 "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
@@ -9009,6 +9027,9 @@ msgstr "Unbekannt"
 
 msgid "Unknown or unformatted"
 msgstr "Unbekannt oder nicht formatiert"
+
+msgid "Unknown size"
+msgstr ""
 
 msgid "Unload"
 msgstr "Auswerfen"
@@ -9300,12 +9321,9 @@ msgstr ""
 msgid "Volume is unlocked"
 msgstr ""
 
-msgid "Volume label"
-msgstr "Datenträgeretikett (Volume label)"
-
 msgid ""
-"Volume label of the new file system. Use a space to separate multiple "
-"labels. (if only one specified next will be auto increment)"
+"Volume label of the new file system. Use $ for device name, % for a counter "
+"or %[startvalue] for a counter starting at startvalue."
 msgstr ""
 
 msgid "Volume mode"
@@ -9470,9 +9488,6 @@ msgstr "Schreibpuffer"
 msgid "Write only"
 msgstr "Nur-schreib-Zugriff"
 
-msgid "Wrong number of count for Volume Label"
-msgstr ""
-
 msgid "Wrong partition type or partition number."
 msgstr "Falsche Partition/-typ"
 
@@ -9498,10 +9513,6 @@ msgstr ""
 
 msgid "You can use the following parameters for substitution:"
 msgstr "Die folgenden Parameter können für die Ersetzung genutzt werden"
-
-msgid "You can't format the OS origin disk!"
-msgstr ""
-"Das Ursprungslaufwerk des Betriebssytems kann nicht formattiert werden!"
 
 #, php-format
 msgid ""
@@ -9598,6 +9609,9 @@ msgstr "ZFS-Schnappschussinformationen & -status"
 
 msgid "ZFS Snapshot Properties"
 msgstr "ZFS-Schnappschusseigenschaften"
+
+msgid "ZFS Storage Pool"
+msgstr ""
 
 msgid "ZFS Volume Information & Status"
 msgstr "ZFS Datenträgerinformationen und -status"
@@ -9776,3 +9790,54 @@ msgstr "Aushängen"
 
 msgid "version:"
 msgstr "Version:"
+
+#~ msgid "Do you really want to format this disk? All data will be lost!"
+#~ msgstr ""
+#~ "Wollen Sie diese Festplatte wirklich formatieren? Alle Daten gehen dabei "
+#~ "verloren!"
+
+#~ msgid "Minimum free space"
+#~ msgstr "Unteres Limit für freien Speicherplatz"
+
+#~ msgid "Volume label"
+#~ msgstr "Datenträgeretikett (Volume label)"
+
+#~ msgid "Advanced format"
+#~ msgstr "Advanced Format"
+
+#~ msgid "Create ZFS on GPT partition."
+#~ msgstr "Erzeuge ZFS auf GPT Partition"
+
+#~ msgid ""
+#~ "Don't erase the Master Boot Record. (useful for some RAID controller cards)"
+#~ msgstr ""
+#~ "Löschen Sie den MBR (Master Boot Record) nicht ! (Dies ist nur für einige "
+#~ "RAID-Controller Karten nützlich)"
+
+#~ msgid "Format disk"
+#~ msgstr "Festplatte formatieren!"
+
+#~ msgid "Enable Advanced Format. (4KB sector)"
+#~ msgstr "Erweiterte Formatierung aktivieren. (4KB Sektor)"
+
+#~ msgid "MBR erase"
+#~ msgstr "MBR löschen"
+
+#~ msgid "Specify the percentage of space held back from normal users."
+#~ msgstr ""
+#~ "Geben Sie den Prozentsatz des Platzes an, der von normalen Nutzern "
+#~ "zurückgehalten werden soll."
+
+#~ msgid ""
+#~ "UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
+#~ "filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
+#~ "unpredictable results, file corruption and loss of data!"
+#~ msgstr ""
+#~ "UFS und ZFS sind die systemeigenen Dateisysteme von NAS4Free. Der Versuch "
+#~ "andere Dateisysteme, wie FAT, FAT32, EXT2, EXT3, EXT4 oder NTFS zu nutzen, "
+#~ "kann unvorhersehbare Ergebnisse, wie Datenkorruption oder den Verlust von "
+#~ "Daten, haben."
+
+#~ msgid "You can't format the OS origin disk!"
+#~ msgstr ""
+#~ "Das Ursprungslaufwerk des Betriebssytems kann nicht formattiert werden!"

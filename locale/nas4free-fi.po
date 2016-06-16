@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-06-06 10:52+0000\n"
+"POT-Creation-Date: 2016-06-16 21:18+0000\n"
 "PO-Revision-Date: 2016-04-18 12:54+0000\n"
 "Last-Translator: raspi <Unknown>\n"
 "Language-Team: NAS4Free <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-12 16:41+0000\n"
+"X-Launchpad-Export-Date: 2016-06-16 20:37+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: FINLAND\n"
 "X-Poedit-Language: Finnish\n"
@@ -604,6 +604,9 @@ msgstr "Lisäasetukset"
 msgid "Advanced Configuration"
 msgstr "Lisäasetusten määritys"
 
+msgid "Advanced Format"
+msgstr ""
+
 msgid "Advanced Options"
 msgstr "Lisäasetusten valinnat"
 
@@ -611,9 +614,6 @@ msgid "Advanced Settings"
 msgstr "Lisäasetukset"
 
 msgid "Advanced Setup"
-msgstr ""
-
-msgid "Advanced format"
 msgstr ""
 
 msgid "Advanced settings"
@@ -935,6 +935,9 @@ msgid ""
 msgstr ""
 
 msgid "Average time of spindle spin up (from zero RPM to fully operational)."
+msgstr ""
+
+msgid "Back"
 msgstr ""
 
 msgid "Backup Configuration"
@@ -1602,7 +1605,7 @@ msgstr ""
 msgid "Create PV Guest"
 msgstr ""
 
-msgid "Create ZFS on GPT partition."
+msgid "Create ZFS on a GPT partition."
 msgstr ""
 
 msgid "Create and initialize RAID."
@@ -2042,10 +2045,25 @@ msgstr ""
 msgid "Device Model"
 msgstr ""
 
+msgid "Device Name"
+msgstr ""
+
 msgid "Device Pass-through"
 msgstr ""
 
+msgid "Device Path"
+msgstr ""
+
 msgid "Device Serial"
+msgstr ""
+
+msgid "Device contains boot partition"
+msgstr ""
+
+msgid "Device is mounted"
+msgstr ""
+
+msgid "Device not found"
 msgstr ""
 
 msgid "Device polling"
@@ -2175,6 +2193,10 @@ msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
 
 msgid ""
+"Do not erase the Master Boot Record (useful for some RAID controller cards)."
+msgstr ""
+
+msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
 msgstr ""
@@ -2269,9 +2291,6 @@ msgid ""
 msgstr ""
 "Haluatko varmasti , että asema poistetaan?\\n!!! Huomaa, että kaikki tiedot "
 "poistetaan ja et voi palauttaa niitä takaisin."
-
-msgid "Do you really want to format this disk? All data will be lost!"
-msgstr "Haluatko alustaa tämän levyn? Kaikki tallennetut tiedot häviävät!"
 
 msgid ""
 "Do you really want to import?\\nThe existing config may be overwritten."
@@ -2396,10 +2415,6 @@ msgstr "Toimialueen nimi vanhassa muodossa esim. ESIMERKKI."
 
 msgid "Domain name, e.g. example.com."
 msgstr "Toimialueen nimi,  esim. esimerkki.com"
-
-msgid ""
-"Don't erase the Master Boot Record. (useful for some RAID controller cards)"
-msgstr ""
 
 msgid "Donate"
 msgstr "Tee lahjoitus"
@@ -2597,7 +2612,7 @@ msgstr "Ota käyttöön"
 msgid "Enable ACL inheritance"
 msgstr ""
 
-msgid "Enable Advanced Format. (4KB sector)"
+msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr ""
 
 msgid "Enable Asynchronous I/O (AIO)"
@@ -2865,6 +2880,9 @@ msgid ""
 "command failures."
 msgstr ""
 
+msgid "Erase MBR"
+msgstr ""
+
 msgid "Error"
 msgstr "Virhe"
 
@@ -2955,6 +2973,9 @@ msgid ""
 msgstr ""
 
 msgid "Extra options to rsync (usually empty)."
+msgstr ""
+
+msgid "FAT32"
 msgstr ""
 
 msgid "FEC (Fast EtherChannel)"
@@ -3161,7 +3182,7 @@ msgstr ""
 msgid "Format"
 msgstr "Alusta"
 
-msgid "Format disk"
+msgid "Format Options"
 msgstr ""
 
 msgid "Format the report for phpBB forum."
@@ -3225,6 +3246,9 @@ msgstr ""
 
 msgid "GID"
 msgstr "Ryhmä-ID (GID)"
+
+msgid "GPT Partition"
+msgstr ""
 
 msgid "GPT partition"
 msgstr ""
@@ -4221,12 +4245,6 @@ msgstr ""
 msgid "Low voltage trimming transfer point"
 msgstr ""
 
-#, php-format
-msgid ""
-"Lowering this threshold can adversely affect performance and auto-"
-"defragmentation."
-msgstr ""
-
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4237,9 +4255,6 @@ msgstr "MAC-osoite"
 
 msgid "MAC address"
 msgstr "MAC osoite"
-
-msgid "MBR erase"
-msgstr ""
 
 msgid "MBR partition"
 msgstr ""
@@ -4488,14 +4503,14 @@ msgstr ""
 msgid "Minimum"
 msgstr "Minimi"
 
+msgid "Minimum Free Space"
+msgstr ""
+
 msgid "Minimum Performance, Minimum Acoustic Output"
 msgstr ""
 
 msgid "Minimum battery level for UPS restart after power-off"
 msgstr "Alin akun varaus UPS:N käynnistykseen sähkökatkon jälkeen"
-
-msgid "Minimum free space"
-msgstr "Mninimi vapaatila"
 
 msgid "Minimum frequency"
 msgstr ""
@@ -4702,6 +4717,9 @@ msgstr "Uusi laite"
 msgid "New password"
 msgstr "Uusi salasana"
 
+msgid "Next"
+msgstr ""
+
 msgid "No"
 msgstr "Ei"
 
@@ -4861,10 +4879,6 @@ msgstr ""
 
 msgid "Note"
 msgstr "Huomautukset"
-
-#, php-format
-msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
-msgstr ""
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and de-select "
@@ -5079,6 +5093,9 @@ msgstr "Paketin lähetys epäonnistui (muisti loppui?)"
 
 msgid "Packages"
 msgstr "Paketit"
+
+msgid "Page"
+msgstr ""
 
 msgid "Painfully aggressive"
 msgstr ""
@@ -5592,6 +5609,9 @@ msgstr "Vain luku"
 msgid "Realm"
 msgstr "Alue"
 
+msgid "Reason Code"
+msgstr ""
+
 msgid "Reason for last transfer to battery (* opaque)"
 msgstr ""
 
@@ -5600,6 +5620,9 @@ msgstr "Käynnistä uudelleen"
 
 msgid "Receive Buffer Size"
 msgstr "Vanstaanottopuskurin koko"
+
+msgid "Record is locked"
+msgstr ""
 
 msgid "Recurse into directories."
 msgstr ""
@@ -5987,6 +6010,9 @@ msgstr ""
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr ""
 
+msgid "Select file system format."
+msgstr ""
+
 msgid "Select firmware:"
 msgstr ""
 
@@ -6359,7 +6385,10 @@ msgid ""
 "Specifies whether it is allowed to login as superuser (root) directly."
 msgstr ""
 
-msgid "Specify the percentage of space held back from normal users."
+msgid ""
+"Specifiy the percentage of disk space to be held back from normal usage. "
+"Lowering this threshold can adversely affect performance and auto-"
+"defragmentation!"
 msgstr ""
 
 msgid "Split request"
@@ -6823,6 +6852,11 @@ msgstr ""
 
 #, php-format
 msgid "The attribute '%s' is required."
+msgstr ""
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
 msgstr ""
 
 #, php-format
@@ -8049,12 +8083,6 @@ msgid ""
 "unpredictable results, file corruption and the loss of data!"
 msgstr ""
 
-msgid ""
-"UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
-"filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
-"unpredictable results, file corruption and loss of data!"
-msgstr ""
-
 #, php-format
 msgid ""
 "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
@@ -8185,6 +8213,9 @@ msgstr "Tuntematon"
 
 msgid "Unknown or unformatted"
 msgstr "Tuntematon tai alustamaton"
+
+msgid "Unknown size"
+msgstr ""
 
 msgid "Unload"
 msgstr ""
@@ -8452,12 +8483,9 @@ msgstr ""
 msgid "Volume is unlocked"
 msgstr ""
 
-msgid "Volume label"
-msgstr "Levyn tunnus"
-
 msgid ""
-"Volume label of the new file system. Use a space to separate multiple "
-"labels. (if only one specified next will be auto increment)"
+"Volume label of the new file system. Use $ for device name, % for a counter "
+"or %[startvalue] for a counter starting at startvalue."
 msgstr ""
 
 msgid "Volume mode"
@@ -8603,9 +8631,6 @@ msgstr ""
 msgid "Write only"
 msgstr "Vain kirjoitus"
 
-msgid "Wrong number of count for Volume Label"
-msgstr ""
-
 msgid "Wrong partition type or partition number."
 msgstr ""
 
@@ -8628,9 +8653,6 @@ msgid ""
 msgstr ""
 
 msgid "You can use the following parameters for substitution:"
-msgstr ""
-
-msgid "You can't format the OS origin disk!"
 msgstr ""
 
 #, php-format
@@ -8716,6 +8738,9 @@ msgid "ZFS Snapshot Information & Status"
 msgstr ""
 
 msgid "ZFS Snapshot Properties"
+msgstr ""
+
+msgid "ZFS Storage Pool"
 msgstr ""
 
 msgid "ZFS Volume Information & Status"
@@ -8889,3 +8914,12 @@ msgstr ""
 
 msgid "version:"
 msgstr ""
+
+#~ msgid "Do you really want to format this disk? All data will be lost!"
+#~ msgstr "Haluatko alustaa tämän levyn? Kaikki tallennetut tiedot häviävät!"
+
+#~ msgid "Minimum free space"
+#~ msgstr "Mninimi vapaatila"
+
+#~ msgid "Volume label"
+#~ msgstr "Levyn tunnus"
