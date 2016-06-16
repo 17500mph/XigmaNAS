@@ -84,7 +84,7 @@ $a_control_matrix = [
 		'default'  => ['page' => 1, 'filesystem' => 2, 'minspace' => 0, 'volumelabel' => 0, 'aft4k' => 0, 'zfsgpt' => 0, 'notinitmbr' => 0],
 	],
 	2 => [
-		'zfs'      => ['page' => 2, 'filesystem' => 1, 'minspace' => 0, 'volumelabel' => 0, 'aft4k' => 0, 'zfsgpt' => 2, 'notinitmbr' => 2],
+		'zfs'      => ['page' => 2, 'filesystem' => 1, 'minspace' => 0, 'volumelabel' => 2, 'aft4k' => 0, 'zfsgpt' => 2, 'notinitmbr' => 2],
 		'softraid' => ['page' => 2, 'filesystem' => 1, 'minspace' => 0, 'volumelabel' => 0, 'aft4k' => 0, 'zfsgpt' => 0, 'notinitmbr' => 2],
 		'ufsgpt'   => ['page' => 2, 'filesystem' => 1, 'minspace' => 2, 'volumelabel' => 2, 'aft4k' => 2, 'zfsgpt' => 0, 'notinitmbr' => 2],
 		'ext2'     => ['page' => 2, 'filesystem' => 1, 'minspace' => 0, 'volumelabel' => 2, 'aft4k' => 0, 'zfsgpt' => 0, 'notinitmbr' => 2],
@@ -92,7 +92,7 @@ $a_control_matrix = [
 		'default'  => ['page' => 1, 'filesystem' => 2, 'minspace' => 0, 'volumelabel' => 0, 'aft4k' => 0, 'zfsgpt' => 0, 'notinitmbr' => 0]
 	],
 	3 => [
-		'zfs'      => ['page' => 3, 'filesystem' => 1, 'minspace' => 0, 'volumelabel' => 0, 'aft4k' => 0, 'zfsgpt' => 1, 'notinitmbr' => 1],
+		'zfs'      => ['page' => 3, 'filesystem' => 1, 'minspace' => 0, 'volumelabel' => 1, 'aft4k' => 0, 'zfsgpt' => 1, 'notinitmbr' => 1],
 		'softraid' => ['page' => 3, 'filesystem' => 1, 'minspace' => 0, 'volumelabel' => 0, 'aft4k' => 0, 'zfsgpt' => 0, 'notinitmbr' => 1],
 		'ufsgpt'   => ['page' => 3, 'filesystem' => 1, 'minspace' => 1, 'volumelabel' => 1, 'aft4k' => 1, 'zfsgpt' => 0, 'notinitmbr' => 1],
 		'ext2'     => ['page' => 3, 'filesystem' => 1, 'minspace' => 0, 'volumelabel' => 1, 'aft4k' => 0, 'zfsgpt' => 0, 'notinitmbr' => 1],
@@ -100,7 +100,7 @@ $a_control_matrix = [
 		'default'  => ['page' => 1, 'filesystem' => 2, 'minspace' => 0, 'volumelabel' => 0, 'aft4k' => 0, 'zfsgpt' => 0, 'notinitmbr' => 0]
 	],
 	4 => [
-		'zfs'      => ['page' => 4, 'filesystem' => 1, 'minspace' => 0, 'volumelabel' => 0, 'aft4k' => 0, 'zfsgpt' => 1, 'notinitmbr' => 1],
+		'zfs'      => ['page' => 4, 'filesystem' => 1, 'minspace' => 0, 'volumelabel' => 1, 'aft4k' => 0, 'zfsgpt' => 1, 'notinitmbr' => 1],
 		'softraid' => ['page' => 4, 'filesystem' => 1, 'minspace' => 0, 'volumelabel' => 0, 'aft4k' => 0, 'zfsgpt' => 0, 'notinitmbr' => 1],
 		'ufsgpt'   => ['page' => 4, 'filesystem' => 1, 'minspace' => 1, 'volumelabel' => 1, 'aft4k' => 1, 'zfsgpt' => 0, 'notinitmbr' => 1],
 		'ext2'     => ['page' => 4, 'filesystem' => 1, 'minspace' => 0, 'volumelabel' => 1, 'aft4k' => 0, 'zfsgpt' => 0, 'notinitmbr' => 1],
