@@ -236,9 +236,23 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 		}
 	}
 	if ($prerequisites_ok) {
-		if (preg_match('/^(ufsgpt|msdos)/', $a_option['filesystem']) && !empty($a_option['volumelabel'])) {
-			if (!preg_match('/^[a-z\d%\$]+$/i', $a_option['volumelabel'])) {
+		if (preg_match('/^(ufsgpt|msdos)/', $a_option['filesystem']) && preg_match('/\S/', $a_option['volumelabel'])) {
+			$helpinghand = preg_quote('%$', '/');
+			if (!preg_match('/^[a-z\d' . $helpinghand . ']+$/i', $a_option['volumelabel'])) {
 				$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."), gettext_gen2('Volume Label'));
+				$prerequisites_ok = false;
+				// invalid volume label defined, we stay on page 2
+				$page_index = 2;
+				$a_control = $a_control_matrix[$page_index][$a_option['filesystem']];
+				$a_button = $a_button_matrix[$page_index];
+			}
+		}
+	}
+	if ($prerequisites_ok) {
+		if (preg_match('/^(zfs)/', $a_option['filesystem']) && preg_match('/\S/', $a_option['volumelabel'])) {
+			$helpinghand = preg_quote('%$.-_', '/');
+			if (!preg_match('/^[a-z\d' . $helpinghand . ']+$/i', $a_option['volumelabel'])) {
+				$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters a-z, A-Z, 0-9 and (.)(-)(_)."), gettext_gen2('Volume Label'));
 				$prerequisites_ok = false;
 				// invalid volume label defined, we stay on page 2
 				$page_index = 2;
@@ -268,12 +282,26 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 		}
 	}
 	if ($prerequisites_ok) {
-		if (preg_match('/^(ufsgpt|msdos)/', $a_option['filesystem']) && !empty($a_option['volumelabel'])) {
-			if (!preg_match('/^[a-z\d%\$]+$/i', $a_option['volumelabel'])) {
+		if (preg_match('/^(ufsgpt|msdos)/', $a_option['filesystem']) && preg_match('/\S/', $a_option['volumelabel'])) {
+			$helpinghand = preg_quote('%$', '/');
+			if (!preg_match('/^[a-z\d' . $helpinghand . ']+$/i', $a_option['volumelabel'])) {
 				$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."), gettext_gen2('Volume Label'));
 				$prerequisites_ok = false;
 				// invalid volume label defined, we stay on page 3
 				$page_index = 3;
+				$a_control = $a_control_matrix[$page_index][$a_option['filesystem']];
+				$a_button = $a_button_matrix[$page_index];
+			}
+		}
+	}
+	if ($prerequisites_ok) {
+		if (preg_match('/^(zfs)/', $a_option['filesystem']) && preg_match('/\S/', $a_option['volumelabel'])) {
+			$helpinghand = preg_quote('%$.-_', '/');
+			if (!preg_match('/^[a-z\d' . $helpinghand . ']+$/i', $a_option['volumelabel'])) {
+				$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters a-z, A-Z, 0-9 and (.)(-)(_)."), gettext_gen2('Volume Label'));
+				$prerequisites_ok = false;
+				// invalid volume label defined, we stay on page 2
+				$page_index = 2;
 				$a_control = $a_control_matrix[$page_index][$a_option['filesystem']];
 				$a_button = $a_button_matrix[$page_index];
 			}
@@ -286,9 +314,8 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 		// gather options and format selected disks
 		$disk_options = [];
 		$disk_options['zfsgpt'] = $a_option['zfsgpt'] ? 'p1' : ''; // set_conf_disk_fstype_opt knows how to deal with it if filesystem is not zfs
-
 		// check for allowed characters, otherwise reset volumelabel
-		$volumelabel_pattern = (preg_match('/^[a-z\d%\$]+$/i', $a_option['volumelabel']) ? $a_option['volumelabel'] : '');
+		$volumelabel_pattern = (preg_match('/(ufsgpt|msdos|zfs)/', $a_option['filesystem'])) ? $a_option['volumelabel'] : '';
 		// check if a counter is required
 		if (false !== preg_match_all('/%(\d*)/', $volumelabel_pattern, $a_pattern)) {
 			for($i = 0; $i < count($a_pattern[0]); $i++) {
@@ -431,15 +458,16 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 	<table id="area_data_selection">
 		<colgroup>
 			<col style="width:5%"><!-- // Checkbox -->
-			<col style="width:20%"><!-- // Device Name -->
-			<col style="width:20%"><!-- // Size -->
+			<col style="width:15%"><!-- // Device Name -->
+			<col style="width:15%"><!-- // Serial Number -->
+			<col style="width:15%"><!-- // Size -->
 			<col style="width:20%"><!-- // Device Path -->
-			<col style="width:25%"><!-- // Reason Code -->
+			<col style="width:20%"><!-- // Reason Code -->
 			<col style="width:10%"><!-- // Toolbox -->
 		</colgroup>
 		<thead>
 			<?php
-			html_titleline2(gettext_gen2('Disk Selection'), 6);
+			html_titleline2(gettext_gen2('Disk Selection'), 7);
 			?>
 			<tr>
 				<?php
@@ -449,6 +477,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 				}
 				?>
 				<th class="lhell"><?=gettext_gen2('Device Name');?></th>
+				<th class="lhell"><?=gettext_gen2('Serial Number');?></th>
 				<th class="lhell"><?=gettext_gen2('Size');?></th>
 				<th class="lhell"><?=gettext_gen2('Device Path');?></th>
 				<th class="lhell"><?=gettext_gen2('Reason Code');?></th>
@@ -489,6 +518,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 				}
 				?>
 				<td class="<?=$notprotected ? 'lcell' : 'lcelld';?>"><?=htmlspecialchars($sphere_record['name']);?></td>
+				<td class="<?=$notprotected ? 'lcell' : 'lcelld';?>"><?=htmlspecialchars($sphere_record['serial']);?></td>
 				<td class="<?=$notprotected ? 'lcell' : 'lcelld';?>"><?=htmlspecialchars($sphere_record['size']);?></td>
 				<td class="<?=$notprotected ? 'lcell' : 'lcelld';?>"><?=htmlspecialchars($sphere_record['devicespecialfile']);?></td>
 				<td class="<?=$notprotected ? 'lcell' : 'lcelld';?>"><?=htmlspecialchars($sphere_record['protected.reason']);?></td>

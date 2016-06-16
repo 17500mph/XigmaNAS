@@ -1030,8 +1030,8 @@ function disks_format($disk, $type, $notinitmbr, $minspace, $volumelabel, $aft4k
 				echo htmlspecialchars('#'), htmlspecialchars($cmd), "\n";
 				system($cmd);
 				$param = ' -a 4m -t freebsd-zfs';
-				if (!empty($volumelabel)) {
-					$param .= ' -l ' . escapeshellarg($volumelabel);
+				if (preg_match('/\S/', $volumelabel)) {
+					$param .= ' -l ' . escapeshellarg(trim($volumelabel));
 				}
 				$cmd = sprintf('/sbin/gpart add %2$s %1$s 2>&1', $disk, $param);
 				echo htmlspecialchars('#'), htmlspecialchars($cmd), "\n";
