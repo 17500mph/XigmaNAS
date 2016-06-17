@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-16 21:18+0000\n"
+"POT-Creation-Date: 2016-06-17 19:08+0000\n"
 "PO-Revision-Date: 2016-03-03 17:10+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-16 20:37+0000\n"
+"X-Launchpad-Export-Date: 2016-06-17 17:45+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -5059,9 +5059,6 @@ msgstr "套件上傳失敗（記憶體不足？）"
 msgid "Packages"
 msgstr "套件"
 
-msgid "Page"
-msgstr ""
-
 msgid "Painfully aggressive"
 msgstr "Painfully aggressive"
 
@@ -6402,6 +6399,9 @@ msgstr "狀態報告成功傳送至：%s。"
 msgid "Status report successfully sent."
 msgstr "狀態報告已成功傳送。"
 
+msgid "Step"
+msgstr ""
+
 msgid "Stop"
 msgstr "停止"
 
@@ -6832,7 +6832,19 @@ msgstr "'%s' 是必填欄位。"
 
 #, php-format
 msgid ""
-"The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
+"The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."
+msgstr ""
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
+"and [._-]"
+msgstr ""
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
+"and [._-]."
 msgstr ""
 
 #, php-format
@@ -8497,7 +8509,8 @@ msgstr ""
 
 msgid ""
 "Volume label of the new file system. Use $ for device name, % for a counter "
-"or %[startvalue] for a counter starting at startvalue."
+"or %n for a counter starting at n, [n for the n rightmost characters of the "
+"device serial number."
 msgstr ""
 
 msgid "Volume mode"
@@ -8924,12 +8937,3 @@ msgstr "卸載"
 
 msgid "version:"
 msgstr "版本："
-
-#~ msgid "Minimum free space"
-#~ msgstr "最少需求空間"
-
-#~ msgid "Volume label"
-#~ msgstr "磁盤卷標籤（Volume label）"
-
-#~ msgid "Do you really want to format this disk? All data will be lost!"
-#~ msgstr "您確定要格式化這個磁碟嗎？所有內部的資料都會消失！"

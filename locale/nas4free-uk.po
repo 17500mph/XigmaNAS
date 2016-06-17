@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-16 21:18+0000\n"
+"POT-Creation-Date: 2016-06-17 19:08+0000\n"
 "PO-Revision-Date: 2016-06-16 18:22+0000\n"
 "Last-Translator: AndriyM <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-16 20:37+0000\n"
+"X-Launchpad-Export-Date: 2016-06-17 17:44+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -5272,9 +5272,6 @@ msgstr ""
 msgid "Packages"
 msgstr "Пакети"
 
-msgid "Page"
-msgstr ""
-
 msgid "Painfully aggressive"
 msgstr "Дуже агресивний"
 
@@ -6622,6 +6619,9 @@ msgstr "Звіт про статус успішно надіслано на: %s.
 msgid "Status report successfully sent."
 msgstr "Звіт про статус успішно надіслано."
 
+msgid "Step"
+msgstr ""
+
 msgid "Stop"
 msgstr "Зупинити"
 
@@ -7051,7 +7051,19 @@ msgstr "Атрибут '%s' необхідно заповнити."
 
 #, php-format
 msgid ""
-"The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
+"The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."
+msgstr ""
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
+"and [._-]"
+msgstr ""
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
+"and [._-]."
 msgstr ""
 
 #, php-format
@@ -8712,7 +8724,8 @@ msgstr ""
 
 msgid ""
 "Volume label of the new file system. Use $ for device name, % for a counter "
-"or %[startvalue] for a counter starting at startvalue."
+"or %n for a counter starting at n, [n for the n rightmost characters of the "
+"device serial number."
 msgstr ""
 
 msgid "Volume mode"
@@ -9142,15 +9155,3 @@ msgstr "umount"
 
 msgid "version:"
 msgstr "версія:"
-
-#~ msgid "Do you really want to format this disk? All data will be lost!"
-#~ msgstr "Ви дійсно хочете відформатувати цей диск? Всі дані буде втрачено!"
-
-#~ msgid "Minimum free space"
-#~ msgstr "Мінімум вільного місця"
-
-#~ msgid "Format disk"
-#~ msgstr "Форматувати диск"
-
-#~ msgid "MBR erase"
-#~ msgstr "Стерти MBR"

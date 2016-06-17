@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-16 21:18+0000\n"
+"POT-Creation-Date: 2016-06-17 19:08+0000\n"
 "PO-Revision-Date: 2016-06-07 15:21+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-16 20:37+0000\n"
+"X-Launchpad-Export-Date: 2016-06-17 17:45+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -5413,9 +5413,6 @@ msgstr "Uppladdning av paket misslyckades (minnet slut?)"
 msgid "Packages"
 msgstr "Paket"
 
-msgid "Page"
-msgstr ""
-
 msgid "Painfully aggressive"
 msgstr "Onödigt aggressiv"
 
@@ -6824,6 +6821,9 @@ msgstr "Statusrapport skickad med lyckat resultat till: '%s'"
 msgid "Status report successfully sent."
 msgstr "Statusrapport skickad med lyckat resultat."
 
+msgid "Step"
+msgstr ""
+
 msgid "Stop"
 msgstr "Stoppa"
 
@@ -7274,7 +7274,19 @@ msgstr "Attributet \"%s\" krävs."
 
 #, php-format
 msgid ""
-"The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
+"The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."
+msgstr ""
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
+"and [._-]"
+msgstr ""
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
+"and [._-]."
 msgstr ""
 
 #, php-format
@@ -9204,7 +9216,8 @@ msgstr "Volymen är olåst"
 
 msgid ""
 "Volume label of the new file system. Use $ for device name, % for a counter "
-"or %[startvalue] for a counter starting at startvalue."
+"or %n for a counter starting at n, [n for the n rightmost characters of the "
+"device serial number."
 msgstr ""
 
 msgid "Volume mode"
@@ -9664,73 +9677,3 @@ msgstr "umount"
 
 msgid "version:"
 msgstr "version:"
-
-#~ msgid "Do you really want to format this disk? All data will be lost!"
-#~ msgstr ""
-#~ "Vill du verkligen formatera den här disken? All data kommer att förloras!"
-
-#~ msgid "Minimum free space"
-#~ msgstr "Minsta lediga utrymme"
-
-#~ msgid "Volume label"
-#~ msgstr "Volymetikett"
-
-#~ msgid "Create ZFS on GPT partition."
-#~ msgstr "Skapa ZFS på GPT partition."
-
-#~ msgid "Enable Advanced Format. (4KB sector)"
-#~ msgstr "Akrivera avancerat format. (4KB sektorer)"
-
-#~ msgid ""
-#~ "Don't erase the Master Boot Record. (useful for some RAID controller cards)"
-#~ msgstr ""
-#~ "Radera inte Master Boot Record. (användbart för några RAID kontrollerkort)"
-
-#~ msgid "Format disk"
-#~ msgstr "Formatera disk"
-
-#~ msgid "MBR erase"
-#~ msgstr "Radera MBR"
-
-#, php-format
-#~ msgid ""
-#~ "Lowering this threshold can adversely affect performance and auto-"
-#~ "defragmentation."
-#~ msgstr ""
-#~ "Att sänka denna gräns kan påverka prestanda och automatisk defragmentering."
-
-#~ msgid "Advanced format"
-#~ msgstr "Avancerat format"
-
-#~ msgid "Specify the percentage of space held back from normal users."
-#~ msgstr ""
-#~ "Specificera procentiell andel av utrymmet som skall gömmas för normala "
-#~ "användare."
-
-#, php-format
-#~ msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
-#~ msgstr ""
-#~ "Notera: Ctrl-klick (command-klick på en MAC) för att välja flera diskar."
-
-#~ msgid ""
-#~ "Volume label of the new file system. Use a space to separate multiple "
-#~ "labels. (if only one specified next will be auto increment)"
-#~ msgstr ""
-#~ "Volymetikett för det nya filsystemet. Använd mellanslag för att separera "
-#~ "flera namn. (om endast ett specificeras kommer nästa att räknas upp "
-#~ "automatiskt)"
-
-#~ msgid ""
-#~ "UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
-#~ "filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
-#~ "unpredictable results, file corruption and loss of data!"
-#~ msgstr ""
-#~ "UFS and ZFS är STANDARD filsystem för NAS4Free. Försök att använda andra "
-#~ "filsystem som FAT, FAT32, EXT2, EXT3, EXT4 eller NTFS kan resultera i "
-#~ "oförutsedda resultat, filskador och förlust av data!"
-
-#~ msgid "Wrong number of count for Volume Label"
-#~ msgstr "Felaktigt värde för volymetikettsräknare"
-
-#~ msgid "You can't format the OS origin disk!"
-#~ msgstr "Du kan inte formatera operativsystemets källdisk."

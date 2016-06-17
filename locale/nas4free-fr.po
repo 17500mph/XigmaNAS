@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-16 21:18+0000\n"
+"POT-Creation-Date: 2016-06-17 19:08+0000\n"
 "PO-Revision-Date: 2016-06-12 14:03+0000\n"
 "Last-Translator: Anthony Gaschet <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-16 20:37+0000\n"
+"X-Launchpad-Export-Date: 2016-06-17 17:46+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
@@ -5538,9 +5538,6 @@ msgstr "Chargement du paquetage échoué (manque de mémoire?)"
 msgid "Packages"
 msgstr "Paquets"
 
-msgid "Page"
-msgstr ""
-
 msgid "Painfully aggressive"
 msgstr "Très agressif"
 
@@ -6973,6 +6970,9 @@ msgstr "Rapport d'état envoyé avec succès à: %s."
 msgid "Status report successfully sent."
 msgstr "Rapport d'état envoyé avec succès."
 
+msgid "Step"
+msgstr ""
+
 msgid "Stop"
 msgstr "Arrêter"
 
@@ -7433,7 +7433,19 @@ msgstr "L'attribut '%s' est requis."
 
 #, php-format
 msgid ""
-"The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
+"The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."
+msgstr ""
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
+"and [._-]"
+msgstr ""
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
+"and [._-]."
 msgstr ""
 
 #, php-format
@@ -9406,7 +9418,8 @@ msgstr "Le Volume est déprotégé"
 
 msgid ""
 "Volume label of the new file system. Use $ for device name, % for a counter "
-"or %[startvalue] for a counter starting at startvalue."
+"or %n for a counter starting at n, [n for the n rightmost characters of the "
+"device serial number."
 msgstr ""
 
 msgid "Volume mode"
@@ -9874,75 +9887,3 @@ msgstr "démontage"
 
 msgid "version:"
 msgstr "version:"
-
-#~ msgid "Minimum free space"
-#~ msgstr "Espace disque minimum"
-
-#~ msgid "Volume label"
-#~ msgstr "Étiquette de volume"
-
-#~ msgid "Do you really want to format this disk? All data will be lost!"
-#~ msgstr ""
-#~ "Voulez-vous vraiment formater ce disque ? Toutes les données seront perdues !"
-
-#~ msgid "Create ZFS on GPT partition."
-#~ msgstr "Créer ZFS sur une partition GPT"
-
-#~ msgid "Advanced format"
-#~ msgstr "Format avancé"
-
-#~ msgid ""
-#~ "Don't erase the Master Boot Record. (useful for some RAID controller cards)"
-#~ msgstr ""
-#~ "Ne pas effacer le  Master Boot Record. (utile pour certaines cartes "
-#~ "contrôleur RAID)"
-
-#~ msgid "Enable Advanced Format. (4KB sector)"
-#~ msgstr "Activer le Format Avancé.(secteurs de 4k)"
-
-#~ msgid "Format disk"
-#~ msgstr "Formater le disque"
-
-#~ msgid ""
-#~ "UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
-#~ "filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
-#~ "unpredictable results, file corruption and loss of data!"
-#~ msgstr ""
-#~ "UFS et ZFS sont les systèmes de fichiers natifs de NAS4Free. Essayer "
-#~ "d'utiliser d'autres systèmes de fichiers tels que  FAT, FAT32, EXT2, EXT3, "
-#~ "EXT4 ou NTFS peut produire des résultats imprévisibles, corruption de "
-#~ "fichier et perte de données!"
-
-#~ msgid "You can't format the OS origin disk!"
-#~ msgstr "Vous ne pouvez pas formater le disque système(OS)!"
-
-#~ msgid "MBR erase"
-#~ msgstr "Effacer le MBR"
-
-#, php-format
-#~ msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
-#~ msgstr ""
-#~ "Note: Ctrl-click (commande-click sur le Mac) pour sélectionner de multiples "
-#~ "disques."
-
-#, php-format
-#~ msgid ""
-#~ "Lowering this threshold can adversely affect performance and auto-"
-#~ "defragmentation."
-#~ msgstr ""
-#~ "Diminuer le seuil peut nuire à la performance et à l'auto-défragmentation."
-
-#~ msgid "Specify the percentage of space held back from normal users."
-#~ msgstr ""
-#~ "Spécifiez le pourcentage d'espace retenu par les utilisateurs normaux."
-
-#~ msgid ""
-#~ "Volume label of the new file system. Use a space to separate multiple "
-#~ "labels. (if only one specified next will be auto increment)"
-#~ msgstr ""
-#~ "Nom de volume du nouveau système de fichiers. Séparer les différents nom par "
-#~ "un espace. (si un seul nom est spécifié, les suivants seront incrémentés "
-#~ "automatiquement)"
-
-#~ msgid "Wrong number of count for Volume Label"
-#~ msgstr "Mauvais numéro pour le nom du volume"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-16 21:18+0000\n"
+"POT-Creation-Date: 2016-06-17 19:08+0000\n"
 "PO-Revision-Date: 2015-06-11 17:41+0000\n"
 "Last-Translator: Flavio Peinado <flavio@peinado.com.br>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-16 20:37+0000\n"
+"X-Launchpad-Export-Date: 2016-06-17 17:45+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: Brazilian Portuguese\n"
 "Language: \n"
@@ -5314,9 +5314,6 @@ msgstr "Falha no upload do pacote (sem memória livre?)"
 msgid "Packages"
 msgstr "Pacotes"
 
-msgid "Page"
-msgstr ""
-
 msgid "Painfully aggressive"
 msgstr "Fortemente agressivo"
 
@@ -6714,6 +6711,9 @@ msgstr "Relatório de status enviado com sucesso para: %s."
 msgid "Status report successfully sent."
 msgstr "Relatório de status enviado com sucesso."
 
+msgid "Step"
+msgstr ""
+
 msgid "Stop"
 msgstr "Parar"
 
@@ -7161,7 +7161,19 @@ msgstr "O atributo '%s' é obrigatório."
 
 #, php-format
 msgid ""
-"The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
+"The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."
+msgstr ""
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
+"and [._-]"
+msgstr ""
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
+"and [._-]."
 msgstr ""
 
 #, php-format
@@ -9031,7 +9043,8 @@ msgstr ""
 
 msgid ""
 "Volume label of the new file system. Use $ for device name, % for a counter "
-"or %[startvalue] for a counter starting at startvalue."
+"or %n for a counter starting at n, [n for the n rightmost characters of the "
+"device serial number."
 msgstr ""
 
 msgid "Volume mode"
@@ -9484,12 +9497,3 @@ msgstr "desmontar"
 
 msgid "version:"
 msgstr "versão:"
-
-#~ msgid "Do you really want to format this disk? All data will be lost!"
-#~ msgstr "Deseja realmente formatar este disco? Todos os dados serão perdidos!"
-
-#~ msgid "Minimum free space"
-#~ msgstr "Mínimo de espaço livre"
-
-#~ msgid "Volume label"
-#~ msgstr "Label do Volume"

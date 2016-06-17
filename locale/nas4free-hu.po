@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-16 21:18+0000\n"
+"POT-Creation-Date: 2016-06-17 19:08+0000\n"
 "PO-Revision-Date: 2016-06-07 19:04+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-16 20:37+0000\n"
+"X-Launchpad-Export-Date: 2016-06-17 17:46+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -5459,9 +5459,6 @@ msgstr "Csomag feltöltés sikertelen (elfogyott a memória?)"
 msgid "Packages"
 msgstr "Csomagok"
 
-msgid "Page"
-msgstr ""
-
 msgid "Painfully aggressive"
 msgstr "Sajnálatosan agresszív"
 
@@ -6885,6 +6882,9 @@ msgstr "Állapotjelentés sikeresen elküldve a következő címre: %s."
 msgid "Status report successfully sent."
 msgstr "Állapotjelentés sikeresen elküldve."
 
+msgid "Step"
+msgstr ""
+
 msgid "Stop"
 msgstr "Leállítás"
 
@@ -7337,7 +7337,19 @@ msgstr "'%s' attribútum kötelező."
 
 #, php-format
 msgid ""
-"The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
+"The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."
+msgstr ""
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
+"and [._-]"
+msgstr ""
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
+"and [._-]."
 msgstr ""
 
 #, php-format
@@ -9262,7 +9274,8 @@ msgstr "Kötet nincs zárolva"
 
 msgid ""
 "Volume label of the new file system. Use $ for device name, % for a counter "
-"or %[startvalue] for a counter starting at startvalue."
+"or %n for a counter starting at n, [n for the n rightmost characters of the "
+"device serial number."
 msgstr ""
 
 msgid "Volume mode"
@@ -9720,73 +9733,3 @@ msgstr "leválasztás"
 
 msgid "version:"
 msgstr "verzió:"
-
-#~ msgid "Do you really want to format this disk? All data will be lost!"
-#~ msgstr "Biztos, hogy formázod ezt a lemezt? Minden adat törlődni fog!"
-
-#~ msgid "Volume label"
-#~ msgstr "Címke"
-
-#~ msgid "Minimum free space"
-#~ msgstr "Minimális szabad lemezterület"
-
-#~ msgid "Advanced format"
-#~ msgstr "Haladó formázás"
-
-#~ msgid "Create ZFS on GPT partition."
-#~ msgstr "ZFS létrehozása GPT partíción"
-
-#~ msgid "Format disk"
-#~ msgstr "Lemez formázása"
-
-#~ msgid "Enable Advanced Format. (4KB sector)"
-#~ msgstr "Fejlett formázás bekapcsolása (4KB-os szektor)."
-
-#~ msgid "MBR erase"
-#~ msgstr "MBR törlése"
-
-#~ msgid "You can't format the OS origin disk!"
-#~ msgstr "Operációs rendszer lemeze nem formázható!"
-
-#, php-format
-#~ msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
-#~ msgstr ""
-#~ "Megjegyzés: Ctrl-kattintással (Mac-en futtatás-kattintással) jelölhetsz ki "
-#~ "több lemezt."
-
-#~ msgid ""
-#~ "Don't erase the Master Boot Record. (useful for some RAID controller cards)"
-#~ msgstr ""
-#~ "Ne törölje a Master Boot Rekord-ot (néhány RAID vezérlő kártyánál esetén "
-#~ "hasznos)."
-
-#~ msgid "Wrong number of count for Volume Label"
-#~ msgstr "Kötetcímkéhez nem megfelelő számosság"
-
-#~ msgid "Specify the percentage of space held back from normal users."
-#~ msgstr ""
-#~ "Hely meghatározása százalékban, amit normál felhasználóknak megtartunk."
-
-#, php-format
-#~ msgid ""
-#~ "Lowering this threshold can adversely affect performance and auto-"
-#~ "defragmentation."
-#~ msgstr ""
-#~ "Ezen küszöbérték csökkentése negatívan befolyásolja a teljesítményt és az "
-#~ "automatikus töredezettségmentesítés."
-
-#~ msgid ""
-#~ "Volume label of the new file system. Use a space to separate multiple "
-#~ "labels. (if only one specified next will be auto increment)"
-#~ msgstr ""
-#~ "Új fájlrendszer kötetcímkéje. Szóközt használj több címke elválasztásához "
-#~ "(ha csak egyet adsz meg, a következő automatikus növekményes lesz)."
-
-#~ msgid ""
-#~ "UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
-#~ "filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
-#~ "unpredictable results, file corruption and loss of data!"
-#~ msgstr ""
-#~ "UFS és ZFS a NAS4Free NATÍV fájlrendszerei. Más fájlrendszer használata, "
-#~ "mint például FAT, FAT32, EXT2, EXT3, EXT4 vagy NTFS kiszámíthatatlan "
-#~ "eseményeket, fájlok sérülését és adatvesztést okozhat!"
