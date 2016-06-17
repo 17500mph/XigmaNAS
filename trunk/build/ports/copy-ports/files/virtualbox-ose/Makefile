@@ -1,11 +1,11 @@
 PORTNAME=	virtualbox-ose
-PORTVERSION=	5.0.20
+PORTVERSION=	5.0.22
 CATEGORIES=	emulators
 MASTER_SITES=	http://download.virtualbox.org/virtualbox/${PORTVERSION}/
 DISTFILES=	VirtualBox-${PORTVERSION}${EXTRACT_SUFX} ${GUESTADDITIONS}
 EXTRACT_ONLY=	VirtualBox-${PORTVERSION}${EXTRACT_SUFX}
 
-MAINTAINER=	zoon01@nas4free.org
+MAINTAINER=	zoon1@nas4free.org
 COMMENT=	General-purpose full virtualizer for x86 hardware
 
 LICENSE=	GPLv2
