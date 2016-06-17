@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-06-16 21:18+0000\n"
+"POT-Creation-Date: 2016-06-17 19:08+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -4613,9 +4613,6 @@ msgstr ""
 msgid "Packages"
 msgstr ""
 
-msgid "Page"
-msgstr ""
-
 msgid "Painfully aggressive"
 msgstr ""
 
@@ -5878,6 +5875,9 @@ msgstr ""
 msgid "Status report successfully sent."
 msgstr ""
 
+msgid "Step"
+msgstr ""
+
 msgid "Stop"
 msgstr ""
 
@@ -6282,7 +6282,15 @@ msgid "The attribute '%s' is required."
 msgstr ""
 
 #, php-format
-msgid "The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
+msgid "The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."
+msgstr ""
+
+#, php-format
+msgid "The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] and [._-]"
+msgstr ""
+
+#, php-format
+msgid "The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] and [._-]."
 msgstr ""
 
 #, php-format
@@ -7625,7 +7633,7 @@ msgstr ""
 msgid "Volume is unlocked"
 msgstr ""
 
-msgid "Volume label of the new file system. Use $ for device name, % for a counter or %[startvalue] for a counter starting at startvalue."
+msgid "Volume label of the new file system. Use $ for device name, % for a counter or %n for a counter starting at n, [n for the n rightmost characters of the device serial number."
 msgstr ""
 
 msgid "Volume mode"
