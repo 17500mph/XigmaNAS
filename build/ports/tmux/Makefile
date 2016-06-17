@@ -3,7 +3,7 @@ PORTVERSION=	2.2
 PORTREVISION=	0
 CATEGORIES=		sysutils
 COMMENT=		Terminal Multiplexer
-MAINTAINER=		zoon01@nas4free.org
+MAINTAINER=		zoon1@nas4free.org
 
 MASTER_SITES=	https://github.com/tmux/tmux/releases/download/${PORTVERSION}/ \
 		SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION:S/a$//}

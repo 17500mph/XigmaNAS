@@ -2,7 +2,7 @@ PORTNAME=		zoneinfo
 DISTVERSION=	2016e
 CATEGORIES=		misc
 COMMENT=		Updated timezone definitions
-MAINTAINER=		zoon01@nas4free.org
+MAINTAINER=		zoon1@nas4free.org
 
 MASTER_SITES=   	ftp://ftp.iana.org/tz/releases/ \
 					ftp://munnari.oz.au/pub/

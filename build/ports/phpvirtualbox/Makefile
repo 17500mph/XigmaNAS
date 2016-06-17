@@ -4,7 +4,7 @@ PORTREVISION=	0
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}
 
-MAINTAINER=	zoon01@nas4free.org
+MAINTAINER=	zoon1@nas4free.org
 COMMENT=	Web Interface for VirtualBox
 
 LICENSE=	GPLv3

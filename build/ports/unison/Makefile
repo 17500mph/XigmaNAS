@@ -3,7 +3,7 @@ PORTVERSION=	2.48.3
 PORTREVISION=	1
 CATEGORIES=		net
 COMMENT=		A user-level file synchronization tool
-MAINTAINER=		zoon01@nas4free.org
+MAINTAINER=		zoon1@nas4free.org
 
 MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/
 DISTFILES=		${EXTRACT_ONLY}

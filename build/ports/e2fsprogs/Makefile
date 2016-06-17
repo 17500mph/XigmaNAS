@@ -4,7 +4,7 @@ PORTREVISION?= 0
 CATEGORIES=		sysutils
 COMMENT=		Utilities & library to manipulate ext2/3/4 filesystems
 
-MAINTAINER=		zoon01@nas4free.org
+MAINTAINER=		zoon1@nas4free.org
 
 MASTER_SITES=		KERNEL_ORG/linux/kernel/people/tytso/${PORTNAME}/v${PORTVERSION}
 

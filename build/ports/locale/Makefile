@@ -2,7 +2,7 @@ PORTNAME=		locale
 PORTVERSION=	1.0
 CATEGORIES=		lang
 COMMENT=		Language packages for NAS4Free
-MAINTAINER=		zoon01@nas4free.org
+MAINTAINER=		zoon1@nas4free.org
 
 DISTFILES?=
 

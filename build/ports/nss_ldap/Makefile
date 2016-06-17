@@ -3,7 +3,7 @@ PORTVERSION=	1.0
 PORTREVISION=   0
 CATEGORIES=		net
 COMMENT=		RFC 2307 NSS module
-MAINTAINER=		zoon01@nas4free.org
+MAINTAINER=		zoon1@nas4free.org
 
 # No files are needed to be fetched.
 DISTFILES?=
