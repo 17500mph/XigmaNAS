@@ -2,7 +2,7 @@ PORTNAME=			arcconf
 DISTVERSION=	v7_30_18837
 CATEGORIES=		sysutils
 COMMENT=			Adaptec SCSI RAID administration tool
-MAINTAINER=		zoon01@nas4free.org
+MAINTAINER=		zoon1@nas4free.org
 
 MASTER_SITES=	http://download.adaptec.com/raid/storage_manager/
 

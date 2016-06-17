@@ -3,7 +3,7 @@ PORTVERSION=	2.5.3
 PORTREVISION?=  1
 CATEGORIES=		editors
 COMMENT=		Nano's ANOther editor, an enhanced free Pico clone
-MAINTAINER=		zoon01@nas4free.org
+MAINTAINER=		zoon1@nas4free.org
 
 MASTER_SITES=	http://www.nano-editor.org/dist/v2.4/ \
 						${MASTER_SITE_GNU}

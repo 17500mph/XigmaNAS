@@ -3,7 +3,7 @@ PORTVERSION=	1.3.5b
 PORTREVISION=	1
 CATEGORIES=		ftp
 COMMENT=		Highly configurable FTP daemon
-MAINTAINER=		zoon01@nas4free.org
+MAINTAINER=		zoon1@nas4free.org
 
 MASTER_SITES=		ftp://ftp.proftpd.org/distrib/source/ \
 						https://github.com/downloads/proftpd/proftpd.github.com/ \

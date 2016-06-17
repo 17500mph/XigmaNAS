@@ -2,7 +2,7 @@ PORTNAME=		bsnmp-ucd
 PORTVERSION=	0.4.2
 CATEGORIES=		net-mgmt
 COMMENT=			A bsnmpd module that implements parts of UCD-SNMP-MIB
-MAINTAINER=		zoon01@nas4free.org
+MAINTAINER=		zoon1@nas4free.org
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	trociny

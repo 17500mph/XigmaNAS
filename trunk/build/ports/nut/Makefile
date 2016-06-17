@@ -3,7 +3,7 @@ PORTVERSION=	2.7.4
 PORTREVISION=	1
 CATEGORIES=		sysutils
 COMMENT=		Network UPS tools
-MAINTAINER=		zoon01@nas4free.org
+MAINTAINER=		zoon1@nas4free.org
 
 MASTER_SITES=	http://www.networkupstools.org/source/${PORTVERSION:R}/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}

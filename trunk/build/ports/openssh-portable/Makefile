@@ -3,7 +3,7 @@ PORTVERSION=	1.0
 PORTREVISION=	1
 CATEGORIES=		security
 COMMENT=		The portable version of OpenBSD's OpenSSH
-MAINTAINER=		zoon01@nas4free.org
+MAINTAINER=		zoon1@nas4free.org
 
 # No files are needed to be fetched.
 DISTFILES?=

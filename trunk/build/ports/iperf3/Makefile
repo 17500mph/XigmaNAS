@@ -3,7 +3,7 @@ PORTVERSION=	3.1.3
 PORTREVISION?=  0
 CATEGORIES=		benchmarks ipv6
 COMMENT=		Improved tool to measure TCP and UDP bandwidth
-MAINTAINER=		zoon01@nas4free.org
+MAINTAINER=		zoon1@nas4free.org
 
 MASTER_SITES=		http://downloads.es.net/pub/iperf/
 PKGNAMESUFFIX=	3
