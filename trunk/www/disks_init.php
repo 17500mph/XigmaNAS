@@ -520,7 +520,7 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 //	$a_control = $a_control_matrix[$page_index][$a_option['filesystem']];
 //	$a_button = $a_button_matrix[$page_index];
 }
-$pgtitle = [gettext_gen2('Disks'), gettext_gen2('Management'), gettext_gen2('HDD Format'), sprintf('%1$s %2$d', gettext_gen2('Page'), $page_index)];
+$pgtitle = [gettext_gen2('Disks'), gettext_gen2('Management'), gettext_gen2('HDD Format'), sprintf('%1$s %2$d', gettext_gen2('Step'), $page_index)];
 ?>
 <?php include("fbegin.inc"); ?>
 <script type="text/javascript">
