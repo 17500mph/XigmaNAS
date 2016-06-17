@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-16 21:18+0000\n"
+"POT-Creation-Date: 2016-06-17 19:08+0000\n"
 "PO-Revision-Date: 2014-11-17 04:09+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-16 20:37+0000\n"
+"X-Launchpad-Export-Date: 2016-06-17 17:45+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: ALBANIA\n"
 "Language: \n"
@@ -5137,9 +5137,6 @@ msgstr "Ngarkimi i paketes deshtoi (mbaroi memoria?)"
 msgid "Packages"
 msgstr "Paketat"
 
-msgid "Page"
-msgstr ""
-
 msgid "Painfully aggressive"
 msgstr ""
 
@@ -6471,6 +6468,9 @@ msgstr ""
 msgid "Status report successfully sent."
 msgstr ""
 
+msgid "Step"
+msgstr ""
+
 msgid "Stop"
 msgstr ""
 
@@ -6899,7 +6899,19 @@ msgstr ""
 
 #, php-format
 msgid ""
-"The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
+"The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."
+msgstr ""
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
+"and [._-]"
+msgstr ""
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
+"and [._-]."
 msgstr ""
 
 #, php-format
@@ -8529,7 +8541,8 @@ msgstr ""
 
 msgid ""
 "Volume label of the new file system. Use $ for device name, % for a counter "
-"or %[startvalue] for a counter starting at startvalue."
+"or %n for a counter starting at n, [n for the n rightmost characters of the "
+"device serial number."
 msgstr ""
 
 msgid "Volume mode"
@@ -8962,14 +8975,3 @@ msgstr "zmonto"
 
 msgid "version:"
 msgstr ""
-
-#~ msgid "Do you really want to format this disk? All data will be lost!"
-#~ msgstr ""
-#~ "Dini me te vertete te formatoni kete disk? Te gjitha te dhenat qe ndodhen ne "
-#~ "te do te humbin!"
-
-#~ msgid "Minimum free space"
-#~ msgstr "Hapesira e lire minimale"
-
-#~ msgid "Volume label"
-#~ msgstr "Emri i volumit"

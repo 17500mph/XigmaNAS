@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-16 21:18+0000\n"
-"PO-Revision-Date: 2016-06-06 09:50+0000\n"
+"POT-Creation-Date: 2016-06-17 19:08+0000\n"
+"PO-Revision-Date: 2016-06-17 17:31+0000\n"
 "Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-16 20:37+0000\n"
+"X-Launchpad-Export-Date: 2016-06-17 17:45+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -621,7 +621,7 @@ msgid "Advanced Configuration"
 msgstr "Дополнительные настройки"
 
 msgid "Advanced Format"
-msgstr ""
+msgstr "Расширенное форматирование"
 
 msgid "Advanced Options"
 msgstr "Дополнительные параметры"
@@ -992,7 +992,7 @@ msgstr ""
 "Среднее время раскрутки шпинделя (от состояния покоя до полной раскрутки)."
 
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 msgid "Backup Configuration"
 msgstr "Сохранение конфигурации"
@@ -1759,7 +1759,7 @@ msgid "Create PV Guest"
 msgstr "Создать гостевую систему PV"
 
 msgid "Create ZFS on a GPT partition."
-msgstr ""
+msgstr "Создание ZFS на раздел GPT."
 
 msgid "Create and initialize RAID."
 msgstr "Создать и инициализировать RAID"
@@ -2212,25 +2212,25 @@ msgid "Device Model"
 msgstr "Модель устройства"
 
 msgid "Device Name"
-msgstr ""
+msgstr "Имя устройства"
 
 msgid "Device Pass-through"
 msgstr "Сквозное (pass-through) устройство"
 
 msgid "Device Path"
-msgstr ""
+msgstr "Путь к устройству"
 
 msgid "Device Serial"
 msgstr "Серийный номер устройства"
 
 msgid "Device contains boot partition"
-msgstr ""
+msgstr "Устройство содержит загрузочный раздел"
 
 msgid "Device is mounted"
-msgstr ""
+msgstr "Устройство смонтировано"
 
 msgid "Device not found"
-msgstr ""
+msgstr "Устройство не найдено"
 
 msgid "Device polling"
 msgstr "Опрос устройств"
@@ -2371,6 +2371,7 @@ msgstr "Не включайте эту опцию, если вы хотите д
 msgid ""
 "Do not erase the Master Boot Record (useful for some RAID controller cards)."
 msgstr ""
+"Не стирать Master Boot Record (полезно для некоторых контроллеров RAID)."
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2807,7 +2808,7 @@ msgid "Enable ACL inheritance"
 msgstr "Включить наследование ACL"
 
 msgid "Enable Advanced Format (4KB Sector Size)."
-msgstr ""
+msgstr "Включить расширенное форматирование (4КБ сектор)."
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Включить асинхронный ввод/вывод (AIO)"
@@ -3100,7 +3101,7 @@ msgstr ""
 "команд стирания флэш."
 
 msgid "Erase MBR"
-msgstr ""
+msgstr "Стирание MBR"
 
 msgid "Error"
 msgstr "Ошибка"
@@ -3204,7 +3205,7 @@ msgid "Extra options to rsync (usually empty)."
 msgstr "Дополнительные настройки rsync (обычно пусто)."
 
 msgid "FAT32"
-msgstr ""
+msgstr "FAT32"
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
@@ -3420,7 +3421,7 @@ msgid "Format"
 msgstr "Форматирование"
 
 msgid "Format Options"
-msgstr ""
+msgstr "Опции форматирования."
 
 msgid "Format the report for phpBB forum."
 msgstr "Сформировать отчет для форума phpBB."
@@ -3487,7 +3488,7 @@ msgid "GID"
 msgstr "GID"
 
 msgid "GPT Partition"
-msgstr ""
+msgstr "GPT раздел"
 
 msgid "GPT partition"
 msgstr "Раздел GPT"
@@ -4855,7 +4856,7 @@ msgid "Minimum"
 msgstr "Минимальный"
 
 msgid "Minimum Free Space"
-msgstr ""
+msgstr "Минимальное свободное пространство"
 
 msgid "Minimum Performance, Minimum Acoustic Output"
 msgstr "Минимальная производительность, минимальный уровень шума"
@@ -5080,7 +5081,7 @@ msgid "New password"
 msgstr "Новый пароль"
 
 msgid "Next"
-msgstr ""
+msgstr "Далее"
 
 msgid "No"
 msgstr "Нет"
@@ -5495,9 +5496,6 @@ msgstr "Загрузка пакета не удалась (возможно, н�
 
 msgid "Packages"
 msgstr "Пакеты"
-
-msgid "Page"
-msgstr ""
 
 msgid "Painfully aggressive"
 msgstr "Агрессивный"
@@ -6031,7 +6029,7 @@ msgid "Realm"
 msgstr "Название области"
 
 msgid "Reason Code"
-msgstr ""
+msgstr "Код причины"
 
 msgid "Reason for last transfer to battery (* opaque)"
 msgstr "Причина последнего перехода на батарею"
@@ -6043,7 +6041,7 @@ msgid "Receive Buffer Size"
 msgstr "Размер буфера приема"
 
 msgid "Record is locked"
-msgstr ""
+msgstr "Запись заблокирована"
 
 msgid "Recurse into directories."
 msgstr "Рекурсивно внутри каталогов"
@@ -6450,7 +6448,7 @@ msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Укажите диск с включенным S.M.A.R.T."
 
 msgid "Select file system format."
-msgstr ""
+msgstr "Выберите формат файловой системы."
 
 msgid "Select firmware:"
 msgstr "Выберите прошивку:"
@@ -6868,6 +6866,9 @@ msgid ""
 "Lowering this threshold can adversely affect performance and auto-"
 "defragmentation!"
 msgstr ""
+"Процент дискового пространства, которое будет скрыто от обычного "
+"использования. Снижение этого порога может отрицательно повлиять на "
+"производительность и автоматическую дефрагментацию!"
 
 msgid "Split request"
 msgstr "Разделение запросов (split request)"
@@ -6908,6 +6909,9 @@ msgstr "Отчет для %s отправлен успешно."
 
 msgid "Status report successfully sent."
 msgstr "Отчет отправлен успешно."
+
+msgid "Step"
+msgstr "Шаг"
 
 msgid "Stop"
 msgstr "Стоп"
@@ -7363,8 +7367,22 @@ msgstr "Атрибут '%s' обязателен."
 
 #, php-format
 msgid ""
-"The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
+"The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."
+msgstr "Атрибут '%s' может состоять только из символов [A-Z], [A-Z] и [0-9]."
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
+"and [._-]"
 msgstr ""
+"Атрибут '%s' может состоять только из символов [A-Z], [A-Z], [0-9] и [._-]"
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
+"and [._-]."
+msgstr ""
+"Атрибут '%s' может состоять только из символов [A-Z], [A-Z], [0-9] и [._-]."
 
 #, php-format
 msgid ""
@@ -9022,7 +9040,7 @@ msgid "Unknown or unformatted"
 msgstr "Неизвестно или не отформатировано"
 
 msgid "Unknown size"
-msgstr ""
+msgstr "Неизвестный размер"
 
 msgid "Unload"
 msgstr "Выгрузка"
@@ -9318,8 +9336,12 @@ msgstr "Том разблокирован"
 
 msgid ""
 "Volume label of the new file system. Use $ for device name, % for a counter "
-"or %[startvalue] for a counter starting at startvalue."
+"or %n for a counter starting at n, [n for the n rightmost characters of the "
+"device serial number."
 msgstr ""
+"Метка тома новой файловой системы. Используйте $ для имени устройства, % для "
+"счета или %n для начала счета, начиная с n, [n для n крайних правых символов "
+"серийного номера устройства."
 
 msgid "Volume mode"
 msgstr "Режим раздела"
@@ -9604,7 +9626,7 @@ msgid "ZFS Snapshot Properties"
 msgstr "Свойства ZFS слепков"
 
 msgid "ZFS Storage Pool"
-msgstr ""
+msgstr "ZFS Storage Pool"
 
 msgid "ZFS Volume Information & Status"
 msgstr "Информация и статус ZFS разделов"
@@ -9787,75 +9809,17 @@ msgstr "размонтировать"
 msgid "version:"
 msgstr "версия:"
 
-#~ msgid "Do you really want to format this disk? All data will be lost!"
-#~ msgstr ""
-#~ "Вы действительно хотите отформатировать этот диск? Все данные на диске будут "
-#~ "уничтожены!"
-
-#~ msgid "Minimum free space"
-#~ msgstr "Минимум свободного места"
-
-#~ msgid "Volume label"
-#~ msgstr "Метка тома"
-
-#~ msgid "Create ZFS on GPT partition."
-#~ msgstr "Создать ZFS на GPT разделах."
-
-#~ msgid "Enable Advanced Format. (4KB sector)"
-#~ msgstr "Включить расширенное форматирование. (4KB сектор)"
-
-#~ msgid ""
-#~ "Don't erase the Master Boot Record. (useful for some RAID controller cards)"
-#~ msgstr ""
-#~ "Не стирать Master Boot Record. (Полезно для некоторых контроллеров RAID)"
-
-#~ msgid "Format disk"
-#~ msgstr "Форматировать диск"
-
-#~ msgid "Advanced format"
-#~ msgstr "Расширенное форматирование"
-
-#~ msgid "MBR erase"
-#~ msgstr "Стирание MBR"
+#~ msgid "Page"
+#~ msgstr "Страница"
 
 #, php-format
 #~ msgid ""
-#~ "Lowering this threshold can adversely affect performance and auto-"
-#~ "defragmentation."
-#~ msgstr ""
-#~ "Снижение этого порога может отрицательно повлиять на производительность и "
-#~ "автоматическую дефрагментацию."
-
-#~ msgid "Specify the percentage of space held back from normal users."
-#~ msgstr ""
-#~ "Задайте процент дискового пространства, недоступного обычным пользователям."
-
-#, php-format
-#~ msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
-#~ msgstr ""
-#~ "Примечание: удерживайте Ctrl (или Command на Mac), чтобы выбрать несколько "
-#~ "дисков."
+#~ "The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
+#~ msgstr "Атрибут '%s' может состоять только из символов A-Z, A-Z и 0-9."
 
 #~ msgid ""
-#~ "UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
-#~ "filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
-#~ "unpredictable results, file corruption and loss of data!"
+#~ "Volume label of the new file system. Use $ for device name, % for a counter "
+#~ "or %[startvalue] for a counter starting at startvalue."
 #~ msgstr ""
-#~ "UFS и ZFS являются родными файловыми системами NAS4Free.  Попытка "
-#~ "использовать другие файловые системы такие как ext2, ext3, EXT4, FAT, FAT32 "
-#~ "или NTFS может привести к непредсказуемым результатам, порче файлов и потере "
-#~ "данных!"
-
-#~ msgid ""
-#~ "Volume label of the new file system. Use a space to separate multiple "
-#~ "labels. (if only one specified next will be auto increment)"
-#~ msgstr ""
-#~ "Метка тома для новой файловой системы. Используйте пробел для разделения "
-#~ "нескольких ярлыков. (Если указан только один  следующий будет автоматическое "
-#~ "добавлен)"
-
-#~ msgid "Wrong number of count for Volume Label"
-#~ msgstr "Неверное число счетчика для метки тома"
-
-#~ msgid "You can't format the OS origin disk!"
-#~ msgstr "Вы не можете отформатировать диск с OS!"
+#~ "Метка тома новой файловой системы. Используйте $ для имени устройства, % для "
+#~ "счетчика или %[startvalue] для счетчика, начиная с startvalue."

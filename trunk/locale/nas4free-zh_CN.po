@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-16 21:18+0000\n"
+"POT-Creation-Date: 2016-06-17 19:08+0000\n"
 "PO-Revision-Date: 2016-05-28 18:47+0000\n"
 "Last-Translator: Jieting Xu <xu.jieting@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-16 20:37+0000\n"
+"X-Launchpad-Export-Date: 2016-06-17 17:45+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -5057,9 +5057,6 @@ msgstr "套件上传失败（记忆体不足？）"
 msgid "Packages"
 msgstr "套件"
 
-msgid "Page"
-msgstr ""
-
 msgid "Painfully aggressive"
 msgstr "Painfully aggressive"
 
@@ -6400,6 +6397,9 @@ msgstr "状态报告成功传送至：%s。"
 msgid "Status report successfully sent."
 msgstr "状态报告已成功传送。"
 
+msgid "Step"
+msgstr ""
+
 msgid "Stop"
 msgstr "停止"
 
@@ -6830,7 +6830,19 @@ msgstr "'%s' 是必填栏位。"
 
 #, php-format
 msgid ""
-"The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
+"The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."
+msgstr ""
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
+"and [._-]"
+msgstr ""
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
+"and [._-]."
 msgstr ""
 
 #, php-format
@@ -8494,7 +8506,8 @@ msgstr ""
 
 msgid ""
 "Volume label of the new file system. Use $ for device name, % for a counter "
-"or %[startvalue] for a counter starting at startvalue."
+"or %n for a counter starting at n, [n for the n rightmost characters of the "
+"device serial number."
 msgstr ""
 
 msgid "Volume mode"
@@ -8921,18 +8934,3 @@ msgstr "卸载"
 
 msgid "version:"
 msgstr "版本："
-
-#~ msgid "Minimum free space"
-#~ msgstr "最少需求空间"
-
-#~ msgid "Do you really want to format this disk? All data will be lost!"
-#~ msgstr "您确定要格式化这个硬盘吗？所有内部的资料都会消失！"
-
-#~ msgid "Volume label"
-#~ msgstr "磁盘卷标签（Volume label）"
-
-#~ msgid "Advanced format"
-#~ msgstr "高级格式化"
-
-#~ msgid "Create ZFS on GPT partition."
-#~ msgstr "在GPT分区上创建ZFS。"

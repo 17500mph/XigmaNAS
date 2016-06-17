@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-16 21:18+0000\n"
-"PO-Revision-Date: 2016-06-16 20:32+0000\n"
+"POT-Creation-Date: 2016-06-17 19:08+0000\n"
+"PO-Revision-Date: 2016-06-17 17:42+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-16 20:38+0000\n"
+"X-Launchpad-Export-Date: 2016-06-17 17:46+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -5553,9 +5553,6 @@ msgstr "Pakket uploaden is mislukt (niet genoeg geheugen?)"
 msgid "Packages"
 msgstr "Pakketten"
 
-msgid "Page"
-msgstr "Pagina"
-
 msgid "Painfully aggressive"
 msgstr "Moeizaam agressief"
 
@@ -6985,6 +6982,9 @@ msgstr "Het statusrapport is met succes verzonden naar: %s."
 msgid "Status report successfully sent."
 msgstr "Het status rapport is met succes verzonden."
 
+msgid "Step"
+msgstr "Stap"
+
 msgid "Stop"
 msgstr "Stop"
 
@@ -7441,9 +7441,26 @@ msgstr "Het kenmerk '%s' is vereist."
 
 #, php-format
 msgid ""
-"The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
+"The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."
 msgstr ""
-"Het attribuut '%s' kan alleen bestaan uit de karakters a-z, A-Z and 0-9."
+"Het attribuut '%s' kan alleen bestaan uit de karakters [a-z], [A-Z] and [0-"
+"9]."
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
+"and [._-]"
+msgstr ""
+"Het attribuut '%s' kan alleen bestaan uit de karakters [a-z], [A-Z], [0-9] "
+"and [._-]"
+
+#, php-format
+msgid ""
+"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
+"and [._-]."
+msgstr ""
+"Het attribuut '%s' kan alleen bestaan uit de karakters [a-z], [A-Z], [0-9] "
+"and [._-]."
 
 #, php-format
 msgid ""
@@ -9420,10 +9437,12 @@ msgstr "Volume is ontgrendeld"
 
 msgid ""
 "Volume label of the new file system. Use $ for device name, % for a counter "
-"or %[startvalue] for a counter starting at startvalue."
+"or %n for a counter starting at n, [n for the n rightmost characters of the "
+"device serial number."
 msgstr ""
 "De volumenaam van het nieuwe bestandssysteem. Gebruik $ voor apparaatnaam, % "
-"voor een nummer of %[startwaarde] voor een nummer startend bij startwaarde."
+"voor een nummer of %n  voor een nummer startend bij n, [n voor de n meest "
+"rechtse karakters van het serienummer van het apparaat."
 
 msgid "Volume mode"
 msgstr "Volume mode"
@@ -9888,76 +9907,18 @@ msgstr "loskoppelen"
 msgid "version:"
 msgstr "versie:"
 
-#~ msgid "Do you really want to format this disk? All data will be lost!"
-#~ msgstr ""
-#~ "Weet u zeker dat u deze schijf wilt formatteren? Alle gegevens zullen "
-#~ "verloren gaan!"
-
-#~ msgid "Minimum free space"
-#~ msgstr "Minimale vrije ruimte"
-
-#~ msgid "Volume label"
-#~ msgstr "Volume label"
-
-#~ msgid "Create ZFS on GPT partition."
-#~ msgstr "Creëer ZFS op GPT-partitie."
-
-#~ msgid "Enable Advanced Format. (4KB sector)"
-#~ msgstr "Inschakelen Geavanceerd Formatteren. (4KB sectoren)"
-
-#~ msgid ""
-#~ "Don't erase the Master Boot Record. (useful for some RAID controller cards)"
-#~ msgstr ""
-#~ "MBR (Master Boot Record) niet wissen. (zinvol voor sommige RAID controller "
-#~ "kaarten)."
-
-#~ msgid "Format disk"
-#~ msgstr "Formatteer schijf"
-
-#~ msgid "MBR erase"
-#~ msgstr "MBR wissen"
+#~ msgid "Page"
+#~ msgstr "Pagina"
 
 #, php-format
 #~ msgid ""
-#~ "Lowering this threshold can adversely affect performance and auto-"
-#~ "defragmentation."
+#~ "The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
 #~ msgstr ""
-#~ "Het verlagen van deze drempel kan een nadelig effect hebben op de prestaties "
-#~ "en auto-defragmentatie."
-
-#~ msgid "Advanced format"
-#~ msgstr "Geavanceerd formatteren"
-
-#~ msgid "Specify the percentage of space held back from normal users."
-#~ msgstr ""
-#~ "Selecteer het percentage van ruimte dat moet worden achtergehouden van "
-#~ "normale gebruikers."
-
-#, php-format
-#~ msgid "Note: Ctrl-click (command-click on the Mac) to select multiple disks."
-#~ msgstr ""
-#~ "Tip: Ctrl-klik (command-klik op de Mac) om meerdere schijven te selecteren."
+#~ "Het attribuut '%s' kan alleen bestaan uit de karakters a-z, A-Z and 0-9."
 
 #~ msgid ""
-#~ "UFS and ZFS are the NATIVE filesystems of NAS4Free. Attempting to use other "
-#~ "filesystems such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in "
-#~ "unpredictable results, file corruption and loss of data!"
+#~ "Volume label of the new file system. Use $ for device name, % for a counter "
+#~ "or %[startvalue] for a counter starting at startvalue."
 #~ msgstr ""
-#~ "UFS en ZFS zijn de NATIVE bestandssystemen van %s. Het gebruik van andere "
-#~ "bestandssystemen zoals FAT, FAT32, EXT2, EXT3, EXT4 of NTFS kan "
-#~ "onvoorspelbare resultaten opleveren zoals bestandsbeschadiging en verlies "
-#~ "van data!"
-
-#~ msgid "You can't format the OS origin disk!"
-#~ msgstr "U kunt de schijf waarop het OS staat niet formatteren!"
-
-#~ msgid "Wrong number of count for Volume Label"
-#~ msgstr "Onjuiste nummer telling voor de volumelabel"
-
-#~ msgid ""
-#~ "Volume label of the new file system. Use a space to separate multiple "
-#~ "labels. (if only one specified next will be auto increment)"
-#~ msgstr ""
-#~ "De volumelabel van het nieuwe bestandssysteem. Gebruik een spatie om "
-#~ "meerdere labels te scheiden. (Indien slechts één opgegeven wordt deze voor "
-#~ "de volgende automatisch toegepast)"
+#~ "De volumenaam van het nieuwe bestandssysteem. Gebruik $ voor apparaatnaam, % "
+#~ "voor een nummer of %[startwaarde] voor een nummer startend bij startwaarde."
