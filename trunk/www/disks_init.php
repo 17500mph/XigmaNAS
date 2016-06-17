@@ -237,11 +237,27 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 	}
 	if ($prerequisites_ok) {
 		if (preg_match('/^(ufsgpt|msdos)/', $a_option['filesystem']) && preg_match('/\S/', $a_option['volumelabel'])) {
-			$helpinghand = preg_quote('%$', '/');
-			if (!preg_match('/^[a-z\d' . $helpinghand . ']+$/i', $a_option['volumelabel'])) {
-				$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."), gettext_gen2('Volume Label'));
+			$helpinghand = preg_quote('[%$', '/');
+			if (preg_match('/^[a-z\d' . $helpinghand . ']+$/i', $a_option['volumelabel'])) {
+				// additional check is required for adding serial number information to the label		
+				$label_serial = [];
+				$label_serial['trigger'] = '[';
+				$label_serial['match'] = '([1-9]\d?)';
+				$label_serial['regex'] = '/' . preg_quote($label_serial['trigger']) . $label_serial['match'] . '/';
+				$label_serial['count'] = substr_count($a_option['volumelabel'], $label_serial['trigger']); // count occurrences of the initiating character
+				if ($label_serial['count'] > 0) { // one or more occurrences found?
+					if ($label_serial['count'] !== preg_match_all($label_serial['regex'], $a_option['volumelabel'])) { // count must match, otherwise something went wrong
+						$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."), gettext_gen2('Volume Label'));
+						$prerequisites_ok = false;
+						// invalid volume label pattern, we stay on page 2
+						$page_index = 2;
+						$a_control = $a_control_matrix[$page_index][$a_option['filesystem']];
+						$a_button = $a_button_matrix[$page_index];
+					}
+				}
+			} else { // invalid volume label pattern, we stay on page 2
+				$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."), gettext_gen2('Volume Label'));
 				$prerequisites_ok = false;
-				// invalid volume label defined, we stay on page 2
 				$page_index = 2;
 				$a_control = $a_control_matrix[$page_index][$a_option['filesystem']];
 				$a_button = $a_button_matrix[$page_index];
@@ -250,11 +266,27 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 	}
 	if ($prerequisites_ok) {
 		if (preg_match('/^(zfs)/', $a_option['filesystem']) && preg_match('/\S/', $a_option['volumelabel'])) {
-			$helpinghand = preg_quote('%$.-_', '/');
-			if (!preg_match('/^[a-z\d' . $helpinghand . ']+$/i', $a_option['volumelabel'])) {
-				$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters a-z, A-Z, 0-9 and (.)(-)(_)."), gettext_gen2('Volume Label'));
+			$helpinghand = preg_quote('[%$.-_', '/');
+			if (preg_match('/^[a-z\d' . $helpinghand . ']+$/i', $a_option['volumelabel'])) {
+				// additional check is required for adding serial number information to the label
+				$label_serial = [];
+				$label_serial['trigger'] = '[';
+				$label_serial['match'] = '([1-9]\d?)';
+				$label_serial['regex'] = '/' . preg_quote($label_serial['trigger']) . $label_serial['match'] . '/';
+				$label_serial['count'] = substr_count($a_option['volumelabel'], $label_serial['trigger']); // count occurrences of the initiating character
+				if ($label_serial['count'] > 0) { // one or more occurrences found?
+					if ($label_serial['count'] !== preg_match_all($label_serial['regex'], $a_option['volumelabel'])) { // count must match, otherwise something went wrong
+						$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] and [._-]."), gettext_gen2('Volume Label'));
+						$prerequisites_ok = false;
+						// invalid volume label defined, we stay on page 2
+						$page_index = 2;
+						$a_control = $a_control_matrix[$page_index][$a_option['filesystem']];
+						$a_button = $a_button_matrix[$page_index];
+					}
+				}
+			} else { // invalid volume label pattern, we stay on page 2
+				$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] and [._-]."), gettext_gen2('Volume Label'));
 				$prerequisites_ok = false;
-				// invalid volume label defined, we stay on page 2
 				$page_index = 2;
 				$a_control = $a_control_matrix[$page_index][$a_option['filesystem']];
 				$a_button = $a_button_matrix[$page_index];
@@ -283,11 +315,27 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 	}
 	if ($prerequisites_ok) {
 		if (preg_match('/^(ufsgpt|msdos)/', $a_option['filesystem']) && preg_match('/\S/', $a_option['volumelabel'])) {
-			$helpinghand = preg_quote('%$', '/');
-			if (!preg_match('/^[a-z\d' . $helpinghand . ']+$/i', $a_option['volumelabel'])) {
-				$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."), gettext_gen2('Volume Label'));
+			$helpinghand = preg_quote('[%$', '/');
+			if (preg_match('/^[a-z\d' . $helpinghand . ']+$/i', $a_option['volumelabel'])) {
+				// additional check is required for adding serial number information to the label
+				$label_serial = [];
+				$label_serial['trigger'] = '[';
+				$label_serial['match'] = '([1-9]\d?)';
+				$label_serial['regex'] = '/' . preg_quote($label_serial['trigger']) . $label_serial['match'] . '/';
+				$label_serial['count'] = substr_count($a_option['volumelabel'], $label_serial['trigger']); // count occurrences of the initiating character
+				if ($label_serial['count'] > 0) { // one or more occurrences found?
+					if ($label_serial['count'] !== preg_match_all($label_serial['regex'], $a_option['volumelabel'])) { // count must match, otherwise something went wrong
+						$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."), gettext_gen2('Volume Label'));
+						$prerequisites_ok = false;
+						// invalid volume label pattern, we stay on page 2
+						$page_index = 2;
+						$a_control = $a_control_matrix[$page_index][$a_option['filesystem']];
+						$a_button = $a_button_matrix[$page_index];
+					}
+				}
+			} else { // invalid volume label defined, we stay on page 3
+				$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."), gettext_gen2('Volume Label'));
 				$prerequisites_ok = false;
-				// invalid volume label defined, we stay on page 3
 				$page_index = 3;
 				$a_control = $a_control_matrix[$page_index][$a_option['filesystem']];
 				$a_button = $a_button_matrix[$page_index];
@@ -296,11 +344,27 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 	}
 	if ($prerequisites_ok) {
 		if (preg_match('/^(zfs)/', $a_option['filesystem']) && preg_match('/\S/', $a_option['volumelabel'])) {
-			$helpinghand = preg_quote('%$.-_', '/');
-			if (!preg_match('/^[a-z\d' . $helpinghand . ']+$/i', $a_option['volumelabel'])) {
-				$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters a-z, A-Z, 0-9 and (.)(-)(_)."), gettext_gen2('Volume Label'));
+			$helpinghand = preg_quote('[%$.-_', '/');
+			if (preg_match('/^[a-z\d' . $helpinghand . ']+$/i', $a_option['volumelabel'])) {
+				// additional check is required when adding serial number information to the label
+				$label_serial = [];
+				$label_serial['trigger'] = '[';
+				$label_serial['match'] = '([1-9]\d?)';
+				$label_serial['regex'] = '/' . preg_quote($label_serial['trigger']) . $label_serial['match'] . '/';
+				$label_serial['count'] = substr_count($a_option['volumelabel'], $label_serial['trigger']); // count occurrences of the initiating character
+				if ($label_serial['count'] > 0) { // one or more occurrences found?
+					if ($label_serial['count'] !== preg_match_all($label_serial['regex'], $a_option['volumelabel'])) { // count must match, otherwise something went wrong
+						$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] and [._-]"), gettext_gen2('Volume Label'));
+						$prerequisites_ok = false;
+						// invalid volume label pattern, we stay on page 2
+						$page_index = 2;
+						$a_control = $a_control_matrix[$page_index][$a_option['filesystem']];
+						$a_button = $a_button_matrix[$page_index];
+					}
+				}
+			} else { // invalid volume label defined, we stay on page 2
+				$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] and [._-]."), gettext_gen2('Volume Label'));
 				$prerequisites_ok = false;
-				// invalid volume label defined, we stay on page 2
 				$page_index = 2;
 				$a_control = $a_control_matrix[$page_index][$a_option['filesystem']];
 				$a_button = $a_button_matrix[$page_index];
@@ -316,33 +380,127 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 		$disk_options['zfsgpt'] = $a_option['zfsgpt'] ? 'p1' : ''; // set_conf_disk_fstype_opt knows how to deal with it if filesystem is not zfs
 		// check for allowed characters, otherwise reset volumelabel
 		$volumelabel_pattern = (preg_match('/(ufsgpt|msdos|zfs)/', $a_option['filesystem'])) ? $a_option['volumelabel'] : '';
-		// check if a counter is required
-		if (false !== preg_match_all('/%(\d*)/', $volumelabel_pattern, $a_pattern)) {
-			for($i = 0; $i < count($a_pattern[0]); $i++) {
-				$a_pattern[0][$i] = '/' . $a_pattern[0][$i] . '/';
-				if(empty($a_pattern[1][$i])) {
-					$a_pattern[1][$i] = 0;
+		// check if the device name is part of the volume label
+		$label_devname = [];
+		if (preg_match('/\S/', $volumelabel_pattern)) { // do we have a volumelabel pattern?
+			$label_devname['trigger'] = '$';
+			$label_devname['match'] = '';
+			$label_devname['regex'] = '/' . preg_quote($label_devname['trigger']) . $label_devname['match'] . '/';
+			$label_devname['count'] = substr_count($volumelabel_pattern, $label_devname['trigger']); // count occurrences of the initiating character
+			if ($label_devname['count'] > 0) { // one or more occurrences found?
+				if ($label_devname['count'] === preg_match_all($label_devname['regex'], $volumelabel_pattern, $helpinghand)) { // count must match, otherwise something went wrong
+					$label_devname['needle'] = $helpinghand[0];
+					$label_devname['origin'] = $helpinghand[1];
+					$label_devname['replacement'] = [];
+					$label_devname['pattern'] = [];
+					for($i = 0; $i < $label_devname['count']; $i++) {
+						$label_devname['pattern'][$i] = '/' . preg_quote($label_devname['needle'][$i], '/') . '/'; // make regex pattern
+						if(empty($label_devname['origin'][$i])) { // using empty is ok
+							$label_devname['replacement'][$i] = ''; // value of replacement if origin is empty
+						} else {
+							$label_devname['replacement'][$i] = ''; // value of replacement if origin is not empty
+						}
+					}
+				} else {
+					$label_devname = [];
+					$volumelabel_pattern = '';
 				}
+				unset($helpinghand);
+			} else {
+				$label_devname = [];
 			}
-		} else {
-			$a_pattern = [];
+		}
+		// check if counters are part of the volume label
+		$label_counter = [];
+		if (preg_match('/\S/', $volumelabel_pattern)) { // do we have a volumelabel pattern?
+			$label_counter['trigger'] = '%';
+			$label_counter['match'] = '(\d*)';
+			$label_counter['regex'] = '/' . preg_quote($label_counter['trigger']) . $label_counter['match'] . '/';
+			$label_counter['count'] = substr_count($volumelabel_pattern, $label_counter['trigger']); // count occurrences of the initiating character
+			if ($label_counter['count'] > 0) { // one or more occurrences found?
+				if ($label_counter['count'] === preg_match_all($label_counter['regex'], $volumelabel_pattern, $helpinghand)) { // count must match, otherwise something went wrong
+					$label_counter['needle'] = $helpinghand[0];
+					$label_counter['origin'] = $helpinghand[1];
+					$label_counter['replacement'] = [];
+					$label_counter['pattern'] = [];
+					for($i = 0; $i < $label_counter['count']; $i++) {
+						$label_counter['pattern'][$i] = '/' . preg_quote($label_counter['needle'][$i], '/') . '/'; // make regex pattern
+						if(empty($label_counter['origin'][$i])) {  // using empty is ok
+							$label_counter['replacement'][$i] = 0; // value of replacement if origin is empty
+						} else {
+							$label_counter['replacement'][$i] = $label_counter['origin'][$i]; // value of replacement if origin is not empty (starting number)
+						}
+					}
+				} else {
+					$label_counter = [];
+					$volumelabel_pattern = '';
+				}
+				unset($helpinghand);
+			} else {
+				$label_counter = [];
+			}
+		}
+
+		// check if the drive's serial number is part of the volume label
+		$label_serial = [];
+		if (preg_match('/\S/', $volumelabel_pattern)) { // do we have a volumelabel pattern?
+			$label_serial['trigger'] = '[';
+			$label_serial['match'] = '([1-9]\d?)';
+			$label_serial['regex'] = '/' . preg_quote($label_serial['trigger']) . $label_serial['match'] . '/';
+			$label_serial['count'] = substr_count($volumelabel_pattern, $label_serial['trigger']); // count occurrences of the initiating character
+			if ($label_serial['count'] > 0) { // one or more occurrences found?
+				if ($label_serial['count'] === preg_match_all($label_serial['regex'], $volumelabel_pattern, $helpinghand)) { // count must match, otherwise something went wrong
+					$label_serial['needle'] = $helpinghand[0];
+					$label_serial['origin'] = $helpinghand[1];
+					$label_serial['replacement'] = [];
+					$label_serial['pattern'] = [];
+					for($i = 0; $i < $label_serial['count']; $i++) {
+						$label_serial['pattern'][$i] = '/' . preg_quote($label_serial['needle'][$i], '/') . '/'; // make regex pattern
+						if(empty($label_serial['origin'][$i])) {  // using empty is ok
+							$label_serial['replacement'][$i] = ''; // value of replacement if origin is empty
+						} else {
+							$label_serial['replacement'][$i] = ''; // value of replacement if origin is not empty
+						}
+					}
+				} else {
+					$label_serial = [];
+					$volumelabel_pattern = '';
+				}
+				unset($helpinghand);
+			} else {
+				$label_serial = [];
+			}
 		}
 		foreach($a_option['checkbox_member_array'] as $checkbox_member_record) {
 			if (false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
 				if (!isset($sphere_array[$index]['protected'])) {
 					set_conf_disk_fstype_opt($sphere_array[$index]['devicespecialfile'], $a_option['filesystem'], $disk_options);
-					// apply counter
-					if (!empty($a_pattern)) {
-						$volumelabel = preg_replace($a_pattern[0], $a_pattern[1], $volumelabel_pattern, 1);
+					$volumelabel = $volumelabel_pattern;
+					// apply counter to label
+					if (!empty($label_counter)) {
+						$volumelabel = preg_replace($label_counter['pattern'], $label_counter['replacement'], $volumelabel, 1);
 						// increase counter;
-						for($i = 0; $i < count($a_pattern[1]); $i++) {
-							$a_pattern[1][$i]++;
+						for($i = 0; $i < $label_counter['count']; $i++) {
+							$label_counter['replacement'][$i]++;
 						}
-					} else {
-						$volumelabel = $volumelabel_pattern;
 					}
-					// replace possible $ with disk name
-					$volumelabel = str_replace('$', $sphere_array[$index]['name'], $volumelabel);
+					// apply serial number to label
+					if (!empty($label_serial)) {
+						for ($i = 0; $i < $label_serial['count']; $i++) {
+							if (false === ($label_serial['replacement'][$i] = substr($sphere_array[$index]['serial'], -$label_serial['origin'][$i], $label_serial['origin'][$i]))) {
+								$label_serial['replacement'][$i] = '';
+							}
+						}
+						$volumelabel = preg_replace($label_serial['pattern'], $label_serial['replacement'], $volumelabel, 1);
+					}
+					// apply disk name to label
+					if (!empty($label_devname)) {
+						for ($i = 0; $i < $label_devname['count']; $i++) {
+							$label_devname['replacement'][$i] = $sphere_array[$index]['name'] . $disk_options['zfsgpt'];
+						}
+						$volumelabel = preg_replace($label_devname['pattern'], $label_devname['replacement'], $volumelabel, 1);
+					}
+					// prepare format
 					$do_format[] = [
 						'devicespecialfile' => $sphere_array[$index]['devicespecialfile'],
 						'filesystem' => $a_option['filesystem'],
@@ -428,7 +586,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 				case 0: echo '<input name="filesystem" type="hidden" value="', $a_option['filesystem'], '"/>', "\n"; break;
 			}
 			switch ($a_control['volumelabel']) {
-				case 2: html_inputbox2('volumelabel', gettext_gen2('Volume Label'), $a_option['volumelabel'], gettext_gen2('Volume label of the new file system. Use $ for device name, % for a counter or %[startvalue] for a counter starting at startvalue.'), false,40, false); break;
+				case 2: html_inputbox2('volumelabel', gettext_gen2('Volume Label'), $a_option['volumelabel'], gettext_gen2('Volume label of the new file system. Use $ for device name, % for a counter or %n for a counter starting at n, [n for the n rightmost characters of the device serial number.'), false, 40, false); break;
 				case 1: html_inputbox2('volumelabel', gettext_gen2('Volume Label'), $a_option['volumelabel'], '', false, 100, true); break;
 				case 0: echo '<input name="volumelabel" type="hidden" value="', $a_option['volumelabel'], '"/>', "\n"; break;
 			}
