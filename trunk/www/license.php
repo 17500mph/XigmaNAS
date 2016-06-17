@@ -40,27 +40,27 @@ require("guiconfig.inc");
 $pgtitle = array(gettext("Help"), gettext("License & Credits"));
 ?>
 <?php include("fbegin.inc");?>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabcont">
 			<table width="100%" border="0" cellspacing="0" cellpadding="0">
 				<?php html_titleline(gettext("License"));?>
-				<tr>
-					<td class="listt">
-            <p><strong>NAS4Free is Copyright &copy; 2012-2016 The NAS4Free Project
+			<tr>
+<td class="listt">
+	     <p><strong>NAS4Free is Copyright &copy; 2012-2016 The NAS4Free Project
               (<a href="mailto:info@nas4free.org">info@nas4free.org</a>).<br />
               All rights reserved.</strong></p>
 
-		<p>The compilation of software, code and documentation known as NAS4Free is distributed under the following terms:</p>
-                <p>Redistribution and use in source and binary forms, with or without<br />
-                   modification, are permitted provided that the following conditions are met:</p>
+	     <p>The compilation of software, code and documentation known as NAS4Free is distributed under the following terms:</p>
+             <p>Redistribution and use in source and binary forms, with or without<br />
+                modification, are permitted provided that the following conditions are met:</p>
 
               1. Redistributions of source code must retain the above copyright notice,<br />
-              this list of conditions and the following disclaimer.<br />
+                 this list of conditions and the following disclaimer.<br />
               <br />
               2. Redistributions in binary form must reproduce the above copyright<br />
-              notice, this list of conditions and the following disclaimer in the<br />
-              documentation and/or other materials provided with the distribution.<br />
+                 notice, this list of conditions and the following disclaimer in the<br />
+                 documentation and/or other materials provided with the distribution.<br />
               <br />
 
               <strong>THIS SOFTWARE IS PROVIDED BY THE NAS4Free PROJECT ``AS IS'' AND ANY<br />
@@ -95,6 +95,8 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
 
 	    <hr size="1" />
 	    <p>The following persons have contributed to NAS4Free support:</p>
+	    <div>Tony Cat (<a href="mailto:tony1@nas4free.org">tony1@nas4free.org</a>) irc alias tony1<br />
+	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">User guide and Live support on irc #nas4free|IRC Freenode <a href="http://webchat.freenode.net/?channels=#nas4free">http://webchat.freenode.net</a></font></em></div><br />
 	    <div>Rhett Hillary (<a href="mailto:siftu@nas4free.org">siftu@nas4free.org</a>) irc alias SIFTU<br />
 	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">User guide and Live support on irc #nas4free|IRC Freenode <a href="http://webchat.freenode.net/?channels=#nas4free">http://webchat.freenode.net</a></font></em></div><br />
 
