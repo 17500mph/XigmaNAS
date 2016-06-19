@@ -672,7 +672,7 @@ pre.cmdoutput {
 	.lceadd: cell containing the add icon, default .lcebld
 */
 
-.lhell, .lhebl, .lhelc, .lhebc {
+.lhell, .lhebl, .lhelc, .lhebc, .lhelr, .lhebr {
 	margin: 0;
 	border-top-width: 0;
 	border-bottom: 1px solid #999999;
@@ -687,7 +687,7 @@ pre.cmdoutput {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-.lcenl, .lcell, .lcebl, .lcelc, .lcebc, .lcelld, .lcebld, .lceadd, .lcelcd, .lcebcd {
+.lcell, .lcebl, .lcelc, .lcebc, .lcelld, .lcebld, .lcelcd, .lcebcd, .lcelr, .lcebr, .lcelrd, .lcebrd, .lceadd, .lcenl {
 	margin: 0;
 	border-top-width: 0;
 	padding-top: 4px;
@@ -701,28 +701,31 @@ pre.cmdoutput {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-.lcell, .lcebl, .lcelc, .lcebc, .lcelld, .lcebld, .lceadd, .lcelcd, .lcebcd {
-	border-bottom: 1px solid #999999;
+.lcell, .lcebl, .lcelc, .lcebc, .lcelld, .lcebld, .lcelcd, .lcebcd, .lcelr, .lcebr, .lcelrd, .lceadd {
+    border-bottom: 1px solid #999999;
 }
 .lcenl {
-	border-bottom-width: 0;
+    border-bottom-width: 0;
 }
-.lhell, .lhebl, .lhelc, .lhebc, .lcell, .lcebl, .lcelc, .lcebc, .lcelld, .lcebld, .lceadd, .lcelcd, .lcebcd {
-	border-left: 1px solid #999999;
+.lhell, .lhebl, .lhelc, .lhebc, .lhelr, .lhebr, .lcell, .lcebl, .lcelc, .lcebc, .lcelr, .lcebr, .lcelld, .lcebld, .lceadd, .lcelcd, .lcebcd, .lcelrd, .lcebrd {
+    border-left: 1px solid #999999;
 }
-.lhebl, .lhebc, .lcebl, .lcebc, .lcebld, .lceadd, .lcebcd {
-	border-right: 1px solid #999999;
+.lhebl, .lhebc, .lhebr, .lcebl, .lcebc, .lcebr, .lcebld, .lcebcd, .lcebrd, .lceadd {
+    border-right: 1px solid #999999;
 }
 .lhell, .lhebl, .lcell, .lcebl, .lcelld, .lcebld, .lceadd {
-	text-align: left;
+    text-align: left;
 }
 .lhelc, .lhebc, .lcelc, .lcebc, .lcelcd, .lcebcd {
-	text-align: center;
+    text-align: center;
 }
-.lcell, .lcebl, .lcelc, .lcebc {
+.lhelr, .lhebr, .lcelr, .lcebr, .lcelrd, .lcebrd {
+    text-align: right;
+}
+.lcell, .lcebl, .lcelc, .lcebc, .lcelr, .lcebr {
 	background-color: #FCFCFC;
 }
-.lcelld, .lcebld, .lceadd, .lcelcd, .lcebcd {
+.lcelld, .lcebld, .lceadd, .lcelcd, .lcebcd, .lcelrd, .lcebrd {
 	background-color: #E0E0E0;
 }
 .lhetop {
