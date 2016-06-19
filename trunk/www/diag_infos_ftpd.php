@@ -6,15 +6,12 @@
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
-	Portions of freenas (http://www.freenas.org).
-	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
-	All rights reserved.
-
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -37,45 +34,46 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Diagnostics"), gettext("Information"), gettext("FTP"));
+$pgtitle = array(gettext_gen2("Diagnostics"), gettext_gen2("Information"), gettext_gen2("FTP"));
 ?>
 <?php include("fbegin.inc");?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabinact"><a href="diag_infos.php"><span><?=gettext("Disks");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_ata.php"><span><?=gettext("Disks (ATA)");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_part.php"><span><?=gettext("Partitions");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_smart.php"><span><?=gettext("S.M.A.R.T.");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_space.php"><span><?=gettext("Space Used");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_mount.php"><span><?=gettext("Mounts");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_raid.php"><span><?=gettext("Software RAID");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos.php"><span><?=gettext_gen2("Disks");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_ata.php"><span><?=gettext_gen2("Disks (ATA)");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_part.php"><span><?=gettext_gen2("Partitions");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_smart.php"><span><?=gettext_gen2("S.M.A.R.T.");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_space.php"><span><?=gettext_gen2("Space Used");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_mount.php"><span><?=gettext_gen2("Mounts");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_raid.php"><span><?=gettext_gen2("Software RAID");?></span></a></li>
 		  </ul>
 	  </td>
 	</tr>
   <tr>
 		<td class="tabnavtbl">
 		  <ul id="tabnav2">
-				<li class="tabinact"><a href="diag_infos_iscsi.php"><span><?=gettext("iSCSI Initiator");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_ad.php"><span><?=gettext("MS Domain");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_samba.php"><span><?=gettext("CIFS/SMB");?></span></a></li>
-				<li class="tabact"><a href="diag_infos_ftpd.php" title="<?=gettext("Reload page");?>"><span><?=gettext("FTP");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_rsync_client.php"><span><?=gettext("RSYNC Client");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_swap.php"><span><?=gettext("Swap");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_sockets.php"><span><?=gettext("Sockets");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_ups.php"><span><?=gettext("UPS");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_iscsi.php"><span><?=gettext_gen2("iSCSI Initiator");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_ad.php"><span><?=gettext_gen2("MS Domain");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_samba.php"><span><?=gettext_gen2("CIFS/SMB");?></span></a></li>
+				<li class="tabact"><a href="diag_infos_ftpd.php" title="<?=gettext_gen2("Reload page");?>"><span><?=gettext_gen2("FTP");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_rsync_client.php"><span><?=gettext_gen2("RSYNC Client");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_swap.php"><span><?=gettext_gen2("Swap");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_sockets.php"><span><?=gettext_gen2("Sockets");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_ipmi.php"><span><?=gettext_gen2('IPMI Stats');?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_ups.php"><span><?=gettext_gen2("UPS");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
   <tr>
     <td class="tabcont">
     	<table width="100%" border="0">
-    		<?php html_titleline(gettext("Connected FTP Users & Status"));?>
+    		<?php html_titleline(gettext_gen2("Connected FTP Users & Status"));?>
 				<tr>
 			    <td>
 			    	<?php if (!isset($config['ftpd']['enable'])):?>
-			    	<pre><?=gettext("FTP server disabled");?></pre>
+			    	<pre><?=gettext_gen2("FTP server disabled");?></pre>
 			    	<?php else:?>
 			    	<pre><?php
 			    	exec("/usr/local/bin/ftpwho -v", $rawdata);
