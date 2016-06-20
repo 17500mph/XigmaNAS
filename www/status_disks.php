@@ -56,6 +56,7 @@ $raidstatus = get_sraid_disks_list();
 	<tr>
 		<td class="tabcont">
 			<table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<?php html_titleline(gettext('Status & Information'), 9);?>
 				<tr>
 					<td width="5%" class="listhdrlr"><?=gettext("Device");?></td>
 					<td width="7%" class="listhdrr"><?=gettext("Size");?></td>
