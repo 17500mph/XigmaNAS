@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-17 19:08+0000\n"
+"POT-Creation-Date: 2016-06-20 03:00+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-17 17:45+0000\n"
+"X-Launchpad-Export-Date: 2016-06-20 01:41+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -265,10 +265,7 @@ msgstr ""
 "키는 로컬 네트워크와 어댑터의 능력에 따라 5자나 13자(40비트나 104비트)의 문자일 것입니다. 이것은 일반 문자열 혹은 '0x'에 "
 "뒤따라오는 16진 숫자의 문자열로 분류합니다."
 
-#, php-format
-msgid ""
-"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
+msgid "A mounted RAID volume cannot be deleted."
 msgstr ""
 
 msgid "A route to this destination network already exists."
@@ -3490,6 +3487,15 @@ msgstr "원격 Rsync 서버의 IP나 FQDN 주소."
 msgid "IP type mismatch for network and gateway."
 msgstr "IP 타입이 네트워크, 게이트웨이와 일치하지 않습니다."
 
+msgid "IPMI FRU"
+msgstr ""
+
+msgid "IPMI Sensor"
+msgstr ""
+
+msgid "IPMI Stats"
+msgstr ""
+
 msgid "IPv4 Configuration"
 msgstr "IPv4 설정"
 
@@ -4223,6 +4229,9 @@ msgstr ""
 msgid "Low voltage trimming transfer point"
 msgstr ""
 
+msgid "Lower"
+msgstr ""
+
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4704,6 +4713,12 @@ msgstr "아니오"
 msgid "No DNS setting found."
 msgstr ""
 
+msgid "No IPMI FRU data available."
+msgstr ""
+
+msgid "No IPMI sensor data available."
+msgstr ""
+
 msgid "No RSYNC Client configured"
 msgstr "RSYNC 클라이언트가 구성되지 않았음"
 
@@ -4832,6 +4847,12 @@ msgid "Nominal value of apparent power (Volt-Amps)"
 msgstr ""
 
 msgid "Nominal value of real power (Watts)"
+msgstr ""
+
+msgid "Non-Critical"
+msgstr ""
+
+msgid "Non-Recoverable"
 msgstr ""
 
 msgid "None"
@@ -5582,6 +5603,9 @@ msgstr "EOM에 도달하면 파일 크기를 확장하는 이동식을 위한 �
 msgid "Read/Write Access"
 msgstr "읽기/쓰기 접근"
 
+msgid "Reading"
+msgstr ""
+
 msgid "Readonly"
 msgstr "읽기 전용"
 
@@ -5673,6 +5697,10 @@ msgstr "이동식"
 
 msgid "Remove all entries from ARP table"
 msgstr "ARP 테이블에서 모든 엔트리 제거"
+
+#, php-format
+msgid "Remove the %s first before proceeding."
+msgstr ""
 
 msgid "Replace Battery UPS"
 msgstr ""
@@ -6065,6 +6093,9 @@ msgstr "지금 보내기"
 msgid "Sensitive"
 msgstr ""
 
+msgid "Sensor"
+msgstr ""
+
 msgid "Sep"
 msgstr ""
 
@@ -6243,6 +6274,9 @@ msgstr "슬로바키아어"
 
 msgid "Slovenian"
 msgstr "슬로베니아어"
+
+msgid "Smart Outlet Management"
+msgstr ""
 
 msgid "SmartBoost"
 msgstr ""
@@ -6546,6 +6580,9 @@ msgid "System Information"
 msgstr ""
 
 msgid "System Load"
+msgstr ""
+
+msgid "System Message"
 msgstr ""
 
 msgid "System Settings"
@@ -8309,6 +8346,9 @@ msgstr ""
 msgid "Upload directory of the webserver. The default is %s."
 msgstr ""
 
+msgid "Upper"
+msgstr ""
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -8919,6 +8959,9 @@ msgstr "분"
 
 msgid "mount"
 msgstr "마운트"
+
+msgid "mount point"
+msgstr ""
 
 msgid "n/a"
 msgstr "n/a"

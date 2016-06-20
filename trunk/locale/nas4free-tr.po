@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-06-17 19:08+0000\n"
+"POT-Creation-Date: 2016-06-20 03:00+0000\n"
 "PO-Revision-Date: 2016-05-01 23:59+0000\n"
 "Last-Translator: ozdesoner <ozdesoner@msn.com>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-17 17:45+0000\n"
+"X-Launchpad-Export-Date: 2016-06-20 01:42+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
@@ -261,10 +261,7 @@ msgid ""
 "'0x'."
 msgstr ""
 
-#, php-format
-msgid ""
-"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
+msgid "A mounted RAID volume cannot be deleted."
 msgstr ""
 
 msgid "A route to this destination network already exists."
@@ -3495,6 +3492,15 @@ msgstr ""
 msgid "IP type mismatch for network and gateway."
 msgstr "Ağ geçidi ve network için uyumsuz ip türü"
 
+msgid "IPMI FRU"
+msgstr ""
+
+msgid "IPMI Sensor"
+msgstr ""
+
+msgid "IPMI Stats"
+msgstr ""
+
 msgid "IPv4 Configuration"
 msgstr "IPv4 Yapılandırması"
 
@@ -4221,6 +4227,9 @@ msgstr ""
 msgid "Low voltage trimming transfer point"
 msgstr ""
 
+msgid "Lower"
+msgstr ""
+
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4700,6 +4709,12 @@ msgstr "Hayır"
 msgid "No DNS setting found."
 msgstr ""
 
+msgid "No IPMI FRU data available."
+msgstr ""
+
+msgid "No IPMI sensor data available."
+msgstr ""
+
 msgid "No RSYNC Client configured"
 msgstr "Yapılandırılmış RSYNC Client yok"
 
@@ -4835,6 +4850,12 @@ msgid "Nominal value of apparent power (Volt-Amps)"
 msgstr ""
 
 msgid "Nominal value of real power (Watts)"
+msgstr ""
+
+msgid "Non-Critical"
+msgstr ""
+
+msgid "Non-Recoverable"
 msgstr ""
 
 msgid "None"
@@ -5579,6 +5600,9 @@ msgstr ""
 msgid "Read/Write Access"
 msgstr ""
 
+msgid "Reading"
+msgstr ""
+
 msgid "Readonly"
 msgstr "Saltokunur"
 
@@ -5669,6 +5693,10 @@ msgid "Removable"
 msgstr ""
 
 msgid "Remove all entries from ARP table"
+msgstr ""
+
+#, php-format
+msgid "Remove the %s first before proceeding."
 msgstr ""
 
 msgid "Replace Battery UPS"
@@ -6060,6 +6088,9 @@ msgstr "Şimdigönder"
 msgid "Sensitive"
 msgstr ""
 
+msgid "Sensor"
+msgstr ""
+
 msgid "Sep"
 msgstr ""
 
@@ -6235,6 +6266,9 @@ msgid "Slovak"
 msgstr ""
 
 msgid "Slovenian"
+msgstr ""
+
+msgid "Smart Outlet Management"
 msgstr ""
 
 msgid "SmartBoost"
@@ -6537,6 +6571,9 @@ msgid "System Information"
 msgstr ""
 
 msgid "System Load"
+msgstr ""
+
+msgid "System Message"
 msgstr ""
 
 msgid "System Settings"
@@ -8244,6 +8281,9 @@ msgstr ""
 msgid "Upload directory of the webserver. The default is %s."
 msgstr ""
 
+msgid "Upper"
+msgstr ""
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -8847,6 +8887,9 @@ msgid "minute(s)"
 msgstr "dakika(lar)"
 
 msgid "mount"
+msgstr ""
+
+msgid "mount point"
 msgstr ""
 
 msgid "n/a"

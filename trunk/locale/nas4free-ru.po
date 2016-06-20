@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-17 19:08+0000\n"
+"POT-Creation-Date: 2016-06-20 03:00+0000\n"
 "PO-Revision-Date: 2016-06-17 17:31+0000\n"
 "Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-19 23:49+0000\n"
+"X-Launchpad-Export-Date: 2016-06-20 01:41+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -306,13 +306,8 @@ msgstr ""
 "от сети и возможностей адаптера. Может быть задан либо как текстовая строка, "
 "либо в шестнадцатеричном формате (начиная с '0x')."
 
-#, php-format
-msgid ""
-"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
+msgid "A mounted RAID volume cannot be deleted."
 msgstr ""
-"Подключенный том RAID не может быть удален. Удалите <a href='%s'> точку "
-"монтирования </a>, прежде чем продолжить."
 
 msgid "A route to this destination network already exists."
 msgstr "Маршрут к этой сети уже существует."
@@ -3776,6 +3771,15 @@ msgstr "IP- или FQDN-адрес удаленного сервера Rsync."
 msgid "IP type mismatch for network and gateway."
 msgstr "Несовпадение IP для подсети и шлюза"
 
+msgid "IPMI FRU"
+msgstr ""
+
+msgid "IPMI Sensor"
+msgstr ""
+
+msgid "IPMI Stats"
+msgstr ""
+
 msgid "IPv4 Configuration"
 msgstr "Конфигурация IPv4"
 
@@ -4581,6 +4585,9 @@ msgstr "Нижняя граница напряжения для переключ
 msgid "Low voltage trimming transfer point"
 msgstr "Нижняя граница напряжения для режима понижения (trimming)"
 
+msgid "Lower"
+msgstr ""
+
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -5089,6 +5096,12 @@ msgstr "Нет"
 msgid "No DNS setting found."
 msgstr "Настройка DNS не найдена."
 
+msgid "No IPMI FRU data available."
+msgstr ""
+
+msgid "No IPMI sensor data available."
+msgstr ""
+
 msgid "No RSYNC Client configured"
 msgstr "Нет настроенных клиентов Rsync"
 
@@ -5238,6 +5251,12 @@ msgstr "Номинальная полная мощность (ВА)"
 
 msgid "Nominal value of real power (Watts)"
 msgstr "Номинальная действующая мощность (Вт)"
+
+msgid "Non-Critical"
+msgstr ""
+
+msgid "Non-Recoverable"
+msgstr ""
 
 msgid "None"
 msgstr "Нет"
@@ -6022,6 +6041,9 @@ msgstr ""
 msgid "Read/Write Access"
 msgstr "Доступ на чтение/запись"
 
+msgid "Reading"
+msgstr ""
+
 msgid "Readonly"
 msgstr "Только чтение"
 
@@ -6117,6 +6139,10 @@ msgstr "Сменный носитель"
 
 msgid "Remove all entries from ARP table"
 msgstr "Удалить все записи из ARP-таблицы"
+
+#, php-format
+msgid "Remove the %s first before proceeding."
+msgstr ""
 
 msgid "Replace Battery UPS"
 msgstr "Замените батарею ИБП (UPS)"
@@ -6525,6 +6551,9 @@ msgstr "Отправить немедленно"
 msgid "Sensitive"
 msgstr "Чувствительный"
 
+msgid "Sensor"
+msgstr ""
+
 msgid "Sep"
 msgstr "сен."
 
@@ -6721,6 +6750,9 @@ msgstr "Словацкий"
 
 msgid "Slovenian"
 msgstr "Словенский"
+
+msgid "Smart Outlet Management"
+msgstr ""
 
 msgid "SmartBoost"
 msgstr "SmartBoost (повышение входного напряжения)"
@@ -7049,6 +7081,9 @@ msgstr "Информация о системе"
 
 msgid "System Load"
 msgstr "Загрузка системы"
+
+msgid "System Message"
+msgstr ""
 
 msgid "System Settings"
 msgstr "Настройки системы"
@@ -9076,6 +9111,9 @@ msgstr "Папка для загрузок"
 msgid "Upload directory of the webserver. The default is %s."
 msgstr "Папка для загрузок на сервер. Путь по умолчанию %s"
 
+msgid "Upper"
+msgstr ""
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -9750,6 +9788,9 @@ msgstr "мин."
 msgid "mount"
 msgstr "монтировать"
 
+msgid "mount point"
+msgstr ""
+
 msgid "n/a"
 msgstr "n/a"
 
@@ -9808,3 +9849,11 @@ msgstr "размонтировать"
 
 msgid "version:"
 msgstr "версия:"
+
+#, php-format
+#~ msgid ""
+#~ "A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
+#~ "point</a> first before proceeding."
+#~ msgstr ""
+#~ "Подключенный том RAID не может быть удален. Удалите <a href='%s'> точку "
+#~ "монтирования </a>, прежде чем продолжить."

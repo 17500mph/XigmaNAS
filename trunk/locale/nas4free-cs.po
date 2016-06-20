@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-17 19:08+0000\n"
+"POT-Creation-Date: 2016-06-20 03:00+0000\n"
 "PO-Revision-Date: 2016-06-11 18:39+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-17 17:46+0000\n"
+"X-Launchpad-Export-Date: 2016-06-20 01:41+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -314,13 +314,8 @@ msgstr ""
 "osmičkových číslic (ve druhém jmenovaném případě předeslaný „0x“ – nula a "
 "malé písmeno iks)."
 
-#, php-format
-msgid ""
-"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
+msgid "A mounted RAID volume cannot be deleted."
 msgstr ""
-"Nelze smazat RAID svazek, který je připojen (mount). Nejdříve je třeba "
-"odebrat <a href='%s'>přípojný bod</a> a pak teprve přistoupit k mazání."
 
 msgid "A route to this destination network already exists."
 msgstr "Trasa do této cílové sítě už existuje."
@@ -3813,6 +3808,15 @@ msgstr "IP adresa nebo úplný doménový název (FQDN) vzdáleného Rsync serve
 msgid "IP type mismatch for network and gateway."
 msgstr "Typ IP adresy sítě neodpovídá tomu u brány."
 
+msgid "IPMI FRU"
+msgstr ""
+
+msgid "IPMI Sensor"
+msgstr ""
+
+msgid "IPMI Stats"
+msgstr ""
+
 msgid "IPv4 Configuration"
 msgstr "Nastavení IPv4"
 
@@ -4629,6 +4633,9 @@ msgstr ""
 "Úroveň podpětí, od které je pro napájená zařízení už přijatelné a není tedy "
 "třeba vyrovnávat a zatěžovat tak transformátor UPS zdroje"
 
+msgid "Lower"
+msgstr ""
+
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -5141,6 +5148,12 @@ msgstr "Ne"
 msgid "No DNS setting found."
 msgstr "Nebyla nalezena žádná nastavení DNS."
 
+msgid "No IPMI FRU data available."
+msgstr ""
+
+msgid "No IPMI sensor data available."
+msgstr ""
+
 msgid "No RSYNC Client configured"
 msgstr "Není nastaven žádný RSYNC klient"
 
@@ -5288,6 +5301,12 @@ msgstr "Jmenovitá hodnota zdánlivého výkonu (VA)"
 
 msgid "Nominal value of real power (Watts)"
 msgstr "Jmenovitá hodnota činného výkonu (W)"
+
+msgid "Non-Critical"
+msgstr ""
+
+msgid "Non-Recoverable"
+msgstr ""
 
 msgid "None"
 msgstr "Žádné"
@@ -6078,6 +6097,9 @@ msgstr ""
 msgid "Read/Write Access"
 msgstr "Přístup pro čtení a zápis"
 
+msgid "Reading"
+msgstr ""
+
 msgid "Readonly"
 msgstr "Pouze čtení"
 
@@ -6174,6 +6196,10 @@ msgstr "Vyjímatelné"
 
 msgid "Remove all entries from ARP table"
 msgstr "Odstranit všechny záznamy z ARP tabulky"
+
+#, php-format
+msgid "Remove the %s first before proceeding."
+msgstr ""
 
 msgid "Replace Battery UPS"
 msgstr "Vyměňte akumulátory v UPS zdroji"
@@ -6590,6 +6616,9 @@ msgstr "Odeslat nyní"
 msgid "Sensitive"
 msgstr "Rozlišovat"
 
+msgid "Sensor"
+msgstr ""
+
 msgid "Sep"
 msgstr "zář"
 
@@ -6783,6 +6812,9 @@ msgstr "slovenština"
 
 msgid "Slovenian"
 msgstr "slovinština"
+
+msgid "Smart Outlet Management"
+msgstr ""
 
 msgid "SmartBoost"
 msgstr "SmartBoost (vyrovnání podpětí)"
@@ -7106,6 +7138,9 @@ msgstr "Informace o systému"
 
 msgid "System Load"
 msgstr "Vytížení systému"
+
+msgid "System Message"
+msgstr ""
 
 msgid "System Settings"
 msgstr "Nastavení systému"
@@ -9133,6 +9168,9 @@ msgstr "Složka pro nahrávání"
 msgid "Upload directory of the webserver. The default is %s."
 msgstr "Složka pro nahrávání na webový server. Výchozí je %s."
 
+msgid "Upper"
+msgstr ""
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -9806,6 +9844,9 @@ msgstr "minut"
 msgid "mount"
 msgstr "připojit (mount)"
 
+msgid "mount point"
+msgstr ""
+
 msgid "n/a"
 msgstr "není k dispozici"
 
@@ -9866,3 +9907,11 @@ msgstr "odpojit (umount)"
 
 msgid "version:"
 msgstr "verze:"
+
+#, php-format
+#~ msgid ""
+#~ "A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
+#~ "point</a> first before proceeding."
+#~ msgstr ""
+#~ "Nelze smazat RAID svazek, který je připojen (mount). Nejdříve je třeba "
+#~ "odebrat <a href='%s'>přípojný bod</a> a pak teprve přistoupit k mazání."

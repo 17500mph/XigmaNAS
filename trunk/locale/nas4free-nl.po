@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-17 19:08+0000\n"
-"PO-Revision-Date: 2016-06-17 17:42+0000\n"
+"POT-Creation-Date: 2016-06-20 03:00+0000\n"
+"PO-Revision-Date: 2016-06-20 01:35+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-17 17:46+0000\n"
+"X-Launchpad-Export-Date: 2016-06-20 01:41+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -319,13 +319,8 @@ msgstr ""
 "gespecificeerd worden als gewone text of als een text van hexadecimale "
 "cijfers voorafgegaan met '0x'."
 
-#, php-format
-msgid ""
-"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
-msgstr ""
-"Een gekoppelde RAID volume kan niet worden verwijderd. Verwijder het <a "
-"href='%s'>koppelpunt</a> eerst voor u verder gaat."
+msgid "A mounted RAID volume cannot be deleted."
+msgstr "Een gekoppelde RAID volume kan niet worden verwijderd."
 
 msgid "A route to this destination network already exists."
 msgstr "Een route naar dit bestemmingsnetwerk bestaat reeds."
@@ -3820,6 +3815,15 @@ msgstr "IP of FQDN adres van de remote Rsync server."
 msgid "IP type mismatch for network and gateway."
 msgstr "Het IP-adres komt niet overeen met het netwerk of de gateway."
 
+msgid "IPMI FRU"
+msgstr "IPMI FRU"
+
+msgid "IPMI Sensor"
+msgstr "IPMI Sensors"
+
+msgid "IPMI Stats"
+msgstr "IPMI Stats"
+
 msgid "IPv4 Configuration"
 msgstr "IPv4 Configuratie"
 
@@ -4632,6 +4636,9 @@ msgstr "Laag voltage overschakelpunt"
 msgid "Low voltage trimming transfer point"
 msgstr "Laag voltage trimming overschakelpunt"
 
+msgid "Lower"
+msgstr "Laag"
+
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -5144,6 +5151,12 @@ msgstr "Nee"
 msgid "No DNS setting found."
 msgstr "Geen DNS instellingen gevonden."
 
+msgid "No IPMI FRU data available."
+msgstr "Geen IPMI FRU gegevens beschikbaar."
+
+msgid "No IPMI sensor data available."
+msgstr "Geen IPMI sensorgegevens beschikbaar."
+
 msgid "No RSYNC Client configured"
 msgstr "Er zijn geen RSYNC Werkstations geconfigureerd"
 
@@ -5292,6 +5305,12 @@ msgstr "Nominale waarde van schijnbaar vermogen (Volt-Amps)"
 
 msgid "Nominal value of real power (Watts)"
 msgstr "Stroomcapaciteit (watt)"
+
+msgid "Non-Critical"
+msgstr "Niet-kritieke"
+
+msgid "Non-Recoverable"
+msgstr "Niet-Herstelbaar"
 
 msgid "None"
 msgstr "Geen"
@@ -6080,6 +6099,9 @@ msgstr ""
 msgid "Read/Write Access"
 msgstr "Lees/Schrijf Toegang"
 
+msgid "Reading"
+msgstr "Uitkomst"
+
 msgid "Readonly"
 msgstr "Alleen-lezen"
 
@@ -6175,6 +6197,10 @@ msgstr "Verwijderbaar"
 
 msgid "Remove all entries from ARP table"
 msgstr "Alle ARP regels verwijderen uit de tabel"
+
+#, php-format
+msgid "Remove the %s first before proceeding."
+msgstr "Verwijder de %s eerst voor u verder gaat."
 
 msgid "Replace Battery UPS"
 msgstr "Vervang Batterij UPS"
@@ -6594,6 +6620,9 @@ msgstr "Nu versturen"
 msgid "Sensitive"
 msgstr "Gevoelig"
 
+msgid "Sensor"
+msgstr "Sensor"
+
 msgid "Sep"
 msgstr "Sep"
 
@@ -6789,6 +6818,9 @@ msgstr "Slowaaks"
 
 msgid "Slovenian"
 msgstr "Sloveens"
+
+msgid "Smart Outlet Management"
+msgstr "Slim Uithangsbeheer"
 
 msgid "SmartBoost"
 msgstr "SmartBoost"
@@ -7121,6 +7153,9 @@ msgstr "Systeemoverzicht"
 
 msgid "System Load"
 msgstr "Systeembelasting"
+
+msgid "System Message"
+msgstr "Systeembericht"
 
 msgid "System Settings"
 msgstr "Systeem Instellingen"
@@ -9180,6 +9215,9 @@ msgstr "Upload folder"
 msgid "Upload directory of the webserver. The default is %s."
 msgstr "Webserver upload folder. Standaard %s."
 
+msgid "Upper"
+msgstr "Hoog"
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -9850,6 +9888,9 @@ msgstr "minu(u)t(en)"
 msgid "mount"
 msgstr "aankoppelen"
 
+msgid "mount point"
+msgstr "Koppelpunt"
+
 msgid "n/a"
 msgstr "n.v.t."
 
@@ -9907,18 +9948,10 @@ msgstr "loskoppelen"
 msgid "version:"
 msgstr "versie:"
 
-#~ msgid "Page"
-#~ msgstr "Pagina"
-
 #, php-format
 #~ msgid ""
-#~ "The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
+#~ "A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
+#~ "point</a> first before proceeding."
 #~ msgstr ""
-#~ "Het attribuut '%s' kan alleen bestaan uit de karakters a-z, A-Z and 0-9."
-
-#~ msgid ""
-#~ "Volume label of the new file system. Use $ for device name, % for a counter "
-#~ "or %[startvalue] for a counter starting at startvalue."
-#~ msgstr ""
-#~ "De volumenaam van het nieuwe bestandssysteem. Gebruik $ voor apparaatnaam, % "
-#~ "voor een nummer of %[startwaarde] voor een nummer startend bij startwaarde."
+#~ "Een gekoppelde RAID volume kan niet worden verwijderd. Verwijder het <a "
+#~ "href='%s'>koppelpunt</a> eerst voor u verder gaat."
