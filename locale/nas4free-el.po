@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-17 19:08+0000\n"
+"POT-Creation-Date: 2016-06-20 03:00+0000\n"
 "PO-Revision-Date: 2016-06-17 07:42+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-17 17:46+0000\n"
+"X-Launchpad-Export-Date: 2016-06-20 01:41+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -321,13 +321,8 @@ msgstr ""
 "σας. Είναι δυνατό να προσδιορισθεί είτε ως απλή συμβολοσειρά ή ως μια σειρά "
 "από δεκαεξαδικά ψηφία στα οποία θα προηγείται το '0x'."
 
-#, php-format
-msgid ""
-"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
+msgid "A mounted RAID volume cannot be deleted."
 msgstr ""
-"Οι προσαρτημένοι τόμοι RAID δεν μπορούν να διαγραφούν. Αφαιρέστε πρώτα το <a "
-"href='%s'>σημείο προσάρτησης</a> πριν συνεχίσετε."
 
 msgid "A route to this destination network already exists."
 msgstr "Υπάρχει ήδη μια διαδρομή προς αυτόν τον προορισμό δικτύου."
@@ -3860,6 +3855,15 @@ msgstr ""
 "Ασυμφωνία του τύπου της IP διεύθυνσης με το δίκτυο και την προεπιλεγμένη "
 "πύλη."
 
+msgid "IPMI FRU"
+msgstr ""
+
+msgid "IPMI Sensor"
+msgstr ""
+
+msgid "IPMI Stats"
+msgstr ""
+
 msgid "IPv4 Configuration"
 msgstr "Ρύθμιση IPv4"
 
@@ -4682,6 +4686,9 @@ msgstr "Σημείο μεταφοράς χαμηλής τάσης"
 msgid "Low voltage trimming transfer point"
 msgstr "Σημείο για μεταφορά σε εκτόνωση χαμηλής τάσης"
 
+msgid "Lower"
+msgstr ""
+
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -5191,6 +5198,12 @@ msgstr "Όχι"
 msgid "No DNS setting found."
 msgstr "Δεν βρέθηκε ρύθμιση DNS."
 
+msgid "No IPMI FRU data available."
+msgstr ""
+
+msgid "No IPMI sensor data available."
+msgstr ""
+
 msgid "No RSYNC Client configured"
 msgstr "Δε ρυθμίστηκε Πελάτης RSYNC"
 
@@ -5340,6 +5353,12 @@ msgstr "Ονομαστική τιμή φαινόμενης ισχύος (Volt-Am
 
 msgid "Nominal value of real power (Watts)"
 msgstr "Ονομαστική τιμή πραγματικής ισχύος (Watts)"
+
+msgid "Non-Critical"
+msgstr ""
+
+msgid "Non-Recoverable"
+msgstr ""
 
 msgid "None"
 msgstr "Κανένα"
@@ -6137,6 +6156,9 @@ msgstr ""
 msgid "Read/Write Access"
 msgstr "Πρόσβαση Ανάγνωσης/Εγγραφής"
 
+msgid "Reading"
+msgstr ""
+
 msgid "Readonly"
 msgstr "Μόνο για ανάγνωση"
 
@@ -6232,6 +6254,10 @@ msgstr "Αφαιρούμενο μέσο"
 
 msgid "Remove all entries from ARP table"
 msgstr "Αφαίρεση όλων των καταχωρήσεων από τον πίνακα ARP"
+
+#, php-format
+msgid "Remove the %s first before proceeding."
+msgstr ""
 
 msgid "Replace Battery UPS"
 msgstr "Αντικαταστήστε τη μπαταρία του UPS"
@@ -6655,6 +6681,9 @@ msgstr "Αποστολή τώρα"
 msgid "Sensitive"
 msgstr "Διαχωρισμός"
 
+msgid "Sensor"
+msgstr ""
+
 msgid "Sep"
 msgstr "Σεπ."
 
@@ -6855,6 +6884,9 @@ msgstr "Σλοβακικά"
 
 msgid "Slovenian"
 msgstr "Σλοβενικά"
+
+msgid "Smart Outlet Management"
+msgstr ""
 
 msgid "SmartBoost"
 msgstr "SmartBoost"
@@ -7185,6 +7217,9 @@ msgstr "Πληροφορίες Συστήματος"
 
 msgid "System Load"
 msgstr "Φόρτος Συστήματος"
+
+msgid "System Message"
+msgstr ""
 
 msgid "System Settings"
 msgstr "Ρυθμίσεις Συστήματος"
@@ -9287,6 +9322,9 @@ msgstr ""
 "Ο φάκελος του διακομιστή web για αποστολές αρχείων. Ο προκαθορισμένος είναι "
 "ο %s."
 
+msgid "Upper"
+msgstr ""
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -9967,6 +10005,9 @@ msgstr "λεπτά"
 msgid "mount"
 msgstr "προσάρτηση"
 
+msgid "mount point"
+msgstr ""
+
 msgid "n/a"
 msgstr "n/a"
 
@@ -10024,20 +10065,10 @@ msgstr "αποπροσάρτηση"
 msgid "version:"
 msgstr "έκδοση:"
 
-#~ msgid ""
-#~ "Volume label of the new file system. Use $ for device name, % for a counter "
-#~ "or %[startvalue] for a counter starting at startvalue."
-#~ msgstr ""
-#~ "Ετικέτα τόμου για το νέο σύστημα αρχείων. Χρησιμοποιήστε $ για όνομα "
-#~ "συσκευής, % για ένα μετρητή ή %[αρχική τιμή] για ένα μετρητή που θα ξεκινάει "
-#~ "από αυτήν την αρχική τιμή."
-
-#~ msgid "Page"
-#~ msgstr "Σελίδα"
-
 #, php-format
 #~ msgid ""
-#~ "The attribute '%s' may only consist of the characters a-z, A-Z and 0-9."
+#~ "A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
+#~ "point</a> first before proceeding."
 #~ msgstr ""
-#~ "Το χαρακτηριστικό '%s'  μπορεί να αποτελείται μόνο από χαρακτήρες a-z, A-Z "
-#~ "και 0-9."
+#~ "Οι προσαρτημένοι τόμοι RAID δεν μπορούν να διαγραφούν. Αφαιρέστε πρώτα το <a "
+#~ "href='%s'>σημείο προσάρτησης</a> πριν συνεχίσετε."

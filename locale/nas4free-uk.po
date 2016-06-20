@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-17 19:08+0000\n"
+"POT-Creation-Date: 2016-06-20 03:00+0000\n"
 "PO-Revision-Date: 2016-06-16 18:22+0000\n"
 "Last-Translator: AndriyM <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-17 17:44+0000\n"
+"X-Launchpad-Export-Date: 2016-06-20 01:42+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -285,13 +285,8 @@ msgstr ""
 "локальної мережі та можливості адаптера. Його можна  ввести простим текстом "
 "або у вигляді рядка шістнадцяткових цифр, перед якими стоїть \"0x\"."
 
-#, php-format
-msgid ""
-"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
+msgid "A mounted RAID volume cannot be deleted."
 msgstr ""
-"Примонтований RAID масив не може бути видалений. Спочатку потрібно видалити "
-"<a href='%s'>точку монтування</a>."
 
 msgid "A route to this destination network already exists."
 msgstr "Маршрут до цієї підмережі вже існує."
@@ -3645,6 +3640,15 @@ msgstr ""
 msgid "IP type mismatch for network and gateway."
 msgstr "Не співпадає тип ІР для підмережі і шлюза."
 
+msgid "IPMI FRU"
+msgstr ""
+
+msgid "IPMI Sensor"
+msgstr ""
+
+msgid "IPMI Stats"
+msgstr ""
+
 msgid "IPv4 Configuration"
 msgstr "Конфігурація IPv4"
 
@@ -4396,6 +4400,9 @@ msgstr "Нижня межа напруги переключення"
 msgid "Low voltage trimming transfer point"
 msgstr ""
 
+msgid "Lower"
+msgstr ""
+
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4885,6 +4892,12 @@ msgstr "Ні"
 msgid "No DNS setting found."
 msgstr "DNS налаштавання не знайдені"
 
+msgid "No IPMI FRU data available."
+msgstr ""
+
+msgid "No IPMI sensor data available."
+msgstr ""
+
 msgid "No RSYNC Client configured"
 msgstr "RSYNC клієнт не сконфігуровано"
 
@@ -5024,6 +5037,12 @@ msgstr ""
 
 msgid "Nominal value of real power (Watts)"
 msgstr "Номінальне значення реальної потужності (Ват)"
+
+msgid "Non-Critical"
+msgstr ""
+
+msgid "Non-Recoverable"
+msgstr ""
 
 msgid "None"
 msgstr "Немає"
@@ -5784,6 +5803,9 @@ msgstr ""
 msgid "Read/Write Access"
 msgstr "Доступ читання / запису"
 
+msgid "Reading"
+msgstr ""
+
 msgid "Readonly"
 msgstr "Лише для читання"
 
@@ -5875,6 +5897,10 @@ msgstr "Змінний пристрій"
 
 msgid "Remove all entries from ARP table"
 msgstr "Видалити усі записи з таблиці ARP"
+
+#, php-format
+msgid "Remove the %s first before proceeding."
+msgstr ""
 
 msgid "Replace Battery UPS"
 msgstr "Зміна батареї ДБЖ(UPS)"
@@ -6274,6 +6300,9 @@ msgstr "Надіслати зараз"
 msgid "Sensitive"
 msgstr "Чутливий"
 
+msgid "Sensor"
+msgstr ""
+
 msgid "Sep"
 msgstr "Вер."
 
@@ -6450,6 +6479,9 @@ msgstr "Словацька"
 
 msgid "Slovenian"
 msgstr "Словенська"
+
+msgid "Smart Outlet Management"
+msgstr ""
 
 msgid "SmartBoost"
 msgstr "SmartBoost"
@@ -6754,6 +6786,9 @@ msgstr "Системна інформація"
 
 msgid "System Load"
 msgstr "Завантаження системи"
+
+msgid "System Message"
+msgstr ""
 
 msgid "System Settings"
 msgstr ""
@@ -8490,6 +8525,9 @@ msgstr "Директорія для вивантаження"
 msgid "Upload directory of the webserver. The default is %s."
 msgstr "Директорія для вивантаження для веб сервера. За замовчуванням - %s."
 
+msgid "Upper"
+msgstr ""
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -9099,6 +9137,9 @@ msgstr "хвилин"
 msgid "mount"
 msgstr "монтування"
 
+msgid "mount point"
+msgstr ""
+
 msgid "n/a"
 msgstr "не визначено"
 
@@ -9155,3 +9196,11 @@ msgstr "umount"
 
 msgid "version:"
 msgstr "версія:"
+
+#, php-format
+#~ msgid ""
+#~ "A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
+#~ "point</a> first before proceeding."
+#~ msgstr ""
+#~ "Примонтований RAID масив не може бути видалений. Спочатку потрібно видалити "
+#~ "<a href='%s'>точку монтування</a>."

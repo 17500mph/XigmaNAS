@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-17 19:08+0000\n"
+"POT-Creation-Date: 2016-06-20 03:00+0000\n"
 "PO-Revision-Date: 2016-06-12 14:03+0000\n"
 "Last-Translator: Anthony Gaschet <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-17 17:46+0000\n"
+"X-Launchpad-Export-Date: 2016-06-20 01:41+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
@@ -315,13 +315,8 @@ msgstr ""
 "et les capacités de l'adaptateur. Elle peut être spécifiée dans une chaîne "
 "texte ou hexadécimale précédée par '0x'."
 
-#, php-format
-msgid ""
-"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
+msgid "A mounted RAID volume cannot be deleted."
 msgstr ""
-"Un volume raid monté ne peut être supprimé. Retirez le  <a href='%s'>point "
-"de montage</a> avant de procéder."
 
 msgid "A route to this destination network already exists."
 msgstr "Une route pour cette destination existe déjà."
@@ -3807,6 +3802,15 @@ msgstr "Adress IP ou FQDN du serveur Rsync distant."
 msgid "IP type mismatch for network and gateway."
 msgstr "Le type d'IP ne correspond pas au réseau et à la passerelle."
 
+msgid "IPMI FRU"
+msgstr ""
+
+msgid "IPMI Sensor"
+msgstr ""
+
+msgid "IPMI Stats"
+msgstr ""
+
 msgid "IPv4 Configuration"
 msgstr "Configuration IPv4"
 
@@ -4623,6 +4627,9 @@ msgstr "point de transfert tension faible"
 msgid "Low voltage trimming transfer point"
 msgstr "Point de transfert de rognage de basse tension"
 
+msgid "Lower"
+msgstr ""
+
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -5130,6 +5137,12 @@ msgstr "Non"
 msgid "No DNS setting found."
 msgstr "Pas de configuration DNS trouvée."
 
+msgid "No IPMI FRU data available."
+msgstr ""
+
+msgid "No IPMI sensor data available."
+msgstr ""
+
 msgid "No RSYNC Client configured"
 msgstr "Aucun client RSYNC configuré"
 
@@ -5279,6 +5292,12 @@ msgstr "Valeur nominale de la puissance apparente (Volt-Ampères)"
 
 msgid "Nominal value of real power (Watts)"
 msgstr "Valeur nominale de la puissance réelle (Watts)"
+
+msgid "Non-Critical"
+msgstr ""
+
+msgid "Non-Recoverable"
+msgstr ""
 
 msgid "None"
 msgstr "Aucun"
@@ -6072,6 +6091,9 @@ msgstr ""
 msgid "Read/Write Access"
 msgstr "Accès en Lecture/Écriture"
 
+msgid "Reading"
+msgstr ""
+
 msgid "Readonly"
 msgstr "Lecture seule"
 
@@ -6167,6 +6189,10 @@ msgstr "Amovible"
 
 msgid "Remove all entries from ARP table"
 msgstr "Supprimer toutes les entrées de la table ARP"
+
+#, php-format
+msgid "Remove the %s first before proceeding."
+msgstr ""
 
 msgid "Replace Battery UPS"
 msgstr "Remplacer la batterie UPS"
@@ -6585,6 +6611,9 @@ msgstr "Envoyer maintenant"
 msgid "Sensitive"
 msgstr "Sensible"
 
+msgid "Sensor"
+msgstr ""
+
 msgid "Sep"
 msgstr "Sept"
 
@@ -6780,6 +6809,9 @@ msgstr "Slovaque"
 
 msgid "Slovenian"
 msgstr "Slovène"
+
+msgid "Smart Outlet Management"
+msgstr ""
 
 msgid "SmartBoost"
 msgstr "SmartBoost"
@@ -7110,6 +7142,9 @@ msgstr "Informations système"
 
 msgid "System Load"
 msgstr "Charge système"
+
+msgid "System Message"
+msgstr ""
 
 msgid "System Settings"
 msgstr "Configuration du système"
@@ -9160,6 +9195,9 @@ msgstr "Répertoire distant de téléchargement"
 msgid "Upload directory of the webserver. The default is %s."
 msgstr "Répertoire distant de téléchargement du serveur WEB. %s par défaut."
 
+msgid "Upper"
+msgstr ""
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -9829,6 +9867,9 @@ msgstr "minutes(s)"
 msgid "mount"
 msgstr "montage"
 
+msgid "mount point"
+msgstr ""
+
 msgid "n/a"
 msgstr "n/a"
 
@@ -9887,3 +9928,11 @@ msgstr "démontage"
 
 msgid "version:"
 msgstr "version:"
+
+#, php-format
+#~ msgid ""
+#~ "A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
+#~ "point</a> first before proceeding."
+#~ msgstr ""
+#~ "Un volume raid monté ne peut être supprimé. Retirez le  <a href='%s'>point "
+#~ "de montage</a> avant de procéder."

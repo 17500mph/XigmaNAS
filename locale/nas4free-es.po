@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-17 19:08+0000\n"
+"POT-Creation-Date: 2016-06-20 03:00+0000\n"
 "PO-Revision-Date: 2016-04-23 17:09+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-17 17:46+0000\n"
+"X-Launchpad-Export-Date: 2016-06-20 01:41+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -306,13 +306,8 @@ msgstr ""
 "indistintamente como texto plano o como digitos hexadecimales precedidos por "
 "'0x'."
 
-#, php-format
-msgid ""
-"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
+msgid "A mounted RAID volume cannot be deleted."
 msgstr ""
-"Un volumen RAID montado no puede ser borrado. Elimine el punto de montaje <a "
-"href='%s'>mount point</a> antes de proceder a borrarlo."
 
 msgid "A route to this destination network already exists."
 msgstr "Ya existe una ruta a esta red de destino."
@@ -3739,6 +3734,15 @@ msgstr "Dirección IP o FQDN del servidor Rsync remoto."
 msgid "IP type mismatch for network and gateway."
 msgstr "La IP no coincide con la red y la puerta de enlace"
 
+msgid "IPMI FRU"
+msgstr ""
+
+msgid "IPMI Sensor"
+msgstr ""
+
+msgid "IPMI Stats"
+msgstr ""
+
 msgid "IPv4 Configuration"
 msgstr "Configuración de IPv4"
 
@@ -4535,6 +4539,9 @@ msgstr "Punto de conmutación baja tensión"
 msgid "Low voltage trimming transfer point"
 msgstr "Ajuste del punto de conmutación para baja tensión"
 
+msgid "Lower"
+msgstr ""
+
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -5036,6 +5043,12 @@ msgstr "No"
 msgid "No DNS setting found."
 msgstr "No se ha encontrado DNS"
 
+msgid "No IPMI FRU data available."
+msgstr ""
+
+msgid "No IPMI sensor data available."
+msgstr ""
+
 msgid "No RSYNC Client configured"
 msgstr "No hay configurado ningún cliente RSYNC"
 
@@ -5183,6 +5196,12 @@ msgstr "Potencia nominal (VA)"
 
 msgid "Nominal value of real power (Watts)"
 msgstr "Potencia real (W)"
+
+msgid "Non-Critical"
+msgstr ""
+
+msgid "Non-Recoverable"
+msgstr ""
 
 msgid "None"
 msgstr "Ninguno"
@@ -5969,6 +5988,9 @@ msgstr ""
 msgid "Read/Write Access"
 msgstr "Acceso Lectura/Escritura"
 
+msgid "Reading"
+msgstr ""
+
 msgid "Readonly"
 msgstr "Sólo lectura"
 
@@ -6060,6 +6082,10 @@ msgstr "Extraíble"
 
 msgid "Remove all entries from ARP table"
 msgstr "Borrar todas las entradas de la tabla ARP"
+
+#, php-format
+msgid "Remove the %s first before proceeding."
+msgstr ""
 
 msgid "Replace Battery UPS"
 msgstr "Remplazar Batería del SAI"
@@ -6475,6 +6501,9 @@ msgstr "Enviar ahora"
 msgid "Sensitive"
 msgstr "Sensible"
 
+msgid "Sensor"
+msgstr ""
+
 msgid "Sep"
 msgstr "sept."
 
@@ -6673,6 +6702,9 @@ msgstr "Eslovaco"
 
 msgid "Slovenian"
 msgstr "Esloveno"
+
+msgid "Smart Outlet Management"
+msgstr ""
 
 msgid "SmartBoost"
 msgstr "SmartBoost"
@@ -6993,6 +7025,9 @@ msgstr "Información del sistema"
 
 msgid "System Load"
 msgstr "Carga del sistema"
+
+msgid "System Message"
+msgstr ""
 
 msgid "System Settings"
 msgstr "Configuración del sistema"
@@ -8982,6 +9017,9 @@ msgstr "Directorio de subidas"
 msgid "Upload directory of the webserver. The default is %s."
 msgstr "Directorio de subidas del servidor Web. Por defecto es %s"
 
+msgid "Upper"
+msgstr ""
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -9643,6 +9681,9 @@ msgstr "minuto(s)"
 msgid "mount"
 msgstr "Montar"
 
+msgid "mount point"
+msgstr ""
+
 msgid "n/a"
 msgstr "n/d"
 
@@ -9699,3 +9740,11 @@ msgstr "Desmontar"
 
 msgid "version:"
 msgstr "versión:"
+
+#, php-format
+#~ msgid ""
+#~ "A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
+#~ "point</a> first before proceeding."
+#~ msgstr ""
+#~ "Un volumen RAID montado no puede ser borrado. Elimine el punto de montaje <a "
+#~ "href='%s'>mount point</a> antes de proceder a borrarlo."

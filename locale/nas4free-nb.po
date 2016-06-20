@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-17 19:08+0000\n"
+"POT-Creation-Date: 2016-06-20 03:00+0000\n"
 "PO-Revision-Date: 2016-05-17 05:21+0000\n"
 "Last-Translator: Alf Gunnar Sørensen <alf-gunnar.sorensen@c2i.net>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-17 17:45+0000\n"
+"X-Launchpad-Export-Date: 2016-06-20 01:41+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: NORWAY\n"
 "Language: \n"
@@ -283,13 +283,8 @@ msgstr ""
 "som en enkelt streng eller som streng med heksadesimale tegn forutgått av "
 "'0x'."
 
-#, php-format
-msgid ""
-"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
+msgid "A mounted RAID volume cannot be deleted."
 msgstr ""
-"Et koblet RAID volum kan ikke slettes. Fjern <a href='%s'>mount point</a> "
-"først før du fortsetter."
 
 msgid "A route to this destination network already exists."
 msgstr "En rute til dette mottakernettverk eksisterer allerede."
@@ -3572,6 +3567,15 @@ msgstr "IP eller FQDN til fjern Rsync tjener."
 msgid "IP type mismatch for network and gateway."
 msgstr "IP type stemmer ikke for nettverk og gateway."
 
+msgid "IPMI FRU"
+msgstr ""
+
+msgid "IPMI Sensor"
+msgstr ""
+
+msgid "IPMI Stats"
+msgstr ""
+
 msgid "IPv4 Configuration"
 msgstr "IPv4 Konfigurasjon"
 
@@ -4309,6 +4313,9 @@ msgstr ""
 msgid "Low voltage trimming transfer point"
 msgstr ""
 
+msgid "Lower"
+msgstr ""
+
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4794,6 +4801,12 @@ msgstr "Nei"
 msgid "No DNS setting found."
 msgstr ""
 
+msgid "No IPMI FRU data available."
+msgstr ""
+
+msgid "No IPMI sensor data available."
+msgstr ""
+
 msgid "No RSYNC Client configured"
 msgstr "Ingen RSYNC klient konfigruert"
 
@@ -4924,6 +4937,12 @@ msgid "Nominal value of apparent power (Volt-Amps)"
 msgstr ""
 
 msgid "Nominal value of real power (Watts)"
+msgstr ""
+
+msgid "Non-Critical"
+msgstr ""
+
+msgid "Non-Recoverable"
 msgstr ""
 
 msgid "None"
@@ -5686,6 +5705,9 @@ msgstr ""
 msgid "Read/Write Access"
 msgstr "Les/Skriv tilgang"
 
+msgid "Reading"
+msgstr ""
+
 msgid "Readonly"
 msgstr ""
 
@@ -5777,6 +5799,10 @@ msgstr ""
 
 msgid "Remove all entries from ARP table"
 msgstr "Slett alle innslag fra ARP tabellen"
+
+#, php-format
+msgid "Remove the %s first before proceeding."
+msgstr ""
 
 msgid "Replace Battery UPS"
 msgstr ""
@@ -6171,6 +6197,9 @@ msgstr "Send nå"
 msgid "Sensitive"
 msgstr ""
 
+msgid "Sensor"
+msgstr ""
+
 msgid "Sep"
 msgstr ""
 
@@ -6349,6 +6378,9 @@ msgstr ""
 
 msgid "Slovenian"
 msgstr "Slovensk"
+
+msgid "Smart Outlet Management"
+msgstr ""
 
 msgid "SmartBoost"
 msgstr ""
@@ -6654,6 +6686,9 @@ msgid "System Information"
 msgstr ""
 
 msgid "System Load"
+msgstr ""
+
+msgid "System Message"
 msgstr ""
 
 msgid "System Settings"
@@ -8374,6 +8409,9 @@ msgstr ""
 msgid "Upload directory of the webserver. The default is %s."
 msgstr ""
 
+msgid "Upper"
+msgstr ""
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -8987,6 +9025,9 @@ msgstr ""
 msgid "mount"
 msgstr ""
 
+msgid "mount point"
+msgstr ""
+
 msgid "n/a"
 msgstr "n/a"
 
@@ -9043,3 +9084,11 @@ msgstr "avmontér"
 
 msgid "version:"
 msgstr ""
+
+#, php-format
+#~ msgid ""
+#~ "A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
+#~ "point</a> first before proceeding."
+#~ msgstr ""
+#~ "Et koblet RAID volum kan ikke slettes. Fjern <a href='%s'>mount point</a> "
+#~ "først før du fortsetter."

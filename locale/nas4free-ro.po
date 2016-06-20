@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-17 19:08+0000\n"
+"POT-Creation-Date: 2016-06-20 03:00+0000\n"
 "PO-Revision-Date: 2016-03-23 12:38+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-17 17:45+0000\n"
+"X-Launchpad-Export-Date: 2016-06-20 01:41+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -313,10 +313,7 @@ msgstr ""
 "fie ca text în clar fie ca un șir de caractere hexazecimale precedate de "
 "șirul '0x'."
 
-#, php-format
-msgid ""
-"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
+msgid "A mounted RAID volume cannot be deleted."
 msgstr ""
 
 msgid "A route to this destination network already exists."
@@ -3788,6 +3785,15 @@ msgstr "IP sau adresă FQDN a serverului Rsync."
 msgid "IP type mismatch for network and gateway."
 msgstr "Tipul de adresă IP diferă pentru rețea și pentru gateway."
 
+msgid "IPMI FRU"
+msgstr ""
+
+msgid "IPMI Sensor"
+msgstr ""
+
+msgid "IPMI Stats"
+msgstr ""
+
 msgid "IPv4 Configuration"
 msgstr "Configurație IPv4"
 
@@ -4596,6 +4602,9 @@ msgstr "Punct de transfer pentru tensiune minimă"
 msgid "Low voltage trimming transfer point"
 msgstr "Ajustare punct de transfer tensiune minimă"
 
+msgid "Lower"
+msgstr ""
+
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -5098,6 +5107,12 @@ msgstr "Nu"
 msgid "No DNS setting found."
 msgstr "Nu există setări DNS definite."
 
+msgid "No IPMI FRU data available."
+msgstr ""
+
+msgid "No IPMI sensor data available."
+msgstr ""
+
 msgid "No RSYNC Client configured"
 msgstr "Niciun client RSYNC configurat"
 
@@ -5242,6 +5257,12 @@ msgstr "Valoare nominală putere aparentă (Volți-Amperi)"
 
 msgid "Nominal value of real power (Watts)"
 msgstr "Valoarea nominală a puterii reale (Wați)"
+
+msgid "Non-Critical"
+msgstr ""
+
+msgid "Non-Recoverable"
+msgstr ""
 
 msgid "None"
 msgstr "Niciunul (niciuna)"
@@ -6027,6 +6048,9 @@ msgstr ""
 msgid "Read/Write Access"
 msgstr "Permisiune Scriere/Citire"
 
+msgid "Reading"
+msgstr ""
+
 msgid "Readonly"
 msgstr "Doar citire"
 
@@ -6118,6 +6142,10 @@ msgstr "Detașabil"
 
 msgid "Remove all entries from ARP table"
 msgstr "Șterge toate intrările din tabela ARP"
+
+#, php-format
+msgid "Remove the %s first before proceeding."
+msgstr ""
 
 msgid "Replace Battery UPS"
 msgstr "Înlocuiți acumulatorul"
@@ -6529,6 +6557,9 @@ msgstr "Trimite acum"
 msgid "Sensitive"
 msgstr "Senzitiv"
 
+msgid "Sensor"
+msgstr ""
+
 msgid "Sep"
 msgstr "Sep"
 
@@ -6724,6 +6755,9 @@ msgstr "Slovacă"
 
 msgid "Slovenian"
 msgstr "Slovenă"
+
+msgid "Smart Outlet Management"
+msgstr ""
 
 msgid "SmartBoost"
 msgstr "SmartBoost"
@@ -7044,6 +7078,9 @@ msgstr "Informații sistem"
 
 msgid "System Load"
 msgstr "Încărcare sistem"
+
+msgid "System Message"
+msgstr ""
 
 msgid "System Settings"
 msgstr "Setări sistem"
@@ -9060,6 +9097,9 @@ msgstr "Folder de încărcare"
 msgid "Upload directory of the webserver. The default is %s."
 msgstr "Folderul de încărcare pentru serverul web. Implicit este %s."
 
+msgid "Upper"
+msgstr ""
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -9730,6 +9770,9 @@ msgstr "minut(e)"
 
 msgid "mount"
 msgstr "montare"
+
+msgid "mount point"
+msgstr ""
 
 msgid "n/a"
 msgstr "n/a"

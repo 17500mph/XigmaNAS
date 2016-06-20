@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-17 19:08+0000\n"
+"POT-Creation-Date: 2016-06-20 03:00+0000\n"
 "PO-Revision-Date: 2016-03-03 17:10+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-17 17:45+0000\n"
+"X-Launchpad-Export-Date: 2016-06-20 01:42+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -258,10 +258,7 @@ msgid ""
 "'0x'."
 msgstr "密鑰可能是5或13個字符（40或104位），這取決於本地網路卡的性能。設置可使用普通的字符串或以 '0x' 開頭的十六進制數字。"
 
-#, php-format
-msgid ""
-"A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
-"point</a> first before proceeding."
+msgid "A mounted RAID volume cannot be deleted."
 msgstr ""
 
 msgid "A route to this destination network already exists."
@@ -3484,6 +3481,15 @@ msgstr "Rsync 遠程伺服器的 IP 或 FQDN 位址"
 msgid "IP type mismatch for network and gateway."
 msgstr "網路與閘道的 IP 類型不符合"
 
+msgid "IPMI FRU"
+msgstr ""
+
+msgid "IPMI Sensor"
+msgstr ""
+
+msgid "IPMI Stats"
+msgstr ""
+
 msgid "IPv4 Configuration"
 msgstr "IPv4 配置"
 
@@ -4212,6 +4218,9 @@ msgstr "低電壓轉換點"
 msgid "Low voltage trimming transfer point"
 msgstr "低電壓微調換乘點"
 
+msgid "Lower"
+msgstr ""
+
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
 "enabled, it is adjusted to 240 on failure."
@@ -4691,6 +4700,12 @@ msgstr "否"
 msgid "No DNS setting found."
 msgstr "找不到DNS配置。"
 
+msgid "No IPMI FRU data available."
+msgstr ""
+
+msgid "No IPMI sensor data available."
+msgstr ""
+
 msgid "No RSYNC Client configured"
 msgstr "尚未配置RSYNC客戶端配置"
 
@@ -4820,6 +4835,12 @@ msgstr "標稱功率（Volt-Amps 伏安）"
 
 msgid "Nominal value of real power (Watts)"
 msgstr "實際功率（Watts 瓦特）"
+
+msgid "Non-Critical"
+msgstr ""
+
+msgid "Non-Recoverable"
+msgstr ""
 
 msgid "None"
 msgstr "無"
@@ -5567,6 +5588,9 @@ msgstr "讀/寫（rw，dynamic）的可移動類文件如果達到 EOM 將會擴
 msgid "Read/Write Access"
 msgstr "讀/寫 權限"
 
+msgid "Reading"
+msgstr ""
+
 msgid "Readonly"
 msgstr "唯讀"
 
@@ -5658,6 +5682,10 @@ msgstr "可移除"
 
 msgid "Remove all entries from ARP table"
 msgstr "移除所有ARP table內的項目"
+
+#, php-format
+msgid "Remove the %s first before proceeding."
+msgstr ""
 
 msgid "Replace Battery UPS"
 msgstr "更換UPS電池"
@@ -6051,6 +6079,9 @@ msgstr "立刻傳送"
 msgid "Sensitive"
 msgstr ""
 
+msgid "Sensor"
+msgstr ""
+
 msgid "Sep"
 msgstr ""
 
@@ -6230,6 +6261,9 @@ msgstr "斯洛伐克文"
 
 msgid "Slovenian"
 msgstr "斯洛維尼亞文"
+
+msgid "Smart Outlet Management"
+msgstr ""
 
 msgid "SmartBoost"
 msgstr "SmartBoost"
@@ -6535,6 +6569,9 @@ msgstr "系統資料"
 
 msgid "System Load"
 msgstr "系統負載"
+
+msgid "System Message"
+msgstr ""
 
 msgid "System Settings"
 msgstr ""
@@ -8273,6 +8310,9 @@ msgstr "上傳目錄"
 msgid "Upload directory of the webserver. The default is %s."
 msgstr "網頁伺服器的上傳目錄。默認值是 %s。"
 
+msgid "Upper"
+msgstr ""
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -8880,6 +8920,9 @@ msgstr "分"
 
 msgid "mount"
 msgstr "掛載"
+
+msgid "mount point"
+msgstr ""
 
 msgid "n/a"
 msgstr "無資料"
