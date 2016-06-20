@@ -3,7 +3,7 @@
 # /etc/rc.firmware
 #
 # Part of NAS4Free (http://www.nas4free.org).
-# Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
+# Copyright (c) 2012-2015 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
 #
 # Script usage:
@@ -16,8 +16,8 @@
 #
 
 SIZE="512M"
-PLATFORM=`/bin/cat /etc/platform`
-XARCH=`/bin/echo ${PLATFORM} | /usr/bin/sed -e 's/-.*//'`
+PLATFORM=`cat /etc/platform`
+XARCH=`/bin/echo ${PLATFORM} | sed -e 's/-.*//'`
 ARCH=`/usr/bin/uname -m`
 if [ "${ARCH}" == "arm" ]; then
 	# write to pre-aligned partition
@@ -58,10 +58,10 @@ case $1 in
 		# Redirect I/O to console.
 		exec </dev/console >/dev/console 2>/dev/console
 
-		# Use efficient memory filesystem
+		# Use efficient memory file system
 		/sbin/mount -t tmpfs -o size=${SIZE},mode=1777 tmpfs ${FTMP} > /dev/null 2>&1
 		if [ 0 != $? ]; then # successfully?
-			msg="ERROR: Failed to create in-memory filesystem."
+			msg="ERROR: Failed to create in-memory file system."
 			printf "\n\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
 			exit 1
@@ -75,10 +75,10 @@ case $1 in
 		# Get the md device.
 		mdid=`/sbin/mount -p | /usr/bin/grep ${FTMP} | /usr/bin/awk '{print $1}'`
 
-		# Umount in-memory filesystem.
+		# Umount in-memory file system.
 		/sbin/umount -f ${FTMP} > /dev/null 2>&1
 		if [ 0 != $? ]; then # successfully?
-			msg="ERROR: Failed to unmount in-memory filesystem."
+			msg="ERROR: Failed to umount in-memory file system."
 			printf "\n\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
 			exit 1
@@ -94,18 +94,18 @@ case $1 in
 
 		printf "\n\n\33[37m%s\33[0m\n" "Firmware upgrade in progress. Please wait..."
 
-		# Check if firmware image exists
+		# Check if firmware file exists
 		if [ ! -r "$2" ]; then
-			msg="ERROR: Firmware image does not exist."
+			msg="ERROR: Firmware file does not exist."
 			printf "\n\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
 			exit 1
 		fi
 
-		# Test firmware image
+		# Test firmware file
 		/usr/bin/xz -t "$2" 2>&1
 		if [ 0 != $? ]; then
-			msg="ERROR: Firmware image is corrupted."
+			msg="ERROR: Firmware file is corrupted."
 			printf "\n\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
 			exit 1
@@ -125,7 +125,7 @@ case $1 in
 		# Unmount /cf
 		/sbin/umount -f /cf
 		if [ 0 != $? ]; then # successfully?
-			msg="ERROR: Failed to unmount '/cf'!"
+			msg="ERROR: Failed to umount '/cf'!"
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
 		fi
@@ -153,7 +153,7 @@ case $1 in
 					# resize boot partition
 					/sbin/growfs -y /dev/${CFDEVICE} > /dev/null 2>&1
 				fi
-				msg="Firmware installed successfully!"
+				msg="Firmware installed successfully."
 				printf "\33[37;44m%s\33[0m\n" "${msg}"
 				/usr/bin/logger "UPGRADE: ${msg}"
 			fi
@@ -227,18 +227,18 @@ case $1 in
 
 		printf "\n\n\33[37m%s\33[0m\n" "Firmware upgrade in progress. Please wait..."
 
-		# Check if firmware image exists.
+		# Check if firmware file exists.
 		if [ ! -r "$2" ]; then
-			msg="ERROR: Firmware image does not exist."
+			msg="ERROR: Firmware file does not exist."
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
 			exit 1
 		fi
 
-		# Test firmware image
+		# Test firmware file
 		/usr/bin/xz -t "$2" 2>&1
 		if [ 0 != $? ]; then
-			msg="ERROR: Firmware image is corrupted."
+			msg="ERROR: Firmware file is corrupted."
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
 			exit 1
@@ -265,7 +265,7 @@ case $1 in
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
 		else
-			msg="Firmware installed successfully!"
+			msg="Firmware installed successfully."
 			printf "\33[37;44m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE: ${msg}"
 		fi
@@ -293,7 +293,7 @@ case $1 in
 		# Reboot system if upgrade was successfully.
 		if [ 0 -eq ${result} ]; then
 			msg="Rebooting server..."
-			printf "\33[44m%s\33[0m\n" "${msg}"
+			printf "\33[37m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "${msg}"
 			/sbin/shutdown -r now > /dev/null 2>&1
 		else
