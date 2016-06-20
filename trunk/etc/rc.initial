@@ -80,32 +80,38 @@ else
 				if [ ${DISABLE_LIVEMODE} -eq 0 ]; then
 					/etc/rc.initial.setports
 				fi
+				/etc/rc.banner
 			 	;;
 			2)
 				if [ ${DISABLE_LIVEMODE} -eq 0 ]; then
 					/etc/rc.initial.setlanip
 				fi
+				/etc/rc.banner
 			 	;;
 			3)
 				if [ ${DISABLE_LIVEMODE} -eq 0 ]; then
 					/etc/rc.initial.password
 				fi
+				/etc/rc.banner
 				;;
 			4)
 				if [ ${DISABLE_LIVEMODE} -eq 0 ]; then
 					/etc/rc.initial.defaults
 				fi
+				/etc/rc.banner
 				;;
 			5)
 				if [ ${DISABLE_LIVEMODE} -eq 0 ]; then
 					/etc/rc.initial.ping
 				fi
+				/etc/rc.banner
 				;;
 			6)
 				exit
 				;;
 			7)
 				/etc/rc.initial.reboot
+				/etc/rc.banner
 				;;
 			8)
 				/etc/rc.initial.halt
@@ -120,6 +126,7 @@ else
 				if [ ${DISABLE_LIVEMODE} -eq 0 ]; then
 					/etc/rc.initial.hostsallow
 				fi
+				/etc/rc.banner
 				;;
 			11)
 				if [ ${DISABLE_LIVEMODE} -eq 0 ]; then
@@ -129,9 +136,11 @@ else
 					/sbin/mount /cf > /dev/null 2>&1
 					/etc/rc.d/lighttpd forcestart > /dev/null
 				fi
+					/etc/rc.banner
 				;;
 			20)
 				/usr/sbin/kbdmap
+				/etc/rc.banner
 				;;
 		esac
 	done
