@@ -107,12 +107,8 @@ function userdbgroup_process_updatenotification($mode, $data) {
 				<table width="100%">
 					<tr>
 						<td>
-							<?php html_titleline(sprintf(gettext("User Defined Groups"))); ?>
-						</td>
-					</tr>
-					<tr>
-						<td>
 							<table width="100%" border="0" cellpadding="0" cellspacing="0">
+							<?php html_titleline2(gettext_gen2('User Defined Groups'), 4);?>
 								<tr>
 									<td width="45%" class="listhdrlr"><?=gettext("Group");?></td>
 									<td width="5%" class="listhdrr"><?=gettext("GID");?></td>
@@ -151,12 +147,8 @@ function userdbgroup_process_updatenotification($mode, $data) {
 				<table width="100%">
 					<tr>
 						<td>
-							<?php html_titleline(sprintf(gettext("Predefined Groups"))); ?>
-						</td>
-					</tr>
-					<tr>
-						<td>
 							<table width="100%" border="0" cellpadding="0" cellspacing="0">
+							<?php html_titleline2(gettext_gen2('Predefined Groups'), 4);?>
 								<tr>
 									<td width="45%" class="listhdrlr"><?=gettext("Group");?></td>
 									<td width="5%" class="listhdrr"><?=gettext("GID");?></td>
