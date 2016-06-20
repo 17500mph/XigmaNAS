@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-06-17 19:08+0000\n"
-"PO-Revision-Date: 2016-06-07 19:04+0000\n"
+"PO-Revision-Date: 2016-06-19 12:52+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-17 17:46+0000\n"
+"X-Launchpad-Export-Date: 2016-06-19 23:48+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -623,7 +623,7 @@ msgid "Advanced Configuration"
 msgstr "Részletes beállítás"
 
 msgid "Advanced Format"
-msgstr ""
+msgstr "Fejlett formázás"
 
 msgid "Advanced Options"
 msgstr "Haladó beállítások"
@@ -992,7 +992,7 @@ msgstr ""
 "működési fordulatig)."
 
 msgid "Back"
-msgstr ""
+msgstr "Vissza"
 
 msgid "Backup Configuration"
 msgstr "Beállítások biztonsági mentése"
@@ -1737,7 +1737,7 @@ msgid "Create PV Guest"
 msgstr "PV vendég létrehozása"
 
 msgid "Create ZFS on a GPT partition."
-msgstr ""
+msgstr "ZFS létrehozása GPT partíción"
 
 msgid "Create and initialize RAID."
 msgstr "RAID létrehozása és inicializálása."
@@ -2190,25 +2190,25 @@ msgid "Device Model"
 msgstr "Eszköz modell"
 
 msgid "Device Name"
-msgstr ""
+msgstr "Eszköz neve"
 
 msgid "Device Pass-through"
 msgstr "Átmenő Eszköz"
 
 msgid "Device Path"
-msgstr ""
+msgstr "Eszköz útvonala"
 
 msgid "Device Serial"
 msgstr "Soros eszköz"
 
 msgid "Device contains boot partition"
-msgstr ""
+msgstr "Eszköz tartalmaz rendszerindító partíciót"
 
 msgid "Device is mounted"
-msgstr ""
+msgstr "Eszköz becsatolva"
 
 msgid "Device not found"
-msgstr ""
+msgstr "Eszköz nem található"
 
 msgid "Device polling"
 msgstr "Device polling (eszköz szavaztatás)"
@@ -2348,6 +2348,8 @@ msgstr ""
 msgid ""
 "Do not erase the Master Boot Record (useful for some RAID controller cards)."
 msgstr ""
+"Ne töröld le a 'Master Boot Record'-ot (néhány RAID vezérlő kártya esetén "
+"hasznos."
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2789,7 +2791,7 @@ msgid "Enable ACL inheritance"
 msgstr "ACL öröklődés engedélyezése"
 
 msgid "Enable Advanced Format (4KB Sector Size)."
-msgstr ""
+msgstr "Fejlett formázás bekapcsolása (4KB-os szektorméret)"
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Aszinkron I/O (AIO) engedélyezése"
@@ -3078,7 +3080,7 @@ msgstr ""
 "parancsok számát mutatja."
 
 msgid "Erase MBR"
-msgstr ""
+msgstr "MBP törlése"
 
 msgid "Error"
 msgstr "Hiba"
@@ -3181,7 +3183,7 @@ msgid "Extra options to rsync (usually empty)."
 msgstr "Extra beállítások az rsynchez (általában üres)"
 
 msgid "FAT32"
-msgstr ""
+msgstr "FAT32"
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
@@ -3394,7 +3396,7 @@ msgid "Format"
 msgstr "Formázás"
 
 msgid "Format Options"
-msgstr ""
+msgstr "Formázási beállítások"
 
 msgid "Format the report for phpBB forum."
 msgstr "Jelentés formázása phpBB fórumhoz."
@@ -3460,7 +3462,7 @@ msgid "GID"
 msgstr "GID"
 
 msgid "GPT Partition"
-msgstr ""
+msgstr "GPT partíció"
 
 msgid "GPT partition"
 msgstr "GPT partíció"
@@ -4817,7 +4819,7 @@ msgid "Minimum"
 msgstr "Minimum"
 
 msgid "Minimum Free Space"
-msgstr ""
+msgstr "Minimális szabad hely"
 
 msgid "Minimum Performance, Minimum Acoustic Output"
 msgstr "Minimális teljesítmény, minimális zajszint kimenet"
@@ -5041,7 +5043,7 @@ msgid "New password"
 msgstr "Új jelszó"
 
 msgid "Next"
-msgstr ""
+msgstr "Következő"
 
 msgid "No"
 msgstr "Nem"
@@ -5994,7 +5996,7 @@ msgid "Realm"
 msgstr "Terület"
 
 msgid "Reason Code"
-msgstr ""
+msgstr "Ok kódja"
 
 msgid "Reason for last transfer to battery (* opaque)"
 msgstr "Utolsó átutalás oka az akkumulátorról (* átlátszó)"
@@ -6006,7 +6008,7 @@ msgid "Receive Buffer Size"
 msgstr "Fogadó puffer mérete"
 
 msgid "Record is locked"
-msgstr ""
+msgstr "Rekord zárolt"
 
 msgid "Recurse into directories."
 msgstr "Rekurzívan a könyvtárakba."
@@ -6422,7 +6424,7 @@ msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Válassza ki a monitorozandó lemezt."
 
 msgid "Select file system format."
-msgstr ""
+msgstr "Válassz fájlrendszer formátumot."
 
 msgid "Select firmware:"
 msgstr "Válassz Firmware-t:"
@@ -6840,6 +6842,9 @@ msgid ""
 "Lowering this threshold can adversely affect performance and auto-"
 "defragmentation!"
 msgstr ""
+"Add meg a normál használatra fenntartandó lemezméretet százalékban. A "
+"küszöbérték alacsonyra állítása hátrányosan befolyásolja a teljesítményt és "
+"az automatikus töredezettségmentesítés!"
 
 msgid "Split request"
 msgstr "Osztott kérés"
@@ -6883,7 +6888,7 @@ msgid "Status report successfully sent."
 msgstr "Állapotjelentés sikeresen elküldve."
 
 msgid "Step"
-msgstr ""
+msgstr "Lépés"
 
 msgid "Stop"
 msgstr "Leállítás"
@@ -7338,19 +7343,21 @@ msgstr "'%s' attribútum kötelező."
 #, php-format
 msgid ""
 "The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."
-msgstr ""
+msgstr "'%s' attribútum csak [a-z], [A-Z] és [0-9] karakterek tartalmazhat."
 
 #, php-format
 msgid ""
 "The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
 "and [._-]"
 msgstr ""
+"'%s' attribútum csak [a-z], [A-Z], [0-9] és [._-] karakterek tartalmazhat."
 
 #, php-format
 msgid ""
 "The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
 "and [._-]."
 msgstr ""
+"'%s' attribútum csak [a-z], [A-Z], [0-9] és [._-] karakterek tartalmazhat."
 
 #, php-format
 msgid ""
@@ -8986,7 +8993,7 @@ msgid "Unknown or unformatted"
 msgstr "Ismeretlen vagy formázatlan"
 
 msgid "Unknown size"
-msgstr ""
+msgstr "Ismeretlen méret"
 
 msgid "Unload"
 msgstr "Nem töltött"
@@ -9277,6 +9284,9 @@ msgid ""
 "or %n for a counter starting at n, [n for the n rightmost characters of the "
 "device serial number."
 msgstr ""
+"Az új fájlrendszer kötetének címkéje.  A következő helyőrzőket használhatod: "
+"$ = eszköz neve, % = számláló, %n = n-től induló számláló, [n = eszköz "
+"sorozatszámának n karaktere jobbról."
 
 msgid "Volume mode"
 msgstr "Kötet mód"
@@ -9556,7 +9566,7 @@ msgid "ZFS Snapshot Properties"
 msgstr "ZFS pillanatkép tulajdonságok"
 
 msgid "ZFS Storage Pool"
-msgstr ""
+msgstr "ZFS tároló"
 
 msgid "ZFS Volume Information & Status"
 msgstr "ZFS kötet információ & állapot"

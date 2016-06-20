@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-06-17 19:08+0000\n"
-"PO-Revision-Date: 2016-06-07 15:21+0000\n"
+"PO-Revision-Date: 2016-06-18 05:23+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-17 17:45+0000\n"
+"X-Launchpad-Export-Date: 2016-06-19 23:48+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -613,7 +613,7 @@ msgid "Advanced Configuration"
 msgstr "Avancerad konfiguration"
 
 msgid "Advanced Format"
-msgstr ""
+msgstr "Avancerat format"
 
 msgid "Advanced Options"
 msgstr "Avancerade alternativ"
@@ -977,7 +977,7 @@ msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr "Medeluppvarvningstid (från 0 RPM till fullt drift)"
 
 msgid "Back"
-msgstr ""
+msgstr "Åter"
 
 msgid "Backup Configuration"
 msgstr "Backupkonfigurering"
@@ -1721,7 +1721,7 @@ msgid "Create PV Guest"
 msgstr "Skapa PV gäst"
 
 msgid "Create ZFS on a GPT partition."
-msgstr ""
+msgstr "Skapa ZFS på en GPT partition"
 
 msgid "Create and initialize RAID."
 msgstr "Skapa och initialisera RAID."
@@ -2172,25 +2172,25 @@ msgid "Device Model"
 msgstr "Enhetstyp"
 
 msgid "Device Name"
-msgstr ""
+msgstr "Enhetsnamn"
 
 msgid "Device Pass-through"
 msgstr "Komponent genomströmning"
 
 msgid "Device Path"
-msgstr ""
+msgstr "Enhetssökväg"
 
 msgid "Device Serial"
 msgstr "Serieport"
 
 msgid "Device contains boot partition"
-msgstr ""
+msgstr "Enheten innehåller bootpartition"
 
 msgid "Device is mounted"
-msgstr ""
+msgstr "Enheten är monterad"
 
 msgid "Device not found"
-msgstr ""
+msgstr "Enheten hittades inte"
 
 msgid "Device polling"
 msgstr "Enhetspolling"
@@ -2331,6 +2331,7 @@ msgstr ""
 msgid ""
 "Do not erase the Master Boot Record (useful for some RAID controller cards)."
 msgstr ""
+"Radera inte \"Master Boot Record\" (användbart för vissa RAID kontrollkort)."
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2758,7 +2759,7 @@ msgid "Enable ACL inheritance"
 msgstr "Aktivera ärvning av ACL"
 
 msgid "Enable Advanced Format (4KB Sector Size)."
-msgstr ""
+msgstr "Aktivera avancerat format (4KB sektorstorlek)"
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Aktivera Asynkron I/O (AIO)"
@@ -3049,7 +3050,7 @@ msgstr ""
 "flashraderingskomandon."
 
 msgid "Erase MBR"
-msgstr ""
+msgstr "Radera MBR"
 
 msgid "Error"
 msgstr "Fel"
@@ -3152,7 +3153,7 @@ msgid "Extra options to rsync (usually empty)."
 msgstr "Extra val till rsync (vantligtvis tom)."
 
 msgid "FAT32"
-msgstr ""
+msgstr "FAT32"
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
@@ -3365,7 +3366,7 @@ msgid "Format"
 msgstr "Formatera"
 
 msgid "Format Options"
-msgstr ""
+msgstr "Formateringsalternativ"
 
 msgid "Format the report for phpBB forum."
 msgstr "Formatera rapporten för phpBB-forum"
@@ -3431,7 +3432,7 @@ msgid "GID"
 msgstr "GID"
 
 msgid "GPT Partition"
-msgstr ""
+msgstr "GPT Partition"
 
 msgid "GPT partition"
 msgstr "GPT Partition"
@@ -4779,7 +4780,7 @@ msgid "Minimum"
 msgstr "Minimum"
 
 msgid "Minimum Free Space"
-msgstr ""
+msgstr "Minsta lediga utrymme"
 
 msgid "Minimum Performance, Minimum Acoustic Output"
 msgstr "Lägsta prestanda, lägsta ljudnivå"
@@ -5002,7 +5003,7 @@ msgid "New password"
 msgstr "Nytt lösenord"
 
 msgid "Next"
-msgstr ""
+msgstr "Nästa"
 
 msgid "No"
 msgstr "Nej"
@@ -5943,7 +5944,7 @@ msgid "Realm"
 msgstr "Rike"
 
 msgid "Reason Code"
-msgstr ""
+msgstr "Anledning"
 
 msgid "Reason for last transfer to battery (* opaque)"
 msgstr "Anledning till senaste övergången till batteridrift (* opaque)"
@@ -5955,7 +5956,7 @@ msgid "Receive Buffer Size"
 msgstr "Storlek på mottagningsbuffert"
 
 msgid "Record is locked"
-msgstr ""
+msgstr "Spåret är låst"
 
 msgid "Recurse into directories."
 msgstr "Upprepa i kataloger."
@@ -6363,7 +6364,7 @@ msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Välj en disk som har S.M.A.R.T.-övervakning aktiverat."
 
 msgid "Select file system format."
-msgstr ""
+msgstr "Välj filsystemsformat"
 
 msgid "Select firmware:"
 msgstr "Välj mjukvara:"
@@ -6779,6 +6780,9 @@ msgid ""
 "Lowering this threshold can adversely affect performance and auto-"
 "defragmentation!"
 msgstr ""
+"Ange hur stor del av utrymmet som skall undantas från normal användning. Att "
+"sänka denna gräns kan negativt påverka prestanda och automatisk "
+"defragmentering!"
 
 msgid "Split request"
 msgstr "Split begäran"
@@ -6822,7 +6826,7 @@ msgid "Status report successfully sent."
 msgstr "Statusrapport skickad med lyckat resultat."
 
 msgid "Step"
-msgstr ""
+msgstr "Steg"
 
 msgid "Stop"
 msgstr "Stoppa"
@@ -7275,19 +7279,23 @@ msgstr "Attributet \"%s\" krävs."
 #, php-format
 msgid ""
 "The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."
-msgstr ""
+msgstr "Attributet '%s' får endast innehålla tecknen [a-z], [A-Z] and [0-9]."
 
 #, php-format
 msgid ""
 "The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
 "and [._-]"
 msgstr ""
+"Attributet '%s' får endast innehålla tecknen [a-z], [A-Z] and [0-9] och [._-"
+"]."
 
 #, php-format
 msgid ""
 "The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
 "and [._-]."
 msgstr ""
+"Attributet '%s' får endast innehålla tecknen [a-z], [A-Z] and [0-9] och [._-"
+"]."
 
 #, php-format
 msgid ""
@@ -8923,7 +8931,7 @@ msgid "Unknown or unformatted"
 msgstr "Okänd eller oformaterad"
 
 msgid "Unknown size"
-msgstr ""
+msgstr "Okänd storlek"
 
 msgid "Unload"
 msgstr "Mata ut"
@@ -9219,6 +9227,9 @@ msgid ""
 "or %n for a counter starting at n, [n for the n rightmost characters of the "
 "device serial number."
 msgstr ""
+"Volymettikett för det nya filsystemet. Använd $ för enhetsnamn, % för en "
+"räknare eller %n för en räknare med start på n, [n avser tecknet längst till "
+"höger i enhetens serienummer."
 
 msgid "Volume mode"
 msgstr "Volymmod"
@@ -9498,7 +9509,7 @@ msgid "ZFS Snapshot Properties"
 msgstr "ZFS Snapshot Egenskaper"
 
 msgid "ZFS Storage Pool"
-msgstr ""
+msgstr "ZFS LagringsPool"
 
 msgid "ZFS Volume Information & Status"
 msgstr "ZFS Volym Information & Status"
