@@ -73,7 +73,7 @@ $a_phy_disk = array_merge((array)get_physical_disks_list());
 	<tr>
 		<td class="tabcont">
 			<table width="100%" border="0" cellpadding="0" cellspacing="0">
-				<?php html_titleline2(gettext_gen2('Status & Information'), 12);?>
+				<?php html_titleline2(gettext_gen2('List Detected Disks'), 12);?>
 				<tr>
 					<td width="5%" class="listhdrlr"><?=gettext_gen2("Device");?></td>
 					<td width="12%" class="listhdrr"><?=gettext_gen2("Device Model"); ?></td>
