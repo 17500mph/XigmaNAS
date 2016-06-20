@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-06-17 19:08+0000\n"
+"POT-Creation-Date: 2016-06-20 03:00+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -191,8 +191,7 @@ msgstr ""
 msgid "A key will be either 5 or 13 characters (40 or 104 bits) depending of the local network and the capabilities of the adaptor. It may be specified either as a plain string or as a string of hexadecimal digits preceded by '0x'."
 msgstr ""
 
-#, php-format
-msgid "A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount point</a> first before proceeding."
+msgid "A mounted RAID volume cannot be deleted."
 msgstr ""
 
 msgid "A route to this destination network already exists."
@@ -3168,6 +3167,15 @@ msgstr ""
 msgid "IP type mismatch for network and gateway."
 msgstr ""
 
+msgid "IPMI FRU"
+msgstr ""
+
+msgid "IPMI Sensor"
+msgstr ""
+
+msgid "IPMI Stats"
+msgstr ""
+
 msgid "IPv4 Configuration"
 msgstr ""
 
@@ -3818,6 +3826,9 @@ msgstr ""
 msgid "Low voltage trimming transfer point"
 msgstr ""
 
+msgid "Lower"
+msgstr ""
+
 msgid "Lowest value is higher priority. For master node, use 0 or 1. If preempt is enabled, it is adjusted to 240 on failure."
 msgstr ""
 
@@ -4276,6 +4287,12 @@ msgstr ""
 msgid "No DNS setting found."
 msgstr ""
 
+msgid "No IPMI FRU data available."
+msgstr ""
+
+msgid "No IPMI sensor data available."
+msgstr ""
+
 msgid "No RSYNC Client configured"
 msgstr ""
 
@@ -4391,6 +4408,12 @@ msgid "Nominal value of apparent power (Volt-Amps)"
 msgstr ""
 
 msgid "Nominal value of real power (Watts)"
+msgstr ""
+
+msgid "Non-Critical"
+msgstr ""
+
+msgid "Non-Recoverable"
 msgstr ""
 
 msgid "None"
@@ -5104,6 +5127,9 @@ msgstr ""
 msgid "Read/Write Access"
 msgstr ""
 
+msgid "Reading"
+msgstr ""
+
 msgid "Readonly"
 msgstr ""
 
@@ -5192,6 +5218,10 @@ msgid "Removable"
 msgstr ""
 
 msgid "Remove all entries from ARP table"
+msgstr ""
+
+#, php-format
+msgid "Remove the %s first before proceeding."
 msgstr ""
 
 msgid "Replace Battery UPS"
@@ -5563,6 +5593,9 @@ msgstr ""
 msgid "Sensitive"
 msgstr ""
 
+msgid "Sensor"
+msgstr ""
+
 msgid "Sep"
 msgstr ""
 
@@ -5725,6 +5758,9 @@ msgid "Slovak"
 msgstr ""
 
 msgid "Slovenian"
+msgstr ""
+
+msgid "Smart Outlet Management"
 msgstr ""
 
 msgid "SmartBoost"
@@ -6004,6 +6040,9 @@ msgid "System Information"
 msgstr ""
 
 msgid "System Load"
+msgstr ""
+
+msgid "System Message"
 msgstr ""
 
 msgid "System Settings"
@@ -7417,6 +7456,9 @@ msgstr ""
 msgid "Upload directory of the webserver. The default is %s."
 msgstr ""
 
+msgid "Upper"
+msgstr ""
+
 msgid "Use a space to separate multiple hosts (only one required). Remember to set up at least one DNS server if you enter a host name here!"
 msgstr ""
 
@@ -7972,6 +8014,9 @@ msgid "minute(s)"
 msgstr ""
 
 msgid "mount"
+msgstr ""
+
+msgid "mount point"
 msgstr ""
 
 msgid "n/a"
