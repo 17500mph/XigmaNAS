@@ -88,6 +88,7 @@ $a_service[] = array("desc" => gettext("UPS"), "link" => "services_ups.php", "co
 		<td class="tabcont">
 			<form action="services_info.php" method="post">
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<?php html_titleline(gettext('Overview'), 3);?>
 					<tr>
 						<td width="90%" class="listhdrlr"><?=gettext("Service");?></td>
 						<td width="5%" class="listhdrc"><?=gettext("Enabled");?></td>
