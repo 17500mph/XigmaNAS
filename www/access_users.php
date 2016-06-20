@@ -110,6 +110,7 @@ function userdbuser_process_updatenotification($mode, $data) {
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<?php if (updatenotify_exists("userdb_user")) print_config_change_box();?>
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+					<?php html_titleline2(gettext_gen2('User Setup'), 5);?>
 					<tr>
 						<td width="20%" class="listhdrlr"><?=gettext("User");?></td>
 						<td width="25%" class="listhdrr"><?=gettext("Full Name");?></td>
