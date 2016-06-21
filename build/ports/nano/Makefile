@@ -1,11 +1,11 @@
 PORTNAME=		nano
-PORTVERSION=	2.5.3
-PORTREVISION?=  1
+PORTVERSION=	2.6.0
+PORTREVISION?=  0
 CATEGORIES=		editors
 COMMENT=		Nano's ANOther editor, an enhanced free Pico clone
 MAINTAINER=		zoon1@nas4free.org
 
-MASTER_SITES=	http://www.nano-editor.org/dist/v2.4/ \
+MASTER_SITES=	http://www.nano-editor.org/dist/v2.6/ \
 						${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	${PORTNAME}
 
