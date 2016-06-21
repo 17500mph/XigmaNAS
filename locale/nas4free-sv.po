@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-06-20 03:00+0000\n"
-"PO-Revision-Date: 2016-06-18 05:23+0000\n"
+"PO-Revision-Date: 2016-06-20 17:17+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-20 01:41+0000\n"
+"X-Launchpad-Export-Date: 2016-06-21 04:29+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -300,7 +300,7 @@ msgstr ""
 "i klartext eller som en sträng av ett hexadecimalt värde inlett med '0x'."
 
 msgid "A mounted RAID volume cannot be deleted."
-msgstr ""
+msgstr "En monterad RAID volym kan inte tas bort."
 
 msgid "A route to this destination network already exists."
 msgstr "Nätverks destinationen finns redan."
@@ -3716,13 +3716,13 @@ msgid "IP type mismatch for network and gateway."
 msgstr "IP adressen stämmer inte överens mellan nätverket och \"gateway\""
 
 msgid "IPMI FRU"
-msgstr ""
+msgstr "IPMI FRU"
 
 msgid "IPMI Sensor"
-msgstr ""
+msgstr "IPMI Sensor"
 
 msgid "IPMI Stats"
-msgstr ""
+msgstr "IPMI Stats"
 
 msgid "IPv4 Configuration"
 msgstr "IPv4-konfiguration"
@@ -4511,7 +4511,7 @@ msgid "Low voltage trimming transfer point"
 msgstr "Anpassar låg spänning till överförings punkt."
 
 msgid "Lower"
-msgstr ""
+msgstr "Lägre"
 
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
@@ -5019,10 +5019,10 @@ msgid "No DNS setting found."
 msgstr "Ingen DNS-inställning hittades"
 
 msgid "No IPMI FRU data available."
-msgstr ""
+msgstr "Ingen IPMI FRU data tillgänglig"
 
 msgid "No IPMI sensor data available."
-msgstr ""
+msgstr "Ingen IPMI sensor data tillgänglig"
 
 msgid "No RSYNC Client configured"
 msgstr "Ingen RSYNC-klient konfigurerad"
@@ -5173,10 +5173,10 @@ msgid "Nominal value of real power (Watts)"
 msgstr "Nominell aktiv effekt (W)"
 
 msgid "Non-Critical"
-msgstr ""
+msgstr "Icke kritisk"
 
 msgid "Non-Recoverable"
-msgstr ""
+msgstr "Inte återskapbar"
 
 msgid "None"
 msgstr "Inget"
@@ -5957,7 +5957,7 @@ msgid "Read/Write Access"
 msgstr "Läs/Skriv Åtkomst"
 
 msgid "Reading"
-msgstr ""
+msgstr "Läsning"
 
 msgid "Readonly"
 msgstr "Skrivskyddad"
@@ -6055,7 +6055,7 @@ msgstr "Ta bort alla värden från ARP-tabellen"
 
 #, php-format
 msgid "Remove the %s first before proceeding."
-msgstr ""
+msgstr "Ta bort %s först innan du fortsätter."
 
 msgid "Replace Battery UPS"
 msgstr "Byt UPS-batteri"
@@ -6468,7 +6468,7 @@ msgid "Sensitive"
 msgstr "Känslig"
 
 msgid "Sensor"
-msgstr ""
+msgstr "Sensor"
 
 msgid "Sep"
 msgstr "sep"
@@ -6663,7 +6663,7 @@ msgid "Slovenian"
 msgstr "Slovenska"
 
 msgid "Smart Outlet Management"
-msgstr ""
+msgstr "Smart uttagshantering"
 
 msgid "SmartBoost"
 msgstr "SmartBoost"
@@ -6998,7 +6998,7 @@ msgid "System Load"
 msgstr "Systembelastning"
 
 msgid "System Message"
-msgstr ""
+msgstr "Systemmeddelande"
 
 msgid "System Settings"
 msgstr "Systeminställningar"
@@ -9003,7 +9003,7 @@ msgid "Upload directory of the webserver. The default is %s."
 msgstr "Uppladdningskatalog för webservern. Standard är %s."
 
 msgid "Upper"
-msgstr ""
+msgstr "Övre"
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
@@ -9671,7 +9671,7 @@ msgid "mount"
 msgstr "montera"
 
 msgid "mount point"
-msgstr ""
+msgstr "monteringspunkt"
 
 msgid "n/a"
 msgstr "ej tillgängligt"
@@ -9729,11 +9729,3 @@ msgstr "umount"
 
 msgid "version:"
 msgstr "version:"
-
-#, php-format
-#~ msgid ""
-#~ "A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
-#~ "point</a> first before proceeding."
-#~ msgstr ""
-#~ "En monterad RAID volym kan inte raderas. Ta bort <a href='%s'> "
-#~ "monteringspunkten</a> först."

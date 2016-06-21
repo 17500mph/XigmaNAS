@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-06-20 03:00+0000\n"
-"PO-Revision-Date: 2016-06-17 07:42+0000\n"
+"PO-Revision-Date: 2016-06-20 13:10+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-20 01:41+0000\n"
+"X-Launchpad-Export-Date: 2016-06-21 04:28+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -322,7 +322,7 @@ msgstr ""
 "από δεκαεξαδικά ψηφία στα οποία θα προηγείται το '0x'."
 
 msgid "A mounted RAID volume cannot be deleted."
-msgstr ""
+msgstr "Οι προσαρτημένοι τόμοι RAID δεν μπορούν να διαγραφούν."
 
 msgid "A route to this destination network already exists."
 msgstr "Υπάρχει ήδη μια διαδρομή προς αυτόν τον προορισμό δικτύου."
@@ -3856,13 +3856,13 @@ msgstr ""
 "πύλη."
 
 msgid "IPMI FRU"
-msgstr ""
+msgstr "IPMI FRU"
 
 msgid "IPMI Sensor"
-msgstr ""
+msgstr "Αισθητήρες IPMI"
 
 msgid "IPMI Stats"
-msgstr ""
+msgstr "Στατιστικά IPMI"
 
 msgid "IPv4 Configuration"
 msgstr "Ρύθμιση IPv4"
@@ -4687,7 +4687,7 @@ msgid "Low voltage trimming transfer point"
 msgstr "Σημείο για μεταφορά σε εκτόνωση χαμηλής τάσης"
 
 msgid "Lower"
-msgstr ""
+msgstr "Κατώτερο"
 
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
@@ -5199,10 +5199,10 @@ msgid "No DNS setting found."
 msgstr "Δεν βρέθηκε ρύθμιση DNS."
 
 msgid "No IPMI FRU data available."
-msgstr ""
+msgstr "Δεν υπάρχουν διαθέσιμα δεδομένα IPMI FRU."
 
 msgid "No IPMI sensor data available."
-msgstr ""
+msgstr "Δεν υπάρχουν διαθέσιμα δεδομένα αισθητήρων IPMI."
 
 msgid "No RSYNC Client configured"
 msgstr "Δε ρυθμίστηκε Πελάτης RSYNC"
@@ -5355,10 +5355,10 @@ msgid "Nominal value of real power (Watts)"
 msgstr "Ονομαστική τιμή πραγματικής ισχύος (Watts)"
 
 msgid "Non-Critical"
-msgstr ""
+msgstr "Μη-Κρίσιμο"
 
 msgid "Non-Recoverable"
-msgstr ""
+msgstr "Μη-Ανακτήσιμο"
 
 msgid "None"
 msgstr "Κανένα"
@@ -6157,7 +6157,7 @@ msgid "Read/Write Access"
 msgstr "Πρόσβαση Ανάγνωσης/Εγγραφής"
 
 msgid "Reading"
-msgstr ""
+msgstr "Αποτέλεσμα μέτρησης"
 
 msgid "Readonly"
 msgstr "Μόνο για ανάγνωση"
@@ -6257,7 +6257,7 @@ msgstr "Αφαίρεση όλων των καταχωρήσεων από τον 
 
 #, php-format
 msgid "Remove the %s first before proceeding."
-msgstr ""
+msgstr "Αφαιρέστε πρώτα το %s πριν συνεχίσετε"
 
 msgid "Replace Battery UPS"
 msgstr "Αντικαταστήστε τη μπαταρία του UPS"
@@ -6682,7 +6682,7 @@ msgid "Sensitive"
 msgstr "Διαχωρισμός"
 
 msgid "Sensor"
-msgstr ""
+msgstr "Αισθητήρας"
 
 msgid "Sep"
 msgstr "Σεπ."
@@ -6886,7 +6886,7 @@ msgid "Slovenian"
 msgstr "Σλοβενικά"
 
 msgid "Smart Outlet Management"
-msgstr ""
+msgstr "Διαχείριση Έξυπνων Παροχών Εξόδου"
 
 msgid "SmartBoost"
 msgstr "SmartBoost"
@@ -7079,7 +7079,7 @@ msgid "Status report successfully sent."
 msgstr "Η αναφορά της κατάστασης στάλθηκε με επιτυχία."
 
 msgid "Step"
-msgstr ""
+msgstr "Βήμα"
 
 msgid "Stop"
 msgstr "Διακοπή"
@@ -7219,7 +7219,7 @@ msgid "System Load"
 msgstr "Φόρτος Συστήματος"
 
 msgid "System Message"
-msgstr ""
+msgstr "Μήνυμα Συστήματος"
 
 msgid "System Settings"
 msgstr "Ρυθμίσεις Συστήματος"
@@ -7552,18 +7552,24 @@ msgstr "Η ιδιότητα '%s' απαιτείται."
 msgid ""
 "The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."
 msgstr ""
+"Το χαρακτηριστικό '%s' μπορεί να αποτελείται μόνο από τους  χαρακτήρες [a-"
+"z], [A-Z] και [0-9]."
 
 #, php-format
 msgid ""
 "The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
 "and [._-]"
 msgstr ""
+"Το χαρακτηριστικό '%s' μπορεί να αποτελείται μόνο από τους  χαρακτήρες [a-"
+"z], [A-Z], [0-9] και [._-]"
 
 #, php-format
 msgid ""
 "The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
 "and [._-]."
 msgstr ""
+"Το χαρακτηριστικό '%s' μπορεί να αποτελείται μόνο από τους  χαρακτήρες [a-"
+"z], [A-Z], [0-9] και [._-]"
 
 #, php-format
 msgid ""
@@ -9323,7 +9329,7 @@ msgstr ""
 "ο %s."
 
 msgid "Upper"
-msgstr ""
+msgstr "Ανώτερο"
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
@@ -9589,6 +9595,9 @@ msgid ""
 "or %n for a counter starting at n, [n for the n rightmost characters of the "
 "device serial number."
 msgstr ""
+"Ετικέτα τόμου του νέου συστήματος αρχείων. Χρησιμοποιείστε $ για όνομα "
+"συσκευής, % για έναν μετρητή ή %n για έναν μετρητή που ξεκινάει από την τιμή "
+"n,  [n για τους n τελευταίους χαρακτήρες του σειριακού αριθμού της συσκευής."
 
 msgid "Volume mode"
 msgstr "Λειτουργία τόμου"
@@ -10006,7 +10015,7 @@ msgid "mount"
 msgstr "προσάρτηση"
 
 msgid "mount point"
-msgstr ""
+msgstr "σημείο προσάρτησης"
 
 msgid "n/a"
 msgstr "n/a"
@@ -10064,11 +10073,3 @@ msgstr "αποπροσάρτηση"
 
 msgid "version:"
 msgstr "έκδοση:"
-
-#, php-format
-#~ msgid ""
-#~ "A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
-#~ "point</a> first before proceeding."
-#~ msgstr ""
-#~ "Οι προσαρτημένοι τόμοι RAID δεν μπορούν να διαγραφούν. Αφαιρέστε πρώτα το <a "
-#~ "href='%s'>σημείο προσάρτησης</a> πριν συνεχίσετε."
