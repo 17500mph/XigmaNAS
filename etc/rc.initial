@@ -72,7 +72,8 @@ else
 		esac
 
 		echo
-		read -p "Enter a number: " opmode
+		read -p "Enter a number: 
+" opmode
 
 		# see what the user has chosen
 		case ${opmode} in
