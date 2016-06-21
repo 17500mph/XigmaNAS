@@ -288,33 +288,33 @@ if(function_exists("date_default_timezone_set") and function_exists("date_defaul
 $(document).ready(function(){
 	var gui = new GUI;
 	gui.recall(5000, 5000, 'index.php', null, function(data) {
-		if ($('#vipstatus').size() > 0)
+		if ($('#vipstatus').length > 0)
 			$('#vipstatus').text(data.vipstatus);
-		if ($('#system_uptime').size() > 0)
+		if ($('#system_uptime').length > 0)
 			$('#system_uptime').text(data.uptime);
-		if ($('#system_datetime').size() > 0)
+		if ($('#system_datetime').length > 0)
 			$('#system_datetime').text(data.date);
-		if ($('#memusage').size() > 0) {
+		if ($('#memusage').length > 0) {
 			$('#memusage').val(data.memusage.caption);
 			$('#memusageu').attr('width', data.memusage.percentage + 'px');
 			$('#memusagef').attr('width', (100 - data.memusage.percentage) + 'px');
 		}
-		if ($('#loadaverage').size() > 0)
+		if ($('#loadaverage').length > 0)
 			$('#loadaverage').val(data.loadaverage);
 		if (typeof(data.cputemp) != 'undefined')
-			if ($('#cputemp').size() > 0)
+			if ($('#cputemp').length > 0)
 				$('#cputemp').val(data.cputemp);
 		if (typeof(data.cputemp2) != 'undefined') {
 			for (var idx = 0; idx < data.cputemp2.length; idx++) {
-				if ($('#cputemp'+idx).size() > 0)
+				if ($('#cputemp'+idx).length > 0)
 					$('#cputemp'+idx).val(data.cputemp2[idx]);
 			}
 		}
 		if (typeof(data.cpufreq) != 'undefined')
-			if ($('#cpufreq').size() > 0)
+			if ($('#cpufreq').length > 0)
 				$('#cpufreq').val(data.cpufreq + 'MHz');
 		if (typeof(data.cpuusage) != 'undefined') {
-			if ($('#cpuusage').size() > 0) {
+			if ($('#cpuusage').length > 0) {
 				$('#cpuusage').val(data.cpuusage + '%');
 				$('#cpuusageu').attr('width', data.cpuusage + 'px');
 				$('#cpuusagef').attr('width', (100 - data.cpuusage) + 'px');
@@ -322,7 +322,7 @@ $(document).ready(function(){
 		}
 		if (typeof(data.cpuusage2) != 'undefined') {
 			for (var idx = 0; idx < data.cpuusage2.length; idx++) {
-				if ($('#cpuusage'+idx).size() > 0) {
+				if ($('#cpuusage'+idx).length > 0) {
 					$('#cpuusage'+idx).val(data.cpuusage2[idx] + '%');
 					$('#cpuusageu'+idx).attr('width', data.cpuusage2[idx] + 'px');
 					$('#cpuusagef'+idx).attr('width', (100 - data.cpuusage2[idx]) + 'px');
@@ -333,7 +333,7 @@ $(document).ready(function(){
 		if (typeof(data.diskusage) != 'undefined') {
 			for (var idx = 0; idx < data.diskusage.length; idx++) {
 				var du = data.diskusage[idx];
-				if ($('#diskusage_'+du.id+'_bar_used').size() > 0) {
+				if ($('#diskusage_'+du.id+'_bar_used').length > 0) {
 					$('#diskusage_'+du.id+'_name').text(du.name);
 					$('#diskusage_'+du.id+'_bar_used').attr('width', du.percentage + 'px');
 					$('#diskusage_'+du.id+'_bar_used').attr('title', du['tooltip'].used);
@@ -350,7 +350,7 @@ $(document).ready(function(){
 		if (typeof(data.poolusage) != 'undefined') {
 			for (var idx = 0; idx < data.poolusage.length; idx++) {
 				var pu = data.poolusage[idx];
-				if ($('#poolusage_'+pu.id+'_bar_used').size() > 0) {
+				if ($('#poolusage_'+pu.id+'_bar_used').length > 0) {
 					$('#poolusage_'+pu.id+'_name').text(pu.name);
 					$('#poolusage_'+pu.id+'_bar_used').attr('width', pu.percentage + 'px');
 					$('#poolusage_'+pu.id+'_bar_used').attr('title', pu['tooltip'].used);
@@ -368,7 +368,7 @@ $(document).ready(function(){
 		if (typeof(data.swapusage) != 'undefined') {
 			for (var idx = 0; idx < data.swapusage.length; idx++) {
 				var su = data.swapusage[idx];
-				if ($('#swapusage_'+su.id+'_bar_used').size() > 0) {
+				if ($('#swapusage_'+su.id+'_bar_used').length > 0) {
 					$('#swapusage_'+su.id+'_name').text(su.name);
 					$('#swapusage_'+su.id+'_bar_used').attr('width', su.percentage + 'px');
 					$('#swapusage_'+su.id+'_bar_used').attr('title', su['tooltip'].used);
@@ -383,11 +383,11 @@ $(document).ready(function(){
 			}
 		}
 		if (typeof(data.upsinfo) != 'undefined' && data.upsinfo !== null) {
-			if ($('#ups_status_disp_status').size() > 0)
+			if ($('#ups_status_disp_status').length > 0)
 				$('#ups_status_disp_status').text(data.upsinfo.disp_status);
 			var ups_id = "load";
 			var ui = data.upsinfo[ups_id];
-			if ($('#ups_status_'+ups_id+'_bar_used').size() > 0) {
+			if ($('#ups_status_'+ups_id+'_bar_used').length > 0) {
 				$('#ups_status_'+ups_id+'_bar_used').attr('width', ui.percentage + 'px');
 				$('#ups_status_'+ups_id+'_bar_used').attr('title', ui.tooltip_used);
 				$('#ups_status_'+ups_id+'_bar_free').attr('width', (100 - ui.percentage) + 'px');
@@ -396,7 +396,7 @@ $(document).ready(function(){
 			}
 			var ups_id = "battery";
 			var ui = data.upsinfo[ups_id];
-			if ($('#ups_status_'+ups_id+'_bar_used').size() > 0) {
+			if ($('#ups_status_'+ups_id+'_bar_used').length > 0) {
 				$('#ups_status_'+ups_id+'_bar_used').attr('width', ui.percentage + 'px');
 				$('#ups_status_'+ups_id+'_bar_used').attr('title', ui.tooltip_used);
 				$('#ups_status_'+ups_id+'_bar_free').attr('width', (100 - ui.percentage) + 'px');
@@ -405,11 +405,11 @@ $(document).ready(function(){
 			}
 		}
 		if (typeof(data.upsinfo2) != 'undefined' && data.upsinfo2 !== null) {
-			if ($('#ups_status_disp_status2').size() > 0)
+			if ($('#ups_status_disp_status2').length > 0)
 				$('#ups_status_disp_status2').text(data.upsinfo2.disp_status);
 			var ups_id = "load2";
 			var ui = data.upsinfo2["load"];
-			if ($('#ups_status_'+ups_id+'_bar_used').size() > 0) {
+			if ($('#ups_status_'+ups_id+'_bar_used').length > 0) {
 				$('#ups_status_'+ups_id+'_bar_used').attr('width', ui.percentage + 'px');
 				$('#ups_status_'+ups_id+'_bar_used').attr('title', ui.tooltip_used);
 				$('#ups_status_'+ups_id+'_bar_free').attr('width', (100 - ui.percentage) + 'px');
@@ -418,7 +418,7 @@ $(document).ready(function(){
 			}
 			var ups_id = "battery2";
 			var ui = data.upsinfo2["battery"];
-			if ($('#ups_status_'+ups_id+'_bar_used').size() > 0) {
+			if ($('#ups_status_'+ups_id+'_bar_used').length > 0) {
 				$('#ups_status_'+ups_id+'_bar_used').attr('width', ui.percentage + 'px');
 				$('#ups_status_'+ups_id+'_bar_used').attr('title', ui.tooltip_used);
 				$('#ups_status_'+ups_id+'_bar_free').attr('width', (100 - ui.percentage) + 'px');
