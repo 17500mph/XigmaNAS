@@ -277,14 +277,14 @@ EOD;
 	mwexec("(cd {$mntpath}/boot/kernel; for f in *.gz; do /usr/bin/gzip -d -f \$f; done)");
 
 	// Generate /etc/fstab.
-	//$ufsid = disks_get_ufsid("/dev/{$harddrive}{$part}");
-	//if (empty($ufsid)) {
-	//	write_console("Error: Failed to get UFS ID.\n");
-	//	return 1;
-	//}
+	$ufsid = disks_get_ufsid("/dev/{$harddrive}{$part}");
+	if (empty($ufsid)) {
+		write_console("Error: Failed to get UFS ID.\n");
+		return 1;
+	}
 	$fstab = <<<EOD
 # Device                    Mountpoint  FStype  Options         Dump    Pass#
-/dev/{$harddrive}{$part}     /       ufs     rw              1       1
+/dev/ufsid/{$ufsid}     /       ufs     rw              1       1
 
 EOD;
 
