@@ -198,13 +198,13 @@ function install_harddrive_image($harddrive)
 
 	// Mount disk used to install OS.
 	mwexec("/bin/mkdir -p {$mntpath}");
-	if (1 == mwexec("/sbin/mount /dev/{$harddrive}$part {$mntpath}")) {
-		write_console("Error: Failed to mount '/dev/{$harddrive}$part'!\n");
+	if (1 == mwexec("/sbin/mount /dev/{$harddrive}{$part} {$mntpath}")) {
+		write_console("Error: Failed to mount '/dev/{$harddrive}{$part}'!\n");
 		return 1;
 	}
 
 	// Install system files.
-	write_console("Installing system files on device {$harddrive}$part.\n");
+	write_console("Installing system files on device {$harddrive}{$part}.\n");
 	mwexec("/usr/bin/tar --exclude mnt/ --exclude dev/ --exclude var/ --exclude tmp/ --exclude {$g['cf_path']}/ -c -f - -C / . | tar -xvpf - -C {$mntpath}");
 	if ($boot_lowmem === "1" && preg_match('/-liveCD$/i', $platform)) {
 		// under lowmem version
@@ -277,14 +277,14 @@ EOD;
 	mwexec("(cd {$mntpath}/boot/kernel; for f in *.gz; do /usr/bin/gzip -d -f \$f; done)");
 
 	// Generate /etc/fstab.
-	$ufsid = disks_get_ufsid("/dev/{$harddrive}$part");
-	if (empty($ufsid)) {
-		write_console("Error: Failed to get UFS ID.\n");
-		return 1;
-	}
+	//$ufsid = disks_get_ufsid("/dev/{$harddrive}{$part}");
+	//if (empty($ufsid)) {
+	//	write_console("Error: Failed to get UFS ID.\n");
+	//	return 1;
+	//}
 	$fstab = <<<EOD
 # Device                    Mountpoint  FStype  Options         Dump    Pass#
-/dev/ufsid/{$ufsid}     /       ufs     rw              1       1
+/dev/{$harddrive}{$part}     /       ufs     rw              1       1
 
 EOD;
 
@@ -298,7 +298,7 @@ EOD;
 	// generated with 'liveCD' and 'embedded' during startup, but need to be
 	// created during install of 'full'.
 	$cfdevice = <<<EOD
-{$harddrive}$part
+{$harddrive}{$part}
 
 EOD;
 
@@ -341,8 +341,8 @@ function install_upgrade_full($harddrive)
 
 	// Mount disk used to install OS
 	mwexec("/bin/mkdir -p {$mntpath}");
-	if (1 == mwexec("/sbin/mount /dev/{$harddrive}$part {$mntpath}")) {
-		write_console("Error: Failed to mount '/dev/{$harddrive}$part'!\n");
+	if (1 == mwexec("/sbin/mount /dev/{$harddrive}{$part} {$mntpath}")) {
+		write_console("Error: Failed to mount '/dev/{$harddrive}{$part}'!\n");
 		return 1;
 	}
 
@@ -367,7 +367,7 @@ function install_upgrade_full($harddrive)
 	mwexec("/etc/install/upgrade.sh clean {$mntpath}");
 
 	// Install system files
-	write_console("Installing system files on device {$harddrive}$part.\n");
+	write_console("Installing system files on device {$harddrive}{$part}.\n");
 	mwexec("/usr/bin/tar --exclude mnt/ --exclude dev/ --exclude var/ --exclude tmp/ --exclude {$g['cf_path']}/ -c -f - -C / . | tar -xvpf - -C {$mntpath}");
 	if ($boot_lowmem === "1" && preg_match('/-liveCD$/i', $platform)) {
 		// under lowmem version
