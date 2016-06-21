@@ -1,7 +1,7 @@
 PORTNAME=				bash
-PATCHLEVEL=		42
+PATCHLEVEL=		46
 PORTVERSION=		4.3.${PATCHLEVEL:S/^0//g}
-PORTREVISION?=	7
+PORTREVISION?=	8
 CATEGORIES=			shells
 COMMENT=				The GNU Project's Bourne Again SHell
 MAINTAINER=			zoon1@nas4free.org
