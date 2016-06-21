@@ -117,6 +117,7 @@ function hosts_process_updatenotification($mode, $data) {
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<?php if (updatenotify_exists("hosts")) print_config_change_box();?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
+				<?php html_titleline2(gettext_gen2('Hosts'), 2);?>
 					<tr>
 						<td width="22%" valign="top" class="vncell"><?=gettext("Hostname database");?></td>
 						<td width="78%" class="vtable">

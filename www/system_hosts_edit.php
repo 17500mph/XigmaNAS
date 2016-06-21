@@ -119,6 +119,7 @@ if ($_POST) {
       <form action="system_hosts_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
       	<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
         <table width="100%" border="0" cellpadding="6" cellspacing="0">
+				<?php html_titleline2(gettext_gen2('Hosts Setup'), 2);?>
 					<?php html_inputbox("name", gettext("Hostname"), $pconfig['name'], gettext("The host name may only consist of the characters a-z, A-Z and 0-9, - , _ and ."), true, 40);?>
 					<?php html_inputbox("address", gettext("IP address"), $pconfig['address'], gettext("The IP address that this hostname represents."), true, 20);?>
 					<?php html_inputbox("descr", gettext("Description"), $pconfig['descr'], gettext("You may enter a description here for your reference."), false, 20);?>
