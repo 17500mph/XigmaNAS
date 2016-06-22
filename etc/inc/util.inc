@@ -2924,8 +2924,4 @@ function decrypt_aes256cbc($password, $b64enc_data)
 		return FALSE;
 	return $dec;
 }
-
-function gtext($data) {
-	return htmlspecialchars(gettext($data), ENT_QUOTES);
-}
 ?>
