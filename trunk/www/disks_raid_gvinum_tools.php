@@ -68,87 +68,84 @@ $(window).on("load", function() {
 //]]>
 </script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-	<td class="tabnavtbl">
-  		<ul id="tabnav">
-			<li class="tabinact"><a href="disks_raid_geom.php"><span><?=gtext('GEOM');?></span></a></li>
-			<li class="tabact"><a href="disks_raid_gvinum.php" title="<?=gtext('Reload page');?>"><span><?=gtext('RAID 0/1/5');?></span></a></li>
-		</ul>
-	  </td>
-</tr>
-	<tr><td class="tabnavtbl">
-		<ul id="tabnav2">
-			<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?=gtext("Management"); ?></span></a></li>
-			<li class="tabact"><a href="disks_raid_gvinum_tools.php" title="<?=gtext('Reload page');?>" ><span><?=gtext("Maintenance");?></span></a></li>
-			<li class="tabinact"><a href="disks_raid_gvinum_info.php"><span><?=gtext("Information"); ?></span></a></li>
-		</ul>
-	</td>
-</tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabinact"><a href="disks_raid_geom.php"><span><?=gtext('GEOM');?></span></a></li>
+		<li class="tabact"><a href="disks_raid_gvinum.php" title="<?=gtext('Reload page');?>"><span><?=gtext('RAID 0/1/5');?></span></a></li>
+	</ul></td></tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav2">
+		<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?=gtext("Management"); ?></span></a></li>
+		<li class="tabact"><a href="disks_raid_gvinum_tools.php" title="<?=gtext('Reload page');?>" ><span><?=gtext("Maintenance");?></span></a></li>
+		<li class="tabinact"><a href="disks_raid_gvinum_info.php"><span><?=gtext("Information"); ?></span></a></li>
+	</ul></td></tr>
 	<tr><td class="tabcont">
-			<table width="100%" border="0" cellspacing="0" cellpadding="0">
-	    		<?php html_titleline(gtext("RAID 0/1/5 Maintenance"));?>
-	    	<tr>
-			<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-			<form action="disks_raid_gvinum_tools.php" method="post" name="iform" id="iform">
-			<table width="100%" border="0" cellpadding="6" cellspacing="0">
-		<tr>
-			<td width="22%" valign="top" class="vncellreq"><?=gtext("Object name");?></td>
-			<td width="78%" class="vtable">
-	          	<input name="object" type="text" class="formfld" id="object" size="20" value="<?=htmlspecialchars($object);?>" />
-		</td>
-	</tr>
-		<tr>
-			<td width="22%" valign="top" class="vncellreq"><?=gtext("Unix Command");?></td>
-			<td width="78%" class="vtable">
-			<select name="action" class="formfld" id="action">
-			<option value="start" <?php if ($action == "start") echo "selected=\"selected\""; ?>>start</option>
-			<option value="rebuild" <?php if ($action == "rebuild") echo "selected=\"selected\""; ?>>rebuild</option>
-			<option value="list" <?php if ($action == "list") echo "selected=\"selected\""; ?>>list</option>
-			<option value="remove" <?php if ($action == "remove") echo "selected=\"selected\""; ?>>remove</option>
-			<option value="forceup" <?php if ($action == "forceup") echo "selected=\"selected\""; ?>>forceup</option>
-			<option value="saveconfig" <?php if ($action == "saveconfig") echo "selected=\"selected\""; ?>>saveconfig</option>
-		</select>
-	</td>
-		</tr>
-			</table>
-			<div id="submit">
-			<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Send Command!");?>" />
-		</div>
-			<?php if ($do_action) {
-				echo(sprintf("<div id='cmdoutput'>%s</div>", gtext("Command output:")));
-				echo('<pre class="cmdoutput">');
-				//ob_end_flush();
-
-				// Function disks_geom_cmd() can't be used. That's because gvinum can't be accessed
-				// via 'geom vinum xxx'.
-				switch ($action) {
-				case "start":
-					disks_geom_cmd("vinum", "start", $object, true);
-					break;
-					case "rebuild":
-					disks_geom_cmd("vinum", "rebuildparity", $object, true);
-					break;
-					case "list":
-					disks_geom_cmd("vinum", "list", $object, true);
-					break;
-					case "remove":
-					disks_geom_cmd("vinum", "rm", "-r {$object}", true);
-					break;
-					case "forceup":
-					disks_geom_cmd("vinum", "setstate", "-f up {$object}", true);
-					break;
-					case "saveconfig":
-					disks_geom_cmd("vinum", "saveconfig", "", true);
-					break;
-				}
-				echo('</pre>');
-			};?>
-<div id="remarks">
-	<?php html_remark("warning", gtext('Warning'), gettext("1. Use these specials actions for debugging only!<br />2. There is no need of using this menu for starting a RAID volume (start automaticaly)."));?>
-	</div>
-<?php include("formend.inc");?>
-</form>
-</td>
-</tr>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<?php html_titleline(gtext("RAID 0/1/5 Maintenance"));?>
+			<tr><td>			
+				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
+				<form action="disks_raid_gvinum_tools.php" method="post" name="iform" id="iform">
+					<table width="100%" border="0" cellpadding="6" cellspacing="0">
+					<tr>
+						<td width="22%" valign="top" class="vncellreq"><?=gtext("Object name");?></td>
+						<td width="78%" class="vtable">
+							<input name="object" type="text" class="formfld" id="object" size="20" value="<?=htmlspecialchars($object);?>" />
+						</td>
+					</tr>
+					<tr>
+						<td width="22%" valign="top" class="vncellreq"><?=gtext("Unix Command");?></td>
+						<td width="78%" class="vtable">
+							<select name="action" class="formfld" id="action">
+								<option value="start" <?php if ($action == "start") echo "selected=\"selected\""; ?>>start</option>
+								<option value="rebuild" <?php if ($action == "rebuild") echo "selected=\"selected\""; ?>>rebuild</option>
+								<option value="list" <?php if ($action == "list") echo "selected=\"selected\""; ?>>list</option>
+								<option value="remove" <?php if ($action == "remove") echo "selected=\"selected\""; ?>>remove</option>
+								<option value="forceup" <?php if ($action == "forceup") echo "selected=\"selected\""; ?>>forceup</option>
+								<option value="saveconfig" <?php if ($action == "saveconfig") echo "selected=\"selected\""; ?>>saveconfig</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+				<div id="submit">
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Send Command!");?>"/>
+				</div>
+				<?php 
+				if ($do_action) {
+					echo(sprintf("<div id='cmdoutput'>%s</div>", gtext("Command output:")));
+					echo('<pre class="cmdoutput">');
+						//ob_end_flush();
+						// Function disks_geom_cmd() can't be used. That's because gvinum can't be accessed
+						// via 'geom vinum xxx'.
+						switch ($action) {
+							case "start":
+								disks_geom_cmd("vinum", "start", $object, true);
+								break;
+							case "rebuild":
+								disks_geom_cmd("vinum", "rebuildparity", $object, true);
+								break;
+							case "list":
+								disks_geom_cmd("vinum", "list", $object, true);
+								break;
+							case "remove":
+								disks_geom_cmd("vinum", "rm", "-r {$object}", true);
+								break;
+							case "forceup":
+								disks_geom_cmd("vinum", "setstate", "-f up {$object}", true);
+								break;
+							case "saveconfig":
+								disks_geom_cmd("vinum", "saveconfig", "", true);
+								break;
+						}
+					echo('</pre>');
+				};
+				?>
+				<div id="remarks">
+					<?php
+					$helpinghand = '1. ' . gtext('Use these specials actions for debugging only!') . '<br />2. ' . gtext('There is no need to start a RAID volume from here (It starts automatically).');
+					html_remark('warning', gtext('Warning'), $helpinghand);
+					?>
+				</div>
+				<?php include("formend.inc");?>
+			</form>
+		</td></tr></table>
+	</td></tr>
 </table>
 <?php include("fend.inc");?>
