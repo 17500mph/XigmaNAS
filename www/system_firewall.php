@@ -254,8 +254,8 @@ spinner();
 									<td class="listbg"><?=htmlspecialchars($rule['desc']);?>&nbsp;</td>
 									<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 									<td valign="middle" nowrap="nowrap" class="list">
-										<a href="system_firewall_edit.php?uuid=<?=$rule['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit rule");?>" border="0" alt="<?=gtext("Edit rule");?>" /></a>
-										<a href="system_firewall.php?act=del&amp;uuid=<?=$rule['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this rule?");?>')"><img src="images/delete.png" title="<?=gettext("Delete rule");?>" border="0" alt="<?=gtext("Delete rule");?>" /></a>
+										<a href="system_firewall_edit.php?uuid=<?=$rule['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit rule");?>" border="0" alt="<?=gtext("Edit rule");?>" /></a>
+										<a href="system_firewall.php?act=del&amp;uuid=<?=$rule['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this rule?");?>')"><img src="images/delete.png" title="<?=gtext("Delete rule");?>" border="0" alt="<?=gtext("Delete rule");?>" /></a>
 									</td>
 									<?php else:?>
 									<td valign="middle" nowrap="nowrap" class="list">
@@ -267,9 +267,9 @@ spinner();
 								<tr>
 									<td class="list" colspan="8"></td>
 									<td class="list">
-										<a href="system_firewall_edit.php"><img src="images/add.png" title="<?=gettext("Add rule");?>" border="0" alt="<?=gtext("Add rule");?>" /></a>
+										<a href="system_firewall_edit.php"><img src="images/add.png" title="<?=gtext("Add rule");?>" border="0" alt="<?=gtext("Add rule");?>" /></a>
 										<?php if (!empty($a_rule)):?>
-										<a href="system_firewall.php?act=del&amp;uuid=all" onclick="return confirm('<?=gettext("Do you really want to delete all rules?");?>')"><img src="images/delete.png" title="<?=gettext("Delete all rules");?>" border="0" alt="<?=gtext("Delete all rules");?>" /></a>
+										<a href="system_firewall.php?act=del&amp;uuid=all" onclick="return confirm('<?=gtext("Do you really want to delete all rules?");?>')"><img src="images/delete.png" title="<?=gtext("Delete all rules");?>" border="0" alt="<?=gtext("Delete all rules");?>" /></a>
 										<?php endif;?>
 									</td>
 								</tr>

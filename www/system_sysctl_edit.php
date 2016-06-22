@@ -184,7 +184,7 @@ $pgtitle = array(gtext('System'), gtext('Advanced'), gtext('sysctl.conf'), $isre
 		<li class="tabinact"><a href="system_cron.php"><span><?=gtext("Cron");?></span></a></li>
 		<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext("loader.conf");?></span></a></li>
 		<li class="tabinact"><a href="system_rcconf.php"><span><?=gtext("rc.conf");?></span></a></li>
-		<li class="tabact"><a href="system_sysctl.php" title="<?=gettext("Reload page");?>"><span><?=gtext("sysctl.conf");?></span></a></li>
+		<li class="tabact"><a href="system_sysctl.php" title="<?=gtext('Reload page');?>"><span><?=gtext("sysctl.conf");?></span></a></li>
 	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform" onsubmit="spinner()">

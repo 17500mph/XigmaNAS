@@ -88,7 +88,7 @@ if (!isset($do_action)) {
     <td class="tabnavtbl">
       <ul id="tabnav">
         <li class="tabinact"><a href="disks_mount.php"><span><?=gtext("Management");?></span></a></li>
-        <li class="tabact"><a href="disks_mount_tools.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Tools");?></span></a></li>
+        <li class="tabact"><a href="disks_mount_tools.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Tools");?></span></a></li>
         <li class="tabinact"><a href="disks_mount_fsck.php"><span><?=gtext("Fsck");?></span></a></li>
       </ul>
     </td>
@@ -115,12 +115,12 @@ if (!isset($do_action)) {
 
 						switch ($action) {
 						  case "mount":
-						    echo(gettext("Mounting...") . "<br />");
+						    echo(gtext("Mounting...") . "<br />");
 								$result = disks_mount($mount);
 						    break;
 
 						  case "umount":
-						    echo(gettext("Unmounting...") . "<br />");
+						    echo(gtext("Unmounting...") . "<br />");
 								$result = disks_umount($mount);
 						    break;
 						}

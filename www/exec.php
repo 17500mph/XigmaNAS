@@ -180,7 +180,7 @@ if (!isset($_POST['txtRecallBuffer']) || isBlank( $_POST['txtRecallBuffer'] )) {
 //-->
 </script>
 <?php if (!isset($_POST['txtCommand']) || isBlank($_POST['txtCommand'])): ?>
-<p class="red"><strong><?=gettext("Warning");?>: <?=gtext("This is a very powerful tool. Use it on your own risk!");?></strong></p>
+<p class="red"><strong><?=gtext('Warning');?>: <?=gtext("This is a very powerful tool. Use it on your own risk!");?></strong></p>
 <?php endif; ?>
 <?php if (!empty($ulmsg)) echo "<p><strong>" . $ulmsg . "</strong></p>\n"; ?>
 <?php

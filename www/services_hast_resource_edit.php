@@ -130,7 +130,7 @@ if ($_POST) {
     <td class="tabnavtbl">
       <ul id="tabnav">
 	<li class="tabinact"><a href="services_hast.php"><span><?=gtext("Settings");?></span></a></li>
-	<li class="tabact"><a href="services_hast_resource.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Resources");?></span></a></li>
+	<li class="tabact"><a href="services_hast_resource.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Resources");?></span></a></li>
 	<li class="tabinact"><a href="services_hast_info.php"><span><?=gtext("Information");?></span></a></li>
       </ul>
     </td>
@@ -142,7 +142,7 @@ if ($_POST) {
 	<table width="100%" border="0" cellpadding="6" cellspacing="0">
 	<?php html_titleline(gtext("HAST Resource"));?>
 	<?php html_inputbox("name", gtext("Resource name"), $pconfig['name'], "", false, 30);?>
-	<?php html_textarea("auxparam", gettext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gettext("These parameters are added to %s."), "hast.conf") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://www.freebsd.org/cgi/man.cgi?query=hast.conf&sektion=5"), false, 65, 5, false, false);?>
+	<?php html_textarea("auxparam", gtext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gtext("These parameters are added to %s."), "hast.conf") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://www.freebsd.org/cgi/man.cgi?query=hast.conf&sektion=5"), false, 65, 5, false, false);?>
 	<?php html_separator();?>
 	<?php html_titleline(gtext("Node A Settings"));?>
 	<?php html_inputbox("aname", gtext("Node Name"), $pconfig['aname'], "", false, 40);?>

@@ -359,14 +359,14 @@ function toggleselection(ego, triggerbyname) {
 		<td class="tabnavtbl">
 			<ul id="tabnav">
 				<li class="tabinact"><a href="disks_raid_geom.php"><span><?=gtext('GEOM');?></span></a></li>
-				<li class="tabact"><a href="disks_raid_gvinum.php" title="<?=gettext('Reload page');?>"><span><?=gtext('RAID 0/1/5');?></span></a></li>
+				<li class="tabact"><a href="disks_raid_gvinum.php" title="<?=gtext('Reload page');?>"><span><?=gtext('RAID 0/1/5');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav2">
-				<li class="tabact"><a href="disks_raid_gvinum.php" title="<?=gettext('Reload page');?>" ><span><?=gtext('Management');?></span></a></li>
+				<li class="tabact"><a href="disks_raid_gvinum.php" title="<?=gtext('Reload page');?>" ><span><?=gtext('Management');?></span></a></li>
 				<li class="tabinact"><a href="disks_raid_gvinum_tools.php"><span><?=gtext('Maintenance'); ?></span></a></li>
 				<li class="tabinact"><a href="disks_raid_gvinum_info.php"><span><?=gtext('Information'); ?></span></a></li>
 			</ul>
@@ -469,7 +469,7 @@ function toggleselection(ego, triggerbyname) {
 							<td class="lcell"><?=htmlspecialchars($r_device['desc']);?>&nbsp;</td>
 							<td class="lcebcd">
 								<?php if ($isinthissraid):?>
-									<img src="<?=$img_path['unl'];?>" title="<?=gettext($gt_record_opn);?>" alt="<?=gtext($gt_record_opn);?>" />
+									<img src="<?=$img_path['unl'];?>" title="<?=$gt_record_opn;?>" alt="<?=$gt_record_opn;?>" />
 								<?php else:?>
 									&nbsp;
 								<?php endif;?>
@@ -491,7 +491,7 @@ function toggleselection(ego, triggerbyname) {
 							<td class="lcelld"><?=htmlspecialchars($r_device['controller']);?>&nbsp;</td>
 							<td class="lcelld"><?=htmlspecialchars($r_device['desc']);?>&nbsp;</td>
 							<td class="lcebcd">
-								<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gtext($gt_record_loc);?>" />
+								<img src="<?=$img_path['loc'];?>" title="<?=$gt_record_loc;?>" alt="<?=$gt_record_loc;?>" />
 							</td>
 						</tr>
 					<?php endif; ?>

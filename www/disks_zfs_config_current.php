@@ -128,14 +128,14 @@ if (updatenotify_exists('zfs_import_config'))
 			<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext("Datasets");?></span></a></li>
 			<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext("Volumes");?></span></a></li>
 			<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext("Snapshots");?></span></a></li>
-			<li class="tabact"><a href="disks_zfs_config.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Configuration");?></span></a></li>
+			<li class="tabact"><a href="disks_zfs_config.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Configuration");?></span></a></li>
 		</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabnavtbl">
 		<ul id="tabnav2">
-			<li class="tabact"><a href="disks_zfs_config_current.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Current");?></span></a></li>
+			<li class="tabact"><a href="disks_zfs_config_current.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Current");?></span></a></li>
 			<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext("Detected");?></span></a></li>
 			<li class="tabinact"><a href="disks_zfs_config_sync.php"><span><?=gtext("Synchronize");?></span></a></li>
 		</ul>

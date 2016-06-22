@@ -265,115 +265,115 @@ function command_change() {
 	var action = document.iform.action.value;
 	switch (action) {
 		case "upgrade":
-			document.iform.option[0] = new Option('<?=gettext("Display")?>','v', <?=$pconfig['option'] === 'v' ? "true" : "false"?>);
-			document.iform.option[1] = new Option('<?=gettext("All")?>','a', <?=$pconfig['option'] === 'a' ? "true" : "false"?>);
+			document.iform.option[0] = new Option('<?=gtext("Display")?>','v', <?=$pconfig['option'] === 'v' ? "true" : "false"?>);
+			document.iform.option[1] = new Option('<?=gtext("All")?>','a', <?=$pconfig['option'] === 'a' ? "true" : "false"?>);
 			<?php if (!empty($a_pool) && is_array($a_pool)):?>
-			document.iform.option[2] = new Option('<?=gettext("Pool")?>','p', <?=$pconfig['option'] === 'p' ? "true" : "false"?>);
+			document.iform.option[2] = new Option('<?=gtext("Pool")?>','p', <?=$pconfig['option'] === 'p' ? "true" : "false"?>);
 			<?php endif;?>
 			break;
 		case "history":
-			document.iform.option[0] = new Option('<?=gettext("All")?>','a', <?=$pconfig['option'] === 'a' ? "true" : "false"?>);
+			document.iform.option[0] = new Option('<?=gtext("All")?>','a', <?=$pconfig['option'] === 'a' ? "true" : "false"?>);
 			<?php if (!empty($a_pool) && is_array($a_pool)):?>
-			document.iform.option[1] = new Option('<?=gettext("Pool")?>','p', <?=$pconfig['option'] === 'p' ? "true" : "false"?>);
+			document.iform.option[1] = new Option('<?=gtext("Pool")?>','p', <?=$pconfig['option'] === 'p' ? "true" : "false"?>);
 			<?php endif;?>
 			break;
 		case "scrub":
-			document.iform.option[0] = new Option('<?=gettext("Start")?>','s', <?=$pconfig['option'] === 's' ? "true" : "false"?>);
-			document.iform.option[1] = new Option('<?=gettext("Stop")?>','st', <?=$pconfig['option'] === 'st' ? "true" : "false"?>);
+			document.iform.option[0] = new Option('<?=gtext("Start")?>','s', <?=$pconfig['option'] === 's' ? "true" : "false"?>);
+			document.iform.option[1] = new Option('<?=gtext("Stop")?>','st', <?=$pconfig['option'] === 'st' ? "true" : "false"?>);
 			break;
 		case "clear":
 			showElementById('devices_tr','show');
 			<?php if (!empty($a_pool) && is_array($a_pool)):?>
-			document.iform.option[0] = new Option('<?=gettext("Pool")?>','p', <?=$pconfig['option'] === 'p' ? "true" : "false"?>);
-			document.iform.option[1] = new Option('<?=gettext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
+			document.iform.option[0] = new Option('<?=gtext("Pool")?>','p', <?=$pconfig['option'] === 'p' ? "true" : "false"?>);
+			document.iform.option[1] = new Option('<?=gtext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
 			<?php endif;?>
 			break;
 		case "offline":
 			showElementById('devices_tr','show');
 			<?php if (!empty($a_pool) && is_array($a_pool)):?>
-			document.iform.option[0] = new Option('<?=gettext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
-			document.iform.option[1] = new Option('<?=gettext("Temporary Device")?>','t', <?=$pconfig['option'] === 't' ? "true" : "false"?>);
+			document.iform.option[0] = new Option('<?=gtext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
+			document.iform.option[1] = new Option('<?=gtext("Temporary Device")?>','t', <?=$pconfig['option'] === 't' ? "true" : "false"?>);
 			<?php endif;?>
 			break;
 		case "online":
 			showElementById('devices_tr','show');
 			<?php if(!empty($a_pool) && is_array($a_pool)):?>
-			document.iform.option[0] = new Option('<?=gettext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
+			document.iform.option[0] = new Option('<?=gtext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
 			<?php endif;?>
 			break;
 		case "attach":
 			showElementById('devices_tr','show');
 			showElementById('device_new2_tr','show');
 			<?php if(!empty($a_pool) && is_array($a_pool)):?>
-			document.iform.option[0] = new Option('<?=gettext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
+			document.iform.option[0] = new Option('<?=gtext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
 			<?php endif;?>
 			break;
 		case "detach":
 			showElementById('devices_tr','show');
 			<?php if(!empty($a_pool) && is_array($a_pool)):?>
-			document.iform.option[0] = new Option('<?=gettext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
+			document.iform.option[0] = new Option('<?=gtext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
 			<?php endif;?>
 			break;
 		case "remove":
 			showElementById('devices_tr','show');
 			<?php if (!empty($a_pool) && is_array($a_pool)):?>
-			document.iform.option[0] = new Option('<?=gettext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
+			document.iform.option[0] = new Option('<?=gtext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
 			<?php endif;?>
 			break;
 		case "replace":
 			showElementById('devices_tr','show');
 			showElementById('device_new_tr','show');
 			<?php if (!empty($a_pool) && is_array($a_pool)):?>
-			document.iform.option[0] = new Option('<?=gettext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
+			document.iform.option[0] = new Option('<?=gtext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
 			<?php endif;?>
 			break;
 		case "cache add":
 			showElementById('devices_tr','hide');
 			showElementById('device_cache_tr','show');
 			<?php if (!empty($a_pool) && is_array($a_pool)):?>
-			document.iform.option[0] = new Option('<?=gettext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
+			document.iform.option[0] = new Option('<?=gtext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
 			<?php endif;?>
 			break;
 		case "cache remove":
 			showElementById('devices_tr','hide');
 			showElementById('device_cache_tr','show');
 			<?php if (!empty($a_pool) && is_array($a_pool)):?>
-			document.iform.option[0] = new Option('<?=gettext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
+			document.iform.option[0] = new Option('<?=gtext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
 			<?php endif;?>
 			break;
 		case "log add":
 			showElementById('devices_tr','hide');
 			showElementById('device_log_tr','show');
 			<?php if (!empty($a_pool) && is_array($a_pool)):?>
-			document.iform.option[0] = new Option('<?=gettext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
+			document.iform.option[0] = new Option('<?=gtext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
 			<?php endif;?>
 			break;
 		case "log remove":
 			showElementById('devices_tr','hide');
 			showElementById('device_log_tr','show');
 			<?php if (!empty($a_pool) && is_array($a_pool)):?>
-			document.iform.option[0] = new Option('<?=gettext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
+			document.iform.option[0] = new Option('<?=gtext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
 			<?php endif;?>
 			break;
 		case "spare add":
 			showElementById('devices_tr','hide');
 			showElementById('device_spare_tr','show');
 			<?php if (!empty($a_pool) && is_array($a_pool)):?>
-			document.iform.option[0] = new Option('<?=gettext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
+			document.iform.option[0] = new Option('<?=gtext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
 			<?php endif;?>
 			break;
 		case "spare remove":
 			showElementById('devices_tr','hide');
 			showElementById('device_spare_tr','show');
 			<?php if (!empty($a_pool) && is_array($a_pool)):?>
-			document.iform.option[0] = new Option('<?=gettext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
+			document.iform.option[0] = new Option('<?=gtext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
 			<?php endif;?>
 			break;
 		case "vdev add":
 			showElementById('devices_tr','hide');
 			showElementById('device_vdev_tr','show');
 			<?php if (!empty($a_pool) && is_array($a_pool)):?>
-			document.iform.option[0] = new Option('<?=gettext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
+			document.iform.option[0] = new Option('<?=gtext("Device")?>','d', <?=$pconfig['option'] === 'd' ? "true" : "false"?>);
 			<?php endif;?>
 			break;
 		default:
@@ -619,7 +619,7 @@ function pool_change() {
   <tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-	<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Pools");?></span></a></li>
+	<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Pools");?></span></a></li>
 	<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext("Datasets");?></span></a></li>
 	<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext("Volumes");?></span></a></li>
 	<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext("Snapshots");?></span></a></li>
@@ -632,7 +632,7 @@ function pool_change() {
       <ul id="tabnav2">
 	<li class="tabinact"><a href="disks_zfs_zpool_vdevice.php"><span><?=gtext("Virtual Device");?></span></a></li>
 	<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext("Management");?></span></a></li>
-	<li class="tabact"><a href="disks_zfs_zpool_tools.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Tools");?></span></a></li>
+	<li class="tabact"><a href="disks_zfs_zpool_tools.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Tools");?></span></a></li>
 	<li class="tabinact"><a href="disks_zfs_zpool_info.php"><span><?=gtext("Information");?></span></a></li>
 	<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gtext("I/O Statistics");?></span></a></li>
       </ul>

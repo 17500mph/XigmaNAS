@@ -129,7 +129,7 @@ function enable_change(enable_change) {
     <td class="tabnavtbl">
       <ul id="tabnav">
         <li class="tabinact"><a href="reboot.php"><span><?=gtext("Now");?></span></a></li>
-        <li class="tabact"><a href="reboot_sched.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Scheduled");?></span></a></li>
+        <li class="tabact"><a href="reboot_sched.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Scheduled");?></span></a></li>
       </ul>
     </td>
   </tr>

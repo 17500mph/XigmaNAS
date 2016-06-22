@@ -163,7 +163,7 @@ function set_selected(name) {
       	<li class="tabinact"><a href="system_proxy.php"><span><?=gtext("Proxy");?></span></a></li>
       	<li class="tabinact"><a href="system_swap.php"><span><?=gtext("Swap");?></span></a></li>
       	<li class="tabinact"><a href="system_rc.php"><span><?=gtext("Command Scripts");?></span></a></li>
-        <li class="tabact"><a href="system_cron.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Cron");?></span></a></li>
+        <li class="tabact"><a href="system_cron.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Cron");?></span></a></li>
 		<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext("loader.conf");?></span></a></li>
         <li class="tabinact"><a href="system_rcconf.php"><span><?=gtext("rc.conf");?></span></a></li>
         <li class="tabinact"><a href="system_sysctl.php"><span><?=gtext("sysctl.conf");?></span></a></li>

@@ -373,7 +373,7 @@ function toggleselection(ego, triggerbyname) {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gettext('Reload page');?>"><span><?=gtext('Pools');?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Pools');?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext('Volumes');?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
@@ -384,7 +384,7 @@ function toggleselection(ego, triggerbyname) {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav2">
-				<li class="tabact"><a href="disks_zfs_zpool_vdevice.php" title="<?=gettext('Reload page');?>"><span><?=gtext('Virtual Device');?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_zpool_vdevice.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Virtual Device');?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Management');?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_zpool_tools.php"><span><?=gtext('Tools');?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_zpool_info.php"><span><?=gtext('Information');?></span></a></li>
@@ -489,7 +489,7 @@ function toggleselection(ego, triggerbyname) {
 							<td class="lcell"><?=htmlspecialchars($r_device['desc']);?>&nbsp;</td>
 							<td class="lcebcd">
 								<?php if ($ismemberofthisvdev):?>
-									<img src="<?=$img_path['unl'];?>" title="<?=gettext($gt_record_opn);?>" alt="<?=gtext($gt_record_opn);?>"/>
+									<img src="<?=$img_path['unl'];?>" title="<?=$gt_record_opn;?>" alt="<?=$gt_record_opn;?>"/>
 								<?php else:?>
 									&nbsp;
 								<?php endif;?>
@@ -511,7 +511,7 @@ function toggleselection(ego, triggerbyname) {
 							<td class="lcelld"><?=htmlspecialchars($r_device['controller']);?>&nbsp;</td>
 							<td class="lcelld"><?=htmlspecialchars($r_device['desc']);?>&nbsp;</td>
 							<td class="lcebcd">
-								<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gtext($gt_record_loc);?>"/>
+								<img src="<?=$img_path['loc'];?>" title="<?=$gt_record_loc;?>" alt="<?=$gt_record_loc;?>"/>
 							</td>
 						</tr>
 					<?php endif;?>
@@ -528,7 +528,7 @@ function toggleselection(ego, triggerbyname) {
 	</div>
 	<div id="remarks">
 		<?php
-			html_remark2('note', gettext('Note'), sprintf(gettext("Make sure to select the correct number of devices:<div id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"), ''));
+			html_remark2('note', gtext('Note'), sprintf(gettext("Make sure to select the correct number of devices:<div id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"), ''));
 		?>
 	</div>
 	<?php include("formend.inc");?>

@@ -161,7 +161,7 @@ function trapenable_change() {
 					<?php html_inputbox("traphost", gtext("Trap host"), $pconfig['traphost'], gtext("Enter trap host name."), true, 40);?>
 					<?php html_inputbox("trapport", gtext("Trap port"), $pconfig['trapport'], gtext("Enter the port to send the traps to (default 162)."), true, 5);?>
 					<?php html_inputbox("trap", gtext("Trap string"), $pconfig['trap'], gtext("Trap string."), true, 40);?>
-					<?php html_textarea("auxparam", gettext("Auxiliary parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", sprintf(gettext("These parameters will be added to %s."), "snmpd.config")  . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://www.freebsd.org/cgi/man.cgi?query=bsnmpd&amp;apropos=0&amp;sektion=0&amp;manpath=FreeBSD+${os_release}-RELEASE&amp;format=html"), false, 65, 5, false, false);?>
+					<?php html_textarea("auxparam", gtext("Auxiliary parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", sprintf(gtext("These parameters will be added to %s."), "snmpd.config")  . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://www.freebsd.org/cgi/man.cgi?query=bsnmpd&amp;apropos=0&amp;sektion=0&amp;manpath=FreeBSD+${os_release}-RELEASE&amp;format=html"), false, 65, 5, false, false);?>
 					<?php html_separator();?>
 					<?php html_titleline(gtext("Modules"));?>
 					<tr>

@@ -78,7 +78,7 @@ $(document).ready(function(){
       <ul id="tabnav">
 	<li class="tabinact"><a href="services_hast.php"><span><?=gtext("Settings");?></span></a></li>
 	<li class="tabinact"><a href="services_hast_resource.php"><span><?=gtext("Resources");?></span></a></li>
-	<li class="tabact"><a href="services_hast_info.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Information");?></span></a></li>
+	<li class="tabact"><a href="services_hast_info.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Information");?></span></a></li>
       </ul>
     </td>
   </tr>

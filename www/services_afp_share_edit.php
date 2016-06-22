@@ -181,7 +181,7 @@ function adisk_change() {
     <td class="tabnavtbl">
       <ul id="tabnav">
         <li class="tabinact"><a href="services_afp.php"><span><?=gtext("Settings");?></span></a></li>
-        <li class="tabact"><a href="services_afp_share.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Shares");?></span></a></li>
+        <li class="tabact"><a href="services_afp_share.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Shares");?></span></a></li>
       </ul>
     </td>
   </tr>
@@ -266,7 +266,7 @@ function adisk_change() {
 			      </td>
 			    </tr>
 				<tr>
-					<?php html_textarea("auxparam", gettext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gettext("add any supplemental parameters")) . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://netatalk.sourceforge.net/3.1/htmldocs/afp.conf.5.html"), false, 65, 5, false, false);?>
+					<?php html_textarea("auxparam", gtext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gtext("add any supplemental parameters")) . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://netatalk.sourceforge.net/3.1/htmldocs/afp.conf.5.html"), false, 65, 5, false, false);?>
                                         </tr>
 			  </table>
 				<div id="submit">

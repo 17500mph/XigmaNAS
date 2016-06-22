@@ -52,7 +52,7 @@ if (isset($_GET['act']) && $_GET['act'] == "del") {
   <tr>
 		<td class="tabnavtbl">
   		<ul id="tabnav">
-				<li class="tabact"><a href="system_packages.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Packages");?></span></a></li>
+				<li class="tabact"><a href="system_packages.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Packages");?></span></a></li>
   		</ul>
   	</td>
 	</tr>
@@ -72,12 +72,12 @@ if (isset($_GET['act']) && $_GET['act'] == "del") {
 			    <tr>
 			      <td class="listr"><?=htmlspecialchars($packagev['name']);?>&nbsp;</td>
 			      <td class="listbg"><?=htmlspecialchars($packagev['desc']);?>&nbsp;</td>
-			      <td valign="middle" nowrap="nowrap" class="list"> <a href="system_packages.php?act=del&amp;id=<?=$i;?>" onclick="return confirm('<?=gettext("Do you really want to uninstall this package?"); ?>')"><img src="images/delete.png" title="<?=gettext("Uninstall package"); ?>" border="0" alt="<?=gtext("Uninstall package"); ?>" /></a></td>
+			      <td valign="middle" nowrap="nowrap" class="list"> <a href="system_packages.php?act=del&amp;id=<?=$i;?>" onclick="return confirm('<?=gtext("Do you really want to uninstall this package?"); ?>')"><img src="images/delete.png" title="<?=gtext("Uninstall package"); ?>" border="0" alt="<?=gtext("Uninstall package"); ?>" /></a></td>
 			    </tr>
 			    <?php $i++; endforeach; ?>
 			    <tr>
 						<td class="list" colspan="2"></td>
-						<td class="list"> <a href="system_packages_edit.php"><img src="images/add.png" title="<?=gettext("Install package"); ?>" border="0" alt="<?=gtext("Install package"); ?>" /></a></td>
+						<td class="list"> <a href="system_packages_edit.php"><img src="images/add.png" title="<?=gtext("Install package"); ?>" border="0" alt="<?=gtext("Install package"); ?>" /></a></td>
 					</tr>
 			  </table>
 			  <?php include("formend.inc");?>

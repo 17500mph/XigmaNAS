@@ -64,7 +64,7 @@ $(document).ready(function(){
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabact"><a href="disks_raid_geom.php" title="<?= gettext('Reload page'); ?>"><span><?= gtext('GEOM'); ?></span></a></li>
+				<li class="tabact"><a href="disks_raid_geom.php" title="<?= gtext('Reload page'); ?>"><span><?= gtext('GEOM'); ?></span></a></li>
 				<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?= gtext('RAID 0/1/5'); ?></span></a></li>
 			</ul>
 		</td>
@@ -74,7 +74,7 @@ $(document).ready(function(){
 			<ul id="tabnav2">
 				<li class="tabinact"><a href="disks_raid_geom.php"><span><?= gtext('Management'); ?></span></a></li>
 				<li class="tabinact"><a href="disks_raid_gstripe_tools.php"><span><?= gtext('Maintenance'); ?></span></a></li>
-				<li class="tabact"><a href="disks_raid_gstripe_info.php" title="<?= gettext('Reload page'); ?>" ><span><?= gtext('Information'); ?></span></a></li>
+				<li class="tabact"><a href="disks_raid_gstripe_info.php" title="<?= gtext('Reload page'); ?>" ><span><?= gtext('Information'); ?></span></a></li>
 			</ul>
 		</td>
 	</tr>

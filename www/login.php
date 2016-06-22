@@ -195,7 +195,7 @@ window.onload=function() {
 	</span></h1>
         <div class="loginwrapperinner">
             <form id="loginform" action="" method="post" name="loginform">
-                <p class="allocate"><input type="text" id="username" name="username" onFocus="value=''" placeholder="<?=gettext("Username");?>" value="<?=gtext("Username");?>"></p>
+                <p class="allocate"><input type="text" id="username" name="username" onFocus="value=''" placeholder="<?=gtext("Username");?>" value="<?=gtext("Username");?>"></p>
                 <p class="allocate"><input type="password" id="password" name="password" onFocus="value=''" placeholder="<?=gtext("Password");?>" value="password"></p>
                 <p class="allocate"><input class="btn formbtn" type="submit" value="<?=gtext("Login");?>" /></p>
             </form>

@@ -293,7 +293,7 @@ function webguiproto_change() {
 	<tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-      	<li class="tabact"><a href="system.php" title="<?=gettext("Reload page");?>"><span><?=gtext("General");?></span></a></li>
+      	<li class="tabact"><a href="system.php" title="<?=gtext('Reload page');?>"><span><?=gtext("General");?></span></a></li>
       	<li class="tabinact"><a href="system_password.php"><span><?=gtext("Password");?></span></a></li>
       </ul>
     </td>
@@ -316,8 +316,8 @@ function webguiproto_change() {
 			  	<tr>
 						<td colspan="2" valign="top" class="listtopic"><?=gtext("Hostname");?></td>
 					</tr>
-					<?php html_inputbox("hostname", gettext("Hostname"), $pconfig['hostname'], sprintf(gettext("Name of the NAS host, without domain part e.g. %s."), "<em>" . strtolower(get_product_name()) ."</em>"), true, 40);?>
-					<?php html_inputbox("domain", gettext("Domain"), $pconfig['domain'], sprintf(gettext("e.g. %s"), "<em>com, local</em>"), false, 40);?>
+					<?php html_inputbox("hostname", gtext("Hostname"), $pconfig['hostname'], sprintf(gtext("Name of the NAS host, without domain part e.g. %s."), "<em>" . strtolower(get_product_name()) ."</em>"), true, 40);?>
+					<?php html_inputbox("domain", gtext("Domain"), $pconfig['domain'], sprintf(gtext("e.g. %s"), "<em>com, local</em>"), false, 40);?>
 					<?php html_separator();?>
 					<?php html_titleline(gtext("DNS"));?>
 			    <tr>

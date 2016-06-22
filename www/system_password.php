@@ -88,7 +88,7 @@ if ($_POST) {
     <td class="tabnavtbl">
       <ul id="tabnav">
       	<li class="tabinact"><a href="system.php"><span><?=gtext("General");?></span></a></li>
-      	<li class="tabact"><a href="system_password.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Password");?></span></a></li>
+      	<li class="tabact"><a href="system_password.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Password");?></span></a></li>
       </ul>
     </td>
   </tr>
@@ -108,7 +108,7 @@ if ($_POST) {
 				</div>
 				<br>
 				<div id="remarks">
-			  	<?php html_remark("note", gettext("Note"), gettext("<div id='enumeration'><ul><li>The new password is also the default root password of the system!</li></ul></div>"));?>
+			  	<?php html_remark("note", gtext('Note'), gettext("<div id='enumeration'><ul><li>The new password is also the default root password of the system!</li></ul></div>"));?>
 				</div>
 				</br>
 				<?php include("formend.inc");?>

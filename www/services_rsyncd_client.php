@@ -99,7 +99,7 @@ function rsyncclient_process_updatenotification($mode, $data) {
 		<td class="tabnavtbl">
 			<ul id="tabnav">
 				<li class="tabinact"><a href="services_rsyncd.php"><span><?=gtext("Server");?></span></a></li>
-				<li class="tabact"><a href="services_rsyncd_client.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Client");?></span></a></li>
+				<li class="tabact"><a href="services_rsyncd_client.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Client");?></span></a></li>
 				<li class="tabinact"><a href="services_rsyncd_local.php"><span><?=gtext("Local");?></span></a></li>
 			</ul>
 		</td>
@@ -129,8 +129,8 @@ function rsyncclient_process_updatenotification($mode, $data) {
 						<td class="listbg"><?=htmlspecialchars($rsyncclient['description']);?>&nbsp;</td>
 						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
             <td valign="middle" nowrap="nowrap" class="list">
-							<a href="services_rsyncd_client_edit.php?uuid=<?=$rsyncclient['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit Rsync job");?>" border="0" alt="<?=gtext("Edit Rsync job");?>" /></a>&nbsp;
-              <a href="services_rsyncd_client.php?act=del&amp;uuid=<?=$rsyncclient['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this Rsync job?");?>')"><img src="images/delete.png" title="<?=gettext("Delete Rsync job"); ?>" border="0" alt="<?=gtext("Delete Rsync job"); ?>" /></a>
+							<a href="services_rsyncd_client_edit.php?uuid=<?=$rsyncclient['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit Rsync job");?>" border="0" alt="<?=gtext("Edit Rsync job");?>" /></a>&nbsp;
+              <a href="services_rsyncd_client.php?act=del&amp;uuid=<?=$rsyncclient['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this Rsync job?");?>')"><img src="images/delete.png" title="<?=gtext("Delete Rsync job"); ?>" border="0" alt="<?=gtext("Delete Rsync job"); ?>" /></a>
             </td>
             <?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
@@ -141,7 +141,7 @@ function rsyncclient_process_updatenotification($mode, $data) {
           <?php endforeach;?>
           <tr> 
             <td class="list" colspan="5"></td>
-            <td class="list"><a href="services_rsyncd_client_edit.php"><img src="images/add.png" title="<?=gettext("Add Rsync job");?>" border="0" alt="<?=gtext("Add Rsync job");?>" /></a></td>
+            <td class="list"><a href="services_rsyncd_client_edit.php"><img src="images/add.png" title="<?=gtext("Add Rsync job");?>" border="0" alt="<?=gtext("Add Rsync job");?>" /></a></td>
 			    </tr>
         </table>
         <?php include("formend.inc");?>

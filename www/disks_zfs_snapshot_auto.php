@@ -140,7 +140,7 @@ function zfsautosnapshot_process_updatenotification($mode, $data) {
 				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext("Pools");?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext("Datasets");?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext("Volumes");?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_snapshot.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Snapshots");?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_snapshot.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Snapshots");?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext("Configuration");?></span></a></li>
 			</ul>
 		</td>
@@ -150,7 +150,7 @@ function zfsautosnapshot_process_updatenotification($mode, $data) {
 			<ul id="tabnav2">
 				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext("Snapshot");?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_snapshot_clone.php"><span><?=gtext("Clone");?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_snapshot_auto.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Auto Snapshot");?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_snapshot_auto.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Auto Snapshot");?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_snapshot_info.php"><span><?=gtext("Information");?></span></a></li>
 			</ul>
 		</td>
@@ -182,8 +182,8 @@ function zfsautosnapshot_process_updatenotification($mode, $data) {
 						<td class="listr"><?=htmlspecialchars($a_lifetime[$autosnapshotv['lifetime']]);?>&nbsp;</td>
 						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 						<td valign="middle" nowrap="nowrap" class="list">
-							<a href="disks_zfs_snapshot_auto_edit.php?uuid=<?=$autosnapshotv['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit auto snapshot");?>" border="0" alt="<?=gtext("Edit auto snapshot");?>" /></a>&nbsp;
-							<a href="disks_zfs_snapshot_auto.php?act=del&amp;uuid=<?=$autosnapshotv['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this auto snapshot?");?>')"><img src="images/delete.png" title="<?=gettext("Delete auto snapshot");?>" border="0" alt="<?=gtext("Delete auto snapshot");?>" /></a>
+							<a href="disks_zfs_snapshot_auto_edit.php?uuid=<?=$autosnapshotv['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit auto snapshot");?>" border="0" alt="<?=gtext("Edit auto snapshot");?>" /></a>&nbsp;
+							<a href="disks_zfs_snapshot_auto.php?act=del&amp;uuid=<?=$autosnapshotv['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this auto snapshot?");?>')"><img src="images/delete.png" title="<?=gtext("Delete auto snapshot");?>" border="0" alt="<?=gtext("Delete auto snapshot");?>" /></a>
 						</td>
 						<?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
@@ -195,7 +195,7 @@ function zfsautosnapshot_process_updatenotification($mode, $data) {
 					<tr>
 						<td class="list" colspan="6"></td>
 						<td class="list">
-							<a href="disks_zfs_snapshot_auto_edit.php"><img src="images/add.png" title="<?=gettext("Add auto snapshot");?>" border="0" alt="<?=gtext("Add auto snapshot");?>" /></a>
+							<a href="disks_zfs_snapshot_auto_edit.php"><img src="images/add.png" title="<?=gtext("Add auto snapshot");?>" border="0" alt="<?=gtext("Add auto snapshot");?>" /></a>
 						</td>
 					</tr>
 				</table>

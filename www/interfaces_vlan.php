@@ -90,7 +90,7 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 		  <ul id="tabnav">
 				<li class="tabinact"><a href="interfaces_assign.php"><span><?=gtext("Management");?></span></a></li>
 				<li class="tabinact"><a href="interfaces_wlan.php"><span><?=gtext("WLAN");?></span></a></li>
-				<li class="tabact"><a href="interfaces_vlan.php" title="<?=gettext("Reload page");?>"><span><?=gtext("VLAN");?></span></a></li>
+				<li class="tabact"><a href="interfaces_vlan.php" title="<?=gtext('Reload page');?>"><span><?=gtext("VLAN");?></span></a></li>
 				<li class="tabinact"><a href="interfaces_lagg.php"><span><?=gtext("LAGG");?></span></a></li>
 				<li class="tabinact"><a href="interfaces_bridge.php"><span><?=gtext("Bridge");?></span></a></li>
 				<li class="tabinact"><a href="interfaces_carp.php"><span><?=gtext("CARP");?></span></a></li>
@@ -117,15 +117,15 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 						<td class="listr"><?=htmlspecialchars($vlan['tag']);?></td>
 						<td class="listbg"><?=htmlspecialchars($vlan['desc']);?>&nbsp;</td>
 						<td valign="middle" nowrap="nowrap" class="list">
-							<a href="interfaces_vlan_edit.php?uuid=<?=$vlan['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit interface");?>" border="0" alt="<?=gtext("Edit interface");?>" /></a>&nbsp;
-							<a href="interfaces_vlan.php?act=del&amp;uuid=<?=$vlan['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this interface?");?>')"><img src="images/delete.png" title="<?=gettext("Delete interface");?>" border="0" alt="<?=gtext("Delete interface");?>" /></a>
+							<a href="interfaces_vlan_edit.php?uuid=<?=$vlan['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit interface");?>" border="0" alt="<?=gtext("Edit interface");?>" /></a>&nbsp;
+							<a href="interfaces_vlan.php?act=del&amp;uuid=<?=$vlan['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this interface?");?>')"><img src="images/delete.png" title="<?=gtext("Delete interface");?>" border="0" alt="<?=gtext("Delete interface");?>" /></a>
 						</td>
 					</tr>
 					<?php endforeach;?>
 					<tr>
 						<td class="list" colspan="4">&nbsp;</td>
 						<td class="list">
-							<a href="interfaces_vlan_edit.php"><img src="images/add.png" title="<?=gettext("Add interface");?>" border="0" alt="<?=gtext("Add interface");?>" /></a>
+							<a href="interfaces_vlan_edit.php"><img src="images/add.png" title="<?=gtext("Add interface");?>" border="0" alt="<?=gtext("Add interface");?>" /></a>
 						</td>
 					</tr>
 				</table>

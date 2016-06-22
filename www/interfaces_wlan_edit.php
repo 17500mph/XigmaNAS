@@ -200,7 +200,7 @@ $(document).ready(function(){
 	<td class="tabnavtbl">
 		<ul id="tabnav">
 			<li class="tabinact"><a href="interfaces_assign.php"><span><?=gtext("Management");?></span></a></li>
-			<li class="tabact"><a href="interfaces_wlan.php" title="<?=gettext("Reload page");?>"><span><?=gtext("WLAN");?></span></a></li>
+			<li class="tabact"><a href="interfaces_wlan.php" title="<?=gtext('Reload page');?>"><span><?=gtext("WLAN");?></span></a></li>
 			<li class="tabinact"><a href="interfaces_vlan.php"><span><?=gtext("VLAN");?></span></a></li>
 			<li class="tabinact"><a href="interfaces_lagg.php"><span><?=gtext("LAGG");?></span></a></li>
 			<li class="tabinact"><a href="interfaces_bridge.php"><span><?=gtext("Bridge");?></span></a></li>
@@ -225,7 +225,7 @@ $(document).ready(function(){
 				<?php html_combobox("ap_pairwise", gtext("Pairwise"), $pconfig['ap_pairwise'], array("CCMP" => gtext("CCMP"), "CCMP TKIP" => gtext("CCMP TKIP")), "", true);?>
 				<?php html_passwordbox("ap_psk", gtext("PSK"), $pconfig['ap_psk'], gtext("Enter the passphrase that will be used in WPA-PSK mode. This must be between 8 and 63 characters long."), true, 40);?>
 				<?php html_inputbox("ap_extraoptions", gtext("Extra options"), $pconfig['ap_extraoptions'], gtext("Extra options to ifconfig (usually empty)."), false, 60);?>
-				<?php html_textarea("auxparam", gettext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gettext("These parameters are added to %s."), "hostapd.conf") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://www.freebsd.org/cgi/man.cgi?query=hostapd.conf"), false, 65, 5, false, false);?>
+				<?php html_textarea("auxparam", gtext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gtext("These parameters are added to %s."), "hostapd.conf") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://www.freebsd.org/cgi/man.cgi?query=hostapd.conf"), false, 65, 5, false, false);?>
 			</table>
 			<div id="submit">
 				<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" />

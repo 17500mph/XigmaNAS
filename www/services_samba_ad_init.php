@@ -174,7 +174,7 @@ $(document).ready(function(){
     <td class="tabnavtbl">
       <ul id="tabnav">
 	<li class="tabinact"><a href="services_samba_ad.php"><span><?=gtext("Settings");?></span></a></li>
-	<li class="tabact"><a href="services_samba_ad_init.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Initialize");?></span></a></li>
+	<li class="tabact"><a href="services_samba_ad_init.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Initialize");?></span></a></li>
       </ul>
     </td>
   </tr>
@@ -228,7 +228,7 @@ $(document).ready(function(){
 		}
 	}?>
 	<div id="remarks">
-	  <?php html_remark("note", gettext("Note"), sprintf("<div id='enumeration'><ul><li>%s</li><li>%s</li><li>%s</li></ul></div>", gettext("All data in the path is overwritten. To avoid invalid data/permission, using empty UFS directory is recommended."), sprintf(gettext("Check <a href=\"%s\">System|General Setup</a> before initializing."), "system.php"), ""));?>
+	  <?php html_remark("note", gtext('Note'), sprintf("<div id='enumeration'><ul><li>%s</li><li>%s</li><li>%s</li></ul></div>", gtext("All data in the path is overwritten. To avoid invalid data/permission, using empty UFS directory is recommended."), sprintf(gettext("Check <a href=\"%s\">System|General Setup</a> before initializing."), "system.php"), ""));?>
 	</div>
 	<?php include("formend.inc");?>
       </form>

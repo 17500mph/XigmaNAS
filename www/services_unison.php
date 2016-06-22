@@ -130,7 +130,7 @@ function enable_change(enable_change) {
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save and Restart");?>" onclick="enable_change(true)" />
 				</div>
 				<div id="remarks">
-					<?php html_remark("note", gettext("Note"), sprintf(gettext("<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a href='%s'>user</a> must have shell access."), "services_sshd.php", "access_users.php"));?>
+					<?php html_remark("note", gtext('Note'), sprintf(gettext("<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a href='%s'>user</a> must have shell access."), "services_sshd.php", "access_users.php"));?>
 				</div>
 			</td>
 		</tr>

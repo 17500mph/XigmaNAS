@@ -122,7 +122,7 @@ function iscsitargetag_process_updatenotification($mode, $data) {
         <li class="tabinact"><a href="services_iscsitarget_target.php"><span><?=gtext("Targets");?></span></a></li>
         <li class="tabinact"><a href="services_iscsitarget_pg.php"><span><?=gtext("Portals");?></span></a></li>
 				<li class="tabinact"><a href="services_iscsitarget_ig.php"><span><?=gtext("Initiators");?></span></a></li>
-				<li class="tabact"><a href="services_iscsitarget_ag.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Auths");?></span></a></li>
+				<li class="tabact"><a href="services_iscsitarget_ag.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Auths");?></span></a></li>
 				<li class="tabinact"><a href="services_iscsitarget_media.php"><span><?=gtext("Media");?></span></a></li>
       </ul>
     </td>
@@ -171,8 +171,8 @@ function iscsitargetag_process_updatenotification($mode, $data) {
           <td class="listr"><?=htmlspecialchars($ag['comment']);?>&nbsp;</td>
           <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
           <td valign="middle" nowrap="nowrap" class="list">
-            <a href="services_iscsitarget_ag_edit.php?uuid=<?=$ag['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit auth group");?>" border="0" alt="<?=gtext("Edit auth group");?>" /></a>
-            <a href="services_iscsitarget_ag.php?act=del&amp;type=ag&amp;uuid=<?=$ag['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this auth group?");?>')"><img src="images/delete.png" title="<?=gettext("Delete auth group");?>" border="0" alt="<?=gtext("Delete auth group");?>" /></a>
+            <a href="services_iscsitarget_ag_edit.php?uuid=<?=$ag['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit auth group");?>" border="0" alt="<?=gtext("Edit auth group");?>" /></a>
+            <a href="services_iscsitarget_ag.php?act=del&amp;type=ag&amp;uuid=<?=$ag['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this auth group?");?>')"><img src="images/delete.png" title="<?=gtext("Delete auth group");?>" border="0" alt="<?=gtext("Delete auth group");?>" /></a>
           </td>
           <?php else:?>
           <td valign="middle" nowrap="nowrap" class="list">
@@ -183,7 +183,7 @@ function iscsitargetag_process_updatenotification($mode, $data) {
         <?php endforeach;?>
         <tr>
           <td class="list" colspan="4"></td>
-          <td class="list"><a href="services_iscsitarget_ag_edit.php"><img src="images/add.png" title="<?=gettext("Add auth group");?>" border="0" alt="<?=gtext("Add auth group");?>" /></a></td>
+          <td class="list"><a href="services_iscsitarget_ag_edit.php"><img src="images/add.png" title="<?=gtext("Add auth group");?>" border="0" alt="<?=gtext("Add auth group");?>" /></a></td>
         </tr>
         </table>
         <?=gtext("A Auth Group contains authorised users and secrets for additional security.");?>

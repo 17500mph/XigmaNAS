@@ -235,7 +235,7 @@ if ($_POST) {
 			$out = array();
 			$ufsid = disks_get_ufsid($device, $out);
 			if (empty($ufsid)) {
-				$input_errors[] = sprintf("%s: %s", $device, gettext("Can't get UFS ID."))."<br />".join('<br />', $out);
+				$input_errors[] = sprintf("%s: %s", $device, gtext("Can't get UFS ID."))."<br />".join('<br />', $out);
 			} else {
 				$device = "/dev/ufsid/$ufsid";
 			}
@@ -267,7 +267,7 @@ if ($_POST) {
 			$out = array();
 			$ufsid = disks_get_ufsid($device, $out);
 			if (empty($ufsid)) {
-				$input_errors[] = sprintf("%s: %s", $device, gettext("Can't get UFS ID."))."<br />".join('<br />', $out);
+				$input_errors[] = sprintf("%s: %s", $device, gtext("Can't get UFS ID."))."<br />".join('<br />', $out);
 			} else {
 				$device = "/dev/ufsid/$ufsid";
 			}
@@ -554,7 +554,7 @@ function enable_change(enable_change) {
   <tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-        <li class="tabact"><a href="disks_mount.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Management");?></span></a></li>
+        <li class="tabact"><a href="disks_mount.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Management");?></span></a></li>
         <li class="tabinact"><a href="disks_mount_tools.php"><span><?=gtext("Tools");?></span></a></li>
         <li class="tabinact"><a href="disks_mount_fsck.php"><span><?=gtext("Fsck");?></span></a></li>
       </ul>
@@ -646,7 +646,7 @@ function enable_change(enable_change) {
 					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
 				</div>
 				<div id="remarks">
-					<?php html_remark("warning", gettext("Warning"), sprintf(gettext("You can't mount the partition '%s' where the config file is stored.<br />"),htmlspecialchars($cfdevice)) . sprintf(gtext("UFS and variants are the NATIVE file format for FreeBSD (the underlying OS of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, or NTFS can result in unpredictable results, file corruption, and loss of data!"), get_product_name()));?>
+					<?php html_remark("warning", gtext('Warning'), sprintf(gettext("You can't mount the partition '%s' where the config file is stored.<br />"),htmlspecialchars($cfdevice)) . sprintf(gtext("UFS and variants are the NATIVE file format for FreeBSD (the underlying OS of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, or NTFS can result in unpredictable results, file corruption, and loss of data!"), get_product_name()));?>
 				</div>
 				<?php include("formend.inc");?>
 			</form>

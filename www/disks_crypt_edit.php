@@ -165,7 +165,7 @@ function ealgo_change() {
 	<tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-        <li class="tabact"><a href="disks_crypt.php" title="<?=gettext("Reload page");?>" ><span><?=gtext("Management");?></span></a></li>
+        <li class="tabact"><a href="disks_crypt.php" title="<?=gtext('Reload page');?>" ><span><?=gtext("Management");?></span></a></li>
         <li class="tabinact"><a href="disks_crypt_tools.php"><span><?=gtext("Tools");?></span></a></li>
       </ul>
     </td>
@@ -231,12 +231,12 @@ function ealgo_change() {
 
 				if (isset($pconfig['init']) && true === $pconfig['init']) {
 					// Initialize and encrypt the disk.
-					echo sprintf(gettext("Encrypting '%s'... Please wait") . "!<br />", $pconfig['devicespecialfile']);
+					echo sprintf(gtext("Encrypting '%s'... Please wait") . "!<br />", $pconfig['devicespecialfile']);
 					disks_geli_init($pconfig['devicespecialfile'], $pconfig['aalgo'], $pconfig['ealgo'], $pconfig['keylen'], $pconfig['passphrase'], true);
 				}
 
 				// Attach the disk.
-				echo(sprintf(gettext("Attaching provider '%s'."), $pconfig['devicespecialfile']) . "<br />");
+				echo(sprintf(gtext("Attaching provider '%s'."), $pconfig['devicespecialfile']) . "<br />");
 				disks_geli_attach($pconfig['devicespecialfile'], $pconfig['passphrase'], true);
 
 				echo('</pre>');

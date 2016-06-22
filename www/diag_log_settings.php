@@ -115,7 +115,7 @@ function enable_change(enable_change) {
 		<td class="tabnavtbl">
 			<ul id="tabnav">
 				<li class="tabinact"><a href="diag_log.php"><span><?=gtext("Log");?></span></a></li>
-				<li class="tabact"><a href="diag_log_settings.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Settings");?></span></a></li>
+				<li class="tabact"><a href="diag_log_settings.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Settings");?></span></a></li>
 			</ul>
 		</td>
 	</tr>

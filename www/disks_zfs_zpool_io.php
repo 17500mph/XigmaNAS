@@ -68,7 +68,7 @@ $(document).ready(function(){
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Pools");?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Pools");?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext("Datasets");?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext("Volumes");?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext("Snapshots");?></span></a></li>
@@ -83,7 +83,7 @@ $(document).ready(function(){
 				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext("Management");?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_zpool_tools.php"><span><?=gtext("Tools");?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_zpool_info.php"><span><?=gtext("Information");?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_zpool_io.php" title="<?=gettext("Reload page");?>"><span><?=gtext("I/O Statistics");?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_zpool_io.php" title="<?=gtext('Reload page');?>"><span><?=gtext("I/O Statistics");?></span></a></li>
 			</ul>
 		</td>
 	</tr>

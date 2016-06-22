@@ -100,7 +100,7 @@ function enable_change(enable_change) {
   <tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-        <li class="tabact"><a href="services_afp.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Settings");?></span></a></li>
+        <li class="tabact"><a href="services_afp.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Settings");?></span></a></li>
         <li class="tabinact"><a href="services_afp_share.php"><span><?=gtext("Shares");?></span></a></li>
       </ul>
     </td>
@@ -130,14 +130,14 @@ function enable_change(enable_change) {
 					</tr>
 					
 					<tr>
-					<?php html_textarea("auxparam", gettext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gettext("add any supplemental parameters")) . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://netatalk.sourceforge.net/3.1/htmldocs/afp.conf.5.html"), false, 65, 5, false, false);?>
+					<?php html_textarea("auxparam", gtext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gtext("add any supplemental parameters")) . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://netatalk.sourceforge.net/3.1/htmldocs/afp.conf.5.html"), false, 65, 5, false, false);?>
                                         </tr>
 			  </table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="enable_change(true)" />
 				</div>
 				<div id="remarks">
-					<?php html_remark("note", gettext("Note"), sprintf(gettext("You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this service to clients."), "system_advanced.php"));?>
+					<?php html_remark("note", gtext('Note'), sprintf(gettext("You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this service to clients."), "system_advanced.php"));?>
 				</div>
 				<?php include("formend.inc");?>
 			</form>

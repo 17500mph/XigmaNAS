@@ -122,7 +122,7 @@ function geli_process_updatenotification($mode, $data) {
 	<tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-        <li class="tabact"><a href="disks_crypt.php" title="<?=gettext("Reload page");?>" ><span><?=gtext("Management");?></span></a></li>
+        <li class="tabact"><a href="disks_crypt.php" title="<?=gtext('Reload page');?>" ><span><?=gtext("Management");?></span></a></li>
         <li class="tabinact"><a href="disks_crypt_tools.php"><span><?=gtext("Tools");?></span></a></li>
       </ul>
     </td>
@@ -162,7 +162,7 @@ function geli_process_updatenotification($mode, $data) {
               } else {
 		$notificationmode = UPDATENOTIFY_MODE_UNKNOWN;
                 if(disks_exists($geli['devicespecialfile'])) {
-                  echo("<a href=\"disks_crypt_tools.php?disk={$geli['devicespecialfile']}&amp;action=attach\">" . htmlspecialchars(gettext("Not attached")) . "</a>");
+                  echo("<a href=\"disks_crypt_tools.php?disk={$geli['devicespecialfile']}&amp;action=attach\">" . gtext("Not attached") . "</a>");
                 } else {
                   echo(gtext("Attached"));
                 }
@@ -171,8 +171,8 @@ function geli_process_updatenotification($mode, $data) {
             </td>
             <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
             <td valign="middle" nowrap="nowrap" class="list">
-							<a href="disks_crypt_tools.php?disk=<?=$geli['devicespecialfile'];?>&amp;action=setkey"><img src="images/edit.png" title="<?=gettext("Change password"); ?>" border="0" alt="<?=gtext("Change password"); ?>" /></a>&nbsp;
-              <a href="disks_crypt.php?act=del&amp;uuid=<?=$geli['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this volume?\\n!!! Note, all data will get lost and can not be recovered. !!!");?>')"><img src="images/delete.png" title="<?=gettext("Kill encrypted volume"); ?>" border="0" alt="<?=gtext("Kill encrypted volume"); ?>" /></a>
+							<a href="disks_crypt_tools.php?disk=<?=$geli['devicespecialfile'];?>&amp;action=setkey"><img src="images/edit.png" title="<?=gtext("Change password"); ?>" border="0" alt="<?=gtext("Change password"); ?>" /></a>&nbsp;
+              <a href="disks_crypt.php?act=del&amp;uuid=<?=$geli['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this volume?\\n!!! Note, all data will get lost and can not be recovered. !!!");?>')"><img src="images/delete.png" title="<?=gtext("Kill encrypted volume"); ?>" border="0" alt="<?=gtext("Kill encrypted volume"); ?>" /></a>
             </td>
             <?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
@@ -184,13 +184,13 @@ function geli_process_updatenotification($mode, $data) {
           <tr>
             <td class="list" colspan="4"></td>
             <td class="list">
-							<a href="disks_crypt_edit.php"><img src="images/add.png" title="<?=gettext("Create encrypted volume");?>" border="0" alt="<?=gtext("Create encrypted volume");?>" /></a>
+							<a href="disks_crypt_edit.php"><img src="images/add.png" title="<?=gtext("Create encrypted volume");?>" border="0" alt="<?=gtext("Create encrypted volume");?>" /></a>
 						</td>
 			    </tr>
         </table>
 	<div id="submit">
-		<input name="import" type="submit" class="formbtn" value="<?=gettext("Import disks");?>" onclick="return confirm('<?=gtext("Do you really want to import?\\nThe existing config may be overwritten.");?>');" />
-		<input name="clear_import" type="submit" class="formbtn" value="<?=gettext("Clear config and Import disks");?>" onclick="return confirm('<?=gtext("Do you really want to clear and import?\\nThe existing config will be cleared and overwritten.");?>');" />
+		<input name="import" type="submit" class="formbtn" value="<?=gtext("Import disks");?>" onclick="return confirm('<?=gtext("Do you really want to import?\\nThe existing config may be overwritten.");?>');" />
+		<input name="clear_import" type="submit" class="formbtn" value="<?=gtext("Clear config and Import disks");?>" onclick="return confirm('<?=gtext("Do you really want to clear and import?\\nThe existing config will be cleared and overwritten.");?>');" />
 	</div>
         <?php include("formend.inc");?>
       </form>

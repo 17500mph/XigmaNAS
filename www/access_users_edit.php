@@ -199,7 +199,7 @@ function get_nextuser_id() {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabact"><a href="access_users.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Users");?></span></a></li>
+				<li class="tabact"><a href="access_users.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Users");?></span></a></li>
 				<li class="tabinact"><a href="access_users_groups.php"><span><?=gtext("Groups");?></span></a></li>
 			</ul>
 		</td>
@@ -217,7 +217,7 @@ function get_nextuser_id() {
 					<?php html_combobox("shell", gtext("Shell"), $pconfig['shell'], array("nologin" => "nologin", "scponly" => "scponly", "sh" => "sh",  "csh" => "csh", "tcsh" => "tcsh", "bash" => "bash"), gtext("The user's login shell."), true);?>
 					<?php $grouplist = array(); foreach ($a_group as $groupk => $groupv) { $grouplist[$groupv] = $groupk; } ?>
 					<?php html_combobox("primarygroup", gtext("Primary Group"), $pconfig['primarygroup'], $grouplist, gtext("Set the account's primary group to the given group."), true);?>
-					<?php html_listbox("group", gettext("Additional group"), !empty($pconfig['group']) ? $pconfig['group'] : array(), $grouplist, gettext("Set additional group memberships for this account.")."<br />".gtext("Note: Ctrl-click (or command-click on the Mac) to select and deselect groups."));?>
+					<?php html_listbox("group", gtext("Additional group"), !empty($pconfig['group']) ? $pconfig['group'] : array(), $grouplist, gtext("Set additional group memberships for this account.")."<br />".gtext("Note: Ctrl-click (or command-click on the Mac) to select and deselect groups."));?>
 					<?php html_filechooser("homedir", gtext("Home directory"), $pconfig['homedir'], gtext("Enter the path to the home directory of that user. Leave this field empty to use default path /mnt."), $g['media_path'], false, 60);?>
 					<?php html_checkbox("userportal", gtext("User portal"), !empty($pconfig['userportal']) ? true : false, gtext("Grant access to the user portal."), "", false);?>
 				</table>

@@ -148,7 +148,7 @@ if ($_POST) {
 		<td class="tabnavtbl">
 			<ul id="tabnav">
 				<li class="tabinact"><a href="services_nfs.php"><span><?=gtext("Settings");?></span></a></li>
-				<li class="tabact"><a href="services_nfs_share.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Shares");?></span></a></li>
+				<li class="tabact"><a href="services_nfs_share.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Shares");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -162,7 +162,7 @@ if ($_POST) {
   				  <td width="78%" class="vtable">
   				  	<input name="path" type="text" class="formfld" id="path" size="60" value="<?=htmlspecialchars($pconfig['path']);?>" />
   				  	<input name="browse" type="button" class="formbtn" id="Browse" onclick='ifield = form.path; filechooser = window.open("filechooser.php?p="+encodeURIComponent(ifield.value)+"&amp;sd=<?=$g['media_path'];?>", "filechooser", "scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300"); filechooser.ifield = ifield; window.ifield = ifield;' value="..." /><br />
-  				  	<span class="vexpl"><?=gettext("Path to be shared.");?> <?=gtext("Please note that blanks in path names are not allowed.");?></span>
+  				  	<span class="vexpl"><?=gtext("Path to be shared.");?> <?=gtext("Please note that blanks in path names are not allowed.");?></span>
   				  </td>
   				</tr>
 			    <tr>

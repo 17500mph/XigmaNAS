@@ -208,7 +208,7 @@ function iscsitargettarget_process_updatenotification($mode, $data) {
     <td class="tabnavtbl">
       <ul id="tabnav">
 				<li class="tabinact"><a href="services_iscsitarget.php"><span><?=gtext("Settings");?></span></a></li>
-				<li class="tabact"><a href="services_iscsitarget_target.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Targets");?></span></a></li>
+				<li class="tabact"><a href="services_iscsitarget_target.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Targets");?></span></a></li>
 				<li class="tabinact"><a href="services_iscsitarget_pg.php"><span><?=gtext("Portals");?></span></a></li>
 				<li class="tabinact"><a href="services_iscsitarget_ig.php"><span><?=gtext("Initiators");?></span></a></li>
 				<li class="tabinact"><a href="services_iscsitarget_ag.php"><span><?=gtext("Auths");?></span></a></li>
@@ -245,8 +245,8 @@ function iscsitargettarget_process_updatenotification($mode, $data) {
           <td class="listr"><?=htmlspecialchars($extent['size']);?><?=htmlspecialchars($psizeunit)?>&nbsp;</td>
           <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
           <td valign="middle" nowrap="nowrap" class="list">
-            <a href="services_iscsitarget_extent_edit.php?uuid=<?=$extent['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit extent");?>" border="0" alt="<?=gtext("Edit extent");?>" /></a>
-            <a href="services_iscsitarget_target.php?act=del&amp;type=extent&amp;uuid=<?=$extent['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this extent?");?>')"><img src="images/delete.png" title="<?=gettext("Delete extent");?>" border="0" alt="<?=gtext("Delete extent");?>" /></a>
+            <a href="services_iscsitarget_extent_edit.php?uuid=<?=$extent['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit extent");?>" border="0" alt="<?=gtext("Edit extent");?>" /></a>
+            <a href="services_iscsitarget_target.php?act=del&amp;type=extent&amp;uuid=<?=$extent['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this extent?");?>')"><img src="images/delete.png" title="<?=gtext("Delete extent");?>" border="0" alt="<?=gtext("Delete extent");?>" /></a>
           </td>
           <?php else:?>
           <td valign="middle" nowrap="nowrap" class="list">
@@ -257,7 +257,7 @@ function iscsitargettarget_process_updatenotification($mode, $data) {
         <?php endforeach;?>
         <tr>
           <td class="list" colspan="3"></td>
-          <td class="list"><a href="services_iscsitarget_extent_edit.php"><img src="images/add.png" title="<?=gettext("Add extent");?>" border="0" alt="<?=gtext("Add extent");?>" /></a></td>
+          <td class="list"><a href="services_iscsitarget_extent_edit.php"><img src="images/add.png" title="<?=gtext("Add extent");?>" border="0" alt="<?=gtext("Add extent");?>" /></a></td>
         </tr>
         </table>
         <?=gtext("Extents must be defined before they can be used, and extents cannot be used more than once.");?>
@@ -360,8 +360,8 @@ function iscsitargettarget_process_updatenotification($mode, $data) {
           </td>
           <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
           <td valign="middle" nowrap="nowrap" class="list">
-            <a href="services_iscsitarget_target_edit.php?uuid=<?=$target['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit target");?>" border="0" alt="<?=gtext("Edit target");?>" /></a>
-            <a href="services_iscsitarget_target.php?act=del&amp;type=target&amp;uuid=<?=$target['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this target?");?>')"><img src="images/delete.png" title="<?=gettext("Delete target");?>" border="0" alt="<?=gtext("Delete target");?>" /></a>
+            <a href="services_iscsitarget_target_edit.php?uuid=<?=$target['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit target");?>" border="0" alt="<?=gtext("Edit target");?>" /></a>
+            <a href="services_iscsitarget_target.php?act=del&amp;type=target&amp;uuid=<?=$target['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this target?");?>')"><img src="images/delete.png" title="<?=gtext("Delete target");?>" border="0" alt="<?=gtext("Delete target");?>" /></a>
           </td>
           <?php else:?>
           <td valign="middle" nowrap="nowrap" class="list">
@@ -372,7 +372,7 @@ function iscsitargettarget_process_updatenotification($mode, $data) {
         <?php endforeach;?>
         <tr>
           <td class="list" colspan="6"></td>
-          <td class="list"><a href="services_iscsitarget_target_edit.php"><img src="images/add.png" title="<?=gettext("Add target");?>" border="0" alt="<?=gtext("Add target");?>" /></a></td>
+          <td class="list"><a href="services_iscsitarget_target_edit.php"><img src="images/add.png" title="<?=gtext("Add target");?>" border="0" alt="<?=gtext("Add target");?>" /></a></td>
         </tr>
         </table>
         <?=gtext("At the highest level, a target is what is presented to the initiator, and is made up of one or more extents.");?>
@@ -380,7 +380,7 @@ function iscsitargettarget_process_updatenotification($mode, $data) {
       </tr>
       </table>
       <div id="remarks">
-        <?php html_remark("note", gettext("Note"), gettext("To configure the target, you must add at least Portal Group and Initiator Group and Extent.<br />Portal Group which is identified by tag number defines IP addresses and listening TCP ports.<br />Initiator Group which is identified by tag number defines authorised initiator names and networks.<br />Auth Group which is identified by tag number and is optional if the target does not use CHAP authentication defines authorised users and secrets for additional security.<br />Extent defines the storage area of the target."));?>
+        <?php html_remark("note", gtext('Note'), gettext("To configure the target, you must add at least Portal Group and Initiator Group and Extent.<br />Portal Group which is identified by tag number defines IP addresses and listening TCP ports.<br />Initiator Group which is identified by tag number defines authorised initiator names and networks.<br />Auth Group which is identified by tag number and is optional if the target does not use CHAP authentication defines authorised users and secrets for additional security.<br />Extent defines the storage area of the target."));?>
       </div>
     </td>
   </tr>

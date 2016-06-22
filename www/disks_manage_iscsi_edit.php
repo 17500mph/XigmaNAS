@@ -135,7 +135,7 @@ if ($_POST) {
       		<li class="tabinact"><a href="disks_manage.php"><span><?=gtext("HDD Management");?></span></a></li>
 		<li class="tabinact"><a href="disks_init.php"><span><?=gtext("HDD Format");?></span></a></li>
       		<li class="tabinact"><a href="disks_manage_smart.php"><span><?=gtext("S.M.A.R.T.");?></span></a></li>
-		<li class="tabact"><a href="disks_manage_iscsi.php" title="<?=gettext("Reload page");?>"><span><?=gtext("iSCSI Initiator");?></span></a></li>
+		<li class="tabact"><a href="disks_manage_iscsi.php" title="<?=gtext('Reload page');?>"><span><?=gtext("iSCSI Initiator");?></span></a></li>
 	</ul>
     </td>
   </tr>
