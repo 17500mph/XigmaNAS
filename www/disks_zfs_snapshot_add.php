@@ -71,7 +71,10 @@ function get_zfs_paths() {
 $a_path = get_zfs_paths();
 
 if (!isset($uuid) && (!sizeof($a_pool))) {
-	$errormsg = sprintf(gettext("No configured pools. Please add new <a href='%s'>pools</a> first."), "disks_zfs_zpool.php");
+	$link = sprintf('<a href="%1$s">%2$s</a>', 'disks_zfs_zpool.php', gtext('pools'));
+	$helpinghand = gtext('No configured pools.') . ' ' . gtext('Please add new %s first.');
+	$helpinghand = sprintf($helpinghand, $link);
+	$errormsg = $helpinghand;
 }
 
 $cnid = FALSE;

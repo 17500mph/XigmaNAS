@@ -109,7 +109,7 @@ function login ()
             echo "<INPUT name=\"p_pass\" type=\"password\" size=\"25\"></TD></TR>\n";
             // NAS4Free Code
             //Select box and auto language detection array
-            echo "<TR><TD>".gettext("Detected Language:<br />(Change if needed)")."</TD><TD align=\"right\">";
+            echo "<TR><TD>", gtext("Detected Language:"), "<br />", gtext("(Change if needed)"), "</TD><TD align=\"right\">";
             @include "./_lang/_info.php";
             // End NAS4Free Code
             echo "<TR><TD colspan=\"2\" align=\"right\"><INPUT type=\"submit\" value=\"";

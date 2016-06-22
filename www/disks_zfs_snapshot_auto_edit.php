@@ -92,7 +92,10 @@ $a_lifetime = array("0" => gtext("infinity"),
 	    "2y" => sprintf(gtext("%d years"), 2));
 
 if (!isset($uuid) && (!sizeof($a_pool))) {
-	$errormsg = sprintf(gettext("No configured pools. Please add new <a href='%s'>pools</a> first."), "disks_zfs_zpool.php");
+	$link = sprintf('<a href="%1$s">%2$s</a>', 'disks_zfs_zpool.php', gtext('pools'));
+	$helpinghand = gtext('No configured pools.') . ' ' . gtext('Please add new %s first.');
+	$helpinghand = sprintf($helpinghand, $link);
+	$errormsg = $helpinghand;
 }
 
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_autosnapshot, "uuid")))) {

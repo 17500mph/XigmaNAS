@@ -187,7 +187,10 @@ function raid_change() {
 								};
 							?>
 							<div id="remarks">
-								<?php html_remark("warning", gtext('Warning'), gettext("1. Use these specials actions for debugging only!<br />2. There is no need of using this menu for starting a RAID volume (start automaticaly)."));?>
+								<?php
+								$helpinghand = '1. ' . gtext('Use these specials actions for debugging only!') . '<br />2. ' . gtext('There is no need to start a RAID volume from here (It starts automatically).');
+								html_remark('warning', gtext('Warning'), $helpinghand);
+								?>
 							</div>
 							<?php include("formend.inc");?>
 						</form>
