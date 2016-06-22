@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Disks"),gettext("Mount Point"),gettext("Fsck"));
+$pgtitle = array(gtext("Disks"),gtext("Mount Point"),gtext("Fsck"));
 
 if (!isset($config['mounts']['mount']) || !is_array($config['mounts']['mount']))
 	$config['mounts']['mount'] = array();
@@ -50,7 +50,7 @@ if ($_POST) {
 
 	// Input validation
 	$reqdfields = explode(" ", "disk");
-	$reqdfieldsn = array(gettext("Disk"));
+	$reqdfieldsn = array(gtext("Disk"));
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 	if (empty($input_errors)) {
@@ -71,9 +71,9 @@ if (!isset($do_action)) {
   <tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-				<li class="tabinact"><a href="disks_mount.php"><span><?=gettext("Management");?></span></a></li>
-        <li class="tabinact"><a href="disks_mount_tools.php"><span><?=gettext("Tools");?></span></a></li>
-				<li class="tabact"><a href="disks_mount_fsck.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Fsck");?></span></a></li>
+				<li class="tabinact"><a href="disks_mount.php"><span><?=gtext("Management");?></span></a></li>
+        <li class="tabinact"><a href="disks_mount_tools.php"><span><?=gtext("Tools");?></span></a></li>
+				<li class="tabact"><a href="disks_mount_fsck.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Fsck");?></span></a></li>
       </ul>
     </td>
   </tr>
@@ -83,10 +83,10 @@ if (!isset($do_action)) {
 			<form action="disks_mount_fsck.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 			  <table width="100%" border="0" cellpadding="6" cellspacing="0">
           <tr>
-            <td valign="top" class="vncellreq"><?=gettext("Disk");?></td>
+            <td valign="top" class="vncellreq"><?=gtext("Disk");?></td>
             <td class="vtable">
               <select name="disk" class="formfld" id="disk">
-              	<option value=""><?=gettext("Must choose one");?></option>
+              	<option value=""><?=gtext("Must choose one");?></option>
                 <?php foreach ($a_mount as $mountv):?>
 								<?php if (strcmp($mountv['fstype'],"cd9660") == 0) continue;?>
                 <option value="<?=$mountv['devicespecialfile'];?>" <?php if ($mountv['devicespecialfile'] === $disk) echo "selected=\"selected\"";?>>
@@ -100,27 +100,27 @@ if (!isset($do_action)) {
             <td width="22%" valign="top" class="vncell"></td>
             <td width="78%" class="vtable">
               <input name="umount" type="checkbox" id="umount" value="yes" <?php if (!empty($umount)) echo "checked=\"checked\""; ?> />
-              <strong><?=gettext("Unmount disk/partition");?></strong><span class="vexpl"><br />
+              <strong><?=gtext("Unmount disk/partition");?></strong><span class="vexpl"><br />
               <?=gettext("If the selected disk/partition is mounted it will be unmounted temporarily to perform selected command, otherwise the commands work in read-only mode.<br />Service disruption to users accessing this mount will occur during this process.");?></span>
             </td>
           </tr>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Execute");?>" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Execute");?>" />
 				</div>
 				<?php if($do_action) {
-				echo(sprintf("<div id='cmdoutput'>%s</div>", gettext("Command output:")));
+				echo(sprintf("<div id='cmdoutput'>%s</div>", gtext("Command output:")));
 				echo('<pre class="cmdoutput">');
 				//ob_end_flush();
 				/* Check filesystem */
 				$result = disks_fsck($disk,$umount);
 				/* Display result */
-				echo((0 == $result) ? gettext("Successful") : gettext("Failed"));
+				echo((0 == $result) ? gtext("Successful") : gtext("Failed"));
 				echo('</pre>');
 				}
 				?>
 				<div id="remarks">
-					<?php html_remark("note", gettext("Note"), gettext("You can't unmount a drive which is used by swap file, a iSCSI-target file or any other running process!"));?>
+					<?php html_remark("note", gtext("Note"), gtext("You can't unmount a drive which is used by swap file, a iSCSI-target file or any other running process!"));?>
 				</div>
 				<?php include("formend.inc");?>
     	</form>

@@ -34,17 +34,17 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Services"), gettext("FTP"));
+$pgtitle = array(gtext("Services"), gtext("FTP"));
 
 $l_sysloglevel = [
-	'emerg' => gettext('Emergency Level'),
-	'alert' => gettext('Alert Level'),
-	'crit' => gettext('Critical Error Level'),
-	'error' => gettext('Error Level'),
-	'warn' => gettext('Warning Level'),
-	'notice' => gettext('Notice Level'),
-	'info' => gettext('Info Level'),
-	'debug' => gettext('Debug Level')
+	'emerg' => gtext('Emergency Level'),
+	'alert' => gtext('Alert Level'),
+	'crit' => gtext('Critical Error Level'),
+	'error' => gtext('Error Level'),
+	'warn' => gtext('Warning Level'),
+	'notice' => gtext('Notice Level'),
+	'info' => gtext('Info Level'),
+	'debug' => gtext('Debug Level')
 ];
 if (!isset($config['ftpd']) || !is_array($config['ftpd']))
 	$config['ftpd'] = array();
@@ -98,12 +98,12 @@ if ($_POST) {
 	if (isset($_POST['enable']) && $_POST['enable']) {
 		// Input validation.
 		$reqdfields = explode(" ", "port numberclients maxconperip timeout maxloginattempts");
-		$reqdfieldsn = array(gettext("TCP port"), gettext("Number of clients"), gettext("Max. conn. per IP"), gettext("Timeout"), gettext("Max. login attempts"));
+		$reqdfieldsn = array(gtext("TCP port"), gtext("Number of clients"), gtext("Max. conn. per IP"), gtext("Timeout"), gtext("Max. login attempts"));
 		$reqdfieldst = explode(" ", "numeric numeric numeric numeric numeric");
 
 		if (!empty($_POST['tls'])) {
 			$reqdfields = array_merge($reqdfields, explode(" ", "certificate privatekey"));
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gettext("Certificate"), gettext("Private key")));
+			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Certificate"), gtext("Private key")));
 			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "certificate privatekey"));
 		}
 
@@ -111,37 +111,37 @@ if ($_POST) {
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
 		if (!is_port($_POST['port'])) {
-			$input_errors[] = gettext("The TCP port must be a valid port number.");
+			$input_errors[] = gtext("The TCP port must be a valid port number.");
 		}
 
 		if ((1 > $_POST['numberclients']) || (50 < $_POST['numberclients'])) {
-			$input_errors[] = gettext("The number of clients must be between 1 and 50.");
+			$input_errors[] = gtext("The number of clients must be between 1 and 50.");
 		}
 
 		if (0 > $_POST['maxconperip']) {
-			$input_errors[] = gettext("The max. connection per IP must be either 0 (unlimited) or greater.");
+			$input_errors[] = gtext("The max. connection per IP must be either 0 (unlimited) or greater.");
 		}
 
 		if (!is_numericint($_POST['timeout'])) {
-			$input_errors[] = gettext("The maximum idle time be a number.");
+			$input_errors[] = gtext("The maximum idle time be a number.");
 		}
 
 		if (("0" !== $_POST['pasv_min_port']) && (($_POST['pasv_min_port'] < 1024) || ($_POST['pasv_min_port'] > 65535))) {
-			$input_errors[] = sprintf(gettext("The attribute '%s' must be in the range from %d to %d."), gettext("Min. passive port"), 1024, 65535);
+			$input_errors[] = sprintf(gtext("The attribute '%s' must be in the range from %d to %d."), gtext("Min. passive port"), 1024, 65535);
 		}
 
 		if (("0" !== $_POST['pasv_max_port']) && (($_POST['pasv_max_port'] < 1024) || ($_POST['pasv_max_port'] > 65535))) {
-			$input_errors[] = sprintf(gettext("The attribute '%s' must be in the range from %d to %d."), gettext("Max. passive port"), 1024, 65535);
+			$input_errors[] = sprintf(gtext("The attribute '%s' must be in the range from %d to %d."), gtext("Max. passive port"), 1024, 65535);
 		}
 
 		if (("0" !== $_POST['pasv_min_port']) && ("0" !== $_POST['pasv_max_port'])) {
 			if ($_POST['pasv_min_port'] >= $_POST['pasv_max_port']) {
-				$input_errors[] = sprintf(gettext("The attribute '%s' must be less than '%s'."), gettext("Min. passive port"), gettext("Max. passive port"));
+				$input_errors[] = sprintf(gtext("The attribute '%s' must be less than '%s'."), gtext("Min. passive port"), gtext("Max. passive port"));
 			}
 		}
 
 		if (!empty($_POST['anonymousonly']) && !empty($_POST['localusersonly'])) {
-			$input_errors[] = gettext("It is impossible to enable 'Anonymous users only' and 'Local users only' authentication simultaneously.");
+			$input_errors[] = gtext("It is impossible to enable 'Anonymous users only' and 'Local users only' authentication simultaneously.");
 		}
 	}
 
@@ -288,8 +288,8 @@ function anonymousonly_change() {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabact"><a href="services_ftp.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Settings");?></span></a></li>
-				<li class="tabinact"><a href="services_ftp_mod.php"><span><?=gettext("Modules");?></span></a></li>
+				<li class="tabact"><a href="services_ftp.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Settings");?></span></a></li>
+				<li class="tabinact"><a href="services_ftp_mod.php"><span><?=gtext("Modules");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -300,44 +300,44 @@ function anonymousonly_change() {
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php 
-						html_titleline_checkbox("enable", gettext("File Transfer Protocol"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "enable_change(false)");
-						html_inputbox("port", gettext("TCP port"), $pconfig['port'], sprintf(gettext("Default is %s."), "21"), true, 4);
-						html_inputbox("numberclients", gettext("Number of clients"), $pconfig['numberclients'], gettext("Maximum number of simultaneous clients."), true, 3);
-						html_inputbox("maxconperip", gettext("Max. conn. per IP"), $pconfig['maxconperip'], gettext("Maximum number of connections per IP address (0 = unlimited)."), true, 3);
-						html_inputbox("maxloginattempts", gettext("Max. login attempts"), $pconfig['maxloginattempts'], gettext("Maximum number of allowed password attempts before disconnection."), true, 3);
-						html_inputbox("timeout", gettext("Timeout"), $pconfig['timeout'], gettext("Maximum idle time in seconds."), true, 5);
-						html_checkbox("permitrootlogin", gettext("Permit root login"), !empty($pconfig['permitrootlogin']) ? true : false, gettext("Specifies whether it is allowed to login as superuser (root) directly."), "", false);
-						html_checkbox("anonymousonly", gettext("Anonymous users only"), !empty($pconfig['anonymousonly']) ? true : false, gettext("Only allow anonymous users. Use this on a public FTP site with no remote FTP access to real accounts."), "", false, "anonymousonly_change()");
-						html_checkbox("localusersonly", gettext("Local users only"), !empty($pconfig['localusersonly']) ? true : false, gettext("Only allow authenticated users. Anonymous logins are prohibited."), "", false, "localusersonly_change()");
-						html_inputbox("allowgroup", gettext("Allow group"), $pconfig['allowgroup'], gettext("Comma-separated list of group names that are permitted to login to the FTP server. (empty is ftp group)"), false, 40);
-						html_textarea("banner", gettext("Banner"), $pconfig['banner'], gettext("Greeting banner displayed by FTP when a connection first comes in."), false, 65, 7, false, false);
+						html_titleline_checkbox("enable", gtext("File Transfer Protocol"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");
+						html_inputbox("port", gtext("TCP port"), $pconfig['port'], sprintf(gtext("Default is %s."), "21"), true, 4);
+						html_inputbox("numberclients", gtext("Number of clients"), $pconfig['numberclients'], gtext("Maximum number of simultaneous clients."), true, 3);
+						html_inputbox("maxconperip", gtext("Max. conn. per IP"), $pconfig['maxconperip'], gtext("Maximum number of connections per IP address (0 = unlimited)."), true, 3);
+						html_inputbox("maxloginattempts", gtext("Max. login attempts"), $pconfig['maxloginattempts'], gtext("Maximum number of allowed password attempts before disconnection."), true, 3);
+						html_inputbox("timeout", gtext("Timeout"), $pconfig['timeout'], gtext("Maximum idle time in seconds."), true, 5);
+						html_checkbox("permitrootlogin", gtext("Permit root login"), !empty($pconfig['permitrootlogin']) ? true : false, gtext("Specifies whether it is allowed to login as superuser (root) directly."), "", false);
+						html_checkbox("anonymousonly", gtext("Anonymous users only"), !empty($pconfig['anonymousonly']) ? true : false, gtext("Only allow anonymous users. Use this on a public FTP site with no remote FTP access to real accounts."), "", false, "anonymousonly_change()");
+						html_checkbox("localusersonly", gtext("Local users only"), !empty($pconfig['localusersonly']) ? true : false, gtext("Only allow authenticated users. Anonymous logins are prohibited."), "", false, "localusersonly_change()");
+						html_inputbox("allowgroup", gtext("Allow group"), $pconfig['allowgroup'], gtext("Comma-separated list of group names that are permitted to login to the FTP server. (empty is ftp group)"), false, 40);
+						html_textarea("banner", gtext("Banner"), $pconfig['banner'], gtext("Greeting banner displayed by FTP when a connection first comes in."), false, 65, 7, false, false);
 						html_separator();
-						html_titleline(gettext("Advanced Settings"));
-						html_inputbox("filemask", gettext("Create mask"), $pconfig['filemask'], gettext("Use this option to override the file creation mask (077 by default)."), false, 3);
-						html_inputbox("directorymask", gettext("Directory mask"), $pconfig['directorymask'], gettext("Use this option to override the directory creation mask (022 by default)."), false, 3);
-						html_checkbox("fxp", gettext("FXP"), !empty($pconfig['fxp']) ? true : false, gettext("Enable FXP protocol."), gettext("FXP allows transfers between two remote servers without any file data going to the client asking for the transfer (insecure!)."), false);
-						html_checkbox("allowrestart", gettext("Resume"), !empty($pconfig['allowrestart']) ? true : false, gettext("Allow clients to resume interrupted uploads and downloads."), "", false);
-						html_checkbox("chrooteveryone", gettext("Default root"), !empty($pconfig['chrooteveryone']) ? true : false, gettext("chroot() everyone, but root."), gettext("If default root is enabled, a chroot operation is performed immediately after a client authenticates. This can be used to effectively isolate the client from a portion of the host system filespace."), false);
-						html_checkbox("identlookups", gettext("Ident protocol"), !empty($pconfig['identlookups']) ? true : false, gettext("Enable the ident protocol (RFC1413)."), gettext("When a client initially connects to the server the ident protocol is used to attempt to identify the remote username."), false);
-						html_checkbox("usereversedns", gettext("Reverse DNS lookup"), !empty($pconfig['usereversedns']) ? true : false, gettext("Enable reverse DNS lookup."), gettext("Enable reverse DNS lookup performed on the remote host's IP address for incoming active mode data connections and outgoing passive mode data connections."), false);
-						html_checkbox("disabletcpwrapper", gettext("TCP wrapper"), !empty($pconfig['disabletcpwrapper']) ? true : false, gettext("Disable TCP wrapper (mod_wrap module)."), "", false);
-						html_inputbox("pasv_address", gettext("Masquerade address"), $pconfig['pasv_address'], gettext("Causes the server to display the network information for the specified IP address or DNS hostname to the client, on the assumption that that IP address or DNS host is acting as a NAT gateway or port forwarder for the server."), false, 20);
-						html_inputbox("pasv_min_port", gettext("Passive ports"), $pconfig['pasv_min_port'], gettext("The minimum port to allocate for PASV style data connections (0 = use any port)."), false, 20);
-						html_inputbox("pasv_max_port", "&nbsp;", $pconfig['pasv_max_port'], gettext("The maximum port to allocate for PASV style data connections (0 = use any port).") . "<br /><br />" . gettext("Passive ports restricts the range of ports from which the server will select when sent the PASV command from a client. The server will randomly choose a number from within the specified range until an open port is found. The port range selected must be in the non-privileged range (eg. greater than or equal to 1024). It is strongly recommended that the chosen range be large enough to handle many simultaneous passive connections (for example, 49152-65534, the IANA-registered ephemeral port range)."), true, 20);
-						html_inputbox("userbandwidthup", gettext("Local user bandwidth"), $pconfig['userbandwidthup'], gettext("Local user upload bandwith in KB/s. An empty field means infinity."), false, 5);
-						html_inputbox("userbandwidthdown", "&nbsp;", $pconfig['userbandwidthdown'], gettext("Local user download bandwith in KB/s. An empty field means infinity."), false, 5);
-						html_inputbox("anonymousbandwidthup", gettext("Anonymous user bandwidth"), $pconfig['anonymousbandwidthup'], gettext("Anonymous user upload bandwith in KB/s. An empty field means infinity."), false, 5);
-						html_inputbox("anonymousbandwidthdown", "&nbsp;", $pconfig['anonymousbandwidthdown'], gettext("Anonymous user download bandwith in KB/s. An empty field means infinity."), false, 5);
-						html_checkbox("tls", gettext("TLS"), !empty($pconfig['tls']) ? true : false, gettext("Enable TLS connections."), "", false, "tls_change()");
-						html_textarea("certificate", gettext("Certificate"), $pconfig['certificate'], gettext("Paste a signed certificate in X.509 PEM format here."), true, 65, 7, false, false);
-						html_textarea("privatekey", gettext("Private key"), $pconfig['privatekey'], gettext("Paste an private key in PEM format here."), true, 65, 7, false, false);
-						html_checkbox("tlsrequired", gettext("TLS only"), !empty($pconfig['tlsrequired']) ? true : false, gettext("Allow TLS connections only."), "", false);
-						html_combobox('sysloglevel', gettext('Syslog Level'), $pconfig['sysloglevel'], $l_sysloglevel, '');
+						html_titleline(gtext("Advanced Settings"));
+						html_inputbox("filemask", gtext("Create mask"), $pconfig['filemask'], gtext("Use this option to override the file creation mask (077 by default)."), false, 3);
+						html_inputbox("directorymask", gtext("Directory mask"), $pconfig['directorymask'], gtext("Use this option to override the directory creation mask (022 by default)."), false, 3);
+						html_checkbox("fxp", gtext("FXP"), !empty($pconfig['fxp']) ? true : false, gtext("Enable FXP protocol."), gtext("FXP allows transfers between two remote servers without any file data going to the client asking for the transfer (insecure!)."), false);
+						html_checkbox("allowrestart", gtext("Resume"), !empty($pconfig['allowrestart']) ? true : false, gtext("Allow clients to resume interrupted uploads and downloads."), "", false);
+						html_checkbox("chrooteveryone", gtext("Default root"), !empty($pconfig['chrooteveryone']) ? true : false, gtext("chroot() everyone, but root."), gtext("If default root is enabled, a chroot operation is performed immediately after a client authenticates. This can be used to effectively isolate the client from a portion of the host system filespace."), false);
+						html_checkbox("identlookups", gtext("Ident protocol"), !empty($pconfig['identlookups']) ? true : false, gtext("Enable the ident protocol (RFC1413)."), gtext("When a client initially connects to the server the ident protocol is used to attempt to identify the remote username."), false);
+						html_checkbox("usereversedns", gtext("Reverse DNS lookup"), !empty($pconfig['usereversedns']) ? true : false, gtext("Enable reverse DNS lookup."), gtext("Enable reverse DNS lookup performed on the remote host's IP address for incoming active mode data connections and outgoing passive mode data connections."), false);
+						html_checkbox("disabletcpwrapper", gtext("TCP wrapper"), !empty($pconfig['disabletcpwrapper']) ? true : false, gtext("Disable TCP wrapper (mod_wrap module)."), "", false);
+						html_inputbox("pasv_address", gtext("Masquerade address"), $pconfig['pasv_address'], gtext("Causes the server to display the network information for the specified IP address or DNS hostname to the client, on the assumption that that IP address or DNS host is acting as a NAT gateway or port forwarder for the server."), false, 20);
+						html_inputbox("pasv_min_port", gtext("Passive ports"), $pconfig['pasv_min_port'], gtext("The minimum port to allocate for PASV style data connections (0 = use any port)."), false, 20);
+						html_inputbox("pasv_max_port", "&nbsp;", $pconfig['pasv_max_port'], gettext("The maximum port to allocate for PASV style data connections (0 = use any port).") . "<br /><br />" . gtext("Passive ports restricts the range of ports from which the server will select when sent the PASV command from a client. The server will randomly choose a number from within the specified range until an open port is found. The port range selected must be in the non-privileged range (eg. greater than or equal to 1024). It is strongly recommended that the chosen range be large enough to handle many simultaneous passive connections (for example, 49152-65534, the IANA-registered ephemeral port range)."), true, 20);
+						html_inputbox("userbandwidthup", gtext("Local user bandwidth"), $pconfig['userbandwidthup'], gtext("Local user upload bandwith in KB/s. An empty field means infinity."), false, 5);
+						html_inputbox("userbandwidthdown", "&nbsp;", $pconfig['userbandwidthdown'], gtext("Local user download bandwith in KB/s. An empty field means infinity."), false, 5);
+						html_inputbox("anonymousbandwidthup", gtext("Anonymous user bandwidth"), $pconfig['anonymousbandwidthup'], gtext("Anonymous user upload bandwith in KB/s. An empty field means infinity."), false, 5);
+						html_inputbox("anonymousbandwidthdown", "&nbsp;", $pconfig['anonymousbandwidthdown'], gtext("Anonymous user download bandwith in KB/s. An empty field means infinity."), false, 5);
+						html_checkbox("tls", gtext("TLS"), !empty($pconfig['tls']) ? true : false, gtext("Enable TLS connections."), "", false, "tls_change()");
+						html_textarea("certificate", gtext("Certificate"), $pconfig['certificate'], gtext("Paste a signed certificate in X.509 PEM format here."), true, 65, 7, false, false);
+						html_textarea("privatekey", gtext("Private key"), $pconfig['privatekey'], gtext("Paste an private key in PEM format here."), true, 65, 7, false, false);
+						html_checkbox("tlsrequired", gtext("TLS only"), !empty($pconfig['tlsrequired']) ? true : false, gtext("Allow TLS connections only."), "", false);
+						html_combobox('sysloglevel', gtext('Syslog Level'), $pconfig['sysloglevel'], $l_sysloglevel, '');
 						html_textarea("auxparam", gettext("Auxiliary parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", sprintf(gettext("These parameters are added to %s."), "proftpd.conf") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://www.proftpd.org/docs/directives/linked/configuration.html"), false, 65, 5, false, false);
 					?>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" onclick="enable_change(true)" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="enable_change(true)" />
 				</div>
 				<?php include("formend.inc");?>
 			</form>

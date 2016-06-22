@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Services"), gettext("NFS"), gettext("Shares"));
+$pgtitle = array(gtext("Services"), gtext("NFS"), gtext("Shares"));
 
 if ($_POST) {
 	$pconfig = $_POST;
@@ -97,8 +97,8 @@ function nfsshare_process_updatenotification($mode, $data) {
   <tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-        <li class="tabinact"><a href="services_nfs.php"><span><?=gettext("Settings");?></span></a></li>
-        <li class="tabact"><a href="services_nfs_share.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Shares");?></span></a></li>
+        <li class="tabinact"><a href="services_nfs.php"><span><?=gtext("Settings");?></span></a></li>
+        <li class="tabact"><a href="services_nfs_share.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Shares");?></span></a></li>
       </ul>
     </td>
   </tr>
@@ -109,9 +109,9 @@ function nfsshare_process_updatenotification($mode, $data) {
         <?php if (updatenotify_exists("nfsshare")) print_config_change_box();?>
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
           <tr>
-						<td width="30%" class="listhdrlr"><?=gettext("Path");?></td>
-						<td width="30%" class="listhdrr"><?=gettext("Network");?></td>
-						<td width="30%" class="listhdrr"><?=gettext("Comment");?></td>
+						<td width="30%" class="listhdrlr"><?=gtext("Path");?></td>
+						<td width="30%" class="listhdrr"><?=gtext("Network");?></td>
+						<td width="30%" class="listhdrr"><?=gtext("Comment");?></td>
             <td width="10%" class="list"></td>
           </tr>
   			  <?php foreach ($a_share as $sharev):?>
@@ -122,8 +122,8 @@ function nfsshare_process_updatenotification($mode, $data) {
 						<td class="listr"><?=htmlspecialchars($sharev['comment']);?>&nbsp;</td>
 						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
             <td valign="middle" nowrap="nowrap" class="list">
-              <a href="services_nfs_share_edit.php?uuid=<?=$sharev['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit share");?>" border="0" alt="<?=gettext("Edit share");?>" /></a>
-              <a href="services_nfs_share.php?act=del&amp;uuid=<?=$sharev['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this share?");?>')"><img src="images/delete.png" title="<?=gettext("Delete share");?>" border="0" alt="<?=gettext("Delete share");?>" /></a>
+              <a href="services_nfs_share_edit.php?uuid=<?=$sharev['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit share");?>" border="0" alt="<?=gtext("Edit share");?>" /></a>
+              <a href="services_nfs_share.php?act=del&amp;uuid=<?=$sharev['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this share?");?>')"><img src="images/delete.png" title="<?=gettext("Delete share");?>" border="0" alt="<?=gtext("Delete share");?>" /></a>
             </td>
             <?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
@@ -134,7 +134,7 @@ function nfsshare_process_updatenotification($mode, $data) {
           <?php endforeach;?>
           <tr>
             <td class="list" colspan="3"></td>
-            <td class="list"><a href="services_nfs_share_edit.php"><img src="images/add.png" title="<?=gettext("Add share");?>" border="0" alt="<?=gettext("Add share");?>" /></a></td>
+            <td class="list"><a href="services_nfs_share_edit.php"><img src="images/add.png" title="<?=gettext("Add share");?>" border="0" alt="<?=gtext("Add share");?>" /></a></td>
           </tr>
         </table>
         <?php include("formend.inc");?>

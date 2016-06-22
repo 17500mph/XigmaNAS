@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Status"), gettext("Processes"));
+$pgtitle = array(gtext("Status"), gtext("Processes"));
 
 function get_process_info() {
 	exec("top -b 23", $result);
@@ -60,7 +60,7 @@ $(document).ready(function(){
   <tr>
     <td class="tabcont">
 			<table width="100%" border="0" cellspacing="0" cellpadding="0">
-				<?php html_titleline(gettext("Processes Information"));?>
+				<?php html_titleline(gtext("Processes Information"));?>
 			  <tr>
 			    <td class="listt">
 			    	<pre><textarea style="width: 98%;" id="procinfo" name="procinfo" class="listcontent" cols="95" rows="34" readonly="readonly"></textarea></pre>

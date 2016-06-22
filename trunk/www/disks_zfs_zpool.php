@@ -46,15 +46,15 @@ $sphere_record = [];
 $checkbox_member_name = 'checkbox_member_array';
 $checkbox_member_array = [];
 $checkbox_member_record = [];
-$gt_record_add = gettext('Add pool');
-$gt_record_mod = gettext('Edit pool');
-$gt_record_del = gettext('Pool is marked for removal');
-$gt_record_loc = gettext('Pool is protected');
-$gt_record_unl = gettext('Pool is unlocked');
-$gt_record_mai = gettext('Maintenance');
-$gt_record_inf = gettext('Information');
-$gt_selection_delete = gettext('Delete Selected Pools');
-$gt_selection_delete_confirm = gettext('Do you want to delete selected pools?');
+$gt_record_add = gtext('Add pool');
+$gt_record_mod = gtext('Edit pool');
+$gt_record_del = gtext('Pool is marked for removal');
+$gt_record_loc = gtext('Pool is protected');
+$gt_record_unl = gtext('Pool is unlocked');
+$gt_record_mai = gtext('Maintenance');
+$gt_record_inf = gtext('Information');
+$gt_selection_delete = gtext('Delete Selected Pools');
+$gt_selection_delete_confirm = gtext('Do you want to delete selected pools?');
 $img_path = [
 	'add' => 'images/add.png',
 	'mod' => 'images/edit.png',
@@ -144,7 +144,7 @@ function zfszpool_process_updatenotification($mode, $data) {
 
 $sphere_addon_array = zfs_get_pool_list();
 $showusedavail = isset($config['zfs']['settings']['showusedavail']);
-$pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Pools'), gettext('Management'));
+$pgtitle = array(gtext('Disks'), gtext('ZFS'), gtext('Pools'), gtext('Management'));
 ?>
 <?php include("fbegin.inc");?>
 <script type="text/javascript">
@@ -209,22 +209,22 @@ function controlactionbuttons(ego, triggerbyname) {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gettext('Reload page');?>"><span><?=gettext('Pools');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gettext('Datasets');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gettext('Volumes');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gettext('Snapshots');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gettext('Configuration');?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gettext('Reload page');?>"><span><?=gtext('Pools');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext('Volumes');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav2">
-				<li class="tabinact"><a href="disks_zfs_zpool_vdevice.php"><span><?=gettext('Virtual Device');?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gettext('Reload page');?>"><span><?=gettext('Management');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_zpool_tools.php"><span><?=gettext('Tools');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_zpool_info.php"><span><?=gettext('Information');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gettext('I/O Statistics');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool_vdevice.php"><span><?=gtext('Virtual Device');?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gettext('Reload page');?>"><span><?=gtext('Management');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool_tools.php"><span><?=gtext('Tools');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool_info.php"><span><?=gtext('Information');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gtext('I/O Statistics');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -255,24 +255,24 @@ function controlactionbuttons(ego, triggerbyname) {
 			<col style="width:10%"><!--// Toolbox -->
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gettext('Overview'), 11);?>
+			<?php html_titleline2(gtext('Overview'), 11);?>
 			<tr>
-				<td class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gettext('Invert Selection');?>"/></td>
-				<td class="lhell"><?=gettext('Name');?></td>
-				<td class="lhell"><?=gettext('Size');?></td>
+				<td class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></td>
+				<td class="lhell"><?=gtext('Name');?></td>
+				<td class="lhell"><?=gtext('Size');?></td>
 				<?php if ($showusedavail):?>
-					<td class="lhell"><?=gettext('Used');?></td>
-					<td class="lhell"><?=gettext('Avail');?></td>
+					<td class="lhell"><?=gtext('Used');?></td>
+					<td class="lhell"><?=gtext('Avail');?></td>
 				<?php else:?>
-					<td class="lhell"><?=gettext('Alloc');?></td>
-					<td class="lhell"><?=gettext('Free');?></td>
+					<td class="lhell"><?=gtext('Alloc');?></td>
+					<td class="lhell"><?=gtext('Free');?></td>
 				<?php endif;?>
-				<td class="lhell"><?=gettext('Frag');?></td>
-				<td class="lhell"><?=gettext('Capacity');?></td>
-				<td class="lhell"><?=gettext('Dedup');?></td>
-				<td class="lhell"><?=gettext('Health');?></td>
-				<td class="lhell"><?=gettext('AltRoot');?></td>
-				<td class="lhebl"><?=gettext('Toolbox');?></td>
+				<td class="lhell"><?=gtext('Frag');?></td>
+				<td class="lhell"><?=gtext('Capacity');?></td>
+				<td class="lhell"><?=gtext('Dedup');?></td>
+				<td class="lhell"><?=gtext('Health');?></td>
+				<td class="lhell"><?=gtext('AltRoot');?></td>
+				<td class="lhebl"><?=gtext('Toolbox');?></td>
 			</tr>
 		</thead>
 		<tfoot>
@@ -289,13 +289,13 @@ function controlactionbuttons(ego, triggerbyname) {
 					$notprotected = !isset($sphere_record['protected']);
 					switch ($notificationmode) {
 						case UPDATENOTIFY_MODE_NEW:
-							$size = $used = $alloc = $avail = $free = $frag = $cap = $dedup = $health = $altroot = gettext('Initializing');
+							$size = $used = $alloc = $avail = $free = $frag = $cap = $dedup = $health = $altroot = gtext('Initializing');
 							break;
 						case UPDATENOTIFY_MODE_MODIFIED:
-							$size = $used = $alloc = $avail = $free = $frag = $cap = $dedup = $health = $altroot = gettext('Modifying');
+							$size = $used = $alloc = $avail = $free = $frag = $cap = $dedup = $health = $altroot = gtext('Modifying');
 							break;
 						default:
-							$size = $used = $alloc = $avail = $free = $frag = $cap = $dedup = $health = $altroot = gettext('Unknown');
+							$size = $used = $alloc = $avail = $free = $frag = $cap = $dedup = $health = $altroot = gtext('Unknown');
 					}
 					if (is_array($sphere_addon_array) && array_key_exists($sphere_record['name'], $sphere_addon_array)) {
 						$sphere_addon_record = &$sphere_addon_array[$sphere_record['name']];
@@ -340,9 +340,9 @@ function controlactionbuttons(ego, triggerbyname) {
 									<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
 								<?php else:?>
 									<?php if ($notprotected):?>
-										<img src="<?=$img_path['del'];?>" title="<?=gettext($gt_record_del);?>" alt="<?=gettext($gt_record_del);?>"/>
+										<img src="<?=$img_path['del'];?>" title="<?=gettext($gt_record_del);?>" alt="<?=gtext($gt_record_del);?>"/>
 									<?php else:?>
-										<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gettext($gt_record_loc);?>"/>
+										<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gtext($gt_record_loc);?>"/>
 									<?php endif;?>
 								<?php endif;?>
 							</td>

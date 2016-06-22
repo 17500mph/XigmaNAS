@@ -35,7 +35,7 @@ require("auth.inc");
 require("guiconfig.inc");
 require("email.inc");
 
-$pgtitle = array(gettext("Services"), gettext("UPS"));
+$pgtitle = array(gtext("Services"), gtext("UPS"));
 
 if (!isset($config['ups']) || !is_array($config['ups']))
 	$config['ups'] = array();
@@ -73,18 +73,18 @@ if ($_POST) {
 	// Input validation.
 	if (isset($_POST['enable']) && $_POST['enable']) {
 		$reqdfields = explode(" ", "upsname driver port shutdownmode monitoruser monitorpassword");
-		$reqdfieldsn = array(gettext("Identifier"), gettext("Driver"), gettext("Port"), gettext("Shutdown mode"), gettext("Username"), gettext("Password"));
+		$reqdfieldsn = array(gtext("Identifier"), gtext("Driver"), gtext("Port"), gtext("Shutdown mode"), gtext("Username"), gtext("Password"));
 		$reqdfieldst = explode(" ", "alias string string string string string");
 
 		if ("onbatt" === $_POST['shutdownmode']) {
 			$reqdfields = array_merge($reqdfields, explode(" ", "shutdowntimer"));
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gettext("Shutdown timer")));
+			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Shutdown timer")));
 			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "numericint"));
 		}
 
 		if (!empty($_POST['email_enable'])) {
 			$reqdfields = array_merge($reqdfields, explode(" ", "email_to email_subject"));
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gettext("To email"), gettext("Subject")));
+			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("To email"), gtext("Subject")));
 			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "string string"));
 		}
 
@@ -292,32 +292,32 @@ function ups2_change() {
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline_checkbox("enable", gettext("Uninterruptible Power Supply"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "enable_change(false)");?>
-                    <?php html_combobox("mode", gettext("Mode"), !empty($config['ups']['mode']) ? $config['ups']['mode'] : "Master", array('master' =>'Master','slave'=> 'Slave'), gettext("Choose UPS mode."), true, false, "mode_change()" );?>
-                    <?php html_inputbox("upsname", gettext("Identifier"), $pconfig['upsname'], gettext("This name is used to uniquely identify your UPS on this system.")." ".gettext("In slave mode it is the UPS name (Identifier) at the UPS master."), true, 30);?>
+					<?php html_titleline_checkbox("enable", gtext("Uninterruptible Power Supply"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
+                    <?php html_combobox("mode", gtext("Mode"), !empty($config['ups']['mode']) ? $config['ups']['mode'] : "Master", array('master' =>'Master','slave'=> 'Slave'), gtext("Choose UPS mode."), true, false, "mode_change()" );?>
+                    <?php html_inputbox("upsname", gtext("Identifier"), $pconfig['upsname'], gtext("This name is used to uniquely identify your UPS on this system.")." ".gtext("In slave mode it is the UPS name (Identifier) at the UPS master."), true, 30);?>
 					<?php html_inputbox("driver", gettext("Driver"), $pconfig['driver'], sprintf(gettext("The driver used to communicate with your UPS. Get the list of available <a href='%s' target='_blank'>drivers</a>."), "services_ups_drv.php"), true, 30);?>
-					<?php html_inputbox("port", gettext("Port"), $pconfig['port'], gettext("The serial or USB port where your UPS is connected."), true, 30);?>
-					<?php html_textarea("auxparam", gettext("Auxiliary parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", gettext("Additional parameters to the hardware-specific part of the driver."), false, 65, 5, false, false);?>
-					<?php html_inputbox("desc", gettext("Description"), $pconfig['desc'], gettext("You may enter a description here for your reference."), false, 40);?>
-					<?php html_checkbox("ups2", gettext("UPS")." 2", !empty($pconfig['ups2']) ? true : false, gettext("Enable second local connected UPS."), "", false, "ups2_change()");?>
-                    <?php html_inputbox("ups2_upsname", gettext("Identifier"), $pconfig['ups2_upsname'], gettext("This name is used to uniquely identify your second UPS on this system.")." ".gettext("In slave mode it is the UPS name (Identifier) at the UPS master."), false, 30);?>
+					<?php html_inputbox("port", gtext("Port"), $pconfig['port'], gtext("The serial or USB port where your UPS is connected."), true, 30);?>
+					<?php html_textarea("auxparam", gtext("Auxiliary parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", gtext("Additional parameters to the hardware-specific part of the driver."), false, 65, 5, false, false);?>
+					<?php html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("You may enter a description here for your reference."), false, 40);?>
+					<?php html_checkbox("ups2", gtext("UPS")." 2", !empty($pconfig['ups2']) ? true : false, gtext("Enable second local connected UPS."), "", false, "ups2_change()");?>
+                    <?php html_inputbox("ups2_upsname", gtext("Identifier"), $pconfig['ups2_upsname'], gtext("This name is used to uniquely identify your second UPS on this system.")." ".gtext("In slave mode it is the UPS name (Identifier) at the UPS master."), false, 30);?>
 					<?php html_inputbox("ups2_driver", gettext("Driver"), $pconfig['ups2_driver'], sprintf(gettext("The driver used to communicate with your second UPS. Get the list of available <a href='%s' target='_blank'>drivers</a>."), "services_ups_drv.php"), false, 30);?>
-					<?php html_inputbox("ups2_port", gettext("Port"), $pconfig['ups2_port'], gettext("The serial or USB port where your second UPS is connected."), false, 30);?>
-					<?php html_textarea("ups2_auxparam", gettext("Auxiliary parameters"), !empty($pconfig['ups2_auxparam']) ? $pconfig['ups2_auxparam'] : "", gettext("Additional parameters to the hardware-specific part of the driver for second UPS."), false, 65, 5, false, false);?>
-					<?php html_inputbox("ups2_desc", gettext("Description"), $pconfig['ups2_desc'], gettext("You may enter a description here for your reference."), false, 40);?>
-                    <?php html_inputbox("ip", gettext("IP address"), $pconfig['ip'], gettext("The IP address of the UPS master."), true, 30);?>
-					<?php html_combobox("shutdownmode", gettext("Shutdown mode"), $pconfig['shutdownmode'], array("fsd" => gettext("UPS reaches low battery"), "onbatt" => gettext("UPS goes on battery")), gettext("Defines when the shutdown is initiated."), true, false, "shutdownmode_change()");?>
-					<?php html_inputbox("shutdowntimer", gettext("Shutdown timer"), $pconfig['shutdowntimer'], gettext("The time in seconds until shutdown is initiated. If the UPS happens to come back before the time is up the shutdown is canceled."), true, 3);?>
-					<?php html_checkbox("remotemonitor", gettext("Remote monitoring"), !empty($pconfig['remotemonitor']) ? true : false, gettext("Enable remote monitoring of the local connected UPS."), "", false, "monitoring_change()");?>
-					<?php html_inputbox("monitoruser", gettext("Username"), $pconfig['monitoruser'], gettext("Remote monitoring username. Must be equal on both master and slave system."), true, 20);?>
-					<?php html_passwordbox("monitorpassword", gettext("Password"), $pconfig['monitorpassword'], gettext("Remote monitoring password. Must be equal on both master and slave system."), true, 20);?>
+					<?php html_inputbox("ups2_port", gtext("Port"), $pconfig['ups2_port'], gtext("The serial or USB port where your second UPS is connected."), false, 30);?>
+					<?php html_textarea("ups2_auxparam", gtext("Auxiliary parameters"), !empty($pconfig['ups2_auxparam']) ? $pconfig['ups2_auxparam'] : "", gtext("Additional parameters to the hardware-specific part of the driver for second UPS."), false, 65, 5, false, false);?>
+					<?php html_inputbox("ups2_desc", gtext("Description"), $pconfig['ups2_desc'], gtext("You may enter a description here for your reference."), false, 40);?>
+                    <?php html_inputbox("ip", gtext("IP address"), $pconfig['ip'], gtext("The IP address of the UPS master."), true, 30);?>
+					<?php html_combobox("shutdownmode", gtext("Shutdown mode"), $pconfig['shutdownmode'], array("fsd" => gtext("UPS reaches low battery"), "onbatt" => gtext("UPS goes on battery")), gtext("Defines when the shutdown is initiated."), true, false, "shutdownmode_change()");?>
+					<?php html_inputbox("shutdowntimer", gtext("Shutdown timer"), $pconfig['shutdowntimer'], gtext("The time in seconds until shutdown is initiated. If the UPS happens to come back before the time is up the shutdown is canceled."), true, 3);?>
+					<?php html_checkbox("remotemonitor", gtext("Remote monitoring"), !empty($pconfig['remotemonitor']) ? true : false, gtext("Enable remote monitoring of the local connected UPS."), "", false, "monitoring_change()");?>
+					<?php html_inputbox("monitoruser", gtext("Username"), $pconfig['monitoruser'], gtext("Remote monitoring username. Must be equal on both master and slave system."), true, 20);?>
+					<?php html_passwordbox("monitorpassword", gtext("Password"), $pconfig['monitorpassword'], gtext("Remote monitoring password. Must be equal on both master and slave system."), true, 20);?>
 					<?php html_separator();?>
-					<?php html_titleline_checkbox("email_enable", gettext("Email Report"), !empty($pconfig['email_enable']) ? true : false, gettext("Activate"), "enable_change(this)");?>
-					<?php html_inputbox("email_to", gettext("To email"), $pconfig['email_to'], sprintf("%s %s", gettext("Destination email address."), gettext("Separate email addresses by semi-colon.")), true, 40);?>
+					<?php html_titleline_checkbox("email_enable", gtext("Email Report"), !empty($pconfig['email_enable']) ? true : false, gtext("Activate"), "enable_change(this)");?>
+					<?php html_inputbox("email_to", gtext("To email"), $pconfig['email_to'], sprintf("%s %s", gtext("Destination email address."), gtext("Separate email addresses by semi-colon.")), true, 40);?>
 					<?php html_inputbox("email_subject", gettext("Subject"), $pconfig['email_subject'], gettext("The subject of the email.") . " " . gettext("You can use the following parameters for substitution:") . "</span>" . gettext("<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>") . "<span>", true, 60);?>
 			  </table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" onclick="enable_change(true)" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="enable_change(true)" />
 				</div>
 				<div id="remarks">
 					<?php html_remark("note", gettext("Note"), sprintf(gettext("This configuration settings are used to generate the ups.conf configuration file which is required by the NUT UPS daemon. To get more information how to configure your UPS please check the NUT (Network UPS Tools) <a href='%s' target='_blank'>documentation</a>."), "http://www.networkupstools.org"));?>

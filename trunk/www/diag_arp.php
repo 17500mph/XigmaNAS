@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Diagnostics"), gettext("ARP Tables"));
+$pgtitle = array(gtext("Diagnostics"), gtext("ARP Tables"));
 
 if (isset($_GET['id']))
   $id = $_GET['id'];
@@ -203,15 +203,15 @@ function get_HostName($mac, $ip) {
   <tr>
     <td class="tabcont">
 			<table width="100%" border="0" cellpadding="0" cellspacing="0">
-				<?php html_titleline(gettext("ARP Tables List"));?>
+				<?php html_titleline(gtext("ARP Tables List"));?>
 				<tr>
 			     <td>
 			<tr>
 			<table width="100%" border="0" cellpadding="0" cellspacing="0"></br>
-			    <td class="listhdrlr"><?=gettext("IP address");?></td>
-			    <td class="listhdrr"><?=gettext("MAC address");?></td>
-			    <td class="listhdrr"><?=gettext("Hostname");?></td>
-			    <td class="listhdrr"><?=gettext("Interface");?></td>
+			    <td class="listhdrlr"><?=gtext("IP address");?></td>
+			    <td class="listhdrr"><?=gtext("MAC address");?></td>
+			    <td class="listhdrr"><?=gtext("Hostname");?></td>
+			    <td class="listhdrr"><?=gtext("Interface");?></td>
 			    <td class="list"></td>
 			  </tr>
 			  <?php $i = 0; foreach ($data as $entry): ?>
@@ -220,7 +220,7 @@ function get_HostName($mac, $ip) {
 			    <td class="listr"><?=htmlspecialchars($entry['mac']);?></td>
 			    <td class="listr"><?=htmlspecialchars(get_HostName($entry['mac'], $entry['ip']));?>&nbsp;</td>
 			    <td class="listr"><?=htmlspecialchars($hwif[$entry['interface']]);?>&nbsp;</td>
-			    <td valign="middle" nowrap="nowrap" class="list"><a href="diag_arp.php?act=del&amp;id=<?=$entry['ip'];?>"><img src="images/delete.png" title="<?=gettext("Delete ARP entry");?>" border="0" alt="<?=gettext("Delete ARP entry");?>" /></a></td>
+			    <td valign="middle" nowrap="nowrap" class="list"><a href="diag_arp.php?act=del&amp;id=<?=$entry['ip'];?>"><img src="images/delete.png" title="<?=gettext("Delete ARP entry");?>" border="0" alt="<?=gtext("Delete ARP entry");?>" /></a></td>
 			  </tr>
 			  <?php $i++; endforeach; ?>
 			  <tr>
@@ -228,7 +228,7 @@ function get_HostName($mac, $ip) {
 			  </tr>
 			  <tr>
 			    <td class="list" colspan="4"></td>
-			    <td class="list"><a href="diag_arp.php?act=del"><img src="images/delete.png" title="<?=gettext("Remove all entries from ARP table");?>" border="0" alt="<?=gettext("Remove all entries from ARP table");?>" /></a></td>
+			    <td class="list"><a href="diag_arp.php?act=del"><img src="images/delete.png" title="<?=gettext("Remove all entries from ARP table");?>" border="0" alt="<?=gtext("Remove all entries from ARP table");?>" /></a></td>
 			  </tr>
 			</table>
 			<div id="remarks">

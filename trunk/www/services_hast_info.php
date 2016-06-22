@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Services"), gettext("HAST"), gettext("Information"));
+$pgtitle = array(gtext("Services"), gtext("HAST"), gtext("Information"));
 
 if (!isset($config['hast']['auxparam']) || !is_array($config['hast']['auxparam']))
 	$config['hast']['auxparam'] = array();
@@ -45,7 +45,7 @@ function hast_get_status() {
 	global $config;
 
 	if (!isset($config['hast']['enable'])) {
-		return gettext("HAST disabled");
+		return gtext("HAST disabled");
 	}
 
 	$cmd = "/sbin/hastctl status";
@@ -76,16 +76,16 @@ $(document).ready(function(){
   <tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-	<li class="tabinact"><a href="services_hast.php"><span><?=gettext("Settings");?></span></a></li>
-	<li class="tabinact"><a href="services_hast_resource.php"><span><?=gettext("Resources");?></span></a></li>
-	<li class="tabact"><a href="services_hast_info.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Information");?></span></a></li>
+	<li class="tabinact"><a href="services_hast.php"><span><?=gtext("Settings");?></span></a></li>
+	<li class="tabinact"><a href="services_hast_resource.php"><span><?=gtext("Resources");?></span></a></li>
+	<li class="tabact"><a href="services_hast_info.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Information");?></span></a></li>
       </ul>
     </td>
   </tr>
   <tr>
     <td class="tabcont">
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
-	<?php html_titleline(gettext("HAST Information & Status Configured Resources"));?>
+	<?php html_titleline(gtext("HAST Information & Status Configured Resources"));?>
 	<tr>
 	  <td class="listt">
 	  <pre><span id="hast_status"></span></pre>

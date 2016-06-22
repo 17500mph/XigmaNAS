@@ -408,14 +408,14 @@ function system_get_uptime() {
 	$upsecs = $uptime % 60;
 
 	if (($updays < 1) && ($uphours < 1)) {
-		$uptime = sprintf("%d %s %d %s", $upmins, gettext("minute(s)"), $upsecs, gettext("second(s)"));
+		$uptime = sprintf("%d %s %d %s", $upmins, gtext("minute(s)"), $upsecs, gtext("second(s)"));
 	} else if ($updays < 1) {
-		$uptime = sprintf("%d %s %d %s %d %s", $uphours, gettext("hour(s)"),
-			$upmins, gettext("minute(s)"), $upsecs, gettext("second(s)"));
+		$uptime = sprintf("%d %s %d %s %d %s", $uphours, gtext("hour(s)"),
+			$upmins, gtext("minute(s)"), $upsecs, gtext("second(s)"));
 	} else {
-		$uptime = sprintf("%d %s %d %s %d %s %d %s", $updays, gettext("day(s)"),
-			$uphours, gettext("hour(s)"), $upmins, gettext("minute(s)"), $upsecs,
-			gettext("second(s)"));
+		$uptime = sprintf("%d %s %d %s %d %s %d %s", $updays, gtext("day(s)"),
+			$uphours, gtext("hour(s)"), $upmins, gtext("minute(s)"), $upsecs,
+			gtext("second(s)"));
 	}
 
 	return htmlspecialchars($uptime);
@@ -462,10 +462,10 @@ function get_datetime_locale($timestamp = null, $format = null) {
 	$format_symbols = ['D','l','M','F'];
 	$replacement_symbols = ['%1','%2','%3','%4'];
 	$localised_names = [
-		gettext($datetime_object->format($format_symbols[0])),
-		gettext($datetime_object->format($format_symbols[1])),
-		gettext($datetime_object->format($format_symbols[2])),
-		gettext($datetime_object->format($format_symbols[3]))
+		gtext($datetime_object->format($format_symbols[0])),
+		gtext($datetime_object->format($format_symbols[1])),
+		gtext($datetime_object->format($format_symbols[2])),
+		gtext($datetime_object->format($format_symbols[3]))
 	];
 	$retval = str_replace($replacement_symbols, $localised_names, $datetime_object->format(str_replace($format_symbols, $replacement_symbols, $format))); // Do the whole thing in one go
 	return $retval;
@@ -661,7 +661,7 @@ function system_get_controller($devicespecialfile) {
 		}
 	}
 
-	return gettext("n/a");
+	return gtext("n/a");
 }
 
 /**
@@ -698,7 +698,7 @@ function system_get_volume_serial($devicespecialfile) {
 			return $serial;
 	}
 
-	return gettext("n/a");
+	return gtext("n/a");
 }
 
 /**
@@ -740,7 +740,7 @@ function system_get_volume_model($devicespecialfile) {
 			return $model;
 	}
 
-	return gettext("n/a");
+	return gtext("n/a");
 }
 
 /**
@@ -809,9 +809,9 @@ function get_disk_usage() {
 			$r_diskusage['size'] = $diskv['size'];
 			$r_diskusage['used'] = $diskv['used'];
 			$r_diskusage['avail'] = $diskv['avail'];
-			$r_diskusage['capofsize'] = sprintf(gettext("%s of %sB"), $r_diskusage['capacity'], $r_diskusage['size']);
-			$r_diskusage['tooltip']['used'] = sprintf(gettext("%sB used of %sB"), $r_diskusage['used'], $r_diskusage['size']);
-			$r_diskusage['tooltip']['avail'] = sprintf(gettext("%sB available of %sB"), $r_diskusage['avail'], $r_diskusage['size']);
+			$r_diskusage['capofsize'] = sprintf(gtext("%s of %sB"), $r_diskusage['capacity'], $r_diskusage['size']);
+			$r_diskusage['tooltip']['used'] = sprintf(gtext("%sB used of %sB"), $r_diskusage['used'], $r_diskusage['size']);
+			$r_diskusage['tooltip']['avail'] = sprintf(gtext("%sB available of %sB"), $r_diskusage['avail'], $r_diskusage['size']);
 			$a_diskusage[] = $r_diskusage;
 		}
 		array_sort_key($a_diskusage, 'name');
@@ -843,9 +843,9 @@ function get_pool_usage() {
 				$r_poolusage['avail'] = $poolv['free'];
 			}
 			$r_poolusage['health'] = $poolv['health'];
-			$r_poolusage['capofsize'] = sprintf(gettext("%s of %sB"), $r_poolusage['capacity'], $r_poolusage['size']);
-			$r_poolusage['tooltip']['used'] = sprintf(gettext("%sB used of %sB"), $r_poolusage['used'], $r_poolusage['size']);
-			$r_poolusage['tooltip']['avail'] = sprintf(gettext("%sB available of %sB"), $r_poolusage['avail'], $r_poolusage['size']);
+			$r_poolusage['capofsize'] = sprintf(gtext("%s of %sB"), $r_poolusage['capacity'], $r_poolusage['size']);
+			$r_poolusage['tooltip']['used'] = sprintf(gtext("%sB used of %sB"), $r_poolusage['used'], $r_poolusage['size']);
+			$r_poolusage['tooltip']['avail'] = sprintf(gtext("%sB available of %sB"), $r_poolusage['avail'], $r_poolusage['size']);
 			$a_poolusage[] = $r_poolusage;
 		}
 		array_sort_key($a_poolusage, 'name');
@@ -869,9 +869,9 @@ function get_swap_usage() {
 			$r_swapusage['size'] = $swapv['total'];
 			$r_swapusage['used'] = $swapv['used'];
 			$r_swapusage['avail'] = $swapv['avail'];
-			$r_swapusage['capofsize'] = sprintf(gettext("%s of %sB"), $r_swapusage['capacity'], $r_swapusage['size']);
-			$r_swapusage['tooltip']['used'] = sprintf(gettext("%sB used of %sB"), $r_swapusage['used'], $r_swapusage['size']);
-			$r_swapusage['tooltip']['avail']  = sprintf(gettext("%sB available of %sB"), $r_swapusage['avail'], $r_swapusage['size']);
+			$r_swapusage['capofsize'] = sprintf(gtext("%s of %sB"), $r_swapusage['capacity'], $r_swapusage['size']);
+			$r_swapusage['tooltip']['used'] = sprintf(gtext("%sB used of %sB"), $r_swapusage['used'], $r_swapusage['size']);
+			$r_swapusage['tooltip']['avail']  = sprintf(gtext("%sB available of %sB"), $r_swapusage['avail'], $r_swapusage['size']);
 			$a_swapusage[]= $r_swapusage;
 		}
 		array_sort_key($a_swapusage, 'name');
@@ -895,7 +895,7 @@ function system_get_sysinfo() {
 	$raminfo = system_get_ram_info();
 	$percentage = round(($raminfo['used'] * 100) / $raminfo['total'], 0);
 	$value['memusage']['percentage'] = $percentage;
-	$value['memusage']['caption'] = sprintf(gettext("%d%% of %dMiB"), $percentage, round($raminfo['physical'] / 1024 / 1024));
+	$value['memusage']['caption'] = sprintf(gtext("%d%% of %dMiB"), $percentage, round($raminfo['physical'] / 1024 / 1024));
 
 	// Get load average.
 	exec("uptime", $result);

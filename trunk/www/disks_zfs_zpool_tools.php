@@ -38,7 +38,7 @@ require("auth.inc");
 require("guiconfig.inc");
 require("zfs.inc");
 
-$pgtitle = array(gettext("Disks"), gettext("ZFS"), gettext("Pools"), gettext("Tools"));
+$pgtitle = array(gtext("Disks"), gtext("ZFS"), gtext("Pools"), gtext("Tools"));
 
 if (!isset($config['zfs']['pools']['pool']) || !is_array($config['zfs']['pools']['pool']))
 	$config['zfs']['pools']['pool'] = array();
@@ -384,7 +384,7 @@ function command_change() {
 
 function option_change() {
 	var div = document.getElementById("devices");
-	div.innerHTML = "<?=gettext("No device selected.");?>";
+	div.innerHTML = "<?=gtext("No device selected.");?>";
 
 	document.iform.pool.disabled = 1;
 	document.iform.pool.length = 0;
@@ -619,22 +619,22 @@ function pool_change() {
   <tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-	<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Pools");?></span></a></li>
-	<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gettext("Datasets");?></span></a></li>
-	<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gettext("Volumes");?></span></a></li>
-	<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gettext("Snapshots");?></span></a></li>
-	<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gettext("Configuration");?></span></a></li>
+	<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Pools");?></span></a></li>
+	<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext("Datasets");?></span></a></li>
+	<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext("Volumes");?></span></a></li>
+	<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext("Snapshots");?></span></a></li>
+	<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext("Configuration");?></span></a></li>
       </ul>
     </td>
   </tr>
   <tr>
     <td class="tabnavtbl">
       <ul id="tabnav2">
-	<li class="tabinact"><a href="disks_zfs_zpool_vdevice.php"><span><?=gettext("Virtual Device");?></span></a></li>
-	<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gettext("Management");?></span></a></li>
-	<li class="tabact"><a href="disks_zfs_zpool_tools.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Tools");?></span></a></li>
-	<li class="tabinact"><a href="disks_zfs_zpool_info.php"><span><?=gettext("Information");?></span></a></li>
-	<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gettext("I/O Statistics");?></span></a></li>
+	<li class="tabinact"><a href="disks_zfs_zpool_vdevice.php"><span><?=gtext("Virtual Device");?></span></a></li>
+	<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext("Management");?></span></a></li>
+	<li class="tabact"><a href="disks_zfs_zpool_tools.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Tools");?></span></a></li>
+	<li class="tabinact"><a href="disks_zfs_zpool_info.php"><span><?=gtext("Information");?></span></a></li>
+	<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gtext("I/O Statistics");?></span></a></li>
       </ul>
     </td>
   </tr>
@@ -650,8 +650,8 @@ function pool_change() {
 	<table width="100%" border="0" cellpadding="6" cellspacing="0" style="display:none;">
 	<?php } ?>
 	<tr>
-	  <?php html_titleline(gettext("Pool Tools"));?>
-	  <td width="22%" valign="top" class="vncellreq"><?=gettext("Command");?></td>
+	  <?php html_titleline(gtext("Pool Tools"));?>
+	  <td width="22%" valign="top" class="vncellreq"><?=gtext("Command");?></td>
 	  <td width="78%" class="vtable">
 	  <select name="action" class="formfld" id="action" onchange="command_change()">
 	  <?
@@ -680,34 +680,34 @@ function pool_change() {
 	  </select>
 	  </td>
 	</tr>
-	<?php html_combobox("option", gettext("Option"), NULL, NULL, "", true, false, "option_change()");?>
-	<?php html_combobox("pool", gettext("Pool"), NULL, NULL, "", true, true, "pool_change()");?>
+	<?php html_combobox("option", gtext("Option"), NULL, NULL, "", true, false, "option_change()");?>
+	<?php html_combobox("pool", gtext("Pool"), NULL, NULL, "", true, true, "pool_change()");?>
 	<tr id='devices_tr'>
-	<td valign="top" class="vncellreq"><?=gettext("Devices");?></td>
+	<td valign="top" class="vncellreq"><?=gtext("Devices");?></td>
 	<td class="vtable">
 	<div id="devices">
-	<?=gettext("No device selected.");?>
+	<?=gtext("No device selected.");?>
 	</div>
 	</td>
 	</tr>
-	<?php html_combobox("device_new", gettext("New Device"), NULL, NULL, "", true);?>
-	<?php html_combobox("device_new2", gettext("New Device"), NULL, $a_disk_free, "", true);?>
-	<?php html_combobox("device_cache", gettext("Cache Device"), NULL, NULL, "", true);?>
-	<?php html_combobox("device_log", gettext("Log Device"), NULL, NULL, "", true);?>
-	<?php html_combobox("device_spare", gettext("Hot Spare"), NULL, NULL, "", true);?>
-	<?php html_combobox("device_vdev", gettext("Virtual Device"), NULL, NULL, gettext("Once you add the virtual device, it becomes impossible to delete again. It recommends adding the same number of drives as the existing virtual device."), true);?>
+	<?php html_combobox("device_new", gtext("New Device"), NULL, NULL, "", true);?>
+	<?php html_combobox("device_new2", gtext("New Device"), NULL, $a_disk_free, "", true);?>
+	<?php html_combobox("device_cache", gtext("Cache Device"), NULL, NULL, "", true);?>
+	<?php html_combobox("device_log", gtext("Log Device"), NULL, NULL, "", true);?>
+	<?php html_combobox("device_spare", gtext("Hot Spare"), NULL, NULL, "", true);?>
+	<?php html_combobox("device_vdev", gtext("Virtual Device"), NULL, NULL, gtext("Once you add the virtual device, it becomes impossible to delete again. It recommends adding the same number of drives as the existing virtual device."), true);?>
 	</table>
 	<?php if (!$do_action) { ?>
 	<div id="submit">
-	  <input name="Submit" type="submit" class="formbtn" value="<?=gettext("Send Command!");?>" />
+	  <input name="Submit" type="submit" class="formbtn" value="<?=gtext("Send Command!");?>" />
 	</div>
 	<?php } else { ?>
 	<div id="reload">
-	  <input name="reload" type="button" class="formbtn" value="<?=gettext("Return to Command page");?>" onclick="location.href='disks_zfs_zpool_tools.php';" />
+	  <input name="reload" type="button" class="formbtn" value="<?=gtext("Return to Command page");?>" onclick="location.href='disks_zfs_zpool_tools.php';" />
 	</div>
 	<?php } ?>
 	<?php if ($do_action) {
-		echo(sprintf("<div id='cmdoutput'>%s</div>", gettext("Command output:")));
+		echo(sprintf("<div id='cmdoutput'>%s</div>", gtext("Command output:")));
 		echo('<pre class="cmdoutput">');
 		//ob_end_flush();
 
@@ -843,7 +843,7 @@ function pool_change() {
 		    case "t":
 			$result = zfs_zpool_cmd($action, "-t {$pool} {$device}", true);
 			if ($result == 0) {
-			    echo gettext("Done.")."\n";
+			    echo gtext("Done.")."\n";
 			}
 			break;
 
@@ -857,7 +857,7 @@ function pool_change() {
 			    $result = zfs_zpool_cmd($action, "{$pool} {$device}", true);
 			}
 			if ($result == 0) {
-			    echo gettext("Done.")."\n";
+			    echo gtext("Done.")."\n";
 			}
 			break;
 		    }
@@ -876,7 +876,7 @@ function pool_change() {
 			    $result = zfs_zpool_cmd($action, "{$pool} {$device}", true);
 			}
 			if ($result == 0) {
-			    echo gettext("Done.")."\n";
+			    echo gtext("Done.")."\n";
 			}
 			break;
 		    }
@@ -930,7 +930,7 @@ function pool_change() {
 			    }
 
 			    write_config();
-			    echo gettext("Done.")."\n";
+			    echo gtext("Done.")."\n";
 			}
 			break;
 		    }
@@ -1057,7 +1057,7 @@ var_dump($config['zfs']['vdevices']);
 				break;
 
 			    write_config();
-			    echo gettext("Done.")."\n";
+			    echo gtext("Done.")."\n";
 			}
 			break;
 		    }
@@ -1076,7 +1076,7 @@ var_dump($config['zfs']['vdevices']);
 			    $result = zfs_zpool_cmd($action, "{$pool} {$device}", true);
 			}
 			if ($result == 0) {
-			    echo gettext("Done.")."\n";
+			    echo gtext("Done.")."\n";
 			}
 			break;
 		    }
@@ -1095,7 +1095,7 @@ var_dump($config['zfs']['vdevices']);
 			    $result = zfs_zpool_cmd($action, "{$pool} {$device} {$new_device}", true);
 			}
 			if ($result == 0) {
-			    echo gettext("Done.")."\n";
+			    echo gtext("Done.")."\n";
 			}
 			break;
 		    }
@@ -1135,7 +1135,7 @@ var_dump($config['zfs']['vdevices']);
 				if ($index !== false) {
 					$config['zfs']['pools']['pool'][$index]['vdevice'][] = $cache_device;
 					write_config();
-					echo gettext("Done.")."\n";
+					echo gtext("Done.")."\n";
 				}
 			}
 			break;
@@ -1194,7 +1194,7 @@ var_dump($config['zfs']['vdevices']);
 					}
 					$config['zfs']['pools']['pool'][$index]['vdevice'] = $new_vdevice;
 					write_config();
-					echo gettext("Done.")."\n";
+					echo gtext("Done.")."\n";
 				}
 			}
 			break;
@@ -1238,7 +1238,7 @@ var_dump($config['zfs']['vdevices']);
 				if ($index !== false) {
 					$config['zfs']['pools']['pool'][$index]['vdevice'][] = $log_device;
 					write_config();
-					echo gettext("Done.")."\n";
+					echo gtext("Done.")."\n";
 				}
 			}
 			break;
@@ -1268,7 +1268,7 @@ var_dump($config['zfs']['vdevices']);
 			if ($vdevice['type'] == "log-mirror") {
 				$mirror = get_logmirror($pool, $device[0]);
 				if ($mirror == "") {
-					printf(gettext("%s: cannot get mirror name.")."\n", $device[0]);
+					printf(gtext("%s: cannot get mirror name.")."\n", $device[0]);
 					break;
 				}
 				$result = zfs_zpool_cmd("remove", "{$pool} {$mirror}", true);
@@ -1306,7 +1306,7 @@ var_dump($config['zfs']['vdevices']);
 					}
 					$config['zfs']['pools']['pool'][$index]['vdevice'] = $new_vdevice;
 					write_config();
-					echo gettext("Done.")."\n";
+					echo gtext("Done.")."\n";
 				}
 			}
 			break;
@@ -1348,7 +1348,7 @@ var_dump($config['zfs']['vdevices']);
 				if ($index !== false) {
 					$config['zfs']['pools']['pool'][$index]['vdevice'][] = $spare_device;
 					write_config();
-					echo gettext("Done.")."\n";
+					echo gtext("Done.")."\n";
 				}
 			}
 			break;
@@ -1408,7 +1408,7 @@ var_dump($config['zfs']['vdevices']);
 					}
 					$config['zfs']['pools']['pool'][$index]['vdevice'] = $new_vdevice;
 					write_config();
-					echo gettext("Done.")."\n";
+					echo gtext("Done.")."\n";
 				}
 			}
 			break;
@@ -1455,7 +1455,7 @@ var_dump($config['zfs']['vdevices']);
 				if ($index !== false) {
 					$config['zfs']['pools']['pool'][$index]['vdevice'][] = $vdev_device;
 					write_config();
-					echo gettext("Done.")."\n";
+					echo gtext("Done.")."\n";
 				}
 			}
 			break;

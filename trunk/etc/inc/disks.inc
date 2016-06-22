@@ -939,7 +939,7 @@ function disks_format($disk, $type, $notinitmbr, $minspace, $volumelabel, $aft4k
 	$diskinfo = disks_get_diskinfo($disk);
 	set_kern_geom_debugflags(0x10);
 	if (!$notinitmbr) {
-		echo gettext("Deleting MBR and partition table")."...\n";
+		echo gtext("Deleting MBR and partition table")."...\n";
 		$cmd =  sprintf('/sbin/gpart destroy -F %1$s 1>/dev/null 2>&1', $disk);
 		echo htmlspecialchars('#'), htmlspecialchars($cmd), "\n";
 		system($cmd);
@@ -973,7 +973,7 @@ function disks_format($disk, $type, $notinitmbr, $minspace, $volumelabel, $aft4k
 
 	switch ($type) {
 		case "ufsgpt":
-			echo gettext("Creating partition")."...\n";
+			echo gtext("Creating partition")."...\n";
 			// Destroy old GPT partition
 			//system("/sbin/gpt destroy {$disk} 1>/dev/null 2>&1");
 			system("/sbin/gpart destroy -F {$disk} 1>/dev/null 2>&1");
@@ -989,21 +989,21 @@ function disks_format($disk, $type, $notinitmbr, $minspace, $volumelabel, $aft4k
 			}
 
 			// Create filesystem
-			echo gettext("Creating filesystem with 'Soft Updates'")."...\n";
+			echo gtext("Creating filesystem with 'Soft Updates'")."...\n";
 			$param = "-U -j";
 			if (!empty($volumelabel))
 				$param .= " -L " . escapeshellarg($volumelabel);
 			if (!empty($minspace))
 				$param .= " -m {$minspace}";
 			if ($aft4k) {
-				echo sprintf(gettext("Using %s bytes fragment size."), $aft_bytes)."\n";
+				echo sprintf(gtext("Using %s bytes fragment size."), $aft_bytes)."\n";
 				$param .= " -S $aft_bytes -b $aft_blocksize -f $aft_bytes";
 			}
 			//echo "/sbin/newfs {$param} {$disk}p1\n";
 			system("/sbin/newfs {$param} {$disk}p1 2>&1");
 
 			echo "\n";
-			echo gettext("Created UFS file system:")."\n";
+			echo gtext("Created UFS file system:")."\n";
 			system("/sbin/dumpfs -l {$disk}p1 2>&1");
 			echo "\n";
 			break;
@@ -1018,10 +1018,10 @@ function disks_format($disk, $type, $notinitmbr, $minspace, $volumelabel, $aft4k
 
 			// Initialize disk
 			// Ensure that existing GEOM metadata is completely removed.
-			echo gettext("Deleting GEOM metadata")."...\n";
+			echo gtext("Deleting GEOM metadata")."...\n";
 			system("/bin/dd if=/dev/zero of={$disk} bs={$diskinfo['sectorsize']} oseek={$oseek} count=1 2>&1");
 			if ($zfsgpt) {
-				echo gettext("Creating partition")."...\n";
+				echo gtext("Creating partition")."...\n";
 				$param = ' -s gpt';
 				$cmd = sprintf('/sbin/gpart create %2$s %1$s 2>&1', $disk, $param);
 				echo htmlspecialchars('#'), htmlspecialchars($cmd), "\n";
@@ -1048,12 +1048,12 @@ function disks_format($disk, $type, $notinitmbr, $minspace, $volumelabel, $aft4k
 			}
 
 			// Initialize disk
-			echo gettext("Creating partition")."...\n";
+			echo gtext("Creating partition")."...\n";
 			system("/sbin/fdisk -v -f {$g['tmp_path']}/fdisk.conf {$disk} 2>&1");
 			@unlink("{$g['tmp_path']}/fdisk.conf");
 
 			// Create filesystem
-			echo gettext("Creating filesystem")."...\n";
+			echo gtext("Creating filesystem")."...\n";
 			$param = "-F 32";
 			if (!empty($volumelabel))
 				$param .= " -L " . escapeshellarg($volumelabel);
@@ -1073,7 +1073,7 @@ function disks_format($disk, $type, $notinitmbr, $minspace, $volumelabel, $aft4k
 			}
 
 			// Initialize disk
-			echo gettext("Creating partition")."...\n";
+			echo gtext("Creating partition")."...\n";
 			system("/sbin/fdisk -v -f {$g['tmp_path']}/fdisk.conf {$disk} 2>&1");
 			@unlink("{$g['tmp_path']}/fdisk.conf");
 
@@ -1083,7 +1083,7 @@ function disks_format($disk, $type, $notinitmbr, $minspace, $volumelabel, $aft4k
 			// which is not supported by FreeBSD. Using 128 bytes via '-I 128'
 			// could solve that problem but the file system is permanently in
 			// 'not clean' state.
-			echo gettext("Creating filesystem")."...\n";
+			echo gtext("Creating filesystem")."...\n";
 			$param = "-r 0";
 			if (!empty($volumelabel))
 				$param .= " -L " . escapeshellarg($volumelabel);
@@ -1093,7 +1093,7 @@ function disks_format($disk, $type, $notinitmbr, $minspace, $volumelabel, $aft4k
 	}
 	set_kern_geom_debugflags(0);
 
-	echo gettext("Done")."!\n";
+	echo gtext("Done")."!\n";
 }
 
 // File system consistency check and interactive repair.
@@ -1524,7 +1524,7 @@ function disks_verify_all_disks($a_phy_disks) {
 		if ($phy_disk['type'] === "HAST")
 			continue;
 
-		if (($phy_disk['serial'] == "n/a") || ($phy_disk['serial'] == gettext("n/a"))){
+		if (($phy_disk['serial'] == "n/a") || ($phy_disk['serial'] == gtext("n/a"))){
 			$phy_disk_serial = "";
 		} else{
 			$phy_disk_serial = $phy_disk['serial'];
@@ -1874,7 +1874,7 @@ function disks_import_all_disks($clean_import) {
 				if (!empty($diskv['serial'])) {
 					$serial = $diskv['serial'];
 				}
-				if (($serial == "n/a") || ($serial == gettext("n/a"))) {
+				if (($serial == "n/a") || ($serial == gtext("n/a"))) {
 					$serial = "";
 				}
 				$pdisk['serial'] = $serial;
@@ -1991,7 +1991,7 @@ function disks_import_consumers($name, $type, $dev, $disks, $clean_import) {
 					if (!empty($diskv['serial'])) {
 						$serial = $diskv['serial'];
 					}
-					if (($serial == "n/a") || ($serial == gettext("n/a"))) {
+					if (($serial == "n/a") || ($serial == gtext("n/a"))) {
 						$serial = "";
 					}
 					$pdisk['serial'] = $serial;
@@ -2253,7 +2253,7 @@ function disks_import_all_encrypted_disks($clean_import) {
 				if (!empty($diskv['serial'])) {
 					$serial = $diskv['serial'];
 				}
-				if (($serial == "n/a") || ($serial == gettext("n/a"))) {
+				if (($serial == "n/a") || ($serial == gtext("n/a"))) {
 					$serial = "";
 				}
 				$pdisk['serial'] = $serial;

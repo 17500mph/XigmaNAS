@@ -41,8 +41,8 @@ $sphere_header_parent = 'Location: disks_zfs_zpool.php';
 $sphere_notifier = 'zfspool';
 $sphere_array = [];
 $sphere_record = [];
-$gt_record_loc = gettext('Virtual device is already in use.');
-$gt_record_opn = gettext('Virtual device can be removed.');
+$gt_record_loc = gtext('Virtual device is already in use.');
+$gt_record_opn = gtext('Virtual device can be removed.');
 $prerequisites_ok = true; // flag to indicate lack of information / resources
 $img_path = [
 	'add' => 'images/add.png',
@@ -144,13 +144,13 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 
 	// Input validation
 	$reqdfields = explode(' ', 'name vdevice');
-	$reqdfieldsn = [gettext('Name'), gettext('Virtual devices')];
+	$reqdfieldsn = [gtext('Name'), gtext('Virtual devices')];
 
 	do_input_validation($sphere_record, $reqdfields, $reqdfieldsn, $input_errors);
 
 	if ($prerequisites_ok && empty($input_errors)) { // check for a valid pool name.
 		if (!zfs_is_valid_poolname($sphere_record['name'])) {
-			$input_errors[] = sprintf(gettext("The attribute '%s' contains invalid characters."), gettext('Name'));
+			$input_errors[] = sprintf(gtext("The attribute '%s' contains invalid characters."), gtext('Name'));
 		}
 	}
 
@@ -165,10 +165,10 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 					case 1: // An error occured. => pool doesn't exist
 						break;
 					case 0: // Successful completion. => pool found
-						$input_errors[] = sprintf(gettext('%s already exists.'), $sphere_record['name']);
+						$input_errors[] = sprintf(gtext('%s already exists.'), $sphere_record['name']);
 						break;
 					case 2: // Invalid command line options were specified.
-						$input_errors[] = gettext('Failed to execute command zpool.');
+						$input_errors[] = gtext('Failed to execute command zpool.');
 						break;
 				}
 		}
@@ -178,19 +178,19 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 		switch ($mode_record) { // verify config
 			case RECORD_NEW: // pool name must not exist in config at all
 				if (false !== array_search_ex($sphere_record['name'], $sphere_array, 'name')) {
-					$input_errors[] = gettext('This pool name already exists.');
+					$input_errors[] = gtext('This pool name already exists.');
 				}
 				break;
 			case RECORD_NEW_MODIFY: // if the pool name has changed it shouldn't be found in config
 				if ($sphere_record['name'] !== $sphere_array[$index]['name']) { // pool name has changed
 					if (false !== array_search_ex($sphere_record['name'], $sphere_array, 'name')) {
-						$input_errors[] = gettext('This pool name already exists.');
+						$input_errors[] = gtext('This pool name already exists.');
 					}
 				}
 				break;
 			case RECORD_MODIFY: // should never happen because sphere_record['name'] should be set to $sphere_array[$index]['name']
 				if ($sphere_record['name'] !== $sphere_array[$index]['name']) {
-					$input_errors[] = gettext('The name of the pool cannot be changed.');
+					$input_errors[] = gtext('The name of the pool cannot be changed.');
 				}
 				break;
 		}
@@ -219,7 +219,7 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 			$n++;
 		}
 		if ($n == 0) {
-			$input_errors[] = sprintf(gettext("The attribute '%s' is required."), gettext('Virtual devices'));
+			$input_errors[] = sprintf(gtext("The attribute '%s' is required."), gtext('Virtual devices'));
 		}
 	}
 	$sphere_record['hastpool'] = $hastpool;
@@ -258,7 +258,7 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 			break;
 	}
 }
-$pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Pools'), gettext('Management'), (!$isrecordnew) ? gettext('Edit') : gettext('Add'));
+$pgtitle = array(gtext('Disks'), gtext('ZFS'), gtext('Pools'), gtext('Management'), (!$isrecordnew) ? gtext('Edit') : gtext('Add'));
 ?>
 <?php include("fbegin.inc");?>
 <script type="text/javascript">
@@ -273,22 +273,22 @@ $(window).on("load", function() {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gettext('Reload page');?>"><span><?=gettext('Pools');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gettext('Datasets');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gettext('Volumes');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gettext('Snapshots');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gettext('Configuration');?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gettext('Reload page');?>"><span><?=gtext('Pools');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext('Volumes');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav2">
-				<li class="tabinact"><a href="disks_zfs_zpool_vdevice.php"><span><?=gettext('Virtual Device');?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gettext('Reload page');?>"><span><?=gettext('Management');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_zpool_tools.php"><span><?=gettext('Tools');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_zpool_info.php"><span><?=gettext('Information');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gettext('I/O Statistics');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool_vdevice.php"><span><?=gtext('Virtual Device');?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gettext('Reload page');?>"><span><?=gtext('Management');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool_tools.php"><span><?=gtext('Tools');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool_info.php"><span><?=gtext('Information');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gtext('I/O Statistics');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -305,15 +305,15 @@ $(window).on("load", function() {
 			<col id="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gettext('Settings'));?>
+			<?php html_titleline2(gtext('Settings'));?>
 		</thead>
 		<tbody>
 			<?php
-				html_inputbox2('name', gettext('Name'), $sphere_record['name'], '', false, 20, $isrecordmodify);
-				html_inputbox2('root', gettext('Root'), $sphere_record['root'], gettext('Creates the pool with an alternate root.'), false, 40, $isrecordmodify);
-				html_inputbox2('mountpoint', gettext('Mount point'), $sphere_record['mountpoint'], gettext('Sets an alternate mount point for the root dataset. Default is /mnt.'), false, 40);
-				html_checkbox2('force', gettext('Force use'), $sphere_record['force'], gettext('Forces use of vdevs, even if they appear in use or specify different size. (This is not recommended.)'), '', false, $isrecordmodify);
-				html_inputbox2('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 40);
+				html_inputbox2('name', gtext('Name'), $sphere_record['name'], '', false, 20, $isrecordmodify);
+				html_inputbox2('root', gtext('Root'), $sphere_record['root'], gtext('Creates the pool with an alternate root.'), false, 40, $isrecordmodify);
+				html_inputbox2('mountpoint', gtext('Mount point'), $sphere_record['mountpoint'], gtext('Sets an alternate mount point for the root dataset. Default is /mnt.'), false, 40);
+				html_checkbox2('force', gtext('Force use'), $sphere_record['force'], gtext('Forces use of vdevs, even if they appear in use or specify different size. (This is not recommended.)'), '', false, $isrecordmodify);
+				html_inputbox2('desc', gtext('Description'), $sphere_record['desc'], gtext('You may enter a description here for your reference.'), false, 40);
 				html_separator2();
 			?>
 		</tbody>
@@ -327,12 +327,12 @@ $(window).on("load", function() {
 			<col style="width:5%"> <!--// Icons -->
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gettext('Virtual Device List'), 5);?>
+			<?php html_titleline2(gtext('Virtual Device List'), 5);?>
 			<tr>
 				<td class="lhelc"><input type="checkbox" name="togglemembers" disabled="disabled"/></td>
-				<td class="lhell"><?=gettext('Name');?></td>
-				<td class="lhell"><?=gettext('Type');?></td>
-				<td class="lhell"><?=gettext('Description');?></td>
+				<td class="lhell"><?=gtext('Name');?></td>
+				<td class="lhell"><?=gtext('Type');?></td>
+				<td class="lhell"><?=gtext('Description');?></td>
 				<td class="lhebl">&nbsp;</td>
 			</tr>
 		</thead>
@@ -357,7 +357,7 @@ $(window).on("load", function() {
 							<td class="lcell"><?=htmlspecialchars($r_vdevice['desc']);?>&nbsp;</td>
 							<td class="lcebcd">
 								<?php if ($ismemberofthispool):?>
-									<img src="<?=$img_path['unl'];?>" title="<?=gettext($gt_record_opn);?>" alt="<?=gettext($gt_record_opn);?>" />
+									<img src="<?=$img_path['unl'];?>" title="<?=gettext($gt_record_opn);?>" alt="<?=gtext($gt_record_opn);?>" />
 								<?php else:?>
 									&nbsp;
 								<?php endif;?>
@@ -375,7 +375,7 @@ $(window).on("load", function() {
 							<td class="lcelld"><?=htmlspecialchars($r_vdevice['type']);?>&nbsp;</td>
 							<td class="lcelld"><?=htmlspecialchars($r_vdevice['desc']);?>&nbsp;</td>
 							<td class="lcebcd">
-								<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gettext($gt_record_loc);?>" />
+								<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gtext($gt_record_loc);?>" />
 							</td>
 						</tr>
 					<?php endif;?>
@@ -384,8 +384,8 @@ $(window).on("load", function() {
 		</tbody>
 	</table>
 	<div id="submit">
-		<input name="Submit" type="submit" class="formbtn" value="<?=($isrecordnew) ? gettext('Add') : gettext('Save');?>"/>
-		<input name="Cancel" type="submit" class="formbtn" value="<?=gettext('Cancel');?>" />
+		<input name="Submit" type="submit" class="formbtn" value="<?=($isrecordnew) ? gtext('Add') : gtext('Save');?>"/>
+		<input name="Cancel" type="submit" class="formbtn" value="<?=gtext('Cancel');?>" />
 		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>" />
 	</div>
 	<?php include("formend.inc");?>

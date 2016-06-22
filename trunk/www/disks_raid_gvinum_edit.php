@@ -44,11 +44,11 @@ $sphere_record = [];
 $checkbox_member_name = 'checkbox_member_array';
 $checkbox_member_array = [];
 $checkbox_member_record = [];
-$gt_record_loc = gettext('RAID device is already in use.');
-$gt_record_opn = gettext('RAID device can be removed.');
-$gt_confirm_mirror = gettext('Do you want to create a RAID-1 from selected disks?');
-$gt_confirm_raid5 = gettext('Do you want to create a RAID-5 from selected disks?');
-$gt_confirm_stripe = gettext('Do you want to create a RAID-0 from selected disks?');
+$gt_record_loc = gtext('RAID device is already in use.');
+$gt_record_opn = gtext('RAID device can be removed.');
+$gt_confirm_mirror = gtext('Do you want to create a RAID-1 from selected disks?');
+$gt_confirm_raid5 = gtext('Do you want to create a RAID-5 from selected disks?');
+$gt_confirm_stripe = gtext('Do you want to create a RAID-0 from selected disks?');
 $prerequisites_ok = true; // flag to indicate lack of information / resources
 $img_path = [
 	'add' => 'images/add.png',
@@ -133,7 +133,7 @@ $a_config_sraid = get_conf_sraid_disks_list();
 // get all disks that are softraid-formatted 
 $a_sdisk = get_conf_disks_filtered_ex('fstype', 'softraid');
 if (!sizeof($a_sdisk)) {
-	$errormsg = gettext('No softraid-formatted disks available.');
+	$errormsg = gtext('No softraid-formatted disks available.');
 	$prerequisites_ok = false;
 }
 if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit" or "Action", already checked at the beginning
@@ -161,13 +161,13 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit" or "Action", alr
 	unset($input_errors);
 	// Input validation
 	$reqdfields = ['name', 'type'];
-	$reqdfieldsn = [gettext('RAID Name'), gettext('Type')];
+	$reqdfieldsn = [gtext('RAID Name'), gtext('Type')];
 
 	do_input_validation($sphere_record, $reqdfields, $reqdfieldsn, $input_errors);
 	// logic validation
 	if ($prerequisites_ok && empty($input_errors)) { // check for a valid RAID name.
 		if (($sphere_record['name'] && !is_validaliasname($sphere_record['name']))) {
-			$input_errors[] = gettext('The name of the RAID may only consist of the characters a-z, A-Z, 0-9.');
+			$input_errors[] = gtext('The name of the RAID may only consist of the characters a-z, A-Z, 0-9.');
 		}
 	}
 	if ($prerequisites_ok && empty($input_errors)) { // check for existing RAID names
@@ -175,7 +175,7 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit" or "Action", alr
 			case RECORD_NEW:
 				foreach ($a_config_sraid as $r_config_sraid) { // RAID name must not exist in config at all
 					if ($r_config_sraid['name'] === $sphere_record['name']) {
-						$input_errors[] = gettext('The name of the RAID is already in use.');
+						$input_errors[] = gtext('The name of the RAID is already in use.');
 						break; // break loop
 					}
 				}
@@ -184,7 +184,7 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit" or "Action", alr
 				if ($sphere_record['name'] !== $sphere_array[$index]['name']) { // if the RAID name has changed it shouldn't be found in config
 					foreach ($a_config_sraid as $r_config_sraid) {
 						if ($r_config_sraid['name'] === $sphere_record['name']) {
-							$input_errors[] = gettext('The name of the RAID is already in use.');
+							$input_errors[] = gtext('The name of the RAID is already in use.');
 							break; // break loop
 						}
 					}
@@ -192,7 +192,7 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit" or "Action", alr
 				break;
 			case RECORD_MODIFY: 
 				if ($sphere_record['name'] !== $sphere_array[$index]['name']) { // should never happen because sphere_record['name'] should be set to $sphere_array[$index]['name']
-					$input_errors[] = gettext('The name of the RAID cannot be changed.');
+					$input_errors[] = gtext('The name of the RAID cannot be changed.');
 				}
 				break;
 		}
@@ -200,9 +200,9 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit" or "Action", alr
 	if ($prerequisites_ok && empty($input_errors)) { // check the number of disk for RAID volume
 		$helpinghand = count($sphere_record['device']);
 		switch ($sphere_record['type']) {
-			case '1'   : if ($helpinghand < 2) { $input_errors[] = gettext('2 or more disks are required to build a RAID-1 volume.'); } break;
-			case '5'   : if ($helpinghand < 3) { $input_errors[] = gettext('3 or more disks are required to build a RAID-5 volume.'); } break;
-			case '0'   : if ($helpinghand < 2) { $input_errors[] = gettext('2 or more disks are required to build a RAID-0 volume.'); } break;
+			case '1'   : if ($helpinghand < 2) { $input_errors[] = gtext('2 or more disks are required to build a RAID-1 volume.'); } break;
+			case '5'   : if ($helpinghand < 3) { $input_errors[] = gtext('3 or more disks are required to build a RAID-5 volume.'); } break;
+			case '0'   : if ($helpinghand < 2) { $input_errors[] = gtext('2 or more disks are required to build a RAID-0 volume.'); } break;
 		}
 	}
 	// process POST
@@ -247,7 +247,7 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit" or "Action", alr
 			$sphere_record['init'] = false;
 			$sphere_record['device'] = [];
 			$sphere_record['devicespecialfile'] = '';
-			$sphere_record['desc'] = gettext('GEOM VINUM Software RAID');
+			$sphere_record['desc'] = gtext('GEOM VINUM Software RAID');
 			break;
 		case RECORD_NEW_MODIFY:
 			$sphere_record['name'] = (isset($sphere_array[$index]['name']) ? $sphere_array[$index]['name'] : '');
@@ -276,7 +276,7 @@ foreach ($a_sdisk as $r_sdisk) {
 	$r_device['uuid'] = isset($r_sdisk['uuid']) ? $r_sdisk['uuid'] : '';
 	$r_device['model'] = isset($r_sdidk['model']) ? htmlspecialchars($r_sdisk['model']) : '';
 	$r_device['devicespecialfile'] = htmlspecialchars($helpinghand);
-	$r_device['partition'] = ((isset($r_sdisk['zfsgpt']) && (!empty($r_sdisk['zfsgpt'])))? $r_sdisk['zfsgpt'] : gettext('Entire Device'));
+	$r_device['partition'] = ((isset($r_sdisk['zfsgpt']) && (!empty($r_sdisk['zfsgpt'])))? $r_sdisk['zfsgpt'] : gtext('Entire Device'));
 	$r_device['controller'] = (isset($r_sdisk['controller']) ? $r_sdisk['controller'] : '?') . (isset($r_sdisk['controller_id']) ?  $r_sdisk['controller_id'] : '');
 	if (isset($r_sdisk['controller_desc'])) {
 		$r_device['controller'] .= (' (' . $r_sdisk['controller_desc'] . ')');
@@ -289,7 +289,7 @@ foreach ($a_sdisk as $r_sdisk) {
 	$a_device[$helpinghand] = $r_device;
 }
 
-$pgtitle = [gettext('Disks'), gettext('Software RAID'), gettext('RAID 0/1/5'), ($isrecordnew) ? gettext('Add') : gettext('Edit')];
+$pgtitle = [gtext('Disks'), gtext('Software RAID'), gtext('RAID 0/1/5'), ($isrecordnew) ? gtext('Add') : gtext('Edit')];
 ?>
 <?php include("fbegin.inc"); ?>
 <?php if ($isrecordnewornewmodify):?>
@@ -358,17 +358,17 @@ function toggleselection(ego, triggerbyname) {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabinact"><a href="disks_raid_geom.php"><span><?=gettext('GEOM');?></span></a></li>
-				<li class="tabact"><a href="disks_raid_gvinum.php" title="<?=gettext('Reload page');?>"><span><?=gettext('RAID 0/1/5');?></span></a></li>
+				<li class="tabinact"><a href="disks_raid_geom.php"><span><?=gtext('GEOM');?></span></a></li>
+				<li class="tabact"><a href="disks_raid_gvinum.php" title="<?=gettext('Reload page');?>"><span><?=gtext('RAID 0/1/5');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav2">
-				<li class="tabact"><a href="disks_raid_gvinum.php" title="<?=gettext('Reload page');?>" ><span><?=gettext('Management');?></span></a></li>
-				<li class="tabinact"><a href="disks_raid_gvinum_tools.php"><span><?=gettext('Maintenance'); ?></span></a></li>
-				<li class="tabinact"><a href="disks_raid_gvinum_info.php"><span><?=gettext('Information'); ?></span></a></li>
+				<li class="tabact"><a href="disks_raid_gvinum.php" title="<?=gettext('Reload page');?>" ><span><?=gtext('Management');?></span></a></li>
+				<li class="tabinact"><a href="disks_raid_gvinum_tools.php"><span><?=gtext('Maintenance'); ?></span></a></li>
+				<li class="tabinact"><a href="disks_raid_gvinum_info.php"><span><?=gtext('Information'); ?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -392,22 +392,22 @@ function toggleselection(ego, triggerbyname) {
 			<col id="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gettext('Settings'));?>
+			<?php html_titleline2(gtext('Settings'));?>
 		</thead>
 		<tbody>
 			<?php
-				html_inputbox2('name', gettext('RAID Name'), $sphere_record['name'], '', true, 15, $isrecordmodify); // readonly when in mode modify
+				html_inputbox2('name', gtext('RAID Name'), $sphere_record['name'], '', true, 15, $isrecordmodify); // readonly when in mode modify
 				if ($isrecordmodify) {
-					html_inputbox2('type', gettext('RAID Type'), $a_process[$sphere_record['type']]['gt-type'], '', false, 40, $isrecordmodify);
+					html_inputbox2('type', gtext('RAID Type'), $a_process[$sphere_record['type']]['gt-type'], '', false, 40, $isrecordmodify);
 				}
 			?>
 			<?php
 				$helpinghand = [
-					[gettext('Do not activate this option if you want to add an existing RAID.')],
-					[gettext('All data will be lost when you activate this option!'), 'red']
+					[gtext('Do not activate this option if you want to add an existing RAID.')],
+					[gtext('All data will be lost when you activate this option!'), 'red']
 				];
-				html_checkbox2('init', gettext('Initialize'), !empty($sphere_record['init']) ? true : false, gettext('Create and initialize RAID.'), $helpinghand, false, $isrecordmodify);
-				html_inputbox2('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 48);
+				html_checkbox2('init', gtext('Initialize'), !empty($sphere_record['init']) ? true : false, gtext('Create and initialize RAID.'), $helpinghand, false, $isrecordmodify);
+				html_inputbox2('desc', gtext('Description'), $sphere_record['desc'], gtext('You may enter a description here for your reference.'), false, 48);
 				html_separator2();
 			?>
 		</tbody>
@@ -425,22 +425,22 @@ function toggleselection(ego, triggerbyname) {
 			<col style="width:5%"> <!--// Icons -->
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gettext('Device List'), 9);?>
+			<?php html_titleline2(gtext('Device List'), 9);?>
 			<tr>
 				<td class="lhelc">
 					<?php if ($isrecordnewornewmodify):?>
-						<input type="checkbox" id="togglebox" name="togglebox" title="<?=gettext('Invert Selection');?>"/>
+						<input type="checkbox" id="togglebox" name="togglebox" title="<?=gtext('Invert Selection');?>"/>
 					<?php else:?>
 						<input type="checkbox" id="togglebox" name="togglebox" disabled="disabled"/>
 					<?php endif;?>
 				</td>
-				<td class="lhell"><?=gettext('Device');?></td>
-				<td class="lhell"><?=gettext('Partition');?></td>
-				<td class="lhell"><?=gettext('Model');?></td>
-				<td class="lhell"><?=gettext('Serial Number');?></td>
-				<td class="lhell"><?=gettext('Size');?></td>
-				<td class="lhell"><?=gettext('Controller');?></td>
-				<td class="lhell"><?=gettext('Name');?></td>
+				<td class="lhell"><?=gtext('Device');?></td>
+				<td class="lhell"><?=gtext('Partition');?></td>
+				<td class="lhell"><?=gtext('Model');?></td>
+				<td class="lhell"><?=gtext('Serial Number');?></td>
+				<td class="lhell"><?=gtext('Size');?></td>
+				<td class="lhell"><?=gtext('Controller');?></td>
+				<td class="lhell"><?=gtext('Name');?></td>
 				<td class="lhebl">&nbsp;</td>
 			</tr>
 		</thead>
@@ -469,7 +469,7 @@ function toggleselection(ego, triggerbyname) {
 							<td class="lcell"><?=htmlspecialchars($r_device['desc']);?>&nbsp;</td>
 							<td class="lcebcd">
 								<?php if ($isinthissraid):?>
-									<img src="<?=$img_path['unl'];?>" title="<?=gettext($gt_record_opn);?>" alt="<?=gettext($gt_record_opn);?>" />
+									<img src="<?=$img_path['unl'];?>" title="<?=gettext($gt_record_opn);?>" alt="<?=gtext($gt_record_opn);?>" />
 								<?php else:?>
 									&nbsp;
 								<?php endif;?>
@@ -491,7 +491,7 @@ function toggleselection(ego, triggerbyname) {
 							<td class="lcelld"><?=htmlspecialchars($r_device['controller']);?>&nbsp;</td>
 							<td class="lcelld"><?=htmlspecialchars($r_device['desc']);?>&nbsp;</td>
 							<td class="lcebcd">
-								<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gettext($gt_record_loc);?>" />
+								<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gtext($gt_record_loc);?>" />
 							</td>
 						</tr>
 					<?php endif; ?>
@@ -501,9 +501,9 @@ function toggleselection(ego, triggerbyname) {
 	</table>
 	<div id="submit">
 		<?php if ($isrecordmodify):?>
-			<input name="Submit" id="submit_button" type="submit" class="formbtn" value="<?=gettext('Save');?>"/>
+			<input name="Submit" id="submit_button" type="submit" class="formbtn" value="<?=gtext('Save');?>"/>
 		<?php endif;?>
-		<input name="Cancel" id="cancel_button" type="submit" class="formbtn" value="<?=gettext('Cancel');?>" />
+		<input name="Cancel" id="cancel_button" type="submit" class="formbtn" value="<?=gtext('Cancel');?>" />
 		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>" />
 	</div>
 	<?php include("formend.inc"); ?>

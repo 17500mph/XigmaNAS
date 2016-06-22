@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Disks"), gettext("Software RAID"), gettext("RAID 0/1/5"), gettext("Maintenance"));
+$pgtitle = array(gtext("Disks"), gtext("Software RAID"), gtext("RAID 0/1/5"), gtext("Maintenance"));
 
 if ($_POST) {
 	unset($input_errors);
@@ -42,7 +42,7 @@ if ($_POST) {
 
 	/* input validation */
 	$reqdfields = explode(" ", "action object");
-	$reqdfieldsn = array(gettext("Command"),gettext("Object name"));
+	$reqdfieldsn = array(gtext("Command"),gtext("Object name"));
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 if (empty($input_errors)) {
@@ -71,34 +71,34 @@ $(window).on("load", function() {
 	<tr>
 	<td class="tabnavtbl">
   		<ul id="tabnav">
-			<li class="tabinact"><a href="disks_raid_geom.php"><span><?=gettext('GEOM');?></span></a></li>
-			<li class="tabact"><a href="disks_raid_gvinum.php" title="<?=gettext('Reload page');?>"><span><?=gettext('RAID 0/1/5');?></span></a></li>
+			<li class="tabinact"><a href="disks_raid_geom.php"><span><?=gtext('GEOM');?></span></a></li>
+			<li class="tabact"><a href="disks_raid_gvinum.php" title="<?=gettext('Reload page');?>"><span><?=gtext('RAID 0/1/5');?></span></a></li>
 		</ul>
 	  </td>
 </tr>
 	<tr><td class="tabnavtbl">
 		<ul id="tabnav2">
-			<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?=gettext("Management"); ?></span></a></li>
-			<li class="tabact"><a href="disks_raid_gvinum_tools.php" title="<?=gettext("Reload page");?>" ><span><?=gettext("Maintenance");?></span></a></li>
-			<li class="tabinact"><a href="disks_raid_gvinum_info.php"><span><?=gettext("Information"); ?></span></a></li>
+			<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?=gtext("Management"); ?></span></a></li>
+			<li class="tabact"><a href="disks_raid_gvinum_tools.php" title="<?=gettext("Reload page");?>" ><span><?=gtext("Maintenance");?></span></a></li>
+			<li class="tabinact"><a href="disks_raid_gvinum_info.php"><span><?=gtext("Information"); ?></span></a></li>
 		</ul>
 	</td>
 </tr>
 	<tr><td class="tabcont">
 			<table width="100%" border="0" cellspacing="0" cellpadding="0">
-	    		<?php html_titleline(gettext("RAID 0/1/5 Maintenance"));?>
+	    		<?php html_titleline(gtext("RAID 0/1/5 Maintenance"));?>
 	    	<tr>
 			<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 			<form action="disks_raid_gvinum_tools.php" method="post" name="iform" id="iform">
 			<table width="100%" border="0" cellpadding="6" cellspacing="0">
 		<tr>
-			<td width="22%" valign="top" class="vncellreq"><?=gettext("Object name");?></td>
+			<td width="22%" valign="top" class="vncellreq"><?=gtext("Object name");?></td>
 			<td width="78%" class="vtable">
 	          	<input name="object" type="text" class="formfld" id="object" size="20" value="<?=htmlspecialchars($object);?>" />
 		</td>
 	</tr>
 		<tr>
-			<td width="22%" valign="top" class="vncellreq"><?=gettext("Unix Command");?></td>
+			<td width="22%" valign="top" class="vncellreq"><?=gtext("Unix Command");?></td>
 			<td width="78%" class="vtable">
 			<select name="action" class="formfld" id="action">
 			<option value="start" <?php if ($action == "start") echo "selected=\"selected\""; ?>>start</option>
@@ -112,10 +112,10 @@ $(window).on("load", function() {
 		</tr>
 			</table>
 			<div id="submit">
-			<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Send Command!");?>" />
+			<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Send Command!");?>" />
 		</div>
 			<?php if ($do_action) {
-				echo(sprintf("<div id='cmdoutput'>%s</div>", gettext("Command output:")));
+				echo(sprintf("<div id='cmdoutput'>%s</div>", gtext("Command output:")));
 				echo('<pre class="cmdoutput">');
 				//ob_end_flush();
 

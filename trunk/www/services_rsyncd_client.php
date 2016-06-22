@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Services"), gettext("Rsync"), gettext("Client"));
+$pgtitle = array(gtext("Services"), gtext("Rsync"), gtext("Client"));
 
 if ($_POST) {
 	$pconfig = $_POST;
@@ -98,9 +98,9 @@ function rsyncclient_process_updatenotification($mode, $data) {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabinact"><a href="services_rsyncd.php"><span><?=gettext("Server");?></span></a></li>
-				<li class="tabact"><a href="services_rsyncd_client.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Client");?></span></a></li>
-				<li class="tabinact"><a href="services_rsyncd_local.php"><span><?=gettext("Local");?></span></a></li>
+				<li class="tabinact"><a href="services_rsyncd.php"><span><?=gtext("Server");?></span></a></li>
+				<li class="tabact"><a href="services_rsyncd_client.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Client");?></span></a></li>
+				<li class="tabinact"><a href="services_rsyncd_local.php"><span><?=gtext("Local");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -111,11 +111,11 @@ function rsyncclient_process_updatenotification($mode, $data) {
         <?php if (updatenotify_exists("rsyncclient")) print_config_change_box();?>
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
           <tr>
-						<td width="20%" class="listhdrlr"><?=gettext("Remote Module (Source)");?></td>
-						<td width="15%" class="listhdrr"><?=gettext("Remote Address");?></td>
-						<td width="15%" class="listhdrr"><?=gettext("Local Share (Destination)");?></td>
-						<td width="10%" class="listhdrr"><?=gettext("Who");?></td>
-						<td width="30%" class="listhdrr"><?=gettext("Description");?></td>
+						<td width="20%" class="listhdrlr"><?=gtext("Remote Module (Source)");?></td>
+						<td width="15%" class="listhdrr"><?=gtext("Remote Address");?></td>
+						<td width="15%" class="listhdrr"><?=gtext("Local Share (Destination)");?></td>
+						<td width="10%" class="listhdrr"><?=gtext("Who");?></td>
+						<td width="30%" class="listhdrr"><?=gtext("Description");?></td>
             <td width="10%" class="list"></td>
           </tr>
   			  <?php foreach($a_rsyncclient as $rsyncclient):?>
@@ -129,8 +129,8 @@ function rsyncclient_process_updatenotification($mode, $data) {
 						<td class="listbg"><?=htmlspecialchars($rsyncclient['description']);?>&nbsp;</td>
 						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
             <td valign="middle" nowrap="nowrap" class="list">
-							<a href="services_rsyncd_client_edit.php?uuid=<?=$rsyncclient['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit Rsync job");?>" border="0" alt="<?=gettext("Edit Rsync job");?>" /></a>&nbsp;
-              <a href="services_rsyncd_client.php?act=del&amp;uuid=<?=$rsyncclient['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this Rsync job?");?>')"><img src="images/delete.png" title="<?=gettext("Delete Rsync job"); ?>" border="0" alt="<?=gettext("Delete Rsync job"); ?>" /></a>
+							<a href="services_rsyncd_client_edit.php?uuid=<?=$rsyncclient['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit Rsync job");?>" border="0" alt="<?=gtext("Edit Rsync job");?>" /></a>&nbsp;
+              <a href="services_rsyncd_client.php?act=del&amp;uuid=<?=$rsyncclient['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this Rsync job?");?>')"><img src="images/delete.png" title="<?=gettext("Delete Rsync job"); ?>" border="0" alt="<?=gtext("Delete Rsync job"); ?>" /></a>
             </td>
             <?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
@@ -141,7 +141,7 @@ function rsyncclient_process_updatenotification($mode, $data) {
           <?php endforeach;?>
           <tr> 
             <td class="list" colspan="5"></td>
-            <td class="list"><a href="services_rsyncd_client_edit.php"><img src="images/add.png" title="<?=gettext("Add Rsync job");?>" border="0" alt="<?=gettext("Add Rsync job");?>" /></a></td>
+            <td class="list"><a href="services_rsyncd_client_edit.php"><img src="images/add.png" title="<?=gettext("Add Rsync job");?>" border="0" alt="<?=gtext("Add Rsync job");?>" /></a></td>
 			    </tr>
         </table>
         <?php include("formend.inc");?>

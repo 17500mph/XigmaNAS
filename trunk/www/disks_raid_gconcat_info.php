@@ -38,7 +38,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext('Disks'), gettext('Software RAID'), gettext('JBOD'), gettext('Information'));
+$pgtitle = array(gtext('Disks'), gtext('Software RAID'), gtext('JBOD'), gtext('Information'));
 
 function get_raidinfo() {
 	exec("/sbin/gconcat list",$rawdata);
@@ -65,24 +65,24 @@ $(document).ready(function(){
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabact"><a href="disks_raid_geom.php" title="<?=gettext('Reload page');?>"><span><?=gettext('GEOM');?></span></a></li>
-				<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?=gettext('RAID 0/1/5');?></span></a></li>
+				<li class="tabact"><a href="disks_raid_geom.php" title="<?=gettext('Reload page');?>"><span><?=gtext('GEOM');?></span></a></li>
+				<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?=gtext('RAID 0/1/5');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav2">
-				<li class="tabinact"><a href="disks_raid_geom.php"><span><?=gettext('Management'); ?></span></a></li>
-				<li class="tabinact"><a href="disks_raid_gconcat_tools.php"><span><?=gettext('Maintenance'); ?></span></a></li>
-				<li class="tabact"><a href="disks_raid_gconcat_info.php" title="<?=gettext('Reload page');?>" ><span><?=gettext('Information');?></span></a></li>
+				<li class="tabinact"><a href="disks_raid_geom.php"><span><?=gtext('Management'); ?></span></a></li>
+				<li class="tabinact"><a href="disks_raid_gconcat_tools.php"><span><?=gtext('Maintenance'); ?></span></a></li>
+				<li class="tabact"><a href="disks_raid_gconcat_info.php" title="<?=gettext('Reload page');?>" ><span><?=gtext('Information');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
 	<table id="area_data_settings">
-		<?php html_titleline(gettext('JBOD Information & Status'));?>
+		<?php html_titleline(gtext('JBOD Information & Status'));?>
 		<tr>
 			<td class="listt">
 				<pre><span id="raidinfo"></span></pre>

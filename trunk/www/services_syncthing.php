@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Services"),gettext("Syncthing"));
+$pgtitle = array(gtext("Services"),gtext("Syncthing"));
 
 if (!isset($config['syncthing']) || !is_array($config['syncthing']))
 	$config['syncthing'] = array();
@@ -56,7 +56,7 @@ if ($_POST) {
 
 	if (isset($_POST['enable'])) {
 		$reqdfields = explode(" ", "homedir");
-		$reqdfieldsn = array(gettext("Home directory"));
+		$reqdfieldsn = array(gtext("Home directory"));
 		$reqdfieldst = explode(" ", "string");
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
@@ -64,10 +64,10 @@ if ($_POST) {
 
 	$dir = $_POST['homedir'];
 	if (!file_exists($dir)) {
-		$input_errors[] = sprintf(gettext("The path '%s' does not exist."), $dir);
+		$input_errors[] = sprintf(gtext("The path '%s' does not exist."), $dir);
 	}
 	if (!is_dir($dir)) {
-		$input_errors[] = sprintf(gettext("The path '%s' is not a directory."), $dir);
+		$input_errors[] = sprintf(gtext("The path '%s' is not a directory."), $dir);
 	}
 
 	if (empty($input_errors)) {
@@ -137,18 +137,18 @@ $(document).ready(function(){
 	<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 	<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 	<table width="100%" border="0" cellpadding="6" cellspacing="0">
-	<?php html_titleline_checkbox("enable", gettext("Syncthing"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "");?>
-	<?php html_filechooser("homedir", gettext("Home directory"), $pconfig['homedir'], gettext("Enter the path to the home directory. The config will be created under the specified directory."), $g['media_path'], false, 60);?>
+	<?php html_titleline_checkbox("enable", gtext("Syncthing"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "");?>
+	<?php html_filechooser("homedir", gtext("Home directory"), $pconfig['homedir'], gtext("Enter the path to the home directory. The config will be created under the specified directory."), $g['media_path'], false, 60);?>
 	<?php html_separator();?>
-	<?php html_titleline(gettext("Administrative WebGUI"));?>
+	<?php html_titleline(gtext("Administrative WebGUI"));?>
 	<?php
 		$url = "http://${gui_ipaddr}:${gui_port}/";
 		$text = "<a href='${url}' id='a_url' target='_blank'>{$url}</a>";
 	?>
-	<?php html_text("url", gettext("URL"), $text);?>
+	<?php html_text("url", gtext("URL"), $text);?>
 	</table>
 	<div id="submit">
-	  <input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" />
+	  <input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" />
 	</div>
 	<?php include("formend.inc");?>
       </form>

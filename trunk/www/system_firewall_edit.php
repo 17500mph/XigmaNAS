@@ -39,7 +39,7 @@ if (isset($_GET['uuid']))
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = array(gettext("Network"), gettext("Firewall"), gettext("Rule"), isset($uuid) ? gettext("Edit") : gettext("Add"));
+$pgtitle = array(gtext("Network"), gtext("Firewall"), gtext("Rule"), isset($uuid) ? gtext("Edit") : gtext("Add"));
 
 if (!isset($config['system']['firewall']['rule']) || !is_array($config['system']['firewall']['rule']))
 	$config['system']['firewall']['rule'] = array();
@@ -93,7 +93,7 @@ if ($_POST) {
 	$index = array_search_ex($_POST['ruleno'], $a_rule, "ruleno");
 	if (FALSE !== $index) {
 		if (!((FALSE !== $cnid) && ($a_rule[$cnid]['uuid'] === $a_rule[$index]['uuid']))) {
-			$input_errors[] = gettext("The unique rule number is already used.");
+			$input_errors[] = gtext("The unique rule number is already used.");
 		}
 	}
 
@@ -154,24 +154,24 @@ function get_next_rulenumber() {
       <form action="system_firewall_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
       	<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
         <table width="100%" border="0" cellpadding="6" cellspacing="0">
-        	<?php html_titleline_checkbox("enable", gettext("Firewall Rule Settings"), !empty($pconfig['enable']) ? true : false, gettext("Enable"));?>
-        	<?php html_inputbox("ruleno", gettext("Rule number"), $pconfig['ruleno'], gettext("The rule number determines the order of the rule."), true, 10);?>
-					<?php html_combobox("action", gettext("Action"), $pconfig['action'], array("allow" => gettext("Allow"), "deny" => gettext("Deny"), "unreach host" => gettext("Reject")), gettext("The action which will be executed when the packet match the criteria specified below."), true);?>
-					<?php $a_interface = array("" => gettext("All"), get_ifname($config['interfaces']['lan']['if']) => "LAN"); for ($i = 1; isset($config['interfaces']['opt' . $i]); ++$i) { $a_interface[$config['interfaces']['opt' . $i]['if']] = $config['interfaces']['opt' . $i]['descr']; }?>
-					<?php html_combobox("if", gettext("Interface"), $pconfig['if'], $a_interface, gettext("Choose on which interface packets must come in to match this rule."), true);?>
-					<?php html_combobox("protocol", gettext("Protocol"), $pconfig['protocol'], array("udp" => "UDP", "tcp" => "TCP", "icmp" => "ICMP", "all" => gettext("All")), gettext("Choose which IP protocol this rule should match."), true);?>
-					<?php html_inputbox("src", gettext("Source"), $pconfig['src'], gettext("To match any IP address leave this field empty."), false, 40);?>
-					<?php html_inputbox("srcport", gettext("Source port"), $pconfig['srcport'], "", false, 5);?>
-					<?php html_inputbox("dst", gettext("Destination"), $pconfig['dst'], gettext("To match any IP address leave this field empty."), false, 40);?>
-					<?php html_inputbox("dstport", gettext("Destination port"), $pconfig['dstport'], "", false, 5);?>
-					<?php html_inputbox("extraoptions", gettext("Options"), $pconfig['extraoptions'], "", false, 40);?>
-					<?php html_combobox("direction", gettext("Direction"), $pconfig['direction'], array("in" => gettext("In"), "out" => gettext("Out"), "" => gettext("Any")), "", true);?>
-					<?php html_checkbox("log", gettext("Log"), !empty($pconfig['log']) ? true : false, gettext("Log packets that are handled by this rule to syslog."), "", false);?>
-					<?php html_inputbox("desc", gettext("Description"), $pconfig['desc'], gettext("You may enter a description here for your reference."), false, 40);?>
+        	<?php html_titleline_checkbox("enable", gtext("Firewall Rule Settings"), !empty($pconfig['enable']) ? true : false, gtext("Enable"));?>
+        	<?php html_inputbox("ruleno", gtext("Rule number"), $pconfig['ruleno'], gtext("The rule number determines the order of the rule."), true, 10);?>
+					<?php html_combobox("action", gtext("Action"), $pconfig['action'], array("allow" => gtext("Allow"), "deny" => gtext("Deny"), "unreach host" => gtext("Reject")), gtext("The action which will be executed when the packet match the criteria specified below."), true);?>
+					<?php $a_interface = array("" => gtext("All"), get_ifname($config['interfaces']['lan']['if']) => "LAN"); for ($i = 1; isset($config['interfaces']['opt' . $i]); ++$i) { $a_interface[$config['interfaces']['opt' . $i]['if']] = $config['interfaces']['opt' . $i]['descr']; }?>
+					<?php html_combobox("if", gtext("Interface"), $pconfig['if'], $a_interface, gtext("Choose on which interface packets must come in to match this rule."), true);?>
+					<?php html_combobox("protocol", gtext("Protocol"), $pconfig['protocol'], array("udp" => "UDP", "tcp" => "TCP", "icmp" => "ICMP", "all" => gtext("All")), gtext("Choose which IP protocol this rule should match."), true);?>
+					<?php html_inputbox("src", gtext("Source"), $pconfig['src'], gtext("To match any IP address leave this field empty."), false, 40);?>
+					<?php html_inputbox("srcport", gtext("Source port"), $pconfig['srcport'], "", false, 5);?>
+					<?php html_inputbox("dst", gtext("Destination"), $pconfig['dst'], gtext("To match any IP address leave this field empty."), false, 40);?>
+					<?php html_inputbox("dstport", gtext("Destination port"), $pconfig['dstport'], "", false, 5);?>
+					<?php html_inputbox("extraoptions", gtext("Options"), $pconfig['extraoptions'], "", false, 40);?>
+					<?php html_combobox("direction", gtext("Direction"), $pconfig['direction'], array("in" => gtext("In"), "out" => gtext("Out"), "" => gtext("Any")), "", true);?>
+					<?php html_checkbox("log", gtext("Log"), !empty($pconfig['log']) ? true : false, gtext("Log packets that are handled by this rule to syslog."), "", false);?>
+					<?php html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("You may enter a description here for your reference."), false, 40);?>
         </table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gettext("Save") : gettext("Add")?>" />
-					<input name="Cancel" type="submit" class="formbtn" value="<?=gettext("Cancel");?>" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" />
+					<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
 					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
 			  </div>
 			  <div id="remarks">

@@ -35,7 +35,7 @@ require("auth.inc");
 require("guiconfig.inc");
 require("email.inc");
 
-$pgtitle = array(gettext("System"),gettext("Advanced"),gettext("Email"));
+$pgtitle = array(gtext("System"),gtext("Advanced"),gtext("Email"));
 
 if (!isset($config['system']['email']) || !is_array($config['system']['email']))
 	$config['system']['email'] = array();
@@ -53,7 +53,7 @@ $pconfig['from'] = $config['system']['email']['from'];
 $pconfig['sendto'] = isset($config['system']['email']['sendto']) ? $config['system']['email']['sendto'] : (isset($config['system']['email']['from']) ? $config['system']['email']['from'] : '');
 
 //assure that POST Submit and Input Button use the same string
-$sendtestemailbuttonvalue = gettext('Send Test Email');
+$sendtestemailbuttonvalue = gtext('Send Test Email');
 
 if ($_POST) {
 	unset($input_errors);
@@ -65,7 +65,7 @@ if ($_POST) {
 
 	if (isset($_POST['auth'])) {
 		$reqdfields = array_merge($reqdfields, array("username", "password"));
-		$reqdfieldsn = array_merge($reqdfieldsn, array(gettext("Username"), gettext("Password")));
+		$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Username"), gtext("Password")));
 		$reqdfieldst = array_merge($reqdfieldst, array("string","string"));
 	}
 
@@ -74,7 +74,7 @@ if ($_POST) {
 
 	// Check for a password mismatch.
 	if (isset($_POST['auth']) && ($_POST['password'] !== $_POST['passwordconf'])) {
-		$input_errors[] = gettext("The passwords do not match.");
+		$input_errors[] = gtext("The passwords do not match.");
 	}
 
 	if (empty($input_errors)) {
@@ -100,16 +100,16 @@ if ($_POST) {
 
 		// Send test email.
 		if (stristr($_POST['Submit'], $sendtestemailbuttonvalue)) {
-			$subject = sprintf(gettext("Test email from host: %s"), system_get_hostname());
-			$message = gettext("This email has been sent to validate your email configuration.");
+			$subject = sprintf(gtext("Test email from host: %s"), system_get_hostname());
+			$message = gtext("This email has been sent to validate your email configuration.");
 
 			$retval = @email_send($config['system']['email']['sendto'], $subject, $message, $error);
 			if (0 == $retval) {
-				$savemsg = gettext("Test email successfully sent.");
-				write_log(sprintf(gettext("Test email successfully sent to: %s."), $config['system']['email']['sendto']));
+				$savemsg = gtext("Test email successfully sent.");
+				write_log(sprintf(gtext("Test email successfully sent to: %s."), $config['system']['email']['sendto']));
 			} else {
 				$failmsg = sprintf(gettext("Failed to send test email. Please check the <a href='%s'>log</a> files."), "diag_log.php");
-				write_log(sprintf(gettext("Failed to send test email to: %s."), $config['system']['email']['sendto']));
+				write_log(sprintf(gtext("Failed to send test email to: %s."), $config['system']['email']['sendto']));
 			}
 		} else {
 			$savemsg = get_std_save_message($retval);
@@ -144,14 +144,14 @@ function enable_change(enable_change) {
 	<tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-      	<li class="tabinact"><a href="system_advanced.php"><span><?=gettext("Advanced");?></span></a></li>
-      	<li class="tabact"><a href="system_email.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Email");?></span></a></li>
-      	<li class="tabinact"><a href="system_swap.php"><span><?=gettext("Swap");?></span></a></li>
-      	<li class="tabinact"><a href="system_rc.php"><span><?=gettext("Command Scripts");?></span></a></li>
-        <li class="tabinact"><a href="system_cron.php"><span><?=gettext("Cron");?></span></a></li>
-		<li class="tabinact"><a href="system_loaderconf.php"><span><?=gettext("loader.conf");?></span></a></li>
-        <li class="tabinact"><a href="system_rcconf.php"><span><?=gettext("rc.conf");?></span></a></li>
-        <li class="tabinact"><a href="system_sysctl.php"><span><?=gettext("sysctl.conf");?></span></a></li>
+      	<li class="tabinact"><a href="system_advanced.php"><span><?=gtext("Advanced");?></span></a></li>
+      	<li class="tabact"><a href="system_email.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Email");?></span></a></li>
+      	<li class="tabinact"><a href="system_swap.php"><span><?=gtext("Swap");?></span></a></li>
+      	<li class="tabinact"><a href="system_rc.php"><span><?=gtext("Command Scripts");?></span></a></li>
+        <li class="tabinact"><a href="system_cron.php"><span><?=gtext("Cron");?></span></a></li>
+		<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext("loader.conf");?></span></a></li>
+        <li class="tabinact"><a href="system_rcconf.php"><span><?=gtext("rc.conf");?></span></a></li>
+        <li class="tabinact"><a href="system_sysctl.php"><span><?=gtext("sysctl.conf");?></span></a></li>
       </ul>
     </td>
   </tr>
@@ -162,20 +162,20 @@ function enable_change(enable_change) {
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<?php if (!empty($failmsg)) print_error_box($failmsg);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-			    		<?php html_titleline(gettext("Email"));?>
-					<?php html_inputbox("from", gettext("From Email Address"), $pconfig['from'], gettext("From email address for sending system messages."), true, 62);?>
-					<?php html_inputbox("sendto", gettext("To Email Address"), $pconfig['sendto'], gettext("Destination email address. Separate email addresses by semi-colon."), true, 62);?>
-					<?php html_inputbox("server", gettext("SMTP Server"), $pconfig['server'], gettext("Outgoing SMTP mail server address."), true, 62);?>
-					<?php html_inputbox("port", gettext("Port"), $pconfig['port'], gettext("The default SMTP mail server port, e.g. 25 or 587."), true, 5);?>
-					<?php html_combobox("security", gettext("Security"), $pconfig['security'], array("none" => gettext("None"), "ssl" => "SSL", "tls" => "TLS"), "", true);?>
-					<?php html_checkbox("starttls", gettext("TLS mode"), !empty($pconfig['starttls']) ? true : false, gettext("Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can use SSL."), gettext("This is a way to take an existing insecure connection, and upgrade it to a secure connection using SSL/TLS."), false);?>
-					<?php html_checkbox("auth", gettext("Authentication"), !empty($pconfig['auth']) ? true : false, gettext("Enable SMTP authentication."), "", false, "auth_change()");?>
-					<?php html_inputbox("username", gettext("Username"), $pconfig['username'], "", true, 40);?>
-					<?php html_passwordconfbox("password", "passwordconf", gettext("Password"), $pconfig['password'], $pconfig['passwordconf'], "", true);?>
-					<?php html_combobox("authmethod", gettext("Authentication method"), $pconfig['authmethod'], array("plain" => gettext("Plain-text"), "cram-md5" => "Cram-MD5", "digest-md5" => "Digest-MD5", "gssapi" => "GSSAPI", "external" => "External", "login" => gettext("Login"), "ntlm" => "NTLM", "on" => gettext("Best available")), "", true);?>
+			    		<?php html_titleline(gtext("Email"));?>
+					<?php html_inputbox("from", gtext("From Email Address"), $pconfig['from'], gtext("From email address for sending system messages."), true, 62);?>
+					<?php html_inputbox("sendto", gtext("To Email Address"), $pconfig['sendto'], gtext("Destination email address. Separate email addresses by semi-colon."), true, 62);?>
+					<?php html_inputbox("server", gtext("SMTP Server"), $pconfig['server'], gtext("Outgoing SMTP mail server address."), true, 62);?>
+					<?php html_inputbox("port", gtext("Port"), $pconfig['port'], gtext("The default SMTP mail server port, e.g. 25 or 587."), true, 5);?>
+					<?php html_combobox("security", gtext("Security"), $pconfig['security'], array("none" => gtext("None"), "ssl" => "SSL", "tls" => "TLS"), "", true);?>
+					<?php html_checkbox("starttls", gtext("TLS mode"), !empty($pconfig['starttls']) ? true : false, gtext("Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can use SSL."), gtext("This is a way to take an existing insecure connection, and upgrade it to a secure connection using SSL/TLS."), false);?>
+					<?php html_checkbox("auth", gtext("Authentication"), !empty($pconfig['auth']) ? true : false, gtext("Enable SMTP authentication."), "", false, "auth_change()");?>
+					<?php html_inputbox("username", gtext("Username"), $pconfig['username'], "", true, 40);?>
+					<?php html_passwordconfbox("password", "passwordconf", gtext("Password"), $pconfig['password'], $pconfig['passwordconf'], "", true);?>
+					<?php html_combobox("authmethod", gtext("Authentication method"), $pconfig['authmethod'], array("plain" => gtext("Plain-text"), "cram-md5" => "Cram-MD5", "digest-md5" => "Digest-MD5", "gssapi" => "GSSAPI", "external" => "External", "login" => gtext("Login"), "ntlm" => "NTLM", "on" => gtext("Best available")), "", true);?>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save");?>" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save");?>" />
 					<input name="Submit" id="sendnow" type="submit" class="formbtn" value="<?=$sendtestemailbuttonvalue;?>" />
 			  </div>
 			  <?php include("formend.inc");?>

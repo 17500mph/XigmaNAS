@@ -37,14 +37,14 @@ $pgperm['allowuser'] = TRUE;
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Help"), gettext("Release Notes"));
+$pgtitle = array(gtext("Help"), gtext("Release Notes"));
 ?>
 <?php include("fbegin.inc");?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabcont">
 			<table width="100%" border="0" cellspacing="0" cellpadding="0">
-				<?php html_titleline(gettext("Release Notes"));?>
+				<?php html_titleline(gtext("Release Notes"));?>
 				<tr>
 					<td class="listt">
 						<div>

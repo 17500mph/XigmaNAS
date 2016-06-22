@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Extract gettext and gettext_gen2 strings from source files and create new pot file.
+# Extract gettext and gtext strings from source files and create new pot file.
 #
 # Part of NAS4Free (http://www.nas4free.org).
 # Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
@@ -15,7 +15,7 @@ NAS4FREE_PRODUCTNAME=$(cat ${NAS4FREE_SVNDIR}/etc/prd.name)
 OUTPUT="$(echo ${NAS4FREE_PRODUCTNAME} | tr '[:upper:]' '[:lower:]').pot"
 OUTPUTDIR="${NAS4FREE_SVNDIR}/locale"
 PARAMETERS="--output-dir=${OUTPUTDIR} --output=${OUTPUT} --language=PHP \
---force-po --no-location --no-wrap --sort-output --omit-header --keyword="gettext_gen2""
+--force-po --no-location --no-wrap --sort-output --omit-header --keyword="gtext""
 
 cd ${NAS4FREE_SVNDIR}/www
 xgettext ${PARAMETERS} *.*

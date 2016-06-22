@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Services"), gettext("FTP"), gettext("Modules"));
+$pgtitle = array(gtext("Services"), gtext("FTP"), gtext("Modules"));
 
 $pconfig['mod_ban_enable'] = isset($config['ftpd']['mod_ban']['enable']);
 
@@ -103,8 +103,8 @@ function ftpd_mod_ban_process_updatenotification($mode, $data) {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabinact"><a href="services_ftp.php"><span><?=gettext("Settings");?></span></a></li>
-				<li class="tabact"><a href="services_ftp_mod.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Modules");?></span></a></li>
+				<li class="tabinact"><a href="services_ftp.php"><span><?=gtext("Settings");?></span></a></li>
+				<li class="tabact"><a href="services_ftp_mod.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Modules");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -114,15 +114,15 @@ function ftpd_mod_ban_process_updatenotification($mode, $data) {
 				<?php if (updatenotify_exists("ftpd_mod_ban")) print_config_change_box();?>
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline_checkbox("mod_ban_enable", gettext("Ban List"), !empty($pconfig['mod_ban_enable']) ? true : false, gettext("Enable"), "enable_change(false)");?>
+					<?php html_titleline_checkbox("mod_ban_enable", gtext("Ban List"), !empty($pconfig['mod_ban_enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
 					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gettext("Rules");?></td>
+						<td width="22%" valign="top" class="vncell"><?=gtext("Rules");?></td>
 						<td width="78%" class="vtable">
 							<table width="100%" border="0" cellpadding="0" cellspacing="0">
 								<tr>
-									<td width="30%" class="listhdrlr"><?=gettext("Event");?></td>
-									<td width="30%" class="listhdrr"><?=gettext("Frequency");?></td>
-									<td width="30%" class="listhdrr"><?=gettext("Expire");?></td>
+									<td width="30%" class="listhdrlr"><?=gtext("Event");?></td>
+									<td width="30%" class="listhdrr"><?=gtext("Frequency");?></td>
+									<td width="30%" class="listhdrr"><?=gtext("Expire");?></td>
 									<td width="10%" class="list"></td>
 								</tr>
 								<?php $i = 0; foreach ($a_rule as $rule):?>
@@ -133,8 +133,8 @@ function ftpd_mod_ban_process_updatenotification($mode, $data) {
 									<td class="listr"><?=htmlspecialchars($rule['expire']);?>&nbsp;</td>
 									<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 									<td valign="middle" nowrap="nowrap" class="list">
-										<a href="services_ftp_mod_ban_edit.php?uuid=<?=$rule['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit rule");?>" border="0" alt="<?=gettext("Edit rule");?>" /></a>
-										<a href="services_ftp_mod.php?act=del&amp;mod=mod_ban&amp;uuid=<?=$rule['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this rule?");?>')"><img src="images/delete.png" title="<?=gettext("Delete rule");?>" border="0" alt="<?=gettext("Delete rule");?>" /></a>
+										<a href="services_ftp_mod_ban_edit.php?uuid=<?=$rule['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit rule");?>" border="0" alt="<?=gtext("Edit rule");?>" /></a>
+										<a href="services_ftp_mod.php?act=del&amp;mod=mod_ban&amp;uuid=<?=$rule['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this rule?");?>')"><img src="images/delete.png" title="<?=gettext("Delete rule");?>" border="0" alt="<?=gtext("Delete rule");?>" /></a>
 									</td>
 									<?php else:?>
 									<td valign="middle" nowrap="nowrap" class="list">
@@ -146,21 +146,21 @@ function ftpd_mod_ban_process_updatenotification($mode, $data) {
 								<tr>
 									<td class="list" colspan="3"></td>
 									<td class="list">
-										<a href="services_ftp_mod_ban_edit.php"><img src="images/add.png" title="<?=gettext("Add rule");?>" border="0" alt="<?=gettext("Add rule");?>" /></a>
+										<a href="services_ftp_mod_ban_edit.php"><img src="images/add.png" title="<?=gettext("Add rule");?>" border="0" alt="<?=gtext("Add rule");?>" /></a>
 										<?php if (!empty($a_rule)):?>
-										<a href="services_ftp_mod.php?act=del&amp;mod=mod_ban&amp;uuid=all" onclick="return confirm('<?=gettext("Do you really want to delete all rules?");?>')"><img src="images/delete.png" title="<?=gettext("Delete all rules");?>" border="0" alt="<?=gettext("Delete all rules");?>" /></a>
+										<a href="services_ftp_mod.php?act=del&amp;mod=mod_ban&amp;uuid=all" onclick="return confirm('<?=gettext("Do you really want to delete all rules?");?>')"><img src="images/delete.png" title="<?=gettext("Delete all rules");?>" border="0" alt="<?=gtext("Delete all rules");?>" /></a>
 										<?php endif;?>
 									</td>
 								</tr>
 							</table>
 							<div id="remarks">
-								<?php html_remark("note", "", gettext("The module provides automatic bans that are triggered based on configurable criteria. A ban prevents the banned user, host, or class from logging into the server, it does not prevent the banned user, host, or class from connecting to the server."));?>
+								<?php html_remark("note", "", gtext("The module provides automatic bans that are triggered based on configurable criteria. A ban prevents the banned user, host, or class from logging into the server, it does not prevent the banned user, host, or class from connecting to the server."));?>
 							</div>
 						</td>
 					</tr>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" />
 				</div>
 				<?php include("formend.inc");?>
 			</form>

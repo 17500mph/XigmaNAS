@@ -52,7 +52,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Services"), gettext("Unison"));
+$pgtitle = array(gtext("Services"), gtext("Unison"));
 
 if (!isset($config['unison']) || !is_array($config['unison']))
 	$config['unison'] = array();
@@ -71,13 +71,13 @@ if ($_POST) {
 
 	if (isset($_POST['enable']) && $_POST['enable']) {
 		$reqdfields = array_merge($reqdfields, explode(" ", "workdir"));
-		$reqdfieldsn = array_merge($reqdfieldsn, array(gettext("Working directory")));
+		$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Working directory")));
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 		// Check if working directory exists
 		if (empty($_POST['mkdir']) && !file_exists($_POST['workdir'])) {
-			$input_errors[] = gettext("The working directory does not exist.");
+			$input_errors[] = gtext("The working directory does not exist.");
 		}
 	}
 
@@ -122,12 +122,12 @@ function enable_change(enable_change) {
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>	    
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline_checkbox("enable", gettext("Unison File Synchronisation"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "enable_change(false)");?>
-					<?php html_filechooser("workdir", gettext("Working directory"), $pconfig['workdir'], sprintf(gettext("Location where the working files will be stored, e.g. %s/backup/.unison"), $g['media_path']), $g['media_path'], true, 60);?>
-				  <?php html_checkbox("mkdir", "", !empty($pconfig['mkdir']) ? true : false, gettext("Create work directory if it doesn't exist."), "", false);?>
+					<?php html_titleline_checkbox("enable", gtext("Unison File Synchronisation"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
+					<?php html_filechooser("workdir", gtext("Working directory"), $pconfig['workdir'], sprintf(gtext("Location where the working files will be stored, e.g. %s/backup/.unison"), $g['media_path']), $g['media_path'], true, 60);?>
+				  <?php html_checkbox("mkdir", "", !empty($pconfig['mkdir']) ? true : false, gtext("Create work directory if it doesn't exist."), "", false);?>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save and Restart");?>" onclick="enable_change(true)" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save and Restart");?>" onclick="enable_change(true)" />
 				</div>
 				<div id="remarks">
 					<?php html_remark("note", gettext("Note"), sprintf(gettext("<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a href='%s'>user</a> must have shell access."), "services_sshd.php", "access_users.php"));?>

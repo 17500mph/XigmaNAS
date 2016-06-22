@@ -721,7 +721,7 @@ function get_gmirror_disks_list()
 			$disklist[$diskname]['devicespecialfile'] = "/dev/mirror/" . $diskname;
 			$disklist[$diskname]['type'] = "gmirror";
 			$disklist[$diskname]['desc'] = "Software RAID";
-			$disklist[$diskname]['state'] = gettext("Unknown");
+			$disklist[$diskname]['state'] = gtext("Unknown");
 
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
@@ -791,7 +791,7 @@ function get_gconcat_disks_list()
 			$disklist[$diskname]['devicespecialfile'] = "/dev/concat/" . $diskname;
 			$disklist[$diskname]['type'] = "gconcat";
 			$disklist[$diskname]['desc'] = "Software RAID";
-			$disklist[$diskname]['state'] = gettext("Unknown");
+			$disklist[$diskname]['state'] = gtext("Unknown");
 
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
@@ -850,7 +850,7 @@ function get_gstripe_disks_list()
 			$disklist[$diskname]['devicespecialfile'] = "/dev/stripe/" . $diskname;
 			$disklist[$diskname]['type'] = "gstripe";
 			$disklist[$diskname]['desc'] = "Software RAID";
-			$disklist[$diskname]['state'] = gettext("Unknown");
+			$disklist[$diskname]['state'] = gtext("Unknown");
 
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
@@ -909,7 +909,7 @@ function get_graid5_disks_list()
 			$disklist[$diskname]['devicespecialfile'] = "/dev/raid5/" . $diskname;
 			$disklist[$diskname]['type'] = "graid5";
 			$disklist[$diskname]['desc'] = "Software RAID";
-			$disklist[$diskname]['state'] = gettext("Unknown");
+			$disklist[$diskname]['state'] = gtext("Unknown");
 
 			/* Get diskinfo to get disk size */
 			$diskinfo = disks_get_diskinfo($disklist[$diskname]['devicespecialfile']);
@@ -962,8 +962,8 @@ function get_hast_disks_list()
 			$disklist[$diskname]['type'] = "HAST";
 			$disklist[$diskname]['model'] = "HAST device";
 			$disklist[$diskname]['desc'] = "HAST device";
-			$disklist[$diskname]['role'] = gettext("Unknown");
-			$disklist[$diskname]['status'] = gettext("Unknown");
+			$disklist[$diskname]['role'] = gtext("Unknown");
+			$disklist[$diskname]['status'] = gtext("Unknown");
 			$disklist[$diskname]['localpath'] = '';
 		} else if (preg_match("/^\s+role:\s+(.+)$/",$line,$match)) {
 			$role = trim($match[1]);
@@ -1085,7 +1085,7 @@ function parse_camcontrol_info($devtype){
 
 					// Get diskinfo to get disk size
 					$diskinfo = disks_get_diskinfo($devlist["$device[0]$device[1]"]['devicespecialfile']);
-					$devlist["$device[0]$device[1]"]['size'] = isset($diskinfo['mediasize_mbytes']) ? $diskinfo['mediasize_mbytes'] . "MB" : gettext('Unknown');					
+					$devlist["$device[0]$device[1]"]['size'] = isset($diskinfo['mediasize_mbytes']) ? $diskinfo['mediasize_mbytes'] . "MB" : gtext('Unknown');					
 
 					$devlist["$device[0]$device[1]"]['controller'] = $controller[0];
 					$devlist["$device[0]$device[1]"]['controller_id'] = $controller[1];
@@ -2088,7 +2088,7 @@ function get_fstype_shortdesc($fstype) {
 
 	switch($fstype) {
 		case "":
-			$shortdesc = gettext("Unformated");
+			$shortdesc = gtext("Unformated");
 			break;
 		case "ufs":
 		case "ufs_no_su":
@@ -2121,10 +2121,10 @@ function get_fstype_shortdesc($fstype) {
 			$shortdesc = "gvinum";
 			break;
 		case "softraid":
-			$shortdesc = gettext("SoftRaid");
+			$shortdesc = gtext("SoftRaid");
 			break;
 		case "geli":
-			$shortdesc = gettext("Encrypted");
+			$shortdesc = gtext("Encrypted");
 			break;
 		case "ext2":
 			$shortdesc = "EXT2";
@@ -2925,7 +2925,7 @@ function decrypt_aes256cbc($password, $b64enc_data)
 	return $dec;
 }
 
-function gettext_gen2($data) {
-	return htmlentities(strip_tags(gettext($data)));
+function gtext($data) {
+	return htmlspecialchars(gettext($data), ENT_QUOTES);
 }
 ?>

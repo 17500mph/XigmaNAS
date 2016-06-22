@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Services"), gettext("HAST"), gettext("Resources"));
+$pgtitle = array(gtext("Services"), gtext("HAST"), gtext("Resources"));
 
 if ($_POST) {
 	$pconfig = $_POST;
@@ -92,9 +92,9 @@ function hastresource_process_updatenotification($mode, $data) {
   <tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-	<li class="tabinact"><a href="services_hast.php"><span><?=gettext("Settings");?></span></a></li>
-	<li class="tabact"><a href="services_hast_resource.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Resources");?></span></a></li>
-	<li class="tabinact"><a href="services_hast_info.php"><span><?=gettext("Information");?></span></a></li>
+	<li class="tabinact"><a href="services_hast.php"><span><?=gtext("Settings");?></span></a></li>
+	<li class="tabact"><a href="services_hast_resource.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Resources");?></span></a></li>
+	<li class="tabinact"><a href="services_hast_info.php"><span><?=gtext("Information");?></span></a></li>
       </ul>
     </td>
   </tr>
@@ -105,12 +105,12 @@ function hastresource_process_updatenotification($mode, $data) {
 	<?php if (updatenotify_exists("hastresource")) print_config_change_box();?>
 	<table width="100%" border="0" cellpadding="0" cellspacing="0">
 	  <tr>
-	    <td width="12%" class="listhdrlr"><?=gettext("Resource");?></td>
-	    <td width="10%" class="listhdrr"><?=gettext("Role");?></td>
-	    <td width="10%" class="listhdrr"><?=gettext("Status");?></td>
-	    <td width="20%" class="listhdrr"><?=gettext("Node Name");?></td>
-	    <td width="22%" class="listhdrr"><?=gettext("Path");?></td>
-	    <td width="20%" class="listhdrr"><?=gettext("IP Address");?></td>
+	    <td width="12%" class="listhdrlr"><?=gtext("Resource");?></td>
+	    <td width="10%" class="listhdrr"><?=gtext("Role");?></td>
+	    <td width="10%" class="listhdrr"><?=gtext("Status");?></td>
+	    <td width="20%" class="listhdrr"><?=gtext("Node Name");?></td>
+	    <td width="22%" class="listhdrr"><?=gtext("Path");?></td>
+	    <td width="20%" class="listhdrr"><?=gtext("IP Address");?></td>
 	    <td width="6%" class="list"></td>
 	  </tr>
 	  <?php foreach ($a_resource as $resourcev):?>
@@ -126,8 +126,8 @@ function hastresource_process_updatenotification($mode, $data) {
 
 	    <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 	    <td valign="middle" nowrap="nowrap" class="list">
-	      <a href="services_hast_resource_edit.php?uuid=<?=$resourcev['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit resource");?>" border="0" alt="<?=gettext("Edit resource");?>" /></a>
-	      <a href="services_hast_resource.php?act=del&amp;uuid=<?=$resourcev['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this resource?");?>')"><img src="images/delete.png" title="<?=gettext("Delete resource");?>" border="0" alt="<?=gettext("Delete resource");?>" /></a>
+	      <a href="services_hast_resource_edit.php?uuid=<?=$resourcev['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit resource");?>" border="0" alt="<?=gtext("Edit resource");?>" /></a>
+	      <a href="services_hast_resource.php?act=del&amp;uuid=<?=$resourcev['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this resource?");?>')"><img src="images/delete.png" title="<?=gettext("Delete resource");?>" border="0" alt="<?=gtext("Delete resource");?>" /></a>
 	    </td>
 	    <?php else:?>
 	    <td valign="middle" nowrap="nowrap" class="list">
@@ -138,11 +138,11 @@ function hastresource_process_updatenotification($mode, $data) {
 	  <?php endforeach;?>
 	  <tr>
 	    <td class="list" colspan="6"></td>
-	    <td class="list"><a href="services_hast_resource_edit.php"><img src="images/add.png" title="<?=gettext("Add resource");?>" border="0" alt="<?=gettext("Add resource");?>" /></a></td>
+	    <td class="list"><a href="services_hast_resource_edit.php"><img src="images/add.png" title="<?=gettext("Add resource");?>" border="0" alt="<?=gtext("Add resource");?>" /></a></td>
 	  </tr>
 	</table>
 	<div id="submit">
-	  <input id="reload" name="reload" type="submit" class="formbtn" value="<?php echo gettext("Reload page"); ?>" />
+	  <input id="reload" name="reload" type="submit" class="formbtn" value="<?php echo gtext("Reload page"); ?>" />
 	</div>
 	<?php include("formend.inc");?>
       </form>

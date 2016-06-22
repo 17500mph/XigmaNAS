@@ -62,12 +62,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			}
 		}
 
-		write_log(gettext("Authentication error for illegal user : {$_POST['username']} from {$_SERVER['REMOTE_ADDR']}"));
+		write_log(gtext("Authentication error for illegal user : {$_POST['username']} from {$_SERVER['REMOTE_ADDR']}"));
 		$input_errors = gettext("Invalid username or password.</br> Please try again.");
 	}
 	else {
-		write_log(gettext('Username contains invalid character(s) : '.escapeshellarg(escapeshellcmd( htmlspecialchars($_POST['username'],ENT_QUOTES))).' from '.$_SERVER['REMOTE_ADDR']));		
-		$input_errors = gettext('Username field : '.htmlspecialchars($_POST['username']).' contains illegal characters.');
+		write_log(gtext('Username contains invalid character(s) : '.escapeshellarg(escapeshellcmd( htmlspecialchars($_POST['username'],ENT_QUOTES))).' from '.$_SERVER['REMOTE_ADDR']));		
+		$input_errors = gtext('Username field : '.htmlspecialchars($_POST['username']).' contains illegal characters.');
 	}
 }
 ?>
@@ -84,22 +84,22 @@ function genhtmltitle($title) {
 
 // Menu items.
 // Info and Manual
-$menu['info']['desc'] = gettext("Information & Manuals");
+$menu['info']['desc'] = gtext("Information & Manuals");
 $menu['info']['visible'] = TRUE;
 $menu['info']['link'] = "http://wiki.nas4free.org/";
 $menu['info']['menuitem']['visible'] = FALSE;
 // Forum
-$menu['forum']['desc'] = gettext("Forum");
+$menu['forum']['desc'] = gtext("Forum");
 $menu['forum']['link'] = "http://forums.nas4free.org";
 $menu['forum']['visible'] = TRUE;
 $menu['forum']['menuitem']['visible'] = FALSE;
 // IRC
-$menu['irc']['desc'] = gettext("IRC NAS4Free");
+$menu['irc']['desc'] = gtext("IRC NAS4Free");
 $menu['irc']['visible'] = TRUE;
 $menu['irc']['link'] = "http://webchat.freenode.net/?channels=#nas4free";
 $menu['irc']['menuitem']['visible'] = FALSE;
 // Donate
-$menu['donate']['desc'] = gettext("Donate");
+$menu['donate']['desc'] = gtext("Donate");
 $menu['donate']['visible'] = TRUE;
 $menu['donate']['link'] = "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40nas4free%2eorg&lc=US&item_name=NAS4Free%20Project&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest";
 $menu['donate']['menuitem']['visible'] = FALSE;
@@ -195,9 +195,9 @@ window.onload=function() {
 	</span></h1>
         <div class="loginwrapperinner">
             <form id="loginform" action="" method="post" name="loginform">
-                <p class="allocate"><input type="text" id="username" name="username" onFocus="value=''" placeholder="<?=gettext("Username");?>" value="<?=gettext("Username");?>"></p>
-                <p class="allocate"><input type="password" id="password" name="password" onFocus="value=''" placeholder="<?=gettext("Password");?>" value="password"></p>
-                <p class="allocate"><input class="btn formbtn" type="submit" value="<?=gettext("Login");?>" /></p>
+                <p class="allocate"><input type="text" id="username" name="username" onFocus="value=''" placeholder="<?=gettext("Username");?>" value="<?=gtext("Username");?>"></p>
+                <p class="allocate"><input type="password" id="password" name="password" onFocus="value=''" placeholder="<?=gtext("Password");?>" value="password"></p>
+                <p class="allocate"><input class="btn formbtn" type="submit" value="<?=gtext("Login");?>" /></p>
             </form>
             </div>
              <br>
@@ -210,7 +210,7 @@ window.onload=function() {
 		<!-- Begin extension section -->
 		<?php if (Session::isAdmin() && is_dir("{$g['www_path']}/ext")):?>
 		<li>
-			<a href="index.php" onmouseover="mopen('extensions')" onmouseout="mclosetime()"><?=gettext("Extensions");?></a>
+			<a href="index.php" onmouseover="mopen('extensions')" onmouseout="mclosetime()"><?=gtext("Extensions");?></a>
 			<div id="extensions" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
 				<?php
 				$dh = @opendir("{$g['www_path']}/ext");

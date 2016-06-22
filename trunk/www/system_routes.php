@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Network"), gettext("Static Routes"));
+$pgtitle = array(gtext("Network"), gtext("Static Routes"));
 
 if ($_POST) {
 	$pconfig = $_POST;
@@ -94,12 +94,12 @@ function routes_process_updatenotification($mode, $data) {
 				<?php if (!empty($savemsg)) print_info_box($savemsg); ?>
 				<?php if (updatenotify_exists("routes")) print_config_change_box();?>
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-				<?php html_titleline2(gettext_gen2('Static Routes'), 5);?>
+				<?php html_titleline2(gtext('Static Routes'), 5);?>
 					<tr>
-						<td width="15%" class="listhdrlr"><?=gettext("Interface");?></td>
-						<td width="25%" class="listhdrr"><?=gettext("Network");?></td>
-						<td width="20%" class="listhdrr"><?=gettext("Gateway");?></td>
-						<td width="30%" class="listhdrr"><?=gettext("Description");?></td>
+						<td width="15%" class="listhdrlr"><?=gtext("Interface");?></td>
+						<td width="25%" class="listhdrr"><?=gtext("Network");?></td>
+						<td width="20%" class="listhdrr"><?=gtext("Gateway");?></td>
+						<td width="30%" class="listhdrr"><?=gtext("Description");?></td>
 						<td width="10%" class="list"></td>
 					</tr>
 					<?php foreach ($a_routes as $route):?>
@@ -117,8 +117,8 @@ function routes_process_updatenotification($mode, $data) {
 	          <td class="listbg"><?=htmlspecialchars($route['descr']);?>&nbsp;</td>
 	          <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 	          <td valign="middle" nowrap="nowrap" class="list">
-							<a href="system_routes_edit.php?uuid=<?=$route['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit Route");?>" border="0" alt="<?=gettext("Edit Route");?>" /></a>
-	          	<a href="system_routes.php?act=del&amp;uuid=<?=$route['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this route?");?>')"><img src="images/delete.png" title="<?=gettext("Delete Route");?>" border="0" alt="<?=gettext("Delete Route");?>" /></a>
+							<a href="system_routes_edit.php?uuid=<?=$route['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit Route");?>" border="0" alt="<?=gtext("Edit Route");?>" /></a>
+	          	<a href="system_routes.php?act=del&amp;uuid=<?=$route['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this route?");?>')"><img src="images/delete.png" title="<?=gettext("Delete Route");?>" border="0" alt="<?=gtext("Delete Route");?>" /></a>
 						</td>
 						<?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
@@ -130,7 +130,7 @@ function routes_process_updatenotification($mode, $data) {
 					<tr>
 						<td class="list" colspan="4"></td>
 						<td class="list">
-							<a href="system_routes_edit.php"><img src="images/add.png" title="<?=gettext("Add Route");?>" border="0" alt="<?=gettext("Add Route");?>" /></a>
+							<a href="system_routes_edit.php"><img src="images/add.png" title="<?=gettext("Add Route");?>" border="0" alt="<?=gtext("Add Route");?>" /></a>
 						</td>
 					</tr>
 				</table>

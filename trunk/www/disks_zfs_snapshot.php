@@ -50,15 +50,15 @@ $sphere_record = [];
 $checkbox_member_name = 'checkbox_member_array';
 $checkbox_member_array = [];
 $checkbox_member_record = [];
-$gt_record_add = gettext('Add Snapshot');
-$gt_record_mod = gettext('Edit Snapshot');
-$gt_record_del = gettext('Snapshot is marked for deletion');
-$gt_record_loc = gettext('Snapshot is locked');
-$gt_record_unl = gettext('Snapshot is unlocked');
-$gt_record_mai = gettext('Maintenance');
-$gt_record_inf = gettext('Information');
-$gt_selection_delete = gettext('Delete Selected Snapshots');
-$gt_selection_delete_confirm = gettext('Do you want to delete selected snapshots?');
+$gt_record_add = gtext('Add Snapshot');
+$gt_record_mod = gtext('Edit Snapshot');
+$gt_record_del = gtext('Snapshot is marked for deletion');
+$gt_record_loc = gtext('Snapshot is locked');
+$gt_record_unl = gtext('Snapshot is unlocked');
+$gt_record_mai = gtext('Maintenance');
+$gt_record_inf = gtext('Information');
+$gt_selection_delete = gtext('Delete Selected Snapshots');
+$gt_selection_delete_confirm = gtext('Do you want to delete selected snapshots?');
 $img_path = [
 	'add' => 'images/add.png',
 	'mod' => 'images/edit.png',
@@ -109,13 +109,13 @@ if (isset($_SESSION['filter_time'])) {
 	$filter_time = '1week';
 }
 $l_filter_time = [
-	    '1week' => sprintf(gettext('%d week'), 1),
-	    '2weeks' => sprintf(gettext('%d weeks'), 2),
-	    '30days' => sprintf(gettext('%d days'), 30),
-	    '60days' => sprintf(gettext('%d days'), 60),
-	    '90days' => sprintf(gettext('%d days'), 90),
-	    '180days' => sprintf(gettext('%d days'), 180),
-	    '0' => gettext('All')
+	    '1week' => sprintf(gtext('%d week'), 1),
+	    '2weeks' => sprintf(gtext('%d weeks'), 2),
+	    '30days' => sprintf(gtext('%d days'), 30),
+	    '60days' => sprintf(gtext('%d days'), 60),
+	    '90days' => sprintf(gtext('%d days'), 90),
+	    '180days' => sprintf(gtext('%d days'), 180),
+	    '0' => gtext('All')
 ];
 
 function get_zfs_snapshots_filter($snapshots, $filter) {
@@ -207,7 +207,7 @@ function zfssnapshot_process_updatenotification($mode, $data) {
 	}
 	return $ret;
 }
-$pgtitle = [gettext('Disks'), gettext('ZFS'), gettext('Snapshots'), gettext('Snapshot')];
+$pgtitle = [gtext('Disks'), gtext('ZFS'), gtext('Snapshots'), gtext('Snapshot')];
 ?>
 <?php include("fbegin.inc");?>
 <script type="text/javascript">
@@ -270,21 +270,21 @@ function controlactionbuttons(ego, triggerbyname) {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gettext('Pools');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gettext('Datasets');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gettext('Volumes');?></span></a></li>
-				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gettext('Reload page');?>"><span><?=gettext('Snapshots');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gettext('Configuration');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Pools');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext('Volumes');?></span></a></li>
+				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gettext('Reload page');?>"><span><?=gtext('Snapshots');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav2">
-				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gettext('Reload page');?>"><span><?=gettext('Snapshot');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot_clone.php"><span><?=gettext('Clone');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot_auto.php"><span><?=gettext('Auto Snapshot');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot_info.php"><span><?=gettext('Information');?></span></a></li>
+				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gettext('Reload page');?>"><span><?=gtext('Snapshot');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_snapshot_clone.php"><span><?=gtext('Clone');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_snapshot_auto.php"><span><?=gtext('Auto Snapshot');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_snapshot_info.php"><span><?=gtext('Information');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -307,16 +307,16 @@ function controlactionbuttons(ego, triggerbyname) {
 			<col id="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gettext('Filter'));?>
+			<?php html_titleline2(gtext('Filter'));?>
 		</thead>
 		<tbody>
 			<?php>
-				html_combobox2('filter_time', gettext('Age'), $filter_time, $l_filter_time, '');
+				html_combobox2('filter_time', gtext('Age'), $filter_time, $l_filter_time, '');
 			?>
 		</tbody>
 	</table>
 	<div id="submit">
-		<input type="submit" class="formbtn" id="filter" name="filter" value="<?=gettext('Apply Filter');?>"/>
+		<input type="submit" class="formbtn" id="filter" name="filter" value="<?=gtext('Apply Filter');?>"/>
 	</div>
 	<table id="area_data_selection">
 		<colgroup>
@@ -330,15 +330,15 @@ function controlactionbuttons(ego, triggerbyname) {
 		<thead>
 			<?php
 				html_separator2();
-				html_titleline2(gettext('Overview'), 6);
+				html_titleline2(gtext('Overview'), 6);
 			?>
 			<tr>
-				<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gettext('Invert Selection');?>"/></th>
-				<th class="lhell"><?=sprintf('%1$s (%2$d/%3$d)', gettext('Path'), count($sphere_array), count($a_snapshot));?></th>
-				<th class="lhell"><?=gettext('Name');?></th>
-				<th class="lhell"><?=gettext('Used');?></th>
-				<th class="lhell"><?=gettext('Create Date');?></th>
-				<th class="lhebl"><?=gettext('Toolbox');?></th>
+				<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></th>
+				<th class="lhell"><?=sprintf('%1$s (%2$d/%3$d)', gtext('Path'), count($sphere_array), count($a_snapshot));?></th>
+				<th class="lhell"><?=gtext('Name');?></th>
+				<th class="lhell"><?=gtext('Used');?></th>
+				<th class="lhell"><?=gtext('Create Date');?></th>
+				<th class="lhebl"><?=gtext('Toolbox');?></th>
 			</tr>
 		</thead>
 		<tfoot>
@@ -382,9 +382,9 @@ function controlactionbuttons(ego, triggerbyname) {
 									<a href="<?=$sphere_scriptname_child;?>?snapshot=<?=urlencode($sphere_record['snapshot']);?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
 								<?php else:?>
 									<?php if ($notprotected):?>
-										<img src="<?=$img_path['del'];?>" title="<?=gettext($gt_record_del);?>" alt="<?=gettext($gt_record_del);?>"/>
+										<img src="<?=$img_path['del'];?>" title="<?=gettext($gt_record_del);?>" alt="<?=gtext($gt_record_del);?>"/>
 									<?php else:?>
-										<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gettext($gt_record_loc);?>"/>
+										<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gtext($gt_record_loc);?>"/>
 									<?php endif;?>
 								<?php endif;?>
 							</td>

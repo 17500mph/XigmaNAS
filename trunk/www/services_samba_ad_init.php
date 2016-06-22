@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Services"), gettext("Samba AD"), gettext("Initialize"));
+$pgtitle = array(gtext("Services"), gtext("Samba AD"), gtext("Initialize"));
 
 $errormsg="";
 $do_init = false;
@@ -47,7 +47,7 @@ if (preg_match('/^([^\.]+)\./', $pconfig['dns_domain'], $m)) {
 	$pconfig['netbios_domain'] = strtoupper($m[1]);
 } else {
 	$pconfig['netbios_domain'] = strtoupper($pconfig['dns_domain']);
-	$errormsg .= gettext("Domain have no 2nd level name.");
+	$errormsg .= gtext("Domain have no 2nd level name.");
 	$errormsg .= "<br/>";
 }
 $pconfig['path'] = "";
@@ -58,20 +58,20 @@ $hostname = $config['system']['hostname'];
 $netbiosname = strtoupper($config['system']['hostname']);
 
 if ($config['interfaces']['lan']['ipaddr'] == "dhcp") {
-	$errormsg .= gettext("Cannot use DHCP for LAN interface.");
+	$errormsg .= gtext("Cannot use DHCP for LAN interface.");
 	$errormsg .= "<br/>";
 }
 if ((!empty($config['system']['dnsserver']) && $config['system']['dnsserver'][0] == "")
    && (!empty($config['system']['ipv6dnsserver']) && $config['system']['ipv6dnsserver'][0] == "")) {
-	$errormsg .= gettext("DNS server is empty.");
+	$errormsg .= gtext("DNS server is empty.");
 	$errormsg .= "<br/>";
 }
 if (!isset($config['system']['ntp']['enable'])) {
-	$errormsg .= gettext("NTP is not enabled.");
+	$errormsg .= gtext("NTP is not enabled.");
 	$errormsg .= "<br/>";
 }
 if (isset($config['samba']['enable'])) {
-	$errormsg .= gettext("CIFS/SMB is enabled.");
+	$errormsg .= gtext("CIFS/SMB is enabled.");
 	$errormsg .= "<br/>";
 }
 
@@ -83,17 +83,17 @@ if ($_POST) {
 	$pconfig = $_POST;
 
 	if (!file_exists($_POST['path'])) {
-		$input_errors[] = gettext("Not found path.");
+		$input_errors[] = gtext("Not found path.");
 	} else if (file_exists($_POST['path']."/sysvol")) {
-		$input_errors[] = gettext("sysvol exist in path.");
+		$input_errors[] = gtext("sysvol exist in path.");
 	}
 	if ($_POST['password'] != $_POST['password_confirm']) {
-		$input_errors[] = gettext("The confirmed password does not match. Please ensure the passwords match exactly.");
+		$input_errors[] = gtext("The confirmed password does not match. Please ensure the passwords match exactly.");
 	} else if ($_POST['password'] == "") {
-		//$input_errors[] = gettext("The admin password is empty.");
+		//$input_errors[] = gtext("The admin password is empty.");
 	}
 	if ($_POST['dns_forwarder'] == "") {
-		$input_errors[] = gettext("DNS server is empty.");
+		$input_errors[] = gtext("DNS server is empty.");
 	}
 
 	if (empty($input_errors)) {
@@ -147,7 +147,7 @@ if ($_POST) {
 		}
 		if (file_exists("/var/etc/smb4.conf")) {
 			if (unlink("/var/etc/smb4.conf") == FALSE) {
-				$input_errors[] = sprintf(gettext("Failed to remove: %s"), "/var/etc/smb4.conf");
+				$input_errors[] = sprintf(gtext("Failed to remove: %s"), "/var/etc/smb4.conf");
 			}
 		}
 	}
@@ -173,8 +173,8 @@ $(document).ready(function(){
   <tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-	<li class="tabinact"><a href="services_samba_ad.php"><span><?=gettext("Settings");?></span></a></li>
-	<li class="tabact"><a href="services_samba_ad_init.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Initialize");?></span></a></li>
+	<li class="tabinact"><a href="services_samba_ad.php"><span><?=gtext("Settings");?></span></a></li>
+	<li class="tabact"><a href="services_samba_ad_init.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Initialize");?></span></a></li>
       </ul>
     </td>
   </tr>
@@ -185,28 +185,28 @@ $(document).ready(function(){
 	<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 	<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 	<table width="100%" border="0" cellpadding="6" cellspacing="0">
-	<?php html_titleline(gettext("Samba Active Directory Domain Controller"));?>
-	<?php html_text("hostname", gettext("Hostname"), htmlspecialchars($hostname));?>
-	<?php html_text("netniosname", gettext("NetBIOS name"), htmlspecialchars($netbiosname));?>
-	<?php html_inputbox("dns_forwarder", gettext("DNS forwarder"), $pconfig['dns_forwarder'], "", true, 40);?>
-	<?php html_inputbox("dns_domain", gettext("DNS domain"), $pconfig['dns_domain'], "", true, 40);?>
-	<?php html_inputbox("netbios_domain", gettext("NetBIOS domain"), $pconfig['netbios_domain'], "", true, 40);?>
-	<?php //html_text("realm", gettext("Kerberos realm"), htmlspecialchars($realm));?>
-	<?php html_passwordconfbox("password", "password_confirm", gettext("Admin password"), "", "", gettext("Generate password if leave empty."), true);?>
-	<?php html_filechooser("path", gettext("Path"), $pconfig['path'], sprintf(gettext("Permanent samba data path (e.g. %s)."), "/mnt/data/samba4"), $g['media_path'], true);?>
-	<?php html_combobox("fstype", gettext("Fileserver"), $pconfig['fstype'], array("s3fs" => "s3fs", "ntvfs" => "ntvfs"), "", true);?>
-	<?php html_checkbox("user_shares", gettext("User shares"), !empty($pconfig['user_shares']) ? true : false, gettext("Append user defined shares"), "", false);?>
+	<?php html_titleline(gtext("Samba Active Directory Domain Controller"));?>
+	<?php html_text("hostname", gtext("Hostname"), htmlspecialchars($hostname));?>
+	<?php html_text("netniosname", gtext("NetBIOS name"), htmlspecialchars($netbiosname));?>
+	<?php html_inputbox("dns_forwarder", gtext("DNS forwarder"), $pconfig['dns_forwarder'], "", true, 40);?>
+	<?php html_inputbox("dns_domain", gtext("DNS domain"), $pconfig['dns_domain'], "", true, 40);?>
+	<?php html_inputbox("netbios_domain", gtext("NetBIOS domain"), $pconfig['netbios_domain'], "", true, 40);?>
+	<?php //html_text("realm", gtext("Kerberos realm"), htmlspecialchars($realm));?>
+	<?php html_passwordconfbox("password", "password_confirm", gtext("Admin password"), "", "", gtext("Generate password if leave empty."), true);?>
+	<?php html_filechooser("path", gtext("Path"), $pconfig['path'], sprintf(gtext("Permanent samba data path (e.g. %s)."), "/mnt/data/samba4"), $g['media_path'], true);?>
+	<?php html_combobox("fstype", gtext("Fileserver"), $pconfig['fstype'], array("s3fs" => "s3fs", "ntvfs" => "ntvfs"), "", true);?>
+	<?php html_checkbox("user_shares", gtext("User shares"), !empty($pconfig['user_shares']) ? true : false, gtext("Append user defined shares"), "", false);?>
 	</table>
 	<div id="submit">
-	  <input name="Submit" type="submit" class="formbtn" value="<?=gettext("Initialize");?>" />
+	  <input name="Submit" type="submit" class="formbtn" value="<?=gtext("Initialize");?>" />
 	</div>
 	<?php if ($do_init) {
-		echo(sprintf("<div id='cmdoutput'>%s</div>", gettext("Command output:")));
+		echo(sprintf("<div id='cmdoutput'>%s</div>", gtext("Command output:")));
 		echo('<pre class="cmdoutput">');
 		ob_end_flush();
 		$cmd .= " ".implode(" ", $cmdargs);
 		//echo "$cmd\n";
-		echo gettext("Initializing...")."\n";
+		echo gtext("Initializing...")."\n";
 /*
 		mwexec2("$cmd 2>&1", $rawdata, $result);
 		foreach ($rawdata as $line) {

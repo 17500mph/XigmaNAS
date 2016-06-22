@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("System"), gettext("Advanced"), gettext("Swap"));
+$pgtitle = array(gtext("System"), gtext("Advanced"), gtext("Swap"));
 
 $pconfig['enable'] = isset($config['system']['swap']['enable']);
 $pconfig['type'] = $config['system']['swap']['type'];
@@ -47,7 +47,7 @@ $pconfig['size'] = !empty($config['system']['swap']['size']) ? $config['system']
 //	$swapdevice = trim(file_get_contents("{$g['etc_path']}/swapdevice"));
 //if (empty($_POST) && (empty($pconfig['enable']) || $pconfig['enable'] === false)) {
 //	if ($swapdevice != "NONE")
-//		$infomsg = sprintf("%s (%s)", gettext("This server uses default swap."), $swapdevice);
+//		$infomsg = sprintf("%s (%s)", gtext("This server uses default swap."), $swapdevice);
 //}
 
 if ($_POST) {
@@ -56,16 +56,16 @@ if ($_POST) {
 
 	if (isset($_POST['enable'])) {
 		$reqdfields = explode(" ", "type");
-		$reqdfieldsn = array(gettext("Type"));
+		$reqdfieldsn = array(gtext("Type"));
 		$reqdfieldst = explode(" ", "string");
 
 		if ("device" === $_POST['type']) {
 			$reqdfields = array_merge($reqdfields, explode(" ", "devicespecialfile"));
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gettext("Device")));
+			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Device")));
 			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "string"));
 		} else {
 			$reqdfields = array_merge($reqdfields, explode(" ", "mountpoint size"));
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gettext("Mount point"), gettext("Size")));
+			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Mount point"), gtext("Size")));
 			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "string numeric"));
 		}
 
@@ -126,14 +126,14 @@ function type_change() {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabinact"><a href="system_advanced.php"><span><?=gettext("Advanced");?></span></a></li>
-				<li class="tabinact"><a href="system_email.php"><span><?=gettext("Email");?></span></a></li>
-				<li class="tabact"><a href="system_swap.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Swap");?></span></a></li>
-				<li class="tabinact"><a href="system_rc.php"><span><?=gettext("Command Scripts");?></span></a></li>
-				<li class="tabinact"><a href="system_cron.php"><span><?=gettext("Cron");?></span></a></li>
-				<li class="tabinact"><a href="system_loaderconf.php"><span><?=gettext("loader.conf");?></span></a></li>
-				<li class="tabinact"><a href="system_rcconf.php"><span><?=gettext("rc.conf");?></span></a></li>
-				<li class="tabinact"><a href="system_sysctl.php"><span><?=gettext("sysctl.conf");?></span></a></li>
+				<li class="tabinact"><a href="system_advanced.php"><span><?=gtext("Advanced");?></span></a></li>
+				<li class="tabinact"><a href="system_email.php"><span><?=gtext("Email");?></span></a></li>
+				<li class="tabact"><a href="system_swap.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Swap");?></span></a></li>
+				<li class="tabinact"><a href="system_rc.php"><span><?=gtext("Command Scripts");?></span></a></li>
+				<li class="tabinact"><a href="system_cron.php"><span><?=gtext("Cron");?></span></a></li>
+				<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext("loader.conf");?></span></a></li>
+				<li class="tabinact"><a href="system_rcconf.php"><span><?=gtext("rc.conf");?></span></a></li>
+				<li class="tabinact"><a href="system_sysctl.php"><span><?=gtext("sysctl.conf");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -144,10 +144,10 @@ function type_change() {
 				<?php if (!empty($infomsg)) print_info_box($infomsg); ?>
 				<?php if (!empty($savemsg)) print_info_box($savemsg); ?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline_checkbox("enable", gettext("Swap Memory"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "enable_change(false)");?>
+					<?php html_titleline_checkbox("enable", gtext("Swap Memory"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
 					<?php $swapinfo = system_get_swap_info(); if (!empty($swapinfo)):?>
 					<tr>
-					<td width="25%" class="vncellt"><?=gettext("This server uses default swap!");?></td>
+					<td width="25%" class="vncellt"><?=gtext("This server uses default swap!");?></td>
 					<td width="75%" style="background-color:#EEEEEE;" class="listr">
 						<table width="100%" border="0" cellspacing="10" cellpadding="1">
 							<?php
@@ -156,19 +156,19 @@ function type_change() {
 							foreach ($swapinfo as $swapk => $swapv) {
 								$ctrlid++;
 								$percent_used = rtrim($swapv['capacity'], "%");
-								$tooltip_used = sprintf(gettext("%sB used of %sB"), $swapv['used'], $swapv['total']);
-								$tooltip_available = sprintf(gettext("%sB available of %sB"), $swapv['avail'], $swapv['total']);
+								$tooltip_used = sprintf(gtext("%sB used of %sB"), $swapv['used'], $swapv['total']);
+								$tooltip_available = sprintf(gtext("%sB available of %sB"), $swapv['avail'], $swapv['total']);
 
 								echo "<tr><td><div id='swapusage'>";
 								echo "<img src='images/bar_left.gif' class='progbarl' alt='' />";
 								echo "<img src='images/bar_blue.gif' name='swapusage_{$ctrlid}_bar_used' id='swapusage_{$ctrlid}_bar_used' width='{$percent_used}' class='progbarcf' title='{$tooltip_used}' alt='' />";
 								echo "<img src='images/bar_gray.gif' name='swapusage_{$ctrlid}_bar_free' id='swapusage_{$ctrlid}_bar_free' width='" . (100 - $percent_used) . "' class='progbarc' title='{$tooltip_available}' alt='' />";
 								echo "<img src='images/bar_right.gif' class='progbarr' alt='' /> ";
-								echo sprintf(gettext("%s of %sB"),
+								echo sprintf(gtext("%s of %sB"),
 									"<span name='swapusage_{$ctrlid}_capacity' id='swapusage_{$ctrlid}_capacity' class='capacity'>{$swapv['capacity']}</span>",
 									$swapv['total']);
 								echo "<br />";
-								echo sprintf(gettext("Device: %s | Total: %s | Used: %s | Free: %s"),
+								echo sprintf(gtext("Device: %s | Total: %s | Used: %s | Free: %s"),
 									"<span name='swapusage_{$ctrlid}_device' id='swapusage_{$ctrlid}_device' class='device'>{$swapv['device']}</span>",
 									"<span name='swapusage_{$ctrlid}_total' id='swapusage_{$ctrlid}_total' class='total'>{$swapv['total']}</span>",
 									"<span name='swapusage_{$ctrlid}_used' id='swapusage_{$ctrlid}_used' class='used'>{$swapv['used']}</span>",
@@ -183,13 +183,13 @@ function type_change() {
 				</tr>
 				<?php endif;?>
 				<tr>
-					<?php html_combobox("type", gettext("Type"), $pconfig['type'], array("file" => gettext("File"), "device" => gettext("Device")), "", true, false, "type_change()");?>
-					<?php html_mountcombobox("mountpoint", gettext("Mount point"), $pconfig['mountpoint'], gettext("Select mount point where to create the swap file."), true);?>
-					<?php html_inputbox("size", gettext("Size"), $pconfig['size'], gettext("The size of the swap file in MB."), true, 10);?>
-					<?php html_inputbox("devicespecialfile", gettext("Device"), $pconfig['devicespecialfile'], sprintf(gettext("Name of the device to use as swap device, e.g. %s."), "/dev/da0s2b"), true, 20);?>
+					<?php html_combobox("type", gtext("Type"), $pconfig['type'], array("file" => gtext("File"), "device" => gtext("Device")), "", true, false, "type_change()");?>
+					<?php html_mountcombobox("mountpoint", gtext("Mount point"), $pconfig['mountpoint'], gtext("Select mount point where to create the swap file."), true);?>
+					<?php html_inputbox("size", gtext("Size"), $pconfig['size'], gtext("The size of the swap file in MB."), true, 10);?>
+					<?php html_inputbox("devicespecialfile", gtext("Device"), $pconfig['devicespecialfile'], sprintf(gtext("Name of the device to use as swap device, e.g. %s."), "/dev/da0s2b"), true, 20);?>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save");?>" onclick="enable_change(true)" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save");?>" onclick="enable_change(true)" />
 				</div>
 				<?php include("formend.inc");?>
 			</form>

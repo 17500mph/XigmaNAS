@@ -36,7 +36,7 @@ $d_isfwfile = 1;
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("System"), gettext("Firmware"));
+$pgtitle = array(gtext("System"), gtext("Firmware"));
 
 // check boot partition
 $part1size = $g_install['part1size_embedded'];
@@ -50,7 +50,7 @@ if ($g['arch'] == "rpi" || $g['arch'] == "rpi2" || $g['arch'] == "oc1")
 if ($diskinfo['mediasize_mbytes'] < $part1min) {
 	if (in_array($g['platform'], $fwupplatforms)) {
 		$part1ok = false;
-		$errormsg = sprintf(gettext("Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or resize boot partition of %s.\n"), $cfdevice);
+		$errormsg = sprintf(gtext("Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or resize boot partition of %s.\n"), $cfdevice);
 	}
 }
 
@@ -243,19 +243,19 @@ function check_firmware_version_rss($locale) {
 	}
 	$resp = "";
 	if (!empty($release)) {
-		$resp .= sprintf(gettext("Latest Release: %s"), $release);
+		$resp .= sprintf(gtext("Latest Release: %s"), $release);
 		$resp .= "<br />\n";
 	}
 	if (!empty($beta)) {
-		$resp .= sprintf(gettext("Latest Beta Build: %s"), $beta);
+		$resp .= sprintf(gtext("Latest Beta Build: %s"), $beta);
 		$resp .= "<br />\n";
 	}
 	if (!empty($arm)) {
-		$resp .= sprintf(gettext("Latest Release: %s"), $arm);
+		$resp .= sprintf(gtext("Latest Release: %s"), $arm);
 		$resp .= "<br />\n";
 	}
 	if (!empty($arm_beta)) {
-		$resp .= sprintf(gettext("Latest Beta Build: %s"), $arm_beta);
+		$resp .= sprintf(gtext("Latest Beta Build: %s"), $arm_beta);
 		$resp .= "<br />\n";
 	}
 	return $resp;
@@ -280,7 +280,7 @@ if ($_POST && !file_exists($d_firmwarelock_path)) {
 			if (0 == $retval) {
 				touch($d_fwupenabled_path);
 			} else {
-				$input_errors[] = gettext("Failed to create in-memory file system.");
+				$input_errors[] = gtext("Failed to create in-memory file system.");
 			}
 		} else if ($mode === "disable") {
 			rc_exec_script("/etc/rc.firmware disable");
@@ -290,21 +290,21 @@ if ($_POST && !file_exists($d_firmwarelock_path)) {
 			if (!empty($_FILES) && is_uploaded_file($_FILES['ulfile']['tmp_name'])) {
 				/* verify firmware image(s) */
 				if (!stristr($_FILES['ulfile']['name'], $g['fullplatform']) && !$_POST['sig_override'])
-					$input_errors[] = gettext("The file you try to flash is not for this platform")." ({$g['fullplatform']}).";
+					$input_errors[] = gtext("The file you try to flash is not for this platform")." ({$g['fullplatform']}).";
 				else if (!file_exists($_FILES['ulfile']['tmp_name'])) {
 					/* probably out of memory for the MFS */
-					$input_errors[] = gettext("Firmware upload failed (out of memory?)");
+					$input_errors[] = gtext("Firmware upload failed (out of memory?)");
 				} else {
 					/* move the image so PHP won't delete it */
 					move_uploaded_file($_FILES['ulfile']['tmp_name'], "{$g['ftmp_path']}/firmware.img");
 
 					if (!verify_xz_file("{$g['ftmp_path']}/firmware.img")) {
-						$input_errors[] = gettext("The firmware file is corrupt");
+						$input_errors[] = gtext("The firmware file is corrupt");
 						unlink("{$g['ftmp_path']}/firmware.img");
 					}
 				}
 			} else {
-				$input_errors[] = gettext("Firmware upload failed (out of memory?)");
+				$input_errors[] = gtext("Firmware upload failed (out of memory?)");
 			}
 
 			// Cleanup if there were errors.
@@ -327,7 +327,7 @@ if ($_POST && !file_exists($d_firmwarelock_path)) {
 						break;
 				}
 
-				$savemsg = sprintf(gettext("The firmware is now being installed. The server will reboot automatically."));
+				$savemsg = sprintf(gtext("The firmware is now being installed. The server will reboot automatically."));
 
 				// Clean firmwarelock: Permit to force all pages to be redirect on the firmware page.
 				if (file_exists($d_firmwarelock_path))
@@ -359,11 +359,11 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 			<?php if (!empty($errormsg)) print_error_box($errormsg); ?>
 			<?php if (!empty($savemsg)) print_info_box($savemsg); ?>
 			<table width="100%" border="0" cellpadding="6" cellspacing="0">
-				<?php html_titleline(gettext("Firmware"));?>
-				<?php html_text("Current version", gettext("Current Version:"), sprintf("%s %s (%s)", get_product_name(), get_product_version(), get_product_revision()));?>
+				<?php html_titleline(gtext("Firmware"));?>
+				<?php html_text("Current version", gtext("Current Version:"), sprintf("%s %s (%s)", get_product_name(), get_product_version(), get_product_revision()));?>
 				<?php html_separator();?>
 				<?php if (isset($fwinfo) && $fwinfo) {
-						html_titleline(gettext("Online"));
+						html_titleline(gtext("Online"));
 						echo "<tr id='fwinfo'><td class='vtable' colspan='2'>";
 						echo "{$fwinfo}";
 						echo "</td></tr>\n";
@@ -372,7 +372,7 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 				?>
 			</table>
 			<?php if (!in_array($g['platform'], $fwupplatforms)): ?>
-				<?php print_error_box(gettext("Firmware uploading is not supported on this platform."));?>
+				<?php print_error_box(gtext("Firmware uploading is not supported on this platform."));?>
 			<?php elseif (!empty($sig_warning) && empty($input_errors)): ?>
 				<form action="system_firmware.php" method="post">
 					<?php
@@ -390,17 +390,17 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 						<?php if (!file_exists($d_sysrebootreqd_path)):?>
 								<?php if (!file_exists($d_fwupenabled_path)):?>
 									<div id="submit">
-										<input name="EnableFirmwareUpdate" id="Enable" type="submit" class="formbtn" value="<?=gettext("Enable Firmware Update");?>" />
+										<input name="EnableFirmwareUpdate" id="Enable" type="submit" class="formbtn" value="<?=gtext("Enable Firmware Update");?>" />
 									</div>
 								<?php else:?>
 									<div id="submit">
-										<input name="DisableFirmwareUpdate" id="Disable" type="submit" class="formbtn" value="<?=gettext("Disable Firmware Update");?>" />
+										<input name="DisableFirmwareUpdate" id="Disable" type="submit" class="formbtn" value="<?=gtext("Disable Firmware Update");?>" />
 									</div>
 									<div id="submit">
-										<strong><?=gettext("Select firmware:");?> </strong>&nbsp;<input name="ulfile" type="file" class="formfld" size="40" />
+										<strong><?=gtext("Select firmware:");?> </strong>&nbsp;<input name="ulfile" type="file" class="formfld" size="40" />
 									</div>
 									<div id="submit">
-										<input name="PerformFirmwareUpdate" id="Upgrade" type="submit" class="formbtn" value="<?=gettext("Upgrade Firmware");?>" />
+										<input name="PerformFirmwareUpdate" id="Upgrade" type="submit" class="formbtn" value="<?=gtext("Upgrade Firmware");?>" />
 									</div>
 									<br />
 									<div id="remarks">
