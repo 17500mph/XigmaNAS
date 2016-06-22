@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Disks"), gettext("Mount Point"), gettext("Tools"));
+$pgtitle = array(gtext("Disks"), gtext("Mount Point"), gtext("Tools"));
 
 if (isset($_GET['disk'])) {
 	$index = array_search_ex($_GET['disk'], $config['mounts']['mount'], "mdisk");
@@ -57,7 +57,7 @@ if ($_POST) {
 
 	// Input validation.
 	$reqdfields = explode(" ", "mountpoint action");
-	$reqdfieldsn = array(gettext("Mount point"), gettext("Command"));
+	$reqdfieldsn = array(gtext("Mount point"), gtext("Command"));
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 	// Check if mount point is used to store a swap file.
@@ -66,7 +66,7 @@ if ($_POST) {
 			($config['system']['swap']['type'] === "file") &&
 			($config['system']['swap']['mountpoint'] === $_POST['mountpoint'])) {
 		$index = array_search_ex($_POST['mountpoint'], $config['mounts']['mount'], "uuid");
-		$errormsg[] = gettext(sprintf("A swap file is located on the mounted device %s.",
+		$errormsg[] = gtext(sprintf("A swap file is located on the mounted device %s.",
 		$config['mounts']['mount'][$index]['devicespecialfile']));
 	}
 
@@ -87,9 +87,9 @@ if (!isset($do_action)) {
   <tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-        <li class="tabinact"><a href="disks_mount.php"><span><?=gettext("Management");?></span></a></li>
-        <li class="tabact"><a href="disks_mount_tools.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Tools");?></span></a></li>
-        <li class="tabinact"><a href="disks_mount_fsck.php"><span><?=gettext("Fsck");?></span></a></li>
+        <li class="tabinact"><a href="disks_mount.php"><span><?=gtext("Management");?></span></a></li>
+        <li class="tabact"><a href="disks_mount_tools.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Tools");?></span></a></li>
+        <li class="tabinact"><a href="disks_mount_fsck.php"><span><?=gtext("Fsck");?></span></a></li>
       </ul>
     </td>
   </tr>
@@ -98,14 +98,14 @@ if (!isset($do_action)) {
       <?php if ($input_errors) print_input_errors($input_errors);?>
 			<form action="disks_mount_tools.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 			  <table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_mountcombobox("mountpoint", gettext("Mount point"), !empty($uuid) ? $uuid : "", "", true);?>
-					<?php html_combobox("action", gettext("Command"), !empty($action) ? $action : "", array("mount" => gettext("mount"), "umount" => gettext("umount")), "", true);?>
+					<?php html_mountcombobox("mountpoint", gtext("Mount point"), !empty($uuid) ? $uuid : "", "", true);?>
+					<?php html_combobox("action", gtext("Command"), !empty($action) ? $action : "", array("mount" => gtext("mount"), "umount" => gtext("umount")), "", true);?>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Execute");?>" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Execute");?>" />
 				</div>
 				<?php if(($do_action) && (empty($errormsg))) {
-					echo(sprintf("<div id='cmdoutput'>%s</div>", gettext("Command output:")));
+					echo(sprintf("<div id='cmdoutput'>%s</div>", gtext("Command output:")));
 					echo('<pre class="cmdoutput">');
 					//ob_end_flush();
 
@@ -125,12 +125,12 @@ if (!isset($do_action)) {
 						    break;
 						}
 
-						echo (0 == $result) ? gettext("Done.") : gettext("Failed.");
+						echo (0 == $result) ? gtext("Done.") : gtext("Failed.");
 					}
 					echo('</pre>');
 				}?>
 				<div id="remarks">
-					<?php html_remark("note", gettext("Note"), gettext("You can't unmount a drive which is used by swap file, a iSCSI-target file or any other running process!"));?>
+					<?php html_remark("note", gtext("Note"), gtext("You can't unmount a drive which is used by swap file, a iSCSI-target file or any other running process!"));?>
 				</div>
 				<?php include("formend.inc");?>
 			</form>

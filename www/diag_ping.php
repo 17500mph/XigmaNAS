@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Diagnostics"), gettext("Ping"));
+$pgtitle = array(gtext("Diagnostics"), gtext("Ping"));
 
 if ($_POST) {
 	unset($input_errors);
@@ -42,7 +42,7 @@ if ($_POST) {
 
 	// Input validation.
 	$reqdfields = explode(" ", "host count");
-	$reqdfieldsn = array(gettext("Host"), gettext("Count"));
+	$reqdfieldsn = array(gtext("Host"), gtext("Count"));
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
@@ -74,8 +74,8 @@ function get_interface_addr($ifdescr) {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabact"><a href="diag_ping.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Ping");?></span></a></li>
-				<li class="tabinact"><a href="diag_traceroute.php"><span><?=gettext("Traceroute");?></span></a></li>
+				<li class="tabact"><a href="diag_ping.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Ping");?></span></a></li>
+				<li class="tabinact"><a href="diag_traceroute.php"><span><?=gtext("Traceroute");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -84,17 +84,17 @@ function get_interface_addr($ifdescr) {
 			<form action="diag_ping.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline(gettext("Ping Test"));?>
-					<?php html_inputbox("host", gettext("Host"), $host, gettext("Destination host name or IP number."), true, 20);?>
-					<?php html_interfacecombobox("interface", gettext("Interface"), !empty($interface) ? $interface : "", gettext("Use the following IP address as the source address in outgoing packets."), true);?>
+					<?php html_titleline(gtext("Ping Test"));?>
+					<?php html_inputbox("host", gtext("Host"), $host, gtext("Destination host name or IP number."), true, 20);?>
+					<?php html_interfacecombobox("interface", gtext("Interface"), !empty($interface) ? $interface : "", gtext("Use the following IP address as the source address in outgoing packets."), true);?>
 					<?php $a_count = array(); for ($i = 1; $i <= 10; $i++) { $a_count[$i] = $i; }?>
-					<?php html_combobox("count", gettext("Count"), $count, $a_count, gettext("Stop after sending (and receiving) N packets."), true);?>
+					<?php html_combobox("count", gtext("Count"), $count, $a_count, gtext("Stop after sending (and receiving) N packets."), true);?>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Ping");?>" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Ping");?>" />
 				</div>
 				<?php if ($do_ping) {
-				echo(sprintf("<div id='cmdoutput'>%s</div>", gettext("Command output:")));
+				echo(sprintf("<div id='cmdoutput'>%s</div>", gtext("Command output:")));
 				echo('<pre class="cmdoutput">');
 				//ob_end_flush();
 				$ifaddr = get_interface_addr($interface);

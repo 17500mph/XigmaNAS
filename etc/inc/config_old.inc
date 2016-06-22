@@ -1593,11 +1593,11 @@ function config_upgrade_old() {
 					"uuid" => uuid(),
 					"name" => $key,
 					"value" => $val,
-					"comment" => gettext("System tuning"),
+					"comment" => gtext("System tuning"),
 					"enable" => true );
 			} else {
 				$config['system']['sysctl']['param'][$index]['value'] = $val;
-				$config['system']['sysctl']['param'][$index]['comment'] = gettext("System tuning");
+				$config['system']['sysctl']['param'][$index]['comment'] = gtext("System tuning");
 				$config['system']['sysctl']['param'][$index]['enable'] = true;
 			}
 		}
@@ -1800,7 +1800,7 @@ function config_upgrade_old() {
 				} else {
 					$serial = "";
 				}
-				if (($serial == "n/a") || ($serial == gettext("n/a"))) {
+				if (($serial == "n/a") || ($serial == gtext("n/a"))) {
 					$serial = "";
 				}
 				$a['serial'] = $serial;

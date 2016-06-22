@@ -146,7 +146,7 @@ class FileChooser
 				// store elements of folder in sub array
 				$folderInfo['name']	= $file;
 				$folderInfo['mtime'] = @filemtime("{$dir}/{$file}");
-				$folderInfo['type'] = gettext("Directory");
+				$folderInfo['type'] = gtext("Directory");
 				// calc folder size ?
 				$folderInfo['size'] =
 					$this->cfg['calcFolderSizes'] ?
@@ -448,18 +448,18 @@ class FileChooser
 
 				$row .= $this->cfg['lineNumbers'] ?
 				        '<td class="ln">&nbsp;</td>' : '';
-				$row .= '<td><a href="'.$scriptname.'?N='.$N.'&amp;p=' . urlencode($dir) . '">'.gettext("Name").'</a></td>';
+				$row .= '<td><a href="'.$scriptname.'?N='.$N.'&amp;p=' . urlencode($dir) . '">'.gtext("Name").'</a></td>';
 				$row .= $this->cfg['showFileSize'] ?
 					    '<td class="sz">
-						 <a href="'.$scriptname.'?S='.$S.'&amp;p=' . urlencode($dir) . '">'.gettext("Size").'</a>
+						 <a href="'.$scriptname.'?S='.$S.'&amp;p=' . urlencode($dir) . '">'.gtext("Size").'</a>
 						 </td>' : '';
 				$row .= $this->cfg['showFileType'] ?
 				        '<td class="tp">
-				         <a href="'.$scriptname.'?T='.$T.'&amp;p=' . urlencode($dir) . '">'.gettext("Type").'</a>
+				         <a href="'.$scriptname.'?T='.$T.'&amp;p=' . urlencode($dir) . '">'.gtext("Type").'</a>
 				         </td>' : '';
 				$row .= $this->cfg['showFileModDate'] ?
 					    '<td class="dt">
-					     <a href="'.$scriptname.'?M='.$M.'&amp;p=' . urlencode($dir) . '">'.gettext("Modified").'</a>
+					     <a href="'.$scriptname.'?M='.$M.'&amp;p=' . urlencode($dir) . '">'.gtext("Modified").'</a>
 					     </td>' : '';
 				break;
 
@@ -469,7 +469,7 @@ class FileChooser
 				        '<td class="ln">&laquo;</td>' : '';
 				$row .= '<td class="nm">
 				         <a href="'.$scriptname.'?p=' . urlencode($this->get_valid_parent_dir($dir)) . '">';
-				$row .= gettext("Parent Directory");
+				$row .= gtext("Parent Directory");
 				$row .= '</a></td>';
 				$row .= $this->cfg['showFileSize'] ?
 				        '<td class="sz">&nbsp;</td>' : '';
@@ -507,8 +507,8 @@ class FileChooser
 	<td class="navbar">
 	<form method="get" action="filechooser.php" onSubmit="onSubmit();" onReset="onReset();">
 		<input class="input" name="p" value="{$path}" type="text">
-		<input class="button" type="reset" value="{$gettext("Cancel")}">
-		<input class="button" type="submit" value="{$gettext("OK")}">
+		<input class="button" type="reset" value="{$gtext("Cancel")}">
+		<input class="button" type="submit" value="{$gtext("OK")}">
 EOD;
     ob_start();
     include("formend.inc");
@@ -529,7 +529,7 @@ EOD;
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="<?=system_get_language_code();?>">
   <head>
-	<title><?=htmlspecialchars(gettext("filechooser"));?></title>
+	<title><?=gtext("filechooser");?></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=<?=system_get_language_codeset();?>">
 	<meta http-equiv="Content-Script-Type" content="text/javascript">
 	<meta http-equiv="Content-Style-Type" content="text/css">

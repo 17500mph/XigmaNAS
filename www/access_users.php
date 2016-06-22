@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Access"), gettext("Users"));
+$pgtitle = array(gtext("Access"), gtext("Users"));
 
 if ($_POST) {
 	$pconfig = $_POST;
@@ -99,8 +99,8 @@ function userdbuser_process_updatenotification($mode, $data) {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabact"><a href="access_users.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Users");?></span></a></li>
-				<li class="tabinact"><a href="access_users_groups.php"><span><?=gettext("Groups");?></span></a></li>
+				<li class="tabact"><a href="access_users.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Users");?></span></a></li>
+				<li class="tabinact"><a href="access_users_groups.php"><span><?=gtext("Groups");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -110,12 +110,12 @@ function userdbuser_process_updatenotification($mode, $data) {
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<?php if (updatenotify_exists("userdb_user")) print_config_change_box();?>
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-					<?php html_titleline2(gettext_gen2('User Setup'), 5);?>
+					<?php html_titleline2(gtext('User Setup'), 5);?>
 					<tr>
-						<td width="20%" class="listhdrlr"><?=gettext("User");?></td>
-						<td width="25%" class="listhdrr"><?=gettext("Full Name");?></td>
-						<td width="5%" class="listhdrr"><?=gettext("UID");?></td>
-						<td width="40%" class="listhdrr"><?=gettext("Group");?></td>
+						<td width="20%" class="listhdrlr"><?=gtext("User");?></td>
+						<td width="25%" class="listhdrr"><?=gtext("Full Name");?></td>
+						<td width="5%" class="listhdrr"><?=gtext("UID");?></td>
+						<td width="40%" class="listhdrr"><?=gtext("Group");?></td>
 						<td width="10%" class="list"></td>
 					</tr>
 					<?php foreach ($a_user as $userv):?>
@@ -132,8 +132,8 @@ function userdbuser_process_updatenotification($mode, $data) {
 							}?>&nbsp;</td>
 						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 						<td valign="middle" nowrap="nowrap" class="list">
-							<a href="access_users_edit.php?uuid=<?=$userv['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit user");?>" border="0" alt="<?=gettext("Edit user");?>" /></a>&nbsp;
-							<a href="access_users.php?act=del&amp;uuid=<?=$userv['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this user?");?>')"><img src="images/delete.png" title="<?=gettext("Delete user");?>" border="0" alt="<?=gettext("Delete user");?>" /></a>
+							<a href="access_users_edit.php?uuid=<?=$userv['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit user");?>" border="0" alt="<?=gtext("Edit user");?>" /></a>&nbsp;
+							<a href="access_users.php?act=del&amp;uuid=<?=$userv['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this user?");?>')"><img src="images/delete.png" title="<?=gettext("Delete user");?>" border="0" alt="<?=gtext("Delete user");?>" /></a>
 						</td>
 						<?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
@@ -145,7 +145,7 @@ function userdbuser_process_updatenotification($mode, $data) {
 					<tr>
 						<td class="list" colspan="4"></td>
 						<td class="list">
-							<a href="access_users_edit.php"><img src="images/add.png" title="<?=gettext("Add user");?>" border="0" alt="<?=gettext("Add user");?>" /></a>
+							<a href="access_users_edit.php"><img src="images/add.png" title="<?=gettext("Add user");?>" border="0" alt="<?=gtext("Add user");?>" /></a>
 						</td>
 					</tr>
 				</table>

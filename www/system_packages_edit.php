@@ -35,7 +35,7 @@ require("auth.inc");
 require("guiconfig.inc");
 require("packages.inc");
 
-$pgtitle = array(gettext("System"),gettext("Packages"),gettext("Install"));
+$pgtitle = array(gtext("System"),gtext("Packages"),gtext("Install"));
 
 if (isset($_POST) && $_POST) {
 	unset($input_errors);
@@ -43,11 +43,11 @@ if (isset($_POST) && $_POST) {
 	if (is_uploaded_file($_FILES['ulfile']['tmp_name'])) {
 		if (!file_exists($_FILES['ulfile']['tmp_name'])) {
 			// Probably out of memory for the MFS.
-			$input_errors[] = gettext("Package upload failed (out of memory?)");
+			$input_errors[] = gtext("Package upload failed (out of memory?)");
 		} else {
 			// Check whether package is already installed.
 			if (0 == packages_is_installed($_FILES['ulfile']['name'])) {
-				$input_errors[] = gettext("Package is already installed.");
+				$input_errors[] = gtext("Package is already installed.");
 			} else {
 				$packagename = "{$g['tmp_path']}/{$_FILES['ulfile']['name']}";
 
@@ -70,7 +70,7 @@ if(!isset($do_action)) {
   <tr>
 		<td class="tabnavtbl">
   		<ul id="tabnav">
-				<li class="tabact"><a href="system_packages.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Packages");?></span></a></li>
+				<li class="tabact"><a href="system_packages.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Packages");?></span></a></li>
   		</ul>
   	</td>
 	</tr>
@@ -81,19 +81,19 @@ if(!isset($do_action)) {
 				<?php if (!empty($savemsg)) print_info_box($savemsg); ?>
 			  <table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gettext("Package file");?></td>
+						<td width="22%" valign="top" class="vncellreq"><?=gtext("Package file");?></td>
 						<td width="78%" class="vtable">
 							<input name="ulfile" type="file" class="formfld" />
-							<br /><?=gettext("Select the FreeBSD package to be installed.");?>
+							<br /><?=gtext("Select the FreeBSD package to be installed.");?>
 						</td>
 					</tr>
 			  </table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Install")?>" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Install")?>" />
 				</div>
 				<?php if($do_action)
 				{
-				echo(sprintf("<div id='cmdoutput'>%s</div>", gettext("Command output:")));
+				echo(sprintf("<div id='cmdoutput'>%s</div>", gtext("Command output:")));
 				echo('<pre class="cmdoutput">');
 				//ob_end_flush();
 				ob_start();

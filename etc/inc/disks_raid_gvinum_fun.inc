@@ -45,7 +45,7 @@ function gvinum_processinfo_get() {
 		'x-page-maintenance' => 'disks_raid_gvinum_tools.php',
 		'x-page-information' => 'disks_raid_gvinum_info.php',
 		'x-button' => 'button_raid1',
-		'gt-type' => gettext('RAID-1')
+		'gt-type' => gtext('RAID-1')
 	];
 	$a_return['5'] = [
 		'type' =>  '5',
@@ -55,7 +55,7 @@ function gvinum_processinfo_get() {
 		'x-page-maintenance' => 'disks_raid_gvinum_tools.php',
 		'x-page-information' => 'disks_raid_gvinum_info.php',
 		'x-button' => 'button_raid5',
-		'gt-type' => gettext('RAID-5')
+		'gt-type' => gtext('RAID-5')
 	];
 	$a_return['0'] = [
 		'type' =>  '0',
@@ -65,7 +65,7 @@ function gvinum_processinfo_get() {
 		'x-page-maintenance' => 'disks_raid_gvinum_tools.php',
 		'x-page-information' => 'disks_raid_gvinum_info.php',
 		'x-button' => 'button_raid0',
-		'gt-type' => gettext('RAID-0')
+		'gt-type' => gtext('RAID-0')
 	];
 	return $a_return;
 }

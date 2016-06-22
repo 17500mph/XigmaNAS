@@ -34,35 +34,35 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Diagnostics"), gettext("Information"), gettext("CIFS/SMB"));
+$pgtitle = array(gtext("Diagnostics"), gtext("Information"), gtext("CIFS/SMB"));
 ?>
 <?php include("fbegin.inc");?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabinact"><a href="diag_infos.php"><span><?=gettext_gen2("Disks");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_ata.php"><span><?=gettext_gen2("Disks (ATA)");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_part.php"><span><?=gettext_gen2("Partitions");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_smart.php"><span><?=gettext_gen2("S.M.A.R.T.");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_space.php"><span><?=gettext_gen2("Space Used");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_mount.php"><span><?=gettext_gen2("Mounts");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_raid.php"><span><?=gettext_gen2("Software RAID");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos.php"><span><?=gtext("Disks");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_ata.php"><span><?=gtext("Disks (ATA)");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_part.php"><span><?=gtext("Partitions");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_smart.php"><span><?=gtext("S.M.A.R.T.");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_space.php"><span><?=gtext("Space Used");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_mount.php"><span><?=gtext("Mounts");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_raid.php"><span><?=gtext("Software RAID");?></span></a></li>
 		  </ul>
 	  </td>
 	</tr>
   <tr>
 		<td class="tabnavtbl">
 		  <ul id="tabnav2">
-				<li class="tabinact"><a href="diag_infos_iscsi.php"><span><?=gettext_gen2("iSCSI Initiator");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_ad.php"><span><?=gettext_gen2("MS Domain");?></span></a></li>
-				<li class="tabact"><a href="diag_infos_samba.php" title="<?=gettext_gen2("Reload page");?>"><span><?=gettext("CIFS/SMB");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_ftpd.php"><span><?=gettext_gen2("FTP");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_rsync_client.php"><span><?=gettext_gen2("RSYNC Client");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_swap.php"><span><?=gettext_gen2("Swap");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_sockets.php"><span><?=gettext_gen2("Sockets");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_ipmi.php"><span><?=gettext_gen2('IPMI Stats');?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_ups.php"><span><?=gettext_gen2("UPS");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_iscsi.php"><span><?=gtext("iSCSI Initiator");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_ad.php"><span><?=gtext("MS Domain");?></span></a></li>
+				<li class="tabact"><a href="diag_infos_samba.php" title="<?=gtext("Reload page");?>"><span><?=gtext("CIFS/SMB");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_ftpd.php"><span><?=gtext("FTP");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_rsync_client.php"><span><?=gtext("RSYNC Client");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_swap.php"><span><?=gtext("Swap");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_sockets.php"><span><?=gtext("Sockets");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_ipmi.php"><span><?=gtext('IPMI Stats');?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_ups.php"><span><?=gtext("UPS");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -70,15 +70,15 @@ $pgtitle = array(gettext("Diagnostics"), gettext("Information"), gettext("CIFS/S
 		<td class="tabcont">
 			<table width="100%" border="0">
 				<?php if (!isset($config['samba']['enable'])):?>
-				<?php html_titleline(gettext("CIFS/SMB informations"));?>
+				<?php html_titleline(gtext("CIFS/SMB informations"));?>
 				<tr>
 					<td>
-						<pre><?=gettext("CIFS/SMB disabled");?></pre>
+						<pre><?=gtext("CIFS/SMB disabled");?></pre>
 					</td>
 				</tr>
 				<?php else:?>
 				</tr>
-				<?php html_titleline(gettext("Active Users"));?>
+				<?php html_titleline(gtext("Active Users"));?>
 				<tr>
 					<td>
 						<pre><?php
@@ -87,7 +87,7 @@ $pgtitle = array(gettext("Diagnostics"), gettext("Information"), gettext("CIFS/S
 						unset($rawdata);
 						?></pre>
 					</td>
-				<?php html_titleline(gettext("Active Shares"));?>
+				<?php html_titleline(gtext("Active Shares"));?>
 				<tr>
 					<td>
 						<pre><?php
@@ -97,7 +97,7 @@ $pgtitle = array(gettext("Diagnostics"), gettext("Information"), gettext("CIFS/S
 						?></pre>
 					</td>
 				</tr>
-				<?php html_titleline(gettext("Active Directory List"));?>
+				<?php html_titleline(gtext("Active Directory List"));?>
 				<tr>
 					<td>
 						<pre><?php 

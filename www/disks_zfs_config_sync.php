@@ -370,7 +370,7 @@ if (isset($_POST['import_config'])) {
 					if (!empty($disk['serial'])) {
 						$serial = $disk['serial'];
 					}
-					if (($serial == "n/a") || ($serial == gettext("n/a"))) {
+					if (($serial == "n/a") || ($serial == gtext("n/a"))) {
 						$serial = "";
 					}
 					$cfg['disks']['disk'][] = [
@@ -459,26 +459,26 @@ if (!empty($zfs['extra']) && !empty($zfs['extra']['pools']) && !empty($zfs['extr
 
 if (!$health) {
 	$message_box_type = 'warning';
-	$message_box_text = gettext('Your ZFS system is not healthy.');
+	$message_box_text = gtext('Your ZFS system is not healthy.');
 	$message_box_text .= ' ';
-	$message_box_text .= gettext('It is not recommanded to import non healthy pools nor virtual devices that are part of a non healthy pool.');
+	$message_box_text .= gtext('It is not recommanded to import non healthy pools nor virtual devices that are part of a non healthy pool.');
 }
 
-$pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Configuration'), gettext('Synchronize'));
+$pgtitle = array(gtext('Disks'), gtext('ZFS'), gtext('Configuration'), gtext('Synchronize'));
 ?>
 <?php include("fbegin.inc");?>
 <table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gettext("Pools");?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gettext("Datasets");?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gettext("Volumes");?></span></a></li>
-		<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gettext("Snapshots");?></span></a></li>
-		<li class="tabact"><a href="disks_zfs_config.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Configuration");?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext("Pools");?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext("Datasets");?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext("Volumes");?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext("Snapshots");?></span></a></li>
+		<li class="tabact"><a href="disks_zfs_config.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Configuration");?></span></a></li>
 	</ul></td></tr>
 	<tr><td class="tabnavtbl"><ul id="tabnav2">
-		<li class="tabinact"><a href="disks_zfs_config_current.php"><span><?=gettext("Current");?></span></a></li>
-		<li class="tabinact" title="<?=gettext("Reload page");?>"><a href="disks_zfs_config.php"><span><?=gettext("Detected");?></span></a></li>
-		<li class="tabact"><a href="disks_zfs_config_sync.php"><span><?=gettext("Synchronize");?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_config_current.php"><span><?=gtext("Current");?></span></a></li>
+		<li class="tabinact" title="<?=gettext("Reload page");?>"><a href="disks_zfs_config.php"><span><?=gtext("Detected");?></span></a></li>
+		<li class="tabact"><a href="disks_zfs_config_sync.php"><span><?=gtext("Synchronize");?></span></a></li>
 	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
@@ -487,7 +487,7 @@ $pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Configuration'), get
 			print_core_box($message_box_type, $message_box_text);
 		}
 		if (isset($import) && $import === false) {
-			print_error_box(gettext('Nothing to synchronize'));
+			print_error_box(gtext('Nothing to synchronize'));
 		}
 	?>
 	<table id="area_data_selection">
@@ -505,19 +505,19 @@ $pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Configuration'), get
 			<col style="width:9%"><!-- // AltRoot -->
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gettext('Pools').' ('.count($zfs['pools']['pool']).')', 11);?>
+			<?php html_titleline2(gtext('Pools').' ('.count($zfs['pools']['pool']).')', 11);?>
 			<tr>
 				<th class="lhelc">&nbsp;</th>
-				<th class="lhell"><?=gettext('Name');?></th>
-				<th class="lhell"><?=gettext('Size');?></th>
-				<th class="lhell"><?=gettext('Alloc');?></th>
-				<th class="lhell"><?=gettext('Free');?></th>
-				<th class="lhell"><?=gettext('Expandsz');?></th>
-				<th class="lhell"><?=gettext('Frag');?></th>
-				<th class="lhell"><?=gettext('Dedup');?></th>
-				<th class="lhell"><?=gettext('Health');?></th>
-				<th class="lhell"><?=gettext('Mount Point');?></th>
-				<th class="lhebl"><?=gettext('AltRoot');?></th>
+				<th class="lhell"><?=gtext('Name');?></th>
+				<th class="lhell"><?=gtext('Size');?></th>
+				<th class="lhell"><?=gtext('Alloc');?></th>
+				<th class="lhell"><?=gtext('Free');?></th>
+				<th class="lhell"><?=gtext('Expandsz');?></th>
+				<th class="lhell"><?=gtext('Frag');?></th>
+				<th class="lhell"><?=gtext('Dedup');?></th>
+				<th class="lhell"><?=gtext('Health');?></th>
+				<th class="lhell"><?=gtext('Mount Point');?></th>
+				<th class="lhebl"><?=gtext('AltRoot');?></th>
 			</tr>
 		</thead>
 		<tfoot>
@@ -553,13 +553,13 @@ $pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Configuration'), get
 			<col style="width:40%"><!-- // Devices -->
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gettext('Virtual Devices').' ('.count($zfs['vdevices']['vdevice']).')', 5);?>
+			<?php html_titleline2(gtext('Virtual Devices').' ('.count($zfs['vdevices']['vdevice']).')', 5);?>
 			<tr>
 				<th class="lhelc">&nbsp;</th>
-				<th class="lhell"><?=gettext('Name');?></th>
-				<th class="lhell"><?=gettext('Type');?></th>
-				<th class="lhell"><?=gettext('Pool');?></th>
-				<th class="lhebl"><?=gettext('Devices');?></th>
+				<th class="lhell"><?=gtext('Name');?></th>
+				<th class="lhell"><?=gtext('Type');?></th>
+				<th class="lhell"><?=gtext('Pool');?></th>
+				<th class="lhebl"><?=gtext('Devices');?></th>
 			</tr>
 		</thead>
 		<tfoot>
@@ -599,23 +599,23 @@ $pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Configuration'), get
 			<col style="width:8%"><!-- // Snapshot Visibility -->
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gettext('Datasets').' ('.count($zfs['datasets']['dataset']).')', 12);?>
+			<?php html_titleline2(gtext('Datasets').' ('.count($zfs['datasets']['dataset']).')', 12);?>
 			<tr>
 				<th class="lhelc">&nbsp;</th>
-				<th class="lhell"><?=gettext('Name');?></th>
-				<th class="lhell"><?=gettext('Pool');?></th>
-				<th class="lhell"><?=gettext('Compression');?></th>
-				<th class="lhell"><?=gettext('Dedup');?></th>
-				<th class="lhell"><?=gettext('Sync');?></th>
-				<th class="lhell"><?=gettext('ACL Inherit');?></th>
-				<th class="lhell"><?=gettext('ACL Mode');?></th>
-				<th class="lhell"><?=gettext('Canmount');?></th>
-				<th class="lhell"><?=gettext('Quota');?></th>
+				<th class="lhell"><?=gtext('Name');?></th>
+				<th class="lhell"><?=gtext('Pool');?></th>
+				<th class="lhell"><?=gtext('Compression');?></th>
+				<th class="lhell"><?=gtext('Dedup');?></th>
+				<th class="lhell"><?=gtext('Sync');?></th>
+				<th class="lhell"><?=gtext('ACL Inherit');?></th>
+				<th class="lhell"><?=gtext('ACL Mode');?></th>
+				<th class="lhell"><?=gtext('Canmount');?></th>
+				<th class="lhell"><?=gtext('Quota');?></th>
 <!--
-				<th class="lhell"><?=gettext('Extended Attributes');?></th>
+				<th class="lhell"><?=gtext('Extended Attributes');?></th>
 -->
-				<th class="lhell"><?=gettext('Readonly');?></th>
-				<th class="lhebl"><?=gettext('Snapshot Visibility');?></th>
+				<th class="lhell"><?=gtext('Readonly');?></th>
+				<th class="lhebl"><?=gtext('Snapshot Visibility');?></th>
 			</tr>
 		</thead>
 		<tfoot>
@@ -658,17 +658,17 @@ $pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Configuration'), get
 			<col style="width:11%"><!-- // Sync -->
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gettext('Volumes').' ('.count($zfs['volumes']['volume']).')', 9);?>
+			<?php html_titleline2(gtext('Volumes').' ('.count($zfs['volumes']['volume']).')', 9);?>
 			<tr>
 				<th class="lhelc">&nbsp;</th>
-				<th class="lhell"><?=gettext('Name');?></th>
-				<th class="lhell"><?=gettext('Pool');?></th>
-				<th class="lhell"><?=gettext('Size');?></th>
-				<th class="lhell"><?=gettext('Blocksize');?></th>
-				<th class="lhell"><?=gettext('Sparse');?></th>
-				<th class="lhell"><?=gettext('Compression');?></th>
-				<th class="lhell"><?=gettext('Dedup');?></th>
-				<th class="lhebl"><?=gettext('Sync');?></th>
+				<th class="lhell"><?=gtext('Name');?></th>
+				<th class="lhell"><?=gtext('Pool');?></th>
+				<th class="lhell"><?=gtext('Size');?></th>
+				<th class="lhell"><?=gtext('Blocksize');?></th>
+				<th class="lhell"><?=gtext('Sparse');?></th>
+				<th class="lhell"><?=gtext('Compression');?></th>
+				<th class="lhell"><?=gtext('Dedup');?></th>
+				<th class="lhebl"><?=gtext('Sync');?></th>
 			</tr>
 		</thead>
 		<tfoot>
@@ -698,18 +698,18 @@ $pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Configuration'), get
 			<col id="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gettext('Options'));?>
+			<?php html_titleline2(gtext('Options'));?>
 		</thead>
 		<tbody>
 			<?php
-				html_checkbox2('leave_autosnapshots', gettext('Leave auto snapshot configuration'), true, gettext('Leave already configured auto snapshots.'), '', false);
-				html_checkbox2('import_disks', gettext('Import disks'), true, gettext('Import disks used in configuration.'), '', false);
-				html_checkbox2('import_disks_overwrite', gettext('Overwrite disks configuration'), false, gettext('Overwrite already configured disks (only affects filesystem value).'), '', false);
+				html_checkbox2('leave_autosnapshots', gtext('Leave auto snapshot configuration'), true, gtext('Leave already configured auto snapshots.'), '', false);
+				html_checkbox2('import_disks', gtext('Import disks'), true, gtext('Import disks used in configuration.'), '', false);
+				html_checkbox2('import_disks_overwrite', gtext('Overwrite disks configuration'), false, gtext('Overwrite already configured disks (only affects filesystem value).'), '', false);
 			?>
 		</tbody>
 	</table>
 	<div id="submit">
-		<input type="submit" name="import_config" value="<?=gettext('Synchronize');?>"/>
+		<input type="submit" name="import_config" value="<?=gtext('Synchronize');?>"/>
 	</div>
 	<?php include("formend.inc");?>
 </form></td></tr></tbody></table>

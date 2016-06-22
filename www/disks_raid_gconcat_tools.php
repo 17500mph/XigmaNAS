@@ -38,7 +38,7 @@ ini_set('display_startup_errors', TRUE);
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Disks"), gettext("Software RAID"), gettext("JBOD"), gettext("Maintenance"));
+$pgtitle = array(gtext("Disks"), gtext("Software RAID"), gtext("JBOD"), gtext("Maintenance"));
 
 if (!isset($config['gconcat']['vdisk']) || !is_array($config['gconcat']['vdisk']))
 	$config['gconcat']['vdisk'] = array();
@@ -53,7 +53,7 @@ if ($_POST) {
 
 	/* input validation */
 	$reqdfields = explode(" ", "action raid disk");
-	$reqdfieldsn = array(gettext("Command"),gettext("Volume Name"),gettext("Disk"));
+	$reqdfieldsn = array(gtext("Command"),gtext("Volume Name"),gtext("Disk"));
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 if (empty($input_errors)) {
@@ -103,34 +103,34 @@ function raid_change() {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabact"><a href="disks_raid_geom.php" title="<?=gettext("Reload page");?>"><span><?=gettext('GEOM');?></span></a></li>
-				<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?=gettext("RAID 0/1/5");?></span></a></li>
+				<li class="tabact"><a href="disks_raid_geom.php" title="<?=gettext("Reload page");?>"><span><?=gtext('GEOM');?></span></a></li>
+				<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?=gtext("RAID 0/1/5");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav2">
-				<li class="tabinact"><a href="disks_raid_geom.php"><span><?=gettext('Management'); ?></span></a></li>
-				<li class="tabact"><a href="disks_raid_gconcat_tools.php" title="<?=gettext('Reload page');?>" ><span><?=gettext('Maintenance');?></span></a></li>
-				<li class="tabinact"><a href="disks_raid_gconcat_info.php"><span><?=gettext('Information'); ?></span></a></li>
+				<li class="tabinact"><a href="disks_raid_geom.php"><span><?=gtext('Management'); ?></span></a></li>
+				<li class="tabact"><a href="disks_raid_gconcat_tools.php" title="<?=gettext('Reload page');?>" ><span><?=gtext('Maintenance');?></span></a></li>
+				<li class="tabinact"><a href="disks_raid_gconcat_info.php"><span><?=gtext('Information'); ?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabcont">
 			<table width="100%" border="0" cellspacing="0" cellpadding="0">
-				<?php html_titleline(gettext('JBOD Maintenance'));?>
+				<?php html_titleline(gtext('JBOD Maintenance'));?>
 				<tr>
 					<td>
 						<form action="disks_raid_gconcat_tools.php" method="post" name="iform" id="iform">
 							<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
 							<table width="100%" border="0" cellpadding="6" cellspacing="0">
 								<tr>
-									<td width="22%" valign="top" class="vncellreq"><?=gettext("Volume Name");?></td>
+									<td width="22%" valign="top" class="vncellreq"><?=gtext("Volume Name");?></td>
 									<td width="78%" class="vtable">
 										<select name="raid" class="formfld" id="raid" onchange="raid_change()">
-											<option value=""><?=gettext("Must choose one");?></option>
+											<option value=""><?=gtext("Must choose one");?></option>
 											<?php foreach ($a_raid as $raidv): ?>
 												<option value="<?=$raidv['name'];?>" <?php if ($raid === $raidv['name']) echo "selected=\"selected\"";?>>
 													<?php echo htmlspecialchars($raidv['name']);	?>
@@ -140,13 +140,13 @@ function raid_change() {
 									</td>
 								</tr>
 								<tr>
-									<td width="22%" valign="top" class="vncellreq"><?=gettext("Disk");?></td>
+									<td width="22%" valign="top" class="vncellreq"><?=gtext("Disk");?></td>
 									<td width="78%" class="vtable">
 										<select name="disk" class="formfld" id="disk"></select>
 									</td>
 								</tr>
 								<tr>
-									<td width="22%" valign="top" class="vncellreq"><?=gettext("Command");?></td>
+									<td width="22%" valign="top" class="vncellreq"><?=gtext("Command");?></td>
 									<td width="78%" class="vtable">
 										<select name="action" class="formfld" id="action">
 											<option value="list" <?php if ($action == "list") echo "selected=\"selected\""; ?>>list</option>
@@ -159,11 +159,11 @@ function raid_change() {
 								</tr>
 							</table>
 							<div id="submit">
-								<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Send Command!");?>" />
+								<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Send Command!");?>" />
 							</div>
 							<?php
 								if ($do_action) {
-									echo(sprintf("<div id='cmdoutput'>%s</div>", gettext("Command output:")));
+									echo(sprintf("<div id='cmdoutput'>%s</div>", gtext("Command output:")));
 									echo('<pre class="cmdoutput">');
 									//ob_end_flush();
 									switch ($action) {

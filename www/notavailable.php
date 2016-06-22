@@ -38,6 +38,6 @@ $pgtitle = array("Not", "YET", "AVAILABLE");
 ?>
 <?php include("fbegin.inc");?>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
-	<?php html_titleline(gettext("NOT YET AVAILABLE"));?>
+	<?php html_titleline(gtext("NOT YET AVAILABLE"));?>
 </table>
 <?php include("fend.inc");?>

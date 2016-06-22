@@ -34,11 +34,11 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("System"),gettext("Shutdown"), gettext("Now"));
+$pgtitle = array(gtext("System"),gtext("Shutdown"), gtext("Now"));
 
 if ($_POST) {
-	if ($_POST['Submit'] !== gettext("No")) {
-		$rebootmsg = gettext("The system is halting now. This may take one minute.");
+	if ($_POST['Submit'] !== gtext("No")) {
+		$rebootmsg = gtext("The system is halting now. This may take one minute.");
 	} else {
 		header("Location: index.php");
 		exit;
@@ -50,8 +50,8 @@ if ($_POST) {
   <tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-        <li class="tabact"><a href="shutdown.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Now");?></span></a></li>
-        <li class="tabinact"><a href="shutdown_sched.php"><span><?=gettext("Scheduled");?></span></a></li>
+        <li class="tabact"><a href="shutdown.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Now");?></span></a></li>
+        <li class="tabinact"><a href="shutdown_sched.php"><span><?=gtext("Scheduled");?></span></a></li>
       </ul>
     </td>
   </tr>
@@ -59,10 +59,10 @@ if ($_POST) {
     <td class="tabcont">
       <?php if (!empty($rebootmsg)): echo print_info_box($rebootmsg); system_halt(); else:?>
       <form action="shutdown.php" method="post" onsubmit="spinner()">
-				<strong><?=gettext("Are you sure you want to shutdown the system?");?></strong>
+				<strong><?=gtext("Are you sure you want to shutdown the system?");?></strong>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Yes");?>" />
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("No");?>" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Yes");?>" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("No");?>" />
 				</div>
 				<?php include("formend.inc");?>
       </form>

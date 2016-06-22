@@ -44,20 +44,20 @@ $sphere_record = [];
 $checkbox_member_name = 'checkbox_member_array';
 $checkbox_member_array = [];
 $checkbox_member_record = [];
-$gt_record_add = gettext('Add job');
-$gt_record_mod = gettext('Edit job');
-$gt_record_del = gettext('Job is marked for deletion');
-$gt_record_loc = gettext('Job is locked');
-$gt_record_mup = gettext('Move up');
-$gt_record_mdn = gettext('Move down');
-$gt_selection_toggle = gettext('Toggle Selected Jobs');
-$gt_selection_toggle_confirm = gettext('Do you want to toggle selected jobs?');
-$gt_selection_enable = gettext('Enable Selected Jobs');
-$gt_selection_enable_confirm = gettext('Do you want to enable selected jobs?');
-$gt_selection_disable = gettext('Disable Selected Jobs');
-$gt_selection_disable_confirm = gettext('Do you want to disable selected jobs?');
-$gt_selection_delete = gettext('Delete Selected Jobs');
-$gt_selection_delete_confirm = gettext('Do you want to delete selected jobs?');
+$gt_record_add = gtext('Add job');
+$gt_record_mod = gtext('Edit job');
+$gt_record_del = gtext('Job is marked for deletion');
+$gt_record_loc = gtext('Job is locked');
+$gt_record_mup = gtext('Move up');
+$gt_record_mdn = gtext('Move down');
+$gt_selection_toggle = gtext('Toggle Selected Jobs');
+$gt_selection_toggle_confirm = gtext('Do you want to toggle selected jobs?');
+$gt_selection_enable = gtext('Enable Selected Jobs');
+$gt_selection_enable_confirm = gtext('Do you want to enable selected jobs?');
+$gt_selection_disable = gtext('Disable Selected Jobs');
+$gt_selection_disable_confirm = gtext('Do you want to disable selected jobs?');
+$gt_selection_delete = gtext('Delete Selected Jobs');
+$gt_selection_delete_confirm = gtext('Do you want to delete selected jobs?');
 $img_path = [
 	'add' => 'images/add.png',
 	'mod' => 'images/edit.png',
@@ -211,7 +211,7 @@ function cronjob_process_updatenotification($mode, $data) {
 }
 
 $enabletogglemode = isset($config['system']['enabletogglemode']);
-$pgtitle = array(gettext('System'), gettext('Advanced'), gettext('Cron'));
+$pgtitle = array(gtext('System'), gtext('Advanced'), gtext('Cron'));
 ?>
 <?php include("fbegin.inc");?>
 <script type="text/javascript">
@@ -291,14 +291,14 @@ function controlactionbuttons(ego, triggerbyname) {
 </script>
 <table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabinact"><a href="system_advanced.php"><span><?=gettext('Advanced');?></span></a></li>
-		<li class="tabinact"><a href="system_email.php"><span><?=gettext('Email');?></span></a></li>
-		<li class="tabinact"><a href="system_swap.php"><span><?=gettext('Swap');?></span></a></li>
-		<li class="tabinact"><a href="system_rc.php"><span><?=gettext('Command Scripts');?></span></a></li>
-		<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gettext('Reload page');?>"><span><?=gettext('Cron');?></span></a></li>
-		<li class="tabinact"><a href="system_loaderconf.php"><span><?=gettext('loader.conf');?></span></a></li>
-		<li class="tabinact"><a href="system_rcconf.php"><span><?=gettext('rc.conf');?></span></a></li>
-		<li class="tabinact"><a href="system_sysctl.php"><span><?=gettext('sysctl.conf');?></span></a></li>
+		<li class="tabinact"><a href="system_advanced.php"><span><?=gtext('Advanced');?></span></a></li>
+		<li class="tabinact"><a href="system_email.php"><span><?=gtext('Email');?></span></a></li>
+		<li class="tabinact"><a href="system_swap.php"><span><?=gtext('Swap');?></span></a></li>
+		<li class="tabinact"><a href="system_rc.php"><span><?=gtext('Command Scripts');?></span></a></li>
+		<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gettext('Reload page');?>"><span><?=gtext('Cron');?></span></a></li>
+		<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext('loader.conf');?></span></a></li>
+		<li class="tabinact"><a href="system_rcconf.php"><span><?=gtext('rc.conf');?></span></a></li>
+		<li class="tabinact"><a href="system_sysctl.php"><span><?=gtext('sysctl.conf');?></span></a></li>
 	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iframe" name="iframe">
@@ -324,14 +324,14 @@ function controlactionbuttons(ego, triggerbyname) {
 			<col style="width:10%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gettext('Overview'), 6);?>
+			<?php html_titleline2(gtext('Overview'), 6);?>
 			<tr>
-				<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gettext('Invert Selection');?>"/></th>
-				<th class="lhell"><?=gettext('Command');?></th>
-				<th class="lhell"><?=gettext('Who');?></th>
-				<th class="lhell"><?=gettext('Status');?></th>
-				<th class="lhell"><?=gettext('Description');?></th>
-				<th class="lhebl"><?=gettext('Toolbox');?></th>
+				<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></th>
+				<th class="lhell"><?=gtext('Command');?></th>
+				<th class="lhell"><?=gtext('Who');?></th>
+				<th class="lhell"><?=gtext('Status');?></th>
+				<th class="lhell"><?=gtext('Description');?></th>
+				<th class="lhebl"><?=gtext('Toolbox');?></th>
 			</tr>
 		</thead>
 		<tfoot>
@@ -360,9 +360,9 @@ function controlactionbuttons(ego, triggerbyname) {
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['who']);?>&nbsp;</td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>">
 						<?php if ($enabled):?>
-							<a title="<?=gettext('Enabled');?>"><center><img src="<?=$img_path['ena'];?>" border="0" alt="" /></center></a>
+							<a title="<?=gtext('Enabled');?>"><center><img src="<?=$img_path['ena'];?>" border="0" alt="" /></center></a>
 						<?php else:?>
-							<a title="<?=gettext('Disabled');?>"><center><img src="<?=$img_path['dis'];?>" border="0" alt="" /></center></a>
+							<a title="<?=gtext('Disabled');?>"><center><img src="<?=$img_path['dis'];?>" border="0" alt="" /></center></a>
 						<?php endif;?>
 					</td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['desc']);?>&nbsp;</td>
@@ -373,9 +373,9 @@ function controlactionbuttons(ego, triggerbyname) {
 									<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
 								<?php else:?>
 									<?php if ($notprotected):?>
-										<img src="<?=$img_path['del'];?>" title="<?=gettext($gt_record_del);?>" alt="<?=gettext($gt_record_del);?>"/>
+										<img src="<?=$img_path['del'];?>" title="<?=gettext($gt_record_del);?>" alt="<?=gtext($gt_record_del);?>"/>
 									<?php else:?>
-										<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gettext($gt_record_loc);?>"/>
+										<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gtext($gt_record_loc);?>"/>
 									<?php endif;?>
 								<?php endif;?>
 							</td>

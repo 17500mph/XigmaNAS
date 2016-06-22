@@ -44,20 +44,20 @@ $sphere_record = [];
 $checkbox_member_name = 'checkbox_member_array';
 $checkbox_member_array = [];
 $checkbox_member_record = [];
-$gt_record_add = gettext('Add option');
-$gt_record_mod = gettext('Edit option');
-$gt_record_del = gettext('Option is marked for deletion');
-$gt_record_loc = gettext('Option is locked');
-$gt_record_mup = gettext('Move up');
-$gt_record_mdn = gettext('Move down');
-$gt_selection_toggle = gettext('Toggle Selected Options');
-$gt_selection_toggle_confirm = gettext('Do you want to toggle selected options?');
-$gt_selection_enable = gettext('Enable Selected Options');
-$gt_selection_enable_confirm = gettext('Do you want to enable selected options?');
-$gt_selection_disable = gettext('Disable Selected Options');
-$gt_selection_disable_confirm = gettext('Do you want to disable selected options?');
-$gt_selection_delete = gettext('Delete Selected Options');
-$gt_selection_delete_confirm = gettext('Do you want to delete selected options?');
+$gt_record_add = gtext('Add option');
+$gt_record_mod = gtext('Edit option');
+$gt_record_del = gtext('Option is marked for deletion');
+$gt_record_loc = gtext('Option is locked');
+$gt_record_mup = gtext('Move up');
+$gt_record_mdn = gtext('Move down');
+$gt_selection_toggle = gtext('Toggle Selected Options');
+$gt_selection_toggle_confirm = gtext('Do you want to toggle selected options?');
+$gt_selection_enable = gtext('Enable Selected Options');
+$gt_selection_enable_confirm = gtext('Do you want to enable selected options?');
+$gt_selection_disable = gtext('Disable Selected Options');
+$gt_selection_disable_confirm = gtext('Do you want to disable selected options?');
+$gt_selection_delete = gtext('Delete Selected Options');
+$gt_selection_delete_confirm = gtext('Do you want to delete selected options?');
 $img_path = [
 	'add' => 'images/add.png',
 	'mod' => 'images/edit.png',
@@ -229,7 +229,7 @@ function rcconf_process_updatenotification($mode, $data) {
 }
 
 $enabletogglemode = isset($config['system']['enabletogglemode']);
-$pgtitle = array(gettext('System'), gettext('Advanced'), gettext('rc.conf'));
+$pgtitle = array(gtext('System'), gtext('Advanced'), gtext('rc.conf'));
 ?>
 <?php include("fbegin.inc");?>
 <script type="text/javascript">
@@ -309,14 +309,14 @@ function controlactionbuttons(ego, triggerbyname) {
 </script>
 <table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabinact"><a href="system_advanced.php"><span><?=gettext('Advanced');?></span></a></li>
-		<li class="tabinact"><a href="system_email.php"><span><?=gettext('Email');?></span></a></li>
-		<li class="tabinact"><a href="system_swap.php"><span><?=gettext('Swap');?></span></a></li>
-		<li class="tabinact"><a href="system_rc.php"><span><?=gettext('Command Scripts');?></span></a></li>
-		<li class="tabinact"><a href="system_cron.php"><span><?=gettext('Cron');?></span></a></li>
-		<li class="tabinact"><a href="system_loaderconf.php"><span><?=gettext('loader.conf');?></span></a></li>
-		<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gettext('Reload page');?>"><span><?=gettext('rc.conf');?></span></a></li>
-		<li class="tabinact"><a href="system_sysctl.php"><span><?=gettext('sysctl.conf');?></span></a></li>
+		<li class="tabinact"><a href="system_advanced.php"><span><?=gtext('Advanced');?></span></a></li>
+		<li class="tabinact"><a href="system_email.php"><span><?=gtext('Email');?></span></a></li>
+		<li class="tabinact"><a href="system_swap.php"><span><?=gtext('Swap');?></span></a></li>
+		<li class="tabinact"><a href="system_rc.php"><span><?=gtext('Command Scripts');?></span></a></li>
+		<li class="tabinact"><a href="system_cron.php"><span><?=gtext('Cron');?></span></a></li>
+		<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext('loader.conf');?></span></a></li>
+		<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gettext('Reload page');?>"><span><?=gtext('rc.conf');?></span></a></li>
+		<li class="tabinact"><a href="system_sysctl.php"><span><?=gtext('sysctl.conf');?></span></a></li>
 	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iframe" name="iframe">
@@ -342,14 +342,14 @@ function controlactionbuttons(ego, triggerbyname) {
 			<col style="width:10%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gettext('Overview'), 6);?>
+			<?php html_titleline2(gtext('Overview'), 6);?>
 			<tr>
-				<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gettext('Invert Selection');?>"/></th>
-				<th class="lhell"><?=gettext('Variable');?></th>
-				<th class="lhell"><?=gettext('Value');?></th>
-				<th class="lhell"><?=gettext('Status');?></th>
-				<th class="lhell"><?=gettext('Comment');?></th>
-				<th class="lhebl"><?=gettext('Toolbox');?></th>
+				<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></th>
+				<th class="lhell"><?=gtext('Variable');?></th>
+				<th class="lhell"><?=gtext('Value');?></th>
+				<th class="lhell"><?=gtext('Status');?></th>
+				<th class="lhell"><?=gtext('Comment');?></th>
+				<th class="lhebl"><?=gtext('Toolbox');?></th>
 			</tr>
 		</thead>
 		<tfoot>
@@ -378,9 +378,9 @@ function controlactionbuttons(ego, triggerbyname) {
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['value']);?>&nbsp;</td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>">
 						<?php if ($enabled):?>
-							<a title="<?=gettext('Enabled');?>"><center><img src="<?=$img_path['ena'];?>" border="0" alt=""/></center></a>
+							<a title="<?=gtext('Enabled');?>"><center><img src="<?=$img_path['ena'];?>" border="0" alt=""/></center></a>
 						<?php else:?>
-							<a title="<?=gettext('Disabled');?>"><center><img src="<?=$img_path['dis'];?>" border="0" alt=""/></center></a>
+							<a title="<?=gtext('Disabled');?>"><center><img src="<?=$img_path['dis'];?>" border="0" alt=""/></center></a>
 						<?php endif;?>
 					</td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?= htmlspecialchars($sphere_record['comment']);?>&nbsp;</td>
@@ -392,9 +392,9 @@ function controlactionbuttons(ego, triggerbyname) {
 									<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
 								<?php else:?>
 									<?php if ($notprotected):?>
-										<img src="<?=$img_path['del'];?>" title="<?=gettext($gt_record_del);?>" alt="<?=gettext($gt_record_del);?>"/>
+										<img src="<?=$img_path['del'];?>" title="<?=gettext($gt_record_del);?>" alt="<?=gtext($gt_record_del);?>"/>
 									<?php else:?>
-										<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gettext($gt_record_loc);?>"/>
+										<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gtext($gt_record_loc);?>"/>
 									<?php endif;?>
 								<?php endif;?>
 							</td>
@@ -416,7 +416,7 @@ function controlactionbuttons(ego, triggerbyname) {
 		<input type="submit" class="formbtn" name="delete_selected_rows" id="delete_selected_rows" value="<?=$gt_selection_delete;?>"/>
 	</div>
 	<div id="remarks">
-		<?php html_remark2('note', gettext('Note'), gettext('These option(s) will be added to /etc/rc.conf. This allow you to overwrite options used by various generic startup scripts.'));?>
+		<?php html_remark2('note', gtext('Note'), gtext('These option(s) will be added to /etc/rc.conf. This allow you to overwrite options used by various generic startup scripts.'));?>
 	</div>
 	<?php include("formend.inc");?>
 </form></td></tr></tbody></table>

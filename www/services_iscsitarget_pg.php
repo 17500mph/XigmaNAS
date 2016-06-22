@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Services"), gettext("iSCSI Target"), gettext("Portal Group"));
+$pgtitle = array(gtext("Services"), gtext("iSCSI Target"), gtext("Portal Group"));
 
 if ($_POST) {
 	$pconfig = $_POST;
@@ -78,7 +78,7 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 			if (isset($target['pgigmap'])) {
 				foreach ($target['pgigmap'] as $pgigmap) {
 					if ($pgigmap['pgtag'] == $pg['tag']) {
-						$input_errors[] = gettext("This tag is used.");
+						$input_errors[] = gtext("This tag is used.");
 					}
 				}
 			}
@@ -116,12 +116,12 @@ function iscsitargetpg_process_updatenotification($mode, $data) {
   <tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-        <li class="tabinact"><a href="services_iscsitarget.php"><span><?=gettext("Settings");?></span></a></li>
-        <li class="tabinact"><a href="services_iscsitarget_target.php"><span><?=gettext("Targets");?></span></a></li>
-        <li class="tabact"><a href="services_iscsitarget_pg.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Portals");?></span></a></li>
-				<li class="tabinact"><a href="services_iscsitarget_ig.php"><span><?=gettext("Initiators");?></span></a></li>
-				<li class="tabinact"><a href="services_iscsitarget_ag.php"><span><?=gettext("Auths");?></span></a></li>
-				<li class="tabinact"><a href="services_iscsitarget_media.php"><span><?=gettext("Media");?></span></a></li>
+        <li class="tabinact"><a href="services_iscsitarget.php"><span><?=gtext("Settings");?></span></a></li>
+        <li class="tabinact"><a href="services_iscsitarget_target.php"><span><?=gtext("Targets");?></span></a></li>
+        <li class="tabact"><a href="services_iscsitarget_pg.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Portals");?></span></a></li>
+				<li class="tabinact"><a href="services_iscsitarget_ig.php"><span><?=gtext("Initiators");?></span></a></li>
+				<li class="tabinact"><a href="services_iscsitarget_ag.php"><span><?=gtext("Auths");?></span></a></li>
+				<li class="tabinact"><a href="services_iscsitarget_media.php"><span><?=gtext("Media");?></span></a></li>
       </ul>
     </td>
   </tr>
@@ -132,16 +132,16 @@ function iscsitargetpg_process_updatenotification($mode, $data) {
       <?php if (updatenotify_exists("iscsitarget_pg")) print_config_change_box();?>
       <table width="100%" border="0" cellpadding="6" cellspacing="0">
       <tr>
-        <td colspan="2" valign="top" class="listtopic"><?=gettext("Portal Groups");?></td>
+        <td colspan="2" valign="top" class="listtopic"><?=gtext("Portal Groups");?></td>
       </tr>
       <tr>
-        <td width="22%" valign="top" class="vncell"><?=gettext("Portal Group");?></td>
+        <td width="22%" valign="top" class="vncell"><?=gtext("Portal Group");?></td>
         <td width="78%" class="vtable">
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
         <tr>
-          <td width="5%" class="listhdrlr"><?=gettext("Tag");?></td>
-          <td width="55%" class="listhdrr"><?=gettext("Portals");?></td>
-          <td width="30%" class="listhdrr"><?=gettext("Comment");?></td>
+          <td width="5%" class="listhdrlr"><?=gtext("Tag");?></td>
+          <td width="55%" class="listhdrr"><?=gtext("Portals");?></td>
+          <td width="30%" class="listhdrr"><?=gtext("Comment");?></td>
           <td width="10%" class="list"></td>
         </tr>
         <?php foreach($config['iscsitarget']['portalgroup'] as $pg):?>
@@ -156,8 +156,8 @@ function iscsitargetpg_process_updatenotification($mode, $data) {
           <td class="listr"><?=htmlspecialchars($pg['comment']);?>&nbsp;</td>
           <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
           <td valign="middle" nowrap="nowrap" class="list">
-            <a href="services_iscsitarget_pg_edit.php?uuid=<?=$pg['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit portal group");?>" border="0" alt="<?=gettext("Edit portal group");?>" /></a>
-            <a href="services_iscsitarget_pg.php?act=del&amp;type=pg&amp;uuid=<?=$pg['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this portal group?");?>')"><img src="images/delete.png" title="<?=gettext("Delete portal group");?>" border="0" alt="<?=gettext("Delete portal group");?>" /></a>
+            <a href="services_iscsitarget_pg_edit.php?uuid=<?=$pg['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit portal group");?>" border="0" alt="<?=gtext("Edit portal group");?>" /></a>
+            <a href="services_iscsitarget_pg.php?act=del&amp;type=pg&amp;uuid=<?=$pg['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this portal group?");?>')"><img src="images/delete.png" title="<?=gettext("Delete portal group");?>" border="0" alt="<?=gtext("Delete portal group");?>" /></a>
           </td>
           <?php else:?>
           <td valign="middle" nowrap="nowrap" class="list">
@@ -168,10 +168,10 @@ function iscsitargetpg_process_updatenotification($mode, $data) {
         <?php endforeach;?>
         <tr>
           <td class="list" colspan="3"></td>
-          <td class="list"><a href="services_iscsitarget_pg_edit.php"><img src="images/add.png" title="<?=gettext("Add portal group");?>" border="0" alt="<?=gettext("Add portal group");?>" /></a></td>
+          <td class="list"><a href="services_iscsitarget_pg_edit.php"><img src="images/add.png" title="<?=gettext("Add portal group");?>" border="0" alt="<?=gtext("Add portal group");?>" /></a></td>
         </tr>
         </table>
-        <?=gettext("A Portal Group contains IP addresses and listening TCP ports to connect the target from the initiator.");?>
+        <?=gtext("A Portal Group contains IP addresses and listening TCP ports to connect the target from the initiator.");?>
         </td>
       </tr>
       </table>

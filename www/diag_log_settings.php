@@ -35,7 +35,7 @@ require("auth.inc");
 require("guiconfig.inc");
 require("diag_log.inc");
 
-$pgtitle = array(gettext("Diagnostics"), gettext("Log"), gettext("Settings"));
+$pgtitle = array(gtext("Diagnostics"), gtext("Log"), gtext("Settings"));
 
 $pconfig['reverse']  = isset($config['syslogd']['reverse']);
 $pconfig['nentries'] = $config['syslogd']['nentries'];
@@ -62,10 +62,10 @@ if ($_POST) {
 
 	/* input validation */
 	if (isset($_POST['enable']) && $_POST['enable'] && !is_ipaddr($_POST['ipaddr'])) {
-		$input_errors[] = gettext("A valid IP address must be specified.");
+		$input_errors[] = gtext("A valid IP address must be specified.");
 	}
 	if (($_POST['nentries'] < 5) || ($_POST['nentries'] > 1000)) {
-		$input_errors[] = gettext("Number of log entries to show must be between 5 and 1000.");
+		$input_errors[] = gtext("Number of log entries to show must be between 5 and 1000.");
 	}
 
 	if (empty($input_errors)) {
@@ -114,8 +114,8 @@ function enable_change(enable_change) {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabinact"><a href="diag_log.php"><span><?=gettext("Log");?></span></a></li>
-				<li class="tabact"><a href="diag_log_settings.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Settings");?></span></a></li>
+				<li class="tabinact"><a href="diag_log.php"><span><?=gtext("Log");?></span></a></li>
+				<li class="tabact"><a href="diag_log_settings.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Settings");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -125,72 +125,72 @@ function enable_change(enable_change) {
 			<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 			<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 			<table width="100%" border="0" cellpadding="6" cellspacing="0">
-			<?php html_titleline(gettext("Log Settings"));?>
+			<?php html_titleline(gtext("Log Settings"));?>
 		   <tr>
 		<tr>
-			<td width="22%" valign="top" class="vncell"><?=gettext("Log order");?></td>
+			<td width="22%" valign="top" class="vncell"><?=gtext("Log order");?></td>
 			<td width="78%" class="vtable">
 			<input name="reverse" type="checkbox" id="reverse" value="yes" <?php if (!empty($pconfig['reverse'])) echo "checked=\"checked\""; ?> />
-			<?=gettext("Show log entries in reverse order (newest entries on top).");?>
+			<?=gtext("Show log entries in reverse order (newest entries on top).");?>
 		   </td>
 		</tr>
 	        <tr>
-		<td width="22%" valign="top" class="vncell"><?=gettext("Max entries");?></td>
+		<td width="22%" valign="top" class="vncell"><?=gtext("Max entries");?></td>
 		<td width="78%" class="vtable">
-			<?=gettext("Number of log entries to show");?>:
+			<?=gtext("Number of log entries to show");?>:
 			<input name="nentries" id="nentries" type="text" class="formfld" size="4" value="<?=htmlspecialchars($pconfig['nentries']);?>" /></td>
 		   </tr>
 		<tr>
-			<td width="22%" valign="top" class="vncell"><?=gettext("Resolve IP");?></td>
+			<td width="22%" valign="top" class="vncell"><?=gtext("Resolve IP");?></td>
 			<td width="78%" class="vtable">
 			<input name="resolve" type="checkbox" id="resolve" value="yes" <?php if (!empty($pconfig['resolve'])) echo "checked=\"checked\""; ?> />
-			<?=gettext("Resolve IP addresses to hostnames.");?><br />
+			<?=gtext("Resolve IP addresses to hostnames.");?><br />
 			<?php echo sprintf(gettext("Hint: If this is checked, IP addresses in the server logs are resolved to real hostnames where possible.<br><font color='red'>Warning</font>: This can cause a huge delay in loading the log page!"));?>
 		   </td>
 		</tr>
 		<tr>
-			<td width="22%" valign="top" class="vncell"><?=gettext("Compression");?></td>
+			<td width="22%" valign="top" class="vncell"><?=gtext("Compression");?></td>
 			<td width="78%" class="vtable">
 			<input name="disablecomp" type="checkbox" id="disablecomp" value="yes" <?php if (!empty($pconfig['disablecomp'])) echo "checked=\"checked\""; ?> />
-			<?=gettext("Disable the compression of repeated line.");?></td>
+			<?=gtext("Disable the compression of repeated line.");?></td>
 		   </tr>
 		<tr>
-			<td width="22%" valign="top" class="vncell"><?=gettext("Remote syslog messages");?></td>
+			<td width="22%" valign="top" class="vncell"><?=gtext("Remote syslog messages");?></td>
 			<td width="78%" class="vtable">
 			<input name="disablesecure" type="checkbox" id="disablesecure" value="yes" <?php if (!empty($pconfig['disablesecure'])) echo "checked=\"checked\""; ?> />
-			<?=gettext("Accept remote syslog messages.");?></td>
+			<?=gtext("Accept remote syslog messages.");?></td>
 			<?php html_separator();?>
 		   </tr>
 		<tr>
-			<?php html_titleline_checkbox("enable", gettext("Remote Syslog Server"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "enable_change(false)");?>
-			<td width="22%" valign="top" class="vncell"><?=gettext("IP address");?></td>
+			<?php html_titleline_checkbox("enable", gtext("Remote Syslog Server"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
+			<td width="22%" valign="top" class="vncell"><?=gtext("IP address");?></td>
 			<td width="78%" class="vtable">
 			<input name="ipaddr" id="ipaddr" type="text" class="formfld" size="17" value="<?=htmlspecialchars($pconfig['ipaddr']);?>" />
-			<br /><?=gettext("IP address of remote syslog server.");?>
+			<br /><?=gtext("IP address of remote syslog server.");?>
 		   </tr>
 		<tr>
-			<td width="22%" valign="top" class="vncell"><?=gettext("Event selection");?></td>
+			<td width="22%" valign="top" class="vncell"><?=gtext("Event selection");?></td>
 			<td width="78%" class="vtable">
 			<input name="system" id="system" type="checkbox" value="yes" <?php if (!empty($pconfig['system'])) echo "checked=\"checked\""; ?> />
-			<?=gettext("System events");?><br />
+			<?=gtext("System events");?><br />
 			<input name="ftp" id="ftp" type="checkbox" value="yes" <?php if (!empty($pconfig['ftp'])) echo "checked=\"checked\""; ?> />
-			<?=gettext("FTP events");?><br />
+			<?=gtext("FTP events");?><br />
 			<input name="rsyncd" id="rsyncd" type="checkbox" value="yes" <?php if (!empty($pconfig['rsyncd'])) echo "checked=\"checked\""; ?> />
-			<?=gettext("RSYNC events");?><br />
+			<?=gtext("RSYNC events");?><br />
 			<input name="sshd" id="sshd" type="checkbox" value="yes" <?php if (!empty($pconfig['sshd'])) echo "checked=\"checked\""; ?> />
-			<?=gettext("SSH events");?><br />
+			<?=gtext("SSH events");?><br />
 			<input name="smartd" id="smartd" type="checkbox" value="yes" <?php if (!empty($pconfig['smartd'])) echo "checked=\"checked\""; ?> />
-			<?=gettext("S.M.A.R.T. events");?><br />
+			<?=gtext("S.M.A.R.T. events");?><br />
 			<input name="daemon" id="daemon" type="checkbox" value="yes" <?php if (!empty($pconfig['daemon'])) echo "checked=\"checked\""; ?> />
-			<?=gettext("Daemon events");?><br />
+			<?=gtext("Daemon events");?><br />
 		   </td>
 		</tr>
 	</table>
 		<div id="submit">
-			<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save");?>" onclick="enable_change(true)" />
+			<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save");?>" onclick="enable_change(true)" />
 			</div>
 			<div id="remarks">
-			<?php html_remark("note", gettext("Note"), sprintf(gettext("Syslog sends UDP datagrams to port 514 on the specified remote syslog server. Be sure to set syslogd on the remote server to accept syslog messages from this server.")));?>
+			<?php html_remark("note", gtext("Note"), sprintf(gtext("Syslog sends UDP datagrams to port 514 on the specified remote syslog server. Be sure to set syslogd on the remote server to accept syslog messages from this server.")));?>
 			</div>
 			<?php include("formend.inc");?>
 		   </form>

@@ -119,7 +119,7 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 
 	// Input validation.
 	$reqdfields = ['name', 'value'];
-	$reqdfieldsn = [gettext('Name'), gettext('Value')];
+	$reqdfieldsn = [gtext('Name'), gtext('Value')];
 	$reqdfieldst = ['string', 'string'];
 
 	do_input_validation($sphere_record, $reqdfields, $reqdfieldsn, $input_errors);
@@ -156,20 +156,20 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 			break;
 	}
 }
-$pgtitle = [gettext('System'), gettext('Advanced'), gettext('loader.conf'), $isrecordnew ? gettext('Add') : gettext('Edit')];
+$pgtitle = [gtext('System'), gtext('Advanced'), gtext('loader.conf'), $isrecordnew ? gtext('Add') : gtext('Edit')];
 ?>
 <?php include("fbegin.inc");?>
 <table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabinact"><a href="system_advanced.php"><span><?=gettext('Advanced');?></span></a></li>
-		<li class="tabinact"><a href="system_email.php"><span><?=gettext('Email');?></span></a></li>
-		<li class="tabinact"><a href="system_proxy.php"><span><?=gettext('Proxy');?></span></a></li>
-		<li class="tabinact"><a href="system_swap.php"><span><?=gettext('Swap');?></span></a></li>
-		<li class="tabinact"><a href="system_rc.php"><span><?=gettext('Command Scripts');?></span></a></li>
-		<li class="tabinact"><a href="system_cron.php"><span><?=gettext('Cron');?></span></a></li>
-		<li class="tabact"><a href="system_loaderconf.php" title="<?=gettext('Reload page');?>"><span><?=gettext('loader.conf');?></span></a></li>
-		<li class="tabinact"><a href="system_rcconf.php"><span><?=gettext('rc.conf');?></span></a></li>
-		<li class="tabinact"><a href="system_sysctl.php"><span><?=gettext('sysctl.conf');?></span></a></li>
+		<li class="tabinact"><a href="system_advanced.php"><span><?=gtext('Advanced');?></span></a></li>
+		<li class="tabinact"><a href="system_email.php"><span><?=gtext('Email');?></span></a></li>
+		<li class="tabinact"><a href="system_proxy.php"><span><?=gtext('Proxy');?></span></a></li>
+		<li class="tabinact"><a href="system_swap.php"><span><?=gtext('Swap');?></span></a></li>
+		<li class="tabinact"><a href="system_rc.php"><span><?=gtext('Command Scripts');?></span></a></li>
+		<li class="tabinact"><a href="system_cron.php"><span><?=gtext('Cron');?></span></a></li>
+		<li class="tabact"><a href="system_loaderconf.php" title="<?=gettext('Reload page');?>"><span><?=gtext('loader.conf');?></span></a></li>
+		<li class="tabinact"><a href="system_rcconf.php"><span><?=gtext('rc.conf');?></span></a></li>
+		<li class="tabinact"><a href="system_sysctl.php"><span><?=gtext('sysctl.conf');?></span></a></li>
 	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform" onsubmit="spinner()">
@@ -186,19 +186,19 @@ $pgtitle = [gettext('System'), gettext('Advanced'), gettext('loader.conf'), $isr
 	?>
 	<table id="area_data_settings">
 		<thead>
-			<?php html_titleline_checkbox2('enable', gettext('Configuration'), $sphere_record['enable'], gettext('Enable'));?>
+			<?php html_titleline_checkbox2('enable', gtext('Configuration'), $sphere_record['enable'], gtext('Enable'));?>
 		</thead>
 		<tbody>
 			<?php
-				html_inputbox2('name', gettext('Name'), $sphere_record['name'], gettext('Name of the variable.'), true, 40);
-				html_inputbox2('value', gettext('Value'), $sphere_record['value'], gettext('The value of the variable.'), true);
-				html_inputbox2('comment', gettext('Comment'), $sphere_record['comment'], gettext('You may enter a description here for your reference.'), false, 40);
+				html_inputbox2('name', gtext('Name'), $sphere_record['name'], gtext('Name of the variable.'), true, 40);
+				html_inputbox2('value', gtext('Value'), $sphere_record['value'], gtext('The value of the variable.'), true);
+				html_inputbox2('comment', gtext('Comment'), $sphere_record['comment'], gtext('You may enter a description here for your reference.'), false, 40);
 			?>
 		</tbody>
 	</table>
 	<div id="submit">
-		<input name="Submit" type="submit" class="formbtn" value="<?=$isrecordnew ? gettext('Add') : gettext('Save');?>"/>
-		<input name="Cancel" type="submit" class="formbtn" value="<?=gettext('Cancel');?>"/>
+		<input name="Submit" type="submit" class="formbtn" value="<?=$isrecordnew ? gtext('Add') : gtext('Save');?>"/>
+		<input name="Cancel" type="submit" class="formbtn" value="<?=gtext('Cancel');?>"/>
 		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>"/>
 	</div>
 	<?php require('formend.inc');?>

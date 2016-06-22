@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("VM"), gettext("Xen"));
+$pgtitle = array(gtext("VM"), gtext("Xen"));
 
 if (!isset($config['xen']['vms']['param']) || !is_array($config['xen']['vms']['param']))
 	$config['xen']['vms']['param'] = array();
@@ -457,15 +457,15 @@ $(document).ready(function(){
 	<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 	<?php if (updatenotify_exists("vm_xen_pv") || updatenotify_exists("vm_xen_hvm")) print_config_change_box();?>
 	<table width="100%" border="0" cellpadding="6" cellspacing="0">
-	<?php html_titleline(gettext("Xen Virtual Machine"), 7);?>
+	<?php html_titleline(gtext("Xen Virtual Machine"), 7);?>
 	<tr>
-	  <td width="20%" class="listhdrlr"><?=gettext("Name");?></td>
-	  <td width="10%" class="listhdrr"><?=gettext("Mem");?></td>
-	  <td width="10%" class="listhdrr"><?=gettext("VCPUs");?></td>
-	  <td width="10%" class="listhdrr"><?=gettext("VM Type");?></td>
-	  <td width="10%" class="listhdrr"><?=gettext("VNC Display");?></td>
-	  <td width="10%" class="listhdrr"><?=gettext("DomID");?></td>
-	  <td width="25%" class="listhdrr"><?=gettext("Command");?></td>
+	  <td width="20%" class="listhdrlr"><?=gtext("Name");?></td>
+	  <td width="10%" class="listhdrr"><?=gtext("Mem");?></td>
+	  <td width="10%" class="listhdrr"><?=gtext("VCPUs");?></td>
+	  <td width="10%" class="listhdrr"><?=gtext("VM Type");?></td>
+	  <td width="10%" class="listhdrr"><?=gtext("VNC Display");?></td>
+	  <td width="10%" class="listhdrr"><?=gtext("DomID");?></td>
+	  <td width="25%" class="listhdrr"><?=gtext("Command");?></td>
 	  <td width="5%" class="list"></td>
 	</tr>
 	<?php foreach ($a_vms as $vmv):?>
@@ -480,21 +480,21 @@ $(document).ready(function(){
 	  <td class="listr"><?php
 		if ($domid === false) {
 			// not running uuid
-			echo "<button type=\"button\" value=\"{$vmv['uuid']}\" class=\"formbtn vmstart\">".gettext("Start")."</button>";
+			echo "<button type=\"button\" value=\"{$vmv['uuid']}\" class=\"formbtn vmstart\">".gtext("Start")."</button>";
 			echo "\n";
 		} else {
 			// running uuid
-			echo "<button type=\"button\" value=\"{$vmv['uuid']}\" class=\"formbtn vmshutdown\">".gettext("Shutdown")."</button> ";
-			echo "<button type=\"button\" value=\"{$vmv['uuid']}\" class=\"formbtn vmreboot\">".gettext("Reboot")."</button> ";
-			echo "<button type=\"button\" value=\"{$vmv['uuid']}\" class=\"formbtn vmstop\">".gettext("Stop")."</button> ";
+			echo "<button type=\"button\" value=\"{$vmv['uuid']}\" class=\"formbtn vmshutdown\">".gtext("Shutdown")."</button> ";
+			echo "<button type=\"button\" value=\"{$vmv['uuid']}\" class=\"formbtn vmreboot\">".gtext("Reboot")."</button> ";
+			echo "<button type=\"button\" value=\"{$vmv['uuid']}\" class=\"formbtn vmstop\">".gtext("Stop")."</button> ";
 			echo "\n";
 		}
 	  ?></td>
 	  <?php $notificationmode = updatenotify_get_mode(($vmv['type'] == "pv") ? "vm_xen_pv" : "vm_xen_hvm", $vmv['uuid']);?>
 	  <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 	  <td valign="middle" nowrap="nowrap" class="list">
-	    <a href="<?=($vmv['type'] == "pv") ? "vm_xen_pv.php" : "vm_xen_hvm.php";?>?uuid=<?=$vmv['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit VM");?>" border="0" alt="<?=gettext("Edit VM");?>" /></a>
-	    <a href="vm_xen.php?act=del&amp;uuid=<?=$vmv['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this VM?");?>')"><img src="images/delete.png" title="<?=gettext("Delete VM");?>" border="0" alt="<?=gettext("Delete VM");?>" /></a>
+	    <a href="<?=($vmv['type'] == "pv") ? "vm_xen_pv.php" : "vm_xen_hvm.php";?>?uuid=<?=$vmv['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit VM");?>" border="0" alt="<?=gtext("Edit VM");?>" /></a>
+	    <a href="vm_xen.php?act=del&amp;uuid=<?=$vmv['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this VM?");?>')"><img src="images/delete.png" title="<?=gettext("Delete VM");?>" border="0" alt="<?=gtext("Delete VM");?>" /></a>
 	  </td>
 	  <?php else:?>
 	  <td valign="middle" nowrap="nowrap" class="list">
@@ -506,8 +506,8 @@ $(document).ready(function(){
 	<?php html_separator();?>
 	</table>
 	<div id="vm_new">
-	  <button type="button" id="CreatePV" class="formbtn"><?=gettext("Create PV Guest");?></button>
-	  <button type="button" id="CreateHVM" class="formbtn"><?=gettext("Create HVM Guest");?></button>
+	  <button type="button" id="CreatePV" class="formbtn"><?=gtext("Create PV Guest");?></button>
+	  <button type="button" id="CreateHVM" class="formbtn"><?=gtext("Create HVM Guest");?></button>
 	</div>
 	<?php include("formend.inc");?>
       </form>

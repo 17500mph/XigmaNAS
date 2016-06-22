@@ -43,7 +43,7 @@ if (isset($_GET['uuid']))
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = array(gettext("Disks"), gettext("ZFS"), gettext("Snapshots"), gettext("Snapshot"), gettext("Edit"));
+$pgtitle = array(gtext("Disks"), gtext("ZFS"), gtext("Snapshots"), gtext("Snapshot"), gtext("Edit"));
 
 if (!isset($config['zfs']['pools']['pool']) || !is_array($config['zfs']['pools']['pool']))
 	$config['zfs']['pools']['pool'] = array();
@@ -112,18 +112,18 @@ if ($_POST) {
 	if (isset($_POST['action']))
 		$action = $_POST['action'];
 	if (empty($action)) {
-		$input_errors[] = sprintf(gettext("The attribute '%s' is required."), gettext("Action"));
+		$input_errors[] = sprintf(gtext("The attribute '%s' is required."), gtext("Action"));
 	} else if ($action == 'clone') {
 		// Input validation
 		$reqdfields = explode(" ", "newpath");
-		$reqdfieldsn = array(gettext("Path"));
+		$reqdfieldsn = array(gtext("Path"));
 		$reqdfieldst = explode(" ", "string");
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
 		if (preg_match("/(\\s|\\@|\\'|\\\")+/", $_POST['newpath'])) {
-			$input_errors[] = sprintf(gettext("The attribute '%s' contains invalid characters."), gettext("Path"));
+			$input_errors[] = sprintf(gtext("The attribute '%s' contains invalid characters."), gtext("Path"));
 		}
 
 		if (empty($input_errors)) {
@@ -173,7 +173,7 @@ if ($_POST) {
 			$errormsg = implode("\n", $ret['output']);
 		}
 	} else {
-		$input_errors[] = sprintf(gettext("The attribute '%s' is invalid."), "action");
+		$input_errors[] = sprintf(gtext("The attribute '%s' is invalid."), "action");
 	}
 }
 ?>
@@ -205,21 +205,21 @@ function action_change() {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gettext("Pools");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gettext("Datasets");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gettext("Volumes");?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_snapshot.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Snapshots");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gettext("Configuration");?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext("Pools");?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext("Datasets");?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext("Volumes");?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_snapshot.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Snapshots");?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext("Configuration");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav2">
-				<li class="tabact"><a href="disks_zfs_snapshot.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Snapshot");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot_clone.php"><span><?=gettext("Clone");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot_auto.php"><span><?=gettext("Auto Snapshot");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot_info.php"><span><?=gettext("Information");?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_snapshot.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Snapshot");?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_snapshot_clone.php"><span><?=gtext("Clone");?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_snapshot_auto.php"><span><?=gtext("Auto Snapshot");?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_snapshot_info.php"><span><?=gtext("Information");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -230,15 +230,15 @@ function action_change() {
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<?php if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_text("snapshot", gettext("Snapshot"), htmlspecialchars($pconfig['snapshot']));?>
-					<?php $a_action = array("clone" => gettext("Clone"), "delete" => gettext("Delete"));?>
-					<?php html_combobox("action", gettext("Action"), $pconfig['action'], $a_action, "", true, false, "action_change()");?>
-					<?php html_inputbox("newpath", gettext("Path"), $pconfig['newpath'], "", true, 30);?>
-					<?php html_checkbox("recursive", gettext("Recursive"), !empty($pconfig['recursive']) ? true : false, gettext("Deletes the recursive snapshot."), "", false);?>
+					<?php html_text("snapshot", gtext("Snapshot"), htmlspecialchars($pconfig['snapshot']));?>
+					<?php $a_action = array("clone" => gtext("Clone"), "delete" => gtext("Delete"));?>
+					<?php html_combobox("action", gtext("Action"), $pconfig['action'], $a_action, "", true, false, "action_change()");?>
+					<?php html_inputbox("newpath", gtext("Path"), $pconfig['newpath'], "", true, 30);?>
+					<?php html_checkbox("recursive", gtext("Recursive"), !empty($pconfig['recursive']) ? true : false, gtext("Deletes the recursive snapshot."), "", false);?>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Execute");?>" onclick="enable_change(true)" />
-					<input name="Cancel" type="submit" class="formbtn" value="<?=gettext("Cancel");?>" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Execute");?>" onclick="enable_change(true)" />
+					<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
 					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
 					<input name="snapshot" type="hidden" value="<?=$pconfig['snapshot'];?>" />
 					<input name="pool" type="hidden" value="<?=$pconfig['pool'];?>" />

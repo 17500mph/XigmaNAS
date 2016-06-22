@@ -45,15 +45,15 @@ $sphere_record = [];
 $checkbox_member_name = 'checkbox_member_array';
 $checkbox_member_array = [];
 $checkbox_member_record = [];
-$gt_record_add = gettext('Add Virtual Device');
-$gt_record_mod = gettext('Edit Virtual Device');
-$gt_record_del = gettext('Virtual Device is marked for removal');
-$gt_record_loc = gettext('Virtual Device is protected');
-$gt_record_unl = gettext('Virtual Device is unlocked');
-$gt_record_mai = gettext('Maintenance');
-$gt_record_inf = gettext('Information');
-$gt_selection_delete = gettext('Delete Selected Virtual Devices');
-$gt_selection_delete_confirm = gettext('Do you want to delete selected virtual devices?');
+$gt_record_add = gtext('Add Virtual Device');
+$gt_record_mod = gtext('Edit Virtual Device');
+$gt_record_del = gtext('Virtual Device is marked for removal');
+$gt_record_loc = gtext('Virtual Device is protected');
+$gt_record_unl = gtext('Virtual Device is unlocked');
+$gt_record_mai = gtext('Maintenance');
+$gt_record_inf = gtext('Information');
+$gt_selection_delete = gtext('Delete Selected Virtual Devices');
+$gt_selection_delete_confirm = gtext('Do you want to delete selected virtual devices?');
 $img_path = [
 	'add' => 'images/add.png',
 	'mod' => 'images/edit.png',
@@ -133,7 +133,7 @@ if (!(isset($config['zfs']['pools']['pool']) && is_array($config['zfs']['pools']
 }
 $a_pool = &$config['zfs']['pools']['pool'];
  
-$pgtitle = array(gettext('Disks'), gettext('ZFS'), gettext('Pools'), gettext('Virtual Device'));
+$pgtitle = array(gtext('Disks'), gtext('ZFS'), gtext('Pools'), gtext('Virtual Device'));
 ?>
 <?php include("fbegin.inc");?>
 <script type="text/javascript">
@@ -198,22 +198,22 @@ function controlactionbuttons(ego, triggerbyname) {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gettext('Reload page');?>"><span><?=gettext('Pools');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gettext('Datasets');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gettext('Volumes');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gettext('Snapshots');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gettext('Configuration');?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gettext('Reload page');?>"><span><?=gtext('Pools');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext('Volumes');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav2">
-				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gettext('Reload page');?>"><span><?=gettext('Virtual Device');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gettext('Management');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_zpool_tools.php"><span><?=gettext('Tools');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_zpool_info.php"><span><?=gettext('Information');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gettext('I/O Statistics');?></span></a></li>
+				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gettext('Reload page');?>"><span><?=gtext('Virtual Device');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Management');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool_tools.php"><span><?=gtext('Tools');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool_info.php"><span><?=gtext('Information');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gtext('I/O Statistics');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -238,13 +238,13 @@ function controlactionbuttons(ego, triggerbyname) {
 			<col style="width:10%"><!-- // Toolbox -->
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gettext('Overview'), 5);?>
+			<?php html_titleline2(gtext('Overview'), 5);?>
 			<tr>
-				<td class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gettext('Invert Selection');?>"/></td>
-				<td class="lhell"><?=gettext('Name');?></td>
-				<td class="lhell"><?=gettext('Type');?></td>
-				<td class="lhell"><?=gettext('Description');?></td>
-				<td class="lhebl"><?=gettext('Toolbox');?></td>
+				<td class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></td>
+				<td class="lhell"><?=gtext('Name');?></td>
+				<td class="lhell"><?=gtext('Type');?></td>
+				<td class="lhell"><?=gtext('Description');?></td>
+				<td class="lhebl"><?=gtext('Toolbox');?></td>
 			</tr>
 		</thead>
 		<tfoot>
@@ -279,9 +279,9 @@ function controlactionbuttons(ego, triggerbyname) {
 									<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
 								<?php else:?>
 									<?php if ($notprotected && $isnotmemberofapool):?>
-										<img src="<?=$img_path['del'];?>" title="<?=gettext($gt_record_del);?>" alt="<?=gettext($gt_record_del);?>"/>
+										<img src="<?=$img_path['del'];?>" title="<?=gettext($gt_record_del);?>" alt="<?=gtext($gt_record_del);?>"/>
 									<?php else:?>
-										<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gettext($gt_record_loc);?>"/>
+										<img src="<?=$img_path['loc'];?>" title="<?=gettext($gt_record_loc);?>" alt="<?=gtext($gt_record_loc);?>"/>
 									<?php endif;?>
 								<?php endif;?>
 							</td>

@@ -37,7 +37,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Disks"), gettext("ZFS"), gettext("Volumes"), gettext("Information"));
+$pgtitle = array(gtext("Disks"), gtext("ZFS"), gtext("Volumes"), gtext("Information"));
 
 if (!isset($config['zfs']['volumes']['volume']) || !is_array($config['zfs']['volumes']['volume']))
 	$config['zfs']['volumes']['volume'] = array();
@@ -61,32 +61,32 @@ function zfs_volume_display_properties() {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gettext("Pools");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gettext("Datasets");?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_volume.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Volumes");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gettext("Snapshots");?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gettext("Configuration");?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext("Pools");?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext("Datasets");?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_volume.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Volumes");?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext("Snapshots");?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext("Configuration");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav2">
-				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gettext("Volume");?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_volume_info.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Information");?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext("Volume");?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_volume_info.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Information");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabcont">
 			<table width="100%" border="0">
-				<?php html_titleline(gettext("ZFS Volume Information & Status"));?>
+				<?php html_titleline(gtext("ZFS Volume Information & Status"));?>
 				<tr>
 					<td class="listt">
 						<pre><span id="zfs_volume_list"><?=zfs_volume_display_list();?></span></pre>
 					</td>
 				</tr>
-				<?php html_titleline(gettext("ZFS Volume Properties"));?>
+				<?php html_titleline(gtext("ZFS Volume Properties"));?>
 				<tr>
 					<td class="listt">
 						<pre><span id="zfs_volume_properties"><?=zfs_volume_display_properties();?></span></pre>

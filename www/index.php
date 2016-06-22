@@ -38,7 +38,7 @@ require("auth.inc");
 require("guiconfig.inc");
 require("zfs.inc");
 
-$pgtitle = array(gettext("System Information"));
+$pgtitle = array(gtext("System Information"));
 $pgtitle_omit = true;
 
 if (!isset($config['vinterfaces']['carp']) || !is_array($config['vinterfaces']['carp']))
@@ -70,37 +70,37 @@ function get_ups_disp_status($ups_status) {
 		if ($disp_status) $disp_status .= ', ';
 		switch ($condition) {
 		case 'WAIT':
-			$disp_status .= gettext('UPS Waiting');
+			$disp_status .= gtext('UPS Waiting');
 			break;
 		case 'OFF':
-			$disp_status .= gettext('UPS Off Line');
+			$disp_status .= gtext('UPS Off Line');
 			break;
 		case 'OL':
-			$disp_status .= gettext('UPS On Line');
+			$disp_status .= gtext('UPS On Line');
 			break;
 		case 'OB':
-			$disp_status .= gettext('UPS On Battery');
+			$disp_status .= gtext('UPS On Battery');
 			break;
 		case 'TRIM':
-			$disp_status .= gettext('SmartTrim');
+			$disp_status .= gtext('SmartTrim');
 			break;
 		case 'BOOST':
-			$disp_status .= gettext('SmartBoost');
+			$disp_status .= gtext('SmartBoost');
 			break;
 		case 'OVER':
-			$disp_status .= gettext('Overload');
+			$disp_status .= gtext('Overload');
 			break;
 		case 'LB':
-			$disp_status .= gettext('Battery Low');
+			$disp_status .= gtext('Battery Low');
 			break;
 		case 'RB':
-			$disp_status .= gettext('Replace Battery UPS');
+			$disp_status .= gtext('Replace Battery UPS');
 			break;
 		case 'CAL':
-			$disp_status .= gettext('Calibration Battery');
+			$disp_status .= gtext('Calibration Battery');
 			break;
 		case 'CHRG':
-			$disp_status .= gettext('Charging Battery');
+			$disp_status .= gtext('Charging Battery');
 			break;
 		default:
 			$disp_status .= $condition;
@@ -129,14 +129,14 @@ function get_upsinfo() {
 		"percentage" => $value,
 		"used" => sprintf("%.1f", $value),
 		"tooltip_used" => sprintf("%s%%", $value),
-		"tooltip_available" => sprintf(gettext("%s%% available"), 100 - $value),
+		"tooltip_available" => sprintf(gtext("%s%% available"), 100 - $value),
 	);
 	$value = !empty($ups['battery.charge']) ? $ups['battery.charge'] : 0;
 	$ups['battery'] = array(
 		"percentage" => $value,
 		"used" => sprintf("%.1f", $value),
 		"tooltip_used" => sprintf("%s%%", $value),
-		"tooltip_available" => sprintf(gettext("%s%% available"), 100 - $value),
+		"tooltip_available" => sprintf(gtext("%s%% available"), 100 - $value),
 	);
 	return $ups;
 }
@@ -160,14 +160,14 @@ function get_upsinfo2() {
 		"percentage" => $value,
 		"used" => sprintf("%.1f", $value),
 		"tooltip_used" => sprintf("%s%%", $value),
-		"tooltip_available" => sprintf(gettext("%s%% available"), 100 - $value),
+		"tooltip_available" => sprintf(gtext("%s%% available"), 100 - $value),
 	);
 	$value = !empty($ups['battery.charge']) ? $ups['battery.charge'] : 0;
 	$ups['battery'] = array(
 		"percentage" => $value,
 		"used" => sprintf("%.1f", $value),
 		"tooltip_used" => sprintf("%s%%", $value),
-		"tooltip_available" => sprintf(gettext("%s%% available"), 100 - $value),
+		"tooltip_available" => sprintf(gtext("%s%% available"), 100 - $value),
 	);
 	return $ups;
 }
@@ -263,7 +263,7 @@ function tblrowbar ($id, $name, $value) {
 		if(is_null($value)) return;
 		$available = 100 - $value;
 		$tooltip_used = sprintf("%s%%", $value);
-		$tooltip_available = sprintf(gettext("%s%% available"), $available);
+		$tooltip_available = sprintf(gtext("%s%% available"), $available);
 		$span_used = sprintf("%s%%", "<span name='ups_status_used' id='ups_status_{$id}_used' class='capacity'>".$value."</span>");
 	
 	print(<<<EOD
@@ -437,12 +437,12 @@ $(document).ready(function(){
 	// make sure normal user such as www can write to temporary
 	$perms = fileperms("/tmp");
 	if (($perms & 01777) != 01777) {
-		$errormsg .= sprintf(gettext("Wrong permission on %s."), "/tmp");
+		$errormsg .= sprintf(gtext("Wrong permission on %s."), "/tmp");
 		$errormsg .= "<br />\n";
 	}
 	$perms = fileperms("/var/tmp");
 	if (($perms & 01777) != 01777) {
-		$errormsg .= sprintf(gettext("Wrong permission on %s."), "/var/tmp");
+		$errormsg .= sprintf(gtext("Wrong permission on %s."), "/var/tmp");
 		$errormsg .= "<br />\n";
 	}
 	// check DNS
@@ -452,7 +452,7 @@ $(document).ready(function(){
 		// need by service/firmware check?
 		if (!isset($config['system']['disablefirmwarecheck'])
 		   || isset($config['ftpd']['enable'])) {
-			$errormsg .= gettext("No DNS setting found.");
+			$errormsg .= gtext("No DNS setting found.");
 			$errormsg .= "<br />\n";
 		}
 	}
@@ -462,35 +462,35 @@ $(document).ready(function(){
   <tr>
     <td class="tabcont">
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
-	<?php html_titleline(gettext("System Information"));?>
+	<?php html_titleline(gtext("System Information"));?>
 	<?php if (!empty($config['vinterfaces']['carp'])):?>
-	<?php html_textinfo("vipstatus", gettext("Virtual IP address"), htmlspecialchars(get_vip_status()));?>
+	<?php html_textinfo("vipstatus", gtext("Virtual IP address"), htmlspecialchars(get_vip_status()));?>
 	<?php endif;?>
-	<?php html_textinfo("hostname", gettext("Hostname"), system_get_hostname());?>
-	<?php html_textinfo("version", gettext("Version"), sprintf("<strong>%s %s</strong> (%s %s)", get_product_version(), get_product_versionname(), gettext("revision"), get_product_revision()));?>
-	<?php html_textinfo("builddate", gettext("Compiled"), htmlspecialchars(get_datetime_locale(get_product_buildtimestamp())));?>
+	<?php html_textinfo("hostname", gtext("Hostname"), system_get_hostname());?>
+	<?php html_textinfo("version", gettext("Version"), sprintf("<strong>%s %s</strong> (%s %s)", get_product_version(), get_product_versionname(), gtext("revision"), get_product_revision()));?>
+	<?php html_textinfo("builddate", gtext("Compiled"), htmlspecialchars(get_datetime_locale(get_product_buildtimestamp())));?>
 	<?php
 		exec("/sbin/sysctl -n kern.version", $osversion);
 	?>
-	<?php html_textinfo("platform_os", gettext("Platform OS"), sprintf("%s", $osversion[0]));?>
-	<?php html_textinfo("platform", gettext("Platform"), sprintf(gettext("%s on %s"), $g['fullplatform'], $cpuinfo['model']));?>
+	<?php html_textinfo("platform_os", gtext("Platform OS"), sprintf("%s", $osversion[0]));?>
+	<?php html_textinfo("platform", gtext("Platform"), sprintf(gtext("%s on %s"), $g['fullplatform'], $cpuinfo['model']));?>
 	<?php
 		if (!empty($smbios['planar'])) {
-			html_textinfo("system", gettext("System"), sprintf("%s %s", htmlspecialchars($smbios['planar']['maker']), htmlspecialchars($smbios['planar']['product'])));
+			html_textinfo("system", gtext("System"), sprintf("%s %s", htmlspecialchars($smbios['planar']['maker']), htmlspecialchars($smbios['planar']['product'])));
 		} else {
-			html_textinfo("system", gettext("System"), sprintf("%s %s", htmlspecialchars($smbios['system']['maker']), htmlspecialchars($smbios['system']['product'])));
+			html_textinfo("system", gtext("System"), sprintf("%s %s", htmlspecialchars($smbios['system']['maker']), htmlspecialchars($smbios['system']['product'])));
 		}
 	?>
-	<?php html_textinfo("system_bios", gettext("System bios"), sprintf("%s %s %s %s", htmlspecialchars($smbios['bios']['vendor']), gettext("version:"), htmlspecialchars($smbios['bios']['version']), htmlspecialchars($smbios['bios']['reldate'])));?>
-	<?php html_textinfo("system_datetime", gettext("System time"), htmlspecialchars(get_datetime_locale()));?>
-	<?php html_textinfo("system_uptime", gettext("System uptime"), htmlspecialchars(system_get_uptime()));?>
+	<?php html_textinfo("system_bios", gtext("System bios"), sprintf("%s %s %s %s", htmlspecialchars($smbios['bios']['vendor']), gtext("version:"), htmlspecialchars($smbios['bios']['version']), htmlspecialchars($smbios['bios']['reldate'])));?>
+	<?php html_textinfo("system_datetime", gtext("System time"), htmlspecialchars(get_datetime_locale()));?>
+	<?php html_textinfo("system_uptime", gtext("System uptime"), htmlspecialchars(system_get_uptime()));?>
 	<?php if (Session::isAdmin()):?>
 		<?php if ($config['lastchange']):?>
-			<?php html_textinfo("last_config_change", gettext("System last config change"), htmlspecialchars(get_datetime_locale($config['lastchange'])));?>
+			<?php html_textinfo("last_config_change", gtext("System last config change"), htmlspecialchars(get_datetime_locale($config['lastchange'])));?>
 		<?php endif;?>
 		<?php if (!empty($cpuinfo['temperature2'])):
 			echo "<tr>";
-			echo "<td width='25%' class='vncellt'>".gettext("CPU temperature")."</td>";
+			echo "<td width='25%' class='vncellt'>".gtext("CPU temperature")."</td>";
 			echo "<td width='75%' class='listr'>";
 			echo "<table width='100%' border='0' cellspacing='0' cellpadding='0'><tr><td>\n";
 			$cpus = system_get_cpus();
@@ -506,7 +506,7 @@ $(document).ready(function(){
 		?>
 		<?php elseif (!empty($cpuinfo['temperature'])):?>
 			<tr>
-				<td width="25%" class="vncellt"><?=gettext("CPU temperature");?></td>
+				<td width="25%" class="vncellt"><?=gtext("CPU temperature");?></td>
 				<td width="75%" class="listr">
 					<input style="padding: 0; border: 0; background-color:#FCFCFC;" size="30" name="cputemp" id="cputemp" value="<?=htmlspecialchars($cpuinfo['temperature']);?>" />
 				</td>
@@ -514,14 +514,14 @@ $(document).ready(function(){
 		<?php endif;?>
 		<?php if (!empty($cpuinfo['freq'])):?>
 			<tr>
-				<td width="25%" class="vncellt"><?=gettext("CPU frequency");?></td>
+				<td width="25%" class="vncellt"><?=gtext("CPU frequency");?></td>
 				<td width="75%" class="listr">
-					<input style="padding: 0; border: 0; background-color:#FCFCFC;" size="30" name="cpufreq" id="cpufreq" value="<?=htmlspecialchars($cpuinfo['freq']);?>MHz" title="<?=sprintf(gettext("Levels (MHz/mW): %s"), $cpuinfo['freqlevels']);?>" />
+					<input style="padding: 0; border: 0; background-color:#FCFCFC;" size="30" name="cpufreq" id="cpufreq" value="<?=htmlspecialchars($cpuinfo['freq']);?>MHz" title="<?=sprintf(gtext("Levels (MHz/mW): %s"), $cpuinfo['freqlevels']);?>" />
 				</td>
 			</tr>
 		<?php endif;?>
 		<tr>
-			<td width="25%" class="vncellt"><?=gettext("CPU usage");?></td>
+			<td width="25%" class="vncellt"><?=gtext("CPU usage");?></td>
 			<td width="75%" class="listr">
 			<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
 			<?php
@@ -531,7 +531,7 @@ $(document).ready(function(){
 				echo "<img src='images/bar_gray.gif' name='cpuusagef' id='cpuusagef' width='" . (100 - $percentage) . "' class='progbarc' alt='' />";
 				echo "<img src='images/bar_right.gif' class='progbarr' alt='' /> ";
 			?>
-				<input style="padding: 0; border: 0; background-color:#FCFCFC;" size="30" name="cpuusage" id="cpuusage" value="<?=gettext("Updating in 5 seconds.");?>" />
+				<input style="padding: 0; border: 0; background-color:#FCFCFC;" size="30" name="cpuusage" id="cpuusage" value="<?=gtext("Updating in 5 seconds.");?>" />
 			</td></tr>
 			<?php
 				$cpus = system_get_cpus();
@@ -544,7 +544,7 @@ $(document).ready(function(){
 						echo "<img src='images/bar_blue.gif' name='cpuusageu${idx}' id='cpuusageu${idx}' width='" . $percentage . "' class='progbarcf' alt='' />";
 						echo "<img src='images/bar_gray.gif' name='cpuusagef${idx}' id='cpuusagef${idx}' width='" . (100 - $percentage) . "' class='progbarc' alt='' />";
 						echo "<img src='images/bar_right.gif' class='progbarr' alt='' /> ";
-						echo "<input style='padding: 0; border: 0; background-color:#FCFCFC;' size='30' name='cpuusage${idx}' id='cpuusage${idx}' value=\"".gettext("Updating in 5 seconds.")."\" />";
+						echo "<input style='padding: 0; border: 0; background-color:#FCFCFC;' size='30' name='cpuusage${idx}' id='cpuusage${idx}' value=\"".gtext("Updating in 5 seconds.")."\" />";
 						echo "</td></tr>";
 					}
 				}
@@ -552,7 +552,7 @@ $(document).ready(function(){
 			</table></td>
 		</tr>
 		<tr>
-			<td width="25%" class="vncellt"><?=gettext("Memory usage");?></td>
+			<td width="25%" class="vncellt"><?=gtext("Memory usage");?></td>
 			<td width="75%" class="listr">
 			<?php
 				$raminfo = system_get_ram_info();
@@ -562,12 +562,12 @@ $(document).ready(function(){
 				echo "<img src='images/bar_gray.gif' name='memusagef' id='memusagef' width='" . (100 - $percentage) . "' class='progbarc' alt='' />";
 				echo "<img src='images/bar_right.gif' class='progbarr' alt='' /> ";
 			?>
-			<input style="padding: 0; border: 0; background-color:#FCFCFC;" size="30" name="memusage" id="memusage" value="<?=sprintf(gettext("%d%% of %dMiB"), $percentage, round($raminfo['physical'] / 1024 / 1024));?>" />
+			<input style="padding: 0; border: 0; background-color:#FCFCFC;" size="30" name="memusage" id="memusage" value="<?=sprintf(gtext("%d%% of %dMiB"), $percentage, round($raminfo['physical'] / 1024 / 1024));?>" />
 			</td>
 		</tr>
 		<?php $a_swapusage = get_swap_usage(); if (!empty($a_swapusage)):?>
 		<tr>
-			<td width="25%" class="vncellt"><?=gettext("Swap usage");?></td>
+			<td width="25%" class="vncellt"><?=gtext("Swap usage");?></td>
 			<td width="75%" class="listr">
 			<table width="100%" border="0" cellspacing="0" cellpadding="1">
 			<?php
@@ -585,7 +585,7 @@ $(document).ready(function(){
 					echo "<img src='images/bar_right.gif' class='progbarr' alt='' /> ";
 					echo "<span name='swapusage_{$ctrlid}_capofsize' id='swapusage_{$ctrlid}_capofsize' class='capofsize'>{$r_swapusage['capofsize']}</span>";
 					echo "<br />";
-					echo sprintf(gettext("Device: %s | Total: %s | Used: %s | Free: %s"),
+					echo sprintf(gtext("Device: %s | Total: %s | Used: %s | Free: %s"),
 						"<span name='swapusage_{$ctrlid}_name' id='swapusage_{$ctrlid}_name' class='name'>{$r_swapusage['name']}</span>",
 						"<span name='swapusage_{$ctrlid}_size' id='swapusage_{$ctrlid}_size' class='size'>{$r_swapusage['size']}</span>",
 						"<span name='swapusage_{$ctrlid}_used' id='swapusage_{$ctrlid}_used' class='used'>{$r_swapusage['used']}</span>",
@@ -600,18 +600,18 @@ $(document).ready(function(){
 		</tr>
 		<?php endif;?>
 		<tr>
-			<td width="25%" class="vncellt"><?=gettext("Load averages");?></td>
+			<td width="25%" class="vncellt"><?=gtext("Load averages");?></td>
 			<td width="75%" class="listr">
 			<?php
 				exec("uptime", $result);
 				$loadaverage = substr(strrchr($result[0], "load averages:"), 15);
 				?>
 				<input style="padding: 0; border: 0; background-color:#FCFCFC;" size="14" name="loadaverage" id="loadaverage" value="<?=$loadaverage;?>" />
-				<?="<small>[<a href='status_process.php'>".gettext("Show Process Information")."</a></small>]";?>
+				<?="<small>[<a href='status_process.php'>".gtext("Show Process Information")."</a></small>]";?>
 			</td>
 		</tr>
 		<tr>
-			<td width="25%" class="vncellt"><?=gettext("Disk space usage");?></td>
+			<td width="25%" class="vncellt"><?=gtext("Disk space usage");?></td>
 			<td width="75%" class="listr">
 			<table width="100%" border="0" cellspacing="0" cellpadding="1">
 			<?php
@@ -632,7 +632,7 @@ $(document).ready(function(){
 						echo "<img src='images/bar_right.gif' class='progbarr' alt='' /> ";
 						echo "<span name='diskusage_{$ctrlid}_capofsize' id='diskusage_{$ctrlid}_capofsize' class='capofsize'>{$r_diskusage['capofsize']}</span>";
 						echo "<br />";
-						echo sprintf(gettext("Total: %s | Used: %s | Free: %s"),
+						echo sprintf(gtext("Total: %s | Used: %s | Free: %s"),
 							"<span name='diskusage_{$ctrlid}_size' id='diskusage_{$ctrlid}_size' class='size'>{$r_diskusage['size']}</span>",
 							"<span name='diskusage_{$ctrlid}_used' id='diskusage_{$ctrlid}_used' class='used'>{$r_diskusage['used']}</span>",
 							"<span name='diskusage_{$ctrlid}_avail' id='diskusage_{$ctrlid}_avail' class='avail'>{$r_diskusage['avail']}</span>");
@@ -662,7 +662,7 @@ $(document).ready(function(){
 						echo "<img src='images/bar_right.gif' class='progbarr' alt='' /> ";
 						echo "<span name='poolusage_{$ctrlid}_capofsize' id='poolusage_{$ctrlid}_capofsize' class='capofsize'>{$r_poolusage['capofsize']}</span>";
 						echo "<br />";
-						echo sprintf(gettext("Total: %s | Alloc: %s | Free: %s | State: %s"),
+						echo sprintf(gtext("Total: %s | Alloc: %s | Free: %s | State: %s"),
 							"<span name='poolusage_{$ctrlid}_size' id='poolusage_{$ctrlid}_size' class='size'>{$r_poolusage['size']}</span>",
 							"<span name='poolusage_{$ctrlid}_used' id='poolusage_{$ctrlid}_used' class='used'>{$r_poolusage['used']}</span>",
 							"<span name='poolusage_{$ctrlid}_avail' id='poolusage_{$ctrlid}_avail' class='avail'>{$r_poolusage['avail']}</span>",
@@ -676,20 +676,20 @@ $(document).ready(function(){
 
 				if (empty($a_diskusage) && empty($a_poolusage)) {
 					echo "<tr><td>";
-					echo gettext("No disk configured");
+					echo gtext("No disk configured");
 					echo "</td></tr>";
 				}
 			?>
 			</table></td>
 		</tr>
 		<tr>
-			<td width="25%" class="vncellt"><?=gettext("UPS Status")." ".$config["ups"]["upsname"];?></td>
+			<td width="25%" class="vncellt"><?=gtext("UPS Status")." ".$config["ups"]["upsname"];?></td>
 			<td width="75%" class="listr">
 			<table width="100%" border="0" cellspacing="0" cellpadding="2">
 			<?php if (!isset($config['ups']['enable'])):?>
 				<tr>
 					<td>
-						<input style="padding: 0; border: 0; background-color:#FCFCFC;" size="18" name="upsstatus" id="upsstatus" value="<?=gettext("UPS disabled");?>" />
+						<input style="padding: 0; border: 0; background-color:#FCFCFC;" size="18" name="upsstatus" id="upsstatus" value="<?=gtext("UPS disabled");?>" />
 					</td>
 				</tr>
 			<?php else:?>
@@ -713,8 +713,8 @@ $(document).ready(function(){
 
 					$disp_status = get_ups_disp_status($ups['ups.status']);
 					tblrow(gettext('Status'), '<span id="ups_status_disp_status">'.$disp_status."</span>". "  <small>[<a href='diag_infos_ups.php'>" . gettext("Show UPS Information")."</a></small>]");
-					tblrowbar("load", gettext('Load'), $ups['ups.load'], '%', '100-80', '79-60', '59-0');
-					tblrowbar("battery", gettext('Battery Level'), $ups['battery.charge'], '%', '0-29' ,'30-79', '80-100');
+					tblrowbar("load", gtext('Load'), $ups['ups.load'], '%', '100-80', '79-60', '59-0');
+					tblrowbar("battery", gtext('Battery Level'), $ups['battery.charge'], '%', '0-29' ,'30-79', '80-100');
 				}
 
 				unset($handle);
@@ -730,7 +730,7 @@ $(document).ready(function(){
 		</tr>
 		<?php
         	if (isset($config['ups']['enable']) && isset($config['ups']['ups2'])) { ?>
-			<td width="25%" class="vncellt"><?=gettext("UPS Status")." ".$config["ups"]["ups2_upsname"];?></td>
+			<td width="25%" class="vncellt"><?=gtext("UPS Status")." ".$config["ups"]["ups2_upsname"];?></td>
 			<td width="75%" class="listr">
 			<table width="100%" border="0" cellspacing="0" cellpadding="2">
 		    <?php
@@ -753,8 +753,8 @@ $(document).ready(function(){
                 
                 	$disp_status = get_ups_disp_status($ups['ups.status']);
                 	tblrow(gettext('Status'), '<span id="ups_status_disp_status2">'.$disp_status."</span>". "  <small>[<a href='diag_infos_ups.php'>" . gettext("Show UPS Information")."</a></small>]");
-                	tblrowbar("load2", gettext('Load'), $ups['ups.load'], '%', '100-80', '79-60', '59-0');
-                	tblrowbar("battery2", gettext('Battery Level'), $ups['battery.charge'], '%', '0-29' ,'30-79', '80-100');
+                	tblrowbar("load2", gtext('Load'), $ups['ups.load'], '%', '100-80', '79-60', '59-0');
+                	tblrowbar("battery2", gtext('Battery Level'), $ups['battery.charge'], '%', '0-29' ,'30-79', '80-100');
                 }
                 
                 unset($handle);
@@ -792,7 +792,7 @@ $(document).ready(function(){
 			if (!empty($vmlist) || !empty($vmlist2) || !empty($vmlist3)):
 		?>
 		<tr>
-			<td width="25%" class="vncellt"><?=gettext("Virtual Machine");?></td>
+			<td width="25%" class="vncellt"><?=gtext("Virtual Machine");?></td>
 			<td width="75%" class="listr">
 			<table width="100%" border="0" cellspacing="0" cellpadding="1">
 			<?php

@@ -34,13 +34,13 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("System"), gettext("Factory Defaults"));
+$pgtitle = array(gtext("System"), gtext("Factory Defaults"));
 
 if ($_POST) {
-	if (0 == strcmp($_POST['Submit'], gettext("Yes"))) {
+	if (0 == strcmp($_POST['Submit'], gtext("Yes"))) {
 		reset_factory_defaults();
 		system_reboot();
-		$rebootmsg = gettext("The server has been reset to factory defaults and is now rebooting. This may take one minute.");
+		$rebootmsg = gtext("The server has been reset to factory defaults and is now rebooting. This may take one minute.");
 	} else {
 		header("Location: index.php");
 		exit;
@@ -54,18 +54,18 @@ if ($_POST) {
 	<tr>
 		<td class="tabcont">
 			<table width="100%" border="0" cellspacing="0" cellpadding="0">
-	<?php html_titleline(gettext("Factory Defaults"));?>
+	<?php html_titleline(gtext("Factory Defaults"));?>
 	  <tr>
 	    <td class="tabcont">
 				<p>
 					<strong>
-						<?=sprintf(gettext("If you click 'Yes', The server will be reset to factory defaults and will reboot immediately. The entire system configuration will be overwritten. The LAN IP address will be reset to %s and the password will be set to '%s'."), $g['default_ip'], $g['default_passwd']);?><br /><br />
-						<p class="red"><?=gettext("Are you sure you want to proceed?");?>
+						<?=sprintf(gtext("If you click 'Yes', The server will be reset to factory defaults and will reboot immediately. The entire system configuration will be overwritten. The LAN IP address will be reset to %s and the password will be set to '%s'."), $g['default_ip'], $g['default_passwd']);?><br /><br />
+						<p class="red"><?=gtext("Are you sure you want to proceed?");?>
 					</strong>
 				</p>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Yes");?>" />
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("No");?>" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Yes");?>" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("No");?>" />
 				</div>
 			</td>
 		</tr>

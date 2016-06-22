@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Services"), gettext("Rsync"), gettext("Local"));
+$pgtitle = array(gtext("Services"), gtext("Rsync"), gtext("Local"));
 
 if ($_POST) {
 	$pconfig = $_POST;
@@ -98,9 +98,9 @@ function rsynclocal_process_updatenotification($mode, $data) {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabinact"><a href="services_rsyncd.php"><span><?=gettext("Server") ;?></span></a></li>
-				<li class="tabinact"><a href="services_rsyncd_client.php"><span><?=gettext("Client") ;?></span></a></li>
-				<li class="tabact"><a href="services_rsyncd_local.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Local") ;?></span></a></li>
+				<li class="tabinact"><a href="services_rsyncd.php"><span><?=gtext("Server") ;?></span></a></li>
+				<li class="tabinact"><a href="services_rsyncd_client.php"><span><?=gtext("Client") ;?></span></a></li>
+				<li class="tabact"><a href="services_rsyncd_local.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Local") ;?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -111,10 +111,10 @@ function rsynclocal_process_updatenotification($mode, $data) {
         <?php if (updatenotify_exists("rsynclocal")) print_config_change_box();?>
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
           <tr>
-            <td width="25%" class="listhdrlr"><?=gettext("Source Share");?></td>
-						<td width="25%" class="listhdrr"><?=gettext("Destination Share");?></td>
-						<td width="10%" class="listhdrr"><?=gettext("Who");?></td>
-						<td width="30%" class="listhdrr"><?=gettext("Description");?></td>
+            <td width="25%" class="listhdrlr"><?=gtext("Source Share");?></td>
+						<td width="25%" class="listhdrr"><?=gtext("Destination Share");?></td>
+						<td width="10%" class="listhdrr"><?=gtext("Who");?></td>
+						<td width="30%" class="listhdrr"><?=gtext("Description");?></td>
             <td width="10%" class="list"></td>
           </tr>
   			  <?php foreach($a_rsynclocal as $rsynclocal):?>
@@ -127,8 +127,8 @@ function rsynclocal_process_updatenotification($mode, $data) {
 						<td class="listbg"><?=htmlspecialchars($rsynclocal['description']);?>&nbsp;</td>
 						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
             <td valign="middle" nowrap="nowrap" class="list">
-							<a href="services_rsyncd_local_edit.php?uuid=<?=$rsynclocal['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit Rsync job");?>" border="0" alt="<?=gettext("Edit Rsync job");?>" /></a>&nbsp;
-              <a href="services_rsyncd_local.php?act=del&amp;uuid=<?=$rsynclocal['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this Rsync job?");?>')"><img src="images/delete.png" title="<?=gettext("Delete Rsync job");?>" border="0" alt="<?=gettext("Delete Rsync job");?>" /></a>
+							<a href="services_rsyncd_local_edit.php?uuid=<?=$rsynclocal['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit Rsync job");?>" border="0" alt="<?=gtext("Edit Rsync job");?>" /></a>&nbsp;
+              <a href="services_rsyncd_local.php?act=del&amp;uuid=<?=$rsynclocal['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this Rsync job?");?>')"><img src="images/delete.png" title="<?=gettext("Delete Rsync job");?>" border="0" alt="<?=gtext("Delete Rsync job");?>" /></a>
             </td>
             <?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
@@ -139,7 +139,7 @@ function rsynclocal_process_updatenotification($mode, $data) {
           <?php endforeach;?>
           <tr> 
             <td class="list" colspan="4"></td>
-            <td class="list"><a href="services_rsyncd_local_edit.php"><img src="images/add.png" title="<?=gettext("Add Rsync job");?>" border="0" alt="<?=gettext("Add Rsync job");?>" /></a></td>
+            <td class="list"><a href="services_rsyncd_local_edit.php"><img src="images/add.png" title="<?=gettext("Add Rsync job");?>" border="0" alt="<?=gtext("Add Rsync job");?>" /></a></td>
 			    </tr>
         </table>
         <?php include("formend.inc");?>

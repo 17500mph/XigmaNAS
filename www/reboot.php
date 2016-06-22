@@ -34,11 +34,11 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("System"), gettext("Reboot"), gettext("Now"));
+$pgtitle = array(gtext("System"), gtext("Reboot"), gtext("Now"));
 
 if ($_POST) {
-	if ($_POST['Submit'] !== gettext("No")) {
-		$rebootmsg = gettext("The system is rebooting now. This may take one minute.");
+	if ($_POST['Submit'] !== gtext("No")) {
+		$rebootmsg = gtext("The system is rebooting now. This may take one minute.");
 	} else {
 		header("Location: index.php");
 		exit;
@@ -50,8 +50,8 @@ if ($_POST) {
   <tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-        <li class="tabact"><a href="reboot.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Now");?></span></a></li>
-        <li class="tabinact"><a href="reboot_sched.php"><span><?=gettext("Scheduled");?></span></a></li>
+        <li class="tabact"><a href="reboot.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Now");?></span></a></li>
+        <li class="tabinact"><a href="reboot_sched.php"><span><?=gtext("Scheduled");?></span></a></li>
       </ul>
     </td>
   </tr>
@@ -59,10 +59,10 @@ if ($_POST) {
     <td class="tabcont">
 			<?php if (!empty($rebootmsg)): echo print_info_box($rebootmsg); sleep(1); system_reboot(); else:?>
 			<form action="reboot.php" method="post" onsubmit="spinner()">
-			  <strong><?=gettext("Are you sure you want to reboot the system?");?></strong>
+			  <strong><?=gtext("Are you sure you want to reboot the system?");?></strong>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Yes");?>" />
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("No");?>" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Yes");?>" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("No");?>" />
 				</div>
 				<?php include("formend.inc");?>
 			</form>

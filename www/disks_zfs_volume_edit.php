@@ -149,7 +149,7 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 
 	// Input validation
 	$reqdfields = ['pool', 'name', 'volsize'];
-	$reqdfieldsn = [gettext('Pool'), gettext('Name'), gettext('Size')];
+	$reqdfieldsn = [gtext('Pool'), gtext('Name'), gtext('Size')];
 	$reqdfieldst = ['string', 'string', 'string'];
 
 	do_input_validation($sphere_record, $reqdfields, $reqdfieldsn, $input_errors);
@@ -159,7 +159,7 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 		// check for a valid name with the format name[/name], blanks are not supported.
 		$helpinghand = preg_quote('.:-_', '/');
 		if (!(preg_match('/^[a-z\d][a-z\d'.$helpinghand.']*(?:\/[a-z\d][a-z\d'.$helpinghand.']*)*$/i', $sphere_record['name']))) {
-			$input_errors[] = sprintf(gettext("The attribute '%s' contains invalid characters."), gettext('Name'));
+			$input_errors[] = sprintf(gtext("The attribute '%s' contains invalid characters."), gtext('Name'));
 		}
 	}
 	
@@ -171,7 +171,7 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 	// 1.
 	if (empty($input_errors)) {
 		if ($isrecordmodify && (0 !== strcmp($sphere_array[$index]['pool'][0], $sphere_record['pool']))) {
-			$input_errors[] = gettext('Pool cannot be changed.');
+			$input_errors[] = gtext('Pool cannot be changed.');
 		}
 	}
 	// 2., 3., 4.
@@ -185,10 +185,10 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 					case 1: // An error occured. => zfs dataset doesn't exist
 						break;
 					case 0: // Successful completion. => zfs dataset found
-						$input_errors[] = sprintf(gettext('%s already exists as a %s.'), $poolslashname, $retdat[0]);
+						$input_errors[] = sprintf(gtext('%s already exists as a %s.'), $poolslashname, $retdat[0]);
 						break;
  					case 2: // Invalid command line options were specified.
-						$input_errors[] = gettext('Failed to execute command zfs.');
+						$input_errors[] = gtext('Failed to execute command zfs.');
 						break;
 				}
 			}
@@ -196,7 +196,7 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 			if (empty($input_errors)) {
 				foreach ($sphere_array as $r_volume) {
 					if (0 === strcmp(escapeshellarg($r_volume['pool'][0].'/'.$r_volume['name']), $poolslashname)) {
-						$input_errors[] = sprintf(gettext('%s is already configured as a volume.'), $poolslashname);
+						$input_errors[] = sprintf(gtext('%s is already configured as a volume.'), $poolslashname);
 						break;
 					}
 				}
@@ -205,7 +205,7 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 			if (empty($input_errors)) {
 				foreach ($a_dataset as $r_dataset) {
 					if (0 === strcmp(escapeshellarg($r_dataset['pool'][0].'/'.$r_dataset['name']), $poolslashname)) {
-						$input_errors[] = sprintf(gettext('%s is already configured as a filesystem.'), $poolslashname);
+						$input_errors[] = sprintf(gtext('%s is already configured as a filesystem.'), $poolslashname);
 						break;
 					}
 				}
@@ -281,14 +281,14 @@ foreach ($a_pool as $r_pool) {
 	$l_poollist[$r_pool['name']] = htmlspecialchars($helpinghand);
 }
 $l_volmode = [
-	'default' => gettext('Default'),
+	'default' => gtext('Default'),
 	'geom' => 'geom',
 	'dev' => 'dev',
 	'none' => 'none'
 ];
 $l_compressionmode = [
-	'on' => gettext('On'),
-	'off' => gettext('Off'),
+	'on' => gtext('On'),
+	'off' => gtext('Off'),
 	'lz4' => 'lz4',
 	'lzjb' => 'lzjb',
 	'gzip' => 'gzip',
@@ -304,19 +304,19 @@ $l_compressionmode = [
 	'zle' => 'zle'
 ];
 $l_dedup = [
-	'on' => gettext('On'),
-	'off' => gettext('Off'),
-	'verify' => gettext('Verify'),
+	'on' => gtext('On'),
+	'off' => gtext('Off'),
+	'verify' => gtext('Verify'),
 	'sha256' => 'SHA256',
-	'sha256,verify' => gettext('SHA256, Verify')
+	'sha256,verify' => gtext('SHA256, Verify')
 ];
 $l_sync = [
-	'standard' => gettext('Standard'),
-	'always' => gettext('Always'),
-	'disabled' => gettext('Disabled')
+	'standard' => gtext('Standard'),
+	'always' => gtext('Always'),
+	'disabled' => gtext('Disabled')
 ];
 $l_volblocksize = [
-	'' => gettext('Default'),
+	'' => gtext('Default'),
 	'512B' => '512B',
 	'1K' => '1K',
 	'2K' => '2K',
@@ -328,7 +328,7 @@ $l_volblocksize = [
 	'128K' => '128K'
 ];
 
-$pgtitle = [gettext('Disks'), gettext('ZFS'), gettext('Volumes'), gettext('Volume'), ($isrecordnew) ? gettext('Add') : gettext('Edit')];
+$pgtitle = [gtext('Disks'), gtext('ZFS'), gtext('Volumes'), gtext('Volume'), ($isrecordnew) ? gtext('Add') : gtext('Edit')];
 ?>
 <?php include("fbegin.inc");?>
 <script type="text/javascript">
@@ -343,19 +343,19 @@ $(window).on("load", function() {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gettext('Pools');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gettext('Datasets');?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_volume.php" title="<?=gettext('Reload page');?>"><span><?=gettext('Volumes');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gettext('Snapshots');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gettext('Configuration');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Pools');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_volume.php" title="<?=gettext('Reload page');?>"><span><?=gtext('Volumes');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav2">
-				<li class="tabact"><a href="disks_zfs_volume.php" title="<?=gettext('Reload page');?>"><span><?=gettext('Volume');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_volume_info.php"><span><?=gettext('Information');?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_volume.php" title="<?=gettext('Reload page');?>"><span><?=gtext('Volume');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_volume_info.php"><span><?=gtext('Information');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -372,25 +372,25 @@ $(window).on("load", function() {
 			<col id="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gettext('Settings'));?>
+			<?php html_titleline2(gtext('Settings'));?>
 		</thead>
 		<tbody>
 			<?php
-				html_inputbox2('name', gettext('Name'), $sphere_record['name'], '', true, 20, $isrecordmodify);
-				html_combobox2('pool', gettext('Pool'), $sphere_record['pool'], $l_poollist, '', true, $isrecordmodify);
-				html_inputbox2('volsize', gettext('Size'), $sphere_record['volsize'], gettext("ZFS volume size. To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."), true, 10);
-				html_combobox2('volmode', gettext('Volume mode'), $sphere_record['volmode'], $l_volmode, gettext('Specifies how the volume should be exposed to the OS.'), true);
-				html_combobox2('compression', gettext('Compression'), $sphere_record['compression'], $l_compressionmode, gettext("Controls the compression algorithm used for this volume. The 'lzjb' compression algorithm is optimized for performance while providing decent data compression. Setting compression to 'On' uses the 'lzjb' compression algorithm. You can specify the 'gzip' level by using the value 'gzip-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'gzip' is equivalent to 'gzip-6'."), true);
+				html_inputbox2('name', gtext('Name'), $sphere_record['name'], '', true, 20, $isrecordmodify);
+				html_combobox2('pool', gtext('Pool'), $sphere_record['pool'], $l_poollist, '', true, $isrecordmodify);
+				html_inputbox2('volsize', gtext('Size'), $sphere_record['volsize'], gtext("ZFS volume size. To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."), true, 10);
+				html_combobox2('volmode', gtext('Volume mode'), $sphere_record['volmode'], $l_volmode, gtext('Specifies how the volume should be exposed to the OS.'), true);
+				html_combobox2('compression', gtext('Compression'), $sphere_record['compression'], $l_compressionmode, gtext("Controls the compression algorithm used for this volume. The 'lzjb' compression algorithm is optimized for performance while providing decent data compression. Setting compression to 'On' uses the 'lzjb' compression algorithm. You can specify the 'gzip' level by using the value 'gzip-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'gzip' is equivalent to 'gzip-6'."), true);
 				html_combobox2('dedup', gettext('Dedup'), $sphere_record['dedup'], $l_dedup, gettext("Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See <a href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide:disks-zfs-volumes-volume' target='_blank'>ZFS volumes & deduplication</a> wiki article BEFORE using this feature.</b></br>"), true);
-				html_combobox2('sync', gettext('Sync'), $sphere_record['sync'], $l_sync, gettext('Controls the behavior of synchronous requests.'), true);
-				html_checkbox2('sparse', gettext('Sparse Volume'), !empty($sphere_record['sparse']) ? true : false, gettext('Use as sparse volume. (thin provisioning)'), '', false);
-				html_combobox2('volblocksize', gettext('Block size'), $sphere_record['volblocksize'], $l_volblocksize, gettext('ZFS volume block size. This value can not be changed after creation.'), false, $isrecordmodify);
-				html_inputbox2('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 40);?>
+				html_combobox2('sync', gtext('Sync'), $sphere_record['sync'], $l_sync, gtext('Controls the behavior of synchronous requests.'), true);
+				html_checkbox2('sparse', gtext('Sparse Volume'), !empty($sphere_record['sparse']) ? true : false, gtext('Use as sparse volume. (thin provisioning)'), '', false);
+				html_combobox2('volblocksize', gtext('Block size'), $sphere_record['volblocksize'], $l_volblocksize, gtext('ZFS volume block size. This value can not be changed after creation.'), false, $isrecordmodify);
+				html_inputbox2('desc', gtext('Description'), $sphere_record['desc'], gtext('You may enter a description here for your reference.'), false, 40);?>
 		</tbody>
 	</table>
 	<div id="submit">
-		<input name="Submit" type="submit" class="formbtn" value="<?=($isrecordnew) ? gettext('Add') : gettext('Save');?>"/>
-		<input name="Cancel" type="submit" class="formbtn" value="<?=gettext("Cancel");?>"/>
+		<input name="Submit" type="submit" class="formbtn" value="<?=($isrecordnew) ? gtext('Add') : gtext('Save');?>"/>
+		<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>"/>
 		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>"/>
 	</div>
 	<?php include("formend.inc");?>

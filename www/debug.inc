@@ -31,9 +31,9 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-$specialnets = array("wanip" => gettext("WAN address"),
-                     "lan"   => gettext("LAN net"),
-                     "pptp"  => gettext("PPTP clients"));
+$specialnets = array("wanip" => gtext("WAN address"),
+                     "lan"   => gtext("LAN net"),
+                     "pptp"  => gtext("PPTP clients"));
 
 for ($i = 1; isset($config['interfaces']['opt' . $i]); $i++) {
 	$specialnets['opt' . $i] = $config['interfaces']['opt' . $i]['descr'] . " net";

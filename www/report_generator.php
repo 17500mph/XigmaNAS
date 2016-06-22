@@ -43,7 +43,7 @@ $pgperm['allowuser'] = TRUE;
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Help"), gettext("Report Generator"));
+$pgtitle = array(gtext("Help"), gtext("Report Generator"));
 
 $pglocalheader = <<< EOD
 <style type="text/css">
@@ -110,34 +110,34 @@ EOD;
 <form action="<?=$_SERVER['SCRIPT_NAME'];?>" method="post" enctype="multipart/form-data" name="iform">
   <table>
 		<tr>
-			<td class="label" align="right"><?=gettext("Info");?></td>
+			<td class="label" align="right"><?=gtext("Info");?></td>
 			<td class="text" align="left"><?=$sys_summary;?></td>
 		</tr>
 		<tr>
-			<td class="label" align="right"><?=gettext("Subject");?></td>
+			<td class="label" align="right"><?=gtext("Subject");?></td>
 			<td class="text"><input id="txtSubject" name="txtSubject" type="text" size="130" value="<?php echo !empty($_POST['txtSubject']) ? $_POST['txtSubject'] : ""; ?>" /></td>
 		</tr>
 		<tr>
-			<td class="label" align="right"><?=gettext("Description");?></td>
+			<td class="label" align="right"><?=gtext("Description");?></td>
 			<td class="text"><textarea id="txtDescription" name="txtDescription" rows="7" cols="80" wrap="on"><?=htmlspecialchars(!empty($_POST['txtDescription']) ? $_POST['txtDescription'] : "");?></textarea></td>
 		</tr>
 		<tr>
-			<td align="right"><?=gettext("Error");?></td>
+			<td align="right"><?=gtext("Error");?></td>
 			<td class="text"><textarea id="txtError" name="txtError" rows="3" cols="80" wrap="on"><?=htmlspecialchars(!empty($_POST['txtError']) ? $_POST['txtError'] : "");?></textarea></td>
 		</tr>
 		<tr>
-			<td align="right"><?=gettext("Hardware");?></td>
-			<td class="type" valign="top"><input name="chk_Hardware" type="checkbox" id="chk_Hardware" checked="checked" /><?=gettext("Include basic hardware information.");?></td>
+			<td align="right"><?=gtext("Hardware");?></td>
+			<td class="type" valign="top"><input name="chk_Hardware" type="checkbox" id="chk_Hardware" checked="checked" /><?=gtext("Include basic hardware information.");?></td>
 		</tr>
 		<tr>
-			<td align="right"><?=gettext("phpBB");?></td>
-			<td class="type" valign="top"><input name="chk_phpBB" type="checkbox" id="chk_phpBB" checked="checked" /><?=gettext("Format the report for phpBB forum.");?></td>
+			<td align="right"><?=gtext("phpBB");?></td>
+			<td class="type" valign="top"><input name="chk_phpBB" type="checkbox" id="chk_phpBB" checked="checked" /><?=gtext("Format the report for phpBB forum.");?></td>
 		</tr>
 		<tr>
 			<td valign="top">&nbsp;&nbsp;&nbsp;</td>
 			<td valign="top" align="center" class="label">
-				<input type="submit" class="button" value="<?=gettext("Generate");?>" />
-				<input type="button" class="button" value="<?=gettext("Clear");?>" onclick="return Reset_onClick( this.form )" />
+				<input type="submit" class="button" value="<?=gtext("Generate");?>" />
+				<input type="button" class="button" value="<?=gtext("Clear");?>" onclick="return Reset_onClick( this.form )" />
 			</td>
 		</tr>
   </table>

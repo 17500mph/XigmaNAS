@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Network"), gettext("Interface Management"));
+$pgtitle = array(gtext("Network"), gtext("Interface Management"));
 
 /*
 	In this file, "port" refers to the physical port name,
@@ -86,9 +86,9 @@ if ($_POST) {
 	/* Deliver error message for any port with more than one assignment */
 	foreach ($portifmap as $portname => $ifnames) {
 		if (count($ifnames) > 1) {
-			$errstr = gettext("Port ") . $portname .
-				gettext(" was assigned to ") . count($ifnames) .
-				gettext(" interfaces:");
+			$errstr = gtext("Port ") . $portname .
+				gtext(" was assigned to ") . count($ifnames) .
+				gtext(" interfaces:");
 
 			foreach ($portifmap[$portname] as $ifn)
 				$errstr .= " " . $ifn;
@@ -202,12 +202,12 @@ if (isset($_GET['act']) && $_GET['act'] == "add") {
 	<tr>
 		<td class="tabnavtbl">
 		  <ul id="tabnav">
-				<li class="tabact"><a href="interfaces_assign.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Management");?></span></a></li>
-				<li class="tabinact"><a href="interfaces_wlan.php"><span><?=gettext("WLAN");?></span></a></li>
-				<li class="tabinact"><a href="interfaces_vlan.php"><span><?=gettext("VLAN");?></span></a></li>
-				<li class="tabinact"><a href="interfaces_lagg.php"><span><?=gettext("LAGG");?></span></a></li>
-				<li class="tabinact"><a href="interfaces_bridge.php"><span><?=gettext("Bridge");?></span></a></li>
-				<li class="tabinact"><a href="interfaces_carp.php"><span><?=gettext("CARP");?></span></a></li>
+				<li class="tabact"><a href="interfaces_assign.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Management");?></span></a></li>
+				<li class="tabinact"><a href="interfaces_wlan.php"><span><?=gtext("WLAN");?></span></a></li>
+				<li class="tabinact"><a href="interfaces_vlan.php"><span><?=gtext("VLAN");?></span></a></li>
+				<li class="tabinact"><a href="interfaces_lagg.php"><span><?=gtext("LAGG");?></span></a></li>
+				<li class="tabinact"><a href="interfaces_bridge.php"><span><?=gtext("Bridge");?></span></a></li>
+				<li class="tabinact"><a href="interfaces_carp.php"><span><?=gtext("CARP");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -218,8 +218,8 @@ if (isset($_GET['act']) && $_GET['act'] == "add") {
 				<?php if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));?>
 				<table border="0" cellpadding="0" cellspacing="0">
 					<tr>
-						<td class="listhdrlr"><?=gettext("Interface");?></td>
-						<td class="listhdrr"><?=gettext("Network port");?></td>
+						<td class="listhdrlr"><?=gtext("Interface");?></td>
+						<td class="listhdrr"><?=gtext("Network port");?></td>
 						<td class="list">&nbsp;</td>
 					</tr>
 					<?php foreach ($config['interfaces'] as $ifname => $iface):
@@ -251,7 +251,7 @@ if (isset($_GET['act']) && $_GET['act'] == "add") {
 						</td>
 						<td valign="middle" class="list">
 							<?php if (($ifname != 'lan') && ($ifname != 'wan')):?>
-							<a href="interfaces_assign.php?act=del&amp;id=<?=$ifname;?>"><img src="images/delete.png" title="<?=gettext("Delete interface");?>" border="0" alt="<?=gettext("Delete interface");?>" /></a>
+							<a href="interfaces_assign.php?act=del&amp;id=<?=$ifname;?>"><img src="images/delete.png" title="<?=gettext("Delete interface");?>" border="0" alt="<?=gtext("Delete interface");?>" /></a>
 							<?php endif;?>
 						</td>
 					</tr>
@@ -260,7 +260,7 @@ if (isset($_GET['act']) && $_GET['act'] == "add") {
 				  <tr>
 						<td class="list" colspan="2"></td>
 						<td class="list" nowrap="nowrap">
-							<a href="interfaces_assign.php?act=add"><img src="images/add.png" title="<?=gettext("Add interface");?>" border="0" alt="<?=gettext("Add interface");?>" /></a>
+							<a href="interfaces_assign.php?act=add"><img src="images/add.png" title="<?=gettext("Add interface");?>" border="0" alt="<?=gtext("Add interface");?>" /></a>
 						</td>
 				  </tr>
 				  <?php else:?>
@@ -270,7 +270,7 @@ if (isset($_GET['act']) && $_GET['act'] == "add") {
 				  <?php endif;?>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save");?>" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save");?>" />
 				</div>
 				<div id="remarks">
 					<?php html_remark("warning", gettext("Warning"), sprintf(gettext("After you click &quot;Save&quot;, you must reboot the server to make the changes take effect. You may also have to do one or more of the following steps before you can access your server again: <ul><li><span class='vexpl'>change the IP address of your server</span></li><li><span class='vexpl'>access the webGUI with the new IP address</span></li></ul>")));?>

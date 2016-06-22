@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Diagnostics"), gettext("Routing tables"));
+$pgtitle = array(gtext("Diagnostics"), gtext("Routing tables"));
 ?>
 <?php include("fbegin.inc");?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
@@ -54,7 +54,7 @@ $pgtitle = array(gettext("Diagnostics"), gettext("Routing tables"));
 ?>
 			<table width="100%" border="0" cellpadding="6" cellspacing="0">
 				<?php html_titleline($name, $elements);?>
-<?
+<?php
 		foreach (explode("\n", $table) as $row => $line) {
 			if ($row == 0)
 				continue;

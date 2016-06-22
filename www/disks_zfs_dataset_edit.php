@@ -171,7 +171,7 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 	
 	// Input validation
 	$reqdfields = ['pool', 'name'];
-	$reqdfieldsn = [gettext('Pool'), gettext('Name')];
+	$reqdfieldsn = [gtext('Pool'), gtext('Name')];
 	$reqdfieldst = ['string', 'string'];
 
 	do_input_validation($sphere_record, $reqdfields, $reqdfieldsn, $input_errors);
@@ -179,7 +179,7 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 
 	if ($prerequisites_ok && empty($input_errors)) { // check for a valid name with format name[/name], blanks are excluded.
 		if (false === zfs_is_valid_dataset_name($sphere_record['name'])) {
-			$input_errors[] = sprintf(gettext("The attribute '%s' contains invalid characters."), gettext('Name'));
+			$input_errors[] = sprintf(gtext("The attribute '%s' contains invalid characters."), gtext('Name'));
 		}
 	}
 	
@@ -191,7 +191,7 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 	// 1.
 	if ($prerequisites_ok && empty($input_errors)) {
 		if ($isrecordmodify && (0 !== strcmp($sphere_array[$index]['pool'][0], $sphere_record['pool']))) {
-			$input_errors[] = gettext('Pool cannot be changed.');
+			$input_errors[] = gtext('Pool cannot be changed.');
 		}
 	}
 	// 2., 3., 4.
@@ -205,10 +205,10 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 					case 1: // An error occured. => zfs dataset doesn't exist
 						break;
 					case 0: // Successful completion. => zfs dataset found
-						$input_errors[] = sprintf(gettext('%s already exists as a %s.'), $poolslashname, $retdat[0]);
+						$input_errors[] = sprintf(gtext('%s already exists as a %s.'), $poolslashname, $retdat[0]);
 						break;
  					case 2: // Invalid command line options were specified.
-						$input_errors[] = gettext('Failed to execute command zfs.');
+						$input_errors[] = gtext('Failed to execute command zfs.');
 						break;
 				}
 			}
@@ -216,7 +216,7 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 			if (empty($input_errors)) {
 				foreach ($a_volume as $r_volume) {
 					if (0 === strcmp(escapeshellarg($r_volume['pool'][0]."/".$r_volume['name']), $poolslashname)) {
-						$input_errors[] = sprintf(gettext('%s is already configured as a volume.'), $poolslashname);
+						$input_errors[] = sprintf(gtext('%s is already configured as a volume.'), $poolslashname);
 						break;
 					}
 				}
@@ -225,7 +225,7 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 			if (empty($input_errors)) {
 				foreach ($sphere_array as $r_dataset) {
 					if (0 === strcmp(escapeshellarg($r_dataset['pool'][0]."/".$r_dataset['name']), $poolslashname)) {
-						$input_errors[] = sprintf(gettext('%s is already configured as a filesystem.'), $poolslashname);
+						$input_errors[] = sprintf(gtext('%s is already configured as a filesystem.'), $poolslashname);
 						break;
 					}
 				}
@@ -312,8 +312,8 @@ foreach ($a_pool as $r_pool) {
 	$l_poollist[$r_pool['name']] = htmlspecialchars($helpinghand);
 }
 $l_compressionmode = [
-	'on' => gettext('On'),
-	'off' => gettext('Off'),
+	'on' => gtext('On'),
+	'off' => gtext('Off'),
 	'lz4' => 'lz4',
 	'lzjb' => 'lzjb',
 	'gzip' => 'gzip',
@@ -329,38 +329,38 @@ $l_compressionmode = [
 	'zle' => 'zle'
 ];
 $l_dedup = [
-	'on' => gettext('On'),
-	'off' => gettext('Off'),
-	'verify' => gettext('Verify'),
+	'on' => gtext('On'),
+	'off' => gtext('Off'),
+	'verify' => gtext('Verify'),
 	'sha256' => 'SHA256',
-	'sha256,verify' => gettext('SHA256, Verify')
+	'sha256,verify' => gtext('SHA256, Verify')
 ];		
 $l_sync = [
-	'standard' => gettext('Standard'),
-	'always' => gettext('Always'),
-	'disabled' => gettext('Disabled')
+	'standard' => gtext('Standard'),
+	'always' => gtext('Always'),
+	'disabled' => gtext('Disabled')
 ];
 $l_atime = [
-	'on' => gettext('On'),
-	'off' => gettext('Off')
+	'on' => gtext('On'),
+	'off' => gtext('Off')
 ];
 $l_aclinherit = [
-	'discard' => gettext('Discard - Do not inherit entries'),
-	'noallow' => gettext('Noallow - Only inherit deny entries'),
-	'restricted' => gettext('Restricted - Inherit all but "write ACL" and "change owner"'),
-	'passthrough' => gettext('Passthrough - Inherit all entries'),
-	'passthrough-x' => gettext('Passthrough-X - Inherit all but "execute" when not specified')
+	'discard' => gtext('Discard - Do not inherit entries'),
+	'noallow' => gtext('Noallow - Only inherit deny entries'),
+	'restricted' => gtext('Restricted - Inherit all but "write ACL" and "change owner"'),
+	'passthrough' => gtext('Passthrough - Inherit all entries'),
+	'passthrough-x' => gtext('Passthrough-X - Inherit all but "execute" when not specified')
 ];
 $l_aclmode = [
-	'discard' => gettext('Discard - Discard ACL'),
-	'groupmask' => gettext('Groupmask - Mask ACL with mode'),
-	'passthrough' => gettext('Passthrough - Do not change ACL'),
-	'restricted' => gettext('Restricted')
+	'discard' => gtext('Discard - Discard ACL'),
+	'groupmask' => gtext('Groupmask - Mask ACL with mode'),
+	'passthrough' => gtext('Passthrough - Do not change ACL'),
+	'restricted' => gtext('Restricted')
 ];
 $l_casesensitivity = [
-	'sensitive' => gettext('Sensitive'),
-	'insensitive' => gettext('Insensitive'),
-	'mixed' => gettext('Mixed')
+	'sensitive' => gtext('Sensitive'),
+	'insensitive' => gtext('Insensitive'),
+	'mixed' => gtext('Mixed')
 ];
 $l_users = [];
 foreach (system_get_user_list() as $r_key => $r_value) {
@@ -377,7 +377,7 @@ for ($i = 0; $i < 9; $i++) {
 	$mode_access[$i] = $helpinghand & (1 << $i);
 }
 
-$pgtitle = [gettext('Disks'), gettext('ZFS'), gettext('Datasets'), gettext('Dataset'), $isrecordnew ? gettext('Add') : gettext('Edit')];
+$pgtitle = [gtext('Disks'), gtext('ZFS'), gtext('Datasets'), gtext('Dataset'), $isrecordnew ? gtext('Add') : gtext('Edit')];
 ?>
 <?php include("fbegin.inc");?>
 <script type="text/javascript">
@@ -392,19 +392,19 @@ $(window).on("load", function() {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gettext('Pools');?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_dataset.php" title="<?=gettext('Reload page');?>"><span><?=gettext('Datasets');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gettext('Volumes');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gettext('Snapshots');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gettext('Configuration');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Pools');?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_dataset.php" title="<?=gettext('Reload page');?>"><span><?=gtext('Datasets');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext('Volumes');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav2">
-				<li class="tabact"><a href="disks_zfs_dataset.php" title="<?=gettext('Reload page');?>"><span><?=gettext('Dataset');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_dataset_info.php"><span><?=gettext('Information');?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_dataset.php" title="<?=gettext('Reload page');?>"><span><?=gtext('Dataset');?></span></a></li>
+				<li class="tabinact"><a href="disks_zfs_dataset_info.php"><span><?=gtext('Information');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -421,35 +421,35 @@ $(window).on("load", function() {
 			<col id="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gettext('Settings'));?>
+			<?php html_titleline2(gtext('Settings'));?>
 		</thead>
 		<tbody>
 			<?php
-				html_inputbox2('name', gettext('Name'), $sphere_record['name'], '', true, 20, $isrecordmodify);
-				html_combobox2('pool', gettext('Pool'), $sphere_record['pool'], $l_poollist, '', true, $isrecordmodify);
-				html_combobox2('compression', gettext('Compression'), $sphere_record['compression'], $l_compressionmode, gettext("Controls the compression algorithm used for this dataset. The 'lzjb' compression algorithm is optimized for performance while providing decent data compression. Setting compression to 'On' uses the 'lzjb' compression algorithm. You can specify the 'gzip' level by using the value 'gzip-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'gzip' is equivalent to 'gzip-6'."), true);
+				html_inputbox2('name', gtext('Name'), $sphere_record['name'], '', true, 20, $isrecordmodify);
+				html_combobox2('pool', gtext('Pool'), $sphere_record['pool'], $l_poollist, '', true, $isrecordmodify);
+				html_combobox2('compression', gtext('Compression'), $sphere_record['compression'], $l_compressionmode, gtext("Controls the compression algorithm used for this dataset. The 'lzjb' compression algorithm is optimized for performance while providing decent data compression. Setting compression to 'On' uses the 'lzjb' compression algorithm. You can specify the 'gzip' level by using the value 'gzip-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'gzip' is equivalent to 'gzip-6'."), true);
 				html_combobox2('dedup', gettext('Dedup'), $sphere_record['dedup'], $l_dedup, gettext("Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See <a href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide:disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & deduplication</a> wiki article BEFORE using this feature.</b></br>"), true);
-				html_combobox2('sync', gettext('Sync'), $sphere_record['sync'], $l_sync, gettext('Controls the behavior of synchronous requests.'), true);
-				html_combobox2('atime', gettext('Access Time (atime)'), $sphere_record['atime'], $l_atime, gettext('Turn access time on or off for this dataset.'), true);
-				html_combobox2('aclinherit', gettext('ACL inherit'), $sphere_record['aclinherit'], $l_aclinherit, gettext('This attribute determines the behavior of Access Control List inheritance.'), true);
-				html_combobox2('aclmode', gettext('ACL mode'), $sphere_record['aclmode'], $l_aclmode, gettext('This attribute controls the ACL behavior when a file is created or whenever the mode of a file or a directory is modified.'), true);
+				html_combobox2('sync', gtext('Sync'), $sphere_record['sync'], $l_sync, gtext('Controls the behavior of synchronous requests.'), true);
+				html_combobox2('atime', gtext('Access Time (atime)'), $sphere_record['atime'], $l_atime, gtext('Turn access time on or off for this dataset.'), true);
+				html_combobox2('aclinherit', gtext('ACL inherit'), $sphere_record['aclinherit'], $l_aclinherit, gtext('This attribute determines the behavior of Access Control List inheritance.'), true);
+				html_combobox2('aclmode', gtext('ACL mode'), $sphere_record['aclmode'], $l_aclmode, gtext('This attribute controls the ACL behavior when a file is created or whenever the mode of a file or a directory is modified.'), true);
 				if ($isrecordnewornewmodify) {
-					html_combobox2('casesensitivity', gettext('Case Sensitivity'), $sphere_record['casesensitivity'], $l_casesensitivity, gettext('This property indicates whether the file name matching algorithm used by the file system should be casesensitive, caseinsensitive, or allow a combination of both styles of matching'), false);
+					html_combobox2('casesensitivity', gtext('Case Sensitivity'), $sphere_record['casesensitivity'], $l_casesensitivity, gtext('This property indicates whether the file name matching algorithm used by the file system should be casesensitive, caseinsensitive, or allow a combination of both styles of matching'), false);
 				}
-				html_checkbox2('canmount', gettext('Canmount'), !empty($sphere_record['canmount']) ? true : false, gettext('If this property is disabled, the file system cannot be mounted.'), '', false);
-				html_checkbox2('readonly', gettext('Readonly'), !empty($sphere_record['readonly']) ? true : false, gettext('Controls whether this dataset can be modified.'), '', false);
-				html_checkbox2('xattr', gettext('Extended attributes'), !empty($sphere_record['xattr']) ? true : false, gettext('Enable extended attributes for this file system.'), '', false);
-				html_checkbox2('snapdir', gettext('Snapshot Visibility'), !empty($sphere_record['snapdir']) ? true : false, gettext('If this property is enabled, the snapshots are displayed into .zfs directory.'), '', false);
-				html_inputbox2('reservation', gettext('Reservation'), $sphere_record['reservation'], gettext("The minimum amount of space guaranteed to a dataset (usually empty). To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."), false, 10);
-				html_inputbox2('quota', gettext('Quota'), $sphere_record['quota'], gettext("Limits the amount of space a dataset and its descendants can consume. This property enforces a hard limit on the amount of space used. This includes all space consumed by descendants, including file systems and snapshots. To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."), false, 10);
-				html_inputbox2('desc', gettext('Description'), $sphere_record['desc'], gettext('You may enter a description here for your reference.'), false, 40);
+				html_checkbox2('canmount', gtext('Canmount'), !empty($sphere_record['canmount']) ? true : false, gtext('If this property is disabled, the file system cannot be mounted.'), '', false);
+				html_checkbox2('readonly', gtext('Readonly'), !empty($sphere_record['readonly']) ? true : false, gtext('Controls whether this dataset can be modified.'), '', false);
+				html_checkbox2('xattr', gtext('Extended attributes'), !empty($sphere_record['xattr']) ? true : false, gtext('Enable extended attributes for this file system.'), '', false);
+				html_checkbox2('snapdir', gtext('Snapshot Visibility'), !empty($sphere_record['snapdir']) ? true : false, gtext('If this property is enabled, the snapshots are displayed into .zfs directory.'), '', false);
+				html_inputbox2('reservation', gtext('Reservation'), $sphere_record['reservation'], gtext("The minimum amount of space guaranteed to a dataset (usually empty). To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."), false, 10);
+				html_inputbox2('quota', gtext('Quota'), $sphere_record['quota'], gtext("Limits the amount of space a dataset and its descendants can consume. This property enforces a hard limit on the amount of space used. This includes all space consumed by descendants, including file systems and snapshots. To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."), false, 10);
+				html_inputbox2('desc', gtext('Description'), $sphere_record['desc'], gtext('You may enter a description here for your reference.'), false, 40);
 				html_separator2();
-				html_titleline2(gettext('Access Restrictions'));
-				html_combobox2('owner', gettext('Owner'), $sphere_record['accessrestrictions']['owner'], $l_users, '', false);
-				html_combobox2('group', gettext('Group'), $sphere_record['accessrestrictions']['group'], $l_groups, '', false);
+				html_titleline2(gtext('Access Restrictions'));
+				html_combobox2('owner', gtext('Owner'), $sphere_record['accessrestrictions']['owner'], $l_users, '', false);
+				html_combobox2('group', gtext('Group'), $sphere_record['accessrestrictions']['group'], $l_groups, '', false);
 			?>
 			<tr>
-				<td class="celltag"><?=gettext('Mode');?></td>
+				<td class="celltag"><?=gtext('Mode');?></td>
 				<td class="celldata">
 					<table id="area_data_selection">
 						<colgroup>
@@ -460,27 +460,27 @@ $(window).on("load", function() {
 						</colgroup>
 						<thead>
 							<tr>
-								<td class="lhell"><?=gettext('Who');?></td>
-								<td class="lhelc"><?=gettext('Read');?></td>
-								<td class="lhelc"><?=gettext('Write');?></td>
-								<td class="lhebc"><?=gettext('Execute');?></td>
+								<td class="lhell"><?=gtext('Who');?></td>
+								<td class="lhelc"><?=gtext('Read');?></td>
+								<td class="lhelc"><?=gtext('Write');?></td>
+								<td class="lhebc"><?=gtext('Execute');?></td>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td class="lcell"><?=gettext('Owner');?>&nbsp;</td>
+								<td class="lcell"><?=gtext('Owner');?>&nbsp;</td>
 								<td class="lcelc"><input type="checkbox" name="mode_access[]" id="owner_r" value="256" <?php if ($mode_access[8] > 0) echo "checked=\"checked\"";?>/></td>
 								<td class="lcelc"><input type="checkbox" name="mode_access[]" id="owner_w" value="128" <?php if ($mode_access[7] > 0) echo "checked=\"checked\"";?>/></td>
 								<td class="lcebc"><input type="checkbox" name="mode_access[]" id="owner_x" value= "64" <?php if ($mode_access[6] > 0) echo "checked=\"checked\"";?>/></td>
 							</tr>
 							<tr>
-								<td class="lcell"><?=gettext('Group');?>&nbsp;</td>
+								<td class="lcell"><?=gtext('Group');?>&nbsp;</td>
 								<td class="lcelc"><input type="checkbox" name="mode_access[]" id="group_r" value= "32" <?php if ($mode_access[5] > 0) echo "checked=\"checked\"";?>/></td>
 								<td class="lcelc"><input type="checkbox" name="mode_access[]" id="group_w" value= "16" <?php if ($mode_access[4] > 0) echo "checked=\"checked\"";?>/></td>
 								<td class="lcebc"><input type="checkbox" name="mode_access[]" id="group_x" value=  "8" <?php if ($mode_access[3] > 0) echo "checked=\"checked\"";?>/></td>
 							</tr>
 							<tr>
-								<td class="lcell"><?=gettext('Others');?>&nbsp;</td>
+								<td class="lcell"><?=gtext('Others');?>&nbsp;</td>
 								<td class="lcelc"><input type="checkbox" name="mode_access[]" id="other_r" value=  "4" <?php if ($mode_access[2] > 0) echo "checked=\"checked\"";?>/></td>
 								<td class="lcelc"><input type="checkbox" name="mode_access[]" id="other_w" value=  "2" <?php if ($mode_access[1] > 0) echo "checked=\"checked\"";?>/></td>
 								<td class="lcebc"><input type="checkbox" name="mode_access[]" id="other_x" value=  "1" <?php if ($mode_access[0] > 0) echo "checked=\"checked\"";?>/></td>
@@ -492,8 +492,8 @@ $(window).on("load", function() {
 		</tbody>
 	</table>
 	<div id="submit">
-		<input name="Submit" type="submit" class="formbtn" value="<?=$isrecordnew ? gettext('Add') : gettext('Save');?>"/>
-		<input name="Cancel" type="submit" class="formbtn" value="<?=gettext('Cancel');?>" />
+		<input name="Submit" type="submit" class="formbtn" value="<?=$isrecordnew ? gtext('Add') : gtext('Save');?>"/>
+		<input name="Cancel" type="submit" class="formbtn" value="<?=gtext('Cancel');?>" />
 		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>" />
 	</div>
 	<?php include("formend.inc");?>

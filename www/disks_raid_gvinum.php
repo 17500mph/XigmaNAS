@@ -46,12 +46,12 @@ $sphere_record = [];
 $checkbox_member_name = 'checkbox_member_array';
 $checkbox_member_array = [];
 $checkbox_member_record = [];
-$gt_record_add = gettext_gen2('Add RAID');
-$gt_record_mod = gettext_gen2('Edit RAID');
-$gt_record_del = gettext_gen2('RAID is marked for removal');
-$gt_record_loc = gettext_gen2('RAID is protected');
-$gt_selection_delete = gettext_gen2('Delete Selected RAID Volumes');
-$gt_selection_delete_confirm = gettext_gen2('Do you want to delete selected RAID volumes?');
+$gt_record_add = gtext('Add RAID');
+$gt_record_mod = gtext('Edit RAID');
+$gt_record_del = gtext('RAID is marked for removal');
+$gt_record_loc = gtext('RAID is protected');
+$gt_selection_delete = gtext('Delete Selected RAID Volumes');
+$gt_selection_delete_confirm = gtext('Do you want to delete selected RAID volumes?');
 $img_path = [
 	'add' => 'images/add.png',
 	'mod' => 'images/edit.png',
@@ -115,7 +115,7 @@ if ($_POST) {
 	}
 }
 
-$pgtitle = [gettext_gen2('Disks'), gettext_gen2('Software RAID'), gettext_gen2('RAID 0/1/5'), gettext_gen2('Management')];
+$pgtitle = [gtext('Disks'), gtext('Software RAID'), gtext('RAID 0/1/5'), gtext('Management')];
 ?>
 <?php include("fbegin.inc"); ?>
 <script type="text/javascript">
@@ -180,17 +180,17 @@ function controlactionbuttons(ego, triggerbyname) {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabinact"><a href="disks_raid_geom.php"><span><?=gettext_gen2('GEOM');?></span></a></li>
-				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gettext_gen2('Reload page');?>"><span><?=gettext_gen2('RAID 0/1/5');?></span></a></li>
+				<li class="tabinact"><a href="disks_raid_geom.php"><span><?=gtext('GEOM');?></span></a></li>
+				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('RAID 0/1/5');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav2">
-				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gettext_gen2('Reload page');?>" ><span><?=gettext_gen2('Management');?></span></a></li>
-				<li class="tabinact"><a href="disks_raid_gvinum_tools.php"><span><?=gettext_gen2('Maintenance'); ?></span></a></li>
-				<li class="tabinact"><a href="disks_raid_gvinum_info.php"><span><?=gettext_gen2('Information'); ?></span></a></li>
+				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>" ><span><?=gtext('Management');?></span></a></li>
+				<li class="tabinact"><a href="disks_raid_gvinum_tools.php"><span><?=gtext('Maintenance'); ?></span></a></li>
+				<li class="tabinact"><a href="disks_raid_gvinum_info.php"><span><?=gtext('Information'); ?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -212,15 +212,15 @@ function controlactionbuttons(ego, triggerbyname) {
 			<col style="width:10%"><!-- Icons -->
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gettext_gen2('Overview'), 7);?>
+			<?php html_titleline2(gtext('Overview'), 7);?>
 			<tr>
-				<td class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gettext_gen2('Invert Selection');?>"/></td>
-				<td class="lhell"><?=gettext_gen2('Volume Name');?></td>
-				<td class="lhell"><?=gettext_gen2('Type');?></td>
-				<td class="lhell"><?=gettext_gen2('Size');?></td>
-				<td class="lhell"><?=gettext_gen2('Description');?></td>
-				<td class="lhell"><?=gettext_gen2('Status');?></td>
-				<td class="lhebl"><?=gettext_gen2('Toolbox');?></td>
+				<td class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></td>
+				<td class="lhell"><?=gtext('Volume Name');?></td>
+				<td class="lhell"><?=gtext('Type');?></td>
+				<td class="lhell"><?=gtext('Size');?></td>
+				<td class="lhell"><?=gtext('Description');?></td>
+				<td class="lhell"><?=gtext('Status');?></td>
+				<td class="lhebl"><?=gtext('Toolbox');?></td>
 			</tr>
 		</thead>
 		<tfoot>
@@ -233,8 +233,8 @@ function controlactionbuttons(ego, triggerbyname) {
 			<?php $raidstatus = get_gvinum_disks_list(); ?>
 			<?php foreach ($sphere_array as $sphere_record): ?>
 				<?php
-					$size = gettext_gen2('Unknown');
-					$status = gettext_gen2('Stopped');
+					$size = gtext('Unknown');
+					$status = gtext('Stopped');
 					if (is_array($raidstatus) && array_key_exists($sphere_record['name'], $raidstatus)) {
 						$size = $raidstatus[$sphere_record['name']]['size'];
 						$status = $raidstatus[$sphere_record['name']]['state'];
@@ -242,14 +242,14 @@ function controlactionbuttons(ego, triggerbyname) {
 					$notificationmode = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']);
 					switch ($notificationmode) {
 						case UPDATENOTIFY_MODE_NEW:
-							$status = $size = gettext_gen2('Initializing');
+							$status = $size = gtext('Initializing');
 							break;
 						case UPDATENOTIFY_MODE_MODIFIED:
-							$status = $size = gettext_gen2('Modifying');
+							$status = $size = gtext('Modifying');
 							break;
 						case UPDATENOTIFY_MODE_DIRTY:
 						case UPDATENOTIFY_MODE_DIRTY_CONFIG:
-							$status = gettext_gen2('Deleting');
+							$status = gtext('Deleting');
 							break;
 					}
 					$status = strtoupper($status);
@@ -303,16 +303,16 @@ function controlactionbuttons(ego, triggerbyname) {
 		<thead>
 			<?php
 				html_separator2();
-				html_titleline2(gettext_gen2('Message Board'));
+				html_titleline2(gtext('Message Board'));
 			?>
 		</thead>
 		<tbody>
 			<?php
-				html_textinfo2("info", gettext_gen2('Info'), sprintf(gettext_gen2('%1$s is used to create %2$s volumes.'), 'GEOM Vinum', 'RAID'));
-				$link = sprintf('<a href="%1$s">%2$s</a>', 'disks_mount.php', gettext_gen2('mount point'));
-				$helpinghand = gettext_gen2('A mounted RAID volume cannot be deleted.') . ' ' . gettext_gen2('Remove the %s first before proceeding.');
+				html_textinfo2("info", gtext('Info'), sprintf(gtext('%1$s is used to create %2$s volumes.'), 'GEOM Vinum', 'RAID'));
+				$link = sprintf('<a href="%1$s">%2$s</a>', 'disks_mount.php', gtext('mount point'));
+				$helpinghand = gtext('A mounted RAID volume cannot be deleted.') . ' ' . gtext('Remove the %s first before proceeding.');
 				$helpinghand = sprintf($helpinghand, $link);
-				html_textinfo2("warning", gettext_gen2('Warning'), $helpinghand);
+				html_textinfo2("warning", gtext('Warning'), $helpinghand);
 			?>
 		</tbody>
 	</table>

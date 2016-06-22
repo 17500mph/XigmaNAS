@@ -37,7 +37,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Disks"), gettext("Management"), gettext("iSCSI Initiator"));
+$pgtitle = array(gtext("Disks"), gtext("Management"), gtext("iSCSI Initiator"));
 
 if ($_POST) {
 	$pconfig = $_POST;
@@ -97,10 +97,10 @@ function iscsiinitiator_process_updatenotification($mode, $data) {
 <tr>
     <td class="tabnavtbl">
 	<ul id="tabnav">
-      		<li class="tabinact"><a href="disks_manage.php"><span><?=gettext("HDD Management");?></span></a></li>
-		<li class="tabinact"><a href="disks_init.php"><span><?=gettext("HDD Format");?></span></a></li>
-      		<li class="tabinact"><a href="disks_manage_smart.php"><span><?=gettext("S.M.A.R.T.");?></span></a></li>
-		<li class="tabact"><a href="disks_manage_iscsi.php" title="<?=gettext("Reload page");?>"><span><?=gettext("iSCSI Initiator");?></span></a></li>
+      		<li class="tabinact"><a href="disks_manage.php"><span><?=gtext("HDD Management");?></span></a></li>
+		<li class="tabinact"><a href="disks_init.php"><span><?=gtext("HDD Format");?></span></a></li>
+      		<li class="tabinact"><a href="disks_manage_smart.php"><span><?=gtext("S.M.A.R.T.");?></span></a></li>
+		<li class="tabact"><a href="disks_manage_iscsi.php" title="<?=gettext("Reload page");?>"><span><?=gtext("iSCSI Initiator");?></span></a></li>
 	</ul>
     </td>
   </tr>
@@ -111,9 +111,9 @@ function iscsiinitiator_process_updatenotification($mode, $data) {
         <?php if (updatenotify_exists("iscsiinitiator")) print_config_change_box();?>
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
           <tr>
-            <td width="25%" class="listhdrlr"><?=gettext("Name"); ?></td>
-						<td width="25%" class="listhdrr"><?=gettext("Target name"); ?></td>
-						<td width="25%" class="listhdrr"><?=gettext("Target address"); ?></td>
+            <td width="25%" class="listhdrlr"><?=gtext("Name"); ?></td>
+						<td width="25%" class="listhdrr"><?=gtext("Target name"); ?></td>
+						<td width="25%" class="listhdrr"><?=gtext("Target address"); ?></td>
             <td width="10%" class="list"></td>
           </tr>
   			  <?php foreach($a_iscsiinit as $iscsiinit):?>
@@ -124,8 +124,8 @@ function iscsiinitiator_process_updatenotification($mode, $data) {
             <td class="listr"><?=htmlspecialchars($iscsiinit['targetaddress']);?>&nbsp;</td>
             <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
             <td valign="middle" nowrap="nowrap" class="list">
-							<a href="disks_manage_iscsi_edit.php?uuid=<?=$iscsiinit['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit initiator");?>" border="0" alt="<?=gettext("Edit initiator");?>" /></a>
-							<a href="disks_manage_iscsi.php?act=del&amp;uuid=<?=$iscsiinit['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this initiator? All elements that still use it will become invalid (e.g. share)!");?>')"><img src="images/delete.png" title="<?=gettext("Delete initiator"); ?>" border="0" alt="<?=gettext("Delete initiator"); ?>" /></a>
+							<a href="disks_manage_iscsi_edit.php?uuid=<?=$iscsiinit['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit initiator");?>" border="0" alt="<?=gtext("Edit initiator");?>" /></a>
+							<a href="disks_manage_iscsi.php?act=del&amp;uuid=<?=$iscsiinit['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this initiator? All elements that still use it will become invalid (e.g. share)!");?>')"><img src="images/delete.png" title="<?=gettext("Delete initiator"); ?>" border="0" alt="<?=gtext("Delete initiator"); ?>" /></a>
             </td>
             <?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
@@ -136,7 +136,7 @@ function iscsiinitiator_process_updatenotification($mode, $data) {
           <?php endforeach;?>
           <tr> 
             <td class="list" colspan="3"></td>
-            <td class="list"><a href="disks_manage_iscsi_edit.php"><img src="images/add.png" title="<?=gettext("Add initiator");?>" border="0" alt="<?=gettext("Add initiator");?>" /></a></td>
+            <td class="list"><a href="disks_manage_iscsi_edit.php"><img src="images/add.png" title="<?=gettext("Add initiator");?>" border="0" alt="<?=gtext("Add initiator");?>" /></a></td>
 			    </tr>
         </table>
         <?php include("formend.inc");?>

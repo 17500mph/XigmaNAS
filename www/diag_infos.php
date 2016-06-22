@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext_gen2("Diagnostics"), gettext_gen2("Information"), gettext_gen2("Disks"));
+$pgtitle = array(gtext("Diagnostics"), gtext("Information"), gtext("Disks"));
 
 // Get all physical disks.
 $a_phy_disk = array_merge((array)get_physical_disks_list());
@@ -45,58 +45,58 @@ $a_phy_disk = array_merge((array)get_physical_disks_list());
   <tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabact"><a href="diag_infos.php" title="<?=gettext_gen2("Reload page");?>"><span><?=gettext_gen2("Disks");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_ata.php"><span><?=gettext_gen2("Disks (ATA)");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_part.php"><span><?=gettext_gen2("Partitions");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_smart.php"><span><?=gettext_gen2("S.M.A.R.T.");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_space.php"><span><?=gettext_gen2("Space Used");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_mount.php"><span><?=gettext_gen2("Mounts");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_raid.php"><span><?=gettext_gen2("Software RAID");?></span></a></li>
+				<li class="tabact"><a href="diag_infos.php" title="<?=gtext("Reload page");?>"><span><?=gtext("Disks");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_ata.php"><span><?=gtext("Disks (ATA)");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_part.php"><span><?=gtext("Partitions");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_smart.php"><span><?=gtext("S.M.A.R.T.");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_space.php"><span><?=gtext("Space Used");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_mount.php"><span><?=gtext("Mounts");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_raid.php"><span><?=gtext("Software RAID");?></span></a></li>
 		  </ul>
 	  </td>
 	</tr>
   <tr>
 		<td class="tabnavtbl">
 		  <ul id="tabnav2">
-				<li class="tabinact"><a href="diag_infos_iscsi.php"><span><?=gettext_gen2("iSCSI Initiator");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_ad.php"><span><?=gettext_gen2("MS Domain");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_samba.php"><span><?=gettext_gen2("CIFS/SMB");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_ftpd.php"><span><?=gettext_gen2("FTP");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_rsync_client.php"><span><?=gettext_gen2("RSYNC Client");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_swap.php"><span><?=gettext_gen2("Swap");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_sockets.php"><span><?=gettext_gen2("Sockets");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_ipmi.php"><span><?=gettext_gen2('IPMI Stats');?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_ups.php"><span><?=gettext_gen2("UPS");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_iscsi.php"><span><?=gtext("iSCSI Initiator");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_ad.php"><span><?=gtext("MS Domain");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_samba.php"><span><?=gtext("CIFS/SMB");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_ftpd.php"><span><?=gtext("FTP");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_rsync_client.php"><span><?=gtext("RSYNC Client");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_swap.php"><span><?=gtext("Swap");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_sockets.php"><span><?=gtext("Sockets");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_ipmi.php"><span><?=gtext('IPMI Stats');?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_ups.php"><span><?=gtext("UPS");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabcont">
 			<table width="100%" border="0" cellpadding="0" cellspacing="0">
-				<?php html_titleline2(gettext_gen2('List Detected Disks'), 12);?>
+				<?php html_titleline2(gtext('List Detected Disks'), 12);?>
 				<tr>
-					<td width="5%" class="listhdrlr"><?=gettext_gen2("Device");?></td>
-					<td width="12%" class="listhdrr"><?=gettext_gen2("Device Model"); ?></td>
-					<td width="11%" class="listhdrr"><?=gettext_gen2("Description"); ?></td>
-					<td width="8%" class="listhdrr"><?=gettext_gen2("Size");?></td>
-					<td width="10%" class="listhdrr"><?=gettext_gen2("Serial Number"); ?></td>
-					<td width="7%" class="listhdrr"><?=gettext_gen2("Rotation Rate"); ?></td>
-					<td width="7%" class="listhdrr"><?=gettext_gen2("Transfer Rate"); ?></td>
-					<td width="8%" class="listhdrr"><?=gettext_gen2("S.M.A.R.T."); ?></td>
-					<td width="5%" class="listhdrr"><?=gettext_gen2("Controller"); ?></td>
-					<td width="14%" class="listhdrr"><?=gettext_gen2("Controller Model"); ?></td>
-					<td width="7%" class="listhdrr"><?=gettext_gen2("Temperature");?></td>
-					<td width="6%" class="listhdrr"><?=gettext_gen2("Status");?></td>
+					<td width="5%" class="listhdrlr"><?=gtext("Device");?></td>
+					<td width="12%" class="listhdrr"><?=gtext("Device Model"); ?></td>
+					<td width="11%" class="listhdrr"><?=gtext("Description"); ?></td>
+					<td width="8%" class="listhdrr"><?=gtext("Size");?></td>
+					<td width="10%" class="listhdrr"><?=gtext("Serial Number"); ?></td>
+					<td width="7%" class="listhdrr"><?=gtext("Rotation Rate"); ?></td>
+					<td width="7%" class="listhdrr"><?=gtext("Transfer Rate"); ?></td>
+					<td width="8%" class="listhdrr"><?=gtext("S.M.A.R.T."); ?></td>
+					<td width="5%" class="listhdrr"><?=gtext("Controller"); ?></td>
+					<td width="14%" class="listhdrr"><?=gtext("Controller Model"); ?></td>
+					<td width="7%" class="listhdrr"><?=gtext("Temperature");?></td>
+					<td width="6%" class="listhdrr"><?=gtext("Status");?></td>
 				</tr>
 				<?php foreach ($a_phy_disk as $disk):?>
-				<?php (($temp = system_get_device_temp($disk['devicespecialfile'])) === FALSE) ? $temp = htmlspecialchars(gettext_gen2("n/a")) : $temp = sprintf("%s &deg;C", htmlspecialchars($temp));?>
+				<?php (($temp = system_get_device_temp($disk['devicespecialfile'])) === FALSE) ? $temp = gtext("n/a") : $temp = sprintf("%s &deg;C", htmlspecialchars($temp));?>
 				<?php
 					if ($disk['type'] == 'HAST') {
 						$role = $a_phy_disk[$disk['name']]['role'];
-						$status = sprintf("%s (%s)", (0 == disks_exists($disk['devicespecialfile'])) ? gettext_gen2("ONLINE") : gettext_gen2("MISSING"), $role);
+						$status = sprintf("%s (%s)", (0 == disks_exists($disk['devicespecialfile'])) ? gtext("ONLINE") : gtext("MISSING"), $role);
 						$disk['size'] = $a_phy_disk[$disk['name']]['size'];
 					} else {
-						$status = (0 == disks_exists($disk['devicespecialfile'])) ? gettext_gen2("ONLINE") : gettext_gen2("MISSING");
+						$status = (0 == disks_exists($disk['devicespecialfile'])) ? gtext("ONLINE") : gtext("MISSING");
 					}
 				?>
 				<tr>
@@ -105,26 +105,26 @@ $a_phy_disk = array_merge((array)get_physical_disks_list());
 				<?php	global $config_disks;
 					$disk['desc'] = $config_disks[$disk['devicespecialfile']]['desc'];
 				?>
-					<td class="listr"><?=(empty($disk['desc']) ) === FALSE ? htmlspecialchars($disk['desc']) : htmlspecialchars(gettext_gen2("n/a"));?>&nbsp;</td>
+					<td class="listr"><?=(empty($disk['desc']) ) === FALSE ? htmlspecialchars($disk['desc']) : gtext("n/a");?>&nbsp;</td>
 					<td class="listr"><?=htmlspecialchars($disk['size']);?></td>
-					<td class="listr"><?=(empty($disk['serial']) ) === FALSE ? htmlspecialchars($disk['serial']) : htmlspecialchars(gettext_gen2("n/a"));?>&nbsp;</td>
-					<td class="listr"><?=(empty($disk['rotation_rate']) ) === FALSE ? htmlspecialchars($disk['rotation_rate']) : htmlspecialchars(gettext_gen2("Unknown"));?>&nbsp;</td>
-					<td class="listr"><?=(empty($disk['transfer_rate']) ) === FALSE ? htmlspecialchars($disk['transfer_rate']) : htmlspecialchars(gettext_gen2("n/a"));?>&nbsp;</td>
+					<td class="listr"><?=(empty($disk['serial']) ) === FALSE ? htmlspecialchars($disk['serial']) : gtext("n/a");?>&nbsp;</td>
+					<td class="listr"><?=(empty($disk['rotation_rate']) ) === FALSE ? htmlspecialchars($disk['rotation_rate']) : gtext("Unknown");?>&nbsp;</td>
+					<td class="listr"><?=(empty($disk['transfer_rate']) ) === FALSE ? htmlspecialchars($disk['transfer_rate']) : gtext("n/a");?>&nbsp;</td>
 				<?php
 					$matches = preg_split("/[\s\,]+/", $disk['smart']['smart_support']);
 					$smartsupport = '';
 					if (isset($matches[0])) {
 						if (0 == strcasecmp($matches[0], 'available')) {
-							$smartsupport .= gettext_gen2('Available');
+							$smartsupport .= gtext('Available');
 							if (isset($matches[1])) {
 								if (0 == strcasecmp($matches[1], 'enabled')) {
-									$smartsupport .= (', ' . gettext_gen2('Enabled'));
+									$smartsupport .= (', ' . gtext('Enabled'));
 								} elseif (0 ==  strcasecmp($matches[1], 'disabled')) {
-									$smartsupport .= (', ' . gettext_gen2('Disabled'));
+									$smartsupport .= (', ' . gtext('Disabled'));
 								}
 							}
 						} elseif (0 == strcasecmp($matches[0], 'unavailable')) {
-							$smartsupport .= gettext_gen2('Unavailable');
+							$smartsupport .= gtext('Unavailable');
 						}
 					}
 				?>

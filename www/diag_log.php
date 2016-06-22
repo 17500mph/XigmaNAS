@@ -42,7 +42,7 @@ if (isset($_POST['log']))
 if (empty($log))
 	$log = 0;
 
-$pgtitle = array(gettext("Diagnostics"), gettext("Log"));
+$pgtitle = array(gtext("Diagnostics"), gtext("Log"));
 
 if (isset($_POST['clear']) && $_POST['clear']) {
 	log_clear($loginfo[$log]);
@@ -74,8 +74,8 @@ function log_change() {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabact"><a href="diag_log.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Log");?></span></a></li>
-				<li class="tabinact"><a href="diag_log_settings.php"><span><?=gettext("Settings");?></span></a></li>
+				<li class="tabact"><a href="diag_log.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Log");?></span></a></li>
+				<li class="tabinact"><a href="diag_log_settings.php"><span><?=gtext("Settings");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -88,12 +88,12 @@ function log_change() {
 					<option value="<?=$loginfok;?>" <?php if ($loginfok == $log) echo "selected=\"selected\"";?>><?=htmlspecialchars($loginfov['desc']);?></option>
 					<?php endforeach;?>
 				</select>
-				<input name="clear" type="submit" class="formbtn" value="<?=gettext("Clear");?>" />
-				<input name="download" type="submit" class="formbtn" value="<?=gettext("Download");?>" />
-				<input name="refresh" type="submit" class="formbtn" value="<?=gettext("Refresh");?>" />
-				<span class="label">&nbsp;&nbsp;&nbsp;<?=gettext("Search event");?></span>
+				<input name="clear" type="submit" class="formbtn" value="<?=gtext("Clear");?>" />
+				<input name="download" type="submit" class="formbtn" value="<?=gtext("Download");?>" />
+				<input name="refresh" type="submit" class="formbtn" value="<?=gtext("Refresh");?>" />
+				<span class="label">&nbsp;&nbsp;&nbsp;<?=gtext("Search event");?></span>
 				<input size="30" id="searchlog" name="searchlog" value="<?=$searchlog;?>" />
-				<input name="search" type="submit" class="formbtn" value="<?=gettext("Search");?>" />
+				<input name="search" type="submit" class="formbtn" value="<?=gtext("Search");?>" />
 				<br /><br />
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
 				  <?php log_display($loginfo[$log]);?>

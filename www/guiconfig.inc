@@ -116,13 +116,13 @@ function do_input_validation($postdata, $reqdfields, $reqdfieldsn, &$input_error
 	/* check for bad control characters */
 	foreach ($postdata as $pn => $pd) {
 		if (is_string($pd) && preg_match("/[\\x00-\\x08\\x0b\\x0c\\x0e-\\x1f]/", $pd)) {
-			$input_errors[] = sprintf( gettext("The attribute '%s' contains invalid characters."), $pn);
+			$input_errors[] = sprintf( gtext("The attribute '%s' contains invalid characters."), $pn);
 		}
 	}
 
 	for ($i = 0; $i < count($reqdfields); $i++) {
 		if (!isset($postdata[$reqdfields[$i]]) || ($postdata[$reqdfields[$i]] === "")) {
-			$input_errors[] = sprintf( gettext("The attribute '%s' is required."), $reqdfieldsn[$i]);
+			$input_errors[] = sprintf( gtext("The attribute '%s' is required."), $reqdfieldsn[$i]);
 		}
 	}
 }
@@ -137,64 +137,64 @@ function do_input_validation_type($postdata, $reqdfields, $reqdfieldsn, $reqdfie
 
 			switch($reqdfieldst[$i]) {
 				case 'string':				$valid = is_string($postdata[$reqdfields[$i]]);
-															$message = sprintf( gettext("The attribute '%s' must be a string."), $reqdfieldsn[$i]);
+															$message = sprintf( gtext("The attribute '%s' must be a string."), $reqdfieldsn[$i]);
 															break;
 				case 'numeric':				$valid = is_numeric($postdata[$reqdfields[$i]]);
-															$message = sprintf( gettext("The attribute '%s' must be a number."), $reqdfieldsn[$i]);
+															$message = sprintf( gtext("The attribute '%s' must be a number."), $reqdfieldsn[$i]);
 															break;
 				case 'numericint':		$valid = is_numericint($postdata[$reqdfields[$i]]);
-															$message = sprintf( gettext("The attribute '%s' must be a number."), $reqdfieldsn[$i]);
+															$message = sprintf( gtext("The attribute '%s' must be a number."), $reqdfieldsn[$i]);
 															break;
 				case 'ipaddr':				$valid = is_ipaddr($postdata[$reqdfields[$i]]);
-															$message = sprintf( gettext("The attribute '%s' is not a valid IP address."), $reqdfieldsn[$i]);
+															$message = sprintf( gtext("The attribute '%s' is not a valid IP address."), $reqdfieldsn[$i]);
 															break;
 				case 'macaddr': 			$valid = is_macaddr($postdata[$reqdfields[$i]]);
-															$message = sprintf( gettext("The attribute '%s' is not a valid MAC address."), $reqdfieldsn[$i]);
+															$message = sprintf( gtext("The attribute '%s' is not a valid MAC address."), $reqdfieldsn[$i]);
 															break;
 				case 'subnet': 				$valid = is_subnet($postdata[$reqdfields[$i]]);
-															$message = sprintf( gettext("The attribute '%s' is not a valid subnet mask."), $reqdfieldsn[$i]);
+															$message = sprintf( gtext("The attribute '%s' is not a valid subnet mask."), $reqdfieldsn[$i]);
 															break;
 				case 'domain': 				$valid = is_domain($postdata[$reqdfields[$i]]);
-															$message = sprintf( gettext("The attribute '%s' contains invalid characters and is not a valid domain name."), $reqdfieldsn[$i]);
+															$message = sprintf( gtext("The attribute '%s' contains invalid characters and is not a valid domain name."), $reqdfieldsn[$i]);
 															break;
 				case 'netbios': 			$valid = is_netbios($postdata[$reqdfields[$i]]);
-															$message = sprintf( gettext("The attribute '%s' contains invalid characters and is not a valid NetBIOS name."), $reqdfieldsn[$i]);
+															$message = sprintf( gtext("The attribute '%s' contains invalid characters and is not a valid NetBIOS name."), $reqdfieldsn[$i]);
 															break;
 				case 'hostname': 			$valid = is_hostname($postdata[$reqdfields[$i]]);
-															$message = sprintf( gettext("The attribute '%s' contains invalid characters and is not a valid host name."), $reqdfieldsn[$i]);
+															$message = sprintf( gtext("The attribute '%s' contains invalid characters and is not a valid host name."), $reqdfieldsn[$i]);
 															break;
 				case 'workgroup': 		$valid = is_workgroup($postdata[$reqdfields[$i]]);
-															$message = sprintf( gettext("The attribute '%s' contains invalid characters and is not a valid workgroup name."), $reqdfieldsn[$i]);
+															$message = sprintf( gtext("The attribute '%s' contains invalid characters and is not a valid workgroup name."), $reqdfieldsn[$i]);
 															break;
 				case 'filemode': 			$valid = is_filemode($postdata[$reqdfields[$i]]);
-															$message = sprintf( gettext("The attribute '%s' is not a valid file mode mask."), $reqdfieldsn[$i]);
+															$message = sprintf( gtext("The attribute '%s' is not a valid file mode mask."), $reqdfieldsn[$i]);
 															break;
 				case 'mtu': 					$valid = is_mtu($postdata[$reqdfields[$i]]);
-															$message = sprintf( gettext("The attribute '%s' is invalid."), $reqdfieldsn[$i]);
+															$message = sprintf( gtext("The attribute '%s' is invalid."), $reqdfieldsn[$i]);
 															break;
 				case 'port': 					$valid = is_port($postdata[$reqdfields[$i]]);
-															$message = sprintf( gettext("The attribute '%s' is an invalid port number."), $reqdfieldsn[$i]);
+															$message = sprintf( gtext("The attribute '%s' is an invalid port number."), $reqdfieldsn[$i]);
 															break;
 				case 'password':			$valid = is_validpassword($postdata[$reqdfields[$i]]);
-															$message = sprintf( gettext("The attribute '%s' contains the illegal character ':' and is not a valid password."), $reqdfieldsn[$i]);
+															$message = sprintf( gtext("The attribute '%s' contains the illegal character ':' and is not a valid password."), $reqdfieldsn[$i]);
 															break;
 				case 'certificate':		$valid = is_valid_certificate($postdata[$reqdfields[$i]]);
-															$message = sprintf( gettext("The attribute '%s' does not appear to be a valid certificate."), $reqdfieldsn[$i]);
+															$message = sprintf( gtext("The attribute '%s' does not appear to be a valid certificate."), $reqdfieldsn[$i]);
 															break;
 				case 'privatekey':		$valid = is_valid_privatekey($postdata[$reqdfields[$i]], "RSA");
-															$message = sprintf( gettext("The attribute '%s' does not appear to be a valid private key."), $reqdfieldsn[$i]);
+															$message = sprintf( gtext("The attribute '%s' does not appear to be a valid private key."), $reqdfieldsn[$i]);
 															break;
 				case 'privatedsakey':	$valid = is_valid_privatekey($postdata[$reqdfields[$i]], "DSA");
-															$message = sprintf( gettext("The attribute '%s' does not appear to be a valid private %s key."), $reqdfieldsn[$i], "DSA");
+															$message = sprintf( gtext("The attribute '%s' does not appear to be a valid private %s key."), $reqdfieldsn[$i], "DSA");
 															break;
 				case 'alias':					$valid = is_validaliasname($postdata[$reqdfields[$i]]);
-															$message = sprintf( gettext("The attribute '%s' may only consist of the characters a-z, A-Z, 0-9."), $reqdfieldsn[$i]);
+															$message = sprintf( gtext("The attribute '%s' may only consist of the characters a-z, A-Z, 0-9."), $reqdfieldsn[$i]);
 															break;
 				case 'time':					$valid = (FALSE !== strptime($postdata[$reqdfields[$i]], "%H:%M:%S"));
-															$message = sprintf( gettext("The attribute '%s' is not a valid time value."), $reqdfieldsn[$i]);
+															$message = sprintf( gtext("The attribute '%s' is not a valid time value."), $reqdfieldsn[$i]);
 															break;
 				case 'array':					$valid = (is_array($postdata[$reqdfields[$i]]) && !empty($postdata[$reqdfields[$i]]));
-															$message = sprintf( gettext("The attribute '%s' must contain at least one entry."), $reqdfieldsn[$i]);
+															$message = sprintf( gtext("The attribute '%s' must contain at least one entry."), $reqdfieldsn[$i]);
 															break;
 			}
 			if (!$valid) {
@@ -215,7 +215,7 @@ function do_input_validate_synctime($postdata, &$input_errors) {
 	foreach ($data as $datak => $datav) {
 		if (!$postdata[$datav['all']]) {
 			if (!isset($postdata[$datav['field']]) || empty($postdata[$datav['field']])) {
-				$input_errors[] = sprintf(gettext("You have to select at least one item for '%s'."), $datav['text']);
+				$input_errors[] = sprintf(gtext("You have to select at least one item for '%s'."), $datav['text']);
 			}
 		}
 	}
@@ -227,7 +227,7 @@ function print_input_errors($input_errors) {
 	echo "      <tr>\n";
 	echo "        <td class=\"icon\" align=\"center\" valign=\"center\"><img src=\"images/error_box.png\" alt=\"\" /></td>\n";
 	echo "        <td class=\"message\">\n";
-	echo "          <div>" . gettext("The following input errors were detected").":\n";
+	echo "          <div>" . gtext("The following input errors were detected").":\n";
 	echo "            <ul>\n";
 	foreach ($input_errors as $msg) {
 		echo "              <li>{$msg}</li>\n";
@@ -295,7 +295,7 @@ function print_warning_box($msg) {
 }
 
 function print_config_change_box() {
-	$message = gettext("Apply changes");
+	$message = gtext("Apply changes");
 	echo "<div id='applybox'>";
 	print_info_box(sprintf(gettext("The configuration has been changed.<br />You must apply the changes in order for them to take effect.<br /><b>If this message persist take a look at the <a href='%s'>system log</a> for more information.</b>"), "diag_log.php"));
 	echo "<input name=\"apply\" type=\"submit\" class=\"formbtn\" id=\"apply\" value=\"{$message}\" />";
@@ -324,10 +324,10 @@ function get_std_save_message($ok) {
 			return sprintf( gettext("The changes have been saved. You have to <a href='%s'>reboot</a> the system for the changes to take effect."), "reboot.php");
 		}
 		else {
-			return gettext("The changes have been applied successfully.");
+			return gtext("The changes have been applied successfully.");
 		}
 	} else {
-		return sprintf( gettext("Error: The changes could not be applied (error code %s)."), $ok);
+		return sprintf( gtext("Error: The changes could not be applied (error code %s)."), $ok);
 	}
 }
 
@@ -646,10 +646,10 @@ function get_weekday_names($long = NULL, $english = NULL) {
 	$actioncode = (is_null($long) ? 0 : 1) || (is_null($english) ? 0 : 2);
 	switch ($actioncode) {
 		case 0: // short, locale 
-			$retval = [gettext('Mon'), gettext('Tue'), gettext('Wed'), gettext('Thu'), gettext('Fri'), gettext('Sat'), gettext('Sun')];
+			$retval = [gtext('Mon'), gtext('Tue'), gtext('Wed'), gtext('Thu'), gtext('Fri'), gtext('Sat'), gtext('Sun')];
 			break;
 		case 1: // long, locale
-			$retval = [gettext('Monday'),gettext('Tuesday'),gettext('Wednesday'),gettext('Thursday'),gettext('Friday'),gettext('Saturday'),gettext('Sunday')];
+			$retval = [gtext('Monday'),gtext('Tuesday'),gtext('Wednesday'),gtext('Thursday'),gtext('Friday'),gtext('Saturday'),gtext('Sunday')];
 			break;
 		case 2: // short, english
 			$retval = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
@@ -665,10 +665,10 @@ function get_month_names($long = NULL, $english = NULL) {
 	$actioncode = (is_null($long) ? 0 : 1) || (is_null($english) ? 0 : 2);
 	switch ($actioncode) {
 		case 0: // short, locale 
-			$retval = [gettext('Jan'), gettext('Feb'), gettext('Mar'), gettext('Apr'), gettext('May'), gettext('Jun'), gettext('Jul'), gettext('Aug'), gettext('Sep'), gettext('Oct'), gettext('Nov'), gettext('Dec')];
+			$retval = [gtext('Jan'), gtext('Feb'), gtext('Mar'), gtext('Apr'), gtext('May'), gtext('Jun'), gtext('Jul'), gtext('Aug'), gtext('Sep'), gtext('Oct'), gtext('Nov'), gtext('Dec')];
 			break;
 		case 1: // long, locale
-			$retval = [gettext('January'),gettext('February'),gettext('March'),gettext('April'),gettext('May'),gettext('June'),gettext('July'),gettext('August'),gettext('September'),gettext('October'),gettext('November'),gettext('December')];
+			$retval = [gtext('January'),gtext('February'),gtext('March'),gtext('April'),gtext('May'),gtext('June'),gtext('July'),gtext('August'),gtext('September'),gtext('October'),gtext('November'),gtext('December')];
 			break;
 		case 2: // short, english
 			$retval = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];

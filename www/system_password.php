@@ -34,13 +34,13 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("System"),gettext("General"),gettext("Password"));
+$pgtitle = array(gtext("System"),gtext("General"),gtext("Password"));
 
 if ($_POST) {
 	unset($input_errors);
 
 	$reqdfields = explode(" ", "password_old password_new password_confirm");
-	$reqdfieldsn = array(gettext("Old password"), gettext("Password"), gettext("Password (confirmed)"));
+	$reqdfieldsn = array(gtext("Old password"), gtext("Password"), gtext("Password (confirmed)"));
 	$reqdfieldst = explode(" ", "password password password");
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -48,19 +48,19 @@ if ($_POST) {
 
 	// Validate old password.
 	if (!password_verify($_POST['password_old'], $config['system']['password'])) {
-		$input_errors[] = gettext("The current password is incorrectly entered.");
+		$input_errors[] = gtext("The current password is incorrectly entered.");
 	}
 
 	// Validate new password.
 	if ($_POST['password_new'] !== $_POST['password_confirm']) {
-		$input_errors[] = gettext("The new password does not match. Please ensure the passwords match exactly.");
+		$input_errors[] = gtext("The new password does not match. Please ensure the passwords match exactly.");
 	}
 
 	// Check Webserver document root if auth is required
 	if (isset($config['websrv']['enable'])
 	    && isset($config['websrv']['authentication']['enable'])
 	    && !is_dir($config['websrv']['documentroot'])) {
-		$input_errors[] = gettext("Webserver document root is missing.");
+		$input_errors[] = gtext("Webserver document root is missing.");
 	}
 
 	if (empty($input_errors)) {
@@ -87,8 +87,8 @@ if ($_POST) {
 	<tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-      	<li class="tabinact"><a href="system.php"><span><?=gettext("General");?></span></a></li>
-      	<li class="tabact"><a href="system_password.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Password");?></span></a></li>
+      	<li class="tabinact"><a href="system.php"><span><?=gtext("General");?></span></a></li>
+      	<li class="tabact"><a href="system_password.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Password");?></span></a></li>
       </ul>
     </td>
   </tr>
@@ -99,12 +99,12 @@ if ($_POST) {
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 			    <?php html_separator();?>
-			    <?php html_titleline(gettext("WebGUI"));?>
-					<?php html_passwordbox("password_old", gettext("Current password"), "", "", true);?>
-					<?php html_passwordconfbox("password_new", "password_confirm", gettext("New password"), "", "", gettext("If you want to change the password for accessing the WebGUI, enter it here twice."), true);?>
+			    <?php html_titleline(gtext("WebGUI"));?>
+					<?php html_passwordbox("password_old", gtext("Current password"), "", "", true);?>
+					<?php html_passwordconfbox("password_new", "password_confirm", gtext("New password"), "", "", gtext("If you want to change the password for accessing the WebGUI, enter it here twice."), true);?>
 			  </table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save");?>" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save");?>" />
 				</div>
 				<br>
 				<div id="remarks">

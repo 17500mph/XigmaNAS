@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Services"),gettext("AFP"));
+$pgtitle = array(gtext("Services"),gtext("AFP"));
 
 if (!(isset($config['afp']) && is_array($config['afp']))) {
 	$config['afp'] = [];
@@ -54,7 +54,7 @@ if ($_POST) {
 	$pconfig = $_POST;
 
 	if (!empty($_POST['enable']) && (empty($_POST['guest']) && empty($_POST['local']))) {
-		$input_errors[] = gettext("You must select at least one authentication method.");
+		$input_errors[] = gtext("You must select at least one authentication method.");
 	}
 
 	if (empty($input_errors)) {
@@ -100,8 +100,8 @@ function enable_change(enable_change) {
   <tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-        <li class="tabact"><a href="services_afp.php" title="<?=gettext("Reload page");?>"><span><?=gettext("Settings");?></span></a></li>
-        <li class="tabinact"><a href="services_afp_share.php"><span><?=gettext("Shares");?></span></a></li>
+        <li class="tabact"><a href="services_afp.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Settings");?></span></a></li>
+        <li class="tabinact"><a href="services_afp_share.php"><span><?=gtext("Shares");?></span></a></li>
       </ul>
     </td>
   </tr>
@@ -111,21 +111,21 @@ function enable_change(enable_change) {
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline_checkbox("enable", gettext("Apple Filing Protocol"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "enable_change(false)");?>
+					<?php html_titleline_checkbox("enable", gtext("Apple Filing Protocol"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
 					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gettext("Server Name");?></td>
+						<td width="22%" valign="top" class="vncell"><?=gtext("Server Name");?></td>
 						<td width="78%" class="vtable">
 							<input name="afpname" type="text" class="formfld" id="afpname" size="30" value="<?=htmlspecialchars($pconfig['afpname']);?>" /><br />
-							<?=gettext("Name of the server. If this field is left empty the default server is specified.");?><br />
+							<?=gtext("Name of the server. If this field is left empty the default server is specified.");?><br />
 						</td>
 					</tr>
 					<tr>
-						<td width="22%" valign="top" class="vncell"><strong><?=gettext("Authentication");?></strong></td>
+						<td width="22%" valign="top" class="vncell"><strong><?=gtext("Authentication");?></strong></td>
 						<td width="78%" class="vtable">
 							<input name="guest" id="guest" type="checkbox" value="yes" <?php if (!empty($pconfig['guest'])) echo "checked=\"checked\"";?> />
-							<?=gettext("Enable guest access.");?><br />
+							<?=gtext("Enable guest access.");?><br />
 							<input name="local" id="local" type="checkbox" value="yes" <?php if (!empty($pconfig['local'])) echo "checked=\"checked\"";?> />
-							<?=gettext("Enable local user authentication.");?>
+							<?=gtext("Enable local user authentication.");?>
 						</td>
 					</tr>
 					
@@ -134,7 +134,7 @@ function enable_change(enable_change) {
                                         </tr>
 			  </table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" onclick="enable_change(true)" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="enable_change(true)" />
 				</div>
 				<div id="remarks">
 					<?php html_remark("note", gettext("Note"), sprintf(gettext("You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this service to clients."), "system_advanced.php"));?>

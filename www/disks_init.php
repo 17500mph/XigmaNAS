@@ -41,7 +41,7 @@ $sphere_record = [];
 $checkbox_member_name = 'checkbox_member_array';
 $checkbox_member_array = [];
 $checkbox_member_record = [];
-$gt_record_loc = gettext_gen2('Record is locked');
+$gt_record_loc = gtext('Record is locked');
 $img_path = [
 	'add' => 'images/add.png',
 	'mod' => 'images/edit.png',
@@ -109,17 +109,17 @@ $a_control_matrix = [
 	]
 ];
 $a_button_matrix = [
-	1 => ['submit_value' => gettext_gen2('Next'  ), 'submit_name' => 'action1', 'submit_control' => 2, 'cancel_value' => gettext_gen2('Cancel'), 'cancel_name' => 'cancel1', 'cancel_control' => 0, 'checkbox_control' => 2],
-	2 => ['submit_value' => gettext_gen2('Next'  ), 'submit_name' => 'action2', 'submit_control' => 2, 'cancel_value' => gettext_gen2('Back'  ), 'cancel_name' => 'cancel2', 'cancel_control' => 2, 'checkbox_control' => 2],
-	3 => ['submit_value' => gettext_gen2('Format'), 'submit_name' => 'action3', 'submit_control' => 2, 'cancel_value' => gettext_gen2('Back'  ), 'cancel_name' => 'cancel3', 'cancel_control' => 2, 'checkbox_control' => 1],
-	4 => ['submit_value' => gettext_gen2('OK'    ), 'submit_name' => 'action4', 'submit_control' => 2, 'cancel_value' => gettext_gen2('Back'  ), 'cancel_name' => 'cancel4', 'cancel_control' => 0, 'checkbox_control' => 1]
+	1 => ['submit_value' => gtext('Next'  ), 'submit_name' => 'action1', 'submit_control' => 2, 'cancel_value' => gtext('Cancel'), 'cancel_name' => 'cancel1', 'cancel_control' => 0, 'checkbox_control' => 2],
+	2 => ['submit_value' => gtext('Next'  ), 'submit_name' => 'action2', 'submit_control' => 2, 'cancel_value' => gtext('Back'  ), 'cancel_name' => 'cancel2', 'cancel_control' => 2, 'checkbox_control' => 2],
+	3 => ['submit_value' => gtext('Format'), 'submit_name' => 'action3', 'submit_control' => 2, 'cancel_value' => gtext('Back'  ), 'cancel_name' => 'cancel3', 'cancel_control' => 2, 'checkbox_control' => 1],
+	4 => ['submit_value' => gtext('OK'    ), 'submit_name' => 'action4', 'submit_control' => 2, 'cancel_value' => gtext('Back'  ), 'cancel_name' => 'cancel4', 'cancel_control' => 0, 'checkbox_control' => 1]
 ];
 $l_filesystem = [
-	'ufsgpt' => gettext_gen2('UFS (GPT and Soft Updates)'),
-	'msdos' => gettext_gen2('FAT32'),
-//	'ext2' => gettext_gen2('EXT2'),
-	'softraid' => gettext_gen2('Software RAID'),
-	'zfs' => gettext_gen2('ZFS Storage Pool')
+	'ufsgpt' => gtext('UFS (GPT and Soft Updates)'),
+	'msdos' => gtext('FAT32'),
+//	'ext2' => gtext('EXT2'),
+	'softraid' => gtext('Software RAID'),
+	'zfs' => gtext('ZFS Storage Pool')
 ];
 $l_minspace = [
 	'8' => '8%',
@@ -163,16 +163,16 @@ foreach ($sphere_array as &$sphere_record) {
 	$sphere_record['protected.reason'] = '';
 	if (0 === strcmp($sphere_record['size'], 'NA')) {
 		$sphere_record['protected'] = true;
-		$sphere_record['protected.reason'] = gettext_gen2('Unknown size');
+		$sphere_record['protected.reason'] = gtext('Unknown size');
 	} elseif  (1 === disks_exists($sphere_record['devicespecialfile'])) {
 		$sphere_record['protected'] = true;
-		$sphere_record['protected.reason'] = gettext_gen2('Device not found');
+		$sphere_record['protected.reason'] = gtext('Device not found');
 	} elseif (disks_ismounted_ex($sphere_record['devicespecialfile'], "devicespecialfile")) {
 		$sphere_record['protected'] = true;
-		$sphere_record['protected.reason'] = gettext_gen2('Device is mounted');
+		$sphere_record['protected.reason'] = gtext('Device is mounted');
 	} elseif (1 === preg_match('/^' . $sphere_record['name'] . '/', $bootdevice)) {
 		$sphere_record['protected'] = true;
-		$sphere_record['protected.reason'] = gettext_gen2('Device contains boot partition');
+		$sphere_record['protected.reason'] = gtext('Device contains boot partition');
 	}
 }
 unset($sphere_record); // release pass by reference
@@ -247,7 +247,7 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 				$label_serial['count'] = substr_count($a_option['volumelabel'], $label_serial['trigger']); // count occurrences of the initiating character
 				if ($label_serial['count'] > 0) { // one or more occurrences found?
 					if ($label_serial['count'] !== preg_match_all($label_serial['regex'], $a_option['volumelabel'])) { // count must match, otherwise something went wrong
-						$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."), gettext_gen2('Volume Label'));
+						$input_errors[] = sprintf(gtext("The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."), gtext('Volume Label'));
 						$prerequisites_ok = false;
 						// invalid volume label pattern, we stay on page 2
 						$page_index = 2;
@@ -256,7 +256,7 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 					}
 				}
 			} else { // invalid volume label pattern, we stay on page 2
-				$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."), gettext_gen2('Volume Label'));
+				$input_errors[] = sprintf(gtext("The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."), gtext('Volume Label'));
 				$prerequisites_ok = false;
 				$page_index = 2;
 				$a_control = $a_control_matrix[$page_index][$a_option['filesystem']];
@@ -276,7 +276,7 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 				$label_serial['count'] = substr_count($a_option['volumelabel'], $label_serial['trigger']); // count occurrences of the initiating character
 				if ($label_serial['count'] > 0) { // one or more occurrences found?
 					if ($label_serial['count'] !== preg_match_all($label_serial['regex'], $a_option['volumelabel'])) { // count must match, otherwise something went wrong
-						$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] and [._-]."), gettext_gen2('Volume Label'));
+						$input_errors[] = sprintf(gtext("The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] and [._-]."), gtext('Volume Label'));
 						$prerequisites_ok = false;
 						// invalid volume label defined, we stay on page 2
 						$page_index = 2;
@@ -285,7 +285,7 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 					}
 				}
 			} else { // invalid volume label pattern, we stay on page 2
-				$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] and [._-]."), gettext_gen2('Volume Label'));
+				$input_errors[] = sprintf(gtext("The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] and [._-]."), gtext('Volume Label'));
 				$prerequisites_ok = false;
 				$page_index = 2;
 				$a_control = $a_control_matrix[$page_index][$a_option['filesystem']];
@@ -325,7 +325,7 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 				$label_serial['count'] = substr_count($a_option['volumelabel'], $label_serial['trigger']); // count occurrences of the initiating character
 				if ($label_serial['count'] > 0) { // one or more occurrences found?
 					if ($label_serial['count'] !== preg_match_all($label_serial['regex'], $a_option['volumelabel'])) { // count must match, otherwise something went wrong
-						$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."), gettext_gen2('Volume Label'));
+						$input_errors[] = sprintf(gtext("The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."), gtext('Volume Label'));
 						$prerequisites_ok = false;
 						// invalid volume label pattern, we stay on page 2
 						$page_index = 2;
@@ -334,7 +334,7 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 					}
 				}
 			} else { // invalid volume label defined, we stay on page 3
-				$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."), gettext_gen2('Volume Label'));
+				$input_errors[] = sprintf(gtext("The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."), gtext('Volume Label'));
 				$prerequisites_ok = false;
 				$page_index = 3;
 				$a_control = $a_control_matrix[$page_index][$a_option['filesystem']];
@@ -354,7 +354,7 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 				$label_serial['count'] = substr_count($a_option['volumelabel'], $label_serial['trigger']); // count occurrences of the initiating character
 				if ($label_serial['count'] > 0) { // one or more occurrences found?
 					if ($label_serial['count'] !== preg_match_all($label_serial['regex'], $a_option['volumelabel'])) { // count must match, otherwise something went wrong
-						$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] and [._-]"), gettext_gen2('Volume Label'));
+						$input_errors[] = sprintf(gtext("The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] and [._-]."), gtext('Volume Label'));
 						$prerequisites_ok = false;
 						// invalid volume label pattern, we stay on page 2
 						$page_index = 2;
@@ -363,7 +363,7 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 					}
 				}
 			} else { // invalid volume label defined, we stay on page 2
-				$input_errors[] = sprintf(gettext_gen2("The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] and [._-]."), gettext_gen2('Volume Label'));
+				$input_errors[] = sprintf(gtext("The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] and [._-]."), gtext('Volume Label'));
 				$prerequisites_ok = false;
 				$page_index = 2;
 				$a_control = $a_control_matrix[$page_index][$a_option['filesystem']];
@@ -520,7 +520,7 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 //	$a_control = $a_control_matrix[$page_index][$a_option['filesystem']];
 //	$a_button = $a_button_matrix[$page_index];
 }
-$pgtitle = [gettext_gen2('Disks'), gettext_gen2('Management'), gettext_gen2('HDD Format'), sprintf('%1$s %2$d', gettext_gen2('Step'), $page_index)];
+$pgtitle = [gtext('Disks'), gtext('Management'), gtext('HDD Format'), sprintf('%1$s %2$d', gtext('Step'), $page_index)];
 ?>
 <?php include("fbegin.inc"); ?>
 <script type="text/javascript">
@@ -548,10 +548,10 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 </script>
 <table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
-		<li class="tabinact"><a href="disks_manage.php"><span><?=gettext_gen2('HDD Management');?></span></a></li>
-		<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gettext_gen2('Reload page');?>"><span><?=gettext_gen2('HDD Format');?></span></a></li>
-		<li class="tabinact"><a href="disks_manage_smart.php"><span><?=gettext_gen2('S.M.A.R.T.');?></span></a></li>
-		<li class="tabinact"><a href="disks_manage_iscsi.php"><span><?=gettext_gen2('iSCSI Initiator');?></span></a></li>
+		<li class="tabinact"><a href="disks_manage.php"><span><?=gtext('HDD Management');?></span></a></li>
+		<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('HDD Format');?></span></a></li>
+		<li class="tabinact"><a href="disks_manage_smart.php"><span><?=gtext('S.M.A.R.T.');?></span></a></li>
+		<li class="tabinact"><a href="disks_manage_iscsi.php"><span><?=gtext('iSCSI Initiator');?></span></a></li>
 	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iform" name="iform">
@@ -570,7 +570,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 		</colgroup>
 		<thead>
 			<?php
-			html_titleline2(gettext_gen2('Format Options'));
+			html_titleline2(gtext('Format Options'));
 			?>
 		</thead>
 		<tfoot>
@@ -581,33 +581,33 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 		<tbody>
 			<?php
 			switch ($a_control['filesystem']) {
-				case 2: html_combobox2('filesystem', gettext_gen2('File System'), $a_option['filesystem'], $l_filesystem, gettext_gen2('Select file system format.'), true, false); break;
-				case 1: html_combobox2('filesystem', gettext_gen2('File System'), $a_option['filesystem'], $l_filesystem, '', false, true);
+				case 2: html_combobox2('filesystem', gtext('File System'), $a_option['filesystem'], $l_filesystem, gtext('Select file system format.'), true, false); break;
+				case 1: html_combobox2('filesystem', gtext('File System'), $a_option['filesystem'], $l_filesystem, '', false, true);
 				case 0: echo '<input name="filesystem" type="hidden" value="', $a_option['filesystem'], '"/>', "\n"; break;
 			}
 			switch ($a_control['volumelabel']) {
-				case 2: html_inputbox2('volumelabel', gettext_gen2('Volume Label'), $a_option['volumelabel'], gettext_gen2('Volume label of the new file system. Use $ for device name, % for a counter or %n for a counter starting at n, [n for the n rightmost characters of the device serial number.'), false, 40, false); break;
-				case 1: html_inputbox2('volumelabel', gettext_gen2('Volume Label'), $a_option['volumelabel'], '', false, 100, true); break;
+				case 2: html_inputbox2('volumelabel', gtext('Volume Label'), $a_option['volumelabel'], gtext('Volume label of the new file system. Use $ for device name, % for a counter or %n for a counter starting at n, [n for the n rightmost characters of the device serial number.'), false, 40, false); break;
+				case 1: html_inputbox2('volumelabel', gtext('Volume Label'), $a_option['volumelabel'], '', false, 100, true); break;
 				case 0: echo '<input name="volumelabel" type="hidden" value="', $a_option['volumelabel'], '"/>', "\n"; break;
 			}
 			switch ($a_control['minspace']) {
-				case 2: html_combobox2('minspace', gettext_gen2('Minimum Free Space'), $a_option['minspace'], $l_minspace, gettext_gen2('Specifiy the percentage of disk space to be held back from normal usage. Lowering this threshold can adversely affect performance and auto-defragmentation!'), true, false); break;
-				case 1: html_combobox2('minspace', gettext_gen2('Minimum Free Space'), $a_option['minspace'], $l_minspace, '', false, true);
+				case 2: html_combobox2('minspace', gtext('Minimum Free Space'), $a_option['minspace'], $l_minspace, gtext('Specifiy the percentage of disk space to be held back from normal usage. Lowering this threshold can adversely affect performance and auto-defragmentation!'), true, false); break;
+				case 1: html_combobox2('minspace', gtext('Minimum Free Space'), $a_option['minspace'], $l_minspace, '', false, true);
 				case 0: echo '<input name="minspace" type="hidden" value="', $a_option['minspace'], '"/>', "\n"; break;
 			}
 			switch ($a_control['aft4k']) {
-				case 2: html_checkbox2('aft4k', gettext_gen2('Advanced Format'), $a_option['aft4k'], gettext_gen2('Enable Advanced Format (4KB Sector Size).'), '', false, false); break;
-				case 1: html_checkbox2('aft4k', gettext_gen2('Advanced Format'), $a_option['aft4k'], gettext_gen2('Enable Advanced Format (4KB Sector Size).'), '', false, true);
+				case 2: html_checkbox2('aft4k', gtext('Advanced Format'), $a_option['aft4k'], gtext('Enable Advanced Format (4KB Sector Size).'), '', false, false); break;
+				case 1: html_checkbox2('aft4k', gtext('Advanced Format'), $a_option['aft4k'], gtext('Enable Advanced Format (4KB Sector Size).'), '', false, true);
 				case 0: if (true === $a_option['aft4k']) { echo '<input name="aft4k" type="hidden" value="yes"/>', "\n"; } break;
 			}
 			switch ($a_control['zfsgpt']) {
-				case 2: html_checkbox2('zfsgpt', gettext_gen2('GPT Partition'), $a_option['zfsgpt'], gettext_gen2('Create ZFS on a GPT partition.'), '', false, false); break;
-				case 1: html_checkbox2('zfsgpt', gettext_gen2('GPT Partition'), $a_option['zfsgpt'], gettext_gen2('Create ZFS on a GPT partition.'), '', false, true);
+				case 2: html_checkbox2('zfsgpt', gtext('GPT Partition'), $a_option['zfsgpt'], gtext('Create ZFS on a GPT partition.'), '', false, false); break;
+				case 1: html_checkbox2('zfsgpt', gtext('GPT Partition'), $a_option['zfsgpt'], gtext('Create ZFS on a GPT partition.'), '', false, true);
 				case 0: if (true === $a_option['zfsgpt']) { echo '<input name="zfsgpt" type="hidden" value="yes"/>', "\n"; } break;
 			}
 			switch ($a_control['notinitmbr']) {
-				case 2: html_checkbox2('notinitmbr', gettext_gen2('Erase MBR'), $a_option['notinitmbr'], gettext_gen2("Do not erase the Master Boot Record (useful for some RAID controller cards)."), '', false, false); break;
-				case 1: html_checkbox2('notinitmbr', gettext_gen2('Erase MBR'), $a_option['notinitmbr'], gettext_gen2("Do not erase the Master Boot Record (useful for some RAID controller cards)."), '', false, true);
+				case 2: html_checkbox2('notinitmbr', gtext('Erase MBR'), $a_option['notinitmbr'], gtext("Do not erase the Master Boot Record (useful for some RAID controller cards)."), '', false, false); break;
+				case 1: html_checkbox2('notinitmbr', gtext('Erase MBR'), $a_option['notinitmbr'], gtext("Do not erase the Master Boot Record (useful for some RAID controller cards)."), '', false, true);
 				case 0: if (true === $a_option['notinitmbr']) { echo '<input name="notinitmbr" type="hidden" value="yes"/>', "\n"; } break;
 			}
 			?>
@@ -625,21 +625,21 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 		</colgroup>
 		<thead>
 			<?php
-			html_titleline2(gettext_gen2('Disk Selection'), 7);
+			html_titleline2(gtext('Disk Selection'), 7);
 			?>
 			<tr>
 				<?php
 				switch ($a_button['checkbox_control']) {
-					case 2:	echo '<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="', gettext_gen2('Invert Selection'), '"/></th>', "\n"; break;
-					case 1:	echo '<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="', gettext_gen2('Invert Selection'), '" disabled="disabled"/></th>', "\n"; break;
+					case 2:	echo '<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="', gtext('Invert Selection'), '"/></th>', "\n"; break;
+					case 1:	echo '<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="', gtext('Invert Selection'), '" disabled="disabled"/></th>', "\n"; break;
 				}
 				?>
-				<th class="lhell"><?=gettext_gen2('Device Name');?></th>
-				<th class="lhell"><?=gettext_gen2('Serial Number');?></th>
-				<th class="lhell"><?=gettext_gen2('Size');?></th>
-				<th class="lhell"><?=gettext_gen2('Device Path');?></th>
-				<th class="lhell"><?=gettext_gen2('Reason Code');?></th>
-				<th class="lhebc"><?=gettext_gen2('Toolbox');?></th>
+				<th class="lhell"><?=gtext('Device Name');?></th>
+				<th class="lhell"><?=gtext('Serial Number');?></th>
+				<th class="lhell"><?=gtext('Size');?></th>
+				<th class="lhell"><?=gtext('Device Path');?></th>
+				<th class="lhell"><?=gtext('Reason Code');?></th>
+				<th class="lhebc"><?=gtext('Toolbox');?></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -711,7 +711,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 	<?php
 	if (count($do_format) > 0) {
 		foreach ($do_format as $do_format_disk) {
-			echo(sprintf("<div id='cmdoutput'>%s</div>", sprintf(gettext("Command output") . " for disk %s :", $do_format_disk['devicespecialfile'])));
+			echo(sprintf("<div id='cmdoutput'>%s</div>", sprintf(gtext("Command output") . " for disk %s :", $do_format_disk['devicespecialfile'])));
 			echo('<pre class="cmdoutput">');
 			disks_format($do_format_disk['devicespecialfile'], $do_format_disk['filesystem'], $do_format_disk['notinitmbr'], $do_format_disk['minspace'], $do_format_disk['volumelabel'], $do_format_disk['aft4k'], $do_format_disk['zfsgpt']);
 			echo('</pre><br/>');

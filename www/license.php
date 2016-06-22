@@ -37,14 +37,14 @@ $pgperm['allowuser'] = TRUE;
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Help"), gettext("License & Credits"));
+$pgtitle = array(gtext("Help"), gtext("License & Credits"));
 ?>
 <?php include("fbegin.inc");?>
 	<table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabcont">
 			<table width="100%" border="0" cellspacing="0" cellpadding="0">
-				<?php html_titleline(gettext("License"));?>
+				<?php html_titleline(gtext("License"));?>
 			<tr>
 <td class="listt">
 	     <p><strong>NAS4Free is Copyright &copy; 2012-2016 The NAS4Free Project
@@ -80,7 +80,7 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
 							
 </tr>
             <?php html_separator();?>
-            <?php html_titleline(gettext("Credits"));?>
+            <?php html_titleline(gtext("Credits"));?>
             <tr>
             	<td class="listt">
             <p>The following persons have contributed to NAS4Free code:</p>
@@ -151,7 +151,7 @@ $pgtitle = array(gettext("Help"), gettext("License & Credits"));
 	</td>
 </tr>
 	    <?php html_separator();?>
-	    <?php html_titleline(gettext("Software Used"));?>
+	    <?php html_titleline(gtext("Software Used"));?>
 	    <tr>
 	    <td class="listt">
 	    <p>NAS4Free is based upon/includes various free software packages, listed below.<br />

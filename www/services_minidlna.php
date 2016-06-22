@@ -36,7 +36,7 @@ require("guiconfig.inc");
 require("services.inc");
 unset($currentconfig);
 
-$pgtitle = array(gettext("Services"),gettext("DLNA/UPnP MiniDLNA"));
+$pgtitle = array(gtext("Services"),gtext("DLNA/UPnP MiniDLNA"));
 
 $homechanged =0;
 
@@ -69,8 +69,8 @@ if ($_POST) {
 	unset($input_errors);
 
 	// Input validation.
-	if ( !is_array ($_POST['content'])) $input_errors[] = gettext("Please define the Media library location.");
-	if ( empty ($_POST['home']) || !is_dir ($_POST['home'])) $input_errors[] = gettext("Please define the Database directory location.");
+	if ( !is_array ($_POST['content'])) $input_errors[] = gtext("Please define the Media library location.");
+	if ( empty ($_POST['home']) || !is_dir ($_POST['home'])) $input_errors[] = gtext("Please define the Database directory location.");
 	$pconfig = $_POST;
 
 	if (empty($input_errors)) {
@@ -96,7 +96,7 @@ if ($_POST) {
 		$config['minidlna']['container'] =  $_POST['container'];
 
 		if (empty ($currentconfig['content']) || $homechanged == 1) {
-		updatenotify_set("minidlna", UPDATENOTIFY_MODE_NEW, gettext("Building database in progress"));
+		updatenotify_set("minidlna", UPDATENOTIFY_MODE_NEW, gtext("Building database in progress"));
 		}	else {
 			$a_content = $config['minidlna']['content'];
 			$b_content = $currentconfig['content'];
@@ -104,9 +104,9 @@ if ($_POST) {
 			sort ($b_content);
 			$check_differences = array_merge (  array_diff_assoc ( $a_content ,$b_content ), array_diff_assoc ( $b_content ,  $a_content));
 			if (count ($check_differences) > 0 ) {
-				updatenotify_set("minidlna", UPDATENOTIFY_MODE_MODIFIED, gettext("Rescan database in progress"));
+				updatenotify_set("minidlna", UPDATENOTIFY_MODE_MODIFIED, gtext("Rescan database in progress"));
 					} else {
-				updatenotify_set("minidlna", UPDATENOTIFY_MODE_DIRTY, gettext("Minidlna configuration has been updated."));
+				updatenotify_set("minidlna", UPDATENOTIFY_MODE_DIRTY, gtext("Minidlna configuration has been updated."));
 			}
 	}
 		write_config();
@@ -172,24 +172,24 @@ function enable_change(enable_change) {
 	<table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr id="tabnavtbl"><td class="tabnavtbl">
 		<ul id="tabnav">
-			<li class="tabinact"><a href="services_fuppes.php"><span><?=gettext("Fuppes")?></span></a></li>
-		    <li class="tabact"><a href="services_minidlna.php"><span><?=gettext("MiniDLNA");?></span></a></li>
+			<li class="tabinact"><a href="services_fuppes.php"><span><?=gtext("Fuppes")?></span></a></li>
+		    <li class="tabact"><a href="services_minidlna.php"><span><?=gtext("MiniDLNA");?></span></a></li>
 			</ul>
 		</td></tr>
 		   <tr>
 			<td class="tabcont">
 				<?php if (true === isset($config['upnp']['enable'])) {
-				$savemsg = gettext("Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable Fuppes first.");
+				$savemsg = gtext("Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable Fuppes first.");
 				if (!empty($savemsg)) print_info_box($savemsg);
 				}else{?>
 			<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
 			<?php if (!empty($savemsg)) print_info_box($savemsg); ?>
 			<?php if (updatenotify_exists("minidlna" )) print_config_change_box();?>
 			<table width="100%" border="0" cellpadding="6" cellspacing="0">
-			<?php html_titleline_checkbox("enable", gettext("MiniDLNA A/V Media Server"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "enable_change(false)" ); ?>
-			<?php html_inputbox("name", gettext("Name"), $pconfig['name'], gettext("Give your media library a friendly name."), true, 35);?>
+			<?php html_titleline_checkbox("enable", gtext("MiniDLNA A/V Media Server"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)" ); ?>
+			<?php html_inputbox("name", gtext("Name"), $pconfig['name'], gtext("Give your media library a friendly name."), true, 35);?>
 			<tr>
-					<td width="22%" valign="top" class="vncellreq"><?=gettext("Interface selection");?></td>
+					<td width="22%" valign="top" class="vncellreq"><?=gtext("Interface selection");?></td>
 					<td width="78%" class="vtable">
 					<select name="if" class="formfld" id="xif">
 						<?php foreach($a_interface as $if => $ifinfo):?>
@@ -198,30 +198,30 @@ function enable_change(enable_change) {
 							<?php endif;?>
 						<?php endforeach;?>
 					</select>
-					<br /><?=gettext("Select which interface to use. (Only selectable if your server has more than one)");?>
+					<br /><?=gtext("Select which interface to use. (Only selectable if your server has more than one)");?>
 					</td>
 				</tr>
-					<?php html_inputbox("port", gettext("Port"), $pconfig['port'], sprintf(gettext("Port to listen on. Only dynamic or private ports can be used (from %d through %d). Default port is %d."), 1025, 65535, 8200), true, 5);?>
-					<?php html_inputbox("notify_int", gettext("Broadcast interval"), $pconfig['notify_int'], sprintf(gettext("Broadcasts its availability every N seconds on the network. (Default 300 seconds)"), 1025, 65535, 60), true, 5);?>
-					<?php html_filechooser("home", gettext("Database directory"), $pconfig['home'], gettext("Location where the database with media contents will be stored."), $g['media_path'], true, 67);?>
-					<?php html_minidlnabox("content", gettext("Media library"), !empty($pconfig['content']) ? $pconfig['content'] : array(), gettext("Set the content location(s) to or from the media library."), $g['media_path'], true);?>
-					<?php html_checkbox ("inotify", gettext("Inotify"), !empty($pconfig['inotify']) ? true : false, gettext("Enable inotify."), gettext("Use inotify monitoring to automatically discover new files."), false);?>
-					<?php html_combobox("container", gettext("Container"), $pconfig['container'], array("." => gettext("Standard"), "B" => gettext("Browse Directory"), "M" => gettext("Music"), "V" => gettext("Video"), "P" => gettext("Pictures")), gettext("Use different container as root of the tree."), false, false, "" );?>
-					<?php html_checkbox ("strict", gettext("Strict DLNA"), !empty($pconfig['strict']) ? true : false, gettext("Enable to strictly adhere to DLNA standards."), gettext("This will allow server-side downscaling of very large JPEG images, it can hurt JPEG serving performance on (at least) Sony DLNA products."), false);?>
-					<?php html_checkbox ("tivo", gettext("TiVo support"), !empty($pconfig['tivo']) ? true : false, gettext("Enable TiVo support."), gettext("This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."), false);?>
-					<?php html_combobox("loglevel", gettext("Log level"), $pconfig['loglevel'], array("off" => gettext("Off"), "fatal" => gettext("Fatal"), "error" => gettext("Error"), "warn" => gettext("Warning"), "info" => gettext("Info"),"debug" => gettext("debug")), "", false, false, "" );?>
+					<?php html_inputbox("port", gtext("Port"), $pconfig['port'], sprintf(gtext("Port to listen on. Only dynamic or private ports can be used (from %d through %d). Default port is %d."), 1025, 65535, 8200), true, 5);?>
+					<?php html_inputbox("notify_int", gtext("Broadcast interval"), $pconfig['notify_int'], sprintf(gtext("Broadcasts its availability every N seconds on the network. (Default 300 seconds)"), 1025, 65535, 60), true, 5);?>
+					<?php html_filechooser("home", gtext("Database directory"), $pconfig['home'], gtext("Location where the database with media contents will be stored."), $g['media_path'], true, 67);?>
+					<?php html_minidlnabox("content", gtext("Media library"), !empty($pconfig['content']) ? $pconfig['content'] : array(), gtext("Set the content location(s) to or from the media library."), $g['media_path'], true);?>
+					<?php html_checkbox ("inotify", gtext("Inotify"), !empty($pconfig['inotify']) ? true : false, gtext("Enable inotify."), gtext("Use inotify monitoring to automatically discover new files."), false);?>
+					<?php html_combobox("container", gtext("Container"), $pconfig['container'], array("." => gtext("Standard"), "B" => gtext("Browse Directory"), "M" => gtext("Music"), "V" => gtext("Video"), "P" => gtext("Pictures")), gtext("Use different container as root of the tree."), false, false, "" );?>
+					<?php html_checkbox ("strict", gtext("Strict DLNA"), !empty($pconfig['strict']) ? true : false, gtext("Enable to strictly adhere to DLNA standards."), gtext("This will allow server-side downscaling of very large JPEG images, it can hurt JPEG serving performance on (at least) Sony DLNA products."), false);?>
+					<?php html_checkbox ("tivo", gtext("TiVo support"), !empty($pconfig['tivo']) ? true : false, gtext("Enable TiVo support."), gtext("This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."), false);?>
+					<?php html_combobox("loglevel", gtext("Log level"), $pconfig['loglevel'], array("off" => gtext("Off"), "fatal" => gtext("Fatal"), "error" => gtext("Error"), "warn" => gtext("Warning"), "info" => gtext("Info"),"debug" => gtext("debug")), "", false, false, "" );?>
 					<?php html_separator();?>
-					<?php html_titleline(gettext("Presentation WebGUI"));?>
+					<?php html_titleline(gtext("Presentation WebGUI"));?>
 					<?php
 						$if = get_ifname($pconfig['if']);
 						$ipaddr = get_ipaddr($if);
 						$url = htmlspecialchars("http://{$ipaddr}:{$pconfig['port']}/status");
 						$text = "<a href='{$url}' target='_blank'>{$url}</a>";
 					?>
-					<?php html_text("url", gettext("URL"), $text);?>
+					<?php html_text("url", gtext("URL"), $text);?>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" onclick="onsubmit_content(); enable_change(true)" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="onsubmit_content(); enable_change(true)" />
 					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
 				</div>
 			</td>

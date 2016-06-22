@@ -48,160 +48,160 @@ $proftpd_modban_logfile = rc_getenv_ex("proftpd_modban_banlog", "{$g['varlog_pat
 $loginfo = array(
 	array(
 		"visible" => TRUE,
-		"desc" => gettext("System"),
+		"desc" => gtext("System"),
 		"logfile" => "{$clogdir}/system.log",
 		"filename" => "system.log",
 		"type" => "clog",
 		"size" => "262144",
 		"pattern" => "/^(\S+\s+\d+\s+\S+)\s+(\S+)\s+(.*)$/",
 		"columns" => array(
-			array("title" => gettext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
-			array("title" => gettext("User"), "class" => "listr", "param" => "nowrap=\"nowrap\"", "pmid" => 2),
-			array("title" => gettext("Event"), "class" => "listr", "param" => "", "pmid" => 3)
+			array("title" => gtext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
+			array("title" => gtext("User"), "class" => "listr", "param" => "nowrap=\"nowrap\"", "pmid" => 2),
+			array("title" => gtext("Event"), "class" => "listr", "param" => "", "pmid" => 3)
 		)),
 	array(
 		"visible" => TRUE,
-		"desc" => gettext("SSH"),
+		"desc" => gtext("SSH"),
 		"logfile" => "{$clogdir}/sshd.log",
 		"filename" => "sshd.log",
 		"type" => "clog",
 		"size" => "32768",
 		"pattern" => "/^(\S+\s+\d+\s+\S+)\s+(\S+)\s+(.*)$/",
 		"columns" => array(
-			array("title" => gettext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
-			array("title" => gettext("User"), "class" => "listr", "param" => "nowrap=\"nowrap\"", "pmid" => 2),
-			array("title" => gettext("Event"), "class" => "listr", "param" => "", "pmid" => 3)
+			array("title" => gtext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
+			array("title" => gtext("User"), "class" => "listr", "param" => "nowrap=\"nowrap\"", "pmid" => 2),
+			array("title" => gtext("Event"), "class" => "listr", "param" => "", "pmid" => 3)
 		)),
 	array(
 		"visible" => TRUE,
-		"desc" => gettext("Daemon"),
+		"desc" => gtext("Daemon"),
 		"logfile" => "{$clogdir}/daemon.log",
 		"filename" => "daemon.log",
 		"type" => "clog",
 		"size" => "32768",
 		"pattern" => "/^(\S+\s+\d+\s+\S+)\s+(\S+)\s+(.*)$/",
 		"columns" => array(
-			array("title" => gettext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
-			array("title" => gettext("User"), "class" => "listr", "param" => "nowrap=\"nowrap\"", "pmid" => 2),
-			array("title" => gettext("Event"), "class" => "listr", "param" => "", "pmid" => 3)
+			array("title" => gtext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
+			array("title" => gtext("User"), "class" => "listr", "param" => "nowrap=\"nowrap\"", "pmid" => 2),
+			array("title" => gtext("Event"), "class" => "listr", "param" => "", "pmid" => 3)
 		)),
 	array(
 		"visible" => TRUE,
-		"desc" => gettext("FTP"),
+		"desc" => gtext("FTP"),
 		"logfile" => "{$clogdir}/ftp.log",
 		"filename" => "ftp.log",
 		"type" => "clog",
 		"size" => "32768",
 		"pattern" => "/^(\S+\s+\d+\s+\S+)\s+(\S+)\s+(.*)$/",
 		"columns" => array(
-			array("title" => gettext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
-			array("title" => gettext("User"), "class" => "listr", "param" => "nowrap=\"nowrap\"", "pmid" => 2),
-			array("title" => gettext("Event"), "class" => "listr", "param" => "", "pmid" => 3)
+			array("title" => gtext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
+			array("title" => gtext("User"), "class" => "listr", "param" => "nowrap=\"nowrap\"", "pmid" => 2),
+			array("title" => gtext("Event"), "class" => "listr", "param" => "", "pmid" => 3)
 		)),
 	array(
 		"visible" => isset($config['ftpd']['mod_ban']['enable']),
-		"desc" => gettext("FTP - Ban module"),
+		"desc" => gtext("FTP - Ban module"),
 		"logfile" => $proftpd_modban_logfile,
 		"filename" => "ban.log",
 		"type" => "plain",
 		"pattern" => "/^(\S+\s+\S+)\s+(.*)$/",
 		"columns" => array(
-			array("title" => gettext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
-			array("title" => gettext("Event"), "class" => "listr", "param" => "", "pmid" => 2)
+			array("title" => gtext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
+			array("title" => gtext("Event"), "class" => "listr", "param" => "", "pmid" => 2)
 		)),
 	array(
 		"visible" => TRUE,
-		"desc" => gettext("FTP - File transfer"),
+		"desc" => gtext("FTP - File transfer"),
 		"logfile" => "{$g['varlog_path']}/xferlog",
 		"filename" => "xferlog",
 		"type" => "plain",
 		"pattern" => "/^(\S+\s+\S+\s+\d+\s+\S+\s+\d+) ((\d+) (\S+) (\d+) (\S+) (a|b) (C|U|T|_) (o|i|d) (a|g|r) (\S+) (\S+) (0|1) (\S+) (c|i))$/",
 		"columns" => array(
-			array("title" => gettext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
-			array("title" => gettext("IP"), "class" => "listr", "param" => "", "pmid" => 4),
-			array("title" => gettext("User"), "class" => "listr", "param" => "", "pmid" => 11),
-//		array("title" => gettext("File"), "class" => "listr", "param" => "", "pmid" => 6),
-//		array("title" => gettext("Filesize"), "class" => "listr", "param" => "", "pmid" => 5),
-			array("title" => gettext("Event"), "class" => "listr", "param" => "", "pmid" => 2)
+			array("title" => gtext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
+			array("title" => gtext("IP"), "class" => "listr", "param" => "", "pmid" => 4),
+			array("title" => gtext("User"), "class" => "listr", "param" => "", "pmid" => 11),
+//		array("title" => gtext("File"), "class" => "listr", "param" => "", "pmid" => 6),
+//		array("title" => gtext("Filesize"), "class" => "listr", "param" => "", "pmid" => 5),
+			array("title" => gtext("Event"), "class" => "listr", "param" => "", "pmid" => 2)
 		)),
 	array(
 		"visible" => TRUE,
-		"desc" => gettext("S.M.A.R.T."),
+		"desc" => gtext("S.M.A.R.T."),
 		"logfile" => "{$clogdir}/smartd.log",
 		"filename" => "smartd.log",
 		"type" => "clog",
 		"size" => "32768",
 		"pattern" => "/^(\S+\s+\d+\s+\S+)\s+(\S+)\s+(.*)$/",
 		"columns" => array(
-			array("title" => gettext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
-			array("title" => gettext("User"), "class" => "listr", "param" => "nowrap=\"nowrap\"", "pmid" => 2),
-			array("title" => gettext("Event"), "class" => "listr", "param" => "", "pmid" => 3)
+			array("title" => gtext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
+			array("title" => gtext("User"), "class" => "listr", "param" => "nowrap=\"nowrap\"", "pmid" => 2),
+			array("title" => gtext("Event"), "class" => "listr", "param" => "", "pmid" => 3)
 		)),
 	array(
 		"visible" => TRUE,
-		"desc" => gettext("RSYNC - Server"),
+		"desc" => gtext("RSYNC - Server"),
 		"logfile" => "{$clogdir}/rsyncd.log",
 		"filename" => "rsyncd.log",
 		"type" => "clog",
 		"size" => "32768",
 		"pattern" => "/^(\S+\s+\d+\s+\S+)\s+(\S+)\s+(.*)$/",
 		"columns" => array(
-			array("title" => gettext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
-			array("title" => gettext("User"), "class" => "listr", "param" => "nowrap=\"nowrap\"", "pmid" => 2),
-			array("title" => gettext("Event"), "class" => "listr", "param" => "", "pmid" => 3)
+			array("title" => gtext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
+			array("title" => gtext("User"), "class" => "listr", "param" => "nowrap=\"nowrap\"", "pmid" => 2),
+			array("title" => gtext("Event"), "class" => "listr", "param" => "", "pmid" => 3)
 		)),
 	array(
 		"visible" => TRUE,
-		"desc" => gettext("RSYNC - Client"),
+		"desc" => gtext("RSYNC - Client"),
 		"logfile" => $rsync_client_logfile,
 		"filename" => "rsync_client.log",
 		"type" => "plain",
 		"pattern" => "/^(.*)$/",
 		"columns" => array(
-			array("title" => gettext("Event"), "class" => "listlr", "param" => "", "pmid" => 1)
+			array("title" => gtext("Event"), "class" => "listlr", "param" => "", "pmid" => 1)
 		)),
 	array(
 		"visible" => TRUE,
-		"desc" => gettext("RSYNC - Local"),
+		"desc" => gtext("RSYNC - Local"),
 		"logfile" => $rsync_local_logfile,
 		"filename" => "rsync_local.log",
 		"type" => "plain",
 		"pattern" => "/^(.*)$/",
 		"columns" => array(
-			array("title" => gettext("Event"), "class" => "listlr", "param" => "", "pmid" => 1)
+			array("title" => gtext("Event"), "class" => "listlr", "param" => "", "pmid" => 1)
 		)),
 	array(
 		"visible" => TRUE,
-		"desc" => gettext("UPnP/DLNA - Fuppes"),
+		"desc" => gtext("UPnP/DLNA - Fuppes"),
 		"logfile" => $fuppes_logfile,
 		"filename" => "fuppes.log",
 		"type" => "plain",
 		"pattern" => "/^(.*)$/",
 		"columns" => array(
-			array("title" => gettext("Event"), "class" => "listlr", "param" => "", "pmid" => 1)
+			array("title" => gtext("Event"), "class" => "listlr", "param" => "", "pmid" => 1)
 		)),
 	array(
 		"visible" => TRUE,
-		"desc" => gettext("UPnP/DLNA - MiniDLNA"),
+		"desc" => gtext("UPnP/DLNA - MiniDLNA"),
 		"logfile" =>  $minidlna_logfile,
 		"filename" => "minidlna.log",
 		"type" => "plain",
 		"pattern" => "/^\[(.*?)\]\s+(.*?)\..*?:\d+:\s+.*?:\s+(.*)$/",
 		"columns" => array(
-			array("title" => gettext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
-			array("title" => gettext("Who"), "class" => "listr", "param" => "nowrap=\"nowrap\"", "pmid" => 2),
-			array("title" => gettext("Event"), "class" => "listr", "param" => "", "pmid" => 3)
+			array("title" => gtext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
+			array("title" => gtext("Who"), "class" => "listr", "param" => "nowrap=\"nowrap\"", "pmid" => 2),
+			array("title" => gtext("Event"), "class" => "listr", "param" => "", "pmid" => 3)
 		)),
 	array(
 		"visible" => TRUE,
-		"desc" => gettext("DAAP"),
+		"desc" => gtext("DAAP"),
 		"logfile" => $mtdaapd_logfile,
 		"filename" => "daap.log",
 		"type" => "plain",
 		"pattern" => "/^(\S+\s+\S+)\s+\S+:\s+(.*)$/",
 		"columns" => array(
-			array("title" => gettext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
-			array("title" => gettext("Event"), "class" => "listr", "param" => "", "pmid" => 2)
+			array("title" => gtext("Date & Time"), "class" => "listlr", "param" => "nowrap=\"nowrap\"", "pmid" => 1),
+			array("title" => gtext("Event"), "class" => "listr", "param" => "", "pmid" => 2)
 		))
 );
 

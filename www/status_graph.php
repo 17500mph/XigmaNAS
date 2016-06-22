@@ -41,7 +41,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Status"), gettext("Graph"),gettext("System Load"));
+$pgtitle = array(gtext("Status"), gtext("Graph"),gtext("System Load"));
 
 $curif = "lan";
 if (isset($_GET['if']) && $_GET['if'])
@@ -57,8 +57,8 @@ $graph_height = 220;
 		<td class="tabnavtbl">
 		<div align="center">
   		<ul id="tabnav">
-				<li class="tabact"><a href="status_graph.php" title="<?=gettext("Reload page");?>"><span><?=gettext("System Load");?></span></a></li>
-				<li class="tabinact"><a href="status_graph_cpu.php"><span><?=gettext("CPU Load");?></span></a></li>
+				<li class="tabact"><a href="status_graph.php" title="<?=gettext("Reload page");?>"><span><?=gtext("System Load");?></span></a></li>
+				<li class="tabinact"><a href="status_graph_cpu.php"><span><?=gtext("CPU Load");?></span></a></li>
   		</ul>
 		</div>
   	</td>
@@ -71,7 +71,7 @@ for ($j = 1; isset($config['interfaces']['opt' . $j]); $j++) {
 	$ifdescrs['opt' . $j] = $config['interfaces']['opt' . $j]['descr'];
 }
 ?>
-<?=gettext("Graph shows last 120 seconds");?>
+<?=gtext("Graph shows last 120 seconds");?>
 <div align="center" style="min-width:840px;">
 <br>
 <object id="graph"

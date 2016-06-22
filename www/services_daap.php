@@ -35,7 +35,7 @@ require("auth.inc");
 require("guiconfig.inc");
 require("services.inc");
 
-$pgtitle = array(gettext("Services"), gettext("iTunes/DAAP"));
+$pgtitle = array(gtext("Services"), gtext("iTunes/DAAP"));
 
 if (!isset($config['daap']) || !is_array($config['daap']))
 	$config['daap'] = array();
@@ -70,20 +70,20 @@ if ($_POST) {
 	// Input validation.
 	if (isset($_POST['enable']) && $_POST['enable']) {
 		$reqdfields = explode(" ", "servername port dbdir content admin_pw");
-		$reqdfieldsn = array(gettext("Server name"), gettext("Port"), gettext("Database directory"), gettext("Content"), gettext("Password"));
+		$reqdfieldsn = array(gtext("Server name"), gtext("Port"), gtext("Database directory"), gtext("Content"), gtext("Password"));
 		$reqdfieldst = explode(" ", "string port string array password");
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 		$reqdfields = array_merge($reqdfields, array("rescaninterval"));
-		$reqdfieldsn = array_merge($reqdfieldsn, array(gettext("Rescan interval")));
+		$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Rescan interval")));
 		$reqdfieldst = array_merge($reqdfieldst, array("numeric"));
 
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
 		// Check if port is already used.
 		if (services_is_port_used($_POST['port'], "daap"))
-			$input_errors[] = sprintf(gettext("Port %ld is already used by another service."), $_POST['port']);
+			$input_errors[] = sprintf(gtext("Port %ld is already used by another service."), $_POST['port']);
 	}
 
 	if (empty($input_errors)) {
@@ -147,30 +147,30 @@ function enable_change(enable_change) {
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<?php if (!isset($config['system']['zeroconf'])) print_error_box(sprintf(gettext("You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this service to clients."), "system_advanced.php"));?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline_checkbox("enable", gettext("Digital Audio Access Protocol"), !empty($pconfig['enable']) ? true : false, gettext("Enable"), "enable_change(false)");?>
-					<?php html_inputbox("servername", gettext("Server name"), $pconfig['servername'], gettext("This is both the name of the server as advertised via Zeroconf/Bonjour/Rendezvous, and the name of the database exported via DAAP."), true, 20);?>
-					<?php html_inputbox("port", gettext("Port"), $pconfig['port'], gettext("Port to listen on. Default iTunes port is 3689."), true, 5);?>
-					<?php html_filechooser("dbdir", gettext("Database directory"), $pconfig['dbdir'], gettext("Location where the content database file will be stored."), $g['media_path'], true, 60);?>
-					<?php html_folderbox("content", gettext("Content"), !empty($pconfig['content']) ? $pconfig['content'] : array(), gettext("Location of the files to share."), $g['media_path'], true);?>
-					<?php html_inputbox("compdirs", gettext("Compilations directories"), $pconfig['compdirs'], gettext("Tracks whose path contains one or more of these comma separated strings will be treated as a compilation."), false, 40);?>
-					<?php html_checkbox("concatcomps", gettext("Group compilations"), !empty($pconfig['concatcomps']) ? true : false, "", gettext("Whether compilations should be shown together under Various Artists."), false);?>
-					<?php html_inputbox("rescaninterval", gettext("Rescan interval"), $pconfig['rescaninterval'], gettext("Scan file system every N seconds to see if any files have been added or removed. Set to 0 to disable background scanning. If background rescanning is disabled, a scan can still be forced from the status page of the administrative web interface."), false, 5);?>
-					<?php html_checkbox("alwaysscan", gettext("Always scan"), !empty($pconfig['alwaysscan']) ? true : false, "", gettext("Whether scans should be skipped if there are no users connected. This allows the drive to spin down when no users are connected."), false);?>
-					<?php html_checkbox("skipfirst", gettext("Skip first scan"), !empty($pconfig['skipfirst']) ? true : false, "", gettext("Whether to skip initial boot-up scan."), false);?>
-					<?php html_combobox("scantype", gettext("Scan type"), $pconfig['scantype'], array("0" => gettext("Normal"), "1" => gettext("Aggressive"), "2" => gettext("Painfully aggressive")), "", false);?>
+					<?php html_titleline_checkbox("enable", gtext("Digital Audio Access Protocol"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
+					<?php html_inputbox("servername", gtext("Server name"), $pconfig['servername'], gtext("This is both the name of the server as advertised via Zeroconf/Bonjour/Rendezvous, and the name of the database exported via DAAP."), true, 20);?>
+					<?php html_inputbox("port", gtext("Port"), $pconfig['port'], gtext("Port to listen on. Default iTunes port is 3689."), true, 5);?>
+					<?php html_filechooser("dbdir", gtext("Database directory"), $pconfig['dbdir'], gtext("Location where the content database file will be stored."), $g['media_path'], true, 60);?>
+					<?php html_folderbox("content", gtext("Content"), !empty($pconfig['content']) ? $pconfig['content'] : array(), gtext("Location of the files to share."), $g['media_path'], true);?>
+					<?php html_inputbox("compdirs", gtext("Compilations directories"), $pconfig['compdirs'], gtext("Tracks whose path contains one or more of these comma separated strings will be treated as a compilation."), false, 40);?>
+					<?php html_checkbox("concatcomps", gtext("Group compilations"), !empty($pconfig['concatcomps']) ? true : false, "", gtext("Whether compilations should be shown together under Various Artists."), false);?>
+					<?php html_inputbox("rescaninterval", gtext("Rescan interval"), $pconfig['rescaninterval'], gtext("Scan file system every N seconds to see if any files have been added or removed. Set to 0 to disable background scanning. If background rescanning is disabled, a scan can still be forced from the status page of the administrative web interface."), false, 5);?>
+					<?php html_checkbox("alwaysscan", gtext("Always scan"), !empty($pconfig['alwaysscan']) ? true : false, "", gtext("Whether scans should be skipped if there are no users connected. This allows the drive to spin down when no users are connected."), false);?>
+					<?php html_checkbox("skipfirst", gtext("Skip first scan"), !empty($pconfig['skipfirst']) ? true : false, "", gtext("Whether to skip initial boot-up scan."), false);?>
+					<?php html_combobox("scantype", gtext("Scan type"), $pconfig['scantype'], array("0" => gtext("Normal"), "1" => gtext("Aggressive"), "2" => gtext("Painfully aggressive")), "", false);?>
 					<?php html_separator();?>
-					<?php html_titleline(gettext("Administrative WebGUI"));?>
-					<?php html_passwordbox("admin_pw", gettext("Password"), $pconfig['admin_pw'], sprintf("%s %s", gettext("Password for the administrative pages."), gettext("Default user name is 'admin'.")), true, 20);?>
+					<?php html_titleline(gtext("Administrative WebGUI"));?>
+					<?php html_passwordbox("admin_pw", gtext("Password"), $pconfig['admin_pw'], sprintf("%s %s", gtext("Password for the administrative pages."), gtext("Default user name is 'admin'.")), true, 20);?>
 					<?php
 					$if = get_ifname($config['interfaces']['lan']['if']);
 					$ipaddr = get_ipaddr($if);
 					$url = htmlspecialchars("http://{$ipaddr}:{$pconfig['port']}");
 					$text = "<a href='{$url}' target='_blank'>{$url}</a>";
 					?>
-					<?php html_text("url", gettext("URL"), $text);?>
+					<?php html_text("url", gtext("URL"), $text);?>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save & Restart");?>" onclick="onsubmit_content(); enable_change(true)" />
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="onsubmit_content(); enable_change(true)" />
 				</div>
 				<div id="remarks">
 					<?php html_remark("note", gettext("Note"), sprintf(gettext("You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this service to clients."), "system_advanced.php"));?>

@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gettext("Services"), gettext("UPS"), gettext("Driver list"));
+$pgtitle = array(gtext("Services"), gtext("UPS"), gtext("Driver list"));
 
 function nut_get_driverlist() {
 	$a_driverinfo = array();
@@ -68,10 +68,10 @@ function nut_get_driverlist() {
 	    <td class="tabcont">
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
           <tr>
-          	<td width="25%" class="listhdrlr"><?=gettext("Manufacturer");?></td>
-            <td width="25%" class="listhdrr"><?=gettext("Model Name");?></td>
-            <td width="25%" class="listhdrr"><?=gettext("Model Extra");?></td>
-            <td width="25%" class="listhdrr"><?=gettext("Driver");?></td>
+          	<td width="25%" class="listhdrlr"><?=gtext("Manufacturer");?></td>
+            <td width="25%" class="listhdrr"><?=gtext("Model Name");?></td>
+            <td width="25%" class="listhdrr"><?=gtext("Model Extra");?></td>
+            <td width="25%" class="listhdrr"><?=gtext("Driver");?></td>
           </tr>
   			  <?php foreach(nut_get_driverlist() as $driverinfov):?>
           <tr>
