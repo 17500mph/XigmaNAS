@@ -100,7 +100,7 @@ function iscsiinitiator_process_updatenotification($mode, $data) {
       		<li class="tabinact"><a href="disks_manage.php"><span><?=gtext("HDD Management");?></span></a></li>
 		<li class="tabinact"><a href="disks_init.php"><span><?=gtext("HDD Format");?></span></a></li>
       		<li class="tabinact"><a href="disks_manage_smart.php"><span><?=gtext("S.M.A.R.T.");?></span></a></li>
-		<li class="tabact"><a href="disks_manage_iscsi.php" title="<?=gettext("Reload page");?>"><span><?=gtext("iSCSI Initiator");?></span></a></li>
+		<li class="tabact"><a href="disks_manage_iscsi.php" title="<?=gtext('Reload page');?>"><span><?=gtext("iSCSI Initiator");?></span></a></li>
 	</ul>
     </td>
   </tr>
@@ -124,8 +124,8 @@ function iscsiinitiator_process_updatenotification($mode, $data) {
             <td class="listr"><?=htmlspecialchars($iscsiinit['targetaddress']);?>&nbsp;</td>
             <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
             <td valign="middle" nowrap="nowrap" class="list">
-							<a href="disks_manage_iscsi_edit.php?uuid=<?=$iscsiinit['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit initiator");?>" border="0" alt="<?=gtext("Edit initiator");?>" /></a>
-							<a href="disks_manage_iscsi.php?act=del&amp;uuid=<?=$iscsiinit['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this initiator? All elements that still use it will become invalid (e.g. share)!");?>')"><img src="images/delete.png" title="<?=gettext("Delete initiator"); ?>" border="0" alt="<?=gtext("Delete initiator"); ?>" /></a>
+							<a href="disks_manage_iscsi_edit.php?uuid=<?=$iscsiinit['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit initiator");?>" border="0" alt="<?=gtext("Edit initiator");?>" /></a>
+							<a href="disks_manage_iscsi.php?act=del&amp;uuid=<?=$iscsiinit['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this initiator? All elements that still use it will become invalid (e.g. share)!");?>')"><img src="images/delete.png" title="<?=gtext("Delete initiator"); ?>" border="0" alt="<?=gtext("Delete initiator"); ?>" /></a>
             </td>
             <?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
@@ -136,7 +136,7 @@ function iscsiinitiator_process_updatenotification($mode, $data) {
           <?php endforeach;?>
           <tr> 
             <td class="list" colspan="3"></td>
-            <td class="list"><a href="disks_manage_iscsi_edit.php"><img src="images/add.png" title="<?=gettext("Add initiator");?>" border="0" alt="<?=gtext("Add initiator");?>" /></a></td>
+            <td class="list"><a href="disks_manage_iscsi_edit.php"><img src="images/add.png" title="<?=gtext("Add initiator");?>" border="0" alt="<?=gtext("Add initiator");?>" /></a></td>
 			    </tr>
         </table>
         <?php include("formend.inc");?>

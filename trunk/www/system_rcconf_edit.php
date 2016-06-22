@@ -168,7 +168,7 @@ $pgtitle = array(gtext('System'), gtext('Advanced'), gtext('rc.conf'), $isrecord
 		<li class="tabinact"><a href="system_rc.php"><span><?=gtext("Command Scripts");?></span></a></li>
 		<li class="tabinact"><a href="system_cron.php"><span><?=gtext("Cron");?></span></a></li>
 		<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext("loader.conf");?></span></a></li>
-		<li class="tabact"><a href="system_rcconf.php" title="<?=gettext("Reload page");?>"><span><?=gtext("rc.conf");?></span></a></li>
+		<li class="tabact"><a href="system_rcconf.php" title="<?=gtext('Reload page');?>"><span><?=gtext("rc.conf");?></span></a></li>
 		<li class="tabinact"><a href="system_sysctl.php"><span><?=gtext("sysctl.conf");?></span></a></li>
 	</ul></td></tr>
 </tbody></table>

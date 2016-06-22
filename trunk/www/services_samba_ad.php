@@ -148,7 +148,7 @@ $(document).ready(function(){
   <tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-	<li class="tabact"><a href="services_samba_ad.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Settings");?></span></a></li>
+	<li class="tabact"><a href="services_samba_ad.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Settings");?></span></a></li>
 	<li class="tabinact"><a href="services_samba_ad_init.php"><span><?=gtext("Initialize");?></span></a></li>
       </ul>
     </td>
@@ -169,13 +169,13 @@ $(document).ready(function(){
 	<?php html_text("path", gtext("Path"), htmlspecialchars($pconfig['path']));?>
 	<?php html_text("fstype", gtext("Fileserver"), htmlspecialchars($pconfig['fstype']));?>
 	<?php html_checkbox("user_shares", gtext("User shares"), !empty($pconfig['user_shares']) ? true : false, gtext("Append user defined shares"), "", false);?>
-	<?php html_textarea("auxparam", gettext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gettext("These parameters are added to [Global] section of %s."), "smb4.conf") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://us1.samba.org/samba/docs/man/manpages-3/smb.conf.5.html"), false, 65, 5, false, false);?>
+	<?php html_textarea("auxparam", gtext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gtext("These parameters are added to [Global] section of %s."), "smb4.conf") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://us1.samba.org/samba/docs/man/manpages-3/smb.conf.5.html"), false, 65, 5, false, false);?>
 	</table>
 	<div id="submit">
 	  <input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" />
 	</div>
 	<div id="remarks">
-	  <?php html_remark("note", gettext("Note"), sprintf("<div id='enumeration'><ul><li>%s</li><li>%s</li><li>%s</li></ul></div>", gtext("When Samba AD is enabled, stand-alone CIFS/SMB file sharing cannot be used."), gtext("NTP must be enabled."), gtext("DHCP cannot be used for LAN interface.")));?>
+	  <?php html_remark("note", gtext('Note'), sprintf("<div id='enumeration'><ul><li>%s</li><li>%s</li><li>%s</li></ul></div>", gtext("When Samba AD is enabled, stand-alone CIFS/SMB file sharing cannot be used."), gtext("NTP must be enabled."), gtext("DHCP cannot be used for LAN interface.")));?>
 	</div>
 	<?php include("formend.inc");?>
       </form>

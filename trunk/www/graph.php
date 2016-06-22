@@ -100,7 +100,7 @@ echo "<?xml version=\"1.0\" encoding=\"{$encoding}\"?>\n";
     <text id="graph_in_lbl" x="3" y="7" <?=$attribs['in']?>><?=gtext("In");?> <tspan id="graph_in_txt" <?=$attribs['in']?>> </tspan></text>
     <text id="graph_out_lbl" x="3" y="13" <?=$attribs['out']?>><?=gtext("Out");?> <tspan id="graph_out_txt" <?=$attribs['out']?>> </tspan></text>
     <text id="switch_unit" x="<?=$width*0.60?>" y="5" <?=$attribs['switch_unit']?>><?=sprintf(gtext("Switch to %s/s"), ("bits" === $unit) ? "bytes" : "bits");?></text>
-    <text id="switch_scale" x="<?=$width*0.60?>" y="11" <?=$attribs['switch_scale']?>><?=gettext("AutoScale");?> (<?=("up" === $scale_type) ? gtext("Up") : gtext("Follow");?>)</text>
+    <text id="switch_scale" x="<?=$width*0.60?>" y="11" <?=$attribs['switch_scale']?>><?=gtext("AutoScale");?> (<?=("up" === $scale_type) ? gtext("Up") : gtext("Follow");?>)</text>
     <text id="datetime" x="<?=$width*0.38?>" y="5" <?=$attribs['legend']?>>00/00/0000</text>
     <text id="interface_name"  x="<?=$width*0.99?>" y="7" <?=$attribs['in']?> text-anchor="end"><?=$ifname?></text>
     <polygon id="axis_arrow_x" <?=$attribs['axis']?> points="<?=($width) . "," . ($height)?> <?=($width-2) . "," . ($height-2)?> <?=($width-2) . "," . $height?>"/>
@@ -188,7 +188,7 @@ function switch_unit(event)
 function switch_scale(event)
 {
   scale_type = (scale_type == 'up') ? 'follow' : 'up';
-  scale_type_text = (scale_type == 'up') ? '<?=gettext("Up");?>' : '<?=gtext("Follow");?>';
+  scale_type_text = (scale_type == 'up') ? '<?=gtext("Up");?>' : '<?=gtext("Follow");?>';
   SVGDoc.getElementById('switch_scale').firstChild.data = '<?=gtext("AutoScale");?> (' + scale_type_text + ')';
 }
 

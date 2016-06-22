@@ -180,7 +180,7 @@ function smart_enable_change() {
 	<tr>
 	<td class="tabnavtbl">
 	<ul id="tabnav">
-		<li class="tabact"><a href="disks_manage.php" title="<?=gettext("Reload page");?>"><span><?=gtext("HDD Management");?></span></a></li>
+		<li class="tabact"><a href="disks_manage.php" title="<?=gtext('Reload page');?>"><span><?=gtext("HDD Management");?></span></a></li>
 		<li class="tabinact"><a href="disks_init.php"><span><?=gtext("HDD Format");?></span></a></li>
 		<li class="tabinact"><a href="disks_manage_smart.php"><span><?=gtext("S.M.A.R.T.");?></span></a></li>
 		<li class="tabinact"><a href="disks_manage_iscsi.php"><span><?=gtext("iSCSI Initiator");?></span></a></li>
@@ -214,9 +214,9 @@ function smart_enable_change() {
 					<?php $options = array(0 => gtext("Disabled"), 1 => gtext("Minimum Performance, Minimum Acoustic Output"), 64 => gtext("Medium Acoustic Output"), 127 => gtext("Maximum Performance, Maximum Acoustic Output"));?>
 					<?php html_combobox("acoustic", gtext("Acoustic level"), $pconfig['acoustic'], $options, gtext("This allows you to set how loud the drive is while it's operating."), false);?>
 					<?php html_checkbox("smart_enable", gtext("S.M.A.R.T."), !empty($pconfig['smart_enable']) ? true : false, gtext("Activate S.M.A.R.T. monitoring for this device."), "", false, "smart_enable_change()");?>
-					<?php html_inputbox("smart_extraoptions", gettext("S.M.A.R.T. extra options"), $pconfig['smart_extraoptions'], gettext("Extra options (usually empty).") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://smartmontools.sourceforge.net/man/smartd.conf.5.html"), false, 40);?>
+					<?php html_inputbox("smart_extraoptions", gtext("S.M.A.R.T. extra options"), $pconfig['smart_extraoptions'], gtext("Extra options (usually empty).") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://smartmontools.sourceforge.net/man/smartd.conf.5.html"), false, 40);?>
 					<?php $options = get_fstype_list();?>
-					<?php html_combobox("fstype", gettext("Preformatted file system"), $pconfig['fstype'], $options, gettext("This allows you to set the file system for preformatted hard disks containing data.") . " " . sprintf(gettext("Leave '%s' for unformated disks and format them using <a href='%s'>format</a> menu."), "Unformated", "disks_init.php"), false);?>
+					<?php html_combobox("fstype", gtext("Preformatted file system"), $pconfig['fstype'], $options, gtext("This allows you to set the file system for preformatted hard disks containing data.") . " " . sprintf(gettext("Leave '%s' for unformated disks and format them using <a href='%s'>format</a> menu."), "Unformated", "disks_init.php"), false);?>
 				</table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" onclick="enable_change(true)" />

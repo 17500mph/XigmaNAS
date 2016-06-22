@@ -179,7 +179,7 @@ function enable_change(enable_change) {
       <ul id="tabnav">
       	<li class="tabinact"><a href="disks_manage.php"><span><?=gtext("HDD Management");?></span></a></li>
 				<li class="tabinact"><a href="disks_init.php"><span><?=gtext("HDD Format");?></span></a></li>
-				<li class="tabact"><a href="disks_manage_smart.php" title="<?=gettext("Reload page");?>"><span><?=gtext("S.M.A.R.T.");?></span></a></li>
+				<li class="tabact"><a href="disks_manage_smart.php" title="<?=gtext('Reload page');?>"><span><?=gtext("S.M.A.R.T.");?></span></a></li>
 				<li class="tabinact"><a href="disks_manage_iscsi.php"><span><?=gtext("iSCSI Initiator");?></span></a></li>
       </ul>
     </td>
@@ -260,8 +260,8 @@ function enable_change(enable_change) {
 									<td class="listr"><?=htmlspecialchars($selftest['desc']);?>&nbsp;</td>
 									<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 				          <td valign="middle" nowrap="nowrap" class="list">
-				          	<a href="disks_manage_smart_edit.php?uuid=<?=$selftest['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit self-test");?>" border="0" alt="<?=gtext("Edit self-test");?>" /></a>
-				            <a href="disks_manage_smart.php?act=del&amp;uuid=<?=$selftest['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this scheduled self-test?");?>')"><img src="images/delete.png" title="<?=gettext("Delete self-test");?>" border="0" alt="<?=gtext("Delete self-test");?>" /></a>
+				          	<a href="disks_manage_smart_edit.php?uuid=<?=$selftest['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit self-test");?>" border="0" alt="<?=gtext("Edit self-test");?>" /></a>
+				            <a href="disks_manage_smart.php?act=del&amp;uuid=<?=$selftest['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this scheduled self-test?");?>')"><img src="images/delete.png" title="<?=gtext("Delete self-test");?>" border="0" alt="<?=gtext("Delete self-test");?>" /></a>
 				          </td>
 				          <?php else:?>
 									<td valign="middle" nowrap="nowrap" class="list">
@@ -273,9 +273,9 @@ function enable_change(enable_change) {
 				        <tr>
 				          <td class="list" colspan="3"></td>
 				          <td class="list">
-										<a href="disks_manage_smart_edit.php"><img src="images/add.png" title="<?=gettext("Add self-test");?>" border="0" alt="<?=gtext("Add self-test");?>" /></a>
+										<a href="disks_manage_smart_edit.php"><img src="images/add.png" title="<?=gtext("Add self-test");?>" border="0" alt="<?=gtext("Add self-test");?>" /></a>
 										<?php if (!empty($a_selftest)):?>
-										<a href="disks_manage_smart.php?act=del&amp;uuid=all" onclick="return confirm('<?=gettext("Do you really want to delete all scheduled self-tests?");?>')"><img src="images/delete.png" title="<?=gettext("Delete all self-tests");?>" border="0" alt="<?=gtext("Delete all self-tests");?>" /></a>
+										<a href="disks_manage_smart.php?act=del&amp;uuid=all" onclick="return confirm('<?=gtext("Do you really want to delete all scheduled self-tests?");?>')"><img src="images/delete.png" title="<?=gtext("Delete all self-tests");?>" border="0" alt="<?=gtext("Delete all self-tests");?>" /></a>
 										<?php endif;?>
 									</td>
 						    </tr>

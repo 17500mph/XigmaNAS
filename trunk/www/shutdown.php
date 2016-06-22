@@ -50,7 +50,7 @@ if ($_POST) {
   <tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-        <li class="tabact"><a href="shutdown.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Now");?></span></a></li>
+        <li class="tabact"><a href="shutdown.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Now");?></span></a></li>
         <li class="tabinact"><a href="shutdown_sched.php"><span><?=gtext("Scheduled");?></span></a></li>
       </ul>
     </td>

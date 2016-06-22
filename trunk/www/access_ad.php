@@ -162,7 +162,7 @@ function enable_change(enable_change) {
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save");?>" onclick="enable_change(true)" />
 			  </div>
 			  <div id="remarks">
-			  	<?php html_remark("note", gettext("Note"), gettext("To use Active Directory the CIFS/SMB service will enabled, too. The following services will use AD authentication:<div id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li>System</li></ul></div>"));?>
+			  	<?php html_remark("note", gtext('Note'), gettext("To use Active Directory the CIFS/SMB service will enabled, too. The following services will use AD authentication:<div id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li>System</li></ul></div>"));?>
 			  </div>
 			</td>
 		</tr>

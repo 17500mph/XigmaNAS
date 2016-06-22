@@ -99,7 +99,7 @@ function userdbuser_process_updatenotification($mode, $data) {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabact"><a href="access_users.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Users");?></span></a></li>
+				<li class="tabact"><a href="access_users.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Users");?></span></a></li>
 				<li class="tabinact"><a href="access_users_groups.php"><span><?=gtext("Groups");?></span></a></li>
 			</ul>
 		</td>
@@ -132,8 +132,8 @@ function userdbuser_process_updatenotification($mode, $data) {
 							}?>&nbsp;</td>
 						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 						<td valign="middle" nowrap="nowrap" class="list">
-							<a href="access_users_edit.php?uuid=<?=$userv['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit user");?>" border="0" alt="<?=gtext("Edit user");?>" /></a>&nbsp;
-							<a href="access_users.php?act=del&amp;uuid=<?=$userv['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this user?");?>')"><img src="images/delete.png" title="<?=gettext("Delete user");?>" border="0" alt="<?=gtext("Delete user");?>" /></a>
+							<a href="access_users_edit.php?uuid=<?=$userv['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit user");?>" border="0" alt="<?=gtext("Edit user");?>" /></a>&nbsp;
+							<a href="access_users.php?act=del&amp;uuid=<?=$userv['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this user?");?>')"><img src="images/delete.png" title="<?=gtext("Delete user");?>" border="0" alt="<?=gtext("Delete user");?>" /></a>
 						</td>
 						<?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
@@ -145,7 +145,7 @@ function userdbuser_process_updatenotification($mode, $data) {
 					<tr>
 						<td class="list" colspan="4"></td>
 						<td class="list">
-							<a href="access_users_edit.php"><img src="images/add.png" title="<?=gettext("Add user");?>" border="0" alt="<?=gtext("Add user");?>" /></a>
+							<a href="access_users_edit.php"><img src="images/add.png" title="<?=gtext("Add user");?>" border="0" alt="<?=gtext("Add user");?>" /></a>
 						</td>
 					</tr>
 				</table>

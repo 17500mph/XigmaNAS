@@ -73,7 +73,7 @@ if (!isset($do_action)) {
       <ul id="tabnav">
 				<li class="tabinact"><a href="disks_mount.php"><span><?=gtext("Management");?></span></a></li>
         <li class="tabinact"><a href="disks_mount_tools.php"><span><?=gtext("Tools");?></span></a></li>
-				<li class="tabact"><a href="disks_mount_fsck.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Fsck");?></span></a></li>
+				<li class="tabact"><a href="disks_mount_fsck.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Fsck");?></span></a></li>
       </ul>
     </td>
   </tr>

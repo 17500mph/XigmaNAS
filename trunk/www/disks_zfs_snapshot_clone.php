@@ -131,7 +131,7 @@ function zfsclone_process_updatenotification($mode, $data) {
 				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext("Pools");?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext("Datasets");?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext("Volumes");?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_snapshot.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Snapshots");?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_snapshot.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Snapshots");?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext("Configuration");?></span></a></li>
 			</ul>
 		</td>
@@ -140,7 +140,7 @@ function zfsclone_process_updatenotification($mode, $data) {
 		<td class="tabnavtbl">
 			<ul id="tabnav2">
 				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext("Snapshot");?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_snapshot_clone.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Clone");?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_snapshot_clone.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Clone");?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_snapshot_auto.php"><span><?=gtext("Auto Snapshot");?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_snapshot_info.php"><span><?=gtext("Information");?></span></a></li>
 			</ul>
@@ -168,7 +168,7 @@ function zfsclone_process_updatenotification($mode, $data) {
 						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 						<td valign="middle" nowrap="nowrap" class="list">
 							&nbsp; &nbsp; &nbsp;
-							<a href="disks_zfs_snapshot_clone.php?act=del&amp;path=<?=urlencode($clonev['path']);?>" onclick="return confirm('<?=gettext("Do you really want to delete this clone?");?>')"><img src="images/delete.png" title="<?=gettext("Delete clone");?>" border="0" alt="<?=gtext("Delete clone");?>" /></a>
+							<a href="disks_zfs_snapshot_clone.php?act=del&amp;path=<?=urlencode($clonev['path']);?>" onclick="return confirm('<?=gtext("Do you really want to delete this clone?");?>')"><img src="images/delete.png" title="<?=gtext("Delete clone");?>" border="0" alt="<?=gtext("Delete clone");?>" /></a>
 						</td>
 						<?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">

@@ -467,7 +467,7 @@ $(document).ready(function(){
 	<?php html_textinfo("vipstatus", gtext("Virtual IP address"), htmlspecialchars(get_vip_status()));?>
 	<?php endif;?>
 	<?php html_textinfo("hostname", gtext("Hostname"), system_get_hostname());?>
-	<?php html_textinfo("version", gettext("Version"), sprintf("<strong>%s %s</strong> (%s %s)", get_product_version(), get_product_versionname(), gtext("revision"), get_product_revision()));?>
+	<?php html_textinfo("version", gtext("Version"), sprintf("<strong>%s %s</strong> (%s %s)", get_product_version(), get_product_versionname(), gtext("revision"), get_product_revision()));?>
 	<?php html_textinfo("builddate", gtext("Compiled"), htmlspecialchars(get_datetime_locale(get_product_buildtimestamp())));?>
 	<?php
 		exec("/sbin/sysctl -n kern.version", $osversion);
@@ -712,7 +712,7 @@ $(document).ready(function(){
 						tblrow('ERROR:', 'Data stale!');
 
 					$disp_status = get_ups_disp_status($ups['ups.status']);
-					tblrow(gettext('Status'), '<span id="ups_status_disp_status">'.$disp_status."</span>". "  <small>[<a href='diag_infos_ups.php'>" . gettext("Show UPS Information")."</a></small>]");
+					tblrow(gtext('Status'), '<span id="ups_status_disp_status">'.$disp_status."</span>". "  <small>[<a href='diag_infos_ups.php'>" . gtext("Show UPS Information")."</a></small>]");
 					tblrowbar("load", gtext('Load'), $ups['ups.load'], '%', '100-80', '79-60', '59-0');
 					tblrowbar("battery", gtext('Battery Level'), $ups['battery.charge'], '%', '0-29' ,'30-79', '80-100');
 				}
@@ -752,7 +752,7 @@ $(document).ready(function(){
                 		tblrow('ERROR:', 'Data stale!');
                 
                 	$disp_status = get_ups_disp_status($ups['ups.status']);
-                	tblrow(gettext('Status'), '<span id="ups_status_disp_status2">'.$disp_status."</span>". "  <small>[<a href='diag_infos_ups.php'>" . gettext("Show UPS Information")."</a></small>]");
+                	tblrow(gtext('Status'), '<span id="ups_status_disp_status2">'.$disp_status."</span>". "  <small>[<a href='diag_infos_ups.php'>" . gtext("Show UPS Information")."</a></small>]");
                 	tblrowbar("load2", gtext('Load'), $ups['ups.load'], '%', '100-80', '79-60', '59-0');
                 	tblrowbar("battery2", gtext('Battery Level'), $ups['battery.charge'], '%', '0-29' ,'30-79', '80-100');
                 }

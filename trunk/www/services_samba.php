@@ -280,7 +280,7 @@ function aio_change() {
   <tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-        <li class="tabact"><a href="services_samba.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Settings");?></span></a></li>
+        <li class="tabact"><a href="services_samba.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Settings");?></span></a></li>
 				<li class="tabinact"><a href="services_samba_share.php"><span><?=gtext("Shares");?></span></a></li>
       </ul>
     </td>
@@ -293,7 +293,7 @@ function aio_change() {
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_titleline_checkbox("enable", gtext("Common Internet File System"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
 					<?php html_combobox("security", gtext("Authentication"), $pconfig['security'], array("user" => gtext("Local User"), "ads" => gtext("Active Directory")), "", true, false, "authentication_change()");?>
-					<?php html_combobox("maxprotocol", gettext("Max Protocol"), $pconfig['maxprotocol'], array("SMB3" => gettext("SMB3"), "SMB2" => gettext("SMB2"), "NT1" => gettext("NT1")), sprintf("%s<br>%s", gtext("SMB3 is for recent OS like Windows 8. SMB2 is for OS like Windows 7 and Vista. NT1 is for legacy OS like XP."), gtext("When the negotiation is complete, you will not be able to change the SMB protocol. If you change it, you will need to restart the client connected to this server.")), true, false, "");?>
+					<?php html_combobox("maxprotocol", gtext("Max Protocol"), $pconfig['maxprotocol'], array("SMB3" => gtext("SMB3"), "SMB2" => gtext("SMB2"), "NT1" => gtext("NT1")), sprintf("%s<br>%s", gtext("SMB3 is for recent OS like Windows 8. SMB2 is for OS like Windows 7 and Vista. NT1 is for legacy OS like XP."), gtext("When the negotiation is complete, you will not be able to change the SMB protocol. If you change it, you will need to restart the client connected to this server.")), true, false, "");?>
           <tr>
             <td width="22%" valign="top" class="vncellreq"><?=gtext("NetBIOS name");?></td>
             <td width="78%" class="vtable">
@@ -446,13 +446,13 @@ function aio_change() {
 					<?php html_inputbox("aiorsize", gtext("AIO read size"), $pconfig['aiorsize'], sprintf(gtext("Samba will read from file asynchronously when size of request is bigger than this value. (%d by default)"), 1024), true, 30);?>
 					<?php html_inputbox("aiowsize", gtext("AIO write size"), $pconfig['aiowsize'], sprintf(gtext("Samba will write to file asynchronously when size of request is bigger than this value. (%d by default)"), 1024), true, 30);?>
 					<?php /*html_inputbox("aiowbehind", gtext("AIO write behind"), $pconfig['aiowbehind'], "", false, 60);*/?>
-					<?php html_textarea("auxparam", gettext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gettext("These parameters are added to [Global] section of %s."), "smb4.conf") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://us1.samba.org/samba/docs/man/manpages-3/smb.conf.5.html"), false, 65, 5, false, false);?>
+					<?php html_textarea("auxparam", gtext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gtext("These parameters are added to [Global] section of %s."), "smb4.conf") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://us1.samba.org/samba/docs/man/manpages-3/smb.conf.5.html"), false, 65, 5, false, false);?>
         </table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="enable_change(true)" />
 				</div>
 				<div id="remarks">
-					<?php html_remark("note", gettext("Note"), sprintf(gettext("To increase CIFS performance try the following:<div id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a href='%s'>Tuning</a>' switch</li></ul></div>"), "system_advanced.php", "interfaces_lan.php"));?>
+					<?php html_remark("note", gtext('Note'), sprintf(gettext("To increase CIFS performance try the following:<div id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a href='%s'>Tuning</a>' switch</li></ul></div>"), "system_advanced.php", "interfaces_lan.php"));?>
 				</div>
 				<?php include("formend.inc");?>
       </form>

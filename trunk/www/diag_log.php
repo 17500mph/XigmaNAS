@@ -74,7 +74,7 @@ function log_change() {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabact"><a href="diag_log.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Log");?></span></a></li>
+				<li class="tabact"><a href="diag_log.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Log");?></span></a></li>
 				<li class="tabinact"><a href="diag_log_settings.php"><span><?=gtext("Settings");?></span></a></li>
 			</ul>
 		</td>

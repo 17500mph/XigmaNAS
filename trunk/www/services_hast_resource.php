@@ -93,7 +93,7 @@ function hastresource_process_updatenotification($mode, $data) {
     <td class="tabnavtbl">
       <ul id="tabnav">
 	<li class="tabinact"><a href="services_hast.php"><span><?=gtext("Settings");?></span></a></li>
-	<li class="tabact"><a href="services_hast_resource.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Resources");?></span></a></li>
+	<li class="tabact"><a href="services_hast_resource.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Resources");?></span></a></li>
 	<li class="tabinact"><a href="services_hast_info.php"><span><?=gtext("Information");?></span></a></li>
       </ul>
     </td>
@@ -126,8 +126,8 @@ function hastresource_process_updatenotification($mode, $data) {
 
 	    <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 	    <td valign="middle" nowrap="nowrap" class="list">
-	      <a href="services_hast_resource_edit.php?uuid=<?=$resourcev['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit resource");?>" border="0" alt="<?=gtext("Edit resource");?>" /></a>
-	      <a href="services_hast_resource.php?act=del&amp;uuid=<?=$resourcev['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this resource?");?>')"><img src="images/delete.png" title="<?=gettext("Delete resource");?>" border="0" alt="<?=gtext("Delete resource");?>" /></a>
+	      <a href="services_hast_resource_edit.php?uuid=<?=$resourcev['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit resource");?>" border="0" alt="<?=gtext("Edit resource");?>" /></a>
+	      <a href="services_hast_resource.php?act=del&amp;uuid=<?=$resourcev['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this resource?");?>')"><img src="images/delete.png" title="<?=gtext("Delete resource");?>" border="0" alt="<?=gtext("Delete resource");?>" /></a>
 	    </td>
 	    <?php else:?>
 	    <td valign="middle" nowrap="nowrap" class="list">
@@ -138,7 +138,7 @@ function hastresource_process_updatenotification($mode, $data) {
 	  <?php endforeach;?>
 	  <tr>
 	    <td class="list" colspan="6"></td>
-	    <td class="list"><a href="services_hast_resource_edit.php"><img src="images/add.png" title="<?=gettext("Add resource");?>" border="0" alt="<?=gtext("Add resource");?>" /></a></td>
+	    <td class="list"><a href="services_hast_resource_edit.php"><img src="images/add.png" title="<?=gtext("Add resource");?>" border="0" alt="<?=gtext("Add resource");?>" /></a></td>
 	  </tr>
 	</table>
 	<div id="submit">

@@ -202,7 +202,7 @@ if (isset($_GET['act']) && $_GET['act'] == "add") {
 	<tr>
 		<td class="tabnavtbl">
 		  <ul id="tabnav">
-				<li class="tabact"><a href="interfaces_assign.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Management");?></span></a></li>
+				<li class="tabact"><a href="interfaces_assign.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Management");?></span></a></li>
 				<li class="tabinact"><a href="interfaces_wlan.php"><span><?=gtext("WLAN");?></span></a></li>
 				<li class="tabinact"><a href="interfaces_vlan.php"><span><?=gtext("VLAN");?></span></a></li>
 				<li class="tabinact"><a href="interfaces_lagg.php"><span><?=gtext("LAGG");?></span></a></li>
@@ -251,7 +251,7 @@ if (isset($_GET['act']) && $_GET['act'] == "add") {
 						</td>
 						<td valign="middle" class="list">
 							<?php if (($ifname != 'lan') && ($ifname != 'wan')):?>
-							<a href="interfaces_assign.php?act=del&amp;id=<?=$ifname;?>"><img src="images/delete.png" title="<?=gettext("Delete interface");?>" border="0" alt="<?=gtext("Delete interface");?>" /></a>
+							<a href="interfaces_assign.php?act=del&amp;id=<?=$ifname;?>"><img src="images/delete.png" title="<?=gtext("Delete interface");?>" border="0" alt="<?=gtext("Delete interface");?>" /></a>
 							<?php endif;?>
 						</td>
 					</tr>
@@ -260,7 +260,7 @@ if (isset($_GET['act']) && $_GET['act'] == "add") {
 				  <tr>
 						<td class="list" colspan="2"></td>
 						<td class="list" nowrap="nowrap">
-							<a href="interfaces_assign.php?act=add"><img src="images/add.png" title="<?=gettext("Add interface");?>" border="0" alt="<?=gtext("Add interface");?>" /></a>
+							<a href="interfaces_assign.php?act=add"><img src="images/add.png" title="<?=gtext("Add interface");?>" border="0" alt="<?=gtext("Add interface");?>" /></a>
 						</td>
 				  </tr>
 				  <?php else:?>
@@ -273,7 +273,7 @@ if (isset($_GET['act']) && $_GET['act'] == "add") {
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save");?>" />
 				</div>
 				<div id="remarks">
-					<?php html_remark("warning", gettext("Warning"), sprintf(gettext("After you click &quot;Save&quot;, you must reboot the server to make the changes take effect. You may also have to do one or more of the following steps before you can access your server again: <ul><li><span class='vexpl'>change the IP address of your server</span></li><li><span class='vexpl'>access the webGUI with the new IP address</span></li></ul>")));?>
+					<?php html_remark("warning", gtext('Warning'), sprintf(gettext("After you click &quot;Save&quot;, you must reboot the server to make the changes take effect. You may also have to do one or more of the following steps before you can access your server again: <ul><li><span class='vexpl'>change the IP address of your server</span></li><li><span class='vexpl'>access the webGUI with the new IP address</span></li></ul>")));?>
 				</div>
 				<?php include("formend.inc");?>
 			</form>

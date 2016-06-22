@@ -151,7 +151,7 @@ function get_nextgroup_id() {
 		<td class="tabnavtbl">
 			<ul id="tabnav">
 				<li class="tabinact"><a href="access_users.php"><span><?=gtext("Users");?></span></a></li>
-				<li class="tabact"><a href="access_users_groups.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Groups");?></span></a></li>
+				<li class="tabact"><a href="access_users_groups.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Groups");?></span></a></li>
 			</ul>
 		</td>
 	</tr>

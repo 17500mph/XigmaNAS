@@ -72,14 +72,14 @@ $(window).on("load", function() {
 	<td class="tabnavtbl">
   		<ul id="tabnav">
 			<li class="tabinact"><a href="disks_raid_geom.php"><span><?=gtext('GEOM');?></span></a></li>
-			<li class="tabact"><a href="disks_raid_gvinum.php" title="<?=gettext('Reload page');?>"><span><?=gtext('RAID 0/1/5');?></span></a></li>
+			<li class="tabact"><a href="disks_raid_gvinum.php" title="<?=gtext('Reload page');?>"><span><?=gtext('RAID 0/1/5');?></span></a></li>
 		</ul>
 	  </td>
 </tr>
 	<tr><td class="tabnavtbl">
 		<ul id="tabnav2">
 			<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?=gtext("Management"); ?></span></a></li>
-			<li class="tabact"><a href="disks_raid_gvinum_tools.php" title="<?=gettext("Reload page");?>" ><span><?=gtext("Maintenance");?></span></a></li>
+			<li class="tabact"><a href="disks_raid_gvinum_tools.php" title="<?=gtext('Reload page');?>" ><span><?=gtext("Maintenance");?></span></a></li>
 			<li class="tabinact"><a href="disks_raid_gvinum_info.php"><span><?=gtext("Information"); ?></span></a></li>
 		</ul>
 	</td>
@@ -144,7 +144,7 @@ $(window).on("load", function() {
 				echo('</pre>');
 			};?>
 <div id="remarks">
-	<?php html_remark("warning", gettext("Warning"), gettext("1. Use these specials actions for debugging only!<br />2. There is no need of using this menu for starting a RAID volume (start automaticaly)."));?>
+	<?php html_remark("warning", gtext('Warning'), gettext("1. Use these specials actions for debugging only!<br />2. There is no need of using this menu for starting a RAID volume (start automaticaly)."));?>
 	</div>
 <?php include("formend.inc");?>
 </form>

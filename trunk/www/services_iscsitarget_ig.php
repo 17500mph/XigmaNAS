@@ -118,7 +118,7 @@ function iscsitargetig_process_updatenotification($mode, $data) {
 				<li class="tabinact"><a href="services_iscsitarget.php"><span><?=gtext("Settings");?></span></a></li>
 				<li class="tabinact"><a href="services_iscsitarget_target.php"><span><?=gtext("Targets");?></span></a></li>
 				<li class="tabinact"><a href="services_iscsitarget_pg.php"><span><?=gtext("Portals");?></span></a></li>
-				<li class="tabact"><a href="services_iscsitarget_ig.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Initiators");?></span></a></li>
+				<li class="tabact"><a href="services_iscsitarget_ig.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Initiators");?></span></a></li>
 				<li class="tabinact"><a href="services_iscsitarget_ag.php"><span><?=gtext("Auths");?></span></a></li>
 				<li class="tabinact"><a href="services_iscsitarget_media.php"><span><?=gtext("Media");?></span></a></li>
       </ul>
@@ -161,8 +161,8 @@ function iscsitargetig_process_updatenotification($mode, $data) {
           <td class="listr"><?=htmlspecialchars($ig['comment']);?>&nbsp;</td>
           <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
           <td valign="middle" nowrap="nowrap" class="list">
-            <a href="services_iscsitarget_ig_edit.php?uuid=<?=$ig['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit initiator group");?>" border="0" alt="<?=gtext("Edit initiator group");?>" /></a>
-            <a href="services_iscsitarget_ig.php?act=del&amp;type=ig&amp;uuid=<?=$ig['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this initiator group?");?>')"><img src="images/delete.png" title="<?=gettext("Delete initiator group");?>" border="0" alt="<?=gtext("Add initiator group");?>" /></a>
+            <a href="services_iscsitarget_ig_edit.php?uuid=<?=$ig['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit initiator group");?>" border="0" alt="<?=gtext("Edit initiator group");?>" /></a>
+            <a href="services_iscsitarget_ig.php?act=del&amp;type=ig&amp;uuid=<?=$ig['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this initiator group?");?>')"><img src="images/delete.png" title="<?=gtext("Delete initiator group");?>" border="0" alt="<?=gtext("Add initiator group");?>" /></a>
           </td>
           <?php else:?>
           <td valign="middle" nowrap="nowrap" class="list">
@@ -174,7 +174,7 @@ function iscsitargetig_process_updatenotification($mode, $data) {
         <tr>
           <td class="list" colspan="4"></td>
           <td class="list">
-						<a href="services_iscsitarget_ig_edit.php"><img src="images/add.png" title="<?=gettext("Add initiator group");?>" border="0" alt="<?=gtext("Add initiator group");?>" /></a>
+						<a href="services_iscsitarget_ig_edit.php"><img src="images/add.png" title="<?=gtext("Add initiator group");?>" border="0" alt="<?=gtext("Add initiator group");?>" /></a>
 					</td>
         </tr>
         </table>

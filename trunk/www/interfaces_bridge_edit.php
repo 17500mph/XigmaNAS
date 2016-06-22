@@ -142,7 +142,7 @@ function get_nextbridge_id() {
 			<li class="tabinact"><a href="interfaces_wlan.php"><span><?=gtext("WLAN");?></span></a></li>
 			<li class="tabinact"><a href="interfaces_vlan.php"><span><?=gtext("VLAN");?></span></a></li>
 			<li class="tabinact"><a href="interfaces_lagg.php"><span><?=gtext("LAGG");?></span></a></li>
-			<li class="tabact"><a href="interfaces_bridge.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Bridge");?></span></a></li>
+			<li class="tabact"><a href="interfaces_bridge.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Bridge");?></span></a></li>
 			<li class="tabinact"><a href="interfaces_carp.php"><span><?=gtext("CARP");?></span></a></li>
 		</ul>
 	</td>

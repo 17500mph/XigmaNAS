@@ -95,7 +95,7 @@ function userdbgroup_process_updatenotification($mode, $data) {
 		<td class="tabnavtbl">
 			<ul id="tabnav">
 				<li class="tabinact"><a href="access_users.php"><span><?=gtext("Users");?></span></a></li>
-				<li class="tabact"><a href="access_users_groups.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Groups");?></span></a></li>
+				<li class="tabact"><a href="access_users_groups.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Groups");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -123,8 +123,8 @@ function userdbgroup_process_updatenotification($mode, $data) {
 									<td class="listr"><?=htmlspecialchars($groupv['desc']);?>&nbsp;</td>
 									<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 										<td valign="middle" nowrap="nowrap" class="list">
-											<a href="access_users_groups_edit.php?uuid=<?=$groupv['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit group");?>" border="0" alt="<?=gtext("Edit group");?>" /></a>&nbsp;
-											<a href="access_users_groups.php?act=del&amp;uuid=<?=$groupv["uuid"];?>" onclick="return confirm('<?=gettext("Do you really want to delete this group?");?>')"><img src="images/delete.png" title="<?=gettext("Delete group");?>" border="0" alt="<?=gtext("Delete group");?>" /></a>
+											<a href="access_users_groups_edit.php?uuid=<?=$groupv['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit group");?>" border="0" alt="<?=gtext("Edit group");?>" /></a>&nbsp;
+											<a href="access_users_groups.php?act=del&amp;uuid=<?=$groupv["uuid"];?>" onclick="return confirm('<?=gtext("Do you really want to delete this group?");?>')"><img src="images/delete.png" title="<?=gtext("Delete group");?>" border="0" alt="<?=gtext("Delete group");?>" /></a>
 										</td>
 									<?php else: ?>
 										<td valign="middle" nowrap="nowrap" class="list">
@@ -136,7 +136,7 @@ function userdbgroup_process_updatenotification($mode, $data) {
 								<tr>
 									<td class="list" colspan="3"></td>
 									<td class="list">
-										<a href="access_users_groups_edit.php"><img src="images/add.png" title="<?=gettext("Add group");?>" border="0" alt="<?=gtext("Add group");?>" /></a>
+										<a href="access_users_groups_edit.php"><img src="images/add.png" title="<?=gtext("Add group");?>" border="0" alt="<?=gtext("Add group");?>" /></a>
 									</td	>
 								</tr>
 							</table>

@@ -243,7 +243,7 @@ $(document).ready(function(){
   <tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-	<li class="tabact"><a href="services_hast.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Settings");?></span></a></li>
+	<li class="tabact"><a href="services_hast.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Settings");?></span></a></li>
 	<li class="tabinact"><a href="services_hast_resource.php"><span><?=gtext("Resources");?></span></a></li>
 	<li class="tabinact"><a href="services_hast_info.php"><span><?=gtext("Information");?></span></a></li>
       </ul>
@@ -267,7 +267,7 @@ $(document).ready(function(){
 			$a_vipaddrs[] = $carp['vipaddr']." ({$ifinfo['state']})";
 		}
 	?>
-	<?php echo html_text("vipaddr", gettext("Virtual IP address"), (!empty($a_vipaddrs) ? htmlspecialchars(join(', ', $a_vipaddrs)) : sprintf("<span class='red'>%s</span>", gtext("No configured CARP interfaces.")))); ?>
+	<?php echo html_text("vipaddr", gtext("Virtual IP address"), (!empty($a_vipaddrs) ? htmlspecialchars(join(', ', $a_vipaddrs)) : sprintf("<span class='red'>%s</span>", gtext("No configured CARP interfaces.")))); ?>
 	<?php //html_combobox("role", gtext("HAST role"), $pconfig['role'], array("primary" => gtext("Primary"), "secondary" => gtext("Secondary")), "", true);?>
 	<tr id="control_btn">
 	  <td colspan="2">
@@ -279,13 +279,13 @@ $(document).ready(function(){
 	</tr>
 	<?php html_separator();?>
 	<?php html_titleline(gtext("Advanced Settings"));?>
-	<?php html_textarea("auxparam", gettext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gettext("These parameters are added to %s."), "hast.conf") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/disks-hast.html"), false, 65, 5, false, false);?>
+	<?php html_textarea("auxparam", gtext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gtext("These parameters are added to %s."), "hast.conf") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/disks-hast.html"), false, 65, 5, false, false);?>
 	</table>
 	<div id="submit">
 	  <input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" />
 	</div>
 	<div id="remarks">
-	  <?php html_remark("note", gettext("Note"), sprintf("<div id='enumeration'><ul><li>%s</li><li>%s</li><li>%s</li></ul></div>", gtext("When HAST is enabled, the local devices, the local services and the additional packages which do not support HAST volume cannot be used."), gtext("The HAST volumes can not be accessed until HAST node becomes Primary."), gtext("Dynamic IP (DHCP) can not be used for HAST resources.")));?>
+	  <?php html_remark("note", gtext('Note'), sprintf("<div id='enumeration'><ul><li>%s</li><li>%s</li><li>%s</li></ul></div>", gtext("When HAST is enabled, the local devices, the local services and the additional packages which do not support HAST volume cannot be used."), gtext("The HAST volumes can not be accessed until HAST node becomes Primary."), gtext("Dynamic IP (DHCP) can not be used for HAST resources.")));?>
 	</div>
 	<?php include("formend.inc");?>
       </form>

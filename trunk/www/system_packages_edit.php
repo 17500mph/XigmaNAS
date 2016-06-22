@@ -70,7 +70,7 @@ if(!isset($do_action)) {
   <tr>
 		<td class="tabnavtbl">
   		<ul id="tabnav">
-				<li class="tabact"><a href="system_packages.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Packages");?></span></a></li>
+				<li class="tabact"><a href="system_packages.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Packages");?></span></a></li>
   		</ul>
   	</td>
 	</tr>
@@ -112,7 +112,7 @@ if(!isset($do_action)) {
 				}
 				?>
 				<div id="remarks">
-					<?php html_remark("note", gettext("Note"), gettext("You can also install a package via SSH or console using the the pkg add command.<br />Example: pkg add packagename"));?>
+					<?php html_remark("note", gtext('Note'), gettext("You can also install a package via SSH or console using the the pkg add command.<br />Example: pkg add packagename"));?>
 				</div>
 				<?php include("formend.inc");?>
 			</form>

@@ -118,7 +118,7 @@ function iscsitargetpg_process_updatenotification($mode, $data) {
       <ul id="tabnav">
         <li class="tabinact"><a href="services_iscsitarget.php"><span><?=gtext("Settings");?></span></a></li>
         <li class="tabinact"><a href="services_iscsitarget_target.php"><span><?=gtext("Targets");?></span></a></li>
-        <li class="tabact"><a href="services_iscsitarget_pg.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Portals");?></span></a></li>
+        <li class="tabact"><a href="services_iscsitarget_pg.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Portals");?></span></a></li>
 				<li class="tabinact"><a href="services_iscsitarget_ig.php"><span><?=gtext("Initiators");?></span></a></li>
 				<li class="tabinact"><a href="services_iscsitarget_ag.php"><span><?=gtext("Auths");?></span></a></li>
 				<li class="tabinact"><a href="services_iscsitarget_media.php"><span><?=gtext("Media");?></span></a></li>
@@ -156,8 +156,8 @@ function iscsitargetpg_process_updatenotification($mode, $data) {
           <td class="listr"><?=htmlspecialchars($pg['comment']);?>&nbsp;</td>
           <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
           <td valign="middle" nowrap="nowrap" class="list">
-            <a href="services_iscsitarget_pg_edit.php?uuid=<?=$pg['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit portal group");?>" border="0" alt="<?=gtext("Edit portal group");?>" /></a>
-            <a href="services_iscsitarget_pg.php?act=del&amp;type=pg&amp;uuid=<?=$pg['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this portal group?");?>')"><img src="images/delete.png" title="<?=gettext("Delete portal group");?>" border="0" alt="<?=gtext("Delete portal group");?>" /></a>
+            <a href="services_iscsitarget_pg_edit.php?uuid=<?=$pg['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit portal group");?>" border="0" alt="<?=gtext("Edit portal group");?>" /></a>
+            <a href="services_iscsitarget_pg.php?act=del&amp;type=pg&amp;uuid=<?=$pg['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this portal group?");?>')"><img src="images/delete.png" title="<?=gtext("Delete portal group");?>" border="0" alt="<?=gtext("Delete portal group");?>" /></a>
           </td>
           <?php else:?>
           <td valign="middle" nowrap="nowrap" class="list">
@@ -168,7 +168,7 @@ function iscsitargetpg_process_updatenotification($mode, $data) {
         <?php endforeach;?>
         <tr>
           <td class="list" colspan="3"></td>
-          <td class="list"><a href="services_iscsitarget_pg_edit.php"><img src="images/add.png" title="<?=gettext("Add portal group");?>" border="0" alt="<?=gtext("Add portal group");?>" /></a></td>
+          <td class="list"><a href="services_iscsitarget_pg_edit.php"><img src="images/add.png" title="<?=gtext("Add portal group");?>" border="0" alt="<?=gtext("Add portal group");?>" /></a></td>
         </tr>
         </table>
         <?=gtext("A Portal Group contains IP addresses and listening TCP ports to connect the target from the initiator.");?>

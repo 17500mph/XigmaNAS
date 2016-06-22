@@ -104,7 +104,7 @@ function ftpd_mod_ban_process_updatenotification($mode, $data) {
 		<td class="tabnavtbl">
 			<ul id="tabnav">
 				<li class="tabinact"><a href="services_ftp.php"><span><?=gtext("Settings");?></span></a></li>
-				<li class="tabact"><a href="services_ftp_mod.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Modules");?></span></a></li>
+				<li class="tabact"><a href="services_ftp_mod.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Modules");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -133,8 +133,8 @@ function ftpd_mod_ban_process_updatenotification($mode, $data) {
 									<td class="listr"><?=htmlspecialchars($rule['expire']);?>&nbsp;</td>
 									<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 									<td valign="middle" nowrap="nowrap" class="list">
-										<a href="services_ftp_mod_ban_edit.php?uuid=<?=$rule['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit rule");?>" border="0" alt="<?=gtext("Edit rule");?>" /></a>
-										<a href="services_ftp_mod.php?act=del&amp;mod=mod_ban&amp;uuid=<?=$rule['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this rule?");?>')"><img src="images/delete.png" title="<?=gettext("Delete rule");?>" border="0" alt="<?=gtext("Delete rule");?>" /></a>
+										<a href="services_ftp_mod_ban_edit.php?uuid=<?=$rule['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit rule");?>" border="0" alt="<?=gtext("Edit rule");?>" /></a>
+										<a href="services_ftp_mod.php?act=del&amp;mod=mod_ban&amp;uuid=<?=$rule['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this rule?");?>')"><img src="images/delete.png" title="<?=gtext("Delete rule");?>" border="0" alt="<?=gtext("Delete rule");?>" /></a>
 									</td>
 									<?php else:?>
 									<td valign="middle" nowrap="nowrap" class="list">
@@ -146,9 +146,9 @@ function ftpd_mod_ban_process_updatenotification($mode, $data) {
 								<tr>
 									<td class="list" colspan="3"></td>
 									<td class="list">
-										<a href="services_ftp_mod_ban_edit.php"><img src="images/add.png" title="<?=gettext("Add rule");?>" border="0" alt="<?=gtext("Add rule");?>" /></a>
+										<a href="services_ftp_mod_ban_edit.php"><img src="images/add.png" title="<?=gtext("Add rule");?>" border="0" alt="<?=gtext("Add rule");?>" /></a>
 										<?php if (!empty($a_rule)):?>
-										<a href="services_ftp_mod.php?act=del&amp;mod=mod_ban&amp;uuid=all" onclick="return confirm('<?=gettext("Do you really want to delete all rules?");?>')"><img src="images/delete.png" title="<?=gettext("Delete all rules");?>" border="0" alt="<?=gtext("Delete all rules");?>" /></a>
+										<a href="services_ftp_mod.php?act=del&amp;mod=mod_ban&amp;uuid=all" onclick="return confirm('<?=gtext("Do you really want to delete all rules?");?>')"><img src="images/delete.png" title="<?=gtext("Delete all rules");?>" border="0" alt="<?=gtext("Delete all rules");?>" /></a>
 										<?php endif;?>
 									</td>
 								</tr>

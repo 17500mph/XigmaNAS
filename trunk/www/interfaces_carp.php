@@ -94,7 +94,7 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 			<li class="tabinact"><a href="interfaces_vlan.php"><span><?=gtext("VLAN");?></span></a></li>
 			<li class="tabinact"><a href="interfaces_lagg.php"><span><?=gtext("LAGG");?></span></a></li>
 			<li class="tabinact"><a href="interfaces_bridge.php"><span><?=gtext("Bridge");?></span></a></li>
-			<li class="tabact"><a href="interfaces_carp.php" title="<?=gettext("Reload page");?>"><span><?=gtext("CARP");?></span></a></li>
+			<li class="tabact"><a href="interfaces_carp.php" title="<?=gtext('Reload page');?>"><span><?=gtext("CARP");?></span></a></li>
 		</ul>
 	</td>
 </tr>
@@ -120,15 +120,15 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 				<td class="listr"><?=htmlspecialchars($carp['advskew']);?></td>
 				<td class="listbg"><?=htmlspecialchars($carp['desc']);?>&nbsp;</td>
 				<td valign="middle" nowrap="nowrap" class="list">
-					<a href="interfaces_carp_edit.php?uuid=<?=$carp['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit interface");?>" border="0" alt="<?=gtext("Edit interface");?>" /></a>&nbsp;
-					<a href="interfaces_carp.php?act=del&amp;uuid=<?=$carp['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this interface?");?>')"><img src="images/delete.png" title="<?=gettext("Delete interface");?>" border="0" alt="<?=gtext("Delete interface");?>" /></a>
+					<a href="interfaces_carp_edit.php?uuid=<?=$carp['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit interface");?>" border="0" alt="<?=gtext("Edit interface");?>" /></a>&nbsp;
+					<a href="interfaces_carp.php?act=del&amp;uuid=<?=$carp['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this interface?");?>')"><img src="images/delete.png" title="<?=gtext("Delete interface");?>" border="0" alt="<?=gtext("Delete interface");?>" /></a>
 				</td>
 			</tr>
 			<?php endforeach;?>
 			<tr>
 				<td class="list" colspan="5">&nbsp;</td>
 				<td class="list">
-					<a href="interfaces_carp_edit.php"><img src="images/add.png" title="<?=gettext("Add interface");?>" border="0" alt="<?=gtext("Add interface");?>" /></a>
+					<a href="interfaces_carp_edit.php"><img src="images/add.png" title="<?=gtext("Add interface");?>" border="0" alt="<?=gtext("Add interface");?>" /></a>
 				</td>
 			</tr>
 			</table>

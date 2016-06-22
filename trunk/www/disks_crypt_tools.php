@@ -166,7 +166,7 @@ function action_change() {
     <td class="tabnavtbl">
       <ul id="tabnav">
         <li class="tabinact"><a href="disks_crypt.php"><span><?=gtext("Management");?></span></a></li>
-        <li class="tabact"><a href="disks_crypt_tools.php" title="<?=gettext("Reload page");?>" ><span><?=gtext("Tools");?></span></a></li>
+        <li class="tabact"><a href="disks_crypt_tools.php" title="<?=gtext('Reload page');?>" ><span><?=gtext("Tools");?></span></a></li>
       </ul>
     </td>
   </tr>
@@ -225,7 +225,7 @@ function action_change() {
 			        $result = disks_geli_attach($geli['device'][0], $pconfig['passphrase'], true);
 			        // When attaching the disk, then also mount it.
 							if (FALSE !== ($cnid = array_search_ex($geli['devicespecialfile'], $a_mount, "mdisk"))) {
-								echo("<br />" . gettext("Mounting device.") . "<br />");
+								echo("<br />" . gtext("Mounting device.") . "<br />");
 								echo((0 == disks_mount($a_mount[$cnid])) ? gtext("Successful.") : gtext("Failed."));
 							}
 			        break;

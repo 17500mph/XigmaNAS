@@ -57,7 +57,7 @@ $graph_height = 220;
 		<td class="tabnavtbl">
 		<div align="center">
   		<ul id="tabnav">
-				<li class="tabact"><a href="status_graph.php" title="<?=gettext("Reload page");?>"><span><?=gtext("System Load");?></span></a></li>
+				<li class="tabact"><a href="status_graph.php" title="<?=gtext('Reload page');?>"><span><?=gtext("System Load");?></span></a></li>
 				<li class="tabinact"><a href="status_graph_cpu.php"><span><?=gtext("CPU Load");?></span></a></li>
   		</ul>
 		</div>

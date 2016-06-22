@@ -288,7 +288,7 @@ function anonymousonly_change() {
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabact"><a href="services_ftp.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Settings");?></span></a></li>
+				<li class="tabact"><a href="services_ftp.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Settings");?></span></a></li>
 				<li class="tabinact"><a href="services_ftp_mod.php"><span><?=gtext("Modules");?></span></a></li>
 			</ul>
 		</td>
@@ -323,7 +323,7 @@ function anonymousonly_change() {
 						html_checkbox("disabletcpwrapper", gtext("TCP wrapper"), !empty($pconfig['disabletcpwrapper']) ? true : false, gtext("Disable TCP wrapper (mod_wrap module)."), "", false);
 						html_inputbox("pasv_address", gtext("Masquerade address"), $pconfig['pasv_address'], gtext("Causes the server to display the network information for the specified IP address or DNS hostname to the client, on the assumption that that IP address or DNS host is acting as a NAT gateway or port forwarder for the server."), false, 20);
 						html_inputbox("pasv_min_port", gtext("Passive ports"), $pconfig['pasv_min_port'], gtext("The minimum port to allocate for PASV style data connections (0 = use any port)."), false, 20);
-						html_inputbox("pasv_max_port", "&nbsp;", $pconfig['pasv_max_port'], gettext("The maximum port to allocate for PASV style data connections (0 = use any port).") . "<br /><br />" . gtext("Passive ports restricts the range of ports from which the server will select when sent the PASV command from a client. The server will randomly choose a number from within the specified range until an open port is found. The port range selected must be in the non-privileged range (eg. greater than or equal to 1024). It is strongly recommended that the chosen range be large enough to handle many simultaneous passive connections (for example, 49152-65534, the IANA-registered ephemeral port range)."), true, 20);
+						html_inputbox("pasv_max_port", "&nbsp;", $pconfig['pasv_max_port'], gtext("The maximum port to allocate for PASV style data connections (0 = use any port).") . "<br /><br />" . gtext("Passive ports restricts the range of ports from which the server will select when sent the PASV command from a client. The server will randomly choose a number from within the specified range until an open port is found. The port range selected must be in the non-privileged range (eg. greater than or equal to 1024). It is strongly recommended that the chosen range be large enough to handle many simultaneous passive connections (for example, 49152-65534, the IANA-registered ephemeral port range)."), true, 20);
 						html_inputbox("userbandwidthup", gtext("Local user bandwidth"), $pconfig['userbandwidthup'], gtext("Local user upload bandwith in KB/s. An empty field means infinity."), false, 5);
 						html_inputbox("userbandwidthdown", "&nbsp;", $pconfig['userbandwidthdown'], gtext("Local user download bandwith in KB/s. An empty field means infinity."), false, 5);
 						html_inputbox("anonymousbandwidthup", gtext("Anonymous user bandwidth"), $pconfig['anonymousbandwidthup'], gtext("Anonymous user upload bandwith in KB/s. An empty field means infinity."), false, 5);
@@ -333,7 +333,7 @@ function anonymousonly_change() {
 						html_textarea("privatekey", gtext("Private key"), $pconfig['privatekey'], gtext("Paste an private key in PEM format here."), true, 65, 7, false, false);
 						html_checkbox("tlsrequired", gtext("TLS only"), !empty($pconfig['tlsrequired']) ? true : false, gtext("Allow TLS connections only."), "", false);
 						html_combobox('sysloglevel', gtext('Syslog Level'), $pconfig['sysloglevel'], $l_sysloglevel, '');
-						html_textarea("auxparam", gettext("Auxiliary parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", sprintf(gettext("These parameters are added to %s."), "proftpd.conf") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://www.proftpd.org/docs/directives/linked/configuration.html"), false, 65, 5, false, false);
+						html_textarea("auxparam", gtext("Auxiliary parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", sprintf(gtext("These parameters are added to %s."), "proftpd.conf") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://www.proftpd.org/docs/directives/linked/configuration.html"), false, 65, 5, false, false);
 					?>
 				</table>
 				<div id="submit">

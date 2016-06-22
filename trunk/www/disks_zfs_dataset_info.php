@@ -62,7 +62,7 @@ function zfs_dataset_display_properties() {
 		<td class="tabnavtbl">
 			<ul id="tabnav">
 				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext("Pools");?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_dataset.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Datasets");?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_dataset.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Datasets");?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext("Volumes");?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext("Snapshots");?></span></a></li>
 				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext("Configuration");?></span></a></li>
@@ -73,7 +73,7 @@ function zfs_dataset_display_properties() {
 		<td class="tabnavtbl">
 			<ul id="tabnav2">
 				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext("Dataset");?></span></a></li>
-				<li class="tabact"><a href="disks_zfs_dataset_info.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Information");?></span></a></li>
+				<li class="tabact"><a href="disks_zfs_dataset_info.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Information");?></span></a></li>
 			</ul>
 		</td>
 	</tr>

@@ -189,14 +189,14 @@ function enable_change(enable_change) {
 						<td width="22%" valign="top" class="vncellreq"><?=gtext("To email");?></td>
 						<td width="78%" class="vtable">
 							<input name="to" type="text" class="formfld" id="to" size="74" value="<?=htmlspecialchars($pconfig['to']);?>" /><br />
-							<span class="vexpl"><?=gettext("Destination email address.");?> <?=gtext("Separate email addresses by semi-colon.");?></span>
+							<span class="vexpl"><?=gtext("Destination email address.");?> <?=gtext("Separate email addresses by semi-colon.");?></span>
 						</td>
 					</tr>
 					<tr>
 						<td width="22%" valign="top" class="vncell"><?=gtext("Subject");?></td>
 						<td width="78%" class="vtable">
 							<input name="subject" type="text" class="formfld" id="subject" size="74" value="<?=htmlspecialchars($pconfig['subject']);?>" /><br />
-							<span class="vexpl"><?=gettext("The subject of the email.") . " " . gettext("You can use the following parameters for substitution:");?></span><?=gettext("<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>");?>
+							<span class="vexpl"><?=gtext("The subject of the email.") . " " . gettext("You can use the following parameters for substitution:");?></span><?=gettext("<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>");?>
 						</td>
 					</tr>
 					<tr>

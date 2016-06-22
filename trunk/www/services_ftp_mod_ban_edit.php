@@ -107,7 +107,7 @@ if ($_POST) {
 		<td class="tabnavtbl">
 			<ul id="tabnav">
 				<li class="tabinact"><a href="services_ftp.php"><span><?=gtext("Settings");?></span></a></li>
-				<li class="tabact"><a href="services_ftp_mod.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Modules");?></span></a></li>
+				<li class="tabact"><a href="services_ftp_mod.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Modules");?></span></a></li>
 			</ul>
 		</td>
 	</tr>

@@ -152,7 +152,7 @@ function diskmanagement_process_updatenotification($mode, $data) {
   <tr>
 		<td class="tabnavtbl">
   		<ul id="tabnav">
-				<li class="tabact"><a href="disks_manage.php" title="<?=gettext("Reload page");?>"><span><?=gtext("HDD Management");?></span></a></li>
+				<li class="tabact"><a href="disks_manage.php" title="<?=gtext('Reload page');?>"><span><?=gtext("HDD Management");?></span></a></li>
 				<li class="tabinact"><a href="disks_init.php"><span><?=gtext("HDD Format");?></span></a></li>
 				<li class="tabinact"><a href="disks_manage_smart.php"><span><?=gtext("S.M.A.R.T.");?></span></a></li>
 				<li class="tabinact"><a href="disks_manage_iscsi.php"><span><?=gtext("iSCSI Initiator");?></span></a></li>
@@ -269,8 +269,8 @@ function diskmanagement_process_updatenotification($mode, $data) {
 
 						<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 						<td valign="middle" nowrap="nowrap" class="list">
-							<a href="disks_manage_edit.php?uuid=<?=$disk['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit disk");?>" border="0" alt="<?=gtext("Edit disk");?>" /></a>&nbsp;
-							<a href="disks_manage.php?act=del&amp;uuid=<?=$disk['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this disk? All elements that still use it will become invalid (e.g. share)!"); ?>')"><img src="images/delete.png" title="<?=gettext("Delete disk"); ?>" border="0" alt="<?=gtext("Delete disk"); ?>" /></a>
+							<a href="disks_manage_edit.php?uuid=<?=$disk['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit disk");?>" border="0" alt="<?=gtext("Edit disk");?>" /></a>&nbsp;
+							<a href="disks_manage.php?act=del&amp;uuid=<?=$disk['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this disk? All elements that still use it will become invalid (e.g. share)!"); ?>')"><img src="images/delete.png" title="<?=gtext("Delete disk"); ?>" border="0" alt="<?=gtext("Delete disk"); ?>" /></a>
 						</td>
 						<?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
@@ -281,17 +281,17 @@ function diskmanagement_process_updatenotification($mode, $data) {
 					<?php endforeach;?>
 					<tr>
 						<td class="list" colspan="9"></td>
-						<td class="list"> <a href="disks_manage_edit.php"><img src="images/add.png" title="<?=gettext("Add disk"); ?>" border="0" alt="<?=gtext("Add disk"); ?>" /></a></td>
+						<td class="list"> <a href="disks_manage_edit.php"><img src="images/add.png" title="<?=gtext("Add disk"); ?>" border="0" alt="<?=gtext("Add disk"); ?>" /></a></td>
 					</tr>
 				</table>
 				<div id="submit">
-					<input name="import" type="submit" class="formbtn" value="<?=gettext("Import Disks");?>" onclick="return confirm('<?=gtext("Do you really want to import?\\nThe existing config may be overwritten.");?>');" />
-					<input name="clear_import" type="submit" class="formbtn" value="<?=gettext("Clear Config & Import Disks");?>" onclick="return confirm('<?=gtext("Do you really want to clear and import?\\nThe existing config will be cleared and overwritten.");?>');" />
+					<input name="import" type="submit" class="formbtn" value="<?=gtext("Import Disks");?>" onclick="return confirm('<?=gtext("Do you really want to import?\\nThe existing config may be overwritten.");?>');" />
+					<input name="clear_import" type="submit" class="formbtn" value="<?=gtext("Clear Config & Import Disks");?>" onclick="return confirm('<?=gtext("Do you really want to clear and import?\\nThe existing config will be cleared and overwritten.");?>');" />
 					<input name="disks_rescan" type="submit" class="formbtn" value="<?=gtext("Rescan Disks");?>" />
 					<br />
 					<br />
-					<input name="import_swraid" type="submit" class="formbtn" value="<?=gettext("Import Software Raid Disks");?>" onclick="return confirm('<?=gtext("Do you really want to import?\\nThe existing config may be overwritten.");?>');" />
-					<input name="clear_import_swraid" type="submit" class="formbtn" value="<?=gettext("Clear Config & Import Software Raid Disks");?>" onclick="return confirm('<?=gtext("Do you really want to clear and import?\\nThe existing config will be cleared and overwritten.");?>');" />
+					<input name="import_swraid" type="submit" class="formbtn" value="<?=gtext("Import Software Raid Disks");?>" onclick="return confirm('<?=gtext("Do you really want to import?\\nThe existing config may be overwritten.");?>');" />
+					<input name="clear_import_swraid" type="submit" class="formbtn" value="<?=gtext("Clear Config & Import Software Raid Disks");?>" onclick="return confirm('<?=gtext("Do you really want to clear and import?\\nThe existing config will be cleared and overwritten.");?>');" />
 				</div>
 				<?php
 				if ($do_action) {

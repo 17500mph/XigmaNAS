@@ -141,7 +141,7 @@ function mountmanagement_process_updatenotification($mode, $data) {
   <tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-        <li class="tabact"><a href="disks_mount.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Management");?></span></a></li>
+        <li class="tabact"><a href="disks_mount.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Management");?></span></a></li>
         <li class="tabinact"><a href="disks_mount_tools.php"><span><?=gtext("Tools");?></span></a></li>
         <li class="tabinact"><a href="disks_mount_fsck.php"><span><?=gtext("Fsck");?></span></a></li>
       </ul>
@@ -178,7 +178,7 @@ function mountmanagement_process_updatenotification($mode, $data) {
 							if(disks_ismounted_ex($mount['sharename'],"sharename")) {
 								$status = gtext("OK");
 							} else {
-								$status = gettext("Error") . " - <a href=\"disks_mount.php?act=retry&uuid={$mount['uuid']}\">" . gtext("Retry") . "</a>";
+								$status = gtext("Error") . " - <a href=\"disks_mount.php?act=retry&uuid={$mount['uuid']}\">" . gtext("Retry") . "</a>";
 							}
 							break;
 					}
@@ -199,8 +199,8 @@ function mountmanagement_process_updatenotification($mode, $data) {
             <td class="listbg"><?=$status;?>&nbsp;</td>
             <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
             <td valign="middle" nowrap="nowrap" class="list">
-              <a href="disks_mount_edit.php?uuid=<?=$mount['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit mount point");?>" border="0" alt="<?=gtext("Edit mount point");?>" /></a>&nbsp;
-              <a href="disks_mount.php?act=del&amp;uuid=<?=$mount['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this mount point? All elements that still use it will become invalid (e.g. share)!");?>')"><img src="images/delete.png" title="<?=gettext("Delete mount point");?>" border="0" alt="<?=gtext("Delete mount point");?>" /></a>
+              <a href="disks_mount_edit.php?uuid=<?=$mount['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit mount point");?>" border="0" alt="<?=gtext("Edit mount point");?>" /></a>&nbsp;
+              <a href="disks_mount.php?act=del&amp;uuid=<?=$mount['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this mount point? All elements that still use it will become invalid (e.g. share)!");?>')"><img src="images/delete.png" title="<?=gtext("Delete mount point");?>" border="0" alt="<?=gtext("Delete mount point");?>" /></a>
             </td>
             <?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
@@ -211,7 +211,7 @@ function mountmanagement_process_updatenotification($mode, $data) {
           <?php endforeach;?>
           <tr>
             <td class="list" colspan="5"></td>
-            <td class="list"><a href="disks_mount_edit.php"><img src="images/add.png" title="<?=gettext("Add mount point");?>" border="0" alt="<?=gtext("Add mount point");?>" /></a></td>
+            <td class="list"><a href="disks_mount_edit.php"><img src="images/add.png" title="<?=gtext("Add mount point");?>" border="0" alt="<?=gtext("Add mount point");?>" /></a></td>
           </tr>
         </table>
         <div id="remarks">

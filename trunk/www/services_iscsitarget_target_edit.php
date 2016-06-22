@@ -601,7 +601,7 @@ function enable_change(enable_change) {
     <td class="tabnavtbl">
       <ul id="tabnav">
         <li class="tabinact"><a href="services_iscsitarget.php"><span><?=gtext("Settings");?></span></a></li>
-        <li class="tabact"><a href="services_iscsitarget_target.php" title="<?=gettext("Reload page");?>"><span><?=gtext("Targets");?></span></a></li>
+        <li class="tabact"><a href="services_iscsitarget_target.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Targets");?></span></a></li>
         <li class="tabinact"><a href="services_iscsitarget_pg.php"><span><?=gtext("Portals");?></span></a></li>
 		<li class="tabinact"><a href="services_iscsitarget_ig.php"><span><?=gtext("Initiators");?></span></a></li>
 		<li class="tabinact"><a href="services_iscsitarget_ag.php"><span><?=gtext("Auths");?></span></a></li>
@@ -758,7 +758,7 @@ function enable_change(enable_change) {
       <?php if ($MAX_BLOCKLEN > 512): ?>
       <?php $a_blocklen = array();
 	for ($x = 0; (512 << $x) <= $MAX_BLOCKLEN; $x++) {
-		$a_blocklen[(512 << $x)] = sprintf(gettext("%dB / block"), (512 << $x));
+		$a_blocklen[(512 << $x)] = sprintf(gtext("%dB / block"), (512 << $x));
 	}
       ?>
       <?php html_combobox("blocklen", gtext("Logical Block Length"), $pconfig['blocklen'], $a_blocklen, sprintf("%s %s", sprintf(gtext("You may specify logical block length (%d by default)."), 512), sprintf(gtext("The recommended length for compatibility is %d."), 512)), false, false, "");?>

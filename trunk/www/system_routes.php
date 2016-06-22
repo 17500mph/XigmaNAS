@@ -117,8 +117,8 @@ function routes_process_updatenotification($mode, $data) {
 	          <td class="listbg"><?=htmlspecialchars($route['descr']);?>&nbsp;</td>
 	          <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
 	          <td valign="middle" nowrap="nowrap" class="list">
-							<a href="system_routes_edit.php?uuid=<?=$route['uuid'];?>"><img src="images/edit.png" title="<?=gettext("Edit Route");?>" border="0" alt="<?=gtext("Edit Route");?>" /></a>
-	          	<a href="system_routes.php?act=del&amp;uuid=<?=$route['uuid'];?>" onclick="return confirm('<?=gettext("Do you really want to delete this route?");?>')"><img src="images/delete.png" title="<?=gettext("Delete Route");?>" border="0" alt="<?=gtext("Delete Route");?>" /></a>
+							<a href="system_routes_edit.php?uuid=<?=$route['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit Route");?>" border="0" alt="<?=gtext("Edit Route");?>" /></a>
+	          	<a href="system_routes.php?act=del&amp;uuid=<?=$route['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this route?");?>')"><img src="images/delete.png" title="<?=gtext("Delete Route");?>" border="0" alt="<?=gtext("Delete Route");?>" /></a>
 						</td>
 						<?php else:?>
 						<td valign="middle" nowrap="nowrap" class="list">
@@ -130,7 +130,7 @@ function routes_process_updatenotification($mode, $data) {
 					<tr>
 						<td class="list" colspan="4"></td>
 						<td class="list">
-							<a href="system_routes_edit.php"><img src="images/add.png" title="<?=gettext("Add Route");?>" border="0" alt="<?=gtext("Add Route");?>" /></a>
+							<a href="system_routes_edit.php"><img src="images/add.png" title="<?=gtext("Add Route");?>" border="0" alt="<?=gtext("Add Route");?>" /></a>
 						</td>
 					</tr>
 				</table>
