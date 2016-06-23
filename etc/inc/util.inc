@@ -31,6 +31,7 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
+require_once "super_fun.inc";
 require_once("globals.inc");
 require_once("array.inc");
 require_once("system.inc");
