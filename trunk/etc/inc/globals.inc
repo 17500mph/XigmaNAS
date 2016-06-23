@@ -31,6 +31,7 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
+require_once "super_fun.inc";
 
 $g = array(
 	"varrun_path" => "/var/run",
