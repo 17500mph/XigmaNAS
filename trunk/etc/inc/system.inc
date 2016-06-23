@@ -925,4 +925,10 @@ function system_get_sysinfo() {
 	$value['date'] = get_datetime_locale();
 	return $value;
 }
+/*
+ * Replacement for gettext, converts html characters <>"' into their character codes 
+ */
+function gtext($data) {
+	return htmlspecialchars(gettext($data), ENT_QUOTES);
+}
 ?>
