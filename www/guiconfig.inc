@@ -679,7 +679,4 @@ function get_month_names($long = NULL, $english = NULL) {
 	}
 	return $retval;
 }
-function gtext($data) {
-	return htmlspecialchars(gettext($data), ENT_QUOTES);
-}
 ?>
