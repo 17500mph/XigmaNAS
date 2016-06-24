@@ -52,8 +52,12 @@ if ($_POST) {
 		$savemsg = get_std_save_message($retval);
 		if ($retval == 0) {
 			if (get_hast_role() != 'secondary') {
-				$savemsg .= "<br>";
-				$savemsg .= sprintf(gettext("The reloading request has been sent to the daemon. You can see the result by <a href=\"%s\">Log</a>."), "diag_log.php?log=2");
+				$savemsg .= '<br>'
+					. gtext('A reload request has been sent to the daemon.')
+					. ' '
+					. '<a href="' . 'diag_log.php?log=2' . '">'
+					. gtext('You can verify the result in the log file.')
+					. '</a>';
 			}
 			updatenotify_delete("iscsitarget_ag");
 		}

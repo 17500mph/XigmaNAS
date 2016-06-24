@@ -224,7 +224,7 @@ spinner();
 									<td width="5%" class="listhdrr"><?=gtext("Port");?></td>
 									<td width="20%" class="listhdrr"><?=gtext("Destination");?></td>
 									<td width="5%" class="listhdrr"><?=gtext("Port");?></td>
-									<td width="5%" class="listhdrr"><?=htmlspecialchars(gettext("<->"));?></td>
+									<td width="5%" class="listhdrr"><?=htmlspecialchars('<->');?></td>
 									<td width="26%" class="listhdrr"><?=gtext("Description");?></td>
 									<td width="10%" class="list"></td>
 								</tr>
