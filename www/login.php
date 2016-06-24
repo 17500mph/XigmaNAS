@@ -84,8 +84,8 @@ function genhtmltitle($title) {
 
 // Menu items.
 // Info and Manual
-$menu['info']['desc'] = gtext("Information & Manuals");
-$menu['info']['visible'] = TRUE;
+$menu['info']['desc'] = gtext('Information & Manuals');
+$menu['info']['visible'] = true;
 $menu['info']['link'] = "http://wiki.nas4free.org/";
 $menu['info']['menuitem']['visible'] = FALSE;
 // Forum
@@ -115,7 +115,7 @@ function display_menu($menuid) {
 	$link = $menu[$menuid]['link'];
 	if ($link == '') $link = 'index.php';
 	echo "<li>\n";
-	echo "	<a href=\"{$link}\" onmouseover=\"mopen('{$menuid}')\" onmouseout=\"mclosetime()\">".htmlspecialchars($menu[$menuid]['desc'])."</a>\n";
+	echo "	<a href=\"{$link}\" onmouseover=\"mopen('{$menuid}')\" onmouseout=\"mclosetime()\">" . $menu[$menuid]['desc'] . "</a>\n";
 	echo "	<div id=\"{$menuid}\" onmouseover=\"mcancelclosetime()\" onmouseout=\"mclosetime()\">\n";
 
 	# Display menu items.
@@ -128,7 +128,7 @@ function display_menu($menuid) {
 			# Display menuitem.
 			$link = $menuv['link'];
 			if ($link == '') $link = 'index.php';
-			echo "<a href=\"{$link}\" target=\"" . (empty($menuv['target']) ? "_self" : $menuv['target']) . "\" title=\"".htmlspecialchars($menuv['desc'])."\">".htmlspecialchars($menuv['desc'])."</a>\n";
+			echo "<a href=\"{$link}\" target=\"" . (empty($menuv['target']) ? "_self" : $menuv['target']) . "\" title=\"" . $menuv['desc'] . "\">" . $menuv['desc']."</a>\n";
 		} else {
 			# Display separator.
 			echo "<span class=\"tabseparator\">&nbsp;</span>";
