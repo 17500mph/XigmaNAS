@@ -1,5 +1,5 @@
 PORTNAME=		php70
-PORTVERSION=	7.0.7
+PORTVERSION=	7.0.8
 PORTREVISION=	0
 CATEGORIES=		lang
 COMMENT=		PHP5 Scripting Language
@@ -91,7 +91,7 @@ OPTIONS=	CLI "Build CLI version" on \
 		PHPDBG "Enable debug" off \
 		DTRACE "Enable DTrace support" off \
 		LINKTHR "Link thread lib (for threaded extensions)" on \
-		MZTS "Force Zend Thread Safety (ZTS) build" off
+		ZTS "Force Zend Thread Safety (ZTS) build" off
 
 CONFLICTS=	php55-5* php56-*
 
