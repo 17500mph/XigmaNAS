@@ -145,7 +145,9 @@ function enable_change(enable_change) {
 			<td width="78%" class="vtable">
 			<input name="resolve" type="checkbox" id="resolve" value="yes" <?php if (!empty($pconfig['resolve'])) echo "checked=\"checked\""; ?> />
 			<?=gtext("Resolve IP addresses to hostnames.");?><br />
-			<?php echo sprintf(gettext("Hint: If this is checked, IP addresses in the server logs are resolved to real hostnames where possible.<br><font color='red'>Warning</font>: This can cause a huge delay in loading the log page!"));?>
+			<?php
+			echo gtext('Hint'), ': ', gtext('If this option is checked, IP addresses in the server logs are resolved to their hostnames where possible.'), '<br><font color="red">', gtext('Warning'), '</font>: ', gtext('This can cause a huge delay in loading the log page!');
+			?>
 		   </td>
 		</tr>
 		<tr>

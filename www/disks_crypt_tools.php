@@ -78,7 +78,9 @@ if ($_POST) {
 
 		// Action = 'detach' => Check if device is mounted
 		if (($_POST['action'] === "detach") && (1 == disks_ismounted_ex($_POST['disk'], "devicespecialfile"))) {
-			$errormsg = sprintf(gettext("The encrypted device is currently mounted! <a href='%s'>Unmount</a> this disk first before proceeding."), "disks_mount_tools.php?disk={$_POST['disk']}&action=umount");
+			$helpinghand = sprintf('disks_mount_tools.php?disk=%1$s&action=umount', $_POST['disk']);
+			$link = sprintf('<a href="%1$s">%2$s</a>', $helpinghand, gtext('Unmount this disk first before proceeding.'));
+			$errormsg = gtext('The encrypted device is currently mounted!') . ' ' . $link;
 			$pconfig['do_action'] = false;
 		}
 

@@ -199,42 +199,59 @@ function get_HostName($mac, $ip) {
 }
 ?>
 <?php include("fbegin.inc");?>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td class="tabcont">
-			<table width="100%" border="0" cellpadding="0" cellspacing="0">
-				<?php html_titleline(gtext("ARP Tables List"));?>
-				<tr>
-			     <td>
+<table id="area_data"><tbody><tr><td id="area_data_frame">
+	<table id="area_data_selection">
+		<colgroup>
+			<col style="width:20%"><!-- IP Address -->
+			<col style="width:20%"><!-- MAC Address -->
+			<col style="width:30%"><!-- Hostname -->
+			<col style="width:20%"><!-- Interface -->
+			<col style="width:10%"><!-- Toolbox -->
+		</colgroup>
+		<thead>
+			<?php html_titleline2(gtext('ARP Tables List'), 5);?>
 			<tr>
-			<table width="100%" border="0" cellpadding="0" cellspacing="0"></br>
-			    <td class="listhdrlr"><?=gtext("IP address");?></td>
-			    <td class="listhdrr"><?=gtext("MAC address");?></td>
-			    <td class="listhdrr"><?=gtext("Hostname");?></td>
-			    <td class="listhdrr"><?=gtext("Interface");?></td>
-			    <td class="list"></td>
-			  </tr>
-			  <?php $i = 0; foreach ($data as $entry): ?>
-			  <tr>
-			    <td class="listlr"><?=htmlspecialchars($entry['ip']);?></td>
-			    <td class="listr"><?=htmlspecialchars($entry['mac']);?></td>
-			    <td class="listr"><?=htmlspecialchars(get_HostName($entry['mac'], $entry['ip']));?>&nbsp;</td>
-			    <td class="listr"><?=htmlspecialchars($hwif[$entry['interface']]);?>&nbsp;</td>
-			    <td valign="middle" nowrap="nowrap" class="list"><a href="diag_arp.php?act=del&amp;id=<?=$entry['ip'];?>"><img src="images/delete.png" title="<?=gtext("Delete ARP entry");?>" border="0" alt="<?=gtext("Delete ARP entry");?>" /></a></td>
-			  </tr>
-			  <?php $i++; endforeach; ?>
-			  <tr>
-			    <td></td>
-			  </tr>
-			  <tr>
-			    <td class="list" colspan="4"></td>
-			    <td class="list"><a href="diag_arp.php?act=del"><img src="images/delete.png" title="<?=gtext("Remove all entries from ARP table");?>" border="0" alt="<?=gtext("Remove all entries from ARP table");?>" /></a></td>
-			  </tr>
-			</table>
-			<div id="remarks">
-				<?php html_remark("hint", gtext('Hint'), sprintf(gettext("IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP addresses to hostnames&quot;</a> is enabled."), "diag_log_settings.php"));?>
-			</div>
-		</td>
-	</tr>
-</table>
+				<th class="lhell"><?=gtext('IP Address');?></th>
+				<th class="lhell"><?=gtext('MAC Address');?></th>
+				<th class="lhell"><?=gtext('Hostname');?></th>
+				<th class="lhell"><?=gtext('Interface');?></th>
+				<th class="lhebl"><?=gtext('Toolbox');?></th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td class="lcenl" colspan="4"></td>
+				<td class="lceadd"><a href="diag_arp.php?act=del"><img src="images/delete.png" title="<?=gtext('Remove all entries from ARP table');?>" border="0" alt="<?=gtext('Remove all entries from ARP table');?>"/></a></td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<?php $i = 0; foreach ($data as $entry): ?>
+				<tr>
+					<td class="lcell"><?=htmlspecialchars($entry['ip']);?></td>
+					<td class="lcell"><?=htmlspecialchars($entry['mac']);?></td>
+					<td class="lcell"><?=htmlspecialchars(get_HostName($entry['mac'], $entry['ip']));?>&nbsp;</td>
+					<td class="lcell"><?=htmlspecialchars($hwif[$entry['interface']]);?>&nbsp;</td>
+					<td class="lcebld">
+						<table id="area_data_selection_toolbox"><tbody><tr>
+							<td>
+								<a href="diag_arp.php?act=del&amp;id=<?=$entry['ip'];?>"><img src="images/delete.png" title="<?=gtext("Delete ARP entry");?>" border="0" alt="<?=gtext("Delete ARP entry");?>" /></a>
+							</td>
+							<td></td>
+							<td></td>
+						</tr></tbody></table>
+					</td>
+				</tr>
+			<?php $i++; endforeach; ?>
+		</tbody>
+	</table>
+	<div id="remarks">
+		<?php
+		$helpinghand =  
+			gtext('IP addresses are resolved to hostnames when the following option is enabled:') .
+			' ' .
+			'<a href="' . 'diag_log_settings.php' . '">' . gtext('Resolve IP addresses to hostnames.') . '</a>';
+		html_remark("hint", gtext('Hint'), $helpinghand);
+		?>
+	</div>
+</td></tr></tbody></table>
 <?php include("fend.inc");?>
