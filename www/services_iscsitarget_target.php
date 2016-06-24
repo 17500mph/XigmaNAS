@@ -57,8 +57,12 @@ if ($_POST) {
 		$savemsg = get_std_save_message($retval);
 		if ($retval == 0) {
 			if (get_hast_role() != 'secondary') {
-				$savemsg .= "<br>";
-				$savemsg .= sprintf(gettext("The reloading request has been sent to the daemon. You can see the result by <a href=\"%s\">Log</a>."), "diag_log.php?log=2");
+				$savemsg .= '<br>'
+					. gtext('A reload request has been sent to the daemon.')
+					. ' '
+					. '<a href="' . 'diag_log.php?log=2' . '">'
+					. gtext('You can verify the result in the log file.')
+					. '</a>';
 			}
 			updatenotify_delete("iscsitarget_extent");
 			updatenotify_delete("iscsitarget_target");
@@ -380,7 +384,18 @@ function iscsitargettarget_process_updatenotification($mode, $data) {
       </tr>
       </table>
       <div id="remarks">
-        <?php html_remark("note", gtext('Note'), gettext("To configure the target, you must add at least Portal Group and Initiator Group and Extent.<br />Portal Group which is identified by tag number defines IP addresses and listening TCP ports.<br />Initiator Group which is identified by tag number defines authorised initiator names and networks.<br />Auth Group which is identified by tag number and is optional if the target does not use CHAP authentication defines authorised users and secrets for additional security.<br />Extent defines the storage area of the target."));?>
+        <?php
+		$helpinghand = gtext('You must add at least a Portal Group, an Initiator Group and an Extent before you can configure a Target.')
+			. '<br />'
+			. gtext('A Portal Group is identified by a tag number and defines IP addresses and listening TCP ports.')
+			. '<br />'
+			. gtext('An Initiator Group is identified by a tag number and defines authorised initiator names and networks.')
+			. '<br />'
+			. gtext('An Auth Group is identified by a tag number and is optional. If the Target does not use CHAP authentication it defines authorised users and secrets for additional security.')
+			. '<br />'
+			. gtext('An Extent defines the storage area of the Target.');
+		html_remark("note", gtext('Note'), $helpinghand);
+		?>
       </div>
     </td>
   </tr>

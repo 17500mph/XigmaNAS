@@ -48,7 +48,11 @@ $a_bridge = &$config['vinterfaces']['bridge'];
 array_sort_key($a_bridge, "if");
 
 if (!sizeof($a_bridge)) {
-	$errormsg = sprintf(gettext("No configured bridge interfaces. Please add new <a href='%s'>bridge interface</a> first."), "interfaces_bridge.php");
+	$errormsg = gtext('No configured bridge interfaces.')
+		. ' '
+		. '<a href="' . 'interfaces_bridge.php' . '">'
+		. gtext('Please add a bridge interface first.')
+		. '</a>';
 }
 
 // js button handler

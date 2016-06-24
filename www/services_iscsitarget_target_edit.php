@@ -127,13 +127,31 @@ function get_random_iscsi_sn($length = 8){
 
 $errormsg = "";
 if (count($config['iscsitarget']['portalgroup']) == 0) {
-	$errormsg .= sprintf(gettext("No configured Portal Group. Please add new <a href='%s'>Portal Group</a> first."), "services_iscsitarget_pg.php")."<br />\n";
+	$errormsg .= gtext('No Portal Group has been configured.')
+		. ' '
+		. '<a href="' . 'services_iscsitarget_pg.php' . '">'
+		. gtext('Please add a new Portal Group first.')
+		. '</a>'
+		. '<br />'
+		. "\n";
 }
 if (count($config['iscsitarget']['initiatorgroup']) == 0) {
-	$errormsg .= sprintf(gettext("No configured Initiator Group. Please add new <a href='%s'>Initiator Group</a> first."), "services_iscsitarget_ig.php")."<br />\n";
+	$errormsg .= gtext('No Initiator Group has been configured.')
+		. ' '
+		. '<a href="' . 'services_iscsitarget_ig.php' . '">'
+		. gtext('Please add a new Initiator Group first.')
+		. '</a>'
+		. '<br />'
+		. "\n";
 }
 if (count($config['iscsitarget']['extent']) == 0) {
-	$errormsg .= sprintf(gettext("No configured Extent. Please add new <a href='%s'>Extent</a> first."), "services_iscsitarget_target.php")."<br />\n";
+	$errormsg .= gtext('No Extent has been configured.')
+		. ' '
+		. '<a href="' . 'services_iscsitarget_target.php' . '">'
+		. gtext('Please add a new Extent first.')
+		. '</a>'
+		. '<br />'
+		. "\n";
 }
 
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_iscsitarget_target, "uuid")))) {
