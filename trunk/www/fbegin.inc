@@ -41,167 +41,168 @@ function genhtmltitle($title) {
 	return system_get_hostname() . " - " . gentitle($title);
 }
 
+$isAdminSession = Session::isAdmin();
 // Menu items.
 // System
-$menu['system']['desc'] = gtext("System");
+$menu['system']['desc'] = gtext('System');
 $menu['system']['visible'] = TRUE;
-$menu['system']['link'] = "";
-$menu['system']['menuitem'] = array();
-$menu['system']['menuitem'][] = array("desc" => gtext("General"), "link" => "system.php", "visible" => Session::isAdmin());
-$menu['system']['menuitem'][] = array("desc" => gtext("Advanced"), "link" => "system_advanced.php", "visible" => Session::isAdmin());
-$menu['system']['menuitem'][] = array("desc" => gtext("Password"), "link" => "userportal_system_password.php", "visible" => !Session::isAdmin());
-$menu['system']['menuitem'][] = array("type" => "separator", "visible" => Session::isAdmin());
-if ("full" == $g['platform']) {
-	$menu['system']['menuitem'][] = array("desc" => gtext("Packages"), "link" => "system_packages.php", "visible" => Session::isAdmin());
+$menu['system']['link'] = '';
+$menu['system']['menuitem'] = [];
+$menu['system']['menuitem'][] = ['desc' => gtext('General'), 'link' => 'system.php', 'visible' => $isAdminSession];
+$menu['system']['menuitem'][] = ['desc' => gtext('Advanced'), 'link' => 'system_advanced.php', 'visible' => $isAdminSession];
+$menu['system']['menuitem'][] = ['desc' => gtext('Password'), 'link' => 'userportal_system_password.php', 'visible' => !$isAdminSession];
+$menu['system']['menuitem'][] = ['type' => 'separator', 'visible' =>  $isAdminSession];
+if ('full' == $g['platform']) {
+	$menu['system']['menuitem'][] = ['desc' => gtext('Packages'), 'link' => 'system_packages.php', 'visible' => $isAdminSession];
 } else {
-	$menu['system']['menuitem'][] = array("desc" => gtext("Firmware"), "link" => "system_firmware.php", "visible" => Session::isAdmin());
+	$menu['system']['menuitem'][] = ['desc' => gtext('Firmware'), 'link' => 'system_firmware.php', 'visible' => $isAdminSession];
 }
-$menu['system']['menuitem'][] = array("desc" => gtext("Backup/Restore"), "link" => "system_backup.php", "visible" => Session::isAdmin());
-$menu['system']['menuitem'][] = array("desc" => gtext("Factory Defaults"), "link" => "system_defaults.php", "visible" => Session::isAdmin());
-$menu['system']['menuitem'][] = array("type" => "separator", "visible" => Session::isAdmin());
-$menu['system']['menuitem'][] = array("desc" => gtext("Reboot"), "link" => "reboot.php", "visible" => Session::isAdmin());
-$menu['system']['menuitem'][] = array("desc" => gtext("Shutdown"), "link" => "shutdown.php", "visible" => Session::isAdmin());
-$menu['system']['menuitem'][] = array("type" => "separator", "visible" => TRUE);
-$menu['system']['menuitem'][] = array("desc" => gtext("Logout"), "link" => "logout.php", "visible" => TRUE);
+$menu['system']['menuitem'][] = ['desc' => gtext('Backup/Restore'), 'link' => 'system_backup.php', 'visible' => $isAdminSession];
+$menu['system']['menuitem'][] = ['desc' => gtext('Factory Defaults'), 'link' => 'system_defaults.php', 'visible' => $isAdminSession];
+$menu['system']['menuitem'][] = ['type' => 'separator', 'visible' => $isAdminSession];
+$menu['system']['menuitem'][] = ['desc' => gtext('Reboot'), 'link' => 'reboot.php', 'visible' => $isAdminSession];
+$menu['system']['menuitem'][] = ['desc' => gtext('Shutdown'), 'link' => 'shutdown.php', 'visible' => $isAdminSession];
+$menu['system']['menuitem'][] = ['type' => 'separator', 'visible' => true];
+$menu['system']['menuitem'][] = ['desc' => gtext('Logout'), 'link' => 'logout.php', 'visible' => true];
 
 // Network
-$menu['network']['desc'] = gtext("Network");
-$menu['network']['visible'] = Session::isAdmin();
-$menu['network']['link'] = "";
-$menu['network']['menuitem'] = array();
-$menu['network']['menuitem'][] = array("desc" => gtext("Interface Management"), "link" => "interfaces_assign.php", "visible" => TRUE);
-$menu['network']['menuitem'][] = array("desc" => gtext("LAN Management"), "link" => "interfaces_lan.php", "visible" => TRUE);
+$menu['network']['desc'] = gtext('Network');
+$menu['network']['visible'] = $isAdminSession;
+$menu['network']['link'] = '';
+$menu['network']['menuitem'] = [];
+$menu['network']['menuitem'][] = ['desc' => gtext('Interface Management'), 'link' => 'interfaces_assign.php', 'visible' => true];
+$menu['network']['menuitem'][] = ['desc' => gtext('LAN Management'), 'link' => 'interfaces_lan.php', 'visible' => true];
 for ($i = 1; isset($config['interfaces']['opt' . $i]); $i++) {
 	$desc = $config['interfaces']['opt'.$i]['descr'];
-	$menu['network']['menuitem'][] = array("desc" => "{$desc}", "link" => "interfaces_opt.php?index={$i}", "visible" => TRUE);
+	$menu['network']['menuitem'][] = ['desc' => "{$desc}", 'link' => "interfaces_opt.php?index={$i}", 'visible' => true];
 }
-$menu['network']['menuitem'][] = array("type" => "separator", "visible" => TRUE);
-$menu['network']['menuitem'][] = array("desc" => gtext("Hosts"), "link" => "system_hosts.php", "visible" => TRUE);
-$menu['network']['menuitem'][] = array("desc" => gtext("Static Routes"), "link" => "system_routes.php", "visible" => TRUE);
-$menu['network']['menuitem'][] = array("type" => "separator", "visible" => TRUE);
-$menu['network']['menuitem'][] = array("desc" => gtext("Proxy"), "link" => "system_proxy.php", "visible" => TRUE);
-$menu['network']['menuitem'][] = array("desc" => gtext("Firewall"), "link" => "system_firewall.php", "visible" => TRUE);
+$menu['network']['menuitem'][] = ['type' => 'separator', 'visible' => true];
+$menu['network']['menuitem'][] = ['desc' => gtext('Hosts'), 'link' => 'system_hosts.php', 'visible' => true];
+$menu['network']['menuitem'][] = ['desc' => gtext('Static Routes'), 'link' => 'system_routes.php', 'visible' => true];
+$menu['network']['menuitem'][] = ['type' => 'separator', 'visible' => true];
+$menu['network']['menuitem'][] = ['desc' => gtext('Proxy'), 'link' => 'system_proxy.php', 'visible' => true];
+$menu['network']['menuitem'][] = ['desc' => gtext('Firewall'), 'link' => 'system_firewall.php', 'visible' => true];
 
 // Disks
-$menu['disks']['desc'] = gtext("Disks");
-$menu['disks']['visible'] = Session::isAdmin();
-$menu['disks']['link'] = "";
-$menu['disks']['menuitem'] = array();
-$menu['disks']['menuitem'][] = array("desc" => gtext("Management"), "link" => "disks_manage.php", "visible" => TRUE);
-$menu['disks']['menuitem'][] = array("desc" => gtext("Software RAID"), "link" => "disks_raid_geom.php", "visible" => TRUE);
-$menu['disks']['menuitem'][] = array("desc" => gtext("ZFS"), "link" => "disks_zfs_zpool.php", "visible" => TRUE);
-$menu['disks']['menuitem'][] = array("type" => "separator", "visible" => TRUE);
-$menu['disks']['menuitem'][] = array("desc" => gtext("Encryption"), "link" => "disks_crypt.php", "visible" => TRUE);
-$menu['disks']['menuitem'][] = array("desc" => gtext("Mount Point"), "link" => "disks_mount.php", "visible" => TRUE);
+$menu['disks']['desc'] = gtext('Disks');
+$menu['disks']['visible'] = $isAdminSession;
+$menu['disks']['link'] = '';
+$menu['disks']['menuitem'] = [];
+$menu['disks']['menuitem'][] = ['desc' => gtext('Management'), 'link' => 'disks_manage.php', 'visible' => true];
+$menu['disks']['menuitem'][] = ['desc' => gtext('Software RAID'), 'link' => 'disks_raid_geom.php', 'visible' => true];
+$menu['disks']['menuitem'][] = ['desc' => gtext('ZFS'), 'link' => 'disks_zfs_zpool.php', 'visible' => true];
+$menu['disks']['menuitem'][] = ['type' => 'separator', 'visible' => true];
+$menu['disks']['menuitem'][] = ['desc' => gtext('Encryption'), 'link' => 'disks_crypt.php', 'visible' => true];
+$menu['disks']['menuitem'][] = ['desc' => gtext('Mount Point'), 'link' => 'disks_mount.php', 'visible' => true];
 
 // Services
-$menu['services']['desc'] = gtext("Services");
-$menu['services']['visible'] = Session::isAdmin();
-$menu['services']['link'] = "status_services.php";
-$menu['services']['menuitem'] = array();
-if ("dom0" !== $g['arch']) {
-$menu['services']['menuitem'][] = array("desc" => gtext("HAST"), "link" => "services_hast.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("Samba AD"), "link" => "services_samba_ad.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("type" => "separator", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("CIFS/SMB"), "link" => "services_samba.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("FTP"), "link" => "services_ftp.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("TFTP"), "link" => "services_tftp.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("SSH"), "link" => "services_sshd.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("NFS"), "link" => "services_nfs.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("AFP"), "link" => "services_afp.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("Rsync"), "link" => "services_rsyncd.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("Syncthing"), "link" => "services_syncthing.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("Unison"), "link" => "services_unison.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("iSCSI Target"), "link" => "services_iscsitarget.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("DLNA/UPnP"), "link" => "services_fuppes.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("iTunes/DAAP"), "link" => "services_daap.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("Dynamic DNS"), "link" => "services_dynamicdns.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("SNMP"), "link" => "services_snmp.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("UPS"), "link" => "services_ups.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("Webserver"), "link" => "services_websrv.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("BitTorrent"), "link" => "services_bittorrent.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("LCDproc"), "link" => "services_lcdproc.php", "visible" => TRUE);
+$menu['services']['desc'] = gtext('Services');
+$menu['services']['visible'] = $isAdminSession;
+$menu['services']['link'] = 'status_services.php';
+$menu['services']['menuitem'] = [];
+if ('dom0' !== $g['arch']) {
+	$menu['services']['menuitem'][] = ['desc' => gtext('HAST'), 'link' => 'services_hast.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('Samba AD'), 'link' => 'services_samba_ad.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['type' => 'separator', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('CIFS/SMB'), 'link' => 'services_samba.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('FTP'), 'link' => 'services_ftp.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('TFTP'), 'link' => 'services_tftp.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('SSH'), 'link' => 'services_sshd.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('NFS'), 'link' => 'services_nfs.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('AFP'), 'link' => 'services_afp.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('Rsync'), 'link' => 'services_rsyncd.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('Syncthing'), 'link' => 'services_syncthing.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('Unison'), 'link' => 'services_unison.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('iSCSI Target'), 'link' => 'services_iscsitarget.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('DLNA/UPnP'), 'link' => 'services_fuppes.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('iTunes/DAAP'), 'link' => 'services_daap.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('Dynamic DNS'), 'link' => 'services_dynamicdns.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('SNMP'), 'link' => 'services_snmp.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('UPS'), 'link' => 'services_ups.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('Webserver'), 'link' => 'services_websrv.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('BitTorrent'), 'link' => 'services_bittorrent.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('LCDproc'), 'link' => 'services_lcdproc.php', 'visible' => true];
 } else {
-$menu['services']['menuitem'][] = array("desc" => gtext("SSH"), "link" => "services_sshd.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("NFS"), "link" => "services_nfs.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("iSCSI Target"), "link" => "services_iscsitarget.php", "visible" => TRUE);
-$menu['services']['menuitem'][] = array("desc" => gtext("UPS"), "link" => "services_ups.php", "visible" => TRUE);
+	$menu['services']['menuitem'][] = ['desc' => gtext('SSH'), 'link' => 'services_sshd.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('NFS'), 'link' => 'services_nfs.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('iSCSI Target'), 'link' => 'services_iscsitarget.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('UPS'), 'link' => 'services_ups.php', 'visible' => true];
 }
 
 // VM
-if ("x64" == $g['arch']) {
-$menu['vm']['desc'] = gtext("VM");
-$menu['vm']['visible'] = Session::isAdmin();
-$menu['vm']['link'] = "";
-$menu['vm']['menuitem'] = array();
+if ('x64' == $g['arch']) {
+	$menu['vm']['desc'] = gtext('VM');
+	$menu['vm']['visible'] = $isAdminSession;
+	$menu['vm']['link'] = '';
+	$menu['vm']['menuitem'] = [];
 }
-if ("dom0" !== $g['arch']) {
-$menu['vm']['menuitem'][] = array("desc" => gtext("VirtualBox"), "link" => "vm_vbox.php", "visible" => Session::isAdmin());
+if ('dom0' !== $g['arch']) {
+	$menu['vm']['menuitem'][] = ['desc' => gtext('VirtualBox'), 'link' => 'vm_vbox.php', 'visible' => $isAdminSession];
 } else {
-$menu['vm']['menuitem'][] = array("desc" => gtext("Virtual Machine"), "link" => "vm_xen.php", "visible" => TRUE);
+	$menu['vm']['menuitem'][] = ['desc' => gtext('Virtual Machine'), 'link' => 'vm_xen.php', 'visible' => true];
 }
 
 // Access
-$menu['access']['desc'] = gtext("Access");
-$menu['access']['visible'] = Session::isAdmin();
-$menu['access']['link'] = "";
-$menu['access']['menuitem'] = array();
-$menu['access']['menuitem'][] = array("desc" => gtext("Users & Groups"), "link" => "access_users.php", "visible" => TRUE);
-if ("dom0" !== $g['arch']) {
-$menu['access']['menuitem'][] = array("desc" => gtext("Active Directory"), "link" => "access_ad.php", "visible" => TRUE);
-$menu['access']['menuitem'][] = array("desc" => gtext("LDAP"), "link" => "access_ldap.php", "visible" => TRUE);
-$menu['access']['menuitem'][] = array("desc" => gtext("NIS"), "link" => "notavailable.php", "visible" => false);
+$menu['access']['desc'] = gtext('Access');
+$menu['access']['visible'] = $isAdminSession;
+$menu['access']['link'] = '';
+$menu['access']['menuitem'] = [];
+$menu['access']['menuitem'][] = ['desc' => gtext('Users & Groups'), 'link' => 'access_users.php', 'visible' => true];
+if ('dom0' !== $g['arch']) {
+	$menu['access']['menuitem'][] = ['desc' => gtext('Active Directory'), 'link' => 'access_ad.php', 'visible' => true];
+	$menu['access']['menuitem'][] = ['desc' => gtext('LDAP'), 'link' => 'access_ldap.php', 'visible' => true];
+	$menu['access']['menuitem'][] = ['desc' => gtext('NIS'), 'link' => 'notavailable.php', 'visible' => false];
 }
 
 // Status
-$menu['status']['desc'] = gtext("Status");
-$menu['status']['visible'] = Session::isAdmin();
-$menu['status']['link'] = "index.php";
-$menu['status']['menuitem'] = array();
-$menu['status']['menuitem'][] = array("desc" => gtext("System"), "link" => "index.php", "visible" => TRUE);
-$menu['status']['menuitem'][] = array("desc" => gtext("Process"), "link" => "status_process.php", "visible" => TRUE);
-$menu['status']['menuitem'][] = array("desc" => gtext("Services"), "link" => "status_services.php", "visible" => TRUE);
-$menu['status']['menuitem'][] = array("desc" => gtext("Interfaces"), "link" => "status_interfaces.php", "visible" => TRUE);
-$menu['status']['menuitem'][] = array("desc" => gtext("Disks"), "link" => "status_disks.php", "visible" => TRUE);
-$menu['status']['menuitem'][] = array("desc" => gtext("Graph"), "link" => "status_graph.php", "visible" => TRUE);
-$menu['status']['menuitem'][] = array("desc" => gtext("Email Report"), "link" => "status_report.php", "visible" => TRUE);
+$menu['status']['desc'] = gtext('Status');
+$menu['status']['visible'] = $isAdminSession;
+$menu['status']['link'] = 'index.php';
+$menu['status']['menuitem'] = [];
+$menu['status']['menuitem'][] = ['desc' => gtext('System'), 'link' => 'index.php', 'visible' => true];
+$menu['status']['menuitem'][] = ['desc' => gtext('Process'), 'link' => 'status_process.php', 'visible' => true];
+$menu['status']['menuitem'][] = ['desc' => gtext('Services'), 'link' => 'status_services.php', 'visible' => true];
+$menu['status']['menuitem'][] = ['desc' => gtext('Interfaces'), 'link' => 'status_interfaces.php', 'visible' => true];
+$menu['status']['menuitem'][] = ['desc' => gtext('Disks'), 'link' => 'status_disks.php', 'visible' => true];
+$menu['status']['menuitem'][] = ['desc' => gtext('Graph'), 'link' => 'status_graph.php', 'visible' => true];
+$menu['status']['menuitem'][] = ['desc' => gtext('Email Report'), 'link' => 'status_report.php', 'visible' => true];
 
 // Advanced
-$menu['advanced']['desc'] = gtext("Advanced");
+$menu['advanced']['desc'] = gtext('Advanced');
 $menu['advanced']['visible'] = TRUE;
-$menu['advanced']['link'] = "";
-$menu['advanced']['menuitem'] = array();
-$menu['advanced']['menuitem'][] = array("desc" => gtext("File Editor"), "link" => "system_edit.php", "visible" => Session::isAdmin());
+$menu['advanced']['link'] = '';
+$menu['advanced']['menuitem'] = [];
+$menu['advanced']['menuitem'][] = ['desc' => gtext('File Editor'), 'link' => 'system_edit.php', 'visible' => $isAdminSession];
 if (!isset($config['system']['disablefm'])) {
-	$menu['advanced']['menuitem'][] = array("desc" => gtext("File Manager"), "link" => "/quixplorer/system_filemanager.php", "visible" => TRUE);
+	$menu['advanced']['menuitem'][] = ['desc' => gtext('File Manager'), 'link' => '/quixplorer/system_filemanager.php', 'visible' => true];
 }
-$menu['advanced']['menuitem'][] = array("type" => "separator", "visible" => Session::isAdmin());
-$menu['advanced']['menuitem'][] = array("desc" => gtext("Command"), "link" => "exec.php", "visible" => Session::isAdmin());
+$menu['advanced']['menuitem'][] = ['type' => 'separator', 'visible' => $isAdminSession];
+$menu['advanced']['menuitem'][] = ['desc' => gtext('Command'), 'link' => 'exec.php', 'visible' => $isAdminSession];
 
 // Diagnostics
-$menu['diagnostics']['desc'] = gtext("Diagnostics");
-$menu['diagnostics']['visible'] = Session::isAdmin();
-$menu['diagnostics']['link'] = "";
-$menu['diagnostics']['menuitem'] = array();
-$menu['diagnostics']['menuitem'][] = array("desc" => gtext("Log"), "link" => "diag_log.php", "visible" => TRUE);
-$menu['diagnostics']['menuitem'][] = array("desc" => gtext("Information"), "link" => "diag_infos.php", "visible" => TRUE);
-$menu['diagnostics']['menuitem'][] = array("type" => "separator", "visible" => TRUE);
-$menu['diagnostics']['menuitem'][] = array("desc" => gtext("Ping/Traceroute"), "link" => "diag_ping.php", "visible" => TRUE);
-$menu['diagnostics']['menuitem'][] = array("desc" => gtext("ARP Tables"), "link" => "diag_arp.php", "visible" => TRUE);
-$menu['diagnostics']['menuitem'][] = array("desc" => gtext("Routes"), "link" => "diag_routes.php", "visible" => TRUE);
+$menu['diagnostics']['desc'] = gtext('Diagnostics');
+$menu['diagnostics']['visible'] = $isAdminSession;
+$menu['diagnostics']['link'] = '';
+$menu['diagnostics']['menuitem'] = [];
+$menu['diagnostics']['menuitem'][] = ['desc' => gtext('Log'), 'link' => 'diag_log.php', 'visible' => true];
+$menu['diagnostics']['menuitem'][] = ['desc' => gtext('Information'), 'link' => 'diag_infos.php', 'visible' => true];
+$menu['diagnostics']['menuitem'][] = ['type' => 'separator', 'visible' => true];
+$menu['diagnostics']['menuitem'][] = ['desc' => gtext('Ping/Traceroute'), 'link' => 'diag_ping.php', 'visible' => true];
+$menu['diagnostics']['menuitem'][] = ['desc' => gtext('ARP Tables'), 'link' => 'diag_arp.php', 'visible' => true];
+$menu['diagnostics']['menuitem'][] = ['desc' => gtext('Routes'), 'link' => 'diag_routes.php', 'visible' => true];
 
 // Help
-$menu['help']['desc'] = gtext("Help");
+$menu['help']['desc'] = gtext('Help');
 $menu['help']['visible'] = TRUE;
-$menu['help']['link'] = "";
-$menu['help']['menuitem'] = array();
-$menu['help']['menuitem'][] = array("desc" => gtext("Forum"), "link" => "http://forums.nas4free.org", "visible" => TRUE, "target" => "_blank");
-$menu['help']['menuitem'][] = array("desc" => gtext("Information & Manual"), "link" => "http://wiki.nas4free.org/", "visible" => TRUE, "target" => "_blank");
-$menu['help']['menuitem'][] = array("desc" => gtext("IRC Live Support"), "link" => "http://webchat.freenode.net/?channels=#nas4free", "visible" => TRUE, "target" => "_blank");
-$menu['help']['menuitem'][] = array("type" => "separator", "visible" => TRUE);
-$menu['help']['menuitem'][] = array("desc" => gtext("Release Notes"), "link" => "changes.php", "visible" => TRUE);
-$menu['help']['menuitem'][] = array("desc" => gtext("License & Credits"), "link" => "license.php", "visible" => TRUE);
-$menu['help']['menuitem'][] = array("desc" => gtext("Donate"), "link" => "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40nas4free%2eorg&lc=US&item_name=NAS4Free%20Project&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest", "visible" => TRUE, "target" => "_blank");
+$menu['help']['link'] = '';
+$menu['help']['menuitem'] = [];
+$menu['help']['menuitem'][] = ['desc' => gtext('Forum'), 'link' => 'http://forums.nas4free.org', 'visible' => TRUE, 'target' => '_blank'];
+$menu['help']['menuitem'][] = ['desc' => gtext('Information & Manual'), 'link' => 'http://wiki.nas4free.org', 'visible' => TRUE, 'target' => '_blank'];
+$menu['help']['menuitem'][] = ['desc' => gtext('IRC Live Support'), 'link' => 'http://webchat.freenode.net/?channels=#nas4free', 'visible' => TRUE, 'target' => '_blank'];
+$menu['help']['menuitem'][] = ['type' => 'separator', 'visible' => true];
+$menu['help']['menuitem'][] = ['desc' => gtext('Release Notes'), 'link' => 'changes.php', 'visible' => true];
+$menu['help']['menuitem'][] = ['desc' => gtext('License & Credits'), 'link' => 'license.php', 'visible' => true];
+$menu['help']['menuitem'][] = ['desc' => gtext('Donate'), 'link' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40nas4free%2eorg&lc=US&item_name=NAS4Free%20Project&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest', 'visible' => TRUE, 'target' => '_blank'];
 function display_menu($menuid) {
 	global $menu;
 
@@ -213,11 +214,11 @@ function display_menu($menuid) {
 	if ($link == '') $link = 'index.php';
 	echo "<li>\n";
 	    $agent = $_SERVER['HTTP_USER_AGENT']; // Put browser name into local variable for desktop/mobile detection
-       if ((preg_match("/iPhone/i", $agent)) || (preg_match("/android/i", $agent))) {
-          echo "<a href=\"javascript:mopen('{$menuid}');\" onmouseout=\"mclosetime()\">".htmlspecialchars($menu[$menuid]['desc'])."</a>\n";
+       if ((preg_match('/iPhone/i', $agent)) || (preg_match('/android/i', $agent))) {
+          echo "<a href=\"javascript:mopen('{$menuid}');\" onmouseout=\"mclosetime()\">".$menu[$menuid]['desc']."</a>\n";
        }
        else {
-          echo "<a href=\"{$link}\" onmouseover=\"mopen('{$menuid}')\" onmouseout=\"mclosetime()\">".htmlspecialchars($menu[$menuid]['desc'])."</a>\n";
+          echo "<a href=\"{$link}\" onmouseover=\"mopen('{$menuid}')\" onmouseout=\"mclosetime()\">".$menu[$menuid]['desc']."</a>\n";
        }
 	echo "	<div id=\"{$menuid}\" onmouseover=\"mcancelclosetime()\" onmouseout=\"mclosetime()\">\n";
 
@@ -227,11 +228,11 @@ function display_menu($menuid) {
 		if (!$menuv['visible']) {
 			continue;
 		}
-		if (!isset($menuv['type']) || "separator" !== $menuv['type']) {
+		if (!isset($menuv['type']) || 'separator' !== $menuv['type']) {
 			# Display menuitem.
 			$link = $menuv['link'];
 			if ($link == '') $link = 'index.php';
-			echo "<a href=\"{$link}\" target=\"" . (empty($menuv['target']) ? "_self" : $menuv['target']) . "\" title=\"".htmlspecialchars($menuv['desc'])."\">".htmlspecialchars($menuv['desc'])."</a>\n";
+			echo "<a href=\"{$link}\" target=\"" . (empty($menuv['target']) ? "_self" : $menuv['target']) . "\" title=\"".$menuv['desc']."\">".$menuv['desc']."</a>\n";
 		} else {
 			# Display separator.
 			echo "<span class=\"tabseparator\">&nbsp;</span>";
@@ -242,7 +243,7 @@ function display_menu($menuid) {
 	echo "</li>\n";
 }
 ?>
-<?php header("Content-Type: text/html; charset=" . system_get_language_codeset());?>
+<?php header('Content-Type: text/html; charset=' . system_get_language_codeset());?>
 <?php
   // XML declarations
 /*
@@ -268,7 +269,7 @@ function display_menu($menuid) {
 	<script type="text/javascript" src="/js/gui.js"></script>
 	<?php include("js/spinner.inc");?>
 	<script type="text/javascript" src="/js/spin.min.js"></script>
-<?php
+	<?php
 	if (isset($pglocalheader) && !empty($pglocalheader)) {
 		if (is_array($pglocalheader)) {
 			foreach ($pglocalheader as $pglocalheaderv) {
@@ -280,7 +281,7 @@ function display_menu($menuid) {
 			echo "\n";
 		}
 	}
-?>
+	?>
 </head>
 <body>
 <div id="header">
@@ -295,20 +296,20 @@ function display_menu($menuid) {
 </div>
 <div id="headernavbar">
 	<ul id="navbarmenu">
-		<?=display_menu("system");?>
-		<?=display_menu("network");?>
-		<?=display_menu("disks");?>
-		<?=display_menu("services");?>
+		<?=display_menu('system');?>
+		<?=display_menu('network');?>
+		<?=display_menu('disks');?>
+		<?=display_menu('services');?>
 		<!-- Begin extension section -->
-		<?php if (Session::isAdmin() && is_dir("{$g['www_path']}/ext")):?>
+		<?php if ($isAdminSession && is_dir("{$g['www_path']}/ext")):?>
 		<li>
 		<?php
                 $agent = $_SERVER['HTTP_USER_AGENT']; // Put browser name into local variable for desktop/mobile detection
-                if ((preg_match("/iPhone/i", $agent)) || (preg_match("/android/i", $agent))) {
-                   echo "<a href=\"javascript:mopen('extensions');\" onmouseout=\"mclosetime()\">".gtext("Extensions")."</a>";
+                if ((preg_match('/iPhone/i', $agent)) || (preg_match('/android/i', $agent))) {
+                   echo "<a href=\"javascript:mopen('extensions');\" onmouseout=\"mclosetime()\">".gtext('Extensions')."</a>";
                 }
                 else {
-                    echo "<a href=\"index.php\" onmouseover=\"mopen('extensions')\" onmouseout=\"mclosetime()\">".gtext("Extensions")."</a>";
+                    echo "<a href=\"index.php\" onmouseover=\"mopen('extensions')\" onmouseout=\"mclosetime()\">".gtext('Extensions')."</a>";
                 }
                 ?>
 			<div id="extensions" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
@@ -316,7 +317,7 @@ function display_menu($menuid) {
 				$dh = @opendir("{$g['www_path']}/ext");
 				if ($dh) {
 					while (($extd = readdir($dh)) !== false) {
-						if (($extd === ".") || ($extd === ".."))
+						if (($extd === '.') || ($extd === '..'))
 							continue;
 						@include("{$g['www_path']}/ext/" . $extd . "/menu.inc");
 					}
@@ -326,12 +327,12 @@ function display_menu($menuid) {
 		</li>
 		<?php endif;?>
 		<!-- End extension section -->
-		<?=display_menu("vm");?>
-		<?=display_menu("access");?>
-		<?=display_menu("status");?>
-		<?=display_menu("diagnostics");?>
-		<?=display_menu("advanced");?>
-		<?=display_menu("help");?>
+		<?=display_menu('vm');?>
+		<?=display_menu('access');?>
+		<?=display_menu('status');?>
+		<?=display_menu('diagnostics');?>
+		<?=display_menu('advanced');?>
+		<?=display_menu('help');?>
 	</ul>
 	<div style="clear:both"></div>
 </div>
@@ -343,5 +344,5 @@ function display_menu($menuid) {
 	<tr>
 <td>
 <?php if (!isset($pgtitle_omit) || !$pgtitle_omit): ?>
-		<p class="pgtitle"><?=htmlspecialchars(gentitle($pgtitle));?></p>
+	<p class="pgtitle"><?=htmlspecialchars(gentitle($pgtitle));?></p>
 <?php endif;?>
