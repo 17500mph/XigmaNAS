@@ -1,6 +1,6 @@
 PORTNAME?=		${SAMBA4_BASENAME}43
 PORTVERSION?=		${SAMBA4_VERSION}
-PORTREVISION?=		0
+PORTREVISION?=		1
 CATEGORIES?=		net
 MASTER_SITES=		SAMBA/samba/stable SAMBA/samba/rc
 DISTNAME=		${SAMBA4_DISTNAME}
@@ -79,8 +79,8 @@ LIB_DEPENDS+=		libgnutls.so:security/gnutls
 # NFS4 ACL glue
 LIB_DEPENDS+=		libsunacl.so:sysutils/libsunacl
 # Libarchive
-BUILD_DEPENDS+=		libarchive>=3.1.2:archivers/libarchive
-RUN_DEPENDS+=		libarchive>=3.1.2:archivers/libarchive
+BUILD_DEPENDS+=		libarchive>=3.2.1:archivers/libarchive
+RUN_DEPENDS+=		libarchive>=3.2.1:archivers/libarchive
 # External Samba dependencies
 # IDL compiler
 BUILD_DEPENDS+=		p5-Parse-Pidl>=4.3.1:devel/p5-Parse-Pidl
