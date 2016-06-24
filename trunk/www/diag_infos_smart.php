@@ -37,7 +37,7 @@ require("guiconfig.inc");
 $pgtitle = array(gtext("Diagnostics"), gtext("Information"), gtext("S.M.A.R.T."));
 $a_disk = get_physical_disks_list();
 
-$smartValueInfo = array(
+$smartValueInfo = [
 	"1" => array(False,"",gtext("(Vendor specific raw value.) Stores data related to the rate of hardware read errors that occurred when reading data from a disk surface. The raw value has different structure for different vendors and is often not meaningful as a decimal number.")),
 	"2" => array(False,"",gtext("Overall (general) throughput performance of a hard disk drive. If the value of this attribute is decreasing there is a high probability that there is a problem with the disk.")),
 	"3" => array(False,"",gtext("Average time of spindle spin up (from zero RPM to fully operational).")),
@@ -58,7 +58,7 @@ $smartValueInfo = array(
 	"172" => array(False,"",gtext("(Kingston)Counts the number of flash erase failures. This Attribute returns the total number of Flash erase operation failures since the drive was deployed. This Attribute is identical to Attribute 182.")),
 	"173" => array(False,"",gtext("Counts the maximum worst erase count on any block.")),
 	"174" => array(False,"",gtext("Also known as 'Power-off Retract Count' per conventional HDD terminology. Raw value reports the number of unclean shutdowns, cumulative over the life of an SSD, where an 'unclean shutdown' is the removal of power without STANDBY IMMEDIATE as the last command (regardless of PLI activity using capacitor power). Normalized value is always 100.")),
-	"175" => array(False,"",gettext("Last test result as microseconds to discharge cap, saturated at its maximum value. Also logs minutes since last test and lifetime number of tests. Raw value contains the following data: Bytes 0-1: Last test result as microseconds to discharge cap, saturates at max value. Test result expected in range 25 <= result <= 5000000, lower indicates specific error code. Bytes 2-3: Minutes since last test, saturates at max value. Bytes 4-5: Lifetime number of tests, not incremented on power cycle, saturates at max value. Normalized value is set to one on test failure or 11 if the capacitor has been tested in an excessive temperature condition, otherwise 100.")),
+	"175" => array(False,"",gtext("Last test result as microseconds to discharge cap, saturated at its maximum value. Also logs minutes since last test and lifetime number of tests. Raw value contains the following data: Bytes 0-1: Last test result as microseconds to discharge cap, saturates at max value. Test result expected in range 25 <= result <= 5000000, lower indicates specific error code. Bytes 2-3: Minutes since last test, saturates at max value. Bytes 4-5: Lifetime number of tests, not incremented on power cycle, saturates at max value. Normalized value is set to one on test failure or 11 if the capacitor has been tested in an excessive temperature condition, otherwise 100.")),
 	"176" => array(False,"",gtext("Erase Fail Count (chip). This parameter indicates a number of flash erase command failures.")),
 	"177" => array(False,"",gtext("Delta between most-worn and least-worn Flash blocks. It describes how good/bad the wearleveling of the SSD works on a more technical way.")),
 	"179" => array(False,"",gtext("Pre-Fail' Attribute used at least in Samsung devices.")),
@@ -128,7 +128,7 @@ $smartValueInfo = array(
 	"251" => array(False,"",gtext("The Minimum Spares Remaining attribute indicates the number of remaining spare blocks as a percentage of the total number of spare blocks available.")),
 	"252" => array(False,"",gtext("The Newly Added Bad Flash Block attribute indicates the total number of bad flash blocks the drive detected since it was first initialized in manufacturing.")),
 	"254" => array(False,"",gtext("Count of 'Free Fall Events' detected."))
-);
+];
 
 include("fbegin.inc");
 ?>

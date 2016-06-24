@@ -92,7 +92,7 @@ if (!(isset($config['zfs']['pools']) && is_array($config['zfs']['pools']))) {
 }
 if (!(isset($config['zfs']['pools']['pool']) && is_array($config['zfs']['pools']['pool']))) {
 	$config['zfs']['pools']['pool'] = [];
-	$errormsg = sprintf(gettext("No configured pools. Please add new <a href='%s'>pools</a> first."), 'disks_zfs_zpool.php');
+	$errormsg = gtext('No configured pools.') . ' ' . '<a href="' . 'disks_zfs_zpool.php' . '">' . gtext('Please add new pools first.') . '</a>';
 	$prerequisites_ok = false;
 }
 array_sort_key($config['zfs']['pools']['pool'], 'name');
@@ -428,7 +428,16 @@ $(window).on("load", function() {
 				html_inputbox2('name', gtext('Name'), $sphere_record['name'], '', true, 20, $isrecordmodify);
 				html_combobox2('pool', gtext('Pool'), $sphere_record['pool'], $l_poollist, '', true, $isrecordmodify);
 				html_combobox2('compression', gtext('Compression'), $sphere_record['compression'], $l_compressionmode, gtext("Controls the compression algorithm used for this dataset. The 'lzjb' compression algorithm is optimized for performance while providing decent data compression. Setting compression to 'On' uses the 'lzjb' compression algorithm. You can specify the 'gzip' level by using the value 'gzip-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'gzip' is equivalent to 'gzip-6'."), true);
-				html_combobox2('dedup', gtext('Dedup'), $sphere_record['dedup'], $l_dedup, gettext("Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See <a href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide:disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & deduplication</a> wiki article BEFORE using this feature.</b></br>"), true);
+				$helpinghand = gtext('Controls the dedup method.')
+					. ' '
+					. '<br><b>'
+					. '<font color="red">' . gtext('WARNING') . '</font>'
+					. ': '
+					. '<a href="http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide:disks_zfs_datasets_dataset" target="_blank">'
+					. gtext('See ZFS datasets & deduplication wiki article BEFORE using this feature.')
+					. '</a>'
+					. '</b></br>';
+				html_combobox2('dedup', gtext('Dedup'), $sphere_record['dedup'], $l_dedup, $helpinghand, true);
 				html_combobox2('sync', gtext('Sync'), $sphere_record['sync'], $l_sync, gtext('Controls the behavior of synchronous requests.'), true);
 				html_combobox2('atime', gtext('Access Time (atime)'), $sphere_record['atime'], $l_atime, gtext('Turn access time on or off for this dataset.'), true);
 				html_combobox2('aclinherit', gtext('ACL inherit'), $sphere_record['aclinherit'], $l_aclinherit, gtext('This attribute determines the behavior of Access Control List inheritance.'), true);

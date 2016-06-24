@@ -86,10 +86,7 @@ array_sort_key($config['zfs']['pools']['pool'], 'name');
 $a_pool = &$config['zfs']['pools']['pool'];
 
 if (empty($a_pool)) { // Throw error message if no pool exists
-	$link = sprintf('<a href="%1$s">%2$s</a>', 'disks_zfs_zpool.php', gtext('pools'));
-	$helpinghand = gtext('No configured pools.') . ' ' . gtext('Please add new %s first.');
-	$helpinghand = sprintf($helpinghand, $link);
-	$errormsg = $helpinghand;
+	$errormsg = gtext('No configured pools.') . ' ' . '<a href="' . 'disks_zfs_zpool.php' . '">' . gtext('Please add new pools first.') . '</a>';
 	$prerequisites_ok = false;
 }
 
@@ -384,7 +381,16 @@ $(window).on("load", function() {
 				html_inputbox2('volsize', gtext('Size'), $sphere_record['volsize'], gtext("ZFS volume size. To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."), true, 10);
 				html_combobox2('volmode', gtext('Volume mode'), $sphere_record['volmode'], $l_volmode, gtext('Specifies how the volume should be exposed to the OS.'), true);
 				html_combobox2('compression', gtext('Compression'), $sphere_record['compression'], $l_compressionmode, gtext("Controls the compression algorithm used for this volume. The 'lzjb' compression algorithm is optimized for performance while providing decent data compression. Setting compression to 'On' uses the 'lzjb' compression algorithm. You can specify the 'gzip' level by using the value 'gzip-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'gzip' is equivalent to 'gzip-6'."), true);
-				html_combobox2('dedup', gtext('Dedup'), $sphere_record['dedup'], $l_dedup, gettext("Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See <a href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide:disks-zfs-volumes-volume' target='_blank'>ZFS volumes & deduplication</a> wiki article BEFORE using this feature.</b></br>"), true);
+				$helpinghand = gtext('Controls the dedup method.')
+					. ' '
+					. '<br><b>'
+					. '<font color="red">' . gtext('WARNING') . '</font>'
+					. ': '
+					. '<a href="http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide:disks-zfs-volumes-volume" target="_blank">'
+					. gtext('See ZFS volumes & deduplication wiki article BEFORE using this feature.')
+					. '</a>'
+					. '</b></br>';
+				html_combobox2('dedup', gtext('Dedup'), $sphere_record['dedup'], $l_dedup, $helpinghand, true);
 				html_combobox2('sync', gtext('Sync'), $sphere_record['sync'], $l_sync, gtext('Controls the behavior of synchronous requests.'), true);
 				html_checkbox2('sparse', gtext('Sparse Volume'), !empty($sphere_record['sparse']) ? true : false, gtext('Use as sparse volume. (thin provisioning)'), '', false);
 				html_combobox2('volblocksize', gtext('Block size'), $sphere_record['volblocksize'], $l_volblocksize, gtext('ZFS volume block size. This value can not be changed after creation.'), false, $isrecordmodify);
