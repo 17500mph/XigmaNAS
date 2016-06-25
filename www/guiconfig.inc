@@ -296,8 +296,17 @@ function print_warning_box($msg) {
 
 function print_config_change_box() {
 	$message = gtext("Apply changes");
+	$gt_info = gtext('The configuration has been changed.')
+		. '<br />'
+		. gtext('You must apply the changes in order for them to take effect.')
+		. '<br />'
+		. '<b>'
+		. '<a href="' . 'diag_log.php' . '">'
+		. gtext('If this message persist take a look at the system log for more information.')
+		. '</a>'
+		. '</b>';
 	echo "<div id='applybox'>";
-	print_info_box(sprintf(gettext("The configuration has been changed.<br />You must apply the changes in order for them to take effect.<br /><b>If this message persist take a look at the <a href='%s'>system log</a> for more information.</b>"), "diag_log.php"));
+	print_info_box($gt_info);
 	echo "<input name=\"apply\" type=\"submit\" class=\"formbtn\" id=\"apply\" value=\"{$message}\" />";
 	echo "</div>";
 }
@@ -321,14 +330,25 @@ function get_std_save_message($ok) {
 
 	if ($ok == 0) {
 		if (file_exists($d_sysrebootreqd_path)) {
-			return sprintf( gettext("The changes have been saved. You have to <a href='%s'>reboot</a> the system for the changes to take effect."), "reboot.php");
-		}
-		else {
-			return gtext("The changes have been applied successfully.");
+			$gt_ret = gtext('The changes have been saved.')
+			. ' '
+			. '<a href="' . 'reboot.php' . '">'
+			. gtext('You have to reboot the system for the changes to take effect.')
+			. '</a>';
+		} else {
+			$gt_ret = gtext('The changes have been applied successfully.');
 		}
 	} else {
-		return sprintf( gtext("Error: The changes could not be applied (error code %s)."), $ok);
+		$gt_ret = gtext('Error')
+			. ': '
+			. gtext('The changes could not be applied')
+			. ' ('
+			. gtext('Error Code')
+			. ' '
+			. sprintf('%s',$ok)
+			. ').';
 	}
+	return $gt_ret;
 }
 
 function html_inputbox($ctrlname, $title, $value, $desc, $required = false, $size = 40, $readonly = false) {

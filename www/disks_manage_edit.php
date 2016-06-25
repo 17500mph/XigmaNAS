@@ -204,19 +204,33 @@ function smart_enable_change() {
 							</select>
 					  </td>
 					</tr>
-					<?php html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("You may enter a description here for your reference."), false, 40);?>
-					<?php $options = array("auto" => "Auto", "PIO0" => "PIO0", "PIO1" => "PIO1", "PIO2" => "PIO2", "PIO3" => "PIO3", "PIO4" => "PIO4", "WDMA2" => "WDMA2", "UDMA2" => "UDMA-33", "UDMA4" => "UDMA-66", "UDMA5" => "UDMA-100", "UDMA6" => "UDMA-133");?>
-					<?php html_combobox("transfermode", gtext("Transfer mode"), $pconfig['transfermode'], $options, gtext("This allows you to set the transfer mode for ATA/IDE disks."), false);?>
-					<?php $options = array(0 => gtext("Always On")); foreach(array(5, 10, 20, 30, 60, 120, 180, 240, 300, 360) as $vsbtime) { $options[$vsbtime] = sprintf("%d %s", $vsbtime, gtext("Minutes")); }?>
-					<?php html_combobox("harddiskstandby", gtext("HDD standby time"), $pconfig['harddiskstandby'], $options, gtext("Puts the disk into standby mode when the selected amount of time after the last disk access has been elapsed."), false);?>
-					<?php $options = array(0 => gtext("Disabled"), 1 => gtext("Level 1 - Minimum Power Usage with Standby (Spindown)"), 64 => gtext("Level 64 - Intermediate Power Usage with Standby"), 127 => gtext("Level 127 - Intermediate Power Usage with Standby"), 128 => gtext("Level 128 - Minimum Power Usage without Standby (No Spindown)"), 192 => gtext("Level 192 - Intermediate Power Usage without Standby"), 254 => gtext("Level 254 - Maximum Performance, Maximum Power Usage"));?>
-					<?php html_combobox("apm", gtext("Power management"), $pconfig['apm'], $options, gtext("This allows you to lower the power consumption of the disk, at the expense of performance."), false);?>
-					<?php $options = array(0 => gtext("Disabled"), 1 => gtext("Minimum Performance, Minimum Acoustic Output"), 64 => gtext("Medium Acoustic Output"), 127 => gtext("Maximum Performance, Maximum Acoustic Output"));?>
-					<?php html_combobox("acoustic", gtext("Acoustic level"), $pconfig['acoustic'], $options, gtext("This allows you to set how loud the drive is while it's operating."), false);?>
-					<?php html_checkbox("smart_enable", gtext("S.M.A.R.T."), !empty($pconfig['smart_enable']) ? true : false, gtext("Activate S.M.A.R.T. monitoring for this device."), "", false, "smart_enable_change()");?>
-					<?php html_inputbox("smart_extraoptions", gtext("S.M.A.R.T. extra options"), $pconfig['smart_extraoptions'], gtext("Extra options (usually empty).") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://smartmontools.sourceforge.net/man/smartd.conf.5.html"), false, 40);?>
-					<?php $options = get_fstype_list();?>
-					<?php html_combobox("fstype", gtext("Preformatted file system"), $pconfig['fstype'], $options, gtext("This allows you to set the file system for preformatted hard disks containing data.") . " " . sprintf(gettext("Leave '%s' for unformated disks and format them using <a href='%s'>format</a> menu."), "Unformated", "disks_init.php"), false);?>
+					<?php
+					html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("You may enter a description here for your reference."), false, 40);
+					$options = array("auto" => "Auto", "PIO0" => "PIO0", "PIO1" => "PIO1", "PIO2" => "PIO2", "PIO3" => "PIO3", "PIO4" => "PIO4", "WDMA2" => "WDMA2", "UDMA2" => "UDMA-33", "UDMA4" => "UDMA-66", "UDMA5" => "UDMA-100", "UDMA6" => "UDMA-133");
+					html_combobox("transfermode", gtext("Transfer mode"), $pconfig['transfermode'], $options, gtext("This allows you to set the transfer mode for ATA/IDE disks."), false);
+					$options = array(0 => gtext("Always On")); foreach(array(5, 10, 20, 30, 60, 120, 180, 240, 300, 360) as $vsbtime) { $options[$vsbtime] = sprintf("%d %s", $vsbtime, gtext("Minutes")); }
+					html_combobox("harddiskstandby", gtext("HDD standby time"), $pconfig['harddiskstandby'], $options, gtext("Puts the disk into standby mode when the selected amount of time after the last disk access has been elapsed."), false);
+					$options = array(0 => gtext("Disabled"), 1 => gtext("Level 1 - Minimum Power Usage with Standby (Spindown)"), 64 => gtext("Level 64 - Intermediate Power Usage with Standby"), 127 => gtext("Level 127 - Intermediate Power Usage with Standby"), 128 => gtext("Level 128 - Minimum Power Usage without Standby (No Spindown)"), 192 => gtext("Level 192 - Intermediate Power Usage without Standby"), 254 => gtext("Level 254 - Maximum Performance, Maximum Power Usage"));
+					html_combobox("apm", gtext("Power management"), $pconfig['apm'], $options, gtext("This allows you to lower the power consumption of the disk, at the expense of performance."), false);
+					$options = array(0 => gtext("Disabled"), 1 => gtext("Minimum Performance, Minimum Acoustic Output"), 64 => gtext("Medium Acoustic Output"), 127 => gtext("Maximum Performance, Maximum Acoustic Output"));
+					html_combobox("acoustic", gtext("Acoustic level"), $pconfig['acoustic'], $options, gtext("This allows you to set how loud the drive is while it's operating."), false);
+					html_checkbox("smart_enable", gtext("S.M.A.R.T."), !empty($pconfig['smart_enable']) ? true : false, gtext("Activate S.M.A.R.T. monitoring for this device."), "", false, "smart_enable_change()");
+					$helpinghand = gtext('Extra options (usually empty).')
+						. ' '
+						. '<a href="' . 'http://smartmontools.sourceforge.net/man/smartd.conf.5.html' . '" target="_blank">'
+						. gtext('Please check the documentation.')
+						. '</a>';
+					html_inputbox("smart_extraoptions", gtext("S.M.A.R.T. extra options"), $pconfig['smart_extraoptions'], $helpinghand, false, 40);
+					$options = get_fstype_list();
+					$helpinghand = gtext('This option allows you to set the file system of already formatted disks containing data.')
+						. ' '
+						. gtext("Select option 'Unformatted' for unformatted disks and format them with the")
+						. ' '
+						. '<a <href="' . 'disks_init.php' . '">'
+						. gtext('Format Program')
+						. '</a>.';
+					html_combobox("fstype", gtext("Preformatted file system"), $pconfig['fstype'], $options, $helpinghand, false);
+					?>
 				</table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" onclick="enable_change(true)" />

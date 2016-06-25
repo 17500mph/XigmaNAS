@@ -157,7 +157,11 @@ function strip_exists($device, &$sphere_array) {
 
 $a_disk = get_conf_disks_filtered_ex('fstype', 'zfs');
 if ($isrecordnewornewmodify && (empty($a_disk)) && (empty($a_encrypteddisk))) {
-	$errormsg = sprintf(gettext("No disks available. Please add new <a href='%s'>disk</a> first."), 'disks_manage.php');
+	$errormsg = gtext('No disks available.')
+		. ' '
+		. '<a href="' . 'disks_manage.php' . '">'
+		. gtext('Please add a new disk first.')
+		. '</a>';
 	$prerequisites_ok = false;
 }
 
@@ -528,7 +532,14 @@ function toggleselection(ego, triggerbyname) {
 	</div>
 	<div id="remarks">
 		<?php
-			html_remark2('note', gtext('Note'), sprintf(gettext("Make sure to select the correct number of devices:<div id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"), ''));
+		$helpinghand = gtext('Make sure to select the optimal number of devices')
+			. ':'
+			. '<div id="enumeration">' . '<ul>'
+			. '<li>' . gtext('RAID-Z1 should have 3, 5, or 9 disks in each vdev.') . '</li>'
+			. '<li>' . gtext('RAID-Z2 should have 4, 6, or 10 disks in each vdev.') . '</li>'
+			. '<li>' . gtext('RAID-Z3 should have 5, 7, or 11 disks in each vdev.') . '</li>'
+			. '</ul></div>';
+		html_remark2('note', gtext('Note'), $helpinghand);
 		?>
 	</div>
 	<?php include("formend.inc");?>
