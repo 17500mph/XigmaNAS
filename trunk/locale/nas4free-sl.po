@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-20 03:00+0000\n"
+"POT-Creation-Date: 2016-06-25 01:50+0000\n"
 "PO-Revision-Date: 2016-03-28 06:18+0000\n"
 "Last-Translator: Matic Gradišer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-20 01:41+0000\n"
-"X-Generator: Launchpad (build 18097)\n"
+"X-Launchpad-Export-Date: 2016-06-25 01:49+0000\n"
+"X-Generator: Launchpad (build 18111)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
 "X-Poedit-Language: Slovenian\n"
@@ -106,6 +106,9 @@ msgstr "prosto %sB od %sB"
 msgid "%sB used of %sB"
 msgstr "uporabljeno %sB od %sB"
 
+msgid "(Change if needed)"
+msgstr ""
+
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(V Maxtor 6B200M0 200GB in Maxtor 2R015H1 15GB diskih)."
 
@@ -157,13 +160,6 @@ msgstr ""
 msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr ""
 
-msgid ""
-"1. Use these specials actions for debugging only!<br />2. There is no need "
-"of using this menu for starting a RAID volume (start automaticaly)."
-msgstr ""
-"1. Uporabite te posebne ukaze samo za razhroščevanje!<br />2. Tega menuja ne "
-"potrebujete za zagon RAID nosilca (zažene se samodejno)."
-
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr ""
 
@@ -178,9 +174,6 @@ msgstr ""
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN oznaka (med 1 in 4094)."
-
-msgid "<->"
-msgstr "<->"
 
 #, php-format
 msgid ""
@@ -250,6 +243,11 @@ msgid ""
 msgstr ""
 "Skupina vsebuje IP naslove in TCP porte za povezave sprožiteljev do cilja."
 
+msgid ""
+"A Portal Group is identified by a tag number and defines IP addresses and "
+"listening TCP ports."
+msgstr ""
+
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr "VLAN z oznako %s je že določen na tem vmesniku."
@@ -280,6 +278,9 @@ msgstr ""
 "besedilo, ali kot heksadecimalno število, ki se začne z '0x'."
 
 msgid "A mounted RAID volume cannot be deleted."
+msgstr ""
+
+msgid "A reload request has been sent to the daemon."
 msgstr ""
 
 msgid "A route to this destination network already exists."
@@ -715,7 +716,6 @@ msgid ""
 "follows the allow option format."
 msgstr "Dovoli določenim uporabnikom in skupinam le branje deljene mape."
 
-#, php-format
 msgid "Allows the server to try and become a local master browser."
 msgstr ""
 
@@ -766,6 +766,20 @@ msgstr ""
 msgid ""
 "Amplitude of 'thrashing' (distance of repetitive forward/reverse head "
 "motion)."
+msgstr ""
+
+msgid ""
+"An Auth Group is identified by a tag number and is optional. If the Target "
+"does not use CHAP authentication it defines authorised users and secrets for "
+"additional security."
+msgstr ""
+
+msgid "An Extent defines the storage area of the Target."
+msgstr ""
+
+msgid ""
+"An Initiator Group is identified by a tag number and defines authorised "
+"initiator names and networks."
 msgstr ""
 
 msgid "An host with this name already exists."
@@ -1053,7 +1067,6 @@ msgstr ""
 msgid "Broadcast interval"
 msgstr ""
 
-#, php-format
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
 "seconds)"
@@ -1317,7 +1330,6 @@ msgstr ""
 msgid "Command for LINK_UP event (e.g. %s)."
 msgstr ""
 
-#, php-format
 msgid "Command output"
 msgstr ""
 
@@ -1458,20 +1470,7 @@ msgid ""
 "Currently, 'gzip' is equivalent to 'gzip-6'."
 msgstr ""
 
-msgid ""
-"Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-"<a "
-"href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-":disks-zfs-volumes-volume' target='_blank'>ZFS volumes & deduplication</a> "
-"wiki article BEFORE using this feature.</b></br>"
-msgstr ""
-
-msgid ""
-"Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-"<a "
-"href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-":disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & "
-"deduplication</a> wiki article BEFORE using this feature.</b></br>"
+msgid "Controls the dedup method."
 msgstr ""
 
 msgid "Controls whether this dataset can be modified."
@@ -2007,7 +2006,7 @@ msgstr "Ciljni deljeni vir"
 msgid "Detected"
 msgstr "Zaznano"
 
-msgid "Detected Language:<br />(Change if needed)"
+msgid "Detected Language:"
 msgstr ""
 
 msgid "Detected RSYNC remote shares"
@@ -3445,13 +3444,6 @@ msgstr "Poudarjanje"
 msgid "Hint"
 msgstr "Namig"
 
-#, php-format
-msgid ""
-"Hint: If this is checked, IP addresses in the server logs are resolved to "
-"real hostnames where possible.<br><font color='red'>Warning</font>: This can "
-"cause a huge delay in loading the log page!"
-msgstr ""
-
 msgid "Home directory"
 msgstr "Domača mapa"
 
@@ -3475,6 +3467,9 @@ msgstr "Podatkovna baza imen"
 
 msgid "Hosts"
 msgstr "Gostitelji"
+
+msgid "Hosts Setup"
+msgstr ""
 
 msgid "Hosts allow"
 msgstr "Dovoljeni dostopi"
@@ -3531,13 +3526,9 @@ msgstr "IP naslov"
 msgid "IP address of remote syslog server."
 msgstr ""
 
-#, php-format
 msgid ""
-"IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
-"addresses to hostnames&quot;</a> is enabled."
+"IP addresses are resolved to hostnames when the following option is enabled:"
 msgstr ""
-"IP naslovi so prevedeni v imena, če je omogočen <a href='%s'>&quot;prevedi "
-"IP naslove v imena&quot;</a>."
 
 msgid "IP or FQDN address of remote Rsync server."
 msgstr "IP ali FQDN naslov oddaljenega Rsync serverja."
@@ -3638,6 +3629,11 @@ msgstr ""
 msgid ""
 "If the server is behind a proxy set these parameters to give local services "
 "access to the internet via proxy."
+msgstr ""
+
+msgid ""
+"If this option is checked, IP addresses in the server logs are resolved to "
+"their hostnames where possible."
 msgstr ""
 
 msgid ""
@@ -3906,7 +3902,7 @@ msgstr "Napačen format datoteke."
 msgid "Invalid max. block size! It must be in the range from %d to %d."
 msgstr "Napačna velikost bloka. Biti more med %d in %d."
 
-msgid "Invalid username or password.</br> Please try again."
+msgid "Invalid username or password."
 msgstr ""
 
 msgid "Invert Selection"
@@ -3932,7 +3928,6 @@ msgid ""
 "are part of a non healthy pool."
 msgstr ""
 
-#, php-format
 msgid ""
 "It is recommended to use encryption before you store the backup in a safe "
 "location."
@@ -4803,10 +4798,19 @@ msgstr "Ne"
 msgid "No DNS setting found."
 msgstr ""
 
+msgid "No Extent has been configured."
+msgstr ""
+
 msgid "No IPMI FRU data available."
 msgstr ""
 
 msgid "No IPMI sensor data available."
+msgstr ""
+
+msgid "No Initiator Group has been configured."
+msgstr ""
+
+msgid "No Portal Group has been configured."
 msgstr ""
 
 msgid "No RSYNC Client configured"
@@ -4828,35 +4832,11 @@ msgid ""
 "interface</a> first."
 msgstr ""
 
-#, php-format
-msgid "No configured Extent. Please add new <a href='%s'>Extent</a> first."
-msgstr "Ni nastavljenih obsegov. Prosim, dodajte nov <a href='%s'>obseg</a>."
-
-#, php-format
-msgid ""
-"No configured Initiator Group. Please add new <a href='%s'>Initiator "
-"Group</a> first."
-msgstr ""
-"Ni nastavljenih skupin sprožiteljev. Prosim, dodajte novo <a "
-"href='%s'>skupino sprožiteljev</a>."
-
-#, php-format
-msgid ""
-"No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
-"first."
-msgstr ""
-"Ni nastavljeni skupin portal. Prosim, dodajte novo <a href='%s'>skupino "
-"portal</a>."
-
-#, php-format
-msgid ""
-"No configured bridge interfaces. Please add new <a href='%s'>bridge "
-"interface</a> first."
+msgid "No configured bridge interfaces."
 msgstr ""
 
-#, php-format
-msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
-msgstr "Ni nastavljenih bazenov. Prosim, dodajte nov <a href='%s'>bazen</a>."
+msgid "No configured pools."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -5361,6 +5341,25 @@ msgstr "Platforma"
 msgid "Platform OS"
 msgstr ""
 
+msgid "Please add a bridge interface first."
+msgstr ""
+
+msgid "Please add a new Extent first."
+msgstr ""
+
+msgid "Please add a new Initiator Group first."
+msgstr ""
+
+msgid "Please add a new Portal Group first."
+msgstr ""
+
+#, php-format
+msgid "Please add new %s first."
+msgstr ""
+
+msgid "Please add new pools first."
+msgstr ""
+
 #, php-format
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "Prosim, preverite <a href='%s' target='_blank'>dokumentacijo</a>."
@@ -5373,6 +5372,9 @@ msgstr ""
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr "Prazna polja v imenih poti niso dovoljena."
+
+msgid "Please try again."
+msgstr ""
 
 msgid "Polish"
 msgstr "Poljščina"
@@ -5478,7 +5480,6 @@ msgstr ""
 msgid "PreInit"
 msgstr "PreInit"
 
-#, php-format
 msgid "Predefined Groups"
 msgstr ""
 
@@ -6125,6 +6126,14 @@ msgstr "Varna lupina"
 msgid "Security"
 msgstr "Varnost"
 
+msgid ""
+"See ZFS datasets & deduplication wiki article BEFORE using this feature."
+msgstr ""
+
+msgid ""
+"See ZFS volumes & deduplication wiki article BEFORE using this feature."
+msgstr ""
+
 msgid "See attribute E8."
 msgstr ""
 
@@ -6164,7 +6173,6 @@ msgstr ""
 msgid "Select the location closest to you."
 msgstr "Izbor najbližje lokacije"
 
-#, php-format
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
 "the button below to restore the configuration."
@@ -6569,11 +6577,17 @@ msgstr "Statično"
 msgid "Static Routes"
 msgstr "Statične smeri (routes)"
 
+msgid "Static Routes Setup"
+msgstr ""
+
 msgid "Static routes"
 msgstr "Statične poti"
 
 msgid "Status"
 msgstr "Stanje"
+
+msgid "Status & Information"
+msgstr ""
 
 #, php-format
 msgid "Status report successfully sent to: %s."
@@ -6701,7 +6715,6 @@ msgstr ""
 msgid "Syslog Level"
 msgstr ""
 
-#, php-format
 msgid ""
 "Syslog sends UDP datagrams to port 514 on the specified remote syslog "
 "server. Be sure to set syslogd on the remote server to accept syslog "
@@ -7025,12 +7038,6 @@ msgstr ""
 #, php-format
 msgid ""
 "The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
-"and [._-]"
-msgstr ""
-
-#, php-format
-msgid ""
-"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
 "and [._-]."
 msgstr ""
 
@@ -7114,7 +7121,6 @@ msgstr "Nastavitev ni bilo možno obnoviti."
 msgid "The configuration could not be restored. %s"
 msgstr ""
 
-#, php-format
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr ""
 
@@ -7125,7 +7131,6 @@ msgid ""
 "<a href='%s'>system log</a> for more information.</b>"
 msgstr ""
 
-#, php-format
 msgid "The configuration has been restored. The server is now rebooting."
 msgstr ""
 
@@ -7213,13 +7218,8 @@ msgid ""
 "not need to pass along the directory as part of the transfer."
 msgstr ""
 
-#, php-format
-msgid ""
-"The disk is currently mounted! <a href='%s'>Unmount</a> this disk first "
-"before proceeding."
+msgid "The disk is currently mounted!"
 msgstr ""
-"Pogon je trnutno priklopljen! Pred nadaljevanjem ga najprej <a "
-"href='%s'>Odklopite</a>"
 
 msgid ""
 "The disk is currently mounted! The mount point will be removed temporarily "
@@ -7256,10 +7256,7 @@ msgid ""
 "target='_blank'>drivers</a>."
 msgstr ""
 
-#, php-format
-msgid ""
-"The encrypted device is currently mounted! <a href='%s'>Unmount</a> this "
-"disk first before proceeding."
+msgid "The encrypted device is currently mounted!"
 msgstr ""
 
 msgid "The extent name already exists."
@@ -7271,13 +7268,15 @@ msgstr ""
 msgid "The firmware file is corrupt"
 msgstr ""
 
-#, php-format
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
 msgstr ""
 
 msgid "The following input errors were detected"
 msgstr "Odkrite so bile sledeče vhodne napake"
+
+msgid "The following services will use AD authentication:"
+msgstr ""
 
 msgid "The full name contains invalid characters."
 msgstr "Polno ime vsebuje neveljavne karakterje."
@@ -7485,12 +7484,6 @@ msgid "The recommended queue depth is %d."
 msgstr ""
 
 #, php-format
-msgid ""
-"The reloading request has been sent to the daemon. You can see the result by "
-"<a href=\"%s\">Log</a>."
-msgstr ""
-
-#, php-format
 msgid "The removable area mapped to LUN%d."
 msgstr ""
 
@@ -7503,7 +7496,6 @@ msgstr ""
 msgid "The serial or USB port where your second UPS is connected."
 msgstr ""
 
-#, php-format
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr ""
 
@@ -7602,6 +7594,10 @@ msgid "There are too many additional groups."
 msgstr ""
 
 msgid "There is no error, the file uploaded with success."
+msgstr ""
+
+msgid ""
+"There is no need to start a RAID volume from here (It starts automatically)."
 msgstr ""
 
 msgid "There must be at least 1 disks selected."
@@ -7739,6 +7735,9 @@ msgid ""
 "as part of other vendors' IO Error Detection and Correction schemas, and it "
 "contains a count of parity errors which occur in the data path to the media "
 "via the drive's cache RAM."
+msgstr ""
+
+msgid "This can cause a huge delay in loading the log page!"
 msgstr ""
 
 #, php-format
@@ -8059,16 +8058,6 @@ msgstr ""
 msgid "To Email Address"
 msgstr ""
 
-msgid ""
-"To configure the target, you must add at least Portal Group and Initiator "
-"Group and Extent.<br />Portal Group which is identified by tag number "
-"defines IP addresses and listening TCP ports.<br />Initiator Group which is "
-"identified by tag number defines authorised initiator names and networks.<br "
-"/>Auth Group which is identified by tag number and is optional if the target "
-"does not use CHAP authentication defines authorised users and secrets for "
-"additional security.<br />Extent defines the storage area of the target."
-msgstr ""
-
 msgid "To e-mail"
 msgstr ""
 
@@ -8104,11 +8093,7 @@ msgstr ""
 msgid "To match any IP address leave this field empty."
 msgstr ""
 
-msgid ""
-"To use Active Directory the CIFS/SMB service will enabled, too. The "
-"following services will use AD authentication:<div "
-"id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-">System</li></ul></div>"
+msgid "To use Active Directory the CIFS/SMB service will enabled as well."
 msgstr ""
 
 #, php-format
@@ -8413,6 +8398,9 @@ msgstr ""
 msgid "Unmount disk/partition"
 msgstr "Odklopi pogon/particijo"
 
+msgid "Unmount this disk first before proceeding."
+msgstr ""
+
 msgid "Unmounting..."
 msgstr "Odklapljanje..."
 
@@ -8472,6 +8460,9 @@ msgstr ""
 msgid "Use the specified NTP server."
 msgstr ""
 
+msgid "Use these specials actions for debugging only!"
+msgstr ""
+
 #, php-format
 msgid ""
 "Use this option to override the default permission modes for newly created "
@@ -8509,11 +8500,13 @@ msgstr ""
 msgid "User"
 msgstr "Uporabnik"
 
-#, php-format
 msgid "User Defined Groups"
 msgstr ""
 
 msgid "User ID"
+msgstr ""
+
+msgid "User Setup"
 msgstr ""
 
 msgid "User full name."
@@ -8693,6 +8686,9 @@ msgstr ""
 msgid "WAN address"
 msgstr ""
 
+msgid "WARNING"
+msgstr ""
+
 msgid "WEP"
 msgstr ""
 
@@ -8851,6 +8847,9 @@ msgstr ""
 msgid "You can use the following parameters for substitution:"
 msgstr ""
 
+msgid "You can verify the result in the log file."
+msgstr ""
+
 #, php-format
 msgid ""
 "You can't mount the partition '%s' where the config file is stored.<br />"
@@ -8891,6 +8890,11 @@ msgstr ""
 msgid ""
 "You must <a href='%s'>reboot</a> the system before you can upgrade the "
 "firmware."
+msgstr ""
+
+msgid ""
+"You must add at least a Portal Group, an Initiator Group and an Extent "
+"before you can configure a Target."
 msgstr ""
 
 msgid "You must add disks first."
@@ -8960,7 +8964,6 @@ msgstr ""
 msgid "adaptive (low power consumption)"
 msgstr ""
 
-#, php-format
 msgid "add any supplemental parameters"
 msgstr ""
 
@@ -9073,6 +9076,9 @@ msgstr ""
 msgid "phpVirtualBox"
 msgstr ""
 
+msgid "pools"
+msgstr ""
+
 msgid "rc.conf"
 msgstr ""
 
@@ -9111,3 +9117,53 @@ msgstr "izvrzi"
 
 msgid "version:"
 msgstr ""
+
+#~ msgid ""
+#~ "1. Use these specials actions for debugging only!<br />2. There is no need "
+#~ "of using this menu for starting a RAID volume (start automaticaly)."
+#~ msgstr ""
+#~ "1. Uporabite te posebne ukaze samo za razhroščevanje!<br />2. Tega menuja ne "
+#~ "potrebujete za zagon RAID nosilca (zažene se samodejno)."
+
+#~ msgid "<->"
+#~ msgstr "<->"
+
+#, php-format
+#~ msgid ""
+#~ "IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
+#~ "addresses to hostnames&quot;</a> is enabled."
+#~ msgstr ""
+#~ "IP naslovi so prevedeni v imena, če je omogočen <a href='%s'>&quot;prevedi "
+#~ "IP naslove v imena&quot;</a>."
+
+#, php-format
+#~ msgid "No configured Extent. Please add new <a href='%s'>Extent</a> first."
+#~ msgstr "Ni nastavljenih obsegov. Prosim, dodajte nov <a href='%s'>obseg</a>."
+
+#, php-format
+#~ msgid ""
+#~ "No configured Initiator Group. Please add new <a href='%s'>Initiator "
+#~ "Group</a> first."
+#~ msgstr ""
+#~ "Ni nastavljenih skupin sprožiteljev. Prosim, dodajte novo <a "
+#~ "href='%s'>skupino sprožiteljev</a>."
+
+#, php-format
+#~ msgid ""
+#~ "No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
+#~ "first."
+#~ msgstr ""
+#~ "Ni nastavljeni skupin portal. Prosim, dodajte novo <a href='%s'>skupino "
+#~ "portal</a>."
+
+#, php-format
+#~ msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
+#~ msgstr "Ni nastavljenih bazenov. Prosim, dodajte nov <a href='%s'>bazen</a>."
+
+#, php-format
+#~ msgid ""
+#~ "The disk is currently mounted! <a href='%s'>Unmount</a> this disk first "
+#~ "before proceeding."
+#~ msgstr ""
+#~ "Pogon je trnutno priklopljen! Pred nadaljevanjem ga najprej <a "
+#~ "href='%s'>Odklopite</a>"
