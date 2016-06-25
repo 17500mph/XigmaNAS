@@ -114,7 +114,11 @@ $isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
 
 if (!(isset($config['zfs']['vdevices']['vdevice']) && is_array($config['zfs']['vdevices']['vdevice']))) {
 	$config['zfs']['vdevices']['vdevice'] = [];
-	$errormsg = sprintf(gettext('No configured virtual devices. Please add new <a href="%s">virtual device</a> first.'), 'disks_zfs_zpool_vdevice.php');
+	$errormsg = gtext('No configured virtual devices.')
+		. ' '
+		. '<a href="' . 'disks_zfs_zpool_vdevice.php' . '">'
+		. gtext('Please add a virtual device first.')
+		. '</a>';
 	$prerequisites_ok = false;
 }
 array_sort_key($config['zfs']['vdevices']['vdevice'], 'name');
