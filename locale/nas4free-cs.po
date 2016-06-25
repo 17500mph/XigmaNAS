@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-20 03:00+0000\n"
-"PO-Revision-Date: 2016-06-11 18:39+0000\n"
+"POT-Creation-Date: 2016-06-25 01:50+0000\n"
+"PO-Revision-Date: 2016-06-23 14:41+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-20 01:41+0000\n"
-"X-Generator: Launchpad (build 18097)\n"
+"X-Launchpad-Export-Date: 2016-06-25 01:48+0000\n"
+"X-Generator: Launchpad (build 18111)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
 "X-Poedit-Language: Czech\n"
@@ -106,6 +106,9 @@ msgstr "dostupných %sB z %sB"
 msgid "%sB used of %sB"
 msgstr "použito %sB z %sB"
 
+msgid "(Change if needed)"
+msgstr ""
+
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(vyskytuje se v discích Maxtor 6B200M0 200GB a 2R015H1 15 GB)."
 
@@ -177,13 +180,6 @@ msgstr "Pro vytvoření JBOD svazku je zapotřebí jednoho a více disků."
 msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr "Pro vytvoření RAID-1 svazku je zapotřebí jednoho a více disků."
 
-msgid ""
-"1. Use these specials actions for debugging only!<br />2. There is no need "
-"of using this menu for starting a RAID volume (start automaticaly)."
-msgstr ""
-"1. Tyto zvláštní akce používejte pouze pro účely ladění!<br />2. Tuto "
-"nabídku není třeba používat pro spouštění RAID svazku (děje se automaticky)."
-
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr "Pro vytvoření RAID-0 svazku je zapotřebí dvou a více disků."
 
@@ -199,9 +195,6 @@ msgstr "4KB mezivrstva (wrapper)"
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr ""
 "Značka virtuální sítě (VLAN) dle normy 802.1Q – číslo z rozsahu 1 až 4094."
-
-msgid "<->"
-msgstr "Směr"
 
 #, php-format
 msgid ""
@@ -280,6 +273,11 @@ msgstr ""
 "Skupina portálů obsahuje IP adresy a TCP porty, na kterých cíl očekává "
 "spojení."
 
+msgid ""
+"A Portal Group is identified by a tag number and defines IP addresses and "
+"listening TCP ports."
+msgstr ""
+
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr ""
@@ -315,6 +313,9 @@ msgstr ""
 "malé písmeno iks)."
 
 msgid "A mounted RAID volume cannot be deleted."
+msgstr "Nelze smazat RAID svazek, který je připojený (mount)."
+
+msgid "A reload request has been sent to the daemon."
 msgstr ""
 
 msgid "A route to this destination network already exists."
@@ -785,7 +786,6 @@ msgstr ""
 "Zpřístupní sdílení určitým uživatelům a skupinám pouze pro čtení. Forma "
 "zápisu je stejná, jako u seznamu povolených (allow)."
 
-#, php-format
 msgid "Allows the server to try and become a local master browser."
 msgstr "Umožní serveru pokusit se stát místním hlavním prohlížečem (WINS)."
 
@@ -845,6 +845,20 @@ msgid ""
 "Amplitude of 'thrashing' (distance of repetitive forward/reverse head "
 "motion)."
 msgstr "Rozkmit (vzdálenost opakovaných pohybů hlaviček disku vpřed/vzad)."
+
+msgid ""
+"An Auth Group is identified by a tag number and is optional. If the Target "
+"does not use CHAP authentication it defines authorised users and secrets for "
+"additional security."
+msgstr ""
+
+msgid "An Extent defines the storage area of the Target."
+msgstr ""
+
+msgid ""
+"An Initiator Group is identified by a tag number and defines authorised "
+"initiator names and networks."
+msgstr ""
 
 msgid "An host with this name already exists."
 msgstr "Tento název je už používán jiným strojem v síti."
@@ -1003,7 +1017,7 @@ msgstr ""
 "provozní otáčky)."
 
 msgid "Back"
-msgstr ""
+msgstr "Zpět"
 
 msgid "Backup Configuration"
 msgstr "Záloha nastavení"
@@ -1142,7 +1156,6 @@ msgstr "Síťový most"
 msgid "Broadcast interval"
 msgstr "Interval všesměrového vysílání"
 
-#, php-format
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
 "seconds)"
@@ -1424,7 +1437,6 @@ msgstr ""
 "Příkaz, který vykonat v případě události LINK_UP (připojení do sítě) (např. "
 "%s)."
 
-#, php-format
 msgid "Command output"
 msgstr "Výstup z příkazu"
 
@@ -1574,32 +1586,8 @@ msgstr ""
 "kladné číslo z rozsahu 1 (jedna) (nejrychlejší) až 9 (nejlepší kompresní "
 "poměr). Samotné gzip (bez číslice) v tuto chvíli znamená to samé, co gzip-6."
 
-msgid ""
-"Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-"<a "
-"href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-":disks-zfs-volumes-volume' target='_blank'>ZFS volumes & deduplication</a> "
-"wiki article BEFORE using this feature.</b></br>"
+msgid "Controls the dedup method."
 msgstr ""
-"Určuje metodu deduplikace dat. <br><b><font "
-"color='red'>UPOZORNĚNÍ/VAROVÁNÍ</font>: Prostudujte si článek <a "
-"href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-":disks-zfs-volumes-volume' target='_blank'>ZFS svazky a deduplikace</a> na "
-"wiki ještě PŘEDTÍM, než vůbec začnete tuto funkci používat.</b></br>"
-
-msgid ""
-"Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-"<a "
-"href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-":disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & "
-"deduplication</a> wiki article BEFORE using this feature.</b></br>"
-msgstr ""
-"Určuje metodu deduplikace. <br><b><font "
-"color='red'>UPOZORNĚNÍ/VAROVÁNÍ</font>: Prostudujte si článek <a "
-"href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-":disks_zfs_datasets_dataset' target='_blank'>ZFS datové sady a "
-"deduplikace</a> na wiki ještě PŘEDTÍM, než vůbec začnete tuto funkci "
-"používat.</b></br>"
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Určuje, zda bude možné tuto datovou sadu upravovat."
@@ -1779,7 +1767,7 @@ msgid "Create PV Guest"
 msgstr "Vytvořit virtualizační kontejner (PV)"
 
 msgid "Create ZFS on a GPT partition."
-msgstr ""
+msgstr "Vytvořit ZFS nad GPT oddílem."
 
 msgid "Create and initialize RAID."
 msgstr "Vytvořit a inicializovat RAID pole."
@@ -2206,8 +2194,8 @@ msgstr "Cílové sdílení"
 msgid "Detected"
 msgstr "Rozpoznáno"
 
-msgid "Detected Language:<br />(Change if needed)"
-msgstr "Zjištěný jazyk:<br />(Změňte dle potřeby)"
+msgid "Detected Language:"
+msgstr ""
 
 msgid "Detected RSYNC remote shares"
 msgstr "Zjištěná RSYNC sdílení na protistraně"
@@ -2242,25 +2230,25 @@ msgid "Device Model"
 msgstr "Model zařízení"
 
 msgid "Device Name"
-msgstr ""
+msgstr "Název zařízení"
 
 msgid "Device Pass-through"
 msgstr "Předávání zařízení"
 
 msgid "Device Path"
-msgstr ""
+msgstr "Umístění souboru, představujícího zařízení"
 
 msgid "Device Serial"
 msgstr "Sériové číslo zařízení"
 
 msgid "Device contains boot partition"
-msgstr ""
+msgstr "Zařízení obsahuje zaváděcí oddíl"
 
 msgid "Device is mounted"
-msgstr ""
+msgstr "Zařízení je připojené (mount)"
 
 msgid "Device not found"
-msgstr ""
+msgstr "Zařízení nebylo nalezeno"
 
 msgid "Device polling"
 msgstr "Dotazování (polling) zařízení"
@@ -2832,7 +2820,7 @@ msgid "Enable ACL inheritance"
 msgstr "Zapnout přebírání ACL seznamů."
 
 msgid "Enable Advanced Format (4KB Sector Size)."
-msgstr ""
+msgstr "Použít tzv. pokročilý formát (velikost sektoru 4KB)."
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Zapnout asynchronní vst./výst. (AIO)"
@@ -3126,7 +3114,7 @@ msgstr ""
 "příkazů vymazání flash paměti."
 
 msgid "Erase MBR"
-msgstr ""
+msgstr "Vymazat hlavní zaváděcí záznam (MBR)"
 
 msgid "Error"
 msgstr "Chyba"
@@ -3229,7 +3217,7 @@ msgid "Extra options to rsync (usually empty)."
 msgstr "Další předvolby pro Rsync (obvykle se nevyplňuje)."
 
 msgid "FAT32"
-msgstr ""
+msgstr "FAT32"
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
@@ -3446,7 +3434,7 @@ msgid "Format"
 msgstr "Formátovat"
 
 msgid "Format Options"
-msgstr ""
+msgstr "Předvolby formátování"
 
 msgid "Format the report for phpBB forum."
 msgstr "Připravit výstup do podoby vhodné pro phpBB fórum."
@@ -3513,7 +3501,7 @@ msgid "GID"
 msgstr "Identifikátor skupiny (GID)"
 
 msgid "GPT Partition"
-msgstr ""
+msgstr "Oddíl typu GPT"
 
 msgid "GPT partition"
 msgstr "Oddíl GPT"
@@ -3703,17 +3691,6 @@ msgstr "Zvýrazňování"
 msgid "Hint"
 msgstr "Tip"
 
-#, php-format
-msgid ""
-"Hint: If this is checked, IP addresses in the server logs are resolved to "
-"real hostnames where possible.<br><font color='red'>Warning</font>: This can "
-"cause a huge delay in loading the log page!"
-msgstr ""
-"Tip: pokud je toto zašrktnuto, jsou při zobrazování záznamu událostí na "
-"serveru IP adresy překládány na názvy strojů.<br><font "
-"color='red'>Varování</font>: Může způsobit opravdu velké prodlevy při "
-"načítání stránky záznamu událostí!"
-
 msgid "Home directory"
 msgstr "Domovská složka"
 
@@ -3737,6 +3714,9 @@ msgstr "Databáze názvů strojů"
 
 msgid "Hosts"
 msgstr "Stroje"
+
+msgid "Hosts Setup"
+msgstr ""
 
 msgid "Hosts allow"
 msgstr "Stroje, kterým umožnit přístup"
@@ -3794,13 +3774,9 @@ msgstr "IP adresa"
 msgid "IP address of remote syslog server."
 msgstr "IP adresa vzdáleného syslog serveru."
 
-#, php-format
 msgid ""
-"IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
-"addresses to hostnames&quot;</a> is enabled."
+"IP addresses are resolved to hostnames when the following option is enabled:"
 msgstr ""
-"Pokud je zapnuto <a href='%s'>Překládání IP adres na názvy strojů</a>, pak "
-"jsou zobrazovány jejich DNS názvy namísto IP adres."
 
 msgid "IP or FQDN address of remote Rsync server."
 msgstr "IP adresa nebo úplný doménový název (FQDN) vzdáleného Rsync serveru."
@@ -3809,13 +3785,13 @@ msgid "IP type mismatch for network and gateway."
 msgstr "Typ IP adresy sítě neodpovídá tomu u brány."
 
 msgid "IPMI FRU"
-msgstr ""
+msgstr "Informace o uživatelsky vyměnitelných součástech z IPMI"
 
 msgid "IPMI Sensor"
-msgstr ""
+msgstr "Čidlo z IPMI"
 
 msgid "IPMI Stats"
-msgstr ""
+msgstr "Statistiky z IPMI"
 
 msgid "IPv4 Configuration"
 msgstr "Nastavení IPv4"
@@ -3906,6 +3882,11 @@ msgid ""
 msgstr ""
 "Pokud je server za proxy, nastavení těchto parametrů umožní místním službám "
 "přístup k Internetu přes proxy."
+
+msgid ""
+"If this option is checked, IP addresses in the server logs are resolved to "
+"their hostnames where possible."
+msgstr ""
 
 msgid ""
 "If this parameter is set, Samba attempts to first read DOS attributes "
@@ -4193,8 +4174,8 @@ msgstr ""
 "Neplatné zadání nejvyšší umožněné velikosti bloku! Je třeba, aby bylo v "
 "rozsahu od %d do %d."
 
-msgid "Invalid username or password.</br> Please try again."
-msgstr "Neplatné uživatelské jméno nebo heslo.</br> Zkuste to znovu."
+msgid "Invalid username or password."
+msgstr ""
 
 msgid "Invert Selection"
 msgstr "Obrátit výběr"
@@ -4223,7 +4204,6 @@ msgstr ""
 "Nedoporučuje se importovat fondy, které nejsou v pořádku či virtuální "
 "zařízení, která jsou součástí takových fondů."
 
-#, php-format
 msgid ""
 "It is recommended to use encryption before you store the backup in a safe "
 "location."
@@ -4634,7 +4614,7 @@ msgstr ""
 "třeba vyrovnávat a zatěžovat tak transformátor UPS zdroje"
 
 msgid "Lower"
-msgstr ""
+msgstr "Snížit"
 
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
@@ -4913,7 +4893,7 @@ msgid "Minimum"
 msgstr "Nejnižší hodnota"
 
 msgid "Minimum Free Space"
-msgstr ""
+msgstr "Přinejmenším volného prostoru"
 
 msgid "Minimum Performance, Minimum Acoustic Output"
 msgstr "Nejnižší výkon, nejnižší hlučnost"
@@ -5140,7 +5120,7 @@ msgid "New password"
 msgstr "Nové heslo"
 
 msgid "Next"
-msgstr ""
+msgstr "Další"
 
 msgid "No"
 msgstr "Ne"
@@ -5148,10 +5128,20 @@ msgstr "Ne"
 msgid "No DNS setting found."
 msgstr "Nebyla nalezena žádná nastavení DNS."
 
-msgid "No IPMI FRU data available."
+msgid "No Extent has been configured."
 msgstr ""
 
+msgid "No IPMI FRU data available."
+msgstr ""
+"Toto IPMI neposkytuje žádné informace o uživatelsky vyměnitelných součástech"
+
 msgid "No IPMI sensor data available."
+msgstr "Nejsou k dispozici z čidel v IPMI"
+
+msgid "No Initiator Group has been configured."
+msgstr ""
+
+msgid "No Portal Group has been configured."
 msgstr ""
 
 msgid "No RSYNC Client configured"
@@ -5175,40 +5165,11 @@ msgstr ""
 "Nejsou nastavena žádná CARP rozhraní. Nejprve přidejte <a href='%s'>CARP "
 "rozhraní</a>."
 
-#, php-format
-msgid "No configured Extent. Please add new <a href='%s'>Extent</a> first."
+msgid "No configured bridge interfaces."
 msgstr ""
-"Není nastavena žádná úložná jednotka. Nejprve přidejte <a href='%s'>úložnou "
-"jednotku</a>."
 
-#, php-format
-msgid ""
-"No configured Initiator Group. Please add new <a href='%s'>Initiator "
-"Group</a> first."
+msgid "No configured pools."
 msgstr ""
-"Není nastavena žádná skupina iniciátoru. Nejdříve nějakou <a "
-"href='%s'>Initiator Group</a> přidejte."
-
-#, php-format
-msgid ""
-"No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
-"first."
-msgstr ""
-"Není nastavena žádná skupina portálu. Nejprve nějakou <a href='%s'>skupinu "
-"portálu</a> přidejte."
-
-#, php-format
-msgid ""
-"No configured bridge interfaces. Please add new <a href='%s'>bridge "
-"interface</a> first."
-msgstr ""
-"Nejsou nastavena rozhraní síťových mostů. Nejprve nějaká nová <a "
-"href='%s'>přidejte</a>."
-
-#, php-format
-msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
-msgstr ""
-"Nejsou nastavené fondy. Nejprve nějaké <a href='%s'>fondy</a> přidejte."
 
 #, php-format
 msgid ""
@@ -5303,10 +5264,10 @@ msgid "Nominal value of real power (Watts)"
 msgstr "Jmenovitá hodnota činného výkonu (W)"
 
 msgid "Non-Critical"
-msgstr ""
+msgstr "Nekritické"
 
 msgid "Non-Recoverable"
-msgstr ""
+msgstr "Neopravitelné"
 
 msgid "None"
 msgstr "Žádné"
@@ -5618,13 +5579,14 @@ msgid "Passphrase don't match."
 msgstr "Heslová fráze nesouhlasí."
 
 msgid "Passthrough - Do not change ACL"
-msgstr ""
+msgstr "Předat – ponechat ACL seznamy beze změny"
 
 msgid "Passthrough - Inherit all entries"
 msgstr "Průchod – převzít všechny položky"
 
 msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
 msgstr ""
+"Předat mimo spouštění – převzít vše kromě „spouštět“, pokud není určeno"
 
 msgid "Password"
 msgstr "Heslo"
@@ -5735,6 +5697,25 @@ msgstr "Platforma a procesor"
 msgid "Platform OS"
 msgstr "Založeno na operačním systému"
 
+msgid "Please add a bridge interface first."
+msgstr ""
+
+msgid "Please add a new Extent first."
+msgstr ""
+
+msgid "Please add a new Initiator Group first."
+msgstr ""
+
+msgid "Please add a new Portal Group first."
+msgstr ""
+
+#, php-format
+msgid "Please add new %s first."
+msgstr ""
+
+msgid "Please add new pools first."
+msgstr ""
+
 #, php-format
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "Viz <a href='%s' target='_blank'>dokumentace</a>."
@@ -5749,6 +5730,9 @@ msgid "Please note that blanks in path names are not allowed."
 msgstr ""
 "Mějte na paměti, že v popisech umístění nejsou dovoleny prázdné znaky "
 "(mezera, tabulátor, atp.)."
+
+msgid "Please try again."
+msgstr ""
 
 msgid "Polish"
 msgstr "polština"
@@ -5860,7 +5844,6 @@ msgstr ""
 msgid "PreInit"
 msgstr "Před inicializací"
 
-#, php-format
 msgid "Predefined Groups"
 msgstr "Předdefinované skupiny"
 
@@ -6098,7 +6081,7 @@ msgid "Read/Write Access"
 msgstr "Přístup pro čtení a zápis"
 
 msgid "Reading"
-msgstr ""
+msgstr "Čtení"
 
 msgid "Readonly"
 msgstr "Pouze čtení"
@@ -6107,7 +6090,7 @@ msgid "Realm"
 msgstr "Oblast"
 
 msgid "Reason Code"
-msgstr ""
+msgstr "Ḱód důvodu"
 
 msgid "Reason for last transfer to battery (* opaque)"
 msgstr "Důvod předchozího přechodu na provoz z akumulátorů (* nejednotné)"
@@ -6119,7 +6102,7 @@ msgid "Receive Buffer Size"
 msgstr "Velikost vyrovnávací paměti příjmu"
 
 msgid "Record is locked"
-msgstr ""
+msgstr "Záznam je uzamčený"
 
 msgid "Recurse into directories."
 msgstr "Včetně podsložek"
@@ -6199,7 +6182,7 @@ msgstr "Odstranit všechny záznamy z ARP tabulky"
 
 #, php-format
 msgid "Remove the %s first before proceeding."
-msgstr ""
+msgstr "Pokračovat bude možné až po odebrání %s."
 
 msgid "Replace Battery UPS"
 msgstr "Vyměňte akumulátory v UPS zdroji"
@@ -6276,7 +6259,7 @@ msgid "Restricted"
 msgstr "Omezené"
 
 msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
-msgstr ""
+msgstr "Omezené – převzít vše krom „zapsat ACL“ a „změnit vlastníka“"
 
 msgid "Results for net rpc testjoin:"
 msgstr "Výsledek operace net rpc testjoin:"
@@ -6520,6 +6503,14 @@ msgstr "Zabezpečený shell"
 msgid "Security"
 msgstr "Zabezpečení"
 
+msgid ""
+"See ZFS datasets & deduplication wiki article BEFORE using this feature."
+msgstr ""
+
+msgid ""
+"See ZFS volumes & deduplication wiki article BEFORE using this feature."
+msgstr ""
+
 msgid "See attribute E8."
 msgstr "Viz atribut E8"
 
@@ -6538,7 +6529,7 @@ msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Vyberte disk, který má zapnuté dohledování hodnot SMART diagnostiky."
 
 msgid "Select file system format."
-msgstr ""
+msgstr "Vyberte formát souborového systému."
 
 msgid "Select firmware:"
 msgstr "Vyberte firmware:"
@@ -6561,7 +6552,6 @@ msgstr "Vyberte jazyk pro webové rozhraní."
 msgid "Select the location closest to you."
 msgstr "Vyberte umístění, kterému jste nejblíže."
 
-#, php-format
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
 "the button below to restore the configuration."
@@ -6590,7 +6580,7 @@ msgid "Selected file isn't an valid ISO file."
 msgstr "Vybraný soubor není platným ISO souborem."
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
-msgstr ""
+msgstr "Technologie pro samo-dohledování, analýzu a hlášení"
 
 msgid "Self-tests Management"
 msgstr "Správa samotestů"
@@ -6617,7 +6607,7 @@ msgid "Sensitive"
 msgstr "Rozlišovat"
 
 msgid "Sensor"
-msgstr ""
+msgstr "Čidlo"
 
 msgid "Sep"
 msgstr "zář"
@@ -6814,7 +6804,7 @@ msgid "Slovenian"
 msgstr "slovinština"
 
 msgid "Smart Outlet Management"
-msgstr ""
+msgstr "Správa odpojovatelných zásuvek"
 
 msgid "SmartBoost"
 msgstr "SmartBoost (vyrovnání podpětí)"
@@ -6955,6 +6945,8 @@ msgid ""
 "Lowering this threshold can adversely affect performance and auto-"
 "defragmentation!"
 msgstr ""
+"Určuje, kolik procent úložné kapacity vyhradit pro vnitřní potřebu. Snížení "
+"této hodnoty může negativně ovlivnit výkon a automatickou defragmentaci."
 
 msgid "Split request"
 msgstr "Rozdělit požadavek"
@@ -6984,11 +6976,17 @@ msgstr "Statické"
 msgid "Static Routes"
 msgstr "Statické trasy"
 
+msgid "Static Routes Setup"
+msgstr ""
+
 msgid "Static routes"
 msgstr "Statické trasy"
 
 msgid "Status"
 msgstr "Stav"
+
+msgid "Status & Information"
+msgstr ""
 
 #, php-format
 msgid "Status report successfully sent to: %s."
@@ -6998,7 +6996,7 @@ msgid "Status report successfully sent."
 msgstr "Zpráva o stavu byla úspěšně odeslána."
 
 msgid "Step"
-msgstr ""
+msgstr "Velikost změny"
 
 msgid "Stop"
 msgstr "Zastavit"
@@ -7120,7 +7118,6 @@ msgstr "Syncthing"
 msgid "Syslog Level"
 msgstr "Úroveň podrobností pro syslog"
 
-#, php-format
 msgid ""
 "Syslog sends UDP datagrams to port 514 on the specified remote syslog "
 "server. Be sure to set syslogd on the remote server to accept syslog "
@@ -7140,7 +7137,7 @@ msgid "System Load"
 msgstr "Vytížení systému"
 
 msgid "System Message"
-msgstr ""
+msgstr "Systémová zpráva"
 
 msgid "System Settings"
 msgstr "Nastavení systému"
@@ -7322,7 +7319,7 @@ msgstr "IP adresa, příslušející k tomuto názvu stroje."
 
 #, php-format
 msgid "The MIB '%s' already exists."
-msgstr ""
+msgstr "MIB „%s“ už existuje."
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -7461,18 +7458,15 @@ msgstr "Je třeba vyplnit atribut %s."
 msgid ""
 "The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."
 msgstr ""
-
-#, php-format
-msgid ""
-"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
-"and [._-]"
-msgstr ""
+"Hodnota atributu „%s“ se může sestávat pouze ze znaků [a-z], [A-Z] a [0-9]."
 
 #, php-format
 msgid ""
 "The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
 "and [._-]."
 msgstr ""
+"Hodnota atributu „%s“ se může sestávat pouze ze znaků [a-z], [A-Z], [0-9] a "
+"[._-]."
 
 #, php-format
 msgid ""
@@ -7565,7 +7559,6 @@ msgstr "Nastavení nebylo možné obnovit."
 msgid "The configuration could not be restored. %s"
 msgstr "Nastavení se nepodařilo obnovit. %s"
 
-#, php-format
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr ""
 "Nastavení nelze obnovit - nebyl poskytnut žádný soubor, který by ho měl "
@@ -7581,7 +7574,6 @@ msgstr ""
 "hlášení přetrvává, podívejte se na podrobnosti v <a href='%s'>záznamu "
 "událostí v systému</a>.</b>"
 
-#, php-format
 msgid "The configuration has been restored. The server is now rebooting."
 msgstr ""
 "Nastavení byla uvedena do stavu, zachyceném v poskytnuté záloze. Server je "
@@ -7697,13 +7689,8 @@ msgstr ""
 "Složka, která obsahuje soubory, které chcete zveřejnit. Protějšek nemusí "
 "nemusí v rámci přenosu předávat složku."
 
-#, php-format
-msgid ""
-"The disk is currently mounted! <a href='%s'>Unmount</a> this disk first "
-"before proceeding."
+msgid "The disk is currently mounted!"
 msgstr ""
-"Disk je v tuto chvíli připojený! Než budete pokračovat, <a "
-"href='%s'>odpojte</a> (unmount) ho."
 
 msgid ""
 "The disk is currently mounted! The mount point will be removed temporarily "
@@ -7749,13 +7736,8 @@ msgstr ""
 "tohoto NAS serveru. Seznam dostupných <a href='%s' "
 "target='_blank'>ovladačů</a>."
 
-#, php-format
-msgid ""
-"The encrypted device is currently mounted! <a href='%s'>Unmount</a> this "
-"disk first before proceeding."
+msgid "The encrypted device is currently mounted!"
 msgstr ""
-"Šifrované zařízení je v tuto chvíli připojeno! <a href='%s'>Odpojte "
-"(umount)</a> jej, než budete pokračovat."
 
 msgid "The extent name already exists."
 msgstr "Název úložné jednotky je užpoužíván."
@@ -7766,7 +7748,6 @@ msgstr "Soubor, který se snažíte aplikovat, není určen pro tuto platformu"
 msgid "The firmware file is corrupt"
 msgstr "Soubor s firmware je poškozený"
 
-#, php-format
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
 msgstr ""
@@ -7775,6 +7756,9 @@ msgstr ""
 
 msgid "The following input errors were detected"
 msgstr "V zadaných údajích byly zjištěny následující chyby"
+
+msgid "The following services will use AD authentication:"
+msgstr ""
 
 msgid "The full name contains invalid characters."
 msgstr "Úplný název obsahuje neplatné znaky."
@@ -8021,14 +8005,6 @@ msgid "The recommended queue depth is %d."
 msgstr "Doporučená délka fronty je %d."
 
 #, php-format
-msgid ""
-"The reloading request has been sent to the daemon. You can see the result by "
-"<a href=\"%s\">Log</a>."
-msgstr ""
-"Požadavek na znovunačtení byl odeslán procesu služby. Výsledek je k vidění v "
-"<a href=\"%s\">záznamu událostí</a>."
-
-#, php-format
 msgid "The removable area mapped to LUN%d."
 msgstr "Vyjímatelná oblast mapovaná na LUN%d."
 
@@ -8041,7 +8017,6 @@ msgstr "Sériový nebo USB port, ke kterému je UPS zdroj připojen."
 msgid "The serial or USB port where your second UPS is connected."
 msgstr "Sériový nebo USB port, ke kterému je druhý UPS zdroj připojený."
 
-#, php-format
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr "Server se propaguje jako časový server pro Windows klienty."
 
@@ -8163,6 +8138,10 @@ msgstr "Příliš mnoho dalších skupin."
 
 msgid "There is no error, the file uploaded with success."
 msgstr "Soubor byl serverem úspěšně přijat."
+
+msgid ""
+"There is no need to start a RAID volume from here (It starts automatically)."
+msgstr ""
 
 msgid "There must be at least 1 disks selected."
 msgstr "Je třeba vybrat alespoň jeden disk."
@@ -8322,6 +8301,9 @@ msgstr ""
 "jako součást schémat zjišťování a oprav chyb vstupu/výstupu ostatních "
 "výrobců. Uvádí počet chyb parity, které se vyskytly po cestě na médium "
 "prostřednictvím mezipaměti na jednotce."
+
+msgid "This can cause a huge delay in loading the log page!"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -8547,6 +8529,9 @@ msgid ""
 "the configuration which has been created with the WebGUI if changes has been "
 "done via command line"
 msgstr ""
+"Tato stránka odráží stávající nastavení systému. V případě, že byly "
+"provedeny změny prostřednictvím rozhraní příkazového řádku, bude se lišit od "
+"toho, provedeného prostřednictvím webového správního rozhraní."
 
 msgid ""
 "This parameter controls whether files starting with a dot appear as hidden "
@@ -8733,25 +8718,6 @@ msgstr "RychlostTitulku"
 msgid "To Email Address"
 msgstr "Na e-mailovou adresu"
 
-msgid ""
-"To configure the target, you must add at least Portal Group and Initiator "
-"Group and Extent.<br />Portal Group which is identified by tag number "
-"defines IP addresses and listening TCP ports.<br />Initiator Group which is "
-"identified by tag number defines authorised initiator names and networks.<br "
-"/>Auth Group which is identified by tag number and is optional if the target "
-"does not use CHAP authentication defines authorised users and secrets for "
-"additional security.<br />Extent defines the storage area of the target."
-msgstr ""
-"Pro nastavení cíle je třeba zadat alespoň skupinu portálů, skupinu "
-"iniciátorů a úložnou jednotku.<br />Skupina portálů (identifikovaná číslem "
-"značky), určuje IP adresy a TCP porty, na kterých bude očekáváno spojení.<br "
-"/>Skupina iniciátorů (identifikovaná číslem značky) obsahuje názvy "
-"iniciátorů a sítě, ze kterých bude umožněn přístup.<br />Ověřovací skupina "
-"(identifikovaná číslem značky) není v případě, že cíl nepoužívá CHAP "
-"ověřování, povinná. Pro posílení zabezpečení obsahuje pověřené uživatele a "
-"jejich hesla.<br />Úložná jednotka určuje oblast úložiště, které cíl "
-"poskytuje."
-
 msgid "To e-mail"
 msgstr "Na e-mail"
 
@@ -8798,16 +8764,8 @@ msgid "To match any IP address leave this field empty."
 msgstr ""
 "Pokud má platit pro jakoukoli IP adresu, ponechte kolonku nevyplněnou."
 
-msgid ""
-"To use Active Directory the CIFS/SMB service will enabled, too. The "
-"following services will use AD authentication:<div "
-"id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-">System</li></ul></div>"
+msgid "To use Active Directory the CIFS/SMB service will enabled as well."
 msgstr ""
-"Společně se službou Active Directory bude zapnuta i služba CIFS/SMB. "
-"Následující služby budou používat ověřování vůči AD:<div "
-"id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-">Systém</li></ul></div>"
 
 #, php-format
 msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
@@ -9132,13 +9090,16 @@ msgid "Unknown or unformatted"
 msgstr "Neznámý nebo nenaformátované"
 
 msgid "Unknown size"
-msgstr ""
+msgstr "Neznámá velikost"
 
 msgid "Unload"
 msgstr "Uvolnit"
 
 msgid "Unmount disk/partition"
 msgstr "Odpojit disk/oddíl"
+
+msgid "Unmount this disk first before proceeding."
+msgstr ""
 
 msgid "Unmounting..."
 msgstr "Odpojování…"
@@ -9169,7 +9130,7 @@ msgid "Upload directory of the webserver. The default is %s."
 msgstr "Složka pro nahrávání na webový server. Výchozí je %s."
 
 msgid "Upper"
-msgstr ""
+msgstr "Horní"
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
@@ -9203,6 +9164,9 @@ msgstr ""
 
 msgid "Use the specified NTP server."
 msgstr "Použít uvedený NTP server."
+
+msgid "Use these specials actions for debugging only!"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -9256,12 +9220,14 @@ msgstr "Použito"
 msgid "User"
 msgstr "Uživatel"
 
-#, php-format
 msgid "User Defined Groups"
 msgstr "Uživatelem definované skupiny"
 
 msgid "User ID"
 msgstr "Identifikátor uživatele"
+
+msgid "User Setup"
+msgstr ""
 
 msgid "User full name."
 msgstr "Celé jméno uživatele"
@@ -9432,6 +9398,10 @@ msgid ""
 "or %n for a counter starting at n, [n for the n rightmost characters of the "
 "device serial number."
 msgstr ""
+"Název svazku nově vytvářeného souborového systému. Je možné použít i "
+"zástupná vyjádření – $ pro vložení názvu zařízení, % jako čítač nebo %n pro "
+"čítač, začínající na hodnotě n, [n coby znak z konce sériového čísla "
+"zařízení."
 
 msgid "Volume mode"
 msgstr "Režim svazku"
@@ -9441,6 +9411,9 @@ msgstr "Svazky"
 
 msgid "WAN address"
 msgstr "Adresa rozhraní vnější sítě (WAN)"
+
+msgid "WARNING"
+msgstr ""
 
 msgid "WEP"
 msgstr "WEP"
@@ -9621,6 +9594,9 @@ msgstr ""
 msgid "You can use the following parameters for substitution:"
 msgstr "Pro dosazování je možné použít následující parametry:"
 
+msgid "You can verify the result in the log file."
+msgstr ""
+
 #, php-format
 msgid ""
 "You can't mount the partition '%s' where the config file is stored.<br />"
@@ -9673,6 +9649,11 @@ msgstr ""
 "Před přechodem na novější verzi firmware je třeba systém nejprve <a "
 "href='%s'>restartovat</a>."
 
+msgid ""
+"You must add at least a Portal Group, an Initiator Group and an Extent "
+"before you can configure a Target."
+msgstr ""
+
 msgid "You must add disks first."
 msgstr "Nejprve je třeba přidat disky."
 
@@ -9718,7 +9699,7 @@ msgid "ZFS Snapshot Properties"
 msgstr "Vlastnosti ZFS zachyceného stavu"
 
 msgid "ZFS Storage Pool"
-msgstr ""
+msgstr "ZFS fond úložišť"
 
 msgid "ZFS Volume Information & Status"
 msgstr "ZFS svazek – informace a stav"
@@ -9746,7 +9727,6 @@ msgstr "Zeroconf/Bonjour"
 msgid "adaptive (low power consumption)"
 msgstr "přizpůsobivé (nízká spotřeba energie)"
 
-#, php-format
 msgid "add any supplemental parameters"
 msgstr "přidejte jakékoli doplňující parametry"
 
@@ -9845,7 +9825,7 @@ msgid "mount"
 msgstr "připojit (mount)"
 
 msgid "mount point"
-msgstr ""
+msgstr "přípojný (mount) bod"
 
 msgid "n/a"
 msgstr "není k dispozici"
@@ -9864,6 +9844,9 @@ msgstr "phpBB"
 
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
+
+msgid "pools"
+msgstr ""
 
 msgid "rc.conf"
 msgstr "rc.conf"
@@ -9908,10 +9891,161 @@ msgstr "odpojit (umount)"
 msgid "version:"
 msgstr "verze:"
 
+#~ msgid "Detected Language:<br />(Change if needed)"
+#~ msgstr "Zjištěný jazyk:<br />(Změňte dle potřeby)"
+
+#~ msgid "<->"
+#~ msgstr "Směr"
+
+#~ msgid ""
+#~ "Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
+#~ "<a "
+#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
+#~ ":disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & "
+#~ "deduplication</a> wiki article BEFORE using this feature.</b></br>"
+#~ msgstr ""
+#~ "Určuje metodu deduplikace. <br><b><font "
+#~ "color='red'>UPOZORNĚNÍ/VAROVÁNÍ</font>: Prostudujte si článek <a "
+#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
+#~ ":disks_zfs_datasets_dataset' target='_blank'>ZFS datové sady a "
+#~ "deduplikace</a> na wiki ještě PŘEDTÍM, než vůbec začnete tuto funkci "
+#~ "používat.</b></br>"
+
+#, php-format
+#~ msgid "No configured Extent. Please add new <a href='%s'>Extent</a> first."
+#~ msgstr ""
+#~ "Není nastavena žádná úložná jednotka. Nejprve přidejte <a href='%s'>úložnou "
+#~ "jednotku</a>."
+
 #, php-format
 #~ msgid ""
-#~ "A mounted RAID volume cannot be deleted. Remove the <a href='%s'>mount "
-#~ "point</a> first before proceeding."
+#~ "The encrypted device is currently mounted! <a href='%s'>Unmount</a> this "
+#~ "disk first before proceeding."
 #~ msgstr ""
-#~ "Nelze smazat RAID svazek, který je připojen (mount). Nejdříve je třeba "
-#~ "odebrat <a href='%s'>přípojný bod</a> a pak teprve přistoupit k mazání."
+#~ "Šifrované zařízení je v tuto chvíli připojeno! <a href='%s'>Odpojte "
+#~ "(umount)</a> jej, než budete pokračovat."
+
+#, php-format
+#~ msgid ""
+#~ "The reloading request has been sent to the daemon. You can see the result by "
+#~ "<a href=\"%s\">Log</a>."
+#~ msgstr ""
+#~ "Požadavek na znovunačtení byl odeslán procesu služby. Výsledek je k vidění v "
+#~ "<a href=\"%s\">záznamu událostí</a>."
+
+#~ msgid ""
+#~ "To use Active Directory the CIFS/SMB service will enabled, too. The "
+#~ "following services will use AD authentication:<div "
+#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
+#~ ">System</li></ul></div>"
+#~ msgstr ""
+#~ "Společně se službou Active Directory bude zapnuta i služba CIFS/SMB. "
+#~ "Následující služby budou používat ověřování vůči AD:<div "
+#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
+#~ ">Systém</li></ul></div>"
+
+#~ msgid ""
+#~ "1. Use these specials actions for debugging only!<br />2. There is no need "
+#~ "of using this menu for starting a RAID volume (start automaticaly)."
+#~ msgstr ""
+#~ "1. Tyto zvláštní akce používejte pouze pro účely ladění!<br />2. Tuto "
+#~ "nabídku není třeba používat pro spouštění RAID svazku (děje se automaticky)."
+
+#, php-format
+#~ msgid ""
+#~ "Hint: If this is checked, IP addresses in the server logs are resolved to "
+#~ "real hostnames where possible.<br><font color='red'>Warning</font>: This can "
+#~ "cause a huge delay in loading the log page!"
+#~ msgstr ""
+#~ "Tip: pokud je toto zašrktnuto, jsou při zobrazování záznamu událostí na "
+#~ "serveru IP adresy překládány na názvy strojů.<br><font "
+#~ "color='red'>Varování</font>: Může způsobit opravdu velké prodlevy při "
+#~ "načítání stránky záznamu událostí!"
+
+#, php-format
+#~ msgid ""
+#~ "IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
+#~ "addresses to hostnames&quot;</a> is enabled."
+#~ msgstr ""
+#~ "Pokud je zapnuto <a href='%s'>Překládání IP adres na názvy strojů</a>, pak "
+#~ "jsou zobrazovány jejich DNS názvy namísto IP adres."
+
+#~ msgid ""
+#~ "To configure the target, you must add at least Portal Group and Initiator "
+#~ "Group and Extent.<br />Portal Group which is identified by tag number "
+#~ "defines IP addresses and listening TCP ports.<br />Initiator Group which is "
+#~ "identified by tag number defines authorised initiator names and networks.<br "
+#~ "/>Auth Group which is identified by tag number and is optional if the target "
+#~ "does not use CHAP authentication defines authorised users and secrets for "
+#~ "additional security.<br />Extent defines the storage area of the target."
+#~ msgstr ""
+#~ "Pro nastavení cíle je třeba zadat alespoň skupinu portálů, skupinu "
+#~ "iniciátorů a úložnou jednotku.<br />Skupina portálů (identifikovaná číslem "
+#~ "značky), určuje IP adresy a TCP porty, na kterých bude očekáváno spojení.<br "
+#~ "/>Skupina iniciátorů (identifikovaná číslem značky) obsahuje názvy "
+#~ "iniciátorů a sítě, ze kterých bude umožněn přístup.<br />Ověřovací skupina "
+#~ "(identifikovaná číslem značky) není v případě, že cíl nepoužívá CHAP "
+#~ "ověřování, povinná. Pro posílení zabezpečení obsahuje pověřené uživatele a "
+#~ "jejich hesla.<br />Úložná jednotka určuje oblast úložiště, které cíl "
+#~ "poskytuje."
+
+#~ msgid ""
+#~ "Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
+#~ "<a "
+#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
+#~ ":disks-zfs-volumes-volume' target='_blank'>ZFS volumes & deduplication</a> "
+#~ "wiki article BEFORE using this feature.</b></br>"
+#~ msgstr ""
+#~ "Určuje metodu deduplikace dat. <br><b><font "
+#~ "color='red'>UPOZORNĚNÍ/VAROVÁNÍ</font>: Prostudujte si článek <a "
+#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
+#~ ":disks-zfs-volumes-volume' target='_blank'>ZFS svazky a deduplikace</a> na "
+#~ "wiki ještě PŘEDTÍM, než vůbec začnete tuto funkci používat.</b></br>"
+
+#, php-format
+#~ msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
+#~ msgstr ""
+#~ "Nejsou nastavené fondy. Nejprve nějaké <a href='%s'>fondy</a> přidejte."
+
+#, php-format
+#~ msgid ""
+#~ "The disk is currently mounted! <a href='%s'>Unmount</a> this disk first "
+#~ "before proceeding."
+#~ msgstr ""
+#~ "Disk je v tuto chvíli připojený! Než budete pokračovat, <a "
+#~ "href='%s'>odpojte</a> (unmount) ho."
+
+#, php-format
+#~ msgid ""
+#~ "No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
+#~ "first."
+#~ msgstr ""
+#~ "Není nastavena žádná skupina portálu. Nejprve nějakou <a href='%s'>skupinu "
+#~ "portálu</a> přidejte."
+
+#, php-format
+#~ msgid ""
+#~ "No configured Initiator Group. Please add new <a href='%s'>Initiator "
+#~ "Group</a> first."
+#~ msgstr ""
+#~ "Není nastavena žádná skupina iniciátoru. Nejdříve nějakou <a "
+#~ "href='%s'>Initiator Group</a> přidejte."
+
+#, php-format
+#~ msgid ""
+#~ "No configured bridge interfaces. Please add new <a href='%s'>bridge "
+#~ "interface</a> first."
+#~ msgstr ""
+#~ "Nejsou nastavena rozhraní síťových mostů. Nejprve nějaká nová <a "
+#~ "href='%s'>přidejte</a>."
+
+#~ msgid "Invalid username or password.</br> Please try again."
+#~ msgstr "Neplatné uživatelské jméno nebo heslo.</br> Zkuste to znovu."
+
+#, php-format
+#~ msgid ""
+#~ "The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
+#~ "and [._-]"
+#~ msgstr ""
+#~ "Hodnota atributu „%s“ se může sestávat pouze ze znaků [a-z], [A-Z], [0-9] a "
+#~ "[._-]"

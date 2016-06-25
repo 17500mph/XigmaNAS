@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-20 03:00+0000\n"
+"POT-Creation-Date: 2016-06-25 01:50+0000\n"
 "PO-Revision-Date: 2016-03-03 17:10+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-20 01:42+0000\n"
-"X-Generator: Launchpad (build 18097)\n"
+"X-Launchpad-Export-Date: 2016-06-25 01:50+0000\n"
+"X-Generator: Launchpad (build 18111)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -105,6 +105,9 @@ msgstr "%sB有效，於%sB"
 msgid "%sB used of %sB"
 msgstr "%sB 已用，於%sB"
 
+msgid "(Change if needed)"
+msgstr ""
+
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr ""
 
@@ -153,11 +156,6 @@ msgstr ""
 msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr ""
 
-msgid ""
-"1. Use these specials actions for debugging only!<br />2. There is no need "
-"of using this menu for starting a RAID volume (start automaticaly)."
-msgstr "1. 這些特殊操作僅適用於調試（debuging）！<br />2. 無需操作此選單來啟動RAID卷(系統自動啟動)。"
-
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr ""
 
@@ -172,9 +170,6 @@ msgstr "4KB封套"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN 標籤（介於 1 和 4094 之間）。"
-
-msgid "<->"
-msgstr "<->"
 
 #, php-format
 msgid ""
@@ -234,6 +229,11 @@ msgid ""
 "target from the initiator."
 msgstr "門戶組含有可從啟動器（initiator）連接目標器（target）的 IP 地址和偵聽的 TCP 端口 。"
 
+msgid ""
+"A Portal Group is identified by a tag number and defines IP addresses and "
+"listening TCP ports."
+msgstr ""
+
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr "此介面已經定義一個為 %s 的 VLAN 標籤。"
@@ -259,6 +259,9 @@ msgid ""
 msgstr "密鑰可能是5或13個字符（40或104位），這取決於本地網路卡的性能。設置可使用普通的字符串或以 '0x' 開頭的十六進制數字。"
 
 msgid "A mounted RAID volume cannot be deleted."
+msgstr ""
+
+msgid "A reload request has been sent to the daemon."
 msgstr ""
 
 msgid "A route to this destination network already exists."
@@ -693,7 +696,6 @@ msgid ""
 "follows the allow option format."
 msgstr "允許特定用戶與群組可唯讀某個分享區。此選項和允許選項格式相同。"
 
-#, php-format
 msgid "Allows the server to try and become a local master browser."
 msgstr "允許伺服器嘗試成為本區域網路瀏覽器（local master browser）。"
 
@@ -744,6 +746,20 @@ msgstr ""
 msgid ""
 "Amplitude of 'thrashing' (distance of repetitive forward/reverse head "
 "motion)."
+msgstr ""
+
+msgid ""
+"An Auth Group is identified by a tag number and is optional. If the Target "
+"does not use CHAP authentication it defines authorised users and secrets for "
+"additional security."
+msgstr ""
+
+msgid "An Extent defines the storage area of the Target."
+msgstr ""
+
+msgid ""
+"An Initiator Group is identified by a tag number and defines authorised "
+"initiator names and networks."
 msgstr ""
 
 msgid "An host with this name already exists."
@@ -1025,7 +1041,6 @@ msgstr "橋接"
 msgid "Broadcast interval"
 msgstr "廣播間隔"
 
-#, php-format
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
 "seconds)"
@@ -1284,7 +1299,6 @@ msgstr "LINK_DOWN 事件的指令（例如 %s）。"
 msgid "Command for LINK_UP event (e.g. %s)."
 msgstr "LINK_UP 事件的指令（例如 %s）。"
 
-#, php-format
 msgid "Command output"
 msgstr ""
 
@@ -1422,28 +1436,8 @@ msgstr ""
 "gzip-N 值來指定 'gzip' 的壓縮算法階段，其中N是一個整數，從1（最快）到 9（最好壓縮比）。目前，'gzip' 的壓縮階段是 'gzip-"
 "6' 。"
 
-msgid ""
-"Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-"<a "
-"href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-":disks-zfs-volumes-volume' target='_blank'>ZFS volumes & deduplication</a> "
-"wiki article BEFORE using this feature.</b></br>"
+msgid "Controls the dedup method."
 msgstr ""
-"控制重複資料删除模式。<br><b><font color='red'>注意/警告</font>：使用此功能前，請參閱 <a "
-"href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-":disks-zfs-volumes-volume' target='_blank'>ZFS 卷 與 重複資料删除</a> 維基文章。</b></br>"
-
-msgid ""
-"Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-"<a "
-"href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-":disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & "
-"deduplication</a> wiki article BEFORE using this feature.</b></br>"
-msgstr ""
-"控制重複資料删除模式。<br><b><font color='red'>注意/警告</font>：使用此功能前，請參閱 <a "
-"href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-":disks_zfs_datasets_dataset' target='_blank'>ZFS 數據集 與 重複資料删除</a> "
-"維基文章。</b></br>"
 
 msgid "Controls whether this dataset can be modified."
 msgstr "控制此數據集能否被修改。"
@@ -1978,8 +1972,8 @@ msgstr "共享目的端"
 msgid "Detected"
 msgstr "已偵測"
 
-msgid "Detected Language:<br />(Change if needed)"
-msgstr "檢測語言：<br />（如果需要請更改）"
+msgid "Detected Language:"
+msgstr ""
 
 msgid "Detected RSYNC remote shares"
 msgstr "刪除 RSYNC 遠端分享"
@@ -3384,15 +3378,6 @@ msgstr "語法高亮度顯示"
 msgid "Hint"
 msgstr "提示"
 
-#, php-format
-msgid ""
-"Hint: If this is checked, IP addresses in the server logs are resolved to "
-"real hostnames where possible.<br><font color='red'>Warning</font>: This can "
-"cause a huge delay in loading the log page!"
-msgstr ""
-"提示：如果勾選此選項，在伺服器日誌中的IP 地址將盡可能解析為主機名。<br><font "
-"color='red'>警告</font>：這可能會導致延遲加載日誌頁！"
-
 msgid "Home directory"
 msgstr "個人目錄（ Home ）"
 
@@ -3416,6 +3401,9 @@ msgstr "主機名數據庫"
 
 msgid "Hosts"
 msgstr "主機列表"
+
+msgid "Hosts Setup"
+msgstr ""
 
 msgid "Hosts allow"
 msgstr "允許主機"
@@ -3469,11 +3457,9 @@ msgstr "IP 地址"
 msgid "IP address of remote syslog server."
 msgstr ""
 
-#, php-format
 msgid ""
-"IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
-"addresses to hostnames&quot;</a> is enabled."
-msgstr "如果啟用  <a href='%s'>&quot;IP  地址將轉換成主機名&quot;</a> ，IP  位址將轉換成主機名。"
+"IP addresses are resolved to hostnames when the following option is enabled:"
+msgstr ""
 
 msgid "IP or FQDN address of remote Rsync server."
 msgstr "Rsync 遠程伺服器的 IP 或 FQDN 位址"
@@ -3566,6 +3552,11 @@ msgid ""
 "If the server is behind a proxy set these parameters to give local services "
 "access to the internet via proxy."
 msgstr "如果伺服器是在位於代理伺服器後，設置此可讓本地服務通過代理伺服器連接到互聯網。"
+
+msgid ""
+"If this option is checked, IP addresses in the server logs are resolved to "
+"their hostnames where possible."
+msgstr ""
 
 msgid ""
 "If this parameter is set, Samba attempts to first read DOS attributes "
@@ -3828,7 +3819,7 @@ msgstr "檔案格式無效。"
 msgid "Invalid max. block size! It must be in the range from %d to %d."
 msgstr "数据块的最大值無效！它必須是從 %d 到 %d 的範圍。"
 
-msgid "Invalid username or password.</br> Please try again."
+msgid "Invalid username or password."
 msgstr ""
 
 msgid "Invert Selection"
@@ -3852,7 +3843,6 @@ msgid ""
 "are part of a non healthy pool."
 msgstr "不建議導入運行狀況不良的存儲池或是屬於運行不良的存儲池的虛擬設備。"
 
-#, php-format
 msgid ""
 "It is recommended to use encryption before you store the backup in a safe "
 "location."
@@ -4700,10 +4690,19 @@ msgstr "否"
 msgid "No DNS setting found."
 msgstr "找不到DNS配置。"
 
+msgid "No Extent has been configured."
+msgstr ""
+
 msgid "No IPMI FRU data available."
 msgstr ""
 
 msgid "No IPMI sensor data available."
+msgstr ""
+
+msgid "No Initiator Group has been configured."
+msgstr ""
+
+msgid "No Portal Group has been configured."
 msgstr ""
 
 msgid "No RSYNC Client configured"
@@ -4723,31 +4722,11 @@ msgid ""
 "interface</a> first."
 msgstr "尚未配置 CARP 介面。請先添加新的<a href='%s'>CARP介面</a>。"
 
-#, php-format
-msgid "No configured Extent. Please add new <a href='%s'>Extent</a> first."
-msgstr "尚未配置 Extent 。請先添加新的<a href='%s'>Extent</a>。"
-
-#, php-format
-msgid ""
-"No configured Initiator Group. Please add new <a href='%s'>Initiator "
-"Group</a> first."
-msgstr "尚未配置啟動器（Initiator）群組。請先添加新的<a href='%s'>啟動器（Initiator）群組</a>。"
-
-#, php-format
-msgid ""
-"No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
-"first."
-msgstr "尚未配置門戶組（Portal Group）。請先添加新的<a href='%s'>門戶組（Portal Group）</a>。"
-
-#, php-format
-msgid ""
-"No configured bridge interfaces. Please add new <a href='%s'>bridge "
-"interface</a> first."
+msgid "No configured bridge interfaces."
 msgstr ""
 
-#, php-format
-msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
-msgstr "尚未配置存儲池。請先添加新的<a href='%s'>存儲池</a>。"
+msgid "No configured pools."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -5242,6 +5221,25 @@ msgstr "硬體平台"
 msgid "Platform OS"
 msgstr "操作系統平台"
 
+msgid "Please add a bridge interface first."
+msgstr ""
+
+msgid "Please add a new Extent first."
+msgstr ""
+
+msgid "Please add a new Initiator Group first."
+msgstr ""
+
+msgid "Please add a new Portal Group first."
+msgstr ""
+
+#, php-format
+msgid "Please add new %s first."
+msgstr ""
+
+msgid "Please add new pools first."
+msgstr ""
+
 #, php-format
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "請查看 <a href='%s' target='_blank'>文檔</a>。"
@@ -5254,6 +5252,9 @@ msgstr ""
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr "請注意在路徑中不可以有空白字元。"
+
+msgid "Please try again."
+msgstr ""
 
 msgid "Polish"
 msgstr "波蘭文"
@@ -5357,7 +5358,6 @@ msgstr ""
 msgid "PreInit"
 msgstr "前置初始動作（PreInit）"
 
-#, php-format
 msgid "Predefined Groups"
 msgstr ""
 
@@ -5991,6 +5991,14 @@ msgstr "安全系統殼(Secure Shell)"
 msgid "Security"
 msgstr "安全選項"
 
+msgid ""
+"See ZFS datasets & deduplication wiki article BEFORE using this feature."
+msgstr ""
+
+msgid ""
+"See ZFS volumes & deduplication wiki article BEFORE using this feature."
+msgstr ""
+
 msgid "See attribute E8."
 msgstr ""
 
@@ -6029,7 +6037,6 @@ msgstr "請選擇網頁界面的語言。"
 msgid "Select the location closest to you."
 msgstr "請選擇最鄰近的區域。"
 
-#, php-format
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
 "the button below to restore the configuration."
@@ -6420,11 +6427,17 @@ msgstr "靜態"
 msgid "Static Routes"
 msgstr "靜態路由"
 
+msgid "Static Routes Setup"
+msgstr ""
+
 msgid "Static routes"
 msgstr "靜態路由"
 
 msgid "Status"
 msgstr "狀態"
+
+msgid "Status & Information"
+msgstr ""
 
 #, php-format
 msgid "Status report successfully sent to: %s."
@@ -6552,7 +6565,6 @@ msgstr "Syncthing"
 msgid "Syslog Level"
 msgstr ""
 
-#, php-format
 msgid ""
 "Syslog sends UDP datagrams to port 514 on the specified remote syslog "
 "server. Be sure to set syslogd on the remote server to accept syslog "
@@ -6875,12 +6887,6 @@ msgstr ""
 #, php-format
 msgid ""
 "The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
-"and [._-]"
-msgstr ""
-
-#, php-format
-msgid ""
-"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
 "and [._-]."
 msgstr ""
 
@@ -6962,7 +6968,6 @@ msgstr "無法還原配置。"
 msgid "The configuration could not be restored. %s"
 msgstr "無法還原配置。%s"
 
-#, php-format
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr "無法還原配置。沒有文件被上傳！"
 
@@ -6975,7 +6980,6 @@ msgstr ""
 "設定已經變更。<br />您必須套用變更才可以變更設定。<br /><b>假如這個訊息一直存在請去看一下<a "
 "href='%s'>系統紀錄</a>來取得更多資訊。</b>"
 
-#, php-format
 msgid "The configuration has been restored. The server is now rebooting."
 msgstr "已還原配置。現在重新啟動伺服器。"
 
@@ -7063,11 +7067,8 @@ msgid ""
 "not need to pass along the directory as part of the transfer."
 msgstr "您想要發布文件的目錄。遠程主機傳遞時不需要轉移目錄。"
 
-#, php-format
-msgid ""
-"The disk is currently mounted! <a href='%s'>Unmount</a> this disk first "
-"before proceeding."
-msgstr "磁盤正在掛載中！繼續前請先 <a href='%s'>卸載</a> 磁盤。"
+msgid "The disk is currently mounted!"
+msgstr ""
 
 msgid ""
 "The disk is currently mounted! The mount point will be removed temporarily "
@@ -7104,11 +7105,8 @@ msgid ""
 "target='_blank'>drivers</a>."
 msgstr "用來與 LCD 通訊的驅動程式。取得可用的<a href='%s' target='_blank'>驅動程式</a> 清單。"
 
-#, php-format
-msgid ""
-"The encrypted device is currently mounted! <a href='%s'>Unmount</a> this "
-"disk first before proceeding."
-msgstr "加密裝置正在掛載中！繼續前請先 <a href='%s'>卸載</a> 磁盤。"
+msgid "The encrypted device is currently mounted!"
+msgstr ""
 
 msgid "The extent name already exists."
 msgstr "Extent 名稱已經存在。"
@@ -7119,13 +7117,15 @@ msgstr ""
 msgid "The firmware file is corrupt"
 msgstr "固件檔案已損壞"
 
-#, php-format
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
 msgstr "正在安裝韌體。伺服器將自動重新啟動。"
 
 msgid "The following input errors were detected"
 msgstr "偵測到以下的輸入錯誤"
+
+msgid "The following services will use AD authentication:"
+msgstr ""
 
 msgid "The full name contains invalid characters."
 msgstr "全名含有無效的字元。"
@@ -7334,12 +7334,6 @@ msgid "The recommended queue depth is %d."
 msgstr "建議的隊列深度是 %d。"
 
 #, php-format
-msgid ""
-"The reloading request has been sent to the daemon. You can see the result by "
-"<a href=\"%s\">Log</a>."
-msgstr "重復荷載請求已發送到守護進程。您可以在<a href=\"%s\">記錄檔</a>看到結果。"
-
-#, php-format
 msgid "The removable area mapped to LUN%d."
 msgstr "可移動區域映射到 LUN%d。"
 
@@ -7352,7 +7346,6 @@ msgstr "您的 UPS 連接的串行端口或 USB 端口。"
 msgid "The serial or USB port where your second UPS is connected."
 msgstr ""
 
-#, php-format
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr "向Windows客戶端廣播本時間伺服器。"
 
@@ -7452,6 +7445,10 @@ msgstr "有太多的附加組。"
 
 msgid "There is no error, the file uploaded with success."
 msgstr "檔案上傳成功，沒有任何錯誤。"
+
+msgid ""
+"There is no need to start a RAID volume from here (It starts automatically)."
+msgstr ""
 
 msgid "There must be at least 1 disks selected."
 msgstr "至少要選擇１個磁盘。"
@@ -7588,6 +7585,9 @@ msgid ""
 "as part of other vendors' IO Error Detection and Correction schemas, and it "
 "contains a count of parity errors which occur in the data path to the media "
 "via the drive's cache RAM."
+msgstr ""
+
+msgid "This can cause a huge delay in loading the log page!"
 msgstr ""
 
 #, php-format
@@ -7916,21 +7916,6 @@ msgstr "標題滾動速度"
 msgid "To Email Address"
 msgstr ""
 
-msgid ""
-"To configure the target, you must add at least Portal Group and Initiator "
-"Group and Extent.<br />Portal Group which is identified by tag number "
-"defines IP addresses and listening TCP ports.<br />Initiator Group which is "
-"identified by tag number defines authorised initiator names and networks.<br "
-"/>Auth Group which is identified by tag number and is optional if the target "
-"does not use CHAP authentication defines authorised users and secrets for "
-"additional security.<br />Extent defines the storage area of the target."
-msgstr ""
-"要設定目標（target）的話，您至少必須添加門戶網站用戶組（Portal Group）和啟動器組（Initiator Group）和 "
-"Extent。<br />以標籤數識別的的門戶網站用戶組定義 IP 地址和偵聽TCP端口。<br "
-"/>以標籤數識別的啟動器組定義授權的啟動器名稱和網絡。<br />如果不使用 CHAP "
-"身份驗證的定義，以獲得更高的安全性授權用戶和秘密的話，那末以標籤數識別的認證組（Auth Group）是可選擇性的。<br />Extent "
-"定義目標的存儲區域。"
-
 msgid "To e-mail"
 msgstr "發送電郵"
 
@@ -7970,15 +7955,8 @@ msgstr ""
 msgid "To match any IP address leave this field empty."
 msgstr "要匹配任何IP地址的話，請保留此字段為空白。"
 
-msgid ""
-"To use Active Directory the CIFS/SMB service will enabled, too. The "
-"following services will use AD authentication:<div "
-"id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-">System</li></ul></div>"
+msgid "To use Active Directory the CIFS/SMB service will enabled as well."
 msgstr ""
-"使用 Active Directory 前會啟用 CIFS/ SMB 服務。以下服務將使用AD認證：<div "
-"id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-">系統</li></ul></div>"
 
 #, php-format
 msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
@@ -8282,6 +8260,9 @@ msgstr "缷載"
 msgid "Unmount disk/partition"
 msgstr "卸載 磁碟/磁區"
 
+msgid "Unmount this disk first before proceeding."
+msgstr ""
+
 msgid "Unmounting..."
 msgstr "卸載中..."
 
@@ -8339,6 +8320,9 @@ msgstr "啟用自從Windows 2000 新增的 64k 讀寫串流的 SMB 詢問。"
 msgid "Use the specified NTP server."
 msgstr "使用指定的 NTP 伺服器。"
 
+msgid "Use these specials actions for debugging only!"
+msgstr ""
+
 #, php-format
 msgid ""
 "Use this option to override the default permission modes for newly created "
@@ -8378,12 +8362,14 @@ msgstr "已用空間"
 msgid "User"
 msgstr "用戶"
 
-#, php-format
 msgid "User Defined Groups"
 msgstr "用戶定義的群組"
 
 msgid "User ID"
 msgstr "用戶ID"
+
+msgid "User Setup"
+msgstr ""
 
 msgid "User full name."
 msgstr "用戶全名"
@@ -8562,6 +8548,9 @@ msgstr "卷（Volumes）"
 msgid "WAN address"
 msgstr "廣域網絡位址"
 
+msgid "WARNING"
+msgstr ""
+
 msgid "WEP"
 msgstr "WEP"
 
@@ -8721,6 +8710,9 @@ msgstr ""
 msgid "You can use the following parameters for substitution:"
 msgstr "您可以使用以下的參數替代："
 
+msgid "You can verify the result in the log file."
+msgstr ""
+
 #, php-format
 msgid ""
 "You can't mount the partition '%s' where the config file is stored.<br />"
@@ -8762,6 +8754,11 @@ msgid ""
 "You must <a href='%s'>reboot</a> the system before you can upgrade the "
 "firmware."
 msgstr "在您可以升級韌體之前您必須 <a href='%s'>重新啟動</a> 系統。"
+
+msgid ""
+"You must add at least a Portal Group, an Initiator Group and an Extent "
+"before you can configure a Target."
+msgstr ""
 
 msgid "You must add disks first."
 msgstr "請先加入磁盤。"
@@ -8829,7 +8826,6 @@ msgstr "Zeroconf/Bonjour"
 msgid "adaptive (low power consumption)"
 msgstr "自適應（低耗電量）"
 
-#, php-format
 msgid "add any supplemental parameters"
 msgstr "新增任意補充的參數"
 
@@ -8942,6 +8938,9 @@ msgstr "phpBB"
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
+msgid "pools"
+msgstr ""
+
 msgid "rc.conf"
 msgstr "rc.conf"
 
@@ -8980,3 +8979,115 @@ msgstr "卸載"
 
 msgid "version:"
 msgstr "版本："
+
+#~ msgid "<->"
+#~ msgstr "<->"
+
+#, php-format
+#~ msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
+#~ msgstr "尚未配置存儲池。請先添加新的<a href='%s'>存儲池</a>。"
+
+#, php-format
+#~ msgid "No configured Extent. Please add new <a href='%s'>Extent</a> first."
+#~ msgstr "尚未配置 Extent 。請先添加新的<a href='%s'>Extent</a>。"
+
+#, php-format
+#~ msgid ""
+#~ "The disk is currently mounted! <a href='%s'>Unmount</a> this disk first "
+#~ "before proceeding."
+#~ msgstr "磁盤正在掛載中！繼續前請先 <a href='%s'>卸載</a> 磁盤。"
+
+#, php-format
+#~ msgid ""
+#~ "The encrypted device is currently mounted! <a href='%s'>Unmount</a> this "
+#~ "disk first before proceeding."
+#~ msgstr "加密裝置正在掛載中！繼續前請先 <a href='%s'>卸載</a> 磁盤。"
+
+#~ msgid ""
+#~ "To use Active Directory the CIFS/SMB service will enabled, too. The "
+#~ "following services will use AD authentication:<div "
+#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
+#~ ">System</li></ul></div>"
+#~ msgstr ""
+#~ "使用 Active Directory 前會啟用 CIFS/ SMB 服務。以下服務將使用AD認證：<div "
+#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
+#~ ">系統</li></ul></div>"
+
+#, php-format
+#~ msgid ""
+#~ "No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
+#~ "first."
+#~ msgstr "尚未配置門戶組（Portal Group）。請先添加新的<a href='%s'>門戶組（Portal Group）</a>。"
+
+#, php-format
+#~ msgid ""
+#~ "No configured Initiator Group. Please add new <a href='%s'>Initiator "
+#~ "Group</a> first."
+#~ msgstr "尚未配置啟動器（Initiator）群組。請先添加新的<a href='%s'>啟動器（Initiator）群組</a>。"
+
+#~ msgid ""
+#~ "To configure the target, you must add at least Portal Group and Initiator "
+#~ "Group and Extent.<br />Portal Group which is identified by tag number "
+#~ "defines IP addresses and listening TCP ports.<br />Initiator Group which is "
+#~ "identified by tag number defines authorised initiator names and networks.<br "
+#~ "/>Auth Group which is identified by tag number and is optional if the target "
+#~ "does not use CHAP authentication defines authorised users and secrets for "
+#~ "additional security.<br />Extent defines the storage area of the target."
+#~ msgstr ""
+#~ "要設定目標（target）的話，您至少必須添加門戶網站用戶組（Portal Group）和啟動器組（Initiator Group）和 "
+#~ "Extent。<br />以標籤數識別的的門戶網站用戶組定義 IP 地址和偵聽TCP端口。<br "
+#~ "/>以標籤數識別的啟動器組定義授權的啟動器名稱和網絡。<br />如果不使用 CHAP "
+#~ "身份驗證的定義，以獲得更高的安全性授權用戶和秘密的話，那末以標籤數識別的認證組（Auth Group）是可選擇性的。<br />Extent "
+#~ "定義目標的存儲區域。"
+
+#, php-format
+#~ msgid ""
+#~ "The reloading request has been sent to the daemon. You can see the result by "
+#~ "<a href=\"%s\">Log</a>."
+#~ msgstr "重復荷載請求已發送到守護進程。您可以在<a href=\"%s\">記錄檔</a>看到結果。"
+
+#~ msgid ""
+#~ "1. Use these specials actions for debugging only!<br />2. There is no need "
+#~ "of using this menu for starting a RAID volume (start automaticaly)."
+#~ msgstr "1. 這些特殊操作僅適用於調試（debuging）！<br />2. 無需操作此選單來啟動RAID卷(系統自動啟動)。"
+
+#, php-format
+#~ msgid ""
+#~ "IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
+#~ "addresses to hostnames&quot;</a> is enabled."
+#~ msgstr "如果啟用  <a href='%s'>&quot;IP  地址將轉換成主機名&quot;</a> ，IP  位址將轉換成主機名。"
+
+#, php-format
+#~ msgid ""
+#~ "Hint: If this is checked, IP addresses in the server logs are resolved to "
+#~ "real hostnames where possible.<br><font color='red'>Warning</font>: This can "
+#~ "cause a huge delay in loading the log page!"
+#~ msgstr ""
+#~ "提示：如果勾選此選項，在伺服器日誌中的IP 地址將盡可能解析為主機名。<br><font "
+#~ "color='red'>警告</font>：這可能會導致延遲加載日誌頁！"
+
+#~ msgid ""
+#~ "Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
+#~ "<a "
+#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
+#~ ":disks-zfs-volumes-volume' target='_blank'>ZFS volumes & deduplication</a> "
+#~ "wiki article BEFORE using this feature.</b></br>"
+#~ msgstr ""
+#~ "控制重複資料删除模式。<br><b><font color='red'>注意/警告</font>：使用此功能前，請參閱 <a "
+#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
+#~ ":disks-zfs-volumes-volume' target='_blank'>ZFS 卷 與 重複資料删除</a> 維基文章。</b></br>"
+
+#~ msgid ""
+#~ "Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
+#~ "<a "
+#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
+#~ ":disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & "
+#~ "deduplication</a> wiki article BEFORE using this feature.</b></br>"
+#~ msgstr ""
+#~ "控制重複資料删除模式。<br><b><font color='red'>注意/警告</font>：使用此功能前，請參閱 <a "
+#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
+#~ ":disks_zfs_datasets_dataset' target='_blank'>ZFS 數據集 與 重複資料删除</a> "
+#~ "維基文章。</b></br>"
+
+#~ msgid "Detected Language:<br />(Change if needed)"
+#~ msgstr "檢測語言：<br />（如果需要請更改）"

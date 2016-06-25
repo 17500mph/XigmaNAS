@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-20 03:00+0000\n"
+"POT-Creation-Date: 2016-06-25 01:50+0000\n"
 "PO-Revision-Date: 2015-12-19 13:07+0000\n"
 "Last-Translator: Daisuke Aoyama <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-20 01:41+0000\n"
-"X-Generator: Launchpad (build 18097)\n"
+"X-Launchpad-Export-Date: 2016-06-25 01:49+0000\n"
+"X-Generator: Launchpad (build 18111)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
 "X-Poedit-Language: Japanese\n"
@@ -106,6 +106,9 @@ msgstr "%2$sB 中 %1$sB 使用可能"
 msgid "%sB used of %sB"
 msgstr "%2$sB 中 %1$sB 使用中"
 
+msgid "(Change if needed)"
+msgstr ""
+
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(Maxtor 6B200M0 200GB と Maxtor 2R015H1 15GB ディスクで見られます)."
 
@@ -162,13 +165,6 @@ msgstr ""
 msgid "1 or more disks are required to build a RAID-1 volume."
 msgstr ""
 
-msgid ""
-"1. Use these specials actions for debugging only!<br />2. There is no need "
-"of using this menu for starting a RAID volume (start automaticaly)."
-msgstr ""
-"1. この特殊な作業はデバッグ時のみに使用して下さい！<br />2. "
-"RAIDボリュームの使用を開始する為にこのメニューを使用する必要はありません。(自動的に開始されます)"
-
 msgid "2 or more disks are required to build a RAID-0 volume."
 msgstr ""
 
@@ -183,9 +179,6 @@ msgstr "4KBラッパー"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN タグ (1 から 4094 まで)。"
-
-msgid "<->"
-msgstr "方向"
 
 #, php-format
 msgid ""
@@ -251,6 +244,11 @@ msgid ""
 "target from the initiator."
 msgstr "ポータルグループは、イニシエータからターゲットへの接続に利用するIPアドレスとTCP待ち受けポート番号の組を含みます。"
 
+msgid ""
+"A Portal Group is identified by a tag number and defines IP addresses and "
+"listening TCP ports."
+msgstr ""
+
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr "VLAN タグ %s は既にこのインタフェースで使用されています。"
@@ -280,6 +278,9 @@ msgstr ""
 "16進数として指定する事が可能です。"
 
 msgid "A mounted RAID volume cannot be deleted."
+msgstr ""
+
+msgid "A reload request has been sent to the daemon."
 msgstr ""
 
 msgid "A route to this destination network already exists."
@@ -719,7 +720,6 @@ msgid ""
 "follows the allow option format."
 msgstr "特定のユーザ、グループが共有への読取り専用アクセス権を持つ事を可能にします。これは許可オプションのフォーマットに追従します。"
 
-#, php-format
 msgid "Allows the server to try and become a local master browser."
 msgstr "このサーバがローカルマスタブラウザの選出に参加する事を可能にします。"
 
@@ -774,6 +774,20 @@ msgid ""
 "Amplitude of 'thrashing' (distance of repetitive forward/reverse head "
 "motion)."
 msgstr "「スラッシング」（反復フォワード/リバースヘッドの動きの距離）の振幅。"
+
+msgid ""
+"An Auth Group is identified by a tag number and is optional. If the Target "
+"does not use CHAP authentication it defines authorised users and secrets for "
+"additional security."
+msgstr ""
+
+msgid "An Extent defines the storage area of the Target."
+msgstr ""
+
+msgid ""
+"An Initiator Group is identified by a tag number and defines authorised "
+"initiator names and networks."
+msgstr ""
 
 msgid "An host with this name already exists."
 msgstr "この名前がつけられたホストは既に存在しています。"
@@ -1056,7 +1070,6 @@ msgstr "ブリッジ"
 msgid "Broadcast interval"
 msgstr "ブロードキャスト間隔"
 
-#, php-format
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
 "seconds)"
@@ -1317,7 +1330,6 @@ msgstr "リンクダウンイベント用のコマンド (例: %s)"
 msgid "Command for LINK_UP event (e.g. %s)."
 msgstr "リンクアップイベント用のコマンド (例: %s)"
 
-#, php-format
 msgid "Command output"
 msgstr ""
 
@@ -1456,29 +1468,8 @@ msgstr ""
 "圧縮アルゴリズムを使用します。'gzip-N' で 'gzip' の圧縮レベルを指定できます。N は数値で、1 (最速) から 9 (最高圧縮率) "
 "です。現在、'gzip' は 'gzip-6' の指定と同じです。"
 
-msgid ""
-"Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-"<a "
-"href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-":disks-zfs-volumes-volume' target='_blank'>ZFS volumes & deduplication</a> "
-"wiki article BEFORE using this feature.</b></br>"
+msgid "Controls the dedup method."
 msgstr ""
-"重複排除の方法を指定します。<br><b><font color='red'>注意/警告</font>: この機能を使う前に <a "
-"href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-":disks-zfs-volumes-volume' target='_blank'>ZFS ボリュームと重複排除</a> のwiki "
-"記事を見てください。</b></br>"
-
-msgid ""
-"Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-"<a "
-"href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-":disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & "
-"deduplication</a> wiki article BEFORE using this feature.</b></br>"
-msgstr ""
-"重複排除の方法を指定します。<br><b><font color='red'>注意/警告</font>: この機能を使う前に <a "
-"href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-":disks_zfs_datasets_dataset' target='_blank'>ZFS データセットと重複排除</a> のwiki "
-"記事を見てください。</b></br>"
 
 msgid "Controls whether this dataset can be modified."
 msgstr "このデータセットが修正可能かどうか制御します。"
@@ -2024,8 +2015,8 @@ msgstr "接続先共有"
 msgid "Detected"
 msgstr "検出"
 
-msgid "Detected Language:<br />(Change if needed)"
-msgstr "検出された言語:<br />(必要ならば変更してください)"
+msgid "Detected Language:"
+msgstr ""
 
 msgid "Detected RSYNC remote shares"
 msgstr "検出された RSYNC リモート共有"
@@ -3440,15 +3431,6 @@ msgstr "ハイライト"
 msgid "Hint"
 msgstr "ヒント"
 
-#, php-format
-msgid ""
-"Hint: If this is checked, IP addresses in the server logs are resolved to "
-"real hostnames where possible.<br><font color='red'>Warning</font>: This can "
-"cause a huge delay in loading the log page!"
-msgstr ""
-"ヒント: チェックした場合、 サーバログ内の IP アドレスは可能であればホスト名で表示されます。<br><font "
-"color='red'>警告</font>: これはログページの表示に長い遅延が生じる可能性があります！"
-
 msgid "Home directory"
 msgstr "ホームディレクトリ"
 
@@ -3472,6 +3454,9 @@ msgstr "ホスト名データベース"
 
 msgid "Hosts"
 msgstr "ホスト"
+
+msgid "Hosts Setup"
+msgstr ""
 
 msgid "Hosts allow"
 msgstr "許可するホスト"
@@ -3525,12 +3510,9 @@ msgstr "IP アドレス"
 msgid "IP address of remote syslog server."
 msgstr ""
 
-#, php-format
 msgid ""
-"IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
-"addresses to hostnames&quot;</a> is enabled."
+"IP addresses are resolved to hostnames when the following option is enabled:"
 msgstr ""
-"<a href='%s'>&quot;IPアドレスからホスト名へ変換&quot;</a>が有効な場合、IPアドレスはホスト名へ変換されます。"
 
 msgid "IP or FQDN address of remote Rsync server."
 msgstr "リモート Rsync サーバの IP もしくは FQDN を入力します。"
@@ -3629,6 +3611,11 @@ msgid ""
 "If the server is behind a proxy set these parameters to give local services "
 "access to the internet via proxy."
 msgstr "サーバ上のローカルサービスをプロキシ経由でアクセスできるようにするには、このパラメータをセットして下さい。"
+
+msgid ""
+"If this option is checked, IP addresses in the server logs are resolved to "
+"their hostnames where possible."
+msgstr ""
 
 msgid ""
 "If this parameter is set, Samba attempts to first read DOS attributes "
@@ -3893,7 +3880,7 @@ msgstr "無効なファイル形式です。"
 msgid "Invalid max. block size! It must be in the range from %d to %d."
 msgstr "無効なブロックサイズの最大値です! %d から %d の範囲で指定して下さい。"
 
-msgid "Invalid username or password.</br> Please try again."
+msgid "Invalid username or password."
 msgstr ""
 
 msgid "Invert Selection"
@@ -3917,7 +3904,6 @@ msgid ""
 "are part of a non healthy pool."
 msgstr "良好な状態でないプールまたはそれらに含まれる仮想デバイスをインポートする事は推奨しません。"
 
-#, php-format
 msgid ""
 "It is recommended to use encryption before you store the backup in a safe "
 "location."
@@ -4778,10 +4764,19 @@ msgstr "No"
 msgid "No DNS setting found."
 msgstr "DNS 設定が見つかりません。"
 
+msgid "No Extent has been configured."
+msgstr ""
+
 msgid "No IPMI FRU data available."
 msgstr ""
 
 msgid "No IPMI sensor data available."
+msgstr ""
+
+msgid "No Initiator Group has been configured."
+msgstr ""
+
+msgid "No Portal Group has been configured."
 msgstr ""
 
 msgid "No RSYNC Client configured"
@@ -4801,31 +4796,11 @@ msgid ""
 "interface</a> first."
 msgstr "CARPインターフェースがありません。まず最初に新しい <a href='%s'>CARPインターフェース</a> を追加してください。"
 
-#, php-format
-msgid "No configured Extent. Please add new <a href='%s'>Extent</a> first."
-msgstr "エクステントがありません。まず最初に新しい <a href='%s'>エクステント</a> を追加してください。"
+msgid "No configured bridge interfaces."
+msgstr ""
 
-#, php-format
-msgid ""
-"No configured Initiator Group. Please add new <a href='%s'>Initiator "
-"Group</a> first."
-msgstr "イニシエータグループがありません。まず最初に新しい <a href='%s'>イニシエータグループ</a> を追加してください。"
-
-#, php-format
-msgid ""
-"No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
-"first."
-msgstr "ポータルグループがありません。まず最初に新しい <a href='%s'>ポータルグループ</a> を追加してください。"
-
-#, php-format
-msgid ""
-"No configured bridge interfaces. Please add new <a href='%s'>bridge "
-"interface</a> first."
-msgstr "ブリッジインターフェースがありません。まず最初に新しい <a href='%s'>ブリッジインターフェース</a> を追加してください。"
-
-#, php-format
-msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
-msgstr "プールがありません。まず最初に新しい <a href='%s'>プール</a> を追加してください。"
+msgid "No configured pools."
+msgstr ""
 
 #, php-format
 msgid ""
@@ -5324,6 +5299,25 @@ msgstr "プラットフォーム"
 msgid "Platform OS"
 msgstr "プラットフォームOS"
 
+msgid "Please add a bridge interface first."
+msgstr ""
+
+msgid "Please add a new Extent first."
+msgstr ""
+
+msgid "Please add a new Initiator Group first."
+msgstr ""
+
+msgid "Please add a new Portal Group first."
+msgstr ""
+
+#, php-format
+msgid "Please add new %s first."
+msgstr ""
+
+msgid "Please add new pools first."
+msgstr ""
+
 #, php-format
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "<a href='%s' target='_blank'>ドキュメント</a> を確認してください。"
@@ -5336,6 +5330,9 @@ msgstr "メディアライブラリの場所を定義してください。"
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr "パス内に空白が含まれないように注意して下さい。"
+
+msgid "Please try again."
+msgstr ""
 
 msgid "Polish"
 msgstr "ポーランド語"
@@ -5439,7 +5436,6 @@ msgstr "少なくともサムスンのデバイスで使用されている属性
 msgid "PreInit"
 msgstr "初期化前"
 
-#, php-format
 msgid "Predefined Groups"
 msgstr "定義済みグループ"
 
@@ -6075,6 +6071,14 @@ msgstr "Secure Shell"
 msgid "Security"
 msgstr "セキュリティー"
 
+msgid ""
+"See ZFS datasets & deduplication wiki article BEFORE using this feature."
+msgstr ""
+
+msgid ""
+"See ZFS volumes & deduplication wiki article BEFORE using this feature."
+msgstr ""
+
 msgid "See attribute E8."
 msgstr "E8属性を参照してください。"
 
@@ -6115,7 +6119,6 @@ msgstr "WebGUIで利用する言語を選択してください。"
 msgid "Select the location closest to you."
 msgstr "もっとも近いロケーションを選択して下さい。"
 
-#, php-format
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
 "the button below to restore the configuration."
@@ -6512,11 +6515,17 @@ msgstr "スタティック"
 msgid "Static Routes"
 msgstr "スタティックルート"
 
+msgid "Static Routes Setup"
+msgstr ""
+
 msgid "Static routes"
 msgstr "スタティックルート"
 
 msgid "Status"
 msgstr "ステータス"
+
+msgid "Status & Information"
+msgstr ""
 
 #, php-format
 msgid "Status report successfully sent to: %s."
@@ -6644,7 +6653,6 @@ msgstr "Syncthing"
 msgid "Syslog Level"
 msgstr ""
 
-#, php-format
 msgid ""
 "Syslog sends UDP datagrams to port 514 on the specified remote syslog "
 "server. Be sure to set syslogd on the remote server to accept syslog "
@@ -6967,12 +6975,6 @@ msgstr ""
 #, php-format
 msgid ""
 "The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
-"and [._-]"
-msgstr ""
-
-#, php-format
-msgid ""
-"The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
 "and [._-]."
 msgstr ""
 
@@ -7056,7 +7058,6 @@ msgstr "設定情報をリストアする事が出来ませんでした。"
 msgid "The configuration could not be restored. %s"
 msgstr "設定情報をリストアする事が出来ませんでした。%s"
 
-#, php-format
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr "設定情報をリストアする事が出来ませんでした。アップロードファイルが見つかりません。"
 
@@ -7069,7 +7070,6 @@ msgstr ""
 "設定は変更されました。<br />変更された設定は適用するまで効果は出ません。<br /><b>もしもこのメッセージが出続けるようであれば <a "
 "href='%s'>システムログ</a> を参照してください。</b>"
 
-#, php-format
 msgid "The configuration has been restored. The server is now rebooting."
 msgstr "設定情報はリストアされました。サーバーをリブートしています。"
 
@@ -7162,11 +7162,8 @@ msgid ""
 "not need to pass along the directory as part of the transfer."
 msgstr "発信したいファイルがおかれているディレクトリを指定します。リモートホストは転送の一部分としてディレクトリに沿っている必要はありません。"
 
-#, php-format
-msgid ""
-"The disk is currently mounted! <a href='%s'>Unmount</a> this disk first "
-"before proceeding."
-msgstr "ディスクは既にマウントされています! 次へ進む為に最初にディスクを <a href='%s'>アンマウント</a> して下さい。"
+msgid "The disk is currently mounted!"
+msgstr ""
 
 msgid ""
 "The disk is currently mounted! The mount point will be removed temporarily "
@@ -7205,11 +7202,8 @@ msgid ""
 "target='_blank'>drivers</a>."
 msgstr "LCD に接続する為のドライバを指定します。使用可能な <a href='%s' target='_blank'>ドライバ</a>。"
 
-#, php-format
-msgid ""
-"The encrypted device is currently mounted! <a href='%s'>Unmount</a> this "
-"disk first before proceeding."
-msgstr "ディスクは既にマウントされています! 次へ進む為に最初にディスクを <a href='%s'>アンマウント</a> して下さい。"
+msgid "The encrypted device is currently mounted!"
+msgstr ""
 
 msgid "The extent name already exists."
 msgstr "エクステント名は既に存在しています。"
@@ -7220,13 +7214,15 @@ msgstr "指定したファイルはこのプラットフォーム用ではあり
 msgid "The firmware file is corrupt"
 msgstr "ファームウェアファイルは破損しています"
 
-#, php-format
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
 msgstr "現在、ファームウェアをインストールしています。サーバーは自動的にリブートされます。"
 
 msgid "The following input errors were detected"
 msgstr "以下の入力エラーが検出されました"
+
+msgid "The following services will use AD authentication:"
+msgstr ""
 
 msgid "The full name contains invalid characters."
 msgstr "フルネームに不正な文字が使用されています。"
@@ -7442,12 +7438,6 @@ msgid "The recommended queue depth is %d."
 msgstr "推奨するキューの深さは%dです。"
 
 #, php-format
-msgid ""
-"The reloading request has been sent to the daemon. You can see the result by "
-"<a href=\"%s\">Log</a>."
-msgstr "リロード要求がデーモンに送信されました。<a href=\"%s\">ログ</a>によって結果を見ることができます。"
-
-#, php-format
 msgid "The removable area mapped to LUN%d."
 msgstr "LUN%dに割り当てるリムーバブル領域"
 
@@ -7460,7 +7450,6 @@ msgstr "UPS が接続されているシリアルまたは USB ポートを指定
 msgid "The serial or USB port where your second UPS is connected."
 msgstr ""
 
-#, php-format
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr "このサーバを Windows クライアントにタイムサーバとして公告します。"
 
@@ -7561,6 +7550,10 @@ msgstr "追加グループが多すぎます。"
 
 msgid "There is no error, the file uploaded with success."
 msgstr "ファイルのアップロードに成功しました。"
+
+msgid ""
+"There is no need to start a RAID volume from here (It starts automatically)."
+msgstr ""
 
 msgid "There must be at least 1 disks selected."
 msgstr "最低1個のディスクを選択する必要があります。"
@@ -7705,6 +7698,9 @@ msgstr ""
 "この属性は、Hewlett-PackardのSMART "
 "IV技術の一部だけでなく、他のベンダーのIOエラー検出·訂正スキーマの一部であり、ドライブのキャッシュRAMを経由したメディアへのデータパスで発生したパリ"
 "ティエラーの数が含まれています。"
+
+msgid "This can cause a huge delay in loading the log page!"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -8049,21 +8045,6 @@ msgstr "タイトル時間"
 msgid "To Email Address"
 msgstr ""
 
-msgid ""
-"To configure the target, you must add at least Portal Group and Initiator "
-"Group and Extent.<br />Portal Group which is identified by tag number "
-"defines IP addresses and listening TCP ports.<br />Initiator Group which is "
-"identified by tag number defines authorised initiator names and networks.<br "
-"/>Auth Group which is identified by tag number and is optional if the target "
-"does not use CHAP authentication defines authorised users and secrets for "
-"additional security.<br />Extent defines the storage area of the target."
-msgstr ""
-"ターゲットを構成するには、ポータルグループ、イニシエータグループ、エクステントを追加する必要があります。<br "
-"/>ポータルグループは、タグ番号で識別され、接続に利用するIPアドレスとTCP待ち受けポート番号を定義します。<br "
-"/>イニシエータグループは、タグ番号で識別され、許可されたイニシエータ名とネットワークを定義します。<br "
-"/>認証グループは、タグ番号で識別され、追加のセキュリティのための認証ユーザとシークレットを定義します。CHAP認証を利用しない場合は省略可能です。<br"
-" />エクステントは、ターゲットのストレージ領域を定義します。"
-
 msgid "To e-mail"
 msgstr "メールの宛て先"
 
@@ -8108,15 +8089,8 @@ msgstr ""
 msgid "To match any IP address leave this field empty."
 msgstr "全ての IP アドレスにマッチさせる場合は、このフィールドを空にして下さい。"
 
-msgid ""
-"To use Active Directory the CIFS/SMB service will enabled, too. The "
-"following services will use AD authentication:<div "
-"id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-">System</li></ul></div>"
+msgid "To use Active Directory the CIFS/SMB service will enabled as well."
 msgstr ""
-"CIFS/SMB サービスにおいて ActiveDirectory の使用を有効にした場合、次のサービスも AD 認証を使用します: <div "
-"id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-">System</li></ul></div>"
 
 #, php-format
 msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
@@ -8424,6 +8398,9 @@ msgstr "アンロード"
 msgid "Unmount disk/partition"
 msgstr "ディスク/パーティションのアンマウント"
 
+msgid "Unmount this disk first before proceeding."
+msgstr ""
+
 msgid "Unmounting..."
 msgstr "アンマウント中..."
 
@@ -8482,6 +8459,9 @@ msgstr "Windows 2000 より導入された 64k ストリーミングによる読
 msgid "Use the specified NTP server."
 msgstr "特定の NTP サーバを使用します。"
 
+msgid "Use these specials actions for debugging only!"
+msgstr ""
+
 #, php-format
 msgid ""
 "Use this option to override the default permission modes for newly created "
@@ -8522,12 +8502,14 @@ msgstr "使用量"
 msgid "User"
 msgstr "ユーザ"
 
-#, php-format
 msgid "User Defined Groups"
 msgstr "ユーザ定義グループ"
 
 msgid "User ID"
 msgstr "ユーザ ID"
+
+msgid "User Setup"
+msgstr ""
 
 msgid "User full name."
 msgstr "ユーザのフルネーム。"
@@ -8706,6 +8688,9 @@ msgstr "ボリューム"
 msgid "WAN address"
 msgstr "WAN アドレス"
 
+msgid "WARNING"
+msgstr ""
+
 msgid "WEP"
 msgstr "WEP"
 
@@ -8870,6 +8855,9 @@ msgstr ""
 msgid "You can use the following parameters for substitution:"
 msgstr "以下のパラメータを埋め込みできます:"
 
+msgid "You can verify the result in the log file."
+msgstr ""
+
 #, php-format
 msgid ""
 "You can't mount the partition '%s' where the config file is stored.<br />"
@@ -8912,6 +8900,11 @@ msgid ""
 "You must <a href='%s'>reboot</a> the system before you can upgrade the "
 "firmware."
 msgstr "ファームウェアのアップデートの前にシステムを <a href='%s'>リブート</a> する必要があります。"
+
+msgid ""
+"You must add at least a Portal Group, an Initiator Group and an Extent "
+"before you can configure a Target."
+msgstr ""
 
 msgid "You must add disks first."
 msgstr "始めにディスクを追加して下さい。"
@@ -8979,7 +8972,6 @@ msgstr "Zeroconf/Bonjour"
 msgid "adaptive (low power consumption)"
 msgstr "adaptive (低消費電力)"
 
-#, php-format
 msgid "add any supplemental parameters"
 msgstr "もしあれば補足パラメータを追加してください"
 
@@ -9092,6 +9084,9 @@ msgstr "phpBB"
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
+msgid "pools"
+msgstr ""
+
 msgid "rc.conf"
 msgstr "rc.conf"
 
@@ -9130,3 +9125,125 @@ msgstr "アンマウント"
 
 msgid "version:"
 msgstr "バージョン:"
+
+#~ msgid ""
+#~ "1. Use these specials actions for debugging only!<br />2. There is no need "
+#~ "of using this menu for starting a RAID volume (start automaticaly)."
+#~ msgstr ""
+#~ "1. この特殊な作業はデバッグ時のみに使用して下さい！<br />2. "
+#~ "RAIDボリュームの使用を開始する為にこのメニューを使用する必要はありません。(自動的に開始されます)"
+
+#~ msgid "<->"
+#~ msgstr "方向"
+
+#, php-format
+#~ msgid ""
+#~ "IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
+#~ "addresses to hostnames&quot;</a> is enabled."
+#~ msgstr ""
+#~ "<a href='%s'>&quot;IPアドレスからホスト名へ変換&quot;</a>が有効な場合、IPアドレスはホスト名へ変換されます。"
+
+#, php-format
+#~ msgid "No configured Extent. Please add new <a href='%s'>Extent</a> first."
+#~ msgstr "エクステントがありません。まず最初に新しい <a href='%s'>エクステント</a> を追加してください。"
+
+#, php-format
+#~ msgid ""
+#~ "No configured Initiator Group. Please add new <a href='%s'>Initiator "
+#~ "Group</a> first."
+#~ msgstr "イニシエータグループがありません。まず最初に新しい <a href='%s'>イニシエータグループ</a> を追加してください。"
+
+#, php-format
+#~ msgid ""
+#~ "No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
+#~ "first."
+#~ msgstr "ポータルグループがありません。まず最初に新しい <a href='%s'>ポータルグループ</a> を追加してください。"
+
+#, php-format
+#~ msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
+#~ msgstr "プールがありません。まず最初に新しい <a href='%s'>プール</a> を追加してください。"
+
+#, php-format
+#~ msgid ""
+#~ "The disk is currently mounted! <a href='%s'>Unmount</a> this disk first "
+#~ "before proceeding."
+#~ msgstr "ディスクは既にマウントされています! 次へ進む為に最初にディスクを <a href='%s'>アンマウント</a> して下さい。"
+
+#, php-format
+#~ msgid ""
+#~ "The encrypted device is currently mounted! <a href='%s'>Unmount</a> this "
+#~ "disk first before proceeding."
+#~ msgstr "ディスクは既にマウントされています! 次へ進む為に最初にディスクを <a href='%s'>アンマウント</a> して下さい。"
+
+#~ msgid ""
+#~ "To configure the target, you must add at least Portal Group and Initiator "
+#~ "Group and Extent.<br />Portal Group which is identified by tag number "
+#~ "defines IP addresses and listening TCP ports.<br />Initiator Group which is "
+#~ "identified by tag number defines authorised initiator names and networks.<br "
+#~ "/>Auth Group which is identified by tag number and is optional if the target "
+#~ "does not use CHAP authentication defines authorised users and secrets for "
+#~ "additional security.<br />Extent defines the storage area of the target."
+#~ msgstr ""
+#~ "ターゲットを構成するには、ポータルグループ、イニシエータグループ、エクステントを追加する必要があります。<br "
+#~ "/>ポータルグループは、タグ番号で識別され、接続に利用するIPアドレスとTCP待ち受けポート番号を定義します。<br "
+#~ "/>イニシエータグループは、タグ番号で識別され、許可されたイニシエータ名とネットワークを定義します。<br "
+#~ "/>認証グループは、タグ番号で識別され、追加のセキュリティのための認証ユーザとシークレットを定義します。CHAP認証を利用しない場合は省略可能です。<br"
+#~ " />エクステントは、ターゲットのストレージ領域を定義します。"
+
+#~ msgid ""
+#~ "To use Active Directory the CIFS/SMB service will enabled, too. The "
+#~ "following services will use AD authentication:<div "
+#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
+#~ ">System</li></ul></div>"
+#~ msgstr ""
+#~ "CIFS/SMB サービスにおいて ActiveDirectory の使用を有効にした場合、次のサービスも AD 認証を使用します: <div "
+#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
+#~ ">System</li></ul></div>"
+
+#~ msgid ""
+#~ "Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
+#~ "<a "
+#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
+#~ ":disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & "
+#~ "deduplication</a> wiki article BEFORE using this feature.</b></br>"
+#~ msgstr ""
+#~ "重複排除の方法を指定します。<br><b><font color='red'>注意/警告</font>: この機能を使う前に <a "
+#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
+#~ ":disks_zfs_datasets_dataset' target='_blank'>ZFS データセットと重複排除</a> のwiki "
+#~ "記事を見てください。</b></br>"
+
+#~ msgid ""
+#~ "Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
+#~ "<a "
+#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
+#~ ":disks-zfs-volumes-volume' target='_blank'>ZFS volumes & deduplication</a> "
+#~ "wiki article BEFORE using this feature.</b></br>"
+#~ msgstr ""
+#~ "重複排除の方法を指定します。<br><b><font color='red'>注意/警告</font>: この機能を使う前に <a "
+#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
+#~ ":disks-zfs-volumes-volume' target='_blank'>ZFS ボリュームと重複排除</a> のwiki "
+#~ "記事を見てください。</b></br>"
+
+#, php-format
+#~ msgid ""
+#~ "The reloading request has been sent to the daemon. You can see the result by "
+#~ "<a href=\"%s\">Log</a>."
+#~ msgstr "リロード要求がデーモンに送信されました。<a href=\"%s\">ログ</a>によって結果を見ることができます。"
+
+#, php-format
+#~ msgid ""
+#~ "Hint: If this is checked, IP addresses in the server logs are resolved to "
+#~ "real hostnames where possible.<br><font color='red'>Warning</font>: This can "
+#~ "cause a huge delay in loading the log page!"
+#~ msgstr ""
+#~ "ヒント: チェックした場合、 サーバログ内の IP アドレスは可能であればホスト名で表示されます。<br><font "
+#~ "color='red'>警告</font>: これはログページの表示に長い遅延が生じる可能性があります！"
+
+#~ msgid "Detected Language:<br />(Change if needed)"
+#~ msgstr "検出された言語:<br />(必要ならば変更してください)"
+
+#, php-format
+#~ msgid ""
+#~ "No configured bridge interfaces. Please add new <a href='%s'>bridge "
+#~ "interface</a> first."
+#~ msgstr "ブリッジインターフェースがありません。まず最初に新しい <a href='%s'>ブリッジインターフェース</a> を追加してください。"
