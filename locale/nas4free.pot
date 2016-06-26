@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-06-25 01:50+0000\n"
+"POT-Creation-Date: 2016-06-26 22:56+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -192,6 +192,9 @@ msgid "A key will be either 5 or 13 characters (40 or 104 bits) depending of the
 msgstr ""
 
 msgid "A mounted RAID volume cannot be deleted."
+msgstr ""
+
+msgid "A mounted disk or partition will be unmounted temporarily to perform the requested action."
 msgstr ""
 
 msgid "A reload request has been sent to the daemon."
@@ -2577,11 +2580,10 @@ msgstr ""
 msgid "Error"
 msgstr ""
 
-msgid "Error Level"
+msgid "Error Code"
 msgstr ""
 
-#, php-format
-msgid "Error: The changes could not be applied (error code %s)."
+msgid "Error Level"
 msgstr ""
 
 msgid "Event"
@@ -2859,6 +2861,9 @@ msgid "Format"
 msgstr ""
 
 msgid "Format Options"
+msgstr ""
+
+msgid "Format Program"
 msgstr ""
 
 msgid "Format the report for phpBB forum."
@@ -3238,10 +3243,10 @@ msgstr ""
 msgid "If default root is enabled, a chroot operation is performed immediately after a client authenticates. This can be used to effectively isolate the client from a portion of the host system filespace."
 msgstr ""
 
-msgid "If the selected disk/partition is mounted it will be unmounted temporarily to perform selected command, otherwise the commands work in read-only mode.<br />Service disruption to users accessing this mount will occur during this process."
+msgid "If the server is behind a proxy set these parameters to give local services access to the internet via proxy."
 msgstr ""
 
-msgid "If the server is behind a proxy set these parameters to give local services access to the internet via proxy."
+msgid "If this message persist take a look at the system log for more information."
 msgstr ""
 
 msgid "If this option is checked, IP addresses in the server logs are resolved to their hostnames where possible."
@@ -3631,10 +3636,6 @@ msgstr ""
 msgid "Latvian"
 msgstr ""
 
-#, php-format
-msgid "Leave '%s' for unformated disks and format them using <a href='%s'>format</a> menu."
-msgstr ""
-
 msgid "Leave already configured auto snapshots."
 msgstr ""
 
@@ -3886,8 +3887,7 @@ msgstr ""
 msgid "Maintenance"
 msgstr ""
 
-#, php-format
-msgid "Make sure to select the correct number of devices:<div id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
+msgid "Make sure to select the optimal number of devices"
 msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
@@ -4328,8 +4328,7 @@ msgstr ""
 msgid "No configured pools."
 msgstr ""
 
-#, php-format
-msgid "No configured virtual devices. Please add new <a href=\"%s\">virtual device</a> first."
+msgid "No configured virtual devices."
 msgstr ""
 
 msgid "No device selected."
@@ -4338,8 +4337,7 @@ msgstr ""
 msgid "No disk configured"
 msgstr ""
 
-#, php-format
-msgid "No disks available. Please add new <a href='%s'>disk</a> first."
+msgid "No disks available."
 msgstr ""
 
 msgid "No disks configured, please add disks to see the diagnostic information of disks!"
@@ -4801,6 +4799,12 @@ msgstr ""
 msgid "Please add a new Portal Group first."
 msgstr ""
 
+msgid "Please add a new disk first."
+msgstr ""
+
+msgid "Please add a virtual device first."
+msgstr ""
+
 #, php-format
 msgid "Please add new %s first."
 msgstr ""
@@ -4810,6 +4814,9 @@ msgstr ""
 
 #, php-format
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
+msgstr ""
+
+msgid "Please check the documentation."
 msgstr ""
 
 msgid "Please define the Database directory location."
@@ -5068,10 +5075,19 @@ msgstr ""
 msgid "RAID-Z1"
 msgstr ""
 
+msgid "RAID-Z1 should have 3, 5, or 9 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z2"
 msgstr ""
 
+msgid "RAID-Z2 should have 4, 6, or 10 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z3"
+msgstr ""
+
+msgid "RAID-Z3 should have 5, 7, or 11 disks in each vdev."
 msgstr ""
 
 msgid "RAID0"
@@ -5561,6 +5577,9 @@ msgid "Select item to remove from the list"
 msgstr ""
 
 msgid "Select mount point where to create the swap file."
+msgstr ""
+
+msgid "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
 
 msgid "Select read balance algorithm."
@@ -6402,11 +6421,13 @@ msgstr ""
 msgid "The basic configuration usually takes the form of 'daemon : address : action'. Where daemon is the daemon name of the service started. The address can be a valid hostname, an IP address or an IPv6 address enclosed in brackets. The action field can be either allow or deny to grant or deny access appropriately. Keep in mind that configuration works off a first rule match semantic, meaning that the configuration file is scanned in ascending order for a matching rule. When a match is found the rule is applied and the search process will halt."
 msgstr ""
 
+msgid "The changes could not be applied"
+msgstr ""
+
 msgid "The changes have been applied successfully."
 msgstr ""
 
-#, php-format
-msgid "The changes have been saved. You have to <a href='%s'>reboot</a> the system for the changes to take effect."
+msgid "The changes have been saved."
 msgstr ""
 
 msgid "The cleartext credentials with which to bind."
@@ -6425,8 +6446,7 @@ msgstr ""
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr ""
 
-#, php-format
-msgid "The configuration has been changed.<br />You must apply the changes in order for them to take effect.<br /><b>If this message persist take a look at the <a href='%s'>system log</a> for more information.</b>"
+msgid "The configuration has been changed."
 msgstr ""
 
 msgid "The configuration has been restored. The server is now rebooting."
@@ -6886,9 +6906,6 @@ msgstr ""
 msgid "This allows you to set how loud the drive is while it's operating."
 msgstr ""
 
-msgid "This allows you to set the file system for preformatted hard disks containing data."
-msgstr ""
-
 msgid "This allows you to set the transfer mode for ATA/IDE disks."
 msgstr ""
 
@@ -6973,6 +6990,9 @@ msgid "This name is used to uniquely identify your second UPS on this system."
 msgstr ""
 
 msgid "This option allows the users and groups that access a share to be specified. Users and groups are specified, delimited by commas. Groups are designated by a @ prefix."
+msgstr ""
+
+msgid "This option allows you to set the file system of already formatted disks containing data."
 msgstr ""
 
 msgid "This option applies to GEOM RAID-1 only."
@@ -7449,7 +7469,7 @@ msgstr ""
 msgid "Unload"
 msgstr ""
 
-msgid "Unmount disk/partition"
+msgid "Unmount Disk/Partition"
 msgstr ""
 
 msgid "Unmount this disk first before proceeding."
@@ -7584,6 +7604,9 @@ msgid "Users"
 msgstr ""
 
 msgid "Users & Groups"
+msgstr ""
+
+msgid "Users will notice a service disruption when trying to access this mount while the file system check is running."
 msgstr ""
 
 #, php-format
@@ -7878,6 +7901,9 @@ msgstr ""
 msgid "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this service to clients."
 msgstr ""
 
+msgid "You have to reboot the system for the changes to take effect."
+msgstr ""
+
 #, php-format
 msgid "You have to select at least one item for '%s'."
 msgstr ""
@@ -7904,6 +7930,9 @@ msgid "You must add at least a Portal Group, an Initiator Group and an Extent be
 msgstr ""
 
 msgid "You must add disks first."
+msgstr ""
+
+msgid "You must apply the changes in order for them to take effect."
 msgstr ""
 
 msgid "You must enter the same IP type for network and gateway."
