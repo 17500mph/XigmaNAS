@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-25 01:50+0000\n"
-"PO-Revision-Date: 2016-06-19 12:52+0000\n"
+"POT-Creation-Date: 2016-06-26 22:56+0000\n"
+"PO-Revision-Date: 2016-06-25 13:52+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-25 01:49+0000\n"
+"X-Launchpad-Export-Date: 2016-06-26 23:49+0000\n"
 "X-Generator: Launchpad (build 18111)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -111,7 +111,7 @@ msgid "%sB used of %sB"
 msgstr "%sB foglalt a(z) %sB-ból"
 
 msgid "(Change if needed)"
-msgstr ""
+msgstr "(Szükség esetén módosítsd)"
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(Maxtor 6B200M0 200GB és Maxtor 2R015H1 15GB lemezekben van)."
@@ -247,14 +247,14 @@ msgstr ""
 msgid ""
 "A Auth Group contains authorised users and secrets for additional security."
 msgstr ""
-"Az Auth csoport hitelesített felhasználókat és titkosításokat tartalmaz a "
-"nagyobb biztonság érdekében."
+"Az Hitelesítő csoport hitelesített felhasználókat és titkosításokat "
+"tartalmaz a nagyobb biztonság érdekében."
 
 msgid ""
 "A Initiator Group contains authorised initiator names and networks to access "
 "the target."
 msgstr ""
-"A kezdeményező csoport tartalmazza az hitelesített kezdeményező "
+"A Kezdeményező csoport tartalmazza az hitelesített kezdeményező "
 "felhasználókat és hálózatok a cél eléréséhez."
 
 msgid ""
@@ -267,13 +267,15 @@ msgid ""
 "A Portal Group contains IP addresses and listening TCP ports to connect the "
 "target from the initiator."
 msgstr ""
-"A Portal csoportGroup IP címeket és TCP portokat tartalmaz, melyekkel "
-"kapcsolódnak a célhoz a kezdeményezőtől."
+"Egy Portal csoport IP címeket és TCP portokat tartalmaz, melyekhez a célhoz "
+"kapcsolódnak a kezdeményezőtől."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
 "listening TCP ports."
 msgstr ""
+"Egy Portal csoportot egy címke száma azonosít és az IP címeket és a figyelt "
+"TCP portokat határozza meg."
 
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
@@ -305,10 +307,15 @@ msgstr ""
 "megadható ('0x')."
 
 msgid "A mounted RAID volume cannot be deleted."
+msgstr "Becsatold RAID kötet nem törölhető."
+
+msgid ""
+"A mounted disk or partition will be unmounted temporarily to perform the "
+"requested action."
 msgstr ""
 
 msgid "A reload request has been sent to the daemon."
-msgstr ""
+msgstr "Betöltési kérést elküldtük a démonnak."
 
 msgid "A route to this destination network already exists."
 msgstr "Az útvonal ehhez a célhálózathoz már létezik."
@@ -512,7 +519,7 @@ msgid "Add additional scheduled self-test."
 msgstr "További időzített öntesztek hozzáadása"
 
 msgid "Add auth group"
-msgstr "auth csoport hozzáadása"
+msgstr "Hitelesítő csoport létrehozása"
 
 msgid "Add auto snapshot"
 msgstr "Automatikus pillanatkép hozzáadása"
@@ -530,10 +537,10 @@ msgid "Add group"
 msgstr "Csoport hozzáadása"
 
 msgid "Add initiator"
-msgstr "Kezdeményező hozzáadása"
+msgstr "Kezdeményező létrehozása"
 
 msgid "Add initiator group"
-msgstr "Kezdeményező csoport hozzáadása"
+msgstr "Kezdeményező csoport létrehozása"
 
 msgid "Add interface"
 msgstr "Interfész hozzáadása"
@@ -834,14 +841,19 @@ msgid ""
 "does not use CHAP authentication it defines authorised users and secrets for "
 "additional security."
 msgstr ""
+"Az Hitelesítő csoportot címke száma határozza meg, és választható. Ha a Cél "
+"nem használ CHAP hitelesítést, meghatározza a hitelesített felhasználókat és "
+"titkokat egyéb biztonsághoz."
 
 msgid "An Extent defines the storage area of the Target."
-msgstr ""
+msgstr "Egy Extent a Cél tároló területét határozza meg."
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
 "initiator names and networks."
 msgstr ""
+"Egy Kezdeményező csoportot egy címke száma határozza meg és hitelesített "
+"kezdeményezők neveit és hálózatát határozza meg."
 
 msgid "An host with this name already exists."
 msgstr "Egy állomás ugyanezzel a névvel létezik már."
@@ -913,8 +925,8 @@ msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
 "made up of one or more extents."
 msgstr ""
-"A legmagasabb szinten, a cél az, ami elé a kezdeményező, és alkotják, egy "
-"vagy több mértékben."
+"A legmagasabb szinten a cél az, ami a kezdeményezőhöz vezet, és egy vagy "
+"több extent alkotja."
 
 msgid "Attached"
 msgstr "Csatolt"
@@ -933,10 +945,10 @@ msgid "August"
 msgstr "Augusztus"
 
 msgid "Auth Group"
-msgstr "Auth csoport"
+msgstr "Hitelesítő csoport"
 
 msgid "Auth Groups"
-msgstr "Auth csoportok"
+msgstr "Hitelesítő csoportok"
 
 msgid "Auth Method"
 msgstr "Auth eljárás"
@@ -1498,7 +1510,7 @@ msgid "Controller"
 msgstr "Vezérlő"
 
 msgid "Controller Auth Group"
-msgstr "Kontroller Auth csoport"
+msgstr "Kontroller Hitelesítő csoport"
 
 msgid "Controller Auth Method"
 msgstr "Kontroller Auth eljárás"
@@ -1555,7 +1567,7 @@ msgstr ""
 "beállítással."
 
 msgid "Controls the dedup method."
-msgstr ""
+msgstr "Egyszerűsítés eljárását felügyeli."
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Azt szabályozza, hogy az adattárat lehessen-e módosítani."
@@ -2018,7 +2030,7 @@ msgid "Delete all self-tests"
 msgstr "Összes önteszt törlése"
 
 msgid "Delete auth group"
-msgstr "Auth csoport törlése"
+msgstr "Hitelesítő csoport törlése"
 
 msgid "Delete auto snapshot"
 msgstr "Automatikus pillanatkép törlése"
@@ -2137,7 +2149,7 @@ msgid "Detected"
 msgstr "Észlelt"
 
 msgid "Detected Language:"
-msgstr ""
+msgstr "Nyelv érzékelése:"
 
 msgid "Detected RSYNC remote shares"
 msgstr "Felismert rsync távoli megosztások"
@@ -2288,7 +2300,7 @@ msgid "Discovered iSCSI target for %s"
 msgstr "Felfedezett iSCSI-cél a következőnek: %s"
 
 msgid "Discovery Auth Group"
-msgstr "Discovery Auth Csoport"
+msgstr "Felfeldező Hitelesítő Csoport"
 
 msgid "Discovery Auth Method"
 msgstr "Discovery Auth Eljárás"
@@ -2357,7 +2369,7 @@ msgid "Do you really want to delete this VM?"
 msgstr "Biztos, hogy törlöd ezt a VM-et?"
 
 msgid "Do you really want to delete this auth group?"
-msgstr "Biztos, hogy törli ezt az auth csoportot?"
+msgstr "Biztos, hogy törli ezt a Hitelesítő csoportot?"
 
 msgid "Do you really want to delete this auto snapshot?"
 msgstr "Valóban törölni kívánja ezt az automatikus pillanatképet?"
@@ -2426,7 +2438,7 @@ msgid "Do you really want to delete this share?"
 msgstr "Valóban törölni akarja ezt a megosztást?"
 
 msgid "Do you really want to delete this target?"
-msgstr "Valóban törölni akarja ezt a célt?"
+msgstr "Bizto, hogy törlöd ezt a célt?"
 
 msgid "Do you really want to delete this user?"
 msgstr "Valóban törölni akarja ezt a felhasználót?"
@@ -2689,7 +2701,7 @@ msgid "Edit Volume"
 msgstr "Kötet módosítása"
 
 msgid "Edit auth group"
-msgstr "Auth csoport szerkesztése"
+msgstr "Hitelesítő csoport módosítása"
 
 msgid "Edit auto snapshot"
 msgstr "Automatikus pillanatkép beállításai"
@@ -3068,12 +3080,11 @@ msgstr "MBP törlése"
 msgid "Error"
 msgstr "Hiba"
 
+msgid "Error Code"
+msgstr ""
+
 msgid "Error Level"
 msgstr "Hiba szint"
-
-#, php-format
-msgid "Error: The changes could not be applied (error code %s)."
-msgstr "Hiba: A változtatásokat nem lehet alkalmazni (hibakód: %s)."
 
 msgid "Event"
 msgstr "Esemény"
@@ -3381,6 +3392,9 @@ msgstr "Formázás"
 msgid "Format Options"
 msgstr "Formázási beállítások"
 
+msgid "Format Program"
+msgstr ""
+
 msgid "Format the report for phpBB forum."
 msgstr "Jelentés formázása phpBB fórumhoz."
 
@@ -3655,7 +3669,7 @@ msgid "Hosts"
 msgstr "Állomásnevek (Hosts)"
 
 msgid "Hosts Setup"
-msgstr ""
+msgstr "Kiszolgálók beállítása"
 
 msgid "Hosts allow"
 msgstr "Állomások engedélyezése"
@@ -3716,6 +3730,8 @@ msgstr "Távoli rendszernapló-szerver IP címe"
 msgid ""
 "IP addresses are resolved to hostnames when the following option is enabled:"
 msgstr ""
+"IP címeket kiszolgálónevekké oldjuk fel, ha a következő beállítása be van "
+"kapcsolva:"
 
 msgid "IP or FQDN address of remote Rsync server."
 msgstr "Távoli rsync szerver IP vagy FQDN címe."
@@ -3724,13 +3740,13 @@ msgid "IP type mismatch for network and gateway."
 msgstr "IP típusú eltérés a hálózathoz és az átjáróhoz."
 
 msgid "IPMI FRU"
-msgstr ""
+msgstr "IPMI FRU"
 
 msgid "IPMI Sensor"
-msgstr ""
+msgstr "IPMI érzékelő"
 
 msgid "IPMI Stats"
-msgstr ""
+msgstr "IPMI statisztikák"
 
 msgid "IPv4 Configuration"
 msgstr "IPv4 beállítás"
@@ -3805,17 +3821,6 @@ msgstr ""
 "elkülönítsük a klienst a hostrendszer fájlterületének részétől."
 
 msgid ""
-"If the selected disk/partition is mounted it will be unmounted temporarily "
-"to perform selected command, otherwise the commands work in read-only "
-"mode.<br />Service disruption to users accessing this mount will occur "
-"during this process."
-msgstr ""
-"Ha a kiválasztott lemez/partíció be van csatolva, akkor az ideiglenesen "
-"leválasztásra kerül a megadott parancs elvégzéséhez, különben a parancs "
-"írásvédett módban fut. <br />Ez szolgáltatásleállást idéz elő azoknál a "
-"felhasználóknál, akik használják ezt a csatolást."
-
-msgid ""
 "If the server is behind a proxy set these parameters to give local services "
 "access to the internet via proxy."
 msgstr ""
@@ -3824,9 +3829,15 @@ msgstr ""
 "proxy-n keresztül."
 
 msgid ""
+"If this message persist take a look at the system log for more information."
+msgstr ""
+
+msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
 "their hostnames where possible."
 msgstr ""
+"Ha ez az beállítás be van kapcsolva, az IP címeket a szerver naplóiban "
+"kiszolgálóneveké oldjuk fel, ahol lehetséges."
 
 msgid ""
 "If this parameter is set, Samba attempts to first read DOS attributes "
@@ -3978,7 +3989,7 @@ msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
 "'ALL' for any initiators."
 msgstr ""
-"A kezdeményező jogosult elérni a iSCSI-célt. Nevet vagy az 'ÖSSZES'-t adja "
+"A kezdeményező jogosult elérni a iSCSI-célt. Nevet vagy az 'ÖSSZES'-t add "
 "bármely kezdeményezőnek."
 
 msgid "Initiator name"
@@ -4104,7 +4115,7 @@ msgid "Invalid max. block size! It must be in the range from %d to %d."
 msgstr "Érvénytelen max. blokk méret! A blokk méret %d-tól %d-ig terjedhet."
 
 msgid "Invalid username or password."
-msgstr ""
+msgstr "Érvénytelen felhasználónév vagy jelszó."
 
 msgid "Invert Selection"
 msgstr "Kijelölés megfordítása"
@@ -4296,14 +4307,6 @@ msgstr "Utolsó verzió: %s"
 
 msgid "Latvian"
 msgstr "Lett"
-
-#, php-format
-msgid ""
-"Leave '%s' for unformated disks and format them using <a "
-"href='%s'>format</a> menu."
-msgstr ""
-"Maradjon '%s' a nem formatált lemezekből és formázd meg őket a <a "
-"href='%s'>format</a> menüvel."
 
 msgid "Leave already configured auto snapshots."
 msgstr "Ne módosuljanak a már meglévő automatikus pillanatkép beállításai."
@@ -4531,7 +4534,7 @@ msgid "Low voltage trimming transfer point"
 msgstr "Kisfeszültségű átkapcsolási pontot"
 
 msgid "Lower"
-msgstr ""
+msgstr "Kisbetűs"
 
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
@@ -4589,17 +4592,8 @@ msgstr "Gép utótag"
 msgid "Maintenance"
 msgstr "Karbantartás"
 
-#, php-format
-msgid ""
-"Make sure to select the correct number of devices:<div "
-"id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each "
-"vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
-"Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
+msgid "Make sure to select the optimal number of devices"
 msgstr ""
-"Győződj meg arról, hogy kellő számú eszközt választottál ki:<div "
-"id='enumeration'><ul><li>RAID-Z1 esetén 3, 5 vagy 9 lemez minden vdev-"
-"ben</li><li>RAID-Z2 esetén 4, 6 vagy 10 lemez minden vdev-ben</li><li>RAID-"
-"Z3 esetén 5, 7 vagy 11 lemez minden vdev-ben</li></ul></div>"
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Bizonyosodjon meg róla, hogy a S.M.A.R.T.-ot aktiválta eszközein."
@@ -5040,19 +5034,19 @@ msgid "No DNS setting found."
 msgstr "Nem találtam DNS beállítást."
 
 msgid "No Extent has been configured."
-msgstr ""
+msgstr "Egy Extent sincs konfigurálva."
 
 msgid "No IPMI FRU data available."
-msgstr ""
+msgstr "IMPI FRU adat nem érhető el."
 
 msgid "No IPMI sensor data available."
-msgstr ""
+msgstr "IMPI érzékelő adat nem érhető el."
 
 msgid "No Initiator Group has been configured."
-msgstr ""
+msgstr "Egy Kezdeményező csoport sincs konfigurálva."
 
 msgid "No Portal Group has been configured."
-msgstr ""
+msgstr "Egy Portal csoport sincs konfigurálva."
 
 msgid "No RSYNC Client configured"
 msgstr "Nincs RSYNC kliens beállítva"
@@ -5061,8 +5055,8 @@ msgstr "Nincs RSYNC kliens beállítva"
 msgid ""
 "No configured Auth Group. Please add new <a href='%s'>Auth Group</a> first."
 msgstr ""
-"Nincs Auth csoport konfigurálva. Kérem hozz létre egy új <a href='%s'>Auth "
-"csoportot</a> először."
+"Nincs Hitelesítő csoport konfigurálva. Kérem hozz létre egy új <a "
+"href='%s'>Hitelesítő csoportot</a> először."
 
 msgid "No configured CARP interfaces."
 msgstr "Nincs konfigurált CARP interfész."
@@ -5076,18 +5070,13 @@ msgstr ""
 "interfészt</a> először."
 
 msgid "No configured bridge interfaces."
-msgstr ""
+msgstr "Egy konfigurált híd interfész sincs."
 
 msgid "No configured pools."
-msgstr ""
+msgstr "Egy konfigurált tároló sincs."
 
-#, php-format
-msgid ""
-"No configured virtual devices. Please add new <a href=\"%s\">virtual "
-"device</a> first."
+msgid "No configured virtual devices."
 msgstr ""
-"Egy konfigurált virtuális eszköz sincs. Először adj új <a "
-"href=\"%s\">virtuális eszközt</a>."
 
 msgid "No device selected."
 msgstr "Nem választott ki eszközt."
@@ -5095,11 +5084,8 @@ msgstr "Nem választott ki eszközt."
 msgid "No disk configured"
 msgstr "Nincs lemez beállítva"
 
-#, php-format
-msgid "No disks available. Please add new <a href='%s'>disk</a> first."
+msgid "No disks available."
 msgstr ""
-"Egy lemez sem áll rendelkezésre. Kérem hozz létre egy új <a "
-"href='%s'>lemezt</a> először."
 
 msgid ""
 "No disks configured, please add disks to see the diagnostic information of "
@@ -5175,10 +5161,10 @@ msgid "Nominal value of real power (Watts)"
 msgstr "Valós teljesítmény névleges értéke (Watt)"
 
 msgid "Non-Critical"
-msgstr ""
+msgstr "Nemkritikus"
 
 msgid "Non-Recoverable"
-msgstr ""
+msgstr "Nem visszaállítható"
 
 msgid "None"
 msgstr "Nincs"
@@ -5611,27 +5597,36 @@ msgid "Platform OS"
 msgstr "Platform operációs rendszere"
 
 msgid "Please add a bridge interface first."
-msgstr ""
+msgstr "Először egy híd interfészt hozz létre."
 
 msgid "Please add a new Extent first."
-msgstr ""
+msgstr "Először egy Extent-et hozz létre."
 
 msgid "Please add a new Initiator Group first."
-msgstr ""
+msgstr "Először egy új Kezdeményező csoportot hozz létre."
 
 msgid "Please add a new Portal Group first."
+msgstr "Először egy új Portal csoportot hozz létre."
+
+msgid "Please add a new disk first."
+msgstr ""
+
+msgid "Please add a virtual device first."
 msgstr ""
 
 #, php-format
 msgid "Please add new %s first."
-msgstr ""
+msgstr "Először egy új %s-t hozz létre."
 
 msgid "Please add new pools first."
-msgstr ""
+msgstr "Először egy új tárolót hozz létre."
 
 #, php-format
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "Kérjük olvasd el a <a href='%s' target='_blank'>dokumentációt</a>."
+
+msgid "Please check the documentation."
+msgstr ""
 
 msgid "Please define the Database directory location."
 msgstr "Add meg az adatbázis  könyvtárának helyét."
@@ -5645,7 +5640,7 @@ msgstr ""
 "karaktert."
 
 msgid "Please try again."
-msgstr ""
+msgstr "Kérem, próbálkozz újra."
 
 msgid "Polish"
 msgstr "Lengyel"
@@ -5900,11 +5895,20 @@ msgstr "RAID-5 karbantartás"
 msgid "RAID-Z1"
 msgstr "RAID-Z1"
 
+msgid "RAID-Z1 should have 3, 5, or 9 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z2"
 msgstr "RAID-Z2"
 
+msgid "RAID-Z2 should have 4, 6, or 10 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z3"
 msgstr "RAID-Z3"
+
+msgid "RAID-Z3 should have 5, 7, or 11 disks in each vdev."
+msgstr ""
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -5990,7 +5994,7 @@ msgid "Read/Write Access"
 msgstr "Olvasás/írás hozzáférés"
 
 msgid "Reading"
-msgstr ""
+msgstr "Olvasás"
 
 msgid "Readonly"
 msgstr "Írásvédett"
@@ -6090,7 +6094,7 @@ msgstr "Törölje az összes bejegyzést ARP táblából"
 
 #, php-format
 msgid "Remove the %s first before proceeding."
-msgstr ""
+msgstr "Folytatás előtt távolítsd el: %s."
 
 msgid "Replace Battery UPS"
 msgstr "Cserélje ki az szünetmentes akkumulátorát."
@@ -6417,10 +6421,14 @@ msgstr "Biztonság"
 msgid ""
 "See ZFS datasets & deduplication wiki article BEFORE using this feature."
 msgstr ""
+"Ezen funkció használata ELŐTT olvasd el a ZFS adattárak és egyszeresítés "
+"wiki cikket."
 
 msgid ""
 "See ZFS volumes & deduplication wiki article BEFORE using this feature."
 msgstr ""
+"Ezen funkció használata ELŐTT olvasd el a ZFS kötetek és egyszeresítés wiki "
+"cikket."
 
 msgid "See attribute E8."
 msgstr "Lásd E8 attribútum."
@@ -6449,6 +6457,10 @@ msgstr "Válaszd ki a listáról eltávolítandó elemet."
 
 msgid "Select mount point where to create the swap file."
 msgstr "Válassz csatolást, ahová a cserefájl létrehozható."
+
+msgid ""
+"Select option 'Unformatted' for unformatted disks and format them with the"
+msgstr ""
 
 msgid "Select read balance algorithm."
 msgstr "Olvasó egyensúly algoritmus kiválasztása"
@@ -6516,7 +6528,7 @@ msgid "Sensitive"
 msgstr "Érzékenység"
 
 msgid "Sensor"
-msgstr ""
+msgstr "Érzékelő"
 
 msgid "Sep"
 msgstr "Szept"
@@ -6714,7 +6726,7 @@ msgid "Slovenian"
 msgstr "Szlovén"
 
 msgid "Smart Outlet Management"
-msgstr ""
+msgstr "Smart Outlet menedzsment"
 
 msgid "SmartBoost"
 msgstr "SmartBoost"
@@ -6895,7 +6907,7 @@ msgid "Static Routes"
 msgstr "Statikus útvonalak"
 
 msgid "Static Routes Setup"
-msgstr ""
+msgstr "Statikus útvonal beállítások"
 
 msgid "Static routes"
 msgstr "Statikus útvonalak"
@@ -6904,7 +6916,7 @@ msgid "Status"
 msgstr "Állapot"
 
 msgid "Status & Information"
-msgstr ""
+msgstr "Állapot és információ"
 
 #, php-format
 msgid "Status report successfully sent to: %s."
@@ -7053,7 +7065,7 @@ msgid "System Load"
 msgstr "Rendszerterhelés"
 
 msgid "System Message"
-msgstr ""
+msgstr "Rendszerüzenet"
 
 msgid "System Settings"
 msgstr "Rendszerbeállítások"
@@ -7447,16 +7459,14 @@ msgstr ""
 "konfigurációs fájl szabályait. Amikor egyezést találunk, akkor a szabályt "
 "alkalmazzuk, és a keresési folyamat leáll."
 
+msgid "The changes could not be applied"
+msgstr ""
+
 msgid "The changes have been applied successfully."
 msgstr "A módosítások sikeresen végrehajtva."
 
-#, php-format
-msgid ""
-"The changes have been saved. You have to <a href='%s'>reboot</a> the system "
-"for the changes to take effect."
+msgid "The changes have been saved."
 msgstr ""
-"A változások elmentve. <a href='%s'>Újraindítás</a> szükséges a "
-"változtatások életbe léptetéséhez."
 
 msgid "The cleartext credentials with which to bind."
 msgstr "A kódolatlan hitelesítő, amellyel kötés megvalósul."
@@ -7474,15 +7484,8 @@ msgstr "A beállításokat nem lehet visszaállítani. %s"
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr "A beállításokat nem lehet visszaállítani. Nincs feltöltött fájl!"
 
-#, php-format
-msgid ""
-"The configuration has been changed.<br />You must apply the changes in order "
-"for them to take effect.<br /><b>If this message persist take a look at the "
-"<a href='%s'>system log</a> for more information.</b>"
+msgid "The configuration has been changed."
 msgstr ""
-"A konfiguráció megváltozott.<br />Hagyd jóvá a változásokat azok érvényre "
-"juttatásához .<br /><b>Amennyiben az üzenet továbbra is látható, nézd meg "
-"további információkért a <a href='%s'>Rendszernaplót</a>.</b>"
 
 msgid "The configuration has been restored. The server is now rebooting."
 msgstr "A beállítások visszaálltak. A szerver most újraindul."
@@ -7595,7 +7598,7 @@ msgstr ""
 "kell, hogy végigvezet a könyvtár részeként az átadás."
 
 msgid "The disk is currently mounted!"
-msgstr ""
+msgstr "A lemez jelenleg be van csatolva!"
 
 msgid ""
 "The disk is currently mounted! The mount point will be removed temporarily "
@@ -7641,7 +7644,7 @@ msgstr ""
 "='_blank'>illesztőprogramok</a> listája."
 
 msgid "The encrypted device is currently mounted!"
-msgstr ""
+msgstr "Az titkosított eszköz jelenleg be van csatolva!"
 
 msgid "The extent name already exists."
 msgstr "A extent már létezik"
@@ -7660,7 +7663,7 @@ msgid "The following input errors were detected"
 msgstr "A következő bemeneti hibák fordultak elő"
 
 msgid "The following services will use AD authentication:"
-msgstr ""
+msgstr "A következő szolgáltatások használnak AD hitelesítést:"
 
 msgid "The full name contains invalid characters."
 msgstr "A teljes név érvénytelen karaktereket tartalmaz."
@@ -7701,7 +7704,7 @@ msgstr ""
 
 msgid "The initiator can connect to the portals in specific Portal Group."
 msgstr ""
-"A kezdeményező csatlakozhat a portálokhoz, a Portálcsoportban megadottak "
+"A kezdeményező csatlakozhat a portálokhoz, a Portál csoportban megadottak "
 "szerint."
 
 msgid ""
@@ -8038,6 +8041,7 @@ msgstr "Nem történt hiba, a fájl feltöltése sikeresen megtörtént."
 msgid ""
 "There is no need to start a RAID volume from here (It starts automatically)."
 msgstr ""
+"Innen nincs szükség a RAID kötet indítására (az automatikusan indul)."
 
 msgid "There must be at least 1 disks selected."
 msgstr "Legalább egy lemezt kell választania."
@@ -8160,13 +8164,6 @@ msgid "This allows you to set how loud the drive is while it's operating."
 msgstr ""
 "Ez lehetővé teszi, hogy milyen hangos legyen a meghajtó amíg működik."
 
-msgid ""
-"This allows you to set the file system for preformatted hard disks "
-"containing data."
-msgstr ""
-"Ez lehetővé teszi, hogy a fájlrendszer beállítását előre formázott "
-"merevlemezeken, mely adatokat tartalmaz."
-
 msgid "This allows you to set the transfer mode for ATA/IDE disks."
 msgstr "Ez engedélyezi ATA/IDE lemezek átviteli módjának beállítását."
 
@@ -8208,7 +8205,7 @@ msgstr ""
 "számát tartalmazza."
 
 msgid "This can cause a huge delay in loading the log page!"
-msgstr ""
+msgstr "Ez nagy késleltetést okoz a napló oldal betöltésében!"
 
 #, php-format
 msgid ""
@@ -8314,6 +8311,11 @@ msgstr ""
 "Ez az opció meghatározza azon felhasználókat és csoportokat akik a "
 "megosztáshoz hozzáférésnek. A felhasználókat és a csoportokat vesszővel "
 "elválasztva kell megadni. A csoportok @ előtag vannak megkülönböztetve."
+
+msgid ""
+"This option allows you to set the file system of already formatted disks "
+"containing data."
+msgstr ""
 
 msgid "This option applies to GEOM RAID-1 only."
 msgstr "Ez a beállítás csak GEOM RAID-1-re van hatással."
@@ -8660,6 +8662,7 @@ msgstr "Hagyd üresen, ha minden IP címre szeretnéd ezt a szabályt."
 
 msgid "To use Active Directory the CIFS/SMB service will enabled as well."
 msgstr ""
+"Az Címtárszolgáltatás használatához a CIF/SMB szolgáltatást is bekapcsolod."
 
 #, php-format
 msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
@@ -8981,11 +8984,11 @@ msgstr "Ismeretlen méret"
 msgid "Unload"
 msgstr "Nem töltött"
 
-msgid "Unmount disk/partition"
-msgstr "Lemez/partíció leválasztása (unmount)"
+msgid "Unmount Disk/Partition"
+msgstr ""
 
 msgid "Unmount this disk first before proceeding."
-msgstr ""
+msgstr "Folytatás előtt csatold le a lemezt."
 
 msgid "Unmounting..."
 msgstr "Leválasztás..."
@@ -9016,7 +9019,7 @@ msgid "Upload directory of the webserver. The default is %s."
 msgstr "Webszerver feltöltési könyvtára. Alapértelmezetten: %s"
 
 msgid "Upper"
-msgstr ""
+msgstr "Nagybetűs"
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
@@ -9049,7 +9052,7 @@ msgid "Use the specified NTP server."
 msgstr "Megadott NTP-időkiszolgáló használata."
 
 msgid "Use these specials actions for debugging only!"
-msgstr ""
+msgstr "Ezeket a speciális műveleteket csak hibakeresésre használd!"
 
 #, php-format
 msgid ""
@@ -9106,7 +9109,7 @@ msgid "User ID"
 msgstr "Felhasználó-azonosító (ID)"
 
 msgid "User Setup"
-msgstr ""
+msgstr "Felhasználók beállítása"
 
 msgid "User full name."
 msgstr "A felhasználó teljes neve."
@@ -9146,6 +9149,11 @@ msgstr "Felhasználók"
 
 msgid "Users & Groups"
 msgstr "Felhasználók és csoportok"
+
+msgid ""
+"Users will notice a service disruption when trying to access this mount "
+"while the file system check is running."
+msgstr ""
 
 #, php-format
 msgid "Using %s bytes fragment size."
@@ -9292,7 +9300,7 @@ msgid "WAN address"
 msgstr "WAN cím"
 
 msgid "WARNING"
-msgstr ""
+msgstr "FIGYELMEZTETÉS"
 
 msgid "WEP"
 msgstr "WEP"
@@ -9472,7 +9480,7 @@ msgid "You can use the following parameters for substitution:"
 msgstr "A következő paramétereket használhatod helyettesítésre:"
 
 msgid "You can verify the result in the log file."
-msgstr ""
+msgstr "Az eredményt a naplófájlban tudod ellenőrizni."
 
 #, php-format
 msgid ""
@@ -9494,6 +9502,9 @@ msgid ""
 msgstr ""
 "Aktiválni kell a  <a href='%s'>Zeroconf/Bonjour</a>-t, hogy azt a "
 "szolgáltatást közzétenni  lehessen a kliensek felé."
+
+msgid "You have to reboot the system for the changes to take effect."
+msgstr ""
 
 #, php-format
 msgid "You have to select at least one item for '%s'."
@@ -9528,9 +9539,14 @@ msgid ""
 "You must add at least a Portal Group, an Initiator Group and an Extent "
 "before you can configure a Target."
 msgstr ""
+"A Cél konfigurálása előtt legalább egy Portal csoportot, egy Initiator "
+"csoportot és egy Extent-et létre kell hoznod."
 
 msgid "You must add disks first."
 msgstr "Először lemezt kell hozzáadni."
+
+msgid "You must apply the changes in order for them to take effect."
+msgstr ""
 
 msgid "You must enter the same IP type for network and gateway."
 msgstr "Ugyanazt az IP-t kell beállítanod a hálózathoz és az átjáróhoz"
@@ -9649,7 +9665,7 @@ msgid "hour(s)"
 msgstr "óra"
 
 msgid "iSCSI Initiator"
-msgstr "iSCSI Initiator"
+msgstr "iSCSI Kezdeményező"
 
 msgid "iSCSI Target"
 msgstr "iSCSI-cél (iSCSI Target)"
@@ -9665,7 +9681,7 @@ msgid "iSCSI initial parameter (%d by default)."
 msgstr "iSCSI initial parameter (%d az alapértelmezett)."
 
 msgid "iSCSI initiator disabled"
-msgstr "iSCSI initiator tiltva"
+msgstr "iSCSI Kezdeményező kikapcsolva"
 
 msgid "iTunes/DAAP"
 msgstr "iTunes/DAAP"
@@ -9692,7 +9708,7 @@ msgid "mount"
 msgstr "csatolás"
 
 msgid "mount point"
-msgstr ""
+msgstr "csatolási pont"
 
 msgid "n/a"
 msgstr "nem elérhető"
@@ -9713,7 +9729,7 @@ msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
 msgid "pools"
-msgstr ""
+msgstr "tárolók"
 
 msgid "rc.conf"
 msgstr "rc.conf"
@@ -9753,160 +9769,3 @@ msgstr "leválasztás"
 
 msgid "version:"
 msgstr "verzió:"
-
-#~ msgid "<->"
-#~ msgstr "<->"
-
-#, php-format
-#~ msgid "No configured Extent. Please add new <a href='%s'>Extent</a> first."
-#~ msgstr ""
-#~ "Nincs konfigurált Extent. Kérem hozz létre egy új <a href='%s'>Extent-et</a> "
-#~ "először."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Initiator Group. Please add new <a href='%s'>Initiator "
-#~ "Group</a> first."
-#~ msgstr ""
-#~ "Nincs konfigurált Kérelmező csoport. Kérem hozz létre egy új <a "
-#~ "href='%s'>Kérelmező csoportot</a> először."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
-#~ "first."
-#~ msgstr ""
-#~ "Nincs konfigurált Portal csoport. Kérem hozz létre egy új <a "
-#~ "href='%s'>Portal csoportot</a> először."
-
-#, php-format
-#~ msgid ""
-#~ "The reloading request has been sent to the daemon. You can see the result by "
-#~ "<a href=\"%s\">Log</a>."
-#~ msgstr ""
-#~ "Az újratöltési kérelmet elküldték a démonnak. Láthatjuk az eredményt a <a "
-#~ "href=\"%s\">Log-ban</a>."
-
-#, php-format
-#~ msgid ""
-#~ "The disk is currently mounted! <a href='%s'>Unmount</a> this disk first "
-#~ "before proceeding."
-#~ msgstr ""
-#~ "A lemez jelenleg be van csatolva! A folytatás előtt <a href='%s'>válaszd "
-#~ "le</a> ezt a lemezt."
-
-#, php-format
-#~ msgid ""
-#~ "The encrypted device is currently mounted! <a href='%s'>Unmount</a> this "
-#~ "disk first before proceeding."
-#~ msgstr ""
-#~ "A titkosított eszköz jelenleg be van csatolva! A folytatás előtt <a "
-#~ "href='%s'>válaszd le</a> ezt a lemezt."
-
-#~ msgid ""
-#~ "Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-#~ "<a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & "
-#~ "deduplication</a> wiki article BEFORE using this feature.</b></br>"
-#~ msgstr ""
-#~ "Az egyszeresítés (dedup) módot állítja. <br><b><font color='red'>FONTOS "
-#~ "FIGYELMEZTETÉS</font>: Olvasd el a <a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks-zfs-volumes-volume' target='_blank'>ZFS adattárak & deduplikáció</a> "
-#~ "wiki cikket MIELŐTT használod ezt a tulajdonságot.</b></br>"
-
-#~ msgid ""
-#~ "Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-#~ "<a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks-zfs-volumes-volume' target='_blank'>ZFS volumes & deduplication</a> "
-#~ "wiki article BEFORE using this feature.</b></br>"
-#~ msgstr ""
-#~ "Az egyszeresítés (dedup) módot állítja. <br><b><font color='red'>FONTOS "
-#~ "FIGYELMEZTETÉS</font>: Olvasd el a <a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks-zfs-volumes-volume' target='_blank'>ZFS kötetek & deduplikáció</a> "
-#~ "wiki cikket MIELŐTT használod ezt a tulajdonságot.</b></br>"
-
-#~ msgid ""
-#~ "1. Use these specials actions for debugging only!<br />2. There is no need "
-#~ "of using this menu for starting a RAID volume (start automaticaly)."
-#~ msgstr ""
-#~ "1. Ezeket a speciális műveleteket csak hibakeresésre használd!<br />2. Nincs "
-#~ "szükség ennek a menünek a használatára RAID-kötet indításához (az "
-#~ "automatikusan elindul)."
-
-#, php-format
-#~ msgid ""
-#~ "IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
-#~ "addresses to hostnames&quot;</a> is enabled."
-#~ msgstr ""
-#~ "IP-címeket feloldja-e a program állomásnevekre, ha <a href='%s'>&quot;IP "
-#~ "címek feloldása állomásnevekre&quot;</a> engedélyezve van."
-
-#~ msgid "Detected Language:<br />(Change if needed)"
-#~ msgstr "Érzékelt nyelv:<br />(Változtassa meg, ha szükséges)"
-
-#, php-format
-#~ msgid ""
-#~ "Hint: If this is checked, IP addresses in the server logs are resolved to "
-#~ "real hostnames where possible.<br><font color='red'>Warning</font>: This can "
-#~ "cause a huge delay in loading the log page!"
-#~ msgstr ""
-#~ "Tipp: Ha ez be van jelölve, ahol lehetséges a szerver napló az IP-címeket "
-#~ "átalakítja igazi állomásnevekké. <br/><font color='red'>Figyelmeztetés:</ "
-#~ "font>Ez nagyon lelassíthatja a napló oldal betöltését!"
-
-#~ msgid ""
-#~ "To configure the target, you must add at least Portal Group and Initiator "
-#~ "Group and Extent.<br />Portal Group which is identified by tag number "
-#~ "defines IP addresses and listening TCP ports.<br />Initiator Group which is "
-#~ "identified by tag number defines authorised initiator names and networks.<br "
-#~ "/>Auth Group which is identified by tag number and is optional if the target "
-#~ "does not use CHAP authentication defines authorised users and secrets for "
-#~ "additional security.<br />Extent defines the storage area of the target."
-#~ msgstr ""
-#~ "A cél beállításához meg kell adnia legalább a Portal csoportot és a "
-#~ "Kezdeményező csoportot és Extent-et.<br /> Portál csoport azonosítja a tag "
-#~ "számot , ami definiálja IP-címek és TCP portokat.<br />Kezdeményező csoport "
-#~ "azonosítja a címke számát, ami meghatározza a hivatalos kezdeményező nevét "
-#~ "és hálózatait.<br/> Auth csoport ami azonosítja az azonosító számmal, nem "
-#~ "kötelező, ha a cél nem használ CHAP hitelesítéssel meghatározott "
-#~ "felhasználók és titkokat a biztonsághoz.<br />Extent meghatározza a "
-#~ "céltárolót."
-
-#, php-format
-#~ msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
-#~ msgstr ""
-#~ "Nincs konfigurált tároló. Kérem először hozz létre egy új <a "
-#~ "href='%s'>tárolót</a>."
-
-#, php-format
-#~ msgid ""
-#~ "No configured bridge interfaces. Please add new <a href='%s'>bridge "
-#~ "interface</a> first."
-#~ msgstr ""
-#~ "Nincs híd interfész konfigurálva. Először hozz létre egy <a href='%s'>híd "
-#~ "interfészt</a>."
-
-#~ msgid ""
-#~ "To use Active Directory the CIFS/SMB service will enabled, too. The "
-#~ "following services will use AD authentication:<div "
-#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-#~ ">System</li></ul></div>"
-#~ msgstr ""
-#~ "A Címtárszolgáltatás használatához a CIFS/SMB szolgáltatást is "
-#~ "engedélyezzük. A következő szolgáltatások használnak AD hitelesítést:<div "
-#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-#~ ">Rendszer</li></ul></div>"
-
-#~ msgid "Invalid username or password.</br> Please try again."
-#~ msgstr "Hibás felhasználónév, illetve jelszó.</br>Próbáld újra."
-
-#, php-format
-#~ msgid ""
-#~ "The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
-#~ "and [._-]"
-#~ msgstr ""
-#~ "'%s' attribútum csak [a-z], [A-Z], [0-9] és [._-] karakterek tartalmazhat."

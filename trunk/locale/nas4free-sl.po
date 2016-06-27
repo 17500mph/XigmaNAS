@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-25 01:50+0000\n"
+"POT-Creation-Date: 2016-06-26 22:56+0000\n"
 "PO-Revision-Date: 2016-03-28 06:18+0000\n"
 "Last-Translator: Matic Gradišer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-25 01:49+0000\n"
+"X-Launchpad-Export-Date: 2016-06-26 23:49+0000\n"
 "X-Generator: Launchpad (build 18111)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
@@ -278,6 +278,11 @@ msgstr ""
 "besedilo, ali kot heksadecimalno število, ki se začne z '0x'."
 
 msgid "A mounted RAID volume cannot be deleted."
+msgstr ""
+
+msgid ""
+"A mounted disk or partition will be unmounted temporarily to perform the "
+"requested action."
 msgstr ""
 
 msgid "A reload request has been sent to the daemon."
@@ -2899,12 +2904,11 @@ msgstr ""
 msgid "Error"
 msgstr "Napaka"
 
-msgid "Error Level"
+msgid "Error Code"
 msgstr ""
 
-#, php-format
-msgid "Error: The changes could not be applied (error code %s)."
-msgstr "Napaka: Spremembe ne morejo biti uveljavljene (koda napake %s)."
+msgid "Error Level"
+msgstr ""
 
 msgid "Event"
 msgstr "Dogodek"
@@ -3204,6 +3208,9 @@ msgid "Format"
 msgstr "Formatiranje"
 
 msgid "Format Options"
+msgstr ""
+
+msgid "Format Program"
 msgstr ""
 
 msgid "Format the report for phpBB forum."
@@ -3616,19 +3623,12 @@ msgstr ""
 "datotečnega sistema."
 
 msgid ""
-"If the selected disk/partition is mounted it will be unmounted temporarily "
-"to perform selected command, otherwise the commands work in read-only "
-"mode.<br />Service disruption to users accessing this mount will occur "
-"during this process."
-msgstr ""
-"Če je izbrani pogon/particija priklopljen, bo za izvršitev izbranega ukaza "
-"začasno odklopljen. Drugače se bo ukaz izvršil v bralnem načinu.<br />Med "
-"izvajanjem ukaza bodo imeli uporabniki, ki dostopajo do sistema, moten "
-"dostop."
-
-msgid ""
 "If the server is behind a proxy set these parameters to give local services "
 "access to the internet via proxy."
+msgstr ""
+
+msgid ""
+"If this message persist take a look at the system log for more information."
 msgstr ""
 
 msgid ""
@@ -4077,14 +4077,6 @@ msgstr ""
 msgid "Latvian"
 msgstr "Latvijščina"
 
-#, php-format
-msgid ""
-"Leave '%s' for unformated disks and format them using <a "
-"href='%s'>format</a> menu."
-msgstr ""
-"Pusti '%s' za neformatirane diske in jih formatiraj z uporabo <a "
-"href='%s'>format</a> menuja."
-
 msgid "Leave already configured auto snapshots."
 msgstr ""
 
@@ -4361,12 +4353,7 @@ msgstr "Pripona"
 msgid "Maintenance"
 msgstr ""
 
-#, php-format
-msgid ""
-"Make sure to select the correct number of devices:<div "
-"id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each "
-"vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
-"Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
+msgid "Make sure to select the optimal number of devices"
 msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
@@ -4838,10 +4825,7 @@ msgstr ""
 msgid "No configured pools."
 msgstr ""
 
-#, php-format
-msgid ""
-"No configured virtual devices. Please add new <a href=\"%s\">virtual "
-"device</a> first."
+msgid "No configured virtual devices."
 msgstr ""
 
 msgid "No device selected."
@@ -4850,9 +4834,8 @@ msgstr "Nobena naprava ni izbrana."
 msgid "No disk configured"
 msgstr "Ni nastavljenih diskov"
 
-#, php-format
-msgid "No disks available. Please add new <a href='%s'>disk</a> first."
-msgstr "Na voljo ni diskov. Prosim, dodajte nov <a href='%s'>disk</a>."
+msgid "No disks available."
+msgstr ""
 
 msgid ""
 "No disks configured, please add disks to see the diagnostic information of "
@@ -5353,6 +5336,12 @@ msgstr ""
 msgid "Please add a new Portal Group first."
 msgstr ""
 
+msgid "Please add a new disk first."
+msgstr ""
+
+msgid "Please add a virtual device first."
+msgstr ""
+
 #, php-format
 msgid "Please add new %s first."
 msgstr ""
@@ -5363,6 +5352,9 @@ msgstr ""
 #, php-format
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "Prosim, preverite <a href='%s' target='_blank'>dokumentacijo</a>."
+
+msgid "Please check the documentation."
+msgstr ""
 
 msgid "Please define the Database directory location."
 msgstr ""
@@ -5626,10 +5618,19 @@ msgstr ""
 msgid "RAID-Z1"
 msgstr ""
 
+msgid "RAID-Z1 should have 3, 5, or 9 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z2"
 msgstr ""
 
+msgid "RAID-Z2 should have 4, 6, or 10 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z3"
+msgstr ""
+
+msgid "RAID-Z3 should have 5, 7, or 11 disks in each vdev."
 msgstr ""
 
 msgid "RAID0"
@@ -6160,6 +6161,10 @@ msgstr "Izberite predmet, ki ga želite odstraniti s seznama."
 msgid "Select mount point where to create the swap file."
 msgstr ""
 "Izberite priklopno točko, kjer ustvarim datoteko za izmenljiv prostor."
+
+msgid ""
+"Select option 'Unformatted' for unformatted disks and format them with the"
+msgstr ""
 
 msgid "Select read balance algorithm."
 msgstr ""
@@ -7097,16 +7102,14 @@ msgid ""
 "search process will halt."
 msgstr ""
 
+msgid "The changes could not be applied"
+msgstr ""
+
 msgid "The changes have been applied successfully."
 msgstr "Spremembe so bile uspešno uveljavljene."
 
-#, php-format
-msgid ""
-"The changes have been saved. You have to <a href='%s'>reboot</a> the system "
-"for the changes to take effect."
+msgid "The changes have been saved."
 msgstr ""
-"Spremembe so bile shranjene. Potreben je <a href='%s'>ponovni zagon</a> "
-"sistema, da se nastavitve lahko uporabijo."
 
 msgid "The cleartext credentials with which to bind."
 msgstr ""
@@ -7124,11 +7127,7 @@ msgstr ""
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr ""
 
-#, php-format
-msgid ""
-"The configuration has been changed.<br />You must apply the changes in order "
-"for them to take effect.<br /><b>If this message persist take a look at the "
-"<a href='%s'>system log</a> for more information.</b>"
+msgid "The configuration has been changed."
 msgstr ""
 
 msgid "The configuration has been restored. The server is now rebooting."
@@ -7703,11 +7702,6 @@ msgstr ""
 msgid "This allows you to set how loud the drive is while it's operating."
 msgstr ""
 
-msgid ""
-"This allows you to set the file system for preformatted hard disks "
-"containing data."
-msgstr ""
-
 msgid "This allows you to set the transfer mode for ATA/IDE disks."
 msgstr ""
 
@@ -7823,6 +7817,11 @@ msgid ""
 "This option allows the users and groups that access a share to be specified. "
 "Users and groups are specified, delimited by commas. Groups are designated "
 "by a @ prefix."
+msgstr ""
+
+msgid ""
+"This option allows you to set the file system of already formatted disks "
+"containing data."
 msgstr ""
 
 msgid "This option applies to GEOM RAID-1 only."
@@ -8395,8 +8394,8 @@ msgstr ""
 msgid "Unload"
 msgstr ""
 
-msgid "Unmount disk/partition"
-msgstr "Odklopi pogon/particijo"
+msgid "Unmount Disk/Partition"
+msgstr ""
 
 msgid "Unmount this disk first before proceeding."
 msgstr ""
@@ -8546,6 +8545,11 @@ msgid "Users"
 msgstr "Uporabniki"
 
 msgid "Users & Groups"
+msgstr ""
+
+msgid ""
+"Users will notice a service disruption when trying to access this mount "
+"while the file system check is running."
 msgstr ""
 
 #, php-format
@@ -8866,6 +8870,9 @@ msgid ""
 "service to clients."
 msgstr ""
 
+msgid "You have to reboot the system for the changes to take effect."
+msgstr ""
+
 #, php-format
 msgid "You have to select at least one item for '%s'."
 msgstr ""
@@ -8899,6 +8906,9 @@ msgstr ""
 
 msgid "You must add disks first."
 msgstr "Najprej morate dodati diske."
+
+msgid "You must apply the changes in order for them to take effect."
+msgstr ""
 
 msgid "You must enter the same IP type for network and gateway."
 msgstr ""
@@ -9117,53 +9127,3 @@ msgstr "izvrzi"
 
 msgid "version:"
 msgstr ""
-
-#~ msgid ""
-#~ "1. Use these specials actions for debugging only!<br />2. There is no need "
-#~ "of using this menu for starting a RAID volume (start automaticaly)."
-#~ msgstr ""
-#~ "1. Uporabite te posebne ukaze samo za razhroščevanje!<br />2. Tega menuja ne "
-#~ "potrebujete za zagon RAID nosilca (zažene se samodejno)."
-
-#~ msgid "<->"
-#~ msgstr "<->"
-
-#, php-format
-#~ msgid ""
-#~ "IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
-#~ "addresses to hostnames&quot;</a> is enabled."
-#~ msgstr ""
-#~ "IP naslovi so prevedeni v imena, če je omogočen <a href='%s'>&quot;prevedi "
-#~ "IP naslove v imena&quot;</a>."
-
-#, php-format
-#~ msgid "No configured Extent. Please add new <a href='%s'>Extent</a> first."
-#~ msgstr "Ni nastavljenih obsegov. Prosim, dodajte nov <a href='%s'>obseg</a>."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Initiator Group. Please add new <a href='%s'>Initiator "
-#~ "Group</a> first."
-#~ msgstr ""
-#~ "Ni nastavljenih skupin sprožiteljev. Prosim, dodajte novo <a "
-#~ "href='%s'>skupino sprožiteljev</a>."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
-#~ "first."
-#~ msgstr ""
-#~ "Ni nastavljeni skupin portal. Prosim, dodajte novo <a href='%s'>skupino "
-#~ "portal</a>."
-
-#, php-format
-#~ msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
-#~ msgstr "Ni nastavljenih bazenov. Prosim, dodajte nov <a href='%s'>bazen</a>."
-
-#, php-format
-#~ msgid ""
-#~ "The disk is currently mounted! <a href='%s'>Unmount</a> this disk first "
-#~ "before proceeding."
-#~ msgstr ""
-#~ "Pogon je trnutno priklopljen! Pred nadaljevanjem ga najprej <a "
-#~ "href='%s'>Odklopite</a>"

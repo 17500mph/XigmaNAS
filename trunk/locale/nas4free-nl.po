@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-25 01:50+0000\n"
-"PO-Revision-Date: 2016-06-25 01:43+0000\n"
+"POT-Creation-Date: 2016-06-26 22:56+0000\n"
+"PO-Revision-Date: 2016-06-26 23:42+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-25 01:48+0000\n"
+"X-Launchpad-Export-Date: 2016-06-26 23:57+0000\n"
 "X-Generator: Launchpad (build 18111)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -320,6 +320,13 @@ msgstr ""
 
 msgid "A mounted RAID volume cannot be deleted."
 msgstr "Een gekoppelde RAID volume kan niet worden verwijderd."
+
+msgid ""
+"A mounted disk or partition will be unmounted temporarily to perform the "
+"requested action."
+msgstr ""
+"Een aangekoppelde schijf of partitie wordt tijdelijk ontkoppeld  om de "
+"gevraagde actie uit te voeren."
 
 msgid "A reload request has been sent to the daemon."
 msgstr "Een herlaad verzoek is verstuurd naar de daemon."
@@ -3137,12 +3144,11 @@ msgstr "Wissen MBR"
 msgid "Error"
 msgstr "Fout"
 
+msgid "Error Code"
+msgstr "Fout Code"
+
 msgid "Error Level"
 msgstr "Fout niveau"
-
-#, php-format
-msgid "Error: The changes could not be applied (error code %s)."
-msgstr "Fout: wijzigingen kunnen niet worden doorgevoerd (fout code %s)."
 
 msgid "Event"
 msgstr "Gebeurtenis"
@@ -3451,6 +3457,9 @@ msgstr "Formatteren"
 
 msgid "Format Options"
 msgstr "Formatteren Opties"
+
+msgid "Format Program"
+msgstr "Formatteer Programma"
 
 msgid "Format the report for phpBB forum."
 msgstr "Rapportage indelen voor plaatsing op het NAS4Free forum."
@@ -3882,24 +3891,17 @@ msgstr ""
 "hostsysteem bestandsruimte."
 
 msgid ""
-"If the selected disk/partition is mounted it will be unmounted temporarily "
-"to perform selected command, otherwise the commands work in read-only "
-"mode.<br />Service disruption to users accessing this mount will occur "
-"during this process."
-msgstr ""
-"Als de geselecteerde schijf/partitie is aangekoppeld zal deze tijdelijk "
-"ontkoppeld worden om de gekozen opdracht uit te voeren, anders werken de "
-"opdrachten in 'alleen-lezen' mode.<br>Verstoring van services naar "
-"gebruikers zullen ontstaan wanneer deze toegang zoeken naar dit koppelpunt "
-"gedurende dit proces."
-
-msgid ""
 "If the server is behind a proxy set these parameters to give local services "
 "access to the internet via proxy."
 msgstr ""
 "Als de server zich achter een proxy bevindt, vul dan hier deze gegevens in "
 "om de lokale services internet toegang te verlenen door middel van een proxy "
 "server."
+
+msgid ""
+"If this message persist take a look at the system log for more information."
+msgstr ""
+"Als dit bericht blijft aanhouden bekijk dan het logboek voor meer informatie."
 
 msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
@@ -4386,14 +4388,6 @@ msgstr "Laatste Uitgave: %s"
 msgid "Latvian"
 msgstr "Lets"
 
-#, php-format
-msgid ""
-"Leave '%s' for unformated disks and format them using <a "
-"href='%s'>format</a> menu."
-msgstr ""
-"Behoud '%s' voor ongeformatteerde harde schijven en formatteer deze via het "
-"<a href='%s'>Formatteren</a> menu."
-
 msgid "Leave already configured auto snapshots."
 msgstr "Laat reeds geconfigureerde snapshots bestaan."
 
@@ -4684,18 +4678,8 @@ msgstr "Machine achtervoegsel"
 msgid "Maintenance"
 msgstr "Onderhoud"
 
-#, php-format
-msgid ""
-"Make sure to select the correct number of devices:<div "
-"id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each "
-"vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
-"Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
-msgstr ""
-"Zorg ervoor dat u het juiste aantal schijven selecteert:<div "
-"id='enumeration'><ul><li>RAID-Z1 zou 3, 5, of 9 schijven in elke vdev moeten "
-"gebruiken</li><li>RAID-Z2 zou 4, 6, or 10 schijven in elke vdev moeten "
-"gebruiken</li><li>RAID-Z3 zou 5, 7, or 11 schijven in elke vdev moeten "
-"gebruiken</li></ul></div>"
+msgid "Make sure to select the optimal number of devices"
+msgstr "Zorg ervoor dat u het juiste aantal schijven selecteert"
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr ""
@@ -5183,13 +5167,8 @@ msgstr "Er zijn geen bridge netwerken geconfigureerd."
 msgid "No configured pools."
 msgstr "Er zijn geen pools geconfigureerd."
 
-#, php-format
-msgid ""
-"No configured virtual devices. Please add new <a href=\"%s\">virtual "
-"device</a> first."
-msgstr ""
-"Er zijn geen virtuele schijven geconfigureerd. Voeg eerst een nieuwe <a "
-"href=\"%s\">virtuele schijf</a> toe."
+msgid "No configured virtual devices."
+msgstr "Er zijn geen virtuele schijven geconfigureerd."
 
 msgid "No device selected."
 msgstr "Er is geen schijf geselecteerd"
@@ -5197,10 +5176,8 @@ msgstr "Er is geen schijf geselecteerd"
 msgid "No disk configured"
 msgstr "Geen schijf geconfigureerd"
 
-#, php-format
-msgid "No disks available. Please add new <a href='%s'>disk</a> first."
-msgstr ""
-"Geen schijven beschikbaar. Voeg eerst een nieuwe <a href='%s'>schijf</a> toe."
+msgid "No disks available."
+msgstr "Er zijn geen schijven beschikbaar."
 
 msgid ""
 "No disks configured, please add disks to see the diagnostic information of "
@@ -5724,6 +5701,12 @@ msgstr "Voeg eerst een nieuwe Initiator Groep toe."
 msgid "Please add a new Portal Group first."
 msgstr "Voeg eerst een nieuwe Portaal Groep toe."
 
+msgid "Please add a new disk first."
+msgstr "Voeg eerst een nieuwe schijf toe."
+
+msgid "Please add a virtual device first."
+msgstr "Voeg eerst een nieuwe virtuele schijf toe."
+
 #, php-format
 msgid "Please add new %s first."
 msgstr "Voeg eerst een nieuwe %s toe."
@@ -5734,6 +5717,9 @@ msgstr "Voeg eerst een nieuwe pools toe."
 #, php-format
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "Bekijk de <a href='%s' target='_blank'>documentatie</a>."
+
+msgid "Please check the documentation."
+msgstr "Bekijk de documentatie."
 
 msgid "Please define the Database directory location."
 msgstr "Definieer de database locatie."
@@ -6000,11 +5986,20 @@ msgstr "RAID-5 Onderhoud"
 msgid "RAID-Z1"
 msgstr "RAID-Z1"
 
+msgid "RAID-Z1 should have 3, 5, or 9 disks in each vdev."
+msgstr "RAID-Z1 zou 3, 5, of 9 schijven in elke vdev moeten gebruiken."
+
 msgid "RAID-Z2"
 msgstr "RAID-Z2"
 
+msgid "RAID-Z2 should have 4, 6, or 10 disks in each vdev."
+msgstr "RAID-Z2 zou 4, 6, of 10 schijven in elke vdev moeten gebruiken."
+
 msgid "RAID-Z3"
 msgstr "RAID-Z3"
+
+msgid "RAID-Z3 should have 5, 7, or 11 disks in each vdev."
+msgstr "RAID-Z3 zou 5, 7, of 11 schijven in elke vdev moeten gebruiken."
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -6553,6 +6548,12 @@ msgid "Select mount point where to create the swap file."
 msgstr ""
 "Selecteer het koppelpunt waar het wisselbestand op aangemaakt dient te "
 "worden."
+
+msgid ""
+"Select option 'Unformatted' for unformatted disks and format them with the"
+msgstr ""
+"Selecteer de optie 'Ongeformatteerd' voor  ongeformatteerde schijven en "
+"formatteer deze met de"
 
 msgid "Select read balance algorithm."
 msgstr "Selecteer lees balans algoritme."
@@ -7563,16 +7564,14 @@ msgstr ""
 "afgezocht. Wanneer een gelijke is gevonden zal de regel worden toegepast en "
 "het zoek proces zal worden beëindigd."
 
+msgid "The changes could not be applied"
+msgstr "De wijzigingen kunnen niet worden toegepast"
+
 msgid "The changes have been applied successfully."
 msgstr "De wijzigingen zijn succesvol uitgevoerd."
 
-#, php-format
-msgid ""
-"The changes have been saved. You have to <a href='%s'>reboot</a> the system "
-"for the changes to take effect."
-msgstr ""
-"De wijzigingen zijn opgeslagen. U moet het systeem eerst <a "
-"href='%s'>herstarten</a> om de wijzigingen door te voeren."
+msgid "The changes have been saved."
+msgstr "De veranderingen zijn opgeslagen."
 
 msgid "The cleartext credentials with which to bind."
 msgstr "De cleartext credentials om mee te koppelen."
@@ -7591,15 +7590,8 @@ msgid "The configuration could not be restored. No file was uploaded!"
 msgstr ""
 "De configuratie kan niet worden hersteld. Er is geen bestand geupload!"
 
-#, php-format
-msgid ""
-"The configuration has been changed.<br />You must apply the changes in order "
-"for them to take effect.<br /><b>If this message persist take a look at the "
-"<a href='%s'>system log</a> for more information.</b>"
-msgstr ""
-"De configuratie is veranderd.<br />U dient de wijzigingen toe te passen "
-"voordat deze effect zullen hebben.<br /><b>Als dit bericht blijft aanhouden "
-"neem kijkje dan in de <a href='%s'>system log</a> voor meer informatie.</b>"
+msgid "The configuration has been changed."
+msgstr "De configuratie is gewijzigd."
 
 msgid "The configuration has been restored. The server is now rebooting."
 msgstr "De configuratie is hersteld. De server is nu aan het herstarten."
@@ -8304,13 +8296,6 @@ msgstr ""
 "Selecteer een instelling om de geluidsproduktie van de harde schijf te "
 "beperken tijdens lees/schrijf acties."
 
-msgid ""
-"This allows you to set the file system for preformatted hard disks "
-"containing data."
-msgstr ""
-"Selecteer het bestands systeem van de reeds geformatteerde harde schijven "
-"die eventueel al gevuld zijn met gegevens."
-
 msgid "This allows you to set the transfer mode for ATA/IDE disks."
 msgstr "Selecteer de overdracht mode voor ATA/IDE schijven."
 
@@ -8468,6 +8453,13 @@ msgstr ""
 "Deze optie staat de gebruikers en de groepen toe die tot een te specificeren "
 "deling toegang hebben. De gebruikers en de groepen worden gespecificeerd, "
 "afgebakend door komma's. De groepen worden aangewezen door een @ voorvoegsel."
+
+msgid ""
+"This option allows you to set the file system of already formatted disks "
+"containing data."
+msgstr ""
+"Met deze optie kunt u het bestandssysteem instellen van reeds geformatteerde "
+"schijven met data gegevens."
 
 msgid "This option applies to GEOM RAID-1 only."
 msgstr "Deze optie is alleen van toepassing op GEOM RAID-1."
@@ -9147,8 +9139,8 @@ msgstr "Onbekende grootte"
 msgid "Unload"
 msgstr "Verwijder"
 
-msgid "Unmount disk/partition"
-msgstr "Ontkoppel schijf/partitie"
+msgid "Unmount Disk/Partition"
+msgstr "Ontkoppel Schijf/Partitie"
 
 msgid "Unmount this disk first before proceeding."
 msgstr "Ontkoppel deze schijf eerst voor u verder gaat."
@@ -9318,6 +9310,14 @@ msgstr "Gebruikers"
 
 msgid "Users & Groups"
 msgstr "Gebruikers & Groepen"
+
+msgid ""
+"Users will notice a service disruption when trying to access this mount "
+"while the file system check is running."
+msgstr ""
+"Gebruikers zullen een service onderbreking merken wanneer ze toegang "
+"proberen te krijgen tot dit koppelpunt terwijl controle van het "
+"bestandssysteem wordt uitgevoerd."
 
 #, php-format
 msgid "Using %s bytes fragment size."
@@ -9668,6 +9668,9 @@ msgstr ""
 "U dient <a href='%s'>Zeroconf/Bonjour</a> in te schakelen om deze service "
 "kenbaar te maken aan de werkstations."
 
+msgid "You have to reboot the system for the changes to take effect."
+msgstr "U dient de server te herstarten om de wijzigingen te activeren."
+
 #, php-format
 msgid "You have to select at least one item for '%s'."
 msgstr "U moet tenminste 1 item selecteren voor '%s'."
@@ -9707,6 +9710,10 @@ msgstr ""
 
 msgid "You must add disks first."
 msgstr "U moet eerst de hardeschijven toevoegen."
+
+msgid "You must apply the changes in order for them to take effect."
+msgstr ""
+"U dient de wijzigingen toe te passen voordat deze effect zullen hebben."
 
 msgid "You must enter the same IP type for network and gateway."
 msgstr ""
@@ -9933,164 +9940,3 @@ msgstr "loskoppelen"
 
 msgid "version:"
 msgstr "versie:"
-
-#~ msgid ""
-#~ "1. Use these specials actions for debugging only!<br />2. There is no need "
-#~ "of using this menu for starting a RAID volume (start automaticaly)."
-#~ msgstr ""
-#~ "1. Gebruik deze speciale opdrachten alléén voor fout opsporing!<br />2. Het "
-#~ "is niet nodig om dit menu te gebruiken om een RAID volume te starten. (start "
-#~ "automatisch)."
-
-#~ msgid "<->"
-#~ msgstr "<->"
-
-#, php-format
-#~ msgid ""
-#~ "IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
-#~ "addresses to hostnames&quot;</a> is enabled."
-#~ msgstr ""
-#~ "IP-adressen worden omgezet naar hostnamen indien <a href='%s'>&quot;Omzetten "
-#~ "van IP-adressen naar hostnamen&quot;</a> is ingeschakeld."
-
-#, php-format
-#~ msgid "No configured Extent. Please add new <a href='%s'>Extent</a> first."
-#~ msgstr ""
-#~ "Er is geen extentie geconfigureerd. Voeg eerst een nieuwe <a "
-#~ "href='%s'>Extentie</a> toe."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Initiator Group. Please add new <a href='%s'>Initiator "
-#~ "Group</a> first."
-#~ msgstr ""
-#~ "Er is geen Initiator Groep geconfigureerd. Voeg eerst een nieuwe <a "
-#~ "href='%s'>Initiator Groep</a> toe."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
-#~ "first."
-#~ msgstr ""
-#~ "Er is geen Portaal Groep geconfigureerd. Voeg eerst een nieuwe <a "
-#~ "href='%s'>Portaal Groep</a> toe."
-
-#, php-format
-#~ msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
-#~ msgstr ""
-#~ "Er zijn geen pools geconfigureerd. Voeg eerst een nieuwe <a "
-#~ "href='%s'>pool</a> toe."
-
-#, php-format
-#~ msgid ""
-#~ "The disk is currently mounted! <a href='%s'>Unmount</a> this disk first "
-#~ "before proceeding."
-#~ msgstr ""
-#~ "De schijf is momenteel aangekoppeld! <a href='%s'>Ontkoppel</a> deze schijf "
-#~ "eerst voor u verder gaat."
-
-#, php-format
-#~ msgid ""
-#~ "The encrypted device is currently mounted! <a href='%s'>Unmount</a> this "
-#~ "disk first before proceeding."
-#~ msgstr ""
-#~ "De versleutelde schijf is momenteel aangekoppeld! <a href='%s'>Ontkoppel</a> "
-#~ "deze schijf eerst voor u verder gaat."
-
-#~ msgid ""
-#~ "To configure the target, you must add at least Portal Group and Initiator "
-#~ "Group and Extent.<br />Portal Group which is identified by tag number "
-#~ "defines IP addresses and listening TCP ports.<br />Initiator Group which is "
-#~ "identified by tag number defines authorised initiator names and networks.<br "
-#~ "/>Auth Group which is identified by tag number and is optional if the target "
-#~ "does not use CHAP authentication defines authorised users and secrets for "
-#~ "additional security.<br />Extent defines the storage area of the target."
-#~ msgstr ""
-#~ "Om het doel te configureren, dient u ten minste een Portaal Groep en "
-#~ "Initiator Groep en de Extentie toe te voegen. <br /> Portaal Groep, die "
-#~ "wordt aangeduid met een markeringsnummer definieert IP-adressen en TCP "
-#~ "luister poorten. <br /> Initiator Groep, die wordt aangeduid met een "
-#~ "markeringsnummer definieert geautoriseerde initiator-namen en netwerken. <br "
-#~ "/> Auth Groep, die wordt aangeduid met een markeringsnummer en is optioneel "
-#~ "als het doel CHAP verificatie niet gebruikt definieert geautoriseerde "
-#~ "gebruikers en wachtwoorden voor extra beveiliging. <br /> Extenties "
-#~ "definiëren het opslaggebied van de doel."
-
-#~ msgid ""
-#~ "To use Active Directory the CIFS/SMB service will enabled, too. The "
-#~ "following services will use AD authentication:<div "
-#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-#~ ">System</li></ul></div>"
-#~ msgstr ""
-#~ "Om de Active Directory te gebruiken zal de CIFS/SMB service ook ingeschakeld "
-#~ "worden. De onderstaande services gebruiken AD verificatie:<div "
-#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-#~ ">Systeem</li></ul></div>"
-
-#, php-format
-#~ msgid ""
-#~ "The reloading request has been sent to the daemon. You can see the result by "
-#~ "<a href=\"%s\">Log</a>."
-#~ msgstr ""
-#~ "Het herlaad verzoek is verstuurd naar de daemon. U kunt het resultaat "
-#~ "bekijken in de <a href=\"%s\">Log</a>."
-
-#~ msgid ""
-#~ "Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-#~ "<a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & "
-#~ "deduplication</a> wiki article BEFORE using this feature.</b></br>"
-#~ msgstr ""
-#~ "Hiermee bepaalt u de dedup methode. <br><b><font "
-#~ "color='red'>Tip/Waarschuwing</font>: Bekijk de <a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & "
-#~ "deduplication</a> wiki artikel VOOR je gebruikt maakt van deze "
-#~ "instelling.</b></br>"
-
-#~ msgid ""
-#~ "Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-#~ "<a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks-zfs-volumes-volume' target='_blank'>ZFS volumes & deduplication</a> "
-#~ "wiki article BEFORE using this feature.</b></br>"
-#~ msgstr ""
-#~ "Hiermee bepaalt u de dedup methode. <br><b><font "
-#~ "color='red'>Tip/Waarschuwing</font>: Bekijk de <a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks-zfs-volumes-volume' target='_blank'>ZFS volumes & deduplication</a> "
-#~ "wiki artikel VOOR je gebruikt maakt van deze instelling.<b></br>"
-
-#, php-format
-#~ msgid ""
-#~ "Hint: If this is checked, IP addresses in the server logs are resolved to "
-#~ "real hostnames where possible.<br><font color='red'>Warning</font>: This can "
-#~ "cause a huge delay in loading the log page!"
-#~ msgstr ""
-#~ "Tip: Wanneer dit is aangevinkt, IP-adressen in de server logs worden waar "
-#~ "mogelijk omgezet naar echte hostnamen.<br><font "
-#~ "color='red'>Waarschuwing</font>: Dit kan een grote vertraging opleveren om "
-#~ "de log pagina te laden!"
-
-#~ msgid "Detected Language:<br />(Change if needed)"
-#~ msgstr "Gedetecteerde taal:<br />(verander indien nodig)"
-
-#, php-format
-#~ msgid ""
-#~ "No configured bridge interfaces. Please add new <a href='%s'>bridge "
-#~ "interface</a> first."
-#~ msgstr ""
-#~ "Er zijn geen bridge netwerken geconfigureerd. U dient eerst een nieuw <a "
-#~ "href='%s'>bridge netwerk</a> toe te voegen."
-
-#~ msgid "Invalid username or password.</br> Please try again."
-#~ msgstr "Gebruikersnaam of wachtwoord onjuist. Probeer het opnieuw."
-
-#, php-format
-#~ msgid ""
-#~ "The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
-#~ "and [._-]"
-#~ msgstr ""
-#~ "Het attribuut '%s' kan alleen bestaan uit de karakters [a-z], [A-Z], [0-9] "
-#~ "and [._-]"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-25 01:50+0000\n"
+"POT-Creation-Date: 2016-06-26 22:56+0000\n"
 "PO-Revision-Date: 2016-05-28 18:47+0000\n"
 "Last-Translator: Jieting Xu <xu.jieting@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-25 01:50+0000\n"
+"X-Launchpad-Export-Date: 2016-06-26 23:49+0000\n"
 "X-Generator: Launchpad (build 18111)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -259,6 +259,11 @@ msgid ""
 msgstr "密钥可能是5或13个字符（40或104位），这取决于本地网络适配器的性能。设置可使用普通的字符串或以'0x' 开头的十六进制数字。"
 
 msgid "A mounted RAID volume cannot be deleted."
+msgstr ""
+
+msgid ""
+"A mounted disk or partition will be unmounted temporarily to perform the "
+"requested action."
 msgstr ""
 
 msgid "A reload request has been sent to the daemon."
@@ -2843,12 +2848,11 @@ msgstr ""
 msgid "Error"
 msgstr "错误"
 
-msgid "Error Level"
+msgid "Error Code"
 msgstr ""
 
-#, php-format
-msgid "Error: The changes could not be applied (error code %s)."
-msgstr "错误：不能应用设置（错误代码 %s）。"
+msgid "Error Level"
+msgstr ""
 
 msgid "Event"
 msgstr "事件"
@@ -3138,6 +3142,9 @@ msgid "Format"
 msgstr "格式化"
 
 msgid "Format Options"
+msgstr ""
+
+msgid "Format Program"
 msgstr ""
 
 msgid "Format the report for phpBB forum."
@@ -3541,16 +3548,13 @@ msgstr ""
 "如果启用了默认的root ，当客户端进行身份验证后， chroot 操作将立即执行。这可以用来有效地从主机系统一部分的档案空间隔离客户端。"
 
 msgid ""
-"If the selected disk/partition is mounted it will be unmounted temporarily "
-"to perform selected command, otherwise the commands work in read-only "
-"mode.<br />Service disruption to users accessing this mount will occur "
-"during this process."
-msgstr "如果所选磁盘/分区已经挂载，它会被暂时卸载以执行指令，否则指令会在唯读模式下执行。<br />在此过程将中断使用此磁盘/分区的服务。"
-
-msgid ""
 "If the server is behind a proxy set these parameters to give local services "
 "access to the internet via proxy."
 msgstr "如果伺服器是在位于代理伺服器后，设置此可让本地服务通过代理伺服器连接到互联网。"
+
+msgid ""
+"If this message persist take a look at the system log for more information."
+msgstr ""
 
 msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
@@ -3988,12 +3992,6 @@ msgstr "最新版本：%s"
 msgid "Latvian"
 msgstr "拉脱维亚文"
 
-#, php-format
-msgid ""
-"Leave '%s' for unformated disks and format them using <a "
-"href='%s'>format</a> menu."
-msgstr "使用 <a href='%s'>格式化</a> 菜单来保留 '%s' 的未格式化空间和格式化磁盘。"
-
 msgid "Leave already configured auto snapshots."
 msgstr "保留已经配置的自动快照。"
 
@@ -4262,12 +4260,7 @@ msgstr "电脑后缀"
 msgid "Maintenance"
 msgstr ""
 
-#, php-format
-msgid ""
-"Make sure to select the correct number of devices:<div "
-"id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each "
-"vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
-"Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
+msgid "Make sure to select the optimal number of devices"
 msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
@@ -4726,10 +4719,7 @@ msgstr ""
 msgid "No configured pools."
 msgstr ""
 
-#, php-format
-msgid ""
-"No configured virtual devices. Please add new <a href=\"%s\">virtual "
-"device</a> first."
+msgid "No configured virtual devices."
 msgstr ""
 
 msgid "No device selected."
@@ -4738,9 +4728,8 @@ msgstr "没有选择设备。"
 msgid "No disk configured"
 msgstr "尚未配置硬盘"
 
-#, php-format
-msgid "No disks available. Please add new <a href='%s'>disk</a> first."
-msgstr "没有可用硬盘。请先添加新的 <a href='%s'>硬盘</a>。"
+msgid "No disks available."
+msgstr ""
 
 msgid ""
 "No disks configured, please add disks to see the diagnostic information of "
@@ -5231,6 +5220,12 @@ msgstr ""
 msgid "Please add a new Portal Group first."
 msgstr ""
 
+msgid "Please add a new disk first."
+msgstr ""
+
+msgid "Please add a virtual device first."
+msgstr ""
+
 #, php-format
 msgid "Please add new %s first."
 msgstr ""
@@ -5241,6 +5236,9 @@ msgstr ""
 #, php-format
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "请参见 <a href='%s' target='_blank'>文档</a>。"
+
+msgid "Please check the documentation."
+msgstr ""
 
 msgid "Please define the Database directory location."
 msgstr ""
@@ -5502,10 +5500,19 @@ msgstr ""
 msgid "RAID-Z1"
 msgstr ""
 
+msgid "RAID-Z1 should have 3, 5, or 9 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z2"
 msgstr ""
 
+msgid "RAID-Z2 should have 4, 6, or 10 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z3"
+msgstr ""
+
+msgid "RAID-Z3 should have 5, 7, or 11 disks in each vdev."
 msgstr ""
 
 msgid "RAID0"
@@ -6022,6 +6029,10 @@ msgstr "请从列表中选择要删除的项目"
 
 msgid "Select mount point where to create the swap file."
 msgstr "请选择欲创建 Swap 档的挂载点。"
+
+msgid ""
+"Select option 'Unformatted' for unformatted disks and format them with the"
+msgstr ""
 
 msgid "Select read balance algorithm."
 msgstr ""
@@ -6944,14 +6955,14 @@ msgstr ""
 "地址或括在括号中的IPv6 地址。 action "
 "可以是允许或拒绝访问的权限。请记住，进行扫描时会沿着配置文件内的规则顺序地匹配规则。当搜索过程找到一个匹配的规则就会套用规则，然后停止匹配。"
 
+msgid "The changes could not be applied"
+msgstr ""
+
 msgid "The changes have been applied successfully."
 msgstr "变更套用成功。"
 
-#, php-format
-msgid ""
-"The changes have been saved. You have to <a href='%s'>reboot</a> the system "
-"for the changes to take effect."
-msgstr "更改已存档。您必须 <a href='%s'>重新启动</a> 系统使才能更改生效。"
+msgid "The changes have been saved."
+msgstr ""
 
 msgid "The cleartext credentials with which to bind."
 msgstr "绑定用的不加密密码。"
@@ -6969,13 +6980,8 @@ msgstr "无法还原配置。 %s"
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr "无法还原配置。没有文件被上传！"
 
-#, php-format
-msgid ""
-"The configuration has been changed.<br />You must apply the changes in order "
-"for them to take effect.<br /><b>If this message persist take a look at the "
-"<a href='%s'>system log</a> for more information.</b>"
+msgid "The configuration has been changed."
 msgstr ""
-"配置已被更改。<br />您必须套用更改以使其生效。如果此信息持续的话，请查阅 <a href='%s'>系统记录</a> 以了解更多信息。</b>"
 
 msgid "The configuration has been restored. The server is now rebooting."
 msgstr "已还原配置。现在重新启动伺服器。"
@@ -7550,11 +7556,6 @@ msgstr ""
 msgid "This allows you to set how loud the drive is while it's operating."
 msgstr "这是硬盘的运作噪音控制选项。"
 
-msgid ""
-"This allows you to set the file system for preformatted hard disks "
-"containing data."
-msgstr "此选项让您可以设置已经格式化，包含数据的硬盘的档案系统。"
-
 msgid "This allows you to set the transfer mode for ATA/IDE disks."
 msgstr ""
 
@@ -7672,6 +7673,11 @@ msgid ""
 "Users and groups are specified, delimited by commas. Groups are designated "
 "by a @ prefix."
 msgstr "此选项允许指定的用户和群组访问分享区。指定用户和群组以逗号 \",\" 分隔 。指定群组则有 @ 前缀。"
+
+msgid ""
+"This option allows you to set the file system of already formatted disks "
+"containing data."
+msgstr ""
 
 msgid "This option applies to GEOM RAID-1 only."
 msgstr ""
@@ -8254,8 +8260,8 @@ msgstr ""
 msgid "Unload"
 msgstr "卸载"
 
-msgid "Unmount disk/partition"
-msgstr "卸载 硬盘/分区"
+msgid "Unmount Disk/Partition"
+msgstr ""
 
 msgid "Unmount this disk first before proceeding."
 msgstr ""
@@ -8406,6 +8412,11 @@ msgstr "用户"
 
 msgid "Users & Groups"
 msgstr "用户和群组"
+
+msgid ""
+"Users will notice a service disruption when trying to access this mount "
+"while the file system check is running."
+msgstr ""
 
 #, php-format
 msgid "Using %s bytes fragment size."
@@ -8726,6 +8737,9 @@ msgid ""
 "service to clients."
 msgstr "您必须激活  <a href='%s'>Zeroconf/Bonjour</a> 才可对客户端宣传服务。"
 
+msgid "You have to reboot the system for the changes to take effect."
+msgstr ""
+
 #, php-format
 msgid "You have to select at least one item for '%s'."
 msgstr "请至少选择一个项目给 '%s'。"
@@ -8759,6 +8773,9 @@ msgstr ""
 
 msgid "You must add disks first."
 msgstr "请先加入硬盘。"
+
+msgid "You must apply the changes in order for them to take effect."
+msgstr ""
 
 msgid "You must enter the same IP type for network and gateway."
 msgstr "您必须输入与网络和网关相同的 IP 类型。"
@@ -8976,115 +8993,3 @@ msgstr "卸载"
 
 msgid "version:"
 msgstr "版本："
-
-#~ msgid "<->"
-#~ msgstr "<->"
-
-#~ msgid ""
-#~ "1. Use these specials actions for debugging only!<br />2. There is no need "
-#~ "of using this menu for starting a RAID volume (start automaticaly)."
-#~ msgstr "1.这些特殊操作仅适用于调试（debugging）！<br />2.无需操作此选单来启动RAID卷（系统自动启动）。"
-
-#~ msgid ""
-#~ "Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-#~ "<a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & "
-#~ "deduplication</a> wiki article BEFORE using this feature.</b></br>"
-#~ msgstr ""
-#~ "控制重复数据删除模式。<br><b><font color='red'>注意/警告</font>：使用此功能前，请参阅 <a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks_zfs_datasets_dataset' target='_blank'>ZFS 数据集与重复数据删除</a> 维基文章。 "
-#~ "</b></br>"
-
-#~ msgid ""
-#~ "Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-#~ "<a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks-zfs-volumes-volume' target='_blank'>ZFS volumes & deduplication</a> "
-#~ "wiki article BEFORE using this feature.</b></br>"
-#~ msgstr ""
-#~ "控制重复数据删除模式。<br><b><font color='red'>注意/警告</font>：使用此功能前，请参阅 <a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks-zfs-volumes-volume' target='_blank'>ZFS 卷与重复数据删除</a> 维基文章。 </b></br>"
-
-#, php-format
-#~ msgid ""
-#~ "IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
-#~ "addresses to hostnames&quot;</a> is enabled."
-#~ msgstr "如果启用 <a href='%s'>&quot;IP 地址将转换成主机名&quot;</a> IP 地址将转换成主机名。"
-
-#, php-format
-#~ msgid "No configured Extent. Please add new <a href='%s'>Extent</a> first."
-#~ msgstr "尚未配置 Extent 。请先添加新的 <a href='%s'>Extent</a>。"
-
-#, php-format
-#~ msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
-#~ msgstr "尚未配置存储池。请先添加新的 <a href='%s'>存储池</a>。"
-
-#, php-format
-#~ msgid ""
-#~ "No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
-#~ "first."
-#~ msgstr "尚未配置门户组（Portal Group）。请先添加新的 <a href='%s'>门户组（Portal Group）</a>。"
-
-#, php-format
-#~ msgid ""
-#~ "No configured Initiator Group. Please add new <a href='%s'>Initiator "
-#~ "Group</a> first."
-#~ msgstr "尚未配置启动器（Initiator）群组。请先添加新的 <a href='%s'>启动器（Initiator）群组</a>。"
-
-#, php-format
-#~ msgid ""
-#~ "The disk is currently mounted! <a href='%s'>Unmount</a> this disk first "
-#~ "before proceeding."
-#~ msgstr "磁盘正在挂载中！继续前请先 <a href='%s'>卸载</a> 磁盘。"
-
-#, php-format
-#~ msgid ""
-#~ "The encrypted device is currently mounted! <a href='%s'>Unmount</a> this "
-#~ "disk first before proceeding."
-#~ msgstr "加密装置正在挂载中！继续前请先 <a href='%s'>卸载</a> 磁盘。"
-
-#, php-format
-#~ msgid ""
-#~ "The reloading request has been sent to the daemon. You can see the result by "
-#~ "<a href=\"%s\">Log</a>."
-#~ msgstr "重复荷载请求已发送到守护进程。您可以在  <a href=\"%s\">记录档</a> 看到结果。"
-
-#~ msgid ""
-#~ "To use Active Directory the CIFS/SMB service will enabled, too. The "
-#~ "following services will use AD authentication:<div "
-#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-#~ ">System</li></ul></div>"
-#~ msgstr ""
-#~ "使用 Active Directory 前会启用CIFS/ SMB 服务。以下服务将使用 AD 认证：<div "
-#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</ "
-#~ "li><li>系统</li></ul></div>"
-
-#~ msgid ""
-#~ "To configure the target, you must add at least Portal Group and Initiator "
-#~ "Group and Extent.<br />Portal Group which is identified by tag number "
-#~ "defines IP addresses and listening TCP ports.<br />Initiator Group which is "
-#~ "identified by tag number defines authorised initiator names and networks.<br "
-#~ "/>Auth Group which is identified by tag number and is optional if the target "
-#~ "does not use CHAP authentication defines authorised users and secrets for "
-#~ "additional security.<br />Extent defines the storage area of the target."
-#~ msgstr ""
-#~ "要设定目标（target）的话，您至少必须添加门户网站用户组（Portal Group）和启动器组（Initiator "
-#~ "Group）和Extent。<br />以标签数识别的的门户网站用户组定义IP 地址和侦听TCP端口。<br "
-#~ "/>以标签数识别的启动器组定义授权的启动器名称和网络。<br />如果不使用CHAP "
-#~ "身份验证的定义，以获得更高的安全性授权用户和秘密的话，那末以标签数识别的认证组（Auth Group）是可选择性的。<br />Extent "
-#~ "定义目标的存储区域。"
-
-#, php-format
-#~ msgid ""
-#~ "Hint: If this is checked, IP addresses in the server logs are resolved to "
-#~ "real hostnames where possible.<br><font color='red'>Warning</font>: This can "
-#~ "cause a huge delay in loading the log page!"
-#~ msgstr ""
-#~ "提示：如果勾选此选项，在伺服器日志中的IP 地址将尽可能解析为主机名。<br><font "
-#~ "color='red'>警告</font>：这可能会导致延迟加载日志页！"
-
-#~ msgid "Detected Language:<br />(Change if needed)"
-#~ msgstr "检测语言：<br />（如果需要请更改）"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-25 01:50+0000\n"
+"POT-Creation-Date: 2016-06-26 22:56+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-25 01:49+0000\n"
+"X-Launchpad-Export-Date: 2016-06-26 23:49+0000\n"
 "X-Generator: Launchpad (build 18111)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -264,6 +264,11 @@ msgstr ""
 "뒤따라오는 16진 숫자의 문자열로 분류합니다."
 
 msgid "A mounted RAID volume cannot be deleted."
+msgstr ""
+
+msgid ""
+"A mounted disk or partition will be unmounted temporarily to perform the "
+"requested action."
 msgstr ""
 
 msgid "A reload request has been sent to the daemon."
@@ -2851,12 +2856,11 @@ msgstr ""
 msgid "Error"
 msgstr "에러"
 
-msgid "Error Level"
+msgid "Error Code"
 msgstr ""
 
-#, php-format
-msgid "Error: The changes could not be applied (error code %s)."
-msgstr "에러: 변경 내용이 적용될 수 없습니다(에러 코드 %s)."
+msgid "Error Level"
+msgstr ""
 
 msgid "Event"
 msgstr "이벤트"
@@ -3150,6 +3154,9 @@ msgid "Format"
 msgstr "포맷"
 
 msgid "Format Options"
+msgstr ""
+
+msgid "Format Program"
 msgstr ""
 
 msgid "Format the report for phpBB forum."
@@ -3556,17 +3563,12 @@ msgstr ""
 "효율적으로 격리하기 위해 이용될 수 있습니다."
 
 msgid ""
-"If the selected disk/partition is mounted it will be unmounted temporarily "
-"to perform selected command, otherwise the commands work in read-only "
-"mode.<br />Service disruption to users accessing this mount will occur "
-"during this process."
-msgstr ""
-"선택된 디스크/파티션이 마운트 되었다면 선택된 명령을 실행하기 위해 일시적으로 마운트 해제될 것이며 그렇지 않다면 명령이 일기 전용 "
-"모드에서 작동할 것입니다.<br />이 과정에 이 마운트를 접근하는 사용자에 대한 서비스가 중단될 것입니다."
-
-msgid ""
 "If the server is behind a proxy set these parameters to give local services "
 "access to the internet via proxy."
+msgstr ""
+
+msgid ""
+"If this message persist take a look at the system log for more information."
 msgstr ""
 
 msgid ""
@@ -4004,12 +4006,6 @@ msgstr ""
 msgid "Latvian"
 msgstr "라트비아어"
 
-#, php-format
-msgid ""
-"Leave '%s' for unformated disks and format them using <a "
-"href='%s'>format</a> menu."
-msgstr "포맷 되지 않은 디스크에서는 '%s' 상태로 두고 <a href='%s'>포맷</a> 메뉴를 이용해서 포맷 하십시오."
-
 msgid "Leave already configured auto snapshots."
 msgstr ""
 
@@ -4280,12 +4276,7 @@ msgstr "머신 접미사"
 msgid "Maintenance"
 msgstr ""
 
-#, php-format
-msgid ""
-"Make sure to select the correct number of devices:<div "
-"id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each "
-"vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
-"Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
+msgid "Make sure to select the optimal number of devices"
 msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
@@ -4746,10 +4737,7 @@ msgstr ""
 msgid "No configured pools."
 msgstr ""
 
-#, php-format
-msgid ""
-"No configured virtual devices. Please add new <a href=\"%s\">virtual "
-"device</a> first."
+msgid "No configured virtual devices."
 msgstr ""
 
 msgid "No device selected."
@@ -4758,9 +4746,8 @@ msgstr "장치가 선택되지 않았습니다."
 msgid "No disk configured"
 msgstr "디스크가 구성되지 않았습니다"
 
-#, php-format
-msgid "No disks available. Please add new <a href='%s'>disk</a> first."
-msgstr "이용할 수 있는 디스크가 없습니다. 먼저 <a href='%s'>디스크</a>를 새로 추가하십시오."
+msgid "No disks available."
+msgstr ""
 
 msgid ""
 "No disks configured, please add disks to see the diagnostic information of "
@@ -5253,6 +5240,12 @@ msgstr ""
 msgid "Please add a new Portal Group first."
 msgstr ""
 
+msgid "Please add a new disk first."
+msgstr ""
+
+msgid "Please add a virtual device first."
+msgstr ""
+
 #, php-format
 msgid "Please add new %s first."
 msgstr ""
@@ -5263,6 +5256,9 @@ msgstr ""
 #, php-format
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "<a href='%s' target='_blank'>문서</a>를 체크 하기 바랍니다."
+
+msgid "Please check the documentation."
+msgstr ""
 
 msgid "Please define the Database directory location."
 msgstr ""
@@ -5524,10 +5520,19 @@ msgstr ""
 msgid "RAID-Z1"
 msgstr ""
 
+msgid "RAID-Z1 should have 3, 5, or 9 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z2"
 msgstr ""
 
+msgid "RAID-Z2 should have 4, 6, or 10 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z3"
+msgstr ""
+
+msgid "RAID-Z3 should have 5, 7, or 11 disks in each vdev."
 msgstr ""
 
 msgid "RAID0"
@@ -6043,6 +6048,10 @@ msgstr "리스트에서 지울 항목을 선택하십시오"
 
 msgid "Select mount point where to create the swap file."
 msgstr "스왑 파일을 생성할 마운트 지점을 선택하십시오."
+
+msgid ""
+"Select option 'Unformatted' for unformatted disks and format them with the"
+msgstr ""
 
 msgid "Select read balance algorithm."
 msgstr ""
@@ -6965,14 +6974,14 @@ msgstr ""
 "이용할 수 있습니다. 설정은 첫 번째 일치하는 규칙이 의미를 가지므로 일치하는 규칙을 찾아서 설정 파일이 오름차순으로 스캔 된다는 것을 "
 "기억하기 바랍니다. 일치하는 것이 발견되면 그 규칙이 적용되고 검색 과정은 정지할 것입니다."
 
+msgid "The changes could not be applied"
+msgstr ""
+
 msgid "The changes have been applied successfully."
 msgstr "변경 내용들이 성공적으로 적용되었습니다."
 
-#, php-format
-msgid ""
-"The changes have been saved. You have to <a href='%s'>reboot</a> the system "
-"for the changes to take effect."
-msgstr "변경 내용이 저장되었습니다. 변경 내용을 적용하려면 시스템을 <a href='%s'>리붓</a> 해야 합니다."
+msgid "The changes have been saved."
+msgstr ""
 
 msgid "The cleartext credentials with which to bind."
 msgstr "bind 할 때 이용할 평문의 자격 증명서."
@@ -6990,11 +6999,7 @@ msgstr "설정이 복원되지 못했습니다. %s"
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr ""
 
-#, php-format
-msgid ""
-"The configuration has been changed.<br />You must apply the changes in order "
-"for them to take effect.<br /><b>If this message persist take a look at the "
-"<a href='%s'>system log</a> for more information.</b>"
+msgid "The configuration has been changed."
 msgstr ""
 
 msgid "The configuration has been restored. The server is now rebooting."
@@ -7573,11 +7578,6 @@ msgstr ""
 msgid "This allows you to set how loud the drive is while it's operating."
 msgstr "이것은 드라이브가 동작하는 동안 소음 레벨이 어느 정도일 지를 설정할 수 있게 합니다."
 
-msgid ""
-"This allows you to set the file system for preformatted hard disks "
-"containing data."
-msgstr "이것은 데이터를 포함하고 있는 이미 포맷 된 하드 디스크에 파일 시스템을 설정할 수 있게 해줍니다."
-
 msgid "This allows you to set the transfer mode for ATA/IDE disks."
 msgstr ""
 
@@ -7700,6 +7700,11 @@ msgid ""
 msgstr ""
 "이 옵션은 공유를 접근할 사용자와 그룹을 명세 하도록 해줍니다. 사용자와 그룹은 콤마로 분리해서 명세 됩니다. 그룹은 @ 접미사를 붙여서 "
 "표기됩니다."
+
+msgid ""
+"This option allows you to set the file system of already formatted disks "
+"containing data."
+msgstr ""
 
 msgid "This option applies to GEOM RAID-1 only."
 msgstr ""
@@ -8297,8 +8302,8 @@ msgstr ""
 msgid "Unload"
 msgstr "Unload"
 
-msgid "Unmount disk/partition"
-msgstr "디스크/파티션 마운트 해제"
+msgid "Unmount Disk/Partition"
+msgstr ""
 
 msgid "Unmount this disk first before proceeding."
 msgstr ""
@@ -8451,6 +8456,11 @@ msgid "Users"
 msgstr "사용자"
 
 msgid "Users & Groups"
+msgstr ""
+
+msgid ""
+"Users will notice a service disruption when trying to access this mount "
+"while the file system check is running."
 msgstr ""
 
 #, php-format
@@ -8772,6 +8782,9 @@ msgid ""
 "service to clients."
 msgstr "이 서비스를 클라이언트에게 공지하려면 <a href='%s'>Zeroconf/Bonjour</a>를 활성화해야 합니다."
 
+msgid "You have to reboot the system for the changes to take effect."
+msgstr ""
+
 #, php-format
 msgid "You have to select at least one item for '%s'."
 msgstr "'%s'에 대해 최소 한 개의 항목을 선택해야 합니다."
@@ -8805,6 +8818,9 @@ msgstr ""
 
 msgid "You must add disks first."
 msgstr "먼저 디스크를 추가해야 합니다."
+
+msgid "You must apply the changes in order for them to take effect."
+msgstr ""
 
 msgid "You must enter the same IP type for network and gateway."
 msgstr "네트워크와 게이트웨이에 동일한 IP 타입을 입력해야 합니다."
@@ -9022,79 +9038,3 @@ msgstr "마운트 해제"
 
 msgid "version:"
 msgstr ""
-
-#~ msgid ""
-#~ "1. Use these specials actions for debugging only!<br />2. There is no need "
-#~ "of using this menu for starting a RAID volume (start automaticaly)."
-#~ msgstr ""
-#~ "1. 이 특수 기능은 디버깅 목적으로만 이용하십시오!<br />2. RAID 볼륨을 사용하기 위해 이 메뉴를 사용할 필요는 "
-#~ "없습니다(자동으로 시작됩니다)."
-
-#~ msgid "<->"
-#~ msgstr "<->"
-
-#, php-format
-#~ msgid ""
-#~ "IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
-#~ "addresses to hostnames&quot;</a> is enabled."
-#~ msgstr ""
-#~ "<a href='%s'>&quot;IP 주소를 호스트 명으로 resolve&quot;</a> 항목이 활성화되면 IP 이름이 호스트 명으로 "
-#~ "resolve 됩니다."
-
-#, php-format
-#~ msgid "No configured Extent. Please add new <a href='%s'>Extent</a> first."
-#~ msgstr "구성된 범위가 없습니다. 먼저 새 <a href='%s'>범위</a>를 추가하십시오."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Initiator Group. Please add new <a href='%s'>Initiator "
-#~ "Group</a> first."
-#~ msgstr "구성된 개시자 그룹이 없습니다. 먼저 새 <a href='%s'>개시자 그룹</a>을 추가하십시오."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
-#~ "first."
-#~ msgstr "포털 그룹이 구성되지 않았음. 먼저 <a href='%s'>포털 그룹</a>을 새로 추가하십시오."
-
-#, php-format
-#~ msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
-#~ msgstr "풀이 구성되지 않았음. 먼저 <a href='%s'>풀</a>을 새로 추가하십시오."
-
-#, php-format
-#~ msgid ""
-#~ "The disk is currently mounted! <a href='%s'>Unmount</a> this disk first "
-#~ "before proceeding."
-#~ msgstr ""
-#~ "디스크가 현재 마운트 되어 있습니다! 계속 진행하기 전에 먼저 이 디스크를 <a href='%s'>마운트 해제</a>하십시오."
-
-#, php-format
-#~ msgid ""
-#~ "The encrypted device is currently mounted! <a href='%s'>Unmount</a> this "
-#~ "disk first before proceeding."
-#~ msgstr ""
-#~ "암호화된 장치가 현재 마운트 되어 있습니다! 계속 진행하기 전에 먼저 이 디스크를 <a href='%s'>마운트 해제</a>하십시오."
-
-#~ msgid ""
-#~ "To configure the target, you must add at least Portal Group and Initiator "
-#~ "Group and Extent.<br />Portal Group which is identified by tag number "
-#~ "defines IP addresses and listening TCP ports.<br />Initiator Group which is "
-#~ "identified by tag number defines authorised initiator names and networks.<br "
-#~ "/>Auth Group which is identified by tag number and is optional if the target "
-#~ "does not use CHAP authentication defines authorised users and secrets for "
-#~ "additional security.<br />Extent defines the storage area of the target."
-#~ msgstr ""
-#~ "타젯을 설정하기 위해서는 최소한 포털 그룹과 개시자 그룹과 범위를 추가해야 합니다.<br />태그 번호에 의해 식별 되는 포털 그룹은 "
-#~ "IP 주소와 listen 하는 TCP 포트를 정의합니다.<br />태그 번호에 의해 식별 되는 개시자 그룹은 권한을 부여 받은 개시자 "
-#~ "명과 네트워크를 정의합니다.<br />태그 번호에 의해 식별 되고 타젯이 CHAP 인증을 이용하지 않으면 선택 옵션인 인증 그룹은 "
-#~ "추가적인 보안을 위해 권한을 부여 받은 사용자와 비밀을 정의합니다.<br />범위는 타젯의 저장 영역을 정의합니다."
-
-#~ msgid ""
-#~ "To use Active Directory the CIFS/SMB service will enabled, too. The "
-#~ "following services will use AD authentication:<div "
-#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-#~ ">System</li></ul></div>"
-#~ msgstr ""
-#~ "액티브 디렉터리를 이용하기 위해 CIFS/SMB 서비스도 활성화될 것입니다. 아래의 서비스들은 AD 인증을 이용할 것입니다:<div "
-#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-#~ ">시스템</li></ul></div>"

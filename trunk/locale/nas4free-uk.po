@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-25 01:50+0000\n"
+"POT-Creation-Date: 2016-06-26 22:56+0000\n"
 "PO-Revision-Date: 2016-06-21 16:32+0000\n"
 "Last-Translator: AndriyM <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-25 01:50+0000\n"
+"X-Launchpad-Export-Date: 2016-06-26 23:49+0000\n"
 "X-Generator: Launchpad (build 18111)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -283,6 +283,11 @@ msgstr ""
 "або у вигляді рядка шістнадцяткових цифр, перед якими стоїть \"0x\"."
 
 msgid "A mounted RAID volume cannot be deleted."
+msgstr ""
+
+msgid ""
+"A mounted disk or partition will be unmounted temporarily to perform the "
+"requested action."
 msgstr ""
 
 msgid "A reload request has been sent to the daemon."
@@ -2982,12 +2987,11 @@ msgstr ""
 msgid "Error"
 msgstr "Помилка"
 
-msgid "Error Level"
+msgid "Error Code"
 msgstr ""
 
-#, php-format
-msgid "Error: The changes could not be applied (error code %s)."
-msgstr "Помилка: Неможливо застосувати зміни (код помилки: %s)."
+msgid "Error Level"
+msgstr ""
 
 msgid "Event"
 msgstr "Подія"
@@ -3289,6 +3293,9 @@ msgid "Format"
 msgstr "Формат"
 
 msgid "Format Options"
+msgstr ""
+
+msgid "Format Program"
 msgstr ""
 
 msgid "Format the report for phpBB forum."
@@ -3696,22 +3703,15 @@ msgid ""
 msgstr ""
 
 msgid ""
-"If the selected disk/partition is mounted it will be unmounted temporarily "
-"to perform selected command, otherwise the commands work in read-only "
-"mode.<br />Service disruption to users accessing this mount will occur "
-"during this process."
-msgstr ""
-"Якщо вибраний диск/розділ примонтовано, він буде тимчасово відмонтований для "
-"виконання вибраної команди, інакше команди працюють в режимі тільки-для-"
-"читання.<br />Протягом цього можливе відключення користувачів, що мають "
-"доступ до цього ресурсу."
-
-msgid ""
 "If the server is behind a proxy set these parameters to give local services "
 "access to the internet via proxy."
 msgstr ""
 "Якщо сервер знаходиться за проксі, увімкніть цей параметр, щоб дати "
 "локальним сервісам доступ до інтернету через проксі."
+
+msgid ""
+"If this message persist take a look at the system log for more information."
+msgstr ""
 
 msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
@@ -4163,12 +4163,6 @@ msgstr "Остання збірка: %s"
 msgid "Latvian"
 msgstr "Латвійска"
 
-#, php-format
-msgid ""
-"Leave '%s' for unformated disks and format them using <a "
-"href='%s'>format</a> menu."
-msgstr ""
-
 msgid "Leave already configured auto snapshots."
 msgstr "Залишити вже сконфігуровані знімки."
 
@@ -4440,12 +4434,7 @@ msgstr "Суфікс комп'ютера"
 msgid "Maintenance"
 msgstr "Обслуговування"
 
-#, php-format
-msgid ""
-"Make sure to select the correct number of devices:<div "
-"id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each "
-"vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
-"Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
+msgid "Make sure to select the optimal number of devices"
 msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
@@ -4916,10 +4905,7 @@ msgstr ""
 msgid "No configured pools."
 msgstr ""
 
-#, php-format
-msgid ""
-"No configured virtual devices. Please add new <a href=\"%s\">virtual "
-"device</a> first."
+msgid "No configured virtual devices."
 msgstr ""
 
 msgid "No device selected."
@@ -4928,11 +4914,8 @@ msgstr "Не вибрано пристрій."
 msgid "No disk configured"
 msgstr "Диск не зконфігурований"
 
-#, php-format
-msgid "No disks available. Please add new <a href='%s'>disk</a> first."
+msgid "No disks available."
 msgstr ""
-"Нема доступних дисків. Будь ласка спочатку додайте новий <a "
-"href='%s'>диск</a>."
 
 msgid ""
 "No disks configured, please add disks to see the diagnostic information of "
@@ -5435,6 +5418,12 @@ msgstr ""
 msgid "Please add a new Portal Group first."
 msgstr ""
 
+msgid "Please add a new disk first."
+msgstr ""
+
+msgid "Please add a virtual device first."
+msgstr ""
+
 #, php-format
 msgid "Please add new %s first."
 msgstr ""
@@ -5446,6 +5435,9 @@ msgstr ""
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr ""
 "Будь ласка зверніться до <a href='%s' target='_blank'>документації</a>."
+
+msgid "Please check the documentation."
+msgstr ""
 
 msgid "Please define the Database directory location."
 msgstr "Будь ласка влажіть директорію де знаходиться база даних."
@@ -5707,11 +5699,20 @@ msgstr "Обслуговування RAID-5"
 msgid "RAID-Z1"
 msgstr "RAID-Z1"
 
+msgid "RAID-Z1 should have 3, 5, or 9 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z2"
 msgstr "RAID-Z2"
 
+msgid "RAID-Z2 should have 4, 6, or 10 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z3"
 msgstr "RAID-Z3"
+
+msgid "RAID-Z3 should have 5, 7, or 11 disks in each vdev."
+msgstr ""
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -6238,6 +6239,10 @@ msgstr "Виберіть елемент для видалення із спис�
 
 msgid "Select mount point where to create the swap file."
 msgstr "Виберіть точку монтування для створення файла підкачки."
+
+msgid ""
+"Select option 'Unformatted' for unformatted disks and format them with the"
+msgstr ""
 
 msgid "Select read balance algorithm."
 msgstr "Виберіть алгоритм балансування читання."
@@ -7154,13 +7159,13 @@ msgid ""
 "search process will halt."
 msgstr ""
 
+msgid "The changes could not be applied"
+msgstr ""
+
 msgid "The changes have been applied successfully."
 msgstr "Зміни було успішно застосовано."
 
-#, php-format
-msgid ""
-"The changes have been saved. You have to <a href='%s'>reboot</a> the system "
-"for the changes to take effect."
+msgid "The changes have been saved."
 msgstr ""
 
 msgid "The cleartext credentials with which to bind."
@@ -7179,15 +7184,8 @@ msgstr "Конфігурація не може бути відновлена. %s
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr "Конфігурація не може бути відновлена. Файл не завантажено!"
 
-#, php-format
-msgid ""
-"The configuration has been changed.<br />You must apply the changes in order "
-"for them to take effect.<br /><b>If this message persist take a look at the "
-"<a href='%s'>system log</a> for more information.</b>"
+msgid "The configuration has been changed."
 msgstr ""
-"Конфігурацію було змінено.<br />Ви повинні застосувати зміни щоб вони "
-"вступили в дію.<br /><b>Якщо це повідомлення продовжує з'являтися, перевірте "
-"<a href='%s'>журнал системи</a> для детальної інформації.</b>"
 
 msgid "The configuration has been restored. The server is now rebooting."
 msgstr "Конфігурацію відновлено. Сервер перезавантажується."
@@ -7765,11 +7763,6 @@ msgid "This allows you to set how loud the drive is while it's operating."
 msgstr ""
 "Це дозволяє встановити наскільки гучним буде диск під час своєї роботи."
 
-msgid ""
-"This allows you to set the file system for preformatted hard disks "
-"containing data."
-msgstr ""
-
 msgid "This allows you to set the transfer mode for ATA/IDE disks."
 msgstr ""
 
@@ -7889,6 +7882,11 @@ msgid ""
 "This option allows the users and groups that access a share to be specified. "
 "Users and groups are specified, delimited by commas. Groups are designated "
 "by a @ prefix."
+msgstr ""
+
+msgid ""
+"This option allows you to set the file system of already formatted disks "
+"containing data."
 msgstr ""
 
 msgid "This option applies to GEOM RAID-1 only."
@@ -8468,8 +8466,8 @@ msgstr ""
 msgid "Unload"
 msgstr "Вивантажити"
 
-msgid "Unmount disk/partition"
-msgstr "Розмонтувати диск/розділ"
+msgid "Unmount Disk/Partition"
+msgstr ""
 
 msgid "Unmount this disk first before proceeding."
 msgstr ""
@@ -8617,6 +8615,11 @@ msgid "Users"
 msgstr "Користувачі"
 
 msgid "Users & Groups"
+msgstr ""
+
+msgid ""
+"Users will notice a service disruption when trying to access this mount "
+"while the file system check is running."
 msgstr ""
 
 #, php-format
@@ -8939,6 +8942,9 @@ msgid ""
 "service to clients."
 msgstr ""
 
+msgid "You have to reboot the system for the changes to take effect."
+msgstr ""
+
 #, php-format
 msgid "You have to select at least one item for '%s'."
 msgstr ""
@@ -8972,6 +8978,9 @@ msgstr ""
 
 msgid "You must add disks first."
 msgstr "Спочатку треба додати диски."
+
+msgid "You must apply the changes in order for them to take effect."
+msgstr ""
 
 msgid "You must enter the same IP type for network and gateway."
 msgstr "Треба ввести однаковий тип ІР для мережі і для шлюза."
@@ -9191,99 +9200,3 @@ msgstr "umount"
 
 msgid "version:"
 msgstr "версія:"
-
-#~ msgid ""
-#~ "1. Use these specials actions for debugging only!<br />2. There is no need "
-#~ "of using this menu for starting a RAID volume (start automaticaly)."
-#~ msgstr ""
-#~ "1. Використовуйте ці спеціальні дії лише для налагодження!<br />2. Немає "
-#~ "потреби використовувати це меню для запуску пристрою RAID (стартує "
-#~ "автоматично)."
-
-#~ msgid "<->"
-#~ msgstr "<->"
-
-#~ msgid ""
-#~ "Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-#~ "<a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & "
-#~ "deduplication</a> wiki article BEFORE using this feature.</b></br>"
-#~ msgstr ""
-#~ "Керує методом дедуплікації. <br><b><font color='red'>УВАГА</font>: Дивіться "
-#~ "вікі статтю <a "
-#~ "http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide:disks"
-#~ "_zfs_datasets_dataset' target='_blank'>Датасети ZFS та дедуплікація</a> "
-#~ "ПЕРЕД тим, як використовувати цю функцію.</b></br>"
-
-#~ msgid ""
-#~ "Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-#~ "<a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks-zfs-volumes-volume' target='_blank'>ZFS volumes & deduplication</a> "
-#~ "wiki article BEFORE using this feature.</b></br>"
-#~ msgstr ""
-#~ "Керує методом дедуплікації. <br><b><font color='red'>УВАГА</font>: Дивіться "
-#~ "вікі статтю <a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks-zfs-volumes-volume' target='_blank'>Томи ZFS та дедуплікація</a> "
-#~ "ПЕРЕД тим, як використовувати цю функцію.</b></br>"
-
-#~ msgid "Detected Language:<br />(Change if needed)"
-#~ msgstr "Визначена мова:<br />(Змініть, якщо необхідно)"
-
-#, php-format
-#~ msgid ""
-#~ "The disk is currently mounted! <a href='%s'>Unmount</a> this disk first "
-#~ "before proceeding."
-#~ msgstr ""
-#~ "Диск примонтовано! <a href='%s'>Розмонтуйте</a> цей диск перед тим як "
-#~ "продовжити."
-
-#, php-format
-#~ msgid ""
-#~ "The encrypted device is currently mounted! <a href='%s'>Unmount</a> this "
-#~ "disk first before proceeding."
-#~ msgstr ""
-#~ "Зашифрований пристрій зараз примонтовано! <a href='%s'>Розмонтуйте</a> цей "
-#~ "диск перед тим як продовжити."
-
-#, php-format
-#~ msgid ""
-#~ "The reloading request has been sent to the daemon. You can see the result by "
-#~ "<a href=\"%s\">Log</a>."
-#~ msgstr ""
-#~ "Запит на рестарт надіслано демону. Ви можете подивитися результат в <a "
-#~ "href=\"%s\">журналі</a>."
-
-#, php-format
-#~ msgid ""
-#~ "IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
-#~ "addresses to hostnames&quot;</a> is enabled."
-#~ msgstr ""
-#~ "ІР адреси перетворюються в імена хостів якщо увімкнено <a "
-#~ "href='%s'>&quot;Перетворювати ІР в імена хостів&quot;</a>."
-
-#, php-format
-#~ msgid ""
-#~ "No configured bridge interfaces. Please add new <a href='%s'>bridge "
-#~ "interface</a> first."
-#~ msgstr ""
-#~ "Немає налаштованих bridge-інтерфейсів. Будь ласка спочатку додайте новий <a "
-#~ "href='%s'>bridge-інтерфейс</a>."
-
-#, php-format
-#~ msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
-#~ msgstr ""
-#~ "Немає налаштованих пулів. Будь ласка спочатку додайте нові <a "
-#~ "href='%s'>пули</a>."
-
-#~ msgid "Invalid username or password.</br> Please try again."
-#~ msgstr "Невірне ім'я користувача або пароль.</br>Спробуйте ще раз."
-
-#, php-format
-#~ msgid ""
-#~ "The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
-#~ "and [._-]"
-#~ msgstr ""
-#~ "Атрибут '%s' повинен містити лише символи [A-Z], [A-Z], [0-9] і [._-]"

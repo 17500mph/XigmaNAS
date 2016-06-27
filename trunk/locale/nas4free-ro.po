@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-25 01:50+0000\n"
+"POT-Creation-Date: 2016-06-26 22:56+0000\n"
 "PO-Revision-Date: 2016-03-23 12:38+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-25 01:49+0000\n"
+"X-Launchpad-Export-Date: 2016-06-26 23:49+0000\n"
 "X-Generator: Launchpad (build 18111)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -311,6 +311,11 @@ msgstr ""
 "șirul '0x'."
 
 msgid "A mounted RAID volume cannot be deleted."
+msgstr ""
+
+msgid ""
+"A mounted disk or partition will be unmounted temporarily to perform the "
+"requested action."
 msgstr ""
 
 msgid "A reload request has been sent to the daemon."
@@ -3098,12 +3103,11 @@ msgstr ""
 msgid "Error"
 msgstr "Eroare"
 
+msgid "Error Code"
+msgstr ""
+
 msgid "Error Level"
 msgstr "Nivel eroare"
-
-#, php-format
-msgid "Error: The changes could not be applied (error code %s)."
-msgstr "Eroare: Modificările nu pot fi aplicate (cod de eroare %s)."
 
 msgid "Event"
 msgstr "Eveniment"
@@ -3410,6 +3414,9 @@ msgid "Format"
 msgstr "Formatare"
 
 msgid "Format Options"
+msgstr ""
+
+msgid "Format Program"
 msgstr ""
 
 msgid "Format the report for phpBB forum."
@@ -3843,22 +3850,15 @@ msgstr ""
 "gazdei."
 
 msgid ""
-"If the selected disk/partition is mounted it will be unmounted temporarily "
-"to perform selected command, otherwise the commands work in read-only "
-"mode.<br />Service disruption to users accessing this mount will occur "
-"during this process."
-msgstr ""
-"Dacă discul/partiția este deja montată sistemul le va demonta temporar "
-"pentru a efectua operațiunea selectată, altfel comanda va fi executată doar "
-"în modul citire. În timpul executării comenzii pot apare întreruperi "
-"temporare ale serviciilor active."
-
-msgid ""
 "If the server is behind a proxy set these parameters to give local services "
 "access to the internet via proxy."
 msgstr ""
 "Dacă serverul se află în spatele unui proxy setați acești parametri pentru "
 "ca acesta să poată accesa internetul via proxy."
+
+msgid ""
+"If this message persist take a look at the system log for more information."
+msgstr ""
 
 msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
@@ -4348,14 +4348,6 @@ msgstr "Ultima versiune disponibilă online: %s"
 msgid "Latvian"
 msgstr "Letonă"
 
-#, php-format
-msgid ""
-"Leave '%s' for unformated disks and format them using <a "
-"href='%s'>format</a> menu."
-msgstr ""
-"Păstrați '%s' pentru discuri neformatate și formatați-le utilizînd meniul <a "
-"href='%s'>format</a>."
-
 msgid "Leave already configured auto snapshots."
 msgstr "Păstrare imagini sistem automate deja configurate."
 
@@ -4640,12 +4632,7 @@ msgstr "Sufix Sistem"
 msgid "Maintenance"
 msgstr ""
 
-#, php-format
-msgid ""
-"Make sure to select the correct number of devices:<div "
-"id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each "
-"vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
-"Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
+msgid "Make sure to select the optimal number of devices"
 msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
@@ -5128,10 +5115,7 @@ msgstr ""
 msgid "No configured pools."
 msgstr ""
 
-#, php-format
-msgid ""
-"No configured virtual devices. Please add new <a href=\"%s\">virtual "
-"device</a> first."
+msgid "No configured virtual devices."
 msgstr ""
 
 msgid "No device selected."
@@ -5140,9 +5124,8 @@ msgstr "Niciun dispozitiv selectat."
 msgid "No disk configured"
 msgstr "Niciun disc configurat"
 
-#, php-format
-msgid "No disks available. Please add new <a href='%s'>disk</a> first."
-msgstr "Niciun disc disponibil. Adăugați mai întîi un <a href='%s'>disc</a>"
+msgid "No disks available."
+msgstr ""
 
 msgid ""
 "No disks configured, please add disks to see the diagnostic information of "
@@ -5660,6 +5643,12 @@ msgstr ""
 msgid "Please add a new Portal Group first."
 msgstr ""
 
+msgid "Please add a new disk first."
+msgstr ""
+
+msgid "Please add a virtual device first."
+msgstr ""
+
 #, php-format
 msgid "Please add new %s first."
 msgstr ""
@@ -5670,6 +5659,9 @@ msgstr ""
 #, php-format
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "Consultați <a href='%s' target='_blank'>documentația</a>."
+
+msgid "Please check the documentation."
+msgstr ""
 
 msgid "Please define the Database directory location."
 msgstr "Introduceți directorul pentru baza de date."
@@ -5940,10 +5932,19 @@ msgstr ""
 msgid "RAID-Z1"
 msgstr ""
 
+msgid "RAID-Z1 should have 3, 5, or 9 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z2"
 msgstr ""
 
+msgid "RAID-Z2 should have 4, 6, or 10 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z3"
+msgstr ""
+
+msgid "RAID-Z3 should have 5, 7, or 11 disks in each vdev."
 msgstr ""
 
 msgid "RAID0"
@@ -6479,6 +6480,10 @@ msgstr "Selectați un element din listă pentru eliminare"
 
 msgid "Select mount point where to create the swap file."
 msgstr "Selectați un punct de montare unde va fi creat fișierul 'swap'."
+
+msgid ""
+"Select option 'Unformatted' for unformatted disks and format them with the"
+msgstr ""
 
 msgid "Select read balance algorithm."
 msgstr ""
@@ -7464,16 +7469,14 @@ msgstr ""
 "(permite) sau 'deny' (refuză). Aveți în vedere faptul că sistemul va aplica "
 "prima regulă găsită în listă, cu ignorarea tuturor intrărilor ulterioare."
 
+msgid "The changes could not be applied"
+msgstr ""
+
 msgid "The changes have been applied successfully."
 msgstr "Modificările au fost aplicate cu succes."
 
-#, php-format
-msgid ""
-"The changes have been saved. You have to <a href='%s'>reboot</a> the system "
-"for the changes to take effect."
+msgid "The changes have been saved."
 msgstr ""
-"Modificările au fost salvate. Trebuie să <a href='%s'>reporniți</a> sistemul "
-"pentru ca modificările să devină active."
 
 msgid "The cleartext credentials with which to bind."
 msgstr "Creditele afișate în clar folosite la legare (bind)."
@@ -7492,15 +7495,8 @@ msgid "The configuration could not be restored. No file was uploaded!"
 msgstr ""
 "Configurația nu a putut fi restaurată. Niciun fișier nu a fost încărcat!"
 
-#, php-format
-msgid ""
-"The configuration has been changed.<br />You must apply the changes in order "
-"for them to take effect.<br /><b>If this message persist take a look at the "
-"<a href='%s'>system log</a> for more information.</b>"
+msgid "The configuration has been changed."
 msgstr ""
-"Configurația a fost modificată.<br />Va trebui să aplicați aceste modificări "
-"pentru ca ele să devină active.<br /><b>Dacă acest mesaj persistă consultați "
-"<a href='%s'>system log</a> pentru mai multe informații.</b>"
 
 msgid "The configuration has been restored. The server is now rebooting."
 msgstr "Configurația a fost restaurată și serverul va reporni automat."
@@ -8181,13 +8177,6 @@ msgid "This allows you to set how loud the drive is while it's operating."
 msgstr ""
 "Vă permite să stabiliți cît de zgomotos va fi discul în timpul funcționării."
 
-msgid ""
-"This allows you to set the file system for preformatted hard disks "
-"containing data."
-msgstr ""
-"Vă permite să stabiliți sistemul de fișiere pentru discurile preformatate "
-"care conțin deja date."
-
 msgid "This allows you to set the transfer mode for ATA/IDE disks."
 msgstr "Puteți defini aici modul de transfer pentru discurile ATA/IDE."
 
@@ -8340,6 +8329,11 @@ msgstr ""
 "Această opțiune permite specificarea utilizatorilor și grupurilor care pot "
 "accesa o partajare. Utilizatorii și grupurile pot fi delimitați prin "
 "virgulă. Grupurile sînt desemnate prin prefixul @."
+
+msgid ""
+"This option allows you to set the file system of already formatted disks "
+"containing data."
+msgstr ""
 
 msgid "This option applies to GEOM RAID-1 only."
 msgstr ""
@@ -9013,8 +9007,8 @@ msgstr ""
 msgid "Unload"
 msgstr "Descărcare"
 
-msgid "Unmount disk/partition"
-msgstr "Demontare disc/partiție"
+msgid "Unmount Disk/Partition"
+msgstr ""
 
 msgid "Unmount this disk first before proceeding."
 msgstr ""
@@ -9189,6 +9183,11 @@ msgstr "Utilizatori"
 
 msgid "Users & Groups"
 msgstr "Utilizatori & Grupuri"
+
+msgid ""
+"Users will notice a service disruption when trying to access this mount "
+"while the file system check is running."
+msgstr ""
 
 #, php-format
 msgid "Using %s bytes fragment size."
@@ -9534,6 +9533,9 @@ msgstr ""
 "Trebuie să activați serviciul <a href='%s'>Zeroconf/Bonjour</a> pentru ca "
 "serviciul iTunes/DAAP să fie vizibil către clienți."
 
+msgid "You have to reboot the system for the changes to take effect."
+msgstr ""
+
 #, php-format
 msgid "You have to select at least one item for '%s'."
 msgstr "Trebuie să selectați cel puțin un element pentru '%s'."
@@ -9572,6 +9574,9 @@ msgstr ""
 
 msgid "You must add disks first."
 msgstr "Mai întâi trebuie să adăugați discuri."
+
+msgid "You must apply the changes in order for them to take effect."
+msgstr ""
 
 msgid "You must enter the same IP type for network and gateway."
 msgstr ""
@@ -9798,152 +9803,3 @@ msgstr "demontare"
 
 msgid "version:"
 msgstr "versiune:"
-
-#~ msgid "<->"
-#~ msgstr "<->"
-
-#~ msgid ""
-#~ "To use Active Directory the CIFS/SMB service will enabled, too. The "
-#~ "following services will use AD authentication:<div "
-#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-#~ ">System</li></ul></div>"
-#~ msgstr ""
-#~ "Pentru utilizarea Active Directory serviciul CIFS/SMS va fi deasemenea "
-#~ "activat. Următoarele servicii pot utiliza autentificarea AD:<div "
-#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-#~ ">Sistem</li></ul></div>"
-
-#~ msgid ""
-#~ "Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-#~ "<a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks-zfs-volumes-volume' target='_blank'>ZFS volumes & deduplication</a> "
-#~ "wiki article BEFORE using this feature.</b></br>"
-#~ msgstr ""
-#~ "Controlează metoda dedup. <br><b><font color='red'>NOTĂ/ATENȚIE</font>: De "
-#~ "văzut articolul <a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks-zfs-volumes-volume' target='_blank'>Volume ZFS & deduplicare</a>  "
-#~ "ÎNAINTE de a utiliza această opțiune.</b></br>"
-
-#~ msgid ""
-#~ "Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-#~ "<a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & "
-#~ "deduplication</a> wiki article BEFORE using this feature.</b></br>"
-#~ msgstr ""
-#~ "Controlează metoda dedup. <br><b><font color='red'>NOTĂ/ATENȚIE</font>: De "
-#~ "văzut articolul  <a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & "
-#~ "deduplication</a>  ÎNAINTE de a utiliza această opțiune.</b></br>"
-
-#, php-format
-#~ msgid ""
-#~ "IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
-#~ "addresses to hostnames&quot;</a> is enabled."
-#~ msgstr ""
-#~ "Adresele IP sînt convertite în nume de sistem (hostnames) dacă opțiunea <a "
-#~ "href='%s'>&quot;Convertire adrese IP în nume de sistem&quot;</a> este activă."
-
-#, php-format
-#~ msgid "No configured Extent. Please add new <a href='%s'>Extent</a> first."
-#~ msgstr ""
-#~ "Nicio Extensie configurată. Adăugați mai întîi o a href='%s'>Extensie</a>."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Initiator Group. Please add new <a href='%s'>Initiator "
-#~ "Group</a> first."
-#~ msgstr ""
-#~ "Niciun Grup Inițiator configurat. Adăugați mai întîi un <a href='%s'>Grup "
-#~ "Inițiator</a>"
-
-#, php-format
-#~ msgid ""
-#~ "No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
-#~ "first."
-#~ msgstr ""
-#~ "Niciun Grup Portal configurat. Adăugați mai întîi un <a href='%s'>Grup "
-#~ "Portal</a>"
-
-#, php-format
-#~ msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
-#~ msgstr ""
-#~ "Nicio structură (pools) definită. Adăugați mai intîi o <a "
-#~ "href='%s'>structură</a>."
-
-#, php-format
-#~ msgid ""
-#~ "The disk is currently mounted! <a href='%s'>Unmount</a> this disk first "
-#~ "before proceeding."
-#~ msgstr ""
-#~ "Discul este în acest moment montat! Acesta trebuie mai intâi <a "
-#~ "href='%s'>Demontat</a>"
-
-#, php-format
-#~ msgid ""
-#~ "The encrypted device is currently mounted! <a href='%s'>Unmount</a> this "
-#~ "disk first before proceeding."
-#~ msgstr ""
-#~ "Discul criptat este montat în acest moment! <a href='%s'>Demontați</a> "
-#~ "discul înainte de a continua."
-
-#, php-format
-#~ msgid ""
-#~ "The reloading request has been sent to the daemon. You can see the result by "
-#~ "<a href=\"%s\">Log</a>."
-#~ msgstr ""
-#~ "Cererea reluată a fost trimisă către daemon. Puteți vedea rezultatul în <a "
-#~ "href=\"%s\">Jurnal</a>."
-
-#~ msgid ""
-#~ "To configure the target, you must add at least Portal Group and Initiator "
-#~ "Group and Extent.<br />Portal Group which is identified by tag number "
-#~ "defines IP addresses and listening TCP ports.<br />Initiator Group which is "
-#~ "identified by tag number defines authorised initiator names and networks.<br "
-#~ "/>Auth Group which is identified by tag number and is optional if the target "
-#~ "does not use CHAP authentication defines authorised users and secrets for "
-#~ "additional security.<br />Extent defines the storage area of the target."
-#~ msgstr ""
-#~ "Pentru a configura destinația trebuie să adăugați cel puțin un Grup Portal "
-#~ "și un Grup Inițiator și Extins.<br />Grupul Portal care este identificat "
-#~ "printr-o etichetă numerică stabilește adresele IP și porturile TCP.<br "
-#~ "/>Grupul Inițiator care este identificat similar printr-o etichetă numerică "
-#~ "stabilește numele autorizate pentru inițiatori și rețelele autorizate.<br "
-#~ "/>Grupul Autorizat identificat tot printr-o etichetă numerică este opțional "
-#~ "dacă destinația nu folosește autentificarea CHAP și stabilește utilizatorii "
-#~ "autorizați și secretele folosite pentru măsuri suplimentare de "
-#~ "securitate.<br />Extensiile definesc zona de stocare a destinației."
-
-#, php-format
-#~ msgid ""
-#~ "Hint: If this is checked, IP addresses in the server logs are resolved to "
-#~ "real hostnames where possible.<br><font color='red'>Warning</font>: This can "
-#~ "cause a huge delay in loading the log page!"
-#~ msgstr ""
-#~ "Sugestie: Dacă opțiunea este activă, acolo unde este posibil, toate adresele "
-#~ "IP din jurnalele serverului vor fi afișate ca nume de server.<br><font "
-#~ "color='red'>Atenție</font>: Acest mod de conversie a adeselor IP, mare "
-#~ "consumator de timp, va determina o întîrziere importantă în afișarea "
-#~ "jurnalelor!"
-
-#~ msgid ""
-#~ "1. Use these specials actions for debugging only!<br />2. There is no need "
-#~ "of using this menu for starting a RAID volume (start automaticaly)."
-#~ msgstr ""
-#~ "1. Folosiți aceste comenzi speciale doar pentru depanare!<br />2. Nu este "
-#~ "nevoie să folosiți acest meniu pentru pornirea volumului RAID (volumul este "
-#~ "pornit automat)"
-
-#~ msgid "Detected Language:<br />(Change if needed)"
-#~ msgstr "Limba detectată:<br />(Modifcați dacă este necesar)"
-
-#, php-format
-#~ msgid ""
-#~ "No configured bridge interfaces. Please add new <a href='%s'>bridge "
-#~ "interface</a> first."
-#~ msgstr ""
-#~ "Nu există nicio interfață tip bridge configurată. Adăugați acum o interfață "
-#~ "<a href='%s'>interfață bridge</a>."
