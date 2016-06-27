@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-25 01:50+0000\n"
+"POT-Creation-Date: 2016-06-26 22:56+0000\n"
 "PO-Revision-Date: 2016-05-06 22:36+0000\n"
 "Last-Translator: Pedro Grave <pedro.grave.abt@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-25 01:49+0000\n"
+"X-Launchpad-Export-Date: 2016-06-26 23:49+0000\n"
 "X-Generator: Launchpad (build 18111)\n"
 "X-Poedit-Country: PORTUGAL\n"
 "Language: \n"
@@ -306,6 +306,11 @@ msgstr ""
 "ou como string de dígitos hexadecimais precedidos por '0x'."
 
 msgid "A mounted RAID volume cannot be deleted."
+msgstr ""
+
+msgid ""
+"A mounted disk or partition will be unmounted temporarily to perform the "
+"requested action."
 msgstr ""
 
 msgid "A reload request has been sent to the daemon."
@@ -2962,12 +2967,11 @@ msgstr ""
 msgid "Error"
 msgstr "Erro"
 
-msgid "Error Level"
+msgid "Error Code"
 msgstr ""
 
-#, php-format
-msgid "Error: The changes could not be applied (error code %s)."
-msgstr "ERRO: As alterações não foram guardadas (código do erro: %s)."
+msgid "Error Level"
+msgstr ""
 
 msgid "Event"
 msgstr "Evento"
@@ -3271,6 +3275,9 @@ msgid "Format"
 msgstr "Formatar"
 
 msgid "Format Options"
+msgstr ""
+
+msgid "Format Program"
 msgstr ""
 
 msgid "Format the report for phpBB forum."
@@ -3686,19 +3693,12 @@ msgstr ""
 "servidor."
 
 msgid ""
-"If the selected disk/partition is mounted it will be unmounted temporarily "
-"to perform selected command, otherwise the commands work in read-only "
-"mode.<br />Service disruption to users accessing this mount will occur "
-"during this process."
-msgstr ""
-"Se a partição/disco seleccionada estiver montada será desmontada "
-"temporariamente para efectuar o comando seleccionado, caso contrário o "
-"comando apenas funcionária em modo de leitura..<br />A perda do serviço a "
-"esta partição ocorrerá durante este processo."
-
-msgid ""
 "If the server is behind a proxy set these parameters to give local services "
 "access to the internet via proxy."
+msgstr ""
+
+msgid ""
+"If this message persist take a look at the system log for more information."
 msgstr ""
 
 msgid ""
@@ -4157,14 +4157,6 @@ msgstr "Última Release: %s"
 msgid "Latvian"
 msgstr "Letão"
 
-#, php-format
-msgid ""
-"Leave '%s' for unformated disks and format them using <a "
-"href='%s'>format</a> menu."
-msgstr ""
-"Deixar '%s' para discos não formatados e formatá-los usando o menu <a "
-"href='%s'>format</a>."
-
 msgid "Leave already configured auto snapshots."
 msgstr "Deixe os snapshots automáticos já configurados."
 
@@ -4446,12 +4438,7 @@ msgstr "Sufixo da máquina"
 msgid "Maintenance"
 msgstr ""
 
-#, php-format
-msgid ""
-"Make sure to select the correct number of devices:<div "
-"id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each "
-"vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
-"Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
+msgid "Make sure to select the optimal number of devices"
 msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
@@ -4922,10 +4909,7 @@ msgstr ""
 msgid "No configured pools."
 msgstr ""
 
-#, php-format
-msgid ""
-"No configured virtual devices. Please add new <a href=\"%s\">virtual "
-"device</a> first."
+msgid "No configured virtual devices."
 msgstr ""
 
 msgid "No device selected."
@@ -4934,11 +4918,8 @@ msgstr "Nenhum dispositivo seleccionado."
 msgid "No disk configured"
 msgstr "Nenhum disco configurado"
 
-#, php-format
-msgid "No disks available. Please add new <a href='%s'>disk</a> first."
+msgid "No disks available."
 msgstr ""
-"Nenhum disco disponivel.  Por favor adicione um novo <a href='%s'>disco</a> "
-"primeiro."
 
 msgid ""
 "No disks configured, please add disks to see the diagnostic information of "
@@ -5453,6 +5434,12 @@ msgstr ""
 msgid "Please add a new Portal Group first."
 msgstr ""
 
+msgid "Please add a new disk first."
+msgstr ""
+
+msgid "Please add a virtual device first."
+msgstr ""
+
 #, php-format
 msgid "Please add new %s first."
 msgstr ""
@@ -5463,6 +5450,9 @@ msgstr ""
 #, php-format
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "Por favor verifique a <a href='%s' target='_blank'>documentação</a>."
+
+msgid "Please check the documentation."
+msgstr ""
 
 msgid "Please define the Database directory location."
 msgstr ""
@@ -5728,10 +5718,19 @@ msgstr ""
 msgid "RAID-Z1"
 msgstr ""
 
+msgid "RAID-Z1 should have 3, 5, or 9 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z2"
 msgstr ""
 
+msgid "RAID-Z2 should have 4, 6, or 10 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z3"
+msgstr ""
+
+msgid "RAID-Z3 should have 5, 7, or 11 disks in each vdev."
 msgstr ""
 
 msgid "RAID0"
@@ -6262,6 +6261,10 @@ msgstr "Seleccione da lista o item a remover"
 msgid "Select mount point where to create the swap file."
 msgstr ""
 "Escolha a localização onde deseja criar o ficheiro de memória virtual."
+
+msgid ""
+"Select option 'Unformatted' for unformatted disks and format them with the"
+msgstr ""
 
 msgid "Select read balance algorithm."
 msgstr ""
@@ -7226,16 +7229,14 @@ msgstr ""
 "regra para comparação. Quando uma comparação é válida a regra é aplicada e o "
 "processo de procura termina."
 
+msgid "The changes could not be applied"
+msgstr ""
+
 msgid "The changes have been applied successfully."
 msgstr "As alterações foram aplicadas com sucesso."
 
-#, php-format
-msgid ""
-"The changes have been saved. You have to <a href='%s'>reboot</a> the system "
-"for the changes to take effect."
+msgid "The changes have been saved."
 msgstr ""
-"As alterações ainda não foram guardadas. Tem de <a href='%s'>reiniciar</a> o "
-"sistema para que as alterações tenham efeito."
 
 msgid "The cleartext credentials with which to bind."
 msgstr "As credenciais em formato texto com as quais é feita a ligação."
@@ -7253,11 +7254,7 @@ msgstr "A configuração não pode ser restaurada. %s"
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr ""
 
-#, php-format
-msgid ""
-"The configuration has been changed.<br />You must apply the changes in order "
-"for them to take effect.<br /><b>If this message persist take a look at the "
-"<a href='%s'>system log</a> for more information.</b>"
+msgid "The configuration has been changed."
 msgstr ""
 
 msgid "The configuration has been restored. The server is now rebooting."
@@ -7894,13 +7891,6 @@ msgstr ""
 "Isto permite-lhe definir o nível de som da sua drive quando está em "
 "funcionamento."
 
-msgid ""
-"This allows you to set the file system for preformatted hard disks "
-"containing data."
-msgstr ""
-"Isto permite-lhe definir o sistema de ficheiros para os discos rígidos pré-"
-"formatados contendo dados."
-
 msgid "This allows you to set the transfer mode for ATA/IDE disks."
 msgstr ""
 
@@ -8029,6 +8019,11 @@ msgstr ""
 "Esta opção permite especificar os utilizadores e grupos que acedem à "
 "partilha. Utilizadores e grupos são especificados, separados por vírgulas. "
 "Grupos são designados pelo prefixo @."
+
+msgid ""
+"This option allows you to set the file system of already formatted disks "
+"containing data."
+msgstr ""
 
 msgid "This option applies to GEOM RAID-1 only."
 msgstr ""
@@ -8667,8 +8662,8 @@ msgstr ""
 msgid "Unload"
 msgstr "Fechar"
 
-msgid "Unmount disk/partition"
-msgstr "Desmontar disco/partição"
+msgid "Unmount Disk/Partition"
+msgstr ""
 
 msgid "Unmount this disk first before proceeding."
 msgstr ""
@@ -8835,6 +8830,11 @@ msgid "Users"
 msgstr "Utilizadores"
 
 msgid "Users & Groups"
+msgstr ""
+
+msgid ""
+"Users will notice a service disruption when trying to access this mount "
+"while the file system check is running."
 msgstr ""
 
 #, php-format
@@ -9170,6 +9170,9 @@ msgstr ""
 "Tem de activar o <a href='%s'>Zeroconf/Bonjour</a> para informar os clientes "
 "deste serviço."
 
+msgid "You have to reboot the system for the changes to take effect."
+msgstr ""
+
 #, php-format
 msgid "You have to select at least one item for '%s'."
 msgstr "Tem de selecionar pelo menos um item para '%s'"
@@ -9205,6 +9208,9 @@ msgstr ""
 
 msgid "You must add disks first."
 msgstr "Tem que adicionar discos primeiro."
+
+msgid "You must apply the changes in order for them to take effect."
+msgstr ""
 
 msgid "You must enter the same IP type for network and gateway."
 msgstr "Tem de introduzir o mesmo tipo de IP para a rede e gateway."
@@ -9423,94 +9429,3 @@ msgstr "umount"
 
 msgid "version:"
 msgstr ""
-
-#~ msgid ""
-#~ "1. Use these specials actions for debugging only!<br />2. There is no need "
-#~ "of using this menu for starting a RAID volume (start automaticaly)."
-#~ msgstr ""
-#~ "1. Use estas acções especiais apenas para debug!<br />2.Não é necessário "
-#~ "usar este menu para iniciar um volume RAID (inicia-se automaticamente)."
-
-#~ msgid "<->"
-#~ msgstr "<->"
-
-#, php-format
-#~ msgid ""
-#~ "IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
-#~ "addresses to hostnames&quot;</a> is enabled."
-#~ msgstr ""
-#~ "Endereço IP é resolvido nos servidores se <a href='%s'>&quot;Resolver "
-#~ "endereço IP nos servidores&quot;</a> está activo."
-
-#, php-format
-#~ msgid "No configured Extent. Please add new <a href='%s'>Extent</a> first."
-#~ msgstr ""
-#~ "Nenhum bloco contíguo definido. Por favor adicione um novo <a "
-#~ "href='%s'>Extent</a> primeiro."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Initiator Group. Please add new <a href='%s'>Initiator "
-#~ "Group</a> first."
-#~ msgstr ""
-#~ "Não está configurado um Grupo Iniciador. Por favor adicione um <a "
-#~ "href='%s'>Grupo Iniciador</a> primeiro."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
-#~ "first."
-#~ msgstr ""
-#~ "Nenhum Grupo de Portal configurado. Por favor adicione um novo <a "
-#~ "href='%s'>Grupo de Portal</a> antes."
-
-#, php-format
-#~ msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
-#~ msgstr ""
-#~ "Nenhum conjunto de volumes configurado. Por favor adicione um novo <a "
-#~ "href='%s'>conjunto de volumes</a> primeiro."
-
-#, php-format
-#~ msgid ""
-#~ "The disk is currently mounted! <a href='%s'>Unmount</a> this disk first "
-#~ "before proceeding."
-#~ msgstr ""
-#~ "O disco já está montado! <a href='%s'>Desmonte</a> primeiro o disco antes de "
-#~ "continuar."
-
-#, php-format
-#~ msgid ""
-#~ "The encrypted device is currently mounted! <a href='%s'>Unmount</a> this "
-#~ "disk first before proceeding."
-#~ msgstr ""
-#~ "O dispositivo encriptado já se encontra montado! <a href='%s'>Desmonte</a> "
-#~ "primeiro o disco antes de continuar."
-
-#~ msgid ""
-#~ "To configure the target, you must add at least Portal Group and Initiator "
-#~ "Group and Extent.<br />Portal Group which is identified by tag number "
-#~ "defines IP addresses and listening TCP ports.<br />Initiator Group which is "
-#~ "identified by tag number defines authorised initiator names and networks.<br "
-#~ "/>Auth Group which is identified by tag number and is optional if the target "
-#~ "does not use CHAP authentication defines authorised users and secrets for "
-#~ "additional security.<br />Extent defines the storage area of the target."
-#~ msgstr ""
-#~ "Para configurar o destino, deve adicionar pelo menos o Grupo de Portal e o "
-#~ "Grupo de Iniciadores e Extensões.<br />O Grupo de Portal é identificado por "
-#~ "números de tag define o endereço IP e escuta as portas TCP.<br />O Grupo "
-#~ "Iniciador é identificado por um número de tag e define os nomes iniciadores "
-#~ "e as redes.<br />O Grupo de Autenticação é identificado por um número de "
-#~ "tag, e que é opcional se o destino não usa autenticação CHAP, define "
-#~ "utilizadores e palavras-passe definidas para segurança adicional.<br "
-#~ "/>Extensões definem a área de armazenamento do destino."
-
-#~ msgid ""
-#~ "To use Active Directory the CIFS/SMB service will enabled, too. The "
-#~ "following services will use AD authentication:<div "
-#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-#~ ">System</li></ul></div>"
-#~ msgstr ""
-#~ "Para usar Active Directory o serviço CIFS/SMB deve estar activado também. Os "
-#~ "serviços seguintes utilizarão a autenticação AD:<div "
-#~ "id='enumeração'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li>"
-#~ "Sistema</li></ul></div>"

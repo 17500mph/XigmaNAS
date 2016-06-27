@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-25 01:50+0000\n"
+"POT-Creation-Date: 2016-06-26 22:56+0000\n"
 "PO-Revision-Date: 2016-06-23 14:41+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-25 01:48+0000\n"
+"X-Launchpad-Export-Date: 2016-06-26 23:48+0000\n"
 "X-Generator: Launchpad (build 18111)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -314,6 +314,11 @@ msgstr ""
 
 msgid "A mounted RAID volume cannot be deleted."
 msgstr "Nelze smazat RAID svazek, který je připojený (mount)."
+
+msgid ""
+"A mounted disk or partition will be unmounted temporarily to perform the "
+"requested action."
+msgstr ""
 
 msgid "A reload request has been sent to the daemon."
 msgstr ""
@@ -3119,12 +3124,11 @@ msgstr "Vymazat hlavní zaváděcí záznam (MBR)"
 msgid "Error"
 msgstr "Chyba"
 
+msgid "Error Code"
+msgstr ""
+
 msgid "Error Level"
 msgstr "Úroveň chybových stavů"
-
-#, php-format
-msgid "Error: The changes could not be applied (error code %s)."
-msgstr "Chyba: Změny nemohly být provedeny (kód chyby %s)."
 
 msgid "Event"
 msgstr "Událost"
@@ -3435,6 +3439,9 @@ msgstr "Formátovat"
 
 msgid "Format Options"
 msgstr "Předvolby formátování"
+
+msgid "Format Program"
+msgstr ""
 
 msgid "Format the report for phpBB forum."
 msgstr "Připravit výstup do podoby vhodné pro phpBB fórum."
@@ -3866,22 +3873,15 @@ msgstr ""
 "izolovat klienta od části souborového prostoru na stroji."
 
 msgid ""
-"If the selected disk/partition is mounted it will be unmounted temporarily "
-"to perform selected command, otherwise the commands work in read-only "
-"mode.<br />Service disruption to users accessing this mount will occur "
-"during this process."
-msgstr ""
-"Je-li označený disk/oddíl připojen, bude pro provedení zvoleného příkazu "
-"dočasně odpojen, jinak by příkazy fungovali v režimu pouze pro čtení.<br "
-"/>Uživatelé, kteří používají služby, související s tímto prostředkem, "
-"pochopitelně zaznamenají výpadek."
-
-msgid ""
 "If the server is behind a proxy set these parameters to give local services "
 "access to the internet via proxy."
 msgstr ""
 "Pokud je server za proxy, nastavení těchto parametrů umožní místním službám "
 "přístup k Internetu přes proxy."
+
+msgid ""
+"If this message persist take a look at the system log for more information."
+msgstr ""
 
 msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
@@ -4370,14 +4370,6 @@ msgstr "Nejnovější vydaná hotová verze: %s"
 msgid "Latvian"
 msgstr "Lotyština"
 
-#, php-format
-msgid ""
-"Leave '%s' for unformated disks and format them using <a "
-"href='%s'>format</a> menu."
-msgstr ""
-"Pro nenaformátované disky ponechte %s a posléze je naformátujte pomocí "
-"nabídky <a href='%s'> formát </a>."
-
 msgid "Leave already configured auto snapshots."
 msgstr "Ponechat užnastavené samočinná zachycení stavu"
 
@@ -4672,16 +4664,8 @@ msgstr "Přípona stroje"
 msgid "Maintenance"
 msgstr "Údržba"
 
-#, php-format
-msgid ""
-"Make sure to select the correct number of devices:<div "
-"id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each "
-"vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
-"Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
+msgid "Make sure to select the optimal number of devices"
 msgstr ""
-"Vždy vyberte správný počet zařízení:<div id='enumeration'><ul><li>pro RAID-"
-"Z1 je třeba 3, 5 nebo 9 disků</li><li>pro RAID-Z2 4, 6 nebo 10 "
-"disků</li><li>pro RAID-Z3 5, 7 nebo 11 disků</li></ul></div>"
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Zkontrolujte, zda máte zapnuté SMART dohledování u svých zařízení."
@@ -5171,13 +5155,8 @@ msgstr ""
 msgid "No configured pools."
 msgstr ""
 
-#, php-format
-msgid ""
-"No configured virtual devices. Please add new <a href=\"%s\">virtual "
-"device</a> first."
+msgid "No configured virtual devices."
 msgstr ""
-"Nejsou nastavená virtuální zařízení. Nejprve nějaké <a href=\"%s\">virtuální "
-"zařízení</a> přidejte."
 
 msgid "No device selected."
 msgstr "Není vybráno žádné zařízení."
@@ -5185,10 +5164,8 @@ msgstr "Není vybráno žádné zařízení."
 msgid "No disk configured"
 msgstr "Není nastaven žádný disk"
 
-#, php-format
-msgid "No disks available. Please add new <a href='%s'>disk</a> first."
+msgid "No disks available."
 msgstr ""
-"Nejsou k dispozici žádné disky. Nejprve přidejte nový <a href='%s'>disk</a>."
 
 msgid ""
 "No disks configured, please add disks to see the diagnostic information of "
@@ -5709,6 +5686,12 @@ msgstr ""
 msgid "Please add a new Portal Group first."
 msgstr ""
 
+msgid "Please add a new disk first."
+msgstr ""
+
+msgid "Please add a virtual device first."
+msgstr ""
+
 #, php-format
 msgid "Please add new %s first."
 msgstr ""
@@ -5719,6 +5702,9 @@ msgstr ""
 #, php-format
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "Viz <a href='%s' target='_blank'>dokumentace</a>."
+
+msgid "Please check the documentation."
+msgstr ""
 
 msgid "Please define the Database directory location."
 msgstr "Zadejte umístění složky databáze"
@@ -5992,10 +5978,19 @@ msgstr ""
 msgid "RAID-Z1"
 msgstr ""
 
+msgid "RAID-Z1 should have 3, 5, or 9 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z2"
 msgstr ""
 
+msgid "RAID-Z2 should have 4, 6, or 10 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z3"
+msgstr ""
+
+msgid "RAID-Z3 should have 5, 7, or 11 disks in each vdev."
 msgstr ""
 
 msgid "RAID0"
@@ -6539,6 +6534,10 @@ msgstr "Vyberte položku, kterou chcete ze seznamu odstranit"
 
 msgid "Select mount point where to create the swap file."
 msgstr "Vyberte přípojný bod, ve kterém má být vytvořen odkládací soubor."
+
+msgid ""
+"Select option 'Unformatted' for unformatted disks and format them with the"
+msgstr ""
 
 msgid "Select read balance algorithm."
 msgstr "Vyberte vyvažovací algoritmus pro čtení."
@@ -7534,16 +7533,14 @@ msgstr ""
 "nalezený v souboru s nastaveními. To znamená, že další výskyty už nebudou "
 "brány v potaz."
 
+msgid "The changes could not be applied"
+msgstr ""
+
 msgid "The changes have been applied successfully."
 msgstr "Změny byly úspěšně provedeny."
 
-#, php-format
-msgid ""
-"The changes have been saved. You have to <a href='%s'>reboot</a> the system "
-"for the changes to take effect."
+msgid "The changes have been saved."
 msgstr ""
-"Změny byly uloženy. Změny se promítnou až po <a href='%s'>restartu</a> "
-"systému."
 
 msgid "The cleartext credentials with which to bind."
 msgstr ""
@@ -7564,15 +7561,8 @@ msgstr ""
 "Nastavení nelze obnovit - nebyl poskytnut žádný soubor, který by ho měl "
 "obsahovat!"
 
-#, php-format
-msgid ""
-"The configuration has been changed.<br />You must apply the changes in order "
-"for them to take effect.<br /><b>If this message persist take a look at the "
-"<a href='%s'>system log</a> for more information.</b>"
+msgid "The configuration has been changed."
 msgstr ""
-"Nastavení byla změněna.<br />Nyní je třeba je použít.<br /><b>Pokud toto "
-"hlášení přetrvává, podívejte se na podrobnosti v <a href='%s'>záznamu "
-"událostí v systému</a>.</b>"
 
 msgid "The configuration has been restored. The server is now rebooting."
 msgstr ""
@@ -8257,12 +8247,6 @@ msgstr ""
 msgid "This allows you to set how loud the drive is while it's operating."
 msgstr "Zde je možné nastavit, jak budou disky za chodu hlučné."
 
-msgid ""
-"This allows you to set the file system for preformatted hard disks "
-"containing data."
-msgstr ""
-"Tímto nastavíte systém souborů pro zformátované disky užobsahující data."
-
 msgid "This allows you to set the transfer mode for ATA/IDE disks."
 msgstr "Zde je možné nastavit přenosový režim ATA/IDE disků."
 
@@ -8413,6 +8397,11 @@ msgstr ""
 "Zde je možné zadat uživatele a skupiny, kterým umožnit přístup ke sdílení. "
 "Uživatele a skupiny uvádějte oddělené čárkou. Před názvy supin uvádějte "
 "předponu @ (znak „zavináč“)."
+
+msgid ""
+"This option allows you to set the file system of already formatted disks "
+"containing data."
+msgstr ""
 
 msgid "This option applies to GEOM RAID-1 only."
 msgstr ""
@@ -9095,8 +9084,8 @@ msgstr "Neznámá velikost"
 msgid "Unload"
 msgstr "Uvolnit"
 
-msgid "Unmount disk/partition"
-msgstr "Odpojit disk/oddíl"
+msgid "Unmount Disk/Partition"
+msgstr ""
 
 msgid "Unmount this disk first before proceeding."
 msgstr ""
@@ -9267,6 +9256,11 @@ msgstr "Uživatelé"
 
 msgid "Users & Groups"
 msgstr "Uživatelé a skupiny"
+
+msgid ""
+"Users will notice a service disruption when trying to access this mount "
+"while the file system check is running."
+msgstr ""
 
 #, php-format
 msgid "Using %s bytes fragment size."
@@ -9619,6 +9613,9 @@ msgstr ""
 "Klientům začne být tato služba propagována až po zapnutí služby<a "
 "href='%s'>Zeroconf/Bonjour</a>."
 
+msgid "You have to reboot the system for the changes to take effect."
+msgstr ""
+
 #, php-format
 msgid "You have to select at least one item for '%s'."
 msgstr "Pro %s je třeba vybrat alespoň jednu položku."
@@ -9656,6 +9653,9 @@ msgstr ""
 
 msgid "You must add disks first."
 msgstr "Nejprve je třeba přidat disky."
+
+msgid "You must apply the changes in order for them to take effect."
+msgstr ""
 
 msgid "You must enter the same IP type for network and gateway."
 msgstr "Pro síť i bránu je třeba zadat IP adresu stejného typu."
@@ -9890,162 +9890,3 @@ msgstr "odpojit (umount)"
 
 msgid "version:"
 msgstr "verze:"
-
-#~ msgid "Detected Language:<br />(Change if needed)"
-#~ msgstr "Zjištěný jazyk:<br />(Změňte dle potřeby)"
-
-#~ msgid "<->"
-#~ msgstr "Směr"
-
-#~ msgid ""
-#~ "Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-#~ "<a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & "
-#~ "deduplication</a> wiki article BEFORE using this feature.</b></br>"
-#~ msgstr ""
-#~ "Určuje metodu deduplikace. <br><b><font "
-#~ "color='red'>UPOZORNĚNÍ/VAROVÁNÍ</font>: Prostudujte si článek <a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks_zfs_datasets_dataset' target='_blank'>ZFS datové sady a "
-#~ "deduplikace</a> na wiki ještě PŘEDTÍM, než vůbec začnete tuto funkci "
-#~ "používat.</b></br>"
-
-#, php-format
-#~ msgid "No configured Extent. Please add new <a href='%s'>Extent</a> first."
-#~ msgstr ""
-#~ "Není nastavena žádná úložná jednotka. Nejprve přidejte <a href='%s'>úložnou "
-#~ "jednotku</a>."
-
-#, php-format
-#~ msgid ""
-#~ "The encrypted device is currently mounted! <a href='%s'>Unmount</a> this "
-#~ "disk first before proceeding."
-#~ msgstr ""
-#~ "Šifrované zařízení je v tuto chvíli připojeno! <a href='%s'>Odpojte "
-#~ "(umount)</a> jej, než budete pokračovat."
-
-#, php-format
-#~ msgid ""
-#~ "The reloading request has been sent to the daemon. You can see the result by "
-#~ "<a href=\"%s\">Log</a>."
-#~ msgstr ""
-#~ "Požadavek na znovunačtení byl odeslán procesu služby. Výsledek je k vidění v "
-#~ "<a href=\"%s\">záznamu událostí</a>."
-
-#~ msgid ""
-#~ "To use Active Directory the CIFS/SMB service will enabled, too. The "
-#~ "following services will use AD authentication:<div "
-#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-#~ ">System</li></ul></div>"
-#~ msgstr ""
-#~ "Společně se službou Active Directory bude zapnuta i služba CIFS/SMB. "
-#~ "Následující služby budou používat ověřování vůči AD:<div "
-#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-#~ ">Systém</li></ul></div>"
-
-#~ msgid ""
-#~ "1. Use these specials actions for debugging only!<br />2. There is no need "
-#~ "of using this menu for starting a RAID volume (start automaticaly)."
-#~ msgstr ""
-#~ "1. Tyto zvláštní akce používejte pouze pro účely ladění!<br />2. Tuto "
-#~ "nabídku není třeba používat pro spouštění RAID svazku (děje se automaticky)."
-
-#, php-format
-#~ msgid ""
-#~ "Hint: If this is checked, IP addresses in the server logs are resolved to "
-#~ "real hostnames where possible.<br><font color='red'>Warning</font>: This can "
-#~ "cause a huge delay in loading the log page!"
-#~ msgstr ""
-#~ "Tip: pokud je toto zašrktnuto, jsou při zobrazování záznamu událostí na "
-#~ "serveru IP adresy překládány na názvy strojů.<br><font "
-#~ "color='red'>Varování</font>: Může způsobit opravdu velké prodlevy při "
-#~ "načítání stránky záznamu událostí!"
-
-#, php-format
-#~ msgid ""
-#~ "IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
-#~ "addresses to hostnames&quot;</a> is enabled."
-#~ msgstr ""
-#~ "Pokud je zapnuto <a href='%s'>Překládání IP adres na názvy strojů</a>, pak "
-#~ "jsou zobrazovány jejich DNS názvy namísto IP adres."
-
-#~ msgid ""
-#~ "To configure the target, you must add at least Portal Group and Initiator "
-#~ "Group and Extent.<br />Portal Group which is identified by tag number "
-#~ "defines IP addresses and listening TCP ports.<br />Initiator Group which is "
-#~ "identified by tag number defines authorised initiator names and networks.<br "
-#~ "/>Auth Group which is identified by tag number and is optional if the target "
-#~ "does not use CHAP authentication defines authorised users and secrets for "
-#~ "additional security.<br />Extent defines the storage area of the target."
-#~ msgstr ""
-#~ "Pro nastavení cíle je třeba zadat alespoň skupinu portálů, skupinu "
-#~ "iniciátorů a úložnou jednotku.<br />Skupina portálů (identifikovaná číslem "
-#~ "značky), určuje IP adresy a TCP porty, na kterých bude očekáváno spojení.<br "
-#~ "/>Skupina iniciátorů (identifikovaná číslem značky) obsahuje názvy "
-#~ "iniciátorů a sítě, ze kterých bude umožněn přístup.<br />Ověřovací skupina "
-#~ "(identifikovaná číslem značky) není v případě, že cíl nepoužívá CHAP "
-#~ "ověřování, povinná. Pro posílení zabezpečení obsahuje pověřené uživatele a "
-#~ "jejich hesla.<br />Úložná jednotka určuje oblast úložiště, které cíl "
-#~ "poskytuje."
-
-#~ msgid ""
-#~ "Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-#~ "<a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks-zfs-volumes-volume' target='_blank'>ZFS volumes & deduplication</a> "
-#~ "wiki article BEFORE using this feature.</b></br>"
-#~ msgstr ""
-#~ "Určuje metodu deduplikace dat. <br><b><font "
-#~ "color='red'>UPOZORNĚNÍ/VAROVÁNÍ</font>: Prostudujte si článek <a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks-zfs-volumes-volume' target='_blank'>ZFS svazky a deduplikace</a> na "
-#~ "wiki ještě PŘEDTÍM, než vůbec začnete tuto funkci používat.</b></br>"
-
-#, php-format
-#~ msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
-#~ msgstr ""
-#~ "Nejsou nastavené fondy. Nejprve nějaké <a href='%s'>fondy</a> přidejte."
-
-#, php-format
-#~ msgid ""
-#~ "The disk is currently mounted! <a href='%s'>Unmount</a> this disk first "
-#~ "before proceeding."
-#~ msgstr ""
-#~ "Disk je v tuto chvíli připojený! Než budete pokračovat, <a "
-#~ "href='%s'>odpojte</a> (unmount) ho."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
-#~ "first."
-#~ msgstr ""
-#~ "Není nastavena žádná skupina portálu. Nejprve nějakou <a href='%s'>skupinu "
-#~ "portálu</a> přidejte."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Initiator Group. Please add new <a href='%s'>Initiator "
-#~ "Group</a> first."
-#~ msgstr ""
-#~ "Není nastavena žádná skupina iniciátoru. Nejdříve nějakou <a "
-#~ "href='%s'>Initiator Group</a> přidejte."
-
-#, php-format
-#~ msgid ""
-#~ "No configured bridge interfaces. Please add new <a href='%s'>bridge "
-#~ "interface</a> first."
-#~ msgstr ""
-#~ "Nejsou nastavena rozhraní síťových mostů. Nejprve nějaká nová <a "
-#~ "href='%s'>přidejte</a>."
-
-#~ msgid "Invalid username or password.</br> Please try again."
-#~ msgstr "Neplatné uživatelské jméno nebo heslo.</br> Zkuste to znovu."
-
-#, php-format
-#~ msgid ""
-#~ "The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
-#~ "and [._-]"
-#~ msgstr ""
-#~ "Hodnota atributu „%s“ se může sestávat pouze ze znaků [a-z], [A-Z], [0-9] a "
-#~ "[._-]"

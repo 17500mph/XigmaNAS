@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-25 01:50+0000\n"
+"POT-Creation-Date: 2016-06-26 22:56+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: Jānis Marks Gailis <jm-gailis@fai-vianet.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-25 01:49+0000\n"
+"X-Launchpad-Export-Date: 2016-06-26 23:49+0000\n"
 "X-Generator: Launchpad (build 18111)\n"
 "X-Poedit-Country: LATVIA\n"
 "Language: \n"
@@ -282,6 +282,11 @@ msgstr ""
 "rinda."
 
 msgid "A mounted RAID volume cannot be deleted."
+msgstr ""
+
+msgid ""
+"A mounted disk or partition will be unmounted temporarily to perform the "
+"requested action."
 msgstr ""
 
 msgid "A reload request has been sent to the daemon."
@@ -2911,12 +2916,11 @@ msgstr ""
 msgid "Error"
 msgstr "Kļūda"
 
-msgid "Error Level"
+msgid "Error Code"
 msgstr ""
 
-#, php-format
-msgid "Error: The changes could not be applied (error code %s)."
-msgstr "Kļūda: Izmaiņas nevar tikt veiktas (kļūdas kods %s)."
+msgid "Error Level"
+msgstr ""
 
 msgid "Event"
 msgstr "Notikums"
@@ -3218,6 +3222,9 @@ msgid "Format"
 msgstr "Formatēt"
 
 msgid "Format Options"
+msgstr ""
+
+msgid "Format Program"
 msgstr ""
 
 msgid "Format the report for phpBB forum."
@@ -3630,19 +3637,12 @@ msgstr ""
 "efektīvi izolētu klientu no saimniekdatora sistēmas datņu laukuma porcijas."
 
 msgid ""
-"If the selected disk/partition is mounted it will be unmounted temporarily "
-"to perform selected command, otherwise the commands work in read-only "
-"mode.<br />Service disruption to users accessing this mount will occur "
-"during this process."
-msgstr ""
-"Ja izvēlētais disks/partīcija ir piemontēts, tas tiks atmontēts uz pagaidu "
-"laiku, kamēr tiks izpildīta komanda, citādāk komandas darbojas tikai "
-"lasīšanas režīmā.<br />Servisa pārraušana klientiem, kuri piekļūs šim "
-"montējumam, notiks šī procesa laikā."
-
-msgid ""
 "If the server is behind a proxy set these parameters to give local services "
 "access to the internet via proxy."
+msgstr ""
+
+msgid ""
+"If this message persist take a look at the system log for more information."
 msgstr ""
 
 msgid ""
@@ -4093,14 +4093,6 @@ msgstr ""
 msgid "Latvian"
 msgstr "Latviešu"
 
-#, php-format
-msgid ""
-"Leave '%s' for unformated disks and format them using <a "
-"href='%s'>format</a> menu."
-msgstr ""
-"Atstāj '%s' neformatētiem diskiem, un formatē tos izmantojot <a "
-"href='%s'>formatēšanas</a> izvēlni."
-
 msgid "Leave already configured auto snapshots."
 msgstr ""
 
@@ -4380,12 +4372,7 @@ msgstr "Mašīnas sufikss"
 msgid "Maintenance"
 msgstr ""
 
-#, php-format
-msgid ""
-"Make sure to select the correct number of devices:<div "
-"id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each "
-"vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
-"Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
+msgid "Make sure to select the optimal number of devices"
 msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
@@ -4860,10 +4847,7 @@ msgstr ""
 msgid "No configured pools."
 msgstr ""
 
-#, php-format
-msgid ""
-"No configured virtual devices. Please add new <a href=\"%s\">virtual "
-"device</a> first."
+msgid "No configured virtual devices."
 msgstr ""
 
 msgid "No device selected."
@@ -4872,10 +4856,8 @@ msgstr "Nav izvēlēta neviena ierīce."
 msgid "No disk configured"
 msgstr "Nav konfigurēts neviens disks."
 
-#, php-format
-msgid "No disks available. Please add new <a href='%s'>disk</a> first."
+msgid "No disks available."
 msgstr ""
-"Nav pieejami diski. Lūdzu pievieno jaunu <a href='%s'>disku</a> vispirms."
 
 msgid ""
 "No disks configured, please add disks to see the diagnostic information of "
@@ -5383,6 +5365,12 @@ msgstr ""
 msgid "Please add a new Portal Group first."
 msgstr ""
 
+msgid "Please add a new disk first."
+msgstr ""
+
+msgid "Please add a virtual device first."
+msgstr ""
+
 #, php-format
 msgid "Please add new %s first."
 msgstr ""
@@ -5393,6 +5381,9 @@ msgstr ""
 #, php-format
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "Lūdzu pārbaudi <a href='%s' target='_blank'>dokumentāciju</a>."
+
+msgid "Please check the documentation."
+msgstr ""
 
 msgid "Please define the Database directory location."
 msgstr ""
@@ -5658,10 +5649,19 @@ msgstr ""
 msgid "RAID-Z1"
 msgstr ""
 
+msgid "RAID-Z1 should have 3, 5, or 9 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z2"
 msgstr ""
 
+msgid "RAID-Z2 should have 4, 6, or 10 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z3"
+msgstr ""
+
+msgid "RAID-Z3 should have 5, 7, or 11 disks in each vdev."
 msgstr ""
 
 msgid "RAID0"
@@ -6191,6 +6191,10 @@ msgstr "Izvēlies vērtību, kuru izņemt no saraksta"
 
 msgid "Select mount point where to create the swap file."
 msgstr "Izvēlies montēšanas punktu, kur izveidot swap datni."
+
+msgid ""
+"Select option 'Unformatted' for unformatted disks and format them with the"
+msgstr ""
 
 msgid "Select read balance algorithm."
 msgstr ""
@@ -7145,16 +7149,14 @@ msgstr ""
 "saderīgs noteikums ir atrasts, tas tiek pielietots un meklēšanas process "
 "tiks pārtraukts."
 
+msgid "The changes could not be applied"
+msgstr ""
+
 msgid "The changes have been applied successfully."
 msgstr "Izmaiņas ir veiktas veiksmīgi."
 
-#, php-format
-msgid ""
-"The changes have been saved. You have to <a href='%s'>reboot</a> the system "
-"for the changes to take effect."
+msgid "The changes have been saved."
 msgstr ""
-"Izmaiņas ir saglabātas. Tev vajag <a href='%s'>pārstartēt</a> sistēmu, lai "
-"izmaiņas dotu efektu."
 
 msgid "The cleartext credentials with which to bind."
 msgstr "Tīrā teksta rekvizīti ar kuriem sasiet."
@@ -7172,11 +7174,7 @@ msgstr "Konfigurāciju nevar atjaunot. %s"
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr ""
 
-#, php-format
-msgid ""
-"The configuration has been changed.<br />You must apply the changes in order "
-"for them to take effect.<br /><b>If this message persist take a look at the "
-"<a href='%s'>system log</a> for more information.</b>"
+msgid "The configuration has been changed."
 msgstr ""
 
 msgid "The configuration has been restored. The server is now rebooting."
@@ -7803,13 +7801,6 @@ msgstr ""
 msgid "This allows you to set how loud the drive is while it's operating."
 msgstr "Šis ļauj uzstādīt cik skaļam jābūt diskam, kad tas darbojas."
 
-msgid ""
-"This allows you to set the file system for preformatted hard disks "
-"containing data."
-msgstr ""
-"Šis ļauj uzstādīt datņu sistēmu iepriekš formatētiem cietajiem diskiem, "
-"kuros ir dati."
-
 msgid "This allows you to set the transfer mode for ATA/IDE disks."
 msgstr ""
 
@@ -7939,6 +7930,11 @@ msgstr ""
 "Šī iespēja ļauj lietotājiem un grupām, kuras piekļūst kopīgojumam, tikt "
 "noteiktiem. Lietotāji un grupas tiek noteikti atdalot ar komatiem. Grupas "
 "tiek dizainētas ar @ priedēkli."
+
+msgid ""
+"This option allows you to set the file system of already formatted disks "
+"containing data."
+msgstr ""
 
 msgid "This option applies to GEOM RAID-1 only."
 msgstr ""
@@ -8572,8 +8568,8 @@ msgstr ""
 msgid "Unload"
 msgstr "Izlādēt"
 
-msgid "Unmount disk/partition"
-msgstr "Atmontēt disku/partīciju"
+msgid "Unmount Disk/Partition"
+msgstr ""
 
 msgid "Unmount this disk first before proceeding."
 msgstr ""
@@ -8739,6 +8735,11 @@ msgid "Users"
 msgstr "Lietotāji"
 
 msgid "Users & Groups"
+msgstr ""
+
+msgid ""
+"Users will notice a service disruption when trying to access this mount "
+"while the file system check is running."
 msgstr ""
 
 #, php-format
@@ -9071,6 +9072,9 @@ msgstr ""
 "Tev vajag aktivizēt <a href='%s'>Zeroconf/Bonjour</a> lai reklamētu šo "
 "servisu lietotājiem."
 
+msgid "You have to reboot the system for the changes to take effect."
+msgstr ""
+
 #, php-format
 msgid "You have to select at least one item for '%s'."
 msgstr "Tev vajag izvēlēties vismaz vienu vienumu priekš '%s'."
@@ -9106,6 +9110,9 @@ msgstr ""
 
 msgid "You must add disks first."
 msgstr "Tev vispirms jāpievieno disks."
+
+msgid "You must apply the changes in order for them to take effect."
+msgstr ""
 
 msgid "You must enter the same IP type for network and gateway."
 msgstr "Tev vajag ievadīt to pašu IP tipu tīklam un vartējai."
@@ -9324,95 +9331,3 @@ msgstr "aitsaistīt"
 
 msgid "version:"
 msgstr ""
-
-#~ msgid ""
-#~ "1. Use these specials actions for debugging only!<br />2. There is no need "
-#~ "of using this menu for starting a RAID volume (start automaticaly)."
-#~ msgstr ""
-#~ "1. Lietojiet šīs speciālās iespējas tikai atkļūdošanai!<br />2. Nav iemesla "
-#~ "izmantot šo izvēlni, lai uzsāktu RAID sējumu (iespēkojas automātiski)."
-
-#~ msgid "<->"
-#~ msgstr "<->"
-
-#, php-format
-#~ msgid ""
-#~ "IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
-#~ "addresses to hostnames&quot;</a> is enabled."
-#~ msgstr ""
-#~ "IP adreses tiek atrisinātas uz saimniekdatoru nosaukumiem, ja <a "
-#~ "href='%s'>&quot;Atrisināt IP adreses uz saimniekdatoru nosaukumiem&quot;</a> "
-#~ "ir iespējots."
-
-#, php-format
-#~ msgid "No configured Extent. Please add new <a href='%s'>Extent</a> first."
-#~ msgstr ""
-#~ "Nav konfigurēts Apjoms. Lūdzu pievieno jaunu <a href='%s'>Apjomu</a> "
-#~ "vispirms."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Initiator Group. Please add new <a href='%s'>Initiator "
-#~ "Group</a> first."
-#~ msgstr ""
-#~ "Nav konfigurēta Iniciatoru Grupa. Lūdzu pievieno jaunu <a "
-#~ "href='%s'>Iniciatoru Grupu</a> vispirms."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
-#~ "first."
-#~ msgstr ""
-#~ "Nav konfigurēta Portāla Grupa. Lūdzu pievieno jaunu <a href='%s'>Portāla "
-#~ "Grupu</a> vispirms."
-
-#, php-format
-#~ msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
-#~ msgstr ""
-#~ "Nav konfigurēts neviens pūls. Lūdzu pievieno jaunus <a href='%s'>pūlus</a> "
-#~ "vispirms."
-
-#, php-format
-#~ msgid ""
-#~ "The disk is currently mounted! <a href='%s'>Unmount</a> this disk first "
-#~ "before proceeding."
-#~ msgstr ""
-#~ "Šis disks pašlaik ir piemontēts! <a href='%s'>Atmontēt</a> šo disku pirms "
-#~ "turpināt."
-
-#, php-format
-#~ msgid ""
-#~ "The encrypted device is currently mounted! <a href='%s'>Unmount</a> this "
-#~ "disk first before proceeding."
-#~ msgstr ""
-#~ "Šifrētā ierīce pašlaik ir piemontēta! <a href='%s'>Atmontē</a> šo disku "
-#~ "pirms turpini."
-
-#~ msgid ""
-#~ "To configure the target, you must add at least Portal Group and Initiator "
-#~ "Group and Extent.<br />Portal Group which is identified by tag number "
-#~ "defines IP addresses and listening TCP ports.<br />Initiator Group which is "
-#~ "identified by tag number defines authorised initiator names and networks.<br "
-#~ "/>Auth Group which is identified by tag number and is optional if the target "
-#~ "does not use CHAP authentication defines authorised users and secrets for "
-#~ "additional security.<br />Extent defines the storage area of the target."
-#~ msgstr ""
-#~ "Lai konfigurētu mērķi, tev vajag pievienot vismaz Portāla Grupu un "
-#~ "Iniciatoru Grupu un Apjomu.<br />Portāla Grupa, kura ir identificēta pēc "
-#~ "birkas numura, definē IP adreses un klausās TCP vartējas.<br />Iniciatoru "
-#~ "Grupa, kura tiek identificēta pēc birkas numura, definē autorizētos "
-#~ "iniciatoru vārdus un tīklus.<br />Autorizēšanas grupa, kura ir identificēta "
-#~ "pēc birkas un nav obligāta, ja mērķis nelieto CHAP autentifikāciju, definē "
-#~ "autorizētos lietotājus un noslēpumus papildus drošībai.<br />Apjoms definē "
-#~ "glabātuves apjomu iekš mērķa."
-
-#~ msgid ""
-#~ "To use Active Directory the CIFS/SMB service will enabled, too. The "
-#~ "following services will use AD authentication:<div "
-#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-#~ ">System</li></ul></div>"
-#~ msgstr ""
-#~ "Lai lietotu Aktīvo Mapi, CIFS/SMB servisam arī jābūt ieslēgtam. Sekojošie "
-#~ "servisi lietos AD autorizāciju:<div "
-#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-#~ ">Sistēma</li></ul></div>"

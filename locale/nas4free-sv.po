@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-25 01:50+0000\n"
-"PO-Revision-Date: 2016-06-20 17:17+0000\n"
+"POT-Creation-Date: 2016-06-26 22:56+0000\n"
+"PO-Revision-Date: 2016-06-25 05:09+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-25 01:50+0000\n"
+"X-Launchpad-Export-Date: 2016-06-26 23:49+0000\n"
 "X-Generator: Launchpad (build 18111)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -107,7 +107,7 @@ msgid "%sB used of %sB"
 msgstr "%sB använt av %sB"
 
 msgid "(Change if needed)"
-msgstr ""
+msgstr "(Ändra vid behov)"
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(Hittat i Maxtor 6B200M0 200GB och 2R015H1 15GB diskar)"
@@ -265,6 +265,8 @@ msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
 "listening TCP ports."
 msgstr ""
+"En Portalgrupp identifieras av ett nummer och definierar IP-adresser och "
+"lyssnande TCP portar."
 
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
@@ -300,8 +302,13 @@ msgstr ""
 msgid "A mounted RAID volume cannot be deleted."
 msgstr "En monterad RAID volym kan inte tas bort."
 
-msgid "A reload request has been sent to the daemon."
+msgid ""
+"A mounted disk or partition will be unmounted temporarily to perform the "
+"requested action."
 msgstr ""
+
+msgid "A reload request has been sent to the daemon."
+msgstr "En omladdningbegäran har sänts till demonen."
 
 msgid "A route to this destination network already exists."
 msgstr "Nätverks destinationen finns redan."
@@ -822,14 +829,19 @@ msgid ""
 "does not use CHAP authentication it defines authorised users and secrets for "
 "additional security."
 msgstr ""
+"En Autentiseringsgrupp identifieras av ett nummer och är frivillig. Om målet "
+"inte använder CHAP autentisering definierar den godkända användare och "
+"hemligheter för extra säkerhet."
 
 msgid "An Extent defines the storage area of the Target."
-msgstr ""
+msgstr "En utökning definierar lagringsarean på målet."
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
 "initiator names and networks."
 msgstr ""
+"En Initierargrupp identifieras av en nummer och definierar godkända "
+"initiatornamn och nätverk."
 
 msgid "An host with this name already exists."
 msgstr "En värd med det här namnet finns redan."
@@ -1537,7 +1549,7 @@ msgstr ""
 "komprimeringsgrad). För nuvarande är 'gzip' ekvivalent med 'gzip-6'."
 
 msgid "Controls the dedup method."
-msgstr ""
+msgstr "Kontrollerar \"dedup\" metoden."
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Kontrollerar huruvida detta Dataset kan modifieras"
@@ -2123,7 +2135,7 @@ msgid "Detected"
 msgstr "Identifierad"
 
 msgid "Detected Language:"
-msgstr ""
+msgstr "Detekterat språk:"
 
 msgid "Detected RSYNC remote shares"
 msgstr "Upptäckte fjärranslutna RSYNC utdelningar"
@@ -3041,12 +3053,11 @@ msgstr "Radera MBR"
 msgid "Error"
 msgstr "Fel"
 
+msgid "Error Code"
+msgstr ""
+
 msgid "Error Level"
 msgstr "Felnivå"
-
-#, php-format
-msgid "Error: The changes could not be applied (error code %s)."
-msgstr "Fel: Ändringarna kunde inte verkställas (felkod %s)."
 
 msgid "Event"
 msgstr "Händelse"
@@ -3354,6 +3365,9 @@ msgstr "Formatera"
 msgid "Format Options"
 msgstr "Formateringsalternativ"
 
+msgid "Format Program"
+msgstr ""
+
 msgid "Format the report for phpBB forum."
 msgstr "Formatera rapporten för phpBB-forum"
 
@@ -3626,7 +3640,7 @@ msgid "Hosts"
 msgstr "Värdar"
 
 msgid "Hosts Setup"
-msgstr ""
+msgstr "Hosts Inställningar"
 
 msgid "Hosts allow"
 msgstr "Tillåtna värdar"
@@ -3686,7 +3700,7 @@ msgstr "IP-adress till extern syslogserver."
 
 msgid ""
 "IP addresses are resolved to hostnames when the following option is enabled:"
-msgstr ""
+msgstr "IP adresser konverteras till hostnamn när följande val är aktivt:"
 
 msgid "IP or FQDN address of remote Rsync server."
 msgstr "IP eller FQDN adress på den fjärranslutna rsync-servern."
@@ -3775,17 +3789,6 @@ msgstr ""
 "effektivt isolera klienten från en del av värdsystemets filarea."
 
 msgid ""
-"If the selected disk/partition is mounted it will be unmounted temporarily "
-"to perform selected command, otherwise the commands work in read-only "
-"mode.<br />Service disruption to users accessing this mount will occur "
-"during this process."
-msgstr ""
-"Om den valda disken/partitionen är monterad, kommer den tillfälligt att "
-"avmonteras för att utföra det valda kommandot, i annat fall kommer "
-"kommandona att fungera i endast-läsning läge.<br />Avbrott i tjänsten kommer "
-"ske för användare som använder denna montering under processen."
-
-msgid ""
 "If the server is behind a proxy set these parameters to give local services "
 "access to the internet via proxy."
 msgstr ""
@@ -3793,9 +3796,15 @@ msgstr ""
 "servern är placerad bakom en proxyserver."
 
 msgid ""
+"If this message persist take a look at the system log for more information."
+msgstr ""
+
+msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
 "their hostnames where possible."
 msgstr ""
+"Om detta val är förkryssat kommer IP adresser i serverns logfiler "
+"konverteras till hostnamn när det är möjligt."
 
 msgid ""
 "If this parameter is set, Samba attempts to first read DOS attributes "
@@ -4080,7 +4089,7 @@ msgstr ""
 "Ogiltig max. blockstorlek! Det måste vara i intervallet från %d till %d."
 
 msgid "Invalid username or password."
-msgstr ""
+msgstr "Ogiltigt användarnamn eller lösenord."
 
 msgid "Invert Selection"
 msgstr "Invertera markering"
@@ -4263,14 +4272,6 @@ msgstr "Senast utgåva: %s"
 
 msgid "Latvian"
 msgstr "Lettiska"
-
-#, php-format
-msgid ""
-"Leave '%s' for unformated disks and format them using <a "
-"href='%s'>format</a> menu."
-msgstr ""
-"Lämna '%s' för oformaterade diskar och formatera dem med <a href='%s'> "
-"formata </ a> menyn."
 
 msgid "Leave already configured auto snapshots."
 msgstr "Lämna redan konfigurerade automatiska avbilder."
@@ -4551,18 +4552,8 @@ msgstr "Maskinändelse"
 msgid "Maintenance"
 msgstr "Underhåll"
 
-#, php-format
-msgid ""
-"Make sure to select the correct number of devices:<div "
-"id='enumeration'><ul><li>RAID-Z1 should have 3, 5, or 9 disks in each "
-"vdev</li><li>RAID-Z2 should have 4, 6, or 10 disks in each vdev</li><li>RAID-"
-"Z3 should have 5, 7, or 11 disks in each vdev</li></ul></div>"
+msgid "Make sure to select the optimal number of devices"
 msgstr ""
-"Säkerställ att du väljer rätt antal enheter:<div "
-"id='enumeration'><ul><li>RAID-Z1 skall ha 3, 5, eller 9 diskar i varje "
-"vdev</li><li>RAID-Z2 skall ha 4, 6, eller 10 diskar i varje "
-"vdev</li><li>RAID-Z3 skall ha 5, 7, eller 11 diskar i varje "
-"vdev</li></ul></div>"
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Se till att du har aktiverat S.M.A.R.T. för dina enheter."
@@ -5002,7 +4993,7 @@ msgid "No DNS setting found."
 msgstr "Ingen DNS-inställning hittades"
 
 msgid "No Extent has been configured."
-msgstr ""
+msgstr "Inga utökningar har konfigurerats."
 
 msgid "No IPMI FRU data available."
 msgstr "Ingen IPMI FRU data tillgänglig"
@@ -5011,10 +5002,10 @@ msgid "No IPMI sensor data available."
 msgstr "Ingen IPMI sensor data tillgänglig"
 
 msgid "No Initiator Group has been configured."
-msgstr ""
+msgstr "Ingen Intierargrupp har konfigurerats."
 
 msgid "No Portal Group has been configured."
-msgstr ""
+msgstr "Ingen Portalgrupp har konfigurerats."
 
 msgid "No RSYNC Client configured"
 msgstr "Ingen RSYNC-klient konfigurerad"
@@ -5038,18 +5029,13 @@ msgstr ""
 "gränssnitt</a> först."
 
 msgid "No configured bridge interfaces."
-msgstr ""
+msgstr "Inga konfigurerade bryggränsnitt."
 
 msgid "No configured pools."
-msgstr ""
+msgstr "Inga konfigurerade pooler."
 
-#, php-format
-msgid ""
-"No configured virtual devices. Please add new <a href=\"%s\">virtual "
-"device</a> first."
+msgid "No configured virtual devices."
 msgstr ""
-"Inga konfigurerade virtuella enheter. Lägg till en ny <a href= "
-"\"%s\">virtuell enhet</a>först."
 
 msgid "No device selected."
 msgstr "Ingen enhet vald."
@@ -5057,11 +5043,8 @@ msgstr "Ingen enhet vald."
 msgid "No disk configured"
 msgstr "Ingen disk konfigurerad"
 
-#, php-format
-msgid "No disks available. Please add new <a href='%s'>disk</a> first."
+msgid "No disks available."
 msgstr ""
-"Inga diskar tillgängliga. Var god lägg till en ny <a href='%s'>disk</a> "
-"först."
 
 msgid ""
 "No disks configured, please add disks to see the diagnostic information of "
@@ -5567,28 +5550,37 @@ msgid "Platform OS"
 msgstr "Plattforms-OS"
 
 msgid "Please add a bridge interface first."
-msgstr ""
+msgstr "Vänligen lägg till ett bryggränssnitt först."
 
 msgid "Please add a new Extent first."
-msgstr ""
+msgstr "Vänligen lägg till en ny utökning först."
 
 msgid "Please add a new Initiator Group first."
-msgstr ""
+msgstr "Vänligen lägg till en ny Initierargrupp först."
 
 msgid "Please add a new Portal Group first."
+msgstr "Vänligen lägg till en ny portalgrupp först."
+
+msgid "Please add a new disk first."
+msgstr ""
+
+msgid "Please add a virtual device first."
 msgstr ""
 
 #, php-format
 msgid "Please add new %s first."
-msgstr ""
+msgstr "Vänligen lägg till ny %s först."
 
 msgid "Please add new pools first."
-msgstr ""
+msgstr "Vänligen lägg till nya pooler först."
 
 #, php-format
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr ""
 "Vänligen kontrollera <a href='%s' target='_blank'>dokumentationen</a>."
+
+msgid "Please check the documentation."
+msgstr ""
 
 msgid "Please define the Database directory location."
 msgstr "Ange platsen för databasen."
@@ -5600,7 +5592,7 @@ msgid "Please note that blanks in path names are not allowed."
 msgstr "Notera att blanktecken i sökvägarna inte är tillåtet."
 
 msgid "Please try again."
-msgstr ""
+msgstr "Försök igen."
 
 msgid "Polish"
 msgstr "Polska"
@@ -5853,11 +5845,20 @@ msgstr "RAID-5 Underhåll"
 msgid "RAID-Z1"
 msgstr "RAID-Z1"
 
+msgid "RAID-Z1 should have 3, 5, or 9 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z2"
 msgstr "RAID-Z2"
 
+msgid "RAID-Z2 should have 4, 6, or 10 disks in each vdev."
+msgstr ""
+
 msgid "RAID-Z3"
 msgstr "RAID-Z3"
+
+msgid "RAID-Z3 should have 5, 7, or 11 disks in each vdev."
+msgstr ""
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -6361,10 +6362,14 @@ msgstr "Säkerhet"
 msgid ""
 "See ZFS datasets & deduplication wiki article BEFORE using this feature."
 msgstr ""
+"Se wiki artikel om ZFS dataset & deduplikation INNAN du använder denna "
+"funktion."
 
 msgid ""
 "See ZFS volumes & deduplication wiki article BEFORE using this feature."
 msgstr ""
+"Se wiki artikel om ZFS volymer & deduplikation INNAN du använder denna "
+"funktion."
 
 msgid "See attribute E8."
 msgstr "Se attribut E8."
@@ -6393,6 +6398,10 @@ msgstr "Välj poster att ta bort från listan"
 
 msgid "Select mount point where to create the swap file."
 msgstr "Välj monteringspunkt där växlingsfilen ska skapas."
+
+msgid ""
+"Select option 'Unformatted' for unformatted disks and format them with the"
+msgstr ""
 
 msgid "Select read balance algorithm."
 msgstr "Välj läsbalanseringsalgoritm"
@@ -6837,7 +6846,7 @@ msgid "Static Routes"
 msgstr "Statiska Rutter"
 
 msgid "Static Routes Setup"
-msgstr ""
+msgstr "Inställningar för statiska rutter"
 
 msgid "Static routes"
 msgstr "Statiska rutter"
@@ -6846,7 +6855,7 @@ msgid "Status"
 msgstr "Status"
 
 msgid "Status & Information"
-msgstr ""
+msgstr "Status & Information"
 
 #, php-format
 msgid "Status report successfully sent to: %s."
@@ -7387,16 +7396,14 @@ msgstr ""
 "matchande regel. När en matchning har hittats tillämpas regeln och "
 "sökprocessen kommer att stoppa."
 
+msgid "The changes could not be applied"
+msgstr ""
+
 msgid "The changes have been applied successfully."
 msgstr "Ändringarna har verkställts."
 
-#, php-format
-msgid ""
-"The changes have been saved. You have to <a href='%s'>reboot</a> the system "
-"for the changes to take effect."
+msgid "The changes have been saved."
 msgstr ""
-"Ändringarna har sparats. Du måste <a href='%s'>återstarta</a> systemet för "
-"att ändringarna skall läsas in."
 
 msgid "The cleartext credentials with which to bind."
 msgstr ""
@@ -7415,15 +7422,8 @@ msgstr "Konfigurationen kunde inte återställas. %s"
 msgid "The configuration could not be restored. No file was uploaded!"
 msgstr "Konfigurationen kunde inte återställas. Ingen fil laddades upp!"
 
-#, php-format
-msgid ""
-"The configuration has been changed.<br />You must apply the changes in order "
-"for them to take effect.<br /><b>If this message persist take a look at the "
-"<a href='%s'>system log</a> for more information.</b>"
+msgid "The configuration has been changed."
 msgstr ""
-"Inställningarna har ändrats.<br />Du måste bekräfta ändringarna för att de "
-"skall börja gälla.<br /><b>Titta i <a href='%s'>system log</a> för mer "
-"information om detta meddelande kvarstår.</b>"
 
 msgid "The configuration has been restored. The server is now rebooting."
 msgstr "Konfigurationen har återställts. Servern startar om."
@@ -7536,7 +7536,7 @@ msgstr ""
 "ej sända katalognamnet som en del av överföringen."
 
 msgid "The disk is currently mounted!"
-msgstr ""
+msgstr "Disken är för närvarande monterad!"
 
 msgid ""
 "The disk is currently mounted! The mount point will be removed temporarily "
@@ -7586,7 +7586,7 @@ msgstr ""
 "href='%s' target='_blank'>drivrutiner</a>."
 
 msgid "The encrypted device is currently mounted!"
-msgstr ""
+msgstr "Den krypterade enheten är för närvarande monterad!"
 
 msgid "The extent name already exists."
 msgstr "Namnet på utökningen finns redan"
@@ -7606,7 +7606,7 @@ msgid "The following input errors were detected"
 msgstr "Följande felinmatningar upptäcktes"
 
 msgid "The following services will use AD authentication:"
-msgstr ""
+msgstr "Följande tjänster kommer att använda AD autentisering:"
 
 msgid "The full name contains invalid characters."
 msgstr "Det fullständiga namnet innehåller ogiltiga tecken."
@@ -7973,6 +7973,7 @@ msgstr "Inget fel inträffade, filen laddades upp med lyckat resultat."
 msgid ""
 "There is no need to start a RAID volume from here (It starts automatically)."
 msgstr ""
+"Du behöver inte starta RAID volymen härifrån (den startar automatiskt)"
 
 msgid "There must be at least 1 disks selected."
 msgstr "Åtminstone 1 disk måste vara vald."
@@ -8097,13 +8098,6 @@ msgid "This allows you to set how loud the drive is while it's operating."
 msgstr ""
 "Detta låter dig att ställa in hur högljudd hårddisken är när den arbetar."
 
-msgid ""
-"This allows you to set the file system for preformatted hard disks "
-"containing data."
-msgstr ""
-"Detta låter dig ställa in filsystemet för förformaterade hårddiskar som "
-"innehåller data."
-
 msgid "This allows you to set the transfer mode for ATA/IDE disks."
 msgstr ""
 "Detta ger dig möjlighet att sätta överföringsmetod för ATA/IDE diskar."
@@ -8144,7 +8138,7 @@ msgstr ""
 "cacheminnet i disken."
 
 msgid "This can cause a huge delay in loading the log page!"
-msgstr ""
+msgstr "Detta kan medföra en stor fördröjning vid öppning av logsidan!"
 
 #, php-format
 msgid ""
@@ -8253,6 +8247,11 @@ msgstr ""
 "Detta alternativ tillåter användare och grupper att få tillgång till en "
 "delning som skall fastställas. Användare och grupper anges, avgränsade med "
 "kommatecken. Grupper utses genom ett @ prefix."
+
+msgid ""
+"This option allows you to set the file system of already formatted disks "
+"containing data."
+msgstr ""
 
 msgid "This option applies to GEOM RAID-1 only."
 msgstr "Detta alternativ gäller endast GEOM RAID-1."
@@ -8599,7 +8598,7 @@ msgid "To match any IP address leave this field empty."
 msgstr "För att matcha varje IP-adress lämna detta fält tomt."
 
 msgid "To use Active Directory the CIFS/SMB service will enabled as well."
-msgstr ""
+msgstr "För att använda Active Directory kommer CIFS/SMB tjänsten aktiveras."
 
 #, php-format
 msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
@@ -8922,11 +8921,11 @@ msgstr "Okänd storlek"
 msgid "Unload"
 msgstr "Mata ut"
 
-msgid "Unmount disk/partition"
-msgstr "Avmontera disk/partition"
+msgid "Unmount Disk/Partition"
+msgstr ""
 
 msgid "Unmount this disk first before proceeding."
-msgstr ""
+msgstr "Avmontera disken först innan du fortsätter."
 
 msgid "Unmounting..."
 msgstr "Avmonterar..."
@@ -8991,7 +8990,7 @@ msgid "Use the specified NTP server."
 msgstr "Använd den specificerade NTP-servern."
 
 msgid "Use these specials actions for debugging only!"
-msgstr ""
+msgstr "Använd bara dessa specialåtgärder för felsökning!"
 
 #, php-format
 msgid ""
@@ -9053,7 +9052,7 @@ msgid "User ID"
 msgstr "Användar-ID"
 
 msgid "User Setup"
-msgstr ""
+msgstr "Användarinställningar"
 
 msgid "User full name."
 msgstr "Användarens fullständiga namn."
@@ -9093,6 +9092,11 @@ msgstr "Användare"
 
 msgid "Users & Groups"
 msgstr "Användare och grupper"
+
+msgid ""
+"Users will notice a service disruption when trying to access this mount "
+"while the file system check is running."
+msgstr ""
 
 #, php-format
 msgid "Using %s bytes fragment size."
@@ -9238,7 +9242,7 @@ msgid "WAN address"
 msgstr "WAN adress"
 
 msgid "WARNING"
-msgstr ""
+msgstr "VARNING"
 
 msgid "WEP"
 msgstr "WEP"
@@ -9416,7 +9420,7 @@ msgid "You can use the following parameters for substitution:"
 msgstr "Du kan använda följande parametrar för substitution(utbyte):"
 
 msgid "You can verify the result in the log file."
-msgstr ""
+msgstr "Du kan kontrollera resultatet i logfilen."
 
 #, php-format
 msgid ""
@@ -9438,6 +9442,9 @@ msgid ""
 msgstr ""
 "Du måste aktivera <a href='%s'>Zeroconf/Bonjour</a> för att annonsera denna "
 "tjänst för klienterna."
+
+msgid "You have to reboot the system for the changes to take effect."
+msgstr ""
 
 #, php-format
 msgid "You have to select at least one item for '%s'."
@@ -9473,9 +9480,14 @@ msgid ""
 "You must add at least a Portal Group, an Initiator Group and an Extent "
 "before you can configure a Target."
 msgstr ""
+"Du måste lägga till minst en Portalgrupp, en Initierargrupp och en utökning "
+"innan du kan konfigurera ett mål."
 
 msgid "You must add disks first."
 msgstr "Du måste lägga till diskar först."
+
+msgid "You must apply the changes in order for them to take effect."
+msgstr ""
 
 msgid "You must enter the same IP type for network and gateway."
 msgstr "Du måste ange samma IP-typ för nät och gateway."
@@ -9661,7 +9673,7 @@ msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
 msgid "pools"
-msgstr ""
+msgstr "pooler"
 
 msgid "rc.conf"
 msgstr "rc.conf"
@@ -9701,157 +9713,3 @@ msgstr "umount"
 
 msgid "version:"
 msgstr "version:"
-
-#~ msgid "<->"
-#~ msgstr "<->"
-
-#, php-format
-#~ msgid "No configured Extent. Please add new <a href='%s'>Extent</a> first."
-#~ msgstr ""
-#~ "Ingen konfigurerad Omfattning. Lägg till ny <a href='%s'>Extent</a> först."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Initiator Group. Please add new <a href='%s'>Initiator "
-#~ "Group</a> first."
-#~ msgstr ""
-#~ "Ingen konfigurerad Initieringsgrupp (Initiator Group). Lägg till ny <a "
-#~ "href='%s'>Initiator Group</a> först."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Portal Group. Please add new <a href='%s'>Portal Group</a> "
-#~ "first."
-#~ msgstr ""
-#~ "Ingen konfigurerad Portalgrupp (Portal Group). Lägg till ny <a "
-#~ "href='%s'>Portal Group</a> först."
-
-#, php-format
-#~ msgid "No configured pools. Please add new <a href='%s'>pools</a> first."
-#~ msgstr ""
-#~ "Inga konfigurerade pooler. Var god lägg till ny <a href='%s'>pools</a> först."
-
-#, php-format
-#~ msgid ""
-#~ "The disk is currently mounted! <a href='%s'>Unmount</a> this disk first "
-#~ "before proceeding."
-#~ msgstr ""
-#~ "Disken är redan monterad! <a href='%s'>Avmontera</a> den här disken innan Du "
-#~ "fortsätter."
-
-#, php-format
-#~ msgid ""
-#~ "The encrypted device is currently mounted! <a href='%s'>Unmount</a> this "
-#~ "disk first before proceeding."
-#~ msgstr ""
-#~ "Den krypterade enheten är redan monterad! <a href='%s'>Avmontera</a> den här "
-#~ "disken innan Du fortsätter."
-
-#~ msgid ""
-#~ "To use Active Directory the CIFS/SMB service will enabled, too. The "
-#~ "following services will use AD authentication:<div "
-#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-#~ ">System</li></ul></div>"
-#~ msgstr ""
-#~ "För att använda Active Directory måste tjänsten CIFS/SMB aktiveras. Följande "
-#~ "tjänster kommer att använda AD autenticering:<div "
-#~ "id='enumeration'><ul><li>CIFS/SMB</li><li>SSH</li><li>FTP</li><li>AFP</li><li"
-#~ ">System</li></ul></div>"
-
-#, php-format
-#~ msgid ""
-#~ "The reloading request has been sent to the daemon. You can see the result by "
-#~ "<a href=\"%s\">Log</a>."
-#~ msgstr ""
-#~ "Begäran om omladdning har skickat till daemon. Resultatet kan ses via <a "
-#~ "href=\"%s\">Log</a>."
-
-#, php-format
-#~ msgid ""
-#~ "Hint: If this is checked, IP addresses in the server logs are resolved to "
-#~ "real hostnames where possible.<br><font color='red'>Warning</font>: This can "
-#~ "cause a huge delay in loading the log page!"
-#~ msgstr ""
-#~ "Tips: Om denna är ikryssad kommer IP-adresser i serverns logfil översättas "
-#~ "till verkliga värdnamn där så är möjligt.<br><font "
-#~ "color='red'>Varning</font>:Detta kan leda till lång fördröjning vid laddning "
-#~ "av logsidan!"
-
-#~ msgid "Detected Language:<br />(Change if needed)"
-#~ msgstr "Identifiera språk:<br />(Byt om det behövs)"
-
-#~ msgid ""
-#~ "1. Use these specials actions for debugging only!<br />2. There is no need "
-#~ "of using this menu for starting a RAID volume (start automaticaly)."
-#~ msgstr ""
-#~ "Använd endast dessa åtgärder för felsökning!<br />2. Man behöver inte starta "
-#~ "RAID-volymen genom att använde denna menyn (den startar automatiskt)."
-
-#, php-format
-#~ msgid ""
-#~ "No configured bridge interfaces. Please add new <a href='%s'>bridge "
-#~ "interface</a> first."
-#~ msgstr ""
-#~ "Inga konfigurerade bryggränssnitt. Lägg till ett nytt <a href='%s'> "
-#~ "bryggränssnitt</a> först."
-
-#, php-format
-#~ msgid ""
-#~ "IP addresses are resolved to hostnames if <a href='%s'>&quot;Resolve IP "
-#~ "addresses to hostnames&quot;</a> is enabled."
-#~ msgstr ""
-#~ "IP-adresser är översatta till domännamn om<a href='%s'>&quot;Resolve IP "
-#~ "addresses to hostnames&quot;</a> är aktiverat."
-
-#~ msgid ""
-#~ "Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-#~ "<a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks_zfs_datasets_dataset' target='_blank'>ZFS datasets & "
-#~ "deduplication</a> wiki article BEFORE using this feature.</b></br>"
-#~ msgstr ""
-#~ "Styr dedup metod. <br><b><font color='red'>NOTERING/VARNING</font>: Se <a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks_zfs_datasets_dataset' target='_blank'>ZFS dataset & deduplikation</a> "
-#~ "wikiartikel FÖRE användande av denna funktion.</b></br>"
-
-#~ msgid ""
-#~ "Controls the dedup method. <br><b><font color='red'>NOTE/WARNING</font>: See "
-#~ "<a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks-zfs-volumes-volume' target='_blank'>ZFS volumes & deduplication</a> "
-#~ "wiki article BEFORE using this feature.</b></br>"
-#~ msgstr ""
-#~ "Styr dedup metod. <br><b><font color='red'>NOTERING/VARNING</font>: Se <a "
-#~ "href='http://wiki.nas4free.org/doku.php?id=documentation:setup_and_user_guide"
-#~ ":disks-zfs-volumes-volume' target='_blank'>ZFS volymer & deduplikation</a> "
-#~ "wikiartikel FÖRE användning av denna funktion.</b></br>"
-
-#~ msgid ""
-#~ "To configure the target, you must add at least Portal Group and Initiator "
-#~ "Group and Extent.<br />Portal Group which is identified by tag number "
-#~ "defines IP addresses and listening TCP ports.<br />Initiator Group which is "
-#~ "identified by tag number defines authorised initiator names and networks.<br "
-#~ "/>Auth Group which is identified by tag number and is optional if the target "
-#~ "does not use CHAP authentication defines authorised users and secrets for "
-#~ "additional security.<br />Extent defines the storage area of the target."
-#~ msgstr ""
-#~ "För att konfigurera målet, måste du lägga till minst Portalgruppen, "
-#~ "Initiatorgruppen och omfattning. <br /> Portalgruppen som identifieras av id-"
-#~ "numret definierar IP-adresser och lyssnande TCP-portar. <br /> "
-#~ "Initiatorgruppen som har identifierats genom tag-nummer definierar godkända "
-#~ "Initiator namn och nätverk. <br /> Autentiseringsgruppen som identifieras av "
-#~ "id-numret och är valbar om målet inte använder CHAP-autentisering som "
-#~ "definierar behöriga användare och hemligheter för ytterligare säkerhet. <br "
-#~ "/> Extent avser det lagerutrymme som finns på målet."
-
-#~ msgid "Invalid username or password.</br> Please try again."
-#~ msgstr "Felaktigt användarnamn eller lösenord.</br> Försök igen."
-
-#, php-format
-#~ msgid ""
-#~ "The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
-#~ "and [._-]"
-#~ msgstr ""
-#~ "Attributet '%s' får endast innehålla tecknen [a-z], [A-Z] and [0-9] och [._-"
-#~ "]."
