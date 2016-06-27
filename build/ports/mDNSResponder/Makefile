@@ -1,5 +1,5 @@
 PORTNAME=		mDNSResponder
-PORTVERSION=	576.30.4
+PORTVERSION=	625.41.2
 CATEGORIES=		net dns
 COMMENT=		Apple's mDNSResponder
 MAINTAINER=		zoon1@nas4free.org
