@@ -213,19 +213,26 @@ $(document).ready(function(){
 		<form action="interfaces_wlan_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 			<?php if ($input_errors) print_input_errors($input_errors);?>
 			<table width="100%" border="0" cellpadding="6" cellspacing="0">
-				<?php $a_if = array(); foreach (get_interface_wlist() as $ifk => $ifv) { if (preg_match('/wlan/i', $ifk)) { continue; } $a_if[$ifk] = htmlspecialchars("{$ifk} ({$ifv['mac']})"); };?>
-				<?php html_combobox("wlandev", gtext("Physical interface"), $pconfig['wlandev'], $a_if, "", true);?>
-				<?php html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("You may enter a description here for your reference."), false, 40);?>
-				<?php html_separator();?>
-				<?php html_titleline_checkbox("apmode", gtext("AP mode"), !empty($pconfig['apmode']) ? true : false, gtext("Enable"), "");?>
-				<?php html_inputbox("ap_ssid", gtext("SSID"), $pconfig['ap_ssid'], gtext("Set the desired Service Set Identifier (aka network name)."), true, 20);?>
-				<?php html_inputbox("ap_channel", gtext("Channel"), $pconfig['ap_channel'], "", true, 10);?>
-				<?php html_combobox("ap_encryption", gtext("Encryption"), $pconfig['ap_encryption'], array("wpa" => sprintf("%s / %s", gtext("WPA"), gtext("WPA2"))), "", true, false, "encryption_change()");?>
-				<?php html_combobox("ap_keymgmt", gtext("Key Management Protocol"), $pconfig['ap_keymgmt'], array("WPA-PSK" => gtext("WPA-PSK (Pre Shared Key)")), "", true);?>
-				<?php html_combobox("ap_pairwise", gtext("Pairwise"), $pconfig['ap_pairwise'], array("CCMP" => gtext("CCMP"), "CCMP TKIP" => gtext("CCMP TKIP")), "", true);?>
-				<?php html_passwordbox("ap_psk", gtext("PSK"), $pconfig['ap_psk'], gtext("Enter the passphrase that will be used in WPA-PSK mode. This must be between 8 and 63 characters long."), true, 40);?>
-				<?php html_inputbox("ap_extraoptions", gtext("Extra options"), $pconfig['ap_extraoptions'], gtext("Extra options to ifconfig (usually empty)."), false, 60);?>
-				<?php html_textarea("auxparam", gtext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gtext("These parameters are added to %s."), "hostapd.conf") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://www.freebsd.org/cgi/man.cgi?query=hostapd.conf"), false, 65, 5, false, false);?>
+				<?php
+				$a_if = array(); foreach (get_interface_wlist() as $ifk => $ifv) { if (preg_match('/wlan/i', $ifk)) { continue; } $a_if[$ifk] = htmlspecialchars("{$ifk} ({$ifv['mac']})"); };
+				html_combobox("wlandev", gtext("Physical interface"), $pconfig['wlandev'], $a_if, "", true);
+				html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("You may enter a description here for your reference."), false, 40);
+				html_separator();
+				html_titleline_checkbox("apmode", gtext("AP mode"), !empty($pconfig['apmode']) ? true : false, gtext("Enable"), "");
+				html_inputbox("ap_ssid", gtext("SSID"), $pconfig['ap_ssid'], gtext("Set the desired Service Set Identifier (aka network name)."), true, 20);
+				html_inputbox("ap_channel", gtext("Channel"), $pconfig['ap_channel'], "", true, 10);
+				html_combobox("ap_encryption", gtext("Encryption"), $pconfig['ap_encryption'], array("wpa" => sprintf("%s / %s", gtext("WPA"), gtext("WPA2"))), "", true, false, "encryption_change()");
+				html_combobox("ap_keymgmt", gtext("Key Management Protocol"), $pconfig['ap_keymgmt'], array("WPA-PSK" => gtext("WPA-PSK (Pre Shared Key)")), "", true);
+				html_combobox("ap_pairwise", gtext("Pairwise"), $pconfig['ap_pairwise'], array("CCMP" => gtext("CCMP"), "CCMP TKIP" => gtext("CCMP TKIP")), "", true);
+				html_passwordbox("ap_psk", gtext("PSK"), $pconfig['ap_psk'], gtext("Enter the passphrase that will be used in WPA-PSK mode. This must be between 8 and 63 characters long."), true, 40);
+				html_inputbox("ap_extraoptions", gtext("Extra options"), $pconfig['ap_extraoptions'], gtext("Extra options to ifconfig (usually empty)."), false, 60);
+				$helpinghand = '<a href="'
+					. 'http://www.freebsd.org/cgi/man.cgi?query=hostapd.conf'
+					. '" target="_blank">'
+					. gtext('Please check the documentation')
+					. '</a>.';
+				html_textarea("auxparam", gtext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gtext("These parameters are added to %s."), "hostapd.conf") . " " . $helpinghand, false, 65, 5, false, false);
+				?>
 			</table>
 			<div id="submit">
 				<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" />
