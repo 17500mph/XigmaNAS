@@ -1,5 +1,5 @@
 PORTNAME=		rconf
-PORTVERSION=	1.0
+PORTVERSION=	1.0.0
 PORTREVISION=	0
 CATEGORIES=		sysutils
 COMMENT=		Command-line tool to manage content of rc.conf
