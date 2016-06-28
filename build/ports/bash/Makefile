@@ -36,6 +36,7 @@ USE_GETTEXT=	  yes
 CONFIGURE_ARGS=	--without-bash-malloc \
 								--disable-rpath \
 								--enable-disabled-builtins \
+								--with-libiconv-prefix=${ICONV_PREFIX} \
 								--disable-help-builtin \
 								--disable-static-link
 CPPFLAGS+=			${PTHREAD_CFLAGS} \
