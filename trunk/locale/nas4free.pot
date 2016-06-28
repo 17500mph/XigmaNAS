@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-06-26 22:56+0000\n"
+"POT-Creation-Date: 2016-06-29 01:14+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -155,9 +155,6 @@ msgid "<b>EFI GPT partition</b> if you want to mount a GPT formatted drive (<b>d
 msgstr ""
 
 msgid "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
-msgstr ""
-
-msgid "<div id='enumeration'><ul><li>The new password is also the default root password of the system!</li></ul></div>"
 msgstr ""
 
 msgid "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync 3.0.0 or newer, and the 'before' algorithm when talking to an older rsync.</li><li>Before - File-deletions will be done before the transfer starts.</li><li>During - File-deletions will be done incrementally as the transfer happens.</li><li>Delay - File-deletions will be computed during the transfer, and then removed after the transfer completes.</li><li>After - File-deletions will be done after the transfer has completed.</li>"
@@ -1528,6 +1525,9 @@ msgstr ""
 msgid "Datasets"
 msgstr ""
 
+msgid "Date"
+msgstr ""
+
 msgid "Date & Time"
 msgstr ""
 
@@ -2592,6 +2592,9 @@ msgstr ""
 msgid "Event selection"
 msgstr ""
 
+msgid "Example: pkg add packagename."
+msgstr ""
+
 msgid "Execute"
 msgstr ""
 
@@ -2720,16 +2723,14 @@ msgstr ""
 msgid "Failed to send status report to: %s."
 msgstr ""
 
-#, php-format
-msgid "Failed to send status report. Please check the <a href='%s'>log</a> files."
+msgid "Failed to send status report."
 msgstr ""
 
 #, php-format
 msgid "Failed to send test email to: %s."
 msgstr ""
 
-#, php-format
-msgid "Failed to send test email. Please check the <a href='%s'>log</a> files."
+msgid "Failed to send test email."
 msgstr ""
 
 msgid "Failed to upload file."
@@ -3897,6 +3898,9 @@ msgstr ""
 msgid "Make sure you have already configured your <a href='%s'>Email</a> settings."
 msgstr ""
 
+msgid "Make sure you have already configured your email settings"
+msgstr ""
+
 msgid "Management"
 msgstr ""
 
@@ -4816,7 +4820,13 @@ msgstr ""
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr ""
 
+msgid "Please check the documentation"
+msgstr ""
+
 msgid "Please check the documentation."
+msgstr ""
+
+msgid "Please check the log files"
 msgstr ""
 
 msgid "Please define the Database directory location."
@@ -6658,6 +6668,9 @@ msgstr ""
 msgid "The new password does not match. Please ensure the passwords match exactly."
 msgstr ""
 
+msgid "The new password is also the default root password of the system!"
+msgstr ""
+
 msgid "The number of clients must be between 1 and 50."
 msgstr ""
 
@@ -7091,7 +7104,7 @@ msgid "This will allow server-side downscaling of very large JPEG images, it can
 msgstr ""
 
 #, php-format
-msgid "This will cause %s not to check for newer firmware versions when the <a href='%s'>%s</a> page is viewed."
+msgid "This will cause %s not to check for newer firmware versions when the %s page is viewed."
 msgstr ""
 
 msgid "This will create a recycle bin on the share."
@@ -7179,8 +7192,7 @@ msgstr ""
 msgid "To get detailed informations about TCP Wrappers check the FreeBSD <a href='%s' target='_blank'>documentation</a>."
 msgstr ""
 
-#, php-format
-msgid "To get detailed informations about writing firewall rules check the FreeBSD <a href='%s' target='_blank'>documentation</a>."
+msgid "To get detailed informations about writing firewall rules check the FreeBSD documentation"
 msgstr ""
 
 #, php-format
@@ -7881,7 +7893,7 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-msgid "You can also install a package via SSH or console using the the pkg add command.<br />Example: pkg add packagename"
+msgid "You can also install a package via SSH or console using the the pkg add command."
 msgstr ""
 
 msgid "You can use the following parameters for substitution:"
