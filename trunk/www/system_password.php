@@ -108,7 +108,14 @@ if ($_POST) {
 				</div>
 				<br>
 				<div id="remarks">
-			  	<?php html_remark("note", gtext('Note'), gettext("<div id='enumeration'><ul><li>The new password is also the default root password of the system!</li></ul></div>"));?>
+			  	<?php 
+				$helpinghand = '<div id="enumeration">'
+					. '<ul><li>'
+					. gtext('The new password is also the default root password of the system!')
+					. '</li></ul>'
+					. '</div>';
+				html_remark("note", gtext('Note'), $helpinghand);
+				?>
 				</div>
 				</br>
 				<?php include("formend.inc");?>
