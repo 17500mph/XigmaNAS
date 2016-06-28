@@ -1,6 +1,6 @@
 PORTNAME=			cdialog
-PORTVERSION=	1.2.20150920
-PORTEPOCH=	1
+PORTVERSION=	1.3.20160424
+PORTEPOCH=	0
 CATEGORIES=			devel
 COMMENT=			An enhanced version of 'dialog' to work with ncurses
 MAINTAINER=		zoon1@nas4free.org
