@@ -108,7 +108,11 @@ if ($_POST) {
 				$savemsg = gtext("Test email successfully sent.");
 				write_log(sprintf(gtext("Test email successfully sent to: %s."), $config['system']['email']['sendto']));
 			} else {
-				$failmsg = sprintf(gettext("Failed to send test email. Please check the <a href='%s'>log</a> files."), "diag_log.php");
+				$failmsg = gtext('Failed to send test email.')
+					. ' '
+					. '<a href="' . 'diag_log.php' . '">'
+					. gtext('Please check the log files')
+					. '</a>.';
 				write_log(sprintf(gtext("Failed to send test email to: %s."), $config['system']['email']['sendto']));
 			}
 		} else {

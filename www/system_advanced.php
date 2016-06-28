@@ -312,16 +312,20 @@ function powerd_change() {
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-			    		<?php html_titleline(gtext("System Settings"));?>
-					<?php html_checkbox("zeroconf", gtext("Zeroconf/Bonjour"), !empty($pconfig['zeroconf']) ? true : false, gtext("Enable Zeroconf/Bonjour to advertise services of this device."));?>
-					<?php html_checkbox("disablefm", gtext("File Manager"), !empty($pconfig['disablefm']) ? true : false, gtext("Disable file manager completely."));?>
-					<?php if ("full" !== $g['platform']):?>
-					<?php html_checkbox("disablefirmwarecheck", gtext("Firmware Check"), !empty($pconfig['disablefirmwarecheck']) ? true : false, gtext("Disable firmware version check."), sprintf(gettext("This will cause %s not to check for newer firmware versions when the <a href='%s'>%s</a> page is viewed."), get_product_name(), "system_firmware.php", gtext("System").": ".gtext("Firmware")));?>
-					<?php endif;?>
-					<?php html_checkbox("disablebeep", gtext("Speaker Beep"), !empty($pconfig['disablebeep']) ? true : false, gtext("Disable speaker beep on startup and shutdown."));?>
-					<?php html_checkbox("enabletogglemode", gtext("Toggle Mode"), !empty($pconfig['enabletogglemode']) ? true : false, gtext("Use toggle button instead of enable/disable buttons."));?>
-					<?php html_separator();?>
-			  	<tr>
+					<?php
+					html_titleline(gtext("System Settings"));
+					html_checkbox("zeroconf", gtext("Zeroconf/Bonjour"), !empty($pconfig['zeroconf']) ? true : false, gtext("Enable Zeroconf/Bonjour to advertise services of this device."));
+					html_checkbox("disablefm", gtext("File Manager"), !empty($pconfig['disablefm']) ? true : false, gtext("Disable file manager completely."));
+					if ("full" !== $g['platform']) {
+						$link = '<a href="' . 'system_firmware.php' . '">' . gtext('System') . ': ' . gtext('Firmware') . '</a>';
+						$helpinghand = sprintf(gtext('This will cause %s not to check for newer firmware versions when the %s page is viewed.'), get_product_name(), $link);
+						html_checkbox("disablefirmwarecheck", gtext("Firmware Check"), !empty($pconfig['disablefirmwarecheck']) ? true : false, gtext("Disable firmware version check."), $helpinghand);
+					}
+					html_checkbox("disablebeep", gtext("Speaker Beep"), !empty($pconfig['disablebeep']) ? true : false, gtext("Disable speaker beep on startup and shutdown."));
+					html_checkbox("enabletogglemode", gtext("Toggle Mode"), !empty($pconfig['enabletogglemode']) ? true : false, gtext("Use toggle button instead of enable/disable buttons."));
+					html_separator();
+					?>
+					<tr>
 						<td colspan="2" valign="top" class="listtopic"><?=gtext("Performance Settings");?></td>
 					</tr>
 					<?php html_checkbox("tune_enable", gtext("Tuning"), !empty($pconfig['tune_enable']) ? true : false, gtext("Enable tuning of some kernel variables."));?>
@@ -329,15 +333,15 @@ function powerd_change() {
 					<?php $a_pwmode = array("maximum" => gtext("maximum (highest performance)"), "hiadaptive" => gtext("hiadaptive (high performance)"), "adaptive" => gtext("adaptive (low power consumption)"), "minimum" => gtext("minimum (power saving)")); ?>
 					<?php html_combobox("pwmode", gtext("Power Mode"), $pconfig['pwmode'], $a_pwmode, gtext("Controls power consumption."), false);?>
 					<?php $clocks = @exec("/sbin/sysctl -q -n dev.cpu.0.freq_levels");
-					    $a_freq = array();
-					   if (!empty($clocks)) {
-						$a_tmp = preg_split("/\s/", $clocks);
+						$a_freq = array();
+						if (!empty($clocks)) {
+							$a_tmp = preg_split("/\s/", $clocks);
 						foreach ($a_tmp as $val) {
 							list($freq,$tmp) = preg_split("/\//", $val);
 							if (!empty($freq))
 								$a_freq[] = $freq;
 						}
-					   }
+						}
 					?>
 					<?php html_inputbox("pwmax", gtext("Maximum frequency"), $pconfig['pwmax'], sprintf("%s %s", gtext("CPU frequency:"), join(", ", $a_freq)).".<br />".gtext("Empty as default."), false, 5);?>
 					<?php html_inputbox("pwmin", gtext("Minimum frequency"), $pconfig['pwmin'], gtext("Empty as default."), false, 5);?>

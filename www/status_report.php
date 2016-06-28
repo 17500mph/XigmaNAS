@@ -110,10 +110,15 @@ if ($_POST) {
 		if (stristr($_POST['Submit'], gtext("Send now"))) {
 			// Send an email status report now.
 			$retval = @report_send_mail();
-			if (0 == $retval)
+			if (0 == $retval) {
 				$savemsg = gtext("Status report successfully sent.");
-			else
-				$failmsg = sprintf(gettext("Failed to send status report. Please check the <a href='%s'>log</a> files."), "diag_log.php");
+			} else {
+				$failmsg = gtext('Failed to send status report.')
+					. ' '
+					. '<a href="' . 'diag_log.php' . '">'
+					. gtext('Please check the log files')
+					. '</a>.';
+			}
 		} else {
 			// Configure cron job.
 			if (!file_exists($d_sysrebootreqd_path)) {
@@ -179,11 +184,24 @@ function enable_change(enable_change) {
 	<table width="100%" border="0" cellpadding="0" cellspacing="0">
 	  <tr>
 	    <td class="tabcont">
-	    	<?php if (0 !== email_validate_settings()) print_error_box(sprintf(gettext("Make sure you have already configured your <a href='%s'>Email</a> settings."), "system_email.php"));?>
-    		<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
-				<?php if (!empty($failmsg)) print_error_box($failmsg);?>
-			  <table width="100%" border="0" cellpadding="6" cellspacing="0">
+	    	<?php
+			if (0 !== email_validate_settings()) {
+				$helpinghand = '<a href="' . 'system_email.php' . '">'
+					. gtext('Make sure you have already configured your email settings')
+					. '</a>.';
+				print_error_box($helpinghand);
+			}
+			if (!empty($input_errors)) {
+				print_input_errors($input_errors);
+			}
+			if (!empty($savemsg)) {
+				print_info_box($savemsg);
+			}
+			if (!empty($failmsg)) {
+				print_error_box($failmsg);
+			}
+			?>
+			<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_titleline_checkbox("enable", gtext("Email Report"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
 					<tr>
 						<td width="22%" valign="top" class="vncellreq"><?=gtext("To email");?></td>
@@ -196,7 +214,10 @@ function enable_change(enable_change) {
 						<td width="22%" valign="top" class="vncell"><?=gtext("Subject");?></td>
 						<td width="78%" class="vtable">
 							<input name="subject" type="text" class="formfld" id="subject" size="74" value="<?=htmlspecialchars($pconfig['subject']);?>" /><br />
-							<span class="vexpl"><?=gtext("The subject of the email.") . " " . gettext("You can use the following parameters for substitution:");?></span><?=gettext("<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>");?>
+							<?php
+							$helpinghand = '<div id="enumeration"><ul><li>%d - ' . gtext('Date') . '</li><li>%h - ' . gtext('Hostname') . '</li></ul></div>';
+							?>
+							<span class="vexpl"><?=gtext('The subject of the email.') . ' ' . gtext('You can use the following parameters for substitution:');?></span><?=$helpinghand;?>
 						</td>
 					</tr>
 					<tr>

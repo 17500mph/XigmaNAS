@@ -149,33 +149,40 @@ function get_next_rulenumber() {
 ?>
 <?php include("fbegin.inc"); ?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td class="tabcont">
-      <form action="system_firewall_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-      	<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
-        <table width="100%" border="0" cellpadding="6" cellspacing="0">
-        	<?php html_titleline_checkbox("enable", gtext("Firewall Rule Settings"), !empty($pconfig['enable']) ? true : false, gtext("Enable"));?>
-        	<?php html_inputbox("ruleno", gtext("Rule number"), $pconfig['ruleno'], gtext("The rule number determines the order of the rule."), true, 10);?>
-					<?php html_combobox("action", gtext("Action"), $pconfig['action'], array("allow" => gtext("Allow"), "deny" => gtext("Deny"), "unreach host" => gtext("Reject")), gtext("The action which will be executed when the packet match the criteria specified below."), true);?>
-					<?php $a_interface = array("" => gtext("All"), get_ifname($config['interfaces']['lan']['if']) => "LAN"); for ($i = 1; isset($config['interfaces']['opt' . $i]); ++$i) { $a_interface[$config['interfaces']['opt' . $i]['if']] = $config['interfaces']['opt' . $i]['descr']; }?>
-					<?php html_combobox("if", gtext("Interface"), $pconfig['if'], $a_interface, gtext("Choose on which interface packets must come in to match this rule."), true);?>
-					<?php html_combobox("protocol", gtext("Protocol"), $pconfig['protocol'], array("udp" => "UDP", "tcp" => "TCP", "icmp" => "ICMP", "all" => gtext("All")), gtext("Choose which IP protocol this rule should match."), true);?>
-					<?php html_inputbox("src", gtext("Source"), $pconfig['src'], gtext("To match any IP address leave this field empty."), false, 40);?>
-					<?php html_inputbox("srcport", gtext("Source port"), $pconfig['srcport'], "", false, 5);?>
-					<?php html_inputbox("dst", gtext("Destination"), $pconfig['dst'], gtext("To match any IP address leave this field empty."), false, 40);?>
-					<?php html_inputbox("dstport", gtext("Destination port"), $pconfig['dstport'], "", false, 5);?>
-					<?php html_inputbox("extraoptions", gtext("Options"), $pconfig['extraoptions'], "", false, 40);?>
-					<?php html_combobox("direction", gtext("Direction"), $pconfig['direction'], array("in" => gtext("In"), "out" => gtext("Out"), "" => gtext("Any")), "", true);?>
-					<?php html_checkbox("log", gtext("Log"), !empty($pconfig['log']) ? true : false, gtext("Log packets that are handled by this rule to syslog."), "", false);?>
-					<?php html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("You may enter a description here for your reference."), false, 40);?>
-        </table>
+	<tr>
+		<td class="tabcont">
+			<form action="system_firewall_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
+				<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
+				<table width="100%" border="0" cellpadding="6" cellspacing="0">
+					<?php
+					html_titleline_checkbox("enable", gtext("Firewall Rule Settings"), !empty($pconfig['enable']) ? true : false, gtext("Enable"));
+					html_inputbox("ruleno", gtext("Rule number"), $pconfig['ruleno'], gtext("The rule number determines the order of the rule."), true, 10);
+					html_combobox("action", gtext("Action"), $pconfig['action'], array("allow" => gtext("Allow"), "deny" => gtext("Deny"), "unreach host" => gtext("Reject")), gtext("The action which will be executed when the packet match the criteria specified below."), true);
+					$a_interface = array("" => gtext("All"), get_ifname($config['interfaces']['lan']['if']) => "LAN"); for ($i = 1; isset($config['interfaces']['opt' . $i]); ++$i) { $a_interface[$config['interfaces']['opt' . $i]['if']] = $config['interfaces']['opt' . $i]['descr']; }
+					html_combobox("if", gtext("Interface"), $pconfig['if'], $a_interface, gtext("Choose on which interface packets must come in to match this rule."), true);
+					html_combobox("protocol", gtext("Protocol"), $pconfig['protocol'], array("udp" => "UDP", "tcp" => "TCP", "icmp" => "ICMP", "all" => gtext("All")), gtext("Choose which IP protocol this rule should match."), true);
+					html_inputbox("src", gtext("Source"), $pconfig['src'], gtext("To match any IP address leave this field empty."), false, 40);
+					html_inputbox("srcport", gtext("Source port"), $pconfig['srcport'], "", false, 5);
+					html_inputbox("dst", gtext("Destination"), $pconfig['dst'], gtext("To match any IP address leave this field empty."), false, 40);
+					html_inputbox("dstport", gtext("Destination port"), $pconfig['dstport'], "", false, 5);
+					html_inputbox("extraoptions", gtext("Options"), $pconfig['extraoptions'], "", false, 40);
+					html_combobox("direction", gtext("Direction"), $pconfig['direction'], array("in" => gtext("In"), "out" => gtext("Out"), "" => gtext("Any")), "", true);
+					html_checkbox("log", gtext("Log"), !empty($pconfig['log']) ? true : false, gtext("Log packets that are handled by this rule to syslog."), "", false);
+					html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("You may enter a description here for your reference."), false, 40);
+					?>
+				</table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" />
 					<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
 					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
-			  </div>
-			  <div id="remarks">
-					<?php html_remark("note", gtext('Note'), sprintf(gettext("To get detailed informations about writing firewall rules check the FreeBSD <a href='%s' target='_blank'>documentation</a>."), "http://www.freebsd.org/doc/en/books/handbook/firewalls-ipfw.html"));?>
+				</div>
+				<div id="remarks">
+					<?php
+					$helpinghand = '<a href="' . 'http://www.freebsd.org/doc/en/books/handbook/firewalls-ipfw.html' . '" target="_blank">'
+						. gtext('To get detailed informations about writing firewall rules check the FreeBSD documentation')
+						. '</a>.';
+					html_remark("note", gtext('Note'), $helpinghand);
+					?>
 				</div>
 				<?php include("formend.inc");?>
 			</form>
