@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-06-26 22:56+0000\n"
-"PO-Revision-Date: 2016-06-26 13:04+0000\n"
+"PO-Revision-Date: 2016-06-28 19:26+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-26 23:49+0000\n"
-"X-Generator: Launchpad (build 18111)\n"
+"X-Launchpad-Export-Date: 2016-06-28 22:14+0000\n"
+"X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
 "X-Poedit-Language: French\n"
@@ -321,6 +321,8 @@ msgid ""
 "A mounted disk or partition will be unmounted temporarily to perform the "
 "requested action."
 msgstr ""
+"Un disque ou une partition monté doit être démonté temporairement pour "
+"réaliser l'action demandée."
 
 msgid "A reload request has been sent to the daemon."
 msgstr "Une demande de rechargement a été envoyée au démon"
@@ -860,12 +862,14 @@ msgid ""
 msgstr ""
 
 msgid "An Extent defines the storage area of the Target."
-msgstr ""
+msgstr "Une Extension definit la zone de stockage de la Cible."
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
 "initiator names and networks."
 msgstr ""
+"Un groupe initiateur est identifié par un numéro de tag et définit un nom "
+"d'initiateur autorisé ainsi qu'un réseau."
 
 msgid "An host with this name already exists."
 msgstr "Une hôte portant ce nom existe déjà."
@@ -3118,13 +3122,13 @@ msgid ""
 msgstr "périphérique entier"
 
 msgid "Erase MBR"
-msgstr ""
+msgstr "Effacer MBR"
 
 msgid "Error"
 msgstr "Erreur"
 
 msgid "Error Code"
-msgstr ""
+msgstr "Code Erreur"
 
 msgid "Error Level"
 msgstr "Niveau d’erreur"
@@ -3436,7 +3440,7 @@ msgid "Format"
 msgstr "Formater"
 
 msgid "Format Options"
-msgstr ""
+msgstr "Options de mise en forme"
 
 msgid "Format Program"
 msgstr ""
@@ -3717,7 +3721,7 @@ msgid "Hosts"
 msgstr "Hôtes"
 
 msgid "Hosts Setup"
-msgstr ""
+msgstr "Configuration de l'hôte"
 
 msgid "Hosts allow"
 msgstr "Hôtes autorisés"
@@ -3787,13 +3791,13 @@ msgid "IP type mismatch for network and gateway."
 msgstr "Le type d'IP ne correspond pas au réseau et à la passerelle."
 
 msgid "IPMI FRU"
-msgstr ""
+msgstr "IPMI FRU"
 
 msgid "IPMI Sensor"
-msgstr ""
+msgstr "Capteur  IPMI"
 
 msgid "IPMI Stats"
-msgstr ""
+msgstr "Statistiques IPMI"
 
 msgid "IPv4 Configuration"
 msgstr "Configuration IPv4"
@@ -4598,7 +4602,7 @@ msgid "Low voltage trimming transfer point"
 msgstr "Point de transfert de rognage de basse tension"
 
 msgid "Lower"
-msgstr ""
+msgstr "Inférieur"
 
 msgid ""
 "Lowest value is higher priority. For master node, use 0 or 1. If preempt is "
@@ -4657,7 +4661,7 @@ msgid "Maintenance"
 msgstr "Maintenance"
 
 msgid "Make sure to select the optimal number of devices"
-msgstr ""
+msgstr "Assurez vous d'avoir sélectionné le nombre de périphérique optimal"
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Assurez-vous que vous avez activé S.M.A.R.T. pour vos périphériques."
@@ -5098,19 +5102,19 @@ msgid "No DNS setting found."
 msgstr "Pas de configuration DNS trouvée."
 
 msgid "No Extent has been configured."
-msgstr ""
+msgstr "Aucune extension n'a été configurée"
 
 msgid "No IPMI FRU data available."
-msgstr ""
+msgstr "Pas de données FRU IPMI disponibles."
 
 msgid "No IPMI sensor data available."
-msgstr ""
+msgstr "Pas de données de capteur  IPMI disponibles."
 
 msgid "No Initiator Group has been configured."
-msgstr ""
+msgstr "Aucun Groupe Initiateur n'a été configuré."
 
 msgid "No Portal Group has been configured."
-msgstr ""
+msgstr "Aucun Groupe Portail n'a été configuré."
 
 msgid "No RSYNC Client configured"
 msgstr "Aucun client RSYNC configuré"
@@ -5140,7 +5144,7 @@ msgid "No configured pools."
 msgstr "Pas de pool configuré"
 
 msgid "No configured virtual devices."
-msgstr ""
+msgstr "Aucun périphérique virtuel configuré."
 
 msgid "No device selected."
 msgstr "Aucun périphérique sélectionné."
@@ -5149,7 +5153,7 @@ msgid "No disk configured"
 msgstr "Aucun disque configuré"
 
 msgid "No disks available."
-msgstr ""
+msgstr "Pas de disques disponible."
 
 msgid ""
 "No disks configured, please add disks to see the diagnostic information of "
@@ -5670,17 +5674,17 @@ msgid "Please add a new Portal Group first."
 msgstr "S'il vous plaît créez d'abord un nouveau groupe Portail"
 
 msgid "Please add a new disk first."
-msgstr ""
+msgstr "Ajouter d'abord un nouveau disque."
 
 msgid "Please add a virtual device first."
-msgstr ""
+msgstr "Ajouter d'abord un périphérique virtuel."
 
 #, php-format
 msgid "Please add new %s first."
 msgstr "S'il vous plaît créez d'abord un nouveau %s ."
 
 msgid "Please add new pools first."
-msgstr ""
+msgstr "Ajouter d'abord de nouveaux pools."
 
 #, php-format
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
@@ -5688,7 +5692,7 @@ msgstr ""
 "Veuillez consulter la <a href='%s' target='_blank'>documentation</a>."
 
 msgid "Please check the documentation."
-msgstr ""
+msgstr "S'il vous plaît consulter la documentation."
 
 msgid "Please define the Database directory location."
 msgstr "Veuillez définir l'emplacement du répertoire de la base de données."
@@ -5964,19 +5968,19 @@ msgid "RAID-Z1"
 msgstr "RAID-Z1"
 
 msgid "RAID-Z1 should have 3, 5, or 9 disks in each vdev."
-msgstr ""
+msgstr "RAID-Z1 doit avoir 3, 5 ou 9 disques dans chaque vdev."
 
 msgid "RAID-Z2"
 msgstr "RAID-Z2"
 
 msgid "RAID-Z2 should have 4, 6, or 10 disks in each vdev."
-msgstr ""
+msgstr "RAID-Z2 doit avoir 4, 6 ou 10 disques dans chaque vdev."
 
 msgid "RAID-Z3"
 msgstr "RAID-Z3"
 
 msgid "RAID-Z3 should have 5, 7, or 11 disks in each vdev."
-msgstr ""
+msgstr "RAID-Z3 doit avoir 5, 7 ou 11 disques dans chaque vdev."
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -6062,7 +6066,7 @@ msgid "Read/Write Access"
 msgstr "Accès en Lecture/Écriture"
 
 msgid "Reading"
-msgstr ""
+msgstr "Lecture"
 
 msgid "Readonly"
 msgstr "Lecture seule"
@@ -6083,7 +6087,7 @@ msgid "Receive Buffer Size"
 msgstr "Taille du tampon de réception"
 
 msgid "Record is locked"
-msgstr ""
+msgstr "L'enregistrement est verrouillé."
 
 msgid "Recurse into directories."
 msgstr "Parcourir récursivement les répertoires."
@@ -6495,6 +6499,8 @@ msgstr ""
 msgid ""
 "See ZFS volumes & deduplication wiki article BEFORE using this feature."
 msgstr ""
+"Voir les articles wiki sur les volumes ZFS et la déduplication  AVANT "
+"d'utiliser cette fonctionnalité."
 
 msgid "See attribute E8."
 msgstr "Voir l'attribut E8"
@@ -6981,7 +6987,7 @@ msgid "Status"
 msgstr "Statut"
 
 msgid "Status & Information"
-msgstr ""
+msgstr "Status & Information"
 
 #, php-format
 msgid "Status report successfully sent to: %s."
@@ -6991,7 +6997,7 @@ msgid "Status report successfully sent."
 msgstr "Rapport d'état envoyé avec succès."
 
 msgid "Step"
-msgstr ""
+msgstr "Étape"
 
 msgid "Stop"
 msgstr "Arrêter"
@@ -7137,7 +7143,7 @@ msgid "System Settings"
 msgstr "Configuration du système"
 
 msgid "System bios"
-msgstr "Le syst&egrave;me BIOS"
+msgstr "Le système BIOS"
 
 msgid "System events"
 msgstr "Evénements système"
@@ -7457,12 +7463,16 @@ msgstr "L'attribut '%s' est requis."
 msgid ""
 "The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."
 msgstr ""
+"L' attribut '%s' doit uniquement contenir les caractères [a-z], [A-Z] et [0-"
+"9]."
 
 #, php-format
 msgid ""
 "The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
 "and [._-]."
 msgstr ""
+"L' attribut '%s' doit contenir uniquement les caractères [a-z], [A-Z], [0-9] "
+"et [._-]."
 
 #, php-format
 msgid ""
@@ -7532,13 +7542,13 @@ msgstr ""
 "qu'une règle est satisfaite, elle est appliquée et la recherche est arrêtée."
 
 msgid "The changes could not be applied"
-msgstr ""
+msgstr "Les changements ne peuvent être appliqués"
 
 msgid "The changes have been applied successfully."
 msgstr "Les modifications ont été appliquées avec succès."
 
 msgid "The changes have been saved."
-msgstr ""
+msgstr "Les changements ont été enregistrés."
 
 msgid "The cleartext credentials with which to bind."
 msgstr "Mot de passe en clair utilisé pour le bind."
@@ -7558,7 +7568,7 @@ msgstr ""
 "La configuration n'a pas pu être restauré. Aucun fichier n'a été téléchargé!"
 
 msgid "The configuration has been changed."
-msgstr ""
+msgstr "La configuration a été changée."
 
 msgid "The configuration has been restored. The server is now rebooting."
 msgstr "La configuration a été restaurée. Le serveur reboote."
@@ -7678,7 +7688,7 @@ msgstr ""
 "n'a pas besoin d'indiquer le nom du répertoire dans le transfert."
 
 msgid "The disk is currently mounted!"
-msgstr ""
+msgstr "Le disque est actellement monté!"
 
 msgid ""
 "The disk is currently mounted! The mount point will be removed temporarily "
@@ -7726,7 +7736,7 @@ msgstr ""
 "href='%s' target='_blank'>drivers</a>."
 
 msgid "The encrypted device is currently mounted!"
-msgstr ""
+msgstr "Le périphérique crypté est actellement monté!"
 
 msgid "The extent name already exists."
 msgstr "Le nom d'extension existe déjà."
@@ -9097,7 +9107,7 @@ msgid "Unload"
 msgstr "Ejecter"
 
 msgid "Unmount Disk/Partition"
-msgstr ""
+msgstr "Démonte disque / partition"
 
 msgid "Unmount this disk first before proceeding."
 msgstr ""
@@ -9131,7 +9141,7 @@ msgid "Upload directory of the webserver. The default is %s."
 msgstr "Répertoire distant de téléchargement du serveur WEB. %s par défaut."
 
 msgid "Upper"
-msgstr ""
+msgstr "Supérieur"
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
@@ -9228,7 +9238,7 @@ msgid "User ID"
 msgstr "Identifiant de l'utilisateur"
 
 msgid "User Setup"
-msgstr ""
+msgstr "Configuration des Utilisateurs"
 
 msgid "User full name."
 msgstr "Nom complet de l'utilisateur."
@@ -9415,7 +9425,7 @@ msgid "WAN address"
 msgstr "Adresse WAN"
 
 msgid "WARNING"
-msgstr ""
+msgstr "AVERTISSEMENT"
 
 msgid "WEP"
 msgstr "WEP"
@@ -9597,7 +9607,7 @@ msgid "You can use the following parameters for substitution:"
 msgstr "Vous pouvez utilisez les paramètres suivants pour substitution:"
 
 msgid "You can verify the result in the log file."
-msgstr ""
+msgstr "Vous pouvez vérifier le résultat dans le fichier journal."
 
 #, php-format
 msgid ""
@@ -9623,6 +9633,7 @@ msgstr ""
 
 msgid "You have to reboot the system for the changes to take effect."
 msgstr ""
+"Vous devez redémarrer le système pour que les changements soient appliqués."
 
 #, php-format
 msgid "You have to select at least one item for '%s'."
@@ -9658,12 +9669,14 @@ msgid ""
 "You must add at least a Portal Group, an Initiator Group and an Extent "
 "before you can configure a Target."
 msgstr ""
+"Vous devez ajouter au moins un groupe de Portail, un groupe initiateur et "
+"une extension avant de pouvoir configurer une cible."
 
 msgid "You must add disks first."
 msgstr "Vous devez d'abord ajouter des disques."
 
 msgid "You must apply the changes in order for them to take effect."
-msgstr ""
+msgstr "Vous devez appliquer les modifications afin qu'elles prennent effet."
 
 msgid "You must enter the same IP type for network and gateway."
 msgstr ""
@@ -9706,7 +9719,7 @@ msgid "ZFS Snapshot Properties"
 msgstr "Propriétés des Instantanés ZFS"
 
 msgid "ZFS Storage Pool"
-msgstr ""
+msgstr "Pool de stockage ZFS"
 
 msgid "ZFS Volume Information & Status"
 msgstr "Informations et statu des Volumes ZFS"
@@ -9829,7 +9842,7 @@ msgid "mount"
 msgstr "montage"
 
 msgid "mount point"
-msgstr ""
+msgstr "Point de montage"
 
 msgid "n/a"
 msgstr "n/a"
@@ -9850,7 +9863,7 @@ msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
 msgid "pools"
-msgstr ""
+msgstr "pools"
 
 msgid "rc.conf"
 msgstr "rc.conf"

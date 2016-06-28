@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-06-26 22:56+0000\n"
-"PO-Revision-Date: 2016-06-25 05:09+0000\n"
+"PO-Revision-Date: 2016-06-27 05:15+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-26 23:49+0000\n"
-"X-Generator: Launchpad (build 18111)\n"
+"X-Launchpad-Export-Date: 2016-06-28 22:13+0000\n"
+"X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -306,6 +306,8 @@ msgid ""
 "A mounted disk or partition will be unmounted temporarily to perform the "
 "requested action."
 msgstr ""
+"En monterad disk eller partition kommer att avmonteras tillfälligt för att "
+"utföra åtgärden."
 
 msgid "A reload request has been sent to the daemon."
 msgstr "En omladdningbegäran har sänts till demonen."
@@ -3054,7 +3056,7 @@ msgid "Error"
 msgstr "Fel"
 
 msgid "Error Code"
-msgstr ""
+msgstr "Felkod"
 
 msgid "Error Level"
 msgstr "Felnivå"
@@ -3366,7 +3368,7 @@ msgid "Format Options"
 msgstr "Formateringsalternativ"
 
 msgid "Format Program"
-msgstr ""
+msgstr "Format Program"
 
 msgid "Format the report for phpBB forum."
 msgstr "Formatera rapporten för phpBB-forum"
@@ -3798,6 +3800,7 @@ msgstr ""
 msgid ""
 "If this message persist take a look at the system log for more information."
 msgstr ""
+"Titta i systemloggen för mer information om detta meddelande kvarstår."
 
 msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
@@ -4553,7 +4556,7 @@ msgid "Maintenance"
 msgstr "Underhåll"
 
 msgid "Make sure to select the optimal number of devices"
-msgstr ""
+msgstr "Försäkra dig om att välja optimalt antal enheter"
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Se till att du har aktiverat S.M.A.R.T. för dina enheter."
@@ -5035,7 +5038,7 @@ msgid "No configured pools."
 msgstr "Inga konfigurerade pooler."
 
 msgid "No configured virtual devices."
-msgstr ""
+msgstr "Inga konfigurerade virtuella enheter."
 
 msgid "No device selected."
 msgstr "Ingen enhet vald."
@@ -5044,7 +5047,7 @@ msgid "No disk configured"
 msgstr "Ingen disk konfigurerad"
 
 msgid "No disks available."
-msgstr ""
+msgstr "Inga diskar tillgängliga."
 
 msgid ""
 "No disks configured, please add disks to see the diagnostic information of "
@@ -5562,10 +5565,10 @@ msgid "Please add a new Portal Group first."
 msgstr "Vänligen lägg till en ny portalgrupp först."
 
 msgid "Please add a new disk first."
-msgstr ""
+msgstr "Lägg till en ny disk först."
 
 msgid "Please add a virtual device first."
-msgstr ""
+msgstr "Lägg till en ny virtuell enhet först."
 
 #, php-format
 msgid "Please add new %s first."
@@ -5580,7 +5583,7 @@ msgstr ""
 "Vänligen kontrollera <a href='%s' target='_blank'>dokumentationen</a>."
 
 msgid "Please check the documentation."
-msgstr ""
+msgstr "Kontrollera dokumentationen."
 
 msgid "Please define the Database directory location."
 msgstr "Ange platsen för databasen."
@@ -5846,19 +5849,19 @@ msgid "RAID-Z1"
 msgstr "RAID-Z1"
 
 msgid "RAID-Z1 should have 3, 5, or 9 disks in each vdev."
-msgstr ""
+msgstr "RAID-Z1 skall ha 3, 5, eller 9 diskar i varje vdev."
 
 msgid "RAID-Z2"
 msgstr "RAID-Z2"
 
 msgid "RAID-Z2 should have 4, 6, or 10 disks in each vdev."
-msgstr ""
+msgstr "RAID-Z2 skall ha 4, 6, eller 10 diskar i varje vdev."
 
 msgid "RAID-Z3"
 msgstr "RAID-Z3"
 
 msgid "RAID-Z3 should have 5, 7, or 11 disks in each vdev."
-msgstr ""
+msgstr "RAID-Z3 skall ha 5, 7, eller 11 diskar i varje vdev."
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -6402,6 +6405,7 @@ msgstr "Välj monteringspunkt där växlingsfilen ska skapas."
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
+"Välj alternativet 'Oformaterad' för oformaterade diskar och formatera dem med"
 
 msgid "Select read balance algorithm."
 msgstr "Välj läsbalanseringsalgoritm"
@@ -7397,13 +7401,13 @@ msgstr ""
 "sökprocessen kommer att stoppa."
 
 msgid "The changes could not be applied"
-msgstr ""
+msgstr "Ändringen kunde inte verkställas"
 
 msgid "The changes have been applied successfully."
 msgstr "Ändringarna har verkställts."
 
 msgid "The changes have been saved."
-msgstr ""
+msgstr "Ändringarna har sparats."
 
 msgid "The cleartext credentials with which to bind."
 msgstr ""
@@ -7423,7 +7427,7 @@ msgid "The configuration could not be restored. No file was uploaded!"
 msgstr "Konfigurationen kunde inte återställas. Ingen fil laddades upp!"
 
 msgid "The configuration has been changed."
-msgstr ""
+msgstr "Konfigurationen har ändrats."
 
 msgid "The configuration has been restored. The server is now rebooting."
 msgstr "Konfigurationen har återställts. Servern startar om."
@@ -8252,6 +8256,8 @@ msgid ""
 "This option allows you to set the file system of already formatted disks "
 "containing data."
 msgstr ""
+"Detta alternativ låter dig sätta filsystem för redan formaterade diskar som "
+"innehåller data."
 
 msgid "This option applies to GEOM RAID-1 only."
 msgstr "Detta alternativ gäller endast GEOM RAID-1."
@@ -8922,7 +8928,7 @@ msgid "Unload"
 msgstr "Mata ut"
 
 msgid "Unmount Disk/Partition"
-msgstr ""
+msgstr "Avmontera Disk/Partition"
 
 msgid "Unmount this disk first before proceeding."
 msgstr "Avmontera disken först innan du fortsätter."
@@ -9097,6 +9103,8 @@ msgid ""
 "Users will notice a service disruption when trying to access this mount "
 "while the file system check is running."
 msgstr ""
+"Användare kommer märka en störning i tjänsten när de försöker komma åt denna "
+"utdelning när en filsystemstest körs."
 
 #, php-format
 msgid "Using %s bytes fragment size."
@@ -9444,7 +9452,7 @@ msgstr ""
 "tjänst för klienterna."
 
 msgid "You have to reboot the system for the changes to take effect."
-msgstr ""
+msgstr "Du måste starta om systemet innan ändringarna slår igenom."
 
 #, php-format
 msgid "You have to select at least one item for '%s'."
@@ -9487,7 +9495,7 @@ msgid "You must add disks first."
 msgstr "Du måste lägga till diskar först."
 
 msgid "You must apply the changes in order for them to take effect."
-msgstr ""
+msgstr "Du måste godkänna ändringarna innan de slår igenom."
 
 msgid "You must enter the same IP type for network and gateway."
 msgstr "Du måste ange samma IP-typ för nät och gateway."
