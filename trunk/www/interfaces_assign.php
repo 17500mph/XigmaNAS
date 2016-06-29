@@ -230,7 +230,7 @@ if (isset($_GET['act']) && $_GET['act'] == "add") {
 					?>
 					<tr>
 						<td class="listlr" valign="middle"><strong><?=$ifdescr;?></strong></td>
-					  <td valign="middle" class="listr">
+						<td valign="middle" class="listr">
 							<select name="<?=$ifname;?>" class="formfld" id="<?=$ifname;?>">
 							  <?php foreach ($portlist as $portname => $portinfo):?>
 							  <option value="<?=$portname;?>" <?php if ($portname == $iface['if']) echo "selected=\"selected\"";?>>
@@ -255,25 +255,34 @@ if (isset($_GET['act']) && $_GET['act'] == "add") {
 							<?php endif;?>
 						</td>
 					</tr>
-				  <?php endforeach;?>
-				  <?php if (count($config['interfaces']) < count($portlist)):?>
-				  <tr>
+					<?php endforeach;?>
+					<?php if (count($config['interfaces']) < count($portlist)):?>
+					<tr>
 						<td class="list" colspan="2"></td>
 						<td class="list" nowrap="nowrap">
 							<a href="interfaces_assign.php?act=add"><img src="images/add.png" title="<?=gtext("Add interface");?>" border="0" alt="<?=gtext("Add interface");?>" /></a>
 						</td>
-				  </tr>
-				  <?php else:?>
-				  <tr>
-					<td class="list" colspan="3" height="10"></td>
-				  </tr>
-				  <?php endif;?>
+					</tr>
+					<?php else:?>
+					<tr>
+						<td class="list" colspan="3" height="10"></td>
+					</tr>
+					<?php endif;?>
 				</table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save");?>" />
 				</div>
 				<div id="remarks">
-					<?php html_remark("warning", gtext('Warning'), sprintf(gettext("After you click &quot;Save&quot;, you must reboot the server to make the changes take effect. You may also have to do one or more of the following steps before you can access your server again: <ul><li><span class='vexpl'>change the IP address of your server</span></li><li><span class='vexpl'>access the webGUI with the new IP address</span></li></ul>")));?>
+					<?php
+					$helpinghand = gtext('After you click "Save" you must reboot the server to make the changes take effect.')
+						. ' '
+						. gtext('You may also have to do one or more of the following steps before you can access your server again:')
+						. '<ul>'
+						. '<li><span class="vexpl">' . gtext('Change the IP address of your server') . '</span></li>'
+						. '<li><span class="vexpl">' . gtext('Access the webGUI with the new IP address') . '</span></li>'
+						. '</ul>';
+					html_remark("warning", gtext('Warning'), $helpinghand);
+					?>
 				</div>
 				<?php include("formend.inc");?>
 			</form>

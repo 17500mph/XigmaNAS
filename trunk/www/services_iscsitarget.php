@@ -143,7 +143,13 @@ if ($_POST) {
 		   && strcasecmp("None", $pconfig['uctlauthmethod']) != 0)
 			&& $pconfig['uctlauthgroup'] == 0) {
 			if (count($config['iscsitarget']['authgroup']) == 0) {
-				$errormsg .= sprintf(gettext("No configured Auth Group. Please add new <a href='%s'>Auth Group</a> first."), "services_iscsitarget_ag.php")."<br />\n";
+				$errormsg .= gtext('No configured Auth Group.')
+					. ' '
+					. '<a href="'
+					. 'services_iscsitarget_ag.php' . '">'
+					. gtext('Please add a new Auth Group first')
+					. '</a>.<br />'
+					. "\n";
 			}
 			$input_errors[] = sprintf(gtext("The attribute '%s' is required."), gtext("Controller Auth Group"));
 		}
@@ -251,85 +257,83 @@ function uctlenable_change(enable_change) {
 //-->
 </script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td class="tabnavtbl">
-      <ul id="tabnav">
-	<li class="tabact"><a href="services_iscsitarget.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Settings");?></span></a></li>
-	<li class="tabinact"><a href="services_iscsitarget_target.php"><span><?=gtext("Targets");?></span></a></li>
-	<li class="tabinact"><a href="services_iscsitarget_pg.php"><span><?=gtext("Portals");?></span></a></li>
-	<li class="tabinact"><a href="services_iscsitarget_ig.php"><span><?=gtext("Initiators");?></span></a></li>
-	<li class="tabinact"><a href="services_iscsitarget_ag.php"><span><?=gtext("Auths");?></span></a></li>
-	<li class="tabinact"><a href="services_iscsitarget_media.php"><span><?=gtext("Media");?></span></a></li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td class="tabcont">
-      <form action="services_iscsitarget.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-	<?php if (!empty($errormsg)) print_error_box($errormsg);?>
-	<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-	<?php if (!empty($savemsg)) print_info_box($savemsg);?>
-	<table width="100%" border="0" cellpadding="6" cellspacing="0">
-	<?php html_titleline_checkbox("enable", gtext("iSCSI Target"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
-	<?php html_inputbox("nodebase", gtext("Base Name"), $pconfig['nodebase'], gtext("The base name (e.g. iqn.2007-09.jp.ne.peach.istgt) will append the target name that is not starting with 'iqn.'."), true, 60, false);?>
-	<?php html_combobox("discoveryauthmethod", gtext("Discovery Auth Method"), $pconfig['discoveryauthmethod'], array("Auto" => gtext("Auto"), "CHAP" => gtext("CHAP"), "CHAP Mutual" => gtext("Mutual CHAP"), "None" => gtext("None")), gtext("The method can be accepted in discovery session. Auto means both none and authentication."), true);?>
-	<?php
-	    $ag_list = array();
-	    $ag_list['0'] = gtext("None");
-	    foreach($config['iscsitarget']['authgroup'] as $ag) {
-		if ($ag['comment']) {
-		    $l = sprintf(gtext("Tag%d (%s)"), $ag['tag'], $ag['comment']);
-		} else {
-		    $l = sprintf(gtext("Tag%d"), $ag['tag']);
-		}
-		$ag_list[$ag['tag']] = htmlspecialchars($l);
-	    }
-	?>
-	<?php html_combobox("discoveryauthgroup", gtext("Discovery Auth Group"), $pconfig['discoveryauthgroup'], $ag_list, gtext("The initiator can discover the targets with correct user and secret in specific Auth Group."), true);?>
-	<?php html_separator();?>
-	<?php html_titleline(gtext("Advanced Settings"));?>
-	<?php html_inputbox("timeout", gtext("I/O Timeout"), $pconfig['timeout'], sprintf(gtext("I/O timeout in seconds (%d by default)."), 30), true, 30, false);?>
-	<?php html_inputbox("nopininterval", gtext("NOPIN Interval"), $pconfig['nopininterval'], sprintf(gtext("NOPIN sending interval in seconds (%d by default)."), 20), true, 30, false);?>
-	<?php html_inputbox("maxsessions", gtext("Max. sessions"), $pconfig['maxsessions'], sprintf(gtext("Maximum number of sessions holding at same time (%d by default)."), 16), true, 30, false);?>
-	<?php html_inputbox("maxconnections", gtext("Max. connections"), $pconfig['maxconnections'], sprintf(gtext("Maximum number of connections in each session (%d by default)."), 4), true, 30, false);?>
-	<?php html_inputbox("maxr2t", gtext("Max. pre-send R2T"), $pconfig['maxr2t'], sprintf(gtext("Maximum number of pre-send R2T in each connection (%d by default). The actual number is limited to QueueDepth of the target."), 32), true, 30, false);?>
-	<?php html_inputbox("firstburstlength", gtext("FirstBurstLength"), $pconfig['firstburstlength'], sprintf(gtext("iSCSI initial parameter (%d by default)."), 262144), true, 30, false);?>
-	<?php html_inputbox("maxburstlength", gtext("MaxBurstLength"), $pconfig['maxburstlength'], sprintf(gtext("iSCSI initial parameter (%d by default)."), 1048576), true, 30, false);?>
-	<?php html_inputbox("maxrecvdatasegmentlength", gtext("MaxRecvDataSegmentLength"), $pconfig['maxrecvdatasegmentlength'], sprintf(gtext("iSCSI initial parameter (%d by default)."), 262144), true, 30, false);?>
-	<?php html_inputbox("maxoutstandingr2t", gtext("MaxOutstandingR2T"), $pconfig['maxoutstandingr2t'], sprintf(gtext("iSCSI initial parameter (%d by default)."), 16), true, 30, false);?>
-	<?php html_inputbox("defaulttime2wait", gtext("DefaultTime2Wait"), $pconfig['defaulttime2wait'], sprintf(gtext("iSCSI initial parameter (%d by default)."), 2), true, 30, false);?>
-	<?php html_inputbox("defaulttime2retain", gtext("DefaultTime2Retain"), $pconfig['defaulttime2retain'], sprintf(gtext("iSCSI initial parameter (%d by default)."), 60), true, 30, false);?>
-	<?php html_separator();?>
-	<?php html_titleline_checkbox("uctlenable", gtext("iSCSI Target Logical Unit Controller"), !empty($pconfig['uctlenable']) ? true : false, gtext("Enable"), "uctlenable_change(false)");?>
-	<?php html_inputbox("uctladdress", gtext("Controller IP address"), $pconfig['uctladdress'], sprintf(gtext("Logical Unit Controller IP address (%s by default)"), "127.0.0.1(localhost)"), true, 30, false);?>
-	<?php html_inputbox("uctlport", gtext("Controller TCP Port"), $pconfig['uctlport'], sprintf(gtext("Logical Unit Controller TCP port (%d by default)"), 3261), true, 15, false);?>
-	<?php html_inputbox("uctlnetmask", gtext("Controller Authorised network"), $pconfig['uctlnetmask'], sprintf(gtext("Logical Unit Controller Authorised network (%s by default)"), "127.0.0.1/8"), true, 30, false);?>
-	<?php html_combobox("uctlauthmethod", gtext("Controller Auth Method"), $pconfig['uctlauthmethod'], array("CHAP" => gtext("CHAP"), "CHAP mutual" => gtext("Mutual CHAP"), "None" => gtext("None")), gtext("The method can be accepted in the controller."), true);?>
-	<?php
-	    $ag_list = array();
-	    $ag_list['0'] = gtext("Must choose one");
-	    foreach($config['iscsitarget']['authgroup'] as $ag) {
-		if ($ag['comment']) {
-		    $l = sprintf(gtext("Tag%d (%s)"), $ag['tag'], $ag['comment']);
-		} else {
-		    $l = sprintf(gtext("Tag%d"), $ag['tag']);
-		}
-		$ag_list[$ag['tag']] = htmlspecialchars($l);
-	    }
-	?>
-	<?php html_combobox("uctlauthgroup", gtext("Controller Auth Group"), $pconfig['uctlauthgroup'], $ag_list, gtext("The istgtcontrol can access the targets with correct user and secret in specific Auth Group."), true);?>
-	<?php html_filechooser("mediadirectory", gtext("Media Directory"), $pconfig['mediadirectory'], gtext("Directory that contains removable media. (e.g /mnt/iscsi/)"), $g['media_path'], true);?>
-	</table>
-	<div id="submit">
-	  <input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="enable_change(true)" />
-	</div>
-	<div id="remarks">
-	  <?php html_remark("note", gtext("Note"), sprintf(gtext("You must have a minimum of %dMiB RAM for using iSCSI target."), 512));?>
-	</div>
-	<?php include("formend.inc");?>
-      </form>
-    </td>
-  </tr>
+	<tr>
+		<td class="tabnavtbl">
+			<ul id="tabnav">
+				<li class="tabact"><a href="services_iscsitarget.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Settings");?></span></a></li>
+				<li class="tabinact"><a href="services_iscsitarget_target.php"><span><?=gtext("Targets");?></span></a></li>
+				<li class="tabinact"><a href="services_iscsitarget_pg.php"><span><?=gtext("Portals");?></span></a></li>
+				<li class="tabinact"><a href="services_iscsitarget_ig.php"><span><?=gtext("Initiators");?></span></a></li>
+				<li class="tabinact"><a href="services_iscsitarget_ag.php"><span><?=gtext("Auths");?></span></a></li>
+				<li class="tabinact"><a href="services_iscsitarget_media.php"><span><?=gtext("Media");?></span></a></li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td class="tabcont">
+			<form action="services_iscsitarget.php" method="post" name="iform" id="iform" onsubmit="spinner()">
+				<?php if (!empty($errormsg)) print_error_box($errormsg);?>
+				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
+				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
+				<table width="100%" border="0" cellpadding="6" cellspacing="0">
+					<?php html_titleline_checkbox("enable", gtext("iSCSI Target"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
+					<?php html_inputbox("nodebase", gtext("Base Name"), $pconfig['nodebase'], gtext("The base name (e.g. iqn.2007-09.jp.ne.peach.istgt) will append the target name that is not starting with 'iqn.'."), true, 60, false);?>
+					<?php html_combobox("discoveryauthmethod", gtext("Discovery Auth Method"), $pconfig['discoveryauthmethod'], array("Auto" => gtext("Auto"), "CHAP" => gtext("CHAP"), "CHAP Mutual" => gtext("Mutual CHAP"), "None" => gtext("None")), gtext("The method can be accepted in discovery session. Auto means both none and authentication."), true);?>
+					<?php
+					$ag_list = array();
+					$ag_list['0'] = gtext("None");
+					foreach($config['iscsitarget']['authgroup'] as $ag) {
+						if ($ag['comment']) {
+							$l = sprintf(gtext("Tag%d (%s)"), $ag['tag'], $ag['comment']);
+						} else {
+							$l = sprintf(gtext("Tag%d"), $ag['tag']);
+						}
+						$ag_list[$ag['tag']] = htmlspecialchars($l);
+					}
+					html_combobox("discoveryauthgroup", gtext("Discovery Auth Group"), $pconfig['discoveryauthgroup'], $ag_list, gtext("The initiator can discover the targets with correct user and secret in specific Auth Group."), true);
+					html_separator();
+					html_titleline(gtext("Advanced Settings"));
+					html_inputbox("timeout", gtext("I/O Timeout"), $pconfig['timeout'], sprintf(gtext("I/O timeout in seconds (%d by default)."), 30), true, 30, false);
+					html_inputbox("nopininterval", gtext("NOPIN Interval"), $pconfig['nopininterval'], sprintf(gtext("NOPIN sending interval in seconds (%d by default)."), 20), true, 30, false);
+					html_inputbox("maxsessions", gtext("Max. sessions"), $pconfig['maxsessions'], sprintf(gtext("Maximum number of sessions holding at same time (%d by default)."), 16), true, 30, false);
+					html_inputbox("maxconnections", gtext("Max. connections"), $pconfig['maxconnections'], sprintf(gtext("Maximum number of connections in each session (%d by default)."), 4), true, 30, false);
+					html_inputbox("maxr2t", gtext("Max. pre-send R2T"), $pconfig['maxr2t'], sprintf(gtext("Maximum number of pre-send R2T in each connection (%d by default). The actual number is limited to QueueDepth of the target."), 32), true, 30, false);
+					html_inputbox("firstburstlength", gtext("FirstBurstLength"), $pconfig['firstburstlength'], sprintf(gtext("iSCSI initial parameter (%d by default)."), 262144), true, 30, false);
+					html_inputbox("maxburstlength", gtext("MaxBurstLength"), $pconfig['maxburstlength'], sprintf(gtext("iSCSI initial parameter (%d by default)."), 1048576), true, 30, false);
+					html_inputbox("maxrecvdatasegmentlength", gtext("MaxRecvDataSegmentLength"), $pconfig['maxrecvdatasegmentlength'], sprintf(gtext("iSCSI initial parameter (%d by default)."), 262144), true, 30, false);
+					html_inputbox("maxoutstandingr2t", gtext("MaxOutstandingR2T"), $pconfig['maxoutstandingr2t'], sprintf(gtext("iSCSI initial parameter (%d by default)."), 16), true, 30, false);
+					html_inputbox("defaulttime2wait", gtext("DefaultTime2Wait"), $pconfig['defaulttime2wait'], sprintf(gtext("iSCSI initial parameter (%d by default)."), 2), true, 30, false);
+					html_inputbox("defaulttime2retain", gtext("DefaultTime2Retain"), $pconfig['defaulttime2retain'], sprintf(gtext("iSCSI initial parameter (%d by default)."), 60), true, 30, false);
+					html_separator();
+					html_titleline_checkbox("uctlenable", gtext("iSCSI Target Logical Unit Controller"), !empty($pconfig['uctlenable']) ? true : false, gtext("Enable"), "uctlenable_change(false)");
+					html_inputbox("uctladdress", gtext("Controller IP address"), $pconfig['uctladdress'], sprintf(gtext("Logical Unit Controller IP address (%s by default)"), "127.0.0.1(localhost)"), true, 30, false);
+					html_inputbox("uctlport", gtext("Controller TCP Port"), $pconfig['uctlport'], sprintf(gtext("Logical Unit Controller TCP port (%d by default)"), 3261), true, 15, false);
+					html_inputbox("uctlnetmask", gtext("Controller Authorised network"), $pconfig['uctlnetmask'], sprintf(gtext("Logical Unit Controller Authorised network (%s by default)"), "127.0.0.1/8"), true, 30, false);
+					html_combobox("uctlauthmethod", gtext("Controller Auth Method"), $pconfig['uctlauthmethod'], array("CHAP" => gtext("CHAP"), "CHAP mutual" => gtext("Mutual CHAP"), "None" => gtext("None")), gtext("The method can be accepted in the controller."), true);
+					$ag_list = array();
+					$ag_list['0'] = gtext("Must choose one");
+					foreach($config['iscsitarget']['authgroup'] as $ag) {
+						if ($ag['comment']) {
+							$l = sprintf(gtext("Tag%d (%s)"), $ag['tag'], $ag['comment']);
+						} else {
+							$l = sprintf(gtext("Tag%d"), $ag['tag']);
+						}
+						$ag_list[$ag['tag']] = htmlspecialchars($l);
+					}
+					html_combobox("uctlauthgroup", gtext("Controller Auth Group"), $pconfig['uctlauthgroup'], $ag_list, gtext("The istgtcontrol can access the targets with correct user and secret in specific Auth Group."), true);
+					html_filechooser("mediadirectory", gtext("Media Directory"), $pconfig['mediadirectory'], gtext("Directory that contains removable media. (e.g /mnt/iscsi/)"), $g['media_path'], true);
+					?>
+				</table>
+				<div id="submit">
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="enable_change(true)" />
+				</div>
+				<div id="remarks">
+					<?php html_remark("note", gtext("Note"), sprintf(gtext("You must have a minimum of %dMiB RAM for using iSCSI target."), 512));?>
+				</div>
+				<?php include("formend.inc");?>
+			</form>
+		</td>
+	</tr>
 </table>
 <script type="text/javascript">
 <!--
