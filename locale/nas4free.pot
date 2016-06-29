@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-06-29 22:10+0000\n"
+"POT-Creation-Date: 2016-06-30 00:10+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -149,12 +149,6 @@ msgid "4KB wrapper"
 msgstr ""
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
-msgstr ""
-
-msgid "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
-msgstr ""
-
-msgid "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync 3.0.0 or newer, and the 'before' algorithm when talking to an older rsync.</li><li>Before - File-deletions will be done before the transfer starts.</li><li>During - File-deletions will be done incrementally as the transfer happens.</li><li>Delay - File-deletions will be computed during the transfer, and then removed after the transfer completes.</li><li>After - File-deletions will be done after the transfer has completed.</li>"
 msgstr ""
 
 msgid "A Auth Group contains authorised users and secrets for additional security."
@@ -501,6 +495,9 @@ msgid "Advanced settings"
 msgstr ""
 
 msgid "Advertisement skew"
+msgstr ""
+
+msgid "After"
 msgstr ""
 
 msgid "After - File-deletions will be done after the transfer has completed."
@@ -871,7 +868,13 @@ msgstr ""
 msgid "Battery voltage"
 msgstr ""
 
+msgid "Before"
+msgstr ""
+
 msgid "Before - File-deletions will be done before the transfer starts."
+msgstr ""
+
+msgid "Before - File-deletions will be performed before the transfer starts."
 msgstr ""
 
 msgid "Best available"
@@ -1113,6 +1116,12 @@ msgid "Check interval"
 msgstr ""
 
 msgid "Check shared secret:"
+msgstr ""
+
+msgid "Check the FreeBSD documentation for detailed information about TCP Wrappers"
+msgstr ""
+
+msgid "Check the list of available drivers"
 msgstr ""
 
 msgid "Chinese (Simplified)"
@@ -1501,8 +1510,11 @@ msgstr ""
 msgid "DNS server is empty."
 msgstr ""
 
+msgid "DO NOT abort the firmware upgrade process once it has started."
+msgstr ""
+
 #, php-format
-msgid "DO NOT abort the firmware upgrade process once it has started.<br />DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br />It is recommended that you <a href='%s'>Backup</a> the server configuration before doing a upgrade."
+msgid "DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
 msgstr ""
 
 msgid "DVD"
@@ -1580,6 +1592,9 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
+msgid "Default - Rsync will choose the 'during' algorithm when talking to rsync 3.0.0 or newer and the 'before' algorithm when talking to an older rsync."
+msgstr ""
+
 msgid "Default - Rsync will choose the 'during' algorithm when talking to rsync 3.0.0 or newer, and the 'before' algorithm when talking to an older rsync."
 msgstr ""
 
@@ -1606,6 +1621,12 @@ msgid "Define directories/URL's that require authentication."
 msgstr ""
 
 msgid "Defines when the shutdown is initiated."
+msgstr ""
+
+msgid "Delay"
+msgstr ""
+
+msgid "Delay - File-deletions will be computed during the transfer and will be done after the transfer."
 msgstr ""
 
 msgid "Delay - File-deletions will be computed during the transfer, and then removed after the transfer completes."
@@ -2127,6 +2148,9 @@ msgstr ""
 msgid "Do you want to enable selected options?"
 msgstr ""
 
+msgid "Do you want to install this firmware anyway (at your own risk)?"
+msgstr ""
+
 msgid "Do you want to toggle selected jobs?"
 msgstr ""
 
@@ -2221,6 +2245,9 @@ msgid "Duplex"
 msgstr ""
 
 msgid "Duplicate mount point name."
+msgstr ""
+
+msgid "During"
 msgstr ""
 
 msgid "During - File-deletions will be done incrementally as the transfer happens."
@@ -2997,6 +3024,9 @@ msgstr ""
 msgid "Get Target Info"
 msgstr ""
 
+msgid "Get a list of available drivers"
+msgstr ""
+
 msgid "GiB"
 msgstr ""
 
@@ -3545,6 +3575,9 @@ msgstr ""
 msgid "It is not recommanded to import non healthy pools nor virtual devices that are part of a non healthy pool."
 msgstr ""
 
+msgid "It is recommended that you backup the server configuration before you upgrade"
+msgstr ""
+
 msgid "It is recommended to use encryption before you store the backup in a safe location."
 msgstr ""
 
@@ -3932,10 +3965,6 @@ msgid "Make sure to select the optimal number of devices"
 msgstr ""
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
-msgstr ""
-
-#, php-format
-msgid "Make sure you have already configured your <a href='%s'>Email</a> settings."
 msgstr ""
 
 msgid "Make sure you have already configured your email settings"
@@ -4581,6 +4610,9 @@ msgstr ""
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr ""
 
+msgid "Only install firmwares that come from sources that you trust, and make sure that the firmware has not been tampered with."
+msgstr ""
+
 msgid "Option"
 msgstr ""
 
@@ -4858,10 +4890,6 @@ msgid "Please add new %s first."
 msgstr ""
 
 msgid "Please add new pools first."
-msgstr ""
-
-#, php-format
-msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr ""
 
 msgid "Please check the documentation"
@@ -6601,16 +6629,13 @@ msgstr ""
 msgid "The distinguished name with which to bind to the directory server, e.g. %s"
 msgstr ""
 
-#, php-format
-msgid "The driver used to communicate with your UPS. Get the list of available <a href='%s' target='_blank'>drivers</a>."
+msgid "The driver used to communicate with your UPS."
 msgstr ""
 
-#, php-format
-msgid "The driver used to communicate with your second UPS. Get the list of available <a href='%s' target='_blank'>drivers</a>."
+msgid "The driver used to communicate with your second UPS."
 msgstr ""
 
-#, php-format
-msgid "The driver used to connect with the LCD. The list of available <a href='%s' target='_blank'>drivers</a>."
+msgid "The driver used to connect with the LCD."
 msgstr ""
 
 msgid "The encrypted device is currently mounted!"
@@ -7003,8 +7028,7 @@ msgstr ""
 msgid "This can cause a huge delay in loading the log page!"
 msgstr ""
 
-#, php-format
-msgid "This configuration settings are used to generate the ups.conf configuration file which is required by the NUT UPS daemon. To get more information how to configure your UPS please check the NUT (Network UPS Tools) <a href='%s' target='_blank'>documentation</a>."
+msgid "This configuration settings are used to generate the ups.conf configuration file which is required by the NUT UPS daemon."
 msgstr ""
 
 msgid "This controls the access a remote host has to this module."
@@ -7046,7 +7070,7 @@ msgstr ""
 msgid "This is for information only (not using during iSCSI negotiation)."
 msgstr ""
 
-msgid "This means that the firmware you flashed is not an official/supported firmware and may lead to unexpected behavior or security compromises. Only install firmwares that come from sources that you trust, and make sure that the firmware has not been tampered with.<br /><br />Do you want to install this firmware anyway (on your own risk)?"
+msgid "This means that the firmware you flashed is not an official/supported firmware and may lead to unexpected behavior or security compromises."
 msgstr ""
 
 msgid "This name already exists in the disk list."
@@ -7251,15 +7275,13 @@ msgstr ""
 msgid "To email"
 msgstr ""
 
-#, php-format
-msgid "To get detailed informations about TCP Wrappers check the FreeBSD <a href='%s' target='_blank'>documentation</a>."
-msgstr ""
-
 msgid "To get detailed informations about writing firewall rules check the FreeBSD documentation"
 msgstr ""
 
-#, php-format
-msgid "To get more information how to configure LCDproc check the LCDproc <a href='%s' target='_blank'>documentation</a>."
+msgid "To get more information how to configure LCDproc check the LCDproc documentation"
+msgstr ""
+
+msgid "To get more information how to configure your UPS please check the NUT (Network UPS Tools) documentation"
 msgstr ""
 
 msgid "To increase CIFS performance try the following:"
@@ -7999,10 +8021,6 @@ msgstr ""
 msgid "You may specify logical block length (%d by default)."
 msgstr ""
 
-#, php-format
-msgid "You must <a href='%s'>reboot</a> the system before you can upgrade the firmware."
-msgstr ""
-
 msgid "You must add at least a Portal Group, an Initiator Group and an Extent before you can configure a Target."
 msgstr ""
 
@@ -8020,6 +8038,9 @@ msgid "You must have a minimum of %dMiB RAM for using iSCSI target."
 msgstr ""
 
 msgid "You must initialize data before enabling."
+msgstr ""
+
+msgid "You must reboot the system before you can upgrade the firmware"
 msgstr ""
 
 msgid "You must select at least one authentication method."
