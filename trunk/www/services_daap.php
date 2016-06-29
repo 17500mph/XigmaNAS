@@ -143,37 +143,57 @@ function enable_change(enable_change) {
 	<table width="100%" border="0" cellpadding="0" cellspacing="0">
 		<tr>
 			<td class="tabcont">
-				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
-				<?php if (!isset($config['system']['zeroconf'])) print_error_box(sprintf(gettext("You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this service to clients."), "system_advanced.php"));?>
+				<?php 
+				if (!empty($input_errors)) print_input_errors($input_errors);
+				?>
+				<?php
+				if (!empty($savemsg)) print_info_box($savemsg);
+				?>
+				<?php
+				if (!isset($config['system']['zeroconf'])) {
+					$link = '<a href="'
+						. 'system_advanced.php'
+						. '">'
+						. gtext('Zeroconf/Bonjour')
+						. '</a>';
+					print_error_box(sprintf(gtext('You have to activate %s to advertise this service to clients.'), $link));
+				}
+				?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline_checkbox("enable", gtext("Digital Audio Access Protocol"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
-					<?php html_inputbox("servername", gtext("Server name"), $pconfig['servername'], gtext("This is both the name of the server as advertised via Zeroconf/Bonjour/Rendezvous, and the name of the database exported via DAAP."), true, 20);?>
-					<?php html_inputbox("port", gtext("Port"), $pconfig['port'], gtext("Port to listen on. Default iTunes port is 3689."), true, 5);?>
-					<?php html_filechooser("dbdir", gtext("Database directory"), $pconfig['dbdir'], gtext("Location where the content database file will be stored."), $g['media_path'], true, 60);?>
-					<?php html_folderbox("content", gtext("Content"), !empty($pconfig['content']) ? $pconfig['content'] : array(), gtext("Location of the files to share."), $g['media_path'], true);?>
-					<?php html_inputbox("compdirs", gtext("Compilations directories"), $pconfig['compdirs'], gtext("Tracks whose path contains one or more of these comma separated strings will be treated as a compilation."), false, 40);?>
-					<?php html_checkbox("concatcomps", gtext("Group compilations"), !empty($pconfig['concatcomps']) ? true : false, "", gtext("Whether compilations should be shown together under Various Artists."), false);?>
-					<?php html_inputbox("rescaninterval", gtext("Rescan interval"), $pconfig['rescaninterval'], gtext("Scan file system every N seconds to see if any files have been added or removed. Set to 0 to disable background scanning. If background rescanning is disabled, a scan can still be forced from the status page of the administrative web interface."), false, 5);?>
-					<?php html_checkbox("alwaysscan", gtext("Always scan"), !empty($pconfig['alwaysscan']) ? true : false, "", gtext("Whether scans should be skipped if there are no users connected. This allows the drive to spin down when no users are connected."), false);?>
-					<?php html_checkbox("skipfirst", gtext("Skip first scan"), !empty($pconfig['skipfirst']) ? true : false, "", gtext("Whether to skip initial boot-up scan."), false);?>
-					<?php html_combobox("scantype", gtext("Scan type"), $pconfig['scantype'], array("0" => gtext("Normal"), "1" => gtext("Aggressive"), "2" => gtext("Painfully aggressive")), "", false);?>
-					<?php html_separator();?>
-					<?php html_titleline(gtext("Administrative WebGUI"));?>
-					<?php html_passwordbox("admin_pw", gtext("Password"), $pconfig['admin_pw'], sprintf("%s %s", gtext("Password for the administrative pages."), gtext("Default user name is 'admin'.")), true, 20);?>
 					<?php
+					html_titleline_checkbox("enable", gtext("Digital Audio Access Protocol"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");
+					html_inputbox("servername", gtext("Server name"), $pconfig['servername'], gtext("This is both the name of the server as advertised via Zeroconf/Bonjour/Rendezvous, and the name of the database exported via DAAP."), true, 20);
+					html_inputbox("port", gtext("Port"), $pconfig['port'], gtext("Port to listen on. Default iTunes port is 3689."), true, 5);
+					html_filechooser("dbdir", gtext("Database directory"), $pconfig['dbdir'], gtext("Location where the content database file will be stored."), $g['media_path'], true, 60);
+					html_folderbox("content", gtext("Content"), !empty($pconfig['content']) ? $pconfig['content'] : array(), gtext("Location of the files to share."), $g['media_path'], true);
+					html_inputbox("compdirs", gtext("Compilations directories"), $pconfig['compdirs'], gtext("Tracks whose path contains one or more of these comma separated strings will be treated as a compilation."), false, 40);
+					html_checkbox("concatcomps", gtext("Group compilations"), !empty($pconfig['concatcomps']) ? true : false, "", gtext("Whether compilations should be shown together under Various Artists."), false);
+					html_inputbox("rescaninterval", gtext("Rescan interval"), $pconfig['rescaninterval'], gtext("Scan file system every N seconds to see if any files have been added or removed. Set to 0 to disable background scanning. If background rescanning is disabled, a scan can still be forced from the status page of the administrative web interface."), false, 5);
+					html_checkbox("alwaysscan", gtext("Always scan"), !empty($pconfig['alwaysscan']) ? true : false, "", gtext("Whether scans should be skipped if there are no users connected. This allows the drive to spin down when no users are connected."), false);
+					html_checkbox("skipfirst", gtext("Skip first scan"), !empty($pconfig['skipfirst']) ? true : false, "", gtext("Whether to skip initial boot-up scan."), false);
+					html_combobox("scantype", gtext("Scan type"), $pconfig['scantype'], array("0" => gtext("Normal"), "1" => gtext("Aggressive"), "2" => gtext("Painfully aggressive")), "", false);
+					html_separator();
+					html_titleline(gtext("Administrative WebGUI"));
+					html_passwordbox("admin_pw", gtext("Password"), $pconfig['admin_pw'], sprintf("%s %s", gtext("Password for the administrative pages."), gtext("Default user name is 'admin'.")), true, 20);
 					$if = get_ifname($config['interfaces']['lan']['if']);
 					$ipaddr = get_ipaddr($if);
 					$url = htmlspecialchars("http://{$ipaddr}:{$pconfig['port']}");
 					$text = "<a href='{$url}' target='_blank'>{$url}</a>";
+					html_text("url", gtext("URL"), $text);
 					?>
-					<?php html_text("url", gtext("URL"), $text);?>
 				</table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="onsubmit_content(); enable_change(true)" />
 				</div>
 				<div id="remarks">
-					<?php html_remark("note", gtext('Note'), sprintf(gettext("You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this service to clients."), "system_advanced.php"));?>
+					<?php
+					$link = '<a href="'
+						. 'system_advanced.php'
+						. '">'
+						. gtext('Zeroconf/Bonjour')
+						. '</a>';
+					html_remark("note", gtext('Note'), sprintf(gtext('You have to activate %s to advertise this service to clients.'), $link));
+					?>
 				</div>
 			</td>
 		</tr>

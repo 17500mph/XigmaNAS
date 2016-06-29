@@ -148,8 +148,15 @@ function enable_change(enable_change) {
 							<br /><?=gtext("Alternate TCP port. Default is 873");?>
 						</td>
 					</tr>
-					<?php html_textarea("motd", gtext("MOTD"), $pconfig['motd'], gtext("Message of the day."), false, 65, 7, false, false);?>
-					<?php html_textarea("auxparam", gtext("Auxiliary parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", sprintf(gtext("These parameters will be added to [global] settings in %s."), "rsyncd.conf") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://rsync.samba.org/ftp/rsync/rsyncd.conf.html"), false, 65, 5, false, false);?>
+					<?php
+					html_textarea("motd", gtext("MOTD"), $pconfig['motd'], gtext("Message of the day."), false, 65, 7, false, false);
+					$helpinghand = '<a href="'
+						. 'http://rsync.samba.org/ftp/rsync/rsyncd.conf.html'
+						. '" target="_blank">'
+						. gtext('Please check the documentation')
+						. '</a>.';
+					html_textarea("auxparam", gtext("Auxiliary parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", sprintf(gtext("These parameters will be added to [global] settings in %s."), "rsyncd.conf") . " " . $helpinghand, false, 65, 5, false, false);
+					?>
 				</table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="enable_change(true)" />
