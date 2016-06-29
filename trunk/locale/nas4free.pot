@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-06-29 03:10+0000\n"
+"POT-Creation-Date: 2016-06-29 22:10+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -69,6 +69,10 @@ msgstr ""
 
 #, php-format
 msgid "%s is too long."
+msgstr ""
+
+#, php-format
+msgid "%s must be enabled for Unison to work, and the %s must have shell access."
 msgstr ""
 
 #, php-format
@@ -145,13 +149,6 @@ msgid "4KB wrapper"
 msgstr ""
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
-msgstr ""
-
-#, php-format
-msgid "<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a href='%s'>user</a> must have shell access."
-msgstr ""
-
-msgid "<b>EFI GPT partition</b> if you want to mount a GPT formatted drive (<b>default partition</b>).<br/><b>MBR partition</b> if you want to mount a UFS formatted drive or do imported disks from other OS.<br/><b>CD/DVD volume</b> if you want to mount a CD/DVD volume."
 msgstr ""
 
 msgid "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
@@ -315,6 +312,9 @@ msgid "Access Time (atime)"
 msgstr ""
 
 msgid "Access mode"
+msgstr ""
+
+msgid "Access the webGUI with the new IP address"
 msgstr ""
 
 msgid "Acoustic level"
@@ -503,12 +503,13 @@ msgstr ""
 msgid "Advertisement skew"
 msgstr ""
 
-#, php-format
-msgid "After you click &quot;Save&quot;, you may also have to do one or more of the following steps before you can access this server again: <ul><li>change the IP address of your computer</li><li>access the webGUI with the new IP address</li></ul>"
+msgid "After - File-deletions will be done after the transfer has completed."
 msgstr ""
 
-#, php-format
-msgid "After you click &quot;Save&quot;, you must reboot the server to make the changes take effect. You may also have to do one or more of the following steps before you can access your server again: <ul><li><span class='vexpl'>change the IP address of your server</span></li><li><span class='vexpl'>access the webGUI with the new IP address</span></li></ul>"
+msgid "After you click \"Save\" you may also have to do one or more of the following steps before you can access this server again:"
+msgstr ""
+
+msgid "After you click \"Save\" you must reboot the server to make the changes take effect."
 msgstr ""
 
 msgid "Age"
@@ -532,7 +533,7 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-msgid "All data in the path is overwritten. To avoid invalid data/permission, using empty UFS directory is recommended."
+msgid "All data in the path is overwritten. To avoid invalid data/permission, using an empty UFS directory is recommended."
 msgstr ""
 
 msgid "All data will be lost when you activate this option!"
@@ -720,6 +721,9 @@ msgstr ""
 msgid "Attaching provider '%s'."
 msgstr ""
 
+msgid "Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, or NTFS can result in unpredictable results, file corruption and the loss of data!"
+msgstr ""
+
 msgid "Audio"
 msgstr ""
 
@@ -865,6 +869,9 @@ msgid "Battery temperature"
 msgstr ""
 
 msgid "Battery voltage"
+msgstr ""
+
+msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
 
 msgid "Best available"
@@ -1081,6 +1088,12 @@ msgstr ""
 msgid "Change password"
 msgstr ""
 
+msgid "Change the IP address of your computer"
+msgstr ""
+
+msgid "Change the IP address of your server"
+msgstr ""
+
 msgid "Changes to this option will take effect after a reboot."
 msgstr ""
 
@@ -1090,8 +1103,7 @@ msgstr ""
 msgid "Charging Battery"
 msgstr ""
 
-#, php-format
-msgid "Check <a href=\"%s\">System|General Setup</a> before initializing."
+msgid "Check System|General Setup before initializing"
 msgstr ""
 
 msgid "Check and replace cable"
@@ -1568,6 +1580,9 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
+msgid "Default - Rsync will choose the 'during' algorithm when talking to rsync 3.0.0 or newer, and the 'before' algorithm when talking to an older rsync."
+msgstr ""
+
 msgid "Default Device Settings"
 msgstr ""
 
@@ -1591,6 +1606,9 @@ msgid "Define directories/URL's that require authentication."
 msgstr ""
 
 msgid "Defines when the shutdown is initiated."
+msgstr ""
+
+msgid "Delay - File-deletions will be computed during the transfer, and then removed after the transfer completes."
 msgstr ""
 
 msgid "Delete"
@@ -2205,6 +2223,9 @@ msgstr ""
 msgid "Duplicate mount point name."
 msgstr ""
 
+msgid "During - File-deletions will be done incrementally as the transfer happens."
+msgstr ""
+
 msgid "Dutch"
 msgstr ""
 
@@ -2338,6 +2359,12 @@ msgid "Empty as default."
 msgstr ""
 
 msgid "Enable"
+msgstr ""
+
+msgid "Enable 'Asynchronous I/O (AIO)' switch."
+msgstr ""
+
+msgid "Enable 'Large read/write' switch."
 msgstr ""
 
 msgid "Enable ACL inheritance"
@@ -2509,6 +2536,9 @@ msgid "Enable traps."
 msgstr ""
 
 msgid "Enable tuning of some kernel variables."
+msgstr ""
+
+msgid "Enable tuning switch"
 msgstr ""
 
 msgid "Enable write cache mode."
@@ -4218,6 +4248,9 @@ msgstr ""
 msgid "NOT YET AVAILABLE"
 msgstr ""
 
+msgid "NOTE"
+msgstr ""
+
 msgid "NT1"
 msgstr ""
 
@@ -4325,15 +4358,10 @@ msgstr ""
 msgid "No RSYNC Client configured"
 msgstr ""
 
-#, php-format
-msgid "No configured Auth Group. Please add new <a href='%s'>Auth Group</a> first."
+msgid "No configured Auth Group."
 msgstr ""
 
 msgid "No configured CARP interfaces."
-msgstr ""
-
-#, php-format
-msgid "No configured CARP interfaces. Please add new <a href='%s'>CARP interface</a> first."
 msgstr ""
 
 msgid "No configured bridge interfaces."
@@ -4802,6 +4830,12 @@ msgid "Platform OS"
 msgstr ""
 
 msgid "Please add a bridge interface first."
+msgstr ""
+
+msgid "Please add a new Auth Group first"
+msgstr ""
+
+msgid "Please add a new CARP interface first"
 msgstr ""
 
 msgid "Please add a new Extent first."
@@ -5432,6 +5466,9 @@ msgstr ""
 msgid "Running"
 msgstr ""
 
+msgid "Running the service as user root is not recommended for security reasons, use at your own risk!"
+msgstr ""
+
 msgid "Russian"
 msgstr ""
 
@@ -5475,6 +5512,9 @@ msgid "SSH"
 msgstr ""
 
 msgid "SSH events"
+msgstr ""
+
+msgid "SSHD"
 msgstr ""
 
 msgid "SSHD log"
@@ -5576,6 +5616,15 @@ msgid "See ZFS volumes & deduplication wiki article BEFORE using this feature."
 msgstr ""
 
 msgid "See attribute E8."
+msgstr ""
+
+msgid "Select 'CD/DVD' if you want to mount a CD/DVD volume."
+msgstr ""
+
+msgid "Select 'GPT partition' if you want to mount a GPT formatted drive"
+msgstr ""
+
+msgid "Select 'MBR partition' default partition if you want to mount a UFS formatted drive or if you want to import disks from other OS."
 msgstr ""
 
 msgid "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol Secure (HTTPS) for the WebGUI."
@@ -5735,7 +5784,7 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
 
-msgid "Set what user the service will run as (www by default). <br><b><font color='red'>NOTE</font>: Running as root is <u>not recommended</u> for security reasons, use it on your own risk!</b></br>"
+msgid "Set under which user the service should run (www by default)."
 msgstr ""
 
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
@@ -7213,8 +7262,7 @@ msgstr ""
 msgid "To get more information how to configure LCDproc check the LCDproc <a href='%s' target='_blank'>documentation</a>."
 msgstr ""
 
-#, php-format
-msgid "To increase CIFS performance try the following:<div id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a href='%s'>Tuning</a>' switch</li></ul></div>"
+msgid "To increase CIFS performance try the following:"
 msgstr ""
 
 msgid "To match any IP address leave this field empty."
@@ -7363,7 +7411,7 @@ msgid "UFS and ZFS are NATIVE filesystems of %s. Attempting to use other filesys
 msgstr ""
 
 #, php-format
-msgid "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, or NTFS can result in unpredictable results, file corruption, and loss of data!"
+msgid "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS of %s)."
 msgstr ""
 
 msgid "UFS with Soft Updates"
@@ -7910,14 +7958,14 @@ msgstr ""
 msgid "You can also install a package via SSH or console using the the pkg add command."
 msgstr ""
 
+#, php-format
+msgid "You can not mount partition '%s' where the config file is stored."
+msgstr ""
+
 msgid "You can use the following parameters for substitution:"
 msgstr ""
 
 msgid "You can verify the result in the log file."
-msgstr ""
-
-#, php-format
-msgid "You can't mount the partition '%s' where the config file is stored.<br />"
 msgstr ""
 
 msgid "You can't unmount a drive which is used by swap file, a iSCSI-target file or any other running process!"
@@ -7932,6 +7980,9 @@ msgstr ""
 
 #, php-format
 msgid "You have to select at least one item for '%s'."
+msgstr ""
+
+msgid "You may also have to do one or more of the following steps before you can access your server again:"
 msgstr ""
 
 msgid "You may enter a description here for your reference."
@@ -8166,6 +8217,9 @@ msgid "umask"
 msgstr ""
 
 msgid "umount"
+msgstr ""
+
+msgid "user"
 msgstr ""
 
 msgid "version:"
