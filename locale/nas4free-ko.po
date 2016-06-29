@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-26 22:56+0000\n"
+"POT-Creation-Date: 2016-06-29 03:10+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-28 22:14+0000\n"
+"X-Launchpad-Export-Date: 2016-06-29 01:52+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -191,11 +191,6 @@ msgid ""
 "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
 msgstr ""
 "<div id='enumeration'><ul><li>%d - 날짜</li><li>%h - 호스트 명</li></ul></div>"
-
-msgid ""
-"<div id='enumeration'><ul><li>The new password is also the default root "
-"password of the system!</li></ul></div>"
-msgstr ""
 
 msgid ""
 "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
@@ -467,6 +462,9 @@ msgstr ""
 
 msgid "Add additional scheduled self-test."
 msgstr "추가적인 자체 테스트 예약 추가"
+
+msgid "Add any supplemental parameters."
+msgstr ""
 
 msgid "Add auth group"
 msgstr "인증 그룹 추가"
@@ -1008,6 +1006,12 @@ msgstr "bind 비밀번호"
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
+
+#, php-format
+msgid ""
+"BitTorrent needs at least read & execute permissions at the mount point for "
+"directory %s!"
+msgstr ""
 
 msgid "Blank time"
 msgstr "빈 시간"
@@ -1748,6 +1752,9 @@ msgstr ""
 msgid "Datasets"
 msgstr "데이터 셋"
 
+msgid "Date"
+msgstr ""
+
 msgid "Date & Time"
 msgstr "날짜와 시간"
 
@@ -2149,6 +2156,9 @@ msgid "Disks (ATA)"
 msgstr "디스크(ATA)"
 
 msgid "Disks (ATA) information"
+msgstr ""
+
+msgid "Disks | Mount Point | Management"
 msgstr ""
 
 msgid "Display"
@@ -2868,6 +2878,9 @@ msgstr "이벤트"
 msgid "Event selection"
 msgstr ""
 
+msgid "Example: pkg add packagename."
+msgstr ""
+
 msgid "Execute"
 msgstr "실행"
 
@@ -3009,19 +3022,15 @@ msgstr ""
 msgid "Failed to send status report to: %s."
 msgstr "%s에 상태 보고서를 전송하는 데에 실패했습니다."
 
-#, php-format
-msgid ""
-"Failed to send status report. Please check the <a href='%s'>log</a> files."
-msgstr "상태 보고서를 전송하는 데에 실패했습니다. <a href='%s'>로그</a> 파일을 체크 하시기 바랍니다."
+msgid "Failed to send status report."
+msgstr ""
 
 #, php-format
 msgid "Failed to send test email to: %s."
 msgstr "%s에 테스트 전자우편 보내기 실패함."
 
-#, php-format
-msgid ""
-"Failed to send test email. Please check the <a href='%s'>log</a> files."
-msgstr "테스트 전자우편을 보내는데 실패했습니다. <a href='%s'>로그</a> 파일을 체크하십시오."
+msgid "Failed to send test email."
+msgstr ""
 
 msgid "Failed to upload file."
 msgstr "파일 업로드에 실패했습니다."
@@ -4287,6 +4296,9 @@ msgid ""
 "Make sure you have already configured your <a href='%s'>Email</a> settings."
 msgstr "당신의 <a href='%s'>전자우편</a>  설정이 이미 설정되어 있는지 확인하십시오."
 
+msgid "Make sure you have already configured your email settings"
+msgstr ""
+
 msgid "Management"
 msgstr "관리"
 
@@ -5257,7 +5269,13 @@ msgstr ""
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "<a href='%s' target='_blank'>문서</a>를 체크 하기 바랍니다."
 
+msgid "Please check the documentation"
+msgstr ""
+
 msgid "Please check the documentation."
+msgstr ""
+
+msgid "Please check the log files"
 msgstr ""
 
 msgid "Please define the Database directory location."
@@ -6170,6 +6188,12 @@ msgstr "읽기 전용으로 설정"
 
 msgid "Set share password."
 msgstr "공유 암호 설정."
+
+#, php-format
+msgid ""
+"Set the Read and Execute bits permission for Others (Access Restrictions | "
+"Mode) for the mount point %s in %s and hit Save in order to take them effect."
+msgstr ""
 
 msgid "Set the account's primary group to the given group."
 msgstr "주어진 그룹으로 계정의 기본 그룹을 설정합니다."
@@ -7277,6 +7301,9 @@ msgid ""
 "The new password does not match. Please ensure the passwords match exactly."
 msgstr ""
 
+msgid "The new password is also the default root password of the system!"
+msgstr ""
+
 msgid "The number of clients must be between 1 and 50."
 msgstr "클라이언트의 수는 1에서 50까지의 사이여야 합니다."
 
@@ -7872,10 +7899,9 @@ msgstr ""
 
 #, php-format
 msgid ""
-"This will cause %s not to check for newer firmware versions when the <a "
-"href='%s'>%s</a> page is viewed."
+"This will cause %s not to check for newer firmware versions when the %s page "
+"is viewed."
 msgstr ""
-"이것은 %s이(가) <a href='%s'>%s</a> 페이지가 보여질 경우 새 펌웨어 버전을 check 하지 않도록 할 것입니다."
 
 msgid "This will create a recycle bin on the share."
 msgstr "이것은 공유에 휴지통을 생성할 것입니다."
@@ -7970,13 +7996,10 @@ msgstr ""
 "TCP Wrapper에 관한 더 자세한 정보는 FreeBSD <a href='%s' target='_blank'>문서</a>를 참조하기 "
 "바랍니다."
 
-#, php-format
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
-"<a href='%s' target='_blank'>documentation</a>."
+"documentation"
 msgstr ""
-"방화벽 규칙을 작성하는 방법에 관한 더 자세한 정보는 FreeBSD <a href='%s' target='_blank'>문서</a>를 "
-"참조하기 바랍니다."
 
 #, php-format
 msgid ""
@@ -8757,7 +8780,7 @@ msgstr "예"
 
 msgid ""
 "You can also install a package via SSH or console using the the pkg add "
-"command.<br />Example: pkg add packagename"
+"command."
 msgstr ""
 
 msgid "You can use the following parameters for substitution:"
@@ -8777,10 +8800,8 @@ msgid ""
 msgstr "스왑 파일이나 iSCSI 타젯 파일 또는 다른 실행 프로세스에 의해 이둉되는 드라이브는 마운트 해제할 수 없습니다."
 
 #, php-format
-msgid ""
-"You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
-"service to clients."
-msgstr "이 서비스를 클라이언트에게 공지하려면 <a href='%s'>Zeroconf/Bonjour</a>를 활성화해야 합니다."
+msgid "You have to activate %s to advertise this service to clients."
+msgstr ""
 
 msgid "You have to reboot the system for the changes to take effect."
 msgstr ""
@@ -8883,9 +8904,6 @@ msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
 msgid "adaptive (low power consumption)"
-msgstr ""
-
-msgid "add any supplemental parameters"
 msgstr ""
 
 msgid "all encrypted disks are imported."
@@ -9038,3 +9056,34 @@ msgstr "마운트 해제"
 
 msgid "version:"
 msgstr ""
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
+#~ msgstr "상태 보고서를 전송하는 데에 실패했습니다. <a href='%s'>로그</a> 파일을 체크 하시기 바랍니다."
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
+#~ msgstr "테스트 전자우편을 보내는데 실패했습니다. <a href='%s'>로그</a> 파일을 체크하십시오."
+
+#, php-format
+#~ msgid ""
+#~ "This will cause %s not to check for newer firmware versions when the <a "
+#~ "href='%s'>%s</a> page is viewed."
+#~ msgstr ""
+#~ "이것은 %s이(가) <a href='%s'>%s</a> 페이지가 보여질 경우 새 펌웨어 버전을 check 하지 않도록 할 것입니다."
+
+#, php-format
+#~ msgid ""
+#~ "To get detailed informations about writing firewall rules check the FreeBSD "
+#~ "<a href='%s' target='_blank'>documentation</a>."
+#~ msgstr ""
+#~ "방화벽 규칙을 작성하는 방법에 관한 더 자세한 정보는 FreeBSD <a href='%s' target='_blank'>문서</a>를 "
+#~ "참조하기 바랍니다."
+
+#, php-format
+#~ msgid ""
+#~ "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
+#~ "service to clients."
+#~ msgstr "이 서비스를 클라이언트에게 공지하려면 <a href='%s'>Zeroconf/Bonjour</a>를 활성화해야 합니다."

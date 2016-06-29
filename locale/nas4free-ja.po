@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-26 22:56+0000\n"
+"POT-Creation-Date: 2016-06-29 03:10+0000\n"
 "PO-Revision-Date: 2015-12-19 13:07+0000\n"
 "Last-Translator: Daisuke Aoyama <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-28 22:14+0000\n"
+"X-Launchpad-Export-Date: 2016-06-29 01:52+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -202,13 +202,6 @@ msgid ""
 "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
 msgstr ""
 "<div id='enumeration'><ul><li>%d - 日付</li><li>%h - ホスト名</li></ul></div>"
-
-msgid ""
-"<div id='enumeration'><ul><li>The new password is also the default root "
-"password of the system!</li></ul></div>"
-msgstr ""
-"<div id='enumeration'><ul><li>新しいパスワードはシステムの root "
-"パスワードにもなります！</li></ul></div>"
 
 msgid ""
 "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
@@ -481,6 +474,9 @@ msgstr ""
 
 msgid "Add additional scheduled self-test."
 msgstr "スケジュールされたセルフテスト項目を追加します。"
+
+msgid "Add any supplemental parameters."
+msgstr ""
 
 msgid "Add auth group"
 msgstr "認証グループの追加"
@@ -1031,6 +1027,12 @@ msgstr "バインドパスワード"
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
+
+#, php-format
+msgid ""
+"BitTorrent needs at least read & execute permissions at the mount point for "
+"directory %s!"
+msgstr ""
 
 msgid "Blank time"
 msgstr "待機時間"
@@ -1787,6 +1789,9 @@ msgstr ""
 msgid "Datasets"
 msgstr "データセット"
 
+msgid "Date"
+msgstr ""
+
 msgid "Date & Time"
 msgstr "日付と時間"
 
@@ -2188,6 +2193,9 @@ msgstr "ディスク(ATA)"
 
 msgid "Disks (ATA) information"
 msgstr "ディスク (ATA) 情報"
+
+msgid "Disks | Mount Point | Management"
+msgstr ""
 
 msgid "Display"
 msgstr "表示"
@@ -2908,6 +2916,9 @@ msgstr "イベント"
 msgid "Event selection"
 msgstr ""
 
+msgid "Example: pkg add packagename."
+msgstr ""
+
 msgid "Execute"
 msgstr "実行"
 
@@ -3048,19 +3059,15 @@ msgstr "削除に失敗しました: %s"
 msgid "Failed to send status report to: %s."
 msgstr "ステータスレポートの送信に失敗しました。宛て先: %s"
 
-#, php-format
-msgid ""
-"Failed to send status report. Please check the <a href='%s'>log</a> files."
-msgstr "ステータスレポートの送信に失敗しました。<a href='%s'>ログ</a> ファイルを確認して下さい。"
+msgid "Failed to send status report."
+msgstr ""
 
 #, php-format
 msgid "Failed to send test email to: %s."
 msgstr "テストメールの送信に失敗しました。宛て先: %s"
 
-#, php-format
-msgid ""
-"Failed to send test email. Please check the <a href='%s'>log</a> files."
-msgstr "テストメールの送信に失敗しました。<a href='%s'>ログ</a> ファイルを確認して下さい。"
+msgid "Failed to send test email."
+msgstr ""
 
 msgid "Failed to upload file."
 msgstr "ファイルのアップロードに失敗しました。"
@@ -4342,6 +4349,9 @@ msgid ""
 "Make sure you have already configured your <a href='%s'>Email</a> settings."
 msgstr "既に <a href='%s'>メール</a> の設定が完了しているか確認して下さい。"
 
+msgid "Make sure you have already configured your email settings"
+msgstr ""
+
 msgid "Management"
 msgstr "マネージメント"
 
@@ -5314,7 +5324,13 @@ msgstr ""
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "<a href='%s' target='_blank'>ドキュメント</a> を確認してください。"
 
+msgid "Please check the documentation"
+msgstr ""
+
 msgid "Please check the documentation."
+msgstr ""
+
+msgid "Please check the log files"
 msgstr ""
 
 msgid "Please define the Database directory location."
@@ -6232,6 +6248,12 @@ msgstr "読込み専用に設定します。"
 
 msgid "Set share password."
 msgstr "共有パスワードを設定します。"
+
+#, php-format
+msgid ""
+"Set the Read and Execute bits permission for Others (Access Restrictions | "
+"Mode) for the mount point %s in %s and hit Save in order to take them effect."
+msgstr ""
 
 msgid "Set the account's primary group to the given group."
 msgstr "このアカウントのプライマリグループを設定して下さい。"
@@ -7358,6 +7380,9 @@ msgid ""
 "The new password does not match. Please ensure the passwords match exactly."
 msgstr "新しいパスワードが一致しません。正しいパスワードを入力してください。"
 
+msgid "The new password is also the default root password of the system!"
+msgstr ""
+
 msgid "The number of clients must be between 1 and 50."
 msgstr "クライアント数は 1 から 50 の範囲で指定してください。"
 
@@ -7964,9 +7989,9 @@ msgstr ""
 
 #, php-format
 msgid ""
-"This will cause %s not to check for newer firmware versions when the <a "
-"href='%s'>%s</a> page is viewed."
-msgstr "%s が <a href='%s'>%s</a> において、新しいファームウェアのバージョンチェックをしません。"
+"This will cause %s not to check for newer firmware versions when the %s page "
+"is viewed."
+msgstr ""
 
 msgid "This will create a recycle bin on the share."
 msgstr "共有領域にごみ箱が作成されます。"
@@ -8061,13 +8086,10 @@ msgstr ""
 "TCP Wrappers の詳細情報を入手するには、FreeBSD の<a href='%s' "
 "target='_blank'>ドキュメント</a>をチェックして下さい。"
 
-#, php-format
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
-"<a href='%s' target='_blank'>documentation</a>."
+"documentation"
 msgstr ""
-"ファイアウォールのルールの詳細な書き方についてはFreeBSDの<a href='%s' "
-"target='_blank'>ドキュメント</a>を確認してください。"
 
 #, php-format
 msgid ""
@@ -8854,10 +8876,8 @@ msgstr "Yes"
 
 msgid ""
 "You can also install a package via SSH or console using the the pkg add "
-"command.<br />Example: pkg add packagename"
+"command."
 msgstr ""
-"SSHによるリモートコンソールもしくはローカルコンソールでも pkg add コマンドを使用してパッケージをインストールする事が可能です。<br/>例) "
-"pkg add パッケージ名"
 
 msgid "You can use the following parameters for substitution:"
 msgstr "以下のパラメータを埋め込みできます:"
@@ -8876,11 +8896,8 @@ msgid ""
 msgstr "スワップファイルや iSCSI ターゲットとして現在使用されているドライブはアンマウントできません。"
 
 #, php-format
-msgid ""
-"You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
-"service to clients."
+msgid "You have to activate %s to advertise this service to clients."
 msgstr ""
-"このサービスをクライアントへ広告するには <a href='%s'>Zeroconf/Bonjour</a> を起動させる必要があります。"
 
 msgid "You have to reboot the system for the changes to take effect."
 msgstr ""
@@ -8984,9 +9001,6 @@ msgstr "Zeroconf/Bonjour"
 
 msgid "adaptive (low power consumption)"
 msgstr "adaptive (低消費電力)"
-
-msgid "add any supplemental parameters"
-msgstr "もしあれば補足パラメータを追加してください"
 
 msgid "all encrypted disks are imported."
 msgstr "暗号化されたディスクをすべてインポートします。"
@@ -9138,3 +9152,51 @@ msgstr "アンマウント"
 
 msgid "version:"
 msgstr "バージョン:"
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
+#~ msgstr "ステータスレポートの送信に失敗しました。<a href='%s'>ログ</a> ファイルを確認して下さい。"
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
+#~ msgstr "テストメールの送信に失敗しました。<a href='%s'>ログ</a> ファイルを確認して下さい。"
+
+#, php-format
+#~ msgid ""
+#~ "This will cause %s not to check for newer firmware versions when the <a "
+#~ "href='%s'>%s</a> page is viewed."
+#~ msgstr "%s が <a href='%s'>%s</a> において、新しいファームウェアのバージョンチェックをしません。"
+
+#, php-format
+#~ msgid ""
+#~ "To get detailed informations about writing firewall rules check the FreeBSD "
+#~ "<a href='%s' target='_blank'>documentation</a>."
+#~ msgstr ""
+#~ "ファイアウォールのルールの詳細な書き方についてはFreeBSDの<a href='%s' "
+#~ "target='_blank'>ドキュメント</a>を確認してください。"
+
+#, php-format
+#~ msgid ""
+#~ "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
+#~ "service to clients."
+#~ msgstr ""
+#~ "このサービスをクライアントへ広告するには <a href='%s'>Zeroconf/Bonjour</a> を起動させる必要があります。"
+
+#~ msgid ""
+#~ "<div id='enumeration'><ul><li>The new password is also the default root "
+#~ "password of the system!</li></ul></div>"
+#~ msgstr ""
+#~ "<div id='enumeration'><ul><li>新しいパスワードはシステムの root "
+#~ "パスワードにもなります！</li></ul></div>"
+
+#~ msgid ""
+#~ "You can also install a package via SSH or console using the the pkg add "
+#~ "command.<br />Example: pkg add packagename"
+#~ msgstr ""
+#~ "SSHによるリモートコンソールもしくはローカルコンソールでも pkg add コマンドを使用してパッケージをインストールする事が可能です。<br/>例) "
+#~ "pkg add パッケージ名"
+
+#~ msgid "add any supplemental parameters"
+#~ msgstr "もしあれば補足パラメータを追加してください"

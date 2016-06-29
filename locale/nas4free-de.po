@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-26 22:56+0000\n"
+"POT-Creation-Date: 2016-06-29 03:10+0000\n"
 "PO-Revision-Date: 2016-06-01 20:36+0000\n"
 "Last-Translator: thor123 <thorstenoesterle123@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-28 22:14+0000\n"
+"X-Launchpad-Export-Date: 2016-06-29 01:52+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -224,13 +224,6 @@ msgid ""
 msgstr ""
 "<div id='enumeration'><ul><li>%d - Datum</li><li>%h - "
 "Hostname</li></ul></div>"
-
-msgid ""
-"<div id='enumeration'><ul><li>The new password is also the default root "
-"password of the system!</li></ul></div>"
-msgstr ""
-"<div id='enumeration'><ul><li>Das neue Passwort ist auch das vorgegebene "
-"Systemverwalterpasswort des Systems!</li></ul></div>"
 
 msgid ""
 "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
@@ -531,6 +524,9 @@ msgstr "Datenträger hinzufügen"
 
 msgid "Add additional scheduled self-test."
 msgstr "Zusätzliche planmäßige Selbsttests hinzufügen."
+
+msgid "Add any supplemental parameters."
+msgstr ""
 
 msgid "Add auth group"
 msgstr "Authentifizierungsgruppe hinzufügen"
@@ -1115,6 +1111,12 @@ msgstr "Kennwort für Bind"
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
+
+#, php-format
+msgid ""
+"BitTorrent needs at least read & execute permissions at the mount point for "
+"directory %s!"
+msgstr ""
 
 msgid "Blank time"
 msgstr "untätig"
@@ -1914,6 +1916,9 @@ msgstr "Datenset ist nicht gesperrt"
 msgid "Datasets"
 msgstr "Datensätze"
 
+msgid "Date"
+msgstr ""
+
 msgid "Date & Time"
 msgstr "Datum & Zeit"
 
@@ -2327,6 +2332,9 @@ msgstr "Festplatten (ATA)"
 
 msgid "Disks (ATA) information"
 msgstr "Festplatten (ATA) Informationen"
+
+msgid "Disks | Mount Point | Management"
+msgstr ""
 
 msgid "Display"
 msgstr "Anzeige"
@@ -3093,6 +3101,9 @@ msgstr "Ereignis"
 msgid "Event selection"
 msgstr "Vorgangsauswahl"
 
+msgid "Example: pkg add packagename."
+msgstr ""
+
 msgid "Execute"
 msgstr "Ausführen"
 
@@ -3240,23 +3251,15 @@ msgstr "%s kann nicht entfernt werden"
 msgid "Failed to send status report to: %s."
 msgstr "Konnte keine Statusreport an %s senden."
 
-#, php-format
-msgid ""
-"Failed to send status report. Please check the <a href='%s'>log</a> files."
+msgid "Failed to send status report."
 msgstr ""
-"Fehler beim versenden des Statusreports. Bitte überprüfen Sie die <a "
-"href='%s'>Log-Dateien</a>."
 
 #, php-format
 msgid "Failed to send test email to: %s."
 msgstr "Fehler beim Senden der Test-E-Mail an: %s."
 
-#, php-format
-msgid ""
-"Failed to send test email. Please check the <a href='%s'>log</a> files."
+msgid "Failed to send test email."
 msgstr ""
-"Fehler beim Versenden der Test-E-Mail. Bitte überprüfen Sie die <a "
-"href='%s'>Log-Dateien</a>."
 
 msgid "Failed to upload file."
 msgstr "Das Hochladen der Datei ist fehlgeschlagen."
@@ -4617,6 +4620,9 @@ msgstr ""
 "Stellen Sie sicher, das Sie Ihre <a href='%s'>E-Mail</a>-Einstellungen schon "
 "konfiguriert haben."
 
+msgid "Make sure you have already configured your email settings"
+msgstr ""
+
 msgid "Management"
 msgstr "Management"
 
@@ -5635,7 +5641,13 @@ msgstr ""
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "Bitte überprüfe die <a href='%s' target='_blank'>Dokumentation</a>."
 
+msgid "Please check the documentation"
+msgstr ""
+
 msgid "Please check the documentation."
+msgstr ""
+
+msgid "Please check the log files"
 msgstr ""
 
 msgid "Please define the Database directory location."
@@ -6580,6 +6592,12 @@ msgstr "Schreibschutz einschalten"
 
 msgid "Set share password."
 msgstr "Setze Passwort für Freigabe."
+
+#, php-format
+msgid ""
+"Set the Read and Execute bits permission for Others (Access Restrictions | "
+"Mode) for the mount point %s in %s and hit Save in order to take them effect."
+msgstr ""
 
 msgid "Set the account's primary group to the given group."
 msgstr "Setzt die primäre Gruppe für das Konto in die vorhandene Gruppe."
@@ -7830,6 +7848,9 @@ msgstr ""
 "Das neue Passwort stimmt nicht überein. Bitte stellen Sie sicher, dass die "
 "Passwörter einander exakt entsprechen."
 
+msgid "The new password is also the default root password of the system!"
+msgstr ""
+
 msgid "The number of clients must be between 1 and 50."
 msgstr "Die Anzahl der Clients muss zwischen 1 und 50 liegen."
 
@@ -8559,11 +8580,9 @@ msgstr ""
 
 #, php-format
 msgid ""
-"This will cause %s not to check for newer firmware versions when the <a "
-"href='%s'>%s</a> page is viewed."
+"This will cause %s not to check for newer firmware versions when the %s page "
+"is viewed."
 msgstr ""
-"Damit wird %s beim Aufruf der Seite <a href='%s'>%s</a> nicht nach einer "
-"neuen Firmware suchen."
 
 msgid "This will create a recycle bin on the share."
 msgstr "Papierkorb auf der Freigabe wird eingereichtet."
@@ -8666,14 +8685,10 @@ msgstr ""
 "Um ausführliche Informationen über TCP Wrapper zu erhalten, sehen Sie in der "
 "FreeBSD <a href='%s' target='_blank'>Dokumentation</a> nach."
 
-#, php-format
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
-"<a href='%s' target='_blank'>documentation</a>."
+"documentation"
 msgstr ""
-"Um ausführliche Informationen über das Erstellen von Firewall-Regeln zu "
-"erhalten, sehen Sie in der FreeBSD <a href='%s' "
-"target='_blank'>Dokumentation</a> nach."
 
 #, php-format
 msgid ""
@@ -9511,10 +9526,8 @@ msgstr "Ja"
 
 msgid ""
 "You can also install a package via SSH or console using the the pkg add "
-"command.<br />Example: pkg add packagename"
+"command."
 msgstr ""
-"Man kann ein Paket auch mittels SSH oder der Konsole mit dem pkg add "
-"Kommando installieren.<br />Beispiel: pkg add packagename"
 
 msgid "You can use the following parameters for substitution:"
 msgstr "Die folgenden Parameter können für die Ersetzung genutzt werden"
@@ -9537,12 +9550,8 @@ msgstr ""
 "einem iSCSI-Target oder irgendeinem anderen Prozess verwendet wird."
 
 #, php-format
-msgid ""
-"You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
-"service to clients."
+msgid "You have to activate %s to advertise this service to clients."
 msgstr ""
-"Sie müssen <a href='%s'>Zeroconf/Bonjour</a> aktivieren um diesen Service "
-"den Clients bekannt zu machen."
 
 msgid "You have to reboot the system for the changes to take effect."
 msgstr ""
@@ -9658,9 +9667,6 @@ msgstr "Zeroconf/Bonjour"
 
 msgid "adaptive (low power consumption)"
 msgstr "adaptiv (geringer Stromverbrauch)"
-
-msgid "add any supplemental parameters"
-msgstr "hinzufügen von zusätzlichen Parametern"
 
 msgid "all encrypted disks are imported."
 msgstr "Alle verschl&uuml;sselten Platten importiert."
@@ -9814,3 +9820,59 @@ msgstr "Aushängen"
 
 msgid "version:"
 msgstr "Version:"
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
+#~ msgstr ""
+#~ "Fehler beim versenden des Statusreports. Bitte überprüfen Sie die <a "
+#~ "href='%s'>Log-Dateien</a>."
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
+#~ msgstr ""
+#~ "Fehler beim Versenden der Test-E-Mail. Bitte überprüfen Sie die <a "
+#~ "href='%s'>Log-Dateien</a>."
+
+#, php-format
+#~ msgid ""
+#~ "This will cause %s not to check for newer firmware versions when the <a "
+#~ "href='%s'>%s</a> page is viewed."
+#~ msgstr ""
+#~ "Damit wird %s beim Aufruf der Seite <a href='%s'>%s</a> nicht nach einer "
+#~ "neuen Firmware suchen."
+
+#, php-format
+#~ msgid ""
+#~ "To get detailed informations about writing firewall rules check the FreeBSD "
+#~ "<a href='%s' target='_blank'>documentation</a>."
+#~ msgstr ""
+#~ "Um ausführliche Informationen über das Erstellen von Firewall-Regeln zu "
+#~ "erhalten, sehen Sie in der FreeBSD <a href='%s' "
+#~ "target='_blank'>Dokumentation</a> nach."
+
+#, php-format
+#~ msgid ""
+#~ "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
+#~ "service to clients."
+#~ msgstr ""
+#~ "Sie müssen <a href='%s'>Zeroconf/Bonjour</a> aktivieren um diesen Service "
+#~ "den Clients bekannt zu machen."
+
+#~ msgid ""
+#~ "<div id='enumeration'><ul><li>The new password is also the default root "
+#~ "password of the system!</li></ul></div>"
+#~ msgstr ""
+#~ "<div id='enumeration'><ul><li>Das neue Passwort ist auch das vorgegebene "
+#~ "Systemverwalterpasswort des Systems!</li></ul></div>"
+
+#~ msgid "add any supplemental parameters"
+#~ msgstr "hinzufügen von zusätzlichen Parametern"
+
+#~ msgid ""
+#~ "You can also install a package via SSH or console using the the pkg add "
+#~ "command.<br />Example: pkg add packagename"
+#~ msgstr ""
+#~ "Man kann ein Paket auch mittels SSH oder der Konsole mit dem pkg add "
+#~ "Kommando installieren.<br />Beispiel: pkg add packagename"

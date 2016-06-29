@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-26 22:56+0000\n"
+"POT-Creation-Date: 2016-06-29 03:10+0000\n"
 "PO-Revision-Date: 2016-05-17 05:21+0000\n"
 "Last-Translator: Alf Gunnar Sørensen <alf-gunnar.sorensen@c2i.net>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-28 22:14+0000\n"
+"X-Launchpad-Export-Date: 2016-06-29 01:52+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: NORWAY\n"
 "Language: \n"
@@ -195,13 +195,6 @@ msgid ""
 "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
 msgstr ""
 "<div id='enumeration'><ul><li>%d -Dato</li><li>%h - Vertsnavn</li></ul></div>"
-
-msgid ""
-"<div id='enumeration'><ul><li>The new password is also the default root "
-"password of the system!</li></ul></div>"
-msgstr ""
-"<div id='enumeration'><ul><li>Det nye passordet vil bli standard for dette "
-"systemet!</li></ul></div"
 
 msgid ""
 "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
@@ -491,6 +484,9 @@ msgstr ""
 
 msgid "Add additional scheduled self-test."
 msgstr "Legg til en planlagt selv-test."
+
+msgid "Add any supplemental parameters."
+msgstr ""
 
 msgid "Add auth group"
 msgstr "Legg til autentiseringsgruppe"
@@ -1050,6 +1046,12 @@ msgstr "Bind passord"
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
+
+#, php-format
+msgid ""
+"BitTorrent needs at least read & execute permissions at the mount point for "
+"directory %s!"
+msgstr ""
 
 msgid "Blank time"
 msgstr "Blank tid"
@@ -1800,6 +1802,9 @@ msgstr ""
 msgid "Datasets"
 msgstr "Datasett"
 
+msgid "Date"
+msgstr ""
+
 msgid "Date & Time"
 msgstr "Dato og klokkeslett"
 
@@ -2205,6 +2210,9 @@ msgid "Disks (ATA)"
 msgstr "Disker (ATA)"
 
 msgid "Disks (ATA) information"
+msgstr ""
+
+msgid "Disks | Mount Point | Management"
 msgstr ""
 
 msgid "Display"
@@ -2942,6 +2950,9 @@ msgstr "Hendelse"
 msgid "Event selection"
 msgstr ""
 
+msgid "Example: pkg add packagename."
+msgstr ""
+
 msgid "Execute"
 msgstr "Kjør"
 
@@ -3086,19 +3097,15 @@ msgstr ""
 msgid "Failed to send status report to: %s."
 msgstr "Feilet i å sende status rapport til: %s."
 
-#, php-format
-msgid ""
-"Failed to send status report. Please check the <a href='%s'>log</a> files."
-msgstr "Feilet i å sende status rapport. Sjekk <a href='%s'>logg</a> filene."
+msgid "Failed to send status report."
+msgstr ""
 
 #, php-format
 msgid "Failed to send test email to: %s."
 msgstr "Feilet i å sende test e-post til: %s."
 
-#, php-format
-msgid ""
-"Failed to send test email. Please check the <a href='%s'>log</a> files."
-msgstr "Feilet i å sende test e-post. Sjekk <a href='%s'>logg</a> filene."
+msgid "Failed to send test email."
+msgstr ""
 
 msgid "Failed to upload file."
 msgstr "Opplasting av fil feilet."
@@ -4372,6 +4379,9 @@ msgstr ""
 "Sjekk at du allerede har konfigurert dine <a href='%s'>e-post</a> "
 "innstillinger."
 
+msgid "Make sure you have already configured your email settings"
+msgstr ""
+
 msgid "Management"
 msgstr "Håndering"
 
@@ -5353,7 +5363,13 @@ msgstr ""
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr ""
 
+msgid "Please check the documentation"
+msgstr ""
+
 msgid "Please check the documentation."
+msgstr ""
+
+msgid "Please check the log files"
 msgstr ""
 
 msgid "Please define the Database directory location."
@@ -6271,6 +6287,12 @@ msgstr "Set kun-lese"
 
 msgid "Set share password."
 msgstr "Set delings passord."
+
+#, php-format
+msgid ""
+"Set the Read and Execute bits permission for Others (Access Restrictions | "
+"Mode) for the mount point %s in %s and hit Save in order to take them effect."
+msgstr ""
 
 msgid "Set the account's primary group to the given group."
 msgstr "Sett kontoens primærgruppe til den oppgitte gruppen."
@@ -7372,6 +7394,9 @@ msgid ""
 "The new password does not match. Please ensure the passwords match exactly."
 msgstr ""
 
+msgid "The new password is also the default root password of the system!"
+msgstr ""
+
 msgid "The number of clients must be between 1 and 50."
 msgstr "Antallet klienter må være mellom 1 og 50."
 
@@ -7949,8 +7974,8 @@ msgstr ""
 
 #, php-format
 msgid ""
-"This will cause %s not to check for newer firmware versions when the <a "
-"href='%s'>%s</a> page is viewed."
+"This will cause %s not to check for newer firmware versions when the %s page "
+"is viewed."
 msgstr ""
 
 msgid "This will create a recycle bin on the share."
@@ -8044,10 +8069,9 @@ msgid ""
 "href='%s' target='_blank'>documentation</a>."
 msgstr ""
 
-#, php-format
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
-"<a href='%s' target='_blank'>documentation</a>."
+"documentation"
 msgstr ""
 
 #, php-format
@@ -8824,7 +8848,7 @@ msgstr "Ja"
 
 msgid ""
 "You can also install a package via SSH or console using the the pkg add "
-"command.<br />Example: pkg add packagename"
+"command."
 msgstr ""
 
 msgid "You can use the following parameters for substitution:"
@@ -8846,9 +8870,7 @@ msgstr ""
 "eller en annen kjørende prosess!"
 
 #, php-format
-msgid ""
-"You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
-"service to clients."
+msgid "You have to activate %s to advertise this service to clients."
 msgstr ""
 
 msgid "You have to reboot the system for the changes to take effect."
@@ -8952,9 +8974,6 @@ msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
 msgid "adaptive (low power consumption)"
-msgstr ""
-
-msgid "add any supplemental parameters"
 msgstr ""
 
 msgid "all encrypted disks are imported."
@@ -9107,3 +9126,20 @@ msgstr "avmontér"
 
 msgid "version:"
 msgstr ""
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
+#~ msgstr "Feilet i å sende status rapport. Sjekk <a href='%s'>logg</a> filene."
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
+#~ msgstr "Feilet i å sende test e-post. Sjekk <a href='%s'>logg</a> filene."
+
+#~ msgid ""
+#~ "<div id='enumeration'><ul><li>The new password is also the default root "
+#~ "password of the system!</li></ul></div>"
+#~ msgstr ""
+#~ "<div id='enumeration'><ul><li>Det nye passordet vil bli standard for dette "
+#~ "systemet!</li></ul></div"

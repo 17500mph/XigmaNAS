@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-26 22:56+0000\n"
+"POT-Creation-Date: 2016-06-29 03:10+0000\n"
 "PO-Revision-Date: 2016-05-28 18:47+0000\n"
 "Last-Translator: Jieting Xu <xu.jieting@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-28 22:13+0000\n"
+"X-Launchpad-Export-Date: 2016-06-29 01:53+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -191,11 +191,6 @@ msgid ""
 "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
 msgstr ""
 "<div id='enumeration'><ul><li>%d - 日期</li><li>%h - 主机名</li></ul></div>"
-
-msgid ""
-"<div id='enumeration'><ul><li>The new password is also the default root "
-"password of the system!</li></ul></div>"
-msgstr "<div id='enumeration'><ul><li>新密码也是系统的 root 的默认密码！</li></ul></div>"
 
 msgid ""
 "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
@@ -460,6 +455,9 @@ msgstr "添加卷"
 
 msgid "Add additional scheduled self-test."
 msgstr "添加附加的计划自我检测"
+
+msgid "Add any supplemental parameters."
+msgstr ""
 
 msgid "Add auth group"
 msgstr "添加验证组(Auth Group)"
@@ -1004,6 +1002,12 @@ msgstr "绑定密码"
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
+
+#, php-format
+msgid ""
+"BitTorrent needs at least read & execute permissions at the mount point for "
+"directory %s!"
+msgstr ""
 
 msgid "Blank time"
 msgstr "空闲时间"
@@ -1743,6 +1747,9 @@ msgstr "数据集未锁定"
 msgid "Datasets"
 msgstr "数据集（Datasets）"
 
+msgid "Date"
+msgstr ""
+
 msgid "Date & Time"
 msgstr "日期与时间"
 
@@ -2143,6 +2150,9 @@ msgstr "硬盘（ATA）"
 
 msgid "Disks (ATA) information"
 msgstr "磁盘(ATA)信息"
+
+msgid "Disks | Mount Point | Management"
+msgstr ""
 
 msgid "Display"
 msgstr "显示"
@@ -2860,6 +2870,9 @@ msgstr "事件"
 msgid "Event selection"
 msgstr ""
 
+msgid "Example: pkg add packagename."
+msgstr ""
+
 msgid "Execute"
 msgstr "执行"
 
@@ -2997,19 +3010,15 @@ msgstr "无法删除：%s"
 msgid "Failed to send status report to: %s."
 msgstr "发送状态报告电邮给：%s 失败。"
 
-#, php-format
-msgid ""
-"Failed to send status report. Please check the <a href='%s'>log</a> files."
-msgstr "发送状态报告电邮失败。请参见 <a href='%s'>记录</a> 文件。"
+msgid "Failed to send status report."
+msgstr ""
 
 #, php-format
 msgid "Failed to send test email to: %s."
 msgstr "发送测试电邮给：%s 失败。"
 
-#, php-format
-msgid ""
-"Failed to send test email. Please check the <a href='%s'>log</a> files."
-msgstr "发送测试电邮失败。请参见 <a href='%s'>记录</a> 文件。"
+msgid "Failed to send test email."
+msgstr ""
 
 msgid "Failed to upload file."
 msgstr "上传文件失败。"
@@ -4271,6 +4280,9 @@ msgid ""
 "Make sure you have already configured your <a href='%s'>Email</a> settings."
 msgstr "请确认您是否已经设定好 <a href='%s'>电邮</a> 资讯了。"
 
+msgid "Make sure you have already configured your email settings"
+msgstr ""
+
 msgid "Management"
 msgstr "管理"
 
@@ -5237,7 +5249,13 @@ msgstr ""
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "请参见 <a href='%s' target='_blank'>文档</a>。"
 
+msgid "Please check the documentation"
+msgstr ""
+
 msgid "Please check the documentation."
+msgstr ""
+
+msgid "Please check the log files"
 msgstr ""
 
 msgid "Please define the Database directory location."
@@ -6151,6 +6169,12 @@ msgstr "设成只读"
 
 msgid "Set share password."
 msgstr "设置共享密码。"
+
+#, php-format
+msgid ""
+"Set the Read and Execute bits permission for Others (Access Restrictions | "
+"Mode) for the mount point %s in %s and hit Save in order to take them effect."
+msgstr ""
 
 msgid "Set the account's primary group to the given group."
 msgstr "设置帐号的主要群组。"
@@ -7257,6 +7281,9 @@ msgid ""
 "The new password does not match. Please ensure the passwords match exactly."
 msgstr "新密码不相符。请确保密码完全相符。"
 
+msgid "The new password is also the default root password of the system!"
+msgstr ""
+
 msgid "The number of clients must be between 1 and 50."
 msgstr "客户端上限必须介于 1 至 50。"
 
@@ -7836,9 +7863,9 @@ msgstr ""
 
 #, php-format
 msgid ""
-"This will cause %s not to check for newer firmware versions when the <a "
-"href='%s'>%s</a> page is viewed."
-msgstr "这将导致 %s 查看 <a href='%s'>%s</a> 页时不检查新的固件版。"
+"This will cause %s not to check for newer firmware versions when the %s page "
+"is viewed."
+msgstr ""
 
 msgid "This will create a recycle bin on the share."
 msgstr "在分享区创建回收站。"
@@ -7932,11 +7959,10 @@ msgid ""
 msgstr ""
 "关于 TCP Wrappers 的详细资讯请查看 FreeBSD <a href='%s' target='_blank'>文档</a>。"
 
-#, php-format
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
-"<a href='%s' target='_blank'>documentation</a>."
-msgstr "关于防火墙规则的详细资讯请查看 FreeBSD <a href='%s' target='_blank'>文档</a>。"
+"documentation"
+msgstr ""
 
 #, php-format
 msgid ""
@@ -8711,9 +8737,8 @@ msgstr "是"
 
 msgid ""
 "You can also install a package via SSH or console using the the pkg add "
-"command.<br />Example: pkg add packagename"
+"command."
 msgstr ""
-"您也可以通过 SSH 或在 console 使用 pkg add 命令来安装套件。 <br />（例如：pkg add packagename）"
 
 msgid "You can use the following parameters for substitution:"
 msgstr "您可以使用以下的参数替代："
@@ -8732,10 +8757,8 @@ msgid ""
 msgstr "您不可以卸载正在被Swap、iSCSI 目标或是任何程序使用中的驱动器。"
 
 #, php-format
-msgid ""
-"You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
-"service to clients."
-msgstr "您必须激活  <a href='%s'>Zeroconf/Bonjour</a> 才可对客户端宣传服务。"
+msgid "You have to activate %s to advertise this service to clients."
+msgstr ""
 
 msgid "You have to reboot the system for the changes to take effect."
 msgstr ""
@@ -8839,9 +8862,6 @@ msgstr "Zeroconf/Bonjour"
 
 msgid "adaptive (low power consumption)"
 msgstr "自适应（低耗电量）"
-
-msgid "add any supplemental parameters"
-msgstr "添加任何辅助参数"
 
 msgid "all encrypted disks are imported."
 msgstr "已经导入所有加密硬盘。"
@@ -8993,3 +9013,45 @@ msgstr "卸载"
 
 msgid "version:"
 msgstr "版本："
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
+#~ msgstr "发送测试电邮失败。请参见 <a href='%s'>记录</a> 文件。"
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
+#~ msgstr "发送状态报告电邮失败。请参见 <a href='%s'>记录</a> 文件。"
+
+#, php-format
+#~ msgid ""
+#~ "This will cause %s not to check for newer firmware versions when the <a "
+#~ "href='%s'>%s</a> page is viewed."
+#~ msgstr "这将导致 %s 查看 <a href='%s'>%s</a> 页时不检查新的固件版。"
+
+#, php-format
+#~ msgid ""
+#~ "To get detailed informations about writing firewall rules check the FreeBSD "
+#~ "<a href='%s' target='_blank'>documentation</a>."
+#~ msgstr "关于防火墙规则的详细资讯请查看 FreeBSD <a href='%s' target='_blank'>文档</a>。"
+
+#, php-format
+#~ msgid ""
+#~ "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
+#~ "service to clients."
+#~ msgstr "您必须激活  <a href='%s'>Zeroconf/Bonjour</a> 才可对客户端宣传服务。"
+
+#~ msgid ""
+#~ "<div id='enumeration'><ul><li>The new password is also the default root "
+#~ "password of the system!</li></ul></div>"
+#~ msgstr "<div id='enumeration'><ul><li>新密码也是系统的 root 的默认密码！</li></ul></div>"
+
+#~ msgid ""
+#~ "You can also install a package via SSH or console using the the pkg add "
+#~ "command.<br />Example: pkg add packagename"
+#~ msgstr ""
+#~ "您也可以通过 SSH 或在 console 使用 pkg add 命令来安装套件。 <br />（例如：pkg add packagename）"
+
+#~ msgid "add any supplemental parameters"
+#~ msgstr "添加任何辅助参数"

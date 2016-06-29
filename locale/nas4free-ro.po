@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-26 22:56+0000\n"
+"POT-Creation-Date: 2016-06-29 03:10+0000\n"
 "PO-Revision-Date: 2016-03-23 12:38+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-28 22:13+0000\n"
+"X-Launchpad-Export-Date: 2016-06-29 01:52+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -221,13 +221,6 @@ msgid ""
 msgstr ""
 "<div id='enumeration'><ul><li>%d - Data</li><li>%h - Nume "
 "Sistem</li></ul></div>"
-
-msgid ""
-"<div id='enumeration'><ul><li>The new password is also the default root "
-"password of the system!</li></ul></div>"
-msgstr ""
-"<div id='enumerare'><ul><li>Noua parolă este și parola implicită pentru "
-"contul root al sistemului!</li></ul></div>"
 
 msgid ""
 "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
@@ -522,6 +515,9 @@ msgstr "Adăugare volum"
 
 msgid "Add additional scheduled self-test."
 msgstr "Adăugare auto-test suplimentar programat."
+
+msgid "Add any supplemental parameters."
+msgstr ""
 
 msgid "Add auth group"
 msgstr "Adăugare grup autorizat"
@@ -1106,6 +1102,12 @@ msgstr "Parola legare"
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
+
+#, php-format
+msgid ""
+"BitTorrent needs at least read & execute permissions at the mount point for "
+"directory %s!"
+msgstr ""
 
 msgid "Blank time"
 msgstr "Timp nul"
@@ -1946,6 +1948,9 @@ msgstr ""
 msgid "Datasets"
 msgstr "Seturi de date"
 
+msgid "Date"
+msgstr ""
+
 msgid "Date & Time"
 msgstr "Data şi Ora"
 
@@ -2360,6 +2365,9 @@ msgstr "Discuri (ATA)"
 
 msgid "Disks (ATA) information"
 msgstr "Informații Discuri (ATA)"
+
+msgid "Disks | Mount Point | Management"
+msgstr ""
 
 msgid "Display"
 msgstr "Afișare"
@@ -3115,6 +3123,9 @@ msgstr "Eveniment"
 msgid "Event selection"
 msgstr "Selecție eveniment"
 
+msgid "Example: pkg add packagename."
+msgstr ""
+
 msgid "Execute"
 msgstr "Executare"
 
@@ -3262,23 +3273,15 @@ msgstr "Eroare eliminare: %s"
 msgid "Failed to send status report to: %s."
 msgstr "Eroare transmitere raport de stare la %s."
 
-#, php-format
-msgid ""
-"Failed to send status report. Please check the <a href='%s'>log</a> files."
+msgid "Failed to send status report."
 msgstr ""
-"Eroare transmitere raport de stare. Verificați fișierul <a "
-"href='%s'>jurnal</a>."
 
 #, php-format
 msgid "Failed to send test email to: %s."
 msgstr "Eroare transmitere email de test la: %s."
 
-#, php-format
-msgid ""
-"Failed to send test email. Please check the <a href='%s'>log</a> files."
+msgid "Failed to send test email."
 msgstr ""
-"Eroare transmitere email de test. Verificaţi fişierul <a "
-"href='%s'>jurnal</a>."
 
 msgid "Failed to upload file."
 msgstr "Eroare încărcare fișier."
@@ -4644,6 +4647,9 @@ msgid ""
 msgstr ""
 "Verificați dacă ați configurat deja setările pentru <a href='%s'>Email</a>."
 
+msgid "Make sure you have already configured your email settings"
+msgstr ""
+
 msgid "Management"
 msgstr "Configurare"
 
@@ -5660,7 +5666,13 @@ msgstr ""
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "Consultați <a href='%s' target='_blank'>documentația</a>."
 
+msgid "Please check the documentation"
+msgstr ""
+
 msgid "Please check the documentation."
+msgstr ""
+
+msgid "Please check the log files"
 msgstr ""
 
 msgid "Please define the Database directory location."
@@ -6605,6 +6617,12 @@ msgstr "Setare doar citire"
 
 msgid "Set share password."
 msgstr "Setare parolă partajare."
+
+#, php-format
+msgid ""
+"Set the Read and Execute bits permission for Others (Access Restrictions | "
+"Mode) for the mount point %s in %s and hit Save in order to take them effect."
+msgstr ""
 
 msgid "Set the account's primary group to the given group."
 msgstr "Setarea grupului de autorizare primar la grupul dat."
@@ -7836,6 +7854,9 @@ msgid ""
 msgstr ""
 "Noua parolă nu coincide. Verificați ca cele două parole să fie identice."
 
+msgid "The new password is also the default root password of the system!"
+msgstr ""
+
 msgid "The number of clients must be between 1 and 50."
 msgstr "Numărul clienților trebuie sa fie cuprins între 1 și 50."
 
@@ -8541,11 +8562,9 @@ msgstr ""
 
 #, php-format
 msgid ""
-"This will cause %s not to check for newer firmware versions when the <a "
-"href='%s'>%s</a> page is viewed."
+"This will cause %s not to check for newer firmware versions when the %s page "
+"is viewed."
 msgstr ""
-"Această opțiune determină %s să nu mai verifice existența unor versiuni "
-"actualizate de firmware la accesarea paginii <a href='%s'>%s</a>."
 
 msgid "This will create a recycle bin on the share."
 msgstr ""
@@ -8652,13 +8671,10 @@ msgstr ""
 "Pentru informații suplimentare despre TCP Wrappers consultați <a href='%s' "
 "target='_blank'>documentația</a> FreeBSD."
 
-#, php-format
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
-"<a href='%s' target='_blank'>documentation</a>."
+"documentation"
 msgstr ""
-"Pentru informații suplimentare despre scrierea regulilor pentru firewall "
-"consultați <a href='%s' target='_blank'>documentația</a> FreeBSD."
 
 #, php-format
 msgid ""
@@ -9501,10 +9517,8 @@ msgstr "Da"
 
 msgid ""
 "You can also install a package via SSH or console using the the pkg add "
-"command.<br />Example: pkg add packagename"
+"command."
 msgstr ""
-"Puteți deasemenea să instalați pachete software via SSH sau de la consolă "
-"folosind comanda ”pkg add”.<br />Exemplu: pkg add nume_pachet_software"
 
 msgid "You can use the following parameters for substitution:"
 msgstr "Puteți folosi următorii parametri pentru substituție:"
@@ -9526,12 +9540,8 @@ msgstr ""
 "destinație iSCSI sau pentru un alt proces activ!"
 
 #, php-format
-msgid ""
-"You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
-"service to clients."
+msgid "You have to activate %s to advertise this service to clients."
 msgstr ""
-"Trebuie să activați serviciul <a href='%s'>Zeroconf/Bonjour</a> pentru ca "
-"serviciul iTunes/DAAP să fie vizibil către clienți."
 
 msgid "You have to reboot the system for the changes to take effect."
 msgstr ""
@@ -9647,9 +9657,6 @@ msgstr "Zeroconf/Bonjour"
 
 msgid "adaptive (low power consumption)"
 msgstr "adaptiv (consum redus de energie)"
-
-msgid "add any supplemental parameters"
-msgstr "adăugați orice parametru suplimentar"
 
 msgid "all encrypted disks are imported."
 msgstr "toate discurile criptate sînt importate."
@@ -9803,3 +9810,58 @@ msgstr "demontare"
 
 msgid "version:"
 msgstr "versiune:"
+
+#~ msgid ""
+#~ "<div id='enumeration'><ul><li>The new password is also the default root "
+#~ "password of the system!</li></ul></div>"
+#~ msgstr ""
+#~ "<div id='enumerare'><ul><li>Noua parolă este și parola implicită pentru "
+#~ "contul root al sistemului!</li></ul></div>"
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
+#~ msgstr ""
+#~ "Eroare transmitere raport de stare. Verificați fișierul <a "
+#~ "href='%s'>jurnal</a>."
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
+#~ msgstr ""
+#~ "Eroare transmitere email de test. Verificaţi fişierul <a "
+#~ "href='%s'>jurnal</a>."
+
+#, php-format
+#~ msgid ""
+#~ "To get detailed informations about writing firewall rules check the FreeBSD "
+#~ "<a href='%s' target='_blank'>documentation</a>."
+#~ msgstr ""
+#~ "Pentru informații suplimentare despre scrierea regulilor pentru firewall "
+#~ "consultați <a href='%s' target='_blank'>documentația</a> FreeBSD."
+
+#, php-format
+#~ msgid ""
+#~ "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
+#~ "service to clients."
+#~ msgstr ""
+#~ "Trebuie să activați serviciul <a href='%s'>Zeroconf/Bonjour</a> pentru ca "
+#~ "serviciul iTunes/DAAP să fie vizibil către clienți."
+
+#, php-format
+#~ msgid ""
+#~ "This will cause %s not to check for newer firmware versions when the <a "
+#~ "href='%s'>%s</a> page is viewed."
+#~ msgstr ""
+#~ "Această opțiune determină %s să nu mai verifice existența unor versiuni "
+#~ "actualizate de firmware la accesarea paginii <a href='%s'>%s</a>."
+
+#~ msgid ""
+#~ "You can also install a package via SSH or console using the the pkg add "
+#~ "command.<br />Example: pkg add packagename"
+#~ msgstr ""
+#~ "Puteți deasemenea să instalați pachete software via SSH sau de la consolă "
+#~ "folosind comanda ”pkg add”.<br />Exemplu: pkg add nume_pachet_software"
+
+#~ msgid "add any supplemental parameters"
+#~ msgstr "adăugați orice parametru suplimentar"
