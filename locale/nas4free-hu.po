@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-29 03:10+0000\n"
-"PO-Revision-Date: 2016-06-27 18:39+0000\n"
+"POT-Creation-Date: 2016-06-30 00:10+0000\n"
+"PO-Revision-Date: 2016-06-29 17:40+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-29 01:52+0000\n"
+"X-Launchpad-Export-Date: 2016-06-29 22:58+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -81,6 +81,11 @@ msgstr "%s már kötetnek be lett állítva."
 #, php-format
 msgid "%s is too long."
 msgstr "%s túl hosszú."
+
+#, php-format
+msgid ""
+"%s must be enabled for Unison to work, and the %s must have shell access."
+msgstr ""
 
 #, php-format
 msgid "%s of %sB"
@@ -193,49 +198,6 @@ msgstr "4KB wrapper"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN címke (1 és 4094 közötti érték)."
-
-#, php-format
-msgid ""
-"<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
-"href='%s'>user</a> must have shell access."
-msgstr ""
-"<a href='%s'>SSHD</a>-t engedélyezni kell Unison működéséhez, és a <a "
-"href='%s'>felhasználó</a>nak szüksége van shell hozzáférésre."
-
-msgid ""
-"<b>EFI GPT partition</b> if you want to mount a GPT formatted drive "
-"(<b>default partition</b>).<br/><b>MBR partition</b> if you want to mount a "
-"UFS formatted drive or do imported disks from other OS.<br/><b>CD/DVD "
-"volume</b> if you want to mount a CD/DVD volume."
-msgstr ""
-"<b>EFI GPT partíció</b> ha GPT formázott meghajtót szeretnél becsatolni "
-"(<b>alapértelmezett partíció</b>). <br/>\r\n"
-"<b>MBR partíció</b> ha UFS formázott meghajtót vagy másik operációs "
-"rendszerből importált lemezt szeretnél becsatolni.<br/>\r\n"
-"<b>CD/DVD meghajtó</b> ha CD/DVD-kötetet szeretnél becsatolni."
-
-msgid ""
-"<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
-msgstr ""
-"<div id='enumeration'><ul><li>%d - Dátum</li><li>%h - "
-"Állomásnév</li></ul></div>"
-
-msgid ""
-"<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
-"3.0.0 or newer, and the 'before' algorithm when talking to an older "
-"rsync.</li><li>Before - File-deletions will be done before the transfer "
-"starts.</li><li>During - File-deletions will be done incrementally as the "
-"transfer happens.</li><li>Delay - File-deletions will be computed during the "
-"transfer, and then removed after the transfer completes.</li><li>After - "
-"File-deletions will be done after the transfer has completed.</li>"
-msgstr ""
-"<li>Alapértelmezett - Rsync az 'alatta' algoritmust választja, amikor rsync "
-"3.0.0 vagy újabbal, és az 'előtte' algoritmust amikor egy régebbi rsync-kel "
-"beszélget.</li><li>Előtte - Fájl-törlések az átvitel előtt kezdődik el. "
-"</li><li>Alatta - Fájl törlések inkrementálisan zajlanak az átvitel "
-"alatt.</li><li>Késleltetett - Fájl törlések az átvitel alatt számolódnak, és "
-"az átvitel végén fejeződik be.</li><li>Utána - Fájl-törlések az átvitel után "
-"kezdődnek.</li>"
 
 msgid ""
 "A Auth Group contains authorised users and secrets for additional security."
@@ -446,6 +408,9 @@ msgstr "Hozzáférési idő"
 msgid "Access mode"
 msgstr "Hozzáférési mód"
 
+msgid "Access the webGUI with the new IP address"
+msgstr ""
+
 msgid "Acoustic level"
 msgstr "Zajszint"
 
@@ -514,7 +479,7 @@ msgid "Add additional scheduled self-test."
 msgstr "További időzített öntesztek hozzáadása"
 
 msgid "Add any supplemental parameters."
-msgstr ""
+msgstr "Adj hozzá tetszőleges kiegészítő paramétert."
 
 msgid "Add auth group"
 msgstr "Hitelesítő csoport létrehozása"
@@ -640,30 +605,21 @@ msgstr "Speciális beállítások"
 msgid "Advertisement skew"
 msgstr "Advertisement skew"
 
-#, php-format
-msgid ""
-"After you click &quot;Save&quot;, you may also have to do one or more of the "
-"following steps before you can access this server again: <ul><li>change the "
-"IP address of your computer</li><li>access the webGUI with the new IP "
-"address</li></ul>"
+msgid "After"
 msgstr ""
-"Miután a &quot;Mentés&quot; gombra kattintottál, lehetséges hogy valamelyik "
-"lépést végre kell hajtani mielőtt a szervert újra eléred: <ul><li>szervered "
-"IP címének megváltoztatása</li><li>a WebGUI elérése az új IP címen</li></ul>"
 
-#, php-format
-msgid ""
-"After you click &quot;Save&quot;, you must reboot the server to make the "
-"changes take effect. You may also have to do one or more of the following "
-"steps before you can access your server again: <ul><li><span "
-"class='vexpl'>change the IP address of your server</span></li><li><span "
-"class='vexpl'>access the webGUI with the new IP address</span></li></ul>"
+msgid "After - File-deletions will be done after the transfer has completed."
 msgstr ""
-"Miután a &quot;Mentés&quot; gombra kattintottál, újra kell indítani a "
-"szervert, hogy a beállítások életbe lépjenek. Lehetséges hogy valamelyik "
-"lépést végre kell hajtani mielőtt a szervert újra eléred: <ul><li><span "
-"class='vexpl'>szervered IP címének megváltoztatása</span></li><li><span "
-"class='vexpl'>a WebGUI elérése az új IP címen</span></li></ul>"
+
+msgid ""
+"After you click \"Save\" you may also have to do one or more of the "
+"following steps before you can access this server again:"
+msgstr ""
+
+msgid ""
+"After you click \"Save\" you must reboot the server to make the changes take "
+"effect."
+msgstr ""
 
 msgid "Age"
 msgstr "Életkor"
@@ -693,10 +649,8 @@ msgstr "Minden"
 
 msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
-"empty UFS directory is recommended."
+"an empty UFS directory is recommended."
 msgstr ""
-"Az útvonalon lévő összes adat felülíródik.  Érvénytelen adatok/jogosultságok "
-"elkerülés érdekében üres UFS könyvtár használat ajánlott."
 
 msgid "All data will be lost when you activate this option!"
 msgstr "Az opció aktiválásakor az összes adat el fog veszni!"
@@ -933,6 +887,11 @@ msgstr "Csatolt"
 msgid "Attaching provider '%s'."
 msgstr "'%s' szolgáltató csatlakoztatása."
 
+msgid ""
+"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, or NTFS "
+"can result in unpredictable results, file corruption and the loss of data!"
+msgstr ""
+
 msgid "Audio"
 msgstr "audió"
 
@@ -1090,6 +1049,15 @@ msgstr "Akkumulátor hőmérséklete"
 msgid "Battery voltage"
 msgstr "Akkumulátor feszültsége"
 
+msgid "Before"
+msgstr ""
+
+msgid "Before - File-deletions will be done before the transfer starts."
+msgstr ""
+
+msgid "Before - File-deletions will be performed before the transfer starts."
+msgstr ""
+
 msgid "Best available"
 msgstr "Az elérhető legjobb"
 
@@ -1107,6 +1075,8 @@ msgid ""
 "BitTorrent needs at least read & execute permissions at the mount point for "
 "directory %s!"
 msgstr ""
+"BitTorrentnek legalább olvasási és futtatási jogosultságra van szüksége a "
+"csatolási pont %s könyvtárán."
 
 msgid "Blank time"
 msgstr "Üres idő"
@@ -1323,6 +1293,12 @@ msgstr "Változás az alábbi fájlt"
 msgid "Change password"
 msgstr "Jelszó megváltoztatása"
 
+msgid "Change the IP address of your computer"
+msgstr ""
+
+msgid "Change the IP address of your server"
+msgstr ""
+
 msgid "Changes to this option will take effect after a reboot."
 msgstr ""
 "Ezeknek a beállításoknak a módosításai újraindítás után lépnek életbe."
@@ -1333,11 +1309,8 @@ msgstr "Csatorna"
 msgid "Charging Battery"
 msgstr "Akkumulátor töltése"
 
-#, php-format
-msgid "Check <a href=\"%s\">System|General Setup</a> before initializing."
+msgid "Check System|General Setup before initializing"
 msgstr ""
-"Inicializálás előtt ellenőrizze a <a href=\"%s\">Rendszer|Általános "
-"beállítások</a>at."
 
 msgid "Check and replace cable"
 msgstr "Ellenőrizd, illetve cseréld a kábelt."
@@ -1347,6 +1320,13 @@ msgstr "Ellenőrzési időköz"
 
 msgid "Check shared secret:"
 msgstr "Megosztott titok ellenőrzése:"
+
+msgid ""
+"Check the FreeBSD documentation for detailed information about TCP Wrappers"
+msgstr ""
+
+msgid "Check the list of available drivers"
+msgstr ""
 
 msgid "Chinese (Simplified)"
 msgstr "Kínai (egyszerűsített)"
@@ -1864,16 +1844,13 @@ msgstr "DNS továbbító"
 msgid "DNS server is empty."
 msgstr "DNS szerver üres."
 
+msgid "DO NOT abort the firmware upgrade process once it has started."
+msgstr ""
+
 #, php-format
 msgid ""
-"DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-"try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
-"/>It is recommended that you <a href='%s'>Backup</a> the server "
-"configuration before doing a upgrade."
+"DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
 msgstr ""
-"NE SZAKÍTSD meg a frissítési folyamatot, ha már elindítottad.<br />NE "
-"próbálj valid '%s-%s-embedded.img.xz' fájltól eltérővel frissíteni.<br "
-"/>Frissítés előtt készíts <a href='%s'>biztonsági másolatot</a>."
 
 msgid "DVD"
 msgstr "DVD"
@@ -1915,7 +1892,7 @@ msgid "Datasets"
 msgstr "Adattárak (datasets)"
 
 msgid "Date"
-msgstr ""
+msgstr "Dátum"
 
 msgid "Date & Time"
 msgstr "Dátum & idő"
@@ -1954,6 +1931,16 @@ msgstr "Egyszeresítés"
 msgid "Default"
 msgstr "Alapértelmezett"
 
+msgid ""
+"Default - Rsync will choose the 'during' algorithm when talking to rsync "
+"3.0.0 or newer and the 'before' algorithm when talking to an older rsync."
+msgstr ""
+
+msgid ""
+"Default - Rsync will choose the 'during' algorithm when talking to rsync "
+"3.0.0 or newer, and the 'before' algorithm when talking to an older rsync."
+msgstr ""
+
 msgid "Default Device Settings"
 msgstr "Alapértelmezett eszközbeállítások"
 
@@ -1978,6 +1965,19 @@ msgstr "Hitelesítést igénylő mappák/URL-ek meghatározása."
 
 msgid "Defines when the shutdown is initiated."
 msgstr "Mikor állítsa le a szervert."
+
+msgid "Delay"
+msgstr ""
+
+msgid ""
+"Delay - File-deletions will be computed during the transfer and will be done "
+"after the transfer."
+msgstr ""
+
+msgid ""
+"Delay - File-deletions will be computed during the transfer, and then "
+"removed after the transfer completes."
+msgstr ""
 
 msgid "Delete"
 msgstr "Törlés"
@@ -2331,7 +2331,7 @@ msgid "Disks (ATA) information"
 msgstr "ATA lemezekről információ"
 
 msgid "Disks | Mount Point | Management"
-msgstr ""
+msgstr "Lemez | Csatolási pont | Kezelés"
 
 msgid "Display"
 msgstr "Kijelző"
@@ -2559,6 +2559,9 @@ msgstr "Biztos, hogy engedélyezed a kiválasztott feladatokat?"
 msgid "Do you want to enable selected options?"
 msgstr "Biztos, hogy engedélyezed a kiválasztott beállításokat?"
 
+msgid "Do you want to install this firmware anyway (at your own risk)?"
+msgstr ""
+
 msgid "Do you want to toggle selected jobs?"
 msgstr "Biztos, hogy átkapcsolod a kiválasztott feladatokat?"
 
@@ -2655,6 +2658,13 @@ msgstr "Duplex"
 
 msgid "Duplicate mount point name."
 msgstr "Csatolási pont nevének duplázása."
+
+msgid "During"
+msgstr ""
+
+msgid ""
+"During - File-deletions will be done incrementally as the transfer happens."
+msgstr ""
 
 msgid "Dutch"
 msgstr "Holland"
@@ -2791,6 +2801,12 @@ msgstr "Alapértelmezetten üres"
 
 msgid "Enable"
 msgstr "Engedélyezés"
+
+msgid "Enable 'Asynchronous I/O (AIO)' switch."
+msgstr ""
+
+msgid "Enable 'Large read/write' switch."
+msgstr ""
 
 msgid "Enable ACL inheritance"
 msgstr "ACL öröklődés engedélyezése"
@@ -2979,6 +2995,9 @@ msgstr "Csapdák engedélyezése."
 msgid "Enable tuning of some kernel variables."
 msgstr "Néhány kernelváltozó hangolásának engedélyezése"
 
+msgid "Enable tuning switch"
+msgstr ""
+
 msgid "Enable write cache mode."
 msgstr "Írás cache engedélyezése."
 
@@ -3103,7 +3122,7 @@ msgid "Event selection"
 msgstr "Esemény kiválasztása"
 
 msgid "Example: pkg add packagename."
-msgstr ""
+msgstr "például: pkg add csomagnév"
 
 msgid "Execute"
 msgstr "Futtatás"
@@ -3253,14 +3272,14 @@ msgid "Failed to send status report to: %s."
 msgstr "Az állapot jelentés küldése meghiúsult ehhez: %s."
 
 msgid "Failed to send status report."
-msgstr ""
+msgstr "Állapot riport küldése sikertelen."
 
 #, php-format
 msgid "Failed to send test email to: %s."
 msgstr "Teszt e-mail küldése sikertelen ide: %s."
 
 msgid "Failed to send test email."
-msgstr ""
+msgstr "Teszt e-mail küldése sikertelen."
 
 msgid "Failed to upload file."
 msgstr "Fájlfeltöltés sikertelen."
@@ -3492,6 +3511,9 @@ msgstr "Német"
 
 msgid "Get Target Info"
 msgstr "Cél info"
+
+msgid "Get a list of available drivers"
+msgstr ""
 
 msgid "GiB"
 msgstr "GiB"
@@ -4152,6 +4174,10 @@ msgstr ""
 "hibátlan tárolónak, nem javasolt importálni."
 
 msgid ""
+"It is recommended that you backup the server configuration before you upgrade"
+msgstr ""
+
+msgid ""
 "It is recommended to use encryption before you store the backup in a safe "
 "location."
 msgstr ""
@@ -4605,15 +4631,8 @@ msgstr "Győződjön meg arról, hogy optimális számú eszközt választott ki
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Bizonyosodjon meg róla, hogy a S.M.A.R.T.-ot aktiválta eszközein."
 
-#, php-format
-msgid ""
-"Make sure you have already configured your <a href='%s'>Email</a> settings."
-msgstr ""
-"Győződjön meg arról ,hogy az <a href='%s'>e-mail</a> beállításokat már "
-"elvégezte."
-
 msgid "Make sure you have already configured your email settings"
-msgstr ""
+msgstr "Győződj meg arról, hogy az e-mail tulajdonságokat beállítottad."
 
 msgid "Management"
 msgstr "Kezelés"
@@ -4941,6 +4960,9 @@ msgstr "NOPIN küldő intervallum másodpercben (%d alapértelmezetten)"
 msgid "NOT YET AVAILABLE"
 msgstr "MÉG NEM ÉRHETŐ EL"
 
+msgid "NOTE"
+msgstr ""
+
 msgid "NT1"
 msgstr "NT1"
 
@@ -5061,23 +5083,11 @@ msgstr "Egy Portal csoport sincs konfigurálva."
 msgid "No RSYNC Client configured"
 msgstr "Nincs RSYNC kliens beállítva"
 
-#, php-format
-msgid ""
-"No configured Auth Group. Please add new <a href='%s'>Auth Group</a> first."
+msgid "No configured Auth Group."
 msgstr ""
-"Nincs Hitelesítő csoport konfigurálva. Kérem hozz létre egy új <a "
-"href='%s'>Hitelesítő csoportot</a> először."
 
 msgid "No configured CARP interfaces."
 msgstr "Nincs konfigurált CARP interfész."
-
-#, php-format
-msgid ""
-"No configured CARP interfaces. Please add new <a href='%s'>CARP "
-"interface</a> first."
-msgstr ""
-"Nincs konfigurált CARP interfész. Kérem hozz létre egy új <a href='%s'>CARP "
-"interfészt</a> először."
 
 msgid "No configured bridge interfaces."
 msgstr "Egy konfigurált híd interfész sincs."
@@ -5333,6 +5343,11 @@ msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr ""
 "Csak hitelesített felhasználók engedélyezettek. Névtelen bejelentkezések "
 "tiltva."
+
+msgid ""
+"Only install firmwares that come from sources that you trust, and make sure "
+"that the firmware has not been tampered with."
+msgstr ""
 
 msgid "Option"
 msgstr "Beállítás"
@@ -5609,6 +5624,12 @@ msgstr "Platform operációs rendszere"
 msgid "Please add a bridge interface first."
 msgstr "Először egy híd interfészt hozz létre."
 
+msgid "Please add a new Auth Group first"
+msgstr ""
+
+msgid "Please add a new CARP interface first"
+msgstr ""
+
 msgid "Please add a new Extent first."
 msgstr "Először egy Extent-et hozz létre."
 
@@ -5631,18 +5652,14 @@ msgstr "Először egy új %s-t hozz létre."
 msgid "Please add new pools first."
 msgstr "Először egy új tárolót hozz létre."
 
-#, php-format
-msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
-msgstr "Kérjük olvasd el a <a href='%s' target='_blank'>dokumentációt</a>."
-
 msgid "Please check the documentation"
-msgstr ""
+msgstr "Olvasd el a dokumentációt."
 
 msgid "Please check the documentation."
 msgstr "Ellenőrizd a dokumentációt."
 
 msgid "Please check the log files"
-msgstr ""
+msgstr "Ellenőrizd a naplófájlt."
 
 msgid "Please define the Database directory location."
 msgstr "Add meg az adatbázis  könyvtárának helyét."
@@ -6276,6 +6293,11 @@ msgstr ""
 msgid "Running"
 msgstr "Fut"
 
+msgid ""
+"Running the service as user root is not recommended for security reasons, "
+"use at your own risk!"
+msgstr ""
+
 msgid "Russian"
 msgstr "Orosz"
 
@@ -6325,6 +6347,9 @@ msgstr "SSH"
 
 msgid "SSH events"
 msgstr "SSH események"
+
+msgid "SSHD"
+msgstr ""
 
 msgid "SSHD log"
 msgstr "SSHD napló"
@@ -6448,6 +6473,17 @@ msgstr ""
 
 msgid "See attribute E8."
 msgstr "Lásd E8 attribútum."
+
+msgid "Select 'CD/DVD' if you want to mount a CD/DVD volume."
+msgstr ""
+
+msgid "Select 'GPT partition' if you want to mount a GPT formatted drive"
+msgstr ""
+
+msgid ""
+"Select 'MBR partition' default partition if you want to mount a UFS "
+"formatted drive or if you want to import disks from other OS."
+msgstr ""
 
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
@@ -6607,6 +6643,9 @@ msgid ""
 "Set the Read and Execute bits permission for Others (Access Restrictions | "
 "Mode) for the mount point %s in %s and hit Save in order to take them effect."
 msgstr ""
+"Állítsd be Olvasási és Futtatási biteket a Többieknek (Hozzáférési "
+"jogosultságok | Mód) %s csatolási pontra (%s) és nyomd meg a Mentés gombot, "
+"hogy életbe lépjen."
 
 msgid "Set the account's primary group to the given group."
 msgstr "A kválasztott csoport beállítása elsődleges csoportnak."
@@ -6632,14 +6671,8 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "Állítsd be a görgető sebességét 0-10 között (alapértelmezetten 10)."
 
-msgid ""
-"Set what user the service will run as (www by default). <br><b><font "
-"color='red'>NOTE</font>: Running as root is <u>not recommended</u> for "
-"security reasons, use it on your own risk!</b></br>"
+msgid "Set under which user the service should run (www by default)."
 msgstr ""
-"A szolgáltatást futtató felhasználó (www alapértelmezetten). <br><b><font "
-"color='red'>MEGJEGYZÉS</font>: Root-ként futtatni <u>nem ajánlott</u> "
-"biztonsági okok miatt, csak saját felelősségre használd!</b></br>"
 
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
@@ -7643,29 +7676,14 @@ msgid ""
 "The distinguished name with which to bind to the directory server, e.g. %s"
 msgstr "A megkülönböztető név, amivel kötődik a címtárkiszolgálóhoz, pl. %s"
 
-#, php-format
-msgid ""
-"The driver used to communicate with your UPS. Get the list of available <a "
-"href='%s' target='_blank'>drivers</a>."
+msgid "The driver used to communicate with your UPS."
 msgstr ""
-"A szünetmentessel kommunikáló illesztőprogram. Az elérhető <a href='%s' "
-"target ='_blank'>illesztőprogramok</a> listája."
 
-#, php-format
-msgid ""
-"The driver used to communicate with your second UPS. Get the list of "
-"available <a href='%s' target='_blank'>drivers</a>."
+msgid "The driver used to communicate with your second UPS."
 msgstr ""
-"Az illesztőprogram a második szünetmentessel kommunikál. Az elérhető <a "
-"href='%s' target='_blank'>illesztőprogramok</a> listája."
 
-#, php-format
-msgid ""
-"The driver used to connect with the LCD. The list of available <a href='%s' "
-"target='_blank'>drivers</a>."
+msgid "The driver used to connect with the LCD."
 msgstr ""
-"Az LCD-hez kapcsolódó illesztőprogram. Az elérhető <a href='%s' target "
-"='_blank'>illesztőprogramok</a> listája."
 
 msgid "The encrypted device is currently mounted!"
 msgstr "Az titkosított eszköz jelenleg be van csatolva!"
@@ -7849,7 +7867,7 @@ msgstr ""
 "Az új jelszó nem azonos. Figyelj, hogy a jelszavak pontosan egyezzenek."
 
 msgid "The new password is also the default root password of the system!"
-msgstr ""
+msgstr "Az új jelszó a rendszer alapértelmezett root jelszava egyben!"
 
 msgid "The number of clients must be between 1 and 50."
 msgstr "A kliensek száma 1 és 50 közé kell, hogy essen."
@@ -8234,18 +8252,10 @@ msgstr ""
 msgid "This can cause a huge delay in loading the log page!"
 msgstr "Ez nagy késleltetést okoz a napló oldal betöltésében!"
 
-#, php-format
 msgid ""
 "This configuration settings are used to generate the ups.conf configuration "
-"file which is required by the NUT UPS daemon. To get more information how to "
-"configure your UPS please check the NUT (Network UPS Tools) <a href='%s' "
-"target='_blank'>documentation</a>."
+"file which is required by the NUT UPS daemon."
 msgstr ""
-"Ezeket a beállításokat használja a ups.conf konfigurációs fájl "
-"generálásához, ami szükséges a NUT szünetmentes démon futásához. Bővebb "
-"információért, hogyan kell beállítani a szünetmentest, ellenőrizze az NUT "
-"(Hálózat Szünetmentes Eszközök) <a href='%s' "
-"target='_blank'>dokumentációját</a>."
 
 msgid "This controls the access a remote host has to this module."
 msgstr "Ez befolyásolja a távoli host ezen modulhoz való hozzáférését."
@@ -8293,24 +8303,16 @@ msgid ""
 "This is both the name of the server as advertised via "
 "Zeroconf/Bonjour/Rendezvous, and the name of the database exported via DAAP."
 msgstr ""
-"Ez szerver neve, ami hirdetésre keresztül Zeroconf/Bonjour/Rendezvous-n "
-"keresztül, és az adatbázisnév DAAP-n keresztül exportálódik."
+"Ez a Zeroconf/Bonjour/Rendezvous-n keresztül meghirdetésre keresztül "
+"szervernév, és a DAAP-n keresztül exportált adatbázis neve is egyben."
 
 msgid "This is for information only (not using during iSCSI negotiation)."
 msgstr "Ez csak leíró információ (nem kerül használatra iSCSI esetén)"
 
 msgid ""
 "This means that the firmware you flashed is not an official/supported "
-"firmware and may lead to unexpected behavior or security compromises. Only "
-"install firmwares that come from sources that you trust, and make sure that "
-"the firmware has not been tampered with.<br /><br />Do you want to install "
-"this firmware anyway (on your own risk)?"
+"firmware and may lead to unexpected behavior or security compromises."
 msgstr ""
-"Nem hivatalos/támogatott firmware fájllal tervezel frissíteni. Ez "
-"kiszámíthatatlan viselkedéshez és komoly biztonsági hibákhoz vezethet. Csak "
-"akkor telepítsd ezt a firmware-t, ha biztosan megbízható forrásból származik "
-"és nem hamisított/módosított. <br /><br />Biztos, hogy telepíted ezt a "
-"firmware-t (csak a saját felelősségedre)?"
 
 msgid "This name already exists in the disk list."
 msgstr "Ez a név már szerepel a lemezlistában."
@@ -8556,6 +8558,7 @@ msgid ""
 "This will cause %s not to check for newer firmware versions when the %s page "
 "is viewed."
 msgstr ""
+"Ennek hatására %s nem keres új firmware verziót, amikor %s oldal jelenik meg."
 
 msgid "This will create a recycle bin on the share."
 msgstr "Ez csinál egy lomtárat a megosztáson."
@@ -8648,38 +8651,25 @@ msgstr "Fogadó e-mail"
 msgid "To email"
 msgstr "Címzett"
 
-#, php-format
-msgid ""
-"To get detailed informations about TCP Wrappers check the FreeBSD <a "
-"href='%s' target='_blank'>documentation</a>."
-msgstr ""
-"A TCP Wrapper-ekről bővebb információt találsz a FreeBSD <a href='%s' "
-"target='_blank'>leírásban</a>."
-
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
 "documentation"
 msgstr ""
+"Tűzfalszabályok írásával kapcsolatos részletes információkért olvasd el a "
+"FreeBSD dokumentációját."
 
-#, php-format
 msgid ""
-"To get more information how to configure LCDproc check the LCDproc <a "
-"href='%s' target='_blank'>documentation</a>."
+"To get more information how to configure LCDproc check the LCDproc "
+"documentation"
 msgstr ""
-"Az LCDproc beállításáról bővebb információt találsz a LCDproc <a href='%s' "
-"target='_blank'>leírásban</a>."
 
-#, php-format
 msgid ""
-"To increase CIFS performance try the following:<div "
-"id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' "
-"switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a "
-"href='%s'>Tuning</a>' switch</li></ul></div>"
+"To get more information how to configure your UPS please check the NUT "
+"(Network UPS Tools) documentation"
 msgstr ""
-"CIFS teljesítmény javításához próbálkozz a következőkkel:<div "
-"id='enumeration'><ul><li>'Aszinkron I/O (AIO) engedélyezése' </li><li>'Nagy "
-"olvasás/írás engedélyezése'</li><li>'<a href='%s'>Tuning</a>' "
-"engedélyezése</li></ul></div>"
+
+msgid "To increase CIFS performance try the following:"
+msgstr ""
 
 msgid "To match any IP address leave this field empty."
 msgstr "Hagyd üresen, ha minden IP címre szeretnéd ezt a szabályt."
@@ -8870,14 +8860,8 @@ msgstr ""
 #, php-format
 msgid ""
 "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
-"of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
-"or NTFS can result in unpredictable results, file corruption, and loss of "
-"data!"
+"of %s)."
 msgstr ""
-"Az UFS és változatai a FreeBSD NATÍV fájlrendszere (a %s alapjául szolgáló  "
-"operációs rendszer). Az egyéb - mint FAT, FAT32, EXT2, EXT3 vagy NTFS - "
-"fájlrendszerekkel való kísérletezés kiszámíthatatlan eredményhez, fájl "
-"sérüléshez és adatvesztéshez vezethet!"
 
 msgid "UFS with Soft Updates"
 msgstr "UFS Puha Frissítésekkel"
@@ -9499,18 +9483,18 @@ msgid ""
 "You can also install a package via SSH or console using the the pkg add "
 "command."
 msgstr ""
+"A pkg add paranccsal SSH-n vagy konzolon keresztül is telepíthetsz "
+"csomagokat."
+
+#, php-format
+msgid "You can not mount partition '%s' where the config file is stored."
+msgstr ""
 
 msgid "You can use the following parameters for substitution:"
 msgstr "A következő paramétereket használhatod helyettesítésre:"
 
 msgid "You can verify the result in the log file."
 msgstr "Az eredményt a naplófájlban tudod ellenőrizni."
-
-#, php-format
-msgid ""
-"You can't mount the partition '%s' where the config file is stored.<br />"
-msgstr ""
-"Nem választhatod le a(z) '%s' partíciót ahol a konfig fájl található.<br />"
 
 msgid ""
 "You can't unmount a drive which is used by swap file, a iSCSI-target file or "
@@ -9522,6 +9506,7 @@ msgstr ""
 #, php-format
 msgid "You have to activate %s to advertise this service to clients."
 msgstr ""
+"Aktiválnod kell %s-t, hogy ez a szolgáltatás kiszolgálja a klienseket."
 
 msgid "You have to reboot the system for the changes to take effect."
 msgstr "A változások életbe lépéséhez újra kell indítanod a rendszert."
@@ -9529,6 +9514,11 @@ msgstr "A változások életbe lépéséhez újra kell indítanod a rendszert."
 #, php-format
 msgid "You have to select at least one item for '%s'."
 msgstr "Legalább egy elemet választania kell ehhez: '%s'."
+
+msgid ""
+"You may also have to do one or more of the following steps before you can "
+"access your server again:"
+msgstr ""
 
 msgid "You may enter a description here for your reference."
 msgstr "Rövid leírást készíthetsz ide."
@@ -9547,13 +9537,6 @@ msgstr ""
 #, php-format
 msgid "You may specify logical block length (%d by default)."
 msgstr "Megadhatod a logikai blokk hosszát (%d alapértelmezetten)."
-
-#, php-format
-msgid ""
-"You must <a href='%s'>reboot</a> the system before you can upgrade the "
-"firmware."
-msgstr ""
-"Firmware frissítése előtt <a href='%s'>új kell indítani</a> a rendszert."
 
 msgid ""
 "You must add at least a Portal Group, an Initiator Group and an Extent "
@@ -9577,6 +9560,9 @@ msgstr "Legalább %dMiB RAM szükséges az iSCSI-cél használatához."
 
 msgid "You must initialize data before enabling."
 msgstr "Engedélyezés előtt szükséges az adat inicializálása."
+
+msgid "You must reboot the system before you can upgrade the firmware"
+msgstr ""
 
 msgid "You must select at least one authentication method."
 msgstr "Legalább egy hitelesítési eljárást ki kell választanod."
@@ -9784,6 +9770,9 @@ msgstr "umask"
 msgid "umount"
 msgstr "leválasztás"
 
+msgid "user"
+msgstr ""
+
 msgid "version:"
 msgstr "verzió:"
 
@@ -9803,6 +9792,13 @@ msgstr "verzió:"
 
 #, php-format
 #~ msgid ""
+#~ "Make sure you have already configured your <a href='%s'>Email</a> settings."
+#~ msgstr ""
+#~ "Győződjön meg arról ,hogy az <a href='%s'>e-mail</a> beállításokat már "
+#~ "elvégezte."
+
+#, php-format
+#~ msgid ""
 #~ "This will cause %s not to check for newer firmware versions when the <a "
 #~ "href='%s'>%s</a> page is viewed."
 #~ msgstr ""
@@ -9811,11 +9807,77 @@ msgstr "verzió:"
 
 #, php-format
 #~ msgid ""
+#~ "To get detailed informations about TCP Wrappers check the FreeBSD <a "
+#~ "href='%s' target='_blank'>documentation</a>."
+#~ msgstr ""
+#~ "A TCP Wrapper-ekről bővebb információt találsz a FreeBSD <a href='%s' "
+#~ "target='_blank'>leírásban</a>."
+
+#, php-format
+#~ msgid ""
+#~ "No configured CARP interfaces. Please add new <a href='%s'>CARP "
+#~ "interface</a> first."
+#~ msgstr ""
+#~ "Nincs konfigurált CARP interfész. Kérem hozz létre egy új <a href='%s'>CARP "
+#~ "interfészt</a> először."
+
+#~ msgid ""
+#~ "Set what user the service will run as (www by default). <br><b><font "
+#~ "color='red'>NOTE</font>: Running as root is <u>not recommended</u> for "
+#~ "security reasons, use it on your own risk!</b></br>"
+#~ msgstr ""
+#~ "A szolgáltatást futtató felhasználó (www alapértelmezetten). <br><b><font "
+#~ "color='red'>MEGJEGYZÉS</font>: Root-ként futtatni <u>nem ajánlott</u> "
+#~ "biztonsági okok miatt, csak saját felelősségre használd!</b></br>"
+
+#, php-format
+#~ msgid ""
+#~ "The driver used to communicate with your UPS. Get the list of available <a "
+#~ "href='%s' target='_blank'>drivers</a>."
+#~ msgstr ""
+#~ "A szünetmentessel kommunikáló illesztőprogram. Az elérhető <a href='%s' "
+#~ "target ='_blank'>illesztőprogramok</a> listája."
+
+#, php-format
+#~ msgid ""
+#~ "This configuration settings are used to generate the ups.conf configuration "
+#~ "file which is required by the NUT UPS daemon. To get more information how to "
+#~ "configure your UPS please check the NUT (Network UPS Tools) <a href='%s' "
+#~ "target='_blank'>documentation</a>."
+#~ msgstr ""
+#~ "Ezeket a beállításokat használja a ups.conf konfigurációs fájl "
+#~ "generálásához, ami szükséges a NUT szünetmentes démon futásához. Bővebb "
+#~ "információért, hogyan kell beállítani a szünetmentest, ellenőrizze az NUT "
+#~ "(Hálózat Szünetmentes Eszközök) <a href='%s' "
+#~ "target='_blank'>dokumentációját</a>."
+
+#, php-format
+#~ msgid ""
 #~ "To get detailed informations about writing firewall rules check the FreeBSD "
 #~ "<a href='%s' target='_blank'>documentation</a>."
 #~ msgstr ""
 #~ "A tűzfalszabályok létrehozásáról bővebb információt találsz a FreeBSD <a "
 #~ "href='%s' target='_blank'>leírásban</a>."
+
+#, php-format
+#~ msgid ""
+#~ "To get more information how to configure LCDproc check the LCDproc <a "
+#~ "href='%s' target='_blank'>documentation</a>."
+#~ msgstr ""
+#~ "Az LCDproc beállításáról bővebb információt találsz a LCDproc <a href='%s' "
+#~ "target='_blank'>leírásban</a>."
+
+#, php-format
+#~ msgid ""
+#~ "To increase CIFS performance try the following:<div "
+#~ "id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' "
+#~ "switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a "
+#~ "href='%s'>Tuning</a>' switch</li></ul></div>"
+#~ msgstr ""
+#~ "CIFS teljesítmény javításához próbálkozz a következőkkel:<div "
+#~ "id='enumeration'><ul><li>'Aszinkron I/O (AIO) engedélyezése' </li><li>'Nagy "
+#~ "olvasás/írás engedélyezése'</li><li>'<a href='%s'>Tuning</a>' "
+#~ "engedélyezése</li></ul></div>"
 
 #~ msgid ""
 #~ "You can also install a package via SSH or console using the the pkg add "
@@ -9826,6 +9888,71 @@ msgstr "verzió:"
 
 #~ msgid "add any supplemental parameters"
 #~ msgstr "adj meg tetszőleges kiegészítő paramétereket"
+
+#, php-format
+#~ msgid "Check <a href=\"%s\">System|General Setup</a> before initializing."
+#~ msgstr ""
+#~ "Inicializálás előtt ellenőrizze a <a href=\"%s\">Rendszer|Általános "
+#~ "beállítások</a>at."
+
+#, php-format
+#~ msgid ""
+#~ "<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
+#~ "href='%s'>user</a> must have shell access."
+#~ msgstr ""
+#~ "<a href='%s'>SSHD</a>-t engedélyezni kell Unison működéséhez, és a <a "
+#~ "href='%s'>felhasználó</a>nak szüksége van shell hozzáférésre."
+
+#~ msgid ""
+#~ "<b>EFI GPT partition</b> if you want to mount a GPT formatted drive "
+#~ "(<b>default partition</b>).<br/><b>MBR partition</b> if you want to mount a "
+#~ "UFS formatted drive or do imported disks from other OS.<br/><b>CD/DVD "
+#~ "volume</b> if you want to mount a CD/DVD volume."
+#~ msgstr ""
+#~ "<b>EFI GPT partíció</b> ha GPT formázott meghajtót szeretnél becsatolni "
+#~ "(<b>alapértelmezett partíció</b>). <br/>\r\n"
+#~ "<b>MBR partíció</b> ha UFS formázott meghajtót vagy másik operációs "
+#~ "rendszerből importált lemezt szeretnél becsatolni.<br/>\r\n"
+#~ "<b>CD/DVD meghajtó</b> ha CD/DVD-kötetet szeretnél becsatolni."
+
+#, php-format
+#~ msgid ""
+#~ "You can't mount the partition '%s' where the config file is stored.<br />"
+#~ msgstr ""
+#~ "Nem választhatod le a(z) '%s' partíciót ahol a konfig fájl található.<br />"
+
+#~ msgid ""
+#~ "All data in the path is overwritten. To avoid invalid data/permission, using "
+#~ "empty UFS directory is recommended."
+#~ msgstr ""
+#~ "Az útvonalon lévő összes adat felülíródik.  Érvénytelen adatok/jogosultságok "
+#~ "elkerülés érdekében üres UFS könyvtár használat ajánlott."
+
+#, php-format
+#~ msgid ""
+#~ "After you click &quot;Save&quot;, you must reboot the server to make the "
+#~ "changes take effect. You may also have to do one or more of the following "
+#~ "steps before you can access your server again: <ul><li><span "
+#~ "class='vexpl'>change the IP address of your server</span></li><li><span "
+#~ "class='vexpl'>access the webGUI with the new IP address</span></li></ul>"
+#~ msgstr ""
+#~ "Miután a &quot;Mentés&quot; gombra kattintottál, újra kell indítani a "
+#~ "szervert, hogy a beállítások életbe lépjenek. Lehetséges hogy valamelyik "
+#~ "lépést végre kell hajtani mielőtt a szervert újra eléred: <ul><li><span "
+#~ "class='vexpl'>szervered IP címének megváltoztatása</span></li><li><span "
+#~ "class='vexpl'>a WebGUI elérése az új IP címen</span></li></ul>"
+
+#, php-format
+#~ msgid ""
+#~ "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
+#~ "of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
+#~ "or NTFS can result in unpredictable results, file corruption, and loss of "
+#~ "data!"
+#~ msgstr ""
+#~ "Az UFS és változatai a FreeBSD NATÍV fájlrendszere (a %s alapjául szolgáló  "
+#~ "operációs rendszer). Az egyéb - mint FAT, FAT32, EXT2, EXT3 vagy NTFS - "
+#~ "fájlrendszerekkel való kísérletezés kiszámíthatatlan eredményhez, fájl "
+#~ "sérüléshez és adatvesztéshez vezethet!"
 
 #, php-format
 #~ msgid ""
@@ -9841,3 +9968,95 @@ msgstr "verzió:"
 #~ msgstr ""
 #~ "<div id='enumeration'><ul><li>A rendszer alapértelmezett root jelszava is ez "
 #~ "a jelszó lesz!</li></ul></div>"
+
+#, php-format
+#~ msgid ""
+#~ "You must <a href='%s'>reboot</a> the system before you can upgrade the "
+#~ "firmware."
+#~ msgstr ""
+#~ "Firmware frissítése előtt <a href='%s'>új kell indítani</a> a rendszert."
+
+#, php-format
+#~ msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
+#~ msgstr "Kérjük olvasd el a <a href='%s' target='_blank'>dokumentációt</a>."
+
+#, php-format
+#~ msgid ""
+#~ "After you click &quot;Save&quot;, you may also have to do one or more of the "
+#~ "following steps before you can access this server again: <ul><li>change the "
+#~ "IP address of your computer</li><li>access the webGUI with the new IP "
+#~ "address</li></ul>"
+#~ msgstr ""
+#~ "Miután a &quot;Mentés&quot; gombra kattintottál, lehetséges hogy valamelyik "
+#~ "lépést végre kell hajtani mielőtt a szervert újra eléred: <ul><li>szervered "
+#~ "IP címének megváltoztatása</li><li>a WebGUI elérése az új IP címen</li></ul>"
+
+#, php-format
+#~ msgid ""
+#~ "DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
+#~ "try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
+#~ "/>It is recommended that you <a href='%s'>Backup</a> the server "
+#~ "configuration before doing a upgrade."
+#~ msgstr ""
+#~ "NE SZAKÍTSD meg a frissítési folyamatot, ha már elindítottad.<br />NE "
+#~ "próbálj valid '%s-%s-embedded.img.xz' fájltól eltérővel frissíteni.<br "
+#~ "/>Frissítés előtt készíts <a href='%s'>biztonsági másolatot</a>."
+
+#~ msgid ""
+#~ "This means that the firmware you flashed is not an official/supported "
+#~ "firmware and may lead to unexpected behavior or security compromises. Only "
+#~ "install firmwares that come from sources that you trust, and make sure that "
+#~ "the firmware has not been tampered with.<br /><br />Do you want to install "
+#~ "this firmware anyway (on your own risk)?"
+#~ msgstr ""
+#~ "Nem hivatalos/támogatott firmware fájllal tervezel frissíteni. Ez "
+#~ "kiszámíthatatlan viselkedéshez és komoly biztonsági hibákhoz vezethet. Csak "
+#~ "akkor telepítsd ezt a firmware-t, ha biztosan megbízható forrásból származik "
+#~ "és nem hamisított/módosított. <br /><br />Biztos, hogy telepíted ezt a "
+#~ "firmware-t (csak a saját felelősségedre)?"
+
+#~ msgid ""
+#~ "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
+#~ msgstr ""
+#~ "<div id='enumeration'><ul><li>%d - Dátum</li><li>%h - "
+#~ "Állomásnév</li></ul></div>"
+
+#~ msgid ""
+#~ "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
+#~ "3.0.0 or newer, and the 'before' algorithm when talking to an older "
+#~ "rsync.</li><li>Before - File-deletions will be done before the transfer "
+#~ "starts.</li><li>During - File-deletions will be done incrementally as the "
+#~ "transfer happens.</li><li>Delay - File-deletions will be computed during the "
+#~ "transfer, and then removed after the transfer completes.</li><li>After - "
+#~ "File-deletions will be done after the transfer has completed.</li>"
+#~ msgstr ""
+#~ "<li>Alapértelmezett - Rsync az 'alatta' algoritmust választja, amikor rsync "
+#~ "3.0.0 vagy újabbal, és az 'előtte' algoritmust amikor egy régebbi rsync-kel "
+#~ "beszélget.</li><li>Előtte - Fájl-törlések az átvitel előtt kezdődik el. "
+#~ "</li><li>Alatta - Fájl törlések inkrementálisan zajlanak az átvitel "
+#~ "alatt.</li><li>Késleltetett - Fájl törlések az átvitel alatt számolódnak, és "
+#~ "az átvitel végén fejeződik be.</li><li>Utána - Fájl-törlések az átvitel után "
+#~ "kezdődnek.</li>"
+
+#, php-format
+#~ msgid ""
+#~ "The driver used to communicate with your second UPS. Get the list of "
+#~ "available <a href='%s' target='_blank'>drivers</a>."
+#~ msgstr ""
+#~ "Az illesztőprogram a második szünetmentessel kommunikál. Az elérhető <a "
+#~ "href='%s' target='_blank'>illesztőprogramok</a> listája."
+
+#, php-format
+#~ msgid ""
+#~ "The driver used to connect with the LCD. The list of available <a href='%s' "
+#~ "target='_blank'>drivers</a>."
+#~ msgstr ""
+#~ "Az LCD-hez kapcsolódó illesztőprogram. Az elérhető <a href='%s' target "
+#~ "='_blank'>illesztőprogramok</a> listája."
+
+#, php-format
+#~ msgid ""
+#~ "No configured Auth Group. Please add new <a href='%s'>Auth Group</a> first."
+#~ msgstr ""
+#~ "Nincs Hitelesítő csoport konfigurálva. Kérem hozz létre egy új <a "
+#~ "href='%s'>Hitelesítő csoportot</a> először."
