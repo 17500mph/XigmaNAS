@@ -412,22 +412,43 @@ function delete_change() {
 					<tr>
 						<td colspan="2" valign="top" class="listtopic"><?=gtext("Advanced Options");?></td>
 					</tr>
-					<?php html_checkbox("recursive", gtext("Recursive"), !empty($pconfig['recursive']) ? true : false, gtext("Recurse into directories."), "", false);?>
-					<?php html_checkbox("times", gtext("Times"), !empty($pconfig['times']) ? true : false, gtext("Preserve modification times."), "", false);?>
-					<?php html_checkbox("compress", gtext("Compress"), !empty($pconfig['compress']) ? true : false, gtext("Compress file data during the transfer."), "", false);?>
-					<?php html_checkbox("archive", gtext("Archive"), !empty($pconfig['archive']) ? true : false, gtext("Archive mode."), "", false);?>
-					<?php html_checkbox("delete", gtext("Delete"), !empty($pconfig['delete']) ? true : false, gtext("Delete files on the receiving side that don't exist on sender."), "", false, "delete_change()");?>
-					<?php html_combobox("delete_algorithm", gtext("Delete algorithm"), $pconfig['delete_algorithm'], array("default" => "Default", "before" => "Before", "during" => "During", "delay" => "Delay", "after" => "After"), "</span><div id='enumeration'><ul>".gettext("<li>Default - Rsync will choose the 'during' algorithm when talking to rsync 3.0.0 or newer, and the 'before' algorithm when talking to an older rsync.</li><li>Before - File-deletions will be done before the transfer starts.</li><li>During - File-deletions will be done incrementally as the transfer happens.</li><li>Delay - File-deletions will be computed during the transfer, and then removed after the transfer completes.</li><li>After - File-deletions will be done after the transfer has completed.</li>")."</ul></div><span>", false);?>
+					<?php
+					html_checkbox("recursive", gtext("Recursive"), !empty($pconfig['recursive']) ? true : false, gtext("Recurse into directories."), "", false);
+					html_checkbox("times", gtext("Times"), !empty($pconfig['times']) ? true : false, gtext("Preserve modification times."), "", false);
+					html_checkbox("compress", gtext("Compress"), !empty($pconfig['compress']) ? true : false, gtext("Compress file data during the transfer."), "", false);
+					html_checkbox("archive", gtext("Archive"), !empty($pconfig['archive']) ? true : false, gtext("Archive mode."), "", false);
+					html_checkbox("delete", gtext("Delete"), !empty($pconfig['delete']) ? true : false, gtext("Delete files on the receiving side that don't exist on sender."), "", false, "delete_change()");
+					$helpinghand = '</span><div id="enumeration"><ul>'
+						. '<li>' . gtext("Default - Rsync will choose the 'during' algorithm when talking to rsync 3.0.0 or newer and the 'before' algorithm when talking to an older rsync.") . '</li>'
+						. '<li>' . gtext('Before - File-deletions will be performed before the transfer starts.') . '</li>'
+						. '<li>' . gtext('During - File-deletions will be done incrementally as the transfer happens.') . '</li>'
+						. '<li>' . gtext('Delay - File-deletions will be computed during the transfer and will be done after the transfer.') . ' </li>'
+						. '<li>' . gtext('After - File-deletions will be done after the transfer has completed.') . '</li>'
+						. '</ul></div><span>';
+					$l_delalgol = [
+						'default' => gtext('Default'),
+						'before' => gtext('Before'),
+						'during' => gtext('During'),
+						'delay' => gtext('Delay'),
+						'after' => gtext('After')
+					];
+					html_combobox("delete_algorithm", gtext("Delete algorithm"), $pconfig['delete_algorithm'], $l_delalgol, $helpinghand, false);
+					?>
 					<tr>
 						<td width="22%" valign="top" class="vncell"><?=gtext("Quiet");?></td>
 						<td width="78%" class="vtable">
 							<input name="quiet" id="quiet" type="checkbox" value="yes" <?php if (!empty($pconfig['quiet'])) echo "checked=\"checked\""; ?> /> <?=gtext("Suppress non-error messages."); ?><br />
 						</td>
 					</tr>
-					<?php html_checkbox("perms", gtext("Preserve permissions"), !empty($pconfig['perms']) ? true : false, gtext("This option causes the receiving rsync to set the destination permissions to be the same as the source permissions."), "", false);?>
-					<?php html_checkbox("xattrs", gtext("Preserve extended attributes"), !empty($pconfig['xattrs']) ? true : false, gtext("This option causes rsync to update the remote extended attributes to be the same as the local ones."), "", false);?>
-					<?php html_inputbox("extraoptions", gtext("Extra options"), !empty($pconfig['extraoptions']) ? $pconfig['extraoptions'] : "", gtext("Extra options to rsync (usually empty).") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://rsync.samba.org/ftp/rsync/rsync.html"), false, 40);?>
-        </table>
+					<?php
+					html_checkbox("perms", gtext("Preserve permissions"), !empty($pconfig['perms']) ? true : false, gtext("This option causes the receiving rsync to set the destination permissions to be the same as the source permissions."), "", false);
+					html_checkbox("xattrs", gtext("Preserve extended attributes"), !empty($pconfig['xattrs']) ? true : false, gtext("This option causes rsync to update the remote extended attributes to be the same as the local ones."), "", false);
+					$helpinghand = '<a href="' . 'http://rsync.samba.org/ftp/rsync/rsync.html' . '" target="_blank">'
+						. gtext('Please check the documentation')
+						. '</a>.';
+					html_inputbox("extraoptions", gtext("Extra options"), !empty($pconfig['extraoptions']) ? $pconfig['extraoptions'] : "", gtext("Extra options to rsync (usually empty).") . " " . $helpinghand, false, 40);
+					?>
+				</table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" />
 					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />

@@ -154,7 +154,11 @@ function hosts_process_updatenotification($mode, $data) {
 							</table>
 						</td>
 					</tr>
-					<?php html_textarea("hostsacl", gtext("Host access control"), $pconfig['hostsacl'], gettext("The basic configuration usually takes the form of 'daemon : address : action'. Where daemon is the daemon name of the service started. The address can be a valid hostname, an IP address or an IPv6 address enclosed in brackets. The action field can be either allow or deny to grant or deny access appropriately. Keep in mind that configuration works off a first rule match semantic, meaning that the configuration file is scanned in ascending order for a matching rule. When a match is found the rule is applied and the search process will halt.") . " " . sprintf(gettext("To get detailed informations about TCP Wrappers check the FreeBSD <a href='%s' target='_blank'>documentation</a>."), "http://www.freebsd.org/doc/en/books/handbook/tcpwrappers.html"), false, 80, 8, false, false);?>
+					<?php
+					$helpinghand = '<a href="' . 'http://www.freebsd.org/doc/en/books/handbook/tcpwrappers.html' . '" target="_blank">'
+						. gtext('Check the FreeBSD documentation for detailed information about TCP Wrappers')
+						. '</a>.';
+					html_textarea("hostsacl", gtext("Host access control"), $pconfig['hostsacl'], gtext("The basic configuration usually takes the form of 'daemon : address : action'. Where daemon is the daemon name of the service started. The address can be a valid hostname, an IP address or an IPv6 address enclosed in brackets. The action field can be either allow or deny to grant or deny access appropriately. Keep in mind that configuration works off a first rule match semantic, meaning that the configuration file is scanned in ascending order for a matching rule. When a match is found the rule is applied and the search process will halt.") . " " . $helpinghand, false, 80, 8, false, false);?>
 				</table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save and Restart");?>" />

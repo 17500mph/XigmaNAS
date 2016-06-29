@@ -141,34 +141,52 @@ function lcdproc_enable_change(enable_change) {
 //-->
 </script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td class="tabcont">
-      <form action="services_lcdproc.php" method="post" name="iform" id="iform">
-	<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-	<?php if (!empty($savemsg)) print_info_box($savemsg);?>
-	<table width="100%" border="0" cellpadding="6" cellspacing="0">
-	<?php html_titleline_checkbox("enable", gtext("LCDproc"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
-	<?php html_inputbox("driver", gtext("Driver"), $pconfig['driver'], sprintf(gettext("The driver used to connect with the LCD. The list of available <a href='%s' target='_blank'>drivers</a>."), "http://lcdproc.omnipotent.net/hardware.php3"), true, 30);?>
-	<?php html_inputbox("port", gtext("Port"), $pconfig['port'], sprintf(gtext("Port to listen on. Default port is %d."), 13666), true, 10);?>
-	<?php html_inputbox("waittime", gtext("Wait time"), $pconfig['waittime'], gtext("The default time in seconds to display a screen."), true, 10);?>
-	<?php html_inputbox("titlespeed", gtext("TitleSpeed"), $pconfig['titlespeed'], gtext("Set title scrolling speed between 0-10 (default 10)."), true, 10);?>
-	<?php html_textarea("param", gtext("Driver parameters"), !empty($pconfig['param']) ? $pconfig['param'] : "", gtext("Additional parameters to the hardware-specific part of the driver."), false, 65, 10, false, false);?>
-	<?php html_textarea("auxparam", gtext("Auxiliary parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", "", false, 65, 5, false, false);?>
-	<?php html_separator();?>
-	<?php html_titleline_checkbox("lcdproc_enable", gtext("LCDproc (Client)"), !empty($pconfig['lcdproc_enable']) ? true : false, gtext("Enable"), "lcdproc_enable_change(false)");?>
-	<?php html_textarea("lcdproc_param", gtext("Extra options"), !empty($pconfig['lcdproc_param']) ? $pconfig['lcdproc_param'] : "", "", false, 65, 10, false, false);?>
-	<?php html_textarea("lcdproc_auxparam", gtext("Auxiliary parameters"), !empty($pconfig['lcdproc_auxparam']) ? $pconfig['lcdproc_auxparam'] : "", "", false, 65, 5, false, false);?>
-	</table>
-	<div id="submit">
-	  <input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="enable_change(true); lcdproc_enable_change(true);" />
-	</div>
-	<div id="remarks">
-	  <?php html_remark("note", gtext('Note'), sprintf(gettext("To get more information how to configure LCDproc check the LCDproc <a href='%s' target='_blank'>documentation</a>."), "http://lcdproc.omnipotent.net"));?>
-	</div>
-	<?php include("formend.inc");?>
-      </form>
-    </td>
-  </tr>
+	<tr>
+		<td class="tabcont">
+			<form action="services_lcdproc.php" method="post" name="iform" id="iform">
+				<?php
+				if (!empty($input_errors)) {
+					print_input_errors($input_errors);
+				}
+				if (!empty($savemsg)) {
+					print_info_box($savemsg);
+				}
+				?>
+				<table width="100%" border="0" cellpadding="6" cellspacing="0">
+					<?php
+					html_titleline_checkbox("enable", gtext("LCDproc"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");
+					$helpinghand = gtext('The driver used to connect with the LCD.')
+						. ' '
+						. '<a href="' . 'http://lcdproc.omnipotent.net/hardware.php3' . '" target="_blank">'
+						. gtext('Check the list of available drivers')
+						. '</a>.';
+					html_inputbox("driver", gtext("Driver"), $pconfig['driver'], $helpinghand, true, 30);
+					html_inputbox("port", gtext("Port"), $pconfig['port'], sprintf(gtext("Port to listen on. Default port is %d."), 13666), true, 10);
+					html_inputbox("waittime", gtext("Wait time"), $pconfig['waittime'], gtext("The default time in seconds to display a screen."), true, 10);
+					html_inputbox("titlespeed", gtext("TitleSpeed"), $pconfig['titlespeed'], gtext("Set title scrolling speed between 0-10 (default 10)."), true, 10);
+					html_textarea("param", gtext("Driver parameters"), !empty($pconfig['param']) ? $pconfig['param'] : "", gtext("Additional parameters to the hardware-specific part of the driver."), false, 65, 10, false, false);
+					html_textarea("auxparam", gtext("Auxiliary parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", "", false, 65, 5, false, false);
+					html_separator();
+					html_titleline_checkbox("lcdproc_enable", gtext("LCDproc (Client)"), !empty($pconfig['lcdproc_enable']) ? true : false, gtext("Enable"), "lcdproc_enable_change(false)");
+					html_textarea("lcdproc_param", gtext("Extra options"), !empty($pconfig['lcdproc_param']) ? $pconfig['lcdproc_param'] : "", "", false, 65, 10, false, false);
+					html_textarea("lcdproc_auxparam", gtext("Auxiliary parameters"), !empty($pconfig['lcdproc_auxparam']) ? $pconfig['lcdproc_auxparam'] : "", "", false, 65, 5, false, false);
+					?>
+				</table>
+				<div id="submit">
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="enable_change(true); lcdproc_enable_change(true);" />
+				</div>
+				<div id="remarks">
+					<?php
+					$helpinghand = '<a href="' . 'http://lcdproc.omnipotent.net' . '" target="_blank">'
+						. gtext('To get more information how to configure LCDproc check the LCDproc documentation')
+						. '</a>.';
+					html_remark("note", gtext('Note'), $helpinghand);
+					?>
+				</div>
+				<?php include("formend.inc");?>
+			</form>
+		</td>
+	</tr>
 </table>
 <script type="text/javascript">
 <!--

@@ -376,7 +376,13 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 			<?php elseif (!empty($sig_warning) && empty($input_errors)): ?>
 				<form action="system_firmware.php" method="post">
 					<?php
-						$sig_warning = "<strong>" . $sig_warning . "</strong><br />".gettext("This means that the firmware you flashed is not an official/supported firmware and may lead to unexpected behavior or security compromises. Only install firmwares that come from sources that you trust, and make sure that the firmware has not been tampered with.<br /><br />Do you want to install this firmware anyway (on your own risk)?");
+						$sig_warning = '<strong>' . $sig_warning . '</strong>'
+							. '<br />'
+							. gtext('This means that the firmware you flashed is not an official/supported firmware and may lead to unexpected behavior or security compromises.')
+							. ' '
+							. gtext('Only install firmwares that come from sources that you trust, and make sure that the firmware has not been tampered with.')
+							. '<br /><br />'
+							. gtext('Do you want to install this firmware anyway (at your own risk)?');
 						print_info_box($sig_warning);
 					?>
 					<input name="sig_override" type="submit" class="formbtn" id="sig_override" value=" Yes ">
@@ -404,11 +410,25 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 									</div>
 									<br />
 									<div id="remarks">
-										<?php html_remark("warning", gtext('Warning'), sprintf(gettext("DO NOT abort the firmware upgrade process once it has started.<br />DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br />It is recommended that you <a href='%s'>Backup</a> the server configuration before doing a upgrade."), get_product_name(), $g['arch'], "system_backup.php"));?>
+										<?php
+										$helpinghand = gtext('DO NOT abort the firmware upgrade process once it has started.')
+											. '<br />'
+											. sprintf(gtext("DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."), get_product_name(), $g['arch'])
+											. '<br />'
+											. '<a href="' . 'system_backup.php' . '">'
+											. gtext('It is recommended that you backup the server configuration before you upgrade')
+											. '</a>.';
+										html_remark("warning", gtext('Warning'), $helpinghand);
+										?>
 									</div>
 								<?php endif;?>
 							<?php else:?>
-								<strong><?=sprintf(gettext("You must <a href='%s'>reboot</a> the system before you can upgrade the firmware."), "reboot.php");?></strong>
+								<?php
+								$helpinghand = '<a href="' . 'reboot.php' . '">'
+									. gtext('You must reboot the system before you can upgrade the firmware')
+									. '</a>.';
+								?>
+								<strong><?=$helpinghand;?></strong>
 							<?php endif;?>
 							<?php include("formend.inc");?>
 						</form>
