@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-26 22:56+0000\n"
+"POT-Creation-Date: 2016-06-29 03:10+0000\n"
 "PO-Revision-Date: 2016-06-27 05:15+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-28 22:13+0000\n"
+"X-Launchpad-Export-Date: 2016-06-29 01:53+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -212,13 +212,6 @@ msgid ""
 msgstr ""
 "<div id='enumeration'><ul><li>%d - Datum</li><li>%h - "
 "Värdnamn</li></ul></div>"
-
-msgid ""
-"<div id='enumeration'><ul><li>The new password is also the default root "
-"password of the system!</li></ul></div>"
-msgstr ""
-"<div id='enumeration'><ul><li>Det nya lösenordet är också lösenord för "
-"användaren root i systemet!</li></ul></div>"
 
 msgid ""
 "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
@@ -510,6 +503,9 @@ msgstr "Lägg till Volym"
 
 msgid "Add additional scheduled self-test."
 msgstr "Lägg till ytterligare schemalagda självtest."
+
+msgid "Add any supplemental parameters."
+msgstr ""
 
 msgid "Add auth group"
 msgstr "Lägg till i autentiserings gruppen."
@@ -1090,6 +1086,12 @@ msgstr "Bind lösenord"
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
+
+#, php-format
+msgid ""
+"BitTorrent needs at least read & execute permissions at the mount point for "
+"directory %s!"
+msgstr ""
 
 msgid "Blank time"
 msgstr "Blank tid"
@@ -1899,6 +1901,9 @@ msgstr "Datasetet är olåst"
 msgid "Datasets"
 msgstr "Dataseten"
 
+msgid "Date"
+msgstr ""
+
 msgid "Date & Time"
 msgstr "Datum och tid"
 
@@ -2310,6 +2315,9 @@ msgstr "Diskar (ATA)"
 
 msgid "Disks (ATA) information"
 msgstr "Diskar (ATA) information"
+
+msgid "Disks | Mount Point | Management"
+msgstr ""
 
 msgid "Display"
 msgstr "Visa"
@@ -3067,6 +3075,9 @@ msgstr "Händelse"
 msgid "Event selection"
 msgstr "Val av händelse"
 
+msgid "Example: pkg add packagename."
+msgstr ""
+
 msgid "Execute"
 msgstr "Kör"
 
@@ -3214,22 +3225,15 @@ msgstr "Misslyckades att ta bort: %s"
 msgid "Failed to send status report to: %s."
 msgstr "Misslyckades att sända statusrapport till %s."
 
-#, php-format
-msgid ""
-"Failed to send status report. Please check the <a href='%s'>log</a> files."
+msgid "Failed to send status report."
 msgstr ""
-"Misslyckades att sända statusrapport. Kontrollera <a "
-"href='%s'>loggfilerna</a>."
 
 #, php-format
 msgid "Failed to send test email to: %s."
 msgstr "Misslyckades att sända test-epost till %s."
 
-#, php-format
-msgid ""
-"Failed to send test email. Please check the <a href='%s'>log</a> files."
+msgid "Failed to send test email."
 msgstr ""
-"Misslyckades att sända test-epost. Kontrollera <a href='%s'>loggfilerna</a>."
 
 msgid "Failed to upload file."
 msgstr "Misslyckades att ladda upp fil."
@@ -4568,6 +4572,9 @@ msgstr ""
 "Se till att du redan har konfigurerat dina inställningar för <a href='%s'>e-"
 "post</a>."
 
+msgid "Make sure you have already configured your email settings"
+msgstr ""
+
 msgid "Management"
 msgstr "Hantering"
 
@@ -5582,8 +5589,14 @@ msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr ""
 "Vänligen kontrollera <a href='%s' target='_blank'>dokumentationen</a>."
 
+msgid "Please check the documentation"
+msgstr ""
+
 msgid "Please check the documentation."
 msgstr "Kontrollera dokumentationen."
+
+msgid "Please check the log files"
+msgstr ""
 
 msgid "Please define the Database directory location."
 msgstr "Ange platsen för databasen."
@@ -6528,6 +6541,12 @@ msgstr "Välj endast läsning (read-only)"
 
 msgid "Set share password."
 msgstr "Välj lösenord för utdelningen."
+
+#, php-format
+msgid ""
+"Set the Read and Execute bits permission for Others (Access Restrictions | "
+"Mode) for the mount point %s in %s and hit Save in order to take them effect."
+msgstr ""
 
 msgid "Set the account's primary group to the given group."
 msgstr "Sätter kontots huvudgrupp till den angivna gruppen."
@@ -7762,6 +7781,9 @@ msgid ""
 msgstr ""
 "De nya lösenorden är inte lika. Försäkra dig om att de är exakt lika."
 
+msgid "The new password is also the default root password of the system!"
+msgstr ""
+
 msgid "The number of clients must be between 1 and 50."
 msgstr "Antalet klienter måste vara mellan 1 och 50"
 
@@ -8466,12 +8488,9 @@ msgstr ""
 
 #, php-format
 msgid ""
-"This will cause %s not to check for newer firmware versions when the <a "
-"href='%s'>%s</a> page is viewed."
+"This will cause %s not to check for newer firmware versions when the %s page "
+"is viewed."
 msgstr ""
-"Detta kommer att medföra att %s är ​​inte kommer att kontrollera om det "
-"finns en nyare version av systemprogramvara när <a href='%s'>% s </ a> sidan "
-"visas."
 
 msgid "This will create a recycle bin on the share."
 msgstr "Detta kommer skapa en papperskorg i delningen."
@@ -8572,13 +8591,10 @@ msgstr ""
 "För att få detaljerad information om TCP-wrappers kontrollera FreeBSD <a "
 "href='%s' target='_blank'>dokumentation</ a>."
 
-#, php-format
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
-"<a href='%s' target='_blank'>documentation</a>."
+"documentation"
 msgstr ""
-"För detaljerad information om hur man skriver regler för brandväggen se <a "
-"href='%s' target='_blank'>dokumentationen</a> för FreeBSD."
 
 #, php-format
 msgid ""
@@ -9419,10 +9435,8 @@ msgstr "Ja"
 
 msgid ""
 "You can also install a package via SSH or console using the the pkg add "
-"command.<br />Example: pkg add packagename"
+"command."
 msgstr ""
-"Du kan också installera ett paket via SSH eller konsolen genom att använda "
-"\"pkg add\" kommandot.<br />Exempelvis: pkg add paketnamn"
 
 msgid "You can use the following parameters for substitution:"
 msgstr "Du kan använda följande parametrar för substitution(utbyte):"
@@ -9444,12 +9458,8 @@ msgstr ""
 "målfil eller annan aktiv process!"
 
 #, php-format
-msgid ""
-"You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
-"service to clients."
+msgid "You have to activate %s to advertise this service to clients."
 msgstr ""
-"Du måste aktivera <a href='%s'>Zeroconf/Bonjour</a> för att annonsera denna "
-"tjänst för klienterna."
 
 msgid "You have to reboot the system for the changes to take effect."
 msgstr "Du måste starta om systemet innan ändringarna slår igenom."
@@ -9565,9 +9575,6 @@ msgstr "Zeroconf/Bonjour"
 
 msgid "adaptive (low power consumption)"
 msgstr "adaptiv (låg effektförbrukning)"
-
-msgid "add any supplemental parameters"
-msgstr "lägg till eventuella extra parametrar"
 
 msgid "all encrypted disks are imported."
 msgstr "alla krypterade diskar är importerade"
@@ -9721,3 +9728,58 @@ msgstr "umount"
 
 msgid "version:"
 msgstr "version:"
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
+#~ msgstr ""
+#~ "Misslyckades att sända statusrapport. Kontrollera <a "
+#~ "href='%s'>loggfilerna</a>."
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
+#~ msgstr ""
+#~ "Misslyckades att sända test-epost. Kontrollera <a href='%s'>loggfilerna</a>."
+
+#, php-format
+#~ msgid ""
+#~ "To get detailed informations about writing firewall rules check the FreeBSD "
+#~ "<a href='%s' target='_blank'>documentation</a>."
+#~ msgstr ""
+#~ "För detaljerad information om hur man skriver regler för brandväggen se <a "
+#~ "href='%s' target='_blank'>dokumentationen</a> för FreeBSD."
+
+#, php-format
+#~ msgid ""
+#~ "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
+#~ "service to clients."
+#~ msgstr ""
+#~ "Du måste aktivera <a href='%s'>Zeroconf/Bonjour</a> för att annonsera denna "
+#~ "tjänst för klienterna."
+
+#~ msgid ""
+#~ "You can also install a package via SSH or console using the the pkg add "
+#~ "command.<br />Example: pkg add packagename"
+#~ msgstr ""
+#~ "Du kan också installera ett paket via SSH eller konsolen genom att använda "
+#~ "\"pkg add\" kommandot.<br />Exempelvis: pkg add paketnamn"
+
+#~ msgid "add any supplemental parameters"
+#~ msgstr "lägg till eventuella extra parametrar"
+
+#~ msgid ""
+#~ "<div id='enumeration'><ul><li>The new password is also the default root "
+#~ "password of the system!</li></ul></div>"
+#~ msgstr ""
+#~ "<div id='enumeration'><ul><li>Det nya lösenordet är också lösenord för "
+#~ "användaren root i systemet!</li></ul></div>"
+
+#, php-format
+#~ msgid ""
+#~ "This will cause %s not to check for newer firmware versions when the <a "
+#~ "href='%s'>%s</a> page is viewed."
+#~ msgstr ""
+#~ "Detta kommer att medföra att %s är ​​inte kommer att kontrollera om det "
+#~ "finns en nyare version av systemprogramvara när <a href='%s'>% s </ a> sidan "
+#~ "visas."

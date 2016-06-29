@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-26 22:56+0000\n"
+"POT-Creation-Date: 2016-06-29 03:10+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: Jānis Marks Gailis <jm-gailis@fai-vianet.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-28 22:14+0000\n"
+"X-Launchpad-Export-Date: 2016-06-29 01:52+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: LATVIA\n"
 "Language: \n"
@@ -196,13 +196,6 @@ msgid ""
 msgstr ""
 "<div id='enumeration'><ul><li>%d - Datums</li><li>%h - Saimniekdatora "
 "nosaukums</li></ul></div>"
-
-msgid ""
-"<div id='enumeration'><ul><li>The new password is also the default root "
-"password of the system!</li></ul></div>"
-msgstr ""
-"<div id='enumeration'><ul><li>Jaunā parole ir arī sistēmas noklusējuma root "
-"parole!</li></ul></div>"
 
 msgid ""
 "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
@@ -485,6 +478,9 @@ msgstr ""
 
 msgid "Add additional scheduled self-test."
 msgstr "Pievienot papildus ieplānotu paš-pārbaudi."
+
+msgid "Add any supplemental parameters."
+msgstr ""
 
 msgid "Add auth group"
 msgstr "Pievienot auth grupu"
@@ -1037,6 +1033,12 @@ msgstr "Sasiet paroli"
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
+
+#, php-format
+msgid ""
+"BitTorrent needs at least read & execute permissions at the mount point for "
+"directory %s!"
+msgstr ""
 
 msgid "Blank time"
 msgstr "Tukš laiks"
@@ -1787,6 +1789,9 @@ msgstr ""
 msgid "Datasets"
 msgstr "Datu sējumi"
 
+msgid "Date"
+msgstr ""
+
 msgid "Date & Time"
 msgstr "Datums un laiks"
 
@@ -2191,6 +2196,9 @@ msgid "Disks (ATA)"
 msgstr "Diski (ATA)"
 
 msgid "Disks (ATA) information"
+msgstr ""
+
+msgid "Disks | Mount Point | Management"
 msgstr ""
 
 msgid "Display"
@@ -2928,6 +2936,9 @@ msgstr "Notikums"
 msgid "Event selection"
 msgstr ""
 
+msgid "Example: pkg add packagename."
+msgstr ""
+
 msgid "Execute"
 msgstr "Izpildīt"
 
@@ -3073,23 +3084,15 @@ msgstr ""
 msgid "Failed to send status report to: %s."
 msgstr "Neizdevās nosūtīt pārskatu uz: %s."
 
-#, php-format
-msgid ""
-"Failed to send status report. Please check the <a href='%s'>log</a> files."
+msgid "Failed to send status report."
 msgstr ""
-"Neizdevās nosūtīt statusa pārskatu. Lūdzu pārbaudi <a href='%s'> žurnāla "
-"</a> datnes."
 
 #, php-format
 msgid "Failed to send test email to: %s."
 msgstr "Neizdevās nosūtīt testa e-pastu uz: %s."
 
-#, php-format
-msgid ""
-"Failed to send test email. Please check the <a href='%s'>log</a> files."
+msgid "Failed to send test email."
 msgstr ""
-"Neizdevās nosūtīt testa e-pastu. Lūdzu pārbaudi <a href='%s'>žurnāla</a> "
-"datnes."
 
 msgid "Failed to upload file."
 msgstr "Neizdevās augšupielādēt datni."
@@ -4385,6 +4388,9 @@ msgstr ""
 "Pārbaudi vai jau esi konfigurējis savus <a href='%s'>E-pasta</a> "
 "uzstādījumus."
 
+msgid "Make sure you have already configured your email settings"
+msgstr ""
+
 msgid "Management"
 msgstr "Menedžments"
 
@@ -5382,7 +5388,13 @@ msgstr ""
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "Lūdzu pārbaudi <a href='%s' target='_blank'>dokumentāciju</a>."
 
+msgid "Please check the documentation"
+msgstr ""
+
 msgid "Please check the documentation."
+msgstr ""
+
+msgid "Please check the log files"
 msgstr ""
 
 msgid "Please define the Database directory location."
@@ -6313,6 +6325,12 @@ msgstr "Uzstādīt tikai lasāmu"
 
 msgid "Set share password."
 msgstr "Uzstādīt kopīgojuma paroli."
+
+#, php-format
+msgid ""
+"Set the Read and Execute bits permission for Others (Access Restrictions | "
+"Mode) for the mount point %s in %s and hit Save in order to take them effect."
+msgstr ""
 
 msgid "Set the account's primary group to the given group."
 msgstr "Uzstādīt lietotāja primāro grupu uz doto grupu."
@@ -7482,6 +7500,9 @@ msgid ""
 "The new password does not match. Please ensure the passwords match exactly."
 msgstr ""
 
+msgid "The new password is also the default root password of the system!"
+msgstr ""
+
 msgid "The number of clients must be between 1 and 50."
 msgstr "Klientu skaitam vajag būt starp 1 un 50."
 
@@ -8132,11 +8153,9 @@ msgstr ""
 
 #, php-format
 msgid ""
-"This will cause %s not to check for newer firmware versions when the <a "
-"href='%s'>%s</a> page is viewed."
+"This will cause %s not to check for newer firmware versions when the %s page "
+"is viewed."
 msgstr ""
-"Šis liks %s nepārbaudīt vai ir jaunāka programmatūras versija, kad <a "
-"href='%s'>%s</a> lapa ir apskatīta."
 
 msgid "This will create a recycle bin on the share."
 msgstr "Šis izveidois miskasti iekš kopīgojuma."
@@ -8233,13 +8252,10 @@ msgstr ""
 "Lai iegūtu detalizētu informāciju par TCP Wrappers pārbaudi FreeBSD <a "
 "href='%s' target='_blank'>dokumentāciju</a>."
 
-#, php-format
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
-"<a href='%s' target='_blank'>documentation</a>."
+"documentation"
 msgstr ""
-"Lai iegūtu detalizētu informāciju, kā rakstīt ugunsmūra noteikumus pārbaudi "
-"FreeBSD <a href='%s' target='_blank'>dokumentāciju</a>."
 
 #, php-format
 msgid ""
@@ -9041,7 +9057,7 @@ msgstr "Jā"
 
 msgid ""
 "You can also install a package via SSH or console using the the pkg add "
-"command.<br />Example: pkg add packagename"
+"command."
 msgstr ""
 
 msgid "You can use the following parameters for substitution:"
@@ -9065,12 +9081,8 @@ msgstr ""
 "datne vai cits darbojoš process!"
 
 #, php-format
-msgid ""
-"You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
-"service to clients."
+msgid "You have to activate %s to advertise this service to clients."
 msgstr ""
-"Tev vajag aktivizēt <a href='%s'>Zeroconf/Bonjour</a> lai reklamētu šo "
-"servisu lietotājiem."
 
 msgid "You have to reboot the system for the changes to take effect."
 msgstr ""
@@ -9176,9 +9188,6 @@ msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
 msgid "adaptive (low power consumption)"
-msgstr ""
-
-msgid "add any supplemental parameters"
 msgstr ""
 
 msgid "all encrypted disks are imported."
@@ -9331,3 +9340,48 @@ msgstr "aitsaistīt"
 
 msgid "version:"
 msgstr ""
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
+#~ msgstr ""
+#~ "Neizdevās nosūtīt statusa pārskatu. Lūdzu pārbaudi <a href='%s'> žurnāla "
+#~ "</a> datnes."
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
+#~ msgstr ""
+#~ "Neizdevās nosūtīt testa e-pastu. Lūdzu pārbaudi <a href='%s'>žurnāla</a> "
+#~ "datnes."
+
+#, php-format
+#~ msgid ""
+#~ "This will cause %s not to check for newer firmware versions when the <a "
+#~ "href='%s'>%s</a> page is viewed."
+#~ msgstr ""
+#~ "Šis liks %s nepārbaudīt vai ir jaunāka programmatūras versija, kad <a "
+#~ "href='%s'>%s</a> lapa ir apskatīta."
+
+#, php-format
+#~ msgid ""
+#~ "To get detailed informations about writing firewall rules check the FreeBSD "
+#~ "<a href='%s' target='_blank'>documentation</a>."
+#~ msgstr ""
+#~ "Lai iegūtu detalizētu informāciju, kā rakstīt ugunsmūra noteikumus pārbaudi "
+#~ "FreeBSD <a href='%s' target='_blank'>dokumentāciju</a>."
+
+#, php-format
+#~ msgid ""
+#~ "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
+#~ "service to clients."
+#~ msgstr ""
+#~ "Tev vajag aktivizēt <a href='%s'>Zeroconf/Bonjour</a> lai reklamētu šo "
+#~ "servisu lietotājiem."
+
+#~ msgid ""
+#~ "<div id='enumeration'><ul><li>The new password is also the default root "
+#~ "password of the system!</li></ul></div>"
+#~ msgstr ""
+#~ "<div id='enumeration'><ul><li>Jaunā parole ir arī sistēmas noklusējuma root "
+#~ "parole!</li></ul></div>"

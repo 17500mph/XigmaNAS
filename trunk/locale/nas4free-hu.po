@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-26 22:56+0000\n"
+"POT-Creation-Date: 2016-06-29 03:10+0000\n"
 "PO-Revision-Date: 2016-06-27 18:39+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-28 22:14+0000\n"
+"X-Launchpad-Export-Date: 2016-06-29 01:52+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -219,13 +219,6 @@ msgid ""
 msgstr ""
 "<div id='enumeration'><ul><li>%d - Dátum</li><li>%h - "
 "Állomásnév</li></ul></div>"
-
-msgid ""
-"<div id='enumeration'><ul><li>The new password is also the default root "
-"password of the system!</li></ul></div>"
-msgstr ""
-"<div id='enumeration'><ul><li>A rendszer alapértelmezett root jelszava is ez "
-"a jelszó lesz!</li></ul></div>"
 
 msgid ""
 "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
@@ -519,6 +512,9 @@ msgstr "Kötet hozzáadása"
 
 msgid "Add additional scheduled self-test."
 msgstr "További időzített öntesztek hozzáadása"
+
+msgid "Add any supplemental parameters."
+msgstr ""
 
 msgid "Add auth group"
 msgstr "Hitelesítő csoport létrehozása"
@@ -1105,6 +1101,12 @@ msgstr "Kötés jelszava"
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
+
+#, php-format
+msgid ""
+"BitTorrent needs at least read & execute permissions at the mount point for "
+"directory %s!"
+msgstr ""
 
 msgid "Blank time"
 msgstr "Üres idő"
@@ -1912,6 +1914,9 @@ msgstr "Adattár zárolva van"
 msgid "Datasets"
 msgstr "Adattárak (datasets)"
 
+msgid "Date"
+msgstr ""
+
 msgid "Date & Time"
 msgstr "Dátum & idő"
 
@@ -2324,6 +2329,9 @@ msgstr "Merevlemezek (ATA)"
 
 msgid "Disks (ATA) information"
 msgstr "ATA lemezekről információ"
+
+msgid "Disks | Mount Point | Management"
+msgstr ""
 
 msgid "Display"
 msgstr "Kijelző"
@@ -3094,6 +3102,9 @@ msgstr "Esemény"
 msgid "Event selection"
 msgstr "Esemény kiválasztása"
 
+msgid "Example: pkg add packagename."
+msgstr ""
+
 msgid "Execute"
 msgstr "Futtatás"
 
@@ -3241,23 +3252,15 @@ msgstr "Nem sikerült eltávolítani: %s"
 msgid "Failed to send status report to: %s."
 msgstr "Az állapot jelentés küldése meghiúsult ehhez: %s."
 
-#, php-format
-msgid ""
-"Failed to send status report. Please check the <a href='%s'>log</a> files."
+msgid "Failed to send status report."
 msgstr ""
-"Az állapot jelentés küldése meghiúsult. Kérjük ellenőrizze a <a "
-"href='%s'>napló</a> fájlokat."
 
 #, php-format
 msgid "Failed to send test email to: %s."
 msgstr "Teszt e-mail küldése sikertelen ide: %s."
 
-#, php-format
-msgid ""
-"Failed to send test email. Please check the <a href='%s'>log</a> files."
+msgid "Failed to send test email."
 msgstr ""
-"Teszt e-mail küldése sikertelen. Kérjük ellenőrizze a <a href='%s'>napló</a> "
-"fájlokat."
 
 msgid "Failed to upload file."
 msgstr "Fájlfeltöltés sikertelen."
@@ -4609,6 +4612,9 @@ msgstr ""
 "Győződjön meg arról ,hogy az <a href='%s'>e-mail</a> beállításokat már "
 "elvégezte."
 
+msgid "Make sure you have already configured your email settings"
+msgstr ""
+
 msgid "Management"
 msgstr "Kezelés"
 
@@ -5629,8 +5635,14 @@ msgstr "Először egy új tárolót hozz létre."
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "Kérjük olvasd el a <a href='%s' target='_blank'>dokumentációt</a>."
 
+msgid "Please check the documentation"
+msgstr ""
+
 msgid "Please check the documentation."
 msgstr "Ellenőrizd a dokumentációt."
+
+msgid "Please check the log files"
+msgstr ""
 
 msgid "Please define the Database directory location."
 msgstr "Add meg az adatbázis  könyvtárának helyét."
@@ -6589,6 +6601,12 @@ msgstr "Beállítás írásvédettnek"
 
 msgid "Set share password."
 msgstr "Megosztási jelszó beállítása"
+
+#, php-format
+msgid ""
+"Set the Read and Execute bits permission for Others (Access Restrictions | "
+"Mode) for the mount point %s in %s and hit Save in order to take them effect."
+msgstr ""
 
 msgid "Set the account's primary group to the given group."
 msgstr "A kválasztott csoport beállítása elsődleges csoportnak."
@@ -7830,6 +7848,9 @@ msgid ""
 msgstr ""
 "Az új jelszó nem azonos. Figyelj, hogy a jelszavak pontosan egyezzenek."
 
+msgid "The new password is also the default root password of the system!"
+msgstr ""
+
 msgid "The number of clients must be between 1 and 50."
 msgstr "A kliensek száma 1 és 50 közé kell, hogy essen."
 
@@ -8532,11 +8553,9 @@ msgstr ""
 
 #, php-format
 msgid ""
-"This will cause %s not to check for newer firmware versions when the <a "
-"href='%s'>%s</a> page is viewed."
+"This will cause %s not to check for newer firmware versions when the %s page "
+"is viewed."
 msgstr ""
-"Így a %s nem ellenőrzi a <a href='%s'>%s</a> oldalon, hogy elérhető-e újabb "
-"firmware verzió."
 
 msgid "This will create a recycle bin on the share."
 msgstr "Ez csinál egy lomtárat a megosztáson."
@@ -8637,13 +8656,10 @@ msgstr ""
 "A TCP Wrapper-ekről bővebb információt találsz a FreeBSD <a href='%s' "
 "target='_blank'>leírásban</a>."
 
-#, php-format
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
-"<a href='%s' target='_blank'>documentation</a>."
+"documentation"
 msgstr ""
-"A tűzfalszabályok létrehozásáról bővebb információt találsz a FreeBSD <a "
-"href='%s' target='_blank'>leírásban</a>."
 
 #, php-format
 msgid ""
@@ -9481,10 +9497,8 @@ msgstr "Igen"
 
 msgid ""
 "You can also install a package via SSH or console using the the pkg add "
-"command.<br />Example: pkg add packagename"
+"command."
 msgstr ""
-"Csomagot telepíthetsz a pkg add parancs SSH-n vagy konzolon keresztüli "
-"használatával.<br />Például: pkg add csomagnév"
 
 msgid "You can use the following parameters for substitution:"
 msgstr "A következő paramétereket használhatod helyettesítésre:"
@@ -9506,12 +9520,8 @@ msgstr ""
 "található, illetve valamely futó folyamat használja!"
 
 #, php-format
-msgid ""
-"You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
-"service to clients."
+msgid "You have to activate %s to advertise this service to clients."
 msgstr ""
-"Aktiválni kell a  <a href='%s'>Zeroconf/Bonjour</a>-t, hogy azt a "
-"szolgáltatást közzétenni  lehessen a kliensek felé."
 
 msgid "You have to reboot the system for the changes to take effect."
 msgstr "A változások életbe lépéséhez újra kell indítanod a rendszert."
@@ -9623,9 +9633,6 @@ msgstr "Zeroconf/Bonjour"
 
 msgid "adaptive (low power consumption)"
 msgstr "adaptív (alacsony fogyasztás)"
-
-msgid "add any supplemental parameters"
-msgstr "adj meg tetszőleges kiegészítő paramétereket"
 
 msgid "all encrypted disks are imported."
 msgstr "összes encrypted raid lemez importálva."
@@ -9779,3 +9786,58 @@ msgstr "leválasztás"
 
 msgid "version:"
 msgstr "verzió:"
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
+#~ msgstr ""
+#~ "Az állapot jelentés küldése meghiúsult. Kérjük ellenőrizze a <a "
+#~ "href='%s'>napló</a> fájlokat."
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
+#~ msgstr ""
+#~ "Teszt e-mail küldése sikertelen. Kérjük ellenőrizze a <a href='%s'>napló</a> "
+#~ "fájlokat."
+
+#, php-format
+#~ msgid ""
+#~ "This will cause %s not to check for newer firmware versions when the <a "
+#~ "href='%s'>%s</a> page is viewed."
+#~ msgstr ""
+#~ "Így a %s nem ellenőrzi a <a href='%s'>%s</a> oldalon, hogy elérhető-e újabb "
+#~ "firmware verzió."
+
+#, php-format
+#~ msgid ""
+#~ "To get detailed informations about writing firewall rules check the FreeBSD "
+#~ "<a href='%s' target='_blank'>documentation</a>."
+#~ msgstr ""
+#~ "A tűzfalszabályok létrehozásáról bővebb információt találsz a FreeBSD <a "
+#~ "href='%s' target='_blank'>leírásban</a>."
+
+#~ msgid ""
+#~ "You can also install a package via SSH or console using the the pkg add "
+#~ "command.<br />Example: pkg add packagename"
+#~ msgstr ""
+#~ "Csomagot telepíthetsz a pkg add parancs SSH-n vagy konzolon keresztüli "
+#~ "használatával.<br />Például: pkg add csomagnév"
+
+#~ msgid "add any supplemental parameters"
+#~ msgstr "adj meg tetszőleges kiegészítő paramétereket"
+
+#, php-format
+#~ msgid ""
+#~ "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
+#~ "service to clients."
+#~ msgstr ""
+#~ "Aktiválni kell a  <a href='%s'>Zeroconf/Bonjour</a>-t, hogy azt a "
+#~ "szolgáltatást közzétenni  lehessen a kliensek felé."
+
+#~ msgid ""
+#~ "<div id='enumeration'><ul><li>The new password is also the default root "
+#~ "password of the system!</li></ul></div>"
+#~ msgstr ""
+#~ "<div id='enumeration'><ul><li>A rendszer alapértelmezett root jelszava is ez "
+#~ "a jelszó lesz!</li></ul></div>"

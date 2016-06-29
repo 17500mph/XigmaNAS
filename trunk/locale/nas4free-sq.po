@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-26 22:56+0000\n"
+"POT-Creation-Date: 2016-06-29 03:10+0000\n"
 "PO-Revision-Date: 2014-11-17 04:09+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-28 22:13+0000\n"
+"X-Launchpad-Export-Date: 2016-06-29 01:53+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: ALBANIA\n"
 "Language: \n"
@@ -193,11 +193,6 @@ msgid ""
 "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
 msgstr ""
 "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
-
-msgid ""
-"<div id='enumeration'><ul><li>The new password is also the default root "
-"password of the system!</li></ul></div>"
-msgstr ""
 
 msgid ""
 "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
@@ -482,6 +477,9 @@ msgstr ""
 
 msgid "Add additional scheduled self-test."
 msgstr "Shto nje testim automatik te programuar."
+
+msgid "Add any supplemental parameters."
+msgstr ""
 
 msgid "Add auth group"
 msgstr "Shto nje grup te autorizuar"
@@ -1037,6 +1035,12 @@ msgstr "Falekalimi bind"
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
+
+#, php-format
+msgid ""
+"BitTorrent needs at least read & execute permissions at the mount point for "
+"directory %s!"
+msgstr ""
 
 msgid "Blank time"
 msgstr "Ler kohen bosh"
@@ -1779,6 +1783,9 @@ msgstr ""
 msgid "Datasets"
 msgstr "Datasets"
 
+msgid "Date"
+msgstr ""
+
 msgid "Date & Time"
 msgstr "Data & Ora"
 
@@ -2178,6 +2185,9 @@ msgid "Disks (ATA)"
 msgstr "Disqet (ATA)"
 
 msgid "Disks (ATA) information"
+msgstr ""
+
+msgid "Disks | Mount Point | Management"
 msgstr ""
 
 msgid "Display"
@@ -2909,6 +2919,9 @@ msgstr "Ngjarje"
 msgid "Event selection"
 msgstr ""
 
+msgid "Example: pkg add packagename."
+msgstr ""
+
 msgid "Execute"
 msgstr "Ekzekuto"
 
@@ -3052,23 +3065,15 @@ msgstr ""
 msgid "Failed to send status report to: %s."
 msgstr "Dergimi i raportit te statusit deshtoi :  %s."
 
-#, php-format
-msgid ""
-"Failed to send status report. Please check the <a href='%s'>log</a> files."
+msgid "Failed to send status report."
 msgstr ""
-"Dergimi i raportit te statusit deshtoi. Ju lutem kontrolloni <a "
-"href='%s'>log</a> e skedarit."
 
 #, php-format
 msgid "Failed to send test email to: %s."
 msgstr "Deshtoi dergimi i email-it per testim tek: %s."
 
-#, php-format
-msgid ""
-"Failed to send test email. Please check the <a href='%s'>log</a> files."
+msgid "Failed to send test email."
 msgstr ""
-"Dergimi i email-it per testim deshtoi. Ju lutem kontrolloni <a "
-"href='%s'>log</a> e skedarit."
 
 msgid "Failed to upload file."
 msgstr "Ngarkimi i skedes deshtoi."
@@ -4342,6 +4347,9 @@ msgid ""
 "Make sure you have already configured your <a href='%s'>Email</a> settings."
 msgstr ""
 
+msgid "Make sure you have already configured your email settings"
+msgstr ""
+
 msgid "Management"
 msgstr "Menaxhim"
 
@@ -5321,7 +5329,13 @@ msgstr ""
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr ""
 
+msgid "Please check the documentation"
+msgstr ""
+
 msgid "Please check the documentation."
+msgstr ""
+
+msgid "Please check the log files"
 msgstr ""
 
 msgid "Please define the Database directory location."
@@ -6232,6 +6246,12 @@ msgstr "Vendos vetem lexim"
 
 msgid "Set share password."
 msgstr "Vendos fjakalim te perbashket."
+
+#, php-format
+msgid ""
+"Set the Read and Execute bits permission for Others (Access Restrictions | "
+"Mode) for the mount point %s in %s and hit Save in order to take them effect."
+msgstr ""
 
 msgid "Set the account's primary group to the given group."
 msgstr ""
@@ -7327,6 +7347,9 @@ msgid ""
 "The new password does not match. Please ensure the passwords match exactly."
 msgstr ""
 
+msgid "The new password is also the default root password of the system!"
+msgstr ""
+
 msgid "The number of clients must be between 1 and 50."
 msgstr ""
 
@@ -7892,8 +7915,8 @@ msgstr ""
 
 #, php-format
 msgid ""
-"This will cause %s not to check for newer firmware versions when the <a "
-"href='%s'>%s</a> page is viewed."
+"This will cause %s not to check for newer firmware versions when the %s page "
+"is viewed."
 msgstr ""
 
 msgid "This will create a recycle bin on the share."
@@ -7987,13 +8010,10 @@ msgid ""
 "href='%s' target='_blank'>documentation</a>."
 msgstr ""
 
-#, php-format
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
-"<a href='%s' target='_blank'>documentation</a>."
+"documentation"
 msgstr ""
-"Per detajet me te shumta për te shkruar rregullat e firewallit kontrollo "
-"FreeBSD <a href='%s' target='_blank'>documentation</a>."
 
 #, php-format
 msgid ""
@@ -8767,7 +8787,7 @@ msgstr "Po"
 
 msgid ""
 "You can also install a package via SSH or console using the the pkg add "
-"command.<br />Example: pkg add packagename"
+"command."
 msgstr ""
 
 msgid "You can use the following parameters for substitution:"
@@ -8787,9 +8807,7 @@ msgid ""
 msgstr ""
 
 #, php-format
-msgid ""
-"You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
-"service to clients."
+msgid "You have to activate %s to advertise this service to clients."
 msgstr ""
 
 msgid "You have to reboot the system for the changes to take effect."
@@ -8894,9 +8912,6 @@ msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
 msgid "adaptive (low power consumption)"
-msgstr ""
-
-msgid "add any supplemental parameters"
 msgstr ""
 
 msgid "all encrypted disks are imported."
@@ -9049,3 +9064,25 @@ msgstr "zmonto"
 
 msgid "version:"
 msgstr ""
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
+#~ msgstr ""
+#~ "Dergimi i raportit te statusit deshtoi. Ju lutem kontrolloni <a "
+#~ "href='%s'>log</a> e skedarit."
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
+#~ msgstr ""
+#~ "Dergimi i email-it per testim deshtoi. Ju lutem kontrolloni <a "
+#~ "href='%s'>log</a> e skedarit."
+
+#, php-format
+#~ msgid ""
+#~ "To get detailed informations about writing firewall rules check the FreeBSD "
+#~ "<a href='%s' target='_blank'>documentation</a>."
+#~ msgstr ""
+#~ "Per detajet me te shumta për te shkruar rregullat e firewallit kontrollo "
+#~ "FreeBSD <a href='%s' target='_blank'>documentation</a>."

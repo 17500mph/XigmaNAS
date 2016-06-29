@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-26 22:56+0000\n"
+"POT-Creation-Date: 2016-06-29 03:10+0000\n"
 "PO-Revision-Date: 2016-06-23 14:41+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-28 22:14+0000\n"
+"X-Launchpad-Export-Date: 2016-06-29 01:52+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -222,13 +222,6 @@ msgid ""
 msgstr ""
 "<div id='enumeration'><ul><li>%d – datum</li><li>%h – název "
 "stroje</li></ul></div>"
-
-msgid ""
-"<div id='enumeration'><ul><li>The new password is also the default root "
-"password of the system!</li></ul></div>"
-msgstr ""
-"<div id='enumeration'><ul><li>Toto nové heslo bude zároveň také výchozím "
-"heslem správce systému (root)!</li></ul></div>"
 
 msgid ""
 "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
@@ -525,6 +518,9 @@ msgstr "Přidat svazek"
 
 msgid "Add additional scheduled self-test."
 msgstr "Přidat další naplánovaný samotest."
+
+msgid "Add any supplemental parameters."
+msgstr ""
 
 msgid "Add auth group"
 msgstr "Přidat skupinu pověřených"
@@ -1117,6 +1113,12 @@ msgstr "Heslo, kterým se spojovat"
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
+
+#, php-format
+msgid ""
+"BitTorrent needs at least read & execute permissions at the mount point for "
+"directory %s!"
+msgstr ""
 
 msgid "Blank time"
 msgstr "Prodleva potemnění obrazovky"
@@ -1957,6 +1959,9 @@ msgstr "Datová sada je odemčená"
 msgid "Datasets"
 msgstr "Datové sady"
 
+msgid "Date"
+msgstr ""
+
 msgid "Date & Time"
 msgstr "Datum a čas"
 
@@ -2372,6 +2377,9 @@ msgstr "Disky (rozhraní ATA)"
 
 msgid "Disks (ATA) information"
 msgstr "Informace o discích (ATA)"
+
+msgid "Disks | Mount Point | Management"
+msgstr ""
 
 msgid "Display"
 msgstr "Zobrazit"
@@ -3136,6 +3144,9 @@ msgstr "Událost"
 msgid "Event selection"
 msgstr "Výběr události"
 
+msgid "Example: pkg add packagename."
+msgstr ""
+
 msgid "Execute"
 msgstr "Spustit"
 
@@ -3283,23 +3294,15 @@ msgstr "Nezdařilo se odstranit: %s"
 msgid "Failed to send status report to: %s."
 msgstr "Nezdařilo se poslat hlášení o stavu na: %s"
 
-#, php-format
-msgid ""
-"Failed to send status report. Please check the <a href='%s'>log</a> files."
+msgid "Failed to send status report."
 msgstr ""
-"Hlášení o stavu se nepodařilo odeslat. Zkontrolujte soubory se <a "
-"href='%s'>záznamem událostí</a>."
 
 #, php-format
 msgid "Failed to send test email to: %s."
 msgstr "Nezdařilo se odeslat zkušební e-mail na: %s."
 
-#, php-format
-msgid ""
-"Failed to send test email. Please check the <a href='%s'>log</a> files."
+msgid "Failed to send test email."
 msgstr ""
-"Zkušební e-mail se nepodařilo odeslat. Zkontrolujte soubory se <a "
-"href='%s'>záznamem událostí</a>."
 
 msgid "Failed to upload file."
 msgstr "Nezdařilo se nahrát soubor."
@@ -4675,6 +4678,9 @@ msgid ""
 "Make sure you have already configured your <a href='%s'>Email</a> settings."
 msgstr "Ověřte, že užmáte nastaven svůj<a href='%s'>e-mail</a>."
 
+msgid "Make sure you have already configured your email settings"
+msgstr ""
+
 msgid "Management"
 msgstr "Správa"
 
@@ -5703,7 +5709,13 @@ msgstr ""
 msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
 msgstr "Viz <a href='%s' target='_blank'>dokumentace</a>."
 
+msgid "Please check the documentation"
+msgstr ""
+
 msgid "Please check the documentation."
+msgstr ""
+
+msgid "Please check the log files"
 msgstr ""
 
 msgid "Please define the Database directory location."
@@ -6661,6 +6673,12 @@ msgstr "Nastavit pouze pro čtení"
 
 msgid "Set share password."
 msgstr "Nastavit heslo pro přístup na sdílení."
+
+#, php-format
+msgid ""
+"Set the Read and Execute bits permission for Others (Access Restrictions | "
+"Mode) for the mount point %s in %s and hit Save in order to take them effect."
+msgstr ""
 
 msgid "Set the account's primary group to the given group."
 msgstr "Danou skupinu nastavit tomuto účtu jako hlavní."
@@ -7905,6 +7923,9 @@ msgid ""
 msgstr ""
 "Zadání nového hesla s neshodují. Do obou kolonek zadejte to stejné heslo."
 
+msgid "The new password is also the default root password of the system!"
+msgstr ""
+
 msgid "The number of clients must be between 1 and 50."
 msgstr "Je třeba, aby počet klientů byl v rozmezí 1 až 50."
 
@@ -8615,11 +8636,9 @@ msgstr ""
 
 #, php-format
 msgid ""
-"This will cause %s not to check for newer firmware versions when the <a "
-"href='%s'>%s</a> page is viewed."
+"This will cause %s not to check for newer firmware versions when the %s page "
+"is viewed."
 msgstr ""
-"Vypne kontrolu dostupnosti novější verze firmware, prováděnou %s pokaždé, "
-"když je zobrazena stránka <a href='%s'>%s</a>."
 
 msgid "This will create a recycle bin on the share."
 msgstr "Toto na sdílení vytvoří objekt Koš."
@@ -8721,13 +8740,10 @@ msgstr ""
 "Podrobnosti o TCP „obalení“ (wrappers) nalezenete v <a href='%s' "
 "target='_blank'>dokumentaci</a> k systému FreeBSD."
 
-#, php-format
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
-"<a href='%s' target='_blank'>documentation</a>."
+"documentation"
 msgstr ""
-"Podrobnosti ohledně vytváření pravidel pro bránu firewall naleznete v <a "
-"href='%s' target='_blank'>dokumentaci</a> k systému FreeBSD."
 
 #, php-format
 msgid ""
@@ -9580,10 +9596,8 @@ msgstr "Ano"
 
 msgid ""
 "You can also install a package via SSH or console using the the pkg add "
-"command.<br />Example: pkg add packagename"
+"command."
 msgstr ""
-"Balíček je možné nainstalovat také přes SSH či místní konzoli s použitím "
-"příkazu pkg add.<br />Příklad: pkg add nazevbalicku"
 
 msgid "You can use the following parameters for substitution:"
 msgstr "Pro dosazování je možné použít následující parametry:"
@@ -9606,12 +9620,8 @@ msgstr ""
 "cíle nebo jakýmkoli jiným běžícím procesem, nelze odpojit (umount)!"
 
 #, php-format
-msgid ""
-"You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
-"service to clients."
+msgid "You have to activate %s to advertise this service to clients."
 msgstr ""
-"Klientům začne být tato služba propagována až po zapnutí služby<a "
-"href='%s'>Zeroconf/Bonjour</a>."
 
 msgid "You have to reboot the system for the changes to take effect."
 msgstr ""
@@ -9726,9 +9736,6 @@ msgstr "Zeroconf/Bonjour"
 
 msgid "adaptive (low power consumption)"
 msgstr "přizpůsobivé (nízká spotřeba energie)"
-
-msgid "add any supplemental parameters"
-msgstr "přidejte jakékoli doplňující parametry"
 
 msgid "all encrypted disks are imported."
 msgstr "všechny šifrované disky jsou importovány."
@@ -9890,3 +9897,58 @@ msgstr "odpojit (umount)"
 
 msgid "version:"
 msgstr "verze:"
+
+#~ msgid "add any supplemental parameters"
+#~ msgstr "přidejte jakékoli doplňující parametry"
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
+#~ msgstr ""
+#~ "Hlášení o stavu se nepodařilo odeslat. Zkontrolujte soubory se <a "
+#~ "href='%s'>záznamem událostí</a>."
+
+#, php-format
+#~ msgid ""
+#~ "This will cause %s not to check for newer firmware versions when the <a "
+#~ "href='%s'>%s</a> page is viewed."
+#~ msgstr ""
+#~ "Vypne kontrolu dostupnosti novější verze firmware, prováděnou %s pokaždé, "
+#~ "když je zobrazena stránka <a href='%s'>%s</a>."
+
+#, php-format
+#~ msgid ""
+#~ "To get detailed informations about writing firewall rules check the FreeBSD "
+#~ "<a href='%s' target='_blank'>documentation</a>."
+#~ msgstr ""
+#~ "Podrobnosti ohledně vytváření pravidel pro bránu firewall naleznete v <a "
+#~ "href='%s' target='_blank'>dokumentaci</a> k systému FreeBSD."
+
+#~ msgid ""
+#~ "You can also install a package via SSH or console using the the pkg add "
+#~ "command.<br />Example: pkg add packagename"
+#~ msgstr ""
+#~ "Balíček je možné nainstalovat také přes SSH či místní konzoli s použitím "
+#~ "příkazu pkg add.<br />Příklad: pkg add nazevbalicku"
+
+#~ msgid ""
+#~ "<div id='enumeration'><ul><li>The new password is also the default root "
+#~ "password of the system!</li></ul></div>"
+#~ msgstr ""
+#~ "<div id='enumeration'><ul><li>Toto nové heslo bude zároveň také výchozím "
+#~ "heslem správce systému (root)!</li></ul></div>"
+
+#, php-format
+#~ msgid ""
+#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
+#~ msgstr ""
+#~ "Zkušební e-mail se nepodařilo odeslat. Zkontrolujte soubory se <a "
+#~ "href='%s'>záznamem událostí</a>."
+
+#, php-format
+#~ msgid ""
+#~ "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
+#~ "service to clients."
+#~ msgstr ""
+#~ "Klientům začne být tato služba propagována až po zapnutí služby<a "
+#~ "href='%s'>Zeroconf/Bonjour</a>."
