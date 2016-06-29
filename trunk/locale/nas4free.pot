@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-06-29 01:14+0000\n"
+"POT-Creation-Date: 2016-06-29 01:59+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -378,6 +378,9 @@ msgid "Add Volume"
 msgstr ""
 
 msgid "Add additional scheduled self-test."
+msgstr ""
+
+msgid "Add any supplemental parameters."
 msgstr ""
 
 msgid "Add auth group"
@@ -874,6 +877,10 @@ msgid "Bind password"
 msgstr ""
 
 msgid "BitTorrent"
+msgstr ""
+
+#, php-format
+msgid "BitTorrent needs at least read & execute permissions at the mount point for directory %s!"
 msgstr ""
 
 msgid "Blank time"
@@ -1914,6 +1921,9 @@ msgid "Disks (ATA)"
 msgstr ""
 
 msgid "Disks (ATA) information"
+msgstr ""
+
+msgid "Disks | Mount Point | Management"
 msgstr ""
 
 msgid "Display"
@@ -5704,6 +5714,10 @@ msgid "Set read only"
 msgstr ""
 
 msgid "Set share password."
+msgstr ""
+
+#, php-format
+msgid "Set the Read and Execute bits permission for Others (Access Restrictions | Mode) for the mount point %s in %s and hit Save in order to take them effect."
 msgstr ""
 
 msgid "Set the account's primary group to the given group."
