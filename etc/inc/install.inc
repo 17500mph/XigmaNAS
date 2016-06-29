@@ -190,7 +190,7 @@ function install_harddrive_image($harddrive)
 	global $g;
 	
 	// Determine if target disk/partition is GPT or MBR
-	if (mwexec('/sbin/gpart show "'.$harddrive.'" | grep "GPT"') == false ){ $part = "p2"; } else { $part = "s1a"; }
+	if (mwexec("/sbin/gpart show {$harddrive} | grep GPT") == false ){ $part = "p2"; } else { $part = "s1a"; }
 
 	$boot_lowmem = trim(@file_get_contents("/etc/boot_lowmem"));
 	$platform = get_platform_type();
@@ -333,7 +333,7 @@ function install_upgrade_full($harddrive)
 	global $g;
 	
 	// Determine if target disk/partition is GPT or MBR
-	if (mwexec('/sbin/gpart show "'.$harddrive.'" | grep "GPT"') == false ){ $part = "p2"; } else { $part = "s1a"; }
+	if (mwexec("/sbin/gpart show {$harddrive} | grep GPT") == false ){ $part = "p2"; } else { $part = "s1a"; }
 
 	$boot_lowmem = trim(@file_get_contents("/etc/boot_lowmem"));
 	$platform = get_platform_type();
