@@ -117,20 +117,26 @@ function enable_change(enable_change) {
 </script>
 <form action="services_unison.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 	<table width="100%" border="0" cellpadding="0" cellspacing="0">
-	  <tr>
-	    <td class="tabcont">
+		<tr>
+			<td class="tabcont">
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>	    
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline_checkbox("enable", gtext("Unison File Synchronisation"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
-					<?php html_filechooser("workdir", gtext("Working directory"), $pconfig['workdir'], sprintf(gtext("Location where the working files will be stored, e.g. %s/backup/.unison"), $g['media_path']), $g['media_path'], true, 60);?>
-				  <?php html_checkbox("mkdir", "", !empty($pconfig['mkdir']) ? true : false, gtext("Create work directory if it doesn't exist."), "", false);?>
+					<?php
+					html_titleline_checkbox("enable", gtext("Unison File Synchronisation"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");
+					html_filechooser("workdir", gtext("Working directory"), $pconfig['workdir'], sprintf(gtext("Location where the working files will be stored, e.g. %s/backup/.unison"), $g['media_path']), $g['media_path'], true, 60);
+					html_checkbox("mkdir", "", !empty($pconfig['mkdir']) ? true : false, gtext("Create work directory if it doesn't exist."), "", false);
+					?>
 				</table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save and Restart");?>" onclick="enable_change(true)" />
 				</div>
 				<div id="remarks">
-					<?php html_remark("note", gtext('Note'), sprintf(gettext("<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a href='%s'>user</a> must have shell access."), "services_sshd.php", "access_users.php"));?>
+					<?php
+					$link1 = '<a href="' . 'services_sshd.php' . '">' . gtext('SSHD') . '</a>';
+					$link2 = '<a href="' . 'access_users.php' . '">' . gtext('user') . '</a>';
+					html_remark("note", gtext('Note'), sprintf(gtext("%s must be enabled for Unison to work, and the %s must have shell access."), $link1, $link2));
+					?>
 				</div>
 			</td>
 		</tr>

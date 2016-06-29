@@ -145,41 +145,52 @@ $(document).ready(function(){
 //]]>
 </script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td class="tabnavtbl">
-      <ul id="tabnav">
-	<li class="tabact"><a href="services_samba_ad.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Settings");?></span></a></li>
-	<li class="tabinact"><a href="services_samba_ad_init.php"><span><?=gtext("Initialize");?></span></a></li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td class="tabcont">
-      <form action="services_samba_ad.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-	<?php if (!empty($errormsg)) print_error_box($errormsg);?>
-	<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-	<?php if (!empty($savemsg)) print_info_box($savemsg);?>
-	<table width="100%" border="0" cellpadding="6" cellspacing="0">
-	<?php html_titleline_checkbox("enable", gtext("Samba Active Directory Domain Controller"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "");?>
-	<?php html_text("hostname", gtext("Hostname"), htmlspecialchars($hostname));?>
-	<?php html_text("netniosname", gtext("NetBIOS name"), htmlspecialchars($netbiosname));?>
-	<?php html_inputbox("dns_forwarder", gtext("DNS forwarder"), $pconfig['dns_forwarder'], "", false, 40);?>
-	<?php html_text("dns_domain", gtext("DNS domain"), htmlspecialchars($pconfig['dns_domain']));?>
-	<?php html_text("netbios_domain", gtext("NetBIOS domain"), htmlspecialchars($pconfig['netbios_domain']));?>
-	<?php html_text("path", gtext("Path"), htmlspecialchars($pconfig['path']));?>
-	<?php html_text("fstype", gtext("Fileserver"), htmlspecialchars($pconfig['fstype']));?>
-	<?php html_checkbox("user_shares", gtext("User shares"), !empty($pconfig['user_shares']) ? true : false, gtext("Append user defined shares"), "", false);?>
-	<?php html_textarea("auxparam", gtext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gtext("These parameters are added to [Global] section of %s."), "smb4.conf") . " " . sprintf(gettext("Please check the <a href='%s' target='_blank'>documentation</a>."), "http://us1.samba.org/samba/docs/man/manpages-3/smb.conf.5.html"), false, 65, 5, false, false);?>
-	</table>
-	<div id="submit">
-	  <input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" />
-	</div>
-	<div id="remarks">
-	  <?php html_remark("note", gtext('Note'), sprintf("<div id='enumeration'><ul><li>%s</li><li>%s</li><li>%s</li></ul></div>", gtext("When Samba AD is enabled, stand-alone CIFS/SMB file sharing cannot be used."), gtext("NTP must be enabled."), gtext("DHCP cannot be used for LAN interface.")));?>
-	</div>
-	<?php include("formend.inc");?>
-      </form>
-    </td>
-  </tr>
+	<tr>
+		<td class="tabnavtbl">
+			<ul id="tabnav">
+				<li class="tabact"><a href="services_samba_ad.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Settings");?></span></a></li>
+				<li class="tabinact"><a href="services_samba_ad_init.php"><span><?=gtext("Initialize");?></span></a></li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td class="tabcont">
+			<form action="services_samba_ad.php" method="post" name="iform" id="iform" onsubmit="spinner()">
+				<?php
+				if (!empty($errormsg)) print_error_box($errormsg);
+				if (!empty($input_errors)) print_input_errors($input_errors);
+				if (!empty($savemsg)) print_info_box($savemsg);
+				?>
+				<table width="100%" border="0" cellpadding="6" cellspacing="0">
+					<?php
+					html_titleline_checkbox("enable", gtext("Samba Active Directory Domain Controller"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "");
+					html_text("hostname", gtext("Hostname"), htmlspecialchars($hostname));
+					html_text("netniosname", gtext("NetBIOS name"), htmlspecialchars($netbiosname));
+					html_inputbox("dns_forwarder", gtext("DNS forwarder"), $pconfig['dns_forwarder'], "", false, 40);
+					html_text("dns_domain", gtext("DNS domain"), htmlspecialchars($pconfig['dns_domain']));
+					html_text("netbios_domain", gtext("NetBIOS domain"), htmlspecialchars($pconfig['netbios_domain']));
+					html_text("path", gtext("Path"), htmlspecialchars($pconfig['path']));
+					html_text("fstype", gtext("Fileserver"), htmlspecialchars($pconfig['fstype']));
+					html_checkbox("user_shares", gtext("User shares"), !empty($pconfig['user_shares']) ? true : false, gtext("Append user defined shares"), "", false);
+					$helpinghand = '<a href="'
+						. 'http://us1.samba.org/samba/docs/man/manpages-3/smb.conf.5.html'
+						. '" target="_blank">'
+						. gtext('Please check the documentation')
+						. '</a>.';
+					html_textarea("auxparam", gtext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gtext("These parameters are added to [Global] section of %s."), "smb4.conf") . " " . $helpinghand, false, 65, 5, false, false);
+					?>
+				</table>
+				<div id="submit">
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" />
+				</div>
+				<div id="remarks">
+					<?php
+					html_remark("note", gtext('Note'), sprintf("<div id='enumeration'><ul><li>%s</li><li>%s</li><li>%s</li></ul></div>", gtext("When Samba AD is enabled, stand-alone CIFS/SMB file sharing cannot be used."), gtext("NTP must be enabled."), gtext("DHCP cannot be used for LAN interface.")));
+					?>
+				</div>
+				<?php include("formend.inc");?>
+			</form>
+		</td>
+	</tr>
 </table>
 <?php include("fend.inc");?>

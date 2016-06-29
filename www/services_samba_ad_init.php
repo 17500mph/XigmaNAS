@@ -170,69 +170,86 @@ $(document).ready(function(){
 //]]>
 </script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td class="tabnavtbl">
-      <ul id="tabnav">
-	<li class="tabinact"><a href="services_samba_ad.php"><span><?=gtext("Settings");?></span></a></li>
-	<li class="tabact"><a href="services_samba_ad_init.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Initialize");?></span></a></li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td class="tabcont">
-      <form action="services_samba_ad_init.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-	<?php if (!empty($errormsg)) print_error_box($errormsg);?>
-	<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-	<?php if (!empty($savemsg)) print_info_box($savemsg);?>
-	<table width="100%" border="0" cellpadding="6" cellspacing="0">
-	<?php html_titleline(gtext("Samba Active Directory Domain Controller"));?>
-	<?php html_text("hostname", gtext("Hostname"), htmlspecialchars($hostname));?>
-	<?php html_text("netniosname", gtext("NetBIOS name"), htmlspecialchars($netbiosname));?>
-	<?php html_inputbox("dns_forwarder", gtext("DNS forwarder"), $pconfig['dns_forwarder'], "", true, 40);?>
-	<?php html_inputbox("dns_domain", gtext("DNS domain"), $pconfig['dns_domain'], "", true, 40);?>
-	<?php html_inputbox("netbios_domain", gtext("NetBIOS domain"), $pconfig['netbios_domain'], "", true, 40);?>
-	<?php //html_text("realm", gtext("Kerberos realm"), htmlspecialchars($realm));?>
-	<?php html_passwordconfbox("password", "password_confirm", gtext("Admin password"), "", "", gtext("Generate password if leave empty."), true);?>
-	<?php html_filechooser("path", gtext("Path"), $pconfig['path'], sprintf(gtext("Permanent samba data path (e.g. %s)."), "/mnt/data/samba4"), $g['media_path'], true);?>
-	<?php html_combobox("fstype", gtext("Fileserver"), $pconfig['fstype'], array("s3fs" => "s3fs", "ntvfs" => "ntvfs"), "", true);?>
-	<?php html_checkbox("user_shares", gtext("User shares"), !empty($pconfig['user_shares']) ? true : false, gtext("Append user defined shares"), "", false);?>
-	</table>
-	<div id="submit">
-	  <input name="Submit" type="submit" class="formbtn" value="<?=gtext("Initialize");?>" />
-	</div>
-	<?php if ($do_init) {
-		echo(sprintf("<div id='cmdoutput'>%s</div>", gtext("Command output:")));
-		echo('<pre class="cmdoutput">');
-		ob_end_flush();
-		$cmd .= " ".implode(" ", $cmdargs);
-		//echo "$cmd\n";
-		echo gtext("Initializing...")."\n";
+	<tr>
+		<td class="tabnavtbl">
+			<ul id="tabnav">
+				<li class="tabinact"><a href="services_samba_ad.php"><span><?=gtext("Settings");?></span></a></li>
+				<li class="tabact"><a href="services_samba_ad_init.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Initialize");?></span></a></li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td class="tabcont">
+			<form action="services_samba_ad_init.php" method="post" name="iform" id="iform" onsubmit="spinner()">
+				<?php
+				if (!empty($errormsg)) {
+					print_error_box($errormsg);
+				}
+				if (!empty($input_errors)) {
+					print_input_errors($input_errors);
+				}
+				if (!empty($savemsg)) {
+					print_info_box($savemsg);
+				}
+				?>
+				<table width="100%" border="0" cellpadding="6" cellspacing="0">
+					<?php
+					html_titleline(gtext("Samba Active Directory Domain Controller"));
+					html_text("hostname", gtext("Hostname"), htmlspecialchars($hostname));
+					html_text("netniosname", gtext("NetBIOS name"), htmlspecialchars($netbiosname));
+					html_inputbox("dns_forwarder", gtext("DNS forwarder"), $pconfig['dns_forwarder'], "", true, 40);
+					html_inputbox("dns_domain", gtext("DNS domain"), $pconfig['dns_domain'], "", true, 40);
+					html_inputbox("netbios_domain", gtext("NetBIOS domain"), $pconfig['netbios_domain'], "", true, 40);
+					//html_text("realm", gtext("Kerberos realm"), htmlspecialchars($realm));
+					html_passwordconfbox("password", "password_confirm", gtext("Admin password"), "", "", gtext("Generate password if leave empty."), true);
+					html_filechooser("path", gtext("Path"), $pconfig['path'], sprintf(gtext("Permanent samba data path (e.g. %s)."), "/mnt/data/samba4"), $g['media_path'], true);
+					html_combobox("fstype", gtext("Fileserver"), $pconfig['fstype'], array("s3fs" => "s3fs", "ntvfs" => "ntvfs"), "", true);
+					html_checkbox("user_shares", gtext("User shares"), !empty($pconfig['user_shares']) ? true : false, gtext("Append user defined shares"), "", false);
+					?>
+				</table>
+				<div id="submit">
+					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Initialize");?>" />
+				</div>
+				<?php if ($do_init) {
+					echo(sprintf("<div id='cmdoutput'>%s</div>", gtext("Command output:")));
+					echo('<pre class="cmdoutput">');
+					ob_end_flush();
+					$cmd .= " ".implode(" ", $cmdargs);
+					//echo "$cmd\n";
+					echo gtext("Initializing...")."\n";
 /*
-		mwexec2("$cmd 2>&1", $rawdata, $result);
-		foreach ($rawdata as $line) {
-			echo htmlspecialchars($line)."\n";
-		}
+					mwexec2("$cmd 2>&1", $rawdata, $result);
+					foreach ($rawdata as $line) {
+						echo htmlspecialchars($line)."\n";
+					}
 */
-		$handle = popen("$cmd 2>&1", "r");
-		while (!feof($handle)) {
-			$line = fgets($handle);
-			echo htmlspecialchars($line);
-			ob_flush();
-			flush();
-		}
-		$result = pclose($handle);
-		echo('</pre>');
-		if ($result == 0) {
-			rename("/var/etc/smb4.conf", "${path}/smb4.conf.created");
-			rc_exec_service("resolv");
-		}
-	}?>
-	<div id="remarks">
-	  <?php html_remark("note", gtext('Note'), sprintf("<div id='enumeration'><ul><li>%s</li><li>%s</li><li>%s</li></ul></div>", gtext("All data in the path is overwritten. To avoid invalid data/permission, using empty UFS directory is recommended."), sprintf(gettext("Check <a href=\"%s\">System|General Setup</a> before initializing."), "system.php"), ""));?>
-	</div>
-	<?php include("formend.inc");?>
-      </form>
-    </td>
-  </tr>
+					$handle = popen("$cmd 2>&1", "r");
+					while (!feof($handle)) {
+						$line = fgets($handle);
+						echo htmlspecialchars($line);
+						ob_flush();
+						flush();
+					}
+					$result = pclose($handle);
+					echo('</pre>');
+					if ($result == 0) {
+						rename("/var/etc/smb4.conf", "${path}/smb4.conf.created");
+						rc_exec_service("resolv");
+					}
+				}?>
+				<div id="remarks">
+					<?php
+					$helpinghand = '<a href="'
+						. 'system.php'
+						. '">'
+						. gtext('Check System|General Setup before initializing')
+						. '</a>.';
+					html_remark("note", gtext('Note'), sprintf("<div id='enumeration'><ul><li>%s</li><li>%s</li></ul></div>", gtext("All data in the path is overwritten. To avoid invalid data/permission, using an empty UFS directory is recommended."), $helpinghand));
+					?>
+				</div>
+				<?php include("formend.inc");?>
+			</form>
+		</td>
+	</tr>
 </table>
 <?php include("fend.inc");?>
