@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-29 03:10+0000\n"
+"POT-Creation-Date: 2016-06-30 00:10+0000\n"
 "PO-Revision-Date: 2016-05-28 18:47+0000\n"
 "Last-Translator: Jieting Xu <xu.jieting@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-29 01:53+0000\n"
+"X-Launchpad-Export-Date: 2016-06-29 22:57+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -76,6 +76,11 @@ msgstr "%s 卷已存在。"
 #, php-format
 msgid "%s is too long."
 msgstr "%s 太长了。"
+
+#, php-format
+msgid ""
+"%s must be enabled for Unison to work, and the %s must have shell access."
+msgstr ""
 
 #, php-format
 msgid "%s of %sB"
@@ -170,41 +175,6 @@ msgstr "4KB封套"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN 标签 （介于1和4094之间）。"
-
-#, php-format
-msgid ""
-"<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
-"href='%s'>user</a> must have shell access."
-msgstr ""
-"必须启用 <a href='%s'>SSHD</a> 才能使用 Unison，而且<a href='%s'>用户</a> 必须有壳层（shell）权限"
-
-msgid ""
-"<b>EFI GPT partition</b> if you want to mount a GPT formatted drive "
-"(<b>default partition</b>).<br/><b>MBR partition</b> if you want to mount a "
-"UFS formatted drive or do imported disks from other OS.<br/><b>CD/DVD "
-"volume</b> if you want to mount a CD/DVD volume."
-msgstr ""
-"<b>EFI GPT分区</b>如果您想挂载GPT格式的驱动器号（<b>默认分区</b>）。<br/><b>MBR分区</b> "
-"如果您想挂载UFS格式驱动器或输入其他作业系统的磁盘。<br/><b>CD / DVD<b>如果您想挂载CD / DVD。"
-
-msgid ""
-"<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
-msgstr ""
-"<div id='enumeration'><ul><li>%d - 日期</li><li>%h - 主机名</li></ul></div>"
-
-msgid ""
-"<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
-"3.0.0 or newer, and the 'before' algorithm when talking to an older "
-"rsync.</li><li>Before - File-deletions will be done before the transfer "
-"starts.</li><li>During - File-deletions will be done incrementally as the "
-"transfer happens.</li><li>Delay - File-deletions will be computed during the "
-"transfer, and then removed after the transfer completes.</li><li>After - "
-"File-deletions will be done after the transfer has completed.</li>"
-msgstr ""
-"<li>默认- Rsync 会在连接到 rsync 3.0.0 或更高版本时会选择 “during” 演算法，而在连接至旧版本时使用 “before” "
-"算法。</li><li>Before - 文件删除工作将在传输开始之前完成。</li><li>During - "
-"文件删除工作将在传输过程中逐渐进行。</li><li>Delay - "
-"文件删除工作仅在传输时进行​​计算，并在传输完成后进行。</li><li>After - 文件删除工作将在传输完成后进行。</li>"
 
 msgid ""
 "A Auth Group contains authorised users and secrets for additional security."
@@ -390,6 +360,9 @@ msgstr "访问时间(atime)"
 
 msgid "Access mode"
 msgstr "存取模式"
+
+msgid "Access the webGUI with the new IP address"
+msgstr ""
 
 msgid "Acoustic level"
 msgstr "噪音控制"
@@ -581,27 +554,21 @@ msgstr "高级设置"
 msgid "Advertisement skew"
 msgstr "廣告的毫秒級值"
 
-#, php-format
-msgid ""
-"After you click &quot;Save&quot;, you may also have to do one or more of the "
-"following steps before you can access this server again: <ul><li>change the "
-"IP address of your computer</li><li>access the webGUI with the new IP "
-"address</li></ul>"
+msgid "After"
 msgstr ""
-"当您单击&quot;储存&quot;后，您可能得执行以下步骤才能再访问伺服器：<ul><li>更改您的电脑的IP 位址</li><li>使用新的IP "
-"位址访问网页界面。 </li><ul>"
 
-#, php-format
-msgid ""
-"After you click &quot;Save&quot;, you must reboot the server to make the "
-"changes take effect. You may also have to do one or more of the following "
-"steps before you can access your server again: <ul><li><span "
-"class='vexpl'>change the IP address of your server</span></li><li><span "
-"class='vexpl'>access the webGUI with the new IP address</span></li></ul>"
+msgid "After - File-deletions will be done after the transfer has completed."
 msgstr ""
-"当您单击&quot;储存&quot;后，您必须重新启动伺服器才能使更改生效。您可能还需要做以下一个或多个步骤才能再次访问您的伺服器： "
-"<ul><li><span class='vexpl'>变更伺服器的IP位址</span></li><li><span "
-"class='vexpl'>使用新的IP位址来连接网页界面</span></li></ul>"
+
+msgid ""
+"After you click \"Save\" you may also have to do one or more of the "
+"following steps before you can access this server again:"
+msgstr ""
+
+msgid ""
+"After you click \"Save\" you must reboot the server to make the changes take "
+"effect."
+msgstr ""
 
 msgid "Age"
 msgstr ""
@@ -628,8 +595,8 @@ msgstr "全部"
 
 msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
-"empty UFS directory is recommended."
-msgstr "在路径上的所有数据将被覆盖。为了避免无效的数据/权限，建议使用空的UFS目录。"
+"an empty UFS directory is recommended."
+msgstr ""
 
 msgid "All data will be lost when you activate this option!"
 msgstr "当你激活此选项所有的数据将会丢失"
@@ -839,6 +806,11 @@ msgstr "连接成功"
 msgid "Attaching provider '%s'."
 msgstr "连接 '%s' 中。"
 
+msgid ""
+"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, or NTFS "
+"can result in unpredictable results, file corruption and the loss of data!"
+msgstr ""
+
 msgid "Audio"
 msgstr "音频"
 
@@ -990,6 +962,15 @@ msgstr "电池温度"
 
 msgid "Battery voltage"
 msgstr "电池电压"
+
+msgid "Before"
+msgstr ""
+
+msgid "Before - File-deletions will be done before the transfer starts."
+msgstr ""
+
+msgid "Before - File-deletions will be performed before the transfer starts."
+msgstr ""
 
 msgid "Best available"
 msgstr "现有最佳"
@@ -1217,6 +1198,12 @@ msgstr "更改下列文件"
 msgid "Change password"
 msgstr "更改密码"
 
+msgid "Change the IP address of your computer"
+msgstr ""
+
+msgid "Change the IP address of your server"
+msgstr ""
+
 msgid "Changes to this option will take effect after a reboot."
 msgstr "重新启动系统之后，更改的设置才会生效。"
 
@@ -1226,9 +1213,8 @@ msgstr "频道"
 msgid "Charging Battery"
 msgstr "充电中"
 
-#, php-format
-msgid "Check <a href=\"%s\">System|General Setup</a> before initializing."
-msgstr "初始化前检查<a href=\"%s\">系统|一般设定</a>。"
+msgid "Check System|General Setup before initializing"
+msgstr ""
 
 msgid "Check and replace cable"
 msgstr "检查并更换电缆"
@@ -1238,6 +1224,13 @@ msgstr "检查间隔"
 
 msgid "Check shared secret:"
 msgstr "检查分享密文："
+
+msgid ""
+"Check the FreeBSD documentation for detailed information about TCP Wrappers"
+msgstr ""
+
+msgid "Check the list of available drivers"
+msgstr ""
 
 msgid "Chinese (Simplified)"
 msgstr "中文（简体）"
@@ -1700,12 +1693,12 @@ msgstr "DNS转发器"
 msgid "DNS server is empty."
 msgstr "DNS伺服器是空白的。"
 
+msgid "DO NOT abort the firmware upgrade process once it has started."
+msgstr ""
+
 #, php-format
 msgid ""
-"DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-"try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
-"/>It is recommended that you <a href='%s'>Backup</a> the server "
-"configuration before doing a upgrade."
+"DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
 msgstr ""
 
 msgid "DVD"
@@ -1785,6 +1778,16 @@ msgstr "重复数据删除（Dedup）"
 msgid "Default"
 msgstr "默认值"
 
+msgid ""
+"Default - Rsync will choose the 'during' algorithm when talking to rsync "
+"3.0.0 or newer and the 'before' algorithm when talking to an older rsync."
+msgstr ""
+
+msgid ""
+"Default - Rsync will choose the 'during' algorithm when talking to rsync "
+"3.0.0 or newer, and the 'before' algorithm when talking to an older rsync."
+msgstr ""
+
 msgid "Default Device Settings"
 msgstr "默认设备设置"
 
@@ -1809,6 +1812,19 @@ msgstr "指定需要认证的目录/URL"
 
 msgid "Defines when the shutdown is initiated."
 msgstr "设定何时关机。"
+
+msgid "Delay"
+msgstr ""
+
+msgid ""
+"Delay - File-deletions will be computed during the transfer and will be done "
+"after the transfer."
+msgstr ""
+
+msgid ""
+"Delay - File-deletions will be computed during the transfer, and then "
+"removed after the transfer completes."
+msgstr ""
 
 msgid "Delete"
 msgstr "删除"
@@ -2351,6 +2367,9 @@ msgstr ""
 msgid "Do you want to enable selected options?"
 msgstr ""
 
+msgid "Do you want to install this firmware anyway (at your own risk)?"
+msgstr ""
+
 msgid "Do you want to toggle selected jobs?"
 msgstr ""
 
@@ -2446,6 +2465,13 @@ msgstr "双工模式"
 
 msgid "Duplicate mount point name."
 msgstr "重复的挂载点名称"
+
+msgid "During"
+msgstr ""
+
+msgid ""
+"During - File-deletions will be done incrementally as the transfer happens."
+msgstr ""
 
 msgid "Dutch"
 msgstr "荷兰文"
@@ -2582,6 +2608,12 @@ msgstr "默认值为空白。"
 
 msgid "Enable"
 msgstr "启动"
+
+msgid "Enable 'Asynchronous I/O (AIO)' switch."
+msgstr ""
+
+msgid "Enable 'Large read/write' switch."
+msgstr ""
 
 msgid "Enable ACL inheritance"
 msgstr "启用ACL继承"
@@ -2761,6 +2793,9 @@ msgid "Enable traps."
 msgstr "启用 traps。"
 
 msgid "Enable tuning of some kernel variables."
+msgstr ""
+
+msgid "Enable tuning switch"
 msgstr ""
 
 msgid "Enable write cache mode."
@@ -3247,6 +3282,9 @@ msgstr "德语"
 
 msgid "Get Target Info"
 msgstr "获取目标信息"
+
+msgid "Get a list of available drivers"
+msgstr ""
 
 msgid "GiB"
 msgstr "GiB"
@@ -3855,6 +3893,10 @@ msgid ""
 msgstr "不建议导入运行状况不良的存储池或是属于运行不良的存储池的虚拟设备。"
 
 msgid ""
+"It is recommended that you backup the server configuration before you upgrade"
+msgstr ""
+
+msgid ""
 "It is recommended to use encryption before you store the backup in a safe "
 "location."
 msgstr ""
@@ -4275,11 +4317,6 @@ msgstr ""
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "请确定您已经启用装置的 S.M.A.R.T.。"
 
-#, php-format
-msgid ""
-"Make sure you have already configured your <a href='%s'>Email</a> settings."
-msgstr "请确认您是否已经设定好 <a href='%s'>电邮</a> 资讯了。"
-
 msgid "Make sure you have already configured your email settings"
 msgstr ""
 
@@ -4598,6 +4635,9 @@ msgstr "NOPIN 的发送时间间隔（秒）（默认值为 %d）。"
 msgid "NOT YET AVAILABLE"
 msgstr "尚未公布"
 
+msgid "NOTE"
+msgstr ""
+
 msgid "NT1"
 msgstr "NT1"
 
@@ -4711,19 +4751,11 @@ msgstr ""
 msgid "No RSYNC Client configured"
 msgstr "尚未配置RSYNC客户端配置"
 
-#, php-format
-msgid ""
-"No configured Auth Group. Please add new <a href='%s'>Auth Group</a> first."
-msgstr "尚未配置认证组。请先添加新的 <a href='%s'>认证组（Auth Group）</a>。"
+msgid "No configured Auth Group."
+msgstr ""
 
 msgid "No configured CARP interfaces."
 msgstr "没有CARP介面配置。"
-
-#, php-format
-msgid ""
-"No configured CARP interfaces. Please add new <a href='%s'>CARP "
-"interface</a> first."
-msgstr "尚未配置 CARP 介面。請先添加新的 <a href='%s'>CARP介面</a>。"
 
 msgid "No configured bridge interfaces."
 msgstr ""
@@ -4958,6 +4990,11 @@ msgstr "只允许匿名用户。使用在公共而且拒绝远端帐号连线的
 
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr "只允许授权用户，匿名用户无法登录。"
+
+msgid ""
+"Only install firmwares that come from sources that you trust, and make sure "
+"that the firmware has not been tampered with."
+msgstr ""
 
 msgid "Option"
 msgstr "选项"
@@ -5223,6 +5260,12 @@ msgstr "操作系统平台"
 msgid "Please add a bridge interface first."
 msgstr ""
 
+msgid "Please add a new Auth Group first"
+msgstr ""
+
+msgid "Please add a new CARP interface first"
+msgstr ""
+
 msgid "Please add a new Extent first."
 msgstr ""
 
@@ -5244,10 +5287,6 @@ msgstr ""
 
 msgid "Please add new pools first."
 msgstr ""
-
-#, php-format
-msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
-msgstr "请参见 <a href='%s' target='_blank'>文档</a>。"
 
 msgid "Please check the documentation"
 msgstr ""
@@ -5864,6 +5903,11 @@ msgstr "运行而不需要远程rsync进程。 （默认禁用）"
 msgid "Running"
 msgstr "执行中"
 
+msgid ""
+"Running the service as user root is not recommended for security reasons, "
+"use at your own risk!"
+msgstr ""
+
 msgid "Russian"
 msgstr "俄文"
 
@@ -5912,6 +5956,9 @@ msgstr "SSH"
 
 msgid "SSH events"
 msgstr "SSH 事件"
+
+msgid "SSHD"
+msgstr ""
 
 msgid "SSHD log"
 msgstr "SSHD 记录"
@@ -6023,6 +6070,17 @@ msgid ""
 msgstr ""
 
 msgid "See attribute E8."
+msgstr ""
+
+msgid "Select 'CD/DVD' if you want to mount a CD/DVD volume."
+msgstr ""
+
+msgid "Select 'GPT partition' if you want to mount a GPT formatted drive"
+msgstr ""
+
+msgid ""
+"Select 'MBR partition' default partition if you want to mount a UFS "
+"formatted drive or if you want to import disks from other OS."
 msgstr ""
 
 msgid ""
@@ -6196,13 +6254,8 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "设置标题滚动速度 0-10（默认为10）。"
 
-msgid ""
-"Set what user the service will run as (www by default). <br><b><font "
-"color='red'>NOTE</font>: Running as root is <u>not recommended</u> for "
-"security reasons, use it on your own risk!</b></br>"
+msgid "Set under which user the service should run (www by default)."
 msgstr ""
-"设置服务由哪些户口运行（默认为www）。 <br><b><font color='red'>注意</font>：为了安全起见，<u>不推荐</u> "
-"以root 运行，请自行承担风险！ </b></br>"
 
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr "设置根数据集的备用挂载点。默认为 /mnt。"
@@ -7114,23 +7167,14 @@ msgid ""
 "The distinguished name with which to bind to the directory server, e.g. %s"
 msgstr "绑定目录伺服器的独特名称，例如 %s"
 
-#, php-format
-msgid ""
-"The driver used to communicate with your UPS. Get the list of available <a "
-"href='%s' target='_blank'>drivers</a>."
-msgstr "用来与 UPS 通讯的驱动程式。取得可用的 <a href='%s' target='_blank'>驱动程式</a> 清单。"
-
-#, php-format
-msgid ""
-"The driver used to communicate with your second UPS. Get the list of "
-"available <a href='%s' target='_blank'>drivers</a>."
+msgid "The driver used to communicate with your UPS."
 msgstr ""
 
-#, php-format
-msgid ""
-"The driver used to connect with the LCD. The list of available <a href='%s' "
-"target='_blank'>drivers</a>."
-msgstr "用来与 LCD 联系的驱动程式。取得可用的 <a href='%s' target='_blank'>驱动程式</a> 清单。"
+msgid "The driver used to communicate with your second UPS."
+msgstr ""
+
+msgid "The driver used to connect with the LCD."
+msgstr ""
 
 msgid "The encrypted device is currently mounted!"
 msgstr ""
@@ -7615,15 +7659,10 @@ msgstr ""
 msgid "This can cause a huge delay in loading the log page!"
 msgstr ""
 
-#, php-format
 msgid ""
 "This configuration settings are used to generate the ups.conf configuration "
-"file which is required by the NUT UPS daemon. To get more information how to "
-"configure your UPS please check the NUT (Network UPS Tools) <a href='%s' "
-"target='_blank'>documentation</a>."
+"file which is required by the NUT UPS daemon."
 msgstr ""
-"此配置设置是用来生成NUT UPS 守护进程的配置文件（ups.conf）。如想查获更多配置UPS 的信息，请查看NUT（Network UPS "
-"Tools）<a href='%s' target='_blank'>文档</a>。"
 
 msgid "This controls the access a remote host has to this module."
 msgstr "控制远程主机访问该模块的权限。"
@@ -7672,10 +7711,7 @@ msgstr "仅供参考（不在iSCSI 的交涉中使用）。"
 
 msgid ""
 "This means that the firmware you flashed is not an official/supported "
-"firmware and may lead to unexpected behavior or security compromises. Only "
-"install firmwares that come from sources that you trust, and make sure that "
-"the firmware has not been tampered with.<br /><br />Do you want to install "
-"this firmware anyway (on your own risk)?"
+"firmware and may lead to unexpected behavior or security compromises."
 msgstr ""
 
 msgid "This name already exists in the disk list."
@@ -7952,34 +7988,23 @@ msgstr "发送电​​邮"
 msgid "To email"
 msgstr "发送电​​邮"
 
-#, php-format
-msgid ""
-"To get detailed informations about TCP Wrappers check the FreeBSD <a "
-"href='%s' target='_blank'>documentation</a>."
-msgstr ""
-"关于 TCP Wrappers 的详细资讯请查看 FreeBSD <a href='%s' target='_blank'>文档</a>。"
-
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
 "documentation"
 msgstr ""
 
-#, php-format
 msgid ""
-"To get more information how to configure LCDproc check the LCDproc <a "
-"href='%s' target='_blank'>documentation</a>."
-msgstr "关于 LCDproc 的详细资讯请查看 LCDproc <a href='%s' target='_blank'>文档</a>。"
-
-#, php-format
-msgid ""
-"To increase CIFS performance try the following:<div "
-"id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' "
-"switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a "
-"href='%s'>Tuning</a>' switch</li></ul></div>"
+"To get more information how to configure LCDproc check the LCDproc "
+"documentation"
 msgstr ""
-"若想提高CIFS 性能，请尝试以下操作：<div id='enumeration'><ul><li>启用“异步I / "
-"O（AIO）”开关</li><li>启用“大笔资料读/写”开关</li><li>启用<a "
-"href='%s'>调整</a>开关</li></ul></div>"
+
+msgid ""
+"To get more information how to configure your UPS please check the NUT "
+"(Network UPS Tools) documentation"
+msgstr ""
+
+msgid "To increase CIFS performance try the following:"
+msgstr ""
 
 msgid "To match any IP address leave this field empty."
 msgstr "要匹配任何IP地址的话，请保留此字段为空白。"
@@ -8150,12 +8175,8 @@ msgstr ""
 #, php-format
 msgid ""
 "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
-"of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
-"or NTFS can result in unpredictable results, file corruption, and loss of "
-"data!"
+"of %s)."
 msgstr ""
-"UFS 档案系统格式是FreeBSD 原生档案格式(%s的OS)。如果使用FAT, FAT32, EXT2, EXT3, 或是NTFS "
-"可能会导致档案损毁等不可预期的效果或错误！"
 
 msgid "UFS with Soft Updates"
 msgstr ""
@@ -8740,16 +8761,15 @@ msgid ""
 "command."
 msgstr ""
 
+#, php-format
+msgid "You can not mount partition '%s' where the config file is stored."
+msgstr ""
+
 msgid "You can use the following parameters for substitution:"
 msgstr "您可以使用以下的参数替代："
 
 msgid "You can verify the result in the log file."
 msgstr ""
-
-#, php-format
-msgid ""
-"You can't mount the partition '%s' where the config file is stored.<br />"
-msgstr "请不要把 '%s' 分区挂载于存储配置文件的目录。"
 
 msgid ""
 "You can't unmount a drive which is used by swap file, a iSCSI-target file or "
@@ -8767,6 +8787,11 @@ msgstr ""
 msgid "You have to select at least one item for '%s'."
 msgstr "请至少选择一个项目给 '%s'。"
 
+msgid ""
+"You may also have to do one or more of the following steps before you can "
+"access your server again:"
+msgstr ""
+
 msgid "You may enter a description here for your reference."
 msgstr "您可以在此输入说明，以供参考。"
 
@@ -8782,12 +8807,6 @@ msgstr "您可以指定 SCSI INQUIRY 数据。默认情况下是空白的。 （
 #, php-format
 msgid "You may specify logical block length (%d by default)."
 msgstr "您可以指定逻辑块长度（默认为 %d）"
-
-#, php-format
-msgid ""
-"You must <a href='%s'>reboot</a> the system before you can upgrade the "
-"firmware."
-msgstr "固件升级之前，您必须 <a href='%s'>重新启动</a> 系统。"
 
 msgid ""
 "You must add at least a Portal Group, an Initiator Group and an Extent "
@@ -8809,6 +8828,9 @@ msgstr "要使用iSCSI目标的话，您必须有至少 %d MiB RAM。"
 
 msgid "You must initialize data before enabling."
 msgstr "启用之前，必须先初始化数据。"
+
+msgid "You must reboot the system before you can upgrade the firmware"
+msgstr ""
 
 msgid "You must select at least one authentication method."
 msgstr "请至少选择一种认证方式。"
@@ -9011,8 +9033,46 @@ msgstr "档案预设权限（umask）"
 msgid "umount"
 msgstr "卸载"
 
+msgid "user"
+msgstr ""
+
 msgid "version:"
 msgstr "版本："
+
+#~ msgid ""
+#~ "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
+#~ msgstr ""
+#~ "<div id='enumeration'><ul><li>%d - 日期</li><li>%h - 主机名</li></ul></div>"
+
+#, php-format
+#~ msgid ""
+#~ "<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
+#~ "href='%s'>user</a> must have shell access."
+#~ msgstr ""
+#~ "必须启用 <a href='%s'>SSHD</a> 才能使用 Unison，而且<a href='%s'>用户</a> 必须有壳层（shell）权限"
+
+#~ msgid ""
+#~ "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
+#~ "3.0.0 or newer, and the 'before' algorithm when talking to an older "
+#~ "rsync.</li><li>Before - File-deletions will be done before the transfer "
+#~ "starts.</li><li>During - File-deletions will be done incrementally as the "
+#~ "transfer happens.</li><li>Delay - File-deletions will be computed during the "
+#~ "transfer, and then removed after the transfer completes.</li><li>After - "
+#~ "File-deletions will be done after the transfer has completed.</li>"
+#~ msgstr ""
+#~ "<li>默认- Rsync 会在连接到 rsync 3.0.0 或更高版本时会选择 “during” 演算法，而在连接至旧版本时使用 “before” "
+#~ "算法。</li><li>Before - 文件删除工作将在传输开始之前完成。</li><li>During - "
+#~ "文件删除工作将在传输过程中逐渐进行。</li><li>Delay - "
+#~ "文件删除工作仅在传输时进行​​计算，并在传输完成后进行。</li><li>After - 文件删除工作将在传输完成后进行。</li>"
+
+#~ msgid ""
+#~ "<b>EFI GPT partition</b> if you want to mount a GPT formatted drive "
+#~ "(<b>default partition</b>).<br/><b>MBR partition</b> if you want to mount a "
+#~ "UFS formatted drive or do imported disks from other OS.<br/><b>CD/DVD "
+#~ "volume</b> if you want to mount a CD/DVD volume."
+#~ msgstr ""
+#~ "<b>EFI GPT分区</b>如果您想挂载GPT格式的驱动器号（<b>默认分区</b>）。<br/><b>MBR分区</b> "
+#~ "如果您想挂载UFS格式驱动器或输入其他作业系统的磁盘。<br/><b>CD / DVD<b>如果您想挂载CD / DVD。"
 
 #, php-format
 #~ msgid ""
@@ -9026,9 +9086,76 @@ msgstr "版本："
 
 #, php-format
 #~ msgid ""
+#~ "Make sure you have already configured your <a href='%s'>Email</a> settings."
+#~ msgstr "请确认您是否已经设定好 <a href='%s'>电邮</a> 资讯了。"
+
+#, php-format
+#~ msgid ""
+#~ "No configured CARP interfaces. Please add new <a href='%s'>CARP "
+#~ "interface</a> first."
+#~ msgstr "尚未配置 CARP 介面。請先添加新的 <a href='%s'>CARP介面</a>。"
+
+#, php-format
+#~ msgid ""
+#~ "No configured Auth Group. Please add new <a href='%s'>Auth Group</a> first."
+#~ msgstr "尚未配置认证组。请先添加新的 <a href='%s'>认证组（Auth Group）</a>。"
+
+#, php-format
+#~ msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
+#~ msgstr "请参见 <a href='%s' target='_blank'>文档</a>。"
+
+#~ msgid ""
+#~ "Set what user the service will run as (www by default). <br><b><font "
+#~ "color='red'>NOTE</font>: Running as root is <u>not recommended</u> for "
+#~ "security reasons, use it on your own risk!</b></br>"
+#~ msgstr ""
+#~ "设置服务由哪些户口运行（默认为www）。 <br><b><font color='red'>注意</font>：为了安全起见，<u>不推荐</u> "
+#~ "以root 运行，请自行承担风险！ </b></br>"
+
+#, php-format
+#~ msgid ""
+#~ "The driver used to communicate with your UPS. Get the list of available <a "
+#~ "href='%s' target='_blank'>drivers</a>."
+#~ msgstr "用来与 UPS 通讯的驱动程式。取得可用的 <a href='%s' target='_blank'>驱动程式</a> 清单。"
+
+#, php-format
+#~ msgid ""
+#~ "The driver used to connect with the LCD. The list of available <a href='%s' "
+#~ "target='_blank'>drivers</a>."
+#~ msgstr "用来与 LCD 联系的驱动程式。取得可用的 <a href='%s' target='_blank'>驱动程式</a> 清单。"
+
+#, php-format
+#~ msgid ""
+#~ "This configuration settings are used to generate the ups.conf configuration "
+#~ "file which is required by the NUT UPS daemon. To get more information how to "
+#~ "configure your UPS please check the NUT (Network UPS Tools) <a href='%s' "
+#~ "target='_blank'>documentation</a>."
+#~ msgstr ""
+#~ "此配置设置是用来生成NUT UPS 守护进程的配置文件（ups.conf）。如想查获更多配置UPS 的信息，请查看NUT（Network UPS "
+#~ "Tools）<a href='%s' target='_blank'>文档</a>。"
+
+#, php-format
+#~ msgid ""
 #~ "This will cause %s not to check for newer firmware versions when the <a "
 #~ "href='%s'>%s</a> page is viewed."
 #~ msgstr "这将导致 %s 查看 <a href='%s'>%s</a> 页时不检查新的固件版。"
+
+#, php-format
+#~ msgid ""
+#~ "To increase CIFS performance try the following:<div "
+#~ "id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' "
+#~ "switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a "
+#~ "href='%s'>Tuning</a>' switch</li></ul></div>"
+#~ msgstr ""
+#~ "若想提高CIFS 性能，请尝试以下操作：<div id='enumeration'><ul><li>启用“异步I / "
+#~ "O（AIO）”开关</li><li>启用“大笔资料读/写”开关</li><li>启用<a "
+#~ "href='%s'>调整</a>开关</li></ul></div>"
+
+#, php-format
+#~ msgid ""
+#~ "To get more information how to configure LCDproc check the LCDproc <a "
+#~ "href='%s' target='_blank'>documentation</a>."
+#~ msgstr "关于 LCDproc 的详细资讯请查看 LCDproc <a href='%s' target='_blank'>文档</a>。"
 
 #, php-format
 #~ msgid ""
@@ -9038,9 +9165,53 @@ msgstr "版本："
 
 #, php-format
 #~ msgid ""
+#~ "To get detailed informations about TCP Wrappers check the FreeBSD <a "
+#~ "href='%s' target='_blank'>documentation</a>."
+#~ msgstr ""
+#~ "关于 TCP Wrappers 的详细资讯请查看 FreeBSD <a href='%s' target='_blank'>文档</a>。"
+
+#, php-format
+#~ msgid ""
+#~ "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
+#~ "of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
+#~ "or NTFS can result in unpredictable results, file corruption, and loss of "
+#~ "data!"
+#~ msgstr ""
+#~ "UFS 档案系统格式是FreeBSD 原生档案格式(%s的OS)。如果使用FAT, FAT32, EXT2, EXT3, 或是NTFS "
+#~ "可能会导致档案损毁等不可预期的效果或错误！"
+
+#, php-format
+#~ msgid ""
 #~ "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
 #~ "service to clients."
 #~ msgstr "您必须激活  <a href='%s'>Zeroconf/Bonjour</a> 才可对客户端宣传服务。"
+
+#, php-format
+#~ msgid ""
+#~ "You can't mount the partition '%s' where the config file is stored.<br />"
+#~ msgstr "请不要把 '%s' 分区挂载于存储配置文件的目录。"
+
+#, php-format
+#~ msgid ""
+#~ "After you click &quot;Save&quot;, you must reboot the server to make the "
+#~ "changes take effect. You may also have to do one or more of the following "
+#~ "steps before you can access your server again: <ul><li><span "
+#~ "class='vexpl'>change the IP address of your server</span></li><li><span "
+#~ "class='vexpl'>access the webGUI with the new IP address</span></li></ul>"
+#~ msgstr ""
+#~ "当您单击&quot;储存&quot;后，您必须重新启动伺服器才能使更改生效。您可能还需要做以下一个或多个步骤才能再次访问您的伺服器： "
+#~ "<ul><li><span class='vexpl'>变更伺服器的IP位址</span></li><li><span "
+#~ "class='vexpl'>使用新的IP位址来连接网页界面</span></li></ul>"
+
+#, php-format
+#~ msgid ""
+#~ "After you click &quot;Save&quot;, you may also have to do one or more of the "
+#~ "following steps before you can access this server again: <ul><li>change the "
+#~ "IP address of your computer</li><li>access the webGUI with the new IP "
+#~ "address</li></ul>"
+#~ msgstr ""
+#~ "当您单击&quot;储存&quot;后，您可能得执行以下步骤才能再访问伺服器：<ul><li>更改您的电脑的IP 位址</li><li>使用新的IP "
+#~ "位址访问网页界面。 </li><ul>"
 
 #~ msgid ""
 #~ "<div id='enumeration'><ul><li>The new password is also the default root "
@@ -9053,5 +9224,20 @@ msgstr "版本："
 #~ msgstr ""
 #~ "您也可以通过 SSH 或在 console 使用 pkg add 命令来安装套件。 <br />（例如：pkg add packagename）"
 
+#, php-format
+#~ msgid ""
+#~ "You must <a href='%s'>reboot</a> the system before you can upgrade the "
+#~ "firmware."
+#~ msgstr "固件升级之前，您必须 <a href='%s'>重新启动</a> 系统。"
+
 #~ msgid "add any supplemental parameters"
 #~ msgstr "添加任何辅助参数"
+
+#, php-format
+#~ msgid "Check <a href=\"%s\">System|General Setup</a> before initializing."
+#~ msgstr "初始化前检查<a href=\"%s\">系统|一般设定</a>。"
+
+#~ msgid ""
+#~ "All data in the path is overwritten. To avoid invalid data/permission, using "
+#~ "empty UFS directory is recommended."
+#~ msgstr "在路径上的所有数据将被覆盖。为了避免无效的数据/权限，建议使用空的UFS目录。"

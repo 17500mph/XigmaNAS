@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-29 03:10+0000\n"
+"POT-Creation-Date: 2016-06-30 00:10+0000\n"
 "PO-Revision-Date: 2016-06-26 11:18+0000\n"
 "Last-Translator: Lukas Vescicik <lukas.vescicik@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-29 01:52+0000\n"
+"X-Launchpad-Export-Date: 2016-06-29 22:57+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: SLOVAKIA\n"
 "Language: \n"
@@ -77,6 +77,11 @@ msgstr "%s už bol nakonfigurovaný ako logický oddiel."
 #, php-format
 msgid "%s is too long."
 msgstr "%s je píliš dlhý."
+
+#, php-format
+msgid ""
+"%s must be enabled for Unison to work, and the %s must have shell access."
+msgstr ""
 
 #, php-format
 msgid "%s of %sB"
@@ -175,42 +180,6 @@ msgstr "4KB wrapper (zarovnávač/oddeľovač)"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "značka VLAN 802.1Q (medzi 1 a 4094)."
-
-#, php-format
-msgid ""
-"<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
-"href='%s'>user</a> must have shell access."
-msgstr ""
-"<a href='%s'>SSHD</a> musí byť povolený aby Unison fungoval, a <a "
-"href='%s'>Používaťeľ</a> musí mať prístupové práva f príkazovému riadku.."
-
-msgid ""
-"<b>EFI GPT partition</b> if you want to mount a GPT formatted drive "
-"(<b>default partition</b>).<br/><b>MBR partition</b> if you want to mount a "
-"UFS formatted drive or do imported disks from other OS.<br/><b>CD/DVD "
-"volume</b> if you want to mount a CD/DVD volume."
-msgstr ""
-
-msgid ""
-"<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
-msgstr ""
-
-msgid ""
-"<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
-"3.0.0 or newer, and the 'before' algorithm when talking to an older "
-"rsync.</li><li>Before - File-deletions will be done before the transfer "
-"starts.</li><li>During - File-deletions will be done incrementally as the "
-"transfer happens.</li><li>Delay - File-deletions will be computed during the "
-"transfer, and then removed after the transfer completes.</li><li>After - "
-"File-deletions will be done after the transfer has completed.</li>"
-msgstr ""
-"<li>Štandardne - Rsync vyberie algoritmus „počas” pri komunikácii s rsync "
-"3.0.0 alebo novším a algoritmus „pred” pri komunikácii so starším "
-"rsync.</li><li>Pred - Zmazanie súborov sa vykoná pred začatím "
-"prenosu.</li><li>Počas - Zmazanie súborov sa vykoná postupne počas "
-"prenosu.</li><li>Oneskorené - Zmazanie súborov sa vypočíta pred začatím "
-"prenosu a vykoná sa po dokončení prenosu.</li><li>Po - Zmazanie súborov sa "
-"vykoná po dokončení prenosu.</li>"
 
 msgid ""
 "A Auth Group contains authorised users and secrets for additional security."
@@ -412,6 +381,9 @@ msgstr ""
 msgid "Access mode"
 msgstr "Režim prístupu"
 
+msgid "Access the webGUI with the new IP address"
+msgstr ""
+
 msgid "Acoustic level"
 msgstr "Úroveň hlasitosti"
 
@@ -604,21 +576,20 @@ msgstr "Rozšírené nastavenia"
 msgid "Advertisement skew"
 msgstr ""
 
-#, php-format
-msgid ""
-"After you click &quot;Save&quot;, you may also have to do one or more of the "
-"following steps before you can access this server again: <ul><li>change the "
-"IP address of your computer</li><li>access the webGUI with the new IP "
-"address</li></ul>"
+msgid "After"
 msgstr ""
 
-#, php-format
+msgid "After - File-deletions will be done after the transfer has completed."
+msgstr ""
+
 msgid ""
-"After you click &quot;Save&quot;, you must reboot the server to make the "
-"changes take effect. You may also have to do one or more of the following "
-"steps before you can access your server again: <ul><li><span "
-"class='vexpl'>change the IP address of your server</span></li><li><span "
-"class='vexpl'>access the webGUI with the new IP address</span></li></ul>"
+"After you click \"Save\" you may also have to do one or more of the "
+"following steps before you can access this server again:"
+msgstr ""
+
+msgid ""
+"After you click \"Save\" you must reboot the server to make the changes take "
+"effect."
 msgstr ""
 
 msgid "Age"
@@ -646,7 +617,7 @@ msgstr "Všetko:"
 
 msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
-"empty UFS directory is recommended."
+"an empty UFS directory is recommended."
 msgstr ""
 
 msgid "All data will be lost when you activate this option!"
@@ -871,6 +842,11 @@ msgstr "Pridaný"
 msgid "Attaching provider '%s'."
 msgstr "Pridáva sa poskytovateľ „%s“."
 
+msgid ""
+"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, or NTFS "
+"can result in unpredictable results, file corruption and the loss of data!"
+msgstr ""
+
 msgid "Audio"
 msgstr ""
 
@@ -1021,6 +997,15 @@ msgid "Battery temperature"
 msgstr ""
 
 msgid "Battery voltage"
+msgstr ""
+
+msgid "Before"
+msgstr ""
+
+msgid "Before - File-deletions will be done before the transfer starts."
+msgstr ""
+
+msgid "Before - File-deletions will be performed before the transfer starts."
 msgstr ""
 
 msgid "Best available"
@@ -1252,6 +1237,12 @@ msgstr ""
 msgid "Change password"
 msgstr ""
 
+msgid "Change the IP address of your computer"
+msgstr ""
+
+msgid "Change the IP address of your server"
+msgstr ""
+
 msgid "Changes to this option will take effect after a reboot."
 msgstr "Zmeny tejto voľby sa prejavia po reštarte"
 
@@ -1261,8 +1252,7 @@ msgstr "Kanál"
 msgid "Charging Battery"
 msgstr ""
 
-#, php-format
-msgid "Check <a href=\"%s\">System|General Setup</a> before initializing."
+msgid "Check System|General Setup before initializing"
 msgstr ""
 
 msgid "Check and replace cable"
@@ -1273,6 +1263,13 @@ msgstr "Interval kontroly"
 
 msgid "Check shared secret:"
 msgstr "Skontrolovať spoločné tajomstvo:"
+
+msgid ""
+"Check the FreeBSD documentation for detailed information about TCP Wrappers"
+msgstr ""
+
+msgid "Check the list of available drivers"
+msgstr ""
 
 msgid "Chinese (Simplified)"
 msgstr "čínština (zjednodušená)"
@@ -1743,12 +1740,12 @@ msgstr ""
 msgid "DNS server is empty."
 msgstr ""
 
+msgid "DO NOT abort the firmware upgrade process once it has started."
+msgstr ""
+
 #, php-format
 msgid ""
-"DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-"try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
-"/>It is recommended that you <a href='%s'>Backup</a> the server "
-"configuration before doing a upgrade."
+"DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
 msgstr ""
 
 msgid "DVD"
@@ -1828,6 +1825,16 @@ msgstr ""
 msgid "Default"
 msgstr "Štandardné"
 
+msgid ""
+"Default - Rsync will choose the 'during' algorithm when talking to rsync "
+"3.0.0 or newer and the 'before' algorithm when talking to an older rsync."
+msgstr ""
+
+msgid ""
+"Default - Rsync will choose the 'during' algorithm when talking to rsync "
+"3.0.0 or newer, and the 'before' algorithm when talking to an older rsync."
+msgstr ""
+
 msgid "Default Device Settings"
 msgstr ""
 
@@ -1852,6 +1859,19 @@ msgstr "Definovať adresáre/URL, ktoré vyžadujú overenie."
 
 msgid "Defines when the shutdown is initiated."
 msgstr "Definuje, kedy bolo začaté vypnutie."
+
+msgid "Delay"
+msgstr ""
+
+msgid ""
+"Delay - File-deletions will be computed during the transfer and will be done "
+"after the transfer."
+msgstr ""
+
+msgid ""
+"Delay - File-deletions will be computed during the transfer, and then "
+"removed after the transfer completes."
+msgstr ""
 
 msgid "Delete"
 msgstr "Zmazať"
@@ -2408,6 +2428,9 @@ msgstr ""
 msgid "Do you want to enable selected options?"
 msgstr ""
 
+msgid "Do you want to install this firmware anyway (at your own risk)?"
+msgstr ""
+
 msgid "Do you want to toggle selected jobs?"
 msgstr ""
 
@@ -2504,6 +2527,13 @@ msgstr "Duplexne"
 
 msgid "Duplicate mount point name."
 msgstr "Názov duplicitného bodu pripojenia."
+
+msgid "During"
+msgstr ""
+
+msgid ""
+"During - File-deletions will be done incrementally as the transfer happens."
+msgstr ""
 
 msgid "Dutch"
 msgstr "holandčina"
@@ -2640,6 +2670,12 @@ msgstr ""
 
 msgid "Enable"
 msgstr "Zapnúť"
+
+msgid "Enable 'Asynchronous I/O (AIO)' switch."
+msgstr ""
+
+msgid "Enable 'Large read/write' switch."
+msgstr ""
 
 msgid "Enable ACL inheritance"
 msgstr ""
@@ -2823,6 +2859,9 @@ msgid "Enable traps."
 msgstr ""
 
 msgid "Enable tuning of some kernel variables."
+msgstr ""
+
+msgid "Enable tuning switch"
 msgstr ""
 
 msgid "Enable write cache mode."
@@ -3322,6 +3361,9 @@ msgid "German"
 msgstr "nemčina"
 
 msgid "Get Target Info"
+msgstr ""
+
+msgid "Get a list of available drivers"
 msgstr ""
 
 msgid "GiB"
@@ -3947,6 +3989,10 @@ msgid ""
 msgstr ""
 
 msgid ""
+"It is recommended that you backup the server configuration before you upgrade"
+msgstr ""
+
+msgid ""
 "It is recommended to use encryption before you store the backup in a safe "
 "location."
 msgstr ""
@@ -4375,12 +4421,6 @@ msgstr ""
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Ubezpečte sa, že ste aktivovali S.M.A.R.T. pre Vaše zariadenia."
 
-#, php-format
-msgid ""
-"Make sure you have already configured your <a href='%s'>Email</a> settings."
-msgstr ""
-"Uistite sa, že ste už upravili svoje nastavenia <a href='%s'>emailu</a>."
-
 msgid "Make sure you have already configured your email settings"
 msgstr ""
 
@@ -4703,6 +4743,9 @@ msgstr ""
 msgid "NOT YET AVAILABLE"
 msgstr "ZATIAĽ NEDOSTUPNÉ"
 
+msgid "NOTE"
+msgstr ""
+
 msgid "NT1"
 msgstr ""
 
@@ -4820,18 +4863,10 @@ msgstr ""
 msgid "No RSYNC Client configured"
 msgstr "Žiadny RSYNC klient nebol nakonfigurovaný"
 
-#, php-format
-msgid ""
-"No configured Auth Group. Please add new <a href='%s'>Auth Group</a> first."
+msgid "No configured Auth Group."
 msgstr ""
 
 msgid "No configured CARP interfaces."
-msgstr ""
-
-#, php-format
-msgid ""
-"No configured CARP interfaces. Please add new <a href='%s'>CARP "
-"interface</a> first."
 msgstr ""
 
 msgid "No configured bridge interfaces."
@@ -5077,6 +5112,11 @@ msgstr ""
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr ""
 "Povoliť iba overených používateľov. Anonymné prihasovanie je zakázané."
+
+msgid ""
+"Only install firmwares that come from sources that you trust, and make sure "
+"that the firmware has not been tampered with."
+msgstr ""
 
 msgid "Option"
 msgstr "Voľba"
@@ -5347,6 +5387,12 @@ msgstr ""
 msgid "Please add a bridge interface first."
 msgstr ""
 
+msgid "Please add a new Auth Group first"
+msgstr ""
+
+msgid "Please add a new CARP interface first"
+msgstr ""
+
 msgid "Please add a new Extent first."
 msgstr ""
 
@@ -5368,10 +5414,6 @@ msgstr ""
 
 msgid "Please add new pools first."
 msgstr ""
-
-#, php-format
-msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
-msgstr "Prosím, pozrite si <a href='%s' target='_blank'>dokumentáciu</a>."
 
 msgid "Please check the documentation"
 msgstr ""
@@ -5996,6 +6038,11 @@ msgstr ""
 msgid "Running"
 msgstr "Beží"
 
+msgid ""
+"Running the service as user root is not recommended for security reasons, "
+"use at your own risk!"
+msgstr ""
+
 msgid "Russian"
 msgstr "ruština"
 
@@ -6042,6 +6089,9 @@ msgstr "SSH"
 
 msgid "SSH events"
 msgstr "Udalosti SSH"
+
+msgid "SSHD"
+msgstr ""
 
 msgid "SSHD log"
 msgstr "Záznam SSHD"
@@ -6156,6 +6206,17 @@ msgid ""
 msgstr ""
 
 msgid "See attribute E8."
+msgstr ""
+
+msgid "Select 'CD/DVD' if you want to mount a CD/DVD volume."
+msgstr ""
+
+msgid "Select 'GPT partition' if you want to mount a GPT formatted drive"
+msgstr ""
+
+msgid ""
+"Select 'MBR partition' default partition if you want to mount a UFS "
+"formatted drive or if you want to import disks from other OS."
 msgstr ""
 
 msgid ""
@@ -6333,10 +6394,7 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
 
-msgid ""
-"Set what user the service will run as (www by default). <br><b><font "
-"color='red'>NOTE</font>: Running as root is <u>not recommended</u> for "
-"security reasons, use it on your own risk!</b></br>"
+msgid "Set under which user the service should run (www by default)."
 msgstr ""
 
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
@@ -7269,24 +7327,13 @@ msgid ""
 "The distinguished name with which to bind to the directory server, e.g. %s"
 msgstr "DN kde sa má pripojiť k adresárovému serveru, napr. %s"
 
-#, php-format
-msgid ""
-"The driver used to communicate with your UPS. Get the list of available <a "
-"href='%s' target='_blank'>drivers</a>."
-msgstr ""
-"Ovládač komunikoval s vašim UPS. Stiahnuť zoznam dostupných <a href='%s' "
-"target='_blank'>ovládačov</a>."
-
-#, php-format
-msgid ""
-"The driver used to communicate with your second UPS. Get the list of "
-"available <a href='%s' target='_blank'>drivers</a>."
+msgid "The driver used to communicate with your UPS."
 msgstr ""
 
-#, php-format
-msgid ""
-"The driver used to connect with the LCD. The list of available <a href='%s' "
-"target='_blank'>drivers</a>."
+msgid "The driver used to communicate with your second UPS."
+msgstr ""
+
+msgid "The driver used to connect with the LCD."
 msgstr ""
 
 msgid "The encrypted device is currently mounted!"
@@ -7792,17 +7839,10 @@ msgstr ""
 msgid "This can cause a huge delay in loading the log page!"
 msgstr ""
 
-#, php-format
 msgid ""
 "This configuration settings are used to generate the ups.conf configuration "
-"file which is required by the NUT UPS daemon. To get more information how to "
-"configure your UPS please check the NUT (Network UPS Tools) <a href='%s' "
-"target='_blank'>documentation</a>."
+"file which is required by the NUT UPS daemon."
 msgstr ""
-"Tieto konfiguračné nastavenia slúžia na vygenerovanie konfiguračného súboru "
-"ups.conf, ktorý vyžaduje démon NUT UPS. Ďalšie informácie informácií ako "
-"nakonfigurovať váš UPS nájdete v <a href='%s' "
-"target='_blank'>dokumentácii</a> NUT (Network UPS Tools)."
 
 msgid "This controls the access a remote host has to this module."
 msgstr ""
@@ -7859,10 +7899,7 @@ msgstr ""
 
 msgid ""
 "This means that the firmware you flashed is not an official/supported "
-"firmware and may lead to unexpected behavior or security compromises. Only "
-"install firmwares that come from sources that you trust, and make sure that "
-"the firmware has not been tampered with.<br /><br />Do you want to install "
-"this firmware anyway (on your own risk)?"
+"firmware and may lead to unexpected behavior or security compromises."
 msgstr ""
 
 msgid "This name already exists in the disk list."
@@ -8186,31 +8223,22 @@ msgstr "Na email."
 msgid "To email"
 msgstr "Na email."
 
-#, php-format
-msgid ""
-"To get detailed informations about TCP Wrappers check the FreeBSD <a "
-"href='%s' target='_blank'>documentation</a>."
-msgstr ""
-"Podrobné informácie o TCP Wrappers nájdete v <a href='%s' "
-"target='_blank'>dokumentácii</a> FreeBSD."
-
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
 "documentation"
 msgstr ""
 
-#, php-format
 msgid ""
-"To get more information how to configure LCDproc check the LCDproc <a "
-"href='%s' target='_blank'>documentation</a>."
+"To get more information how to configure LCDproc check the LCDproc "
+"documentation"
 msgstr ""
 
-#, php-format
 msgid ""
-"To increase CIFS performance try the following:<div "
-"id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' "
-"switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a "
-"href='%s'>Tuning</a>' switch</li></ul></div>"
+"To get more information how to configure your UPS please check the NUT "
+"(Network UPS Tools) documentation"
+msgstr ""
+
+msgid "To increase CIFS performance try the following:"
 msgstr ""
 
 msgid "To match any IP address leave this field empty."
@@ -8385,14 +8413,8 @@ msgstr ""
 #, php-format
 msgid ""
 "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
-"of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
-"or NTFS can result in unpredictable results, file corruption, and loss of "
-"data!"
+"of %s)."
 msgstr ""
-"UFS a varianty sú NATÍVNY formát súborového systému FreeBSD (OS, na ktorom "
-"je založený %s). Pokus o použitie incýh súborových systémov ako FAT, FAT32, "
-"EXT2, EXT3, alebo NTFS môže znamenať nepredvídateľné následky, poškodenie "
-"súborov a stratu dát!"
 
 msgid "UFS with Soft Updates"
 msgstr ""
@@ -8993,15 +9015,14 @@ msgid ""
 "command."
 msgstr ""
 
+#, php-format
+msgid "You can not mount partition '%s' where the config file is stored."
+msgstr ""
+
 msgid "You can use the following parameters for substitution:"
 msgstr ""
 
 msgid "You can verify the result in the log file."
-msgstr ""
-
-#, php-format
-msgid ""
-"You can't mount the partition '%s' where the config file is stored.<br />"
 msgstr ""
 
 msgid ""
@@ -9022,6 +9043,11 @@ msgstr ""
 msgid "You have to select at least one item for '%s'."
 msgstr "Musíte vybrať aspoň jednu položku pre „%s”."
 
+msgid ""
+"You may also have to do one or more of the following steps before you can "
+"access your server again:"
+msgstr ""
+
 msgid "You may enter a description here for your reference."
 msgstr "Sem môžete napísať popis pre vlastnú potrebu."
 
@@ -9036,12 +9062,6 @@ msgstr ""
 
 #, php-format
 msgid "You may specify logical block length (%d by default)."
-msgstr ""
-
-#, php-format
-msgid ""
-"You must <a href='%s'>reboot</a> the system before you can upgrade the "
-"firmware."
 msgstr ""
 
 msgid ""
@@ -9063,6 +9083,9 @@ msgid "You must have a minimum of %dMiB RAM for using iSCSI target."
 msgstr ""
 
 msgid "You must initialize data before enabling."
+msgstr ""
+
+msgid "You must reboot the system before you can upgrade the firmware"
 msgstr ""
 
 msgid "You must select at least one authentication method."
@@ -9266,8 +9289,28 @@ msgstr "umask"
 msgid "umount"
 msgstr "odpojiť"
 
+msgid "user"
+msgstr ""
+
 msgid "version:"
 msgstr ""
+
+#~ msgid ""
+#~ "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
+#~ "3.0.0 or newer, and the 'before' algorithm when talking to an older "
+#~ "rsync.</li><li>Before - File-deletions will be done before the transfer "
+#~ "starts.</li><li>During - File-deletions will be done incrementally as the "
+#~ "transfer happens.</li><li>Delay - File-deletions will be computed during the "
+#~ "transfer, and then removed after the transfer completes.</li><li>After - "
+#~ "File-deletions will be done after the transfer has completed.</li>"
+#~ msgstr ""
+#~ "<li>Štandardne - Rsync vyberie algoritmus „počas” pri komunikácii s rsync "
+#~ "3.0.0 alebo novším a algoritmus „pred” pri komunikácii so starším "
+#~ "rsync.</li><li>Pred - Zmazanie súborov sa vykoná pred začatím "
+#~ "prenosu.</li><li>Počas - Zmazanie súborov sa vykoná postupne počas "
+#~ "prenosu.</li><li>Oneskorené - Zmazanie súborov sa vypočíta pred začatím "
+#~ "prenosu a vykoná sa po dokončení prenosu.</li><li>Po - Zmazanie súborov sa "
+#~ "vykoná po dokončení prenosu.</li>"
 
 #, php-format
 #~ msgid ""
@@ -9285,8 +9328,66 @@ msgstr ""
 
 #, php-format
 #~ msgid ""
+#~ "Make sure you have already configured your <a href='%s'>Email</a> settings."
+#~ msgstr ""
+#~ "Uistite sa, že ste už upravili svoje nastavenia <a href='%s'>emailu</a>."
+
+#, php-format
+#~ msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
+#~ msgstr "Prosím, pozrite si <a href='%s' target='_blank'>dokumentáciu</a>."
+
+#, php-format
+#~ msgid ""
+#~ "The driver used to communicate with your UPS. Get the list of available <a "
+#~ "href='%s' target='_blank'>drivers</a>."
+#~ msgstr ""
+#~ "Ovládač komunikoval s vašim UPS. Stiahnuť zoznam dostupných <a href='%s' "
+#~ "target='_blank'>ovládačov</a>."
+
+#, php-format
+#~ msgid ""
+#~ "This configuration settings are used to generate the ups.conf configuration "
+#~ "file which is required by the NUT UPS daemon. To get more information how to "
+#~ "configure your UPS please check the NUT (Network UPS Tools) <a href='%s' "
+#~ "target='_blank'>documentation</a>."
+#~ msgstr ""
+#~ "Tieto konfiguračné nastavenia slúžia na vygenerovanie konfiguračného súboru "
+#~ "ups.conf, ktorý vyžaduje démon NUT UPS. Ďalšie informácie informácií ako "
+#~ "nakonfigurovať váš UPS nájdete v <a href='%s' "
+#~ "target='_blank'>dokumentácii</a> NUT (Network UPS Tools)."
+
+#, php-format
+#~ msgid ""
+#~ "To get detailed informations about TCP Wrappers check the FreeBSD <a "
+#~ "href='%s' target='_blank'>documentation</a>."
+#~ msgstr ""
+#~ "Podrobné informácie o TCP Wrappers nájdete v <a href='%s' "
+#~ "target='_blank'>dokumentácii</a> FreeBSD."
+
+#, php-format
+#~ msgid ""
 #~ "To get detailed informations about writing firewall rules check the FreeBSD "
 #~ "<a href='%s' target='_blank'>documentation</a>."
 #~ msgstr ""
 #~ "Podrobné informácie o písaní pravidiel firewallu nájdete v <a href='%s' "
 #~ "target='_blank'>dokumentácii</a> FreeBSD."
+
+#, php-format
+#~ msgid ""
+#~ "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
+#~ "of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
+#~ "or NTFS can result in unpredictable results, file corruption, and loss of "
+#~ "data!"
+#~ msgstr ""
+#~ "UFS a varianty sú NATÍVNY formát súborového systému FreeBSD (OS, na ktorom "
+#~ "je založený %s). Pokus o použitie incýh súborových systémov ako FAT, FAT32, "
+#~ "EXT2, EXT3, alebo NTFS môže znamenať nepredvídateľné následky, poškodenie "
+#~ "súborov a stratu dát!"
+
+#, php-format
+#~ msgid ""
+#~ "<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
+#~ "href='%s'>user</a> must have shell access."
+#~ msgstr ""
+#~ "<a href='%s'>SSHD</a> musí byť povolený aby Unison fungoval, a <a "
+#~ "href='%s'>Používaťeľ</a> musí mať prístupové práva f príkazovému riadku.."

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-29 03:10+0000\n"
+"POT-Creation-Date: 2016-06-30 00:10+0000\n"
 "PO-Revision-Date: 2016-06-01 20:36+0000\n"
 "Last-Translator: thor123 <thorstenoesterle123@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-29 01:52+0000\n"
+"X-Launchpad-Export-Date: 2016-06-29 22:58+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -80,6 +80,11 @@ msgstr "%s ist bereits als Datenträger konfiguriert."
 #, php-format
 msgid "%s is too long."
 msgstr "%s ist zu lang."
+
+#, php-format
+msgid ""
+"%s must be enabled for Unison to work, and the %s must have shell access."
+msgstr ""
 
 #, php-format
 msgid "%s of %sB"
@@ -197,52 +202,6 @@ msgstr "4k Anpassung"
 
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN-Markierung (zwischen 1 und 4094)."
-
-#, php-format
-msgid ""
-"<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
-"href='%s'>user</a> must have shell access."
-msgstr ""
-"<a href='%s'>SSHD</a> muss aktiviert sein, damit Unison funktioniert. Zudem "
-"muss der <a href='%s'>Benutzer</a> Shell-Rechte besitzen."
-
-msgid ""
-"<b>EFI GPT partition</b> if you want to mount a GPT formatted drive "
-"(<b>default partition</b>).<br/><b>MBR partition</b> if you want to mount a "
-"UFS formatted drive or do imported disks from other OS.<br/><b>CD/DVD "
-"volume</b> if you want to mount a CD/DVD volume."
-msgstr ""
-"<b>EFI GPT Partition</b> wenn Sie ein mit GPT formatiertes Laufwerk mounten "
-"möchten (<b>default partition</b>).<br/><b>MBR Partition</b> wenn Sie eine "
-"UFS formatierte Partition die auf dem gleichen Laufwerk wie die NAS4Free "
-"Installation liegt, oder ein Laufwerk dass unter einem konventionellen "
-"Betriebssystems erstellt wurde mounten möchten.<br/><b>CD/DVD Volume</b> "
-"Wenn Sie eine CD/DVD mounten möchten."
-
-msgid ""
-"<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
-msgstr ""
-"<div id='enumeration'><ul><li>%d - Datum</li><li>%h - "
-"Hostname</li></ul></div>"
-
-msgid ""
-"<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
-"3.0.0 or newer, and the 'before' algorithm when talking to an older "
-"rsync.</li><li>Before - File-deletions will be done before the transfer "
-"starts.</li><li>During - File-deletions will be done incrementally as the "
-"transfer happens.</li><li>Delay - File-deletions will be computed during the "
-"transfer, and then removed after the transfer completes.</li><li>After - "
-"File-deletions will be done after the transfer has completed.</li>"
-msgstr ""
-"<li>Voreinstellung - Rsync wird den 'During'-Algorithmus verwenden, wenn "
-"Kommunikation mit Rsync 3.0 oder neuer besteht - und den 'Before'-"
-"Algorithmus, wenn Kommunikation zu einer älteren Rsync Version besteht. "
-".</li><li>Before - Dateilöschen wird vor dem Dateitransfer "
-"begonnen..</li><li>During - Dateilöschen wird während des Dateitransfers "
-"durchgeführt. .</li><li>Delay - Dateilöschen wird beim Dateitransfer "
-"berechnet, und nach dem Abschluss des Dateitransfers werden die Daten "
-"gelöscht. .</li><li>Löschen der Dateien wird nach dem Transfer "
-"durchgeführt..</li>"
 
 msgid ""
 "A Auth Group contains authorised users and secrets for additional security."
@@ -457,6 +416,9 @@ msgstr "Zugriffszeit (atime)"
 msgid "Access mode"
 msgstr "Zugriffsmodus"
 
+msgid "Access the webGUI with the new IP address"
+msgstr ""
+
 msgid "Acoustic level"
 msgstr "Geräuschpegel"
 
@@ -651,32 +613,21 @@ msgstr "Erweiterte Einstellungen"
 msgid "Advertisement skew"
 msgstr "Advertisement skew"
 
-#, php-format
-msgid ""
-"After you click &quot;Save&quot;, you may also have to do one or more of the "
-"following steps before you can access this server again: <ul><li>change the "
-"IP address of your computer</li><li>access the webGUI with the new IP "
-"address</li></ul>"
+msgid "After"
 msgstr ""
-"Nach dem Klick auf &quot;Speichern&quot; könnten einige Schritte notwendig "
-"werden, damit ein Zugriff auf den Server wieder möglich wird: <ul><li>Ändern "
-"der IP-Adresse des Servers</li><li>Zugriff auf die WebGUI via neuer IP-"
-"Adresse</li></ul>"
 
-#, php-format
-msgid ""
-"After you click &quot;Save&quot;, you must reboot the server to make the "
-"changes take effect. You may also have to do one or more of the following "
-"steps before you can access your server again: <ul><li><span "
-"class='vexpl'>change the IP address of your server</span></li><li><span "
-"class='vexpl'>access the webGUI with the new IP address</span></li></ul>"
+msgid "After - File-deletions will be done after the transfer has completed."
 msgstr ""
-"Nach dem Klick auf &quot;Speichern&quot; müssen sie den Server neu starten, "
-"damit die Änderungen wirksam werden. Danach könnten einige Schritte "
-"notwendig werden, damit ein Zugriff auf den Server wieder möglich wird: "
-"<ul><li><span class='vexpl'>Ändern der IP-Adresse des "
-"Servers</span></li><li><span class='vexpl'>Zugriff auf die WebGUI via neuer "
-"IP-Adresse</span></li></ul>"
+
+msgid ""
+"After you click \"Save\" you may also have to do one or more of the "
+"following steps before you can access this server again:"
+msgstr ""
+
+msgid ""
+"After you click \"Save\" you must reboot the server to make the changes take "
+"effect."
+msgstr ""
 
 msgid "Age"
 msgstr ""
@@ -703,10 +654,8 @@ msgstr "Alle"
 
 msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
-"empty UFS directory is recommended."
+"an empty UFS directory is recommended."
 msgstr ""
-"Alle Daten im Pfad werden überschrieben. Es wird empfohlen, ein leeres USF-"
-"Verzeichnis zu verwenden, um ungültige Daten/ZUgriffsrechte zu vermeiden."
 
 msgid "All data will be lost when you activate this option!"
 msgstr "Alle Daten werden gelöscht wenn diese OPtion aktiviert wird."
@@ -943,6 +892,11 @@ msgstr "Hinzugefügt"
 msgid "Attaching provider '%s'."
 msgstr "Binde Provider '%s' ein."
 
+msgid ""
+"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, or NTFS "
+"can result in unpredictable results, file corruption and the loss of data!"
+msgstr ""
+
 msgid "Audio"
 msgstr "Ton"
 
@@ -1099,6 +1053,15 @@ msgstr "Batterie Temperatur"
 
 msgid "Battery voltage"
 msgstr "Akkuspannung"
+
+msgid "Before"
+msgstr ""
+
+msgid "Before - File-deletions will be done before the transfer starts."
+msgstr ""
+
+msgid "Before - File-deletions will be performed before the transfer starts."
+msgstr ""
 
 msgid "Best available"
 msgstr "Bester verfügbarer"
@@ -1338,6 +1301,12 @@ msgstr "ändere unterstehende Datei"
 msgid "Change password"
 msgstr "Passwort ändern"
 
+msgid "Change the IP address of your computer"
+msgstr ""
+
+msgid "Change the IP address of your server"
+msgstr ""
+
 msgid "Changes to this option will take effect after a reboot."
 msgstr ""
 "Änderungen in diesen Optionen werden erst nach einem Neustart wirksam."
@@ -1348,10 +1317,8 @@ msgstr "Kanal"
 msgid "Charging Battery"
 msgstr "Akku wird geladen"
 
-#, php-format
-msgid "Check <a href=\"%s\">System|General Setup</a> before initializing."
+msgid "Check System|General Setup before initializing"
 msgstr ""
-"Vord er Initialisierung <a href=\"%s\">System|General Setup</a> überprüfen"
 
 msgid "Check and replace cable"
 msgstr "Prüfe und ersetze das Kabel"
@@ -1361,6 +1328,13 @@ msgstr "Überprüfungsintervall"
 
 msgid "Check shared secret:"
 msgstr "Überprüfe geteiltes Geheimnis:"
+
+msgid ""
+"Check the FreeBSD documentation for detailed information about TCP Wrappers"
+msgstr ""
+
+msgid "Check the list of available drivers"
+msgstr ""
 
 msgid "Chinese (Simplified)"
 msgstr "Chinesisch (Vereinfacht)"
@@ -1864,18 +1838,13 @@ msgstr "DNS Absender"
 msgid "DNS server is empty."
 msgstr "Der DNS Server ist leer"
 
+msgid "DO NOT abort the firmware upgrade process once it has started."
+msgstr ""
+
 #, php-format
 msgid ""
-"DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-"try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
-"/>It is recommended that you <a href='%s'>Backup</a> the server "
-"configuration before doing a upgrade."
+"DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
 msgstr ""
-"Unter keinen Umständen ein Firmware-Upgrade von Nas4Free unterbrechen !!!!! "
-".<br />Auf keinen Fall eine andere Datei als eine gültige '%s-%s-"
-"embedded.img.xz' Datei.<br />Es wird dringend empfohlen <a "
-"href='%s'>Backup</a> die Serverkonfigurationsdatei vor einem Upgrade zu "
-"sichern !!!"
 
 msgid "DVD"
 msgstr "DVD"
@@ -1956,6 +1925,16 @@ msgstr "Deduplikation"
 msgid "Default"
 msgstr "Vorgaben"
 
+msgid ""
+"Default - Rsync will choose the 'during' algorithm when talking to rsync "
+"3.0.0 or newer and the 'before' algorithm when talking to an older rsync."
+msgstr ""
+
+msgid ""
+"Default - Rsync will choose the 'during' algorithm when talking to rsync "
+"3.0.0 or newer, and the 'before' algorithm when talking to an older rsync."
+msgstr ""
+
 msgid "Default Device Settings"
 msgstr "Voreinstellungen"
 
@@ -1980,6 +1959,19 @@ msgstr "Geben Sie Verzeichnisse an, die eine Benutzeranmeldung erfordern."
 
 msgid "Defines when the shutdown is initiated."
 msgstr "Definiert wann das Herunterfahren initiiert werden soll."
+
+msgid "Delay"
+msgstr ""
+
+msgid ""
+"Delay - File-deletions will be computed during the transfer and will be done "
+"after the transfer."
+msgstr ""
+
+msgid ""
+"Delay - File-deletions will be computed during the transfer, and then "
+"removed after the transfer completes."
+msgstr ""
 
 msgid "Delete"
 msgstr "Löschen"
@@ -2557,6 +2549,9 @@ msgstr "Wollen Sie die ausgewählten Aufträge aktivieren?"
 msgid "Do you want to enable selected options?"
 msgstr "Wollen Sie die ausgewählten Einstellungen aktivieren?"
 
+msgid "Do you want to install this firmware anyway (at your own risk)?"
+msgstr ""
+
 msgid "Do you want to toggle selected jobs?"
 msgstr "Wollen Sie die ausgewählten Aufträge umschalten?"
 
@@ -2653,6 +2648,13 @@ msgstr "Duplex"
 
 msgid "Duplicate mount point name."
 msgstr "Der Einhängepunkt existiert bereits."
+
+msgid "During"
+msgstr ""
+
+msgid ""
+"During - File-deletions will be done incrementally as the transfer happens."
+msgstr ""
 
 msgid "Dutch"
 msgstr "Niederländisch"
@@ -2790,6 +2792,12 @@ msgstr "Standard: Leer."
 
 msgid "Enable"
 msgstr "Freigeben"
+
+msgid "Enable 'Asynchronous I/O (AIO)' switch."
+msgstr ""
+
+msgid "Enable 'Large read/write' switch."
+msgstr ""
 
 msgid "Enable ACL inheritance"
 msgstr "ACL Vererbung aktivieren"
@@ -2979,6 +2987,9 @@ msgstr "Traps aktivieren."
 
 msgid "Enable tuning of some kernel variables."
 msgstr "Einstellung einiger Kernel-Variablen aktivieren."
+
+msgid "Enable tuning switch"
+msgstr ""
 
 msgid "Enable write cache mode."
 msgstr "Schreibpuffermodus aktivieren."
@@ -3493,6 +3504,9 @@ msgstr "Deutsch"
 
 msgid "Get Target Info"
 msgstr "Zielinformation festlegen"
+
+msgid "Get a list of available drivers"
+msgstr ""
 
 msgid "GiB"
 msgstr "GiB"
@@ -4154,6 +4168,10 @@ msgstr ""
 "!"
 
 msgid ""
+"It is recommended that you backup the server configuration before you upgrade"
+msgstr ""
+
+msgid ""
 "It is recommended to use encryption before you store the backup in a safe "
 "location."
 msgstr ""
@@ -4613,13 +4631,6 @@ msgstr ""
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Aktivieren Sie S.M.A.R.T. für  Ihre Geräte."
 
-#, php-format
-msgid ""
-"Make sure you have already configured your <a href='%s'>Email</a> settings."
-msgstr ""
-"Stellen Sie sicher, das Sie Ihre <a href='%s'>E-Mail</a>-Einstellungen schon "
-"konfiguriert haben."
-
 msgid "Make sure you have already configured your email settings"
 msgstr ""
 
@@ -4952,6 +4963,9 @@ msgstr "NOPIN Versandintervall in Sekunden (%d ist standard)."
 msgid "NOT YET AVAILABLE"
 msgstr "Noch nicht verfügbar"
 
+msgid "NOTE"
+msgstr ""
+
 msgid "NT1"
 msgstr "NT1"
 
@@ -5071,23 +5085,11 @@ msgstr ""
 msgid "No RSYNC Client configured"
 msgstr "Kein RSYNC-Programm konfiguriert"
 
-#, php-format
-msgid ""
-"No configured Auth Group. Please add new <a href='%s'>Auth Group</a> first."
+msgid "No configured Auth Group."
 msgstr ""
-"Keine konfigurierte Auth Gruppe gefunden. Bitte füge eine neue <a "
-"href='%s'>Auth Gruppe</a> zuerst hinzu."
 
 msgid "No configured CARP interfaces."
 msgstr "Keine konfigurierten CARP Schnittstellen"
-
-#, php-format
-msgid ""
-"No configured CARP interfaces. Please add new <a href='%s'>CARP "
-"interface</a> first."
-msgstr ""
-"Keine konfigurierten CARP Schnittstellen. Bitte zuerst eine neue <a "
-"href='%s'> CARP Schnittstelle </a> hinzufügen"
 
 msgid "No configured bridge interfaces."
 msgstr ""
@@ -5341,6 +5343,11 @@ msgstr ""
 msgid "Only allow authenticated users. Anonymous logins are prohibited."
 msgstr ""
 "Nur authentifizierte Benutzer zulassen. Anonymer Zugang ist verboten."
+
+msgid ""
+"Only install firmwares that come from sources that you trust, and make sure "
+"that the firmware has not been tampered with."
+msgstr ""
 
 msgid "Option"
 msgstr "Einstellung"
@@ -5615,6 +5622,12 @@ msgstr "Betriebssystem"
 msgid "Please add a bridge interface first."
 msgstr ""
 
+msgid "Please add a new Auth Group first"
+msgstr ""
+
+msgid "Please add a new CARP interface first"
+msgstr ""
+
 msgid "Please add a new Extent first."
 msgstr ""
 
@@ -5636,10 +5649,6 @@ msgstr ""
 
 msgid "Please add new pools first."
 msgstr ""
-
-#, php-format
-msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
-msgstr "Bitte überprüfe die <a href='%s' target='_blank'>Dokumentation</a>."
 
 msgid "Please check the documentation"
 msgstr ""
@@ -6272,6 +6281,11 @@ msgstr "Ohne Remote-rsync-Daemon ausführen. (Voreinstellung: ausgeschaltet)."
 msgid "Running"
 msgstr "Läuft"
 
+msgid ""
+"Running the service as user root is not recommended for security reasons, "
+"use at your own risk!"
+msgstr ""
+
 msgid "Russian"
 msgstr "Russisch"
 
@@ -6321,6 +6335,9 @@ msgstr "SSH"
 
 msgid "SSH events"
 msgstr "SSH Ereignisse"
+
+msgid "SSHD"
+msgstr ""
 
 msgid "SSHD log"
 msgstr "SSHD Logfile"
@@ -6440,6 +6457,17 @@ msgstr ""
 
 msgid "See attribute E8."
 msgstr "Verweis auf Attribut E8"
+
+msgid "Select 'CD/DVD' if you want to mount a CD/DVD volume."
+msgstr ""
+
+msgid "Select 'GPT partition' if you want to mount a GPT formatted drive"
+msgstr ""
+
+msgid ""
+"Select 'MBR partition' default partition if you want to mount a UFS "
+"formatted drive or if you want to import disks from other OS."
+msgstr ""
 
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
@@ -6623,15 +6651,8 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "Bildlaufgeschwindigkeit der Titel von 0-10 setzen (Standard: 10)."
 
-msgid ""
-"Set what user the service will run as (www by default). <br><b><font "
-"color='red'>NOTE</font>: Running as root is <u>not recommended</u> for "
-"security reasons, use it on your own risk!</b></br>"
+msgid "Set under which user the service should run (www by default)."
 msgstr ""
-"Einstellen des Benutzers, der den Dienst ausführen soll (Default: www). "
-"<br><b><font color='red'>ACHTUNG</font>: Ausführung als root wird aus "
-"Sicherheitsgründen <u>nicht empfohlen</u>, verwenden Sie diesen auf eigene "
-"Gefahr!</b></br>"
 
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
@@ -7641,27 +7662,14 @@ msgstr ""
 "Der ausgewählte Name, zu dem der Verzeichnis-Server verbunden werden soll, "
 "z.B.: %s"
 
-#, php-format
-msgid ""
-"The driver used to communicate with your UPS. Get the list of available <a "
-"href='%s' target='_blank'>drivers</a>."
-msgstr ""
-"Der Treiber der für die USV benutzt wird. Hier die Liste der zur Verfügung "
-"stehenden <a href='%s' target='_blank'>Treiber</a>."
-
-#, php-format
-msgid ""
-"The driver used to communicate with your second UPS. Get the list of "
-"available <a href='%s' target='_blank'>drivers</a>."
+msgid "The driver used to communicate with your UPS."
 msgstr ""
 
-#, php-format
-msgid ""
-"The driver used to connect with the LCD. The list of available <a href='%s' "
-"target='_blank'>drivers</a>."
+msgid "The driver used to communicate with your second UPS."
 msgstr ""
-"Der Treiber, der benutzt wird, um das LCD anzusteuern. Die Liste von "
-"verfügbaren <a href='%s' target='_blank'>Treibern</a>."
+
+msgid "The driver used to connect with the LCD."
+msgstr ""
 
 msgid "The encrypted device is currently mounted!"
 msgstr ""
@@ -8250,17 +8258,10 @@ msgstr ""
 msgid "This can cause a huge delay in loading the log page!"
 msgstr ""
 
-#, php-format
 msgid ""
 "This configuration settings are used to generate the ups.conf configuration "
-"file which is required by the NUT UPS daemon. To get more information how to "
-"configure your UPS please check the NUT (Network UPS Tools) <a href='%s' "
-"target='_blank'>documentation</a>."
+"file which is required by the NUT UPS daemon."
 msgstr ""
-"Diese Konfigurationseinstellungen werden zur Erstellung der ups.conf "
-"Konfigurationsdatei des NUT UPS Daemon verwendet. Um nähere Informationen "
-"zur Konfigurationen Ihres UPS zu bekommen schauen Sie bitte in die NUT "
-"(Network UPS Tools) <a href='%s' target='_blank'>Dokumentation</a>."
 
 msgid "This controls the access a remote host has to this module."
 msgstr ""
@@ -8325,17 +8326,8 @@ msgstr "Nur als Info (wird nicht für iSCSI Kommunikation verwendet)."
 
 msgid ""
 "This means that the firmware you flashed is not an official/supported "
-"firmware and may lead to unexpected behavior or security compromises. Only "
-"install firmwares that come from sources that you trust, and make sure that "
-"the firmware has not been tampered with.<br /><br />Do you want to install "
-"this firmware anyway (on your own risk)?"
+"firmware and may lead to unexpected behavior or security compromises."
 msgstr ""
-"Das bedeutet, dass die von Ihnen aufgespielte Firmware keine "
-"offizielle/unterstützte Version ist und zu unerwartetem Verhalten oder "
-"Sicherheitsrisiken führen kann. Installieren Sie nur Firmware-Versionen aus "
-"Quellen, denen Sie vertrauen, und stellen Sie sicher, dass die Firmware "
-"nicht manipuliert wurde.<br /><br />Wollen Sie diese Firmware trotzdem "
-"installieren (auf eigenes Risiko)?"
 
 msgid "This name already exists in the disk list."
 msgstr "Der Name kommt in der Platten-Liste bereits vor."
@@ -8677,38 +8669,23 @@ msgstr "An E-Mail-Adresse"
 msgid "To email"
 msgstr "An E-Mail-Adresse"
 
-#, php-format
-msgid ""
-"To get detailed informations about TCP Wrappers check the FreeBSD <a "
-"href='%s' target='_blank'>documentation</a>."
-msgstr ""
-"Um ausführliche Informationen über TCP Wrapper zu erhalten, sehen Sie in der "
-"FreeBSD <a href='%s' target='_blank'>Dokumentation</a> nach."
-
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
 "documentation"
 msgstr ""
 
-#, php-format
 msgid ""
-"To get more information how to configure LCDproc check the LCDproc <a "
-"href='%s' target='_blank'>documentation</a>."
+"To get more information how to configure LCDproc check the LCDproc "
+"documentation"
 msgstr ""
-"In der <a href='%s' target='_blank'>Dokumentation</a> zu LCDproc gibt es "
-"mehr Informationen zur Konfiguration von LCDproc."
 
-#, php-format
 msgid ""
-"To increase CIFS performance try the following:<div "
-"id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' "
-"switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a "
-"href='%s'>Tuning</a>' switch</li></ul></div>"
+"To get more information how to configure your UPS please check the NUT "
+"(Network UPS Tools) documentation"
 msgstr ""
-"Um die CIFS-Performance zu erhöhen versuchen Sie folgendes: <div "
-"id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' "
-"switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a "
-"href='%s'>Tuning</a>' switch</li></ul></div>"
+
+msgid "To increase CIFS performance try the following:"
+msgstr ""
 
 msgid "To match any IP address leave this field empty."
 msgstr "Um alle IP Adressen abzudecken, lassen Sie dieses Feld frei."
@@ -8895,14 +8872,8 @@ msgstr ""
 #, php-format
 msgid ""
 "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
-"of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
-"or NTFS can result in unpredictable results, file corruption, and loss of "
-"data!"
+"of %s)."
 msgstr ""
-"UFS und Varianten sind die nativen Dateisystemformate für FreeBSD (dem %s "
-"zugrundeliegenden Betriebssystem). Die Verwendung anderer Dateisysteme wie "
-"FAT, FAT32, EXT2, EXT3, oder NTFS kann unter Umständen unvorhersehbare "
-"Folgen, Dateifehler oder Datenverlust verursachen!"
 
 msgid "UFS with Soft Updates"
 msgstr ""
@@ -9529,18 +9500,15 @@ msgid ""
 "command."
 msgstr ""
 
+#, php-format
+msgid "You can not mount partition '%s' where the config file is stored."
+msgstr ""
+
 msgid "You can use the following parameters for substitution:"
 msgstr "Die folgenden Parameter können für die Ersetzung genutzt werden"
 
 msgid "You can verify the result in the log file."
 msgstr ""
-
-#, php-format
-msgid ""
-"You can't mount the partition '%s' where the config file is stored.<br />"
-msgstr ""
-"Die Partition '%s' dient als Speicherort für die Konfigurationsdatei und "
-"kann daher nicht eingebunden werden.<br />"
 
 msgid ""
 "You can't unmount a drive which is used by swap file, a iSCSI-target file or "
@@ -9560,6 +9528,11 @@ msgstr ""
 msgid "You have to select at least one item for '%s'."
 msgstr "Sie müssen mindestens einen Eintrag für '%s' auswählen."
 
+msgid ""
+"You may also have to do one or more of the following steps before you can "
+"access your server again:"
+msgstr ""
+
 msgid "You may enter a description here for your reference."
 msgstr "Sie können hier eine Beschreibung für Ihre Referenz eintragen."
 
@@ -9577,14 +9550,6 @@ msgstr ""
 #, php-format
 msgid "You may specify logical block length (%d by default)."
 msgstr "Sie können die logische Blocklänge zuweisen (Standard ist %d)"
-
-#, php-format
-msgid ""
-"You must <a href='%s'>reboot</a> the system before you can upgrade the "
-"firmware."
-msgstr ""
-"Vor dem Upgrade der Firmware muss ein <a href='%s'>Neustart</a> des Systems "
-"durchgeführt werden."
 
 msgid ""
 "You must add at least a Portal Group, an Initiator Group and an Extent "
@@ -9608,6 +9573,9 @@ msgstr ""
 
 msgid "You must initialize data before enabling."
 msgstr "Die Daten müssen vor der Aktivieruing initialisert  werden."
+
+msgid "You must reboot the system before you can upgrade the firmware"
+msgstr ""
 
 msgid "You must select at least one authentication method."
 msgstr "Sie müssen mind. eine Authentifizierungsmethode auswählen."
@@ -9818,8 +9786,44 @@ msgstr "umask"
 msgid "umount"
 msgstr "Aushängen"
 
+msgid "user"
+msgstr ""
+
 msgid "version:"
 msgstr "Version:"
+
+#, php-format
+#~ msgid ""
+#~ "<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
+#~ "href='%s'>user</a> must have shell access."
+#~ msgstr ""
+#~ "<a href='%s'>SSHD</a> muss aktiviert sein, damit Unison funktioniert. Zudem "
+#~ "muss der <a href='%s'>Benutzer</a> Shell-Rechte besitzen."
+
+#~ msgid ""
+#~ "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
+#~ msgstr ""
+#~ "<div id='enumeration'><ul><li>%d - Datum</li><li>%h - "
+#~ "Hostname</li></ul></div>"
+
+#~ msgid ""
+#~ "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
+#~ "3.0.0 or newer, and the 'before' algorithm when talking to an older "
+#~ "rsync.</li><li>Before - File-deletions will be done before the transfer "
+#~ "starts.</li><li>During - File-deletions will be done incrementally as the "
+#~ "transfer happens.</li><li>Delay - File-deletions will be computed during the "
+#~ "transfer, and then removed after the transfer completes.</li><li>After - "
+#~ "File-deletions will be done after the transfer has completed.</li>"
+#~ msgstr ""
+#~ "<li>Voreinstellung - Rsync wird den 'During'-Algorithmus verwenden, wenn "
+#~ "Kommunikation mit Rsync 3.0 oder neuer besteht - und den 'Before'-"
+#~ "Algorithmus, wenn Kommunikation zu einer älteren Rsync Version besteht. "
+#~ ".</li><li>Before - Dateilöschen wird vor dem Dateitransfer "
+#~ "begonnen..</li><li>During - Dateilöschen wird während des Dateitransfers "
+#~ "durchgeführt. .</li><li>Delay - Dateilöschen wird beim Dateitransfer "
+#~ "berechnet, und nach dem Abschluss des Dateitransfers werden die Daten "
+#~ "gelöscht. .</li><li>Löschen der Dateien wird nach dem Transfer "
+#~ "durchgeführt..</li>"
 
 #, php-format
 #~ msgid ""
@@ -9837,11 +9841,65 @@ msgstr "Version:"
 
 #, php-format
 #~ msgid ""
+#~ "Make sure you have already configured your <a href='%s'>Email</a> settings."
+#~ msgstr ""
+#~ "Stellen Sie sicher, das Sie Ihre <a href='%s'>E-Mail</a>-Einstellungen schon "
+#~ "konfiguriert haben."
+
+#, php-format
+#~ msgid ""
+#~ "No configured Auth Group. Please add new <a href='%s'>Auth Group</a> first."
+#~ msgstr ""
+#~ "Keine konfigurierte Auth Gruppe gefunden. Bitte füge eine neue <a "
+#~ "href='%s'>Auth Gruppe</a> zuerst hinzu."
+
+#, php-format
+#~ msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
+#~ msgstr "Bitte überprüfe die <a href='%s' target='_blank'>Dokumentation</a>."
+
+#, php-format
+#~ msgid ""
+#~ "The driver used to communicate with your UPS. Get the list of available <a "
+#~ "href='%s' target='_blank'>drivers</a>."
+#~ msgstr ""
+#~ "Der Treiber der für die USV benutzt wird. Hier die Liste der zur Verfügung "
+#~ "stehenden <a href='%s' target='_blank'>Treiber</a>."
+
+#, php-format
+#~ msgid ""
+#~ "The driver used to connect with the LCD. The list of available <a href='%s' "
+#~ "target='_blank'>drivers</a>."
+#~ msgstr ""
+#~ "Der Treiber, der benutzt wird, um das LCD anzusteuern. Die Liste von "
+#~ "verfügbaren <a href='%s' target='_blank'>Treibern</a>."
+
+#, php-format
+#~ msgid ""
+#~ "This configuration settings are used to generate the ups.conf configuration "
+#~ "file which is required by the NUT UPS daemon. To get more information how to "
+#~ "configure your UPS please check the NUT (Network UPS Tools) <a href='%s' "
+#~ "target='_blank'>documentation</a>."
+#~ msgstr ""
+#~ "Diese Konfigurationseinstellungen werden zur Erstellung der ups.conf "
+#~ "Konfigurationsdatei des NUT UPS Daemon verwendet. Um nähere Informationen "
+#~ "zur Konfigurationen Ihres UPS zu bekommen schauen Sie bitte in die NUT "
+#~ "(Network UPS Tools) <a href='%s' target='_blank'>Dokumentation</a>."
+
+#, php-format
+#~ msgid ""
 #~ "This will cause %s not to check for newer firmware versions when the <a "
 #~ "href='%s'>%s</a> page is viewed."
 #~ msgstr ""
 #~ "Damit wird %s beim Aufruf der Seite <a href='%s'>%s</a> nicht nach einer "
 #~ "neuen Firmware suchen."
+
+#, php-format
+#~ msgid ""
+#~ "To get detailed informations about TCP Wrappers check the FreeBSD <a "
+#~ "href='%s' target='_blank'>documentation</a>."
+#~ msgstr ""
+#~ "Um ausführliche Informationen über TCP Wrapper zu erhalten, sehen Sie in der "
+#~ "FreeBSD <a href='%s' target='_blank'>Dokumentation</a> nach."
 
 #, php-format
 #~ msgid ""
@@ -9854,11 +9912,71 @@ msgstr "Version:"
 
 #, php-format
 #~ msgid ""
+#~ "To get more information how to configure LCDproc check the LCDproc <a "
+#~ "href='%s' target='_blank'>documentation</a>."
+#~ msgstr ""
+#~ "In der <a href='%s' target='_blank'>Dokumentation</a> zu LCDproc gibt es "
+#~ "mehr Informationen zur Konfiguration von LCDproc."
+
+#, php-format
+#~ msgid ""
+#~ "To increase CIFS performance try the following:<div "
+#~ "id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' "
+#~ "switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a "
+#~ "href='%s'>Tuning</a>' switch</li></ul></div>"
+#~ msgstr ""
+#~ "Um die CIFS-Performance zu erhöhen versuchen Sie folgendes: <div "
+#~ "id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' "
+#~ "switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a "
+#~ "href='%s'>Tuning</a>' switch</li></ul></div>"
+
+#, php-format
+#~ msgid ""
+#~ "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
+#~ "of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
+#~ "or NTFS can result in unpredictable results, file corruption, and loss of "
+#~ "data!"
+#~ msgstr ""
+#~ "UFS und Varianten sind die nativen Dateisystemformate für FreeBSD (dem %s "
+#~ "zugrundeliegenden Betriebssystem). Die Verwendung anderer Dateisysteme wie "
+#~ "FAT, FAT32, EXT2, EXT3, oder NTFS kann unter Umständen unvorhersehbare "
+#~ "Folgen, Dateifehler oder Datenverlust verursachen!"
+
+#, php-format
+#~ msgid ""
+#~ "You can't mount the partition '%s' where the config file is stored.<br />"
+#~ msgstr ""
+#~ "Die Partition '%s' dient als Speicherort für die Konfigurationsdatei und "
+#~ "kann daher nicht eingebunden werden.<br />"
+
+#, php-format
+#~ msgid ""
 #~ "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
 #~ "service to clients."
 #~ msgstr ""
 #~ "Sie müssen <a href='%s'>Zeroconf/Bonjour</a> aktivieren um diesen Service "
 #~ "den Clients bekannt zu machen."
+
+#~ msgid ""
+#~ "<b>EFI GPT partition</b> if you want to mount a GPT formatted drive "
+#~ "(<b>default partition</b>).<br/><b>MBR partition</b> if you want to mount a "
+#~ "UFS formatted drive or do imported disks from other OS.<br/><b>CD/DVD "
+#~ "volume</b> if you want to mount a CD/DVD volume."
+#~ msgstr ""
+#~ "<b>EFI GPT Partition</b> wenn Sie ein mit GPT formatiertes Laufwerk mounten "
+#~ "möchten (<b>default partition</b>).<br/><b>MBR Partition</b> wenn Sie eine "
+#~ "UFS formatierte Partition die auf dem gleichen Laufwerk wie die NAS4Free "
+#~ "Installation liegt, oder ein Laufwerk dass unter einem konventionellen "
+#~ "Betriebssystems erstellt wurde mounten möchten.<br/><b>CD/DVD Volume</b> "
+#~ "Wenn Sie eine CD/DVD mounten möchten."
+
+#, php-format
+#~ msgid ""
+#~ "No configured CARP interfaces. Please add new <a href='%s'>CARP "
+#~ "interface</a> first."
+#~ msgstr ""
+#~ "Keine konfigurierten CARP Schnittstellen. Bitte zuerst eine neue <a "
+#~ "href='%s'> CARP Schnittstelle </a> hinzufügen"
 
 #~ msgid ""
 #~ "<div id='enumeration'><ul><li>The new password is also the default root "
@@ -9867,8 +9985,53 @@ msgstr "Version:"
 #~ "<div id='enumeration'><ul><li>Das neue Passwort ist auch das vorgegebene "
 #~ "Systemverwalterpasswort des Systems!</li></ul></div>"
 
+#~ msgid ""
+#~ "Set what user the service will run as (www by default). <br><b><font "
+#~ "color='red'>NOTE</font>: Running as root is <u>not recommended</u> for "
+#~ "security reasons, use it on your own risk!</b></br>"
+#~ msgstr ""
+#~ "Einstellen des Benutzers, der den Dienst ausführen soll (Default: www). "
+#~ "<br><b><font color='red'>ACHTUNG</font>: Ausführung als root wird aus "
+#~ "Sicherheitsgründen <u>nicht empfohlen</u>, verwenden Sie diesen auf eigene "
+#~ "Gefahr!</b></br>"
+
+#, php-format
+#~ msgid ""
+#~ "After you click &quot;Save&quot;, you must reboot the server to make the "
+#~ "changes take effect. You may also have to do one or more of the following "
+#~ "steps before you can access your server again: <ul><li><span "
+#~ "class='vexpl'>change the IP address of your server</span></li><li><span "
+#~ "class='vexpl'>access the webGUI with the new IP address</span></li></ul>"
+#~ msgstr ""
+#~ "Nach dem Klick auf &quot;Speichern&quot; müssen sie den Server neu starten, "
+#~ "damit die Änderungen wirksam werden. Danach könnten einige Schritte "
+#~ "notwendig werden, damit ein Zugriff auf den Server wieder möglich wird: "
+#~ "<ul><li><span class='vexpl'>Ändern der IP-Adresse des "
+#~ "Servers</span></li><li><span class='vexpl'>Zugriff auf die WebGUI via neuer "
+#~ "IP-Adresse</span></li></ul>"
+
+#, php-format
+#~ msgid ""
+#~ "After you click &quot;Save&quot;, you may also have to do one or more of the "
+#~ "following steps before you can access this server again: <ul><li>change the "
+#~ "IP address of your computer</li><li>access the webGUI with the new IP "
+#~ "address</li></ul>"
+#~ msgstr ""
+#~ "Nach dem Klick auf &quot;Speichern&quot; könnten einige Schritte notwendig "
+#~ "werden, damit ein Zugriff auf den Server wieder möglich wird: <ul><li>Ändern "
+#~ "der IP-Adresse des Servers</li><li>Zugriff auf die WebGUI via neuer IP-"
+#~ "Adresse</li></ul>"
+
 #~ msgid "add any supplemental parameters"
 #~ msgstr "hinzufügen von zusätzlichen Parametern"
+
+#, php-format
+#~ msgid ""
+#~ "You must <a href='%s'>reboot</a> the system before you can upgrade the "
+#~ "firmware."
+#~ msgstr ""
+#~ "Vor dem Upgrade der Firmware muss ein <a href='%s'>Neustart</a> des Systems "
+#~ "durchgeführt werden."
 
 #~ msgid ""
 #~ "You can also install a package via SSH or console using the the pkg add "
@@ -9876,3 +10039,42 @@ msgstr "Version:"
 #~ msgstr ""
 #~ "Man kann ein Paket auch mittels SSH oder der Konsole mit dem pkg add "
 #~ "Kommando installieren.<br />Beispiel: pkg add packagename"
+
+#, php-format
+#~ msgid "Check <a href=\"%s\">System|General Setup</a> before initializing."
+#~ msgstr ""
+#~ "Vord er Initialisierung <a href=\"%s\">System|General Setup</a> überprüfen"
+
+#~ msgid ""
+#~ "All data in the path is overwritten. To avoid invalid data/permission, using "
+#~ "empty UFS directory is recommended."
+#~ msgstr ""
+#~ "Alle Daten im Pfad werden überschrieben. Es wird empfohlen, ein leeres USF-"
+#~ "Verzeichnis zu verwenden, um ungültige Daten/ZUgriffsrechte zu vermeiden."
+
+#, php-format
+#~ msgid ""
+#~ "DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
+#~ "try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
+#~ "/>It is recommended that you <a href='%s'>Backup</a> the server "
+#~ "configuration before doing a upgrade."
+#~ msgstr ""
+#~ "Unter keinen Umständen ein Firmware-Upgrade von Nas4Free unterbrechen !!!!! "
+#~ ".<br />Auf keinen Fall eine andere Datei als eine gültige '%s-%s-"
+#~ "embedded.img.xz' Datei.<br />Es wird dringend empfohlen <a "
+#~ "href='%s'>Backup</a> die Serverkonfigurationsdatei vor einem Upgrade zu "
+#~ "sichern !!!"
+
+#~ msgid ""
+#~ "This means that the firmware you flashed is not an official/supported "
+#~ "firmware and may lead to unexpected behavior or security compromises. Only "
+#~ "install firmwares that come from sources that you trust, and make sure that "
+#~ "the firmware has not been tampered with.<br /><br />Do you want to install "
+#~ "this firmware anyway (on your own risk)?"
+#~ msgstr ""
+#~ "Das bedeutet, dass die von Ihnen aufgespielte Firmware keine "
+#~ "offizielle/unterstützte Version ist und zu unerwartetem Verhalten oder "
+#~ "Sicherheitsrisiken führen kann. Installieren Sie nur Firmware-Versionen aus "
+#~ "Quellen, denen Sie vertrauen, und stellen Sie sicher, dass die Firmware "
+#~ "nicht manipuliert wurde.<br /><br />Wollen Sie diese Firmware trotzdem "
+#~ "installieren (auf eigenes Risiko)?"
