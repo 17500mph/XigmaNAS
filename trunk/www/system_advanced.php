@@ -318,10 +318,10 @@ function powerd_change() {
 					html_checkbox("disablefm", gtext("File Manager"), !empty($pconfig['disablefm']) ? true : false, gtext("Disable file manager completely."));
 					if ("full" !== $g['platform']) {
 						$link = '<a href="' . 'system_firmware.php' . '">' . gtext('System') . ': ' . gtext('Firmware Update') . '</a>';
-						$helpinghand = sprintf(gtext('This will cause %s not to check for newer firmware versions when the %s page is viewed.'), get_product_name(), $link);
+						$helpinghand = sprintf(gtext('Do not let the server check for newer firmware versions when the %s page gets loaded.'), $link);
 						html_checkbox("disablefirmwarecheck", gtext("Firmware Check"), !empty($pconfig['disablefirmwarecheck']) ? true : false, gtext("Disable firmware version check."), $helpinghand);
 					}
-					html_checkbox("disablebeep", gtext("Speaker Beep"), !empty($pconfig['disablebeep']) ? true : false, gtext("Disable speaker beep on startup and shutdown."));
+					html_checkbox("disablebeep", gtext("Internal Speaker"), !empty($pconfig['disablebeep']) ? true : false, gtext("Disable speaker beep on startup and shutdowns."));
 					html_checkbox("enabletogglemode", gtext("Toggle Mode"), !empty($pconfig['enabletogglemode']) ? true : false, gtext("Use toggle button instead of enable/disable buttons."));
 					html_separator();
 					?>
@@ -329,8 +329,8 @@ function powerd_change() {
 						<td colspan="2" valign="top" class="listtopic"><?=gtext("Performance Settings");?></td>
 					</tr>
 					<?php html_checkbox("tune_enable", gtext("Tuning"), !empty($pconfig['tune_enable']) ? true : false, gtext("Enable tuning of some kernel variables."));?>
-					<?php html_checkbox("powerd", gtext("Power Daemon"), !empty($pconfig['powerd']) ? true : false, gtext("Enable the system power control utility."), gtext("The powerd utility monitors the system state and sets various power control options accordingly."), false, "powerd_change()");?>
-					<?php $a_pwmode = array("maximum" => gtext("maximum (highest performance)"), "hiadaptive" => gtext("hiadaptive (high performance)"), "adaptive" => gtext("adaptive (low power consumption)"), "minimum" => gtext("minimum (power saving)")); ?>
+					<?php html_checkbox("powerd", gtext("Power Daemon"), !empty($pconfig['powerd']) ? true : false, gtext("Enable the server power control utility."), gtext("The powerd utility monitors the server state and sets various power control options accordingly."), false, "powerd_change()");?>
+					<?php $a_pwmode = array("maximum" => gtext("Maximum (Highest Performance)"), "hiadaptive" => gtext("Hiadaptive (High Performance)"), "adaptive" => gtext("Adaptive (Low Power Consumption)"), "minimum" => gtext("Minimum (Lowest Performance)")); ?>
 					<?php html_combobox("pwmode", gtext("Power Mode"), $pconfig['pwmode'], $a_pwmode, gtext("Controls power consumption."), false);?>
 					<?php $clocks = @exec("/sbin/sysctl -q -n dev.cpu.0.freq_levels");
 						$a_freq = array();
