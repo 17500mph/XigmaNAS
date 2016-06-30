@@ -38,7 +38,7 @@ function gentitle($title) {
 }
 
 function genhtmltitle($title) {
-	return system_get_hostname() . " - " . gentitle($title);
+	return htmlspecialchars(system_get_hostname()) . " - " . gentitle($title);
 }
 
 $isAdminSession = Session::isAdmin();
@@ -255,7 +255,7 @@ function display_menu($menuid) {
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=system_get_language_code();?>" lang="<?=system_get_language_code();?>">
 <head>
-	<title><?=htmlspecialchars(genhtmltitle($pgtitle));?></title>
+	<title><?=genhtmltitle($pgtitle);?></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=<?=system_get_language_codeset();?>" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
@@ -344,5 +344,5 @@ function display_menu($menuid) {
 	<tr>
 <td>
 <?php if (!isset($pgtitle_omit) || !$pgtitle_omit): ?>
-	<p class="pgtitle"><?=htmlspecialchars(gentitle($pgtitle));?></p>
+	<p class="pgtitle"><?=gentitle($pgtitle);?></p>
 <?php endif;?>
