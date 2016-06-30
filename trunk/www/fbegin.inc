@@ -55,7 +55,7 @@ $menu['system']['menuitem'][] = ['type' => 'separator', 'visible' =>  $isAdminSe
 if ('full' == $g['platform']) {
 	$menu['system']['menuitem'][] = ['desc' => gtext('Packages'), 'link' => 'system_packages.php', 'visible' => $isAdminSession];
 } else {
-	$menu['system']['menuitem'][] = ['desc' => gtext('Firmware'), 'link' => 'system_firmware.php', 'visible' => $isAdminSession];
+	$menu['system']['menuitem'][] = ['desc' => gtext('Firmware Update'), 'link' => 'system_firmware.php', 'visible' => $isAdminSession];
 }
 $menu['system']['menuitem'][] = ['desc' => gtext('Backup/Restore'), 'link' => 'system_backup.php', 'visible' => $isAdminSession];
 $menu['system']['menuitem'][] = ['desc' => gtext('Factory Defaults'), 'link' => 'system_defaults.php', 'visible' => $isAdminSession];

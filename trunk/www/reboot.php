@@ -59,7 +59,7 @@ if ($_POST) {
     <td class="tabcont">
 			<?php if (!empty($rebootmsg)): echo print_info_box($rebootmsg); sleep(1); system_reboot(); else:?>
 			<form action="reboot.php" method="post" onsubmit="spinner()">
-			  <strong><?=gtext("Are you sure you want to reboot the system?");?></strong>
+			  <strong><?=gtext("Are you sure you want to reboot the server?");?></strong>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Yes");?>" />
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("No");?>" />

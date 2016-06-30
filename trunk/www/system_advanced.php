@@ -317,7 +317,7 @@ function powerd_change() {
 					html_checkbox("zeroconf", gtext("Zeroconf/Bonjour"), !empty($pconfig['zeroconf']) ? true : false, gtext("Enable Zeroconf/Bonjour to advertise services of this device."));
 					html_checkbox("disablefm", gtext("File Manager"), !empty($pconfig['disablefm']) ? true : false, gtext("Disable file manager completely."));
 					if ("full" !== $g['platform']) {
-						$link = '<a href="' . 'system_firmware.php' . '">' . gtext('System') . ': ' . gtext('Firmware') . '</a>';
+						$link = '<a href="' . 'system_firmware.php' . '">' . gtext('System') . ': ' . gtext('Firmware Update') . '</a>';
 						$helpinghand = sprintf(gtext('This will cause %s not to check for newer firmware versions when the %s page is viewed.'), get_product_name(), $link);
 						html_checkbox("disablefirmwarecheck", gtext("Firmware Check"), !empty($pconfig['disablefirmwarecheck']) ? true : false, gtext("Disable firmware version check."), $helpinghand);
 					}

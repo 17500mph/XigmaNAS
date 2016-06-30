@@ -38,7 +38,7 @@ $pgtitle = array(gtext("System"),gtext("Shutdown"), gtext("Now"));
 
 if ($_POST) {
 	if ($_POST['Submit'] !== gtext("No")) {
-		$rebootmsg = gtext("The system is halting now. This may take one minute.");
+		$rebootmsg = gtext("The server is halting now. This may take one minute.");
 	} else {
 		header("Location: index.php");
 		exit;
@@ -59,7 +59,7 @@ if ($_POST) {
     <td class="tabcont">
       <?php if (!empty($rebootmsg)): echo print_info_box($rebootmsg); system_halt(); else:?>
       <form action="shutdown.php" method="post" onsubmit="spinner()">
-				<strong><?=gtext("Are you sure you want to shutdown the system?");?></strong>
+				<strong><?=gtext("Are you sure you want to shutdown the server?");?></strong>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Yes");?>" />
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("No");?>" />
