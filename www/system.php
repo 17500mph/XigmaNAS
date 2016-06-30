@@ -353,7 +353,7 @@ function webguiproto_change() {
 			    </tr>
 					<?php html_checkbox("ntp_enable", gtext("Enable NTP"), !empty($pconfig['ntp_enable']) ? true : false, gtext("Use the specified NTP server."), "", false, "ntp_change()");?>
 					<?php html_inputbox("ntp_timeservers", gtext("NTP time server"), $pconfig['ntp_timeservers'], gtext("Use a space to separate multiple hosts (only one required). Remember to set up at least one DNS server if you enter a host name here!"), true, 40);?>
-					<?php html_inputbox("ntp_updateinterval", gtext("Time update interval"), $pconfig['ntp_updateinterval'], gtext("Minutes between network time sync."), true, 20);?>
+					<?php html_inputbox("ntp_updateinterval", gtext("Time Synchronization"), $pconfig['ntp_updateinterval'], gtext("Minutes between the next network time synchronization."), true, 20);?>
 			  </table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save");?>" />
