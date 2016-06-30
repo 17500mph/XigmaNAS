@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-30 00:10+0000\n"
+"POT-Creation-Date: 2016-06-30 20:15+0000\n"
 "PO-Revision-Date: 2016-04-11 23:03+0000\n"
 "Last-Translator: Dominik Papierok <dominik.papierok@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-29 22:58+0000\n"
+"X-Launchpad-Export-Date: 2016-06-30 18:45+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: POLAND\n"
 "Language: \n"
@@ -438,6 +438,9 @@ msgstr "Aktywne udziały"
 msgid "Active Users"
 msgstr "Aktywni użytkownicy"
 
+msgid "Adaptive (Low Power Consumption)"
+msgstr ""
+
 msgid "Add"
 msgstr "Dodaj"
 
@@ -852,11 +855,11 @@ msgstr "Tryb archiwizacji."
 msgid "Are you sure you want to proceed?"
 msgstr "Czy jesteś pewien że chcesz wykonać?"
 
-msgid "Are you sure you want to reboot the system?"
-msgstr "Czy na pewno ponownie uruchomić system?"
+msgid "Are you sure you want to reboot the server?"
+msgstr ""
 
-msgid "Are you sure you want to shutdown the system?"
-msgstr "Czy na pewno wyłączyć system?"
+msgid "Are you sure you want to shutdown the server?"
+msgstr ""
 
 msgid "Asynchronous I/O (AIO)"
 msgstr "Asynchroniczne wejście/wyjście (AIO)"
@@ -2232,8 +2235,8 @@ msgstr "Wyłącz menadżer plików"
 msgid "Disable firmware version check."
 msgstr "Wyłącz sprawdzanie wersji oprogramowania."
 
-msgid "Disable speaker beep on startup and shutdown."
-msgstr "Wyłącz dźwięki głośnika podczas uruchamiania i zamykania systemu."
+msgid "Disable speaker beep on startup and shutdowns."
+msgstr ""
 
 msgid "Disable the compression of repeated line."
 msgstr ""
@@ -2294,6 +2297,12 @@ msgstr ""
 
 msgid ""
 "Do not erase the Master Boot Record (useful for some RAID controller cards)."
+msgstr ""
+
+#, php-format
+msgid ""
+"Do not let the server check for newer firmware versions when the %s page "
+"gets loaded."
 msgstr ""
 
 msgid ""
@@ -2910,7 +2919,7 @@ msgstr "Włącz przechowywanie atrybutów DOS"
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Włącz protokół identyfikacji (RFC1413)."
 
-msgid "Enable the system power control utility."
+msgid "Enable the server power control utility."
 msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
@@ -3299,6 +3308,9 @@ msgstr "Firmware"
 msgid "Firmware Check"
 msgstr ""
 
+msgid "Firmware Update"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr ""
 
@@ -3565,6 +3577,9 @@ msgstr ""
 
 msgid "Help"
 msgstr "Pomoc"
+
+msgid "Hiadaptive (High Performance)"
+msgstr ""
 
 msgid "Hide dot files"
 msgstr "Ukryj pliki rozpoczynające się od znaku kropki"
@@ -4015,6 +4030,9 @@ msgstr "Interfejsy"
 
 msgid "Internal Server Information"
 msgstr "Informacja serwera wewnętrznego"
+
+msgid "Internal Speaker"
+msgstr ""
 
 msgid "Internal UPS clock date"
 msgstr "Data zegara wewnętrznego zasilacza UPS"
@@ -4595,6 +4613,9 @@ msgstr ""
 msgid "MaxRecvDataSegmentLength"
 msgstr "MaxRecvDataSegmentLength"
 
+msgid "Maximum (Highest Performance)"
+msgstr ""
+
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr ""
 
@@ -4706,6 +4727,9 @@ msgstr ""
 msgid "Minimum"
 msgstr "Minimum"
 
+msgid "Minimum (Lowest Performance)"
+msgstr ""
+
 msgid "Minimum Free Space"
 msgstr ""
 
@@ -4731,8 +4755,8 @@ msgstr "Minimalna temperatura (stopnie C)"
 msgid "Minutes"
 msgstr "Minuty"
 
-msgid "Minutes between network time sync."
-msgstr "Ilość minut między synchronizacjami czasu."
+msgid "Minutes between the next network time synchronization."
+msgstr ""
 
 msgid "Missing a temporary folder."
 msgstr "Brak folderu tymczasowego."
@@ -6684,9 +6708,6 @@ msgstr "Zmniejsz"
 msgid "Sparse Volume"
 msgstr "Zmniejsz wolumin"
 
-msgid "Speaker Beep"
-msgstr ""
-
 msgid ""
 "Specific Helium Level. The Helium, so says the literature, allows the drives "
 "to run cooler and quieter, and reduces power consumption. This is the status "
@@ -7699,11 +7720,9 @@ msgid ""
 msgstr ""
 
 msgid ""
-"The powerd utility monitors the system state and sets various power control "
+"The powerd utility monitors the server state and sets various power control "
 "options accordingly."
 msgstr ""
-"Narzędzie zarządzania energią monitoruje stan systemu i ustawia równolegle "
-"różne opcje kontroli zasilania."
 
 msgid "The queuedepth range is invalid."
 msgstr "Zakres długości kolejki nie jest prawidłowy."
@@ -7739,6 +7758,9 @@ msgstr ""
 "Serwer został przywrócony do ustawień fabrycznych i jest uruchamiany "
 "ponownie. To potrwa minutkę."
 
+msgid "The server is halting now. This may take one minute."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr "Po przywróceniu konfiguracji serwer zostanie uruchomiony ponownie."
 
@@ -7757,9 +7779,6 @@ msgstr "Przestrzeń dyskowa zmapowana do LUN%d"
 
 msgid "The subject of the email."
 msgstr "Temat listu"
-
-msgid "The system is halting now. This may take one minute."
-msgstr "System jest w trakcie zamykania. Może to potrwać minutę."
 
 msgid "The system is rebooting now. This may take one minute."
 msgstr "System uruchamia się ponownie. To może potrwać minutę."
@@ -8256,12 +8275,6 @@ msgid ""
 "hurt JPEG serving performance on (at least) Sony DLNA products."
 msgstr ""
 
-#, php-format
-msgid ""
-"This will cause %s not to check for newer firmware versions when the %s page "
-"is viewed."
-msgstr ""
-
 msgid "This will create a recycle bin on the share."
 msgstr "Utwórz kosz dla udziału."
 
@@ -8301,6 +8314,9 @@ msgid "Time"
 msgstr "Czas"
 
 msgid "Time Machine"
+msgstr ""
+
+msgid "Time Synchronization"
 msgstr ""
 
 msgid "Time before the load will be rebooted"
@@ -9219,7 +9235,7 @@ msgstr ""
 msgid "You must initialize data before enabling."
 msgstr "Przed włączeniem musisz zainicjować dane."
 
-msgid "You must reboot the system before you can upgrade the firmware"
+msgid "You must reboot the server before you can upgrade the firmware"
 msgstr ""
 
 msgid "You must select at least one authentication method."
@@ -9275,9 +9291,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "adaptive (low power consumption)"
-msgstr "dostosujący się (niskie zużycie energii)"
-
 msgid "all encrypted disks are imported."
 msgstr "Wszystkie zaszyfrowane dyski zostały zaimportowane"
 
@@ -9317,9 +9330,6 @@ msgstr "największy dostepny próg przełączenia wysokiego napięcia"
 msgid "greatest settable low voltage transfer point"
 msgstr "największy dostępny próg przełączenia niskiego napięcia"
 
-msgid "hiadaptive (high performance)"
-msgstr "hiadaptive (wysoka wydajność)"
-
 msgid "hour(s)"
 msgstr "godzina(godziny)"
 
@@ -9353,12 +9363,6 @@ msgstr ""
 
 msgid "loader.conf"
 msgstr "loader.conf"
-
-msgid "maximum (highest performance)"
-msgstr "maksimum (najwyższa wydajność)"
-
-msgid "minimum (power saving)"
-msgstr "minimum (oszczędzanie energii)"
 
 msgid "minute(s)"
 msgstr "minuta(minuty)"
@@ -9432,223 +9436,27 @@ msgstr ""
 msgid "version:"
 msgstr "wersja:"
 
-#, php-format
-#~ msgid ""
-#~ "<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
-#~ "href='%s'>user</a> must have shell access."
-#~ msgstr ""
-#~ "Unison dla poprawnego działania wymaga włączenia <a href='%s'>SSHD</a> oraz "
-#~ "pełnego dostępu do shell'a dla <a href='%s'>użytkownika</a>."
+#~ msgid "Minutes between network time sync."
+#~ msgstr "Ilość minut między synchronizacjami czasu."
 
 #~ msgid ""
-#~ "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
-#~ "3.0.0 or newer, and the 'before' algorithm when talking to an older "
-#~ "rsync.</li><li>Before - File-deletions will be done before the transfer "
-#~ "starts.</li><li>During - File-deletions will be done incrementally as the "
-#~ "transfer happens.</li><li>Delay - File-deletions will be computed during the "
-#~ "transfer, and then removed after the transfer completes.</li><li>After - "
-#~ "File-deletions will be done after the transfer has completed.</li>"
+#~ "The powerd utility monitors the system state and sets various power control "
+#~ "options accordingly."
 #~ msgstr ""
-#~ "<li>Domyślny - Rsync wybierze algorytm 'podczas\" komunikując się z rsync "
-#~ "3.0.0 lub nowszym, oraz algorytm 'przed' jeśli będzie komunikował się ze "
-#~ "starszym rsync.</li><li>Przed - Kasowanie plików następuje zanim zacznie się "
-#~ "transfer plików.</li><li>Podczas - Przyrostowe kasowanie plików podczas "
-#~ "transferu plików.</li><li>Opóźnione - Kasowanie plików zostanie obliczone "
-#~ "podczas transferu plików a wykonane po zakończeniu "
-#~ "transferu.</li><li>Później - Kasowanie plików zostanie wykonane po "
-#~ "zakończeniu transferu plików.</li>"
+#~ "Narzędzie zarządzania energią monitoruje stan systemu i ustawia równolegle "
+#~ "różne opcje kontroli zasilania."
 
-#, php-format
-#~ msgid ""
-#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
-#~ msgstr ""
-#~ "Nie udało się wysłać raportu ze statusem systemu. Proszę przejrzeć <a "
-#~ "href='%s'>logi</a>."
+#~ msgid "maximum (highest performance)"
+#~ msgstr "maksimum (najwyższa wydajność)"
 
-#, php-format
-#~ msgid ""
-#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
-#~ msgstr ""
-#~ "Nie udało się wysłać testowej wiadomości. Proszę przejrzeć <a "
-#~ "href='%s'>log</a>."
+#~ msgid "minimum (power saving)"
+#~ msgstr "minimum (oszczędzanie energii)"
 
-#, php-format
-#~ msgid ""
-#~ "Make sure you have already configured your <a href='%s'>Email</a> settings."
-#~ msgstr "Upewnij się, że skonfigurowałeś ustawienia <a href='%s'>Email</a>."
+#~ msgid "adaptive (low power consumption)"
+#~ msgstr "dostosujący się (niskie zużycie energii)"
 
-#, php-format
-#~ msgid ""
-#~ "No configured Auth Group. Please add new <a href='%s'>Auth Group</a> first."
-#~ msgstr ""
-#~ "Nie udało się wysłać testowej wiadomości. Proszę przejrzeć <a href='%s'>Auth "
-#~ "Group</a>."
+#~ msgid "hiadaptive (high performance)"
+#~ msgstr "hiadaptive (wysoka wydajność)"
 
-#, php-format
-#~ msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
-#~ msgstr "Proszę sprawdzić <a href='%s' target='_blank'>dokumentację</a>."
-
-#, php-format
-#~ msgid ""
-#~ "The driver used to communicate with your UPS. Get the list of available <a "
-#~ "href='%s' target='_blank'>drivers</a>."
-#~ msgstr ""
-#~ "Sterownik używany do komunikacji z Twoim zasilaczem UPS. Sprawdź lisŧę "
-#~ "dostępnych <a href='%s' target='_blank'>drivers</a>."
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about writing firewall rules check the FreeBSD "
-#~ "<a href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Dokładne informacje na temat pisania reguł zapory można znaleźć w <a "
-#~ "href='%s' target='_blank'>documentation</a> FreeBSD."
-
-#, php-format
-#~ msgid ""
-#~ "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
-#~ "of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
-#~ "or NTFS can result in unpredictable results, file corruption, and loss of "
-#~ "data!"
-#~ msgstr ""
-#~ "UFS i warianty są domyślnymi formatami plików dla FreeBSD (systemu dla %s). "
-#~ "Próba użycia innych formatów, jak FAT, FAT32, EXT2, EXT3 lub NTFS może "
-#~ "prowadzić do nieprzewidywalnych rezultatów, zniszczenia plików lub utraty "
-#~ "danych!"
-
-#~ msgid ""
-#~ "<b>EFI GPT partition</b> if you want to mount a GPT formatted drive "
-#~ "(<b>default partition</b>).<br/><b>MBR partition</b> if you want to mount a "
-#~ "UFS formatted drive or do imported disks from other OS.<br/><b>CD/DVD "
-#~ "volume</b> if you want to mount a CD/DVD volume."
-#~ msgstr ""
-#~ "<b>Partycja EFI GPT</b> jeśli chcesz zamontować dysk sformatowany w GPT "
-#~ "(<b>domyślna partycja</b>).<br/><b>Partycja MBR</b> jeśli chcesz zamontować "
-#~ "dysk sformatowany w UFS lub zaimportować dyski z innego OSa.<br/><b>CD/DVD "
-#~ "volume</b> jeśli chcesz zamontować CD/DVD volume."
-
-#~ msgid ""
-#~ "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
-#~ msgstr ""
-#~ "<div id='enumeration'><ul><li>%d - Data</li><li>%h - Nazwa "
-#~ "hosta</li></ul></div>"
-
-#~ msgid ""
-#~ "<div id='enumeration'><ul><li>The new password is also the default root "
-#~ "password of the system!</li></ul></div>"
-#~ msgstr ""
-#~ "<div id='enumeration'><ul><li>Nowe hasło zostanie też nowym hasłem "
-#~ "root!</li></ul></div>"
-
-#, php-format
-#~ msgid ""
-#~ "After you click &quot;Save&quot;, you may also have to do one or more of the "
-#~ "following steps before you can access this server again: <ul><li>change the "
-#~ "IP address of your computer</li><li>access the webGUI with the new IP "
-#~ "address</li></ul>"
-#~ msgstr ""
-#~ "Po kliknięciu &quot;Zapisz&quot;,do ponownego dostępu do serwera może być "
-#~ "wymagane: <ul><li>zmienienie adresu IP komputera</li><li>dostęp do WebGUI z "
-#~ "nowego adresu IP</li></ul>"
-
-#, php-format
-#~ msgid ""
-#~ "After you click &quot;Save&quot;, you must reboot the server to make the "
-#~ "changes take effect. You may also have to do one or more of the following "
-#~ "steps before you can access your server again: <ul><li><span "
-#~ "class='vexpl'>change the IP address of your server</span></li><li><span "
-#~ "class='vexpl'>access the webGUI with the new IP address</span></li></ul>"
-#~ msgstr ""
-#~ "Po kliknięciu &quotZapisz&quot;, Musisz zrestartować serwer by zastosować "
-#~ "zmiany. Może być wymagane także: <ul><li><span class='vexpl'>zmienienie "
-#~ "adresu IP serwera</span></li><li><span class='vexpl'>dostęp do WebGUI z "
-#~ "nowego adresu IP</span></li></ul>"
-
-#, php-format
-#~ msgid ""
-#~ "No configured CARP interfaces. Please add new <a href='%s'>CARP "
-#~ "interface</a> first."
-#~ msgstr ""
-#~ "Brak skonfigurowanych interfejsów CARP.Proszę dodać najpierw <a "
-#~ "href='%s'>interfejs CARP</a>."
-
-#~ msgid ""
-#~ "Set what user the service will run as (www by default). <br><b><font "
-#~ "color='red'>NOTE</font>: Running as root is <u>not recommended</u> for "
-#~ "security reasons, use it on your own risk!</b></br>"
-#~ msgstr ""
-#~ "Wybierz użytkownika wykorzystwanego przez usługę (zalecany www). "
-#~ "<br><b><font color='red'>UWAGA</font>: Użytkownik root <u>jest "
-#~ "niezalecany</u>ze względów bezpieczeństwa, używaj na własne ryzyko!</b></br>"
-
-#~ msgid ""
-#~ "You can also install a package via SSH or console using the the pkg add "
-#~ "command.<br />Example: pkg add packagename"
-#~ msgstr ""
-#~ "Możesz także zainstalować pakiet przez SSH ulb konsole korzystając z komendy "
-#~ "pkg add. <br />Na przykład: pkg add nazwapakietu"
-
-#, php-format
-#~ msgid ""
-#~ "You must <a href='%s'>reboot</a> the system before you can upgrade the "
-#~ "firmware."
-#~ msgstr ""
-#~ "Musisz <a href='%s'>zrestartować</a>system przed aktualizacją oprogramowania."
-
-#, php-format
-#~ msgid ""
-#~ "You can't mount the partition '%s' where the config file is stored.<br />"
-#~ msgstr ""
-#~ "Nie możesz zamontować partycji '%s' gdzie przechowywany jest plik "
-#~ "konfiguracji.<br />"
-
-#, php-format
-#~ msgid ""
-#~ "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
-#~ "service to clients."
-#~ msgstr ""
-#~ "Musisz aktywować <a href='%s'>Zeroconf/Bonjour</> by rozgłaszać to do "
-#~ "klientów."
-
-#, php-format
-#~ msgid ""
-#~ "The driver used to connect with the LCD. The list of available <a href='%s' "
-#~ "target='_blank'>drivers</a>."
-#~ msgstr ""
-#~ "Sterownik użyty do połączenia z LCD. Lista dostępnych <a href='%s' "
-#~ "target='_blank'>drivers</a>."
-
-#, php-format
-#~ msgid ""
-#~ "To increase CIFS performance try the following:<div "
-#~ "id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' "
-#~ "switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a "
-#~ "href='%s'>Tuning</a>' switch</li></ul></div>"
-#~ msgstr ""
-#~ "Celem zwiększenia wydajności CIFS spróbuj: <div "
-#~ "id='enumeration'><ul><li>Włącz synchroniczne wejście/wyjście "
-#~ "(AIO)</li><li>Włącz opcję \"large read/write\"</li><li>Włącz '<a "
-#~ "href='%s'>Tuning</a>' switch</li></ul></div>"
-
-#, php-format
-#~ msgid ""
-#~ "To get more information how to configure LCDproc check the LCDproc <a "
-#~ "href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Aby zdobyć więcej informacji na temat konfiguracji LCDproc sprawdź LCDproc "
-#~ "<a href='%s' target='_blank'>documentation</a>."
-
-#~ msgid ""
-#~ "All data in the path is overwritten. To avoid invalid data/permission, using "
-#~ "empty UFS directory is recommended."
-#~ msgstr ""
-#~ "Wszystkie dane w wybranej ścieżce zostały nadpisane. Aby uniknąć błędnych "
-#~ "zezwoleń, zalecane jest używanie pustych folderów USF."
-
-#, php-format
-#~ msgid "Check <a href=\"%s\">System|General Setup</a> before initializing."
-#~ msgstr ""
-#~ "Sprawdź <a href=\"%s\">System|Ustawienia Ogólne</a> przed zainicjowaniem."
-
-#~ msgid "add any supplemental parameters"
-#~ msgstr "dodaj dodatkowy parametr"
+#~ msgid "Disable speaker beep on startup and shutdown."
+#~ msgstr "Wyłącz dźwięki głośnika podczas uruchamiania i zamykania systemu."

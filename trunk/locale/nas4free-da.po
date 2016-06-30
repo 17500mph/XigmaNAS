@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-30 00:10+0000\n"
+"POT-Creation-Date: 2016-06-30 20:15+0000\n"
 "PO-Revision-Date: 2015-06-15 08:06+0000\n"
 "Last-Translator: Carsten Matzon <carsten@matzon.dk>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-29 22:59+0000\n"
+"X-Launchpad-Export-Date: 2016-06-30 18:44+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
@@ -414,6 +414,9 @@ msgstr "Aktive netværksdelinger"
 msgid "Active Users"
 msgstr "Aktive brugere"
 
+msgid "Adaptive (Low Power Consumption)"
+msgstr ""
+
 msgid "Add"
 msgstr "Tilføj"
 
@@ -815,11 +818,11 @@ msgstr "Arkiverings tilstand."
 msgid "Are you sure you want to proceed?"
 msgstr "Er du sikker på du vil fortsætte?"
 
-msgid "Are you sure you want to reboot the system?"
-msgstr "Er du sikker på du vil genstarte systemet?"
+msgid "Are you sure you want to reboot the server?"
+msgstr ""
 
-msgid "Are you sure you want to shutdown the system?"
-msgstr "Er du sikker på du vil lukke systemet ned?"
+msgid "Are you sure you want to shutdown the server?"
+msgstr ""
 
 msgid "Asynchronous I/O (AIO)"
 msgstr "Asynkron I/O (AIO)"
@@ -2183,7 +2186,7 @@ msgstr ""
 msgid "Disable firmware version check."
 msgstr ""
 
-msgid "Disable speaker beep on startup and shutdown."
+msgid "Disable speaker beep on startup and shutdowns."
 msgstr ""
 
 msgid "Disable the compression of repeated line."
@@ -2245,6 +2248,12 @@ msgstr ""
 
 msgid ""
 "Do not erase the Master Boot Record (useful for some RAID controller cards)."
+msgstr ""
+
+#, php-format
+msgid ""
+"Do not let the server check for newer firmware versions when the %s page "
+"gets loaded."
 msgstr ""
 
 msgid ""
@@ -2853,7 +2862,7 @@ msgstr "Aktiver lagring af DOS attributter"
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Aktiver ident protokollen (RFC1413)."
 
-msgid "Enable the system power control utility."
+msgid "Enable the server power control utility."
 msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
@@ -3240,6 +3249,9 @@ msgstr "Firmware"
 msgid "Firmware Check"
 msgstr ""
 
+msgid "Firmware Update"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr ""
 
@@ -3506,6 +3518,9 @@ msgstr ""
 
 msgid "Help"
 msgstr "Hjælp"
+
+msgid "Hiadaptive (High Performance)"
+msgstr ""
 
 msgid "Hide dot files"
 msgstr "Skjul filer der starter med punktum"
@@ -3949,6 +3964,9 @@ msgstr "Grænseflader"
 
 msgid "Internal Server Information"
 msgstr "Intern server information"
+
+msgid "Internal Speaker"
+msgstr ""
 
 msgid "Internal UPS clock date"
 msgstr "Intern UPS dato"
@@ -4524,6 +4542,9 @@ msgstr "MaxOutstandingR2T"
 msgid "MaxRecvDataSegmentLength"
 msgstr "MaxRecvDataSegmentLength"
 
+msgid "Maximum (Highest Performance)"
+msgstr ""
+
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr ""
 
@@ -4635,6 +4656,9 @@ msgstr ""
 msgid "Minimum"
 msgstr "Minimum"
 
+msgid "Minimum (Lowest Performance)"
+msgstr ""
+
 msgid "Minimum Free Space"
 msgstr ""
 
@@ -4659,8 +4683,8 @@ msgstr "Mindste temperatur detekteret (grader C)"
 msgid "Minutes"
 msgstr "Minutter"
 
-msgid "Minutes between network time sync."
-msgstr "Minustter mellem netværks tids synkronisering."
+msgid "Minutes between the next network time synchronization."
+msgstr ""
 
 msgid "Missing a temporary folder."
 msgstr "Mangler en midlertidig mappe."
@@ -6617,9 +6641,6 @@ msgstr "Spredt"
 msgid "Sparse Volume"
 msgstr ""
 
-msgid "Speaker Beep"
-msgstr ""
-
 msgid ""
 "Specific Helium Level. The Helium, so says the literature, allows the drives "
 "to run cooler and quieter, and reduces power consumption. This is the status "
@@ -7642,11 +7663,9 @@ msgstr ""
 "'[::]:3260'. Bland ikke joker og andre IP-adresser i samme adresse familie."
 
 msgid ""
-"The powerd utility monitors the system state and sets various power control "
+"The powerd utility monitors the server state and sets various power control "
 "options accordingly."
 msgstr ""
-"Værktøjet powerd overvåget systemets tilstand, og indstiller forskellige "
-"strømstyrings muligheder derefter."
 
 msgid "The queuedepth range is invalid."
 msgstr "Queuedepth området er ugyldigt."
@@ -7682,6 +7701,9 @@ msgstr ""
 "Serveren er blevet sat til standard opsætning og vil nu genstarte. Dette vil "
 "tage et minuts tid."
 
+msgid "The server is halting now. This may take one minute."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr "Serveren vil genstarte efter gendannelse af konfiguration"
 
@@ -7700,9 +7722,6 @@ msgstr "Lager område sammenkoblet til LUN%d."
 
 msgid "The subject of the email."
 msgstr "Emnet på emailen."
-
-msgid "The system is halting now. This may take one minute."
-msgstr "Systemet stopper nu. Dette kan tage omkring et minut."
 
 msgid "The system is rebooting now. This may take one minute."
 msgstr "Systemet genstarter nu. Dette kan tage omkring et minut."
@@ -8222,12 +8241,6 @@ msgid ""
 "hurt JPEG serving performance on (at least) Sony DLNA products."
 msgstr ""
 
-#, php-format
-msgid ""
-"This will cause %s not to check for newer firmware versions when the %s page "
-"is viewed."
-msgstr ""
-
 msgid "This will create a recycle bin on the share."
 msgstr "Dette vil oprette en papirkurv på sharet."
 
@@ -8268,6 +8281,9 @@ msgstr "Tid"
 
 msgid "Time Machine"
 msgstr "Time Machine"
+
+msgid "Time Synchronization"
+msgstr ""
 
 msgid "Time before the load will be rebooted"
 msgstr "Tid før lasten vil blive genstartet"
@@ -9183,7 +9199,7 @@ msgstr ""
 msgid "You must initialize data before enabling."
 msgstr ""
 
-msgid "You must reboot the system before you can upgrade the firmware"
+msgid "You must reboot the server before you can upgrade the firmware"
 msgstr ""
 
 msgid "You must select at least one authentication method."
@@ -9238,9 +9254,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "adaptive (low power consumption)"
-msgstr "adaptive (lav strøm forbrug)"
-
 msgid "all encrypted disks are imported."
 msgstr "alle krypterede diske er importeret"
 
@@ -9280,9 +9293,6 @@ msgstr ""
 msgid "greatest settable low voltage transfer point"
 msgstr ""
 
-msgid "hiadaptive (high performance)"
-msgstr "hiadaptive (høj ydelse)"
-
 msgid "hour(s)"
 msgstr "time(r)"
 
@@ -9316,12 +9326,6 @@ msgstr "Indlæsning/Udlæsning fejlede."
 
 msgid "loader.conf"
 msgstr "loader.conf"
-
-msgid "maximum (highest performance)"
-msgstr "maksimum (højeste ydelse)"
-
-msgid "minimum (power saving)"
-msgstr "minimum (strøm besparelse)"
 
 msgid "minute(s)"
 msgstr "minut(ter)"
@@ -9395,177 +9399,24 @@ msgstr ""
 msgid "version:"
 msgstr "version:"
 
-#, php-format
+#~ msgid "Minutes between network time sync."
+#~ msgstr "Minustter mellem netværks tids synkronisering."
+
 #~ msgid ""
-#~ "<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
-#~ "href='%s'>user</a> must have shell access."
+#~ "The powerd utility monitors the system state and sets various power control "
+#~ "options accordingly."
 #~ msgstr ""
-#~ "<a href='%s'>SSHD</a> skal være aktiveret for at Unison kan virke, og <a "
-#~ "href='%s'>brugeren</a> skal have fulde Shell rettigheder."
+#~ "Værktøjet powerd overvåget systemets tilstand, og indstiller forskellige "
+#~ "strømstyrings muligheder derefter."
 
-#~ msgid ""
-#~ "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
-#~ msgstr ""
-#~ "<div id='enumeration'><ul><li>%d - Dato</li><li>%h - "
-#~ "Værtsnavn</li></ul></div>"
+#~ msgid "hiadaptive (high performance)"
+#~ msgstr "hiadaptive (høj ydelse)"
 
-#~ msgid ""
-#~ "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
-#~ "3.0.0 or newer, and the 'before' algorithm when talking to an older "
-#~ "rsync.</li><li>Before - File-deletions will be done before the transfer "
-#~ "starts.</li><li>During - File-deletions will be done incrementally as the "
-#~ "transfer happens.</li><li>Delay - File-deletions will be computed during the "
-#~ "transfer, and then removed after the transfer completes.</li><li>After - "
-#~ "File-deletions will be done after the transfer has completed.</li>"
-#~ msgstr ""
-#~ "<li>Standard - Rsync vil vælge 'imens' algoritmen når den snakker med rsync "
-#~ "3.0.0 eller nyere, og 'før' algoritmen når den snakker med en ældre "
-#~ "rsync.</li><li>Før - Slettede filer vil blive behandlet inden overførslen "
-#~ "starter.</li><li>Imens - Slettede filer vil blive behandlet imens "
-#~ "overførslen gennemføres.</li><li>Forsink - Slettede filer bliver udregnet "
-#~ "under overførslen, og bliver fjernet når overførslen "
-#~ "fuldføres.</li><li>Efter - Slettede filer bliver behandlet når overførslen "
-#~ "er færdig.</li>"
+#~ msgid "adaptive (low power consumption)"
+#~ msgstr "adaptive (lav strøm forbrug)"
 
-#, php-format
-#~ msgid ""
-#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
-#~ msgstr ""
-#~ "Kunne ikke sende status rapport. Kontroller venligst <a href='%s'>log</a> "
-#~ "filerne."
+#~ msgid "maximum (highest performance)"
+#~ msgstr "maksimum (højeste ydelse)"
 
-#, php-format
-#~ msgid ""
-#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
-#~ msgstr ""
-#~ "Kunne ikke afsende test email. Kontroller venligst <a href='%s'>log</a> "
-#~ "filerne."
-
-#, php-format
-#~ msgid ""
-#~ "Make sure you have already configured your <a href='%s'>Email</a> settings."
-#~ msgstr ""
-#~ "Sørg for at du allerede har konfigureret dine <a href='%s'>Email</a> "
-#~ "indstillinger."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Auth Group. Please add new <a href='%s'>Auth Group</a> first."
-#~ msgstr ""
-#~ "Ingen konfigureret Auth Gruppe. Tilføj venligst en ny <a href='%s'>Auth "
-#~ "Gruppe</a> først."
-
-#, php-format
-#~ msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
-#~ msgstr "Se venligst <a href='%s' target='_blank'>dokumentationen</a>."
-
-#, php-format
-#~ msgid ""
-#~ "The driver used to communicate with your UPS. Get the list of available <a "
-#~ "href='%s' target='_blank'>drivers</a>."
-#~ msgstr ""
-#~ "Driver der bruges til at kommunikere med din UPS. Se listen med tilgængelige "
-#~ "<a href='%s' target='_blank'>drivere</a>."
-
-#, php-format
-#~ msgid ""
-#~ "This configuration settings are used to generate the ups.conf configuration "
-#~ "file which is required by the NUT UPS daemon. To get more information how to "
-#~ "configure your UPS please check the NUT (Network UPS Tools) <a href='%s' "
-#~ "target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Disse konfigurations indstillinger bliver brugt til at generere ups.conf "
-#~ "konfigurations filen, som er krævet af NUT UPS daemonen. For at få flere "
-#~ "informationer om hvordan din UPS konfigureres, kan du finde det i NUT "
-#~ "(Network UPS Tools) <a href='%s' target='_blank'>dokumentationen</a>."
-
-#, php-format
-#~ msgid ""
-#~ "This will cause %s not to check for newer firmware versions when the <a "
-#~ "href='%s'>%s</a> page is viewed."
-#~ msgstr ""
-#~ "Dette vil gøre så %s ikke ser efter nye firmware versioner, når <a "
-#~ "href='%s'>%s</a> siden bliver vist."
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about TCP Wrappers check the FreeBSD <a "
-#~ "href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "For mere detaljerede informationer om TCP Wrapper, kan du finde det i "
-#~ "FreeBSD <a href='%s' target='_blank'>dokumentationen</a>."
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about writing firewall rules check the FreeBSD "
-#~ "<a href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "For mere detaljerede informationer om at skrive firewall regler, kan du "
-#~ "finde det i FreeBSD <a href='%s' target='_blank'>dokumentationen</a>."
-
-#, php-format
-#~ msgid ""
-#~ "To increase CIFS performance try the following:<div "
-#~ "id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' "
-#~ "switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a "
-#~ "href='%s'>Tuning</a>' switch</li></ul></div>"
-#~ msgstr ""
-#~ "For at forbedre CIFS ydelsen, kan du prøve følgende:<div "
-#~ "id='enumeration'><ul><li>Aktiver 'Asynkron I/O (AIO)' "
-#~ "indstillingen</li><li>Aktiver 'Stor læsning/skrivning' "
-#~ "indstillingen</li><li>Aktiver '<a href='%s'>Finjustering</a>' "
-#~ "indstillingen</li></ul></div>"
-
-#, php-format
-#~ msgid ""
-#~ "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
-#~ "of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
-#~ "or NTFS can result in unpredictable results, file corruption, and loss of "
-#~ "data!"
-#~ msgstr ""
-#~ "UFS og varianter er det MEDFØDTE filformat for FreeBSD (det underlæggende OS "
-#~ "for %s). Forsøg på at bruge andre filsystemet såsom FAT, FAT32, EXT2, EXT3 "
-#~ "og NTFS kan give uforudsigelige resultater, korrupte filer og tab af data!"
-
-#, php-format
-#~ msgid ""
-#~ "You can't mount the partition '%s' where the config file is stored.<br />"
-#~ msgstr ""
-#~ "Du kan ikke montere partitionen '%s' hvor konfigurations-filen er gemt.<br />"
-
-#, php-format
-#~ msgid ""
-#~ "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
-#~ "service to clients."
-#~ msgstr ""
-#~ "Du er nødt til at aktivere <a href='%s'>Zeroconf/Bonjour</a> for at oplyse "
-#~ "klienter om denne tjeneste."
-
-#, php-format
-#~ msgid ""
-#~ "The driver used to connect with the LCD. The list of available <a href='%s' "
-#~ "target='_blank'>drivers</a>."
-#~ msgstr ""
-#~ "Den driver der bruges til at forbinde til LCD. Liste af tilgængelige <a "
-#~ "href='%s' target='_blank'>drivers</a>."
-
-#, php-format
-#~ msgid ""
-#~ "To get more information how to configure LCDproc check the LCDproc <a "
-#~ "href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "For at læse mere information om at indstille LCDproc så læs LCDproc <a "
-#~ "href='%s' target='_blank'>brugervejledningen</a>."
-
-#~ msgid ""
-#~ "<div id='enumeration'><ul><li>The new password is also the default root "
-#~ "password of the system!</li></ul></div>"
-#~ msgstr "Det nye password er det samme som standard root password på systemet"
-
-#, php-format
-#~ msgid ""
-#~ "No configured CARP interfaces. Please add new <a href='%s'>CARP "
-#~ "interface</a> first."
-#~ msgstr ""
-#~ "Ingen netkort konfigureret til CARP. Tildel nyt <a href='%s'>CARP "
-#~ "netkort</a> først."
+#~ msgid "minimum (power saving)"
+#~ msgstr "minimum (strøm besparelse)"

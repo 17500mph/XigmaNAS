@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-30 00:10+0000\n"
-"PO-Revision-Date: 2016-06-26 20:35+0000\n"
+"POT-Creation-Date: 2016-06-30 20:15+0000\n"
+"PO-Revision-Date: 2016-06-30 14:13+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-29 22:58+0000\n"
+"X-Launchpad-Export-Date: 2016-06-30 18:44+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -82,6 +82,8 @@ msgstr "%s είναι πολύ μεγάλο."
 msgid ""
 "%s must be enabled for Unison to work, and the %s must have shell access."
 msgstr ""
+"To %s πρέπει να είναι ενεργοποιημένο για να δουλέψει το Unison, και ο %s "
+"πρέπει να έχει πρόσβαση κελύφους"
 
 #, php-format
 msgid "%s of %sB"
@@ -281,6 +283,8 @@ msgid ""
 "A mounted disk or partition will be unmounted temporarily to perform the "
 "requested action."
 msgstr ""
+"Ο προσαρτημένος  δίσκος ή κατάτμηση θα αποπροσαρτηθεί προσωρινά για να "
+"εκτελεστεί η λειτουργία που ζητήθηκε."
 
 msgid "A reload request has been sent to the daemon."
 msgstr "Ένα αίτημα επαναφόρτωσης έχει σταλεί στο δαίμονα."
@@ -424,7 +428,7 @@ msgid "Access mode"
 msgstr "Λειτουργία πρόσβασης"
 
 msgid "Access the webGUI with the new IP address"
-msgstr ""
+msgstr "Πρόσβαση στο web περιβάλλον διαχείρισης με τη νέα διεύθυνση IP"
 
 msgid "Acoustic level"
 msgstr "Επίπεδο ακουστικής"
@@ -457,6 +461,9 @@ msgstr "Ενεργά διαμοιραζόμενα"
 
 msgid "Active Users"
 msgstr "Ενεργοί χρήστες"
+
+msgid "Adaptive (Low Power Consumption)"
+msgstr ""
 
 msgid "Add"
 msgstr "Προσθήκη"
@@ -495,7 +502,7 @@ msgid "Add additional scheduled self-test."
 msgstr "Προσθήκη επιπλέον προγραμματισμένης αυτοεξέτασης."
 
 msgid "Add any supplemental parameters."
-msgstr ""
+msgstr "Προσθέστε οποιεσδήποτε συμπληρωματικές παραμέτρους."
 
 msgid "Add auth group"
 msgstr "Προσθήκη ομάδας πιστοποίησης."
@@ -625,20 +632,26 @@ msgid "Advertisement skew"
 msgstr "Στρέβλωση διαφήμισης CARP"
 
 msgid "After"
-msgstr ""
+msgstr "Μετά"
 
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr ""
+"Μετά - Οι διαγραφές αρχειων θα γίνονται μετά την ολοκλήρωση της μεταφοράς."
 
 msgid ""
 "After you click \"Save\" you may also have to do one or more of the "
 "following steps before you can access this server again:"
 msgstr ""
+"Αφού πατήσετε \"Αποθήκευση\", ίσως να χρειάζεται να κάνετε ένα ή περισσότερα "
+"από τα παρακάτω βήματα πριν μπορέσετε να έχετε ξανά πρόσβαση σε αυτόν το "
+"διακομιστή:"
 
 msgid ""
 "After you click \"Save\" you must reboot the server to make the changes take "
 "effect."
 msgstr ""
+"Αφού πατήσετε \"Αποθήκευση\" πρέπει να κάνετε επανεκκίνηση του διακομιστή "
+"για να ενεργοποιηθούν οι αλλαγές."
 
 msgid "Age"
 msgstr "Ηλικία"
@@ -670,6 +683,8 @@ msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
 "an empty UFS directory is recommended."
 msgstr ""
+"Όλα τα δεδομένα θα αντικατασταθούν. Για να αποφύγετε μη έγκυρα "
+"δεδομένα/προσβάσεις, συνιστάται να χρησιμοποιήσετε έναν άδειο φάκελο UFS."
 
 msgid "All data will be lost when you activate this option!"
 msgstr "Όλα τα δεδομένα θα χαθούν αν ενργοποιήσετε αυτή την επιλογή!"
@@ -892,11 +907,12 @@ msgstr "Λειτουργία αρχειοθέτησης"
 msgid "Are you sure you want to proceed?"
 msgstr "Είστε βέβαιοι ότι θέλετε να προχωρήσετε;"
 
-msgid "Are you sure you want to reboot the system?"
-msgstr "Είσαστε σίγουροι ότι θέλετε να επανεκκινήσετε το σύστημα;"
+msgid "Are you sure you want to reboot the server?"
+msgstr "Είστε σίγουροι ότι θέλετε να επανεκκινήσετε το διακομιστή;"
 
-msgid "Are you sure you want to shutdown the system?"
-msgstr "Είστε σίγουροι ότι θέλετε να τερματίσετε το σύστημα;"
+msgid "Are you sure you want to shutdown the server?"
+msgstr ""
+"Είσαστε σίγουροι ότι θέλετε να τερματίσετε τη λειτουργία του διακομιστή;"
 
 msgid "Asynchronous I/O (AIO)"
 msgstr "Ασύγχρονο I/O (είσοδος/έξοδος)"
@@ -1080,10 +1096,10 @@ msgid "Battery voltage"
 msgstr "Τάση Μπαταρίας"
 
 msgid "Before"
-msgstr ""
+msgstr "Πριν"
 
 msgid "Before - File-deletions will be done before the transfer starts."
-msgstr ""
+msgstr "Πριν - Οι διαγραφές αρχείων θα γίνουν πριν ξεκινήσει η μεταφορά."
 
 msgid "Before - File-deletions will be performed before the transfer starts."
 msgstr ""
@@ -1327,10 +1343,10 @@ msgid "Change password"
 msgstr "Αλλαγή κωδικού"
 
 msgid "Change the IP address of your computer"
-msgstr ""
+msgstr "Αλλαγή της διεύθυνσης IP του υπολογιστή σας"
 
 msgid "Change the IP address of your server"
-msgstr ""
+msgstr "Αλλαγή της διεύθυνσης IP του διακομιστή σας"
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr "Οι αλλαγές σε αυτή την επιλογή θα ισχύσουν μετά από επανεκκίνηση."
@@ -1358,7 +1374,7 @@ msgid ""
 msgstr ""
 
 msgid "Check the list of available drivers"
-msgstr ""
+msgstr "Ελέγξτε τη λίστα με τους διαθέσιμους οδηγούς συσκευών"
 
 msgid "Chinese (Simplified)"
 msgstr "Κινέζικα (Απλοποιημένα)"
@@ -1913,6 +1929,8 @@ msgstr "Το πεδίο για το διακομιστή DNS είναι άδει
 
 msgid "DO NOT abort the firmware upgrade process once it has started."
 msgstr ""
+"ΜΗΝ ακυρώσετε τη διαδικασία αναβάθμισης του υλικολογισμικού άπαξ και "
+"ξεκινήσει."
 
 #, php-format
 msgid ""
@@ -1959,7 +1977,7 @@ msgid "Datasets"
 msgstr "Datasets"
 
 msgid "Date"
-msgstr ""
+msgstr "Ημερομηνία"
 
 msgid "Date & Time"
 msgstr "Ημ/νία & Ώρα"
@@ -2034,7 +2052,7 @@ msgid "Defines when the shutdown is initiated."
 msgstr "Καθορίζει πότε θα ξεκινήσει ο τερματισμός του συστήματος"
 
 msgid "Delay"
-msgstr ""
+msgstr "Καθυστέρηση"
 
 msgid ""
 "Delay - File-deletions will be computed during the transfer and will be done "
@@ -2358,10 +2376,8 @@ msgstr "Απενεργοποίηση εντελώς του διαχειριστ�
 msgid "Disable firmware version check."
 msgstr "Απενεργοποίηση ελέγχου έκδοσης υλικολογισμικού"
 
-msgid "Disable speaker beep on startup and shutdown."
+msgid "Disable speaker beep on startup and shutdowns."
 msgstr ""
-"Απενεργοποίηση ηχητικής ειδοποίησης συστήματος κατά την έναρξη και τον "
-"τερματισμό."
 
 msgid "Disable the compression of repeated line."
 msgstr "Απενεργοποίηση συμπίεσης της επαναλαμβανόμενης γραμμής."
@@ -2404,7 +2420,7 @@ msgid "Disks (ATA) information"
 msgstr "Πληροφορίες δίσκων (ATA)"
 
 msgid "Disks | Mount Point | Management"
-msgstr ""
+msgstr "Δίσκοι | Σημείο Προσάρτησης | Διαχείριση"
 
 msgid "Display"
 msgstr "Εμφάνιση"
@@ -2428,6 +2444,12 @@ msgid ""
 "Do not erase the Master Boot Record (useful for some RAID controller cards)."
 msgstr ""
 "Να μην διαγραφεί το Master Boot Record. (Χρήσιμο για κάποιους ελεγκτές RAID)."
+
+#, php-format
+msgid ""
+"Do not let the server check for newer firmware versions when the %s page "
+"gets loaded."
+msgstr ""
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2631,6 +2653,8 @@ msgstr "Θέλετε να ενεργοποιήσετε τις επιλεγμέν
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr ""
+"Θέλετε να εγκαταστήσετε αυτό το υλικολογισμικό ούτως ή άλλως (με δικό σας "
+"ρίσκο);"
 
 msgid "Do you want to toggle selected jobs?"
 msgstr "Θέλετε να εναλλάξετε τις επιλεγμένες εργασίες;"
@@ -2731,7 +2755,7 @@ msgid "Duplicate mount point name."
 msgstr "Δημιουργία διπλότυπου ονόματος σημείου προσάρτησης."
 
 msgid "During"
-msgstr ""
+msgstr "Κατά τη διάρκεια"
 
 msgid ""
 "During - File-deletions will be done incrementally as the transfer happens."
@@ -3059,8 +3083,8 @@ msgstr "Ενεργοποίηση αποθήκευσης ιδιοτήτων DOS"
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Ενεργοποιήση του πρωτοκόλλου ταυτοποίησης (RFC1413)."
 
-msgid "Enable the system power control utility."
-msgstr "Ενεργοποίηση του εργαλείου ελέγχου ενέργειας του συστήματος"
+msgid "Enable the server power control utility."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Ενεργοποίηση αυστηρής τήρησης των πρότυπων DLNA."
@@ -3192,7 +3216,7 @@ msgid "Error"
 msgstr "Σφάλμα"
 
 msgid "Error Code"
-msgstr ""
+msgstr "Κωδικός Σφάλματος"
 
 msgid "Error Level"
 msgstr "Επίπεδο Σφαλμάτων"
@@ -3204,7 +3228,7 @@ msgid "Event selection"
 msgstr "Επιλογή συμβάντων"
 
 msgid "Example: pkg add packagename."
-msgstr ""
+msgstr "Παράδειγμα: pkg add όνομα_πακέτου."
 
 msgid "Execute"
 msgstr "Εκτέλεση"
@@ -3463,6 +3487,9 @@ msgstr "Firmware"
 
 msgid "Firmware Check"
 msgstr "Έλεγχος για υλικολογισμικό"
+
+msgid "Firmware Update"
+msgstr "Αναβάθμιση Υλικολογισμικού"
 
 msgid "Firmware upload failed (out of memory?)"
 msgstr ""
@@ -3747,6 +3774,9 @@ msgstr ""
 
 msgid "Help"
 msgstr "Βοήθεια"
+
+msgid "Hiadaptive (High Performance)"
+msgstr ""
 
 msgid "Hide dot files"
 msgstr "Μη εμφάνιση κρυφών αρχείων"
@@ -4223,6 +4253,9 @@ msgstr "Διεπαφές δικτύου"
 
 msgid "Internal Server Information"
 msgstr "Πληροφορίες εσωτερικού διακομιστή"
+
+msgid "Internal Speaker"
+msgstr ""
 
 msgid "Internal UPS clock date"
 msgstr "Ημερομηνία εσωτερικού ρολογιού UPS"
@@ -4836,6 +4869,9 @@ msgstr "MaxOutstandingR2T"
 msgid "MaxRecvDataSegmentLength"
 msgstr "MaxRecvDataSegmentLength"
 
+msgid "Maximum (Highest Performance)"
+msgstr ""
+
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr "Μέγιστη απόδοση, μέγιστη ένταση θορύβου"
 
@@ -4953,6 +4989,9 @@ msgstr "Οι ρυθμίσεις του Minidlna έχουν ενημερωθεί.
 msgid "Minimum"
 msgstr "Ελάχιστο"
 
+msgid "Minimum (Lowest Performance)"
+msgstr ""
+
 msgid "Minimum Free Space"
 msgstr "Ελάχιστος Eλεύθερος Xώρος"
 
@@ -4978,8 +5017,8 @@ msgstr "Ελάχιστη εμφανιζόμενη θερμοκρασία (βαθ
 msgid "Minutes"
 msgstr "Λεπτά"
 
-msgid "Minutes between network time sync."
-msgstr "Λεπτά μεταξύ του συγχρονισμού της ώρας του δικτύου."
+msgid "Minutes between the next network time synchronization."
+msgstr ""
 
 msgid "Missing a temporary folder."
 msgstr "Λείπει ένας προσωρινός φάκελος."
@@ -5220,7 +5259,7 @@ msgid "No configured pools."
 msgstr "Δεν έχουν ρυθμιστεί pools."
 
 msgid "No configured virtual devices."
-msgstr ""
+msgstr "Δεν υπάρχουν ρυθμισμένες εικονικές συσκευές."
 
 msgid "No device selected."
 msgstr "Δεν επιλέχθηκε συσκευή."
@@ -5229,7 +5268,7 @@ msgid "No disk configured"
 msgstr "Δε ρυθμίστηκε δίσκος"
 
 msgid "No disks available."
-msgstr ""
+msgstr "Δεν υπάρχουν διαθέσιμοι δίσκοι."
 
 msgid ""
 "No disks configured, please add disks to see the diagnostic information of "
@@ -5450,9 +5489,6 @@ msgid ""
 "Once you add the virtual device, it becomes impossible to delete again. It "
 "recommends adding the same number of drives as the existing virtual device."
 msgstr ""
-"Μόλις προσθέσετε την εικονική συσκευή, καθίσταται αδύνατο να τη διαγράψετε "
-"ξανά. Συνίσταται να προσθέτετε τον ίδιο αριθμό δίσκων με την υπάρχουσα "
-"εικονική συσκευή."
 
 msgid "Online"
 msgstr "Σε σύνδεση"
@@ -5754,7 +5790,7 @@ msgid "Please add a bridge interface first."
 msgstr "Παρακαλώ προσθέστε πρώτα ένα γεφύρωμα δικτύου."
 
 msgid "Please add a new Auth Group first"
-msgstr ""
+msgstr "Παρακαλώ προσθέστε πρώτα μια νέα Ομάδα Πιστοποίησης"
 
 msgid "Please add a new CARP interface first"
 msgstr ""
@@ -5769,10 +5805,10 @@ msgid "Please add a new Portal Group first."
 msgstr "Παρακαλώ προσθέστε πρώτα μια νέα Ομάδα Portal."
 
 msgid "Please add a new disk first."
-msgstr ""
+msgstr "Παρακαλώ προσθέστε πρώτα ένα νέο δίσκο."
 
 msgid "Please add a virtual device first."
-msgstr ""
+msgstr "Παρακαλώ προσθέστε πρώτα μια εικονική συσκευή."
 
 #, php-format
 msgid "Please add new %s first."
@@ -5782,13 +5818,13 @@ msgid "Please add new pools first."
 msgstr "Παρακαλώ προσθέστε πρώτα νέα pool."
 
 msgid "Please check the documentation"
-msgstr ""
+msgstr "Παρακαλώ ελέγξτε την τεκμηρίωση"
 
 msgid "Please check the documentation."
-msgstr ""
+msgstr "Παρακαλώ ελέγξτε την τεκμηρίωση."
 
 msgid "Please check the log files"
-msgstr ""
+msgstr "Παρακαλώ ελέγξτε τα αρχεία καταγραφής"
 
 msgid "Please define the Database directory location."
 msgstr "Παρακαλώ ορίστε την τοποθεσία του καταλόγου με τη βάση δεδομένων."
@@ -6061,19 +6097,19 @@ msgid "RAID-Z1"
 msgstr "RAID-Z1"
 
 msgid "RAID-Z1 should have 3, 5, or 9 disks in each vdev."
-msgstr ""
+msgstr "Το RAID-Z1 πρέπει να έχει 3,5, ή 9 δίσκους σε κάθε vdev."
 
 msgid "RAID-Z2"
 msgstr "RAID-Z2"
 
 msgid "RAID-Z2 should have 4, 6, or 10 disks in each vdev."
-msgstr ""
+msgstr "Το RAID-Z2 πρέπει να έχει 4,6, ή 10 δίσκους σε κάθε vdev."
 
 msgid "RAID-Z3"
 msgstr "RAID-Z3"
 
 msgid "RAID-Z3 should have 5, 7, or 11 disks in each vdev."
-msgstr ""
+msgstr "Το RAID-Z3 πρέπει να έχει 5,7, ή 11 δίσκους σε κάθε vdev."
 
 msgid "RAID0"
 msgstr "RAID0"
@@ -6429,6 +6465,8 @@ msgid ""
 "Running the service as user root is not recommended for security reasons, "
 "use at your own risk!"
 msgstr ""
+"Η εκτέλεση της υπηρεσίας ως χρήστης root δεν συνιστάται για λόγους "
+"ασφαλείας, κάντε το με δικό σας ρίσκο!"
 
 msgid "Russian"
 msgstr "Ρωσικά"
@@ -6481,7 +6519,7 @@ msgid "SSH events"
 msgstr "Γεγονότα SSH"
 
 msgid "SSHD"
-msgstr ""
+msgstr "SSHD"
 
 msgid "SSHD log"
 msgstr "Καταγραφή SSHD"
@@ -6608,10 +6646,12 @@ msgid "See attribute E8."
 msgstr "Δείτε το χαρακτηριστικό E8."
 
 msgid "Select 'CD/DVD' if you want to mount a CD/DVD volume."
-msgstr ""
+msgstr "Επιλέξτε 'CD/DVD' αν θέλετε να προσαρτήσετε έναν τόμο CD/DVD."
 
 msgid "Select 'GPT partition' if you want to mount a GPT formatted drive"
 msgstr ""
+"Επιλέξτε 'GPT partition' αν θέλετε να προσαρτήσετε ένα δίσκο διαμορφωμένο με "
+"GPT"
 
 msgid ""
 "Select 'MBR partition' default partition if you want to mount a UFS "
@@ -6997,9 +7037,6 @@ msgstr "Sparse"
 
 msgid "Sparse Volume"
 msgstr "Sparse Volume"
-
-msgid "Speaker Beep"
-msgstr "Ηχητική Ειδοποίηση"
 
 msgid ""
 "Specific Helium Level. The Helium, so says the literature, allows the drives "
@@ -7673,13 +7710,13 @@ msgstr ""
 "σταματάει."
 
 msgid "The changes could not be applied"
-msgstr ""
+msgstr "Οι αλλαγές δεν μπόρεσαν να εφαρμοστούν"
 
 msgid "The changes have been applied successfully."
 msgstr "Οι αλλαγές εφαρμόστηκαν με επιτυχία."
 
 msgid "The changes have been saved."
-msgstr ""
+msgstr "Οι αλλαγές έχουν αποθηκευτεί."
 
 msgid "The cleartext credentials with which to bind."
 msgstr "Τα διαπιστευτήρια σε απλό κείμενο με τα οποία θα γίνει η δέσμευση."
@@ -8119,11 +8156,9 @@ msgstr ""
 "άλλες ΙΡs στην ίδια οικογένεια διευθύνσεων."
 
 msgid ""
-"The powerd utility monitors the system state and sets various power control "
+"The powerd utility monitors the server state and sets various power control "
 "options accordingly."
 msgstr ""
-"Το εργαλείο  powerd παρακολουθεί την κατάσταση του συστήματος και θέτει "
-"διάφορες επιλογές ενέργειας κατάλληλα."
 
 msgid "The queuedepth range is invalid."
 msgstr "Η καθορισμένη τιμή για το βάθος της ουράς δεν είναι έγκυρη."
@@ -8161,6 +8196,10 @@ msgstr ""
 "Ο διακομιστής επαναφέρθηκε στις εργοστασιακές ρυθμίσεις και τώρα κάνει "
 "επανεκκίνηση. Αυτό μπορεί να πάρει ένα λεπτό."
 
+msgid "The server is halting now. This may take one minute."
+msgstr ""
+"Η λειτουργία του διακομιστή τερματίζεται. Αυτό μπορεί να διαρκέσει ένα λεπτό."
+
 msgid "The server will reboot after restoring the configuration."
 msgstr ""
 "Ο διακομιστής θα κάνει επανεκκίνηση μετά την επαναφορά των ρυθμίσεων."
@@ -8180,9 +8219,6 @@ msgstr "Ο χώρος αποθήκευσης που έχει αντιστοιχ�
 
 msgid "The subject of the email."
 msgstr "Το θέμα του μηνύματος ηλ.ταχυδρομείου."
-
-msgid "The system is halting now. This may take one minute."
-msgstr "Το σύστημα τερματίζεται τώρα. Αυτό μπορεί να διαρκέσει ένα λεπτό."
 
 msgid "The system is rebooting now. This may take one minute."
 msgstr "Το σύστημα επανεκκινείται τώρα. Αυτό μπορεί να διαρκέσει ένα λεπτό."
@@ -8776,12 +8812,6 @@ msgstr ""
 "εικόνας JPEG. Μπορεί να επηρεάσει αρνητικά την απόδοση εξυπηρέτησης, "
 "(τουλάχιστον) στα προϊόντα DLNA της Sony."
 
-#, php-format
-msgid ""
-"This will cause %s not to check for newer firmware versions when the %s page "
-"is viewed."
-msgstr ""
-
 msgid "This will create a recycle bin on the share."
 msgstr "Αυτό δημιουργεί κάδο ανακύκλωσης στο κοινόχρηστο."
 
@@ -8827,6 +8857,9 @@ msgstr "Χρόνος"
 
 msgid "Time Machine"
 msgstr "Time Machine"
+
+msgid "Time Synchronization"
+msgstr ""
 
 msgid "Time before the load will be rebooted"
 msgstr "Χρόνος πριν την επανεκκίνηση του φορτίου"
@@ -9227,7 +9260,7 @@ msgid "Unload"
 msgstr "Ξεφόρτωμα"
 
 msgid "Unmount Disk/Partition"
-msgstr ""
+msgstr "Αποπροσάρτηση Δίσκου/Κατάτμησης"
 
 msgid "Unmount this disk first before proceeding."
 msgstr "Αποπροσαρτήστε πρώτα αυτό το δίσκο πριν συνεχίσετε."
@@ -9811,7 +9844,7 @@ msgstr ""
 msgid "You must initialize data before enabling."
 msgstr "Πρέπει να αρχικοποιήσετε δεδομένα πριν την ενεργοποίηση."
 
-msgid "You must reboot the system before you can upgrade the firmware"
+msgid "You must reboot the server before you can upgrade the firmware"
 msgstr ""
 
 msgid "You must select at least one authentication method."
@@ -9871,9 +9904,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "adaptive (low power consumption)"
-msgstr "adaptive (χαμηλή κατανάλωση ενέργειας)"
-
 msgid "all encrypted disks are imported."
 msgstr "όλοι οι κρυπτογραφημένοι δίσκοι εισήχθησαν."
 
@@ -9915,9 +9945,6 @@ msgstr "μέγιστο οριζόμενο σημείο μεταφοράς υψη
 msgid "greatest settable low voltage transfer point"
 msgstr "μέγιστο οριζόμενο σημείο μεταφοράς χαμηλής τάσης"
 
-msgid "hiadaptive (high performance)"
-msgstr "hiadaptive (υψηλές επιδόσεις)"
-
 msgid "hour(s)"
 msgstr "ώρα(ες)"
 
@@ -9951,12 +9978,6 @@ msgstr "αποτυχία από/φόρτωσης"
 
 msgid "loader.conf"
 msgstr "loader.conf"
-
-msgid "maximum (highest performance)"
-msgstr "maximum (υψηλότερες επιδόσεις)"
-
-msgid "minimum (power saving)"
-msgstr "minimum (εξοικονόμηση ενέργειας)"
 
 msgid "minute(s)"
 msgstr "λεπτά"
@@ -10025,301 +10046,40 @@ msgid "umount"
 msgstr "αποπροσάρτηση"
 
 msgid "user"
-msgstr ""
+msgstr "χρήστης"
 
 msgid "version:"
 msgstr "έκδοση:"
 
-#~ msgid ""
-#~ "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
-#~ "3.0.0 or newer, and the 'before' algorithm when talking to an older "
-#~ "rsync.</li><li>Before - File-deletions will be done before the transfer "
-#~ "starts.</li><li>During - File-deletions will be done incrementally as the "
-#~ "transfer happens.</li><li>Delay - File-deletions will be computed during the "
-#~ "transfer, and then removed after the transfer completes.</li><li>After - "
-#~ "File-deletions will be done after the transfer has completed.</li>"
-#~ msgstr ""
-#~ "<li>Προεπιλογή - Το Rsync θα επιλέξει τον αλγόριθμο 'κατά τη διάρκεια' για "
-#~ "την επικοινωνία με το rsync 3.0.0 ή νεότερο και τον αλγόριθμο 'πριν' για την "
-#~ "επικοινωνία με παλιότερο rsync.</li><li>Πριν - Οι διαγραφές των αρχείων θα "
-#~ "γίνουν πριν την έναρξη της μεταφοράς.</li><li>Κατά τη διάρκεια - Οι "
-#~ "διαγραφές των αρχείων θα γίνουν σταδιακά κατά τη διάρκεια της "
-#~ "μεταφοράς.</li><li>Καθυστέρηση - Οι διαγραφές των αρχείων θα υπολογιστούν "
-#~ "κατά τη διάρκεια της μεταφοράς και θα συμβούν μετά το τέλος της "
-#~ "μεταφοράς.</li><li>Μετά - Οι διαγραφές των αρχείων θα γίνουν μετά το τέλος "
-#~ "της μεταφοράς.</li>"
-
-#, php-format
-#~ msgid ""
-#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
-#~ msgstr ""
-#~ "Αποτυχία αποστολής αναφοράς κατάστασης. Παρακαλώ ελέγξτε το αρχείο <a "
-#~ "href='%s'>log</a>."
-
-#, php-format
-#~ msgid ""
-#~ "You can't mount the partition '%s' where the config file is stored.<br />"
-#~ msgstr ""
-#~ "Δεν μπορείτε να προσαρτήσετε το διαμέρισμα '%s' όπου βρίσκεται αποθηκευμένο "
-#~ "το αρχείο ρυθμίσεων."
-
-#, php-format
-#~ msgid ""
-#~ "The driver used to connect with the LCD. The list of available <a href='%s' "
-#~ "target='_blank'>drivers</a>."
-#~ msgstr ""
-#~ "Ο οδηγός που χρησιμοποιείται για τη σύνδεση με την οθόνη LCD. Δείτε τη λίστα "
-#~ "των διαθέσιμων <a href='%s' target='_blank'>οδηγών</a>."
-
-#, php-format
-#~ msgid ""
-#~ "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
-#~ "service to clients."
-#~ msgstr ""
-#~ "Θα πρέπει να ενεργοποιήσετε το <a href='%s'>Zeroconf/Bonjour</ a> για να "
-#~ "γίνει ορατή αυτή η υπηρεσία στους πελάτες."
+#~ msgid "Minutes between network time sync."
+#~ msgstr "Λεπτά μεταξύ του συγχρονισμού της ώρας του δικτύου."
 
 #~ msgid ""
-#~ "<b>EFI GPT partition</b> if you want to mount a GPT formatted drive "
-#~ "(<b>default partition</b>).<br/><b>MBR partition</b> if you want to mount a "
-#~ "UFS formatted drive or do imported disks from other OS.<br/><b>CD/DVD "
-#~ "volume</b> if you want to mount a CD/DVD volume."
+#~ "The powerd utility monitors the system state and sets various power control "
+#~ "options accordingly."
 #~ msgstr ""
-#~ "<b>Κατάτμηση EFI GPT</b> Αν θέλετε να προσαρτήσετε έναν δίσκο με μορφοποίηση "
-#~ "GPT (<b>προεπιλεγμένη κατάτμηση</b>).<br/><b>Κατάτμηση MBR</b> Αν θέλετε να "
-#~ "προσαρτήσετε έναν δίσκο με μορφοποίηση UFS ή δίσκους που εισάγατε από άλλο  "
-#~ "OS.<br/><b>Δίσκος CD/DVD</b> Αν θέλετε να προσαρτήσετε έναν τόμο CD/DVD."
+#~ "Το εργαλείο  powerd παρακολουθεί την κατάσταση του συστήματος και θέτει "
+#~ "διάφορες επιλογές ενέργειας κατάλληλα."
 
-#, php-format
-#~ msgid ""
-#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
+#~ msgid "hiadaptive (high performance)"
+#~ msgstr "hiadaptive (υψηλές επιδόσεις)"
+
+#~ msgid "maximum (highest performance)"
+#~ msgstr "maximum (υψηλότερες επιδόσεις)"
+
+#~ msgid "adaptive (low power consumption)"
+#~ msgstr "adaptive (χαμηλή κατανάλωση ενέργειας)"
+
+#~ msgid "minimum (power saving)"
+#~ msgstr "minimum (εξοικονόμηση ενέργειας)"
+
+#~ msgid "Disable speaker beep on startup and shutdown."
 #~ msgstr ""
-#~ "Αποτυχία αποστολής δοκιμαστικού μηνύματος ηλεκτρονικού ταχυδρομείου. "
-#~ "Παρακαλώ ελέγξτε το αρχείο <a href='%s'>καταγραφής</a>."
+#~ "Απενεργοποίηση ηχητικής ειδοποίησης συστήματος κατά την έναρξη και τον "
+#~ "τερματισμό."
 
-#, php-format
-#~ msgid ""
-#~ "Make sure you have already configured your <a href='%s'>Email</a> settings."
-#~ msgstr ""
-#~ "Βεβαιωθείτε ότι έχετε ρυθμίσει το <a href='%s'>Ηλεκτρονικό Ταχυδρομείο</a>."
+#~ msgid "Enable the system power control utility."
+#~ msgstr "Ενεργοποίηση του εργαλείου ελέγχου ενέργειας του συστήματος"
 
-#, php-format
-#~ msgid ""
-#~ "No configured Auth Group. Please add new <a href='%s'>Auth Group</a> first."
-#~ msgstr ""
-#~ "Δεν έχει καθοριστεί κάποια Ομάδα Πιστοποίησης. Παρακαλώ προσθέστε μια <a "
-#~ "href='%s'>Ομάδα Πιστοποίησης</a> πρώτα."
-
-#, php-format
-#~ msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
-#~ msgstr "Παρακαλώ ελέγξτε την <a href='%s' target='_blank'>τεκμηρίωση</a>."
-
-#, php-format
-#~ msgid ""
-#~ "This configuration settings are used to generate the ups.conf configuration "
-#~ "file which is required by the NUT UPS daemon. To get more information how to "
-#~ "configure your UPS please check the NUT (Network UPS Tools) <a href='%s' "
-#~ "target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Αυτές οι ρυθμίσεις χρησιμοποιούνται για τη δημιουργία του αρχείου ρυθμίσεων "
-#~ "ups.conf που απαιτείται από το δαίμονα NUT UPS. Για περισσότερες πληροφορίες "
-#~ "όσον αφορά στο πώς να ρυθμίσετε το UPS σας, παρακαλούμε να ελέγξετε την <a "
-#~ "href='%s' target='_blank'>τεκμηρίωση</ a> του NUT (Network UPS Tools)."
-
-#, php-format
-#~ msgid ""
-#~ "This will cause %s not to check for newer firmware versions when the <a "
-#~ "href='%s'>%s</a> page is viewed."
-#~ msgstr ""
-#~ "Αυτό θα κάνει το %s να μην ελέγχει για νεώτερες εκδόσεις του firmware, όταν "
-#~ "προβάλλεται η σελίδα <a href='%s'>%s</ a>."
-
-#, php-format
-#~ msgid ""
-#~ "To get more information how to configure LCDproc check the LCDproc <a "
-#~ "href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Για περισσότερες πληροφορίες σχετικά με τη ρύθμιση του LCDproc ελέγξτε την "
-#~ "<a href='%s' target='_blank'>τεκμηρίωση</a> του LCDproc."
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about writing firewall rules check the FreeBSD "
-#~ "<a href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Για περισσότερες πληροφορίες σχετικά με τη συγγραφή κανόνων για το τείχος "
-#~ "προστασίας ελέγξτε την <a href='%s' target='_blank'>τεκμηρίωση</a> του "
-#~ "FreeBSD."
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about TCP Wrappers check the FreeBSD <a "
-#~ "href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Για περισσότερες πληροφορίες σχετικά με τα TCP Wrappers ελέγξτε την <a "
-#~ "href='%s' target='_blank'>τεκμηρίωση</a> του FreeBSD."
-
-#, php-format
-#~ msgid ""
-#~ "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
-#~ "of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
-#~ "or NTFS can result in unpredictable results, file corruption, and loss of "
-#~ "data!"
-#~ msgstr ""
-#~ "Το UFS και οι διάφορες ποικιλίες του, είναι η ΕΓΓΕΝΗΣ μορφή συστήματος "
-#~ "αρχείων για το FreeBSD (το OS στο οποίο βασίζεται το %s). Η προσπάθεια "
-#~ "χρήσης άλλης μορφής συστήματος αρχείων όπως FAT, FAT32, EXT2, EXT3, ή NTFS "
-#~ "μπορεί να έχει ως επακόλουθο απρόβλεπτα αποτελέσματα, καταστροφή αρχείων, "
-#~ "και χάσιμο δεδομένων!"
-
-#, php-format
-#~ msgid ""
-#~ "To increase CIFS performance try the following:<div "
-#~ "id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' "
-#~ "switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a "
-#~ "href='%s'>Tuning</a>' switch</li></ul></div>"
-#~ msgstr ""
-#~ "Για να αυξήσετε την απόδοση του CIFS δοκιμάστε τα εξής: <div "
-#~ "id='enumeration'><ul><li>Ενεργοποίηση  ' Ασύγχρονου Ι/Ο είσοδος/έξοδος) "
-#~ "'</li><li>Ενεργοποίηση ' Μεγάλης ανάγνωσης/εγγραφής '</li><li>Ενεργοποίηση ' "
-#~ "<a href='%s'>Βελτιστοποίησης</a> '</li></ul></div>"
-
-#, php-format
-#~ msgid ""
-#~ "The driver used to communicate with your UPS. Get the list of available <a "
-#~ "href='%s' target='_blank'>drivers</a>."
-#~ msgstr ""
-#~ "Ο οδηγός που χρησιμοποιείται για την επικοινωνία με το UPS σας. Δείτε τη "
-#~ "λίστα των διαθέσιμων <a href='%s' target='_blank'>οδηγών</a>."
-
-#, php-format
-#~ msgid ""
-#~ "No configured CARP interfaces. Please add new <a href='%s'>CARP "
-#~ "interface</a> first."
-#~ msgstr ""
-#~ "Δεν υπάρχουν ρυθμισμένες διεπαφές CARP. Παρακαλώ προσθέστε πρώτα μια νέα <a "
-#~ "href='%s'>διεπαφή CARP </a>."
-
-#~ msgid ""
-#~ "Set what user the service will run as (www by default). <br><b><font "
-#~ "color='red'>NOTE</font>: Running as root is <u>not recommended</u> for "
-#~ "security reasons, use it on your own risk!</b></br>"
-#~ msgstr ""
-#~ "Ορίστε με ποιο χρήστη θα εκτελείται η υπηρεσία (προεπιλογή είναι ο www). "
-#~ "<br><b><font color='red'>ΣΗΜΕΙΩΣΗ</font>: Η εκτέλεση ως root <u>δεν "
-#~ "συνίσταται</u> για λόγους ασφαλείας, κάντε το με δική σας ευθύνη!</b></br>"
-
-#~ msgid ""
-#~ "<div id='enumeration'><ul><li>The new password is also the default root "
-#~ "password of the system!</li></ul></div>"
-#~ msgstr ""
-#~ "<div id='enumeration'><ul><li>Ο νέος κωδικός θα είναι επίσης και ο κωδικός "
-#~ "για τον χρήστη root του συστήματος !</li></ul></div>"
-
-#, php-format
-#~ msgid ""
-#~ "<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
-#~ "href='%s'>user</a> must have shell access."
-#~ msgstr ""
-#~ "Το <a href='%s'>SSHD</a> πρέπει να είναι ενεργοποιημένο για Unison για να "
-#~ "δουλέψει, και <a href='%s'>ο χρήστης</a> πρέπει να έχει πρόσβαση κελύφους."
-
-#~ msgid ""
-#~ "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
-#~ msgstr ""
-#~ "<div id='enumeration'><ul><li>%d - Ημερομηνία</li><li>%h - Όνομα "
-#~ "υπολογιστή</li></ul></div>"
-
-#, php-format
-#~ msgid ""
-#~ "You must <a href='%s'>reboot</a> the system before you can upgrade the "
-#~ "firmware."
-#~ msgstr ""
-#~ "Πρέπει να κάνετε <a href='%s'>επανεκκίνηση</a> του συστήματος πριν μπορέσετε "
-#~ "να κάνετε αναβάθμιση στο firmware."
-
-#~ msgid "add any supplemental parameters"
-#~ msgstr "προσθέστε οποιεσδήποτε συμπληρωματικές παραμέτρους"
-
-#~ msgid ""
-#~ "You can also install a package via SSH or console using the the pkg add "
-#~ "command.<br />Example: pkg add packagename"
-#~ msgstr ""
-#~ "Μπορείτε επίσης να εγκαταστήσετε ένα πακέτο μέσω SSH ή τηε κονσόλας, "
-#~ "χρησιμοποιώντας την εντολή pkg add. <br />Παράδειγμα: pkg add ΌνομαΠακέτου"
-
-#, php-format
-#~ msgid "Check <a href=\"%s\">System|General Setup</a> before initializing."
-#~ msgstr ""
-#~ "Ελέγξτε στο <a href=\"%s\">Σύστημα|Γενικές Ρυθμίσεις</a> πριν την "
-#~ "αρχικοποίηση."
-
-#~ msgid ""
-#~ "All data in the path is overwritten. To avoid invalid data/permission, using "
-#~ "empty UFS directory is recommended."
-#~ msgstr ""
-#~ "Όλα τα δεδομένα στη διαδρομή θα αντικατασταθούν. Για να αποφύγετε μη έγκυρα "
-#~ "δεδομένα/δικαιώματα, συνιστάται να χρησιμοποιήσετε έναν άδειο κατάλογο UFS."
-
-#~ msgid ""
-#~ "This means that the firmware you flashed is not an official/supported "
-#~ "firmware and may lead to unexpected behavior or security compromises. Only "
-#~ "install firmwares that come from sources that you trust, and make sure that "
-#~ "the firmware has not been tampered with.<br /><br />Do you want to install "
-#~ "this firmware anyway (on your own risk)?"
-#~ msgstr ""
-#~ "Αυτό σημαίνει ότι το υλικολογισμικό που φορτώσατε δεν είναι "
-#~ "έγκυρο/υποστηριζόμενο υλικολογισμικό και μπορεί να οδηγήσει σε απροσδόκητη "
-#~ "συμπεριφορά ή συμβιβασμούς από πλευράς ασφαλείας. Να εγκαθιστάτε "
-#~ "υλικολογισμικά που προέρχονται μόνο από πηγές που εμπιστεύεστε, και να "
-#~ "σιγουρεύεστε ότι το υλικολογισμικό δεν έχει πειραχθεί.<br /><br />Θέλετε να "
-#~ "εγκαταστήσετε αυτό το υλικολογισμικό όπως και να' χει (με δικό σας ρίσκο);"
-
-#, php-format
-#~ msgid ""
-#~ "DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-#~ "try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
-#~ "/>It is recommended that you <a href='%s'>Backup</a> the server "
-#~ "configuration before doing a upgrade."
-#~ msgstr ""
-#~ "ΜΗΝ ακυρώσετε τη διαδικασία αναβάθμισης υλικολογισμικού αφού ξεκινήσει. <br "
-#~ "/>ΜΗΝ προσπαθήσετε να εγκαταστήσετε άλλα αρχεία εκτός από το έγκυρο αρχείο "
-#~ "'%s-%s-embedded.img.xz'.<br />Συνιστάται να κάνετε ένα <a "
-#~ "href='%s'>Αντίγραφο Ασφαλείας</a> των ρυθμίσεων του διακομιστή σας πριν "
-#~ "κάνετε αναβάθμιση."
-
-#, php-format
-#~ msgid ""
-#~ "After you click &quot;Save&quot;, you must reboot the server to make the "
-#~ "changes take effect. You may also have to do one or more of the following "
-#~ "steps before you can access your server again: <ul><li><span "
-#~ "class='vexpl'>change the IP address of your server</span></li><li><span "
-#~ "class='vexpl'>access the webGUI with the new IP address</span></li></ul>"
-#~ msgstr ""
-#~ "Αφού πατήσετε &quot;Αποθήκευση&quot;, πρέπει να κάνετε επανεκκίνηση το "
-#~ "διακομιστή για να εφαρμοστούν οι αλλαγές. Μπορεί επίσης να χρειαστεί να "
-#~ "κάνετε ένα ή περισσότερα από τα παρακάτω βήματα πριν μπορέσετε να έχετε ξανά "
-#~ "πρόσβαση στον διακομιστή: <ul><li><span class='vexpl'>Αλλαγή της διεύθυνσης "
-#~ "IP του διακομιστή σας</span></li><li><span class='vexpl'>Πρόσβαση στο web "
-#~ "περιβάλλον διαχείρισης με τη νέα διεύθυνση IP</span></li></ul>"
-
-#, php-format
-#~ msgid ""
-#~ "After you click &quot;Save&quot;, you may also have to do one or more of the "
-#~ "following steps before you can access this server again: <ul><li>change the "
-#~ "IP address of your computer</li><li>access the webGUI with the new IP "
-#~ "address</li></ul>"
-#~ msgstr ""
-#~ "Αφού πατήσετε  &quot;Αποθήκευση&quot;, μπορεί να χρειαστεί να κάνετε ακόμα "
-#~ "ένα ή περισσότερα από τα ακόλουθα βήματα πριν να μπορέσετε να έχετε ξανά "
-#~ "πρόσβαση στον διακομιστή : <ul><li>Αλλαγή της διεύθυνσης IP του υπολογιστή "
-#~ "σας</li><li>Πρόσβαση στο web περιβάλλον διαχείρισης με τη νέα διεύθυνση "
-#~ "IP</li></ul>"
-
-#, php-format
-#~ msgid ""
-#~ "The driver used to communicate with your second UPS. Get the list of "
-#~ "available <a href='%s' target='_blank'>drivers</a>."
-#~ msgstr ""
-#~ "Ο οδηγός που χρησιμοποιείται για την επικοινωνία με το δεύτερο UPS. Πατήστε "
-#~ "για τη λίστα των διαθέσιμων <a href='%s' target='_blank'>οδηγών</a>."
+#~ msgid "Speaker Beep"
+#~ msgstr "Ηχητική Ειδοποίηση"

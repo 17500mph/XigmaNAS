@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-30 00:10+0000\n"
+"POT-Creation-Date: 2016-06-30 20:15+0000\n"
 "PO-Revision-Date: 2016-03-23 12:38+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-29 22:57+0000\n"
+"X-Launchpad-Export-Date: 2016-06-30 18:45+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -444,6 +444,9 @@ msgstr "Partajări active"
 msgid "Active Users"
 msgstr "Utilizatori activi"
 
+msgid "Adaptive (Low Power Consumption)"
+msgstr ""
+
 msgid "Add"
 msgstr "Adăugare"
 
@@ -860,11 +863,11 @@ msgstr "Mod arhivare."
 msgid "Are you sure you want to proceed?"
 msgstr "Sînteți sigur că vreți să continuați?"
 
-msgid "Are you sure you want to reboot the system?"
-msgstr "Doriți să reporniți sistemul acum?"
+msgid "Are you sure you want to reboot the server?"
+msgstr ""
 
-msgid "Are you sure you want to shutdown the system?"
-msgstr "Doriți să opriți sistemul acum?"
+msgid "Are you sure you want to shutdown the server?"
+msgstr ""
 
 msgid "Asynchronous I/O (AIO)"
 msgstr "Mod I/O Asincron (AIO)"
@@ -2318,8 +2321,8 @@ msgstr "Dezactivare completă manager fișiere."
 msgid "Disable firmware version check."
 msgstr "Dezactivare verificare versiune firmware."
 
-msgid "Disable speaker beep on startup and shutdown."
-msgstr "Dezactivare beep la pornire/oprire sistem."
+msgid "Disable speaker beep on startup and shutdowns."
+msgstr ""
 
 msgid "Disable the compression of repeated line."
 msgstr "Dezactivare compresie pentru linile repetate."
@@ -2382,6 +2385,12 @@ msgstr ""
 
 msgid ""
 "Do not erase the Master Boot Record (useful for some RAID controller cards)."
+msgstr ""
+
+#, php-format
+msgid ""
+"Do not let the server check for newer firmware versions when the %s page "
+"gets loaded."
 msgstr ""
 
 msgid ""
@@ -2995,8 +3004,8 @@ msgstr "Activare salvare atribute DOS"
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Activare protocol identificare (RFC1413)."
 
-msgid "Enable the system power control utility."
-msgstr "Activare sistem control alimentare."
+msgid "Enable the server power control utility."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Activare suport strict pentru standardul DLNA."
@@ -3393,6 +3402,9 @@ msgstr "Firmware"
 msgid "Firmware Check"
 msgstr "Verificare firmware"
 
+msgid "Firmware Update"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Eroare încărcare firmware (memorie insuficientă?)"
 
@@ -3674,6 +3686,9 @@ msgstr ""
 
 msgid "Help"
 msgstr "Asistență"
+
+msgid "Hiadaptive (High Performance)"
+msgstr ""
 
 msgid "Hide dot files"
 msgstr "Ascundere fișiere cu punct (dot files)"
@@ -4140,6 +4155,9 @@ msgstr "Interfețe"
 
 msgid "Internal Server Information"
 msgstr "Informații interne server"
+
+msgid "Internal Speaker"
+msgstr ""
 
 msgid "Internal UPS clock date"
 msgstr "Dată ceas intern UPS"
@@ -4747,6 +4765,9 @@ msgstr "MaxOutstandingR2T"
 msgid "MaxRecvDataSegmentLength"
 msgstr "MaxRecvDataSegmentLength"
 
+msgid "Maximum (Highest Performance)"
+msgstr ""
+
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr "Performanță maximă, nivel acustic maxim"
 
@@ -4861,6 +4882,9 @@ msgstr "Configurația MiniDLNA a fost actualizată."
 msgid "Minimum"
 msgstr "Minim"
 
+msgid "Minimum (Lowest Performance)"
+msgstr ""
+
 msgid "Minimum Free Space"
 msgstr ""
 
@@ -4887,8 +4911,8 @@ msgstr "Temperatură minimă (grade C)"
 msgid "Minutes"
 msgstr "Minute"
 
-msgid "Minutes between network time sync."
-msgstr "Minute între două sincronizări ale ceasului de rețea."
+msgid "Minutes between the next network time synchronization."
+msgstr ""
 
 msgid "Missing a temporary folder."
 msgstr "Lipsește un folder temporar."
@@ -6869,9 +6893,6 @@ msgstr "Împrăștiat"
 msgid "Sparse Volume"
 msgstr "Volum Imagine"
 
-msgid "Speaker Beep"
-msgstr "Bip difuzor"
-
 msgid ""
 "Specific Helium Level. The Helium, so says the literature, allows the drives "
 "to run cooler and quieter, and reduces power consumption. This is the status "
@@ -7941,11 +7962,9 @@ msgstr ""
 "speciale și adresarea cu IP pentru aceeași familie de adrese."
 
 msgid ""
-"The powerd utility monitors the system state and sets various power control "
+"The powerd utility monitors the server state and sets various power control "
 "options accordingly."
 msgstr ""
-"Utilitarul <b>powerd</b> monitorizează și stabilește diferite setări pentru "
-"controlul optim al alimentării sistemului."
 
 msgid "The queuedepth range is invalid."
 msgstr "Lungimea listei este incorectă."
@@ -7982,6 +8001,9 @@ msgstr ""
 "Serverul a revenit la setările implicite și va reporni în mod automat. "
 "Procesul poate dura 1-2 minute."
 
+msgid "The server is halting now. This may take one minute."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr "Serverul va reporni în mod automat după restaurarea configurației."
 
@@ -8000,9 +8022,6 @@ msgstr "Zona de stocare mapată la LUN%d."
 
 msgid "The subject of the email."
 msgstr "Subiectul emailului."
-
-msgid "The system is halting now. This may take one minute."
-msgstr "Sistemul se oprește. Durează aproximativ 1 minut."
 
 msgid "The system is rebooting now. This may take one minute."
 msgstr "Sistemul va reporni acum. Dureză aproximativ 1 minut."
@@ -8556,12 +8575,6 @@ msgstr ""
 "Permite redimensionarea de către server a imaginilor JPEG foarte mari, cu "
 "scăderea performanțelor (cel puțin) pentru produsele Sony DLNA."
 
-#, php-format
-msgid ""
-"This will cause %s not to check for newer firmware versions when the %s page "
-"is viewed."
-msgstr ""
-
 msgid "This will create a recycle bin on the share."
 msgstr ""
 "Această opțiune determină crearea unui Coș de Fișiere (recycle bin) în "
@@ -8610,6 +8623,9 @@ msgstr "Timp"
 
 msgid "Time Machine"
 msgstr "Time Machine"
+
+msgid "Time Synchronization"
+msgstr ""
 
 msgid "Time before the load will be rebooted"
 msgstr "Timpul pînă la repornirea sarcinii"
@@ -9571,7 +9587,7 @@ msgstr ""
 msgid "You must initialize data before enabling."
 msgstr "Va trebui să inițializați datele înainte de activare."
 
-msgid "You must reboot the system before you can upgrade the firmware"
+msgid "You must reboot the server before you can upgrade the firmware"
 msgstr ""
 
 msgid "You must select at least one authentication method."
@@ -9628,9 +9644,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "adaptive (low power consumption)"
-msgstr "adaptiv (consum redus de energie)"
-
 msgid "all encrypted disks are imported."
 msgstr "toate discurile criptate sînt importate."
 
@@ -9672,9 +9685,6 @@ msgstr "valoarea maximă punct de transfer tensiune înaltă"
 msgid "greatest settable low voltage transfer point"
 msgstr "valoarea maximă punct de transfer tensiune joasă"
 
-msgid "hiadaptive (high performance)"
-msgstr "superadaptiv (performanță maximă)"
-
 msgid "hour(s)"
 msgstr "oră(e)"
 
@@ -9708,12 +9718,6 @@ msgstr "eroare încărcare/descărcare."
 
 msgid "loader.conf"
 msgstr "loader.conf"
-
-msgid "maximum (highest performance)"
-msgstr "maxim (performanţă maximă)"
-
-msgid "minimum (power saving)"
-msgstr "minim (conservarea energiei)"
 
 msgid "minute(s)"
 msgstr "minut(e)"
@@ -9787,283 +9791,33 @@ msgstr ""
 msgid "version:"
 msgstr "versiune:"
 
-#~ msgid ""
-#~ "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
-#~ msgstr ""
-#~ "<div id='enumeration'><ul><li>%d - Data</li><li>%h - Nume "
-#~ "Sistem</li></ul></div>"
+#~ msgid "minimum (power saving)"
+#~ msgstr "minim (conservarea energiei)"
 
-#, php-format
-#~ msgid ""
-#~ "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
-#~ "of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
-#~ "or NTFS can result in unpredictable results, file corruption, and loss of "
-#~ "data!"
-#~ msgstr ""
-#~ "UFS (și variantele sale) reprezintă sistemul de fișiere NATIV pentru  "
-#~ "FreeBSD (sistemul sursă al %s). Utilizarea altor sisteme de fișiere gen FAT, "
-#~ "FAT32, EXT2, EXT3, sau NTFS poate produce rezultate nedorite (inclusiv "
-#~ "pierderi de date)!"
+#~ msgid "maximum (highest performance)"
+#~ msgstr "maxim (performanţă maximă)"
+
+#~ msgid "adaptive (low power consumption)"
+#~ msgstr "adaptiv (consum redus de energie)"
+
+#~ msgid "Minutes between network time sync."
+#~ msgstr "Minute între două sincronizări ale ceasului de rețea."
 
 #~ msgid ""
-#~ "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
-#~ "3.0.0 or newer, and the 'before' algorithm when talking to an older "
-#~ "rsync.</li><li>Before - File-deletions will be done before the transfer "
-#~ "starts.</li><li>During - File-deletions will be done incrementally as the "
-#~ "transfer happens.</li><li>Delay - File-deletions will be computed during the "
-#~ "transfer, and then removed after the transfer completes.</li><li>After - "
-#~ "File-deletions will be done after the transfer has completed.</li>"
+#~ "The powerd utility monitors the system state and sets various power control "
+#~ "options accordingly."
 #~ msgstr ""
-#~ "<li>Implicit - Rsync va alege algoritmul 'simultan' atunci când negociază cu "
-#~ "rsync v3.0.0 sau mai nou, și algoritmul 'anterior'  atunci când negociază cu "
-#~ "o versiune mai veche de rsync.</li><li>Anterior - Ştergerea fişierelor se "
-#~ "face înainte de începerea transferului.</li><li>Simultan - Ştergerea "
-#~ "fișierelor se face incremental, în cursul transferului.</li><li>Decalat- "
-#~ "Ştergerea fișierelor va fi analizată în timpul transferului, dar se va "
-#~ "efectua după terminarea transferului.</li><li>După - Ştergerea fișierelor se "
-#~ "va face după terminarea transferului.</li>"
+#~ "Utilitarul <b>powerd</b> monitorizează și stabilește diferite setări pentru "
+#~ "controlul optim al alimentării sistemului."
 
-#~ msgid ""
-#~ "<div id='enumeration'><ul><li>The new password is also the default root "
-#~ "password of the system!</li></ul></div>"
-#~ msgstr ""
-#~ "<div id='enumerare'><ul><li>Noua parolă este și parola implicită pentru "
-#~ "contul root al sistemului!</li></ul></div>"
+#~ msgid "hiadaptive (high performance)"
+#~ msgstr "superadaptiv (performanță maximă)"
 
-#~ msgid ""
-#~ "<b>EFI GPT partition</b> if you want to mount a GPT formatted drive "
-#~ "(<b>default partition</b>).<br/><b>MBR partition</b> if you want to mount a "
-#~ "UFS formatted drive or do imported disks from other OS.<br/><b>CD/DVD "
-#~ "volume</b> if you want to mount a CD/DVD volume."
-#~ msgstr ""
-#~ "<b>Partiție EFI GPT</b> dacă doriți să montați un disc formatat GPT "
-#~ "(<b>partiție implicită</b>).<br/><b>Partiție MBR </b> dacă doriți să montați "
-#~ "un disc formatat UFS sau un disc importat din alt SO.<br/><b>Volum "
-#~ "CD/DVD</b> dacă doriți să montați un volum CD/DVD."
+#~ msgid "Enable the system power control utility."
+#~ msgstr "Activare sistem control alimentare."
 
-#, php-format
-#~ msgid ""
-#~ "<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
-#~ "href='%s'>user</a> must have shell access."
-#~ msgstr ""
-#~ "Serviciul <a href='%s'>SSHD</a> trebuie să fie activat pentru ca Unison să "
-#~ "funcționeze, iar <a href='%s'>utilizatorul</a> trebuie să aibă acces la "
-#~ "shell."
+#~ msgid "Disable speaker beep on startup and shutdown."
+#~ msgstr "Dezactivare beep la pornire/oprire sistem."
 
-#, php-format
-#~ msgid ""
-#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
-#~ msgstr ""
-#~ "Eroare transmitere raport de stare. Verificați fișierul <a "
-#~ "href='%s'>jurnal</a>."
-
-#, php-format
-#~ msgid ""
-#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
-#~ msgstr ""
-#~ "Eroare transmitere email de test. Verificaţi fişierul <a "
-#~ "href='%s'>jurnal</a>."
-
-#, php-format
-#~ msgid ""
-#~ "Make sure you have already configured your <a href='%s'>Email</a> settings."
-#~ msgstr ""
-#~ "Verificați dacă ați configurat deja setările pentru <a href='%s'>Email</a>."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Auth Group. Please add new <a href='%s'>Auth Group</a> first."
-#~ msgstr ""
-#~ "Niciun Grup Autorizat configurat. Adăugați mai întîii un <a href='%s'>Grup "
-#~ "Autorizat</a>"
-
-#, php-format
-#~ msgid ""
-#~ "No configured CARP interfaces. Please add new <a href='%s'>CARP "
-#~ "interface</a> first."
-#~ msgstr ""
-#~ "Nu există nicio interfață CARP configurată. Adăugați mai întîi o <a "
-#~ "href='%s'>interfață CARP</a>"
-
-#~ msgid ""
-#~ "Set what user the service will run as (www by default). <br><b><font "
-#~ "color='red'>NOTE</font>: Running as root is <u>not recommended</u> for "
-#~ "security reasons, use it on your own risk!</b></br>"
-#~ msgstr ""
-#~ "Definește sub ce utilizator va rula serviciul (implicit www).<br><b><font "
-#~ "color='red'>NOTĂ</font>: Rularea ca utilizator root <u>nu este "
-#~ "recomandată</u> din motive de siguranță. Puteți rula totuși ca root pe "
-#~ "propria răspundere!</b></br>"
-
-#, php-format
-#~ msgid ""
-#~ "The driver used to connect with the LCD. The list of available <a href='%s' "
-#~ "target='_blank'>drivers</a>."
-#~ msgstr ""
-#~ "Driverul utilizat pentru LCD. Lista driverelor disponibile o găsiți <a "
-#~ "href='%s' target='_blank'>aici</a>."
-
-#, php-format
-#~ msgid ""
-#~ "This configuration settings are used to generate the ups.conf configuration "
-#~ "file which is required by the NUT UPS daemon. To get more information how to "
-#~ "configure your UPS please check the NUT (Network UPS Tools) <a href='%s' "
-#~ "target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Aceste setări sînt utilizate pentru generarea fișierului ups.conf care este "
-#~ "necesar funcționării daemonului NUT UPS. Pentru mai multe informații despre "
-#~ "cum puteți configura UPS-ul dumneavoastră verificați <a href='%s' "
-#~ "target='_blank'>documentația</a> NUT (Network UPS Tools)."
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about TCP Wrappers check the FreeBSD <a "
-#~ "href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Pentru informații suplimentare despre TCP Wrappers consultați <a href='%s' "
-#~ "target='_blank'>documentația</a> FreeBSD."
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about writing firewall rules check the FreeBSD "
-#~ "<a href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Pentru informații suplimentare despre scrierea regulilor pentru firewall "
-#~ "consultați <a href='%s' target='_blank'>documentația</a> FreeBSD."
-
-#, php-format
-#~ msgid ""
-#~ "To get more information how to configure LCDproc check the LCDproc <a "
-#~ "href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Pentru informații suplimentare privind configurarea LCDproc consultați <a "
-#~ "href='%s' target='_blank'>documentația</a> LCDproc."
-
-#, php-format
-#~ msgid ""
-#~ "To increase CIFS performance try the following:<div "
-#~ "id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' "
-#~ "switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a "
-#~ "href='%s'>Tuning</a>' switch</li></ul></div>"
-#~ msgstr ""
-#~ "Pentru a crește performanțele CIFS (Samba) puteți încerca următoarele:<div "
-#~ "id='enumeration'><ul><li>Activare Mod I/O Asincron (AIO)'</li><li>Activare "
-#~ "opțiune 'Scriere/Citire în pachete mari de date'</li><li>Activare opțiune "
-#~ "'<a href='%s'>Reglaj Fin</a>'</li></ul></div>"
-
-#, php-format
-#~ msgid ""
-#~ "You can't mount the partition '%s' where the config file is stored.<br />"
-#~ msgstr ""
-#~ "Nu puteți monta partiția '%s' unde este stocat fișierul de configurare.<br />"
-
-#, php-format
-#~ msgid ""
-#~ "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
-#~ "service to clients."
-#~ msgstr ""
-#~ "Trebuie să activați serviciul <a href='%s'>Zeroconf/Bonjour</a> pentru ca "
-#~ "serviciul iTunes/DAAP să fie vizibil către clienți."
-
-#, php-format
-#~ msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
-#~ msgstr "Consultați <a href='%s' target='_blank'>documentația</a>."
-
-#, php-format
-#~ msgid ""
-#~ "This will cause %s not to check for newer firmware versions when the <a "
-#~ "href='%s'>%s</a> page is viewed."
-#~ msgstr ""
-#~ "Această opțiune determină %s să nu mai verifice existența unor versiuni "
-#~ "actualizate de firmware la accesarea paginii <a href='%s'>%s</a>."
-
-#~ msgid ""
-#~ "You can also install a package via SSH or console using the the pkg add "
-#~ "command.<br />Example: pkg add packagename"
-#~ msgstr ""
-#~ "Puteți deasemenea să instalați pachete software via SSH sau de la consolă "
-#~ "folosind comanda ”pkg add”.<br />Exemplu: pkg add nume_pachet_software"
-
-#, php-format
-#~ msgid ""
-#~ "You must <a href='%s'>reboot</a> the system before you can upgrade the "
-#~ "firmware."
-#~ msgstr ""
-#~ "Va trebui să <a href='%s'>reporniți</a> sistemul înainte de actualizarea "
-#~ "firmware."
-
-#~ msgid "add any supplemental parameters"
-#~ msgstr "adăugați orice parametru suplimentar"
-
-#, php-format
-#~ msgid "Check <a href=\"%s\">System|General Setup</a> before initializing."
-#~ msgstr ""
-#~ "Verificați <a href=\"%s\">Sistem|Setări generale</a> înainte de inițializare."
-
-#~ msgid ""
-#~ "All data in the path is overwritten. To avoid invalid data/permission, using "
-#~ "empty UFS directory is recommended."
-#~ msgstr ""
-#~ "Toate datele din calea specificată vor fi suprascrise. Pentru a evita "
-#~ "date/permisiuni invalide se recomandă utilizarea folderelor UFS goale."
-
-#, php-format
-#~ msgid ""
-#~ "After you click &quot;Save&quot;, you must reboot the server to make the "
-#~ "changes take effect. You may also have to do one or more of the following "
-#~ "steps before you can access your server again: <ul><li><span "
-#~ "class='vexpl'>change the IP address of your server</span></li><li><span "
-#~ "class='vexpl'>access the webGUI with the new IP address</span></li></ul>"
-#~ msgstr ""
-#~ "După selectarea butonului &quot;Salvare&quot;, va trebui să reporniți "
-#~ "serverul pentru a activa modificările. Va mai trebui însă să parcurgeți și "
-#~ "următorii pași pentru a avea din nou acces la server:  <ul><li><span "
-#~ "class='vexpl'>modificați adresa IP a serverului "
-#~ "dumneavoastră</span></li><li><span class='vexpl'>accesați Interfața Grafică "
-#~ "folosind noua adresă IP</span></li></ul>"
-
-#, php-format
-#~ msgid ""
-#~ "After you click &quot;Save&quot;, you may also have to do one or more of the "
-#~ "following steps before you can access this server again: <ul><li>change the "
-#~ "IP address of your computer</li><li>access the webGUI with the new IP "
-#~ "address</li></ul>"
-#~ msgstr ""
-#~ "După selectarea butonului &quot;Salvare&quot;, va mai fi probabil necesar să "
-#~ "executați și următorii pași înainte de a putea accesa serverul din nou: "
-#~ "<ul><li>schimbați adresa IP a calculatorului dumneavoastră</li><li>accesați "
-#~ "Interfața Web cu noua adresă IP</li></ul>"
-
-#, php-format
-#~ msgid ""
-#~ "The driver used to communicate with your UPS. Get the list of available <a "
-#~ "href='%s' target='_blank'>drivers</a>."
-#~ msgstr ""
-#~ "Driverul utilizat pentru a comunica cu UPS-ul. Lista driverelor disponibile "
-#~ "o găsiți <a href='%s' target='_blank'>aici</a>."
-
-#, php-format
-#~ msgid ""
-#~ "DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-#~ "try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
-#~ "/>It is recommended that you <a href='%s'>Backup</a> the server "
-#~ "configuration before doing a upgrade."
-#~ msgstr ""
-#~ "NU ÎNTRERUPEȚI sub nicio formă procesul de actualizare.<br />NU ÎNCERCAȚI să "
-#~ "folosiți pentru actualizare alt tip de fișier înafară de cele de tipul '%s-"
-#~ "%s-embedded.img.xz'..<br />Vă recomandăm să faceți un <a "
-#~ "href='%s'>Backup</a> a configurației sistemului înainte de orice actualizare."
-
-#~ msgid ""
-#~ "This means that the firmware you flashed is not an official/supported "
-#~ "firmware and may lead to unexpected behavior or security compromises. Only "
-#~ "install firmwares that come from sources that you trust, and make sure that "
-#~ "the firmware has not been tampered with.<br /><br />Do you want to install "
-#~ "this firmware anyway (on your own risk)?"
-#~ msgstr ""
-#~ "Acest lucru înseamnă că versiunea de firmware pe care ați încărcat-o nu este "
-#~ "o versiune oficială/suportată, acest lucru putând conduce la probleme de "
-#~ "funcționare ale sistemului. Instalați versiuni firmware doar din surse "
-#~ "sigure și asigurați-vă că acestea nu au fost modificate în mod intenționat "
-#~ "de terțe persoane.<br /><br />Doriți să instalați totuși acestă versiune "
-#~ "firmware, pe riscul dumneavoastră?"
+#~ msgid "Speaker Beep"
+#~ msgstr "Bip difuzor"

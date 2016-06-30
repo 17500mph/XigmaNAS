@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-30 06:03+0000\n"
-"PO-Revision-Date: 2016-06-30 04:19+0000\n"
+"POT-Creation-Date: 2016-06-30 20:15+0000\n"
+"PO-Revision-Date: 2016-06-30 18:39+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-30 04:24+0000\n"
+"X-Launchpad-Export-Date: 2016-06-30 18:44+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -458,6 +458,9 @@ msgstr "Actief Gedeeld"
 
 msgid "Active Users"
 msgstr "Actieve Gebruikers"
+
+msgid "Adaptive (Low Power Consumption)"
+msgstr "adaptief (Laag Energieverbruik)"
 
 msgid "Add"
 msgstr "Toevoegen"
@@ -2370,7 +2373,7 @@ msgstr "Uitschakelen bestandsmanager."
 msgid "Disable firmware version check."
 msgstr "Uitschakelen firmware versie controle."
 
-msgid "Disable speaker beep on startup and shutdown."
+msgid "Disable speaker beep on startup and shutdowns."
 msgstr "Uitschakelen luidspreker piep tijdens het opstarten en afsluiten."
 
 msgid "Disable the compression of repeated line."
@@ -2437,6 +2440,13 @@ msgid ""
 msgstr ""
 "De Master Boot Record niet wissen (nuttig voor sommige RAID "
 "controllerkaarten)."
+
+#, php-format
+msgid ""
+"Do not let the server check for newer firmware versions when the %s page "
+"gets loaded."
+msgstr ""
+"Niet op nieuwere firmware versies controleren wanneer u de pagina %s bezoekt."
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -3070,8 +3080,8 @@ msgstr "Inschakelen opslaan van DOS attributen"
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Inschakelen van de ident protocol (RFC1413)."
 
-msgid "Enable the system power control utility."
-msgstr "Inschakelen systeem energiebeheer modus."
+msgid "Enable the server power control utility."
+msgstr "Inschakelen server energiebeheer modus."
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Inschakelen om zich strikt aan de DLNA-normen te houden."
@@ -3146,8 +3156,8 @@ msgid ""
 "Enter desired system time directly (format mm/dd/yyyy hh:mm) or use icon to "
 "select it."
 msgstr ""
-"Vul de gewenste systeemtijd direct in (formaat mm/dd/jjjj uu:mm) of gebruik "
-"het icoon om het te selecteren."
+"Vul een gewenste systeemtijd in (formaat mm/dd/jjjj uu:mm) of gebruik het "
+"icoon om te selecteren."
 
 msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
@@ -3752,6 +3762,9 @@ msgstr ""
 msgid "Help"
 msgstr "Help"
 
+msgid "Hiadaptive (High Performance)"
+msgstr "Hiadaptief"
+
 msgid "Hide dot files"
 msgstr "Verberg punt bestanden"
 
@@ -4219,6 +4232,9 @@ msgstr "Netwerk"
 
 msgid "Internal Server Information"
 msgstr "Interne Serverinformatie"
+
+msgid "Internal Speaker"
+msgstr "Interne Speaker"
 
 msgid "Internal UPS clock date"
 msgstr "Interne UPS klok datum"
@@ -4834,6 +4850,9 @@ msgstr "MaxOutstandingR2T"
 msgid "MaxRecvDataSegmentLength"
 msgstr "MaxRecvDataSegmentLength"
 
+msgid "Maximum (Highest Performance)"
+msgstr "Maximaal (Hoogste Prestaties)"
+
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr "Maximale Prestaties, Maximale Geluidsproductie"
 
@@ -4951,6 +4970,9 @@ msgstr "Minidlna configuratie is bijgewerkt."
 msgid "Minimum"
 msgstr "Minimaal"
 
+msgid "Minimum (Lowest Performance)"
+msgstr "Minimaal (Laagste Prestaties)"
+
 msgid "Minimum Free Space"
 msgstr "Minimale Vrije Ruimte"
 
@@ -4975,8 +4997,8 @@ msgstr "Minimum temperatuur gezien (graden C)"
 msgid "Minutes"
 msgstr "Minuten"
 
-msgid "Minutes between network time sync."
-msgstr "Aantal minuten tussen de netwerk tijdsynchronisatie's."
+msgid "Minutes between the next network time synchronization."
+msgstr "Het aantal minuten tot de volgende netwerk tijdsynchronisatie."
 
 msgid "Missing a temporary folder."
 msgstr "Een tijdelijke map ontbreekt."
@@ -6991,9 +7013,6 @@ msgstr "Sparse"
 msgid "Sparse Volume"
 msgstr "Sparse Volume"
 
-msgid "Speaker Beep"
-msgstr "Luidspreker Piep"
-
 msgid ""
 "Specific Helium Level. The Helium, so says the literature, allows the drives "
 "to run cooler and quieter, and reduces power consumption. This is the status "
@@ -8092,11 +8111,11 @@ msgstr ""
 "adressen op het zelfde adres familie."
 
 msgid ""
-"The powerd utility monitors the system state and sets various power control "
+"The powerd utility monitors the server state and sets various power control "
 "options accordingly."
 msgstr ""
-"De powerd tool monitort de staat van het systeem en bestuurd diverse "
-"energieopties om het energieverbruik om laag te brengen."
+"De powerd tool monitort de staat van de server en bestuurd diverse "
+"energieopties om het energieverbruik te besturen."
 
 msgid "The queuedepth range is invalid."
 msgstr "De queuedepth bereik is ongeldig."
@@ -8742,14 +8761,6 @@ msgstr ""
 "afbeeldingen, het kan de JPEG aanbied prestaties negatief beïnvloeden op "
 "(minstens) Sony DLNA producten."
 
-#, php-format
-msgid ""
-"This will cause %s not to check for newer firmware versions when the %s page "
-"is viewed."
-msgstr ""
-"%s niet laten controleren op een nieuwere firmware versie wanneer u de "
-"pagina %s bezoekt."
-
 msgid "This will create a recycle bin on the share."
 msgstr "Dit creëert een prullenbak op het gedeeld station."
 
@@ -8795,6 +8806,9 @@ msgstr "Tijd"
 
 msgid "Time Machine"
 msgstr "Time Machine"
+
+msgid "Time Synchronization"
+msgstr "Tijdsynchronisatie"
 
 msgid "Time before the load will be rebooted"
 msgstr "Tijd voordat de belasting opnieuw zal worden opgestart"
@@ -9838,9 +9852,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "adaptive (low power consumption)"
-msgstr "adaptieve (laag energieverbruik)"
-
 msgid "all encrypted disks are imported."
 msgstr "alle versleutelde schijven worden geïmporteerd."
 
@@ -9882,9 +9893,6 @@ msgstr "grootste instelbare hoogspanning overschakelpunt"
 msgid "greatest settable low voltage transfer point"
 msgstr "grootste instelbare laagspanning overschakelpunt"
 
-msgid "hiadaptive (high performance)"
-msgstr "hiadaptive (hoge prestaties)"
-
 msgid "hour(s)"
 msgstr "(u)ur(en)"
 
@@ -9918,12 +9926,6 @@ msgstr "load/unload mislukt."
 
 msgid "loader.conf"
 msgstr "loader.conf"
-
-msgid "maximum (highest performance)"
-msgstr "maximaal (hoogste prestaties)"
-
-msgid "minimum (power saving)"
-msgstr "minimum (energiebesparing)"
 
 msgid "minute(s)"
 msgstr "minu(u)t(en)"
@@ -9997,310 +9999,41 @@ msgstr "gebruiker"
 msgid "version:"
 msgstr "versie:"
 
-#, php-format
-#~ msgid ""
-#~ "<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
-#~ "href='%s'>user</a> must have shell access."
-#~ msgstr ""
-#~ "<a href='%s'>SSHD</a> moet ingeschakeld zijn om Unison te laten werken en de "
-#~ "<a href='%s'>gebruiker</a> heeft volledige shell toegang nodig."
+#~ msgid "Minutes between network time sync."
+#~ msgstr "Aantal minuten tussen de netwerk tijdsynchronisatie's."
 
 #~ msgid ""
-#~ "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
+#~ "The powerd utility monitors the system state and sets various power control "
+#~ "options accordingly."
 #~ msgstr ""
-#~ "<div id='enumeration'><ul><li>%d - Datum</li><li>%h - "
-#~ "Hostnaam</li></ul></div>"
+#~ "De powerd tool monitort de staat van het systeem en bestuurd diverse "
+#~ "energieopties om het energieverbruik om laag te brengen."
 
-#~ msgid ""
-#~ "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
-#~ "3.0.0 or newer, and the 'before' algorithm when talking to an older "
-#~ "rsync.</li><li>Before - File-deletions will be done before the transfer "
-#~ "starts.</li><li>During - File-deletions will be done incrementally as the "
-#~ "transfer happens.</li><li>Delay - File-deletions will be computed during the "
-#~ "transfer, and then removed after the transfer completes.</li><li>After - "
-#~ "File-deletions will be done after the transfer has completed.</li>"
-#~ msgstr ""
-#~ "<li>Default - Rsync zal het \"Tijdens“ algoritme kiezen tijdens communicatie "
-#~ "met rsync 3.0.0 of recenter en het \"voordien“ algoritme als het om een "
-#~ "oudere versie van rsync gaat.</li><li>Before - Bestand-verwijderingen van "
-#~ "bestanden zullen gewist zijn voor de overdracht plaats gevonden "
-#~ "heeft.</li><li>During - Bestand-verwijderingen van bestanden zullen "
-#~ "plaatsvinden naargelang de overdracht.</li><li>Delay - Bestand-"
-#~ "verwijderingen van bestanden zullen geïnventariseerd zijn tijdens de "
-#~ "overdracht, en wanner de overdracht klaar is gewist worden.</li><li>After - "
-#~ "Bestand-verwijdering van bestanden zullen gedaan worden als de overdracht "
-#~ "klaar is.</li>"
+#~ msgid "maximum (highest performance)"
+#~ msgstr "maximaal (hoogste prestaties)"
 
-#~ msgid "Are you sure you want to shutdown the system?"
-#~ msgstr "Weet u zeker dat u het systeem wilt uitschakelen?"
+#~ msgid "hiadaptive (high performance)"
+#~ msgstr "hiadaptive (hoge prestaties)"
+
+#~ msgid "adaptive (low power consumption)"
+#~ msgstr "adaptieve (laag energieverbruik)"
+
+#~ msgid "minimum (power saving)"
+#~ msgstr "minimum (energiebesparing)"
+
+#~ msgid "Disable speaker beep on startup and shutdown."
+#~ msgstr "Uitschakelen luidspreker piep tijdens het opstarten en afsluiten."
+
+#~ msgid "Enable the system power control utility."
+#~ msgstr "Inschakelen systeem energiebeheer modus."
+
+#~ msgid "Speaker Beep"
+#~ msgstr "Luidspreker Piep"
 
 #, php-format
 #~ msgid ""
-#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
-#~ msgstr ""
-#~ "Mislukt om het statusrapport te verzenden. Controleert u alstublieft de <a "
-#~ "href='%s'>log</a> bestanden."
-
-#, php-format
-#~ msgid ""
-#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
-#~ msgstr ""
-#~ "De test e-mail verzenden is mislukt. Controleer de <a href='%s'>log</a> "
-#~ "bestanden."
-
-#, php-format
-#~ msgid ""
-#~ "Make sure you have already configured your <a href='%s'>Email</a> settings."
-#~ msgstr ""
-#~ "Controleer dat u reeds de <a href='%s'>E-mail</a> instellingen "
-#~ "geconfigureerd heeft."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Auth Group. Please add new <a href='%s'>Auth Group</a> first."
-#~ msgstr ""
-#~ "Er is geen Auth Groep geconfigureerd. Voeg eerst een nieuwe <a "
-#~ "href='%s'>Auth Groep</a> toe."
-
-#, php-format
-#~ msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
-#~ msgstr "Bekijk de <a href='%s' target='_blank'>documentatie</a>."
-
-#, php-format
-#~ msgid ""
-#~ "The driver used to communicate with your UPS. Get the list of available <a "
-#~ "href='%s' target='_blank'>drivers</a>."
-#~ msgstr ""
-#~ "Het stuurprogramma dat gebruikt wordt om te communiceren met uw UPS. Bekijk "
-#~ "de lijst met beschikbare <a href='%s' target='_blank'>stuurprogramma's</a>."
-
-#~ msgid "The system is halting now. This may take one minute."
-#~ msgstr "Het systeem wordt nu gestopt. Dit kan ongeveer een minuut duren."
-
-#, php-format
-#~ msgid ""
-#~ "This will cause %s not to check for newer firmware versions when the <a "
-#~ "href='%s'>%s</a> page is viewed."
+#~ "This will cause %s not to check for newer firmware versions when the %s page "
+#~ "is viewed."
 #~ msgstr ""
 #~ "%s niet laten controleren op een nieuwere firmware versie wanneer u de "
-#~ "pagina <a href='%s'>%s</a>  bezoekt."
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about TCP Wrappers check the FreeBSD <a "
-#~ "href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Voor gedetailleerde informatie over TCP Wrappers bekijkt u de FreeBSD <a "
-#~ "href='%s' target='_blank'>documentatie</a>."
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about writing firewall rules check the FreeBSD "
-#~ "<a href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Bekijk voor gedetailleerde informatie over het schrijven van firewallregels "
-#~ "de FreeBSD <a href='%s' target='_blank'>documentatie</a>."
-
-#, php-format
-#~ msgid ""
-#~ "You can't mount the partition '%s' where the config file is stored.<br />"
-#~ msgstr ""
-#~ "U kunt de partitie '%s' waarop het configuratiebestand is opgeslagen niet "
-#~ "aankoppelen.<br />"
-
-#, php-format
-#~ msgid ""
-#~ "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
-#~ "service to clients."
-#~ msgstr ""
-#~ "U dient <a href='%s'>Zeroconf/Bonjour</a> in te schakelen om deze service "
-#~ "kenbaar te maken aan de werkstations."
-
-#~ msgid ""
-#~ "<b>EFI GPT partition</b> if you want to mount a GPT formatted drive "
-#~ "(<b>default partition</b>).<br/><b>MBR partition</b> if you want to mount a "
-#~ "UFS formatted drive or do imported disks from other OS.<br/><b>CD/DVD "
-#~ "volume</b> if you want to mount a CD/DVD volume."
-#~ msgstr ""
-#~ "<b>GPT partitie</b> als u een GPT geformatteerde harde schijf wilt "
-#~ "aankoppelen (<b>standaard partitie</b>).<br /><b>MBR partitie</b> als u een "
-#~ "UFS geformatteerde harde schijf wilt aankoppelen of een schijf importeert "
-#~ "uit een ander OS.<br/><b>CD/DVD volume</b> als u een CD/DVD volume wilt "
-#~ "aankoppelen."
-
-#, php-format
-#~ msgid ""
-#~ "The driver used to connect with the LCD. The list of available <a href='%s' "
-#~ "target='_blank'>drivers</a>."
-#~ msgstr ""
-#~ "De driver die gebruikt wordt om te verbinden met de LCD. De lijst met "
-#~ "beschikbare <a href='%s' target='_blank'>drivers</a>."
-
-#, php-format
-#~ msgid ""
-#~ "To get more information how to configure LCDproc check the LCDproc <a "
-#~ "href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Voor meer informatie om LCDproc te configureren, bekijk de LCDproc:  <a "
-#~ "href='%s' target='_blank'>documentatie</a>."
-
-#, php-format
-#~ msgid ""
-#~ "No configured CARP interfaces. Please add new <a href='%s'>CARP "
-#~ "interface</a> first."
-#~ msgstr ""
-#~ "Er zijn geen CARP netwerken geconfigureerd. U dient eerst een nieuw <a "
-#~ "href='%s'>CARP netwerk</a> toe te voegen."
-
-#~ msgid ""
-#~ "Set what user the service will run as (www by default). <br><b><font "
-#~ "color='red'>NOTE</font>: Running as root is <u>not recommended</u> for "
-#~ "security reasons, use it on your own risk!</b></br>"
-#~ msgstr ""
-#~ "Selecteer als welke gebruiker de service uitgevoerd zal worden (standaard "
-#~ "www).  <br><b><font color='red'>Waarschuwing</font>: Als root uitvoeren "
-#~ "is<u> niet aanbevolen</u> vanwege beveiligings redenen, uitvoeren als root "
-#~ "is geheel voor eigen risico!</b></br>"
-
-#, php-format
-#~ msgid ""
-#~ "After you click &quot;Save&quot;, you must reboot the server to make the "
-#~ "changes take effect. You may also have to do one or more of the following "
-#~ "steps before you can access your server again: <ul><li><span "
-#~ "class='vexpl'>change the IP address of your server</span></li><li><span "
-#~ "class='vexpl'>access the webGUI with the new IP address</span></li></ul>"
-#~ msgstr ""
-#~ "Na gebruik van de knop &quot;Opslaan&quot; moet u de server herstarten om de "
-#~ "veranderingen door te voeren. Mogelijk moeten ook één van de volgende "
-#~ "stappen uitgevoerd worden, om opnieuw toegang tot uw server te krijgen: "
-#~ "<ul><li><span class='vexpl'>Verander het IP-adres van uw "
-#~ "computer</span></li><li><span class='vexpl'>Open de WebGUI met het nieuwe IP-"
-#~ "adres</span></li></ul>"
-
-#~ msgid ""
-#~ "<div id='enumeration'><ul><li>The new password is also the default root "
-#~ "password of the system!</li></ul></div>"
-#~ msgstr ""
-#~ "<div id='enumeration'><ul><li>Het nieuwe wachtwoord is ook de standaard root "
-#~ "wachtwoord van het systeem!</li></ul></div>"
-
-#, php-format
-#~ msgid ""
-#~ "After you click &quot;Save&quot;, you may also have to do one or more of the "
-#~ "following steps before you can access this server again: <ul><li>change the "
-#~ "IP address of your computer</li><li>access the webGUI with the new IP "
-#~ "address</li></ul>"
-#~ msgstr ""
-#~ "Na gebruik van de knop &quot;Opslaan&quot;, moet u mogelijk ook één van de "
-#~ "volgende stappen uitvoeren om opnieuw toegang tot deze server te krijgen: "
-#~ "<ul><li>Verander het IP-adres van uw computer</li><li>Open de webGUI met het "
-#~ "nieuwe IP-adres</li></ul>"
-
-#~ msgid "Are you sure you want to reboot the system?"
-#~ msgstr "Weet u zeker dat u de server wilt herstarten?"
-
-#, php-format
-#~ msgid ""
-#~ "This configuration settings are used to generate the ups.conf configuration "
-#~ "file which is required by the NUT UPS daemon. To get more information how to "
-#~ "configure your UPS please check the NUT (Network UPS Tools) <a href='%s' "
-#~ "target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Deze configuratie opties zijn gebruikt om de ups.conf configuratiebestand te "
-#~ "genereren welke nodig is voor de NUT UPS daemon. Om meer informatie te "
-#~ "krijgen hoe u uw UPS configureerd, bekijkt u dan de NUT (Network UPS Tools) "
-#~ "<a href='%s' target='_blank'>documentatie</a>."
-
-#~ msgid ""
-#~ "You can also install a package via SSH or console using the the pkg add "
-#~ "command.<br />Example: pkg add packagename"
-#~ msgstr ""
-#~ "U kunt een pakket installeren via SSH of de console door gebruik te maken "
-#~ "van de pkg_add opdracht.<br />Voorbeeld: pkg_add pakketnaam"
-
-#~ msgid "add any supplemental parameters"
-#~ msgstr "Voeg hier eventuele aanvullende parameters toe"
-
-#, php-format
-#~ msgid "Check <a href=\"%s\">System|General Setup</a> before initializing."
-#~ msgstr ""
-#~ "Controleer <a href=\"%s\">System|General Setup</a> alvorens te initialiseren."
-
-#, php-format
-#~ msgid ""
-#~ "To increase CIFS performance try the following:<div "
-#~ "id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' "
-#~ "switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a "
-#~ "href='%s'>Tuning</a>' switch</li></ul></div>"
-#~ msgstr ""
-#~ "Om de CIFS prestaties te verhogen kunt u het volgende proberen:<div "
-#~ "id='enumeration'><ul><li>Inschakelen 'Asynchronous I/O "
-#~ "(AIO)'</li><li>Inschakelen 'Groot lezen/schrijven'</li><li>Inschakelen  '<a "
-#~ "href='%s'>Optimalisatie</a>'</li></ul></div>"
-
-#~ msgid ""
-#~ "This means that the firmware you flashed is not an official/supported "
-#~ "firmware and may lead to unexpected behavior or security compromises. Only "
-#~ "install firmwares that come from sources that you trust, and make sure that "
-#~ "the firmware has not been tampered with.<br /><br />Do you want to install "
-#~ "this firmware anyway (on your own risk)?"
-#~ msgstr ""
-#~ "Dit betekent dat het firmware bestand dat u wilt gebruiken geen "
-#~ "officieel/ondersteund firmware bestand is en dat dit kan leiden tot een "
-#~ "onverwacht systeemgedrag of een beveiligingsrisico. Installeer uitsluitend "
-#~ "firmware bestanden die afkomstig zijn uit betrouwbare bronnen, en zorgt u "
-#~ "ervoor dat er niets veranderd is aan/in de firmware.<br /><br />Wilt u het "
-#~ "firmware bestand toch installeren (Dit is op eigen risico)?"
-
-#, php-format
-#~ msgid ""
-#~ "DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-#~ "try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
-#~ "/>It is recommended that you <a href='%s'>Backup</a> the server "
-#~ "configuration before doing a upgrade."
-#~ msgstr ""
-#~ "Breek de firmware update procedure niet af nadat deze is gestart.<br "
-#~ "/>Probeer geen andere bestanden te flashen dan alleen een geldig '%s-%s-"
-#~ "embedded.img.xz' bestand.<br />Het is aanbevolen eerst een <a "
-#~ "href='%s'>Backup</a> van de huidige configuratie te maken, alvorens de "
-#~ "firmware update uit te voeren."
-
-#~ msgid ""
-#~ "All data in the path is overwritten. To avoid invalid data/permission, using "
-#~ "empty UFS directory is recommended."
-#~ msgstr ""
-#~ "Alle data in de locatie wordt overschreven. Om ongeldige data/permissies te "
-#~ "vermijden, gebruik van een lege UFS bestand is ten sterkste aanbevolen."
-
-#, php-format
-#~ msgid ""
-#~ "You must <a href='%s'>reboot</a> the system before you can upgrade the "
-#~ "firmware."
-#~ msgstr ""
-#~ "U moet het systeem <a href='%s'>herstarten</a> voordat u de firmware kunt "
-#~ "upgraden."
-
-#, php-format
-#~ msgid ""
-#~ "The driver used to communicate with your second UPS. Get the list of "
-#~ "available <a href='%s' target='_blank'>drivers</a>."
-#~ msgstr ""
-#~ "Het stuurprogramma dat gebruikt wordt om te communiceren met uw tweede UPS. "
-#~ "Bekijk de lijst met beschikbare <a href='%s' "
-#~ "target='_blank'>stuurprogramma's</a>."
-
-#, php-format
-#~ msgid ""
-#~ "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
-#~ "of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
-#~ "or NTFS can result in unpredictable results, file corruption, and loss of "
-#~ "data!"
-#~ msgstr ""
-#~ "UFS en zijn varianten zijn de ORIGINELE bestandsformaten van FreeBSD (Het "
-#~ "onderliggende OS van %s). Een poging tot het gebruik van andere "
-#~ "bestandsformaten als FAT, FAT32, EXT2, EXT3, of NTFS kan onvoorspelbare "
-#~ "resultaten opleveren zoals bestandsbeschadiging en/of verlies van gegevens!"
-
-#~ msgid "You must reboot the system before you can upgrade the firmware"
-#~ msgstr ""
-#~ "U moet de server eerst opnieuw opstarten voordat u de firmware kunt upgraden."
+#~ "pagina %s bezoekt."

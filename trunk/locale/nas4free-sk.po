@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-30 00:10+0000\n"
+"POT-Creation-Date: 2016-06-30 20:15+0000\n"
 "PO-Revision-Date: 2016-06-26 11:18+0000\n"
 "Last-Translator: Lukas Vescicik <lukas.vescicik@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-29 22:57+0000\n"
+"X-Launchpad-Export-Date: 2016-06-30 18:45+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: SLOVAKIA\n"
 "Language: \n"
@@ -413,6 +413,9 @@ msgid "Active Shares"
 msgstr ""
 
 msgid "Active Users"
+msgstr ""
+
+msgid "Adaptive (Low Power Consumption)"
 msgstr ""
 
 msgid "Add"
@@ -819,11 +822,11 @@ msgstr "Archivačný režim"
 msgid "Are you sure you want to proceed?"
 msgstr "Ste si istý, že chcete pokračovať?"
 
-msgid "Are you sure you want to reboot the system?"
-msgstr "Ste si istý, že chcete reštartovať systém?"
+msgid "Are you sure you want to reboot the server?"
+msgstr ""
 
-msgid "Are you sure you want to shutdown the system?"
-msgstr "Ste si istý, že chcete zastaviť systém?"
+msgid "Are you sure you want to shutdown the server?"
+msgstr ""
 
 msgid "Asynchronous I/O (AIO)"
 msgstr ""
@@ -2177,7 +2180,7 @@ msgstr ""
 msgid "Disable firmware version check."
 msgstr ""
 
-msgid "Disable speaker beep on startup and shutdown."
+msgid "Disable speaker beep on startup and shutdowns."
 msgstr ""
 
 msgid "Disable the compression of repeated line."
@@ -2239,6 +2242,12 @@ msgstr ""
 
 msgid ""
 "Do not erase the Master Boot Record (useful for some RAID controller cards)."
+msgstr ""
+
+#, php-format
+msgid ""
+"Do not let the server check for newer firmware versions when the %s page "
+"gets loaded."
 msgstr ""
 
 msgid ""
@@ -2846,7 +2855,7 @@ msgstr "Zapnúť ukladanie DOS atribútov."
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Zapnúť protokol ident (RFC1413)."
 
-msgid "Enable the system power control utility."
+msgid "Enable the server power control utility."
 msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
@@ -3230,6 +3239,9 @@ msgstr "Firmvér"
 msgid "Firmware Check"
 msgstr ""
 
+msgid "Firmware Update"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr ""
 
@@ -3493,6 +3505,9 @@ msgstr ""
 
 msgid "Help"
 msgstr "Pomocník"
+
+msgid "Hiadaptive (High Performance)"
+msgstr ""
 
 msgid "Hide dot files"
 msgstr "Skryť súbory s bodkou"
@@ -3929,6 +3944,9 @@ msgid "Interfaces"
 msgstr "Rozhrania"
 
 msgid "Internal Server Information"
+msgstr ""
+
+msgid "Internal Speaker"
 msgstr ""
 
 msgid "Internal UPS clock date"
@@ -4504,6 +4522,9 @@ msgstr ""
 msgid "MaxRecvDataSegmentLength"
 msgstr ""
 
+msgid "Maximum (Highest Performance)"
+msgstr ""
+
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr ""
 
@@ -4613,6 +4634,9 @@ msgstr ""
 msgid "Minimum"
 msgstr "Minimum"
 
+msgid "Minimum (Lowest Performance)"
+msgstr ""
+
 msgid "Minimum Free Space"
 msgstr ""
 
@@ -4637,8 +4661,8 @@ msgstr ""
 msgid "Minutes"
 msgstr ""
 
-msgid "Minutes between network time sync."
-msgstr "Interval medzi synchronizáciou času zo siete."
+msgid "Minutes between the next network time synchronization."
+msgstr ""
 
 msgid "Missing a temporary folder."
 msgstr ""
@@ -6573,9 +6597,6 @@ msgstr ""
 msgid "Sparse Volume"
 msgstr ""
 
-msgid "Speaker Beep"
-msgstr ""
-
 msgid ""
 "Specific Helium Level. The Helium, so says the literature, allows the drives "
 "to run cooler and quieter, and reduces power consumption. This is the status "
@@ -7561,11 +7582,9 @@ msgid ""
 msgstr ""
 
 msgid ""
-"The powerd utility monitors the system state and sets various power control "
+"The powerd utility monitors the server state and sets various power control "
 "options accordingly."
 msgstr ""
-"Nástroj powerd monitoruje stav systému a nastavuje podľa toho rôzne voľby "
-"riadenia napájania."
 
 msgid "The queuedepth range is invalid."
 msgstr ""
@@ -7599,6 +7618,9 @@ msgid ""
 "take one minute."
 msgstr ""
 
+msgid "The server is halting now. This may take one minute."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr ""
 
@@ -7617,9 +7639,6 @@ msgstr ""
 
 msgid "The subject of the email."
 msgstr "Predmet emailu."
-
-msgid "The system is halting now. This may take one minute."
-msgstr "Systém sa teraz zastavuje. To môže minútu trvať."
 
 msgid "The system is rebooting now. This may take one minute."
 msgstr "Systém sa teraz reštartuje. To môže minútu trvať."
@@ -8130,12 +8149,6 @@ msgid ""
 "hurt JPEG serving performance on (at least) Sony DLNA products."
 msgstr ""
 
-#, php-format
-msgid ""
-"This will cause %s not to check for newer firmware versions when the %s page "
-"is viewed."
-msgstr ""
-
 msgid "This will create a recycle bin on the share."
 msgstr "Týmto sa na disku vytvorí odpadkový kôš."
 
@@ -8175,6 +8188,9 @@ msgid "Time"
 msgstr "Čas"
 
 msgid "Time Machine"
+msgstr ""
+
+msgid "Time Synchronization"
 msgstr ""
 
 msgid "Time before the load will be rebooted"
@@ -9085,7 +9101,7 @@ msgstr ""
 msgid "You must initialize data before enabling."
 msgstr ""
 
-msgid "You must reboot the system before you can upgrade the firmware"
+msgid "You must reboot the server before you can upgrade the firmware"
 msgstr ""
 
 msgid "You must select at least one authentication method."
@@ -9138,9 +9154,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "adaptive (low power consumption)"
-msgstr ""
-
 msgid "all encrypted disks are imported."
 msgstr ""
 
@@ -9180,9 +9193,6 @@ msgstr ""
 msgid "greatest settable low voltage transfer point"
 msgstr ""
 
-msgid "hiadaptive (high performance)"
-msgstr ""
-
 msgid "hour(s)"
 msgstr ""
 
@@ -9215,12 +9225,6 @@ msgid "load/unload failed."
 msgstr ""
 
 msgid "loader.conf"
-msgstr ""
-
-msgid "maximum (highest performance)"
-msgstr ""
-
-msgid "minimum (power saving)"
 msgstr ""
 
 msgid "minute(s)"
@@ -9295,99 +9299,12 @@ msgstr ""
 msgid "version:"
 msgstr ""
 
-#~ msgid ""
-#~ "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
-#~ "3.0.0 or newer, and the 'before' algorithm when talking to an older "
-#~ "rsync.</li><li>Before - File-deletions will be done before the transfer "
-#~ "starts.</li><li>During - File-deletions will be done incrementally as the "
-#~ "transfer happens.</li><li>Delay - File-deletions will be computed during the "
-#~ "transfer, and then removed after the transfer completes.</li><li>After - "
-#~ "File-deletions will be done after the transfer has completed.</li>"
-#~ msgstr ""
-#~ "<li>Štandardne - Rsync vyberie algoritmus „počas” pri komunikácii s rsync "
-#~ "3.0.0 alebo novším a algoritmus „pred” pri komunikácii so starším "
-#~ "rsync.</li><li>Pred - Zmazanie súborov sa vykoná pred začatím "
-#~ "prenosu.</li><li>Počas - Zmazanie súborov sa vykoná postupne počas "
-#~ "prenosu.</li><li>Oneskorené - Zmazanie súborov sa vypočíta pred začatím "
-#~ "prenosu a vykoná sa po dokončení prenosu.</li><li>Po - Zmazanie súborov sa "
-#~ "vykoná po dokončení prenosu.</li>"
+#~ msgid "Minutes between network time sync."
+#~ msgstr "Interval medzi synchronizáciou času zo siete."
 
-#, php-format
 #~ msgid ""
-#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
+#~ "The powerd utility monitors the system state and sets various power control "
+#~ "options accordingly."
 #~ msgstr ""
-#~ "Nepodarilo sa odoslať správu o stave. Prosím, skontrolujte <a "
-#~ "href='%s'>záznamy</a>."
-
-#, php-format
-#~ msgid ""
-#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
-#~ msgstr ""
-#~ "Nepodarilo sa odoslať testovací email. Prosím, skontrolujte <a "
-#~ "href='%s'>záznamy</a>."
-
-#, php-format
-#~ msgid ""
-#~ "Make sure you have already configured your <a href='%s'>Email</a> settings."
-#~ msgstr ""
-#~ "Uistite sa, že ste už upravili svoje nastavenia <a href='%s'>emailu</a>."
-
-#, php-format
-#~ msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
-#~ msgstr "Prosím, pozrite si <a href='%s' target='_blank'>dokumentáciu</a>."
-
-#, php-format
-#~ msgid ""
-#~ "The driver used to communicate with your UPS. Get the list of available <a "
-#~ "href='%s' target='_blank'>drivers</a>."
-#~ msgstr ""
-#~ "Ovládač komunikoval s vašim UPS. Stiahnuť zoznam dostupných <a href='%s' "
-#~ "target='_blank'>ovládačov</a>."
-
-#, php-format
-#~ msgid ""
-#~ "This configuration settings are used to generate the ups.conf configuration "
-#~ "file which is required by the NUT UPS daemon. To get more information how to "
-#~ "configure your UPS please check the NUT (Network UPS Tools) <a href='%s' "
-#~ "target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Tieto konfiguračné nastavenia slúžia na vygenerovanie konfiguračného súboru "
-#~ "ups.conf, ktorý vyžaduje démon NUT UPS. Ďalšie informácie informácií ako "
-#~ "nakonfigurovať váš UPS nájdete v <a href='%s' "
-#~ "target='_blank'>dokumentácii</a> NUT (Network UPS Tools)."
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about TCP Wrappers check the FreeBSD <a "
-#~ "href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Podrobné informácie o TCP Wrappers nájdete v <a href='%s' "
-#~ "target='_blank'>dokumentácii</a> FreeBSD."
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about writing firewall rules check the FreeBSD "
-#~ "<a href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Podrobné informácie o písaní pravidiel firewallu nájdete v <a href='%s' "
-#~ "target='_blank'>dokumentácii</a> FreeBSD."
-
-#, php-format
-#~ msgid ""
-#~ "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
-#~ "of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
-#~ "or NTFS can result in unpredictable results, file corruption, and loss of "
-#~ "data!"
-#~ msgstr ""
-#~ "UFS a varianty sú NATÍVNY formát súborového systému FreeBSD (OS, na ktorom "
-#~ "je založený %s). Pokus o použitie incýh súborových systémov ako FAT, FAT32, "
-#~ "EXT2, EXT3, alebo NTFS môže znamenať nepredvídateľné následky, poškodenie "
-#~ "súborov a stratu dát!"
-
-#, php-format
-#~ msgid ""
-#~ "<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
-#~ "href='%s'>user</a> must have shell access."
-#~ msgstr ""
-#~ "<a href='%s'>SSHD</a> musí byť povolený aby Unison fungoval, a <a "
-#~ "href='%s'>Používaťeľ</a> musí mať prístupové práva f príkazovému riadku.."
+#~ "Nástroj powerd monitoruje stav systému a nastavuje podľa toho rôzne voľby "
+#~ "riadenia napájania."

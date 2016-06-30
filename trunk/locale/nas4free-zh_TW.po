@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-30 00:10+0000\n"
+"POT-Creation-Date: 2016-06-30 20:15+0000\n"
 "PO-Revision-Date: 2016-03-03 17:10+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-29 22:57+0000\n"
+"X-Launchpad-Export-Date: 2016-06-30 18:45+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -392,6 +392,9 @@ msgstr "啟用的分享區"
 
 msgid "Active Users"
 msgstr "啟用的使用者"
+
+msgid "Adaptive (Low Power Consumption)"
+msgstr ""
 
 msgid "Add"
 msgstr "新增"
@@ -785,11 +788,11 @@ msgstr "歸檔模式"
 msgid "Are you sure you want to proceed?"
 msgstr "您確定要繼續進行？"
 
-msgid "Are you sure you want to reboot the system?"
-msgstr "您確定要重新啟動系統？"
+msgid "Are you sure you want to reboot the server?"
+msgstr ""
 
-msgid "Are you sure you want to shutdown the system?"
-msgstr "您確定要關閉系統？"
+msgid "Are you sure you want to shutdown the server?"
+msgstr ""
 
 msgid "Asynchronous I/O (AIO)"
 msgstr "異步 I/O (AIO)"
@@ -2125,7 +2128,7 @@ msgstr ""
 msgid "Disable firmware version check."
 msgstr ""
 
-msgid "Disable speaker beep on startup and shutdown."
+msgid "Disable speaker beep on startup and shutdowns."
 msgstr ""
 
 msgid "Disable the compression of repeated line."
@@ -2187,6 +2190,12 @@ msgstr ""
 
 msgid ""
 "Do not erase the Master Boot Record (useful for some RAID controller cards)."
+msgstr ""
+
+#, php-format
+msgid ""
+"Do not let the server check for newer firmware versions when the %s page "
+"gets loaded."
 msgstr ""
 
 msgid ""
@@ -2781,7 +2790,7 @@ msgstr "啟用 DOS 屬性儲存"
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "啟用 ident 協議（RFC1413）。"
 
-msgid "Enable the system power control utility."
+msgid "Enable the server power control utility."
 msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
@@ -3151,6 +3160,9 @@ msgstr "韌體"
 msgid "Firmware Check"
 msgstr ""
 
+msgid "Firmware Update"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr "固件上傳失敗（內存不足？）"
 
@@ -3413,6 +3425,9 @@ msgstr ""
 
 msgid "Help"
 msgstr "說明"
+
+msgid "Hiadaptive (High Performance)"
+msgstr ""
 
 msgid "Hide dot files"
 msgstr "隱藏以點開頭的檔案"
@@ -3838,6 +3853,9 @@ msgstr "網路介面"
 
 msgid "Internal Server Information"
 msgstr "內部伺服器信息"
+
+msgid "Internal Speaker"
+msgstr ""
 
 msgid "Internal UPS clock date"
 msgstr "UPS 內部時鐘的日期"
@@ -4400,6 +4418,9 @@ msgstr "MaxOutstandingR2T"
 msgid "MaxRecvDataSegmentLength"
 msgstr "MaxRecvDataSegmentLength"
 
+msgid "Maximum (Highest Performance)"
+msgstr ""
+
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr ""
 
@@ -4509,6 +4530,9 @@ msgstr ""
 msgid "Minimum"
 msgstr "最小值"
 
+msgid "Minimum (Lowest Performance)"
+msgstr ""
+
 msgid "Minimum Free Space"
 msgstr ""
 
@@ -4533,8 +4557,8 @@ msgstr "最低氣溫（攝氏度）"
 msgid "Minutes"
 msgstr "分鐘"
 
-msgid "Minutes between network time sync."
-msgstr "多少分鐘進行一次校時。"
+msgid "Minutes between the next network time synchronization."
+msgstr ""
 
 msgid "Missing a temporary folder."
 msgstr "遺失了一個暫存檔案夾。"
@@ -6431,9 +6455,6 @@ msgstr "稀疏"
 msgid "Sparse Volume"
 msgstr "稀疏卷（Sparse Volume）"
 
-msgid "Speaker Beep"
-msgstr ""
-
 msgid ""
 "Specific Helium Level. The Helium, so says the literature, allows the drives "
 "to run cooler and quieter, and reduces power consumption. This is the status "
@@ -7394,9 +7415,9 @@ msgstr ""
 "address）），用'0.0.0.0:3260' 和/或 '[::]:3260'。不要在同一地址族混合使用通配地址和其他 IP 地址。"
 
 msgid ""
-"The powerd utility monitors the system state and sets various power control "
+"The powerd utility monitors the server state and sets various power control "
 "options accordingly."
-msgstr "電源監控程式（powerd）會監控系統的整體狀態並相應地設置相關的電源控制項目。"
+msgstr ""
 
 msgid "The queuedepth range is invalid."
 msgstr "該佇列深度（queuedepth）範圍無效。"
@@ -7430,6 +7451,9 @@ msgid ""
 "take one minute."
 msgstr "伺服器已被重置到出廠默認設置，現在重新啟動。這可能需要一分鐘的時間。"
 
+msgid "The server is halting now. This may take one minute."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr "還原配置後，伺服器將重新啟動。"
 
@@ -7448,9 +7472,6 @@ msgstr "儲存區域映射到 LUN%d 。"
 
 msgid "The subject of the email."
 msgstr "電子郵件的主題。"
-
-msgid "The system is halting now. This may take one minute."
-msgstr "系統關閉中，可能需要一分鐘的時間..."
 
 msgid "The system is rebooting now. This may take one minute."
 msgstr "系統重新啟動中，可能需要一分鐘的時間..."
@@ -7899,12 +7920,6 @@ msgid ""
 "hurt JPEG serving performance on (at least) Sony DLNA products."
 msgstr ""
 
-#, php-format
-msgid ""
-"This will cause %s not to check for newer firmware versions when the %s page "
-"is viewed."
-msgstr ""
-
 msgid "This will create a recycle bin on the share."
 msgstr "在分享區創建回收站。"
 
@@ -7943,6 +7958,9 @@ msgstr "時間"
 
 msgid "Time Machine"
 msgstr "Time Machine"
+
+msgid "Time Synchronization"
+msgstr ""
 
 msgid "Time before the load will be rebooted"
 msgstr "負載將重新啟動之前的時間"
@@ -8831,7 +8849,7 @@ msgstr "要使用iSCSI目標的話，您必須有至少%d MiB RAM。"
 msgid "You must initialize data before enabling."
 msgstr "啟用之前，必須先初始化數據。"
 
-msgid "You must reboot the system before you can upgrade the firmware"
+msgid "You must reboot the server before you can upgrade the firmware"
 msgstr ""
 
 msgid "You must select at least one authentication method."
@@ -8884,9 +8902,6 @@ msgstr "ZFS 卷的容量。要指定的容量大小使用以下後綴（例如 '
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "adaptive (low power consumption)"
-msgstr "自適應（低耗電量）"
-
 msgid "all encrypted disks are imported."
 msgstr "已经導入所有加密磁盤。"
 
@@ -8926,9 +8941,6 @@ msgstr "最大可設定高電壓轉換點"
 msgid "greatest settable low voltage transfer point"
 msgstr "最大可設置的低電壓轉換點"
 
-msgid "hiadaptive (high performance)"
-msgstr "高自適應（hiadaptive）（高性能）"
-
 msgid "hour(s)"
 msgstr "小時"
 
@@ -8962,12 +8974,6 @@ msgstr "加載/卸載失敗。"
 
 msgid "loader.conf"
 msgstr "loader.conf"
-
-msgid "maximum (highest performance)"
-msgstr "最大（最高性能）"
-
-msgid "minimum (power saving)"
-msgstr "最低（省電）"
 
 msgid "minute(s)"
 msgstr "分"
@@ -9041,205 +9047,22 @@ msgstr ""
 msgid "version:"
 msgstr "版本："
 
-#, php-format
-#~ msgid ""
-#~ "The driver used to communicate with your UPS. Get the list of available <a "
-#~ "href='%s' target='_blank'>drivers</a>."
-#~ msgstr "用來與 UPS 通訊的驅動程式。取得可用的<a href='%s' target='_blank'>驅動程式</a> 清單。"
+#~ msgid "Minutes between network time sync."
+#~ msgstr "多少分鐘進行一次校時。"
 
 #~ msgid ""
-#~ "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
-#~ msgstr ""
-#~ "<div id='enumeration'><ul><li>%d - 日期</li><li>%h - 主機名</li></ul></div>"
+#~ "The powerd utility monitors the system state and sets various power control "
+#~ "options accordingly."
+#~ msgstr "電源監控程式（powerd）會監控系統的整體狀態並相應地設置相關的電源控制項目。"
 
-#, php-format
-#~ msgid ""
-#~ "Make sure you have already configured your <a href='%s'>Email</a> settings."
-#~ msgstr "請確認您是否已經設定好<a href='%s'>電郵</a>資訊了。"
+#~ msgid "adaptive (low power consumption)"
+#~ msgstr "自適應（低耗電量）"
 
-#, php-format
-#~ msgid ""
-#~ "No configured CARP interfaces. Please add new <a href='%s'>CARP "
-#~ "interface</a> first."
-#~ msgstr "尚未配置 CARP 介面。請先添加新的<a href='%s'>CARP介面</a>。"
+#~ msgid "hiadaptive (high performance)"
+#~ msgstr "高自適應（hiadaptive）（高性能）"
 
-#~ msgid ""
-#~ "Set what user the service will run as (www by default). <br><b><font "
-#~ "color='red'>NOTE</font>: Running as root is <u>not recommended</u> for "
-#~ "security reasons, use it on your own risk!</b></br>"
-#~ msgstr ""
-#~ "設置服務由哪些戶口運行（默認為 www）。<br><b><font color='red'>注意</font>：為了安全起見，<u>不推薦</u> 以 "
-#~ "root 運行，請自行承擔風險！</b></br>"
+#~ msgid "maximum (highest performance)"
+#~ msgstr "最大（最高性能）"
 
-#, php-format
-#~ msgid ""
-#~ "The driver used to connect with the LCD. The list of available <a href='%s' "
-#~ "target='_blank'>drivers</a>."
-#~ msgstr "用來與 LCD 通訊的驅動程式。取得可用的<a href='%s' target='_blank'>驅動程式</a> 清單。"
-
-#, php-format
-#~ msgid ""
-#~ "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
-#~ "of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
-#~ "or NTFS can result in unpredictable results, file corruption, and loss of "
-#~ "data!"
-#~ msgstr ""
-#~ "UFS 檔案系統格式是 FreeBSD 原生檔案格式 (%s的OS)。 如果使用FAT, FAT32, EXT2, EXT3, 或是 NTFS "
-#~ "可能會導致檔案損毀等不可預期的效果或錯誤！"
-
-#, php-format
-#~ msgid ""
-#~ "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
-#~ "service to clients."
-#~ msgstr "您必須激活 <a href='%s'>Zeroconf/Bonjour</a> 才可對客戶端宣傳服務。"
-
-#, php-format
-#~ msgid ""
-#~ "This configuration settings are used to generate the ups.conf configuration "
-#~ "file which is required by the NUT UPS daemon. To get more information how to "
-#~ "configure your UPS please check the NUT (Network UPS Tools) <a href='%s' "
-#~ "target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "此配置設置是用來生成 NUT UPS 守護進程的配置文件（ups.conf）。如想查獲更多配置 UPS 的信息，請查看 NUT（Network UPS "
-#~ "Tools）<a href='%s' target='_blank'>文檔</a>。"
-
-#, php-format
-#~ msgid ""
-#~ "To get more information how to configure LCDproc check the LCDproc <a "
-#~ "href='%s' target='_blank'>documentation</a>."
-#~ msgstr "關於 LCDproc 的詳細資訊請查看 LCDproc <a href='%s' target='_blank'>文檔</a>。"
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about writing firewall rules check the FreeBSD "
-#~ "<a href='%s' target='_blank'>documentation</a>."
-#~ msgstr "關於防火牆規則的詳細資訊請查看 FreeBSD <a href='%s' target='_blank'>文檔</a>。"
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about TCP Wrappers check the FreeBSD <a "
-#~ "href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "關於 TCP Wrappers 的詳細資訊請查看 FreeBSD <a href='%s' target='_blank'>文檔</a>。"
-
-#, php-format
-#~ msgid ""
-#~ "<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
-#~ "href='%s'>user</a> must have shell access."
-#~ msgstr ""
-#~ "必須啟用<a href='%s'>SSHD</a> 才能使用Unison, 而且 <a href='%s'>用戶</a> 必須有殼層(shell)權限"
-
-#, php-format
-#~ msgid ""
-#~ "This will cause %s not to check for newer firmware versions when the <a "
-#~ "href='%s'>%s</a> page is viewed."
-#~ msgstr "這將導致%s 查看<a href='%s'>%s</ a>頁時不檢查新的韌體版。"
-
-#, php-format
-#~ msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
-#~ msgstr "請查看 <a href='%s' target='_blank'>文檔</a>。"
-
-#~ msgid ""
-#~ "<b>EFI GPT partition</b> if you want to mount a GPT formatted drive "
-#~ "(<b>default partition</b>).<br/><b>MBR partition</b> if you want to mount a "
-#~ "UFS formatted drive or do imported disks from other OS.<br/><b>CD/DVD "
-#~ "volume</b> if you want to mount a CD/DVD volume."
-#~ msgstr ""
-#~ "<b>EFI GPT 分區</b> 如果您想掛載GPT格式的驅動器 (<b>默認分區</b>).<br/><b>MBR 分區</b>  如果您想掛載 "
-#~ "UFS 格式驅動器或輸入其他作業系統的磁盤。<br/><b>CD/DVD</b> 如果您想掛載 CD/DVD。"
-
-#, php-format
-#~ msgid ""
-#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
-#~ msgstr "傳送測試電子郵件失敗。請檢查 <a href='%s'>記錄</a> 檔案。"
-
-#, php-format
-#~ msgid ""
-#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
-#~ msgstr "傳送狀態報告失敗。請檢查 <a href='%s'>記錄</a> 檔案。"
-
-#, php-format
-#~ msgid ""
-#~ "To increase CIFS performance try the following:<div "
-#~ "id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' "
-#~ "switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a "
-#~ "href='%s'>Tuning</a>' switch</li></ul></div>"
-#~ msgstr ""
-#~ "若想提高 CIFS 性能，請嘗試以下操作：<div id='enumeration'><ul><li>啟用“異步I / "
-#~ "O（AIO）”開關</li><li>啟用“大筆資料讀/寫”開關</li><li>啟用<a "
-#~ "href='%s'>調整</a>開關</li></ul></div>"
-
-#, php-format
-#~ msgid ""
-#~ "No configured Auth Group. Please add new <a href='%s'>Auth Group</a> first."
-#~ msgstr "尚未配置認證組。請先添加新的<a href='%s'>認證組（Auth Group）</a>。"
-
-#, php-format
-#~ msgid ""
-#~ "You can't mount the partition '%s' where the config file is stored.<br />"
-#~ msgstr "您不可以把'%s' 分區掛載於存儲配置文件的目錄。"
-
-#, php-format
-#~ msgid ""
-#~ "After you click &quot;Save&quot;, you must reboot the server to make the "
-#~ "changes take effect. You may also have to do one or more of the following "
-#~ "steps before you can access your server again: <ul><li><span "
-#~ "class='vexpl'>change the IP address of your server</span></li><li><span "
-#~ "class='vexpl'>access the webGUI with the new IP address</span></li></ul>"
-#~ msgstr ""
-#~ "當您單擊 &quot;儲存&quot;之後，您必須重新啟動伺服器才能使更改生效。您可能還需要做以下一個或多個步驟才能再次訪問您的伺服器： "
-#~ "<ul><li><span class='vexpl'>變更伺服器的IP位址</span></li><li><span "
-#~ "class='vexpl'>使用新的IP位址來連接網頁管理界面</span></li></ul>"
-
-#, php-format
-#~ msgid ""
-#~ "After you click &quot;Save&quot;, you may also have to do one or more of the "
-#~ "following steps before you can access this server again: <ul><li>change the "
-#~ "IP address of your computer</li><li>access the webGUI with the new IP "
-#~ "address</li></ul>"
-#~ msgstr ""
-#~ "當您單擊&quot;儲存&quot;後，您可能得執行以下步驟才能再訪問伺服器：<ul><li>更改您的電腦的 IP 位址</li><li>使用新的IP "
-#~ "位址訪問網頁界面。</li></ul>"
-
-#~ msgid ""
-#~ "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
-#~ "3.0.0 or newer, and the 'before' algorithm when talking to an older "
-#~ "rsync.</li><li>Before - File-deletions will be done before the transfer "
-#~ "starts.</li><li>During - File-deletions will be done incrementally as the "
-#~ "transfer happens.</li><li>Delay - File-deletions will be computed during the "
-#~ "transfer, and then removed after the transfer completes.</li><li>After - "
-#~ "File-deletions will be done after the transfer has completed.</li>"
-#~ msgstr ""
-#~ "<li>預設 - Rsync 會在連接到 rsync 3.0.0 或更高版本時會選擇 “during” 演算法，而在連接至舊版本時使用 “before” "
-#~ "算法。</li><li>Before - 文件刪除工作將在傳輸開始之前完成。</li><li>During - "
-#~ "文件刪除工作將在傳輸過程中逐漸進行。</li><li>Delay - "
-#~ "文件刪除工作僅在傳輸時進行​​計算，並在傳輸完成後進行。</li><li>After - 文件刪除工作將在傳輸完成後進行。</li>"
-
-#~ msgid ""
-#~ "<div id='enumeration'><ul><li>The new password is also the default root "
-#~ "password of the system!</li></ul></div>"
-#~ msgstr "<div id='enumeration'><ul><li>新密碼也是系統 root 的預設密碼！</li></ul></div>"
-
-#~ msgid ""
-#~ "You can also install a package via SSH or console using the the pkg add "
-#~ "command.<br />Example: pkg add packagename"
-#~ msgstr ""
-#~ "您也可以透過 SSH 或是 Console 介面並使用 pkg add 指令來安裝套件。<br />例如: pkg add packagename"
-
-#, php-format
-#~ msgid ""
-#~ "You must <a href='%s'>reboot</a> the system before you can upgrade the "
-#~ "firmware."
-#~ msgstr "在您可以升級韌體之前您必須 <a href='%s'>重新啟動</a> 系統。"
-
-#~ msgid "add any supplemental parameters"
-#~ msgstr "新增任意補充的參數"
-
-#, php-format
-#~ msgid "Check <a href=\"%s\">System|General Setup</a> before initializing."
-#~ msgstr "初始化前檢查<a href=\"%s\">系統|一般設定</a>。"
-
-#~ msgid ""
-#~ "All data in the path is overwritten. To avoid invalid data/permission, using "
-#~ "empty UFS directory is recommended."
-#~ msgstr "在路徑上的所有數據將被覆蓋。為了避免無效的數據/權限，建議使用空的UFS目錄。"
+#~ msgid "minimum (power saving)"
+#~ msgstr "最低（省電）"

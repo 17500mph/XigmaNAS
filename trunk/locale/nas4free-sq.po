@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-30 00:10+0000\n"
+"POT-Creation-Date: 2016-06-30 20:15+0000\n"
 "PO-Revision-Date: 2014-11-17 04:09+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-29 22:57+0000\n"
+"X-Launchpad-Export-Date: 2016-06-30 18:45+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: ALBANIA\n"
 "Language: \n"
@@ -420,6 +420,9 @@ msgstr ""
 msgid "Active Users"
 msgstr "Perdorues Aktiv"
 
+msgid "Adaptive (Low Power Consumption)"
+msgstr ""
+
 msgid "Add"
 msgstr "Shto"
 
@@ -826,11 +829,11 @@ msgstr "Modalitet arkivi."
 msgid "Are you sure you want to proceed?"
 msgstr "Je i sigurte qe doni te proçedoni?"
 
-msgid "Are you sure you want to reboot the system?"
-msgstr "Jeni i sigurte qe doni re rindizni sistemin tuaj?"
+msgid "Are you sure you want to reboot the server?"
+msgstr ""
 
-msgid "Are you sure you want to shutdown the system?"
-msgstr "Jeni i sigurte qe doni te fikni sistemin tuaj?"
+msgid "Are you sure you want to shutdown the server?"
+msgstr ""
 
 msgid "Asynchronous I/O (AIO)"
 msgstr "Josinkronik I / O (AIO)"
@@ -2170,7 +2173,7 @@ msgstr ""
 msgid "Disable firmware version check."
 msgstr ""
 
-msgid "Disable speaker beep on startup and shutdown."
+msgid "Disable speaker beep on startup and shutdowns."
 msgstr ""
 
 msgid "Disable the compression of repeated line."
@@ -2232,6 +2235,12 @@ msgstr ""
 
 msgid ""
 "Do not erase the Master Boot Record (useful for some RAID controller cards)."
+msgstr ""
+
+#, php-format
+msgid ""
+"Do not let the server check for newer firmware versions when the %s page "
+"gets loaded."
 msgstr ""
 
 msgid ""
@@ -2835,7 +2844,7 @@ msgstr "Aktivo atributet per ruajtjen DOS"
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Aktivo protokollin e identitetit (RFC1413)."
 
-msgid "Enable the system power control utility."
+msgid "Enable the server power control utility."
 msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
@@ -3215,6 +3224,9 @@ msgstr "Firmware"
 msgid "Firmware Check"
 msgstr ""
 
+msgid "Firmware Update"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr ""
 
@@ -3478,6 +3490,9 @@ msgstr ""
 
 msgid "Help"
 msgstr "Ndihmë"
+
+msgid "Hiadaptive (High Performance)"
+msgstr ""
 
 msgid "Hide dot files"
 msgstr "Fsheh skedaret dot"
@@ -3906,6 +3921,9 @@ msgid "Interfaces"
 msgstr "Nderfaqet"
 
 msgid "Internal Server Information"
+msgstr ""
+
+msgid "Internal Speaker"
 msgstr ""
 
 msgid "Internal UPS clock date"
@@ -4475,6 +4493,9 @@ msgstr ""
 msgid "MaxRecvDataSegmentLength"
 msgstr ""
 
+msgid "Maximum (Highest Performance)"
+msgstr ""
+
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr ""
 
@@ -4586,6 +4607,9 @@ msgstr ""
 msgid "Minimum"
 msgstr "Minimum"
 
+msgid "Minimum (Lowest Performance)"
+msgstr ""
+
 msgid "Minimum Free Space"
 msgstr ""
 
@@ -4610,8 +4634,8 @@ msgstr ""
 msgid "Minutes"
 msgstr "Minuta"
 
-msgid "Minutes between network time sync."
-msgstr "Minutat perpara se koha e rrjetit te sinkronizohet"
+msgid "Minutes between the next network time synchronization."
+msgstr ""
 
 msgid "Missing a temporary folder."
 msgstr "Nuk gjej nje dosje te perkohshme."
@@ -6515,9 +6539,6 @@ msgstr ""
 msgid "Sparse Volume"
 msgstr ""
 
-msgid "Speaker Beep"
-msgstr ""
-
 msgid ""
 "Specific Helium Level. The Helium, so says the literature, allows the drives "
 "to run cooler and quieter, and reduces power consumption. This is the status "
@@ -7465,7 +7486,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"The powerd utility monitors the system state and sets various power control "
+"The powerd utility monitors the server state and sets various power control "
 "options accordingly."
 msgstr ""
 
@@ -7501,6 +7522,9 @@ msgid ""
 "take one minute."
 msgstr ""
 
+msgid "The server is halting now. This may take one minute."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr ""
 
@@ -7519,9 +7543,6 @@ msgstr ""
 
 msgid "The subject of the email."
 msgstr "Subjekti i emaili-t."
-
-msgid "The system is halting now. This may take one minute."
-msgstr ""
 
 msgid "The system is rebooting now. This may take one minute."
 msgstr ""
@@ -7963,12 +7984,6 @@ msgid ""
 "hurt JPEG serving performance on (at least) Sony DLNA products."
 msgstr ""
 
-#, php-format
-msgid ""
-"This will cause %s not to check for newer firmware versions when the %s page "
-"is viewed."
-msgstr ""
-
 msgid "This will create a recycle bin on the share."
 msgstr ""
 
@@ -8006,6 +8021,9 @@ msgid "Time"
 msgstr ""
 
 msgid "Time Machine"
+msgstr ""
+
+msgid "Time Synchronization"
 msgstr ""
 
 msgid "Time before the load will be rebooted"
@@ -8899,7 +8917,7 @@ msgstr ""
 msgid "You must initialize data before enabling."
 msgstr ""
 
-msgid "You must reboot the system before you can upgrade the firmware"
+msgid "You must reboot the server before you can upgrade the firmware"
 msgstr ""
 
 msgid "You must select at least one authentication method."
@@ -8953,9 +8971,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "adaptive (low power consumption)"
-msgstr ""
-
 msgid "all encrypted disks are imported."
 msgstr ""
 
@@ -8995,9 +9010,6 @@ msgstr ""
 msgid "greatest settable low voltage transfer point"
 msgstr ""
 
-msgid "hiadaptive (high performance)"
-msgstr ""
-
 msgid "hour(s)"
 msgstr "orë(t)"
 
@@ -9030,12 +9042,6 @@ msgid "load/unload failed."
 msgstr ""
 
 msgid "loader.conf"
-msgstr ""
-
-msgid "maximum (highest performance)"
-msgstr ""
-
-msgid "minimum (power saving)"
 msgstr ""
 
 msgid "minute(s)"
@@ -9110,37 +9116,5 @@ msgstr ""
 msgid "version:"
 msgstr ""
 
-#, php-format
-#~ msgid ""
-#~ "<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
-#~ "href='%s'>user</a> must have shell access."
-#~ msgstr ""
-#~ "<a href='%s'>SSHD</a> duhet të jenë të aktivizuara që unisoni të punojë, dhe "
-#~ "<a href='%s'>user</a> duhet të kenë hyrje ne shell."
-
-#~ msgid ""
-#~ "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
-#~ msgstr ""
-#~ "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
-
-#, php-format
-#~ msgid ""
-#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
-#~ msgstr ""
-#~ "Dergimi i raportit te statusit deshtoi. Ju lutem kontrolloni <a "
-#~ "href='%s'>log</a> e skedarit."
-
-#, php-format
-#~ msgid ""
-#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
-#~ msgstr ""
-#~ "Dergimi i email-it per testim deshtoi. Ju lutem kontrolloni <a "
-#~ "href='%s'>log</a> e skedarit."
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about writing firewall rules check the FreeBSD "
-#~ "<a href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Per detajet me te shumta për te shkruar rregullat e firewallit kontrollo "
-#~ "FreeBSD <a href='%s' target='_blank'>documentation</a>."
+#~ msgid "Minutes between network time sync."
+#~ msgstr "Minutat perpara se koha e rrjetit te sinkronizohet"

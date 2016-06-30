@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-30 00:10+0000\n"
+"POT-Creation-Date: 2016-06-30 20:15+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-29 22:58+0000\n"
+"X-Launchpad-Export-Date: 2016-06-30 18:45+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -399,6 +399,9 @@ msgstr ""
 
 msgid "Active Users"
 msgstr "활성 사용자"
+
+msgid "Adaptive (Low Power Consumption)"
+msgstr ""
 
 msgid "Add"
 msgstr "추가"
@@ -794,11 +797,11 @@ msgstr "아카이브 모드."
 msgid "Are you sure you want to proceed?"
 msgstr "계속 진행하시겠습니까?"
 
-msgid "Are you sure you want to reboot the system?"
-msgstr "시스템을 리붓 하시겠습니까?"
+msgid "Are you sure you want to reboot the server?"
+msgstr ""
 
-msgid "Are you sure you want to shutdown the system?"
-msgstr "시스템을 끄시겠습니까?"
+msgid "Are you sure you want to shutdown the server?"
+msgstr ""
 
 msgid "Asynchronous I/O (AIO)"
 msgstr "비동기적 I/O(AIO)"
@@ -2136,7 +2139,7 @@ msgstr ""
 msgid "Disable firmware version check."
 msgstr ""
 
-msgid "Disable speaker beep on startup and shutdown."
+msgid "Disable speaker beep on startup and shutdowns."
 msgstr ""
 
 msgid "Disable the compression of repeated line."
@@ -2198,6 +2201,12 @@ msgstr ""
 
 msgid ""
 "Do not erase the Master Boot Record (useful for some RAID controller cards)."
+msgstr ""
+
+#, php-format
+msgid ""
+"Do not let the server check for newer firmware versions when the %s page "
+"gets loaded."
 msgstr ""
 
 msgid ""
@@ -2793,7 +2802,7 @@ msgstr "도스 속성 저장 활성화"
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "ident 프로토콜(RFC1413) 활성화."
 
-msgid "Enable the system power control utility."
+msgid "Enable the server power control utility."
 msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
@@ -3167,6 +3176,9 @@ msgstr "펌웨어"
 msgid "Firmware Check"
 msgstr ""
 
+msgid "Firmware Update"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr ""
 
@@ -3429,6 +3441,9 @@ msgstr ""
 
 msgid "Help"
 msgstr "도움말"
+
+msgid "Hiadaptive (High Performance)"
+msgstr ""
 
 msgid "Hide dot files"
 msgstr "숨김 파일 감추기"
@@ -3854,6 +3869,9 @@ msgid "Interfaces"
 msgstr "인터페이스"
 
 msgid "Internal Server Information"
+msgstr ""
+
+msgid "Internal Speaker"
 msgstr ""
 
 msgid "Internal UPS clock date"
@@ -4419,6 +4437,9 @@ msgstr "MaxOutstandingR2T"
 msgid "MaxRecvDataSegmentLength"
 msgstr "MaxRecvDataSegmentLength"
 
+msgid "Maximum (Highest Performance)"
+msgstr ""
+
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr ""
 
@@ -4528,6 +4549,9 @@ msgstr ""
 msgid "Minimum"
 msgstr "최소"
 
+msgid "Minimum (Lowest Performance)"
+msgstr ""
+
 msgid "Minimum Free Space"
 msgstr ""
 
@@ -4552,8 +4576,8 @@ msgstr ""
 msgid "Minutes"
 msgstr "분"
 
-msgid "Minutes between network time sync."
-msgstr "네트워크 시간 동기화 사이의 분들(시간)."
+msgid "Minutes between the next network time synchronization."
+msgstr ""
 
 msgid "Missing a temporary folder."
 msgstr "임시 폴더를 찾을 수 없습니다."
@@ -6454,9 +6478,6 @@ msgstr ""
 msgid "Sparse Volume"
 msgstr ""
 
-msgid "Speaker Beep"
-msgstr ""
-
 msgid ""
 "Specific Helium Level. The Helium, so says the literature, allows the drives "
 "to run cooler and quieter, and reduces power consumption. This is the status "
@@ -7418,9 +7439,9 @@ msgstr ""
 "'0.0.0.0:3260' 또는 '[::]:3260'을 이용합니다. 동일한 주소 패밀리에 와일드 카드와 다른 IP들을 섞지 말기 바랍니다."
 
 msgid ""
-"The powerd utility monitors the system state and sets various power control "
+"The powerd utility monitors the server state and sets various power control "
 "options accordingly."
-msgstr "powerd 유틸리티는 시스템 상태를 모니터 하며 다양한 파워 제어 옵션을 적절히 설정합니다."
+msgstr ""
 
 msgid "The queuedepth range is invalid."
 msgstr "큐 깊이 범위가 무효합니다."
@@ -7454,6 +7475,9 @@ msgid ""
 "take one minute."
 msgstr ""
 
+msgid "The server is halting now. This may take one minute."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr ""
 
@@ -7472,9 +7496,6 @@ msgstr "저장 영역이 LUN%d로(으로) mapping 되었습니다."
 
 msgid "The subject of the email."
 msgstr "전자우편의 제목."
-
-msgid "The system is halting now. This may take one minute."
-msgstr "시스템이 이제 정지합니다. 1분 정도 걸릴 것입니다."
 
 msgid "The system is rebooting now. This may take one minute."
 msgstr "이제 시스템이 리붓 합니다. 1분 정도 걸릴 것입니다."
@@ -7938,12 +7959,6 @@ msgid ""
 "hurt JPEG serving performance on (at least) Sony DLNA products."
 msgstr ""
 
-#, php-format
-msgid ""
-"This will cause %s not to check for newer firmware versions when the %s page "
-"is viewed."
-msgstr ""
-
 msgid "This will create a recycle bin on the share."
 msgstr "이것은 공유에 휴지통을 생성할 것입니다."
 
@@ -7981,6 +7996,9 @@ msgid "Time"
 msgstr "시간"
 
 msgid "Time Machine"
+msgstr ""
+
+msgid "Time Synchronization"
 msgstr ""
 
 msgid "Time before the load will be rebooted"
@@ -8876,7 +8894,7 @@ msgstr ""
 msgid "You must initialize data before enabling."
 msgstr ""
 
-msgid "You must reboot the system before you can upgrade the firmware"
+msgid "You must reboot the server before you can upgrade the firmware"
 msgstr ""
 
 msgid "You must select at least one authentication method."
@@ -8929,9 +8947,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "adaptive (low power consumption)"
-msgstr ""
-
 msgid "all encrypted disks are imported."
 msgstr ""
 
@@ -8971,9 +8986,6 @@ msgstr ""
 msgid "greatest settable low voltage transfer point"
 msgstr ""
 
-msgid "hiadaptive (high performance)"
-msgstr ""
-
 msgid "hour(s)"
 msgstr "시간"
 
@@ -9006,12 +9018,6 @@ msgid "load/unload failed."
 msgstr "로드/언로드가 실패했습니다."
 
 msgid "loader.conf"
-msgstr ""
-
-msgid "maximum (highest performance)"
-msgstr ""
-
-msgid "minimum (power saving)"
 msgstr ""
 
 msgid "minute(s)"
@@ -9086,127 +9092,10 @@ msgstr ""
 msgid "version:"
 msgstr ""
 
-#, php-format
-#~ msgid ""
-#~ "<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
-#~ "href='%s'>user</a> must have shell access."
-#~ msgstr ""
-#~ "Unison이 작동하려면 <a href='%s'>SSHD</a>가 활성화 되어야 하며 <a href='%s'>사용자</a>가 셸 접근 "
-#~ "권한을 가져야 합니다."
+#~ msgid "Minutes between network time sync."
+#~ msgstr "네트워크 시간 동기화 사이의 분들(시간)."
 
 #~ msgid ""
-#~ "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
-#~ msgstr ""
-#~ "<div id='enumeration'><ul><li>%d - 날짜</li><li>%h - 호스트 명</li></ul></div>"
-
-#~ msgid ""
-#~ "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
-#~ "3.0.0 or newer, and the 'before' algorithm when talking to an older "
-#~ "rsync.</li><li>Before - File-deletions will be done before the transfer "
-#~ "starts.</li><li>During - File-deletions will be done incrementally as the "
-#~ "transfer happens.</li><li>Delay - File-deletions will be computed during the "
-#~ "transfer, and then removed after the transfer completes.</li><li>After - "
-#~ "File-deletions will be done after the transfer has completed.</li>"
-#~ msgstr ""
-#~ "<li>기본 값 - rsync가 rsync 3.0.0 이상과 대화를 할 때는 'during' 알고리즘을 선택하고 구형 rsync와 대화할 "
-#~ "때는 'before' 알고리즘을 선택할 것입니다.</li><li>Before - 전송이 시작되기 전에 파일 삭제가 수행될 "
-#~ "것입니다.</li><li>During - 파일 삭제는 전송이 일어나면서 점증적으로 수행될 것입니다.</li><li>Delay - 파일 "
-#~ "삭제는 전송하는 동안 계산될 것이며 전송이 완료한 후에 삭제될 것입니다.</li><li>After - 파일 삭제는 전송이 완료된 후에 "
-#~ "수행될 것입니다.</li>"
-
-#, php-format
-#~ msgid ""
-#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
-#~ msgstr "상태 보고서를 전송하는 데에 실패했습니다. <a href='%s'>로그</a> 파일을 체크 하시기 바랍니다."
-
-#, php-format
-#~ msgid ""
-#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
-#~ msgstr "테스트 전자우편을 보내는데 실패했습니다. <a href='%s'>로그</a> 파일을 체크하십시오."
-
-#, php-format
-#~ msgid ""
-#~ "Make sure you have already configured your <a href='%s'>Email</a> settings."
-#~ msgstr "당신의 <a href='%s'>전자우편</a>  설정이 이미 설정되어 있는지 확인하십시오."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Auth Group. Please add new <a href='%s'>Auth Group</a> first."
-#~ msgstr "설정된 인증 그룹이 없습니다. 먼저 새 <a href='%s'>인증 그룹</a>을 추가하십시오."
-
-#, php-format
-#~ msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
-#~ msgstr "<a href='%s' target='_blank'>문서</a>를 체크 하기 바랍니다."
-
-#, php-format
-#~ msgid ""
-#~ "The driver used to communicate with your UPS. Get the list of available <a "
-#~ "href='%s' target='_blank'>drivers</a>."
-#~ msgstr ""
-#~ "UPS와 통신하기 위해 이용되는 드라이버. 이용할 수 있는 <a href='%s' target='_blank'>드라이버</a>."
-
-#, php-format
-#~ msgid ""
-#~ "This configuration settings are used to generate the ups.conf configuration "
-#~ "file which is required by the NUT UPS daemon. To get more information how to "
-#~ "configure your UPS please check the NUT (Network UPS Tools) <a href='%s' "
-#~ "target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "이 구성 설정은 NUT UPS 데몬이 필요로 하는 ups.conf 구성 파일을 생성하는 데에 이용됩니다. UPS를 구성하는 방법에 관한 "
-#~ "자세한 내용은 NUT(Network UPS Tools) <a href='%s' target='_blank'>문서</a>를 참조하기 "
-#~ "바랍니다."
-
-#, php-format
-#~ msgid ""
-#~ "This will cause %s not to check for newer firmware versions when the <a "
-#~ "href='%s'>%s</a> page is viewed."
-#~ msgstr ""
-#~ "이것은 %s이(가) <a href='%s'>%s</a> 페이지가 보여질 경우 새 펌웨어 버전을 check 하지 않도록 할 것입니다."
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about TCP Wrappers check the FreeBSD <a "
-#~ "href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "TCP Wrapper에 관한 더 자세한 정보는 FreeBSD <a href='%s' target='_blank'>문서</a>를 참조하기 "
-#~ "바랍니다."
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about writing firewall rules check the FreeBSD "
-#~ "<a href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "방화벽 규칙을 작성하는 방법에 관한 더 자세한 정보는 FreeBSD <a href='%s' target='_blank'>문서</a>를 "
-#~ "참조하기 바랍니다."
-
-#, php-format
-#~ msgid ""
-#~ "To increase CIFS performance try the following:<div "
-#~ "id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' "
-#~ "switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a "
-#~ "href='%s'>Tuning</a>' switch</li></ul></div>"
-#~ msgstr ""
-#~ "CIFS 성능을 향상하기 위해 아래를 시도하시기 바랍니다:<div id='enumeration'><ul><li>'비동기적 I/O "
-#~ "(AIO)' 스위치 활성화</li><li>'대용량 읽기/쓰기' 스위치 활성화</li><li>'<a href='%s'>미세 조정</a>' "
-#~ "스위치 활성화</li></ul></div>"
-
-#, php-format
-#~ msgid ""
-#~ "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
-#~ "of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
-#~ "or NTFS can result in unpredictable results, file corruption, and loss of "
-#~ "data!"
-#~ msgstr ""
-#~ "UFS와 그 변종은 FreeBSD(%s의 기반 OS)의 기본 파일 포맷입니다. FAT, FAT32, EXT2, EXT3이나 NTFS와 "
-#~ "같은 다른 파일 포맷을 이용하려고 하는 것은 파일 붕괴와 데이터 손실과 같은 예측할 수 없는 결과를 야기할 수 있습니다."
-
-#, php-format
-#~ msgid ""
-#~ "You can't mount the partition '%s' where the config file is stored.<br />"
-#~ msgstr "설정 파일이 저장된 파티션 '%s'을(를) 마운트 할 수 없습니다.<br />"
-
-#, php-format
-#~ msgid ""
-#~ "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
-#~ "service to clients."
-#~ msgstr "이 서비스를 클라이언트에게 공지하려면 <a href='%s'>Zeroconf/Bonjour</a>를 활성화해야 합니다."
+#~ "The powerd utility monitors the system state and sets various power control "
+#~ "options accordingly."
+#~ msgstr "powerd 유틸리티는 시스템 상태를 모니터 하며 다양한 파워 제어 옵션을 적절히 설정합니다."

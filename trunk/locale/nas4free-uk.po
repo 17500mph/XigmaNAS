@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-30 00:10+0000\n"
+"POT-Creation-Date: 2016-06-30 20:15+0000\n"
 "PO-Revision-Date: 2016-06-21 16:32+0000\n"
 "Last-Translator: AndriyM <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-29 22:57+0000\n"
+"X-Launchpad-Export-Date: 2016-06-30 18:46+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -414,6 +414,9 @@ msgstr "Активні ресурси"
 
 msgid "Active Users"
 msgstr "Активні користувачі"
+
+msgid "Adaptive (Low Power Consumption)"
+msgstr ""
 
 msgid "Add"
 msgstr "Додати"
@@ -823,11 +826,11 @@ msgstr "Режим архівування"
 msgid "Are you sure you want to proceed?"
 msgstr "Ви впевнені, що хочете продовжити?"
 
-msgid "Are you sure you want to reboot the system?"
-msgstr "Ви впевнені, що хочете перезавантажити систему?"
+msgid "Are you sure you want to reboot the server?"
+msgstr ""
 
-msgid "Are you sure you want to shutdown the system?"
-msgstr "Ви впевнені, що хочете вимкнути систему?"
+msgid "Are you sure you want to shutdown the server?"
+msgstr ""
 
 msgid "Asynchronous I/O (AIO)"
 msgstr "Асинхронний I/O (AIO)"
@@ -2212,8 +2215,8 @@ msgstr "Повністю деактивувати файловий менедж�
 msgid "Disable firmware version check."
 msgstr "Вимкнути перевірку версії прошивки."
 
-msgid "Disable speaker beep on startup and shutdown."
-msgstr "Вимкнути сигнал спікера при старті і завершенні."
+msgid "Disable speaker beep on startup and shutdowns."
+msgstr ""
 
 msgid "Disable the compression of repeated line."
 msgstr ""
@@ -2276,6 +2279,12 @@ msgstr ""
 
 msgid ""
 "Do not erase the Master Boot Record (useful for some RAID controller cards)."
+msgstr ""
+
+#, php-format
+msgid ""
+"Do not let the server check for newer firmware versions when the %s page "
+"gets loaded."
 msgstr ""
 
 msgid ""
@@ -2894,8 +2903,8 @@ msgstr "Увімкнути зберігання атрибутів DOS"
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Увімкнути протокол ідентифікації (RFC1413)."
 
-msgid "Enable the system power control utility."
-msgstr "Увімкнути програму контролю напруги живлення."
+msgid "Enable the server power control utility."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Увімкнути строге дотримання DLNA стандартів."
@@ -3276,6 +3285,9 @@ msgstr "Прошивка"
 msgid "Firmware Check"
 msgstr "Перевірка прошивки"
 
+msgid "Firmware Update"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Не вдалося завантажити прошивку (недостатньо пам'яті?)"
 
@@ -3541,6 +3553,9 @@ msgstr ""
 
 msgid "Help"
 msgstr "Допомога"
+
+msgid "Hiadaptive (High Performance)"
+msgstr ""
 
 msgid "Hide dot files"
 msgstr "Приховати файли, що починаються з крапки."
@@ -3975,6 +3990,9 @@ msgstr "Інтерфейси"
 
 msgid "Internal Server Information"
 msgstr "Внутрішня інформація про сервер"
+
+msgid "Internal Speaker"
+msgstr ""
 
 msgid "Internal UPS clock date"
 msgstr "Дата на внутрішньому годиннику ДБЖ"
@@ -4549,6 +4567,9 @@ msgstr "MaxOutstandingR2T"
 msgid "MaxRecvDataSegmentLength"
 msgstr "MaxRecvDataSegmentLength"
 
+msgid "Maximum (Highest Performance)"
+msgstr ""
+
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr "Максимальна продуктивність, максимальний рівень шуму"
 
@@ -4660,6 +4681,9 @@ msgstr "Налаштування MiniDLNA оновлено."
 msgid "Minimum"
 msgstr "Мінімум"
 
+msgid "Minimum (Lowest Performance)"
+msgstr ""
+
 msgid "Minimum Free Space"
 msgstr ""
 
@@ -4685,8 +4709,8 @@ msgstr "Мінімальна зафіксована температура (в �
 msgid "Minutes"
 msgstr "Хвилин"
 
-msgid "Minutes between network time sync."
-msgstr "Хвилин між синхронізаціями часу"
+msgid "Minutes between the next network time synchronization."
+msgstr ""
 
 msgid "Missing a temporary folder."
 msgstr "Тимчасова директорія відсутня."
@@ -6611,9 +6635,6 @@ msgstr "Розріджений"
 msgid "Sparse Volume"
 msgstr "Розріджений диск"
 
-msgid "Speaker Beep"
-msgstr "Звуковий сигнал"
-
 msgid ""
 "Specific Helium Level. The Helium, so says the literature, allows the drives "
 "to run cooler and quieter, and reduces power consumption. This is the status "
@@ -7569,7 +7590,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"The powerd utility monitors the system state and sets various power control "
+"The powerd utility monitors the server state and sets various power control "
 "options accordingly."
 msgstr ""
 
@@ -7605,6 +7626,9 @@ msgid ""
 "take one minute."
 msgstr ""
 
+msgid "The server is halting now. This may take one minute."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr "Сервер перезавантажиться після відновлення конфігурації."
 
@@ -7623,9 +7647,6 @@ msgstr ""
 
 msgid "The subject of the email."
 msgstr "Тема емейла."
-
-msgid "The system is halting now. This may take one minute."
-msgstr "Система в процесі зупинки. Це може зайняти якийсь час."
 
 msgid "The system is rebooting now. This may take one minute."
 msgstr "Система перезавантажується. Це може зайняти якийсь час."
@@ -8078,12 +8099,6 @@ msgid ""
 "hurt JPEG serving performance on (at least) Sony DLNA products."
 msgstr ""
 
-#, php-format
-msgid ""
-"This will cause %s not to check for newer firmware versions when the %s page "
-"is viewed."
-msgstr ""
-
 msgid "This will create a recycle bin on the share."
 msgstr ""
 
@@ -8121,6 +8136,9 @@ msgid "Time"
 msgstr "Час"
 
 msgid "Time Machine"
+msgstr ""
+
+msgid "Time Synchronization"
 msgstr ""
 
 msgid "Time before the load will be rebooted"
@@ -9014,7 +9032,7 @@ msgstr ""
 msgid "You must initialize data before enabling."
 msgstr ""
 
-msgid "You must reboot the system before you can upgrade the firmware"
+msgid "You must reboot the server before you can upgrade the firmware"
 msgstr ""
 
 msgid "You must select at least one authentication method."
@@ -9069,9 +9087,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "adaptive (low power consumption)"
-msgstr "адаптивний (низький рівень споживання)"
-
 msgid "all encrypted disks are imported."
 msgstr "усі зашифровані диски імпортовані"
 
@@ -9111,9 +9126,6 @@ msgstr ""
 msgid "greatest settable low voltage transfer point"
 msgstr ""
 
-msgid "hiadaptive (high performance)"
-msgstr "hiadaptive (висока продуктивність)"
-
 msgid "hour(s)"
 msgstr "година"
 
@@ -9147,12 +9159,6 @@ msgstr "сбій завантаження / розвантаження."
 
 msgid "loader.conf"
 msgstr "loader.conf"
-
-msgid "maximum (highest performance)"
-msgstr "максимальная (найвища продуктивність)"
-
-msgid "minimum (power saving)"
-msgstr "мінімальна (збереження енергії)"
 
 msgid "minute(s)"
 msgstr "хвилин"
@@ -9226,145 +9232,26 @@ msgstr ""
 msgid "version:"
 msgstr "версія:"
 
-#~ msgid ""
-#~ "<b>EFI GPT partition</b> if you want to mount a GPT formatted drive "
-#~ "(<b>default partition</b>).<br/><b>MBR partition</b> if you want to mount a "
-#~ "UFS formatted drive or do imported disks from other OS.<br/><b>CD/DVD "
-#~ "volume</b> if you want to mount a CD/DVD volume."
-#~ msgstr ""
-#~ "<b>Розділ EFI GPT</b> якщо ви бажаєте змонтувати диск форматований у GPT "
-#~ "(<b>розділ за умовчанням</b>).<br/><b>Розділ MBR</b> якщо ви бажаєте "
-#~ "змонтувати диск форматований у UFS або зробити імпортування дисків із іншої "
-#~ "ОС.<br/><b>Том CD/DVD</b> якщо ви бажаєте змонтувати диск CD/DVD."
+#~ msgid "maximum (highest performance)"
+#~ msgstr "максимальная (найвища продуктивність)"
 
-#, php-format
-#~ msgid ""
-#~ "After you click &quot;Save&quot;, you must reboot the server to make the "
-#~ "changes take effect. You may also have to do one or more of the following "
-#~ "steps before you can access your server again: <ul><li><span "
-#~ "class='vexpl'>change the IP address of your server</span></li><li><span "
-#~ "class='vexpl'>access the webGUI with the new IP address</span></li></ul>"
-#~ msgstr ""
-#~ "Після натискання кнопки &quot;Зберегти&quot;, Ви повинні перезавантажити "
-#~ "сервер, щоб прийняти зміни. Вам, можливо, доведеться,  зробити одну або "
-#~ "більше наступних дій, перш ніж ви зможете отримати доступ до цього сервера "
-#~ "знов: <UL> <LI> змінити IP-адресу вашого комп'ютера </ LI> <LI> отримати "
-#~ "доступ до web-інтерфейсу з нової IP-адреси </ LI> </ UL>"
+#~ msgid "minimum (power saving)"
+#~ msgstr "мінімальна (збереження енергії)"
 
-#, php-format
-#~ msgid ""
-#~ "After you click &quot;Save&quot;, you may also have to do one or more of the "
-#~ "following steps before you can access this server again: <ul><li>change the "
-#~ "IP address of your computer</li><li>access the webGUI with the new IP "
-#~ "address</li></ul>"
-#~ msgstr ""
-#~ "Після натискання кнопки &quot;Зберегти&quot;, Вам, можливо, доведеться,  "
-#~ "зробити одну або більше наступних дій, перш ніж ви зможете отримати доступ "
-#~ "до цього сервера знов: <UL> <LI> змінити IP-адресу вашого комп'ютера </ LI> "
-#~ "<LI> отримати доступ до web-інтерфейсу з нової IP-адреси </ LI> </ UL>"
+#~ msgid "hiadaptive (high performance)"
+#~ msgstr "hiadaptive (висока продуктивність)"
 
-#, php-format
-#~ msgid ""
-#~ "<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
-#~ "href='%s'>user</a> must have shell access."
-#~ msgstr ""
-#~ "<a href='%s'>SSHD</a> має бути увімкненим для роботи Unison, а також <a "
-#~ "href='%s'>користувач</a> повинен мати доступ до консолі."
+#~ msgid "adaptive (low power consumption)"
+#~ msgstr "адаптивний (низький рівень споживання)"
 
-#~ msgid ""
-#~ "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
-#~ msgstr ""
-#~ "<div id='enumeration'><ul><li>%d - Дата</li><li>%h - Ім'я "
-#~ "хоста</li></ul></div>"
+#~ msgid "Minutes between network time sync."
+#~ msgstr "Хвилин між синхронізаціями часу"
 
-#~ msgid ""
-#~ "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
-#~ "3.0.0 or newer, and the 'before' algorithm when talking to an older "
-#~ "rsync.</li><li>Before - File-deletions will be done before the transfer "
-#~ "starts.</li><li>During - File-deletions will be done incrementally as the "
-#~ "transfer happens.</li><li>Delay - File-deletions will be computed during the "
-#~ "transfer, and then removed after the transfer completes.</li><li>After - "
-#~ "File-deletions will be done after the transfer has completed.</li>"
-#~ msgstr ""
-#~ "<li>За замовчуванням - Rsync обере алгоритм 'в процесі' коли спілкуватимется "
-#~ "із rsync 3.0.0 або новішим, і алгоритм 'раніше' коли спілкуватимется із "
-#~ "старішим rsync.</li><li>Раніше - видалення файла буде зроблено до початку "
-#~ "передачі.</li><li>В процесі - видалення файла буде зроблено поступово, у "
-#~ "процесі того, як відбуватиметься передача.</li><li>Затримка - видалення "
-#~ "файла буде обчислюватися під час передачі, а видалятися потім, після "
-#~ "закінчення передачі.</li><li>Після - видалення файла буде зроблено після "
-#~ "закінчення передачі.</li>"
+#~ msgid "Disable speaker beep on startup and shutdown."
+#~ msgstr "Вимкнути сигнал спікера при старті і завершенні."
 
-#, php-format
-#~ msgid ""
-#~ "To get more information how to configure LCDproc check the LCDproc <a "
-#~ "href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Для детальнішої інформації про налаштування LCDproc, зверніться до <a "
-#~ "href='%s' target='_blank'>документації</a> LCDproc."
+#~ msgid "Enable the system power control utility."
+#~ msgstr "Увімкнути програму контролю напруги живлення."
 
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about TCP Wrappers check the FreeBSD <a "
-#~ "href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Для детальнішої інформації про TCP Wrappers, зверніться до <a href='%s' "
-#~ "target='_blank'>документації</a> FreeBSD ."
-
-#, php-format
-#~ msgid ""
-#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
-#~ msgstr ""
-#~ "Не вдалося відправити звіт про стан. Будь ласка, перевірте <a "
-#~ "href='%s'>log</a> файли."
-
-#, php-format
-#~ msgid ""
-#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
-#~ msgstr ""
-#~ "Неможливо відправити тестового листа. Будь ласка, перевірте <a "
-#~ "href='%s'>log</a> файли."
-
-#, php-format
-#~ msgid ""
-#~ "Make sure you have already configured your <a href='%s'>Email</a> settings."
-#~ msgstr ""
-#~ "Переконайтесь, що ви вже налаштували вашу <a href='%s'>електронну пошту</a>."
-
-#, php-format
-#~ msgid ""
-#~ "No configured CARP interfaces. Please add new <a href='%s'>CARP "
-#~ "interface</a> first."
-#~ msgstr ""
-#~ "Нема налаштованих CARP інтерфейсів. Будь ласка спочатку додайте новий <a "
-#~ "href='%s'>CARP інтерфейс</a>."
-
-#~ msgid ""
-#~ "<div id='enumeration'><ul><li>The new password is also the default root "
-#~ "password of the system!</li></ul></div>"
-#~ msgstr ""
-#~ "<div id='enumeration'><ul><li>Новий пароль також є типовим паролем "
-#~ "користувача root!</li></ul></div>"
-
-#, php-format
-#~ msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Будь ласка зверніться до <a href='%s' target='_blank'>документації</a>."
-
-#~ msgid ""
-#~ "All data in the path is overwritten. To avoid invalid data/permission, using "
-#~ "empty UFS directory is recommended."
-#~ msgstr ""
-#~ "Всі дані за цим шляхом переписано. Для уникнення помилок даних чи прав "
-#~ "доступу, радимо використовувати пусту UFS директорію."
-
-#, php-format
-#~ msgid ""
-#~ "DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-#~ "try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
-#~ "/>It is recommended that you <a href='%s'>Backup</a> the server "
-#~ "configuration before doing a upgrade."
-#~ msgstr ""
-#~ "НЕ переривайте розпочатий процес оновлення.<br />НЕ намагайтеся прошити інші "
-#~ "файли крім правильного '%s-%s-embedded.img.xz'.<br />Рекомендується зробити "
-#~ "<a href='%s'>резервну копію</a> конфігурації сервера до початку оновлення."
+#~ msgid "Speaker Beep"
+#~ msgstr "Звуковий сигнал"

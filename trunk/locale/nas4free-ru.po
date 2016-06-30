@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-30 00:10+0000\n"
+"POT-Creation-Date: 2016-06-30 20:15+0000\n"
 "PO-Revision-Date: 2016-06-29 21:07+0000\n"
 "Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-29 22:57+0000\n"
+"X-Launchpad-Export-Date: 2016-06-30 18:45+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -441,6 +441,9 @@ msgstr "Активные общие ресурсы"
 msgid "Active Users"
 msgstr "Активные пользователи"
 
+msgid "Adaptive (Low Power Consumption)"
+msgstr ""
+
 msgid "Add"
 msgstr "Добавить"
 
@@ -861,11 +864,11 @@ msgstr "Включить режим архивирования"
 msgid "Are you sure you want to proceed?"
 msgstr "Вы уверены, что хотите продолжить?"
 
-msgid "Are you sure you want to reboot the system?"
-msgstr "Вы уверены, что хотите перезагрузить систему?"
+msgid "Are you sure you want to reboot the server?"
+msgstr ""
 
-msgid "Are you sure you want to shutdown the system?"
-msgstr "Вы уверены, что хотите выключить систему?"
+msgid "Are you sure you want to shutdown the server?"
+msgstr ""
 
 msgid "Asynchronous I/O (AIO)"
 msgstr "Асинхронный ввод/вывод (AIO)"
@@ -2307,8 +2310,8 @@ msgstr "Отключить файловый менеджер полностью.
 msgid "Disable firmware version check."
 msgstr "Отключить проверку версии прошивки."
 
-msgid "Disable speaker beep on startup and shutdown."
-msgstr "Отключить звуковой сигнал при запуске и выключении."
+msgid "Disable speaker beep on startup and shutdowns."
+msgstr ""
 
 msgid "Disable the compression of repeated line."
 msgstr "Отключить сжатие повторяющихся строк."
@@ -2373,6 +2376,12 @@ msgid ""
 "Do not erase the Master Boot Record (useful for some RAID controller cards)."
 msgstr ""
 "Не стирать Master Boot Record (полезно для некоторых контроллеров RAID)."
+
+#, php-format
+msgid ""
+"Do not let the server check for newer firmware versions when the %s page "
+"gets loaded."
+msgstr ""
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2997,8 +3006,8 @@ msgstr "Включить хранение атрибутов DOS"
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Разрешить протокол идентификации (RFC1413)"
 
-msgid "Enable the system power control utility."
-msgstr "Включение утилиты управления питанием системы."
+msgid "Enable the server power control utility."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Включить строгое придерживание стандартов DLNA."
@@ -3397,6 +3406,9 @@ msgstr "Прошивка"
 msgid "Firmware Check"
 msgstr "Проверка прошивки"
 
+msgid "Firmware Update"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Загрузка прошивки не удалась (закончилась память?)"
 
@@ -3674,6 +3686,9 @@ msgstr ""
 
 msgid "Help"
 msgstr "Помощь"
+
+msgid "Hiadaptive (High Performance)"
+msgstr ""
 
 msgid "Hide dot files"
 msgstr "Скрывать файлы \".\""
@@ -4138,6 +4153,9 @@ msgstr "Интерфейсы"
 
 msgid "Internal Server Information"
 msgstr "Информация о внутреннем сервере"
+
+msgid "Internal Speaker"
+msgstr ""
 
 msgid "Internal UPS clock date"
 msgstr "Дата по данным внутренних часов ИБП"
@@ -4744,6 +4762,9 @@ msgstr "MaxOutstandingR2T"
 msgid "MaxRecvDataSegmentLength"
 msgstr "MaxRecvDataSegmentLength"
 
+msgid "Maximum (Highest Performance)"
+msgstr ""
+
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr "Максимальная производительность, максимальный уровень шума"
 
@@ -4862,6 +4883,9 @@ msgstr "Конфигурация Minidlna была обновлена."
 msgid "Minimum"
 msgstr "Минимальный"
 
+msgid "Minimum (Lowest Performance)"
+msgstr ""
+
 msgid "Minimum Free Space"
 msgstr "Минимальное свободное пространство"
 
@@ -4887,8 +4911,8 @@ msgstr ""
 msgid "Minutes"
 msgstr "Минуты"
 
-msgid "Minutes between network time sync."
-msgstr "Сетевая синхронизация времени через (минут)."
+msgid "Minutes between the next network time synchronization."
+msgstr ""
 
 msgid "Missing a temporary folder."
 msgstr "&=&Отсутствует временный каталог."
@@ -6882,9 +6906,6 @@ msgstr "Разряженный том"
 msgid "Sparse Volume"
 msgstr "Разреженный том (Sparse Volume)"
 
-msgid "Speaker Beep"
-msgstr "Звуковой сигнал"
-
 msgid ""
 "Specific Helium Level. The Helium, so says the literature, allows the drives "
 "to run cooler and quieter, and reduces power consumption. This is the status "
@@ -7970,11 +7991,9 @@ msgstr ""
 "из одного и того же адресного пространства."
 
 msgid ""
-"The powerd utility monitors the system state and sets various power control "
+"The powerd utility monitors the server state and sets various power control "
 "options accordingly."
 msgstr ""
-"Утилита powerd ведет наблюдение за состоянием системы и выставляет "
-"соответствующие настройки управления электропитанием."
 
 msgid "The queuedepth range is invalid."
 msgstr "Диапазон глубины очереди задан некорректно."
@@ -8010,6 +8029,9 @@ msgstr ""
 "Восстановлены стандартные настройки сервера, далее будет выполнена "
 "перезагрузка. Это может занять около минуты времени."
 
+msgid "The server is halting now. This may take one minute."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr "Сервер будет перезагружен после восстановления конфигурации."
 
@@ -8028,9 +8050,6 @@ msgstr "Область хранилища, сопоставленная с LUN%d
 
 msgid "The subject of the email."
 msgstr "Тема письма."
-
-msgid "The system is halting now. This may take one minute."
-msgstr "Система выключается. Это может занять некоторое время."
 
 msgid "The system is rebooting now. This may take one minute."
 msgstr "Система перезагружается. Это может занять некоторое время."
@@ -8588,14 +8607,6 @@ msgstr ""
 "уменьшение размера слишком больших JPEG-изображений на стороне сервера, что "
 "может повредить производительности (по крайней мере) DLNA-продуктов Sony."
 
-#, php-format
-msgid ""
-"This will cause %s not to check for newer firmware versions when the %s page "
-"is viewed."
-msgstr ""
-"Это заставит %s не проверять наличие новых версий прошивки, когда страница "
-"%s в просмотре."
-
 msgid "This will create a recycle bin on the share."
 msgstr "Создает 'корзину' на данном общем ресурсе."
 
@@ -8640,6 +8651,9 @@ msgstr "Время"
 
 msgid "Time Machine"
 msgstr "Time Machine"
+
+msgid "Time Synchronization"
+msgstr ""
 
 msgid "Time before the load will be rebooted"
 msgstr "Время до перезапуска нагрузки"
@@ -9617,7 +9631,7 @@ msgstr ""
 msgid "You must initialize data before enabling."
 msgstr "Вы должны инициализировать данные перед включением."
 
-msgid "You must reboot the system before you can upgrade the firmware"
+msgid "You must reboot the server before you can upgrade the firmware"
 msgstr ""
 
 msgid "You must select at least one authentication method."
@@ -9675,9 +9689,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "adaptive (low power consumption)"
-msgstr "адаптивный (низкое энергопотребление)"
-
 msgid "all encrypted disks are imported."
 msgstr "все диски использующие шифрование импортированы."
 
@@ -9721,9 +9732,6 @@ msgid "greatest settable low voltage transfer point"
 msgstr ""
 "наибольшее устанавливаемое значение низкого напряжения для переключения"
 
-msgid "hiadaptive (high performance)"
-msgstr "hiadaptive (высокая производительность)"
-
 msgid "hour(s)"
 msgstr "час."
 
@@ -9757,12 +9765,6 @@ msgstr "неудачная загрузка/выгрузка."
 
 msgid "loader.conf"
 msgstr "loader.conf"
-
-msgid "maximum (highest performance)"
-msgstr "максимум (высочайшая производительность)"
-
-msgid "minimum (power saving)"
-msgstr "минимум (энергосбережение)"
 
 msgid "minute(s)"
 msgstr "мин."
@@ -9838,294 +9840,41 @@ msgstr ""
 msgid "version:"
 msgstr "версия:"
 
-#, php-format
-#~ msgid ""
-#~ "<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
-#~ "href='%s'>user</a> must have shell access."
-#~ msgstr ""
-#~ "<a href='%s'>SSHD</a> должен быть включен для работы Unison. <a "
-#~ "href='%s'>Пользователь</a> должен иметь доступ к интерпретатору команд "
-#~ "(shell)."
+#~ msgid "Minutes between network time sync."
+#~ msgstr "Сетевая синхронизация времени через (минут)."
 
 #~ msgid ""
-#~ "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
+#~ "The powerd utility monitors the system state and sets various power control "
+#~ "options accordingly."
 #~ msgstr ""
-#~ "<div id='enumeration'><ul><li>%d - Дата</li><li>%h - Имя "
-#~ "хоста</li></ul></div>"
+#~ "Утилита powerd ведет наблюдение за состоянием системы и выставляет "
+#~ "соответствующие настройки управления электропитанием."
 
-#~ msgid ""
-#~ "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
-#~ "3.0.0 or newer, and the 'before' algorithm when talking to an older "
-#~ "rsync.</li><li>Before - File-deletions will be done before the transfer "
-#~ "starts.</li><li>During - File-deletions will be done incrementally as the "
-#~ "transfer happens.</li><li>Delay - File-deletions will be computed during the "
-#~ "transfer, and then removed after the transfer completes.</li><li>After - "
-#~ "File-deletions will be done after the transfer has completed.</li>"
-#~ msgstr ""
-#~ "<li>Default - Rsync будет выбирать алгоритм 'During' для взаимодействия с "
-#~ "версией rsync 3.0.0 или новее. Если версия rsync ниже 3.0.0, будет применен "
-#~ "алгоритм 'Before'. </li><li>Before - удаление файлов будет осуществлено "
-#~ "перед началом передачи.</li><li>During - удаление файлов будет выполнено "
-#~ "инкрементно, как только процесс передачи успешно завершится.</li><li>Delay - "
-#~ "во время передачи будет производиться процесс вычисления, и удаление файлов "
-#~ "произойдет после его полного выполнения.</li><li>After - удаление файлов "
-#~ "произойдет после полного выполнения процесса передачи.</li>"
+#~ msgid "adaptive (low power consumption)"
+#~ msgstr "адаптивный (низкое энергопотребление)"
 
-#, php-format
-#~ msgid ""
-#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
-#~ msgstr ""
-#~ "Отправка отчета состояния завершилась неудачно. Пожалуйста, проверьте <a "
-#~ "href='%s'>log-файлы</a>."
+#~ msgid "maximum (highest performance)"
+#~ msgstr "максимум (высочайшая производительность)"
+
+#~ msgid "hiadaptive (high performance)"
+#~ msgstr "hiadaptive (высокая производительность)"
+
+#~ msgid "minimum (power saving)"
+#~ msgstr "минимум (энергосбережение)"
+
+#~ msgid "Disable speaker beep on startup and shutdown."
+#~ msgstr "Отключить звуковой сигнал при запуске и выключении."
+
+#~ msgid "Enable the system power control utility."
+#~ msgstr "Включение утилиты управления питанием системы."
+
+#~ msgid "Speaker Beep"
+#~ msgstr "Звуковой сигнал"
 
 #, php-format
 #~ msgid ""
-#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
+#~ "This will cause %s not to check for newer firmware versions when the %s page "
+#~ "is viewed."
 #~ msgstr ""
-#~ "Отправка  тестового сообщения завершилась неудачно. Пожалуйста, проверьте <a "
-#~ "href='%s'>log-файлы</a>."
-
-#, php-format
-#~ msgid ""
-#~ "Make sure you have already configured your <a href='%s'>Email</a> settings."
-#~ msgstr ""
-#~ "Убедитесь, что ваша <a href='%s'>электронная почта</a> настроена правильно."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Auth Group. Please add new <a href='%s'>Auth Group</a> first."
-#~ msgstr ""
-#~ "Отсутствуют сконфигурированные группы порталов. Пожалуйста, добавьте вначале "
-#~ "<a href='%s'>группу порталов</a>."
-
-#, php-format
-#~ msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Для получения дополнительных сведений вы можете обратиться к <a href='%s' "
-#~ "target='_blank'>документации</a>."
-
-#, php-format
-#~ msgid ""
-#~ "The driver used to communicate with your UPS. Get the list of available <a "
-#~ "href='%s' target='_blank'>drivers</a>."
-#~ msgstr ""
-#~ "Драйвер используется для соединения с вашим UPS. Список доступных драйверов "
-#~ "находится <a href='%s' target='_blank'>здесь</a>."
-
-#, php-format
-#~ msgid ""
-#~ "This configuration settings are used to generate the ups.conf configuration "
-#~ "file which is required by the NUT UPS daemon. To get more information how to "
-#~ "configure your UPS please check the NUT (Network UPS Tools) <a href='%s' "
-#~ "target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Эти настройки используются для создания файла настроек ups.conf, который "
-#~ "необходим для работы процесса NUT UPS. Для получения дополнительных сведений "
-#~ "о настройке NUT (Network UPS Tools) вы можете обратиться к <a href='%s' "
-#~ "target='_blank'>документации</a>."
-
-#, php-format
-#~ msgid ""
-#~ "This will cause %s not to check for newer firmware versions when the <a "
-#~ "href='%s'>%s</a> page is viewed."
-#~ msgstr ""
-#~ "Это заставит %s не проверять обновления версий прошивок при просмотре "
-#~ "страницы <a href='%s'>%s</a>."
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about TCP Wrappers check the FreeBSD <a "
-#~ "href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Подробную информацию о TCP Wrappers можно узнать из <a href='%s' "
-#~ "target='_blank'>документации</a> по FreeBSD."
-
-#, php-format
-#~ msgid ""
-#~ "To increase CIFS performance try the following:<div "
-#~ "id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' "
-#~ "switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a "
-#~ "href='%s'>Tuning</a>' switch</li></ul></div>"
-#~ msgstr ""
-#~ "Для повышения производительности службы CIFS попробуйте сделать следующее: "
-#~ "<div id='enumeration'><ul><li>Включите 'Асинхронный ввод/вывод "
-#~ "(AIO)'</li><li>Включите 'Чтение/запись большими блоками'</li><li>Включите "
-#~ "'<a href='%s'>Настройку переменных ядра</a>'</li></ul></div>"
-
-#, php-format
-#~ msgid ""
-#~ "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
-#~ "of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
-#~ "or NTFS can result in unpredictable results, file corruption, and loss of "
-#~ "data!"
-#~ msgstr ""
-#~ "UFS и ее варианты являются родными файловыми системами для FreeBSD (основа "
-#~ "%s). Попытка использования других файловых систем, таких как FAT, FAT32, "
-#~ "EXT2, EXT3 или NTFS может привести к непредсказуемым результатам, "
-#~ "повреждению файлов и потерям данных!"
-
-#, php-format
-#~ msgid ""
-#~ "You can't mount the partition '%s' where the config file is stored.<br />"
-#~ msgstr ""
-#~ "Невозможно смонтировать раздел '%s', где хранится файл настроек.<br />"
-
-#, php-format
-#~ msgid ""
-#~ "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
-#~ "service to clients."
-#~ msgstr ""
-#~ "Включите <a href='%s'>Zeroconf/Bonjour</a> для предоставления сервиса "
-#~ "клиентам."
-
-#, php-format
-#~ msgid ""
-#~ "To get more information how to configure LCDproc check the LCDproc <a "
-#~ "href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Для получения более подробной информации по настройке LCDproc смотри "
-#~ "соответствующую <a href='%s' target='_blank'>документацию</a>."
-
-#, php-format
-#~ msgid ""
-#~ "The driver used to connect with the LCD. The list of available <a href='%s' "
-#~ "target='_blank'>drivers</a>."
-#~ msgstr ""
-#~ "Драйвер, чтобы соединиться с LCD. Список <a href='%s' "
-#~ "target='_blank'>драйверов</a>."
-
-#~ msgid ""
-#~ "<div id='enumeration'><ul><li>The new password is also the default root "
-#~ "password of the system!</li></ul></div>"
-#~ msgstr ""
-#~ "<div id='enumeration'><ul><li>Новый пароль также будет являться паролем "
-#~ "пользователя root!</li></ul></div>"
-
-#~ msgid ""
-#~ "Set what user the service will run as (www by default). <br><b><font "
-#~ "color='red'>NOTE</font>: Running as root is <u>not recommended</u> for "
-#~ "security reasons, use it on your own risk!</b></br>"
-#~ msgstr ""
-#~ "Укажите, от имени какого пользователя запускать службу (по умолчанию: www). "
-#~ "<br><b><font color='red'>ВНИМАНИЕ</font>: Запуск от имени пользователя root  "
-#~ "<u>не рекомендуется</u> из соображений безопасности!</b></br>"
-
-#, php-format
-#~ msgid ""
-#~ "After you click &quot;Save&quot;, you may also have to do one or more of the "
-#~ "following steps before you can access this server again: <ul><li>change the "
-#~ "IP address of your computer</li><li>access the webGUI with the new IP "
-#~ "address</li></ul>"
-#~ msgstr ""
-#~ "После нажатия кнопки &quot;Сохранить&quot;, вам, возможно, придется "
-#~ "выполнить одно или несколько из следующих действий, прежде чем вы cможете "
-#~ "получить доступ к этому серверу еще раз: <ul><li>изменить IP-адрес вашего "
-#~ "компьютера</li><li>получить доступ к Web-интерфейсу с новым IP-"
-#~ "адресом</li></ul>"
-
-#, php-format
-#~ msgid ""
-#~ "No configured CARP interfaces. Please add new <a href='%s'>CARP "
-#~ "interface</a> first."
-#~ msgstr ""
-#~ "Не настроены CARP интерфейсы. Сперва добавьте новый <a href='%s'>CARP "
-#~ "интерфейс</a>."
-
-#, php-format
-#~ msgid ""
-#~ "You must <a href='%s'>reboot</a> the system before you can upgrade the "
-#~ "firmware."
-#~ msgstr ""
-#~ "Вы должны <a href='%s'>перезагрузить</a> систему прежде чем вы сможете "
-#~ "произвести апгрейд прошивки."
-
-#~ msgid ""
-#~ "You can also install a package via SSH or console using the the pkg add "
-#~ "command.<br />Example: pkg add packagename"
-#~ msgstr ""
-#~ "Вы также можете установить пакет с помощью SSH или консоли, использовав "
-#~ "команду pkg add.<br />Например: pkg add packagename"
-
-#~ msgid "add any supplemental parameters"
-#~ msgstr "добавьте любые дополнительные параметры"
-
-#~ msgid ""
-#~ "All data in the path is overwritten. To avoid invalid data/permission, using "
-#~ "empty UFS directory is recommended."
-#~ msgstr ""
-#~ "Все данные по указанному пути будут перезаписаны. Чтобы избежать "
-#~ "неправильных данных/разрешений, рекомендуется использовать пустой каталог "
-#~ "UFS."
-
-#, php-format
-#~ msgid "Check <a href=\"%s\">System|General Setup</a> before initializing."
-#~ msgstr ""
-#~ "Проверьте <a href=\"%s\">Система|Общие параметры</a> перед инициализацией."
-
-#, php-format
-#~ msgid ""
-#~ "After you click &quot;Save&quot;, you must reboot the server to make the "
-#~ "changes take effect. You may also have to do one or more of the following "
-#~ "steps before you can access your server again: <ul><li><span "
-#~ "class='vexpl'>change the IP address of your server</span></li><li><span "
-#~ "class='vexpl'>access the webGUI with the new IP address</span></li></ul>"
-#~ msgstr ""
-#~ "После того, как вы нажмёте &quot;Сохранить&quot;, вам необходимо "
-#~ "перезагрузить сервер, чтобы изменения вступили в силу. Также, возможно, вам "
-#~ "понадобится проделать некоторые из следующих шагов, прежде чем вы сможете "
-#~ "получить доступ к серверу:<ul><li><span class='vexpl'>поменять IP адрес "
-#~ "сервера</span></li><li><span class='vexpl'>войти в веб интерфейс с "
-#~ "использованием нового IP адреса</span></li></ul>"
-
-#~ msgid ""
-#~ "<b>EFI GPT partition</b> if you want to mount a GPT formatted drive "
-#~ "(<b>default partition</b>).<br/><b>MBR partition</b> if you want to mount a "
-#~ "UFS formatted drive or do imported disks from other OS.<br/><b>CD/DVD "
-#~ "volume</b> if you want to mount a CD/DVD volume."
-#~ msgstr ""
-#~ "<b>Раздел GPT </b> если вы хотите подключить GPT отформатированный диск "
-#~ "(<b>раздел по умолчанию</b>).<br/><b>Раздел MBR </b> если вы хотите "
-#~ "подключить отформатированный диск UFS или же импортируете диск из других "
-#~ "ОС.<br/><b>CD/DVD привод</b> если Вы подключаете CD/DVD привод."
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about writing firewall rules check the FreeBSD "
-#~ "<a href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Чтобы получить подробную информацию о создании правил брандмауэра, прочтите "
-#~ "<a href='%s' target='_blank'>документацию</a> по FreeBSD."
-
-#~ msgid ""
-#~ "This means that the firmware you flashed is not an official/supported "
-#~ "firmware and may lead to unexpected behavior or security compromises. Only "
-#~ "install firmwares that come from sources that you trust, and make sure that "
-#~ "the firmware has not been tampered with.<br /><br />Do you want to install "
-#~ "this firmware anyway (on your own risk)?"
-#~ msgstr ""
-#~ "Это означает, что прошивка, который вы пытаетесь обновиться не является "
-#~ "официальной/поддерживаемой прошивкой и может привести к неожиданному "
-#~ "поведению или изъянам в безопасности. Обновляйте только прошивками, которые "
-#~ "получаете от источников, которым вы доверяете, и убедитесь, что прошивка не "
-#~ "была подделана.<br /><br />Вы хотите обновиться с помощью этой прошивки в "
-#~ "любом случае (на свой страх и риск)?"
-
-#, php-format
-#~ msgid ""
-#~ "DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-#~ "try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
-#~ "/>It is recommended that you <a href='%s'>Backup</a> the server "
-#~ "configuration before doing a upgrade."
-#~ msgstr ""
-#~ "НЕ прерывайте процесс обновления прошивки после старта.<br />НЕ пытайтесь "
-#~ "произвести прошивку сервера файлами отличными от '%s-%s-embedded.img.xz'.<br "
-#~ "/>Рекомендуется <a href='%s'>Сохранить</a> конфигурацию сервера перед "
-#~ "началом прошивки."
-
-#, php-format
-#~ msgid ""
-#~ "The driver used to communicate with your second UPS. Get the list of "
-#~ "available <a href='%s' target='_blank'>drivers</a>."
-#~ msgstr ""
-#~ "Драйвер используется для связи с вашим вторым ИБП. Получить список доступных "
-#~ "<a href='%s' target='_blank'>drivers</a>."
+#~ "Это заставит %s не проверять наличие новых версий прошивки, когда страница "
+#~ "%s в просмотре."
