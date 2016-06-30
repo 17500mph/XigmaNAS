@@ -36,7 +36,7 @@ $d_isfwfile = 1;
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gtext("System"), gtext("Firmware"));
+$pgtitle = array(gtext("System"), gtext("Firmware Update"));
 
 // check boot partition
 $part1size = $g_install['part1size_embedded'];
@@ -425,7 +425,7 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 							<?php else:?>
 								<?php
 								$helpinghand = '<a href="' . 'reboot.php' . '">'
-									. gtext('You must reboot the system before you can upgrade the firmware')
+									. gtext('You must reboot the server before you can upgrade the firmware')
 									. '</a>.';
 								?>
 								<strong><?=$helpinghand;?></strong>
