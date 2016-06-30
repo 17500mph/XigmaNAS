@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-06-30 06:03+0000\n"
+"POT-Creation-Date: 2016-06-30 20:15+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -336,6 +336,9 @@ msgid "Active Shares"
 msgstr ""
 
 msgid "Active Users"
+msgstr ""
+
+msgid "Adaptive (Low Power Consumption)"
 msgstr ""
 
 msgid "Add"
@@ -1919,7 +1922,7 @@ msgstr ""
 msgid "Disable firmware version check."
 msgstr ""
 
-msgid "Disable speaker beep on startup and shutdown."
+msgid "Disable speaker beep on startup and shutdowns."
 msgstr ""
 
 msgid "Disable the compression of repeated line."
@@ -1978,6 +1981,10 @@ msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
 
 msgid "Do not erase the Master Boot Record (useful for some RAID controller cards)."
+msgstr ""
+
+#, php-format
+msgid "Do not let the server check for newer firmware versions when the %s page gets loaded."
 msgstr ""
 
 msgid "Do you really want to clear and import?\\nThe existing config will be cleared and overwritten."
@@ -2550,7 +2557,7 @@ msgstr ""
 msgid "Enable the ident protocol (RFC1413)."
 msgstr ""
 
-msgid "Enable the system power control utility."
+msgid "Enable the server power control utility."
 msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
@@ -3147,6 +3154,9 @@ msgstr ""
 msgid "Help"
 msgstr ""
 
+msgid "Hiadaptive (High Performance)"
+msgstr ""
+
 msgid "Hide dot files"
 msgstr ""
 
@@ -3527,6 +3537,9 @@ msgid "Interfaces"
 msgstr ""
 
 msgid "Internal Server Information"
+msgstr ""
+
+msgid "Internal Speaker"
 msgstr ""
 
 msgid "Internal UPS clock date"
@@ -4048,6 +4061,9 @@ msgstr ""
 msgid "MaxRecvDataSegmentLength"
 msgstr ""
 
+msgid "Maximum (Highest Performance)"
+msgstr ""
+
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr ""
 
@@ -4153,6 +4169,9 @@ msgstr ""
 msgid "Minimum"
 msgstr ""
 
+msgid "Minimum (Lowest Performance)"
+msgstr ""
+
 msgid "Minimum Free Space"
 msgstr ""
 
@@ -4177,7 +4196,7 @@ msgstr ""
 msgid "Minutes"
 msgstr ""
 
-msgid "Minutes between network time sync."
+msgid "Minutes between the next network time synchronization."
 msgstr ""
 
 msgid "Missing a temporary folder."
@@ -5982,9 +6001,6 @@ msgstr ""
 msgid "Sparse Volume"
 msgstr ""
 
-msgid "Speaker Beep"
-msgstr ""
-
 msgid "Specific Helium Level. The Helium, so says the literature, allows the drives to run cooler and quieter, and reduces power consumption. This is the status of the Helium in the drive. It is a pre-fail attribute that trips once the drive detects that the internal environment is out of specification."
 msgstr ""
 
@@ -6808,7 +6824,7 @@ msgstr ""
 msgid "The portal takes the form of 'address:port'. for example '192.168.1.1:3260' for IPv4, '[2001:db8:1:1::1]:3260' for IPv6. the port 3260 is standard iSCSI port number. For any IPs (wildcard address), use '0.0.0.0:3260' and/or '[::]:3260'. Do not mix wildcard and other IPs at same address family."
 msgstr ""
 
-msgid "The powerd utility monitors the system state and sets various power control options accordingly."
+msgid "The powerd utility monitors the server state and sets various power control options accordingly."
 msgstr ""
 
 msgid "The queuedepth range is invalid."
@@ -7193,10 +7209,6 @@ msgstr ""
 msgid "This will allow server-side downscaling of very large JPEG images, it can hurt JPEG serving performance on (at least) Sony DLNA products."
 msgstr ""
 
-#, php-format
-msgid "This will cause %s not to check for newer firmware versions when the %s page is viewed."
-msgstr ""
-
 msgid "This will create a recycle bin on the share."
 msgstr ""
 
@@ -7231,6 +7243,9 @@ msgid "Time"
 msgstr ""
 
 msgid "Time Machine"
+msgstr ""
+
+msgid "Time Synchronization"
 msgstr ""
 
 msgid "Time before the load will be rebooted"
@@ -8094,9 +8109,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr ""
 
-msgid "adaptive (low power consumption)"
-msgstr ""
-
 msgid "all encrypted disks are imported."
 msgstr ""
 
@@ -8134,9 +8146,6 @@ msgstr ""
 msgid "greatest settable low voltage transfer point"
 msgstr ""
 
-msgid "hiadaptive (high performance)"
-msgstr ""
-
 msgid "hour(s)"
 msgstr ""
 
@@ -8169,12 +8178,6 @@ msgid "load/unload failed."
 msgstr ""
 
 msgid "loader.conf"
-msgstr ""
-
-msgid "maximum (highest performance)"
-msgstr ""
-
-msgid "minimum (power saving)"
 msgstr ""
 
 msgid "minute(s)"
