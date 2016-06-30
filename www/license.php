@@ -204,7 +204,7 @@ $pgtitle = array(gtext("Help"), gtext("License & Credits"));
 	    Copyright &copy; 2004-2005 Bruce Cran (<a href="mailto:bruce@cran.org.uk">bruce@cran.org.uk</a>). All Rights Reserved.</p>
 
 	    <p> smartmontools - Utility programs (smartctl, smartd) to control/monitor storage systems (<a href="http://sourceforge.net/projects/smartmontools/" target="_blank">http://sourceforge.net/projects/smartmontools</a>)<br />
-	    Copyright &copy; 2002-2015 Bruce Allen. All Rights Reserved.</p>
+	    Copyright &copy; 2002-2016 Bruce Allen. All Rights Reserved.</p>
 
 	    <p> iSCSI initiator (<a href="ftp://ftp.cs.huji.ac.il/users/danny/freebsd" target="_blank">ftp://ftp.cs.huji.ac.il/users/danny/freebsd</a>)<br />
 	    Copyright &copy; 2005-2011 Daniel Braniss (<a href="mailto:danny@cs.huji.ac.il">danny@cs.huji.ac.il</a>). All Rights Reserved.</p>
@@ -272,7 +272,7 @@ $pgtitle = array(gtext("Help"), gtext("License & Credits"));
 	    Copyright &copy;2007-2015 VMware Inc. All rights reserved.</p>
 
 	    <p> VirtualBox Open Source Edition (OSE) (guest additions) (<a href="http://www.virtualbox.org" target="_blank">http://www.virtualbox.org</a>)<br />
-	    Copyright &copy; 2010-2015, Oracle and/or its affiliates. All Rights Reserved.</p>
+	    Copyright &copy; 2010-2016, Oracle and/or its affiliates. All Rights Reserved.</p>
 
 	    <p> phpVirtualBox (<a href="http://sourceforge.net/projects/phpvirtualbox/" target="_blank">http://sourceforge.net/projects/phpvirtualbox</a>)<br />
 	    Copyright &copy; 2011 Ian Moore, Inc. All Rights Reserved.</p>
@@ -290,7 +290,7 @@ $pgtitle = array(gtext("Help"), gtext("License & Credits"));
 	    Copyright &copy; 2014-2016 The Regents of the University of California. All Rights Reserved.</p>
 
 	    <p> sudo - An tool to allow a sysadmin to give limited root privileges. (<a href="http://www.sudo.ws" target="_blank">http://www.sudo.ws</a>)<br />
-	    Copyright &copy; 1994-1996, 1998-2015 Todd C. Miller. All Rights Reserved.</p>
+	    Copyright &copy; 1994-1996, 1998-2016 Todd C. Miller. All Rights Reserved.</p>
 
 	    <p> ipmitool - IPMItool provides a simple command-line interface to v1.5 & v2.0 IPMI-enabled devices. (<a href="http://sourceforge.net/projects/ipmitool/" target="_blank">http://sourceforge.net/projects/ipmitool</a>)<br />
 	    Copyright &copy; 2003 Sun Microsystems. All Rights Reserved.</p>
