@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-30 00:10+0000\n"
+"POT-Creation-Date: 2016-06-30 20:15+0000\n"
 "PO-Revision-Date: 2015-04-24 14:59+0000\n"
 "Last-Translator: delvago <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-29 22:59+0000\n"
+"X-Launchpad-Export-Date: 2016-06-30 18:44+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: BULGARIA\n"
 "Language: \n"
@@ -410,6 +410,9 @@ msgstr "Активни споделяния"
 msgid "Active Users"
 msgstr "Активни Потребители"
 
+msgid "Adaptive (Low Power Consumption)"
+msgstr ""
+
 msgid "Add"
 msgstr "Добави"
 
@@ -806,11 +809,11 @@ msgstr "Режим архив."
 msgid "Are you sure you want to proceed?"
 msgstr "Сигурни ли сте, че желаете да продължите?"
 
-msgid "Are you sure you want to reboot the system?"
-msgstr "Сигурни ли сте ,че искате да рестартирате системата?"
+msgid "Are you sure you want to reboot the server?"
+msgstr ""
 
-msgid "Are you sure you want to shutdown the system?"
-msgstr "Сигурни ли сте ,че искате да спрете системата?"
+msgid "Are you sure you want to shutdown the server?"
+msgstr ""
 
 msgid "Asynchronous I/O (AIO)"
 msgstr "Несинхронен I/O (AIO)"
@@ -2167,7 +2170,7 @@ msgstr ""
 msgid "Disable firmware version check."
 msgstr ""
 
-msgid "Disable speaker beep on startup and shutdown."
+msgid "Disable speaker beep on startup and shutdowns."
 msgstr ""
 
 msgid "Disable the compression of repeated line."
@@ -2229,6 +2232,12 @@ msgstr ""
 
 msgid ""
 "Do not erase the Master Boot Record (useful for some RAID controller cards)."
+msgstr ""
+
+#, php-format
+msgid ""
+"Do not let the server check for newer firmware versions when the %s page "
+"gets loaded."
 msgstr ""
 
 msgid ""
@@ -2827,7 +2836,7 @@ msgstr ""
 msgid "Enable the ident protocol (RFC1413)."
 msgstr ""
 
-msgid "Enable the system power control utility."
+msgid "Enable the server power control utility."
 msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
@@ -3199,6 +3208,9 @@ msgstr "Firmware"
 msgid "Firmware Check"
 msgstr ""
 
+msgid "Firmware Update"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr ""
 
@@ -3461,6 +3473,9 @@ msgstr ""
 
 msgid "Help"
 msgstr "Помощ"
+
+msgid "Hiadaptive (High Performance)"
+msgstr ""
 
 msgid "Hide dot files"
 msgstr ""
@@ -3879,6 +3894,9 @@ msgid "Interfaces"
 msgstr "Интерфейси"
 
 msgid "Internal Server Information"
+msgstr ""
+
+msgid "Internal Speaker"
 msgstr ""
 
 msgid "Internal UPS clock date"
@@ -4440,6 +4458,9 @@ msgstr ""
 msgid "MaxRecvDataSegmentLength"
 msgstr ""
 
+msgid "Maximum (Highest Performance)"
+msgstr ""
+
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr ""
 
@@ -4550,6 +4571,9 @@ msgstr ""
 msgid "Minimum"
 msgstr ""
 
+msgid "Minimum (Lowest Performance)"
+msgstr ""
+
 msgid "Minimum Free Space"
 msgstr ""
 
@@ -4574,7 +4598,7 @@ msgstr ""
 msgid "Minutes"
 msgstr ""
 
-msgid "Minutes between network time sync."
+msgid "Minutes between the next network time synchronization."
 msgstr ""
 
 msgid "Missing a temporary folder."
@@ -6466,9 +6490,6 @@ msgstr ""
 msgid "Sparse Volume"
 msgstr ""
 
-msgid "Speaker Beep"
-msgstr ""
-
 msgid ""
 "Specific Helium Level. The Helium, so says the literature, allows the drives "
 "to run cooler and quieter, and reduces power consumption. This is the status "
@@ -7423,11 +7444,9 @@ msgid ""
 msgstr ""
 
 msgid ""
-"The powerd utility monitors the system state and sets various power control "
+"The powerd utility monitors the server state and sets various power control "
 "options accordingly."
 msgstr ""
-"The powerd utility monitors the system state and sets various power control "
-"options accordingly."
 
 msgid "The queuedepth range is invalid."
 msgstr ""
@@ -7461,6 +7480,9 @@ msgid ""
 "take one minute."
 msgstr ""
 
+msgid "The server is halting now. This may take one minute."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr ""
 
@@ -7479,9 +7501,6 @@ msgstr ""
 
 msgid "The subject of the email."
 msgstr ""
-
-msgid "The system is halting now. This may take one minute."
-msgstr "Системата се спира в момента. Това може да отнеме минута."
 
 msgid "The system is rebooting now. This may take one minute."
 msgstr "Системата се рестартира в момента. Това може да отнеме минута"
@@ -7923,12 +7942,6 @@ msgid ""
 "hurt JPEG serving performance on (at least) Sony DLNA products."
 msgstr ""
 
-#, php-format
-msgid ""
-"This will cause %s not to check for newer firmware versions when the %s page "
-"is viewed."
-msgstr ""
-
 msgid "This will create a recycle bin on the share."
 msgstr ""
 
@@ -7966,6 +7979,9 @@ msgid "Time"
 msgstr "Час"
 
 msgid "Time Machine"
+msgstr ""
+
+msgid "Time Synchronization"
 msgstr ""
 
 msgid "Time before the load will be rebooted"
@@ -8857,7 +8873,7 @@ msgstr ""
 msgid "You must initialize data before enabling."
 msgstr ""
 
-msgid "You must reboot the system before you can upgrade the firmware"
+msgid "You must reboot the server before you can upgrade the firmware"
 msgstr ""
 
 msgid "You must select at least one authentication method."
@@ -8911,9 +8927,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr ""
 
-msgid "adaptive (low power consumption)"
-msgstr ""
-
 msgid "all encrypted disks are imported."
 msgstr ""
 
@@ -8953,9 +8966,6 @@ msgstr ""
 msgid "greatest settable low voltage transfer point"
 msgstr ""
 
-msgid "hiadaptive (high performance)"
-msgstr ""
-
 msgid "hour(s)"
 msgstr ""
 
@@ -8988,12 +8998,6 @@ msgid "load/unload failed."
 msgstr ""
 
 msgid "loader.conf"
-msgstr ""
-
-msgid "maximum (highest performance)"
-msgstr ""
-
-msgid "minimum (power saving)"
 msgstr ""
 
 msgid "minute(s)"
@@ -9068,59 +9072,9 @@ msgstr ""
 msgid "version:"
 msgstr "версия:"
 
-#, php-format
 #~ msgid ""
-#~ "<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
-#~ "href='%s'>user</a> must have shell access."
+#~ "The powerd utility monitors the system state and sets various power control "
+#~ "options accordingly."
 #~ msgstr ""
-#~ "<a href='%s'>SSHD</a> трябва да бъде включен за работа на Unison. <a "
-#~ "href='%s'>Потребител</a> трябва да има достъп до shell обвивката."
-
-#~ msgid ""
-#~ "<div id='enumeration'><ul><li>The new password is also the default root "
-#~ "password of the system!</li></ul></div>"
-#~ msgstr ""
-#~ "<div id='enumeration'>Новата парола е също и парола на root "
-#~ "потребителя!<ul><li></li></ul></div>"
-
-#~ msgid ""
-#~ "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
-#~ msgstr ""
-#~ "<div id='enumeration'><ul><li>%d - Дата</li><li>%h - Хост име</li></ul></div>"
-
-#~ msgid ""
-#~ "<b>EFI GPT partition</b> if you want to mount a GPT formatted drive "
-#~ "(<b>default partition</b>).<br/><b>MBR partition</b> if you want to mount a "
-#~ "UFS formatted drive or do imported disks from other OS.<br/><b>CD/DVD "
-#~ "volume</b> if you want to mount a CD/DVD volume."
-#~ msgstr ""
-#~ "<b>EFI GPT partition</b> ако искате да монтирате GPT форматирано устройство "
-#~ "(<b>default partition</b>).<br/><b>MBR partition</b> ако искате да монтирате "
-#~ "UFS форматирано устройство или да да добавите диск от различна "
-#~ "OS.<br/><b>CD/DVD volume</b> ако искате да монтирате CD/DVD volume."
-
-#, php-format
-#~ msgid ""
-#~ "After you click &quot;Save&quot;, you must reboot the server to make the "
-#~ "changes take effect. You may also have to do one or more of the following "
-#~ "steps before you can access your server again: <ul><li><span "
-#~ "class='vexpl'>change the IP address of your server</span></li><li><span "
-#~ "class='vexpl'>access the webGUI with the new IP address</span></li></ul>"
-#~ msgstr ""
-#~ "След като натиснете &quot;Запази&quot;, трябва да рестартирате сървъра за да "
-#~ "се изпълнят направените промени. Освен това е възможно да са нужни една или "
-#~ "повече от следните стъпки за да възстановите достъпа до сървъра отново: "
-#~ "<ul><li>да смените IP адреса на Вашия компютър</li><li>да заредите уеб "
-#~ "интерфейса с новия IP адрес</li></ul>"
-
-#, php-format
-#~ msgid ""
-#~ "After you click &quot;Save&quot;, you may also have to do one or more of the "
-#~ "following steps before you can access this server again: <ul><li>change the "
-#~ "IP address of your computer</li><li>access the webGUI with the new IP "
-#~ "address</li></ul>"
-#~ msgstr ""
-#~ "След като натиснете &quot;Запази&quot;, е възможно да са нужни една или "
-#~ "повече от следните стъпки за да възстановите достъпа до сървъра отново: "
-#~ "<ul><li>да смените IP адреса на Вашия компютър</li><li>да заредите уеб "
-#~ "интерфейса с новия IP адрес</li></ul>"
+#~ "The powerd utility monitors the system state and sets various power control "
+#~ "options accordingly."

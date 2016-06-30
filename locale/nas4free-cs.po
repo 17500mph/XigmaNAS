@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-30 00:10+0000\n"
+"POT-Creation-Date: 2016-06-30 20:15+0000\n"
 "PO-Revision-Date: 2016-06-23 14:41+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-29 22:59+0000\n"
+"X-Launchpad-Export-Date: 2016-06-30 18:44+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -446,6 +446,9 @@ msgstr "Sdílení, ke kterým je právě přistupováno"
 msgid "Active Users"
 msgstr "Aktivní uživatelé"
 
+msgid "Adaptive (Low Power Consumption)"
+msgstr ""
+
 msgid "Add"
 msgstr "Přidat"
 
@@ -869,11 +872,11 @@ msgstr "Režim archivace"
 msgid "Are you sure you want to proceed?"
 msgstr "Opravdu chcete pokračovat?"
 
-msgid "Are you sure you want to reboot the system?"
-msgstr "Opravdu chcete tento systém restartovat?"
+msgid "Are you sure you want to reboot the server?"
+msgstr ""
 
-msgid "Are you sure you want to shutdown the system?"
-msgstr "Opravdu chcete tento systém vypnout?"
+msgid "Are you sure you want to shutdown the server?"
+msgstr ""
 
 msgid "Asynchronous I/O (AIO)"
 msgstr "Asynchronní vst./výst. (AIO)"
@@ -2330,8 +2333,8 @@ msgstr "Úplně vypnout správce souborů."
 msgid "Disable firmware version check."
 msgstr "Vypnout kontrolu verze firmware."
 
-msgid "Disable speaker beep on startup and shutdown."
-msgstr "Vypnout pípnutí při spouštění a vypínání."
+msgid "Disable speaker beep on startup and shutdowns."
+msgstr ""
 
 msgid "Disable the compression of repeated line."
 msgstr "Vypnout vynechání opakujících se řádek"
@@ -2395,6 +2398,12 @@ msgstr ""
 
 msgid ""
 "Do not erase the Master Boot Record (useful for some RAID controller cards)."
+msgstr ""
+
+#, php-format
+msgid ""
+"Do not let the server check for newer firmware versions when the %s page "
+"gets loaded."
 msgstr ""
 
 msgid ""
@@ -3017,8 +3026,8 @@ msgstr "Umožnit ukládání atributů systému DOS"
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Používat protokol ident (norma RFC1413)"
 
-msgid "Enable the system power control utility."
-msgstr "Zapnout systémový nástroj pro řízení napájení."
+msgid "Enable the server power control utility."
+msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Zapnutím budou striktně dodržovány standardy pro DLNA."
@@ -3417,6 +3426,9 @@ msgstr "Firmware"
 msgid "Firmware Check"
 msgstr "Kontrola firmware"
 
+msgid "Firmware Update"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Nahrání firmware se nezdařilo (nedostatek paměti?)"
 
@@ -3695,6 +3707,9 @@ msgstr ""
 
 msgid "Help"
 msgstr "Nápověda"
+
+msgid "Hiadaptive (High Performance)"
+msgstr ""
 
 msgid "Hide dot files"
 msgstr "Nezobrazovat skryté soubory (s názvy začínajícími tečkou)"
@@ -4160,6 +4175,9 @@ msgstr "Rozhraní"
 
 msgid "Internal Server Information"
 msgstr "Vnitřní informace o serveru"
+
+msgid "Internal Speaker"
+msgstr ""
 
 msgid "Internal UPS clock date"
 msgstr "Datum v UPS"
@@ -4777,6 +4795,9 @@ msgstr "MaxZbyvajicichZpravPriravenychKPrenosu"
 msgid "MaxRecvDataSegmentLength"
 msgstr "MaxDelkaPrijmutehoDatovehoSegmentu"
 
+msgid "Maximum (Highest Performance)"
+msgstr ""
+
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr "Nejvyšší výkon, nevyšší hlučnost"
 
@@ -4898,6 +4919,9 @@ msgstr "Nastavení minidlna byla zaktualizována"
 msgid "Minimum"
 msgstr "Nejnižší hodnota"
 
+msgid "Minimum (Lowest Performance)"
+msgstr ""
+
 msgid "Minimum Free Space"
 msgstr "Přinejmenším volného prostoru"
 
@@ -4924,8 +4948,8 @@ msgstr "Nejnižší zaznamenaná teplota (stupně Celsia)"
 msgid "Minutes"
 msgstr "Minuty"
 
-msgid "Minutes between network time sync."
-msgstr "Perioda synchronizace času ze sítě (v minutách)."
+msgid "Minutes between the next network time synchronization."
+msgstr ""
 
 msgid "Missing a temporary folder."
 msgstr "Chybí dočasná složka."
@@ -6923,9 +6947,6 @@ msgstr "Řídké"
 msgid "Sparse Volume"
 msgstr "Řídký svazek"
 
-msgid "Speaker Beep"
-msgstr "Pípání vestavěným reproduktorem"
-
 msgid ""
 "Specific Helium Level. The Helium, so says the literature, allows the drives "
 "to run cooler and quieter, and reduces power consumption. This is the status "
@@ -8010,11 +8031,9 @@ msgstr ""
 "adresy a zástupné vyjádření."
 
 msgid ""
-"The powerd utility monitors the system state and sets various power control "
+"The powerd utility monitors the server state and sets various power control "
 "options accordingly."
 msgstr ""
-"Služba powerd sleduje stav systému a dle potřeby nastavuje odpovídající "
-"prvky správy napájení."
 
 msgid "The queuedepth range is invalid."
 msgstr "Rozsah délek fronty je neplatný."
@@ -8050,6 +8069,9 @@ msgstr ""
 "Nastavení serveru byla vrácena na výchozí hodnoty a ten se nyní restartuje. "
 "Může nějakou minutu trvat."
 
+msgid "The server is halting now. This may take one minute."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr "Po obnovení nastavení bude server restartován."
 
@@ -8068,9 +8090,6 @@ msgstr "Úložná oblast mapována na LUN%d."
 
 msgid "The subject of the email."
 msgstr "Předmět e-mailu."
-
-msgid "The system is halting now. This may take one minute."
-msgstr "Systém se vypíná. Může nějakou minutu trvat."
 
 msgid "The system is rebooting now. This may take one minute."
 msgstr "Systém se restartuje. Může nějakou minutu trvat."
@@ -8631,12 +8650,6 @@ msgstr ""
 "Toto umožní snižování rozlišení u opravdu velkých jpeg obrázků, může "
 "zpomalit dodávání na (přinejmenším) DLNA zařízení od Sony."
 
-#, php-format
-msgid ""
-"This will cause %s not to check for newer firmware versions when the %s page "
-"is viewed."
-msgstr ""
-
 msgid "This will create a recycle bin on the share."
 msgstr "Toto na sdílení vytvoří objekt Koš."
 
@@ -8682,6 +8695,9 @@ msgstr "Čas"
 
 msgid "Time Machine"
 msgstr "Apple Time Machine"
+
+msgid "Time Synchronization"
+msgstr ""
 
 msgid "Time before the load will be rebooted"
 msgstr "Prodleva restartu napájení připojených zařízení"
@@ -9649,7 +9665,7 @@ msgstr ""
 msgid "You must initialize data before enabling."
 msgstr "Před zapnutím je třeba inicializovat data."
 
-msgid "You must reboot the system before you can upgrade the firmware"
+msgid "You must reboot the server before you can upgrade the firmware"
 msgstr ""
 
 msgid "You must select at least one authentication method."
@@ -9707,9 +9723,6 @@ msgstr ""
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "adaptive (low power consumption)"
-msgstr "přizpůsobivé (nízká spotřeba energie)"
-
 msgid "all encrypted disks are imported."
 msgstr "všechny šifrované disky jsou importovány."
 
@@ -9755,9 +9768,6 @@ msgstr ""
 "až jak „vysoko“ lze nastavit hranici podpětí, při poklesu pod kterou "
 "přepnout na akumulátory"
 
-msgid "hiadaptive (high performance)"
-msgstr "vysoké přizpůsobivé (vysoký výkon)"
-
 msgid "hour(s)"
 msgstr "hodin"
 
@@ -9791,12 +9801,6 @@ msgstr "načtení/uvolnění se nezdařilo."
 
 msgid "loader.conf"
 msgstr "loader.conf"
-
-msgid "maximum (highest performance)"
-msgstr "co nejvíce (nejvyšší výkon)"
-
-msgid "minimum (power saving)"
-msgstr "co nejméně (úspora energie)"
 
 msgid "minute(s)"
 msgstr "minut"
@@ -9874,283 +9878,33 @@ msgstr ""
 msgid "version:"
 msgstr "verze:"
 
-#~ msgid "add any supplemental parameters"
-#~ msgstr "přidejte jakékoli doplňující parametry"
+#~ msgid "Minutes between network time sync."
+#~ msgstr "Perioda synchronizace času ze sítě (v minutách)."
 
 #~ msgid ""
-#~ "All data in the path is overwritten. To avoid invalid data/permission, using "
-#~ "empty UFS directory is recommended."
+#~ "The powerd utility monitors the system state and sets various power control "
+#~ "options accordingly."
 #~ msgstr ""
-#~ "Veškerá data v zadaném umístění jsou přepsána. Je doporučeno použít prázdnou "
-#~ "UFS složku a vyhnout se tak neplatným datům / přístupovým právům."
+#~ "Služba powerd sleduje stav systému a dle potřeby nastavuje odpovídající "
+#~ "prvky správy napájení."
 
-#, php-format
-#~ msgid "Check <a href=\"%s\">System|General Setup</a> before initializing."
-#~ msgstr ""
-#~ "Před inicializací zkontrolujte <a href=\"%s\">Systém|Obecná nastavení</a>."
+#~ msgid "adaptive (low power consumption)"
+#~ msgstr "přizpůsobivé (nízká spotřeba energie)"
 
-#, php-format
-#~ msgid ""
-#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
-#~ msgstr ""
-#~ "Hlášení o stavu se nepodařilo odeslat. Zkontrolujte soubory se <a "
-#~ "href='%s'>záznamem událostí</a>."
+#~ msgid "hiadaptive (high performance)"
+#~ msgstr "vysoké přizpůsobivé (vysoký výkon)"
 
-#, php-format
-#~ msgid ""
-#~ "No configured CARP interfaces. Please add new <a href='%s'>CARP "
-#~ "interface</a> first."
-#~ msgstr ""
-#~ "Nejsou nastavena žádná CARP rozhraní. Nejprve přidejte <a href='%s'>CARP "
-#~ "rozhraní</a>."
+#~ msgid "maximum (highest performance)"
+#~ msgstr "co nejvíce (nejvyšší výkon)"
 
-#~ msgid ""
-#~ "Set what user the service will run as (www by default). <br><b><font "
-#~ "color='red'>NOTE</font>: Running as root is <u>not recommended</u> for "
-#~ "security reasons, use it on your own risk!</b></br>"
-#~ msgstr ""
-#~ "Nastavuje, pod jakým uživatelským účtem bude proces služby spouštěn (výchozí "
-#~ "je www). <br><b><font color='red'>POZOR</font>: Provozování pod účtem root "
-#~ "(správce systému) <u>není doporučováno</u> z důvodu zabezpečení, proto "
-#~ "použijte jen na vlastní nebezpečí!</b></br>"
+#~ msgid "minimum (power saving)"
+#~ msgstr "co nejméně (úspora energie)"
 
-#, php-format
-#~ msgid ""
-#~ "The driver used to communicate with your UPS. Get the list of available <a "
-#~ "href='%s' target='_blank'>drivers</a>."
-#~ msgstr ""
-#~ "Ovladač pro komunikaci s UPS, ze které je systém napájen. Seznam dostupných "
-#~ "ovladačů obdržíte <a href='%s' target='_blank'>zde</a>."
+#~ msgid "Disable speaker beep on startup and shutdown."
+#~ msgstr "Vypnout pípnutí při spouštění a vypínání."
 
-#, php-format
-#~ msgid ""
-#~ "The driver used to connect with the LCD. The list of available <a href='%s' "
-#~ "target='_blank'>drivers</a>."
-#~ msgstr ""
-#~ "Ovladač pro připojení informačního displeje, nacházejícím se  na skříni "
-#~ "tohoto NAS serveru. Seznam dostupných <a href='%s' "
-#~ "target='_blank'>ovladačů</a>."
+#~ msgid "Speaker Beep"
+#~ msgstr "Pípání vestavěným reproduktorem"
 
-#, php-format
-#~ msgid ""
-#~ "This configuration settings are used to generate the ups.conf configuration "
-#~ "file which is required by the NUT UPS daemon. To get more information how to "
-#~ "configure your UPS please check the NUT (Network UPS Tools) <a href='%s' "
-#~ "target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Tato nastavení jsou použita pro vytvoření souboru ups.conf, potřebného pro "
-#~ "službu NUT, spravující UPS zdroje. Více informací ohledně nastavování zdroje "
-#~ "nepřerušovaného napájení (UPS) naleznete <a href='%s' "
-#~ "target='_blank'>dokumentaci</a> k NUT (síťové nástroje pro správu UPS)."
-
-#, php-format
-#~ msgid ""
-#~ "This will cause %s not to check for newer firmware versions when the <a "
-#~ "href='%s'>%s</a> page is viewed."
-#~ msgstr ""
-#~ "Vypne kontrolu dostupnosti novější verze firmware, prováděnou %s pokaždé, "
-#~ "když je zobrazena stránka <a href='%s'>%s</a>."
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about writing firewall rules check the FreeBSD "
-#~ "<a href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Podrobnosti ohledně vytváření pravidel pro bránu firewall naleznete v <a "
-#~ "href='%s' target='_blank'>dokumentaci</a> k systému FreeBSD."
-
-#, php-format
-#~ msgid ""
-#~ "To get more information how to configure LCDproc check the LCDproc <a "
-#~ "href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Podrobnosti ohledně nastavování naleznete v <a href='%s' "
-#~ "target='_blank'>dokumentaci</a> k ovladači LCDproc."
-
-#, php-format
-#~ msgid ""
-#~ "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
-#~ "of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
-#~ "or NTFS can result in unpredictable results, file corruption, and loss of "
-#~ "data!"
-#~ msgstr ""
-#~ "UFS (a jeho varianty) je pro operační systém FreeBSD (na kterém je %s "
-#~ "založený) PŘIROZENÝM souborovým systémem. Pokus o použití ostatních "
-#~ "souborových systémů, jako např. FAT, FAT32, EXT2, EXT3, EXT4 nebo NTFS může "
-#~ "vyústit v nečekané důsledky, poškození souborů a ztrátu dat!"
-
-#~ msgid ""
-#~ "You can also install a package via SSH or console using the the pkg add "
-#~ "command.<br />Example: pkg add packagename"
-#~ msgstr ""
-#~ "Balíček je možné nainstalovat také přes SSH či místní konzoli s použitím "
-#~ "příkazu pkg add.<br />Příklad: pkg add nazevbalicku"
-
-#~ msgid ""
-#~ "<b>EFI GPT partition</b> if you want to mount a GPT formatted drive "
-#~ "(<b>default partition</b>).<br/><b>MBR partition</b> if you want to mount a "
-#~ "UFS formatted drive or do imported disks from other OS.<br/><b>CD/DVD "
-#~ "volume</b> if you want to mount a CD/DVD volume."
-#~ msgstr ""
-#~ "<b>oddíl EFI GPT</b> pokud chcete připojit jednotku nesoucí formát GPT "
-#~ "(<b>výchozí oddíl</b>).<br/><b>oddíl MBR</b> pokud chcete připojit jednotku "
-#~ "nesoucí formát UFS nebo takovou, která byla dříve provozovaná v jiném "
-#~ "operačním systému, a chcete zachovat tak, jak je.<br/><b>CD/DVD/BD "
-#~ "svazek</b> pokud chcete připojit svazek, nacházející se na optickém médiu."
-
-#~ msgid ""
-#~ "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
-#~ msgstr ""
-#~ "<div id='enumeration'><ul><li>%d – datum</li><li>%h – název "
-#~ "stroje</li></ul></div>"
-
-#~ msgid ""
-#~ "<div id='enumeration'><ul><li>The new password is also the default root "
-#~ "password of the system!</li></ul></div>"
-#~ msgstr ""
-#~ "<div id='enumeration'><ul><li>Toto nové heslo bude zároveň také výchozím "
-#~ "heslem správce systému (root)!</li></ul></div>"
-
-#~ msgid ""
-#~ "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
-#~ "3.0.0 or newer, and the 'before' algorithm when talking to an older "
-#~ "rsync.</li><li>Before - File-deletions will be done before the transfer "
-#~ "starts.</li><li>During - File-deletions will be done incrementally as the "
-#~ "transfer happens.</li><li>Delay - File-deletions will be computed during the "
-#~ "transfer, and then removed after the transfer completes.</li><li>After - "
-#~ "File-deletions will be done after the transfer has completed.</li>"
-#~ msgstr ""
-#~ "<li>Výchozí – nástroj Rsync zvolí algoritmus pro komunikaci dle verze na "
-#~ "protějšku: „v průběhu“ pro 3.0.0 a novější, „před“ pro starší rsync "
-#~ "servery</li><li>Před – mazání souborů bude provedeno před začátkem "
-#~ "přenosu.</li><li>V průběhu – mazání souborů bude probíhat souběžně s "
-#~ "přenosem.</li><li>S prodlevou – během přenosu bude zjištěno, které soubory "
-#~ "jsou  určeny ke smazání – to ale proběhne až po dokončení "
-#~ "přenosu.</li><li>Po – veškeré operace ohledně mazání souborů proběhnou až po "
-#~ "dokončení přenosu.</li>"
-
-#, php-format
-#~ msgid ""
-#~ "After you click &quot;Save&quot;, you may also have to do one or more of the "
-#~ "following steps before you can access this server again: <ul><li>change the "
-#~ "IP address of your computer</li><li>access the webGUI with the new IP "
-#~ "address</li></ul>"
-#~ msgstr ""
-#~ "Až kliknete na Uložit, pak abyste se opět mohli připojit k tomuto serveru, "
-#~ "bude nejspíš ještě třeba provést: <ul><li>příslušně změnit IP adresu svého "
-#~ "počítače</li><li>nasměrovat webový prohlížeč na novou adresu webového "
-#~ "správního rozhraní serveru</li></ul>"
-
-#, php-format
-#~ msgid ""
-#~ "After you click &quot;Save&quot;, you must reboot the server to make the "
-#~ "changes take effect. You may also have to do one or more of the following "
-#~ "steps before you can access your server again: <ul><li><span "
-#~ "class='vexpl'>change the IP address of your server</span></li><li><span "
-#~ "class='vexpl'>access the webGUI with the new IP address</span></li></ul>"
-#~ msgstr ""
-#~ "Aby změny vstoupily v platnost, je třeba po kliknutí na Uložit ještě "
-#~ "restartovat server. Abyste se opět mohli připojit ke svému serveru, bude "
-#~ "nejspíš ještě třeba provést: <ul><li><span class='vexpl'>příslušně změnit "
-#~ "jeho IP adresu</span></li><li><span class='vexpl'>použít tuto novou adresu "
-#~ "pro přístup do webového správního rozhraní</span></li></ul>"
-
-#, php-format
-#~ msgid ""
-#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
-#~ msgstr ""
-#~ "Zkušební e-mail se nepodařilo odeslat. Zkontrolujte soubory se <a "
-#~ "href='%s'>záznamem událostí</a>."
-
-#, php-format
-#~ msgid ""
-#~ "Make sure you have already configured your <a href='%s'>Email</a> settings."
-#~ msgstr "Ověřte, že užmáte nastaven svůj<a href='%s'>e-mail</a>."
-
-#, php-format
-#~ msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
-#~ msgstr "Viz <a href='%s' target='_blank'>dokumentace</a>."
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about TCP Wrappers check the FreeBSD <a "
-#~ "href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "Podrobnosti o TCP „obalení“ (wrappers) nalezenete v <a href='%s' "
-#~ "target='_blank'>dokumentaci</a> k systému FreeBSD."
-
-#, php-format
-#~ msgid ""
-#~ "To increase CIFS performance try the following:<div "
-#~ "id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' "
-#~ "switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a "
-#~ "href='%s'>Tuning</a>' switch</li></ul></div>"
-#~ msgstr ""
-#~ "Chcete-li zvýšit výkonnost CIFS, zkuste následující:<div "
-#~ "id='enumeration'><ul><li>Zapněte asynchronní vst./výst. "
-#~ "(AIO)</li><li>Zapněte masivní čtení/zápis</li><li>Zapněte<a "
-#~ "href='%s'>vyladění</a>'</li></ul></div>"
-
-#, php-format
-#~ msgid ""
-#~ "You can't mount the partition '%s' where the config file is stored.<br />"
-#~ msgstr ""
-#~ "Diskový oddíl %s nelze připojit do umístění, ve kterém se nachází soubor s "
-#~ "nastaveními.<br />"
-
-#, php-format
-#~ msgid ""
-#~ "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
-#~ "service to clients."
-#~ msgstr ""
-#~ "Klientům začne být tato služba propagována až po zapnutí služby<a "
-#~ "href='%s'>Zeroconf/Bonjour</a>."
-
-#, php-format
-#~ msgid ""
-#~ "You must <a href='%s'>reboot</a> the system before you can upgrade the "
-#~ "firmware."
-#~ msgstr ""
-#~ "Před přechodem na novější verzi firmware je třeba systém nejprve <a "
-#~ "href='%s'>restartovat</a>."
-
-#, php-format
-#~ msgid ""
-#~ "No configured Auth Group. Please add new <a href='%s'>Auth Group</a> first."
-#~ msgstr ""
-#~ "Není nastavená žádná ověřovací skupina. Nejprve nějakou <a "
-#~ "href='%s'>ověřovací skupinu</a> přidejte."
-
-#, php-format
-#~ msgid ""
-#~ "DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-#~ "try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
-#~ "/>It is recommended that you <a href='%s'>Backup</a> the server "
-#~ "configuration before doing a upgrade."
-#~ msgstr ""
-#~ "Jakmile započne, NEPŘERUŠUJTE proces aktualizace firmware.<br />NEAPLIKUJTE "
-#~ "jiné, než platné %s-%s-embedded.img.xz soubory.<br />Před provedením "
-#~ "aktualizace je důrazně doporučeno <a href='%s'>Zazálohovat</a> nastavení "
-#~ "serveru."
-
-#~ msgid ""
-#~ "This means that the firmware you flashed is not an official/supported "
-#~ "firmware and may lead to unexpected behavior or security compromises. Only "
-#~ "install firmwares that come from sources that you trust, and make sure that "
-#~ "the firmware has not been tampered with.<br /><br />Do you want to install "
-#~ "this firmware anyway (on your own risk)?"
-#~ msgstr ""
-#~ "To znamená, že firmware, který jste nahráli, není oficiální/podporovaný a "
-#~ "může vést k neočekávanému chování či nedostatkům v zabezpečení. Instalujte "
-#~ "pouze firmware, pocházející z důvěryhodných zdrojů a ověřte, že nebyl "
-#~ "pozměněn.<br /><br />Opravdu i tak chcete tento firmware nainstalovat (na "
-#~ "vlastní zodpovědnost)?"
-
-#, php-format
-#~ msgid ""
-#~ "<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
-#~ "href='%s'>user</a> must have shell access."
-#~ msgstr ""
-#~ "Pro správnou funkci synchronizace Unison je třeba, aby byla zapnutá služba<a "
-#~ "href='%s'>SSH</a> a <a href='%s'>uživatelský účet</a> měl přístup ke "
-#~ "skutečnému shellu (tj. ne např. /bin/nologin, atp)."
+#~ msgid "Enable the system power control utility."
+#~ msgstr "Zapnout systémový nástroj pro řízení napájení."

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-30 00:10+0000\n"
+"POT-Creation-Date: 2016-06-30 20:15+0000\n"
 "PO-Revision-Date: 2015-12-19 13:07+0000\n"
 "Last-Translator: Daisuke Aoyama <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-29 22:58+0000\n"
+"X-Launchpad-Export-Date: 2016-06-30 18:45+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -408,6 +408,9 @@ msgstr "アクティブな共有"
 msgid "Active Users"
 msgstr "アクティブなユーザ"
 
+msgid "Adaptive (Low Power Consumption)"
+msgstr ""
+
 msgid "Add"
 msgstr "追加"
 
@@ -804,11 +807,11 @@ msgstr "アーカイブモード"
 msgid "Are you sure you want to proceed?"
 msgstr "処理を進めても宜しいですか?"
 
-msgid "Are you sure you want to reboot the system?"
-msgstr "本当にリブートしても宜しいですか?"
+msgid "Are you sure you want to reboot the server?"
+msgstr ""
 
-msgid "Are you sure you want to shutdown the system?"
-msgstr "本当にシステムをシャットダウンしても宜しいですか?"
+msgid "Are you sure you want to shutdown the server?"
+msgstr ""
 
 msgid "Asynchronous I/O (AIO)"
 msgstr "非同期I/O (AIO)"
@@ -2158,7 +2161,7 @@ msgstr ""
 msgid "Disable firmware version check."
 msgstr ""
 
-msgid "Disable speaker beep on startup and shutdown."
+msgid "Disable speaker beep on startup and shutdowns."
 msgstr ""
 
 msgid "Disable the compression of repeated line."
@@ -2220,6 +2223,12 @@ msgstr ""
 
 msgid ""
 "Do not erase the Master Boot Record (useful for some RAID controller cards)."
+msgstr ""
+
+#, php-format
+msgid ""
+"Do not let the server check for newer firmware versions when the %s page "
+"gets loaded."
 msgstr ""
 
 msgid ""
@@ -2817,7 +2826,7 @@ msgstr "DOS 属性の保存を有効にします"
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Ident プロトコル (RFC1413) を有効にします。"
 
-msgid "Enable the system power control utility."
+msgid "Enable the server power control utility."
 msgstr ""
 
 msgid "Enable to strictly adhere to DLNA standards."
@@ -3190,6 +3199,9 @@ msgstr "ファームウェア"
 msgid "Firmware Check"
 msgstr ""
 
+msgid "Firmware Update"
+msgstr ""
+
 msgid "Firmware upload failed (out of memory?)"
 msgstr "ファームウェアアップロードに失敗しました (メモリ不足？)"
 
@@ -3455,6 +3467,9 @@ msgstr "ディスク表面上のヘッドの高さ。低すぎる浮上量はヘ
 
 msgid "Help"
 msgstr "ヘルプ"
+
+msgid "Hiadaptive (High Performance)"
+msgstr ""
 
 msgid "Hide dot files"
 msgstr "ドットファイルを隠す"
@@ -3886,6 +3901,9 @@ msgstr "インタフェース"
 
 msgid "Internal Server Information"
 msgstr "内部サーバー情報"
+
+msgid "Internal Speaker"
+msgstr ""
 
 msgid "Internal UPS clock date"
 msgstr "内部UPS日時"
@@ -4458,6 +4476,9 @@ msgstr "MaxOutstandingR2T"
 msgid "MaxRecvDataSegmentLength"
 msgstr "MaxRecvDataSegmentLength"
 
+msgid "Maximum (Highest Performance)"
+msgstr ""
+
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr "最大のパフォーマンス、最大の音響出力"
 
@@ -4567,6 +4588,9 @@ msgstr "Minidlna構成が更新されました。"
 msgid "Minimum"
 msgstr "最小"
 
+msgid "Minimum (Lowest Performance)"
+msgstr ""
+
 msgid "Minimum Free Space"
 msgstr ""
 
@@ -4591,8 +4615,8 @@ msgstr "最少温度(セ氏)"
 msgid "Minutes"
 msgstr "分"
 
-msgid "Minutes between network time sync."
-msgstr "NTP の時間更新間隔を指定して下さい。"
+msgid "Minutes between the next network time synchronization."
+msgstr ""
 
 msgid "Missing a temporary folder."
 msgstr "テンポラリフォルダがありません。"
@@ -6503,9 +6527,6 @@ msgstr "スパース"
 msgid "Sparse Volume"
 msgstr "スパースボリューム"
 
-msgid "Speaker Beep"
-msgstr ""
-
 msgid ""
 "Specific Helium Level. The Helium, so says the literature, allows the drives "
 "to run cooler and quieter, and reduces power consumption. This is the status "
@@ -7482,9 +7503,9 @@ msgstr ""
 "(IPv6) の形式で指定します。ワイルドカードと他のアドレス指定を混ぜる事はできません。"
 
 msgid ""
-"The powerd utility monitors the system state and sets various power control "
+"The powerd utility monitors the server state and sets various power control "
 "options accordingly."
-msgstr "電源制御ユーティリティはシステム状態を監視し、それに応じて様々な電源制御オプションをセットします。"
+msgstr ""
 
 msgid "The queuedepth range is invalid."
 msgstr "キューの深さが範囲外です。"
@@ -7518,6 +7539,9 @@ msgid ""
 "take one minute."
 msgstr "サーバーを初期状態にリストアした後、リブートを実行中です。しばらくお待ちください。"
 
+msgid "The server is halting now. This may take one minute."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr "サーバーは設定をリストア後、リブートします。"
 
@@ -7536,9 +7560,6 @@ msgstr "LUN%dに割り当てるストレージ領域"
 
 msgid "The subject of the email."
 msgstr "メールの件名"
-
-msgid "The system is halting now. This may take one minute."
-msgstr "今すぐシステムをシャットダウンします。1分ほどかかるかもしれません。"
 
 msgid "The system is rebooting now. This may take one minute."
 msgstr "今すぐシステムをリブートします。1分ほどかかるかもしれません。"
@@ -8009,12 +8030,6 @@ msgstr ""
 "非常に大きなJPEG画像のサーバー側でのダウンスケールを許可します。それは少なくともソニーのDLNA製品のJPEGサービスのパフォーマンスを損なう可能性が"
 "あります。"
 
-#, php-format
-msgid ""
-"This will cause %s not to check for newer firmware versions when the %s page "
-"is viewed."
-msgstr ""
-
 msgid "This will create a recycle bin on the share."
 msgstr "共有領域にごみ箱が作成されます。"
 
@@ -8053,6 +8068,9 @@ msgstr "時間"
 
 msgid "Time Machine"
 msgstr "Time Machine"
+
+msgid "Time Synchronization"
+msgstr ""
 
 msgid "Time before the load will be rebooted"
 msgstr "リブートする前の時間"
@@ -8951,7 +8969,7 @@ msgstr "iSCSI ターゲット機能を有効にするには最低 %dMiB の RAM 
 msgid "You must initialize data before enabling."
 msgstr "有効にする前にデータを初期化する必要があります。"
 
-msgid "You must reboot the system before you can upgrade the firmware"
+msgid "You must reboot the server before you can upgrade the firmware"
 msgstr ""
 
 msgid "You must select at least one authentication method."
@@ -9004,9 +9022,6 @@ msgstr "サイズを指定するには、以下の人間が読める接尾語を
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
-msgid "adaptive (low power consumption)"
-msgstr "adaptive (低消費電力)"
-
 msgid "all encrypted disks are imported."
 msgstr "暗号化されたディスクをすべてインポートします。"
 
@@ -9046,9 +9061,6 @@ msgstr "設定可能な最大切り替え電圧上限値"
 msgid "greatest settable low voltage transfer point"
 msgstr "設定可能な最大切り替え電圧下限値"
 
-msgid "hiadaptive (high performance)"
-msgstr "hiadaptive (高パフォーマンス)"
-
 msgid "hour(s)"
 msgstr "時間"
 
@@ -9082,12 +9094,6 @@ msgstr "ロード/アンロードに失敗しました。"
 
 msgid "loader.conf"
 msgstr "loader.conf"
-
-msgid "maximum (highest performance)"
-msgstr "maximum (最大パフォーマンス)"
-
-msgid "minimum (power saving)"
-msgstr "minimum (省電力)"
 
 msgid "minute(s)"
 msgstr "分"
@@ -9161,244 +9167,22 @@ msgstr ""
 msgid "version:"
 msgstr "バージョン:"
 
-#, php-format
-#~ msgid ""
-#~ "<a href='%s'>SSHD</a> must be enabled for Unison to work, and the <a "
-#~ "href='%s'>user</a> must have shell access."
-#~ msgstr ""
-#~ "UNISONを動作させるには<a href='%s'>SSHD</a>が使用可能になっている必要があります。また <a "
-#~ "href=%s>user</a>がシェルにアクセスできることが必要となります。"
+#~ msgid "Minutes between network time sync."
+#~ msgstr "NTP の時間更新間隔を指定して下さい。"
 
 #~ msgid ""
-#~ "<div id='enumeration'><ul><li>%d - Date</li><li>%h - Hostname</li></ul></div>"
-#~ msgstr ""
-#~ "<div id='enumeration'><ul><li>%d - 日付</li><li>%h - ホスト名</li></ul></div>"
+#~ "The powerd utility monitors the system state and sets various power control "
+#~ "options accordingly."
+#~ msgstr "電源制御ユーティリティはシステム状態を監視し、それに応じて様々な電源制御オプションをセットします。"
 
-#~ msgid ""
-#~ "<li>Default - Rsync will choose the 'during' algorithm when talking to rsync "
-#~ "3.0.0 or newer, and the 'before' algorithm when talking to an older "
-#~ "rsync.</li><li>Before - File-deletions will be done before the transfer "
-#~ "starts.</li><li>During - File-deletions will be done incrementally as the "
-#~ "transfer happens.</li><li>Delay - File-deletions will be computed during the "
-#~ "transfer, and then removed after the transfer completes.</li><li>After - "
-#~ "File-deletions will be done after the transfer has completed.</li>"
-#~ msgstr ""
-#~ "<li>Default - Rsync は 3.0.0 以降のバージョンの rsync と通信する際は 'During' "
-#~ "アルゴリズムを、それ以前のバージョンの rsync と通信する際は 'Before' アルゴリズムを使用します。</li><li>Before - "
-#~ "ファイルの削除は、転送開始前に実行されます。</li><li>During - "
-#~ "ファイルの削除は、転送が行われる度に実行されます。</li><li>Delay - "
-#~ "ファイルの削除は、転送中に判断され、転送完了後に実行されます。</li><li>After - "
-#~ "ファイルの削除は、転送が完了した後に実行されます。</li>"
+#~ msgid "minimum (power saving)"
+#~ msgstr "minimum (省電力)"
 
-#, php-format
-#~ msgid ""
-#~ "Failed to send status report. Please check the <a href='%s'>log</a> files."
-#~ msgstr "ステータスレポートの送信に失敗しました。<a href='%s'>ログ</a> ファイルを確認して下さい。"
+#~ msgid "maximum (highest performance)"
+#~ msgstr "maximum (最大パフォーマンス)"
 
-#, php-format
-#~ msgid ""
-#~ "Failed to send test email. Please check the <a href='%s'>log</a> files."
-#~ msgstr "テストメールの送信に失敗しました。<a href='%s'>ログ</a> ファイルを確認して下さい。"
+#~ msgid "hiadaptive (high performance)"
+#~ msgstr "hiadaptive (高パフォーマンス)"
 
-#, php-format
-#~ msgid ""
-#~ "Make sure you have already configured your <a href='%s'>Email</a> settings."
-#~ msgstr "既に <a href='%s'>メール</a> の設定が完了しているか確認して下さい。"
-
-#, php-format
-#~ msgid ""
-#~ "No configured Auth Group. Please add new <a href='%s'>Auth Group</a> first."
-#~ msgstr "認証グループがありません。まず最初に新しい <a href='%s'>認証グループ</a> を追加してください。"
-
-#, php-format
-#~ msgid "Please check the <a href='%s' target='_blank'>documentation</a>."
-#~ msgstr "<a href='%s' target='_blank'>ドキュメント</a> を確認してください。"
-
-#, php-format
-#~ msgid ""
-#~ "The driver used to communicate with your UPS. Get the list of available <a "
-#~ "href='%s' target='_blank'>drivers</a>."
-#~ msgstr ""
-#~ "UPS と通信する為のドライバを指定します。使用可能な <a href='%s' target='_blank'>ドライバ</a> "
-#~ "のリストを入手して下さい"
-
-#, php-format
-#~ msgid ""
-#~ "The driver used to connect with the LCD. The list of available <a href='%s' "
-#~ "target='_blank'>drivers</a>."
-#~ msgstr "LCD に接続する為のドライバを指定します。使用可能な <a href='%s' target='_blank'>ドライバ</a>。"
-
-#, php-format
-#~ msgid ""
-#~ "This configuration settings are used to generate the ups.conf configuration "
-#~ "file which is required by the NUT UPS daemon. To get more information how to "
-#~ "configure your UPS please check the NUT (Network UPS Tools) <a href='%s' "
-#~ "target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "この設定は、NUT UPS デーモンが必要とする ups.conf 設定ファイルを生成する為のものです。使用する UPS のより多くの情報を得たい場合は "
-#~ "NUT (Network UPS Tools)の <a href='%s' target='_blank'>ドキュメント</a> をチェックして下さい。"
-
-#, php-format
-#~ msgid ""
-#~ "This will cause %s not to check for newer firmware versions when the <a "
-#~ "href='%s'>%s</a> page is viewed."
-#~ msgstr "%s が <a href='%s'>%s</a> において、新しいファームウェアのバージョンチェックをしません。"
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about TCP Wrappers check the FreeBSD <a "
-#~ "href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "TCP Wrappers の詳細情報を入手するには、FreeBSD の<a href='%s' "
-#~ "target='_blank'>ドキュメント</a>をチェックして下さい。"
-
-#, php-format
-#~ msgid ""
-#~ "To get detailed informations about writing firewall rules check the FreeBSD "
-#~ "<a href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "ファイアウォールのルールの詳細な書き方についてはFreeBSDの<a href='%s' "
-#~ "target='_blank'>ドキュメント</a>を確認してください。"
-
-#, php-format
-#~ msgid ""
-#~ "To get more information how to configure LCDproc check the LCDproc <a "
-#~ "href='%s' target='_blank'>documentation</a>."
-#~ msgstr ""
-#~ "LCDprocの詳細な設定についてはLCDprocの<a href='%s' target='_blank'>ドキュメント</a>を確認してください。"
-
-#, php-format
-#~ msgid ""
-#~ "To increase CIFS performance try the following:<div "
-#~ "id='enumeration'><ul><li>Enable 'Asynchronous I/O (AIO)' "
-#~ "switch</li><li>Enable 'Large read/write' switch</li><li>Enable '<a "
-#~ "href='%s'>Tuning</a>' switch</li></ul></div>"
-#~ msgstr ""
-#~ "CIFS のパフォーマンスをあげる為に、以下を試して見て下さい: <div id='enumeration'><ul><li>'非同期 I/O "
-#~ "(AIO)' を有効にする</li>\n"
-#~ "<li>Large read/write を有効にする</li><li>'<a href='%s'>チューニング</a>' "
-#~ "スイッチを有効にする</li></ul></div>"
-
-#, php-format
-#~ msgid ""
-#~ "UFS and variants are the NATIVE file format for FreeBSD (the underlying OS "
-#~ "of %s). Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, "
-#~ "or NTFS can result in unpredictable results, file corruption, and loss of "
-#~ "data!"
-#~ msgstr ""
-#~ "UFS とその派生は FreeBSD  (%s のベース OS) のネイティブなファイルフォーマットです。FAT、FAT32、EXT2、EXT3 又は "
-#~ "NTFS 等、他のファイルフォーマットを使う場合、予期せぬ結果、ファイルの破損及びデータの紛失が起こる恐れがあります!"
-
-#, php-format
-#~ msgid ""
-#~ "You can't mount the partition '%s' where the config file is stored.<br />"
-#~ msgstr "設定ファイルを保存している '%s' のパーティションはマウントできません。<br />"
-
-#, php-format
-#~ msgid ""
-#~ "You have to activate <a href='%s'>Zeroconf/Bonjour</a> to advertise this "
-#~ "service to clients."
-#~ msgstr ""
-#~ "このサービスをクライアントへ広告するには <a href='%s'>Zeroconf/Bonjour</a> を起動させる必要があります。"
-
-#~ msgid ""
-#~ "<b>EFI GPT partition</b> if you want to mount a GPT formatted drive "
-#~ "(<b>default partition</b>).<br/><b>MBR partition</b> if you want to mount a "
-#~ "UFS formatted drive or do imported disks from other OS.<br/><b>CD/DVD "
-#~ "volume</b> if you want to mount a CD/DVD volume."
-#~ msgstr ""
-#~ "<b>EFI GPT パーティション</b> GPTフォーマット済のドライブをマウントしたい場合 (<b>デフォルトパーティション</b>)．<br "
-#~ "/><b>MBRパーティション</b> UFSフォーマット済みのドライブをマウントしたい場合、または他のＯＳからの移設．<br /><b>CD/DVD "
-#~ "ボリューム</b> CD/DVD ボリュームをマウントしたい場合．"
-
-#, php-format
-#~ msgid ""
-#~ "No configured CARP interfaces. Please add new <a href='%s'>CARP "
-#~ "interface</a> first."
-#~ msgstr "CARPインターフェースがありません。まず最初に新しい <a href='%s'>CARPインターフェース</a> を追加してください。"
-
-#, php-format
-#~ msgid ""
-#~ "After you click &quot;Save&quot;, you must reboot the server to make the "
-#~ "changes take effect. You may also have to do one or more of the following "
-#~ "steps before you can access your server again: <ul><li><span "
-#~ "class='vexpl'>change the IP address of your server</span></li><li><span "
-#~ "class='vexpl'>access the webGUI with the new IP address</span></li></ul>"
-#~ msgstr ""
-#~ "&quot;保存&quot; "
-#~ "をクリックした後、変更を適用するにはサーバーをリブートしなければなりません。また、再度NASへアクセスする為に以下のステップを実行する必要があるかもしれま"
-#~ "せん。<ul><li><span class='vexpl'>コンピュータの IPアドレスを変更して下さい</span></li><li><span "
-#~ "class='vexpl'>新しい IP アドレスで WebGUIへアクセスして下さい</span></li></ul>"
-
-#~ msgid ""
-#~ "Set what user the service will run as (www by default). <br><b><font "
-#~ "color='red'>NOTE</font>: Running as root is <u>not recommended</u> for "
-#~ "security reasons, use it on your own risk!</b></br>"
-#~ msgstr ""
-#~ "どのユーザでサービスを実行するか設定します。 (デフォルトは www) <br><b><font color='red'>注意</font>: "
-#~ "rootユーザで実行する事はセキュリティの理由により <u>推奨されません。</u> 自己責任で使用してください！</b></br>"
-
-#~ msgid ""
-#~ "<div id='enumeration'><ul><li>The new password is also the default root "
-#~ "password of the system!</li></ul></div>"
-#~ msgstr ""
-#~ "<div id='enumeration'><ul><li>新しいパスワードはシステムの root "
-#~ "パスワードにもなります！</li></ul></div>"
-
-#, php-format
-#~ msgid ""
-#~ "After you click &quot;Save&quot;, you may also have to do one or more of the "
-#~ "following steps before you can access this server again: <ul><li>change the "
-#~ "IP address of your computer</li><li>access the webGUI with the new IP "
-#~ "address</li></ul>"
-#~ msgstr ""
-#~ "&quot;保存&quot; "
-#~ "をクリックした後、再度このサーバへアクセスする為に以下のステップを実行する必要があるかもしれません。<ul><li>コンピュータの IP "
-#~ "アドレスを変更して下さい</li><li>新しい IP アドレスで WebGUI へアクセスして下さい</li></ul>"
-
-#~ msgid ""
-#~ "You can also install a package via SSH or console using the the pkg add "
-#~ "command.<br />Example: pkg add packagename"
-#~ msgstr ""
-#~ "SSHによるリモートコンソールもしくはローカルコンソールでも pkg add コマンドを使用してパッケージをインストールする事が可能です。<br/>例) "
-#~ "pkg add パッケージ名"
-
-#, php-format
-#~ msgid ""
-#~ "You must <a href='%s'>reboot</a> the system before you can upgrade the "
-#~ "firmware."
-#~ msgstr "ファームウェアのアップデートの前にシステムを <a href='%s'>リブート</a> する必要があります。"
-
-#~ msgid "add any supplemental parameters"
-#~ msgstr "もしあれば補足パラメータを追加してください"
-
-#, php-format
-#~ msgid "Check <a href=\"%s\">System|General Setup</a> before initializing."
-#~ msgstr "初期化前に <a href=\"%s\">システム|基本設定</a> を確認してください。"
-
-#~ msgid ""
-#~ "All data in the path is overwritten. To avoid invalid data/permission, using "
-#~ "empty UFS directory is recommended."
-#~ msgstr "パス内のすべてのデータが上書きされます。無効なデータ/パーミッションを避けるため、空のUFSディレクトリを使用することをお勧めします。"
-
-#~ msgid ""
-#~ "This means that the firmware you flashed is not an official/supported "
-#~ "firmware and may lead to unexpected behavior or security compromises. Only "
-#~ "install firmwares that come from sources that you trust, and make sure that "
-#~ "the firmware has not been tampered with.<br /><br />Do you want to install "
-#~ "this firmware anyway (on your own risk)?"
-#~ msgstr ""
-#~ "これはアップロードしたイメージが正式な/サポートされたイメージでは無い為、予期しない挙動又はセキュリティが損なわれるかもしれない事を意味しています。信頼で"
-#~ "きる所から取得し、イメージの改変がないと確認出来るイメージをインストールして下さい。<br /><br />とにかくこのイメージを "
-#~ "(あなた自身のリスクで) インストールしてもよろしいですか?"
-
-#, php-format
-#~ msgid ""
-#~ "DO NOT abort the firmware upgrade process once it has started.<br />DO NOT "
-#~ "try to flash other files than a valid '%s-%s-embedded.img.xz' file only.<br "
-#~ "/>It is recommended that you <a href='%s'>Backup</a> the server "
-#~ "configuration before doing a upgrade."
-#~ msgstr ""
-#~ "ファームウェアのアップグレードを一旦開始したら途中で終了しないでください。<br />有効な埋め込みファームウェア(%s-%s-"
-#~ "embedded.img.xz)のみアップグレードに利用できます。<br />ファームウェアをアップグレードする前にシステム設定の <a "
-#~ "href='%s'>バックアップ</a> を行う事をお勧めします。"
+#~ msgid "adaptive (low power consumption)"
+#~ msgstr "adaptive (低消費電力)"
