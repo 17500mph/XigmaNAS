@@ -80,8 +80,8 @@ function log_change() {
 		</td>
 	</tr>
 	<tr>
-    <td class="tabcont">
-    	<form action="diag_log.php" method="post" name="iform" id="iform">
+		<td class="tabcont">
+			<form action="diag_log.php" method="post" name="iform" id="iform">
 				<select id="log" class="formfld" onchange="log_change()" name="log">
 					<?php foreach($loginfo as $loginfok => $loginfov):?>
 					<?php if (FALSE === $loginfov['visible']) continue;?>
@@ -96,11 +96,11 @@ function log_change() {
 				<input name="search" type="submit" class="formbtn" value="<?=gtext("Search");?>" />
 				<br /><br />
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-				  <?php log_display($loginfo[$log]);?>
+					<?php log_display($loginfo[$log]);?>
 				</table>
 				<?php include("formend.inc");?>
 			</form>
 		</td>
-  </tr>
+	</tr>
 </table>
 <?php include("fend.inc");?>
