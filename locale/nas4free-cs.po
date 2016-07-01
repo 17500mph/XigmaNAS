@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-06-30 20:15+0000\n"
-"PO-Revision-Date: 2016-06-23 14:41+0000\n"
+"POT-Creation-Date: 2016-06-30 22:00+0000\n"
+"PO-Revision-Date: 2016-07-01 19:48+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-30 18:44+0000\n"
+"X-Launchpad-Export-Date: 2016-07-01 21:53+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -873,10 +873,10 @@ msgid "Are you sure you want to proceed?"
 msgstr "Opravdu chcete pokračovat?"
 
 msgid "Are you sure you want to reboot the server?"
-msgstr ""
+msgstr "Opravdu chcete tento server restartovat?"
 
 msgid "Are you sure you want to shutdown the server?"
-msgstr ""
+msgstr "Opravdu chcete tento server vypnout?"
 
 msgid "Asynchronous I/O (AIO)"
 msgstr "Asynchronní vst./výst. (AIO)"
@@ -1935,7 +1935,7 @@ msgid "Datasets"
 msgstr "Datové sady"
 
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 msgid "Date & Time"
 msgstr "Datum a čas"
@@ -2010,7 +2010,7 @@ msgid "Defines when the shutdown is initiated."
 msgstr "Určuje, kdy je zahájeno vypínání."
 
 msgid "Delay"
-msgstr ""
+msgstr "Prodleva"
 
 msgid ""
 "Delay - File-deletions will be computed during the transfer and will be done "
@@ -2203,7 +2203,7 @@ msgid "Detected"
 msgstr "Rozpoznáno"
 
 msgid "Detected Language:"
-msgstr ""
+msgstr "Zjištěný jazyk:"
 
 msgid "Detected RSYNC remote shares"
 msgstr "Zjištěná RSYNC sdílení na protistraně"
@@ -3027,7 +3027,7 @@ msgid "Enable the ident protocol (RFC1413)."
 msgstr "Používat protokol ident (norma RFC1413)"
 
 msgid "Enable the server power control utility."
-msgstr ""
+msgstr "Zapnout nástroj pro řízení napájení serveru."
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Zapnutím budou striktně dodržovány standardy pro DLNA."
@@ -3156,7 +3156,7 @@ msgid "Error"
 msgstr "Chyba"
 
 msgid "Error Code"
-msgstr ""
+msgstr "Kód chyby"
 
 msgid "Error Level"
 msgstr "Úroveň chybových stavů"
@@ -4177,7 +4177,7 @@ msgid "Internal Server Information"
 msgstr "Vnitřní informace o serveru"
 
 msgid "Internal Speaker"
-msgstr ""
+msgstr "Vestavěný reproduktor stroje"
 
 msgid "Internal UPS clock date"
 msgstr "Datum v UPS"
@@ -4213,7 +4213,7 @@ msgstr ""
 "rozsahu od %d do %d."
 
 msgid "Invalid username or password."
-msgstr ""
+msgstr "Neplatné uživatelské jméno nebo heslo."
 
 msgid "Invert Selection"
 msgstr "Obrátit výběr"
@@ -4245,6 +4245,7 @@ msgstr ""
 msgid ""
 "It is recommended that you backup the server configuration before you upgrade"
 msgstr ""
+"Před přechodem na novější verzi doporučujeme provést zálohu nastavení serveru"
 
 msgid ""
 "It is recommended to use encryption before you store the backup in a safe "
@@ -6422,12 +6423,9 @@ msgid "SMB3"
 msgstr "SMB3"
 
 msgid ""
-"SMB3 is for recent OS like Windows 8. SMB2 is for OS like Windows 7 and "
-"Vista. NT1 is for legacy OS like XP."
+"SMB3 is for recent OS like Windows 10 and 8. SMB2 is for OS like Windows 7 "
+"and Vista. NT1 is for legacy OS."
 msgstr ""
-"Protokol SMB3 je určen pro současné operační systémy, jako je např. Windows "
-"8. SMB2 je pro systémy jako jsou Windows 7 a Vista. NT1 je pro staré systémy "
-"jako je Windows XP."
 
 msgid "SMTP Server"
 msgstr "SMTP server"
@@ -9877,34 +9875,3 @@ msgstr ""
 
 msgid "version:"
 msgstr "verze:"
-
-#~ msgid "Minutes between network time sync."
-#~ msgstr "Perioda synchronizace času ze sítě (v minutách)."
-
-#~ msgid ""
-#~ "The powerd utility monitors the system state and sets various power control "
-#~ "options accordingly."
-#~ msgstr ""
-#~ "Služba powerd sleduje stav systému a dle potřeby nastavuje odpovídající "
-#~ "prvky správy napájení."
-
-#~ msgid "adaptive (low power consumption)"
-#~ msgstr "přizpůsobivé (nízká spotřeba energie)"
-
-#~ msgid "hiadaptive (high performance)"
-#~ msgstr "vysoké přizpůsobivé (vysoký výkon)"
-
-#~ msgid "maximum (highest performance)"
-#~ msgstr "co nejvíce (nejvyšší výkon)"
-
-#~ msgid "minimum (power saving)"
-#~ msgstr "co nejméně (úspora energie)"
-
-#~ msgid "Disable speaker beep on startup and shutdown."
-#~ msgstr "Vypnout pípnutí při spouštění a vypínání."
-
-#~ msgid "Speaker Beep"
-#~ msgstr "Pípání vestavěným reproduktorem"
-
-#~ msgid "Enable the system power control utility."
-#~ msgstr "Zapnout systémový nástroj pro řízení napájení."
