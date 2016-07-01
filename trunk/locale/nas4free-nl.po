@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-06-30 22:00+0000\n"
-"PO-Revision-Date: 2016-06-30 20:18+0000\n"
+"PO-Revision-Date: 2016-07-01 15:53+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-30 20:21+0000\n"
+"X-Launchpad-Export-Date: 2016-07-01 21:53+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -3869,7 +3869,7 @@ msgstr "Vul hier het IP-adres in van de externe syslog server."
 msgid ""
 "IP addresses are resolved to hostnames when the following option is enabled:"
 msgstr ""
-"IP-adressen worden omgezet naar hostnamen wanneer de volgende optie is "
+"IP-adressen worden omgezet naar hostnamen als de volgende optie is "
 "ingeschakeld:"
 
 msgid "IP or FQDN address of remote Rsync server."
@@ -4026,8 +4026,8 @@ msgid ""
 "If you want to change the password for accessing the WebGUI, enter it here "
 "twice."
 msgstr ""
-"Als u het wachtwoord voor de toegang naar de WebGUI wil veranderen, vul het "
-"hier dan twee keer in."
+"Als u het wachtwoord voor de WebGUI wil veranderen, vul het hier dan twee "
+"keer in."
 
 msgid "Import"
 msgstr "Importeren"
@@ -4458,7 +4458,7 @@ msgstr ""
 
 #, php-format
 msgid "Latest Beta Build: %s"
-msgstr "Laatste Beta Build: %s"
+msgstr "Laatste Beta Versie: %s"
 
 #, php-format
 msgid "Latest Release: %s"
@@ -6330,7 +6330,7 @@ msgid "Resolve IP addresses to hostnames"
 msgstr "Omzetten van IP-adressen naar hostnamen"
 
 msgid "Resolve IP addresses to hostnames."
-msgstr "IP-adressen naar hostnamen omzetten"
+msgstr "IP-adressen naar hostnamen omzetten."
 
 msgid "Resource"
 msgstr "Bron"
@@ -9998,49 +9998,3 @@ msgstr "gebruiker"
 
 msgid "version:"
 msgstr "versie:"
-
-#~ msgid "Minutes between network time sync."
-#~ msgstr "Aantal minuten tussen de netwerk tijdsynchronisatie's."
-
-#~ msgid ""
-#~ "The powerd utility monitors the system state and sets various power control "
-#~ "options accordingly."
-#~ msgstr ""
-#~ "De powerd tool monitort de staat van het systeem en bestuurd diverse "
-#~ "energieopties om het energieverbruik om laag te brengen."
-
-#~ msgid "maximum (highest performance)"
-#~ msgstr "maximaal (hoogste prestaties)"
-
-#~ msgid "hiadaptive (high performance)"
-#~ msgstr "hiadaptive (hoge prestaties)"
-
-#~ msgid "adaptive (low power consumption)"
-#~ msgstr "adaptieve (laag energieverbruik)"
-
-#~ msgid "minimum (power saving)"
-#~ msgstr "minimum (energiebesparing)"
-
-#~ msgid ""
-#~ "SMB3 is for recent OS like Windows 8. SMB2 is for OS like Windows 7 and "
-#~ "Vista. NT1 is for legacy OS like XP."
-#~ msgstr ""
-#~ "SMB3 is voor recent OS zoals Windows 8. SMB2 is voor Windows 7 en Vista. NT1 "
-#~ "voor oud OS zoals XP."
-
-#~ msgid "Disable speaker beep on startup and shutdown."
-#~ msgstr "Uitschakelen luidspreker piep tijdens het opstarten en afsluiten."
-
-#~ msgid "Enable the system power control utility."
-#~ msgstr "Inschakelen systeem energiebeheer modus."
-
-#~ msgid "Speaker Beep"
-#~ msgstr "Luidspreker Piep"
-
-#, php-format
-#~ msgid ""
-#~ "This will cause %s not to check for newer firmware versions when the %s page "
-#~ "is viewed."
-#~ msgstr ""
-#~ "%s niet laten controleren op een nieuwere firmware versie wanneer u de "
-#~ "pagina %s bezoekt."
