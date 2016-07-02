@@ -1,5 +1,5 @@
 #!/bin/sh
-
+#
 # /etc/rc.initial
 #
 # Part of NAS4Free (http://www.nas4free.org).
@@ -26,8 +26,11 @@ PLATFORM=`cat /etc/platform`
 # Check if console menu is disabled.
 if configxml_isset "//system/disableconsolemenu"; then
 	while : ; do
-		printf "\n\n\33[31m%s\33[0m\n\n"  "*** Console Menu Disabled. ***"
+		echo -e "\n\n\n"
+		printf "\n\n\33[31m%s\33[0m\n\n"  "*** Console Menu Disabled! ***"
 		read tmp
+		reset -Q
+		/etc/rc.banner
 	done
 else
 	BOOT_LOWMEM=`cat /etc/boot_lowmem`
@@ -148,3 +151,4 @@ else
 		esac
 	done
 fi
+
