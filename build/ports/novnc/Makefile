@@ -1,16 +1,16 @@
 PORTNAME=       noVNC
-PORTVERSION=    20160613
+PORTVERSION=    20160701
 PORTREVISION=   0
 CATEGORIES=     net
 
-MAINTAINER=     aoyama@nas4free.org
+MAINTAINER=     zoon1@nas4free.org
 COMMENT=        HTML5 VNC Client
 
 LICENSE=        MPL
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	kanaka
-GH_TAGNAME=	15e733f
+GH_TAGNAME=	5230ab6
 
 NO_BUILD=		yes
 NO_PKG_REGISTER=	yes
