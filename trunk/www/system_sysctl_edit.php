@@ -205,9 +205,9 @@ $pgtitle = array(gtext('System'), gtext('Advanced'), gtext('sysctl.conf'), $isre
 		</thead>
 		<tbody>
 			<?php
-				html_inputbox2('name', gtext('Name'), $sphere_record['name'], gtext('Enter a valid sysctl MIB name.'), true, 40);
-				html_inputbox2('value', gtext('Value'), $sphere_record['value'], gtext('A valid systctl MIB value.'), true);
-				html_inputbox2('comment', gtext('Comment'), $sphere_record['comment'], gtext('You may enter a description here for your reference.'), false, 40);
+				html_inputbox2('name', gtext('Name'), $sphere_record['name'], gtext('Enter a valid sysctl MIB name.'), true, 67);
+				html_inputbox2('value', gtext('Value'), $sphere_record['value'], gtext('A valid systctl MIB value.'), true, 67);
+				html_inputbox2('comment', gtext('Comment'), $sphere_record['comment'], gtext('You may enter a description here for your reference.'), false, 67);
 			?>
 		</tbody>
 	</table>

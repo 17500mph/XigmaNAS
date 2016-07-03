@@ -136,7 +136,7 @@ if ($_POST) {
 			<form action="system_rc_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 				<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
 			  <table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_inputbox("command", gtext("Command"), $pconfig['command'], gtext("The command to be executed."), true, 60);?>
+					<?php html_inputbox("command", gtext("Command"), $pconfig['command'], gtext("The command to be executed."), true, 67);?>
 					<?php html_combobox("type", gtext("Type"), $pconfig['type'], array("PREINIT" => "PreInit", "POSTINIT" => "PostInit", "SHUTDOWN" => "Shutdown"), gtext("Execute command pre or post system initialization (booting) or before system shutdown."), true, isset($pconfig['type']));?>
 			  </table>
 				<div id="submit">
