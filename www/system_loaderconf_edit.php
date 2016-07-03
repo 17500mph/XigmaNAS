@@ -190,9 +190,9 @@ $pgtitle = [gtext('System'), gtext('Advanced'), gtext('loader.conf'), $isrecordn
 		</thead>
 		<tbody>
 			<?php
-				html_inputbox2('name', gtext('Name'), $sphere_record['name'], gtext('Name of the variable.'), true, 40);
-				html_inputbox2('value', gtext('Value'), $sphere_record['value'], gtext('The value of the variable.'), true);
-				html_inputbox2('comment', gtext('Comment'), $sphere_record['comment'], gtext('You may enter a description here for your reference.'), false, 40);
+				html_inputbox2('name', gtext('Name'), $sphere_record['name'], gtext('Name of the variable.'), true, 67);
+				html_inputbox2('value', gtext('Value'), $sphere_record['value'], gtext('The value of the variable.'), true, 67);
+				html_inputbox2('comment', gtext('Comment'), $sphere_record['comment'], gtext('You may enter a description here for your reference.'), false, 67);
 			?>
 		</tbody>
 	</table>
