@@ -1823,8 +1823,12 @@ copy_files() {
 			echo "===> Start copy sources"
 			cp -f ${NAS4FREE_SVNDIR}/build/ports/distfiles/CLI_freebsd-from_the_10.2.2.1_9.5.5.1_codesets.zip /usr/ports/distfiles
 			echo "===> Copy CLI_freebsd-from_the_10.2.2.1_9.5.5.1_codesets.zip done!"
+			cp -f ${NAS4FREE_SVNDIR}/build/ports/distfiles/istgt-20150713.tar.gz /usr/ports/distfiles
+			echo "===> Copy istgt-20150713.tar.gz done!"
 			cp -f ${NAS4FREE_SVNDIR}/build/ports/distfiles/fuppes-0.692.tar.gz /usr/ports/distfiles
 			echo "===> Copy fuppes-0.692.tar.gz done!"
+			cp -f ${NAS4FREE_SVNDIR}/build/ports/distfiles/xmd-0.5.tar.gz /usr/ports/distfiles
+			echo "===> Copy xmd-0.5.tar.gz done!"
 
 			# Copy required ports to FreeBSD ports directory.
 			echo;
