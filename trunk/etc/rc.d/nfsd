@@ -4,6 +4,8 @@
 # Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
 #
+# Remote NFS server
+#
 # $FreeBSD: /src/etc/rc.d/nfsd
 # Changes: modified for nas4free, removed REQUIRE: gssd
 #
@@ -19,6 +21,7 @@
 . /etc/util.subr
 
 name="nfsd"
+desc="Remote NFS server"
 rcvar=nfs_server_enable
 command="/usr/sbin/${name}"
 

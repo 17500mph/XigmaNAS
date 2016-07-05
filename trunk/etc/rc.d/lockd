@@ -4,9 +4,7 @@
 # Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
 #
-# Portions of freenas (http://www.freenas.org).
-# Copyright (c) 2005-2011 Olivier Cochard-Labbe <olivier@freenas.org>.
-# All rights reserved.
+# NFS file locking daemon
 #
 # $FreeBSD: src/etc/rc.d/lockd
 # Changes:	- Remove nfsclient
@@ -22,6 +20,7 @@
 . /etc/rc.subr
 
 name="lockd"
+desc="NFS file locking daemon"
 rcvar=rpc_lockd_enable
 command="/usr/sbin/rpc.${name}"
 start_precmd='lockd_precmd'

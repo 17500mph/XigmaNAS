@@ -4,6 +4,7 @@
 # Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
 #
+# Set the system\'s hostname
 # $FreeBSD: /etc/rc.d/hostname Revision 286671
 #
 
@@ -15,6 +16,7 @@
 . /etc/network.subr
 
 name="hostname"
+desc="Set the system\'s hostname"
 start_cmd="hostname_start"
 restart_cmd="hostname_restart"
 stop_cmd=":"
@@ -44,14 +46,14 @@ hostname_start()
 		# Null hostname is probably OK if DHCP is in use.
 		#
 		if [ -z "`list_net_interfaces dhcp`" ]; then
-			warn "\$hostname is not set -- see ${rcvar_manpage}."
+			warn "\$hostname is not set -- see rc.conf(5)."
 		fi
 		return
 	fi
 
 	# All right, it is safe to invoke hostname(1) now.
 	#
-	echo "Setting hostname: ${hostname}."
+	[ -z "${rc_quiet}" ] && echo "Setting hostname: ${hostname}."
 	/bin/hostname "${hostname}"
 }
 

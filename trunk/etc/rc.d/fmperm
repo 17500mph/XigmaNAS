@@ -14,7 +14,7 @@
 . /etc/configxml.subr
 
 name="fmperm"
-
+desc="export users to Quixplorer config"
 load_rc_config "$name"
 
 # Defaults

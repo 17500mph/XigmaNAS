@@ -4,9 +4,7 @@
 # Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
 #
-# Portions of freenas (http://www.freenas.org).
-# Copyright (c) 2005-2011 Olivier Cochard-Labbe <olivier@freenas.org>.
-# All rights reserved.
+# Run file system checks
 #
 # $FreeBSD: /etc/rc.d/fsck Revision 289186
 #
@@ -22,6 +20,7 @@
 . /etc/configxml.subr
 
 name="fsck"
+desc="Run file system checks"
 
 # Custom commands
 extra_commands="root"
