@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gtext("System"),gtext("Advanced"),gtext("Proxy"));
+$pgtitle = array(gtext("Network"), gtext("Proxy"));
 
 if (!isset($config['system']['proxy']['http']) || !is_array($config['system']['proxy']['http']))
 	$config['system']['proxy']['http'] = array();
