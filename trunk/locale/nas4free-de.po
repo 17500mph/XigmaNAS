@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-06-30 22:00+0000\n"
-"PO-Revision-Date: 2016-06-01 20:36+0000\n"
-"Last-Translator: thor123 <thorstenoesterle123@gmail.com>\n"
+"PO-Revision-Date: 2016-07-03 17:47+0000\n"
+"Last-Translator: apollo567 <apollo567@hotmail.de>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-01 21:53+0000\n"
+"X-Launchpad-Export-Date: 2016-07-05 10:06+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -85,6 +85,8 @@ msgstr "%s ist zu lang."
 msgid ""
 "%s must be enabled for Unison to work, and the %s must have shell access."
 msgstr ""
+"%s muss aktiviert sein damit Unison funktioniert und  %s muss über Shell "
+"Zugriff verfügen."
 
 #, php-format
 msgid "%s of %sB"
@@ -115,7 +117,7 @@ msgid "%sB used of %sB"
 msgstr "%sB von %sB verwendet"
 
 msgid "(Change if needed)"
-msgstr ""
+msgstr "Ändern bei Bedarf"
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr ""
@@ -270,14 +272,19 @@ msgstr ""
 
 msgid "A mounted RAID volume cannot be deleted."
 msgstr ""
+"Eine 'eingehängte' (mounted) Festplatte oder Partition kann nicht gelöscht "
+"werden."
 
 msgid ""
 "A mounted disk or partition will be unmounted temporarily to perform the "
 "requested action."
 msgstr ""
+"Eine 'eingehängte' (mountd) Festplatte oder Partition wird temporär "
+"'ausgehängt' (unmounted), damit die angeforderte Aktion durchgeführt werden "
+"kann."
 
 msgid "A reload request has been sent to the daemon."
-msgstr ""
+msgstr "Ein 'Neuladen' - Befehl wurde an den Hintergrunddienst geschickt."
 
 msgid "A route to this destination network already exists."
 msgstr "Eine Route zu diesem Netzwerk besteht bereits."
@@ -417,7 +424,7 @@ msgid "Access mode"
 msgstr "Zugriffsmodus"
 
 msgid "Access the webGUI with the new IP address"
-msgstr ""
+msgstr "WebGUI Zugriff mit neuer IP-Adresse"
 
 msgid "Acoustic level"
 msgstr "Geräuschpegel"
@@ -452,7 +459,7 @@ msgid "Active Users"
 msgstr "Aktive Benutzer"
 
 msgid "Adaptive (Low Power Consumption)"
-msgstr ""
+msgstr "adaptiv (niedriger Energieverbrauch)"
 
 msgid "Add"
 msgstr "Hinzufügen"
@@ -476,7 +483,7 @@ msgid "Add Rsync job"
 msgstr "Rsync-Job hinzufügen"
 
 msgid "Add Snapshot"
-msgstr ""
+msgstr "Schnappschuß hinzufügen"
 
 msgid "Add URL"
 msgstr "URL hinzufügen"
@@ -491,7 +498,7 @@ msgid "Add additional scheduled self-test."
 msgstr "Zusätzliche planmäßige Selbsttests hinzufügen."
 
 msgid "Add any supplemental parameters."
-msgstr ""
+msgstr "Ergänzende Parameter hinzufügen"
 
 msgid "Add auth group"
 msgstr "Authentifizierungsgruppe hinzufügen"
@@ -569,6 +576,8 @@ msgid ""
 "Additional parameters to the hardware-specific part of the driver for second "
 "UPS."
 msgstr ""
+"Zusätzliche Parameter für den hardware-spezifischen Treiber der zweiten "
+"unterbrechungsfreien Stromversorgung (UPS)"
 
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr "Zusätzliche hardwarespezifische Parameter für den Treiber."
@@ -599,7 +608,7 @@ msgid "Advanced Configuration"
 msgstr "Erweiterte Einstellungen"
 
 msgid "Advanced Format"
-msgstr ""
+msgstr "Advanced Format (4K-Sektorgröße)"
 
 msgid "Advanced Options"
 msgstr "Erweiterte Einstellungen"
@@ -617,23 +626,30 @@ msgid "Advertisement skew"
 msgstr "Advertisement skew"
 
 msgid "After"
-msgstr ""
+msgstr "Hinterher"
 
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr ""
+"Nachfolgede Befehle zum Löschen der Datei erfolgen erst nachdem der "
+"Dateitransfer beendet ist."
 
 msgid ""
 "After you click \"Save\" you may also have to do one or more of the "
 "following steps before you can access this server again:"
 msgstr ""
+"Nach dem sie 'Abspeichern' oder 'Save' angeklickt haben, müssen Sie die "
+"folgenden Schritte durchführen, damit Sie wieder Zugriff auf den Server "
+"verfügen :"
 
 msgid ""
 "After you click \"Save\" you must reboot the server to make the changes take "
 "effect."
 msgstr ""
+"Nach dem sie 'Abspeichern' oder 'Save' angeklickt haben, müssen Sie "
+"neustarten, damit die Änderungen effektiv werden."
 
 msgid "Age"
-msgstr ""
+msgstr "Alter"
 
 msgid "Aggregation protocol"
 msgstr "Aggregation Protokoll"
@@ -659,6 +675,8 @@ msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
 "an empty UFS directory is recommended."
 msgstr ""
+"All dAten in diesem Pfad werden überschrieben, deshalb wird die Nutzung "
+"eines Leeren UFS Verzeichnisses empfohlen !"
 
 msgid "All data will be lost when you activate this option!"
 msgstr "Alle Daten werden gelöscht wenn diese OPtion aktiviert wird."
@@ -743,7 +761,7 @@ msgid "Allows the server to try and become a local master browser."
 msgstr "Erlaubt dem Server zu versuchen, Local Master Browser zu werden."
 
 msgid "Allows to connect to a hidden network"
-msgstr ""
+msgstr "Verbindung zu einem verstecktem Netzwerk"
 
 msgid ""
 "Also known as 'Power-off Retract Count' per conventional HDD terminology. "
@@ -852,7 +870,7 @@ msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
 
 msgid "Apply Filter"
-msgstr ""
+msgstr "Filter anwenden"
 
 msgid "Apply changes"
 msgstr "Änderung übernehmen"
@@ -873,10 +891,10 @@ msgid "Are you sure you want to proceed?"
 msgstr "Sind Sie sicher, dass Sie fortfahren möchten?"
 
 msgid "Are you sure you want to reboot the server?"
-msgstr ""
+msgstr "Sind Sie sicher, dass Sie den Server rebooten wollen ?"
 
 msgid "Are you sure you want to shutdown the server?"
-msgstr ""
+msgstr "Sind Sie sicher, dass Sie den Server herunterfahren  wollen ?"
 
 msgid "Asynchronous I/O (AIO)"
 msgstr "Asynchrones I/O (AIO)"
@@ -899,6 +917,8 @@ msgid ""
 "Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, or NTFS "
 "can result in unpredictable results, file corruption and the loss of data!"
 msgstr ""
+"Die Nutzung ander Dateiformate als FAT, FAT32, EXT2, EXT3 oder NTFS führt zu "
+"unvorhersehbaren Ergebnissen oder Datenverlust !"
 
 msgid "Audio"
 msgstr "Ton"
@@ -976,7 +996,7 @@ msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr "Durchschnittliche Anlaufzeit der Festplatte"
 
 msgid "Back"
-msgstr ""
+msgstr "Zurück"
 
 msgid "Backup Configuration"
 msgstr "Backup-Konfiguration"
@@ -1058,13 +1078,17 @@ msgid "Battery voltage"
 msgstr "Akkuspannung"
 
 msgid "Before"
-msgstr ""
+msgstr "Vorher"
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
+"Vorgelagerte Dateilöschungen werden ausgeführt bevor die Dateitransfers "
+"beginnen"
 
 msgid "Before - File-deletions will be performed before the transfer starts."
 msgstr ""
+"Vorgelagerte Dateilöschungen werden ausgeführt bevor die Dateitransfers "
+"beginnen"
 
 msgid "Best available"
 msgstr "Bester verfügbarer"
@@ -1305,10 +1329,10 @@ msgid "Change password"
 msgstr "Passwort ändern"
 
 msgid "Change the IP address of your computer"
-msgstr ""
+msgstr "Ändern sie die IP-Adresse ihres Computers"
 
 msgid "Change the IP address of your server"
-msgstr ""
+msgstr "Ändern sie die IP-Adresse ihres Servers"
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr ""
@@ -1334,10 +1358,10 @@ msgstr "Überprüfe geteiltes Geheimnis:"
 
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
-msgstr ""
+msgstr "Prpfen Sie die FreeBSD Dokumentation für Details zu 'TCP Wrappers'"
 
 msgid "Check the list of available drivers"
-msgstr ""
+msgstr "Prüfen sie die Liste der verfügbaren Treiber"
 
 msgid "Chinese (Simplified)"
 msgstr "Chinesisch (Vereinfacht)"
@@ -1469,7 +1493,7 @@ msgid "Confirmation"
 msgstr "Bestätigung"
 
 msgid "Connect to hidden network"
-msgstr ""
+msgstr "Verbinden mit einem verstecktem Netzwerk"
 
 msgid "Connected FTP Users & Status"
 msgstr "angemeldete FTP-Nutzer (mit Status)"
@@ -1564,7 +1588,7 @@ msgstr ""
 "(größtmögliche Komprimierung) ist. 'gzip' ist gleichbedeutend mit 'gzip-6'."
 
 msgid "Controls the dedup method."
-msgstr ""
+msgstr "Beeinflusst die Deduplikation-Methode"
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Steuert, ob dieser Datensatz geändert werden kann"
@@ -1704,7 +1728,7 @@ msgid "Create 4KB wrapper (nop device)."
 msgstr "4k Anpassung erstellen (nop Laufwerk)"
 
 msgid "Create Date"
-msgstr ""
+msgstr "Erstelldatum"
 
 msgid "Create HVM Guest"
 msgstr "HVM-Gast erstellen"
@@ -1713,7 +1737,7 @@ msgid "Create PV Guest"
 msgstr "PV-Gast erstellen"
 
 msgid "Create ZFS on a GPT partition."
-msgstr ""
+msgstr "ZFS-Dateisystem auf einer GPT-Partition erstellen"
 
 msgid "Create and initialize RAID."
 msgstr "RAID erstellen und initialisieren."
@@ -1842,12 +1866,12 @@ msgid "DNS server is empty."
 msgstr "Der DNS Server ist leer"
 
 msgid "DO NOT abort the firmware upgrade process once it has started."
-msgstr ""
+msgstr "Das Firmware-Upgrade  d a r f   n i c h t unterbrochen werden !!!"
 
 #, php-format
 msgid ""
 "DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
-msgstr ""
+msgstr "Nur eine gültige '%s-%s-embedded.img.xz' Datei flashen !!!!"
 
 msgid "DVD"
 msgstr "DVD"
@@ -1889,7 +1913,7 @@ msgid "Datasets"
 msgstr "Datensätze"
 
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 msgid "Date & Time"
 msgstr "Datum & Zeit"
@@ -1964,7 +1988,7 @@ msgid "Defines when the shutdown is initiated."
 msgstr "Definiert wann das Herunterfahren initiiert werden soll."
 
 msgid "Delay"
-msgstr ""
+msgstr "Verzögerung"
 
 msgid ""
 "Delay - File-deletions will be computed during the transfer and will be done "
@@ -2010,7 +2034,7 @@ msgid "Delete Selected RAID Volumes"
 msgstr "Lösche die ausgewählten RAID Laufwerke"
 
 msgid "Delete Selected Snapshots"
-msgstr ""
+msgstr "Ausgewählte Snapshots löschen"
 
 msgid "Delete Selected Virtual Devices"
 msgstr "Ausgewählte Virtuelle Geräte löschen"
@@ -2154,7 +2178,7 @@ msgid "Detected"
 msgstr "Entdeckt"
 
 msgid "Detected Language:"
-msgstr ""
+msgstr "ermittelte Sprache"
 
 msgid "Detected RSYNC remote shares"
 msgstr "Erkannte RSYNC-Remote-Freigaben"
@@ -2189,25 +2213,25 @@ msgid "Device Model"
 msgstr "Modell"
 
 msgid "Device Name"
-msgstr ""
+msgstr "Gerätename"
 
 msgid "Device Pass-through"
 msgstr "Gerät durchreichen"
 
 msgid "Device Path"
-msgstr ""
+msgstr "Gerätepfad"
 
 msgid "Device Serial"
 msgstr "Seriennummer"
 
 msgid "Device contains boot partition"
-msgstr ""
+msgstr "Gerät enthält die Boot-Partition"
 
 msgid "Device is mounted"
-msgstr ""
+msgstr "Gerät ist eingehängt ('mounted')"
 
 msgid "Device not found"
-msgstr ""
+msgstr "Gerät nicht gefunden"
 
 msgid "Device polling"
 msgstr "Device polling"
@@ -2538,7 +2562,7 @@ msgid "Do you want to delete selected pools?"
 msgstr "Wollen Sie die ausgewählten ZFS-Pools löschen ?"
 
 msgid "Do you want to delete selected snapshots?"
-msgstr ""
+msgstr "Wollen sie die ausgewählten 'Snapshots' wirklich löschen ?"
 
 msgid "Do you want to delete selected virtual devices?"
 msgstr "Wollen Sie die ausgewählten virtuellen Geräte  löschen ?"
