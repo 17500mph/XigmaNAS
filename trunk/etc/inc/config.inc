@@ -1084,6 +1084,14 @@ function config_upgrade() {
 		$config['version'] = "2.4";
 	}
 
+	/* Convert 2.4 -> 2.5 */
+	if ($config['version'] === "2.4") {
+		if ($config['ups']['upsname'] === "ups")
+			$config['ups']['upsname'] = "ups1";
+
+		$config['version'] = "2.5";
+	}
+
 	/* XXX Convert 9.5 -> 9.7 (must skip 9.6) */
 
 	write_config();
