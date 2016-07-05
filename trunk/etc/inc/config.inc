@@ -1080,7 +1080,6 @@ function config_upgrade() {
 			"name" => "vfs.zfs.prefetch_disable",
 			"value" => "1",
 			"comment" => "ZFS prefech disable");
-
 		$config['version'] = "2.4";
 	}
 
@@ -1099,12 +1098,10 @@ function config_upgrade() {
 			"name" => "ipmi_load",
 			"value" => "YES",
 			"comment" => "IPMItool Server Management Utility");
-
 		$config['version'] = "2.5";
 	}
 
 	/* XXX Convert 9.5 -> 9.7 (must skip 9.6) */
-
 	write_config();
 
 	if (is_booting())
