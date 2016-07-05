@@ -1089,6 +1089,17 @@ function config_upgrade() {
 		if ($config['ups']['upsname'] === "ups")
 			$config['ups']['upsname'] = "ups1";
 
+		$config['system']['loaderconf']['param'][] = array(
+			"uuid" => uuid(),
+			"name" => "arcsas_load",
+			"value" => "YES",
+			"comment" => "Areca non-RAID HBAs ARC-1300/ARC-1320 series Driver");
+		$config['system']['loaderconf']['param'][] = array(
+			"uuid" => uuid(),
+			"name" => "ipmi_load",
+			"value" => "YES",
+			"comment" => "IPMItool Server Management Utility");
+
 		$config['version'] = "2.5";
 	}
 
