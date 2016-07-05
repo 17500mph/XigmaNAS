@@ -4,6 +4,8 @@
 # Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
 #
+# Service remote NFS mount requests
+#
 # $FreeBSD: src/etc/rc.d/mountd
 # Changes:	- Remove nfsserver quota
 # 		- Add mkconf command
@@ -20,6 +22,7 @@
 . /etc/util.subr
 
 name="mountd"
+desc="Service remote NFS mount requests"
 rcvar=mountd_enable
 
 command="/usr/sbin/${name}"

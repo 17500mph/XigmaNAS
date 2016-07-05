@@ -4,9 +4,7 @@
 # Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
 #
-# Portions of freenas (http://www.freenas.org).
-# Copyright (c) 2005-2011 Olivier Cochard-Labbe <olivier@freenas.org>.
-# All rights reserved.
+# websrv setup
 #
 
 # PROVIDE: websrv
@@ -20,6 +18,7 @@
 . /etc/util.subr
 
 name="websrv"
+desc="websrv setup"
 rcvar=websrv_enable
 
 load_rc_config "${name}"

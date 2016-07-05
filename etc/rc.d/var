@@ -4,6 +4,8 @@
 # Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
 #
+# Populate /var directory
+#
 # $FreeBSD: src/etc/rc.d/var
 # Changes: - Remove useless code
 #    ToDo: - Relocate code to populate /var from /etc/rc to this file ASAP
@@ -17,6 +19,7 @@
 . /etc/rc.subr
 
 name="var"
+desc="Populate /var directory"
 stop_cmd=':'
 
 load_rc_config $name

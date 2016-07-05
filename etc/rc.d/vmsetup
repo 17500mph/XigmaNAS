@@ -4,6 +4,8 @@
 # Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
 #
+# vm setup
+#
 
 # PROVIDE: vmsetup
 # REQUIRE: FILESYSTEMS
@@ -13,6 +15,7 @@
 . /etc/util.subr
 
 name="vmsetup"
+desc="vm setup"
 rcvar=vmsetup_enable
 load_rc_config "${name}"
 
