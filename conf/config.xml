@@ -101,7 +101,7 @@
 				<uuid>d68b8192-ca70-45ad-b312-c61715ac1c27</uuid>
 				<name>ipmi_load</name>
 				<value>YES</value>
-				<comment>IPMI server management utility ipmitool</comment>
+				<comment>IPMItool Server Management Utility</comment>
 			</param>		
 			<param>
 				<!-- <enable/> -->
@@ -1536,9 +1536,9 @@
 			<to></to>
 			<subject>UPS notification from %h</subject>
 		</email>
+		<ups2_upsname>ups2</ups2_upsname>
 		<!--
-		<ups2_upsname>-----</ups2_upsname>
-		<ups2_driver>-----</ups2_driver>
+		<ups2_driver>usbhid-ups</ups2_driver>
 		<ups2_port>auto</ups2_port>
 		<ups2_desc/>
 		<ip>localhost</ip>
