@@ -167,7 +167,7 @@ if ($_POST) {
 	}
 }
 
-$pgtitle = array(gtext("Interfaces"), "Optional $index (" . htmlspecialchars($optcfg['descr']) . ")");
+$pgtitle = array(gtext("Network"), "Optional $index (" . htmlspecialchars($optcfg['descr']) . ")");
 ?>
 <?php include("fbegin.inc"); ?>
 <script type="text/javascript">
