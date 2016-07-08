@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PHP:S,$,:release,}
 MASTER_SITE_SUBDIR=	distributions/:release
 DISTNAME=		php-${PORTVERSION:S/.r/RC/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}:release
-USES=			tar:bzip2 cpe iconv
+USES+=			tar:bzip2 cpe iconv
 
 BUILD_DEPENDS=		sqlite3>=3.0:databases/sqlite3
 LIB_DEPENDS=		libpcre.so:devel/pcre
@@ -31,7 +31,7 @@ USE_GNOME=	 libxml2
 USE_OPENLDAP=	 yes
 USE_OPENSSL=	 yes
 GNU_CONFIGURE=	 yes
-NO_PKG_REGISTER=yes
+NO_PKG_REGISTER= yes
 
 CONFIGURE_ARGS+=	\
 		--without-pear \
