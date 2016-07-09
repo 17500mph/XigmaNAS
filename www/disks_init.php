@@ -213,7 +213,7 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 	// expectation: filesystem has been chosen.
 	if ($prerequisites_ok) { // verify filesystem type
 		$prerequisites_ok = (isset($a_option['filesystem']) && verify_filesystem_name($a_option['filesystem']));
-		// filesystem type could be invalid, we need to return to page 0 to be able to select a valid filesystem. Nothing to do here because page 0 is set by default
+		// filesystem type could be invalid, we need to return to page 1 to be able to select a valid filesystem. Nothing to do here because page 1 is set by default
 	}
 	if ($prerequisites_ok) {
 		$page_index = 2;
@@ -225,7 +225,7 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 	// expectation: filesystem has been chosen, disks have been selected.
 	if ($prerequisites_ok) {  // verify filesystem type
 		$prerequisites_ok = (isset($a_option['filesystem']) && verify_filesystem_name(htmlspecialchars($a_option['filesystem'])));
-		// filesystem type could be invalid, we need to return to page 0 to be able to select a valid filesystem. Nothing to do here because page 0 is set by default
+		// filesystem type could be invalid, we need to return to page 1 to be able to select a valid filesystem. Nothing to do here because page 1 is set by default
 	}
 	if ($prerequisites_ok) { // verify selected disks
 		if (false === ($prerequisites_ok = (isset($a_option['checkbox_member_array']) && is_array($a_option['checkbox_member_array']) && (count($a_option['checkbox_member_array']) > 0)))) {
@@ -237,7 +237,7 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 	}
 	if ($prerequisites_ok) {
 		if (preg_match('/^(ufsgpt|msdos)/', $a_option['filesystem']) && preg_match('/\S/', $a_option['volumelabel'])) {
-			$helpinghand = preg_quote('[%$', '/');
+			$helpinghand = preg_quote('[%', '/');
 			if (preg_match('/^[a-z\d' . $helpinghand . ']+$/i', $a_option['volumelabel'])) {
 				// additional check is required for adding serial number information to the label		
 				$label_serial = [];
@@ -266,7 +266,7 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 	}
 	if ($prerequisites_ok) {
 		if (preg_match('/^(zfs)/', $a_option['filesystem']) && preg_match('/\S/', $a_option['volumelabel'])) {
-			$helpinghand = preg_quote('[%$.-_', '/');
+			$helpinghand = preg_quote('[%.-_', '/');
 			if (preg_match('/^[a-z\d' . $helpinghand . ']+$/i', $a_option['volumelabel'])) {
 				// additional check is required for adding serial number information to the label
 				$label_serial = [];
@@ -303,7 +303,7 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 	// expectation: filesystem has been chosen, disks have been selected, options have been set.
 	if ($prerequisites_ok) { // verify filesystem type
 		$prerequisites_ok = (isset($a_option['filesystem']) && verify_filesystem_name($a_option['filesystem']));
-		// filesystem type could be invalid, we need to return to page 0 to be able to select a valid filesystem. Nothing to do here because page 0 is set by default
+		// filesystem type could be invalid, we need to return to page 1 to be able to select a valid filesystem. Nothing to do here because page 1 is set by default
 	}
 	if ($prerequisites_ok) { // verify selected disks
 		if (false === ($prerequisites_ok = (isset($a_option['checkbox_member_array']) && is_array($a_option['checkbox_member_array']) && (count($a_option['checkbox_member_array']) > 0)))) {
@@ -315,7 +315,7 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 	}
 	if ($prerequisites_ok) {
 		if (preg_match('/^(ufsgpt|msdos)/', $a_option['filesystem']) && preg_match('/\S/', $a_option['volumelabel'])) {
-			$helpinghand = preg_quote('[%$', '/');
+			$helpinghand = preg_quote('[%', '/');
 			if (preg_match('/^[a-z\d' . $helpinghand . ']+$/i', $a_option['volumelabel'])) {
 				// additional check is required for adding serial number information to the label
 				$label_serial = [];
@@ -344,7 +344,7 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 	}
 	if ($prerequisites_ok) {
 		if (preg_match('/^(zfs)/', $a_option['filesystem']) && preg_match('/\S/', $a_option['volumelabel'])) {
-			$helpinghand = preg_quote('[%$.-_', '/');
+			$helpinghand = preg_quote('[%.-_', '/');
 			if (preg_match('/^[a-z\d' . $helpinghand . ']+$/i', $a_option['volumelabel'])) {
 				// additional check is required when adding serial number information to the label
 				$label_serial = [];
@@ -380,36 +380,6 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 		$disk_options['zfsgpt'] = $a_option['zfsgpt'] ? 'p1' : ''; // set_conf_disk_fstype_opt knows how to deal with it if filesystem is not zfs
 		// check for allowed characters, otherwise reset volumelabel
 		$volumelabel_pattern = (preg_match('/(ufsgpt|msdos|zfs)/', $a_option['filesystem'])) ? $a_option['volumelabel'] : '';
-		// check if the device name is part of the volume label
-		$label_devname = [];
-		if (preg_match('/\S/', $volumelabel_pattern)) { // do we have a volumelabel pattern?
-			$label_devname['trigger'] = '$';
-			$label_devname['match'] = '';
-			$label_devname['regex'] = '/' . preg_quote($label_devname['trigger']) . $label_devname['match'] . '/';
-			$label_devname['count'] = substr_count($volumelabel_pattern, $label_devname['trigger']); // count occurrences of the initiating character
-			if ($label_devname['count'] > 0) { // one or more occurrences found?
-				if ($label_devname['count'] === preg_match_all($label_devname['regex'], $volumelabel_pattern, $helpinghand)) { // count must match, otherwise something went wrong
-					$label_devname['needle'] = $helpinghand[0];
-					$label_devname['origin'] = $helpinghand[1];
-					$label_devname['replacement'] = [];
-					$label_devname['pattern'] = [];
-					for($i = 0; $i < $label_devname['count']; $i++) {
-						$label_devname['pattern'][$i] = '/' . preg_quote($label_devname['needle'][$i], '/') . '/'; // make regex pattern
-						if(empty($label_devname['origin'][$i])) { // using empty is ok
-							$label_devname['replacement'][$i] = ''; // value of replacement if origin is empty
-						} else {
-							$label_devname['replacement'][$i] = ''; // value of replacement if origin is not empty
-						}
-					}
-				} else {
-					$label_devname = [];
-					$volumelabel_pattern = '';
-				}
-				unset($helpinghand);
-			} else {
-				$label_devname = [];
-			}
-		}
 		// check if counters are part of the volume label
 		$label_counter = [];
 		if (preg_match('/\S/', $volumelabel_pattern)) { // do we have a volumelabel pattern?
@@ -440,7 +410,6 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 				$label_counter = [];
 			}
 		}
-
 		// check if the drive's serial number is part of the volume label
 		$label_serial = [];
 		if (preg_match('/\S/', $volumelabel_pattern)) { // do we have a volumelabel pattern?
@@ -492,13 +461,6 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 							}
 						}
 						$volumelabel = preg_replace($label_serial['pattern'], $label_serial['replacement'], $volumelabel, 1);
-					}
-					// apply disk name to label
-					if (!empty($label_devname)) {
-						for ($i = 0; $i < $label_devname['count']; $i++) {
-							$label_devname['replacement'][$i] = $sphere_array[$index]['name'] . $disk_options['zfsgpt'];
-						}
-						$volumelabel = preg_replace($label_devname['pattern'], $label_devname['replacement'], $volumelabel, 1);
 					}
 					// prepare format
 					$do_format[] = [
@@ -586,7 +548,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 				case 0: echo '<input name="filesystem" type="hidden" value="', $a_option['filesystem'], '"/>', "\n"; break;
 			}
 			switch ($a_control['volumelabel']) {
-				case 2: html_inputbox2('volumelabel', gtext('Volume Label'), $a_option['volumelabel'], gtext('Volume label of the new file system. Use $ for device name, % for a counter or %n for a counter starting at n, [n for the n rightmost characters of the device serial number.'), false, 40, false); break;
+				case 2: html_inputbox2('volumelabel', gtext('Volume Label'), $a_option['volumelabel'], gtext('Volume label of the new file system. Use % for a counter or %n for a counter starting at number n, Use [n for the rightmost n characters of the device serial number.'), false, 40, false); break;
 				case 1: html_inputbox2('volumelabel', gtext('Volume Label'), $a_option['volumelabel'], '', false, 100, true); break;
 				case 0: echo '<input name="volumelabel" type="hidden" value="', $a_option['volumelabel'], '"/>', "\n"; break;
 			}
