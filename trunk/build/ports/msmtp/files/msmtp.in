@@ -3,8 +3,9 @@
 # Part of NAS4Free (http://www.nas4free.org).
 # Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
-# 
-
+#
+# msmtp configuration
+#
 
 # PROVIDE: msmtp
 # BEFORE: DAEMON
@@ -13,7 +14,7 @@
 . /etc/configxml.subr
 
 name="msmtp"
-
+desc="msmtp configuration"
 load_rc_config "${name}"
 
 # Defaults
@@ -37,7 +38,7 @@ msmtprc=${msmtprc:-"/usr/local/etc/msmtprc"}
 		-o "tls on" -n \
 		-i "count(//system/email/starttls) > 0" -o "tls_starttls on" -n -b \
 		-i "count(//system/email/starttls) = 0" -o "tls_starttls off" -n -b \
-		-o "tls_certcheck off" -n \
+	-v "concat('',//system/email/tls_certcheck)" -n \
 	-b \
 	-o "syslog LOG_MAIL" -n \
 	${configxml_file} | /usr/local/bin/xml unesc > ${msmtp_config}

@@ -45,6 +45,7 @@ $pconfig['port'] = $config['system']['email']['port'];
 $pconfig['auth'] = isset($config['system']['email']['auth']);
 $pconfig['authmethod'] = $config['system']['email']['authmethod'];
 $pconfig['starttls'] = isset($config['system']['email']['starttls']);
+$pconfig['tls_certcheck'] = $config['system']['email']['tls_certcheck'];
 $pconfig['security'] = $config['system']['email']['security'];
 $pconfig['username'] = $config['system']['email']['username'];
 $pconfig['password'] = $config['system']['email']['password'];
@@ -84,6 +85,7 @@ if ($_POST) {
 		$config['system']['email']['authmethod'] = $_POST['authmethod'];
 		$config['system']['email']['security'] = $_POST['security'];
 		$config['system']['email']['starttls'] = isset($_POST['starttls']) ? true : false;
+		$config['system']['email']['tls_certcheck'] = $_POST['tls_certcheck'];
 		$config['system']['email']['username'] = $_POST['username'];
 		$config['system']['email']['password'] = $_POST['password'];
 		$config['system']['email']['from'] = $_POST['from'];
@@ -173,6 +175,7 @@ function enable_change(enable_change) {
 					<?php html_inputbox("port", gtext("Port"), $pconfig['port'], gtext("The default SMTP mail server port, e.g. 25 or 587."), true, 5);?>
 					<?php html_combobox("security", gtext("Security"), $pconfig['security'], array("none" => gtext("None"), "ssl" => "SSL", "tls" => "TLS"), "", true);?>
 					<?php html_checkbox("starttls", gtext("TLS mode"), !empty($pconfig['starttls']) ? true : false, gtext("Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can use SSL."), gtext("This is a way to take an existing insecure connection, and upgrade it to a secure connection using SSL/TLS."), false);?>
+					<?php html_combobox("tls_certcheck", gtext("TLS Server Certificate Check"), $pconfig['tls_certcheck'], array("tls_certcheck off" => gtext("Off"), "tls_certcheck on" => gtext("On")), gtext("Enable or disable checks of the server certificate."), "", false);?>
 					<?php html_checkbox("auth", gtext("Authentication"), !empty($pconfig['auth']) ? true : false, gtext("Enable SMTP authentication."), "", false, "auth_change()");?>
 					<?php html_inputbox("username", gtext("Username"), $pconfig['username'], "", true, 40);?>
 					<?php html_passwordconfbox("password", "passwordconf", gtext("Password"), $pconfig['password'], $pconfig['passwordconf'], "", true);?>

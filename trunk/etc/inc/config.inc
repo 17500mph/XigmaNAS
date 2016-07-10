@@ -1088,6 +1088,8 @@ function config_upgrade() {
 		if ($config['ups']['upsname'] === "ups")
 			$config['ups']['upsname'] = "ups1";
 
+		$config['system']['email']['tls_certcheck'] = "tls_certcheck off";
+
 		$config['system']['loaderconf']['param'][] = array(
 			"uuid" => uuid(),
 			"name" => "arcsas_load",
