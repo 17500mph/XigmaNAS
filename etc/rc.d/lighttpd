@@ -4,7 +4,7 @@
 # Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
 #
-# Run lighttpd
+# Lighttpd Daemon
 #
 
 # PROVIDE: lighttpd
@@ -16,7 +16,7 @@
 . /etc/configxml.subr
 
 name="lighttpd"
-desc="Run lighttpd"
+desc="Lighttpd Daemon"
 rcvar=lighttpd_enable
 
 load_rc_config "${name}"
