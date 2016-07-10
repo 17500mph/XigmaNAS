@@ -4,9 +4,7 @@
 # Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
 #
-# Portions of freenas (http://www.freenas.org).
-# Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
-# All rights reserved.
+# ataidle
 #
 
 # PROVIDE: ataidle
@@ -17,7 +15,7 @@
 . /etc/configxml.subr
 
 name="ataidle"
-
+desc="ataidle"
 load_rc_config "${name}"
 
 # Defaults
