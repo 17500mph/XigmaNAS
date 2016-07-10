@@ -4,6 +4,8 @@
 # Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
 #
+# mdnsresponder deamon
+#
 # Service types definition: http://www.dns-sd.org/ServiceTypes.html
 
 # PROVIDE: mdnsresponder
@@ -17,6 +19,7 @@
 . /etc/util.subr
 
 name="mdnsresponder"
+desc="mdnsresponder deamon"
 rcvar=mdnsresponder_enable
 
 load_rc_config "${name}"
