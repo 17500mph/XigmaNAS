@@ -288,6 +288,7 @@ function log_download($loginfo) {
 	header("Content-Disposition: attachment; filename={$loginfo['filename']}");
 	header("Content-Length: {$fs}");
 	header("Pragma: hack");
+	readfile($loginfo['logfile']);
 
 	switch ($loginfo['type']) {
 		case "clog":
