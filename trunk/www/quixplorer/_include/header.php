@@ -140,10 +140,12 @@ $menu['services']['menuitem'][] = array("desc" => gtext("UPS"), "link" => "../se
 }
 
 // VM
+if ('x64' == $g['arch']) {
 $menu['vm']['desc'] = gtext("VM");
 $menu['vm']['visible'] = Session::isAdmin();
 $menu['vm']['link'] = "../index.php";
 $menu['vm']['menuitem'] = array();
+}
 if ("dom0" !== $g['arch']) {
 $menu['vm']['menuitem'][] = array("desc" => gtext("VirtualBox"), "link" => "../vm_vbox.php", "visible" => Session::isAdmin());
 } else {
