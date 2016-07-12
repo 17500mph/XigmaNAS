@@ -601,7 +601,7 @@ function system_get_device_temp($devicespecialfile) {
 		foreach ($rawdata as $rawdatav) {
 			$arawdatav = preg_split("/\s+/", $rawdatav);
 
-			if (!empty($arawdatav[1]) && (0 == strncmp(trim($arawdatav[1]), "Temperature_", 12)) &&
+			if (!empty($arawdatav[1]) && ((0 == strncmp(trim($arawdatav[1]), "Temperature_", 12)) || (0 == strncmp(trim($arawdatav[1]), "Airflow_Temperature_", 20))) &&
 				((0 != strcmp(trim($arawdatav[0]), "190")) || (0 != strcmp(trim($arawdatav[0]), "194")) )) {
 				$result = chop($arawdatav[9]);
 				break;
