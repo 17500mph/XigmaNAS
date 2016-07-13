@@ -590,7 +590,7 @@ class HTMLLanguageComboBox extends HTMLComboBox {
 		// Generate options.
 		$options = array();
 		foreach ($g_languages as $languagek => $languagev) {
-			$options[$languagek] = gtext($languagev['desc']);
+			$options[$languagek] = $languagev['desc.localized'];
 		}
 		// Sort options alphabetically
 		asort($options);
