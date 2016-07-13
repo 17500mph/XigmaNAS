@@ -85,7 +85,7 @@ function log_change() {
 				<select id="log" class="formfld" onchange="log_change()" name="log">
 					<?php foreach($loginfo as $loginfok => $loginfov):?>
 					<?php if (FALSE === $loginfov['visible']) continue;?>
-					<option value="<?=$loginfok;?>" <?php if ($loginfok == $log) echo "selected=\"selected\"";?>><?=htmlspecialchars($loginfov['desc']);?></option>
+					<option value="<?=$loginfok;?>" <?php if ($loginfok == $log) echo 'selected="selected"';?>><?=$loginfov['desc'];?></option>
 					<?php endforeach;?>
 				</select>
 				<input name="clear" type="submit" class="formbtn" value="<?=gtext("Clear");?>" />

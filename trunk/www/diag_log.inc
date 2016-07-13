@@ -279,25 +279,42 @@ function log_clear($loginfo) {
 }
 
 function log_download($loginfo) {
-	if (!is_array($loginfo))
-		return;
-
-	$fs = get_filesize($loginfo['logfile']);
-
-	header("Content-Type: application/octet-stream");
-	header("Content-Disposition: attachment; filename={$loginfo['filename']}");
-	header("Content-Length: {$fs}");
-	header("Pragma: hack");
-	readfile($loginfo['logfile']);
-
-	switch ($loginfo['type']) {
-		case "clog":
-			exec("/usr/sbin/clog {$loginfo['logfile']}", $content);
-			echo implode("\n", $content);
-			break;
-
-		case "plain":
-			readfile($loginfo['logfile']);
+	$gt_logisempty = gtext('Log file is empty.');
+	if (is_array($loginfo)) {
+		switch ($loginfo['type']) {
+			case "clog":
+				if(file_exists($loginfo['logfile'])) {
+					exec(sprintf('/usr/sbin/clog %s', escapeshellarg($loginfo['logfile'])), $output);
+					$content = implode("\n", $output);
+				} else {
+					$content = $gt_logisempty;
+				}
+				$fs = strlen($content);
+				header("Content-Type: application/octet-stream");
+				header("Content-Disposition: attachment; filename={$loginfo['filename']}");
+				header("Content-Length: {$fs}");
+				header("Pragma: hack");
+				echo $content;
+				break;
+			case "plain":
+				if(file_exists($loginfo['logfile'])) {
+					if(false === ($content = file_get_contents($loginfo['logfile']))) {
+						$content = $gt_logisempty;
+					}
+				} else {
+					$content = $gt_logisempty;
+				}
+				if(empty($content)) {
+					$content = $gt_logisempty;
+				}
+				$fs = strlen($content);
+				header("Content-Type: application/octet-stream");
+				header("Content-Disposition: attachment; filename={$loginfo['filename']}");
+				header("Content-Length: {$fs}");
+				header("Pragma: hack");
+				echo $content;
+				break;
+		}
 	}
 }
 ?>
