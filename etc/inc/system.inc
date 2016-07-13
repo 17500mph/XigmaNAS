@@ -258,7 +258,17 @@ function get_smbios_info() {
 		$serial = chop(`/sbin/sysctl -n hw.board.serial`);
 		if (!empty($serial))
 			$smbios['planar']['product'] .= " (S/N: $serial)";
-	} else if ($smbios['bios']['vendor'] == 'BHYVE') {
+	}   else if (preg_match('/^bpi-/', $platform)) {
+		// fake data on BANANA-PI
+		$smbios['bios']['reldate'] = "01/01/2015";
+		$smbios['bios']['vendor'] = "BANANA-PI";
+		$smbios['bios']['version'] = "1.0";
+		$smbios['planar']['maker'] = "Sinovoip Co";
+		$smbios['planar']['product'] = chop(`sysctl -n dev.cpu.0.%pnpinfo | awk -F "," '{ print $2; }'`);
+		$serial = chop(`/sbin/sysctl -n hw.board.revision`);
+		if (!empty($serial))
+			$smbios['planar']['product'] .= " (S/N: $serial)";
+	} 	else if ($smbios['bios']['vendor'] == 'BHYVE') {
 		$smbios['bios']['reldate'] = "01/01/2015";
 		$smbios['bios']['vendor'] = "BHyVe";
 		$smbios['bios']['version'] = "1.0";
@@ -354,11 +364,14 @@ function system_get_cpu_info() {
 			$cpuinfo['model'] = "Broadcom BCM2836";
 		else if ($platform == "meson8b")
 			$cpuinfo['model'] = "Amlogic S805";
+		else if ($platform == "a20")
+			$cpuinfo['model'] = "Allwinner a20";
 		else
 			$cpuinfo['model'] = $platform;
 	}
 	$cpuinfo['clockrate'] = chop(`/sbin/sysctl -n hw.clockrate`);
-	$cpuinfo['temperature'] = chop(`/sbin/sysctl -n hw.acpi.thermal.tz0.temperature`);
+	if (chop(`/sbin/sysctl -n hw.platform`) == 'a20') $cpuinfo['temperature'] = chop(`/sbin/sysctl -n dev.axp209_pmu.0.temp`);
+	else $cpuinfo['temperature'] = chop(`/sbin/sysctl -n hw.acpi.thermal.tz0.temperature`);
 	$cpus = system_get_cpus();
 	$cpuinfo['temperature2'] = array();
 	$temp = @exec("/sbin/sysctl -q -n dev.cpu.0.temperature");
