@@ -87,8 +87,11 @@ if ($_POST) {
 			config_lock();
 			$retval |= rc_update_service("swap");
 			config_unlock();
-			if (!isset($_POST['enable']) && $swapdevice != "NONE")
-				mwexec("swapon $swapdevice");
+			if (isset($_POST['enable']) && (false !== preg_match('/\S/', $_POST['devicespecialfile']))) {
+				$cmd = sprintf('swapon %s', escapeshellarg($_POST['devicespecialfile']));
+				write_log($cmd);
+				mwexec($cmd);
+			}
 		}
 		$savemsg = get_std_save_message($retval);
 	}
