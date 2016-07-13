@@ -89,8 +89,8 @@ BUILD_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}dnspython>=1.9.4:dns/py-dnspython
 RUN_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}dnspython>=1.9.4:dns/py-dnspython
 PLIST_SUB+=		PY_DNSPYTHON="@comment "
 #
-BUILD_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}dnspython>=0.1.11:devel/py-iso8601
-RUN_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}dnspython>=0.1.11:devel/py-iso8601
+BUILD_DEPENDS+=         ${PYTHON_PKGNAMEPREFIX}iso8601>=0.1.11:devel/py-iso8601
+RUN_DEPENDS+=           ${PYTHON_PKGNAMEPREFIX}iso8601>=0.1.11:devel/py-iso8601
 PLIST_SUB+=		PY_ISO8601="@comment "
 # talloc
 BUILD_DEPENDS+=		talloc>=2.1.5:devel/talloc
