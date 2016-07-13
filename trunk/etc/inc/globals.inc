@@ -63,37 +63,37 @@ $g_install = array(
 );
 
 /* Available languages/locales */
-$g_languages = array (
-	"sq"    => array("codeset" => "UTF-8", "desc" => gtext("Albanian")),
-	"bg"    => array("codeset" => "UTF-8", "desc" => gtext("Bulgarian")),
-	"cs"    => array("codeset" => "UTF-8", "desc" => gtext("Czech")),
-	"zh_CN" => array("codeset" => "UTF-8", "desc" => gtext("Chinese (Simplified)")),
-	"zh_TW" => array("codeset" => "UTF-8", "desc" => gtext("Chinese (Traditional)")),
-	"nl"    => array("codeset" => "UTF-8", "desc" => gtext("Dutch")),
-	"da"    => array("codeset" => "UTF-8", "desc" => gtext("Danish")),
-	"en_US" => array("codeset" => "UTF-8", "desc" => gtext("English")),
-	"fi"    => array("codeset" => "UTF-8", "desc" => gtext("Finnish")),
-	"fr"    => array("codeset" => "UTF-8", "desc" => gtext("French")),
-	"de"    => array("codeset" => "UTF-8", "desc" => gtext("German")),
-	"el"    => array("codeset" => "UTF-8", "desc" => gtext("Greek")),
-	"hu"    => array("codeset" => "UTF-8", "desc" => gtext("Hungarian")),
-	"it"    => array("codeset" => "UTF-8", "desc" => gtext("Italian")),
-	"ja"    => array("codeset" => "UTF-8", "desc" => gtext("Japanese")),
-	"ko"    => array("codeset" => "UTF-8", "desc" => gtext("Korean")),
-	"lv"    => array("codeset" => "UTF-8", "desc" => gtext("Latvian")),
-	"nb"    => array("codeset" => "UTF-8", "desc" => gtext("Norwegian (Bokmal)")),
-	"pl"    => array("codeset" => "UTF-8", "desc" => gtext("Polish")),
-	"pt_BR" => array("codeset" => "UTF-8", "desc" => gtext("Portuguese (Brazil)")),
-	"pt"    => array("codeset" => "UTF-8", "desc" => gtext("Portuguese (Portugal)")),
-	"ro"    => array("codeset" => "UTF-8", "desc" => gtext("Romanian")),
-	"ru"    => array("codeset" => "UTF-8", "desc" => gtext("Russian")),
-	"sl"    => array("codeset" => "UTF-8", "desc" => gtext("Slovenian")),
-	"es"    => array("codeset" => "UTF-8", "desc" => gtext("Spanish")),
-	"sv"    => array("codeset" => "UTF-8", "desc" => gtext("Swedish")),
-	"sk"    => array("codeset" => "UTF-8", "desc" => gtext("Slovak")),
-	"tr"    => array("codeset" => "UTF-8", "desc" => gtext("Turkish")),
-	"uk"    => array("codeset" => "UTF-8", "desc" => gtext("Ukrainian"))
-);
+$g_languages = [
+	'sq'    => ['codeset' => 'UTF-8', 'desc' => gtext('Albanian'), 'desc.localized' => 'Shqip'],
+	'bg'    => ['codeset' => 'UTF-8', 'desc' => gtext('Bulgarian'), 'desc.localized' => 'Български'],
+	'cs'    => ['codeset' => 'UTF-8', 'desc' => gtext('Czech'), 'desc.localized' => 'čeština'],
+	'zh_CN' => ['codeset' => 'UTF-8', 'desc' => gtext('Chinese (Simplified)'), 'desc.localized' => '中文（簡體）'],
+	'zh_TW' => ['codeset' => 'UTF-8', 'desc' => gtext('Chinese (Traditional)'), 'desc.localized' => '正體中文'],
+	'nl'    => ['codeset' => 'UTF-8', 'desc' => gtext('Dutch'), 'desc.localized' => 'Nederlands'],
+	'da'    => ['codeset' => 'UTF-8', 'desc' => gtext('Danish'), 'desc.localized' => 'Dansk'],
+	'en_US' => ['codeset' => 'UTF-8', 'desc' => gtext('English'), 'desc.localized' => "English"],
+	'fi'    => ['codeset' => 'UTF-8', 'desc' => gtext('Finnish'), 'desc.localized' => 'Suomi'],
+	'fr'    => ['codeset' => 'UTF-8', 'desc' => gtext('French'), 'desc.localized' => 'Français'],
+	'de'    => ['codeset' => 'UTF-8', 'desc' => gtext('German'), 'desc.localized' => 'Deutsch'],
+	'el'    => ['codeset' => 'UTF-8', 'desc' => gtext('Greek'), 'desc.localized' => 'Ελληνικά'],
+	'hu'    => ['codeset' => 'UTF-8', 'desc' => gtext('Hungarian'), 'desc.localized' => 'Magyar'],
+	'it'    => ['codeset' => 'UTF-8', 'desc' => gtext('Italian'), 'desc.localized' => 'Italiano'],
+	'ja'    => ['codeset' => 'UTF-8', 'desc' => gtext('Japanese'), 'desc.localized' => '日本語'],
+	'ko'    => ['codeset' => 'UTF-8', 'desc' => gtext('Korean'), 'desc.localized' => '한국어'],
+	'lv'    => ['codeset' => 'UTF-8', 'desc' => gtext('Latvian'), 'desc.localized' => 'Latviešu'],
+	'nb'    => ['codeset' => 'UTF-8', 'desc' => gtext('Norwegian (Bokmal)'), 'desc.localized' => 'Norsk (bokmål)'],
+	'pl'    => ['codeset' => 'UTF-8', 'desc' => gtext('Polish'), 'desc.localized' => 'Polski'],
+	'pt_BR' => ['codeset' => 'UTF-8', 'desc' => gtext('Portuguese (Brazil)'), 'desc.localized' => 'Português (Brasil)'],
+	'pt'    => ['codeset' => 'UTF-8', 'desc' => gtext('Portuguese (Portugal)'), 'desc.localized' => 'Português (Portugal)'],
+	'ro'    => ['codeset' => 'UTF-8', 'desc' => gtext('Romanian'), 'desc.localized' => 'Română'],
+	'ru'    => ['codeset' => 'UTF-8', 'desc' => gtext('Russian'), 'desc.localized' => 'Русский'],
+	'sl'    => ['codeset' => 'UTF-8', 'desc' => gtext('Slovenian'), 'desc.localized' => 'Slovenščina'],
+	'es'    => ['codeset' => 'UTF-8', 'desc' => gtext('Spanish'), 'desc.localized' => 'Español'],
+	'sv'    => ['codeset' => 'UTF-8', 'desc' => gtext('Swedish'), 'desc.localized' => "Svenska"],
+	'sk'    => ['codeset' => 'UTF-8', 'desc' => gtext('Slovak'), 'desc.localized' => 'Slovenský'],
+	'tr'    => ['codeset' => 'UTF-8', 'desc' => gtext('Turkish'), 'desc.localized' => 'Türkçe'],
+	'uk'    => ['codeset' => 'UTF-8', 'desc' => gtext('Ukrainian'), 'desc.localized' => 'Українська']
+];
 
 /* Supported filesystems */
 $g_filesystems = array(
