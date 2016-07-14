@@ -111,7 +111,7 @@ if ('dom0' !== $g['arch']) {
 	$menu['services']['menuitem'][] = ['desc' => gtext('NFS'), 'link' => 'services_nfs.php', 'visible' => true];
 	$menu['services']['menuitem'][] = ['desc' => gtext('AFP'), 'link' => 'services_afp.php', 'visible' => true];
 	$menu['services']['menuitem'][] = ['desc' => gtext('Rsync'), 'link' => 'services_rsyncd.php', 'visible' => true];
-	$menu['services']['menuitem'][] = array("desc" => gettext("Syncthing"), "link" => "services_syncthing.php", "visible" => ( 0 == preg_match('/^bpi-/', get_platform_type())));
+	$menu['services']['menuitem'][] = array("desc" => gettext("Syncthing"), "link" => "services_syncthing.php", "visible" => ( false == preg_match('/^bpi-/i', get_platform_type())));
 	$menu['services']['menuitem'][] = ['desc' => gtext('Unison'), 'link' => 'services_unison.php', 'visible' => true];
 	$menu['services']['menuitem'][] = ['desc' => gtext('iSCSI Target'), 'link' => 'services_iscsitarget.php', 'visible' => true];
 	$menu['services']['menuitem'][] = ['desc' => gtext('DLNA/UPnP'), 'link' => 'services_fuppes.php', 'visible' => true];
