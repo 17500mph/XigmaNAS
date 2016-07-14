@@ -46,7 +46,11 @@ Fixes:
 - Fix gettext protection against html code injections.
 - Fix issue when reformatting disks.
 - Fix a problem with gpt/labels.
+- Fix Some HGST drive temperatures are not displayed.
 - Fix download log files did not always work with some browsers.
+- Fix some code errors on System|Advanced|Swap.
+- Fix broken log files downloads.
+- Fix test emails could not send as in French WebGUI.
 
 Permanent restrictions:
 - It is not possible to use virtualbox-ose on 32-bits nas4free, 64-bits only feature.
