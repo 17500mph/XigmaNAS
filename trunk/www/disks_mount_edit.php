@@ -601,7 +601,7 @@ function enable_change(enable_change) {
 					</tr>
 					<?php
 					html_inputbox("partitionnum", gtext("Partition number"), $pconfig['partitionnum'], "", true, 3);
-					html_combobox("fstype", gtext("File system"), !empty($pconfig['fstype']) ? $pconfig['fstype'] : "", array("ufs" => "UFS", "msdosfs" => "FAT", "cd9660" => "CD/DVD", "ntfs" => "NTFS", "ext2fs" => "EXT2", "exfat" => "exFAT"), "", true, false, "fstype_change()");
+					html_combobox("fstype", gtext("File system"), !empty($pconfig['fstype']) ? $pconfig['fstype'] : "", array("ufs" => "UFS", "msdosfs" => "FAT", "cd9660" => "CD/DVD", "ntfs" => "NTFS", "ext2fs" => "EXT2/3", "ext4fuse" => "EXT4", "exfat" => "exFAT"), "", true, false, "fstype_change()");
 					html_filechooser("filename", "Filename", !empty($pconfig['filename']) ? $pconfig['filename'] : "", gtext("ISO file to be mounted."), $g['media_path'], true);
 					html_inputbox("sharename", gtext("Mount point name"), !empty($pconfig['sharename']) ? $pconfig['sharename'] : "", "", true, 20);
 					html_inputbox("desc", gtext("Description"), !empty($pconfig['desc']) ? $pconfig['desc'] : "", gtext("You may enter a description here for your reference."), false, 40);
@@ -658,7 +658,7 @@ function enable_change(enable_change) {
 						. '<br />'
 						. sprintf(gtext('UFS and variants are the NATIVE file format for FreeBSD (the underlying OS of %s).'), get_product_name())
 						. ' '
-						. gtext('Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, or NTFS can result in unpredictable results, file corruption and the loss of data!');
+						. gtext('Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, or NTFS can result in unpredictable results, file corruption and the loss of data!');
 					html_remark("warning", gtext('Warning'), $helpinghand);
 					?>
 				</div>
