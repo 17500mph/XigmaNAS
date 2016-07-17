@@ -2128,7 +2128,7 @@ function get_fstype_shortdesc($fstype) {
 			$shortdesc = gtext("Encrypted");
 			break;
 		case "ext2":
-			$shortdesc = "EXT2";
+			$shortdesc = "EXT2/3/4";
 			break;
 		case "exfat":
 			$shortdesc = "exFAT";
