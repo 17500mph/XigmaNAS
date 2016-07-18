@@ -225,6 +225,9 @@ $pgtitle = array(gtext("Help"), gtext("License & Credits"));
 	    <p> NTFS-3G - NTFS-3G is a NTFS driver (<a href="http://www.tuxera.com/community/open-source-ntfs-3g/" target="_blank">http://www.tuxera.com/community/open-source-ntfs-3g</a>)<br />
 	    Copyright &copy; 2008-2015 Tuxera Inc. All Rights Reserved.</p>
 
+	    <p> ext4fuse - EXT4 implementation for FUSE (<a href="https://github.com/gerard/ext4fuse" target="_blank">https://github.com/gerard/ext4fuse</a>)<br />
+	    Copyright &copy; 1989, 1991 Free Software Foundation. All Rights Reserved.</p>
+
 	    <p> Fuse - Filesystem in Userspace (<a href="https://github.com/libfuse/libfuse" target="_blank">https://github.com/libfuse/libfuse</a>)<br />
 	    Copyright &copy;GNU General Public License. All Rights Reserved.</p>
 
