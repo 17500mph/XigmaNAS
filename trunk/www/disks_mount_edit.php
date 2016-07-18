@@ -658,7 +658,7 @@ function enable_change(enable_change) {
 						. '<br />'
 						. sprintf(gtext('UFS and variants are the NATIVE file format for FreeBSD (the underlying OS of %s).'), get_product_name())
 						. ' '
-						. gtext('Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, or NTFS can result in unpredictable results, file corruption and the loss of data!');
+						. gtext('Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4 or NTFS can result in unpredictable results, file corruption and the loss of data!');
 					html_remark("warning", gtext('Warning'), $helpinghand);
 					?>
 				</div>
