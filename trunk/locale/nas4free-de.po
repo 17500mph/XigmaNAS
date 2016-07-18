@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-07-17 08:18+0000\n"
-"PO-Revision-Date: 2016-07-16 22:05+0000\n"
+"PO-Revision-Date: 2016-07-17 10:01+0000\n"
 "Last-Translator: J@r00n¥ <jaroony@outlook.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-17 06:37+0000\n"
+"X-Launchpad-Export-Date: 2016-07-18 08:13+0000\n"
 "X-Generator: Launchpad (build 18140)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -3153,7 +3153,7 @@ msgid "Event selection"
 msgstr "Vorgangsauswahl"
 
 msgid "Example: pkg add packagename."
-msgstr ""
+msgstr "Beispiel: pkg add NameDesPaketes"
 
 msgid "Execute"
 msgstr "Ausführen"
@@ -3303,7 +3303,7 @@ msgid "Failed to send status report to: %s."
 msgstr "Konnte keine Statusreport an %s senden."
 
 msgid "Failed to send status report."
-msgstr ""
+msgstr "Senden des Statusreports fehlgeschlagen."
 
 #, php-format
 msgid "Failed to send test email to: %s."
@@ -4566,7 +4566,7 @@ msgid "Log Settings"
 msgstr "Protokoll-Einstellungen"
 
 msgid "Log file is empty."
-msgstr ""
+msgstr "Log-Datei ist leer."
 
 msgid "Log level"
 msgstr "Protokollierungsstufe"
@@ -9073,16 +9073,16 @@ msgid "Unknown or unformatted"
 msgstr "Unbekannt oder nicht formatiert"
 
 msgid "Unknown size"
-msgstr ""
+msgstr "Unbekannte Größe"
 
 msgid "Unload"
 msgstr "Auswerfen"
 
 msgid "Unmount Disk/Partition"
-msgstr ""
+msgstr "Aushängen von Festplatte/Partition"
 
 msgid "Unmount this disk first before proceeding."
-msgstr ""
+msgstr "Hängen Sie diese Festplatte aus bevor Sie fortfahren."
 
 msgid "Unmounting..."
 msgstr "Aushängen läuft …"
@@ -9210,7 +9210,7 @@ msgid "User ID"
 msgstr "Benutzerkennung"
 
 msgid "User Setup"
-msgstr ""
+msgstr "Benutzer Verwaltung"
 
 msgid "User full name."
 msgstr "Vollständiger Name."
@@ -9319,7 +9319,7 @@ msgid "Virtual Device"
 msgstr "Virtuelles Gerät"
 
 msgid "Virtual Device List"
-msgstr ""
+msgstr "Liste der virtuellen Geräte"
 
 msgid "Virtual Device is marked for removal"
 msgstr "Virtuelles Laufwerk ist zum entfernen markiert"
@@ -9397,7 +9397,7 @@ msgid "WAN address"
 msgstr "WAN Adresse"
 
 msgid "WARNING"
-msgstr ""
+msgstr "WARNUNG"
 
 msgid "WEP"
 msgstr "WEP"
@@ -9595,7 +9595,7 @@ msgid "You have to activate %s to advertise this service to clients."
 msgstr ""
 
 msgid "You have to reboot the system for the changes to take effect."
-msgstr ""
+msgstr "Um die Änderungen durchzuführen muss das System neugestartet werden."
 
 #, php-format
 msgid "You have to select at least one item for '%s'."
@@ -9649,6 +9649,8 @@ msgstr "Die Daten müssen vor der Aktivieruing initialisert  werden."
 
 msgid "You must reboot the server before you can upgrade the firmware"
 msgstr ""
+"Der Server muss neugestartet werden, bevor die Firmware aktualisiert werden "
+"kann."
 
 msgid "You must select at least one authentication method."
 msgstr "Sie müssen mind. eine Authentifizierungsmethode auswählen."
@@ -9788,7 +9790,7 @@ msgid "mount"
 msgstr "Einhängen"
 
 msgid "mount point"
-msgstr ""
+msgstr "Einhängepunkt"
 
 msgid "n/a"
 msgstr "k.A."
@@ -9848,14 +9850,7 @@ msgid "umount"
 msgstr "Aushängen"
 
 msgid "user"
-msgstr ""
+msgstr "Benutzer"
 
 msgid "version:"
 msgstr "Version:"
-
-#~ msgid ""
-#~ "Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, or NTFS "
-#~ "can result in unpredictable results, file corruption and the loss of data!"
-#~ msgstr ""
-#~ "Die Nutzung ander Dateiformate als FAT, FAT32, EXT2, EXT3 oder NTFS führt zu "
-#~ "unvorhersehbaren Ergebnissen oder Datenverlust !"
