@@ -47,7 +47,7 @@ $productname = get_product_name();
 // Display information
 $text = <<<EOD
 
-This will upgrade your current installation to the latest version.
+This will 'Upgrade' your current installation from LiveCD/LiveUSB.
 
 EOD;
 $result = tui_display_message_ex("{$productname} Upgrade", $text, 70, 7);

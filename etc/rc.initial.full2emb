@@ -47,13 +47,14 @@ $productname = get_product_name();
 // Display information
 $text = <<<EOD
 
-This will convert and upgrade 'Full' installation to 'Embedded'.
+This will upgrade and convert 'Full' installation to 'Embedded'.
 
-Installing on CF or USB Flash Drive is the preferred way:
-It saves you Power and a IDE/SATA/SCSI channel for more storage drives.
+Installing on CF/USB/SSD device is the preferred way:
+1. It saves Power and a SATA/SCSI channel for more storage drives. 
+2. Server upgrades can easy be performed by the WebGUI.
 
 EOD;
-$result = tui_display_message_ex("{$productname} Convert & Upgrade", $text, 70, 12);
+$result = tui_display_message_ex("{$productname} Upgrade & Convert", $text, 70, 12);
 if (0 != $result)
 	exit(0);
 

@@ -54,15 +54,15 @@ $productname = get_product_name();
 // Display information
 $text = <<<EOD
 
-{$productname} 'Embedded' installer for HDD, SSD, CF or USB flash drive.
+{$productname} 'Embedded' without swap installer for HDD, SSD, CF or USB flash drive.
 
 - Create GPT partition 1, for bootcode
 - Create GPT partition 2, using UFS, {$part1size}MB size for OS image
 - Uses a RAM disk to limit read/write access to the device
 
 WARNING: There will be some limitations:
-1. This will erase ALL partitions and data on the destination disk
-2. You can't use your destination disk for sharing data
+1. This will erase ALL partitions and data on the destination disk!
+2. You can't use your destination disk for sharing data.
 
 EOD;
 $result = tui_display_message_ex("{$productname} Embedded Installation", $text, 74, 15);

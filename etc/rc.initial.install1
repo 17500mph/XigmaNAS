@@ -60,15 +60,15 @@ $text = <<<EOD
 - Uses a RAM disk to limit read/write access to the device
 
 WARNING: There will be some limitations:
-1. This will erase ALL partitions and data on the destination disk
-2. You can't use your destination disk for sharing data
-3. If the destination is too small, use limited support size of {$part1min}MB for 500MB disk
+1. This will erase ALL partitions and data on the destination disk!
+2. You can't use your destination disk for sharing data.
+3. If the destination is too small, use limited support size of {$part1min}MB for 500MB disk.
 
 Installing on CF or USB Flash Drive is the preferred way:
 It saves you Power and a IDE/SATA/SCSI channel for more storage drives.
 
 EOD;
-$result = tui_display_message_ex("{$productname} Embedded Installation", $text, 74, 17);
+$result = tui_display_message_ex("{$productname} Embedded Installation", $text, 74, 15);
 if (0 != $result)
 	exit(0);
 
