@@ -65,7 +65,7 @@ $text = <<<EOD
 - Uses a RAM disk to limit read/write access to the device
 
 WARNING: There will be some limitations:
-1. This will erase ALL partitions and data on the destination disk
+1. This will erase ALL partitions and data on the destination disk!
 
 EOD;
 $result = tui_display_message_ex("{$productname} Embedded Installation", $text, 74, 15);

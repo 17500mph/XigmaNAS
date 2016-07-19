@@ -64,7 +64,7 @@ $text = <<<EOD
 - Create GPT partition 4, using UFS, for DATA
 
 WARNING: There will be some limitations:
-1. This will erase ALL partitions and data on the destination disk
+1. This will erase ALL partitions and data on the destination disk!
 
 EOD;
 $result = tui_display_message_ex("{$productname} Full Installation", $text, 74, 15);

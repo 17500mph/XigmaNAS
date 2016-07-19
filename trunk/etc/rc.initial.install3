@@ -63,7 +63,7 @@ $text = <<<EOD
 - Easy to customize (e.g. install additional FreeBSD packages)
 
 WARNING: There will be some limitations:
-1. This will erase ALL partitions and data on the destination disk
+1. This will erase ALL partitions and data on the destination disk!
 
 EOD;
 $result = tui_display_message_ex("{$productname} Full Installation", $text, 74, 15);
