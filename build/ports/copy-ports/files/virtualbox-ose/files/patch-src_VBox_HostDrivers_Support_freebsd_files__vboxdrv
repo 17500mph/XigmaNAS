@@ -1,6 +1,14 @@
---- src/VBox/HostDrivers/Support/freebsd/files_vboxdrv.orig	2016-04-18 15:24:43 UTC
+--- src/VBox/HostDrivers/Support/freebsd/files_vboxdrv.orig	2016-07-18 11:56:20 UTC
 +++ src/VBox/HostDrivers/Support/freebsd/files_vboxdrv
-@@ -124,13 +124,14 @@ FILES_VBOXDRV_NOBIN=" \
+@@ -116,6 +116,7 @@ FILES_VBOXDRV_NOBIN=" \
+     ${PATH_ROOT}/src/VBox/Runtime/common/misc/handletable.cpp=>common/misc/handletable.c \
+     ${PATH_ROOT}/src/VBox/Runtime/common/misc/handletable.h=>common/misc/handletable.h \
+     ${PATH_ROOT}/src/VBox/Runtime/common/misc/handletablectx.cpp=>common/misc/handletablectx.c \
++    ${PATH_ROOT}/src/VBox/Runtime/common/misc/handletablesimple.cpp=>common/misc/handletablesimple.c \
+     ${PATH_ROOT}/src/VBox/Runtime/common/misc/once.cpp=>common/misc/once.c \
+     ${PATH_ROOT}/src/VBox/Runtime/common/misc/term.cpp=>common/misc/term.c \
+     ${PATH_ROOT}/src/VBox/Runtime/common/misc/thread.cpp=>common/misc/thread.c \
+@@ -124,13 +125,14 @@ FILES_VBOXDRV_NOBIN=" \
      ${PATH_ROOT}/src/VBox/Runtime/common/string/RTStrCopyEx.cpp=>common/string/RTStrCopyEx.c \
      ${PATH_ROOT}/src/VBox/Runtime/common/string/RTStrNCmp.cpp=>common/string/RTStrNCmp.c \
      ${PATH_ROOT}/src/VBox/Runtime/common/string/RTStrNLen.cpp=>common/string/RTStrNLen.c \

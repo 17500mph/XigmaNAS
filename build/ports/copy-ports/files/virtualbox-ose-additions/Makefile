@@ -1,5 +1,5 @@
 PORTNAME=	virtualbox-ose
-PORTVERSION=	5.0.24
+PORTVERSION=	5.0.26
 CATEGORIES=	emulators
 MASTER_SITES=	http://download.virtualbox.org/virtualbox/${PORTVERSION}/
 PKGNAMESUFFIX=	-additions
@@ -97,6 +97,8 @@ KMK_ARCH=	freebsd.x86
 KMK_ARCH=	freebsd.${ARCH}
 .endif
 
+SUB_LIST+=	VBOX_KMODS="${VBOX_KMODS}"
+
 .include <bsd.port.pre.mk>
 
 .if ${COMPILER_TYPE} == clang
@@ -108,7 +110,10 @@ EXTRA_PATCHES+=	${PATCHDIR}/extrapatch-src-VBox-Additions-x11-VBoxClient-Makefil
 .endif
 .endif
 
-SUB_LIST+=	KMODDIR=${KMODDIR}
+VBOX_KMODS=	vboxguest:pci/vboxguest
+.if ${PORT_OPTIONS:MOPENGL}
+VBOX_KMODS+=	vboxvideo:vgapci/vboxvideo
+.endif
 
 pre-everything::
 .if ${ARCH} == "amd64"
