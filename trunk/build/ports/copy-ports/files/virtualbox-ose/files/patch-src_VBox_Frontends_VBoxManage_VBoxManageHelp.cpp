@@ -1,20 +1,21 @@
---- src/VBox/Frontends/VBoxManage/VBoxManageHelp.cpp.orig	2015-06-01 13:55:01.000000000 -0400
-+++ src/VBox/Frontends/VBoxManage/VBoxManageHelp.cpp	2015-06-04 15:03:32.105882000 -0400
-@@ -298,7 +298,7 @@
+--- src/VBox/Frontends/VBoxManage/VBoxManageHelp.cpp.orig	2016-07-18 11:55:55 UTC
++++ src/VBox/Frontends/VBoxManage/VBoxManageHelp.cpp
+@@ -791,7 +791,7 @@ void printUsage(USAGECATEGORY fCategory,
+             RTStrmPrintf(pStrm, "|dsound");
  #endif
-                         );
          }
--        if (fLinux)
-+        if (fLinux || fFreeBSD)
+-        if (fLinux || fSolaris)
++        if (fLinux || fFreeBSD || fSolaris)
          {
-             RTStrmPrintf(pStrm, "|oss"
- #ifdef VBOX_WITH_ALSA
-@@ -309,20 +309,6 @@
+             RTStrmPrintf(pStrm, ""
+ #ifdef VBOX_WITH_OSS
+@@ -805,22 +805,6 @@ void printUsage(USAGECATEGORY fCategory,
  #endif
                          );
          }
 -        if (fFreeBSD)
 -        {
+-#ifdef VBOX_WITH_OSS
 -            /* Get the line break sorted when dumping all option variants. */
 -            if (fDumpOpts)
 -            {
@@ -23,6 +24,7 @@
 -            }
 -            else
 -                RTStrmPrintf(pStrm, "|oss");
+-#endif
 -#ifdef VBOX_WITH_PULSE
 -            RTStrmPrintf(pStrm, "|pulse");
 -#endif

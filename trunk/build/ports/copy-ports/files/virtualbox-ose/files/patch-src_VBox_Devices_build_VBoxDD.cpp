@@ -1,6 +1,6 @@
---- src/VBox/Devices/build/VBoxDD.cpp.orig	2015-06-01 13:54:34.000000000 -0400
-+++ src/VBox/Devices/build/VBoxDD.cpp	2015-06-04 14:59:08.925853000 -0400
-@@ -281,7 +281,7 @@
+--- src/VBox/Devices/build/VBoxDD.cpp.orig	2016-07-18 11:55:27 UTC
++++ src/VBox/Devices/build/VBoxDD.cpp
+@@ -286,7 +286,7 @@ extern "C" DECLEXPORT(int) VBoxDriversRe
      if (RT_FAILURE(rc))
          return rc;
  #endif
@@ -9,10 +9,10 @@
  # ifdef VBOX_WITH_PULSE
      rc = pCallbacks->pfnRegister(pCallbacks, &g_DrvHostPulseAudio);
      if (RT_FAILURE(rc))
-@@ -295,12 +295,7 @@
-     rc = pCallbacks->pfnRegister(pCallbacks, &g_DrvHostOSSAudio);
+@@ -302,12 +302,7 @@ extern "C" DECLEXPORT(int) VBoxDriversRe
      if (RT_FAILURE(rc))
          return rc;
+ # endif
 -#endif /* RT_OS_LINUX */
 -#if defined(RT_OS_FREEBSD)
 -    rc = pCallbacks->pfnRegister(pCallbacks, &g_DrvHostOSSAudio);
