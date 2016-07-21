@@ -1,11 +1,11 @@
 PORTNAME=		netatalk
-PORTVERSION=	 3.1.8
-PORTREVISION=	 2
+PORTVERSION=	 3.1.9
+PORTREVISION=	 0
 CATEGORIES=	 net
 MASTER_SITES=	 SF
 PKGNAMESUFFIX=   3
 
-MAINTAINER=	aoyama@nas4free.org
+MAINTAINER=	zoon1@nas4free.org
 COMMENT=	File server for Mac OS X
 
 LICENSE=	GPLv2
@@ -13,8 +13,8 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	libgcrypt.so:security/libgcrypt \
 		libevent.so:devel/libevent2
 
-USE_BDB=	5+
-USES=		iconv gmake pkgconfig perl5 libtool tar:bzip2
+USES=           iconv gmake pkgconfig perl5 libtool tar:bzip2 bdb:5+ ssl
+
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 #USE_RC_SUBR=	netatalk
@@ -28,7 +28,8 @@ CONFIGURE_ARGS+=	--with-pkgconfdir=${PREFIX}/etc \
 			--sysconfdir=/var/etc \
 			--disable-bundled-libevent \
 			--with-libevent-header=${LOCALBASE}/include \
-			--with-libevent-lib=${LOCALBASE}/lib
+			--with-libevent-lib=${LOCALBASE}/lib \
+			--with-ssl-dir=${OPENSSLBASE}
 
 LIB_DEPENDS+=	libsunacl.so:sysutils/libsunacl
 
