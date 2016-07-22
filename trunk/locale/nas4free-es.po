@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-07-17 08:18+0000\n"
-"PO-Revision-Date: 2016-06-28 05:54+0000\n"
+"PO-Revision-Date: 2016-07-22 18:51+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-21 02:58+0000\n"
+"X-Launchpad-Export-Date: 2016-07-22 21:28+0000\n"
 "X-Generator: Launchpad (build 18147)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -22,7 +22,7 @@ msgstr " fue asignada a "
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
-msgstr ""
+msgstr "%1$s es usado para crear el volumen(es) %2$s"
 
 #, php-format
 msgid "%d days"
@@ -80,6 +80,8 @@ msgstr "%s es demasiado largo."
 msgid ""
 "%s must be enabled for Unison to work, and the %s must have shell access."
 msgstr ""
+"%s debe ser habilitado para que funcione Unison y ademas %s debe tener "
+"acceso de shell."
 
 #, php-format
 msgid "%s of %sB"
@@ -110,7 +112,7 @@ msgid "%sB used of %sB"
 msgstr "%sB usado de %sB"
 
 msgid "(Change if needed)"
-msgstr ""
+msgstr "(Cambiar si es necesario)"
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(En Discos Maxtor 6B200M0 200GB y Maxtor 2R015H1 15GB )."
@@ -176,19 +178,19 @@ msgstr ""
 "especificada"
 
 msgid "1 or more disks are required to build a JBOD volume."
-msgstr ""
+msgstr "1 o más discos son necesarios para crear un volumen JOBD."
 
 msgid "1 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "1 o más discos son necesarios para crear un volumen RAID-1."
 
 msgid "2 or more disks are required to build a RAID-0 volume."
-msgstr ""
+msgstr "2 o más discos son necesarios para crear un volumen RAID-0."
 
 msgid "2 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "2 o más discos son necesarios para crear un volumen RAID-1."
 
 msgid "3 or more disks are required to build a RAID-5 volume."
-msgstr ""
+msgstr "3 o más discos son necesarios para crear un volumen RAID-5."
 
 msgid "4KB wrapper"
 msgstr "4KB wrapper"
@@ -226,6 +228,8 @@ msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
 "listening TCP ports."
 msgstr ""
+"Un portal de grupo se identifica por un nº de tag y varias IP y puertos de "
+"escucha TCP."
 
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
@@ -259,15 +263,17 @@ msgstr ""
 "'0x'."
 
 msgid "A mounted RAID volume cannot be deleted."
-msgstr ""
+msgstr "Un volumen RAID montado NO puede ser borrado."
 
 msgid ""
 "A mounted disk or partition will be unmounted temporarily to perform the "
 "requested action."
 msgstr ""
+"El disco o la partición deben ser desmontadas temporalmente para ejecutar la "
+"acción solicitada."
 
 msgid "A reload request has been sent to the daemon."
-msgstr ""
+msgstr "Una petición de recarga ha sido enviada al demonio."
 
 msgid "A route to this destination network already exists."
 msgstr "Ya existe una ruta a esta red de destino."
@@ -408,7 +414,7 @@ msgid "Access mode"
 msgstr "Modo de acceso"
 
 msgid "Access the webGUI with the new IP address"
-msgstr ""
+msgstr "Acceda a la webGUI con la nueva IP"
 
 msgid "Acoustic level"
 msgstr "Nivel acústico"
@@ -443,7 +449,7 @@ msgid "Active Users"
 msgstr "Usuarios activos"
 
 msgid "Adaptive (Low Power Consumption)"
-msgstr ""
+msgstr "Adaptativo (Low Power)"
 
 msgid "Add"
 msgstr "Añadir"
@@ -467,13 +473,13 @@ msgid "Add Rsync job"
 msgstr "Añadir tarea Rsync"
 
 msgid "Add Snapshot"
-msgstr ""
+msgstr "Añadir Snapshot"
 
 msgid "Add URL"
 msgstr "Añadir URL"
 
 msgid "Add Virtual Device"
-msgstr ""
+msgstr "Añadir dispositivo virtual"
 
 msgid "Add Volume"
 msgstr "Añadir Volumen"
@@ -482,7 +488,7 @@ msgid "Add additional scheduled self-test."
 msgstr "Añadir autocomprobación planeada adicional."
 
 msgid "Add any supplemental parameters."
-msgstr ""
+msgstr "Añadir parametros suplementarios."
 
 msgid "Add auth group"
 msgstr "Añadir grupo autorizado"
@@ -560,6 +566,7 @@ msgid ""
 "Additional parameters to the hardware-specific part of the driver for second "
 "UPS."
 msgstr ""
+"Parametros adicionales de la parte especifica del hardware de la segunda SAI."
 
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr ""
@@ -590,7 +597,7 @@ msgid "Advanced Configuration"
 msgstr "Configuración avanzada"
 
 msgid "Advanced Format"
-msgstr ""
+msgstr "Formateo Avanzado (4k)"
 
 msgid "Advanced Options"
 msgstr "Opciones avanzadas"
@@ -608,7 +615,7 @@ msgid "Advertisement skew"
 msgstr "Aviso skew"
 
 msgid "After"
-msgstr ""
+msgstr "Después"
 
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr ""
@@ -617,14 +624,18 @@ msgid ""
 "After you click \"Save\" you may also have to do one or more of the "
 "following steps before you can access this server again:"
 msgstr ""
+"Despues de hacer clic en \"Salvar\" debe realizar una o más de las "
+"siguientes tareas o paso para acceder de nuevo al servidor:"
 
 msgid ""
 "After you click \"Save\" you must reboot the server to make the changes take "
 "effect."
 msgstr ""
+"Despues de hacer clic en \"Salvar\" debe reiniciar el servidor para que los "
+"cambios surtan efecto."
 
 msgid "Age"
-msgstr ""
+msgstr "Edad"
 
 msgid "Aggregation protocol"
 msgstr "Protocolo de Agregación"
@@ -652,6 +663,8 @@ msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
 "an empty UFS directory is recommended."
 msgstr ""
+"Todos los datos en la ruta serán sobreescritos. Para evitar problemas de "
+"permisos, se recomienda usar un directorio UFS vacío."
 
 msgid "All data will be lost when you activate this option!"
 msgstr "¡Todos los datos se perderan si activa está opción!"
@@ -733,7 +746,7 @@ msgid "Allows the server to try and become a local master browser."
 msgstr "Permite al servidor convertirse en el local master browser."
 
 msgid "Allows to connect to a hidden network"
-msgstr ""
+msgstr "Permite conectarse a redes ocultas."
 
 msgid ""
 "Also known as 'Power-off Retract Count' per conventional HDD terminology. "
@@ -841,7 +854,7 @@ msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
 
 msgid "Apply Filter"
-msgstr ""
+msgstr "Aplicar Filtro"
 
 msgid "Apply changes"
 msgstr "Aplicar Cambios"
@@ -862,10 +875,10 @@ msgid "Are you sure you want to proceed?"
 msgstr "Está seguro de que desea continuar?"
 
 msgid "Are you sure you want to reboot the server?"
-msgstr ""
+msgstr "¿Está seguro de que desea reiniciar el servidor?"
 
 msgid "Are you sure you want to shutdown the server?"
-msgstr ""
+msgstr "¿Está seguro de que desea apagar el servidor?"
 
 msgid "Asynchronous I/O (AIO)"
 msgstr "AIO Lectura/Escritura Asincrona"
@@ -889,6 +902,9 @@ msgid ""
 "or NTFS can result in unpredictable results, file corruption and the loss of "
 "data!"
 msgstr ""
+"Intentar usar otro sistema de archivos distinto de FAT, FAT32, EXT2, EXT3, "
+"EXT4, o NTFS puede dar resultados impredecibles, como corrupción de archivos "
+"o perdida de datos."
 
 msgid "Audio"
 msgstr "Audio"
@@ -948,7 +964,7 @@ msgid "Auxiliary parameters"
 msgstr "Parámetros auxiliares."
 
 msgid "Avail"
-msgstr ""
+msgstr "Disp."
 
 msgid "Available"
 msgstr "Disponible"
@@ -967,7 +983,7 @@ msgstr ""
 "Tiempo medio para arrancar el Disco (desde cero a las RPM nominales)."
 
 msgid "Back"
-msgstr ""
+msgstr "Atrás"
 
 msgid "Backup Configuration"
 msgstr "Configuración de backup"
@@ -982,7 +998,7 @@ msgid "Bad User - (Non Existing Users)"
 msgstr "Usuario erroneo - (No existe el usuario)"
 
 msgid "Balance Algorithm"
-msgstr ""
+msgstr "Algoritmo Balanceado"
 
 msgid "Ban List"
 msgstr "Lista de expulsados"
@@ -1050,7 +1066,7 @@ msgid "Battery voltage"
 msgstr "Tensión d ela batería"
 
 msgid "Before"
-msgstr ""
+msgstr "Delante"
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
@@ -1075,6 +1091,8 @@ msgid ""
 "BitTorrent needs at least read & execute permissions at the mount point for "
 "directory %s!"
 msgstr ""
+"Bittorrent necesita al menos los permisos de lectura y ejecución (rx) en el "
+"punto de montaje del directorio %s!"
 
 msgid "Blank time"
 msgstr "Tiempo en blanco"
@@ -1141,7 +1159,7 @@ msgid "By default, only already existing files can be uploaded."
 msgstr "Por defecto, sólo se pueden subir archivos que ya existan."
 
 msgid "CACHE"
-msgstr ""
+msgstr "CACHÉ"
 
 msgid "CARP"
 msgstr "CARP"
@@ -1296,10 +1314,10 @@ msgid "Change password"
 msgstr "Cambiar contraseña"
 
 msgid "Change the IP address of your computer"
-msgstr ""
+msgstr "Cambie la IP de su computadora"
 
 msgid "Change the IP address of your server"
-msgstr ""
+msgstr "Cambie la IP de su servidor"
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr "Los cambios en esta opción tendrán efecto después de reiniciar."
@@ -1311,7 +1329,7 @@ msgid "Charging Battery"
 msgstr "Cargando Batería"
 
 msgid "Check System|General Setup before initializing"
-msgstr ""
+msgstr "Revise System|General Setup antes de inicializar"
 
 msgid "Check and replace cable"
 msgstr "Revise o remplace el cable"
@@ -1325,9 +1343,11 @@ msgstr "Comprobando el secreto compartido:"
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
 msgstr ""
+"Revise la documentacion FreeBSD para información detallada de los wrappers "
+"TCP"
 
 msgid "Check the list of available drivers"
-msgstr ""
+msgstr "Revise la lista de dispositivos disponibles"
 
 msgid "Chinese (Simplified)"
 msgstr "Chino (simplificado)"
@@ -1404,7 +1424,7 @@ msgid "Command for LINK_UP event (e.g. %s)."
 msgstr "Comando para evento LINK_UP (ej: %s)."
 
 msgid "Command output"
-msgstr ""
+msgstr "Salida de comandos"
 
 msgid "Command output:"
 msgstr "Salida del comando:"
@@ -1458,7 +1478,7 @@ msgid "Confirmation"
 msgstr "Confirmar"
 
 msgid "Connect to hidden network"
-msgstr ""
+msgstr "Conectarse a una red oculta"
 
 msgid "Connected FTP Users & Status"
 msgstr "Usuarios FTP conectados y su estado"
@@ -1554,7 +1574,7 @@ msgstr ""
 "'gzip' es equivalente a 'gzip-6'."
 
 msgid "Controls the dedup method."
-msgstr ""
+msgstr "Controla el metodo de Deduplicado"
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Controla si este conjunto de datos puede ser modificado."
@@ -1698,7 +1718,7 @@ msgid "Create 4KB wrapper (nop device)."
 msgstr "Crear 4KB wrapper (dispositivo .nop)."
 
 msgid "Create Date"
-msgstr ""
+msgstr "Fecha de creación"
 
 msgid "Create HVM Guest"
 msgstr "Crear un invitado HVM"
@@ -1707,7 +1727,7 @@ msgid "Create PV Guest"
 msgstr "Crear un invitado PV"
 
 msgid "Create ZFS on a GPT partition."
-msgstr ""
+msgstr "Crear ZFS en particiones GPT"
 
 msgid "Create and initialize RAID."
 msgstr "Crear e inicializar RAID"
@@ -1837,12 +1857,14 @@ msgid "DNS server is empty."
 msgstr "El servidor DNS está en blanco"
 
 msgid "DO NOT abort the firmware upgrade process once it has started."
-msgstr ""
+msgstr "NO PARAR el proceso de upgrade del firmware una vez iniciado."
 
 #, php-format
 msgid ""
 "DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
 msgstr ""
+"NO TRATAR de flashear otros archivos que no sean un archivo  '%s-%s-"
+"embedded.img.xz' válido."
 
 msgid "DVD"
 msgstr "DVD"
@@ -1878,13 +1900,13 @@ msgid "Dataset is protected"
 msgstr "El Dataset está protegido"
 
 msgid "Dataset is unlocked"
-msgstr ""
+msgstr "El Dataset está desbloqueado"
 
 msgid "Datasets"
 msgstr "Conjuntos de datos"
 
 msgid "Date"
-msgstr ""
+msgstr "Fecha"
 
 msgid "Date & Time"
 msgstr "Fecha y hora"
@@ -1999,16 +2021,16 @@ msgid "Delete Selected Options"
 msgstr "Borrar las opciones seleccionadas"
 
 msgid "Delete Selected Pools"
-msgstr ""
+msgstr "Borrar los pools seleccionados"
 
 msgid "Delete Selected RAID Volumes"
 msgstr "Borrar los volúmenes RAID seleccionados"
 
 msgid "Delete Selected Snapshots"
-msgstr ""
+msgstr "Borrar los snapshot seleccionados"
 
 msgid "Delete Selected Virtual Devices"
-msgstr ""
+msgstr "Borrar los dispositivos virtuales seleccionados"
 
 msgid "Delete Selected Volumes"
 msgstr "Borrar los volumenes seleccionadas"
@@ -2149,7 +2171,7 @@ msgid "Detected"
 msgstr "Detectado"
 
 msgid "Detected Language:"
-msgstr ""
+msgstr "Lengua detectada:"
 
 msgid "Detected RSYNC remote shares"
 msgstr "Elementos compartidos RSYNC detectados"
@@ -2184,7 +2206,7 @@ msgid "Device Model"
 msgstr "Modelo del dispositivo"
 
 msgid "Device Name"
-msgstr ""
+msgstr "Nombre del dispositivo"
 
 msgid "Device Pass-through"
 msgstr "Dispositivo por medio de paso"
@@ -2196,13 +2218,13 @@ msgid "Device Serial"
 msgstr "nº de serie"
 
 msgid "Device contains boot partition"
-msgstr ""
+msgstr "El dispositivo contiene una partición de arranque"
 
 msgid "Device is mounted"
-msgstr ""
+msgstr "El dispositivo está montado"
 
 msgid "Device not found"
-msgstr ""
+msgstr "Dispositivo no encontrado"
 
 msgid "Device polling"
 msgstr "Comprobación de los dispositivos"
@@ -2280,7 +2302,7 @@ msgid "Disable firmware version check."
 msgstr "Deshabilitar el revisar si hay un nuevo firmware"
 
 msgid "Disable speaker beep on startup and shutdowns."
-msgstr ""
+msgstr "Desabilitar el altavoz en el arranque y apagado."
 
 msgid "Disable the compression of repeated line."
 msgstr "Deshabilitar el eliminar las lineas repetidas."
@@ -2308,7 +2330,7 @@ msgid "Disk"
 msgstr "Disco"
 
 msgid "Disk Selection"
-msgstr ""
+msgstr "Selección de discos"
 
 msgid "Disk space usage"
 msgstr "Uso del espacio en disco"
@@ -2323,7 +2345,7 @@ msgid "Disks (ATA) information"
 msgstr "Informacion de Discos (ATA)"
 
 msgid "Disks | Mount Point | Management"
-msgstr ""
+msgstr "Disks | Mount Point | Management"
 
 msgid "Display"
 msgstr "Pantalla"
@@ -2339,11 +2361,11 @@ msgid "Distributed hash table"
 msgstr "Tabla de hash distribuida"
 
 msgid "Do not activate this option if you want to add an existing RAID."
-msgstr ""
+msgstr "No activar esta opción si desea añadir a un RAID existente."
 
 msgid ""
 "Do not erase the Master Boot Record (useful for some RAID controller cards)."
-msgstr ""
+msgstr "No borrar el MBR (Util para algunas controladoras RAID)"
 
 #, php-format
 msgid ""
@@ -2467,10 +2489,10 @@ msgid "Do you really want to uninstall this package?"
 msgstr "¿Realmente quiere eliminar este paquete?"
 
 msgid "Do you want to create a JBOD from selected disks?"
-msgstr ""
+msgstr "¿Desea crear un JOBD con los discos seleccionados?"
 
 msgid "Do you want to create a RAID-0 from selected disks?"
-msgstr ""
+msgstr "¿Desea crear un RAID-0 con los discos seleccionados?"
 
 msgid "Do you want to create a RAID-1 from selected disks?"
 msgstr ""
