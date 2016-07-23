@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-07-17 08:18+0000\n"
-"PO-Revision-Date: 2016-07-22 18:51+0000\n"
-"Last-Translator: raul fernandez garcia <Unknown>\n"
+"PO-Revision-Date: 2016-07-23 13:31+0000\n"
+"Last-Translator: Marcos <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-22 21:28+0000\n"
+"X-Launchpad-Export-Date: 2016-07-23 14:44+0000\n"
 "X-Generator: Launchpad (build 18147)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -1981,7 +1981,7 @@ msgid "Defines when the shutdown is initiated."
 msgstr "Define cuando se inicia el apagado."
 
 msgid "Delay"
-msgstr ""
+msgstr "Retraso"
 
 msgid ""
 "Delay - File-deletions will be computed during the transfer and will be done "
@@ -2212,7 +2212,7 @@ msgid "Device Pass-through"
 msgstr "Dispositivo por medio de paso"
 
 msgid "Device Path"
-msgstr ""
+msgstr "Ruta del dispositivo"
 
 msgid "Device Serial"
 msgstr "nº de serie"
@@ -2495,40 +2495,44 @@ msgid "Do you want to create a RAID-0 from selected disks?"
 msgstr "¿Desea crear un RAID-0 con los discos seleccionados?"
 
 msgid "Do you want to create a RAID-1 from selected disks?"
-msgstr ""
+msgstr "Desea crear un RAID-1 desde los discos seleccionados?"
 
 msgid "Do you want to create a RAID-5 from selected disks?"
-msgstr ""
+msgstr "Desea crear un RAID-5 desde los discos seleccionados?"
 
 msgid "Do you want to create a RAID-Z1 from selected disks?"
-msgstr ""
+msgstr "Desea crear un RAID-Z1 desde los discos seleccionados?"
 
 msgid "Do you want to create a RAID-Z2 from selected disks?"
-msgstr ""
+msgstr "Desea crear un RAID-Z2 desde los discos seleccionados?"
 
 msgid "Do you want to create a RAID-Z3 from selected disks?"
-msgstr ""
+msgstr "Desea crear un RAID-Z3 desde los discos seleccionados?"
 
 msgid "Do you want to create a cache device from selected disks?"
-msgstr ""
+msgstr "Desea crearn un dispositivo cache desde los discos seleccionados?"
 
 msgid "Do you want to create a hot spare device from selected disk?"
 msgstr ""
+"Desea crear un disposivito de repuesto desde los discos seleccionados?"
 
 msgid "Do you want to create a log device from selected disk?"
 msgstr ""
+"Desea crear un dispositivo de registro desde los discos seleccionados?"
 
 msgid "Do you want to create a mirrored log device from selected disks?"
 msgstr ""
+"Desea crear un dispositivo de registro espejo desde los discos seleccionados?"
 
 msgid "Do you want to create a mirrored virtual device from selected disks?"
 msgstr ""
+"Desea crear un dispositivo virtual espejo desde los discos seleccionados?"
 
 msgid "Do you want to create a striped virtual device from selected disks?"
 msgstr ""
 
 msgid "Do you want to delete selected RAID volumes?"
-msgstr "¿Realmente desea borrar los volumenes RAID seleccionados?"
+msgstr "Desea borrar los volúmenes RAID seleccionados?"
 
 msgid "Do you want to delete selected datasets?"
 msgstr "Desea borrar los Dataset seleccionados?"
@@ -2546,7 +2550,7 @@ msgid "Do you want to delete selected snapshots?"
 msgstr ""
 
 msgid "Do you want to delete selected virtual devices?"
-msgstr ""
+msgstr "Desea borrar los dispositivos virtuales seleccionados?"
 
 msgid "Do you want to delete selected volumes?"
 msgstr "Desea borrar los volumenes seleccionados?"
@@ -2664,7 +2668,7 @@ msgid "Duplicate mount point name."
 msgstr "Punto de montaje duplicado"
 
 msgid "During"
-msgstr ""
+msgstr "Durante"
 
 msgid ""
 "During - File-deletions will be done incrementally as the transfer happens."
@@ -2719,7 +2723,7 @@ msgid "Edit VM"
 msgstr "Editar VM"
 
 msgid "Edit Virtual Device"
-msgstr ""
+msgstr "Editar Dispositivo Virtual"
 
 msgid "Edit Volume"
 msgstr "Editar Volumen"
@@ -2818,13 +2822,13 @@ msgid "Enable ACL inheritance"
 msgstr "Habilitar herencia ACL"
 
 msgid "Enable Advanced Format (4KB Sector Size)."
-msgstr ""
+msgstr "Habilitar Formateo Avanzado (Tamaño del Sector 4KB)"
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Habilitar AIO"
 
 msgid "Enable Challenge-Response Authentication"
-msgstr ""
+msgstr "Habilitar Autenticacion Desafio-Respuesta"
 
 msgid "Enable FXP protocol."
 msgstr "Habilitar el protocolo FXP."
@@ -2944,7 +2948,7 @@ msgid "Enable nested virtualization"
 msgstr "Habilitar virtualización anidada"
 
 msgid "Enable or disable checks of the server certificate."
-msgstr ""
+msgstr "Habilitar o Desabilitar búsqueda de certificado del servidor"
 
 msgid "Enable peer exchange (PEX)."
 msgstr "Habilitar intercambio de pares (PEX)."
@@ -2977,7 +2981,7 @@ msgid "Enable reverse DNS lookup."
 msgstr "Permitir busqueda DNS a la inversa."
 
 msgid "Enable second local connected UPS."
-msgstr ""
+msgstr "Habilitar UPS secundario conectado localmente"
 
 msgid "Enable serial console."
 msgstr "Habilitar consola RS-232"
@@ -2992,7 +2996,7 @@ msgid "Enable the ident protocol (RFC1413)."
 msgstr "Activar el protocolo de identificación (RFC1413)."
 
 msgid "Enable the server power control utility."
-msgstr ""
+msgstr "Habilitar la utilidad de control de alimentación del servidor"
 
 msgid "Enable to strictly adhere to DLNA standards."
 msgstr "Activar estandares estrictos de DLNA"
@@ -3117,13 +3121,13 @@ msgstr ""
 "borrado fallidos de la flash."
 
 msgid "Erase MBR"
-msgstr ""
+msgstr "Borrar MBR"
 
 msgid "Error"
 msgstr "Error"
 
 msgid "Error Code"
-msgstr ""
+msgstr "Código de error"
 
 msgid "Error Level"
 msgstr "Nivel de Error"
@@ -3135,7 +3139,7 @@ msgid "Event selection"
 msgstr "Selecionar eventos"
 
 msgid "Example: pkg add packagename."
-msgstr ""
+msgstr "Ejemplo: pkg add nombredelpaquete"
 
 msgid "Execute"
 msgstr "Ejecutar"
@@ -3222,7 +3226,7 @@ msgid "Extra options to rsync (usually empty)."
 msgstr "Opciones extra para rsync (normalmente vacío)"
 
 msgid "FAT32"
-msgstr ""
+msgstr "FAT32"
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Canal Fast Ethernet)"
@@ -3272,7 +3276,7 @@ msgid "Failed to execute command zfs."
 msgstr "Error al ejecutar el comando ZFS"
 
 msgid "Failed to execute command zpool."
-msgstr ""
+msgstr "Fallo al ejecutar comando zpool."
 
 msgid "Failed to execute cron job."
 msgstr "Fallo al ejecutar el proceso cron."
@@ -3286,14 +3290,14 @@ msgid "Failed to send status report to: %s."
 msgstr "Fallo al enviar informe de estado a: %s."
 
 msgid "Failed to send status report."
-msgstr ""
+msgstr "Fallo al enviar reporte de estado."
 
 #, php-format
 msgid "Failed to send test email to: %s."
 msgstr "Fallo al enviar un e-mail de prueba a: %s."
 
 msgid "Failed to send test email."
-msgstr ""
+msgstr "Fallo al enviar email de prueba"
 
 msgid "Failed to upload file."
 msgstr "Fallo al subir el archivo."
@@ -3392,7 +3396,7 @@ msgid "Firmware Check"
 msgstr "Comprobar Firmware"
 
 msgid "Firmware Update"
-msgstr ""
+msgstr "Actualización de Firmware"
 
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Error al actualizar el firmware (falta de RAM)"
@@ -3432,10 +3436,10 @@ msgid "Format"
 msgstr "Formatear"
 
 msgid "Format Options"
-msgstr ""
+msgstr "Opciones de formato"
 
 msgid "Format Program"
-msgstr ""
+msgstr "Programa de formato"
 
 msgid "Format the report for phpBB forum."
 msgstr "Formatea el reporte/informe para un foro phpBB"
@@ -3491,19 +3495,19 @@ msgstr ""
 "Fuppes."
 
 msgid "GEOM"
-msgstr ""
+msgstr "GEOM"
 
 msgid "GEOM Software RAID"
-msgstr ""
+msgstr "Software RAID GEOM"
 
 msgid "GEOM VINUM Software RAID"
-msgstr ""
+msgstr "Software RAID GEOM VINUM"
 
 msgid "GID"
 msgstr "GID"
 
 msgid "GPT Partition"
-msgstr ""
+msgstr "Partición GPT"
 
 msgid "GPT partition"
 msgstr "Particion GPT"
@@ -3533,7 +3537,7 @@ msgid "Get Target Info"
 msgstr "Obtener información del destino"
 
 msgid "Get a list of available drivers"
-msgstr ""
+msgstr "Obtener una lista de controladores disponibles"
 
 msgid "GiB"
 msgstr "GiB"
@@ -3631,7 +3635,7 @@ msgid "HDD standby time"
 msgstr "HDD standby time"
 
 msgid "HOT SPARE"
-msgstr ""
+msgstr "Repuesto"
 
 msgid "HTTP Proxy"
 msgstr "Proxy HTTP"
@@ -3664,7 +3668,7 @@ msgid "Help"
 msgstr "Ayuda"
 
 msgid "Hiadaptive (High Performance)"
-msgstr ""
+msgstr "Hiadaptive (Alto Rendimiento)"
 
 msgid "Hide dot files"
 msgstr "Ocultar archivos de punto"
@@ -3709,7 +3713,7 @@ msgid "Hosts"
 msgstr "Equipos"
 
 msgid "Hosts Setup"
-msgstr ""
+msgstr "Compifuracion de hosts"
 
 msgid "Hosts allow"
 msgstr "Hosts permitidos"
@@ -3771,6 +3775,8 @@ msgstr "IP del servidor syslog remoto."
 msgid ""
 "IP addresses are resolved to hostnames when the following option is enabled:"
 msgstr ""
+"Dirección ip es resuelta al hostname cuando la siguiente opciones esta "
+"habilitada"
 
 msgid "IP or FQDN address of remote Rsync server."
 msgstr "Dirección IP o FQDN del servidor Rsync remoto."
@@ -3779,13 +3785,13 @@ msgid "IP type mismatch for network and gateway."
 msgstr "La IP no coincide con la red y la puerta de enlace"
 
 msgid "IPMI FRU"
-msgstr ""
+msgstr "IPMI FRU"
 
 msgid "IPMI Sensor"
-msgstr ""
+msgstr "Sensor IPMI"
 
 msgid "IPMI Stats"
-msgstr ""
+msgstr "Estado del IPMI"
 
 msgid "IPv4 Configuration"
 msgstr "Configuración de IPv4"
@@ -3871,6 +3877,8 @@ msgstr ""
 msgid ""
 "If this message persist take a look at the system log for more information."
 msgstr ""
+"Si el mensaje persiste dele una mirada al registro de sistema para mas "
+"información"
 
 msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
@@ -4133,7 +4141,7 @@ msgid "Internal Server Information"
 msgstr "Información interna del servidor"
 
 msgid "Internal Speaker"
-msgstr ""
+msgstr "Altavoz interno"
 
 msgid "Internal UPS clock date"
 msgstr "Fecha interna del SAI"
@@ -4167,7 +4175,7 @@ msgid "Invalid max. block size! It must be in the range from %d to %d."
 msgstr "¡Tamaño de bloque máximo no válido! Debe estar en %d a %d."
 
 msgid "Invalid username or password."
-msgstr ""
+msgstr "Nombre de usuario o contraseña incorrectos."
 
 msgid "Invert Selection"
 msgstr "Invertir Selección"
@@ -4199,11 +4207,13 @@ msgstr ""
 msgid ""
 "It is recommended that you backup the server configuration before you upgrade"
 msgstr ""
+"Es recomendable respaldar la configuración del sistema antes de actualizar"
 
 msgid ""
 "It is recommended to use encryption before you store the backup in a safe "
 "location."
 msgstr ""
+"Es recomendable encriptar antes de guardar el resaldo en un lugar saguro"
 
 msgid ""
 "It's recommended to change the default username and password for accessing "
@@ -4222,7 +4232,7 @@ msgid "JBOD Information & Status"
 msgstr "Imformación y estado del JBOD"
 
 msgid "JBOD Maintenance"
-msgstr ""
+msgstr "Mantenimiento JBOD"
 
 msgid "Jan"
 msgstr "ene."
@@ -4308,10 +4318,10 @@ msgid "LDAP"
 msgstr "LDAP"
 
 msgid "LOG"
-msgstr ""
+msgstr "LOG"
 
 msgid "LOG (Mirror)"
-msgstr ""
+msgstr "LOG (Espejo)"
 
 msgid "LUN"
 msgstr "LUN"
@@ -4532,7 +4542,7 @@ msgid "Log Settings"
 msgstr "Opciones del log"
 
 msgid "Log file is empty."
-msgstr ""
+msgstr "Archivo de registro esta vacío"
 
 msgid "Log level"
 msgstr "Nivel de registro"
@@ -4611,7 +4621,7 @@ msgid "MIB is marked for deletion"
 msgstr "MIB está marcado para eliminación"
 
 msgid "MIRROR"
-msgstr ""
+msgstr "Espejo"
 
 msgid "MISSING"
 msgstr "DESAPARECIDO"
@@ -4638,16 +4648,16 @@ msgid "Machine suffix"
 msgstr "Sufijos de máquinas"
 
 msgid "Maintenance"
-msgstr ""
+msgstr "Mantenimiento"
 
 msgid "Make sure to select the optimal number of devices"
-msgstr ""
+msgstr "Asegúrese de seleccionar el numero de dispositivos optimos"
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Asegúrese de haber activado S.M.A.R.T. para todos sus dispositivos."
 
 msgid "Make sure you have already configured your email settings"
-msgstr ""
+msgstr "Asegúrese de haber configurado los ajustes de email"
 
 msgid "Management"
 msgstr "Administración"
@@ -4733,7 +4743,7 @@ msgstr ""
 "MaxRecvDataSegmentLength: Longitud maxima para recibir segmentos de datos"
 
 msgid "Maximum (Highest Performance)"
-msgstr ""
+msgstr "Máximo (Rendimiento mas Alto)"
 
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr "Máximo rendimiento, Máxima salida acústica"
@@ -4852,10 +4862,10 @@ msgid "Minimum"
 msgstr "Mínimo"
 
 msgid "Minimum (Lowest Performance)"
-msgstr ""
+msgstr "Mínimo (Rendimiento mas Bajo)"
 
 msgid "Minimum Free Space"
-msgstr ""
+msgstr "Espacio mínimo disponible"
 
 msgid "Minimum Performance, Minimum Acoustic Output"
 msgstr "Rendimiento mínimo, salida máxima acústica"
@@ -4880,7 +4890,7 @@ msgid "Minutes"
 msgstr "Minutos"
 
 msgid "Minutes between the next network time synchronization."
-msgstr ""
+msgstr "Minutos entre la siguiente sincronización de tiempo"
 
 msgid "Missing a temporary folder."
 msgstr "Falta una carpeta temporal."
@@ -4986,7 +4996,7 @@ msgid "NOT YET AVAILABLE"
 msgstr "AUN NO DISPONIBLE"
 
 msgid "NOTE"
-msgstr ""
+msgstr "NOTA"
 
 msgid "NT1"
 msgstr "NT1"
@@ -5079,7 +5089,7 @@ msgid "New password"
 msgstr "Nueva contraseña"
 
 msgid "Next"
-msgstr ""
+msgstr "Siguiente"
 
 msgid "No"
 msgstr "No"
@@ -5091,34 +5101,34 @@ msgid "No Extent has been configured."
 msgstr ""
 
 msgid "No IPMI FRU data available."
-msgstr ""
+msgstr "No se encuentra disponible los datos de IPMI FRU"
 
 msgid "No IPMI sensor data available."
-msgstr ""
+msgstr "No se encuentra disponible datos del sensor IPMI"
 
 msgid "No Initiator Group has been configured."
 msgstr ""
 
 msgid "No Portal Group has been configured."
-msgstr ""
+msgstr "No se ha configurado el Grupo Portal"
 
 msgid "No RSYNC Client configured"
 msgstr "No hay configurado ningún cliente RSYNC"
 
 msgid "No configured Auth Group."
-msgstr ""
+msgstr "No configurado Grupo Auth"
 
 msgid "No configured CARP interfaces."
 msgstr "No hay configurados interfeces CARP."
 
 msgid "No configured bridge interfaces."
-msgstr ""
+msgstr "No configurado interfaces de puente"
 
 msgid "No configured pools."
-msgstr ""
+msgstr "No configurado pools."
 
 msgid "No configured virtual devices."
-msgstr ""
+msgstr "No configurado dispositivos virtuales"
 
 msgid "No device selected."
 msgstr "Ningún dispositivo seleccionado."
@@ -5127,7 +5137,7 @@ msgid "No disk configured"
 msgstr "No hay discos configurados"
 
 msgid "No disks available."
-msgstr ""
+msgstr "No hay discos disponibles."
 
 msgid ""
 "No disks configured, please add disks to see the diagnostic information of "
@@ -5149,7 +5159,7 @@ msgid "No pool was found."
 msgstr "Ningun poll fue encontrado."
 
 msgid "No softraid-formatted disks available."
-msgstr ""
+msgstr "No hay discos formateados-softraid"
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "No Permitir - Solo se heredan denegadas"
@@ -5203,10 +5213,10 @@ msgid "Nominal value of real power (Watts)"
 msgstr "Potencia real (W)"
 
 msgid "Non-Critical"
-msgstr ""
+msgstr "No-Crito"
 
 msgid "Non-Recoverable"
-msgstr ""
+msgstr "No-Recuperable"
 
 msgid "None"
 msgstr "Ninguno"
@@ -5642,25 +5652,25 @@ msgid "Platform OS"
 msgstr "Sistema Operativo"
 
 msgid "Please add a bridge interface first."
-msgstr ""
+msgstr "Por favor añada primero una interfaz de puente"
 
 msgid "Please add a new Auth Group first"
-msgstr ""
+msgstr "Por favor añada primero un nuevo Grupo Auth"
 
 msgid "Please add a new CARP interface first"
-msgstr ""
+msgstr "Por favor añada primero una interfaz CARP"
 
 msgid "Please add a new Extent first."
 msgstr ""
 
 msgid "Please add a new Initiator Group first."
-msgstr ""
+msgstr "Por favor añada primero un Grupo Initiator"
 
 msgid "Please add a new Portal Group first."
-msgstr ""
+msgstr "Por favor añada primero un Grupo Portal"
 
 msgid "Please add a new disk first."
-msgstr ""
+msgstr "Por favor añada primero un nuevo disco"
 
 msgid "Please add a virtual device first."
 msgstr ""
@@ -5720,7 +5730,7 @@ msgid "Pool is protected"
 msgstr ""
 
 msgid "Pool is unlocked"
-msgstr ""
+msgstr "Pool esta desbloqueada"
 
 msgid "Pools"
 msgstr "Pools"
@@ -5906,7 +5916,7 @@ msgid "RAID 5 Information & Status"
 msgstr "Info y estado RAID 5"
 
 msgid "RAID Name"
-msgstr ""
+msgstr "Nombre del RAID"
 
 msgid "RAID Type"
 msgstr ""
@@ -5924,43 +5934,43 @@ msgid "RAID is protected"
 msgstr "El RAID está protegido"
 
 msgid "RAID is unlocked"
-msgstr ""
+msgstr "RAID esta desbloqueado"
 
 msgid "RAID-0"
-msgstr ""
+msgstr "RAID-0"
 
 msgid "RAID-0 Maintenance"
 msgstr ""
 
 msgid "RAID-1"
-msgstr ""
+msgstr "RAID-1"
 
 msgid "RAID-1 Maintenance"
 msgstr ""
 
 msgid "RAID-5"
-msgstr ""
+msgstr "RAID-5"
 
 msgid "RAID-5 Maintenance"
 msgstr ""
 
 msgid "RAID-Z1"
-msgstr ""
+msgstr "RAID-Z1"
 
 msgid "RAID-Z1 should have 3, 5, or 9 disks in each vdev."
-msgstr ""
+msgstr "RAID-Z1 debería tener 3,5 o 9 discos en cada vdev."
 
 msgid "RAID-Z2"
-msgstr ""
+msgstr "RAID-Z2"
 
 msgid "RAID-Z2 should have 4, 6, or 10 disks in each vdev."
-msgstr ""
+msgstr "RAID-Z2 debería tener 4,6 o 10 discos en cada vdev"
 
 msgid "RAID-Z3"
-msgstr ""
+msgstr "RAID-Z3"
 
 msgid "RAID-Z3 should have 5, 7, or 11 disks in each vdev."
-msgstr ""
+msgstr "RAID-Z3 debería tener 5,7 o 11 discos en cada vdev"
 
 msgid "RAID0"
 msgstr "RAID 0"
@@ -6046,7 +6056,7 @@ msgid "Read/Write Access"
 msgstr "Acceso Lectura/Escritura"
 
 msgid "Reading"
-msgstr ""
+msgstr "Leyendo"
 
 msgid "Readonly"
 msgstr "Sólo lectura"
@@ -6103,7 +6113,7 @@ msgid "Remote Address"
 msgstr "Dirección Remota"
 
 msgid "Remote Module (Source)"
-msgstr ""
+msgstr "Modulo Remoto (Fuente)"
 
 msgid "Remote Rsync Server"
 msgstr "Servidor Rsync remoto"
@@ -6123,10 +6133,14 @@ msgstr "Monitorización remota"
 msgid ""
 "Remote monitoring password. Must be equal on both master and slave system."
 msgstr ""
+"Contraseña de monitoreo remoto. Debe ser igual en ambos sistemas maestro y "
+"esclavo"
 
 msgid ""
 "Remote monitoring username. Must be equal on both master and slave system."
 msgstr ""
+"Nombre de usuario de monitoreo remoto. Debe ser igual en ambos sistemas "
+"maestro y esclavo"
 
 msgid "Remote rsync daemon"
 msgstr "Demonio remoto de rsync"
@@ -6310,6 +6324,8 @@ msgid ""
 "Running the service as user root is not recommended for security reasons, "
 "use at your own risk!"
 msgstr ""
+"Correr el sistema como usuario root no es recomendable por razones de "
+"seguridad, use bajo su propio riesgos"
 
 msgid "Russian"
 msgstr "Ruso"
@@ -6342,6 +6358,8 @@ msgid ""
 "SMB3 is for recent OS like Windows 10 and 8. SMB2 is for OS like Windows 7 "
 "and Vista. NT1 is for legacy OS."
 msgstr ""
+"SMB3 es para SO recientes como Windows 10 y 8. SMB2 para SO como Windows 7 y "
+"Vista. NT1 es para SO antiguos"
 
 msgid "SMTP Server"
 msgstr "Servidor SMTP (Simple Mail Transfer Protocol)"
@@ -6359,7 +6377,7 @@ msgid "SSH events"
 msgstr "eventos SSH"
 
 msgid "SSHD"
-msgstr ""
+msgstr "SSHD"
 
 msgid "SSHD log"
 msgstr "Registro de SSHD"
@@ -6457,7 +6475,7 @@ msgid "Search"
 msgstr "Buscar..."
 
 msgid "Search event"
-msgstr ""
+msgstr "Buscar evento"
 
 msgid "Secondary"
 msgstr "Secundario"
@@ -6483,21 +6501,24 @@ msgid "See attribute E8."
 msgstr "Ver el atributo E8."
 
 msgid "Select 'CD/DVD' if you want to mount a CD/DVD volume."
-msgstr ""
+msgstr "Seleccionar 'CD/DVD' si quiere montar un volumen CD/DVD"
 
 msgid "Select 'GPT partition' if you want to mount a GPT formatted drive"
 msgstr ""
+"Seleccionar partición 'GPT' si quiere montar una unidad formateada en GPT"
 
 msgid ""
 "Select 'MBR partition' default partition if you want to mount a UFS "
 "formatted drive or if you want to import disks from other OS."
 msgstr ""
+"Seleccionar partición predertimanada 'partición MBR'  si quiere montar una "
+"unidad formateada en UFS o si quiere importar un disco de otro SO"
 
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
 "Secure (HTTPS) for the WebGUI."
 msgstr ""
-"Seleccione Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
+"Seleccione Hypertext Transfer Protocol (HTTP) o Hypertext Transfer Protocol "
 "Secure (HTTPS) para el acceso a la WebGUI."
 
 msgid "Select a date format."
@@ -6507,7 +6528,7 @@ msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Seleccionar un disco habilitado para monitoreo S.M.A.R.T."
 
 msgid "Select file system format."
-msgstr ""
+msgstr "Seleccionar formato de sistema de archivo"
 
 msgid "Select firmware:"
 msgstr "Seleccionar Firmware:"
@@ -6521,6 +6542,8 @@ msgstr "Seleccione el punto de montaje donde crear el archivo de swap."
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
+"Seleccionar opción 'sin formatear' para discos sin formato y luego "
+"formatearlo con"
 
 msgid "Select read balance algorithm."
 msgstr ""
@@ -6551,7 +6574,7 @@ msgid "Selected"
 msgstr "Seleccionado"
 
 msgid "Selected UPS"
-msgstr ""
+msgstr "Seleccionar UPS"
 
 msgid "Selected device or label does not exist."
 msgstr "El dispositivo o la etiqueta , no existe."
@@ -6587,7 +6610,7 @@ msgid "Sensitive"
 msgstr "Sensible"
 
 msgid "Sensor"
-msgstr ""
+msgstr "Sensor"
 
 msgid "Sep"
 msgstr "sept."
@@ -6965,7 +6988,7 @@ msgid "Status"
 msgstr "Estado"
 
 msgid "Status & Information"
-msgstr ""
+msgstr "Estado e información"
 
 #, php-format
 msgid "Status report successfully sent to: %s."
@@ -7113,7 +7136,7 @@ msgid "System Load"
 msgstr "Carga del sistema"
 
 msgid "System Message"
-msgstr ""
+msgstr "Mensaje del sistema"
 
 msgid "System Settings"
 msgstr "Configuración del sistema"
@@ -7513,13 +7536,13 @@ msgstr ""
 "en orden ascendente para encontrar una regla coincidente."
 
 msgid "The changes could not be applied"
-msgstr ""
+msgstr "Los cambios no pudieron ser aplicados"
 
 msgid "The changes have been applied successfully."
 msgstr "Los cambios han sido aplicados correctamente."
 
 msgid "The changes have been saved."
-msgstr ""
+msgstr "Se han guardado los cambios."
 
 msgid "The cleartext credentials with which to bind."
 msgstr "La credencial de texto en claro con la cual se enlazará"
@@ -7539,7 +7562,7 @@ msgstr ""
 "La configuración no puede ser restaurada. No se ha podido subir el archivo."
 
 msgid "The configuration has been changed."
-msgstr ""
+msgstr "La configuración se ha cambiado"
 
 msgid "The configuration has been restored. The server is now rebooting."
 msgstr ""
@@ -7645,7 +7668,7 @@ msgstr ""
 "remoto no necesita conocer el path local"
 
 msgid "The disk is currently mounted!"
-msgstr ""
+msgstr "El disco esta montado actualmente"
 
 msgid ""
 "The disk is currently mounted! The mount point will be removed temporarily "
@@ -7670,16 +7693,16 @@ msgstr ""
 "por ejemplo %s"
 
 msgid "The driver used to communicate with your UPS."
-msgstr ""
+msgstr "La unidad usada.para comunicarse con el UPS"
 
 msgid "The driver used to communicate with your second UPS."
-msgstr ""
+msgstr "El controlador usado para comunicarse con su UPS secundario"
 
 msgid "The driver used to connect with the LCD."
-msgstr ""
+msgstr "El controlador usado para conectarse con la LCD"
 
 msgid "The encrypted device is currently mounted!"
-msgstr ""
+msgstr "El dispositivo encriptado se encuentra montado!"
 
 msgid "The extent name already exists."
 msgstr "El nombre de extensión ya existe."
@@ -7835,20 +7858,20 @@ msgstr ""
 "conecten usuarios, equipos o clases prohibidas al servidor."
 
 msgid "The name of the RAID cannot be changed."
-msgstr ""
+msgstr "El nombre de RAID no puede ser cambiado"
 
 msgid "The name of the RAID is already in use."
-msgstr ""
+msgstr "El nombre del RAID esta en uso"
 
 msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
-msgstr ""
+msgstr "El nombre del RAID debe consistir sólo en caracteres a-z, A-Z, 0-9"
 
 msgid "The name of the pool cannot be changed."
 msgstr ""
 
 msgid "The name of this virtual device cannot be changed."
-msgstr ""
+msgstr "El nombre de este dispositivo virtual no se puede cambiar"
 
 #, php-format
 msgid "The network '%s' is invalid."
@@ -7862,6 +7885,7 @@ msgstr ""
 
 msgid "The new password is also the default root password of the system!"
 msgstr ""
+"La nueva contraseña es también la contraseña predeterminada del sistema root"
 
 msgid "The number of clients must be between 1 and 50."
 msgstr "El número de clientes debe estar entre 1 y 50."
