@@ -28,7 +28,7 @@ NO_PKG_REGISTER= yes
 post-patch:
 	@cd ${WRKSRC} ; ${MKDIR} src/github.com/${PORTNAME}/${PORTNAME} ; \
 		${MV} .gitattributes .gitignore .mailmap AUTHORS CONDUCT.md \
-		CONTRIBUTING.md ISSUE_TEMPLATE.md LICENSE NICKS \
+		CONTRIBUTING.md ISSUE_TEMPLATE.md LICENSE NICKS debtpl \
 		PULL_REQUEST_TEMPLATE.md README.md assets build.go build.sh cmd \
 		etc gui lib man script test vendor \
 		src/github.com/${PORTNAME}/${PORTNAME}
