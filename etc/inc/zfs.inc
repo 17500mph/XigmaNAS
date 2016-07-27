@@ -576,7 +576,7 @@ function zfs_dataset_properties($uuid) {
 	}
 	// determine mountpoint
 	$mountpoint = sprintf('/mnt/%1$s', $relpath);
-	$cmd = sprintf('zfs list -H -t filesystem -o mountpoint %1$s', escapeshellarg($mountpoint));
+	$cmd = sprintf('zfs list -H -t filesystem -o mountpoint %1$s', escapeshellarg($relpath));
 	mwexec2($cmd, $rawdata2);
 	if (!empty($rawdata2) && ($rawdata2[0] != 'none') && ($rawdata2[0] != 'legacy')) {
 		$mountpoint = ltrim($rawdata2[0]);
