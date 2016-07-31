@@ -37,6 +37,7 @@ Changes:
 - Upgrade virtualbox-ose to 5.0.26.
 - Upgrade syncthing to 0.14.3.
 - Upgrade lighttpd to 1.4.41.
+- Upgrade arcconf to 1_8_21375.
 
 Fixes:
 - Fix prevent deletion of mounted gconcat softraid.
@@ -56,6 +57,7 @@ Fixes:
 - Fix some code errors on System|Advanced|Swap.
 - Fix broken log files downloads.
 - Fix test emails could not send as in French WebGUI.
+- Fix change permission of a dataset fails if related pool doesn't use the default mount point.
 - Fix timezone in file manager.
 
 Permanent restrictions:
