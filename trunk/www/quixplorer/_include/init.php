@@ -83,7 +83,18 @@ if($GLOBALS["srt"]=="") $GLOBALS["srt"]=="yes";
 
 // Necessary files
 ob_start(); // prevent unwanted output
+/* NAS4FREE CODE*/
+if(function_exists('date_default_timezone_set')) {
+	if(function_exists('date_default_timezone_get')) {
+		@date_default_timezone_set(@date_default_timezone_get());
+	} else {
+		@date_default_timezone_set('UTC');
+	}
+}
+/* END NAS4FREE CODE*/
+/* ORIGINAL CODE
 date_default_timezone_set ( "UTC" );
+ */
 if (!is_readable("./_config/conf.php"))
     show_error("./_config/conf.php not found.. please see installation instructions");
 
