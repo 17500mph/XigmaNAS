@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-07-17 08:18+0000\n"
-"PO-Revision-Date: 2016-07-01 19:48+0000\n"
+"PO-Revision-Date: 2016-08-10 20:00+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-31 11:44+0000\n"
+"X-Launchpad-Export-Date: 2016-08-16 14:03+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -112,7 +112,7 @@ msgid "%sB used of %sB"
 msgstr "použito %sB z %sB"
 
 msgid "(Change if needed)"
-msgstr ""
+msgstr "(v případě potřeby změňte)"
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr "(vyskytuje se v discích Maxtor 6B200M0 200GB a 2R015H1 15 GB)."
@@ -272,9 +272,11 @@ msgid ""
 "A mounted disk or partition will be unmounted temporarily to perform the "
 "requested action."
 msgstr ""
+"Pro provedení požadované akce bude připojený disk / diskový oddíl dočasně "
+"odpojen (umount)."
 
 msgid "A reload request has been sent to the daemon."
-msgstr ""
+msgstr "Požadavek na znovunačtení byl odeslán procesu služby."
 
 msgid "A route to this destination network already exists."
 msgstr "Trasa do této cílové sítě už existuje."
@@ -447,7 +449,7 @@ msgid "Active Users"
 msgstr "Aktivní uživatelé"
 
 msgid "Adaptive (Low Power Consumption)"
-msgstr ""
+msgstr "Přizpůsobivé (nízká spotřeba energie)"
 
 msgid "Add"
 msgstr "Přidat"
@@ -486,7 +488,7 @@ msgid "Add additional scheduled self-test."
 msgstr "Přidat další naplánovaný samotest."
 
 msgid "Add any supplemental parameters."
-msgstr ""
+msgstr "Přidejte jakékoli doplňující parametry."
 
 msgid "Add auth group"
 msgstr "Přidat skupinu pověřených"
@@ -1314,7 +1316,7 @@ msgid "Change the IP address of your computer"
 msgstr ""
 
 msgid "Change the IP address of your server"
-msgstr ""
+msgstr "Změňte IP adresu tohoto serveru"
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr "Změny této předvolby se projeví až po restartu."
@@ -1574,7 +1576,7 @@ msgstr ""
 "poměr). Samotné gzip (bez číslice) v tuto chvíli znamená to samé, co gzip-6."
 
 msgid "Controls the dedup method."
-msgstr ""
+msgstr "Ovládá metodu deduplikace."
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Určuje, zda bude možné tuto datovou sadu upravovat."
@@ -1890,6 +1892,7 @@ msgstr "Není vyplněn DNS server."
 
 msgid "DO NOT abort the firmware upgrade process once it has started."
 msgstr ""
+"Po jeho spuštění NEPŘERUŠUJTE proces přechodu na novější verzi firmware."
 
 #, php-format
 msgid ""
@@ -2336,6 +2339,7 @@ msgstr "Vypnout kontrolu verze firmware."
 
 msgid "Disable speaker beep on startup and shutdowns."
 msgstr ""
+"Vypnout pípnutí systémového reproduktoru při  spouštění a vypínání systému."
 
 msgid "Disable the compression of repeated line."
 msgstr "Vypnout vynechání opakujících se řádek"
@@ -2378,7 +2382,7 @@ msgid "Disks (ATA) information"
 msgstr "Informace o discích (ATA)"
 
 msgid "Disks | Mount Point | Management"
-msgstr ""
+msgstr "Disky | Přípojný bod | Správa"
 
 msgid "Display"
 msgstr "Zobrazit"
@@ -3172,7 +3176,7 @@ msgid "Event selection"
 msgstr "Výběr události"
 
 msgid "Example: pkg add packagename."
-msgstr ""
+msgstr "Příklad: pkg add nazevbalicku."
 
 msgid "Execute"
 msgstr "Spustit"
@@ -3329,7 +3333,7 @@ msgid "Failed to send test email to: %s."
 msgstr "Nezdařilo se odeslat zkušební e-mail na: %s."
 
 msgid "Failed to send test email."
-msgstr ""
+msgstr "Odeslání zkušebního e-mailu se nezdařilo."
 
 msgid "Failed to upload file."
 msgstr "Nezdařilo se nahrát soubor."
@@ -3823,6 +3827,8 @@ msgstr "IP adresa vzdáleného syslog serveru."
 msgid ""
 "IP addresses are resolved to hostnames when the following option is enabled:"
 msgstr ""
+"IP adresy jsou překládány na názvy strojů pokud jsou zapnuty následující "
+"předvolby:"
 
 msgid "IP or FQDN address of remote Rsync server."
 msgstr "IP adresa nebo úplný doménový název (FQDN) vzdáleného Rsync serveru."
@@ -4599,7 +4605,7 @@ msgid "Log Settings"
 msgstr "Nastavení zaznamenávání událostí"
 
 msgid "Log file is empty."
-msgstr ""
+msgstr "Soubor se záznamy událostí je prázdný."
 
 msgid "Log level"
 msgstr "Úroveň podrobností zaznamenávání událostí"
@@ -4957,7 +4963,7 @@ msgid "Minutes"
 msgstr "Minuty"
 
 msgid "Minutes between the next network time synchronization."
-msgstr ""
+msgstr "Minut mezi příští synchronizací času ze sítě."
 
 msgid "Missing a temporary folder."
 msgstr "Chybí dočasná složka."
@@ -5183,7 +5189,7 @@ msgid "No Initiator Group has been configured."
 msgstr ""
 
 msgid "No Portal Group has been configured."
-msgstr ""
+msgstr "Není nastavená žádná skupina portálu."
 
 msgid "No RSYNC Client configured"
 msgstr "Není nastaven žádný RSYNC klient"
@@ -5198,7 +5204,7 @@ msgid "No configured bridge interfaces."
 msgstr ""
 
 msgid "No configured pools."
-msgstr ""
+msgstr "Nejsou nastavené žádné fondy úložišť."
 
 msgid "No configured virtual devices."
 msgstr ""
@@ -5210,7 +5216,7 @@ msgid "No disk configured"
 msgstr "Není nastaven žádný disk"
 
 msgid "No disks available."
-msgstr ""
+msgstr "Nejsou k dispozici žádné jednotky datových úložišť."
 
 msgid ""
 "No disks configured, please add disks to see the diagnostic information of "
@@ -5750,16 +5756,16 @@ msgstr ""
 
 #, php-format
 msgid "Please add new %s first."
-msgstr ""
+msgstr "Nejprve přidejte nové %s."
 
 msgid "Please add new pools first."
 msgstr ""
 
 msgid "Please check the documentation"
-msgstr ""
+msgstr "Podívejte se do dokumentace"
 
 msgid "Please check the documentation."
-msgstr ""
+msgstr "Podívejte se do dokumentace."
 
 msgid "Please check the log files"
 msgstr ""
@@ -5776,7 +5782,7 @@ msgstr ""
 "(mezera, tabulátor, atp.)."
 
 msgid "Please try again."
-msgstr ""
+msgstr "Zkuste to znovu."
 
 msgid "Polish"
 msgstr "polština"
@@ -6401,6 +6407,8 @@ msgid ""
 "Running the service as user root is not recommended for security reasons, "
 "use at your own risk!"
 msgstr ""
+"Provozování služby pod účtem správce systému (root) oslabuje zabezpečení – "
+"použijte jen na vlastní riziko!"
 
 msgid "Russian"
 msgstr "ruština"
@@ -6433,6 +6441,8 @@ msgid ""
 "SMB3 is for recent OS like Windows 10 and 8. SMB2 is for OS like Windows 7 "
 "and Vista. NT1 is for legacy OS."
 msgstr ""
+"SMB3 je určeno pro nejnovější Windows systémy, jako je 10 a 8.x. SMB2 pro 7 "
+"a Vista. NT1 pak pro nejstarší systémy."
 
 msgid "SMTP Server"
 msgstr "SMTP server"
@@ -6767,6 +6777,8 @@ msgstr "Nastavte rychlost posouvání titulku v rozmezí 0-10 (výchozí je 10).
 
 msgid "Set under which user the service should run (www by default)."
 msgstr ""
+"Nastavte pod jakým uživatelským účtem má být služba provozován (výchozím je "
+"www)."
 
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
@@ -7046,7 +7058,7 @@ msgid "Static Routes"
 msgstr "Statické trasy"
 
 msgid "Static Routes Setup"
-msgstr ""
+msgstr "Nastavení statických tras"
 
 msgid "Static routes"
 msgstr "Statické trasy"
@@ -7055,7 +7067,7 @@ msgid "Status"
 msgstr "Stav"
 
 msgid "Status & Information"
-msgstr ""
+msgstr "Stav a informace"
 
 #, php-format
 msgid "Status report successfully sent to: %s."
@@ -7263,7 +7275,7 @@ msgid "TLS"
 msgstr "TLS"
 
 msgid "TLS Server Certificate Check"
-msgstr ""
+msgstr "Kontrola TLS certifikátu serveru"
 
 msgid "TLS mode"
 msgstr "Režim TLS"
@@ -7613,7 +7625,7 @@ msgid "The changes have been applied successfully."
 msgstr "Změny byly úspěšně provedeny."
 
 msgid "The changes have been saved."
-msgstr ""
+msgstr "Změny byly uloženy."
 
 msgid "The cleartext credentials with which to bind."
 msgstr ""
@@ -7635,7 +7647,7 @@ msgstr ""
 "obsahovat!"
 
 msgid "The configuration has been changed."
-msgstr ""
+msgstr "Nastavení byla změněna."
 
 msgid "The configuration has been restored. The server is now rebooting."
 msgstr ""
@@ -7753,7 +7765,7 @@ msgstr ""
 "nemusí v rámci přenosu předávat složku."
 
 msgid "The disk is currently mounted!"
-msgstr ""
+msgstr "Disk je v současnosti připojen (mount)!"
 
 msgid ""
 "The disk is currently mounted! The mount point will be removed temporarily "
@@ -7777,16 +7789,16 @@ msgstr ""
 "Rozlišený název, kterým se přihlašovat k adresářovému serveru, např. %s"
 
 msgid "The driver used to communicate with your UPS."
-msgstr ""
+msgstr "Ovladač sloužící ke komunikaci s UPS zdrojem tohoto systému."
 
 msgid "The driver used to communicate with your second UPS."
 msgstr ""
 
 msgid "The driver used to connect with the LCD."
-msgstr ""
+msgstr "Ovladač sloužící pro ovládání informačního displeje."
 
 msgid "The encrypted device is currently mounted!"
-msgstr ""
+msgstr "Toto šifrované zařízení je nyní připojené (mount)!"
 
 msgid "The extent name already exists."
 msgstr "Název úložné jednotky je užpoužíván."
@@ -7807,7 +7819,7 @@ msgid "The following input errors were detected"
 msgstr "V zadaných údajích byly zjištěny následující chyby"
 
 msgid "The following services will use AD authentication:"
-msgstr ""
+msgstr "Tyto služby budou používat ověřování vůči AD adresáři:"
 
 msgid "The full name contains invalid characters."
 msgstr "Úplný název obsahuje neplatné znaky."
@@ -7966,6 +7978,7 @@ msgstr ""
 
 msgid "The new password is also the default root password of the system!"
 msgstr ""
+"Toto nové heslo je zároveň výchozím heslem správce (root) tohoto systému!"
 
 msgid "The number of clients must be between 1 and 50."
 msgstr "Je třeba, aby počet klientů byl v rozmezí 1 až 50."
@@ -8078,7 +8091,7 @@ msgstr ""
 "Může nějakou minutu trvat."
 
 msgid "The server is halting now. This may take one minute."
-msgstr ""
+msgstr "Systém se vypíná. Může trvat několik minut."
 
 msgid "The server will reboot after restoring the configuration."
 msgstr "Po obnovení nastavení bude server restartován."
@@ -8348,6 +8361,8 @@ msgstr ""
 
 msgid "This can cause a huge delay in loading the log page!"
 msgstr ""
+"Toto může způsobit obrovskou prodlevu při načítání stránky se záznamem "
+"událostí!"
 
 msgid ""
 "This configuration settings are used to generate the ups.conf configuration "
@@ -8705,7 +8720,7 @@ msgid "Time Machine"
 msgstr "Apple Time Machine"
 
 msgid "Time Synchronization"
-msgstr ""
+msgstr "Synchronizace času"
 
 msgid "Time before the load will be rebooted"
 msgstr "Prodleva restartu napájení připojených zařízení"
@@ -8757,11 +8772,15 @@ msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
 "documentation"
 msgstr ""
+"Podrobnosti ohledně vytváření pravidel pro bránu firewall naleznete v "
+"dokumentaci k systému FreeBSD"
 
 msgid ""
 "To get more information how to configure LCDproc check the LCDproc "
 "documentation"
 msgstr ""
+"Více informací o tom, jak nastavit nástroj LCDproc naleznete v jeho "
+"dokumentaci"
 
 msgid ""
 "To get more information how to configure your UPS please check the NUT "
@@ -9101,7 +9120,7 @@ msgid "Unload"
 msgstr "Uvolnit"
 
 msgid "Unmount Disk/Partition"
-msgstr ""
+msgstr "Odpojit (umount) disk/oddíl"
 
 msgid "Unmount this disk first before proceeding."
 msgstr ""
@@ -9171,7 +9190,7 @@ msgid "Use the specified NTP server."
 msgstr "Použít uvedený NTP server."
 
 msgid "Use these specials actions for debugging only!"
-msgstr ""
+msgstr "Tyto zvláštní akce slouží pouze pro účely ladění!"
 
 #, php-format
 msgid ""
@@ -9419,7 +9438,7 @@ msgid "WAN address"
 msgstr "Adresa rozhraní vnější sítě (WAN)"
 
 msgid "WARNING"
-msgstr ""
+msgstr "VAROVÁNÍ"
 
 msgid "WEP"
 msgstr "WEP"
@@ -9603,7 +9622,7 @@ msgid "You can use the following parameters for substitution:"
 msgstr "Pro dosazování je možné použít následující parametry:"
 
 msgid "You can verify the result in the log file."
-msgstr ""
+msgstr "Výsledek je možné zkontrolovat v souboru se záznamem událostí."
 
 msgid ""
 "You can't unmount a drive which is used by swap file, a iSCSI-target file or "
@@ -9617,7 +9636,7 @@ msgid "You have to activate %s to advertise this service to clients."
 msgstr ""
 
 msgid "You have to reboot the system for the changes to take effect."
-msgstr ""
+msgstr "Změny se projeví až po restartu serveru."
 
 #, php-format
 msgid "You have to select at least one item for '%s'."
@@ -9655,7 +9674,7 @@ msgid "You must add disks first."
 msgstr "Nejprve je třeba přidat disky."
 
 msgid "You must apply the changes in order for them to take effect."
-msgstr ""
+msgstr "Aby se změny projevily, je třeba je promítnout (použít)."
 
 msgid "You must enter the same IP type for network and gateway."
 msgstr "Pro síť i bránu je třeba zadat IP adresu stejného typu."
@@ -9670,7 +9689,7 @@ msgid "You must initialize data before enabling."
 msgstr "Před zapnutím je třeba inicializovat data."
 
 msgid "You must reboot the server before you can upgrade the firmware"
-msgstr ""
+msgstr "Přejít na novější verzi firmware bude možné až po restartu serveru"
 
 msgid "You must select at least one authentication method."
 msgstr "Je třeba vybrat alespoň jeden ze způsobů ověřování."
@@ -9834,7 +9853,7 @@ msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
 msgid "pools"
-msgstr ""
+msgstr "fondy úložišť"
 
 msgid "rc.conf"
 msgstr "rc.conf"
@@ -9877,7 +9896,7 @@ msgid "umount"
 msgstr "odpojit (umount)"
 
 msgid "user"
-msgstr ""
+msgstr "uživatel"
 
 msgid "version:"
 msgstr "verze:"
