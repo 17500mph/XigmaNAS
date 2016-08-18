@@ -491,7 +491,7 @@ function zfs_dataset_configure($uuid) {
 	write_log($cmd);
 	$result |= mwexec($cmd, true);
 	if ($result != 0) {
-		write_log(sprintf('Error: Failed to create dataset %1$s', escapeshellarg($relpath)));
+		write_log(sprintf('Error: Failed to create dataset %1$s', $relpath));
 		return $result;
 	}
 	// Check mountpoint
@@ -507,10 +507,10 @@ function zfs_dataset_configure($uuid) {
 			$mode = $dataset['accessrestrictions']['mode'];
 			$owner = $dataset['accessrestrictions']['owner'];
 			$group = $dataset['accessrestrictions']['group'][0];
-			write_log(sprintf('Access restrictions to be set: %1$s %2$s %3$s %4$s', escapeshellarg($mountpoint), $mode, $owner, $group));
+			write_log(sprintf('Access restrictions to be set: %1$s %2$s %3$s %4$s', $mountpoint, $mode, $owner, $group));
 			if (file_exists($mountpoint) && is_writable($mountpoint)) {
 				if (!@chmod($mountpoint, octdec($mode)) || !@chown($mountpoint, $owner) || !@chgrp($mountpoint, $group)) {
-					write_log(sprintf('Error: Failed to set access restrictions on directory %1$s', escapeshellarg($mountpoint)));
+					write_log(sprintf('Error: Failed to set access restrictions on directory %1$s', $mountpoint));
 				}
 			}
 		}
@@ -543,7 +543,7 @@ function zfs_dataset_destroy($uuid) {
 	write_log($cmd);
 	$result |= mwexec($cmd, true);
 	if ($result != 0) {
-		write_log(sprintf('Error: Failed to destroy dataset %1$s', escapeshellarg($relpath)));
+		write_log(sprintf('Error: Failed to destroy dataset %1$s', $relpath));
 	}
 	return $result;
 }
@@ -679,10 +679,10 @@ function zfs_dataset_properties($uuid) {
 			$mode = $dataset['accessrestrictions']['mode'];
 			$owner = $dataset['accessrestrictions']['owner'];
 			$group = $dataset['accessrestrictions']['group'][0];
-			write_log(sprintf('Access restrictions to be set: %1$s %2$s %3$s %4$s', escapeshellarg($mountpoint), $mode, $owner, $group));
+			write_log(sprintf('Access restrictions to be set: %1$s %2$s %3$s %4$s', $mountpoint, $mode, $owner, $group));
 			if (file_exists($mountpoint) && is_writable($mountpoint)) {
 				if (!@chmod($mountpoint, octdec($mode)) || !@chown($mountpoint, $owner) || !@chgrp($mountpoint, $group)) {
-					write_log(sprintf('Error: Failed to set access restrictions on directory %1$s', escapeshellarg($mountpoint)));
+					write_log(sprintf('Error: Failed to set access restrictions on directory %1$s', $mountpoint));
 				}
 			}
 		}
@@ -762,7 +762,7 @@ function zfs_volume_destroy($uuid) {
 	write_log($cmd);
 	$result |= mwexec($cmd, true);
 	if ($result != 0) {
-		write_log(sprintf('Error: Failed to destroy volume %1$s', escapeshellarg($relpath)));
+		write_log(sprintf('Error: Failed to destroy volume %1$s', $relpath));
 	}
 	return $result;
 }

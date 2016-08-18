@@ -110,14 +110,14 @@ if ($_POST) {
 			$retval = @email_send($config['system']['email']['sendto'], $subject, $message, $error);
 			if (0 == $retval) {
 				$savemsg = gtext('Test email successfully sent.');
-				write_log(sprintf(gtext("Test email successfully sent to: %s."), $config['system']['email']['sendto']));
+				write_log(sprintf('Test email successfully sent to: %s.', $config['system']['email']['sendto']));
 			} else {
 				$failmsg = gtext('Failed to send test email.')
 					. ' '
 					. '<a href="' . 'diag_log.php' . '">'
 					. gtext('Please check the log files')
 					. '</a>.';
-				write_log(sprintf(gtext('Failed to send test email to: %s.'), $config['system']['email']['sendto']));
+				write_log(sprintf('Failed to send test email to: %s.', $config['system']['email']['sendto']));
 			}
 		} else {
 			$savemsg = get_std_save_message($retval);
