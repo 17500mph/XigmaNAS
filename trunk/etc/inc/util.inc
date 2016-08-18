@@ -2414,7 +2414,7 @@ function get_product_versionname() {
 // Write message into log file.
 // Return 0 if successful, otherwise 1
 function write_log($message) {
-	$cmd="/usr/bin/logger \"{$message}\"";
+	$cmd= sprintf('/usr/bin/logger %s', escapeshellarg($message));
 	return mwexec($cmd);
 }
 

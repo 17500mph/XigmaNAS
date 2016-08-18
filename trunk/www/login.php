@@ -62,11 +62,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			}
 		}
 
-		write_log(gtext("Authentication error for illegal user : {$_POST['username']} from {$_SERVER['REMOTE_ADDR']}"));
+		write_log(sprintf('Authentication error for illegal user: %s from %s', $_POST['username'], $_SERVER['REMOTE_ADDR']));
 		$input_errors = gtext('Invalid username or password.') . '</br>' . gtext('Please try again.');
 	}
 	else {
-		write_log(gtext('Username contains invalid character(s) : '.escapeshellarg(escapeshellcmd( htmlspecialchars($_POST['username'],ENT_QUOTES))).' from '.$_SERVER['REMOTE_ADDR']));		
+		write_log(sprintf('Username contains invalid character(s): %s from %s', $_POST['username'], $_SERVER['REMOTE_ADDR']));
 		$input_errors = gtext('Username field : '.htmlspecialchars($_POST['username']).' contains illegal characters.');
 	}
 }
