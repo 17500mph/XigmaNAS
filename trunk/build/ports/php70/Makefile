@@ -1,5 +1,5 @@
 PORTNAME=		php70
-PORTVERSION=	7.0.9
+PORTVERSION=	7.0.10
 PORTREVISION=	0
 CATEGORIES=		lang
 COMMENT=		PHP5 Scripting Language
@@ -7,9 +7,9 @@ MAINTAINER=		zoon1@nas4free.org
 
 MASTER_SITES=		${MASTER_SITE_PHP:S,$,:release,}
 MASTER_SITE_SUBDIR=	distributions/:release
-DISTNAME=		php-${PORTVERSION:S/.r/RC/}
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX}:release
-USES+=			tar:bzip2 cpe iconv
+DISTNAME=			php-${PORTVERSION:S/.r/RC/}
+DISTFILES=			${DISTNAME}${EXTRACT_SUFX}:release
+USES+=			tar:xz cpe iconv
 
 BUILD_DEPENDS=		sqlite3>=3.0:databases/sqlite3
 LIB_DEPENDS=		libpcre.so:devel/pcre
