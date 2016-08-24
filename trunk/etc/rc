@@ -50,7 +50,31 @@ if [ ${mem} -le 1536 ]; then
 fi
 export BOOT_LOWMEM BOOT_LIVECD
 #/bin/kenv -q boot_lowmem=${BOOT_LOWMEM} > /dev/null
-
+#Reroot in case banana-pi embedded
+if [ "${PLATFORM}" = "bpi-embedded" ]; then
+	if [ -f /reroot ]; then
+	# Prepare reroot disk and variables.  We know, /var is empty and /mnt is empty and I use its
+		/bin/echo "Create new root disk in memory"
+		mdr=`/sbin/mdconfig -t swap -s 128m`
+		/sbin/mount /dev/mmcsd0s2a /mnt
+		/usr/bin/xz -dcv /mnt/mfsroot.tar.xz | /bin/dd of=/dev/${mdr} bs=1m status=none
+		/sbin/umount /mnt
+		/sbin/fsck -yf /dev/${mdr}s1a
+		#prepare reroot variables
+		/bin/kenv mfsroot_type="mfs_root"
+		/bin/kenv vfs.root.mountfrom="ufs:/dev/${mdr}s1a";
+		/bin/kenv vfs.root.mountfrom.options="rw";
+		/sbin/reboot -r;
+		sleep 2;
+		exit;
+	else
+		if [ -f /dev/md0.uzip ];then
+			# I destroy unused broken after reroot md0 and unload geom_uzip module
+			mdconfig -d -u 0
+		fi
+		/sbin/kldunload geom_uzip
+	fi
+fi
 case ${PLATFORM} in
 	*-full)
 		# Do a fsck on root file system.
@@ -61,10 +85,16 @@ case ${PLATFORM} in
 		;;
 	*)
 		# If running from liveCD or embedded, mount the root (ramdisk) in read-write.
+		
 		if [ -e /dev/xmd0 ]; then
 			/sbin/mount -u -o rw,noatime,acls /dev/xmd0 /;
+		
 		else
-			/sbin/mount -u -o rw,noatime,acls /dev/md0 /;
+			if [ "${PLATFORM}" = "bpi-embedded" ]; then
+				/sbin/mount -u -o rw,noatime,acls /dev/md1s1a /;
+			else
+				/sbin/mount -u -o rw,noatime,acls /dev/md0 /;
+			fi
 		fi
 
 		/bin/echo "Creating 2nd memory disk for ${PLATFORM}"
@@ -134,7 +164,11 @@ case ${PLATFORM} in
 				/sbin/umount /mnt
 				;;
 			*-embedded)
-				root=`/sbin/glabel status -s|/usr/bin/awk '/embboot/{print $3;exit 0}'`
+				if  [ "${PLATFORM}" = "bpi-embedded" ]; then
+					root="md1s1a"
+				else
+					root=`/sbin/glabel status -s|/usr/bin/awk '/embboot/{print $3;exit 0}'`
+				fi
 				gptswap=`/sbin/glabel status -s|/usr/bin/awk '/gptswap/{print $3;exit 0}'`
 				if [ -z "${root}" ]; then
 					echo "can't determine rootfs"

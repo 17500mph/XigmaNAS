@@ -151,6 +151,14 @@ if (is_booting()) {
 					}
 					// Unmount device
 					mwexec("/sbin/umount -f {$g['cf_path']}");
+				} else if (($g['arch'] == "bpi" ) && (0 == mwexec("/sbin/mount -w  /dev/{$disk}s2a {$g['cf_path']}"))) { // Search on slice 2
+					if (file_exists($g['cf_conf_path']."/config.xml")) {
+						$cfgdevice = $disk;
+						$cfgpartition = "{$cfgdevice}s2a";
+						$cfgfstype = "ufs";	
+					}
+					// Unmount device
+					mwexec("/sbin/umount -f {$g['cf_path']}");
 				}
 
 				// Device found, exit
@@ -233,6 +241,13 @@ EOD;
 		@file_put_contents("{$g['etc_path']}/fstab", $data, FILE_TEXT | FILE_APPEND);
 	}
 
+	//bananaPI
+	if ($g['arch'] == "bpi" ) {		
+	if (mwexec("/usr/bin/grep ' /boot/msdos ' {$g['etc_path']}/fstab") != 0) {
+		// Append process file system to /etc/fstab
+		$data = "/dev/{$cfgdevice}s1 /boot/msdos  msdosfs ro 0 0\n";
+		@file_put_contents("{$g['etc_path']}/fstab", $data, FILE_TEXT | FILE_APPEND);
+	}	}
 	// Mount all filesystems
 	mwexec("/sbin/mount -a");
 }
