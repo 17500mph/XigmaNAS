@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-07-17 08:18+0000\n"
-"PO-Revision-Date: 2016-08-10 20:00+0000\n"
+"PO-Revision-Date: 2016-08-17 19:35+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-16 14:03+0000\n"
-"X-Generator: Launchpad (build 18169)\n"
+"X-Launchpad-Export-Date: 2016-08-24 09:12+0000\n"
+"X-Generator: Launchpad (build 18179)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
 "X-Poedit-Language: Czech\n"
@@ -2606,7 +2606,7 @@ msgid "Do you want to enable selected options?"
 msgstr "Opravdu zapnout označené předvolby?"
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
-msgstr ""
+msgstr "Chcete tento firmware nainstalovat i tak (na vlastní riziko)?"
 
 msgid "Do you want to toggle selected jobs?"
 msgstr "Opravdu přepnout označené úlohy?"
@@ -3326,7 +3326,7 @@ msgid "Failed to send status report to: %s."
 msgstr "Nezdařilo se poslat hlášení o stavu na: %s"
 
 msgid "Failed to send status report."
-msgstr ""
+msgstr "Odeslání hlášení o stavu se nezdařilo."
 
 #, php-format
 msgid "Failed to send test email to: %s."
@@ -3435,7 +3435,7 @@ msgid "Firmware Check"
 msgstr "Kontrola firmware"
 
 msgid "Firmware Update"
-msgstr ""
+msgstr "Aktualizace firmware."
 
 msgid "Firmware upload failed (out of memory?)"
 msgstr "Nahrání firmware se nezdařilo (nedostatek paměti?)"
@@ -3478,7 +3478,7 @@ msgid "Format Options"
 msgstr "Předvolby formátování"
 
 msgid "Format Program"
-msgstr ""
+msgstr "Nástroj pro formátování"
 
 msgid "Format the report for phpBB forum."
 msgstr "Připravit výstup do podoby vhodné pro phpBB fórum."
@@ -3575,7 +3575,7 @@ msgid "Get Target Info"
 msgstr "Získat informace o cíli"
 
 msgid "Get a list of available drivers"
-msgstr ""
+msgstr "Získat seznam dostupných ovladačů"
 
 msgid "GiB"
 msgstr "GiB"
@@ -4721,13 +4721,13 @@ msgid "Maintenance"
 msgstr "Údržba"
 
 msgid "Make sure to select the optimal number of devices"
-msgstr ""
+msgstr "Určitě vyberte optimální počet zařízení"
 
 msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Zkontrolujte, zda máte zapnuté SMART dohledování u svých zařízení."
 
 msgid "Make sure you have already configured your email settings"
-msgstr ""
+msgstr "Ověřte, zda jsou provedena nastavení ohledně e-mailu"
 
 msgid "Management"
 msgstr "Správa"
@@ -5207,7 +5207,7 @@ msgid "No configured pools."
 msgstr "Nejsou nastavené žádné fondy úložišť."
 
 msgid "No configured virtual devices."
-msgstr ""
+msgstr "Nejsou nastavená žádná virtuální zařízení."
 
 msgid "No device selected."
 msgstr "Není vybráno žádné zařízení."
@@ -5460,6 +5460,8 @@ msgid ""
 "Only install firmwares that come from sources that you trust, and make sure "
 "that the firmware has not been tampered with."
 msgstr ""
+"Instalujte pouze firmware, který pochází z důvěryhodného zdroje a ověřte, že "
+"se souborem s firmware nebylo manipulováno (kontrolní součet)."
 
 msgid "Option"
 msgstr "Předvolba"
@@ -5749,17 +5751,17 @@ msgid "Please add a new Portal Group first."
 msgstr ""
 
 msgid "Please add a new disk first."
-msgstr ""
+msgstr "Nejprve přidejte nový disk."
 
 msgid "Please add a virtual device first."
-msgstr ""
+msgstr "Nejprve přidejte virtuální zařízení."
 
 #, php-format
 msgid "Please add new %s first."
 msgstr "Nejprve přidejte nové %s."
 
 msgid "Please add new pools first."
-msgstr ""
+msgstr "Nejprve přidejte nové fondy."
 
 msgid "Please check the documentation"
 msgstr "Podívejte se do dokumentace"
@@ -5768,7 +5770,7 @@ msgid "Please check the documentation."
 msgstr "Podívejte se do dokumentace."
 
 msgid "Please check the log files"
-msgstr ""
+msgstr "Zkontrolujte soubory se záznamem událostí."
 
 msgid "Please define the Database directory location."
 msgstr "Zadejte umístění složky databáze"
@@ -7619,7 +7621,7 @@ msgstr ""
 "brány v potaz."
 
 msgid "The changes could not be applied"
-msgstr ""
+msgstr "Změny se nepodařilo aplikovat"
 
 msgid "The changes have been applied successfully."
 msgstr "Změny byly úspěšně provedeny."
@@ -7792,7 +7794,7 @@ msgid "The driver used to communicate with your UPS."
 msgstr "Ovladač sloužící ke komunikaci s UPS zdrojem tohoto systému."
 
 msgid "The driver used to communicate with your second UPS."
-msgstr ""
+msgstr "Ovladač sloužící pro komunikaci s druhým záložním zdrojem"
 
 msgid "The driver used to connect with the LCD."
 msgstr "Ovladač sloužící pro ovládání informačního displeje."
@@ -8055,6 +8057,8 @@ msgid ""
 "The powerd utility monitors the server state and sets various power control "
 "options accordingly."
 msgstr ""
+"Nástroj powerd sleduje stav serveru a příslušně dle toho nastavuje různé "
+"parametry napájení."
 
 msgid "The queuedepth range is invalid."
 msgstr "Rozsah délek fronty je neplatný."
@@ -8788,7 +8792,7 @@ msgid ""
 msgstr ""
 
 msgid "To increase CIFS performance try the following:"
-msgstr ""
+msgstr "Výkonnost CIFS se můžete pokusit zvýšit pomocí následujícího:"
 
 msgid "To match any IP address leave this field empty."
 msgstr ""
@@ -9251,7 +9255,7 @@ msgid "User ID"
 msgstr "Identifikátor uživatele"
 
 msgid "User Setup"
-msgstr ""
+msgstr "Nastavení uživatele"
 
 msgid "User full name."
 msgstr "Celé jméno uživatele"
