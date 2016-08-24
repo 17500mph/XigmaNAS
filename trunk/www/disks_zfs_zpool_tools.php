@@ -749,7 +749,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							$o_zpool->set_poolname_filter($sphere_array['pool'][0]);
 							$a_pool_device_for_clear = $o_zpool->get_all_data_devices();
 							$o_zpool->set_poolname_filter();
-							render_pooldev_edit($a_pool_device_for_clear, '0N');
+							render_pooldev_edit($a_pool_device_for_clear, '0');
 							render_set_end();
 							render_submit(4, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
 							break;
