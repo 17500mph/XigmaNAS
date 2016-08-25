@@ -1327,7 +1327,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							render_pooldev_edit($a_device_for_replace_data, '1');
 							html_separator2(2);
 							html_titleline2(gtext('Select a data device'), 2);
-							render_newdev_edit($a_newdev, '0');
+							render_newdev_edit($a_newdev, '1'); // we make it mandatory
 							render_set_end();
 							render_submit(4, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], []);
 							break;
@@ -1341,7 +1341,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							$prerequisites_ok &= render_pooldev_view($sphere_array['pooldev']);
 							html_separator2(2);
 							html_titleline2(gtext('Source'), 2);
-							render_newdev_view($sphere_array['newdev']); // can be blank, not a prerequisite
+							$prerequisites_ok &= render_newdev_view($sphere_array['newdev']);
 							html_separator2(2);
 							html_titleline2(gtext('Output'), 2);
 							$result = $prerequisites_ok ? 0 : 15;
@@ -1356,9 +1356,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 								}
 								$a_param[] = escapeshellarg($sphere_array['pool'][0]);
 								$a_param[] = escapeshellarg($sphere_array['pooldev'][0]);
-								if(0 < count($sphere_array['newdev'])) {
-									$a_param[] = escapeshellarg($sphere_array['newdev'][0]);
-								}
+								$a_param[] = escapeshellarg($sphere_array['newdev'][0]);
 								$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
 							}
 							render_command_result($result);
