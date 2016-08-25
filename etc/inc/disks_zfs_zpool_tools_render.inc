@@ -60,6 +60,17 @@ function render_command_and_execute($subcommand, $a_param = [], $b_exec = true) 
 	echo '</pre></td></tr>';
 	return $result;
 }
+function render_zpool_status($param, $b_exec = true) {
+	echo '<tr>', "\n", '<td class="celltag">', gtext('Pool Status'), '</td><td class="celldata"><pre>';
+	if ($b_exec) {
+		$result = zfs_zpool_cmd('status', escapeshellarg($param), true);
+	} else {
+		$result = 7;
+	}
+	echo '</pre></td></tr>';
+	return $result;
+}
+
 function render_command_result($result = 0, $render_success = true, $render_error = true) {
 	switch($result) {
 		case 0:
