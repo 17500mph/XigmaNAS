@@ -299,6 +299,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							html_separator2(2);
 							html_titleline2(gtext('Target'), 2);
 							render_pool_view($sphere_array['pool']);
+							render_zpool_status($sphere_array['pool'][0], $b_exec);
 							html_separator2(2);
 							html_titleline2(gtext('Select a cache device'), 2);
 							render_newdev_edit($a_newdev, '1');
@@ -364,6 +365,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							html_separator2(2);
 							html_titleline2(gtext('Target'), 2);
 							render_pool_view($sphere_array['pool']);
+							render_zpool_status($sphere_array['pool'][0], $b_exec);
 							html_separator2(2);
 							html_titleline2(gtext('Select a data device'), 2);
 							render_newvdev_edit($a_cfg_newvdev_data, '1');
@@ -443,6 +445,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							html_separator2(2);
 							html_titleline2(gtext('Target'), 2);
 							render_pool_view($sphere_array['pool']);
+							render_zpool_status($sphere_array['pool'][0], $b_exec);
 							html_separator2(2);
 							html_titleline2(gtext('Select a log device'), 2);
 							render_newdev_edit($a_newdev, '1');
@@ -508,6 +511,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							html_separator2(2);
 							html_titleline2(gtext('Target'), 2);
 							render_pool_view($sphere_array['pool']);
+							render_zpool_status($sphere_array['pool'][0], $b_exec);
 							html_separator2(2);
 							html_titleline2(gtext('Select one or more spare devices'), 2);
 							render_newdev_edit($a_newdev, '1N');
@@ -573,6 +577,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							html_separator2(2);
 							html_titleline2(gtext('Select a pool device'), 2);
 							render_pool_view($sphere_array['pool']);
+							render_zpool_status($sphere_array['pool'][0], $b_exec);
 							$o_zpool->set_poolname_filter($sphere_array['pool'][0]); // limit next query to selected pool
 							$a_device_for_attach_data = $o_zpool->get_pool_devices_for_attach_data();
 							$o_zpool->set_poolname_filter();
@@ -638,6 +643,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							html_separator2(2);
 							html_titleline2(gtext('Select a pool device'), 2);
 							render_pool_view($sphere_array['pool']);
+							render_zpool_status($sphere_array['pool'][0], $b_exec);
 							$o_zpool->set_poolname_filter($sphere_array['pool'][0]);
 							$a_device_for_attach_log = $o_zpool->get_pool_devices_for_attach_log();
 							$o_zpool->set_poolname_filter();
@@ -798,6 +804,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							html_separator2(2);
 							html_titleline2(gtext('Select a data device'), 2);
 							render_pool_view($sphere_array['pool']);
+							render_zpool_status($sphere_array['pool'][0], $b_exec);
 							$o_zpool->set_poolname_filter($sphere_array['pool'][0]);
 							$a_pool_device_for_detach_data = $o_zpool->get_mirrored_data_devices();
 							$o_zpool->set_poolname_filter();
@@ -845,6 +852,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							html_separator2(2);
 							html_titleline2(gtext('Select a log device'), 2);
 							render_pool_view($sphere_array['pool']);
+							render_zpool_status($sphere_array['pool'][0], $b_exec);
 							$o_zpool->set_poolname_filter($sphere_array['pool'][0]);
 							$a_pool_device_for_detach_log = $o_zpool->get_mirrored_log_devices();
 							$o_zpool->set_poolname_filter();
@@ -1031,6 +1039,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							html_separator2(2);
 							html_titleline2(gtext('Select a device'), 2);
 							render_pool_view($sphere_array['pool']);
+							render_zpool_status($sphere_array['pool'][0], $b_exec);
 							$o_zpool->set_poolname_filter($sphere_array['pool'][0]);
 							$a_pool_device_for_offline_data = $o_zpool->get_pool_devices_for_offline_data();
 							$o_zpool->set_poolname_filter();
@@ -1078,6 +1087,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							html_separator2(2);
 							html_titleline2(gtext('Select a pool device'), 2);
 							render_pool_view($sphere_array['pool']);
+							render_zpool_status($sphere_array['pool'][0], $b_exec);
 							$o_zpool->set_poolname_filter($sphere_array['pool'][0]);
 							$a_pool_device_for_online_data = $o_zpool->get_pool_devices_for_online_data();
 							$o_zpool->set_poolname_filter();
@@ -1162,6 +1172,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							html_separator2(2);
 							html_titleline2(gtext('Selece a cache device'), 2);
 							render_pool_view($sphere_array['pool']);
+							render_zpool_status($sphere_array['pool'][0], $b_exec);
 							$o_zpool->set_poolname_filter($sphere_array['pool'][0]);
 							$a_pool_device_for_remove_cache = $o_zpool->get_single_cache_devices();
 							$o_zpool->set_poolname_filter();
@@ -1209,6 +1220,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							html_separator2(2);
 							html_titleline2(gtext('Selece a log device'), 2);
 							render_pool_view($sphere_array['pool']);
+							render_zpool_status($sphere_array['pool'][0], $b_exec);
 							$o_zpool->set_poolname_filter($sphere_array['pool'][0]);
 							$a_pool_device_for_remove_log = $o_zpool->get_single_log_devices();
 							$o_zpool->set_poolname_filter();
@@ -1256,6 +1268,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							html_separator2(2);
 							html_titleline2(gtext('Select a spare device'), 2);
 							render_pool_view($sphere_array['pool']);
+							render_zpool_status($sphere_array['pool'][0], $b_exec);
 							$o_zpool->set_poolname_filter($sphere_array['pool'][0]);
 							$a_pool_device_for_remove_spare = $o_zpool->get_single_spare_devices();
 							$o_zpool->set_poolname_filter();
@@ -1307,6 +1320,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							html_separator2(2);
 							html_titleline2(gtext('Select a pool device'), 2);
 							render_pool_view($sphere_array['pool']);
+							render_zpool_status($sphere_array['pool'][0], $b_exec);
 							$o_zpool->set_poolname_filter($sphere_array['pool'][0]); // limit next query to selected pool
 							$a_device_for_replace_data = $o_zpool->get_pool_devices_for_replace_data();
 							$o_zpool->set_poolname_filter();
