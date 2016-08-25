@@ -1170,7 +1170,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							render_set_start();
 							render_activity_view($c_activity);
 							html_separator2(2);
-							html_titleline2(gtext('Selece a cache device'), 2);
+							html_titleline2(gtext('Select a cache device'), 2);
 							render_pool_view($sphere_array['pool']);
 							render_zpool_status($sphere_array['pool'][0], $b_exec);
 							$o_zpool->set_poolname_filter($sphere_array['pool'][0]);
@@ -1218,7 +1218,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							render_set_start();
 							render_activity_view($c_activity);
 							html_separator2(2);
-							html_titleline2(gtext('Selece a log device'), 2);
+							html_titleline2(gtext('Select a log device'), 2);
 							render_pool_view($sphere_array['pool']);
 							render_zpool_status($sphere_array['pool'][0], $b_exec);
 							$o_zpool->set_poolname_filter($sphere_array['pool'][0]);
