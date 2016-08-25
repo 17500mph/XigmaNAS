@@ -47,26 +47,48 @@ function render_set_start() {
 		echo '<tbody>', "\n";
 	return true;
 }
-function render_cmd_start() {
-/*
- * Enables raw output
- */
-	echo '<tr>', "\n", '<td class="celltag">', gtext('Output'), '</td><td class="celldata"><pre>';
-	return true;
-}
-function render_command($subcommand = '', $param = '') {
-	$id = 'syscommand';
-	$gt_tag_header = gtext('Command');
+function render_command_and_execute($subcommand, $a_param = [], $b_exec = true) {
+	$param = implode(' ', $a_param);
 	$output = sprintf('%1$s %2$s %3$s', 'zpool', $subcommand, $param);
-	html_text2($id, $gt_tag_header, $output);
-	return true;
-}
-function render_cmd_stop() {
-/*
- * Disables raw output
- */
+	html_text2('syscommand', gtext('Command'), $output);
+	echo '<tr>', "\n", '<td class="celltag">', gtext('Output'), '</td><td class="celldata"><pre>';
+	if ($b_exec) {
+		$result = zfs_zpool_cmd($subcommand, $param, true);
+	} else {
+		$result = 7;
+	}
 	echo '</pre></td></tr>';
-	return true;
+	return $result;
+}
+function render_command_result($result = 0, $render_success = true, $render_error = true) {
+	switch($result) {
+		case 0:
+			if($render_success) {
+				html_text2('success', gtext('Success'), gtext('Command execution was successful'));
+			}
+			break;
+		case 2:
+			if($render_error) {
+				html_text2('error', gtext('Error'), gtext('Invalid command line option'));
+			}
+			break;
+		case 7: // test mode
+			if($render_success) {
+				html_text2('success', gtext('Success'), gtext('Test mode, no command execution'));
+			}
+			break;
+		case 15: // rendering problem, rendering function reported no items
+			if($render_error) {
+				html_text2('error', gtext('Error'), gtext('Missing parameter'));
+			}
+			break;
+//		case 1:
+		default:
+			if($render_error) {
+				html_text2('error', gtext('Error'), gtext('An error occured.'));
+			}
+			break;
+	}
 }
 function render_set_end() {
 /*
