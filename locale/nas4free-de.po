@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-07-17 08:18+0000\n"
+"POT-Creation-Date: 2016-08-26 00:19+0000\n"
 "PO-Revision-Date: 2016-08-03 05:06+0000\n"
-"Last-Translator: crest <a.schmidhuber@gmail.com>\n"
+"Last-Translator: crest <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-24 09:13+0000\n"
+"X-Launchpad-Export-Date: 2016-08-25 22:37+0000\n"
 "X-Generator: Launchpad (build 18179)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -103,10 +103,6 @@ msgstr "%s%% verfügbar"
 #, php-format
 msgid "%s%d %s is already used by %s%d."
 msgstr "%s%d %s wird bereits von %s%d verwendet."
-
-#, php-format
-msgid "%s: cannot get mirror name."
-msgstr "%s: Mirror Name kann nicht abgerufen werden."
 
 #, php-format
 msgid "%sB available of %sB"
@@ -446,6 +442,9 @@ msgstr ""
 "wenn eine Störung oder ein neuer Fehler erkannt wurde, oder wenn ein "
 "S.M.A.R.T. Befehl an eine Festplatte fehlschlug."
 
+msgid "Active"
+msgstr ""
+
 msgid "Active Directory"
 msgstr "Active Directory"
 
@@ -457,6 +456,12 @@ msgstr "Verwendete Freigaben"
 
 msgid "Active Users"
 msgstr "Aktive Benutzer"
+
+msgid "Activities"
+msgstr ""
+
+msgid "Activity"
+msgstr ""
 
 msgid "Adaptive (Low Power Consumption)"
 msgstr "adaptiv (niedriger Energieverbrauch)"
@@ -493,6 +498,18 @@ msgstr "Virtual Device hinzufügen"
 
 msgid "Add Volume"
 msgstr "Datenträger hinzufügen"
+
+msgid "Add a cache device to a pool"
+msgstr ""
+
+msgid "Add a log device to a pool"
+msgstr ""
+
+msgid "Add a spare device to a pool"
+msgstr ""
+
+msgid "Add a virtual device to a pool"
+msgstr ""
 
 msgid "Add additional scheduled self-test."
 msgstr "Zusätzliche planmäßige Selbsttests hinzufügen."
@@ -832,6 +849,9 @@ msgid ""
 "initiator names and networks."
 msgstr ""
 
+msgid "An error occured."
+msgstr ""
+
 msgid "An host with this name already exists."
 msgstr "Ein Host mit diesem Namen existiert bereits."
 
@@ -906,6 +926,12 @@ msgstr ""
 "In der höchsten Einstellung wird dem Initiator ein Target bereitgestellt, "
 "welches aus einem oder mehreren Extents besteht."
 
+msgid "Attach a data device"
+msgstr ""
+
+msgid "Attach a log device"
+msgstr ""
+
 msgid "Attached"
 msgstr "Hinzugefügt"
 
@@ -914,13 +940,10 @@ msgid "Attaching provider '%s'."
 msgstr "Binde Provider '%s' ein."
 
 msgid ""
-"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
-"or NTFS can result in unpredictable results, file corruption and the loss of "
+"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4 or "
+"NTFS can result in unpredictable results, file corruption and the loss of "
 "data!"
 msgstr ""
-"Der Versuch andere Dateiformate, wie zum Beispiel FAT, FAT32, EXT2, EXT3, "
-"EXT4 oder NTFS zu verwenden, kann unerwartete Ergebnisse, Datenkorruption "
-"oder Datenverluste mit sich bringen!"
 
 msgid "Audio"
 msgstr "Ton"
@@ -1152,6 +1175,9 @@ msgstr "Bootloader"
 msgid "Bridge"
 msgstr "Netzwerkbrücke"
 
+msgid "Bring a device online"
+msgstr ""
+
 msgid "Broadcast interval"
 msgstr "Intervall des Netzwerk Boradcast"
 
@@ -1273,9 +1299,6 @@ msgstr ""
 "CRC-Fehler.  Die Anzahl der bei der lesenden oder schreibenden Übertragung "
 "von Daten-FIS (Frame Information Structures, s. SATA-Protokoll) "
 "aufgetretenen Cyclic Redundancy Check-Fehler."
-
-msgid "Cache Device"
-msgstr "Puffergerät"
 
 msgid "Calibration Battery"
 msgstr "Akku Calibration"
@@ -1399,6 +1422,9 @@ msgstr "Konfiguration löschen und neu von dem Software Raidl einlesen"
 msgid "Clear config and Import disks"
 msgstr "Konfiguration bereinigen und Platten importieren"
 
+msgid "Clear device errors"
+msgstr ""
+
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
 "file or XML format."
@@ -1433,6 +1459,9 @@ msgstr "Befehl"
 
 msgid "Command Scripts"
 msgstr "Befehlsskripte"
+
+msgid "Command execution was successful"
+msgstr ""
 
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
@@ -2178,6 +2207,18 @@ msgstr "Ziel-Port"
 msgid "Destination share"
 msgstr "Zielfreigabe"
 
+msgid "Destroy a pool"
+msgstr ""
+
+msgid "Destroyed"
+msgstr ""
+
+msgid "Detach a data device from a mirror"
+msgstr ""
+
+msgid "Detach a log device from a mirrored log"
+msgstr ""
+
 msgid "Detected"
 msgstr "Entdeckt"
 
@@ -2362,6 +2403,9 @@ msgstr "Festplatten | Einhängepunkt | Management"
 
 msgid "Display"
 msgstr "Anzeige"
+
+msgid "Display ZFS command history"
+msgstr ""
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -3185,8 +3229,14 @@ msgstr "Läuft ab"
 msgid "Export"
 msgstr "Exportieren"
 
+msgid "Export a pool from the system"
+msgstr ""
+
 msgid "Export all the directories in the specified path."
 msgstr "Alle Ordner im angegebenen Pfad exportieren."
+
+msgid "Exported"
+msgstr ""
 
 msgid "Extended Attributes"
 msgstr "Erweiterte Attribute"
@@ -3303,16 +3353,8 @@ msgstr "cron Job wurde nicht ausgeführt."
 msgid "Failed to remove: %s"
 msgstr "%s kann nicht entfernt werden"
 
-#, php-format
-msgid "Failed to send status report to: %s."
-msgstr "Konnte keine Statusreport an %s senden."
-
 msgid "Failed to send status report."
 msgstr "Senden des Statusreports fehlgeschlagen."
-
-#, php-format
-msgid "Failed to send test email to: %s."
-msgstr "Fehler beim Senden der Test-E-Mail an: %s."
 
 msgid "Failed to send test email."
 msgstr "Versenden der Test-E-Mail fehlgeschlagen"
@@ -3438,6 +3480,9 @@ msgstr "Markierungen"
 msgid "Follow"
 msgstr "Nachfolgen"
 
+msgid "Force Operation"
+msgstr ""
+
 msgid "Force use"
 msgstr "Erzwinge Nutzung"
 
@@ -3543,6 +3588,9 @@ msgstr "Allgemeine Einstellungen"
 
 msgid "Generate"
 msgstr "Erzeugen"
+
+msgid "Generate a new unique identifier for a pool"
+msgstr ""
 
 msgid "Generate password if leave empty."
 msgstr "Passwort wird automatisch erzeugt, wenn das Feld leer bleibt."
@@ -3746,9 +3794,6 @@ msgstr "zuzulassende Hosts"
 
 msgid "Hosts deny"
 msgstr "abzuweisende Hosts"
-
-msgid "Hot Spare"
-msgstr "Hot Spare"
 
 msgid "Hours"
 msgstr "Stunden"
@@ -4186,6 +4231,9 @@ msgstr "Wartezeit vor UPS-Neustart"
 msgid "Interval to wait before restarting the load"
 msgstr "Warteintervall bis zum Wiederanlauf der Leistung"
 
+msgid "Invalid command line option"
+msgstr ""
+
 msgid "Invalid file format or incorrect password."
 msgstr "Ungültiges Dateiformat oder falsches Passwort"
 
@@ -4315,6 +4363,9 @@ msgstr "Verschlüsselten Datenträger entfernen"
 
 msgid "Korean"
 msgstr "Koreanisch"
+
+msgid "L2 Cache"
+msgstr ""
 
 msgid "LACP (Link Aggregation Control Protocol)"
 msgstr "LACP (Link Aggregation Control Protocol)"
@@ -4492,6 +4543,9 @@ msgstr ""
 "802i/D7.0), TKIP (temporäres Schlüssel Integritätsprotokoll, IEEE "
 "802.11i/D7.0)."
 
+msgid "List or import pools"
+msgstr ""
+
 msgid "Load averages"
 msgstr "Durchschnittliche Last"
 
@@ -4566,9 +4620,6 @@ msgstr ""
 
 msgid "Log"
 msgstr "Log"
-
-msgid "Log Device"
-msgstr "Log Gerät"
 
 msgid "Log Level"
 msgstr "Log Level"
@@ -4935,6 +4986,9 @@ msgstr "Minuten bis zur nächsten Netzwerk-Zeit-Synchronisation (ntp time)."
 msgid "Missing a temporary folder."
 msgstr "Es fehlt ein tempor&auml;rer Ordner."
 
+msgid "Missing parameter"
+msgstr ""
+
 msgid "Mixed"
 msgstr "Gemischt"
 
@@ -5124,9 +5178,6 @@ msgstr ""
 "Nie - Das Gerät wird immer überprüft, unabhängig vom Energiesparzustand. "
 "Eine abgeschaltete Festplatte wird dann für die Überprüfung hochgefahren."
 
-msgid "New Device"
-msgstr "Neues Gerät"
-
 msgid "New password"
 msgstr "Neues Passwort"
 
@@ -5172,8 +5223,8 @@ msgstr "Keine konfigurierten Pools"
 msgid "No configured virtual devices."
 msgstr "Keine virtuellen Geräte konfiguriert."
 
-msgid "No device selected."
-msgstr "Kein Gerät ausgewählt."
+msgid "No devices have been selected"
+msgstr ""
 
 msgid "No disk configured"
 msgstr "Keine Festplatte konfiguriert"
@@ -5197,11 +5248,29 @@ msgstr "Keine neuen Festplatten gefunden."
 msgid "No new software raid disk found."
 msgstr "Keine neuen Software-RAID Festplatten gefunden."
 
+msgid "No pool devices have been selected"
+msgstr ""
+
 msgid "No pool was found."
 msgstr "Keinen Pool gefunden."
 
+msgid "No pools have been selected"
+msgstr ""
+
 msgid "No softraid-formatted disks available."
 msgstr "Keine SoftRAID formatierte Festplatte vorhanden."
+
+msgid "No suitable devices found."
+msgstr ""
+
+msgid "No suitable pools found."
+msgstr ""
+
+msgid "No suitable virtual devices found."
+msgstr ""
+
+msgid "No virtual devices have been selected"
+msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
 msgstr ""
@@ -5393,14 +5462,6 @@ msgstr "Altes Passwort"
 msgid "On"
 msgstr "Aktiviert"
 
-msgid ""
-"Once you add the virtual device, it becomes impossible to delete again. It "
-"recommends adding the same number of drives as the existing virtual device."
-msgstr ""
-"Ein virtuelles Gerät kann nicht mehr gelöscht werden. Es wird empfohlen die "
-"gleiche Anzahl virtueller Geräte wieder zu installieren, wie im "
-"existierenden bereits virtuellen Gerät vorhanden waren"
-
 msgid "Online"
 msgstr "In Betrieb"
 
@@ -5452,6 +5513,9 @@ msgstr "Ausgangsleistungs/Gleichspannungsinformationen"
 
 msgid "Outgoing SMTP mail server address."
 msgstr "Ausgehende SMTP Mail-Server-Adresse."
+
+msgid "Output"
+msgstr ""
 
 msgid "Output current (A)"
 msgstr "ausgansseitige Stromstärke (in A)"
@@ -5528,6 +5592,9 @@ msgstr "Schmerzhaft aggressiv"
 
 msgid "Pairwise"
 msgstr "Paarweise"
+
+msgid "Parameter"
+msgstr ""
 
 msgid "Parameter xxx (ups.conf or cmdline -x) setting"
 msgstr "Parameter xxx (ups.conf oder cmdline -x) Einstellung"
@@ -5754,11 +5821,20 @@ msgstr "Abfragezeit"
 msgid "Pool"
 msgstr "Pool"
 
+msgid "Pool Devices"
+msgstr ""
+
 msgid "Pool Information & Status"
 msgstr "Pool -Zustandsinformation"
 
-msgid "Pool Tools"
-msgstr "Werkzeuge Pool"
+msgid "Pool State"
+msgstr ""
+
+msgid "Pool Status"
+msgstr ""
+
+msgid "Pool Version"
+msgstr ""
 
 msgid "Pool cannot be changed."
 msgstr "Pool kann nicht verändert werden."
@@ -5829,6 +5905,9 @@ msgstr "Portugiesisch (Portugal)"
 
 msgid "PostInit"
 msgstr "PostInit"
+
+msgid "Potentially Active"
+msgstr ""
 
 msgid "Power Daemon"
 msgstr "Power Daemon"
@@ -6191,6 +6270,15 @@ msgstr "Remote Syslog Nachrichten"
 msgid "Removable"
 msgstr "Wechselbar"
 
+msgid "Remove a cache device from a pool"
+msgstr ""
+
+msgid "Remove a log device from a pool"
+msgstr ""
+
+msgid "Remove a spare device from a pool"
+msgstr ""
+
 msgid "Remove all entries from ARP table"
 msgstr "Lösch alle Einträge aus ARP Tabelle"
 
@@ -6200,6 +6288,9 @@ msgstr "Entfernen Sie das %s bevor Sie fortfahren."
 
 msgid "Replace Battery UPS"
 msgstr "Akku tauschen"
+
+msgid "Replace a device"
+msgstr ""
 
 msgid "Report Generator"
 msgstr "Bericht generieren"
@@ -6508,11 +6599,17 @@ msgstr "geplantes Ausschalten des Systems"
 msgid "Scheduled tests"
 msgstr "geplante Tests"
 
+msgid "Scrub a pool"
+msgstr ""
+
 msgid "Search"
 msgstr "Suchen"
 
 msgid "Search event"
 msgstr "Ereignis suchen"
+
+msgid "Search for and import all disks found"
+msgstr ""
 
 msgid "Secondary"
 msgstr "Sekundärer"
@@ -6565,12 +6662,33 @@ msgstr ""
 "Wahlen sie die Zugriffsmethode auf die NAS4Free Weboberfläche aus (HTTP oder "
 "HTTPS)."
 
+msgid "Select a cache device"
+msgstr ""
+
+msgid "Select a data device"
+msgstr ""
+
 msgid "Select a date format."
 msgstr "Datumsformat auswählen"
+
+msgid "Select a device"
+msgstr ""
 
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr ""
 "Wähle ein Gerät welches für die S.M.A.R.T. Überwachung aktiviert wurde."
+
+msgid "Select a log device"
+msgstr ""
+
+msgid "Select a pool"
+msgstr ""
+
+msgid "Select a pool device"
+msgstr ""
+
+msgid "Select a spare device"
+msgstr ""
 
 msgid "Select file system format."
 msgstr "Wählen Sie das Dateisystem Format"
@@ -6584,11 +6702,20 @@ msgstr "Objekt auswählen, welches von der Liste entfernt werden soll"
 msgid "Select mount point where to create the swap file."
 msgstr "Wählen Sie den Einhängpunkt wo die Swap Datei erzeugt werden soll."
 
+msgid "Select one or more spare devices"
+msgstr ""
+
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
 "Wählen Sie 'unformatiert' für unformatierte Festplatten und formatieren Sie "
 "diese mit dem"
+
+msgid "Select pool device"
+msgstr ""
+
+msgid "Select pools"
+msgstr ""
 
 msgid "Select read balance algorithm."
 msgstr "Wählen Sie den Read-Balance Algorithmus"
@@ -6928,6 +7055,9 @@ msgstr ""
 msgid "Spanish"
 msgstr "Spanisch"
 
+msgid "Spare"
+msgstr ""
+
 msgid "Sparse"
 msgstr "Karg"
 
@@ -7043,10 +7173,6 @@ msgstr "Status"
 msgid "Status & Information"
 msgstr "Status & Informationen"
 
-#, php-format
-msgid "Status report successfully sent to: %s."
-msgstr "Statusbericht erfolgreich versendet an: %s."
-
 msgid "Status report successfully sent."
 msgstr "Statusreport wurde erfolgreich versandt."
 
@@ -7102,6 +7228,9 @@ msgstr "Subnetz Maske"
 
 msgid "Subsystem"
 msgstr "Subsystem"
+
+msgid "Success"
+msgstr ""
 
 msgid "Successful"
 msgstr "Erfolgreich"
@@ -7268,6 +7397,9 @@ msgstr "Tag%d"
 msgid "Tag%d (%s)"
 msgstr "Tag%d (%s)"
 
+msgid "Take a device offline"
+msgstr ""
+
 msgid "Tap device"
 msgstr "TAP-Gerät"
 
@@ -7335,6 +7467,9 @@ msgstr "Temporäres Verzeichnis"
 msgid "Temporary directory to store transcoded files."
 msgstr "Temporäres Verzeichnis für umkodierte Dateien."
 
+msgid "Test Mode"
+msgstr ""
+
 msgid "Test email"
 msgstr "Test E-Mail"
 
@@ -7342,12 +7477,11 @@ msgstr "Test E-Mail"
 msgid "Test email from host: %s"
 msgstr "Test-E-Mail von Host: %s"
 
-#, php-format
-msgid "Test email successfully sent to: %s."
-msgstr "Test-E-Mail erfolgreich verschickt an: %s."
-
 msgid "Test email successfully sent."
 msgstr "Test-E-Mail erfolgreich versendet."
+
+msgid "Test mode, no command execution"
+msgstr ""
 
 msgid ""
 "The  deny  option specifies users and groups who are not allowed access to "
@@ -9104,6 +9238,9 @@ msgstr "Nichtbehobende Lesefehler lt. Betriebssystem."
 msgid "Unformated"
 msgstr "Unformatiert"
 
+msgid "Uninitialized"
+msgstr ""
+
 msgid "Uninstall package"
 msgstr "Deinstallationspaket"
 
@@ -9124,6 +9261,9 @@ msgstr "Unix charset"
 
 msgid "Unknown"
 msgstr "Unbekannt"
+
+msgid "Unknown Activity"
+msgstr ""
 
 msgid "Unknown or unformatted"
 msgstr "Unbekannt oder nicht formatiert"
@@ -9154,6 +9294,9 @@ msgstr "Aktualisierung in 5 Sekunden"
 
 msgid "Upgrade Firmware"
 msgstr "Upgrade Firmware"
+
+msgid "Upgrade ZFS and add all supported feature flags on a pool"
+msgstr ""
 
 msgid "Upload"
 msgstr "Hochladen"
@@ -9291,9 +9434,6 @@ msgstr "Benutzersuffix"
 
 msgid "Username"
 msgstr "Benutzername"
-
-msgid "Username contains invalid character(s) : "
-msgstr "Der Nutzernahme enthält nicht erlaubte Zeichen oder Buchstaben: "
 
 msgid "Username field : "
 msgstr "Nutzername: "
@@ -9741,6 +9881,9 @@ msgstr "ZFS Datensatzinformation und -status"
 msgid "ZFS Dataset Properties"
 msgstr "ZFS Datensatz Eigenschaften"
 
+msgid "ZFS Pool Tools"
+msgstr ""
+
 msgid "ZFS Snapshot Information & Status"
 msgstr "ZFS-Schnappschussinformationen & -status"
 
@@ -9776,6 +9919,9 @@ msgstr "Zeroconf/Bonjour"
 
 msgid "all encrypted disks are imported."
 msgstr "Alle verschl&uuml;sselten Platten importiert."
+
+msgid "and"
+msgstr ""
 
 msgid "change failed."
 msgstr "Die Änderungen wurden nicht durchgeführt"
@@ -9920,3 +10066,61 @@ msgstr "Benutzer"
 
 msgid "version:"
 msgstr "Version:"
+
+#, php-format
+#~ msgid "Failed to send status report to: %s."
+#~ msgstr "Konnte keine Statusreport an %s senden."
+
+#, php-format
+#~ msgid "Failed to send test email to: %s."
+#~ msgstr "Fehler beim Senden der Test-E-Mail an: %s."
+
+#~ msgid "Hot Spare"
+#~ msgstr "Hot Spare"
+
+#~ msgid "New Device"
+#~ msgstr "Neues Gerät"
+
+#~ msgid "No device selected."
+#~ msgstr "Kein Gerät ausgewählt."
+
+#, php-format
+#~ msgid "Status report successfully sent to: %s."
+#~ msgstr "Statusbericht erfolgreich versendet an: %s."
+
+#, php-format
+#~ msgid "Test email successfully sent to: %s."
+#~ msgstr "Test-E-Mail erfolgreich verschickt an: %s."
+
+#~ msgid ""
+#~ "Once you add the virtual device, it becomes impossible to delete again. It "
+#~ "recommends adding the same number of drives as the existing virtual device."
+#~ msgstr ""
+#~ "Ein virtuelles Gerät kann nicht mehr gelöscht werden. Es wird empfohlen die "
+#~ "gleiche Anzahl virtueller Geräte wieder zu installieren, wie im "
+#~ "existierenden bereits virtuellen Gerät vorhanden waren"
+
+#~ msgid "Username contains invalid character(s) : "
+#~ msgstr "Der Nutzernahme enthält nicht erlaubte Zeichen oder Buchstaben: "
+
+#~ msgid "Log Device"
+#~ msgstr "Log Gerät"
+
+#, php-format
+#~ msgid "%s: cannot get mirror name."
+#~ msgstr "%s: Mirror Name kann nicht abgerufen werden."
+
+#~ msgid "Cache Device"
+#~ msgstr "Puffergerät"
+
+#~ msgid "Pool Tools"
+#~ msgstr "Werkzeuge Pool"
+
+#~ msgid ""
+#~ "Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
+#~ "or NTFS can result in unpredictable results, file corruption and the loss of "
+#~ "data!"
+#~ msgstr ""
+#~ "Der Versuch andere Dateiformate, wie zum Beispiel FAT, FAT32, EXT2, EXT3, "
+#~ "EXT4 oder NTFS zu verwenden, kann unerwartete Ergebnisse, Datenkorruption "
+#~ "oder Datenverluste mit sich bringen!"

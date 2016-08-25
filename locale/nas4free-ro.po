@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-17 08:18+0000\n"
+"POT-Creation-Date: 2016-08-26 00:19+0000\n"
 "PO-Revision-Date: 2016-08-19 13:58+0000\n"
 "Last-Translator: peter <peterswebdesign2010@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-24 09:13+0000\n"
+"X-Launchpad-Export-Date: 2016-08-25 22:37+0000\n"
 "X-Generator: Launchpad (build 18179)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -101,10 +101,6 @@ msgstr "%s%% disponibil"
 #, php-format
 msgid "%s%d %s is already used by %s%d."
 msgstr "%s%d %s este deja utilizat de %s%d."
-
-#, php-format
-msgid "%s: cannot get mirror name."
-msgstr "%s: nu se obtine denumirea stocarii"
 
 #, php-format
 msgid "%sB available of %sB"
@@ -438,6 +434,9 @@ msgstr ""
 "Activați raportul prin email dacă doriți să fiți informat în cazul apariției "
 "unei erori sau unei defecțiuni la discuri (monitorizare S.M.A.R.T.)"
 
+msgid "Active"
+msgstr ""
+
 msgid "Active Directory"
 msgstr "Active Directory (AD)"
 
@@ -449,6 +448,12 @@ msgstr "Partajări active"
 
 msgid "Active Users"
 msgstr "Utilizatori activi"
+
+msgid "Activities"
+msgstr ""
+
+msgid "Activity"
+msgstr ""
 
 msgid "Adaptive (Low Power Consumption)"
 msgstr "Adaptiv (Consum redus de energie)"
@@ -485,6 +490,18 @@ msgstr "Adăugare Dispozitiv virtual"
 
 msgid "Add Volume"
 msgstr "Adăugare volum"
+
+msgid "Add a cache device to a pool"
+msgstr ""
+
+msgid "Add a log device to a pool"
+msgstr ""
+
+msgid "Add a spare device to a pool"
+msgstr ""
+
+msgid "Add a virtual device to a pool"
+msgstr ""
 
 msgid "Add additional scheduled self-test."
 msgstr "Adăugare auto-test suplimentar programat."
@@ -826,6 +843,9 @@ msgstr ""
 "Un Grup Inițiator este identificat printr-un tag și definește inițiatorii "
 "autorizați și rețelele."
 
+msgid "An error occured."
+msgstr ""
+
 msgid "An host with this name already exists."
 msgstr "Un sistem cu acest nume există deja."
 
@@ -899,6 +919,12 @@ msgstr ""
 "La cel mai înalt nivel, o destinație este ceea ce este prezentat "
 "inițiatorului, și este alcătuită din una sau mai multe extensii."
 
+msgid "Attach a data device"
+msgstr ""
+
+msgid "Attach a log device"
+msgstr ""
+
 msgid "Attached"
 msgstr "Atașat"
 
@@ -907,12 +933,10 @@ msgid "Attaching provider '%s'."
 msgstr "Atașează providerul '%s'."
 
 msgid ""
-"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
-"or NTFS can result in unpredictable results, file corruption and the loss of "
+"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4 or "
+"NTFS can result in unpredictable results, file corruption and the loss of "
 "data!"
 msgstr ""
-"Utilizarea altor formate ca FAT, FAT32, EXT2, EXT3, EXT4, sau NTFS poate "
-"avea rezultate imprevizibile sau poate determina pierderi de date!"
 
 msgid "Audio"
 msgstr "Audio"
@@ -1142,6 +1166,9 @@ msgstr "Bootloader"
 msgid "Bridge"
 msgstr "Bridge"
 
+msgid "Bring a device online"
+msgstr ""
+
 msgid "Broadcast interval"
 msgstr "Interval transmisie"
 
@@ -1263,9 +1290,6 @@ msgid ""
 msgstr ""
 "Număr erori CRC. Contorizează numărul erorilor CRC (erori FIS CRC la "
 "citire/scriere)."
-
-msgid "Cache Device"
-msgstr "Dispozitiv Cache"
 
 msgid "Calibration Battery"
 msgstr "Calibrare acumulator"
@@ -1390,6 +1414,9 @@ msgstr "Ștergere configurație & Import discuri Raid software"
 msgid "Clear config and Import disks"
 msgstr "Ştergere Configurație și Import discuri"
 
+msgid "Clear device errors"
+msgstr ""
+
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
 "file or XML format."
@@ -1424,6 +1451,9 @@ msgstr "Comandă"
 
 msgid "Command Scripts"
 msgstr "Scripturi comenzi"
+
+msgid "Command execution was successful"
+msgstr ""
 
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
@@ -2224,6 +2254,18 @@ msgstr "Port destinație"
 msgid "Destination share"
 msgstr "Partajare Destinație"
 
+msgid "Destroy a pool"
+msgstr ""
+
+msgid "Destroyed"
+msgstr ""
+
+msgid "Detach a data device from a mirror"
+msgstr ""
+
+msgid "Detach a log device from a mirrored log"
+msgstr ""
+
 msgid "Detected"
 msgstr "Detectat"
 
@@ -2408,6 +2450,9 @@ msgstr "Discuri | Punct de montare | Management"
 
 msgid "Display"
 msgstr "Afișare"
+
+msgid "Display ZFS command history"
+msgstr ""
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -3222,8 +3267,14 @@ msgstr "Expiră la"
 msgid "Export"
 msgstr "Exportă"
 
+msgid "Export a pool from the system"
+msgstr ""
+
 msgid "Export all the directories in the specified path."
 msgstr "Exportă toate directoarele din calea specificată."
+
+msgid "Exported"
+msgstr ""
 
 msgid "Extended Attributes"
 msgstr "Atribute extinse"
@@ -3340,16 +3391,8 @@ msgstr "Eroare execuție acțiune din lista cron."
 msgid "Failed to remove: %s"
 msgstr "Eroare eliminare: %s"
 
-#, php-format
-msgid "Failed to send status report to: %s."
-msgstr "Eroare transmitere raport de stare la %s."
-
 msgid "Failed to send status report."
 msgstr "Eroare trimitere raport de stare."
-
-#, php-format
-msgid "Failed to send test email to: %s."
-msgstr "Eroare transmitere email de test la: %s."
 
 msgid "Failed to send test email."
 msgstr "Eroare trimitere email de test."
@@ -3474,6 +3517,9 @@ msgstr "Indicatori"
 msgid "Follow"
 msgstr "Urmărire"
 
+msgid "Force Operation"
+msgstr ""
+
 msgid "Force use"
 msgstr "Forțare utilizare"
 
@@ -3581,6 +3627,9 @@ msgstr "Setări generale"
 
 msgid "Generate"
 msgstr "Generare"
+
+msgid "Generate a new unique identifier for a pool"
+msgstr ""
 
 msgid "Generate password if leave empty."
 msgstr "Generare parolă pentru câmp nul."
@@ -3788,9 +3837,6 @@ msgstr "Adrese permise"
 
 msgid "Hosts deny"
 msgstr "Adrese blocate"
-
-msgid "Hot Spare"
-msgstr "Rezervă de urgență (Hot Spare)"
 
 msgid "Hours"
 msgstr "Ore"
@@ -4234,6 +4280,9 @@ msgstr "Timp de așteptare pînă la repornirea UPS-ului"
 msgid "Interval to wait before restarting the load"
 msgstr "Timp de așteptare pînă la repornirea sarcinii"
 
+msgid "Invalid command line option"
+msgstr ""
+
 msgid "Invalid file format or incorrect password."
 msgstr "Format invalid de fișier sau parolă incorectă."
 
@@ -4366,6 +4415,9 @@ msgstr "Distrugere volum criptat"
 
 msgid "Korean"
 msgstr "Koreană"
+
+msgid "L2 Cache"
+msgstr ""
 
 msgid "LACP (Link Aggregation Control Protocol)"
 msgstr "LACP (Protocol de Control Agregare Legături)"
@@ -4536,6 +4588,9 @@ msgstr ""
 "CCMP (AES în modul Counter cu CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
 "(Temporal Key Integrity Protocol, IEEE 802.11i/D7.0)."
 
+msgid "List or import pools"
+msgstr ""
+
 msgid "Load"
 msgstr "Încărcare"
 
@@ -4613,9 +4668,6 @@ msgstr ""
 
 msgid "Log"
 msgstr "Jurnal"
-
-msgid "Log Device"
-msgstr "Dispozitiv pentru jurnal"
 
 msgid "Log Level"
 msgstr "Nivel Jurnal"
@@ -4976,6 +5028,9 @@ msgstr "Minute până la următoarea sincronizare."
 msgid "Missing a temporary folder."
 msgstr "Lipsește un folder temporar."
 
+msgid "Missing parameter"
+msgstr ""
+
 msgid "Mixed"
 msgstr "Amestecate"
 
@@ -5165,9 +5220,6 @@ msgstr ""
 "energetic. Verificarea dispozitivului poate determina ca un disc care are "
 "platanele oprite să le pună în funcțiune."
 
-msgid "New Device"
-msgstr "Dispozitiv nou"
-
 msgid "New password"
 msgstr "Parola nouă"
 
@@ -5213,8 +5265,8 @@ msgstr "Nu există nicio structură pool configurată."
 msgid "No configured virtual devices."
 msgstr "Niciun dispozitiv virtual configurat."
 
-msgid "No device selected."
-msgstr "Niciun dispozitiv selectat."
+msgid "No devices have been selected"
+msgstr ""
 
 msgid "No disk configured"
 msgstr "Niciun disc configurat"
@@ -5238,11 +5290,29 @@ msgstr "Nu exista dispozitive de stocare noi."
 msgid "No new software raid disk found."
 msgstr "Nu exista dispozitive RAID-Soft  noi."
 
+msgid "No pool devices have been selected"
+msgstr ""
+
 msgid "No pool was found."
 msgstr "Nu a fost găsită nicio structură (pool)."
 
+msgid "No pools have been selected"
+msgstr ""
+
 msgid "No softraid-formatted disks available."
 msgstr "Niciun disc formatat soft-raid nu este disponibil."
+
+msgid "No suitable devices found."
+msgstr ""
+
+msgid "No suitable pools found."
+msgstr ""
+
+msgid "No suitable virtual devices found."
+msgstr ""
+
+msgid "No virtual devices have been selected"
+msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Doar intrări de refuz moștenite"
@@ -5433,14 +5503,6 @@ msgstr "Parola veche"
 msgid "On"
 msgstr "Pornit"
 
-msgid ""
-"Once you add the virtual device, it becomes impossible to delete again. It "
-"recommends adding the same number of drives as the existing virtual device."
-msgstr ""
-"Odată adăugat dispozitivul virtual devine imposibilă ștergerea lui. E "
-"recomandabil să adăugați același număr de unităţi ca cel al dispozitivelor "
-"virtuale existente."
-
 msgid "Online"
 msgstr "Activ"
 
@@ -5492,6 +5554,9 @@ msgstr "Puterea de ieșire/Informații Invertor"
 
 msgid "Outgoing SMTP mail server address."
 msgstr "Adresă server email pentru trimitere"
+
+msgid "Output"
+msgstr ""
 
 msgid "Output current (A)"
 msgstr "Curentul de ieșire (A)"
@@ -5571,6 +5636,9 @@ msgstr "Agresiv extrem"
 
 msgid "Pairwise"
 msgstr "Pereche"
+
+msgid "Parameter"
+msgstr ""
 
 msgid "Parameter xxx (ups.conf or cmdline -x) setting"
 msgstr "Setările pentru parametrul xxx (ups.conf sau cmdline -x)"
@@ -5797,11 +5865,20 @@ msgstr "Interval verificare"
 msgid "Pool"
 msgstr "Structură"
 
+msgid "Pool Devices"
+msgstr ""
+
 msgid "Pool Information & Status"
 msgstr "Informații & Stare Pool"
 
-msgid "Pool Tools"
-msgstr "Unelte structură pool"
+msgid "Pool State"
+msgstr ""
+
+msgid "Pool Status"
+msgstr ""
+
+msgid "Pool Version"
+msgstr ""
 
 msgid "Pool cannot be changed."
 msgstr "Structura pool nu poate fi modificată."
@@ -5872,6 +5949,9 @@ msgstr "Portugheză (Portugalia)"
 
 msgid "PostInit"
 msgstr "PostInițializare"
+
+msgid "Potentially Active"
+msgstr ""
 
 msgid "Power Daemon"
 msgstr "Daemon Energetic"
@@ -6237,6 +6317,15 @@ msgstr "Mesaje syslog remote"
 msgid "Removable"
 msgstr "Detașabil"
 
+msgid "Remove a cache device from a pool"
+msgstr ""
+
+msgid "Remove a log device from a pool"
+msgstr ""
+
+msgid "Remove a spare device from a pool"
+msgstr ""
+
 msgid "Remove all entries from ARP table"
 msgstr "Șterge toate intrările din tabela ARP"
 
@@ -6246,6 +6335,9 @@ msgstr "Ștergeți %s înainte de a merge mai departe."
 
 msgid "Replace Battery UPS"
 msgstr "Înlocuiți acumulatorul"
+
+msgid "Replace a device"
+msgstr ""
 
 msgid "Report Generator"
 msgstr "Generator de Rapoarte"
@@ -6555,11 +6647,17 @@ msgstr "Oprire programată"
 msgid "Scheduled tests"
 msgstr "Teste programate"
 
+msgid "Scrub a pool"
+msgstr ""
+
 msgid "Search"
 msgstr "Căutare"
 
 msgid "Search event"
 msgstr "Eveniment căutare"
+
+msgid "Search for and import all disks found"
+msgstr ""
 
 msgid "Secondary"
 msgstr "Secundar"
@@ -6610,12 +6708,33 @@ msgstr ""
 "Selectați protocolul Hypertext Transfer Protocol (HTTP) sau Hypertext "
 "Transfer Protocol Secure (HTTPS) pentru accesarea Interfeței Grafice."
 
+msgid "Select a cache device"
+msgstr ""
+
+msgid "Select a data device"
+msgstr ""
+
 msgid "Select a date format."
 msgstr "Selectare format dată."
+
+msgid "Select a device"
+msgstr ""
 
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr ""
 "Selectați un disc care are activată opțiunea de monitorizare S.M.A.R.T."
+
+msgid "Select a log device"
+msgstr ""
+
+msgid "Select a pool"
+msgstr ""
+
+msgid "Select a pool device"
+msgstr ""
+
+msgid "Select a spare device"
+msgstr ""
 
 msgid "Select file system format."
 msgstr "Selectare format sistem fișiere."
@@ -6629,11 +6748,20 @@ msgstr "Selectați un element din listă pentru eliminare"
 msgid "Select mount point where to create the swap file."
 msgstr "Selectați un punct de montare unde va fi creat fișierul 'swap'."
 
+msgid "Select one or more spare devices"
+msgstr ""
+
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
 "Selectați opțiunea 'Neformatat' pentru discuri neformatate și formatați-le "
 "folosind"
+
+msgid "Select pool device"
+msgstr ""
+
+msgid "Select pools"
+msgstr ""
 
 msgid "Select read balance algorithm."
 msgstr "Selectați algoritmul de balans."
@@ -6974,6 +7102,9 @@ msgstr ""
 msgid "Spanish"
 msgstr "Spaniolă"
 
+msgid "Spare"
+msgstr ""
+
 msgid "Sparse"
 msgstr "Împrăștiat"
 
@@ -7090,10 +7221,6 @@ msgstr "Rute Statice"
 msgid "Status & Information"
 msgstr "Stare & Informații"
 
-#, php-format
-msgid "Status report successfully sent to: %s."
-msgstr "Raportul de stare a fost trimis cu succes la: %s."
-
 msgid "Status report successfully sent."
 msgstr "Raportul de stare a fost trimis cu succes."
 
@@ -7148,6 +7275,9 @@ msgstr "Mască subrețea"
 
 msgid "Subsystem"
 msgstr "Subsistem"
+
+msgid "Success"
+msgstr ""
 
 msgid "Successful"
 msgstr "Cu succes"
@@ -7314,6 +7444,9 @@ msgstr "Eticheta%d"
 msgid "Tag%d (%s)"
 msgstr "Eticheta%d (%s)"
 
+msgid "Take a device offline"
+msgstr ""
+
 msgid "Tap device"
 msgstr "Dispozitiv tap"
 
@@ -7382,6 +7515,9 @@ msgstr "Folder temporar"
 msgid "Temporary directory to store transcoded files."
 msgstr "Folder temporar pentru stocarea fișierelor convertite."
 
+msgid "Test Mode"
+msgstr ""
+
 msgid "Test email"
 msgstr "Email de test"
 
@@ -7389,12 +7525,11 @@ msgstr "Email de test"
 msgid "Test email from host: %s"
 msgstr "Email de test de la: %s"
 
-#, php-format
-msgid "Test email successfully sent to: %s."
-msgstr "Email de test trimis cu succes la: %s"
-
 msgid "Test email successfully sent."
 msgstr "Emailul de test a fost trimis cu succes."
+
+msgid "Test mode, no command execution"
+msgstr ""
 
 msgid ""
 "The  deny  option specifies users and groups who are not allowed access to "
@@ -9108,6 +9243,9 @@ msgstr "Numărul de erori necorectate raportate de sistemul de operare."
 msgid "Unformated"
 msgstr "Neformatat"
 
+msgid "Uninitialized"
+msgstr ""
+
 msgid "Uninstall package"
 msgstr "Dezinstalare pachet"
 
@@ -9128,6 +9266,9 @@ msgstr "Caractere Unix"
 
 msgid "Unknown"
 msgstr "Necunoscut"
+
+msgid "Unknown Activity"
+msgstr ""
 
 msgid "Unknown or unformatted"
 msgstr "Necunoscut sau neformatat"
@@ -9158,6 +9299,9 @@ msgstr "Actualizare în 5 secunde."
 
 msgid "Upgrade Firmware"
 msgstr "Upgrade firmware"
+
+msgid "Upgrade ZFS and add all supported feature flags on a pool"
+msgstr ""
 
 msgid "Upload"
 msgstr "Încărcare"
@@ -9299,9 +9443,6 @@ msgstr "Sufix user"
 
 msgid "Username"
 msgstr "Nume Utilizator"
-
-msgid "Username contains invalid character(s) : "
-msgstr "Numele de utilizator conţine caractere invalide : "
 
 msgid "Username field : "
 msgstr "Cîmp nume utilizator : "
@@ -9752,6 +9893,9 @@ msgstr "Informații & Stare sistem ZFS"
 msgid "ZFS Dataset Properties"
 msgstr "Proprietăți sistem ZFS"
 
+msgid "ZFS Pool Tools"
+msgstr ""
+
 msgid "ZFS Snapshot Information & Status"
 msgstr "Informații & Stare imagine ZFS"
 
@@ -9786,6 +9930,9 @@ msgstr "Zeroconf/Bonjour"
 
 msgid "all encrypted disks are imported."
 msgstr "toate discurile criptate sînt importate."
+
+msgid "and"
+msgstr ""
 
 msgid "change failed."
 msgstr "schimbare eșuată."
@@ -9930,3 +10077,60 @@ msgstr "utilizator"
 
 msgid "version:"
 msgstr "versiune:"
+
+#~ msgid "New Device"
+#~ msgstr "Dispozitiv nou"
+
+#, php-format
+#~ msgid "Failed to send status report to: %s."
+#~ msgstr "Eroare transmitere raport de stare la %s."
+
+#~ msgid "No device selected."
+#~ msgstr "Niciun dispozitiv selectat."
+
+#, php-format
+#~ msgid "Status report successfully sent to: %s."
+#~ msgstr "Raportul de stare a fost trimis cu succes la: %s."
+
+#, php-format
+#~ msgid "Test email successfully sent to: %s."
+#~ msgstr "Email de test trimis cu succes la: %s"
+
+#~ msgid "Cache Device"
+#~ msgstr "Dispozitiv Cache"
+
+#, php-format
+#~ msgid "Failed to send test email to: %s."
+#~ msgstr "Eroare transmitere email de test la: %s."
+
+#~ msgid "Hot Spare"
+#~ msgstr "Rezervă de urgență (Hot Spare)"
+
+#~ msgid ""
+#~ "Once you add the virtual device, it becomes impossible to delete again. It "
+#~ "recommends adding the same number of drives as the existing virtual device."
+#~ msgstr ""
+#~ "Odată adăugat dispozitivul virtual devine imposibilă ștergerea lui. E "
+#~ "recomandabil să adăugați același număr de unităţi ca cel al dispozitivelor "
+#~ "virtuale existente."
+
+#~ msgid "Username contains invalid character(s) : "
+#~ msgstr "Numele de utilizator conţine caractere invalide : "
+
+#, php-format
+#~ msgid "%s: cannot get mirror name."
+#~ msgstr "%s: nu se obtine denumirea stocarii"
+
+#~ msgid "Log Device"
+#~ msgstr "Dispozitiv pentru jurnal"
+
+#~ msgid ""
+#~ "Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
+#~ "or NTFS can result in unpredictable results, file corruption and the loss of "
+#~ "data!"
+#~ msgstr ""
+#~ "Utilizarea altor formate ca FAT, FAT32, EXT2, EXT3, EXT4, sau NTFS poate "
+#~ "avea rezultate imprevizibile sau poate determina pierderi de date!"
+
+#~ msgid "Pool Tools"
+#~ msgstr "Unelte structură pool"

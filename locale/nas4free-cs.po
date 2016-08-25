@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-07-17 08:18+0000\n"
-"PO-Revision-Date: 2016-08-17 19:35+0000\n"
+"POT-Creation-Date: 2016-08-26 00:19+0000\n"
+"PO-Revision-Date: 2016-08-25 12:51+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-24 09:12+0000\n"
+"X-Launchpad-Export-Date: 2016-08-25 22:36+0000\n"
 "X-Generator: Launchpad (build 18179)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -82,6 +82,8 @@ msgstr "%s je příliš dlouhé."
 msgid ""
 "%s must be enabled for Unison to work, and the %s must have shell access."
 msgstr ""
+"Pro fungování Unison je třeba, aby %s bylo zapnuté a uživatel %s měl přístup "
+"k shellu."
 
 #, php-format
 msgid "%s of %sB"
@@ -98,10 +100,6 @@ msgstr "%s%% k dispozici"
 #, php-format
 msgid "%s%d %s is already used by %s%d."
 msgstr "%s%d %s je už používáno %s%d."
-
-#, php-format
-msgid "%s: cannot get mirror name."
-msgstr "%s: nedaří se získat název zrcadla (mirror) instalačního zdroje."
 
 #, php-format
 msgid "%sB available of %sB"
@@ -230,6 +228,8 @@ msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
 "listening TCP ports."
 msgstr ""
+"Skupina portálu je určena číslem značky (tag) a určuje IP adresy a TCP "
+"porty, na kterých je očekáváno spojení."
 
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
@@ -436,6 +436,9 @@ msgstr ""
 "nezdařeném SMART příkazu na jednotce datového úložiště, zapněte hlášení e-"
 "mailem."
 
+msgid "Active"
+msgstr ""
+
 msgid "Active Directory"
 msgstr "Active Directory"
 
@@ -447,6 +450,12 @@ msgstr "Sdílení, ke kterým je právě přistupováno"
 
 msgid "Active Users"
 msgstr "Aktivní uživatelé"
+
+msgid "Activities"
+msgstr ""
+
+msgid "Activity"
+msgstr ""
 
 msgid "Adaptive (Low Power Consumption)"
 msgstr "Přizpůsobivé (nízká spotřeba energie)"
@@ -483,6 +492,18 @@ msgstr "Přidat virtuální zařízení"
 
 msgid "Add Volume"
 msgstr "Přidat svazek"
+
+msgid "Add a cache device to a pool"
+msgstr ""
+
+msgid "Add a log device to a pool"
+msgstr ""
+
+msgid "Add a spare device to a pool"
+msgstr ""
+
+msgid "Add a virtual device to a pool"
+msgstr ""
 
 msgid "Add additional scheduled self-test."
 msgstr "Přidat další naplánovaný samotest."
@@ -599,7 +620,7 @@ msgid "Advanced Configuration"
 msgstr "Pokročilá nastavení"
 
 msgid "Advanced Format"
-msgstr ""
+msgstr "Pokročilý formát (AF)"
 
 msgid "Advanced Options"
 msgstr "Pokročilé předvolby"
@@ -662,6 +683,8 @@ msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
 "an empty UFS directory is recommended."
 msgstr ""
+"Veškerá data v zadaném umístění jsou přepsána. Je doporučeno použít prázdnou "
+"UFS složku a vyhnout se tak neplatným datům / přístupovým právům."
 
 msgid "All data will be lost when you activate this option!"
 msgstr "Pokud zapnete tuto volbu, všechna data budou ztracena!"
@@ -808,13 +831,20 @@ msgid ""
 "does not use CHAP authentication it defines authorised users and secrets for "
 "additional security."
 msgstr ""
+"Skupina ověřených je určena číslem značky (tag) a není povinná. Pokud cíl "
+"nepoužívá CHAP ověřování, určuje tato skupina pověřené uživatele a hesla."
 
 msgid "An Extent defines the storage area of the Target."
-msgstr ""
+msgstr "Úložná jednotka určuje úložnou oblast na cíli."
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
 "initiator names and networks."
+msgstr ""
+"Skupina iniciátorů je určena číslem značky (tag) a určuje názvy a sítě "
+"pověřených iniciátorů."
+
+msgid "An error occured."
 msgstr ""
 
 msgid "An host with this name already exists."
@@ -890,6 +920,12 @@ msgstr ""
 "Na nejvyšší úrovni abstrakce, je cíl to, co je představováno iniciátoru a je "
 "tvořeno jednou nebo více úložnými jednotkami."
 
+msgid "Attach a data device"
+msgstr ""
+
+msgid "Attach a log device"
+msgstr ""
+
 msgid "Attached"
 msgstr "Připojeno"
 
@@ -898,8 +934,8 @@ msgid "Attaching provider '%s'."
 msgstr "Připojování poskytovatele %s"
 
 msgid ""
-"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
-"or NTFS can result in unpredictable results, file corruption and the loss of "
+"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4 or "
+"NTFS can result in unpredictable results, file corruption and the loss of "
 "data!"
 msgstr ""
 
@@ -1131,6 +1167,9 @@ msgstr "Zavaděč"
 msgid "Bridge"
 msgstr "Síťový most"
 
+msgid "Bring a device online"
+msgstr ""
+
 msgid "Broadcast interval"
 msgstr "Interval všesměrového vysílání"
 
@@ -1253,9 +1292,6 @@ msgid ""
 "error)."
 msgstr "Počet CRC chyb. Počítá CRC chyby (FIS CRC při čtení/zápisu dat)."
 
-msgid "Cache Device"
-msgstr "Zařízení mezipaměti"
-
 msgid "Calibration Battery"
 msgstr "Kalibrace akumulátorů"
 
@@ -1313,7 +1349,7 @@ msgid "Change password"
 msgstr "Změnit heslo"
 
 msgid "Change the IP address of your computer"
-msgstr ""
+msgstr "Změňte IP adresu počítače, ze kterého přistupujete"
 
 msgid "Change the IP address of your server"
 msgstr "Změňte IP adresu tohoto serveru"
@@ -1328,7 +1364,7 @@ msgid "Charging Battery"
 msgstr "Nabíjení akumulátorů"
 
 msgid "Check System|General Setup before initializing"
-msgstr ""
+msgstr "Před inicializací zkontrolujte Systém | Obecná nastavení"
 
 msgid "Check and replace cable"
 msgstr "Zkontrolujte a nahraďte kabel"
@@ -1344,7 +1380,7 @@ msgid ""
 msgstr ""
 
 msgid "Check the list of available drivers"
-msgstr ""
+msgstr "Zkontrolovat seznam ovladačů, které jsou k dispozici"
 
 msgid "Chinese (Simplified)"
 msgstr "čínština (zjednodušená)"
@@ -1377,6 +1413,9 @@ msgstr "Vyčistit nastavení a importovat disky softwarového RAID pole"
 
 msgid "Clear config and Import disks"
 msgstr "Vyčistit nastavení a importovat disky"
+
+msgid "Clear device errors"
+msgstr ""
 
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
@@ -1413,6 +1452,9 @@ msgstr "Příkaz"
 
 msgid "Command Scripts"
 msgstr "Skripty příkazu"
+
+msgid "Command execution was successful"
+msgstr ""
 
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
@@ -1898,6 +1940,7 @@ msgstr ""
 msgid ""
 "DO NOT try to flash other files than a valid '%s-%s-embedded.img.xz' file."
 msgstr ""
+"NEPOKOUŠEJTE se zapsat jiný než platný „%s-%s-embedded.img.xz“ soubor."
 
 msgid "DVD"
 msgstr "DVD"
@@ -2203,6 +2246,18 @@ msgstr "Cílový port"
 msgid "Destination share"
 msgstr "Cílové sdílení"
 
+msgid "Destroy a pool"
+msgstr ""
+
+msgid "Destroyed"
+msgstr ""
+
+msgid "Detach a data device from a mirror"
+msgstr ""
+
+msgid "Detach a log device from a mirrored log"
+msgstr ""
+
 msgid "Detected"
 msgstr "Rozpoznáno"
 
@@ -2387,6 +2442,9 @@ msgstr "Disky | Přípojný bod | Správa"
 msgid "Display"
 msgstr "Zobrazit"
 
+msgid "Display ZFS command history"
+msgstr ""
+
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
@@ -2404,12 +2462,16 @@ msgstr ""
 msgid ""
 "Do not erase the Master Boot Record (useful for some RAID controller cards)."
 msgstr ""
+"Nemazat hlavní zaváděcí záznam (MBR) – potřebné v případě některých řadičů "
+"RAID polí (ukládají zde nastavení)."
 
 #, php-format
 msgid ""
 "Do not let the server check for newer firmware versions when the %s page "
 "gets loaded."
 msgstr ""
+"Když je načítána stránka %s, neumožnit serveru zjišťovat dostupnost nových "
+"verzí systému."
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2849,7 +2911,7 @@ msgid "Enable"
 msgstr "Zapnout"
 
 msgid "Enable 'Asynchronous I/O (AIO)' switch."
-msgstr ""
+msgstr "Zapnout přepínač „Asynchronní vst./výst. (AIO)“."
 
 msgid "Enable 'Large read/write' switch."
 msgstr ""
@@ -2985,7 +3047,7 @@ msgid "Enable nested virtualization"
 msgstr "Zapnout vnořenou virtualizaci"
 
 msgid "Enable or disable checks of the server certificate."
-msgstr ""
+msgstr "Vypnout nebo zapnout kontrolu certifikátu serveru"
 
 msgid "Enable peer exchange (PEX)."
 msgstr "Umožnit výměnu stran (PEX)."
@@ -3050,7 +3112,7 @@ msgid "Enable tuning of some kernel variables."
 msgstr "Umožnit ladění některých proměnných jádra systému."
 
 msgid "Enable tuning switch"
-msgstr ""
+msgstr "Zapnout přepínač vyladění"
 
 msgid "Enable write cache mode."
 msgstr "Zapnout režim zápisu s mezipamětí."
@@ -3203,8 +3265,14 @@ msgstr "Platnost skončí v"
 msgid "Export"
 msgstr "Exportovat"
 
+msgid "Export a pool from the system"
+msgstr ""
+
 msgid "Export all the directories in the specified path."
 msgstr "Exportovat všechny složky v zadaném umístění."
+
+msgid "Exported"
+msgstr ""
 
 msgid "Extended Attributes"
 msgstr "Rozšířené atributy"
@@ -3321,16 +3389,8 @@ msgstr "Nezdařilo se vykonat naplánovanou (cron) úlohu."
 msgid "Failed to remove: %s"
 msgstr "Nezdařilo se odstranit: %s"
 
-#, php-format
-msgid "Failed to send status report to: %s."
-msgstr "Nezdařilo se poslat hlášení o stavu na: %s"
-
 msgid "Failed to send status report."
 msgstr "Odeslání hlášení o stavu se nezdařilo."
-
-#, php-format
-msgid "Failed to send test email to: %s."
-msgstr "Nezdařilo se odeslat zkušební e-mail na: %s."
 
 msgid "Failed to send test email."
 msgstr "Odeslání zkušebního e-mailu se nezdařilo."
@@ -3458,6 +3518,9 @@ msgstr "Příznaky"
 msgid "Follow"
 msgstr "Následovat"
 
+msgid "Force Operation"
+msgstr ""
+
 msgid "Force use"
 msgstr "Vynutit použití"
 
@@ -3564,6 +3627,9 @@ msgstr "Obecná nastavení"
 
 msgid "Generate"
 msgstr "Vytvořit"
+
+msgid "Generate a new unique identifier for a pool"
+msgstr ""
 
 msgid "Generate password if leave empty."
 msgstr "Vytvořit heslo, pokud ponecháno nevyplněné."
@@ -3717,7 +3783,7 @@ msgid "Help"
 msgstr "Nápověda"
 
 msgid "Hiadaptive (High Performance)"
-msgstr ""
+msgstr "Vysoce přizpůsobivé (vysoký výkon)"
 
 msgid "Hide dot files"
 msgstr "Nezobrazovat skryté soubory (s názvy začínajícími tečkou)"
@@ -3773,9 +3839,6 @@ msgstr "Stroje, kterým umožnit přístup"
 
 msgid "Hosts deny"
 msgstr "Stroje, kterým odepřít přístup"
-
-msgid "Hot Spare"
-msgstr "Pohotovostní náhrada"
 
 msgid "Hours"
 msgstr "Hodiny"
@@ -3927,6 +3990,8 @@ msgstr ""
 msgid ""
 "If this message persist take a look at the system log for more information."
 msgstr ""
+"Pokud se toto hlášení bude i nadále opakovat, je třeba zjistit podrobnosti "
+"ze záznamu událostí systému."
 
 msgid ""
 "If this option is checked, IP addresses in the server logs are resolved to "
@@ -4210,6 +4275,9 @@ msgstr "Prodleva restartu UPS zdroje)"
 msgid "Interval to wait before restarting the load"
 msgstr "Prodleva obnovení napájení do připojených zařízení"
 
+msgid "Invalid command line option"
+msgstr ""
+
 msgid "Invalid file format or incorrect password."
 msgstr "Neplatný formát souboru nebo nesprávné heslo"
 
@@ -4339,6 +4407,9 @@ msgstr "Zlikvidovat šifrovaný svazek"
 
 msgid "Korean"
 msgstr "korejština"
+
+msgid "L2 Cache"
+msgstr ""
 
 msgid "LACP (Link Aggregation Control Protocol)"
 msgstr ""
@@ -4518,6 +4589,9 @@ msgstr ""
 "(AES v režimu čítače s CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP (Protokol "
 "celistvosti časového klíče, IEEE 802.11i/D7.0)."
 
+msgid "List or import pools"
+msgstr ""
+
 msgid "Load"
 msgstr "Vytížení"
 
@@ -4594,9 +4668,6 @@ msgstr "Umístění pracovních souborů, např. %s/backup/.unison"
 
 msgid "Log"
 msgstr "Záznam událostí"
-
-msgid "Log Device"
-msgstr "Zařízení, na které zaznamenávat události"
 
 msgid "Log Level"
 msgstr "Podrobnost protokolování"
@@ -4810,7 +4881,7 @@ msgid "MaxRecvDataSegmentLength"
 msgstr "MaxDelkaPrijmutehoDatovehoSegmentu"
 
 msgid "Maximum (Highest Performance)"
-msgstr ""
+msgstr "Nejvíce (nejvyšší výkon)"
 
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr "Nejvyšší výkon, nevyšší hlučnost"
@@ -4934,7 +5005,7 @@ msgid "Minimum"
 msgstr "Nejnižší hodnota"
 
 msgid "Minimum (Lowest Performance)"
-msgstr ""
+msgstr "Nejméně (nejnižší výkon)"
 
 msgid "Minimum Free Space"
 msgstr "Přinejmenším volného prostoru"
@@ -4967,6 +5038,9 @@ msgstr "Minut mezi příští synchronizací času ze sítě."
 
 msgid "Missing a temporary folder."
 msgstr "Chybí dočasná složka."
+
+msgid "Missing parameter"
+msgstr ""
 
 msgid "Mixed"
 msgstr "Smíšené"
@@ -5160,9 +5234,6 @@ msgstr ""
 "Nikdy – Dotazovat (kontrolovat) zařízení bez ohledu na to, v jakém režimu "
 "napájení se nachází Tato volba může způsobovat roztáčení zastavených disků."
 
-msgid "New Device"
-msgstr "Nové zařízení"
-
 msgid "New password"
 msgstr "Nové heslo"
 
@@ -5176,7 +5247,7 @@ msgid "No DNS setting found."
 msgstr "Nebyla nalezena žádná nastavení DNS."
 
 msgid "No Extent has been configured."
-msgstr ""
+msgstr "Není nastavená žádná úložná jednotka."
 
 msgid "No IPMI FRU data available."
 msgstr ""
@@ -5186,7 +5257,7 @@ msgid "No IPMI sensor data available."
 msgstr "Nejsou k dispozici z čidel v IPMI"
 
 msgid "No Initiator Group has been configured."
-msgstr ""
+msgstr "Není nastavená žádná skupina iniciátoru."
 
 msgid "No Portal Group has been configured."
 msgstr "Není nastavená žádná skupina portálu."
@@ -5201,7 +5272,7 @@ msgid "No configured CARP interfaces."
 msgstr "Nejsou nastavena žádná CARP rozhraní."
 
 msgid "No configured bridge interfaces."
-msgstr ""
+msgstr "Nejsou nastavená žádná síťová přemostění."
 
 msgid "No configured pools."
 msgstr "Nejsou nastavené žádné fondy úložišť."
@@ -5209,8 +5280,8 @@ msgstr "Nejsou nastavené žádné fondy úložišť."
 msgid "No configured virtual devices."
 msgstr "Nejsou nastavená žádná virtuální zařízení."
 
-msgid "No device selected."
-msgstr "Není vybráno žádné zařízení."
+msgid "No devices have been selected"
+msgstr ""
 
 msgid "No disk configured"
 msgstr "Není nastaven žádný disk"
@@ -5234,11 +5305,29 @@ msgstr "Nebyly nalezeny žádné nové disky."
 msgid "No new software raid disk found."
 msgstr "Nebyly nalezeny žádné nové disky softwarového raid pole."
 
+msgid "No pool devices have been selected"
+msgstr ""
+
 msgid "No pool was found."
 msgstr "Nebyl nalezen žádný fond."
 
+msgid "No pools have been selected"
+msgstr ""
+
 msgid "No softraid-formatted disks available."
 msgstr "Nejsou k dispozici žádné disky, formátované na softraid"
+
+msgid "No suitable devices found."
+msgstr ""
+
+msgid "No suitable pools found."
+msgstr ""
+
+msgid "No suitable virtual devices found."
+msgstr ""
+
+msgid "No virtual devices have been selected"
+msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
 msgstr ""
@@ -5433,14 +5522,6 @@ msgstr "Původní heslo"
 msgid "On"
 msgstr "Zapnuto"
 
-msgid ""
-"Once you add the virtual device, it becomes impossible to delete again. It "
-"recommends adding the same number of drives as the existing virtual device."
-msgstr ""
-"Jakmile virtuální zařízení přidáte, nebude možné jej odstranit. Je "
-"doporučeno přidat stejné množství disků, jaké má stávající virtuální "
-"zařízení."
-
 msgid "Online"
 msgstr "Připraveno"
 
@@ -5492,6 +5573,9 @@ msgstr "Informace o výstupu napájení / střídači"
 
 msgid "Outgoing SMTP mail server address."
 msgstr "Adresa odchozího SMTP serveru."
+
+msgid "Output"
+msgstr ""
 
 msgid "Output current (A)"
 msgstr "Výstupní proud (A)"
@@ -5570,6 +5654,9 @@ msgstr "Nejpodrobněji (nejpomalejší)"
 
 msgid "Pairwise"
 msgstr "Párově"
+
+msgid "Parameter"
+msgstr ""
 
 msgid "Parameter xxx (ups.conf or cmdline -x) setting"
 msgstr "Nastavení parametru xxx (ups.conf nebo cmdline -x)"
@@ -5733,7 +5820,7 @@ msgid "Platform OS"
 msgstr "Založeno na operačním systému"
 
 msgid "Please add a bridge interface first."
-msgstr ""
+msgstr "Nejprve je třeba přidat síťové přemostění."
 
 msgid "Please add a new Auth Group first"
 msgstr ""
@@ -5742,13 +5829,13 @@ msgid "Please add a new CARP interface first"
 msgstr ""
 
 msgid "Please add a new Extent first."
-msgstr ""
+msgstr "Nejprve je třeba přidat úložnou jednotku."
 
 msgid "Please add a new Initiator Group first."
-msgstr ""
+msgstr "Nejprve je třeba přidat novou skupinu iniciátoru."
 
 msgid "Please add a new Portal Group first."
-msgstr ""
+msgstr "Nejprve je třeba přidat novou skupinu portálu."
 
 msgid "Please add a new disk first."
 msgstr "Nejprve přidejte nový disk."
@@ -5795,11 +5882,20 @@ msgstr "Interval dotazování"
 msgid "Pool"
 msgstr "Fond"
 
+msgid "Pool Devices"
+msgstr ""
+
 msgid "Pool Information & Status"
 msgstr "Fond – informace a stav"
 
-msgid "Pool Tools"
-msgstr "Nástroje fondu"
+msgid "Pool State"
+msgstr ""
+
+msgid "Pool Status"
+msgstr ""
+
+msgid "Pool Version"
+msgstr ""
 
 msgid "Pool cannot be changed."
 msgstr "Fond úložišť nemůže být změněn."
@@ -5870,6 +5966,9 @@ msgstr "portugalština (Portugalsko)"
 
 msgid "PostInit"
 msgstr "Po inicializaci"
+
+msgid "Potentially Active"
+msgstr ""
 
 msgid "Power Daemon"
 msgstr "Služba správy napájení"
@@ -6238,6 +6337,15 @@ msgstr "Zprávy vzdáleného syslog"
 msgid "Removable"
 msgstr "Vyjímatelné"
 
+msgid "Remove a cache device from a pool"
+msgstr ""
+
+msgid "Remove a log device from a pool"
+msgstr ""
+
+msgid "Remove a spare device from a pool"
+msgstr ""
+
 msgid "Remove all entries from ARP table"
 msgstr "Odstranit všechny záznamy z ARP tabulky"
 
@@ -6247,6 +6355,9 @@ msgstr "Pokračovat bude možné až po odebrání %s."
 
 msgid "Replace Battery UPS"
 msgstr "Vyměňte akumulátory v UPS zdroji"
+
+msgid "Replace a device"
+msgstr ""
 
 msgid "Report Generator"
 msgstr "Vytvoření hlášení"
@@ -6555,11 +6666,17 @@ msgstr "Naplánované vypnutí"
 msgid "Scheduled tests"
 msgstr "Naplánované testy"
 
+msgid "Scrub a pool"
+msgstr ""
+
 msgid "Search"
 msgstr "Vyhledat"
 
 msgid "Search event"
 msgstr "Vyhledat událost"
+
+msgid "Search for and import all disks found"
+msgstr ""
 
 msgid "Secondary"
 msgstr "Vedlejší"
@@ -6576,6 +6693,8 @@ msgstr "Zabezpečení"
 msgid ""
 "See ZFS datasets & deduplication wiki article BEFORE using this feature."
 msgstr ""
+"PŘED použitím této funkce si prostudujte článek „ZFS datasets & "
+"deduplication“ na wiki."
 
 msgid ""
 "See ZFS volumes & deduplication wiki article BEFORE using this feature."
@@ -6603,11 +6722,32 @@ msgstr ""
 "(protokol přenosu hypertextu) nebo HTTPS (stejné jako předchozí, ale "
 "zabezpečené)."
 
+msgid "Select a cache device"
+msgstr ""
+
+msgid "Select a data device"
+msgstr ""
+
 msgid "Select a date format."
 msgstr "Vyberte formát datumu."
 
+msgid "Select a device"
+msgstr ""
+
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Vyberte disk, který má zapnuté dohledování hodnot SMART diagnostiky."
+
+msgid "Select a log device"
+msgstr ""
+
+msgid "Select a pool"
+msgstr ""
+
+msgid "Select a pool device"
+msgstr ""
+
+msgid "Select a spare device"
+msgstr ""
 
 msgid "Select file system format."
 msgstr "Vyberte formát souborového systému."
@@ -6621,8 +6761,19 @@ msgstr "Vyberte položku, kterou chcete ze seznamu odstranit"
 msgid "Select mount point where to create the swap file."
 msgstr "Vyberte přípojný bod, ve kterém má být vytvořen odkládací soubor."
 
+msgid "Select one or more spare devices"
+msgstr ""
+
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
+msgstr ""
+"V případě předem nepřipravených disků vyberte možnost „nenaformátovaný“ a "
+"připravte je tak pomocí"
+
+msgid "Select pool device"
+msgstr ""
+
+msgid "Select pools"
 msgstr ""
 
 msgid "Select read balance algorithm."
@@ -6960,6 +7111,9 @@ msgstr ""
 msgid "Spanish"
 msgstr "Španělština"
 
+msgid "Spare"
+msgstr ""
+
 msgid "Sparse"
 msgstr "Řídké"
 
@@ -7071,10 +7225,6 @@ msgstr "Stav"
 msgid "Status & Information"
 msgstr "Stav a informace"
 
-#, php-format
-msgid "Status report successfully sent to: %s."
-msgstr "Zpráva o stavu byla úspěšně odeslána na: %s."
-
 msgid "Status report successfully sent."
 msgstr "Zpráva o stavu byla úspěšně odeslána."
 
@@ -7133,6 +7283,9 @@ msgstr "Maska podsítě"
 
 msgid "Subsystem"
 msgstr "Podsystém"
+
+msgid "Success"
+msgstr ""
 
 msgid "Successful"
 msgstr "Úspěšné"
@@ -7299,6 +7452,9 @@ msgstr "Značka%d"
 msgid "Tag%d (%s)"
 msgstr "Značka%d (%s)"
 
+msgid "Take a device offline"
+msgstr ""
+
 msgid "Tap device"
 msgstr "Tap (linkové) zařízení"
 
@@ -7367,6 +7523,9 @@ msgstr "Dočasná složka"
 msgid "Temporary directory to store transcoded files."
 msgstr "Dočasná složka pro překódovávané soubory."
 
+msgid "Test Mode"
+msgstr ""
+
 msgid "Test email"
 msgstr "Zkušební e-mail"
 
@@ -7374,12 +7533,11 @@ msgstr "Zkušební e-mail"
 msgid "Test email from host: %s"
 msgstr "Zkušební e-mail z: %s"
 
-#, php-format
-msgid "Test email successfully sent to: %s."
-msgstr "Zkušební e-mail byl úspěšně odeslán na: %s"
-
 msgid "Test email successfully sent."
 msgstr "Zkušební e-mail byl úspěšně odeslán."
+
+msgid "Test mode, no command execution"
+msgstr ""
 
 msgid ""
 "The  deny  option specifies users and groups who are not allowed access to "
@@ -8208,7 +8366,7 @@ msgstr "Soubor byl serverem úspěšně přijat."
 
 msgid ""
 "There is no need to start a RAID volume from here (It starts automatically)."
-msgstr ""
+msgstr "RAID svazek není třeba spouštět odsud (děje se tak automaticky)."
 
 msgid "There must be at least 1 disks selected."
 msgstr "Je třeba vybrat alespoň jeden disk."
@@ -8431,6 +8589,9 @@ msgid ""
 "This means that the firmware you flashed is not an official/supported "
 "firmware and may lead to unexpected behavior or security compromises."
 msgstr ""
+"To znamená, že základní systém, který jste nainstalovali, není "
+"oficiální/podporovaný, což může vést k neočekávanému chování či narušení "
+"zabezpečení."
 
 msgid "This name already exists in the disk list."
 msgstr "Tento název už v seznamu disků existuje."
@@ -8790,6 +8951,8 @@ msgid ""
 "To get more information how to configure your UPS please check the NUT "
 "(Network UPS Tools) documentation"
 msgstr ""
+"Podrobnosti o nastavování UPS zdroje naleznete v dokumentaci k nástroji NUT "
+"(Network UPS Tools)"
 
 msgid "To increase CIFS performance try the following:"
 msgstr "Výkonnost CIFS se můžete pokusit zvýšit pomocí následujícího:"
@@ -8799,7 +8962,7 @@ msgstr ""
 "Pokud má platit pro jakoukoli IP adresu, ponechte kolonku nevyplněnou."
 
 msgid "To use Active Directory the CIFS/SMB service will enabled as well."
-msgstr ""
+msgstr "Společně se službou Active Directory bude zapnuta i služba CIFS/SMB."
 
 #, php-format
 msgid "To use subdirectories, you must mount each directories. (e.g. %s)"
@@ -9093,6 +9256,9 @@ msgstr "Neopravené chyby, nahlášené operačnímu systému."
 msgid "Unformated"
 msgstr "Nenaformátované"
 
+msgid "Uninitialized"
+msgstr ""
+
 msgid "Uninstall package"
 msgstr "Odinstalovat balíček"
 
@@ -9114,6 +9280,9 @@ msgstr "Unixová znaková sada"
 msgid "Unknown"
 msgstr "Neznámý"
 
+msgid "Unknown Activity"
+msgstr ""
+
 msgid "Unknown or unformatted"
 msgstr "Neznámý nebo nenaformátované"
 
@@ -9128,6 +9297,8 @@ msgstr "Odpojit (umount) disk/oddíl"
 
 msgid "Unmount this disk first before proceeding."
 msgstr ""
+"Pokračovat bude možné až po odpojení (umount) této jednotky datového "
+"úložiště."
 
 msgid "Unmounting..."
 msgstr "Odpojování…"
@@ -9143,6 +9314,9 @@ msgstr "Aktualizace začne za 5 sekund."
 
 msgid "Upgrade Firmware"
 msgstr "Aktualizovat firmware"
+
+msgid "Upgrade ZFS and add all supported feature flags on a pool"
+msgstr ""
 
 msgid "Upload"
 msgstr "Nahrát"
@@ -9281,9 +9455,6 @@ msgstr "Přípona uživatele"
 msgid "Username"
 msgstr "Uživatelské jméno"
 
-msgid "Username contains invalid character(s) : "
-msgstr "Uživatelské jméno obsahuje neplatné znaky: "
-
 msgid "Username field : "
 msgstr "Kolonka uživatelské jméno: "
 
@@ -9300,6 +9471,8 @@ msgid ""
 "Users will notice a service disruption when trying to access this mount "
 "while the file system check is running."
 msgstr ""
+"Uživatelé služby, závisející na tomto umístění, zaznamenají po dobu kontroly "
+"souborového systému výpadek."
 
 #, php-format
 msgid "Using %s bytes fragment size."
@@ -9617,6 +9790,8 @@ msgid ""
 "You can also install a package via SSH or console using the the pkg add "
 "command."
 msgstr ""
+"Balíčky se software je možné instalovat také přes SSH či konzolový přístup "
+"pomocí příkazu pkg add."
 
 #, php-format
 msgid "You can not mount partition '%s' where the config file is stored."
@@ -9637,7 +9812,7 @@ msgstr ""
 
 #, php-format
 msgid "You have to activate %s to advertise this service to clients."
-msgstr ""
+msgstr "Služba bude klientům propagována až po zapnutí %s."
 
 msgid "You have to reboot the system for the changes to take effect."
 msgstr "Změny se projeví až po restartu serveru."
@@ -9673,6 +9848,8 @@ msgid ""
 "You must add at least a Portal Group, an Initiator Group and an Extent "
 "before you can configure a Target."
 msgstr ""
+"Cíl bude možné nastavit až po přidání alespoň skupiny portálu, skupiny "
+"iniciátorů a úložné jednotky."
 
 msgid "You must add disks first."
 msgstr "Nejprve je třeba přidat disky."
@@ -9718,6 +9895,9 @@ msgstr "ZFS datová sada – informace a stav"
 msgid "ZFS Dataset Properties"
 msgstr "Vlastnosti ZFS datové sady"
 
+msgid "ZFS Pool Tools"
+msgstr ""
+
 msgid "ZFS Snapshot Information & Status"
 msgstr "ZFS zachycený stav – informace a stav"
 
@@ -9752,6 +9932,9 @@ msgstr "Zeroconf/Bonjour"
 
 msgid "all encrypted disks are imported."
 msgstr "všechny šifrované disky jsou importovány."
+
+msgid "and"
+msgstr ""
 
 msgid "change failed."
 msgstr "změna se nezdařila."
@@ -9904,3 +10087,60 @@ msgstr "uživatel"
 
 msgid "version:"
 msgstr "verze:"
+
+#~ msgid "New Device"
+#~ msgstr "Nové zařízení"
+
+#~ msgid "No device selected."
+#~ msgstr "Není vybráno žádné zařízení."
+
+#, php-format
+#~ msgid "Status report successfully sent to: %s."
+#~ msgstr "Zpráva o stavu byla úspěšně odeslána na: %s."
+
+#~ msgid "Cache Device"
+#~ msgstr "Zařízení mezipaměti"
+
+#~ msgid "Hot Spare"
+#~ msgstr "Pohotovostní náhrada"
+
+#, php-format
+#~ msgid "Failed to send status report to: %s."
+#~ msgstr "Nezdařilo se poslat hlášení o stavu na: %s"
+
+#, php-format
+#~ msgid "Failed to send test email to: %s."
+#~ msgstr "Nezdařilo se odeslat zkušební e-mail na: %s."
+
+#, php-format
+#~ msgid "Test email successfully sent to: %s."
+#~ msgstr "Zkušební e-mail byl úspěšně odeslán na: %s"
+
+#~ msgid "Username contains invalid character(s) : "
+#~ msgstr "Uživatelské jméno obsahuje neplatné znaky: "
+
+#~ msgid "Log Device"
+#~ msgstr "Zařízení, na které zaznamenávat události"
+
+#~ msgid ""
+#~ "Once you add the virtual device, it becomes impossible to delete again. It "
+#~ "recommends adding the same number of drives as the existing virtual device."
+#~ msgstr ""
+#~ "Jakmile virtuální zařízení přidáte, nebude možné jej odstranit. Je "
+#~ "doporučeno přidat stejné množství disků, jaké má stávající virtuální "
+#~ "zařízení."
+
+#~ msgid "Pool Tools"
+#~ msgstr "Nástroje fondu"
+
+#, php-format
+#~ msgid "%s: cannot get mirror name."
+#~ msgstr "%s: nedaří se získat název zrcadla (mirror) instalačního zdroje."
+
+#~ msgid ""
+#~ "Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
+#~ "or NTFS can result in unpredictable results, file corruption and the loss of "
+#~ "data!"
+#~ msgstr ""
+#~ "Použití ostatních souborových systémů, jako např. FAT, FAT32, EXT2, EXT3, "
+#~ "EXT4, nebo NTFS může vést k neočekávaným důsledkům, poškození a ztrátě dat!"

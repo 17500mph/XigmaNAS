@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-07-17 08:18+0000\n"
+"POT-Creation-Date: 2016-08-26 00:19+0000\n"
 "PO-Revision-Date: 2016-03-03 17:10+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-24 09:13+0000\n"
+"X-Launchpad-Export-Date: 2016-08-25 22:37+0000\n"
 "X-Generator: Launchpad (build 18179)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -97,10 +97,6 @@ msgstr "%s%% 可用"
 #, php-format
 msgid "%s%d %s is already used by %s%d."
 msgstr "%s%d %s 已被 %s%d 使用。"
-
-#, php-format
-msgid "%s: cannot get mirror name."
-msgstr "%s: 找不到鏡像名。"
 
 #, php-format
 msgid "%sB available of %sB"
@@ -381,6 +377,9 @@ msgid ""
 "has been detected, or if a S.M.A.R.T. command to a disk fails."
 msgstr "如果您希望偵測到新的錯誤或是對磁碟的 S.M.A.R.T. 指令失敗時獲得通知，請使用 email 回報功能。"
 
+msgid "Active"
+msgstr ""
+
 msgid "Active Directory"
 msgstr "Active Directory"
 
@@ -392,6 +391,12 @@ msgstr "啟用的分享區"
 
 msgid "Active Users"
 msgstr "啟用的使用者"
+
+msgid "Activities"
+msgstr ""
+
+msgid "Activity"
+msgstr ""
 
 msgid "Adaptive (Low Power Consumption)"
 msgstr ""
@@ -428,6 +433,18 @@ msgstr ""
 
 msgid "Add Volume"
 msgstr "添加卷"
+
+msgid "Add a cache device to a pool"
+msgstr ""
+
+msgid "Add a log device to a pool"
+msgstr ""
+
+msgid "Add a spare device to a pool"
+msgstr ""
+
+msgid "Add a virtual device to a pool"
+msgstr ""
 
 msgid "Add additional scheduled self-test."
 msgstr "新增自動化的自我監測"
@@ -735,6 +752,9 @@ msgid ""
 "initiator names and networks."
 msgstr ""
 
+msgid "An error occured."
+msgstr ""
+
 msgid "An host with this name already exists."
 msgstr "已經有一個相同的主機名稱存在了。"
 
@@ -802,6 +822,12 @@ msgid ""
 "made up of one or more extents."
 msgstr "目標裝置是由一個或多個 extent 組成，然後轉送给啟動器。"
 
+msgid "Attach a data device"
+msgstr ""
+
+msgid "Attach a log device"
+msgstr ""
+
 msgid "Attached"
 msgstr "連結成功"
 
@@ -810,8 +836,8 @@ msgid "Attaching provider '%s'."
 msgstr "連接 '%s' 中。"
 
 msgid ""
-"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
-"or NTFS can result in unpredictable results, file corruption and the loss of "
+"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4 or "
+"NTFS can result in unpredictable results, file corruption and the loss of "
 "data!"
 msgstr ""
 
@@ -1032,6 +1058,9 @@ msgstr "啟動程序"
 msgid "Bridge"
 msgstr "橋接"
 
+msgid "Bring a device online"
+msgstr ""
+
 msgid "Broadcast interval"
 msgstr "廣播間隔"
 
@@ -1150,9 +1179,6 @@ msgid ""
 "error)."
 msgstr ""
 
-msgid "Cache Device"
-msgstr "快取裝置"
-
 msgid "Calibration Battery"
 msgstr "電池校正"
 
@@ -1266,6 +1292,9 @@ msgstr "清除和匯入軟體RAID設定"
 msgid "Clear config and Import disks"
 msgstr "清除和匯入磁碟設定"
 
+msgid "Clear device errors"
+msgstr ""
+
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
 "file or XML format."
@@ -1295,6 +1324,9 @@ msgid "Command"
 msgstr "指令"
 
 msgid "Command Scripts"
+msgstr ""
+
+msgid "Command execution was successful"
 msgstr ""
 
 #, php-format
@@ -2001,6 +2033,18 @@ msgstr "目的端端口"
 msgid "Destination share"
 msgstr "共享目的端"
 
+msgid "Destroy a pool"
+msgstr ""
+
+msgid "Destroyed"
+msgstr ""
+
+msgid "Detach a data device from a mirror"
+msgstr ""
+
+msgid "Detach a log device from a mirrored log"
+msgstr ""
+
 msgid "Detected"
 msgstr "已偵測"
 
@@ -2177,6 +2221,9 @@ msgstr ""
 
 msgid "Display"
 msgstr "顯示"
+
+msgid "Display ZFS command history"
+msgstr ""
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -2945,8 +2992,14 @@ msgstr "過期"
 msgid "Export"
 msgstr "導出"
 
+msgid "Export a pool from the system"
+msgstr ""
+
 msgid "Export all the directories in the specified path."
 msgstr "導出指定的路徑中的所有目錄。"
+
+msgid "Exported"
+msgstr ""
 
 msgid "Extended Attributes"
 msgstr "擴展屬性"
@@ -3055,16 +3108,8 @@ msgstr "執行定時任務失敗。"
 msgid "Failed to remove: %s"
 msgstr "無法刪除：%s"
 
-#, php-format
-msgid "Failed to send status report to: %s."
-msgstr "傳送狀態報告電郵給：%s 失敗。"
-
 msgid "Failed to send status report."
 msgstr ""
-
-#, php-format
-msgid "Failed to send test email to: %s."
-msgstr "傳送測試電郵給：%s 失敗。"
 
 msgid "Failed to send test email."
 msgstr ""
@@ -3188,6 +3233,9 @@ msgstr "標示符"
 msgid "Follow"
 msgstr "跟隨"
 
+msgid "Force Operation"
+msgstr ""
+
 msgid "Force use"
 msgstr "強制使用"
 
@@ -3290,6 +3338,9 @@ msgstr "一般設定"
 
 msgid "Generate"
 msgstr "生成"
+
+msgid "Generate a new unique identifier for a pool"
+msgstr ""
 
 msgid "Generate password if leave empty."
 msgstr "如果保留為空白的話，自動生成密碼。"
@@ -3483,9 +3534,6 @@ msgstr "允許主機"
 
 msgid "Hosts deny"
 msgstr "拒絕主機"
-
-msgid "Hot Spare"
-msgstr "熱備用"
 
 msgid "Hours"
 msgstr "小時"
@@ -3882,6 +3930,9 @@ msgstr "重新啟動 UPS 前的等待間隔"
 msgid "Interval to wait before restarting the load"
 msgstr "重新啟動負載之前的等待間隔"
 
+msgid "Invalid command line option"
+msgstr ""
+
 msgid "Invalid file format or incorrect password."
 msgstr "文件格式無效或密碼不正確。"
 
@@ -3998,6 +4049,9 @@ msgstr "刪除加密磁碟"
 
 msgid "Korean"
 msgstr "韓文"
+
+msgid "L2 Cache"
+msgstr ""
 
 msgid "LACP (Link Aggregation Control Protocol)"
 msgstr "LACP （鏈路匯聚控制協議）"
@@ -4152,6 +4206,9 @@ msgstr ""
 "可接受的成對（單播）為WPA密碼的列表。一個或多個：CCMP（AES計數器模式CBC-"
 "MAC，RFC3610，IEEE802.11i/D7.0），TKIP（臨時密鑰完整性協議，IEEE802.11i/D7.0）。"
 
+msgid "List or import pools"
+msgstr ""
+
 msgid "Load"
 msgstr "載入"
 
@@ -4221,9 +4278,6 @@ msgstr "存儲使用文件的位置，例如：%s/backup/.unison"
 
 msgid "Log"
 msgstr "記錄檔"
-
-msgid "Log Device"
-msgstr "记录设备"
 
 msgid "Log Level"
 msgstr "記錄檔層級"
@@ -4570,6 +4624,9 @@ msgstr ""
 msgid "Missing a temporary folder."
 msgstr "遺失了一個暫存檔案夾。"
 
+msgid "Missing parameter"
+msgstr ""
+
 msgid "Mixed"
 msgstr ""
 
@@ -4751,9 +4808,6 @@ msgid ""
 "a disk which is spun-down to be spun-up when it is checked."
 msgstr "永不 - 永遠不管目標磁碟的電源模式而進行檢查。"
 
-msgid "New Device"
-msgstr "新裝置"
-
 msgid "New password"
 msgstr "新密碼"
 
@@ -4799,8 +4853,8 @@ msgstr ""
 msgid "No configured virtual devices."
 msgstr ""
 
-msgid "No device selected."
-msgstr "沒有選擇裝置。"
+msgid "No devices have been selected"
+msgstr ""
 
 msgid "No disk configured"
 msgstr "尚未加入磁碟"
@@ -4822,10 +4876,28 @@ msgstr "沒有發現新的硬盤。"
 msgid "No new software raid disk found."
 msgstr "沒有發現新的軟體RAID的硬盤。"
 
+msgid "No pool devices have been selected"
+msgstr ""
+
 msgid "No pool was found."
 msgstr "找不到池。"
 
+msgid "No pools have been selected"
+msgstr ""
+
 msgid "No softraid-formatted disks available."
+msgstr ""
+
+msgid "No suitable devices found."
+msgstr ""
+
+msgid "No suitable pools found."
+msgstr ""
+
+msgid "No suitable virtual devices found."
+msgstr ""
+
+msgid "No virtual devices have been selected"
 msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
@@ -5008,11 +5080,6 @@ msgstr "舊密碼"
 msgid "On"
 msgstr "開"
 
-msgid ""
-"Once you add the virtual device, it becomes impossible to delete again. It "
-"recommends adding the same number of drives as the existing virtual device."
-msgstr "您一旦添加虛擬設備，就不可能再刪除。建議您添加與現有的虛擬設備相同數量的驅動器​​。"
-
 msgid "Online"
 msgstr ""
 
@@ -5057,6 +5124,9 @@ msgid "Outgoing Power/Inverter Information"
 msgstr "輸出電力/逆變器的信息"
 
 msgid "Outgoing SMTP mail server address."
+msgstr ""
+
+msgid "Output"
 msgstr ""
 
 msgid "Output current (A)"
@@ -5133,6 +5203,9 @@ msgstr "Painfully aggressive"
 
 msgid "Pairwise"
 msgstr "成對（Pairwise）"
+
+msgid "Parameter"
+msgstr ""
 
 msgid "Parameter xxx (ups.conf or cmdline -x) setting"
 msgstr "參數xxx（ups.conf 或 cmdline -x）的設置"
@@ -5351,10 +5424,19 @@ msgstr "輪詢時間"
 msgid "Pool"
 msgstr "存儲池"
 
+msgid "Pool Devices"
+msgstr ""
+
 msgid "Pool Information & Status"
 msgstr "存儲池信息和狀態"
 
-msgid "Pool Tools"
+msgid "Pool State"
+msgstr ""
+
+msgid "Pool Status"
+msgstr ""
+
+msgid "Pool Version"
 msgstr ""
 
 msgid "Pool cannot be changed."
@@ -5422,6 +5504,9 @@ msgstr "葡萄牙文 (葡萄牙)"
 
 msgid "PostInit"
 msgstr "後置初始動作（PostInit）"
+
+msgid "Potentially Active"
+msgstr ""
 
 msgid "Power Daemon"
 msgstr "電源監控守护进程"
@@ -5775,6 +5860,15 @@ msgstr ""
 msgid "Removable"
 msgstr "可移除"
 
+msgid "Remove a cache device from a pool"
+msgstr ""
+
+msgid "Remove a log device from a pool"
+msgstr ""
+
+msgid "Remove a spare device from a pool"
+msgstr ""
+
 msgid "Remove all entries from ARP table"
 msgstr "移除所有ARP table內的項目"
 
@@ -5784,6 +5878,9 @@ msgstr ""
 
 msgid "Replace Battery UPS"
 msgstr "更換UPS電池"
+
+msgid "Replace a device"
+msgstr ""
 
 msgid "Report Generator"
 msgstr "報告生成"
@@ -6074,10 +6171,16 @@ msgstr "定時關機"
 msgid "Scheduled tests"
 msgstr "定時測試"
 
+msgid "Scrub a pool"
+msgstr ""
+
 msgid "Search"
 msgstr ""
 
 msgid "Search event"
+msgstr ""
+
+msgid "Search for and import all disks found"
 msgstr ""
 
 msgid "Secondary"
@@ -6119,11 +6222,32 @@ msgid ""
 "Secure (HTTPS) for the WebGUI."
 msgstr "請在網頁界面中選擇超文本傳輸協議（HTTP）或安全超文本傳輸協議（HTTPS）。"
 
+msgid "Select a cache device"
+msgstr ""
+
+msgid "Select a data device"
+msgstr ""
+
 msgid "Select a date format."
+msgstr ""
+
+msgid "Select a device"
 msgstr ""
 
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "選擇要開啟 S.M.A.R.T. 監測的磁碟。"
+
+msgid "Select a log device"
+msgstr ""
+
+msgid "Select a pool"
+msgstr ""
+
+msgid "Select a pool device"
+msgstr ""
+
+msgid "Select a spare device"
+msgstr ""
 
 msgid "Select file system format."
 msgstr ""
@@ -6137,8 +6261,17 @@ msgstr "請從列表中選擇要刪除的項目"
 msgid "Select mount point where to create the swap file."
 msgstr "請選擇欲創建 Swap 檔的掛載點。"
 
+msgid "Select one or more spare devices"
+msgstr ""
+
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
+msgstr ""
+
+msgid "Select pool device"
+msgstr ""
+
+msgid "Select pools"
 msgstr ""
 
 msgid "Select read balance algorithm."
@@ -6454,6 +6587,9 @@ msgstr "允許訪問WebGUI 的一組以空間分隔的IP 位址或CIDR 標記。
 msgid "Spanish"
 msgstr "西班牙文"
 
+msgid "Spare"
+msgstr ""
+
 msgid "Sparse"
 msgstr "稀疏"
 
@@ -6553,10 +6689,6 @@ msgstr "狀態"
 msgid "Status & Information"
 msgstr ""
 
-#, php-format
-msgid "Status report successfully sent to: %s."
-msgstr "狀態報告成功傳送至：%s。"
-
 msgid "Status report successfully sent."
 msgstr "狀態報告已成功傳送。"
 
@@ -6611,6 +6743,9 @@ msgstr "子網掩碼"
 
 msgid "Subsystem"
 msgstr "子系統"
+
+msgid "Success"
+msgstr ""
 
 msgid "Successful"
 msgstr "完成"
@@ -6776,6 +6911,9 @@ msgstr "標籤%d"
 msgid "Tag%d (%s)"
 msgstr "標籤%d （%s）"
 
+msgid "Take a device offline"
+msgstr ""
+
 msgid "Tap device"
 msgstr ""
 
@@ -6842,6 +6980,9 @@ msgstr "暫存目錄"
 msgid "Temporary directory to store transcoded files."
 msgstr "用來儲存轉碼檔案的暫存目錄。"
 
+msgid "Test Mode"
+msgstr ""
+
 msgid "Test email"
 msgstr "測試電子郵件"
 
@@ -6849,12 +6990,11 @@ msgstr "測試電子郵件"
 msgid "Test email from host: %s"
 msgstr "來自主機的測試電郵：%s"
 
-#, php-format
-msgid "Test email successfully sent to: %s."
-msgstr "測試電子郵件成功的傳送至：%s。"
-
 msgid "Test email successfully sent."
 msgstr "測試電子郵件成功的送出。"
+
+msgid "Test mode, no command execution"
+msgstr ""
 
 msgid ""
 "The  deny  option specifies users and groups who are not allowed access to "
@@ -8305,6 +8445,9 @@ msgstr ""
 msgid "Unformated"
 msgstr "尚未格式化"
 
+msgid "Uninitialized"
+msgstr ""
+
 msgid "Uninstall package"
 msgstr "移除套件"
 
@@ -8325,6 +8468,9 @@ msgstr "Unix字元編碼"
 
 msgid "Unknown"
 msgstr "不詳"
+
+msgid "Unknown Activity"
+msgstr ""
 
 msgid "Unknown or unformatted"
 msgstr "不詳/未格式化"
@@ -8355,6 +8501,9 @@ msgstr "五秒內更新"
 
 msgid "Upgrade Firmware"
 msgstr "升級固件"
+
+msgid "Upgrade ZFS and add all supported feature flags on a pool"
+msgstr ""
 
 msgid "Upload"
 msgstr "上傳"
@@ -8472,9 +8621,6 @@ msgstr "用戶名後綴"
 
 msgid "Username"
 msgstr "用戶名"
-
-msgid "Username contains invalid character(s) : "
-msgstr "用戶名包含無效字符： "
 
 msgid "Username field : "
 msgstr "用戶名： "
@@ -8881,6 +9027,9 @@ msgstr "ZFS 數據集信息和狀態"
 msgid "ZFS Dataset Properties"
 msgstr "ZFS 數據集屬性"
 
+msgid "ZFS Pool Tools"
+msgstr ""
+
 msgid "ZFS Snapshot Information & Status"
 msgstr "ZFS 快照信息和狀態"
 
@@ -8912,6 +9061,9 @@ msgstr "Zeroconf/Bonjour"
 
 msgid "all encrypted disks are imported."
 msgstr "已经導入所有加密磁盤。"
+
+msgid "and"
+msgstr ""
 
 msgid "change failed."
 msgstr "更改失敗。"
@@ -9054,3 +9206,46 @@ msgstr ""
 
 msgid "version:"
 msgstr "版本："
+
+#~ msgid "New Device"
+#~ msgstr "新裝置"
+
+#~ msgid "No device selected."
+#~ msgstr "沒有選擇裝置。"
+
+#, php-format
+#~ msgid "Test email successfully sent to: %s."
+#~ msgstr "測試電子郵件成功的傳送至：%s。"
+
+#~ msgid "Hot Spare"
+#~ msgstr "熱備用"
+
+#~ msgid ""
+#~ "Once you add the virtual device, it becomes impossible to delete again. It "
+#~ "recommends adding the same number of drives as the existing virtual device."
+#~ msgstr "您一旦添加虛擬設備，就不可能再刪除。建議您添加與現有的虛擬設備相同數量的驅動器​​。"
+
+#, php-format
+#~ msgid "Status report successfully sent to: %s."
+#~ msgstr "狀態報告成功傳送至：%s。"
+
+#, php-format
+#~ msgid "Failed to send status report to: %s."
+#~ msgstr "傳送狀態報告電郵給：%s 失敗。"
+
+#, php-format
+#~ msgid "Failed to send test email to: %s."
+#~ msgstr "傳送測試電郵給：%s 失敗。"
+
+#~ msgid "Username contains invalid character(s) : "
+#~ msgstr "用戶名包含無效字符： "
+
+#~ msgid "Cache Device"
+#~ msgstr "快取裝置"
+
+#, php-format
+#~ msgid "%s: cannot get mirror name."
+#~ msgstr "%s: 找不到鏡像名。"
+
+#~ msgid "Log Device"
+#~ msgstr "记录设备"

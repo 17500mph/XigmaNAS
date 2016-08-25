@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-07-17 08:18+0000\n"
+"POT-Creation-Date: 2016-08-26 00:19+0000\n"
 "PO-Revision-Date: 2016-07-18 07:33+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-24 09:13+0000\n"
+"X-Launchpad-Export-Date: 2016-08-25 22:37+0000\n"
 "X-Generator: Launchpad (build 18179)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -103,10 +103,6 @@ msgstr "%s%% elérhető"
 #, php-format
 msgid "%s%d %s is already used by %s%d."
 msgstr "%s%d %s már használatban van: %s%d."
-
-#, php-format
-msgid "%s: cannot get mirror name."
-msgstr "%s: nincs tükörnév."
 
 #, php-format
 msgid "%sB available of %sB"
@@ -431,6 +427,9 @@ msgstr ""
 "Ne feledd el bekapcsolni az e-mail jelentést, ha e-mailben értesülni "
 "szeretnél egy esetleges hibáról vagy a merevlemez S.M.A.R.T. hibaüzeneteiről."
 
+msgid "Active"
+msgstr ""
+
 msgid "Active Directory"
 msgstr "Címtárszolgáltatás (AD)"
 
@@ -442,6 +441,12 @@ msgstr "Aktív megosztások"
 
 msgid "Active Users"
 msgstr "Aktív felhasználók"
+
+msgid "Activities"
+msgstr ""
+
+msgid "Activity"
+msgstr ""
 
 msgid "Adaptive (Low Power Consumption)"
 msgstr "Alkalmazkodó (Alacsony energiafelhasználás)"
@@ -478,6 +483,18 @@ msgstr "Virtuális eszköz hozzáadása"
 
 msgid "Add Volume"
 msgstr "Kötet hozzáadása"
+
+msgid "Add a cache device to a pool"
+msgstr ""
+
+msgid "Add a log device to a pool"
+msgstr ""
+
+msgid "Add a spare device to a pool"
+msgstr ""
+
+msgid "Add a virtual device to a pool"
+msgstr ""
 
 msgid "Add additional scheduled self-test."
 msgstr "További időzített öntesztek hozzáadása"
@@ -817,6 +834,9 @@ msgstr ""
 "Egy Kezdeményező csoportot egy címke száma határozza meg és hitelesített "
 "kezdeményezők neveit és hálózatát határozza meg."
 
+msgid "An error occured."
+msgstr ""
+
 msgid "An host with this name already exists."
 msgstr "Egy állomás ugyanezzel a névvel létezik már."
 
@@ -890,6 +910,12 @@ msgstr ""
 "A legmagasabb szinten a cél az, ami a kezdeményezőhöz vezet, és egy vagy "
 "több extent alkotja."
 
+msgid "Attach a data device"
+msgstr ""
+
+msgid "Attach a log device"
+msgstr ""
+
 msgid "Attached"
 msgstr "Csatolt"
 
@@ -898,13 +924,10 @@ msgid "Attaching provider '%s'."
 msgstr "'%s' szolgáltató csatlakoztatása."
 
 msgid ""
-"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
-"or NTFS can result in unpredictable results, file corruption and the loss of "
+"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4 or "
+"NTFS can result in unpredictable results, file corruption and the loss of "
 "data!"
 msgstr ""
-"Más fájlrendszer használata, mint például FAT, FAT32, EXT2, EXT3, EXT4 vagy "
-"NTFS kiszámíthatatlan eseményeket, fájlok sérüléseit, és adatvesztést "
-"okozhat!"
 
 msgid "Audio"
 msgstr "audió"
@@ -1132,6 +1155,9 @@ msgstr "Rendszerbetöltő"
 msgid "Bridge"
 msgstr "Híd (bridge)"
 
+msgid "Bring a device online"
+msgstr ""
+
 msgid "Broadcast interval"
 msgstr "Broadcast időköz"
 
@@ -1251,9 +1277,6 @@ msgid ""
 "error)."
 msgstr ""
 "CRC hibaszám. CRC hibák (adat olvasás/írás FIS CRC hiba) számát számolja."
-
-msgid "Cache Device"
-msgstr "Cache eszköz"
 
 msgid "Calibration Battery"
 msgstr "Elem kalibrálása"
@@ -1375,6 +1398,9 @@ msgstr "Beállítások törlése és szoftveres RAID-es lemezek importálása"
 msgid "Clear config and Import disks"
 msgstr "Beállítások törlése és lemezek importálása"
 
+msgid "Clear device errors"
+msgstr ""
+
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
 "file or XML format."
@@ -1409,6 +1435,9 @@ msgstr "Parancs"
 
 msgid "Command Scripts"
 msgstr "Parancsszkript"
+
+msgid "Command execution was successful"
+msgstr ""
 
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
@@ -2179,6 +2208,18 @@ msgstr "Cél port"
 msgid "Destination share"
 msgstr "Cél megosztás"
 
+msgid "Destroy a pool"
+msgstr ""
+
+msgid "Destroyed"
+msgstr ""
+
+msgid "Detach a data device from a mirror"
+msgstr ""
+
+msgid "Detach a log device from a mirrored log"
+msgstr ""
+
 msgid "Detected"
 msgstr "Észlelt"
 
@@ -2362,6 +2403,9 @@ msgstr "Lemez | Csatolási pont | Kezelés"
 
 msgid "Display"
 msgstr "Kijelző"
+
+msgid "Display ZFS command history"
+msgstr ""
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -3185,8 +3229,14 @@ msgstr "Lejár"
 msgid "Export"
 msgstr "Exportálás"
 
+msgid "Export a pool from the system"
+msgstr ""
+
 msgid "Export all the directories in the specified path."
 msgstr "A kiválasztott útvonalon lévő összes könyvtár exportálása."
+
+msgid "Exported"
+msgstr ""
 
 msgid "Extended Attributes"
 msgstr "Kiterjesztett attribútumok"
@@ -3303,16 +3353,8 @@ msgstr "Hiba az ütemezett feladat végrehajtása közben."
 msgid "Failed to remove: %s"
 msgstr "Nem sikerült eltávolítani: %s"
 
-#, php-format
-msgid "Failed to send status report to: %s."
-msgstr "Az állapot jelentés küldése meghiúsult ehhez: %s."
-
 msgid "Failed to send status report."
 msgstr "Állapot riport küldése sikertelen."
-
-#, php-format
-msgid "Failed to send test email to: %s."
-msgstr "Teszt e-mail küldése sikertelen ide: %s."
 
 msgid "Failed to send test email."
 msgstr "Teszt e-mail küldése sikertelen."
@@ -3436,6 +3478,9 @@ msgstr "Jelzők"
 msgid "Follow"
 msgstr "Követés"
 
+msgid "Force Operation"
+msgstr ""
+
 msgid "Force use"
 msgstr "Mindenképpen használ"
 
@@ -3541,6 +3586,9 @@ msgstr "Általános beállítások"
 
 msgid "Generate"
 msgstr "Generálás"
+
+msgid "Generate a new unique identifier for a pool"
+msgstr ""
 
 msgid "Generate password if leave empty."
 msgstr "Jelszó generálásához hagyd üresen."
@@ -3745,9 +3793,6 @@ msgstr "Állomások engedélyezése"
 
 msgid "Hosts deny"
 msgstr "Állomások tiltása"
-
-msgid "Hot Spare"
-msgstr "Hot pótalkatrész"
 
 msgid "Hours"
 msgstr "Óra"
@@ -4178,6 +4223,9 @@ msgstr "A szünetmentes újraindítása előtti várakozási idő."
 msgid "Interval to wait before restarting the load"
 msgstr "A töltés újraindítása előtti várakozási idő"
 
+msgid "Invalid command line option"
+msgstr ""
+
 msgid "Invalid file format or incorrect password."
 msgstr "Érvénytelen fájlformátum vagy hibás jelszó."
 
@@ -4306,6 +4354,9 @@ msgstr "Titkosított kötet kilövése"
 
 msgid "Korean"
 msgstr "Koreai"
+
+msgid "L2 Cache"
+msgstr ""
 
 msgid "LACP (Link Aggregation Control Protocol)"
 msgstr "LACP (Link Aggregation Control Protokoll)"
@@ -4480,6 +4531,9 @@ msgstr ""
 "következőkből: CCMP (AES számoló módban CBC-MAC-kel, RFC 3610, IEEE "
 "802.11i/D7.0), TKIP (Temporal Key Integrity Protokoll, IEEE 802.11i/D7.0)."
 
+msgid "List or import pools"
+msgstr ""
+
 msgid "Load"
 msgstr "Terhelés"
 
@@ -4553,9 +4607,6 @@ msgstr "Munka fájlok helye, pl. %s/backup/.unison"
 
 msgid "Log"
 msgstr "Napló"
-
-msgid "Log Device"
-msgstr "Napló eszköz"
 
 msgid "Log Level"
 msgstr "Naplózás szintje"
@@ -4915,6 +4966,9 @@ msgstr "Következő hálózati időszinkronizáció közötti idő."
 msgid "Missing a temporary folder."
 msgstr "Hiányzik az átmeneti könyvtár."
 
+msgid "Missing parameter"
+msgstr ""
+
 msgid "Mixed"
 msgstr "Vegyes"
 
@@ -5104,9 +5158,6 @@ msgstr ""
 "üzemmódban van. A leállított lemezt is újra felpörgetheti az ellenőrzés "
 "idejére."
 
-msgid "New Device"
-msgstr "Új eszköz"
-
 msgid "New password"
 msgstr "Új jelszó"
 
@@ -5152,8 +5203,8 @@ msgstr "Egy konfigurált tároló sincs."
 msgid "No configured virtual devices."
 msgstr "Egy konfigurált virtuális eszköz sincs."
 
-msgid "No device selected."
-msgstr "Nem választott ki eszközt."
+msgid "No devices have been selected"
+msgstr ""
 
 msgid "No disk configured"
 msgstr "Nincs lemez beállítva"
@@ -5177,11 +5228,29 @@ msgstr "Nincs új lemez."
 msgid "No new software raid disk found."
 msgstr "Nincs új szoftveres raid lemez."
 
+msgid "No pool devices have been selected"
+msgstr ""
+
 msgid "No pool was found."
 msgstr "Nincs tároló"
 
+msgid "No pools have been selected"
+msgstr ""
+
 msgid "No softraid-formatted disks available."
 msgstr "Egy softraid-formázott eszköz sincs."
+
+msgid "No suitable devices found."
+msgstr ""
+
+msgid "No suitable pools found."
+msgstr ""
+
+msgid "No suitable virtual devices found."
+msgstr ""
+
+msgid "No virtual devices have been selected"
+msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "Nemmegengedő - Csak tiltó bejegyzése öröklődjenek"
@@ -5375,14 +5444,6 @@ msgstr "Régi jelszó"
 msgid "On"
 msgstr "Be"
 
-msgid ""
-"Once you add the virtual device, it becomes impossible to delete again. It "
-"recommends adding the same number of drives as the existing virtual device."
-msgstr ""
-"Ha hozzáadsz egy virtuális eszközt, lehetetlenné válik, hogy újra töröld. "
-"Ajánlott azonos számú meghajtók hozzáadása, mint a már meglévő virtuális "
-"eszköz száma."
-
 msgid "Online"
 msgstr "Online"
 
@@ -5434,6 +5495,9 @@ msgstr "Kimenő teljesítmény/Inverter Information"
 
 msgid "Outgoing SMTP mail server address."
 msgstr "Kimenő SMTP levelezőszerver címe."
+
+msgid "Output"
+msgstr ""
 
 msgid "Output current (A)"
 msgstr "Kimeneti áram (A)"
@@ -5512,6 +5576,9 @@ msgstr "Sajnálatosan agresszív"
 
 msgid "Pairwise"
 msgstr "Páros"
+
+msgid "Parameter"
+msgstr ""
 
 msgid "Parameter xxx (ups.conf or cmdline -x) setting"
 msgstr "Paraméter xxx (ups.conf vagy cmdline -x) beállítás"
@@ -5740,11 +5807,20 @@ msgstr "Lekérdezési idő"
 msgid "Pool"
 msgstr "Tároló"
 
+msgid "Pool Devices"
+msgstr ""
+
 msgid "Pool Information & Status"
 msgstr "Tároló információ & állapot"
 
-msgid "Pool Tools"
-msgstr "Tároló eszközök"
+msgid "Pool State"
+msgstr ""
+
+msgid "Pool Status"
+msgstr ""
+
+msgid "Pool Version"
+msgstr ""
 
 msgid "Pool cannot be changed."
 msgstr "Tárolót nem lehet módosítani."
@@ -5813,6 +5889,9 @@ msgstr "Portugál"
 
 msgid "PostInit"
 msgstr "Indítás után"
+
+msgid "Potentially Active"
+msgstr ""
 
 msgid "Power Daemon"
 msgstr "Energiafelhasználás démon"
@@ -6178,6 +6257,15 @@ msgstr "Távoli rendszernapló-üzenetek"
 msgid "Removable"
 msgstr "Eltávolítható"
 
+msgid "Remove a cache device from a pool"
+msgstr ""
+
+msgid "Remove a log device from a pool"
+msgstr ""
+
+msgid "Remove a spare device from a pool"
+msgstr ""
+
 msgid "Remove all entries from ARP table"
 msgstr "Törölje az összes bejegyzést ARP táblából"
 
@@ -6187,6 +6275,9 @@ msgstr "Folytatás előtt távolítsd el: %s."
 
 msgid "Replace Battery UPS"
 msgstr "Cserélje ki az szünetmentes akkumulátorát."
+
+msgid "Replace a device"
+msgstr ""
 
 msgid "Report Generator"
 msgstr "Jelentéskészítő"
@@ -6499,11 +6590,17 @@ msgstr "Ütemezett leállítása"
 msgid "Scheduled tests"
 msgstr "Ütemezett tesztek"
 
+msgid "Scrub a pool"
+msgstr ""
+
 msgid "Search"
 msgstr "Keresés"
 
 msgid "Search event"
 msgstr "Esemény keresése"
+
+msgid "Search for and import all disks found"
+msgstr ""
 
 msgid "Secondary"
 msgstr "Másodlagos"
@@ -6554,11 +6651,32 @@ msgstr ""
 "Válassz a WebGUI-hoz Hypertext Transfer Protokoll (HTTP) vagy Biztonságos "
 "Hypertext Transfer Protokoll (HTTPS) közül."
 
+msgid "Select a cache device"
+msgstr ""
+
+msgid "Select a data device"
+msgstr ""
+
 msgid "Select a date format."
 msgstr "Válassz dátumformátumot"
 
+msgid "Select a device"
+msgstr ""
+
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Válassza ki a monitorozandó lemezt."
+
+msgid "Select a log device"
+msgstr ""
+
+msgid "Select a pool"
+msgstr ""
+
+msgid "Select a pool device"
+msgstr ""
+
+msgid "Select a spare device"
+msgstr ""
 
 msgid "Select file system format."
 msgstr "Válassz fájlrendszer formátumot."
@@ -6572,11 +6690,20 @@ msgstr "Válaszd ki a listáról eltávolítandó elemet."
 msgid "Select mount point where to create the swap file."
 msgstr "Válassz csatolást, ahová a cserefájl létrehozható."
 
+msgid "Select one or more spare devices"
+msgstr ""
+
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
 "Válaszd a 'Formázatlan' beállítást a nem formázott lemezekhez, majd formázd "
 "meg őket"
+
+msgid "Select pool device"
+msgstr ""
+
+msgid "Select pools"
+msgstr ""
 
 msgid "Select read balance algorithm."
 msgstr "Olvasó egyensúly algoritmus kiválasztása"
@@ -6914,6 +7041,9 @@ msgstr ""
 msgid "Spanish"
 msgstr "Spanyol"
 
+msgid "Spare"
+msgstr ""
+
 msgid "Sparse"
 msgstr "Szórványos"
 
@@ -7034,10 +7164,6 @@ msgstr "Állapot"
 msgid "Status & Information"
 msgstr "Állapot és információ"
 
-#, php-format
-msgid "Status report successfully sent to: %s."
-msgstr "Állapotjelentés sikeresen elküldve a következő címre: %s."
-
 msgid "Status report successfully sent."
 msgstr "Állapotjelentés sikeresen elküldve."
 
@@ -7094,6 +7220,9 @@ msgstr "Alhálózati maszk"
 
 msgid "Subsystem"
 msgstr "Alrendszer"
+
+msgid "Success"
+msgstr ""
 
 msgid "Successful"
 msgstr "Sikeres"
@@ -7260,6 +7389,9 @@ msgstr "%d. címke"
 msgid "Tag%d (%s)"
 msgstr "%d. címke (%s)"
 
+msgid "Take a device offline"
+msgstr ""
+
 msgid "Tap device"
 msgstr "Érintőeszköz"
 
@@ -7326,6 +7458,9 @@ msgstr "Átmeneti könyvtár"
 msgid "Temporary directory to store transcoded files."
 msgstr "Átmeneti könyvtár az átkódolt fájlok tárolására."
 
+msgid "Test Mode"
+msgstr ""
+
 msgid "Test email"
 msgstr "Teszt e-mail"
 
@@ -7333,12 +7468,11 @@ msgstr "Teszt e-mail"
 msgid "Test email from host: %s"
 msgstr "Teszt e-mail %s állomásról"
 
-#, php-format
-msgid "Test email successfully sent to: %s."
-msgstr "Teszt e-mail sikeresen elküldve ide: %s."
-
 msgid "Test email successfully sent."
 msgstr "Teszt e-mail sikeresen elküldve."
+
+msgid "Test mode, no command execution"
+msgstr ""
 
 msgid ""
 "The  deny  option specifies users and groups who are not allowed access to "
@@ -9030,6 +9164,9 @@ msgstr "Az operáció rendszer felé jelzett javíthatatlan hibák száma."
 msgid "Unformated"
 msgstr "Formázatlan"
 
+msgid "Uninitialized"
+msgstr ""
+
 msgid "Uninstall package"
 msgstr "Csomag eltávolítása"
 
@@ -9050,6 +9187,9 @@ msgstr "Unix karakterkiosztás"
 
 msgid "Unknown"
 msgstr "Ismeretlen"
+
+msgid "Unknown Activity"
+msgstr ""
 
 msgid "Unknown or unformatted"
 msgstr "Ismeretlen vagy formázatlan"
@@ -9080,6 +9220,9 @@ msgstr "Frissítés 5 másodpercen belül."
 
 msgid "Upgrade Firmware"
 msgstr "Firmware frissítése"
+
+msgid "Upgrade ZFS and add all supported feature flags on a pool"
+msgstr ""
 
 msgid "Upload"
 msgstr "Feltöltés"
@@ -9210,9 +9353,6 @@ msgstr "Felhasználó utótag"
 
 msgid "Username"
 msgstr "Felhasználónév"
-
-msgid "Username contains invalid character(s) : "
-msgstr "A felhasználónévben nem megengedett karakter szerepel: "
 
 msgid "Username field : "
 msgstr "Felhasználónév: "
@@ -9654,6 +9794,9 @@ msgstr "ZFS Adattár információ & állapot"
 msgid "ZFS Dataset Properties"
 msgstr "ZFS Adattár tulajdonságok"
 
+msgid "ZFS Pool Tools"
+msgstr ""
+
 msgid "ZFS Snapshot Information & Status"
 msgstr "ZFS pillantkép információ & állapot"
 
@@ -9687,6 +9830,9 @@ msgstr "Zeroconf/Bonjour"
 
 msgid "all encrypted disks are imported."
 msgstr "összes encrypted raid lemez importálva."
+
+msgid "and"
+msgstr ""
 
 msgid "change failed."
 msgstr "változtatás sikertelen"
@@ -9831,3 +9977,61 @@ msgstr "felhasználó"
 
 msgid "version:"
 msgstr "verzió:"
+
+#, php-format
+#~ msgid "Failed to send status report to: %s."
+#~ msgstr "Az állapot jelentés küldése meghiúsult ehhez: %s."
+
+#, php-format
+#~ msgid "Failed to send test email to: %s."
+#~ msgstr "Teszt e-mail küldése sikertelen ide: %s."
+
+#~ msgid "New Device"
+#~ msgstr "Új eszköz"
+
+#~ msgid "No device selected."
+#~ msgstr "Nem választott ki eszközt."
+
+#, php-format
+#~ msgid "Test email successfully sent to: %s."
+#~ msgstr "Teszt e-mail sikeresen elküldve ide: %s."
+
+#~ msgid "Cache Device"
+#~ msgstr "Cache eszköz"
+
+#~ msgid "Hot Spare"
+#~ msgstr "Hot pótalkatrész"
+
+#~ msgid ""
+#~ "Once you add the virtual device, it becomes impossible to delete again. It "
+#~ "recommends adding the same number of drives as the existing virtual device."
+#~ msgstr ""
+#~ "Ha hozzáadsz egy virtuális eszközt, lehetetlenné válik, hogy újra töröld. "
+#~ "Ajánlott azonos számú meghajtók hozzáadása, mint a már meglévő virtuális "
+#~ "eszköz száma."
+
+#, php-format
+#~ msgid "Status report successfully sent to: %s."
+#~ msgstr "Állapotjelentés sikeresen elküldve a következő címre: %s."
+
+#~ msgid "Username contains invalid character(s) : "
+#~ msgstr "A felhasználónévben nem megengedett karakter szerepel: "
+
+#~ msgid "Log Device"
+#~ msgstr "Napló eszköz"
+
+#, php-format
+#~ msgid "%s: cannot get mirror name."
+#~ msgstr "%s: nincs tükörnév."
+
+#~ msgid "Pool Tools"
+#~ msgstr "Tároló eszközök"
+
+#~ msgid ""
+#~ "Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
+#~ "or NTFS can result in unpredictable results, file corruption and the loss of "
+#~ "data!"
+#~ msgstr ""
+#~ "Más fájlrendszer használata, mint például FAT, FAT32, EXT2, EXT3, EXT4 vagy "
+#~ "NTFS kiszámíthatatlan eseményeket, fájlok sérüléseit, és adatvesztést "
+#~ "okozhat!"
