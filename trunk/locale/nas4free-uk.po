@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2016-07-17 08:18+0000\n"
+"POT-Creation-Date: 2016-08-26 00:19+0000\n"
 "PO-Revision-Date: 2016-07-25 18:31+0000\n"
 "Last-Translator: AndriyM <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-24 09:13+0000\n"
+"X-Launchpad-Export-Date: 2016-08-25 22:37+0000\n"
 "X-Generator: Launchpad (build 18179)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -99,10 +99,6 @@ msgstr "%s%% доступно"
 #, php-format
 msgid "%s%d %s is already used by %s%d."
 msgstr "%s%d %s вже використовується %s%d."
-
-#, php-format
-msgid "%s: cannot get mirror name."
-msgstr "%s: неможливо отримати ім'я дзеркала."
 
 #, php-format
 msgid "%sB available of %sB"
@@ -432,6 +428,9 @@ msgstr ""
 "Активуйте email-інформування, якщо бажаєте отримувати повідомлення про "
 "виявлені помилки або у випадку невдалого виконання команди S.M.A.R.T."
 
+msgid "Active"
+msgstr ""
+
 msgid "Active Directory"
 msgstr "Активна Директорія"
 
@@ -443,6 +442,12 @@ msgstr "Активні ресурси"
 
 msgid "Active Users"
 msgstr "Активні користувачі"
+
+msgid "Activities"
+msgstr ""
+
+msgid "Activity"
+msgstr ""
 
 msgid "Adaptive (Low Power Consumption)"
 msgstr "Адаптивний (низьке споживання енергії)"
@@ -479,6 +484,18 @@ msgstr "Додати віртуальний пристрій"
 
 msgid "Add Volume"
 msgstr "Додати том"
+
+msgid "Add a cache device to a pool"
+msgstr ""
+
+msgid "Add a log device to a pool"
+msgstr ""
+
+msgid "Add a spare device to a pool"
+msgstr ""
+
+msgid "Add a virtual device to a pool"
+msgstr ""
 
 msgid "Add additional scheduled self-test."
 msgstr "Додати заплановане самотестування."
@@ -821,6 +838,9 @@ msgstr ""
 "Група ініціаторів ідентифікується номером мітки і визначає дозволені імена "
 "ініціатора і мереж."
 
+msgid "An error occured."
+msgstr ""
+
 msgid "An host with this name already exists."
 msgstr "Хост із таким іменем вже існує"
 
@@ -894,6 +914,12 @@ msgstr ""
 "На найвищому рівні метою є те, що представлене ініціатору, і може складатися "
 "з одного або більше екстентів."
 
+msgid "Attach a data device"
+msgstr ""
+
+msgid "Attach a log device"
+msgstr ""
+
 msgid "Attached"
 msgstr "Приєднано"
 
@@ -902,13 +928,10 @@ msgid "Attaching provider '%s'."
 msgstr "Приєдную провайдера '%s'."
 
 msgid ""
-"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
-"or NTFS can result in unpredictable results, file corruption and the loss of "
+"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4 or "
+"NTFS can result in unpredictable results, file corruption and the loss of "
 "data!"
 msgstr ""
-"Спроба використати інші формати файлів, такі як FAT, FAT32, EXT2, EXT3, "
-"EXT4, або NTFS може привести до непередбачуваних результатів, пошкодження "
-"файлів і втрати даних!"
 
 msgid "Audio"
 msgstr "Аудіо"
@@ -1136,6 +1159,9 @@ msgstr "Завантажувач"
 msgid "Bridge"
 msgstr "Міст"
 
+msgid "Bring a device online"
+msgstr ""
+
 msgid "Broadcast interval"
 msgstr "Інтервал"
 
@@ -1258,9 +1284,6 @@ msgstr ""
 "Лічильник помилок CRC. Рахує кількість помилок CRC (читання / запису даних "
 "помилок CRC FIS)."
 
-msgid "Cache Device"
-msgstr "Кеш пристрою"
-
 msgid "Calibration Battery"
 msgstr "Калібрування батареї"
 
@@ -1380,6 +1403,9 @@ msgstr "Очистити конфігурацію програмних RAID та
 msgid "Clear config and Import disks"
 msgstr "Очистити налаштування та імпортувати диски"
 
+msgid "Clear device errors"
+msgstr ""
+
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
 "file or XML format."
@@ -1414,6 +1440,9 @@ msgstr "Команда"
 
 msgid "Command Scripts"
 msgstr "Командні скрипти"
+
+msgid "Command execution was successful"
+msgstr ""
 
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
@@ -2202,6 +2231,18 @@ msgstr "Порт призначення"
 msgid "Destination share"
 msgstr "Каталог призначення"
 
+msgid "Destroy a pool"
+msgstr ""
+
+msgid "Destroyed"
+msgstr ""
+
+msgid "Detach a data device from a mirror"
+msgstr ""
+
+msgid "Detach a log device from a mirrored log"
+msgstr ""
+
 msgid "Detected"
 msgstr "Виявлено"
 
@@ -2384,6 +2425,9 @@ msgstr "Диски | Точка монтування | Управління"
 
 msgid "Display"
 msgstr "Дисплей"
+
+msgid "Display ZFS command history"
+msgstr ""
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -3205,8 +3249,14 @@ msgstr "Закінчується"
 msgid "Export"
 msgstr "Експорт"
 
+msgid "Export a pool from the system"
+msgstr ""
+
 msgid "Export all the directories in the specified path."
 msgstr "Експортувати всі папки за вказаним шляхом."
+
+msgid "Exported"
+msgstr ""
 
 msgid "Extended Attributes"
 msgstr "Додаткові атрибути"
@@ -3323,16 +3373,8 @@ msgstr "Помилка виконання завдання cron."
 msgid "Failed to remove: %s"
 msgstr "Не вдалося видалити: %s"
 
-#, php-format
-msgid "Failed to send status report to: %s."
-msgstr "Не вдалося відіслати звіт на %s."
-
 msgid "Failed to send status report."
 msgstr "Відмова відправлення звіту про стан."
-
-#, php-format
-msgid "Failed to send test email to: %s."
-msgstr "Неможливо відправити тестового листа на адресу: %s."
 
 msgid "Failed to send test email."
 msgstr "Відмова відправлення тестового емейлу."
@@ -3460,6 +3502,9 @@ msgstr "Прапорці"
 msgid "Follow"
 msgstr "Стежити"
 
+msgid "Force Operation"
+msgstr ""
+
 msgid "Force use"
 msgstr "Примусове використання"
 
@@ -3566,6 +3611,9 @@ msgstr "Загальне налаштування"
 
 msgid "Generate"
 msgstr "Створити"
+
+msgid "Generate a new unique identifier for a pool"
+msgstr ""
 
 msgid "Generate password if leave empty."
 msgstr "Згенерувати пароль, якщо залишений пустим."
@@ -3771,9 +3819,6 @@ msgstr "Дозволені хости"
 
 msgid "Hosts deny"
 msgstr "Заборонені хости"
-
-msgid "Hot Spare"
-msgstr "Гарячий резерв"
 
 msgid "Hours"
 msgstr "Годин"
@@ -4209,6 +4254,9 @@ msgstr "Інтервал очікування перед перезапуско�
 msgid "Interval to wait before restarting the load"
 msgstr "Інтервал очікування перед повторним запуском навантаження"
 
+msgid "Invalid command line option"
+msgstr ""
+
 msgid "Invalid file format or incorrect password."
 msgstr "Неправильний формат файла або пароль."
 
@@ -4339,6 +4387,9 @@ msgstr "Знищити зашифрований диск"
 
 msgid "Korean"
 msgstr "Корейська"
+
+msgid "L2 Cache"
+msgstr ""
 
 msgid "LACP (Link Aggregation Control Protocol)"
 msgstr "LACP (Link Aggregation Control Protocol)"
@@ -4511,6 +4562,9 @@ msgstr ""
 "(AES в режимі лічильника з CBC-MAC, RFC 3610, IEEE 802.11i / D7.0), TKIP "
 "(Temporal Key Integrity Protocol, IEEE 802.11i / D7.0)."
 
+msgid "List or import pools"
+msgstr ""
+
 msgid "Load"
 msgstr "Завантажити"
 
@@ -4587,9 +4641,6 @@ msgstr ""
 
 msgid "Log"
 msgstr "Журнал"
-
-msgid "Log Device"
-msgstr "Пристрій для журналу"
 
 msgid "Log Level"
 msgstr "Рівень запису до журналу"
@@ -4944,6 +4995,9 @@ msgstr "Минут до наступної мережевої синхроніз
 msgid "Missing a temporary folder."
 msgstr "Тимчасова директорія відсутня."
 
+msgid "Missing parameter"
+msgstr ""
+
 msgid "Mixed"
 msgstr "Змішаний"
 
@@ -5134,9 +5188,6 @@ msgstr ""
 "енергоспоживання. Це може спричинити повторну розкрутку шпинделя диска, який "
 "зупинився."
 
-msgid "New Device"
-msgstr "Новий пристрій"
-
 msgid "New password"
 msgstr "Новий пароль"
 
@@ -5182,8 +5233,8 @@ msgstr "Немає налаштованих пулів."
 msgid "No configured virtual devices."
 msgstr "Немає налаштованих віртуальних пристроїв."
 
-msgid "No device selected."
-msgstr "Не вибрано пристрій."
+msgid "No devices have been selected"
+msgstr ""
 
 msgid "No disk configured"
 msgstr "Диск не зконфігурований"
@@ -5207,11 +5258,29 @@ msgstr "Нових дисків не знайдено."
 msgid "No new software raid disk found."
 msgstr "Нових дисків для програмного RAID не знайдено."
 
+msgid "No pool devices have been selected"
+msgstr ""
+
 msgid "No pool was found."
 msgstr "Жодного пула не знайдено."
 
+msgid "No pools have been selected"
+msgstr ""
+
 msgid "No softraid-formatted disks available."
 msgstr "Немає доступних відформатованих SoftRAID дисків."
+
+msgid "No suitable devices found."
+msgstr ""
+
+msgid "No suitable pools found."
+msgstr ""
+
+msgid "No suitable virtual devices found."
+msgstr ""
+
+msgid "No virtual devices have been selected"
+msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Успадковувати тільки заборону запису"
@@ -5402,13 +5471,6 @@ msgstr "Старий пароль"
 msgid "On"
 msgstr "Увімкнено"
 
-msgid ""
-"Once you add the virtual device, it becomes impossible to delete again. It "
-"recommends adding the same number of drives as the existing virtual device."
-msgstr ""
-"Доданий віртуальний пристрій неможливо видалити. Рекомендується додавати "
-"кількість дисків рівну кількості віртуальних пристроїв."
-
 msgid "Online"
 msgstr "Онлайн"
 
@@ -5459,6 +5521,9 @@ msgstr "Інформація про вихідну лінію/інвертор"
 
 msgid "Outgoing SMTP mail server address."
 msgstr "Адреса вихідного SMTP сервера"
+
+msgid "Output"
+msgstr ""
 
 msgid "Output current (A)"
 msgstr "Вихідний струм (А)"
@@ -5538,6 +5603,9 @@ msgstr "Дуже агресивний"
 
 msgid "Pairwise"
 msgstr "Попарний"
+
+msgid "Parameter"
+msgstr ""
 
 msgid "Parameter xxx (ups.conf or cmdline -x) setting"
 msgstr "Встановлення параметра xxx (ups.conf або cmdline -x)"
@@ -5762,11 +5830,20 @@ msgstr "Час опитування"
 msgid "Pool"
 msgstr "Список"
 
+msgid "Pool Devices"
+msgstr ""
+
 msgid "Pool Information & Status"
 msgstr "Статус та інформація про пул"
 
-msgid "Pool Tools"
-msgstr "Інструменти пула"
+msgid "Pool State"
+msgstr ""
+
+msgid "Pool Status"
+msgstr ""
+
+msgid "Pool Version"
+msgstr ""
 
 msgid "Pool cannot be changed."
 msgstr "Пул не може бути змінений."
@@ -5835,6 +5912,9 @@ msgstr "Португальська (Португалія)"
 
 msgid "PostInit"
 msgstr "PostInit"
+
+msgid "Potentially Active"
+msgstr ""
 
 msgid "Power Daemon"
 msgstr "Сервіс живлення"
@@ -6197,6 +6277,15 @@ msgstr "Віддалені syslog повідомлення"
 msgid "Removable"
 msgstr "Змінний пристрій"
 
+msgid "Remove a cache device from a pool"
+msgstr ""
+
+msgid "Remove a log device from a pool"
+msgstr ""
+
+msgid "Remove a spare device from a pool"
+msgstr ""
+
 msgid "Remove all entries from ARP table"
 msgstr "Видалити усі записи з таблиці ARP"
 
@@ -6206,6 +6295,9 @@ msgstr "Видаліть%s, перш ніж продовжити."
 
 msgid "Replace Battery UPS"
 msgstr "Зміна батареї ДБЖ(UPS)"
+
+msgid "Replace a device"
+msgstr ""
 
 msgid "Report Generator"
 msgstr "Генератор звітів"
@@ -6513,11 +6605,17 @@ msgstr "Заплановане вимкнення"
 msgid "Scheduled tests"
 msgstr "Заплановані тести"
 
+msgid "Scrub a pool"
+msgstr ""
+
 msgid "Search"
 msgstr "Пошук"
 
 msgid "Search event"
 msgstr "Шукати подію"
+
+msgid "Search for and import all disks found"
+msgstr ""
 
 msgid "Secondary"
 msgstr "Вторинний"
@@ -6565,11 +6663,32 @@ msgid ""
 "Secure (HTTPS) for the WebGUI."
 msgstr "Вкажіть протокол доступу до веб-інтерфейсу: HTTP або HTTPS"
 
+msgid "Select a cache device"
+msgstr ""
+
+msgid "Select a data device"
+msgstr ""
+
 msgid "Select a date format."
 msgstr "Виберіть формат дати."
 
+msgid "Select a device"
+msgstr ""
+
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Виберіть диск для якого дозволено моніторинг S.M.A.R.T."
+
+msgid "Select a log device"
+msgstr ""
+
+msgid "Select a pool"
+msgstr ""
+
+msgid "Select a pool device"
+msgstr ""
+
+msgid "Select a spare device"
+msgstr ""
 
 msgid "Select file system format."
 msgstr "Виберіть формат файлової системи."
@@ -6583,11 +6702,20 @@ msgstr "Виберіть елемент для видалення із спис�
 msgid "Select mount point where to create the swap file."
 msgstr "Виберіть точку монтування для створення файла підкачки."
 
+msgid "Select one or more spare devices"
+msgstr ""
+
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
 "Виберіть варіант \"Неформатований\" для неформатованих дисків і "
 "відформатуйте їх за допомогою"
+
+msgid "Select pool device"
+msgstr ""
+
+msgid "Select pools"
+msgstr ""
 
 msgid "Select read balance algorithm."
 msgstr "Виберіть алгоритм балансування читання."
@@ -6929,6 +7057,9 @@ msgstr ""
 msgid "Spanish"
 msgstr "Іспанська"
 
+msgid "Spare"
+msgstr ""
+
 msgid "Sparse"
 msgstr "Розріджений"
 
@@ -7041,10 +7172,6 @@ msgstr "Статус"
 msgid "Status & Information"
 msgstr "Інформація і статус"
 
-#, php-format
-msgid "Status report successfully sent to: %s."
-msgstr "Звіт про статус успішно надіслано на: %s."
-
 msgid "Status report successfully sent."
 msgstr "Звіт про статус успішно надіслано."
 
@@ -7101,6 +7228,9 @@ msgstr "Маска підмережі"
 
 msgid "Subsystem"
 msgstr "Підсистема"
+
+msgid "Success"
+msgstr ""
 
 msgid "Successful"
 msgstr "Успішно"
@@ -7268,6 +7398,9 @@ msgstr "Мітка%d"
 msgid "Tag%d (%s)"
 msgstr "Мітка%d (%s)"
 
+msgid "Take a device offline"
+msgstr ""
+
 msgid "Tap device"
 msgstr "Tap пристрій"
 
@@ -7336,6 +7469,9 @@ msgstr "Тимчасова директорія"
 msgid "Temporary directory to store transcoded files."
 msgstr "Тимчасова директорія для файлів перекодування"
 
+msgid "Test Mode"
+msgstr ""
+
 msgid "Test email"
 msgstr "Тестувати email"
 
@@ -7343,12 +7479,11 @@ msgstr "Тестувати email"
 msgid "Test email from host: %s"
 msgstr "Тестовий email від хоста: %s"
 
-#, php-format
-msgid "Test email successfully sent to: %s."
-msgstr "Тестовий email успішно відіслано на: %s."
-
 msgid "Test email successfully sent."
 msgstr "Тестовий email успішно відіслано."
+
+msgid "Test mode, no command execution"
+msgstr ""
 
 msgid ""
 "The  deny  option specifies users and groups who are not allowed access to "
@@ -9054,6 +9189,9 @@ msgstr ""
 msgid "Unformated"
 msgstr "Неформатований"
 
+msgid "Uninitialized"
+msgstr ""
+
 msgid "Uninstall package"
 msgstr "Видалити пакунок"
 
@@ -9074,6 +9212,9 @@ msgstr "Набір символів Unix"
 
 msgid "Unknown"
 msgstr "Невідомо"
+
+msgid "Unknown Activity"
+msgstr ""
 
 msgid "Unknown or unformatted"
 msgstr "Невідомий або невідформатований"
@@ -9104,6 +9245,9 @@ msgstr "Оновлюється кожних 5 секунд."
 
 msgid "Upgrade Firmware"
 msgstr "Оновлення прошивки"
+
+msgid "Upgrade ZFS and add all supported feature flags on a pool"
+msgstr ""
 
 msgid "Upload"
 msgstr "Вивантажити"
@@ -9244,9 +9388,6 @@ msgstr "Суфікс користувача"
 
 msgid "Username"
 msgstr "Ім'я користувача"
-
-msgid "Username contains invalid character(s) : "
-msgstr "Ім'я користувача містить недопустимі символи: "
 
 msgid "Username field : "
 msgstr "Поле ім'я користувача: "
@@ -9694,6 +9835,9 @@ msgstr "Інформація та Статус датасету ZFS"
 msgid "ZFS Dataset Properties"
 msgstr "Властивості датасету ZFS"
 
+msgid "ZFS Pool Tools"
+msgstr ""
+
 msgid "ZFS Snapshot Information & Status"
 msgstr "Інформація та Статус снапшоту ZFS"
 
@@ -9728,6 +9872,9 @@ msgstr "Zeroconf/Bonjour"
 
 msgid "all encrypted disks are imported."
 msgstr "усі зашифровані диски імпортовані."
+
+msgid "and"
+msgstr ""
 
 msgid "change failed."
 msgstr "відмова зміни."
@@ -9872,3 +10019,60 @@ msgstr "користувач"
 
 msgid "version:"
 msgstr "версія:"
+
+#~ msgid "Cache Device"
+#~ msgstr "Кеш пристрою"
+
+#, php-format
+#~ msgid "%s: cannot get mirror name."
+#~ msgstr "%s: неможливо отримати ім'я дзеркала."
+
+#, php-format
+#~ msgid "Failed to send status report to: %s."
+#~ msgstr "Не вдалося відіслати звіт на %s."
+
+#~ msgid "New Device"
+#~ msgstr "Новий пристрій"
+
+#~ msgid "No device selected."
+#~ msgstr "Не вибрано пристрій."
+
+#, php-format
+#~ msgid "Status report successfully sent to: %s."
+#~ msgstr "Звіт про статус успішно надіслано на: %s."
+
+#, php-format
+#~ msgid "Test email successfully sent to: %s."
+#~ msgstr "Тестовий email успішно відіслано на: %s."
+
+#, php-format
+#~ msgid "Failed to send test email to: %s."
+#~ msgstr "Неможливо відправити тестового листа на адресу: %s."
+
+#~ msgid "Log Device"
+#~ msgstr "Пристрій для журналу"
+
+#~ msgid "Hot Spare"
+#~ msgstr "Гарячий резерв"
+
+#~ msgid ""
+#~ "Once you add the virtual device, it becomes impossible to delete again. It "
+#~ "recommends adding the same number of drives as the existing virtual device."
+#~ msgstr ""
+#~ "Доданий віртуальний пристрій неможливо видалити. Рекомендується додавати "
+#~ "кількість дисків рівну кількості віртуальних пристроїв."
+
+#~ msgid "Pool Tools"
+#~ msgstr "Інструменти пула"
+
+#~ msgid ""
+#~ "Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
+#~ "or NTFS can result in unpredictable results, file corruption and the loss of "
+#~ "data!"
+#~ msgstr ""
+#~ "Спроба використати інші формати файлів, такі як FAT, FAT32, EXT2, EXT3, "
+#~ "EXT4, або NTFS може привести до непередбачуваних результатів, пошкодження "
+#~ "файлів і втрати даних!"
+
+#~ msgid "Username contains invalid character(s) : "
+#~ msgstr "Ім'я користувача містить недопустимі символи: "

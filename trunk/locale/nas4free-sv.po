@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-07-17 08:18+0000\n"
+"POT-Creation-Date: 2016-08-26 00:19+0000\n"
 "PO-Revision-Date: 2016-08-23 19:08+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-24 09:13+0000\n"
+"X-Launchpad-Export-Date: 2016-08-25 22:37+0000\n"
 "X-Generator: Launchpad (build 18179)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -100,10 +100,6 @@ msgstr "%s%%tillgänglig"
 #, php-format
 msgid "%s%d %s is already used by %s%d."
 msgstr "%s%d %s används redan av %s%d."
-
-#, php-format
-msgid "%s: cannot get mirror name."
-msgstr "%s: Kan inte hämta namnet på speglingen"
 
 #, php-format
 msgid "%sB available of %sB"
@@ -424,6 +420,9 @@ msgstr ""
 "ett nytt fel har upptäckts, eller om ett S.M.A.R.T. kommando till en disk "
 "misslyckats."
 
+msgid "Active"
+msgstr ""
+
 msgid "Active Directory"
 msgstr "Active Directory"
 
@@ -435,6 +434,12 @@ msgstr "Aktiva delningar"
 
 msgid "Active Users"
 msgstr "Aktiva användare"
+
+msgid "Activities"
+msgstr ""
+
+msgid "Activity"
+msgstr ""
 
 msgid "Adaptive (Low Power Consumption)"
 msgstr "Adaptiv (Låg effektförbrukning)"
@@ -471,6 +476,18 @@ msgstr "Lägg till virtuell enhet"
 
 msgid "Add Volume"
 msgstr "Lägg till Volym"
+
+msgid "Add a cache device to a pool"
+msgstr ""
+
+msgid "Add a log device to a pool"
+msgstr ""
+
+msgid "Add a spare device to a pool"
+msgstr ""
+
+msgid "Add a virtual device to a pool"
+msgstr ""
 
 msgid "Add additional scheduled self-test."
 msgstr "Lägg till ytterligare schemalagda självtest."
@@ -807,6 +824,9 @@ msgstr ""
 "En Initierargrupp identifieras av en nummer och definierar godkända "
 "initiatornamn och nätverk."
 
+msgid "An error occured."
+msgstr ""
+
 msgid "An host with this name already exists."
 msgstr "En värd med det här namnet finns redan."
 
@@ -880,6 +900,12 @@ msgstr ""
 "På den högsta nivån är ett mål det som presenteras för initiator, och består "
 "av en eller flera utökningar."
 
+msgid "Attach a data device"
+msgstr ""
+
+msgid "Attach a log device"
+msgstr ""
+
 msgid "Attached"
 msgstr "Ansluten"
 
@@ -888,13 +914,10 @@ msgid "Attaching provider '%s'."
 msgstr "Lägger till leverantör '%s'."
 
 msgid ""
-"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
-"or NTFS can result in unpredictable results, file corruption and the loss of "
+"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4 or "
+"NTFS can result in unpredictable results, file corruption and the loss of "
 "data!"
 msgstr ""
-"Försök att använda andra filformat som FAT, FAT32, EXT2, EXT3, EXT4, eller "
-"NTFS kan resultera i oförutsägbara resultat, korrupta filer och förlust av "
-"data!"
 
 msgid "Audio"
 msgstr "Ljud"
@@ -1119,6 +1142,9 @@ msgstr "Starthanterare"
 msgid "Bridge"
 msgstr "Brygga"
 
+msgid "Bring a device online"
+msgstr ""
+
 msgid "Broadcast interval"
 msgstr "Sändningsintervall"
 
@@ -1238,9 +1264,6 @@ msgid ""
 "error)."
 msgstr "CRC felräknare. Räknar antal CRC fel (läs/skriv data FIS CRC fel)."
 
-msgid "Cache Device"
-msgstr "Buffertenhet"
-
 msgid "Calibration Battery"
 msgstr "Batterikallibrering"
 
@@ -1359,6 +1382,9 @@ msgstr "Nollställ konfiguration & importera mjukvaruraiddiskar"
 msgid "Clear config and Import disks"
 msgstr "Rensa inställningar och importera diskar"
 
+msgid "Clear device errors"
+msgstr ""
+
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
 "file or XML format."
@@ -1393,6 +1419,9 @@ msgstr "Kommando"
 
 msgid "Command Scripts"
 msgstr "Kommando skript"
+
+msgid "Command execution was successful"
+msgstr ""
 
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
@@ -2166,6 +2195,18 @@ msgstr "Målport"
 msgid "Destination share"
 msgstr "Destination utdelning"
 
+msgid "Destroy a pool"
+msgstr ""
+
+msgid "Destroyed"
+msgstr ""
+
+msgid "Detach a data device from a mirror"
+msgstr ""
+
+msgid "Detach a log device from a mirrored log"
+msgstr ""
+
 msgid "Detected"
 msgstr "Identifierad"
 
@@ -2349,6 +2390,9 @@ msgstr "Diskar | Monteringspunkt | Hantering"
 
 msgid "Display"
 msgstr "Visa"
+
+msgid "Display ZFS command history"
+msgstr ""
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -3161,8 +3205,14 @@ msgstr "Upphör"
 msgid "Export"
 msgstr "Exportera"
 
+msgid "Export a pool from the system"
+msgstr ""
+
 msgid "Export all the directories in the specified path."
 msgstr "Exportera alla kataloger i den angivna sökvägen."
+
+msgid "Exported"
+msgstr ""
 
 msgid "Extended Attributes"
 msgstr "Utökade attribut"
@@ -3279,16 +3329,8 @@ msgstr "Misslyckades med att köra cron-jobb."
 msgid "Failed to remove: %s"
 msgstr "Misslyckades att ta bort: %s"
 
-#, php-format
-msgid "Failed to send status report to: %s."
-msgstr "Misslyckades att sända statusrapport till %s."
-
 msgid "Failed to send status report."
 msgstr "Misslyckades att skicka statusrapport."
-
-#, php-format
-msgid "Failed to send test email to: %s."
-msgstr "Misslyckades att sända test-epost till %s."
 
 msgid "Failed to send test email."
 msgstr "Misslyckades att skicka test e-post."
@@ -3413,6 +3455,9 @@ msgstr "Flaggor"
 msgid "Follow"
 msgstr "Följ"
 
+msgid "Force Operation"
+msgstr ""
+
 msgid "Force use"
 msgstr "Tvinga"
 
@@ -3518,6 +3563,9 @@ msgstr "Grundinställningar"
 
 msgid "Generate"
 msgstr "Generera"
+
+msgid "Generate a new unique identifier for a pool"
+msgstr ""
 
 msgid "Generate password if leave empty."
 msgstr "Skapa lösenord om fältet lämnas tomt."
@@ -3720,9 +3768,6 @@ msgstr "Tillåtna värdar"
 
 msgid "Hosts deny"
 msgstr "Nekade värdar"
-
-msgid "Hot Spare"
-msgstr "Extra tillgänglig (Hot Spare)"
 
 msgid "Hours"
 msgstr "Timmar"
@@ -4154,6 +4199,9 @@ msgstr "Omstartsintervall för UPS"
 msgid "Interval to wait before restarting the load"
 msgstr "Fördröjning innan återinkoppling av last"
 
+msgid "Invalid command line option"
+msgstr ""
+
 msgid "Invalid file format or incorrect password."
 msgstr "Felaktigt filformat eller felaktigt lösenord."
 
@@ -4287,6 +4335,9 @@ msgstr "Döda krypterad volym"
 
 msgid "Korean"
 msgstr "Koreanska"
+
+msgid "L2 Cache"
+msgstr ""
 
 msgid "LACP (Link Aggregation Control Protocol)"
 msgstr "LACP (Link Aggregation Control Protocol)"
@@ -4445,6 +4496,9 @@ msgstr ""
 "CCMP (AES i Counter-läge med CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
 "(Temporal Key Integrity Protocol, IEEE 802.11i/D7.0)."
 
+msgid "List or import pools"
+msgstr ""
+
 msgid "Load"
 msgstr "Läs in"
 
@@ -4519,9 +4573,6 @@ msgstr "Platsen där arbetsfilerna ska lagras, t.ex. %s/backup/.unison"
 
 msgid "Log"
 msgstr "Logg"
-
-msgid "Log Device"
-msgstr "Logga enhet"
 
 msgid "Log Level"
 msgstr "Loggnivå"
@@ -4878,6 +4929,9 @@ msgstr "Minuter innan nästa tidssynkronisering via nätet."
 msgid "Missing a temporary folder."
 msgstr "Saknar en temporär mapp."
 
+msgid "Missing parameter"
+msgstr ""
+
 msgid "Mixed"
 msgstr "Blandad"
 
@@ -5068,9 +5122,6 @@ msgstr ""
 "strömförbrukningsinställning. Detta kan komma att medföra att en disk i "
 "vilolåge spinner igång när den blir kontrollerad."
 
-msgid "New Device"
-msgstr "Ny Enhet"
-
 msgid "New password"
 msgstr "Nytt lösenord"
 
@@ -5116,8 +5167,8 @@ msgstr "Inga konfigurerade pooler."
 msgid "No configured virtual devices."
 msgstr "Inga konfigurerade virtuella enheter."
 
-msgid "No device selected."
-msgstr "Ingen enhet vald."
+msgid "No devices have been selected"
+msgstr ""
 
 msgid "No disk configured"
 msgstr "Ingen disk konfigurerad"
@@ -5141,11 +5192,29 @@ msgstr "Inga nya diskar hittades."
 msgid "No new software raid disk found."
 msgstr "Inga nya mjukvaroraid hårddiskar hittades."
 
+msgid "No pool devices have been selected"
+msgstr ""
+
 msgid "No pool was found."
 msgstr "Ingen pool finns."
 
+msgid "No pools have been selected"
+msgstr ""
+
 msgid "No softraid-formatted disks available."
 msgstr "Inga mjukvaruraidformaterade diskar tillgängliga."
+
+msgid "No suitable devices found."
+msgstr ""
+
+msgid "No suitable pools found."
+msgstr ""
+
+msgid "No suitable virtual devices found."
+msgstr ""
+
+msgid "No virtual devices have been selected"
+msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Ärv bara nekande egenskaper"
@@ -5335,14 +5404,6 @@ msgstr "Gammalt lösenord"
 msgid "On"
 msgstr "På"
 
-msgid ""
-"Once you add the virtual device, it becomes impossible to delete again. It "
-"recommends adding the same number of drives as the existing virtual device."
-msgstr ""
-"Efter att en virtuell enhet har skapats är inte möjligt att ta bort den. Det "
-"rekommenderas att man lägger till samma antal diskar som antalet existerande "
-"virtuella enheter."
-
 msgid "Online"
 msgstr "Ansluten"
 
@@ -5393,6 +5454,9 @@ msgstr "Utgående effekt/omriktarinformation"
 
 msgid "Outgoing SMTP mail server address."
 msgstr "Utgående SMTP e-postserveradress."
+
+msgid "Output"
+msgstr ""
 
 msgid "Output current (A)"
 msgstr "Utström (A)"
@@ -5471,6 +5535,9 @@ msgstr "Onödigt aggressiv"
 
 msgid "Pairwise"
 msgstr "Parvis"
+
+msgid "Parameter"
+msgstr ""
 
 msgid "Parameter xxx (ups.conf or cmdline -x) setting"
 msgstr "Parameter xxx (ups.conf eller cmdline -x) inställning"
@@ -5696,11 +5763,20 @@ msgstr "Körtid (Polling tid)"
 msgid "Pool"
 msgstr "Pool"
 
+msgid "Pool Devices"
+msgstr ""
+
 msgid "Pool Information & Status"
 msgstr "Pool Information & Status"
 
-msgid "Pool Tools"
-msgstr "Pool verktyg"
+msgid "Pool State"
+msgstr ""
+
+msgid "Pool Status"
+msgstr ""
+
+msgid "Pool Version"
+msgstr ""
 
 msgid "Pool cannot be changed."
 msgstr "Poolen kan inte ändras."
@@ -5770,6 +5846,9 @@ msgstr "Portugisiska (Portugal)"
 
 msgid "PostInit"
 msgstr "Efter-initiering"
+
+msgid "Potentially Active"
+msgstr ""
 
 msgid "Power Daemon"
 msgstr "Strömdemon"
@@ -6129,6 +6208,15 @@ msgstr "Externa syslogmeddelanden"
 msgid "Removable"
 msgstr "Flyttbar"
 
+msgid "Remove a cache device from a pool"
+msgstr ""
+
+msgid "Remove a log device from a pool"
+msgstr ""
+
+msgid "Remove a spare device from a pool"
+msgstr ""
+
 msgid "Remove all entries from ARP table"
 msgstr "Ta bort alla värden från ARP-tabellen"
 
@@ -6138,6 +6226,9 @@ msgstr "Ta bort %s först innan du fortsätter."
 
 msgid "Replace Battery UPS"
 msgstr "Byt UPS-batteri"
+
+msgid "Replace a device"
+msgstr ""
 
 msgid "Report Generator"
 msgstr "Rapportgenerator"
@@ -6444,11 +6535,17 @@ msgstr "Schemalagd avstängning"
 msgid "Scheduled tests"
 msgstr "Schemalagda tester"
 
+msgid "Scrub a pool"
+msgstr ""
+
 msgid "Search"
 msgstr "Sök"
 
 msgid "Search event"
 msgstr "Sök händelse"
+
+msgid "Search for and import all disks found"
+msgstr ""
 
 msgid "Secondary"
 msgstr "Sekundär"
@@ -6497,11 +6594,32 @@ msgstr ""
 "Välj Hypertext Transfer Protocol (HTTP) eller Hypertext Transfer Protocol "
 "Secure (HTTPS) för webgränssnittet."
 
+msgid "Select a cache device"
+msgstr ""
+
+msgid "Select a data device"
+msgstr ""
+
 msgid "Select a date format."
 msgstr "Välj datumformat."
 
+msgid "Select a device"
+msgstr ""
+
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Välj en disk som har S.M.A.R.T.-övervakning aktiverat."
+
+msgid "Select a log device"
+msgstr ""
+
+msgid "Select a pool"
+msgstr ""
+
+msgid "Select a pool device"
+msgstr ""
+
+msgid "Select a spare device"
+msgstr ""
 
 msgid "Select file system format."
 msgstr "Välj filsystemsformat"
@@ -6515,10 +6633,19 @@ msgstr "Välj poster att ta bort från listan"
 msgid "Select mount point where to create the swap file."
 msgstr "Välj monteringspunkt där växlingsfilen ska skapas."
 
+msgid "Select one or more spare devices"
+msgstr ""
+
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
 "Välj alternativet 'Oformaterad' för oformaterade diskar och formatera dem med"
+
+msgid "Select pool device"
+msgstr ""
+
+msgid "Select pools"
+msgstr ""
 
 msgid "Select read balance algorithm."
 msgstr "Välj läsbalanseringsalgoritm"
@@ -6853,6 +6980,9 @@ msgstr ""
 msgid "Spanish"
 msgstr "Spanska"
 
+msgid "Spare"
+msgstr ""
+
 msgid "Sparse"
 msgstr "Gles"
 
@@ -6973,10 +7103,6 @@ msgstr "Status"
 msgid "Status & Information"
 msgstr "Status & Information"
 
-#, php-format
-msgid "Status report successfully sent to: %s."
-msgstr "Statusrapport skickad med lyckat resultat till: '%s'"
-
 msgid "Status report successfully sent."
 msgstr "Statusrapport skickad med lyckat resultat."
 
@@ -7033,6 +7159,9 @@ msgstr "Subnätmask"
 
 msgid "Subsystem"
 msgstr "Delsystem"
+
+msgid "Success"
+msgstr ""
 
 msgid "Successful"
 msgstr "Lyckades"
@@ -7199,6 +7328,9 @@ msgstr "Etikett%d"
 msgid "Tag%d (%s)"
 msgstr "Etikett%d (%s)"
 
+msgid "Take a device offline"
+msgstr ""
+
 msgid "Tap device"
 msgstr "Anslutningsenhet"
 
@@ -7266,6 +7398,9 @@ msgstr "Temporär katalog"
 msgid "Temporary directory to store transcoded files."
 msgstr "Temporär katalog för lagring av omkodade filer."
 
+msgid "Test Mode"
+msgstr ""
+
 msgid "Test email"
 msgstr "Testa E-post (Testbrev)"
 
@@ -7273,12 +7408,11 @@ msgstr "Testa E-post (Testbrev)"
 msgid "Test email from host: %s"
 msgstr "Testbrev från värden: %s"
 
-#, php-format
-msgid "Test email successfully sent to: %s."
-msgstr "Testbrev sänt till: %s med lyckat resultat."
-
 msgid "Test email successfully sent."
 msgstr "Testbrev sänt med lyckat resultat."
+
+msgid "Test mode, no command execution"
+msgstr ""
 
 msgid ""
 "The  deny  option specifies users and groups who are not allowed access to "
@@ -8968,6 +9102,9 @@ msgstr "Okorrigerade läsfel som rapporterats till operativsystemet."
 msgid "Unformated"
 msgstr "Oformaterad"
 
+msgid "Uninitialized"
+msgstr ""
+
 msgid "Uninstall package"
 msgstr "Avinstallera paket"
 
@@ -8988,6 +9125,9 @@ msgstr "Unix-teckenuppsättning"
 
 msgid "Unknown"
 msgstr "Okänt"
+
+msgid "Unknown Activity"
+msgstr ""
 
 msgid "Unknown or unformatted"
 msgstr "Okänd eller oformaterad"
@@ -9018,6 +9158,9 @@ msgstr "Uppdaterar inom 5 sekunder."
 
 msgid "Upgrade Firmware"
 msgstr "Uppgradera systemmjukvara"
+
+msgid "Upgrade ZFS and add all supported feature flags on a pool"
+msgstr ""
 
 msgid "Upload"
 msgstr "Ladda upp"
@@ -9154,9 +9297,6 @@ msgstr "Användarändelse"
 
 msgid "Username"
 msgstr "Användarnamn"
-
-msgid "Username contains invalid character(s) : "
-msgstr "Användarnamnet innehåller felaktiga tecken: "
 
 msgid "Username field : "
 msgstr "Användarnamnfält: "
@@ -9599,6 +9739,9 @@ msgstr "ZFS Dataset Information & Status"
 msgid "ZFS Dataset Properties"
 msgstr "ZFS Dataset Egenskaper"
 
+msgid "ZFS Pool Tools"
+msgstr ""
+
 msgid "ZFS Snapshot Information & Status"
 msgstr "ZFS Snapshot Information & Status"
 
@@ -9634,6 +9777,9 @@ msgstr "Zeroconf/Bonjour"
 
 msgid "all encrypted disks are imported."
 msgstr "alla krypterade diskar är importerade"
+
+msgid "and"
+msgstr ""
 
 msgid "change failed."
 msgstr "Ändringen misslyckades."
@@ -9778,3 +9924,61 @@ msgstr "användare"
 
 msgid "version:"
 msgstr "version:"
+
+#~ msgid "Cache Device"
+#~ msgstr "Buffertenhet"
+
+#, php-format
+#~ msgid "Failed to send status report to: %s."
+#~ msgstr "Misslyckades att sända statusrapport till %s."
+
+#, php-format
+#~ msgid "Failed to send test email to: %s."
+#~ msgstr "Misslyckades att sända test-epost till %s."
+
+#~ msgid "Hot Spare"
+#~ msgstr "Extra tillgänglig (Hot Spare)"
+
+#~ msgid "New Device"
+#~ msgstr "Ny Enhet"
+
+#~ msgid "No device selected."
+#~ msgstr "Ingen enhet vald."
+
+#, php-format
+#~ msgid "Status report successfully sent to: %s."
+#~ msgstr "Statusrapport skickad med lyckat resultat till: '%s'"
+
+#, php-format
+#~ msgid "Test email successfully sent to: %s."
+#~ msgstr "Testbrev sänt till: %s med lyckat resultat."
+
+#~ msgid ""
+#~ "Once you add the virtual device, it becomes impossible to delete again. It "
+#~ "recommends adding the same number of drives as the existing virtual device."
+#~ msgstr ""
+#~ "Efter att en virtuell enhet har skapats är inte möjligt att ta bort den. Det "
+#~ "rekommenderas att man lägger till samma antal diskar som antalet existerande "
+#~ "virtuella enheter."
+
+#~ msgid "Username contains invalid character(s) : "
+#~ msgstr "Användarnamnet innehåller felaktiga tecken: "
+
+#~ msgid "Log Device"
+#~ msgstr "Logga enhet"
+
+#, php-format
+#~ msgid "%s: cannot get mirror name."
+#~ msgstr "%s: Kan inte hämta namnet på speglingen"
+
+#~ msgid "Pool Tools"
+#~ msgstr "Pool verktyg"
+
+#~ msgid ""
+#~ "Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
+#~ "or NTFS can result in unpredictable results, file corruption and the loss of "
+#~ "data!"
+#~ msgstr ""
+#~ "Försök att använda andra filformat som FAT, FAT32, EXT2, EXT3, EXT4, eller "
+#~ "NTFS kan resultera i oförutsägbara resultat, korrupta filer och förlust av "
+#~ "data!"

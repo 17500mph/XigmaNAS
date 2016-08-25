@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-07-17 08:18+0000\n"
+"POT-Creation-Date: 2016-08-26 00:19+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: Jānis Marks Gailis <jm-gailis@fai-vianet.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-24 09:13+0000\n"
+"X-Launchpad-Export-Date: 2016-08-25 22:37+0000\n"
 "X-Generator: Launchpad (build 18179)\n"
 "X-Poedit-Country: LATVIA\n"
 "Language: \n"
@@ -98,10 +98,6 @@ msgstr ""
 #, php-format
 msgid "%s%d %s is already used by %s%d."
 msgstr "%s%d %s jau tiek izmantots pēc %s%d."
-
-#, php-format
-msgid "%s: cannot get mirror name."
-msgstr ""
 
 #, php-format
 msgid "%sB available of %sB"
@@ -397,6 +393,9 @@ msgstr ""
 "Iespējot e-pasta paziņojumu, ja vēlaties lai jums paziņo, ja kļūme vai kļuda "
 "tiek pamanīta, vai ja S.M.A.R.T. komanda nenokļūst līdz diskam."
 
+msgid "Active"
+msgstr ""
+
 msgid "Active Directory"
 msgstr "Aktīvais direktorijs"
 
@@ -408,6 +407,12 @@ msgstr ""
 
 msgid "Active Users"
 msgstr "Aktīvie Lietotāji"
+
+msgid "Activities"
+msgstr ""
+
+msgid "Activity"
+msgstr ""
 
 msgid "Adaptive (Low Power Consumption)"
 msgstr ""
@@ -443,6 +448,18 @@ msgid "Add Virtual Device"
 msgstr ""
 
 msgid "Add Volume"
+msgstr ""
+
+msgid "Add a cache device to a pool"
+msgstr ""
+
+msgid "Add a log device to a pool"
+msgstr ""
+
+msgid "Add a spare device to a pool"
+msgstr ""
+
+msgid "Add a virtual device to a pool"
 msgstr ""
 
 msgid "Add additional scheduled self-test."
@@ -758,6 +775,9 @@ msgid ""
 "initiator names and networks."
 msgstr ""
 
+msgid "An error occured."
+msgstr ""
+
 msgid "An host with this name already exists."
 msgstr "Saimniekdators ar šādu vārdu jau eksistē."
 
@@ -831,6 +851,12 @@ msgstr ""
 "Augstākajā līmenī, mērķis ir tas, kas tiek prezentēts iniciatoram, un ir "
 "izveidots no viena vai vairākiem apjomiem."
 
+msgid "Attach a data device"
+msgstr ""
+
+msgid "Attach a log device"
+msgstr ""
+
 msgid "Attached"
 msgstr "Pievienots"
 
@@ -839,8 +865,8 @@ msgid "Attaching provider '%s'."
 msgstr "Pievienojam sniedzēju '%s'."
 
 msgid ""
-"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
-"or NTFS can result in unpredictable results, file corruption and the loss of "
+"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4 or "
+"NTFS can result in unpredictable results, file corruption and the loss of "
 "data!"
 msgstr ""
 
@@ -1061,6 +1087,9 @@ msgstr ""
 msgid "Bridge"
 msgstr "Tilts"
 
+msgid "Bring a device online"
+msgstr ""
+
 msgid "Broadcast interval"
 msgstr ""
 
@@ -1180,9 +1209,6 @@ msgid ""
 "error)."
 msgstr ""
 
-msgid "Cache Device"
-msgstr "Kešatmiņas ierīce"
-
 msgid "Calibration Battery"
 msgstr ""
 
@@ -1300,6 +1326,9 @@ msgstr ""
 msgid "Clear config and Import disks"
 msgstr ""
 
+msgid "Clear device errors"
+msgstr ""
+
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
 "file or XML format."
@@ -1329,6 +1358,9 @@ msgid "Command"
 msgstr "Komanda"
 
 msgid "Command Scripts"
+msgstr ""
+
+msgid "Command execution was successful"
 msgstr ""
 
 #, php-format
@@ -2040,6 +2072,18 @@ msgstr "Galamērķa ports"
 msgid "Destination share"
 msgstr "Galamērķa kopīgojums"
 
+msgid "Destroy a pool"
+msgstr ""
+
+msgid "Destroyed"
+msgstr ""
+
+msgid "Detach a data device from a mirror"
+msgstr ""
+
+msgid "Detach a log device from a mirrored log"
+msgstr ""
+
 msgid "Detected"
 msgstr "Atklāts"
 
@@ -2221,6 +2265,9 @@ msgstr ""
 
 msgid "Display"
 msgstr "Rādīt"
+
+msgid "Display ZFS command history"
+msgstr ""
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -3010,7 +3057,13 @@ msgstr "Izbeigties"
 msgid "Export"
 msgstr "Eksportēt"
 
+msgid "Export a pool from the system"
+msgstr ""
+
 msgid "Export all the directories in the specified path."
+msgstr ""
+
+msgid "Exported"
 msgstr ""
 
 msgid "Extended Attributes"
@@ -3126,16 +3179,8 @@ msgstr "Neizdevās izpildīt cron job."
 msgid "Failed to remove: %s"
 msgstr ""
 
-#, php-format
-msgid "Failed to send status report to: %s."
-msgstr "Neizdevās nosūtīt pārskatu uz: %s."
-
 msgid "Failed to send status report."
 msgstr ""
-
-#, php-format
-msgid "Failed to send test email to: %s."
-msgstr "Neizdevās nosūtīt testa e-pastu uz: %s."
 
 msgid "Failed to send test email."
 msgstr ""
@@ -3259,6 +3304,9 @@ msgstr "Karogi"
 msgid "Follow"
 msgstr "Sekot"
 
+msgid "Force Operation"
+msgstr ""
+
 msgid "Force use"
 msgstr ""
 
@@ -3361,6 +3409,9 @@ msgstr "Pamata iestatījumi"
 
 msgid "Generate"
 msgstr "Ģenerēt"
+
+msgid "Generate a new unique identifier for a pool"
+msgstr ""
 
 msgid "Generate password if leave empty."
 msgstr ""
@@ -3555,9 +3606,6 @@ msgstr "Atļautie saimniekdatori"
 
 msgid "Hosts deny"
 msgstr "Aizliegtie saimniekdatori"
-
-msgid "Hot Spare"
-msgstr "Karstā rezerves daļa"
 
 msgid "Hours"
 msgstr "Stundas"
@@ -3968,6 +4016,9 @@ msgstr ""
 msgid "Interval to wait before restarting the load"
 msgstr ""
 
+msgid "Invalid command line option"
+msgstr ""
+
 msgid "Invalid file format or incorrect password."
 msgstr ""
 
@@ -4089,6 +4140,9 @@ msgstr "Iznīcināt šifrēto sējumu"
 
 msgid "Korean"
 msgstr "Korejiešu"
+
+msgid "L2 Cache"
+msgstr ""
 
 msgid "LACP (Link Aggregation Control Protocol)"
 msgstr "LACP (Saišu Savākšanas Kontroles Protokols)"
@@ -4248,6 +4302,9 @@ msgstr ""
 "802.11i/D7.0), TKIP (Pagaidu Atslēgas Integritātes Protokols, IEEE "
 "802.11i/D7.0)."
 
+msgid "List or import pools"
+msgstr ""
+
 msgid "Load"
 msgstr "Slodze"
 
@@ -4323,9 +4380,6 @@ msgstr "Vieta, kur darbojošās datnes tiks glabātas, piem. %s/backup/.unison"
 
 msgid "Log"
 msgstr "Žurnāls"
-
-msgid "Log Device"
-msgstr ""
 
 msgid "Log Level"
 msgstr "Žurnalēšanas līmenis"
@@ -4676,6 +4730,9 @@ msgstr ""
 msgid "Missing a temporary folder."
 msgstr "Pazudusi pagaidu mape."
 
+msgid "Missing parameter"
+msgstr ""
+
 msgid "Mixed"
 msgstr ""
 
@@ -4865,9 +4922,6 @@ msgstr ""
 "Nekad - Pārbaudīt ierīci neievērojot tās statusu (jaudas režīmu). Šis var "
 "likt diskam, kurš ir pārstājis griezties, sākt griezties, lai to pārbaudītu."
 
-msgid "New Device"
-msgstr "Jauna ierīce"
-
 msgid "New password"
 msgstr ""
 
@@ -4913,8 +4967,8 @@ msgstr ""
 msgid "No configured virtual devices."
 msgstr ""
 
-msgid "No device selected."
-msgstr "Nav izvēlēta neviena ierīce."
+msgid "No devices have been selected"
+msgstr ""
 
 msgid "No disk configured"
 msgstr "Nav konfigurēts neviens disks."
@@ -4936,10 +4990,28 @@ msgstr ""
 msgid "No new software raid disk found."
 msgstr ""
 
+msgid "No pool devices have been selected"
+msgstr ""
+
 msgid "No pool was found."
 msgstr "Neviens pūls netika atrasts."
 
+msgid "No pools have been selected"
+msgstr ""
+
 msgid "No softraid-formatted disks available."
+msgstr ""
+
+msgid "No suitable devices found."
+msgstr ""
+
+msgid "No suitable pools found."
+msgstr ""
+
+msgid "No suitable virtual devices found."
+msgstr ""
+
+msgid "No virtual devices have been selected"
 msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
@@ -5129,11 +5201,6 @@ msgstr "Vecā parole"
 msgid "On"
 msgstr "Ieslēgts"
 
-msgid ""
-"Once you add the virtual device, it becomes impossible to delete again. It "
-"recommends adding the same number of drives as the existing virtual device."
-msgstr ""
-
 msgid "Online"
 msgstr ""
 
@@ -5182,6 +5249,9 @@ msgid "Outgoing Power/Inverter Information"
 msgstr ""
 
 msgid "Outgoing SMTP mail server address."
+msgstr ""
+
+msgid "Output"
 msgstr ""
 
 msgid "Output current (A)"
@@ -5259,6 +5329,9 @@ msgstr "Mokoši agresīvs"
 
 msgid "Pairwise"
 msgstr "Pāru veids"
+
+msgid "Parameter"
+msgstr ""
 
 msgid "Parameter xxx (ups.conf or cmdline -x) setting"
 msgstr ""
@@ -5482,10 +5555,19 @@ msgstr "Balsošanas laiks"
 msgid "Pool"
 msgstr "Pūls"
 
+msgid "Pool Devices"
+msgstr ""
+
 msgid "Pool Information & Status"
 msgstr ""
 
-msgid "Pool Tools"
+msgid "Pool State"
+msgstr ""
+
+msgid "Pool Status"
+msgstr ""
+
+msgid "Pool Version"
 msgstr ""
 
 msgid "Pool cannot be changed."
@@ -5557,6 +5639,9 @@ msgstr "Portugāļu (Portugāle)"
 
 msgid "PostInit"
 msgstr "PostInit"
+
+msgid "Potentially Active"
+msgstr ""
 
 msgid "Power Daemon"
 msgstr "Jaudas Dēmons"
@@ -5914,6 +5999,15 @@ msgstr ""
 msgid "Removable"
 msgstr "Noņemams"
 
+msgid "Remove a cache device from a pool"
+msgstr ""
+
+msgid "Remove a log device from a pool"
+msgstr ""
+
+msgid "Remove a spare device from a pool"
+msgstr ""
+
 msgid "Remove all entries from ARP table"
 msgstr "Izdzēst visus ierakstus no ARP tabulas"
 
@@ -5922,6 +6016,9 @@ msgid "Remove the %s first before proceeding."
 msgstr ""
 
 msgid "Replace Battery UPS"
+msgstr ""
+
+msgid "Replace a device"
 msgstr ""
 
 msgid "Report Generator"
@@ -6224,10 +6321,16 @@ msgstr ""
 msgid "Scheduled tests"
 msgstr ""
 
+msgid "Scrub a pool"
+msgstr ""
+
 msgid "Search"
 msgstr ""
 
 msgid "Search event"
+msgstr ""
+
+msgid "Search for and import all disks found"
 msgstr ""
 
 msgid "Secondary"
@@ -6269,11 +6372,32 @@ msgid ""
 "Secure (HTTPS) for the WebGUI."
 msgstr ""
 
+msgid "Select a cache device"
+msgstr ""
+
+msgid "Select a data device"
+msgstr ""
+
 msgid "Select a date format."
+msgstr ""
+
+msgid "Select a device"
 msgstr ""
 
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Izvēlies disku, kas ir iespējot priekš S.M.A.R.T. pāraudzības."
+
+msgid "Select a log device"
+msgstr ""
+
+msgid "Select a pool"
+msgstr ""
+
+msgid "Select a pool device"
+msgstr ""
+
+msgid "Select a spare device"
+msgstr ""
 
 msgid "Select file system format."
 msgstr ""
@@ -6287,8 +6411,17 @@ msgstr "Izvēlies vērtību, kuru izņemt no saraksta"
 msgid "Select mount point where to create the swap file."
 msgstr "Izvēlies montēšanas punktu, kur izveidot swap datni."
 
+msgid "Select one or more spare devices"
+msgstr ""
+
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
+msgstr ""
+
+msgid "Select pool device"
+msgstr ""
+
+msgid "Select pools"
 msgstr ""
 
 msgid "Select read balance algorithm."
@@ -6615,6 +6748,9 @@ msgstr ""
 msgid "Spanish"
 msgstr "Spāņu"
 
+msgid "Spare"
+msgstr ""
+
 msgid "Sparse"
 msgstr ""
 
@@ -6723,10 +6859,6 @@ msgstr "Statuss"
 msgid "Status & Information"
 msgstr ""
 
-#, php-format
-msgid "Status report successfully sent to: %s."
-msgstr "Statusa pārskats veiksmīgi nosūtīts uz: %s."
-
 msgid "Status report successfully sent."
 msgstr "Statusa pārskats veiksmīgi nosūtīts."
 
@@ -6780,6 +6912,9 @@ msgid "Subnet mask"
 msgstr "Apakštīkla maska"
 
 msgid "Subsystem"
+msgstr ""
+
+msgid "Success"
 msgstr ""
 
 msgid "Successful"
@@ -6945,6 +7080,9 @@ msgstr "Birka%d"
 msgid "Tag%d (%s)"
 msgstr "Birka%d (%s)"
 
+msgid "Take a device offline"
+msgstr ""
+
 msgid "Tap device"
 msgstr ""
 
@@ -7013,6 +7151,9 @@ msgstr "Pagaidu mape"
 msgid "Temporary directory to store transcoded files."
 msgstr "Pagaidu mape, kurā uzglabāt pārkodētās datnes."
 
+msgid "Test Mode"
+msgstr ""
+
 msgid "Test email"
 msgstr "Pārbaudes e-pasts"
 
@@ -7020,12 +7161,11 @@ msgstr "Pārbaudes e-pasts"
 msgid "Test email from host: %s"
 msgstr "Pārbaudes e-pasts no saimniekdatora: %s"
 
-#, php-format
-msgid "Test email successfully sent to: %s."
-msgstr "Pārbaudes e-pasts veiksmīgi izsūtīts uz: %s."
-
 msgid "Test email successfully sent."
 msgstr "Pārbaudes e-pasts veiksmīgi izsūtīts."
+
+msgid "Test mode, no command execution"
+msgstr ""
 
 msgid ""
 "The  deny  option specifies users and groups who are not allowed access to "
@@ -8589,6 +8729,9 @@ msgstr ""
 msgid "Unformated"
 msgstr "Neformatēts"
 
+msgid "Uninitialized"
+msgstr ""
+
 msgid "Uninstall package"
 msgstr "Atinstalēt paku"
 
@@ -8609,6 +8752,9 @@ msgstr "Unix rakstzīmju kopa"
 
 msgid "Unknown"
 msgstr "Nezināms"
+
+msgid "Unknown Activity"
+msgstr ""
 
 msgid "Unknown or unformatted"
 msgstr "Nezināms vai neformatēts"
@@ -8638,6 +8784,9 @@ msgid "Updating in 5 seconds."
 msgstr "Atjauno 5 sekundēs."
 
 msgid "Upgrade Firmware"
+msgstr ""
+
+msgid "Upgrade ZFS and add all supported feature flags on a pool"
 msgstr ""
 
 msgid "Upload"
@@ -8772,9 +8921,6 @@ msgstr "Lietotāja sufikss"
 
 msgid "Username"
 msgstr "Lietotājvārds"
-
-msgid "Username contains invalid character(s) : "
-msgstr ""
 
 msgid "Username field : "
 msgstr ""
@@ -9192,6 +9338,9 @@ msgstr ""
 msgid "ZFS Dataset Properties"
 msgstr ""
 
+msgid "ZFS Pool Tools"
+msgstr ""
+
 msgid "ZFS Snapshot Information & Status"
 msgstr ""
 
@@ -9222,6 +9371,9 @@ msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
 msgid "all encrypted disks are imported."
+msgstr ""
+
+msgid "and"
 msgstr ""
 
 msgid "change failed."
@@ -9365,3 +9517,31 @@ msgstr ""
 
 msgid "version:"
 msgstr ""
+
+#~ msgid "Cache Device"
+#~ msgstr "Kešatmiņas ierīce"
+
+#, php-format
+#~ msgid "Failed to send status report to: %s."
+#~ msgstr "Neizdevās nosūtīt pārskatu uz: %s."
+
+#, php-format
+#~ msgid "Failed to send test email to: %s."
+#~ msgstr "Neizdevās nosūtīt testa e-pastu uz: %s."
+
+#~ msgid "Hot Spare"
+#~ msgstr "Karstā rezerves daļa"
+
+#~ msgid "New Device"
+#~ msgstr "Jauna ierīce"
+
+#~ msgid "No device selected."
+#~ msgstr "Nav izvēlēta neviena ierīce."
+
+#, php-format
+#~ msgid "Status report successfully sent to: %s."
+#~ msgstr "Statusa pārskats veiksmīgi nosūtīts uz: %s."
+
+#, php-format
+#~ msgid "Test email successfully sent to: %s."
+#~ msgstr "Pārbaudes e-pasts veiksmīgi izsūtīts uz: %s."

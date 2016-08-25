@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-07-17 08:18+0000\n"
+"POT-Creation-Date: 2016-08-26 00:19+0000\n"
 "PO-Revision-Date: 2016-07-13 23:35+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-24 09:13+0000\n"
+"X-Launchpad-Export-Date: 2016-08-25 22:37+0000\n"
 "X-Generator: Launchpad (build 18179)\n"
 "X-Poedit-Country: SLOVAKIA\n"
 "Language: \n"
@@ -98,10 +98,6 @@ msgstr "%s%% dostupných"
 #, php-format
 msgid "%s%d %s is already used by %s%d."
 msgstr "%s%d %s už používa %s%d."
-
-#, php-format
-msgid "%s: cannot get mirror name."
-msgstr "%s: nedarilo sa získať názov zrkadla (mirror)."
 
 #, php-format
 msgid "%sB available of %sB"
@@ -403,6 +399,9 @@ msgstr ""
 "Aktivujte správy emailom ak chcete dostávať oznámenia v prípade zlyhania "
 "alebo novej chyby či zlyhania S.M.A.R.T. príkazu disku."
 
+msgid "Active"
+msgstr ""
+
 msgid "Active Directory"
 msgstr "Active Directory"
 
@@ -413,6 +412,12 @@ msgid "Active Shares"
 msgstr ""
 
 msgid "Active Users"
+msgstr ""
+
+msgid "Activities"
+msgstr ""
+
+msgid "Activity"
 msgstr ""
 
 msgid "Adaptive (Low Power Consumption)"
@@ -449,6 +454,18 @@ msgid "Add Virtual Device"
 msgstr ""
 
 msgid "Add Volume"
+msgstr ""
+
+msgid "Add a cache device to a pool"
+msgstr ""
+
+msgid "Add a log device to a pool"
+msgstr ""
+
+msgid "Add a spare device to a pool"
+msgstr ""
+
+msgid "Add a virtual device to a pool"
 msgstr ""
 
 msgid "Add additional scheduled self-test."
@@ -765,6 +782,9 @@ msgid ""
 "initiator names and networks."
 msgstr ""
 
+msgid "An error occured."
+msgstr ""
+
 msgid "An host with this name already exists."
 msgstr "Hostiteľ s týmto názvom už existuje."
 
@@ -838,6 +858,12 @@ msgstr ""
 "Na najvyššej úrovni je cieľ to, čo sa predstavuje iniciátoru a skladá sa z "
 "jedného alebo viacerých rozsahov."
 
+msgid "Attach a data device"
+msgstr ""
+
+msgid "Attach a log device"
+msgstr ""
+
 msgid "Attached"
 msgstr "Pridaný"
 
@@ -846,8 +872,8 @@ msgid "Attaching provider '%s'."
 msgstr "Pridáva sa poskytovateľ „%s“."
 
 msgid ""
-"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
-"or NTFS can result in unpredictable results, file corruption and the loss of "
+"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4 or "
+"NTFS can result in unpredictable results, file corruption and the loss of "
 "data!"
 msgstr ""
 
@@ -1068,6 +1094,9 @@ msgstr ""
 msgid "Bridge"
 msgstr ""
 
+msgid "Bring a device online"
+msgstr ""
+
 msgid "Broadcast interval"
 msgstr ""
 
@@ -1184,9 +1213,6 @@ msgstr "Využitie CPU"
 msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
 "error)."
-msgstr ""
-
-msgid "Cache Device"
 msgstr ""
 
 msgid "Calibration Battery"
@@ -1307,6 +1333,9 @@ msgstr ""
 msgid "Clear config and Import disks"
 msgstr ""
 
+msgid "Clear device errors"
+msgstr ""
+
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
 "file or XML format."
@@ -1336,6 +1365,9 @@ msgid "Command"
 msgstr "Príkaz"
 
 msgid "Command Scripts"
+msgstr ""
+
+msgid "Command execution was successful"
 msgstr ""
 
 #, php-format
@@ -2048,6 +2080,18 @@ msgstr "Cieľový port"
 msgid "Destination share"
 msgstr "Cieľový zdieľaný priečinok"
 
+msgid "Destroy a pool"
+msgstr ""
+
+msgid "Destroyed"
+msgstr ""
+
+msgid "Detach a data device from a mirror"
+msgstr ""
+
+msgid "Detach a log device from a mirrored log"
+msgstr ""
+
 msgid "Detected"
 msgstr "Zistené"
 
@@ -2228,6 +2272,9 @@ msgid "Disks | Mount Point | Management"
 msgstr ""
 
 msgid "Display"
+msgstr ""
+
+msgid "Display ZFS command history"
 msgstr ""
 
 msgid ""
@@ -3018,7 +3065,13 @@ msgstr "Vypršanie"
 msgid "Export"
 msgstr "Exportovať"
 
+msgid "Export a pool from the system"
+msgstr ""
+
 msgid "Export all the directories in the specified path."
+msgstr ""
+
+msgid "Exported"
 msgstr ""
 
 msgid "Extended Attributes"
@@ -3134,16 +3187,8 @@ msgstr "Nepodarilo sa vykonať cron úlohu"
 msgid "Failed to remove: %s"
 msgstr ""
 
-#, php-format
-msgid "Failed to send status report to: %s."
-msgstr "Nepodarilo sa poslať správu o stave pre: %s."
-
 msgid "Failed to send status report."
 msgstr ""
-
-#, php-format
-msgid "Failed to send test email to: %s."
-msgstr "Nepodarilo sa odoslať testovací email pre: %s."
 
 msgid "Failed to send test email."
 msgstr ""
@@ -3267,6 +3312,9 @@ msgstr "Príznaky"
 msgid "Follow"
 msgstr "Nasledovať"
 
+msgid "Force Operation"
+msgstr ""
+
 msgid "Force use"
 msgstr ""
 
@@ -3368,6 +3416,9 @@ msgid "General Setup"
 msgstr "Všeobecné nastavenia"
 
 msgid "Generate"
+msgstr ""
+
+msgid "Generate a new unique identifier for a pool"
 msgstr ""
 
 msgid "Generate password if leave empty."
@@ -3563,9 +3614,6 @@ msgstr "Povolené stroje"
 
 msgid "Hosts deny"
 msgstr "Zakázané stroje"
-
-msgid "Hot Spare"
-msgstr ""
 
 msgid "Hours"
 msgstr ""
@@ -3974,6 +4022,9 @@ msgstr ""
 msgid "Interval to wait before restarting the load"
 msgstr ""
 
+msgid "Invalid command line option"
+msgstr ""
+
 msgid "Invalid file format or incorrect password."
 msgstr ""
 
@@ -4093,6 +4144,9 @@ msgid "Kill encrypted volume"
 msgstr "Zrušiť kryptovaný zväzok"
 
 msgid "Korean"
+msgstr ""
+
+msgid "L2 Cache"
 msgstr ""
 
 msgid "LACP (Link Aggregation Control Protocol)"
@@ -4247,6 +4301,9 @@ msgstr ""
 "CCMP (AES v režime počítadla s CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
 "(Temporal Key Integrity Protocol, IEEE 802.11i/D7.0)."
 
+msgid "List or import pools"
+msgstr ""
+
 msgid "Load"
 msgstr "Načítať"
 
@@ -4322,9 +4379,6 @@ msgstr ""
 
 msgid "Log"
 msgstr "Záznam"
-
-msgid "Log Device"
-msgstr ""
 
 msgid "Log Level"
 msgstr "Úroveň podrobnosti záznamov"
@@ -4674,6 +4728,9 @@ msgstr ""
 msgid "Missing a temporary folder."
 msgstr ""
 
+msgid "Missing parameter"
+msgstr ""
+
 msgid "Mixed"
 msgstr ""
 
@@ -4861,9 +4918,6 @@ msgstr ""
 "sa nachádza. To môže spôsobiť pri kontrole roztočenie disku, ktorý je v "
 "stave nečinnosti."
 
-msgid "New Device"
-msgstr ""
-
 msgid "New password"
 msgstr ""
 
@@ -4909,7 +4963,7 @@ msgstr ""
 msgid "No configured virtual devices."
 msgstr ""
 
-msgid "No device selected."
+msgid "No devices have been selected"
 msgstr ""
 
 msgid "No disk configured"
@@ -4932,10 +4986,28 @@ msgstr ""
 msgid "No new software raid disk found."
 msgstr ""
 
+msgid "No pool devices have been selected"
+msgstr ""
+
 msgid "No pool was found."
 msgstr ""
 
+msgid "No pools have been selected"
+msgstr ""
+
 msgid "No softraid-formatted disks available."
+msgstr ""
+
+msgid "No suitable devices found."
+msgstr ""
+
+msgid "No suitable pools found."
+msgstr ""
+
+msgid "No suitable virtual devices found."
+msgstr ""
+
+msgid "No virtual devices have been selected"
 msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
@@ -5125,11 +5197,6 @@ msgstr "Staré heslo"
 msgid "On"
 msgstr ""
 
-msgid ""
-"Once you add the virtual device, it becomes impossible to delete again. It "
-"recommends adding the same number of drives as the existing virtual device."
-msgstr ""
-
 msgid "Online"
 msgstr ""
 
@@ -5177,6 +5244,9 @@ msgid "Outgoing Power/Inverter Information"
 msgstr ""
 
 msgid "Outgoing SMTP mail server address."
+msgstr ""
+
+msgid "Output"
 msgstr ""
 
 msgid "Output current (A)"
@@ -5253,6 +5323,9 @@ msgstr ""
 
 msgid "Pairwise"
 msgstr "Párovo"
+
+msgid "Parameter"
+msgstr ""
 
 msgid "Parameter xxx (ups.conf or cmdline -x) setting"
 msgstr ""
@@ -5476,10 +5549,19 @@ msgstr "Interval pýtania"
 msgid "Pool"
 msgstr ""
 
+msgid "Pool Devices"
+msgstr ""
+
 msgid "Pool Information & Status"
 msgstr ""
 
-msgid "Pool Tools"
+msgid "Pool State"
+msgstr ""
+
+msgid "Pool Status"
+msgstr ""
+
+msgid "Pool Version"
 msgstr ""
 
 msgid "Pool cannot be changed."
@@ -5551,6 +5633,9 @@ msgstr ""
 
 msgid "PostInit"
 msgstr "po inicializácii"
+
+msgid "Potentially Active"
+msgstr ""
 
 msgid "Power Daemon"
 msgstr "Napíjací démon"
@@ -5904,6 +5989,15 @@ msgstr ""
 msgid "Removable"
 msgstr ""
 
+msgid "Remove a cache device from a pool"
+msgstr ""
+
+msgid "Remove a log device from a pool"
+msgstr ""
+
+msgid "Remove a spare device from a pool"
+msgstr ""
+
 msgid "Remove all entries from ARP table"
 msgstr "Odstrániť všetky položky z ARP tabuľky"
 
@@ -5912,6 +6006,9 @@ msgid "Remove the %s first before proceeding."
 msgstr ""
 
 msgid "Replace Battery UPS"
+msgstr ""
+
+msgid "Replace a device"
 msgstr ""
 
 msgid "Report Generator"
@@ -6210,10 +6307,16 @@ msgstr ""
 msgid "Scheduled tests"
 msgstr ""
 
+msgid "Scrub a pool"
+msgstr ""
+
 msgid "Search"
 msgstr ""
 
 msgid "Search event"
+msgstr ""
+
+msgid "Search for and import all disks found"
 msgstr ""
 
 msgid "Secondary"
@@ -6255,11 +6358,32 @@ msgid ""
 "Secure (HTTPS) for the WebGUI."
 msgstr ""
 
+msgid "Select a cache device"
+msgstr ""
+
+msgid "Select a data device"
+msgstr ""
+
 msgid "Select a date format."
+msgstr ""
+
+msgid "Select a device"
 msgstr ""
 
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Vyberte disk, ktorý má zapnuté monitorovanie S.M.A.R.T."
+
+msgid "Select a log device"
+msgstr ""
+
+msgid "Select a pool"
+msgstr ""
+
+msgid "Select a pool device"
+msgstr ""
+
+msgid "Select a spare device"
+msgstr ""
 
 msgid "Select file system format."
 msgstr ""
@@ -6273,8 +6397,17 @@ msgstr "yberte položku, ktorú chcete odstrániť zo zoznamu"
 msgid "Select mount point where to create the swap file."
 msgstr "Zvoľte miesto pripojenia, kde sa má vytvoriť odkladací súbor"
 
+msgid "Select one or more spare devices"
+msgstr ""
+
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
+msgstr ""
+
+msgid "Select pool device"
+msgstr ""
+
+msgid "Select pools"
 msgstr ""
 
 msgid "Select read balance algorithm."
@@ -6598,6 +6731,9 @@ msgstr ""
 msgid "Spanish"
 msgstr "španielčina"
 
+msgid "Spare"
+msgstr ""
+
 msgid "Sparse"
 msgstr ""
 
@@ -6705,10 +6841,6 @@ msgstr "Stav"
 msgid "Status & Information"
 msgstr ""
 
-#, php-format
-msgid "Status report successfully sent to: %s."
-msgstr "Správa o stave úspešne odoslaná pre: %s."
-
 msgid "Status report successfully sent."
 msgstr "Správa o stave bola úspešne odoslaná."
 
@@ -6763,6 +6895,9 @@ msgid "Subnet mask"
 msgstr "Maska podsiete"
 
 msgid "Subsystem"
+msgstr ""
+
+msgid "Success"
 msgstr ""
 
 msgid "Successful"
@@ -6927,6 +7062,9 @@ msgstr ""
 msgid "Tag%d (%s)"
 msgstr ""
 
+msgid "Take a device offline"
+msgstr ""
+
 msgid "Tap device"
 msgstr ""
 
@@ -6993,6 +7131,9 @@ msgstr "Dočasný priečinok"
 msgid "Temporary directory to store transcoded files."
 msgstr "Dočasný priečinok na uloženie prekódovaných súborov."
 
+msgid "Test Mode"
+msgstr ""
+
 msgid "Test email"
 msgstr "Testovací email"
 
@@ -7000,12 +7141,11 @@ msgstr "Testovací email"
 msgid "Test email from host: %s"
 msgstr "Testovací email zo stroja: %s"
 
-#, php-format
-msgid "Test email successfully sent to: %s."
-msgstr "Testovací email úspešne odoslaný pre: %s"
-
 msgid "Test email successfully sent."
 msgstr "Testovací email bol úspešne odoslaný."
+
+msgid "Test mode, no command execution"
+msgstr ""
 
 msgid ""
 "The  deny  option specifies users and groups who are not allowed access to "
@@ -8541,6 +8681,9 @@ msgstr ""
 msgid "Unformated"
 msgstr "Nenaformátované"
 
+msgid "Uninitialized"
+msgstr ""
+
 msgid "Uninstall package"
 msgstr "Odinštalovať balík"
 
@@ -8561,6 +8704,9 @@ msgstr "Znaková sada Unix"
 
 msgid "Unknown"
 msgstr "Neznáme"
+
+msgid "Unknown Activity"
+msgstr ""
 
 msgid "Unknown or unformatted"
 msgstr "Neznáme alebo neformátované"
@@ -8590,6 +8736,9 @@ msgid "Updating in 5 seconds."
 msgstr "Aktualizácia o 5 sekúnd."
 
 msgid "Upgrade Firmware"
+msgstr ""
+
+msgid "Upgrade ZFS and add all supported feature flags on a pool"
 msgstr ""
 
 msgid "Upload"
@@ -8718,9 +8867,6 @@ msgstr "Prípona používateľa"
 
 msgid "Username"
 msgstr "Meno používateľa:"
-
-msgid "Username contains invalid character(s) : "
-msgstr ""
 
 msgid "Username field : "
 msgstr ""
@@ -9135,6 +9281,9 @@ msgstr ""
 msgid "ZFS Dataset Properties"
 msgstr ""
 
+msgid "ZFS Pool Tools"
+msgstr ""
+
 msgid "ZFS Snapshot Information & Status"
 msgstr ""
 
@@ -9165,6 +9314,9 @@ msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
 
 msgid "all encrypted disks are imported."
+msgstr ""
+
+msgid "and"
 msgstr ""
 
 msgid "change failed."
@@ -9308,3 +9460,23 @@ msgstr ""
 
 msgid "version:"
 msgstr ""
+
+#, php-format
+#~ msgid "Failed to send status report to: %s."
+#~ msgstr "Nepodarilo sa poslať správu o stave pre: %s."
+
+#, php-format
+#~ msgid "Failed to send test email to: %s."
+#~ msgstr "Nepodarilo sa odoslať testovací email pre: %s."
+
+#, php-format
+#~ msgid "Status report successfully sent to: %s."
+#~ msgstr "Správa o stave úspešne odoslaná pre: %s."
+
+#, php-format
+#~ msgid "Test email successfully sent to: %s."
+#~ msgstr "Testovací email úspešne odoslaný pre: %s"
+
+#, php-format
+#~ msgid "%s: cannot get mirror name."
+#~ msgstr "%s: nedarilo sa získať názov zrkadla (mirror)."

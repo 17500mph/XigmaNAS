@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-07-17 08:18+0000\n"
+"POT-Creation-Date: 2016-08-26 00:19+0000\n"
 "PO-Revision-Date: 2015-06-15 08:06+0000\n"
 "Last-Translator: Carsten Matzon <carsten@matzon.dk>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-24 09:12+0000\n"
+"X-Launchpad-Export-Date: 2016-08-25 22:37+0000\n"
 "X-Generator: Launchpad (build 18179)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
@@ -98,10 +98,6 @@ msgstr "%s%% til rådighed"
 #, php-format
 msgid "%s%d %s is already used by %s%d."
 msgstr "%s%d %s er allerede brugt af %s%d."
-
-#, php-format
-msgid "%s: cannot get mirror name."
-msgstr "%s: kan ikke få navn på spejl."
 
 #, php-format
 msgid "%sB available of %sB"
@@ -402,6 +398,9 @@ msgstr ""
 "Aktiver email rapport hvis du vil informeres hvis et nedbrud eller eller en "
 "ny fejl opdages, eller hvis en S.M.A.R.T. kommando til en disk fejler."
 
+msgid "Active"
+msgstr ""
+
 msgid "Active Directory"
 msgstr "Active Directory"
 
@@ -413,6 +412,12 @@ msgstr "Aktive netværksdelinger"
 
 msgid "Active Users"
 msgstr "Aktive brugere"
+
+msgid "Activities"
+msgstr ""
+
+msgid "Activity"
+msgstr ""
 
 msgid "Adaptive (Low Power Consumption)"
 msgstr ""
@@ -448,6 +453,18 @@ msgid "Add Virtual Device"
 msgstr ""
 
 msgid "Add Volume"
+msgstr ""
+
+msgid "Add a cache device to a pool"
+msgstr ""
+
+msgid "Add a log device to a pool"
+msgstr ""
+
+msgid "Add a spare device to a pool"
+msgstr ""
+
+msgid "Add a virtual device to a pool"
 msgstr ""
 
 msgid "Add additional scheduled self-test."
@@ -763,6 +780,9 @@ msgid ""
 "initiator names and networks."
 msgstr ""
 
+msgid "An error occured."
+msgstr ""
+
 msgid "An host with this name already exists."
 msgstr "En vært med dette navn eksisterer allerede."
 
@@ -834,6 +854,12 @@ msgstr ""
 "På det højeste niveau, bliver et mål præsenteret for initiatoren, og "
 "indholder en eller flere extents."
 
+msgid "Attach a data device"
+msgstr ""
+
+msgid "Attach a log device"
+msgstr ""
+
 msgid "Attached"
 msgstr "Vedhæftet"
 
@@ -842,8 +868,8 @@ msgid "Attaching provider '%s'."
 msgstr "Vedhæfter provider '%s'."
 
 msgid ""
-"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
-"or NTFS can result in unpredictable results, file corruption and the loss of "
+"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4 or "
+"NTFS can result in unpredictable results, file corruption and the loss of "
 "data!"
 msgstr ""
 
@@ -1065,6 +1091,9 @@ msgstr ""
 msgid "Bridge"
 msgstr "Bro"
 
+msgid "Bring a device online"
+msgstr ""
+
 msgid "Broadcast interval"
 msgstr ""
 
@@ -1182,9 +1211,6 @@ msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
 "error)."
 msgstr ""
-
-msgid "Cache Device"
-msgstr "Cache enhed"
 
 msgid "Calibration Battery"
 msgstr "Kalibreringsbatteri"
@@ -1304,6 +1330,9 @@ msgstr ""
 msgid "Clear config and Import disks"
 msgstr "Slet konfiguration og importer diske"
 
+msgid "Clear device errors"
+msgstr ""
+
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
 "file or XML format."
@@ -1334,6 +1363,9 @@ msgid "Command"
 msgstr "Kommando"
 
 msgid "Command Scripts"
+msgstr ""
+
+msgid "Command execution was successful"
 msgstr ""
 
 #, php-format
@@ -2054,6 +2086,18 @@ msgstr "Destinations port"
 msgid "Destination share"
 msgstr "Destinations share"
 
+msgid "Destroy a pool"
+msgstr ""
+
+msgid "Destroyed"
+msgstr ""
+
+msgid "Detach a data device from a mirror"
+msgstr ""
+
+msgid "Detach a log device from a mirrored log"
+msgstr ""
+
 msgid "Detected"
 msgstr "Fundet"
 
@@ -2235,6 +2279,9 @@ msgstr ""
 
 msgid "Display"
 msgstr "Visning"
+
+msgid "Display ZFS command history"
+msgstr ""
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -3027,8 +3074,14 @@ msgstr "Udløb"
 msgid "Export"
 msgstr "Eksporter"
 
+msgid "Export a pool from the system"
+msgstr ""
+
 msgid "Export all the directories in the specified path."
 msgstr "Eksporter alle foldere i den angivne sti."
+
+msgid "Exported"
+msgstr ""
 
 msgid "Extended Attributes"
 msgstr ""
@@ -3143,16 +3196,8 @@ msgstr "Kunne ikke udføre cron opgaven."
 msgid "Failed to remove: %s"
 msgstr "Fejlet ved at fjerne: %s"
 
-#, php-format
-msgid "Failed to send status report to: %s."
-msgstr "Kunne ikke sende status rapport til: %s."
-
 msgid "Failed to send status report."
 msgstr ""
-
-#, php-format
-msgid "Failed to send test email to: %s."
-msgstr "Kunne ikke afsende test email til: %s"
 
 msgid "Failed to send test email."
 msgstr ""
@@ -3277,6 +3322,9 @@ msgstr "Flag"
 msgid "Follow"
 msgstr "Følg"
 
+msgid "Force Operation"
+msgstr ""
+
 msgid "Force use"
 msgstr "Tvunget brug"
 
@@ -3381,6 +3429,9 @@ msgstr "Generel opsætning"
 
 msgid "Generate"
 msgstr "Generér"
+
+msgid "Generate a new unique identifier for a pool"
+msgstr ""
 
 msgid "Generate password if leave empty."
 msgstr "Generer kodeord hvis tomt"
@@ -3576,9 +3627,6 @@ msgstr "Tilladte værter"
 
 msgid "Hosts deny"
 msgstr "Nægtede værter"
-
-msgid "Hot Spare"
-msgstr "Hot spare"
 
 msgid "Hours"
 msgstr "Timer"
@@ -3993,6 +4041,9 @@ msgstr "Ventetid før UPS genstart"
 msgid "Interval to wait before restarting the load"
 msgstr ""
 
+msgid "Invalid command line option"
+msgstr ""
+
 msgid "Invalid file format or incorrect password."
 msgstr "Ugyldigt fil format eller forkert adgangskode"
 
@@ -4113,6 +4164,9 @@ msgstr "Dræb krypteret volume"
 
 msgid "Korean"
 msgstr "Koreansk"
+
+msgid "L2 Cache"
+msgstr ""
 
 msgid "LACP (Link Aggregation Control Protocol)"
 msgstr "LACP (Link Aggregation Control Protokol)"
@@ -4271,6 +4325,9 @@ msgstr ""
 "(AES i Counter tilstand med CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
 "(Temporal Key Integrity Protokol, IEEE 802.11i/D7.0)."
 
+msgid "List or import pools"
+msgstr ""
+
 msgid "Load"
 msgstr "Indlæs"
 
@@ -4343,9 +4400,6 @@ msgstr "Placering hvor arbejdsfilerne skal gemmes, f.eks. %s/backup/.unison"
 
 msgid "Log"
 msgstr "Log"
-
-msgid "Log Device"
-msgstr "Log enhed"
 
 msgid "Log Level"
 msgstr "Log niveau"
@@ -4696,6 +4750,9 @@ msgstr ""
 msgid "Missing a temporary folder."
 msgstr "Mangler en midlertidig mappe."
 
+msgid "Missing parameter"
+msgstr ""
+
 msgid "Mixed"
 msgstr ""
 
@@ -4884,9 +4941,6 @@ msgstr ""
 "Aldrig - Kontroller enheden uanset dens strømtilstand. Dette kan få en disk, "
 "der er holdt op med at køre, til at køre rundt igen når den kontrolleres"
 
-msgid "New Device"
-msgstr "Ny enhed"
-
 msgid "New password"
 msgstr "Ny adgangskode"
 
@@ -4932,8 +4986,8 @@ msgstr ""
 msgid "No configured virtual devices."
 msgstr ""
 
-msgid "No device selected."
-msgstr "Ingen enhed valgt."
+msgid "No devices have been selected"
+msgstr ""
 
 msgid "No disk configured"
 msgstr "Ingen diske konfigureret"
@@ -4957,10 +5011,28 @@ msgstr "Ingen ny disk fundet"
 msgid "No new software raid disk found."
 msgstr "Ingen nye software raid disk fundet."
 
+msgid "No pool devices have been selected"
+msgstr ""
+
 msgid "No pool was found."
 msgstr "Ingen pulje fundet."
 
+msgid "No pools have been selected"
+msgstr ""
+
 msgid "No softraid-formatted disks available."
+msgstr ""
+
+msgid "No suitable devices found."
+msgstr ""
+
+msgid "No suitable pools found."
+msgstr ""
+
+msgid "No suitable virtual devices found."
+msgstr ""
+
+msgid "No virtual devices have been selected"
 msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
@@ -5150,14 +5222,6 @@ msgstr "Gammelt kodeord"
 msgid "On"
 msgstr "Til"
 
-msgid ""
-"Once you add the virtual device, it becomes impossible to delete again. It "
-"recommends adding the same number of drives as the existing virtual device."
-msgstr ""
-"Når du først har tilføjet en virtuel enhed, så er det umuligt at slette den "
-"igen. Det anbefales at man tilføjer det samme antal drev som antal virtuelle "
-"enheder."
-
 msgid "Online"
 msgstr ""
 
@@ -5204,6 +5268,9 @@ msgid "Outgoing Power/Inverter Information"
 msgstr "Udgående Strøm/Inverter information"
 
 msgid "Outgoing SMTP mail server address."
+msgstr ""
+
+msgid "Output"
 msgstr ""
 
 msgid "Output current (A)"
@@ -5281,6 +5348,9 @@ msgstr "Smertefuld agressiv"
 
 msgid "Pairwise"
 msgstr "Parvis"
+
+msgid "Parameter"
+msgstr ""
 
 msgid "Parameter xxx (ups.conf or cmdline -x) setting"
 msgstr ""
@@ -5504,10 +5574,19 @@ msgstr "Kontrol tid"
 msgid "Pool"
 msgstr "Pulje"
 
+msgid "Pool Devices"
+msgstr ""
+
 msgid "Pool Information & Status"
 msgstr ""
 
-msgid "Pool Tools"
+msgid "Pool State"
+msgstr ""
+
+msgid "Pool Status"
+msgstr ""
+
+msgid "Pool Version"
 msgstr ""
 
 msgid "Pool cannot be changed."
@@ -5579,6 +5658,9 @@ msgstr "Portugisisk (Portugal)"
 
 msgid "PostInit"
 msgstr "PostInit"
+
+msgid "Potentially Active"
+msgstr ""
 
 msgid "Power Daemon"
 msgstr "Strøm Daemon"
@@ -5936,6 +6018,15 @@ msgstr ""
 msgid "Removable"
 msgstr "Flytbar"
 
+msgid "Remove a cache device from a pool"
+msgstr ""
+
+msgid "Remove a log device from a pool"
+msgstr ""
+
+msgid "Remove a spare device from a pool"
+msgstr ""
+
 msgid "Remove all entries from ARP table"
 msgstr "Fjern alle posteringer i ARP tabellen"
 
@@ -5945,6 +6036,9 @@ msgstr ""
 
 msgid "Replace Battery UPS"
 msgstr "Udskift batteri UPS"
+
+msgid "Replace a device"
+msgstr ""
 
 msgid "Report Generator"
 msgstr "Rapport Generator"
@@ -6247,10 +6341,16 @@ msgstr ""
 msgid "Scheduled tests"
 msgstr ""
 
+msgid "Scrub a pool"
+msgstr ""
+
 msgid "Search"
 msgstr ""
 
 msgid "Search event"
+msgstr ""
+
+msgid "Search for and import all disks found"
 msgstr ""
 
 msgid "Secondary"
@@ -6294,11 +6394,32 @@ msgstr ""
 "Vælg Hypertext Transfer Protocol (HTTP) eller Hypertext Transfer Protocol "
 "Secure (HTTPS) for WebGUI."
 
+msgid "Select a cache device"
+msgstr ""
+
+msgid "Select a data device"
+msgstr ""
+
 msgid "Select a date format."
+msgstr ""
+
+msgid "Select a device"
 msgstr ""
 
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Vælg en disk der har aktiveret S.M.A.R.T. overvågning"
+
+msgid "Select a log device"
+msgstr ""
+
+msgid "Select a pool"
+msgstr ""
+
+msgid "Select a pool device"
+msgstr ""
+
+msgid "Select a spare device"
+msgstr ""
 
 msgid "Select file system format."
 msgstr ""
@@ -6312,8 +6433,17 @@ msgstr "Vælg element der skal fjernes fra listen"
 msgid "Select mount point where to create the swap file."
 msgstr "Vælg monterings punkt hvor swap filen skal oprettes."
 
+msgid "Select one or more spare devices"
+msgstr ""
+
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
+msgstr ""
+
+msgid "Select pool device"
+msgstr ""
+
+msgid "Select pools"
 msgstr ""
 
 msgid "Select read balance algorithm."
@@ -6639,6 +6769,9 @@ msgstr ""
 msgid "Spanish"
 msgstr "Spansk"
 
+msgid "Spare"
+msgstr ""
+
 msgid "Sparse"
 msgstr "Spredt"
 
@@ -6747,10 +6880,6 @@ msgstr "Status"
 msgid "Status & Information"
 msgstr ""
 
-#, php-format
-msgid "Status report successfully sent to: %s."
-msgstr "Status rapporten blev succesfuldt sendt til: %s"
-
 msgid "Status report successfully sent."
 msgstr "Status rapporten blev succesfuldt afsendt."
 
@@ -6805,6 +6934,9 @@ msgstr "Undernetmaske"
 
 msgid "Subsystem"
 msgstr "Undersystem"
+
+msgid "Success"
+msgstr ""
 
 msgid "Successful"
 msgstr "Succesfuld"
@@ -6968,6 +7100,9 @@ msgstr "Mærkat%d"
 msgid "Tag%d (%s)"
 msgstr "Mærkat%d (%s)"
 
+msgid "Take a device offline"
+msgstr ""
+
 msgid "Tap device"
 msgstr ""
 
@@ -7035,6 +7170,9 @@ msgstr "Midlertidig mappe"
 msgid "Temporary directory to store transcoded files."
 msgstr "Midlertidig mappe hvor omkodede filer skal gemmes."
 
+msgid "Test Mode"
+msgstr ""
+
 msgid "Test email"
 msgstr "Test email"
 
@@ -7042,12 +7180,11 @@ msgstr "Test email"
 msgid "Test email from host: %s"
 msgstr "Test email fra vært: %s"
 
-#, php-format
-msgid "Test email successfully sent to: %s."
-msgstr "Test email blev succesfuldt afsendt til: %s."
-
 msgid "Test email successfully sent."
 msgstr "Test email blev succesfuldt afsendt."
+
+msgid "Test mode, no command execution"
+msgstr ""
 
 msgid ""
 "The  deny  option specifies users and groups who are not allowed access to "
@@ -8629,6 +8766,9 @@ msgstr ""
 msgid "Unformated"
 msgstr "Uformateret"
 
+msgid "Uninitialized"
+msgstr ""
+
 msgid "Uninstall package"
 msgstr "Afinstaller pakke"
 
@@ -8649,6 +8789,9 @@ msgstr "Unix tegnsæt"
 
 msgid "Unknown"
 msgstr "Ukendt"
+
+msgid "Unknown Activity"
+msgstr ""
 
 msgid "Unknown or unformatted"
 msgstr "Ukendt eller uformateret"
@@ -8678,6 +8821,9 @@ msgid "Updating in 5 seconds."
 msgstr "Opdaterer om 5 sekunder."
 
 msgid "Upgrade Firmware"
+msgstr ""
+
+msgid "Upgrade ZFS and add all supported feature flags on a pool"
 msgstr ""
 
 msgid "Upload"
@@ -8811,9 +8957,6 @@ msgstr "Bruger endelse"
 
 msgid "Username"
 msgstr "Brugernavn"
-
-msgid "Username contains invalid character(s) : "
-msgstr ""
 
 msgid "Username field : "
 msgstr "Brugernavn felt : "
@@ -9230,6 +9373,9 @@ msgstr ""
 msgid "ZFS Dataset Properties"
 msgstr ""
 
+msgid "ZFS Pool Tools"
+msgstr ""
+
 msgid "ZFS Snapshot Information & Status"
 msgstr ""
 
@@ -9263,6 +9409,9 @@ msgstr "Zeroconf/Bonjour"
 
 msgid "all encrypted disks are imported."
 msgstr "alle krypterede diske er importeret"
+
+msgid "and"
+msgstr ""
 
 msgid "change failed."
 msgstr "ændring fejlede."
@@ -9405,3 +9554,46 @@ msgstr ""
 
 msgid "version:"
 msgstr "version:"
+
+#~ msgid "Cache Device"
+#~ msgstr "Cache enhed"
+
+#, php-format
+#~ msgid "Failed to send status report to: %s."
+#~ msgstr "Kunne ikke sende status rapport til: %s."
+
+#, php-format
+#~ msgid "Failed to send test email to: %s."
+#~ msgstr "Kunne ikke afsende test email til: %s"
+
+#~ msgid "Hot Spare"
+#~ msgstr "Hot spare"
+
+#~ msgid "New Device"
+#~ msgstr "Ny enhed"
+
+#~ msgid "No device selected."
+#~ msgstr "Ingen enhed valgt."
+
+#, php-format
+#~ msgid "Status report successfully sent to: %s."
+#~ msgstr "Status rapporten blev succesfuldt sendt til: %s"
+
+#, php-format
+#~ msgid "Test email successfully sent to: %s."
+#~ msgstr "Test email blev succesfuldt afsendt til: %s."
+
+#~ msgid ""
+#~ "Once you add the virtual device, it becomes impossible to delete again. It "
+#~ "recommends adding the same number of drives as the existing virtual device."
+#~ msgstr ""
+#~ "Når du først har tilføjet en virtuel enhed, så er det umuligt at slette den "
+#~ "igen. Det anbefales at man tilføjer det samme antal drev som antal virtuelle "
+#~ "enheder."
+
+#~ msgid "Log Device"
+#~ msgstr "Log enhed"
+
+#, php-format
+#~ msgid "%s: cannot get mirror name."
+#~ msgstr "%s: kan ikke få navn på spejl."

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-07-17 08:18+0000\n"
-"PO-Revision-Date: 2016-08-05 01:41+0000\n"
+"POT-Creation-Date: 2016-08-26 00:19+0000\n"
+"PO-Revision-Date: 2016-08-25 22:31+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-24 09:12+0000\n"
+"X-Launchpad-Export-Date: 2016-08-25 22:36+0000\n"
 "X-Generator: Launchpad (build 18179)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -100,10 +100,6 @@ msgstr "%s%% beschikbaar"
 #, php-format
 msgid "%s%d %s is already used by %s%d."
 msgstr "%s%d %s is reeds gebruikt door %s%d."
-
-#, php-format
-msgid "%s: cannot get mirror name."
-msgstr "%s: kan de spiegel naam niet krijgen."
 
 #, php-format
 msgid "%sB available of %sB"
@@ -447,6 +443,9 @@ msgstr ""
 "defect, of een error wordt gedetecteerd, of als een S.M.A.R.T. opdracht naar "
 "een schijf mislukt."
 
+msgid "Active"
+msgstr "Actief"
+
 msgid "Active Directory"
 msgstr "Active Directory"
 
@@ -458,6 +457,12 @@ msgstr "Actief Gedeeld"
 
 msgid "Active Users"
 msgstr "Actieve Gebruikers"
+
+msgid "Activities"
+msgstr "Activiteiten"
+
+msgid "Activity"
+msgstr "Activiteit"
 
 msgid "Adaptive (Low Power Consumption)"
 msgstr "adaptief (Laag Energieverbruik)"
@@ -494,6 +499,18 @@ msgstr "Virtuele Schijf Toevoegen"
 
 msgid "Add Volume"
 msgstr "Volume Toevoegen"
+
+msgid "Add a cache device to a pool"
+msgstr "Voeg een cache schijf toe aan een pool"
+
+msgid "Add a log device to a pool"
+msgstr "Voeg een log schijf toe aan een pool"
+
+msgid "Add a spare device to a pool"
+msgstr "Voeg een hot spare schijf toe aan een pool"
+
+msgid "Add a virtual device to a pool"
+msgstr "Voeg een virtuele schijf toe aan een pool"
 
 msgid "Add additional scheduled self-test."
 msgstr "Een geplande zelf-test toevoegen."
@@ -839,6 +856,9 @@ msgstr ""
 "Een Initiator Groep wordt geïdentificeerd door een tag-nummer en definieert "
 "geautoriseerde initiator namen en netwerken."
 
+msgid "An error occured."
+msgstr "Er is een fout opgetreden."
+
 msgid "An host with this name already exists."
 msgstr "Een host met deze naam bestaat reeds."
 
@@ -912,6 +932,12 @@ msgstr ""
 "Op het hoogste niveau, een doel is wat is gepresenteerd aan de initiator, en "
 "bestaat uit één of meer extentie's."
 
+msgid "Attach a data device"
+msgstr "Koppel een data schijf"
+
+msgid "Attach a log device"
+msgstr "Koppel een log schijf"
+
 msgid "Attached"
 msgstr "Verbonden"
 
@@ -920,8 +946,8 @@ msgid "Attaching provider '%s'."
 msgstr "Verbindings provider '%s'."
 
 msgid ""
-"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
-"or NTFS can result in unpredictable results, file corruption and the loss of "
+"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4 or "
+"NTFS can result in unpredictable results, file corruption and the loss of "
 "data!"
 msgstr ""
 "Het gebruik van andere bestandssystemen zoals FAT, FAT32, EXT2, EXT3,, EXT4 "
@@ -1159,6 +1185,9 @@ msgstr "Opstartlader"
 msgid "Bridge"
 msgstr "Bridge"
 
+msgid "Bring a device online"
+msgstr "Breng een schijf online"
+
 msgid "Broadcast interval"
 msgstr "Uitzend interval"
 
@@ -1280,9 +1309,6 @@ msgid ""
 msgstr ""
 "CRC Fout Telling. Telt het aantal CRC-fouten (lees/schrijf data FIS CRC "
 "fout)."
-
-msgid "Cache Device"
-msgstr "Cache Apparaat"
 
 msgid "Calibration Battery"
 msgstr "Kalibreren Batterij"
@@ -1407,6 +1433,9 @@ msgstr "Config Leegmaken & Importeer Software RAID Schijven"
 msgid "Clear config and Import disks"
 msgstr "Config leegmaken en importeer schijven"
 
+msgid "Clear device errors"
+msgstr "Wis schijf fouten"
+
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
 "file or XML format."
@@ -1441,6 +1470,9 @@ msgstr "Opdracht Uitvoeren"
 
 msgid "Command Scripts"
 msgstr "Opdrachtscripts"
+
+msgid "Command execution was successful"
+msgstr "Commando uitvoeren was succesvol"
 
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
@@ -2238,6 +2270,18 @@ msgstr "Bestemmingspoort"
 msgid "Destination share"
 msgstr "Gedeelde bestemmingsmap"
 
+msgid "Destroy a pool"
+msgstr "Vernietig een pool"
+
+msgid "Destroyed"
+msgstr "Vernietigd"
+
+msgid "Detach a data device from a mirror"
+msgstr "Ontkoppel een data schijf van een mirror"
+
+msgid "Detach a log device from a mirrored log"
+msgstr "Ontkoppel een log schijf van een mirrored log"
+
 msgid "Detected"
 msgstr "Gedetecteerd"
 
@@ -2422,6 +2466,9 @@ msgstr "Schijven | Koppelpunten | Management"
 
 msgid "Display"
 msgstr "Weergave"
+
+msgid "Display ZFS command history"
+msgstr "ZFS opdrachtgeschiedenis weergeven"
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -3254,8 +3301,14 @@ msgstr "Verlooptijd"
 msgid "Export"
 msgstr "Exporteren"
 
+msgid "Export a pool from the system"
+msgstr "Exporteer een pool van het systeem"
+
 msgid "Export all the directories in the specified path."
 msgstr "Exporteer alle mappen in de opgegeven locatie."
+
+msgid "Exported"
+msgstr "Geëxporteerd"
 
 msgid "Extended Attributes"
 msgstr "Uitgebreide Attributen"
@@ -3372,16 +3425,8 @@ msgstr "Mislukt om de cron taak uit te voeren."
 msgid "Failed to remove: %s"
 msgstr "Mislukt te verwijderen: %s"
 
-#, php-format
-msgid "Failed to send status report to: %s."
-msgstr "Mislukt om het statusrapport te verzenden naar: %s."
-
 msgid "Failed to send status report."
 msgstr "Mislukt om het statusrapport te verzenden."
-
-#, php-format
-msgid "Failed to send test email to: %s."
-msgstr "De test e-mail verzenden naar: %s is mislukt."
 
 msgid "Failed to send test email."
 msgstr "Mislukt om de test-email te verzenden."
@@ -3507,6 +3552,9 @@ msgstr "Vlaggen"
 msgid "Follow"
 msgstr "Volgen"
 
+msgid "Force Operation"
+msgstr "Forceer Opdracht"
+
 msgid "Force use"
 msgstr "Geforceerd gebruiken"
 
@@ -3613,6 +3661,9 @@ msgstr "Algemene Instellingen"
 
 msgid "Generate"
 msgstr "Aanmaken"
+
+msgid "Generate a new unique identifier for a pool"
+msgstr "Genereer een nieuwe unieke identificatiecode voor een pool"
 
 msgid "Generate password if leave empty."
 msgstr "Genereer wachtwoord indien leeg gelaten."
@@ -3819,9 +3870,6 @@ msgstr "Hosten toestaan"
 
 msgid "Hosts deny"
 msgstr "Hosten afwijzen"
-
-msgid "Hot Spare"
-msgstr "Hot Spare"
 
 msgid "Hours"
 msgstr "Uren"
@@ -4260,6 +4308,9 @@ msgstr "Interval te wachten voor het herstarten van de UPS)"
 msgid "Interval to wait before restarting the load"
 msgstr "Interval te wachten voor het opnieuw starten van de belasting"
 
+msgid "Invalid command line option"
+msgstr "Ongeldige command line optie"
+
 msgid "Invalid file format or incorrect password."
 msgstr "Ongeldig bestandsformaat of onjuist wachtwoord."
 
@@ -4391,6 +4442,9 @@ msgstr "Versleuteld station opheffen"
 
 msgid "Korean"
 msgstr "Koreaans"
+
+msgid "L2 Cache"
+msgstr "L2 Cache"
 
 msgid "LACP (Link Aggregation Control Protocol)"
 msgstr "LACP (Link Aggregation Control Protocol)"
@@ -4561,6 +4615,9 @@ msgstr ""
 "van:CCMP (AES in Teller mode met CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP "
 "(Temporal Key Integrity Protocol, IEEE 802.11i/D7.0)."
 
+msgid "List or import pools"
+msgstr "Lijst of inporteer pools"
+
 msgid "Load"
 msgstr "Belasting"
 
@@ -4643,9 +4700,6 @@ msgstr ""
 
 msgid "Log"
 msgstr "Logboek"
-
-msgid "Log Device"
-msgstr "Log-device"
 
 msgid "Log Level"
 msgstr "Log niveau"
@@ -5009,6 +5063,9 @@ msgstr "Het aantal minuten tot de volgende netwerk tijdsynchronisatie."
 msgid "Missing a temporary folder."
 msgstr "Een tijdelijke map ontbreekt."
 
+msgid "Missing parameter"
+msgstr "Ontbrekende parameter"
+
 msgid "Mixed"
 msgstr "Gemengd"
 
@@ -5201,9 +5258,6 @@ msgstr ""
 "kan een schijf die een spin-down heeft opnieuw een spin-up geven wanneer "
 "deze keuze geselecteerd is."
 
-msgid "New Device"
-msgstr "Nieuwe Schijf"
-
 msgid "New password"
 msgstr "Nieuw wachtwoord"
 
@@ -5249,8 +5303,8 @@ msgstr "Er zijn geen pools geconfigureerd."
 msgid "No configured virtual devices."
 msgstr "Er zijn geen virtuele schijven geconfigureerd."
 
-msgid "No device selected."
-msgstr "Er is geen schijf geselecteerd"
+msgid "No devices have been selected"
+msgstr "Er zijn geen schijven geselecteerd"
 
 msgid "No disk configured"
 msgstr "Geen schijf geconfigureerd"
@@ -5274,11 +5328,29 @@ msgstr "Geen nieuwe schijven gevonden."
 msgid "No new software raid disk found."
 msgstr "Geen nieuwe software raid schijven gevonden."
 
+msgid "No pool devices have been selected"
+msgstr "Er zijn geen pool schijven geselecteerd"
+
 msgid "No pool was found."
 msgstr "Er is geen pool gevonden."
 
+msgid "No pools have been selected"
+msgstr "Er zijn geen pools geselecteerd"
+
 msgid "No softraid-formatted disks available."
 msgstr "Geen softraid-geformatteerde schijven beschikbaar."
+
+msgid "No suitable devices found."
+msgstr "Er zijn geen geschikte schijven gevonden."
+
+msgid "No suitable pools found."
+msgstr "Er zijn geen geschikte pools gevonden."
+
+msgid "No suitable virtual devices found."
+msgstr "Er zijn geen geschikte virtuele schijven gevonden."
+
+msgid "No virtual devices have been selected"
+msgstr "Er zijn geen virtuele schijven geselecteerd"
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Alleen overnemen wijger entries"
@@ -5471,14 +5543,6 @@ msgstr "Huidig wachtwoord"
 msgid "On"
 msgstr "Aan"
 
-msgid ""
-"Once you add the virtual device, it becomes impossible to delete again. It "
-"recommends adding the same number of drives as the existing virtual device."
-msgstr ""
-"Als u eenmaal een virtuele schijf heeft toegevoegd, dan wordt het onmogelijk "
-"om deze te verwijderen. Het is raadzaam om het zelfde aantal aan schijven "
-"toe te voegen als de bestaande virtuele schijf."
-
 msgid "Online"
 msgstr "Online"
 
@@ -5530,6 +5594,9 @@ msgstr "Uitgaande Power/Omvormer Informatie"
 
 msgid "Outgoing SMTP mail server address."
 msgstr "SMTP server voor uitgaande e-mail."
+
+msgid "Output"
+msgstr "Uitvoer"
 
 msgid "Output current (A)"
 msgstr "Uitgangsstroom (A)"
@@ -5609,6 +5676,9 @@ msgstr "Moeizaam agressief"
 
 msgid "Pairwise"
 msgstr "Paargewijs"
+
+msgid "Parameter"
+msgstr "Parameter"
 
 msgid "Parameter xxx (ups.conf or cmdline -x) setting"
 msgstr "Parameter xxx (ups.conf of cmdline -x) instelling"
@@ -5837,11 +5907,20 @@ msgstr "Verzendtijd rapportage"
 msgid "Pool"
 msgstr "Pool"
 
+msgid "Pool Devices"
+msgstr "Pool Schijven"
+
 msgid "Pool Information & Status"
 msgstr "Pool Informatie & Status"
 
-msgid "Pool Tools"
-msgstr "Pool Hulpmiddelen"
+msgid "Pool State"
+msgstr "Pool Staat"
+
+msgid "Pool Status"
+msgstr "Pool Status"
+
+msgid "Pool Version"
+msgstr "Pool Versie"
 
 msgid "Pool cannot be changed."
 msgstr "Pool kan niet worden gewijzigd."
@@ -5911,6 +5990,9 @@ msgstr "Portugees (Portugal)"
 
 msgid "PostInit"
 msgstr "PostInit"
+
+msgid "Potentially Active"
+msgstr "Potentieel Active"
 
 msgid "Power Daemon"
 msgstr "Energie Service"
@@ -6275,6 +6357,15 @@ msgstr "Externe syslog berichten"
 msgid "Removable"
 msgstr "Verwijderbaar"
 
+msgid "Remove a cache device from a pool"
+msgstr "Verwijder een cache schijf van een pool"
+
+msgid "Remove a log device from a pool"
+msgstr "Verwijder een cache schijf van een pool"
+
+msgid "Remove a spare device from a pool"
+msgstr "Verwijder een spare schijf van een pool"
+
 msgid "Remove all entries from ARP table"
 msgstr "Alle ARP regels verwijderen uit de tabel"
 
@@ -6284,6 +6375,9 @@ msgstr "Verwijder de %s eerst voor u verder gaat."
 
 msgid "Replace Battery UPS"
 msgstr "Vervang Batterij UPS"
+
+msgid "Replace a device"
+msgstr "Vervang een schijf"
 
 msgid "Report Generator"
 msgstr "Rapport Generator"
@@ -6594,11 +6688,17 @@ msgstr "Gepland Uitschakelen"
 msgid "Scheduled tests"
 msgstr "Gepland testen"
 
+msgid "Scrub a pool"
+msgstr "Scrub een pool"
+
 msgid "Search"
 msgstr "Zoeken"
 
 msgid "Search event"
 msgstr "Zoek gebeurtenis"
+
+msgid "Search for and import all disks found"
+msgstr "Zoek en importeer alle gevonden schijven"
 
 msgid "Secondary"
 msgstr "Secundair"
@@ -6649,11 +6749,32 @@ msgstr ""
 "Selecteer Hypertext Transfer Protocol (HTTP) of Hypertext Transfer Protocol "
 "Secure (HTTPS) voor de WebGUI."
 
+msgid "Select a cache device"
+msgstr "Selecteer een cache schijf"
+
+msgid "Select a data device"
+msgstr "Selecteer een data schijf"
+
 msgid "Select a date format."
 msgstr "Selecteer een datumnotatie."
 
+msgid "Select a device"
+msgstr "Selecteer een schijf"
+
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Selecteer een schijf dat is ingeschakeld voor S.M.A.R.T. controle."
+
+msgid "Select a log device"
+msgstr "Selecteer een log schijf"
+
+msgid "Select a pool"
+msgstr "Selecteer een pool"
+
+msgid "Select a pool device"
+msgstr "Selecteer een pool schijf"
+
+msgid "Select a spare device"
+msgstr "Selecteer een spare schijf"
 
 msgid "Select file system format."
 msgstr "Selecteer het bestandssysteem voor het formatteren."
@@ -6668,11 +6789,20 @@ msgid "Select mount point where to create the swap file."
 msgstr ""
 "Selecteer het koppelpunt waar het wisselbestand op aangemaakt gaat worden."
 
+msgid "Select one or more spare devices"
+msgstr "Selecteer één of meer spare schijven"
+
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
 "Selecteer de optie 'Ongeformatteerd' voor  ongeformatteerde schijven en "
 "formatteer deze met de"
+
+msgid "Select pool device"
+msgstr "Selecteer pool schijf"
+
+msgid "Select pools"
+msgstr "Selecteer pools"
 
 msgid "Select read balance algorithm."
 msgstr "Selecteer lees balans algoritme."
@@ -7014,6 +7144,9 @@ msgstr ""
 msgid "Spanish"
 msgstr "Spaans"
 
+msgid "Spare"
+msgstr "Spare"
+
 msgid "Sparse"
 msgstr "Sparse"
 
@@ -7135,10 +7268,6 @@ msgstr "Status"
 msgid "Status & Information"
 msgstr "Status & Informatie"
 
-#, php-format
-msgid "Status report successfully sent to: %s."
-msgstr "Het statusrapport is met succes verzonden naar: %s."
-
 msgid "Status report successfully sent."
 msgstr "Het status rapport is met succes verzonden."
 
@@ -7195,6 +7324,9 @@ msgstr "Subnetmasker"
 
 msgid "Subsystem"
 msgstr "Subsysteem"
+
+msgid "Success"
+msgstr "Geslaagd"
 
 msgid "Successful"
 msgstr "Succesvol"
@@ -7361,6 +7493,9 @@ msgstr "Markering%d"
 msgid "Tag%d (%s)"
 msgstr "markering%d (%s)"
 
+msgid "Take a device offline"
+msgstr "Neem een schijf offline"
+
 msgid "Tap device"
 msgstr "Tap device"
 
@@ -7429,6 +7564,9 @@ msgid "Temporary directory to store transcoded files."
 msgstr ""
 "Locatie waar de tijdelijk gecodeerde bestanden kunnen worden opgeslagen."
 
+msgid "Test Mode"
+msgstr "Testmodus"
+
 msgid "Test email"
 msgstr "Test e-mail"
 
@@ -7436,12 +7574,11 @@ msgstr "Test e-mail"
 msgid "Test email from host: %s"
 msgstr "Test e-mail van host: %s"
 
-#, php-format
-msgid "Test email successfully sent to: %s."
-msgstr "Test e-mail is met succes verzonden naar: %s."
-
 msgid "Test email successfully sent."
 msgstr "Test e-mail is met succes verzonden."
+
+msgid "Test mode, no command execution"
+msgstr "Testmodus, geen  opdracht uitvoering"
 
 msgid ""
 "The  deny  option specifies users and groups who are not allowed access to "
@@ -9189,6 +9326,9 @@ msgstr "Niet-gecorrigeerde leesfouten gemeld aan het besturingssysteem."
 msgid "Unformated"
 msgstr "Niet geformatteerd"
 
+msgid "Uninitialized"
+msgstr "Geïnitialiseerd"
+
 msgid "Uninstall package"
 msgstr "Pakket deïnstalleren"
 
@@ -9209,6 +9349,9 @@ msgstr "UNIX Karakterset"
 
 msgid "Unknown"
 msgstr "Onbekend"
+
+msgid "Unknown Activity"
+msgstr "Onbekende Activiteit"
 
 msgid "Unknown or unformatted"
 msgstr "Onbekend of nog niet geformatteerd"
@@ -9239,6 +9382,10 @@ msgstr "Bijwerken in 5 seconden"
 
 msgid "Upgrade Firmware"
 msgstr "Update Firmware"
+
+msgid "Upgrade ZFS and add all supported feature flags on a pool"
+msgstr ""
+"Upgrade ZFS en voeg alle ondersteunde functie vlaggen toe op een pool"
 
 msgid "Upload"
 msgstr "Upload"
@@ -9375,9 +9522,6 @@ msgstr "Gebruiker achtervoegsel"
 
 msgid "Username"
 msgstr "Gebruikersnaam"
-
-msgid "Username contains invalid character(s) : "
-msgstr "De gebruikersnaam bevat ongeldige karakters. "
 
 msgid "Username field : "
 msgstr "Gebruikersnaam veld : "
@@ -9829,6 +9973,9 @@ msgstr "ZFS Dataset Informatie & Status"
 msgid "ZFS Dataset Properties"
 msgstr "ZFS Dataset Eigenschappen"
 
+msgid "ZFS Pool Tools"
+msgstr "ZFS Pool Tools"
+
 msgid "ZFS Snapshot Information & Status"
 msgstr "ZFS Snapshot Informatie & Status"
 
@@ -9864,6 +10011,9 @@ msgstr "Zeroconf/Bonjour"
 
 msgid "all encrypted disks are imported."
 msgstr "alle versleutelde schijven worden geïmporteerd."
+
+msgid "and"
+msgstr "en"
 
 msgid "change failed."
 msgstr "wijziging mislukt."
@@ -10008,3 +10158,67 @@ msgstr "gebruiker"
 
 msgid "version:"
 msgstr "versie:"
+
+#~ msgid "Cache Device"
+#~ msgstr "Cache Apparaat"
+
+#, php-format
+#~ msgid "Failed to send status report to: %s."
+#~ msgstr "Mislukt om het statusrapport te verzenden naar: %s."
+
+#, php-format
+#~ msgid "Failed to send test email to: %s."
+#~ msgstr "De test e-mail verzenden naar: %s is mislukt."
+
+#~ msgid "Hot Spare"
+#~ msgstr "Hot Spare"
+
+#~ msgid "New Device"
+#~ msgstr "Nieuwe Schijf"
+
+#~ msgid "No device selected."
+#~ msgstr "Er is geen schijf geselecteerd"
+
+#~ msgid ""
+#~ "Once you add the virtual device, it becomes impossible to delete again. It "
+#~ "recommends adding the same number of drives as the existing virtual device."
+#~ msgstr ""
+#~ "Als u eenmaal een virtuele schijf heeft toegevoegd, dan wordt het onmogelijk "
+#~ "om deze te verwijderen. Het is raadzaam om het zelfde aantal aan schijven "
+#~ "toe te voegen als de bestaande virtuele schijf."
+
+#, php-format
+#~ msgid "Status report successfully sent to: %s."
+#~ msgstr "Het statusrapport is met succes verzonden naar: %s."
+
+#, php-format
+#~ msgid "Test email successfully sent to: %s."
+#~ msgstr "Test e-mail is met succes verzonden naar: %s."
+
+#~ msgid "Username contains invalid character(s) : "
+#~ msgstr "De gebruikersnaam bevat ongeldige karakters. "
+
+#~ msgid "Log Device"
+#~ msgstr "Log-device"
+
+#~ msgid "Pool Tools"
+#~ msgstr "Pool Hulpmiddelen"
+
+#, php-format
+#~ msgid "%s: cannot get mirror name."
+#~ msgstr "%s: kan de spiegel naam niet krijgen."
+
+#~ msgid ""
+#~ "Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
+#~ "or NTFS can result in unpredictable results, file corruption and the loss of "
+#~ "data!"
+#~ msgstr ""
+#~ "Het gebruik van andere bestandssystemen zoals FAT, FAT32, EXT2, EXT3,, EXT4 "
+#~ "of NTFS kan onvoorspelbare resultaten opleveren zoals bestandsbeschadiging "
+#~ "en/of verlies van gegevens!"
+
+#~ msgid "Selece a cache device"
+#~ msgstr "Selecteer een cache schijf"
+
+#~ msgid "Selece a log device"
+#~ msgstr "Selecteer een log schijf"

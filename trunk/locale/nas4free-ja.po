@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-07-17 08:18+0000\n"
+"POT-Creation-Date: 2016-08-26 00:19+0000\n"
 "PO-Revision-Date: 2016-08-10 07:07+0000\n"
 "Last-Translator: Tomoyuki Shiga <tomoyuki_shiga@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-24 09:13+0000\n"
+"X-Launchpad-Export-Date: 2016-08-25 22:37+0000\n"
 "X-Generator: Launchpad (build 18179)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -98,10 +98,6 @@ msgstr "残り%s%%"
 #, php-format
 msgid "%s%d %s is already used by %s%d."
 msgstr "%s%d %s は既に %s%d で使用されています。"
-
-#, php-format
-msgid "%s: cannot get mirror name."
-msgstr "%s: ミラー名が取得できません。"
 
 #, php-format
 msgid "%sB available of %sB"
@@ -396,6 +392,9 @@ msgstr ""
 "通知を受け取りたい場合はメール通知機能を有効にします。処理の失敗や新しいエラーの検出、またはディスクに対する S.M.A.R.T. "
 "コマンドが失敗した時に通知されます。"
 
+msgid "Active"
+msgstr ""
+
 msgid "Active Directory"
 msgstr "Active Directory"
 
@@ -407,6 +406,12 @@ msgstr "アクティブな共有"
 
 msgid "Active Users"
 msgstr "アクティブなユーザ"
+
+msgid "Activities"
+msgstr ""
+
+msgid "Activity"
+msgstr ""
 
 msgid "Adaptive (Low Power Consumption)"
 msgstr ""
@@ -442,6 +447,18 @@ msgid "Add Virtual Device"
 msgstr ""
 
 msgid "Add Volume"
+msgstr ""
+
+msgid "Add a cache device to a pool"
+msgstr ""
+
+msgid "Add a log device to a pool"
+msgstr ""
+
+msgid "Add a spare device to a pool"
+msgstr ""
+
+msgid "Add a virtual device to a pool"
 msgstr ""
 
 msgid "Add additional scheduled self-test."
@@ -754,6 +771,9 @@ msgid ""
 "initiator names and networks."
 msgstr ""
 
+msgid "An error occured."
+msgstr ""
+
 msgid "An host with this name already exists."
 msgstr "この名前がつけられたホストは既に存在しています。"
 
@@ -821,6 +841,12 @@ msgid ""
 "made up of one or more extents."
 msgstr "最も上のレベルで、ターゲットはイニシエータに提示され、ひとつ以上のエクステントから構成されます。"
 
+msgid "Attach a data device"
+msgstr ""
+
+msgid "Attach a log device"
+msgstr ""
+
 msgid "Attached"
 msgstr "接続済み"
 
@@ -829,8 +855,8 @@ msgid "Attaching provider '%s'."
 msgstr "プロバイダ'%s' を接続しています。"
 
 msgid ""
-"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
-"or NTFS can result in unpredictable results, file corruption and the loss of "
+"Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4 or "
+"NTFS can result in unpredictable results, file corruption and the loss of "
 "data!"
 msgstr ""
 
@@ -1053,6 +1079,9 @@ msgstr "ブートローダ"
 msgid "Bridge"
 msgstr "ブリッジ"
 
+msgid "Bring a device online"
+msgstr ""
+
 msgid "Broadcast interval"
 msgstr "ブロードキャスト間隔"
 
@@ -1171,9 +1200,6 @@ msgid ""
 "error)."
 msgstr ""
 
-msgid "Cache Device"
-msgstr "キャッシュ デバイス"
-
 msgid "Calibration Battery"
 msgstr "バッテリーキャリブレーション"
 
@@ -1289,6 +1315,9 @@ msgstr "コンフィグ消去とソフトウェアRAIDのインポート"
 msgid "Clear config and Import disks"
 msgstr "コンフィグ消去とディスクのインポート"
 
+msgid "Clear device errors"
+msgstr ""
+
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
 "file or XML format."
@@ -1318,6 +1347,9 @@ msgid "Command"
 msgstr "コマンド"
 
 msgid "Command Scripts"
+msgstr ""
+
+msgid "Command execution was successful"
 msgstr ""
 
 #, php-format
@@ -2033,6 +2065,18 @@ msgstr "宛て先ポート"
 msgid "Destination share"
 msgstr "接続先共有"
 
+msgid "Destroy a pool"
+msgstr ""
+
+msgid "Destroyed"
+msgstr ""
+
+msgid "Detach a data device from a mirror"
+msgstr ""
+
+msgid "Detach a log device from a mirrored log"
+msgstr ""
+
 msgid "Detected"
 msgstr "検出"
 
@@ -2210,6 +2254,9 @@ msgstr ""
 
 msgid "Display"
 msgstr "表示"
+
+msgid "Display ZFS command history"
+msgstr ""
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -2981,8 +3028,14 @@ msgstr "有効期限"
 msgid "Export"
 msgstr "エクスポート"
 
+msgid "Export a pool from the system"
+msgstr ""
+
 msgid "Export all the directories in the specified path."
 msgstr "指定されたパスの中にあるすべてのディレクトリーをエクスポートします。"
+
+msgid "Exported"
+msgstr ""
 
 msgid "Extended Attributes"
 msgstr "拡張属性"
@@ -3094,16 +3147,8 @@ msgstr "Cron ジョブの実行に失敗しました。"
 msgid "Failed to remove: %s"
 msgstr "削除に失敗しました: %s"
 
-#, php-format
-msgid "Failed to send status report to: %s."
-msgstr "ステータスレポートの送信に失敗しました。宛て先: %s"
-
 msgid "Failed to send status report."
 msgstr ""
-
-#, php-format
-msgid "Failed to send test email to: %s."
-msgstr "テストメールの送信に失敗しました。宛て先: %s"
 
 msgid "Failed to send test email."
 msgstr ""
@@ -3227,6 +3272,9 @@ msgstr "フラグ"
 msgid "Follow"
 msgstr "フロー"
 
+msgid "Force Operation"
+msgstr ""
+
 msgid "Force use"
 msgstr "強制使用"
 
@@ -3329,6 +3377,9 @@ msgstr "基本設定"
 
 msgid "Generate"
 msgstr "生成"
+
+msgid "Generate a new unique identifier for a pool"
+msgstr ""
 
 msgid "Generate password if leave empty."
 msgstr "空欄のままにしておくと、パスワードを生成します。"
@@ -3525,9 +3576,6 @@ msgstr "許可するホスト"
 
 msgid "Hosts deny"
 msgstr "拒否するホスト"
-
-msgid "Hot Spare"
-msgstr "ホットスペア"
 
 msgid "Hours"
 msgstr "時"
@@ -3930,6 +3978,9 @@ msgstr "UPS再起動の待ち時間"
 msgid "Interval to wait before restarting the load"
 msgstr "再始動の待ち時間"
 
+msgid "Invalid command line option"
+msgstr ""
+
 msgid "Invalid file format or incorrect password."
 msgstr "無効なファイル形式またはパスワードが正しくありません。"
 
@@ -4046,6 +4097,9 @@ msgstr "暗号化ボリュームを停止"
 
 msgid "Korean"
 msgstr "韓国語"
+
+msgid "L2 Cache"
+msgstr ""
 
 msgid "LACP (Link Aggregation Control Protocol)"
 msgstr "LACP (リンクアグリゲーション制御プロトコル)"
@@ -4208,6 +4262,9 @@ msgstr ""
 "Protocol, RFC 3610, IEEE 802.11i/D7.0)、TKIP (Temporal Key Integrity "
 "Protocol, IEEE 802.11i/D7.0)。"
 
+msgid "List or import pools"
+msgstr ""
+
 msgid "Load"
 msgstr "ロード"
 
@@ -4277,9 +4334,6 @@ msgstr "作業ファイルが保存される場所を指定します。例) %s/b
 
 msgid "Log"
 msgstr "ログ"
-
-msgid "Log Device"
-msgstr "ログ デバイス"
 
 msgid "Log Level"
 msgstr "ログレベル"
@@ -4628,6 +4682,9 @@ msgstr ""
 msgid "Missing a temporary folder."
 msgstr "テンポラリフォルダがありません。"
 
+msgid "Missing parameter"
+msgstr ""
+
 msgid "Mixed"
 msgstr ""
 
@@ -4811,9 +4868,6 @@ msgstr ""
 "Never - 電源モードに関わらず、デバイスをポーリング (チェック) "
 "します。これは、スピンダウンしているディスクに対してのチェックが行われる際にスピンアップする可能性があります。"
 
-msgid "New Device"
-msgstr "新しいデバイス"
-
 msgid "New password"
 msgstr "新しいパスワード"
 
@@ -4859,8 +4913,8 @@ msgstr ""
 msgid "No configured virtual devices."
 msgstr ""
 
-msgid "No device selected."
-msgstr "デバイスが選択されていませんでした。"
+msgid "No devices have been selected"
+msgstr ""
 
 msgid "No disk configured"
 msgstr "ディスクが設定されていません"
@@ -4882,10 +4936,28 @@ msgstr "新しいディスクがありません。"
 msgid "No new software raid disk found."
 msgstr "新しいソフトウェアRAIDがありません。"
 
+msgid "No pool devices have been selected"
+msgstr ""
+
 msgid "No pool was found."
 msgstr "プールは見つかりませんでした。"
 
+msgid "No pools have been selected"
+msgstr ""
+
 msgid "No softraid-formatted disks available."
+msgstr ""
+
+msgid "No suitable devices found."
+msgstr ""
+
+msgid "No suitable pools found."
+msgstr ""
+
+msgid "No suitable virtual devices found."
+msgstr ""
+
+msgid "No virtual devices have been selected"
 msgstr ""
 
 msgid "Noallow - Only inherit deny entries"
@@ -5068,13 +5140,6 @@ msgstr "古いパスワード"
 msgid "On"
 msgstr "On"
 
-msgid ""
-"Once you add the virtual device, it becomes impossible to delete again. It "
-"recommends adding the same number of drives as the existing virtual device."
-msgstr ""
-"仮想デバイスを一旦加えると、再び削除することは不可能になります。\r\n"
-"既存の仮想デバイスと同じ数のドライブを加えることを推奨します。"
-
 msgid "Online"
 msgstr "オンライン"
 
@@ -5119,6 +5184,9 @@ msgid "Outgoing Power/Inverter Information"
 msgstr "出力電源情報"
 
 msgid "Outgoing SMTP mail server address."
+msgstr ""
+
+msgid "Output"
 msgstr ""
 
 msgid "Output current (A)"
@@ -5195,6 +5263,9 @@ msgstr "最高にアグレッシブ"
 
 msgid "Pairwise"
 msgstr "ペア"
+
+msgid "Parameter"
+msgstr ""
 
 msgid "Parameter xxx (ups.conf or cmdline -x) setting"
 msgstr "xxx パラメータ(ups.conf または cmdline -x) 設定"
@@ -5415,10 +5486,19 @@ msgstr "ポーリング時間"
 msgid "Pool"
 msgstr "プール"
 
+msgid "Pool Devices"
+msgstr ""
+
 msgid "Pool Information & Status"
 msgstr "プール情報とステータス"
 
-msgid "Pool Tools"
+msgid "Pool State"
+msgstr ""
+
+msgid "Pool Status"
+msgstr ""
+
+msgid "Pool Version"
 msgstr ""
 
 msgid "Pool cannot be changed."
@@ -5486,6 +5566,9 @@ msgstr "ポルトガル語（ポルトガル）"
 
 msgid "PostInit"
 msgstr "初期化後"
+
+msgid "Potentially Active"
+msgstr ""
 
 msgid "Power Daemon"
 msgstr "電源管理 デーモン"
@@ -5839,6 +5922,15 @@ msgstr ""
 msgid "Removable"
 msgstr "リムーバブル"
 
+msgid "Remove a cache device from a pool"
+msgstr ""
+
+msgid "Remove a log device from a pool"
+msgstr ""
+
+msgid "Remove a spare device from a pool"
+msgstr ""
+
 msgid "Remove all entries from ARP table"
 msgstr "ARP テーブルの全てのエントリを削除"
 
@@ -5848,6 +5940,9 @@ msgstr ""
 
 msgid "Replace Battery UPS"
 msgstr "UPSバッテリーを交換してください"
+
+msgid "Replace a device"
+msgstr ""
 
 msgid "Report Generator"
 msgstr "レポートジェネレーター"
@@ -6140,10 +6235,16 @@ msgstr "シャットダウンスケジュール"
 msgid "Scheduled tests"
 msgstr "テストスケジュール"
 
+msgid "Scrub a pool"
+msgstr ""
+
 msgid "Search"
 msgstr ""
 
 msgid "Search event"
+msgstr ""
+
+msgid "Search for and import all disks found"
 msgstr ""
 
 msgid "Secondary"
@@ -6187,11 +6288,32 @@ msgstr ""
 "WebGUIに利用するプロトコルを HTTP(Hypertext Transfer Protocol) もしくは HTTPS(Hypertext "
 "Transfer Protocol Secure) から選択してください。"
 
+msgid "Select a cache device"
+msgstr ""
+
+msgid "Select a data device"
+msgstr ""
+
 msgid "Select a date format."
+msgstr ""
+
+msgid "Select a device"
 msgstr ""
 
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "S.M.A.R.T. を有効にするディスクを選択してください。"
+
+msgid "Select a log device"
+msgstr ""
+
+msgid "Select a pool"
+msgstr ""
+
+msgid "Select a pool device"
+msgstr ""
+
+msgid "Select a spare device"
+msgstr ""
 
 msgid "Select file system format."
 msgstr ""
@@ -6205,8 +6327,17 @@ msgstr "リストから削除するアイテムを選択"
 msgid "Select mount point where to create the swap file."
 msgstr "スワップファイルを作成するディレクトリを選択してください。"
 
+msgid "Select one or more spare devices"
+msgstr ""
+
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
+msgstr ""
+
+msgid "Select pool device"
+msgstr ""
+
+msgid "Select pools"
 msgstr ""
 
 msgid "Select read balance algorithm."
@@ -6526,6 +6657,9 @@ msgstr ""
 msgid "Spanish"
 msgstr "スペイン語"
 
+msgid "Spare"
+msgstr ""
+
 msgid "Sparse"
 msgstr "スパース"
 
@@ -6627,10 +6761,6 @@ msgstr "ステータス"
 msgid "Status & Information"
 msgstr ""
 
-#, php-format
-msgid "Status report successfully sent to: %s."
-msgstr "ステータスレポートの送信が完了しました。宛て先: %s"
-
 msgid "Status report successfully sent."
 msgstr "ステータスレポートの送信に成功しました。"
 
@@ -6685,6 +6815,9 @@ msgstr "サブネットマスク"
 
 msgid "Subsystem"
 msgstr "サブシステム"
+
+msgid "Success"
+msgstr ""
 
 msgid "Successful"
 msgstr "成功"
@@ -6850,6 +6983,9 @@ msgstr "タグ%d"
 msgid "Tag%d (%s)"
 msgstr "タグ%d (%s)"
 
+msgid "Take a device offline"
+msgstr ""
+
 msgid "Tap device"
 msgstr "Tapデバイス"
 
@@ -6916,6 +7052,9 @@ msgstr "テンポラリディレクトリ"
 msgid "Temporary directory to store transcoded files."
 msgstr "トランスコードファイルを保存するテンポラリディレクトリ。"
 
+msgid "Test Mode"
+msgstr ""
+
 msgid "Test email"
 msgstr "テストメール送信"
 
@@ -6923,12 +7062,11 @@ msgstr "テストメール送信"
 msgid "Test email from host: %s"
 msgstr "テストメール送信元ホスト: %s"
 
-#, php-format
-msgid "Test email successfully sent to: %s."
-msgstr "テストメールの送信に成功しました。宛て先: %s"
-
 msgid "Test email successfully sent."
 msgstr "テストメールの送信に成功しました。"
+
+msgid "Test mode, no command execution"
+msgstr ""
 
 msgid ""
 "The  deny  option specifies users and groups who are not allowed access to "
@@ -8419,6 +8557,9 @@ msgstr "オペレーティングシステムに報告された未修正の読み
 msgid "Unformated"
 msgstr "フォーマットしない"
 
+msgid "Uninitialized"
+msgstr ""
+
 msgid "Uninstall package"
 msgstr "パッケージのアンインストール"
 
@@ -8439,6 +8580,9 @@ msgstr "Unix 文字セット"
 
 msgid "Unknown"
 msgstr "不明"
+
+msgid "Unknown Activity"
+msgstr ""
 
 msgid "Unknown or unformatted"
 msgstr "不明又は未フォーマット"
@@ -8469,6 +8613,9 @@ msgstr "5秒毎に更新"
 
 msgid "Upgrade Firmware"
 msgstr "ファームウェアアップグレード"
+
+msgid "Upgrade ZFS and add all supported feature flags on a pool"
+msgstr ""
 
 msgid "Upload"
 msgstr "アップロード"
@@ -8588,9 +8735,6 @@ msgstr "ユーザサフィックス"
 
 msgid "Username"
 msgstr "ユーザ名"
-
-msgid "Username contains invalid character(s) : "
-msgstr "ユーザ名に不正な文字が含まれています: "
 
 msgid "Username field : "
 msgstr "ユーザ名欄 : "
@@ -9001,6 +9145,9 @@ msgstr "ZFS データセット情報と状態"
 msgid "ZFS Dataset Properties"
 msgstr "ZFS データセットプロパティ"
 
+msgid "ZFS Pool Tools"
+msgstr ""
+
 msgid "ZFS Snapshot Information & Status"
 msgstr "ZFS スナップショット情報と状態"
 
@@ -9032,6 +9179,9 @@ msgstr "Zeroconf/Bonjour"
 
 msgid "all encrypted disks are imported."
 msgstr "暗号化されたディスクをすべてインポートします。"
+
+msgid "and"
+msgstr ""
 
 msgid "change failed."
 msgstr "変更に失敗しました。"
@@ -9174,3 +9324,48 @@ msgstr ""
 
 msgid "version:"
 msgstr "バージョン:"
+
+#~ msgid "Cache Device"
+#~ msgstr "キャッシュ デバイス"
+
+#, php-format
+#~ msgid "Failed to send status report to: %s."
+#~ msgstr "ステータスレポートの送信に失敗しました。宛て先: %s"
+
+#, php-format
+#~ msgid "Failed to send test email to: %s."
+#~ msgstr "テストメールの送信に失敗しました。宛て先: %s"
+
+#~ msgid "Hot Spare"
+#~ msgstr "ホットスペア"
+
+#~ msgid "New Device"
+#~ msgstr "新しいデバイス"
+
+#~ msgid "No device selected."
+#~ msgstr "デバイスが選択されていませんでした。"
+
+#~ msgid ""
+#~ "Once you add the virtual device, it becomes impossible to delete again. It "
+#~ "recommends adding the same number of drives as the existing virtual device."
+#~ msgstr ""
+#~ "仮想デバイスを一旦加えると、再び削除することは不可能になります。\r\n"
+#~ "既存の仮想デバイスと同じ数のドライブを加えることを推奨します。"
+
+#, php-format
+#~ msgid "Status report successfully sent to: %s."
+#~ msgstr "ステータスレポートの送信が完了しました。宛て先: %s"
+
+#, php-format
+#~ msgid "Test email successfully sent to: %s."
+#~ msgstr "テストメールの送信に成功しました。宛て先: %s"
+
+#~ msgid "Username contains invalid character(s) : "
+#~ msgstr "ユーザ名に不正な文字が含まれています: "
+
+#, php-format
+#~ msgid "%s: cannot get mirror name."
+#~ msgstr "%s: ミラー名が取得できません。"
+
+#~ msgid "Log Device"
+#~ msgstr "ログ デバイス"
