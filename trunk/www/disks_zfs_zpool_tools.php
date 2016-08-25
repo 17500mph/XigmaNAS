@@ -57,7 +57,7 @@ $a_pool_for_remove_log = $o_zpool->get_pools_with_single_log_devices();
 $a_pool_for_remove_cache = $o_zpool->get_pools_with_single_cache_devices();
 $a_pool_for_remove_spare = $o_zpool->get_pools_with_single_spare_devices();
 $a_pool_for_replace_data = $o_zpool->get_pools_for_replace_data();
-// pools from config.xml
+// pools from config.xml, needed for add data
 if (!(isset($config['zfs']['pools']['pool']) && is_array($config['zfs']['pools']['pool']))) {
 	$config['zfs']['pools']['pool'] = [];
 	$a_cfg_pool = [];
@@ -65,7 +65,7 @@ if (!(isset($config['zfs']['pools']['pool']) && is_array($config['zfs']['pools']
 	$a_cfg_pool = $config['zfs']['pools']['pool'];
 //	array_sort_key($a_cfg_pool, 'name');
 }
-// vdevices from config.xml
+// vdevices from config.xml, needed for add data
 if (false === ($b_vdev = (isset($config['zfs']['vdevices']['vdevice']) && is_array($config['zfs']['vdevices']['vdevice'])))) {
 	$config['zfs']['vdevices']['vdevice'] = [];
 	$a_cfg_vdev = [];
@@ -96,8 +96,22 @@ $a_geom_dev = $o_geom->get_dev();
 $o_zpool->set_devicepath_strip_regex('/^\/dev\//');
 $a_devices_in_use = array_column($o_zpool->get_all_devices_except_spare_devices(), 'device.path');
 $o_zpool->set_devicepath_strip_regex();
-$a_newdev = [];
+$a_newdev_stage_1 = [];
 foreach($a_geom_dev as $tmp_device) {
+	if (false === array_search($tmp_device['name'], $a_devices_in_use)) {
+		$a_newdev_stage_1[] = $tmp_device;
+	}
+}
+/*
+ *	Eliminate other devices that shouldn't be made available for selection
+ */
+$a_devices_in_use = [
+	'cd0', 'cd1', 'cd2', 'cd3', 'cd4', 'cd5', 'cd6', 'cd7', 'cd8', 'cd9',
+	'md0', 'md1', 'md2', 'md3', 'md4', 'md5', 'md6', 'md7', 'md8', 'md9',
+	'xmd0', 'xmd1', 'xmd2', 'xmdx', 'xmd4', 'xmd5', 'xmd6', 'xmd7', 'xmd8', 'xmd9',
+];
+$a_newdev = [];
+foreach($a_newdev_stage_1 as $tmp_device) {
 	if (false === array_search($tmp_device['name'], $a_devices_in_use)) {
 		$a_newdev[] = $tmp_device;
 	}
@@ -251,7 +265,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 		<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gtext('I/O Statistics');?></span></a></li>
 	</ul></td></tr>
 </tbody></table>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iframe" name="iframe">
+<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iform" name="iform">
 	<?php
 	if(1 < $sphere_array['pageindex']) {
 		if($sphere_array['submit']) {
@@ -303,8 +317,8 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							$prerequisites_ok &= render_newdev_view($sphere_array['newdev']);
 							html_separator2(2);
 							html_titleline2(gtext('Output'), 2);
+							$result = $prerequisites_ok ? 0 : 15;
 							if($prerequisites_ok) {
-								$result = 0;
 								$a_param = [];
 								foreach($sphere_array['flag'] as $tmp_flag) {
 									switch($tmp_flag) {
@@ -321,19 +335,9 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 								foreach($sphere_array['newdev'] as $tmp_device) {
 									$a_param[] = escapeshellarg($tmp_device);
 								}
-								$param = implode(' ', $a_param);
-								render_command($subcommand, $param);
-								render_cmd_start();
-								if ($b_exec) {
-									$result |= zfs_zpool_cmd($subcommand, $param, true);
-								}
-								render_cmd_stop();
-							} else {
-								$result = 1;
+								$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
 							}
-							if($result !== 0) {
-								html_text2('error', gtext('Error'), gtext('An error occured.'));
-							}
+							render_command_result($result);
 							render_set_end();
 							render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
 							break;
@@ -383,8 +387,8 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 									$prerequisites_ok = false;
 								}
 							}
+							$result = $prerequisites_ok ? 0 : 15;
 							if($prerequisites_ok) {
-								$result = 0;
 								$a_param = [];
 								foreach($sphere_array['flag'] as $tmp_flag) {
 									switch($tmp_flag) {
@@ -410,19 +414,9 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 								foreach($tmp_devices as $tmp_device) {
 									$a_param[] = $tmp_device;
 								}
-								$param = implode(' ', $a_param);
-								render_command($subcommand, $param);
-								render_cmd_start();
-								if ($b_exec) {
-									$result |= zfs_zpool_cmd($subcommand, $param, true);
-								}
-								render_cmd_stop();
-							} else {
-								$result = 1;
+								$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
 							}
-							if($result !== 0) {
-								html_text2('error', gtext('Error'), gtext('An error occured.'));
-							}
+							render_command_result($result);
 							render_set_end();
 							render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
 							break;
@@ -467,8 +461,8 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							$prerequisites_ok &= render_newdev_view($sphere_array['newdev']);
 							html_separator2(2);
 							html_titleline2(gtext('Output'), 2);
+							$result = $prerequisites_ok ? 0 : 15;
 							if($prerequisites_ok) {
-								$result = 0;
 								$a_param = [];
 								foreach($sphere_array['flag'] as $tmp_flag) {
 									switch($tmp_flag) {
@@ -485,19 +479,9 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 								foreach($sphere_array['newdev'] as $tmp_device) {
 									$a_param[] = escapeshellarg($tmp_device);
 								}
-								$param = implode(' ', $a_param);
-								render_command($subcommand, $param);
-								render_cmd_start();
-								if ($b_exec) {
-									$result |= zfs_zpool_cmd($subcommand, $param, true);
-								} 
-								render_cmd_stop();
-							} else {
-								$result = 1;
+								$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
 							}
-							if($result !== 0) {
-								html_text2('error', gtext('Error'), gtext('An error occured.'));
-							}
+							render_command_result($result);
 							render_set_end();
 							render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
 							break;
@@ -542,8 +526,8 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							$prerequisites_ok &= render_newdev_view($sphere_array['newdev']);
 							html_separator2(2);
 							html_titleline2(gtext('Output'), 2);
+							$result = $prerequisites_ok ? 0 : 15;
 							if($prerequisites_ok) {
-								$result = 0;
 								$a_param = [];
 								foreach($sphere_array['flag'] as $tmp_flag) {
 									switch($tmp_flag) {
@@ -560,19 +544,9 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 								foreach($sphere_array['newdev'] as $tmp_device) {
 									$a_param[] = escapeshellarg($tmp_device);
 								}
-								$param = implode(' ', $a_param);
-								render_command($subcommand, $param);
-								render_cmd_start();
-								if ($b_exec) {
-									$result |= zfs_zpool_cmd($subcommand, $param, true);
-								}
-								render_cmd_stop();
-							} else {
-								$result = 1;
+								$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
 							}
-							if($result !== 0) {
-								html_text2('error', gtext('Error'), gtext('An error occured.'));
-							}
+							render_command_result($result);
 							render_set_end();
 							render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
 							break;
@@ -622,8 +596,8 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							$prerequisites_ok &= render_newdev_view($sphere_array['newdev']);
 							html_separator2(2);
 							html_titleline2(gtext('Output'), 2);
+							$result = $prerequisites_ok ? 0 : 15;
 							if($prerequisites_ok) {
-								$result = 0;
 								$a_param = [];
 								foreach($sphere_array['flag'] as $tmp_flag) {
 									switch($tmp_flag) {
@@ -635,19 +609,9 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 								$a_param[] = escapeshellarg($sphere_array['pool'][0]);
 								$a_param[] = escapeshellarg($sphere_array['pooldev'][0]);
 								$a_param[] = escapeshellarg($sphere_array['newdev'][0]);
-								$param = implode(' ', $a_param);
-								render_command($subcommand, $param);
-								render_cmd_start();
-								if ($b_exec) {
-									$result |= zfs_zpool_cmd($subcommand, $param, true);
-								}
-								render_cmd_stop();
-							} else {
-								$result = 1;
+								$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
 							}
-							if($result !== 0) {
-								html_text2('error', gtext('Error'), gtext('An error occured.'));
-							}
+							render_command_result($result);
 							render_set_end();
 							render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['keys']);
 							break;
@@ -697,8 +661,8 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							$prerequisites_ok &= render_newdev_view($sphere_array['newdev']);
 							html_separator2(2);
 							html_titleline2(gtext('Output'), 2);
+							$result = $prerequisites_ok ? 0 : 15;
 							if($prerequisites_ok) {
-								$result = 0;
 								$a_param = [];
 								foreach($sphere_array['flag'] as $tmp_flag) {
 									switch($tmp_flag) {
@@ -710,19 +674,9 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 								$a_param[] = escapeshellarg($sphere_array['pool'][0]);
 								$a_param[] = escapeshellarg($sphere_array['pooldev'][0]);
 								$a_param[] = escapeshellarg($sphere_array['newdev'][0]);
-								$param = implode(' ', $a_param);
-								render_command($subcommand, $param);
-								render_cmd_start();
-								if ($b_exec) {
-									$result |= zfs_zpool_cmd($subcommand, $param, true);
-								}
-								render_cmd_stop();
-							} else {
-								$result = 1;
+								$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
 							}
-							if($result !== 0) {
-								html_text2('error', gtext('Error'), gtext('An error occured.'));
-							}
+							render_command_result($result);
 							render_set_end();
 							render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
 							break;
@@ -762,8 +716,8 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							render_pooldev_view($sphere_array['pooldev']); // 0-N devices can be selected, no check for success
 							html_separator2(2);
 							html_titleline2(gtext('Output'), 2);
+							$result = $prerequisites_ok ? 0 : 15;
 							if($prerequisites_ok) {
-								$result = 0;
 								$a_param = [];
 								$a_param[] = escapeshellarg($sphere_array['pool'][0]);
 								if(0 < count($sphere_array['pooldev'])) {
@@ -771,19 +725,9 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 										$a_param[] = escapeshellarg($tmp_device);
 									}
 								}
-								$param = implode(' ', $a_param);
-								render_command($subcommand, $param);
-								render_cmd_start();
-								if ($b_exec) {
-									$result |= zfs_zpool_cmd($subcommand, $param, true);
-								}
-								render_cmd_stop();
-							} else {
-								$result = 1;
+								$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
 							}
-							if($result !== 0) {
-								html_text2('error', gtext('Error'), gtext('An error occured.'));
-							}
+							render_command_result($result);
 							render_set_end();
 							render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
 							break;
@@ -812,6 +756,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							$prerequisites_ok = render_pool_view($sphere_array['pool']);
 							html_separator2(2);
 							html_titleline2(gtext('Output'), 2);
+							$result = $prerequisites_ok ? 0 : 15;
 							if($prerequisites_ok) {
 								foreach($sphere_array['pool'] as $tmp_pool) {
 									$result = 0;
@@ -824,19 +769,11 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 										}
 									}
 									$a_param[] = escapeshellarg($tmp_pool);
-									$param = implode(' ', $a_param);
-									render_command($subcommand, $param);
-									render_cmd_start();
-									if ($b_exec) {
-										$result |= zfs_zpool_cmd($subcommand, $param, true);
-									}
-									render_cmd_stop();
-									if($result !== 0) {
-										html_text2('error', gtext('Error'), gtext('An error occured.'));
-									}
+									$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
+									render_command_result($result);
 								}
 							} else {
-								html_text2('error', gtext('Error'), gtext('An error occured.'));
+								render_command_result($result);
 							}
 							render_set_end();
 							render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
@@ -877,24 +814,14 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							$prerequisites_ok &= render_pooldev_view($sphere_array['pooldev']);
 							html_separator2(2);
 							html_titleline2(gtext('Output'), 2);
+							$result = $prerequisites_ok ? 0 : 15;
 							if($prerequisites_ok) {
-								$result = 0;
 								$a_param = [];
 								$a_param[] = escapeshellarg($sphere_array['pool'][0]);
 								$a_param[] = escapeshellarg($sphere_array['pooldev'][0]);
-								$param = implode(' ', $a_param);
-								render_command($subcommand, $param);
-								render_cmd_start();
-								if ($b_exec) {
-									$result |= zfs_zpool_cmd($subcommand, $param, true);
-								}
-								render_cmd_stop();
-							} else {
-								$result = 1;
+								$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
 							}
-							if($result !== 0) {
-								html_text2('error', gtext('Error'), gtext('An error occured.'));
-							}
+							render_command_result($result);
 							render_set_end();
 							render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
 							break;
@@ -934,24 +861,14 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							$prerequisites_ok &= render_pooldev_view($sphere_array['pooldev']);
 							html_separator2(2);
 							html_titleline2(gtext('Output'), 2);
+							$result = $prerequisites_ok ? 0 : 15;
 							if($prerequisites_ok) {
-								$result = 0;
 								$a_param = [];
 								$a_param[] = escapeshellarg($sphere_array['pool'][0]);
 								$a_param[] = escapeshellarg($sphere_array['pooldev'][0]);
-								$param = implode(' ', $a_param);
-								render_command($subcommand, $param);
-								render_cmd_start();
-								if ($b_exec) {
-									$result |= zfs_zpool_cmd($subcommand, $param, true);
-								}
-								render_cmd_stop();
-							} else {
-								$result = 1;
+								$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
 							}
-							if($result !== 0) {
-								html_text2('error', gtext('Error'), gtext('An error occured.'));
-							}
+							render_command_result($result);
 							render_set_end();
 							render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
 							break;
@@ -980,6 +897,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							$prerequisites_ok = render_pool_view($sphere_array['pool']);
 							html_separator2(2);
 							html_titleline2(gtext('Output'), 2);
+							$result = $prerequisites_ok ? 0 : 15;
 							if($prerequisites_ok) {
 								foreach($sphere_array['pool'] as $r_pool) {
 									$result = 0;
@@ -992,19 +910,11 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 										}
 									}
 									$a_param[] = escapeshellarg($r_pool);
-									$param = implode(' ', $a_param);
-									render_command($subcommand, $param);
-									render_cmd_start();
-									if ($b_exec && $prerequisites_ok) {
-										$result |= zfs_zpool_cmd($subcommand, $param, true);
-									}
-									render_cmd_stop();
-									if($result !== 0) {
-										html_text2('error', gtext('Error'), gtext('An error occured.'));
-									}
+									$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
+									render_command_result($result);
 								}
 							} else {
-								html_text2('error', gtext('Error'), gtext('An error occured.'));
+								render_command_result($result);
 							}
 							render_set_end();
 							render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
@@ -1030,22 +940,12 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 								$prerequisites_ok = true;
 								html_separator2(2);
 								html_titleline2(gtext('Output'), 2);
+								$result = $prerequisites_ok ? 0 : 15;
 								if($prerequisites_ok) {
-									$result = 0;
 									$a_param = [];
-									$param = implode(' ', $a_param);
-									render_command($subcommand, $param);
-									render_cmd_start();
-									if ($b_exec) {
-										$result |= zfs_zpool_cmd($subcommand, $param, true);
-									}
-									render_cmd_stop();
-								} else {
-									$result = 1;
+									$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
 								}
-								if($result !== 0) {
-									html_text2('error', gtext('Error'), gtext('An error occured.'));
-								}
+								render_command_result($result);
 								render_set_end();
 								render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
 							} else {
@@ -1055,25 +955,18 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 								$prerequisites_ok = true;
 								html_separator2(2);
 								html_titleline2(gtext('Output'), 2);
+								$result = $prerequisites_ok ? 0 : 15;
 								if($prerequisites_ok) {
 									foreach($sphere_array['pool'] as $tmp_pool) {
 										$result = 0;
 										$a_param = [];
 										render_pool_view($tmp_pool);
 										$a_param[] = escapeshellarg($tmp_pool);
-										$param = implode(' ', $a_param);
-										render_command($subcommand, $param);
-										render_cmd_start();
-										if ($b_exec) {
-											$result |= zfs_zpool_cmd($subcommand, $param, true);
-										}
-										render_cmd_stop();
-										if($result !== 0) {
-											html_text2('error', gtext('Error'), gtext('An error occured.'));
-										}
+										$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
+										render_command_result($result);
 									}
 								} else {
-									html_text2('error', gtext('Error'), gtext('An error occured.'));
+									render_command_result($result);
 								}
 								render_set_end();
 								render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
@@ -1099,8 +992,8 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							$prerequisites_ok = true;
 							html_separator2(2);
 							html_titleline2(gtext('Output'), 2);
+							$result = $prerequisites_ok ? 0 : 15;
 							if($prerequisites_ok) {
-								$result = 0;
 								$a_param = [];
 								foreach($sphere_array['flag'] as $tmp_flag) {
 									switch($tmp_flag) {
@@ -1112,19 +1005,9 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 											break;
 									}
 								}
-								$param = implode(' ', $a_param);
-								render_command($subcommand, $param);
-								render_cmd_start();
-								if ($b_exec) {
-									$result |= zfs_zpool_cmd($subcommand, $param, true);
-								}
-								render_cmd_stop();
-							} else {
-								$result = 1;
+								$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
 							}
-							if($result !== 0) {
-								html_text2('error', gtext('Error'), gtext('An error occured.'));
-							}
+							render_command_result($result);
 							render_set_end();
 							render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
 							break;
@@ -1164,24 +1047,14 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							$prerequisites_ok &= render_pooldev_view($sphere_array['pooldev']);
 							html_separator2(2);
 							html_titleline2(gtext('Output'), 2);
+							$result = $prerequisites_ok ? 0 : 15;
 							if($prerequisites_ok) {
-								$result = 0;
 								$a_param = [];
 								$a_param[] = escapeshellarg($sphere_array['pool'][0]);
 								$a_param[] = escapeshellarg($sphere_array['pooldev'][0]);
-								$param = implode(' ', $a_param);
-								render_command($subcommand, $param);
-								render_cmd_start();
-								if ($b_exec) {
-									$result |= zfs_zpool_cmd($subcommand, $param, true);
-								}
-								render_cmd_stop();
-							} else {
-								$result = 1;
+								$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
 							}
-							if($result !== 0) {
-								html_text2('error', gtext('Error'), gtext('An error occured.'));
-							}
+							render_command_result($result);
 							render_set_end();
 							render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
 							break;
@@ -1221,24 +1094,14 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							$prerequisites_ok &= render_pooldev_view($sphere_array['pooldev']);
 							html_separator2(2);
 							html_titleline2(gtext('Output'), 2);
+							$result = $prerequisites_ok ? 0 : 15;
 							if($prerequisites_ok) {
-								$result = 0;
 								$a_param = [];
 								$a_param[] = escapeshellarg($sphere_array['pool'][0]);
 								$a_param[] = escapeshellarg($sphere_array['pooldev'][0]);
-								$param = implode(' ', $a_param);
-								render_command($subcommand, $param);
-								render_cmd_start();
-								if ($b_exec) {
-									$result |= zfs_zpool_cmd($subcommand, $param, true);
-								}
-								render_cmd_stop();
-							} else {
-								$result = 1;
+								$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
 							}
-							if($result !== 0) {
-								html_text2('error', gtext('Error'), gtext('An error occured.'));
-							}
+							render_command_result($result);
 							render_set_end();
 							render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
 							break;
@@ -1264,24 +1127,17 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							$prerequisites_ok = render_pool_view($sphere_array['pool']);
 							html_separator2(2);
 							html_titleline2(gtext('Output'), 2);
+							$result = $prerequisites_ok ? 0 : 15;
 							if($prerequisites_ok) {
 								foreach($sphere_array['pool'] as $tmp_pool) {
 									$result = 0;
 									$a_param = [];
 									$a_param[] = escapeshellarg($tmp_pool);
-									$param = implode(' ', $a_param);
-									render_command($subcommand, $param);
-									render_cmd_start();
-									if ($b_exec) {
-										$result |= zfs_zpool_cmd($subcommand, $param, true);
-									}
-									render_cmd_stop();
-									if($result !== 0) {
-										html_text2('error', gtext('Error'), gtext('An error occured.'));
-									}
+									$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
+									render_command_result($result);
 								}
 							} else {
-									html_text2('error', gtext('Error'), gtext('An error occured.'));
+								render_command_result($result);
 							}
 							render_set_end();
 							render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
@@ -1322,24 +1178,14 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							$prerequisites_ok &= render_pooldev_view($sphere_array['pooldev']);
 							html_separator2(2);
 							html_titleline2(gtext('Output'), 2);
+							$result = $prerequisites_ok ? 0 : 15;
 							if($prerequisites_ok) {
-								$result = 0;
 								$a_param = [];
 								$a_param[] = escapeshellarg($sphere_array['pool'][0]);
 								$a_param[] = escapeshellarg($sphere_array['pooldev'][0]);
-								$param = implode(' ', $a_param);
-								render_command($subcommand, $param);
-								render_cmd_start();
-								if ($b_exec) {
-									$result |= zfs_zpool_cmd($subcommand, $param, true);
-								}
-								render_cmd_stop();
-							} else {
-								$result = 1;
+								$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
 							}
-							if($result !== 0) {
-								html_text2('error', gtext('Error'), gtext('An error occured.'));
-							}
+							render_command_result($result);
 							render_set_end();
 							render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
 							break;
@@ -1379,24 +1225,14 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							$prerequisites_ok &= render_pooldev_view($sphere_array['pooldev']);
 							html_separator2(2);
 							html_titleline2(gtext('Output'), 2);
+							$result = $prerequisites_ok ? 0 : 15;
 							if($prerequisites_ok) {
-								$result = 0;
 								$a_param = [];
 								$a_param[] = escapeshellarg($sphere_array['pool'][0]);
 								$a_param[] = escapeshellarg($sphere_array['pooldev'][0]);
-								$param = implode(' ', $a_param);
-								render_command($subcommand, $param);
-								render_cmd_start();
-								if ($b_exec) {
-									$result |= zfs_zpool_cmd($subcommand, $param, true);
-								}
-								render_cmd_stop();
-							} else {
-								$result = 1;
+								$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
 							}
-							if($result !== 0) {
-								html_text2('error', gtext('Error'), gtext('An error occured.'));
-							}
+							render_command_result($result);
 							render_set_end();
 							render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
 							break;
@@ -1428,8 +1264,6 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							render_submit(4, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
 							break;
 						case 4: // remove spare: process
-							$result = 0;
-							$a_param = [];
 							render_set_start();
 							render_activity_view($c_activity);
 							html_separator2(2);
@@ -1438,22 +1272,14 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							$prerequisites_ok &= render_pooldev_view($sphere_array['pooldev']);
 							html_separator2(2);
 							html_titleline2(gtext('Output'), 2);
+							$result = $prerequisites_ok ? 0 : 15;
 							if($prerequisites_ok) {
+								$a_param = [];
 								$a_param[] = escapeshellarg($sphere_array['pool'][0]);
 								$a_param[] = escapeshellarg($sphere_array['pooldev'][0]);
-								$param = implode(' ', $a_param);
-								render_command($subcommand, $param);
-								render_cmd_start();
-								if ($b_exec) {
-									$result |= zfs_zpool_cmd($subcommand, $param, true);
-								}
-								render_cmd_stop();
-							} else {
-								$result = 1;
+								$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
 							}
-							if($result !== 0) {
-								html_text2('error', gtext('Error'), gtext('An error occured.'));
-							}
+							render_command_result($result);
 							render_set_end();
 							render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
 							break;
@@ -1504,8 +1330,8 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							render_newdev_view($sphere_array['newdev']); // can be blank, not a prerequisite
 							html_separator2(2);
 							html_titleline2(gtext('Output'), 2);
+							$result = $prerequisites_ok ? 0 : 15;
 							if($prerequisites_ok) {
-								$result = 0;
 								$a_param = [];
 								foreach($sphere_array['flag'] as $tmp_flag) {
 									switch($tmp_flag) {
@@ -1519,19 +1345,9 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 								if(0 < count($sphere_array['newdev'])) {
 									$a_param[] = escapeshellarg($sphere_array['newdev'][0]);
 								}
-								$param = implode(' ', $a_param);
-								render_command($subcommand, $param);
-								render_cmd_start();
-								if ($b_exec) {
-									$result |= zfs_zpool_cmd($subcommand, $param, true);
-								}
-								render_cmd_stop();
-							} else {
-								$result = 1;
+								$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
 							}
-							if($result !== 0) {
-								html_text2('error', gtext('Error'), gtext('An error occured.'));
-							}
+							render_command_result($result);
 							render_set_end();
 							render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['keys']);
 							break;
@@ -1567,23 +1383,13 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 										$prerequisites_ok = render_pool_view($sphere_array['pool']);
 										html_separator2(2);
 										html_titleline2(gtext('Output'), 2);
+										$result = $prerequisites_ok ? 0 : 15;
 										if($prerequisites_ok) {
-											$result = 0;
 											$a_param = [];
 											$a_param[] = escapeshellarg($sphere_array['pool'][0]);
-											$param = implode(' ', $a_param);
-											render_command($subcommand, $param);
-											render_cmd_start();
-											if ($b_exec) {
-												$result |= zfs_zpool_cmd($subcommand, $param, true);
-											}
-											render_cmd_stop();
-										} else {
-											$result = 1;
+											$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
 										}
-										if($result !== 0) {
-											html_text2('error', gtext('Error'), gtext('An error occured.'));
-										}
+										render_command_result($result);
 										render_set_end();
 										render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
 										break;
@@ -1596,24 +1402,14 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 										$prerequisites_ok = render_pool_view($sphere_array['pool']);
 										html_separator2(2);
 										html_titleline2(gtext('Output'), 2);
+										$result = $prerequisites_ok ? 0 : 15;
 										if($prerequisites_ok) {
-											$result = 0;
 											$a_param = [];
 											$a_param[] = '-s';
 											$a_param[] = escapeshellarg($sphere_array['pool'][0]);
-											$param = implode(' ', $a_param);
-											render_command($subcommand, $param);
-											render_cmd_start();
-											if ($b_exec) {
-												$result |= zfs_zpool_cmd($subcommand, $param, true);
-											}
-											render_cmd_stop();
-										} else {
-											$result = 1;
+											$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
 										}
-										if($result !== 0) {
-											html_text2('error', gtext('Error'), gtext('An error occured.'));
-										}
+										render_command_result($result);
 										render_set_end();
 										render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
 										break;
@@ -1646,40 +1442,25 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 							render_pool_view($sphere_array['pool']);
 							html_separator2(2);
 							html_titleline2(gtext('Output'), 2);
+							$result = $prerequisites_ok ? 0 : 15;
 							if($prerequisites_ok) {
 								if(0 < count($sphere_array['pool'])) { // Upgrade list of pools
 									foreach($sphere_array['pool'] as $tmp_pool) {
 										$result = 0;
 										$a_param = [];
 										$a_param[] = escapeshellarg($tmp_pool);
-										$param = implode(' ', $a_param);
-										render_command($subcommand, $param);
-										render_cmd_start();
-										if ($b_exec) {
-											$result = zfs_zpool_cmd($subcommand, $param, true);
-										}
-										render_cmd_stop();
-										if($result !== 0) {
-											html_text2('error', gtext('Error'), gtext('An error occured.'));
-										}
+										$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
+										render_command_result($result);
 									}
 								} else { // View feature flags
-									$result = 0;
+//									$result = 0;
 									$a_param = [];
 									$a_param[] = '-v';
-									$param = implode(' ', $a_param);
-									render_command($subcommand, $param);
-									render_cmd_start();
-									if ($b_exec) {
-										$result |= zfs_zpool_cmd($subcommand, $param, true);
-									}
-									render_cmd_stop();
-									if($result !== 0) {
-										html_text2('error', gtext('Error'), gtext('An error occured.'));
-									}
+									$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
+									render_command_result($result);
 								}
 							} else {
-								html_text2('error', gtext('Error'), gtext('An error occured.'));
+								render_command_result($result);
 							}
 							render_set_end();
 							render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
