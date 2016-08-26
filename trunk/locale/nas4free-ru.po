@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-08-26 00:19+0000\n"
-"PO-Revision-Date: 2016-07-17 06:38+0000\n"
+"PO-Revision-Date: 2016-08-26 05:56+0000\n"
 "Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-25 22:37+0000\n"
+"X-Launchpad-Export-Date: 2016-08-26 13:21+0000\n"
 "X-Generator: Launchpad (build 18179)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -428,7 +428,7 @@ msgstr ""
 "сбоях, ошибках или подозрительном статусе S.M.A.R.T."
 
 msgid "Active"
-msgstr ""
+msgstr "Активен"
 
 msgid "Active Directory"
 msgstr "Служба каталогов Active Directory"
@@ -443,10 +443,10 @@ msgid "Active Users"
 msgstr "Активные пользователи"
 
 msgid "Activities"
-msgstr ""
+msgstr "Действия"
 
 msgid "Activity"
-msgstr ""
+msgstr "Действие"
 
 msgid "Adaptive (Low Power Consumption)"
 msgstr "Adaptive (низкое энергопотребление)"
@@ -485,16 +485,16 @@ msgid "Add Volume"
 msgstr "Добавить раздел"
 
 msgid "Add a cache device to a pool"
-msgstr ""
+msgstr "Добавление устройства кэш в пул (Add a cache device to a pool)"
 
 msgid "Add a log device to a pool"
-msgstr ""
+msgstr "Добавление устройства журнала в пул (Add a log device to a pool)"
 
 msgid "Add a spare device to a pool"
-msgstr ""
+msgstr "Добавить запасное устройство в пул (Add a spare device to a pool)"
 
 msgid "Add a virtual device to a pool"
-msgstr ""
+msgstr "Добавление виртуального устройства в пул"
 
 msgid "Add additional scheduled self-test."
 msgstr "Добавить запланированное самотестирование."
@@ -837,7 +837,7 @@ msgstr ""
 "имена инициатора и сетей."
 
 msgid "An error occured."
-msgstr ""
+msgstr "Произошла ошибка."
 
 msgid "An host with this name already exists."
 msgstr "Хост с таким именем уже существует."
@@ -913,10 +913,10 @@ msgstr ""
 "(может состоять из одного или нескольких экстентов)."
 
 msgid "Attach a data device"
-msgstr ""
+msgstr "Подключение устройства данных"
 
 msgid "Attach a log device"
-msgstr ""
+msgstr "Подключение устройства журнала (Attach a log device)"
 
 msgid "Attached"
 msgstr "Присоединен"
@@ -930,6 +930,9 @@ msgid ""
 "NTFS can result in unpredictable results, file corruption and the loss of "
 "data!"
 msgstr ""
+"Попытка использовать другие форматы файлов, такие как FAT, FAT32, EXT2, "
+"EXT3, EXT4 или NTFS может привести к непредсказуемым результатам, "
+"повреждению файлов и потере данных!"
 
 msgid "Audio"
 msgstr "Аудио"
@@ -1161,7 +1164,7 @@ msgid "Bridge"
 msgstr "Мост"
 
 msgid "Bring a device online"
-msgstr ""
+msgstr "Перевести устройство в онлайн (Bring a device online)"
 
 msgid "Broadcast interval"
 msgstr "Интервал трансляции"
@@ -1406,7 +1409,7 @@ msgid "Clear config and Import disks"
 msgstr "Очистить конфигурацию и импортировать диски"
 
 msgid "Clear device errors"
-msgstr ""
+msgstr "Очистить ошибки устройства (Clear device errors)"
 
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
@@ -1444,7 +1447,7 @@ msgid "Command Scripts"
 msgstr "Командные скрипты"
 
 msgid "Command execution was successful"
-msgstr ""
+msgstr "Команда выполнена успешно"
 
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
@@ -2234,16 +2237,16 @@ msgid "Destination share"
 msgstr "Общий ресурс получателя"
 
 msgid "Destroy a pool"
-msgstr ""
+msgstr "Разрушить пул (Destroy a pool)"
 
 msgid "Destroyed"
-msgstr ""
+msgstr "Разрушен"
 
 msgid "Detach a data device from a mirror"
-msgstr ""
+msgstr "Отсоединить устройство данных с зеркала"
 
 msgid "Detach a log device from a mirrored log"
-msgstr ""
+msgstr "Отключить устройство журнала от зеркала"
 
 msgid "Detected"
 msgstr "Определенная"
@@ -2431,7 +2434,7 @@ msgid "Display"
 msgstr "Показать"
 
 msgid "Display ZFS command history"
-msgstr ""
+msgstr "Отображение истории команд ZFS (Display ZFS command history)"
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -3258,13 +3261,13 @@ msgid "Export"
 msgstr "Экспортировать"
 
 msgid "Export a pool from the system"
-msgstr ""
+msgstr "Экспорт пула из системы (Export a pool from the system)"
 
 msgid "Export all the directories in the specified path."
 msgstr "Экспорт всех каталогов по указанному пути"
 
 msgid "Exported"
-msgstr ""
+msgstr "Экспортированно"
 
 msgid "Extended Attributes"
 msgstr "Дополнительные атрибуты"
@@ -3511,7 +3514,7 @@ msgid "Follow"
 msgstr "Следовать"
 
 msgid "Force Operation"
-msgstr ""
+msgstr "Принудительная операция"
 
 msgid "Force use"
 msgstr "Приндуительное использование"
@@ -3622,6 +3625,8 @@ msgstr "Создать"
 
 msgid "Generate a new unique identifier for a pool"
 msgstr ""
+"Создание нового уникального идентификатора для пула (Generate a new unique "
+"identifier for a pool)"
 
 msgid "Generate password if leave empty."
 msgstr "Если оставить поле пустым пароль будет сгенерирован."
@@ -4262,7 +4267,7 @@ msgid "Interval to wait before restarting the load"
 msgstr "Задержка перед подключением нагрузки"
 
 msgid "Invalid command line option"
-msgstr ""
+msgstr "неверная опция командной строки"
 
 msgid "Invalid file format or incorrect password."
 msgstr "Неверный формат файла или неправильный пароль."
@@ -4397,7 +4402,7 @@ msgid "Korean"
 msgstr "Корейский"
 
 msgid "L2 Cache"
-msgstr ""
+msgstr "L2 Cache"
 
 msgid "LACP (Link Aggregation Control Protocol)"
 msgstr "LACP (протокол агрегации каналов)"
@@ -4570,7 +4575,7 @@ msgstr ""
 "(Temporal Key Integrity Protocol, IEEE 802.11i/D7.0)."
 
 msgid "List or import pools"
-msgstr ""
+msgstr "Список или импорт пулов (List or import pools)"
 
 msgid "Load"
 msgstr "Загрузка"
@@ -5011,7 +5016,7 @@ msgid "Missing a temporary folder."
 msgstr "&=&Отсутствует временный каталог."
 
 msgid "Missing parameter"
-msgstr ""
+msgstr "Отсутствует параметр"
 
 msgid "Mixed"
 msgstr "Смешанный"
@@ -5250,7 +5255,7 @@ msgid "No configured virtual devices."
 msgstr "Нет конфигурированных виртуальных устройств."
 
 msgid "No devices have been selected"
-msgstr ""
+msgstr "Не выбраны устройства"
 
 msgid "No disk configured"
 msgstr "Нет сконфигурированных дисков"
@@ -5275,28 +5280,28 @@ msgid "No new software raid disk found."
 msgstr "Не найдено нового диска программного RAID."
 
 msgid "No pool devices have been selected"
-msgstr ""
+msgstr "Не выбраны устройства пулов"
 
 msgid "No pool was found."
 msgstr "Пул не обнаружен."
 
 msgid "No pools have been selected"
-msgstr ""
+msgstr "Не выбраны пулы"
 
 msgid "No softraid-formatted disks available."
 msgstr "Нет SoftRAID отформатированных доступных дисков."
 
 msgid "No suitable devices found."
-msgstr ""
+msgstr "Подходящих устройств не найдено."
 
 msgid "No suitable pools found."
-msgstr ""
+msgstr "Подходящих пулов не найдено."
 
 msgid "No suitable virtual devices found."
-msgstr ""
+msgstr "Подходящих виртуальных устройств не найдено."
 
 msgid "No virtual devices have been selected"
-msgstr ""
+msgstr "Не выбраны виртуальные устройства"
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Наследовать только запрет записи"
@@ -5539,7 +5544,7 @@ msgid "Outgoing SMTP mail server address."
 msgstr "Адрес SMTP-сервера исходящей почты"
 
 msgid "Output"
-msgstr ""
+msgstr "Вывод"
 
 msgid "Output current (A)"
 msgstr "Выходной ток"
@@ -5622,7 +5627,7 @@ msgid "Pairwise"
 msgstr "Парные"
 
 msgid "Parameter"
-msgstr ""
+msgstr "Параметр"
 
 msgid "Parameter xxx (ups.conf or cmdline -x) setting"
 msgstr "Установка параметра xxx (ups.conf или cmdline -x)"
@@ -5849,19 +5854,19 @@ msgid "Pool"
 msgstr "Пул"
 
 msgid "Pool Devices"
-msgstr ""
+msgstr "Устройства пула"
 
 msgid "Pool Information & Status"
 msgstr "Информация и статус пулов"
 
 msgid "Pool State"
-msgstr ""
+msgstr "Состояние пула"
 
 msgid "Pool Status"
-msgstr ""
+msgstr "Статус пула"
 
 msgid "Pool Version"
-msgstr ""
+msgstr "Версия пула"
 
 msgid "Pool cannot be changed."
 msgstr "Пул не может быть изменен."
@@ -5932,7 +5937,7 @@ msgid "PostInit"
 msgstr "Постинициализация"
 
 msgid "Potentially Active"
-msgstr ""
+msgstr "Потенциально Активный"
 
 msgid "Power Daemon"
 msgstr "Процесс управления электропитанием"
@@ -6300,13 +6305,13 @@ msgid "Removable"
 msgstr "Сменный носитель"
 
 msgid "Remove a cache device from a pool"
-msgstr ""
+msgstr "Удалить устройство кэша из пула (Remove a cache device from a pool)"
 
 msgid "Remove a log device from a pool"
-msgstr ""
+msgstr "Удалить устройство журнала из пула (Remove a log device from a pool)"
 
 msgid "Remove a spare device from a pool"
-msgstr ""
+msgstr "Удалить запасное устройство из пула"
 
 msgid "Remove all entries from ARP table"
 msgstr "Удалить все записи из ARP-таблицы"
@@ -6319,7 +6324,7 @@ msgid "Replace Battery UPS"
 msgstr "Замените батарею ИБП (UPS)"
 
 msgid "Replace a device"
-msgstr ""
+msgstr "Заменить устройство (Replace a device)"
 
 msgid "Report Generator"
 msgstr "Генератор отчетов"
@@ -6626,7 +6631,7 @@ msgid "Scheduled tests"
 msgstr "Тест по расписанию"
 
 msgid "Scrub a pool"
-msgstr ""
+msgstr "Проверка пула (Scrub a pool)"
 
 msgid "Search"
 msgstr "Найти"
@@ -6635,7 +6640,7 @@ msgid "Search event"
 msgstr "Искать событие"
 
 msgid "Search for and import all disks found"
-msgstr ""
+msgstr "Искать и импортировать все найденные диски"
 
 msgid "Secondary"
 msgstr "Вторичный (Secondary)"
@@ -6684,31 +6689,31 @@ msgid ""
 msgstr "Укажите протокол доступа к веб-интерфейсу: HTTP или HTTPS"
 
 msgid "Select a cache device"
-msgstr ""
+msgstr "Выберите устройство кэша"
 
 msgid "Select a data device"
-msgstr ""
+msgstr "Выберите устройство данных"
 
 msgid "Select a date format."
 msgstr "Выберите формат даты"
 
 msgid "Select a device"
-msgstr ""
+msgstr "Выберите устройство"
 
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Укажите диск с включенным S.M.A.R.T."
 
 msgid "Select a log device"
-msgstr ""
+msgstr "Выберите устройство журнала"
 
 msgid "Select a pool"
-msgstr ""
+msgstr "Выберите пул"
 
 msgid "Select a pool device"
-msgstr ""
+msgstr "Выберите устройство пула"
 
 msgid "Select a spare device"
-msgstr ""
+msgstr "Выберите запасное устройство"
 
 msgid "Select file system format."
 msgstr "Выберите формат файловой системы."
@@ -6723,7 +6728,7 @@ msgid "Select mount point where to create the swap file."
 msgstr "Точка монтирования для создания файла подкачки."
 
 msgid "Select one or more spare devices"
-msgstr ""
+msgstr "Выберите одно или несколько запасных устройств"
 
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
@@ -6732,10 +6737,10 @@ msgstr ""
 "форматируйте их с помощью"
 
 msgid "Select pool device"
-msgstr ""
+msgstr "Выберите устройство пула"
 
 msgid "Select pools"
-msgstr ""
+msgstr "Выберите пулы"
 
 msgid "Select read balance algorithm."
 msgstr "Выберите алгоритм баланса для чтения."
@@ -7079,7 +7084,7 @@ msgid "Spanish"
 msgstr "Испанский"
 
 msgid "Spare"
-msgstr ""
+msgstr "Запасной"
 
 msgid "Sparse"
 msgstr "Разряженный том"
@@ -7255,7 +7260,7 @@ msgid "Subsystem"
 msgstr "Подсистема"
 
 msgid "Success"
-msgstr ""
+msgstr "Выполнено"
 
 msgid "Successful"
 msgstr "Успешно"
@@ -7423,7 +7428,7 @@ msgid "Tag%d (%s)"
 msgstr "С меткой '%d' (%s)"
 
 msgid "Take a device offline"
-msgstr ""
+msgstr "Перевести устройства в offline (Take a device offline)"
 
 msgid "Tap device"
 msgstr "Tap устройства"
@@ -7493,7 +7498,7 @@ msgid "Temporary directory to store transcoded files."
 msgstr "Временный каталог для хранения транскодированных файлов."
 
 msgid "Test Mode"
-msgstr ""
+msgstr "Тестовый режим"
 
 msgid "Test email"
 msgstr "Тестовый e-mail"
@@ -7506,7 +7511,7 @@ msgid "Test email successfully sent."
 msgstr "Тестовый e-mail успешно отправлен."
 
 msgid "Test mode, no command execution"
-msgstr ""
+msgstr "Тестовый режим, команда не выполнена"
 
 msgid ""
 "The  deny  option specifies users and groups who are not allowed access to "
@@ -9225,7 +9230,7 @@ msgid "Unformated"
 msgstr "Unformated"
 
 msgid "Uninitialized"
-msgstr ""
+msgstr "Неинициализирован"
 
 msgid "Uninstall package"
 msgstr "Удалить пакет"
@@ -9249,7 +9254,7 @@ msgid "Unknown"
 msgstr "Неизвестно"
 
 msgid "Unknown Activity"
-msgstr ""
+msgstr "Неизвестная активность"
 
 msgid "Unknown or unformatted"
 msgstr "Неизвестно или не отформатировано"
@@ -9283,6 +9288,8 @@ msgstr "Обновление прошивки"
 
 msgid "Upgrade ZFS and add all supported feature flags on a pool"
 msgstr ""
+"Обновить ZFS и добавить все поддерживаемые флаги объектов в пуле (Upgrade "
+"ZFS and add all supported feature flags on a pool)"
 
 msgid "Upload"
 msgstr "Закачать"
@@ -9870,7 +9877,7 @@ msgid "ZFS Dataset Properties"
 msgstr "Свойства ZFS Dataset'ов"
 
 msgid "ZFS Pool Tools"
-msgstr ""
+msgstr "Инструменты ZFS пулов"
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "Информация и статус ZFS Snapshot'ов"
@@ -9908,7 +9915,7 @@ msgid "all encrypted disks are imported."
 msgstr "все диски использующие шифрование импортированы."
 
 msgid "and"
-msgstr ""
+msgstr "и"
 
 msgid "change failed."
 msgstr "неудачное изменение."
@@ -10057,61 +10064,3 @@ msgstr "пользователь"
 
 msgid "version:"
 msgstr "версия:"
-
-#~ msgid "Cache Device"
-#~ msgstr "Кэш-устройство"
-
-#, php-format
-#~ msgid "Failed to send status report to: %s."
-#~ msgstr "Отправка отчета состояния для %s завершилась неудачно."
-
-#, php-format
-#~ msgid "Failed to send test email to: %s."
-#~ msgstr "Отправка тестового сообщения для %s завершилась неудачно."
-
-#~ msgid "Hot Spare"
-#~ msgstr "Горячее резервирование (Hot Spare)"
-
-#~ msgid "New Device"
-#~ msgstr "Новое устройство"
-
-#~ msgid "No device selected."
-#~ msgstr "Выбранные устройства отсутствуют."
-
-#, php-format
-#~ msgid "Status report successfully sent to: %s."
-#~ msgstr "Отчет для %s отправлен успешно."
-
-#, php-format
-#~ msgid "Test email successfully sent to: %s."
-#~ msgstr "Тестовое сообщение для %s отправлено успешно."
-
-#~ msgid ""
-#~ "Once you add the virtual device, it becomes impossible to delete again. It "
-#~ "recommends adding the same number of drives as the existing virtual device."
-#~ msgstr ""
-#~ "Добавив виртуальное устройство, будет невозможно удалить его снова. "
-#~ "Рекомендуется добавлять такое количество дисков, которое соответствует "
-#~ "количеству виртуальных устройств."
-
-#~ msgid "Username contains invalid character(s) : "
-#~ msgstr "Имя пользователя содержит недопустимые символы: "
-
-#~ msgid "Log Device"
-#~ msgstr "Устройство журнала событий"
-
-#, php-format
-#~ msgid "%s: cannot get mirror name."
-#~ msgstr "%s: не удалось получить имя зеркала."
-
-#~ msgid "Pool Tools"
-#~ msgstr "Инструменты Pool"
-
-#~ msgid ""
-#~ "Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
-#~ "or NTFS can result in unpredictable results, file corruption and the loss of "
-#~ "data!"
-#~ msgstr ""
-#~ "Попытка использовать другие файловые форматы, такие как FAT, FAT32, EXT2, "
-#~ "EXT3, EXT4 или NTFS может привести к непредсказуемым результатам, "
-#~ "повреждению файлов и потере данных!"

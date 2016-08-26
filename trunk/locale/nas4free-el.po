@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-08-26 00:19+0000\n"
-"PO-Revision-Date: 2016-07-23 23:23+0000\n"
+"PO-Revision-Date: 2016-08-26 07:01+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-25 22:37+0000\n"
+"X-Launchpad-Export-Date: 2016-08-26 13:20+0000\n"
 "X-Generator: Launchpad (build 18179)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -447,7 +447,7 @@ msgstr ""
 "S.M.A.R.T. στο δίσκο."
 
 msgid "Active"
-msgstr ""
+msgstr "Ενεργό"
 
 msgid "Active Directory"
 msgstr "Active Directory"
@@ -462,10 +462,10 @@ msgid "Active Users"
 msgstr "Ενεργοί χρήστες"
 
 msgid "Activities"
-msgstr ""
+msgstr "Δραστηριότητες"
 
 msgid "Activity"
-msgstr ""
+msgstr "Δραστηριότητα"
 
 msgid "Adaptive (Low Power Consumption)"
 msgstr "Adaptive (Χαμηλή Κατανάλωση Ενέργειας)"
@@ -504,16 +504,16 @@ msgid "Add Volume"
 msgstr "Προσθήκη Τόμου"
 
 msgid "Add a cache device to a pool"
-msgstr ""
+msgstr "Προσθήκη μιας συσκευής cache σε ένα pool"
 
 msgid "Add a log device to a pool"
-msgstr ""
+msgstr "Προσθήκη μιας συσκευής log σε ένα pool"
 
 msgid "Add a spare device to a pool"
-msgstr ""
+msgstr "Προσθήκη μιας εφεδρικής συσκευής σε ένα pool"
 
 msgid "Add a virtual device to a pool"
-msgstr ""
+msgstr "Προσθήκη μιας εικονικής συσκευής cache σε ένα pool"
 
 msgid "Add additional scheduled self-test."
 msgstr "Προσθήκη επιπλέον προγραμματισμένης αυτοεξέτασης."
@@ -868,7 +868,7 @@ msgstr ""
 "πιστοποιημένα ονόματα εκκινητών και δίκτυα."
 
 msgid "An error occured."
-msgstr ""
+msgstr "Προέκυψε ένα σφάλμα."
 
 msgid "An host with this name already exists."
 msgstr "Ένας υπολογιστής με αυτό το όνομα υπάρχει ήδη."
@@ -945,10 +945,10 @@ msgstr ""
 "εκκινητή, και αποτελείται από μία ή περισσότερες επεκτάσεις."
 
 msgid "Attach a data device"
-msgstr ""
+msgstr "Προσθήκη μιας συσκευής δεδομένων"
 
 msgid "Attach a log device"
-msgstr ""
+msgstr "Προσθήκη μιας συσκευής log"
 
 msgid "Attached"
 msgstr "Προσαρτημένος"
@@ -962,6 +962,9 @@ msgid ""
 "NTFS can result in unpredictable results, file corruption and the loss of "
 "data!"
 msgstr ""
+"Η προσπάθεια χρήσης άλλων μορφών αρχείων, όπως FAT, FAT32, EXT2, EXT3, EXT4 "
+"ή NTFS, μπορεί να οδηγήσει σε απροσδόκητα αποτελέσματα, καταστροφή αρχείων "
+"και απώλεια δεδομένων!"
 
 msgid "Audio"
 msgstr "Ήχος"
@@ -1193,7 +1196,7 @@ msgid "Bridge"
 msgstr "Γεφύρωμα δικτύου"
 
 msgid "Bring a device online"
-msgstr ""
+msgstr "Κάντε μια συσκευή online"
 
 msgid "Broadcast interval"
 msgstr "Μεσοδιάστημα αναμετάδοσης"
@@ -1442,7 +1445,7 @@ msgid "Clear config and Import disks"
 msgstr "Εκκαθάριση του αρχείου ρυθμίσεων και εισαγωγή δίσκων"
 
 msgid "Clear device errors"
-msgstr ""
+msgstr "Εκκαθάριση σφαλμάτων συσκευής"
 
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
@@ -1480,7 +1483,7 @@ msgid "Command Scripts"
 msgstr "Αρχεία εντολών"
 
 msgid "Command execution was successful"
-msgstr ""
+msgstr "Η εκτέλεση των εντολών ήταν επιτυχής"
 
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
@@ -2291,16 +2294,16 @@ msgid "Destination share"
 msgstr "Κοινόχρηστο προορισμού"
 
 msgid "Destroy a pool"
-msgstr ""
+msgstr "Καταστροφή ενός pool"
 
 msgid "Destroyed"
-msgstr ""
+msgstr "Καταστράφηκε"
 
 msgid "Detach a data device from a mirror"
-msgstr ""
+msgstr "Αποσύνδεση μιας συσκευής δεδομένων από ένα mirror"
 
 msgid "Detach a log device from a mirrored log"
-msgstr ""
+msgstr "Αποσύνδεση μιας συσκευής log από ένα mirrored log"
 
 msgid "Detected"
 msgstr "Ανιχνεύθηκε"
@@ -2488,7 +2491,7 @@ msgid "Display"
 msgstr "Εμφάνιση"
 
 msgid "Display ZFS command history"
-msgstr ""
+msgstr "Εμφάνιση ιστορικότητας των εντολών ZFS"
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -3329,13 +3332,13 @@ msgid "Export"
 msgstr "Εξαγωγή"
 
 msgid "Export a pool from the system"
-msgstr ""
+msgstr "Εξαγωγή ενός pool από το σύστημα"
 
 msgid "Export all the directories in the specified path."
 msgstr "Εξαγωγή όλων των φακέλων στη συγκεκριμένη διαδρομή."
 
 msgid "Exported"
-msgstr ""
+msgstr "Εξήχθη"
 
 msgid "Extended Attributes"
 msgstr "Πρόσθετα Χαρακτηριστικά"
@@ -3584,7 +3587,7 @@ msgid "Follow"
 msgstr "Ακολούθησε"
 
 msgid "Force Operation"
-msgstr ""
+msgstr "Επιβολή Λειτουργίας"
 
 msgid "Force use"
 msgstr "Εξαναγκασμός χρήσης"
@@ -3696,7 +3699,7 @@ msgid "Generate"
 msgstr "Δημιουργία"
 
 msgid "Generate a new unique identifier for a pool"
-msgstr ""
+msgstr "Δημιουργία ενός μοναδικού αναγνωριστικού για ένα pool"
 
 msgid "Generate password if leave empty."
 msgstr "Δημιουργία κωδικού πρόσβασης αν μείνει άδειο."
@@ -4356,7 +4359,7 @@ msgid "Interval to wait before restarting the load"
 msgstr "Μεσοδιάστημα αναμονής πριν την επανεκκίνηση του φορτίου"
 
 msgid "Invalid command line option"
-msgstr ""
+msgstr "Μη έγκυρη επιλογή γραμμής εντολών"
 
 msgid "Invalid file format or incorrect password."
 msgstr "Μη έγκυρος τύπος αρχείου ή λανθασμένος κωδικός πρόσβασης"
@@ -4492,7 +4495,7 @@ msgid "Korean"
 msgstr "Κορεατικά"
 
 msgid "L2 Cache"
-msgstr ""
+msgstr "L2 Cache"
 
 msgid "LACP (Link Aggregation Control Protocol)"
 msgstr "LACP (Πρωτόκολλο Ελέγχου Συνυπολογισμού Συνδέσμου)"
@@ -4668,7 +4671,7 @@ msgstr ""
 "802.11i/D7.0), TKIP (Temporal Key Integrity Protocol, IEEE 802.11i/D7.0)."
 
 msgid "List or import pools"
-msgstr ""
+msgstr "Λίστα ή εισαγωγή pools"
 
 msgid "Load"
 msgstr "Φόρτωση"
@@ -5112,7 +5115,7 @@ msgid "Missing a temporary folder."
 msgstr "Λείπει ένας προσωρινός φάκελος."
 
 msgid "Missing parameter"
-msgstr ""
+msgstr "Ελλειπής παράμετρος"
 
 msgid "Mixed"
 msgstr "Μικτό"
@@ -5350,7 +5353,7 @@ msgid "No configured virtual devices."
 msgstr "Δεν υπάρχουν ρυθμισμένες εικονικές συσκευές."
 
 msgid "No devices have been selected"
-msgstr ""
+msgstr "Δεν επιλέχθηκαν συσκευές"
 
 msgid "No disk configured"
 msgstr "Δε ρυθμίστηκε δίσκος"
@@ -5375,28 +5378,28 @@ msgid "No new software raid disk found."
 msgstr "Δεν βρέθηκαν νέοι δίσκοι σε raid μέσω λογισμικού."
 
 msgid "No pool devices have been selected"
-msgstr ""
+msgstr "Δεν επιλέχθηκαν συσκευές pool"
 
 msgid "No pool was found."
 msgstr "Κανένα pool δεν βρέθηκε."
 
 msgid "No pools have been selected"
-msgstr ""
+msgstr "Δεν επιλέχθηκαν pools"
 
 msgid "No softraid-formatted disks available."
 msgstr "Δεν υπάρχουν διαθέσιμοι δίσκοι με διαμόρφωση raid μέσω λογισμικού."
 
 msgid "No suitable devices found."
-msgstr ""
+msgstr "Δεν βρέθηκαν κατάλληλες συσκευές"
 
 msgid "No suitable pools found."
-msgstr ""
+msgstr "Δεν βρέθηκαν κατάλληλα pool"
 
 msgid "No suitable virtual devices found."
-msgstr ""
+msgstr "Δεν βρέθηκαν κατάλληλες εικονικές συσκευές"
 
 msgid "No virtual devices have been selected"
-msgstr ""
+msgstr "Δεν επιλέχθηκαν εικονικές συσκευές"
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "Noallow - Κληρονόμηση μόνο των καταχωρήσεων απαγόρευσης"
@@ -5644,7 +5647,7 @@ msgid "Outgoing SMTP mail server address."
 msgstr "Διεύθυνση SMTP του διακομιστή εξερχόμενης αλληλογραφίας."
 
 msgid "Output"
-msgstr ""
+msgstr "Έξοδος"
 
 msgid "Output current (A)"
 msgstr "Ένταση ρεύματος εξόδου (A)"
@@ -5727,7 +5730,7 @@ msgid "Pairwise"
 msgstr "Ανά ζεύγος"
 
 msgid "Parameter"
-msgstr ""
+msgstr "Παράμετρος"
 
 msgid "Parameter xxx (ups.conf or cmdline -x) setting"
 msgstr "Ρύθμιση παραμέτρου xxx (ups.conf ή cmdline -x)"
@@ -5958,19 +5961,19 @@ msgid "Pool"
 msgstr "Pool"
 
 msgid "Pool Devices"
-msgstr ""
+msgstr "Συσκευές Pool"
 
 msgid "Pool Information & Status"
 msgstr "Πληροφορίες και Κατάσταση του Pool"
 
 msgid "Pool State"
-msgstr ""
+msgstr "Συσκευές pool"
 
 msgid "Pool Status"
-msgstr ""
+msgstr "Κατάσταση pool"
 
 msgid "Pool Version"
-msgstr ""
+msgstr "Έκδοση pool"
 
 msgid "Pool cannot be changed."
 msgstr "Το Pool δεν μπορεί να αλλαχτεί."
@@ -6043,7 +6046,7 @@ msgid "PostInit"
 msgstr "Μετά την διαδικασία έναρξης"
 
 msgid "Potentially Active"
-msgstr ""
+msgstr "Δυνητικά Ενεργό"
 
 msgid "Power Daemon"
 msgstr "Δαίμονας Ενέργειας"
@@ -6412,13 +6415,13 @@ msgid "Removable"
 msgstr "Αφαιρούμενο μέσο"
 
 msgid "Remove a cache device from a pool"
-msgstr ""
+msgstr "Αφαίρεση μιας συσκευής cache από ένα pool"
 
 msgid "Remove a log device from a pool"
-msgstr ""
+msgstr "Αφαίρεση μιας συσκευής log από ένα pool"
 
 msgid "Remove a spare device from a pool"
-msgstr ""
+msgstr "Αφαίρεση μιας εφεδρικής συσκευής από ένα pool"
 
 msgid "Remove all entries from ARP table"
 msgstr "Αφαίρεση όλων των καταχωρήσεων από τον πίνακα ARP"
@@ -6431,7 +6434,7 @@ msgid "Replace Battery UPS"
 msgstr "Αντικαταστήστε τη μπαταρία του UPS"
 
 msgid "Replace a device"
-msgstr ""
+msgstr "Αντικατάσταση μιας συσκευής"
 
 msgid "Report Generator"
 msgstr "Γεννήτρια Αναφορών"
@@ -6746,7 +6749,7 @@ msgid "Scheduled tests"
 msgstr "Προγραμματισμένες εξετάσεις"
 
 msgid "Scrub a pool"
-msgstr ""
+msgstr "Scrub ενός pool"
 
 msgid "Search"
 msgstr "Αναζήτηση"
@@ -6755,7 +6758,7 @@ msgid "Search event"
 msgstr "Αναζήτηση συμβάντος"
 
 msgid "Search for and import all disks found"
-msgstr ""
+msgstr "Εύρεση και εισαγωγή όλων των δίσκων που θα βρεθούν"
 
 msgid "Secondary"
 msgstr "Δευτερεύων"
@@ -6808,32 +6811,32 @@ msgstr ""
 "Secure (HTTPS) για το Web περιβάλλον εργασίας."
 
 msgid "Select a cache device"
-msgstr ""
+msgstr "Επιλέξτε μια συσκευή cache"
 
 msgid "Select a data device"
-msgstr ""
+msgstr "Επιλέξτε μια συσκευή δεδομένων"
 
 msgid "Select a date format."
 msgstr "Επιλέξτε μια μορφή ημερομηνίας."
 
 msgid "Select a device"
-msgstr ""
+msgstr "Επιλέξτε μια συσκευή"
 
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr ""
 "Επιλέξτε δίσκο ο οποίος είναι ενεργοποιημένος για παρακολούθηση S.M.A.R.T."
 
 msgid "Select a log device"
-msgstr ""
+msgstr "Επιλέξτε μια συσκευή log"
 
 msgid "Select a pool"
-msgstr ""
+msgstr "Επιλέξτε ένα pool"
 
 msgid "Select a pool device"
-msgstr ""
+msgstr "Επιλέξτε μια συσκευή pool"
 
 msgid "Select a spare device"
-msgstr ""
+msgstr "Επιλέξτε μια εφεδρική συσκευή"
 
 msgid "Select file system format."
 msgstr "Επιλογή διαμόρφωσης του συστήματος αρχείων."
@@ -6849,7 +6852,7 @@ msgstr ""
 "Επιλέξτε το σημείο προσάρτησης που θέλετε να δημιουργηθεί το αρχείο swap."
 
 msgid "Select one or more spare devices"
-msgstr ""
+msgstr "Επιλέξτε μια ή περσισσότερες εικονικές συσκευές"
 
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
@@ -6858,10 +6861,10 @@ msgstr ""
 "τους με"
 
 msgid "Select pool device"
-msgstr ""
+msgstr "Επιλέξτε μια συσκευή pool"
 
 msgid "Select pools"
-msgstr ""
+msgstr "Επιλογή pools"
 
 msgid "Select read balance algorithm."
 msgstr "Επιλογή αλγόριθμου ισορροπίας ανάγνωσης."
@@ -7212,7 +7215,7 @@ msgid "Spanish"
 msgstr "Ισπανικά"
 
 msgid "Spare"
-msgstr ""
+msgstr "Εφεδρική συσκευή"
 
 msgid "Sparse"
 msgstr "Sparse"
@@ -7390,7 +7393,7 @@ msgid "Subsystem"
 msgstr "Υποσύστημα"
 
 msgid "Success"
-msgstr ""
+msgstr "Επιτυχία"
 
 msgid "Successful"
 msgstr "Επιτυχής"
@@ -7558,7 +7561,7 @@ msgid "Tag%d (%s)"
 msgstr "Ετικέτα %d (%s)"
 
 msgid "Take a device offline"
-msgstr ""
+msgstr "Κάντε μια συσκευή offline"
 
 msgid "Tap device"
 msgstr "Συσκευή tap"
@@ -7631,7 +7634,7 @@ msgstr ""
 "αρχείων."
 
 msgid "Test Mode"
-msgstr ""
+msgstr "Δοκιμαστική λειτουργία"
 
 msgid "Test email"
 msgstr "Δοκιμαστικό μήνυμα ηλεκτρονικού ταχυδρομείου"
@@ -7644,7 +7647,7 @@ msgid "Test email successfully sent."
 msgstr "Το δοκιμαστικό μήνυμα ηλεκτρονικού ταχυδρομείου στάλθηκε επιτυχώς."
 
 msgid "Test mode, no command execution"
-msgstr ""
+msgstr "Δοκιμαστική λειτουργία, δεν εκτελούνται εντολές"
 
 msgid ""
 "The  deny  option specifies users and groups who are not allowed access to "
@@ -9441,7 +9444,7 @@ msgid "Unformated"
 msgstr "Αδιαμόρφωτο"
 
 msgid "Uninitialized"
-msgstr ""
+msgstr "Μη αρχικοποιημένη"
 
 msgid "Uninstall package"
 msgstr "Απεγκατάσταση πακέτου"
@@ -9465,7 +9468,7 @@ msgid "Unknown"
 msgstr "Άγνωστο"
 
 msgid "Unknown Activity"
-msgstr ""
+msgstr "Άγνωστη δραστηριότητα"
 
 msgid "Unknown or unformatted"
 msgstr "Άγνωστο ή αδιαμόρφωτο"
@@ -9499,6 +9502,8 @@ msgstr "Αναβάθμιση Υλικολογισμικού"
 
 msgid "Upgrade ZFS and add all supported feature flags on a pool"
 msgstr ""
+"Αναβάθμιση του ZFS και προσθήκη όλων των υποστηριζόμενων feature flags σε "
+"ένα pool"
 
 msgid "Upload"
 msgstr "Αποστολή"
@@ -10100,7 +10105,7 @@ msgid "ZFS Dataset Properties"
 msgstr "Ιδιότητες ZFS Dataset"
 
 msgid "ZFS Pool Tools"
-msgstr ""
+msgstr "Εργαλεία ZFS Pool"
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "Πληροφορίες και Κατάσταση ZFS Snapshot"
@@ -10140,7 +10145,7 @@ msgid "all encrypted disks are imported."
 msgstr "όλοι οι κρυπτογραφημένοι δίσκοι εισήχθησαν."
 
 msgid "and"
-msgstr ""
+msgstr "και"
 
 msgid "change failed."
 msgstr "η αλλαγή απέτυχε."
@@ -10285,63 +10290,3 @@ msgstr "χρήστης"
 
 msgid "version:"
 msgstr "έκδοση:"
-
-#, php-format
-#~ msgid "Failed to send status report to: %s."
-#~ msgstr "Αποτυχία αποστολής αναφοράς κατάστασης στο: %s."
-
-#~ msgid "New Device"
-#~ msgstr "Νέα συσκευή"
-
-#~ msgid "No device selected."
-#~ msgstr "Δεν επιλέχθηκε συσκευή."
-
-#~ msgid "Hot Spare"
-#~ msgstr "Εφεδρικό"
-
-#~ msgid "Cache Device"
-#~ msgstr "Συσκευή προσωρινής μνήμης"
-
-#, php-format
-#~ msgid "Failed to send test email to: %s."
-#~ msgstr ""
-#~ "Αποτυχία αποστολής δοκιμαστικού μηνύματος ηλεκτρονικού ταχυδρομείου στο: %s."
-
-#, php-format
-#~ msgid "Test email successfully sent to: %s."
-#~ msgstr ""
-#~ "Το δοκιμαστικό μήνυμα ηλεκτρονικού ταχυδρομείου στάλθηκε επιτυχώς προς: %s."
-
-#, php-format
-#~ msgid "Status report successfully sent to: %s."
-#~ msgstr "Η αναφορά της κατάστασης στάλθηκε με επιτυχία στο: %s."
-
-#~ msgid "Username contains invalid character(s) : "
-#~ msgstr "Το όνομα χρήστη περιέχει  μη έγκυρο(ους) χαρακτήρα(ες): "
-
-#, php-format
-#~ msgid "%s: cannot get mirror name."
-#~ msgstr "%s: αδυναμία ανάκτησης ονόματος του mirror."
-
-#~ msgid "Log Device"
-#~ msgstr "Συσκευή log."
-
-#~ msgid "Pool Tools"
-#~ msgstr "Εργαλεία Pool"
-
-#~ msgid ""
-#~ "Once you add the virtual device, it becomes impossible to delete again. It "
-#~ "recommends adding the same number of drives as the existing virtual device."
-#~ msgstr ""
-#~ "Μόλις προσθέσετε την εικονική συσκευή, καθίσταται αδύνατο να την διαγράψετε. "
-#~ "Συνιστάται να προσθέσετε ίδιο αριθμό δίσκων με την υπάρχουσα εικονική "
-#~ "συσκευή."
-
-#~ msgid ""
-#~ "Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
-#~ "or NTFS can result in unpredictable results, file corruption and the loss of "
-#~ "data!"
-#~ msgstr ""
-#~ "Η προσπάθεια χρήσης άλλων μορφών αρχείων, όπως FAT, FAT32, EXT2, EXT3, EXT4, "
-#~ "ή NTFS, μπορεί να οδηγήσει σε απροσδόκητα αποτελέσματα, καταστροφή αρχείων "
-#~ "και απώλεια δεδομένων!"
