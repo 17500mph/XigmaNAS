@@ -213,13 +213,13 @@ function display_menu($menuid) {
 	$link = $menu[$menuid]['link'];
 	if ($link == '') $link = 'index.php';
 	echo "<li>\n";
-	    $agent = $_SERVER['HTTP_USER_AGENT']; // Put browser name into local variable for desktop/mobile detection
-       if ((preg_match('/iPhone/i', $agent)) || (preg_match('/android/i', $agent))) {
-          echo "<a href=\"javascript:mopen('{$menuid}');\" onmouseout=\"mclosetime()\">".$menu[$menuid]['desc']."</a>\n";
-       }
-       else {
-          echo "<a href=\"{$link}\" onmouseover=\"mopen('{$menuid}')\" onmouseout=\"mclosetime()\">".$menu[$menuid]['desc']."</a>\n";
-       }
+	$agent = $_SERVER['HTTP_USER_AGENT']; // Put browser name into local variable for desktop/mobile detection
+	if ((preg_match('/iPhone/i', $agent)) || (preg_match('/android/i', $agent))) {
+		echo "<a href=\"javascript:mopen('{$menuid}');\" onmouseout=\"mclosetime()\">".$menu[$menuid]['desc']."</a>\n";
+	} else {
+//		echo "<a href=\"{$link}\" onmouseover=\"mopen('{$menuid}')\" onmouseout=\"mclosetime()\">".$menu[$menuid]['desc']."</a>\n";
+		echo "<a href=\"{$link}\" onclick=\"spinner()\" onmouseover=\"mopen('{$menuid}')\" onmouseout=\"mclosetime()\">".$menu[$menuid]['desc']."</a>\n";
+	}
 	echo "	<div id=\"{$menuid}\" onmouseover=\"mcancelclosetime()\" onmouseout=\"mclosetime()\">\n";
 
 	# Display menu items.
@@ -232,7 +232,8 @@ function display_menu($menuid) {
 			# Display menuitem.
 			$link = $menuv['link'];
 			if ($link == '') $link = 'index.php';
-			echo "<a href=\"{$link}\" target=\"" . (empty($menuv['target']) ? "_self" : $menuv['target']) . "\" title=\"".$menuv['desc']."\">".$menuv['desc']."</a>\n";
+//			echo "<a href=\"{$link}\" target=\"" . (empty($menuv['target']) ? "_self" : $menuv['target']) . "\" title=\"".$menuv['desc']."\">".$menuv['desc']."</a>\n";
+			echo '<a href="', $link, '" onclick="spinner()" target="', (empty($menuv['target']) ? "_self" : $menuv['target']), '" title="', $menuv['desc'], '">', $menuv['desc'], '</a>', "\n";
 		} else {
 			# Display separator.
 			echo "<span class=\"tabseparator\">&nbsp;</span>";
@@ -304,26 +305,26 @@ function display_menu($menuid) {
 		<?php if ($isAdminSession && is_dir("{$g['www_path']}/ext")):?>
 		<li>
 		<?php
-                $agent = $_SERVER['HTTP_USER_AGENT']; // Put browser name into local variable for desktop/mobile detection
-                if ((preg_match('/iPhone/i', $agent)) || (preg_match('/android/i', $agent))) {
-                   echo "<a href=\"javascript:mopen('extensions');\" onmouseout=\"mclosetime()\">".gtext('Extensions')."</a>";
-                }
-                else {
-                    echo "<a href=\"index.php\" onmouseover=\"mopen('extensions')\" onmouseout=\"mclosetime()\">".gtext('Extensions')."</a>";
-                }
-                ?>
-			<div id="extensions" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-		  <?php
-				$dh = @opendir("{$g['www_path']}/ext");
-				if ($dh) {
-					while (($extd = readdir($dh)) !== false) {
-						if (($extd === '.') || ($extd === '..'))
-							continue;
-						@include("{$g['www_path']}/ext/" . $extd . "/menu.inc");
-					}
-					closedir($dh);
-				}?>
-			</div>
+			$agent = $_SERVER['HTTP_USER_AGENT']; // Put browser name into local variable for desktop/mobile detection
+			if ((preg_match('/iPhone/i', $agent)) || (preg_match('/android/i', $agent))) {
+				echo "<a href=\"javascript:mopen('extensions');\" onmouseout=\"mclosetime()\">".gtext('Extensions')."</a>";
+			} else {
+//				echo "<a href=\"index.php\" onmouseover=\"mopen('extensions')\" onmouseout=\"mclosetime()\">".gtext('Extensions')."</a>";
+				echo "<a href=\"index.php\" onclick=\"spinner()\" onmouseover=\"mopen('extensions')\" onmouseout=\"mclosetime()\">".gtext('Extensions')."</a>";
+			}
+		?>
+		<div id="extensions" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		<?php
+			$dh = @opendir("{$g['www_path']}/ext");
+			if ($dh) {
+				while (($extd = readdir($dh)) !== false) {
+					if (($extd === '.') || ($extd === '..'))
+						continue;
+					@include("{$g['www_path']}/ext/" . $extd . "/menu.inc");
+				}
+				closedir($dh);
+		}?>
+		</div>
 		</li>
 		<?php endif;?>
 		<!-- End extension section -->
@@ -336,13 +337,23 @@ function display_menu($menuid) {
 	</ul>
 	<div style="clear:both"></div>
 </div>
+<script type="text/javascript">
+//<![CDATA[
+$(window).on("load", function() {
+	// init spinner on tabnav
+	$("#tabnav").on('click', function() { spinner(); });
+	// and his mate
+	$("#tabnav2").on('click', function() { spinner(); });
+});
+//]]>
+</script>
 <div id="pagecontent">
-	<table width="100%" border="0" cellspacing="0" cellpadding="2">
-	  <tr valign="top">
-	    <td>
-		<table width="100%" border="0" cellpadding="10" cellspacing="0">
-	<tr>
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+<tr valign="top">
 <td>
+	<table width="100%" border="0" cellpadding="10" cellspacing="0">
+	<tr>
+	<td>
 <?php if (!isset($pgtitle_omit) || !$pgtitle_omit): ?>
 	<p class="pgtitle"><?=gentitle($pgtitle);?></p>
 <?php endif;?>
