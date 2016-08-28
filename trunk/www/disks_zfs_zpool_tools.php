@@ -109,6 +109,7 @@ $a_devices_in_use = [
 	'cd0', 'cd1', 'cd2', 'cd3', 'cd4', 'cd5', 'cd6', 'cd7', 'cd8', 'cd9',
 	'md0', 'md1', 'md2', 'md3', 'md4', 'md5', 'md6', 'md7', 'md8', 'md9',
 	'xmd0', 'xmd1', 'xmd2', 'xmdx', 'xmd4', 'xmd5', 'xmd6', 'xmd7', 'xmd8', 'xmd9',
+	'ufs/embboot'
 ];
 $a_newdev = [];
 foreach($a_newdev_stage_1 as $tmp_device) {
@@ -150,7 +151,7 @@ $l_command = [
 	'history' => ['name' => 'activity', 'value' => 'history' , 'show' => $b_pool , 'default' => true , 'longname' => gtext('Display ZFS command history')],
 	'import' => ['name' => 'activity', 'value' => 'import' , 'show' => true , 'default' => false, 'longname' => gtext('List or import pools')],
 //	'iostat' => ['name' => 'activity', 'value' => 'iostat' , 'show' => $b_pool && false, 'default' => false, 'longname' => gtext('Display I/O statistics')],
-//	'labelclear' => ['name' => 'activity', 'value' => 'labelclear' , 'show' => $b_pool && false, 'default' => false, 'longname' => gtext('Remove ZFS label information from a device')],
+	'labelclear' => ['name' => 'activity', 'value' => 'labelclear' , 'show' => true, 'default' => false, 'longname' => gtext('Remove ZFS label information from a device')],
 //	'list' => ['name' => 'activity', 'value' => 'list' , 'show' => $b_pool && false, 'default' => false, 'longname' => gtext('List the status of pools')],
 	'offline' => ['name' => 'activity', 'value' => 'offline' , 'show' => $b_offline_data , 'default' => false, 'longname' => gtext('Take a device offline')],
 	'online' => ['name' => 'activity', 'value' => 'online' , 'show' => $b_online_data , 'default' => false, 'longname' => gtext('Bring a device online')],
@@ -1011,6 +1012,55 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 										case 'sfaiapf':
 											$a_param[] = '-a';
 											break;
+									}
+								}
+								$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
+							}
+							render_command_result($result);
+							render_set_end();
+							render_submit(1, $sphere_array['activity'], $sphere_array['option'], $sphere_array['pool'], $sphere_array['flag']);
+							break;
+					}
+					break;
+				case 'labelclear': // labelclear wipes zfs information from a disk
+					$subcommand = 'labelclear';
+					$o_flags = new co_zpool_flags(['force'], $sphere_array['flag']);
+					switch($sphere_array['pageindex']) {
+						case 2: // labelclear: select flags and device
+							render_set_start();
+							render_activity_view($c_activity);
+							$o_flags->render_available_keys();
+							html_separator2(2);
+							html_titleline2(gtext('Select a device'), 2);
+							render_newdev_edit($a_newdev, '1'); // $a_newdev still lists spares, must be changed
+//							render_newdev_edit($o_zpool->get_all_devices(),'1');
+							render_set_end();
+							render_submit(3, $sphere_array['activity'], $sphere_array['option'], $a_sphere['pool'], []);
+							break;
+						case 3: // labelclear: process
+							render_set_start();
+							render_activity_view($c_activity);
+							$o_flags->render_selected_keys();
+							html_separator2(2);
+							html_titleline2(gtext('Target'), 2);
+							$prerequisites_ok &= render_newdev_view($sphere_array['newdev']);
+							html_separator2(2);
+							html_titleline2(gtext('Output'), 2);
+							$result = $prerequisites_ok ? 0 : 15;
+							if($prerequisites_ok) {
+								$a_param = [];
+								foreach($sphere_array['flag'] as $tmp_flag) {
+									switch($tmp_flag) {
+										case 'force':
+											$a_param[] = '-f';
+											break;
+									}
+								}
+								foreach($sphere_array['newdev'] as $tmp_device) { // labelclear expects a full path
+									if(preg_match('/^\//', $tmp_device)) { // verify full path
+										$a_param[] = escapeshellarg($tmp_device);
+									} else {
+										$a_param[] = escapeshellarg(sprintf('/dev/%s', $tmp_device));
 									}
 								}
 								$result |= render_command_and_execute($subcommand, $a_param, $b_exec);
