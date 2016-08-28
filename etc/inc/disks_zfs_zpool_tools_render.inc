@@ -330,7 +330,7 @@ function render_pooldev_edit($a_items = [], $format = '1', $a_selected_items = [
 							if(preg_match('/\S/', $r_item['vdev.type'])) {
 								$vdevice = $r_item['vdev.type'];
 								if(preg_match('/\S/', $r_item['vdev.id'])) {
-									$vdevice .= '_' . $r_item['vdev.id'];
+									$vdevice .= '-' . $r_item['vdev.id'];
 								}
 							}
 							echo '<tr>';
