@@ -353,7 +353,7 @@ class co_zpool_info {
 		$this->get_all_cache_devices($a_ret);
 		$this->get_all_data_devices($a_ret);
 		$this->get_all_log_devices($a_ret);
-		$this->get_all_spare_devices();
+		$this->get_all_spare_devices($a_ret);
 		return $a_ret;
 	}
 	public function get_all_devices_except_spare_devices(&$a_ret = []) {
