@@ -38,7 +38,7 @@ $pgtitle = array(gtext("System"), gtext("Reboot"), gtext("Now"));
 
 if ($_POST) {
 	if ($_POST['Submit'] !== gtext("No")) {
-		$rebootmsg = gtext("The system is rebooting now. This may take one minute.");
+		$rebootmsg = gtext("The server is rebooting now.");
 	} else {
 		header("Location: index.php");
 		exit;
