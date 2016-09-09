@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-08-26 00:19+0000\n"
-"PO-Revision-Date: 2016-08-25 12:51+0000\n"
+"PO-Revision-Date: 2016-08-31 09:44+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-25 22:36+0000\n"
-"X-Generator: Launchpad (build 18179)\n"
+"X-Launchpad-Export-Date: 2016-09-09 22:04+0000\n"
+"X-Generator: Launchpad (build 18186)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
 "X-Poedit-Language: Czech\n"
@@ -68,11 +68,11 @@ msgstr "%s už existuje."
 
 #, php-format
 msgid "%s is already configured as a filesystem."
-msgstr "%s je už nastaveno jako souborový systém."
+msgstr "%s je už používáno jako souborový systém."
 
 #, php-format
 msgid "%s is already configured as a volume."
-msgstr "%s je už nastaveno jako svazek."
+msgstr "%s je už používáno jako svazek."
 
 #, php-format
 msgid "%s is too long."
@@ -82,8 +82,8 @@ msgstr "%s je příliš dlouhé."
 msgid ""
 "%s must be enabled for Unison to work, and the %s must have shell access."
 msgstr ""
-"Pro fungování Unison je třeba, aby %s bylo zapnuté a uživatel %s měl přístup "
-"k shellu."
+"Aby synchronizační nástroj Unison fungoval je třeba, aby %s bylo zapnuté a "
+"uživatelský účet %s měl přístupný příkazový řádek (shell)."
 
 #, php-format
 msgid "%s of %sB"
@@ -10087,60 +10087,3 @@ msgstr "uživatel"
 
 msgid "version:"
 msgstr "verze:"
-
-#~ msgid "New Device"
-#~ msgstr "Nové zařízení"
-
-#~ msgid "No device selected."
-#~ msgstr "Není vybráno žádné zařízení."
-
-#, php-format
-#~ msgid "Status report successfully sent to: %s."
-#~ msgstr "Zpráva o stavu byla úspěšně odeslána na: %s."
-
-#~ msgid "Cache Device"
-#~ msgstr "Zařízení mezipaměti"
-
-#~ msgid "Hot Spare"
-#~ msgstr "Pohotovostní náhrada"
-
-#, php-format
-#~ msgid "Failed to send status report to: %s."
-#~ msgstr "Nezdařilo se poslat hlášení o stavu na: %s"
-
-#, php-format
-#~ msgid "Failed to send test email to: %s."
-#~ msgstr "Nezdařilo se odeslat zkušební e-mail na: %s."
-
-#, php-format
-#~ msgid "Test email successfully sent to: %s."
-#~ msgstr "Zkušební e-mail byl úspěšně odeslán na: %s"
-
-#~ msgid "Username contains invalid character(s) : "
-#~ msgstr "Uživatelské jméno obsahuje neplatné znaky: "
-
-#~ msgid "Log Device"
-#~ msgstr "Zařízení, na které zaznamenávat události"
-
-#~ msgid ""
-#~ "Once you add the virtual device, it becomes impossible to delete again. It "
-#~ "recommends adding the same number of drives as the existing virtual device."
-#~ msgstr ""
-#~ "Jakmile virtuální zařízení přidáte, nebude možné jej odstranit. Je "
-#~ "doporučeno přidat stejné množství disků, jaké má stávající virtuální "
-#~ "zařízení."
-
-#~ msgid "Pool Tools"
-#~ msgstr "Nástroje fondu"
-
-#, php-format
-#~ msgid "%s: cannot get mirror name."
-#~ msgstr "%s: nedaří se získat název zrcadla (mirror) instalačního zdroje."
-
-#~ msgid ""
-#~ "Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4, "
-#~ "or NTFS can result in unpredictable results, file corruption and the loss of "
-#~ "data!"
-#~ msgstr ""
-#~ "Použití ostatních souborových systémů, jako např. FAT, FAT32, EXT2, EXT3, "
-#~ "EXT4, nebo NTFS může vést k neočekávaným důsledkům, poškození a ztrátě dat!"
