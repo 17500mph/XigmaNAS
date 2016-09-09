@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-08-26 00:19+0000\n"
-"PO-Revision-Date: 2016-06-30 15:19+0000\n"
-"Last-Translator: mar.ste <Unknown>\n"
+"PO-Revision-Date: 2016-09-06 17:53+0000\n"
+"Last-Translator: misterredman <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-25 22:37+0000\n"
-"X-Generator: Launchpad (build 18179)\n"
+"X-Launchpad-Export-Date: 2016-09-09 22:04+0000\n"
+"X-Generator: Launchpad (build 18186)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
 "X-Poedit-Language: Italian\n"
@@ -68,20 +68,22 @@ msgstr "%s esiste già."
 
 #, php-format
 msgid "%s is already configured as a filesystem."
-msgstr "%s è già configurato come filsystem"
+msgstr "%s è già configurato come filesystem."
 
 #, php-format
 msgid "%s is already configured as a volume."
-msgstr "%s è già configurato come volume"
+msgstr "%s è già configurato come volume."
 
 #, php-format
 msgid "%s is too long."
-msgstr "%s è troppo lungo"
+msgstr "%s è troppo lungo."
 
 #, php-format
 msgid ""
 "%s must be enabled for Unison to work, and the %s must have shell access."
 msgstr ""
+"%s deve essere attivato perché Unison possa funzionare e %s deve avere "
+"accesso alla shell."
 
 #, php-format
 msgid "%s of %sB"
@@ -263,6 +265,8 @@ msgid ""
 "A mounted disk or partition will be unmounted temporarily to perform the "
 "requested action."
 msgstr ""
+"Un disco attualmente montato verrà temporaneamente smontato per eseguire "
+"l'operazione richiesta."
 
 msgid "A reload request has been sent to the daemon."
 msgstr "Una richiesta di nuovo caricamento è stata inviata ai demoni."
@@ -421,7 +425,7 @@ msgstr ""
 "errori o segnalazioni S.M.A.R.T. riguardo i dischi fissi."
 
 msgid "Active"
-msgstr ""
+msgstr "Attivo"
 
 msgid "Active Directory"
 msgstr "Active Directory"
@@ -436,13 +440,13 @@ msgid "Active Users"
 msgstr "Utenti Attivi"
 
 msgid "Activities"
-msgstr ""
+msgstr "Attività"
 
 msgid "Activity"
-msgstr ""
+msgstr "Attività"
 
 msgid "Adaptive (Low Power Consumption)"
-msgstr ""
+msgstr "Adattivo (Basso Consumo)"
 
 msgid "Add"
 msgstr "Aggiungi"
@@ -478,22 +482,22 @@ msgid "Add Volume"
 msgstr "Aggiungi Volume"
 
 msgid "Add a cache device to a pool"
-msgstr ""
+msgstr "Aggiungi un dispositivo cache al pool"
 
 msgid "Add a log device to a pool"
-msgstr ""
+msgstr "Aggiungi un dispositivo log al pool"
 
 msgid "Add a spare device to a pool"
-msgstr ""
+msgstr "Aggiungi uno spare al pool"
 
 msgid "Add a virtual device to a pool"
-msgstr ""
+msgstr "Aggiungi una virtual device al pool"
 
 msgid "Add additional scheduled self-test."
 msgstr "Aggiungi auto-test delle schede aggiuntive"
 
 msgid "Add any supplemental parameters."
-msgstr ""
+msgstr "Aggiungi parametri supplementari."
 
 msgid "Add auth group"
 msgstr "Aggiungi \"Auth group\""
@@ -571,6 +575,8 @@ msgid ""
 "Additional parameters to the hardware-specific part of the driver for second "
 "UPS."
 msgstr ""
+"Ulteriori parametri per la parte specifica sull'hardware del driver per il "
+"secondo UPS."
 
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr "Parametri aggiuntivi da passare al driver legati al hardware"
@@ -601,7 +607,7 @@ msgid "Advanced Configuration"
 msgstr "Configurazione avanzata"
 
 msgid "Advanced Format"
-msgstr ""
+msgstr "Advanced Format"
 
 msgid "Advanced Options"
 msgstr "Opzioni Avanzate"
@@ -623,6 +629,8 @@ msgstr "Dopo"
 
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr ""
+"After - Le cancellazioni dei files avverranno dopo che il trasferimento sarà "
+"completato."
 
 msgid ""
 "After you click \"Save\" you may also have to do one or more of the "
@@ -812,7 +820,7 @@ msgid ""
 msgstr ""
 
 msgid "An error occured."
-msgstr ""
+msgstr "Si è verificato un errore."
 
 msgid "An host with this name already exists."
 msgstr "Esiste gia' un host con questo nome."
@@ -872,7 +880,7 @@ msgid "Are you sure you want to proceed?"
 msgstr "Si è sicuri di voler procedere?"
 
 msgid "Are you sure you want to reboot the server?"
-msgstr ""
+msgstr "Sei sicuro di voler riavviare il server?"
 
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Sei sicuro di voler spegnere il server?"
@@ -888,10 +896,10 @@ msgstr ""
 "composto di uno o più extents."
 
 msgid "Attach a data device"
-msgstr ""
+msgstr "Collega un dispositivo dati"
 
 msgid "Attach a log device"
-msgstr ""
+msgstr "Collega un dispositivo per i log"
 
 msgid "Attached"
 msgstr "Agganciato"
@@ -905,6 +913,9 @@ msgid ""
 "NTFS can result in unpredictable results, file corruption and the loss of "
 "data!"
 msgstr ""
+"Il tentativo di utilizzare altri formati di file come FAT, FAT32, EXT2, "
+"EXT3, EXT4 o NTFS potrebbe portare a risultati imprevedibili, corruzzione di "
+"files e perdita di dati!"
 
 msgid "Audio"
 msgstr "Audio"
@@ -928,7 +939,7 @@ msgid "Authenticate URL"
 msgstr "Autentica URL"
 
 msgid "Authenticate path & realm"
-msgstr ""
+msgstr "Autentica percorso e realm"
 
 msgid "Authentication"
 msgstr "Autenticazione"
@@ -1070,6 +1081,8 @@ msgstr "Prima"
 
 msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
+"Before - Le cancellazioni dei files avverranno prima che il trasferimento "
+"abbia inizio."
 
 msgid "Before - File-deletions will be performed before the transfer starts."
 msgstr ""
@@ -1133,7 +1146,7 @@ msgid "Bridge"
 msgstr "Bridge"
 
 msgid "Bring a device online"
-msgstr ""
+msgstr "Metti online una device"
 
 msgid "Broadcast interval"
 msgstr "Intervallo di trasmissione"
@@ -1379,7 +1392,7 @@ msgid "Clear config and Import disks"
 msgstr "Cancella la configurazione e importa i dischi"
 
 msgid "Clear device errors"
-msgstr ""
+msgstr "Cancella errori della device"
 
 msgid ""
 "Click this button to download the server configuration in encrypted GZIP "
@@ -1417,7 +1430,7 @@ msgid "Command Scripts"
 msgstr "Script di comando"
 
 msgid "Command execution was successful"
-msgstr ""
+msgstr "Comando eseguito con successo"
 
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
@@ -2184,22 +2197,22 @@ msgid "Destination share"
 msgstr "Condivisione destinazione"
 
 msgid "Destroy a pool"
-msgstr ""
+msgstr "Distruggi un pool"
 
 msgid "Destroyed"
-msgstr ""
+msgstr "Distrutto"
 
 msgid "Detach a data device from a mirror"
-msgstr ""
+msgstr "Rimuovi una device dati da un mirror (detach)"
 
 msgid "Detach a log device from a mirrored log"
-msgstr ""
+msgstr "Rimuovi una device log da un mirrored log (detach)"
 
 msgid "Detected"
 msgstr "Rilevato"
 
 msgid "Detected Language:"
-msgstr ""
+msgstr "Lingua rilevata:"
 
 msgid "Detected RSYNC remote shares"
 msgstr "Condivisioni RSYNC remote trovate"
@@ -2235,25 +2248,25 @@ msgid "Device Model"
 msgstr "Modello dispositivo"
 
 msgid "Device Name"
-msgstr ""
+msgstr "Nome del Dispositivo"
 
 msgid "Device Pass-through"
 msgstr "Dispositivo Pass-through"
 
 msgid "Device Path"
-msgstr ""
+msgstr "Percorso del dispositivo"
 
 msgid "Device Serial"
 msgstr "Numero di serie della periferica"
 
 msgid "Device contains boot partition"
-msgstr ""
+msgstr "Il dispositivo contiene la partizione di avvio"
 
 msgid "Device is mounted"
-msgstr ""
+msgstr "Il dispositivo è montato"
 
 msgid "Device not found"
-msgstr ""
+msgstr "Dispositivo non trovato"
 
 msgid "Device polling"
 msgstr "Device polling"
@@ -2332,7 +2345,7 @@ msgid "Disable firmware version check."
 msgstr "Disabilita il controllo della versione del firmware."
 
 msgid "Disable speaker beep on startup and shutdowns."
-msgstr ""
+msgstr "Disattiva il bip all'avvio e allo spegnimento."
 
 msgid "Disable the compression of repeated line."
 msgstr "Disattivare la compressione delle linee ripetute."
@@ -2381,7 +2394,7 @@ msgid "Display"
 msgstr "Display"
 
 msgid "Display ZFS command history"
-msgstr ""
+msgstr "Mostra la history del comando ZFS"
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -2700,7 +2713,7 @@ msgid "Duplicate mount point name."
 msgstr "Duplica il nome del mount point"
 
 msgid "During"
-msgstr ""
+msgstr "Durante"
 
 msgid ""
 "During - File-deletions will be done incrementally as the transfer happens."
@@ -2853,7 +2866,7 @@ msgid "Enable ACL inheritance"
 msgstr "Attiva eredità ACL"
 
 msgid "Enable Advanced Format (4KB Sector Size)."
-msgstr ""
+msgstr "Attiva Advanced Format (Settori da 4KB)."
 
 msgid "Enable Asynchronous I/O (AIO)"
 msgstr "Attivare I/O asincrono (AIO)"
@@ -9842,49 +9855,3 @@ msgstr ""
 
 msgid "version:"
 msgstr "versione:"
-
-#~ msgid "Cache Device"
-#~ msgstr "Dispositivo cache"
-
-#, php-format
-#~ msgid "Failed to send status report to: %s."
-#~ msgstr "Invio fallito del report di stato a: %s."
-
-#, php-format
-#~ msgid "Failed to send test email to: %s."
-#~ msgstr "Fallito l'invio dell' email di prova a : %s."
-
-#~ msgid "Hot Spare"
-#~ msgstr "Hot Spare"
-
-#~ msgid "New Device"
-#~ msgstr "Nuova periferica"
-
-#~ msgid "No device selected."
-#~ msgstr "Nessuna periferica selezionata."
-
-#~ msgid ""
-#~ "Once you add the virtual device, it becomes impossible to delete again. It "
-#~ "recommends adding the same number of drives as the existing virtual device."
-#~ msgstr ""
-#~ "Una volta aggiunto alla virtual device è impossibile rimuoverlo. Si "
-#~ "raccomanda di aggiungere un numero di dischi pari a quello già presente "
-#~ "nella virtual device."
-
-#, php-format
-#~ msgid "Status report successfully sent to: %s."
-#~ msgstr "Rapporto sullo stato inviato con successo a: %s."
-
-#, php-format
-#~ msgid "Test email successfully sent to: %s."
-#~ msgstr "Email di prova inviata a %s con successo."
-
-#~ msgid "Username contains invalid character(s) : "
-#~ msgstr "Il nome utente contiene caratteri non consentiti : "
-
-#~ msgid "Log Device"
-#~ msgstr "Dispositivo di log"
-
-#, php-format
-#~ msgid "%s: cannot get mirror name."
-#~ msgstr "%s: impossibile ottenere il nome del mirror."
