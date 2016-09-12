@@ -1,6 +1,6 @@
 PORTNAME=	phpvirtualbox
 DISTVERSION=	5.0-5
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}
 
@@ -29,5 +29,7 @@ do-install:
 	@${RM} -f ${STAGEDIR}${WWWDIR}/*.txt
 	#@${MKDIR} -p ${NAS4FREE_ROOTFS}${WWWDIR}
 	@${CP} -Rpv ${STAGEDIR}${WWWDIR} ${NAS4FREE_ROOTFS}${PREFIX}/www
-
+# NAS4Free workaround incompatible version message
+	@${MV} ${NAS4FREE_ROOTFS}${PREFIX}/www/phpvirtualbox/endpoints/lib/vboxwebService-5.0.wsdl ${NAS4FREE_ROOTFS}${PREFIX}/www/phpvirtualbox/endpoints/lib/vboxwebService-5.1.wsdl
+	@${MV} ${NAS4FREE_ROOTFS}${PREFIX}/www/phpvirtualbox/endpoints/lib/vboxweb-5.0.wsdl ${NAS4FREE_ROOTFS}${PREFIX}/www/phpvirtualbox/endpoints/lib/vboxweb-5.1.wsdl
 .include <bsd.port.mk>
