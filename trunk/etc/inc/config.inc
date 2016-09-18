@@ -634,7 +634,7 @@ function config_upgrade() {
 	/* Reject blacklist config */
 	if ($config['version'] == '9.6') {
 		putenv("TERM=xterm"); // not defined at boot
-		$result = tui_display_yesno("Your config is a blacklist. You must reset the config or reinstall.\n\nDo you want to reset to Factory Default now?", 50, 8, false);
+		$result = tui_display_yesno("Your config is blacklisted and not valid. You must reset the config or reinstall.\n\nDo you want to reset to Factory Default now?", 50, 8, false);
 		if (0 == $result) {
 			config_unlock();
 			reset_factory_defaults();
