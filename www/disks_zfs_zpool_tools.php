@@ -1010,10 +1010,14 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 											$a_param[] = '-f';
 											break;
 										case 'gptlabel':
-											$a_param[] = '-d /dev/gpt';
+											if(is_dir('/dev/gpt')) {
+												$a_param[] = '-d /dev/gpt';
+											}
 											break;
 										case 'gptid':
-											$a_param[] = '-d /dev/gptid';
+											if(is_dir('/dev/gptid')) {
+												$a_param[] = '-d /dev/gptid';
+											}
 											break;
 										case 'sfaiapf':
 											$a_param[] = '-a';
