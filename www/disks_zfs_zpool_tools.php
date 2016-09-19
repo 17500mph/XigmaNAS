@@ -985,7 +985,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 					break;
 				case 'import':
 					$subcommand = 'import';
-					$o_flags = new co_zpool_flags(['force', 'sfaiapf'], $sphere_array['flag']);
+					$o_flags = new co_zpool_flags(['force', 'sfaiapf', 'gptlabel'], $sphere_array['flag']);
 					switch($sphere_array['pageindex']) {
 						case 2: // import page: get flags
 							render_set_start();
@@ -1009,6 +1009,8 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 										case 'force':
 											$a_param[] = '-f';
 											break;
+										case 'gptlabel':
+											$a_param[] = '-d /dev/gpt';
 										case 'sfaiapf':
 											$a_param[] = '-a';
 											break;
