@@ -927,6 +927,37 @@ function zfs_snapshot_destroy($snapshot) {
 	return $result;
 }
 
+function zfs_snapshot_rollback($snapshot) {
+	global $config;
+	$result = array("output" => array("error"), "retval" => -1);
+
+	if (empty($snapshot) || empty($snapshot['snapshot'])) {
+		return $result;
+	}
+	if (!preg_match('/.+\@.+/', $snapshot['snapshot'])) {
+		return $result;
+	}
+
+	// Additional parameter
+	$param = "";
+
+	if (!empty($snapshot['force_delete'])) {
+		$param .= "-r ";
+	}
+
+	// Rollback snapshot
+	$cmd = "zfs rollback {$param} {$snapshot['snapshot']}";
+	write_log($cmd);
+
+//	return mwexec($cmd, true);
+	// Execute the command, and save the log.
+	$redirect = "2>&1";
+	exec("{$cmd} {$redirect}", $output, $retval);
+	$result['output'] = $output;
+	$result['retval'] = $retval;
+	return $result;
+}
+
 /**
  * Clone from a ZFS snapshot.
  * @param[in] snapshot	The name of the snapshot to be cloned.
