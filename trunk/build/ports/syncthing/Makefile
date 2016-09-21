@@ -1,5 +1,5 @@
 PORTNAME=		syncthing
-PORTVERSION=	0.14.6
+PORTVERSION=	0.14.7
 PORTREVISION=	0
 DISTVERSIONPREFIX= v
 CATEGORIES=	net
@@ -28,7 +28,7 @@ NO_PKG_REGISTER= yes
 post-patch:
 	@cd ${WRKSRC} ; ${MKDIR} src/github.com/${PORTNAME}/${PORTNAME} ; \
 		${MV} .gitattributes .gitignore .mailmap AUTHORS CONDUCT.md \
-		CONTRIBUTING.md ISSUE_TEMPLATE.md LICENSE NICKS debtpl \
+		CONTRIBUTING.md ISSUE_TEMPLATE.md LICENSE NICKS \
 		PULL_REQUEST_TEMPLATE.md README.md assets build.go build.sh cmd \
 		etc gui lib man script test vendor \
 		src/github.com/${PORTNAME}/${PORTNAME}
