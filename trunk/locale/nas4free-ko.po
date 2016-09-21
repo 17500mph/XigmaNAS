@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-08-26 00:19+0000\n"
+"POT-Creation-Date: 2016-09-21 17:31+0000\n"
 "PO-Revision-Date: 2014-11-17 04:06+0000\n"
 "Last-Translator: NAS4Free Developer <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-17 18:48+0000\n"
-"X-Generator: Launchpad (build 18186)\n"
+"X-Launchpad-Export-Date: 2016-09-21 20:21+0000\n"
+"X-Generator: Launchpad (build 18204)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
 "X-Poedit-Language: Korean\n"
@@ -2045,6 +2045,10 @@ msgstr "목적지 공유"
 msgid "Destroy a pool"
 msgstr ""
 
+msgid ""
+"Destroy any snapshots and bookmarks more recent than the one specified."
+msgstr ""
+
 msgid "Destroyed"
 msgstr ""
 
@@ -3252,6 +3256,9 @@ msgstr "Follow"
 msgid "Force Operation"
 msgstr ""
 
+msgid "Force delete"
+msgstr ""
+
 msgid "Force use"
 msgstr ""
 
@@ -3750,6 +3757,12 @@ msgstr "방화벽 규칙 가져오기."
 
 msgid "Import on-disk ZFS config"
 msgstr "온-디스크 ZFS 설정 가져오기"
+
+msgid "Import using GPT ID"
+msgstr ""
+
+msgid "Import using GPT labels"
+msgstr ""
 
 msgid "In"
 msgstr "안"
@@ -5883,6 +5896,9 @@ msgstr ""
 msgid "Removable"
 msgstr "이동식"
 
+msgid "Remove ZFS label information from a device"
+msgstr ""
+
 msgid "Remove a cache device from a pool"
 msgstr ""
 
@@ -5997,6 +6013,9 @@ msgid "Reverse direction"
 msgstr ""
 
 msgid "Role"
+msgstr ""
+
+msgid "Rollback"
 msgstr ""
 
 msgid "Romanian"
@@ -7628,6 +7647,9 @@ msgstr ""
 msgid "The server is halting now. This may take one minute."
 msgstr ""
 
+msgid "The server is rebooting now."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr ""
 
@@ -7646,9 +7668,6 @@ msgstr "저장 영역이 LUN%d로(으로) mapping 되었습니다."
 
 msgid "The subject of the email."
 msgstr "전자우편의 제목."
-
-msgid "The system is rebooting now. This may take one minute."
-msgstr "이제 시스템이 리붓 합니다. 1분 정도 걸릴 것입니다."
 
 msgid "The tag range is invalid."
 msgstr "태그 범위가 무효합니다."
@@ -9253,3 +9272,6 @@ msgstr ""
 
 msgid "version:"
 msgstr ""
+
+#~ msgid "The system is rebooting now. This may take one minute."
+#~ msgstr "이제 시스템이 리붓 합니다. 1분 정도 걸릴 것입니다."

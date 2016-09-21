@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-08-26 00:19+0000\n"
+"POT-Creation-Date: 2016-09-21 17:31+0000\n"
 "PO-Revision-Date: 2016-08-26 05:56+0000\n"
 "Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-17 18:49+0000\n"
-"X-Generator: Launchpad (build 18186)\n"
+"X-Launchpad-Export-Date: 2016-09-21 20:21+0000\n"
+"X-Generator: Launchpad (build 18204)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
 "X-Poedit-Language: Russian\n"
@@ -2239,6 +2239,10 @@ msgstr "Общий ресурс получателя"
 msgid "Destroy a pool"
 msgstr "Разрушить пул (Destroy a pool)"
 
+msgid ""
+"Destroy any snapshots and bookmarks more recent than the one specified."
+msgstr ""
+
 msgid "Destroyed"
 msgstr "Разрушен"
 
@@ -3516,6 +3520,9 @@ msgstr "Следовать"
 msgid "Force Operation"
 msgstr "Принудительная операция"
 
+msgid "Force delete"
+msgstr ""
+
 msgid "Force use"
 msgstr "Приндуительное использование"
 
@@ -4055,6 +4062,12 @@ msgstr "Импортировать правила брандмауэра"
 
 msgid "Import on-disk ZFS config"
 msgstr "Импортировать конфигурацию с дисков ZFS"
+
+msgid "Import using GPT ID"
+msgstr ""
+
+msgid "Import using GPT labels"
+msgstr ""
 
 msgid "In"
 msgstr "Входящий"
@@ -6304,6 +6317,9 @@ msgstr "Удаленные syslog сообщения"
 msgid "Removable"
 msgstr "Сменный носитель"
 
+msgid "Remove ZFS label information from a device"
+msgstr ""
+
 msgid "Remove a cache device from a pool"
 msgstr "Удалить устройство кэша из пула (Remove a cache device from a pool)"
 
@@ -6424,6 +6440,9 @@ msgstr "Обратное направление"
 
 msgid "Role"
 msgstr "Роль"
+
+msgid "Rollback"
+msgstr ""
 
 msgid "Romanian"
 msgstr "Румынский"
@@ -8228,6 +8247,9 @@ msgid "The server is halting now. This may take one minute."
 msgstr ""
 "Сервер в настоящее время останавливается. Это может занять одну минуту."
 
+msgid "The server is rebooting now."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr "Сервер будет перезагружен после восстановления конфигурации."
 
@@ -8246,9 +8268,6 @@ msgstr "Область хранилища, сопоставленная с LUN%d
 
 msgid "The subject of the email."
 msgstr "Тема письма."
-
-msgid "The system is rebooting now. This may take one minute."
-msgstr "Система перезагружается. Это может занять некоторое время."
 
 msgid "The tag range is invalid."
 msgstr "Диапазон меток задан некорректно."
@@ -10064,3 +10083,6 @@ msgstr "пользователь"
 
 msgid "version:"
 msgstr "версия:"
+
+#~ msgid "The system is rebooting now. This may take one minute."
+#~ msgstr "Система перезагружается. Это может занять некоторое время."

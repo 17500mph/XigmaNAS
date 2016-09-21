@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-08-26 00:19+0000\n"
+"POT-Creation-Date: 2016-09-21 17:31+0000\n"
 "PO-Revision-Date: 2016-09-17 16:31+0000\n"
 "Last-Translator: Timm Lagoni <tila@tl-designs.dk>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-17 18:48+0000\n"
-"X-Generator: Launchpad (build 18186)\n"
+"X-Launchpad-Export-Date: 2016-09-21 20:21+0000\n"
+"X-Generator: Launchpad (build 18204)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
 "X-Poedit-Language: Danish\n"
@@ -2089,6 +2089,10 @@ msgstr "Destinations share"
 msgid "Destroy a pool"
 msgstr ""
 
+msgid ""
+"Destroy any snapshots and bookmarks more recent than the one specified."
+msgstr ""
+
 msgid "Destroyed"
 msgstr ""
 
@@ -3325,6 +3329,9 @@ msgstr "Følg"
 msgid "Force Operation"
 msgstr ""
 
+msgid "Force delete"
+msgstr ""
+
 msgid "Force use"
 msgstr "Tvunget brug"
 
@@ -3841,6 +3848,12 @@ msgstr "Importer firewall regler."
 
 msgid "Import on-disk ZFS config"
 msgstr "Importer on-disk ZFS konfiguration"
+
+msgid "Import using GPT ID"
+msgstr ""
+
+msgid "Import using GPT labels"
+msgstr ""
 
 msgid "In"
 msgstr "Ind"
@@ -6018,6 +6031,9 @@ msgstr ""
 msgid "Removable"
 msgstr "Flytbar"
 
+msgid "Remove ZFS label information from a device"
+msgstr ""
+
 msgid "Remove a cache device from a pool"
 msgstr ""
 
@@ -6137,6 +6153,9 @@ msgstr "Modsat retning"
 
 msgid "Role"
 msgstr "Rolle"
+
+msgid "Rollback"
+msgstr ""
 
 msgid "Romanian"
 msgstr "Rumænsk"
@@ -7848,6 +7867,9 @@ msgstr ""
 msgid "The server is halting now. This may take one minute."
 msgstr ""
 
+msgid "The server is rebooting now."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr "Serveren vil genstarte efter gendannelse af konfiguration"
 
@@ -7866,9 +7888,6 @@ msgstr "Lager område sammenkoblet til LUN%d."
 
 msgid "The subject of the email."
 msgstr "Emnet på emailen."
-
-msgid "The system is rebooting now. This may take one minute."
-msgstr "Systemet genstarter nu. Dette kan tage omkring et minut."
 
 msgid "The tag range is invalid."
 msgstr "Mærkat området er ugyldigt."
@@ -9554,3 +9573,6 @@ msgstr ""
 
 msgid "version:"
 msgstr "version:"
+
+#~ msgid "The system is rebooting now. This may take one minute."
+#~ msgstr "Systemet genstarter nu. Dette kan tage omkring et minut."

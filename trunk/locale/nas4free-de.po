@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-08-26 00:19+0000\n"
+"POT-Creation-Date: 2016-09-21 17:31+0000\n"
 "PO-Revision-Date: 2016-08-03 05:06+0000\n"
 "Last-Translator: crest <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-17 18:48+0000\n"
-"X-Generator: Launchpad (build 18186)\n"
+"X-Launchpad-Export-Date: 2016-09-21 20:21+0000\n"
+"X-Generator: Launchpad (build 18204)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
 "X-Poedit-Language: German\n"
@@ -2210,6 +2210,10 @@ msgstr "Zielfreigabe"
 msgid "Destroy a pool"
 msgstr ""
 
+msgid ""
+"Destroy any snapshots and bookmarks more recent than the one specified."
+msgstr ""
+
 msgid "Destroyed"
 msgstr ""
 
@@ -3483,6 +3487,9 @@ msgstr "Nachfolgen"
 msgid "Force Operation"
 msgstr ""
 
+msgid "Force delete"
+msgstr ""
+
 msgid "Force use"
 msgstr "Erzwinge Nutzung"
 
@@ -4026,6 +4033,12 @@ msgstr "Firewallregeln importieren."
 
 msgid "Import on-disk ZFS config"
 msgstr "Importiere ZFS Konfiguration von Festplatte"
+
+msgid "Import using GPT ID"
+msgstr ""
+
+msgid "Import using GPT labels"
+msgstr ""
 
 msgid "In"
 msgstr "Ankommend"
@@ -6270,6 +6283,9 @@ msgstr "Remote Syslog Nachrichten"
 msgid "Removable"
 msgstr "Wechselbar"
 
+msgid "Remove ZFS label information from a device"
+msgstr ""
+
 msgid "Remove a cache device from a pool"
 msgstr ""
 
@@ -6392,6 +6408,9 @@ msgstr "Umgekehrte Richtung"
 
 msgid "Role"
 msgstr "Rolle"
+
+msgid "Rollback"
+msgstr ""
 
 msgid "Romanian"
 msgstr "Rumänisch"
@@ -8215,6 +8234,9 @@ msgid "The server is halting now. This may take one minute."
 msgstr ""
 "Der Server wird jetzt heruntergefahren. Dies kann eine Minute dauern."
 
+msgid "The server is rebooting now."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr ""
 "Der Server wird nach dem Wiederherstellen der Konfiguration neu starten."
@@ -8236,10 +8258,6 @@ msgstr "Der Speicherbereich der der LUN%d abgebildet ist."
 
 msgid "The subject of the email."
 msgstr "Betreff des E-Mail."
-
-msgid "The system is rebooting now. This may take one minute."
-msgstr ""
-"Das System wird jetzt neu gestartet. Dies kann einige Minuten dauern."
 
 msgid "The tag range is invalid."
 msgstr "Der Eintrag ist ungültig (Wert außerhalb des gültigen Bereichs)"
@@ -10066,3 +10084,7 @@ msgstr "Benutzer"
 
 msgid "version:"
 msgstr "Version:"
+
+#~ msgid "The system is rebooting now. This may take one minute."
+#~ msgstr ""
+#~ "Das System wird jetzt neu gestartet. Dies kann einige Minuten dauern."
