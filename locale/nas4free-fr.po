@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-08-26 00:19+0000\n"
-"PO-Revision-Date: 2016-08-30 05:25+0000\n"
+"POT-Creation-Date: 2016-09-21 17:31+0000\n"
+"PO-Revision-Date: 2016-09-21 18:22+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-17 18:48+0000\n"
-"X-Generator: Launchpad (build 18186)\n"
+"X-Launchpad-Export-Date: 2016-09-21 20:21+0000\n"
+"X-Generator: Launchpad (build 18204)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
 "X-Poedit-Language: French\n"
@@ -2268,6 +2268,11 @@ msgstr "Partage de destination"
 msgid "Destroy a pool"
 msgstr "détruire un pool"
 
+msgid ""
+"Destroy any snapshots and bookmarks more recent than the one specified."
+msgstr ""
+"Détruire tous les instantanés et signets plus récents que celui spécifié"
+
 msgid "Destroyed"
 msgstr "Détruit"
 
@@ -3547,6 +3552,9 @@ msgstr "Suivre"
 msgid "Force Operation"
 msgstr "Forcer l'opération"
 
+msgid "Force delete"
+msgstr "Focer l'effacement"
+
 msgid "Force use"
 msgstr "Forcer l'utilisation"
 
@@ -4090,6 +4098,12 @@ msgstr "Importer des règles de pare-feu."
 
 msgid "Import on-disk ZFS config"
 msgstr "Importer la configuration ZFS du disque"
+
+msgid "Import using GPT ID"
+msgstr "Importer en utilisant les ID GPT"
+
+msgid "Import using GPT labels"
+msgstr "Importer en utilisant les labels GPT"
 
 msgid "In"
 msgstr "Entrée"
@@ -6349,6 +6363,9 @@ msgstr "Messages syslog distants"
 msgid "Removable"
 msgstr "Amovible"
 
+msgid "Remove ZFS label information from a device"
+msgstr "Supprimer les informations de label ZFS d'un périphérique"
+
 msgid "Remove a cache device from a pool"
 msgstr "Retirer un périphérique de cache d'un pool"
 
@@ -6471,6 +6488,9 @@ msgstr "Direction inverse"
 
 msgid "Role"
 msgstr "Rôle"
+
+msgid "Rollback"
+msgstr "Restaurer"
 
 msgid "Romanian"
 msgstr "Roumain"
@@ -8299,6 +8319,9 @@ msgstr ""
 msgid "The server is halting now. This may take one minute."
 msgstr "Le serveur s'arrête maintenant. Cela peut prendre une minute."
 
+msgid "The server is rebooting now."
+msgstr "Le serveur redémarre maintenant"
+
 msgid "The server will reboot after restoring the configuration."
 msgstr "Le serveur va redémarrer après la restauration de la configuration."
 
@@ -8317,9 +8340,6 @@ msgstr "La zone de stockage attachée à LUN%d."
 
 msgid "The subject of the email."
 msgstr "Sujet de l'e-mail."
-
-msgid "The system is rebooting now. This may take one minute."
-msgstr "Le système est en cours de redémarrage."
 
 msgid "The tag range is invalid."
 msgstr "La valeur de tag est invalide."
@@ -10147,3 +10167,6 @@ msgstr "utilisateur"
 
 msgid "version:"
 msgstr "version:"
+
+#~ msgid "The system is rebooting now. This may take one minute."
+#~ msgstr "Le système est en cours de redémarrage."

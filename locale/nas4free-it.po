@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-08-26 00:19+0000\n"
+"POT-Creation-Date: 2016-09-21 17:31+0000\n"
 "PO-Revision-Date: 2016-09-06 17:53+0000\n"
 "Last-Translator: misterredman <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-17 18:48+0000\n"
-"X-Generator: Launchpad (build 18186)\n"
+"X-Launchpad-Export-Date: 2016-09-21 20:21+0000\n"
+"X-Generator: Launchpad (build 18204)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
 "X-Poedit-Language: Italian\n"
@@ -2199,6 +2199,10 @@ msgstr "Condivisione destinazione"
 msgid "Destroy a pool"
 msgstr "Distruggi un pool"
 
+msgid ""
+"Destroy any snapshots and bookmarks more recent than the one specified."
+msgstr ""
+
 msgid "Destroyed"
 msgstr "Distrutto"
 
@@ -3461,6 +3465,9 @@ msgstr "Segui"
 msgid "Force Operation"
 msgstr ""
 
+msgid "Force delete"
+msgstr ""
+
 msgid "Force use"
 msgstr "Forza utilizzo"
 
@@ -3987,6 +3994,12 @@ msgstr "Importa regole firewall"
 
 msgid "Import on-disk ZFS config"
 msgstr "Importa la configurazione ZFS che risiede sui dischi."
+
+msgid "Import using GPT ID"
+msgstr ""
+
+msgid "Import using GPT labels"
+msgstr ""
 
 msgid "In"
 msgstr "Ingresso"
@@ -6196,6 +6209,9 @@ msgstr ""
 msgid "Removable"
 msgstr "Rimovibile"
 
+msgid "Remove ZFS label information from a device"
+msgstr ""
+
 msgid "Remove a cache device from a pool"
 msgstr ""
 
@@ -6315,6 +6331,9 @@ msgstr "Inverti la direzione"
 
 msgid "Role"
 msgstr "Ruolo"
+
+msgid "Rollback"
+msgstr ""
 
 msgid "Romanian"
 msgstr "Romeno"
@@ -8088,6 +8107,9 @@ msgstr ""
 msgid "The server is halting now. This may take one minute."
 msgstr ""
 
+msgid "The server is rebooting now."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr "Il server si riavvierà dopo il ripristino della configurazione."
 
@@ -8106,9 +8128,6 @@ msgstr "L'area di immagazzinamento mappato verso il LUN%d."
 
 msgid "The subject of the email."
 msgstr "L'oggetto della email."
-
-msgid "The system is rebooting now. This may take one minute."
-msgstr "Il sistema si sta riavviando adesso. Potrebbe volerci un minuto."
 
 msgid "The tag range is invalid."
 msgstr "Il valore del tag non è valido."
@@ -9855,3 +9874,6 @@ msgstr ""
 
 msgid "version:"
 msgstr "versione:"
+
+#~ msgid "The system is rebooting now. This may take one minute."
+#~ msgstr "Il sistema si sta riavviando adesso. Potrebbe volerci un minuto."

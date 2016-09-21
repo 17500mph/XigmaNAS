@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-08-26 00:19+0000\n"
+"POT-Creation-Date: 2016-09-21 17:31+0000\n"
 "PO-Revision-Date: 2016-08-10 07:07+0000\n"
 "Last-Translator: Tomoyuki Shiga <tomoyuki_shiga@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-17 18:48+0000\n"
-"X-Generator: Launchpad (build 18186)\n"
+"X-Launchpad-Export-Date: 2016-09-21 20:21+0000\n"
+"X-Generator: Launchpad (build 18204)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
 "X-Poedit-Language: Japanese\n"
@@ -2068,6 +2068,10 @@ msgstr "接続先共有"
 msgid "Destroy a pool"
 msgstr ""
 
+msgid ""
+"Destroy any snapshots and bookmarks more recent than the one specified."
+msgstr ""
+
 msgid "Destroyed"
 msgstr ""
 
@@ -3275,6 +3279,9 @@ msgstr "フロー"
 msgid "Force Operation"
 msgstr ""
 
+msgid "Force delete"
+msgstr ""
+
 msgid "Force use"
 msgstr "強制使用"
 
@@ -3779,6 +3786,12 @@ msgstr "ファイアウォールルールをインポート。"
 
 msgid "Import on-disk ZFS config"
 msgstr "ディスク上のZFS設定をインポート"
+
+msgid "Import using GPT ID"
+msgstr ""
+
+msgid "Import using GPT labels"
+msgstr ""
 
 msgid "In"
 msgstr "入力"
@@ -5922,6 +5935,9 @@ msgstr ""
 msgid "Removable"
 msgstr "リムーバブル"
 
+msgid "Remove ZFS label information from a device"
+msgstr ""
+
 msgid "Remove a cache device from a pool"
 msgstr ""
 
@@ -6037,6 +6053,9 @@ msgstr "逆方向"
 
 msgid "Role"
 msgstr "役割"
+
+msgid "Rollback"
+msgstr ""
 
 msgid "Romanian"
 msgstr "ルーマニア語"
@@ -7688,6 +7707,9 @@ msgstr "サーバーを初期状態にリストアした後、リブートを実
 msgid "The server is halting now. This may take one minute."
 msgstr ""
 
+msgid "The server is rebooting now."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr "サーバーは設定をリストア後、リブートします。"
 
@@ -7706,9 +7728,6 @@ msgstr "LUN%dに割り当てるストレージ領域"
 
 msgid "The subject of the email."
 msgstr "メールの件名"
-
-msgid "The system is rebooting now. This may take one minute."
-msgstr "今すぐシステムをリブートします。1分ほどかかるかもしれません。"
 
 msgid "The tag range is invalid."
 msgstr "タグの値が範囲外です。"
@@ -9324,3 +9343,6 @@ msgstr ""
 
 msgid "version:"
 msgstr "バージョン:"
+
+#~ msgid "The system is rebooting now. This may take one minute."
+#~ msgstr "今すぐシステムをリブートします。1分ほどかかるかもしれません。"

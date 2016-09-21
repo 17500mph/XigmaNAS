@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-08-26 00:19+0000\n"
-"PO-Revision-Date: 2016-09-11 20:23+0000\n"
-"Last-Translator: Krantz <Unknown>\n"
+"POT-Creation-Date: 2016-09-21 17:31+0000\n"
+"PO-Revision-Date: 2016-09-21 01:10+0000\n"
+"Last-Translator: Pepín <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-17 18:48+0000\n"
-"X-Generator: Launchpad (build 18186)\n"
+"X-Launchpad-Export-Date: 2016-09-21 20:21+0000\n"
+"X-Generator: Launchpad (build 18204)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -2260,6 +2260,10 @@ msgstr "Elemento compartido de destino"
 msgid "Destroy a pool"
 msgstr "Elimina un grupo"
 
+msgid ""
+"Destroy any snapshots and bookmarks more recent than the one specified."
+msgstr ""
+
 msgid "Destroyed"
 msgstr "Eliminado"
 
@@ -3278,7 +3282,7 @@ msgid "Export"
 msgstr "Exportar"
 
 msgid "Export a pool from the system"
-msgstr ""
+msgstr "Exportar un pool desde el sistema"
 
 msgid "Export all the directories in the specified path."
 msgstr "Exportar todos los directorios en la ruta especificada."
@@ -3530,6 +3534,9 @@ msgstr "Siguiente"
 
 msgid "Force Operation"
 msgstr "Forzar la operacion"
+
+msgid "Force delete"
+msgstr ""
 
 msgid "Force use"
 msgstr "Uasr forzado"
@@ -4080,6 +4087,12 @@ msgstr "Importar reglas del cortafuegos"
 
 msgid "Import on-disk ZFS config"
 msgstr "Importar la configuración ZFS de los discos"
+
+msgid "Import using GPT ID"
+msgstr ""
+
+msgid "Import using GPT labels"
+msgstr ""
 
 msgid "In"
 msgstr "Entrantes"
@@ -5263,7 +5276,7 @@ msgid "No configured virtual devices."
 msgstr "No configurado dispositivos virtuales"
 
 msgid "No devices have been selected"
-msgstr ""
+msgstr "Ningún dispositivo ha sido seleccionado"
 
 msgid "No disk configured"
 msgstr "No hay discos configurados"
@@ -5288,28 +5301,28 @@ msgid "No new software raid disk found."
 msgstr "No se han encontrado nuevos Discos RAID"
 
 msgid "No pool devices have been selected"
-msgstr ""
+msgstr "Ningún dispositivo de pool ha sido seleccionado"
 
 msgid "No pool was found."
 msgstr "Ningun poll fue encontrado."
 
 msgid "No pools have been selected"
-msgstr ""
+msgstr "Ningún pool ha sido seleccionado"
 
 msgid "No softraid-formatted disks available."
 msgstr "No hay discos formateados-softraid"
 
 msgid "No suitable devices found."
-msgstr ""
+msgstr "No ha sido encontrado ningún dispositivo adecuado"
 
 msgid "No suitable pools found."
-msgstr ""
+msgstr "No ha sido encontrado ningún pool"
 
 msgid "No suitable virtual devices found."
-msgstr ""
+msgstr "No ha sido encontrado ningún dispositivo virtual adecuado"
 
 msgid "No virtual devices have been selected"
-msgstr ""
+msgstr "Ningún dispositivo virtual ha sido seleccionado"
 
 msgid "Noallow - Only inherit deny entries"
 msgstr "No Permitir - Solo se heredan denegadas"
@@ -5552,7 +5565,7 @@ msgid "Outgoing SMTP mail server address."
 msgstr "Dirección del servidor de salida SMTP."
 
 msgid "Output"
-msgstr ""
+msgstr "Resultado"
 
 msgid "Output current (A)"
 msgstr "Corriente de salida (A)"
@@ -5635,7 +5648,7 @@ msgid "Pairwise"
 msgstr "Comparaciones por pares"
 
 msgid "Parameter"
-msgstr ""
+msgstr "Parámetro"
 
 msgid "Parameter xxx (ups.conf or cmdline -x) setting"
 msgstr "Parameter xxx (ups.conf or cmdline -x) setting"
@@ -5690,6 +5703,7 @@ msgstr "Passthrough - Se hereda todo"
 
 msgid "Passthrough-X - Inherit all but \"execute\" when not specified"
 msgstr ""
+"Passthrough-X - Heredar todos excepto \"ejecutar\" cuando no se especifique"
 
 msgid "Password"
 msgstr "Contraseña"
@@ -5823,23 +5837,23 @@ msgid "Please add a new disk first."
 msgstr "Por favor añada primero un nuevo disco"
 
 msgid "Please add a virtual device first."
-msgstr ""
+msgstr "Por favor primero agregue un dispositivo virtual"
 
 #, php-format
 msgid "Please add new %s first."
-msgstr ""
+msgstr "Por favor primero agregue un %s"
 
 msgid "Please add new pools first."
-msgstr ""
+msgstr "Por favor agregue primero un nuevo pool"
 
 msgid "Please check the documentation"
-msgstr ""
+msgstr "Por favor revise la documentación"
 
 msgid "Please check the documentation."
-msgstr ""
+msgstr "Por favor revise la documentación"
 
 msgid "Please check the log files"
-msgstr ""
+msgstr "Por favor revise los logs"
 
 msgid "Please define the Database directory location."
 msgstr "Por favor, especifica el directorio de la base de datos."
@@ -5853,7 +5867,7 @@ msgstr ""
 "permitidos."
 
 msgid "Please try again."
-msgstr ""
+msgstr "Por favor intente de nuevo."
 
 msgid "Polish"
 msgstr "Polaco"
@@ -5950,7 +5964,7 @@ msgid "PostInit"
 msgstr "PostInit"
 
 msgid "Potentially Active"
-msgstr ""
+msgstr "Potencialmente Activo"
 
 msgid "Power Daemon"
 msgstr "Demonio de alimentación electrica (SAI)"
@@ -6066,7 +6080,7 @@ msgid "RAID 0/1/5 Information & Status"
 msgstr "Info y estado RAID 0/1/5"
 
 msgid "RAID 0/1/5 Maintenance"
-msgstr ""
+msgstr "Mantenimiento RAID 0/1/5"
 
 msgid "RAID 1 Information & Status"
 msgstr "Info y estado RAID 1"
@@ -6081,7 +6095,7 @@ msgid "RAID Name"
 msgstr "Nombre del RAID"
 
 msgid "RAID Type"
-msgstr ""
+msgstr "Tipo RAID"
 
 msgid "RAID device can be removed."
 msgstr "El RAID no puede ser eliminado."
@@ -6239,7 +6253,7 @@ msgid "Receive Buffer Size"
 msgstr "Tamaño del Buffer de recepción"
 
 msgid "Record is locked"
-msgstr ""
+msgstr "Grabar está bloqueado"
 
 msgid "Recurse into directories."
 msgstr "Navegar recursivamente en los directorios."
@@ -6313,6 +6327,9 @@ msgstr "Mensajes del servidor syslog remoto"
 msgid "Removable"
 msgstr "Extraíble"
 
+msgid "Remove ZFS label information from a device"
+msgstr ""
+
 msgid "Remove a cache device from a pool"
 msgstr ""
 
@@ -6333,7 +6350,7 @@ msgid "Replace Battery UPS"
 msgstr "Remplazar Batería del SAI"
 
 msgid "Replace a device"
-msgstr ""
+msgstr "Reemplazar un dispositivo"
 
 msgid "Report Generator"
 msgstr "Generador de informes"
@@ -6410,6 +6427,8 @@ msgstr "Restringido"
 
 msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
+"Restringido - Heredar todos excepto \"escribir ACL\" y \"cambiar "
+"propietario\""
 
 msgid "Results for net rpc testjoin:"
 msgstr "Resultados para ingreso de prueba net rpc"
@@ -6434,6 +6453,9 @@ msgstr "Dirección inversa"
 
 msgid "Role"
 msgstr "Rol"
+
+msgid "Rollback"
+msgstr ""
 
 msgid "Romanian"
 msgstr "Rumano"
@@ -6655,7 +6677,7 @@ msgid "Search event"
 msgstr "Buscar evento"
 
 msgid "Search for and import all disks found"
-msgstr ""
+msgstr "Buscar e importar todos los discos encontrados"
 
 msgid "Secondary"
 msgstr "Secundario"
@@ -6672,6 +6694,7 @@ msgstr "Seguridad"
 msgid ""
 "See ZFS datasets & deduplication wiki article BEFORE using this feature."
 msgstr ""
+"Ver artículo de wiki sobre deduplication ANTES de usar esta característica"
 
 msgid ""
 "See ZFS volumes & deduplication wiki article BEFORE using this feature."
@@ -6702,22 +6725,22 @@ msgstr ""
 "Secure (HTTPS) para el acceso a la WebGUI."
 
 msgid "Select a cache device"
-msgstr ""
+msgstr "Seleccionar dispositivo de cache"
 
 msgid "Select a data device"
-msgstr ""
+msgstr "Seleccione un dispositivo de data"
 
 msgid "Select a date format."
 msgstr "Seleccione un formato de fecha"
 
 msgid "Select a device"
-msgstr ""
+msgstr "Seleccione un dispositivo"
 
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Seleccionar un disco habilitado para monitoreo S.M.A.R.T."
 
 msgid "Select a log device"
-msgstr ""
+msgstr "Seleccionar un dispositivo de log"
 
 msgid "Select a pool"
 msgstr ""
@@ -6726,7 +6749,7 @@ msgid "Select a pool device"
 msgstr ""
 
 msgid "Select a spare device"
-msgstr ""
+msgstr "Seleccione un dispositivo de reserva"
 
 msgid "Select file system format."
 msgstr "Seleccionar formato de sistema de archivo"
@@ -6741,7 +6764,7 @@ msgid "Select mount point where to create the swap file."
 msgstr "Seleccione el punto de montaje donde crear el archivo de swap."
 
 msgid "Select one or more spare devices"
-msgstr ""
+msgstr "Seleccionar uno o más dispositivos de reserva"
 
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
@@ -6756,7 +6779,7 @@ msgid "Select pools"
 msgstr ""
 
 msgid "Select read balance algorithm."
-msgstr ""
+msgstr "Seleccionar algoritmo de lectura balance"
 
 msgid "Select the FreeBSD package to be installed."
 msgstr "Seleccionar el paquete FreeBSD para ser Instalado."
@@ -6911,6 +6934,7 @@ msgstr ""
 
 msgid "Set under which user the service should run (www by default)."
 msgstr ""
+"Configurar sobre qué usuario debería correr el servicio (www por defecto)"
 
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
@@ -7036,7 +7060,7 @@ msgid "Snapshot Visibility"
 msgstr "Visivilidad del Snapshot"
 
 msgid "Snapshot is locked"
-msgstr ""
+msgstr "Instantáneas bloqueadas"
 
 msgid "Snapshot is marked for deletion"
 msgstr ""
@@ -7092,7 +7116,7 @@ msgid "Spanish"
 msgstr "Español"
 
 msgid "Spare"
-msgstr ""
+msgstr "Repuesto"
 
 msgid "Sparse"
 msgstr "Sparse (Esparcido)"
@@ -7192,7 +7216,7 @@ msgid "Static Routes"
 msgstr "Rutas estaticas"
 
 msgid "Static Routes Setup"
-msgstr ""
+msgstr "Configuración de rutas estáticas"
 
 msgid "Static routes"
 msgstr "Rutas estáticas"
@@ -7207,7 +7231,7 @@ msgid "Status report successfully sent."
 msgstr "El informe de estado se ha enviado exitosamente."
 
 msgid "Step"
-msgstr ""
+msgstr "Paso"
 
 msgid "Stop"
 msgstr "Parar"
@@ -8219,6 +8243,9 @@ msgstr ""
 msgid "The server is halting now. This may take one minute."
 msgstr ""
 
+msgid "The server is rebooting now."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr "El servidor se reiniciará después de restaurar la configuración."
 
@@ -8237,9 +8264,6 @@ msgstr "El almacenamiento de área mapeado a la LUN%d."
 
 msgid "The subject of the email."
 msgstr "El asunto del e-mail"
-
-msgid "The system is rebooting now. This may take one minute."
-msgstr "El sistema va a reiniciar. Puede tardar un minuto."
 
 msgid "The tag range is invalid."
 msgstr "El rango de la etiqueta es invalido."
@@ -9981,3 +10005,6 @@ msgstr ""
 
 msgid "version:"
 msgstr "versión:"
+
+#~ msgid "The system is rebooting now. This may take one minute."
+#~ msgstr "El sistema va a reiniciar. Puede tardar un minuto."

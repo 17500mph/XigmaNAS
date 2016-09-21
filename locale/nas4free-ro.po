@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-26 00:19+0000\n"
+"POT-Creation-Date: 2016-09-21 17:31+0000\n"
 "PO-Revision-Date: 2016-09-16 05:06+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-17 18:49+0000\n"
-"X-Generator: Launchpad (build 18186)\n"
+"X-Launchpad-Export-Date: 2016-09-21 20:21+0000\n"
+"X-Generator: Launchpad (build 18204)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -2257,6 +2257,10 @@ msgstr "Partajare Destinație"
 msgid "Destroy a pool"
 msgstr "Distrugere pool"
 
+msgid ""
+"Destroy any snapshots and bookmarks more recent than the one specified."
+msgstr ""
+
 msgid "Destroyed"
 msgstr "Distrus"
 
@@ -3520,6 +3524,9 @@ msgstr "Urmărire"
 msgid "Force Operation"
 msgstr "Forțare operațiune"
 
+msgid "Force delete"
+msgstr ""
+
 msgid "Force use"
 msgstr "Forțare utilizare"
 
@@ -4069,6 +4076,12 @@ msgstr "Import reguli firewall."
 
 msgid "Import on-disk ZFS config"
 msgstr "Import configuraţie ZFS"
+
+msgid "Import using GPT ID"
+msgstr ""
+
+msgid "Import using GPT labels"
+msgstr ""
 
 msgid "In"
 msgstr "In"
@@ -6317,6 +6330,9 @@ msgstr "Mesaje syslog remote"
 msgid "Removable"
 msgstr "Detașabil"
 
+msgid "Remove ZFS label information from a device"
+msgstr ""
+
 msgid "Remove a cache device from a pool"
 msgstr "Eliminare dispozitiv cache de la un pool"
 
@@ -6439,6 +6455,9 @@ msgstr "Direcție inversă"
 
 msgid "Role"
 msgstr "Rol"
+
+msgid "Rollback"
+msgstr ""
 
 msgid "Romanian"
 msgstr "Română"
@@ -8241,6 +8260,9 @@ msgstr ""
 msgid "The server is halting now. This may take one minute."
 msgstr "Serverul se va opri. Poate dura câteva minute."
 
+msgid "The server is rebooting now."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr "Serverul va reporni în mod automat după restaurarea configurației."
 
@@ -8259,9 +8281,6 @@ msgstr "Zona de stocare mapată la LUN%d."
 
 msgid "The subject of the email."
 msgstr "Subiectul emailului."
-
-msgid "The system is rebooting now. This may take one minute."
-msgstr "Sistemul va reporni acum. Dureză aproximativ 1 minut."
 
 msgid "The tag range is invalid."
 msgstr "Domeniul etichetei este invalid."
@@ -10081,3 +10100,6 @@ msgstr "utilizator"
 
 msgid "version:"
 msgstr "versiune:"
+
+#~ msgid "The system is rebooting now. This may take one minute."
+#~ msgstr "Sistemul va reporni acum. Dureză aproximativ 1 minut."

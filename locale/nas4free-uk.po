@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2016-08-26 00:19+0000\n"
+"POT-Creation-Date: 2016-09-21 17:31+0000\n"
 "PO-Revision-Date: 2016-09-01 18:36+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-17 18:49+0000\n"
-"X-Generator: Launchpad (build 18186)\n"
+"X-Launchpad-Export-Date: 2016-09-21 20:21+0000\n"
+"X-Generator: Launchpad (build 18204)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -2239,6 +2239,10 @@ msgstr "Каталог призначення"
 msgid "Destroy a pool"
 msgstr "Зруйнувати пул"
 
+msgid ""
+"Destroy any snapshots and bookmarks more recent than the one specified."
+msgstr ""
+
 msgid "Destroyed"
 msgstr "Зруйновано"
 
@@ -3510,6 +3514,9 @@ msgstr "Стежити"
 msgid "Force Operation"
 msgstr "примусова операція"
 
+msgid "Force delete"
+msgstr ""
+
 msgid "Force use"
 msgstr "Примусове використання"
 
@@ -4051,6 +4058,12 @@ msgstr "Імпортувати правила брандмауера."
 
 msgid "Import on-disk ZFS config"
 msgstr "Імпортувати конфігурацію з дисків ZFS"
+
+msgid "Import using GPT ID"
+msgstr ""
+
+msgid "Import using GPT labels"
+msgstr ""
 
 msgid "In"
 msgstr "В"
@@ -6283,6 +6296,9 @@ msgstr "Віддалені syslog повідомлення"
 msgid "Removable"
 msgstr "Змінний пристрій"
 
+msgid "Remove ZFS label information from a device"
+msgstr ""
+
 msgid "Remove a cache device from a pool"
 msgstr "Видалити пристрій кеша з пулу"
 
@@ -6404,6 +6420,9 @@ msgstr "Зворотній напрямок"
 
 msgid "Role"
 msgstr "Роль"
+
+msgid "Rollback"
+msgstr ""
 
 msgid "Romanian"
 msgstr "Румунська"
@@ -8198,6 +8217,9 @@ msgstr ""
 msgid "The server is halting now. This may take one minute."
 msgstr "Сервер в даний час зупинений. Це може зайняти одну хвилину."
 
+msgid "The server is rebooting now."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr "Сервер перезавантажиться після відновлення конфігурації."
 
@@ -8216,9 +8238,6 @@ msgstr "Область сховища, зіставлена з LUN%d."
 
 msgid "The subject of the email."
 msgstr "Тема емейла."
-
-msgid "The system is rebooting now. This may take one minute."
-msgstr "Система перезавантажується. Це може зайняти якийсь час."
 
 msgid "The tag range is invalid."
 msgstr "Діапазон міток заданий некоректно."
@@ -10027,3 +10046,6 @@ msgstr "користувач"
 
 msgid "version:"
 msgstr "версія:"
+
+#~ msgid "The system is rebooting now. This may take one minute."
+#~ msgstr "Система перезавантажується. Це може зайняти якийсь час."

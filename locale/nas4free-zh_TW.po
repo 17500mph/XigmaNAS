@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-08-26 00:19+0000\n"
+"POT-Creation-Date: 2016-09-21 17:31+0000\n"
 "PO-Revision-Date: 2016-03-03 17:10+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-17 18:49+0000\n"
-"X-Generator: Launchpad (build 18186)\n"
+"X-Launchpad-Export-Date: 2016-09-21 20:21+0000\n"
+"X-Generator: Launchpad (build 18204)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -2036,6 +2036,10 @@ msgstr "共享目的端"
 msgid "Destroy a pool"
 msgstr ""
 
+msgid ""
+"Destroy any snapshots and bookmarks more recent than the one specified."
+msgstr ""
+
 msgid "Destroyed"
 msgstr ""
 
@@ -3236,6 +3240,9 @@ msgstr "跟隨"
 msgid "Force Operation"
 msgstr ""
 
+msgid "Force delete"
+msgstr ""
+
 msgid "Force use"
 msgstr "強制使用"
 
@@ -3733,6 +3740,12 @@ msgstr "導入防火牆規則。"
 
 msgid "Import on-disk ZFS config"
 msgstr "從磁盤上導入ZFS 設定"
+
+msgid "Import using GPT ID"
+msgstr ""
+
+msgid "Import using GPT labels"
+msgstr ""
 
 msgid "In"
 msgstr "入"
@@ -5860,6 +5873,9 @@ msgstr ""
 msgid "Removable"
 msgstr "可移除"
 
+msgid "Remove ZFS label information from a device"
+msgstr ""
+
 msgid "Remove a cache device from a pool"
 msgstr ""
 
@@ -5975,6 +5991,9 @@ msgstr "反向"
 
 msgid "Role"
 msgstr "角色"
+
+msgid "Rollback"
+msgstr ""
 
 msgid "Romanian"
 msgstr "羅馬尼亞文"
@@ -7602,6 +7621,9 @@ msgstr "伺服器已被重置到出廠默認設置，現在重新啟動。這可
 msgid "The server is halting now. This may take one minute."
 msgstr ""
 
+msgid "The server is rebooting now."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr "還原配置後，伺服器將重新啟動。"
 
@@ -7620,9 +7642,6 @@ msgstr "儲存區域映射到 LUN%d 。"
 
 msgid "The subject of the email."
 msgstr "電子郵件的主題。"
-
-msgid "The system is rebooting now. This may take one minute."
-msgstr "系統重新啟動中，可能需要一分鐘的時間..."
 
 msgid "The tag range is invalid."
 msgstr "該標籤範圍無效。"
@@ -9206,3 +9225,6 @@ msgstr ""
 
 msgid "version:"
 msgstr "版本："
+
+#~ msgid "The system is rebooting now. This may take one minute."
+#~ msgstr "系統重新啟動中，可能需要一分鐘的時間..."

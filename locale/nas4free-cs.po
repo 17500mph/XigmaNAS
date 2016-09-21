@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-08-26 00:19+0000\n"
+"POT-Creation-Date: 2016-09-21 17:31+0000\n"
 "PO-Revision-Date: 2016-08-31 09:44+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-17 18:48+0000\n"
-"X-Generator: Launchpad (build 18186)\n"
+"X-Launchpad-Export-Date: 2016-09-21 20:20+0000\n"
+"X-Generator: Launchpad (build 18204)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
 "X-Poedit-Language: Czech\n"
@@ -2249,6 +2249,10 @@ msgstr "Cílové sdílení"
 msgid "Destroy a pool"
 msgstr ""
 
+msgid ""
+"Destroy any snapshots and bookmarks more recent than the one specified."
+msgstr ""
+
 msgid "Destroyed"
 msgstr ""
 
@@ -3521,6 +3525,9 @@ msgstr "Následovat"
 msgid "Force Operation"
 msgstr ""
 
+msgid "Force delete"
+msgstr ""
+
 msgid "Force use"
 msgstr "Vynutit použití"
 
@@ -4065,6 +4072,12 @@ msgstr "Import pravidel brány firewall"
 
 msgid "Import on-disk ZFS config"
 msgstr "Import nastavení ZFS přímo z disku"
+
+msgid "Import using GPT ID"
+msgstr ""
+
+msgid "Import using GPT labels"
+msgstr ""
 
 msgid "In"
 msgstr "Do"
@@ -6337,6 +6350,9 @@ msgstr "Zprávy vzdáleného syslog"
 msgid "Removable"
 msgstr "Vyjímatelné"
 
+msgid "Remove ZFS label information from a device"
+msgstr ""
+
 msgid "Remove a cache device from a pool"
 msgstr ""
 
@@ -6456,6 +6472,9 @@ msgstr "Opačný směr"
 
 msgid "Role"
 msgstr "Úloha"
+
+msgid "Rollback"
+msgstr ""
 
 msgid "Romanian"
 msgstr "rumunština"
@@ -8255,6 +8274,9 @@ msgstr ""
 msgid "The server is halting now. This may take one minute."
 msgstr "Systém se vypíná. Může trvat několik minut."
 
+msgid "The server is rebooting now."
+msgstr ""
+
 msgid "The server will reboot after restoring the configuration."
 msgstr "Po obnovení nastavení bude server restartován."
 
@@ -8273,9 +8295,6 @@ msgstr "Úložná oblast mapována na LUN%d."
 
 msgid "The subject of the email."
 msgstr "Předmět e-mailu."
-
-msgid "The system is rebooting now. This may take one minute."
-msgstr "Systém se restartuje. Může nějakou minutu trvat."
 
 msgid "The tag range is invalid."
 msgstr "Rozsah značek je neplatný."
@@ -10087,3 +10106,6 @@ msgstr "uživatel"
 
 msgid "version:"
 msgstr "verze:"
+
+#~ msgid "The system is rebooting now. This may take one minute."
+#~ msgstr "Systém se restartuje. Může nějakou minutu trvat."
