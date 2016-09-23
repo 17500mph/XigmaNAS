@@ -62,6 +62,7 @@ Fixes:
 - Fix test emails could not send as in French WebGUI.
 - Fix change permission of a dataset fails if related pool doesn't use the default mount point.
 - Fix timezone in file manager.
+- Fix websockets-connection drop on mouse events in novnc.
 
 Permanent restrictions:
 - It is not possible to use virtualbox-ose on 32-bits nas4free, 64-bits only feature.
