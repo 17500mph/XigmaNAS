@@ -8,6 +8,7 @@ Changes:
 - Add configuration option for tls_certcheck.
 - Add zfs snapshot rollback.
 - Add zpool import using gpt labels / gpt id.
+- Increase allowed length of zfs dataset name and zfs volume name to 60 characters.
 - Add mounting (read-only) support for EXT4 drives.
 - UPS monitoring username & password can be set/changed.
 - Update installer now full gpt supported.
