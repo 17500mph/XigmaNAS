@@ -376,7 +376,7 @@ $(window).on("load", function() {
 		</thead>
 		<tbody>
 			<?php
-				html_inputbox2('name', gtext('Name'), $sphere_record['name'], '', true, 40, $isrecordmodify);
+				html_inputbox2('name', gtext('Name'), $sphere_record['name'], '', true, 60, $isrecordmodify, false, 60);
 				html_combobox2('pool', gtext('Pool'), $sphere_record['pool'], $l_poollist, '', true, $isrecordmodify);
 				html_inputbox2('volsize', gtext('Size'), $sphere_record['volsize'], gtext("ZFS volume size. To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."), true, 10);
 				html_combobox2('volmode', gtext('Volume mode'), $sphere_record['volmode'], $l_volmode, gtext('Specifies how the volume should be exposed to the OS.'), true);
