@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-09-21 17:31+0000\n"
-"PO-Revision-Date: 2016-09-21 15:51+0000\n"
+"PO-Revision-Date: 2016-10-02 14:48+0000\n"
 "Last-Translator: Aleš <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-23 15:02+0000\n"
-"X-Generator: Launchpad (build 18204)\n"
+"X-Launchpad-Export-Date: 2016-10-04 07:22+0000\n"
+"X-Generator: Launchpad (build 18217)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
 "X-Poedit-Language: Slovenian\n"
@@ -307,13 +307,13 @@ msgid "ACL Inherit"
 msgstr ""
 
 msgid "ACL Mode"
-msgstr ""
+msgstr "ACL način"
 
 msgid "ACL inherit"
 msgstr ""
 
 msgid "ACL mode"
-msgstr ""
+msgstr "ACL način"
 
 msgid "AD authentication disabled"
 msgstr "AD prijava je onemogočena"
@@ -325,7 +325,7 @@ msgid "AFP"
 msgstr "AFP"
 
 msgid "AFP compatibility"
-msgstr ""
+msgstr "AFP kompatibilnost"
 
 msgid "AG"
 msgstr "AG"
@@ -601,6 +601,8 @@ msgid ""
 "After you click \"Save\" you may also have to do one or more of the "
 "following steps before you can access this server again:"
 msgstr ""
+"Po kliku na \"Shrani\" boste morda morali narediti še katerega izmed "
+"naslednjih korakov, da boste lahko ponovno dostopali do strežnika:"
 
 msgid ""
 "After you click \"Save\" you must reboot the server to make the changes take "
@@ -668,7 +670,7 @@ msgid "Allow"
 msgstr "Dovoli"
 
 msgid "Allow TLS connections only."
-msgstr ""
+msgstr "Omogoči samo TLS povezave."
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Dovoli dostop uporabnikom, ki nimajo nastaljenega gesla."
@@ -690,7 +692,7 @@ msgid "Allow new files to be created."
 msgstr "Dovoli ustvarjanje novih datotek"
 
 msgid "Allow to start UPS from battery"
-msgstr ""
+msgstr "Dovoli, da se UPS zažene na baterije."
 
 msgid "Allow trusted domains."
 msgstr ""
@@ -1078,7 +1080,7 @@ msgid ""
 msgstr ""
 
 msgid "Bootloader"
-msgstr ""
+msgstr "Zagonski nalagalnik"
 
 msgid "Bridge"
 msgstr ""
@@ -1113,10 +1115,10 @@ msgid "CACHE"
 msgstr "PREDPOMNILNIK"
 
 msgid "CARP"
-msgstr ""
+msgstr "CARP"
 
 msgid "CARP only"
-msgstr ""
+msgstr "Samo CARP"
 
 msgid "CCMP"
 msgstr "CCMP"
@@ -1128,7 +1130,7 @@ msgid "CD/DVD"
 msgstr "CD/DVD"
 
 msgid "CD/DVD drive"
-msgstr ""
+msgstr "CD/DVD pogon"
 
 msgid "CHANGED"
 msgstr ""
@@ -1155,16 +1157,16 @@ msgid "CP1251 (Cyrillic)"
 msgstr "CP1251 (cirilica)"
 
 msgid "CP1252 (Latin 1)"
-msgstr ""
+msgstr "CP1252 (Latin 1)"
 
 msgid "CP437 (Latin US)"
-msgstr ""
+msgstr "CP437 (Latin US)"
 
 msgid "CP850 (Latin 1)"
-msgstr ""
+msgstr "CP850 (Latin 1)"
 
 msgid "CP852 (Latin 2)"
-msgstr ""
+msgstr "CP852 (Latin 2)"
 
 msgid "CP866 (Cyrillic CIS 1)"
 msgstr ""
@@ -1334,7 +1336,7 @@ msgid "Client"
 msgstr "Odjemalec"
 
 msgid "Clone"
-msgstr ""
+msgstr "Kloniraj"
 
 msgid "Collecting initial data, please wait..."
 msgstr "Zbiranje podatkov, prosim počakajte..."
@@ -1422,7 +1424,7 @@ msgid "Confirmation"
 msgstr "Potrditev"
 
 msgid "Connect to hidden network"
-msgstr ""
+msgstr "Poveži s skritim omrežjem"
 
 msgid "Connected FTP Users & Status"
 msgstr "Povezani FTP uporabniki in status"
@@ -1473,7 +1475,7 @@ msgid "Controller IP address"
 msgstr "IP naslov kontrolerja"
 
 msgid "Controller Model"
-msgstr "Model kontrolerja"
+msgstr "Model krmilnika"
 
 msgid "Controller TCP Port"
 msgstr "TCP vrata kontrolerja"
@@ -1553,13 +1555,13 @@ msgid ""
 msgstr ""
 
 msgid "Count of errors corrected by software ECC."
-msgstr ""
+msgstr "Število napak, ki so bile popravljene s programskim ECC"
 
 msgid "Count of errors due to high temperature."
-msgstr ""
+msgstr "Število napak zaradi visoke temperature."
 
 msgid "Count of errors while reading from a disk."
-msgstr ""
+msgstr "Število napak pri branju z diska."
 
 msgid ""
 "Count of hours in power-on state. The raw value of this attribute shows "
@@ -1637,7 +1639,7 @@ msgid "Create PV Guest"
 msgstr ""
 
 msgid "Create ZFS on a GPT partition."
-msgstr ""
+msgstr "Ustvari ZFS na GPT particiji."
 
 msgid "Create and initialize RAID."
 msgstr "Nastavi in vklopi RAID."
@@ -1652,7 +1654,7 @@ msgid "Create work directory if it doesn't exist."
 msgstr "Ustvari delovni direktorij, če ne obstaja."
 
 msgid "Created UFS file system:"
-msgstr ""
+msgstr "Ustvarjen UFS datotečni sistem:"
 
 msgid "Creates the pool with an alternate root."
 msgstr "Ustvari bazen z drugim izhodiščem"
@@ -1743,16 +1745,16 @@ msgid "DHCP cannot be used for LAN interface."
 msgstr ""
 
 msgid "DLNA/UPnP"
-msgstr ""
+msgstr "DLNA/UPnP"
 
 msgid "DLNA/UPnP Fuppes"
-msgstr ""
+msgstr "DLNA/UPnP Fuppes"
 
 msgid "DLNA/UPnP MiniDLNA"
-msgstr ""
+msgstr "DLNA/UPnP MiniDLNA"
 
 msgid "DNS"
-msgstr ""
+msgstr "DNS"
 
 msgid "DNS domain"
 msgstr "Domena DNS"
@@ -1840,7 +1842,7 @@ msgid ""
 msgstr ""
 
 msgid "Decrypt password"
-msgstr ""
+msgstr "Geslo za dešifriranje"
 
 msgid "Dedup"
 msgstr ""
@@ -1859,7 +1861,7 @@ msgid ""
 msgstr ""
 
 msgid "Default Device Settings"
-msgstr ""
+msgstr "Privzete nastavitve naprave"
 
 #, php-format
 msgid "Default is %s."
@@ -2115,7 +2117,7 @@ msgid "Device IP"
 msgstr "IP naprave"
 
 msgid "Device List"
-msgstr ""
+msgstr "Spisek naprav"
 
 msgid "Device Model"
 msgstr "Model naprave"
@@ -2133,10 +2135,10 @@ msgid "Device Serial"
 msgstr "Serijska številka naprave"
 
 msgid "Device contains boot partition"
-msgstr ""
+msgstr "Naprava vsebuje zagonsko particijo"
 
 msgid "Device is mounted"
-msgstr ""
+msgstr "Naprava je priklopljena"
 
 msgid "Device not found"
 msgstr "Naprave ni mogoče najti"
@@ -2244,7 +2246,7 @@ msgid "Disk"
 msgstr "Disk"
 
 msgid "Disk Selection"
-msgstr ""
+msgstr "Izbira diska"
 
 msgid "Disk space usage"
 msgstr "Uporaba diska"
@@ -2256,7 +2258,7 @@ msgid "Disks (ATA)"
 msgstr "Diski (ATA)"
 
 msgid "Disks (ATA) information"
-msgstr ""
+msgstr "Podatki o diskih (ATA)"
 
 msgid "Disks | Mount Point | Management"
 msgstr ""
@@ -2561,13 +2563,13 @@ msgid "Driver parameters"
 msgstr ""
 
 msgid "Driver used"
-msgstr ""
+msgstr "Uporabljen gonilnik"
 
 msgid "Driver version"
-msgstr ""
+msgstr "Različica gonilnika"
 
 msgid "Driver version internal"
-msgstr ""
+msgstr "Interna različica gonilnika"
 
 msgid "Duplex"
 msgstr "Duplex"
@@ -2713,7 +2715,7 @@ msgid "Emergency Level"
 msgstr ""
 
 msgid "Empty as default."
-msgstr ""
+msgstr "Privzeto je prazno"
 
 msgid "Enable"
 msgstr "Omogoči"
@@ -2768,7 +2770,7 @@ msgid "Enable Selected Options"
 msgstr ""
 
 msgid "Enable TLS connections."
-msgstr ""
+msgstr "Omogoči TLS povezave."
 
 msgid "Enable TiVo support."
 msgstr "Omogoči podporo TiVO"
@@ -2792,7 +2794,7 @@ msgid "Enable compression."
 msgstr "Omogoči stiskanje."
 
 msgid "Enable console screensaver."
-msgstr ""
+msgstr "Omogoči ohranjevalnik zaslona na konzoli"
 
 msgid "Enable device polling"
 msgstr "Omogoči polling naprav"
@@ -2919,10 +2921,10 @@ msgid "Enabled"
 msgstr "Omogočen"
 
 msgid "Encrypt password"
-msgstr "Šifriraj geslo"
+msgstr "Geslo za šifriranje"
 
 msgid "Encrypt password (confirmed)"
-msgstr ""
+msgstr "Geslo za šifriranje (potrjeno)"
 
 msgid "Encrypted"
 msgstr "Šifrirano"
@@ -3014,7 +3016,7 @@ msgid "Error"
 msgstr "Napaka"
 
 msgid "Error Code"
-msgstr ""
+msgstr "Koda napake"
 
 msgid "Error Level"
 msgstr ""
@@ -3117,7 +3119,7 @@ msgid "Extra options to rsync (usually empty)."
 msgstr "Dodatne možnosti za rsync (po navadi prazno)."
 
 msgid "FAT32"
-msgstr ""
+msgstr "FAT32"
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
@@ -3179,7 +3181,7 @@ msgid "Failed to send status report."
 msgstr ""
 
 msgid "Failed to send test email."
-msgstr ""
+msgstr "Testno sporočilo ni bilo uspešno poslano."
 
 msgid "Failed to upload file."
 msgstr "Nisem mogel naložiti datoteke."
@@ -3248,13 +3250,13 @@ msgid "File system check"
 msgstr "Pregled datotečnega sistema"
 
 msgid "File upload stopped by extension."
-msgstr "Prenos datoteke ni uspel zaradi končnice"
+msgstr "Nalaganje datoteke ni uspelo zaradi končnice."
 
 msgid "Filename"
 msgstr "Ime datoteke"
 
 msgid "Fileserver"
-msgstr ""
+msgstr "Datotečni strežnik"
 
 msgid "Filesystem"
 msgstr "Datotečni sistem"
@@ -3263,7 +3265,7 @@ msgid "Filter"
 msgstr ""
 
 msgid "Finnish"
-msgstr ""
+msgstr "finsko"
 
 msgid "Firewall"
 msgstr "Požarni zid"
@@ -3322,7 +3324,7 @@ msgid "Format"
 msgstr "Formatiranje"
 
 msgid "Format Options"
-msgstr ""
+msgstr "Možnosti formatiranja"
 
 msgid "Format Program"
 msgstr ""
@@ -3367,7 +3369,7 @@ msgid "Full Name"
 msgstr "Polno ime"
 
 msgid "Fuppes"
-msgstr ""
+msgstr "Fuppes"
 
 msgid "Fuppes Media Server"
 msgstr "Medijski strežnik Fuppes"
@@ -3376,9 +3378,11 @@ msgid ""
 "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
 "Fuppes first."
 msgstr ""
+"Fuppes je omogočen. Če želite uporabiti MiniDLNA, morate najprej onemogočiti "
+"Fuppes."
 
 msgid "GEOM"
-msgstr ""
+msgstr "GEOM"
 
 msgid "GEOM Software RAID"
 msgstr ""
@@ -3481,7 +3485,7 @@ msgid "Guest account"
 msgstr "Gost"
 
 msgid "HAST"
-msgstr ""
+msgstr "HAST"
 
 msgid "HAST (Highly Available Storage)"
 msgstr ""
@@ -3636,7 +3640,7 @@ msgid "I/O timeout in seconds (%d by default)."
 msgstr "I/O čas v sekundah (privzeto %d)."
 
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgid "IG"
 msgstr "IG"
@@ -3664,7 +3668,7 @@ msgid "IP type mismatch for network and gateway."
 msgstr "IP naslov se ne ujema z omrežjem in prehodom."
 
 msgid "IPMI FRU"
-msgstr ""
+msgstr "IPMI FRU"
 
 msgid "IPMI Sensor"
 msgstr "IPMI senzor"
@@ -3703,7 +3707,7 @@ msgid "IRC Live Support"
 msgstr "IRC podpora"
 
 msgid "IRC NAS4Free"
-msgstr ""
+msgstr "IRC NAS4Free"
 
 #, php-format
 msgid "ISO file path (e.g. %s) used as CD/DVD drive."
@@ -3726,9 +3730,9 @@ msgid ""
 "IDLE state, most disks are still spinning, so this is probably not what you "
 "want."
 msgstr ""
-"Spanje - preverite napravo, razen če je v spanju zo. stanu pripravljenosti. "
-"V stanju 'spanje', se večina diskov še vedno vrti. To najverjetneje ni to, "
-"kar ste želeli."
+"Mirovanje - preverite napravo, razen če je v spanju oz. stanju "
+"pripravljenosti. V stanju 'mirovanje', se večina diskov še vedno vrti. To "
+"najverjetneje ni to, kar ste želeli."
 
 msgid "If allowed, a user of the trusted domains can access the share."
 msgstr ""
@@ -3927,7 +3931,7 @@ msgid "Initiators"
 msgstr "Initiators"
 
 msgid "Inotify"
-msgstr ""
+msgstr "Inotify"
 
 msgid "Input current (A)"
 msgstr "Vhodni tok (A)"
@@ -3936,7 +3940,7 @@ msgid "Input frequency"
 msgstr "Vhodna frekvenca"
 
 msgid "Input line frequency (Hz)"
-msgstr ""
+msgstr "Vhodna frekvenca (Hz)"
 
 msgid "Input line frequency high (Hz)"
 msgstr ""
@@ -4041,7 +4045,7 @@ msgid "Invalid username or password."
 msgstr "Napačno uporabniško ime ali geslo"
 
 msgid "Invert Selection"
-msgstr ""
+msgstr "Obrni izbiro"
 
 msgid ""
 "It can be changed from the client side by standard SCSI mode page at any "
@@ -4049,7 +4053,7 @@ msgid ""
 msgstr ""
 
 msgid "It cannot be used combining SMB2 and Anonymous."
-msgstr ""
+msgstr "Ni mogoče kombinirati SMB2 in Anonymous."
 
 msgid ""
 "It is impossible to enable 'Anonymous users only' and 'Local users only' "
@@ -4128,7 +4132,7 @@ msgstr "Jedro"
 
 #, php-format
 msgid "Kernel file (e.g. %s)."
-msgstr ""
+msgstr "Datoteka jedra (npr. %s)."
 
 msgid "Key"
 msgstr "Ključ"
@@ -4463,13 +4467,13 @@ msgid "MIB"
 msgstr "MIB"
 
 msgid "MIB is locked"
-msgstr ""
+msgstr "MIB je zaklenjen"
 
 msgid "MIB is marked for deletion"
 msgstr ""
 
 msgid "MIRROR"
-msgstr ""
+msgstr "MIRROR"
 
 msgid "MISSING"
 msgstr "MISSING"
@@ -4514,7 +4518,7 @@ msgid "Manufacturer"
 msgstr "Proizvajalec"
 
 msgid "Manufacturing date"
-msgstr ""
+msgstr "Datum proizvodnje"
 
 msgid "Map all users to root"
 msgstr "Dodaj vse uporabnike k root-u"
@@ -4599,7 +4603,7 @@ msgid "Maximum frequency"
 msgstr "Najvišja frekvenca"
 
 msgid "Maximum idle time in seconds."
-msgstr "Najvišji čas nekativnosti v sekundah."
+msgstr "Najdaljši čas nekativnosti v sekundah."
 
 msgid "Maximum incoming voltage seen"
 msgstr ""
@@ -4684,15 +4688,17 @@ msgid "Min. passive port"
 msgstr "Najnižji pasiv port"
 
 msgid "MiniDLNA"
-msgstr ""
+msgstr "MiniDLNA"
 
 msgid "MiniDLNA A/V Media Server"
-msgstr ""
+msgstr "MiniDLNA A/V Medijski strežnik"
 
 msgid ""
 "MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
 "MiniDLNA first."
 msgstr ""
+"MiniDLNA je omogočen. Če želite uporabiti Fuppes, morate najprej onemogočiti "
+"MiniDLNA."
 
 msgid "Minidlna configuration has been updated."
 msgstr ""
@@ -4728,7 +4734,7 @@ msgid "Minutes"
 msgstr "Minute"
 
 msgid "Minutes between the next network time synchronization."
-msgstr ""
+msgstr "Čas v minutah do naslednjega usklajevanja časa."
 
 msgid "Missing a temporary folder."
 msgstr "Ni začasne mape"
@@ -4821,7 +4827,7 @@ msgid "NFS"
 msgstr "NFS"
 
 msgid "NFSv4"
-msgstr ""
+msgstr "NFSv4"
 
 msgid "NIS"
 msgstr "NIS"
@@ -4840,13 +4846,13 @@ msgid "NOTE"
 msgstr ""
 
 msgid "NT1"
-msgstr ""
+msgstr "NT1"
 
 msgid "NTP is not enabled."
-msgstr ""
+msgstr "NTP ni omogočen."
 
 msgid "NTP must be enabled."
-msgstr ""
+msgstr "NTP mora biti omogočen."
 
 msgid "NTP time server"
 msgstr "NTP časovni strežnik"
@@ -4874,10 +4880,10 @@ msgid "Name of the variable."
 msgstr "Ime spremenljivke"
 
 msgid "Nested HVM"
-msgstr ""
+msgstr "Vgnezden HVM"
 
 msgid "NetBIOS domain"
-msgstr ""
+msgstr "NetBIOS domena"
 
 msgid "NetBIOS name"
 msgstr "NetBIOS ime"
@@ -4914,7 +4920,7 @@ msgid "Networks"
 msgstr "Omrežja"
 
 msgid "Never - (Default)"
-msgstr ""
+msgstr "Nikoli - (Privzeto)"
 
 msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
@@ -4927,7 +4933,7 @@ msgid "New password"
 msgstr "Novo geslo"
 
 msgid "Next"
-msgstr ""
+msgstr "Naprej"
 
 msgid "No"
 msgstr "Ne"
@@ -4975,7 +4981,7 @@ msgid "No disk configured"
 msgstr "Ni nastavljenih diskov"
 
 msgid "No disks available."
-msgstr ""
+msgstr "Diski niso na voljo."
 
 msgid ""
 "No disks configured, please add disks to see the diagnostic information of "
@@ -5127,7 +5133,7 @@ msgid "Notification email from host: %s"
 msgstr "Obvestilo od: %s"
 
 msgid "Nov"
-msgstr ""
+msgstr "nov"
 
 msgid "November"
 msgstr "november"
@@ -5174,7 +5180,7 @@ msgid "ONLINE"
 msgstr "ONLINE"
 
 msgid "OPT Only"
-msgstr ""
+msgstr "Samo OPT"
 
 msgid "Object name"
 msgstr "Ime predmeta"
@@ -5258,10 +5264,10 @@ msgid "Output frequency (Hz)"
 msgstr "Izhodna frekvenca (Hz)"
 
 msgid "Output voltage"
-msgstr ""
+msgstr "Izhodna napetost"
 
 msgid "Output voltage (V)"
-msgstr ""
+msgstr "Izhodna napetost (V)"
 
 msgid ""
 "Overall (general) throughput performance of a hard disk drive. If the value "
@@ -5270,7 +5276,7 @@ msgid ""
 msgstr ""
 
 msgid "Overload"
-msgstr ""
+msgstr "Preobremenitev"
 
 msgid "Overview"
 msgstr "Pregled"
@@ -5303,7 +5309,7 @@ msgid "PSK"
 msgstr "PSK"
 
 msgid "PV Guest"
-msgstr ""
+msgstr "PV Gost"
 
 msgid "Package Name"
 msgstr "Ime paketa"
@@ -5336,7 +5342,7 @@ msgid "Parent Directory"
 msgstr ""
 
 msgid "Partition"
-msgstr ""
+msgstr "Particija"
 
 msgid "Partition number"
 msgstr "Številka razdelka"
@@ -5465,7 +5471,7 @@ msgid "Physical interface"
 msgstr "Fizična naprava"
 
 msgid "Pictures"
-msgstr ""
+msgstr "Slike"
 
 msgid "Ping"
 msgstr "Ping"
@@ -5538,7 +5544,7 @@ msgid "Please note that blanks in path names are not allowed."
 msgstr "Prazna polja v imenih poti niso dovoljena."
 
 msgid "Please try again."
-msgstr ""
+msgstr "Prosimo, poskusite znova."
 
 msgid "Polish"
 msgstr "Poljščina"
@@ -5624,10 +5630,10 @@ msgid "Ports"
 msgstr "Vrata"
 
 msgid "Portuguese (Brazil)"
-msgstr ""
+msgstr "portugalščina (Brazilija)"
 
 msgid "Portuguese (Portugal)"
-msgstr ""
+msgstr "portugalščina (Portugalska)"
 
 msgid "PostInit"
 msgstr "PostInit"
@@ -5642,7 +5648,7 @@ msgid "Power Mode"
 msgstr ""
 
 msgid "Power management"
-msgstr ""
+msgstr "Upravljanje z energijo"
 
 msgid "Power mode"
 msgstr "Način napajanja"
@@ -5708,7 +5714,7 @@ msgid "Processes Information"
 msgstr ""
 
 msgid "Product ID"
-msgstr ""
+msgstr "ID izdelka"
 
 msgid "Profile"
 msgstr "Profil"
@@ -5749,7 +5755,7 @@ msgid "RAID 0/1/5 Information & Status"
 msgstr ""
 
 msgid "RAID 0/1/5 Maintenance"
-msgstr ""
+msgstr "RAID 0/1/5 Vzdrževanje"
 
 msgid "RAID 1 Information & Status"
 msgstr ""
@@ -5776,43 +5782,43 @@ msgid "RAID is marked for removal"
 msgstr ""
 
 msgid "RAID is protected"
-msgstr ""
+msgstr "RAID je zaščiten"
 
 msgid "RAID is unlocked"
-msgstr ""
+msgstr "RAID je odklenjen"
 
 msgid "RAID-0"
-msgstr ""
+msgstr "RAID-0"
 
 msgid "RAID-0 Maintenance"
-msgstr ""
+msgstr "RAID-0 Vzdrževanje"
 
 msgid "RAID-1"
-msgstr ""
+msgstr "RAID-1"
 
 msgid "RAID-1 Maintenance"
-msgstr ""
+msgstr "RAID-1 Vzdrževanje"
 
 msgid "RAID-5"
-msgstr ""
+msgstr "RAID-5"
 
 msgid "RAID-5 Maintenance"
-msgstr ""
+msgstr "RAID-5 Vzdrževanje"
 
 msgid "RAID-Z1"
-msgstr ""
+msgstr "RAID-Z1"
 
 msgid "RAID-Z1 should have 3, 5, or 9 disks in each vdev."
 msgstr ""
 
 msgid "RAID-Z2"
-msgstr ""
+msgstr "RAID-Z2"
 
 msgid "RAID-Z2 should have 4, 6, or 10 disks in each vdev."
 msgstr ""
 
 msgid "RAID-Z3"
-msgstr ""
+msgstr "RAID-Z3"
 
 msgid "RAID-Z3 should have 5, 7, or 11 disks in each vdev."
 msgstr ""
@@ -5857,7 +5863,7 @@ msgid "RSYNC log"
 msgstr "RSYNC dnevnik"
 
 msgid "Ramdisk"
-msgstr ""
+msgstr "Ramdisk"
 
 msgid "Read"
 msgstr "Preberi"
@@ -5954,7 +5960,7 @@ msgid "Remaining battery runtime"
 msgstr ""
 
 msgid "Remote Address"
-msgstr ""
+msgstr "Oddaljeni naslov"
 
 msgid "Remote Module (Source)"
 msgstr ""
@@ -6052,7 +6058,7 @@ msgid "Rescan interval"
 msgstr "Interval ponovnega iskanja"
 
 msgid "Reservation"
-msgstr ""
+msgstr "Rezervacija"
 
 msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr ""
@@ -6085,7 +6091,7 @@ msgid "Restore metadata from the given file to the given provider."
 msgstr "Obnovi meta podatke iz dane datoteke, podanemu ponudniku."
 
 msgid "Restricted"
-msgstr ""
+msgstr "Omejeno"
 
 msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
 msgstr ""
@@ -6109,7 +6115,7 @@ msgid "Reverse DNS lookup"
 msgstr "Reverse DNS vpogled"
 
 msgid "Reverse direction"
-msgstr ""
+msgstr "Obrni smer"
 
 msgid "Role"
 msgstr ""
@@ -6163,7 +6169,7 @@ msgid "Rules"
 msgstr "Pravila"
 
 msgid "Run as"
-msgstr ""
+msgstr "Zaženi kot"
 
 msgid "Run now"
 msgstr "Zaženi sedaj"
@@ -6201,10 +6207,10 @@ msgid "SHA256, Verify"
 msgstr ""
 
 msgid "SMB2"
-msgstr ""
+msgstr "SMB2"
 
 msgid "SMB3"
-msgstr ""
+msgstr "SMB3"
 
 msgid ""
 "SMB3 is for recent OS like Windows 10 and 8. SMB2 is for OS like Windows 7 "
@@ -6212,7 +6218,7 @@ msgid ""
 msgstr ""
 
 msgid "SMTP Server"
-msgstr ""
+msgstr "Strežnik SMTP"
 
 msgid "SNMP"
 msgstr "SNMP"
@@ -6227,7 +6233,7 @@ msgid "SSH events"
 msgstr "SSH dogodki"
 
 msgid "SSHD"
-msgstr ""
+msgstr "SSHD"
 
 msgid "SSHD log"
 msgstr "SSHD dnevnik"
@@ -6236,10 +6242,10 @@ msgid "SSID"
 msgstr "SSID"
 
 msgid "STRIPE"
-msgstr ""
+msgstr "STRIPE"
 
 msgid "Samba AD"
-msgstr ""
+msgstr "Samba AD"
 
 msgid "Samba Active Directory Domain Controller"
 msgstr ""
@@ -6261,10 +6267,10 @@ msgstr ""
 "nastavljene vrednosti. (%d privzeto)"
 
 msgid "Sat"
-msgstr ""
+msgstr "sob"
 
 msgid "Saturday"
-msgstr ""
+msgstr "sobota"
 
 msgid "Save"
 msgstr "Shrani"
@@ -6323,7 +6329,7 @@ msgid "Scrub a pool"
 msgstr ""
 
 msgid "Search"
-msgstr ""
+msgstr "Iskanje"
 
 msgid "Search event"
 msgstr ""
@@ -6332,7 +6338,7 @@ msgid "Search for and import all disks found"
 msgstr ""
 
 msgid "Secondary"
-msgstr ""
+msgstr "Drugi"
 
 msgid "Secret"
 msgstr "Geslo"
@@ -6380,7 +6386,7 @@ msgid "Select a date format."
 msgstr "Izberite obliko datuma"
 
 msgid "Select a device"
-msgstr ""
+msgstr "Izberite napravo"
 
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Izberite disk, ki je omogočen za S.M.A.R.T. nadzor."
@@ -6473,7 +6479,7 @@ msgid "Send Now"
 msgstr "Pošlji zdaj"
 
 msgid "Send Test Email"
-msgstr ""
+msgstr "Pošlji testno sporočilo"
 
 msgid "Send a TEST warning email on startup."
 msgstr "Pošlji testno opozorilno e-poštno sporočilo ob zagonu."
@@ -6482,7 +6488,7 @@ msgid "Send now"
 msgstr "Pošlji zdaj"
 
 msgid "Sensitive"
-msgstr ""
+msgstr "Občutljivo"
 
 msgid "Sensor"
 msgstr ""
@@ -6515,13 +6521,13 @@ msgid "Server description. This can usually be left blank."
 msgstr "Opis strežnika. Ponavadi lahko pustite prazno."
 
 msgid "Server information"
-msgstr ""
+msgstr "Podatki o strežniku"
 
 msgid "Server name"
 msgstr "Ime strežnika"
 
 msgid "Server version"
-msgstr ""
+msgstr "Različica strežnika"
 
 msgid "Service"
 msgstr "Storitve"
@@ -6580,7 +6586,7 @@ msgid ""
 "Sets the interval between disk checks to N seconds. The minimum allowed "
 "value is 10."
 msgstr ""
-"Nastavi interval preverjanj trdefa diska na N sekund. Najmanjša dovoljena "
+"Nastavi interval preverjanja trdega diska na N sekund. Najmanjša dovoljena "
 "vrednost je 10."
 
 msgid ""
@@ -6687,22 +6693,22 @@ msgid "SmartTrim"
 msgstr ""
 
 msgid "Snapshot"
-msgstr ""
+msgstr "Posnetek"
 
 msgid "Snapshot Visibility"
 msgstr ""
 
 msgid "Snapshot is locked"
-msgstr ""
+msgstr "Posnetek je zaklenjen"
 
 msgid "Snapshot is marked for deletion"
 msgstr ""
 
 msgid "Snapshot is unlocked"
-msgstr ""
+msgstr "Posnetek je odklenjen"
 
 msgid "Snapshots"
-msgstr ""
+msgstr "Posnetki"
 
 msgid "Sockets"
 msgstr "Vtiči"
@@ -6746,7 +6752,7 @@ msgid "Spanish"
 msgstr "Španščina"
 
 msgid "Spare"
-msgstr ""
+msgstr "Rezervni"
 
 msgid "Sparse"
 msgstr ""
@@ -6822,7 +6828,7 @@ msgid "Standard"
 msgstr "Običajno"
 
 msgid "Standby"
-msgstr ""
+msgstr "V pripravljenost"
 
 msgid ""
 "Standby - Check the device unless it is in SLEEP or STANDBY mode. In these "
@@ -6858,7 +6864,7 @@ msgid "Status report successfully sent."
 msgstr "Poročilo je bilo uspešno poslano."
 
 msgid "Step"
-msgstr ""
+msgstr "Korak"
 
 msgid "Stop"
 msgstr "Stop"
@@ -6888,7 +6894,7 @@ msgid "Store alternate data streams in Extended Attributes"
 msgstr ""
 
 msgid "Strict DLNA"
-msgstr ""
+msgstr "Strogi DLNA"
 
 msgid ""
 "String displayed in the dialog presented to the user when accessing the URL."
@@ -6907,10 +6913,10 @@ msgid "Subnet mask"
 msgstr "Maska omrežja"
 
 msgid "Subsystem"
-msgstr ""
+msgstr "Podsistem"
 
 msgid "Success"
-msgstr ""
+msgstr "Uspešno"
 
 msgid "Successful"
 msgstr "Uspešno"
@@ -6919,10 +6925,10 @@ msgid "Successful."
 msgstr "Uspešno."
 
 msgid "Sun"
-msgstr ""
+msgstr "ned"
 
 msgid "Sunday"
-msgstr ""
+msgstr "nedelja"
 
 msgid "Sunday Monday Tuesday Wednesday Thursday Friday Saturday"
 msgstr "Nedelja Ponedeljek Torek Sreda Četrtek Petek Sobota"
@@ -6937,13 +6943,13 @@ msgid "Swap Information & Status"
 msgstr ""
 
 msgid "Swap Memory"
-msgstr ""
+msgstr "Izmenjevalni pomnilnik"
 
 msgid "Swap disabled"
-msgstr "Izmenljiv prostor je onemogočen"
+msgstr "Izmenjevalni pomnilnik je onemogočen"
 
 msgid "Swap usage"
-msgstr "Uporaba izmenljivega prostora"
+msgstr "Uporaba izmenjevalnega pomnilnika"
 
 msgid "Swedish"
 msgstr "Švedščina"
@@ -6989,13 +6995,13 @@ msgid "System"
 msgstr "Sistem"
 
 msgid "System Information"
-msgstr ""
+msgstr "Podatki o sistemu"
 
 msgid "System Load"
-msgstr ""
+msgstr "Obremenitev sistema"
 
 msgid "System Message"
-msgstr ""
+msgstr "Sistemsko sporočilo"
 
 msgid "System Settings"
 msgstr "Nastavitve sistema"
@@ -7049,16 +7055,16 @@ msgid "TKIP"
 msgstr "TKIP"
 
 msgid "TLS"
-msgstr ""
+msgstr "TLS"
 
 msgid "TLS Server Certificate Check"
 msgstr ""
 
 msgid "TLS mode"
-msgstr ""
+msgstr "TLS način"
 
 msgid "TLS only"
-msgstr ""
+msgstr "Samo TLS"
 
 msgid "Tag"
 msgstr "Oznaka"
@@ -7123,7 +7129,7 @@ msgid "Temperature"
 msgstr "Temperatura"
 
 msgid "Temperature Monitoring"
-msgstr ""
+msgstr "Nadzor temperature"
 
 msgid "Temperature alarm (enabled/disabled)"
 msgstr ""
@@ -7144,7 +7150,7 @@ msgid "Temporary directory to store transcoded files."
 msgstr "Začasni imenik, v katerega se shranijo prekodirane datoteke."
 
 msgid "Test Mode"
-msgstr ""
+msgstr "Testni način"
 
 msgid "Test email"
 msgstr "Testna e-pošta"
@@ -7370,13 +7376,13 @@ msgid ""
 msgstr ""
 
 msgid "The changes could not be applied"
-msgstr ""
+msgstr "Sprememb ni mogoče uporabiti"
 
 msgid "The changes have been applied successfully."
 msgstr "Spremembe so bile uspešno uveljavljene."
 
 msgid "The changes have been saved."
-msgstr ""
+msgstr "Spremembe so bile shranjene."
 
 msgid "The cleartext credentials with which to bind."
 msgstr ""
@@ -7467,12 +7473,14 @@ msgid ""
 "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
 "and 192 for 3DES."
 msgstr ""
+"Privzete dolžine ključev so: 128 za AES, 128 za Blowfish, 128 za Camellia "
+"in192 za 3DES."
 
 msgid "The default time in seconds to display a screen."
 msgstr ""
 
 msgid "The device's IP address."
-msgstr ""
+msgstr "IP naslov naprav"
 
 msgid ""
 "The device(s) in config are different to actual device(s). Please remove the "
@@ -7598,7 +7606,7 @@ msgid ""
 msgstr ""
 
 msgid "The maximum idle time be a number."
-msgstr "Najdaljši čas nedejavnosti mora biti številka."
+msgstr "Najdaljši čas neaktivnosti mora biti številka."
 
 msgid ""
 "The maximum port to allocate for PASV style data connections (0 = use any "
@@ -7677,10 +7685,10 @@ msgid ""
 msgstr ""
 
 msgid "The old password is not correct."
-msgstr ""
+msgstr "Staro geslo ni pravilno."
 
 msgid "The password contains the illegal character ':'."
-msgstr ""
+msgstr "Geslo vsebuje nedovoljeni znak ':'."
 
 msgid "The password encryption protocol to use."
 msgstr ""
@@ -7769,7 +7777,7 @@ msgid "The server is halting now. This may take one minute."
 msgstr "Strežnik se zaustavlja. To lahko traja kakšno minuto."
 
 msgid "The server is rebooting now."
-msgstr ""
+msgstr "Strežnik se zdaj ponovno zaganja."
 
 msgid "The server will reboot after restoring the configuration."
 msgstr ""
@@ -7826,13 +7834,16 @@ msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form."
 msgstr ""
+"Naložena datoteka presega navodilo MAX_FILE_SIZE, ki je bilo določeno v HTML "
+"obrazcu."
 
 msgid ""
 "The uploaded file exceeds the upload_max_filesize directive in php.ini."
 msgstr ""
+"Naložena datoteka presega navodilo upload_max_filesize v datoteki php.ini."
 
 msgid "The uploaded file was only partially uploaded."
-msgstr ""
+msgstr "Datoteka je bila prenešena le delno."
 
 msgid "The user's login shell."
 msgstr ""
@@ -8268,7 +8279,7 @@ msgid "Time Machine"
 msgstr ""
 
 msgid "Time Synchronization"
-msgstr ""
+msgstr "Usklajevanje časa"
 
 msgid "Time before the load will be rebooted"
 msgstr ""
@@ -8308,13 +8319,13 @@ msgid "TitleSpeed"
 msgstr ""
 
 msgid "To Email Address"
-msgstr ""
+msgstr "Na elektronski naslov"
 
 msgid "To e-mail"
 msgstr ""
 
 msgid "To email"
-msgstr ""
+msgstr "Na e-naslov"
 
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
@@ -8548,7 +8559,7 @@ msgid "UPS coldstarts from battery"
 msgstr ""
 
 msgid "UPS disabled"
-msgstr ""
+msgstr "UPS je onemogočen"
 
 msgid "UPS external contact sensors"
 msgstr ""
@@ -8584,7 +8595,7 @@ msgid "UPS watchdog status"
 msgstr ""
 
 msgid "UPnP/DLNA - Fuppes"
-msgstr ""
+msgstr "UPnP/DLNA - Fuppes"
 
 msgid "UPnP/DLNA - MiniDLNA"
 msgstr ""
@@ -8668,7 +8679,7 @@ msgid "Upgrade ZFS and add all supported feature flags on a pool"
 msgstr ""
 
 msgid "Upload"
-msgstr ""
+msgstr "Naloži"
 
 msgid "Upload bandwidth"
 msgstr ""
@@ -8709,7 +8720,7 @@ msgid ""
 msgstr ""
 
 msgid "Use the specified NTP server."
-msgstr ""
+msgstr "Uporabi določen NTP strežnik"
 
 msgid "Use these specials actions for debugging only!"
 msgstr ""
@@ -8758,7 +8769,7 @@ msgid "User ID"
 msgstr ""
 
 msgid "User Setup"
-msgstr ""
+msgstr "Nastavitev uporabnikov"
 
 msgid "User full name."
 msgstr "Uporabnikovo polno ime."
