@@ -1,33 +1,20 @@
-PORTNAME=				bash
-PATCHLEVEL=		46
-PORTVERSION=		4.3.${PATCHLEVEL:S/^0//g}
-PORTREVISION?=	8
-CATEGORIES=			shells
-COMMENT=				The GNU Project's Bourne Again SHell
-MAINTAINER=			zoon1@nas4free.org
+PORTNAME=			bash
+PORTVERSION=		4.4
+PORTREVISION?=	0
+CATEGORIES=		shells
+COMMENT=		GNU Project's Bourne Again SHell
+MAINTAINER=		zoon1@nas4free.org
 
 
-MASTER_SITES=				${MASTER_SITE_GNU:S/$/:bash/} \
-										ftp://ftp.cwru.edu/pub/%SUBDIR%/:faq
-MASTER_SITE_SUBDIR=	${PORTNAME}/:bash,faq
-DISTNAME=						${PORTNAME}-${PORTVERSION:R}
-DISTFILES=					${DISTNAME}${EXTRACT_SUFX}:bash
-DIST_SUBDIR=				${PORTNAME}
+MASTER_SITES=		GNU/${PORTNAME}
+DIST_SUBDIR=		${PORTNAME}
 EXTRACT_ONLY=				${DISTNAME}${EXTRACT_SUFX}
-
-PATCH_SITES=				${MASTER_SITE_GNU} \
-										ftp://ftp.cwru.edu/pub/%SUBDIR%/
-PATCH_SITE_SUBDIR=	${PORTNAME}/${DISTNAME}-patches/
-PATCHFILES!=				/usr/bin/jot -s " " -w \
-										${PORTNAME}${PORTVERSION:R:S/.//g}-%03d \
-										${PATCHLEVEL} 1 ${PATCHLEVEL}
 
 OPTIONS_DEFINE=         IMPLICITCD COLONBREAKSWORDS 
 OPTIONS_DEFAULT=        IMPLICITCD COLONBREAKSWORDS 
 IMPLICITCD_DESC=        Use directory name alone to cd into it 
 COLONBREAKSWORDS_DESC=  Colons break words 
 
-IMPLICITCD_EXTRA_PATCHES=       ${PATCHDIR}/extrapatch-implicitcd
 COLONBREAKSWORDS_EXTRA_PATCHES= ${PATCHDIR}/extrapatch-colonbreakswords
 
 GNU_CONFIGURE=  yes
