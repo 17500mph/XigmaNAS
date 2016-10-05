@@ -626,6 +626,14 @@ function config_write_cache($data) {
 	return TRUE;
 }
 
+function SearchAndRemoveInConfig($needle, &$haystack, $key){
+
+	$index = array_search_ex($needle, $haystack, $key);
+	if ($index !== false) {
+		unset($haystack[$index]);
+	}
+}
+
 // Convert the config file.
 // Return 0 if successful, otherwise 1
 function config_upgrade() {
@@ -1116,6 +1124,19 @@ function config_upgrade() {
 			"value" => "YES",
 			"comment" => "IPMItool Server Management Utility");
 		$config['version'] = "2.5";
+	}
+
+	/* Convert 2.5 -> 2.6 */
+	if ($config['version'] === "2.5") {
+		SearchAndRemoveInConfig('a4bd7970-1c77-43d7-8bc8-7924d9f86077', $config['system']['sysctl']['param'], 'uuid');
+
+		if (!empty($config['system']['sysctl']) && !empty($config['system']['sysctl']['param'])) {
+			$index = array_search_ex("kern.maxfiles", $config['system']['sysctl']['param'], "name");
+			if ($index !== false) {
+			$config['system']['sysctl']['param'][$index]['value'] = "6289573";
+		}
+	}
+		$config['version'] = "2.6";
 	}
 
 	/* XXX Convert 9.5 -> 9.7 (must skip 9.6) */
