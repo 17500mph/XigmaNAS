@@ -1,4 +1,7 @@
 etc/uams
+etc/rc.initial.install1
+etc/rc.initial.install2
+etc/rc.initial.install3
 etc/inc/interfaces.inc
 etc/inc/XMLRPC
 /usr/local/www/css
