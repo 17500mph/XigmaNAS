@@ -1,9 +1,10 @@
-etc/uams
-etc/rc.initial.install1
-etc/rc.initial.install2
-etc/rc.initial.install3
-etc/inc/interfaces.inc
-etc/inc/XMLRPC
+/etc/uams
+/etc/rc.initial.install
+/etc/rc.initial.install1
+/etc/rc.initial.install2
+/etc/rc.initial.install3
+/etc/inc/interfaces.inc
+/etc/inc/XMLRPC
 /usr/local/www/css
 /usr/local/www/images
 /usr/local/www/js
