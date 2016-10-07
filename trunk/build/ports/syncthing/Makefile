@@ -1,6 +1,6 @@
 PORTNAME=		syncthing
 PORTVERSION=	0.14.8
-PORTREVISION=	0
+PORTREVISION=	1
 DISTVERSIONPREFIX= v
 CATEGORIES=	net
 
@@ -10,6 +10,7 @@ COMMENT=	Encrypted file sync tool
 BUILD_DEPENDS=	${LOCALBASE}/bin/go:lang/go
 
 USE_GITHUB=	yes
+GH_SUBDIR=      src/github.com/${PORTNAME}/${PORTNAME}
 USE_RC_SUBR=	syncthing
 # NAS4Free
 #PLIST_FILES=	bin/syncthing
@@ -26,12 +27,6 @@ NO_PKG_REGISTER= yes
 .include <bsd.port.pre.mk>
 
 post-patch:
-	@cd ${WRKSRC} ; ${MKDIR} src/github.com/${PORTNAME}/${PORTNAME} ; \
-		${MV} .gitattributes .gitignore .mailmap AUTHORS CONDUCT.md \
-		CONTRIBUTING.md ISSUE_TEMPLATE.md LICENSE NICKS \
-		PULL_REQUEST_TEMPLATE.md README.md assets build.go build.sh cmd \
-		etc gui lib man script test vendor \
-		src/github.com/${PORTNAME}/${PORTNAME}
 # NAS4Free
 .if ${ARCH} == "i386"
 	# SSE disable patch (run "pkg delete go" before building)
