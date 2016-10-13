@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-09-21 17:31+0000\n"
-"PO-Revision-Date: 2016-09-21 01:10+0000\n"
-"Last-Translator: Pepín <Unknown>\n"
+"PO-Revision-Date: 2016-10-04 19:17+0000\n"
+"Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-10-04 07:23+0000\n"
-"X-Generator: Launchpad (build 18217)\n"
+"X-Launchpad-Export-Date: 2016-10-13 14:05+0000\n"
+"X-Generator: Launchpad (build 18232)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -2263,6 +2263,7 @@ msgstr "Elimina un grupo"
 msgid ""
 "Destroy any snapshots and bookmarks more recent than the one specified."
 msgstr ""
+"Destruir todos los snapshots y marcar como más reciente el especificado."
 
 msgid "Destroyed"
 msgstr "Eliminado"
@@ -3536,7 +3537,7 @@ msgid "Force Operation"
 msgstr "Forzar la operacion"
 
 msgid "Force delete"
-msgstr ""
+msgstr "Borrar (forzado)"
 
 msgid "Force use"
 msgstr "Uasr forzado"
@@ -4089,10 +4090,10 @@ msgid "Import on-disk ZFS config"
 msgstr "Importar la configuración ZFS de los discos"
 
 msgid "Import using GPT ID"
-msgstr ""
+msgstr "Importar usando su ID GPT"
 
 msgid "Import using GPT labels"
-msgstr ""
+msgstr "Importar usando etiquetas GPT"
 
 msgid "In"
 msgstr "Entrantes"
@@ -5825,7 +5826,7 @@ msgid "Please add a new CARP interface first"
 msgstr "Por favor añada primero una interfaz CARP"
 
 msgid "Please add a new Extent first."
-msgstr ""
+msgstr "Por favor añada un extent primero"
 
 msgid "Please add a new Initiator Group first."
 msgstr "Por favor añada primero un Grupo Initiator"
@@ -5879,28 +5880,28 @@ msgid "Pool"
 msgstr "Pool"
 
 msgid "Pool Devices"
-msgstr ""
+msgstr "Dispositivos del Pool"
 
 msgid "Pool Information & Status"
 msgstr "Información y estado del Pool"
 
 msgid "Pool State"
-msgstr ""
+msgstr "Estado del Pool"
 
 msgid "Pool Status"
-msgstr ""
+msgstr "Estado del Pool"
 
 msgid "Pool Version"
-msgstr ""
+msgstr "Versión del  Pool"
 
 msgid "Pool cannot be changed."
-msgstr ""
+msgstr "El Pool no puede ser cambiado."
 
 msgid "Pool is marked for removal"
-msgstr ""
+msgstr "El Pool ha sido marcado para eliminación"
 
 msgid "Pool is protected"
-msgstr ""
+msgstr "El Pool está protegido"
 
 msgid "Pool is unlocked"
 msgstr "Pool esta desbloqueada"
@@ -6060,6 +6061,8 @@ msgid ""
 "Puts the disk into standby mode when the selected amount of time after the "
 "last disk access has been elapsed."
 msgstr ""
+"Poner los discos en Standby cuando pase el tiempo marcado desde la ultima "
+"vez que fue accedido."
 
 msgid "Queue Depth"
 msgstr "Profundidad de cola"
@@ -6116,19 +6119,19 @@ msgid "RAID-0"
 msgstr "RAID-0"
 
 msgid "RAID-0 Maintenance"
-msgstr ""
+msgstr "Mantenimiento RAID-0"
 
 msgid "RAID-1"
 msgstr "RAID-1"
 
 msgid "RAID-1 Maintenance"
-msgstr ""
+msgstr "Mantenimiento RAID-1"
 
 msgid "RAID-5"
 msgstr "RAID-5"
 
 msgid "RAID-5 Maintenance"
-msgstr ""
+msgstr "Mantenimiento RAID-5"
 
 msgid "RAID-Z1"
 msgstr "RAID-Z1"
@@ -6241,7 +6244,7 @@ msgid "Realm"
 msgstr "Dominio"
 
 msgid "Reason Code"
-msgstr ""
+msgstr "Codigo"
 
 msgid "Reason for last transfer to battery (* opaque)"
 msgstr "Razón para la ultma conmutación a batería (* opaque)"
@@ -6328,16 +6331,16 @@ msgid "Removable"
 msgstr "Extraíble"
 
 msgid "Remove ZFS label information from a device"
-msgstr ""
+msgstr "Eliminar la etiqueta ZFS del dispositivo"
 
 msgid "Remove a cache device from a pool"
-msgstr ""
+msgstr "Eliminar el dispositivo de caché del Pool"
 
 msgid "Remove a log device from a pool"
-msgstr ""
+msgstr "Eliminar el dispositivo de log del Pool"
 
 msgid "Remove a spare device from a pool"
-msgstr ""
+msgstr "Eliminar el dispositivo de remplazo del Pool"
 
 msgid "Remove all entries from ARP table"
 msgstr "Borrar todas las entradas de la tabla ARP"
@@ -6455,7 +6458,7 @@ msgid "Role"
 msgstr "Rol"
 
 msgid "Rollback"
-msgstr ""
+msgstr "Deshacer"
 
 msgid "Romanian"
 msgstr "Rumano"
@@ -6582,7 +6585,7 @@ msgid "SSID"
 msgstr "SSID"
 
 msgid "STRIPE"
-msgstr ""
+msgstr "STRIPE"
 
 msgid "Samba AD"
 msgstr "Directorio Activo Samba"
@@ -6668,7 +6671,7 @@ msgid "Scheduled tests"
 msgstr "Test programado"
 
 msgid "Scrub a pool"
-msgstr ""
+msgstr "Revisar el Pool (Scrub)"
 
 msgid "Search"
 msgstr "Buscar..."
@@ -6699,6 +6702,8 @@ msgstr ""
 msgid ""
 "See ZFS volumes & deduplication wiki article BEFORE using this feature."
 msgstr ""
+"Leer el articulo de la wiki acerca de la deduplicación y los volumenes ZFS, "
+"antes de usar está caracteristica."
 
 msgid "See attribute E8."
 msgstr "Ver el atributo E8."
@@ -6743,10 +6748,10 @@ msgid "Select a log device"
 msgstr "Seleccionar un dispositivo de log"
 
 msgid "Select a pool"
-msgstr ""
+msgstr "Seleccionar Pool"
 
 msgid "Select a pool device"
-msgstr ""
+msgstr "Seleccionar dispositivo del Pool"
 
 msgid "Select a spare device"
 msgstr "Seleccione un dispositivo de reserva"
@@ -6773,10 +6778,10 @@ msgstr ""
 "formatearlo con"
 
 msgid "Select pool device"
-msgstr ""
+msgstr "Seleccionar dispositivo del Pool"
 
 msgid "Select pools"
-msgstr ""
+msgstr "Seleccionar Pools"
 
 msgid "Select read balance algorithm."
 msgstr "Seleccionar algoritmo de lectura balance"
@@ -7063,10 +7068,10 @@ msgid "Snapshot is locked"
 msgstr "Instantáneas bloqueadas"
 
 msgid "Snapshot is marked for deletion"
-msgstr ""
+msgstr "El Snapshot ha sido marcado para borrado."
 
 msgid "Snapshot is unlocked"
-msgstr ""
+msgstr "Snatshot desbloqueado"
 
 msgid "Snapshots"
 msgstr "Snapshot - Instantaneas"
@@ -7285,7 +7290,7 @@ msgid "Subsystem"
 msgstr "Subsistema"
 
 msgid "Success"
-msgstr ""
+msgstr "Correcto"
 
 msgid "Successful"
 msgstr "Correcto"
@@ -7429,7 +7434,7 @@ msgid "TLS"
 msgstr "TLS"
 
 msgid "TLS Server Certificate Check"
-msgstr ""
+msgstr "Comprobación de certificado de servidor TLS"
 
 msgid "TLS mode"
 msgstr "Modo TLS"
