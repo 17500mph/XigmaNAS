@@ -4,7 +4,7 @@
 # Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
 #
-# websrv setup
+# websrv script
 #
 
 # PROVIDE: websrv
@@ -90,6 +90,7 @@ server.modules = (
   "mod_auth",
   "mod_expire",
   "mod_cgi",
+  "mod_fastcgi",
   "mod_setenv",
   "mod_rewrite",
   "mod_redirect",
@@ -172,8 +173,28 @@ mimetype.assign             = (
 url.access-deny = ( "~", ".inc", ".websrv_htpasswd" )
 static-file.exclude-extensions = ( ".php", ".pl", ".fcgi" )
 server.pid-file = "${pidfile}"
-cgi.assign = (".php" => "/usr/local/bin/php-cgi-websrv")
+# cgi.assign = (".php" => "/usr/local/bin/php-cgi-websrv")
 server.tag = "webserv"
+
+# FastCGI
+fastcgi.server = ( ".php" =>
+  (( "socket" => "/var/tmp/php-wsrv.socket",
+        "bin-path" => "/usr/local/bin/php-cgi",
+        "bin-environment" => (
+            "PHP_FCGI_CHILDREN" => "2",
+            "PHP_FCGI_MAX_REQUESTS" => "500"
+        ),
+        "bin-copy-environment" => (
+            "PATH", "SHELL", "USER" ),
+        "broken-scriptfilename" => "enable",
+        "min-procs" => 1,
+        "max-procs" => 2,
+        "max-load-per-proc" => 90,
+        "idle-timeout" => 360,
+        "allow-x-send-file" => "enable"
+    )
+  )
+)
 EOF
 
 	# Set temporary directory
