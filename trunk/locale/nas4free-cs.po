@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-09-21 17:31+0000\n"
-"PO-Revision-Date: 2016-10-05 21:35+0000\n"
+"PO-Revision-Date: 2016-10-18 21:36+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-10-13 14:06+0000\n"
+"X-Launchpad-Export-Date: 2016-10-19 13:24+0000\n"
 "X-Generator: Launchpad (build 18232)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -503,7 +503,7 @@ msgid "Add a spare device to a pool"
 msgstr "Přidat do fondu úložišť zařízení pro pohotovostní náhradu"
 
 msgid "Add a virtual device to a pool"
-msgstr ""
+msgstr "Přidat virtuální zařízení do fondu"
 
 msgid "Add additional scheduled self-test."
 msgstr "Přidat další naplánovaný samotest."
@@ -652,6 +652,8 @@ msgid ""
 "After you click \"Save\" you must reboot the server to make the changes take "
 "effect."
 msgstr ""
+"Poté co kliknete na „Uložit“ bude třeba server restartovat, aby se provedené "
+"změny uplatnily."
 
 msgid "Age"
 msgstr "Stáří"
@@ -921,7 +923,7 @@ msgstr ""
 "tvořeno jednou nebo více úložnými jednotkami."
 
 msgid "Attach a data device"
-msgstr ""
+msgstr "Připojit datové zařízení"
 
 msgid "Attach a log device"
 msgstr ""
@@ -938,6 +940,9 @@ msgid ""
 "NTFS can result in unpredictable results, file corruption and the loss of "
 "data!"
 msgstr ""
+"Pokus o použití ostatních souborových systémů, jako například FAT, FAT32, "
+"EXT2, EXT3, EXT4 nebo NTFS může vést k nepředvídatelným výsledkům, poškození "
+"a ztrátě dat!"
 
 msgid "Audio"
 msgstr "Zvuk"
@@ -1168,7 +1173,7 @@ msgid "Bridge"
 msgstr "Síťový most"
 
 msgid "Bring a device online"
-msgstr ""
+msgstr "Uvést zařízení do provozu"
 
 msgid "Broadcast interval"
 msgstr "Interval všesměrového vysílání"
@@ -3270,13 +3275,13 @@ msgid "Export"
 msgstr "Exportovat"
 
 msgid "Export a pool from the system"
-msgstr ""
+msgstr "Exportovat fond ze systému"
 
 msgid "Export all the directories in the specified path."
 msgstr "Exportovat všechny složky v zadaném umístění."
 
 msgid "Exported"
-msgstr ""
+msgstr "Exportováno"
 
 msgid "Extended Attributes"
 msgstr "Rozšířené atributy"
@@ -4077,7 +4082,7 @@ msgid "Import using GPT ID"
 msgstr ""
 
 msgid "Import using GPT labels"
-msgstr ""
+msgstr "Importovat s použitím GPT popisek"
 
 msgid "In"
 msgstr "Do"
@@ -5325,7 +5330,7 @@ msgid "No pool was found."
 msgstr "Nebyl nalezen žádný fond."
 
 msgid "No pools have been selected"
-msgstr ""
+msgstr "Nebyly vybrány žádné fondy"
 
 msgid "No softraid-formatted disks available."
 msgstr "Nejsou k dispozici žádné disky, formátované na softraid"
@@ -5337,10 +5342,10 @@ msgid "No suitable pools found."
 msgstr "Nebyla nalezena žádná vhodná virtuální zařízení."
 
 msgid "No suitable virtual devices found."
-msgstr ""
+msgstr "Nebyla nalezena žádná vhodná virtuální zařízení."
 
 msgid "No virtual devices have been selected"
-msgstr ""
+msgstr "Nebyla vybrána žádná virtuální zařízení"
 
 msgid "Noallow - Only inherit deny entries"
 msgstr ""
@@ -5839,7 +5844,7 @@ msgid "Please add a new Auth Group first"
 msgstr ""
 
 msgid "Please add a new CARP interface first"
-msgstr ""
+msgstr "Nejprve přidejte nové CARP rozhraní"
 
 msgid "Please add a new Extent first."
 msgstr "Nejprve je třeba přidat úložnou jednotku."
@@ -5902,7 +5907,7 @@ msgid "Pool Information & Status"
 msgstr "Fond – informace a stav"
 
 msgid "Pool State"
-msgstr ""
+msgstr "Sav fondu"
 
 msgid "Pool Status"
 msgstr ""
@@ -6354,13 +6359,13 @@ msgid "Remove ZFS label information from a device"
 msgstr ""
 
 msgid "Remove a cache device from a pool"
-msgstr ""
+msgstr "Odebrat zařízení-mezipaměť z fondu"
 
 msgid "Remove a log device from a pool"
 msgstr ""
 
 msgid "Remove a spare device from a pool"
-msgstr ""
+msgstr "Odebrat pohotovostní náhradní zařízení z fondu"
 
 msgid "Remove all entries from ARP table"
 msgstr "Odstranit všechny záznamy z ARP tabulky"
@@ -6695,7 +6700,7 @@ msgid "Search event"
 msgstr "Vyhledat událost"
 
 msgid "Search for and import all disks found"
-msgstr ""
+msgstr "Vyhledat a importovat veškeré nalezené disky"
 
 msgid "Secondary"
 msgstr "Vedlejší"
@@ -6742,10 +6747,10 @@ msgstr ""
 "zabezpečené)."
 
 msgid "Select a cache device"
-msgstr ""
+msgstr "Vyberte zařízení pro mezipaměť"
 
 msgid "Select a data device"
-msgstr ""
+msgstr "Vyberte zařízení pro data"
 
 msgid "Select a date format."
 msgstr "Vyberte formát datumu."
@@ -6757,10 +6762,10 @@ msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Vyberte disk, který má zapnuté dohledování hodnot SMART diagnostiky."
 
 msgid "Select a log device"
-msgstr ""
+msgstr "Vyberte zařízení pro záznamy událostí"
 
 msgid "Select a pool"
-msgstr ""
+msgstr "Vyberte fond"
 
 msgid "Select a pool device"
 msgstr ""
@@ -6781,7 +6786,7 @@ msgid "Select mount point where to create the swap file."
 msgstr "Vyberte přípojný bod, ve kterém má být vytvořen odkládací soubor."
 
 msgid "Select one or more spare devices"
-msgstr ""
+msgstr "Vyberte jedno a více zařízení pro pohotovostní náhradu"
 
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
@@ -6793,7 +6798,7 @@ msgid "Select pool device"
 msgstr ""
 
 msgid "Select pools"
-msgstr ""
+msgstr "Vyberte fondy"
 
 msgid "Select read balance algorithm."
 msgstr "Vyberte vyvažovací algoritmus pro čtení."
@@ -7131,7 +7136,7 @@ msgid "Spanish"
 msgstr "Španělština"
 
 msgid "Spare"
-msgstr ""
+msgstr "Pohotovostní náhrada"
 
 msgid "Sparse"
 msgstr "Řídké"
@@ -9276,7 +9281,7 @@ msgid "Unformated"
 msgstr "Nenaformátované"
 
 msgid "Uninitialized"
-msgstr ""
+msgstr "Neinicializováno"
 
 msgid "Uninstall package"
 msgstr "Odinstalovat balíček"
@@ -9335,7 +9340,7 @@ msgid "Upgrade Firmware"
 msgstr "Aktualizovat firmware"
 
 msgid "Upgrade ZFS and add all supported feature flags on a pool"
-msgstr ""
+msgstr "Aktualizovat ZFS a přidat fondu veškeré podporované příznaky funkcí"
 
 msgid "Upload"
 msgstr "Nahrát"
@@ -9915,7 +9920,7 @@ msgid "ZFS Dataset Properties"
 msgstr "Vlastnosti ZFS datové sady"
 
 msgid "ZFS Pool Tools"
-msgstr ""
+msgstr "Nástroje pro ZFS fondy"
 
 msgid "ZFS Snapshot Information & Status"
 msgstr "ZFS zachycený stav – informace a stav"

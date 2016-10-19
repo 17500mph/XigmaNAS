@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-09-21 17:31+0000\n"
-"PO-Revision-Date: 2016-10-04 19:17+0000\n"
+"PO-Revision-Date: 2016-10-15 17:19+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-10-13 14:05+0000\n"
+"X-Launchpad-Export-Date: 2016-10-19 13:24+0000\n"
 "X-Generator: Launchpad (build 18232)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -6347,7 +6347,7 @@ msgstr "Borrar todas las entradas de la tabla ARP"
 
 #, php-format
 msgid "Remove the %s first before proceeding."
-msgstr ""
+msgstr "Borrar %s primero, antes de proceder."
 
 msgid "Replace Battery UPS"
 msgstr "Remplazar Batería del SAI"
@@ -6909,6 +6909,8 @@ msgid ""
 "Set the Read and Execute bits permission for Others (Access Restrictions | "
 "Mode) for the mount point %s in %s and hit Save in order to take them effect."
 msgstr ""
+"Marcar el bit de lectura y ejecución de \"otros\" (Access Restrictions | "
+"Mode) para el punto de montaje %s en %s y pulse Salvar para que tenga efecto."
 
 msgid "Set the account's primary group to the given group."
 msgstr "Asigne la cuenta primaria de grupo para el grupo dado."
@@ -7135,6 +7137,11 @@ msgid ""
 "of the Helium in the drive. It is a pre-fail attribute that trips once the "
 "drive detects that the internal environment is out of specification."
 msgstr ""
+"Nivel de Helio. El helio según la literatura disponible, permite al disco "
+"funcionar de forma más silenciosa , mas fresca y reduce el consumo. Esto es "
+"el estado del helio en el disco. Es un atributo de pre-fallo que se activa "
+"cuando el disco detecta que la atmosfera en el interior del disco está fuera "
+"de los parametros especificados."
 
 msgid "Specified path is NFSv4 root directory."
 msgstr "La ruta definida es el directorio raíz de NFSv4"
@@ -7177,7 +7184,7 @@ msgstr ""
 "acontecimientos debe suceder para añadir el baneo"
 
 msgid "Specifies the usage of Challenge-Response Authentication."
-msgstr ""
+msgstr "Usar la autentificación Challenge-Response"
 
 msgid "Specifies the username which the service will run as."
 msgstr "Especifica el nombre de usuario con el que el servicio se ejecutará."
@@ -7457,7 +7464,7 @@ msgid "Tag%d (%s)"
 msgstr "Etiqueta%d (%s)"
 
 msgid "Take a device offline"
-msgstr ""
+msgstr "Pone el disco fuera de linea"
 
 msgid "Tap device"
 msgstr "Dispositivo de cinta"
@@ -7530,7 +7537,7 @@ msgstr ""
 "subdirectorio de /mnt"
 
 msgid "Test Mode"
-msgstr ""
+msgstr "Modo Test"
 
 msgid "Test email"
 msgstr "Comprobar e-mail"
@@ -7543,7 +7550,7 @@ msgid "Test email successfully sent."
 msgstr "E-mail de prueba enviado satisfactoriamente"
 
 msgid "Test mode, no command execution"
-msgstr ""
+msgstr "Modo Test, No se ejecutan los comandos."
 
 msgid ""
 "The  deny  option specifies users and groups who are not allowed access to "
@@ -7570,7 +7577,7 @@ msgstr "La dirección IP que representa esta máquina."
 
 #, php-format
 msgid "The MIB '%s' already exists."
-msgstr ""
+msgstr "La MIB %s ya existe."
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -7588,6 +7595,8 @@ msgid ""
 "flash blocks the drive detected since it was first initialized in "
 "manufacturing."
 msgstr ""
+"El nuevo atributo Bloque Flash defectuoso, indica el numero total de bloques "
+"defectuosos en el disco Flash desde que fue fabricado."
 
 msgid "The TCP port must be a valid port number."
 msgstr "El puerto TCP tiene que ser un número de puerto válido."
@@ -7710,12 +7719,15 @@ msgstr "El atributo '%s' es necesario."
 msgid ""
 "The attribute '%s' may only consist of the characters [a-z], [A-Z] and [0-9]."
 msgstr ""
+"El atributo '%s' solo puede contener los caracteres: [a-z], [A-Z] y [0-9]."
 
 #, php-format
 msgid ""
 "The attribute '%s' may only consist of the characters [a-z], [A-Z], [0-9] "
 "and [._-]."
 msgstr ""
+"El atributo '%s' solo puede contener los caracteres: [a-z], [A-Z], [0-9] y "
+"[._-]."
 
 #, php-format
 msgid ""
@@ -7968,7 +7980,7 @@ msgid "The following input errors were detected"
 msgstr "Se ha detectado los siguientes errores de entrada"
 
 msgid "The following services will use AD authentication:"
-msgstr ""
+msgstr "El siguiente servicio usa autentificación AD:"
 
 msgid "The full name contains invalid characters."
 msgstr "El nombre completo contiene caracteres no válidos."
@@ -8114,7 +8126,7 @@ msgid ""
 msgstr "El nombre del RAID debe consistir sólo en caracteres a-z, A-Z, 0-9"
 
 msgid "The name of the pool cannot be changed."
-msgstr ""
+msgstr "El nombre del Pool no puede ser cambiado"
 
 msgid "The name of this virtual device cannot be changed."
 msgstr "El nombre de este dispositivo virtual no se puede cambiar"
@@ -8232,7 +8244,7 @@ msgid "The serial or USB port where your UPS is connected."
 msgstr "El puerto Serie o USB donde está conectado su UPS."
 
 msgid "The serial or USB port where your second UPS is connected."
-msgstr ""
+msgstr "El puerto serie o USB donde la segunda SAI está conectada."
 
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr ""
@@ -8246,10 +8258,10 @@ msgstr ""
 "reiniciado. esto puede tomar unos minutos."
 
 msgid "The server is halting now. This may take one minute."
-msgstr ""
+msgstr "El servidor se está deteniendo. Esto puede durar un poco."
 
 msgid "The server is rebooting now."
-msgstr ""
+msgstr "El servidor está reiniciandose."
 
 msgid "The server will reboot after restoring the configuration."
 msgstr "El servidor se reiniciará después de restaurar la configuración."
