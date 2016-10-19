@@ -181,8 +181,8 @@ fastcgi.server = ( ".php" =>
   (( "socket" => "/var/tmp/php-wsrv.socket",
         "bin-path" => "/usr/local/bin/php-cgi",
         "bin-environment" => (
-            "PHP_FCGI_CHILDREN" => "2",
-            "PHP_FCGI_MAX_REQUESTS" => "500"
+            "PHP_FCGI_CHILDREN" => "5",
+            "PHP_FCGI_MAX_REQUESTS" => "1000"
         ),
         "bin-copy-environment" => (
             "PATH", "SHELL", "USER" ),
@@ -191,7 +191,7 @@ fastcgi.server = ( ".php" =>
         "max-procs" => 2,
         "max-load-per-proc" => 90,
         "idle-timeout" => 360,
-        "allow-x-send-file" => "enable"
+        "x-sendfile" => "enable"
     )
   )
 )
