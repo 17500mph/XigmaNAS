@@ -1826,8 +1826,6 @@ copy_files() {
 			echo "===> Copy istgt-20150713.tar.gz done!"
 			cp -f ${NAS4FREE_SVNDIR}/build/ports/distfiles/fuppes-0.692.tar.gz /usr/ports/distfiles
 			echo "===> Copy fuppes-0.692.tar.gz done!"
-			cp -f ${NAS4FREE_SVNDIR}/build/ports/distfiles/xmd-0.5.tar.gz /usr/ports/distfiles
-			echo "===> Copy xmd-0.5.tar.gz done!"
 
 			# Copy required ports to FreeBSD ports directory.
 			echo;
