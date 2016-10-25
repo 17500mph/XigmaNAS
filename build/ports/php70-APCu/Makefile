@@ -6,7 +6,7 @@ MAINTAINER=	zoon1@nas4free.org
 COMMENT=	APC User Caching
 
 DISTFILES?=
-NO_BUILD?=	        yes
+NO_BUILD?=	         yes
 NO_PKG_REGISTER?=	 yes
 DEPENDS_TARGET=	clean build stage
 
@@ -15,6 +15,7 @@ DEP_STAGEDIR=	${PORTSDIR}/devel/php70-APCu/work/stage
 BUILD_DEPENDS=	${NONEXISTENT}:devel/php70-APCu
 
 do-install:
+# NAS4Free install
 	@${CP} -pv ${FILESDIR}/apcu.ini ${NAS4FREE_ROOTFS}/${PREFIX}/etc/php
 	@${MKDIR} ${NAS4FREE_ROOTFS}${PREFIX}/lib/php/extensions/no-debug-non-zts-20151012
 	${INSTALL_DATA} ${DEP_STAGEDIR}/usr/local/lib/php/20151012/apcu.so ${NAS4FREE_ROOTFS}/${PREFIX}/lib/php/extensions/no-debug-non-zts-20151012
