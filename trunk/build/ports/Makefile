@@ -66,7 +66,6 @@
     SUBDIR += vbox-additions
     SUBDIR += wait_on
     SUBDIR += wol
-    SUBDIR += xmd
     SUBDIR += xmlstarlet
     SUBDIR += zoneinfo
 

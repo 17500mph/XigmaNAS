@@ -436,7 +436,7 @@ add_libs() {
 	done
 
 	# for compatibility
-	install -c -s -v ${NAS4FREE_WORLD}/lib/libreadline.* ${NAS4FREE_ROOTFS}/lib
+	# install -c -s -v ${NAS4FREE_WORLD}/lib/libreadline.* ${NAS4FREE_ROOTFS}/lib
 	install -c -s -v ${NAS4FREE_WORLD}/usr/lib/libgssapi_krb5.so.* ${NAS4FREE_ROOTFS}/usr/lib
 	install -c -s -v ${NAS4FREE_WORLD}/usr/lib/libgssapi_ntlm.so.* ${NAS4FREE_ROOTFS}/usr/lib
 	install -c -s -v ${NAS4FREE_WORLD}/usr/lib/libgssapi_spnego.so.* ${NAS4FREE_ROOTFS}/usr/lib
@@ -580,8 +580,8 @@ create_mfsroot() {
 	mdconfig -d -u ${md2}
 	mdconfig -d -u ${md}
 
-	mkuzip -s ${NAS4FREE_XMD_SEGLEN} $NAS4FREE_WORKINGDIR/mfsroot
-	chmod 644 $NAS4FREE_WORKINGDIR/mfsroot.uzip
+	#mkuzip -s ${NAS4FREE_XMD_SEGLEN} $NAS4FREE_WORKINGDIR/mfsroot
+	#chmod 644 $NAS4FREE_WORKINGDIR/mfsroot.uzip
 	gzip -9kfnv $NAS4FREE_WORKINGDIR/mfsroot
 	if [ "arm" = ${NAS4FREE_ARCH} ]; then
 		mkuzip -s ${NAS4FREE_XMD_SEGLEN} $NAS4FREE_WORKINGDIR/mdlocal
@@ -611,8 +611,8 @@ update_mfsroot() {
 	#[ -f $NAS4FREE_WORKINGDIR/mdlocal.uzip ] && rm -f $NAS4FREE_WORKINGDIR/mdlocal.uzip
 
 	cd $NAS4FREE_WORKINGDIR
-	mkuzip -s ${NAS4FREE_XMD_SEGLEN} $NAS4FREE_WORKINGDIR/mfsroot
-	chmod 644 $NAS4FREE_WORKINGDIR/mfsroot.uzip
+	#mkuzip -s ${NAS4FREE_XMD_SEGLEN} $NAS4FREE_WORKINGDIR/mfsroot
+	#chmod 644 $NAS4FREE_WORKINGDIR/mfsroot.uzip
 	gzip -9kfnv $NAS4FREE_WORKINGDIR/mfsroot
 	#xz -8kv $NAS4FREE_WORKINGDIR/mdlocal
 
@@ -694,8 +694,8 @@ create_image() {
 	echo "===> Mount this virtual disk on $NAS4FREE_TMPDIR"
 	mount /dev/${mdp} $NAS4FREE_TMPDIR
 	echo "===> Copying previously generated MFSROOT file to memory disk"
-	#cp $NAS4FREE_WORKINGDIR/mfsroot.gz $NAS4FREE_TMPDIR
-	cp $NAS4FREE_WORKINGDIR/mfsroot.uzip $NAS4FREE_TMPDIR
+	cp $NAS4FREE_WORKINGDIR/mfsroot.gz $NAS4FREE_TMPDIR
+	#cp $NAS4FREE_WORKINGDIR/mfsroot.uzip $NAS4FREE_TMPDIR
 	cp $NAS4FREE_WORKINGDIR/mdlocal.xz $NAS4FREE_TMPDIR
 	#cp $NAS4FREE_WORKINGDIR/mdlocal.uzip $NAS4FREE_TMPDIR
 	echo "${NAS4FREE_PRODUCTNAME}-${PLATFORM}-${NAS4FREE_VERSION}.${NAS4FREE_REVISION}" > $NAS4FREE_TMPDIR/version
@@ -1243,7 +1243,7 @@ create_full() {
 	echo 'autoboot_delay="3"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 	echo 'isboot_load="YES"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 	echo 'zfs_load="YES"' >> $NAS4FREE_TMPDIR/boot/loader.conf
-	echo 'geom_xmd_load="YES"' >> $NAS4FREE_TMPDIR/boot/loader.conf
+	#echo 'geom_xmd_load="YES"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 
 	# Mellanox ConnectX EN
 	if [ "amd64" == ${NAS4FREE_ARCH} ]; then
