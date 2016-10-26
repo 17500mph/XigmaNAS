@@ -75,13 +75,13 @@ $pgtitle = [gtext('Diagnostics'), gtext('Information'), gtext('Space Used')];
 	    <pre><?php unset($rawdata); exec("/bin/df -h", $rawdata); echo htmlspecialchars(implode("\n", $rawdata));?></pre>
 	  </td>
 	</tr>
-<?php if (file_exists("/sbin/xmdconfig")) { ?>
+<?php if (file_exists("/sbin/mdconfig")) { ?>
 	<?php html_titleline2(gtext("Memory Usage"));?>
 	<tr>
 	  <td>
-	    <pre><?php $xmdconfig_header = "Device  Type       Size Comp  Level    Ratio (compressed/allocated/uncompressed)"; // don't translate this header. it will be removed later.
-			echo "$xmdconfig_header\n";
-			unset($rawdata); exec("/sbin/xmdconfig -lv", $rawdata); echo htmlspecialchars(implode("\n", $rawdata));?></pre>
+	    <pre><?php $mdconfig_header = "Device  Type      Size"; // don't translate this header. it will be removed later.
+			echo "$mdconfig_header\n";
+			unset($rawdata); exec("/sbin/mdconfig -lv", $rawdata); echo htmlspecialchars(implode("\n", $rawdata));?></pre>
 	  </td>
 	</tr>
 <?php } ?>
