@@ -4,8 +4,6 @@
 # Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
 #
-# $FreeBSD: src/etc/rc
-#
 
 # System startup script run by init on autoboot
 # or after single-user.
@@ -98,7 +96,7 @@ case ${PLATFORM} in
 		fi
 
 		/bin/echo "Creating 2nd memory disk for ${PLATFORM}"
-		md=`/sbin/mdconfig -t swap -s ${MDLOCALSIZE}`
+		md=`/sbin/mdconfig -t malloc -o compress -s ${MDLOCALSIZE}`
 		case ${PLATFORM} in
 			*-liveUSB)
 				root=`/sbin/glabel status -s|/usr/bin/awk '/liveboot/{print $3;exit 0}'`
