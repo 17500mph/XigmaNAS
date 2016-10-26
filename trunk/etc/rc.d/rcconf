@@ -588,8 +588,9 @@ resizepartition()
 	ARCH=`/usr/bin/uname -m`
 	_cfdev=`/bin/cat /etc/cfdevice | sed -e 's/0.*/0/'`
 	_dev="/dev/${_cfdev}"
-    _platform=`/bin/cat /etc/platform`
-	
+	_platform=`/bin/cat /etc/platform`
+
+	echo ""
 	echo "Resize for "${_platform}
 			
 	if [ "${ARCH}" = "arm" -a -f /cf/req_resize ]; then
