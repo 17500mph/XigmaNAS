@@ -105,7 +105,6 @@ fi
 
 # Generate the loader.conf file using by bootloader
 echo "Generate $MINIBSD_DIR/loader.conf"
-#echo 'mfsroot_load="NO"' > $MINIBSD_DIR/loader.conf
 echo 'mfsroot_load="YES"' > $MINIBSD_DIR/loader.conf
 echo 'mfsroot_type="mfs_root"' >> $MINIBSD_DIR/loader.conf
 echo 'mfsroot_name="/mfsroot"' >> $MINIBSD_DIR/loader.conf
@@ -148,19 +147,7 @@ fi
 # iSCSI driver
 echo 'isboot_load="YES"' >> $MINIBSD_DIR/loader.conf
 # preload kernel drivers
-#echo 'opensolaris_load="YES"' >> $MINIBSD_DIR/loader.conf
 echo 'zfs_load="YES"' >> $MINIBSD_DIR/loader.conf
-#echo 'geom_mirror_load="YES"' >> $MINIBSD_DIR/loader.conf
-#echo 'geom_stripe_load="YES"' >> $MINIBSD_DIR/loader.conf
-
-# xmd (disabled)
-#echo 'xmfsroot_load="YES"' >> $MINIBSD_DIR/loader.conf
-#echo 'xmfsroot_type="xmd_root"' >> $MINIBSD_DIR/loader.conf
-#echo 'xmfsroot_name="/mfsroot.uzip"' >> $MINIBSD_DIR/loader.conf
-#echo 'geom_xmd_load="YES"' >> $MINIBSD_DIR/loader.conf
-
-# md (disable if freebsd 11)
-#echo 'geom_md_load="YES"' >> $MINIBSD_DIR/loader.conf
 
 # Xen
 if [ "dom0" == ${NAS4FREE_XARCH} ]; then

@@ -1030,8 +1030,6 @@ etc/pccard_ether
 etc/gettytab
 etc/devd/*
 etc/ssl/openssl.cnf
-####### Add modified devd.conf into /etc
-#etc/devd.conf
 etc/devfs.conf
 etc/dhclient.conf
 etc/disktab
@@ -1039,16 +1037,12 @@ etc/fbtab
 etc/netconfig
 etc/networks
 etc/protocols
-#etc/rc.firewall6
 etc/regdomain.xml
 etc/remote
 etc/rpc
 
 ####### contents of /etc/defaults
 etc/defaults/devfs.rules
-#pccard.conf is not present on /etc/defaults on FreeBSD 8.0
-#Need to check if still usefull
-#etc/defaults/pccard.conf
 etc/defaults/rc.conf
 
 ####### contents of /etc/rc.d

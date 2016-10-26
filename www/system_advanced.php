@@ -201,14 +201,12 @@ function sysctl_tune($mode) {
 
 	$a_mib = array(
 	"kern.maxvnodes"                    =>	3339551,
-	"kern.maxproc"	                    =>  201940,
 	"kern.maxfiles"	                    =>  65536,
-	"kern.maxusers"	                    =>  12620,
 	"kern.ipc.nmbclusters"	            =>  12255534,
 	"kern.ipc.nmbjumbop"	            =>  6127766,
 	"kern.ipc.nmbjumbo9"	            =>  5446902,
 	"kern.ipc.nmbjumbo16"	            =>  4085176,
-	"kern.ipc.maxsockets"	            =>  1042450,
+	"kern.ipc.maxsockets"	            =>  1035072,
 	"kern.ipc.maxsockbuf"	            =>  2097152,
 	"kern.ipc.somaxconn"	            =>  2048,
 	"net.inet.tcp.sendbuf_auto"	    =>  1,
