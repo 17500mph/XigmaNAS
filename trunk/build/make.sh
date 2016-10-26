@@ -1243,7 +1243,6 @@ create_full() {
 	echo 'autoboot_delay="3"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 	echo 'isboot_load="YES"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 	echo 'zfs_load="YES"' >> $NAS4FREE_TMPDIR/boot/loader.conf
-	#echo 'geom_xmd_load="YES"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 
 	# Mellanox ConnectX EN
 	if [ "amd64" == ${NAS4FREE_ARCH} ]; then
@@ -1747,17 +1746,8 @@ use_svn() {
 	cd ${NAS4FREE_SVNDIR}/www && find . \! -iregex ".*/\.svn.*" -print | cpio -pdumv ${NAS4FREE_ROOTFS}/usr/local/www
 	cd ${NAS4FREE_SVNDIR}/conf && find . \! -iregex ".*/\.svn.*" -print | cpio -pdumv ${NAS4FREE_ROOTFS}/conf.default
 
-	# adjust for arm/11-current
-	if [ "arm" = ${NAS4FREE_ARCH} ]; then
-		if [ -f ${NAS4FREE_ROOTFS}/etc/rc.d/initrandom ]; then
-			rm -f ${NAS4FREE_ROOTFS}/etc/rc.d/initrandom
-		fi
-	fi
 	# adjust for dom0
 	if [ "dom0" = ${NAS4FREE_XARCH} ]; then
-		if [ -f ${NAS4FREE_ROOTFS}/etc/rc.d/initrandom ]; then
-			rm -f ${NAS4FREE_ROOTFS}/etc/rc.d/initrandom
-		fi
 		sed -i '' -e "/^xc0/ s/off/on /" ${NAS4FREE_ROOTFS}/etc/ttys
 	fi
 
