@@ -82,7 +82,7 @@ $pgtitle = [gtext('Diagnostics'), gtext('Information'), gtext('Space Used')];
 				<td class="celldata">
 					<?php
 						unset($rawdata);
-						exec('/bin/df -h', $rawdata);
+						exec('/bin/df -hT', $rawdata);
 					?>
 					<pre><?php echo htmlspecialchars(implode("\n", $rawdata));?></pre>
 				</td>
