@@ -268,7 +268,7 @@ if (!isset($noparseconfig) || !$noparseconfig) {
 		if (!file_exists("{$g['conf_path']}/config.xml")) {
 			if (is_booting()) {
 				if (stristr($g['platform'], "livecd") || stristr($g['platform'], "liveusb")) {
-					// Try copying the default config.xml to the floppy disk/USB stick
+					// Try copying the default config.xml to the floppy disk/USB stick media
 					config_unlock();
 					reset_factory_defaults();
 					config_lock();
@@ -276,8 +276,8 @@ if (!isset($noparseconfig) || !$noparseconfig) {
 					echo "\n";
 					echo "*******************************************************************************\n";
 					echo "No XML configuration file found - using factory defaults.\n";
-					echo "Make sure that the configuration floppy disk or USB stick (MSDOS FAT formatted)\n";
-					echo "with the config.xml file is inserted. If it isn't, your configuration changes\n";
+					echo "Make sure that the media for holding the configuration is MSDOS FAT formatted\n";
+					echo "and that the config.xml file is inserted. If it isn't, your configuration changes\n";
 					echo "will be lost on reboot.\n";
 					echo "*******************************************************************************\n";
 					echo "\n";
@@ -1134,9 +1134,20 @@ function config_upgrade() {
 			$index = array_search_ex("kern.maxfiles", $config['system']['sysctl']['param'], "name");
 			if ($index !== false) {
 			$config['system']['sysctl']['param'][$index]['value'] = "6289573";
+			}
 		}
-	}
 		$config['version'] = "2.6";
+	}
+
+	/* Convert 2.6 -> 2.7 */
+	if ($config['version'] === "2.6") {
+	if (is_array($config['system']['loaderconf']['param'])) {
+				$index = array_search_ex('1f7c3fcd-402a-437f-bdab-cd3cb3511ef6', $config['system']['loaderconf']['param'], 'uuid');
+				if (false !== $index) {
+					unset($config['system']['loaderconf']['param'][$index]);
+			}
+		}
+		$config['version'] = "2.7";
 	}
 
 	/* XXX Convert 9.5 -> 9.7 (must skip 9.6) */
