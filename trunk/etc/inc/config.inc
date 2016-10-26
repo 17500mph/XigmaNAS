@@ -1142,7 +1142,7 @@ function config_upgrade() {
 	/* Convert 2.6 -> 2.7 */
 	if ($config['version'] === "2.6") {
 	if (is_array($config['system']['loaderconf']['param'])) {
-				$index = array_search_ex('1f7c3fcd-402a-437f-bdab-cd3cb3511ef6', $config['system']['loaderconf']['param'], 'uuid');
+				$index = array_search_ex('arcsas_load', $config['system']['loaderconf']['param'], 'name');
 				if (false !== $index) {
 					unset($config['system']['loaderconf']['param'][$index]);
 			}
