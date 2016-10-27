@@ -85,13 +85,16 @@ $pgtitle = array(gtext("Help"), gtext("License & Credits"));
             	<td class="listt">
             <p>The following persons have contributed to NAS4Free code:</p>
 	    <div>Daisuke Aoyama (<a href="mailto:aoyama@nas4free.org">aoyama@nas4free.org</a>)<br />
-	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">Developer & Project leader</font></em></div><br />
+	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">Developer</font></em></div><br />
 
 	    <div>Michael Schneider (<a href="mailto:ms49434@nas4free.org">ms49434@nas4free.org</a>)<br />
 	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">Developer</font></em></div><br />
 
 	    <div>Michael Zoon (<a href="mailto:zoon1@nas4free.org">zoon1@nas4free.org</a>)<br />
 	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">Developer & Project leader</font></em></div><br />
+
+	    <div>José Rivera (<a href="mailto:joserprg@gmail.com">joserprg@gmail.com</a>)<br />
+	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">contributor</font></em></div><br />
 
 	    <hr size="1" />
 	    <p>The following persons have contributed to NAS4Free support:</p>
@@ -217,7 +220,6 @@ $pgtitle = array(gtext("Help"), gtext("License & Credits"));
 
 	    <p> MiniDLNA - Media server software, with the aim of being fully compliant with DLNA/UPnP-AV clients. (<a href="https://sourceforge.net/projects/minidlna/" target="_blank">https://sourceforge.net/projects/minidlna</a>)<br />
 	    Copyright &copy; 2008-2015  Justin Maggard. All Rights Reserved.</p>
-
 
 	    <p> mt-daapd - Multithread daapd Apple iTunes server (<a href="http://www.fireflymediaserver.org" target="_blank">http://www.fireflymediaserver.org</a>)<br />
 	    Copyright &copy; 2003 Ron Pedde (<a href="mailto:ron@pedde.com">ron@pedde.com</a>). All Rights Reserved.</p>
