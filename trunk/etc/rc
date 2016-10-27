@@ -83,16 +83,10 @@ case ${PLATFORM} in
 		;;
 	*)
 		# If running from liveCD or embedded, mount the root (ramdisk) in read-write.
-		
-		if [ -e /dev/xmd0 ]; then
-			/sbin/mount -u -o rw,noatime,acls /dev/xmd0 /;
-		
+		if [ "${PLATFORM}" = "bpi-embedded" ]; then
+			/sbin/mount -u -o rw,noatime,acls /dev/md1s1a /;
 		else
-			if [ "${PLATFORM}" = "bpi-embedded" ]; then
-				/sbin/mount -u -o rw,noatime,acls /dev/md1s1a /;
-			else
-				/sbin/mount -u -o rw,noatime,acls /dev/md0 /;
-			fi
+			/sbin/mount -u -o rw,noatime,acls /dev/md0 /;
 		fi
 
 		/bin/echo "Creating 2nd memory disk for ${PLATFORM}"
@@ -130,29 +124,15 @@ case ${PLATFORM} in
 					else
 						echo "swap device is not found"
 					fi
-					if [ -f /boot/kernel/geom_xmd.ko ]; then
-						/sbin/mdconfig -d -u ${md}
-						/sbin/kldload /boot/kernel/geom_xmd.ko 2> /dev/null
-						md=`/sbin/xmdconfig -c 4 -s ${MDLOCALSIZE}`
-					fi
 				else
-					# not use LiveUSB
-					#if [ "${swap}" != "NONE" -a -e "/dev/${swap}" ]; then
-					#	/sbin/swapon /dev/${swap}
-					#	echo "/dev/${swap}" > /etc/swapdevice
-					#fi
-					if [ -f /boot/kernel/geom_xmd.ko ]; then
-						/sbin/mdconfig -d -u ${md}
-						/sbin/kldload /boot/kernel/geom_xmd.ko 2> /dev/null
-						md=`/sbin/xmdconfig -c 4 -s ${MDLOCALSIZE}`
+					if [ "${swap}" != "NONE" -a -e "/dev/${swap}" ]; then
+						/sbin/swapon /dev/${swap}
+						echo "/dev/${swap}" > /etc/swapdevice
 					fi
 				fi
 
 				/sbin/mount -r /dev/${root} /mnt
-				if [ -f /mnt/mdlocal.uzip ]; then
-					#echo "Direct loading: /mnt/mdlocal.uzip"
-					/sbin/xmdconfig -ivu ${md} /mnt/mdlocal.uzip
-				elif [ -f /mnt/mdlocal.xz ]; then
+				if [ -f /mnt/mdlocal.xz ]; then
 					/usr/bin/xz -dcv /mnt/mdlocal.xz | \
 					    /bin/dd of=/dev/${md} bs=1m status=none
 				else
@@ -198,28 +178,15 @@ case ${PLATFORM} in
 					else
 						echo "swap device is not found"
 					fi
-					if [ -f /boot/kernel/geom_xmd.ko ]; then
-						/sbin/mdconfig -d -u ${md}
-						/sbin/kldload /boot/kernel/geom_xmd.ko 2> /dev/null
-						md=`/sbin/xmdconfig -c 4 -s ${MDLOCALSIZE}`
-					fi
 				else
 					if [ "${swap}" != "NONE" -a -e "/dev/${swap}" ]; then
 						/sbin/swapon /dev/${swap}
 						echo "/dev/${swap}" > /etc/swapdevice
 					fi
-					if [ -f /boot/kernel/geom_xmd.ko ]; then
-						/sbin/mdconfig -d -u ${md}
-						/sbin/kldload /boot/kernel/geom_xmd.ko 2> /dev/null
-						md=`/sbin/xmdconfig -c 4 -s ${MDLOCALSIZE}`
-					fi
 				fi
 
 				/sbin/mount -r /dev/${root} /mnt
-				if [ -f /mnt/mdlocal.uzip ]; then
-					#echo "Direct loading: /mnt/mdlocal.uzip"
-					/sbin/xmdconfig -ivu ${md} /mnt/mdlocal.uzip
-				elif [ -f /mnt/mdlocal.xz ]; then
+				if [ -f /mnt/mdlocal.xz ]; then
 					/usr/bin/xz -dcv /mnt/mdlocal.xz | \
 					    /bin/dd of=/dev/${md} bs=1m status=none
 				else

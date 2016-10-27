@@ -45,26 +45,11 @@ PLATFORM=`/bin/cat /etc/platform`
 case "${varmfs}" in
 [Yy][Ee][Ss])
 	if [ ${BOOT_LOWMEM} -ne 0 ]; then
-		if [ -f /boot/kernel/geom_xmd.ko ]; then
-			xmd=`/sbin/xmdconfig -a -s ${varsize} -t lz4 -c 4`
-			#/sbin/newfs -U -t -m2 -o space /dev/${xmd} >/dev/null
-			/sbin/newfs -U -t /dev/${xmd} >/dev/null
-			/sbin/mount -o noatime,acls /dev/${xmd} /var
-			/sbin/xmdconfig -m -c 4 -u ${xmd}
-		else
-			mount_md ${varsize} /var "${varmfs_flags}"
-		fi
+		mount_md ${varsize} /var "${varmfs_flags}"
 	else
 		case ${PLATFORM} in
 		*-embedded)
-			if [ -f /boot/kernel/geom_xmd.ko ]; then
-				xmd=`/sbin/xmdconfig -a -s ${varsize} -t lz4 -c 9`
-				/sbin/newfs -U -t /dev/${xmd} >/dev/null
-				/sbin/mount -o noatime,acls /dev/${xmd} /var
-				/sbin/xmdconfig -m -c 1 -u ${xmd}
-			else
-				mount_md ${varsize} /var "${varmfs_flags}"
-			fi
+			mount_md ${varsize} /var "${varmfs_flags}"
 			;;
 		*)
 			mount_md ${varsize} /var "${varmfs_flags}"
@@ -81,25 +66,11 @@ case "${varmfs}" in
 		rmdir /var/.diskless
 	else
 		if [ ${BOOT_LOWMEM} -ne 0 ]; then
-			if [ -f /boot/kernel/geom_xmd.ko ]; then
-				xmd=`/sbin/xmdconfig -a -s ${varsize} -t lz4 -c 4`
-				/sbin/newfs -U -t /dev/${xmd} >/dev/null
-				/sbin/mount -o noatime,acls /dev/${xmd} /var
-				/sbin/xmdconfig -m -c 4 -u ${xmd}
-			else
-				mount_md ${varsize} /var "${varmfs_flags}"
-			fi
+			mount_md ${varsize} /var "${varmfs_flags}"
 		else
 			case ${PLATFORM} in
 			*-embedded)
-				if [ -f /boot/kernel/geom_xmd.ko ]; then
-					xmd=`/sbin/xmdconfig -a -s ${varsize} -t lz4 -c 9`
-					/sbin/newfs -U -t /dev/${xmd} >/dev/null
-					/sbin/mount -o noatime,acls /dev/${xmd} /var
-					/sbin/xmdconfig -m -c 1 -u ${xmd}
-				else
-					mount_md ${varsize} /var "${varmfs_flags}"
-				fi
+				mount_md ${varsize} /var "${varmfs_flags}"
 				;;
 			*)
 				mount_md ${varsize} /var "${varmfs_flags}"
@@ -111,6 +82,10 @@ case "${varmfs}" in
 	fi
 esac
 
+
+# If we have an empty looking /var, populate it, but only if we have
+# /usr available.  Hopefully, we'll eventually find a workaround, but
+# in realistic diskless setups, we're probably ok.
 case "${populate_var}" in
 [Yy][Ee][Ss])
 	populate_var
