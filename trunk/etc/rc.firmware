@@ -154,7 +154,7 @@ case $1 in
 					/sbin/growfs -y /dev/${CFDEVICE} > /dev/null 2>&1
 				fi
 				msg="Firmware installed successfully."
-				printf "\33[37;44m%s\33[0m\n" "${msg}"
+				printf "\33[37;41m%s\33[0m\n" "${msg}"
 				/usr/bin/logger "UPGRADE: ${msg}"
 			fi
 		fi
@@ -266,7 +266,7 @@ case $1 in
 			/usr/bin/logger "UPGRADE ${msg}"
 		else
 			msg="Firmware installed successfully."
-			printf "\33[37;44m%s\33[0m\n" "${msg}"
+			printf "\33[37;41m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE: ${msg}"
 		fi
 
