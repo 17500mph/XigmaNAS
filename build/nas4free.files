@@ -857,6 +857,9 @@ usr/sbin/wake
 ## zdb - ZFS debugg
 usr/sbin/zdb
 
+## zfsd - ZFS fault management daemon
+usr/sbin/zfsd
+
 ## hostapd -- authenticator for IEEE 802.11 networks
 usr/sbin/hostapd
 
@@ -978,9 +981,10 @@ usr/share/locale/en_US.UTF-8/
 ####### contents of /usr/lib
 # PAM libraries
 usr/lib/pam_*.so.*
-
-# Casper libraries
 usr/lib/libcasper.so
+
+####### contents of /lib/casper
+lib/casper/libcap_*.so
 
 # SNMP modules
 usr/lib/snmp_hostres.so.*:usr/lib/snmp_hostres.so
@@ -997,6 +1001,8 @@ lib/geom/geom_*.so
 # zfs tools
 lib/libzfs*.so.*
 lib/libzpool*.so.*
+# libdevdctl - A C++ library that helps devd clients process events
+usr/lib/libdevctl.so.*
 
 # For packages and shelltips only
 lib/libulog.so.0
@@ -1072,6 +1078,7 @@ etc/rc.d/power_profile
 etc/rc.d/random
 etc/rc.d/securelevel
 etc/rc.d/swap
+etc/rc.d/zfsd
 
 ####### contents of /usr/share/snmp/defs
 usr/share/snmp/defs/atm_freebsd.def
