@@ -34,26 +34,33 @@
 // Configure page permission
 $pgperm['allowuser'] = TRUE;
 
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Help"), gtext("Release Notes"));
+$pgtitle = [gtext('Help'), gtext('Release Notes')];
 ?>
-<?php include("fbegin.inc");?>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td class="tabcont">
-			<table width="100%" border="0" cellspacing="0" cellpadding="0">
-				<?php html_titleline(gtext("Release Notes"));?>
-				<tr>
-					<td class="listt">
-						<div>
-							<textarea style="width: 98%;" id="content" name="content" class="listcontent" cols="10" rows="42" readonly="readonly"><?php unset($lines); exec("/bin/cat {$g['www_path']}/CHANGES", $lines); foreach ($lines as $line) { echo htmlspecialchars($line)."\n"; }?></textarea>
-						</div>
-					</td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-</table>
-<?php include("fend.inc");?>
+<?php include 'fbegin.inc';?>
+<table id="area_data"><tbody><tr><td id="area_data_frame">
+	<table id="area_data_settings">
+		<colgroup>
+			<col id="area_data_settings_col_tag">
+			<col id="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+			<?php html_titleline2(gtext('Release Notes'));?>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="celltag"><?=gtext('Information');?></td>
+				<td class="celldata">
+					<?php 
+						unset($rawdata);
+						exec("/bin/cat {$g['www_path']}/CHANGES", $rawdata);
+					?>
+					<pre><?php echo htmlspecialchars(implode("\n", $rawdata));?></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</td></tr></tbody></table>
+<?php include 'fend.inc';?>
