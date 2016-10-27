@@ -1,18 +1,19 @@
-NAS4Free 11.0.0.3 - Beta
-------------------------
+NAS4Free 11.0.0.3 - Sayyadina
+-----------------------------
 Changes:
 - Upgrade to FreeBSD 11.0-RELEASE-P2.
 - Upgrade virtualbox-ose to 5.1.8.
+- Changes XMD driver has been removed. 
 
 Fixes:
 
 
 Permanent restrictions:
-- It is not possible to use virtualbox-ose on 32-bits nas4free, 64-bits only feature.
+- No x86 versions of the NAS4Free 11 series will be made, continue 10.3 series than.
 - It is not possible to format a SoftRAID disk with MSDOS FAT16/32.
 - It is not possible to encrypt a disk partition, only complete disks are supported.
 - AFP shares with TimeMachine support are limited to max. 4 shares.
-- iperf3 is not backwards compatible with iperf2.x. so you might also upgrade your client.
+- Tool iperf3 is not backwards compatible with iperf2.x. you must upgrade your client.
 
 Known bugs:
 - If DHCP for IPv4 is used, the IPv6 statically configured DNS server will be
