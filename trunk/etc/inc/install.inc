@@ -1085,7 +1085,7 @@ function install_detect_installation($mode, &$devinfo) {
 				// Check install mode
 				switch ($mode) {
 					case 'embedded':
-						if (file_exists("{$mnt_cf_disk}/mfsroot.uzip")
+						if (file_exists("{$mnt_cf_disk}/mfsroot.gz")
 						   && !file_exists("{$mnt_cf_disk}/{$imgfile}")) {
 							$result = 0;
 						}
@@ -1121,7 +1121,7 @@ function install_detect_installation($mode, &$devinfo) {
 				// Check install mode
 				switch ($mode) {
 					case 'embedded':
-						if (file_exists("{$mnt_cf_disk}/mfsroot.uzip")
+						if (file_exists("{$mnt_cf_disk}/mfsroot.gz")
 						   && !file_exists("{$mnt_cf_disk}/{$imgfile}")) {
 							$result = 0;
 						}
@@ -1157,7 +1157,7 @@ function install_detect_installation($mode, &$devinfo) {
 				// Check install mode
 				switch ($mode) {
 					case 'embedded':
-						if (file_exists("{$mnt_cf_disk}/mfsroot.uzip")
+						if (file_exists("{$mnt_cf_disk}/mfsroot.gz")
 						   && !file_exists("{$mnt_cf_disk}/{$imgfile}")) {
 							$result = 0;
 						}
