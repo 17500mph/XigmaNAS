@@ -1404,21 +1404,17 @@
 		-->
 	</cron>
 	<rc>
-		<preinit>
-			<!--
-			<cmd></cmd> // Can be defined multiple times.
-			-->
-		</preinit>
-		<postinit>
-			<!--
-			<cmd></cmd> // Can be defined multiple times.
-			-->
-		</postinit>
-		<shutdown>
-			<!--
-			<cmd></cmd> // Can be defined multiple times.
-			-->
-		</shutdown>
+		<!--
+		<param> // can be defined multiple times
+			<uuid>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</uuid>
+			<name></name>
+			<value></value>
+			<typeid>1</typeid>
+			<comment></commant>
+			<enable/>
+			<protected/>
+		</param>
+		-->
 	</rc>
 	<websrv>
 		<protocol>http</protocol>
