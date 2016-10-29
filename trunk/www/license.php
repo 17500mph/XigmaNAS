@@ -94,7 +94,7 @@ $pgtitle = array(gtext("Help"), gtext("License & Credits"));
 	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">Developer & Project leader</font></em></div><br />
 
 	    <div>José Rivera (<a href="mailto:joserprg@gmail.com">joserprg@gmail.com</a>)<br />
-	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">contributor</font></em></div><br />
+	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">Contributor</font></em></div><br />
 
 	    <hr size="1" />
 	    <p>The following persons have contributed to NAS4Free support:</p>
@@ -242,6 +242,9 @@ $pgtitle = array(gtext("Help"), gtext("License & Credits"));
 
 	    <p> XMLStarlet - Command Line XML Toolkit (<a href="http://xmlstar.sourceforge.net" target="_blank">http://xmlstar.sourceforge.net</a>)<br />
 	    Copyright &copy; 2002 Mikhail Grushinskiy. All Rights Reserved.</p>
+
+	    <p> Spinner.js - Command Line XML Toolkit (<a href="https://github.com/fgnass/spin.js" target="_blank">https://github.com/fgnass/spin.js</a>)<br />
+	    Copyright &copy; 2011-2015 Felix Gnass. All Rights Reserved.</p>    
 
 	    <p> sipcalc (<a href="http://www.routemeister.net/projects/sipcalc/" target="_blank">http://www.routemeister.net/projects/sipcalc</a>)<br />
 	    Copyright &copy; 2003 Simon Ekstrand. All Rights Reserved.</p>
