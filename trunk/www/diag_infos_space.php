@@ -34,9 +34,28 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
+function diag_infos_space_ajax() {
+	$cmd = '/bin/df -hT';
+	mwexec2($cmd, $rawdata);
+	return htmlspecialchars(implode("\n", $rawdata));
+}
+if (is_ajax()) {
+	$status = diag_infos_space_ajax();
+	render_ajax($status);
+}
 $pgtitle = [gtext('Diagnostics'), gtext('Information'), gtext('Space Used')];
 ?>
-<?php include('fbegin.inc');?>
+<?php include 'fbegin.inc';?>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+	var gui = new GUI;
+	gui.recall(0, 5000, 'diag_infos_space.php', null, function(data) {
+		$('#area_refresh').text(data.data);
+	});
+});
+//]]>
+</script>
 <table id="area_navigator"><tbody>
 	<tr>
 		<td class="tabnavtbl">
@@ -80,14 +99,10 @@ $pgtitle = [gtext('Diagnostics'), gtext('Information'), gtext('Space Used')];
 			<tr>
 				<td class="celltag"><?=gtext('Information');?></td>
 				<td class="celldata">
-					<?php
-						unset($rawdata);
-						exec('/bin/df -hT', $rawdata);
-					?>
-					<pre><?php echo htmlspecialchars(implode("\n", $rawdata));?></pre>
+					<pre><span id="area_refresh"></span></pre>
 				</td>
 			</tr>
 		</tbody>
 	</table>
 </td></tr></tbody></table>
-<?php include('fend.inc');?>
+<?php include 'fend.inc';?>
