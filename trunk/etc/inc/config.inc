@@ -1141,13 +1141,65 @@ function config_upgrade() {
 
 	/* Convert 2.6 -> 2.7 */
 	if ($config['version'] === "2.6") {
-	if (is_array($config['system']['loaderconf']['param'])) {
-				$index = array_search_ex('arcsas_load', $config['system']['loaderconf']['param'], 'name');
-				if (false !== $index) {
-					unset($config['system']['loaderconf']['param'][$index]);
+		if (is_array($config['system']['loaderconf']['param'])) {
+			$index = array_search_ex('arcsas_load', $config['system']['loaderconf']['param'], 'name');
+			if (false !== $index) {
+				unset($config['system']['loaderconf']['param'][$index]);
 			}
 		}
 		$config['version'] = "2.7";
+	}
+	if ($config['version'] === "2.7") {
+		// convert command scripts
+		if(!(isset($config['rc']) && is_array($config['rc']))) {
+			$config['rc'] = [];
+		}
+		if(!(isset($config['rc']['param']) && is_array($config['rc']['param']))) {
+			$config['rc']['param'] = [];
+		}
+		if(isset($config['rc']['preinit']) && isset($config['rc']['preinit']['cmd']) && isarray($config['rc']['preinit']['cmd'])) {
+			foreach($config['rc']['preinit']['cmd'] as $cmd) {
+				$config['rc']['param'][] = [
+					'uuid' => uuid(),
+					'name' => '',
+					'value' => $cmd,
+					'comment' => '',
+					'typeid' => 1,
+					'enabled' => true,
+					'protected' => false,
+				];
+			}
+			unset($config['rc']['preinit']);
+		}
+		if(isset($config['rc']['postinit']) && isset($config['rc']['postinit']['cmd']) && isarray($config['rc']['postinit']['cmd'])) {
+			foreach($config['rc']['postinit']['cmd'] as $cmd) {
+				$config['rc']['param'][] = [
+					'uuid' => uuid(),
+					'name' => '',
+					'value' => $cmd,
+					'comment' => '',
+					'typeid' => 2,
+					'enabled' => true,
+					'protected' => false,
+				];
+			}
+			unset($config['rc']['postinit']);
+		}
+		if(isset($config['rc']['shutdown']) && isset($config['rc']['shutdown']['cmd']) && isarray($config['rc']['shutdown']['cmd'])) {
+			foreach($config['rc']['shutdown']['cmd'] as $cmd) {
+				$config['rc']['param'][] = [
+					'uuid' => uuid(),
+					'name' => '',
+					'value' => $cmd,
+					'comment' => '',
+					'typeid' => 3,
+					'enabled' => true,
+					'protected' => false,
+				];
+			}
+			unset($config['rc']['shutdown']);
+		}
+		$config['version'] = "2.8";
 	}
 
 	/* XXX Convert 9.5 -> 9.7 (must skip 9.6) */

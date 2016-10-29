@@ -1,6 +1,6 @@
 <?php
 /*
-	system_rc.php
+	system_rc_sort.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
@@ -35,9 +35,8 @@ require 'auth.inc';
 require 'guiconfig.inc';
 
 $sphere_scriptname = basename(__FILE__);
-$sphere_scriptname_child = 'system_rc_edit.php';
 $sphere_header = 'Location: '.$sphere_scriptname;
-$sphere_header_parent = $sphere_header;
+$sphere_header_parent = 'Location: system_rc.php';
 $sphere_notifier = 'rc';
 $sphere_notifier_processor = 'rc_process_updatenotification';
 $sphere_array = [];
@@ -70,131 +69,48 @@ $img_path = [
 ];
 
 // sunrise: verify if setting exists, otherwise run init tasks
-if(!(isset($config['rc']) && is_array($config['rc']))) {
+if (!(isset($config['rc']) && is_array($config['rc']))) {
 	$config['rc'] = [];
 }
-if(!(isset($config['rc']['param']) && is_array($config['rc']['param']))) {
+if (!(isset($config['rc']['param']) && is_array($config['rc']['param']))) {
 	$config['rc']['param'] = [];
 }
 $sphere_array = &$config['rc']['param'];
 
-if($_POST) {
-	if(isset($_POST['apply']) && $_POST['apply']) {
-		$retval = 0;
-		$retval |= updatenotify_process($sphere_notifier, $sphere_notifier_processor);
-		$savemsg = get_std_save_message($retval);
-		if($retval == 0) {
-			updatenotify_delete($sphere_notifier);
-		}
-		header($sphere_header);
-		exit;
-	}
-	if(isset($_POST['delete_selected_rows']) && $_POST['delete_selected_rows']) {
-		$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
-		foreach ($checkbox_member_array as $checkbox_member_record) {
-			if(false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
-				$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index]['uuid']);
-				switch ($mode_updatenotify) {
-					case UPDATENOTIFY_MODE_NEW:
-						updatenotify_clear($sphere_notifier, $sphere_array[$index]['uuid']);
-						updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY_CONFIG, $sphere_array[$index]['uuid']);
-						break;
-					case UPDATENOTIFY_MODE_MODIFIED:
-						updatenotify_clear($sphere_notifier, $sphere_array[$index]['uuid']);
-						updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY, $sphere_array[$index]['uuid']);
-						break;
-					case UPDATENOTIFY_MODE_UNKNOWN:
-						updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY, $sphere_array[$index]['uuid']);
-						break;
+if ($_POST) {
+	if(isset($_POST['Submit'])) {
+		if($_POST[$checkbox_member_name] && is_array($_POST[$checkbox_member_name])) {
+			$a_param =[];
+			foreach($_POST[$checkbox_member_name] as $r_member) {
+				if(is_string($r_member)) {
+					if(false !== ($index = array_search_ex($r_member, $sphere_array, 'uuid'))) {
+						$a_param[] = $sphere_array[$index];
+					}
 				}
 			}
-		}
-		header($sphere_header);
-		exit;
-	}
-}
-function rc_process_updatenotification($mode, $data) {
-	global $config;
-	$retval = 0;
-	switch ($mode) {
-		case UPDATENOTIFY_MODE_NEW:
-		case UPDATENOTIFY_MODE_MODIFIED:
+			$sphere_array = $a_param;
 			write_config();
-			break;
-		case UPDATENOTIFY_MODE_DIRTY:
-		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
-			if(is_array($config['rc']['param'])) {
-				if(false !== ($index = array_search_ex($data, $config['rc']['param'], 'uuid'))) {
-					unset($config['rc']['param'][$index]);
-					write_config();
-				}
-			}
-			break;
+		}
+		header($sphere_header_parent);
+		exit;
 	}
-	return $retval;
 }
 
-$pgtitle = [gtext('System'), gtext('Advanced'), gtext('Command scripts')];
+$pgtitle = [gtext('System'), gtext('Advanced'), gtext('Command scripts'), gtext('Sort')];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
-	// Init action buttons
-	$("#delete_selected_rows").click(function () {
-		return confirm('<?=$gt_selection_delete_confirm;?>');
-	});
-	// Disable action buttons.
-	disableactionbuttons(true);
-	// Init toggle checkbox
-	$("#togglemembers").click(function() {
-		togglecheckboxesbyname(this, "<?=$checkbox_member_name;?>[]");
-	});
-	// Init member checkboxes
-	$("input[name='<?=$checkbox_member_name;?>[]").click(function() {
-		controlactionbuttons(this, '<?=$checkbox_member_name;?>[]');
-	});
 	// Init spinner onsubmit()
 	$("#iform").submit(function() { spinner(); });
 	// Init move row capability
+	$('#system_rc_list img.move').click(function() {
+		var row = $(this).closest('table').closest('tr');
+		if ($(this).hasClass('up')) row.prev().before(row);
+		if ($(this).hasClass('dn')) row.next().after(row);
+	});
 });
-function disableactionbuttons(ab_disable) {
-	var ab_element;
-	ab_element = document.getElementById('delete_selected_rows'); if ((ab_element != null) && (ab_element.disabled != ab_disable)) { ab_element.disabled = ab_disable; }
-}
-function togglecheckboxesbyname(ego, triggerbyname) {
-	var a_trigger = document.getElementsByName(triggerbyname);
-	var n_trigger = a_trigger.length;
-	var ab_disable = true;
-	var i = 0;
-	for (; i < n_trigger; i++) {
-		if (a_trigger[i].type == 'checkbox') {
-			if (!a_trigger[i].disabled) {
-				a_trigger[i].checked = !a_trigger[i].checked;
-				if (a_trigger[i].checked) {
-					ab_disable = false;
-				}
-			}
-		}
-	}
-	if (ego.type == 'checkbox') { ego.checked = false; }
-	disableactionbuttons(ab_disable);
-}
-function controlactionbuttons(ego, triggerbyname) {
-	var a_trigger = document.getElementsByName(triggerbyname);
-	var n_trigger = a_trigger.length;
-	var ab_disable = true;
-	var i = 0;
-	for (; i < n_trigger; i++) {
-		if (a_trigger[i].type == 'checkbox') {
-			if (a_trigger[i].checked) {
-				ab_disable = false;
-				break;
-			}
-		}
-	}
-	disableactionbuttons(ab_disable);
-}
 //]]>
 </script>
 <table id="area_navigator"><tbody>
@@ -215,14 +131,14 @@ function controlactionbuttons(ego, triggerbyname) {
 </table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
 	<?php
-		if(!empty($savemsg)) {
+		if (!empty($savemsg)) {
 			print_info_box($savemsg);
 		} else {
-			if(file_exists($d_sysrebootreqd_path)) {
+			if (file_exists($d_sysrebootreqd_path)) {
 				print_info_box(get_std_save_message(0));
 			}
 		}
-		if(updatenotify_exists($sphere_notifier)) { print_config_change_box(); } 
+		if (updatenotify_exists($sphere_notifier)) { print_config_change_box(); } 
 	?>
 	<table id="area_data_selection">
 		<colgroup>
@@ -234,9 +150,9 @@ function controlactionbuttons(ego, triggerbyname) {
 			<col style="width:10%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Overview'), 6);?>
+			<?php html_titleline2(gtext('Sort'), 6);?>
 			<tr>
-				<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></th>
+				<th class="lhelc">&nbsp;</th>
 				<th class="lhell"><?=gtext('Name');?></th>
 				<th class="lhell"><?=gtext('Command');?></th>
 				<th class="lhell"><?=gtext('Comment');?></th>
@@ -244,13 +160,7 @@ function controlactionbuttons(ego, triggerbyname) {
 				<th class="lhebl"><?=gtext('Toolbox');?></th>
 			</tr>
 		</thead>
-		<tfoot>
-			<tr>
-				<th class="lcenl" colspan="5"></th>
-				<th class="lceadd"><a href="<?=$sphere_scriptname_child;?>"><img src="<?=$img_path['add'];?>" title="<?=$gt_record_add;?>" alt="<?=$gt_record_add;?>"/></a></th>
-			</tr>
-		</tfoot>
-		<tbody>
+		<tbody id="system_rc_list">
 			<?php foreach($sphere_array as $sphere_record):?>
 				<?php
 					$notificationmode = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']);
@@ -274,11 +184,7 @@ function controlactionbuttons(ego, triggerbyname) {
 				?>
 				<tr>
 					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
-						<?php if($notdirty && $notprotected):?>
-							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
-						<?php else:?>
-							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" disabled="disabled"/>
-						<?php endif;?>
+						<input type="hidden" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
 					</td>
 					<td class="lcell"><?=htmlspecialchars($sphere_record['name']);?></td>
 					<td class="lcell"><?=htmlspecialchars($sphere_record['value']);?></td>
@@ -287,20 +193,9 @@ function controlactionbuttons(ego, triggerbyname) {
 					<td class="lcebld">
 						<table id="area_data_selection_toolbox"><tbody><tr>
 							<td>
-								<?php if($notdirty && $notprotected):?>
-									<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
-								<?php else:?>
-									<?php if($notprotected):?>
-										<img src="<?=$img_path['del'];?>" title="<?=$gt_record_del;?>" alt="<?=$gt_record_del;?>"/>
-									<?php else:?>
-										<img src="<?=$img_path['loc'];?>" title="<?=$gt_record_loc;?>" alt="<?=$gt_record_loc;?>"/>
-									<?php endif;?>
-								<?php endif;?>
+								<img src="<?=$img_path['up'];?>" title="<?=$gt_record_up;?>" alt="<?=$gt_record_up;?>" class="move up"/>
+								<img src="<?=$img_path['dow'];?>" title="<?=$gt_record_dow;?>" alt="<?=$gt_record_dow;?>" class="move dn"/>
 							</td>
-							<?php if(updatenotify_exists($sphere_notifier)):?>
-							<?php else:?>
-								<td><a href="system_rc_sort.php"><img src="<?=$img_path['mai'];?>" title="<?=$gt_record_mai;?>" alt="<?=$gt_record_mai;?>" /></a></td>
-							<?php endif;?>
 						</tr></tbody></table>
 					</td>
 				</tr>
@@ -308,7 +203,7 @@ function controlactionbuttons(ego, triggerbyname) {
 		</tbody>
 	</table>
 	<div id="submit">
-		<input name="delete_selected_rows" id="delete_selected_rows" type="submit" class="formbtn" value="<?=$gt_selection_delete;?>"/>
+		<input name="Submit" id="reorder_rows" type="submit" class="formbtn" value="<?=gtext('Reorder Commands');?>"/>
 	</div>
 	<div id="remarks">
 		<?php html_remark('note', gtext('Note'), gtext('These commands will be executed pre or post system initialization (booting) or before system shutdown.'));?>
