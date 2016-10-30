@@ -194,7 +194,7 @@ $(window).on("load", function() {
 			<col id="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Settings'));?>
+			<?php html_titleline_checkbox2('enable', gtext('Settings'), $sphere_record['enable'], gtext('Enable'));?>
 		</thead>
 		<tbody>
 			<?php

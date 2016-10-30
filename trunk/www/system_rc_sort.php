@@ -65,7 +65,9 @@ $img_path = [
 	'mai' => 'images/maintain.png',
 	'mod' => 'images/edit.png',
 	'unl' => 'images/unlocked.png',
-	'up' => 'images/up.png'
+	'up' => 'images/up.png',
+	'ena' => 'images/status_enabled.png',
+	'dis' => 'images/status_disabled.png'
 ];
 
 // sunrise: verify if setting exists, otherwise run init tasks
@@ -108,7 +110,7 @@ $(window).on("load", function() {
 	$('#system_rc_list img.move').click(function() {
 		var row = $(this).closest('table').closest('tr');
 		if ($(this).hasClass('up')) row.prev().before(row);
-		if ($(this).hasClass('dn')) row.next().after(row);
+		if ($(this).hasClass('down')) row.next().after(row);
 	});
 });
 //]]>
@@ -145,16 +147,18 @@ $(window).on("load", function() {
 			<col style="width:5%">
 			<col style="width:15%">
 			<col style="width:35%">
-			<col style="width:25%">
+			<col style="width:7%">
+			<col style="width:18%">
 			<col style="width:10%">
 			<col style="width:10%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Sort'), 6);?>
+			<?php html_titleline2(gtext('Reorder Commands'), 7);?>
 			<tr>
 				<th class="lhelc">&nbsp;</th>
 				<th class="lhell"><?=gtext('Name');?></th>
 				<th class="lhell"><?=gtext('Command');?></th>
+				<th class="lhell"><?=gtext('Status');?></th>
 				<th class="lhell"><?=gtext('Comment');?></th>
 				<th class="lhell"><?=gtext('Type');?></th>
 				<th class="lhebl"><?=gtext('Toolbox');?></th>
@@ -186,15 +190,22 @@ $(window).on("load", function() {
 					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
 						<input type="hidden" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
 					</td>
-					<td class="lcell"><?=htmlspecialchars($sphere_record['name']);?></td>
-					<td class="lcell"><?=htmlspecialchars($sphere_record['value']);?></td>
-					<td class="lcell"><?=htmlspecialchars($sphere_record['comment']);?></td>
-					<td class="lcell"><?=$gt_type;?></td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['name']);?></td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['value']);?></td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>">
+						<?php if ($enabled):?>
+							<a title="<?=gtext('Enabled');?>"><center><img src="<?=$img_path['ena'];?>"/></center></a>
+						<?php else:?>
+							<a title="<?=gtext('Disabled');?>"><center><img src="<?=$img_path['dis'];?>"/></center></a>
+						<?php endif;?>
+					</td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['comment']);?></td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=$gt_type;?></td>
 					<td class="lcebld">
 						<table id="area_data_selection_toolbox"><tbody><tr>
 							<td>
 								<img src="<?=$img_path['up'];?>" title="<?=$gt_record_up;?>" alt="<?=$gt_record_up;?>" class="move up"/>
-								<img src="<?=$img_path['dow'];?>" title="<?=$gt_record_dow;?>" alt="<?=$gt_record_dow;?>" class="move dn"/>
+								<img src="<?=$img_path['dow'];?>" title="<?=$gt_record_dow;?>" alt="<?=$gt_record_dow;?>" class="move down"/>
 							</td>
 						</tr></tbody></table>
 					</td>
