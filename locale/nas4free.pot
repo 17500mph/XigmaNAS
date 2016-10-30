@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-10-29 14:22+0000\n"
+"POT-Creation-Date: 2016-10-30 21:28+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -1224,6 +1224,15 @@ msgstr ""
 msgid "Command for LINK_UP event (e.g. %s)."
 msgstr ""
 
+msgid "Command is marked for removal"
+msgstr ""
+
+msgid "Command is protected"
+msgstr ""
+
+msgid "Command is unlocked"
+msgstr ""
+
 msgid "Command output"
 msgstr ""
 
@@ -1685,6 +1694,9 @@ msgstr ""
 msgid "Delete Rsync job"
 msgstr ""
 
+msgid "Delete Selected Commands"
+msgstr ""
+
 msgid "Delete Selected Datasets"
 msgstr ""
 
@@ -1731,9 +1743,6 @@ msgid "Delete auto snapshot"
 msgstr ""
 
 msgid "Delete clone"
-msgstr ""
-
-msgid "Delete command"
 msgstr ""
 
 msgid "Delete disk"
@@ -1951,6 +1960,9 @@ msgstr ""
 msgid "Disable Firmware Update"
 msgstr ""
 
+msgid "Disable Selected Commands"
+msgstr ""
+
 msgid "Disable Selected Jobs"
 msgstr ""
 
@@ -2064,9 +2076,6 @@ msgstr ""
 msgid "Do you really want to delete this clone?"
 msgstr ""
 
-msgid "Do you really want to delete this command?"
-msgstr ""
-
 msgid "Do you really want to delete this disk? All elements that still use it will become invalid (e.g. share)!"
 msgstr ""
 
@@ -2172,6 +2181,9 @@ msgstr ""
 msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
+msgid "Do you want to delete selected commands?"
+msgstr ""
+
 msgid "Do you want to delete selected datasets?"
 msgstr ""
 
@@ -2193,10 +2205,16 @@ msgstr ""
 msgid "Do you want to delete selected volumes?"
 msgstr ""
 
+msgid "Do you want to disable selected commands??"
+msgstr ""
+
 msgid "Do you want to disable selected jobs?"
 msgstr ""
 
 msgid "Do you want to disable selected options?"
+msgstr ""
+
+msgid "Do you want to enable selected commands?"
 msgstr ""
 
 msgid "Do you want to enable selected jobs?"
@@ -2206,6 +2224,9 @@ msgid "Do you want to enable selected options?"
 msgstr ""
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
+msgstr ""
+
+msgid "Do you want to toggle selected commands?"
 msgstr ""
 
 msgid "Do you want to toggle selected jobs?"
@@ -2484,6 +2505,9 @@ msgstr ""
 msgid "Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can use SSL."
 msgstr ""
 
+msgid "Enable Selected Commands"
+msgstr ""
+
 msgid "Enable Selected Jobs"
 msgstr ""
 
@@ -2666,6 +2690,12 @@ msgid "Enhanced compatibility with Netatalk AFP server"
 msgstr ""
 
 msgid "Enter a custom port number for the WebGUI if you want to override the default (80 for HTTP, 443 for HTTPS)."
+msgstr ""
+
+msgid "Enter a description for your reference."
+msgstr ""
+
+msgid "Enter a name for the command."
 msgstr ""
 
 msgid "Enter a space-separated list of tap devices. The devices will be created and automatically added it to the bridge."
@@ -5480,6 +5510,9 @@ msgstr ""
 msgid "Remove the %s first before proceeding."
 msgstr ""
 
+msgid "Reorder Commands"
+msgstr ""
+
 msgid "Replace Battery UPS"
 msgstr ""
 
@@ -6122,6 +6155,9 @@ msgid "Software RAID"
 msgstr ""
 
 msgid "Software Used"
+msgstr ""
+
+msgid "Sort"
 msgstr ""
 
 msgid "Source"
@@ -7484,6 +7520,9 @@ msgstr ""
 msgid "Toggle Mode"
 msgstr ""
 
+msgid "Toggle Selected Commands"
+msgstr ""
+
 msgid "Toggle Selected Jobs"
 msgstr ""
 
@@ -8252,6 +8291,9 @@ msgid "ZFS Dataset Information & Status"
 msgstr ""
 
 msgid "ZFS Dataset Properties"
+msgstr ""
+
+msgid "ZFS Pool I/O Statistics"
 msgstr ""
 
 msgid "ZFS Pool Tools"
