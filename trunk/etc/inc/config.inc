@@ -1167,7 +1167,7 @@ function config_upgrade() {
 					'value' => $cmd,
 					'comment' => '',
 					'typeid' => 1,
-					'enabled' => true,
+					'enable' => true,
 					'protected' => false,
 				];
 			}
@@ -1181,7 +1181,7 @@ function config_upgrade() {
 					'value' => $cmd,
 					'comment' => '',
 					'typeid' => 2,
-					'enabled' => true,
+					'enable' => true,
 					'protected' => false,
 				];
 			}
@@ -1195,7 +1195,7 @@ function config_upgrade() {
 					'value' => $cmd,
 					'comment' => '',
 					'typeid' => 3,
-					'enabled' => true,
+					'enable' => true,
 					'protected' => false,
 				];
 			}
