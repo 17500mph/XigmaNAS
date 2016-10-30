@@ -1149,6 +1149,8 @@ function config_upgrade() {
 		}
 		$config['version'] = "2.7";
 	}
+
+	/* Convert 2.7 -> 2.8 */
 	if ($config['version'] === "2.7") {
 		// convert command scripts
 		if(!(isset($config['rc']) && is_array($config['rc']))) {
@@ -1157,7 +1159,7 @@ function config_upgrade() {
 		if(!(isset($config['rc']['param']) && is_array($config['rc']['param']))) {
 			$config['rc']['param'] = [];
 		}
-		if(isset($config['rc']['preinit']) && isset($config['rc']['preinit']['cmd']) && isarray($config['rc']['preinit']['cmd'])) {
+		if(isset($config['rc']['preinit']) && isset($config['rc']['preinit']['cmd']) && is_array($config['rc']['preinit']['cmd'])) {
 			foreach($config['rc']['preinit']['cmd'] as $cmd) {
 				$config['rc']['param'][] = [
 					'uuid' => uuid(),
@@ -1171,7 +1173,7 @@ function config_upgrade() {
 			}
 			unset($config['rc']['preinit']);
 		}
-		if(isset($config['rc']['postinit']) && isset($config['rc']['postinit']['cmd']) && isarray($config['rc']['postinit']['cmd'])) {
+		if(isset($config['rc']['postinit']) && isset($config['rc']['postinit']['cmd']) && is_array($config['rc']['postinit']['cmd'])) {
 			foreach($config['rc']['postinit']['cmd'] as $cmd) {
 				$config['rc']['param'][] = [
 					'uuid' => uuid(),
@@ -1185,7 +1187,7 @@ function config_upgrade() {
 			}
 			unset($config['rc']['postinit']);
 		}
-		if(isset($config['rc']['shutdown']) && isset($config['rc']['shutdown']['cmd']) && isarray($config['rc']['shutdown']['cmd'])) {
+		if(isset($config['rc']['shutdown']) && isset($config['rc']['shutdown']['cmd']) && is_array($config['rc']['shutdown']['cmd'])) {
 			foreach($config['rc']['shutdown']['cmd'] as $cmd) {
 				$config['rc']['param'][] = [
 					'uuid' => uuid(),
