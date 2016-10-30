@@ -98,7 +98,7 @@ if ($_POST) {
 	}
 }
 
-$pgtitle = [gtext('System'), gtext('Advanced'), gtext('Command scripts'), gtext('Sort')];
+$pgtitle = [gtext('System'), gtext('Advanced'), gtext('Command Scripts'), gtext('Sort')];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">
