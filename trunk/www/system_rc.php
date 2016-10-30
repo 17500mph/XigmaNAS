@@ -210,7 +210,7 @@ function rc_process_updatenotification($mode, $data) {
 	return $retval;
 }
 $enabletogglemode = isset($config['system']['enabletogglemode']);
-$pgtitle = [gtext('System'), gtext('Advanced'), gtext('Command scripts')];
+$pgtitle = [gtext('System'), gtext('Advanced'), gtext('Command Scripts')];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">
