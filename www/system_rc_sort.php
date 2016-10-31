@@ -130,7 +130,7 @@ $(window).on("load", function() {
 			</ul>
 		</td>
 	</tr>
-</table>
+</tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
 	<?php
 		if (!empty($savemsg)) {
