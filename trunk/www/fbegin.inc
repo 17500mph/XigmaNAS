@@ -253,13 +253,14 @@ function display_menu($menuid) {
   echo "\n";
 */
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php
+// <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+echo '<!DOCTYPE html>', "\n"
+?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=system_get_language_code();?>" lang="<?=system_get_language_code();?>">
 <head>
+	<meta charset="<?=system_get_language_codeset();?>"/>
 	<title><?=genhtmltitle($pgtitle);?></title>
-	<meta http-equiv="Content-Type" content="text/html; charset=<?=system_get_language_codeset();?>" />
-	<meta http-equiv="Content-Script-Type" content="text/javascript" />
-	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<?php if (isset($pgrefresh) && $pgrefresh):?>
 	<meta http-equiv="refresh" content="<?=$pgrefresh;?>" />
 	<?php endif;?>
@@ -268,7 +269,7 @@ function display_menu($menuid) {
 	<link href="/css/tabs.css" rel="stylesheet" type="text/css" />	
 	<script type="text/javascript" src="/js/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/gui.js"></script>
-	<?php include("js/spinner.inc");?>
+	<script type="text/javascript" src="/js/spinner.js"></script>
 	<script type="text/javascript" src="/js/spin.min.js"></script>
 	<?php
 	if (isset($pglocalheader) && !empty($pglocalheader)) {
@@ -285,6 +286,8 @@ function display_menu($menuid) {
 	?>
 </head>
 <body>
+<div id="spinner_main"></div>
+<div id="spinner_overlay" style="display: none; background-color: white; position: fixed; left:0; top:0; height:100%; width:100%; opacity: 0.25;"></div>
 <div id="header">
 	<div id="headerlogo">
 		<a title="www.<?=get_product_url();?>" href="http://<?=get_product_url();?>" target="_blank"><img src="/images/header_logo.png" alt="logo" /></a>
