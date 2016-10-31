@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-10-29 14:22+0000\n"
-"PO-Revision-Date: 2016-10-29 12:33+0000\n"
+"POT-Creation-Date: 2016-10-30 21:28+0000\n"
+"PO-Revision-Date: 2016-10-31 00:18+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-10-29 12:41+0000\n"
+"X-Launchpad-Export-Date: 2016-10-31 00:24+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -1482,6 +1482,15 @@ msgstr "Opdracht voor LINK_DOWN gebeurtenis (bijvoorbeeld %s)."
 msgid "Command for LINK_UP event (e.g. %s)."
 msgstr "Opdracht voor LINK_UP gebeurtenis (bijvoorbeeld %s)."
 
+msgid "Command is marked for removal"
+msgstr "Opdracht is gemarkeerd voor verwijdering"
+
+msgid "Command is protected"
+msgstr "Opdracht wordt beschermd"
+
+msgid "Command is unlocked"
+msgstr "Opdracht is ontgrendeld"
+
 msgid "Command output"
 msgstr "Opdracht uitkomst"
 
@@ -2112,6 +2121,9 @@ msgstr "Route verwijderen"
 msgid "Delete Rsync job"
 msgstr "Rsync taak verwijderen"
 
+msgid "Delete Selected Commands"
+msgstr "Verwijder Geselecteerde Opdrachten"
+
 msgid "Delete Selected Datasets"
 msgstr "Verwijder Geselecteerde Datasets"
 
@@ -2159,9 +2171,6 @@ msgstr "Verwijder automatisch snapshot"
 
 msgid "Delete clone"
 msgstr "Verwijder kloon"
-
-msgid "Delete command"
-msgstr "Opdracht verwijderen"
 
 msgid "Delete disk"
 msgstr "Schijf verwijderen"
@@ -2405,6 +2414,9 @@ msgstr "Map om in te kijken voor nieuwe .torrent bestanden."
 msgid "Disable Firmware Update"
 msgstr "Uitschakelen Firmware Update"
 
+msgid "Disable Selected Commands"
+msgstr "Geselecteerde Opdrachten Uitschakelen"
+
 msgid "Disable Selected Jobs"
 msgstr "Geselecteerde Taken Uitschakelen"
 
@@ -2531,9 +2543,6 @@ msgstr "Weet u zeker dat u dit automatische snapshot wilt verwijderen?"
 
 msgid "Do you really want to delete this clone?"
 msgstr "Weet u zeker dat u deze kloon wilt verwijderen?"
-
-msgid "Do you really want to delete this command?"
-msgstr "Weet u zeker dat u deze opdracht wilt verwijderen?"
 
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
@@ -2667,6 +2676,9 @@ msgstr ""
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Wilt u de geselecteerde RAID volumes verwijderen?"
 
+msgid "Do you want to delete selected commands?"
+msgstr "Wilt u de geselecteerde opdrachten verwijderen?"
+
 msgid "Do you want to delete selected datasets?"
 msgstr "Wilt u de geselecteerde datasets verwijderen?"
 
@@ -2688,11 +2700,17 @@ msgstr "Wilt u de geselecteerde virtuele schijven verwijderen?"
 msgid "Do you want to delete selected volumes?"
 msgstr "Wilt u de geselecteerde volumes verwijderen?"
 
+msgid "Do you want to disable selected commands??"
+msgstr "Wilt u geselecteerde opdrachten uitschakelen?"
+
 msgid "Do you want to disable selected jobs?"
 msgstr "Wilt u geselecteerde taken uitschakelen?"
 
 msgid "Do you want to disable selected options?"
 msgstr "Wilt u geselecteerde opties uitschakelen?"
+
+msgid "Do you want to enable selected commands?"
+msgstr "Wilt u geselecteerde opdrachten inschakelen?"
 
 msgid "Do you want to enable selected jobs?"
 msgstr "Wilt u geselecteerde taken inschakelen?"
@@ -2702,6 +2720,9 @@ msgstr "Wilt u geselecteerde opties inschakelen?"
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr "Wilt u de firmware toch installeren (Dit is op eigen risico)?"
+
+msgid "Do you want to toggle selected commands?"
+msgstr "Wilt u geselecteerde opdrachten omschakelen?"
 
 msgid "Do you want to toggle selected jobs?"
 msgstr "Wilt u geselecteerde taken omschakelen?"
@@ -2996,6 +3017,9 @@ msgstr ""
 "Inschakelen STARTTLS encryptie. Dit betekent niet dat u TLS moet gebruikt, u "
 "kunt ook SSL gebruiken."
 
+msgid "Enable Selected Commands"
+msgstr "Geselecteerde Opdrachten Inschakelen"
+
 msgid "Enable Selected Jobs"
 msgstr "Geselecteerde Taken Inschakelen"
 
@@ -3197,6 +3221,12 @@ msgid ""
 msgstr ""
 "Vul een aangepast poort nummer in voor de WebGUI als u de standaard poort "
 "(80 voor HTTP, 443 voor HTTPS) niet wilt gebruiken."
+
+msgid "Enter a description for your reference."
+msgstr "Geef een beschrijving op voor uw referentie."
+
+msgid "Enter a name for the command."
+msgstr "Geef een naam op voor de opdracht."
 
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
@@ -6387,6 +6417,9 @@ msgstr "Alle ARP regels verwijderen uit de tabel"
 msgid "Remove the %s first before proceeding."
 msgstr "Verwijder de %s eerst voor u verder gaat."
 
+msgid "Reorder Commands"
+msgstr "Herindelen Opdrachten"
+
 msgid "Replace Battery UPS"
 msgstr "Vervang Batterij UPS"
 
@@ -7129,6 +7162,9 @@ msgstr "Software RAID"
 
 msgid "Software Used"
 msgstr "Gebruikte Software"
+
+msgid "Sort"
+msgstr "Sortering"
 
 msgid "Source"
 msgstr "Bron"
@@ -9061,6 +9097,9 @@ msgstr "Voor het gebruik van submappen, moet u elke map koppelen. (e.g. %s)"
 msgid "Toggle Mode"
 msgstr "Schakel Modus"
 
+msgid "Toggle Selected Commands"
+msgstr "Wilt u geselecteerde opdrachten omschakelen?"
+
 msgid "Toggle Selected Jobs"
 msgstr "Schakel Geselecteerde Taken"
 
@@ -9990,6 +10029,9 @@ msgstr "ZFS Dataset Informatie & Status"
 msgid "ZFS Dataset Properties"
 msgstr "ZFS Dataset Eigenschappen"
 
+msgid "ZFS Pool I/O Statistics"
+msgstr "ZFS Pool I/O  Statistieken"
+
 msgid "ZFS Pool Tools"
 msgstr "ZFS Pool Tools"
 
@@ -10175,9 +10217,3 @@ msgstr "gebruiker"
 
 msgid "version:"
 msgstr "versie:"
-
-#~ msgid "List Mount Points"
-#~ msgstr "Lijst Koppelpunten"
-
-#~ msgid "Memory Usage"
-#~ msgstr "Geheugen Gebruik"
