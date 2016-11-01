@@ -1,6 +1,6 @@
 <?php
 /*
-	diag_infos_ata.php
+	diag_infos_disksinfo.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gtext("Diagnostics"), gtext("Information"), gtext("Disks (ATA)"));
+$pgtitle = array(gtext("Diagnostics"), gtext("Information"), gtext("Disks (Info)"));
 
 $a_disk = &$config['disks']['disk'];
 $disk_error = gtext("No disks configured, please add disks to see the diagnostic information of disks!");
@@ -42,39 +42,38 @@ $disk_error = gtext("No disks configured, please add disks to see the diagnostic
 <?php include("fbegin.inc");?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabinact"><a href="diag_infos.php"><span><?=gtext("Disks");?></span></a></li>
-				<li class="tabact"><a href="diag_infos_ata.php" title="<?=gtext("Reload page");?>"><span><?=gtext("Disks (ATA)");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_part.php"><span><?=gtext("Partitions");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_smart.php"><span><?=gtext("S.M.A.R.T.");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_space.php"><span><?=gtext("Space Used");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_mount.php"><span><?=gtext("Mounts");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_raid.php"><span><?=gtext("Software RAID");?></span></a></li>
+	<td class="tabnavtbl">
+			<li class="tabinact"><a href="diag_infos_disks.php"><span><?=gtext("Disks");?></span></a></li>
+			<li class="tabact"><a href="diag_infos_disksinfo.php" title="<?=gtext("Reload page");?>"><span><?=gtext("Disks (Info)");?></span></a></li>
+			<li class="tabinact"><a href="diag_infos_part.php"><span><?=gtext("Partitions");?></span></a></li>
+			<li class="tabinact"><a href="diag_infos_smart.php"><span><?=gtext("S.M.A.R.T.");?></span></a></li>
+			<li class="tabinact"><a href="diag_infos_space.php"><span><?=gtext("Space Used");?></span></a></li>
+			<li class="tabinact"><a href="diag_infos_mount.php"><span><?=gtext("Mounts");?></span></a></li>
+			<li class="tabinact"><a href="diag_infos_raid.php"><span><?=gtext("Software RAID");?></span></a></li>
 		  </ul>
 	  </td>
-	</tr>
-  <tr>
-		<td class="tabnavtbl">
-		  <ul id="tabnav2">
-				<li class="tabinact"><a href="diag_infos_iscsi.php"><span><?=gtext("iSCSI Initiator");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_ad.php"><span><?=gtext("MS Domain");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_samba.php"><span><?=gtext("CIFS/SMB");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_ftpd.php"><span><?=gtext("FTP");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_rsync_client.php"><span><?=gtext("RSYNC Client");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_swap.php"><span><?=gtext("Swap");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_sockets.php"><span><?=gtext("Sockets");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_ipmi.php"><span><?=gtext('IPMI Stats');?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_ups.php"><span><?=gtext("UPS");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
+     </tr>
+ <tr>
+	<td class="tabnavtbl">
+		<ul id="tabnav2">
+			<li class="tabinact"><a href="diag_infos_iscsi.php"><span><?=gtext("iSCSI Initiator");?></span></a></li>
+			<li class="tabinact"><a href="diag_infos_ad.php"><span><?=gtext("MS Domain");?></span></a></li>
+			<li class="tabinact"><a href="diag_infos_samba.php"><span><?=gtext("CIFS/SMB");?></span></a></li>
+			<li class="tabinact"><a href="diag_infos_ftpd.php"><span><?=gtext("FTP");?></span></a></li>
+			<li class="tabinact"><a href="diag_infos_rsync_client.php"><span><?=gtext("RSYNC Client");?></span></a></li>
+			<li class="tabinact"><a href="diag_infos_swap.php"><span><?=gtext("Swap");?></span></a></li>
+			<li class="tabinact"><a href="diag_infos_sockets.php"><span><?=gtext("Sockets");?></span></a></li>
+			<li class="tabinact"><a href="diag_infos_ipmi.php"><span><?=gtext('IPMI Stats');?></span></a></li>
+			<li class="tabinact"><a href="diag_infos_ups.php"><span><?=gtext("UPS");?></span></a></li>
+		</ul>
+	</td>
+</tr>
   <tr>
     <td class="tabcont">
     	<table width="100%" border="0">
 			<?php 
 				if ($a_disk == "") {
-    				html_titleline(gtext("Disks (ATA) information"));
+    				html_titleline(gtext("Disks (Info) information"));
 					echo "<tr><td><br />".$disk_error."</td></tr>\n";
 				} else 
 					{
@@ -87,7 +86,7 @@ $disk_error = gtext("No disks configured, please add disks to see the diagnostic
 								$device = $diskv['devicespecialfile'];
 
 								// Display more information
-								exec("/usr/local/sbin/ataidle {$device}", $rawdata);
+								exec("diskinfo -v {$device}", $rawdata);
 								$rawdata = array_slice($rawdata, 1);
 								echo htmlspecialchars(implode("\n", $rawdata));
 								unset($rawdata);

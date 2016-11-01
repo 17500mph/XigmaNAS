@@ -136,8 +136,8 @@ include("fbegin.inc");
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
-				<li class="tabinact"><a href="diag_infos.php"><span><?=gtext("Disks");?></span></a></li>
-				<li class="tabinact"><a href="diag_infos_ata.php"><span><?=gtext("Disks (ATA)");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_disks.php"><span><?=gtext("Disks");?></span></a></li>
+				<li class="tabinact"><a href="diag_infos_disksinfo.php"><span><?=gtext("Disks (Info)");?></span></a></li>
 				<li class="tabinact"><a href="diag_infos_part.php"><span><?=gtext("Partitions");?></span></a></li>
 				<li class="tabact"><a href="diag_infos_smart.php" title="<?=gtext("Reload page");?>"><span><?=gtext("S.M.A.R.T.");?></span></a></li>
 				<li class="tabinact"><a href="diag_infos_space.php"><span><?=gtext("Space Used");?></span></a></li>

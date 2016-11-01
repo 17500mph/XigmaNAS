@@ -195,7 +195,7 @@ $menu['diagnostics']['visible'] = Session::isAdmin();
 $menu['diagnostics']['link'] = "../index.php";
 $menu['diagnostics']['menuitem'] = array();
 $menu['diagnostics']['menuitem'][] = array("desc" => gtext("Log"), "link" => "../diag_log.php", "visible" => TRUE);
-$menu['diagnostics']['menuitem'][] = array("desc" => gtext("Information"), "link" => "../diag_infos.php", "visible" => TRUE);
+$menu['diagnostics']['menuitem'][] = array("desc" => gtext("Information"), "link" => "../diag_infos_disks.php", "visible" => TRUE);
 $menu['diagnostics']['menuitem'][] = array("type" => "separator", "visible" => TRUE);
 $menu['diagnostics']['menuitem'][] = array("desc" => gtext("Ping/Traceroute"), "link" => "../diag_ping.php", "visible" => TRUE);
 $menu['diagnostics']['menuitem'][] = array("desc" => gtext("ARP Tables"), "link" => "../diag_arp.php", "visible" => TRUE);
