@@ -41,7 +41,7 @@ function zfs_zpool_get_status() {
 		$cmd = 'zpool status -v';
 	}
 	mwexec2($cmd, $rawdata);
-	return htmlspecialchars(implode("\n", $rawdata));
+	return implode("\n", $rawdata);
 }
 if (is_ajax()) {
 	$status = zfs_zpool_get_status();
