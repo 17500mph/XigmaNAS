@@ -23,6 +23,8 @@
 /usr/local/www/diag_infos.php
 /usr/local/www/diag_infos_ad.php
 /usr/local/www/diag_infos_ata.php
+/usr/local/www/diag_infos_disks.php
+/usr/local/www/diag_infos_disksinfo.php
 /usr/local/www/diag_infos_ftpd.php
 /usr/local/www/diag_infos_ipmi.php
 /usr/local/www/diag_infos_iscsi.php
