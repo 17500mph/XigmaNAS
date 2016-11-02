@@ -6,19 +6,12 @@
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
-	Portions of freenas (http://www.freenas.org).
-	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
-	All rights reserved.
-
-	Portions of m0n0wall (http://m0n0.ch/wall).
-	Copyright (c) 2003-2006 Manuel Kasper <mk@neon1.net>.
-	All rights reserved.
-
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -75,13 +68,12 @@ for ($j = 1; isset($config['interfaces']['opt' . $j]); $j++) {
 <div align="center" style="min-width:840px;">
 <br>
 <object id="graph"
-        data="graph.php?ifnum=<?=$ifnum;?>&amp;ifname=<?=rawurlencode($ifdescrs[$curif]);?>"
+        data="status_graph2.php?ifnum=<?=$ifnum;?>&amp;ifname=<?=rawurlencode($ifdescrs[$curif]);?>"
         type="image/svg+xml"
         width="<?=$graph_width;?>"
         height="<?=$graph_height;?>">
 	 <param name="src" value="graph.php?ifnum=<?=$ifnum;?>&amp;ifname=<?=rawurlencode($ifdescrs[$curif]);?>" />
-	 Your browser does not support this object type! You need to either use Firefox, Internet Explorer 9 and higher or download RENESIS Player<br />
-        <span class="red"><strong>Note:</strong></span> The <a href="http://de.brothersoft.com/Renesis-Player-download-141155.html" target="_blank">RENESIS Player</a> is required to view the graph.<br />
+	 Your browser does not support this svg object type!<br /> You need to update your browser or use Internet Explorer 9 or higher.<br />
 </object>
 
 <?php
@@ -90,20 +82,20 @@ for ($j = 1; isset($config['interfaces']['opt' . $j]); $j++) {
 	$ifdescrs = $config['interfaces']['opt' . $j]['descr'];
 	$ifnum = $config['interfaces']['opt' . $j]['if'];
 	echo '<object id="graph1"
-	data="graph.php?ifnum='.$ifnum.'&amp;ifname='.rawurlencode($ifdescrs).'"
+	data="status_graph2.php?ifnum='.$ifnum.'&amp;ifname='.rawurlencode($ifdescrs).'"
 	type="image/svg+xml"
 	width="'.$graph_width.'"
 	height="'.$graph_height.'>';
 	echo '<param name="src" value="graph.php?ifnum='.$ifnum.'&amp;ifname='.rawurlencode($ifdescrs).'" />';
-	echo 'Your browser does not support this object type! You need to either use Firefox, Internet Explorer 9 or download RENESIS Player<br /><span class="red"><strong>Note:</strong></span> The <a href="http://de.brothersoft.com/Renesis-Player-download-141155.html" target="_blank">RENESIS Player</a> is required to view the graph.';
+	echo 'Your browser does not support this svg object type!<br /> You need to update your browser or use Internet Explorer 9 or higher.';
 	echo '</object>';
 	$test = $j % 2;
 	if ($test != 0) { echo '<br /><br /><br />'; }     /* add line breaks after second graph ... */
 	else { echo $graph_gap; }                          /* or the gap between two graphs */
 }
 ?>
-	<object id="graph1" data="graph_cpu.php" type="image/svg+xml" width="<?=$graph_width;?>" height="<?=$graph_height;?>">
-	<param name="src" value="graph_cpu.php">
+	<object id="graph1" data="status_graph_cpu2.php" type="image/svg+xml" width="<?=$graph_width;?>" height="<?=$graph_height;?>">
+	<param name="src" value="status_graph_cpu2.php">
 	</object>
 
 </div>
