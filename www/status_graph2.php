@@ -1,17 +1,9 @@
 <?php
 /*
-	graph.php
+	status_graph2.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
-	All rights reserved.
-
-	Portions of freenas (http://www.freenas.org).
-	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
-	All rights reserved.
-
-	portions of m0n0wall (http://m0n0.ch/wall).
-	Copyright (c) 2003-2006 Manuel Kasper <mk@neon1.net>.
 	All rights reserved.
 
 	Redistribution and use in source and binary forms, with or without
@@ -19,6 +11,7 @@
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -45,16 +38,16 @@ header("Content-type: image/svg+xml");
 
 /********** HTTP GET Based Conf ***********/
 $ifnum=@htmlspecialchars($_GET["ifnum"]);  // BSD / SNMP interface name / number
-$ifname=@htmlspecialchars($_GET["ifname"]) ? htmlspecialchars($_GET["ifname"]) : "Interface $ifnum";  //Interface name that will be showed on top right of graph
+$ifname=@htmlspecialchars($_GET["ifname"]) ? htmlspecialchars($_GET["ifname"]) : "Interface $ifnum";  //Interface name on top right in graph
 
 /********* Other conf *******/
-$scale_type="follow"; //Autoscale default setup : "up" = only increase scale; "follow" = increase and decrease scale according to current graphed datas
+$scale_type="follow"; //Autoscale default setup : "up" = only increase scale; "follow" = increase and decrease scale according to current data
 $nb_plot=120;         //NB plot in graph
 $time_interval=1;		  //Refresh time Interval
 $unit="bytes";         //Initial unit type: "bits" or "bytes"
 $fetch_link = "stats.php?if=$ifnum";
 
-//SVG attributes
+//SVG style attributes
 $attribs['bg']='fill="#000" stroke="none" stroke-width="0" opacity="1"';
 $attribs['axis']='fill="black" stroke="black"';
 $attribs['in']='fill="#00CC00" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="6"';
@@ -63,9 +56,9 @@ $attribs['legend']='fill="white" font-family="Tahoma, Verdana, Arial, Helvetica,
 $attribs['graph_in']='fill="none" stroke="#00CC00" stroke-opacity="0.8"';
 $attribs['graph_out']='fill="none" stroke="#FF0000" stroke-opacity="0.8"';
 $attribs['grid_txt']='fill="gray" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="5"';
-$attribs['grid']='stroke="#C3C3C3" stroke-opacity="0.5"';
-$attribs['switch_unit']='fill="#FFFFFF" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="4" text-decoration="underline"';
-$attribs['switch_scale']='fill="#FFFFFF" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="4" text-decoration="underline"';
+$attribs['grid']='stroke="#C3C3C3" stroke-opacity="1" stroke-width="0.2"';
+$attribs['switch_unit']='fill="#C3C3C3" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="4" text-decoration="underline"';
+$attribs['switch_scale']='fill="#C3C3C3" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="4" text-decoration="underline"';
 $attribs['error']='fill="red" font-family="Arial" font-size="4"';
 $attribs['collect_initial']='fill="gray" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="4"';
 
@@ -352,7 +345,7 @@ function formatSpeedBits(speed) {
   if (speed < 125000000)
     return Math.round(speed / 1250)/100 + " Mb/s";
   // else
-  return Math.round(speed / 1250000)/100 + " Gb/s";  /* wow! */
+  return Math.round(speed / 1250000)/100 + " Gb/s";
 }
 
 function formatSpeedBytes(speed) {
@@ -362,7 +355,7 @@ function formatSpeedBytes(speed) {
   if (speed < 1073741824)
     return Math.round(speed / 10485.76)/100 + " MB/s";
   // else
-  return Math.round(speed / 10737418.24)/100 + " GB/s";  /* wow! */
+  return Math.round(speed / 10737418.24)/100 + " GB/s";
 }
     ]]>
   </script>

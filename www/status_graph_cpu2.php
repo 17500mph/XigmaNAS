@@ -1,6 +1,6 @@
 <?php
 /*
-	graph_cpu.php
+	status_graph_cpu2.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
@@ -40,16 +40,15 @@ $nb_plot=120;			//NB plot in graph
 $time_interval=1; //Refresh time Interval
 $fetch_link = "stats.php?cpu=$cpu";
 
-//Style
-//SVG attributes
-$attribs['bg']='fill="#000000" stroke="none" stroke-width="0" opacity="1"';
-$attribs['axis']='fill="white" stroke="black"';
+//SVG style attributes
+$attribs['bg']='fill="#000" stroke="none" stroke-width="0" opacity="1"';
+$attribs['axis']='fill="black" stroke="black"';
 $attribs['cpu']='fill="#FF0000" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="6"';
 $attribs['graph_cpu']='fill="none" stroke="#CA6110" stroke-opacity="0.8"';
-$attribs['legend']='fill="white" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="4"';
+$attribs['legend']='fill="black" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="4"';
 $attribs['graphname']='fill="#435370" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="7"';
 $attribs['grid_txt']='fill="gray" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="5"';
-$attribs['grid']='stroke="#C3C3C3" stroke-opacity="0.5"';
+$attribs['grid']='stroke="#C3C3C3" stroke-opacity="1" stroke-width="0.2"';
 $attribs['error']='fill="red" font-family="Arial" font-size="4"';
 $attribs['collect_initial']='fill="gray" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="4"';
 
