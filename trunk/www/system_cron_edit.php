@@ -160,6 +160,7 @@ function set_selected(name) {
       <ul id="tabnav">
       	<li class="tabinact"><a href="system_advanced.php"><span><?=gtext("Advanced");?></span></a></li>
       	<li class="tabinact"><a href="system_email.php"><span><?=gtext("Email");?></span></a></li>
+	<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
       	<li class="tabinact"><a href="system_swap.php"><span><?=gtext("Swap");?></span></a></li>
       	<li class="tabinact"><a href="system_rc.php"><span><?=gtext("Command Scripts");?></span></a></li>
         <li class="tabact"><a href="system_cron.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Cron");?></span></a></li>

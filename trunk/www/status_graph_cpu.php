@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gtext("Status"), gtext("Graph"), gtext("CPU Load"));
+$pgtitle = array(gtext("Status"), gtext("Monitoring"), gtext("CPU Load"));
 
 $graph_gap = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
 $graph_width = 397;
