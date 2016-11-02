@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2016-10-29 14:22+0000\n"
-"PO-Revision-Date: 2016-10-30 14:54+0000\n"
+"POT-Creation-Date: 2016-11-02 00:34+0000\n"
+"PO-Revision-Date: 2016-11-01 16:04+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-10-30 18:28+0000\n"
+"X-Launchpad-Export-Date: 2016-11-01 23:49+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -1456,6 +1456,15 @@ msgstr "Команда для події LINK_DOWN (наприклад, %s)."
 msgid "Command for LINK_UP event (e.g. %s)."
 msgstr "Команда для події LINK_UP (наприклад, %s)."
 
+msgid "Command is marked for removal"
+msgstr "Команда позначена для видалення"
+
+msgid "Command is protected"
+msgstr "Команда захищена"
+
+msgid "Command is unlocked"
+msgstr "Команда розблокована"
+
 msgid "Command output"
 msgstr "Вивід команди"
 
@@ -1886,7 +1895,7 @@ msgid "DAAP"
 msgstr "DAAP"
 
 msgid "DESCRIPTION"
-msgstr "ОПИС"
+msgstr "Опис"
 
 msgid "DHCP"
 msgstr "DHCP"
@@ -2081,6 +2090,9 @@ msgstr "Вилучити маршрут"
 msgid "Delete Rsync job"
 msgstr "Видалити завдання Rsync"
 
+msgid "Delete Selected Commands"
+msgstr "Видалити обрані команди"
+
 msgid "Delete Selected Datasets"
 msgstr "Видалити обраний датасет"
 
@@ -2128,9 +2140,6 @@ msgstr "Видалити автоматичний знімок"
 
 msgid "Delete clone"
 msgstr "Видалити клон"
-
-msgid "Delete command"
-msgstr "Видалити команду"
 
 msgid "Delete disk"
 msgstr "Видалити диск"
@@ -2371,6 +2380,9 @@ msgstr "Директорія де слідкувати за новими .torren
 msgid "Disable Firmware Update"
 msgstr "Заборонити оновлення прошивки"
 
+msgid "Disable Selected Commands"
+msgstr "Заборонити обрані команди"
+
 msgid "Disable Selected Jobs"
 msgstr "Деактивувати вибрані завдання"
 
@@ -2426,11 +2438,11 @@ msgstr "Використання дискового простору"
 msgid "Disks"
 msgstr "Диски"
 
-msgid "Disks (ATA)"
-msgstr "Диски (ATA)"
+msgid "Disks (Info)"
+msgstr ""
 
-msgid "Disks (ATA) information"
-msgstr "Інформація про диски (ATA)"
+msgid "Disks (Info) information"
+msgstr ""
 
 msgid "Disks | Mount Point | Management"
 msgstr "Диски | Точка монтування | Управління"
@@ -2497,9 +2509,6 @@ msgstr "Ви дійсно хочете видалити цей автомати�
 
 msgid "Do you really want to delete this clone?"
 msgstr "Ви дійсно хочете видалити цей клон?"
-
-msgid "Do you really want to delete this command?"
-msgstr "Ви дійсно хочете видалити цю команду?"
 
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
@@ -2629,6 +2638,9 @@ msgstr ""
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Бажаєте видалити вибрані RAID диски?"
 
+msgid "Do you want to delete selected commands?"
+msgstr "Ви хочете видалити обрані команди?"
+
 msgid "Do you want to delete selected datasets?"
 msgstr "Бажаєте видалити вибрані набори даних?"
 
@@ -2650,11 +2662,17 @@ msgstr "Бажаєте видалити вибрані віртуальні пр
 msgid "Do you want to delete selected volumes?"
 msgstr "Бажаєте видалити вибрані диски?"
 
+msgid "Do you want to disable selected commands?"
+msgstr ""
+
 msgid "Do you want to disable selected jobs?"
 msgstr "Вимкнути вибрані завдання?"
 
 msgid "Do you want to disable selected options?"
 msgstr "Ви хочете заборонити обрані опції?"
+
+msgid "Do you want to enable selected commands?"
+msgstr "Ви хочете дозволити обрані команди?"
 
 msgid "Do you want to enable selected jobs?"
 msgstr "Увімкнути вибрані завдання?"
@@ -2666,6 +2684,9 @@ msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr ""
 "Ви хочете встановити цю прошивку в будь-якому випадку (на свій страх і "
 "ризик)?"
+
+msgid "Do you want to toggle selected commands?"
+msgstr "Ви хочете переключити обрані команди?"
 
 msgid "Do you want to toggle selected jobs?"
 msgstr "Перемкнути вибрані завдання?"
@@ -2956,6 +2977,9 @@ msgstr ""
 "Дозволити шифрування STARTTLS. Ця опція не вимагає обов'язкового "
 "використання TLS, можна використовувати SSL також."
 
+msgid "Enable Selected Commands"
+msgstr "Дозволити обрані команди"
+
 msgid "Enable Selected Jobs"
 msgstr "Увімкнути вибрані завдання"
 
@@ -3154,6 +3178,12 @@ msgid ""
 msgstr ""
 "Введіть номер порта для веб інтерфейсу, якщо ви хочете змінити значення на "
 "типове (80 для HTTP, 443 для HTTPS)."
+
+msgid "Enter a description for your reference."
+msgstr "Введіть опис для вашого посилання."
+
+msgid "Enter a name for the command."
+msgstr "Введіть ім'я для команди."
 
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
@@ -3542,9 +3572,6 @@ msgstr "Опції форматування"
 msgid "Format Program"
 msgstr "Программа форматування"
 
-msgid "Format the report for phpBB forum."
-msgstr "Сформувати звіт для phpBB форума."
-
 msgid "Forum"
 msgstr "Форум"
 
@@ -3623,9 +3650,6 @@ msgstr "Загальні"
 
 msgid "General Setup"
 msgstr "Загальні налаштування"
-
-msgid "Generate"
-msgstr "Створити"
 
 msgid "Generate a new unique identifier for a pool"
 msgstr "Створення нового унікального ідентифікатора для пулу"
@@ -3756,9 +3780,6 @@ msgstr "HVM Гість"
 
 msgid "Hard Disk"
 msgstr "Жорсткий диск"
-
-msgid "Hardware"
-msgstr "Апаратне обладнання"
 
 msgid "Header and Data digest"
 msgstr "Підпис заголовків і даних"
@@ -4082,9 +4103,6 @@ msgstr "Помилки вводу/виводу"
 
 msgid "In/Out packets"
 msgstr "Пакетів прийнято/відіслано"
-
-msgid "Include basic hardware information."
-msgstr "Включити загальну інформацію про апаратне забезпечення."
 
 msgid "Incoming Line/Power Information"
 msgstr "Інформація про вхідну лінію/потужність"
@@ -6131,7 +6149,7 @@ msgid "RAID5"
 msgstr "RAID5"
 
 msgid "RAW VALUE"
-msgstr "НЕОБРОБЛЕНЕ ЗНАЧЕННЯ"
+msgstr "Необроблене значення"
 
 msgid "RAW info"
 msgstr "НЕОБРОБЛЕНА інформація"
@@ -6319,14 +6337,14 @@ msgstr "Видалити усі записи з таблиці ARP"
 msgid "Remove the %s first before proceeding."
 msgstr "Видаліть %s, перш ніж продовжити."
 
+msgid "Reorder Commands"
+msgstr "Змінити порядок команд"
+
 msgid "Replace Battery UPS"
 msgstr "Зміна батареї ДБЖ(UPS)"
 
 msgid "Replace a device"
 msgstr "Замінити пристрій"
-
-msgid "Report Generator"
-msgstr "Генератор звітів"
 
 msgid ""
 "Report if the temperature had changed by at least N degrees Celsius since "
@@ -7054,6 +7072,9 @@ msgstr "Програмний RAID"
 
 msgid "Software Used"
 msgstr "Робота з програмним забезпеченням"
+
+msgid "Sort"
+msgstr "Сортування"
 
 msgid "Source"
 msgstr "Джерело"
@@ -8939,6 +8960,9 @@ msgstr ""
 msgid "Toggle Mode"
 msgstr "Переключити режим"
 
+msgid "Toggle Selected Commands"
+msgstr "Переключити обрані команди"
+
 msgid "Toggle Selected Jobs"
 msgstr "Переключити обрані завдання"
 
@@ -9274,7 +9298,7 @@ msgid "Update period"
 msgstr "Період оновлення"
 
 msgid "Updating in 5 seconds."
-msgstr "Оновлюється кожних 5 секунд."
+msgstr "Оновлюється кожні 5 секунд."
 
 msgid "Upgrade Firmware"
 msgstr "Оновлення прошивки"
@@ -9868,6 +9892,9 @@ msgstr "Інформація та Статус датасету ZFS"
 msgid "ZFS Dataset Properties"
 msgstr "Властивості датасету ZFS"
 
+msgid "ZFS Pool I/O Statistics"
+msgstr "Статистика I/O для ZFS пулу"
+
 msgid "ZFS Pool Tools"
 msgstr "Інструменти ZFS пулів"
 
@@ -10002,9 +10029,6 @@ msgstr "noVNC"
 msgid "none"
 msgstr "немає"
 
-msgid "phpBB"
-msgstr "phpBB"
-
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
@@ -10052,3 +10076,30 @@ msgstr "користувач"
 
 msgid "version:"
 msgstr "версія:"
+
+#~ msgid "phpBB"
+#~ msgstr "phpBB"
+
+#~ msgid "Disks (ATA)"
+#~ msgstr "Диски (ATA)"
+
+#~ msgid "Report Generator"
+#~ msgstr "Генератор звітів"
+
+#~ msgid "Disks (ATA) information"
+#~ msgstr "Інформація про диски (ATA)"
+
+#~ msgid "Hardware"
+#~ msgstr "Апаратне обладнання"
+
+#~ msgid "Include basic hardware information."
+#~ msgstr "Включити загальну інформацію про апаратне забезпечення."
+
+#~ msgid "Generate"
+#~ msgstr "Створити"
+
+#~ msgid "Format the report for phpBB forum."
+#~ msgstr "Сформувати звіт для phpBB форума."
+
+#~ msgid "Do you want to disable selected commands??"
+#~ msgstr "Ви хочете заборонити обрані команди??"

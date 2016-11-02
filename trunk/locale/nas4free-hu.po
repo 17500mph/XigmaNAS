@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-10-29 14:22+0000\n"
-"PO-Revision-Date: 2016-10-30 05:53+0000\n"
+"POT-Creation-Date: 2016-11-02 00:34+0000\n"
+"PO-Revision-Date: 2016-11-01 17:30+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-10-30 18:28+0000\n"
+"X-Launchpad-Export-Date: 2016-11-01 23:48+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -1450,6 +1450,15 @@ msgstr "LINK_DOWN esemény utasítása (pl. %s)."
 msgid "Command for LINK_UP event (e.g. %s)."
 msgstr "LINK_UP esemény utasítása (pl. %s)."
 
+msgid "Command is marked for removal"
+msgstr "A parancs eltávolításra megjelölve"
+
+msgid "Command is protected"
+msgstr "A parancs védett"
+
+msgid "Command is unlocked"
+msgstr "Parancs zárolása feloldva"
+
 msgid "Command output"
 msgstr "Parancskimenet"
 
@@ -2056,6 +2065,9 @@ msgstr "Útvonal törlése"
 msgid "Delete Rsync job"
 msgstr "Rsync feladat törlése"
 
+msgid "Delete Selected Commands"
+msgstr "Kijelölt parancsok törlése"
+
 msgid "Delete Selected Datasets"
 msgstr "Kiválasztott kötetek törlése"
 
@@ -2103,9 +2115,6 @@ msgstr "Automatikus pillanatkép törlése"
 
 msgid "Delete clone"
 msgstr "Clone törlése"
-
-msgid "Delete command"
-msgstr "Parancs törlése"
 
 msgid "Delete disk"
 msgstr "Lemez eltávolítása"
@@ -2345,6 +2354,9 @@ msgstr "Könyvtár a .torrent fájlok figyelésére."
 msgid "Disable Firmware Update"
 msgstr "Firmware frissítés tiltása"
 
+msgid "Disable Selected Commands"
+msgstr "Kijelölt parancsok tiltása"
+
 msgid "Disable Selected Jobs"
 msgstr "Kiválasztott feladatok tiltása"
 
@@ -2400,11 +2412,11 @@ msgstr "Lemezhasználat"
 msgid "Disks"
 msgstr "Lemezek"
 
-msgid "Disks (ATA)"
-msgstr "Merevlemezek (ATA)"
+msgid "Disks (Info)"
+msgstr ""
 
-msgid "Disks (ATA) information"
-msgstr "ATA lemezekről információ"
+msgid "Disks (Info) information"
+msgstr ""
 
 msgid "Disks | Mount Point | Management"
 msgstr "Lemez | Csatolási pont | Kezelés"
@@ -2471,9 +2483,6 @@ msgstr "Valóban törölni kívánja ezt az automatikus pillanatképet?"
 
 msgid "Do you really want to delete this clone?"
 msgstr "Valóban törölni kívánja ezt a clone-t?"
-
-msgid "Do you really want to delete this command?"
-msgstr "Biztos, hogy törlöd ezt a parancsot?"
 
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
@@ -2611,6 +2620,9 @@ msgstr ""
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Biztos, hogy törli a kiválasztott RAID köteteket?"
 
+msgid "Do you want to delete selected commands?"
+msgstr "Biztos, hogy törlöd a kijelölt parancsokat?"
+
 msgid "Do you want to delete selected datasets?"
 msgstr "Biztos, hogy törlöd a kiválasztott adattárakat?"
 
@@ -2632,11 +2644,17 @@ msgstr "Biztos, hogy törlöd a kiválasztott virtuális eszközöket?"
 msgid "Do you want to delete selected volumes?"
 msgstr "Biztos, hogy törli a kiválasztott köteteket?"
 
+msgid "Do you want to disable selected commands?"
+msgstr ""
+
 msgid "Do you want to disable selected jobs?"
 msgstr "Biztos, hogy tiltod a kiválasztott feladatokat?"
 
 msgid "Do you want to disable selected options?"
 msgstr "Biztos, hogy tiltod a kiválasztott beállításokat?"
+
+msgid "Do you want to enable selected commands?"
+msgstr "Biztos, hogy engedélyezed a kijelölt parancsokat?"
 
 msgid "Do you want to enable selected jobs?"
 msgstr "Biztos, hogy engedélyezed a kiválasztott feladatokat?"
@@ -2646,6 +2664,9 @@ msgstr "Biztos, hogy engedélyezed a kiválasztott beállításokat?"
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr "Ennek ellenére saját felelősségedre telepíted ezt a firmware-t?"
+
+msgid "Do you want to toggle selected commands?"
+msgstr "Biztos, hogy engedélyezed a kijelölt parancsokat?"
 
 msgid "Do you want to toggle selected jobs?"
 msgstr "Biztos, hogy átkapcsolod a kiválasztott feladatokat?"
@@ -2934,6 +2955,9 @@ msgstr ""
 "STARTTLS titkosítás engedélyezése. Ez nem azt jelenti, hogy TLS-t kell "
 "használni, lehet SSL-t is."
 
+msgid "Enable Selected Commands"
+msgstr "Kijelölt parancsok engedélyezése"
+
 msgid "Enable Selected Jobs"
 msgstr "Kiválasztott feladatok engedélyezése"
 
@@ -3129,6 +3153,12 @@ msgid ""
 msgstr ""
 "WebGUI port száma, amennyiben ez az alapértelmezettől eltér (80 HTTP, 443 "
 "HTTPS esetén)."
+
+msgid "Enter a description for your reference."
+msgstr "Add meg a hivatkozás leírását."
+
+msgid "Enter a name for the command."
+msgstr "Add meg a parancs nevét."
 
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
@@ -3514,9 +3544,6 @@ msgstr "Formázási beállítások"
 msgid "Format Program"
 msgstr "Formázó program"
 
-msgid "Format the report for phpBB forum."
-msgstr "Jelentés formázása phpBB fórumhoz."
-
 msgid "Forum"
 msgstr "Fórum"
 
@@ -3594,9 +3621,6 @@ msgstr "Általános"
 
 msgid "General Setup"
 msgstr "Általános beállítások"
-
-msgid "Generate"
-msgstr "Generálás"
 
 msgid "Generate a new unique identifier for a pool"
 msgstr "Egyedi azonosító generálása a tárolónak"
@@ -3726,9 +3750,6 @@ msgstr "HVM vendég"
 
 msgid "Hard Disk"
 msgstr "Merevlemez"
-
-msgid "Hardware"
-msgstr "Hardver"
 
 msgid "Header and Data digest"
 msgstr "Fejléc és adat kivonat"
@@ -4054,9 +4075,6 @@ msgstr "Be/Ki hibák"
 
 msgid "In/Out packets"
 msgstr "Be/Ki csomagok"
-
-msgid "Include basic hardware information."
-msgstr "A jelentés tartalmazza az alap hardverinformációkat."
 
 msgid "Incoming Line/Power Information"
 msgstr "Bemeneti áram/teljesítmény információ"
@@ -6290,14 +6308,14 @@ msgstr "Törölje az összes bejegyzést ARP táblából"
 msgid "Remove the %s first before proceeding."
 msgstr "Folytatás előtt távolítsd el: %s."
 
+msgid "Reorder Commands"
+msgstr "Parancsok sorrendjének megváltoztatása"
+
 msgid "Replace Battery UPS"
 msgstr "Cserélje ki az szünetmentes akkumulátorát."
 
 msgid "Replace a device"
 msgstr "Eszköz cseréje"
-
-msgid "Report Generator"
-msgstr "Jelentéskészítő"
 
 msgid ""
 "Report if the temperature had changed by at least N degrees Celsius since "
@@ -7029,6 +7047,9 @@ msgstr "Szoftveres RAID"
 
 msgid "Software Used"
 msgstr "Felhasznált szoftver"
+
+msgid "Sort"
+msgstr "Rendezés"
 
 msgid "Source"
 msgstr "Forrás"
@@ -8906,6 +8927,9 @@ msgstr ""
 msgid "Toggle Mode"
 msgstr "Átkapcsolási mód"
 
+msgid "Toggle Selected Commands"
+msgstr "Kijelölt parancsok felcserélése"
+
 msgid "Toggle Selected Jobs"
 msgstr "Kiválasztott feladatok átkapcsolása"
 
@@ -9815,6 +9839,9 @@ msgstr "ZFS Adattár információ & állapot"
 msgid "ZFS Dataset Properties"
 msgstr "ZFS Adattár tulajdonságok"
 
+msgid "ZFS Pool I/O Statistics"
+msgstr "ZFS tároló I/O statisztikái"
+
 msgid "ZFS Pool Tools"
 msgstr "ZFS tároló eszközök"
 
@@ -9948,9 +9975,6 @@ msgstr "noVNC"
 msgid "none"
 msgstr "nincs"
 
-msgid "phpBB"
-msgstr "phpBB"
-
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
@@ -9998,3 +10022,30 @@ msgstr "felhasználó"
 
 msgid "version:"
 msgstr "verzió:"
+
+#~ msgid "Disks (ATA)"
+#~ msgstr "Merevlemezek (ATA)"
+
+#~ msgid "Generate"
+#~ msgstr "Generálás"
+
+#~ msgid "Hardware"
+#~ msgstr "Hardver"
+
+#~ msgid "Report Generator"
+#~ msgstr "Jelentéskészítő"
+
+#~ msgid "phpBB"
+#~ msgstr "phpBB"
+
+#~ msgid "Disks (ATA) information"
+#~ msgstr "ATA lemezekről információ"
+
+#~ msgid "Format the report for phpBB forum."
+#~ msgstr "Jelentés formázása phpBB fórumhoz."
+
+#~ msgid "Include basic hardware information."
+#~ msgstr "A jelentés tartalmazza az alap hardverinformációkat."
+
+#~ msgid "Do you want to disable selected commands??"
+#~ msgstr "Biztos, hogy letiltod a kijelölt parancsokat?"
