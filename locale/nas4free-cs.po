@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-10-29 14:22+0000\n"
+"POT-Creation-Date: 2016-11-02 00:34+0000\n"
 "PO-Revision-Date: 2016-10-18 21:36+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-10-29 12:41+0000\n"
+"X-Launchpad-Export-Date: 2016-11-01 23:48+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -1473,6 +1473,15 @@ msgstr ""
 "Příkaz, který vykonat v případě události LINK_UP (připojení do sítě) (např. "
 "%s)."
 
+msgid "Command is marked for removal"
+msgstr ""
+
+msgid "Command is protected"
+msgstr ""
+
+msgid "Command is unlocked"
+msgstr ""
+
 msgid "Command output"
 msgstr "Výstup z příkazu"
 
@@ -2092,6 +2101,9 @@ msgstr "Smazat trasu"
 msgid "Delete Rsync job"
 msgstr "Smazat Rsync úlohu"
 
+msgid "Delete Selected Commands"
+msgstr ""
+
 msgid "Delete Selected Datasets"
 msgstr "Smazat označené datové sady"
 
@@ -2139,9 +2151,6 @@ msgstr "Odstranit automatické zachycování stavu"
 
 msgid "Delete clone"
 msgstr "Smazat klon"
-
-msgid "Delete command"
-msgstr "Odstranit příkaz"
 
 msgid "Delete disk"
 msgstr "Odstranit disk"
@@ -2383,6 +2392,9 @@ msgstr "Složka, ve které sledovat výskyt nových .torrent souborů."
 msgid "Disable Firmware Update"
 msgstr "Vypnout aktualizaci firmware"
 
+msgid "Disable Selected Commands"
+msgstr ""
+
 msgid "Disable Selected Jobs"
 msgstr "Smazat označené úlohy"
 
@@ -2439,11 +2451,11 @@ msgstr "Obsazený prostor"
 msgid "Disks"
 msgstr "Disky"
 
-msgid "Disks (ATA)"
-msgstr "Disky (rozhraní ATA)"
+msgid "Disks (Info)"
+msgstr ""
 
-msgid "Disks (ATA) information"
-msgstr "Informace o discích (ATA)"
+msgid "Disks (Info) information"
+msgstr ""
 
 msgid "Disks | Mount Point | Management"
 msgstr "Disky | Přípojný bod | Správa"
@@ -2512,9 +2524,6 @@ msgstr "Opravdu chcete smazat toto automatické zachycování stavu?"
 
 msgid "Do you really want to delete this clone?"
 msgstr "Opravdu chcete smazat tento klon?"
-
-msgid "Do you really want to delete this command?"
-msgstr "Opravdu chcete smazat tento příkaz?"
 
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
@@ -2643,6 +2652,9 @@ msgstr ""
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Chcete smazat označené RAID svazky?"
 
+msgid "Do you want to delete selected commands?"
+msgstr ""
+
 msgid "Do you want to delete selected datasets?"
 msgstr "Opravdu smazat označené datové sady?"
 
@@ -2664,11 +2676,17 @@ msgstr "Opravdu chcete smazat označené virtuální zařízení?"
 msgid "Do you want to delete selected volumes?"
 msgstr "Opravdu smazat označené svazky?"
 
+msgid "Do you want to disable selected commands?"
+msgstr ""
+
 msgid "Do you want to disable selected jobs?"
 msgstr "Opravdu vypnout označené úlohy?"
 
 msgid "Do you want to disable selected options?"
 msgstr "Opravdu vypnout označené předvolby?"
+
+msgid "Do you want to enable selected commands?"
+msgstr ""
 
 msgid "Do you want to enable selected jobs?"
 msgstr "Opravdu zapnout označené úlohy?"
@@ -2678,6 +2696,9 @@ msgstr "Opravdu zapnout označené předvolby?"
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr "Chcete tento firmware nainstalovat i tak (na vlastní riziko)?"
+
+msgid "Do you want to toggle selected commands?"
+msgstr ""
 
 msgid "Do you want to toggle selected jobs?"
 msgstr "Opravdu přepnout označené úlohy?"
@@ -2966,6 +2987,9 @@ msgstr ""
 "Zapnout STARTTLS šifrování. Toto ovšem neznamená, že je zapotřebí používat "
 "TLS, použít je možné i SSL."
 
+msgid "Enable Selected Commands"
+msgstr ""
+
 msgid "Enable Selected Jobs"
 msgstr "Zapnout označené úlohy"
 
@@ -3166,6 +3190,12 @@ msgid ""
 msgstr ""
 "Pokud nevyhovují výchozí, zadejte vlastní čísla portů pro webové rozhraní "
 "namísto standardních 80 pro HTTP a 443 pro HTTPS."
+
+msgid "Enter a description for your reference."
+msgstr ""
+
+msgid "Enter a name for the command."
+msgstr ""
 
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
@@ -3555,9 +3585,6 @@ msgstr "Předvolby formátování"
 msgid "Format Program"
 msgstr "Nástroj pro formátování"
 
-msgid "Format the report for phpBB forum."
-msgstr "Připravit výstup do podoby vhodné pro phpBB fórum."
-
 msgid "Forum"
 msgstr "Diskuzní fórum"
 
@@ -3636,9 +3663,6 @@ msgstr "Obecné"
 
 msgid "General Setup"
 msgstr "Obecná nastavení"
-
-msgid "Generate"
-msgstr "Vytvořit"
 
 msgid "Generate a new unique identifier for a pool"
 msgstr ""
@@ -3769,9 +3793,6 @@ msgstr "HVM virt. stroj"
 
 msgid "Hard Disk"
 msgstr "Pevný disk"
-
-msgid "Hardware"
-msgstr "Hardware"
 
 msgid "Header and Data digest"
 msgstr "Kontrolní otisk (digest) hlavičky a dat"
@@ -4100,9 +4121,6 @@ msgstr "Vst./výst. chyby"
 
 msgid "In/Out packets"
 msgstr "Vst./výst. pakety"
-
-msgid "Include basic hardware information."
-msgstr "Zahrnout základní údaje o hardware."
 
 msgid "Incoming Line/Power Information"
 msgstr "Informace o stavu napájení z rozvodné sítě"
@@ -6371,14 +6389,14 @@ msgstr "Odstranit všechny záznamy z ARP tabulky"
 msgid "Remove the %s first before proceeding."
 msgstr "Pokračovat bude možné až po odebrání %s."
 
+msgid "Reorder Commands"
+msgstr ""
+
 msgid "Replace Battery UPS"
 msgstr "Vyměňte akumulátory v UPS zdroji"
 
 msgid "Replace a device"
 msgstr "Nahradit zařízení"
-
-msgid "Report Generator"
-msgstr "Vytvoření hlášení"
 
 msgid ""
 "Report if the temperature had changed by at least N degrees Celsius since "
@@ -7099,6 +7117,9 @@ msgstr "Softwarový RAID"
 
 msgid "Software Used"
 msgstr "Použitý software"
+
+msgid "Sort"
+msgstr ""
 
 msgid "Source"
 msgstr "Zdroj"
@@ -8994,6 +9015,9 @@ msgstr ""
 msgid "Toggle Mode"
 msgstr "Přepnout režim"
 
+msgid "Toggle Selected Commands"
+msgstr ""
+
 msgid "Toggle Selected Jobs"
 msgstr "Přepnout označené úlohy"
 
@@ -9916,6 +9940,9 @@ msgstr "ZFS datová sada – informace a stav"
 msgid "ZFS Dataset Properties"
 msgstr "Vlastnosti ZFS datové sady"
 
+msgid "ZFS Pool I/O Statistics"
+msgstr ""
+
 msgid "ZFS Pool Tools"
 msgstr "Nástroje pro ZFS fondy"
 
@@ -10054,9 +10081,6 @@ msgstr "noVNC"
 msgid "none"
 msgstr "žádné"
 
-msgid "phpBB"
-msgstr "phpBB"
-
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
@@ -10109,8 +10133,26 @@ msgstr "uživatel"
 msgid "version:"
 msgstr "verze:"
 
-#~ msgid "Memory Usage"
-#~ msgstr "Využití operační paměti"
+#~ msgid "Hardware"
+#~ msgstr "Hardware"
 
-#~ msgid "List Mount Points"
-#~ msgstr "Vypsat přípojné body"
+#~ msgid "phpBB"
+#~ msgstr "phpBB"
+
+#~ msgid "Disks (ATA) information"
+#~ msgstr "Informace o discích (ATA)"
+
+#~ msgid "Generate"
+#~ msgstr "Vytvořit"
+
+#~ msgid "Disks (ATA)"
+#~ msgstr "Disky (rozhraní ATA)"
+
+#~ msgid "Include basic hardware information."
+#~ msgstr "Zahrnout základní údaje o hardware."
+
+#~ msgid "Format the report for phpBB forum."
+#~ msgstr "Připravit výstup do podoby vhodné pro phpBB fórum."
+
+#~ msgid "Report Generator"
+#~ msgstr "Vytvoření hlášení"

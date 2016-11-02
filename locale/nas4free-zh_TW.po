@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-10-29 14:22+0000\n"
+"POT-Creation-Date: 2016-11-02 00:34+0000\n"
 "PO-Revision-Date: 2016-03-03 17:10+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-10-29 12:41+0000\n"
+"X-Launchpad-Export-Date: 2016-11-01 23:49+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -1337,6 +1337,15 @@ msgstr "LINK_DOWN 事件的指令（例如 %s）。"
 msgid "Command for LINK_UP event (e.g. %s)."
 msgstr "LINK_UP 事件的指令（例如 %s）。"
 
+msgid "Command is marked for removal"
+msgstr ""
+
+msgid "Command is protected"
+msgstr ""
+
+msgid "Command is unlocked"
+msgstr ""
+
 msgid "Command output"
 msgstr ""
 
@@ -1881,6 +1890,9 @@ msgstr "刪除路由"
 msgid "Delete Rsync job"
 msgstr "刪除 Rsync 任務"
 
+msgid "Delete Selected Commands"
+msgstr ""
+
 msgid "Delete Selected Datasets"
 msgstr ""
 
@@ -1928,9 +1940,6 @@ msgstr "刪除自動快照"
 
 msgid "Delete clone"
 msgstr "刪除克隆"
-
-msgid "Delete command"
-msgstr "刪除指令"
 
 msgid "Delete disk"
 msgstr "刪除磁碟"
@@ -2159,6 +2168,9 @@ msgstr "監視新 .torrent 檔案的目錄。"
 msgid "Disable Firmware Update"
 msgstr "關閉固件更新"
 
+msgid "Disable Selected Commands"
+msgstr ""
+
 msgid "Disable Selected Jobs"
 msgstr ""
 
@@ -2214,11 +2226,11 @@ msgstr "磁碟使用狀況"
 msgid "Disks"
 msgstr "磁碟"
 
-msgid "Disks (ATA)"
-msgstr "磁碟（ATA）"
+msgid "Disks (Info)"
+msgstr ""
 
-msgid "Disks (ATA) information"
-msgstr "磁碟（ATA）資訊"
+msgid "Disks (Info) information"
+msgstr ""
 
 msgid "Disks | Mount Point | Management"
 msgstr ""
@@ -2278,9 +2290,6 @@ msgstr "您確定要刪除這個自動快照嗎？"
 
 msgid "Do you really want to delete this clone?"
 msgstr "您確認要刪除這個克隆嗎？"
-
-msgid "Do you really want to delete this command?"
-msgstr "您確認要刪除這個指令嗎？"
 
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
@@ -2396,6 +2405,9 @@ msgstr ""
 msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
+msgid "Do you want to delete selected commands?"
+msgstr ""
+
 msgid "Do you want to delete selected datasets?"
 msgstr ""
 
@@ -2417,10 +2429,16 @@ msgstr ""
 msgid "Do you want to delete selected volumes?"
 msgstr ""
 
+msgid "Do you want to disable selected commands?"
+msgstr ""
+
 msgid "Do you want to disable selected jobs?"
 msgstr ""
 
 msgid "Do you want to disable selected options?"
+msgstr ""
+
+msgid "Do you want to enable selected commands?"
 msgstr ""
 
 msgid "Do you want to enable selected jobs?"
@@ -2430,6 +2448,9 @@ msgid "Do you want to enable selected options?"
 msgstr ""
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
+msgstr ""
+
+msgid "Do you want to toggle selected commands?"
 msgstr ""
 
 msgid "Do you want to toggle selected jobs?"
@@ -2714,6 +2735,9 @@ msgid ""
 "use SSL."
 msgstr "啟用STARTTLS加密。這並不意味著您必須使用TLS，您可以使用SSL。"
 
+msgid "Enable Selected Commands"
+msgstr ""
+
 msgid "Enable Selected Jobs"
 msgstr ""
 
@@ -2904,6 +2928,12 @@ msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr "如果您想覆蓋默認值的話，請輸入自定的網頁界面的端口編號（80為HTTP，HTTPS為443）。"
+
+msgid "Enter a description for your reference."
+msgstr ""
+
+msgid "Enter a name for the command."
+msgstr ""
 
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
@@ -3263,9 +3293,6 @@ msgstr ""
 msgid "Format Program"
 msgstr ""
 
-msgid "Format the report for phpBB forum."
-msgstr "將報告格式化成適合 phpBB 的論壇的形式。"
-
 msgid "Forum"
 msgstr "論壇"
 
@@ -3342,9 +3369,6 @@ msgstr "一般設定"
 
 msgid "General Setup"
 msgstr "一般設定"
-
-msgid "Generate"
-msgstr "生成"
 
 msgid "Generate a new unique identifier for a pool"
 msgstr ""
@@ -3466,9 +3490,6 @@ msgstr ""
 
 msgid "Hard Disk"
 msgstr "硬盤"
-
-msgid "Hardware"
-msgstr "硬體"
 
 msgid "Header and Data digest"
 msgstr "頭摘要和數據摘要"
@@ -3761,9 +3782,6 @@ msgstr "輸入/輸出錯誤"
 
 msgid "In/Out packets"
 msgstr "輸入/輸出數據包"
-
-msgid "Include basic hardware information."
-msgstr "包括基本的硬件資訊。"
 
 msgid "Incoming Line/Power Information"
 msgstr "輸入線/電源信息"
@@ -5889,14 +5907,14 @@ msgstr "移除所有ARP table內的項目"
 msgid "Remove the %s first before proceeding."
 msgstr ""
 
+msgid "Reorder Commands"
+msgstr ""
+
 msgid "Replace Battery UPS"
 msgstr "更換UPS電池"
 
 msgid "Replace a device"
 msgstr ""
-
-msgid "Report Generator"
-msgstr "報告生成"
 
 msgid ""
 "Report if the temperature had changed by at least N degrees Celsius since "
@@ -6572,6 +6590,9 @@ msgid "Software RAID"
 msgstr "軟體RAID"
 
 msgid "Software Used"
+msgstr ""
+
+msgid "Sort"
 msgstr ""
 
 msgid "Source"
@@ -8203,6 +8224,9 @@ msgstr "您必須裝載每個目錄才能使用子目錄。（如 %s）"
 msgid "Toggle Mode"
 msgstr ""
 
+msgid "Toggle Selected Commands"
+msgstr ""
+
 msgid "Toggle Selected Jobs"
 msgstr ""
 
@@ -9043,6 +9067,9 @@ msgstr "ZFS 數據集信息和狀態"
 msgid "ZFS Dataset Properties"
 msgstr "ZFS 數據集屬性"
 
+msgid "ZFS Pool I/O Statistics"
+msgstr ""
+
 msgid "ZFS Pool Tools"
 msgstr ""
 
@@ -9172,9 +9199,6 @@ msgstr "noVNC"
 msgid "none"
 msgstr "無"
 
-msgid "phpBB"
-msgstr "phpBB"
-
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
@@ -9223,8 +9247,26 @@ msgstr ""
 msgid "version:"
 msgstr "版本："
 
-#~ msgid "List Mount Points"
-#~ msgstr "列出掛載點"
+#~ msgid "Disks (ATA)"
+#~ msgstr "磁碟（ATA）"
 
-#~ msgid "Memory Usage"
-#~ msgstr "內存使用情況"
+#~ msgid "Hardware"
+#~ msgstr "硬體"
+
+#~ msgid "phpBB"
+#~ msgstr "phpBB"
+
+#~ msgid "Report Generator"
+#~ msgstr "報告生成"
+
+#~ msgid "Include basic hardware information."
+#~ msgstr "包括基本的硬件資訊。"
+
+#~ msgid "Disks (ATA) information"
+#~ msgstr "磁碟（ATA）資訊"
+
+#~ msgid "Format the report for phpBB forum."
+#~ msgstr "將報告格式化成適合 phpBB 的論壇的形式。"
+
+#~ msgid "Generate"
+#~ msgstr "生成"

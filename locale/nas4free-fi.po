@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-10-29 14:22+0000\n"
+"POT-Creation-Date: 2016-11-02 00:34+0000\n"
 "PO-Revision-Date: 2016-10-16 11:58+0000\n"
 "Last-Translator: Janne <Unknown>\n"
 "Language-Team: NAS4Free <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-10-29 12:41+0000\n"
+"X-Launchpad-Export-Date: 2016-11-01 23:49+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "X-Poedit-Country: FINLAND\n"
 "X-Poedit-Language: Finnish\n"
@@ -1385,6 +1385,15 @@ msgstr ""
 msgid "Command for LINK_UP event (e.g. %s)."
 msgstr ""
 
+msgid "Command is marked for removal"
+msgstr ""
+
+msgid "Command is protected"
+msgstr ""
+
+msgid "Command is unlocked"
+msgstr ""
+
 msgid "Command output"
 msgstr ""
 
@@ -1925,6 +1934,9 @@ msgstr "Poista reitti"
 msgid "Delete Rsync job"
 msgstr "Poista Rsync työ"
 
+msgid "Delete Selected Commands"
+msgstr ""
+
 msgid "Delete Selected Datasets"
 msgstr ""
 
@@ -1972,9 +1984,6 @@ msgstr ""
 
 msgid "Delete clone"
 msgstr "Poista klooni"
-
-msgid "Delete command"
-msgstr "Poista komento"
 
 msgid "Delete disk"
 msgstr "Poista levy"
@@ -2201,6 +2210,9 @@ msgstr ""
 msgid "Disable Firmware Update"
 msgstr ""
 
+msgid "Disable Selected Commands"
+msgstr ""
+
 msgid "Disable Selected Jobs"
 msgstr ""
 
@@ -2256,10 +2268,10 @@ msgstr "Levytilan käyttö"
 msgid "Disks"
 msgstr "Levyt"
 
-msgid "Disks (ATA)"
-msgstr "Levyt  (ATA)"
+msgid "Disks (Info)"
+msgstr ""
 
-msgid "Disks (ATA) information"
+msgid "Disks (Info) information"
 msgstr ""
 
 msgid "Disks | Mount Point | Management"
@@ -2320,9 +2332,6 @@ msgstr ""
 
 msgid "Do you really want to delete this clone?"
 msgstr ""
-
-msgid "Do you really want to delete this command?"
-msgstr "Haluatko varmasti poistaa komennon?"
 
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
@@ -2440,6 +2449,9 @@ msgstr ""
 msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
+msgid "Do you want to delete selected commands?"
+msgstr ""
+
 msgid "Do you want to delete selected datasets?"
 msgstr ""
 
@@ -2461,10 +2473,16 @@ msgstr ""
 msgid "Do you want to delete selected volumes?"
 msgstr ""
 
+msgid "Do you want to disable selected commands?"
+msgstr ""
+
 msgid "Do you want to disable selected jobs?"
 msgstr ""
 
 msgid "Do you want to disable selected options?"
+msgstr ""
+
+msgid "Do you want to enable selected commands?"
 msgstr ""
 
 msgid "Do you want to enable selected jobs?"
@@ -2474,6 +2492,9 @@ msgid "Do you want to enable selected options?"
 msgstr ""
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
+msgstr ""
+
+msgid "Do you want to toggle selected commands?"
 msgstr ""
 
 msgid "Do you want to toggle selected jobs?"
@@ -2758,6 +2779,9 @@ msgid ""
 "use SSL."
 msgstr ""
 
+msgid "Enable Selected Commands"
+msgstr ""
+
 msgid "Enable Selected Jobs"
 msgstr ""
 
@@ -2947,6 +2971,12 @@ msgstr ""
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
 "default (80 for HTTP, 443 for HTTPS)."
+msgstr ""
+
+msgid "Enter a description for your reference."
+msgstr ""
+
+msgid "Enter a name for the command."
 msgstr ""
 
 msgid ""
@@ -3309,9 +3339,6 @@ msgstr ""
 msgid "Format Program"
 msgstr ""
 
-msgid "Format the report for phpBB forum."
-msgstr ""
-
 msgid "Forum"
 msgstr "Keskustelualue"
 
@@ -3388,9 +3415,6 @@ msgstr "Yleistä"
 
 msgid "General Setup"
 msgstr "Yleiset asetukset"
-
-msgid "Generate"
-msgstr "Luo"
 
 msgid "Generate a new unique identifier for a pool"
 msgstr ""
@@ -3512,9 +3536,6 @@ msgstr ""
 
 msgid "Hard Disk"
 msgstr "Kiintolevy"
-
-msgid "Hardware"
-msgstr "Laitteisto"
 
 msgid "Header and Data digest"
 msgstr ""
@@ -3800,9 +3821,6 @@ msgid "In/Out errors"
 msgstr ""
 
 msgid "In/Out packets"
-msgstr ""
-
-msgid "Include basic hardware information."
 msgstr ""
 
 msgid "Incoming Line/Power Information"
@@ -5935,14 +5953,14 @@ msgstr ""
 msgid "Remove the %s first before proceeding."
 msgstr ""
 
+msgid "Reorder Commands"
+msgstr ""
+
 msgid "Replace Battery UPS"
 msgstr "Vaihda UPS:n akku"
 
 msgid "Replace a device"
 msgstr ""
-
-msgid "Report Generator"
-msgstr "Raporttien luonti"
 
 msgid ""
 "Report if the temperature had changed by at least N degrees Celsius since "
@@ -6616,6 +6634,9 @@ msgid "Software RAID"
 msgstr ""
 
 msgid "Software Used"
+msgstr ""
+
+msgid "Sort"
 msgstr ""
 
 msgid "Source"
@@ -8228,6 +8249,9 @@ msgstr ""
 msgid "Toggle Mode"
 msgstr ""
 
+msgid "Toggle Selected Commands"
+msgstr ""
+
 msgid "Toggle Selected Jobs"
 msgstr ""
 
@@ -9069,6 +9093,9 @@ msgstr ""
 msgid "ZFS Dataset Properties"
 msgstr ""
 
+msgid "ZFS Pool I/O Statistics"
+msgstr ""
+
 msgid "ZFS Pool Tools"
 msgstr ""
 
@@ -9198,9 +9225,6 @@ msgstr ""
 msgid "none"
 msgstr "ei mikään"
 
-msgid "phpBB"
-msgstr "phpBB"
-
 msgid "phpVirtualBox"
 msgstr ""
 
@@ -9249,5 +9273,17 @@ msgstr ""
 msgid "version:"
 msgstr ""
 
-#~ msgid "Memory Usage"
-#~ msgstr "Muistin käyttö"
+#~ msgid "Disks (ATA)"
+#~ msgstr "Levyt  (ATA)"
+
+#~ msgid "phpBB"
+#~ msgstr "phpBB"
+
+#~ msgid "Generate"
+#~ msgstr "Luo"
+
+#~ msgid "Hardware"
+#~ msgstr "Laitteisto"
+
+#~ msgid "Report Generator"
+#~ msgstr "Raporttien luonti"

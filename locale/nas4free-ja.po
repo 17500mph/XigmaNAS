@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-10-29 14:22+0000\n"
+"POT-Creation-Date: 2016-11-02 00:34+0000\n"
 "PO-Revision-Date: 2016-08-10 07:07+0000\n"
 "Last-Translator: Tomoyuki Shiga <tomoyuki_shiga@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-10-29 12:41+0000\n"
+"X-Launchpad-Export-Date: 2016-11-01 23:49+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -1360,6 +1360,15 @@ msgstr "リンクダウンイベント用のコマンド (例: %s)"
 msgid "Command for LINK_UP event (e.g. %s)."
 msgstr "リンクアップイベント用のコマンド (例: %s)"
 
+msgid "Command is marked for removal"
+msgstr ""
+
+msgid "Command is protected"
+msgstr ""
+
+msgid "Command is unlocked"
+msgstr ""
+
 msgid "Command output"
 msgstr ""
 
@@ -1913,6 +1922,9 @@ msgstr "ルートの削除"
 msgid "Delete Rsync job"
 msgstr "Rsync ジョブを削除"
 
+msgid "Delete Selected Commands"
+msgstr ""
+
 msgid "Delete Selected Datasets"
 msgstr ""
 
@@ -1960,9 +1972,6 @@ msgstr "自動スナップショットの削除"
 
 msgid "Delete clone"
 msgstr "クローンを削除"
-
-msgid "Delete command"
-msgstr "コマンドを削除"
 
 msgid "Delete disk"
 msgstr "ディスクの削除"
@@ -2192,6 +2201,9 @@ msgstr "新しい .torrent ファイルを監視するディレクトリ。"
 msgid "Disable Firmware Update"
 msgstr "ファームウェアアップデートを無効化"
 
+msgid "Disable Selected Commands"
+msgstr ""
+
 msgid "Disable Selected Jobs"
 msgstr ""
 
@@ -2247,11 +2259,11 @@ msgstr "ディスク使用率"
 msgid "Disks"
 msgstr "ディスク"
 
-msgid "Disks (ATA)"
-msgstr "ディスク(ATA)"
+msgid "Disks (Info)"
+msgstr ""
 
-msgid "Disks (ATA) information"
-msgstr "ディスク (ATA) 情報"
+msgid "Disks (Info) information"
+msgstr ""
 
 msgid "Disks | Mount Point | Management"
 msgstr ""
@@ -2311,9 +2323,6 @@ msgstr "この自動スナップショットを削除してもよろしいです
 
 msgid "Do you really want to delete this clone?"
 msgstr "このクローンを削除してもよろしいですか?"
-
-msgid "Do you really want to delete this command?"
-msgstr "このコマンドを削除してもよろしいですか?"
 
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
@@ -2431,6 +2440,9 @@ msgstr ""
 msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
+msgid "Do you want to delete selected commands?"
+msgstr ""
+
 msgid "Do you want to delete selected datasets?"
 msgstr ""
 
@@ -2452,10 +2464,16 @@ msgstr ""
 msgid "Do you want to delete selected volumes?"
 msgstr ""
 
+msgid "Do you want to disable selected commands?"
+msgstr ""
+
 msgid "Do you want to disable selected jobs?"
 msgstr ""
 
 msgid "Do you want to disable selected options?"
+msgstr ""
+
+msgid "Do you want to enable selected commands?"
 msgstr ""
 
 msgid "Do you want to enable selected jobs?"
@@ -2465,6 +2483,9 @@ msgid "Do you want to enable selected options?"
 msgstr ""
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
+msgstr ""
+
+msgid "Do you want to toggle selected commands?"
 msgstr ""
 
 msgid "Do you want to toggle selected jobs?"
@@ -2749,6 +2770,9 @@ msgid ""
 "use SSL."
 msgstr "STARTTLS暗号化を有効にします。これはTLSを必ず利用しなければいけないわけではなく、SSLを利用できます。"
 
+msgid "Enable Selected Commands"
+msgstr ""
+
 msgid "Enable Selected Jobs"
 msgstr ""
 
@@ -2940,6 +2964,12 @@ msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr "WebGUIデフォルトポート(HTTP 80, HTTPS 443)を変更したい場合は、カスタムポート番号を入力してください。"
+
+msgid "Enter a description for your reference."
+msgstr ""
+
+msgid "Enter a name for the command."
+msgstr ""
 
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
@@ -3302,9 +3332,6 @@ msgstr ""
 msgid "Format Program"
 msgstr ""
 
-msgid "Format the report for phpBB forum."
-msgstr "phpBB フォーラムのフォーマットでレポートを生成します。"
-
 msgid "Forum"
 msgstr "フォーラム"
 
@@ -3381,9 +3408,6 @@ msgstr "基本"
 
 msgid "General Setup"
 msgstr "基本設定"
-
-msgid "Generate"
-msgstr "生成"
 
 msgid "Generate a new unique identifier for a pool"
 msgstr ""
@@ -3508,9 +3532,6 @@ msgstr "HVM ゲスト"
 
 msgid "Hard Disk"
 msgstr "ハードディスク"
-
-msgid "Hardware"
-msgstr "ハードウェア"
 
 msgid "Header and Data digest"
 msgstr "ヘッダー及びデータダイジェスト"
@@ -3807,9 +3828,6 @@ msgstr "In/Out エラー"
 
 msgid "In/Out packets"
 msgstr "In/Out パケット"
-
-msgid "Include basic hardware information."
-msgstr "基本的なハードウェア情報を含む。"
 
 msgid "Incoming Line/Power Information"
 msgstr "入力電源情報"
@@ -5951,14 +5969,14 @@ msgstr "ARP テーブルの全てのエントリを削除"
 msgid "Remove the %s first before proceeding."
 msgstr ""
 
+msgid "Reorder Commands"
+msgstr ""
+
 msgid "Replace Battery UPS"
 msgstr "UPSバッテリーを交換してください"
 
 msgid "Replace a device"
 msgstr ""
-
-msgid "Report Generator"
-msgstr "レポートジェネレーター"
 
 msgid ""
 "Report if the temperature had changed by at least N degrees Celsius since "
@@ -6640,6 +6658,9 @@ msgid "Software RAID"
 msgstr "ソフトウェア RAID"
 
 msgid "Software Used"
+msgstr ""
+
+msgid "Sort"
 msgstr ""
 
 msgid "Source"
@@ -8311,6 +8332,9 @@ msgstr "サブディレクトリを使用するには、各ディレクトリー
 msgid "Toggle Mode"
 msgstr ""
 
+msgid "Toggle Selected Commands"
+msgstr ""
+
 msgid "Toggle Selected Jobs"
 msgstr ""
 
@@ -9161,6 +9185,9 @@ msgstr "ZFS データセット情報と状態"
 msgid "ZFS Dataset Properties"
 msgstr "ZFS データセットプロパティ"
 
+msgid "ZFS Pool I/O Statistics"
+msgstr ""
+
 msgid "ZFS Pool Tools"
 msgstr ""
 
@@ -9290,9 +9317,6 @@ msgstr "noVNC"
 msgid "none"
 msgstr "none"
 
-msgid "phpBB"
-msgstr "phpBB"
-
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
@@ -9341,8 +9365,26 @@ msgstr ""
 msgid "version:"
 msgstr "バージョン:"
 
-#~ msgid "List Mount Points"
-#~ msgstr "マウントポイントのリスト"
+#~ msgid "Disks (ATA)"
+#~ msgstr "ディスク(ATA)"
 
-#~ msgid "Memory Usage"
-#~ msgstr "メモリ使用量"
+#~ msgid "Format the report for phpBB forum."
+#~ msgstr "phpBB フォーラムのフォーマットでレポートを生成します。"
+
+#~ msgid "Generate"
+#~ msgstr "生成"
+
+#~ msgid "Hardware"
+#~ msgstr "ハードウェア"
+
+#~ msgid "Include basic hardware information."
+#~ msgstr "基本的なハードウェア情報を含む。"
+
+#~ msgid "Report Generator"
+#~ msgstr "レポートジェネレーター"
+
+#~ msgid "phpBB"
+#~ msgstr "phpBB"
+
+#~ msgid "Disks (ATA) information"
+#~ msgstr "ディスク (ATA) 情報"

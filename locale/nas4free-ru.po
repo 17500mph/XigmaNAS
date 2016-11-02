@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-10-29 14:22+0000\n"
-"PO-Revision-Date: 2016-10-29 12:32+0000\n"
+"POT-Creation-Date: 2016-11-02 00:34+0000\n"
+"PO-Revision-Date: 2016-10-31 04:38+0000\n"
 "Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-10-29 12:41+0000\n"
+"X-Launchpad-Export-Date: 2016-11-01 23:49+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -1457,6 +1457,15 @@ msgstr "Команда для события LINK_DOWN (например %s)."
 msgid "Command for LINK_UP event (e.g. %s)."
 msgstr "Команда для события LINK_UP (например %s)."
 
+msgid "Command is marked for removal"
+msgstr "Команда помечена для удаления"
+
+msgid "Command is protected"
+msgstr "Команда защищена"
+
+msgid "Command is unlocked"
+msgstr "Команда разблокирована"
+
 msgid "Command output"
 msgstr "Вывод команды"
 
@@ -2080,6 +2089,9 @@ msgstr "Удалить маршрут"
 msgid "Delete Rsync job"
 msgstr "Удалить задание Rsync"
 
+msgid "Delete Selected Commands"
+msgstr "Удалить выбранные команды"
+
 msgid "Delete Selected Datasets"
 msgstr "Удалить выбранные Dataset'ы"
 
@@ -2127,9 +2139,6 @@ msgstr "Удалить автоматический Snapshot"
 
 msgid "Delete clone"
 msgstr "Удалить копию"
-
-msgid "Delete command"
-msgstr "Удалить команду"
 
 msgid "Delete disk"
 msgstr "Удалить диск"
@@ -2370,6 +2379,9 @@ msgstr "Каталог для отслеживания новых .torrent-фа�
 msgid "Disable Firmware Update"
 msgstr "Отключить обновление прошивки"
 
+msgid "Disable Selected Commands"
+msgstr "Отключить выбранные команды"
+
 msgid "Disable Selected Jobs"
 msgstr "Отключить выбранные задания"
 
@@ -2425,11 +2437,11 @@ msgstr "Использование дискового пространства"
 msgid "Disks"
 msgstr "Диски"
 
-msgid "Disks (ATA)"
-msgstr "Диски (ATA)"
+msgid "Disks (Info)"
+msgstr ""
 
-msgid "Disks (ATA) information"
-msgstr "Информация по  дискам (ATA)"
+msgid "Disks (Info) information"
+msgstr ""
 
 msgid "Disks | Mount Point | Management"
 msgstr "Диски | Точка монтирования | Управление"
@@ -2497,9 +2509,6 @@ msgstr "Вы уверены, что вы хотите удалить этот а
 
 msgid "Do you really want to delete this clone?"
 msgstr "Вы действительно хотите удалить эту копию?"
-
-msgid "Do you really want to delete this command?"
-msgstr "Вы действительно хотите удалить эту команду?"
 
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
@@ -2629,6 +2638,9 @@ msgstr ""
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Вы действительно хотите удалить выбранные тома RAID?"
 
+msgid "Do you want to delete selected commands?"
+msgstr "Вы уверены, что желаете удалить выбранные команды?"
+
 msgid "Do you want to delete selected datasets?"
 msgstr "Вы действительно желаете удалить выбранные Dataset'ы?"
 
@@ -2650,11 +2662,17 @@ msgstr "Хотите ли вы удалить выбранные виртуал�
 msgid "Do you want to delete selected volumes?"
 msgstr "Вы действительно желаете удалить выбранные разделы?"
 
+msgid "Do you want to disable selected commands?"
+msgstr ""
+
 msgid "Do you want to disable selected jobs?"
 msgstr "Вы действительно желаете отключить выбранные задания?"
 
 msgid "Do you want to disable selected options?"
 msgstr "Вы действительно желаете отключить выбранные опции?"
+
+msgid "Do you want to enable selected commands?"
+msgstr "Вы уверены, что желаете включить выбранные команды?"
 
 msgid "Do you want to enable selected jobs?"
 msgstr "Вы действительно желаете включить выбранные задания?"
@@ -2665,6 +2683,9 @@ msgstr "Вы действительно желаете включить выбр
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr ""
 "Вы хотите установить эту прошивку в любом случае (на свой страх и риск)?"
+
+msgid "Do you want to toggle selected commands?"
+msgstr "Вы уверены, что желаете переключить выбранные команды?"
 
 msgid "Do you want to toggle selected jobs?"
 msgstr "Вы действительно желаете изменить состояние выбранных заданий?"
@@ -2957,6 +2978,9 @@ msgstr ""
 "Включить шифрование STARTTLS. Это не означает, что Вы должны использовать "
 "TLS, Вы можете использовать SSL."
 
+msgid "Enable Selected Commands"
+msgstr "Включить выбранные команды"
+
 msgid "Enable Selected Jobs"
 msgstr "Включить выбранные задания"
 
@@ -3156,6 +3180,12 @@ msgid ""
 msgstr ""
 "Укажите номер порта вебинтерфейса, если не желаете использовать значение по "
 "умолчанию (80 для HTTP, 443 для HTTPS)"
+
+msgid "Enter a description for your reference."
+msgstr "Введите описание для справки."
+
+msgid "Enter a name for the command."
+msgstr "Введите имя для команды."
 
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
@@ -3545,9 +3575,6 @@ msgstr "Опции форматирования."
 msgid "Format Program"
 msgstr "Программа Форматирования"
 
-msgid "Format the report for phpBB forum."
-msgstr "Сформировать отчет для форума phpBB."
-
 msgid "Forum"
 msgstr "Форум разработчиков"
 
@@ -3626,9 +3653,6 @@ msgstr "Общие"
 
 msgid "General Setup"
 msgstr "Общие параметры"
-
-msgid "Generate"
-msgstr "Создать"
 
 msgid "Generate a new unique identifier for a pool"
 msgstr ""
@@ -3760,9 +3784,6 @@ msgstr "Гостевая система HVM"
 
 msgid "Hard Disk"
 msgstr "Жёсткий диск"
-
-msgid "Hardware"
-msgstr "Аппаратное обеспечение"
 
 msgid "Header and Data digest"
 msgstr "Подпись заголовков и данных"
@@ -4083,9 +4104,6 @@ msgstr "Ошибок ввода/вывода"
 
 msgid "In/Out packets"
 msgstr "Пакетов ввода/вывода"
-
-msgid "Include basic hardware information."
-msgstr "Включить базовые сведения об аппаратном обеспечении"
 
 msgid "Incoming Line/Power Information"
 msgstr "Информация о входной линии"
@@ -6333,14 +6351,14 @@ msgstr "Удалить все записи из ARP-таблицы"
 msgid "Remove the %s first before proceeding."
 msgstr "Удалите %s, прежде чем продолжить."
 
+msgid "Reorder Commands"
+msgstr "Порядок команд"
+
 msgid "Replace Battery UPS"
 msgstr "Замените батарею ИБП (UPS)"
 
 msgid "Replace a device"
 msgstr "Заменить устройство (Replace a device)"
-
-msgid "Report Generator"
-msgstr "Генератор отчетов"
 
 msgid ""
 "Report if the temperature had changed by at least N degrees Celsius since "
@@ -7066,6 +7084,9 @@ msgstr "Программный RAID"
 
 msgid "Software Used"
 msgstr "Используемое программное обеспечение"
+
+msgid "Sort"
+msgstr "Упорядочить"
 
 msgid "Source"
 msgstr "Источник"
@@ -8959,6 +8980,9 @@ msgstr ""
 msgid "Toggle Mode"
 msgstr "Режим переключения"
 
+msgid "Toggle Selected Commands"
+msgstr "Переключить выбранные команды"
+
 msgid "Toggle Selected Jobs"
 msgstr "Вкл./откл. выбранные задания"
 
@@ -9892,6 +9916,9 @@ msgstr "Информация и статус ZFS Dataset'ов"
 msgid "ZFS Dataset Properties"
 msgstr "Свойства ZFS Dataset'ов"
 
+msgid "ZFS Pool I/O Statistics"
+msgstr "Статистика ввода/вывода ZFS пула"
+
 msgid "ZFS Pool Tools"
 msgstr "Инструменты ZFS пулов"
 
@@ -10028,9 +10055,6 @@ msgstr "noVNC"
 msgid "none"
 msgstr "none"
 
-msgid "phpBB"
-msgstr "Отчет для phpBB"
-
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
@@ -10081,8 +10105,29 @@ msgstr "пользователь"
 msgid "version:"
 msgstr "версия:"
 
-#~ msgid "List Mount Points"
-#~ msgstr "Список точек монтирования"
+#~ msgid "Disks (ATA)"
+#~ msgstr "Диски (ATA)"
 
-#~ msgid "Memory Usage"
-#~ msgstr "Использование памяти"
+#~ msgid "Format the report for phpBB forum."
+#~ msgstr "Сформировать отчет для форума phpBB."
+
+#~ msgid "Generate"
+#~ msgstr "Создать"
+
+#~ msgid "Hardware"
+#~ msgstr "Аппаратное обеспечение"
+
+#~ msgid "Include basic hardware information."
+#~ msgstr "Включить базовые сведения об аппаратном обеспечении"
+
+#~ msgid "Report Generator"
+#~ msgstr "Генератор отчетов"
+
+#~ msgid "phpBB"
+#~ msgstr "Отчет для phpBB"
+
+#~ msgid "Disks (ATA) information"
+#~ msgstr "Информация по  дискам (ATA)"
+
+#~ msgid "Do you want to disable selected commands??"
+#~ msgstr "Вы уверены, что желаете удалить выбранные команды?"

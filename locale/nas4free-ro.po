@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-29 14:22+0000\n"
-"PO-Revision-Date: 2016-10-15 07:32+0000\n"
+"POT-Creation-Date: 2016-11-02 00:34+0000\n"
+"PO-Revision-Date: 2016-10-31 05:27+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-10-29 12:41+0000\n"
+"X-Launchpad-Export-Date: 2016-11-01 23:49+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -1463,6 +1463,15 @@ msgstr "Comanda pentru LINK_DOWN (ex. %s)."
 msgid "Command for LINK_UP event (e.g. %s)."
 msgstr "Comanda pentru LINK_UP (ex. %s)."
 
+msgid "Command is marked for removal"
+msgstr "Comanda este marcată pentru ștergere"
+
+msgid "Command is protected"
+msgstr "Comanda este protejată"
+
+msgid "Command is unlocked"
+msgstr "Comanda este deblocată"
+
 msgid "Command output"
 msgstr "Rezultat comandă"
 
@@ -2098,6 +2107,9 @@ msgstr "Ștergere Rută"
 msgid "Delete Rsync job"
 msgstr "Ștergere activitate Rsync"
 
+msgid "Delete Selected Commands"
+msgstr "Ștergere comenzi selectate"
+
 msgid "Delete Selected Datasets"
 msgstr "Ștergere seturi de date selectate"
 
@@ -2145,9 +2157,6 @@ msgstr "Ștergere imagine automată sistem (snapshot)"
 
 msgid "Delete clone"
 msgstr "Ștergere clonă"
-
-msgid "Delete command"
-msgstr "Ștergere comandă"
 
 msgid "Delete disk"
 msgstr "Ștergere disc"
@@ -2389,6 +2398,9 @@ msgstr "Folder pentru urmărirea apariției fișierelor noi tip .torrent."
 msgid "Disable Firmware Update"
 msgstr "Dezactivare actualizare firmware"
 
+msgid "Disable Selected Commands"
+msgstr "Dezactivare comenzi selectate"
+
 msgid "Disable Selected Jobs"
 msgstr "Dezactivare activitîți selectate"
 
@@ -2444,11 +2456,11 @@ msgstr "Utilizare spaţiu disc"
 msgid "Disks"
 msgstr "Discuri"
 
-msgid "Disks (ATA)"
-msgstr "Discuri (ATA)"
+msgid "Disks (Info)"
+msgstr ""
 
-msgid "Disks (ATA) information"
-msgstr "Informații Discuri (ATA)"
+msgid "Disks (Info) information"
+msgstr ""
 
 msgid "Disks | Mount Point | Management"
 msgstr "Discuri | Punct de montare | Management"
@@ -2513,9 +2525,6 @@ msgstr "Doriți să ștergeți această imagine automată (snapshot) a sistemulu
 
 msgid "Do you really want to delete this clone?"
 msgstr "Doriți să ștergeți această clonă?"
-
-msgid "Do you really want to delete this command?"
-msgstr "Doriți să ștergeți această comandă?"
 
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
@@ -2642,6 +2651,9 @@ msgstr "Creați un dispozitiv virtual tip strip folosind discurile selectate?"
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Ștergeți volumele RAID selectate?"
 
+msgid "Do you want to delete selected commands?"
+msgstr "Ștergeți comenzile selectate?"
+
 msgid "Do you want to delete selected datasets?"
 msgstr "Ștergeți seturile de date selectate?"
 
@@ -2663,11 +2675,17 @@ msgstr "Ștergeți dispozitivele virtuale selectate?"
 msgid "Do you want to delete selected volumes?"
 msgstr "Ștergeți volumele selectate?"
 
+msgid "Do you want to disable selected commands?"
+msgstr ""
+
 msgid "Do you want to disable selected jobs?"
 msgstr "Dezactivați activitățile selectate?"
 
 msgid "Do you want to disable selected options?"
 msgstr "Dezactivați opțiunile selectate?"
+
+msgid "Do you want to enable selected commands?"
+msgstr "Activați comenzile selectate?"
 
 msgid "Do you want to enable selected jobs?"
 msgstr "Activați activitățile selectate?"
@@ -2677,6 +2695,9 @@ msgstr "Activați opțiunile selectate?"
 
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr "Instalați oricum acest firmware (pe riscul dumneavoastră)?"
+
+msgid "Do you want to toggle selected commands?"
+msgstr "Schimbați starea comenzilor selectate?"
 
 msgid "Do you want to toggle selected jobs?"
 msgstr "Inversați activitățile selectate?"
@@ -2966,6 +2987,9 @@ msgstr ""
 "Activare criptare STARTTLS. Nu e obligatoriu să folosiți TLS, puteți folosi "
 "și SSL."
 
+msgid "Enable Selected Commands"
+msgstr "Activare comenzi selectate"
+
 msgid "Enable Selected Jobs"
 msgstr "Activare activități selectate"
 
@@ -3163,6 +3187,12 @@ msgid ""
 msgstr ""
 "Introduceți un port personalizat pentru accesarea Interfeței Grafice în "
 "locul portului implicit (80 pentru HTTP, 443 pentru HTTPS)."
+
+msgid "Enter a description for your reference."
+msgstr "Introduceți o scurtă descriere"
+
+msgid "Enter a name for the command."
+msgstr "Introduceți un nume pentru comandă"
 
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
@@ -3550,9 +3580,6 @@ msgstr "Opțiuni format"
 msgid "Format Program"
 msgstr "Program formatare"
 
-msgid "Format the report for phpBB forum."
-msgstr "Format raport utilizat de forumul phpBB."
-
 msgid "Forum"
 msgstr "Forum"
 
@@ -3632,9 +3659,6 @@ msgstr "Setări generale"
 
 msgid "General Setup"
 msgstr "Setări generale"
-
-msgid "Generate"
-msgstr "Generare"
 
 msgid "Generate a new unique identifier for a pool"
 msgstr "Generare a unui nou identificator pentru pool"
@@ -3766,9 +3790,6 @@ msgstr "Guest HVM"
 
 msgid "Hard Disk"
 msgstr "Hard disc"
-
-msgid "Hardware"
-msgstr "Echipament"
 
 msgid "Header and Data digest"
 msgstr "Rezumat Header și Data"
@@ -4099,9 +4120,6 @@ msgstr "Erori In/Out"
 
 msgid "In/Out packets"
 msgstr "Packete In/Out"
-
-msgid "Include basic hardware information."
-msgstr "Include informații de bază hardware."
 
 msgid "Incoming Line/Power Information"
 msgstr "Informații circuit alimentare"
@@ -5082,7 +5100,7 @@ msgid "Mount Point"
 msgstr "Punct Montare"
 
 msgid "Mount Points"
-msgstr ""
+msgstr "Puncte de montare"
 
 msgid "Mount point"
 msgstr "Punct Montare"
@@ -6347,14 +6365,14 @@ msgstr "Șterge toate intrările din tabela ARP"
 msgid "Remove the %s first before proceeding."
 msgstr "Ștergeți %s înainte de a merge mai departe."
 
+msgid "Reorder Commands"
+msgstr "Ordonare comenzi"
+
 msgid "Replace Battery UPS"
 msgstr "Înlocuiți acumulatorul"
 
 msgid "Replace a device"
 msgstr "Înlocuire dispozitiv"
-
-msgid "Report Generator"
-msgstr "Generator de Rapoarte"
 
 msgid ""
 "Report if the temperature had changed by at least N degrees Celsius since "
@@ -7085,6 +7103,9 @@ msgstr "RAID Software"
 
 msgid "Software Used"
 msgstr "Software utilizat"
+
+msgid "Sort"
+msgstr "Sortare"
 
 msgid "Source"
 msgstr "Sursă"
@@ -8984,6 +9005,9 @@ msgstr ""
 msgid "Toggle Mode"
 msgstr "Mod inversare selecție"
 
+msgid "Toggle Selected Commands"
+msgstr "Inversare stare comenzi"
+
 msgid "Toggle Selected Jobs"
 msgstr "Inversare activități selectate."
 
@@ -9914,6 +9938,9 @@ msgstr "Informații & Stare sistem ZFS"
 msgid "ZFS Dataset Properties"
 msgstr "Proprietăți sistem ZFS"
 
+msgid "ZFS Pool I/O Statistics"
+msgstr "Statistici ZFS Pool I/O"
+
 msgid "ZFS Pool Tools"
 msgstr "Unelte pool ZFS"
 
@@ -10048,9 +10075,6 @@ msgstr "noVNC"
 msgid "none"
 msgstr "nimic"
 
-msgid "phpBB"
-msgstr "phpBB"
-
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
@@ -10099,8 +10123,29 @@ msgstr "utilizator"
 msgid "version:"
 msgstr "versiune:"
 
-#~ msgid "List Mount Points"
-#~ msgstr "Afișare puncte de montare"
+#~ msgid "phpBB"
+#~ msgstr "phpBB"
 
-#~ msgid "Memory Usage"
-#~ msgstr "Utilizare memorie"
+#~ msgid "Hardware"
+#~ msgstr "Echipament"
+
+#~ msgid "Format the report for phpBB forum."
+#~ msgstr "Format raport utilizat de forumul phpBB."
+
+#~ msgid "Report Generator"
+#~ msgstr "Generator de Rapoarte"
+
+#~ msgid "Disks (ATA)"
+#~ msgstr "Discuri (ATA)"
+
+#~ msgid "Disks (ATA) information"
+#~ msgstr "Informații Discuri (ATA)"
+
+#~ msgid "Generate"
+#~ msgstr "Generare"
+
+#~ msgid "Include basic hardware information."
+#~ msgstr "Include informații de bază hardware."
+
+#~ msgid "Do you want to disable selected commands??"
+#~ msgstr "Dezactivați comenzile selectate?"

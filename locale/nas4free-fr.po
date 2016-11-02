@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-10-29 14:22+0000\n"
-"PO-Revision-Date: 2016-09-21 18:22+0000\n"
+"POT-Creation-Date: 2016-11-02 00:34+0000\n"
+"PO-Revision-Date: 2016-10-31 05:34+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-10-29 12:41+0000\n"
+"X-Launchpad-Export-Date: 2016-11-01 23:48+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
@@ -1478,6 +1478,15 @@ msgstr "Commande pour l'événement LINK_DOWN (par ex. %s)."
 msgid "Command for LINK_UP event (e.g. %s)."
 msgstr "Commande pour l'événement LINK_UP (par ex. %s)."
 
+msgid "Command is marked for removal"
+msgstr "La commande est marquée pour suppression"
+
+msgid "Command is protected"
+msgstr "La commande est protégée"
+
+msgid "Command is unlocked"
+msgstr "La commande est déverrouillée"
+
 msgid "Command output"
 msgstr "Résultat de la commande"
 
@@ -2107,6 +2116,9 @@ msgstr "Suppression de la route"
 msgid "Delete Rsync job"
 msgstr "Supprimer la tâche Rsync"
 
+msgid "Delete Selected Commands"
+msgstr "Supprimer les commandes sélectionnées"
+
 msgid "Delete Selected Datasets"
 msgstr "supprimer les Dataset sélectionnés"
 
@@ -2154,9 +2166,6 @@ msgstr "Supprimer capture instantanée automatique"
 
 msgid "Delete clone"
 msgstr "supprimer clone"
-
-msgid "Delete command"
-msgstr "Supprimer la commande"
 
 msgid "Delete disk"
 msgstr "Supprimer le  disque"
@@ -2401,6 +2410,9 @@ msgstr "Répertoire où rechercher des nouveaux fichiers .torrent."
 msgid "Disable Firmware Update"
 msgstr "Désactiver la mise à jour du logiciel"
 
+msgid "Disable Selected Commands"
+msgstr "Désactiver les commandes sélectionnées"
+
 msgid "Disable Selected Jobs"
 msgstr "Désactiver les tâches sélectionnées"
 
@@ -2456,11 +2468,11 @@ msgstr "Utilisation des disques"
 msgid "Disks"
 msgstr "Disques"
 
-msgid "Disks (ATA)"
-msgstr "Disques (ATA)"
+msgid "Disks (Info)"
+msgstr ""
 
-msgid "Disks (ATA) information"
-msgstr "Information sur les disques (ATA)"
+msgid "Disks (Info) information"
+msgstr ""
 
 msgid "Disks | Mount Point | Management"
 msgstr "Disques | Point de Montage | Gestion"
@@ -2529,9 +2541,6 @@ msgstr "Voulez-vous vraiment supprimer cet instantané automatique ?"
 
 msgid "Do you really want to delete this clone?"
 msgstr "Voulez-vous vraiment supprimer ce clone?"
-
-msgid "Do you really want to delete this command?"
-msgstr "Voulez-vous vraiment supprimer cette commande?"
 
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
@@ -2667,6 +2676,9 @@ msgstr ""
 msgid "Do you want to delete selected RAID volumes?"
 msgstr "Voulez-vous supprimer le(s) volume(s) RAID sélectionné(s)"
 
+msgid "Do you want to delete selected commands?"
+msgstr "Voulez-vous supprimer les commandes sélectionnées?"
+
 msgid "Do you want to delete selected datasets?"
 msgstr "Voulez-vous effacer les datasets sélectionnés"
 
@@ -2689,11 +2701,17 @@ msgstr ""
 msgid "Do you want to delete selected volumes?"
 msgstr "Voulez-vous effacer les volumes sélectionnés"
 
+msgid "Do you want to disable selected commands?"
+msgstr ""
+
 msgid "Do you want to disable selected jobs?"
 msgstr "Voulez-vous désactiver les tâches sélectionnées"
 
 msgid "Do you want to disable selected options?"
 msgstr "Voulez-vous désactiver les options sélectionnées"
+
+msgid "Do you want to enable selected commands?"
+msgstr "Voulez-vous activer les commandes sélectionnées?"
 
 msgid "Do you want to enable selected jobs?"
 msgstr "Voulez-vous activer les tâches sélectionnées"
@@ -2704,6 +2722,9 @@ msgstr "Voulez-vous activer les options sélectionnées"
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr ""
 "Voulez-vous installer ce firmware de toute façon (à vos propres risques)?"
+
+msgid "Do you want to toggle selected commands?"
+msgstr "Voulez-vous basculer l'état des commandes sélectionnées?"
 
 msgid "Do you want to toggle selected jobs?"
 msgstr "Voulez-vous inverser les tâches sélectionnées"
@@ -2994,6 +3015,9 @@ msgstr ""
 "Activer l'encryption STARTTLS. Ce n'implique pas que vous deviez utiliser du "
 "TLS, vous pouvez utiliser du SSL."
 
+msgid "Enable Selected Commands"
+msgstr "Activer les commandes sélectionnées"
+
 msgid "Enable Selected Jobs"
 msgstr "Activer les tâches sélectionnées"
 
@@ -3191,6 +3215,12 @@ msgid ""
 msgstr ""
 "Saisissez un autre numéro de port pour l'interface Web si vous voulez "
 "remplacer le numéro de port par défaut (80 pour HTTP, 443 pour HTTPS)."
+
+msgid "Enter a description for your reference."
+msgstr "Entrez une description pour votre référence."
+
+msgid "Enter a name for the command."
+msgstr "Entrez un nom pour la commande."
 
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
@@ -3577,9 +3607,6 @@ msgstr "Options de mise en forme"
 msgid "Format Program"
 msgstr "Programme Format"
 
-msgid "Format the report for phpBB forum."
-msgstr "Formater le rapport pour un forum phpBB."
-
 msgid "Forum"
 msgstr "Forum"
 
@@ -3658,9 +3685,6 @@ msgstr "Général"
 
 msgid "General Setup"
 msgstr "Configuration générale"
-
-msgid "Generate"
-msgstr "Générer"
 
 msgid "Generate a new unique identifier for a pool"
 msgstr "Générer un nouvel identifiant unique pour le pool"
@@ -3791,9 +3815,6 @@ msgstr "Invité HVM"
 
 msgid "Hard Disk"
 msgstr "Disque dur"
-
-msgid "Hardware"
-msgstr "Matériel"
 
 msgid "Header and Data digest"
 msgstr "Digest d'en-tête et des données"
@@ -4121,9 +4142,6 @@ msgstr "erreurs d'entrée/sortie"
 
 msgid "In/Out packets"
 msgstr "Paquets en entrée/sortie"
-
-msgid "Include basic hardware information."
-msgstr "Inclure des informations basiques sur le hardware"
 
 msgid "Incoming Line/Power Information"
 msgstr "Ligne entrante/Information sur l'alimentation"
@@ -5108,7 +5126,7 @@ msgid "Mount Point"
 msgstr "Point de montage"
 
 msgid "Mount Points"
-msgstr ""
+msgstr "Points de montage"
 
 msgid "Mount point"
 msgstr "Point de montage"
@@ -6379,14 +6397,14 @@ msgstr "Supprimer toutes les entrées de la table ARP"
 msgid "Remove the %s first before proceeding."
 msgstr "Démontez le %s avant de continuer."
 
+msgid "Reorder Commands"
+msgstr "Réorganiser les commandes"
+
 msgid "Replace Battery UPS"
 msgstr "Remplacer la batterie UPS"
 
 msgid "Replace a device"
 msgstr "Remplacer un périphérique"
-
-msgid "Report Generator"
-msgstr "Générateur de rapports"
 
 msgid ""
 "Report if the temperature had changed by at least N degrees Celsius since "
@@ -7117,6 +7135,9 @@ msgstr "RAID logiciel"
 
 msgid "Software Used"
 msgstr "Logiciel utilisé"
+
+msgid "Sort"
+msgstr "Classer"
 
 msgid "Source"
 msgstr "Source"
@@ -9047,6 +9068,9 @@ msgstr ""
 msgid "Toggle Mode"
 msgstr "Baculer le mode"
 
+msgid "Toggle Selected Commands"
+msgstr "Changer l'état des commandes sélectionnées"
+
 msgid "Toggle Selected Jobs"
 msgstr "Inverse l'état des tâches sélectionnées"
 
@@ -9977,6 +10001,9 @@ msgstr "Informations et statu du Dataset ZFS"
 msgid "ZFS Dataset Properties"
 msgstr "Propriétés du Dataset ZFS"
 
+msgid "ZFS Pool I/O Statistics"
+msgstr "Statistiques d'E / S de pool ZFS"
+
 msgid "ZFS Pool Tools"
 msgstr "Outils pour Pool ZFS"
 
@@ -10112,9 +10139,6 @@ msgstr "noVNC"
 msgid "none"
 msgstr "aucun"
 
-msgid "phpBB"
-msgstr "phpBB"
-
 msgid "phpVirtualBox"
 msgstr "phpVirtualBox"
 
@@ -10165,8 +10189,29 @@ msgstr "utilisateur"
 msgid "version:"
 msgstr "version:"
 
-#~ msgid "Memory Usage"
-#~ msgstr "Utilisation mémoire"
+#~ msgid "Disks (ATA)"
+#~ msgstr "Disques (ATA)"
 
-#~ msgid "List Mount Points"
-#~ msgstr "Liste des points de montage"
+#~ msgid "Format the report for phpBB forum."
+#~ msgstr "Formater le rapport pour un forum phpBB."
+
+#~ msgid "Generate"
+#~ msgstr "Générer"
+
+#~ msgid "Hardware"
+#~ msgstr "Matériel"
+
+#~ msgid "Include basic hardware information."
+#~ msgstr "Inclure des informations basiques sur le hardware"
+
+#~ msgid "Report Generator"
+#~ msgstr "Générateur de rapports"
+
+#~ msgid "phpBB"
+#~ msgstr "phpBB"
+
+#~ msgid "Disks (ATA) information"
+#~ msgstr "Information sur les disques (ATA)"
+
+#~ msgid "Do you want to disable selected commands??"
+#~ msgstr "Voulez-vous désactiver les commandes sélectionnées?"

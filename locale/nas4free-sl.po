@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-10-29 14:22+0000\n"
+"POT-Creation-Date: 2016-11-02 00:34+0000\n"
 "PO-Revision-Date: 2016-10-02 14:48+0000\n"
 "Last-Translator: Aleš <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-10-29 12:41+0000\n"
+"X-Launchpad-Export-Date: 2016-11-01 23:49+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
@@ -1369,6 +1369,15 @@ msgstr ""
 msgid "Command for LINK_UP event (e.g. %s)."
 msgstr ""
 
+msgid "Command is marked for removal"
+msgstr ""
+
+msgid "Command is protected"
+msgstr ""
+
+msgid "Command is unlocked"
+msgstr ""
+
 msgid "Command output"
 msgstr "Rezultat ukaza"
 
@@ -1916,6 +1925,9 @@ msgstr "Odstrani pot"
 msgid "Delete Rsync job"
 msgstr "Pobriši Rsync delo"
 
+msgid "Delete Selected Commands"
+msgstr ""
+
 msgid "Delete Selected Datasets"
 msgstr ""
 
@@ -1963,9 +1975,6 @@ msgstr ""
 
 msgid "Delete clone"
 msgstr ""
-
-msgid "Delete command"
-msgstr "Odstrani ukaz"
 
 msgid "Delete disk"
 msgstr "Odstrani disk"
@@ -2199,6 +2208,9 @@ msgstr "Direktorij za spremljanje za novimi .torrent datotekami."
 msgid "Disable Firmware Update"
 msgstr "Onemogoči nadgradnjo strojne programske opreme"
 
+msgid "Disable Selected Commands"
+msgstr ""
+
 msgid "Disable Selected Jobs"
 msgstr ""
 
@@ -2254,11 +2266,11 @@ msgstr "Uporaba diska"
 msgid "Disks"
 msgstr "Diski"
 
-msgid "Disks (ATA)"
-msgstr "Diski (ATA)"
+msgid "Disks (Info)"
+msgstr ""
 
-msgid "Disks (ATA) information"
-msgstr "Podatki o diskih (ATA)"
+msgid "Disks (Info) information"
+msgstr ""
 
 msgid "Disks | Mount Point | Management"
 msgstr ""
@@ -2318,9 +2330,6 @@ msgstr ""
 
 msgid "Do you really want to delete this clone?"
 msgstr ""
-
-msgid "Do you really want to delete this command?"
-msgstr "Res želite odstraniti ta ukaz?"
 
 msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
@@ -2444,6 +2453,9 @@ msgstr ""
 msgid "Do you want to delete selected RAID volumes?"
 msgstr ""
 
+msgid "Do you want to delete selected commands?"
+msgstr ""
+
 msgid "Do you want to delete selected datasets?"
 msgstr ""
 
@@ -2465,10 +2477,16 @@ msgstr ""
 msgid "Do you want to delete selected volumes?"
 msgstr ""
 
+msgid "Do you want to disable selected commands?"
+msgstr ""
+
 msgid "Do you want to disable selected jobs?"
 msgstr ""
 
 msgid "Do you want to disable selected options?"
+msgstr ""
+
+msgid "Do you want to enable selected commands?"
 msgstr ""
 
 msgid "Do you want to enable selected jobs?"
@@ -2480,6 +2498,9 @@ msgstr ""
 msgid "Do you want to install this firmware anyway (at your own risk)?"
 msgstr ""
 "Ali želite vseeno namestiti to programsko opremo (na vašo odgovornost)?"
+
+msgid "Do you want to toggle selected commands?"
+msgstr ""
 
 msgid "Do you want to toggle selected jobs?"
 msgstr ""
@@ -2763,6 +2784,9 @@ msgid ""
 "use SSL."
 msgstr ""
 
+msgid "Enable Selected Commands"
+msgstr ""
+
 msgid "Enable Selected Jobs"
 msgstr ""
 
@@ -2954,6 +2978,12 @@ msgstr ""
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
 "default (80 for HTTP, 443 for HTTPS)."
+msgstr ""
+
+msgid "Enter a description for your reference."
+msgstr ""
+
+msgid "Enter a name for the command."
 msgstr ""
 
 msgid ""
@@ -3329,9 +3359,6 @@ msgstr "Možnosti formatiranja"
 msgid "Format Program"
 msgstr ""
 
-msgid "Format the report for phpBB forum."
-msgstr "Format poročila za phpBB forum."
-
 msgid "Forum"
 msgstr "Forum"
 
@@ -3410,9 +3437,6 @@ msgstr "Splošno"
 
 msgid "General Setup"
 msgstr "Splošne nastavitve"
-
-msgid "Generate"
-msgstr "Ustvari"
 
 msgid "Generate a new unique identifier for a pool"
 msgstr ""
@@ -3535,9 +3559,6 @@ msgstr ""
 
 msgid "Hard Disk"
 msgstr "Trdi disk"
-
-msgid "Hardware"
-msgstr "Strojna oprema"
 
 msgid "Header and Data digest"
 msgstr "Glava in datotečni izvleček"
@@ -3844,9 +3865,6 @@ msgstr ""
 
 msgid "In/Out packets"
 msgstr ""
-
-msgid "Include basic hardware information."
-msgstr "Vsebuje glavne informacije strojne opreme"
 
 msgid "Incoming Line/Power Information"
 msgstr ""
@@ -6013,14 +6031,14 @@ msgstr "Odstrani vse vnose v ARP tabeli"
 msgid "Remove the %s first before proceeding."
 msgstr ""
 
+msgid "Reorder Commands"
+msgstr ""
+
 msgid "Replace Battery UPS"
 msgstr ""
 
 msgid "Replace a device"
 msgstr ""
-
-msgid "Report Generator"
-msgstr "Izdelovalec poročil"
 
 msgid ""
 "Report if the temperature had changed by at least N degrees Celsius since "
@@ -6717,6 +6735,9 @@ msgid "Software RAID"
 msgstr "Programski RAID"
 
 msgid "Software Used"
+msgstr ""
+
+msgid "Sort"
 msgstr ""
 
 msgid "Source"
@@ -8355,6 +8376,9 @@ msgstr ""
 msgid "Toggle Mode"
 msgstr ""
 
+msgid "Toggle Selected Commands"
+msgstr ""
+
 msgid "Toggle Selected Jobs"
 msgstr ""
 
@@ -9198,6 +9222,9 @@ msgstr ""
 msgid "ZFS Dataset Properties"
 msgstr ""
 
+msgid "ZFS Pool I/O Statistics"
+msgstr ""
+
 msgid "ZFS Pool Tools"
 msgstr ""
 
@@ -9327,9 +9354,6 @@ msgstr ""
 msgid "none"
 msgstr ""
 
-msgid "phpBB"
-msgstr ""
-
 msgid "phpVirtualBox"
 msgstr ""
 
@@ -9378,5 +9402,23 @@ msgstr "uporabnik"
 msgid "version:"
 msgstr "različica:"
 
-#~ msgid "Memory Usage"
-#~ msgstr "Uporaba pomnilnika"
+#~ msgid "Disks (ATA)"
+#~ msgstr "Diski (ATA)"
+
+#~ msgid "Format the report for phpBB forum."
+#~ msgstr "Format poročila za phpBB forum."
+
+#~ msgid "Generate"
+#~ msgstr "Ustvari"
+
+#~ msgid "Hardware"
+#~ msgstr "Strojna oprema"
+
+#~ msgid "Include basic hardware information."
+#~ msgstr "Vsebuje glavne informacije strojne opreme"
+
+#~ msgid "Report Generator"
+#~ msgstr "Izdelovalec poročil"
+
+#~ msgid "Disks (ATA) information"
+#~ msgstr "Podatki o diskih (ATA)"
