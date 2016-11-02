@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gtext("Status"), gtext("Graph"),gtext("System Load"));
+$pgtitle = array(gtext("Status"), gtext("Monitoring"),gtext("System Load"));
 
 $curif = "lan";
 if (isset($_GET['if']) && $_GET['if'])
