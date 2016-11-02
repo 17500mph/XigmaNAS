@@ -48,6 +48,7 @@ $prerequisites_ok = true;
 $o_zpool = new co_zpool_info();
 if(!$o_zpool->configuration_loaded()) {
 	header('Location: index.php');
+	exit;
 }
 $a_pool = $o_zpool->get_all_pools();
 $a_pool_for_attach_data = $o_zpool->get_pools_for_attach_data();
