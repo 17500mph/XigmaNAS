@@ -36,7 +36,7 @@ require("guiconfig.inc");
 require("email.inc");
 require("report.inc");
 
-$pgtitle = [gtext('System'),gtext('Advanced'),gtext('Email Report')];
+$pgtitle = [gtext('System'),gtext('Advanced'),gtext('Email Reports')];
 
 
 if (!isset($config['statusreport']) || !is_array($config['statusreport']))
