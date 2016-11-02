@@ -184,7 +184,7 @@ $menu['diagnostics']['visible'] = $isAdminSession;
 $menu['diagnostics']['link'] = '';
 $menu['diagnostics']['menuitem'] = [];
 $menu['diagnostics']['menuitem'][] = ['desc' => gtext('Log'), 'link' => 'diag_log.php', 'visible' => true];
-$menu['diagnostics']['menuitem'][] = ['desc' => gtext('Information'), 'link' => 'diag_infos.php', 'visible' => true];
+$menu['diagnostics']['menuitem'][] = ['desc' => gtext('Information'), 'link' => 'diag_infos_disks.php', 'visible' => true];
 $menu['diagnostics']['menuitem'][] = ['type' => 'separator', 'visible' => true];
 $menu['diagnostics']['menuitem'][] = ['desc' => gtext('Ping/Traceroute'), 'link' => 'diag_ping.php', 'visible' => true];
 $menu['diagnostics']['menuitem'][] = ['desc' => gtext('ARP Tables'), 'link' => 'diag_arp.php', 'visible' => true];
