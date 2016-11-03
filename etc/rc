@@ -90,6 +90,8 @@ case ${PLATFORM} in
 		fi
 
 		/bin/echo "Creating 2nd memory disk for ${PLATFORM}"
+		# Timer
+		sleep 3
 		md=`/sbin/mdconfig -t malloc -o compress -s ${MDLOCALSIZE}`
 		case ${PLATFORM} in
 			*-liveUSB)
