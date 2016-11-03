@@ -1232,7 +1232,6 @@ create_full() {
 	echo 'hw.msk.msi_disable="1"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 	echo 'kern.maxfiles="6289573"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 	echo 'kern.cam.boot_delay="12000"' >> $NAS4FREE_TMPDIR/boot/loader.conf
-	echo 'kern.cam.ada.legacy_aliases="0"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 	echo 'kern.geom.label.disk_ident.enable="0"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 	echo 'kern.geom.label.gptid.enable="0"' >> $NAS4FREE_TMPDIR/boot/loader.conf
 	echo 'hint.acpi_throttle.0.disabled="0"' >> $NAS4FREE_TMPDIR/boot/loader.conf
