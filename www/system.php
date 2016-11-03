@@ -170,24 +170,32 @@ if ($_POST) {
 		$config['system']['webgui']['certificate'] = base64_encode($_POST['certificate']);
 		$config['system']['webgui']['privatekey'] =  base64_encode($_POST['privatekey']);
 
-		unset($config['system']['dnsserver']);
 		// Only store IPv4 DNS servers when using static IPv4.
+		$config['system']['dnsserver'] = []; // clear configuration
 		if ("dhcp" !== $config['interfaces']['lan']['ipaddr']) {
-			unset($config['system']['dnsserver']);
-			if ($_POST['dns1'])
+			if ($_POST['dns1']) {
 				$config['system']['dnsserver'][] = $_POST['dns1'];
-			if ($_POST['dns2'])
+			}
+			if ($_POST['dns2']) {
 				$config['system']['dnsserver'][] = $_POST['dns2'];
+			}
+		}
+		if(empty($config['system']['dnsserver'])) {
+			$config['system']['dnsserver'][] = '';
 		}
 		// Only store IPv6 DNS servers when using static IPv6.
+		$config['system']['ipv6dnsserver'] = [];
 		if ("auto" !== $config['interfaces']['lan']['ipv6addr']) {
-			unset($config['system']['ipv6dnsserver']);
-			if ($_POST['ipv6dns1'])
+			if ($_POST['ipv6dns1']) {
 				$config['system']['ipv6dnsserver'][] = $_POST['ipv6dns1'];
-			if ($_POST['ipv6dns2'])
+			}
+			if ($_POST['ipv6dns2']) {
 				$config['system']['ipv6dnsserver'][] = $_POST['ipv6dns2'];
+			}
 		}
-
+		if(empty($config['system']['ipv6dnsserver'])) {
+			$config['system']['ipv6dnsserver'][] = '';
+		}
 		$olddnsallowoverride = isset($config['system']['dnsallowoverride']);
 		$config['system']['dnsallowoverride'] = isset($_POST['dnsallowoverride']) ? true : false;
 
