@@ -52,7 +52,6 @@ $attribs['bg']='fill="#000" stroke="none" stroke-width="0" opacity="1"';
 $attribs['axis']='fill="black" stroke="black"';
 $attribs['in']='fill="#00CC00" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="6"';
 $attribs['out']='fill="#FF0000" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="6"';
-$attribs['legend']='fill="white" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="4"';
 $attribs['graph_in']='fill="none" stroke="#00CC00" stroke-opacity="0.8"';
 $attribs['graph_out']='fill="none" stroke="#FF0000" stroke-opacity="0.8"';
 $attribs['grid_txt']='fill="gray" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="5"';
@@ -71,8 +70,6 @@ $width=200;             //SVG internal width : do not modify
 $encoding = system_get_language_codeset();
 
 /********* Graph DATA **************/
-header("Last-Modified: " . gmdate( "D, j M Y H:i:s" ) . " GMT");
-header("Expires: " . gmdate( "D, j M Y H:i:s", time() ) . " GMT");
 header("Cache-Control: no-store, no-cache, must-revalidate"); // HTTP/1.1
 header("Cache-Control: post-check=0, pre-check=0", FALSE);
 header("Pragma: no-cache"); // HTTP/1.0
@@ -94,7 +91,6 @@ echo "<?xml version=\"1.0\" encoding=\"{$encoding}\"?>\n";
     <text id="graph_out_lbl" x="3" y="13" <?=$attribs['out']?>><?=gtext("Out");?> <tspan id="graph_out_txt" <?=$attribs['out']?>> </tspan></text>
     <text id="switch_unit" x="<?=$width*0.60?>" y="5" <?=$attribs['switch_unit']?>><?=sprintf(gtext("Switch to %s/s"), ("bits" === $unit) ? "bytes" : "bits");?></text>
     <text id="switch_scale" x="<?=$width*0.60?>" y="11" <?=$attribs['switch_scale']?>><?=gtext("AutoScale");?> (<?=("up" === $scale_type) ? gtext("Up") : gtext("Follow");?>)</text>
-    <text id="datetime" x="<?=$width*0.38?>" y="5" <?=$attribs['legend']?>>00/00/0000</text>
     <text id="interface_name"  x="<?=$width*0.99?>" y="7" <?=$attribs['in']?> text-anchor="end"><?=$ifname?></text>
     <polygon id="axis_arrow_x" <?=$attribs['axis']?> points="<?=($width) . "," . ($height)?> <?=($width-2) . "," . ($height-2)?> <?=($width-2) . "," . $height?>"/>
     <text id="error" x="<?=$width*0.5?>" y="<?=$height*0.4?>" visibility="hidden" <?=$attribs['error']?> text-anchor="middle"><?=$error_text?></text>
@@ -190,15 +186,6 @@ function fetch_data() {
 }
 
 function plot_data(obj) {
-  // Show datetimelegend
-  var now = new Date();
-  var datetime = (now.getMonth()+1) + "/" + now.getDate() + "/" + now.getFullYear() + ' ' +
-    formatString(now.getHours()) + ":" + formatString(now.getMinutes()) + ":" + formatString(now.getSeconds());
-  SVGDoc.getElementById('datetime').firstChild.data = datetime;
-
-  if (!obj.success)
-    return handle_error();  // getURL failed to get data
-
   var t = obj.content.split("|");
   var ugmt = parseFloat(t[0]);  // ugmt is an unixtimestamp style
   var ifin = parseInt(t[1]);    // number of bytes received by the interface
