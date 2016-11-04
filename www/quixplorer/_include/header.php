@@ -174,8 +174,7 @@ $menu['status']['menuitem'][] = array("desc" => gtext("Process"), "link" => "../
 $menu['status']['menuitem'][] = array("desc" => gtext("Services"), "link" => "../status_services.php", "visible" => TRUE);
 $menu['status']['menuitem'][] = array("desc" => gtext("Interfaces"), "link" => "../status_interfaces.php", "visible" => TRUE);
 $menu['status']['menuitem'][] = array("desc" => gtext("Disks"), "link" => "../status_disks.php", "visible" => TRUE);
-$menu['status']['menuitem'][] = array("desc" => gtext("Graph"), "link" => "../status_graph.php", "visible" => TRUE);
-$menu['status']['menuitem'][] = array("desc" => gtext("Email Report"), "link" => "../status_report.php", "visible" => TRUE);
+$menu['status']['menuitem'][] = array("desc" => gtext("Monitoring"), "link" => "../status_graph.php", "visible" => TRUE);
 
 // Advanced
 $menu['advanced']['desc'] = gtext("Advanced");
