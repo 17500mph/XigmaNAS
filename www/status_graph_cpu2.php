@@ -45,7 +45,6 @@ $attribs['bg']='fill="#000" stroke="none" stroke-width="0" opacity="1"';
 $attribs['axis']='fill="black" stroke="black"';
 $attribs['cpu']='fill="#FF0000" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="6"';
 $attribs['graph_cpu']='fill="none" stroke="#CA6110" stroke-opacity="0.8"';
-$attribs['legend']='fill="black" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="4"';
 $attribs['graphname']='fill="#435370" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="7"';
 $attribs['grid_txt']='fill="gray" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="5"';
 $attribs['grid']='stroke="#C3C3C3" stroke-opacity="1" stroke-width="0.2"';
@@ -60,8 +59,6 @@ $width=200;		//SVG internal width : do not modify
 $encoding = system_get_language_codeset();
 
 /********* Graph DATA **************/
-header("Last-Modified: " . gmdate( "D, j M Y H:i:s" ) . " GMT");
-header("Expires: " . gmdate( "D, j M Y H:i:s", time() ) . " GMT");
 header("Cache-Control: no-store, no-cache, must-revalidate"); // HTTP/1.1
 header("Cache-Control: post-check=0, pre-check=0", FALSE);
 header("Pragma: no-cache"); // HTTP/1.0
@@ -79,7 +76,6 @@ echo "<?xml version=\"1.0\" encoding=\"{$encoding}\"?>\n";
     <text id="grid_txt1" x="<?=$width*0.99?>" y="<?=$height/4.3*1?>" <?=$attribs['grid_txt']?> text-anchor="end">75%</text>
     <text id="grid_txt2" x="<?=$width*0.99?>" y="<?=$height/4.15*2?>" <?=$attribs['grid_txt']?> text-anchor="end">50%</text>
     <text id="grid_txt3" x="<?=$width*0.99?>" y="<?=$height/4.1*3?>" <?=$attribs['grid_txt']?> text-anchor="end">25%</text>
-    <text id="datetime" x="<?=$width*0.50?>" y="5" <?=$attribs['legend']?>>00/00/0000</text>
     <text id="cpu_name"  x="<?=$width*0.99?>" y="7" <?=$attribs['cpu']?> text-anchor="end">CPU <?=$cpu?></text>
     <polygon id="axis_arrow_x" <?=$attribs['axis']?> points="<?=($width) . "," . ($height)?> <?=($width-2) . "," . ($height-2)?> <?=($width-2) . "," . $height?>"/>
     <text id="error" x="<?=$width*0.5?>" y="<?=$height*0.4?>"  visibility="hidden" <?=$attribs['error']?> text-anchor="middle"><?=$error_text?></text>
@@ -152,15 +148,6 @@ function fetch_data() {
 }
 
 function plot_data(obj) {
-  // Show datetimelegend
-  var now = new Date();
-  var datetime = (now.getMonth()+1) + "/" + now.getDate() + "/" + now.getFullYear() + ' ' +
-    formatString(now.getHours()) + ":" + formatString(now.getMinutes()) + ":" + formatString(now.getSeconds());
-  SVGDoc.getElementById('datetime').firstChild.data = datetime;
-
-	if (!obj.success)
-    return handle_error();  // getURL failed to get data
-
   var t = obj.content;
 	var cpu = parseInt(t);
 	var scale;
