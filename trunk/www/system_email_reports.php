@@ -217,7 +217,7 @@ function enable_change(enable_change) {
 			<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_titleline_checkbox("enable", gtext("Email Report"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
 					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("To email");?></td>
+						<td width="22%" valign="top" class="vncellreq"><?=gtext("To Email Address");?></td>
 						<td width="78%" class="vtable">
 							<input name="to" type="text" class="formfld" id="to" size="74" value="<?=htmlspecialchars($pconfig['to']);?>" /><br />
 							<span class="vexpl"><?=gtext("Destination email address.");?> <?=gtext("Separate email addresses by semi-colon.");?></span>
