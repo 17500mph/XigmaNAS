@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-02 15:32+0000\n"
-"PO-Revision-Date: 2016-11-02 19:50+0000\n"
+"POT-Creation-Date: 2016-11-05 15:43+0000\n"
+"PO-Revision-Date: 2016-11-05 15:28+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-02 19:57+0000\n"
+"X-Launchpad-Export-Date: 2016-11-05 15:32+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -2973,6 +2973,9 @@ msgstr "E-mail Rapportage"
 msgid "Email Reports"
 msgstr "E-mail Rapportages"
 
+msgid "Email Setup"
+msgstr "E-mail Instellingen"
+
 msgid "Emergency Level"
 msgstr "Noodgevallen niveau"
 
@@ -3649,10 +3652,10 @@ msgid "Friday"
 msgstr "Vrijdag"
 
 msgid "From Email Address"
-msgstr "Van E-mail Addres"
+msgstr "E-mailadres Afzender"
 
 msgid "From email address for sending system messages."
-msgstr "Het E-mailadres waar vanaf systeem berichten verstuurd worden."
+msgstr "E-mailadres welke systeem berichten gaat versturen."
 
 msgid "Fsck"
 msgstr "Fsck"
@@ -3732,9 +3735,6 @@ msgstr "Geef uw mediabibliotheek een naam."
 
 msgid "Grant access to the user portal."
 msgstr "Toegang toestaan tot de gebruikers portaal."
-
-msgid "Graph"
-msgstr "Grafieken"
 
 msgid "Graph shows last 120 seconds"
 msgstr "Grafiek van de laatste 120 seconden"
@@ -5508,7 +5508,7 @@ msgstr "Opmerking niveau"
 
 #, php-format
 msgid "Notification email from host: %s"
-msgstr "E-mail Bericht van host: %s"
+msgstr "Kennisgeving e-mail van host: %s"
 
 msgid "Nov"
 msgstr "Nov"
@@ -6908,15 +6908,11 @@ msgid "Send Now"
 msgstr "Nu Verzenden"
 
 msgid "Send Test Email"
-msgstr "Verstuur Test E-mail"
+msgstr "Test E-mail Verzenden"
 
 msgid "Send a TEST warning email on startup."
 msgstr ""
-"Verzend een TEST waarschuwings e-mailbericht tijdens het opstarten van het "
-"systeem."
-
-msgid "Send now"
-msgstr "Nu versturen"
+"Verstuur TEST waarschuwingsmail tijdens het opstarten van het systeem."
 
 msgid "Sensitive"
 msgstr "Gevoelig"
@@ -6929,7 +6925,7 @@ msgstr "Sep"
 
 msgid "Separate email addresses by semi-colon."
 msgstr ""
-"Verscheidene e-mailadressen scheiden door punt-komma. (gebruik de ; toets)"
+"Afzonderlijke e-mailadressen scheiden met puntkomma. (gebruik de ; toets)"
 
 msgid "September"
 msgstr "September"
@@ -7460,6 +7456,9 @@ msgstr ""
 msgid "System"
 msgstr "Systeem"
 
+msgid "System Email Settings"
+msgstr "Systeem E-mail Instellingen"
+
 msgid "System Information"
 msgstr "Systeemoverzicht"
 
@@ -7628,7 +7627,7 @@ msgid "Test email from host: %s"
 msgstr "Test e-mail van host: %s"
 
 msgid "Test email successfully sent."
-msgstr "Test e-mail is met succes verzonden."
+msgstr "Test e-mail verzonden."
 
 msgid "Test mode, no command execution"
 msgstr "Testmodus, geen  opdracht uitvoering"
@@ -9052,7 +9051,7 @@ msgid "TitleSpeed"
 msgstr "Scroll snelheid"
 
 msgid "To Email Address"
-msgstr "Naar E-mail Addres"
+msgstr "Email Address Ontvanger"
 
 msgid "To e-mail"
 msgstr "Naar E-mail"
@@ -10217,3 +10216,9 @@ msgstr "gebruiker"
 
 msgid "version:"
 msgstr "versie:"
+
+#~ msgid "Graph"
+#~ msgstr "Grafieken"
+
+#~ msgid "Send now"
+#~ msgstr "Nu versturen"
