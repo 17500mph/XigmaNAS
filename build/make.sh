@@ -39,8 +39,7 @@ if [ "amd64" = ${NAS4FREE_ARCH} ]; then
 	NAS4FREE_KERNCONF="$(echo ${NAS4FREE_PRODUCTNAME} | tr '[:lower:]' '[:upper:]')-${NAS4FREE_XARCH}"
     fi
 elif [ "i386" = ${NAS4FREE_ARCH} ]; then
- echo "->> You can not build 32-bits NAS4Free versions, you can make 64-bits only!"
- echo "->> Install FreeBSD amd64 an (64-bits OS) and try again."
+ echo "->> build script does not support 32-bit builds for the i386 architecture"
 exit
 elif [ "armv6" = ${NAS4FREE_ARCH} ]; then
     NAS4FREE_ARCH="arm"
