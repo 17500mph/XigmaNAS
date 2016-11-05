@@ -59,7 +59,7 @@ if ($_POST) {
 
 		if (isset($_POST['email_enable']) && $_POST['email_enable']) {
 			$reqdfields = array_merge($reqdfields, array("email_to"));
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("To email")));
+			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("To Email Address")));
 			$reqdfieldst = array_merge($reqdfieldst, array("string"));
 		}
 
@@ -313,7 +313,7 @@ function enable_change(enable_change) {
 					<?php
 					html_separator();
 					html_titleline_checkbox("email_enable", gtext("Email Report"), !empty($pconfig['email_enable']) ? true : false, gtext("Activate"), "enable_change(this)");
-					html_inputbox("email_to", gtext("To email"), !empty($pconfig['email_to']) ? $pconfig['email_to'] : "", sprintf("%s %s", gtext("Destination email address."), gtext("Separate email addresses by semi-colon.")), true, 40);
+					html_inputbox("email_to", gtext("To Email Address"), !empty($pconfig['email_to']) ? $pconfig['email_to'] : "", sprintf("%s %s", gtext("Destination email address."), gtext("Separate email addresses by semi-colon.")), true, 40);
 					html_checkbox("email_testemail", gtext("Test email"), !empty($pconfig['email_testemail']) ? true : false, gtext("Send a TEST warning email on startup."));
 					?>
 				</table>

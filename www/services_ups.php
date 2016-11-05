@@ -84,7 +84,7 @@ if ($_POST) {
 
 		if (!empty($_POST['email_enable'])) {
 			$reqdfields = array_merge($reqdfields, explode(" ", "email_to email_subject"));
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("To email"), gtext("Subject")));
+			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("To Email Address"), gtext("Subject")));
 			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "string string"));
 		}
 
@@ -336,7 +336,7 @@ function ups2_change() {
 					html_passwordbox("monitorpassword", gtext("Password"), $pconfig['monitorpassword'], gtext("Remote monitoring password. Must be equal on both master and slave system."), true, 20);
 					html_separator();
 					html_titleline_checkbox("email_enable", gtext("Email Report"), !empty($pconfig['email_enable']) ? true : false, gtext("Activate"), "enable_change(this)");
-					html_inputbox("email_to", gtext("To email"), $pconfig['email_to'], sprintf("%s %s", gtext("Destination email address."), gtext("Separate email addresses by semi-colon.")), true, 40);
+					html_inputbox("email_to", gtext("To Email Address"), $pconfig['email_to'], sprintf("%s %s", gtext("Destination email address."), gtext("Separate email addresses by semi-colon.")), true, 40);
 					html_inputbox("email_subject", gtext("Subject"), $pconfig['email_subject'], gtext("The subject of the email.") . " " . gtext("You can use the following parameters for substitution:") . '</span><div id="enumeration"><ul><li>%d - ' . gtext('Date') . '</li><li>%h - ' . gtext('Hostname') . '</li></ul></div><span>', true, 60);
 					?>
 				</table>
