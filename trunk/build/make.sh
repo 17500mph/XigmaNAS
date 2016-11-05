@@ -39,7 +39,9 @@ if [ "amd64" = ${NAS4FREE_ARCH} ]; then
 	NAS4FREE_KERNCONF="$(echo ${NAS4FREE_PRODUCTNAME} | tr '[:lower:]' '[:upper:]')-${NAS4FREE_XARCH}"
     fi
 elif [ "i386" = ${NAS4FREE_ARCH} ]; then
-    NAS4FREE_XARCH="x86"
+ echo "->> You can not build 32-bits NAS4Free versions, you can make 64-bits only!"
+ echo "->> Install FreeBSD amd64 an (64-bits OS) and try again."
+exit
 elif [ "armv6" = ${NAS4FREE_ARCH} ]; then
     NAS4FREE_ARCH="arm"
     PLATFORM=$(sysctl -n hw.platform)
@@ -1956,8 +1958,6 @@ main() {
 --------------------------
 ${NAS4FREE_PRODUCTNAME} Build Environment
 --------------------------
-
-     Menu Options:
 
 1  - Update NAS4FREE Source Files to CURRENT.
 2  - NAS4Free Compile Menu.
