@@ -37,7 +37,7 @@ require 'email.inc';
 
 $sphere_scriptname = basename(__FILE__);
 
-$pgtitle = [gtext('System'),gtext('Advanced'),gtext('Email')];
+$pgtitle = [gtext('System'),gtext('Advanced'),gtext('Email Setup')];
 $gt_sendtestemailbuttonvalue = gtext('Send Test Email');
 
 if (!isset($config['system']['email']) || !is_array($config['system']['email'])) {
@@ -186,7 +186,7 @@ function enable_change(enable_change) {
 		</colgroup>
 		<thead>
 			<?php
-			html_titleline2(gtext('Email'));
+			html_titleline2(gtext('System Email Settings'));
 			?>
 		</thead>
 		<tbody>
