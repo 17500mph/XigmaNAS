@@ -37,7 +37,7 @@ require 'guiconfig.inc';
 function diag_infos_space_ajax() {
 	$cmd = '/bin/df -hT';
 	mwexec2($cmd, $rawdata);
-	return htmlspecialchars(implode("\n", $rawdata));
+	return implode("\n", $rawdata);
 }
 if (is_ajax()) {
 	$status = diag_infos_space_ajax();
