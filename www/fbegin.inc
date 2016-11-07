@@ -350,12 +350,6 @@ $(window).on("load", function() {
 //]]>
 </script>
 <div id="pagecontent">
-<table width="100%" border="0" cellspacing="0" cellpadding="2">
-<tr valign="top">
-<td>
-	<table width="100%" border="0" cellpadding="10" cellspacing="0">
-	<tr>
-	<td>
 <?php if (!isset($pgtitle_omit) || !$pgtitle_omit): ?>
 	<p class="pgtitle"><?=gentitle($pgtitle);?></p>
 <?php endif;?>
