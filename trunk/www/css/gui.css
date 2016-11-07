@@ -38,7 +38,7 @@ body {
 	background: #D9DCE1;
 	margin: 0 auto;
 	padding: 0pt;
-	min-width: 700px;
+	min-width: 900px;
 }
 body a:link, body a:active, body a:visited {
 	color: #0000CC;
@@ -48,6 +48,9 @@ body a:hover {
 }
 form {
 	margin: 0px;
+}
+img {
+	border: 0;
 }
 p {
 	margin: 0 0 10px 0;
@@ -82,6 +85,13 @@ pre {
 .vncellt {
 	padding-top: 4px;
 	padding-bottom: 4px;
+}
+.area_data_selection_toolbox {
+	border: 0;
+	border-spacing: 0px; 
+	border-collapse: separate;
+	margin: 0px;
+	width: 100%;
 }
 .celltag {
 	border-bottom: 1px solid #999999;
@@ -465,12 +475,9 @@ div#errorbox table tr td.message, div#warningbox table tr td.message {
 	font-weight: bold;
 }
 div#header {
-	min-width: 880px;
 	height: 80px;
 	width: 100%;
 	background: #171717 url("/images/header_bg.png") top left no-repeat;
-	position: fixed;
-	top: 0;
 }
 div#headerlogo {
 	float: left;
@@ -503,8 +510,6 @@ div#pagefooter {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-}
-div#pagefooter span p {
 	font-size: 10px;
 	padding: 4px;
 	color: #FFFFFF;
@@ -522,16 +527,10 @@ div#loginfooter {
 	text-align: center;
 }
 div#headernavbar {
-	min-width: 900px;
-	width: 100%;
 	background: black url("/images/navbar_default.png") center center repeat-x;
-	position: fixed;
-	top: 78px;
 }
 div#pagecontent {
-	min-width: 900px;
-	margin: 20px 25px 10px 25px;
-	padding: 110px 15px 15px 15px;
+	padding: 20px 25px 10px 25px;
 }
 div#submit {
 	margin-top: 10px;
