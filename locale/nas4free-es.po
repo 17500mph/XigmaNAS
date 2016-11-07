@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-05 18:58+0000\n"
+"POT-Creation-Date: 2016-11-07 11:16+0000\n"
 "PO-Revision-Date: 2016-11-05 18:38+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-05 19:16+0000\n"
+"X-Launchpad-Export-Date: 2016-11-07 11:09+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -6074,11 +6074,11 @@ msgstr "Clave privada"
 msgid "Process"
 msgstr "Procesos"
 
+msgid "Process Status"
+msgstr ""
+
 msgid "Processes"
 msgstr "Procesos"
-
-msgid "Processes Information"
-msgstr "Información de procesos"
 
 msgid "Product ID"
 msgstr "ID del producto"
@@ -7623,10 +7623,6 @@ msgid "The IP address that this hostname represents."
 msgstr "La dirección IP que representa esta máquina."
 
 #, php-format
-msgid "The MIB '%s' already exists."
-msgstr "La MIB %s ya existe."
-
-#, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
 msgstr "El MIB '%s' no existe en sysctl."
 
@@ -8318,8 +8314,8 @@ msgstr ""
 "El servidor ha sido restaurado a los valores de fabrica y esta siendo "
 "reiniciado. esto puede tomar unos minutos."
 
-msgid "The server is halting now. This may take one minute."
-msgstr "El servidor se está deteniendo. Esto puede durar un poco."
+msgid "The server is halting now."
+msgstr ""
 
 msgid "The server is rebooting now."
 msgstr "El servidor está reiniciandose."
@@ -10150,11 +10146,12 @@ msgstr "Usuario"
 msgid "version:"
 msgstr "versión:"
 
-#~ msgid "Graph"
-#~ msgstr "Gráfica"
+#~ msgid "Processes Information"
+#~ msgstr "Información de procesos"
 
-#~ msgid "Send now"
-#~ msgstr "Enviar ahora"
+#, php-format
+#~ msgid "The MIB '%s' already exists."
+#~ msgstr "La MIB %s ya existe."
 
-#~ msgid "To email"
-#~ msgstr "e-mail de destino"
+#~ msgid "The server is halting now. This may take one minute."
+#~ msgstr "El servidor se está deteniendo. Esto puede durar un poco."

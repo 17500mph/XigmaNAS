@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-05 18:58+0000\n"
-"PO-Revision-Date: 2016-11-04 17:48+0000\n"
-"Last-Translator: uniss <uniss@ua.fm>\n"
+"POT-Creation-Date: 2016-11-07 11:16+0000\n"
+"PO-Revision-Date: 2016-11-06 13:06+0000\n"
+"Last-Translator: AndriyM <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-05 19:17+0000\n"
+"X-Launchpad-Export-Date: 2016-11-07 11:09+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -2934,7 +2934,7 @@ msgid "Email Reports"
 msgstr "Емейл звіти"
 
 msgid "Email Setup"
-msgstr ""
+msgstr "Налаштування електронної пошти"
 
 msgid "Emergency Level"
 msgstr "Рівень сповіщення"
@@ -6038,11 +6038,11 @@ msgstr "Приватний ключ"
 msgid "Process"
 msgstr "Процес"
 
+msgid "Process Status"
+msgstr ""
+
 msgid "Processes"
 msgstr "Процеси"
-
-msgid "Processes Information"
-msgstr "Інформація про процес"
 
 msgid "Product ID"
 msgstr "ІД виробу"
@@ -7376,7 +7376,7 @@ msgid "System"
 msgstr "Система"
 
 msgid "System Email Settings"
-msgstr ""
+msgstr "Налаштування електронної пошти системи"
 
 msgid "System Information"
 msgstr "Системна інформація"
@@ -7570,10 +7570,6 @@ msgstr "IP адреса контролера БДЖ."
 
 msgid "The IP address that this hostname represents."
 msgstr "IP адреса цього хоста."
-
-#, php-format
-msgid "The MIB '%s' already exists."
-msgstr "MIB '%s' вже існує."
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -8256,8 +8252,8 @@ msgstr ""
 "Сервер був скиданий до заводських налаштувань і тепер перезавантажується. Це "
 "може зайняти одну хвилину."
 
-msgid "The server is halting now. This may take one minute."
-msgstr "Сервер в даний час зупинений. Це може зайняти одну хвилину."
+msgid "The server is halting now."
+msgstr ""
 
 msgid "The server is rebooting now."
 msgstr "Сервер зараз перезавантажується."
@@ -10092,11 +10088,12 @@ msgstr "користувач"
 msgid "version:"
 msgstr "версія:"
 
-#~ msgid "Graph"
-#~ msgstr "Графік"
+#~ msgid "Processes Information"
+#~ msgstr "Інформація про процес"
 
-#~ msgid "Send now"
-#~ msgstr "Надіслати зараз"
+#, php-format
+#~ msgid "The MIB '%s' already exists."
+#~ msgstr "MIB '%s' вже існує."
 
-#~ msgid "To email"
-#~ msgstr "На email"
+#~ msgid "The server is halting now. This may take one minute."
+#~ msgstr "Сервер в даний час зупинений. Це може зайняти одну хвилину."
