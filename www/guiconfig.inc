@@ -268,7 +268,7 @@ function print_core_box($type, $msg) {
 			break;
 		case "error":
 			$id = "errorbox";
-			$img = "images/error_box.png";
+			$img = "images/warn_box.png";
 			break;
 	}
 
