@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-05 18:58+0000\n"
-"PO-Revision-Date: 2016-11-05 15:24+0000\n"
+"POT-Creation-Date: 2016-11-07 11:16+0000\n"
+"PO-Revision-Date: 2016-11-06 14:26+0000\n"
 "Last-Translator: sea1150 <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-05 19:17+0000\n"
+"X-Launchpad-Export-Date: 2016-11-07 11:09+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -2450,7 +2450,7 @@ msgid "Disks (Info) information"
 msgstr "Информация о дисках"
 
 msgid "Disks | Mount Point | Management"
-msgstr "Диски | Точка монтирования | Управление"
+msgstr "Диски | Точки монтирования | Управление"
 
 msgid "Display"
 msgstr "Показать"
@@ -5098,7 +5098,7 @@ msgid "Months"
 msgstr "Месяцы"
 
 msgid "Mount Point"
-msgstr "Точка монтирования"
+msgstr "Точки монтирования"
 
 msgid "Mount Points"
 msgstr "Точки монтирования"
@@ -6048,11 +6048,11 @@ msgstr "Секретный ключ"
 msgid "Process"
 msgstr "Процесс"
 
+msgid "Process Status"
+msgstr ""
+
 msgid "Processes"
 msgstr "Процессы"
-
-msgid "Processes Information"
-msgstr "Информация о процессах"
 
 msgid "Product ID"
 msgstr "ID продукта"
@@ -7587,10 +7587,6 @@ msgid "The IP address that this hostname represents."
 msgstr "IP-адрес, представленный этим именем хоста"
 
 #, php-format
-msgid "The MIB '%s' already exists."
-msgstr "MIB-'%s' уже существует."
-
-#, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
 msgstr "MIB '%s' не существует в sysctl."
 
@@ -8276,9 +8272,8 @@ msgstr ""
 "Восстановлены стандартные настройки сервера, далее будет выполнена "
 "перезагрузка. Это может занять около минуты времени."
 
-msgid "The server is halting now. This may take one minute."
+msgid "The server is halting now."
 msgstr ""
-"Сервер в настоящее время останавливается. Это может занять одну минуту."
 
 msgid "The server is rebooting now."
 msgstr "Сервер сейчас перезагружается."
@@ -10056,7 +10051,7 @@ msgid "mount"
 msgstr "монтировать"
 
 msgid "mount point"
-msgstr "точка монтирования"
+msgstr "точку монтирования"
 
 msgid "n/a"
 msgstr "n/a"
@@ -10120,11 +10115,13 @@ msgstr "пользователь"
 msgid "version:"
 msgstr "версия:"
 
-#~ msgid "Graph"
-#~ msgstr "График"
+#~ msgid "Processes Information"
+#~ msgstr "Информация о процессах"
 
-#~ msgid "Send now"
-#~ msgstr "Отправить немедленно"
+#, php-format
+#~ msgid "The MIB '%s' already exists."
+#~ msgstr "MIB-'%s' уже существует."
 
-#~ msgid "To email"
-#~ msgstr "Адрес e-mail"
+#~ msgid "The server is halting now. This may take one minute."
+#~ msgstr ""
+#~ "Сервер в настоящее время останавливается. Это может занять одну минуту."
