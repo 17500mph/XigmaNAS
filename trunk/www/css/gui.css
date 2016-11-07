@@ -506,12 +506,12 @@ div#pagefooter {
 	margin: 0px 0px 0px 0px;
 	text-align: center;
 	background: url("/images/navbar_default.png");
-	height: 20px;
 	position: fixed;
 	bottom: 0;
 	width: 100%;
 	font-size: 10px;
-	padding: 0px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 	color: #FFFFFF;
 }
 div#pagefooter span a:link, div#pagefooter span a:active, div#pagefooter span a:visited {

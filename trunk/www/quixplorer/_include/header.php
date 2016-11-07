@@ -15,6 +15,7 @@
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -350,29 +351,21 @@ function show_header($title, $additional_header_content = null)
 	echo "</ul>\n";
 	echo "<div style=\"clear:both\"></div>\n";
 	echo "</div>\n";
-	echo "<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />\n";
-	
+	echo '<div id="pagecontent">';
 	// QuiXplorer Header
-	$pgtitle = array(gtext("Advanced"), gtext("File Manager"));
-	if (!isset($pgtitle_omit) || !$pgtitle_omit):
-		echo "<div style=\"margin-left: 50px;\"><p class=\"pgtitle\">".htmlspecialchars(gentitle($pgtitle))."</p></div>\n";
-	endif;
-	echo "<center>\n";
-	echo "<table border=\"0\" width=\"93%\" cellspacing=\"0\" cellpadding=\"5\">\n";
-	echo "<tbody>\n";
-	echo "<tr>\n";
+	$pgtitle = [gtext('Advanced'), gtext('File Manager')];
+	if (!isset($pgtitle_omit) || !$pgtitle_omit) {
+		echo '<p class="pgtitle">', gentitle($pgtitle), "</p>\n";
+	}
+	echo '<table border="0" width="100%" cellspacing="0" cellpadding="5"><tbody><tr>', "\n";
 	echo "<td class=\"title\" aligh=\"left\">\n";
 	if($GLOBALS["require_login"] && isset($GLOBALS['__SESSION']["s_user"]))
 	echo "[".$GLOBALS['__SESSION']["s_user"]."] "; echo $title;
 	echo "</td>\n";
-	echo "<td class=\"title_version\" align=\"right\">\n";
+	echo '<td class="title_version" align="right">', "\n";
 	echo "Powered by QuiXplorer";
 	echo "</td>\n";
-	echo "</tr>\n";
-	echo "</tbody>\n";
-	echo "</table>\n";
-	echo "</center>";
-	echo "<div class=\"main_tbl\">";
+	echo "</tr></tbody></table>\n";
+	echo '<div id="area_data"', ">";
 }
-
 ?>
