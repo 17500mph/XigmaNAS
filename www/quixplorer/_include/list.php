@@ -279,7 +279,7 @@ function list_dir ( $dir )
 	}
 
 	// Toolbar
-	echo "<BR><TABLE width=\"95%\"><TR><TD><TABLE><TR>\n";
+	echo "<BR><TABLE width=\"100%\"><TR><TD><TABLE><TR>\n";
 
 	// PARENT DIR
 	echo "<TD><A HREF=\"".make_link("list", path_up($dir), NULL)."\">";
@@ -343,7 +343,7 @@ function list_dir ( $dir )
 
 
 	// Begin Table + Form for checkboxes
-	echo"<TABLE WIDTH=\"95%\"><FORM name=\"selform\" method=\"POST\" action=\"".make_link("post",$dir,NULL)."\">\n";
+	echo"<TABLE WIDTH=\"100%\"><FORM name=\"selform\" method=\"POST\" action=\"".make_link("post",$dir,NULL)."\">\n";
 	echo "<INPUT type=\"hidden\" name=\"do_action\"><INPUT type=\"hidden\" name=\"first\" value=\"y\">\n";
 
 	// Table Header

@@ -39,6 +39,7 @@
 // footer for html-page
 function show_footer() {
 	echo "</div>";
+	echo '</div>';
 	echo "<div id=\"pagefooter\">\n";
 	echo "<span><p>", htmlspecialchars(get_product_copyright()), "</p></span>\n";
 	echo "</div>\n";
