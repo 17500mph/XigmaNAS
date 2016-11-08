@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-11-08 10:14+0000\n"
+"POT-Creation-Date: 2016-11-08 18:51+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -97,6 +97,10 @@ msgstr ""
 
 #, php-format
 msgid "%sB used of %sB"
+msgstr ""
+
+#, php-format
+msgid "'%s' deletes all the data for selected statistics. If only a certain statistic needs to be reset, clear all other check boxes before performing '%s'."
 msgstr ""
 
 msgid "(Change if needed)"
@@ -550,6 +554,9 @@ msgstr ""
 msgid "All"
 msgstr ""
 
+msgid "All data from the following statistics have been deleted:"
+msgstr ""
+
 msgid "All data in the path is overwritten. To avoid invalid data/permission, using an empty UFS directory is recommended."
 msgstr ""
 
@@ -798,6 +805,12 @@ msgstr ""
 msgid "AutoScale"
 msgstr ""
 
+msgid "Autoscale"
+msgstr ""
+
+msgid "Autoscale for graphs."
+msgstr ""
+
 msgid "Autoselect"
 msgstr ""
 
@@ -811,6 +824,9 @@ msgid "Avail"
 msgstr ""
 
 msgid "Available"
+msgstr ""
+
+msgid "Available graphs"
 msgstr ""
 
 msgid "Average performance of seek operations of the magnetic heads. If this attribute is decreasing, it is a sign of problems in the mechanical subsystem."
@@ -982,6 +998,9 @@ msgstr ""
 msgid "By default, only already existing files can be uploaded."
 msgstr ""
 
+msgid "Bytes/sec"
+msgstr ""
+
 msgid "CACHE"
 msgstr ""
 
@@ -1054,7 +1073,16 @@ msgstr ""
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr ""
 
+msgid "CPU Frequency"
+msgstr ""
+
 msgid "CPU Load"
+msgstr ""
+
+msgid "CPU Temperature"
+msgstr ""
+
+msgid "CPU Usage"
 msgstr ""
 
 msgid "CPU frequency"
@@ -1582,6 +1610,9 @@ msgstr ""
 msgid "Data digest"
 msgstr ""
 
+msgid "Data directory"
+msgstr ""
+
 msgid "Data integrity"
 msgstr ""
 
@@ -1646,6 +1677,10 @@ msgid "Default - Rsync will choose the 'during' algorithm when talking to rsync 
 msgstr ""
 
 msgid "Default Device Settings"
+msgstr ""
+
+#, php-format
+msgid "Default is %s %s."
 msgstr ""
 
 #, php-format
@@ -1832,6 +1867,9 @@ msgstr ""
 msgid "Destination email address. Separate email addresses by semi-colon."
 msgstr ""
 
+msgid "Destination host name or IP address."
+msgstr ""
+
 msgid "Destination host name or IP number."
 msgstr ""
 
@@ -1863,6 +1901,9 @@ msgid "Detach a data device from a mirror"
 msgstr ""
 
 msgid "Detach a log device from a mirrored log"
+msgstr ""
+
+msgid "Detailed"
 msgstr ""
 
 msgid "Detected"
@@ -1948,6 +1989,10 @@ msgstr ""
 msgid "Directory"
 msgstr ""
 
+#, php-format
+msgid "Directory %s doesn't exist!"
+msgstr ""
+
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr ""
 
@@ -2018,7 +2063,13 @@ msgstr ""
 msgid "Disk Selection"
 msgstr ""
 
+msgid "Disk Usage"
+msgstr ""
+
 msgid "Disk space usage"
+msgstr ""
+
+msgid "Disk usage"
 msgstr ""
 
 msgid "Disks"
@@ -2039,6 +2090,18 @@ msgstr ""
 msgid "Display ZFS command history"
 msgstr ""
 
+msgid "Displays a percentage of time spent in each of the processor states (user, nice, system, interrupt, idle)."
+msgstr ""
+
+msgid "Displays information about memory allocation (active, inact, wired, cache, buf, free, swap used, swap free)."
+msgstr ""
+
+msgid "Displays the length of time the system has been up."
+msgstr ""
+
+msgid "Displays the number of processes in each state (total, running, sleeping, waiting, starting, stopped, zombie)."
+msgstr ""
+
 msgid "Distance the disk has shifted relative to the spindle (usually due to shock or temperature). Unit of measure is unknown."
 msgstr ""
 
@@ -2056,6 +2119,9 @@ msgid "Do not let the server check for newer firmware versions when the %s page 
 msgstr ""
 
 msgid "Do you really want to clear and import?\\nThe existing config will be cleared and overwritten."
+msgstr ""
+
+msgid "Do you really want to delete all data from the selected statistics?"
 msgstr ""
 
 msgid "Do you really want to delete all rules?"
@@ -3151,6 +3217,13 @@ msgstr ""
 msgid "Graph shows last 120 seconds"
 msgstr ""
 
+#, php-format
+msgid "Graph updates every %d seconds"
+msgstr ""
+
+msgid "Graphs height"
+msgstr ""
+
 msgid "Greek"
 msgstr ""
 
@@ -3242,6 +3315,10 @@ msgid "Health"
 msgstr ""
 
 msgid "Height of heads above the disk surface. A flying height that's too low increases the chances of a head crash while a flying height that's too high increases the chances of a read/write error."
+msgstr ""
+
+#, php-format
+msgid "Height of the graphs. Default is %s pixel."
 msgstr ""
 
 msgid "Help"
@@ -3415,6 +3492,9 @@ msgid "If allowed, a user of the trusted domains can access the share."
 msgstr ""
 
 msgid "If default root is enabled, a chroot operation is performed immediately after a client authenticates. This can be used to effectively isolate the client from a portion of the host system filespace."
+msgstr ""
+
+msgid "If enabled the network throughput is displayed in Bytes/sec rather than Bits/sec."
 msgstr ""
 
 msgid "If the server is behind a proxy set these parameters to give local services access to the internet via proxy."
@@ -3814,6 +3894,9 @@ msgstr ""
 msgid "Last test result as microseconds to discharge cap, saturated at its maximum value. Also logs minutes since last test and lifetime number of tests. Raw value contains the following data: Bytes 0-1: Last test result as microseconds to discharge cap, saturates at max value. Test result expected in range 25 <= result <= 5000000, lower indicates specific error code. Bytes 2-3: Minutes since last test, saturates at max value. Bytes 4-5: Lifetime number of tests, not incremented on power cycle, saturates at max value. Normalized value is set to one on test failure or 11 if the capacitor has been tested in an excessive temperature condition, otherwise 100."
 msgstr ""
 
+msgid "Latency"
+msgstr ""
+
 #, php-format
 msgid "Latest Beta Build: %s"
 msgstr ""
@@ -3901,6 +3984,9 @@ msgstr ""
 msgid "Load"
 msgstr ""
 
+msgid "Load Averages"
+msgstr ""
+
 msgid "Load averages"
 msgstr ""
 
@@ -3981,6 +4067,13 @@ msgid "Log order"
 msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
+msgstr ""
+
+msgid "Logarithmic scaling"
+msgstr ""
+
+#, php-format
+msgid "Logarithmic y-axis scaling for %s graphs (can not be used together with positive/negative y-axis range)."
 msgstr ""
 
 msgid "Logical Block Length"
@@ -4229,7 +4322,13 @@ msgstr ""
 msgid "Member Interface"
 msgstr ""
 
+msgid "Memory"
+msgstr ""
+
 msgid "Memory (MiB)"
+msgstr ""
+
+msgid "Memory Usage"
 msgstr ""
 
 msgid "Memory usage"
@@ -4460,7 +4559,16 @@ msgstr ""
 msgid "Network File System"
 msgstr ""
 
+msgid "Network Latency"
+msgstr ""
+
+msgid "Network Traffic"
+msgstr ""
+
 msgid "Network authorised to access to the iSCSI target. It takes IP or CIDR addresses or 'ALL' for any IPs."
+msgstr ""
+
+msgid "Network latency"
 msgstr ""
 
 msgid "Network mask"
@@ -4470,6 +4578,9 @@ msgid "Network port"
 msgstr ""
 
 msgid "Network that is authorised to access the NFS share."
+msgstr ""
+
+msgid "Network traffic"
 msgstr ""
 
 msgid "Networks"
@@ -5037,6 +5148,10 @@ msgstr ""
 msgid "Please add new pools first."
 msgstr ""
 
+#, php-format
+msgid "Please check the %s documentation%s."
+msgstr ""
+
 msgid "Please check the documentation"
 msgstr ""
 
@@ -5344,6 +5459,13 @@ msgstr ""
 msgid "RAW info"
 msgstr ""
 
+msgid "RRDGraphs"
+msgstr ""
+
+#, php-format
+msgid "RRDGraphs needs at least read & execute permissions at the mount point for directory %s! Set the Read and Execute bits for Others (Access Restrictions | Mode) for the mount point %s (in <a href='disks_mount.php'>Disks | Mount Point | Management</a> or <a href='disks_zfs_dataset.php'>Disks | ZFS | Datasets</a>) and hit Save in order to take them effect."
+msgstr ""
+
 msgid "RSYNC"
 msgstr ""
 
@@ -5438,6 +5560,12 @@ msgid "Recycle bin"
 msgstr ""
 
 msgid "Refresh"
+msgstr ""
+
+msgid "Refresh time"
+msgstr ""
+
+msgid "Refresh time for graph pages."
 msgstr ""
 
 msgid "Reject"
@@ -5547,6 +5675,9 @@ msgid "Rescan interval"
 msgstr ""
 
 msgid "Reservation"
+msgstr ""
+
+msgid "Reset Graphs"
 msgstr ""
 
 msgid "Resistance caused by friction in mechanical parts while operating."
@@ -5896,6 +6027,9 @@ msgstr ""
 msgid "Select the FreeBSD package to be installed."
 msgstr ""
 
+msgid "Select the interface (only selectable if your server has more than one) to use for the source IP address in outgoing packets."
+msgstr ""
+
 msgid "Select the language of the WebGUI."
 msgstr ""
 
@@ -5918,6 +6052,12 @@ msgid "Selected device or label does not exist."
 msgstr ""
 
 msgid "Selected file isn't an valid ISO file."
+msgstr ""
+
+msgid "Selected graph:"
+msgstr ""
+
+msgid "Selected interface:"
 msgstr ""
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
@@ -6072,6 +6212,10 @@ msgid "Show UPS Information"
 msgstr ""
 
 msgid "Show log entries in reverse order (newest entries on top)."
+msgstr ""
+
+#, php-format
+msgid "Show positive/negative values for %s graphs (can not be used together with logarithmic scaling)."
 msgstr ""
 
 msgid "Shutdown"
@@ -6260,6 +6404,30 @@ msgid "Static Routes Setup"
 msgstr ""
 
 msgid "Static routes"
+msgstr ""
+
+msgid "Statistics for CPU frequency."
+msgstr ""
+
+msgid "Statistics for CPU temperature."
+msgstr ""
+
+msgid "Statistics for UPS battery capacity, voltage, load, remaining runtime, input voltage and the UPS status (online, on battery, charging and offline)."
+msgstr ""
+
+msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
+msgstr ""
+
+msgid "Statistics for average system load for 1, 5 and 15 minute periods."
+msgstr ""
+
+msgid "Statistics for disk (mount point) usage."
+msgstr ""
+
+msgid "Statistics for incoming/outgoing bits/second for network interfaces."
+msgstr ""
+
+msgid "Statistics for network latency."
 msgstr ""
 
 msgid "Status"
@@ -6807,6 +6975,13 @@ msgstr ""
 msgid "The custom format of the snapshot for shadow copy service can be specified. The default format is %s used for ZFS auto snapshot."
 msgstr ""
 
+#, php-format
+msgid "The data directory holds the statistical data for the graphs. This should be set to a %s to prevent a disk spinning all the time."
+msgstr ""
+
+msgid "The data directory must be set to a directory <b>below</b> /mnt."
+msgstr ""
+
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr ""
 
@@ -7198,6 +7373,9 @@ msgid "These parameters will be added to global settings in %s."
 msgstr ""
 
 msgid "These parameters will be added to the module configuration in rsyncd.conf."
+msgstr ""
+
+msgid "These parameters will be added to the ping command."
 msgstr ""
 
 msgid "This Bridge cannot be deleted because it is still being used as an interface."
@@ -7706,6 +7884,12 @@ msgstr ""
 msgid "UPS goes on battery"
 msgstr ""
 
+msgid "UPS identifier and IP address"
+msgstr ""
+
+msgid "UPS identifier and host IP address of the machine where the UPS is connected to (this can be also a remote host)."
+msgstr ""
+
 msgid "UPS model"
 msgstr ""
 
@@ -7828,6 +8012,9 @@ msgid "Upload directory of the webserver. The default is %s."
 msgstr ""
 
 msgid "Upper"
+msgstr ""
+
+msgid "Uptime"
 msgstr ""
 
 msgid "Use a space to separate multiple hosts (only one required). Remember to set up at least one DNS server if you enter a host name here!"
@@ -8202,6 +8389,9 @@ msgstr ""
 msgid "Xen Virtual Machine"
 msgstr ""
 
+msgid "Y-axis range"
+msgstr ""
+
 msgid "Yes"
 msgstr ""
 
@@ -8284,6 +8474,9 @@ msgid "ZFS"
 msgstr ""
 
 msgid "ZFS ACL"
+msgstr ""
+
+msgid "ZFS ARC"
 msgstr ""
 
 msgid "ZFS Dataset Information & Status"
@@ -8408,6 +8601,13 @@ msgstr ""
 msgid "mount point"
 msgstr ""
 
+msgid "must be defined!"
+msgstr ""
+
+#, php-format
+msgid "must be in the format: %s."
+msgstr ""
+
 msgid "n/a"
 msgstr ""
 
@@ -8436,6 +8636,9 @@ msgid "scan target failed."
 msgstr ""
 
 msgid "second(s)"
+msgstr ""
+
+msgid "seconds"
 msgstr ""
 
 msgid "smallest settable high voltage transfer point"
