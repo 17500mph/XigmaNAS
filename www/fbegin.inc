@@ -121,6 +121,7 @@ if ('dom0' !== $g['arch']) {
 	$menu['services']['menuitem'][] = ['desc' => gtext('Webserver'), 'link' => 'services_websrv.php', 'visible' => true];
 	$menu['services']['menuitem'][] = ['desc' => gtext('BitTorrent'), 'link' => 'services_bittorrent.php', 'visible' => true];
 	$menu['services']['menuitem'][] = ['desc' => gtext('LCDproc'), 'link' => 'services_lcdproc.php', 'visible' => true];
+	$menu['services']['menuitem'][] = ['desc' => gtext('RRDGraphs'), 'link' => 'services_rrdgraphs.php', 'visible' => true];
 } else {
 	$menu['services']['menuitem'][] = ['desc' => gtext('SSH'), 'link' => 'services_sshd.php', 'visible' => true];
 	$menu['services']['menuitem'][] = ['desc' => gtext('NFS'), 'link' => 'services_nfs.php', 'visible' => true];
