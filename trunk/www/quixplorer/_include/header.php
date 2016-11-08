@@ -140,9 +140,9 @@ $menu['services']['menuitem'][] = array("desc" => gtext("iSCSI Target"), "link" 
 $menu['services']['menuitem'][] = array("desc" => gtext("UPS"), "link" => "../services_ups.php", "visible" => TRUE);
 }
 
-// VM
+// Virtualization
 if ('x64' == $g['arch']) {
-$menu['vm']['desc'] = gtext("VM");
+$menu['vm']['desc'] = gtext("Virtualization");
 $menu['vm']['visible'] = Session::isAdmin();
 $menu['vm']['link'] = "../index.php";
 $menu['vm']['menuitem'] = array();
@@ -178,16 +178,16 @@ $menu['status']['menuitem'][] = array("desc" => gtext("Disks"), "link" => "../st
 $menu['status']['menuitem'][] = array("desc" => gtext("Monitoring"), "link" => "../status_graph.php", "visible" => TRUE);
 
 // Advanced
-$menu['advanced']['desc'] = gtext("Advanced");
-$menu['advanced']['visible'] = TRUE;
-$menu['advanced']['link'] = "../index.php";
-$menu['advanced']['menuitem'] = array();
-$menu['advanced']['menuitem'][] = array("desc" => gtext("File Editor"), "link" => "../system_edit.php", "visible" => Session::isAdmin());
+$menu['tools']['desc'] = gtext("Tools");
+$menu['tools']['visible'] = TRUE;
+$menu['tools']['link'] = "../index.php";
+$menu['tools']['menuitem'] = array();
+$menu['tools']['menuitem'][] = array("desc" => gtext("File Editor"), "link" => "../system_edit.php", "visible" => Session::isAdmin());
 if (!isset($config['system']['disablefm'])) {
-	$menu['advanced']['menuitem'][] = array("desc" => gtext("File Manager"), "link" => "../quixplorer/system_filemanager.php", "visible" => TRUE);
+	$menu['tools']['menuitem'][] = array("desc" => gtext("File Manager"), "link" => "../quixplorer/system_filemanager.php", "visible" => TRUE);
 }
-$menu['advanced']['menuitem'][] = array("type" => "separator", "visible" => Session::isAdmin());
-$menu['advanced']['menuitem'][] = array("desc" => gtext("Command"), "link" => "../exec.php", "visible" => Session::isAdmin());
+$menu['tools']['menuitem'][] = array("type" => "separator", "visible" => Session::isAdmin());
+$menu['tools']['menuitem'][] = array("desc" => gtext("Command"), "link" => "../exec.php", "visible" => Session::isAdmin());
 
 // Diagnostics
 $menu['diagnostics']['desc'] = gtext("Diagnostics");
@@ -326,7 +326,12 @@ function show_header($title, $additional_header_content = null)
 	echo display_menu("system");
 	echo display_menu("network");
 	echo display_menu("disks");
+	echo display_menu("access");
 	echo display_menu("services");
+	echo display_menu("vm");
+	echo display_menu("status");
+	echo display_menu("diagnostics");
+	echo display_menu("tools");
 	//-- Begin extension section --//
 	if (Session::isAdmin() && isset($g) && isset($g['www_path']) && is_dir("{$g['www_path']}/ext")):
 		echo "<li>\n";
@@ -342,11 +347,6 @@ function show_header($title, $additional_header_content = null)
 		echo "</li>\n";
 	endif;
 	//-- End extension section --//
-	echo display_menu("vm");
-	echo display_menu("access");
-	echo display_menu("status");
-	echo display_menu("diagnostics");
-	echo display_menu("advanced");
 	echo display_menu("help");
 	echo "</ul>\n";
 	echo "<div style=\"clear:both\"></div>\n";

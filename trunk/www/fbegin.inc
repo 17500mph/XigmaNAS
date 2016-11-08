@@ -31,7 +31,6 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-
 function gentitle($title) {
 	$navlevelsep = "|"; // Navigation level separator string.
 	return join($navlevelsep, $title);
@@ -40,9 +39,9 @@ function gentitle($title) {
 function genhtmltitle($title) {
 	return htmlspecialchars(system_get_hostname()) . " - " . gentitle($title);
 }
-
-$isAdminSession = Session::isAdmin();
 // Menu items.
+$isAdminSession = Session::isAdmin();
+
 // System
 $menu['system']['desc'] = gtext('System');
 $menu['system']['visible'] = TRUE;
@@ -129,9 +128,9 @@ if ('dom0' !== $g['arch']) {
 	$menu['services']['menuitem'][] = ['desc' => gtext('UPS'), 'link' => 'services_ups.php', 'visible' => true];
 }
 
-// VM
+// Virtualization
 if ('x64' == $g['arch']) {
-	$menu['vm']['desc'] = gtext('VM');
+	$menu['vm']['desc'] = gtext('Virtualization');
 	$menu['vm']['visible'] = $isAdminSession;
 	$menu['vm']['link'] = '';
 	$menu['vm']['menuitem'] = [];
@@ -166,17 +165,17 @@ $menu['status']['menuitem'][] = ['desc' => gtext('Interfaces'), 'link' => 'statu
 $menu['status']['menuitem'][] = ['desc' => gtext('Disks'), 'link' => 'status_disks.php', 'visible' => true];
 $menu['status']['menuitem'][] = ['desc' => gtext('Monitoring'), 'link' => 'status_graph.php', 'visible' => true];
 
-// Advanced
-$menu['advanced']['desc'] = gtext('Advanced');
-$menu['advanced']['visible'] = TRUE;
-$menu['advanced']['link'] = '';
-$menu['advanced']['menuitem'] = [];
-$menu['advanced']['menuitem'][] = ['desc' => gtext('File Editor'), 'link' => 'system_edit.php', 'visible' => $isAdminSession];
+// Tools
+$menu['tools']['desc'] = gtext('Tools');
+$menu['tools']['visible'] = TRUE;
+$menu['tools']['link'] = '';
+$menu['tools']['menuitem'] = [];
+$menu['tools']['menuitem'][] = ['desc' => gtext('File Editor'), 'link' => 'system_edit.php', 'visible' => $isAdminSession];
 if (!isset($config['system']['disablefm'])) {
-	$menu['advanced']['menuitem'][] = ['desc' => gtext('File Manager'), 'link' => '/quixplorer/system_filemanager.php', 'visible' => true];
+	$menu['tools']['menuitem'][] = ['desc' => gtext('File Manager'), 'link' => '/quixplorer/system_filemanager.php', 'visible' => true];
 }
-$menu['advanced']['menuitem'][] = ['type' => 'separator', 'visible' => $isAdminSession];
-$menu['advanced']['menuitem'][] = ['desc' => gtext('Command'), 'link' => 'exec.php', 'visible' => $isAdminSession];
+$menu['tools']['menuitem'][] = ['type' => 'separator', 'visible' => $isAdminSession];
+$menu['tools']['menuitem'][] = ['desc' => gtext('Command'), 'link' => 'exec.php', 'visible' => $isAdminSession];
 
 // Diagnostics
 $menu['diagnostics']['desc'] = gtext('Diagnostics');
@@ -205,7 +204,7 @@ $menu['help']['menuitem'][] = ['desc' => gtext('Donate'), 'link' => 'https://www
 function display_menu($menuid) {
 	global $menu;
 
-	// Is menu visible?
+// Is menu visible?
 	if (!$menu[$menuid]['visible'])
 		return;
 
@@ -216,7 +215,6 @@ function display_menu($menuid) {
 	if ((preg_match('/iPhone/i', $agent)) || (preg_match('/android/i', $agent))) {
 		echo "<a href=\"javascript:mopen('{$menuid}');\" onmouseout=\"mclosetime()\">".$menu[$menuid]['desc']."</a>\n";
 	} else {
-//		echo "<a href=\"{$link}\" onmouseover=\"mopen('{$menuid}')\" onmouseout=\"mclosetime()\">".$menu[$menuid]['desc']."</a>\n";
 		echo "<a href=\"{$link}\" onclick=\"spinner()\" onmouseover=\"mopen('{$menuid}')\" onmouseout=\"mclosetime()\">".$menu[$menuid]['desc']."</a>\n";
 	}
 	echo "	<div id=\"{$menuid}\" onmouseover=\"mcancelclosetime()\" onmouseout=\"mclosetime()\">\n";
@@ -231,7 +229,6 @@ function display_menu($menuid) {
 			# Display menuitem.
 			$link = $menuv['link'];
 			if ($link == '') $link = 'index.php';
-//			echo "<a href=\"{$link}\" target=\"" . (empty($menuv['target']) ? "_self" : $menuv['target']) . "\" title=\"".$menuv['desc']."\">".$menuv['desc']."</a>\n";
 			echo '<a href="', $link, '" onclick="spinner()" target="', (empty($menuv['target']) ? "_self" : $menuv['target']), '" title="', $menuv['desc'], '">', $menuv['desc'], '</a>', "\n";
 		} else {
 			# Display separator.
@@ -282,7 +279,7 @@ echo '<!DOCTYPE html>', "\n"
 			echo "\n";
 		}
 	}
-	?>
+?>
 </head>
 <body>
 <div id="spinner_main"></div>
@@ -302,7 +299,12 @@ echo '<!DOCTYPE html>', "\n"
 		<?=display_menu('system');?>
 		<?=display_menu('network');?>
 		<?=display_menu('disks');?>
+		<?=display_menu('access');?>
 		<?=display_menu('services');?>
+		<?=display_menu('vm');?>
+		<?=display_menu('status');?>
+		<?=display_menu('diagnostics');?>
+		<?=display_menu('tools');?>
 		<!-- Begin extension section -->
 		<?php if ($isAdminSession && is_dir("{$g['www_path']}/ext")):?>
 		<li>
@@ -311,7 +313,6 @@ echo '<!DOCTYPE html>', "\n"
 			if ((preg_match('/iPhone/i', $agent)) || (preg_match('/android/i', $agent))) {
 				echo "<a href=\"javascript:mopen('extensions');\" onmouseout=\"mclosetime()\">".gtext('Extensions')."</a>";
 			} else {
-//				echo "<a href=\"index.php\" onmouseover=\"mopen('extensions')\" onmouseout=\"mclosetime()\">".gtext('Extensions')."</a>";
 				echo "<a href=\"index.php\" onclick=\"spinner()\" onmouseover=\"mopen('extensions')\" onmouseout=\"mclosetime()\">".gtext('Extensions')."</a>";
 			}
 		?>
@@ -330,11 +331,6 @@ echo '<!DOCTYPE html>', "\n"
 		</li>
 		<?php endif;?>
 		<!-- End extension section -->
-		<?=display_menu('vm');?>
-		<?=display_menu('access');?>
-		<?=display_menu('status');?>
-		<?=display_menu('diagnostics');?>
-		<?=display_menu('advanced');?>
 		<?=display_menu('help');?>
 	</ul>
 	<div style="clear:both"></div>
