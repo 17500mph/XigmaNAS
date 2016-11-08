@@ -35,19 +35,23 @@ require("auth.inc");
 require("guiconfig.inc");
 
 header("Content-type: image/svg+xml");
-
 /********** HTTP GET Based Conf ***********/
 $ifnum=@htmlspecialchars($_GET["ifnum"]);  // BSD / SNMP interface name / number
 $ifname=@htmlspecialchars($_GET["ifname"]) ? htmlspecialchars($_GET["ifname"]) : "Interface $ifnum";  //Interface name on top right in graph
-
 /********* Other conf *******/
-$scale_type="follow"; //Autoscale default setup : "up" = only increase scale; "follow" = increase and decrease scale according to current data
-$nb_plot=120;         //NB plot in graph
-$time_interval=1;		  //Refresh time Interval
+$scale_type="follow"; //Autoscale default setup : "up" = only increase scale; "follow" = increase and decrease scale according to current graphed datas
+if (isset($config['extended-gui']['enable']) && ($config['extended-gui']['type'] == 'Extended')) {
+    $nb_plot=$config['extended-gui']['graph_nb_plot'];              //NB plot in graph default = 120
+    $time_interval=$config['extended-gui']['graph_time_interval'];  //Refresh time Interval default = 1   
+}
+else {
+    $nb_plot=120;       //NB plot in graph
+    $time_interval=1;   //Refresh time Interval
+}
 $unit="bytes";         //Initial unit type: "bits" or "bytes"
 $fetch_link = "stats.php?if=$ifnum";
 
-//SVG style attributes
+//SVG attributes
 $attribs['bg']='fill="#000" stroke="none" stroke-width="0" opacity="1"';
 $attribs['axis']='fill="black" stroke="black"';
 $attribs['in']='fill="#00CC00" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="6"';

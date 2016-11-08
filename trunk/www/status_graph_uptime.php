@@ -1,6 +1,6 @@
 <?php
 /*
-	status_graph_cpu.php
+	status_graph_uptime.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
@@ -34,46 +34,33 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$status_cpu = true;
-$pgtitle = array(gtext("Status"), gtext("Monitoring"), gtext("CPU Load"));
+$pgtitle = array(gtext("Status"), gtext("Monitoring"), gtext("Uptime"));
+$rrd_uptime = true;
 
-$status_cpu = true;
-$graph_gap = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
-$graph_width = 397;
-$graph_height = 220;
+$refresh = !empty($config['rrdgraphs']['refresh_time']) ? $config['rrdgraphs']['refresh_time'] : 300;
+mwexec("/usr/local/share/rrdgraphs/bin/rrd-graph.sh uptime", true);
 
 include("fbegin.inc");?>
+<meta http-equiv="refresh" content="<?=$refresh?>">
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-		<td class="tabnavtbl">
-  		<ul id="tabnav">
-		<?php require("status_graph_tabs.inc");?>
-	   </ul>
-	</td>
- </tr>
-    <td class="tabcont">
-	<?=gtext("Graph shows last 120 seconds");?>
-	<div align="center" style="min-width:840px;">
-        <br />
-<?php
-session_start();
-$cpus = system_get_cpus();
-if ($cpus > 1) {
-	for ($j = 0; $j < $cpus; $j++) {                                             
-        echo '<object id="graph" data="status_graph_cpu2.php?cpu='.$j.'" type="image/svg+xml" width="'.$graph_width.'" height="'.$graph_height.'">';
-        echo '<param name="src" value="status_graph_cpu2.php?cpu='.$j.'" />';
-        echo 'Your browser does not support this svg object type!<br /> You need to update your browser or use Internet Explorer 9 or higher.<br></br>';
-        echo '</object>';
-        $test = $j % 2;
-        if ($test != 0) { echo '<br /><br /><br />'; }     /* add line breaks after second graph ... */
-        else { echo $graph_gap; }                          /* or the gap between two graphs */
-	}
-}
-?>
-        <object id="graph" data="status_graph_cpu2.php" type="image/svg+xml" width="<?=$graph_width;?>" height="<?=$graph_height;?>">
-        <param name="src" value="status_graph_cpu2.php" />
-        </object>
-
+<tr>
+    <td class="tabnavtbl">
+        <ul id="tabnav">
+<?php require("status_graph_tabs.inc");?>
+        </ul>
+    </td>
+</tr>
+<td class="tabcont">
+<?=sprintf(gtext("Graph updates every %d seconds"), $refresh);?>
+<div align="center" style="min-width:840px;">
+    <br>
+    <img src="/images/rrd/rrd-uptime_daily.png?rand=<?=time()?>" alt="RRDGraphs Daily Uptime Graph" width="graph_width" height="graph_height">
+    <br><br>
+    <img src="/images/rrd/rrd-uptime_weekly.png?rand=<?=time()?>" alt="RRDGraphs Weekly Uptime Graph" width="graph_width" height="graph_height">
+    <br><br>
+    <img src="/images/rrd/rrd-uptime_monthly.png?rand=<?=time()?>" alt="RRDGraphs Monthly Uptime Graph" width="graph_width" height="graph_height">
+    <br><br>
+    <img src="/images/rrd/rrd-uptime_yearly.png?rand=<?=time()?>" alt="RRDGraphs Yearly Uptime Graph" width="graph_width" height="graph_height">
 </div>
 </td></tr></table>
 <?php include("fend.inc");?>

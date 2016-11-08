@@ -35,6 +35,7 @@ require("auth.inc");
 require("guiconfig.inc");
 
 $pgtitle = array(gtext("Status"), gtext("Monitoring"),gtext("System Load"));
+$status_graph = true;
 
 $curif = "lan";
 if (isset($_GET['if']) && $_GET['if'])
@@ -43,19 +44,18 @@ $ifnum = get_ifname($config['interfaces'][$curif]['if']);
 $graph_gap = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'; 
 $graph_width = 397;
 $graph_height = 220;
-?>
-<?php include("fbegin.inc");?>
+
+include("fbegin.inc");?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
-		<td class="tabnavtbl">
+	<td class="tabnavtbl">
 		<div align="center">
   		<ul id="tabnav">
-				<li class="tabact"><a href="status_graph.php" title="<?=gtext('Reload page');?>"><span><?=gtext("System Load");?></span></a></li>
-				<li class="tabinact"><a href="status_graph_cpu.php"><span><?=gtext("CPU Load");?></span></a></li>
-  		</ul>
-		</div>
-  	</td>
-	</tr>
+		<?php require("status_graph_tabs.inc");?>
+	   </ul>
+	</div>
+    </td>
+</tr>
   <tr>
     <td class="tabcont">
 <?php
@@ -86,7 +86,7 @@ for ($j = 1; isset($config['interfaces']['opt' . $j]); $j++) {
 	type="image/svg+xml"
 	width="'.$graph_width.'"
 	height="'.$graph_height.'>';
-	echo '<param name="src" value="graph.php?ifnum='.$ifnum.'&amp;ifname='.rawurlencode($ifdescrs).'" />';
+	echo '<param name="src" value="status_graph2.php?ifnum='.$ifnum.'&amp;ifname='.rawurlencode($ifdescrs).'" />';
 	echo 'Your browser does not support this svg object type!<br /> You need to update your browser or use Internet Explorer 9 or higher.';
 	echo '</object>';
 	$test = $j % 2;
