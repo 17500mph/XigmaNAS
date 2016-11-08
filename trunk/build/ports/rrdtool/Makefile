@@ -4,7 +4,7 @@ PORTREVISION=		0
 CATEGORIES=		databases graphics
 
 COMMENT=		Round Robin Database Tools
-MAINTAINER=		aoyama@nas4free.org
+MAINTAINER=		zoon1@nas4free.org
 
 USES=			perl5 python
 
@@ -20,6 +20,27 @@ PANGO_MODULES=		${PREFIX}/lib/pango/1.8.0/modules
 do-install:
 # NAS4Free install
 	@echo "install for ${NAS4FREE_ROOTFS}"
+# share
+	@${MKDIR} -v ${NAS4FREE_ROOTFS}/usr/local/share/rrdgraphs
+	@${MKDIR} -v ${NAS4FREE_ROOTFS}/usr/local/share/rrdgraphs/bin
+	@${MKDIR} -v ${NAS4FREE_ROOTFS}/usr/local/share/rrdgraphs/bin/templates
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/rrd-graph.sh ${NAS4FREE_ROOTFS}/usr/local/share/rrdgraphs/bin/rrd-graph.sh
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/rrd-start.php ${NAS4FREE_ROOTFS}/usr/local/share/rrdgraphs/bin/rrd-start.php
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/rrd-update.sh ${NAS4FREE_ROOTFS}/usr/local/share/rrdgraphs/bin/rrd-update.sh
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/templates/cpu.sh ${NAS4FREE_ROOTFS}/usr/local/share/rrdgraphs/bin/templates/cpu.sh
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/templates/cpu_frequency.sh ${NAS4FREE_ROOTFS}/usr/local/share/rrdgraphs/bin/templates/cpu_frequency.sh
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/templates/cpu_temperature.sh ${NAS4FREE_ROOTFS}/usr/local/share/rrdgraphs/bin/templates/cpu_temperature.sh
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/templates/disk_usage.sh ${NAS4FREE_ROOTFS}/usr/local/share/rrdgraphs/bin/templates/disk_usage.sh
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/templates/latency.sh ${NAS4FREE_ROOTFS}/usr/local/share/rrdgraphs/bin/templates/latency.sh
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/templates/load_averages.sh ${NAS4FREE_ROOTFS}/usr/local/share/rrdgraphs/bin/templates/load_averages.sh
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/templates/memory.sh ${NAS4FREE_ROOTFS}/usr/local/share/rrdgraphs/bin/templates/memory.sh
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/templates/memory-detailed.sh ${NAS4FREE_ROOTFS}/usr/local/share/rrdgraphs/bin/templates/memory-detailed.sh
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/templates/network_traffic.sh ${NAS4FREE_ROOTFS}/usr/local/share/rrdgraphs/bin/templates/network_traffic.sh
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/templates/processes.sh ${NAS4FREE_ROOTFS}/usr/local/share/rrdgraphs/bin/templates/processes.sh
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/templates/ups.sh ${NAS4FREE_ROOTFS}/usr/local/share/rrdgraphs/bin/templates/ups.sh
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/templates/uptime.sh ${NAS4FREE_ROOTFS}/usr/local/share/rrdgraphs/bin/templates/uptime.sh
+	@${INSTALL_SCRIPT} -v ${FILESDIR}/templates/zfs_arc.sh ${NAS4FREE_ROOTFS}/usr/local/share/rrdgraphs/bin/templates/zfs_arc.sh
+
 	@${INSTALL_PROGRAM} -v ${DEP_STAGEDIR}${PREFIX}/bin/rrdcached ${NAS4FREE_ROOTFS}/usr/local/bin
 	@${INSTALL_PROGRAM} -v ${DEP_STAGEDIR}${PREFIX}/bin/rrdcgi ${NAS4FREE_ROOTFS}/usr/local/bin
 	@${INSTALL_PROGRAM} -v ${DEP_STAGEDIR}${PREFIX}/bin/rrdcreate ${NAS4FREE_ROOTFS}/usr/local/bin
