@@ -33,7 +33,7 @@
  */
 require_once("config.inc");
 
-$runtime_dir = "/usr/local/share/rrdgraphs/bin/";
+$runtime_dir = "/usr/local/share/rrdgraphs/bin";
 
 if (isset($config['rrdgraphs']['enable'])) { 
     exec("logger rrdgraphs: enabled, starting ...");
