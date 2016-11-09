@@ -36,11 +36,7 @@ if [ "$1" == "traffic" ] || ( [ "$1" == "" ] && [ "$RUN_LAN" == "1" ] ); then
     done
 fi
 if [ "$1" == "load" ]        || ( [ "$1" == "" ] && [ "$RUN_AVG" == "1" ] ); then CREATE_GRAPHS "load_averages"   "load averages"; fi
-if [ "$1" == "temperature" ] || ( [ "$1" == "" ] && [ "$RUN_TMP" == "1" ] ); then 
-    RRDT_R=`echo -e ${RRDT_RELEASE} | awk '{gsub("[.]",""); print}'`
-    if [ $RRDT_R -ge 160 ]; then LEFT_AXIS_FORMAT="--left-axis-format %2.1lf";
-    else LEFT_AXIS_FORMAT=""; 
-    fi
+if [ "$1" == "temperature" ] || ( [ "$1" == "" ] && [ "$RUN_TMP" == "1" ] ); then
     CREATE_GRAPHS "cpu_temperature" "CPU temperature";
 fi
 if [ "$1" == "frequency" ]   || ( [ "$1" == "" ] && [ "$RUN_FRQ" == "1" ] ); then CREATE_GRAPHS "cpu_frequency"   "CPU frequency"; fi
