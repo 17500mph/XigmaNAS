@@ -147,7 +147,7 @@ HOME=/var/log
 	fi
 
 	# RSYNC client
-	_index=`configxml_get_count "//rrdgraphs/rsyncclient[enable]"`
+	_index=`configxml_get_count "//rsync/rsyncclient[enable]"`
 	if [ 0 -lt ${_index} ]; then
 		while [ ${_index} -gt 0 ]
 		do
