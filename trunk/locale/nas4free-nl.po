@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-07 11:16+0000\n"
-"PO-Revision-Date: 2016-11-07 11:06+0000\n"
+"POT-Creation-Date: 2016-11-08 18:51+0000\n"
+"PO-Revision-Date: 2016-11-09 08:56+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-07 11:09+0000\n"
+"X-Launchpad-Export-Date: 2016-11-09 09:01+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -108,6 +108,16 @@ msgstr "%sB beschikbaar van %sB"
 #, php-format
 msgid "%sB used of %sB"
 msgstr "%sB gebruikt van %sB"
+
+#, php-format
+msgid ""
+"'%s' deletes all the data for selected statistics. If only a certain "
+"statistic needs to be reset, clear all other check boxes before performing "
+"'%s'."
+msgstr ""
+"'%s' wist alle gegevens voor de geselecteerde statistieken. Als slechts een "
+"bepaalde statistiek opnieuw moet worden ingesteld, schakelt u alle overige "
+"selectievakjes uit voor het uitvoeren van '%s'."
 
 msgid "(Change if needed)"
 msgstr "(Wijzig indien nodig)"
@@ -691,6 +701,9 @@ msgstr "Waarschuwings niveau"
 msgid "All"
 msgstr "Alle"
 
+msgid "All data from the following statistics have been deleted:"
+msgstr "Alle gegevens uit de volgende statistieken zijn verwijderd:"
+
 msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
 "an empty UFS directory is recommended."
@@ -1002,6 +1015,12 @@ msgstr "Auto grootte"
 msgid "AutoScale"
 msgstr "AutoSchaal"
 
+msgid "Autoscale"
+msgstr "Automatisch schalen"
+
+msgid "Autoscale for graphs."
+msgstr "Automatisch schalen voor grafieken."
+
 msgid "Autoselect"
 msgstr "Automatisch Selecteren"
 
@@ -1016,6 +1035,9 @@ msgstr "Beschikbaar"
 
 msgid "Available"
 msgstr "Beschikbaar"
+
+msgid "Available graphs"
+msgstr "Beschikbare grafieken"
 
 msgid ""
 "Average performance of seek operations of the magnetic heads. If this "
@@ -1213,6 +1235,9 @@ msgstr "Bulgaars"
 msgid "By default, only already existing files can be uploaded."
 msgstr "Standaard kunnen alleen bestaande bestanden geupload worden."
 
+msgid "Bytes/sec"
+msgstr "Bytes/seconde"
+
 msgid "CACHE"
 msgstr "CACHE"
 
@@ -1285,8 +1310,17 @@ msgstr "CP949 (Koreaans)"
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Traditioneel Chinees Grote5)"
 
+msgid "CPU Frequency"
+msgstr "CPU Frequentie"
+
 msgid "CPU Load"
 msgstr "CPU Belasting"
+
+msgid "CPU Temperature"
+msgstr "CPU Temperatuur"
+
+msgid "CPU Usage"
+msgstr "CPU Gebruik"
 
 msgid "CPU frequency"
 msgstr "CPU kloksnelheid"
@@ -1987,6 +2021,9 @@ msgstr "Deens"
 msgid "Data digest"
 msgstr "Gegevens overzicht"
 
+msgid "Data directory"
+msgstr "Gegevens directory"
+
 msgid "Data integrity"
 msgstr "Data integriteit"
 
@@ -2066,6 +2103,10 @@ msgstr ""
 
 msgid "Default Device Settings"
 msgstr "Standaard Schijf Instellingen"
+
+#, php-format
+msgid "Default is %s %s."
+msgstr "Standaard is %s %s."
 
 #, php-format
 msgid "Default is %s."
@@ -2267,6 +2308,9 @@ msgstr ""
 "Bestemmings e-mail adres. Verscheidene e-mailadressen scheiden door punt-"
 "komma."
 
+msgid "Destination host name or IP address."
+msgstr "Bestemming hostnaam of het IP-adres."
+
 msgid "Destination host name or IP number."
 msgstr "Bestemmings hostnaam of IP-nummer."
 
@@ -2301,6 +2345,9 @@ msgstr "Ontkoppel een data schijf van een mirror"
 
 msgid "Detach a log device from a mirrored log"
 msgstr "Ontkoppel een log schijf van een mirrored log"
+
+msgid "Detailed"
+msgstr "Gedetailleerd"
 
 msgid "Detected"
 msgstr "Gedetecteerd"
@@ -2400,6 +2447,10 @@ msgstr "Richting"
 msgid "Directory"
 msgstr "Map"
 
+#, php-format
+msgid "Directory %s doesn't exist!"
+msgstr "Map %s bestaat niet!"
+
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr ""
 "De map voor incomplete bestanden. Een leeg gelaten veld betekend "
@@ -2472,8 +2523,14 @@ msgstr "Schijf"
 msgid "Disk Selection"
 msgstr "Schijf Selectie"
 
+msgid "Disk Usage"
+msgstr "Schijfgebruik"
+
 msgid "Disk space usage"
 msgstr "Schijfruimte gebruik"
+
+msgid "Disk usage"
+msgstr "Schijfgebruik"
 
 msgid "Disks"
 msgstr "Schijven"
@@ -2492,6 +2549,30 @@ msgstr "Weergave"
 
 msgid "Display ZFS command history"
 msgstr "ZFS opdrachtgeschiedenis weergeven"
+
+msgid ""
+"Displays a percentage of time spent in each of the processor states (user, "
+"nice, system, interrupt, idle)."
+msgstr ""
+"Geeft een percentage van de tijd doorgebracht in de processen van elke "
+"processor (gebruikers, nice, systeem, interrupts, inactief)."
+
+msgid ""
+"Displays information about memory allocation (active, inact, wired, cache, "
+"buf, free, swap used, swap free)."
+msgstr ""
+"Toont informatie over het toewijzen van geheugen (active, inact, wired, "
+"cache, buf, free, swap used, swap free)."
+
+msgid "Displays the length of time the system has been up."
+msgstr "Geeft de lengte van de tijd die het systeem aan heeft gestaan."
+
+msgid ""
+"Displays the number of processes in each state (total, running, sleeping, "
+"waiting, starting, stopped, zombie)."
+msgstr ""
+"Geeft het aantal processen weer in elke staat (total, running, sleeping, "
+"waiting, starting, stopped, zombie)."
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -2525,6 +2606,10 @@ msgid ""
 msgstr ""
 "Weet u zeker dat u wilt leegmaken en importeren?\\nDe huidige config zal "
 "worden leeggemaakt en overschreven."
+
+msgid "Do you really want to delete all data from the selected statistics?"
+msgstr ""
+"Wilt u echt alle gegevens van de geselecteerde statistieken verwijderen?"
 
 msgid "Do you really want to delete all rules?"
 msgstr "Weet u zeker dat alle regels wilt verwijderen?"
@@ -3739,6 +3824,13 @@ msgstr "Toegang toestaan tot de gebruikers portaal."
 msgid "Graph shows last 120 seconds"
 msgstr "Grafiek van de laatste 120 seconden"
 
+#, php-format
+msgid "Graph updates every %d seconds"
+msgstr "Grafiek ververst elke %d seconden"
+
+msgid "Graphs height"
+msgstr "Grafiek hoogte"
+
 msgid "Greek"
 msgstr "Grieks"
 
@@ -3854,6 +3946,10 @@ msgstr ""
 "Hoogte van koppen boven de schijfoppervlakte. Een vliegende hoogte die te "
 "laag is verhoogt de kans op een kop crash terwijl een vliegende hoogte die "
 "te hoog is de kans op lees/schrijf fouten aanzienlijk verhoogt."
+
+#, php-format
+msgid "Height of the graphs. Default is %s pixel."
+msgstr "Hoogte van de grafieken. Standaard is %s pixels."
 
 msgid "Help"
 msgstr "Help"
@@ -4052,6 +4148,13 @@ msgstr ""
 "onmiddellijk uitgevoerd nadat een cliënt geautoriseerd is verklaart. Dit kan "
 "gebruikt worden om de cliënt effectief te isoleren van een deel host systeem "
 "bestandsruimte."
+
+msgid ""
+"If enabled the network throughput is displayed in Bytes/sec rather than "
+"Bits/sec."
+msgstr ""
+"Indien ingeschakeld wordt de doorvoersnelheid van het netwerk in "
+"Bytes/seconde in plaats van Bits/seconde weergegeven."
 
 msgid ""
 "If the server is behind a proxy set these parameters to give local services "
@@ -4557,6 +4660,9 @@ msgstr ""
 "ingesteld op een op test fout of 11 als de condensator is getest in een "
 "buitensporige temperatuur conditie, anders 100."
 
+msgid "Latency"
+msgstr "Latentie"
+
 #, php-format
 msgid "Latest Beta Build: %s"
 msgstr "Laatste Beta Versie: %s"
@@ -4662,6 +4768,9 @@ msgstr "Lijst of importeer pools"
 msgid "Load"
 msgstr "Belasting"
 
+msgid "Load Averages"
+msgstr "Gemiddelde Belasting"
+
 msgid "Load averages"
 msgstr "Systeemprocessen belasting"
 
@@ -4760,6 +4869,17 @@ msgstr "Log volgorde"
 msgid "Log packets that are handled by this rule to syslog."
 msgstr ""
 "Log pakketten die worden behandeld door deze regel door naar de syslog."
+
+msgid "Logarithmic scaling"
+msgstr "Logaritmische schaalverdeling"
+
+#, php-format
+msgid ""
+"Logarithmic y-axis scaling for %s graphs (can not be used together with "
+"positive/negative y-axis range)."
+msgstr ""
+"Logaritmische y-as schaal voor %s grafieken (kan niet gebruikt worden in "
+"combinatie met een positieve/negatieve y-as bereik)."
 
 msgid "Logical Block Length"
 msgstr "Logische Blok Lengte"
@@ -5028,8 +5148,14 @@ msgstr "Geheugen"
 msgid "Member Interface"
 msgstr "Gebruikers Netwerk"
 
+msgid "Memory"
+msgstr "Geheugen"
+
 msgid "Memory (MiB)"
 msgstr "Geheugen (MiB)"
+
+msgid "Memory Usage"
+msgstr "Geheugengebruik"
 
 msgid "Memory usage"
 msgstr "Geheugen gebruik"
@@ -5272,12 +5398,21 @@ msgstr "Netwerkadapter"
 msgid "Network File System"
 msgstr "Netwerk Bestandssysteem"
 
+msgid "Network Latency"
+msgstr "Netwerkvertraging"
+
+msgid "Network Traffic"
+msgstr "Netwerkverkeer"
+
 msgid ""
 "Network authorised to access to the iSCSI target. It takes IP or CIDR "
 "addresses or 'ALL' for any IPs."
 msgstr ""
 "Geautoriseerde netwerk met toegang tot de iSCSI doel. Het gebruikt een IP of "
 "CIDR adres of 'ALLE' voor elke IP."
+
+msgid "Network latency"
+msgstr "Netwerk vertraging"
 
 msgid "Network mask"
 msgstr "Netwerkmasker"
@@ -5287,6 +5422,9 @@ msgstr "Netwerkpoort"
 
 msgid "Network that is authorised to access the NFS share."
 msgstr "Netwerk adres dat is gemachtigd voor toegang tot de gedeelde NFS."
+
+msgid "Network traffic"
+msgstr "Netwerkverkeer"
 
 msgid "Networks"
 msgstr "Netwerken"
@@ -5921,6 +6059,10 @@ msgstr "Voeg eerst een nieuwe %s toe."
 msgid "Please add new pools first."
 msgstr "Voeg eerst een nieuwe pools toe."
 
+#, php-format
+msgid "Please check the %s documentation%s."
+msgstr "Bekijkt u de %s documentatie%s."
+
 msgid "Please check the documentation"
 msgstr "Bekijk de documentatie"
 
@@ -6237,6 +6379,24 @@ msgstr "RUWE WAARDE"
 msgid "RAW info"
 msgstr "Ruwe info"
 
+msgid "RRDGraphs"
+msgstr "RRDGrafiek"
+
+#, php-format
+msgid ""
+"RRDGraphs needs at least read & execute permissions at the mount point for "
+"directory %s! Set the Read and Execute bits for Others (Access Restrictions "
+"| Mode) for the mount point %s (in <a href='disks_mount.php'>Disks | Mount "
+"Point | Management</a> or <a href='disks_zfs_dataset.php'>Disks | ZFS | "
+"Datasets</a>) and hit Save in order to take them effect."
+msgstr ""
+"RRDGrafiek heeft minstens lees en uitvoer rechten nodig op koppelpunt %s! "
+"Zet de bits voor lezen en uitvoeren rechten op anderen (Toegang Beperkingen "
+"| Modus) voor koppelpunt %s (in <a href='disks_mount.php'>Schijven | "
+"Koppelpunten | Management</a> or <a href='disks_zfs_dataset.php'>Schijven | "
+"ZFS | Datasets | Dataset</a>) en druk op Opslaan om ze van kracht te laten "
+"zijn."
+
 msgid "RSYNC"
 msgstr "RSYNC"
 
@@ -6340,6 +6500,12 @@ msgstr "Prullenbak"
 
 msgid "Refresh"
 msgstr "Verversen"
+
+msgid "Refresh time"
+msgstr "Verversingstijd"
+
+msgid "Refresh time for graph pages."
+msgstr "Verversingstijd voor de grafiek pagina's."
 
 msgid "Reject"
 msgstr "Afwijzen"
@@ -6463,6 +6629,9 @@ msgstr "Opnieuw scannen interval"
 
 msgid "Reservation"
 msgstr "Reservering"
+
+msgid "Reset Graphs"
+msgstr "Grafieken Resetten"
 
 msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr ""
@@ -6860,6 +7029,13 @@ msgstr "Selecteer lees balans algoritme."
 msgid "Select the FreeBSD package to be installed."
 msgstr "Selecteer het FreeBSD pakket om te installeren."
 
+msgid ""
+"Select the interface (only selectable if your server has more than one) to "
+"use for the source IP address in outgoing packets."
+msgstr ""
+"Selecteer de interface (alleen selecteerbaar indien de server er meer dan "
+"één heeft) te gebruiken voor de bron IP-adres in uitgaande pakketten."
+
 msgid "Select the language of the WebGUI."
 msgstr "Selecteer de taal van de WebGUI."
 
@@ -6891,6 +7067,12 @@ msgstr "Geselecteerde schijf of label bestaat niet."
 
 msgid "Selected file isn't an valid ISO file."
 msgstr "Het geselecteerd bestand is geen geldig ISO bestand."
+
+msgid "Selected graph:"
+msgstr "Geselecteerde grafiek:"
+
+msgid "Selected interface:"
+msgstr "Geselecteerd netwerk:"
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "Zelf-Controle, Analyseren & Rapportage Techniek"
@@ -7073,6 +7255,14 @@ msgstr "UPS Informatie Weergeven"
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr ""
 "Logboek in omgekeerde volgorde weergeven (nieuwste logregels bovenaan)."
+
+#, php-format
+msgid ""
+"Show positive/negative values for %s graphs (can not be used together with "
+"logarithmic scaling)."
+msgstr ""
+"Laat positieve/negatieve waarden voor %s grafieken (kan niet gebruikt worden "
+"samen met logaritmische schaal)."
 
 msgid "Shutdown"
 msgstr "Uitschakelen"
@@ -7310,6 +7500,38 @@ msgstr "Statische Routes Instellen"
 
 msgid "Static routes"
 msgstr "Statische routes"
+
+msgid "Statistics for CPU frequency."
+msgstr "Statistieken voor de CPU frequentie."
+
+msgid "Statistics for CPU temperature."
+msgstr "Statistieken voor de CPU temperatuur."
+
+msgid ""
+"Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
+"voltage and the UPS status (online, on battery, charging and offline)."
+msgstr ""
+"Statistieken voor de UPS batterij capaciteit, spanning, belasting, de "
+"resterende looptijd, ingangsspanning en de UPS staat (online, op de "
+"batterij, opladen en offline)."
+
+msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
+msgstr "Statistieken voor ZFS ARC (total, MRU, MFU, anon, header, other)."
+
+msgid "Statistics for average system load for 1, 5 and 15 minute periods."
+msgstr ""
+"Statistieken voor de gemiddelde systeembelasting van 1, 5 en 15 minuten "
+"perioden."
+
+msgid "Statistics for disk (mount point) usage."
+msgstr "Statistieken voor schijven (koppelpunt) gebruik."
+
+msgid "Statistics for incoming/outgoing bits/second for network interfaces."
+msgstr ""
+"Statistieken voor inkomende/uitgaande bits/seconde voor netwerkverbindingen."
+
+msgid "Statistics for network latency."
+msgstr "Statistieken voor netwerk vertragingstijd."
 
 msgid "Status"
 msgstr "Status"
@@ -7980,6 +8202,20 @@ msgstr ""
 "gespecificeerd worden. Het standaard formaat, %s wordt gebruikt voor ZFS "
 "automatische snapshots."
 
+#, php-format
+msgid ""
+"The data directory holds the statistical data for the graphs. This should be "
+"set to a %s to prevent a disk spinning all the time."
+msgstr ""
+"De data directory bevat de statistische gegevens voor de grafieken. Dit moet "
+"worden ingesteld op een %s om te voorkomen dat een schijf de hele tijd "
+"blijft draaien."
+
+msgid "The data directory must be set to a directory <b>below</b> /mnt."
+msgstr ""
+"De data directory moet worden ingesteld op een directory <b>lager dan</b> "
+"/mnt."
+
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr "De standaard SMTP mailserver poort, bijv. 25 of 587."
 
@@ -8547,6 +8783,9 @@ msgid ""
 msgstr ""
 "Deze parameters zullen worden toegevoegd aan de module configuratie in "
 "rsyncd.conf."
+
+msgid "These parameters will be added to the ping command."
+msgstr "Deze parameters worden aan het commando ping toegevoegd."
 
 msgid ""
 "This Bridge cannot be deleted because it is still being used as an interface."
@@ -9329,6 +9568,16 @@ msgstr "UPS firmware"
 msgid "UPS goes on battery"
 msgstr "UPS gaat over op batterij"
 
+msgid "UPS identifier and IP address"
+msgstr "UPS id en IP-adres"
+
+msgid ""
+"UPS identifier and host IP address of the machine where the UPS is connected "
+"to (this can be also a remote host)."
+msgstr ""
+"UPS ID en host IP-adres van de computer waarop de UPS is aangesloten (dit "
+"kan ook een externe host te zijn)."
+
 msgid "UPS model"
 msgstr "UPS model"
 
@@ -9453,6 +9702,9 @@ msgstr "Webserver upload folder. Standaard %s."
 
 msgid "Upper"
 msgstr "Hoog"
+
+msgid "Uptime"
+msgstr "Bedrijfstijd"
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
@@ -9698,6 +9950,9 @@ msgstr "Virtuele schijven"
 msgid "VirtualBox"
 msgstr "VirtualBox"
 
+msgid "Virtualization"
+msgstr "Virtualisatie"
+
 msgid "Volume"
 msgstr "Volume"
 
@@ -9905,6 +10160,9 @@ msgstr "Xen"
 msgid "Xen Virtual Machine"
 msgstr "Xen Virtuele Machine"
 
+msgid "Y-axis range"
+msgstr "Y-as bereik"
+
 msgid "Yes"
 msgstr "Ja"
 
@@ -10017,6 +10275,9 @@ msgstr "ZFS"
 
 msgid "ZFS ACL"
 msgstr "ZFS ACL"
+
+msgid "ZFS ARC"
+msgstr "ZFS ARC"
 
 msgid "ZFS Dataset Information & Status"
 msgstr "ZFS Dataset Informatie & Status"
@@ -10150,6 +10411,13 @@ msgstr "aankoppelen"
 msgid "mount point"
 msgstr "Koppelpunt"
 
+msgid "must be defined!"
+msgstr "moet worden gedefinieerd!"
+
+#, php-format
+msgid "must be in the format: %s."
+msgstr "moet zijn in het formaat: %s."
+
 msgid "n/a"
 msgstr "n.v.t."
 
@@ -10180,6 +10448,9 @@ msgstr "doel scannen is mislukt."
 msgid "second(s)"
 msgstr "seconde(n)"
 
+msgid "seconds"
+msgstr "seconden"
+
 msgid "smallest settable high voltage transfer point"
 msgstr "kleinste instelbare hoogspanning overschakelpunt"
 
@@ -10209,13 +10480,3 @@ msgstr "gebruiker"
 
 msgid "version:"
 msgstr "versie:"
-
-#~ msgid "Processes Information"
-#~ msgstr "Systeemprocessen"
-
-#, php-format
-#~ msgid "The MIB '%s' already exists."
-#~ msgstr "De MIB '%s' bestaat reeds."
-
-#~ msgid "The server is halting now. This may take one minute."
-#~ msgstr "De server wordt nu gestopt. Dit kan ongeveer een minuut duren."

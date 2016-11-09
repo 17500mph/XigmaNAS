@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-07 11:16+0000\n"
+"POT-Creation-Date: 2016-11-08 18:51+0000\n"
 "PO-Revision-Date: 2016-11-06 06:55+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-07 11:09+0000\n"
+"X-Launchpad-Export-Date: 2016-11-09 09:01+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -111,6 +111,13 @@ msgstr "%sB elérhető a(z) %sB-ból"
 #, php-format
 msgid "%sB used of %sB"
 msgstr "%sB foglalt a(z) %sB-ból"
+
+#, php-format
+msgid ""
+"'%s' deletes all the data for selected statistics. If only a certain "
+"statistic needs to be reset, clear all other check boxes before performing "
+"'%s'."
+msgstr ""
 
 msgid "(Change if needed)"
 msgstr "(Szükség esetén módosítsd)"
@@ -672,6 +679,9 @@ msgstr "Riasztási szint"
 msgid "All"
 msgstr "Minden"
 
+msgid "All data from the following statistics have been deleted:"
+msgstr ""
+
 msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
 "an empty UFS directory is recommended."
@@ -980,6 +990,12 @@ msgstr "Automatikus méret"
 msgid "AutoScale"
 msgstr "Automatikus méretezés"
 
+msgid "Autoscale"
+msgstr ""
+
+msgid "Autoscale for graphs."
+msgstr ""
+
 msgid "Autoselect"
 msgstr "Automatikus választás"
 
@@ -994,6 +1010,9 @@ msgstr "Elérhető"
 
 msgid "Available"
 msgstr "Elérhető"
+
+msgid "Available graphs"
+msgstr ""
 
 msgid ""
 "Average performance of seek operations of the magnetic heads. If this "
@@ -1185,6 +1204,9 @@ msgstr "Bulgár"
 msgid "By default, only already existing files can be uploaded."
 msgstr "Alapértelmezetten csak már létező fájlok tölthetőek fel."
 
+msgid "Bytes/sec"
+msgstr ""
+
 msgid "CACHE"
 msgstr "GYORSÍTÓTÁRAZÁS"
 
@@ -1257,8 +1279,17 @@ msgstr "CP949 (koreai)"
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Traditional Chinese Big5)"
 
+msgid "CPU Frequency"
+msgstr ""
+
 msgid "CPU Load"
 msgstr "Processzorterhelés"
+
+msgid "CPU Temperature"
+msgstr ""
+
+msgid "CPU Usage"
+msgstr ""
 
 msgid "CPU frequency"
 msgstr "CPU (processzor) frekvencia"
@@ -1931,6 +1962,9 @@ msgstr "Dán"
 msgid "Data digest"
 msgstr "Adat kivonat"
 
+msgid "Data directory"
+msgstr ""
+
 msgid "Data integrity"
 msgstr "Adatsértetlenség"
 
@@ -2010,6 +2044,10 @@ msgstr ""
 
 msgid "Default Device Settings"
 msgstr "Alapértelmezett eszközbeállítások"
+
+#, php-format
+msgid "Default is %s %s."
+msgstr ""
 
 #, php-format
 msgid "Default is %s."
@@ -2208,6 +2246,9 @@ msgstr "Cél e-mailcím."
 msgid "Destination email address. Separate email addresses by semi-colon."
 msgstr "Cél e-mail cím.  Több címet pontosvesszővel válassz el."
 
+msgid "Destination host name or IP address."
+msgstr ""
+
 msgid "Destination host name or IP number."
 msgstr "Cél gépnév vagy IP cím."
 
@@ -2242,6 +2283,9 @@ msgstr "Adateszköz kicsatolása a tükörből"
 
 msgid "Detach a log device from a mirrored log"
 msgstr "Naplóeszköz kicsatolása a tükrözött naplóból"
+
+msgid "Detailed"
+msgstr ""
 
 msgid "Detected"
 msgstr "Észlelt"
@@ -2342,6 +2386,10 @@ msgstr "Irány"
 msgid "Directory"
 msgstr "Könyvtár"
 
+#, php-format
+msgid "Directory %s doesn't exist!"
+msgstr ""
+
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr "Befejezetlen fájlok könyvtára. Az üres mező tiltást jelent."
 
@@ -2412,8 +2460,14 @@ msgstr "Lemez"
 msgid "Disk Selection"
 msgstr "Lemez kiválasztása"
 
+msgid "Disk Usage"
+msgstr ""
+
 msgid "Disk space usage"
 msgstr "Lemezhasználat"
+
+msgid "Disk usage"
+msgstr ""
 
 msgid "Disks"
 msgstr "Lemezek"
@@ -2432,6 +2486,24 @@ msgstr "Kijelző"
 
 msgid "Display ZFS command history"
 msgstr "ZFS parancstörténelem megjelenítése"
+
+msgid ""
+"Displays a percentage of time spent in each of the processor states (user, "
+"nice, system, interrupt, idle)."
+msgstr ""
+
+msgid ""
+"Displays information about memory allocation (active, inact, wired, cache, "
+"buf, free, swap used, swap free)."
+msgstr ""
+
+msgid "Displays the length of time the system has been up."
+msgstr ""
+
+msgid ""
+"Displays the number of processes in each state (total, running, sleeping, "
+"waiting, starting, stopped, zombie)."
+msgstr ""
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -2465,6 +2537,9 @@ msgid ""
 msgstr ""
 "Biztos törölsz és importálsz?\\nA meglévő beállítások törlődnek és "
 "felülíródnak."
+
+msgid "Do you really want to delete all data from the selected statistics?"
+msgstr ""
 
 msgid "Do you really want to delete all rules?"
 msgstr "Biztos, hogy minden szabályt töröl?"
@@ -3667,6 +3742,13 @@ msgstr "Hozzáférés engedélyezése a felhasználói portálhoz."
 msgid "Graph shows last 120 seconds"
 msgstr "Grafikon az utolsó 120 mp-et mutatja"
 
+#, php-format
+msgid "Graph updates every %d seconds"
+msgstr ""
+
+msgid "Graphs height"
+msgstr ""
+
 msgid "Greek"
 msgstr "Görög"
 
@@ -3780,6 +3862,10 @@ msgstr ""
 "A fej lemezfelülete feletti magassága. A túl alacsony repülési magasság "
 "növeli a ütközés/karcolás, a túl magas pedig az írási/olvasási hiba "
 "valószínűségét."
+
+#, php-format
+msgid "Height of the graphs. Default is %s pixel."
+msgstr ""
 
 msgid "Help"
 msgstr "Súgó"
@@ -3977,6 +4063,11 @@ msgstr ""
 "Ha az alapértelmezett root engedélyezve van, a chroot művelet azonnal lefut "
 "az ügyfél hitelesítése után. Ezt fel lehet használni arra, hogy hatékonyan "
 "elkülönítsük a klienst a hostrendszer fájlterületének részétől."
+
+msgid ""
+"If enabled the network throughput is displayed in Bytes/sec rather than "
+"Bits/sec."
+msgstr ""
 
 msgid ""
 "If the server is behind a proxy set these parameters to give local services "
@@ -4473,6 +4564,9 @@ msgstr ""
 "vagy 11 ha a kondenzátort vizsgálták túlzott hőmérséklet esetén, máskülönben "
 "100."
 
+msgid "Latency"
+msgstr ""
+
 #, php-format
 msgid "Latest Beta Build: %s"
 msgstr "Utolsó Béta Rendszerfordítás: %s"
@@ -4581,6 +4675,9 @@ msgstr "Tárolók felsorolása vagy importálása"
 msgid "Load"
 msgstr "Terhelés"
 
+msgid "Load Averages"
+msgstr ""
+
 msgid "Load averages"
 msgstr "Betöltési átlagok"
 
@@ -4669,6 +4766,15 @@ msgstr "Naplózás sorrendje"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Naplózd készítése a syslog-ba."
+
+msgid "Logarithmic scaling"
+msgstr ""
+
+#, php-format
+msgid ""
+"Logarithmic y-axis scaling for %s graphs (can not be used together with "
+"positive/negative y-axis range)."
+msgstr ""
 
 msgid "Logical Block Length"
 msgstr "Logikai Blokk Hossza"
@@ -4932,8 +5038,14 @@ msgstr "Memória"
 msgid "Member Interface"
 msgstr "Interfész tag"
 
+msgid "Memory"
+msgstr ""
+
 msgid "Memory (MiB)"
 msgstr "Memória (MiB)"
+
+msgid "Memory Usage"
+msgstr ""
 
 msgid "Memory usage"
 msgstr "Memóriahasználat"
@@ -5175,12 +5287,21 @@ msgstr "Hálózati adapter"
 msgid "Network File System"
 msgstr "Hálózati fájlrendszer"
 
+msgid "Network Latency"
+msgstr ""
+
+msgid "Network Traffic"
+msgstr ""
+
 msgid ""
 "Network authorised to access to the iSCSI target. It takes IP or CIDR "
 "addresses or 'ALL' for any IPs."
 msgstr ""
 "Hálózati hitelesítő az iSCSI-cél eléréséhez. Lehet IP vagy CIDR cím, vagy "
 "'ÖSSZES' esetén bármely IP cím."
+
+msgid "Network latency"
+msgstr ""
 
 msgid "Network mask"
 msgstr "Hálózati maszk"
@@ -5190,6 +5311,9 @@ msgstr "Hálózati port"
 
 msgid "Network that is authorised to access the NFS share."
 msgstr "Hálózat, amely jogosult elérni a NFS-megosztás."
+
+msgid "Network traffic"
+msgstr ""
 
 msgid "Networks"
 msgstr "Hálózatok"
@@ -5822,6 +5946,10 @@ msgstr "Először egy új %s-t hozz létre."
 msgid "Please add new pools first."
 msgstr "Először egy új tárolót hozz létre."
 
+#, php-format
+msgid "Please check the %s documentation%s."
+msgstr ""
+
 msgid "Please check the documentation"
 msgstr "Olvasd el a dokumentációt."
 
@@ -6140,6 +6268,18 @@ msgstr "NYERS ÉRTÉK"
 msgid "RAW info"
 msgstr "RAW info"
 
+msgid "RRDGraphs"
+msgstr ""
+
+#, php-format
+msgid ""
+"RRDGraphs needs at least read & execute permissions at the mount point for "
+"directory %s! Set the Read and Execute bits for Others (Access Restrictions "
+"| Mode) for the mount point %s (in <a href='disks_mount.php'>Disks | Mount "
+"Point | Management</a> or <a href='disks_zfs_dataset.php'>Disks | ZFS | "
+"Datasets</a>) and hit Save in order to take them effect."
+msgstr ""
+
 msgid "RSYNC"
 msgstr "RSYNC"
 
@@ -6243,6 +6383,12 @@ msgstr "Lomtár"
 
 msgid "Refresh"
 msgstr "Frissítés"
+
+msgid "Refresh time"
+msgstr ""
+
+msgid "Refresh time for graph pages."
+msgstr ""
 
 msgid "Reject"
 msgstr "Elvetés"
@@ -6366,6 +6512,9 @@ msgstr "Újrakeresési időköz"
 
 msgid "Reservation"
 msgstr "Foglalás"
+
+msgid "Reset Graphs"
+msgstr ""
 
 msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr ""
@@ -6764,6 +6913,11 @@ msgstr "Olvasó egyensúly algoritmus kiválasztása"
 msgid "Select the FreeBSD package to be installed."
 msgstr "Válaszd ki a telepítendő FreeBSD csomagot."
 
+msgid ""
+"Select the interface (only selectable if your server has more than one) to "
+"use for the source IP address in outgoing packets."
+msgstr ""
+
 msgid "Select the language of the WebGUI."
 msgstr "Válaszd ki a WebGUI nyelvét."
 
@@ -6795,6 +6949,12 @@ msgstr "A kiválasztott eszköz vagy címke nem létezik."
 
 msgid "Selected file isn't an valid ISO file."
 msgstr "A kiválasztott fájl nem érvényes ISO fájl."
+
+msgid "Selected graph:"
+msgstr ""
+
+msgid "Selected interface:"
+msgstr ""
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "Önellenőrző, Analizáló és Nyilvántartó Technológia"
@@ -6974,6 +7134,12 @@ msgstr "Szünetmentes információk megjelenítése"
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr ""
 "Naplóbejegyzések megjelenítése fordított sorrendben (újabb kerül felülre)."
+
+#, php-format
+msgid ""
+"Show positive/negative values for %s graphs (can not be used together with "
+"logarithmic scaling)."
+msgstr ""
 
 msgid "Shutdown"
 msgstr "Leállítás"
@@ -7210,6 +7376,32 @@ msgstr "Statikus útvonal beállítások"
 
 msgid "Static routes"
 msgstr "Statikus útvonalak"
+
+msgid "Statistics for CPU frequency."
+msgstr ""
+
+msgid "Statistics for CPU temperature."
+msgstr ""
+
+msgid ""
+"Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
+"voltage and the UPS status (online, on battery, charging and offline)."
+msgstr ""
+
+msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
+msgstr ""
+
+msgid "Statistics for average system load for 1, 5 and 15 minute periods."
+msgstr ""
+
+msgid "Statistics for disk (mount point) usage."
+msgstr ""
+
+msgid "Statistics for incoming/outgoing bits/second for network interfaces."
+msgstr ""
+
+msgid "Statistics for network latency."
+msgstr ""
 
 msgid "Status"
 msgstr "Állapot"
@@ -7865,6 +8057,15 @@ msgstr ""
 "Az árnyékmásolat szolgáltatás pillanatképének egyéni formátumot lehet adni. "
 "Az alapértelmezett formátum a ZFS automatikus pillanatképhez az %s."
 
+#, php-format
+msgid ""
+"The data directory holds the statistical data for the graphs. This should be "
+"set to a %s to prevent a disk spinning all the time."
+msgstr ""
+
+msgid "The data directory must be set to a directory <b>below</b> /mnt."
+msgstr ""
+
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr ""
 "Az alapértelmezett SMTP levelezőkiszolgáló port, például 25 vagy 587."
@@ -8417,6 +8618,9 @@ msgid ""
 "These parameters will be added to the module configuration in rsyncd.conf."
 msgstr ""
 "Ezek a paraméterek hozzáadódnak a modulbeállításokhoz az rsyncd.conf fájlban."
+
+msgid "These parameters will be added to the ping command."
+msgstr ""
 
 msgid ""
 "This Bridge cannot be deleted because it is still being used as an interface."
@@ -9171,6 +9375,14 @@ msgstr "Szünetmentes firmware"
 msgid "UPS goes on battery"
 msgstr "Szünetmentes táp akkumulátorról megy"
 
+msgid "UPS identifier and IP address"
+msgstr ""
+
+msgid ""
+"UPS identifier and host IP address of the machine where the UPS is connected "
+"to (this can be also a remote host)."
+msgstr ""
+
 msgid "UPS model"
 msgstr "Szünetmentes modell"
 
@@ -9295,6 +9507,9 @@ msgstr "Webszerver feltöltési könyvtára. Alapértelmezetten: %s"
 
 msgid "Upper"
 msgstr "Nagybetűs"
+
+msgid "Uptime"
+msgstr ""
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
@@ -9534,6 +9749,9 @@ msgstr "Virtuális eszközök"
 msgid "VirtualBox"
 msgstr "VirtualBox"
 
+msgid "Virtualization"
+msgstr ""
+
 msgid "Volume"
 msgstr "Kötet"
 
@@ -9739,6 +9957,9 @@ msgstr "Xen"
 msgid "Xen Virtual Machine"
 msgstr "Xen Virtuális Gép"
 
+msgid "Y-axis range"
+msgstr ""
+
 msgid "Yes"
 msgstr "Igen"
 
@@ -9843,6 +10064,9 @@ msgstr "ZFS"
 
 msgid "ZFS ACL"
 msgstr "ZFS ACL"
+
+msgid "ZFS ARC"
+msgstr ""
 
 msgid "ZFS Dataset Information & Status"
 msgstr "ZFS Adattár információ & állapot"
@@ -9974,6 +10198,13 @@ msgstr "csatolás"
 msgid "mount point"
 msgstr "csatolási pont"
 
+msgid "must be defined!"
+msgstr ""
+
+#, php-format
+msgid "must be in the format: %s."
+msgstr ""
+
 msgid "n/a"
 msgstr "nem elérhető"
 
@@ -10004,6 +10235,9 @@ msgstr "cél keresés sikertelen."
 msgid "second(s)"
 msgstr "másodperc"
 
+msgid "seconds"
+msgstr ""
+
 msgid "smallest settable high voltage transfer point"
 msgstr "legkisebb beállítható magas felszültségű átviteli pont"
 
@@ -10033,13 +10267,3 @@ msgstr "felhasználó"
 
 msgid "version:"
 msgstr "verzió:"
-
-#~ msgid "Processes Information"
-#~ msgstr "Folyamatinformációk"
-
-#, php-format
-#~ msgid "The MIB '%s' already exists."
-#~ msgstr "A '%s' MIB már létezik"
-
-#~ msgid "The server is halting now. This may take one minute."
-#~ msgstr "A szerver hamarosan leáll. Ez egy ideig eltarthat."

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-07 11:16+0000\n"
+"POT-Creation-Date: 2016-11-08 18:51+0000\n"
 "PO-Revision-Date: 2016-10-18 21:36+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-07 11:09+0000\n"
+"X-Launchpad-Export-Date: 2016-11-09 09:01+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -108,6 +108,13 @@ msgstr "dostupných %sB z %sB"
 #, php-format
 msgid "%sB used of %sB"
 msgstr "použito %sB z %sB"
+
+#, php-format
+msgid ""
+"'%s' deletes all the data for selected statistics. If only a certain "
+"statistic needs to be reset, clear all other check boxes before performing "
+"'%s'."
+msgstr ""
 
 msgid "(Change if needed)"
 msgstr "(v případě potřeby změňte)"
@@ -681,6 +688,9 @@ msgstr "Výstražná úroveň"
 msgid "All"
 msgstr "Vše"
 
+msgid "All data from the following statistics have been deleted:"
+msgstr ""
+
 msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
 "an empty UFS directory is recommended."
@@ -992,6 +1002,12 @@ msgstr "Velikost automaticky"
 msgid "AutoScale"
 msgstr "Měřítko automaticky"
 
+msgid "Autoscale"
+msgstr ""
+
+msgid "Autoscale for graphs."
+msgstr ""
+
 msgid "Autoselect"
 msgstr "Automatický výběr"
 
@@ -1006,6 +1022,9 @@ msgstr "Dostup."
 
 msgid "Available"
 msgstr "K dispozici"
+
+msgid "Available graphs"
+msgstr ""
 
 msgid ""
 "Average performance of seek operations of the magnetic heads. If this "
@@ -1202,6 +1221,9 @@ msgstr ""
 "Ve výchozím nastavení je umožněno nahrávat pouze soubory, které jsou nazvané "
 "stejně, jako ty už přítomné."
 
+msgid "Bytes/sec"
+msgstr ""
+
 msgid "CACHE"
 msgstr "MEZIPAMĚŤ"
 
@@ -1274,8 +1296,17 @@ msgstr "CP949 (korejština)"
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (tradiční čínština Big5)"
 
+msgid "CPU Frequency"
+msgstr ""
+
 msgid "CPU Load"
 msgstr "Vytížení procesoru"
+
+msgid "CPU Temperature"
+msgstr ""
+
+msgid "CPU Usage"
+msgstr ""
 
 msgid "CPU frequency"
 msgstr "Frekvence procesoru"
@@ -1977,6 +2008,9 @@ msgstr "dánština"
 msgid "Data digest"
 msgstr "Otisk dat"
 
+msgid "Data directory"
+msgstr ""
+
 msgid "Data integrity"
 msgstr "Celistvost dat"
 
@@ -2050,6 +2084,10 @@ msgstr ""
 
 msgid "Default Device Settings"
 msgstr "Výchozí nastavení pro zařízení"
+
+#, php-format
+msgid "Default is %s %s."
+msgstr ""
 
 #, php-format
 msgid "Default is %s."
@@ -2248,6 +2286,9 @@ msgstr ""
 "Cílová e-mailová adresa. V případě vícero položek oddělujte znakem středník "
 "(;)"
 
+msgid "Destination host name or IP address."
+msgstr ""
+
 msgid "Destination host name or IP number."
 msgstr "Cílový stroj (název nebo IP adresa)."
 
@@ -2280,6 +2321,9 @@ msgid "Detach a data device from a mirror"
 msgstr "Odebrat zařízení ze zrcadlení"
 
 msgid "Detach a log device from a mirrored log"
+msgstr ""
+
+msgid "Detailed"
 msgstr ""
 
 msgid "Detected"
@@ -2380,6 +2424,10 @@ msgstr "Směr"
 msgid "Directory"
 msgstr "Složka"
 
+#, php-format
+msgid "Directory %s doesn't exist!"
+msgstr ""
+
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr "Složka pro neúplné soubory. Nevyplněno znamená nepoužívat."
 
@@ -2451,8 +2499,14 @@ msgstr "Disk"
 msgid "Disk Selection"
 msgstr "Výběr disku"
 
+msgid "Disk Usage"
+msgstr ""
+
 msgid "Disk space usage"
 msgstr "Obsazený prostor"
+
+msgid "Disk usage"
+msgstr ""
 
 msgid "Disks"
 msgstr "Disky"
@@ -2471,6 +2525,24 @@ msgstr "Zobrazit"
 
 msgid "Display ZFS command history"
 msgstr "Zobrazit historii ZFS příkazů"
+
+msgid ""
+"Displays a percentage of time spent in each of the processor states (user, "
+"nice, system, interrupt, idle)."
+msgstr ""
+
+msgid ""
+"Displays information about memory allocation (active, inact, wired, cache, "
+"buf, free, swap used, swap free)."
+msgstr ""
+
+msgid "Displays the length of time the system has been up."
+msgstr ""
+
+msgid ""
+"Displays the number of processes in each state (total, running, sleeping, "
+"waiting, starting, stopped, zombie)."
+msgstr ""
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -2506,6 +2578,9 @@ msgid ""
 msgstr ""
 "Opravdu chcete vyčistit a importovat?\\nExistující nastavení budou smazána a "
 "přepsána."
+
+msgid "Do you really want to delete all data from the selected statistics?"
+msgstr ""
 
 msgid "Do you really want to delete all rules?"
 msgstr "Opravdu chcete smazat všechna pravidla?"
@@ -3711,6 +3786,13 @@ msgstr "Umožnit přístup na portál uživatele."
 msgid "Graph shows last 120 seconds"
 msgstr "Graf zobrazuje předchozích 120 sekund"
 
+#, php-format
+msgid "Graph updates every %d seconds"
+msgstr ""
+
+msgid "Graphs height"
+msgstr ""
+
 msgid "Greek"
 msgstr "řečtina"
 
@@ -3823,6 +3905,10 @@ msgstr ""
 "Výška hlaviček nad povrchem ploten. Příliš malá vzdálenost hlaviček od "
 "povrchu ploten zvyšuje pravděpodobnost havárie, zatímco příliš velká "
 "vzdálenost zvyšuje pravděpodobnost výskytu chyb čtení/zápisu."
+
+#, php-format
+msgid "Height of the graphs. Default is %s pixel."
+msgstr ""
 
 msgid "Help"
 msgstr "Nápověda"
@@ -4024,6 +4110,11 @@ msgstr ""
 "Pokud je zapnuta výchozí kořenová složka, je okamžitě po ověření klienta "
 "provedeno jeho přepnutí do omezeného prostředí (chroot). Tím je možné "
 "izolovat klienta od části souborového prostoru na stroji."
+
+msgid ""
+"If enabled the network throughput is displayed in Bytes/sec rather than "
+"Bits/sec."
+msgstr ""
 
 msgid ""
 "If the server is behind a proxy set these parameters to give local services "
@@ -4531,6 +4622,9 @@ msgstr ""
 "(jedenáct) pokud zkouška proběhla v příliš vysoké teplotě. Ve všech "
 "ostatních případech 100."
 
+msgid "Latency"
+msgstr ""
+
 #, php-format
 msgid "Latest Beta Build: %s"
 msgstr "Nejnovější testovací sestavení: %s"
@@ -4640,6 +4734,9 @@ msgstr "Vypsat nebo importovat fondy úložišť"
 msgid "Load"
 msgstr "Vytížení"
 
+msgid "Load Averages"
+msgstr ""
+
 msgid "Load averages"
 msgstr "Průměrné vytížení"
 
@@ -4731,6 +4828,15 @@ msgstr "Pořadí záznamů"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Zaznamenávat pakety, odpovídající tomuto pravidlu, do syslog."
+
+msgid "Logarithmic scaling"
+msgstr ""
+
+#, php-format
+msgid ""
+"Logarithmic y-axis scaling for %s graphs (can not be used together with "
+"positive/negative y-axis range)."
+msgstr ""
 
 msgid "Logical Block Length"
 msgstr "Délka logického bloku"
@@ -5006,8 +5112,14 @@ msgstr "Pam."
 msgid "Member Interface"
 msgstr "Účastnící se rozhraní"
 
+msgid "Memory"
+msgstr ""
+
 msgid "Memory (MiB)"
 msgstr "Paměť (MiB)"
+
+msgid "Memory Usage"
+msgstr ""
 
 msgid "Memory usage"
 msgstr "Využití operační paměti"
@@ -5252,6 +5364,12 @@ msgstr "Síťové rozhraní"
 msgid "Network File System"
 msgstr "Síťový souborový systém"
 
+msgid "Network Latency"
+msgstr ""
+
+msgid "Network Traffic"
+msgstr ""
+
 msgid ""
 "Network authorised to access to the iSCSI target. It takes IP or CIDR "
 "addresses or 'ALL' for any IPs."
@@ -5259,6 +5377,9 @@ msgstr ""
 "Síť, ze které bude umožněn přístup k iSCSI cíli. Zadejte IP adresu (i v "
 "zápisu CIDR) nebo klíčové slovo ALL (vše) pro umožnění přístupu z libovolné "
 "sítě."
+
+msgid "Network latency"
+msgstr ""
 
 msgid "Network mask"
 msgstr "Síťová maska"
@@ -5268,6 +5389,9 @@ msgstr "Síťový port"
 
 msgid "Network that is authorised to access the NFS share."
 msgstr "Síť, ze které umožnit přístup k NFS sdílení."
+
+msgid "Network traffic"
+msgstr ""
 
 msgid "Networks"
 msgstr "Sítě"
@@ -5898,6 +6022,10 @@ msgstr "Nejprve přidejte nové %s."
 msgid "Please add new pools first."
 msgstr "Nejprve přidejte nové fondy."
 
+#, php-format
+msgid "Please check the %s documentation%s."
+msgstr ""
+
 msgid "Please check the documentation"
 msgstr "Podívejte se do dokumentace"
 
@@ -6221,6 +6349,18 @@ msgstr "HODNOTA V NEZPRACOVANÉM STAVU"
 msgid "RAW info"
 msgstr "Informace v nezpracovaném stavu"
 
+msgid "RRDGraphs"
+msgstr ""
+
+#, php-format
+msgid ""
+"RRDGraphs needs at least read & execute permissions at the mount point for "
+"directory %s! Set the Read and Execute bits for Others (Access Restrictions "
+"| Mode) for the mount point %s (in <a href='disks_mount.php'>Disks | Mount "
+"Point | Management</a> or <a href='disks_zfs_dataset.php'>Disks | ZFS | "
+"Datasets</a>) and hit Save in order to take them effect."
+msgstr ""
+
 msgid "RSYNC"
 msgstr "RSYNC"
 
@@ -6323,6 +6463,12 @@ msgstr "Koš"
 
 msgid "Refresh"
 msgstr "Načíst znovu"
+
+msgid "Refresh time"
+msgstr ""
+
+msgid "Refresh time for graph pages."
+msgstr ""
 
 msgid "Reject"
 msgstr "Odmítnout"
@@ -6447,6 +6593,9 @@ msgstr "Interval opakování zjišťování"
 
 msgid "Reservation"
 msgstr "Vyhrazení"
+
+msgid "Reset Graphs"
+msgstr ""
 
 msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr "Zvýšený třecí odpor mezi mechanickými částmi během provozu."
@@ -6836,6 +6985,11 @@ msgstr "Vyberte vyvažovací algoritmus pro čtení."
 msgid "Select the FreeBSD package to be installed."
 msgstr "Zvolte FreeBSD balíček, který má být nainstalován."
 
+msgid ""
+"Select the interface (only selectable if your server has more than one) to "
+"use for the source IP address in outgoing packets."
+msgstr ""
+
 msgid "Select the language of the WebGUI."
 msgstr "Vyberte jazyk pro webové rozhraní."
 
@@ -6868,6 +7022,12 @@ msgstr "Vybrané zařízení nebo označení neexistuje."
 
 msgid "Selected file isn't an valid ISO file."
 msgstr "Vybraný soubor není platným ISO souborem."
+
+msgid "Selected graph:"
+msgstr ""
+
+msgid "Selected interface:"
+msgstr ""
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "Technologie pro samo-dohledování, analýzu a hlášení"
@@ -7045,6 +7205,12 @@ msgstr "Zobrazit informace o UPS zdroji"
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr ""
 "Zobrazit položky záznamu událostí v obráceném pořadí (nejnovější navrchu)."
+
+#, php-format
+msgid ""
+"Show positive/negative values for %s graphs (can not be used together with "
+"logarithmic scaling)."
+msgstr ""
 
 msgid "Shutdown"
 msgstr "Vypnout"
@@ -7272,6 +7438,32 @@ msgstr "Nastavení statických tras"
 
 msgid "Static routes"
 msgstr "Statické trasy"
+
+msgid "Statistics for CPU frequency."
+msgstr ""
+
+msgid "Statistics for CPU temperature."
+msgstr ""
+
+msgid ""
+"Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
+"voltage and the UPS status (online, on battery, charging and offline)."
+msgstr ""
+
+msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
+msgstr ""
+
+msgid "Statistics for average system load for 1, 5 and 15 minute periods."
+msgstr ""
+
+msgid "Statistics for disk (mount point) usage."
+msgstr ""
+
+msgid "Statistics for incoming/outgoing bits/second for network interfaces."
+msgstr ""
+
+msgid "Statistics for network latency."
+msgstr ""
 
 msgid "Status"
 msgstr "Stav"
@@ -7942,6 +8134,15 @@ msgstr ""
 "Výchozím formátem je %s, používaný automatickým pořizováním zachyceného "
 "stavu ZFS."
 
+#, php-format
+msgid ""
+"The data directory holds the statistical data for the graphs. This should be "
+"set to a %s to prevent a disk spinning all the time."
+msgstr ""
+
+msgid "The data directory must be set to a directory <b>below</b> /mnt."
+msgstr ""
+
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr "Výchozí port SMTP poštovního serveru, např. 25 nebo 587."
 
@@ -8500,6 +8701,9 @@ msgstr "Tyto parametry budou přidány do globálního nastavení v %s."
 msgid ""
 "These parameters will be added to the module configuration in rsyncd.conf."
 msgstr "Tyto parametry budou přidány k nastavení modulu v rsyncd.conf."
+
+msgid "These parameters will be added to the ping command."
+msgstr ""
 
 msgid ""
 "This Bridge cannot be deleted because it is still being used as an interface."
@@ -9264,6 +9468,14 @@ msgstr "Firmware UPS zdroje"
 msgid "UPS goes on battery"
 msgstr "UPS zdroj je nyní napájen z akumulátorů"
 
+msgid "UPS identifier and IP address"
+msgstr ""
+
+msgid ""
+"UPS identifier and host IP address of the machine where the UPS is connected "
+"to (this can be also a remote host)."
+msgstr ""
+
 msgid "UPS model"
 msgstr "Model UPS zdroje"
 
@@ -9389,6 +9601,9 @@ msgstr "Složka pro nahrávání na webový server. Výchozí je %s."
 
 msgid "Upper"
 msgstr "Horní"
+
+msgid "Uptime"
+msgstr ""
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
@@ -9634,6 +9849,9 @@ msgstr "Virtuální zařízení"
 msgid "VirtualBox"
 msgstr "VirtualBox"
 
+msgid "Virtualization"
+msgstr ""
+
 msgid "Volume"
 msgstr "Svazek"
 
@@ -9839,6 +10057,9 @@ msgstr "Xen"
 msgid "Xen Virtual Machine"
 msgstr "Xen virtuální stroj"
 
+msgid "Y-axis range"
+msgstr ""
+
 msgid "Yes"
 msgstr "Ano"
 
@@ -9944,6 +10165,9 @@ msgstr "ZFS"
 
 msgid "ZFS ACL"
 msgstr "ZFS ACL seznamy"
+
+msgid "ZFS ARC"
+msgstr ""
 
 msgid "ZFS Dataset Information & Status"
 msgstr "ZFS datová sada – informace a stav"
@@ -10080,6 +10304,13 @@ msgstr "připojit (mount)"
 msgid "mount point"
 msgstr "přípojný (mount) bod"
 
+msgid "must be defined!"
+msgstr ""
+
+#, php-format
+msgid "must be in the format: %s."
+msgstr ""
+
 msgid "n/a"
 msgstr "není k dispozici"
 
@@ -10109,6 +10340,9 @@ msgstr "skenování cíle se nezdařilo."
 
 msgid "second(s)"
 msgstr "sekund"
+
+msgid "seconds"
+msgstr ""
 
 msgid "smallest settable high voltage transfer point"
 msgstr ""
@@ -10143,13 +10377,3 @@ msgstr "uživatel"
 
 msgid "version:"
 msgstr "verze:"
-
-#~ msgid "Processes Information"
-#~ msgstr "Informace o procesech"
-
-#, php-format
-#~ msgid "The MIB '%s' already exists."
-#~ msgstr "MIB „%s“ už existuje."
-
-#~ msgid "The server is halting now. This may take one minute."
-#~ msgstr "Systém se vypíná. Může trvat několik minut."

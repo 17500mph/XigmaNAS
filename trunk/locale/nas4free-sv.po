@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-07 11:16+0000\n"
-"PO-Revision-Date: 2016-11-07 18:07+0000\n"
+"POT-Creation-Date: 2016-11-08 18:51+0000\n"
+"PO-Revision-Date: 2016-11-08 18:49+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-07 19:09+0000\n"
+"X-Launchpad-Export-Date: 2016-11-09 09:01+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -108,6 +108,15 @@ msgstr "%sB tillgängligt av %sB"
 #, php-format
 msgid "%sB used of %sB"
 msgstr "%sB använt av %sB"
+
+#, php-format
+msgid ""
+"'%s' deletes all the data for selected statistics. If only a certain "
+"statistic needs to be reset, clear all other check boxes before performing "
+"'%s'."
+msgstr ""
+"'%s' tar bort all data för vald statistik. Om bara en viss statistik behöver "
+"återställas, avmarkera alla andra kryssrutor innan '%s' utförs."
 
 msgid "(Change if needed)"
 msgstr "(Ändra vid behov)"
@@ -664,6 +673,9 @@ msgstr "Varningsnivå"
 msgid "All"
 msgstr "Alla"
 
+msgid "All data from the following statistics have been deleted:"
+msgstr "All data från följande statistik har tagits bort"
+
 msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
 "an empty UFS directory is recommended."
@@ -969,6 +981,12 @@ msgstr "Automatisk storlek"
 msgid "AutoScale"
 msgstr "Auto skala"
 
+msgid "Autoscale"
+msgstr "Autoskala"
+
+msgid "Autoscale for graphs."
+msgstr "Autoskala för grafer."
+
 msgid "Autoselect"
 msgstr "Välj automatiskt"
 
@@ -983,6 +1001,9 @@ msgstr "Ledigt"
 
 msgid "Available"
 msgstr "Tillgänglig"
+
+msgid "Available graphs"
+msgstr "Tillgägliga grafer"
 
 msgid ""
 "Average performance of seek operations of the magnetic heads. If this "
@@ -1171,6 +1192,9 @@ msgstr "Bulgariska"
 msgid "By default, only already existing files can be uploaded."
 msgstr "Som standard kan bara redan existerande filer laddas upp."
 
+msgid "Bytes/sec"
+msgstr "Byte/sekund"
+
 msgid "CACHE"
 msgstr "CACHE"
 
@@ -1243,8 +1267,17 @@ msgstr "CP949 (koreanskt)"
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Traditionell kinesiska Big5)"
 
+msgid "CPU Frequency"
+msgstr "CPU Frekvens"
+
 msgid "CPU Load"
 msgstr "Processorbelastning"
+
+msgid "CPU Temperature"
+msgstr "CPU temperatur"
+
+msgid "CPU Usage"
+msgstr "Processoranvändning"
 
 msgid "CPU frequency"
 msgstr "CPU frekvens"
@@ -1918,6 +1951,9 @@ msgstr "Danska"
 msgid "Data digest"
 msgstr "Datasammandrag"
 
+msgid "Data directory"
+msgstr "Datakatalog"
+
 msgid "Data integrity"
 msgstr "Dataintegritet"
 
@@ -1997,6 +2033,10 @@ msgstr ""
 
 msgid "Default Device Settings"
 msgstr "Standardinställningar"
+
+#, php-format
+msgid "Default is %s %s."
+msgstr "Standard är %s %s."
 
 #, php-format
 msgid "Default is %s."
@@ -2194,6 +2234,9 @@ msgstr "E-postadress till mottagaren av rapporter."
 msgid "Destination email address. Separate email addresses by semi-colon."
 msgstr "Måle-postadresser, separera adresser med semikolon."
 
+msgid "Destination host name or IP address."
+msgstr "Destinationens värdnamn eller IP adress."
+
 msgid "Destination host name or IP number."
 msgstr "Destinationsvärd eller IP-adress"
 
@@ -2229,6 +2272,9 @@ msgstr "Koppla från en dataenhet från en spegling"
 
 msgid "Detach a log device from a mirrored log"
 msgstr "Koppla från en loggenhet från en speglad logg"
+
+msgid "Detailed"
+msgstr "Detaljerad"
 
 msgid "Detected"
 msgstr "Identifierad"
@@ -2328,6 +2374,10 @@ msgstr "Riktning"
 msgid "Directory"
 msgstr "Katalog"
 
+#, php-format
+msgid "Directory %s doesn't exist!"
+msgstr "Katalog %s finns inte!"
+
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr ""
 "Katalog för filer som inte är kompletta. Ett tomt fält innebär inaktivera."
@@ -2399,8 +2449,14 @@ msgstr "Disk"
 msgid "Disk Selection"
 msgstr "Diskval"
 
+msgid "Disk Usage"
+msgstr "Använt diskutrymme"
+
 msgid "Disk space usage"
 msgstr "Diskutrymmesanvändning"
+
+msgid "Disk usage"
+msgstr "Använt diskutrymme"
 
 msgid "Disks"
 msgstr "Diskar"
@@ -2419,6 +2475,30 @@ msgstr "Visa"
 
 msgid "Display ZFS command history"
 msgstr "Visa ZFS kommandohistoria"
+
+msgid ""
+"Displays a percentage of time spent in each of the processor states (user, "
+"nice, system, interrupt, idle)."
+msgstr ""
+"Visa procentuell tid som använts av de olika processorlägena (user, nice, "
+"system, interrupt, idle)."
+
+msgid ""
+"Displays information about memory allocation (active, inact, wired, cache, "
+"buf, free, swap used, swap free)."
+msgstr ""
+"Visa information om minnesanvändning (active, inact, wired, cache, buf, "
+"free, swap used, swap free)."
+
+msgid "Displays the length of time the system has been up."
+msgstr "Visar hur länge servern varit uppe"
+
+msgid ""
+"Displays the number of processes in each state (total, running, sleeping, "
+"waiting, starting, stopped, zombie)."
+msgstr ""
+"Visa antal processer i varje status (total, running, sleeping, waiting, "
+"starting, stopped, zombie)."
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -2452,6 +2532,9 @@ msgid ""
 msgstr ""
 "Vill du verkligen radera och importera?\\n Aktuella inställningar kommer att "
 "raderas."
+
+msgid "Do you really want to delete all data from the selected statistics?"
+msgstr "Vill du verkligen radera all data från vald statistik?"
 
 msgid "Do you really want to delete all rules?"
 msgstr "Vill du verkligen radera alla regler?"
@@ -3644,6 +3727,13 @@ msgstr "Tilldela åtkomst till användarportalen."
 msgid "Graph shows last 120 seconds"
 msgstr "Diagrammet visar senaste 120 sekunder"
 
+#, php-format
+msgid "Graph updates every %d seconds"
+msgstr "Grafen uppdateras var %d sekund"
+
+msgid "Graphs height"
+msgstr "Grafhöjd"
+
 msgid "Greek"
 msgstr "Grekiska"
 
@@ -3755,6 +3845,10 @@ msgid ""
 msgstr ""
 "Höjd för huvuden ovanför diskytan. En för låg flyghöjd ökar risken för en "
 "huvudkrasch medan en för hög ökar risken för läs-/skrivfel."
+
+#, php-format
+msgid "Height of the graphs. Default is %s pixel."
+msgstr "Höjden på grafer. Standard är %s pixlar."
 
 msgid "Help"
 msgstr "Hjälp"
@@ -3949,6 +4043,13 @@ msgstr ""
 "Om 'default root' är aktiverad, kommer en chroot operation utföras "
 "omedelbart efter en klient autentiserar. Detta kan användas för att "
 "effektivt isolera klienten från en del av värdsystemets filarea."
+
+msgid ""
+"If enabled the network throughput is displayed in Bytes/sec rather than "
+"Bits/sec."
+msgstr ""
+"Om aktiverad visas nätverksgenomströmningen i Byte/sekund i stället för "
+"Bit/sekund."
 
 msgid ""
 "If the server is behind a proxy set these parameters to give local services "
@@ -4443,6 +4544,9 @@ msgid ""
 "been tested in an excessive temperature condition, otherwise 100."
 msgstr "Senaste testresultat"
 
+msgid "Latency"
+msgstr "Accesstid"
+
 #, php-format
 msgid "Latest Beta Build: %s"
 msgstr "Senast betaversion: %s"
@@ -4546,6 +4650,9 @@ msgstr "Lista eller importera pooler"
 msgid "Load"
 msgstr "Belastning"
 
+msgid "Load Averages"
+msgstr "Belastningsmedelvärden"
+
 msgid "Load averages"
 msgstr "Genomsnittlig belastning"
 
@@ -4635,6 +4742,17 @@ msgstr "Loggordning"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Logga paket som hanteras av denna regel till syslog."
+
+msgid "Logarithmic scaling"
+msgstr "Logaritmisk skalning"
+
+#, php-format
+msgid ""
+"Logarithmic y-axis scaling for %s graphs (can not be used together with "
+"positive/negative y-axis range)."
+msgstr ""
+"Logaritmisk y-axelskalning för %s graf ( kan inte användas tillsammans med "
+"positiv/negativ y-axelområde)."
 
 msgid "Logical Block Length"
 msgstr "Logisk Blocklängd"
@@ -4897,8 +5015,14 @@ msgstr "Minne"
 msgid "Member Interface"
 msgstr "Medlemsinterface"
 
+msgid "Memory"
+msgstr "Minne"
+
 msgid "Memory (MiB)"
 msgstr "Minne (MiB)"
+
+msgid "Memory Usage"
+msgstr "Minnesanvändning"
 
 msgid "Memory usage"
 msgstr "Minnesanvändning"
@@ -5139,12 +5263,21 @@ msgstr "Nätverksanslutning"
 msgid "Network File System"
 msgstr "Network File System"
 
+msgid "Network Latency"
+msgstr "Nätverksaccestid"
+
+msgid "Network Traffic"
+msgstr "Nätverkstrafik"
+
 msgid ""
 "Network authorised to access to the iSCSI target. It takes IP or CIDR "
 "addresses or 'ALL' for any IPs."
 msgstr ""
 "Nätverk auktoriserat för åtkomst till iSCSI-målet. Tar IP-adresser, tillika "
 "CIDR. Ange 'ALL' för obestämd IP-adress."
+
+msgid "Network latency"
+msgstr "Nätverksaccestid"
 
 msgid "Network mask"
 msgstr "Nätverksmask"
@@ -5154,6 +5287,9 @@ msgstr "Nätverksport"
 
 msgid "Network that is authorised to access the NFS share."
 msgstr "Nätverk som är godkänt att ansluta till NFS-utdelning."
+
+msgid "Network traffic"
+msgstr "Nätverkstrafik"
 
 msgid "Networks"
 msgstr "Nätverk"
@@ -5780,6 +5916,10 @@ msgstr "Vänligen lägg till ny %s först."
 msgid "Please add new pools first."
 msgstr "Vänligen lägg till nya pooler först."
 
+#, php-format
+msgid "Please check the %s documentation%s."
+msgstr "Vänligen läs %s dokumentation%s."
+
 msgid "Please check the documentation"
 msgstr "Kontrollera dokumentationen"
 
@@ -6094,6 +6234,24 @@ msgstr "RÅVÄRDE"
 msgid "RAW info"
 msgstr "RAW information"
 
+msgid "RRDGraphs"
+msgstr "RRDGraphs"
+
+#, php-format
+msgid ""
+"RRDGraphs needs at least read & execute permissions at the mount point for "
+"directory %s! Set the Read and Execute bits for Others (Access Restrictions "
+"| Mode) for the mount point %s (in <a href='disks_mount.php'>Disks | Mount "
+"Point | Management</a> or <a href='disks_zfs_dataset.php'>Disks | ZFS | "
+"Datasets</a>) and hit Save in order to take them effect."
+msgstr ""
+"RRDGraphs behöver minst läs- & körrättigheter vid monteringspunkten för "
+"katalog %s! Sätt Läs- och körbitarna för Andra (Åtkomsträttigheter | Mod) "
+"för monteringspunkten %s (i <a href='disks_mount.php'>Diskar | "
+"Monteringspunkter | Hantering</a> eller <a "
+"href='disks_zfs_dataset.php'>Diskar | ZFS | Dataset</a>) och klicka Spara "
+"för att aktivera dem."
+
 msgid "RSYNC"
 msgstr "RSYNC"
 
@@ -6196,6 +6354,12 @@ msgstr "Papperskorgen"
 
 msgid "Refresh"
 msgstr "Uppdatera"
+
+msgid "Refresh time"
+msgstr "Uppdateringstid"
+
+msgid "Refresh time for graph pages."
+msgstr "Uppdateringstid för grafsidor"
 
 msgid "Reject"
 msgstr "Avböj"
@@ -6317,6 +6481,9 @@ msgstr "Intervall för omskanning"
 
 msgid "Reservation"
 msgstr "Reservation"
+
+msgid "Reset Graphs"
+msgstr "Återställ Grafer"
 
 msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr "Motstånd orsakat av friktion i mekaniska delar vid drift."
@@ -6706,6 +6873,13 @@ msgstr "Välj läsbalanseringsalgoritm"
 msgid "Select the FreeBSD package to be installed."
 msgstr "Välj FreeBSD-paket som ska installeras."
 
+msgid ""
+"Select the interface (only selectable if your server has more than one) to "
+"use for the source IP address in outgoing packets."
+msgstr ""
+"Välj gränssnitt ( endast möjligt om din server har fler än ett) att använda "
+"som käll IP adress i utgående paket."
+
 msgid "Select the language of the WebGUI."
 msgstr "Välj språk för webgränssnittet."
 
@@ -6737,6 +6911,12 @@ msgstr "Vald enhet eller etikett existerar inte."
 
 msgid "Selected file isn't an valid ISO file."
 msgstr "Den valda filen är inte en giltig ISO fil."
+
+msgid "Selected graph:"
+msgstr "Vald graf"
+
+msgid "Selected interface:"
+msgstr "Valt gränssnitt"
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "Egenövervakning, analys & raporterings teknik (SMART)"
@@ -6912,6 +7092,14 @@ msgstr "Visa UPS information"
 
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr "Visa loggposter i omvänd ordning (senaste högst upp)."
+
+#, php-format
+msgid ""
+"Show positive/negative values for %s graphs (can not be used together with "
+"logarithmic scaling)."
+msgstr ""
+"Visa positiva/negativa värden för %s graf (kan inte användas tillsammans med "
+"logritmisk skalning)."
 
 msgid "Shutdown"
 msgstr "Stäng av"
@@ -7149,6 +7337,35 @@ msgstr "Inställningar för statiska rutter"
 
 msgid "Static routes"
 msgstr "Statiska rutter"
+
+msgid "Statistics for CPU frequency."
+msgstr "Statistik för CPU frekvens."
+
+msgid "Statistics for CPU temperature."
+msgstr "Statistik för CPU temperatur."
+
+msgid ""
+"Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
+"voltage and the UPS status (online, on battery, charging and offline)."
+msgstr ""
+"Statistik för UPS batterikapacitet, spänning, last, återstående tid, "
+"inspänning och UPS-status (online, på batteri, laddas och offline)."
+
+msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
+msgstr "Statistik för ZFS ARC (total, MRU, MFU, anon, header, other)."
+
+msgid "Statistics for average system load for 1, 5 and 15 minute periods."
+msgstr ""
+"Statistik för genomsnittlig systemlast i 1, 5 och 15 minuters intervall."
+
+msgid "Statistics for disk (mount point) usage."
+msgstr "Statistik över diskanvändning (monteringspunkter)."
+
+msgid "Statistics for incoming/outgoing bits/second for network interfaces."
+msgstr "Statistik över in- och utgående bitar/sekund för nätverksgränssnitt."
+
+msgid "Statistics for network latency."
+msgstr "Statistik för nätverksåtkomsttid."
 
 msgid "Status"
 msgstr "Status"
@@ -7803,6 +8020,17 @@ msgstr ""
 "Ett specifikt avbildsformat för skuggkopia kan anges. Grundinställningen är "
 "%s som anvnäds för ZFS automatisk avbildning."
 
+#, php-format
+msgid ""
+"The data directory holds the statistical data for the graphs. This should be "
+"set to a %s to prevent a disk spinning all the time."
+msgstr ""
+"Datakatalogen innehåller statistiska data för graferna. Denna skall sättas "
+"till en %s för att undvika att diskarna snurrar hela tiden."
+
+msgid "The data directory must be set to a directory <b>below</b> /mnt."
+msgstr "Datakatalogen måste sättas till en katalog <b>under</b> /mnt."
+
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr "Standardporten för SMTP e-postserver, t.ex. 25 eller 587."
 
@@ -8352,6 +8580,9 @@ msgid ""
 msgstr ""
 "Dessa parametrar kommer att läggas till i modulkonfigurationsavsnittet i "
 "rsyncd.conf."
+
+msgid "These parameters will be added to the ping command."
+msgstr "Dessa parametrar kommer att läggas till pingkommandot."
 
 msgid ""
 "This Bridge cannot be deleted because it is still being used as an interface."
@@ -9109,6 +9340,16 @@ msgstr "UPS systemprogramvara"
 msgid "UPS goes on battery"
 msgstr "UPS-enhet på batteridrift"
 
+msgid "UPS identifier and IP address"
+msgstr "UPS Namn och IP adress"
+
+msgid ""
+"UPS identifier and host IP address of the machine where the UPS is connected "
+"to (this can be also a remote host)."
+msgstr ""
+"UPS namn och värd IP adress för maskinen där UPS:en är ansluten (detta kan "
+"även vara en fjärrvärd)."
+
 msgid "UPS model"
 msgstr "UPS modell"
 
@@ -9232,6 +9473,9 @@ msgstr "Uppladdningskatalog för webservern. Standard är %s."
 
 msgid "Upper"
 msgstr "Övre"
+
+msgid "Uptime"
+msgstr "Upptid"
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
@@ -9476,6 +9720,9 @@ msgstr "Virtuella enheter"
 msgid "VirtualBox"
 msgstr "VirtualBox"
 
+msgid "Virtualization"
+msgstr "Virtualisering"
+
 msgid "Volume"
 msgstr "Volym"
 
@@ -9680,6 +9927,9 @@ msgstr "Xen"
 msgid "Xen Virtual Machine"
 msgstr "Xen Virtuell Maskin"
 
+msgid "Y-axis range"
+msgstr "Y-axelomfång"
+
 msgid "Yes"
 msgstr "Ja"
 
@@ -9787,6 +10037,9 @@ msgstr "ZFS"
 
 msgid "ZFS ACL"
 msgstr "ZFS ACL"
+
+msgid "ZFS ARC"
+msgstr "ZFS ARC"
 
 msgid "ZFS Dataset Information & Status"
 msgstr "ZFS Dataset Information & Status"
@@ -9920,6 +10173,13 @@ msgstr "montera"
 msgid "mount point"
 msgstr "monteringspunkt"
 
+msgid "must be defined!"
+msgstr "Måste vare definierat!"
+
+#, php-format
+msgid "must be in the format: %s."
+msgstr "måste vara i format: %s."
+
 msgid "n/a"
 msgstr "ej tillgängligt"
 
@@ -9950,6 +10210,9 @@ msgstr "skanning av målet misslyckades."
 msgid "second(s)"
 msgstr "sekund(er)"
 
+msgid "seconds"
+msgstr "sekunder"
+
 msgid "smallest settable high voltage transfer point"
 msgstr "Minsta inställningen för hög spänning till överförings punkt."
 
@@ -9979,13 +10242,3 @@ msgstr "användare"
 
 msgid "version:"
 msgstr "version:"
-
-#~ msgid "Processes Information"
-#~ msgstr "Processinformation"
-
-#, php-format
-#~ msgid "The MIB '%s' already exists."
-#~ msgstr "MIB \"%s\" finns redan."
-
-#~ msgid "The server is halting now. This may take one minute."
-#~ msgstr "Servern stoppas nu. Detta kan ta någon minut."
