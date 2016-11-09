@@ -40,8 +40,6 @@ if (isset($config['rrdgraphs']['enable'])) {
 
 // create config file - for booleans we need the variable $txt
     $rrdconfig = fopen("{$config['rrdgraphs']['storage_path']}/CONFIG.sh", "w");
-        $RRDT_RELEASE = exec("/usr/local/bin/rrdtool -h | awk '/Copyright/ {print $2}'");
-        fwrite($rrdconfig, "RRDT_RELEASE={$RRDT_RELEASE}"."\n");
         fwrite($rrdconfig, "STORAGE_PATH={$config['rrdgraphs']['storage_path']}"."\n");
         fwrite($rrdconfig, "GRAPH_H={$config['rrdgraphs']['graph_h']}"."\n");
         fwrite($rrdconfig, "REFRESH_TIME={$config['rrdgraphs']['refresh_time']}"."\n");
