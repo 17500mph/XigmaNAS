@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-07 11:16+0000\n"
+"POT-Creation-Date: 2016-11-08 18:51+0000\n"
 "PO-Revision-Date: 2016-08-18 19:02+0000\n"
 "Last-Translator: Hu Xinyu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-07 11:09+0000\n"
+"X-Launchpad-Export-Date: 2016-11-09 09:02+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -105,6 +105,13 @@ msgstr "%sB 有效，于 %sB"
 #, php-format
 msgid "%sB used of %sB"
 msgstr "%sB 已用，于 %sB"
+
+#, php-format
+msgid ""
+"'%s' deletes all the data for selected statistics. If only a certain "
+"statistic needs to be reset, clear all other check boxes before performing "
+"'%s'."
+msgstr ""
 
 msgid "(Change if needed)"
 msgstr "(如果需要则改变)"
@@ -613,6 +620,9 @@ msgstr "警报等级"
 msgid "All"
 msgstr "全部"
 
+msgid "All data from the following statistics have been deleted:"
+msgstr ""
+
 msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
 "an empty UFS directory is recommended."
@@ -889,6 +899,12 @@ msgstr "自动大小"
 msgid "AutoScale"
 msgstr "自动扩展"
 
+msgid "Autoscale"
+msgstr ""
+
+msgid "Autoscale for graphs."
+msgstr ""
+
 msgid "Autoselect"
 msgstr "自动选择"
 
@@ -903,6 +919,9 @@ msgstr ""
 
 msgid "Available"
 msgstr "可用"
+
+msgid "Available graphs"
+msgstr ""
 
 msgid ""
 "Average performance of seek operations of the magnetic heads. If this "
@@ -1084,6 +1103,9 @@ msgstr "保加利亚文"
 msgid "By default, only already existing files can be uploaded."
 msgstr "默认是只有已经存在的文件可以上传。"
 
+msgid "Bytes/sec"
+msgstr ""
+
 msgid "CACHE"
 msgstr "缓存"
 
@@ -1156,8 +1178,17 @@ msgstr "CP949 (韩文)"
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (繁体中文 Big5)"
 
+msgid "CPU Frequency"
+msgstr ""
+
 msgid "CPU Load"
 msgstr "CPU 负载"
+
+msgid "CPU Temperature"
+msgstr ""
+
+msgid "CPU Usage"
+msgstr ""
 
 msgid "CPU frequency"
 msgstr "CPU 频率"
@@ -1767,6 +1798,9 @@ msgstr "丹麥文"
 msgid "Data digest"
 msgstr "数据摘要"
 
+msgid "Data directory"
+msgstr ""
+
 msgid "Data integrity"
 msgstr "数据完整性"
 
@@ -1838,6 +1872,10 @@ msgstr ""
 
 msgid "Default Device Settings"
 msgstr "默认设备设置"
+
+#, php-format
+msgid "Default is %s %s."
+msgstr ""
 
 #, php-format
 msgid "Default is %s."
@@ -2029,6 +2067,9 @@ msgstr "电邮目的端。"
 msgid "Destination email address. Separate email addresses by semi-colon."
 msgstr "目的地邮件地址。多个邮件地址用分号分开。"
 
+msgid "Destination host name or IP address."
+msgstr ""
+
 msgid "Destination host name or IP number."
 msgstr "目的端主机名称或 IP 位址。"
 
@@ -2061,6 +2102,9 @@ msgid "Detach a data device from a mirror"
 msgstr ""
 
 msgid "Detach a log device from a mirrored log"
+msgstr ""
+
+msgid "Detailed"
 msgstr ""
 
 msgid "Detected"
@@ -2155,6 +2199,10 @@ msgstr "方向"
 msgid "Directory"
 msgstr "目录"
 
+#, php-format
+msgid "Directory %s doesn't exist!"
+msgstr ""
+
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr "未完毕档案的目录。空白表示关闭。"
 
@@ -2225,8 +2273,14 @@ msgstr "硬盘"
 msgid "Disk Selection"
 msgstr "选择磁盘"
 
+msgid "Disk Usage"
+msgstr ""
+
 msgid "Disk space usage"
 msgstr "磁盘空间使用情况"
+
+msgid "Disk usage"
+msgstr ""
 
 msgid "Disks"
 msgstr "硬盘"
@@ -2244,6 +2298,24 @@ msgid "Display"
 msgstr "显示"
 
 msgid "Display ZFS command history"
+msgstr ""
+
+msgid ""
+"Displays a percentage of time spent in each of the processor states (user, "
+"nice, system, interrupt, idle)."
+msgstr ""
+
+msgid ""
+"Displays information about memory allocation (active, inact, wired, cache, "
+"buf, free, swap used, swap free)."
+msgstr ""
+
+msgid "Displays the length of time the system has been up."
+msgstr ""
+
+msgid ""
+"Displays the number of processes in each state (total, running, sleeping, "
+"waiting, starting, stopped, zombie)."
 msgstr ""
 
 msgid ""
@@ -2271,6 +2343,9 @@ msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
 msgstr "您确定要清除并导入吗？\\n现有的配置将被清除和覆盖。"
+
+msgid "Do you really want to delete all data from the selected statistics?"
+msgstr ""
 
 msgid "Do you really want to delete all rules?"
 msgstr "您确定要删除所有规则吗？"
@@ -3414,6 +3489,13 @@ msgstr "授予用户门户网站的访问权。"
 msgid "Graph shows last 120 seconds"
 msgstr "图表显示最近120秒"
 
+#, php-format
+msgid "Graph updates every %d seconds"
+msgstr ""
+
+msgid "Graphs height"
+msgstr ""
+
 msgid "Greek"
 msgstr "希腊文"
 
@@ -3515,6 +3597,10 @@ msgid ""
 "Height of heads above the disk surface. A flying height that's too low "
 "increases the chances of a head crash while a flying height that's too high "
 "increases the chances of a read/write error."
+msgstr ""
+
+#, php-format
+msgid "Height of the graphs. Default is %s pixel."
 msgstr ""
 
 msgid "Help"
@@ -3700,6 +3786,11 @@ msgid ""
 "client from a portion of the host system filespace."
 msgstr ""
 "如果启用了默认的root ，当客户端进行身份验证后， chroot 操作将立即执行。这可以用来有效地从主机系统一部分的档案空间隔离客户端。"
+
+msgid ""
+"If enabled the network throughput is displayed in Bytes/sec rather than "
+"Bits/sec."
+msgstr ""
 
 msgid ""
 "If the server is behind a proxy set these parameters to give local services "
@@ -4151,6 +4242,9 @@ msgid ""
 "been tested in an excessive temperature condition, otherwise 100."
 msgstr ""
 
+msgid "Latency"
+msgstr ""
+
 #, php-format
 msgid "Latest Beta Build: %s"
 msgstr "最新的 Beta 版：%s"
@@ -4250,6 +4344,9 @@ msgstr ""
 msgid "Load"
 msgstr "载入"
 
+msgid "Load Averages"
+msgstr ""
+
 msgid "Load averages"
 msgstr "系统负载"
 
@@ -4334,6 +4431,15 @@ msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "这条规则所处理的记录档到 syslog。"
+
+msgid "Logarithmic scaling"
+msgstr ""
+
+#, php-format
+msgid ""
+"Logarithmic y-axis scaling for %s graphs (can not be used together with "
+"positive/negative y-axis range)."
+msgstr ""
 
 msgid "Logical Block Length"
 msgstr "逻辑块长度"
@@ -4588,7 +4694,13 @@ msgstr ""
 msgid "Member Interface"
 msgstr "介面成员"
 
+msgid "Memory"
+msgstr ""
+
 msgid "Memory (MiB)"
+msgstr ""
+
+msgid "Memory Usage"
 msgstr ""
 
 msgid "Memory usage"
@@ -4824,10 +4936,19 @@ msgstr "网络适配器"
 msgid "Network File System"
 msgstr "网络文件系统"
 
+msgid "Network Latency"
+msgstr ""
+
+msgid "Network Traffic"
+msgstr ""
+
 msgid ""
 "Network authorised to access to the iSCSI target. It takes IP or CIDR "
 "addresses or 'ALL' for any IPs."
 msgstr "网络授权可访问 iSCSI 目标。它需要IP 位址或CIDR 位址或 “ALL” （任何IP 位址）。"
+
+msgid "Network latency"
+msgstr ""
 
 msgid "Network mask"
 msgstr "网络掩码"
@@ -4837,6 +4958,9 @@ msgstr "网络端口"
 
 msgid "Network that is authorised to access the NFS share."
 msgstr "授权可使用 NFS 分享区的网域。"
+
+msgid "Network traffic"
+msgstr ""
 
 msgid "Networks"
 msgstr "网络"
@@ -5435,6 +5559,10 @@ msgstr ""
 msgid "Please add new pools first."
 msgstr ""
 
+#, php-format
+msgid "Please check the %s documentation%s."
+msgstr ""
+
 msgid "Please check the documentation"
 msgstr ""
 
@@ -5746,6 +5874,18 @@ msgstr ""
 msgid "RAW info"
 msgstr "RAW 信息"
 
+msgid "RRDGraphs"
+msgstr ""
+
+#, php-format
+msgid ""
+"RRDGraphs needs at least read & execute permissions at the mount point for "
+"directory %s! Set the Read and Execute bits for Others (Access Restrictions "
+"| Mode) for the mount point %s (in <a href='disks_mount.php'>Disks | Mount "
+"Point | Management</a> or <a href='disks_zfs_dataset.php'>Disks | ZFS | "
+"Datasets</a>) and hit Save in order to take them effect."
+msgstr ""
+
 msgid "RSYNC"
 msgstr "RSYNC"
 
@@ -5844,6 +5984,12 @@ msgstr "垃圾桶"
 
 msgid "Refresh"
 msgstr "刷新"
+
+msgid "Refresh time"
+msgstr ""
+
+msgid "Refresh time for graph pages."
+msgstr ""
 
 msgid "Reject"
 msgstr "拒绝"
@@ -5959,6 +6105,9 @@ msgstr "重新扫描间隔"
 
 msgid "Reservation"
 msgstr "预留"
+
+msgid "Reset Graphs"
+msgstr ""
 
 msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr ""
@@ -6327,6 +6476,11 @@ msgstr ""
 msgid "Select the FreeBSD package to be installed."
 msgstr "请选择要安装的 FreeBSD 套件。"
 
+msgid ""
+"Select the interface (only selectable if your server has more than one) to "
+"use for the source IP address in outgoing packets."
+msgstr ""
+
 msgid "Select the language of the WebGUI."
 msgstr "请选择网页界面的语言。"
 
@@ -6354,6 +6508,12 @@ msgstr "选定的设备或标签不存在。"
 
 msgid "Selected file isn't an valid ISO file."
 msgstr "所选择的文件不是一个有效的 ISO 文件。"
+
+msgid "Selected graph:"
+msgstr ""
+
+msgid "Selected interface:"
+msgstr ""
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr ""
@@ -6518,6 +6678,12 @@ msgid "Show UPS Information"
 msgstr "显示UPS信息"
 
 msgid "Show log entries in reverse order (newest entries on top)."
+msgstr ""
+
+#, php-format
+msgid ""
+"Show positive/negative values for %s graphs (can not be used together with "
+"logarithmic scaling)."
 msgstr ""
 
 msgid "Shutdown"
@@ -6729,6 +6895,32 @@ msgstr ""
 
 msgid "Static routes"
 msgstr "静态路由"
+
+msgid "Statistics for CPU frequency."
+msgstr ""
+
+msgid "Statistics for CPU temperature."
+msgstr ""
+
+msgid ""
+"Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
+"voltage and the UPS status (online, on battery, charging and offline)."
+msgstr ""
+
+msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
+msgstr ""
+
+msgid "Statistics for average system load for 1, 5 and 15 minute periods."
+msgstr ""
+
+msgid "Statistics for disk (mount point) usage."
+msgstr ""
+
+msgid "Statistics for incoming/outgoing bits/second for network interfaces."
+msgstr ""
+
+msgid "Statistics for network latency."
+msgstr ""
 
 msgid "Status"
 msgstr "状态"
@@ -7336,6 +7528,15 @@ msgid ""
 "The default format is %s used for ZFS auto snapshot."
 msgstr "可以指定阴影复制服务的快照的自定义格式。默认格式是用于ZFS自动快照的 %s。"
 
+#, php-format
+msgid ""
+"The data directory holds the statistical data for the graphs. This should be "
+"set to a %s to prevent a disk spinning all the time."
+msgstr ""
+
+msgid "The data directory must be set to a directory <b>below</b> /mnt."
+msgstr ""
+
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr "预设的 SMTP 邮件伺服器连接端口，如：25 或 587。"
 
@@ -7812,6 +8013,9 @@ msgstr "这些参数将被添加到 %s 的全域设置。"
 msgid ""
 "These parameters will be added to the module configuration in rsyncd.conf."
 msgstr "这些参数将被添加到 rsyncd.conf 中的模块配置（module configuration） 。"
+
+msgid "These parameters will be added to the ping command."
+msgstr ""
 
 msgid ""
 "This Bridge cannot be deleted because it is still being used as an interface."
@@ -8446,6 +8650,14 @@ msgstr "UPS 固件"
 msgid "UPS goes on battery"
 msgstr "UPS 转用电池"
 
+msgid "UPS identifier and IP address"
+msgstr ""
+
+msgid ""
+"UPS identifier and host IP address of the machine where the UPS is connected "
+"to (this can be also a remote host)."
+msgstr ""
+
 msgid "UPS model"
 msgstr "UPS 型号"
 
@@ -8568,6 +8780,9 @@ msgid "Upload directory of the webserver. The default is %s."
 msgstr "网页伺服器的上传目录。默认值是 %s。"
 
 msgid "Upper"
+msgstr ""
+
+msgid "Uptime"
 msgstr ""
 
 msgid ""
@@ -8790,6 +9005,9 @@ msgstr "虚拟设备"
 msgid "VirtualBox"
 msgstr "VirtualBox"
 
+msgid "Virtualization"
+msgstr ""
+
 msgid "Volume"
 msgstr "卷（Volume）"
 
@@ -8976,6 +9194,9 @@ msgstr "Xen"
 msgid "Xen Virtual Machine"
 msgstr "Xen 虚拟机"
 
+msgid "Y-axis range"
+msgstr ""
+
 msgid "Yes"
 msgstr "是"
 
@@ -9069,6 +9290,9 @@ msgstr "ZFS"
 
 msgid "ZFS ACL"
 msgstr "ZFS 存取控制清单（ACL）"
+
+msgid "ZFS ARC"
+msgstr ""
 
 msgid "ZFS Dataset Information & Status"
 msgstr "ZFS 数据集信息和状态"
@@ -9196,6 +9420,13 @@ msgstr "挂载"
 msgid "mount point"
 msgstr ""
 
+msgid "must be defined!"
+msgstr ""
+
+#, php-format
+msgid "must be in the format: %s."
+msgstr ""
+
 msgid "n/a"
 msgstr "无资料"
 
@@ -9226,6 +9457,9 @@ msgstr "扫描目标失败"
 msgid "second(s)"
 msgstr "秒"
 
+msgid "seconds"
+msgstr ""
+
 msgid "smallest settable high voltage transfer point"
 msgstr "最小可设定高电压转换点"
 
@@ -9255,6 +9489,3 @@ msgstr ""
 
 msgid "version:"
 msgstr "版本："
-
-#~ msgid "Processes Information"
-#~ msgstr "程序信息"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-07 11:16+0000\n"
-"PO-Revision-Date: 2016-11-07 11:45+0000\n"
+"POT-Creation-Date: 2016-11-08 18:51+0000\n"
+"PO-Revision-Date: 2016-11-08 22:09+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-07 19:09+0000\n"
+"X-Launchpad-Export-Date: 2016-11-09 09:01+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -106,6 +106,16 @@ msgstr "%sB disponible de %sB"
 #, php-format
 msgid "%sB used of %sB"
 msgstr "%sB usado de %sB"
+
+#, php-format
+msgid ""
+"'%s' deletes all the data for selected statistics. If only a certain "
+"statistic needs to be reset, clear all other check boxes before performing "
+"'%s'."
+msgstr ""
+"'%s' Borra todos los datos de las estadisticas seleccionadas. Si solo desea "
+"reiniciar ciertas estadisticas, desactive los otros checkbox antes de "
+"aplicar '%s'."
 
 msgid "(Change if needed)"
 msgstr "(Cambiar si es necesario)"
@@ -678,6 +688,9 @@ msgstr "Nivel de alerta"
 msgid "All"
 msgstr "Todos"
 
+msgid "All data from the following statistics have been deleted:"
+msgstr "Todos los datos de esta estadistica serán borrados:"
+
 msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
 "an empty UFS directory is recommended."
@@ -987,6 +1000,12 @@ msgstr "Auto incrrementar"
 msgid "AutoScale"
 msgstr "Escala Automática"
 
+msgid "Autoscale"
+msgstr "Autoescala"
+
+msgid "Autoscale for graphs."
+msgstr "Autoescala gráfica"
+
 msgid "Autoselect"
 msgstr "Autoseleccionar"
 
@@ -1001,6 +1020,9 @@ msgstr "Disp."
 
 msgid "Available"
 msgstr "Disponible"
+
+msgid "Available graphs"
+msgstr "Gráficas disponibles"
 
 msgid ""
 "Average performance of seek operations of the magnetic heads. If this "
@@ -1198,6 +1220,9 @@ msgstr "Búlgaro"
 msgid "By default, only already existing files can be uploaded."
 msgstr "Por defecto, sólo se pueden subir archivos que ya existan."
 
+msgid "Bytes/sec"
+msgstr "Bytes/seg"
+
 msgid "CACHE"
 msgstr "CACHÉ"
 
@@ -1270,8 +1295,17 @@ msgstr "CP949 (Coreano)"
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Chino Tradicional Big5)"
 
+msgid "CPU Frequency"
+msgstr "Frecuencia de la CPU"
+
 msgid "CPU Load"
 msgstr "Carga de la CPU"
+
+msgid "CPU Temperature"
+msgstr "Temperatura de la CPU"
+
+msgid "CPU Usage"
+msgstr "Uso de la CPU"
 
 msgid "CPU frequency"
 msgstr "Frecuencia de CPU"
@@ -1976,6 +2010,9 @@ msgstr "Danés"
 msgid "Data digest"
 msgstr "Resumen de datos."
 
+msgid "Data directory"
+msgstr "Directorio de datos"
+
 msgid "Data integrity"
 msgstr "Integridad de los datos"
 
@@ -2055,6 +2092,10 @@ msgstr ""
 
 msgid "Default Device Settings"
 msgstr "Opciones por defecto del dispositivo"
+
+#, php-format
+msgid "Default is %s %s."
+msgstr "Por defecto es %s %s."
 
 #, php-format
 msgid "Default is %s."
@@ -2254,6 +2295,9 @@ msgstr ""
 "Dirección de correo electrónico de destino. Separar las direcciones de "
 "correo electrónico con punto y coma."
 
+msgid "Destination host name or IP address."
+msgstr "Nombre de host o IP"
+
 msgid "Destination host name or IP number."
 msgstr "hostname o IP del destino."
 
@@ -2288,6 +2332,9 @@ msgstr "Desconecta un dispositivo de datos  de un espejo"
 
 msgid "Detach a log device from a mirrored log"
 msgstr "Desconectar un dispositivo de bitácora de una bitácora espejeada"
+
+msgid "Detailed"
+msgstr "Detallado"
 
 msgid "Detected"
 msgstr "Detectado"
@@ -2387,6 +2434,10 @@ msgstr "Dirección"
 msgid "Directory"
 msgstr "Directorio"
 
+#, php-format
+msgid "Directory %s doesn't exist!"
+msgstr "El directorio %s no existe!"
+
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr "Directorio para archivos incompletos. vacio significa deshabilitado."
 
@@ -2457,8 +2508,14 @@ msgstr "Disco"
 msgid "Disk Selection"
 msgstr "Selección de discos"
 
+msgid "Disk Usage"
+msgstr "Uso de Disco"
+
 msgid "Disk space usage"
 msgstr "Uso del espacio en disco"
+
+msgid "Disk usage"
+msgstr "Uso de Disco"
 
 msgid "Disks"
 msgstr "Discos"
@@ -2477,6 +2534,30 @@ msgstr "Pantalla"
 
 msgid "Display ZFS command history"
 msgstr "Desplegar la historia de comandos ZFS"
+
+msgid ""
+"Displays a percentage of time spent in each of the processor states (user, "
+"nice, system, interrupt, idle)."
+msgstr ""
+"Muestra el % de tiempo gastado en cada uno de los estados del procesador "
+"(nice, system, interrupt, idle)."
+
+msgid ""
+"Displays information about memory allocation (active, inact, wired, cache, "
+"buf, free, swap used, swap free)."
+msgstr ""
+"Muestra información acerca del uso de memoria (active, inact, wired, cache, "
+"buf, free, swap used, swap free)."
+
+msgid "Displays the length of time the system has been up."
+msgstr "Muestra el tiempo que el sistema lleva encendido"
+
+msgid ""
+"Displays the number of processes in each state (total, running, sleeping, "
+"waiting, starting, stopped, zombie)."
+msgstr ""
+"Muestra los procesos y su estado: (total, running, sleeping, waiting, "
+"starting, stopped, zombie)."
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -2509,6 +2590,10 @@ msgid ""
 msgstr ""
 "Realmente desea importar?\\nLa configuración actual será desechada y "
 "sobrescrita."
+
+msgid "Do you really want to delete all data from the selected statistics?"
+msgstr ""
+"¿Realmente desea borrar todos los datos de la estadistica seleccionada?"
 
 msgid "Do you really want to delete all rules?"
 msgstr "¿De verdad desea eliminar todas las reglas?"
@@ -3716,6 +3801,13 @@ msgstr "Otorga acceso al portal de usuario."
 msgid "Graph shows last 120 seconds"
 msgstr "El gráfico muestra los últimos 120 segundos"
 
+#, php-format
+msgid "Graph updates every %d seconds"
+msgstr "La gráfica se actualiza cada %d segundos"
+
+msgid "Graphs height"
+msgstr "Altura"
+
 msgid "Greek"
 msgstr "Griego"
 
@@ -3831,6 +3923,10 @@ msgstr ""
 "baja incrementa la oportunidad de que la cabeza falle mientras que una "
 "altura de vuelo muy alta incrementa la oportunidad de errores de "
 "lectura/escritura."
+
+#, php-format
+msgid "Height of the graphs. Default is %s pixel."
+msgstr "Altura de la gráfica. Por defecto son %s pixel."
 
 msgid "Help"
 msgstr "Ayuda"
@@ -4031,6 +4127,13 @@ msgstr ""
 "realiza inmediatamente despues de que un cliente se autentifica. Esto puede "
 "ser utilizado para aislar efectivamente al cliente en una porcion del "
 "sistema del espacio de archivos."
+
+msgid ""
+"If enabled the network throughput is displayed in Bytes/sec rather than "
+"Bits/sec."
+msgstr ""
+"Si se habilita se mostrará el ancho de banda en Bytes/seg en lugar de "
+"Bits/seg"
 
 msgid ""
 "If the server is behind a proxy set these parameters to give local services "
@@ -4537,6 +4640,9 @@ msgstr ""
 "ha dado como resultado un exceso de temperatura, en otros caso el valor debe "
 "ser 100."
 
+msgid "Latency"
+msgstr "Latencia"
+
 #, php-format
 msgid "Latest Beta Build: %s"
 msgstr "Ultima Beta: %s"
@@ -4644,6 +4750,9 @@ msgstr "Listar o importar pools"
 msgid "Load"
 msgstr "Cargar"
 
+msgid "Load Averages"
+msgstr "Carga media"
+
 msgid "Load averages"
 msgstr "Promedio de carga"
 
@@ -4736,6 +4845,17 @@ msgstr "Orden (ascendente/descendente)"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Paquetes de Log que se trataran por esta regla al syslog."
+
+msgid "Logarithmic scaling"
+msgstr "Escala Logaritmica"
+
+#, php-format
+msgid ""
+"Logarithmic y-axis scaling for %s graphs (can not be used together with "
+"positive/negative y-axis range)."
+msgstr ""
+"La escala logaritmica en el eje Y para el grafico %s no puede ser usada en "
+"el rango propuesto"
 
 msgid "Logical Block Length"
 msgstr "Longitud de bloque logico"
@@ -5002,8 +5122,14 @@ msgstr "Memoria"
 msgid "Member Interface"
 msgstr "Interfaz miembro"
 
+msgid "Memory"
+msgstr "Memoria"
+
 msgid "Memory (MiB)"
 msgstr "Memoria (MiB)"
+
+msgid "Memory Usage"
+msgstr "Uso de memoria"
 
 msgid "Memory usage"
 msgstr "Uso de memoria"
@@ -5245,12 +5371,21 @@ msgstr "Adaptador de Red"
 msgid "Network File System"
 msgstr "Network File System (NFS)"
 
+msgid "Network Latency"
+msgstr "Latencia de red"
+
+msgid "Network Traffic"
+msgstr "Trafico de red"
+
 msgid ""
 "Network authorised to access to the iSCSI target. It takes IP or CIDR "
 "addresses or 'ALL' for any IPs."
 msgstr ""
 "Red autorizada para acceder al objetivo iSCSI. Este toma una IP o "
 "direcciones CIDR o 'ALL' para cualquier IPs."
+
+msgid "Network latency"
+msgstr "Latencia de Red"
 
 msgid "Network mask"
 msgstr "Máscara de red"
@@ -5260,6 +5395,9 @@ msgstr "Puerto de red"
 
 msgid "Network that is authorised to access the NFS share."
 msgstr "Red que está autorizada a acceder a los recursos NFS compartidos."
+
+msgid "Network traffic"
+msgstr "Trafico de Red"
 
 msgid "Networks"
 msgstr "Redes"
@@ -5888,6 +6026,10 @@ msgstr "Por favor primero agregue un %s"
 msgid "Please add new pools first."
 msgstr "Por favor agregue primero un nuevo pool"
 
+#, php-format
+msgid "Please check the %s documentation%s."
+msgstr "Por favor revise la %s documentación%s."
+
 msgid "Please check the documentation"
 msgstr "Por favor revise la documentación"
 
@@ -6207,6 +6349,24 @@ msgstr "Valor en crudo"
 msgid "RAW info"
 msgstr "RAW info"
 
+msgid "RRDGraphs"
+msgstr "RRDGraphs"
+
+#, php-format
+msgid ""
+"RRDGraphs needs at least read & execute permissions at the mount point for "
+"directory %s! Set the Read and Execute bits for Others (Access Restrictions "
+"| Mode) for the mount point %s (in <a href='disks_mount.php'>Disks | Mount "
+"Point | Management</a> or <a href='disks_zfs_dataset.php'>Disks | ZFS | "
+"Datasets</a>) and hit Save in order to take them effect."
+msgstr ""
+"RRDGraphs necesita como minimo permisos de lectura/ejecución en el punto de "
+"montaje para la carpeta %s! Cambie los bits de lectura y ejecución de otros "
+"(Access Restrictions | Mode) para el punto de montaje %s (en  \"<a "
+"href='disks_mount.php'>Disks | Mount Point | Management</a>\" o \"<a "
+"href='disks_zfs_dataset.php'> Disks | ZFS | Datasets</a>\") y y pulse Salvar "
+"para que sean efectivos."
+
 msgid "RSYNC"
 msgstr "RSYNC"
 
@@ -6310,6 +6470,12 @@ msgstr "Papelera de reciclaje"
 
 msgid "Refresh"
 msgstr "Actualizar"
+
+msgid "Refresh time"
+msgstr "Tasa de refresco"
+
+msgid "Refresh time for graph pages."
+msgstr "Tasa de refresco para los graficos"
 
 msgid "Reject"
 msgstr "Rechazar"
@@ -6433,6 +6599,9 @@ msgstr "Intervalo de Re-Escaneo"
 
 msgid "Reservation"
 msgstr "Reserva"
+
+msgid "Reset Graphs"
+msgstr "Reiniciar gráficas."
 
 msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr ""
@@ -6830,6 +6999,13 @@ msgstr "Seleccionar algoritmo de lectura balance"
 msgid "Select the FreeBSD package to be installed."
 msgstr "Seleccionar el paquete FreeBSD para ser Instalado."
 
+msgid ""
+"Select the interface (only selectable if your server has more than one) to "
+"use for the source IP address in outgoing packets."
+msgstr ""
+"Seleccione el interfaz (solo si su sistema tiene más de uno) para usarlo "
+"como origen de los paquetes IP salientes"
+
 msgid "Select the language of the WebGUI."
 msgstr "Seleccione el idioma de la WebGUI"
 
@@ -6860,6 +7036,12 @@ msgstr "El dispositivo o la etiqueta , no existe."
 
 msgid "Selected file isn't an valid ISO file."
 msgstr "El archivo seleccionado no es un archivo válido ISO."
+
+msgid "Selected graph:"
+msgstr "Gráfica seleccionada"
+
+msgid "Selected interface:"
+msgstr "Interfaz seleccionada:"
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "SMART"
@@ -7043,6 +7225,14 @@ msgstr "Mostrar info. dela SAI"
 
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr "Mostrar el log en orden inverso (entradas nuevas arriba)"
+
+#, php-format
+msgid ""
+"Show positive/negative values for %s graphs (can not be used together with "
+"logarithmic scaling)."
+msgstr ""
+"Muestra los valores positivos/negativos de la grafica %s (no puede ser usada "
+"junto a la escala logaritmica) ."
 
 msgid "Shutdown"
 msgstr "Apagar"
@@ -7276,6 +7466,33 @@ msgstr "Configuración de rutas estáticas"
 
 msgid "Static routes"
 msgstr "Rutas estáticas"
+
+msgid "Statistics for CPU frequency."
+msgstr "Estadisticas de la frecuencia de CPU."
+
+msgid "Statistics for CPU temperature."
+msgstr "Estadisticas de la temperatura de CPU."
+
+msgid ""
+"Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
+"voltage and the UPS status (online, on battery, charging and offline)."
+msgstr "Estadisticas del SAI (online, on battery, charging and offline)"
+
+msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
+msgstr "Estadisticas de ZFS ARC (total, MRU, MFU, anon, header, other)."
+
+msgid "Statistics for average system load for 1, 5 and 15 minute periods."
+msgstr "Estadisticas de carga media para periodos de 1, 5 y 15 minutos"
+
+msgid "Statistics for disk (mount point) usage."
+msgstr "Estadisticas de uso del disco"
+
+msgid "Statistics for incoming/outgoing bits/second for network interfaces."
+msgstr ""
+"Estadisticas de los interfaces de red en bits/segundo y de entrada/salida"
+
+msgid "Statistics for network latency."
+msgstr "Estadisticas de la Latencia de Red"
 
 msgid "Status"
 msgstr "Estado"
@@ -7943,6 +8160,18 @@ msgstr ""
 "El formato de Snapshot de la copia oculta debe ser definido. El formato por "
 "defecto es %s usado por los snapshot automáticos ZFS"
 
+#, php-format
+msgid ""
+"The data directory holds the statistical data for the graphs. This should be "
+"set to a %s to prevent a disk spinning all the time."
+msgstr ""
+"El directorio de datos es donde se almacenan los datos para las "
+"estadisticas. Dede ser %s para evitar que el disco gire todo el tiempo."
+
+msgid "The data directory must be set to a directory <b>below</b> /mnt."
+msgstr ""
+"El directorio de datos debe estar por debajo de /mnt, eg: /mnt/Data/RRDGraphs"
+
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr "El puerto por defecto del servidor SMTP, por ejemplo 25 o 587."
 
@@ -8505,6 +8734,9 @@ msgid ""
 "These parameters will be added to the module configuration in rsyncd.conf."
 msgstr ""
 "Estos parámetros se añadirán a la configuración del módulo en rsyncd.conf."
+
+msgid "These parameters will be added to the ping command."
+msgstr "Estos parametros se añadirán al comando ping"
 
 msgid ""
 "This Bridge cannot be deleted because it is still being used as an interface."
@@ -9271,6 +9503,16 @@ msgstr "Firmware del SAI"
 msgid "UPS goes on battery"
 msgstr "UPS alimentado por la batería"
 
+msgid "UPS identifier and IP address"
+msgstr "Identificador del SAI y su IP"
+
+msgid ""
+"UPS identifier and host IP address of the machine where the UPS is connected "
+"to (this can be also a remote host)."
+msgstr ""
+"Identificador del SAI o IP de la máquina donde el SAI está conactada (puede "
+"ser un host remoto)"
+
 msgid "UPS model"
 msgstr "Modelo de SAI"
 
@@ -9396,6 +9638,9 @@ msgstr "Directorio de subidas del servidor Web. Por defecto es %s"
 
 msgid "Upper"
 msgstr "Mayúsculas"
+
+msgid "Uptime"
+msgstr "Tiempo en Activo"
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
@@ -9641,6 +9886,9 @@ msgstr "Dispositivos virtuales"
 msgid "VirtualBox"
 msgstr "VirtualBox"
 
+msgid "Virtualization"
+msgstr "Virtualización"
+
 msgid "Volume"
 msgstr "Volumen"
 
@@ -9849,6 +10097,9 @@ msgstr "Xen"
 msgid "Xen Virtual Machine"
 msgstr "Xen Virtual Machine"
 
+msgid "Y-axis range"
+msgstr "Rango del eje Y"
+
 msgid "Yes"
 msgstr "Si"
 
@@ -9954,6 +10205,9 @@ msgstr "ZFS"
 
 msgid "ZFS ACL"
 msgstr "ZFS ACL"
+
+msgid "ZFS ARC"
+msgstr "ZFS ARC"
 
 msgid "ZFS Dataset Information & Status"
 msgstr "Info y estado de Dataset ZFS"
@@ -10086,6 +10340,13 @@ msgstr "Montar"
 msgid "mount point"
 msgstr "Punto de montaje"
 
+msgid "must be defined!"
+msgstr "Debe estar definido!"
+
+#, php-format
+msgid "must be in the format: %s."
+msgstr "Debe estar en el formato: %s"
+
 msgid "n/a"
 msgstr "n/d"
 
@@ -10116,6 +10377,9 @@ msgstr "Fallo la busqueda del objetivo"
 msgid "second(s)"
 msgstr "segundo(s)"
 
+msgid "seconds"
+msgstr "Segundos"
+
 msgid "smallest settable high voltage transfer point"
 msgstr "Min. valor permitido de alta tensión"
 
@@ -10145,13 +10409,3 @@ msgstr "Usuario"
 
 msgid "version:"
 msgstr "versión:"
-
-#~ msgid "Processes Information"
-#~ msgstr "Información de procesos"
-
-#, php-format
-#~ msgid "The MIB '%s' already exists."
-#~ msgstr "La MIB %s ya existe."
-
-#~ msgid "The server is halting now. This may take one minute."
-#~ msgstr "El servidor se está deteniendo. Esto puede durar un poco."

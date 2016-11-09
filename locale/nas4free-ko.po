@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-07 11:16+0000\n"
+"POT-Creation-Date: 2016-11-08 18:51+0000\n"
 "PO-Revision-Date: 2016-10-12 06:40+0000\n"
 "Last-Translator: Dingle28 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-07 11:09+0000\n"
+"X-Launchpad-Export-Date: 2016-11-09 09:01+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -106,6 +106,13 @@ msgstr "%sB 중 %sB 사용 가능."
 #, php-format
 msgid "%sB used of %sB"
 msgstr "%sB 중 %sB 사용됨."
+
+#, php-format
+msgid ""
+"'%s' deletes all the data for selected statistics. If only a certain "
+"statistic needs to be reset, clear all other check boxes before performing "
+"'%s'."
+msgstr ""
 
 msgid "(Change if needed)"
 msgstr "(필요한 경우 변경)"
@@ -620,6 +627,9 @@ msgstr ""
 msgid "All"
 msgstr "모두"
 
+msgid "All data from the following statistics have been deleted:"
+msgstr ""
+
 msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
 "an empty UFS directory is recommended."
@@ -898,6 +908,12 @@ msgstr "자동 크기"
 msgid "AutoScale"
 msgstr "자동 스케일"
 
+msgid "Autoscale"
+msgstr ""
+
+msgid "Autoscale for graphs."
+msgstr ""
+
 msgid "Autoselect"
 msgstr "자동 선택"
 
@@ -911,6 +927,9 @@ msgid "Avail"
 msgstr ""
 
 msgid "Available"
+msgstr ""
+
+msgid "Available graphs"
 msgstr ""
 
 msgid ""
@@ -1093,6 +1112,9 @@ msgstr "불가리아어"
 msgid "By default, only already existing files can be uploaded."
 msgstr "기본 값으로 이미 존재하는 파일들만 업로드 될 수 있습니다."
 
+msgid "Bytes/sec"
+msgstr ""
+
 msgid "CACHE"
 msgstr ""
 
@@ -1165,7 +1187,16 @@ msgstr ""
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr ""
 
+msgid "CPU Frequency"
+msgstr ""
+
 msgid "CPU Load"
+msgstr ""
+
+msgid "CPU Temperature"
+msgstr ""
+
+msgid "CPU Usage"
 msgstr ""
 
 msgid "CPU frequency"
@@ -1777,6 +1808,9 @@ msgstr "덴마크어"
 msgid "Data digest"
 msgstr "데이터 digest"
 
+msgid "Data directory"
+msgstr ""
+
 msgid "Data integrity"
 msgstr "데이터 무결성"
 
@@ -1847,6 +1881,10 @@ msgid ""
 msgstr ""
 
 msgid "Default Device Settings"
+msgstr ""
+
+#, php-format
+msgid "Default is %s %s."
 msgstr ""
 
 #, php-format
@@ -2039,6 +2077,9 @@ msgstr "목적지 전자우편 주소."
 msgid "Destination email address. Separate email addresses by semi-colon."
 msgstr ""
 
+msgid "Destination host name or IP address."
+msgstr ""
+
 msgid "Destination host name or IP number."
 msgstr "목적지 호스트 명 또는 IP 주소."
 
@@ -2071,6 +2112,9 @@ msgid "Detach a data device from a mirror"
 msgstr ""
 
 msgid "Detach a log device from a mirrored log"
+msgstr ""
+
+msgid "Detailed"
 msgstr ""
 
 msgid "Detected"
@@ -2167,6 +2211,10 @@ msgstr "방향"
 msgid "Directory"
 msgstr "디렉터리"
 
+#, php-format
+msgid "Directory %s doesn't exist!"
+msgstr ""
+
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr ""
 
@@ -2237,8 +2285,14 @@ msgstr "디스크"
 msgid "Disk Selection"
 msgstr ""
 
+msgid "Disk Usage"
+msgstr ""
+
 msgid "Disk space usage"
 msgstr "디스크 공간 사용"
+
+msgid "Disk usage"
+msgstr ""
 
 msgid "Disks"
 msgstr "디스크"
@@ -2256,6 +2310,24 @@ msgid "Display"
 msgstr "표시"
 
 msgid "Display ZFS command history"
+msgstr ""
+
+msgid ""
+"Displays a percentage of time spent in each of the processor states (user, "
+"nice, system, interrupt, idle)."
+msgstr ""
+
+msgid ""
+"Displays information about memory allocation (active, inact, wired, cache, "
+"buf, free, swap used, swap free)."
+msgstr ""
+
+msgid "Displays the length of time the system has been up."
+msgstr ""
+
+msgid ""
+"Displays the number of processes in each state (total, running, sleeping, "
+"waiting, starting, stopped, zombie)."
 msgstr ""
 
 msgid ""
@@ -2282,6 +2354,9 @@ msgstr ""
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
+msgstr ""
+
+msgid "Do you really want to delete all data from the selected statistics?"
 msgstr ""
 
 msgid "Do you really want to delete all rules?"
@@ -3431,6 +3506,13 @@ msgstr "사용자 포털에 대해 접근 권한 부여."
 msgid "Graph shows last 120 seconds"
 msgstr "그래프는 지난 1백20초을 보여줍니다"
 
+#, php-format
+msgid "Graph updates every %d seconds"
+msgstr ""
+
+msgid "Graphs height"
+msgstr ""
+
 msgid "Greek"
 msgstr "그리스어"
 
@@ -3532,6 +3614,10 @@ msgid ""
 "Height of heads above the disk surface. A flying height that's too low "
 "increases the chances of a head crash while a flying height that's too high "
 "increases the chances of a read/write error."
+msgstr ""
+
+#, php-format
+msgid "Height of the graphs. Default is %s pixel."
 msgstr ""
 
 msgid "Help"
@@ -3720,6 +3806,11 @@ msgid ""
 msgstr ""
 "기본 루트가 활성화되면 클라이언트 인증 후에 바로 chroot 작업이 수행됩니다. 이것은 호스트 시스템 파일 공간 부분에서 클라이언트를 "
 "효율적으로 격리하기 위해 이용될 수 있습니다."
+
+msgid ""
+"If enabled the network throughput is displayed in Bytes/sec rather than "
+"Bits/sec."
+msgstr ""
 
 msgid ""
 "If the server is behind a proxy set these parameters to give local services "
@@ -4170,6 +4261,9 @@ msgid ""
 "been tested in an excessive temperature condition, otherwise 100."
 msgstr ""
 
+msgid "Latency"
+msgstr ""
+
 #, php-format
 msgid "Latest Beta Build: %s"
 msgstr ""
@@ -4271,6 +4365,9 @@ msgstr ""
 msgid "Load"
 msgstr "로드"
 
+msgid "Load Averages"
+msgstr ""
+
 msgid "Load averages"
 msgstr "로드 평균"
 
@@ -4355,6 +4452,15 @@ msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "이 규칙에 의해 처리된 패킷들을 syslog에 기록합니다."
+
+msgid "Logarithmic scaling"
+msgstr ""
+
+#, php-format
+msgid ""
+"Logarithmic y-axis scaling for %s graphs (can not be used together with "
+"positive/negative y-axis range)."
+msgstr ""
 
 msgid "Logical Block Length"
 msgstr "논리적 블록 길이"
@@ -4609,7 +4715,13 @@ msgstr ""
 msgid "Member Interface"
 msgstr ""
 
+msgid "Memory"
+msgstr ""
+
 msgid "Memory (MiB)"
+msgstr ""
+
+msgid "Memory Usage"
 msgstr ""
 
 msgid "Memory usage"
@@ -4845,11 +4957,20 @@ msgstr ""
 msgid "Network File System"
 msgstr "네트워크 파일 시스템"
 
+msgid "Network Latency"
+msgstr ""
+
+msgid "Network Traffic"
+msgstr ""
+
 msgid ""
 "Network authorised to access to the iSCSI target. It takes IP or CIDR "
 "addresses or 'ALL' for any IPs."
 msgstr ""
 "iSCSI 타젯에 대한 접근 권한을 부여 받은 네트워크. IP나 CIDR 주소 또는 모든 IP를 설정할 경우 'ALL'을 이용합니다."
+
+msgid "Network latency"
+msgstr ""
 
 msgid "Network mask"
 msgstr "네트워크 마스크"
@@ -4859,6 +4980,9 @@ msgstr "네트워크 포트"
 
 msgid "Network that is authorised to access the NFS share."
 msgstr "NFS 공유의 접근 권한을 부여 받은 네트워크."
+
+msgid "Network traffic"
+msgstr ""
 
 msgid "Networks"
 msgstr "네트워크"
@@ -5460,6 +5584,10 @@ msgstr ""
 msgid "Please add new pools first."
 msgstr ""
 
+#, php-format
+msgid "Please check the %s documentation%s."
+msgstr ""
+
 msgid "Please check the documentation"
 msgstr ""
 
@@ -5771,6 +5899,18 @@ msgstr ""
 msgid "RAW info"
 msgstr ""
 
+msgid "RRDGraphs"
+msgstr ""
+
+#, php-format
+msgid ""
+"RRDGraphs needs at least read & execute permissions at the mount point for "
+"directory %s! Set the Read and Execute bits for Others (Access Restrictions "
+"| Mode) for the mount point %s (in <a href='disks_mount.php'>Disks | Mount "
+"Point | Management</a> or <a href='disks_zfs_dataset.php'>Disks | ZFS | "
+"Datasets</a>) and hit Save in order to take them effect."
+msgstr ""
+
 msgid "RSYNC"
 msgstr "RSYNC"
 
@@ -5869,6 +6009,12 @@ msgstr "휴지통"
 
 msgid "Refresh"
 msgstr "갱신"
+
+msgid "Refresh time"
+msgstr ""
+
+msgid "Refresh time for graph pages."
+msgstr ""
 
 msgid "Reject"
 msgstr "기각"
@@ -5983,6 +6129,9 @@ msgid "Rescan interval"
 msgstr "재 스캔 간격"
 
 msgid "Reservation"
+msgstr ""
+
+msgid "Reset Graphs"
 msgstr ""
 
 msgid "Resistance caused by friction in mechanical parts while operating."
@@ -6353,6 +6502,11 @@ msgstr ""
 msgid "Select the FreeBSD package to be installed."
 msgstr "설치할 FreeBSD 패키지를 선택하십시오."
 
+msgid ""
+"Select the interface (only selectable if your server has more than one) to "
+"use for the source IP address in outgoing packets."
+msgstr ""
+
 msgid "Select the language of the WebGUI."
 msgstr ""
 
@@ -6380,6 +6534,12 @@ msgstr ""
 
 msgid "Selected file isn't an valid ISO file."
 msgstr "선택된 파일은 유효한 ISO 파일이 아닙니다."
+
+msgid "Selected graph:"
+msgstr ""
+
+msgid "Selected interface:"
+msgstr ""
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr ""
@@ -6545,6 +6705,12 @@ msgid "Show UPS Information"
 msgstr ""
 
 msgid "Show log entries in reverse order (newest entries on top)."
+msgstr ""
+
+#, php-format
+msgid ""
+"Show positive/negative values for %s graphs (can not be used together with "
+"logarithmic scaling)."
 msgstr ""
 
 msgid "Shutdown"
@@ -6757,6 +6923,32 @@ msgstr ""
 
 msgid "Static routes"
 msgstr "스태틱 라우트"
+
+msgid "Statistics for CPU frequency."
+msgstr ""
+
+msgid "Statistics for CPU temperature."
+msgstr ""
+
+msgid ""
+"Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
+"voltage and the UPS status (online, on battery, charging and offline)."
+msgstr ""
+
+msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
+msgstr ""
+
+msgid "Statistics for average system load for 1, 5 and 15 minute periods."
+msgstr ""
+
+msgid "Statistics for disk (mount point) usage."
+msgstr ""
+
+msgid "Statistics for incoming/outgoing bits/second for network interfaces."
+msgstr ""
+
+msgid "Statistics for network latency."
+msgstr ""
 
 msgid "Status"
 msgstr "상태"
@@ -7364,6 +7556,15 @@ msgid ""
 "The default format is %s used for ZFS auto snapshot."
 msgstr ""
 
+#, php-format
+msgid ""
+"The data directory holds the statistical data for the graphs. This should be "
+"set to a %s to prevent a disk spinning all the time."
+msgstr ""
+
+msgid "The data directory must be set to a directory <b>below</b> /mnt."
+msgstr ""
+
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr "기본 SMTP 메일 서버 포트. 예 25나 587."
 
@@ -7842,6 +8043,9 @@ msgstr "이 인자들은 %s의 전역 설정에 추가될 것입니다."
 msgid ""
 "These parameters will be added to the module configuration in rsyncd.conf."
 msgstr "이들 인자들이 rsyncd.conf의 모듈 설정에 추가될 것입니다."
+
+msgid "These parameters will be added to the ping command."
+msgstr ""
 
 msgid ""
 "This Bridge cannot be deleted because it is still being used as an interface."
@@ -8491,6 +8695,14 @@ msgstr ""
 msgid "UPS goes on battery"
 msgstr "UPS가 배터리 상태로 갔습니다"
 
+msgid "UPS identifier and IP address"
+msgstr ""
+
+msgid ""
+"UPS identifier and host IP address of the machine where the UPS is connected "
+"to (this can be also a remote host)."
+msgstr ""
+
 msgid "UPS model"
 msgstr ""
 
@@ -8613,6 +8825,9 @@ msgid "Upload directory of the webserver. The default is %s."
 msgstr ""
 
 msgid "Upper"
+msgstr ""
+
+msgid "Uptime"
 msgstr ""
 
 msgid ""
@@ -8838,6 +9053,9 @@ msgstr "가상 장치"
 msgid "VirtualBox"
 msgstr ""
 
+msgid "Virtualization"
+msgstr ""
+
 msgid "Volume"
 msgstr ""
 
@@ -9025,6 +9243,9 @@ msgstr ""
 msgid "Xen Virtual Machine"
 msgstr ""
 
+msgid "Y-axis range"
+msgstr ""
+
 msgid "Yes"
 msgstr "예"
 
@@ -9117,6 +9338,9 @@ msgid "ZFS"
 msgstr "ZFS"
 
 msgid "ZFS ACL"
+msgstr ""
+
+msgid "ZFS ARC"
 msgstr ""
 
 msgid "ZFS Dataset Information & Status"
@@ -9245,6 +9469,13 @@ msgstr "마운트"
 msgid "mount point"
 msgstr ""
 
+msgid "must be defined!"
+msgstr ""
+
+#, php-format
+msgid "must be in the format: %s."
+msgstr ""
+
 msgid "n/a"
 msgstr "n/a"
 
@@ -9274,6 +9505,9 @@ msgstr "타젯 스캔이 실패했습니다."
 
 msgid "second(s)"
 msgstr "초"
+
+msgid "seconds"
+msgstr ""
 
 msgid "smallest settable high voltage transfer point"
 msgstr ""

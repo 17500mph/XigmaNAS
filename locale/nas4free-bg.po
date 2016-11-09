@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-07 11:16+0000\n"
+"POT-Creation-Date: 2016-11-08 18:51+0000\n"
 "PO-Revision-Date: 2016-11-06 21:25+0000\n"
 "Last-Translator: acidlord <acidlord_34@abv.bg>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-07 11:09+0000\n"
+"X-Launchpad-Export-Date: 2016-11-09 09:01+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "X-Poedit-Country: BULGARIA\n"
 "Language: \n"
@@ -108,6 +108,13 @@ msgstr "%sB свободни от %sB"
 #, php-format
 msgid "%sB used of %sB"
 msgstr "%sB използвани от %sB"
+
+#, php-format
+msgid ""
+"'%s' deletes all the data for selected statistics. If only a certain "
+"statistic needs to be reset, clear all other check boxes before performing "
+"'%s'."
+msgstr ""
 
 msgid "(Change if needed)"
 msgstr "(Промени при необходимост)"
@@ -645,6 +652,9 @@ msgstr "Ниво на Тревога"
 msgid "All"
 msgstr "Всички"
 
+msgid "All data from the following statistics have been deleted:"
+msgstr ""
+
 msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
 "an empty UFS directory is recommended."
@@ -950,6 +960,12 @@ msgstr "Автоматичен размер"
 msgid "AutoScale"
 msgstr "AutoScale"
 
+msgid "Autoscale"
+msgstr ""
+
+msgid "Autoscale for graphs."
+msgstr ""
+
 msgid "Autoselect"
 msgstr "Автоматичен избор"
 
@@ -964,6 +980,9 @@ msgstr "Налично"
 
 msgid "Available"
 msgstr "Налични"
+
+msgid "Available graphs"
+msgstr ""
 
 msgid ""
 "Average performance of seek operations of the magnetic heads. If this "
@@ -1161,6 +1180,9 @@ msgid "By default, only already existing files can be uploaded."
 msgstr ""
 "По подразбиране, само вече съществуващи файлове могат да бъдат качвани."
 
+msgid "Bytes/sec"
+msgstr ""
+
 msgid "CACHE"
 msgstr "КЕШ"
 
@@ -1233,8 +1255,17 @@ msgstr "CP949 (Корейски)"
 msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Традиционен Китайски Big5)"
 
+msgid "CPU Frequency"
+msgstr ""
+
 msgid "CPU Load"
 msgstr "Натоварване на процесора"
+
+msgid "CPU Temperature"
+msgstr ""
+
+msgid "CPU Usage"
+msgstr ""
 
 msgid "CPU frequency"
 msgstr "CPU честота"
@@ -1925,6 +1956,9 @@ msgstr "Датски"
 msgid "Data digest"
 msgstr "Справочник на данни"
 
+msgid "Data directory"
+msgstr ""
+
 msgid "Data integrity"
 msgstr "Цялост на данните"
 
@@ -1995,6 +2029,10 @@ msgid ""
 msgstr ""
 
 msgid "Default Device Settings"
+msgstr ""
+
+#, php-format
+msgid "Default is %s %s."
 msgstr ""
 
 #, php-format
@@ -2189,6 +2227,9 @@ msgstr "Целеви e-mail адрес."
 msgid "Destination email address. Separate email addresses by semi-colon."
 msgstr "Целеви e-mail адрес. Разделете e-mail адресите с точка и запетая."
 
+msgid "Destination host name or IP address."
+msgstr ""
+
 msgid "Destination host name or IP number."
 msgstr "Целево Име или IP номер"
 
@@ -2221,6 +2262,9 @@ msgid "Detach a data device from a mirror"
 msgstr ""
 
 msgid "Detach a log device from a mirrored log"
+msgstr ""
+
+msgid "Detailed"
 msgstr ""
 
 msgid "Detected"
@@ -2313,6 +2357,10 @@ msgstr "Направление"
 msgid "Directory"
 msgstr "Папка"
 
+#, php-format
+msgid "Directory %s doesn't exist!"
+msgstr ""
+
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr "Директория за незавършени файлове. Празно поле означава забранено."
 
@@ -2383,8 +2431,14 @@ msgstr "Диск"
 msgid "Disk Selection"
 msgstr "Избор на Диск"
 
+msgid "Disk Usage"
+msgstr ""
+
 msgid "Disk space usage"
 msgstr "Заето място на диска"
+
+msgid "Disk usage"
+msgstr ""
 
 msgid "Disks"
 msgstr "Дискове"
@@ -2403,6 +2457,24 @@ msgstr "Монитор"
 
 msgid "Display ZFS command history"
 msgstr "Покажи историята на ZFS командите"
+
+msgid ""
+"Displays a percentage of time spent in each of the processor states (user, "
+"nice, system, interrupt, idle)."
+msgstr ""
+
+msgid ""
+"Displays information about memory allocation (active, inact, wired, cache, "
+"buf, free, swap used, swap free)."
+msgstr ""
+
+msgid "Displays the length of time the system has been up."
+msgstr ""
+
+msgid ""
+"Displays the number of processes in each state (total, running, sleeping, "
+"waiting, starting, stopped, zombie)."
+msgstr ""
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -2428,6 +2500,9 @@ msgstr ""
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
 "cleared and overwritten."
+msgstr ""
+
+msgid "Do you really want to delete all data from the selected statistics?"
 msgstr ""
 
 msgid "Do you really want to delete all rules?"
@@ -3581,6 +3656,13 @@ msgstr ""
 msgid "Graph shows last 120 seconds"
 msgstr ""
 
+#, php-format
+msgid "Graph updates every %d seconds"
+msgstr ""
+
+msgid "Graphs height"
+msgstr ""
+
 msgid "Greek"
 msgstr ""
 
@@ -3682,6 +3764,10 @@ msgid ""
 "Height of heads above the disk surface. A flying height that's too low "
 "increases the chances of a head crash while a flying height that's too high "
 "increases the chances of a read/write error."
+msgstr ""
+
+#, php-format
+msgid "Height of the graphs. Default is %s pixel."
 msgstr ""
 
 msgid "Help"
@@ -3865,6 +3951,11 @@ msgid ""
 "If default root is enabled, a chroot operation is performed immediately "
 "after a client authenticates. This can be used to effectively isolate the "
 "client from a portion of the host system filespace."
+msgstr ""
+
+msgid ""
+"If enabled the network throughput is displayed in Bytes/sec rather than "
+"Bits/sec."
 msgstr ""
 
 msgid ""
@@ -4315,6 +4406,9 @@ msgid ""
 "been tested in an excessive temperature condition, otherwise 100."
 msgstr ""
 
+msgid "Latency"
+msgstr ""
+
 #, php-format
 msgid "Latest Beta Build: %s"
 msgstr ""
@@ -4410,6 +4504,9 @@ msgstr ""
 msgid "Load"
 msgstr "Зареди"
 
+msgid "Load Averages"
+msgstr ""
+
 msgid "Load averages"
 msgstr "Средно натоварване"
 
@@ -4493,6 +4590,15 @@ msgid "Log order"
 msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
+msgstr ""
+
+msgid "Logarithmic scaling"
+msgstr ""
+
+#, php-format
+msgid ""
+"Logarithmic y-axis scaling for %s graphs (can not be used together with "
+"positive/negative y-axis range)."
 msgstr ""
 
 msgid "Logical Block Length"
@@ -4749,7 +4855,13 @@ msgstr ""
 msgid "Member Interface"
 msgstr ""
 
+msgid "Memory"
+msgstr ""
+
 msgid "Memory (MiB)"
+msgstr ""
+
+msgid "Memory Usage"
 msgstr ""
 
 msgid "Memory usage"
@@ -4985,9 +5097,18 @@ msgstr ""
 msgid "Network File System"
 msgstr ""
 
+msgid "Network Latency"
+msgstr ""
+
+msgid "Network Traffic"
+msgstr ""
+
 msgid ""
 "Network authorised to access to the iSCSI target. It takes IP or CIDR "
 "addresses or 'ALL' for any IPs."
+msgstr ""
+
+msgid "Network latency"
 msgstr ""
 
 msgid "Network mask"
@@ -4997,6 +5118,9 @@ msgid "Network port"
 msgstr "мрежов порт"
 
 msgid "Network that is authorised to access the NFS share."
+msgstr ""
+
+msgid "Network traffic"
 msgstr ""
 
 msgid "Networks"
@@ -5594,6 +5718,10 @@ msgstr ""
 msgid "Please add new pools first."
 msgstr ""
 
+#, php-format
+msgid "Please check the %s documentation%s."
+msgstr ""
+
 msgid "Please check the documentation"
 msgstr ""
 
@@ -5905,6 +6033,18 @@ msgstr ""
 msgid "RAW info"
 msgstr ""
 
+msgid "RRDGraphs"
+msgstr ""
+
+#, php-format
+msgid ""
+"RRDGraphs needs at least read & execute permissions at the mount point for "
+"directory %s! Set the Read and Execute bits for Others (Access Restrictions "
+"| Mode) for the mount point %s (in <a href='disks_mount.php'>Disks | Mount "
+"Point | Management</a> or <a href='disks_zfs_dataset.php'>Disks | ZFS | "
+"Datasets</a>) and hit Save in order to take them effect."
+msgstr ""
+
 msgid "RSYNC"
 msgstr ""
 
@@ -6002,6 +6142,12 @@ msgid "Recycle bin"
 msgstr ""
 
 msgid "Refresh"
+msgstr ""
+
+msgid "Refresh time"
+msgstr ""
+
+msgid "Refresh time for graph pages."
 msgstr ""
 
 msgid "Reject"
@@ -6117,6 +6263,9 @@ msgid "Rescan interval"
 msgstr ""
 
 msgid "Reservation"
+msgstr ""
+
+msgid "Reset Graphs"
 msgstr ""
 
 msgid "Resistance caused by friction in mechanical parts while operating."
@@ -6485,6 +6634,11 @@ msgstr ""
 msgid "Select the FreeBSD package to be installed."
 msgstr ""
 
+msgid ""
+"Select the interface (only selectable if your server has more than one) to "
+"use for the source IP address in outgoing packets."
+msgstr ""
+
 msgid "Select the language of the WebGUI."
 msgstr ""
 
@@ -6511,6 +6665,12 @@ msgid "Selected device or label does not exist."
 msgstr ""
 
 msgid "Selected file isn't an valid ISO file."
+msgstr ""
+
+msgid "Selected graph:"
+msgstr ""
+
+msgid "Selected interface:"
 msgstr ""
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
@@ -6675,6 +6835,12 @@ msgid "Show UPS Information"
 msgstr ""
 
 msgid "Show log entries in reverse order (newest entries on top)."
+msgstr ""
+
+#, php-format
+msgid ""
+"Show positive/negative values for %s graphs (can not be used together with "
+"logarithmic scaling)."
 msgstr ""
 
 msgid "Shutdown"
@@ -6886,6 +7052,32 @@ msgstr ""
 
 msgid "Static routes"
 msgstr "Статични пътища"
+
+msgid "Statistics for CPU frequency."
+msgstr ""
+
+msgid "Statistics for CPU temperature."
+msgstr ""
+
+msgid ""
+"Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
+"voltage and the UPS status (online, on battery, charging and offline)."
+msgstr ""
+
+msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
+msgstr ""
+
+msgid "Statistics for average system load for 1, 5 and 15 minute periods."
+msgstr ""
+
+msgid "Statistics for disk (mount point) usage."
+msgstr ""
+
+msgid "Statistics for incoming/outgoing bits/second for network interfaces."
+msgstr ""
+
+msgid "Statistics for network latency."
+msgstr ""
 
 msgid "Status"
 msgstr "Състояние"
@@ -7488,6 +7680,15 @@ msgid ""
 "The default format is %s used for ZFS auto snapshot."
 msgstr ""
 
+#, php-format
+msgid ""
+"The data directory holds the statistical data for the graphs. This should be "
+"set to a %s to prevent a disk spinning all the time."
+msgstr ""
+
+msgid "The data directory must be set to a directory <b>below</b> /mnt."
+msgstr ""
+
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr ""
 
@@ -7962,6 +8163,9 @@ msgstr ""
 
 msgid ""
 "These parameters will be added to the module configuration in rsyncd.conf."
+msgstr ""
+
+msgid "These parameters will be added to the ping command."
 msgstr ""
 
 msgid ""
@@ -8592,6 +8796,14 @@ msgstr ""
 msgid "UPS goes on battery"
 msgstr ""
 
+msgid "UPS identifier and IP address"
+msgstr ""
+
+msgid ""
+"UPS identifier and host IP address of the machine where the UPS is connected "
+"to (this can be also a remote host)."
+msgstr ""
+
 msgid "UPS model"
 msgstr ""
 
@@ -8714,6 +8926,9 @@ msgid "Upload directory of the webserver. The default is %s."
 msgstr ""
 
 msgid "Upper"
+msgstr ""
+
+msgid "Uptime"
 msgstr ""
 
 msgid ""
@@ -8936,6 +9151,9 @@ msgstr ""
 msgid "VirtualBox"
 msgstr ""
 
+msgid "Virtualization"
+msgstr ""
+
 msgid "Volume"
 msgstr ""
 
@@ -9122,6 +9340,9 @@ msgstr ""
 msgid "Xen Virtual Machine"
 msgstr ""
 
+msgid "Y-axis range"
+msgstr ""
+
 msgid "Yes"
 msgstr "Да"
 
@@ -9215,6 +9436,9 @@ msgid "ZFS"
 msgstr ""
 
 msgid "ZFS ACL"
+msgstr ""
+
+msgid "ZFS ARC"
 msgstr ""
 
 msgid "ZFS Dataset Information & Status"
@@ -9343,6 +9567,13 @@ msgstr ""
 msgid "mount point"
 msgstr ""
 
+msgid "must be defined!"
+msgstr ""
+
+#, php-format
+msgid "must be in the format: %s."
+msgstr ""
+
 msgid "n/a"
 msgstr "няма"
 
@@ -9372,6 +9603,9 @@ msgstr ""
 
 msgid "second(s)"
 msgstr "секунди(s)"
+
+msgid "seconds"
+msgstr ""
 
 msgid "smallest settable high voltage transfer point"
 msgstr ""
