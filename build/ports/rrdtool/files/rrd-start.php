@@ -1,11 +1,8 @@
 <?php
 /* 
-    rrd-start.php
+	rrd-start.php
 
-    Copyright (c) 2015 - 2016 Andreas Schmidhuber, RRDTool portion by Snunn1
-    All rights reserved.
-
-	Portions of NAS4Free (http://www.nas4free.org).
+	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
@@ -14,6 +11,7 @@
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -35,7 +33,7 @@
  */
 require_once("config.inc");
 
-$runtime_dir = "/usr/local/share/rrdgraphs/bin/rrdgraphs";
+$runtime_dir = "/usr/local/share/rrdgraphs/bin/";
 
 if (isset($config['rrdgraphs']['enable'])) { 
     exec("logger rrdgraphs: enabled, starting ...");
