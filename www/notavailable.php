@@ -31,13 +31,36 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array("Not", "YET", "AVAILABLE");
+if($_POST) {
+	header('Location: index.php');
+	exit;
+}
+$pgtitle = [gtext('NOT YET AVAILABLE')];
 ?>
-<?php include("fbegin.inc");?>
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-	<?php html_titleline(gtext("NOT YET AVAILABLE"));?>
-</table>
-<?php include("fend.inc");?>
+<?php include 'fbegin.inc';?>
+<script type="text/javascript">
+//<![CDATA[
+$(window).on("load", function() {
+<?php	// Init spinner onsubmit()?>
+	$("#iform").submit(function() { spinner(); });
+});
+//]]>
+</script>
+<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
+	<table id="area_data_selection">
+		<colgroup>
+			<col style="width:100%">
+		</colgroup>
+		<thead>
+			<?php html_titleline2(gtext('NOT YET AVAILABLE'), 1);?>
+		</thead>
+	</table>
+	<div id="submit">
+		<?=html_button_cancel(gtext('Continue'));?>
+	</div>
+	<?php require 'formend.inc';?>
+</form></td></tr></tbody></table>
+<?php include 'fend.inc';?>
