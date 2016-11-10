@@ -967,4 +967,32 @@ class HTMLFolderBox12 extends HTMLFolderBox2 {
 		echo "    <input name='{$ctrlname}changebtn' type='button' class='formbtn' id='{$ctrlname}changebtn' value='".gtext("Change")."' onclick='onclick_change_{$ctrlname}()' />\n";
 	}
 }
+class co_DOMElement extends DOMElement {
+	public function addAttributes($attributes = []) {
+		foreach($attributes as $key => $value) {
+			$this->setAttribute($key, $value);
+		}
+		return $this;
+	}
+	public function addElement(string $name, array $attributes = [], string $value = NULL, string $namespaceURI = NULL) {
+		$node = $this->appendChild(new co_DOMElement($name, $value, $namespaceURI));
+		$node->addAttributes($attributes);
+		return $node;
+	}
+}
+class co_DOMDocument extends DOMDocument {
+	public function __construct(string $version = '1.0', string $encoding = 'UTF-8') {
+		parent::__construct($version, $encoding);
+		$this->formatOutput = true;
+		$this->registerNodeClass('DOMElement', 'co_DOMElement');
+	}
+	public function addElement(string $name, array $attributes = [], string $value = NULL, string $namespaceURI = NULL) {
+		$node = $this->appendChild(new co_DOMElement($name, $value, $namespaceURI));
+		$node->addAttributes($attributes);
+		return $node;
+	}
+	public function render() {
+		return $this->saveHTML();
+	}
+}
 ?>
