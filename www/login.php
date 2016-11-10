@@ -73,15 +73,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <?php header("Content-Type: text/html; charset=" . system_get_language_codeset());?>
 <?php
-function gentitle($title) {
-	$navlevelsep = "|"; // Navigation level separator string.
-	//return join($navlevelsep, $title);
+function gentitle(array $title = []) {
+	$navlevelsep = htmlspecialchars(' > '); // Navigation level separator string.
+	return implode($navlevelsep, $title);
 }
-
-function genhtmltitle($title) {
-	return system_get_hostname() . " - " . gentitle($title);
+function genhtmltitle(array $title = []) {
+	return htmlspecialchars(system_get_hostname()) . (empty($title) ? '' : ' - ' . gentitle($title));
 }
-
 // Menu items.
 // Info and Manual
 $menu['info']['desc'] = gtext('Information & Manuals');
@@ -151,7 +149,7 @@ function display_menu($menuid) {
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=system_get_language_code();?>" lang="<?=system_get_language_code();?>">
 <head>
-	<title><?=htmlspecialchars(genhtmltitle(isset($pgtitle) ? $pgtitle : ""));?></title>
+	<title><?=genhtmltitle($pgtitle ?? []);?></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=<?=system_get_language_codeset();?>" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />

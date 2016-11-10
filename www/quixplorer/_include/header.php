@@ -46,15 +46,13 @@ if (!Session::isLogin()) {
 	exit;
 }
 // Navigation level separator string.
-function gentitle($title) {
-	$navlevelsep = "|";
-	return join($navlevelsep, $title);
+function gentitle(array $title = []) {
+	$navlevelsep = htmlspecialchars(' > '); // Navigation level separator string.
+	return implode($navlevelsep, $title);
 }
-
-function genhtmltitle($title) {
-	return system_get_hostname() . " - " . gentitle($title);
+function genhtmltitle(array $title = []) {
+	return htmlspecialchars(system_get_hostname()) . (empty($title) ? '' : ' - ' . gentitle($title));
 }
-
 // Menu items.
 // System
 $menu['system']['desc'] = gtext("System");
@@ -275,6 +273,7 @@ function include_ext_menu() {
 function show_header($title, $additional_header_content = null)
 {
     global $site_name, $g, $config;
+	$pgtitle = [gtext('Advanced'), gtext('File Manager')];
 
 	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 	header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
@@ -287,7 +286,7 @@ function show_header($title, $additional_header_content = null)
 	echo "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"".system_get_language_code()."\" lang=\"".system_get_language_code()."\" dir=\"".$GLOBALS["text_dir"]."\">\n";
 	echo "<head>\n";
 	echo "<meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"".$GLOBALS["charset"]."\">\n";
-	echo "<title>".$config['system']['hostname'].".".$config['system']['domain']." - File Manager</title>\n";
+	echo "<title>", genhtmltitle($pgtitle ?? []), "</title>\n";
 	if (isset($pgrefresh) && $pgrefresh):
 		echo "<meta http-equiv='refresh' content=\"".$pgrefresh."\"/>\n";
 	endif;
@@ -353,7 +352,6 @@ function show_header($title, $additional_header_content = null)
 	echo "</div>\n";
 	echo '<div id="pagecontent">';
 	// QuiXplorer Header
-	$pgtitle = [gtext('Advanced'), gtext('File Manager')];
 	if (!isset($pgtitle_omit) || !$pgtitle_omit) {
 		echo '<p class="pgtitle">', gentitle($pgtitle), "</p>\n";
 	}
