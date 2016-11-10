@@ -142,7 +142,7 @@ HOME=/var/log
 
 	# RRDGraps Auto Update 5 minutes
 	if [ 0 -lt `configxml_get_count "//rrdgraphs/enable"` ]; then
-		echo "# RRDGraps Auto Update" >> ${cron_config}
+		echo "# rrdgraphsautautopdate" >> ${cron_config}
 		echo   "0,5,10,15,20,25,30,35,40,45,50,55 * * * * root /usr/local/share/rrdgraphs/bin/rrd-update.sh" >> ${cron_config}
 	fi
 
