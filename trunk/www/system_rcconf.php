@@ -31,8 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
 $sphere_scriptname = basename(__FILE__);
 $sphere_scriptname_child = 'system_rcconf_edit.php';
@@ -58,17 +58,6 @@ $gt_selection_disable = gtext('Disable Selected Options');
 $gt_selection_disable_confirm = gtext('Do you want to disable selected options?');
 $gt_selection_delete = gtext('Delete Selected Options');
 $gt_selection_delete_confirm = gtext('Do you want to delete selected options?');
-$img_path = [
-	'add' => 'images/add.png',
-	'mod' => 'images/edit.png',
-	'del' => 'images/delete.png',
-	'loc' => 'images/locked.png',
-	'unl' => 'images/unlocked.png',
-	'mai' => 'images/maintain.png',
-	'inf' => 'images/info.png',
-	'ena' => 'images/status_enabled.png',
-	'dis' => 'images/status_disabled.png'
-];
 
 // sunrise: verify if setting exists, otherwise run init tasks
 if (!(isset($config['system']) && is_array($config['system']))) {
@@ -103,102 +92,104 @@ if ($_POST) {
 		header($sphere_header);
 		exit;
 	}
-	if (isset($_POST['enable_selected_rows']) && $_POST['enable_selected_rows']) {
-		$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
-		$updateconfig = false;
-		foreach ($checkbox_member_array as $checkbox_member_record) {
-			if (false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
-				if (!(isset($sphere_array[$index]['enable']))) {
-					$sphere_array[$index]['enable'] = true;
-					$updateconfig = true;
-					$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index]['uuid']);
-					if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
-						updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_array[$index]['uuid']);
+	if(isset($_POST['submit'])) {
+		switch( $_POST['submit']) {
+			case 'rows.enable':
+				$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
+				$updateconfig = false;
+				foreach ($checkbox_member_array as $checkbox_member_record) {
+					if (false !== ($index_uuid = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
+						if (!(isset($sphere_array[$index_uuid]['enable']))) {
+							$sphere_array[$index_uuid]['enable'] = true;
+							$updateconfig = true;
+							$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index_uuid]['uuid']);
+							if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
+								updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_array[$index_uuid]['uuid']);
+							}
+						}
 					}
 				}
-			}
-		}
-		if ($updateconfig) {
-			write_config();
-			$updateconfig = false;
-		}
-		header($sphere_header);
-		exit;
-	}
-	if (isset($_POST['disable_selected_rows']) && $_POST['disable_selected_rows']) {
-		$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
-		$updateconfig = false;
-		foreach ($checkbox_member_array as $checkbox_member_record) {
-			if (false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
-				if (isset($sphere_array[$index]['enable'])) {
-					unset($sphere_array[$index]['enable']);
-					$updateconfig = true;
-					$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index]['uuid']);
-					if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
-						updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_array[$index]['uuid']);
+				if ($updateconfig) {
+					write_config();
+					$updateconfig = false;
+				}
+				header($sphere_header);
+				exit;
+				break;
+			case 'rows.disable':
+				$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
+				$updateconfig = false;
+				foreach ($checkbox_member_array as $checkbox_member_record) {
+					if (false !== ($index_uuid = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
+						if (isset($sphere_array[$index_uuid]['enable'])) {
+							unset($sphere_array[$index_uuid]['enable']);
+							$updateconfig = true;
+							$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index_uuid]['uuid']);
+							if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
+								updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_array[$index_uuid]['uuid']);
+							}
+						}
 					}
 				}
-			}
-		}
-		if ($updateconfig) {
-			write_config();
-			$updateconfig = false;
-		}
-		header($sphere_header);
-		exit;
-	}
-	if (isset($_POST['toggle_selected_rows']) && $_POST['toggle_selected_rows']) {
-		$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
-		$updateconfig = false;
-		foreach ($checkbox_member_array as $checkbox_member_record) {
-			if (false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
-				if (isset($sphere_array[$index]['enable'])) {
-					unset($sphere_array[$index]['enable']);
-				} else {
-					$sphere_array[$index]['enable'] = true;
+				if ($updateconfig) {
+					write_config();
+					$updateconfig = false;
 				}
-				$updateconfig = true;
-				$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index]['uuid']);
-				if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
-					updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_array[$index]['uuid']);
+				header($sphere_header);
+				exit;
+				break;
+			case 'rows.toggle':
+				$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
+				$updateconfig = false;
+				foreach ($checkbox_member_array as $checkbox_member_record) {
+					if (false !== ($index_uuid = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
+						if (isset($sphere_array[$index_uuid]['enable'])) {
+							unset($sphere_array[$index_uuid]['enable']);
+						} else {
+							$sphere_array[$index_uuid]['enable'] = true;
+						}
+						$updateconfig = true;
+						$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index_uuid]['uuid']);
+						if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
+							updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_array[$index_uuid]['uuid']);
+						}
+					}
 				}
-			}
-		}
-		if ($updateconfig) {
-			write_config();
-			$updateconfig = false;
-		}
-		header($sphere_header);
-		exit;
-	}
-	if (isset($_POST['delete_selected_rows']) && $_POST['delete_selected_rows']) {
-		$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
-		foreach ($checkbox_member_array as $checkbox_member_record) {
-			if (false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
-				$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index]['uuid']);
-				switch ($mode_updatenotify) {
-					case UPDATENOTIFY_MODE_NEW:  
-						updatenotify_clear($sphere_notifier, $sphere_array[$index]['uuid']);
-						updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY_CONFIG, $sphere_array[$index]['uuid']);
-						break;
-					case UPDATENOTIFY_MODE_MODIFIED:
-						updatenotify_clear($sphere_notifier, $sphere_array[$index]['uuid']);
-						updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY, $sphere_array[$index]['uuid']);
-						break;
-					case UPDATENOTIFY_MODE_UNKNOWN:
-						updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY, $sphere_array[$index]['uuid']);
-						break;
+				if ($updateconfig) {
+					write_config();
+					$updateconfig = false;
 				}
-			}
+				header($sphere_header);
+				exit;
+				break;
+			case 'rows.delete':
+				$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
+				foreach ($checkbox_member_array as $checkbox_member_record) {
+					if (false !== ($index_uuid = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
+						$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index_uuid]['uuid']);
+						switch ($mode_updatenotify) {
+							case UPDATENOTIFY_MODE_NEW:  
+								updatenotify_clear($sphere_notifier, $sphere_array[$index_uuid]['uuid']);
+								updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY_CONFIG, $sphere_array[$index_uuid]['uuid']);
+								break;
+							case UPDATENOTIFY_MODE_MODIFIED:
+								updatenotify_clear($sphere_notifier, $sphere_array[$index_uuid]['uuid']);
+								updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY, $sphere_array[$index_uuid]['uuid']);
+								break;
+							case UPDATENOTIFY_MODE_UNKNOWN:
+								updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY, $sphere_array[$index_uuid]['uuid']);
+								break;
+						}
+					}
+				}
+				header($sphere_header);
+				exit;
+				break;
 		}
-		header($sphere_header);
-		exit;
 	}
 }
-
 function rcconf_process_updatenotification($mode, $data) {
 	global $config;
-
 	$retval = 0;
 
 	switch ($mode) {
@@ -207,19 +198,18 @@ function rcconf_process_updatenotification($mode, $data) {
 			break;
 		case UPDATENOTIFY_MODE_DIRTY:
 			if (is_array($config['system']['rcconf']['param'])) {
-				$index = array_search_ex($data, $config['system']['rcconf']['param'], 'uuid');
-				if (false !== $index) {
-					mwexec2("/usr/local/sbin/rconf attribute remove {$config['system']['rcconf']['param'][$index]['name']}");
-					unset($config['system']['rcconf']['param'][$index]);
+				if (false !== ($index_uuid = array_search_ex($data, $config['system']['rcconf']['param'], 'uuid'))) {
+					$cmd = sprintf('/usr/local/sbin/rconf attribute remove %s', escapeshellarg($config['system']['rcconf']['param'][$index_uuid]['name']));
+					mwexec2($cmd);
+					unset($config['system']['rcconf']['param'][$index_uuid]);
 					write_config();
 				}
 			}
 			break;
 		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
 			if (is_array($config['system']['rcconf']['param'])) {
-				$index = array_search_ex($data, $config['system']['rcconf']['param'], 'uuid');
-				if (false !== $index) {
-					unset($config['system']['rcconf']['param'][$index]);
+				if(false !== ($index_uuid = array_search_ex($data, $config['system']['rcconf']['param'], 'uuid'))) {
+					unset($config['system']['rcconf']['param'][$index_uuid]);
 					write_config();
 				}
 			}
@@ -227,15 +217,14 @@ function rcconf_process_updatenotification($mode, $data) {
 	}
 	return $retval;
 }
-
 $enabletogglemode = isset($config['system']['enabletogglemode']);
 $pgtitle = array(gtext('System'), gtext('Advanced'), gtext('rc.conf'));
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
-	// Init action buttons
+<?php // Init action buttons.?>
 	<?php if ($enabletogglemode):?>
 		$("#toggle_selected_rows").click(function () {
 			return confirm('<?=$gt_selection_toggle_confirm;?>');
@@ -251,16 +240,20 @@ $(window).on("load", function() {
 	$("#delete_selected_rows").click(function () {
 		return confirm('<?=$gt_selection_delete_confirm;?>');
 	});
-	// Disable action buttons.
+<?php // Disable action buttons.?>
 	disableactionbuttons(true);
-	// Init toggle checkbox
+<?php // Init toggle checkbox.?>
 	$("#togglemembers").click(function() {
 		togglecheckboxesbyname(this, "<?=$checkbox_member_name;?>[]");
 	});
-	// Init member checkboxes
+<?php // Init member checkboxes.?>
 	$("input[name='<?=$checkbox_member_name;?>[]").click(function() {
 		controlactionbuttons(this, '<?=$checkbox_member_name;?>[]');
 	});
+<?php // Init spinner on submit for id form.?>
+	$("#iform").submit(function() { spinner(); });
+<?php // Init spinner on click for class spin.?>
+	$(".spin").click(function() { spinner(); });
 }); 
 function disableactionbuttons(ab_disable) {
 	var ab_element;
@@ -320,7 +313,7 @@ function controlactionbuttons(ego, triggerbyname) {
 		<li class="tabinact"><a href="system_sysctl.php"><span><?=gtext('sysctl.conf');?></span></a></li>
 	</ul></td></tr>
 </tbody></table>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iframe" name="iframe">
+<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iform" name="iform">
 	<?php
 		if (!empty($savemsg)) {
 			print_info_box($savemsg);
@@ -354,10 +347,7 @@ function controlactionbuttons(ego, triggerbyname) {
 			</tr>
 		</thead>
 		<tfoot>
-			<tr>
-				<td class="lcenl" colspan="5"></td>
-				<td class="lceadd"><a href="<?=$sphere_scriptname_child;?>"><img src="<?=$img_path['add'];?>" title="<?=$gt_record_add;?>" border="0" alt="<?=$gt_record_add;?>"/></a></td>
-			</tr>
+			<?=html_row_add($sphere_scriptname_child, $gt_record_add, 6);?>
 		</tfoot>
 		<tbody>
 			<?php foreach ($sphere_array as $sphere_record):?>
@@ -370,35 +360,27 @@ function controlactionbuttons(ego, triggerbyname) {
 					?>
 					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
 						<?php if ($notdirty && $notprotected):?>
-							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" onclick="javascript:controlactionbuttons(this,'<?=$checkbox_member_name;?>[]')"/>
+							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
 						<?php else:?>
 							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" disabled="disabled"/>
 						<?php endif;?>
 					</td>
-					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['name']);?>&nbsp;</td>
-					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['value']);?>&nbsp;</td>
-					<td class="<?=$enabled ? "lcell" : "lcelld";?>">
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['name']);?></td>
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['value']);?></td>
+					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
 						<?php if ($enabled):?>
-							<a title="<?=gtext('Enabled');?>"><center><img src="<?=$img_path['ena'];?>" border="0" alt=""/></center></a>
+							<a title="<?=gtext('Enabled');?>"><img src="<?=$g_img['ena'];?>" alt=""/></a>
 						<?php else:?>
-							<a title="<?=gtext('Disabled');?>"><center><img src="<?=$img_path['dis'];?>" border="0" alt=""/></center></a>
+							<a title="<?=gtext('Disabled');?>"><img src="<?=$g_img['dis'];?>" alt=""/></a>
 						<?php endif;?>
 					</td>
-					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?= htmlspecialchars($sphere_record['comment']);?>&nbsp;</td>
-
+					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['comment']);?></td>
 					<td class="lcebld">
-						<table id="area_data_selection_toolbox"><tbody><tr>
-							<td>
-								<?php if ($notdirty && $notprotected):?>
-									<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
-								<?php else:?>
-									<?php if ($notprotected):?>
-										<img src="<?=$img_path['del'];?>" title="<?=$gt_record_del;?>" alt="<?=$gt_record_del;?>"/>
-									<?php else:?>
-										<img src="<?=$img_path['loc'];?>" title="<?=$gt_record_loc;?>" alt="<?=$gt_record_loc;?>"/>
-									<?php endif;?>
-								<?php endif;?>
-							</td>
+						<table class="area_data_selection_toolbox"><tbody><tr>
+							<?php
+							$helpinghand = sprintf('%s?uuid=%s', $sphere_scriptname_child, $sphere_record['uuid']);
+							echo html_row_toolbox($helpinghand, $gt_record_mod, $gt_record_del, $gt_record_loc, $notprotected, $notdirty);
+							?>
 							<td></td>
 							<td></td>
 						</tr></tbody></table>
@@ -408,17 +390,19 @@ function controlactionbuttons(ego, triggerbyname) {
 		</tbody>
 	</table>
 	<div id="submit">
-		<?php if ($enabletogglemode):?>
-			<input type="submit" class="formbtn" name="toggle_selected_rows" id="toggle_selected_rows" value="<?=$gt_selection_toggle;?>"/>
-		<?php else:?>
-			<input type="submit" class="formbtn" name="enable_selected_rows" id="enable_selected_rows" value="<?=$gt_selection_enable;?>"/>
-			<input type="submit" class="formbtn" name="disable_selected_rows" id="disable_selected_rows" value="<?=$gt_selection_disable;?>"/>
-		<?php endif;?>
-		<input type="submit" class="formbtn" name="delete_selected_rows" id="delete_selected_rows" value="<?=$gt_selection_delete;?>"/>
+		<?php
+		if ($enabletogglemode) {
+			echo html_button_toggle_rows($gt_selection_toggle);
+		} else {
+			echo html_button_enable_rows($gt_selection_enable);
+			echo html_button_disable_rows($gt_selection_disable);
+		}
+		echo html_button_delete_rows($gt_selection_delete);
+		?>
 	</div>
 	<div id="remarks">
 		<?php html_remark2('note', gtext('Note'), gtext('These option(s) will be added to /etc/rc.conf. This allow you to overwrite options used by various generic startup scripts.'));?>
 	</div>
-	<?php include("formend.inc");?>
+	<?php include 'formend.inc';?>
 </form></td></tr></tbody></table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
