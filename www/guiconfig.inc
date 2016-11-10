@@ -89,14 +89,14 @@ $savemsg = "";
 /* AJAX misc */
 function is_ajax() {
 	if (isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
-		if (strcasecmp($_SERVER['HTTP_X_REQUESTED_WITH'], 'XMLHttpRequest') == 0)
+		if (strcasecmp($_SERVER['HTTP_X_REQUESTED_WITH'], 'XMLHttpRequest') == 0) {
 			return true;
+		}
 	}
 	return false;
 }
 
-function render_ajax($data, $result = 0)
-{
+function render_ajax($data, $result = 0) {
 	$a = array('result' => $result);
 	if (isset($data)) {
 		if (is_array($data)) {
@@ -105,7 +105,6 @@ function render_ajax($data, $result = 0)
 			$a = array_merge($a, array('data' => $data));
 		}
 	}
-
 	header("Content-Type: application/json; UTF-8\n");
 	echo json_encode($a);
 	exit;
@@ -136,66 +135,86 @@ function do_input_validation_type($postdata, $reqdfields, $reqdfieldsn, $reqdfie
 			$message = "";
 
 			switch($reqdfieldst[$i]) {
-				case 'string':				$valid = is_string($postdata[$reqdfields[$i]]);
-															$message = sprintf( gtext("The attribute '%s' must be a string."), $reqdfieldsn[$i]);
-															break;
-				case 'numeric':				$valid = is_numeric($postdata[$reqdfields[$i]]);
-															$message = sprintf( gtext("The attribute '%s' must be a number."), $reqdfieldsn[$i]);
-															break;
-				case 'numericint':		$valid = is_numericint($postdata[$reqdfields[$i]]);
-															$message = sprintf( gtext("The attribute '%s' must be a number."), $reqdfieldsn[$i]);
-															break;
-				case 'ipaddr':				$valid = is_ipaddr($postdata[$reqdfields[$i]]);
-															$message = sprintf( gtext("The attribute '%s' is not a valid IP address."), $reqdfieldsn[$i]);
-															break;
-				case 'macaddr': 			$valid = is_macaddr($postdata[$reqdfields[$i]]);
-															$message = sprintf( gtext("The attribute '%s' is not a valid MAC address."), $reqdfieldsn[$i]);
-															break;
-				case 'subnet': 				$valid = is_subnet($postdata[$reqdfields[$i]]);
-															$message = sprintf( gtext("The attribute '%s' is not a valid subnet mask."), $reqdfieldsn[$i]);
-															break;
-				case 'domain': 				$valid = is_domain($postdata[$reqdfields[$i]]);
-															$message = sprintf( gtext("The attribute '%s' contains invalid characters and is not a valid domain name."), $reqdfieldsn[$i]);
-															break;
-				case 'netbios': 			$valid = is_netbios($postdata[$reqdfields[$i]]);
-															$message = sprintf( gtext("The attribute '%s' contains invalid characters and is not a valid NetBIOS name."), $reqdfieldsn[$i]);
-															break;
-				case 'hostname': 			$valid = is_hostname($postdata[$reqdfields[$i]]);
-															$message = sprintf( gtext("The attribute '%s' contains invalid characters and is not a valid host name."), $reqdfieldsn[$i]);
-															break;
-				case 'workgroup': 		$valid = is_workgroup($postdata[$reqdfields[$i]]);
-															$message = sprintf( gtext("The attribute '%s' contains invalid characters and is not a valid workgroup name."), $reqdfieldsn[$i]);
-															break;
-				case 'filemode': 			$valid = is_filemode($postdata[$reqdfields[$i]]);
-															$message = sprintf( gtext("The attribute '%s' is not a valid file mode mask."), $reqdfieldsn[$i]);
-															break;
-				case 'mtu': 					$valid = is_mtu($postdata[$reqdfields[$i]]);
-															$message = sprintf( gtext("The attribute '%s' is invalid."), $reqdfieldsn[$i]);
-															break;
-				case 'port': 					$valid = is_port($postdata[$reqdfields[$i]]);
-															$message = sprintf( gtext("The attribute '%s' is an invalid port number."), $reqdfieldsn[$i]);
-															break;
-				case 'password':			$valid = is_validpassword($postdata[$reqdfields[$i]]);
-															$message = sprintf( gtext("The attribute '%s' contains the illegal character ':' and is not a valid password."), $reqdfieldsn[$i]);
-															break;
-				case 'certificate':		$valid = is_valid_certificate($postdata[$reqdfields[$i]]);
-															$message = sprintf( gtext("The attribute '%s' does not appear to be a valid certificate."), $reqdfieldsn[$i]);
-															break;
-				case 'privatekey':		$valid = is_valid_privatekey($postdata[$reqdfields[$i]], "RSA");
-															$message = sprintf( gtext("The attribute '%s' does not appear to be a valid private key."), $reqdfieldsn[$i]);
-															break;
-				case 'privatedsakey':	$valid = is_valid_privatekey($postdata[$reqdfields[$i]], "DSA");
-															$message = sprintf( gtext("The attribute '%s' does not appear to be a valid private %s key."), $reqdfieldsn[$i], "DSA");
-															break;
-				case 'alias':					$valid = is_validaliasname($postdata[$reqdfields[$i]]);
-															$message = sprintf( gtext("The attribute '%s' may only consist of the characters a-z, A-Z, 0-9."), $reqdfieldsn[$i]);
-															break;
-				case 'time':					$valid = (FALSE !== strptime($postdata[$reqdfields[$i]], "%H:%M:%S"));
-															$message = sprintf( gtext("The attribute '%s' is not a valid time value."), $reqdfieldsn[$i]);
-															break;
-				case 'array':					$valid = (is_array($postdata[$reqdfields[$i]]) && !empty($postdata[$reqdfields[$i]]));
-															$message = sprintf( gtext("The attribute '%s' must contain at least one entry."), $reqdfieldsn[$i]);
-															break;
+				case 'string':
+					$valid = is_string($postdata[$reqdfields[$i]]);
+					$message = sprintf( gtext("The attribute '%s' must be a string."), $reqdfieldsn[$i]);
+					break;
+				case 'numeric':
+					$valid = is_numeric($postdata[$reqdfields[$i]]);
+					$message = sprintf( gtext("The attribute '%s' must be a number."), $reqdfieldsn[$i]);
+					break;
+				case 'numericint':
+					$valid = is_numericint($postdata[$reqdfields[$i]]);
+					$message = sprintf( gtext("The attribute '%s' must be a number."), $reqdfieldsn[$i]);
+					break;
+				case 'ipaddr':
+					$valid = is_ipaddr($postdata[$reqdfields[$i]]);
+					$message = sprintf( gtext("The attribute '%s' is not a valid IP address."), $reqdfieldsn[$i]);
+					break;
+				case 'macaddr':
+					$valid = is_macaddr($postdata[$reqdfields[$i]]);
+					$message = sprintf( gtext("The attribute '%s' is not a valid MAC address."), $reqdfieldsn[$i]);
+					break;
+				case 'subnet':
+					$valid = is_subnet($postdata[$reqdfields[$i]]);
+					$message = sprintf( gtext("The attribute '%s' is not a valid subnet mask."), $reqdfieldsn[$i]);
+					break;
+				case 'domain':
+					$valid = is_domain($postdata[$reqdfields[$i]]);
+					$message = sprintf( gtext("The attribute '%s' contains invalid characters and is not a valid domain name."), $reqdfieldsn[$i]);
+					break;
+				case 'netbios':
+					$valid = is_netbios($postdata[$reqdfields[$i]]);
+					$message = sprintf( gtext("The attribute '%s' contains invalid characters and is not a valid NetBIOS name."), $reqdfieldsn[$i]);
+					break;
+				case 'hostname':
+					$valid = is_hostname($postdata[$reqdfields[$i]]);
+					$message = sprintf( gtext("The attribute '%s' contains invalid characters and is not a valid host name."), $reqdfieldsn[$i]);
+					break;
+				case 'workgroup':
+					$valid = is_workgroup($postdata[$reqdfields[$i]]);
+					$message = sprintf( gtext("The attribute '%s' contains invalid characters and is not a valid workgroup name."), $reqdfieldsn[$i]);
+					break;
+				case 'filemode':
+					$valid = is_filemode($postdata[$reqdfields[$i]]);
+					$message = sprintf( gtext("The attribute '%s' is not a valid file mode mask."), $reqdfieldsn[$i]);
+					break;
+				case 'mtu':
+					$valid = is_mtu($postdata[$reqdfields[$i]]);
+					$message = sprintf( gtext("The attribute '%s' is invalid."), $reqdfieldsn[$i]);
+					break;
+				case 'port':
+					$valid = is_port($postdata[$reqdfields[$i]]);
+					$message = sprintf( gtext("The attribute '%s' is an invalid port number."), $reqdfieldsn[$i]);
+					break;
+				case 'password':
+					$valid = is_validpassword($postdata[$reqdfields[$i]]);
+					$message = sprintf( gtext("The attribute '%s' contains the illegal character ':' and is not a valid password."), $reqdfieldsn[$i]);
+					break;
+				case 'certificate':
+					$valid = is_valid_certificate($postdata[$reqdfields[$i]]);
+					$message = sprintf( gtext("The attribute '%s' does not appear to be a valid certificate."), $reqdfieldsn[$i]);
+					break;
+				case 'privatekey':
+					$valid = is_valid_privatekey($postdata[$reqdfields[$i]], "RSA");
+					$message = sprintf( gtext("The attribute '%s' does not appear to be a valid private key."), $reqdfieldsn[$i]);
+					break;
+				case 'privatedsakey':
+					$valid = is_valid_privatekey($postdata[$reqdfields[$i]], "DSA");
+					$message = sprintf( gtext("The attribute '%s' does not appear to be a valid private %s key."), $reqdfieldsn[$i], "DSA");
+					break;
+				case 'alias':
+					$valid = is_validaliasname($postdata[$reqdfields[$i]]);
+					$message = sprintf( gtext("The attribute '%s' may only consist of the characters a-z, A-Z, 0-9."), $reqdfieldsn[$i]);
+					break;
+				case 'time':
+					$valid = (FALSE !== strptime($postdata[$reqdfields[$i]], "%H:%M:%S"));
+					$message = sprintf( gtext("The attribute '%s' is not a valid time value."), $reqdfieldsn[$i]);
+					break;
+				case 'array':
+					$valid = (is_array($postdata[$reqdfields[$i]]) && !empty($postdata[$reqdfields[$i]]));
+					$message = sprintf( gtext("The attribute '%s' must contain at least one entry."), $reqdfieldsn[$i]);
+					break;
 			}
 			if (!$valid) {
 				$input_errors[] = $message;
@@ -662,7 +681,76 @@ function html_minidlnabox2($ctrlname, $title, $value, $desc, $path, $required = 
 	$ctrl->SetPath($path);
 	$ctrl->Render();
 }
-
+function html_button_save(string $value = NULL) {
+	$root = new co_DOMDocument();
+	$element = 'button';
+	$attributes = ['name' => 'submit', 'type' => 'submit', 'class' => 'formbtn', 'value' => 'save', 'id' => 'button.save'];
+	$o_button = $root->addElement($element, $attributes, $value);
+	return $root->render();
+}
+function html_button_cancel(string $value = NULL) {
+	$root = new co_DOMDocument();
+	$element = 'button';
+	$attributes = ['name' => 'submit', 'type' => 'submit', 'class' => 'formbtn', 'value' => 'cancel', 'id' => 'button.cancel'];
+	$o_button = $root->addElement($element, $attributes, $value);
+	return $root->render();
+}
+function html_button_toggle_rows(string $value = NULL) {
+	$root = new co_DOMDocument();
+	$element = 'button';
+	$attributes = ['name' => 'submit', 'type' => 'submit', 'class' => 'formbtn', 'value' => 'rows.toggle', 'id' => 'toggle_selected_rows'];
+	$o_button = $root->addElement($element, $attributes, $value);
+	return $root->render();
+}
+function html_button_enable_rows(string $value = NULL) {
+	$root = new co_DOMDocument();
+	$element = 'button';
+	$attributes = ['name' => 'submit', 'type' => 'submit', 'class' => 'formbtn', 'value' => 'rows.enable', 'id' => 'enable_selected_rows'];
+	$o_button = $root->addElement($element, $attributes, $value);
+	return $root->render();
+}
+function html_button_disable_rows(string $value = NULL) {
+	$root = new co_DOMDocument();
+	$element = 'button';
+	$attributes = ['name' => 'submit', 'type' => 'submit', 'class' => 'formbtn', 'value' => 'rows.disable', 'id' => 'disable_selected_rows'];
+	$o_button = $root->addElement($element, $attributes, $value);
+	return $root->render();
+}
+function html_button_delete_rows(string $value = NULL) {
+	$root = new co_DOMDocument();
+	$element = 'button';
+	$attributes = ['name' => 'submit', 'type' => 'submit', 'class' => 'formbtn', 'value' => 'rows.delete', 'id' => 'delete_selected_rows'];
+	$o_button = $root->addElement($element, $attributes, $value);
+	return $root->render();
+}
+function html_row_add(string $link = '', string $title = '', int $colspan = 2) {
+	global $g_img;
+	$root = new co_DOMDocument();
+	$o_tr = $root->addElement('tr');
+	if($colspan) {
+		$o_td1 = $o_tr->addElement('th', ['class' => 'lcenl', 'colspan' => $colspan-1]);
+	}
+	$o_td2 = $o_tr->addElement('th', ['class' => 'lceadd']);
+	$o_a = $o_td2->addElement('a', ['href' => $link]);
+	$o_img = $o_a->addElement('img', ['src' => $g_img['add'], 'title' => $title, 'alt' => $title, 'class' => 'spin']);
+	return $root->render();
+}
+function html_row_toolbox(string $link = '', string $gt_record_mod = '', string $gt_record_del = '', string $gt_record_loc = '', bool $notprotected = true, bool $notdirty = true) {
+	global $g_img;
+	$root = new co_DOMDocument();
+	$o = $root->addElement('td');
+	if($notdirty && $notprotected) { // editable
+		$o_a = $o->addElement('a', ['href' => $link]);
+		$o_a->addElement('img', ['src' => $g_img['mod'], 'title' => $gt_record_mod, 'alt' => $gt_record_mod, 'class' => 'spin']);
+	} else {
+		if($notprotected) { // dirty
+			$o->addElement('img', ['src' => $g_img['del'], 'title' => $gt_record_del, 'alt' => $gt_record_del]);
+		} else { // protected
+			$o->addElement('img', ['src' => $g_img['loc'], 'title' => $gt_record_loc, 'alt' => $gt_record_loc]);
+		}
+	}
+	return $root->render();
+}
 function get_weekday_names($long = NULL, $english = NULL) {
 	$actioncode = (is_null($long) ? 0 : 1) || (is_null($english) ? 0 : 2);
 	switch ($actioncode) {
