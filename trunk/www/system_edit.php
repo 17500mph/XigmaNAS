@@ -110,9 +110,8 @@ else
 							<input name="submit" type="submit" class="formbtn" id="Save" value="<?=gtext("Save");?>" />
 							<hr noshade="noshade" />
 							<?php if(isset($_POST['highlight']) && $_POST['highlight'] == "no"): ?>
-							<?=gtext("Rows"); ?>: <input size="3" name="rows" value="<? echo $rows; ?>" />
-							<?=gtext("Cols"); ?>: <input size="3" name="cols" value="<? echo $cols; ?>" />
-							|
+							<?=gtext("Rows"); ?>: <input size="3" name="rows" value="<?=$rows;?>"/>
+							<?=gtext("Cols"); ?>: <input size="3" name="cols" value="<?=$cols;?>"/>
 							<?php endif; ?>
 							<?=gtext("Highlighting"); ?>:
 							<input id="highlighting_enabled" name="highlight" type="radio" value="yes" <?php if($highlight == "yes") echo " checked=\"checked\""; ?> />
