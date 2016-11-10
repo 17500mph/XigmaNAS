@@ -64,7 +64,10 @@ $g_img= [
 	'mai' => 'images/maintain.png',
 	'inf' => 'images/info.png',
 	'ena' => 'images/status_enabled.png',
-	'dis' => 'images/status_disabled.png'
+	'dis' => 'images/status_disabled.png',
+	'box.error' => 'images/error_box.png',
+	'box.info' => 'images/info_box.png',
+	'box.warning' => 'images/warn_box.png'
 ];
 //	installation parameter
 $g_install = [
