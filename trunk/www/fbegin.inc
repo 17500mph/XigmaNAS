@@ -31,12 +31,12 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-function gentitle($title) {
-	$navlevelsep = "|"; // Navigation level separator string.
-	return join($navlevelsep, $title);
+function gentitle(array $title = []) {
+	$navlevelsep = '|'; // Navigation level separator string.
+	return implode($navlevelsep, $title);
 }
 
-function genhtmltitle($title) {
+function genhtmltitle(array $title = []) {
 	return htmlspecialchars(system_get_hostname()) . " - " . gentitle($title);
 }
 // Menu items.
