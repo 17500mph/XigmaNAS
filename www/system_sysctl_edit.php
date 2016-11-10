@@ -48,7 +48,7 @@ if (PAGE_MODE_POST == $mode_page) { // POST is Cancel or not Submit => cleanup
 		switch($_POST['submit']) {
 			case 'save':
 				break;
-			case cancel:
+			case 'cancel':
 				header($sphere_header_parent);
 				exit;
 				break;

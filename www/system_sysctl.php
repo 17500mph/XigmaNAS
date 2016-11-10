@@ -98,13 +98,13 @@ if ($_POST) {
 				$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
 				$updateconfig = false;
 				foreach ($checkbox_member_array as $checkbox_member_record) {
-					if (false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
-						if (!(isset($sphere_array[$index]['enable']))) {
-							$sphere_array[$index]['enable'] = true;
+					if (false !== ($index_uuid = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
+						if (!(isset($sphere_array[$index_uuid]['enable']))) {
+							$sphere_array[$index_uuid]['enable'] = true;
 							$updateconfig = true;
-							$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index]['uuid']);
+							$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index_uuid]['uuid']);
 							if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
-								updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_array[$index]['uuid']);
+								updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_array[$index_uuid]['uuid']);
 							}
 						}
 					}
@@ -120,13 +120,13 @@ if ($_POST) {
 				$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
 				$updateconfig = false;
 				foreach ($checkbox_member_array as $checkbox_member_record) {
-					if (false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
-						if (isset($sphere_array[$index]['enable'])) {
-							unset($sphere_array[$index]['enable']);
+					if (false !== ($index_uuid = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
+						if (isset($sphere_array[$index_uuid]['enable'])) {
+							unset($sphere_array[$index_uuid]['enable']);
 							$updateconfig = true;
-							$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index]['uuid']);
+							$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index_uuid]['uuid']);
 							if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
-								updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_array[$index]['uuid']);
+								updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_array[$index_uuid]['uuid']);
 							}
 						}	
 					}	
@@ -142,16 +142,16 @@ if ($_POST) {
 				$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
 				$updateconfig = false;
 				foreach ($checkbox_member_array as $checkbox_member_record) {
-					if (false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
-						if (isset($sphere_array[$index]['enable'])) {
-							unset($sphere_array[$index]['enable']);
+					if (false !== ($index_uuid = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
+						if (isset($sphere_array[$index_uuid]['enable'])) {
+							unset($sphere_array[$index_uuid]['enable']);
 						} else {
-							$sphere_array[$index]['enable'] = true;					
+							$sphere_array[$index_uuid]['enable'] = true;					
 						}
 						$updateconfig = true;
-						$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index]['uuid']);
+						$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index_uuid]['uuid']);
 						if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
-							updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_array[$index]['uuid']);
+							updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_array[$index_uuid]['uuid']);
 						}
 					}	
 				}
@@ -165,19 +165,19 @@ if ($_POST) {
 			case 'rows.delete':
 				$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
 				foreach ($checkbox_member_array as $checkbox_member_record) {
-					if (false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
-						$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index]['uuid']);
+					if (false !== ($index_uuid = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
+						$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index_uuid]['uuid']);
 						switch ($mode_updatenotify) {
 							case UPDATENOTIFY_MODE_NEW:  
-								updatenotify_clear($sphere_notifier, $sphere_array[$index]['uuid']);
-								updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY_CONFIG, $sphere_array[$index]['uuid']);
+								updatenotify_clear($sphere_notifier, $sphere_array[$index_uuid]['uuid']);
+								updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY_CONFIG, $sphere_array[$index_uuid]['uuid']);
 								break;
 							case UPDATENOTIFY_MODE_MODIFIED:
-								updatenotify_clear($sphere_notifier, $sphere_array[$index]['uuid']);
-								updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY, $sphere_array[$index]['uuid']);
+								updatenotify_clear($sphere_notifier, $sphere_array[$index_uuid]['uuid']);
+								updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY, $sphere_array[$index_uuid]['uuid']);
 								break;
 							case UPDATENOTIFY_MODE_UNKNOWN:
-								updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY, $sphere_array[$index]['uuid']);
+								updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY, $sphere_array[$index_uuid]['uuid']);
 								break;
 						}
 					}
