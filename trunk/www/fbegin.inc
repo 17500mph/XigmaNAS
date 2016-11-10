@@ -32,12 +32,11 @@
 	either expressed or implied, of the NAS4Free Project.
 */
 function gentitle(array $title = []) {
-	$navlevelsep = '|'; // Navigation level separator string.
+	$navlevelsep = htmlspecialchars(' > '); // Navigation level separator string.
 	return implode($navlevelsep, $title);
 }
-
 function genhtmltitle(array $title = []) {
-	return htmlspecialchars(system_get_hostname()) . " - " . gentitle($title);
+	return htmlspecialchars(system_get_hostname()) . (empty($title) ? '' : ' - ' . gentitle($title));
 }
 // Menu items.
 $isAdminSession = Session::isAdmin();
@@ -257,7 +256,7 @@ echo '<!DOCTYPE html>', "\n"
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=system_get_language_code();?>" lang="<?=system_get_language_code();?>">
 <head>
 	<meta charset="<?=system_get_language_codeset();?>"/>
-	<title><?=genhtmltitle($pgtitle);?></title>
+	<title><?=genhtmltitle($pgtitle ?? []);?></title>
 	<?php if (isset($pgrefresh) && $pgrefresh):?>
 	<meta http-equiv="refresh" content="<?=$pgrefresh;?>" />
 	<?php endif;?>
