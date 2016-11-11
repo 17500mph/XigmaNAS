@@ -6,7 +6,7 @@
 #
 
 #date
-WORKING_DIR=`dirname $0`
+WORKING_DIR="/var/run/rrdgraphs"
 STORAGE_PATH=`/usr/local/bin/xml sel -t -v "//rrdgraphs/storage_path" /conf/config.xml`
 . $STORAGE_PATH/CONFIG.sh
 
