@@ -184,68 +184,68 @@ window.onload=function() {
 //-->
 </script>
 <body>
-     <div class="loginwrapper">
-		 <div class="tabcont" style="border-radius:4px;">
-    <div class="loginwrap">
-	<h1 class="logintitle"><span class="iconfa-lock"><img src="images/lock.png"></span><a title="www.<?=get_product_url();?>" href="http://<?=get_product_url();?>" target="_blank"><img src="images/header_logo.png" alt="logo" /></a>
-	<span class="subtitle">
-	<?=system_get_hostname();?>&nbsp;
-	</span></h1>
-        <div class="loginwrapperinner">
-            <form id="loginform" action="" method="post" name="loginform">
-                <p class="allocate"><input type="text" id="username" name="username" onFocus="value=''" placeholder="<?=gtext("Username");?>" value="<?=gtext("Username");?>"></p>
-                <p class="allocate"><input type="password" id="password" name="password" onFocus="value=''" placeholder="<?=gtext("Password");?>" value="password"></p>
-                <p class="allocate"><input class="btn formbtn" type="submit" value="<?=gtext("Login");?>" /></p>
-            </form>
-            </div>
-             <br>
-            <div id="all_links">
-	<ul>
-		<?=display_menu("system");?>
-		<?=display_menu("network");?>
-		<?=display_menu("disks");?>
-		<?=display_menu("services");?>
-		<!-- Begin extension section -->
-		<?php if (Session::isAdmin() && is_dir("{$g['www_path']}/ext")):?>
-		<li>
-			<a href="index.php" onmouseover="mopen('extensions')" onmouseout="mclosetime()"><?=gtext("Extensions");?></a>
-			<div id="extensions" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-				<?php
-				$dh = @opendir("{$g['www_path']}/ext");
-				if ($dh) {
-					while (($extd = readdir($dh)) !== false) {
-						if (($extd === ".") || ($extd === ".."))
-							continue;
-						@include("{$g['www_path']}/ext/" . $extd . "/menu.inc");
-					}
-					closedir($dh);
-				}?>
+	<div class="loginwrapper">
+		<div class="tabcont" style="border-radius:4px;">
+			<div class="loginwrap">
+				<h1 class="logintitle"><span class="iconfa-lock"><img src="images/lock.png"></span><a title="www.<?=get_product_url();?>" href="http://<?=get_product_url();?>" target="_blank"><img src="images/header_logo.png" alt="logo" /></a>
+					<span class="subtitle"><?=system_get_hostname();?>&nbsp;</span>
+				</h1>
+				<div class="loginwrapperinner">
+					<form id="loginform" action="" method="post" name="loginform">
+						<p class="allocate"><input type="text" id="username" name="username" onFocus="value=''" placeholder="<?=gtext("Username");?>" value="<?=gtext("Username");?>"></p>
+						<p class="allocate"><input type="password" id="password" name="password" onFocus="value=''" placeholder="<?=gtext("Password");?>" value="password"></p>
+						<p class="allocate"><input class="btn formbtn" type="submit" value="<?=gtext("Login");?>" /></p>
+					</form>
+				</div>
+				<br>
+				<div id="all_links">
+					<ul>
+						<?=display_menu("system");?>
+						<?=display_menu("network");?>
+						<?=display_menu("disks");?>
+						<?=display_menu("services");?>
+<?php // Begin extension section.?>
+<?php if (Session::isAdmin() && is_dir("{$g['www_path']}/ext")):?>
+							<li>
+								<a href="index.php" onmouseover="mopen('extensions')" onmouseout="mclosetime()"><?=gtext("Extensions");?></a>
+								<div id="extensions" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+<?php
+$dh = @opendir("{$g['www_path']}/ext");
+if ($dh) {
+	while (($extd = readdir($dh)) !== false) {
+		if (($extd === ".") || ($extd === "..")) {
+			continue;
+		}
+		@include("{$g['www_path']}/ext/" . $extd . "/menu.inc");
+	}
+	closedir($dh);
+}?>
+								</div>
+							</li>
+<?php endif;?>
+						<left>
+<?php // End extension section.?>
+							<?=display_menu("forum");?> - 
+							<?=display_menu("info");?> - 
+							<?=display_menu("irc");?> - 
+							<?=display_menu("donate");?>
+						</left>
+					</ul>
+				</div>
+				<div id="loginerror">
+<?php 
+if (!empty($input_errors)) {
+	echo $input_errors;
+	echo "\n";
+}
+?>
+				</div>
 			</div>
-		</li>
-		<?php endif;?>
-		<left>
-		<!-- End extension section -->
-		<?=display_menu("forum");?> - 
-		<?=display_menu("info");?> - 
-		<?=display_menu("irc");?> - 
-		<?=display_menu("donate");?>
-		</left>
-	</ul>
-        </div>
-	<div id="loginerror">
-		<?php 
-			if (!empty($input_errors)) {
-				echo $input_errors;
-				echo "\n";
-			}
-		?>
+		</div>
 	</div>
-    </div>
-     </div>
-        </div>
-           </div>
-        <div id="pagefooter">
-			<span><p><?=htmlspecialchars(get_product_copyright());?></p></span>
-	</div>
-	</body>
+	<footer id="g4">
+		<div id="gapfooter"></div>
+		<div id="pagefooter"><span><?=htmlspecialchars(get_product_copyright());?></span></div>
+	</footer>
+</body>
 </html>
