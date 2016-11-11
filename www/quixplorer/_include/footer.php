@@ -40,7 +40,7 @@
 function show_footer() {
 	echo "</div>";
 	echo '</div>';
-	echo '<div id="pagefooter">', htmlspecialchars(get_product_copyright()). '></div>', "\n";
+	echo '<div id="pagefooter">', htmlspecialchars(get_product_copyright()), '></div>', "\n";
 	echo "</body>\n";
 	echo "</html>";
 }
