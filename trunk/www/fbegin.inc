@@ -349,6 +349,7 @@ $(window).on("load", function() {
 });
 //]]>
 </script>
+<main id="g4">
 <div id="pagecontent">
 <?php if (!isset($pgtitle_omit) || !$pgtitle_omit): ?>
 	<p class="pgtitle"><?=gentitle($pgtitle);?></p>
