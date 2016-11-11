@@ -11,6 +11,7 @@
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -31,10 +32,9 @@
 	either expressed or implied, of the NAS4Free Project.
  */
 require_once("config.inc");
-
 $runtime_dir = "/usr/local/share/rrdgraphs/bin";
 
-if (isset($config['rrdgraphs']['enable'])) { 
+if (isset($config['rrdgraphs']['enable'])) {
     exec("logger rrdgraphs: enabled, starting ...");
 
 // create config file - for booleans we need the variable $txt
@@ -72,7 +72,7 @@ if (isset($config['rrdgraphs']['enable'])) {
         fwrite($rrdconfig, "RUN_DUS=".$txt."\n");
         $txt = isset($config['rrdgraphs']['no_processes']) ? "1" : "0";
         fwrite($rrdconfig, "RUN_PRO=".$txt."\n");
-        $txt = isset($config['rrdgraphs']['cpu_usage']) ? "1" : "0";
+        $txt = isset($config['rrdgraphs']['cpu']) ? "1" : "0";
         fwrite($rrdconfig, "RUN_CPU=".$txt."\n");
         $txt = isset($config['rrdgraphs']['memory_usage']) ? "1" : "0";
         fwrite($rrdconfig, "RUN_MEM=".$txt."\n");
@@ -100,7 +100,8 @@ if (isset($config['rrdgraphs']['enable'])) {
 
             if (is_array($config['zfs']['pools']) && is_array($config['zfs']['pools']['pool'])) {
                 unset($pools);
-                exec("zfs list -H -t filesystem -o name", $pools, $retval);             // get ZFS pools and datasets
+		// get ZFS pools and datasets
+                exec("zfs list -H -t filesystem -o name", $pools, $retval);
                 for ($i = 0; $i < count($pools); ++$i) {
                     $config["rrdgraphs"]["pools"]["pool{$i}"] = $pools[$i];
                     fwrite($rrdconfig, "POOL{$i}={$pools[$i]}"."\n");
@@ -126,7 +127,7 @@ if (isset($config['rrdgraphs']['enable'])) {
         }
     fclose($rrdconfig);
 
-// create new .rrds if necessary
+    // create new .rrds if necessary
     $rrd_name = "cpu_freq.rrd";
     if (isset($config['rrdgraphs']['cpu_frequency']) && !is_file("{$config['rrdgraphs']['storage_path']}/rrd/{$rrd_name}"))
     { $ret_val = mwexec("/usr/local/bin/rrdtool create {$config['rrdgraphs']['storage_path']}/rrd/{$rrd_name} \
@@ -153,7 +154,7 @@ if (isset($config['rrdgraphs']['enable'])) {
     ", true);
     exec("logger rrdgraphs: new rrd created: {$rrd_name}");
     }
-    $rrd_name = "cpu_usage.rrd";
+    $rrd_name = "load_averages.rrd";
     if (isset($config['rrdgraphs']['load_averages']) && !is_file("{$config['rrdgraphs']['storage_path']}/rrd/{$rrd_name}"))
     { $ret_val = mwexec("/usr/local/bin/rrdtool create {$config['rrdgraphs']['storage_path']}/rrd/{$rrd_name} \
 			-s 300 \
@@ -199,7 +200,7 @@ if (isset($config['rrdgraphs']['enable'])) {
         }
     }
     $rrd_name = "cpu.rrd";
-    if (isset($config['rrdgraphs']['cpu_usage']) && !is_file("{$config['rrdgraphs']['storage_path']}/rrd/{$rrd_name}"))
+    if (isset($config['rrdgraphs']['cpu']) && !is_file("{$config['rrdgraphs']['storage_path']}/rrd/{$rrd_name}"))
     { $ret_val = mwexec("/usr/local/bin/rrdtool create {$config['rrdgraphs']['storage_path']}/rrd/{$rrd_name} \
 			-s 300 \
             'DS:user:GAUGE:600:U:U' \
@@ -316,7 +317,7 @@ if (isset($config['rrdgraphs']['enable'])) {
     exec("logger rrdgraphs: new rrd created: {$rrd_name}");
     }
 
-// create new graphs
+    // create new graphs
     $ret_val = mwexec("{$runtime_dir}/rrd-graph.sh", true);
 }
 write_config();

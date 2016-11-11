@@ -1,4 +1,10 @@
 #!/bin/bash
+#
+# Part of NAS4Free (http://www.nas4free.org).
+# Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
+# All rights reserved.
+#
+
 #date
 WORKING_DIR=`dirname $0`
 STORAGE_PATH=`/usr/local/bin/xml sel -t -v "//rrdgraphs/storage_path" /conf/config.xml`
@@ -181,7 +187,7 @@ fi
 # system load averages
 if [ $RUN_AVG -eq 1 ]; then 
     LA=`echo -e "$TOP" | awk '/averages:/ {gsub(",", ""); print $6":"$7":"$8; exit}'`
-    /usr/local/bin/rrdtool update $STORAGE_PATH/rrd/cpu_usage.rrd N:$LA 2>> /tmp/rrdgraphs-error.log
+    /usr/local/bin/rrdtool update $STORAGE_PATH/rrd/load_averages.rrd N:$LA 2>> /tmp/rrdgraphs-error.log
 fi
 
 # CPU temperatures
