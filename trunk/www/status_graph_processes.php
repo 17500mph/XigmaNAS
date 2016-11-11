@@ -38,7 +38,7 @@ $pgtitle = array(gtext("Status"), gtext("Monitoring"), gtext("Processes"));
 
 $rrd_processes = true;
 $refresh = !empty($config['rrdgraphs']['refresh_time']) ? $config['rrdgraphs']['refresh_time'] : 300;
-mwexec("/usr/local/share/rrdgraphs/bin/rrd-graph.sh processes", true);
+mwexec("/usr/local/share/rrdgraphs/rrd-graph.sh processes", true);
 
 include("fbegin.inc");?>
 <meta http-equiv="refresh" content="<?=$refresh?>">

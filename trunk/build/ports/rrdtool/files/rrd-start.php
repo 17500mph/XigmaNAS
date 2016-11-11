@@ -32,7 +32,7 @@
 	either expressed or implied, of the NAS4Free Project.
  */
 require_once("config.inc");
-$runtime_dir = "/usr/local/share/rrdgraphs/bin";
+$runtime_dir = "/usr/local/share/rrdgraphs";
 
 if (isset($config['rrdgraphs']['enable'])) {
     exec("logger rrdgraphs: enabled, starting ...");

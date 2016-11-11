@@ -31,14 +31,13 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
  */
-require 'auth.inc';
-require 'guiconfig.inc';
+require("auth.inc");
+require("guiconfig.inc");
 
-$sphere_scriptname = basename(__FILE__);
+$pgtitle = array(gtext("Services"), gtext("RRDGraphs"));
 
-if (!isset($config['rrdgraphs']) || !is_array($config['rrdgraphs'])) {
-	$config['rrdgraphs'] = [];
-}
+if (!isset($config['rrdgraphs']) || !is_array($config['rrdgraphs']))
+	$config['rrdgraphs'] = array();
 
 $upsname = !empty($config['ups']['upsname']) ? $config['ups']['upsname'] : "identifier";
 $upsip = !empty($config['ups']['ip']) ? $config['ups']['ip'] : "host-ip-address";
@@ -147,7 +146,7 @@ if (isset($_POST['save']) && $_POST['save']) {
             $uuid = isset($config['rrdgraphs']['schedule_uuid']) ? $config['rrdgraphs']['schedule_uuid'] : false;
             if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_cronjob, "uuid")))) {
             	$a_cronjob[$cnid]['enable'] = true;
-            	$a_cronjob[$cnid]['command'] = "/usr/local/share/rrdgraphs/bin/rrd-update.sh";
+            	$a_cronjob[$cnid]['command'] = "/usr/local/share/rrdgraphs/rrd-update.sh";
             } else {
             	$cronjob['enable'] = true;
             	$cronjob['uuid'] = uuid();
@@ -163,7 +162,7 @@ if (isset($_POST['save']) && $_POST['save']) {
             	$cronjob['all_months'] = 1;
             	$cronjob['all_weekdays'] = 1;
             	$cronjob['who'] = 'root';
-            	$cronjob['command'] = "/usr/local/share/rrdgraphs/bin/rrd-update.sh";
+            	$cronjob['command'] = "/usr/local/share/rrdgraphs/rrd-update.sh";
                 $config['rrdgraphs']['schedule_uuid'] = $cronjob['uuid'];
             }
             if (isset($uuid) && (FALSE !== $cnid)) {
@@ -188,7 +187,7 @@ if (isset($_POST['save']) && $_POST['save']) {
     			updatenotify_delete("cronjob");
     		}
 
-            require_once("/usr/local/share/rrdgraphs/bin/rrd-start.php");
+            require_once("/usr/local/share/rrdgraphs/rrd-start.php");
         }   // end of enable extension
 		else { 
             $config['rrdgraphs']['enable'] = isset($_POST['enable']) ? true : false;
@@ -262,10 +261,9 @@ if (isset($_POST['reset_graphs']) && $_POST['reset_graphs']) {
     if (isset($_POST['ups']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/ups.rrd")) { unlink("{$config['rrdgraphs']['storage_path']}/rrd/ups.rrd");
         exec("logger rrdgraphs: reseting UPS graphs");
         $savemsg .= "<br />- ".gtext("UPS"); }
-        require_once("/usr/local/share/rrdgraphs/bin/rrd-start.php");
+        require_once("/usr/local/share/rrdgraphs/rrd-start.php");
 }
 
-$rrdtool_release = exec("/usr/local/bin/rrdtool -h | awk '/Copyright/ {print $2}'");
 $pconfig['enable'] = isset($config['rrdgraphs']['enable']) ? true : false;
 $pconfig['storage_path'] = !empty($config['rrdgraphs']['storage_path']) ? $config['rrdgraphs']['storage_path'] : $g['media_path'];
 $pconfig['graph_h'] = !empty($config['rrdgraphs']['graph_h']) ? $config['rrdgraphs']['graph_h'] : 200;
@@ -314,15 +312,10 @@ if (isset($config['vinterfaces']['lagg']) && is_array($config['vinterfaces']['la
 // Use first interface as default if it is not set.
 if (empty($pconfig['latency_interface']) && is_array($a_interface)) $pconfig['latency_interface'] = key($a_interface);
 
-$pgtitle = [gtext("Services"), gtext("RRDGraphs")];
 ?>
-<?php include 'fbegin.inc';?>
+<?php include("fbegin.inc");?>
 <script type="text/javascript">
-//<![CDATA[
-$(window).on("load", function() {
-	// Init spinner onsubmit()
-	$("#iform").submit(function() { spinner(); });
-});
+<!--
 function lan_change() {
 	switch(document.iform.lan_load.checked) {
 		case true:
@@ -360,6 +353,7 @@ function latency_change() {
 			break;
 	}
 }
+
 function ups_change() {
 	switch(document.iform.ups.checked) {
 		case true:
@@ -371,6 +365,7 @@ function ups_change() {
 			break;
 	}
 }
+
 function enable_change(enable_change) {
 	var endis = !(document.iform.enable.checked || enable_change);
 	document.iform.storage_path.disabled = endis;
@@ -400,151 +395,84 @@ function enable_change(enable_change) {
 	document.iform.ups.disabled = endis;
 	document.iform.ups_at.disabled = endis;
 }
-//]]>
+//-->
 </script>
-<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iform" name="iform">
-	<?php
-		if (!empty($errormsg)) {
-			print_error_box($errormsg);
-		}
-		if (!empty($input_errors)) {
-			print_input_errors($input_errors);
-		}
-		if (file_exists($d_sysrebootreqd_path)) {
-			print_info_box(get_std_save_message(0));
-		}
-	?>
-	<table id="area_data_settings">
-		<colgroup>
-			<col id="area_data_settings_col_tag">
-			<col id="area_data_settings_col_data">
-		</colgroup>
-		<thead>
-			<?php
-			html_titleline_checkbox2('enable', gtext('Configuration'), $sphere_record['enable'], gtext('Enable'));
-			html_separator2();
-			?>
-		</thead>
-		<tbody>
-			<?php
-			html_titleline_checkbox2("enable", $config['rrdgraphs']['appname'], $pconfig['enable'], gtext("Enable"), "enable_change(false)");
-			html_filechooser2("storage_path", gtext("Data directory"), $pconfig['storage_path'], sprintf(gtext("The data directory holds the statistical data for the graphs. This should be set to a %s to prevent a disk spinning all the time."), "<b>SSD</b>"), $g['media_path'], true, 60);
-			html_inputbox2("refresh_time", gtext("Refresh time"), $pconfig['refresh_time'], gtext("Refresh time for graph pages.")." ".sprintf(gtext("Default is %s %s."), 300, gtext("seconds")), false, 5);
-			html_inputbox2("graph_h", gtext("Graphs height"), $pconfig['graph_h'], sprintf(gtext("Height of the graphs. Default is %s pixel."), 200), false, 5);
-			html_checkbox2("autoscale", gtext("Autoscale"), $pconfig['autoscale'], gtext("Autoscale for graphs."), "", false);
-			html_separator2();
-
-			html_titleline2(gtext("Available Graphs"));
-			html_checkbox2('cpu_frequency', gtext('CPU Frequency'), $pconfig['cpu_frequency'], gtext('Statistics for CPU frequency.'), '', false);
-			html_checkbox2('cpu_temperature', gtext('CPU Temperature'), $pconfig['cpu_temperature'], gtext('Statistics for CPU temperature.'), '', false);
-			html_checkbox2('cpu_usage', gtext('CPU Usage'), $pconfig['cpu_usage'], gtext('Displays a percentage of time spent in each of the processor states (user, nice, system, interrupt, idle).'), '', false);
-			html_checkbox2('disk_usage', gtext('Disk Usage'), $pconfig['disk_usage'], gtext('Statistics for disk usage (mount point).'), '', false);
-			html_checkbox2('load_averages', gtext('Load Averages'), $pconfig['load_averages'], gtext('Statistics for average system load for 1, 5 and 15 minute periods.'), '', false);
-			html_checkbox2('memory_usage', gtext('Memory Usage'), $pconfig['memory_usage'], gtext('Displays information about memory allocation (active, inact, wired, cache, buf, free, swap used, swap free).'), '', false);
-
-			html_separator2();
-			html_checkbox2('latency', gtext('Network Latency'), $pconfig['latency'], gtext('Statistics for network latency.'), '', false, false, 'latency_change()');
-			?>
+<form action="services_rrdgraphs.php" method="post" name="iform" id="iform" onsubmit="spinner()">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr><td class="tabcont">
+        <?php if (!empty($input_errors)) print_input_errors($input_errors);?>
+        <?php if (!empty($savemsg)) print_info_box($savemsg);?>
+        <table width="100%" border="0" cellpadding="6" cellspacing="0">
+        	<?php html_titleline_checkbox("enable", $config['rrdgraphs']['appname'], $pconfig['enable'], gtext("Enable"), "enable_change(false)");?>
+			<?php html_filechooser("storage_path", gtext("Data directory"), $pconfig['storage_path'], sprintf(gtext("The data directory holds the statistical data for the graphs. This should be set to a %s to prevent a disk spinning all the time."), "<b>SSD</b>"), $g['media_path'], true, 60);?>
+            <?php html_inputbox("refresh_time", gtext("Refresh time"), $pconfig['refresh_time'], gtext("Refresh time for graph pages.")." ".sprintf(gtext("Default is %s %s."), 300, gtext("seconds")), false, 5);?>
+            <?php html_inputbox("graph_h", gtext("Graphs height"), $pconfig['graph_h'], sprintf(gtext("Height of the graphs. Default is %s pixel."), 200), false, 5);?>
+            <?php html_checkbox("autoscale", gtext("Autoscale"), $pconfig['autoscale'], gtext("Autoscale for graphs."), "", false);?>
+			<?php html_separator();?>
+			<?php html_titleline(gtext("Available graphs"));?>
+			<?php html_separator();?>
+            <?php html_titleline_checkbox("cpu_frequency", gtext("CPU frequency")." - ".gtext("Statistics for CPU frequency."), $pconfig['cpu_frequency'], gtext("Enable"), "");?>
+			<?php html_separator();?>
+            <?php html_titleline_checkbox("cpu_temperature", gtext("CPU temperature")." - ".gtext("Statistics for CPU temperature."), $pconfig['cpu_temperature'], gtext("Enable"), "");?>
+			<?php html_separator();?>
+            <?php html_titleline_checkbox("cpu_usage", gtext("CPU usage")." - ".gtext("Displays a percentage of time spent in each of the processor states (user, nice, system, interrupt, idle)."), $pconfig['cpu_usage'], gtext("Enable"), "");?>
+			<?php html_separator();?>
+            <?php html_titleline_checkbox("disk_usage", gtext("Disk usage")." - ".gtext("Statistics for disk (mount point) usage."), $pconfig['disk_usage'], gtext("Enable"), "");?>
+			<?php html_separator();?>
+            <?php html_titleline_checkbox("load_averages", gtext("Load averages")." - ".gtext("Statistics for average system load for 1, 5 and 15 minute periods."), $pconfig['load_averages'], gtext("Enable"), "");?>
+			<?php html_separator();?>
+            <?php html_titleline_checkbox("memory_usage", gtext("Memory")." - ".gtext("Displays information about memory allocation (active, inact, wired, cache, buf, free, swap used, swap free)."), $pconfig['memory_usage'], gtext("Enable"), "");?>
+			<?php html_separator();?>
+            <?php html_titleline_checkbox("latency", gtext("Network latency")." - ".gtext("Statistics for network latency."), $pconfig['latency'], gtext("Enable"), "latency_change()");?>
+            <?php html_inputbox("latency_host", gtext("Host"), $pconfig['latency_host'], gtext("Destination host name or IP address."), false, 20);?>
 			<tr>
-				<td></td>
-				<td>
-					<table id="area_data_settings">
-						<colgroup>
-							<col id="area_data_settings_col_tag">
-							<col id="area_data_settings_col_data">
-						</colgroup>
-						<tbody>
-							<tr>
-								<td id="latency_interface_cell" valign="top" class="vncell"><?=gtext("Interface selection");?></td>
-								<td id="latency_interface_table" class="vtable">
-									<select name="latency_interface" class="formfld" id="xif">
-										<?php foreach($a_interface as $if => $ifinfo):?>
-											<?php $ifinfo = get_interface_info($if); if (("up" == $ifinfo['status']) || ("associated" == $ifinfo['status'])):?>
-												<option value="<?=$if;?>"<?php if ($if == $pconfig['latency_interface']) echo "selected=\"selected\"";?>><?=$if?></option>
-											<?php endif;?>
-										<?php endforeach;?>
-									</select>
-									<br /><?=gtext("Select the interface (only selectable if your server has more than one) to use for the source IP address in outgoing packets.");?>
-								</td>
-							</tr>
-							<?php
-							$latency_a_count = array(); for ($i = 1; $i <= 20; $i++) { $latency_a_count[$i] = $i; }
-							html_combobox2("latency_count", gtext("Count"), $pconfig['latency_count'], $latency_a_count, gtext("Stop after sending (and receiving) N packets."), false);
-							html_inputbox2("latency_parameters", gtext("Auxiliary parameters"), $pconfig['latency_parameters'], gtext("These parameters will be added to the ping command.")." ".sprintf(gtext("Please check the %s documentation%s."), "<a href=http://www.freebsd.org/cgi/man.cgi?query=ping&amp;apropos=0&amp;sektion=0&amp;format=html target='_blank'>", "</a>"), false, 60);
-							?>
-						</tbody>
-					</table>
+				<td id="latency_interface_cell" valign="top" class="vncell"><?=gtext("Interface selection");?></td>
+				<td id="latency_interface_table" class="vtable">
+				<select name="latency_interface" class="formfld" id="xif">
+					<?php foreach($a_interface as $if => $ifinfo):?>
+						<?php $ifinfo = get_interface_info($if); if (("up" == $ifinfo['status']) || ("associated" == $ifinfo['status'])):?>
+						<option value="<?=$if;?>"<?php if ($if == $pconfig['latency_interface']) echo "selected=\"selected\"";?>><?=$if?></option>
+						<?php endif;?>
+					<?php endforeach;?>
+				</select>
+				<br /><?=gtext("Select the interface (only selectable if your server has more than one) to use for the source IP address in outgoing packets.");?>
 				</td>
 			</tr>
-			<?php
-			html_separator2();
-			html_checkbox2('lan_load', gtext('Network Traffic'), $pconfig['lan_load'], gtext('Statistics for incoming/outgoing bits/second for network interfaces.'), '', false, false, 'lan_change()');
-			?>
-			<tr>
-				<td></td>
-				<td>
-					<table id="area_data_settings">
-						<colgroup>
-							<col id="area_data_settings_col_tag">
-							<col id="area_data_settings_col_data">
-						</colgroup>
-						<tbody>
-							<?php
-							html_checkbox2("bytes_per_second", gtext("Bytes/sec"), $pconfig['bytes_per_second'], gtext("If enabled the network throughput is displayed in Bytes/sec rather than Bits/sec."), "", false);
-							html_checkbox2("logarithmic", gtext("Logarithmic scaling"), $pconfig['logarithmic'], sprintf(gtext("Logarithmic y-axis scaling for %s graphs (can not be used together with positive/negative y-axis range)."), gtext("Network traffic")), "", false);
-							html_checkbox2("axis", gtext("Y-axis range"), $pconfig['axis'], sprintf(gtext("Show positive/negative values for %s graphs (can not be used together with logarithmic scaling)."), gtext("Network traffic")), "", false);
-							?>
-						</tbody>
-					</table>
-				</td>
-			</tr>
-			<?php
-			html_separator2();
-			html_checkbox2('no_processes', gtext('Process Information'), $pconfig['no_processes'], gtext('Displays the number of processes in each state (total, running, sleeping, waiting, starting, stopped, zombie).'), '', false);
-			html_checkbox2('uptime', gtext('Uptime'), $pconfig['uptime'], gtext('Displays the length of time the system has been up.'), '', false);
-
-			html_separator2();
-			html_checkbox2('ups', gtext('UPS'), $pconfig['ups'], gtext('Statistics for UPS battery capacity, voltage, load, remaining runtime, input voltage and the UPS status (online, on battery, charging and offline).'), '', false, false, 'ups_change()');
-			?>
-			<tr>
-				<td></td>
-				<td>
-					<table id="area_data_settings">
-						<colgroup>
-							<col id="area_data_settings_col_tag">
-							<col id="area_data_settings_col_data">
-						</colgroup>
-						<tbody>
-							<?php
-							html_inputbox2("ups_at", gtext("UPS identifier and IP address"), $pconfig['ups_at'], gtext("UPS identifier and host IP address of the machine where the UPS is connected to (this can be also a remote host).")." ".gtext("UPS identifier and IP address")." ".sprintf(gtext("must be in the format: %s."), "identifier@host-ip-address"), false, 60);
-							?>
-						</tbody>
-					</table>
-				</td>
-			</tr>
-			<?php
-			html_separator2();
-			html_checkbox2('arc_usage', gtext('ZFS ARC'), $pconfig['arc_usage'], gtext('Statistics for ZFS ARC (total, MRU, MFU, anon, header, other).'), '', false);
-			?>
-		</tbody>
+            <?php $latency_a_count = array(); for ($i = 1; $i <= 20; $i++) { $latency_a_count[$i] = $i; }?>
+            <?php html_combobox("latency_count", gtext("Count"), $pconfig['latency_count'], $latency_a_count, gtext("Stop after sending (and receiving) N packets."), false);?>
+            <?php html_inputbox("latency_parameters", gtext("Auxiliary parameters"), $pconfig['latency_parameters'], gtext("These parameters will be added to the ping command.")." ".sprintf(gtext("Please check the %s documentation%s."), "<a href=http://www.freebsd.org/cgi/man.cgi?query=ping&amp;apropos=0&amp;sektion=0&amp;format=html target='_blank'>", "</a>"), false, 60);?>
+			<?php html_separator();?>
+            <?php html_titleline_checkbox("lan_load", gtext("Network traffic")." - ".gtext("Statistics for incoming/outgoing bits/second for network interfaces."), $pconfig['lan_load'], gtext("Enable"), "lan_change()");?>
+            <?php html_checkbox("bytes_per_second", gtext("Bytes/sec"), $pconfig['bytes_per_second'], gtext("If enabled the network throughput is displayed in Bytes/sec rather than Bits/sec."), "", false);?>
+            <?php html_checkbox("logarithmic", gtext("Logarithmic scaling"), $pconfig['logarithmic'], sprintf(gtext("Logarithmic y-axis scaling for %s graphs (can not be used together with positive/negative y-axis range)."), gtext("Network traffic")), "", false);?>
+            <?php html_checkbox("axis", gtext("Y-axis range"), $pconfig['axis'], sprintf(gtext("Show positive/negative values for %s graphs (can not be used together with logarithmic scaling)."), gtext("Network traffic")), "", false);?>
+			<?php html_separator();?>
+            <?php html_titleline_checkbox("no_processes", gtext("Processes")." - ".gtext("Displays the number of processes in each state (total, running, sleeping, waiting, starting, stopped, zombie)."), $pconfig['no_processes'], gtext("Enable"), "");?>
+			<?php html_separator();?>
+        	<?php html_titleline_checkbox("ups", gtext("UPS")." - ".gtext("Statistics for UPS battery capacity, voltage, load, remaining runtime, input voltage and the UPS status (online, on battery, charging and offline)."), $pconfig['ups'], gtext("Enable"), "ups_change()");?>
+            <?php html_inputbox("ups_at", gtext("UPS identifier and IP address"), $pconfig['ups_at'], gtext("UPS identifier and host IP address of the machine where the UPS is connected to (this can be also a remote host).")." ".gtext("UPS identifier and IP address")." ".sprintf(gtext("must be in the format: %s."), "identifier@host-ip-address"), false, 60);?>
+			<?php html_separator();?>
+            <?php html_titleline_checkbox("uptime", gtext("Uptime")." - ".gtext("Displays the length of time the system has been up."), $pconfig['uptime'], gtext("Enable"), "");?>
+			<?php html_separator();?>
+            <?php html_titleline_checkbox("arc_usage", gtext("ZFS ARC")." - ".gtext("Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."), $pconfig['arc_usage'], gtext("Enable"), "");?>
+        </table>
+        <div id="remarks">
+            <?php html_remark("note", gtext("Note"), sprintf(gtext("'%s' deletes all the data for selected statistics. If only a certain statistic needs to be reset, clear all other check boxes before performing '%s'."), gtext("Reset Graphs"), gtext("Reset Graphs"))); ?>
+        </div>
+        <div id="submit">
+			<input id="save" name="save" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>"/>
+            <input id="reset_graphs" name="reset_graphs" type="submit" class="formbtn" value="<?=gtext("Reset Graphs");?>" onclick="return confirm('<?=gtext("Do you really want to delete all data from the selected statistics?");?>')" />
+    </div>
+	</td></tr>
 	</table>
-	<div id="remarks">
-		<?php
-		html_remark("note", gtext("Note"), sprintf(gtext("'%s' deletes all the data for selected statistics. If only a certain statistic needs to be reset, clear all other check boxes before performing '%s'."), gtext("Reset Graphs"), gtext("Reset Graphs")));
-		?>
-	</div>
-	<div id="submit">
-		<input id="save" name="save" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>"/>
-		<input id="reset_graphs" name="reset_graphs" type="submit" class="formbtn" value="<?=gtext("Reset Graphs");?>" onclick="return confirm('<?=gtext("Do you really want to delete all data from the selected statistics?");?>')" />
-	</div>
-	<?php require 'formend.inc';?>
-</form></td></tr></tbody></table>
+	<?php include("formend.inc");?>
+</form>
 <script type="text/javascript">
-//<![CDATA[
+<!--
 lan_change();
 latency_change();
 ups_change();
 enable_change(false);
 //-->
 </script>
-<?php include 'fend.inc';?>
+<?php include("fend.inc");?>

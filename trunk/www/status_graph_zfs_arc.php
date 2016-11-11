@@ -38,7 +38,7 @@ $pgtitle = array(gtext("Status"), gtext("Monitoring"), gtext("ZFS ARC"));
 $rrd_zfs_arc = true;
 
 $refresh = !empty($config['rrdgraphs']['refresh_time']) ? $config['rrdgraphs']['refresh_time'] : 300;
-mwexec("/usr/local/share/rrdgraphs/bin/rrd-graph.sh zfs_arc", true);
+mwexec("/usr/local/share/rrdgraphs/rrd-graph.sh zfs_arc", true);
 
 include("fbegin.inc");?>
 <meta http-equiv="refresh" content="<?=$refresh?>">
