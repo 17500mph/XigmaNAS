@@ -58,12 +58,6 @@ if ($_POST) {
 				break;
 		}
 	}
-	if (isset($_POST['Reboot']) && $_POST['Reboot']) {
-		$cmd_system_reboot = true;
-	} else {
-		header($sphere_header_parent);
-		exit;
-	}
 }
 $pgtitle = [gtext('System'), gtext('Reboot'), gtext('Now')];
 ?>

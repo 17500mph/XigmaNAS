@@ -43,11 +43,20 @@ $gt_yes = gtext('Yes');
 $gt_no = gtext('No');
 $cmd_system_shutdown = false;
 if ($_POST) {
-	if (isset($_POST['Shutdown']) && $_POST['Shutdown']) {
-		$cmd_system_shutdown = true;
-	} else {
-		header($sphere_header_parent);
-		exit;
+	if($_POST['submit']) {
+		switch($_POST['submit']) {
+			case 'save':
+				$cmd_system_shutdown = true;
+				break;
+			case 'cancel':
+				header($sphere_header_parent);
+				exit;
+				break;
+			default:
+				header($sphere_header_parent);
+				exit;
+				break;
+		}
 	}
 }
 $pgtitle =  [gtext('System'), gtext('Shutdown'), gtext('Now')];
@@ -56,20 +65,16 @@ $pgtitle =  [gtext('System'), gtext('Shutdown'), gtext('Now')];
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
-	// Init spinner onsubmit()
+<?php // Init spinner onsubmit().?>
 	$("#iform").submit(function() { spinner(); });
 });
 //]]>
 </script>
 <table id="area_navigator"><tbody>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabact"><a href="shutdown.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Now');?></span></a></li>
-				<li class="tabinact"><a href="shutdown_sched.php"><span><?=gtext('Scheduled');?></span></a></li>
-			</ul>
-		</td>
-	</tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabact"><a href="shutdown.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Now');?></span></a></li>
+		<li class="tabinact"><a href="shutdown_sched.php"><span><?=gtext('Scheduled');?></span></a></li>
+	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
 	<table id="area_data_selection">
@@ -85,8 +90,10 @@ $(window).on("load", function() {
 	<?php else:?>
 		<?php echo print_warning_box($gt_shutdown_confirm);?>
 		<div id="submit">
-			<input name="Shutdown" type="submit" class="formbtn" value="<?=$gt_yes;?>"/>
-			<input name="DoNotShutdown" type="submit" class="formbtn" value="<?=$gt_no;?>"/>
+			<?php
+			echo html_button_save($gt_yes);
+			echo html_button_cancel($gt_no);
+			?>
 		</div>
 	<?php endif;?>
 	<?php include 'formend.inc';?>
