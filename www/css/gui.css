@@ -37,7 +37,7 @@ body, td, th, input, select {
 body {
 	margin: 0 auto;
 	padding: 0pt;
-	min-width: 1024px;
+	min-width: inherit;
 }
 body, div#gapheader, div#gapfooter {
 	background: #D9DCE1;
@@ -50,6 +50,9 @@ body a:hover {
 }
 form {
 	margin: 0px;
+}
+html {
+	min-width: 1024px;
 }
 img {
 	border: 0;
@@ -524,7 +527,11 @@ header#g4 {
 	top: 0;
 	height: 120px;
 	background-color: transparent;
-	z-index: 3;
+}
+main#g4 {
+	min-width: inherit;
+	padding: 0px 0px 30px 0px;
+	background-color: transparent;
 }
 footer#g4 {
 	min-width: inherit;
@@ -534,7 +541,6 @@ footer#g4 {
 	bottom: 0;
 	height: 30px;
 	background-color: transparent;
-	z-index: 1;
 }
 div#gapheader {
 	width: 100%;
@@ -549,7 +555,7 @@ div#gapfooter {
 	left: 0;
 	bottom: 20px;
 	height: 10px;
-} 
+}
 div#pagefooter {
 	margin: 0px 0px 0px 0px;
 	text-align: center;
@@ -581,14 +587,9 @@ div#headernavbar {
 	background: black url("/images/navbar_default.png") center center repeat-x;
 }
 div#pagecontent {
-	min-width: inherit;
-	position: fixed;
-	top: 120px;
-	bottom: 30px;
-	left: 15px;
-	right:15px;
-	z-index: 2;
+	padding: 120px 25px 30px 25px;
 	overflow: auto;
+	height: 100%;
 }
 div#submit {
 	margin-top: 10px;
