@@ -4,8 +4,9 @@
 # Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 # All rights reserved.
 #
-WORKING_DIR=`dirname $0`
-if [ ! -d $WORKING_DIR/rrd ]; then mkdir $WORKING_DIR/rrd; fi
+WORKING_DIR="/var/run/rrdgraphs"
+TEMPLATE_DIR="/usr/local/share/rrdgraphs"
+if [ ! -d $WORKING_DIR/rrd ]; then mkdir -p $WORKING_DIR/rrd; fi
 STORAGE_PATH=`/usr/local/bin/xml sel -t -v "//rrdgraphs/storage_path" /conf/config.xml`
 . $STORAGE_PATH/CONFIG.sh
 LAST_UPDATE=`date +"%d.%m.%Y %H\:%M"`
@@ -16,13 +17,13 @@ CREATE_GRAPHS ()
 {
     GRAPH=${1}
     GRAPH_NAME="daily";		START_TIME="-1day";	TITLE_STRING="${2} - by day (5 minute averages)"	EXTENDED_OPTIONS="--zoom ${ZOOM_FACTOR} ${AUTOSCALE}"
-    . $WORKING_DIR/templates/${1}.sh
+    . ${TEMPLATE_DIR}/templates/${1}.sh
     GRAPH_NAME="weekly";	START_TIME="-1week";	TITLE_STRING="${2} - by week (30 minute averages)"	EXTENDED_OPTIONS="--zoom ${ZOOM_FACTOR} ${AUTOSCALE}"
-    . $WORKING_DIR/templates/${1}.sh
+    . ${TEMPLATE_DIR}/templates/${1}.sh
     GRAPH_NAME="monthly";	START_TIME="-1month";	TITLE_STRING="${2} - by month (2 hour averages)"	EXTENDED_OPTIONS="--zoom ${ZOOM_FACTOR} ${AUTOSCALE}"
-    . $WORKING_DIR/templates/${1}.sh
+    . ${TEMPLATE_DIR}/templates/${1}.sh
     GRAPH_NAME="yearly";	START_TIME="-1year";	TITLE_STRING="${2} - by year (12 hour averages)"	EXTENDED_OPTIONS="--zoom ${ZOOM_FACTOR} ${AUTOSCALE}"
-    . $WORKING_DIR/templates/${1}.sh
+    . ${TEMPLATE_DIR}/templates/${1}.sh
 }
 
 if [ "$1" == "traffic" ] || ( [ "$1" == "" ] && [ "$RUN_LAN" == "1" ] ); then
