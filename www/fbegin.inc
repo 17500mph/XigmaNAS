@@ -305,7 +305,7 @@ echo '<!DOCTYPE html>', "\n"
 		<?=display_menu('status');?>
 		<?=display_menu('diagnostics');?>
 		<?=display_menu('tools');?>
-		<!-- Begin extension section -->
+<?php // Begin extension section.?>
 		<?php if ($isAdminSession && is_dir("{$g['www_path']}/ext")):?>
 		<li>
 		<?php
@@ -330,7 +330,7 @@ echo '<!DOCTYPE html>', "\n"
 		</div>
 		</li>
 		<?php endif;?>
-		<!-- End extension section -->
+<?php // End extension section.?>
 		<?=display_menu('help');?>
 	</ul>
 	<div style="clear:both"></div>
@@ -338,9 +338,9 @@ echo '<!DOCTYPE html>', "\n"
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
-	// init spinner on tabnav
+<?php // init spinner on tabnav.?>
 	$("#tabnav").on('click', function() { spinner(); });
-	// and his mate
+<?php // and his mate.?>
 	$("#tabnav2").on('click', function() { spinner(); });
 });
 //]]>
