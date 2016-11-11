@@ -35,7 +35,7 @@ require("auth.inc");
 require("guiconfig.inc");
 
 $pgtitle = array(gtext("Status"), gtext("Monitoring"), gtext("CPU Usage"));
-$rrd_cpu_usage = true;
+$rrd_cpu = true;
 
 $refresh = !empty($config['rrdgraphs']['refresh_time']) ? $config['rrdgraphs']['refresh_time'] : 300;
 mwexec("/usr/local/share/rrdgraphs/bin/rrd-graph.sh cpu", true);

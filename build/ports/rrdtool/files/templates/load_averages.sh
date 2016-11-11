@@ -10,9 +10,9 @@ $BACKGROUND                                                 \
 "-l 0"									                    \
 "--slope-mode" \
 "--alt-autoscale-max" \
-"DEF:CPU=$STORAGE_PATH/rrd/cpu_usage.rrd:CPU:AVERAGE"		\
-"DEF:CPU5=$STORAGE_PATH/rrd/cpu_usage.rrd:CPU5:AVERAGE"		\
-"DEF:CPU15=$STORAGE_PATH/rrd/cpu_usage.rrd:CPU15:AVERAGE"    \
+"DEF:CPU=$STORAGE_PATH/rrd/load_averages.rrd:CPU:AVERAGE"		\
+"DEF:CPU5=$STORAGE_PATH/rrd/load_averages.rrd:CPU5:AVERAGE"		\
+"DEF:CPU15=$STORAGE_PATH/rrd/load_averages.rrd:CPU15:AVERAGE"    \
 "LINE1:CPU#FF0000:Load  1 minute "                          \
 "VDEF:minC=CPU,MINIMUM"                                   	\
 "VDEF:maxC=CPU,MAXIMUM"                                   	\

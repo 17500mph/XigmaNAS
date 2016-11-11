@@ -35,7 +35,7 @@ require("auth.inc");
 require("guiconfig.inc");
 
 $pgtitle = array(gtext("Status"), gtext("Monitoring"), gtext("Load Averages"));
-$rrd_cpu_averages = true;
+$rrd_load_averages = true;
 
 $refresh = !empty($config['rrdgraphs']['refresh_time']) ? $config['rrdgraphs']['refresh_time'] : 300;
 mwexec("/usr/local/share/rrdgraphs/bin/rrd-graph.sh load", true);
