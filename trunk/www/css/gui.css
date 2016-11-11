@@ -35,10 +35,12 @@ body, td, th, input, select {
 	font-size: 11px;
 }
 body {
-	background: #D9DCE1;
 	margin: 0 auto;
 	padding: 0pt;
 	min-width: 1024px;
+}
+body, div#gapheader, div#gapfooter {
+	background: #D9DCE1;
 }
 body a:link, body a:active, body a:visited {
 	color: #0000CC;
@@ -492,6 +494,7 @@ div#header {
 }
 div#headerlogo {
 	float: left;
+	height: 100%;
 }
 div#headerlogo a {
 }
@@ -513,17 +516,54 @@ div#headerrlogo .hostname {
 	margin-top: 63px;
 	margin-right: 25px;
 }
+header#g4 {
+	min-width: inherit;
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 120px;
+	background-color: transparent;
+	z-index: 3;
+}
+footer#g4 {
+	min-width: inherit;
+	width: 100%;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 30px;
+	background-color: transparent;
+	z-index: 1;
+}
+div#gapheader {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 110px;
+	height: 10px;
+} 
+div#gapfooter {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	bottom: 20px;
+	height: 10px;
+} 
 div#pagefooter {
 	margin: 0px 0px 0px 0px;
 	text-align: center;
 	background: url("/images/navbar_default.png");
 	position: fixed;
+	left: 0;
+	right: 0;
 	bottom: 0;
 	width: 100%;
 	font-size: 10px;
 	padding-top: 4px;
 	padding-bottom: 4px;
 	color: #FFFFFF;
+	white-space: nowrap;
 }
 div#pagefooter span a:link, div#pagefooter span a:active, div#pagefooter span a:visited {
 	color: #777777;
@@ -541,7 +581,14 @@ div#headernavbar {
 	background: black url("/images/navbar_default.png") center center repeat-x;
 }
 div#pagecontent {
-	padding: 20px 25px 40px 25px;
+	min-width: inherit;
+	position: fixed;
+	top: 120px;
+	bottom: 30px;
+	left: 15px;
+	right:15px;
+	z-index: 2;
+	overflow: auto;
 }
 div#submit {
 	margin-top: 10px;

@@ -40,8 +40,11 @@
 function show_footer() {
 	echo "</div>";
 	echo '</div>';
-	echo '<div id="pagefooter">', htmlspecialchars(get_product_copyright()), '></div>', "\n";
-	echo "</body>\n";
-	echo "</html>";
+	echo '<footer id="g4">';
+	echo '<div id="gapfooter"></div>';
+	echo '<div id="pagefooter"><span>', htmlspecialchars(get_product_copyright()), '</span></div>', "\n";
+	echo '</footer>';
+	echo '</body>';
+	echo '</html>';
 }
 ?>

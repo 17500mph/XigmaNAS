@@ -284,57 +284,61 @@ echo '<!DOCTYPE html>', "\n"
 <body>
 <div id="spinner_main"></div>
 <div id="spinner_overlay" style="display: none; background-color: white; position: fixed; left:0; top:0; height:100%; width:100%; opacity: 0.25;"></div>
-<div id="header">
-	<div id="headerlogo">
-		<a title="www.<?=get_product_url();?>" href="http://<?=get_product_url();?>" target="_blank"><img src="/images/header_logo.png" alt="logo" /></a>
-	</div>
-	<div id="headerrlogo">
-		<div class="hostname">
-			<span><?=system_get_hostname();?>&nbsp;</span>
+<header id="g4">
+	<div id="header">
+		<div id="headerrlogo">
+			<div class="hostname">
+				<span><?=system_get_hostname();?>&nbsp;</span>
+			</div>
+		</div>
+		<div id="headerlogo">
+			<a title="www.<?=get_product_url();?>" href="http://<?=get_product_url();?>" target="_blank"><img src="/images/header_logo.png" alt="logo" /></a>
 		</div>
 	</div>
-</div>
-<div id="headernavbar">
-	<ul id="navbarmenu">
-		<?=display_menu('system');?>
-		<?=display_menu('network');?>
-		<?=display_menu('disks');?>
-		<?=display_menu('access');?>
-		<?=display_menu('services');?>
-		<?=display_menu('vm');?>
-		<?=display_menu('status');?>
-		<?=display_menu('diagnostics');?>
-		<?=display_menu('tools');?>
-<?php // Begin extension section.?>
-		<?php if ($isAdminSession && is_dir("{$g['www_path']}/ext")):?>
-		<li>
-		<?php
-			$agent = $_SERVER['HTTP_USER_AGENT']; // Put browser name into local variable for desktop/mobile detection
-			if ((preg_match('/iPhone/i', $agent)) || (preg_match('/android/i', $agent))) {
-				echo "<a href=\"javascript:mopen('extensions');\" onmouseout=\"mclosetime()\">".gtext('Extensions')."</a>";
-			} else {
-				echo "<a href=\"index.php\" onclick=\"spinner()\" onmouseover=\"mopen('extensions')\" onmouseout=\"mclosetime()\">".gtext('Extensions')."</a>";
-			}
-		?>
-		<div id="extensions" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-		<?php
-			$dh = @opendir("{$g['www_path']}/ext");
-			if ($dh) {
-				while (($extd = readdir($dh)) !== false) {
-					if (($extd === '.') || ($extd === '..'))
-						continue;
-					@include("{$g['www_path']}/ext/" . $extd . "/menu.inc");
-				}
-				closedir($dh);
-		}?>
-		</div>
-		</li>
-		<?php endif;?>
-<?php // End extension section.?>
-		<?=display_menu('help');?>
-	</ul>
-	<div style="clear:both"></div>
-</div>
+	<div id="headernavbar">
+		<ul id="navbarmenu">
+			<?=display_menu('system');?>
+			<?=display_menu('network');?>
+			<?=display_menu('disks');?>
+			<?=display_menu('access');?>
+			<?=display_menu('services');?>
+			<?=display_menu('vm');?>
+			<?=display_menu('status');?>
+			<?=display_menu('diagnostics');?>
+			<?=display_menu('tools');?>
+			<?php // Begin extension section.?>
+			<?php if ($isAdminSession && is_dir("{$g['www_path']}/ext")):?>
+				<li>
+					<?php
+					$agent = $_SERVER['HTTP_USER_AGENT']; // Put browser name into local variable for desktop/mobile detection
+					if ((preg_match('/iPhone/i', $agent)) || (preg_match('/android/i', $agent))) {
+						echo "<a href=\"javascript:mopen('extensions');\" onmouseout=\"mclosetime()\">".gtext('Extensions')."</a>";
+					} else {
+						echo "<a href=\"index.php\" onclick=\"spinner()\" onmouseover=\"mopen('extensions')\" onmouseout=\"mclosetime()\">".gtext('Extensions')."</a>";
+					}
+					?>
+					<div id="extensions" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+					<?php
+					$dh = @opendir("{$g['www_path']}/ext");
+					if ($dh) {
+						while (($extd = readdir($dh)) !== false) {
+							if (($extd === '.') || ($extd === '..'))
+								continue;
+							@include("{$g['www_path']}/ext/" . $extd . "/menu.inc");
+						}
+						closedir($dh);
+					}
+					?>
+					</div>
+				</li>
+			<?php endif;?>
+			<?php // End extension section.?>
+			<?=display_menu('help');?>
+		</ul>
+		<div style="clear:both"></div>
+	</div>
+	<div id="gapheader"></div>
+</header>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
