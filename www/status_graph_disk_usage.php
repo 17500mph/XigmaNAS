@@ -55,7 +55,7 @@ if (isset($_GET['selector']) && $_GET['selector']) {
 else { $current_data = $temp_array[0]; }
  
 $refresh = !empty($config['rrdgraphs']['refresh_time']) ? $config['rrdgraphs']['refresh_time'] : 300;
-mwexec("/usr/local/share/rrdgraphs/bin/rrd-graph.sh disk_usage {$current_data}", true);
+mwexec("/usr/local/share/rrdgraphs/rrd-graph.sh disk_usage {$current_data}", true);
 
 include("fbegin.inc");?>
 <meta http-equiv="refresh" content="<?=$refresh?>">

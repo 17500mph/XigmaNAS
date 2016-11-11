@@ -38,7 +38,7 @@ $pgtitle = array(gtext("Status"), gtext("Monitoring"), gtext("Network Latency"))
 $rrd_latency = true;
 
 $refresh = !empty($config['rrdgraphs']['refresh_time']) ? $config['rrdgraphs']['refresh_time'] : 300;
-mwexec("/usr/local/share/rrdgraphs/bin/rrd-graph.sh latency", true);
+mwexec("/usr/local/share/rrdgraphs/rrd-graph.sh latency", true);
 
 include("fbegin.inc");?>
 <meta http-equiv="refresh" content="<?=$refresh?>">

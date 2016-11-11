@@ -38,7 +38,7 @@ $pgtitle = array(gtext("Status"), gtext("Monitoring"), gtext("CPU Frequency"));
 $rrd_cpu_freq = true;
 
 $refresh = !empty($config['rrdgraphs']['refresh_time']) ? $config['rrdgraphs']['refresh_time'] : 300;
-mwexec("/usr/local/share/rrdgraphs/bin/rrd-graph.sh frequency", true);
+mwexec("/usr/local/share/rrdgraphs/rrd-graph.sh frequency", true);
 
 include("fbegin.inc");?>
 <meta http-equiv="refresh" content="<?=$refresh?>">
