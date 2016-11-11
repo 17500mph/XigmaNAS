@@ -224,10 +224,10 @@ function display_menu($menuid) {
 	echo "<li>\n";
 	    $agent = $_SERVER['HTTP_USER_AGENT']; // Put browser name into local variable for desktop/mobile detection
        if ((preg_match("/iPhone/i", $agent)) || (preg_match("/android/i", $agent))) {
-          echo "<a href=\"javascript:mopen('{$menuid}');\" onmouseout=\"mclosetime()\">".htmlspecialchars($menu[$menuid]['desc'])."</a>\n";
+          echo "<a href=\"javascript:mopen('{$menuid}');\" onmouseout=\"mclosetime()\">".$menu[$menuid]['desc']."</a>\n";
        }
        else {
-          echo "<a href=\"{$link}\" onmouseover=\"mopen('{$menuid}')\" onmouseout=\"mclosetime()\">".htmlspecialchars($menu[$menuid]['desc'])."</a>\n";
+          echo "<a href=\"{$link}\" onmouseover=\"mopen('{$menuid}')\" onmouseout=\"mclosetime()\">".$menu[$menuid]['desc']."</a>\n";
        }
 	echo "	<div id=\"{$menuid}\" onmouseover=\"mcancelclosetime()\" onmouseout=\"mclosetime()\">\n";
 
@@ -241,7 +241,7 @@ function display_menu($menuid) {
 			# Display menuitem.
 			$link = $menuv['link'];
 			if ($link == '') $link = 'index.php';
-			echo "<a href=\"{$link}\" target=\"" . (empty($menuv['target']) ? "_self" : $menuv['target']) . "\" title=\"".htmlspecialchars($menuv['desc'])."\">".htmlspecialchars($menuv['desc'])."</a>\n";
+			echo "<a href=\"{$link}\" target=\"" . (empty($menuv['target']) ? "_self" : $menuv['target']) . "\" title=\"".$menuv['desc']."\">".$menuv['desc']."</a>\n";
 		} else {
 			# Display separator.
 			echo "<span class=\"tabseparator\">&nbsp;</span>";
