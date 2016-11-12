@@ -310,7 +310,7 @@ function show_header($title, $additional_header_content = null)
 	echo "</head>\n";
 	// NAS4Free Header
 	echo "<body>\n";
-	echo '<header id="g4">', "\n";
+	echo '<header id="g4h">', "\n";
 	echo "<div id=\"header\">\n";
 	echo "<div id=\"headerlogo\">\n";
 	echo "<a title=\"www.".get_product_url()."\" href=\"http://".get_product_url()."\" target='_blank'><img src='../images/header_logo.png' alt='logo' /></a>\n";
@@ -351,7 +351,9 @@ function show_header($title, $additional_header_content = null)
 	echo "</ul>\n";
 	echo "<div style=\"clear:both\"></div>\n";
 	echo "</div>\n";
+	echo '<div id="gapheader"></div>', "\n";
 	echo "</header>\n";
+	echo '<main id="g4m">', "\n";
 	echo '<div id="pagecontent">';
 	// QuiXplorer Header
 	if (!isset($pgtitle_omit) || !$pgtitle_omit) {
@@ -366,6 +368,6 @@ function show_header($title, $additional_header_content = null)
 	echo "Powered by QuiXplorer";
 	echo "</td>\n";
 	echo "</tr></tbody></table>\n";
-	echo '<div id="area_data"', ">";
+	echo '<div id="area_data">';
 }
 ?>
