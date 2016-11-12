@@ -36,7 +36,7 @@ require 'guiconfig.inc';
 
 $sphere_scriptname = basename(__FILE__);
 
-if (!isset($config['rrdgraphs']) || !is_array($config['rrdgraphs'])) {
+if (!(isset($config['rrdgraphs']) && is_array($config['rrdgraphs']))) {
 	$config['rrdgraphs'] = [];
 }
 
@@ -51,6 +51,7 @@ function cronjob_process_updatenotification($mode, $data) {
 		case UPDATENOTIFY_MODE_MODIFIED:
 			break;
 		case UPDATENOTIFY_MODE_DIRTY:
+/*
 			if (is_array($config['cron']['job'])) {
 				$index = array_search_ex($data, $config['cron']['job'], "uuid");
 				if (false !== $index) {
@@ -58,6 +59,7 @@ function cronjob_process_updatenotification($mode, $data) {
 					write_config();
 				}
 			}
+*/
 			break;
 	}
 	return $retval;
@@ -67,269 +69,327 @@ function cronjob_process_updatenotification($mode, $data) {
  * set the permission to 775 for the last directory in the path
  */
 function change_perms($dir) {
-    global $input_errors;
+	global $input_errors;
 
-    $path = rtrim($dir,'/');                                            // remove trailing slash
-    if (strlen($path) > 1) {
-        if (!is_dir($path)) {                                           // check if directory exists
-            $input_errors[] = sprintf(gtext("Directory %s doesn't exist!"), $path);
-        }
-        else {
-            $path_check = explode("/", $path);                          // split path to get directory names
-            $path_elements = count($path_check);                        // get path depth
-            $fp = substr(sprintf('%o', fileperms("/$path_check[1]/$path_check[2]")), -1);   // get mountpoint permissions for others
-            if ($fp >= 5) {                                             // transmission needs at least read & search permission at the mountpoint
-                $directory = "/$path_check[1]/$path_check[2]";          // set to the mountpoint
-                for ($i = 3; $i < $path_elements - 1; $i++) {           // traverse the path and set permissions to rx
-                    $directory = $directory."/$path_check[$i]";         // add next level
-                    exec("chmod o=+r+x \"$directory\"");                // set permissions to o=+r+x
-                }
-                $path_elements = $path_elements - 1;
-                $directory = $directory."/$path_check[$path_elements]"; // add last level
-                exec("chmod 775 {$directory}");                         // set permissions to 775
-                exec("chown {$_POST['who']} {$directory}*");
-            }
-            else
-            {
-                $input_errors[] = sprintf(gtext("RRDGraphs needs at least read & execute permissions at the mount point for directory %s! Set the Read and Execute bits for Others (Access Restrictions | Mode) for the mount point %s (in <a href='disks_mount.php'>Disks | Mount Point | Management</a> or <a href='disks_zfs_dataset.php'>Disks | ZFS | Datasets</a>) and hit Save in order to take them effect."), $path, "/{$path_check[1]}/{$path_check[2]}");
-            }
-        }
-    }
+	$path = rtrim($dir,'/');                                            // remove trailing slash
+	if (strlen($path) > 1) {
+		if (!is_dir($path)) {                                           // check if directory exists
+			$input_errors[] = sprintf(gtext("Directory %s doesn't exist!"), $path);
+		} else {
+			$path_check = explode('/', $path);                          // split path to get directory names
+			$path_elements = count($path_check);                        // get path depth
+			$fp = substr(sprintf('%o', fileperms("/$path_check[1]/$path_check[2]")), -1);   // get mountpoint permissions for others
+			if ($fp >= 5) {                                             // transmission needs at least read & search permission at the mountpoint
+				$directory = "/$path_check[1]/$path_check[2]";          // set to the mountpoint
+				for ($i = 3; $i < $path_elements - 1; $i++) {           // traverse the path and set permissions to rx
+					$directory = $directory."/$path_check[$i]";         // add next level
+					exec("chmod o=+r+x \"$directory\"");                // set permissions to o=+r+x
+				}
+				$path_elements = $path_elements - 1;
+				$directory = $directory."/$path_check[$path_elements]"; // add last level
+				exec("chmod 775 {$directory}");                         // set permissions to 775
+				exec("chown {$_POST['who']} {$directory}*");
+			} else {
+				$input_errors[] = sprintf(gtext("RRDGraphs needs at least read & execute permissions at the mount point for directory %s! Set the Read and Execute bits for Others (Access Restrictions | Mode) for the mount point %s (in <a href='disks_mount.php'>Disks | Mount Point | Management</a> or <a href='disks_zfs_dataset.php'>Disks | ZFS | Datasets</a>) and hit Save in order to take them effect."), $path, "/{$path_check[1]}/{$path_check[2]}");
+			}
+		}
+	}
 }
-
 if (isset($_POST['save']) && $_POST['save']) {
-    unset($input_errors);
-    $pconfig = $_POST;
-    if (isset($_POST['ups']) && empty($_POST['ups_at'])) { $input_errors[] = gtext("UPS identifier and IP address")." ".sprintf(gtext("must be in the format: %s."), "identifier@host-ip-address"); }
-    if (isset($_POST['latency']) && empty($_POST['latency_host'])) { $input_errors[] = gtext("Network latency").": ".gtext("Destination host name or IP address.")." ".gtext("Host")." ".gtext("must be defined!"); }
-    if (isset($_POST['storage_path']) && (($_POST['storage_path'] == "") || ($_POST['storage_path'] == $g['media_path']))) { $input_errors[] = gtext("The data directory must be set to a directory <b>below</b> /mnt."); }
+	unset($input_errors);
+	$pconfig = $_POST;
+	if (isset($_POST['ups']) && empty($_POST['ups_at'])) {
+		$input_errors[] = gtext('UPS identifier and IP address')." ".sprintf(gtext('must be in the format: %s.'), "identifier@host-ip-address");
+	}
+	if (isset($_POST['latency']) && empty($_POST['latency_host'])) {
+		$input_errors[] = gtext('Network latency') . ': ' . gtext('Destination host name or IP address.') . ' ' . gtext('Host') . ' ' . gtext('must be defined!');
+	}
+	if (isset($_POST['storage_path']) && (($_POST['storage_path'] == "") || ($_POST['storage_path'] == $g['media_path']))) { $input_errors[] = gtext("The data directory must be set to a directory <b>below</b> /mnt."); }
 	if (empty($input_errors)) {
 		if (isset($_POST['enable'])) {
-            $config['rrdgraphs']['enable'] = isset($_POST['enable']) ? true : false;
-            if (empty($_POST['storage_path'])) { $config['rrdgraphs']['storage_path'] = $g['media_path']; }
-            else $_POST['storage_path'] = rtrim($_POST['storage_path'],'/');            // ensure to have no trailing slash
-            if (!is_dir("{$_POST['storage_path']}/rrd")) { 
-                mkdir("{$_POST['storage_path']}/rrd", 0775, true);                     // new destination or first install
-                change_perms("{$_POST['storage_path']}/rrd");                          // check/set permissions
-            }
-            $config['rrdgraphs']['storage_path'] = $_POST['storage_path'];
-            $_POST['graph_h'] = trim($_POST['graph_h']);  
-            $config['rrdgraphs']['graph_h'] = !empty($_POST['graph_h']) ? $_POST['graph_h'] : 200;
-            $config['rrdgraphs']['refresh_time'] = !empty($_POST['refresh_time']) ? $_POST['refresh_time'] : 300;
-            $config['rrdgraphs']['zoom_factor'] = !empty($_POST['zoom_factor']) ? str_replace(',', '.', $_POST['zoom_factor']) : 1;
-            $config['rrdgraphs']['autoscale'] = isset($_POST['autoscale']) ? true : false;
-            $config['rrdgraphs']['background_black'] = true;
-            $config['rrdgraphs']['bytes_per_second'] = isset($_POST['bytes_per_second']) ? true : false;
-            $config['rrdgraphs']['logarithmic'] = isset($_POST['logarithmic']) ? true : false;
-            $config['rrdgraphs']['axis'] = isset($_POST['axis']) ? true : false;
-            if ($config['rrdgraphs']['axis'] == true) { $config['rrdgraphs']['logarithmic'] = false; }
-            $config['rrdgraphs']['load_averages'] = isset($_POST['load_averages']) ? true : false;
-            $config['rrdgraphs']['cpu_frequency'] = isset($_POST['cpu_frequency']) ? true : false;
-            $config['rrdgraphs']['cpu_temperature'] = isset($_POST['cpu_temperature']) ? true : false;
-            $config['rrdgraphs']['disk_usage'] = isset($_POST['disk_usage']) ? true : false;
-            $config['rrdgraphs']['lan_load'] = isset($_POST['lan_load']) ? true : false;
-            $config['rrdgraphs']['lan_if'] = get_ifname($config['interfaces']['lan']['if']);    // for 'auto' if name
-            $config['rrdgraphs']['no_processes'] = isset($_POST['no_processes']) ? true : false;
-            $config['rrdgraphs']['cpu_usage'] = isset($_POST['cpu_usage']) ? true : false;
-            $config['rrdgraphs']['memory_usage'] = isset($_POST['memory_usage']) ? true : false;
-            $config['rrdgraphs']['arc_usage'] = isset($_POST['arc_usage']) ? true : false;
-            $config['rrdgraphs']['latency'] = isset($_POST['latency']) ? true : false;
-            $config['rrdgraphs']['latency_host'] = !empty($_POST['latency_host']) ? $_POST['latency_host'] : "127.0.0.1";
-            $config['rrdgraphs']['latency_interface'] = $_POST['latency_interface'];
-            $config['rrdgraphs']['latency_count'] = $_POST['latency_count'];
-            $config['rrdgraphs']['latency_parameters'] = !empty($_POST['latency_parameters']) ? $_POST['latency_parameters'] : "";
-            $config['rrdgraphs']['ups'] = isset($_POST['ups']) ? true : false;
-            $config['rrdgraphs']['ups_at'] = !empty($_POST['ups_at']) ? $_POST['ups_at'] : "identifier@host-ip-address";
-            $config['rrdgraphs']['uptime'] = isset($_POST['uptime']) ? true : false;
-
-            $cronjob = array();
-            $a_cronjob = &$config['cron']['job'];
-            $uuid = isset($config['rrdgraphs']['schedule_uuid']) ? $config['rrdgraphs']['schedule_uuid'] : false;
-            if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_cronjob, "uuid")))) {
-            	$a_cronjob[$cnid]['enable'] = true;
-            	$a_cronjob[$cnid]['command'] = "/usr/local/share/rrdgraphs/rrd-update.sh";
-            } else {
-            	$cronjob['enable'] = true;
-            	$cronjob['uuid'] = uuid();
-            	$cronjob['desc'] = "RRDGraphs updates every 5 minutes";
-            	for ($i = 0; $i <= 55; $i = $i+5) { $cronjob['minute'][] = $i; }
-            	$cronjob['hour'] = true;
-            	$cronjob['day'] = true;
-            	$cronjob['month'] = true;
-            	$cronjob['weekday'] = true;
-            	$cronjob['all_mins'] = 0;
-            	$cronjob['all_hours'] = 1;
-            	$cronjob['all_days'] = 1;
-            	$cronjob['all_months'] = 1;
-            	$cronjob['all_weekdays'] = 1;
-            	$cronjob['who'] = 'root';
-            	$cronjob['command'] = "/usr/local/share/rrdgraphs/rrd-update.sh";
-                $config['rrdgraphs']['schedule_uuid'] = $cronjob['uuid'];
-            }
-            if (isset($uuid) && (FALSE !== $cnid)) {
-            		$mode = UPDATENOTIFY_MODE_MODIFIED;
-            	} else {
-            		$a_cronjob[] = $cronjob;
-            		$mode = UPDATENOTIFY_MODE_NEW;
-            	}
-            updatenotify_set("cronjob", $mode, $cronjob['uuid']);
-
-            $savemsg = get_std_save_message(write_config());
-
-    		$retval = 0;
-    		if (!file_exists($d_sysrebootreqd_path)) {
-    			$retval |= updatenotify_process("cronjob", "cronjob_process_updatenotification");
-    			config_lock();
-    			$retval |= rc_update_service("cron");
-    			config_unlock();
-    		}
-    		$savemsg = get_std_save_message($retval);
-    		if ($retval == 0) {
-    			updatenotify_delete("cronjob");
-    		}
-
-            require_once("/usr/local/share/rrdgraphs/rrd-start.php");
-        }   // end of enable extension
-		else { 
-            $config['rrdgraphs']['enable'] = isset($_POST['enable']) ? true : false;
-
-        	if (is_array($config['cron']['job'])) {                                                            // check if cron jobs exists !!!
-                $a_cronjob = &$config['cron']['job'];
-                $uuid = isset($config['rrdgraphs']['schedule_uuid']) ? $config['rrdgraphs']['schedule_uuid'] : false;
-                if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_cronjob, "uuid")))) {
-                	$a_cronjob[$cnid]['enable'] = false;
-                }
-                if (isset($uuid) && (FALSE !== $cnid)) {
-            		$mode = UPDATENOTIFY_MODE_DIRTY;
-        
-                    updatenotify_set("cronjob", $mode, $uuid);
-        
-            		$retval = 0;
-            		if (!file_exists($d_sysrebootreqd_path)) {
-            			$retval |= updatenotify_process("cronjob", "cronjob_process_updatenotification");
-            			config_lock();
-            			$retval |= rc_update_service("cron");
-            			config_unlock();
-            		}
-            		$savemsg = get_std_save_message($retval);
-            		if ($retval == 0) {
-            			updatenotify_delete("cronjob");
-            		}
-                }
-        	}
-            $savemsg = get_std_save_message(write_config());
-        }   // end of disable extension
-    }   // end of empty input_errors
+			$config['rrdgraphs']['enable'] = isset($_POST['enable']);
+			if (empty($_POST['storage_path'])) {
+				$config['rrdgraphs']['storage_path'] = $g['media_path'];
+			} else {
+				$_POST['storage_path'] = rtrim($_POST['storage_path'],'/');            // ensure to have no trailing slash
+			}
+			if (!is_dir("{$_POST['storage_path']}/rrd")) { 
+				mkdir("{$_POST['storage_path']}/rrd", 0775, true);                     // new destination or first install
+				change_perms("{$_POST['storage_path']}/rrd");                          // check/set permissions
+			}
+			$config['rrdgraphs']['storage_path'] = $_POST['storage_path'];
+			$_POST['graph_h'] = trim($_POST['graph_h']);  
+			$config['rrdgraphs']['graph_h'] = !empty($_POST['graph_h']) ? $_POST['graph_h'] : 200;
+			$config['rrdgraphs']['refresh_time'] = !empty($_POST['refresh_time']) ? $_POST['refresh_time'] : 300;
+			$config['rrdgraphs']['zoom_factor'] = !empty($_POST['zoom_factor']) ? str_replace(',', '.', $_POST['zoom_factor']) : 1;
+			$config['rrdgraphs']['autoscale'] = isset($_POST['autoscale']);
+			$config['rrdgraphs']['background_black'] = true;
+			$config['rrdgraphs']['bytes_per_second'] = isset($_POST['bytes_per_second']);
+			$config['rrdgraphs']['logarithmic'] = isset($_POST['logarithmic']);
+			$config['rrdgraphs']['axis'] = isset($_POST['axis']);
+			if ($config['rrdgraphs']['axis']) {
+				$config['rrdgraphs']['logarithmic'] = false;
+			}
+			$config['rrdgraphs']['load_averages'] = isset($_POST['load_averages']);
+			$config['rrdgraphs']['cpu_frequency'] = isset($_POST['cpu_frequency']);
+			$config['rrdgraphs']['cpu_temperature'] = isset($_POST['cpu_temperature']);
+			$config['rrdgraphs']['disk_usage'] = isset($_POST['disk_usage']);
+			$config['rrdgraphs']['lan_load'] = isset($_POST['lan_load']);
+			$config['rrdgraphs']['lan_if'] = get_ifname($config['interfaces']['lan']['if']);    // for 'auto' if name
+			$config['rrdgraphs']['no_processes'] = isset($_POST['no_processes']);
+			$config['rrdgraphs']['cpu_usage'] = isset($_POST['cpu_usage']);
+			$config['rrdgraphs']['memory_usage'] = isset($_POST['memory_usage']);
+			$config['rrdgraphs']['arc_usage'] = isset($_POST['arc_usage']);
+			$config['rrdgraphs']['latency'] = isset($_POST['latency']);
+			$config['rrdgraphs']['latency_host'] = !empty($_POST['latency_host']) ? $_POST['latency_host'] : "127.0.0.1";
+			$config['rrdgraphs']['latency_interface'] = $_POST['latency_interface'];
+			$config['rrdgraphs']['latency_count'] = $_POST['latency_count'];
+			$config['rrdgraphs']['latency_parameters'] = !empty($_POST['latency_parameters']) ? $_POST['latency_parameters'] : "";
+			$config['rrdgraphs']['ups'] = isset($_POST['ups']);
+			$config['rrdgraphs']['ups_at'] = !empty($_POST['ups_at']) ? $_POST['ups_at'] : "identifier@host-ip-address";
+			$config['rrdgraphs']['uptime'] = isset($_POST['uptime']);
+/*
+			$cronjob = array();
+			$a_cronjob = &$config['cron']['job'];
+			$uuid = isset($config['rrdgraphs']['schedule_uuid']) ? $config['rrdgraphs']['schedule_uuid'] : false;
+			if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_cronjob, "uuid")))) {
+				$a_cronjob[$cnid]['enable'] = true;
+				$a_cronjob[$cnid]['command'] = "/usr/local/share/rrdgraphs/rrd-update.sh";
+			} else {
+				$cronjob['enable'] = true;
+				$cronjob['uuid'] = uuid();
+				$cronjob['desc'] = "RRDGraphs updates every 5 minutes";
+				for ($i = 0; $i <= 55; $i = $i+5) { $cronjob['minute'][] = $i; }
+				$cronjob['hour'] = true;
+				$cronjob['day'] = true;
+				$cronjob['month'] = true;
+				$cronjob['weekday'] = true;
+				$cronjob['all_mins'] = 0;
+				$cronjob['all_hours'] = 1;
+				$cronjob['all_days'] = 1;
+				$cronjob['all_months'] = 1;
+				$cronjob['all_weekdays'] = 1;
+				$cronjob['who'] = 'root';
+				$cronjob['command'] = "/usr/local/share/rrdgraphs/rrd-update.sh";
+				$config['rrdgraphs']['schedule_uuid'] = $cronjob['uuid'];
+			}
+			if (isset($uuid) && (FALSE !== $cnid)) {
+					$mode = UPDATENOTIFY_MODE_MODIFIED;
+				} else {
+					$a_cronjob[] = $cronjob;
+					$mode = UPDATENOTIFY_MODE_NEW;
+				}
+			updatenotify_set('cronjob', $mode, $cronjob['uuid']);
+*/
+			$savemsg = get_std_save_message(write_config());
+			$retval = 0;
+/*
+			if (!file_exists($d_sysrebootreqd_path)) {
+				$retval |= updatenotify_process('cronjob', "cronjob_process_updatenotification");
+				config_lock();
+				$retval |= rc_update_service('cron');
+				config_unlock();
+			}
+			$savemsg = get_std_save_message($retval);
+			if ($retval == 0) {
+				updatenotify_delete('cronjob');
+			}
+*/
+			require_once('/usr/local/share/rrdgraphs/rrd-start.php');
+		} else { 
+			$config['rrdgraphs']['enable'] = isset($_POST['enable']) ? true : false;
+/*
+			if (is_array($config['cron']['job'])) {                                                            // check if cron jobs exists !!!
+				$a_cronjob = &$config['cron']['job'];
+				$uuid = isset($config['rrdgraphs']['schedule_uuid']) ? $config['rrdgraphs']['schedule_uuid'] : false;
+				if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_cronjob, "uuid")))) {
+					$a_cronjob[$cnid]['enable'] = false;
+				}
+				if (isset($uuid) && (FALSE !== $cnid)) {
+					$mode = UPDATENOTIFY_MODE_DIRTY;
+					updatenotify_set('cronjob', $mode, $uuid);
+					$retval = 0;
+					if (!file_exists($d_sysrebootreqd_path)) {
+						$retval |= updatenotify_process('cronjob', "cronjob_process_updatenotification");
+						config_lock();
+						$retval |= rc_update_service('cron');
+						config_unlock();
+					}
+					$savemsg = get_std_save_message($retval);
+					if ($retval == 0) {
+						updatenotify_delete('cronjob');
+					}
+				}
+			}
+*/
+			$savemsg = get_std_save_message(write_config());
+		}   // end of disable extension
+	}   // end of empty input_errors
 }   // end of SAVE
 
 // reset graphs
 if (isset($_POST['reset_graphs']) && $_POST['reset_graphs']) {
-    exec("logger rrdgraphs: reseting graphs ...");
-    $savemsg = gtext("All data from the following statistics have been deleted:");
-    if (isset($_POST['uptime']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/uptime.rrd")) { unlink("{$config['rrdgraphs']['storage_path']}/rrd/uptime.rrd");
-        exec("logger rrdgraphs: reseting uptime graphs");
-        $savemsg .= "<br />- ".gtext("Uptime"); }
-    if (isset($_POST['load_averages']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/cpu_usage.rrd")) { unlink("{$config['rrdgraphs']['storage_path']}/rrd/cpu_usage.rrd");
-        exec("logger rrdgraphs: reseting load averages graphs");
-        $savemsg .= "<br />- ".gtext("Load averages"); }
-    if (isset($_POST['no_processes']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/processes.rrd")) { unlink("{$config['rrdgraphs']['storage_path']}/rrd/processes.rrd");
-        exec("logger rrdgraphs: reseting processes graphs");
-        $savemsg .= "<br />- ".gtext("Processes"); }
-    if (isset($_POST['cpu_usage']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/cpu.rrd")) { unlink("{$config['rrdgraphs']['storage_path']}/rrd/cpu.rrd");
-        exec("logger rrdgraphs: reseting cpu usage graphs");
-        $savemsg .= "<br />- ".gtext("CPU usage"); }
-    if (isset($_POST['cpu_frequency']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/cpu_freq.rrd")) { unlink("{$config['rrdgraphs']['storage_path']}/rrd/cpu_freq.rrd"); 
-        exec("logger rrdgraphs: reseting cpu frequency graphs");
-        $savemsg .= "<br />- ".gtext("CPU frequency"); }
-    if (isset($_POST['cpu_temperature']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/cpu_temp.rrd")) { unlink("{$config['rrdgraphs']['storage_path']}/rrd/cpu_temp.rrd"); 
-        exec("logger rrdgraphs: reseting cpu temperature graphs");
-        $savemsg .= "<br />- ".gtext("CPU temperature"); }
-    if (isset($_POST['disk_usage'])) { mwexec("rm {$config['rrdgraphs']['storage_path']}/rrd/mnt_*.rrd", true);
-        exec("logger rrdgraphs: reseting disk_usage graphs");
-        $savemsg .= "<br />- ".gtext("Disk usage"); }
-    if (isset($_POST['memory_usage']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/memory.rrd")) { unlink("{$config['rrdgraphs']['storage_path']}/rrd/memory.rrd");
-        exec("logger rrdgraphs: reseting memory usage graphs");
-        $savemsg .= "<br />- ".gtext("Memory"); }
-    if (isset($_POST['arc_usage']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/arc.rrd")) { unlink("{$config['rrdgraphs']['storage_path']}/rrd/arc.rrd");
-        exec("logger rrdgraphs: reseting ZFS arc usage graphs");
-        $savemsg .= "<br />- ".gtext("ZFS ARC"); }
-    if (isset($_POST['lan_load']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/em0.rrd")) { unlink("{$config['rrdgraphs']['storage_path']}/rrd/em0.rrd"); 
-        exec("logger rrdgraphs: reseting network traffic graphs");
-        $savemsg .= "<br />- ".gtext("Network traffic"); }
-    if (isset($_POST['latency']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/latency.rrd")) { unlink("{$config['rrdgraphs']['storage_path']}/rrd/latency.rrd");
-        exec("logger rrdgraphs: reseting latency graphs");
-        $savemsg .= "<br />- ".gtext("Latency"); }
-    if (isset($_POST['ups']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/ups.rrd")) { unlink("{$config['rrdgraphs']['storage_path']}/rrd/ups.rrd");
-        exec("logger rrdgraphs: reseting UPS graphs");
-        $savemsg .= "<br />- ".gtext("UPS"); }
-        require_once("/usr/local/share/rrdgraphs/rrd-start.php");
+	exec("logger rrdgraphs: reseting graphs ...");
+	$savemsg = gtext("All data from the following statistics have been deleted:");
+	if (isset($_POST['uptime']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/uptime.rrd")) {
+		unlink("{$config['rrdgraphs']['storage_path']}/rrd/uptime.rrd");
+		exec("logger rrdgraphs: reseting uptime graphs");
+		$savemsg .= "<br />- ".gtext("Uptime");
+	}
+	if (isset($_POST['load_averages']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/cpu_usage.rrd")) {
+		unlink("{$config['rrdgraphs']['storage_path']}/rrd/cpu_usage.rrd");
+		exec("logger rrdgraphs: reseting load averages graphs");
+		$savemsg .= "<br />- ".gtext("Load averages");
+	}
+	if (isset($_POST['no_processes']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/processes.rrd")) {
+		unlink("{$config['rrdgraphs']['storage_path']}/rrd/processes.rrd");
+		exec("logger rrdgraphs: reseting processes graphs");
+		$savemsg .= "<br />- ".gtext("Processes");
+	}
+	if (isset($_POST['cpu_usage']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/cpu.rrd")) {
+		unlink("{$config['rrdgraphs']['storage_path']}/rrd/cpu.rrd");
+		exec("logger rrdgraphs: reseting cpu usage graphs");
+		$savemsg .= "<br />- ".gtext("CPU usage");
+	}
+	if (isset($_POST['cpu_frequency']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/cpu_freq.rrd")) {
+		unlink("{$config['rrdgraphs']['storage_path']}/rrd/cpu_freq.rrd"); 
+		exec("logger rrdgraphs: reseting cpu frequency graphs");
+		$savemsg .= "<br />- ".gtext("CPU frequency");
+	}
+	if (isset($_POST['cpu_temperature']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/cpu_temp.rrd")) {
+		unlink("{$config['rrdgraphs']['storage_path']}/rrd/cpu_temp.rrd"); 
+		exec("logger rrdgraphs: reseting cpu temperature graphs");
+		$savemsg .= "<br />- ".gtext("CPU temperature");
+	}
+	if (isset($_POST['disk_usage'])) {
+		mwexec("rm {$config['rrdgraphs']['storage_path']}/rrd/mnt_*.rrd", true);
+		exec("logger rrdgraphs: reseting disk_usage graphs");
+		$savemsg .= "<br />- ".gtext("Disk usage");
+	}
+	if (isset($_POST['memory_usage']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/memory.rrd")) {
+		unlink("{$config['rrdgraphs']['storage_path']}/rrd/memory.rrd");
+		exec("logger rrdgraphs: reseting memory usage graphs");
+		$savemsg .= "<br />- ".gtext("Memory");
+	}
+	if (isset($_POST['arc_usage']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/arc.rrd")) {
+		unlink("{$config['rrdgraphs']['storage_path']}/rrd/arc.rrd");
+		exec("logger rrdgraphs: reseting ZFS arc usage graphs");
+		$savemsg .= "<br />- ".gtext("ZFS ARC");
+	}
+	if (isset($_POST['lan_load']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/em0.rrd")) {
+		unlink("{$config['rrdgraphs']['storage_path']}/rrd/em0.rrd"); 
+		exec("logger rrdgraphs: reseting network traffic graphs");
+		$savemsg .= "<br />- ".gtext("Network traffic");
+	}
+	if (isset($_POST['latency']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/latency.rrd")) {
+		unlink("{$config['rrdgraphs']['storage_path']}/rrd/latency.rrd");
+		exec("logger rrdgraphs: reseting latency graphs");
+		$savemsg .= "<br />- ".gtext("Latency");
+	}
+	if (isset($_POST['ups']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/ups.rrd")) {
+		unlink("{$config['rrdgraphs']['storage_path']}/rrd/ups.rrd");
+		exec("logger rrdgraphs: reseting UPS graphs");
+		$savemsg .= "<br />- ".gtext("UPS");
+	}
+	require_once("/usr/local/share/rrdgraphs/rrd-start.php");
 }
 
 $pconfig['enable'] = isset($config['rrdgraphs']['enable']) ? true : false;
+
 $pconfig['storage_path'] = !empty($config['rrdgraphs']['storage_path']) ? $config['rrdgraphs']['storage_path'] : $g['media_path'];
 $pconfig['graph_h'] = !empty($config['rrdgraphs']['graph_h']) ? $config['rrdgraphs']['graph_h'] : 200;
 $pconfig['refresh_time'] = !empty($config['rrdgraphs']['refresh_time']) ? $config['rrdgraphs']['refresh_time'] : 300;
+
+// MISSING:
 $pconfig['zoom_factor'] = !empty($config['rrdgraphs']['zoom_factor']) ? $config['rrdgraphs']['zoom_factor'] : 1;
+
 $pconfig['autoscale'] = isset($config['rrdgraphs']['autoscale']) ? true : false;
+
+// MISSING:
 $pconfig['background_black'] = false;
-$pconfig['bytes_per_second'] = isset($config['rrdgraphs']['bytes_per_second']) ? true : false;
-$pconfig['logarithmic'] = isset($config['rrdgraphs']['logarithmic']) ? true : false;
-$pconfig['axis'] = isset($config['rrdgraphs']['axis']) ? true : false;
+
 // available graphs
-$pconfig['uptime'] = isset($config['rrdgraphs']['uptime']) ? true : false;
-$pconfig['load_averages'] = isset($config['rrdgraphs']['load_averages']) ? true : false;
-$pconfig['no_processes'] = isset($config['rrdgraphs']['no_processes']) ? true : false;
-$pconfig['cpu_usage'] = isset($config['rrdgraphs']['cpu_usage']) ? true : false;
 $pconfig['cpu_frequency'] = isset($config['rrdgraphs']['cpu_frequency']) ? true : false;
 $pconfig['cpu_temperature'] = isset($config['rrdgraphs']['cpu_temperature']) ? true : false;
+$pconfig['cpu_usage'] = isset($config['rrdgraphs']['cpu_usage']) ? true : false;
 $pconfig['disk_usage'] = isset($config['rrdgraphs']['disk_usage']) ? true : false;
+$pconfig['load_averages'] = isset($config['rrdgraphs']['load_averages']) ? true : false;
 $pconfig['memory_usage'] = isset($config['rrdgraphs']['memory_usage']) ? true : false;
-$pconfig['arc_usage'] = isset($config['rrdgraphs']['arc_usage']) ? true : false;
-$pconfig['lan_load'] = isset($config['rrdgraphs']['lan_load']) ? true : false;
 $pconfig['latency'] = isset($config['rrdgraphs']['latency']) ? true : false;
 $pconfig['latency_host'] = !empty($config['rrdgraphs']['latency_host']) ? $config['rrdgraphs']['latency_host'] : "127.0.0.1";
 $pconfig['latency_interface'] = !empty($config['rrdgraphs']['latency_interface']) ? $config['rrdgraphs']['latency_interface'] : "identifier@host-ip-address";
 $pconfig['latency_count'] = !empty($config['rrdgraphs']['latency_count']) ? $config['rrdgraphs']['latency_count'] : "3";
 $pconfig['latency_parameters'] = !empty($config['rrdgraphs']['latency_parameters']) ? $config['rrdgraphs']['latency_parameters'] : "";
+$pconfig['lan_load'] = isset($config['rrdgraphs']['lan_load']) ? true : false;
+$pconfig['bytes_per_second'] = isset($config['rrdgraphs']['bytes_per_second']) ? true : false;
+$pconfig['logarithmic'] = isset($config['rrdgraphs']['logarithmic']) ? true : false;
+$pconfig['axis'] = isset($config['rrdgraphs']['axis']) ? true : false;
+$pconfig['uptime'] = isset($config['rrdgraphs']['uptime']) ? true : false;
 $pconfig['ups'] = isset($config['rrdgraphs']['ups']) ? true : false;
 $pconfig['ups_at'] = !empty($config['rrdgraphs']['ups_at']) ? $config['rrdgraphs']['ups_at'] : "identifier@host-ip-address";
+$pconfig['arc_usage'] = isset($config['rrdgraphs']['arc_usage']) ? true : false;
+
+// MISSING:
+$pconfig['no_processes'] = isset($config['rrdgraphs']['no_processes']) ? true : false;
 
 $a_interface = get_interface_list();
 // Add VLAN interfaces (from user Vasily1)
 if (isset($config['vinterfaces']['vlan']) && is_array($config['vinterfaces']['vlan']) && count($config['vinterfaces']['vlan'])) {
-   foreach ($config['vinterfaces']['vlan'] as $vlanv) {
-      $a_interface[$vlanv['if']] = $vlanv;
-      $a_interface[$vlanv['if']]['isvirtual'] = true;
-   }
+	foreach ($config['vinterfaces']['vlan'] as $vlanv) {
+		$a_interface[$vlanv['if']] = $vlanv;
+		$a_interface[$vlanv['if']]['isvirtual'] = true;
+	}
 }
 // Add LAGG interfaces (from user Vasily1)
 if (isset($config['vinterfaces']['lagg']) && is_array($config['vinterfaces']['lagg']) && count($config['vinterfaces']['lagg'])) {
-   foreach ($config['vinterfaces']['lagg'] as $laggv) {
-      $a_interface[$laggv['if']] = $laggv;
-      $a_interface[$laggv['if']]['isvirtual'] = true;
-   }
+	foreach ($config['vinterfaces']['lagg'] as $laggv) {
+		$a_interface[$laggv['if']] = $laggv;
+		$a_interface[$laggv['if']]['isvirtual'] = true;
+	}
 }
 
 // Use first interface as default if it is not set.
 if (empty($pconfig['latency_interface']) && is_array($a_interface)) $pconfig['latency_interface'] = key($a_interface);
 
-$pgtitle = [gtext("Services"), gtext("RRDGraphs")];
+$pgtitle = [gtext('Services'), gtext('RRDGraphs')];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
-	// Init spinner onsubmit()
+<?php // Init spinner onsubmit().?>
 	$("#iform").submit(function() { spinner(); });
 });
+function axis_change() {
+	switch(document.iform.axis.checked) {
+		case true:
+			document.getElementById('logarithmic').checked = false;
+			showElementById('logarithmic_tr','hide');
+			break;
+		case false:
+			showElementById('logarithmic_tr','show');
+			break;
+	}
+}
+function logarithmic_change() {
+	switch(document.iform.logarithmic.checked) {
+		case true:
+			document.getElementById('axis').checked = false;
+			showElementById('axis_tr','hide');
+			break;
+		case false:
+			showElementById('axis_tr','show');
+			break;
+	}
+}
 function lan_change() {
 	switch(document.iform.lan_load.checked) {
 		case true:
 			showElementById('bytes_per_second_tr','show');
-			showElementById('logarithmic_tr','show');
 			showElementById('axis_tr','show');
+			axis_change();
+			logarithmic_change();
 			break;
-
 		case false:
 			showElementById('bytes_per_second_tr','hide');
 			showElementById('logarithmic_tr','hide');
@@ -337,7 +397,6 @@ function lan_change() {
 			break;
 	}
 }
-
 function latency_change() {
 	switch(document.iform.latency.checked) {
 		case true:
@@ -348,7 +407,6 @@ function latency_change() {
 			showElementById('latency_interface_cell','show');
 			showElementById('latency_interface_table','show');
 			break;
-
 		case false:
 			showElementById('latency_host_tr','hide');
 			showElementById('latency_interface_tr','hide');
@@ -364,7 +422,6 @@ function ups_change() {
 		case true:
 			showElementById('ups_at_tr','show');
 			break;
-
 		case false:
 			showElementById('ups_at_tr','hide');
 			break;
@@ -402,7 +459,7 @@ function enable_change(enable_change) {
 //]]>
 </script>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iform" name="iform">
-	<?php
+<?php
 		if (!empty($errormsg)) {
 			print_error_box($errormsg);
 		}
@@ -412,26 +469,25 @@ function enable_change(enable_change) {
 		if (file_exists($d_sysrebootreqd_path)) {
 			print_info_box(get_std_save_message(0));
 		}
-	?>
+?>
 	<table id="area_data_settings">
 		<colgroup>
 			<col id="area_data_settings_col_tag">
 			<col id="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php
-			html_titleline_checkbox2("enable", $config['rrdgraphs']['appname'], $pconfig['enable'], gtext("Enable"), "enable_change(false)");
-			?>
+<?php
+			html_titleline_checkbox2('enable', gtext('Configuration'), $pconfig['enable'], gtext('Enable'), "enable_change(false)");
+?>
 		</thead>
 		<tbody>
-			<?php
-			html_filechooser2("storage_path", gtext("Data directory"), $pconfig['storage_path'], sprintf(gtext("The data directory holds the statistical data for the graphs. This should be set to a %s to prevent a disk spinning all the time."), "<b>SSD</b>"), $g['media_path'], true, 60);
-			html_inputbox2("refresh_time", gtext("Refresh time"), $pconfig['refresh_time'], gtext("Refresh time for graph pages.")." ".sprintf(gtext("Default is %s %s."), 300, gtext("seconds")), false, 5);
-			html_inputbox2("graph_h", gtext("Graphs height"), $pconfig['graph_h'], sprintf(gtext("Height of the graphs. Default is %s pixel."), 200), false, 5);
-			html_checkbox2("autoscale", gtext("Autoscale"), $pconfig['autoscale'], gtext("Autoscale for graphs."), "", false);
+<?php
+			html_filechooser2('storage_path', gtext('Data directory'), $pconfig['storage_path'], sprintf(gtext('The data directory holds the statistical data for the graphs. This should be set to a %s to prevent a disk spinning all the time.'), "<b>SSD</b>"), $g['media_path'], true, 60);
+			html_inputbox2('refresh_time', gtext('Refresh time'), $pconfig['refresh_time'], gtext('Refresh time for graph pages.')." ".sprintf(gtext('Default is %s %s.'), 300, gtext('seconds')), false, 5);
+			html_inputbox2('graph_h', gtext('Graphs height'), $pconfig['graph_h'], sprintf(gtext('Height of the graphs. Default is %s pixel.'), 200), false, 5);
+			html_checkbox2('autoscale', gtext('Autoscale'), $pconfig['autoscale'], gtext('Autoscale for graphs.'), "", false);
 			html_separator2();
-
-			html_titleline2(gtext("Available Graphs"));
+			html_titleline2(gtext('Available Graphs'));
 			html_checkbox2('cpu_frequency', gtext('CPU Frequency'), $pconfig['cpu_frequency'], gtext('Enable collecting CPU frequency statistics.'), '', false);
 			html_checkbox2('cpu_temperature', gtext('CPU Temperature'), $pconfig['cpu_temperature'], gtext('Enable collecting CPU temperature statistics.'), '', false);
 			html_checkbox2('cpu_usage', gtext('CPU Usage'), $pconfig['cpu_usage'], gtext('Enable collecting CPU usage statistics.'), '', false);
@@ -439,79 +495,46 @@ function enable_change(enable_change) {
 			html_checkbox2('load_averages', gtext('Load Averages'), $pconfig['load_averages'], gtext('Enable collecting average system load statistics.'), '', false);
 			html_checkbox2('memory_usage', gtext('Memory Usage'), $pconfig['memory_usage'], gtext('Enable collecting memory usage statistics.'), '', false);
 			html_checkbox2('latency', gtext('Network Latency'), $pconfig['latency'], gtext('Enable collecting network latency statistics.'), '', false, false, 'latency_change()');
-			?>
-			<tr>
-				<td class="vncell"></td>
-				<td>
-					<table id="area_data_settings">
-						<colgroup>
-							<col id="area_data_settings_col_tag">
-							<col id="area_data_settings_col_data">
-						</colgroup>
-						<tbody>
-						<?php html_inputbox2("latency_host", gtext("Host"), $pconfig['latency_host'], gtext("Destination host name or IP address."), false, 20);?>
-							<tr>
-								<td id="latency_interface_cell" valign="top" class="vncell"><?=gtext("Interface selection");?></td>
-								<td id="latency_interface_table" class="vtable">
-									<select name="latency_interface" class="formfld" id="xif">
-										<?php foreach($a_interface as $if => $ifinfo):?>
-											<?php $ifinfo = get_interface_info($if); if (("up" == $ifinfo['status']) || ("associated" == $ifinfo['status'])):?>
-												<option value="<?=$if;?>"<?php if ($if == $pconfig['latency_interface']) echo "selected=\"selected\"";?>><?=$if?></option>
-											<?php endif;?>
-										<?php endforeach;?>
-									</select>
-									<br /><?=gtext("Select the interface (only selectable if your server has more than one) to use for the source IP address in outgoing packets.");?>
-								</td>
-							</tr>
-							<?php
-							$latency_a_count = array(); for ($i = 1; $i <= 20; $i++) { $latency_a_count[$i] = $i; }
-							html_combobox2("latency_count", gtext("Count"), $pconfig['latency_count'], $latency_a_count, gtext("Stop after sending (and receiving) N packets."), false);
-							html_inputbox2("latency_parameters", gtext("Auxiliary parameters"), $pconfig['latency_parameters'], gtext("These parameters will be added to the ping command.")." ".sprintf(gtext("Please check the %s documentation%s."), "<a href=http://www.freebsd.org/cgi/man.cgi?query=ping&amp;apropos=0&amp;sektion=0&amp;format=html target='_blank'>", "</a>"), false, 60);
-							?>
-						</tbody>
-					</table>
-				</td>
-			</tr>
-			<?php
+			html_inputbox2('latency_host', gtext('Host'), $pconfig['latency_host'], gtext('Destination host name or IP address.'), false, 20);
+			$a_option = [];
+			foreach($a_interface as $if => $ifinfo) {
+				$ifinfo = get_interface_info($if);
+				if (('up' == $ifinfo['status']) || ('associated' == $ifinfo['status'])) {
+					$a_option[] = $if;
+					if ($if == $pconfig['latency_interface']) {
+						$s_option = $if;
+					}
+				}
+			}
+			html_combobox2('latency_interface', gtext('Interface selection'), $s_option, $a_option, gtext('Select the interface (only selectable if your server has more than one) to use for the source IP address in outgoing packets.'));
+			$latency_a_count = [];
+			for ($i = 1; $i <= 20; $i++) {
+				$latency_a_count[$i] = $i;
+			}
+			html_combobox2('latency_count', gtext('Count'), $pconfig['latency_count'], $latency_a_count, gtext('Stop after sending (and receiving) N packets.'), false);
+			html_inputbox2('latency_parameters', gtext('Auxiliary parameters'), $pconfig['latency_parameters'], gtext('These parameters will be added to the ping command.')." ".sprintf(gtext('Please check the %s documentation%s.'), "<a href=http://www.freebsd.org/cgi/man.cgi?query=ping&amp;apropos=0&amp;sektion=0&amp;format=html target='_blank'>", "</a>"), false, 60);
 			html_checkbox2('lan_load', gtext('Network Traffic'), $pconfig['lan_load'], gtext('Enable collecting network trafic statistics.'), '', false, false, 'lan_change()');
-			?>
-			<tr>
-				<td class="vncell"></td>
-				<td>
-					<table id="area_data_settings">
-						<colgroup>
-							<col id="area_data_settings_col_tag">
-							<col id="area_data_settings_col_data">
-						</colgroup>
-						<tbody>
-							<?php
-							html_checkbox2("bytes_per_second", gtext("Bytes/sec"), $pconfig['bytes_per_second'], gtext("Use Bytes/sec instead of Bits/sec for network throughput display."), "", false);
-							html_checkbox2("logarithmic", gtext("Logarithmic scaling"), $pconfig['logarithmic'], sprintf(gtext("Use logarithmic y-axis scaling for %s graphs (can not be used together with positive/negative y-axis range)."), gtext("Network traffic")), "", false);
-							html_checkbox2("axis", gtext("Y-axis range"), $pconfig['axis'], sprintf(gtext("Show positive/negative values for %s graphs (can not be used together with logarithmic scaling)."), gtext("Network traffic")), "", false);
-							?>
-						</tbody>
-					</table>
-				</td>
-			</tr>
-			<?php
+			html_checkbox2('bytes_per_second', gtext('Bytes/sec'), $pconfig['bytes_per_second'], gtext('Use Bytes/sec instead of Bits/sec for network throughput display.'), "", false);
+			html_checkbox2('logarithmic', gtext('Logarithmic Scaling'), $pconfig['logarithmic'], sprintf(gtext('Use logarithmic y-axis scaling for %s graphs (can not be used together with positive/negative y-axis range).'), gtext('Network traffic')), "", false, false, 'logarithmic_change()');
+			html_checkbox2('axis', gtext('Y-axis range'), $pconfig['axis'], sprintf(gtext('Show positive/negative values for %s graphs (can not be used together with logarithmic scaling).'), gtext('Network traffic')), '', false, false, 'axis_change()');
 			html_checkbox2('no_processes', gtext('System Processes'), $pconfig['no_processes'], gtext('Enable collecting system process statistics.'), '', false);
 			html_checkbox2('uptime', gtext('Uptime'), $pconfig['uptime'], gtext('Enable collecting uptime statistics.'), '', false);
 			html_checkbox2('ups', gtext('UPS Statistics'), $pconfig['ups'], gtext('Enable collecting UPS statistics.'), '', false, false, 'ups_change()');
-			html_inputbox2("ups_at", gtext("UPS Identifier"), $pconfig['ups_at'], gtext("Enter the UPS identifier and host IP address of the machine where the UPS is connected to. (this also can be a remote host)")."<br> ".gtext("The UPS identifier and IP address")." ".sprintf(gtext("must be in the format: %s."), "identifier@host-ip-address"), false, 60);
+			html_inputbox2('ups_at', gtext('UPS Identifier'), $pconfig['ups_at'], gtext('Enter the UPS identifier and host IP address of the machine where the UPS is connected to. (this also can be a remote host)')."<br> ".gtext('The UPS identifier and IP address')." ".sprintf(gtext('must be in the format: %s.'), 'identifier@host-ip-address'), false, 60);
 			html_checkbox2('arc_usage', gtext('ZFS ARC Usage'), $pconfig['arc_usage'], gtext('Enable collecting ZFS ARC usage statistics.'), '', false);
-			?>
+?>
 		</tbody>
 	</table>
 	<div id="remarks">
-		<?php
-		html_remark("note", gtext("Note"), sprintf(gtext("'%s' deletes all the data for selected statistics. If only a certain statistic needs to be reset, clear all other check boxes before performing '%s'."), gtext("Reset Graphs"), gtext("Reset Graphs")));
-		?>
+<?php
+		html_remark('note', gtext('Note'), sprintf(gtext("'%s' deletes all the data for selected statistics. If only a certain statistic needs to be reset, clear all other check boxes before performing '%s'."), gtext('Reset Graphs'), gtext('Reset Graphs')));
+?>
 	</div>
 	<div id="submit">
-		<input id="save" name="save" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>"/>
-		<input id="reset_graphs" name="reset_graphs" type="submit" class="formbtn" value="<?=gtext("Reset Graphs");?>" onclick="return confirm('<?=gtext("Do you really want to delete all data from the selected statistics?");?>')" />
+		<input id="save" name="save" type="submit" class="formbtn" value="<?=gtext('Save & Restart');?>"/>
+		<input id="reset_graphs" name="reset_graphs" type="submit" class="formbtn" value="<?=gtext('Reset Graphs');?>" onclick="return confirm('<?=gtext('Do you really want to delete all data from the selected statistics?');?>')" />
 	</div>
-	<?php require 'formend.inc';?>
+<?php require 'formend.inc';?>
 </form></td></tr></tbody></table>
 <script type="text/javascript">
 //<![CDATA[
