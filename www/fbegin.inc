@@ -250,7 +250,6 @@ function display_menu($menuid) {
 */
 ?>
 <?php
-// <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 echo '<!DOCTYPE html>', "\n"
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=system_get_language_code();?>" lang="<?=system_get_language_code();?>">
@@ -284,7 +283,7 @@ echo '<!DOCTYPE html>', "\n"
 <body>
 <div id="spinner_main"></div>
 <div id="spinner_overlay" style="display: none; background-color: white; position: fixed; left:0; top:0; height:100%; width:100%; opacity: 0.25;"></div>
-<header id="g4">
+<header id="g4h">
 	<div id="header">
 		<div id="headerrlogo">
 			<div class="hostname">
@@ -349,7 +348,7 @@ $(window).on("load", function() {
 });
 //]]>
 </script>
-<main id="g4">
+<main id="g4m">
 <div id="pagecontent">
 <?php if (!isset($pgtitle_omit) || !$pgtitle_omit): ?>
 	<p class="pgtitle"><?=gentitle($pgtitle);?></p>

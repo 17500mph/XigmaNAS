@@ -38,9 +38,11 @@
 // NAS4Free Code
 // footer for html-page
 function show_footer() {
-	echo "</div>";
 	echo '</div>';
-	echo '<footer id="g4">';
+	echo '</div>';
+	echo '</div>';
+	echo '</main>';
+	echo '<footer id="g4f">';
 	echo '<div id="gapfooter"></div>';
 	echo '<div id="pagefooter"><span>', htmlspecialchars(get_product_copyright()), '</span></div>', "\n";
 	echo '</footer>';

@@ -39,7 +39,18 @@ body {
 	padding: 0pt;
 	min-width: inherit;
 	height: 100%;
-	display: table;
+	display: -webkit-box;  /* 1 */
+	display: -moz-box;     /* 2 */
+	display: -ms-flexbox;  /* 3 */
+	display: -webkit-flex; /* 4 */
+	display: -ms-flex;     /* 5 */
+	display: flex;         /* 6 */
+	-webkit-box-orient: vertical;   /* 1 */
+	-moz-box-orient: vertical;      /* 2 */
+	-ms-box-orient: vertical;       /* 3 */
+	-webkit-flex-direction: column; /* 4 */
+	-ms-flex-direction: column;     /* 5 */
+	flex-direction: column;         /* 6 */
 	width: 100%;
 }
 body, div#gapheader, div#gapfooter {
@@ -407,13 +418,11 @@ table#area_data {
 	border-collapse: separate;
 	margin: 0px;
 }
-
 td#area_data_frame {
 	border: 0px;
 	padding: 20px;
 	background-color: #EEEEEE;
 }
-
 table#area_data_settings {
 	border: 0;
 	border-spacing: 0px; 
@@ -465,7 +474,6 @@ col#area_data_messages_col_tag {
 col#area_data_messages_col_data {
 	width: 90%;
 }
-
 .label {
 	font-family: tahoma, verdana, arial, helvetica;
 	font-size: 11px;
@@ -523,23 +531,23 @@ div#headerrlogo .hostname {
 	margin-top: 63px;
 	margin-right: 25px;
 }
-header#g4 {
-	display: table-row;
-	height: 1px;
+header#g4h {
 	min-width: inherit;
 	width: 100%;
 	background-color: transparent;
 }
-main#g4 {
-	display: table-row;
-	height: 1px;
-	height: 100%;
+main#g4m {
 	min-width: inherit;
+	-webkit-box-flex: 1; /* 1 */
+	-moz-box-flex: 1;    /* 2 */
+	width: 100%;         /* 3 */
+	-webkit-flex: 1;     /* 4 */
+	-ms-flex: 1;         /* 5 */
+	flex: 1;             /* 6 */
+	min-height: 1px;
 	background-color: transparent;
 }
-footer#g4 {
-	display: table-row;
-	height: 1px;
+footer#g4f {
 	min-width: inherit;
 	width: 100%;
 	background-color: transparent;
