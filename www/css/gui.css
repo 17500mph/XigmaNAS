@@ -38,6 +38,9 @@ body {
 	margin: 0 auto;
 	padding: 0pt;
 	min-width: inherit;
+	height: 100%;
+	display: table;
+	width: 100%;
 }
 body, div#gapheader, div#gapfooter {
 	background: #D9DCE1;
@@ -53,6 +56,7 @@ form {
 }
 html {
 	min-width: 1024px;
+	height: 100%;
 }
 img {
 	border: 0;
@@ -520,50 +524,38 @@ div#headerrlogo .hostname {
 	margin-right: 25px;
 }
 header#g4 {
+	display: table-row;
+	height: 1px;
 	min-width: inherit;
 	width: 100%;
-	position: fixed;
-	left: 0;
-	top: 0;
-	height: 120px;
 	background-color: transparent;
 }
 main#g4 {
+	display: table-row;
+	height: 1px;
+	height: 100%;
 	min-width: inherit;
-	padding: 0px 0px 30px 0px;
 	background-color: transparent;
 }
 footer#g4 {
+	display: table-row;
+	height: 1px;
 	min-width: inherit;
 	width: 100%;
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	height: 30px;
 	background-color: transparent;
 }
 div#gapheader {
 	width: 100%;
-	position: fixed;
-	left: 0;
-	top: 110px;
 	height: 10px;
 } 
 div#gapfooter {
 	width: 100%;
-	position: fixed;
-	left: 0;
-	bottom: 20px;
 	height: 10px;
 }
 div#pagefooter {
 	margin: 0px 0px 0px 0px;
 	text-align: center;
 	background: url("/images/navbar_default.png");
-	position: fixed;
-	left: 0;
-	right: 0;
-	bottom: 0;
 	width: 100%;
 	font-size: 10px;
 	padding-top: 4px;
@@ -587,7 +579,7 @@ div#headernavbar {
 	background: black url("/images/navbar_default.png") center center repeat-x;
 }
 div#pagecontent {
-	padding: 120px 25px 30px 25px;
+	padding: 0px 25px 0px 25px;
 	overflow: auto;
 	height: 100%;
 }
