@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-11-13 02:00+0000\n"
+"POT-Creation-Date: 2016-11-13 18:07+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -100,7 +100,7 @@ msgid "%sB used of %sB"
 msgstr ""
 
 #, php-format
-msgid "'%s' deletes all the data for selected statistics. If only a certain statistic needs to be reset, clear all other check boxes before performing '%s'."
+msgid "'%s' deletes all statistical data for the selected graphs!"
 msgstr ""
 
 msgid "(Change if needed)"
@@ -836,6 +836,9 @@ msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr ""
 
 msgid "Back"
+msgstr ""
+
+msgid "Background"
 msgstr ""
 
 msgid "Backup Configuration"
@@ -2760,6 +2763,9 @@ msgstr ""
 msgid "Enable tuning switch"
 msgstr ""
 
+msgid "Enable white background graphs. (black by default)"
+msgstr ""
+
 msgid "Enable write cache mode."
 msgstr ""
 
@@ -3525,6 +3531,10 @@ msgid "If allowed, a user of the trusted domains can access the share."
 msgstr ""
 
 msgid "If default root is enabled, a chroot operation is performed immediately after a client authenticates. This can be used to effectively isolate the client from a portion of the host system filespace."
+msgstr ""
+
+#, php-format
+msgid "If only specific statistics needs to be reset, clear all other check boxes before performing '%s'."
 msgstr ""
 
 msgid "If the server is behind a proxy set these parameters to give local services access to the internet via proxy."
@@ -6241,7 +6251,7 @@ msgid "Show log entries in reverse order (newest entries on top)."
 msgstr ""
 
 #, php-format
-msgid "Show positive/negative values for %s graphs (can not be used together with logarithmic scaling)."
+msgid "Show positive/negative values for %s graphs. (can not be used together with logarithmic scaling)"
 msgstr ""
 
 msgid "Shutdown"
@@ -8040,7 +8050,7 @@ msgid "Use inotify monitoring to automatically discover new files."
 msgstr ""
 
 #, php-format
-msgid "Use logarithmic y-axis scaling for %s graphs (can not be used together with positive/negative y-axis range)."
+msgid "Use logarithmic y-axis scaling for %s graphs. (can not be used together with positive/negative y-axis range)"
 msgstr ""
 
 msgid "Use the following IP address as the source address in outgoing packets."
