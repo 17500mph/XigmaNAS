@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-13 02:00+0000\n"
-"PO-Revision-Date: 2016-11-09 08:37+0000\n"
+"POT-Creation-Date: 2016-11-13 18:07+0000\n"
+"PO-Revision-Date: 2016-11-13 17:44+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-13 09:45+0000\n"
+"X-Launchpad-Export-Date: 2016-11-13 18:09+0000\n"
 "X-Generator: Launchpad (build 18255)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
@@ -110,14 +110,8 @@ msgid "%sB used of %sB"
 msgstr "%sB σε χρήση από %sB"
 
 #, php-format
-msgid ""
-"'%s' deletes all the data for selected statistics. If only a certain "
-"statistic needs to be reset, clear all other check boxes before performing "
-"'%s'."
+msgid "'%s' deletes all statistical data for the selected graphs!"
 msgstr ""
-"Η '%s' διαγράφει όλα τα δεδομένα για τα επιλεγμένα στατιστικά. Αν μόνο "
-"κάποιο συγκεκριμένο στατιστικό χρειάζεται επαναφορά, αποεπιλέξτε όλες τις "
-"υπόλοιπες επιλογές πριν πατήσετε '%s'."
 
 msgid "(Change if needed)"
 msgstr "(Αλλάξτε αν χρειάζεται)"
@@ -1067,6 +1061,9 @@ msgstr ""
 msgid "Back"
 msgstr "Πίσω"
 
+msgid "Background"
+msgstr "Φόντο"
+
 msgid "Backup Configuration"
 msgstr "Αντίγραφο ασφαλείας ρυθμίσεων"
 
@@ -1628,7 +1625,7 @@ msgid "Content"
 msgstr "Περιεχόμενα"
 
 msgid "Continue"
-msgstr ""
+msgstr "Συνέχεια"
 
 msgid "Controller"
 msgstr "Ελεγκτής"
@@ -3322,6 +3319,9 @@ msgstr "Ενεργοποίηση βελτιστοποίησης για κάπο�
 msgid "Enable tuning switch"
 msgstr "Ενεργοποίηση του διακόπτη βελτιστοποίησης"
 
+msgid "Enable white background graphs. (black by default)"
+msgstr ""
+
 msgid "Enable write cache mode."
 msgstr "Ενεργοποίηση προσωρινής μνήμης για την εγγραφή."
 
@@ -4215,6 +4215,12 @@ msgstr ""
 "εκτελείται αμέσως μετά από μια ταυτοποίηση του πελάτη. Αυτό μπορεί να "
 "χρησιμοποιηθεί για να απομονώσετε αποτελεσματικά τον πελάτη από μια μερίδα "
 "του χώρου των αρχείων, του συστήματος του εξυπηρετητή."
+
+#, php-format
+msgid ""
+"If only specific statistics needs to be reset, clear all other check boxes "
+"before performing '%s'."
+msgstr ""
 
 msgid ""
 "If the server is behind a proxy set these parameters to give local services "
@@ -7339,11 +7345,9 @@ msgstr ""
 
 #, php-format
 msgid ""
-"Show positive/negative values for %s graphs (can not be used together with "
-"logarithmic scaling)."
+"Show positive/negative values for %s graphs. (can not be used together with "
+"logarithmic scaling)"
 msgstr ""
-"Προβολή θετικών/αρνητικών τιμών για %s γραφήματα (δεν μπορεί να "
-"χρησιμοποιηθεί σε συνδυασμό με τη λογαριθμική κλιμάκωση)."
 
 msgid "Shutdown"
 msgstr "Τερματισμός"
@@ -7738,7 +7742,7 @@ msgid "System Message"
 msgstr "Μήνυμα Συστήματος"
 
 msgid "System Processes"
-msgstr ""
+msgstr "Διεργασίες Συστήματος"
 
 msgid "System Settings"
 msgstr "Ρυθμίσεις Συστήματος"
@@ -9823,8 +9827,8 @@ msgstr "Χρήση παρακολούθησης inotify για αυτόματη 
 
 #, php-format
 msgid ""
-"Use logarithmic y-axis scaling for %s graphs (can not be used together with "
-"positive/negative y-axis range)."
+"Use logarithmic y-axis scaling for %s graphs. (can not be used together with "
+"positive/negative y-axis range)"
 msgstr ""
 
 msgid ""
@@ -10603,9 +10607,6 @@ msgstr "χρήστης"
 msgid "version:"
 msgstr "έκδοση:"
 
-#~ msgid "Available graphs"
-#~ msgstr "Διαθέσιμα γραφήματα"
-
 #~ msgid ""
 #~ "Displays the number of processes in each state (total, running, sleeping, "
 #~ "waiting, starting, stopped, zombie)."
@@ -10665,6 +10666,14 @@ msgstr "έκδοση:"
 #~ msgid "Statistics for CPU temperature."
 #~ msgstr "Στατιστικά για τη θερμοκρασία του επεξεργαστή."
 
+#, php-format
+#~ msgid ""
+#~ "Show positive/negative values for %s graphs (can not be used together with "
+#~ "logarithmic scaling)."
+#~ msgstr ""
+#~ "Προβολή θετικών/αρνητικών τιμών για %s γραφήματα (δεν μπορεί να "
+#~ "χρησιμοποιηθεί σε συνδυασμό με τη λογαριθμική κλιμάκωση)."
+
 #~ msgid "Statistics for average system load for 1, 5 and 15 minute periods."
 #~ msgstr ""
 #~ "Στατιστικά του μέσου φόρτου συστήματος για περιόδους 1, 5 και 15 λεπτών."
@@ -10686,6 +10695,16 @@ msgstr "έκδοση:"
 #~ msgstr ""
 #~ "Αναγνωριστικό UPS και διεύθυνση IP του μηχανήματος στο οποίο είναι συνδεμένο "
 #~ "το UPS (μπορεί να είναι και κάποιος απομακρυσμένος υπολογιστής)."
+
+#, php-format
+#~ msgid ""
+#~ "'%s' deletes all the data for selected statistics. If only a certain "
+#~ "statistic needs to be reset, clear all other check boxes before performing "
+#~ "'%s'."
+#~ msgstr ""
+#~ "Η '%s' διαγράφει όλα τα δεδομένα για τα επιλεγμένα στατιστικά. Αν μόνο "
+#~ "κάποιο συγκεκριμένο στατιστικό χρειάζεται επαναφορά, αποεπιλέξτε όλες τις "
+#~ "υπόλοιπες επιλογές πριν πατήσετε '%s'."
 
 #, php-format
 #~ msgid ""

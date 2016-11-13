@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-13 02:00+0000\n"
+"POT-Creation-Date: 2016-11-13 18:07+0000\n"
 "PO-Revision-Date: 2016-11-12 14:52+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-13 09:45+0000\n"
+"X-Launchpad-Export-Date: 2016-11-13 18:09+0000\n"
 "X-Generator: Launchpad (build 18255)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -108,14 +108,8 @@ msgid "%sB used of %sB"
 msgstr "%sB utilizați din %sB"
 
 #, php-format
-msgid ""
-"'%s' deletes all the data for selected statistics. If only a certain "
-"statistic needs to be reset, clear all other check boxes before performing "
-"'%s'."
+msgid "'%s' deletes all statistical data for the selected graphs!"
 msgstr ""
-"'%s' va șterge toate datele pentru statisticile selectate. Dacă doar anumite "
-"statistici trebuie șterse deselectați-le pe toate celelalte înainte de a "
-"executa '%s'."
 
 msgid "(Change if needed)"
 msgstr "(Modifică dacă este necesar)"
@@ -1038,6 +1032,9 @@ msgstr ""
 
 msgid "Back"
 msgstr "Înapoi"
+
+msgid "Background"
+msgstr ""
 
 msgid "Backup Configuration"
 msgstr "Configurație backup"
@@ -3258,6 +3255,9 @@ msgstr "Activare optimizare variabile kernel."
 msgid "Enable tuning switch"
 msgstr "Activare opțiuni optimizare"
 
+msgid "Enable white background graphs. (black by default)"
+msgstr ""
+
 msgid "Enable write cache mode."
 msgstr "Activare mod cache la scriere."
 
@@ -4140,6 +4140,12 @@ msgstr ""
 "executată imediat după autentificarea clientului. Acest mod permite izolarea "
 "automată a clientului autentificat de anumite zone a sistemului de fișiere a "
 "gazdei."
+
+#, php-format
+msgid ""
+"If only specific statistics needs to be reset, clear all other check boxes "
+"before performing '%s'."
+msgstr ""
 
 msgid ""
 "If the server is behind a proxy set these parameters to give local services "
@@ -7226,11 +7232,9 @@ msgstr ""
 
 #, php-format
 msgid ""
-"Show positive/negative values for %s graphs (can not be used together with "
-"logarithmic scaling)."
+"Show positive/negative values for %s graphs. (can not be used together with "
+"logarithmic scaling)"
 msgstr ""
-"Afișează valori pozitive/negative pentru graficele <b>%s</b> (acest mod nu "
-"poate fi utilizat pentru scale logaritmice)."
 
 msgid "Shutdown"
 msgstr "Oprire"
@@ -9625,8 +9629,8 @@ msgstr ""
 
 #, php-format
 msgid ""
-"Use logarithmic y-axis scaling for %s graphs (can not be used together with "
-"positive/negative y-axis range)."
+"Use logarithmic y-axis scaling for %s graphs. (can not be used together with "
+"positive/negative y-axis range)"
 msgstr ""
 
 msgid ""
@@ -10393,8 +10397,15 @@ msgstr "utilizator"
 msgid "version:"
 msgstr "versiune:"
 
-#~ msgid "Available graphs"
-#~ msgstr "Grafice disponibile"
+#, php-format
+#~ msgid ""
+#~ "'%s' deletes all the data for selected statistics. If only a certain "
+#~ "statistic needs to be reset, clear all other check boxes before performing "
+#~ "'%s'."
+#~ msgstr ""
+#~ "'%s' va șterge toate datele pentru statisticile selectate. Dacă doar anumite "
+#~ "statistici trebuie șterse deselectați-le pe toate celelalte înainte de a "
+#~ "executa '%s'."
 
 #~ msgid ""
 #~ "Displays the number of processes in each state (total, running, sleeping, "
@@ -10450,6 +10461,14 @@ msgstr "versiune:"
 
 #~ msgid "Statistics for CPU frequency."
 #~ msgstr "Grafice pentru frecvența CPU"
+
+#, php-format
+#~ msgid ""
+#~ "Show positive/negative values for %s graphs (can not be used together with "
+#~ "logarithmic scaling)."
+#~ msgstr ""
+#~ "Afișează valori pozitive/negative pentru graficele <b>%s</b> (acest mod nu "
+#~ "poate fi utilizat pentru scale logaritmice)."
 
 #~ msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
 #~ msgstr "Grafice pentru ZFS ARC (total, MRU, MFU, anon, header, altele)"
