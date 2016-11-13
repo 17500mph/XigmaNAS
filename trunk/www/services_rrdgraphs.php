@@ -137,7 +137,7 @@ if (isset($_POST['save']) && $_POST['save']) {
 			$config['rrdgraphs']['lan_load'] = isset($_POST['lan_load']);
 			$config['rrdgraphs']['lan_if'] = get_ifname($config['interfaces']['lan']['if']);    // for 'auto' if name
 			$config['rrdgraphs']['no_processes'] = isset($_POST['no_processes']);
-			$config['rrdgraphs']['cpu_usage'] = isset($_POST['cpu_usage']);
+			$config['rrdgraphs']['cpu'] = isset($_POST['cpu']);
 			$config['rrdgraphs']['memory_usage'] = isset($_POST['memory_usage']);
 			$config['rrdgraphs']['arc_usage'] = isset($_POST['arc_usage']);
 			$config['rrdgraphs']['latency'] = isset($_POST['latency']);
@@ -236,8 +236,8 @@ if (isset($_POST['reset_graphs']) && $_POST['reset_graphs']) {
 		exec("logger rrdgraphs: reseting uptime graphs");
 		$savemsg .= "<br />- ".gtext("Uptime");
 	}
-	if (isset($_POST['load_averages']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/cpu_usage.rrd")) {
-		unlink("{$config['rrdgraphs']['storage_path']}/rrd/cpu_usage.rrd");
+	if (isset($_POST['load_averages']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/load_averages.rrd")) {
+		unlink("{$config['rrdgraphs']['storage_path']}/rrd/load_averages.rrd");
 		exec("logger rrdgraphs: reseting load averages graphs");
 		$savemsg .= "<br />- ".gtext("Load averages");
 	}
@@ -246,7 +246,7 @@ if (isset($_POST['reset_graphs']) && $_POST['reset_graphs']) {
 		exec("logger rrdgraphs: reseting processes graphs");
 		$savemsg .= "<br />- ".gtext("Processes");
 	}
-	if (isset($_POST['cpu_usage']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/cpu.rrd")) {
+	if (isset($_POST['cpu']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/cpu.rrd")) {
 		unlink("{$config['rrdgraphs']['storage_path']}/rrd/cpu.rrd");
 		exec("logger rrdgraphs: reseting cpu usage graphs");
 		$savemsg .= "<br />- ".gtext("CPU usage");
@@ -311,7 +311,7 @@ $pconfig['background_black'] = false;
 // available graphs
 $pconfig['cpu_frequency'] = isset($config['rrdgraphs']['cpu_frequency']) ? true : false;
 $pconfig['cpu_temperature'] = isset($config['rrdgraphs']['cpu_temperature']) ? true : false;
-$pconfig['cpu_usage'] = isset($config['rrdgraphs']['cpu_usage']) ? true : false;
+$pconfig['cpu'] = isset($config['rrdgraphs']['cpu']) ? true : false;
 $pconfig['disk_usage'] = isset($config['rrdgraphs']['disk_usage']) ? true : false;
 $pconfig['load_averages'] = isset($config['rrdgraphs']['load_averages']) ? true : false;
 $pconfig['memory_usage'] = isset($config['rrdgraphs']['memory_usage']) ? true : false;
@@ -441,7 +441,7 @@ function enable_change(enable_change) {
 	document.iform.uptime.disabled = endis;
 	document.iform.load_averages.disabled = endis;
 	document.iform.no_processes.disabled = endis;
-	document.iform.cpu_usage.disabled = endis;
+	document.iform.cpu.disabled = endis;
 	document.iform.cpu_frequency.disabled = endis;
 	document.iform.cpu_temperature.disabled = endis;
 	document.iform.memory_usage.disabled = endis;
@@ -490,7 +490,7 @@ function enable_change(enable_change) {
 			html_titleline2(gtext('Available Graphs'));
 			html_checkbox2('cpu_frequency', gtext('CPU Frequency'), $pconfig['cpu_frequency'], gtext('Enable collecting CPU frequency statistics.'), '', false);
 			html_checkbox2('cpu_temperature', gtext('CPU Temperature'), $pconfig['cpu_temperature'], gtext('Enable collecting CPU temperature statistics.'), '', false);
-			html_checkbox2('cpu_usage', gtext('CPU Usage'), $pconfig['cpu_usage'], gtext('Enable collecting CPU usage statistics.'), '', false);
+			html_checkbox2('cpu', gtext('CPU Usage'), $pconfig['cpu'], gtext('Enable collecting CPU usage statistics.'), '', false);
 			html_checkbox2('disk_usage', gtext('Disk Usage'), $pconfig['disk_usage'], gtext('Enable collecting disk space usage statistics.'), '', false);
 			html_checkbox2('load_averages', gtext('Load Averages'), $pconfig['load_averages'], gtext('Enable collecting average system load statistics.'), '', false);
 			html_checkbox2('memory_usage', gtext('Memory Usage'), $pconfig['memory_usage'], gtext('Enable collecting memory usage statistics.'), '', false);

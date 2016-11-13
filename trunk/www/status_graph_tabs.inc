@@ -39,8 +39,8 @@
     <?php if (isset($config['rrdgraphs']['cpu_temperature'])):?>
         <li class="<?=isset($rrd_cpu_temp) ? "tabact" : "tabinact"?>"><a href="status_graph_cpu_temp.php" title="<?=gtext("Reload page");?>"><span><?=gtext("CPU Temperature");?></span></a></li>
     <?php endif;?>
-    <?php if (isset($config['rrdgraphs']['cpu_usage'])):?>
-        <li class="<?=isset($rrd_cpu_usage) ? "tabact" : "tabinact"?>"><a href="status_graph_cpu_usage.php" title="<?=gtext("Reload page");?>"><span><?=gtext("CPU Usage");?></span></a></li>
+    <?php if (isset($config['rrdgraphs']['cpu'])):?>
+        <li class="<?=isset($rrd_cpu) ? "tabact" : "tabinact"?>"><a href="status_graph_cpu_usage.php" title="<?=gtext("Reload page");?>"><span><?=gtext("CPU Usage");?></span></a></li>
     <?php endif;?>
     <?php if (isset($config['rrdgraphs']['load_averages'])):?>
         <li class="<?=isset($rrd_cpu_averages) ? "tabact" : "tabinact"?>"><a href="status_graph_load_averages.php" title="<?=gtext("Reload page");?>"><span><?=gtext("Load Averages");?></span></a></li>
