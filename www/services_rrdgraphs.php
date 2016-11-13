@@ -51,15 +51,6 @@ function cronjob_process_updatenotification($mode, $data) {
 		case UPDATENOTIFY_MODE_MODIFIED:
 			break;
 		case UPDATENOTIFY_MODE_DIRTY:
-/*
-			if (is_array($config['cron']['job'])) {
-				$index = array_search_ex($data, $config['cron']['job'], "uuid");
-				if (false !== $index) {
-					unset($config['cron']['job'][$index]);
-					write_config();
-				}
-			}
-*/
 			break;
 	}
 	return $retval;
@@ -71,23 +62,23 @@ function cronjob_process_updatenotification($mode, $data) {
 function change_perms($dir) {
 	global $input_errors;
 
-	$path = rtrim($dir,'/');                                            // remove trailing slash
+	$path = rtrim($dir,'/');	// remove trailing slash
 	if (strlen($path) > 1) {
-		if (!is_dir($path)) {                                           // check if directory exists
+		if (!is_dir($path)) {	// check if directory exists
 			$input_errors[] = sprintf(gtext("Directory %s doesn't exist!"), $path);
 		} else {
-			$path_check = explode('/', $path);                          // split path to get directory names
-			$path_elements = count($path_check);                        // get path depth
-			$fp = substr(sprintf('%o', fileperms("/$path_check[1]/$path_check[2]")), -1);   // get mountpoint permissions for others
-			if ($fp >= 5) {                                             // transmission needs at least read & search permission at the mountpoint
-				$directory = "/$path_check[1]/$path_check[2]";          // set to the mountpoint
-				for ($i = 3; $i < $path_elements - 1; $i++) {           // traverse the path and set permissions to rx
-					$directory = $directory."/$path_check[$i]";         // add next level
-					exec("chmod o=+r+x \"$directory\"");                // set permissions to o=+r+x
+			$path_check = explode('/', $path);	// split path to get directory names
+			$path_elements = count($path_check);	// get path depth
+			$fp = substr(sprintf('%o', fileperms("/$path_check[1]/$path_check[2]")), -1);	// get mountpoint permissions for others
+			if ($fp >= 5) {							// transmission needs at least read & search permission at the mountpoint
+				$directory = "/$path_check[1]/$path_check[2]";		// set to the mountpoint
+				for ($i = 3; $i < $path_elements - 1; $i++) {		// traverse the path and set permissions to rx
+					$directory = $directory."/$path_check[$i]";	// add next level
+					exec("chmod o=+r+x \"$directory\"");		// set permissions to o=+r+x
 				}
 				$path_elements = $path_elements - 1;
-				$directory = $directory."/$path_check[$path_elements]"; // add last level
-				exec("chmod 775 {$directory}");                         // set permissions to 775
+				$directory = $directory."/$path_check[$path_elements]";	// add last level
+				exec("chmod 775 {$directory}");				// set permissions to 775
 				exec("chown {$_POST['who']} {$directory}*");
 			} else {
 				$input_errors[] = sprintf(gtext("RRDGraphs needs at least read & execute permissions at the mount point for directory %s! Set the Read and Execute bits for Others (Access Restrictions | Mode) for the mount point %s (in <a href='disks_mount.php'>Disks | Mount Point | Management</a> or <a href='disks_zfs_dataset.php'>Disks | ZFS | Datasets</a>) and hit Save in order to take them effect."), $path, "/{$path_check[1]}/{$path_check[2]}");
@@ -111,11 +102,11 @@ if (isset($_POST['save']) && $_POST['save']) {
 			if (empty($_POST['storage_path'])) {
 				$config['rrdgraphs']['storage_path'] = $g['media_path'];
 			} else {
-				$_POST['storage_path'] = rtrim($_POST['storage_path'],'/');            // ensure to have no trailing slash
+				$_POST['storage_path'] = rtrim($_POST['storage_path'],'/');	// ensure to have no trailing slash
 			}
 			if (!is_dir("{$_POST['storage_path']}/rrd")) { 
-				mkdir("{$_POST['storage_path']}/rrd", 0775, true);                     // new destination or first install
-				change_perms("{$_POST['storage_path']}/rrd");                          // check/set permissions
+				mkdir("{$_POST['storage_path']}/rrd", 0775, true);	// new destination or first install
+				change_perms("{$_POST['storage_path']}/rrd");	// check/set permissions
 			}
 			$config['rrdgraphs']['storage_path'] = $_POST['storage_path'];
 			$_POST['graph_h'] = trim($_POST['graph_h']);  
@@ -135,7 +126,7 @@ if (isset($_POST['save']) && $_POST['save']) {
 			$config['rrdgraphs']['cpu_temperature'] = isset($_POST['cpu_temperature']);
 			$config['rrdgraphs']['disk_usage'] = isset($_POST['disk_usage']);
 			$config['rrdgraphs']['lan_load'] = isset($_POST['lan_load']);
-			$config['rrdgraphs']['lan_if'] = get_ifname($config['interfaces']['lan']['if']);    // for 'auto' if name
+			$config['rrdgraphs']['lan_if'] = get_ifname($config['interfaces']['lan']['if']);	// for 'auto' if name
 			$config['rrdgraphs']['no_processes'] = isset($_POST['no_processes']);
 			$config['rrdgraphs']['cpu'] = isset($_POST['cpu']);
 			$config['rrdgraphs']['memory_usage'] = isset($_POST['memory_usage']);
@@ -148,84 +139,30 @@ if (isset($_POST['save']) && $_POST['save']) {
 			$config['rrdgraphs']['ups'] = isset($_POST['ups']);
 			$config['rrdgraphs']['ups_at'] = !empty($_POST['ups_at']) ? $_POST['ups_at'] : "identifier@host-ip-address";
 			$config['rrdgraphs']['uptime'] = isset($_POST['uptime']);
-/*
-			$cronjob = array();
-			$a_cronjob = &$config['cron']['job'];
-			$uuid = isset($config['rrdgraphs']['schedule_uuid']) ? $config['rrdgraphs']['schedule_uuid'] : false;
-			if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_cronjob, "uuid")))) {
-				$a_cronjob[$cnid]['enable'] = true;
-				$a_cronjob[$cnid]['command'] = "/usr/local/share/rrdgraphs/rrd-update.sh";
-			} else {
-				$cronjob['enable'] = true;
-				$cronjob['uuid'] = uuid();
-				$cronjob['desc'] = "RRDGraphs updates every 5 minutes";
-				for ($i = 0; $i <= 55; $i = $i+5) { $cronjob['minute'][] = $i; }
-				$cronjob['hour'] = true;
-				$cronjob['day'] = true;
-				$cronjob['month'] = true;
-				$cronjob['weekday'] = true;
-				$cronjob['all_mins'] = 0;
-				$cronjob['all_hours'] = 1;
-				$cronjob['all_days'] = 1;
-				$cronjob['all_months'] = 1;
-				$cronjob['all_weekdays'] = 1;
-				$cronjob['who'] = 'root';
-				$cronjob['command'] = "/usr/local/share/rrdgraphs/rrd-update.sh";
-				$config['rrdgraphs']['schedule_uuid'] = $cronjob['uuid'];
-			}
-			if (isset($uuid) && (FALSE !== $cnid)) {
-					$mode = UPDATENOTIFY_MODE_MODIFIED;
-				} else {
-					$a_cronjob[] = $cronjob;
-					$mode = UPDATENOTIFY_MODE_NEW;
-				}
-			updatenotify_set('cronjob', $mode, $cronjob['uuid']);
-*/
+
 			$savemsg = get_std_save_message(write_config());
+
 			$retval = 0;
-/*
 			if (!file_exists($d_sysrebootreqd_path)) {
-				$retval |= updatenotify_process('cronjob', "cronjob_process_updatenotification");
-				config_lock();
-				$retval |= rc_update_service('cron');
-				config_unlock();
-			}
-			$savemsg = get_std_save_message($retval);
-			if ($retval == 0) {
-				updatenotify_delete('cronjob');
-			}
-*/
+			config_lock();
+			$retval |= rc_update_service("cron");
+			config_unlock();
+		}
+
 			require_once('/usr/local/share/rrdgraphs/rrd-start.php');
-		} else { 
+		} else {
 			$config['rrdgraphs']['enable'] = isset($_POST['enable']) ? true : false;
-/*
-			if (is_array($config['cron']['job'])) {                                                            // check if cron jobs exists !!!
-				$a_cronjob = &$config['cron']['job'];
-				$uuid = isset($config['rrdgraphs']['schedule_uuid']) ? $config['rrdgraphs']['schedule_uuid'] : false;
-				if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_cronjob, "uuid")))) {
-					$a_cronjob[$cnid]['enable'] = false;
-				}
-				if (isset($uuid) && (FALSE !== $cnid)) {
-					$mode = UPDATENOTIFY_MODE_DIRTY;
-					updatenotify_set('cronjob', $mode, $uuid);
-					$retval = 0;
-					if (!file_exists($d_sysrebootreqd_path)) {
-						$retval |= updatenotify_process('cronjob', "cronjob_process_updatenotification");
-						config_lock();
-						$retval |= rc_update_service('cron');
-						config_unlock();
-					}
-					$savemsg = get_std_save_message($retval);
-					if ($retval == 0) {
-						updatenotify_delete('cronjob');
-					}
-				}
-			}
-*/
+
 			$savemsg = get_std_save_message(write_config());
-		}   // end of disable extension
-	}   // end of empty input_errors
-}   // end of SAVE
+			exec("logger rrdgraphs: disabled, shutdown ...");
+			if (!file_exists($d_sysrebootreqd_path)) {
+			config_lock();
+			$retval |= rc_update_service("cron");
+			config_unlock();
+			}	
+		}
+	}
+}
 
 // reset graphs
 if (isset($_POST['reset_graphs']) && $_POST['reset_graphs']) {
@@ -252,12 +189,12 @@ if (isset($_POST['reset_graphs']) && $_POST['reset_graphs']) {
 		$savemsg .= "<br />- ".gtext("CPU usage");
 	}
 	if (isset($_POST['cpu_frequency']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/cpu_freq.rrd")) {
-		unlink("{$config['rrdgraphs']['storage_path']}/rrd/cpu_freq.rrd"); 
+		unlink("{$config['rrdgraphs']['storage_path']}/rrd/cpu_freq.rrd");
 		exec("logger rrdgraphs: reseting cpu frequency graphs");
 		$savemsg .= "<br />- ".gtext("CPU frequency");
 	}
 	if (isset($_POST['cpu_temperature']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/cpu_temp.rrd")) {
-		unlink("{$config['rrdgraphs']['storage_path']}/rrd/cpu_temp.rrd"); 
+		unlink("{$config['rrdgraphs']['storage_path']}/rrd/cpu_temp.rrd");
 		exec("logger rrdgraphs: reseting cpu temperature graphs");
 		$savemsg .= "<br />- ".gtext("CPU temperature");
 	}
@@ -277,7 +214,7 @@ if (isset($_POST['reset_graphs']) && $_POST['reset_graphs']) {
 		$savemsg .= "<br />- ".gtext("ZFS ARC");
 	}
 	if (isset($_POST['lan_load']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/em0.rrd")) {
-		unlink("{$config['rrdgraphs']['storage_path']}/rrd/em0.rrd"); 
+		unlink("{$config['rrdgraphs']['storage_path']}/rrd/em0.rrd");
 		exec("logger rrdgraphs: reseting network traffic graphs");
 		$savemsg .= "<br />- ".gtext("Network traffic");
 	}
