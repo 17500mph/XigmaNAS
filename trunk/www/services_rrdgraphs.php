@@ -123,7 +123,7 @@ if (isset($_POST['save']) && $_POST['save']) {
 			$config['rrdgraphs']['refresh_time'] = !empty($_POST['refresh_time']) ? $_POST['refresh_time'] : 300;
 			$config['rrdgraphs']['zoom_factor'] = !empty($_POST['zoom_factor']) ? str_replace(',', '.', $_POST['zoom_factor']) : 1;
 			$config['rrdgraphs']['autoscale'] = isset($_POST['autoscale']);
-			$config['rrdgraphs']['background_black'] = true;
+			$config['rrdgraphs']['background_white'] = isset($_POST['background_white']) ? true : false;
 			$config['rrdgraphs']['bytes_per_second'] = isset($_POST['bytes_per_second']);
 			$config['rrdgraphs']['logarithmic'] = isset($_POST['logarithmic']);
 			$config['rrdgraphs']['axis'] = isset($_POST['axis']);
@@ -299,14 +299,11 @@ $pconfig['enable'] = isset($config['rrdgraphs']['enable']) ? true : false;
 $pconfig['storage_path'] = !empty($config['rrdgraphs']['storage_path']) ? $config['rrdgraphs']['storage_path'] : $g['media_path'];
 $pconfig['graph_h'] = !empty($config['rrdgraphs']['graph_h']) ? $config['rrdgraphs']['graph_h'] : 200;
 $pconfig['refresh_time'] = !empty($config['rrdgraphs']['refresh_time']) ? $config['rrdgraphs']['refresh_time'] : 300;
-
+$pconfig['background_white'] = isset($config['rrdgraphs']['background_white']) ? true : false;
 // MISSING:
 $pconfig['zoom_factor'] = !empty($config['rrdgraphs']['zoom_factor']) ? $config['rrdgraphs']['zoom_factor'] : 1;
 
 $pconfig['autoscale'] = isset($config['rrdgraphs']['autoscale']) ? true : false;
-
-// MISSING:
-$pconfig['background_black'] = false;
 
 // available graphs
 $pconfig['cpu_frequency'] = isset($config['rrdgraphs']['cpu_frequency']) ? true : false;
@@ -333,14 +330,14 @@ $pconfig['arc_usage'] = isset($config['rrdgraphs']['arc_usage']) ? true : false;
 $pconfig['no_processes'] = isset($config['rrdgraphs']['no_processes']) ? true : false;
 
 $a_interface = get_interface_list();
-// Add VLAN interfaces (from user Vasily1)
+// Add VLAN interfaces
 if (isset($config['vinterfaces']['vlan']) && is_array($config['vinterfaces']['vlan']) && count($config['vinterfaces']['vlan'])) {
 	foreach ($config['vinterfaces']['vlan'] as $vlanv) {
 		$a_interface[$vlanv['if']] = $vlanv;
 		$a_interface[$vlanv['if']]['isvirtual'] = true;
 	}
 }
-// Add LAGG interfaces (from user Vasily1)
+// Add LAGG interfaces
 if (isset($config['vinterfaces']['lagg']) && is_array($config['vinterfaces']['lagg']) && count($config['vinterfaces']['lagg'])) {
 	foreach ($config['vinterfaces']['lagg'] as $laggv) {
 		$a_interface[$laggv['if']] = $laggv;
@@ -434,6 +431,7 @@ function enable_change(enable_change) {
 	document.iform.graph_h.disabled = endis;
 	document.iform.refresh_time.disabled = endis;
 	document.iform.autoscale.disabled = endis;
+	document.iform.background_white.disabled = endis;
 	document.iform.bytes_per_second.disabled = endis;
 	document.iform.logarithmic.disabled = endis;
 	document.iform.axis.disabled = endis;
@@ -486,6 +484,7 @@ function enable_change(enable_change) {
 			html_inputbox2('refresh_time', gtext('Refresh time'), $pconfig['refresh_time'], gtext('Refresh time for graph pages.')." ".sprintf(gtext('Default is %s %s.'), 300, gtext('seconds')), false, 5);
 			html_inputbox2('graph_h', gtext('Graphs height'), $pconfig['graph_h'], sprintf(gtext('Height of the graphs. Default is %s pixel.'), 200), false, 5);
 			html_checkbox2('autoscale', gtext('Autoscale'), $pconfig['autoscale'], gtext('Autoscale for graphs.'), "", false);
+			html_checkbox2('background_white', gettext('Background'), $pconfig['background_white'], gettext('Enable white background graphs. (black by default)'), '', false);
 			html_separator2();
 			html_titleline2(gtext('Available Graphs'));
 			html_checkbox2('cpu_frequency', gtext('CPU Frequency'), $pconfig['cpu_frequency'], gtext('Enable collecting CPU frequency statistics.'), '', false);
@@ -515,8 +514,8 @@ function enable_change(enable_change) {
 			html_inputbox2('latency_parameters', gtext('Auxiliary parameters'), $pconfig['latency_parameters'], gtext('These parameters will be added to the ping command.')." ".sprintf(gtext('Please check the %s documentation%s.'), "<a href=http://www.freebsd.org/cgi/man.cgi?query=ping&amp;apropos=0&amp;sektion=0&amp;format=html target='_blank'>", "</a>"), false, 60);
 			html_checkbox2('lan_load', gtext('Network Traffic'), $pconfig['lan_load'], gtext('Enable collecting network trafic statistics.'), '', false, false, 'lan_change()');
 			html_checkbox2('bytes_per_second', gtext('Bytes/sec'), $pconfig['bytes_per_second'], gtext('Use Bytes/sec instead of Bits/sec for network throughput display.'), "", false);
-			html_checkbox2('logarithmic', gtext('Logarithmic Scaling'), $pconfig['logarithmic'], sprintf(gtext('Use logarithmic y-axis scaling for %s graphs (can not be used together with positive/negative y-axis range).'), gtext('network traffic')), "", false, false, 'logarithmic_change()');
-			html_checkbox2('axis', gtext('Y-axis range'), $pconfig['axis'], sprintf(gtext('Show positive/negative values for %s graphs (can not be used together with logarithmic scaling).'), gtext('network traffic')), '', false, false, 'axis_change()');
+			html_checkbox2('logarithmic', gtext('Logarithmic Scaling'), $pconfig['logarithmic'], sprintf(gtext('Use logarithmic y-axis scaling for %s graphs. (can not be used together with positive/negative y-axis range)'), gtext('network traffic')), "", false, false, 'logarithmic_change()');
+			html_checkbox2('axis', gtext('Y-axis range'), $pconfig['axis'], sprintf(gtext('Show positive/negative values for %s graphs. (can not be used together with logarithmic scaling)'), gtext('network traffic')), '', false, false, 'axis_change()');
 			html_checkbox2('no_processes', gtext('System Processes'), $pconfig['no_processes'], gtext('Enable collecting system process statistics.'), '', false);
 			html_checkbox2('uptime', gtext('Uptime'), $pconfig['uptime'], gtext('Enable collecting uptime statistics.'), '', false);
 			html_checkbox2('ups', gtext('UPS Statistics'), $pconfig['ups'], gtext('Enable collecting UPS statistics.'), '', false, false, 'ups_change()');
@@ -525,15 +524,19 @@ function enable_change(enable_change) {
 ?>
 		</tbody>
 	</table>
-	<div id="remarks">
-<?php
-		html_remark('note', gtext('Note'), sprintf(gtext("'%s' deletes all the data for selected statistics. If only a certain statistic needs to be reset, clear all other check boxes before performing '%s'."), gtext('Reset Graphs'), gtext('Reset Graphs')));
-?>
-	</div>
+</div>
 	<div id="submit">
 		<input id="save" name="save" type="submit" class="formbtn" value="<?=gtext('Save & Restart');?>"/>
 		<input id="reset_graphs" name="reset_graphs" type="submit" class="formbtn" value="<?=gtext('Reset Graphs');?>" onclick="return confirm('<?=gtext('Do you really want to delete all data from the selected statistics?');?>')" />
 	</div>
+<div id="remarks">
+		<?php
+		$helpinghand = sprintf(gtext("'%s' deletes all statistical data for the selected graphs!"), gtext('Reset Graphs'))
+			. '<div id="enumeration"><ul>'
+			. '<li>' . sprintf(gtext("If only specific statistics needs to be reset, clear all other check boxes before performing '%s'."), gtext('Reset Graphs')) . '</li>'
+			. '</ul></div>';
+		html_remark("warning", gtext('Warning'), $helpinghand );
+?>
 <?php require 'formend.inc';?>
 </form></td></tr></tbody></table>
 <script type="text/javascript">

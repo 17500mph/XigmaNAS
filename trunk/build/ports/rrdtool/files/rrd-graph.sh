@@ -10,7 +10,8 @@ if [ ! -d $WORKING_DIR/rrd ]; then mkdir -p $WORKING_DIR/rrd; fi
 STORAGE_PATH=`/usr/local/bin/xml sel -t -v "//rrdgraphs/storage_path" /conf/config.xml`
 . $STORAGE_PATH/CONFIG.sh
 LAST_UPDATE=`date +"%d.%m.%Y %H\:%M"`
-BACKGROUND='-c CANVAS#000000'
+if [ $BACKGROUND_WHITE -eq 1 ]; then BACKGROUND='-c CANVAS#FFFFFF';
+else BACKGROUND='-c CANVAS#000000'; fi
 
 # function parameters (mandatory): $1 = template_file_name, $2 = graph_title_string
 CREATE_GRAPHS ()

@@ -45,8 +45,8 @@ if (isset($config['rrdgraphs']['enable'])) {
         fwrite($rrdconfig, "ZOOM_FACTOR={$config['rrdgraphs']['zoom_factor']}"."\n");
         $txt = isset($config['rrdgraphs']['autoscale']) ? "--alt-autoscale" : "";
         fwrite($rrdconfig, "AUTOSCALE=".$txt."\n");
-        $txt = isset($config['rrdgraphs']['background_black']) ? "1" : "0";
-        fwrite($rrdconfig, "BACKGROUND_BLACK=".$txt."\n");
+        $txt = isset($config['rrdgraphs']['background_white']) ? "1" : "0";
+        fwrite($rrdconfig, "BACKGROUND_WHITE=".$txt."\n");
         $txt = isset($config['rrdgraphs']['bytes_per_second']) ? "1" : "0";
         fwrite($rrdconfig, "BYTE_SWITCH=".$txt."\n");
         $txt = isset($config['rrdgraphs']['logarithmic']) ? "1" : "0";
