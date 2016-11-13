@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-13 02:00+0000\n"
+"POT-Creation-Date: 2016-11-13 18:07+0000\n"
 "PO-Revision-Date: 2015-06-11 17:41+0000\n"
 "Last-Translator: Flavio Peinado <flavio@peinado.com.br>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-13 09:45+0000\n"
+"X-Launchpad-Export-Date: 2016-11-13 18:09+0000\n"
 "X-Generator: Launchpad (build 18255)\n"
 "X-Poedit-Country: Brazilian Portuguese\n"
 "Language: \n"
@@ -108,10 +108,7 @@ msgid "%sB used of %sB"
 msgstr "%sB usados de %sB"
 
 #, php-format
-msgid ""
-"'%s' deletes all the data for selected statistics. If only a certain "
-"statistic needs to be reset, clear all other check boxes before performing "
-"'%s'."
+msgid "'%s' deletes all statistical data for the selected graphs!"
 msgstr ""
 
 msgid "(Change if needed)"
@@ -978,6 +975,9 @@ msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr ""
 
 msgid "Back"
+msgstr ""
+
+msgid "Background"
 msgstr ""
 
 msgid "Backup Configuration"
@@ -3095,6 +3095,9 @@ msgstr ""
 msgid "Enable tuning switch"
 msgstr ""
 
+msgid "Enable white background graphs. (black by default)"
+msgstr ""
+
 msgid "Enable write cache mode."
 msgstr "Habilitar o modo de escrita em cache."
 
@@ -3950,6 +3953,12 @@ msgstr ""
 "imediatamente após um cliente se autenticar. Isto pode ser usado para isolar "
 "efetivamente o cliente de uma porção do espaço do sistema de arquivos do "
 "servidor."
+
+#, php-format
+msgid ""
+"If only specific statistics needs to be reset, clear all other check boxes "
+"before performing '%s'."
+msgstr ""
 
 msgid ""
 "If the server is behind a proxy set these parameters to give local services "
@@ -6946,8 +6955,8 @@ msgstr ""
 
 #, php-format
 msgid ""
-"Show positive/negative values for %s graphs (can not be used together with "
-"logarithmic scaling)."
+"Show positive/negative values for %s graphs. (can not be used together with "
+"logarithmic scaling)"
 msgstr ""
 
 msgid "Shutdown"
@@ -9231,8 +9240,8 @@ msgstr ""
 
 #, php-format
 msgid ""
-"Use logarithmic y-axis scaling for %s graphs (can not be used together with "
-"positive/negative y-axis range)."
+"Use logarithmic y-axis scaling for %s graphs. (can not be used together with "
+"positive/negative y-axis range)"
 msgstr ""
 
 msgid ""

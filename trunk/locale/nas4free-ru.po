@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-13 02:00+0000\n"
-"PO-Revision-Date: 2016-11-12 04:58+0000\n"
+"POT-Creation-Date: 2016-11-13 18:07+0000\n"
+"PO-Revision-Date: 2016-11-13 18:06+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-13 09:45+0000\n"
+"X-Launchpad-Export-Date: 2016-11-13 18:09+0000\n"
 "X-Generator: Launchpad (build 18255)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -110,14 +110,8 @@ msgid "%sB used of %sB"
 msgstr "занято %s из %s байт"
 
 #, php-format
-msgid ""
-"'%s' deletes all the data for selected statistics. If only a certain "
-"statistic needs to be reset, clear all other check boxes before performing "
-"'%s'."
-msgstr ""
-"'%s' удаляет все данные для выбранных статистических данных. Если необходимо "
-"сбросить только определенную статистику, снимите все остальные флажки перед "
-"выполнением '%s'."
+msgid "'%s' deletes all statistical data for the selected graphs!"
+msgstr "'%s' удаляет все статистические данные для выбранных графиков!"
 
 msgid "(Change if needed)"
 msgstr "(Изменените в случае необходимости)"
@@ -1017,7 +1011,7 @@ msgid "Available"
 msgstr "Доступно"
 
 msgid "Available Graphs"
-msgstr ""
+msgstr "Доступные графики"
 
 msgid ""
 "Average performance of seek operations of the magnetic heads. If this "
@@ -1033,6 +1027,9 @@ msgstr ""
 
 msgid "Back"
 msgstr "Назад"
+
+msgid "Background"
+msgstr "Фон"
 
 msgid "Backup Configuration"
 msgstr "Сохранение конфигурации"
@@ -1592,7 +1589,7 @@ msgid "Content"
 msgstr "Содержимое"
 
 msgid "Continue"
-msgstr ""
+msgstr "Далее"
 
 msgid "Controller"
 msgstr "Контроллер"
@@ -3087,40 +3084,40 @@ msgid "Enable authentication."
 msgstr "Включить аутентификацию."
 
 msgid "Enable collecting CPU frequency statistics."
-msgstr ""
+msgstr "Включение сбора статистики частоты процессора."
 
 msgid "Enable collecting CPU temperature statistics."
-msgstr ""
+msgstr "Включение сбора статистики температуры процессора."
 
 msgid "Enable collecting CPU usage statistics."
-msgstr ""
+msgstr "Включение сбора статистики использования процессора."
 
 msgid "Enable collecting UPS statistics."
-msgstr ""
+msgstr "Включение сбора статистики ИБП."
 
 msgid "Enable collecting ZFS ARC usage statistics."
-msgstr ""
+msgstr "Включение сбора статистики использования файловых систем ZFS ARC."
 
 msgid "Enable collecting average system load statistics."
-msgstr ""
+msgstr "Включить сбор статистики о средней загрузке системы."
 
 msgid "Enable collecting disk space usage statistics."
-msgstr ""
+msgstr "Включение сбора статистики использования дискового пространства."
 
 msgid "Enable collecting memory usage statistics."
-msgstr ""
+msgstr "Включение сбора статистики использования памяти."
 
 msgid "Enable collecting network latency statistics."
-msgstr ""
+msgstr "Включение сбора статистики сетевых задержек."
 
 msgid "Enable collecting network trafic statistics."
-msgstr ""
+msgstr "Включение сбора статистики сетевого трафика."
 
 msgid "Enable collecting system process statistics."
-msgstr ""
+msgstr "Включение сбора статистики системных процессов."
 
 msgid "Enable collecting uptime statistics."
-msgstr ""
+msgstr "Включение сбора статистики бесперебойной работы."
 
 msgid "Enable compression."
 msgstr "Включить сжатие"
@@ -3251,6 +3248,9 @@ msgstr "Включить настройку некоторых переменн�
 msgid "Enable tuning switch"
 msgstr "Включить настройку некоторых переменных ядра."
 
+msgid "Enable white background graphs. (black by default)"
+msgstr "Включить белый фон графиков. (Черный по умолчанию)"
+
 msgid "Enable write cache mode."
 msgstr "Включить кеширование записи."
 
@@ -3322,6 +3322,8 @@ msgid ""
 "Enter the UPS identifier and host IP address of the machine where the UPS is "
 "connected to. (this also can be a remote host)"
 msgstr ""
+"Введите идентификатор ИБП и IP-адрес компьютера, на котором ИБП подключен. "
+"(Это также может быть удаленный хост)"
 
 msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
@@ -3341,6 +3343,8 @@ msgid ""
 "Enter the path to the home directory of rrdgraphs. The data directory holds "
 "the statistical data for the graphs and will be updated every 5 minutes."
 msgstr ""
+"Введите путь к домашней директории rrdgraphs. Каталог данных содержит "
+"статистические данные для графиков и будет обновляться каждые 5 минут."
 
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
@@ -4130,6 +4134,14 @@ msgstr ""
 "сразу же после аутентификации клиента. Это может быть использовано для "
 "эффективной изоляции клиента от остальной файловой системы хоста."
 
+#, php-format
+msgid ""
+"If only specific statistics needs to be reset, clear all other check boxes "
+"before performing '%s'."
+msgstr ""
+"Если необходимо сбросить только конкретные статистические данные, снимите "
+"все остальные флажки перед выполнением '%s'."
+
 msgid ""
 "If the server is behind a proxy set these parameters to give local services "
 "access to the internet via proxy."
@@ -4841,7 +4853,7 @@ msgstr ""
 "Заносить в журнал записи о пакетах, обработанных этим правилом, для syslog."
 
 msgid "Logarithmic Scaling"
-msgstr ""
+msgstr "Логарифмический масштаб"
 
 msgid "Logical Block Length"
 msgstr "Длина логического блока"
@@ -7207,11 +7219,11 @@ msgstr "Показать записи журнала в обратном пор�
 
 #, php-format
 msgid ""
-"Show positive/negative values for %s graphs (can not be used together with "
-"logarithmic scaling)."
+"Show positive/negative values for %s graphs. (can not be used together with "
+"logarithmic scaling)"
 msgstr ""
-"Отображает положительные/отрицательные величины для графиков %s (не может "
-"быть использовано одновременно с логарифмическим масштабом)."
+"Показать положительные/отрицательные значения для графиков %s. (Не может "
+"быть использовано совместно с логарифмическим масштабом)"
 
 msgid "Shutdown"
 msgstr "Выключение"
@@ -7603,7 +7615,7 @@ msgid "System Message"
 msgstr "Системное сообщение"
 
 msgid "System Processes"
-msgstr ""
+msgstr "Системные процессы"
 
 msgid "System Settings"
 msgstr "Настройки системы"
@@ -7812,7 +7824,7 @@ msgid "The TCP port must be a valid port number."
 msgstr "TCP-порт должен быть задан правильно."
 
 msgid "The UPS identifier and IP address"
-msgstr ""
+msgstr "Идентификатор ИБП и IP-адрес"
 
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr "VLAN ID должен быть между 1 и 4094."
@@ -9399,7 +9411,7 @@ msgid "UPS"
 msgstr "UPS"
 
 msgid "UPS Identifier"
-msgstr ""
+msgstr "Идентификатор ИБП"
 
 msgid "UPS Information & Status"
 msgstr "Информация и статус ИБП"
@@ -9414,7 +9426,7 @@ msgid "UPS On Line"
 msgstr "ИБП работает от сети"
 
 msgid "UPS Statistics"
-msgstr ""
+msgstr "Статистика ИБП"
 
 msgid "UPS Status"
 msgstr "Состояние ИБП"
@@ -9584,6 +9596,8 @@ msgstr "Время работы"
 
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr ""
+"Использование байт/сек вместо бит/сек для отображения пропускной способности "
+"сети."
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
@@ -9607,9 +9621,12 @@ msgstr ""
 
 #, php-format
 msgid ""
-"Use logarithmic y-axis scaling for %s graphs (can not be used together with "
-"positive/negative y-axis range)."
+"Use logarithmic y-axis scaling for %s graphs. (can not be used together with "
+"positive/negative y-axis range)"
 msgstr ""
+"Использовать Логарифмическое масштабирование по оси Y для графиков %s. (Не "
+"может быть использовано вместе с положительным/отрицательным диапазоном оси "
+"у)"
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -10164,7 +10181,7 @@ msgid "ZFS ARC"
 msgstr "ZFS ARC"
 
 msgid "ZFS ARC Usage"
-msgstr ""
+msgstr "Использование ZFS ARC"
 
 msgid "ZFS Dataset Information & Status"
 msgstr "Информация и статус ZFS Dataset'ов"
@@ -10310,7 +10327,7 @@ msgid "n/a"
 msgstr "n/a"
 
 msgid "network traffic"
-msgstr ""
+msgstr "Сетевой трафик"
 
 msgid "no new encrypted disk found."
 msgstr "новый диск использующий шифрование не найден."
@@ -10374,8 +10391,15 @@ msgstr "пользователь"
 msgid "version:"
 msgstr "версия:"
 
-#~ msgid "Available graphs"
-#~ msgstr "Доступные графики"
+#, php-format
+#~ msgid ""
+#~ "'%s' deletes all the data for selected statistics. If only a certain "
+#~ "statistic needs to be reset, clear all other check boxes before performing "
+#~ "'%s'."
+#~ msgstr ""
+#~ "'%s' удаляет все данные для выбранных статистических данных. Если необходимо "
+#~ "сбросить только определенную статистику, снимите все остальные флажки перед "
+#~ "выполнением '%s'."
 
 #~ msgid ""
 #~ "Displays the number of processes in each state (total, running, sleeping, "
@@ -10456,6 +10480,14 @@ msgstr "версия:"
 #~ msgstr ""
 #~ "Идентификатор ИБП и IP адрес машины, к которой ИБП подключен (это может быть "
 #~ "также и удалённый хост)."
+
+#, php-format
+#~ msgid ""
+#~ "Show positive/negative values for %s graphs (can not be used together with "
+#~ "logarithmic scaling)."
+#~ msgstr ""
+#~ "Отображает положительные/отрицательные величины для графиков %s (не может "
+#~ "быть использовано одновременно с логарифмическим масштабом)."
 
 #, php-format
 #~ msgid ""
