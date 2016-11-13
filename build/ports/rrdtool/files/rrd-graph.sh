@@ -49,10 +49,10 @@ if [ "$1" == "disk_usage" ]	|| ( [ "$1" == "" ] && [ "$RUN_DUS" == "1" ] ); then
         DA=`df -k | awk '!/jail/ && /\/mnt\// {gsub("/mnt/",""); print $6}' | awk '!/\// {print}'`      # all mountpoints but not jail
         for DISK_NAME in $DA; do CREATE_GRAPHS "disk_usage" "Disk Space Usage: ${DISK_NAME}"; done
         DA=`zfs list -H -t filesystem -o name`                                                          # all ZFS datasets
-        for DISK_NAME in $DA; do CREATE_GRAPHS "disk_usage" "Disk Space Usage on ${DISK_NAME}"; done
+        for DISK_NAME in $DA; do CREATE_GRAPHS "disk_usage" "Disk Space Usage: ${DISK_NAME}"; done
     else
         DISK_NAME=$2;
-        CREATE_GRAPHS "disk_usage" "Disk Space Usage on ${DISK_NAME}";
+        CREATE_GRAPHS "disk_usage" "Disk Space Usage: ${DISK_NAME}";
     fi
 fi
 if [ "$1" == "memory" ]		|| ( [ "$1" == "" ] && [ "$RUN_MEM" == "1" ] ); then
