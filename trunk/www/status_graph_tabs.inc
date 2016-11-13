@@ -43,7 +43,7 @@
         <li class="<?=isset($rrd_cpu) ? "tabact" : "tabinact"?>"><a href="status_graph_cpu_usage.php" title="<?=gtext("Reload page");?>"><span><?=gtext("CPU Usage");?></span></a></li>
     <?php endif;?>
     <?php if (isset($config['rrdgraphs']['load_averages'])):?>
-        <li class="<?=isset($rrd_cpu_averages) ? "tabact" : "tabinact"?>"><a href="status_graph_load_averages.php" title="<?=gtext("Reload page");?>"><span><?=gtext("Load Averages");?></span></a></li>
+        <li class="<?=isset($rrd_load_averages) ? "tabact" : "tabinact"?>"><a href="status_graph_load_averages.php" title="<?=gtext("Reload page");?>"><span><?=gtext("Load Averages");?></span></a></li>
     <?php endif;?>
     <?php if (isset($config['rrdgraphs']['disk_usage'])):?>
         <li class="<?=isset($rrd_disk_usage) ? "tabact" : "tabinact"?>"><a href="status_graph_disk_usage.php" title="<?=gtext("Reload page");?>"><span><?=gtext("Disk Usage");?></span></a></li>
