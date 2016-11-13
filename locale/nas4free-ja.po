@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-08 18:51+0000\n"
+"POT-Creation-Date: 2016-11-13 02:00+0000\n"
 "PO-Revision-Date: 2016-08-10 07:07+0000\n"
 "Last-Translator: Tomoyuki Shiga <tomoyuki_shiga@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-09 09:01+0000\n"
-"X-Generator: Launchpad (build 18246)\n"
+"X-Launchpad-Export-Date: 2016-11-13 09:45+0000\n"
+"X-Generator: Launchpad (build 18255)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
 "X-Poedit-Language: Japanese\n"
@@ -939,7 +939,7 @@ msgstr ""
 msgid "Available"
 msgstr "利用可能"
 
-msgid "Available graphs"
+msgid "Available Graphs"
 msgstr ""
 
 msgid ""
@@ -1486,6 +1486,9 @@ msgstr "コンテナ"
 
 msgid "Content"
 msgstr "コンテンツ"
+
+msgid "Continue"
+msgstr ""
 
 msgid "Controller"
 msgstr "コントローラー"
@@ -2335,24 +2338,6 @@ msgid "Display ZFS command history"
 msgstr ""
 
 msgid ""
-"Displays a percentage of time spent in each of the processor states (user, "
-"nice, system, interrupt, idle)."
-msgstr ""
-
-msgid ""
-"Displays information about memory allocation (active, inact, wired, cache, "
-"buf, free, swap used, swap free)."
-msgstr ""
-
-msgid "Displays the length of time the system has been up."
-msgstr ""
-
-msgid ""
-"Displays the number of processes in each state (total, running, sleeping, "
-"waiting, starting, stopped, zombie)."
-msgstr ""
-
-msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
 msgstr "ディスクが（通常は原因衝撃や温度により）スピンドルに対してシフトした距離。測定単位は不明です。"
@@ -2890,6 +2875,42 @@ msgstr "匿名バインドを有効にします。"
 msgid "Enable authentication."
 msgstr "認証を有効にします。"
 
+msgid "Enable collecting CPU frequency statistics."
+msgstr ""
+
+msgid "Enable collecting CPU temperature statistics."
+msgstr ""
+
+msgid "Enable collecting CPU usage statistics."
+msgstr ""
+
+msgid "Enable collecting UPS statistics."
+msgstr ""
+
+msgid "Enable collecting ZFS ARC usage statistics."
+msgstr ""
+
+msgid "Enable collecting average system load statistics."
+msgstr ""
+
+msgid "Enable collecting disk space usage statistics."
+msgstr ""
+
+msgid "Enable collecting memory usage statistics."
+msgstr ""
+
+msgid "Enable collecting network latency statistics."
+msgstr ""
+
+msgid "Enable collecting network trafic statistics."
+msgstr ""
+
+msgid "Enable collecting system process statistics."
+msgstr ""
+
+msgid "Enable collecting uptime statistics."
+msgstr ""
+
 msgid "Enable compression."
 msgstr "圧縮を有効化"
 
@@ -3075,6 +3096,11 @@ msgid ""
 msgstr "直接、設定したい時間を (フォーマット mm/dd/yyyy hh:mm) のとおり入力するか、アイコンを使用して選択して下さい。"
 
 msgid ""
+"Enter the UPS identifier and host IP address of the machine where the UPS is "
+"connected to. (this also can be a remote host)"
+msgstr ""
+
+msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
 "8 and 63 characters long."
 msgstr "WPA-PSK モードで使用するパスフレーズを8文字以上63文字以内で入力してください。"
@@ -3083,6 +3109,11 @@ msgid ""
 "Enter the path to the home directory of VirtualBox. VM config and HDD image "
 "will be created under the specified directory."
 msgstr "VirtualBoxのホームディレクトリへのパスを入力します。VMの設定とHDDイメージは、指定したディレクトリの下に作成されます。"
+
+msgid ""
+"Enter the path to the home directory of rrdgraphs. The data directory holds "
+"the statistical data for the graphs and will be updated every 5 minutes."
+msgstr ""
 
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
@@ -3835,11 +3866,6 @@ msgstr ""
 "のオペレーションが実行されます。これはホストシステムのファイルスペースの一部からクライアントを確実に切り離す為に使用できます。"
 
 msgid ""
-"If enabled the network throughput is displayed in Bytes/sec rather than "
-"Bits/sec."
-msgstr ""
-
-msgid ""
 "If the server is behind a proxy set these parameters to give local services "
 "access to the internet via proxy."
 msgstr "サーバ上のローカルサービスをプロキシ経由でアクセスできるようにするには、このパラメータをセットして下さい。"
@@ -4490,13 +4516,7 @@ msgstr ""
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "このルールによって処理されたパケットを syslog に記録します。"
 
-msgid "Logarithmic scaling"
-msgstr ""
-
-#, php-format
-msgid ""
-"Logarithmic y-axis scaling for %s graphs (can not be used together with "
-"positive/negative y-axis range)."
+msgid "Logarithmic Scaling"
 msgstr ""
 
 msgid "Logical Block Length"
@@ -6970,32 +6990,6 @@ msgstr ""
 msgid "Static routes"
 msgstr "スタティックルート"
 
-msgid "Statistics for CPU frequency."
-msgstr ""
-
-msgid "Statistics for CPU temperature."
-msgstr ""
-
-msgid ""
-"Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
-"voltage and the UPS status (online, on battery, charging and offline)."
-msgstr ""
-
-msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
-msgstr ""
-
-msgid "Statistics for average system load for 1, 5 and 15 minute periods."
-msgstr ""
-
-msgid "Statistics for disk (mount point) usage."
-msgstr ""
-
-msgid "Statistics for incoming/outgoing bits/second for network interfaces."
-msgstr ""
-
-msgid "Statistics for network latency."
-msgstr ""
-
 msgid "Status"
 msgstr "ステータス"
 
@@ -7148,6 +7142,9 @@ msgid "System Load"
 msgstr "システム負荷"
 
 msgid "System Message"
+msgstr ""
+
+msgid "System Processes"
 msgstr ""
 
 msgid "System Settings"
@@ -7346,6 +7343,9 @@ msgstr "新しく追加された不良フラッシュブロック属性は、製
 
 msgid "The TCP port must be a valid port number."
 msgstr "有効な TCP ポート番号を指定して下さい。"
+
+msgid "The UPS identifier and IP address"
+msgstr ""
 
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr "VLAN ID は 1-4094 の範囲内で指定してください。"
@@ -7606,12 +7606,6 @@ msgid ""
 "The default format is %s used for ZFS auto snapshot."
 msgstr ""
 "シャドウコピーサービス用のスナップショットのカスタム書式を指定できます。デフォルト書式はZFS自動スナップショットで使用される %s です。"
-
-#, php-format
-msgid ""
-"The data directory holds the statistical data for the graphs. This should be "
-"set to a %s to prevent a disk spinning all the time."
-msgstr ""
 
 msgid "The data directory must be set to a directory <b>below</b> /mnt."
 msgstr ""
@@ -8722,6 +8716,9 @@ msgstr "UID"
 msgid "UPS"
 msgstr "UPS"
 
+msgid "UPS Identifier"
+msgstr ""
+
 msgid "UPS Information & Status"
 msgstr "UPS情報とステータス"
 
@@ -8733,6 +8730,9 @@ msgstr "UPSバッテリー"
 
 msgid "UPS On Line"
 msgstr "UPSオンライン"
+
+msgid "UPS Statistics"
+msgstr ""
 
 msgid "UPS Status"
 msgstr "UPSステータス"
@@ -8765,11 +8765,6 @@ msgid "UPS goes on battery"
 msgstr "UPS はバッテリ駆動となりました"
 
 msgid "UPS identifier and IP address"
-msgstr ""
-
-msgid ""
-"UPS identifier and host IP address of the machine where the UPS is connected "
-"to (this can be also a remote host)."
 msgstr ""
 
 msgid "UPS model"
@@ -8899,6 +8894,9 @@ msgstr ""
 msgid "Uptime"
 msgstr ""
 
+msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
+msgstr ""
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -8913,6 +8911,12 @@ msgstr "ツリーのルートとして別のコンテナを使用します。"
 
 msgid "Use inotify monitoring to automatically discover new files."
 msgstr "自動的に新しいファイルを発見するためにinotify監視を使用します。"
+
+#, php-format
+msgid ""
+"Use logarithmic y-axis scaling for %s graphs (can not be used together with "
+"positive/negative y-axis range)."
+msgstr ""
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -9414,6 +9418,9 @@ msgstr "ZFS ACL"
 msgid "ZFS ARC"
 msgstr ""
 
+msgid "ZFS ARC Usage"
+msgstr ""
+
 msgid "ZFS Dataset Information & Status"
 msgstr "ZFS データセット情報と状態"
 
@@ -9549,6 +9556,9 @@ msgstr ""
 
 msgid "n/a"
 msgstr "n/a"
+
+msgid "network traffic"
+msgstr ""
 
 msgid "no new encrypted disk found."
 msgstr "新しい暗号化ディスクは見つかりません。"

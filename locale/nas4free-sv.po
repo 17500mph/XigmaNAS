@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-08 18:51+0000\n"
-"PO-Revision-Date: 2016-11-08 18:49+0000\n"
+"POT-Creation-Date: 2016-11-13 02:00+0000\n"
+"PO-Revision-Date: 2016-11-13 06:40+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-09 09:01+0000\n"
-"X-Generator: Launchpad (build 18246)\n"
+"X-Launchpad-Export-Date: 2016-11-13 09:46+0000\n"
+"X-Generator: Launchpad (build 18255)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -1002,8 +1002,8 @@ msgstr "Ledigt"
 msgid "Available"
 msgstr "Tillgänglig"
 
-msgid "Available graphs"
-msgstr "Tillgägliga grafer"
+msgid "Available Graphs"
+msgstr "Tillgängliga grafer"
 
 msgid ""
 "Average performance of seek operations of the magnetic heads. If this "
@@ -1565,6 +1565,9 @@ msgstr "Behållare"
 
 msgid "Content"
 msgstr "Innehåll"
+
+msgid "Continue"
+msgstr "Fortsätt"
 
 msgid "Controller"
 msgstr "Diskkontroller"
@@ -2477,30 +2480,6 @@ msgid "Display ZFS command history"
 msgstr "Visa ZFS kommandohistoria"
 
 msgid ""
-"Displays a percentage of time spent in each of the processor states (user, "
-"nice, system, interrupt, idle)."
-msgstr ""
-"Visa procentuell tid som använts av de olika processorlägena (user, nice, "
-"system, interrupt, idle)."
-
-msgid ""
-"Displays information about memory allocation (active, inact, wired, cache, "
-"buf, free, swap used, swap free)."
-msgstr ""
-"Visa information om minnesanvändning (active, inact, wired, cache, buf, "
-"free, swap used, swap free)."
-
-msgid "Displays the length of time the system has been up."
-msgstr "Visar hur länge servern varit uppe"
-
-msgid ""
-"Displays the number of processes in each state (total, running, sleeping, "
-"waiting, starting, stopped, zombie)."
-msgstr ""
-"Visa antal processer i varje status (total, running, sleeping, waiting, "
-"starting, stopped, zombie)."
-
-msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
 msgstr ""
@@ -3058,6 +3037,42 @@ msgstr "Aktivera anonym bindning."
 msgid "Enable authentication."
 msgstr "Aktivera autentisering."
 
+msgid "Enable collecting CPU frequency statistics."
+msgstr "Aktivera insamling av CPU-frekvensstatistik."
+
+msgid "Enable collecting CPU temperature statistics."
+msgstr "Aktivera insamling av CPU-temperaturstatistik."
+
+msgid "Enable collecting CPU usage statistics."
+msgstr "Aktivera insamling av CPU-användningsstatistik."
+
+msgid "Enable collecting UPS statistics."
+msgstr "Aktivera insamling av UPS-statistik."
+
+msgid "Enable collecting ZFS ARC usage statistics."
+msgstr "Aktivera insamling av ZFS ARC anvöndningsstatistik."
+
+msgid "Enable collecting average system load statistics."
+msgstr "Aktivera insamling av genomsnittlig systembelastningsstatistik."
+
+msgid "Enable collecting disk space usage statistics."
+msgstr "Aktivera insamling av diskutrymmesstatistik."
+
+msgid "Enable collecting memory usage statistics."
+msgstr "Aktivera insamling av minnesanvändningsstatistik."
+
+msgid "Enable collecting network latency statistics."
+msgstr "Aktivera insamling av nätverksåtkomsttidstatistik."
+
+msgid "Enable collecting network trafic statistics."
+msgstr "Aktivera insamling av nätverkstrafiksstatistik."
+
+msgid "Enable collecting system process statistics."
+msgstr "Aktivera insamling av systemprocessstatistik."
+
+msgid "Enable collecting uptime statistics."
+msgstr "Aktivera insamling av upptidsstatistik."
+
 msgid "Enable compression."
 msgstr "Aktivera komprimering."
 
@@ -3252,6 +3267,13 @@ msgstr ""
 "ikonen för att välja."
 
 msgid ""
+"Enter the UPS identifier and host IP address of the machine where the UPS is "
+"connected to. (this also can be a remote host)"
+msgstr ""
+"Mata in UPS-namn och  IP-adress för maskinen dit UPS:en är ansluten till. "
+"(detta kan även vara en annan värd)"
+
+msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
 "8 and 63 characters long."
 msgstr ""
@@ -3264,6 +3286,13 @@ msgid ""
 msgstr ""
 "Mata in sökvägen till VirtualBox hemmakatalog. VM config och HDD avbildning "
 "kommer att skapas under denna."
+
+msgid ""
+"Enter the path to the home directory of rrdgraphs. The data directory holds "
+"the statistical data for the graphs and will be updated every 5 minutes."
+msgstr ""
+"Mata in sökvägen till rrdgraps hemkatalog. Datakatalogen innehåller "
+"statistiska data för graferna och kommer att uppdateras var femte minut."
 
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
@@ -4045,13 +4074,6 @@ msgstr ""
 "effektivt isolera klienten från en del av värdsystemets filarea."
 
 msgid ""
-"If enabled the network throughput is displayed in Bytes/sec rather than "
-"Bits/sec."
-msgstr ""
-"Om aktiverad visas nätverksgenomströmningen i Byte/sekund i stället för "
-"Bit/sekund."
-
-msgid ""
 "If the server is behind a proxy set these parameters to give local services "
 "access to the internet via proxy."
 msgstr ""
@@ -4743,16 +4765,8 @@ msgstr "Loggordning"
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Logga paket som hanteras av denna regel till syslog."
 
-msgid "Logarithmic scaling"
-msgstr "Logaritmisk skalning"
-
-#, php-format
-msgid ""
-"Logarithmic y-axis scaling for %s graphs (can not be used together with "
-"positive/negative y-axis range)."
-msgstr ""
-"Logaritmisk y-axelskalning för %s graf ( kan inte användas tillsammans med "
-"positiv/negativ y-axelområde)."
+msgid "Logarithmic Scaling"
+msgstr "Logaritmisk skala"
 
 msgid "Logical Block Length"
 msgstr "Logisk Blocklängd"
@@ -7338,35 +7352,6 @@ msgstr "Inställningar för statiska rutter"
 msgid "Static routes"
 msgstr "Statiska rutter"
 
-msgid "Statistics for CPU frequency."
-msgstr "Statistik för CPU frekvens."
-
-msgid "Statistics for CPU temperature."
-msgstr "Statistik för CPU temperatur."
-
-msgid ""
-"Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
-"voltage and the UPS status (online, on battery, charging and offline)."
-msgstr ""
-"Statistik för UPS batterikapacitet, spänning, last, återstående tid, "
-"inspänning och UPS-status (online, på batteri, laddas och offline)."
-
-msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
-msgstr "Statistik för ZFS ARC (total, MRU, MFU, anon, header, other)."
-
-msgid "Statistics for average system load for 1, 5 and 15 minute periods."
-msgstr ""
-"Statistik för genomsnittlig systemlast i 1, 5 och 15 minuters intervall."
-
-msgid "Statistics for disk (mount point) usage."
-msgstr "Statistik över diskanvändning (monteringspunkter)."
-
-msgid "Statistics for incoming/outgoing bits/second for network interfaces."
-msgstr "Statistik över in- och utgående bitar/sekund för nätverksgränssnitt."
-
-msgid "Statistics for network latency."
-msgstr "Statistik för nätverksåtkomsttid."
-
 msgid "Status"
 msgstr "Status"
 
@@ -7523,6 +7508,9 @@ msgstr "Systembelastning"
 
 msgid "System Message"
 msgstr "Systemmeddelande"
+
+msgid "System Processes"
+msgstr "Systemprocesser"
 
 msgid "System Settings"
 msgstr "Systeminställningar"
@@ -7727,6 +7715,9 @@ msgstr ""
 
 msgid "The TCP port must be a valid port number."
 msgstr "TCP-porten måste vara ett giltigt portnummer."
+
+msgid "The UPS identifier and IP address"
+msgstr "UPS-namn och IP-adress"
 
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr "'VLAN ID' måste vara mellan 1 och 4094."
@@ -8019,14 +8010,6 @@ msgid ""
 msgstr ""
 "Ett specifikt avbildsformat för skuggkopia kan anges. Grundinställningen är "
 "%s som anvnäds för ZFS automatisk avbildning."
-
-#, php-format
-msgid ""
-"The data directory holds the statistical data for the graphs. This should be "
-"set to a %s to prevent a disk spinning all the time."
-msgstr ""
-"Datakatalogen innehåller statistiska data för graferna. Denna skall sättas "
-"till en %s för att undvika att diskarna snurrar hela tiden."
 
 msgid "The data directory must be set to a directory <b>below</b> /mnt."
 msgstr "Datakatalogen måste sättas till en katalog <b>under</b> /mnt."
@@ -9298,6 +9281,9 @@ msgstr "UID"
 msgid "UPS"
 msgstr "UPS"
 
+msgid "UPS Identifier"
+msgstr "UPS-namn"
+
 msgid "UPS Information & Status"
 msgstr "UPS Information & Status"
 
@@ -9309,6 +9295,9 @@ msgstr "UPS på batteri"
 
 msgid "UPS On Line"
 msgstr "UPS ansluten"
+
+msgid "UPS Statistics"
+msgstr "UPS Statistik"
 
 msgid "UPS Status"
 msgstr "UPS Status"
@@ -9342,13 +9331,6 @@ msgstr "UPS-enhet på batteridrift"
 
 msgid "UPS identifier and IP address"
 msgstr "UPS Namn och IP adress"
-
-msgid ""
-"UPS identifier and host IP address of the machine where the UPS is connected "
-"to (this can be also a remote host)."
-msgstr ""
-"UPS namn och värd IP adress för maskinen där UPS:en är ansluten (detta kan "
-"även vara en fjärrvärd)."
 
 msgid "UPS model"
 msgstr "UPS modell"
@@ -9477,6 +9459,10 @@ msgstr "Övre"
 msgid "Uptime"
 msgstr "Upptid"
 
+msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
+msgstr ""
+"Använd Bytes/sec i stället för Bits/sec för nätverksöverföringsvisningen."
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -9493,6 +9479,14 @@ msgstr "Använd en annan plats som rot fär trädet."
 msgid "Use inotify monitoring to automatically discover new files."
 msgstr ""
 "Använd \"inotiy\" övervakning för att automatiskt upptäcka nya filer."
+
+#, php-format
+msgid ""
+"Use logarithmic y-axis scaling for %s graphs (can not be used together with "
+"positive/negative y-axis range)."
+msgstr ""
+"Använd logaritmisk y-axelskalning för %s grafer (kan inte användas "
+"tillsammans med positiv/negativ y-axelområde)."
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -10041,6 +10035,9 @@ msgstr "ZFS ACL"
 msgid "ZFS ARC"
 msgstr "ZFS ARC"
 
+msgid "ZFS ARC Usage"
+msgstr "ZFS ARC Användning"
+
 msgid "ZFS Dataset Information & Status"
 msgstr "ZFS Dataset Information & Status"
 
@@ -10183,6 +10180,9 @@ msgstr "måste vara i format: %s."
 msgid "n/a"
 msgstr "ej tillgängligt"
 
+msgid "network traffic"
+msgstr "nätverlstrafik"
+
 msgid "no new encrypted disk found."
 msgstr "inga nya krypterade diskar hittades"
 
@@ -10242,3 +10242,92 @@ msgstr "användare"
 
 msgid "version:"
 msgstr "version:"
+
+#~ msgid "Available graphs"
+#~ msgstr "Tillgägliga grafer"
+
+#~ msgid ""
+#~ "Displays information about memory allocation (active, inact, wired, cache, "
+#~ "buf, free, swap used, swap free)."
+#~ msgstr ""
+#~ "Visa information om minnesanvändning (active, inact, wired, cache, buf, "
+#~ "free, swap used, swap free)."
+
+#~ msgid ""
+#~ "Displays the number of processes in each state (total, running, sleeping, "
+#~ "waiting, starting, stopped, zombie)."
+#~ msgstr ""
+#~ "Visa antal processer i varje status (total, running, sleeping, waiting, "
+#~ "starting, stopped, zombie)."
+
+#~ msgid "Displays the length of time the system has been up."
+#~ msgstr "Visar hur länge servern varit uppe"
+
+#~ msgid ""
+#~ "Displays a percentage of time spent in each of the processor states (user, "
+#~ "nice, system, interrupt, idle)."
+#~ msgstr ""
+#~ "Visa procentuell tid som använts av de olika processorlägena (user, nice, "
+#~ "system, interrupt, idle)."
+
+#, php-format
+#~ msgid ""
+#~ "Logarithmic y-axis scaling for %s graphs (can not be used together with "
+#~ "positive/negative y-axis range)."
+#~ msgstr ""
+#~ "Logaritmisk y-axelskalning för %s graf ( kan inte användas tillsammans med "
+#~ "positiv/negativ y-axelområde)."
+
+#~ msgid ""
+#~ "If enabled the network throughput is displayed in Bytes/sec rather than "
+#~ "Bits/sec."
+#~ msgstr ""
+#~ "Om aktiverad visas nätverksgenomströmningen i Byte/sekund i stället för "
+#~ "Bit/sekund."
+
+#~ msgid "Logarithmic scaling"
+#~ msgstr "Logaritmisk skalning"
+
+#~ msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
+#~ msgstr "Statistik för ZFS ARC (total, MRU, MFU, anon, header, other)."
+
+#~ msgid ""
+#~ "Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
+#~ "voltage and the UPS status (online, on battery, charging and offline)."
+#~ msgstr ""
+#~ "Statistik för UPS batterikapacitet, spänning, last, återstående tid, "
+#~ "inspänning och UPS-status (online, på batteri, laddas och offline)."
+
+#~ msgid "Statistics for CPU frequency."
+#~ msgstr "Statistik för CPU frekvens."
+
+#~ msgid "Statistics for CPU temperature."
+#~ msgstr "Statistik för CPU temperatur."
+
+#~ msgid "Statistics for average system load for 1, 5 and 15 minute periods."
+#~ msgstr ""
+#~ "Statistik för genomsnittlig systemlast i 1, 5 och 15 minuters intervall."
+
+#~ msgid "Statistics for disk (mount point) usage."
+#~ msgstr "Statistik över diskanvändning (monteringspunkter)."
+
+#, php-format
+#~ msgid ""
+#~ "The data directory holds the statistical data for the graphs. This should be "
+#~ "set to a %s to prevent a disk spinning all the time."
+#~ msgstr ""
+#~ "Datakatalogen innehåller statistiska data för graferna. Denna skall sättas "
+#~ "till en %s för att undvika att diskarna snurrar hela tiden."
+
+#~ msgid "Statistics for network latency."
+#~ msgstr "Statistik för nätverksåtkomsttid."
+
+#~ msgid "Statistics for incoming/outgoing bits/second for network interfaces."
+#~ msgstr "Statistik över in- och utgående bitar/sekund för nätverksgränssnitt."
+
+#~ msgid ""
+#~ "UPS identifier and host IP address of the machine where the UPS is connected "
+#~ "to (this can be also a remote host)."
+#~ msgstr ""
+#~ "UPS namn och värd IP adress för maskinen där UPS:en är ansluten (detta kan "
+#~ "även vara en fjärrvärd)."

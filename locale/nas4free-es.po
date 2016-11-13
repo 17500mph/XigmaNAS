@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-08 18:51+0000\n"
-"PO-Revision-Date: 2016-11-08 22:09+0000\n"
-"Last-Translator: raul fernandez garcia <Unknown>\n"
+"POT-Creation-Date: 2016-11-13 02:00+0000\n"
+"PO-Revision-Date: 2016-11-11 17:52+0000\n"
+"Last-Translator: Iker <iker.urki@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-09 09:01+0000\n"
-"X-Generator: Launchpad (build 18246)\n"
+"X-Launchpad-Export-Date: 2016-11-13 09:45+0000\n"
+"X-Generator: Launchpad (build 18255)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -130,7 +130,7 @@ msgid ""
 msgstr ""
 "(Kingston)Cuenta el nº de fallos en el borrado de la flash. Este atributo "
 "devuelve el nº total de fallos en la operación de borrado de la flash desde "
-"que el disco fue fabricado . este atributo es identico al atributo 182."
+"que el disco fue fabricado. Este atributo es identico al atributo 182."
 
 msgid ""
 "(Kingston)Counts the number of flash program failures. This Attribute "
@@ -180,7 +180,7 @@ msgstr "*** Importación duplicada ***"
 
 msgid "0=disabled, 1-255=enabled command queuing with specified depth."
 msgstr ""
-"0=deshabilitado, 1-255=habilitado, comando de encolado con profundidad "
+"0=deshabilitado, 1-255=habilitado, cola de comandos con profundidad "
 "especificada"
 
 msgid "1 or more disks are required to build a JBOD volume."
@@ -254,8 +254,8 @@ msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
 "that has the same IP. Use a space to separate multiple alias names."
 msgstr ""
-"Un alias al anfitrión. Esta opción puede aparecer múltiples veces, para cada "
-"dominio que usa la misma IP. Usa un espacio para separar los múltiples alias"
+"Alias del anfitrión. Esta opción puede aparecer múltiples veces, para cada "
+"dominio que use la misma IP. Usa un espacio para separar los múltiples alias."
 
 msgid ""
 "A key will be either 5 or 13 characters (40 or 104 bits) depending of the "
@@ -291,10 +291,10 @@ msgid ""
 "disk returns from having previously been put to sleep mode."
 msgstr ""
 "Un recuento de ciclos de arranque/parada del eje. El eje gira y por lo "
-"tanto, la cuenta se incrementa, tanto cuando el disco duro se enciende y "
-"después de haberse apagado enteramente (desconectado de la fuente de "
-"energía) y cuando el disco duro vuelve de haber sido puesto en modo de "
-"espera  anteriormente."
+"tanto, la cuenta se incrementa, tanto cuando el disco duro se enciende, como "
+"después de haberse apagado completamente (desconectado de la fuente de "
+"energía) o cuando el disco duro se activa después de ser puesto en modo de "
+"espera."
 
 msgid "A valid IP address must be specified."
 msgstr "Se debe especificar una dirección IP valida."
@@ -1021,8 +1021,8 @@ msgstr "Disp."
 msgid "Available"
 msgstr "Disponible"
 
-msgid "Available graphs"
-msgstr "Gráficas disponibles"
+msgid "Available Graphs"
+msgstr ""
 
 msgid ""
 "Average performance of seek operations of the magnetic heads. If this "
@@ -1599,6 +1599,9 @@ msgstr "Contenedor"
 
 msgid "Content"
 msgstr "Contenido"
+
+msgid "Continue"
+msgstr ""
 
 msgid "Controller"
 msgstr "Controlador"
@@ -2536,30 +2539,6 @@ msgid "Display ZFS command history"
 msgstr "Desplegar la historia de comandos ZFS"
 
 msgid ""
-"Displays a percentage of time spent in each of the processor states (user, "
-"nice, system, interrupt, idle)."
-msgstr ""
-"Muestra el % de tiempo gastado en cada uno de los estados del procesador "
-"(nice, system, interrupt, idle)."
-
-msgid ""
-"Displays information about memory allocation (active, inact, wired, cache, "
-"buf, free, swap used, swap free)."
-msgstr ""
-"Muestra información acerca del uso de memoria (active, inact, wired, cache, "
-"buf, free, swap used, swap free)."
-
-msgid "Displays the length of time the system has been up."
-msgstr "Muestra el tiempo que el sistema lleva encendido"
-
-msgid ""
-"Displays the number of processes in each state (total, running, sleeping, "
-"waiting, starting, stopped, zombie)."
-msgstr ""
-"Muestra los procesos y su estado: (total, running, sleeping, waiting, "
-"starting, stopped, zombie)."
-
-msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
 msgstr ""
@@ -3126,6 +3105,42 @@ msgstr "Permitir enlace anónimo"
 msgid "Enable authentication."
 msgstr "Activar autentificacion."
 
+msgid "Enable collecting CPU frequency statistics."
+msgstr ""
+
+msgid "Enable collecting CPU temperature statistics."
+msgstr ""
+
+msgid "Enable collecting CPU usage statistics."
+msgstr ""
+
+msgid "Enable collecting UPS statistics."
+msgstr ""
+
+msgid "Enable collecting ZFS ARC usage statistics."
+msgstr ""
+
+msgid "Enable collecting average system load statistics."
+msgstr ""
+
+msgid "Enable collecting disk space usage statistics."
+msgstr ""
+
+msgid "Enable collecting memory usage statistics."
+msgstr ""
+
+msgid "Enable collecting network latency statistics."
+msgstr ""
+
+msgid "Enable collecting network trafic statistics."
+msgstr ""
+
+msgid "Enable collecting system process statistics."
+msgstr ""
+
+msgid "Enable collecting uptime statistics."
+msgstr ""
+
 msgid "Enable compression."
 msgstr "Habilitar compresion"
 
@@ -3322,6 +3337,11 @@ msgstr ""
 "icono para seleccionarla."
 
 msgid ""
+"Enter the UPS identifier and host IP address of the machine where the UPS is "
+"connected to. (this also can be a remote host)"
+msgstr ""
+
+msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
 "8 and 63 characters long."
 msgstr ""
@@ -3334,6 +3354,11 @@ msgid ""
 msgstr ""
 "Ruta del directorio home de VirtualBox. Las imagenes de disco y las VM serán "
 "creadas bajo este directorio."
+
+msgid ""
+"Enter the path to the home directory of rrdgraphs. The data directory holds "
+"the statistical data for the graphs and will be updated every 5 minutes."
+msgstr ""
 
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
@@ -4129,13 +4154,6 @@ msgstr ""
 "sistema del espacio de archivos."
 
 msgid ""
-"If enabled the network throughput is displayed in Bytes/sec rather than "
-"Bits/sec."
-msgstr ""
-"Si se habilita se mostrará el ancho de banda en Bytes/seg en lugar de "
-"Bits/seg"
-
-msgid ""
 "If the server is behind a proxy set these parameters to give local services "
 "access to the internet via proxy."
 msgstr ""
@@ -4846,16 +4864,8 @@ msgstr "Orden (ascendente/descendente)"
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Paquetes de Log que se trataran por esta regla al syslog."
 
-msgid "Logarithmic scaling"
-msgstr "Escala Logaritmica"
-
-#, php-format
-msgid ""
-"Logarithmic y-axis scaling for %s graphs (can not be used together with "
-"positive/negative y-axis range)."
+msgid "Logarithmic Scaling"
 msgstr ""
-"La escala logaritmica en el eje Y para el grafico %s no puede ser usada en "
-"el rango propuesto"
 
 msgid "Logical Block Length"
 msgstr "Longitud de bloque logico"
@@ -7467,33 +7477,6 @@ msgstr "Configuración de rutas estáticas"
 msgid "Static routes"
 msgstr "Rutas estáticas"
 
-msgid "Statistics for CPU frequency."
-msgstr "Estadisticas de la frecuencia de CPU."
-
-msgid "Statistics for CPU temperature."
-msgstr "Estadisticas de la temperatura de CPU."
-
-msgid ""
-"Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
-"voltage and the UPS status (online, on battery, charging and offline)."
-msgstr "Estadisticas del SAI (online, on battery, charging and offline)"
-
-msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
-msgstr "Estadisticas de ZFS ARC (total, MRU, MFU, anon, header, other)."
-
-msgid "Statistics for average system load for 1, 5 and 15 minute periods."
-msgstr "Estadisticas de carga media para periodos de 1, 5 y 15 minutos"
-
-msgid "Statistics for disk (mount point) usage."
-msgstr "Estadisticas de uso del disco"
-
-msgid "Statistics for incoming/outgoing bits/second for network interfaces."
-msgstr ""
-"Estadisticas de los interfaces de red en bits/segundo y de entrada/salida"
-
-msgid "Statistics for network latency."
-msgstr "Estadisticas de la Latencia de Red"
-
 msgid "Status"
 msgstr "Estado"
 
@@ -7649,6 +7632,9 @@ msgstr "Carga del sistema"
 
 msgid "System Message"
 msgstr "Mensaje del sistema"
+
+msgid "System Processes"
+msgstr ""
 
 msgid "System Settings"
 msgstr "Configuración del sistema"
@@ -7860,6 +7846,9 @@ msgstr ""
 
 msgid "The TCP port must be a valid port number."
 msgstr "El puerto TCP tiene que ser un número de puerto válido."
+
+msgid "The UPS identifier and IP address"
+msgstr ""
 
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr "El ID de la VLAN debe estar entre 1 y 4094"
@@ -8159,14 +8148,6 @@ msgid ""
 msgstr ""
 "El formato de Snapshot de la copia oculta debe ser definido. El formato por "
 "defecto es %s usado por los snapshot automáticos ZFS"
-
-#, php-format
-msgid ""
-"The data directory holds the statistical data for the graphs. This should be "
-"set to a %s to prevent a disk spinning all the time."
-msgstr ""
-"El directorio de datos es donde se almacenan los datos para las "
-"estadisticas. Dede ser %s para evitar que el disco gire todo el tiempo."
 
 msgid "The data directory must be set to a directory <b>below</b> /mnt."
 msgstr ""
@@ -9461,6 +9442,9 @@ msgstr "UID"
 msgid "UPS"
 msgstr "UPS"
 
+msgid "UPS Identifier"
+msgstr ""
+
 msgid "UPS Information & Status"
 msgstr "Info y estado del SAI"
 
@@ -9472,6 +9456,9 @@ msgstr "SAI en Batería"
 
 msgid "UPS On Line"
 msgstr "SAI en linea"
+
+msgid "UPS Statistics"
+msgstr ""
 
 msgid "UPS Status"
 msgstr "Estado del SAI"
@@ -9505,13 +9492,6 @@ msgstr "UPS alimentado por la batería"
 
 msgid "UPS identifier and IP address"
 msgstr "Identificador del SAI y su IP"
-
-msgid ""
-"UPS identifier and host IP address of the machine where the UPS is connected "
-"to (this can be also a remote host)."
-msgstr ""
-"Identificador del SAI o IP de la máquina donde el SAI está conactada (puede "
-"ser un host remoto)"
 
 msgid "UPS model"
 msgstr "Modelo de SAI"
@@ -9642,6 +9622,9 @@ msgstr "Mayúsculas"
 msgid "Uptime"
 msgstr "Tiempo en Activo"
 
+msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
+msgstr ""
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -9658,6 +9641,12 @@ msgstr "Use un contenedor distinto como raíz del arbol"
 msgid "Use inotify monitoring to automatically discover new files."
 msgstr ""
 "Usar inotify para descubrir actualizaciones automáticas de archivos nuevos."
+
+#, php-format
+msgid ""
+"Use logarithmic y-axis scaling for %s graphs (can not be used together with "
+"positive/negative y-axis range)."
+msgstr ""
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -10209,6 +10198,9 @@ msgstr "ZFS ACL"
 msgid "ZFS ARC"
 msgstr "ZFS ARC"
 
+msgid "ZFS ARC Usage"
+msgstr ""
+
 msgid "ZFS Dataset Information & Status"
 msgstr "Info y estado de Dataset ZFS"
 
@@ -10350,6 +10342,9 @@ msgstr "Debe estar en el formato: %s"
 msgid "n/a"
 msgstr "n/d"
 
+msgid "network traffic"
+msgstr ""
+
 msgid "no new encrypted disk found."
 msgstr "No se han encontrado nuevos discos encriptados"
 
@@ -10409,3 +10404,90 @@ msgstr "Usuario"
 
 msgid "version:"
 msgstr "versión:"
+
+#~ msgid "Available graphs"
+#~ msgstr "Gráficas disponibles"
+
+#~ msgid ""
+#~ "Displays the number of processes in each state (total, running, sleeping, "
+#~ "waiting, starting, stopped, zombie)."
+#~ msgstr ""
+#~ "Muestra los procesos y su estado: (total, running, sleeping, waiting, "
+#~ "starting, stopped, zombie)."
+
+#~ msgid "Displays the length of time the system has been up."
+#~ msgstr "Muestra el tiempo que el sistema lleva encendido"
+
+#~ msgid ""
+#~ "Displays information about memory allocation (active, inact, wired, cache, "
+#~ "buf, free, swap used, swap free)."
+#~ msgstr ""
+#~ "Muestra información acerca del uso de memoria (active, inact, wired, cache, "
+#~ "buf, free, swap used, swap free)."
+
+#~ msgid ""
+#~ "Displays a percentage of time spent in each of the processor states (user, "
+#~ "nice, system, interrupt, idle)."
+#~ msgstr ""
+#~ "Muestra el % de tiempo gastado en cada uno de los estados del procesador "
+#~ "(nice, system, interrupt, idle)."
+
+#~ msgid "Logarithmic scaling"
+#~ msgstr "Escala Logaritmica"
+
+#, php-format
+#~ msgid ""
+#~ "Logarithmic y-axis scaling for %s graphs (can not be used together with "
+#~ "positive/negative y-axis range)."
+#~ msgstr ""
+#~ "La escala logaritmica en el eje Y para el grafico %s no puede ser usada en "
+#~ "el rango propuesto"
+
+#~ msgid ""
+#~ "If enabled the network throughput is displayed in Bytes/sec rather than "
+#~ "Bits/sec."
+#~ msgstr ""
+#~ "Si se habilita se mostrará el ancho de banda en Bytes/seg en lugar de "
+#~ "Bits/seg"
+
+#~ msgid ""
+#~ "Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
+#~ "voltage and the UPS status (online, on battery, charging and offline)."
+#~ msgstr "Estadisticas del SAI (online, on battery, charging and offline)"
+
+#~ msgid "Statistics for CPU frequency."
+#~ msgstr "Estadisticas de la frecuencia de CPU."
+
+#~ msgid "Statistics for CPU temperature."
+#~ msgstr "Estadisticas de la temperatura de CPU."
+
+#~ msgid "Statistics for average system load for 1, 5 and 15 minute periods."
+#~ msgstr "Estadisticas de carga media para periodos de 1, 5 y 15 minutos"
+
+#~ msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
+#~ msgstr "Estadisticas de ZFS ARC (total, MRU, MFU, anon, header, other)."
+
+#~ msgid "Statistics for disk (mount point) usage."
+#~ msgstr "Estadisticas de uso del disco"
+
+#~ msgid "Statistics for network latency."
+#~ msgstr "Estadisticas de la Latencia de Red"
+
+#~ msgid "Statistics for incoming/outgoing bits/second for network interfaces."
+#~ msgstr ""
+#~ "Estadisticas de los interfaces de red en bits/segundo y de entrada/salida"
+
+#~ msgid ""
+#~ "UPS identifier and host IP address of the machine where the UPS is connected "
+#~ "to (this can be also a remote host)."
+#~ msgstr ""
+#~ "Identificador del SAI o IP de la máquina donde el SAI está conactada (puede "
+#~ "ser un host remoto)"
+
+#, php-format
+#~ msgid ""
+#~ "The data directory holds the statistical data for the graphs. This should be "
+#~ "set to a %s to prevent a disk spinning all the time."
+#~ msgstr ""
+#~ "El directorio de datos es donde se almacenan los datos para las "
+#~ "estadisticas. Dede ser %s para evitar que el disco gire todo el tiempo."

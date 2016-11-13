@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-08 18:51+0000\n"
-"PO-Revision-Date: 2016-11-09 08:56+0000\n"
+"POT-Creation-Date: 2016-11-13 02:00+0000\n"
+"PO-Revision-Date: 2016-11-13 02:13+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-09 09:01+0000\n"
-"X-Generator: Launchpad (build 18246)\n"
+"X-Launchpad-Export-Date: 2016-11-13 09:44+0000\n"
+"X-Generator: Launchpad (build 18255)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
 "X-Poedit-Language: Dutch\n"
@@ -1036,8 +1036,8 @@ msgstr "Beschikbaar"
 msgid "Available"
 msgstr "Beschikbaar"
 
-msgid "Available graphs"
-msgstr "Beschikbare grafieken"
+msgid "Available Graphs"
+msgstr "Grafieken Beschikbaar"
 
 msgid ""
 "Average performance of seek operations of the magnetic heads. If this "
@@ -1616,6 +1616,9 @@ msgstr "Houder"
 
 msgid "Content"
 msgstr "Mediabibliotheek"
+
+msgid "Continue"
+msgstr "Doorgaan"
 
 msgid "Controller"
 msgstr "Controller"
@@ -2551,30 +2554,6 @@ msgid "Display ZFS command history"
 msgstr "ZFS opdrachtgeschiedenis weergeven"
 
 msgid ""
-"Displays a percentage of time spent in each of the processor states (user, "
-"nice, system, interrupt, idle)."
-msgstr ""
-"Geeft een percentage van de tijd doorgebracht in de processen van elke "
-"processor (gebruikers, nice, systeem, interrupts, inactief)."
-
-msgid ""
-"Displays information about memory allocation (active, inact, wired, cache, "
-"buf, free, swap used, swap free)."
-msgstr ""
-"Toont informatie over het toewijzen van geheugen (active, inact, wired, "
-"cache, buf, free, swap used, swap free)."
-
-msgid "Displays the length of time the system has been up."
-msgstr "Geeft de lengte van de tijd die het systeem aan heeft gestaan."
-
-msgid ""
-"Displays the number of processes in each state (total, running, sleeping, "
-"waiting, starting, stopped, zombie)."
-msgstr ""
-"Geeft het aantal processen weer in elke staat (total, running, sleeping, "
-"waiting, starting, stopped, zombie)."
-
-msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
 msgstr ""
@@ -3149,6 +3128,43 @@ msgstr "Inschakelen anonieme koppeling."
 msgid "Enable authentication."
 msgstr "Inschakelen verificatie."
 
+msgid "Enable collecting CPU frequency statistics."
+msgstr "Inschakelen verzamelen van CPU frequentie statistieken."
+
+msgid "Enable collecting CPU temperature statistics."
+msgstr "Inschakelen verzamelen van CPU temperatuur statistieken."
+
+msgid "Enable collecting CPU usage statistics."
+msgstr "Inschakelen verzamelen van CPU gebruik statistieken."
+
+msgid "Enable collecting UPS statistics."
+msgstr "Inschakelen verzamelen van UPS statistieken."
+
+msgid "Enable collecting ZFS ARC usage statistics."
+msgstr "Inschakelen verzamelen van ZFS ARC gebruik statistieken."
+
+msgid "Enable collecting average system load statistics."
+msgstr ""
+"Inschakelen verzamelen van systeem gemiddelde belasting statistieken."
+
+msgid "Enable collecting disk space usage statistics."
+msgstr "Inschakelen verzamelen van schijfruimte gebruik statistieken."
+
+msgid "Enable collecting memory usage statistics."
+msgstr "Inschakelen verzamelen van geheugenverbruik statistieken."
+
+msgid "Enable collecting network latency statistics."
+msgstr "Inschakelen verzamelen van netwerkvertraging statistieken."
+
+msgid "Enable collecting network trafic statistics."
+msgstr "Inschakelen verzamelen van netwerkverkeer statistieken."
+
+msgid "Enable collecting system process statistics."
+msgstr "Inschakelen verzamelen van systeemproces statistieken."
+
+msgid "Enable collecting uptime statistics."
+msgstr "Inschakelen verzamelen van systeem uptime statistieken."
+
 msgid "Enable compression."
 msgstr "Inschakelen compressie."
 
@@ -3346,6 +3362,13 @@ msgstr ""
 "icoon om te selecteren."
 
 msgid ""
+"Enter the UPS identifier and host IP address of the machine where the UPS is "
+"connected to. (this also can be a remote host)"
+msgstr ""
+"Vul de UPS ID en host IP-adres in van de computer waarop de UPS is "
+"aangesloten. (dit kan ook een externe host te zijn)"
+
+msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
 "8 and 63 characters long."
 msgstr ""
@@ -3356,22 +3379,30 @@ msgid ""
 "Enter the path to the home directory of VirtualBox. VM config and HDD image "
 "will be created under the specified directory."
 msgstr ""
-"Vul de locatie in naar de hoofdmap van VirtualBox. De VM configuratie en HDD "
-"image zal worden aangemaakt in de opgegeven hoofdmap."
+"Vul de locatie in naar de gegevensmap voor VirtualBox. In deze gegevensmap "
+"worden de VM configuratie en HDD images opgeslagen."
+
+msgid ""
+"Enter the path to the home directory of rrdgraphs. The data directory holds "
+"the statistical data for the graphs and will be updated every 5 minutes."
+msgstr ""
+"Vul de locatie in naar de gegevensmap voor rrdgraphs. De gegevensmap houdt "
+"de statistische gegevens voor de grafieken en wordt elke 5 minuten "
+"bijgewerkt."
 
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
 msgstr ""
-"Vul de locatie in naar de hoofdmap van deze gebruiker. Laat dit veld leeg om "
-"de standaard locatie te gebruiken /mnt."
+"Vul de locatie in naar de gegevensmap van deze gebruiker. Laat dit veld leeg "
+"om de standaard locatie te gebruiken /mnt."
 
 msgid ""
 "Enter the path to the home directory. The config will be created under the "
 "specified directory."
 msgstr ""
-"Vul de locatie in naar de hoofdmap. De configuratie zal onder de opgegeven "
-"map worden aangemaakt."
+"Vul de locatie in naar de gegevensmap. De configuratie zal onder de "
+"opgegeven map worden aangemaakt."
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr ""
@@ -3970,13 +4001,13 @@ msgid "High voltage trimming transfer point"
 msgstr "Hoog voltage trimming overschakelpunt"
 
 msgid "Highlighting"
-msgstr "Markeren"
+msgstr "Oplichten"
 
 msgid "Hint"
 msgstr "Tip"
 
 msgid "Home directory"
-msgstr "Hoofdmap"
+msgstr "Gegevensmap"
 
 msgid "Host"
 msgstr "Host"
@@ -4148,13 +4179,6 @@ msgstr ""
 "onmiddellijk uitgevoerd nadat een cliënt geautoriseerd is verklaart. Dit kan "
 "gebruikt worden om de cliënt effectief te isoleren van een deel host systeem "
 "bestandsruimte."
-
-msgid ""
-"If enabled the network throughput is displayed in Bytes/sec rather than "
-"Bits/sec."
-msgstr ""
-"Indien ingeschakeld wordt de doorvoersnelheid van het netwerk in "
-"Bytes/seconde in plaats van Bits/seconde weergegeven."
 
 msgid ""
 "If the server is behind a proxy set these parameters to give local services "
@@ -4870,16 +4894,8 @@ msgid "Log packets that are handled by this rule to syslog."
 msgstr ""
 "Log pakketten die worden behandeld door deze regel door naar de syslog."
 
-msgid "Logarithmic scaling"
-msgstr "Logaritmische schaalverdeling"
-
-#, php-format
-msgid ""
-"Logarithmic y-axis scaling for %s graphs (can not be used together with "
-"positive/negative y-axis range)."
-msgstr ""
-"Logaritmische y-as schaal voor %s grafieken (kan niet gebruikt worden in "
-"combinatie met een positieve/negatieve y-as bereik)."
+msgid "Logarithmic Scaling"
+msgstr "Logaritmische schalen"
 
 msgid "Logical Block Length"
 msgstr "Logische Blok Lengte"
@@ -7501,38 +7517,6 @@ msgstr "Statische Routes Instellen"
 msgid "Static routes"
 msgstr "Statische routes"
 
-msgid "Statistics for CPU frequency."
-msgstr "Statistieken voor de CPU frequentie."
-
-msgid "Statistics for CPU temperature."
-msgstr "Statistieken voor de CPU temperatuur."
-
-msgid ""
-"Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
-"voltage and the UPS status (online, on battery, charging and offline)."
-msgstr ""
-"Statistieken voor de UPS batterij capaciteit, spanning, belasting, de "
-"resterende looptijd, ingangsspanning en de UPS staat (online, op de "
-"batterij, opladen en offline)."
-
-msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
-msgstr "Statistieken voor ZFS ARC (total, MRU, MFU, anon, header, other)."
-
-msgid "Statistics for average system load for 1, 5 and 15 minute periods."
-msgstr ""
-"Statistieken voor de gemiddelde systeembelasting van 1, 5 en 15 minuten "
-"perioden."
-
-msgid "Statistics for disk (mount point) usage."
-msgstr "Statistieken voor schijven (koppelpunt) gebruik."
-
-msgid "Statistics for incoming/outgoing bits/second for network interfaces."
-msgstr ""
-"Statistieken voor inkomende/uitgaande bits/seconde voor netwerkverbindingen."
-
-msgid "Statistics for network latency."
-msgstr "Statistieken voor netwerk vertragingstijd."
-
 msgid "Status"
 msgstr "Status"
 
@@ -7689,6 +7673,9 @@ msgstr "Systeembelasting"
 
 msgid "System Message"
 msgstr "Systeembericht"
+
+msgid "System Processes"
+msgstr "Systeemprocessen"
 
 msgid "System Settings"
 msgstr "Systeem Instellingen"
@@ -7900,6 +7887,9 @@ msgstr ""
 
 msgid "The TCP port must be a valid port number."
 msgstr "De TCP-poort moet een geldig poortnummer zijn."
+
+msgid "The UPS identifier and IP address"
+msgstr "De UPS id en IP-adres"
 
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr "Het VLAN ID moet tussen de 1 en 4094 zijn."
@@ -8201,15 +8191,6 @@ msgstr ""
 "Het aangepaste formaat van de snapshot voor schaduw kopie service kan "
 "gespecificeerd worden. Het standaard formaat, %s wordt gebruikt voor ZFS "
 "automatische snapshots."
-
-#, php-format
-msgid ""
-"The data directory holds the statistical data for the graphs. This should be "
-"set to a %s to prevent a disk spinning all the time."
-msgstr ""
-"De data directory bevat de statistische gegevens voor de grafieken. Dit moet "
-"worden ingesteld op een %s om te voorkomen dat een schijf de hele tijd "
-"blijft draaien."
 
 msgid "The data directory must be set to a directory <b>below</b> /mnt."
 msgstr ""
@@ -9526,6 +9507,9 @@ msgstr "UID"
 msgid "UPS"
 msgstr "UPS"
 
+msgid "UPS Identifier"
+msgstr "UPS id"
+
 msgid "UPS Information & Status"
 msgstr "UPS Informatie & Status"
 
@@ -9537,6 +9521,9 @@ msgstr "UPS Op Batterij"
 
 msgid "UPS On Line"
 msgstr "UPS Op Lichtnet"
+
+msgid "UPS Statistics"
+msgstr "UPS Statistieken"
 
 msgid "UPS Status"
 msgstr "UPS Status"
@@ -9570,13 +9557,6 @@ msgstr "UPS gaat over op batterij"
 
 msgid "UPS identifier and IP address"
 msgstr "UPS id en IP-adres"
-
-msgid ""
-"UPS identifier and host IP address of the machine where the UPS is connected "
-"to (this can be also a remote host)."
-msgstr ""
-"UPS ID en host IP-adres van de computer waarop de UPS is aangesloten (dit "
-"kan ook een externe host te zijn)."
 
 msgid "UPS model"
 msgstr "UPS model"
@@ -9706,6 +9686,11 @@ msgstr "Hoog"
 msgid "Uptime"
 msgstr "Bedrijfstijd"
 
+msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
+msgstr ""
+"Gebruik Bytes/seconde in plaats van Bits/seconde voor netwerk doorvoer "
+"weergave."
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -9723,6 +9708,14 @@ msgstr "Gebruik een andere container als root van de lijst."
 msgid "Use inotify monitoring to automatically discover new files."
 msgstr ""
 "Gebruik inotify monitoring om nieuwe bestanden automatisch te ontdekken."
+
+#, php-format
+msgid ""
+"Use logarithmic y-axis scaling for %s graphs (can not be used together with "
+"positive/negative y-axis range)."
+msgstr ""
+"Gebruik logaritmische y-as schalen voor %s grafieken (kan niet gebruikt "
+"worden in combinatie met een positieve/negatieve y-as bereik)."
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -10279,6 +10272,9 @@ msgstr "ZFS ACL"
 msgid "ZFS ARC"
 msgstr "ZFS ARC"
 
+msgid "ZFS ARC Usage"
+msgstr "ZFS ARC Gebruik"
+
 msgid "ZFS Dataset Information & Status"
 msgstr "ZFS Dataset Informatie & Status"
 
@@ -10421,6 +10417,9 @@ msgstr "moet zijn in het formaat: %s."
 msgid "n/a"
 msgstr "n.v.t."
 
+msgid "network traffic"
+msgstr "Netwerkverkeer"
+
 msgid "no new encrypted disk found."
 msgstr "geen nieuwe versleutelde schijven gevonden."
 
@@ -10480,3 +10479,96 @@ msgstr "gebruiker"
 
 msgid "version:"
 msgstr "versie:"
+
+#~ msgid "Available graphs"
+#~ msgstr "Beschikbare grafieken"
+
+#~ msgid "Logarithmic scaling"
+#~ msgstr "Logaritmische schaalverdeling"
+
+#, php-format
+#~ msgid ""
+#~ "Logarithmic y-axis scaling for %s graphs (can not be used together with "
+#~ "positive/negative y-axis range)."
+#~ msgstr ""
+#~ "Logaritmische y-as schaal voor %s grafieken (kan niet gebruikt worden in "
+#~ "combinatie met een positieve/negatieve y-as bereik)."
+
+#~ msgid ""
+#~ "If enabled the network throughput is displayed in Bytes/sec rather than "
+#~ "Bits/sec."
+#~ msgstr ""
+#~ "Indien ingeschakeld wordt de doorvoersnelheid van het netwerk in "
+#~ "Bytes/seconde in plaats van Bits/seconde weergegeven."
+
+#~ msgid "Statistics for CPU temperature."
+#~ msgstr "Statistieken voor de CPU temperatuur."
+
+#~ msgid ""
+#~ "Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
+#~ "voltage and the UPS status (online, on battery, charging and offline)."
+#~ msgstr ""
+#~ "Statistieken voor de UPS batterij capaciteit, spanning, belasting, de "
+#~ "resterende looptijd, ingangsspanning en de UPS staat (online, op de "
+#~ "batterij, opladen en offline)."
+
+#~ msgid "Statistics for CPU frequency."
+#~ msgstr "Statistieken voor de CPU frequentie."
+
+#~ msgid "Statistics for average system load for 1, 5 and 15 minute periods."
+#~ msgstr ""
+#~ "Statistieken voor de gemiddelde systeembelasting van 1, 5 en 15 minuten "
+#~ "perioden."
+
+#~ msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
+#~ msgstr "Statistieken voor ZFS ARC (total, MRU, MFU, anon, header, other)."
+
+#~ msgid "Statistics for disk (mount point) usage."
+#~ msgstr "Statistieken voor schijven (koppelpunt) gebruik."
+
+#~ msgid "Statistics for network latency."
+#~ msgstr "Statistieken voor netwerk vertragingstijd."
+
+#~ msgid "Statistics for incoming/outgoing bits/second for network interfaces."
+#~ msgstr ""
+#~ "Statistieken voor inkomende/uitgaande bits/seconde voor netwerkverbindingen."
+
+#~ msgid ""
+#~ "UPS identifier and host IP address of the machine where the UPS is connected "
+#~ "to (this can be also a remote host)."
+#~ msgstr ""
+#~ "UPS ID en host IP-adres van de computer waarop de UPS is aangesloten (dit "
+#~ "kan ook een externe host te zijn)."
+
+#~ msgid ""
+#~ "Displays the number of processes in each state (total, running, sleeping, "
+#~ "waiting, starting, stopped, zombie)."
+#~ msgstr ""
+#~ "Geeft het aantal processen weer in elke staat (total, running, sleeping, "
+#~ "waiting, starting, stopped, zombie)."
+
+#~ msgid "Displays the length of time the system has been up."
+#~ msgstr "Geeft de lengte van de tijd die het systeem aan heeft gestaan."
+
+#~ msgid ""
+#~ "Displays information about memory allocation (active, inact, wired, cache, "
+#~ "buf, free, swap used, swap free)."
+#~ msgstr ""
+#~ "Toont informatie over het toewijzen van geheugen (active, inact, wired, "
+#~ "cache, buf, free, swap used, swap free)."
+
+#~ msgid ""
+#~ "Displays a percentage of time spent in each of the processor states (user, "
+#~ "nice, system, interrupt, idle)."
+#~ msgstr ""
+#~ "Geeft een percentage van de tijd doorgebracht in de processen van elke "
+#~ "processor (gebruikers, nice, systeem, interrupts, inactief)."
+
+#, php-format
+#~ msgid ""
+#~ "The data directory holds the statistical data for the graphs. This should be "
+#~ "set to a %s to prevent a disk spinning all the time."
+#~ msgstr ""
+#~ "De data directory bevat de statistische gegevens voor de grafieken. Dit moet "
+#~ "worden ingesteld op een %s om te voorkomen dat een schijf de hele tijd "
+#~ "blijft draaien."
