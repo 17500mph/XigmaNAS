@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-08 18:51+0000\n"
+"POT-Creation-Date: 2016-11-13 02:00+0000\n"
 "PO-Revision-Date: 2016-11-06 21:25+0000\n"
 "Last-Translator: acidlord <acidlord_34@abv.bg>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-09 09:01+0000\n"
-"X-Generator: Launchpad (build 18246)\n"
+"X-Launchpad-Export-Date: 2016-11-13 09:44+0000\n"
+"X-Generator: Launchpad (build 18255)\n"
 "X-Poedit-Country: BULGARIA\n"
 "Language: \n"
 "X-Poedit-Language: Bulgarian\n"
@@ -981,7 +981,7 @@ msgstr "Налично"
 msgid "Available"
 msgstr "Налични"
 
-msgid "Available graphs"
+msgid "Available Graphs"
 msgstr ""
 
 msgid ""
@@ -1557,6 +1557,9 @@ msgstr "Контейнер"
 
 msgid "Content"
 msgstr "Съдържание"
+
+msgid "Continue"
+msgstr ""
 
 msgid "Controller"
 msgstr "Контролер"
@@ -2459,24 +2462,6 @@ msgid "Display ZFS command history"
 msgstr "Покажи историята на ZFS командите"
 
 msgid ""
-"Displays a percentage of time spent in each of the processor states (user, "
-"nice, system, interrupt, idle)."
-msgstr ""
-
-msgid ""
-"Displays information about memory allocation (active, inact, wired, cache, "
-"buf, free, swap used, swap free)."
-msgstr ""
-
-msgid "Displays the length of time the system has been up."
-msgstr ""
-
-msgid ""
-"Displays the number of processes in each state (total, running, sleeping, "
-"waiting, starting, stopped, zombie)."
-msgstr ""
-
-msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
 "or temperature). Unit of measure is unknown."
 msgstr ""
@@ -3019,6 +3004,42 @@ msgstr ""
 msgid "Enable authentication."
 msgstr ""
 
+msgid "Enable collecting CPU frequency statistics."
+msgstr ""
+
+msgid "Enable collecting CPU temperature statistics."
+msgstr ""
+
+msgid "Enable collecting CPU usage statistics."
+msgstr ""
+
+msgid "Enable collecting UPS statistics."
+msgstr ""
+
+msgid "Enable collecting ZFS ARC usage statistics."
+msgstr ""
+
+msgid "Enable collecting average system load statistics."
+msgstr ""
+
+msgid "Enable collecting disk space usage statistics."
+msgstr ""
+
+msgid "Enable collecting memory usage statistics."
+msgstr ""
+
+msgid "Enable collecting network latency statistics."
+msgstr ""
+
+msgid "Enable collecting network trafic statistics."
+msgstr ""
+
+msgid "Enable collecting system process statistics."
+msgstr ""
+
+msgid "Enable collecting uptime statistics."
+msgstr ""
+
 msgid "Enable compression."
 msgstr "Активирай компресията."
 
@@ -3203,6 +3224,11 @@ msgid ""
 msgstr ""
 
 msgid ""
+"Enter the UPS identifier and host IP address of the machine where the UPS is "
+"connected to. (this also can be a remote host)"
+msgstr ""
+
+msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
 "8 and 63 characters long."
 msgstr ""
@@ -3210,6 +3236,11 @@ msgstr ""
 msgid ""
 "Enter the path to the home directory of VirtualBox. VM config and HDD image "
 "will be created under the specified directory."
+msgstr ""
+
+msgid ""
+"Enter the path to the home directory of rrdgraphs. The data directory holds "
+"the statistical data for the graphs and will be updated every 5 minutes."
 msgstr ""
 
 msgid ""
@@ -3954,11 +3985,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"If enabled the network throughput is displayed in Bytes/sec rather than "
-"Bits/sec."
-msgstr ""
-
-msgid ""
 "If the server is behind a proxy set these parameters to give local services "
 "access to the internet via proxy."
 msgstr ""
@@ -4592,13 +4618,7 @@ msgstr ""
 msgid "Log packets that are handled by this rule to syslog."
 msgstr ""
 
-msgid "Logarithmic scaling"
-msgstr ""
-
-#, php-format
-msgid ""
-"Logarithmic y-axis scaling for %s graphs (can not be used together with "
-"positive/negative y-axis range)."
+msgid "Logarithmic Scaling"
 msgstr ""
 
 msgid "Logical Block Length"
@@ -7053,32 +7073,6 @@ msgstr ""
 msgid "Static routes"
 msgstr "Статични пътища"
 
-msgid "Statistics for CPU frequency."
-msgstr ""
-
-msgid "Statistics for CPU temperature."
-msgstr ""
-
-msgid ""
-"Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
-"voltage and the UPS status (online, on battery, charging and offline)."
-msgstr ""
-
-msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
-msgstr ""
-
-msgid "Statistics for average system load for 1, 5 and 15 minute periods."
-msgstr ""
-
-msgid "Statistics for disk (mount point) usage."
-msgstr ""
-
-msgid "Statistics for incoming/outgoing bits/second for network interfaces."
-msgstr ""
-
-msgid "Statistics for network latency."
-msgstr ""
-
 msgid "Status"
 msgstr "Състояние"
 
@@ -7229,6 +7223,9 @@ msgid "System Load"
 msgstr ""
 
 msgid "System Message"
+msgstr ""
+
+msgid "System Processes"
 msgstr ""
 
 msgid "System Settings"
@@ -7427,6 +7424,9 @@ msgstr ""
 
 msgid "The TCP port must be a valid port number."
 msgstr "The TCP port must be a valid port number."
+
+msgid "The UPS identifier and IP address"
+msgstr ""
 
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr ""
@@ -7678,12 +7678,6 @@ msgstr ""
 msgid ""
 "The custom format of the snapshot for shadow copy service can be specified. "
 "The default format is %s used for ZFS auto snapshot."
-msgstr ""
-
-#, php-format
-msgid ""
-"The data directory holds the statistical data for the graphs. This should be "
-"set to a %s to prevent a disk spinning all the time."
 msgstr ""
 
 msgid "The data directory must be set to a directory <b>below</b> /mnt."
@@ -8754,6 +8748,9 @@ msgstr ""
 msgid "UPS"
 msgstr ""
 
+msgid "UPS Identifier"
+msgstr ""
+
 msgid "UPS Information & Status"
 msgstr ""
 
@@ -8764,6 +8761,9 @@ msgid "UPS On Battery"
 msgstr ""
 
 msgid "UPS On Line"
+msgstr ""
+
+msgid "UPS Statistics"
 msgstr ""
 
 msgid "UPS Status"
@@ -8797,11 +8797,6 @@ msgid "UPS goes on battery"
 msgstr ""
 
 msgid "UPS identifier and IP address"
-msgstr ""
-
-msgid ""
-"UPS identifier and host IP address of the machine where the UPS is connected "
-"to (this can be also a remote host)."
 msgstr ""
 
 msgid "UPS model"
@@ -8931,6 +8926,9 @@ msgstr ""
 msgid "Uptime"
 msgstr ""
 
+msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
+msgstr ""
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -8945,6 +8943,12 @@ msgid "Use different container as root of the tree."
 msgstr ""
 
 msgid "Use inotify monitoring to automatically discover new files."
+msgstr ""
+
+#, php-format
+msgid ""
+"Use logarithmic y-axis scaling for %s graphs (can not be used together with "
+"positive/negative y-axis range)."
 msgstr ""
 
 msgid ""
@@ -9441,6 +9445,9 @@ msgstr ""
 msgid "ZFS ARC"
 msgstr ""
 
+msgid "ZFS ARC Usage"
+msgstr ""
+
 msgid "ZFS Dataset Information & Status"
 msgstr ""
 
@@ -9576,6 +9583,9 @@ msgstr ""
 
 msgid "n/a"
 msgstr "няма"
+
+msgid "network traffic"
+msgstr ""
 
 msgid "no new encrypted disk found."
 msgstr ""

@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-08 18:51+0000\n"
-"PO-Revision-Date: 2016-11-09 05:04+0000\n"
+"POT-Creation-Date: 2016-11-13 02:00+0000\n"
+"PO-Revision-Date: 2016-11-12 04:58+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-09 09:01+0000\n"
-"X-Generator: Launchpad (build 18246)\n"
+"X-Launchpad-Export-Date: 2016-11-13 09:45+0000\n"
+"X-Generator: Launchpad (build 18255)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
 "X-Poedit-Language: Russian\n"
@@ -1016,8 +1016,8 @@ msgstr "Доступно"
 msgid "Available"
 msgstr "Доступно"
 
-msgid "Available graphs"
-msgstr "Доступные графики"
+msgid "Available Graphs"
+msgstr ""
 
 msgid ""
 "Average performance of seek operations of the magnetic heads. If this "
@@ -1590,6 +1590,9 @@ msgstr "Контейнер"
 
 msgid "Content"
 msgstr "Содержимое"
+
+msgid "Continue"
+msgstr ""
 
 msgid "Controller"
 msgstr "Контроллер"
@@ -2464,7 +2467,7 @@ msgid "Disable the compression of repeated line."
 msgstr "Отключить сжатие повторяющихся строк."
 
 msgid "Disabled"
-msgstr "Запрещено"
+msgstr "Отключено"
 
 msgid "Discard - Discard ACL"
 msgstr "Discard - Сбрасывание ACL"
@@ -2514,32 +2517,6 @@ msgstr "Показать"
 
 msgid "Display ZFS command history"
 msgstr "Отображение истории команд ZFS (Display ZFS command history)"
-
-msgid ""
-"Displays a percentage of time spent in each of the processor states (user, "
-"nice, system, interrupt, idle)."
-msgstr ""
-"Отображает процент времени, проведённого процессором в каждом из состояний "
-"(user, nice, system, interrupt, idle)."
-
-msgid ""
-"Displays information about memory allocation (active, inact, wired, cache, "
-"buf, free, swap used, swap free)."
-msgstr ""
-"Отображает информацию о распределении памяти (active, inact, wired, cache, "
-"buf, free, swap used, swap free)."
-
-msgid "Displays the length of time the system has been up."
-msgstr ""
-"Отображает продолжительность времени, на протяжении которого система "
-"включена."
-
-msgid ""
-"Displays the number of processes in each state (total, running, sleeping, "
-"waiting, starting, stopped, zombie)."
-msgstr ""
-"Отображает число процессов в каждом из состояний (total, running, sleeping, "
-"waiting, starting, stopped, zombie)."
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -3109,6 +3086,42 @@ msgstr "Разрешить анонимный доступ"
 msgid "Enable authentication."
 msgstr "Включить аутентификацию."
 
+msgid "Enable collecting CPU frequency statistics."
+msgstr ""
+
+msgid "Enable collecting CPU temperature statistics."
+msgstr ""
+
+msgid "Enable collecting CPU usage statistics."
+msgstr ""
+
+msgid "Enable collecting UPS statistics."
+msgstr ""
+
+msgid "Enable collecting ZFS ARC usage statistics."
+msgstr ""
+
+msgid "Enable collecting average system load statistics."
+msgstr ""
+
+msgid "Enable collecting disk space usage statistics."
+msgstr ""
+
+msgid "Enable collecting memory usage statistics."
+msgstr ""
+
+msgid "Enable collecting network latency statistics."
+msgstr ""
+
+msgid "Enable collecting network trafic statistics."
+msgstr ""
+
+msgid "Enable collecting system process statistics."
+msgstr ""
+
+msgid "Enable collecting uptime statistics."
+msgstr ""
+
 msgid "Enable compression."
 msgstr "Включить сжатие"
 
@@ -3306,6 +3319,11 @@ msgstr ""
 "значок."
 
 msgid ""
+"Enter the UPS identifier and host IP address of the machine where the UPS is "
+"connected to. (this also can be a remote host)"
+msgstr ""
+
+msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
 "8 and 63 characters long."
 msgstr ""
@@ -3318,6 +3336,11 @@ msgid ""
 msgstr ""
 "Введите путь к домашней папке VirtualBox. Конфигурация Виртуальных Машин и "
 "образы дисков будут созданы в этой папке."
+
+msgid ""
+"Enter the path to the home directory of rrdgraphs. The data directory holds "
+"the statistical data for the graphs and will be updated every 5 minutes."
+msgstr ""
 
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
@@ -4108,13 +4131,6 @@ msgstr ""
 "эффективной изоляции клиента от остальной файловой системы хоста."
 
 msgid ""
-"If enabled the network throughput is displayed in Bytes/sec rather than "
-"Bits/sec."
-msgstr ""
-"Если выбрано, пропускная способность сети отображается в байт/сек вместо "
-"бит/сек."
-
-msgid ""
 "If the server is behind a proxy set these parameters to give local services "
 "access to the internet via proxy."
 msgstr ""
@@ -4824,16 +4840,8 @@ msgid "Log packets that are handled by this rule to syslog."
 msgstr ""
 "Заносить в журнал записи о пакетах, обработанных этим правилом, для syslog."
 
-msgid "Logarithmic scaling"
-msgstr "Логарифмическая шкала"
-
-#, php-format
-msgid ""
-"Logarithmic y-axis scaling for %s graphs (can not be used together with "
-"positive/negative y-axis range)."
+msgid "Logarithmic Scaling"
 msgstr ""
-"Логарифмический масштаб по оси y для графиков %s (не может быть использован "
-"вместе с положительным/отрицательным диапазоном по оси y)."
 
 msgid "Logical Block Length"
 msgstr "Длина логического блока"
@@ -7437,35 +7445,6 @@ msgstr "Настройка статических маршрутов"
 msgid "Static routes"
 msgstr "Статические маршруты"
 
-msgid "Statistics for CPU frequency."
-msgstr "Статистика частоты процессора"
-
-msgid "Statistics for CPU temperature."
-msgstr "Статистика температуры процессора"
-
-msgid ""
-"Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
-"voltage and the UPS status (online, on battery, charging and offline)."
-msgstr ""
-"Статистика ИБП - ёмкость батареи, напряжение, загрузка, оставшееся время "
-"работы, входное напряжение и статус ИБП (online, on battery, charging and "
-"offline)."
-
-msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
-msgstr "Статистика ZFS ARC (total, MRU, MFU, anon, header, other)."
-
-msgid "Statistics for average system load for 1, 5 and 15 minute periods."
-msgstr "Статистика средней загрузки системы для периодов 1, 5 и 15 минут."
-
-msgid "Statistics for disk (mount point) usage."
-msgstr "Статистика использования диска (точки монтирования)."
-
-msgid "Statistics for incoming/outgoing bits/second for network interfaces."
-msgstr "Статистика входящих/исходящих бит/сек для сетевых интерфейсов."
-
-msgid "Statistics for network latency."
-msgstr "Статистика латентности сети"
-
 msgid "Status"
 msgstr "Состояние"
 
@@ -7622,6 +7601,9 @@ msgstr "Загрузка системы"
 
 msgid "System Message"
 msgstr "Системное сообщение"
+
+msgid "System Processes"
+msgstr ""
 
 msgid "System Settings"
 msgstr "Настройки системы"
@@ -7828,6 +7810,9 @@ msgstr ""
 
 msgid "The TCP port must be a valid port number."
 msgstr "TCP-порт должен быть задан правильно."
+
+msgid "The UPS identifier and IP address"
+msgstr ""
 
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr "VLAN ID должен быть между 1 и 4094."
@@ -8129,14 +8114,6 @@ msgid ""
 msgstr ""
 "Здесь вы можете указать формат Snapshot'ов для службы теневого копирования. "
 "Формат по умолчанию % s используется для автоматических Snapshot'ов ZFS."
-
-#, php-format
-msgid ""
-"The data directory holds the statistical data for the graphs. This should be "
-"set to a %s to prevent a disk spinning all the time."
-msgstr ""
-"Каталог данных содержит статистические данные для графиков. Это должно быть "
-"установлено в %s, чтобы предотвратить раскручивание диска постоянно."
 
 msgid "The data directory must be set to a directory <b>below</b> /mnt."
 msgstr ""
@@ -9421,6 +9398,9 @@ msgstr "UID"
 msgid "UPS"
 msgstr "UPS"
 
+msgid "UPS Identifier"
+msgstr ""
+
 msgid "UPS Information & Status"
 msgstr "Информация и статус ИБП"
 
@@ -9432,6 +9412,9 @@ msgstr "ИБП работает от батареи"
 
 msgid "UPS On Line"
 msgstr "ИБП работает от сети"
+
+msgid "UPS Statistics"
+msgstr ""
 
 msgid "UPS Status"
 msgstr "Состояние ИБП"
@@ -9465,13 +9448,6 @@ msgstr "Переключение UPS на работу от батареи"
 
 msgid "UPS identifier and IP address"
 msgstr "Идентификатор ИБП и IP адрес"
-
-msgid ""
-"UPS identifier and host IP address of the machine where the UPS is connected "
-"to (this can be also a remote host)."
-msgstr ""
-"Идентификатор ИБП и IP адрес машины, к которой ИБП подключен (это может быть "
-"также и удалённый хост)."
 
 msgid "UPS model"
 msgstr "Модель ИБП"
@@ -9606,6 +9582,9 @@ msgstr "Выше"
 msgid "Uptime"
 msgstr "Время работы"
 
+msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
+msgstr ""
+
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
 "up at least one DNS server if you enter a host name here!"
@@ -9625,6 +9604,12 @@ msgstr "Используйте другой контейнер в качеств
 msgid "Use inotify monitoring to automatically discover new files."
 msgstr ""
 "Включение наблюдения inotify для автоматического обнаружения новых файлов."
+
+#, php-format
+msgid ""
+"Use logarithmic y-axis scaling for %s graphs (can not be used together with "
+"positive/negative y-axis range)."
+msgstr ""
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -10178,6 +10163,9 @@ msgstr "ZFS ACL"
 msgid "ZFS ARC"
 msgstr "ZFS ARC"
 
+msgid "ZFS ARC Usage"
+msgstr ""
+
 msgid "ZFS Dataset Information & Status"
 msgstr "Информация и статус ZFS Dataset'ов"
 
@@ -10321,6 +10309,9 @@ msgstr "должен быть в формате: %s."
 msgid "n/a"
 msgstr "n/a"
 
+msgid "network traffic"
+msgstr ""
+
 msgid "no new encrypted disk found."
 msgstr "новый диск использующий шифрование не найден."
 
@@ -10382,3 +10373,94 @@ msgstr "пользователь"
 
 msgid "version:"
 msgstr "версия:"
+
+#~ msgid "Available graphs"
+#~ msgstr "Доступные графики"
+
+#~ msgid ""
+#~ "Displays the number of processes in each state (total, running, sleeping, "
+#~ "waiting, starting, stopped, zombie)."
+#~ msgstr ""
+#~ "Отображает число процессов в каждом из состояний (total, running, sleeping, "
+#~ "waiting, starting, stopped, zombie)."
+
+#~ msgid "Displays the length of time the system has been up."
+#~ msgstr ""
+#~ "Отображает продолжительность времени, на протяжении которого система "
+#~ "включена."
+
+#~ msgid ""
+#~ "Displays information about memory allocation (active, inact, wired, cache, "
+#~ "buf, free, swap used, swap free)."
+#~ msgstr ""
+#~ "Отображает информацию о распределении памяти (active, inact, wired, cache, "
+#~ "buf, free, swap used, swap free)."
+
+#~ msgid ""
+#~ "Displays a percentage of time spent in each of the processor states (user, "
+#~ "nice, system, interrupt, idle)."
+#~ msgstr ""
+#~ "Отображает процент времени, проведённого процессором в каждом из состояний "
+#~ "(user, nice, system, interrupt, idle)."
+
+#~ msgid "Logarithmic scaling"
+#~ msgstr "Логарифмическая шкала"
+
+#~ msgid ""
+#~ "If enabled the network throughput is displayed in Bytes/sec rather than "
+#~ "Bits/sec."
+#~ msgstr ""
+#~ "Если выбрано, пропускная способность сети отображается в байт/сек вместо "
+#~ "бит/сек."
+
+#~ msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
+#~ msgstr "Статистика ZFS ARC (total, MRU, MFU, anon, header, other)."
+
+#~ msgid ""
+#~ "Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
+#~ "voltage and the UPS status (online, on battery, charging and offline)."
+#~ msgstr ""
+#~ "Статистика ИБП - ёмкость батареи, напряжение, загрузка, оставшееся время "
+#~ "работы, входное напряжение и статус ИБП (online, on battery, charging and "
+#~ "offline)."
+
+#~ msgid "Statistics for CPU frequency."
+#~ msgstr "Статистика частоты процессора"
+
+#~ msgid "Statistics for CPU temperature."
+#~ msgstr "Статистика температуры процессора"
+
+#~ msgid "Statistics for average system load for 1, 5 and 15 minute periods."
+#~ msgstr "Статистика средней загрузки системы для периодов 1, 5 и 15 минут."
+
+#~ msgid "Statistics for network latency."
+#~ msgstr "Статистика латентности сети"
+
+#~ msgid "Statistics for disk (mount point) usage."
+#~ msgstr "Статистика использования диска (точки монтирования)."
+
+#, php-format
+#~ msgid ""
+#~ "The data directory holds the statistical data for the graphs. This should be "
+#~ "set to a %s to prevent a disk spinning all the time."
+#~ msgstr ""
+#~ "Каталог данных содержит статистические данные для графиков. Это должно быть "
+#~ "установлено в %s, чтобы предотвратить раскручивание диска постоянно."
+
+#~ msgid "Statistics for incoming/outgoing bits/second for network interfaces."
+#~ msgstr "Статистика входящих/исходящих бит/сек для сетевых интерфейсов."
+
+#~ msgid ""
+#~ "UPS identifier and host IP address of the machine where the UPS is connected "
+#~ "to (this can be also a remote host)."
+#~ msgstr ""
+#~ "Идентификатор ИБП и IP адрес машины, к которой ИБП подключен (это может быть "
+#~ "также и удалённый хост)."
+
+#, php-format
+#~ msgid ""
+#~ "Logarithmic y-axis scaling for %s graphs (can not be used together with "
+#~ "positive/negative y-axis range)."
+#~ msgstr ""
+#~ "Логарифмический масштаб по оси y для графиков %s (не может быть использован "
+#~ "вместе с положительным/отрицательным диапазоном по оси y)."

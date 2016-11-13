@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-08 18:51+0000\n"
-"PO-Revision-Date: 2016-10-31 05:27+0000\n"
+"POT-Creation-Date: 2016-11-13 02:00+0000\n"
+"PO-Revision-Date: 2016-11-12 14:52+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-09 09:01+0000\n"
-"X-Generator: Launchpad (build 18246)\n"
+"X-Launchpad-Export-Date: 2016-11-13 09:45+0000\n"
+"X-Generator: Launchpad (build 18255)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -113,6 +113,9 @@ msgid ""
 "statistic needs to be reset, clear all other check boxes before performing "
 "'%s'."
 msgstr ""
+"'%s' va șterge toate datele pentru statisticile selectate. Dacă doar anumite "
+"statistici trebuie șterse deselectați-le pe toate celelalte înainte de a "
+"executa '%s'."
 
 msgid "(Change if needed)"
 msgstr "(Modifică dacă este necesar)"
@@ -685,7 +688,7 @@ msgid "All"
 msgstr "Toate"
 
 msgid "All data from the following statistics have been deleted:"
-msgstr ""
+msgstr "Toate datele pentru următoarele statistici au fost șterse:"
 
 msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
@@ -997,10 +1000,10 @@ msgid "AutoScale"
 msgstr "AutoScalare"
 
 msgid "Autoscale"
-msgstr ""
+msgstr "Autoscalare"
 
 msgid "Autoscale for graphs."
-msgstr ""
+msgstr "Autoscalare pentru grafice."
 
 msgid "Autoselect"
 msgstr "Selectare automată"
@@ -1017,7 +1020,7 @@ msgstr "Disponibil"
 msgid "Available"
 msgstr "Disponibil"
 
-msgid "Available graphs"
+msgid "Available Graphs"
 msgstr ""
 
 msgid ""
@@ -1214,7 +1217,7 @@ msgid "By default, only already existing files can be uploaded."
 msgstr "Implicit, doar fișierele existente deja pot fi încărcate."
 
 msgid "Bytes/sec"
-msgstr ""
+msgstr "Bytes/sec"
 
 msgid "CACHE"
 msgstr "CACHE"
@@ -1289,16 +1292,16 @@ msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Tradițional Chinez Big5)"
 
 msgid "CPU Frequency"
-msgstr ""
+msgstr "Frecvență CPU"
 
 msgid "CPU Load"
 msgstr "Încărcare CPU"
 
 msgid "CPU Temperature"
-msgstr ""
+msgstr "Temperaturp CPU"
 
 msgid "CPU Usage"
-msgstr ""
+msgstr "Utilizare CPU"
 
 msgid "CPU frequency"
 msgstr "Frecvență CPU"
@@ -1484,7 +1487,7 @@ msgid "Command Scripts"
 msgstr "Scripturi comenzi"
 
 msgid "Command Scripts (Maintenance Only)"
-msgstr ""
+msgstr "Scripturi comandă (Doar mentenanță)"
 
 msgid "Command execution was successful"
 msgstr "Comanda a fost executată cu succes"
@@ -1593,6 +1596,9 @@ msgstr "Container"
 
 msgid "Content"
 msgstr "Conținut"
+
+msgid "Continue"
+msgstr ""
 
 msgid "Controller"
 msgstr "Controler"
@@ -2005,7 +2011,7 @@ msgid "Data digest"
 msgstr "Analiză date"
 
 msgid "Data directory"
-msgstr ""
+msgstr "Director Date"
 
 msgid "Data integrity"
 msgstr "Integritate Date"
@@ -2089,7 +2095,7 @@ msgstr "Setări implicite dispozitiv"
 
 #, php-format
 msgid "Default is %s %s."
-msgstr ""
+msgstr "Implicit este %s %s."
 
 #, php-format
 msgid "Default is %s."
@@ -2200,7 +2206,7 @@ msgid "Delete clone"
 msgstr "Ștergere clonă"
 
 msgid "Delete command"
-msgstr ""
+msgstr "Comandă ștergere"
 
 msgid "Delete disk"
 msgstr "Ștergere disc"
@@ -2290,7 +2296,7 @@ msgstr ""
 "Adrese de email destinație. Adresele trebuie separate prin punct și virgulă."
 
 msgid "Destination host name or IP address."
-msgstr ""
+msgstr "Nume destinație sau adresă IP."
 
 msgid "Destination host name or IP number."
 msgstr "Nume sau IP destinație."
@@ -2328,7 +2334,7 @@ msgid "Detach a log device from a mirrored log"
 msgstr "Detașare dispozitiv loguri de la un log tip oglindă"
 
 msgid "Detailed"
-msgstr ""
+msgstr "Detaliat"
 
 msgid "Detected"
 msgstr "Detectat"
@@ -2430,7 +2436,7 @@ msgstr "Folder"
 
 #, php-format
 msgid "Directory %s doesn't exist!"
-msgstr ""
+msgstr "Directorul %s nu există!"
 
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr ""
@@ -2505,22 +2511,22 @@ msgid "Disk Selection"
 msgstr "Selecție disc"
 
 msgid "Disk Usage"
-msgstr ""
+msgstr "Utilizare disc"
 
 msgid "Disk space usage"
 msgstr "Utilizare spaţiu disc"
 
 msgid "Disk usage"
-msgstr ""
+msgstr "Utilizare disc"
 
 msgid "Disks"
 msgstr "Discuri"
 
 msgid "Disks (Info)"
-msgstr ""
+msgstr "Discuri (Info)"
 
 msgid "Disks (Info) information"
-msgstr ""
+msgstr "Informații Discuri (Info)"
 
 msgid "Disks | Mount Point | Management"
 msgstr "Discuri | Punct de montare | Management"
@@ -2530,24 +2536,6 @@ msgstr "Afișare"
 
 msgid "Display ZFS command history"
 msgstr "Afișare istoric comenzi ZFS"
-
-msgid ""
-"Displays a percentage of time spent in each of the processor states (user, "
-"nice, system, interrupt, idle)."
-msgstr ""
-
-msgid ""
-"Displays information about memory allocation (active, inact, wired, cache, "
-"buf, free, swap used, swap free)."
-msgstr ""
-
-msgid "Displays the length of time the system has been up."
-msgstr ""
-
-msgid ""
-"Displays the number of processes in each state (total, running, sleeping, "
-"waiting, starting, stopped, zombie)."
-msgstr ""
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -2581,7 +2569,7 @@ msgid ""
 msgstr "Doriți să ștergeți configurația curentă și să importați o alta nouă?"
 
 msgid "Do you really want to delete all data from the selected statistics?"
-msgstr ""
+msgstr "Ștergeți toate datele corespunzătoare graficelor selectate?"
 
 msgid "Do you really want to delete all rules?"
 msgstr "Doriți să ștergeți toate regulile?"
@@ -2757,10 +2745,10 @@ msgid "Do you want to delete selected volumes?"
 msgstr "Ștergeți volumele selectate?"
 
 msgid "Do you want to delete this command?"
-msgstr ""
+msgstr "Ștergeți această comandă?"
 
 msgid "Do you want to disable selected commands?"
-msgstr ""
+msgstr "Dezactivați comenzile selectate?"
 
 msgid "Do you want to disable selected jobs?"
 msgstr "Dezactivați activitățile selectate?"
@@ -3016,10 +3004,10 @@ msgid "Email Report"
 msgstr "Raport Email"
 
 msgid "Email Reports"
-msgstr ""
+msgstr "Rapoarte pe email"
 
 msgid "Email Setup"
-msgstr ""
+msgstr "Setări email"
 
 msgid "Emergency Level"
 msgstr "Nivel de urgență"
@@ -3106,6 +3094,42 @@ msgstr "Activare legătură anonimă."
 
 msgid "Enable authentication."
 msgstr "Activare autentificare."
+
+msgid "Enable collecting CPU frequency statistics."
+msgstr ""
+
+msgid "Enable collecting CPU temperature statistics."
+msgstr ""
+
+msgid "Enable collecting CPU usage statistics."
+msgstr ""
+
+msgid "Enable collecting UPS statistics."
+msgstr ""
+
+msgid "Enable collecting ZFS ARC usage statistics."
+msgstr ""
+
+msgid "Enable collecting average system load statistics."
+msgstr ""
+
+msgid "Enable collecting disk space usage statistics."
+msgstr ""
+
+msgid "Enable collecting memory usage statistics."
+msgstr ""
+
+msgid "Enable collecting network latency statistics."
+msgstr ""
+
+msgid "Enable collecting network trafic statistics."
+msgstr ""
+
+msgid "Enable collecting system process statistics."
+msgstr ""
+
+msgid "Enable collecting uptime statistics."
+msgstr ""
 
 msgid "Enable compression."
 msgstr "Activare compresie."
@@ -3303,6 +3327,11 @@ msgstr ""
 "sau utilizați butonul de selecție pentru calendar."
 
 msgid ""
+"Enter the UPS identifier and host IP address of the machine where the UPS is "
+"connected to. (this also can be a remote host)"
+msgstr ""
+
+msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
 "8 and 63 characters long."
 msgstr ""
@@ -3315,6 +3344,11 @@ msgid ""
 msgstr ""
 "Introduceți calea către folderul home pentru VirtualBox. Configurația pentru "
 "VM și imaginea HDD-ului vor fi create în acest folder."
+
+msgid ""
+"Enter the path to the home directory of rrdgraphs. The data directory holds "
+"the statistical data for the graphs and will be updated every 5 minutes."
+msgstr ""
 
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
@@ -3782,10 +3816,10 @@ msgstr "Graficul afișează ultimele 120 secunde"
 
 #, php-format
 msgid "Graph updates every %d seconds"
-msgstr ""
+msgstr "Grafic actualizat la fiecare %d secunde"
 
 msgid "Graphs height"
-msgstr ""
+msgstr "Înălțime grafice"
 
 msgid "Greek"
 msgstr "Greacă"
@@ -3906,7 +3940,7 @@ msgstr ""
 
 #, php-format
 msgid "Height of the graphs. Default is %s pixel."
-msgstr ""
+msgstr "Înălțimea graficelor. Implicit %s pixeli."
 
 msgid "Help"
 msgstr "Asistență"
@@ -4106,11 +4140,6 @@ msgstr ""
 "executată imediat după autentificarea clientului. Acest mod permite izolarea "
 "automată a clientului autentificat de anumite zone a sistemului de fișiere a "
 "gazdei."
-
-msgid ""
-"If enabled the network throughput is displayed in Bytes/sec rather than "
-"Bits/sec."
-msgstr ""
 
 msgid ""
 "If the server is behind a proxy set these parameters to give local services "
@@ -4623,7 +4652,7 @@ msgstr ""
 "temperatură excesivă, în rest valoarea normală este 100."
 
 msgid "Latency"
-msgstr ""
+msgstr "Latență"
 
 #, php-format
 msgid "Latest Beta Build: %s"
@@ -4730,7 +4759,7 @@ msgid "Load"
 msgstr "Încărcare"
 
 msgid "Load Averages"
-msgstr ""
+msgstr "Încărcare medie"
 
 msgid "Load averages"
 msgstr "Încărcare medie"
@@ -4825,13 +4854,7 @@ msgstr "Ordine jurnal"
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Memorare pachete gestionate de această regulă în syslog."
 
-msgid "Logarithmic scaling"
-msgstr ""
-
-#, php-format
-msgid ""
-"Logarithmic y-axis scaling for %s graphs (can not be used together with "
-"positive/negative y-axis range)."
+msgid "Logarithmic Scaling"
 msgstr ""
 
 msgid "Logical Block Length"
@@ -5098,13 +5121,13 @@ msgid "Member Interface"
 msgstr "Interfață Membru"
 
 msgid "Memory"
-msgstr ""
+msgstr "Memorie"
 
 msgid "Memory (MiB)"
 msgstr "Memorie (MiB)"
 
 msgid "Memory Usage"
-msgstr ""
+msgstr "Utilizare memorie"
 
 msgid "Memory usage"
 msgstr "Utilizare memorie"
@@ -5218,7 +5241,7 @@ msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
 msgstr "Luni Marţi Miercuri Joi Vineri Sîmbătă Duminică"
 
 msgid "Monitoring"
-msgstr ""
+msgstr "Monitorizează"
 
 msgid "Months"
 msgstr "Luni"
@@ -5347,10 +5370,10 @@ msgid "Network File System"
 msgstr "Sistem Fișiere Rețea"
 
 msgid "Network Latency"
-msgstr ""
+msgstr "Latență rețea"
 
 msgid "Network Traffic"
-msgstr ""
+msgstr "Trafic rețea"
 
 msgid ""
 "Network authorised to access to the iSCSI target. It takes IP or CIDR "
@@ -5360,7 +5383,7 @@ msgstr ""
 "IP, CIDR sau 'ALL'  pentru orice adresă."
 
 msgid "Network latency"
-msgstr ""
+msgstr "Latență rețea"
 
 msgid "Network mask"
 msgstr "Mască rețea"
@@ -5372,7 +5395,7 @@ msgid "Network that is authorised to access the NFS share."
 msgstr "Rețea autorizată pentru accesul partajării NFS."
 
 msgid "Network traffic"
-msgstr ""
+msgstr "Trafic rețea"
 
 msgid "Networks"
 msgstr "Rețele"
@@ -6004,7 +6027,7 @@ msgstr "Va trebui să adăugați o nouă structură pool mai întâi."
 
 #, php-format
 msgid "Please check the %s documentation%s."
-msgstr ""
+msgstr "Verificați %s documentația %s."
 
 msgid "Please check the documentation"
 msgstr "Verificați documentația"
@@ -6196,7 +6219,7 @@ msgid "Process"
 msgstr "Procese"
 
 msgid "Process Status"
-msgstr ""
+msgstr "Stare procese"
 
 msgid "Processes"
 msgstr "Procese"
@@ -6327,7 +6350,7 @@ msgid "RAW info"
 msgstr "Informații brute"
 
 msgid "RRDGraphs"
-msgstr ""
+msgstr "RRDGraphs"
 
 #, php-format
 msgid ""
@@ -6337,6 +6360,13 @@ msgid ""
 "Point | Management</a> or <a href='disks_zfs_dataset.php'>Disks | ZFS | "
 "Datasets</a>) and hit Save in order to take them effect."
 msgstr ""
+"RRDGraphs are nevoie cel puțin de permisiuni de scriere & citire pentru "
+"directorul %s! Setați biții corespunzători de scriere/citire pentru 'Others' "
+"(Mod | Acces Restricționat) pentru punctul de montare al directorului %s (în "
+"<a href='disks_mount.php'>Discuri | Punct de montare | Editare | "
+"Configurare</a> sau <a href='disks_zfs_dataset.php'>Discuri | ZFS | Seturi "
+"de date</a>) și selectați butonul <b>Salvare</b> pentru activarea "
+"modificărilor."
 
 msgid "RSYNC"
 msgstr "RSYNC"
@@ -6442,10 +6472,10 @@ msgid "Refresh"
 msgstr "Reactualizare"
 
 msgid "Refresh time"
-msgstr ""
+msgstr "Timp de actualizare"
 
 msgid "Refresh time for graph pages."
-msgstr ""
+msgstr "Timpul de actualizare al paginii graficelor."
 
 msgid "Reject"
 msgstr "Respingere"
@@ -6571,7 +6601,7 @@ msgid "Reservation"
 msgstr "Rezervare"
 
 msgid "Reset Graphs"
-msgstr ""
+msgstr "Resetare grafice"
 
 msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr ""
@@ -6972,6 +7002,8 @@ msgid ""
 "Select the interface (only selectable if your server has more than one) to "
 "use for the source IP address in outgoing packets."
 msgstr ""
+"Selectați interfața sursă pentru trimiterea pachetelor de date (opțiune "
+"activă doar dacă aveți cel puțin două interfețe în sistem)."
 
 msgid "Select the language of the WebGUI."
 msgstr "Selectați limba folosită pentru Interfața Grafică."
@@ -7005,10 +7037,10 @@ msgid "Selected file isn't an valid ISO file."
 msgstr "Fișierul selectat nu este un fișier ISO valid."
 
 msgid "Selected graph:"
-msgstr ""
+msgstr "Grafice selectate:"
 
 msgid "Selected interface:"
-msgstr ""
+msgstr "Interfață selectată:"
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "Tehnologie de auto-monitorizare, analiză și raportare"
@@ -7197,6 +7229,8 @@ msgid ""
 "Show positive/negative values for %s graphs (can not be used together with "
 "logarithmic scaling)."
 msgstr ""
+"Afișează valori pozitive/negative pentru graficele <b>%s</b> (acest mod nu "
+"poate fi utilizat pentru scale logaritmice)."
 
 msgid "Shutdown"
 msgstr "Oprire"
@@ -7434,32 +7468,6 @@ msgstr "Setarea rutelor statice"
 msgid "Static routes"
 msgstr "Rute Statice"
 
-msgid "Statistics for CPU frequency."
-msgstr ""
-
-msgid "Statistics for CPU temperature."
-msgstr ""
-
-msgid ""
-"Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
-"voltage and the UPS status (online, on battery, charging and offline)."
-msgstr ""
-
-msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
-msgstr ""
-
-msgid "Statistics for average system load for 1, 5 and 15 minute periods."
-msgstr ""
-
-msgid "Statistics for disk (mount point) usage."
-msgstr ""
-
-msgid "Statistics for incoming/outgoing bits/second for network interfaces."
-msgstr ""
-
-msgid "Statistics for network latency."
-msgstr ""
-
 msgid "Status"
 msgstr "Stare"
 
@@ -7604,7 +7612,7 @@ msgid "System"
 msgstr "Sistem"
 
 msgid "System Email Settings"
-msgstr ""
+msgstr "Setări email sistem"
 
 msgid "System Information"
 msgstr "Informații sistem"
@@ -7614,6 +7622,9 @@ msgstr "Încărcare sistem"
 
 msgid "System Message"
 msgstr "Mesaj Sistem"
+
+msgid "System Processes"
+msgstr ""
 
 msgid "System Settings"
 msgstr "Setări sistem"
@@ -7628,7 +7639,7 @@ msgid "System info"
 msgstr "Informații Sistem"
 
 msgid "System last config change"
-msgstr "Modifică ultima configurație sistem"
+msgstr "Ultima modificare a configurației sistemului"
 
 msgid "System log"
 msgstr "Jurnal Sistem"
@@ -7820,6 +7831,9 @@ msgstr ""
 
 msgid "The TCP port must be a valid port number."
 msgstr "Trebuie să introduceți un port TCP valid."
+
+msgid "The UPS identifier and IP address"
+msgstr ""
 
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr "ID-ul VLAN trebuie să fie în intervalul 1-4094."
@@ -8117,14 +8131,9 @@ msgstr ""
 "fi specificat aici. Formatul implicit este %s folosit pentru imaginile ZFS "
 "generate automat."
 
-#, php-format
-msgid ""
-"The data directory holds the statistical data for the graphs. This should be "
-"set to a %s to prevent a disk spinning all the time."
-msgstr ""
-
 msgid "The data directory must be set to a directory <b>below</b> /mnt."
 msgstr ""
+"Directorul pentru date trebuie setat ca un sub-director in <b>/mnt</b>."
 
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr "Portul implicit folosit de serverul SMTP, ex. 25 sau 587."
@@ -8489,7 +8498,7 @@ msgstr ""
 "Procesul poate dura 1-2 minute."
 
 msgid "The server is halting now."
-msgstr ""
+msgstr "Sistemul se va opri"
 
 msgid "The server is rebooting now."
 msgstr "Serverul va reporni acum."
@@ -8682,7 +8691,7 @@ msgstr ""
 "Acești parametri vor fi adăugați la modulul de configurare în rsyncd.conf."
 
 msgid "These parameters will be added to the ping command."
-msgstr ""
+msgstr "Acești parametri vor fi adăugați la comanda ping."
 
 msgid ""
 "This Bridge cannot be deleted because it is still being used as an interface."
@@ -8978,7 +8987,7 @@ msgstr ""
 "necompletat pentru setările implicite."
 
 msgid "This page is for maintenance only."
-msgstr ""
+msgstr "Această pagină este doar pentru mentenanță."
 
 msgid ""
 "This page reflects the configuration that has been created with the WebGUI."
@@ -9412,6 +9421,9 @@ msgstr "UID"
 msgid "UPS"
 msgstr "UPS"
 
+msgid "UPS Identifier"
+msgstr ""
+
 msgid "UPS Information & Status"
 msgstr "Informații & Stare UPS"
 
@@ -9423,6 +9435,9 @@ msgstr "UPS pe acumulator"
 
 msgid "UPS On Line"
 msgstr "UPS activ"
+
+msgid "UPS Statistics"
+msgstr ""
 
 msgid "UPS Status"
 msgstr "Stare UPS"
@@ -9455,12 +9470,7 @@ msgid "UPS goes on battery"
 msgstr "UPS trece pe baterii"
 
 msgid "UPS identifier and IP address"
-msgstr ""
-
-msgid ""
-"UPS identifier and host IP address of the machine where the UPS is connected "
-"to (this can be also a remote host)."
-msgstr ""
+msgstr "Identificator UPS și adresă IP"
 
 msgid "UPS model"
 msgstr "Model UPS"
@@ -9588,6 +9598,9 @@ msgid "Upper"
 msgstr "Superior"
 
 msgid "Uptime"
+msgstr "Timp de funcționare"
+
+msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr ""
 
 msgid ""
@@ -9609,6 +9622,12 @@ msgid "Use inotify monitoring to automatically discover new files."
 msgstr ""
 "Folosește serviciul de monitorizare inotify pentru descoperirea de noi "
 "fișiere."
+
+#, php-format
+msgid ""
+"Use logarithmic y-axis scaling for %s graphs (can not be used together with "
+"positive/negative y-axis range)."
+msgstr ""
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -9840,7 +9859,7 @@ msgid "VirtualBox"
 msgstr "VirtualBox"
 
 msgid "Virtualization"
-msgstr ""
+msgstr "Virtualizare"
 
 msgid "Volume"
 msgstr "Volum"
@@ -10048,7 +10067,7 @@ msgid "Xen Virtual Machine"
 msgstr "Mașină virtuală Xen"
 
 msgid "Y-axis range"
-msgstr ""
+msgstr "Interval axa Y"
 
 msgid "Yes"
 msgstr "Da"
@@ -10165,6 +10184,9 @@ msgid "ZFS ACL"
 msgstr "ACL ZFS"
 
 msgid "ZFS ARC"
+msgstr "ZFS ARC"
+
+msgid "ZFS ARC Usage"
 msgstr ""
 
 msgid "ZFS Dataset Information & Status"
@@ -10299,14 +10321,17 @@ msgid "mount point"
 msgstr "punct de montare"
 
 msgid "must be defined!"
-msgstr ""
+msgstr "trebuie să fie definit!"
 
 #, php-format
 msgid "must be in the format: %s."
-msgstr ""
+msgstr "trebuie să fie în formatul: %s."
 
 msgid "n/a"
 msgstr "n/a"
+
+msgid "network traffic"
+msgstr ""
 
 msgid "no new encrypted disk found."
 msgstr "nu a fost găsit niciun disc nou criptat."
@@ -10336,7 +10361,7 @@ msgid "second(s)"
 msgstr "secunde"
 
 msgid "seconds"
-msgstr ""
+msgstr "secunde"
 
 msgid "smallest settable high voltage transfer point"
 msgstr "valoarea minimă pentru punctul de transfer tensiune înaltă"
@@ -10367,3 +10392,94 @@ msgstr "utilizator"
 
 msgid "version:"
 msgstr "versiune:"
+
+#~ msgid "Available graphs"
+#~ msgstr "Grafice disponibile"
+
+#~ msgid ""
+#~ "Displays the number of processes in each state (total, running, sleeping, "
+#~ "waiting, starting, stopped, zombie)."
+#~ msgstr ""
+#~ "Afișează numărul de procese pentru fiecare stare (total, running, sleeping, "
+#~ "waiting, starting, stopped, zombie)"
+
+#~ msgid "Displays the length of time the system has been up."
+#~ msgstr "Afișează timpul de funcționare al sistemului."
+
+#~ msgid ""
+#~ "Displays information about memory allocation (active, inact, wired, cache, "
+#~ "buf, free, swap used, swap free)."
+#~ msgstr ""
+#~ "Afișează informații despre alocarea memoriei (active, inact, wired, cache, "
+#~ "buf, free, swap used, swap free)"
+
+#~ msgid ""
+#~ "Displays a percentage of time spent in each of the processor states (user, "
+#~ "nice, system, interrupt, idle)."
+#~ msgstr ""
+#~ "Afișează procentual timpul alocat fiecărei stări a procesorului (user, nice, "
+#~ "system, interrupt, idle)"
+
+#~ msgid "Logarithmic scaling"
+#~ msgstr "Scală logaritmică"
+
+#, php-format
+#~ msgid ""
+#~ "Logarithmic y-axis scaling for %s graphs (can not be used together with "
+#~ "positive/negative y-axis range)."
+#~ msgstr ""
+#~ "Scală logaritmică pe axa Y pentru graficele <b>%s</b> (nu poate fi utilizată "
+#~ "împreună cu afișarea pozitivă/negativă)."
+
+#~ msgid ""
+#~ "If enabled the network throughput is displayed in Bytes/sec rather than "
+#~ "Bits/sec."
+#~ msgstr ""
+#~ "Dacă opțiunea este activată rata de transfer va fi afișată în Bytes/sec în "
+#~ "loc de Bits/sec."
+
+#~ msgid "Statistics for CPU temperature."
+#~ msgstr "Grafice pentru temperatura CPU"
+
+#~ msgid ""
+#~ "Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
+#~ "voltage and the UPS status (online, on battery, charging and offline)."
+#~ msgstr ""
+#~ "Grafice pentru capacitate, tensiune, încărcare, timp disponibil, tensiunea "
+#~ "de intrare și starea UPS-ului (activ, pe acumulator, se încarcă, oprit)"
+
+#~ msgid "Statistics for CPU frequency."
+#~ msgstr "Grafice pentru frecvența CPU"
+
+#~ msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
+#~ msgstr "Grafice pentru ZFS ARC (total, MRU, MFU, anon, header, altele)"
+
+#~ msgid "Statistics for average system load for 1, 5 and 15 minute periods."
+#~ msgstr ""
+#~ "Grafice pentru încărcarea medie a sistemului (perioade de 1,5 și 15 minute)"
+
+#~ msgid "Statistics for disk (mount point) usage."
+#~ msgstr "Grafice pentru utilizarea punctului de montare."
+
+#~ msgid "Statistics for network latency."
+#~ msgstr "Grafice pentru latența rețelei"
+
+#~ msgid "Statistics for incoming/outgoing bits/second for network interfaces."
+#~ msgstr ""
+#~ "Grafice pentru traficul de intrare/ieșire în biți/sec pentru interfețele de "
+#~ "rețea"
+
+#~ msgid ""
+#~ "UPS identifier and host IP address of the machine where the UPS is connected "
+#~ "to (this can be also a remote host)."
+#~ msgstr ""
+#~ "Identificatorul UPS-ului și adresa IP a sistemului la care este conectat "
+#~ "(poate fi și un sistem remote)."
+
+#, php-format
+#~ msgid ""
+#~ "The data directory holds the statistical data for the graphs. This should be "
+#~ "set to a %s to prevent a disk spinning all the time."
+#~ msgstr ""
+#~ "Directorul pentru date stochează datele graficelor. Acesta trebui setat la "
+#~ "%s pentru a preveni rotirea permanentă a discurilor."

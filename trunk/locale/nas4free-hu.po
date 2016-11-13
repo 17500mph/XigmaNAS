@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-08 18:51+0000\n"
-"PO-Revision-Date: 2016-11-06 06:55+0000\n"
+"POT-Creation-Date: 2016-11-13 02:00+0000\n"
+"PO-Revision-Date: 2016-11-09 22:08+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-09 09:01+0000\n"
-"X-Generator: Launchpad (build 18246)\n"
+"X-Launchpad-Export-Date: 2016-11-13 09:45+0000\n"
+"X-Generator: Launchpad (build 18255)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -118,6 +118,9 @@ msgid ""
 "statistic needs to be reset, clear all other check boxes before performing "
 "'%s'."
 msgstr ""
+"'%s' törli a kiválasztott statisztikák összes adatát. Ha csupán néhány "
+"statisztikát szükséges alaphelyzetbe hozni, az összes többi jelölőnégyzetről "
+"vedd le a pipát, mielőtt végrehajtod a következőt: '%s'."
 
 msgid "(Change if needed)"
 msgstr "(Szükség esetén módosítsd)"
@@ -680,7 +683,7 @@ msgid "All"
 msgstr "Minden"
 
 msgid "All data from the following statistics have been deleted:"
-msgstr ""
+msgstr "A következő statisztikák összes adatát sikeresen törölted:"
 
 msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
@@ -991,10 +994,10 @@ msgid "AutoScale"
 msgstr "Automatikus méretezés"
 
 msgid "Autoscale"
-msgstr ""
+msgstr "Automatikus skálázás"
 
 msgid "Autoscale for graphs."
-msgstr ""
+msgstr "Grafikonok automatikus skálázása"
 
 msgid "Autoselect"
 msgstr "Automatikus választás"
@@ -1011,7 +1014,7 @@ msgstr "Elérhető"
 msgid "Available"
 msgstr "Elérhető"
 
-msgid "Available graphs"
+msgid "Available Graphs"
 msgstr ""
 
 msgid ""
@@ -1205,7 +1208,7 @@ msgid "By default, only already existing files can be uploaded."
 msgstr "Alapértelmezetten csak már létező fájlok tölthetőek fel."
 
 msgid "Bytes/sec"
-msgstr ""
+msgstr "Byte/mp"
 
 msgid "CACHE"
 msgstr "GYORSÍTÓTÁRAZÁS"
@@ -1280,16 +1283,16 @@ msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (Traditional Chinese Big5)"
 
 msgid "CPU Frequency"
-msgstr ""
+msgstr "CPU frekvencia"
 
 msgid "CPU Load"
 msgstr "Processzorterhelés"
 
 msgid "CPU Temperature"
-msgstr ""
+msgstr "Processzorhőmérséklet"
 
 msgid "CPU Usage"
-msgstr ""
+msgstr "Processzorhasználat"
 
 msgid "CPU frequency"
 msgstr "CPU (processzor) frekvencia"
@@ -1580,6 +1583,9 @@ msgstr "Tároló"
 
 msgid "Content"
 msgstr "Tartalom"
+
+msgid "Continue"
+msgstr ""
 
 msgid "Controller"
 msgstr "Vezérlő"
@@ -1963,7 +1969,7 @@ msgid "Data digest"
 msgstr "Adat kivonat"
 
 msgid "Data directory"
-msgstr ""
+msgstr "Adatkönyvtár"
 
 msgid "Data integrity"
 msgstr "Adatsértetlenség"
@@ -2047,7 +2053,7 @@ msgstr "Alapértelmezett eszközbeállítások"
 
 #, php-format
 msgid "Default is %s %s."
-msgstr ""
+msgstr "%s %s az alapértelmezett."
 
 #, php-format
 msgid "Default is %s."
@@ -2247,7 +2253,7 @@ msgid "Destination email address. Separate email addresses by semi-colon."
 msgstr "Cél e-mail cím.  Több címet pontosvesszővel válassz el."
 
 msgid "Destination host name or IP address."
-msgstr ""
+msgstr "Cél kiszolgálóneve vagy IP címe."
 
 msgid "Destination host name or IP number."
 msgstr "Cél gépnév vagy IP cím."
@@ -2285,7 +2291,7 @@ msgid "Detach a log device from a mirrored log"
 msgstr "Naplóeszköz kicsatolása a tükrözött naplóból"
 
 msgid "Detailed"
-msgstr ""
+msgstr "Részletes"
 
 msgid "Detected"
 msgstr "Észlelt"
@@ -2388,7 +2394,7 @@ msgstr "Könyvtár"
 
 #, php-format
 msgid "Directory %s doesn't exist!"
-msgstr ""
+msgstr "%s könyvtár nem létezik!"
 
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr "Befejezetlen fájlok könyvtára. Az üres mező tiltást jelent."
@@ -2461,13 +2467,13 @@ msgid "Disk Selection"
 msgstr "Lemez kiválasztása"
 
 msgid "Disk Usage"
-msgstr ""
+msgstr "Lemezhasználat"
 
 msgid "Disk space usage"
 msgstr "Lemezhasználat"
 
 msgid "Disk usage"
-msgstr ""
+msgstr "Lemezhasználat"
 
 msgid "Disks"
 msgstr "Lemezek"
@@ -2486,24 +2492,6 @@ msgstr "Kijelző"
 
 msgid "Display ZFS command history"
 msgstr "ZFS parancstörténelem megjelenítése"
-
-msgid ""
-"Displays a percentage of time spent in each of the processor states (user, "
-"nice, system, interrupt, idle)."
-msgstr ""
-
-msgid ""
-"Displays information about memory allocation (active, inact, wired, cache, "
-"buf, free, swap used, swap free)."
-msgstr ""
-
-msgid "Displays the length of time the system has been up."
-msgstr ""
-
-msgid ""
-"Displays the number of processes in each state (total, running, sleeping, "
-"waiting, starting, stopped, zombie)."
-msgstr ""
 
 msgid ""
 "Distance the disk has shifted relative to the spindle (usually due to shock "
@@ -2539,7 +2527,7 @@ msgstr ""
 "felülíródnak."
 
 msgid "Do you really want to delete all data from the selected statistics?"
-msgstr ""
+msgstr "Biztos, hogy törlöd a kiválasztott statisztikák összes adatát?"
 
 msgid "Do you really want to delete all rules?"
 msgstr "Biztos, hogy minden szabályt töröl?"
@@ -3075,6 +3063,42 @@ msgstr "Névtelen csatlakozás engedélyezése"
 msgid "Enable authentication."
 msgstr "Hitelesítés engedélyezése"
 
+msgid "Enable collecting CPU frequency statistics."
+msgstr ""
+
+msgid "Enable collecting CPU temperature statistics."
+msgstr ""
+
+msgid "Enable collecting CPU usage statistics."
+msgstr ""
+
+msgid "Enable collecting UPS statistics."
+msgstr ""
+
+msgid "Enable collecting ZFS ARC usage statistics."
+msgstr ""
+
+msgid "Enable collecting average system load statistics."
+msgstr ""
+
+msgid "Enable collecting disk space usage statistics."
+msgstr ""
+
+msgid "Enable collecting memory usage statistics."
+msgstr ""
+
+msgid "Enable collecting network latency statistics."
+msgstr ""
+
+msgid "Enable collecting network trafic statistics."
+msgstr ""
+
+msgid "Enable collecting system process statistics."
+msgstr ""
+
+msgid "Enable collecting uptime statistics."
+msgstr ""
+
 msgid "Enable compression."
 msgstr "Tömörítés engedélyezése."
 
@@ -3268,6 +3292,11 @@ msgstr ""
 "ikonra kattintva válaszd ki."
 
 msgid ""
+"Enter the UPS identifier and host IP address of the machine where the UPS is "
+"connected to. (this also can be a remote host)"
+msgstr ""
+
+msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
 "8 and 63 characters long."
 msgstr ""
@@ -3280,6 +3309,11 @@ msgid ""
 msgstr ""
 "Add meg a VirtualBox saját könyvtárának útvonalát. A VM konfiguráció és a "
 "HDD képfájl a megadott könyvtárba kerül."
+
+msgid ""
+"Enter the path to the home directory of rrdgraphs. The data directory holds "
+"the statistical data for the graphs and will be updated every 5 minutes."
+msgstr ""
 
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
@@ -3744,10 +3778,10 @@ msgstr "Grafikon az utolsó 120 mp-et mutatja"
 
 #, php-format
 msgid "Graph updates every %d seconds"
-msgstr ""
+msgstr "A grafikon minden %d másodpercben frissül."
 
 msgid "Graphs height"
-msgstr ""
+msgstr "Grafikon magassága"
 
 msgid "Greek"
 msgstr "Görög"
@@ -3865,7 +3899,7 @@ msgstr ""
 
 #, php-format
 msgid "Height of the graphs. Default is %s pixel."
-msgstr ""
+msgstr "A grafikon magassága, alapértelmezetten %s pixel."
 
 msgid "Help"
 msgstr "Súgó"
@@ -4063,11 +4097,6 @@ msgstr ""
 "Ha az alapértelmezett root engedélyezve van, a chroot művelet azonnal lefut "
 "az ügyfél hitelesítése után. Ezt fel lehet használni arra, hogy hatékonyan "
 "elkülönítsük a klienst a hostrendszer fájlterületének részétől."
-
-msgid ""
-"If enabled the network throughput is displayed in Bytes/sec rather than "
-"Bits/sec."
-msgstr ""
 
 msgid ""
 "If the server is behind a proxy set these parameters to give local services "
@@ -4565,7 +4594,7 @@ msgstr ""
 "100."
 
 msgid "Latency"
-msgstr ""
+msgstr "Késlekedés"
 
 #, php-format
 msgid "Latest Beta Build: %s"
@@ -4676,7 +4705,7 @@ msgid "Load"
 msgstr "Terhelés"
 
 msgid "Load Averages"
-msgstr ""
+msgstr "Átlagterhelések"
 
 msgid "Load averages"
 msgstr "Betöltési átlagok"
@@ -4767,13 +4796,7 @@ msgstr "Naplózás sorrendje"
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Naplózd készítése a syslog-ba."
 
-msgid "Logarithmic scaling"
-msgstr ""
-
-#, php-format
-msgid ""
-"Logarithmic y-axis scaling for %s graphs (can not be used together with "
-"positive/negative y-axis range)."
+msgid "Logarithmic Scaling"
 msgstr ""
 
 msgid "Logical Block Length"
@@ -5039,13 +5062,13 @@ msgid "Member Interface"
 msgstr "Interfész tag"
 
 msgid "Memory"
-msgstr ""
+msgstr "Memória"
 
 msgid "Memory (MiB)"
 msgstr "Memória (MiB)"
 
 msgid "Memory Usage"
-msgstr ""
+msgstr "Memóriafelhasználás"
 
 msgid "Memory usage"
 msgstr "Memóriahasználat"
@@ -5288,10 +5311,10 @@ msgid "Network File System"
 msgstr "Hálózati fájlrendszer"
 
 msgid "Network Latency"
-msgstr ""
+msgstr "Hálózati késlekedés"
 
 msgid "Network Traffic"
-msgstr ""
+msgstr "Hálózati forgalom"
 
 msgid ""
 "Network authorised to access to the iSCSI target. It takes IP or CIDR "
@@ -5301,7 +5324,7 @@ msgstr ""
 "'ÖSSZES' esetén bármely IP cím."
 
 msgid "Network latency"
-msgstr ""
+msgstr "Hálózati késlekedés"
 
 msgid "Network mask"
 msgstr "Hálózati maszk"
@@ -5313,7 +5336,7 @@ msgid "Network that is authorised to access the NFS share."
 msgstr "Hálózat, amely jogosult elérni a NFS-megosztás."
 
 msgid "Network traffic"
-msgstr ""
+msgstr "Hálózati forgalom"
 
 msgid "Networks"
 msgstr "Hálózatok"
@@ -5948,7 +5971,7 @@ msgstr "Először egy új tárolót hozz létre."
 
 #, php-format
 msgid "Please check the %s documentation%s."
-msgstr ""
+msgstr "Kérem, olvasd el %s dokumentációt %s."
 
 msgid "Please check the documentation"
 msgstr "Olvasd el a dokumentációt."
@@ -6136,7 +6159,7 @@ msgid "Process"
 msgstr "Folyamat"
 
 msgid "Process Status"
-msgstr ""
+msgstr "Folyamatállapot"
 
 msgid "Processes"
 msgstr "Folyamatok"
@@ -6269,7 +6292,7 @@ msgid "RAW info"
 msgstr "RAW info"
 
 msgid "RRDGraphs"
-msgstr ""
+msgstr "RRDGrafikonok"
 
 #, php-format
 msgid ""
@@ -6279,6 +6302,12 @@ msgid ""
 "Point | Management</a> or <a href='disks_zfs_dataset.php'>Disks | ZFS | "
 "Datasets</a>) and hit Save in order to take them effect."
 msgstr ""
+"RRDGrafikonnak '%s' könyvtáron legalább olvasási és futtatási jogosultsággal "
+"kell rendelkeznie! %s csatolási pontra a Többieknek állíts Olvasási és  "
+"Futtatási jogosultságot (Hozzáférési korlátozások | Mód) (<a "
+"href='disks_mount.php'>Lemezek | Csatolási pont | Kezelés</a> vagy <a "
+"href='disks_zfs_dataset.php'>Lemezek | ZFS | Datatárolók</a> menü alatt), "
+"majd nyomd meg a Mentés gombot."
 
 msgid "RSYNC"
 msgstr "RSYNC"
@@ -6385,10 +6414,10 @@ msgid "Refresh"
 msgstr "Frissítés"
 
 msgid "Refresh time"
-msgstr ""
+msgstr "Frissítési idő"
 
 msgid "Refresh time for graph pages."
-msgstr ""
+msgstr "Grafikus oldalak frissítési ideje."
 
 msgid "Reject"
 msgstr "Elvetés"
@@ -6514,7 +6543,7 @@ msgid "Reservation"
 msgstr "Foglalás"
 
 msgid "Reset Graphs"
-msgstr ""
+msgstr "Grafikonon alaphelyzetbe állítása"
 
 msgid "Resistance caused by friction in mechanical parts while operating."
 msgstr ""
@@ -6917,6 +6946,8 @@ msgid ""
 "Select the interface (only selectable if your server has more than one) to "
 "use for the source IP address in outgoing packets."
 msgstr ""
+"Válaszd ki az interfészt (csak akkor választható, ha szerveredben több, mint "
+"egy van), amelyik a forrás IP lesz a kimenő csomagokban."
 
 msgid "Select the language of the WebGUI."
 msgstr "Válaszd ki a WebGUI nyelvét."
@@ -6951,10 +6982,10 @@ msgid "Selected file isn't an valid ISO file."
 msgstr "A kiválasztott fájl nem érvényes ISO fájl."
 
 msgid "Selected graph:"
-msgstr ""
+msgstr "Kiválasztott grafikonok:"
 
 msgid "Selected interface:"
-msgstr ""
+msgstr "Kiválasztott interfész:"
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
 msgstr "Önellenőrző, Analizáló és Nyilvántartó Technológia"
@@ -7140,6 +7171,8 @@ msgid ""
 "Show positive/negative values for %s graphs (can not be used together with "
 "logarithmic scaling)."
 msgstr ""
+"%s grafikonhoz pozitív/negatív értékek megjelenítése (nem használható együtt "
+"logaritmikus tengelyértékekkel)."
 
 msgid "Shutdown"
 msgstr "Leállítás"
@@ -7377,32 +7410,6 @@ msgstr "Statikus útvonal beállítások"
 msgid "Static routes"
 msgstr "Statikus útvonalak"
 
-msgid "Statistics for CPU frequency."
-msgstr ""
-
-msgid "Statistics for CPU temperature."
-msgstr ""
-
-msgid ""
-"Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
-"voltage and the UPS status (online, on battery, charging and offline)."
-msgstr ""
-
-msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
-msgstr ""
-
-msgid "Statistics for average system load for 1, 5 and 15 minute periods."
-msgstr ""
-
-msgid "Statistics for disk (mount point) usage."
-msgstr ""
-
-msgid "Statistics for incoming/outgoing bits/second for network interfaces."
-msgstr ""
-
-msgid "Statistics for network latency."
-msgstr ""
-
 msgid "Status"
 msgstr "Állapot"
 
@@ -7559,6 +7566,9 @@ msgstr "Rendszerterhelés"
 
 msgid "System Message"
 msgstr "Rendszerüzenet"
+
+msgid "System Processes"
+msgstr ""
 
 msgid "System Settings"
 msgstr "Rendszerbeállítások"
@@ -7766,6 +7776,9 @@ msgstr ""
 
 msgid "The TCP port must be a valid port number."
 msgstr "A TCP portnak érvényes port számnak kell lennie."
+
+msgid "The UPS identifier and IP address"
+msgstr ""
 
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr "A VLAN azonosítónak 1 és 4094 között kell lennie."
@@ -8057,14 +8070,8 @@ msgstr ""
 "Az árnyékmásolat szolgáltatás pillanatképének egyéni formátumot lehet adni. "
 "Az alapértelmezett formátum a ZFS automatikus pillanatképhez az %s."
 
-#, php-format
-msgid ""
-"The data directory holds the statistical data for the graphs. This should be "
-"set to a %s to prevent a disk spinning all the time."
-msgstr ""
-
 msgid "The data directory must be set to a directory <b>below</b> /mnt."
-msgstr ""
+msgstr "Az adatkönyvtárnak a /mnt <b>alatti</b> könyvtárnak kell lennie."
 
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr ""
@@ -8431,7 +8438,7 @@ msgstr ""
 "vehet igénybe."
 
 msgid "The server is halting now."
-msgstr ""
+msgstr "A szerver most leáll."
 
 msgid "The server is rebooting now."
 msgstr "A szerver újraindul."
@@ -8620,7 +8627,7 @@ msgstr ""
 "Ezek a paraméterek hozzáadódnak a modulbeállításokhoz az rsyncd.conf fájlban."
 
 msgid "These parameters will be added to the ping command."
-msgstr ""
+msgstr "Ezeket a paramétereket a ping parancshoz adjuk."
 
 msgid ""
 "This Bridge cannot be deleted because it is still being used as an interface."
@@ -9333,6 +9340,9 @@ msgstr "UID"
 msgid "UPS"
 msgstr "Szünetmentes táp (UPS)"
 
+msgid "UPS Identifier"
+msgstr ""
+
 msgid "UPS Information & Status"
 msgstr "Szünetmentes információ & állapot"
 
@@ -9344,6 +9354,9 @@ msgstr "Szünetmentes akkuról működik"
 
 msgid "UPS On Line"
 msgstr "Szünetmentes bekapcsolva"
+
+msgid "UPS Statistics"
+msgstr ""
 
 msgid "UPS Status"
 msgstr "Szünetmentes állapota"
@@ -9376,12 +9389,7 @@ msgid "UPS goes on battery"
 msgstr "Szünetmentes táp akkumulátorról megy"
 
 msgid "UPS identifier and IP address"
-msgstr ""
-
-msgid ""
-"UPS identifier and host IP address of the machine where the UPS is connected "
-"to (this can be also a remote host)."
-msgstr ""
+msgstr "Szünetmentes azonosítója és IP címe"
 
 msgid "UPS model"
 msgstr "Szünetmentes modell"
@@ -9509,6 +9517,9 @@ msgid "Upper"
 msgstr "Nagybetűs"
 
 msgid "Uptime"
+msgstr "Működési idő"
+
+msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr ""
 
 msgid ""
@@ -9526,6 +9537,12 @@ msgstr "Másik tárolót válassz a fa gyökerének."
 
 msgid "Use inotify monitoring to automatically discover new files."
 msgstr "Inotify használata új fájlok automatikus felfedezésére."
+
+#, php-format
+msgid ""
+"Use logarithmic y-axis scaling for %s graphs (can not be used together with "
+"positive/negative y-axis range)."
+msgstr ""
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -9750,7 +9767,7 @@ msgid "VirtualBox"
 msgstr "VirtualBox"
 
 msgid "Virtualization"
-msgstr ""
+msgstr "Virtualizáció"
 
 msgid "Volume"
 msgstr "Kötet"
@@ -9958,7 +9975,7 @@ msgid "Xen Virtual Machine"
 msgstr "Xen Virtuális Gép"
 
 msgid "Y-axis range"
-msgstr ""
+msgstr "Y-tengely tartománya"
 
 msgid "Yes"
 msgstr "Igen"
@@ -10066,6 +10083,9 @@ msgid "ZFS ACL"
 msgstr "ZFS ACL"
 
 msgid "ZFS ARC"
+msgstr "ZFS ARC"
+
+msgid "ZFS ARC Usage"
 msgstr ""
 
 msgid "ZFS Dataset Information & Status"
@@ -10199,14 +10219,17 @@ msgid "mount point"
 msgstr "csatolási pont"
 
 msgid "must be defined!"
-msgstr ""
+msgstr "értékét meg kell határozni!"
 
 #, php-format
 msgid "must be in the format: %s."
-msgstr ""
+msgstr "%s formátumú kell, hogy legyen!"
 
 msgid "n/a"
 msgstr "nem elérhető"
+
+msgid "network traffic"
+msgstr ""
 
 msgid "no new encrypted disk found."
 msgstr "nincs új encrypted lemez."
@@ -10236,7 +10259,7 @@ msgid "second(s)"
 msgstr "másodperc"
 
 msgid "seconds"
-msgstr ""
+msgstr "másodperc"
 
 msgid "smallest settable high voltage transfer point"
 msgstr "legkisebb beállítható magas felszültségű átviteli pont"
@@ -10267,3 +10290,94 @@ msgstr "felhasználó"
 
 msgid "version:"
 msgstr "verzió:"
+
+#~ msgid "Available graphs"
+#~ msgstr "Elérhető grafikonok"
+
+#~ msgid ""
+#~ "Displays the number of processes in each state (total, running, sleeping, "
+#~ "waiting, starting, stopped, zombie)."
+#~ msgstr ""
+#~ "Az összes, akármilyen állapotban lévő (összes, futó, alvó, várakozó, induló, "
+#~ "leállított, zombi) folyamat számának megjelenítése."
+
+#~ msgid "Displays the length of time the system has been up."
+#~ msgstr "Rendszer elindulás óta eltelt idő."
+
+#~ msgid ""
+#~ "Displays information about memory allocation (active, inact, wired, cache, "
+#~ "buf, free, swap used, swap free)."
+#~ msgstr ""
+#~ "Memóriafoglalásról (aktív, inaktív, nem lapozható, gyorsítótár, puffer, "
+#~ "cserehely, szabad, felhasznált cserehely, szabad cserehely) információ "
+#~ "megjelenítése."
+
+#~ msgid "Logarithmic scaling"
+#~ msgstr "Logaritmikus skála"
+
+#~ msgid "Statistics for network latency."
+#~ msgstr "Hálózati késlekedés statisztikája."
+
+#~ msgid "Statistics for CPU frequency."
+#~ msgstr "Processzorgyakoriság statisztikái."
+
+#~ msgid "Statistics for CPU temperature."
+#~ msgstr "Processzorhőmérséklet statisztikái."
+
+#~ msgid "Statistics for disk (mount point) usage."
+#~ msgstr "Lemezhasználat (csatolási pontok) statisztikái."
+
+#~ msgid "Statistics for incoming/outgoing bits/second for network interfaces."
+#~ msgstr "Hálózati interfészek kimenő/bejövő bit/másodperc statisztikái."
+
+#~ msgid ""
+#~ "UPS identifier and host IP address of the machine where the UPS is connected "
+#~ "to (this can be also a remote host)."
+#~ msgstr ""
+#~ "Szünetmentes azonosítója és a gép kiszolgáló IP címe, ahová a szünetmentes "
+#~ "csatlakozik (ez egy távoli kiszolgáló is lehet)."
+
+#~ msgid "Statistics for average system load for 1, 5 and 15 minute periods."
+#~ msgstr ""
+#~ "Rendszerterhelés átlagának 1, 5 és 10 perces időközönkénti statisztikái."
+
+#~ msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
+#~ msgstr "ZFS ARC (összes, MRU, MFU, anon, header, egyéb) statisztikái."
+
+#~ msgid ""
+#~ "If enabled the network throughput is displayed in Bytes/sec rather than "
+#~ "Bits/sec."
+#~ msgstr ""
+#~ "Ha be van kapcsolva, a hálózati forgalom Byte/mp helyett Bit/mp-ben jelenik "
+#~ "meg."
+
+#~ msgid ""
+#~ "Displays a percentage of time spent in each of the processor states (user, "
+#~ "nice, system, interrupt, idle)."
+#~ msgstr ""
+#~ "Az összes processzorállapotban töltött idő %-os megjelenítése (felhasználó, "
+#~ "nice, rendszer, megszakítás, nyugvó)."
+
+#, php-format
+#~ msgid ""
+#~ "Logarithmic y-axis scaling for %s graphs (can not be used together with "
+#~ "positive/negative y-axis range)."
+#~ msgstr ""
+#~ "%s grafikonhoz logaritmikus y-tengely (nem használható együtt "
+#~ "pozitív/negatív y-tengelytartománnyal)."
+
+#, php-format
+#~ msgid ""
+#~ "The data directory holds the statistical data for the graphs. This should be "
+#~ "set to a %s to prevent a disk spinning all the time."
+#~ msgstr ""
+#~ "Az adatkönyvtár tárolja  grafikonok statisztikai adatait. Ezt %s értékre "
+#~ "célszerű állítani a lemez állandó forgásának megakadályozása érdekében."
+
+#~ msgid ""
+#~ "Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
+#~ "voltage and the UPS status (online, on battery, charging and offline)."
+#~ msgstr ""
+#~ "Szünetmentes adatairól statisztikák: kapacitás, feszültség, terhelés, "
+#~ "hátralévő működési idő, bemenő feszültség és szünetmenetes állapota (online, "
+#~ "akkuról, törlés és offline)."
