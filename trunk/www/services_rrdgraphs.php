@@ -482,7 +482,7 @@ function enable_change(enable_change) {
 		</thead>
 		<tbody>
 <?php
-			html_filechooser2('storage_path', gtext('Data directory'), $pconfig['storage_path'], sprintf(gtext('The data directory holds the statistical data for the graphs. This should be set to a %s to prevent a disk spinning all the time.'), "<b>SSD</b>"), $g['media_path'], true, 60);
+			html_filechooser2('storage_path', gtext('Data directory'), $pconfig['storage_path'], gtext('Enter the path to the home directory of rrdgraphs. The data directory holds the statistical data for the graphs and will be updated every 5 minutes.'), $g['media_path'], true, 60);
 			html_inputbox2('refresh_time', gtext('Refresh time'), $pconfig['refresh_time'], gtext('Refresh time for graph pages.')." ".sprintf(gtext('Default is %s %s.'), 300, gtext('seconds')), false, 5);
 			html_inputbox2('graph_h', gtext('Graphs height'), $pconfig['graph_h'], sprintf(gtext('Height of the graphs. Default is %s pixel.'), 200), false, 5);
 			html_checkbox2('autoscale', gtext('Autoscale'), $pconfig['autoscale'], gtext('Autoscale for graphs.'), "", false);
@@ -515,8 +515,8 @@ function enable_change(enable_change) {
 			html_inputbox2('latency_parameters', gtext('Auxiliary parameters'), $pconfig['latency_parameters'], gtext('These parameters will be added to the ping command.')." ".sprintf(gtext('Please check the %s documentation%s.'), "<a href=http://www.freebsd.org/cgi/man.cgi?query=ping&amp;apropos=0&amp;sektion=0&amp;format=html target='_blank'>", "</a>"), false, 60);
 			html_checkbox2('lan_load', gtext('Network Traffic'), $pconfig['lan_load'], gtext('Enable collecting network trafic statistics.'), '', false, false, 'lan_change()');
 			html_checkbox2('bytes_per_second', gtext('Bytes/sec'), $pconfig['bytes_per_second'], gtext('Use Bytes/sec instead of Bits/sec for network throughput display.'), "", false);
-			html_checkbox2('logarithmic', gtext('Logarithmic Scaling'), $pconfig['logarithmic'], sprintf(gtext('Use logarithmic y-axis scaling for %s graphs (can not be used together with positive/negative y-axis range).'), gtext('Network traffic')), "", false, false, 'logarithmic_change()');
-			html_checkbox2('axis', gtext('Y-axis range'), $pconfig['axis'], sprintf(gtext('Show positive/negative values for %s graphs (can not be used together with logarithmic scaling).'), gtext('Network traffic')), '', false, false, 'axis_change()');
+			html_checkbox2('logarithmic', gtext('Logarithmic Scaling'), $pconfig['logarithmic'], sprintf(gtext('Use logarithmic y-axis scaling for %s graphs (can not be used together with positive/negative y-axis range).'), gtext('network traffic')), "", false, false, 'logarithmic_change()');
+			html_checkbox2('axis', gtext('Y-axis range'), $pconfig['axis'], sprintf(gtext('Show positive/negative values for %s graphs (can not be used together with logarithmic scaling).'), gtext('network traffic')), '', false, false, 'axis_change()');
 			html_checkbox2('no_processes', gtext('System Processes'), $pconfig['no_processes'], gtext('Enable collecting system process statistics.'), '', false);
 			html_checkbox2('uptime', gtext('Uptime'), $pconfig['uptime'], gtext('Enable collecting uptime statistics.'), '', false);
 			html_checkbox2('ups', gtext('UPS Statistics'), $pconfig['ups'], gtext('Enable collecting UPS statistics.'), '', false, false, 'ups_change()');
