@@ -44,42 +44,42 @@ include("fbegin.inc");?>
 <meta http-equiv="refresh" content="<?=$refresh?>">
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 <tr>
-    <td class="tabnavtbl">
-        <ul id="tabnav">
+	<td class="tabnavtbl">
+		<ul id="tabnav">
 <?php require("status_graph_tabs.inc");?>
-        </ul>
-    </td>
+		</ul>
+	</td>
 </tr>
 <td class="tabcont">
 <form name="form2" action="rrd_graph_lan.php" method="get">
 <?=sprintf(gtext("Graph updates every %d seconds"), $refresh);?>.&nbsp;<?=gtext("Selected interface:");?>&nbsp;&nbsp;&nbsp;
 <select name="if" class="formfld" onchange="submit()">
-    <?php
-        $curif = "lan";
-        if (isset($_GET['if']) && $_GET['if'])
-        	$curif = $_GET['if'];
-        $ifnum = get_ifname($config['interfaces'][$curif]['if']);
-        $ifdescrs = array('lan' => 'LAN');
-        for ($j = 1; isset($config['interfaces']['opt' . $j]); $j++) {
-        	$ifdescrs['opt' . $j] = $config['interfaces']['opt' . $j]['descr'];
-        }
-        foreach ($ifdescrs as $ifn => $ifd) {
-        	echo "<option value=\"$ifn\"";
-        	if ($ifn == $curif) echo " selected=\"selected\"";
-        	echo ">" . htmlspecialchars($ifd) . "</option>\n";
-        }
-    ?>
+	<?php
+		$curif = "lan";
+		if (isset($_GET['if']) && $_GET['if'])
+			$curif = $_GET['if'];
+		$ifnum = get_ifname($config['interfaces'][$curif]['if']);
+		$ifdescrs = array('lan' => 'LAN');
+		for ($j = 1; isset($config['interfaces']['opt' . $j]); $j++) {
+			$ifdescrs['opt' . $j] = $config['interfaces']['opt' . $j]['descr'];
+		}
+		foreach ($ifdescrs as $ifn => $ifd) {
+			echo "<option value=\"$ifn\"";
+			if ($ifn == $curif) echo " selected=\"selected\"";
+			echo ">" . htmlspecialchars($ifd) . "</option>\n";
+		}
+	?>
 </select>
 </form>
 <div align="center" style="min-width:840px;">
-    <br>
-    <img src="/images/rrd/rrd-<?=$ifnum;?>_daily.png?rand=<?=time()?>" alt="RRDGraphs Daily Bandwidth <?=$ifnum;?> Graph" width="graph_width" height="graph_height">
-    <br><br>
-    <img src="/images/rrd/rrd-<?=$ifnum;?>_weekly.png?rand=<?=time()?>" alt="RRDGraphs Weekly Bandwidth Graph" width="graph_width" height="graph_height">
-    <br><br>
-    <img src="/images/rrd/rrd-<?=$ifnum;?>_monthly.png?rand=<?=time()?>" alt="RRDGraphs Monthly Bandwidth Graph" width="graph_width" height="graph_height">
-    <br><br>
-    <img src="/images/rrd/rrd-<?=$ifnum;?>_yearly.png?rand=<?=time()?>" alt="RRDGraphs Yearly Bandwidth Graph" width="graph_width" height="graph_height">
+	<br>
+	<img src="/images/rrd/rrd-<?=$ifnum;?>_daily.png?rand=<?=time()?>" alt="RRDGraphs Daily Bandwidth <?=$ifnum;?> Graph" width="graph_width" height="graph_height">
+	<br><br>
+	<img src="/images/rrd/rrd-<?=$ifnum;?>_weekly.png?rand=<?=time()?>" alt="RRDGraphs Weekly Bandwidth Graph" width="graph_width" height="graph_height">
+	<br><br>
+	<img src="/images/rrd/rrd-<?=$ifnum;?>_monthly.png?rand=<?=time()?>" alt="RRDGraphs Monthly Bandwidth Graph" width="graph_width" height="graph_height">
+	<br><br>
+	<img src="/images/rrd/rrd-<?=$ifnum;?>_yearly.png?rand=<?=time()?>" alt="RRDGraphs Yearly Bandwidth Graph" width="graph_width" height="graph_height">
 </div>
 </td></tr></table>
 <?php include("fend.inc");?>

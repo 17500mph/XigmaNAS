@@ -44,23 +44,23 @@ include("fbegin.inc");?>
 <meta http-equiv="refresh" content="<?=$refresh?>">
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 <tr>
-    <td class="tabnavtbl">
-        <ul id="tabnav">
+	<td class="tabnavtbl">
+		<ul id="tabnav">
 <?php require("status_graph_tabs.inc");?>
-        </ul>
-    </td>
+		</ul>
+	</td>
 </tr>
 <td class="tabcont">
 <?=sprintf(gtext("Graph updates every %d seconds"), $refresh);?>
 <div align="center" style="min-width:840px;">
-    <br>
-    <img src="/images/rrd/rrd-cpu_temp_daily.png?rand=<?=time()?>" alt="RRDGraphs Daily CPU Temperature Graph" width="graph_width" height="graph_height">
-    <br><br>
-    <img src="/images/rrd/rrd-cpu_temp_weekly.png?rand=<?=time()?>" alt="RRDGraphs Weekly CPU Temperature Graph" width="graph_width" height="graph_height">
-    <br><br>
-    <img src="/images/rrd/rrd-cpu_temp_monthly.png?rand=<?=time()?>" alt="RRDGraphs Monthly CPU Temperature Graph" width="graph_width" height="graph_height">
-    <br><br>
-    <img src="/images/rrd/rrd-cpu_temp_yearly.png?rand=<?=time()?>" alt="RRDGraphs Yearly CPU Temperature Graph" width="graph_width" height="graph_height">
+	<br>
+	<img src="/images/rrd/rrd-cpu_temp_daily.png?rand=<?=time()?>" alt="RRDGraphs Daily CPU Temperature Graph" width="graph_width" height="graph_height">
+	<br><br>
+	<img src="/images/rrd/rrd-cpu_temp_weekly.png?rand=<?=time()?>" alt="RRDGraphs Weekly CPU Temperature Graph" width="graph_width" height="graph_height">
+	<br><br>
+	<img src="/images/rrd/rrd-cpu_temp_monthly.png?rand=<?=time()?>" alt="RRDGraphs Monthly CPU Temperature Graph" width="graph_width" height="graph_height">
+	<br><br>
+	<img src="/images/rrd/rrd-cpu_temp_yearly.png?rand=<?=time()?>" alt="RRDGraphs Yearly CPU Temperature Graph" width="graph_width" height="graph_height">
 </div>
 </td></tr></table>
 <?php include("fend.inc");?>

@@ -54,10 +54,10 @@ include("fbegin.inc");?>
 		<?php require("status_graph_tabs.inc");?>
 	   </ul>
 	</div>
-    </td>
+	</td>
 </tr>
   <tr>
-    <td class="tabcont">
+	<td class="tabcont">
 <?php
 $ifdescrs = array('lan' => 'LAN');
 for ($j = 1; isset($config['interfaces']['opt' . $j]); $j++) {
@@ -68,10 +68,10 @@ for ($j = 1; isset($config['interfaces']['opt' . $j]); $j++) {
 <div align="center" style="min-width:840px;">
 <br>
 <object id="graph"
-        data="status_graph2.php?ifnum=<?=$ifnum;?>&amp;ifname=<?=rawurlencode($ifdescrs[$curif]);?>"
-        type="image/svg+xml"
-        width="<?=$graph_width;?>"
-        height="<?=$graph_height;?>">
+		data="status_graph2.php?ifnum=<?=$ifnum;?>&amp;ifname=<?=rawurlencode($ifdescrs[$curif]);?>"
+		type="image/svg+xml"
+		width="<?=$graph_width;?>"
+		height="<?=$graph_height;?>">
 	 <param name="src" value="graph.php?ifnum=<?=$ifnum;?>&amp;ifname=<?=rawurlencode($ifdescrs[$curif]);?>" />
 	 Your browser does not support this svg object type!<br /> You need to update your browser or use Internet Explorer 9 or higher.<br />
 </object>

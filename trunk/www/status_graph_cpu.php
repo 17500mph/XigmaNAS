@@ -46,33 +46,33 @@ include("fbegin.inc");?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
 		<td class="tabnavtbl">
-  		<ul id="tabnav">
+		<ul id="tabnav">
 		<?php require("status_graph_tabs.inc");?>
 	   </ul>
 	</td>
- </tr>
-    <td class="tabcont">
+  </tr>
+	<td class="tabcont">
 	<?=gtext("Graph shows last 120 seconds");?>
 	<div align="center" style="min-width:840px;">
-        <br />
+		<br />
 <?php
 session_start();
 $cpus = system_get_cpus();
 if ($cpus > 1) {
 	for ($j = 0; $j < $cpus; $j++) {                                             
-        echo '<object id="graph" data="status_graph_cpu2.php?cpu='.$j.'" type="image/svg+xml" width="'.$graph_width.'" height="'.$graph_height.'">';
-        echo '<param name="src" value="status_graph_cpu2.php?cpu='.$j.'" />';
-        echo 'Your browser does not support this svg object type!<br /> You need to update your browser or use Internet Explorer 9 or higher.<br></br>';
-        echo '</object>';
-        $test = $j % 2;
-        if ($test != 0) { echo '<br /><br /><br />'; }     /* add line breaks after second graph ... */
-        else { echo $graph_gap; }                          /* or the gap between two graphs */
+		echo '<object id="graph" data="status_graph_cpu2.php?cpu='.$j.'" type="image/svg+xml" width="'.$graph_width.'" height="'.$graph_height.'">';
+		echo '<param name="src" value="status_graph_cpu2.php?cpu='.$j.'" />';
+		echo 'Your browser does not support this svg object type!<br /> You need to update your browser or use Internet Explorer 9 or higher.<br></br>';
+		echo '</object>';
+		$test = $j % 2;
+		if ($test != 0) { echo '<br /><br /><br />'; }     /* add line breaks after second graph ... */
+		else { echo $graph_gap; }                          /* or the gap between two graphs */
 	}
 }
 ?>
-        <object id="graph" data="status_graph_cpu2.php" type="image/svg+xml" width="<?=$graph_width;?>" height="<?=$graph_height;?>">
-        <param name="src" value="status_graph_cpu2.php" />
-        </object>
+		<object id="graph" data="status_graph_cpu2.php" type="image/svg+xml" width="<?=$graph_width;?>" height="<?=$graph_height;?>">
+		<param name="src" value="status_graph_cpu2.php" />
+		</object>
 
 </div>
 </td></tr></table>
