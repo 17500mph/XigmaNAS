@@ -150,66 +150,68 @@ if (isset($_POST['save']) && $_POST['save']) {
 }
 
 if (isset($_POST['reset_graphs']) && $_POST['reset_graphs']) {
-	exec("logger rrdgraphs: reseting graphs ...");
+	exec("logger rrdgraphs service execute delete statistical data ...");
 	$savemsg = gtext("All data from the following statistics have been deleted:");
 	if (isset($_POST['cpu_frequency']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/cpu_freq.rrd")) {
 		unlink("{$config['rrdgraphs']['storage_path']}/rrd/cpu_freq.rrd");
-		exec("logger rrdgraphs: resetting cpu frequency graphs");
+		exec("logger rrdgraphs service deleted cpu frequency statistics");
 		$savemsg .= "<br />- ".gtext("CPU Frequency");
 	}
 	if (isset($_POST['cpu_temperature']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/cpu_temp.rrd")) {
 		unlink("{$config['rrdgraphs']['storage_path']}/rrd/cpu_temp.rrd");
-		exec("logger rrdgraphs: resetting cpu temperature graphs");
+		exec("logger rrdgraphs service deleted cpu temperature statistics");
 		$savemsg .= "<br />- ".gtext("CPU Temperature");
 	}
 	if (isset($_POST['cpu']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/cpu.rrd")) {
 		unlink("{$config['rrdgraphs']['storage_path']}/rrd/cpu.rrd");
-		exec("logger rrdgraphs: resetting cpu usage graphs");
+		exec("logger rrdgraphs service deleted cpu usage statistics");
 		$savemsg .= "<br />- ".gtext("CPU Usage");
 	}
 	if (isset($_POST['load_averages']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/load_averages.rrd")) {
 		unlink("{$config['rrdgraphs']['storage_path']}/rrd/load_averages.rrd");
-		exec("logger rrdgraphs: resetting load averages graphs");
+		exec("logger rrdgraphs service deleted load averages statistics");
 		$savemsg .= "<br />- ".gtext("Load averages");
 	}
 	if (isset($_POST['disk_usage'])) {
 		mwexec("rm {$config['rrdgraphs']['storage_path']}/rrd/mnt_*.rrd", true);
-		exec("logger rrdgraphs: resetting disk_usage graphs");
+		exec("logger rrdgraphs service deleted disk usage statistics");
 		$savemsg .= "<br />- ".gtext("Disk Usage");
 	}
 	if (isset($_POST['memory_usage']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/memory.rrd")) {
 		unlink("{$config['rrdgraphs']['storage_path']}/rrd/memory.rrd");
-		exec("logger rrdgraphs: resetting memory usage graphs");
+		exec("logger rrdgraphs service deleted memory usage statistics");
 		$savemsg .= "<br />- ".gtext("Memory Usage");
 	}
 	if (isset($_POST['latency']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/latency.rrd")) {
 		unlink("{$config['rrdgraphs']['storage_path']}/rrd/latency.rrd");
-		exec("logger rrdgraphs: resetting latency graphs");
+		exec("logger rrdgraphs service deleted network latency statistics");
 		$savemsg .= "<br />- ".gtext("Network Latency");
 	}
-	if (isset($_POST['lan_load']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/em0.rrd")) {
-		unlink("{$config['rrdgraphs']['storage_path']}/rrd/em0.rrd");
-		exec("logger rrdgraphs: resetting network traffic graphs");
+	$rrd_name = "{$config['rrdgraphs']['lan_if']}.rrd";
+	if (isset($_POST['lan_load']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/{$rrd_name}")) {
+		unlink("{$config['rrdgraphs']['storage_path']}/rrd/{$rrd_name}");
+		exec("logger rrdgraphs service deleted  network traffic statistics");
 		$savemsg .= "<br />- ".gtext("Network Traffic");
 	}
 	if (isset($_POST['no_processes']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/processes.rrd")) {
 		unlink("{$config['rrdgraphs']['storage_path']}/rrd/processes.rrd");
-		exec("logger rrdgraphs: resetting processes graphs");
+		exec("logger rrdgraphs service deleted sytem processes statistics");
 		$savemsg .= "<br />- ".gtext("System Processes");
-	}
-	if (isset($_POST['uptime']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/uptime.rrd")) {
-		unlink("{$config['rrdgraphs']['storage_path']}/rrd/uptime.rrd");
-		exec("logger rrdgraphs: resetting uptime graphs");
-		$savemsg .= "<br />- ".gtext("Uptime Statistics");
 	}
 	if (isset($_POST['ups']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/ups.rrd")) {
 		unlink("{$config['rrdgraphs']['storage_path']}/rrd/ups.rrd");
-		exec("logger rrdgraphs: resetting UPS graphs");
+		exec("logger rrdgraphs service deleted ups statistics");
 		$savemsg .= "<br />- ".gtext("UPS Statistics");
 	}
-	if (isset($_POST['arc_usage']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/arc.rrd")) {
-		unlink("{$config['rrdgraphs']['storage_path']}/rrd/arc.rrd");
-		exec("logger rrdgraphs: resetting ZFS ARC usage graphs");
+	if (isset($_POST['uptime']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/uptime.rrd")) {
+		unlink("{$config['rrdgraphs']['storage_path']}/rrd/uptime.rrd");
+		exec("logger rrdgraphs service deleted uptime statistics");
+		$savemsg .= "<br />- ".gtext("Uptime Statistics");
+	}
+	$rrd_name = "{$config['rrdgraphs']['arc_usage']}.rrd";
+	if (isset($_POST['arc_usage']) && is_file("{$config['rrdgraphs']['storage_path']}/rrd/zfs_arc.rrd")) {
+		unlink("{$config['rrdgraphs']['storage_path']}/rrd/zfs_arc.rrd");
+		exec("logger rrdgraphs service deleted zfs arc usage statistics");
 		$savemsg .= "<br />- ".gtext("ZFS ARC Usage");
 	}
 	require_once("/usr/local/share/rrdgraphs/rrd-start.php");
@@ -226,8 +228,8 @@ $pconfig['background_white'] = isset($config['rrdgraphs']['background_white']) ?
 $pconfig['cpu_frequency'] = isset($config['rrdgraphs']['cpu_frequency']) ? true : false;
 $pconfig['cpu_temperature'] = isset($config['rrdgraphs']['cpu_temperature']) ? true : false;
 $pconfig['cpu'] = isset($config['rrdgraphs']['cpu']) ? true : false;
-$pconfig['disk_usage'] = isset($config['rrdgraphs']['disk_usage']) ? true : false;
 $pconfig['load_averages'] = isset($config['rrdgraphs']['load_averages']) ? true : false;
+$pconfig['disk_usage'] = isset($config['rrdgraphs']['disk_usage']) ? true : false;
 $pconfig['memory_usage'] = isset($config['rrdgraphs']['memory_usage']) ? true : false;
 $pconfig['latency'] = isset($config['rrdgraphs']['latency']) ? true : false;
 $pconfig['latency_host'] = !empty($config['rrdgraphs']['latency_host']) ? $config['rrdgraphs']['latency_host'] : "127.0.0.1";
@@ -238,13 +240,11 @@ $pconfig['lan_load'] = isset($config['rrdgraphs']['lan_load']) ? true : false;
 $pconfig['bytes_per_second'] = isset($config['rrdgraphs']['bytes_per_second']) ? true : false;
 $pconfig['logarithmic'] = isset($config['rrdgraphs']['logarithmic']) ? true : false;
 $pconfig['axis'] = isset($config['rrdgraphs']['axis']) ? true : false;
-$pconfig['uptime'] = isset($config['rrdgraphs']['uptime']) ? true : false;
+$pconfig['no_processes'] = isset($config['rrdgraphs']['no_processes']) ? true : false;
 $pconfig['ups'] = isset($config['rrdgraphs']['ups']) ? true : false;
 $pconfig['ups_at'] = !empty($config['rrdgraphs']['ups_at']) ? $config['rrdgraphs']['ups_at'] : "identifier@host-ip-address";
+$pconfig['uptime'] = isset($config['rrdgraphs']['uptime']) ? true : false;
 $pconfig['arc_usage'] = isset($config['rrdgraphs']['arc_usage']) ? true : false;
-
-// MISSING:
-$pconfig['no_processes'] = isset($config['rrdgraphs']['no_processes']) ? true : false;
 
 $a_interface = get_interface_list();
 // Add VLAN interfaces
@@ -436,9 +436,9 @@ function enable_change(enable_change) {
 			html_checkbox2('logarithmic', gtext('Logarithmic Scaling'), $pconfig['logarithmic'], sprintf(gtext('Use logarithmic y-axis scaling for %s graphs. (can not be used together with positive/negative y-axis range)'), gtext('network traffic')), "", false, false, 'logarithmic_change()');
 			html_checkbox2('axis', gtext('Y-axis range'), $pconfig['axis'], sprintf(gtext('Show positive/negative values for %s graphs. (can not be used together with logarithmic scaling)'), gtext('network traffic')), '', false, false, 'axis_change()');
 			html_checkbox2('no_processes', gtext('System Processes'), $pconfig['no_processes'], gtext('Enable collecting system process statistics.'), '', false);
-			html_checkbox2('uptime', gtext('Uptime Statistics'), $pconfig['uptime'], gtext('Enable collecting uptime statistics.'), '', false);
 			html_checkbox2('ups', gtext('UPS Statistics'), $pconfig['ups'], gtext('Enable collecting UPS statistics.'), '', false, false, 'ups_change()');
 			html_inputbox2('ups_at', gtext('UPS Identifier'), $pconfig['ups_at'], gtext('Enter the UPS identifier and host IP address of the machine where the UPS is connected to. (this also can be a remote host)')."<br> ".gtext('The UPS identifier and IP address')." ".sprintf(gtext('must be in the format: %s.'), 'identifier@host-ip-address'), false, 60);
+			html_checkbox2('uptime', gtext('Uptime Statistics'), $pconfig['uptime'], gtext('Enable collecting uptime statistics.'), '', false);
 			html_checkbox2('arc_usage', gtext('ZFS ARC Usage'), $pconfig['arc_usage'], gtext('Enable collecting ZFS ARC usage statistics.'), '', false);
 ?>
 		</tbody>
