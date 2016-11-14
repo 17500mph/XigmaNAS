@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-13 18:07+0000\n"
-"PO-Revision-Date: 2016-11-13 17:51+0000\n"
+"POT-Creation-Date: 2016-11-14 05:32+0000\n"
+"PO-Revision-Date: 2016-11-14 16:51+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-13 18:09+0000\n"
-"X-Generator: Launchpad (build 18255)\n"
+"X-Launchpad-Export-Date: 2016-11-14 18:49+0000\n"
+"X-Generator: Launchpad (build 18261)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -110,8 +110,8 @@ msgid "%sB used of %sB"
 msgstr "%sB använt av %sB"
 
 #, php-format
-msgid "'%s' deletes all statistical data for the selected graphs!"
-msgstr "'%s' tar bort all statistisk data för de valda graferna!"
+msgid "'%s' deletes all statistical data from the graphs!"
+msgstr "'%s' tar bort all statistisk data för graferna!"
 
 msgid "(Change if needed)"
 msgstr "(Ändra vid behov)"
@@ -2456,9 +2456,6 @@ msgstr "Använt diskutrymme"
 msgid "Disk space usage"
 msgstr "Diskutrymmesanvändning"
 
-msgid "Disk usage"
-msgstr "Använt diskutrymme"
-
 msgid "Disks"
 msgstr "Diskar"
 
@@ -4575,9 +4572,6 @@ msgid ""
 "been tested in an excessive temperature condition, otherwise 100."
 msgstr "Senaste testresultat"
 
-msgid "Latency"
-msgstr "Accesstid"
-
 #, php-format
 msgid "Latest Beta Build: %s"
 msgstr "Senast betaversion: %s"
@@ -5038,9 +5032,6 @@ msgstr "Minne"
 msgid "Member Interface"
 msgstr "Medlemsinterface"
 
-msgid "Memory"
-msgstr "Minne"
-
 msgid "Memory (MiB)"
 msgstr "Minne (MiB)"
 
@@ -5299,9 +5290,6 @@ msgstr ""
 "Nätverk auktoriserat för åtkomst till iSCSI-målet. Tar IP-adresser, tillika "
 "CIDR. Ange 'ALL' för obestämd IP-adress."
 
-msgid "Network latency"
-msgstr "Nätverksaccestid"
-
 msgid "Network mask"
 msgstr "Nätverksmask"
 
@@ -5310,9 +5298,6 @@ msgstr "Nätverksport"
 
 msgid "Network that is authorised to access the NFS share."
 msgstr "Nätverk som är godkänt att ansluta till NFS-utdelning."
-
-msgid "Network traffic"
-msgstr "Nätverkstrafik"
 
 msgid "Networks"
 msgstr "Nätverk"
@@ -7887,6 +7872,9 @@ msgstr "Attributet '%s' måste innehålla minst ett värde."
 msgid "The attribute '%s': use a port in the range from %d to %d."
 msgstr "Fältet '%s': använd ett portnummer i området från %d till %d."
 
+msgid "The attribute 'Data directory' is required."
+msgstr "Attributet 'Data directory' krävs."
+
 #, php-format
 msgid "The attribute 'Port': port '%ld' is already taken by another service."
 msgstr "Fältet 'Port': port '%ld' är redan upptagen av en annan tjänst."
@@ -8019,9 +8007,6 @@ msgid ""
 msgstr ""
 "Ett specifikt avbildsformat för skuggkopia kan anges. Grundinställningen är "
 "%s som anvnäds för ZFS automatisk avbildning."
-
-msgid "The data directory must be set to a directory <b>below</b> /mnt."
-msgstr "Datakatalogen måste sättas till en katalog <b>under</b> /mnt."
 
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr "Standardporten för SMTP e-postserver, t.ex. 25 eller 587."
@@ -9293,6 +9278,9 @@ msgstr "UPS"
 msgid "UPS Identifier"
 msgstr "UPS-namn"
 
+msgid "UPS Identifier and IP address"
+msgstr "UPS namn och IP adress"
+
 msgid "UPS Information & Status"
 msgstr "UPS Information & Status"
 
@@ -9337,9 +9325,6 @@ msgstr "UPS systemprogramvara"
 
 msgid "UPS goes on battery"
 msgstr "UPS-enhet på batteridrift"
-
-msgid "UPS identifier and IP address"
-msgstr "UPS Namn och IP adress"
 
 msgid "UPS model"
 msgstr "UPS modell"
@@ -9467,6 +9452,9 @@ msgstr "Övre"
 
 msgid "Uptime"
 msgstr "Upptid"
+
+msgid "Uptime Statistics"
+msgstr "Drifttidsstatistik"
 
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr ""
@@ -10252,113 +10240,27 @@ msgstr "användare"
 msgid "version:"
 msgstr "version:"
 
-#, php-format
-#~ msgid ""
-#~ "'%s' deletes all the data for selected statistics. If only a certain "
-#~ "statistic needs to be reset, clear all other check boxes before performing "
-#~ "'%s'."
-#~ msgstr ""
-#~ "'%s' tar bort all data för vald statistik. Om bara en viss statistik behöver "
-#~ "återställas, avmarkera alla andra kryssrutor innan '%s' utförs."
+#~ msgid "Disk usage"
+#~ msgstr "Använt diskutrymme"
 
-#~ msgid ""
-#~ "Displays information about memory allocation (active, inact, wired, cache, "
-#~ "buf, free, swap used, swap free)."
-#~ msgstr ""
-#~ "Visa information om minnesanvändning (active, inact, wired, cache, buf, "
-#~ "free, swap used, swap free)."
+#~ msgid "Memory"
+#~ msgstr "Minne"
 
-#~ msgid ""
-#~ "Displays the number of processes in each state (total, running, sleeping, "
-#~ "waiting, starting, stopped, zombie)."
-#~ msgstr ""
-#~ "Visa antal processer i varje status (total, running, sleeping, waiting, "
-#~ "starting, stopped, zombie)."
+#~ msgid "Latency"
+#~ msgstr "Accesstid"
 
-#~ msgid "Displays the length of time the system has been up."
-#~ msgstr "Visar hur länge servern varit uppe"
+#~ msgid "Network traffic"
+#~ msgstr "Nätverkstrafik"
 
-#~ msgid ""
-#~ "Displays a percentage of time spent in each of the processor states (user, "
-#~ "nice, system, interrupt, idle)."
-#~ msgstr ""
-#~ "Visa procentuell tid som använts av de olika processorlägena (user, nice, "
-#~ "system, interrupt, idle)."
+#~ msgid "Network latency"
+#~ msgstr "Nätverksaccestid"
+
+#~ msgid "The data directory must be set to a directory <b>below</b> /mnt."
+#~ msgstr "Datakatalogen måste sättas till en katalog <b>under</b> /mnt."
+
+#~ msgid "UPS identifier and IP address"
+#~ msgstr "UPS Namn och IP adress"
 
 #, php-format
-#~ msgid ""
-#~ "Logarithmic y-axis scaling for %s graphs (can not be used together with "
-#~ "positive/negative y-axis range)."
-#~ msgstr ""
-#~ "Logaritmisk y-axelskalning för %s graf ( kan inte användas tillsammans med "
-#~ "positiv/negativ y-axelområde)."
-
-#~ msgid ""
-#~ "If enabled the network throughput is displayed in Bytes/sec rather than "
-#~ "Bits/sec."
-#~ msgstr ""
-#~ "Om aktiverad visas nätverksgenomströmningen i Byte/sekund i stället för "
-#~ "Bit/sekund."
-
-#~ msgid "Logarithmic scaling"
-#~ msgstr "Logaritmisk skalning"
-
-#~ msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
-#~ msgstr "Statistik för ZFS ARC (total, MRU, MFU, anon, header, other)."
-
-#~ msgid ""
-#~ "Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
-#~ "voltage and the UPS status (online, on battery, charging and offline)."
-#~ msgstr ""
-#~ "Statistik för UPS batterikapacitet, spänning, last, återstående tid, "
-#~ "inspänning och UPS-status (online, på batteri, laddas och offline)."
-
-#~ msgid "Statistics for CPU frequency."
-#~ msgstr "Statistik för CPU frekvens."
-
-#~ msgid "Statistics for CPU temperature."
-#~ msgstr "Statistik för CPU temperatur."
-
-#, php-format
-#~ msgid ""
-#~ "Show positive/negative values for %s graphs (can not be used together with "
-#~ "logarithmic scaling)."
-#~ msgstr ""
-#~ "Visa positiva/negativa värden för %s graf (kan inte användas tillsammans med "
-#~ "logritmisk skalning)."
-
-#~ msgid "Statistics for average system load for 1, 5 and 15 minute periods."
-#~ msgstr ""
-#~ "Statistik för genomsnittlig systemlast i 1, 5 och 15 minuters intervall."
-
-#~ msgid "Statistics for disk (mount point) usage."
-#~ msgstr "Statistik över diskanvändning (monteringspunkter)."
-
-#, php-format
-#~ msgid ""
-#~ "The data directory holds the statistical data for the graphs. This should be "
-#~ "set to a %s to prevent a disk spinning all the time."
-#~ msgstr ""
-#~ "Datakatalogen innehåller statistiska data för graferna. Denna skall sättas "
-#~ "till en %s för att undvika att diskarna snurrar hela tiden."
-
-#~ msgid "Statistics for network latency."
-#~ msgstr "Statistik för nätverksåtkomsttid."
-
-#~ msgid "Statistics for incoming/outgoing bits/second for network interfaces."
-#~ msgstr "Statistik över in- och utgående bitar/sekund för nätverksgränssnitt."
-
-#~ msgid ""
-#~ "UPS identifier and host IP address of the machine where the UPS is connected "
-#~ "to (this can be also a remote host)."
-#~ msgstr ""
-#~ "UPS namn och värd IP adress för maskinen där UPS:en är ansluten (detta kan "
-#~ "även vara en fjärrvärd)."
-
-#, php-format
-#~ msgid ""
-#~ "Use logarithmic y-axis scaling for %s graphs (can not be used together with "
-#~ "positive/negative y-axis range)."
-#~ msgstr ""
-#~ "Använd logaritmisk y-axelskalning för %s grafer (kan inte användas "
-#~ "tillsammans med positiv/negativ y-axelområde)."
+#~ msgid "'%s' deletes all statistical data for the selected graphs!"
+#~ msgstr "'%s' tar bort all statistisk data för de valda graferna!"

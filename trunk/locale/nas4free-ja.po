@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-13 18:07+0000\n"
+"POT-Creation-Date: 2016-11-14 05:32+0000\n"
 "PO-Revision-Date: 2016-08-10 07:07+0000\n"
 "Last-Translator: Tomoyuki Shiga <tomoyuki_shiga@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-13 18:09+0000\n"
-"X-Generator: Launchpad (build 18255)\n"
+"X-Launchpad-Export-Date: 2016-11-14 18:49+0000\n"
+"X-Generator: Launchpad (build 18261)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
 "X-Poedit-Language: Japanese\n"
@@ -108,7 +108,7 @@ msgid "%sB used of %sB"
 msgstr "%2$sB 中 %1$sB 使用中"
 
 #, php-format
-msgid "'%s' deletes all statistical data for the selected graphs!"
+msgid "'%s' deletes all statistical data from the graphs!"
 msgstr ""
 
 msgid "(Change if needed)"
@@ -2316,9 +2316,6 @@ msgstr ""
 msgid "Disk space usage"
 msgstr "ディスク使用率"
 
-msgid "Disk usage"
-msgstr ""
-
 msgid "Disks"
 msgstr "ディスク"
 
@@ -4333,9 +4330,6 @@ msgstr ""
 "5：パワーサイクルにより増加しないテストのライフタイム番号、最大値の飽和。正規化された値は、テストの失敗で1、コンデンサが過度の温度条件でテストされている"
 "場合は11、それ以外の場合は100に設定されています。"
 
-msgid "Latency"
-msgstr ""
-
 #, php-format
 msgid "Latest Beta Build: %s"
 msgstr "最新ベータ版: %s"
@@ -4783,9 +4777,6 @@ msgstr "メモリ"
 msgid "Member Interface"
 msgstr "メンバ インターフェース"
 
-msgid "Memory"
-msgstr ""
-
 msgid "Memory (MiB)"
 msgstr "メモリ (MiB)"
 
@@ -5036,9 +5027,6 @@ msgid ""
 "addresses or 'ALL' for any IPs."
 msgstr "iSCSI ターゲットへのアクセスを許可するネットワーク。IP または CIDR で指定するか、'ALL' で全てを許可します。"
 
-msgid "Network latency"
-msgstr ""
-
 msgid "Network mask"
 msgstr "ネットワークマスク"
 
@@ -5047,9 +5035,6 @@ msgstr "ネットワークポート"
 
 msgid "Network that is authorised to access the NFS share."
 msgstr "NFS 共有にアクセス可能な権限を与えるネットワークを指定します。"
-
-msgid "Network traffic"
-msgstr ""
 
 msgid "Networks"
 msgstr "ネットワーク"
@@ -7501,6 +7486,9 @@ msgstr "属性 '%s' は最低ひとつのエントリーを含む必要があり
 msgid "The attribute '%s': use a port in the range from %d to %d."
 msgstr "属性 '%s': %d から %d の範囲のポートを使ってください。"
 
+msgid "The attribute 'Data directory' is required."
+msgstr ""
+
 #, php-format
 msgid "The attribute 'Port': port '%ld' is already taken by another service."
 msgstr "属性 'Port': ポート番号 %ld は既に他のサービスで使用されています。"
@@ -7615,9 +7603,6 @@ msgid ""
 "The default format is %s used for ZFS auto snapshot."
 msgstr ""
 "シャドウコピーサービス用のスナップショットのカスタム書式を指定できます。デフォルト書式はZFS自動スナップショットで使用される %s です。"
-
-msgid "The data directory must be set to a directory <b>below</b> /mnt."
-msgstr ""
 
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr "SMTP サーバのポート番号。例) 25 又は 587"
@@ -8728,6 +8713,9 @@ msgstr "UPS"
 msgid "UPS Identifier"
 msgstr ""
 
+msgid "UPS Identifier and IP address"
+msgstr ""
+
 msgid "UPS Information & Status"
 msgstr "UPS情報とステータス"
 
@@ -8772,9 +8760,6 @@ msgstr "UPSファームウェア"
 
 msgid "UPS goes on battery"
 msgstr "UPS はバッテリ駆動となりました"
-
-msgid "UPS identifier and IP address"
-msgstr ""
 
 msgid "UPS model"
 msgstr "UPSモデル"
@@ -8901,6 +8886,9 @@ msgid "Upper"
 msgstr ""
 
 msgid "Uptime"
+msgstr ""
+
+msgid "Uptime Statistics"
 msgstr ""
 
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."

@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-13 18:07+0000\n"
+"POT-Creation-Date: 2016-11-14 05:32+0000\n"
 "PO-Revision-Date: 2016-03-03 17:10+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-13 18:09+0000\n"
-"X-Generator: Launchpad (build 18255)\n"
+"X-Launchpad-Export-Date: 2016-11-14 18:49+0000\n"
+"X-Generator: Launchpad (build 18261)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -107,7 +107,7 @@ msgid "%sB used of %sB"
 msgstr "%sB 已用，於%sB"
 
 #, php-format
-msgid "'%s' deletes all statistical data for the selected graphs!"
+msgid "'%s' deletes all statistical data from the graphs!"
 msgstr ""
 
 msgid "(Change if needed)"
@@ -2283,9 +2283,6 @@ msgstr ""
 msgid "Disk space usage"
 msgstr "磁碟使用狀況"
 
-msgid "Disk usage"
-msgstr ""
-
 msgid "Disks"
 msgstr "磁碟"
 
@@ -4279,9 +4276,6 @@ msgid ""
 "been tested in an excessive temperature condition, otherwise 100."
 msgstr ""
 
-msgid "Latency"
-msgstr ""
-
 #, php-format
 msgid "Latest Beta Build: %s"
 msgstr "最新的Beta版：%s"
@@ -4725,9 +4719,6 @@ msgstr ""
 msgid "Member Interface"
 msgstr "介面成員"
 
-msgid "Memory"
-msgstr ""
-
 msgid "Memory (MiB)"
 msgstr ""
 
@@ -4978,9 +4969,6 @@ msgid ""
 "addresses or 'ALL' for any IPs."
 msgstr "網路授權可訪問 iSCSI 目標。它需要 IP 位址或 CIDR 位址或“ALL” （任何 IP 位址）。"
 
-msgid "Network latency"
-msgstr ""
-
 msgid "Network mask"
 msgstr "網路遮罩"
 
@@ -4989,9 +4977,6 @@ msgstr "網路卡通訊埠"
 
 msgid "Network that is authorised to access the NFS share."
 msgstr "授權可以存取 NFS 分享區的網域。"
-
-msgid "Network traffic"
-msgstr ""
 
 msgid "Networks"
 msgstr "網路"
@@ -7429,6 +7414,9 @@ msgstr "'%s' 必須有至少一個項目。"
 msgid "The attribute '%s': use a port in the range from %d to %d."
 msgstr "屬性'%s'：從 %d 到 %d 的範圍使用一個端口。"
 
+msgid "The attribute 'Data directory' is required."
+msgstr ""
+
 #, php-format
 msgid "The attribute 'Port': port '%ld' is already taken by another service."
 msgstr "屬性'端口'：'%ld' 端口已經被另一項服務採用。"
@@ -7538,9 +7526,6 @@ msgid ""
 "The custom format of the snapshot for shadow copy service can be specified. "
 "The default format is %s used for ZFS auto snapshot."
 msgstr "可以指定陰影複製服務的快照的自定義格式。默認格式是用於ZFS自動快照的 %s。"
-
-msgid "The data directory must be set to a directory <b>below</b> /mnt."
-msgstr ""
 
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr "預設的 SMTP 郵件伺服器連接端口，如：25 或 587。"
@@ -8616,6 +8601,9 @@ msgstr "UPS"
 msgid "UPS Identifier"
 msgstr ""
 
+msgid "UPS Identifier and IP address"
+msgstr ""
+
 msgid "UPS Information & Status"
 msgstr "UPS 信息和狀態"
 
@@ -8660,9 +8648,6 @@ msgstr "UPS 韌體"
 
 msgid "UPS goes on battery"
 msgstr "UPS 轉用電池"
-
-msgid "UPS identifier and IP address"
-msgstr ""
 
 msgid "UPS model"
 msgstr "UPS 型號"
@@ -8789,6 +8774,9 @@ msgid "Upper"
 msgstr ""
 
 msgid "Uptime"
+msgstr ""
+
+msgid "Uptime Statistics"
 msgstr ""
 
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."

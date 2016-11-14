@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-13 18:07+0000\n"
+"POT-Creation-Date: 2016-11-14 05:32+0000\n"
 "PO-Revision-Date: 2016-11-09 22:08+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-13 18:09+0000\n"
-"X-Generator: Launchpad (build 18255)\n"
+"X-Launchpad-Export-Date: 2016-11-14 18:48+0000\n"
+"X-Generator: Launchpad (build 18261)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -113,7 +113,7 @@ msgid "%sB used of %sB"
 msgstr "%sB foglalt a(z) %sB-ból"
 
 #, php-format
-msgid "'%s' deletes all statistical data for the selected graphs!"
+msgid "'%s' deletes all statistical data from the graphs!"
 msgstr ""
 
 msgid "(Change if needed)"
@@ -2469,9 +2469,6 @@ msgstr "Lemezhasználat"
 msgid "Disk space usage"
 msgstr "Lemezhasználat"
 
-msgid "Disk usage"
-msgstr "Lemezhasználat"
-
 msgid "Disks"
 msgstr "Lemezek"
 
@@ -4599,9 +4596,6 @@ msgstr ""
 "vagy 11 ha a kondenzátort vizsgálták túlzott hőmérséklet esetén, máskülönben "
 "100."
 
-msgid "Latency"
-msgstr "Késlekedés"
-
 #, php-format
 msgid "Latest Beta Build: %s"
 msgstr "Utolsó Béta Rendszerfordítás: %s"
@@ -5067,9 +5061,6 @@ msgstr "Memória"
 msgid "Member Interface"
 msgstr "Interfész tag"
 
-msgid "Memory"
-msgstr "Memória"
-
 msgid "Memory (MiB)"
 msgstr "Memória (MiB)"
 
@@ -5329,9 +5320,6 @@ msgstr ""
 "Hálózati hitelesítő az iSCSI-cél eléréséhez. Lehet IP vagy CIDR cím, vagy "
 "'ÖSSZES' esetén bármely IP cím."
 
-msgid "Network latency"
-msgstr "Hálózati késlekedés"
-
 msgid "Network mask"
 msgstr "Hálózati maszk"
 
@@ -5340,9 +5328,6 @@ msgstr "Hálózati port"
 
 msgid "Network that is authorised to access the NFS share."
 msgstr "Hálózat, amely jogosult elérni a NFS-megosztás."
-
-msgid "Network traffic"
-msgstr "Hálózati forgalom"
 
 msgid "Networks"
 msgstr "Hálózatok"
@@ -7943,6 +7928,9 @@ msgid "The attribute '%s': use a port in the range from %d to %d."
 msgstr ""
 "'%s' attribútum: használj portot a következő a(z) %d-%d tartományból."
 
+msgid "The attribute 'Data directory' is required."
+msgstr ""
+
 #, php-format
 msgid "The attribute 'Port': port '%ld' is already taken by another service."
 msgstr "'Port': port attribútumot '%ld' már másik szolgáltatás használja."
@@ -8073,9 +8061,6 @@ msgid ""
 msgstr ""
 "Az árnyékmásolat szolgáltatás pillanatképének egyéni formátumot lehet adni. "
 "Az alapértelmezett formátum a ZFS automatikus pillanatképhez az %s."
-
-msgid "The data directory must be set to a directory <b>below</b> /mnt."
-msgstr "Az adatkönyvtárnak a /mnt <b>alatti</b> könyvtárnak kell lennie."
 
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr ""
@@ -9347,6 +9332,9 @@ msgstr "Szünetmentes táp (UPS)"
 msgid "UPS Identifier"
 msgstr ""
 
+msgid "UPS Identifier and IP address"
+msgstr ""
+
 msgid "UPS Information & Status"
 msgstr "Szünetmentes információ & állapot"
 
@@ -9391,9 +9379,6 @@ msgstr "Szünetmentes firmware"
 
 msgid "UPS goes on battery"
 msgstr "Szünetmentes táp akkumulátorról megy"
-
-msgid "UPS identifier and IP address"
-msgstr "Szünetmentes azonosítója és IP címe"
 
 msgid "UPS model"
 msgstr "Szünetmentes modell"
@@ -9522,6 +9507,9 @@ msgstr "Nagybetűs"
 
 msgid "Uptime"
 msgstr "Működési idő"
+
+msgid "Uptime Statistics"
+msgstr ""
 
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr ""
@@ -10295,108 +10283,23 @@ msgstr "felhasználó"
 msgid "version:"
 msgstr "verzió:"
 
-#~ msgid ""
-#~ "Displays the number of processes in each state (total, running, sleeping, "
-#~ "waiting, starting, stopped, zombie)."
-#~ msgstr ""
-#~ "Az összes, akármilyen állapotban lévő (összes, futó, alvó, várakozó, induló, "
-#~ "leállított, zombi) folyamat számának megjelenítése."
+#~ msgid "Disk usage"
+#~ msgstr "Lemezhasználat"
 
-#~ msgid "Displays the length of time the system has been up."
-#~ msgstr "Rendszer elindulás óta eltelt idő."
+#~ msgid "Memory"
+#~ msgstr "Memória"
 
-#~ msgid ""
-#~ "Displays information about memory allocation (active, inact, wired, cache, "
-#~ "buf, free, swap used, swap free)."
-#~ msgstr ""
-#~ "Memóriafoglalásról (aktív, inaktív, nem lapozható, gyorsítótár, puffer, "
-#~ "cserehely, szabad, felhasznált cserehely, szabad cserehely) információ "
-#~ "megjelenítése."
+#~ msgid "Network traffic"
+#~ msgstr "Hálózati forgalom"
 
-#~ msgid "Logarithmic scaling"
-#~ msgstr "Logaritmikus skála"
+#~ msgid "Network latency"
+#~ msgstr "Hálózati késlekedés"
 
-#~ msgid "Statistics for network latency."
-#~ msgstr "Hálózati késlekedés statisztikája."
+#~ msgid "Latency"
+#~ msgstr "Késlekedés"
 
-#~ msgid "Statistics for CPU frequency."
-#~ msgstr "Processzorgyakoriság statisztikái."
+#~ msgid "The data directory must be set to a directory <b>below</b> /mnt."
+#~ msgstr "Az adatkönyvtárnak a /mnt <b>alatti</b> könyvtárnak kell lennie."
 
-#~ msgid "Statistics for CPU temperature."
-#~ msgstr "Processzorhőmérséklet statisztikái."
-
-#~ msgid "Statistics for disk (mount point) usage."
-#~ msgstr "Lemezhasználat (csatolási pontok) statisztikái."
-
-#~ msgid "Statistics for incoming/outgoing bits/second for network interfaces."
-#~ msgstr "Hálózati interfészek kimenő/bejövő bit/másodperc statisztikái."
-
-#~ msgid ""
-#~ "UPS identifier and host IP address of the machine where the UPS is connected "
-#~ "to (this can be also a remote host)."
-#~ msgstr ""
-#~ "Szünetmentes azonosítója és a gép kiszolgáló IP címe, ahová a szünetmentes "
-#~ "csatlakozik (ez egy távoli kiszolgáló is lehet)."
-
-#~ msgid "Statistics for average system load for 1, 5 and 15 minute periods."
-#~ msgstr ""
-#~ "Rendszerterhelés átlagának 1, 5 és 10 perces időközönkénti statisztikái."
-
-#~ msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
-#~ msgstr "ZFS ARC (összes, MRU, MFU, anon, header, egyéb) statisztikái."
-
-#~ msgid ""
-#~ "If enabled the network throughput is displayed in Bytes/sec rather than "
-#~ "Bits/sec."
-#~ msgstr ""
-#~ "Ha be van kapcsolva, a hálózati forgalom Byte/mp helyett Bit/mp-ben jelenik "
-#~ "meg."
-
-#, php-format
-#~ msgid ""
-#~ "'%s' deletes all the data for selected statistics. If only a certain "
-#~ "statistic needs to be reset, clear all other check boxes before performing "
-#~ "'%s'."
-#~ msgstr ""
-#~ "'%s' törli a kiválasztott statisztikák összes adatát. Ha csupán néhány "
-#~ "statisztikát szükséges alaphelyzetbe hozni, az összes többi jelölőnégyzetről "
-#~ "vedd le a pipát, mielőtt végrehajtod a következőt: '%s'."
-
-#~ msgid ""
-#~ "Displays a percentage of time spent in each of the processor states (user, "
-#~ "nice, system, interrupt, idle)."
-#~ msgstr ""
-#~ "Az összes processzorállapotban töltött idő %-os megjelenítése (felhasználó, "
-#~ "nice, rendszer, megszakítás, nyugvó)."
-
-#, php-format
-#~ msgid ""
-#~ "Show positive/negative values for %s graphs (can not be used together with "
-#~ "logarithmic scaling)."
-#~ msgstr ""
-#~ "%s grafikonhoz pozitív/negatív értékek megjelenítése (nem használható együtt "
-#~ "logaritmikus tengelyértékekkel)."
-
-#, php-format
-#~ msgid ""
-#~ "Logarithmic y-axis scaling for %s graphs (can not be used together with "
-#~ "positive/negative y-axis range)."
-#~ msgstr ""
-#~ "%s grafikonhoz logaritmikus y-tengely (nem használható együtt "
-#~ "pozitív/negatív y-tengelytartománnyal)."
-
-#, php-format
-#~ msgid ""
-#~ "The data directory holds the statistical data for the graphs. This should be "
-#~ "set to a %s to prevent a disk spinning all the time."
-#~ msgstr ""
-#~ "Az adatkönyvtár tárolja  grafikonok statisztikai adatait. Ezt %s értékre "
-#~ "célszerű állítani a lemez állandó forgásának megakadályozása érdekében."
-
-#~ msgid ""
-#~ "Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
-#~ "voltage and the UPS status (online, on battery, charging and offline)."
-#~ msgstr ""
-#~ "Szünetmentes adatairól statisztikák: kapacitás, feszültség, terhelés, "
-#~ "hátralévő működési idő, bemenő feszültség és szünetmenetes állapota (online, "
-#~ "akkuról, törlés és offline)."
+#~ msgid "UPS identifier and IP address"
+#~ msgstr "Szünetmentes azonosítója és IP címe"

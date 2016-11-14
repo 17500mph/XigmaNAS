@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-13 18:07+0000\n"
-"PO-Revision-Date: 2016-11-13 18:06+0000\n"
+"POT-Creation-Date: 2016-11-14 05:32+0000\n"
+"PO-Revision-Date: 2016-11-14 13:55+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-13 18:09+0000\n"
-"X-Generator: Launchpad (build 18255)\n"
+"X-Launchpad-Export-Date: 2016-11-14 18:49+0000\n"
+"X-Generator: Launchpad (build 18261)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
 "X-Poedit-Language: Russian\n"
@@ -110,8 +110,8 @@ msgid "%sB used of %sB"
 msgstr "занято %s из %s байт"
 
 #, php-format
-msgid "'%s' deletes all statistical data for the selected graphs!"
-msgstr "'%s' удаляет все статистические данные для выбранных графиков!"
+msgid "'%s' deletes all statistical data from the graphs!"
+msgstr "'%s' удаляет все статистические данные из графиков!"
 
 msgid "(Change if needed)"
 msgstr "(Изменените в случае необходимости)"
@@ -2489,13 +2489,10 @@ msgid "Disk Selection"
 msgstr "Выбор диска"
 
 msgid "Disk Usage"
-msgstr "Использование диска"
+msgstr "Использование дисков"
 
 msgid "Disk space usage"
 msgstr "Использование дискового пространства"
-
-msgid "Disk usage"
-msgstr "Использование диска"
 
 msgid "Disks"
 msgstr "Диски"
@@ -4647,9 +4644,6 @@ msgstr ""
 "устанавливается в 1 при провале испытаний или 11 если конденсатор был "
 "испытан в чрезмерном температурном режиме, в противном случае 100."
 
-msgid "Latency"
-msgstr "Задержка"
-
 #, php-format
 msgid "Latest Beta Build: %s"
 msgstr "Последняя Бета Сборка: %s"
@@ -5119,9 +5113,6 @@ msgstr "Память"
 msgid "Member Interface"
 msgstr "Физический интерфейс"
 
-msgid "Memory"
-msgstr "Память"
-
 msgid "Memory (MiB)"
 msgstr "Память (Мб)"
 
@@ -5383,9 +5374,6 @@ msgstr ""
 "IP-адреса или CIDR-диапазоны. Чтобы позволить подключение с любого IP-"
 "адреса, введите 'ALL'."
 
-msgid "Network latency"
-msgstr "Латентность сети"
-
 msgid "Network mask"
 msgstr "Сетевая маска"
 
@@ -5394,9 +5382,6 @@ msgstr "Сетевой порт"
 
 msgid "Network that is authorised to access the NFS share."
 msgstr "Сеть, которой разрешен доступ к NFS-ресурсу."
-
-msgid "Network traffic"
-msgstr "Сетевой трафик"
 
 msgid "Networks"
 msgstr "Сети"
@@ -7984,6 +7969,9 @@ msgstr "Атрибут '%s' должен содержать по меньшей 
 msgid "The attribute '%s': use a port in the range from %d to %d."
 msgstr "Атрибут '%s': используйте порт в дипапзоне от %d до %d."
 
+msgid "The attribute 'Data directory' is required."
+msgstr "Атрибут 'Каталог данных' обязателен."
+
 #, php-format
 msgid "The attribute 'Port': port '%ld' is already taken by another service."
 msgstr "Атрибут 'Port': порт '%ld' уже используется другой службой."
@@ -8126,10 +8114,6 @@ msgid ""
 msgstr ""
 "Здесь вы можете указать формат Snapshot'ов для службы теневого копирования. "
 "Формат по умолчанию % s используется для автоматических Snapshot'ов ZFS."
-
-msgid "The data directory must be set to a directory <b>below</b> /mnt."
-msgstr ""
-"Каталог данных должен быть установлен в директории <b>below</b> /mnt."
 
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr "Порт почтового сервера по умолчанию, например, 25-й или 587-й."
@@ -9413,6 +9397,9 @@ msgstr "UPS"
 msgid "UPS Identifier"
 msgstr "Идентификатор ИБП"
 
+msgid "UPS Identifier and IP address"
+msgstr "Идентификатор ИБП и IP-адрес"
+
 msgid "UPS Information & Status"
 msgstr "Информация и статус ИБП"
 
@@ -9457,9 +9444,6 @@ msgstr "Версия прошивки ИБП"
 
 msgid "UPS goes on battery"
 msgstr "Переключение UPS на работу от батареи"
-
-msgid "UPS identifier and IP address"
-msgstr "Идентификатор ИБП и IP адрес"
 
 msgid "UPS model"
 msgstr "Модель ИБП"
@@ -9593,6 +9577,9 @@ msgstr "Выше"
 
 msgid "Uptime"
 msgstr "Время работы"
+
+msgid "Uptime Statistics"
+msgstr "Статистика продолжительности работы"
 
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr ""
@@ -10391,108 +10378,28 @@ msgstr "пользователь"
 msgid "version:"
 msgstr "версия:"
 
-#, php-format
-#~ msgid ""
-#~ "'%s' deletes all the data for selected statistics. If only a certain "
-#~ "statistic needs to be reset, clear all other check boxes before performing "
-#~ "'%s'."
+#~ msgid "Disk usage"
+#~ msgstr "Использование диска"
+
+#~ msgid "Memory"
+#~ msgstr "Память"
+
+#~ msgid "Latency"
+#~ msgstr "Задержка"
+
+#~ msgid "Network traffic"
+#~ msgstr "Сетевой трафик"
+
+#~ msgid "Network latency"
+#~ msgstr "Латентность сети"
+
+#~ msgid "The data directory must be set to a directory <b>below</b> /mnt."
 #~ msgstr ""
-#~ "'%s' удаляет все данные для выбранных статистических данных. Если необходимо "
-#~ "сбросить только определенную статистику, снимите все остальные флажки перед "
-#~ "выполнением '%s'."
+#~ "Каталог данных должен быть установлен в директории <b>below</b> /mnt."
 
-#~ msgid ""
-#~ "Displays the number of processes in each state (total, running, sleeping, "
-#~ "waiting, starting, stopped, zombie)."
-#~ msgstr ""
-#~ "Отображает число процессов в каждом из состояний (total, running, sleeping, "
-#~ "waiting, starting, stopped, zombie)."
-
-#~ msgid "Displays the length of time the system has been up."
-#~ msgstr ""
-#~ "Отображает продолжительность времени, на протяжении которого система "
-#~ "включена."
-
-#~ msgid ""
-#~ "Displays information about memory allocation (active, inact, wired, cache, "
-#~ "buf, free, swap used, swap free)."
-#~ msgstr ""
-#~ "Отображает информацию о распределении памяти (active, inact, wired, cache, "
-#~ "buf, free, swap used, swap free)."
-
-#~ msgid ""
-#~ "Displays a percentage of time spent in each of the processor states (user, "
-#~ "nice, system, interrupt, idle)."
-#~ msgstr ""
-#~ "Отображает процент времени, проведённого процессором в каждом из состояний "
-#~ "(user, nice, system, interrupt, idle)."
-
-#~ msgid "Logarithmic scaling"
-#~ msgstr "Логарифмическая шкала"
-
-#~ msgid ""
-#~ "If enabled the network throughput is displayed in Bytes/sec rather than "
-#~ "Bits/sec."
-#~ msgstr ""
-#~ "Если выбрано, пропускная способность сети отображается в байт/сек вместо "
-#~ "бит/сек."
-
-#~ msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
-#~ msgstr "Статистика ZFS ARC (total, MRU, MFU, anon, header, other)."
-
-#~ msgid ""
-#~ "Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
-#~ "voltage and the UPS status (online, on battery, charging and offline)."
-#~ msgstr ""
-#~ "Статистика ИБП - ёмкость батареи, напряжение, загрузка, оставшееся время "
-#~ "работы, входное напряжение и статус ИБП (online, on battery, charging and "
-#~ "offline)."
-
-#~ msgid "Statistics for CPU frequency."
-#~ msgstr "Статистика частоты процессора"
-
-#~ msgid "Statistics for CPU temperature."
-#~ msgstr "Статистика температуры процессора"
-
-#~ msgid "Statistics for average system load for 1, 5 and 15 minute periods."
-#~ msgstr "Статистика средней загрузки системы для периодов 1, 5 и 15 минут."
-
-#~ msgid "Statistics for network latency."
-#~ msgstr "Статистика латентности сети"
-
-#~ msgid "Statistics for disk (mount point) usage."
-#~ msgstr "Статистика использования диска (точки монтирования)."
+#~ msgid "UPS identifier and IP address"
+#~ msgstr "Идентификатор ИБП и IP адрес"
 
 #, php-format
-#~ msgid ""
-#~ "The data directory holds the statistical data for the graphs. This should be "
-#~ "set to a %s to prevent a disk spinning all the time."
-#~ msgstr ""
-#~ "Каталог данных содержит статистические данные для графиков. Это должно быть "
-#~ "установлено в %s, чтобы предотвратить раскручивание диска постоянно."
-
-#~ msgid "Statistics for incoming/outgoing bits/second for network interfaces."
-#~ msgstr "Статистика входящих/исходящих бит/сек для сетевых интерфейсов."
-
-#~ msgid ""
-#~ "UPS identifier and host IP address of the machine where the UPS is connected "
-#~ "to (this can be also a remote host)."
-#~ msgstr ""
-#~ "Идентификатор ИБП и IP адрес машины, к которой ИБП подключен (это может быть "
-#~ "также и удалённый хост)."
-
-#, php-format
-#~ msgid ""
-#~ "Show positive/negative values for %s graphs (can not be used together with "
-#~ "logarithmic scaling)."
-#~ msgstr ""
-#~ "Отображает положительные/отрицательные величины для графиков %s (не может "
-#~ "быть использовано одновременно с логарифмическим масштабом)."
-
-#, php-format
-#~ msgid ""
-#~ "Logarithmic y-axis scaling for %s graphs (can not be used together with "
-#~ "positive/negative y-axis range)."
-#~ msgstr ""
-#~ "Логарифмический масштаб по оси y для графиков %s (не может быть использован "
-#~ "вместе с положительным/отрицательным диапазоном по оси y)."
+#~ msgid "'%s' deletes all statistical data for the selected graphs!"
+#~ msgstr "'%s' удаляет все статистические данные для выбранных графиков!"
