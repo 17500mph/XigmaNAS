@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-13 18:07+0000\n"
-"PO-Revision-Date: 2016-11-12 18:56+0000\n"
-"Last-Translator: apollo567 <apollo567@hotmail.de>\n"
+"POT-Creation-Date: 2016-11-14 05:32+0000\n"
+"PO-Revision-Date: 2016-11-14 07:53+0000\n"
+"Last-Translator: crest <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-13 18:10+0000\n"
-"X-Generator: Launchpad (build 18255)\n"
+"X-Launchpad-Export-Date: 2016-11-14 18:48+0000\n"
+"X-Generator: Launchpad (build 18261)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
 "X-Poedit-Language: German\n"
@@ -113,7 +113,7 @@ msgid "%sB used of %sB"
 msgstr "%sB von %sB verwendet"
 
 #, php-format
-msgid "'%s' deletes all statistical data for the selected graphs!"
+msgid "'%s' deletes all statistical data from the graphs!"
 msgstr ""
 
 msgid "(Change if needed)"
@@ -1050,7 +1050,7 @@ msgid "Back"
 msgstr "Zurück"
 
 msgid "Background"
-msgstr ""
+msgstr "Hintergrund"
 
 msgid "Backup Configuration"
 msgstr "Backup-Konfiguration"
@@ -1613,7 +1613,7 @@ msgid "Content"
 msgstr "Inhalt"
 
 msgid "Continue"
-msgstr ""
+msgstr "Fortsetzen"
 
 msgid "Controller"
 msgstr "Controller"
@@ -2473,9 +2473,6 @@ msgid "Disk Usage"
 msgstr "Festplattenauslastung"
 
 msgid "Disk space usage"
-msgstr "Festplattenauslastung"
-
-msgid "Disk usage"
 msgstr "Festplattenauslastung"
 
 msgid "Disks"
@@ -4616,9 +4613,6 @@ msgstr ""
 "(Kondensator wurde unter exzessiven Temperaturbedingungen getestet) gesetzt, "
 "ansonsten auf 100."
 
-msgid "Latency"
-msgstr "Latenzzeit"
-
 #, php-format
 msgid "Latest Beta Build: %s"
 msgstr "Neueste Beta Version: %s"
@@ -5097,9 +5091,6 @@ msgstr "Speicher"
 msgid "Member Interface"
 msgstr "Mitglieds Schnittstelle"
 
-msgid "Memory"
-msgstr "Speicher"
-
 msgid "Memory (MiB)"
 msgstr "Speicher in (MiB)"
 
@@ -5357,9 +5348,6 @@ msgstr ""
 "Autorisiertes Netzwerk mit Zugriff auf das iSCSI Ziel. Beinhaltet IP oder "
 "CIDR Adresse oder 'ALL' für jede IP."
 
-msgid "Network latency"
-msgstr "Netzwerk Latenzzeit"
-
 msgid "Network mask"
 msgstr "Netzwerkmaske"
 
@@ -5368,9 +5356,6 @@ msgstr "Netzwerkport"
 
 msgid "Network that is authorised to access the NFS share."
 msgstr "Netzwerk das authorisiert ist, auf die NFS-Freigabe zuzugreifen."
-
-msgid "Network traffic"
-msgstr "Netzwerkverkehr"
 
 msgid "Networks"
 msgstr "Netzwerke"
@@ -7966,6 +7951,9 @@ msgstr "Das Attribut '%s' muss mindestens einen Eintrag enthalten."
 msgid "The attribute '%s': use a port in the range from %d to %d."
 msgstr "Das Attribut '%s': muss im Bereich von %d und %d liegen."
 
+msgid "The attribute 'Data directory' is required."
+msgstr ""
+
 #, php-format
 msgid "The attribute 'Port': port '%ld' is already taken by another service."
 msgstr ""
@@ -8103,11 +8091,6 @@ msgid ""
 msgstr ""
 "Das  Format für das Abbild der Schattenkopie kann individuelle konfiguriert "
 "werden. Das vorgegebene Format für ZFS-atomatischer-Schnappschuss ist %s."
-
-msgid "The data directory must be set to a directory <b>below</b> /mnt."
-msgstr ""
-"Das Datenverzeichnis muss auf ein Verzeichnis <b>unter</b> /mnt eingestellt "
-"werden."
 
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr "Der Standardport für den SMTP-Mailserver, z.B. 25 oder 587."
@@ -9428,6 +9411,9 @@ msgstr "USV"
 msgid "UPS Identifier"
 msgstr ""
 
+msgid "UPS Identifier and IP address"
+msgstr ""
+
 msgid "UPS Information & Status"
 msgstr "UPS Information & Status"
 
@@ -9472,9 +9458,6 @@ msgstr "UPS Firmwareversion"
 
 msgid "UPS goes on battery"
 msgstr "UPS geht in den Batterie-Modus"
-
-msgid "UPS identifier and IP address"
-msgstr "USV Bezeichner und IP-Adresse"
 
 msgid "UPS model"
 msgstr "UPS Modellbezeichnung"
@@ -9603,6 +9586,9 @@ msgstr "Obere"
 
 msgid "Uptime"
 msgstr "Systemlaufzeit"
+
+msgid "Uptime Statistics"
+msgstr ""
 
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr ""
@@ -10391,111 +10377,25 @@ msgstr "Benutzer"
 msgid "version:"
 msgstr "Version:"
 
-#, php-format
-#~ msgid ""
-#~ "'%s' deletes all the data for selected statistics. If only a certain "
-#~ "statistic needs to be reset, clear all other check boxes before performing "
-#~ "'%s'."
+#~ msgid "Disk usage"
+#~ msgstr "Festplattenauslastung"
+
+#~ msgid "Latency"
+#~ msgstr "Latenzzeit"
+
+#~ msgid "Memory"
+#~ msgstr "Speicher"
+
+#~ msgid "Network latency"
+#~ msgstr "Netzwerk Latenzzeit"
+
+#~ msgid "Network traffic"
+#~ msgstr "Netzwerkverkehr"
+
+#~ msgid "The data directory must be set to a directory <b>below</b> /mnt."
 #~ msgstr ""
-#~ "%s löscht alle Daten für ausgewählte Statistiken. Sollen nur bestimmte "
-#~ "Statistiken zurückgesetzt werden, deaktivieren sie alle anderen Checkboxen "
-#~ "bevor '%s' ausgeführt wird."
+#~ "Das Datenverzeichnis muss auf ein Verzeichnis <b>unter</b> /mnt eingestellt "
+#~ "werden."
 
-#~ msgid ""
-#~ "Displays a percentage of time spent in each of the processor states (user, "
-#~ "nice, system, interrupt, idle)."
-#~ msgstr ""
-#~ "Zeigt den Prozentsatz  der Nutzung der verschiedenen Prozessor Stati (user, "
-#~ "nice, system, interrupt, idle)."
-
-#~ msgid ""
-#~ "Displays the number of processes in each state (total, running, sleeping, "
-#~ "waiting, starting, stopped, zombie)."
-#~ msgstr ""
-#~ "Statistik für die Anzahl der Prozesse in den verschiedenen Stati (total, "
-#~ "running, sleeping, waiting, starting, stopped, zombie)."
-
-#~ msgid "Displays the length of time the system has been up."
-#~ msgstr "Statistik für die Systemlaufzeit."
-
-#~ msgid ""
-#~ "Displays information about memory allocation (active, inact, wired, cache, "
-#~ "buf, free, swap used, swap free)."
-#~ msgstr ""
-#~ "Statistik zur Speicherzuordnung (active, inact, wired, cache, buf, free, "
-#~ "swap used, swap free)."
-
-#~ msgid ""
-#~ "If enabled the network throughput is displayed in Bytes/sec rather than "
-#~ "Bits/sec."
-#~ msgstr ""
-#~ "Wenn aktiviert, dann wird der Netzwerkdurchsatz in Bytes/sek anstatt "
-#~ "Bits/sek angezeigt."
-
-#~ msgid "Logarithmic scaling"
-#~ msgstr "Logarithmische Skalierung"
-
-#, php-format
-#~ msgid ""
-#~ "Logarithmic y-axis scaling for %s graphs (can not be used together with "
-#~ "positive/negative y-axis range)."
-#~ msgstr ""
-#~ "Logarithmische Y-Achsen Skalierung für %s Graphen (kann nicht zusammen mit Y-"
-#~ "Achsen Bereich genutzt werden)."
-
-#, php-format
-#~ msgid ""
-#~ "Show positive/negative values for %s graphs (can not be used together with "
-#~ "logarithmic scaling)."
-#~ msgstr ""
-#~ "Zeigt positiv/negativ Werte für %s Graphen (kann nicht zusammen mit "
-#~ "logarithmischer Skalierung verwendet werden)."
-
-#~ msgid ""
-#~ "Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
-#~ "voltage and the UPS status (online, on battery, charging and offline)."
-#~ msgstr ""
-#~ "Statistik für die USV Batteriekapazität, Spannung, Last, verbleibende "
-#~ "Laufzeit, Eingangsspannung und den USV Status (online, on battery, charging, "
-#~ "offline)."
-
-#~ msgid "Statistics for CPU frequency."
-#~ msgstr "Statistik für die CPU Taktfrequenz."
-
-#~ msgid "Statistics for CPU temperature."
-#~ msgstr "Statistik für die CPU Temperatur."
-
-#~ msgid "Statistics for average system load for 1, 5 and 15 minute periods."
-#~ msgstr ""
-#~ "Statistik für die durchschnittliche Systemlast für 1, 5 und 15 Minuten "
-#~ "Perioden."
-
-#~ msgid "Statistics for disk (mount point) usage."
-#~ msgstr "Statistik für die Festplatten (Einhängepunkt) Nutzung."
-
-#~ msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
-#~ msgstr "Statistik für ZFS ARC (total, MRU, MFU, anon, header, other)."
-
-#, php-format
-#~ msgid ""
-#~ "The data directory holds the statistical data for the graphs. This should be "
-#~ "set to a %s to prevent a disk spinning all the time."
-#~ msgstr ""
-#~ "Das Datenverzeichnis hält die statistischen Daten für die Graphen. Es soll "
-#~ "auf eine %s eingestellt werden um zu verhindern, dass eine Festplatten die "
-#~ "ganze Zeit läuft."
-
-#~ msgid "Statistics for network latency."
-#~ msgstr "Statistik für die Netzwerk Latenzzeit."
-
-#~ msgid "Statistics for incoming/outgoing bits/second for network interfaces."
-#~ msgstr ""
-#~ "Statistik für den ankommenden/abgehenden Vekehr auf den "
-#~ "Netzwerkschnittstellen."
-
-#~ msgid ""
-#~ "UPS identifier and host IP address of the machine where the UPS is connected "
-#~ "to (this can be also a remote host)."
-#~ msgstr ""
-#~ "USV Bezeichner und Host IP-Adresse des Servers, an dem die USV angeschlossen "
-#~ "ist (das kann auch ein anderer Host sein)."
+#~ msgid "UPS identifier and IP address"
+#~ msgstr "USV Bezeichner und IP-Adresse"

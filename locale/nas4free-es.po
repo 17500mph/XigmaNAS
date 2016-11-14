@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-13 18:07+0000\n"
-"PO-Revision-Date: 2016-11-11 17:52+0000\n"
-"Last-Translator: Iker <iker.urki@gmail.com>\n"
+"POT-Creation-Date: 2016-11-14 05:32+0000\n"
+"PO-Revision-Date: 2016-11-14 08:17+0000\n"
+"Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-13 18:09+0000\n"
-"X-Generator: Launchpad (build 18255)\n"
+"X-Launchpad-Export-Date: 2016-11-14 18:48+0000\n"
+"X-Generator: Launchpad (build 18261)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -108,8 +108,8 @@ msgid "%sB used of %sB"
 msgstr "%sB usado de %sB"
 
 #, php-format
-msgid "'%s' deletes all statistical data for the selected graphs!"
-msgstr ""
+msgid "'%s' deletes all statistical data from the graphs!"
+msgstr "'%s' Borra los datos de todas las Gráficas!"
 
 msgid "(Change if needed)"
 msgstr "(Cambiar si es necesario)"
@@ -1016,7 +1016,7 @@ msgid "Available"
 msgstr "Disponible"
 
 msgid "Available Graphs"
-msgstr ""
+msgstr "Gráficas disponibles"
 
 msgid ""
 "Average performance of seek operations of the magnetic heads. If this "
@@ -1035,7 +1035,7 @@ msgid "Back"
 msgstr "Atrás"
 
 msgid "Background"
-msgstr ""
+msgstr "Color de fondo"
 
 msgid "Backup Configuration"
 msgstr "Configuración de backup"
@@ -1598,7 +1598,7 @@ msgid "Content"
 msgstr "Contenido"
 
 msgid "Continue"
-msgstr ""
+msgstr "Continuar"
 
 msgid "Controller"
 msgstr "Controlador"
@@ -2514,9 +2514,6 @@ msgstr "Uso de Disco"
 msgid "Disk space usage"
 msgstr "Uso del espacio en disco"
 
-msgid "Disk usage"
-msgstr "Uso de Disco"
-
 msgid "Disks"
 msgstr "Discos"
 
@@ -3103,40 +3100,40 @@ msgid "Enable authentication."
 msgstr "Activar autentificacion."
 
 msgid "Enable collecting CPU frequency statistics."
-msgstr ""
+msgstr "Habilita la estadistica de Frecuencia de CPU"
 
 msgid "Enable collecting CPU temperature statistics."
-msgstr ""
+msgstr "Habilita la estadistica de Temperatura de CPU"
 
 msgid "Enable collecting CPU usage statistics."
-msgstr ""
+msgstr "Habilita la estadistica de Uso de CPU"
 
 msgid "Enable collecting UPS statistics."
-msgstr ""
+msgstr "Habilita la estadistica de SAI"
 
 msgid "Enable collecting ZFS ARC usage statistics."
-msgstr ""
+msgstr "Habilita la estadistica de uso ARC de ZFS"
 
 msgid "Enable collecting average system load statistics."
-msgstr ""
+msgstr "Habilita la estadistica de la carga del sistema"
 
 msgid "Enable collecting disk space usage statistics."
-msgstr ""
+msgstr "Habilita la estadistica de Espacio en Disco"
 
 msgid "Enable collecting memory usage statistics."
-msgstr ""
+msgstr "Habilita la estadistica de uso de Memoria"
 
 msgid "Enable collecting network latency statistics."
-msgstr ""
+msgstr "Habilita la estadistica de Latencia de Red"
 
 msgid "Enable collecting network trafic statistics."
-msgstr ""
+msgstr "Habilita la estadistica de Tráfico de Red"
 
 msgid "Enable collecting system process statistics."
-msgstr ""
+msgstr "Habilita la estadistica de Procesos del sistema"
 
 msgid "Enable collecting uptime statistics."
-msgstr ""
+msgstr "Habilita la estadistica de tiempo arrancado"
 
 msgid "Enable compression."
 msgstr "Habilitar compresion"
@@ -3266,7 +3263,7 @@ msgid "Enable tuning switch"
 msgstr "Habilitar botón de entonacion"
 
 msgid "Enable white background graphs. (black by default)"
-msgstr ""
+msgstr "Habilita el fondo blanco, (Por defecto es negro)"
 
 msgid "Enable write cache mode."
 msgstr "Habilitar Write Cache"
@@ -3340,6 +3337,8 @@ msgid ""
 "Enter the UPS identifier and host IP address of the machine where the UPS is "
 "connected to. (this also can be a remote host)"
 msgstr ""
+"Introduzca la identificación del SAI y la IP de la máquina donde está "
+"conectada. (La IP puede ser de un Host remoto)"
 
 msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
@@ -3359,6 +3358,9 @@ msgid ""
 "Enter the path to the home directory of rrdgraphs. The data directory holds "
 "the statistical data for the graphs and will be updated every 5 minutes."
 msgstr ""
+"Habilita la ruta del directorio home para RRDGraphs. En este directorio se "
+"almacenarán los datos estadisticos para las gráficas y serán actualizados "
+"cada 5 minutos."
 
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
@@ -4158,6 +4160,8 @@ msgid ""
 "If only specific statistics needs to be reset, clear all other check boxes "
 "before performing '%s'."
 msgstr ""
+"Si solo desea borrar algunas estadisticas, seleccione SOLO los check Box "
+"adecuados antes de ejecutar '%s'."
 
 msgid ""
 "If the server is behind a proxy set these parameters to give local services "
@@ -4664,9 +4668,6 @@ msgstr ""
 "ha dado como resultado un exceso de temperatura, en otros caso el valor debe "
 "ser 100."
 
-msgid "Latency"
-msgstr "Latencia"
-
 #, php-format
 msgid "Latest Beta Build: %s"
 msgstr "Ultima Beta: %s"
@@ -4871,7 +4872,7 @@ msgid "Log packets that are handled by this rule to syslog."
 msgstr "Paquetes de Log que se trataran por esta regla al syslog."
 
 msgid "Logarithmic Scaling"
-msgstr ""
+msgstr "Escala logarítmica"
 
 msgid "Logical Block Length"
 msgstr "Longitud de bloque logico"
@@ -5138,9 +5139,6 @@ msgstr "Memoria"
 msgid "Member Interface"
 msgstr "Interfaz miembro"
 
-msgid "Memory"
-msgstr "Memoria"
-
 msgid "Memory (MiB)"
 msgstr "Memoria (MiB)"
 
@@ -5400,9 +5398,6 @@ msgstr ""
 "Red autorizada para acceder al objetivo iSCSI. Este toma una IP o "
 "direcciones CIDR o 'ALL' para cualquier IPs."
 
-msgid "Network latency"
-msgstr "Latencia de Red"
-
 msgid "Network mask"
 msgstr "Máscara de red"
 
@@ -5411,9 +5406,6 @@ msgstr "Puerto de red"
 
 msgid "Network that is authorised to access the NFS share."
 msgstr "Red que está autorizada a acceder a los recursos NFS compartidos."
-
-msgid "Network traffic"
-msgstr "Trafico de Red"
 
 msgid "Networks"
 msgstr "Redes"
@@ -7247,6 +7239,8 @@ msgid ""
 "Show positive/negative values for %s graphs. (can not be used together with "
 "logarithmic scaling)"
 msgstr ""
+"Mostrar valores positivos/negativos para la gráfica %s. (No puede ser usado "
+"al mismo tiempo que la escala logaritmica)"
 
 msgid "Shutdown"
 msgstr "Apagar"
@@ -7638,7 +7632,7 @@ msgid "System Message"
 msgstr "Mensaje del sistema"
 
 msgid "System Processes"
-msgstr ""
+msgstr "Procesos del sistema"
 
 msgid "System Settings"
 msgstr "Configuración del sistema"
@@ -7852,7 +7846,7 @@ msgid "The TCP port must be a valid port number."
 msgstr "El puerto TCP tiene que ser un número de puerto válido."
 
 msgid "The UPS identifier and IP address"
-msgstr ""
+msgstr "Identificador de la SAI y la IP"
 
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr "El ID de la VLAN debe estar entre 1 y 4094"
@@ -8016,6 +8010,9 @@ msgstr "El atributo '%s' debe contener al menos una entrada."
 msgid "The attribute '%s': use a port in the range from %d to %d."
 msgstr "Atributo '%s': use un puerto en el rango %d a %d."
 
+msgid "The attribute 'Data directory' is required."
+msgstr "Se requiere el atributo 'Directorio de datos'"
+
 #, php-format
 msgid "The attribute 'Port': port '%ld' is already taken by another service."
 msgstr "Atributo 'Puerto' : El puerto '%ld' está en uso por otro servicio."
@@ -8152,10 +8149,6 @@ msgid ""
 msgstr ""
 "El formato de Snapshot de la copia oculta debe ser definido. El formato por "
 "defecto es %s usado por los snapshot automáticos ZFS"
-
-msgid "The data directory must be set to a directory <b>below</b> /mnt."
-msgstr ""
-"El directorio de datos debe estar por debajo de /mnt, eg: /mnt/Data/RRDGraphs"
 
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr "El puerto por defecto del servidor SMTP, por ejemplo 25 o 587."
@@ -9447,7 +9440,10 @@ msgid "UPS"
 msgstr "UPS"
 
 msgid "UPS Identifier"
-msgstr ""
+msgstr "Identificador de  la SAI"
+
+msgid "UPS Identifier and IP address"
+msgstr "Identificador de la SAI y la IP"
 
 msgid "UPS Information & Status"
 msgstr "Info y estado del SAI"
@@ -9462,7 +9458,7 @@ msgid "UPS On Line"
 msgstr "SAI en linea"
 
 msgid "UPS Statistics"
-msgstr ""
+msgstr "Estadisticas de SAI"
 
 msgid "UPS Status"
 msgstr "Estado del SAI"
@@ -9493,9 +9489,6 @@ msgstr "Firmware del SAI"
 
 msgid "UPS goes on battery"
 msgstr "UPS alimentado por la batería"
-
-msgid "UPS identifier and IP address"
-msgstr "Identificador del SAI y su IP"
 
 msgid "UPS model"
 msgstr "Modelo de SAI"
@@ -9626,8 +9619,11 @@ msgstr "Mayúsculas"
 msgid "Uptime"
 msgstr "Tiempo en Activo"
 
+msgid "Uptime Statistics"
+msgstr "Estadísticas de tiempo de actividad"
+
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
-msgstr ""
+msgstr "Usar Bytes/sec en lugar de Bits/sec en la gráfica de Red."
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
@@ -9651,6 +9647,8 @@ msgid ""
 "Use logarithmic y-axis scaling for %s graphs. (can not be used together with "
 "positive/negative y-axis range)"
 msgstr ""
+"Use escalado logaritmico en el eje-y para el gráfico %s. (No puede ser usado "
+"con valores positivos/negativos en el eje-y)."
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -10203,7 +10201,7 @@ msgid "ZFS ARC"
 msgstr "ZFS ARC"
 
 msgid "ZFS ARC Usage"
-msgstr ""
+msgstr "Uso de ZFS ARC"
 
 msgid "ZFS Dataset Information & Status"
 msgstr "Info y estado de Dataset ZFS"
@@ -10347,7 +10345,7 @@ msgid "n/a"
 msgstr "n/d"
 
 msgid "network traffic"
-msgstr ""
+msgstr "Tráfico de Red"
 
 msgid "no new encrypted disk found."
 msgstr "No se han encontrado nuevos discos encriptados"
@@ -10409,104 +10407,24 @@ msgstr "Usuario"
 msgid "version:"
 msgstr "versión:"
 
-#, php-format
-#~ msgid ""
-#~ "'%s' deletes all the data for selected statistics. If only a certain "
-#~ "statistic needs to be reset, clear all other check boxes before performing "
-#~ "'%s'."
+#~ msgid "Disk usage"
+#~ msgstr "Uso de Disco"
+
+#~ msgid "Memory"
+#~ msgstr "Memoria"
+
+#~ msgid "Latency"
+#~ msgstr "Latencia"
+
+#~ msgid "Network traffic"
+#~ msgstr "Trafico de Red"
+
+#~ msgid "Network latency"
+#~ msgstr "Latencia de Red"
+
+#~ msgid "UPS identifier and IP address"
+#~ msgstr "Identificador del SAI y su IP"
+
+#~ msgid "The data directory must be set to a directory <b>below</b> /mnt."
 #~ msgstr ""
-#~ "'%s' Borra todos los datos de las estadisticas seleccionadas. Si solo desea "
-#~ "reiniciar ciertas estadisticas, desactive los otros checkbox antes de "
-#~ "aplicar '%s'."
-
-#~ msgid ""
-#~ "Displays the number of processes in each state (total, running, sleeping, "
-#~ "waiting, starting, stopped, zombie)."
-#~ msgstr ""
-#~ "Muestra los procesos y su estado: (total, running, sleeping, waiting, "
-#~ "starting, stopped, zombie)."
-
-#~ msgid "Displays the length of time the system has been up."
-#~ msgstr "Muestra el tiempo que el sistema lleva encendido"
-
-#~ msgid ""
-#~ "Displays information about memory allocation (active, inact, wired, cache, "
-#~ "buf, free, swap used, swap free)."
-#~ msgstr ""
-#~ "Muestra información acerca del uso de memoria (active, inact, wired, cache, "
-#~ "buf, free, swap used, swap free)."
-
-#~ msgid ""
-#~ "Displays a percentage of time spent in each of the processor states (user, "
-#~ "nice, system, interrupt, idle)."
-#~ msgstr ""
-#~ "Muestra el % de tiempo gastado en cada uno de los estados del procesador "
-#~ "(nice, system, interrupt, idle)."
-
-#~ msgid "Logarithmic scaling"
-#~ msgstr "Escala Logaritmica"
-
-#, php-format
-#~ msgid ""
-#~ "Logarithmic y-axis scaling for %s graphs (can not be used together with "
-#~ "positive/negative y-axis range)."
-#~ msgstr ""
-#~ "La escala logaritmica en el eje Y para el grafico %s no puede ser usada en "
-#~ "el rango propuesto"
-
-#~ msgid ""
-#~ "If enabled the network throughput is displayed in Bytes/sec rather than "
-#~ "Bits/sec."
-#~ msgstr ""
-#~ "Si se habilita se mostrará el ancho de banda en Bytes/seg en lugar de "
-#~ "Bits/seg"
-
-#~ msgid ""
-#~ "Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
-#~ "voltage and the UPS status (online, on battery, charging and offline)."
-#~ msgstr "Estadisticas del SAI (online, on battery, charging and offline)"
-
-#~ msgid "Statistics for CPU frequency."
-#~ msgstr "Estadisticas de la frecuencia de CPU."
-
-#~ msgid "Statistics for CPU temperature."
-#~ msgstr "Estadisticas de la temperatura de CPU."
-
-#, php-format
-#~ msgid ""
-#~ "Show positive/negative values for %s graphs (can not be used together with "
-#~ "logarithmic scaling)."
-#~ msgstr ""
-#~ "Muestra los valores positivos/negativos de la grafica %s (no puede ser usada "
-#~ "junto a la escala logaritmica) ."
-
-#~ msgid "Statistics for average system load for 1, 5 and 15 minute periods."
-#~ msgstr "Estadisticas de carga media para periodos de 1, 5 y 15 minutos"
-
-#~ msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
-#~ msgstr "Estadisticas de ZFS ARC (total, MRU, MFU, anon, header, other)."
-
-#~ msgid "Statistics for disk (mount point) usage."
-#~ msgstr "Estadisticas de uso del disco"
-
-#~ msgid "Statistics for network latency."
-#~ msgstr "Estadisticas de la Latencia de Red"
-
-#~ msgid "Statistics for incoming/outgoing bits/second for network interfaces."
-#~ msgstr ""
-#~ "Estadisticas de los interfaces de red en bits/segundo y de entrada/salida"
-
-#~ msgid ""
-#~ "UPS identifier and host IP address of the machine where the UPS is connected "
-#~ "to (this can be also a remote host)."
-#~ msgstr ""
-#~ "Identificador del SAI o IP de la máquina donde el SAI está conactada (puede "
-#~ "ser un host remoto)"
-
-#, php-format
-#~ msgid ""
-#~ "The data directory holds the statistical data for the graphs. This should be "
-#~ "set to a %s to prevent a disk spinning all the time."
-#~ msgstr ""
-#~ "El directorio de datos es donde se almacenan los datos para las "
-#~ "estadisticas. Dede ser %s para evitar que el disco gire todo el tiempo."
+#~ "El directorio de datos debe estar por debajo de /mnt, eg: /mnt/Data/RRDGraphs"

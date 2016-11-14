@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-13 18:07+0000\n"
+"POT-Creation-Date: 2016-11-14 05:32+0000\n"
 "PO-Revision-Date: 2016-11-12 14:52+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-13 18:09+0000\n"
-"X-Generator: Launchpad (build 18255)\n"
+"X-Launchpad-Export-Date: 2016-11-14 18:49+0000\n"
+"X-Generator: Launchpad (build 18261)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -108,7 +108,7 @@ msgid "%sB used of %sB"
 msgstr "%sB utilizați din %sB"
 
 #, php-format
-msgid "'%s' deletes all statistical data for the selected graphs!"
+msgid "'%s' deletes all statistical data from the graphs!"
 msgstr ""
 
 msgid "(Change if needed)"
@@ -2513,9 +2513,6 @@ msgstr "Utilizare disc"
 msgid "Disk space usage"
 msgstr "Utilizare spaţiu disc"
 
-msgid "Disk usage"
-msgstr "Utilizare disc"
-
 msgid "Disks"
 msgstr "Discuri"
 
@@ -4657,9 +4654,6 @@ msgstr ""
 "erori la test sau 11 dacă capacitorul a fost testat în condiții de "
 "temperatură excesivă, în rest valoarea normală este 100."
 
-msgid "Latency"
-msgstr "Latență"
-
 #, php-format
 msgid "Latest Beta Build: %s"
 msgstr "Ultima versiune Beta disponibilă: %s"
@@ -5126,9 +5120,6 @@ msgstr "Mem"
 msgid "Member Interface"
 msgstr "Interfață Membru"
 
-msgid "Memory"
-msgstr "Memorie"
-
 msgid "Memory (MiB)"
 msgstr "Memorie (MiB)"
 
@@ -5388,9 +5379,6 @@ msgstr ""
 "Rețea autorizată pentru accesul destinațiilor iSCSI. Pot fi utilizate adrese "
 "IP, CIDR sau 'ALL'  pentru orice adresă."
 
-msgid "Network latency"
-msgstr "Latență rețea"
-
 msgid "Network mask"
 msgstr "Mască rețea"
 
@@ -5399,9 +5387,6 @@ msgstr "Port rețea"
 
 msgid "Network that is authorised to access the NFS share."
 msgstr "Rețea autorizată pentru accesul partajării NFS."
-
-msgid "Network traffic"
-msgstr "Trafic rețea"
 
 msgid "Networks"
 msgstr "Rețele"
@@ -8000,6 +7985,9 @@ msgstr "Atributul '%s' trebuie să aibă cel puţin o valoare."
 msgid "The attribute '%s': use a port in the range from %d to %d."
 msgstr "Atributul '%s': folosește un port în intervalul %d - %d."
 
+msgid "The attribute 'Data directory' is required."
+msgstr ""
+
 #, php-format
 msgid "The attribute 'Port': port '%ld' is already taken by another service."
 msgstr "Atributul 'Port': portul '%ld' este deja folosit de un alt serviciu."
@@ -8134,10 +8122,6 @@ msgstr ""
 "Formatul utilizator al imaginii sistemului pentru copia de siguranță poate "
 "fi specificat aici. Formatul implicit este %s folosit pentru imaginile ZFS "
 "generate automat."
-
-msgid "The data directory must be set to a directory <b>below</b> /mnt."
-msgstr ""
-"Directorul pentru date trebuie setat ca un sub-director in <b>/mnt</b>."
 
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr "Portul implicit folosit de serverul SMTP, ex. 25 sau 587."
@@ -9428,6 +9412,9 @@ msgstr "UPS"
 msgid "UPS Identifier"
 msgstr ""
 
+msgid "UPS Identifier and IP address"
+msgstr ""
+
 msgid "UPS Information & Status"
 msgstr "Informații & Stare UPS"
 
@@ -9472,9 +9459,6 @@ msgstr "Firmware UPS"
 
 msgid "UPS goes on battery"
 msgstr "UPS trece pe baterii"
-
-msgid "UPS identifier and IP address"
-msgstr "Identificator UPS și adresă IP"
 
 msgid "UPS model"
 msgstr "Model UPS"
@@ -9603,6 +9587,9 @@ msgstr "Superior"
 
 msgid "Uptime"
 msgstr "Timp de funcționare"
+
+msgid "Uptime Statistics"
+msgstr ""
 
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr ""
@@ -10397,108 +10384,24 @@ msgstr "utilizator"
 msgid "version:"
 msgstr "versiune:"
 
-#, php-format
-#~ msgid ""
-#~ "'%s' deletes all the data for selected statistics. If only a certain "
-#~ "statistic needs to be reset, clear all other check boxes before performing "
-#~ "'%s'."
+#~ msgid "Disk usage"
+#~ msgstr "Utilizare disc"
+
+#~ msgid "Memory"
+#~ msgstr "Memorie"
+
+#~ msgid "Latency"
+#~ msgstr "Latență"
+
+#~ msgid "Network traffic"
+#~ msgstr "Trafic rețea"
+
+#~ msgid "Network latency"
+#~ msgstr "Latență rețea"
+
+#~ msgid "UPS identifier and IP address"
+#~ msgstr "Identificator UPS și adresă IP"
+
+#~ msgid "The data directory must be set to a directory <b>below</b> /mnt."
 #~ msgstr ""
-#~ "'%s' va șterge toate datele pentru statisticile selectate. Dacă doar anumite "
-#~ "statistici trebuie șterse deselectați-le pe toate celelalte înainte de a "
-#~ "executa '%s'."
-
-#~ msgid ""
-#~ "Displays the number of processes in each state (total, running, sleeping, "
-#~ "waiting, starting, stopped, zombie)."
-#~ msgstr ""
-#~ "Afișează numărul de procese pentru fiecare stare (total, running, sleeping, "
-#~ "waiting, starting, stopped, zombie)"
-
-#~ msgid "Displays the length of time the system has been up."
-#~ msgstr "Afișează timpul de funcționare al sistemului."
-
-#~ msgid ""
-#~ "Displays information about memory allocation (active, inact, wired, cache, "
-#~ "buf, free, swap used, swap free)."
-#~ msgstr ""
-#~ "Afișează informații despre alocarea memoriei (active, inact, wired, cache, "
-#~ "buf, free, swap used, swap free)"
-
-#~ msgid ""
-#~ "Displays a percentage of time spent in each of the processor states (user, "
-#~ "nice, system, interrupt, idle)."
-#~ msgstr ""
-#~ "Afișează procentual timpul alocat fiecărei stări a procesorului (user, nice, "
-#~ "system, interrupt, idle)"
-
-#~ msgid "Logarithmic scaling"
-#~ msgstr "Scală logaritmică"
-
-#, php-format
-#~ msgid ""
-#~ "Logarithmic y-axis scaling for %s graphs (can not be used together with "
-#~ "positive/negative y-axis range)."
-#~ msgstr ""
-#~ "Scală logaritmică pe axa Y pentru graficele <b>%s</b> (nu poate fi utilizată "
-#~ "împreună cu afișarea pozitivă/negativă)."
-
-#~ msgid ""
-#~ "If enabled the network throughput is displayed in Bytes/sec rather than "
-#~ "Bits/sec."
-#~ msgstr ""
-#~ "Dacă opțiunea este activată rata de transfer va fi afișată în Bytes/sec în "
-#~ "loc de Bits/sec."
-
-#~ msgid "Statistics for CPU temperature."
-#~ msgstr "Grafice pentru temperatura CPU"
-
-#~ msgid ""
-#~ "Statistics for UPS battery capacity, voltage, load, remaining runtime, input "
-#~ "voltage and the UPS status (online, on battery, charging and offline)."
-#~ msgstr ""
-#~ "Grafice pentru capacitate, tensiune, încărcare, timp disponibil, tensiunea "
-#~ "de intrare și starea UPS-ului (activ, pe acumulator, se încarcă, oprit)"
-
-#~ msgid "Statistics for CPU frequency."
-#~ msgstr "Grafice pentru frecvența CPU"
-
-#, php-format
-#~ msgid ""
-#~ "Show positive/negative values for %s graphs (can not be used together with "
-#~ "logarithmic scaling)."
-#~ msgstr ""
-#~ "Afișează valori pozitive/negative pentru graficele <b>%s</b> (acest mod nu "
-#~ "poate fi utilizat pentru scale logaritmice)."
-
-#~ msgid "Statistics for ZFS ARC (total, MRU, MFU, anon, header, other)."
-#~ msgstr "Grafice pentru ZFS ARC (total, MRU, MFU, anon, header, altele)"
-
-#~ msgid "Statistics for average system load for 1, 5 and 15 minute periods."
-#~ msgstr ""
-#~ "Grafice pentru încărcarea medie a sistemului (perioade de 1,5 și 15 minute)"
-
-#~ msgid "Statistics for disk (mount point) usage."
-#~ msgstr "Grafice pentru utilizarea punctului de montare."
-
-#~ msgid "Statistics for network latency."
-#~ msgstr "Grafice pentru latența rețelei"
-
-#~ msgid "Statistics for incoming/outgoing bits/second for network interfaces."
-#~ msgstr ""
-#~ "Grafice pentru traficul de intrare/ieșire în biți/sec pentru interfețele de "
-#~ "rețea"
-
-#~ msgid ""
-#~ "UPS identifier and host IP address of the machine where the UPS is connected "
-#~ "to (this can be also a remote host)."
-#~ msgstr ""
-#~ "Identificatorul UPS-ului și adresa IP a sistemului la care este conectat "
-#~ "(poate fi și un sistem remote)."
-
-#, php-format
-#~ msgid ""
-#~ "The data directory holds the statistical data for the graphs. This should be "
-#~ "set to a %s to prevent a disk spinning all the time."
-#~ msgstr ""
-#~ "Directorul pentru date stochează datele graficelor. Acesta trebui setat la "
-#~ "%s pentru a preveni rotirea permanentă a discurilor."
+#~ "Directorul pentru date trebuie setat ca un sub-director in <b>/mnt</b>."

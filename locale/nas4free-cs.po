@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-13 18:07+0000\n"
+"POT-Creation-Date: 2016-11-14 05:32+0000\n"
 "PO-Revision-Date: 2016-10-18 21:36+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-13 18:10+0000\n"
-"X-Generator: Launchpad (build 18255)\n"
+"X-Launchpad-Export-Date: 2016-11-14 18:48+0000\n"
+"X-Generator: Launchpad (build 18261)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
 "X-Poedit-Language: Czech\n"
@@ -110,7 +110,7 @@ msgid "%sB used of %sB"
 msgstr "použito %sB z %sB"
 
 #, php-format
-msgid "'%s' deletes all statistical data for the selected graphs!"
+msgid "'%s' deletes all statistical data from the graphs!"
 msgstr ""
 
 msgid "(Change if needed)"
@@ -2508,9 +2508,6 @@ msgstr ""
 msgid "Disk space usage"
 msgstr "Obsazený prostor"
 
-msgid "Disk usage"
-msgstr ""
-
 msgid "Disks"
 msgstr "Disky"
 
@@ -4657,9 +4654,6 @@ msgstr ""
 "(jedenáct) pokud zkouška proběhla v příliš vysoké teplotě. Ve všech "
 "ostatních případech 100."
 
-msgid "Latency"
-msgstr ""
-
 #, php-format
 msgid "Latest Beta Build: %s"
 msgstr "Nejnovější testovací sestavení: %s"
@@ -5141,9 +5135,6 @@ msgstr "Pam."
 msgid "Member Interface"
 msgstr "Účastnící se rozhraní"
 
-msgid "Memory"
-msgstr ""
-
 msgid "Memory (MiB)"
 msgstr "Paměť (MiB)"
 
@@ -5407,9 +5398,6 @@ msgstr ""
 "zápisu CIDR) nebo klíčové slovo ALL (vše) pro umožnění přístupu z libovolné "
 "sítě."
 
-msgid "Network latency"
-msgstr ""
-
 msgid "Network mask"
 msgstr "Síťová maska"
 
@@ -5418,9 +5406,6 @@ msgstr "Síťový port"
 
 msgid "Network that is authorised to access the NFS share."
 msgstr "Síť, ze které umožnit přístup k NFS sdílení."
-
-msgid "Network traffic"
-msgstr ""
 
 msgid "Networks"
 msgstr "Sítě"
@@ -8003,6 +7988,9 @@ msgstr "Je třeba vyplnit alespoň jednu položku atributu %s."
 msgid "The attribute '%s': use a port in the range from %d to %d."
 msgstr "Atribut %s: použijte port z rozsahu %d až %d."
 
+msgid "The attribute 'Data directory' is required."
+msgstr ""
+
 #, php-format
 msgid "The attribute 'Port': port '%ld' is already taken by another service."
 msgstr "Atribut Port: port %ld je už zabraný jinou službou."
@@ -8142,9 +8130,6 @@ msgstr ""
 "Je možná zadat vlastní formát zachyceného stavu pro službu stínová kopie. "
 "Výchozím formátem je %s, používaný automatickým pořizováním zachyceného "
 "stavu ZFS."
-
-msgid "The data directory must be set to a directory <b>below</b> /mnt."
-msgstr ""
 
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr "Výchozí port SMTP poštovního serveru, např. 25 nebo 587."
@@ -9432,6 +9417,9 @@ msgstr "Zdroj nepřeruš. napájení (UPS)"
 msgid "UPS Identifier"
 msgstr ""
 
+msgid "UPS Identifier and IP address"
+msgstr ""
+
 msgid "UPS Information & Status"
 msgstr "UPS zdroj – informace a stav"
 
@@ -9476,9 +9464,6 @@ msgstr "Firmware UPS zdroje"
 
 msgid "UPS goes on battery"
 msgstr "UPS zdroj je nyní napájen z akumulátorů"
-
-msgid "UPS identifier and IP address"
-msgstr ""
 
 msgid "UPS model"
 msgstr "Model UPS zdroje"
@@ -9607,6 +9592,9 @@ msgid "Upper"
 msgstr "Horní"
 
 msgid "Uptime"
+msgstr ""
+
+msgid "Uptime Statistics"
 msgstr ""
 
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
