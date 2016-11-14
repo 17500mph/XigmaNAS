@@ -17,13 +17,13 @@ else BACKGROUND='-c CANVAS#000000'; fi
 CREATE_GRAPHS ()
 {
     GRAPH=${1}
-    GRAPH_NAME="daily";		START_TIME="-1day";	TITLE_STRING="${2} - by day (5 minute averages)"	EXTENDED_OPTIONS="--zoom ${ZOOM_FACTOR} ${AUTOSCALE}"
+    GRAPH_NAME="daily";		START_TIME="-1day";	TITLE_STRING="${2} - by day (5 minute averages)"
     . ${TEMPLATE_DIR}/templates/${1}.sh
-    GRAPH_NAME="weekly";	START_TIME="-1week";	TITLE_STRING="${2} - by week (30 minute averages)"	EXTENDED_OPTIONS="--zoom ${ZOOM_FACTOR} ${AUTOSCALE}"
+    GRAPH_NAME="weekly";	START_TIME="-1week";	TITLE_STRING="${2} - by week (30 minute averages)"
     . ${TEMPLATE_DIR}/templates/${1}.sh
-    GRAPH_NAME="monthly";	START_TIME="-1month";	TITLE_STRING="${2} - by month (2 hour averages)"	EXTENDED_OPTIONS="--zoom ${ZOOM_FACTOR} ${AUTOSCALE}"
+    GRAPH_NAME="monthly";	START_TIME="-1month";	TITLE_STRING="${2} - by month (2 hour averages)"
     . ${TEMPLATE_DIR}/templates/${1}.sh
-    GRAPH_NAME="yearly";	START_TIME="-1year";	TITLE_STRING="${2} - by year (12 hour averages)"	EXTENDED_OPTIONS="--zoom ${ZOOM_FACTOR} ${AUTOSCALE}"
+    GRAPH_NAME="yearly";	START_TIME="-1year";	TITLE_STRING="${2} - by year (12 hour averages)"
     . ${TEMPLATE_DIR}/templates/${1}.sh
 }
 

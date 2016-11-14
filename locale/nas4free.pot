@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-11-13 18:07+0000\n"
+"POT-Creation-Date: 2016-11-14 05:32+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -100,7 +100,7 @@ msgid "%sB used of %sB"
 msgstr ""
 
 #, php-format
-msgid "'%s' deletes all statistical data for the selected graphs!"
+msgid "'%s' deletes all statistical data from the graphs!"
 msgstr ""
 
 msgid "(Change if needed)"
@@ -2075,9 +2075,6 @@ msgstr ""
 msgid "Disk space usage"
 msgstr ""
 
-msgid "Disk usage"
-msgstr ""
-
 msgid "Disks"
 msgstr ""
 
@@ -3934,9 +3931,6 @@ msgstr ""
 msgid "Last test result as microseconds to discharge cap, saturated at its maximum value. Also logs minutes since last test and lifetime number of tests. Raw value contains the following data: Bytes 0-1: Last test result as microseconds to discharge cap, saturates at max value. Test result expected in range 25 <= result <= 5000000, lower indicates specific error code. Bytes 2-3: Minutes since last test, saturates at max value. Bytes 4-5: Lifetime number of tests, not incremented on power cycle, saturates at max value. Normalized value is set to one on test failure or 11 if the capacitor has been tested in an excessive temperature condition, otherwise 100."
 msgstr ""
 
-msgid "Latency"
-msgstr ""
-
 #, php-format
 msgid "Latest Beta Build: %s"
 msgstr ""
@@ -4358,9 +4352,6 @@ msgstr ""
 msgid "Member Interface"
 msgstr ""
 
-msgid "Memory"
-msgstr ""
-
 msgid "Memory (MiB)"
 msgstr ""
 
@@ -4604,9 +4595,6 @@ msgstr ""
 msgid "Network authorised to access to the iSCSI target. It takes IP or CIDR addresses or 'ALL' for any IPs."
 msgstr ""
 
-msgid "Network latency"
-msgstr ""
-
 msgid "Network mask"
 msgstr ""
 
@@ -4614,9 +4602,6 @@ msgid "Network port"
 msgstr ""
 
 msgid "Network that is authorised to access the NFS share."
-msgstr ""
-
-msgid "Network traffic"
 msgstr ""
 
 msgid "Networks"
@@ -6915,6 +6900,9 @@ msgstr ""
 msgid "The attribute '%s': use a port in the range from %d to %d."
 msgstr ""
 
+msgid "The attribute 'Data directory' is required."
+msgstr ""
+
 #, php-format
 msgid "The attribute 'Port': port '%ld' is already taken by another service."
 msgstr ""
@@ -6991,9 +6979,6 @@ msgstr ""
 
 #, php-format
 msgid "The custom format of the snapshot for shadow copy service can be specified. The default format is %s used for ZFS auto snapshot."
-msgstr ""
-
-msgid "The data directory must be set to a directory <b>below</b> /mnt."
 msgstr ""
 
 msgid "The default SMTP mail server port, e.g. 25 or 587."
@@ -7859,6 +7844,9 @@ msgstr ""
 msgid "UPS Identifier"
 msgstr ""
 
+msgid "UPS Identifier and IP address"
+msgstr ""
+
 msgid "UPS Information & Status"
 msgstr ""
 
@@ -7902,9 +7890,6 @@ msgid "UPS firmware"
 msgstr ""
 
 msgid "UPS goes on battery"
-msgstr ""
-
-msgid "UPS identifier and IP address"
 msgstr ""
 
 msgid "UPS model"
@@ -8032,6 +8017,9 @@ msgid "Upper"
 msgstr ""
 
 msgid "Uptime"
+msgstr ""
+
+msgid "Uptime Statistics"
 msgstr ""
 
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
