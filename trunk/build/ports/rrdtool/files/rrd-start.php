@@ -42,7 +42,6 @@ if (isset($config['rrdgraphs']['enable'])) {
 		fwrite($rrdconfig, "STORAGE_PATH={$config['rrdgraphs']['storage_path']}"."\n");
 		fwrite($rrdconfig, "GRAPH_H={$config['rrdgraphs']['graph_h']}"."\n");
 		fwrite($rrdconfig, "REFRESH_TIME={$config['rrdgraphs']['refresh_time']}"."\n");
-		fwrite($rrdconfig, "ZOOM_FACTOR={$config['rrdgraphs']['zoom_factor']}"."\n");
 		$txt = isset($config['rrdgraphs']['autoscale']) ? "--alt-autoscale" : "";
 		fwrite($rrdconfig, "AUTOSCALE=".$txt."\n");
 		$txt = isset($config['rrdgraphs']['background_white']) ? "1" : "0";
