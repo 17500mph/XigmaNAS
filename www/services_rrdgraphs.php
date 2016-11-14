@@ -412,8 +412,8 @@ function enable_change(enable_change) {
 			html_checkbox2('disk_usage', gtext('Disk Usage'), $pconfig['disk_usage'], gtext('Enable collecting disk space usage statistics.'), '', false);
 			html_checkbox2('load_averages', gtext('Load Averages'), $pconfig['load_averages'], gtext('Enable collecting average system load statistics.'), '', false);
 			html_checkbox2('memory_usage', gtext('Memory Usage'), $pconfig['memory_usage'], gtext('Enable collecting memory usage statistics.'), '', false);
-			html_checkbox2('latency', gtext('Network Latency'), $pconfig['latency'], gtext('Enable collecting network latency statistics.'), '', false, false, 'latency_change()');
-			html_inputbox2('latency_host', gtext('Host'), $pconfig['latency_host'], gtext('Destination host name or IP address.'), false, 20);
+/* needs get fixed	html_checkbox2('latency', gtext('Network Latency'), $pconfig['latency'], gtext('Enable collecting network latency statistics.'), '', false, false, 'latency_change()');
+no date to graph	html_inputbox2('latency_host', gtext('Host'), $pconfig['latency_host'], gtext('Destination host name or IP address.'), false, 20);
 			$a_option = [];
 			foreach($a_interface as $if => $ifinfo) {
 				$ifinfo = get_interface_info($if);
@@ -431,6 +431,7 @@ function enable_change(enable_change) {
 			}
 			html_combobox2('latency_count', gtext('Count'), $pconfig['latency_count'], $latency_a_count, gtext('Stop after sending (and receiving) N packets.'), false);
 			html_inputbox2('latency_parameters', gtext('Auxiliary parameters'), $pconfig['latency_parameters'], gtext('These parameters will be added to the ping command.')." ".sprintf(gtext('Please check the %s documentation%s.'), "<a href=http://www.freebsd.org/cgi/man.cgi?query=ping&amp;apropos=0&amp;sektion=0&amp;format=html target='_blank'>", "</a>"), false, 60);
+*/
 			html_checkbox2('lan_load', gtext('Network Traffic'), $pconfig['lan_load'], gtext('Enable collecting network trafic statistics.'), '', false, false, 'lan_change()');
 			html_checkbox2('bytes_per_second', gtext('Bytes/sec'), $pconfig['bytes_per_second'], gtext('Use Bytes/sec instead of Bits/sec for network throughput display.'), "", false);
 			html_checkbox2('logarithmic', gtext('Logarithmic Scaling'), $pconfig['logarithmic'], sprintf(gtext('Use logarithmic y-axis scaling for %s graphs. (can not be used together with positive/negative y-axis range)'), gtext('network traffic')), "", false, false, 'logarithmic_change()');
