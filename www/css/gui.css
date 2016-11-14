@@ -126,77 +126,32 @@ pre {
 .area_data_settings_col_data {
 	width: 78%;
 }
-.celltag {
+.celltag, .celltagreq, .celltagalt, .celltagreqalt {
 	border-bottom: 1px solid #999999;
 	background-color: #D6D6D6;
-	padding-top: 4px;
-	padding-bottom: 4px;
 	padding-left: 8px;
 	padding-right: 20px;
+	vertical-align: top;
+}
+.celltag, .celltagalt {
 	font-weight: normal;
-	vertical-align: top;
 }
-.celltagreq {
-	border-bottom: 1px solid #999999;
-	background-color: #D6D6D6;
-	padding-top: 4px;
-	padding-bottom: 4px;
-	padding-left: 8px;
-	padding-right: 20px;
+.celltagreq, .celltagreqalt {
 	font-weight: bold;
-	vertical-align: top;
 }
-.celltagalt {
+.celldata, .celldatareq, .celldataalt, .celldatareqalt {
 	border-bottom: 1px solid #999999;
-	background-color: #D6D6D6;
-	padding-top: 1px;
-	padding-bottom: 1px;
 	padding-left: 8px;
 	padding-right: 20px;
-	font-weight: normal;
 	vertical-align: top;
 }
-.celltagreqalt {
-	border-bottom: 1px solid #999999;
-	background-color: #D6D6D6;
-	padding-top: 1px;
-	padding-bottom: 1px;
-	padding-left: 8px;
-	padding-right: 20px;
-	font-weight: bold;
-	vertical-align: top;
-}
-.celldata {
-	border-bottom: 1px solid #999999;
+.celltag, .celltagreq, .celldata, .celldatareq {
 	padding-top: 4px;
 	padding-bottom: 4px;
-	padding-left: 8px;
-	padding-right: 20px;
-	vertical-align: top;
 }
-.celldatareq {
-	border-bottom: 1px solid #999999;
-	padding-top: 4px;
-	padding-bottom: 4px;
-	padding-left: 8px;
-	padding-right: 20px;
-	vertical-align: top;
-}
-.celldataalt {
-	border-bottom: 1px solid #999999;
+.celltagalt, .celltagreqalt, .celldataalt, .celldatareqalt {
 	padding-top: 1px;
 	padding-bottom: 1px;
-	padding-left: 8px;
-	padding-right: 20px;
-	vertical-align: top;
-}
-.celldatareqalt {
-	border-bottom: 1px solid #999999;
-	padding-top: 1px;
-	padding-bottom: 1px;
-	padding-left: 8px;
-	padding-right: 20px;
-	vertical-align: top;
 }
 .cellabout {
 	font-size: 11px;
