@@ -42,19 +42,6 @@ if (!(isset($config['rrdgraphs']) && is_array($config['rrdgraphs']))) {
 
 $upsname = !empty($config['ups']['upsname']) ? $config['ups']['upsname'] : "identifier";
 $upsip = !empty($config['ups']['ip']) ? $config['ups']['ip'] : "host-ip-address";
- 
-function cronjob_process_updatenotification($mode, $data) {
-	global $config;
-	$retval = 0;
-	switch ($mode) {
-		case UPDATENOTIFY_MODE_NEW:
-		case UPDATENOTIFY_MODE_MODIFIED:
-			break;
-		case UPDATENOTIFY_MODE_DIRTY:
-			break;
-	}
-	return $retval;
-}
 
 /* Check if the directory exists, the mountpoint has at least o=rx permissions and
  * set the permission to 775 for the last directory in the path
@@ -154,7 +141,7 @@ if (isset($_POST['save']) && $_POST['save']) {
 			$config['rrdgraphs']['enable'] = isset($_POST['enable']) ? true : false;
 
 			$savemsg = get_std_save_message(write_config());
-			exec("logger rrdgraphs: disabled, shutdown ...");
+			exec("logger rrdgraphs service stopped");
 			if (!file_exists($d_sysrebootreqd_path)) {
 			config_lock();
 			$retval |= rc_update_service("cron");

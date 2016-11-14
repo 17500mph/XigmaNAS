@@ -35,7 +35,7 @@ require_once("config.inc");
 $runtime_dir = "/usr/local/share/rrdgraphs";
 
 if (isset($config['rrdgraphs']['enable'])) {
-	exec("logger rrdgraphs: enabled, starting ...");
+	exec("logger rrdgraphs service started");
 
 // create config file - for booleans we need the variable $txt
 	$rrdconfig = fopen("{$config['rrdgraphs']['storage_path']}/CONFIG.sh", "w");
