@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
 "POT-Creation-Date: 2016-11-14 05:32+0000\n"
-"PO-Revision-Date: 2016-11-14 18:33+0000\n"
+"PO-Revision-Date: 2016-11-14 19:28+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-14 18:49+0000\n"
+"X-Launchpad-Export-Date: 2016-11-15 13:22+0000\n"
 "X-Generator: Launchpad (build 18261)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -932,7 +932,7 @@ msgstr "Приєднано"
 
 #, php-format
 msgid "Attaching provider '%s'."
-msgstr "Приєдную провайдера '%s'."
+msgstr "Приєднання провайдера '%s'."
 
 msgid ""
 "Attempting to use other file formats such as FAT, FAT32, EXT2, EXT3, EXT4 or "
@@ -1259,10 +1259,10 @@ msgid "CP1251 (Cyrillic)"
 msgstr "CP1251 (Кирилиця)"
 
 msgid "CP1252 (Latin 1)"
-msgstr "CP1252 (Latin 1)"
+msgstr "CP1252 (Латиниця 1)"
 
 msgid "CP437 (Latin US)"
-msgstr "CP437 (Latin US)"
+msgstr "CP437 (Латиниця США)"
 
 msgid "CP850 (Latin 1)"
 msgstr "CP850 (Латиниця 1)"
@@ -1782,7 +1782,7 @@ msgid ""
 msgstr ""
 "Кількість операцій переназначення. Значення цього атрибута визначає загальну "
 "кількість спроб перенесення даних з переназначеного сектора в запасну "
-"область. Рухуються як упішні так і неуспішні спроби."
+"область. Рахуються як успішні так і неуспішні спроби."
 
 msgid ""
 "Count of retry of spin start attempts. This attribute stores a total count "
@@ -1863,7 +1863,7 @@ msgid "Creating filesystem with 'Soft Updates'"
 msgstr "Створення файлової системи з \"Soft Updates\""
 
 msgid "Creating partition"
-msgstr "Створюю розділ"
+msgstr "Створення розділу"
 
 msgid "Creation"
 msgstr "Створення"
@@ -1914,7 +1914,7 @@ msgid "Custom"
 msgstr "Користувацький"
 
 msgid "Custom device"
-msgstr "Спеціальний пристрій."
+msgstr "Спеціальний пристрій"
 
 msgid "Custom script"
 msgstr "Користувацький скрипт"
@@ -2071,7 +2071,7 @@ msgstr ""
 "Rsync."
 
 msgid "Default Device Settings"
-msgstr "Налаштування пристроя за замовчуванням."
+msgstr "Налаштування пристрою за замовчуванням"
 
 #, php-format
 msgid "Default is %s %s."
@@ -2284,7 +2284,7 @@ msgid "Destination host name or IP number."
 msgstr "Хост або IP адреса призначення."
 
 msgid "Destination network"
-msgstr "Мережа призначення."
+msgstr "Мережа призначення"
 
 msgid "Destination network bit count"
 msgstr "Кількість біт маски підмережі призначення"
@@ -2432,7 +2432,7 @@ msgid "Directory that contains removable media. (e.g /mnt/iscsi/)"
 msgstr "Директорія, що містить змінний носій. (e.g /mnt/iscsi/)"
 
 msgid "Directory to watch for new .torrent files."
-msgstr "Директорія де слідкувати за новими .torrent-файлами."
+msgstr "Директорія очікування нових .torrent-файлів."
 
 msgid "Disable Firmware Update"
 msgstr "Заборонити оновлення прошивки"
@@ -2441,28 +2441,28 @@ msgid "Disable Selected Commands"
 msgstr "Заборонити обрані команди"
 
 msgid "Disable Selected Jobs"
-msgstr "Деактивувати вибрані завдання"
+msgstr "Заборонити вибрані завдання"
 
 msgid "Disable Selected Options"
-msgstr "Деактивувати вибрані опції"
+msgstr "Заборонити вибрані опції"
 
 msgid "Disable TCP wrapper (mod_wrap module)."
-msgstr "Вимкнути обгортку TCP (модуль mod_wrap)."
+msgstr "Заборонити обгортку TCP (модуль mod_wrap)."
 
 msgid "Disable console menu."
-msgstr "Деактивувати консольне меню"
+msgstr "Заборонити консольне меню"
 
 msgid "Disable file manager completely."
-msgstr "Повністю деактивувати файловий менеджер"
+msgstr "Повністю заборонити файловий менеджер"
 
 msgid "Disable firmware version check."
-msgstr "Вимкнути перевірку версії прошивки."
+msgstr "Заборонити перевірку версії прошивки."
 
 msgid "Disable speaker beep on startup and shutdowns."
-msgstr "Відключити звуковий сигнал при запуску і вимиканні."
+msgstr "Заборонити звуковий сигнал при запуску і вимиканні."
 
 msgid "Disable the compression of repeated line."
-msgstr "Відключити стиск повторної лінії."
+msgstr "Заборонити стиск повторної лінії."
 
 msgid "Disabled"
 msgstr "Вимкнено"
@@ -2544,7 +2544,7 @@ msgid ""
 "cleared and overwritten."
 msgstr ""
 "Ви дійсно хочете виконати очистку та імпорт?\\nІснуюча конфігурацію буде "
-"очищено і перезаписано."
+"очищена і перезаписана."
 
 msgid "Do you really want to delete all data from the selected statistics?"
 msgstr "Ви дійсно хочете видалити всі дані з обраних статистик?"
@@ -2565,7 +2565,7 @@ msgid "Do you really want to delete this VM?"
 msgstr "Ви справді хочете видалити цю віртуальну машину?"
 
 msgid "Do you really want to delete this auth group?"
-msgstr "Ви дійсно хочете видалити цю авторизаційну групу?"
+msgstr "Ви дійсно хочете видалити цю групу авторизації?"
 
 msgid "Do you really want to delete this auto snapshot?"
 msgstr "Ви дійсно хочете видалити цей автоматичний знімок?"
@@ -2915,7 +2915,7 @@ msgid "Edit Volume"
 msgstr "Редагувати том"
 
 msgid "Edit auth group"
-msgstr "Редагувати авторизаційну групу"
+msgstr "Редагувати групу авторизації"
 
 msgid "Edit auto snapshot"
 msgstr "Редагувати автоматичний знімок"
@@ -2979,7 +2979,7 @@ msgstr "Редагувати користувача"
 
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
-msgstr "Ефективність ДБЖ (Рівень вихідного струму відносно вхідного)"
+msgstr "Ефективність ДБЖ (Співвідношення вихідного струму до вхідного)"
 
 msgid "Email"
 msgstr "Електронна пошта"
@@ -3081,13 +3081,13 @@ msgid "Enable authentication."
 msgstr "Увімкнути автентифікацію."
 
 msgid "Enable collecting CPU frequency statistics."
-msgstr "Увімкнути збір статистики про частоту ЦП"
+msgstr "Увімкнути збір статистики про частоту ЦП."
 
 msgid "Enable collecting CPU temperature statistics."
-msgstr "Увімкнути збір статистики про температуру ЦП"
+msgstr "Увімкнути збір статистики про температуру ЦП."
 
 msgid "Enable collecting CPU usage statistics."
-msgstr "Увімкнути збір статистики про використання ЦП"
+msgstr "Увімкнути збір статистики про використання ЦП."
 
 msgid "Enable collecting UPS statistics."
 msgstr "Увімкнути збір статистики про ДБЖ(UPS)."
@@ -3525,7 +3525,7 @@ msgid "Failed"
 msgstr "Помилка"
 
 msgid "Failed to create in-memory file system."
-msgstr "Не вдалося створити файлову систему в пам'яті"
+msgstr "Не вдалося створити файлову систему в пам'яті."
 
 msgid "Failed to execute command zfs."
 msgstr "Відмова виконання команди zfs."
@@ -3652,7 +3652,7 @@ msgid "Firmware upload failed (out of memory?)"
 msgstr "Не вдалося завантажити прошивку (недостатньо пам'яті?)"
 
 msgid "Firmware uploading is not supported on this platform."
-msgstr "Ця платформа не підтримує завантаження прошивок"
+msgstr "Ця платформа не підтримує завантаження прошивок."
 
 msgid "Firmware version"
 msgstr "Версія прошивки"
@@ -10345,25 +10345,3 @@ msgstr "користувач"
 
 msgid "version:"
 msgstr "версія:"
-
-#~ msgid "Disk usage"
-#~ msgstr "Використання диска"
-
-#~ msgid "Memory"
-#~ msgstr "Пам’ять"
-
-#~ msgid "Latency"
-#~ msgstr "Затримка"
-
-#~ msgid "Network traffic"
-#~ msgstr "Мережевий трафік"
-
-#~ msgid "Network latency"
-#~ msgstr "Латентність (затримка) мережі"
-
-#~ msgid "UPS identifier and IP address"
-#~ msgstr "Ідентифікатор UPS та IP-адреса"
-
-#~ msgid "The data directory must be set to a directory <b>below</b> /mnt."
-#~ msgstr ""
-#~ "Каталог даних повинен бути встановлений в каталозі <b>нижче</ b> /mnt."
