@@ -37,7 +37,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gtext("Advanced"), gtext("Execute command"));
+$pgtitle = array(gtext("Tools"), gtext("Execute command"));
 
 if ((isset($_POST['submit']) && $_POST['submit'] == gtext("Download")) && file_exists($_POST['dlPath'])) {
 	session_cache_limiter('public');
