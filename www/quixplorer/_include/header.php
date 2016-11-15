@@ -175,7 +175,7 @@ $menu['status']['menuitem'][] = array("desc" => gtext("Interfaces"), "link" => "
 $menu['status']['menuitem'][] = array("desc" => gtext("Disks"), "link" => "../status_disks.php", "visible" => TRUE);
 $menu['status']['menuitem'][] = array("desc" => gtext("Monitoring"), "link" => "../status_graph.php", "visible" => TRUE);
 
-// Advanced
+// Tools
 $menu['tools']['desc'] = gtext("Tools");
 $menu['tools']['visible'] = TRUE;
 $menu['tools']['link'] = "../index.php";
@@ -273,7 +273,7 @@ function include_ext_menu() {
 function show_header($title, $additional_header_content = null)
 {
     global $site_name, $g, $config;
-	$pgtitle = [gtext('Advanced'), gtext('File Manager')];
+	$pgtitle = [gtext('Tools'), gtext('File Manager')];
 
 	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 	header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");

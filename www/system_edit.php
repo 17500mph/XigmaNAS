@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gtext("Advanced"), gtext("File Editor"));
+$pgtitle = array(gtext("Tools"), gtext("File Editor"));
 
 $savetopath = "";
 if (isset($_POST['savetopath']))
