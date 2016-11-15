@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-14 05:32+0000\n"
-"PO-Revision-Date: 2016-11-12 14:52+0000\n"
+"PO-Revision-Date: 2016-11-14 20:22+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-14 18:49+0000\n"
+"X-Launchpad-Export-Date: 2016-11-15 13:21+0000\n"
 "X-Generator: Launchpad (build 18261)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -109,7 +109,7 @@ msgstr "%sB utilizați din %sB"
 
 #, php-format
 msgid "'%s' deletes all statistical data from the graphs!"
-msgstr ""
+msgstr "'%s' a șters toate datele statistice ale graficelor!"
 
 msgid "(Change if needed)"
 msgstr "(Modifică dacă este necesar)"
@@ -1015,7 +1015,7 @@ msgid "Available"
 msgstr "Disponibil"
 
 msgid "Available Graphs"
-msgstr ""
+msgstr "Grafice disponibile"
 
 msgid ""
 "Average performance of seek operations of the magnetic heads. If this "
@@ -1034,7 +1034,7 @@ msgid "Back"
 msgstr "Înapoi"
 
 msgid "Background"
-msgstr ""
+msgstr "Fundal"
 
 msgid "Backup Configuration"
 msgstr "Configurație backup"
@@ -1595,7 +1595,7 @@ msgid "Content"
 msgstr "Conținut"
 
 msgid "Continue"
-msgstr ""
+msgstr "Continuă"
 
 msgid "Controller"
 msgstr "Controler"
@@ -3090,40 +3090,40 @@ msgid "Enable authentication."
 msgstr "Activare autentificare."
 
 msgid "Enable collecting CPU frequency statistics."
-msgstr ""
+msgstr "Activare colectare date statistice frecvență CPU."
 
 msgid "Enable collecting CPU temperature statistics."
-msgstr ""
+msgstr "Activare colectare date statistice temperatură CPU."
 
 msgid "Enable collecting CPU usage statistics."
-msgstr ""
+msgstr "Activare colectare date statistice utilizare CPU."
 
 msgid "Enable collecting UPS statistics."
-msgstr ""
+msgstr "Activare colectare date statistice UPS."
 
 msgid "Enable collecting ZFS ARC usage statistics."
-msgstr ""
+msgstr "Activare colectare date statistice ZFS ARC."
 
 msgid "Enable collecting average system load statistics."
-msgstr ""
+msgstr "Activare colectare date statistice încărcare sistem."
 
 msgid "Enable collecting disk space usage statistics."
-msgstr ""
+msgstr "Activare colectare date statistice utilizare spațiu disc."
 
 msgid "Enable collecting memory usage statistics."
-msgstr ""
+msgstr "Activare colectare date statistice utilizare memorie."
 
 msgid "Enable collecting network latency statistics."
-msgstr ""
+msgstr "Activare colectare date statistice latență rețea."
 
 msgid "Enable collecting network trafic statistics."
-msgstr ""
+msgstr "Activare colectare date statistice trafic rețea."
 
 msgid "Enable collecting system process statistics."
-msgstr ""
+msgstr "Activare colectare date statistice procese sistem."
 
 msgid "Enable collecting uptime statistics."
-msgstr ""
+msgstr "Activare colectare date statistice timp funcționare."
 
 msgid "Enable compression."
 msgstr "Activare compresie."
@@ -3253,7 +3253,7 @@ msgid "Enable tuning switch"
 msgstr "Activare opțiuni optimizare"
 
 msgid "Enable white background graphs. (black by default)"
-msgstr ""
+msgstr "Activare fundal alb (implicit este negru)"
 
 msgid "Enable write cache mode."
 msgstr "Activare mod cache la scriere."
@@ -3327,6 +3327,8 @@ msgid ""
 "Enter the UPS identifier and host IP address of the machine where the UPS is "
 "connected to. (this also can be a remote host)"
 msgstr ""
+"Introduceți identificatorul pentru UPS și adresa IP a sistemului la care "
+"este conectat UPS-ul (poate fi și un sistem remote)."
 
 msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
@@ -3346,6 +3348,9 @@ msgid ""
 "Enter the path to the home directory of rrdgraphs. The data directory holds "
 "the statistical data for the graphs and will be updated every 5 minutes."
 msgstr ""
+"Introduceți calea către directorul home a rrdgraphs. Directorul pentru date "
+"va stoca datele statistice pentru grafice și va fi actualizat o dată la "
+"fiecare 5 minute."
 
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
@@ -4143,6 +4148,8 @@ msgid ""
 "If only specific statistics needs to be reset, clear all other check boxes "
 "before performing '%s'."
 msgstr ""
+"Bifați doar statisticile pe care doriți să le ștergeți înainte de a efectua "
+"'%s'."
 
 msgid ""
 "If the server is behind a proxy set these parameters to give local services "
@@ -4855,7 +4862,7 @@ msgid "Log packets that are handled by this rule to syslog."
 msgstr "Memorare pachete gestionate de această regulă în syslog."
 
 msgid "Logarithmic Scaling"
-msgstr ""
+msgstr "Scală logaritmică"
 
 msgid "Logical Block Length"
 msgstr "Lungime Block Logic"
@@ -7220,6 +7227,8 @@ msgid ""
 "Show positive/negative values for %s graphs. (can not be used together with "
 "logarithmic scaling)"
 msgstr ""
+"Afișare valori pozitive/negative pentru graficele %s (nu pot fi utilizate "
+"pentru scalele logaritmice)"
 
 msgid "Shutdown"
 msgstr "Oprire"
@@ -7613,7 +7622,7 @@ msgid "System Message"
 msgstr "Mesaj Sistem"
 
 msgid "System Processes"
-msgstr ""
+msgstr "Procese sistem"
 
 msgid "System Settings"
 msgstr "Setări sistem"
@@ -7822,7 +7831,7 @@ msgid "The TCP port must be a valid port number."
 msgstr "Trebuie să introduceți un port TCP valid."
 
 msgid "The UPS identifier and IP address"
-msgstr ""
+msgstr "Identificatorul UPS și adresa IP"
 
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr "ID-ul VLAN trebuie să fie în intervalul 1-4094."
@@ -7986,7 +7995,7 @@ msgid "The attribute '%s': use a port in the range from %d to %d."
 msgstr "Atributul '%s': folosește un port în intervalul %d - %d."
 
 msgid "The attribute 'Data directory' is required."
-msgstr ""
+msgstr "Definiți directorul 'Date'"
 
 #, php-format
 msgid "The attribute 'Port': port '%ld' is already taken by another service."
@@ -9410,10 +9419,10 @@ msgid "UPS"
 msgstr "UPS"
 
 msgid "UPS Identifier"
-msgstr ""
+msgstr "Identificator UPS"
 
 msgid "UPS Identifier and IP address"
-msgstr ""
+msgstr "Identificator UPS și adresă IP"
 
 msgid "UPS Information & Status"
 msgstr "Informații & Stare UPS"
@@ -9428,7 +9437,7 @@ msgid "UPS On Line"
 msgstr "UPS activ"
 
 msgid "UPS Statistics"
-msgstr ""
+msgstr "Statistici UPS"
 
 msgid "UPS Status"
 msgstr "Stare UPS"
@@ -9589,10 +9598,11 @@ msgid "Uptime"
 msgstr "Timp de funcționare"
 
 msgid "Uptime Statistics"
-msgstr ""
+msgstr "Statistici funcționare"
 
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr ""
+"Folosiți Bytes/sec în loc de Bits/sec pentru graficul traficului în rețea."
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
@@ -9619,6 +9629,8 @@ msgid ""
 "Use logarithmic y-axis scaling for %s graphs. (can not be used together with "
 "positive/negative y-axis range)"
 msgstr ""
+"Folosiți scala logaritmică pe axa y pentru graficul %s (nu poate fi folosită "
+"pentru valori pozitive/negative pe axa y)."
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -10178,7 +10190,7 @@ msgid "ZFS ARC"
 msgstr "ZFS ARC"
 
 msgid "ZFS ARC Usage"
-msgstr ""
+msgstr "Utilizare ZFS ARC"
 
 msgid "ZFS Dataset Information & Status"
 msgstr "Informații & Stare sistem ZFS"
@@ -10322,7 +10334,7 @@ msgid "n/a"
 msgstr "n/a"
 
 msgid "network traffic"
-msgstr ""
+msgstr "trafic rețea"
 
 msgid "no new encrypted disk found."
 msgstr "nu a fost găsit niciun disc nou criptat."
@@ -10383,25 +10395,3 @@ msgstr "utilizator"
 
 msgid "version:"
 msgstr "versiune:"
-
-#~ msgid "Disk usage"
-#~ msgstr "Utilizare disc"
-
-#~ msgid "Memory"
-#~ msgstr "Memorie"
-
-#~ msgid "Latency"
-#~ msgstr "Latență"
-
-#~ msgid "Network traffic"
-#~ msgstr "Trafic rețea"
-
-#~ msgid "Network latency"
-#~ msgstr "Latență rețea"
-
-#~ msgid "UPS identifier and IP address"
-#~ msgstr "Identificator UPS și adresă IP"
-
-#~ msgid "The data directory must be set to a directory <b>below</b> /mnt."
-#~ msgstr ""
-#~ "Directorul pentru date trebuie setat ca un sub-director in <b>/mnt</b>."
