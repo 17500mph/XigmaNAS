@@ -1,5 +1,5 @@
 # states:   active, inact, wired, cache, Buf, free
-/usr/local/bin/rrdtool graph $WORKING_DIR/rrd/rrd-${GRAPH}_${GRAPH_NAME}.png    \
+/usr/local/bin/rrdtool graph $WORKING_DIR/rrd/rrd-${GRAPH}_${GRAPH_NAME}.png \
 "-v Bytes" \
 "-s" "$START_TIME" \
 "-t" "$TITLE_STRING" \
