@@ -33,7 +33,6 @@
 	//Set the language array
 	$lang = array(
 		'en_US'	=> 'English',
-		'sq'		=> 'Shqip',
 		'bg'		=> 'Български',
 		'cs'		=> 'čeština',
 		'da'		=> 'Dansk',
@@ -46,7 +45,6 @@
 		'it'		=> 'Italiano',
 		'ja'		=> '日本語',
 		'ko'		=> '한국어',
-		'lv'		=> 'Latviešu',
 		'nl'		=> 'Nederlands',
 		'nb'		=> 'Norsk (bokmål)',
 		'pl'		=> 'Polski',
