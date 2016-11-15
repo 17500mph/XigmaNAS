@@ -131,6 +131,7 @@ $menu['services']['menuitem'][] = array("desc" => gtext("UPS"), "link" => "../se
 $menu['services']['menuitem'][] = array("desc" => gtext("Webserver"), "link" => "../services_websrv.php", "visible" => TRUE);
 $menu['services']['menuitem'][] = array("desc" => gtext("BitTorrent"), "link" => "../services_bittorrent.php", "visible" => TRUE);
 $menu['services']['menuitem'][] = array("desc" => gtext("LCDproc"), "link" => "../services_lcdproc.php", "visible" => TRUE);
+$menu['services']['menuitem'][] = array("desc" => gtext('RRDGraphs'), "link" => "../services_rrdgraphs.php", "visible" => TRUE);
 } else {
 $menu['services']['menuitem'][] = array("desc" => gtext("SSH"), "link" => "../services_sshd.php", "visible" => TRUE);
 $menu['services']['menuitem'][] = array("desc" => gtext("NFS"), "link" => "../services_nfs.php", "visible" => TRUE);
