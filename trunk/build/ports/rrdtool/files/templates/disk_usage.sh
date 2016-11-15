@@ -1,5 +1,5 @@
 CLEAN_NAME=`echo -e ${DISK_NAME} | awk '{gsub("/","-"); print}'`
-/usr/local/bin/rrdtool graph $WORKING_DIR/rrd/rrd-mnt_${CLEAN_NAME}_${GRAPH_NAME}.png    \
+/usr/local/bin/rrdtool graph $WORKING_DIR/rrd/rrd-mnt_${CLEAN_NAME}_${GRAPH_NAME}.png \
 "-s" "$START_TIME" \
 "-t" "$TITLE_STRING" \
 $BACKGROUND \

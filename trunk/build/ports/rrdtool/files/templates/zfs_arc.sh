@@ -1,5 +1,5 @@
 # ARC: 712K Total, 146K MFU, 347K MRU, 16K Anon, 12K Header, 190K Other
-/usr/local/bin/rrdtool graph $WORKING_DIR/rrd/rrd-${GRAPH}_${GRAPH_NAME}.png    \
+/usr/local/bin/rrdtool graph $WORKING_DIR/rrd/rrd-${GRAPH}_${GRAPH_NAME}.png \
 "-v Bytes" \
 "-s" "$START_TIME" \
 "-t" "$TITLE_STRING" \

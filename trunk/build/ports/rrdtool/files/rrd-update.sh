@@ -7,7 +7,7 @@
 #date
 WORKING_DIR="/var/run/rrdgraphs"
 STORAGE_PATH=`/usr/local/bin/xml sel -t -v "//rrdgraphs/storage_path" /conf/config.xml`
-. $STORAGE_PATH/CONFIG.sh
+. $STORAGE_PATH/rrd_config
 
 # function converts SI units (K, M, G, T bits/bytes) to bits/bytes: factor 1000 instead of 1024 because RRDTool converts not binary
 CALC_SI ()
@@ -87,7 +87,7 @@ while [ "${1}" != "" ]; do
         Wired)  CALC_SI ${2}; wired=${CRESULT};;
         Cache)  CALC_SI ${2}; cache=${CRESULT};;
         Buf)    CALC_SI ${2}; buf=${CRESULT};;
-        Free)	CALC_SI ${2}; free=${CRESULT};;
+        Free)   CALC_SI ${2}; free=${CRESULT};;
         Total)  CALC_SI ${2}; swaptotal=${CRESULT};;
         Used)   CALC_SI ${2}; swapused=${CRESULT};;
     esac
@@ -102,12 +102,12 @@ total=${2}
 running=0; sleeping=0; waiting=0; starting=0; stopped=0; zombie=0
 while [ "${3}" != "" ]; do
    case ${3} in
-        running)	running=${4};;
-        sleeping)	sleeping=${4};;
-        waiting)	waiting=${4};;
+        running)    running=${4};;
+        sleeping)   sleeping=${4};;
+        waiting)    waiting=${4};;
         starting)   starting=${4};;
-        stopped)	stopped=${4};;
-        zombie)		zombie=${4};;
+        stopped)    stopped=${4};;
+        zombie)     zombie=${4};;
     esac
     shift
 done
@@ -124,7 +124,7 @@ while [ "${1}" != "" ]; do
         system)     system=${2};;
         interrupt)  interrupt=${2};;
         idle)       idle=${2};;
-        *)		    TYPE=$2;;
+        *)          TYPE=$2;;
     esac
     shift
 done
@@ -178,7 +178,7 @@ if [ $RUN_LAN -eq 1 ]; then
     while [ -e "${STORAGE_PATH}/rrd/${INTERFACE0}.rrd" ]
     do
         /usr/local/bin/rrdtool update $STORAGE_PATH/rrd/${INTERFACE0}.rrd N:`netstat -I ${INTERFACE0} -nWb -f link | grep -v Name | awk '{print $8":"$11}'` 2>> /tmp/rrdgraphs-error.log
-		x=$((x+1))
+        x=$((x+1))
         INTERFACE0=`/usr/local/bin/xml sel -t -v "//interfaces/opt${x}/if" /conf/config.xml`
     done
 fi
