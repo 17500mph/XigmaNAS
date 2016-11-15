@@ -78,7 +78,6 @@ $g_install = [
 ];
 //	available languages/locales
 $g_languages = [
-	'sq'    => ['codeset' => 'UTF-8', 'desc' => gtext('Albanian'), 'desc.localized' => 'Shqip'],
 	'bg'    => ['codeset' => 'UTF-8', 'desc' => gtext('Bulgarian'), 'desc.localized' => 'Български'],
 	'cs'    => ['codeset' => 'UTF-8', 'desc' => gtext('Czech'), 'desc.localized' => 'čeština'],
 	'zh_CN' => ['codeset' => 'UTF-8', 'desc' => gtext('Chinese (Simplified)'), 'desc.localized' => '中文（簡體）'],
@@ -94,7 +93,6 @@ $g_languages = [
 	'it'    => ['codeset' => 'UTF-8', 'desc' => gtext('Italian'), 'desc.localized' => 'Italiano'],
 	'ja'    => ['codeset' => 'UTF-8', 'desc' => gtext('Japanese'), 'desc.localized' => '日本語'],
 	'ko'    => ['codeset' => 'UTF-8', 'desc' => gtext('Korean'), 'desc.localized' => '한국어'],
-	'lv'    => ['codeset' => 'UTF-8', 'desc' => gtext('Latvian'), 'desc.localized' => 'Latviešu'],
 	'nb'    => ['codeset' => 'UTF-8', 'desc' => gtext('Norwegian (Bokmal)'), 'desc.localized' => 'Norsk (bokmål)'],
 	'pl'    => ['codeset' => 'UTF-8', 'desc' => gtext('Polish'), 'desc.localized' => 'Polski'],
 	'pt_BR' => ['codeset' => 'UTF-8', 'desc' => gtext('Portuguese (Brazil)'), 'desc.localized' => 'Português (Brasil)'],
