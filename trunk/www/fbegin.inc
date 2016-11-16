@@ -280,7 +280,7 @@ echo '<!DOCTYPE html>', "\n"
 	}
 ?>
 </head>
-<body>
+<body id="main">
 <div id="spinner_main"></div>
 <div id="spinner_overlay" style="display: none; background-color: white; position: fixed; left:0; top:0; height:100%; width:100%; opacity: 0.25;"></div>
 <header id="g4h">
