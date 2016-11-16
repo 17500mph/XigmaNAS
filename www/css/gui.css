@@ -66,8 +66,10 @@ form {
 	margin: 0px;
 }
 html {
-	min-width: 1024px;
 	height: 100%;
+}
+body#main {
+	min-width: 1024px;
 }
 img {
 	border: 0;
@@ -156,6 +158,9 @@ pre {
 .cellabout {
 	font-size: 11px;
 }
+.celldatacheckbox {
+	display: block;
+}
 .celldatacheckbox input {
 	float: left;
 	margin: 0px;
@@ -163,7 +168,6 @@ pre {
 .celldatacheckbox label {
 	margin-left: 20px;
 	font-size: 11px;
-	display: block;
 }
 .formfld {
 }
