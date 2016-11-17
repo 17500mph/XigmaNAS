@@ -127,17 +127,18 @@ function type_change() {
 </script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabinact"><a href="system_advanced.php"><span><?=gtext("Advanced");?></span></a></li>
-				<li class="tabinact"><a href="system_email.php"><span><?=gtext("Email");?></span></a></li>
-				<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
-				<li class="tabact"><a href="system_swap.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Swap");?></span></a></li>
-				<li class="tabinact"><a href="system_rc.php"><span><?=gtext("Command Scripts");?></span></a></li>
-				<li class="tabinact"><a href="system_cron.php"><span><?=gtext("Cron");?></span></a></li>
-				<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext("loader.conf");?></span></a></li>
-				<li class="tabinact"><a href="system_rcconf.php"><span><?=gtext("rc.conf");?></span></a></li>
-				<li class="tabinact"><a href="system_sysctl.php"><span><?=gtext("sysctl.conf");?></span></a></li>
+	<td class="tabnavtbl">
+		<ul id="tabnav">
+			<li class="tabinact"><a href="system_advanced.php"><span><?=gtext("Advanced");?></span></a></li>
+			<li class="tabinact"><a href="system_email.php"><span><?=gtext("Email");?></span></a></li>
+			<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
+			<li class="tabinact"><a href="system_rrdgraphs.php"><span><?=gtext("Monitoring");?></span></a></li>
+			<li class="tabact"><a href="system_swap.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Swap");?></span></a></li>
+			<li class="tabinact"><a href="system_rc.php"><span><?=gtext("Command Scripts");?></span></a></li>
+			<li class="tabinact"><a href="system_cron.php"><span><?=gtext("Cron");?></span></a></li>
+			<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext("loader.conf");?></span></a></li>
+			<li class="tabinact"><a href="system_rcconf.php"><span><?=gtext("rc.conf");?></span></a></li>
+			<li class="tabinact"><a href="system_sysctl.php"><span><?=gtext("sysctl.conf");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
