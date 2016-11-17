@@ -1,6 +1,6 @@
 <?php
 /* 
-	services_rrdgraphs.php
+	system_rrdgraphs.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
@@ -38,11 +38,13 @@ $sphere_scriptname = basename(__FILE__);
 $sphere_notifier = 'rrdgraphs';
 
 if (!(isset($config['rrdgraphs']) && is_array($config['rrdgraphs']))) {
-	$config['rrdgraphs'] = [];
+	$config['rrdgraphs'] = enabled;
 }
 
 $upsname = !empty($config['ups']['upsname']) ? $config['ups']['upsname'] : "identifier";
 $upsip = !empty($config['ups']['ip']) ? $config['ups']['ip'] : "host-ip-address";
+
+$pgtitle = [gtext('System'), gtext('Advanced'), gtext('Status Monitoring Setup')];
 
 /* Check if the directory exists, the mountpoint has at least o=rx permissions and
  * set the permission to 775 for the last directory in the path.
@@ -265,7 +267,6 @@ if (isset($config['vinterfaces']['lagg']) && is_array($config['vinterfaces']['la
 // Use first interface as default if it is not set.
 if (empty($pconfig['latency_interface']) && is_array($a_interface)) $pconfig['latency_interface'] = key($a_interface);
 
-$pgtitle = [gtext('Services'), gtext('RRDGraphs')];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">
@@ -373,6 +374,24 @@ function enable_change(enable_change) {
 }
 //]]>
 </script>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td class="tabnavtbl">
+		<ul id="tabnav">
+			<li class="tabinact"><a href="system_advanced.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Advanced");?></span></a></li>
+			<li class="tabinact"><a href="system_email.php"><span><?=gtext("Email");?></span></a></li>
+			<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
+			<li class="tabact"><a href="system_rrdgraphs.php"><span><?=gtext("Monitoring");?></span></a></li>
+			<li class="tabinact"><a href="system_swap.php"><span><?=gtext("Swap");?></span></a></li>
+			<li class="tabinact"><a href="system_rc.php"><span><?=gtext("Command Scripts");?></span></a></li>
+			<li class="tabinact"><a href="system_cron.php"><span><?=gtext("Cron");?></span></a></li>
+			<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext("loader.conf");?></span></a></li>
+			<li class="tabinact"><a href="system_rcconf.php"><span><?=gtext("rc.conf");?></span></a></li>
+			<li class="tabinact"><a href="system_sysctl.php"><span><?=gtext("sysctl.conf");?></span></a></li>
+			</ul>
+		</td>
+	</tr>
+<tr>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iform" name="iform">
 <?php
 		if (!empty($savemsg)) {
@@ -395,11 +414,11 @@ function enable_change(enable_change) {
 			<col id="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline_checkbox2('enable', gtext('Configuration'), $pconfig['enable'], gtext('Enable'), "enable_change(false)");?>
+			<?php html_titleline_checkbox2('enable', gtext('System Monitoring Setup'), $pconfig['enable'], gtext('Enable'), "enable_change(false)");?>
 		</thead>
 		<tbody>
 			<?php
-			html_filechooser2('storage_path', gtext('Data directory'), $pconfig['storage_path'], gtext('Enter the path to the home directory of rrdgraphs. The data directory holds the statistical data for the graphs and will be updated every 5 minutes.'), $g['media_path'], true, 60);
+			html_filechooser2('storage_path', gtext('Data directory'), $pconfig['storage_path'], gtext('Enter the path to the home directory of rrdgraphs. This directory stores the statistical data for the graphs and will be updated every 5 minutes.'), $g['media_path'], true, 60);
 			html_inputbox2('refresh_time', gtext('Refresh time'), $pconfig['refresh_time'], gtext('Refresh time for graph pages.')." ".sprintf(gtext('Default is %s %s.'), 300, gtext('seconds')), false, 5);
 			html_inputbox2('graph_h', gtext('Graphs height'), $pconfig['graph_h'], sprintf(gtext('Height of the graphs. Default is %s pixel.'), 200), false, 5);
 			html_checkbox2('autoscale', gtext('Autoscale'), $pconfig['autoscale'], gtext('Autoscale for graphs.'), "", false);
@@ -448,7 +467,7 @@ function enable_change(enable_change) {
 		<input id="save" name="save" type="submit" class="formbtn" value="<?=gtext('Save & Restart');?>"/>
 		<input id="reset_graphs" name="reset_graphs" type="submit" class="formbtn" value="<?=gtext('Reset Graphs');?>" onclick="return confirm('<?=gtext('Do you really want to delete all data from the selected statistics?');?>')" />
 	</div>
-<div id="remarks">
+	<div id="remarks">
 		<?php
 		$helpinghand = sprintf(gtext("'%s' deletes all statistical data from the graphs!"), gtext('Reset Graphs'))
 			. '<div id="enumeration"><ul>'

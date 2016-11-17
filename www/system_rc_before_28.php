@@ -107,21 +107,22 @@ $pgtitle = [gtext('System'), gtext('Advanced'), gtext('Command Scripts')];
 <?php include 'fbegin.inc';?>
 <table id="area_navigator"><tbody>
 	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabinact"><a href="system_advanced.php"><span><?=gtext('Advanced');?></span></a></li>
-				<li class="tabinact"><a href="system_email.php"><span><?=gtext('Email');?></span></a></li>
-				<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
-				<li class="tabinact"><a href="system_swap.php"><span><?=gtext('Swap');?></span></a></li>
-				<li class="tabinact"><a href="system_rc.php" ><span><?=gtext('Command Scripts');?></span></a></li>
-				<li class="tabact"><a href="system_rc_before_28.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Command Scripts (Maintenance Only)');?></span></a></li>
-				<li class="tabinact"><a href="system_cron.php"><span><?=gtext('Cron');?></span></a></li>
-				<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext('loader.conf');?></span></a></li>
-				<li class="tabinact"><a href="system_rcconf.php"><span><?=gtext('rc.conf');?></span></a></li>
-				<li class="tabinact"><a href="system_sysctl.php"><span><?=gtext('sysctl.conf');?></span></a></li>
-			</ul>
-		</td>
-	</tr>
+	<td class="tabnavtbl">
+		<ul id="tabnav">
+		<li class="tabinact"><a href="system_advanced.php"><span><?=gtext('Advanced');?></span></a></li>
+		<li class="tabinact"><a href="system_email.php"><span><?=gtext('Email');?></span></a></li>
+		<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
+		<li class="tabinact"><a href="system_rrdgraphs.php"><span><?=gtext("Monitoring");?></span></a></li>
+		<li class="tabinact"><a href="system_swap.php"><span><?=gtext('Swap');?></span></a></li>
+		<li class="tabinact"><a href="system_rc.php" ><span><?=gtext('Command Scripts');?></span></a></li>
+		<li class="tabact"><a href="system_rc_before_28.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Command Scripts (Maintenance Only)');?></span></a></li>
+		<li class="tabinact"><a href="system_cron.php"><span><?=gtext('Cron');?></span></a></li>
+		<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext('loader.conf');?></span></a></li>
+		<li class="tabinact"><a href="system_rcconf.php"><span><?=gtext('rc.conf');?></span></a></li>
+		<li class="tabinact"><a href="system_sysctl.php"><span><?=gtext('sysctl.conf');?></span></a></li>
+		</ul>
+	</td>
+</tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
 	<table id="area_data_selection">

@@ -36,7 +36,7 @@ require("guiconfig.inc");
 require("email.inc");
 require("report.inc");
 
-$pgtitle = [gtext('System'),gtext('Advanced'),gtext('Email Reports')];
+$pgtitle = [gtext('System'),gtext('Advanced'),gtext('Email Reports Setup')];
 
 
 if (!isset($config['statusreport']) || !is_array($config['statusreport']))
@@ -187,6 +187,7 @@ function enable_change(enable_change) {
 			<li class="tabinact"><a href="system_advanced.php"><span><?=gtext('Advanced');?></span></a></li>
 			<li class="tabinact"><a href="system_email.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Email');?></span></a></li>
 			<li class="tabact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
+			<li class="tabinact"><a href="system_rrdgraphs.php"><span><?=gtext("Monitoring");?></span></a></li>
 			<li class="tabinact"><a href="system_swap.php"><span><?=gtext('Swap');?></span></a></li>
 			<li class="tabinact"><a href="system_rc.php"><span><?=gtext('Command Scripts');?></span></a></li>
 			<li class="tabinact"><a href="system_cron.php"><span><?=gtext('Cron');?></span></a></li>
@@ -215,7 +216,7 @@ function enable_change(enable_change) {
 			}
 			?>
 			<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline_checkbox("enable", gtext("Email Report"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
+					<?php html_titleline_checkbox("enable", gtext("System Email Report"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
 					<tr>
 						<td width="22%" valign="top" class="vncellreq"><?=gtext("To Email Address");?></td>
 						<td width="78%" class="vtable">
