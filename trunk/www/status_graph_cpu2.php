@@ -35,21 +35,17 @@ require("auth.inc");
 require("guiconfig.inc");
 
 /********* Other conf *******/
-$cpu=@htmlspecialchars($_GET["cpu"]);    // BSD / SNMP interface name / number
-if (isset($config['extended-gui']['enable']) && ($config['extended-gui']['type'] == 'Extended')) {
-	$nb_plot=$config['extended-gui']['graph_nb_plot'];            //NB plot in graph default = 120
-	$time_interval=$config['extended-gui']['graph_time_interval'];    //Refresh time Interval default = 1
-}
-else {
-	$nb_plot=120;        //NB plot in graph
-	$time_interval=1;    //Refresh time Interval
-}
-$fetch_link = "stats.php?cpu=$cpu";
+$cpu=@htmlspecialchars($_GET["cpu"]);  // BSD / SNMP interface name / number
+$nb_plot=120;       //NB plot in graph
+$time_interval=1;   //Refresh time Interval
+
+if (isset($config['rrdgraphs']['background_white'])) $color_fill="white";
+else $color_fill="black";
 $fetch_link = "stats.php?cpu=$cpu";
 
 //SVG style attributes
-$attribs['bg']='fill="#000" stroke="none" stroke-width="0" opacity="1"';
-$attribs['axis']='fill="black" stroke="black"';
+$attribs['bg']='fill="'.$color_fill.'" stroke="none" stroke-width="0" opacity="1"';
+$attribs['axis']='fill="'.$color_fill.'" stroke="black"';
 $attribs['cpu']='fill="#FF0000" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="6"';
 $attribs['graph_cpu']='fill="none" stroke="#CA6110" stroke-opacity="0.8"';
 $attribs['graphname']='fill="#435370" font-family="Tahoma, Verdana, Arial, Helvetica, sans-serif" font-size="7"';
@@ -60,20 +56,20 @@ $attribs['collect_initial']='fill="gray" font-family="Tahoma, Verdana, Arial, He
 
 $error_text = gtext("Cannot get CPU load");
 
-$height=100;        //SVG internal height : do not modify
-$width=200;        //SVG internal width : do not modify
+$height=100;	//SVG internal height : do not modify
+$width=200;	//SVG internal width : do not modify
 
 $encoding = system_get_language_codeset();
 
 /********* Graph DATA **************/
-header("Cache-Control: no-store, no-cache, must-revalidate");    // HTTP/1.1
+header("Cache-Control: no-store, no-cache, must-revalidate"); // HTTP/1.1
 header("Cache-Control: post-check=0, pre-check=0", FALSE);
-header("Pragma: no-cache");    // HTTP/1.0
+header("Pragma: no-cache"); // HTTP/1.0
 header("Content-type: image/svg+xml");
 echo "<?xml version=\"1.0\" encoding=\"{$encoding}\"?>\n";
 ?>
 <svg width="100%" height="100%" viewBox="0 0 <?=$width?> <?=$height?>" preserveAspectRatio="none" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onload="init(evt)">
-  <g id="graph">
+	<g id="graph">
 	<rect id="bg" x1="0" y1="0" width="100%" height="100%" <?=$attribs['bg']?>/>
 	<line id="axis_x" x1="0" y1="0" x2="0" y2="100%" <?=$attribs['axis']?>/>
 	<line id="axis_y" x1="0" y1="100%" x2="100%" y2="100%" <?=$attribs['axis']?>/>
@@ -87,98 +83,98 @@ echo "<?xml version=\"1.0\" encoding=\"{$encoding}\"?>\n";
 	<polygon id="axis_arrow_x" <?=$attribs['axis']?> points="<?=($width) . "," . ($height)?> <?=($width-2) . "," . ($height-2)?> <?=($width-2) . "," . $height?>"/>
 	<text id="error" x="<?=$width*0.5?>" y="<?=$height*0.4?>"  visibility="hidden" <?=$attribs['error']?> text-anchor="middle"><?=$error_text?></text>
 	<text id="collect_initial" x="<?=$width*0.5?>" y="<?=$height*0.3?>" visibility="hidden" <?=$attribs['collect_initial']?> text-anchor="middle"><?=gtext("Collecting initial data, please wait...");?></text>
-  </g>
-  <script type="text/ecmascript">
-	<![CDATA[
+	</g>
+<script type="text/ecmascript">
+<![CDATA[
 
 /**
  * getURL is a proprietary Adobe function, but it's simplicity has made it very
  * popular. If getURL is undefined we spin our own by wrapping XMLHttpRequest.
  */
 if (typeof getURL == 'undefined') {
-  getURL = function(url, callback) {
+	getURL = function(url, callback) {
 	if (!url)
-	  throw 'No URL for getURL';
+	throw 'No URL for getURL';
 
 	try {
-	  if (typeof callback.operationComplete == 'function')
-		callback = callback.operationComplete;
+	if (typeof callback.operationComplete == 'function')
+	callback = callback.operationComplete;
 	} catch (e) {}
 	if (typeof callback != 'function')
-	  throw 'No callback function for getURL';
+	throw 'No callback function for getURL';
 
 	var http_request = null;
 	if (typeof XMLHttpRequest != 'undefined') {
-	  http_request = new XMLHttpRequest();
+	http_request = new XMLHttpRequest();
 	}
 	else if (typeof ActiveXObject != 'undefined') {
-	  try {
-		http_request = new ActiveXObject('Msxml2.XMLHTTP');
-	  } catch (e) {
-		try {
-		  http_request = new ActiveXObject('Microsoft.XMLHTTP');
+	try {
+	http_request = new ActiveXObject('Msxml2.XMLHTTP');
+	} catch (e) {
+	try {
+	http_request = new ActiveXObject('Microsoft.XMLHTTP');
 		} catch (e) {}
 	  }
 	}
 	if (!http_request)
-	  throw 'Both getURL and XMLHttpRequest are undefined';
+	throw 'Both getURL and XMLHttpRequest are undefined';
 
 	http_request.onreadystatechange = function() {
-	  if (http_request.readyState == 4) {
+	if (http_request.readyState == 4) {
 		callback( { success : true,
-					content : http_request.responseText,
-					contentType : http_request.getResponseHeader("Content-Type") } );
+		content : http_request.responseText,
+		contentType : http_request.getResponseHeader("Content-Type") } );
 	  }
 	}
 	http_request.open('GET', url, true);
 	http_request.send(null);
-  }
+	}
 }
 
 var SVGDoc = null;
 var plot_cpu = new Array();
 
-var max_num_points = <?=$nb_plot?>;    // maximum number of plot data points
+var max_num_points = <?=$nb_plot?>; // maximum number of plot data points
 var step = <?=$width?> / max_num_points ;
 
 function formatString(x) {
-  return (x < 0 || x > 9 ? "" : "0") + x;
+	return (x < 0 || x > 9 ? "" : "0") + x;
 }
 
 function init(evt) {
-  SVGDoc = evt.target.ownerDocument;
-  fetch_data();
+	SVGDoc = evt.target.ownerDocument;
+	fetch_data();
 }
 
 function fetch_data() {
-  getURL('<?=$fetch_link?>', plot_data);
+	getURL('<?=$fetch_link?>', plot_data);
 }
 
 function plot_data(obj) {
-  var t = obj.content;
+	var t = obj.content;
 	var cpu = parseInt(t);
 	var scale;
 
 	if (!isNumber(cpu))
 	return handle_error();
 
-  switch (plot_cpu.length) {
-  	case 0:
-  		SVGDoc.getElementById("collect_initial").setAttributeNS(null, 'visibility', 'visible');
-	  plot_cpu[0] = cpu;
-	  setTimeout('fetch_data()',<?=1000*$time_interval?>);
-	  return;
+	switch (plot_cpu.length) {
+	case 0:
+	SVGDoc.getElementById("collect_initial").setAttributeNS(null, 'visibility', 'visible');
+	plot_cpu[0] = cpu;
+	setTimeout('fetch_data()',<?=1000*$time_interval?>);
+	return;
 	case 1:
-		SVGDoc.getElementById("collect_initial").setAttributeNS(null, 'visibility', 'hidden');
-		break;
-  case max_num_points:
-		// shift plot to left if the maximum number of plot points has been reached
+	SVGDoc.getElementById("collect_initial").setAttributeNS(null, 'visibility', 'hidden');
+	break;
+	case max_num_points:
+	// shift plot to left if the maximum number of plot points has been reached
 		var i = 0;
 		while (i < max_num_points) {
 		  plot_cpu[i] = plot_cpu[++i];
 		}
 		plot_cpu.length--;
-  }
+}
 
 	plot_cpu[plot_cpu.length] = cpu;
 	var index_plot = plot_cpu.length - 1;
@@ -187,28 +183,28 @@ function plot_data(obj) {
 
 	scale = <?=$height?> / 100;
 
-  var path_cpu = "M 0 " + (<?=$height?> - (plot_cpu[0] * scale));
-  for (i = 1; i < plot_cpu.length; i++)
-  {
+	var path_cpu = "M 0 " + (<?=$height?> - (plot_cpu[0] * scale));
+	for (i = 1; i < plot_cpu.length; i++)
+{
 	var x = step * i;
 	var y_cpu = <?=$height?> - (plot_cpu[i] * scale);
 	path_cpu += " L" + x + " " + y_cpu;
-  }
+}
 
-  SVGDoc.getElementById('error').setAttributeNS(null, 'visibility', 'hidden');
-  SVGDoc.getElementById('graph_cpu').setAttributeNS(null, 'd', path_cpu);
+	SVGDoc.getElementById('error').setAttributeNS(null, 'visibility', 'hidden');
+	SVGDoc.getElementById('graph_cpu').setAttributeNS(null, 'd', path_cpu);
 
 	setTimeout('fetch_data()',<?=1000*$time_interval?>);
 }
 
 function handle_error() {
-  SVGDoc.getElementById("error").setAttributeNS(null, 'visibility', 'visible');
-  setTimeout('fetch_data()',<?=1000*$time_interval?>);
+	SVGDoc.getElementById("error").setAttributeNS(null, 'visibility', 'visible');
+	setTimeout('fetch_data()',<?=1000*$time_interval?>);
 }
 
 function isNumber(a) {
 	return typeof a == 'number' && isFinite(a);
 }
-	]]>
-  </script>
+]]>
+</script>
 </svg>
