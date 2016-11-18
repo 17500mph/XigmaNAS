@@ -44,7 +44,7 @@ if (!(isset($config['rrdgraphs']) && is_array($config['rrdgraphs']))) {
 $upsname = !empty($config['ups']['upsname']) ? $config['ups']['upsname'] : "identifier";
 $upsip = !empty($config['ups']['ip']) ? $config['ups']['ip'] : "host-ip-address";
 
-$pgtitle = [gtext('System'), gtext('Advanced'), gtext('Status Monitoring Setup')];
+$pgtitle = [gtext('System'), gtext('Advanced'), gtext('Monitoring Setup')];
 
 /* Check if the directory exists, the mountpoint has at least o=rx permissions and
  * set the permission to 775 for the last directory in the path.
