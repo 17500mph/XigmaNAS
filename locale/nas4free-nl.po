@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-14 05:32+0000\n"
-"PO-Revision-Date: 2016-11-14 04:53+0000\n"
+"POT-Creation-Date: 2016-11-18 14:04+0000\n"
+"PO-Revision-Date: 2016-11-18 13:15+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-15 13:21+0000\n"
-"X-Generator: Launchpad (build 18261)\n"
+"X-Launchpad-Export-Date: 2016-11-18 13:16+0000\n"
+"X-Generator: Launchpad (build 18269)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
 "X-Poedit-Language: Dutch\n"
@@ -685,9 +685,6 @@ msgid ""
 msgstr ""
 "Luchtstroom temperatuur op Western Digital HDs (zelfde als temp. ,maar de "
 "huidige waarde is 50 minder voor sommige modellen. Gemarkeerd als verouderd.)"
-
-msgid "Albanian"
-msgstr "Albanees"
 
 msgid "Alert Level"
 msgstr "Waarschuwings niveau"
@@ -3031,6 +3028,9 @@ msgstr "E-mail Rapportage"
 msgid "Email Reports"
 msgstr "E-mail Rapportages"
 
+msgid "Email Reports Setup"
+msgstr "E-mail Rapportage Instellingen"
+
 msgid "Email Setup"
 msgstr "E-mail Instellingen"
 
@@ -3380,12 +3380,13 @@ msgstr ""
 "worden de VM configuratie en HDD images opgeslagen."
 
 msgid ""
-"Enter the path to the home directory of rrdgraphs. The data directory holds "
-"the statistical data for the graphs and will be updated every 5 minutes."
+"Enter the path to the home directory of rrdgraphs. This directory stores the "
+"statistical data for the graphs and will be updated every 5 minutes."
 msgstr ""
-"Vul de locatie in naar de gegevensmap voor rrdgraphs. De gegevensmap houdt "
-"de statistische gegevens voor de grafieken en wordt elke 5 minuten "
-"bijgewerkt."
+"Vul de locatie in naar de gegevensmap voor rrdgraphs. This directory stores "
+"the statistical data for the graphs and will be updated every 5 minutes. In "
+"deze gegevensmap worden de statistische gegevens van de grafieken opgeslagen "
+"en elke 5 minuten bijgewerkt."
 
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
@@ -4697,9 +4698,6 @@ msgstr "Laatste Beta Versie: %s"
 msgid "Latest Release: %s"
 msgstr "Laatste Uitgave: %s"
 
-msgid "Latvian"
-msgstr "Lets"
-
 msgid "Leave already configured auto snapshots."
 msgstr "Laat reeds geconfigureerde snapshots bestaan."
 
@@ -5283,6 +5281,9 @@ msgstr "Maandag Dinsdag Woensdag Donderdag Vrijdag Zaterdag Zondag"
 
 msgid "Monitoring"
 msgstr "Monitoren"
+
+msgid "Monitoring Setup"
+msgstr "Monitoring Instellingen"
 
 msgid "Months"
 msgstr "Maanden"
@@ -6387,9 +6388,6 @@ msgstr "RUWE WAARDE"
 
 msgid "RAW info"
 msgstr "Ruwe info"
-
-msgid "RRDGraphs"
-msgstr "RRDGrafiek"
 
 #, php-format
 msgid ""
@@ -7655,6 +7653,9 @@ msgstr ""
 msgid "System"
 msgstr "Systeem"
 
+msgid "System Email Report Settings"
+msgstr "Systeem E-mail Repportage Instellingen"
+
 msgid "System Email Settings"
 msgstr "Systeem E-mail Instellingen"
 
@@ -7666,6 +7667,9 @@ msgstr "Systeembelasting"
 
 msgid "System Message"
 msgstr "Systeembericht"
+
+msgid "System Monitoring Settings"
+msgstr "Systeem Monitoring Instellingen"
 
 msgid "System Processes"
 msgstr "Systeemprocessen"
@@ -10473,3 +10477,26 @@ msgstr "gebruiker"
 
 msgid "version:"
 msgstr "versie:"
+
+#~ msgid "Albanian"
+#~ msgstr "Albanees"
+
+#~ msgid "Latvian"
+#~ msgstr "Lets"
+
+#~ msgid "RRDGraphs"
+#~ msgstr "RRDGrafiek"
+
+#~ msgid ""
+#~ "Enter the path to the home directory of rrdgraphs. The data directory holds "
+#~ "the statistical data for the graphs and will be updated every 5 minutes."
+#~ msgstr ""
+#~ "Vul de locatie in naar de gegevensmap voor rrdgraphs. De gegevensmap houdt "
+#~ "de statistische gegevens voor de grafieken en wordt elke 5 minuten "
+#~ "bijgewerkt."
+
+#~ msgid "System Monitoring Setup"
+#~ msgstr "Systeem Monitoring Instellingen"
+
+#~ msgid "System Email Report"
+#~ msgstr "Systeem E-mail Rapportage"
