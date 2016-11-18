@@ -414,7 +414,7 @@ function enable_change(enable_change) {
 			<col id="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline_checkbox2('enable', gtext('System Monitoring Setup'), $pconfig['enable'], gtext('Enable'), "enable_change(false)");?>
+			<?php html_titleline_checkbox2('enable', gtext('System Monitoring Settings'), $pconfig['enable'], gtext('Enable'), "enable_change(false)");?>
 		</thead>
 		<tbody>
 			<?php
