@@ -216,38 +216,38 @@ function enable_change(enable_change) {
 			}
 			?>
 			<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline_checkbox("enable", gtext("System Email Report"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
-					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("To Email Address");?></td>
-						<td width="78%" class="vtable">
-							<input name="to" type="text" class="formfld" id="to" size="74" value="<?=htmlspecialchars($pconfig['to']);?>" /><br />
-							<span class="vexpl"><?=gtext("Destination email address.");?> <?=gtext("Separate email addresses by semi-colon.");?></span>
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Subject");?></td>
-						<td width="78%" class="vtable">
-							<input name="subject" type="text" class="formfld" id="subject" size="74" value="<?=htmlspecialchars($pconfig['subject']);?>" /><br />
-							<?php
-							$helpinghand = '<div id="enumeration"><ul><li>%d - ' . gtext('Date') . '</li><li>%h - ' . gtext('Hostname') . '</li></ul></div>';
-							?>
-							<span class="vexpl"><?=gtext('The subject of the email.') . ' ' . gtext('You can use the following parameters for substitution:');?></span><?=$helpinghand;?>
-						</td>
-					</tr>
-				<tr>
-			<td width="22%" valign="top" class="vncell"><?=gtext("Reports");?></td>
-			<td width="78%" class="vtable">
-			      			<table>
-						<tr><td><input name="report[]" type="checkbox" class="formfld" id="report_systeminfo" value="systeminfo" <?php if (is_array($pconfig['report']) && in_array("systeminfo", $pconfig['report'])):?>checked="checked"<?php endif;?> /><?=gtext("System info");?></td></tr>
-						<tr><td><input name="report[]" type="checkbox" class="formfld" id="report_dmesg" value="dmesg" <?php if (is_array($pconfig['report']) && in_array("dmesg", $pconfig['report'])):?>checked="checked"<?php endif;?> /><?=gtext("System message buffer");?></td></tr>
-						<tr><td><input name="report[]" type="checkbox" class="formfld" id="report_systemlog" value="systemlog" <?php if (is_array($pconfig['report']) && in_array("systemlog", $pconfig['report'])):?>checked="checked"<?php endif;?> /><?=gtext("System log");?></td></tr>
-						<tr><td><input name="report[]" type="checkbox" class="formfld" id="report_ftplog" value="ftplog" <?php if (is_array($pconfig['report']) && in_array("ftplog", $pconfig['report'])):?>checked="checked"<?php endif;?> /><?=gtext("FTP log");?></td></tr>
-						<tr><td><input name="report[]" type="checkbox" class="formfld" id="report_rsynclog" value="rsynclog" <?php if (is_array($pconfig['report']) && in_array("rsynclog", $pconfig['report'])):?>checked="checked"<?php endif;?> /><?=gtext("RSYNC log");?></td></tr>
-						<tr><td><input name="report[]" type="checkbox" class="formfld" id="report_sshdlog" value="sshdlog" <?php if (is_array($pconfig['report']) && in_array("sshdlog", $pconfig['report'])):?>checked="checked"<?php endif;?> /><?=gtext("SSHD log");?></td></tr>
-						<tr><td><input name="report[]" type="checkbox" class="formfld" id="report_smartdlog" value="smartdlog" <?php if (is_array($pconfig['report']) && in_array("smartdlog", $pconfig['report'])):?>checked="checked"<?php endif;?> /><?=gtext("S.M.A.R.T. log");?></td></tr>
-						<tr><td><input name="report[]" type="checkbox" class="formfld" id="report_daemonlog" value="daemonlog" <?php if (is_array($pconfig['report']) && in_array("daemonlog", $pconfig['report'])):?>checked="checked"<?php endif;?> /><?=gtext("Daemon log");?></td></tr>
-						<tr><td><input name="report[]" type="checkbox" class="formfld" id="report_script" value="script" <?php if (is_array($pconfig['report']) && in_array("script", $pconfig['report'])):?>checked="checked"<?php endif;?> /><?=gtext("Custom script");?></td></tr>
-						<tr><td>
+			<?php html_titleline_checkbox("enable", gtext("System Email Report Settings"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
+			<tr>
+				<td width="22%" valign="top" class="vncellreq"><?=gtext("To Email Address");?></td>
+				<td width="78%" class="vtable">
+					<input name="to" type="text" class="formfld" id="to" size="74" value="<?=htmlspecialchars($pconfig['to']);?>" /><br />
+					<span class="vexpl"><?=gtext("Destination email address.");?> <?=gtext("Separate email addresses by semi-colon.");?></span>
+				</td>
+			</tr>
+			<tr>
+				<td width="22%" valign="top" class="vncell"><?=gtext("Subject");?></td>
+				<td width="78%" class="vtable">
+					<input name="subject" type="text" class="formfld" id="subject" size="74" value="<?=htmlspecialchars($pconfig['subject']);?>" /><br />
+					<?php
+					$helpinghand = '<div id="enumeration"><ul><li>%d - ' . gtext('Date') . '</li><li>%h - ' . gtext('Hostname') . '</li></ul></div>';
+					?>
+					<span class="vexpl"><?=gtext('The subject of the email.') . ' ' . gtext('You can use the following parameters for substitution:');?></span><?=$helpinghand;?>
+				</td>
+			</tr>
+		<tr>
+		<td width="22%" valign="top" class="vncell"><?=gtext("Reports");?></td>
+		<td width="78%" class="vtable">
+		<table>
+		<tr><td><input name="report[]" type="checkbox" class="formfld" id="report_systeminfo" value="systeminfo" <?php if (is_array($pconfig['report']) && in_array("systeminfo", $pconfig['report'])):?>checked="checked"<?php endif;?> /><?=gtext("System info");?></td></tr>
+		<tr><td><input name="report[]" type="checkbox" class="formfld" id="report_dmesg" value="dmesg" <?php if (is_array($pconfig['report']) && in_array("dmesg", $pconfig['report'])):?>checked="checked"<?php endif;?> /><?=gtext("System message buffer");?></td></tr>
+		<tr><td><input name="report[]" type="checkbox" class="formfld" id="report_systemlog" value="systemlog" <?php if (is_array($pconfig['report']) && in_array("systemlog", $pconfig['report'])):?>checked="checked"<?php endif;?> /><?=gtext("System log");?></td></tr>
+		<tr><td><input name="report[]" type="checkbox" class="formfld" id="report_ftplog" value="ftplog" <?php if (is_array($pconfig['report']) && in_array("ftplog", $pconfig['report'])):?>checked="checked"<?php endif;?> /><?=gtext("FTP log");?></td></tr>
+		<tr><td><input name="report[]" type="checkbox" class="formfld" id="report_rsynclog" value="rsynclog" <?php if (is_array($pconfig['report']) && in_array("rsynclog", $pconfig['report'])):?>checked="checked"<?php endif;?> /><?=gtext("RSYNC log");?></td></tr>
+		<tr><td><input name="report[]" type="checkbox" class="formfld" id="report_sshdlog" value="sshdlog" <?php if (is_array($pconfig['report']) && in_array("sshdlog", $pconfig['report'])):?>checked="checked"<?php endif;?> /><?=gtext("SSHD log");?></td></tr>
+		<tr><td><input name="report[]" type="checkbox" class="formfld" id="report_smartdlog" value="smartdlog" <?php if (is_array($pconfig['report']) && in_array("smartdlog", $pconfig['report'])):?>checked="checked"<?php endif;?> /><?=gtext("S.M.A.R.T. log");?></td></tr>
+		<tr><td><input name="report[]" type="checkbox" class="formfld" id="report_daemonlog" value="daemonlog" <?php if (is_array($pconfig['report']) && in_array("daemonlog", $pconfig['report'])):?>checked="checked"<?php endif;?> /><?=gtext("Daemon log");?></td></tr>
+		<tr><td><input name="report[]" type="checkbox" class="formfld" id="report_script" value="script" <?php if (is_array($pconfig['report']) && in_array("script", $pconfig['report'])):?>checked="checked"<?php endif;?> /><?=gtext("Custom script");?></td></tr>
+		<tr><td>
 <?php
 	$scriptname = $pconfig['report_scriptname'];
 	$scriptpath = "/mnt";
