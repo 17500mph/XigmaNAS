@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-14 05:32+0000\n"
-"PO-Revision-Date: 2016-11-15 07:40+0000\n"
+"POT-Creation-Date: 2016-11-18 14:04+0000\n"
+"PO-Revision-Date: 2016-11-18 18:55+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-15 13:21+0000\n"
-"X-Generator: Launchpad (build 18261)\n"
+"X-Launchpad-Export-Date: 2016-11-19 14:05+0000\n"
+"X-Generator: Launchpad (build 18269)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
 "X-Poedit-Language: Russian\n"
@@ -667,9 +667,6 @@ msgid ""
 msgstr ""
 "Температура воздушного потока на Western Digital HDs (То же, что темп., но "
 "текущее значение в 50 меньше для некоторых моделей. Помечен как устаревший.)"
-
-msgid "Albanian"
-msgstr "Албанский"
 
 msgid "Alert Level"
 msgstr "Уровень оповещения"
@@ -2991,6 +2988,9 @@ msgstr "Отчет по электронной почте"
 msgid "Email Reports"
 msgstr "Отчеты по электронной почте"
 
+msgid "Email Reports Setup"
+msgstr "Настройки отчетов по электронной почте"
+
 msgid "Email Setup"
 msgstr "Настройки электронной почты"
 
@@ -3337,10 +3337,10 @@ msgstr ""
 "образы дисков будут созданы в этой папке."
 
 msgid ""
-"Enter the path to the home directory of rrdgraphs. The data directory holds "
-"the statistical data for the graphs and will be updated every 5 minutes."
+"Enter the path to the home directory of rrdgraphs. This directory stores the "
+"statistical data for the graphs and will be updated every 5 minutes."
 msgstr ""
-"Введите путь к домашней директории rrdgraphs. Каталог данных содержит "
+"Введите путь к домашней директории rrdgraphs. Этот каталог хранит "
 "статистические данные для графиков и будет обновляться каждые 5 минут."
 
 msgid ""
@@ -4652,9 +4652,6 @@ msgstr "Последняя Бета Сборка: %s"
 msgid "Latest Release: %s"
 msgstr "Последний Релиз:  %s"
 
-msgid "Latvian"
-msgstr "Латвийский"
-
 msgid "Leave already configured auto snapshots."
 msgstr "Оставить уже сконфигурированные автоматические Snapshot'ы."
 
@@ -5231,6 +5228,9 @@ msgstr "Понедельник Вторник Среда Четверг Пятн
 
 msgid "Monitoring"
 msgstr "Мониторинг"
+
+msgid "Monitoring Setup"
+msgstr "Настройки мониторинга"
 
 msgid "Months"
 msgstr "Месяцы"
@@ -6331,9 +6331,6 @@ msgstr "ЗНАЧЕНИЕ"
 
 msgid "RAW info"
 msgstr "RAW информация"
-
-msgid "RRDGraphs"
-msgstr "RRDGraphs"
 
 #, php-format
 msgid ""
@@ -7587,6 +7584,9 @@ msgstr ""
 msgid "System"
 msgstr "Система"
 
+msgid "System Email Report Settings"
+msgstr "Системные настройки отчетов по электронной почте"
+
 msgid "System Email Settings"
 msgstr "Настройки электронной почты системы"
 
@@ -7598,6 +7598,9 @@ msgstr "Загрузка системы"
 
 msgid "System Message"
 msgstr "Системное сообщение"
+
+msgid "System Monitoring Settings"
+msgstr "Настройки мониторинга системы"
 
 msgid "System Processes"
 msgstr "Системные процессы"
