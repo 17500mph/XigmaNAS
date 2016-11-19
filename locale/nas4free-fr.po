@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-14 05:32+0000\n"
-"PO-Revision-Date: 2016-11-14 04:50+0000\n"
+"POT-Creation-Date: 2016-11-18 14:04+0000\n"
+"PO-Revision-Date: 2016-11-18 13:52+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-15 13:21+0000\n"
-"X-Generator: Launchpad (build 18261)\n"
+"X-Launchpad-Export-Date: 2016-11-19 14:04+0000\n"
+"X-Generator: Launchpad (build 18269)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
 "X-Poedit-Language: French\n"
@@ -681,9 +681,6 @@ msgstr ""
 "température, mais la valeur courante est inférieur de 50 pour certains "
 "modèles. Obsolète.)"
 
-msgid "Albanian"
-msgstr "Albanais"
-
 msgid "Alert Level"
 msgstr "Niveau d'alerte"
 
@@ -1054,7 +1051,7 @@ msgid "Backup file"
 msgstr "Fichier de sauvegarde"
 
 msgid "Backup/Restore"
-msgstr "Sauvegarder/Restaurer (la configuration)"
+msgstr "Configuration: Sauvegarder/Restaurer"
 
 msgid "Bad User - (Non Existing Users)"
 msgstr "Mauvais utilisateur - (utilisateur inexistant)"
@@ -3030,6 +3027,9 @@ msgstr "Rapport par e-mail"
 msgid "Email Reports"
 msgstr "Courriel de rapports"
 
+msgid "Email Reports Setup"
+msgstr "Configuration du courier de rapports"
+
 msgid "Email Setup"
 msgstr "Configuration du courrier électronique"
 
@@ -3376,12 +3376,12 @@ msgstr ""
 "images disque seront créées sous le répertoire spécifié."
 
 msgid ""
-"Enter the path to the home directory of rrdgraphs. The data directory holds "
-"the statistical data for the graphs and will be updated every 5 minutes."
+"Enter the path to the home directory of rrdgraphs. This directory stores the "
+"statistical data for the graphs and will be updated every 5 minutes."
 msgstr ""
-"Entrez le chemin d'accès au répertoire de base des rrdgraphs. Le répertoire "
-"de données contient les données statistiques des graphiques et sera mis à "
-"jour toutes les 5 minutes."
+"Entrez le chemin d'accès au répertoire de base des rrdgraphs. Ce répertoire "
+"stocke les données statistiques des graphiques et sera mis à jour toutes les "
+"5 minutes."
 
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
@@ -4697,9 +4697,6 @@ msgstr "Version Beta la plus récente: %s"
 msgid "Latest Release: %s"
 msgstr "Version stable la plus récente: %s"
 
-msgid "Latvian"
-msgstr "Letton"
-
 msgid "Leave already configured auto snapshots."
 msgstr "Laisser les instantanés automatiques déjà configurés"
 
@@ -5276,6 +5273,9 @@ msgstr "Lundi Mardi Mercredi Jeudi Vendredi Samedi Dimanche"
 
 msgid "Monitoring"
 msgstr "Surveillance"
+
+msgid "Monitoring Setup"
+msgstr "Configuration de la surveillance"
 
 msgid "Months"
 msgstr "Mois"
@@ -6381,9 +6381,6 @@ msgstr "Valeur brute"
 
 msgid "RAW info"
 msgstr "Informations RAW"
-
-msgid "RRDGraphs"
-msgstr "RRDGraphiques"
 
 #, php-format
 msgid ""
@@ -7647,6 +7644,9 @@ msgstr ""
 msgid "System"
 msgstr "Système"
 
+msgid "System Email Report Settings"
+msgstr "paramètres du courrier de rapports système"
+
 msgid "System Email Settings"
 msgstr "Paramètres système du courrier électronique"
 
@@ -7658,6 +7658,9 @@ msgstr "Charge système"
 
 msgid "System Message"
 msgstr "Message système"
+
+msgid "System Monitoring Settings"
+msgstr "Paramètres de surveillance du système"
 
 msgid "System Processes"
 msgstr "Processus système"

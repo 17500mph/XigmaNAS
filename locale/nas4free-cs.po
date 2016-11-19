@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-14 05:32+0000\n"
-"PO-Revision-Date: 2016-10-18 21:36+0000\n"
+"POT-Creation-Date: 2016-11-18 14:04+0000\n"
+"PO-Revision-Date: 2016-11-15 21:38+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-15 13:21+0000\n"
-"X-Generator: Launchpad (build 18261)\n"
+"X-Launchpad-Export-Date: 2016-11-19 14:04+0000\n"
+"X-Generator: Launchpad (build 18269)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
 "X-Poedit-Language: Czech\n"
@@ -111,7 +111,7 @@ msgstr "použito %sB z %sB"
 
 #, php-format
 msgid "'%s' deletes all statistical data from the graphs!"
-msgstr ""
+msgstr "„%s“ smaže veškeré statistické údaje z grafů!"
 
 msgid "(Change if needed)"
 msgstr "(v případě potřeby změňte)"
@@ -459,7 +459,7 @@ msgid "Activities"
 msgstr "Činnosti"
 
 msgid "Activity"
-msgstr ""
+msgstr "Aktivita"
 
 msgid "Adaptive (Low Power Consumption)"
 msgstr "Přizpůsobivé (nízká spotřeba energie)"
@@ -676,9 +676,6 @@ msgstr ""
 "disku, ale u některých modelů o 50 nižší). Tento atribut je považován za "
 "zastaralý."
 
-msgid "Albanian"
-msgstr "albánština"
-
 msgid "Alert Level"
 msgstr "Výstražná úroveň"
 
@@ -686,7 +683,7 @@ msgid "All"
 msgstr "Vše"
 
 msgid "All data from the following statistics have been deleted:"
-msgstr ""
+msgstr "Budou smazány veškeré údaje z následujících statistik:"
 
 msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
@@ -1000,10 +997,10 @@ msgid "AutoScale"
 msgstr "Měřítko automaticky"
 
 msgid "Autoscale"
-msgstr ""
+msgstr "Automatické měřítko"
 
 msgid "Autoscale for graphs."
-msgstr ""
+msgstr "Automatické měřítko grafů"
 
 msgid "Autoselect"
 msgstr "Automatický výběr"
@@ -1021,7 +1018,7 @@ msgid "Available"
 msgstr "K dispozici"
 
 msgid "Available Graphs"
-msgstr ""
+msgstr "Grafy k dispozici"
 
 msgid ""
 "Average performance of seek operations of the magnetic heads. If this "
@@ -1040,7 +1037,7 @@ msgid "Back"
 msgstr "Zpět"
 
 msgid "Background"
-msgstr ""
+msgstr "Pozadí"
 
 msgid "Backup Configuration"
 msgstr "Záloha nastavení"
@@ -1222,7 +1219,7 @@ msgstr ""
 "stejně, jako ty už přítomné."
 
 msgid "Bytes/sec"
-msgstr ""
+msgstr "Bajtů/sekundu"
 
 msgid "CACHE"
 msgstr "MEZIPAMĚŤ"
@@ -1297,16 +1294,16 @@ msgid "CP950 (Traditional Chinese Big5)"
 msgstr "CP950 (tradiční čínština Big5)"
 
 msgid "CPU Frequency"
-msgstr ""
+msgstr "Frekvence procesoru"
 
 msgid "CPU Load"
 msgstr "Vytížení procesoru"
 
 msgid "CPU Temperature"
-msgstr ""
+msgstr "Teplota procesoru"
 
 msgid "CPU Usage"
-msgstr ""
+msgstr "Využití procesoru"
 
 msgid "CPU frequency"
 msgstr "Frekvence procesoru"
@@ -1605,7 +1602,7 @@ msgid "Content"
 msgstr "Obsah"
 
 msgid "Continue"
-msgstr ""
+msgstr "Pokračovat"
 
 msgid "Controller"
 msgstr "Řadič"
@@ -2012,7 +2009,7 @@ msgid "Data digest"
 msgstr "Otisk dat"
 
 msgid "Data directory"
-msgstr ""
+msgstr "Složka s daty"
 
 msgid "Data integrity"
 msgstr "Celistvost dat"
@@ -2090,7 +2087,7 @@ msgstr "Výchozí nastavení pro zařízení"
 
 #, php-format
 msgid "Default is %s %s."
-msgstr ""
+msgstr "Výchozí je %s %s."
 
 #, php-format
 msgid "Default is %s."
@@ -2290,7 +2287,7 @@ msgstr ""
 "(;)"
 
 msgid "Destination host name or IP address."
-msgstr ""
+msgstr "Název nebo IP adresa cílového stroje."
 
 msgid "Destination host name or IP number."
 msgstr "Cílový stroj (název nebo IP adresa)."
@@ -2315,7 +2312,7 @@ msgstr "Zrušit tento fond úložišť"
 
 msgid ""
 "Destroy any snapshots and bookmarks more recent than the one specified."
-msgstr ""
+msgstr "Zrušit veškeré zachycené stavy a záložky novější než tento."
 
 msgid "Destroyed"
 msgstr "Zlikvidováno"
@@ -2327,7 +2324,7 @@ msgid "Detach a log device from a mirrored log"
 msgstr ""
 
 msgid "Detailed"
-msgstr ""
+msgstr "Podrobné"
 
 msgid "Detected"
 msgstr "Rozpoznáno"
@@ -2429,7 +2426,7 @@ msgstr "Složka"
 
 #, php-format
 msgid "Directory %s doesn't exist!"
-msgstr ""
+msgstr "Složka %s neexistuje!"
 
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr "Složka pro neúplné soubory. Nevyplněno znamená nepoužívat."
@@ -2503,7 +2500,7 @@ msgid "Disk Selection"
 msgstr "Výběr disku"
 
 msgid "Disk Usage"
-msgstr ""
+msgstr "Využití disku"
 
 msgid "Disk space usage"
 msgstr "Obsazený prostor"
@@ -2512,7 +2509,7 @@ msgid "Disks"
 msgstr "Disky"
 
 msgid "Disks (Info)"
-msgstr ""
+msgstr "Disky (info)"
 
 msgid "Disks (Info) information"
 msgstr ""
@@ -3000,6 +2997,9 @@ msgstr "Hlášení e-mailem"
 msgid "Email Reports"
 msgstr ""
 
+msgid "Email Reports Setup"
+msgstr ""
+
 msgid "Email Setup"
 msgstr ""
 
@@ -3091,7 +3091,7 @@ msgid "Enable authentication."
 msgstr "Zapnout ověřování."
 
 msgid "Enable collecting CPU frequency statistics."
-msgstr ""
+msgstr "Shromažďovat statistiky frekvence procesoru."
 
 msgid "Enable collecting CPU temperature statistics."
 msgstr ""
@@ -3100,7 +3100,7 @@ msgid "Enable collecting CPU usage statistics."
 msgstr ""
 
 msgid "Enable collecting UPS statistics."
-msgstr ""
+msgstr "Shromažďovat statistiky o zdroji nepřerušovaného napájení"
 
 msgid "Enable collecting ZFS ARC usage statistics."
 msgstr ""
@@ -3345,8 +3345,8 @@ msgstr ""
 "nastavení a obrazy úložišť virtuálnich strojů."
 
 msgid ""
-"Enter the path to the home directory of rrdgraphs. The data directory holds "
-"the statistical data for the graphs and will be updated every 5 minutes."
+"Enter the path to the home directory of rrdgraphs. This directory stores the "
+"statistical data for the graphs and will be updated every 5 minutes."
 msgstr ""
 
 msgid ""
@@ -4662,9 +4662,6 @@ msgstr "Nejnovější testovací sestavení: %s"
 msgid "Latest Release: %s"
 msgstr "Nejnovější vydaná hotová verze: %s"
 
-msgid "Latvian"
-msgstr "Lotyština"
-
 msgid "Leave already configured auto snapshots."
 msgstr "Ponechat užnastavené samočinná zachycení stavu"
 
@@ -5253,6 +5250,9 @@ msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
 msgstr "pondělí úterý středa čtvrtek pátek sobota neděle"
 
 msgid "Monitoring"
+msgstr ""
+
+msgid "Monitoring Setup"
 msgstr ""
 
 msgid "Months"
@@ -6362,9 +6362,6 @@ msgstr "HODNOTA V NEZPRACOVANÉM STAVU"
 
 msgid "RAW info"
 msgstr "Informace v nezpracovaném stavu"
-
-msgid "RRDGraphs"
-msgstr ""
 
 #, php-format
 msgid ""
@@ -7600,6 +7597,9 @@ msgstr ""
 msgid "System"
 msgstr "Počítač"
 
+msgid "System Email Report Settings"
+msgstr ""
+
 msgid "System Email Settings"
 msgstr ""
 
@@ -7611,6 +7611,9 @@ msgstr "Vytížení systému"
 
 msgid "System Message"
 msgstr "Systémová zpráva"
+
+msgid "System Monitoring Settings"
+msgstr ""
 
 msgid "System Processes"
 msgstr ""

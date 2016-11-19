@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-14 05:32+0000\n"
-"PO-Revision-Date: 2016-11-14 08:17+0000\n"
+"POT-Creation-Date: 2016-11-18 14:04+0000\n"
+"PO-Revision-Date: 2016-11-18 15:28+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-15 13:21+0000\n"
-"X-Generator: Launchpad (build 18261)\n"
+"X-Launchpad-Export-Date: 2016-11-19 14:04+0000\n"
+"X-Generator: Launchpad (build 18269)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -672,9 +672,6 @@ msgid ""
 msgstr ""
 "Temperatura del aire en los Discos Western Digital (Identico a la "
 "Temperatura del disco, pero esta marcado como obsoleto..)"
-
-msgid "Albanian"
-msgstr "Albanés"
 
 msgid "Alert Level"
 msgstr "Nivel de alerta"
@@ -3010,6 +3007,9 @@ msgstr "Informe por correo electrónico"
 msgid "Email Reports"
 msgstr "Informe de Email"
 
+msgid "Email Reports Setup"
+msgstr "Opciones de e-mail"
+
 msgid "Email Setup"
 msgstr "Configurar e-mail"
 
@@ -3355,12 +3355,11 @@ msgstr ""
 "creadas bajo este directorio."
 
 msgid ""
-"Enter the path to the home directory of rrdgraphs. The data directory holds "
-"the statistical data for the graphs and will be updated every 5 minutes."
+"Enter the path to the home directory of rrdgraphs. This directory stores the "
+"statistical data for the graphs and will be updated every 5 minutes."
 msgstr ""
-"Habilita la ruta del directorio home para RRDGraphs. En este directorio se "
-"almacenarán los datos estadisticos para las gráficas y serán actualizados "
-"cada 5 minutos."
+"Ruta del directorio home de rrdgraphs. Es donde se almacenan las "
+"estadisticas y se actualizan cada 5 minutos."
 
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
@@ -4676,9 +4675,6 @@ msgstr "Ultima Beta: %s"
 msgid "Latest Release: %s"
 msgstr "Ultima Versión: %s"
 
-msgid "Latvian"
-msgstr "Lituano"
-
 msgid "Leave already configured auto snapshots."
 msgstr "Dejar como está la configuración de Snapshot automaticos"
 
@@ -5257,6 +5253,9 @@ msgstr "Lunes Martes Miercoles Jueves Viernes Sabado Domingo"
 
 msgid "Monitoring"
 msgstr "Monitorizar"
+
+msgid "Monitoring Setup"
+msgstr "Opciones de Monitorización"
 
 msgid "Months"
 msgstr "Meses"
@@ -6356,9 +6355,6 @@ msgstr "Valor en crudo"
 
 msgid "RAW info"
 msgstr "RAW info"
-
-msgid "RRDGraphs"
-msgstr "RRDGraphs"
 
 #, php-format
 msgid ""
@@ -7619,6 +7615,9 @@ msgstr ""
 msgid "System"
 msgstr "Sistema"
 
+msgid "System Email Report Settings"
+msgstr "Opciones de e-mail del sistema"
+
 msgid "System Email Settings"
 msgstr "E-mail opciones del sistema"
 
@@ -7630,6 +7629,9 @@ msgstr "Carga del sistema"
 
 msgid "System Message"
 msgstr "Mensaje del sistema"
+
+msgid "System Monitoring Settings"
+msgstr "Opciones de Monitorización del sistema"
 
 msgid "System Processes"
 msgstr "Procesos del sistema"
