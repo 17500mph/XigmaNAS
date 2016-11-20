@@ -31,8 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
 $sphere_scriptname = basename(__FILE__);
 $sphere_header = 'Location: '.$sphere_scriptname;
@@ -158,7 +158,7 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 }
 $pgtitle = [gtext('System'), gtext('Advanced'), gtext('loader.conf'), $isrecordnew ? gtext('Add') : gtext('Edit')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
 		<li class="tabinact"><a href="system_advanced.php"><span><?=gtext('Advanced');?></span></a></li>
@@ -186,6 +186,10 @@ $pgtitle = [gtext('System'), gtext('Advanced'), gtext('loader.conf'), $isrecordn
 		}
 	?>
 	<table id="area_data_settings">
+		<colgroup>
+			<col id="area_data_settings_col_tag">
+			<col id="area_data_settings_col_data">
+		</colgroup>
 		<thead>
 			<?php html_titleline_checkbox2('enable', gtext('Configuration'), $sphere_record['enable'], gtext('Enable'));?>
 		</thead>
@@ -202,6 +206,6 @@ $pgtitle = [gtext('System'), gtext('Advanced'), gtext('loader.conf'), $isrecordn
 		<input name="Cancel" type="submit" class="formbtn" value="<?=gtext('Cancel');?>"/>
 		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>"/>
 	</div>
-	<?php require('formend.inc');?>
+	<?php require 'formend.inc';?>
 </form></td></tr></tbody></table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
