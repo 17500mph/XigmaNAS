@@ -426,14 +426,14 @@ function aio_change() {
 						<td width="22%" valign="top" class="vncell"><?=gtext("Send Buffer Size"); ?></td>
 						<td width="78%" class="vtable">
 							<input name="sndbuf" type="text" class="formfld" id="sndbuf" size="30" value="<?=htmlspecialchars($pconfig['sndbuf']);?>" />
-							<br /><?=sprintf(gtext("Size of send buffer (%d by default)."), 128480); ?>
+							<br /><?=sprintf(gtext("Size of send buffer (%d by default)."), 65536); ?>
 						</td>
 					</tr>
 					<tr>
 						<td width="22%" valign="top" class="vncell"><?=gtext("Receive Buffer Size") ; ?></td>
 						<td width="78%" class="vtable">
 							<input name="rcvbuf" type="text" class="formfld" id="rcvbuf" size="30" value="<?=htmlspecialchars($pconfig['rcvbuf']);?>" />
-							<br /><?=sprintf(gtext("Size of receive buffer (%d by default)."), 128480); ?>
+							<br /><?=sprintf(gtext("Size of receive buffer (%d by default)."), 65536); ?>
 						</td>
 					</tr>
 					<tr>
