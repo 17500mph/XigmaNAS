@@ -54,7 +54,10 @@ $pconfig['netbiosname'] = $config['samba']['netbiosname'];
 $pconfig['workgroup'] = $config['samba']['workgroup'];
 $pconfig['serverdesc'] = $config['samba']['serverdesc'];
 $pconfig['security'] = $config['samba']['security'];
-$pconfig['maxprotocol'] = $config['samba']['maxprotocol'];
+$pconfig['maxprotocol'] = $config['samba']['maxprotocol'] ?? 'default';
+$pconfig['minprotocol'] = $config['samba']['minprotocol'] ?? 'default';
+$pconfig['clientmaxprotocol'] = $config['samba']['clientmaxprotocol'] ?? 'default';
+$pconfig['clientminprotocol'] = $config['samba']['clientminprotocol'] ?? 'default';
 $pconfig['if'] = !empty($config['samba']['if']) ? $config['samba']['if'] : "";
 $pconfig['localmaster'] = $config['samba']['localmaster'];
 $pconfig['pwdsrv'] = !empty($config['samba']['pwdsrv']) ? $config['samba']['pwdsrv'] : "";
@@ -101,9 +104,10 @@ if ($_POST) {
 		$reqdfieldst = explode(" ", "numericint numericint");
 
 		// samba 4+ does not have "share". you can delete this in future.
-		if (($_POST['security'] == "share" && $_POST['maxprotocol'] == "SMB2")
-		    || ($_POST['security'] == "share" && $_POST['maxprotocol'] == "SMB3")) {
-			$input_errors[] = gtext("It cannot be used combining SMB2 and Anonymous.");
+		if ($_POST['security'] == 'share') {
+			if(preg_match('/^SMB[23]/',$_POST['maxprotocol']) || preg_match('/^SMB[23]/',$_POST['minprotocol'])) {
+				$input_errors[] = gtext('Anonymous access has been deprecated starting from SMB2.');
+			}
 		}
 		if (!empty($_POST['createmask']) || !empty($_POST['directorymask'])) {
 			$reqdfields = array_merge($reqdfields, explode(" ", "createmask directorymask"));
@@ -136,10 +140,15 @@ if ($_POST) {
 		$config['samba']['workgroup'] = $_POST['workgroup'];
 		$config['samba']['serverdesc'] = $_POST['serverdesc'];
 		$config['samba']['security'] = $_POST['security'];
-		if ($_POST['security'] == "share") {
-			$config['samba']['maxprotocol'] = "NT1";
+		if ($_POST['security'] == 'share') {
+			$config['samba']['maxprotocol'] = 'NT1';
 		} else {
-			$config['samba']['maxprotocol'] = $_POST['maxprotocol'];
+			$config['samba']['maxprotocol'] = $_POST['maxprotocol'] ?? 'default';
+		}
+		if ($_POST['security'] == 'share') {
+			$config['samba']['minprotocol'] = 'NT1';
+		} else {
+			$config['samba']['minprotocol'] = $_POST['minprotocol'] ?? 'default';
 		}
 		$config['samba']['if'] = $_POST['if'];
 		$config['samba']['localmaster'] = $_POST['localmaster'];
@@ -198,6 +207,20 @@ if ($_POST) {
 		$savemsg = get_std_save_message($retval);
 	}
 }
+$l_protocol = [
+	'default' => gtext('Default'),
+	'SMB3' => gtext('SMB3'),
+	'SMB3_11' => gtext('SMB3_11 (Windows 10)'),
+	'SMB3_02' => gtext('SMB3 (Windows 8.1)'),
+	'SMB3_00' => gtext('SMB3 (Windows 8)'),
+	'SMB2' => gtext('SMB2'),
+	'NT1' => gtext('NT1 (CIFS)')
+];
+$desc_anyanyprot = gtext('Normally this option should not be set as the automatic negotiation phase in the SMB protocol takes care of choosing the appropriate protocol.');
+$desc_srvmaxprot = gtext('This parameter sets the highest protocol level that will be supported by the server.');
+$desc_srvminprot = gtext('This setting controls the minimum protocol version that the server will allow the client to use.');
+$desc_climaxprot = gtext('This parameter sets the highest protocol level that will be supported by the client.');
+$desc_climinprot = gtext('This setting controls the minimum protocol version that the client will attempt to use.');
 ?>
 <?php include("fbegin.inc");?>
 <script type="text/javascript">
@@ -219,6 +242,9 @@ function enable_change(enable_change) {
 	document.iform.rcvbuf.disabled = endis;
 	document.iform.security.disabled = endis;
 	document.iform.maxprotocol.disabled = endis;
+	document.iform.minprotocol.disabled = endis;
+	document.iform.clientmaxprotocol.disabled = endis;
+	document.iform.clientminprotocol.disabled = endis;
 	document.iform.if.disabled = endis;
 	document.iform.largereadwrite.disabled = endis;
 	document.iform.easupport.disabled = endis;
@@ -293,7 +319,12 @@ function aio_change() {
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_titleline_checkbox("enable", gtext("Common Internet File System"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
 					<?php html_combobox("security", gtext("Authentication"), $pconfig['security'], array("user" => gtext("Local User"), "ads" => gtext("Active Directory")), "", true, false, "authentication_change()");?>
-					<?php html_combobox("maxprotocol", gtext("Max Protocol"), $pconfig['maxprotocol'], array("SMB3" => gtext("SMB3"), "SMB2" => gtext("SMB2"), "NT1" => gtext("NT1")), sprintf("%s<br>%s", gtext("SMB3 is for recent OS like Windows 10 and 8. SMB2 is for OS like Windows 7 and Vista. NT1 is for legacy OS."), gtext("When the negotiation is complete, you will not be able to change the SMB protocol. If you change it, you will need to restart the client connected to this server.")), true, false, "");?>
+					<?php 
+					html_combobox("maxprotocol", gtext('Server Max Protocol'), $pconfig['maxprotocol'], $l_protocol, sprintf('%s %s',$desc_srvmaxprot,$desc_anyanyprot),false,false,'');
+					html_combobox("minprotocol", gtext('Server Min Protocol'), $pconfig['minprotocol'], $l_protocol, sprintf("%s %s",$desc_srvminprot,$desc_anyanyprot),false,false,'');
+					html_combobox("clientmaxprotocol", gtext('Client Max Protocol'), $pconfig['clientmaxprotocol'], $l_protocol, sprintf("%s %s",$desc_climaxprot,$desc_anyanyprot),false,false,'');
+					html_combobox("clientminprotocol", gtext('Client Min Protocol'), $pconfig['clientminprotocol'], $l_protocol, sprintf("%s %s",$desc_climinprot,$desc_anyanyprot),false,false,'');
+					?>
 					<tr>
 						<td width="22%" valign="top" class="vncellreq"><?=gtext("NetBIOS name");?></td>
 						<td width="78%" class="vtable">
