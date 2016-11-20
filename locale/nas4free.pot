@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-11-18 14:04+0000\n"
+"POT-Creation-Date: 2016-11-20 20:32+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -681,6 +681,9 @@ msgstr ""
 msgid "An interface with the specified description already exists."
 msgstr ""
 
+msgid "Anonymous access has been deprecated starting from SMB2."
+msgstr ""
+
 msgid "Anonymous bind"
 msgstr ""
 
@@ -1218,6 +1221,12 @@ msgid "Click this button to download the server configuration in encrypted GZIP 
 msgstr ""
 
 msgid "Client"
+msgstr ""
+
+msgid "Client Max Protocol"
+msgstr ""
+
+msgid "Client Min Protocol"
 msgstr ""
 
 msgid "Clone"
@@ -3795,9 +3804,6 @@ msgstr ""
 msgid "It can be changed from the client side by standard SCSI mode page at any time."
 msgstr ""
 
-msgid "It cannot be used combining SMB2 and Anonymous."
-msgstr ""
-
 msgid "It is impossible to enable 'Anonymous users only' and 'Local users only' authentication simultaneously."
 msgstr ""
 
@@ -4238,9 +4244,6 @@ msgstr ""
 msgid "Masquerade address"
 msgstr ""
 
-msgid "Max Protocol"
-msgstr ""
-
 msgid "Max entries"
 msgstr ""
 
@@ -4533,7 +4536,7 @@ msgstr ""
 msgid "NOTE"
 msgstr ""
 
-msgid "NT1"
+msgid "NT1 (CIFS)"
 msgstr ""
 
 msgid "NTP is not enabled."
@@ -4764,6 +4767,9 @@ msgid "None"
 msgstr ""
 
 msgid "Normal"
+msgstr ""
+
+msgid "Normally this option should not be set as the automatic negotiation phase in the SMB protocol takes care of choosing the appropriate protocol."
 msgstr ""
 
 msgid "Norwegian (Bokmal)"
@@ -5848,7 +5854,13 @@ msgstr ""
 msgid "SMB3"
 msgstr ""
 
-msgid "SMB3 is for recent OS like Windows 10 and 8. SMB2 is for OS like Windows 7 and Vista. NT1 is for legacy OS."
+msgid "SMB3 (Windows 8)"
+msgstr ""
+
+msgid "SMB3 (Windows 8.1)"
+msgstr ""
+
+msgid "SMB3_11 (Windows 10)"
 msgstr ""
 
 msgid "SMTP Server"
@@ -6124,6 +6136,12 @@ msgid "Serial number"
 msgstr ""
 
 msgid "Server"
+msgstr ""
+
+msgid "Server Max Protocol"
+msgstr ""
+
+msgid "Server Min Protocol"
 msgstr ""
 
 msgid "Server Name"
@@ -7541,6 +7559,12 @@ msgstr ""
 msgid "This parameter says that if N occurrences of the event happen within the given time interval, then a ban is automatically added."
 msgstr ""
 
+msgid "This parameter sets the highest protocol level that will be supported by the client."
+msgstr ""
+
+msgid "This parameter sets the highest protocol level that will be supported by the server."
+msgstr ""
+
 #, php-format
 msgid "This parameter specifies the suffix that is used for groups when these are added to the LDAP directory, e.g. %s"
 msgstr ""
@@ -7567,6 +7591,12 @@ msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr ""
 
 msgid "This server uses default swap!"
+msgstr ""
+
+msgid "This setting controls the minimum protocol version that the client will attempt to use."
+msgstr ""
+
+msgid "This setting controls the minimum protocol version that the server will allow the client to use."
 msgstr ""
 
 msgid "This tag already exists."
@@ -8350,9 +8380,6 @@ msgid "When UPS switches to Low Battery"
 msgstr ""
 
 msgid "When a client initially connects to the server the ident protocol is used to attempt to identify the remote username."
-msgstr ""
-
-msgid "When the negotiation is complete, you will not be able to change the SMB protocol. If you change it, you will need to restart the client connected to this server."
 msgstr ""
 
 msgid "Where to save downloaded data."
