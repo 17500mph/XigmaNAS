@@ -150,6 +150,8 @@ if ($_POST) {
 		} else {
 			$config['samba']['minprotocol'] = $_POST['minprotocol'] ?? 'default';
 		}
+		$config['samba']['clientmaxprotocol'] = $_POST['clientmaxprotocol'] ?? 'default';
+		$config['samba']['clientminprotocol'] = $_POST['clientminprotocol'] ?? 'default';
 		$config['samba']['if'] = $_POST['if'];
 		$config['samba']['localmaster'] = $_POST['localmaster'];
 		$config['samba']['pwdsrv'] = $_POST['pwdsrv'];
