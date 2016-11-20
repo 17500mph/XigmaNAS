@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-18 14:04+0000\n"
-"PO-Revision-Date: 2016-11-18 14:13+0000\n"
+"POT-Creation-Date: 2016-11-20 20:32+0000\n"
+"PO-Revision-Date: 2016-11-20 20:00+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-19 14:04+0000\n"
+"X-Launchpad-Export-Date: 2016-11-20 20:06+0000\n"
 "X-Generator: Launchpad (build 18269)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -869,6 +869,9 @@ msgstr "Een host met deze naam bestaat reeds."
 msgid "An interface with the specified description already exists."
 msgstr "Een netwerk met deze gespecificeerde omschrijving bestaat reeds."
 
+msgid "Anonymous access has been deprecated starting from SMB2."
+msgstr "Anonieme toegang is afgekeurd vanaf SMB2."
+
 msgid "Anonymous bind"
 msgstr "Anonieme koppeling"
 
@@ -1473,6 +1476,12 @@ msgstr ""
 
 msgid "Client"
 msgstr "Werkstation"
+
+msgid "Client Max Protocol"
+msgstr "Cliënt Max Protocol"
+
+msgid "Client Min Protocol"
+msgstr "Cliënt Min Protocol"
 
 msgid "Clone"
 msgstr "Kloon"
@@ -4511,9 +4520,6 @@ msgstr ""
 "Het kan op elk moment worden gewijzigd vanaf de cliëntzijde via standaard "
 "SCSI-modus pagina."
 
-msgid "It cannot be used combining SMB2 and Anonymous."
-msgstr "Kan niet gebruikt worden samen met SMB2 en Anoniem"
-
 msgid ""
 "It is impossible to enable 'Anonymous users only' and 'Local users only' "
 "authentication simultaneously."
@@ -5042,9 +5048,6 @@ msgstr ""
 msgid "Masquerade address"
 msgstr "Masquerade adres"
 
-msgid "Max Protocol"
-msgstr "Max Protocol"
-
 msgid "Max entries"
 msgstr "Max logboekregels"
 
@@ -5355,8 +5358,8 @@ msgstr "NOG NIET BESCHIKBAAR"
 msgid "NOTE"
 msgstr "Opmerking"
 
-msgid "NT1"
-msgstr "NT1"
+msgid "NT1 (CIFS)"
+msgstr "NT1 (CIFS)"
 
 msgid "NTP is not enabled."
 msgstr "NTP is niet ingeschakeld."
@@ -5606,6 +5609,14 @@ msgstr "Geen"
 
 msgid "Normal"
 msgstr "Normaal"
+
+msgid ""
+"Normally this option should not be set as the automatic negotiation phase in "
+"the SMB protocol takes care of choosing the appropriate protocol."
+msgstr ""
+"Normaal gesproken hoeft deze optie niet te worden ingesteld omdat de "
+"automatische onderhandelingsfase in het SMB-protocol zorgt voor het kiezen "
+"van de juiste protocol."
 
 msgid "Norwegian (Bokmal)"
 msgstr "Noors (Bokmal)"
@@ -6798,12 +6809,14 @@ msgstr "SMB2"
 msgid "SMB3"
 msgstr "SMB3"
 
-msgid ""
-"SMB3 is for recent OS like Windows 10 and 8. SMB2 is for OS like Windows 7 "
-"and Vista. NT1 is for legacy OS."
-msgstr ""
-"SMB3 is voor een recent OS zoals Windows 10 en 8. SMB2 is voor Windows 7 en "
-"Vista. NT1 is voor ouder OS."
+msgid "SMB3 (Windows 8)"
+msgstr "SMB3 (Windows 8)"
+
+msgid "SMB3 (Windows 8.1)"
+msgstr "SMB3 (Windows 8.1)"
+
+msgid "SMB3_11 (Windows 10)"
+msgstr "SMB3_11 (Windows 10)"
 
 msgid "SMTP Server"
 msgstr "SMTP Server"
@@ -7130,6 +7143,12 @@ msgstr "Serienummer"
 
 msgid "Server"
 msgstr "Server"
+
+msgid "Server Max Protocol"
+msgstr "Server Max Protocol"
+
+msgid "Server Min Protocol"
+msgstr "Server Min Protocol"
 
 msgid "Server Name"
 msgstr "Servernaam"
@@ -9097,6 +9116,20 @@ msgstr ""
 "Deze parameter zegt dat als N voorkomt en binnen het bepaalde tijdsinterval "
 "gebeurt, een ban automatisch wordt toegepast."
 
+msgid ""
+"This parameter sets the highest protocol level that will be supported by the "
+"client."
+msgstr ""
+"Deze parameter stelt het hoogste protocol niveau in dat zal worden "
+"ondersteund door de cliënt."
+
+msgid ""
+"This parameter sets the highest protocol level that will be supported by the "
+"server."
+msgstr ""
+"Deze parameter stelt het hoogste protocol niveau in dat zal worden "
+"ondersteund door de server."
+
 #, php-format
 msgid ""
 "This parameter specifies the suffix that is used for groups when these are "
@@ -9147,6 +9180,20 @@ msgstr ""
 
 msgid "This server uses default swap!"
 msgstr "Deze server gebruikt standaard swap!"
+
+msgid ""
+"This setting controls the minimum protocol version that the client will "
+"attempt to use."
+msgstr ""
+"Deze parameter stelt het laagste protocol niveau in dat de cliënt zal "
+"proberen te gebruiken."
+
+msgid ""
+"This setting controls the minimum protocol version that the server will "
+"allow the client to use."
+msgstr ""
+"Deze parameter stelt het laagste protocol niveau in dat de server de cliënt "
+"zal toestaan te laten gebruiken."
 
 msgid "This tag already exists."
 msgstr "Deze markering bestaat reeds."
@@ -10088,15 +10135,6 @@ msgstr ""
 "Wanneer een cliënt aanvankelijk verbinding maakt met de server wordt het "
 "ident protocol gebruikt om de remote gebruikersnaam te identificeren."
 
-msgid ""
-"When the negotiation is complete, you will not be able to change the SMB "
-"protocol. If you change it, you will need to restart the client connected to "
-"this server."
-msgstr ""
-"Wanneer de totstandbrenging voltooid is zult u niet in staat zijn om het SMB-"
-"protocol te wijzigen. Indien je het protocol veranderd moeten alle cliënt "
-"computers opnieuw opgestart worden."
-
 msgid "Where to save downloaded data."
 msgstr "Map waarin de gedownloade bestanden opgeslagen worden."
 
@@ -10477,3 +10515,28 @@ msgstr "gebruiker"
 
 msgid "version:"
 msgstr "versie:"
+
+#~ msgid "It cannot be used combining SMB2 and Anonymous."
+#~ msgstr "Kan niet gebruikt worden samen met SMB2 en Anoniem"
+
+#~ msgid "Max Protocol"
+#~ msgstr "Max Protocol"
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid ""
+#~ "When the negotiation is complete, you will not be able to change the SMB "
+#~ "protocol. If you change it, you will need to restart the client connected to "
+#~ "this server."
+#~ msgstr ""
+#~ "Wanneer de totstandbrenging voltooid is zult u niet in staat zijn om het SMB-"
+#~ "protocol te wijzigen. Indien je het protocol veranderd moeten alle cliënt "
+#~ "computers opnieuw opgestart worden."
+
+#~ msgid ""
+#~ "SMB3 is for recent OS like Windows 10 and 8. SMB2 is for OS like Windows 7 "
+#~ "and Vista. NT1 is for legacy OS."
+#~ msgstr ""
+#~ "SMB3 is voor een recent OS zoals Windows 10 en 8. SMB2 is voor Windows 7 en "
+#~ "Vista. NT1 is voor ouder OS."
