@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-18 14:04+0000\n"
+"POT-Creation-Date: 2016-11-20 20:32+0000\n"
 "PO-Revision-Date: 2016-11-18 18:55+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-19 14:05+0000\n"
+"X-Launchpad-Export-Date: 2016-11-20 20:05+0000\n"
 "X-Generator: Launchpad (build 18269)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -849,6 +849,9 @@ msgstr "Хост с таким именем уже существует."
 msgid "An interface with the specified description already exists."
 msgstr "Интерфейс с таким описанием уже существует."
 
+msgid "Anonymous access has been deprecated starting from SMB2."
+msgstr ""
+
 msgid "Anonymous bind"
 msgstr "Анонимный доступ"
 
@@ -1448,6 +1451,12 @@ msgstr ""
 
 msgid "Client"
 msgstr "Клиент"
+
+msgid "Client Max Protocol"
+msgstr ""
+
+msgid "Client Min Protocol"
+msgstr ""
 
 msgid "Clone"
 msgstr "Клоны"
@@ -4466,9 +4475,6 @@ msgstr ""
 "В любое время может быть изменено на клиентской стороне со стандартной "
 "страницы настройки параметров SCSI"
 
-msgid "It cannot be used combining SMB2 and Anonymous."
-msgstr "Невозможно использовать в комбинации SMB2 и Anonymous."
-
 msgid ""
 "It is impossible to enable 'Anonymous users only' and 'Local users only' "
 "authentication simultaneously."
@@ -4989,9 +4995,6 @@ msgstr ""
 msgid "Masquerade address"
 msgstr "Маскарадный адрес"
 
-msgid "Max Protocol"
-msgstr "Максимальный протокол"
-
 msgid "Max entries"
 msgstr "Максимальное количество записей"
 
@@ -5302,8 +5305,8 @@ msgstr "Временно недоступно"
 msgid "NOTE"
 msgstr "ПРИМЕЧАНИЕ"
 
-msgid "NT1"
-msgstr "NT1"
+msgid "NT1 (CIFS)"
+msgstr ""
 
 msgid "NTP is not enabled."
 msgstr "NTP не включен."
@@ -5552,6 +5555,11 @@ msgstr "Нет"
 
 msgid "Normal"
 msgstr "Нормальный"
+
+msgid ""
+"Normally this option should not be set as the automatic negotiation phase in "
+"the SMB protocol takes care of choosing the appropriate protocol."
+msgstr ""
 
 msgid "Norwegian (Bokmal)"
 msgstr "Норвежский (книжный)"
@@ -6737,12 +6745,14 @@ msgstr "SMB2"
 msgid "SMB3"
 msgstr "SMB3"
 
-msgid ""
-"SMB3 is for recent OS like Windows 10 and 8. SMB2 is for OS like Windows 7 "
-"and Vista. NT1 is for legacy OS."
+msgid "SMB3 (Windows 8)"
 msgstr ""
-"SMB3 для новейших ОС таких, как Windows 10 и 8. SMB2 для Windows 7 и Vista. "
-"NT1 для устаревших ОС, таких как XP."
+
+msgid "SMB3 (Windows 8.1)"
+msgstr ""
+
+msgid "SMB3_11 (Windows 10)"
+msgstr ""
 
 msgid "SMTP Server"
 msgstr "Сервер SMTP"
@@ -7062,6 +7072,12 @@ msgstr "Серийный номер"
 
 msgid "Server"
 msgstr "Сервер"
+
+msgid "Server Max Protocol"
+msgstr ""
+
+msgid "Server Min Protocol"
+msgstr ""
 
 msgid "Server Name"
 msgstr "Имя сервера"
@@ -8993,6 +9009,16 @@ msgstr ""
 "Этот параметр означает, что если в рамках заданного временного интервала "
 "произошло N таких событий, то запрет будет добавлен автоматически."
 
+msgid ""
+"This parameter sets the highest protocol level that will be supported by the "
+"client."
+msgstr ""
+
+msgid ""
+"This parameter sets the highest protocol level that will be supported by the "
+"server."
+msgstr ""
+
 #, php-format
 msgid ""
 "This parameter specifies the suffix that is used for groups when these are "
@@ -9042,6 +9068,16 @@ msgstr "Правило, которое срабатывает при насту�
 
 msgid "This server uses default swap!"
 msgstr "Этот сервер использует swap по умолчанию!"
+
+msgid ""
+"This setting controls the minimum protocol version that the client will "
+"attempt to use."
+msgstr ""
+
+msgid ""
+"This setting controls the minimum protocol version that the server will "
+"allow the client to use."
+msgstr ""
 
 msgid "This tag already exists."
 msgstr "Такая метка уже существует."
@@ -9991,15 +10027,6 @@ msgstr ""
 "Когда клиент первоначально подключается к серверу идентификационный протокол "
 "используется для попытки идентификации удаленного пользователя."
 
-msgid ""
-"When the negotiation is complete, you will not be able to change the SMB "
-"protocol. If you change it, you will need to restart the client connected to "
-"this server."
-msgstr ""
-"После завершения процесса согласования вы не сможете изменить протокол SMB. "
-"Если вы его измените, вам придется перезапустить клиент, подключённый к "
-"серверу."
-
 msgid "Where to save downloaded data."
 msgstr "Место хранения загруженных файлов."
 
@@ -10380,3 +10407,28 @@ msgstr "пользователь"
 
 msgid "version:"
 msgstr "версия:"
+
+#~ msgid "It cannot be used combining SMB2 and Anonymous."
+#~ msgstr "Невозможно использовать в комбинации SMB2 и Anonymous."
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid "Max Protocol"
+#~ msgstr "Максимальный протокол"
+
+#~ msgid ""
+#~ "When the negotiation is complete, you will not be able to change the SMB "
+#~ "protocol. If you change it, you will need to restart the client connected to "
+#~ "this server."
+#~ msgstr ""
+#~ "После завершения процесса согласования вы не сможете изменить протокол SMB. "
+#~ "Если вы его измените, вам придется перезапустить клиент, подключённый к "
+#~ "серверу."
+
+#~ msgid ""
+#~ "SMB3 is for recent OS like Windows 10 and 8. SMB2 is for OS like Windows 7 "
+#~ "and Vista. NT1 is for legacy OS."
+#~ msgstr ""
+#~ "SMB3 для новейших ОС таких, как Windows 10 и 8. SMB2 для Windows 7 и Vista. "
+#~ "NT1 для устаревших ОС, таких как XP."

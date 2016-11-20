@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-18 14:04+0000\n"
+"POT-Creation-Date: 2016-11-20 20:32+0000\n"
 "PO-Revision-Date: 2016-09-17 16:31+0000\n"
 "Last-Translator: Timm Lagoni <tila@tl-designs.dk>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-19 14:04+0000\n"
+"X-Launchpad-Export-Date: 2016-11-20 20:06+0000\n"
 "X-Generator: Launchpad (build 18269)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
@@ -793,6 +793,9 @@ msgstr "En vært med dette navn eksisterer allerede."
 msgid "An interface with the specified description already exists."
 msgstr "En grænseflade med den angivne beskrivelse eksisterer allerede."
 
+msgid "Anonymous access has been deprecated starting from SMB2."
+msgstr ""
+
 msgid "Anonymous bind"
 msgstr "Anonym bind"
 
@@ -1369,6 +1372,12 @@ msgstr ""
 
 msgid "Client"
 msgstr "Klient"
+
+msgid "Client Max Protocol"
+msgstr ""
+
+msgid "Client Min Protocol"
+msgstr ""
 
 msgid "Clone"
 msgstr "Klone"
@@ -4231,9 +4240,6 @@ msgid ""
 "time."
 msgstr "Kan ændres når som helst af bruger med standard SCSI mode page."
 
-msgid "It cannot be used combining SMB2 and Anonymous."
-msgstr "Det kan ikke bruges samtidig med SMB2 og Anonymt."
-
 msgid ""
 "It is impossible to enable 'Anonymous users only' and 'Local users only' "
 "authentication simultaneously."
@@ -4726,9 +4732,6 @@ msgstr ""
 msgid "Masquerade address"
 msgstr "Masquerade adresse"
 
-msgid "Max Protocol"
-msgstr "Max protokol"
-
 msgid "Max entries"
 msgstr ""
 
@@ -5031,8 +5034,8 @@ msgstr "IKKE TILGÆNGELIG ENDNU"
 msgid "NOTE"
 msgstr ""
 
-msgid "NT1"
-msgstr "NT1"
+msgid "NT1 (CIFS)"
+msgstr ""
 
 msgid "NTP is not enabled."
 msgstr "NTP er ikke aktiveret."
@@ -5278,6 +5281,11 @@ msgstr "Ingen"
 
 msgid "Normal"
 msgstr "Normal"
+
+msgid ""
+"Normally this option should not be set as the automatic negotiation phase in "
+"the SMB protocol takes care of choosing the appropriate protocol."
+msgstr ""
 
 msgid "Norwegian (Bokmal)"
 msgstr "Norsk (Bokmål)"
@@ -6436,9 +6444,13 @@ msgstr "SMB2"
 msgid "SMB3"
 msgstr "SMB3"
 
-msgid ""
-"SMB3 is for recent OS like Windows 10 and 8. SMB2 is for OS like Windows 7 "
-"and Vista. NT1 is for legacy OS."
+msgid "SMB3 (Windows 8)"
+msgstr ""
+
+msgid "SMB3 (Windows 8.1)"
+msgstr ""
+
+msgid "SMB3_11 (Windows 10)"
 msgstr ""
 
 msgid "SMTP Server"
@@ -6747,6 +6759,12 @@ msgstr "Serienummer"
 
 msgid "Server"
 msgstr "Server"
+
+msgid "Server Max Protocol"
+msgstr ""
+
+msgid "Server Min Protocol"
+msgstr ""
 
 msgid "Server Name"
 msgstr "Server Navn"
@@ -8561,6 +8579,16 @@ msgstr ""
 "Denne parameter siger at hvis hændelsen opstår N gange indenfor det angivne "
 "tidsinterval, bliver udelukkelsen automatisk tilføjet."
 
+msgid ""
+"This parameter sets the highest protocol level that will be supported by the "
+"client."
+msgstr ""
+
+msgid ""
+"This parameter sets the highest protocol level that will be supported by the "
+"server."
+msgstr ""
+
 #, php-format
 msgid ""
 "This parameter specifies the suffix that is used for groups when these are "
@@ -8606,6 +8634,16 @@ msgid "This rule is triggered whenever the selected event directive occurs."
 msgstr "Denne regel aktiveres når det valgte hændelses direktiv opstår."
 
 msgid "This server uses default swap!"
+msgstr ""
+
+msgid ""
+"This setting controls the minimum protocol version that the client will "
+"attempt to use."
+msgstr ""
+
+msgid ""
+"This setting controls the minimum protocol version that the server will "
+"allow the client to use."
 msgstr ""
 
 msgid "This tag already exists."
@@ -9483,12 +9521,6 @@ msgstr ""
 "Når en klient først opretter forbindelse til serveren, vil ident protokollen "
 "forsøge at identificere det fjerne brugernavn."
 
-msgid ""
-"When the negotiation is complete, you will not be able to change the SMB "
-"protocol. If you change it, you will need to restart the client connected to "
-"this server."
-msgstr ""
-
 msgid "Where to save downloaded data."
 msgstr "Hvor de downloadede data skal gemmes."
 
@@ -9849,3 +9881,12 @@ msgstr ""
 
 msgid "version:"
 msgstr "version:"
+
+#~ msgid "It cannot be used combining SMB2 and Anonymous."
+#~ msgstr "Det kan ikke bruges samtidig med SMB2 og Anonymt."
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid "Max Protocol"
+#~ msgstr "Max protokol"

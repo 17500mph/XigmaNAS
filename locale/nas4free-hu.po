@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-18 14:04+0000\n"
+"POT-Creation-Date: 2016-11-20 20:32+0000\n"
 "PO-Revision-Date: 2016-11-09 22:08+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-19 14:04+0000\n"
+"X-Launchpad-Export-Date: 2016-11-20 20:05+0000\n"
 "X-Generator: Launchpad (build 18269)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -847,6 +847,9 @@ msgstr "Egy állomás ugyanezzel a névvel létezik már."
 msgid "An interface with the specified description already exists."
 msgstr "Ilyen leírású interfész már létezik."
 
+msgid "Anonymous access has been deprecated starting from SMB2."
+msgstr ""
+
 msgid "Anonymous bind"
 msgstr "Anonymus kötés"
 
@@ -1441,6 +1444,12 @@ msgstr ""
 
 msgid "Client"
 msgstr "Kliens"
+
+msgid "Client Max Protocol"
+msgstr ""
+
+msgid "Client Min Protocol"
+msgstr ""
 
 msgid "Clone"
 msgstr "Klón"
@@ -4419,9 +4428,6 @@ msgstr ""
 "Ezt bármikor meg lehet változtatni a kliens oldalról szabványos SCSI mód "
 "oldal használatával."
 
-msgid "It cannot be used combining SMB2 and Anonymous."
-msgstr "SMB2 és Anonymous nem használható egyszerre."
-
 msgid ""
 "It is impossible to enable 'Anonymous users only' and 'Local users only' "
 "authentication simultaneously."
@@ -4940,9 +4946,6 @@ msgstr ""
 msgid "Masquerade address"
 msgstr "Álcím"
 
-msgid "Max Protocol"
-msgstr "Max Protokoll"
-
 msgid "Max entries"
 msgstr "Max bejegyzések"
 
@@ -5250,8 +5253,8 @@ msgstr "MÉG NEM ÉRHETŐ EL"
 msgid "NOTE"
 msgstr "MEGJEGYZÉS"
 
-msgid "NT1"
-msgstr "NT1"
+msgid "NT1 (CIFS)"
+msgstr ""
 
 msgid "NTP is not enabled."
 msgstr "NTP nincs bekapcsolva."
@@ -5499,6 +5502,11 @@ msgstr "Nincs"
 
 msgid "Normal"
 msgstr "Szokványos"
+
+msgid ""
+"Normally this option should not be set as the automatic negotiation phase in "
+"the SMB protocol takes care of choosing the appropriate protocol."
+msgstr ""
 
 msgid "Norwegian (Bokmal)"
 msgstr "Norvég (Bokmål)"
@@ -6693,13 +6701,14 @@ msgstr "SMB2"
 msgid "SMB3"
 msgstr "SMB3"
 
-msgid ""
-"SMB3 is for recent OS like Windows 10 and 8. SMB2 is for OS like Windows 7 "
-"and Vista. NT1 is for legacy OS."
+msgid "SMB3 (Windows 8)"
 msgstr ""
-"SMB3 az újabb operációs rendszerhez, mint például Windows 10 és 8. SMB2 "
-"például Windows 7 és Vista operációs rendszerekhez. NT1 a régebbi operációs "
-"rendszer számára, mint például az XP."
+
+msgid "SMB3 (Windows 8.1)"
+msgstr ""
+
+msgid "SMB3_11 (Windows 10)"
+msgstr ""
 
 msgid "SMTP Server"
 msgstr "SMTP szerver"
@@ -7022,6 +7031,12 @@ msgstr "Sorozatszám"
 
 msgid "Server"
 msgstr "Szerver"
+
+msgid "Server Max Protocol"
+msgstr ""
+
+msgid "Server Min Protocol"
+msgstr ""
 
 msgid "Server Name"
 msgstr "Kiszolgálónév"
@@ -8935,6 +8950,16 @@ msgstr ""
 "Ez a paraméter határozza meg, hogy ha N esetben bekövetkezik az adott "
 "esemény a megadott idő alatt, akkor egy tiltás  automatikus életbe lép."
 
+msgid ""
+"This parameter sets the highest protocol level that will be supported by the "
+"client."
+msgstr ""
+
+msgid ""
+"This parameter sets the highest protocol level that will be supported by the "
+"server."
+msgstr ""
+
 #, php-format
 msgid ""
 "This parameter specifies the suffix that is used for groups when these are "
@@ -8984,6 +9009,16 @@ msgstr "A kiválasztott esemény bekövetkezésekor ezt a szabály hívjuk meg."
 
 msgid "This server uses default swap!"
 msgstr "Ez a szerver az alapértelmezett cserehelyet használja!"
+
+msgid ""
+"This setting controls the minimum protocol version that the client will "
+"attempt to use."
+msgstr ""
+
+msgid ""
+"This setting controls the minimum protocol version that the server will "
+"allow the client to use."
+msgstr ""
 
 msgid "This tag already exists."
 msgstr "Ez az elem már létezik."
@@ -9907,14 +9942,6 @@ msgstr ""
 "Amikor egy kliens először csatlakozik a szerverre, az ident protokoll "
 "használatával próbálja meg azonosítani a távoli felhasználó névét."
 
-msgid ""
-"When the negotiation is complete, you will not be able to change the SMB "
-"protocol. If you change it, you will need to restart the client connected to "
-"this server."
-msgstr ""
-"A kapcsolat létrejötte után az SMB protokollt már nem lehet megváltoztatni.  "
-"Amennyiben megváltoztatod, a már csatlakozott klienseket újra kell indítani."
-
 msgid "Where to save downloaded data."
 msgstr "Letöltött fájlok mentése ide"
 
@@ -10285,3 +10312,28 @@ msgstr "felhasználó"
 
 msgid "version:"
 msgstr "verzió:"
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid "It cannot be used combining SMB2 and Anonymous."
+#~ msgstr "SMB2 és Anonymous nem használható egyszerre."
+
+#~ msgid "Max Protocol"
+#~ msgstr "Max Protokoll"
+
+#~ msgid ""
+#~ "When the negotiation is complete, you will not be able to change the SMB "
+#~ "protocol. If you change it, you will need to restart the client connected to "
+#~ "this server."
+#~ msgstr ""
+#~ "A kapcsolat létrejötte után az SMB protokollt már nem lehet megváltoztatni.  "
+#~ "Amennyiben megváltoztatod, a már csatlakozott klienseket újra kell indítani."
+
+#~ msgid ""
+#~ "SMB3 is for recent OS like Windows 10 and 8. SMB2 is for OS like Windows 7 "
+#~ "and Vista. NT1 is for legacy OS."
+#~ msgstr ""
+#~ "SMB3 az újabb operációs rendszerhez, mint például Windows 10 és 8. SMB2 "
+#~ "például Windows 7 és Vista operációs rendszerekhez. NT1 a régebbi operációs "
+#~ "rendszer számára, mint például az XP."
