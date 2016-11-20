@@ -49,7 +49,7 @@
 		'nb'		=> 'Norsk (bokmål)',
 		'pl'		=> 'Polski',
 		'pt'		=> 'Português',
-		'ptbr'		=> 'Português - Brasil',
+		'pt_BR'		=> 'Português - Brasil',
 		'ro'		=> 'Română',
 		'ru'		=> 'Русский',
 		'sk'		=> 'Slovenský',
