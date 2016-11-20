@@ -50,7 +50,7 @@ samba_recycle_subdir_mode="${samba_recycle_subdir_mode:-"0700"}"
 samba_idmap_range="${samba_idmap_range:-"10000-39999"}"
 samba_idmap_uid="${samba_idmap_uid:-"10000-39999"}"
 samba_idmap_gid="${samba_idmap_gid:-"10000-39999"}"
-samba_socket_options="${samba_socket_options:-"TCP_NODELAY"}"
+samba_socket_options="${samba_socket_options:-"TCP_NODELAY IPTOS_LOWDELAY"}"
 samba_create_mask="${samba_create_mask:-"0666"}"
 samba_directory_mask="${samba_directory_mask:-"0777"}"
 
@@ -145,13 +145,13 @@ samba_mkconf_cmd()
 			-v "concat('SO_SNDBUF=',//samba/sndbuf,' ')" \
 		-b \
 		-i "string-length(//samba/sndbuf) = 0" \
-			-o "SO_SNDBUF=64240 " \
+			-o "SO_SNDBUF=65536 " \
 		-b \
 		-i "string-length(//samba/rcvbuf) > 0" \
 			-v "concat('SO_RCVBUF=',//samba/rcvbuf,' ')" \
 		-b \
 		-i "string-length(//samba/rcvbuf) = 0" \
-			-o "SO_RCVBUF=64240 " \
+			-o "SO_RCVBUF=65536 " \
 		-b \
 		-n -o "# End of performance section" -n \
 		-i "string-length(//samba/pwdsrv) > 0" \
