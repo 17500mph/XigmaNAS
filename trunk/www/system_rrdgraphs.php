@@ -38,7 +38,7 @@ $sphere_scriptname = basename(__FILE__);
 $sphere_notifier = 'rrdgraphs';
 
 if (!(isset($config['rrdgraphs']) && is_array($config['rrdgraphs']))) {
-	$config['rrdgraphs'] = enabled;
+	$config['rrdgraphs'] = [];
 }
 
 $upsname = !empty($config['ups']['upsname']) ? $config['ups']['upsname'] : "identifier";
