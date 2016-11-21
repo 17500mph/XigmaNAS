@@ -1897,6 +1897,7 @@ function disks_import_all_disks($clean_import) {
 				$pdisk['acoustic'] = "0";
 				$pdisk['apm'] = "0";
 				$pdisk['transfermode'] = "auto";
+				$additional_fs_info = false;
 				$pdisk['fstype'] = disks_import_get_fstype($dev, $additional_fs_info);
 				if (false !== $additional_fs_info) {
 					$pdisk[$additional_fs_info['tag']] = $additional_fs_info['val'];
