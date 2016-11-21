@@ -179,7 +179,8 @@ function ealgo_change() {
 				<?php if (!empty($nodisks_error)) print_error_box($nodisks_error);?>
 				<?php if (!empty($errormsg)) print_error_box($errormsg);?>
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-			  <table width="100%" border="0" cellpadding="6" cellspacing="0">
+				<table width="100%" border="0" cellpadding="6" cellspacing="0">
+				<?php html_titleline(gtext("Encryption Setup"));?>
 			    <tr>
 			      <td valign="top" class="vncellreq"><?=gtext("Disk");?></td>
 			      <td class="vtable">

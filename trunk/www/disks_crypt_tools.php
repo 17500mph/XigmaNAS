@@ -178,7 +178,8 @@ function action_change() {
       <?php if (!empty($input_errors)) print_input_errors($input_errors);?>
       <?php if (!empty($errormsg)) print_error_box($errormsg);?>
 			<form action="disks_crypt_tools.php" method="post" name="iform" id="iform" enctype="multipart/form-data" onsubmit="spinner()">
-			  <table width="100%" border="0" cellpadding="6" cellspacing="0">
+			<table width="100%" border="0" cellpadding="6" cellspacing="0">
+			<?php html_titleline(gtext("Encryption Tools"));?>
           <tr>
             <td width="22%" valign="top" class="vncellreq"><?=gtext("Disk");?></td>
             <td width="78%" class="vtable">
