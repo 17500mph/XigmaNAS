@@ -200,10 +200,10 @@ $(window).on("load", function() {
 		</thead>
 		<tbody>
 			<?php
-				html_inputbox2('name', gtext('Name'), $sphere_record['name'], gtext('Enter a name for the command.'), false, 40);
-				html_inputbox2('value', gtext('Command'), $sphere_record['value'], gtext('The command to be executed.'), true, 60);
-				html_inputbox2('comment', gtext('Comment'), $sphere_record['comment'], gtext('Enter a description for your reference.'), false, 60);
-				html_combobox2('typeid', gtext('Type'), $sphere_record['typeid'], $l_type, gtext('Execute command pre or post system initialization (booting) or before system shutdown.'), true, isset($pconfig['type']));
+				html_inputbox2('name',gtext('Name'),$sphere_record['name'],gtext('Enter a name for the command.'),false, 40);
+				html_inputbox2('value',gtext('Command'),$sphere_record['value'],gtext('The command to be executed.'),true,60,false,false,256);
+				html_inputbox2('comment',gtext('Comment'),$sphere_record['comment'],gtext('Enter a description for your reference.'),false, 60);
+				html_combobox2('typeid',gtext('Type'),$sphere_record['typeid'],$l_type,gtext('Execute command pre or post system initialization (booting) or before system shutdown.'),true,isset($pconfig['type']));
 			?>
 		</tbody>
 	</table>
