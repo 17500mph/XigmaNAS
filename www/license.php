@@ -95,6 +95,9 @@ $pgtitle = array(gtext("Help"), gtext("License & Credits"));
 
 	    <div>José Rivera (<a href="mailto:joserprg@gmail.com">joserprg@gmail.com</a>)<br />
 	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">Contributor</font></em></div><br />
+	      
+	    <div>Andreas Schmidhuber (<a href="mailto:a.schmidhuber@gmail.com">a.schmidhuber@gmail.com</a>)<br />
+	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">Contributor</font></em></div><br />
 
 	    <hr size="1" />
 	    <p>The following persons have contributed to NAS4Free support:</p>
