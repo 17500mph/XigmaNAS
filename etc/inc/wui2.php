@@ -165,6 +165,7 @@ class HTMLBaseControlJS2 extends HTMLBaseControl2 {
 class HTMLEditBox2 extends HTMLBaseControl2 {
 	var $_size = 40;
 	var $_maxlength = 40;
+	var $_placeholder = '';
 	var $_classinputtext = 'formfld';
 	var $_classinputtextro = 'formfldro';
 	
@@ -176,6 +177,7 @@ class HTMLEditBox2 extends HTMLBaseControl2 {
 	// get methods
 	function GetSize() { return $this->_size; }
 	function GetMaxLength() { return $this->_maxlength; }
+	function GetPlaceholder() { return $this->_placeholder; }
 	function GetClassInputText() { return $this->_classinputtext; }
 	function GetClassInputTextRO() { return $this->_classinputtextro; }	
 	// set methods
@@ -189,14 +191,32 @@ class HTMLEditBox2 extends HTMLBaseControl2 {
 	function SetMaxLength($maxlength) {
 		$this->_maxlength = $maxlength;
 	}
+	function SetPlaceholder(string $placeholder = '') {
+		$this->_placeholder = $placeholder;
+	}
 	function SetClassInputText($param) { $this->_classinputtext = $param; }
 	function SetClassInputTextRO($param) { $this->_classinputtextro = $param; }
 	// support functions
 	function GetParam() {
-		$param = '';
+		$a_param = [];
+		$a_param['name'] = $this->GetCtrlName();
+		$a_param['type'] = 'text';
+		$a_param['class'] = $this->GetClassOfInputText();
+		$a_param['id'] = $this->GetCtrlName();
+		$a_param['size'] = $this->GetSize();
+		$a_param['maxlength'] = $this->GetMaxLength();
+		$a_param['value'] = htmlspecialchars($this->GetValue(), ENT_QUOTES);
 		if (true === $this->IsReadOnly()) { 
-			$param .= 'readonly="readonly" ';
+			$a_param['readonly'] = 'readonly';
 		}
+		if(preg_match('/\S/',$this->GetPlaceholder())) {
+			$a_param['placeholder'] = $this->GetPlaceholder();
+		}
+		$b_param = [];
+		foreach($a_param as $key => $val) {
+			$b_param[] = sprintf('%s="%s"',$key,$val);
+		}
+		$param = implode(' ',$b_param);
 		return $param;
 	}
 	function GetClassOfInputText() {
@@ -207,15 +227,7 @@ class HTMLEditBox2 extends HTMLBaseControl2 {
 		}
 	}
 	function RenderCtrl() {
-		echo '<input name="', $this->GetCtrlName(), '" ', 
-			'type="text" ',
-			'class="', $this->GetClassOfInputText(), '" ', 
-			'id="', $this->GetCtrlName(), '" ', 
-			'size="', $this->GetSize(), '" ', 
-			'maxlength="', $this->GetMaxLength(), '" ',
-			'value="', htmlspecialchars($this->GetValue(), ENT_QUOTES), '" ',
-			$this->GetParam(),
-			"/>\n";
+		echo "<input ",$this->GetParam(),"/>\n";
 	}
 }
 class HTMLPasswordBox2 extends HTMLEditBox2 {

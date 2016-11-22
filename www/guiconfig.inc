@@ -524,12 +524,13 @@ function html_minidlnabox($ctrlname, $title, $value, $desc, $path, $required = f
 	$ctrl->Render();
 }
 
-function html_inputbox2($ctrlname, $title, $value, $desc, $required = false, $size = 40, $readonly = false, $altpadding = false, $maxlength = 40) {
+function html_inputbox2($ctrlname, $title, $value, $desc, $required = false, $size = 40, $readonly = false, $altpadding = false, $maxlength = 40,string $placeholder = '') {
 	$ctrl = new HTMLEditBox2($ctrlname, $title, $value, $desc, $size);
 	$ctrl->SetRequired($required);
 	$ctrl->SetReadOnly($readonly);
 	$ctrl->SetAltPadding($altpadding);
 	$ctrl->SetMaxLength($maxlength);
+	$ctrl->SetPlaceholder($placeholder);
 	$ctrl->Render();
 }
 
