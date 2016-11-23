@@ -456,7 +456,7 @@ function enable_change(enable_change) {
 			html_checkbox2('axis', gtext('Y-axis range'), $pconfig['axis'], sprintf(gtext('Show positive/negative values for %s graphs. (can not be used together with logarithmic scaling)'), gtext('network traffic')), '', false, false, 'axis_change()');
 			html_checkbox2('no_processes', gtext('System Processes'), $pconfig['no_processes'], gtext('Enable collecting system process statistics.'), '', false);
 			html_checkbox2('ups', gtext('UPS Statistics'), $pconfig['ups'], gtext('Enable collecting UPS statistics.'), '', false, false, 'ups_change()');
-			html_inputbox2('ups_at', gtext('UPS Identifier'), $pconfig['ups_at'], gtext('Enter the UPS identifier and host IP address of the machine where the UPS is connected to. (this also can be a remote host)')."<br> ".gtext('The UPS identifier and IP address')." ".sprintf(gtext('must be in the format: %s.'), 'identifier@host-ip-address'), false, 60);
+			html_inputbox2('ups_at', gtext('UPS Identifier'), $pconfig['ups_at'], gtext('Enter the UPS identifier and host IP address of the machine where the UPS is connected to. (this also can be a remote host)')."<br> ".gtext('The UPS identifier and IP address')." ".sprintf(gtext('must be in the format: %s.'), 'identifier@host-ip-address or identifier@localhost'), false, 60);
 			html_checkbox2('uptime', gtext('Uptime Statistics'), $pconfig['uptime'], gtext('Enable collecting uptime statistics.'), '', false);
 			html_checkbox2('arc_usage', gtext('ZFS ARC Usage'), $pconfig['arc_usage'], gtext('Enable collecting ZFS ARC usage statistics.'), '', false);
 ?>
