@@ -6,7 +6,7 @@
 #
 # Remote NFS server
 #
-# $FreeBSD: /etc/rc.d/nfsd	Revision 298514
+# $FreeBSD: /etc/rc.d/nfsd	Revision r302406
 # Changes: modified for nas4free, removed REQUIRE: gssd
 #
 
@@ -35,18 +35,15 @@ sig_stop="USR1"
 
 nfsd_precmd()
 {
-	rc_flags="${nfs_server_flags}"
+		rc_flags="${nfs_server_flags}"
 
 		# Load the modules now, so that the vfs.nfsd sysctl
-		# oids are available
+		# oids are available.
 		load_kld nfsd
 
 		if checkyesno nfs_reserved_port_only; then
 			echo 'NFS on reserved port only=YES'
 			/sbin/sysctl vfs.nfsd.nfs_privport=1 > /dev/null
-	else
-		/sbin/sysctl vfs.nfsd.nfs_privport=0 > /dev/null
-
 		fi
 
 		if checkyesno nfsv4_server_enable; then
@@ -58,8 +55,6 @@ nfsd_precmd()
 					err 1 "Cannot run nfsuserd"
 				fi
 			fi
-		if checkyesno nfsv4_server_enable; then
-			/sbin/sysctl vfs.nfsd.server_max_nfsvers=4 > /dev/null
 		else
 			echo 'NFSv4 is disabled'
 			/sbin/sysctl vfs.nfsd.server_max_nfsvers=3 > /dev/null
@@ -79,7 +74,6 @@ nfsd_precmd()
 	fi
 	return 0
 }
-
 nfsd_cmd()
 {
 	_enable=`configxml_get_count "//hast/enable"`
