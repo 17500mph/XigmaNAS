@@ -58,6 +58,8 @@ nfsd_precmd()
 					err 1 "Cannot run nfsuserd"
 				fi
 			fi
+		if checkyesno nfsv4_server_enable; then
+			/sbin/sysctl vfs.nfsd.server_max_nfsvers=4 > /dev/null
 		else
 			echo 'NFSv4 is disabled'
 			/sbin/sysctl vfs.nfsd.server_max_nfsvers=3 > /dev/null
