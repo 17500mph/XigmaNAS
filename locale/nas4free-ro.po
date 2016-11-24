@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-20 20:32+0000\n"
-"PO-Revision-Date: 2016-11-21 20:00+0000\n"
+"POT-Creation-Date: 2016-11-24 11:28+0000\n"
+"PO-Revision-Date: 2016-11-23 17:27+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-21 20:33+0000\n"
+"X-Launchpad-Export-Date: 2016-11-24 10:53+0000\n"
 "X-Generator: Launchpad (build 18269)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -3289,6 +3289,12 @@ msgstr "Criptare '%s\"... Vă rugăm așteptați"
 msgid "Encryption"
 msgstr "Criptare"
 
+msgid "Encryption Setup"
+msgstr "Setări criptare"
+
+msgid "Encryption Tools"
+msgstr "Unelte criptare"
+
 msgid "Encryption algorithm"
 msgstr "Algoritm criptare"
 
@@ -3301,6 +3307,9 @@ msgstr "Engleză"
 msgid "Enhanced compatibility with Netatalk AFP server"
 msgstr "Compatibilitate extinsă cu serverul Netatalk AFP"
 
+msgid "Enter a comment"
+msgstr ""
+
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
 "default (80 for HTTP, 443 for HTTPS)."
@@ -3310,6 +3319,9 @@ msgstr ""
 
 msgid "Enter a description for your reference."
 msgstr "Introduceți o scurtă descriere"
+
+msgid "Enter a name"
+msgstr ""
 
 msgid "Enter a name for the command."
 msgstr "Introduceți un nume pentru comandă"
@@ -3338,6 +3350,9 @@ msgid ""
 msgstr ""
 "Introduceți identificatorul pentru UPS și adresa IP a sistemului la care "
 "este conectat UPS-ul (poate fi și un sistem remote)."
+
+msgid "Enter the command"
+msgstr ""
 
 msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
@@ -5243,7 +5258,7 @@ msgid "Monday Tuesday Wednesday Thursday Friday Saturday Sunday"
 msgstr "Luni Marţi Miercuri Joi Vineri Sîmbătă Duminică"
 
 msgid "Monitoring"
-msgstr "Monitorizează"
+msgstr "Monitorizare"
 
 msgid "Monitoring Setup"
 msgstr "Setări monitorizare"
@@ -5253,6 +5268,12 @@ msgstr "Luni"
 
 msgid "Mount Point"
 msgstr "Punct Montare"
+
+msgid "Mount Point Fsck"
+msgstr "Fsck punct montare"
+
+msgid "Mount Point Tools"
+msgstr "Unelte punct montare"
 
 msgid "Mount Points"
 msgstr "Puncte de montare"
@@ -5995,10 +6016,10 @@ msgid "Plain-text"
 msgstr "Text simplu"
 
 msgid "Platform"
-msgstr "Platformă"
+msgstr "Platformă hardware"
 
 msgid "Platform OS"
-msgstr "Platformă SO (Sistem Operare)"
+msgstr "Platformă / Sistem Operare"
 
 msgid "Please add a bridge interface first."
 msgstr "Va trebui să adăugați o interfață de tip bridge mai întâi."
@@ -6225,7 +6246,7 @@ msgid "Process"
 msgstr "Procese"
 
 msgid "Process Status"
-msgstr "Stare procese"
+msgstr "Procese active"
 
 msgid "Processes"
 msgstr "Procese"
@@ -7655,7 +7676,7 @@ msgid "System info"
 msgstr "Informații Sistem"
 
 msgid "System last config change"
-msgstr "Ultima modificare a configurației sistemului"
+msgstr "Ultima modificare a configurației"
 
 msgid "System log"
 msgstr "Jurnal Sistem"
@@ -9817,9 +9838,6 @@ msgstr "Tag VLAN"
 msgid "VLAN tag"
 msgstr "Eticheta VLAN"
 
-msgid "VM"
-msgstr "VM"
-
 msgid "VM Type"
 msgstr "Tip VM"
 
@@ -10428,3 +10446,6 @@ msgstr "utilizator"
 
 msgid "version:"
 msgstr "versiune:"
+
+#~ msgid "VM"
+#~ msgstr "VM"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-20 20:32+0000\n"
-"PO-Revision-Date: 2016-08-18 19:02+0000\n"
-"Last-Translator: Hu Xinyu <Unknown>\n"
+"POT-Creation-Date: 2016-11-24 11:28+0000\n"
+"PO-Revision-Date: 2016-11-24 10:20+0000\n"
+"Last-Translator: 罗建涛 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-21 20:33+0000\n"
+"X-Launchpad-Export-Date: 2016-11-24 10:53+0000\n"
 "X-Generator: Launchpad (build 18269)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -80,7 +80,7 @@ msgstr "%s 太长了。"
 #, php-format
 msgid ""
 "%s must be enabled for Unison to work, and the %s must have shell access."
-msgstr ""
+msgstr "%s 必须开启同步才能正常工作，%s 必须通过shell访问"
 
 #, php-format
 msgid "%s of %sB"
@@ -400,7 +400,7 @@ msgid "Activities"
 msgstr ""
 
 msgid "Activity"
-msgstr ""
+msgstr "Activity(活动)"
 
 msgid "Adaptive (Low Power Consumption)"
 msgstr "自适应（节能）"
@@ -439,16 +439,16 @@ msgid "Add Volume"
 msgstr "添加卷"
 
 msgid "Add a cache device to a pool"
-msgstr ""
+msgstr "给库添加一个缓存设备"
 
 msgid "Add a log device to a pool"
-msgstr ""
+msgstr "给库添加一个日志设备"
 
 msgid "Add a spare device to a pool"
-msgstr ""
+msgstr "给库添加一个热备设备"
 
 msgid "Add a virtual device to a pool"
-msgstr ""
+msgstr "给库添加一个虚拟设备"
 
 msgid "Add additional scheduled self-test."
 msgstr "添加附加的计划自我检测"
@@ -3031,6 +3031,12 @@ msgstr "正在加密 '%s'... 请稍待..."
 msgid "Encryption"
 msgstr "加密方式"
 
+msgid "Encryption Setup"
+msgstr ""
+
+msgid "Encryption Tools"
+msgstr ""
+
 msgid "Encryption algorithm"
 msgstr "加密演算法"
 
@@ -3043,12 +3049,18 @@ msgstr "英文"
 msgid "Enhanced compatibility with Netatalk AFP server"
 msgstr ""
 
+msgid "Enter a comment"
+msgstr ""
+
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr "如果您想覆盖默认值的话，请输入自定的网页界面 的端口编号（80为HTTP，HTTPS为443）。"
 
 msgid "Enter a description for your reference."
+msgstr ""
+
+msgid "Enter a name"
 msgstr ""
 
 msgid "Enter a name for the command."
@@ -3070,6 +3082,9 @@ msgstr "请输入系统时间（格式为 MM/DD/YYYY hh:mm），或点选图标�
 msgid ""
 "Enter the UPS identifier and host IP address of the machine where the UPS is "
 "connected to. (this also can be a remote host)"
+msgstr ""
+
+msgid "Enter the command"
 msgstr ""
 
 msgid ""
@@ -4841,6 +4856,12 @@ msgstr "月"
 
 msgid "Mount Point"
 msgstr "挂载点"
+
+msgid "Mount Point Fsck"
+msgstr ""
+
+msgid "Mount Point Tools"
+msgstr ""
 
 msgid "Mount Points"
 msgstr ""
@@ -8964,9 +8985,6 @@ msgstr "VLAN 标签"
 msgid "VLAN tag"
 msgstr "VLAN 标签"
 
-msgid "VM"
-msgstr "VM"
-
 msgid "VM Type"
 msgstr "VM 类型"
 
@@ -9531,3 +9549,6 @@ msgstr ""
 
 msgid "version:"
 msgstr "版本："
+
+#~ msgid "VM"
+#~ msgstr "VM"
