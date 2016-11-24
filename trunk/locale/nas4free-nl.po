@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-20 20:32+0000\n"
-"PO-Revision-Date: 2016-11-20 20:00+0000\n"
+"POT-Creation-Date: 2016-11-24 11:28+0000\n"
+"PO-Revision-Date: 2016-11-24 10:50+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-21 20:32+0000\n"
+"X-Launchpad-Export-Date: 2016-11-24 10:52+0000\n"
 "X-Generator: Launchpad (build 18269)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -3325,6 +3325,12 @@ msgstr "Bezig met het versleutelen '%s'... Een ogenblik geduld"
 msgid "Encryption"
 msgstr "Versleuteling"
 
+msgid "Encryption Setup"
+msgstr "Versleuteling Instellingen"
+
+msgid "Encryption Tools"
+msgstr "Versleuteling Hulpmiddelen"
+
 msgid "Encryption algorithm"
 msgstr "Versleutelings algoritme"
 
@@ -3337,6 +3343,9 @@ msgstr "Engels"
 msgid "Enhanced compatibility with Netatalk AFP server"
 msgstr "Verbeterde compatibiliteit met Netatalk AFP server"
 
+msgid "Enter a comment"
+msgstr "Geef een beschrijving op"
+
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
 "default (80 for HTTP, 443 for HTTPS)."
@@ -3346,6 +3355,9 @@ msgstr ""
 
 msgid "Enter a description for your reference."
 msgstr "Geef een beschrijving op voor uw referentie."
+
+msgid "Enter a name"
+msgstr "Geef een naam op"
 
 msgid "Enter a name for the command."
 msgstr "Geef een naam op voor de opdracht."
@@ -3373,6 +3385,9 @@ msgid ""
 msgstr ""
 "Vul de UPS ID en host IP-adres in van de computer waarop de UPS is "
 "aangesloten. (dit kan ook een externe host te zijn)"
+
+msgid "Enter the command"
+msgstr "Geef een opdracht op"
 
 msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
@@ -5293,6 +5308,12 @@ msgstr "Maanden"
 
 msgid "Mount Point"
 msgstr "Koppelpunten"
+
+msgid "Mount Point Fsck"
+msgstr "Koppelpunt Fsck"
+
+msgid "Mount Point Tools"
+msgstr "Koppelpunt Hulpmiddelen"
 
 msgid "Mount Points"
 msgstr "Koppelpunten"
@@ -9903,9 +9924,6 @@ msgstr "VLAN Tag"
 msgid "VLAN tag"
 msgstr "VLAN markering"
 
-msgid "VM"
-msgstr "VM"
-
 msgid "VM Type"
 msgstr "VM Type"
 
@@ -10228,7 +10246,8 @@ msgstr ""
 "cliënten."
 
 msgid "You have to reboot the system for the changes to take effect."
-msgstr "U dient de server te herstarten om de wijzigingen te activeren."
+msgstr ""
+"U dient nu eerst de server te herstarten voor de wijzigingen actief worden."
 
 #, php-format
 msgid "You have to select at least one item for '%s'."
@@ -10289,7 +10308,7 @@ msgstr ""
 "U moet de server eerst opnieuw opstarten voordat u de firmware kunt upgraden"
 
 msgid "You must select at least one authentication method."
-msgstr "U dient tenminste één verificatie methode te selecteren."
+msgstr "U dient tenminste één authenticatie methode te selecteren."
 
 msgid "You should use HTTPS as WebGUI protocol for sending passphrase."
 msgstr ""
@@ -10515,3 +10534,6 @@ msgstr "gebruiker"
 
 msgid "version:"
 msgstr "versie:"
+
+#~ msgid "VM"
+#~ msgstr "VM"

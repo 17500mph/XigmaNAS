@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-20 20:32+0000\n"
-"PO-Revision-Date: 2016-11-21 17:19+0000\n"
-"Last-Translator: Tomfro <Unknown>\n"
+"POT-Creation-Date: 2016-11-24 11:28+0000\n"
+"PO-Revision-Date: 2016-11-24 10:32+0000\n"
+"Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-21 20:32+0000\n"
+"X-Launchpad-Export-Date: 2016-11-24 10:52+0000\n"
 "X-Generator: Launchpad (build 18269)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -1059,13 +1059,13 @@ msgid "Background"
 msgstr "Hintergrund"
 
 msgid "Backup Configuration"
-msgstr "Backup-Konfiguration"
+msgstr "Sicherungskonfiguration"
 
 msgid "Backup file"
-msgstr "Sicherheitskopie"
+msgstr "Sicherungsdatei"
 
 msgid "Backup/Restore"
-msgstr "Sichern / Wiederherstellen"
+msgstr "Sichern/Wiederherstellen"
 
 msgid "Bad User - (Non Existing Users)"
 msgstr "Benutzer existiert nicht"
@@ -3052,7 +3052,7 @@ msgid ""
 "Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can "
 "use SSL."
 msgstr ""
-"STARTTLS Verschlüsselung aktivieren. TLS muss nicht benutzt werden,  SSL ist "
+"STARTTLS-Verschlüsselung aktivieren. TLS muss nicht benutzt werden,  SSL ist "
 "weiterhin möglich."
 
 msgid "Enable Selected Commands"
@@ -3141,7 +3141,7 @@ msgid "Enable domain wildcarding."
 msgstr "Aktiviere Domain Wildcards."
 
 msgid "Enable encryption."
-msgstr "Aktiviere die Verschlüsselung."
+msgstr "Verschlüsselung aktivieren."
 
 msgid "Enable extended attribute support"
 msgstr "Erweiterte Attributunterstützung aktivieren"
@@ -3277,6 +3277,12 @@ msgstr "»%s« wird verschlüsselt, bitte warten …"
 msgid "Encryption"
 msgstr "Verschlüsselung"
 
+msgid "Encryption Setup"
+msgstr "Verschlüsselungseinrichtung"
+
+msgid "Encryption Tools"
+msgstr "Verschlüsselungswerkzeuge"
+
 msgid "Encryption algorithm"
 msgstr "Verschlüsselungsalgorithmus"
 
@@ -3289,6 +3295,9 @@ msgstr "Englisch"
 msgid "Enhanced compatibility with Netatalk AFP server"
 msgstr "erhöhte Kompatibilität zum Netatalk AFP Server"
 
+msgid "Enter a comment"
+msgstr ""
+
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
 "default (80 for HTTP, 443 for HTTPS)."
@@ -3299,6 +3308,9 @@ msgstr ""
 
 msgid "Enter a description for your reference."
 msgstr "Eine Beschreibung als Referenz eingeben."
+
+msgid "Enter a name"
+msgstr ""
 
 msgid "Enter a name for the command."
 msgstr "Einen Namen für das Kommando eingeben."
@@ -3325,6 +3337,9 @@ msgid ""
 msgstr ""
 "Gebe die USV-Kennung und die IP-Adresse der Host-Maschine mit der die USV "
 "verbunden ist an. (das darf auch ein Remote-Host sein)"
+
+msgid "Enter the command"
+msgstr ""
 
 msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
@@ -3556,7 +3571,7 @@ msgid "Failed to upload file."
 msgstr "Das Hochladen der Datei ist fehlgeschlagen."
 
 msgid "Failed to upload metadata backup file."
-msgstr "Upload der Metadaten-Backupdatei fehlgeschlagen."
+msgstr "Hochladen der Metadatensicherungsdatei ist fehlgeschlagen."
 
 msgid "Failed to write file to disk."
 msgstr "Die Datei wurde nicht auf die Festplatte geschrieben."
@@ -4480,13 +4495,15 @@ msgstr ""
 
 msgid ""
 "It is recommended that you backup the server configuration before you upgrade"
-msgstr "Ein Backup der Server-Konfiguration wird vor dem Upgrade empfohlen."
+msgstr ""
+"Eine Sicherung der Serverkonfiguration wird vor der Systemaktualisierung "
+"empfohlen."
 
 msgid ""
 "It is recommended to use encryption before you store the backup in a safe "
 "location."
 msgstr ""
-"Es wird empfohlen, Verschlüsselung zu verwenden, bevor Sie das Backup an "
+"Es wird empfohlen, Verschlüsselung zu verwenden, bevor Sie die Sicherung an "
 "einem sicheren Ort speichern."
 
 msgid ""
@@ -5236,6 +5253,12 @@ msgstr "Monate"
 
 msgid "Mount Point"
 msgstr "Einhängepunkt"
+
+msgid "Mount Point Fsck"
+msgstr "Einhängepunkt Fsck"
+
+msgid "Mount Point Tools"
+msgstr "Einhängepunkt Werkzeuge"
 
 msgid "Mount Points"
 msgstr "Einhängepunkte"
@@ -6264,13 +6287,13 @@ msgid "RAID 5 Information & Status"
 msgstr "Raid 5 Zustandsinformation"
 
 msgid "RAID Name"
-msgstr "RAID Name"
+msgstr "RAID-Name"
 
 msgid "RAID Type"
-msgstr "RAID Typ"
+msgstr "RAID-Typ"
 
 msgid "RAID device can be removed."
-msgstr "RAID Gerät kann entfernt werden"
+msgstr "RAID-Gerät kann entfernt werden."
 
 msgid "RAID device is already in use."
 msgstr "RAID Gerät wird bereits benutzt"
@@ -9841,9 +9864,6 @@ msgstr "VLAN-Markierung"
 msgid "VLAN tag"
 msgstr "VLAN-Markierung"
 
-msgid "VM"
-msgstr "VM"
-
 msgid "VM Type"
 msgstr "VM-Typ"
 
@@ -10457,3 +10477,6 @@ msgstr "Benutzer"
 
 msgid "version:"
 msgstr "Version:"
+
+#~ msgid "VM"
+#~ msgstr "VM"
