@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gtext("VM"), gtext("VirtualBox"));
+$pgtitle = array(gtext("Virtualization"), gtext("VirtualBox"));
 
 $pconfig['enable'] = isset($config['vbox']['enable']);
 $pconfig['homedir'] = $config['vbox']['homedir'];

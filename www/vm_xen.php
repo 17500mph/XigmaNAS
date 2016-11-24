@@ -34,7 +34,7 @@
 require("auth.inc");
 require("guiconfig.inc");
 
-$pgtitle = array(gtext("VM"), gtext("Xen"));
+$pgtitle = array(gtext("Virtualization"), gtext("Xen"));
 
 if (!isset($config['xen']['vms']['param']) || !is_array($config['xen']['vms']['param']))
 	$config['xen']['vms']['param'] = array();
