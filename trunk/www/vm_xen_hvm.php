@@ -38,7 +38,7 @@ if (isset($_GET['uuid']))
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = array(gtext("VM"), gtext("Xen"), gtext("HVM Guest"), isset($uuid) ? gtext("Edit") : gtext("Add"));
+$pgtitle = array(gtext("Virtualization"), gtext("Xen"), gtext("HVM Guest"), isset($uuid) ? gtext("Edit") : gtext("Add"));
 
 if (!isset($config['xen']['vms']['param']) || !is_array($config['xen']['vms']['param']))
 	$config['xen']['vms']['param'] = array();
