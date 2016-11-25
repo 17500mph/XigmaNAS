@@ -120,10 +120,8 @@ function system_get_group_list() {
 				$grouplist[$group[1]] = $group[2];
 			}
 		}
-
 		ksort($grouplist);
 	}
-
 	return $grouplist;
 }
 
@@ -156,7 +154,6 @@ function system_get_user_list() {
 
 		// Extract user information
 		$userinfo = explode(":", $userinfov);
-
 		$user = array();
 		$user['name'] = $userinfo[0];
 		$user['password'] = $userinfo[1];
@@ -168,10 +165,8 @@ function system_get_user_list() {
 		$user['gecos'] = $userinfo[7];
 		$user['home_dir'] = $userinfo[8];
 		$user['shell'] = $userinfo[9];
-
 		$userlist[$user['name']] = $user;
 	}
-
 	return $userlist;
 }
 
@@ -296,7 +291,6 @@ function system_get_smp_cpu_usage() {
 	sleep(1);
 	$a_stat2 = explode(" ", @exec("/sbin/sysctl -q -n kern.cp_times"));
 	$a_dstat = array_map("cb_map_array_diff2", $a_stat1, $a_stat2);
-
 	$a_usage = array_fill_keys(range(0, $cpus - 1), 0);
 	for ($i = 0; $i < $cpus; $i++) {
 		// user, nice, system, interrupt, idle
@@ -319,7 +313,6 @@ function system_get_cpu_usage() {
 	$diff['sys'] = ($cpuTicks2[2] - $cpuTicks1[2]);
 	$diff['intr'] = ($cpuTicks2[3] - $cpuTicks1[3]);
 	$diff['idle'] = ($cpuTicks2[4] - $cpuTicks1[4]);
-
 	$totalDiff = $diff['user'] + $diff['nice'] + $diff['sys'] + $diff['intr'] + $diff['idle'];
 	$totalused = $diff['user'] + $diff['nice'] + $diff['sys'] + $diff['intr'];
 
@@ -353,7 +346,6 @@ function system_get_cpuid($cpuidx, $level) {
 //  )
 function system_get_cpu_info() {
 	$cpuinfo = array();
-
 	$cpuinfo['number'] = chop(`/sbin/sysctl -n hw.ncpu`);
 	$cpuinfo['model'] = chop(`/sbin/sysctl -n hw.model`);
 	if (empty($cpuinfo['model'])) {
@@ -378,16 +370,6 @@ function system_get_cpu_info() {
 	if ($temp != '' && $temp != '-1') {
 		$adj = 0;
 		$cpuid = system_get_cpuid(0, "0x0");
-		// AuthenticAMD ?
-		if ($cpuid['ebx'] == 0x68747541 && $cpuid['ecx'] == 0x444d4163 && $cpuid['edx'] == 0x69746e65) {
-			$cpuid2 = system_get_cpuid(0, "0x80000001");
-			// Brisbane BH-G1/BH-G2 ?
-			if ($cpuid2['eax'] == 0x00060fb1 || $cpuid2['eax'] == 0x00060fb2) {
-// for freebsd 9.x $adj = 21.0; set to $adj = 0.0; | $adj = 21.0; is needed on freebsd 7 series!
-				$adj = 0.0;
-			}
-
-		}
 		for ($i = 0; $i < $cpus; $i++) {
 			$temp = @exec("/sbin/sysctl -q -n dev.cpu.{$i}.temperature");
 			if ($temp != '') {
@@ -430,7 +412,6 @@ function system_get_uptime() {
 			$uphours, gtext("hour(s)"), $upmins, gtext("minute(s)"), $upsecs,
 			gtext("second(s)"));
 	}
-
 	return htmlspecialchars($uptime);
 }
 
@@ -496,7 +477,6 @@ function system_get_ram_info() {
 	$raminfo['total'] = $memory[0] + $memory[1] + $memory[2] + $memory[3] + $memory[4];
 	$raminfo['free'] = $memory[4] + $memory[1];
 	$raminfo['used'] = $raminfo['total'] - $raminfo['free'];
-
 	return $raminfo;
 }
 
@@ -521,7 +501,6 @@ function system_get_swap_info() {
 			$val = $matches[1];
 		}
 	}
-
 	array_shift($swap);
 	$swapinfo = array();
 
@@ -537,7 +516,6 @@ function system_get_swap_info() {
 			$swapinfo[] = $devswap;
 		}
 	}
-
 	return $swapinfo;
 }
 
@@ -572,7 +550,6 @@ function system_get_device_iostat($device) {
 		$result['tps'] = $matches[2];
 		$result['mps'] = $matches[3];
 	}
-
 	return $result;
 }
 
@@ -593,7 +570,6 @@ function system_get_device_temp($devicespecialfile) {
 			return $result;
 		}
 	}
-
 	global $config;
 	// get S.M.A.R.T. arguments from config
 	global $config_disks;
@@ -629,7 +605,6 @@ function system_get_device_temp($devicespecialfile) {
 	} else {
 		return $_SESSION[$devicespecialfile]['temp']['value'];
 	}
-
 	return $result;
 }
 
@@ -673,7 +648,6 @@ function system_get_controller($devicespecialfile) {
 			}
 		}
 	}
-
 	return gtext("n/a");
 }
 
@@ -710,7 +684,6 @@ function system_get_volume_serial($devicespecialfile) {
 		if (!empty($serial))
 			return $serial;
 	}
-
 	return gtext("n/a");
 }
 
@@ -752,7 +725,6 @@ function system_get_volume_model($devicespecialfile) {
 		if (!empty($model))
 			return $model;
 	}
-
 	return gtext("n/a");
 }
 
@@ -802,7 +774,6 @@ function system_get_mount_usage() {
 			}
 		}
 	}
-
 	return $result;
 }
 
