@@ -31,8 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
  */
-require('auth.inc');
-require('guiconfig.inc');
+require 'auth.inc';
+require 'guiconfig.inc';
 
 $sphere_scriptname = basename(__FILE__);
 $sphere_header = 'Location: '.$sphere_scriptname;
@@ -160,7 +160,6 @@ $bootdevice = trim(file_get_contents("{$g['etc_path']}/cfdevice"));
 $sphere_array = get_conf_all_disks_list_filtered();
 // Protect devices which are invalid or in use
 foreach ($sphere_array as &$sphere_record) {
-	$sphere_record['protected.reason'] = '';
 	if (0 === strcmp($sphere_record['size'], 'NA')) {
 		$sphere_record['protected'] = true;
 		$sphere_record['protected.reason'] = gtext('Unknown size');
@@ -170,9 +169,12 @@ foreach ($sphere_array as &$sphere_record) {
 	} elseif (disks_ismounted_ex($sphere_record['devicespecialfile'], "devicespecialfile")) {
 		$sphere_record['protected'] = true;
 		$sphere_record['protected.reason'] = gtext('Device is mounted');
-	} elseif (1 === preg_match('/^' . $sphere_record['name'] . '/', $bootdevice)) {
+	} elseif (1 === preg_match('~\A' . preg_quote($sphere_record['name'],'~') . '(\D+|\z)~',$bootdevice)) {
 		$sphere_record['protected'] = true;
 		$sphere_record['protected.reason'] = gtext('Device contains boot partition');
+	} else {
+		$sphere_record['protected'] = false;
+		$sphere_record['protected.reason'] = '';
 	}
 }
 unset($sphere_record); // release pass by reference
@@ -183,7 +185,7 @@ unset($sphere_record); // release pass by reference
 $a_member_update = [];
 foreach ($a_option['checkbox_member_array'] as $checkbox_member_record) {
 	if (false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
-		if (!isset($sphere_array[$index]['protected'])) {
+		if (!$sphere_array[$index]['protected']) {
 			$sphere_array[$index]['enabled'] = true;
 			$a_member_update[] = $checkbox_member_record;
 		}
@@ -442,7 +444,7 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 		}
 		foreach($a_option['checkbox_member_array'] as $checkbox_member_record) {
 			if (false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
-				if (!isset($sphere_array[$index]['protected'])) {
+				if (!$sphere_array[$index]['protected']) {
 					set_conf_disk_fstype_opt($sphere_array[$index]['devicespecialfile'], $a_option['filesystem'], $disk_options);
 					$volumelabel = $volumelabel_pattern;
 					// apply counter to label
@@ -484,7 +486,7 @@ if (isset($a_option['cancel1']) && $a_option['cancel1']) {
 }
 $pgtitle = [gtext('Disks'), gtext('Management'), gtext('HDD Format'), sprintf('%1$s %2$d', gtext('Step'), $page_index)];
 ?>
-<?php include("fbegin.inc"); ?>
+<?php include 'fbegin.inc'; ?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
@@ -525,10 +527,10 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 		print_error_box($errormsg);
 	}
 	?>
-	<table id="area_data_settings">
+	<table class="area_data_settings">
 		<colgroup>
-			<col id="area_data_settings_col_tag">
-			<col id="area_data_settings_col_data">
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
 			<?php
@@ -575,7 +577,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 			?>
 		</tbody>
 	</table>
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%"><!-- // Checkbox -->
 			<col style="width:15%"><!-- // Device Name -->
@@ -609,7 +611,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 			<tr>
 				<?php 
 				$enabled      = isset($sphere_record['enabled']);
-				$notprotected = !isset($sphere_record['protected']);
+				$notprotected = !$sphere_record['protected'];
 				$tag_id       = ' id="'  . $sphere_record['uuid'] . '"';
 				$tag_name     = ' name="' . $checkbox_member_name . '[]"';
 				$tag_value    = ' value="' . $sphere_record['uuid'] . '"';
@@ -642,7 +644,7 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 				<td class="<?=$notprotected ? 'lcell' : 'lcelld';?>"><?=htmlspecialchars($sphere_record['size']);?></td>
 				<td class="<?=$notprotected ? 'lcell' : 'lcelld';?>"><?=htmlspecialchars($sphere_record['devicespecialfile']);?></td>
 				<td class="<?=$notprotected ? 'lcell' : 'lcelld';?>"><?=htmlspecialchars($sphere_record['protected.reason']);?></td>
-				<td class="lcebld"><table id="area_data_selection_toolbox"><tbody><tr>
+				<td class="lcebld"><table class="area_data_selection_toolbox"><tbody><tr>
 					<td>
 						<?php
 						if ($notprotected) {
@@ -680,6 +682,6 @@ function togglecheckboxesbyname(ego, triggerbyname) {
 		}
 	}
 	?>
-	<?php include('formend.inc');?>
+	<?php include 'formend.inc';?>
 </form></td></tr></tbody></table>
-<?php include('fend.inc');?>
+<?php include 'fend.inc';?>
