@@ -78,6 +78,7 @@ $g_install = [
 ];
 //	available languages/locales
 $g_languages = [
+	'af'    => ['codeset' => 'UTF-8', 'desc' => gtext('Afrikaans'), 'desc.localized' => 'Afrikaans'],
 	'bg'    => ['codeset' => 'UTF-8', 'desc' => gtext('Bulgarian'), 'desc.localized' => 'Български'],
 	'cs'    => ['codeset' => 'UTF-8', 'desc' => gtext('Czech'), 'desc.localized' => 'čeština'],
 	'zh_CN' => ['codeset' => 'UTF-8', 'desc' => gtext('Chinese (Simplified)'), 'desc.localized' => '中文（簡體）'],

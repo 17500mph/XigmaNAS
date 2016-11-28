@@ -1,10 +1,14 @@
 <?php
 /*
-	_info.php
-	
+	af_mimes.php
+
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
+
+	Portions of Quixplorer (http://quixplorer.sourceforge.net).
+	Authors: quix@free.fr, ck@realtime-projects.com.
+	The Initial Developer of the Original Code is The QuiX project.
 
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
@@ -30,44 +34,77 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-	//Set the language array
-	$lang = array(
-		'en_US'	=> 'English',
-		'af'		=> 'Afrikaans',
-		'bg'		=> 'Български',
-		'cs'		=> 'čeština',
-		'da'		=> 'Dansk',
-		'de'		=> 'Deutsch',
-		'es'		=> 'Español',
-		'fi'		=> 'Suomi',
-		'fr'		=> 'Français',
-		'el'		=> 'Ελληνικά',
-		'hu'		=> 'Magyar',
-		'it'		=> 'Italiano',
-		'ja'		=> '日本語',
-		'ko'		=> '한국어',
-		'nl'		=> 'Nederlands',
-		'nb'		=> 'Norsk (bokmål)',
-		'pl'		=> 'Polski',
-		'pt'		=> 'Português',
-		'pt_BR'		=> 'Português - Brasil',
-		'ro'		=> 'Română',
-		'ru'		=> 'Русский',
-		'sk'		=> 'Slovenský',
-		'sl'		=> 'Slovenščina',
-		'sv'		=> 'Svenska',
-		'tr'		=> 'Türkçe',
-		'uk'		=> 'Українська',
-		'zh_CN'	=> '中文（簡體）',
-		'zh_TW'	=> '正體中文'
+// Afrikaans Mimes Module
+
+$GLOBALS["mimes"]=array(
+
+	// dir, exe, file
+	"dir"		=> "Directory",
+	"exe"		=> "Executable File",
+	"file"		=> "File",
+	"link"		=> "Link",
+
+	// text
+	"text"		=> "Text File",
+
+	// programming
+	"php"		=> "PHP Script",
+	"sql"		=> "SQL File",
+	"perl"		=> "PERL Script",
+	"html"		=> "HTML Page",
+	"js"		=> "Javascript File",
+	"css"		=> "CSS File",
+	"cgi"		=> "CGI Script",
+
+	// C++
+	"cpps"		=> "C++ Source File",
+	"cpph"		=> "C++ Header File",
+
+	// Java
+	"javas"		=> "Java Source File",
+	"javac"		=> "Java Class File",
+
+	// Pascal
+	"pas"		=> "Pascal File",
+
+	// images
+	"gif"		=> "GIF Picture",
+	"jpg"		=> "JPG Picture",
+	"bmp"		=> "BMP Picture",
+	"png"		=> "PNG Picture",
+
+	// compressed
+	"zip"		=> "ZIP Archive",
+	"tar"		=> "TAR Archive",
+	"gzip"		=> "GZIP Archive",
+	"bzip2"		=> "BZIP2 Archive",
+	"rar"		=> "RAR Archive",
+	"iso"		=> "ISO File",
+	"mds"		=> "MDS File",
+
+	// music
+	"mp3"		=> "MP3 Audio File",
+	"wav"		=> "WAV Audio File",
+	"midi"		=> "MIDI Audio File",
+	"real"		=> "RealAudio File",
+	"flac"		=> "FLAC Audio File",
+
+	// movie
+	"mpg"		=> "MPG File",
+	"mov"		=> "MOV File",
+	"avi"		=> "AVI File",
+	"flash"		=> "Flash File",
+	"mkv"		=> "MKV File",
+	"vob"		=> "VOB File",
+
+	// Micosoft / Adobe
+	"word"		=> "Word Document",
+	"excel"		=> "Excel Document",
+	"pdf"		=> "PDF File",
+	"xml"		=> "XML File",
+	"c"		=> "C File",
+	"psd"		=> "Photoshop File",
+	"point"		=> "PowerPoint Presentation"
 );
 
-	//Create the select box and options
-	echo "<SELECT name=\"lang\">\n";
-		foreach($lang as $key => $value) {
-			//Set the default language automatically based on global webgui language
-			$selected = ($key == $GLOBALS["language"]) ? " selected='selected'" : '';
-			//Now create the <options> list
-			echo "<option value='$key'$selected>$value</option>\n";
-}
-	echo "</SELECT></TD></TR>\n";
+?>
