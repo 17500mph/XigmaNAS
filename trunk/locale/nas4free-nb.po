@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-24 11:28+0000\n"
+"POT-Creation-Date: 2016-11-28 15:25+0000\n"
 "PO-Revision-Date: 2016-11-06 09:31+0000\n"
 "Last-Translator: Åka Sikrom <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-28 14:13+0000\n"
+"X-Launchpad-Export-Date: 2016-11-28 15:41+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "X-Poedit-Country: NORWAY\n"
 "Language: \n"
@@ -600,6 +600,9 @@ msgstr "Avanserte innstillinger"
 msgid "Advertisement skew"
 msgstr ""
 
+msgid "Afrikaans"
+msgstr ""
+
 msgid "After"
 msgstr ""
 
@@ -842,10 +845,10 @@ msgstr "Arkiver"
 msgid "Archive mode."
 msgstr "Arkiveringsmodus."
 
-msgid "Are you sure you want to proceed?"
-msgstr "Er du sikker på at du vil fortsette?"
-
 msgid "Are you sure you want to reboot the server?"
+msgstr ""
+
+msgid "Are you sure you want to reset the server to factory defaults?"
 msgstr ""
 
 msgid "Are you sure you want to shutdown the server?"
@@ -3964,13 +3967,6 @@ msgstr "Hvis denne er slått av, kan filsystemet ikke monteres."
 
 msgid ""
 "If this property is enabled, the snapshots are displayed into .zfs directory."
-msgstr ""
-
-#, php-format
-msgid ""
-"If you click 'Yes', The server will be reset to factory defaults and will "
-"reboot immediately. The entire system configuration will be overwritten. The "
-"LAN IP address will be reset to %s and the password will be set to '%s'."
 msgstr ""
 
 msgid ""
@@ -7396,6 +7392,9 @@ msgstr ""
 msgid "The IP address that this hostname represents."
 msgstr "IP adressen som dette vertsnavnet representerer."
 
+msgid "The LAN IP address will be reset to"
+msgstr ""
+
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
 msgstr "MIB '%s' finnes ikke i sysctl."
@@ -7426,6 +7425,9 @@ msgid ""
 msgstr ""
 
 msgid "The administrator has been notified to apply your changes."
+msgstr ""
+
+msgid "The administrator password will be reset to"
 msgstr ""
 
 #, php-format
@@ -7732,6 +7734,9 @@ msgstr ""
 msgid "The encrypted device is currently mounted!"
 msgstr ""
 
+msgid "The entire system configuration will be overwritten."
+msgstr ""
+
 msgid "The extent name already exists."
 msgstr ""
 
@@ -7969,15 +7974,16 @@ msgstr ""
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr ""
 
-msgid ""
-"The server has been reset to factory defaults and is now rebooting. This may "
-"take one minute."
-msgstr ""
-
 msgid "The server is halting now."
 msgstr ""
 
+msgid "The server is now reset to factory defaults and will reboot."
+msgstr ""
+
 msgid "The server is rebooting now."
+msgstr ""
+
+msgid "The server will be reset to factory defaults and will reboot."
 msgstr ""
 
 msgid "The server will reboot after restoring the configuration."
@@ -9658,3 +9664,6 @@ msgstr ""
 
 msgid "version:"
 msgstr ""
+
+#~ msgid "Are you sure you want to proceed?"
+#~ msgstr "Er du sikker på at du vil fortsette?"

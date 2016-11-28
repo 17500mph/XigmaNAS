@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-24 11:28+0000\n"
+"POT-Creation-Date: 2016-11-28 15:25+0000\n"
 "PO-Revision-Date: 2016-11-09 22:08+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-28 14:13+0000\n"
+"X-Launchpad-Export-Date: 2016-11-28 15:42+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -630,6 +630,9 @@ msgstr "Speciális beállítások"
 msgid "Advertisement skew"
 msgstr "Advertisement skew"
 
+msgid "Afrikaans"
+msgstr ""
+
 msgid "After"
 msgstr "Utána"
 
@@ -898,11 +901,11 @@ msgstr "Archív"
 msgid "Archive mode."
 msgstr "Archív mód"
 
-msgid "Are you sure you want to proceed?"
-msgstr "Biztos folytatja?"
-
 msgid "Are you sure you want to reboot the server?"
 msgstr "Biztos, hogy újraindítod a szervert?"
+
+msgid "Are you sure you want to reset the server to factory defaults?"
+msgstr ""
 
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Biztos, hogy kikapcsolod a szervert?"
@@ -4174,16 +4177,6 @@ msgid ""
 "If this property is enabled, the snapshots are displayed into .zfs directory."
 msgstr ""
 "Ha engedélyezve van, a pillanatképek a .zfs könyvtárban jelennek meg."
-
-#, php-format
-msgid ""
-"If you click 'Yes', The server will be reset to factory defaults and will "
-"reboot immediately. The entire system configuration will be overwritten. The "
-"LAN IP address will be reset to %s and the password will be set to '%s'."
-msgstr ""
-"Ha az 'Igen'-re kattintasz, a szerver visszaállítja a gyári beállításokat és "
-"újraindul. Az összes beállítás felülíródik. A hálózat IP címe %s, a jelszó "
-"'%s' lesz újra."
 
 msgid ""
 "If you want to change the password for accessing the WebGUI, enter it here "
@@ -7782,6 +7775,9 @@ msgstr "A szünetmentes mester IP címe."
 msgid "The IP address that this hostname represents."
 msgstr "Erre az állomásnévre mutató IP cím."
 
+msgid "The LAN IP address will be reset to"
+msgstr ""
+
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
 msgstr "A(z) '%s' MIB nem létezik a sysctl-ben."
@@ -7818,6 +7814,9 @@ msgstr "A művelet típusa, ha a csomag megfelelnek az alábbi feltételeknek."
 
 msgid "The administrator has been notified to apply your changes."
 msgstr "A rendszergazda értesítést kapott, hogy módosításaidat alkalmazza."
+
+msgid "The administrator password will be reset to"
+msgstr ""
 
 #, php-format
 msgid "The associated MIB files can be found at %s."
@@ -8172,6 +8171,9 @@ msgstr "Az illesztőprogram az LCD-hez kapcsolódik."
 msgid "The encrypted device is currently mounted!"
 msgstr "Az titkosított eszköz jelenleg be van csatolva!"
 
+msgid "The entire system configuration will be overwritten."
+msgstr ""
+
 msgid "The extent name already exists."
 msgstr "A extent már létezik"
 
@@ -8458,18 +8460,17 @@ msgstr "Soros vagy USB port, ahová a második szünetmentes csatlakozik."
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr "A szerver időkiszolgálóként viselkedjen a Windows kliensek felé."
 
-msgid ""
-"The server has been reset to factory defaults and is now rebooting. This may "
-"take one minute."
-msgstr ""
-"A szerver visszaállt a gyári beállításokra és újraindul. Ez néhány percet "
-"vehet igénybe."
-
 msgid "The server is halting now."
 msgstr "A szerver most leáll."
 
+msgid "The server is now reset to factory defaults and will reboot."
+msgstr ""
+
 msgid "The server is rebooting now."
 msgstr "A szerver újraindul."
+
+msgid "The server will be reset to factory defaults and will reboot."
+msgstr ""
 
 msgid "The server will reboot after restoring the configuration."
 msgstr "A szerver a beállítások visszaállítása után újraindul."
@@ -10330,3 +10331,23 @@ msgstr "felhasználó"
 
 msgid "version:"
 msgstr "verzió:"
+
+#~ msgid "Are you sure you want to proceed?"
+#~ msgstr "Biztos folytatja?"
+
+#~ msgid ""
+#~ "The server has been reset to factory defaults and is now rebooting. This may "
+#~ "take one minute."
+#~ msgstr ""
+#~ "A szerver visszaállt a gyári beállításokra és újraindul. Ez néhány percet "
+#~ "vehet igénybe."
+
+#, php-format
+#~ msgid ""
+#~ "If you click 'Yes', The server will be reset to factory defaults and will "
+#~ "reboot immediately. The entire system configuration will be overwritten. The "
+#~ "LAN IP address will be reset to %s and the password will be set to '%s'."
+#~ msgstr ""
+#~ "Ha az 'Igen'-re kattintasz, a szerver visszaállítja a gyári beállításokat és "
+#~ "újraindul. Az összes beállítás felülíródik. A hálózat IP címe %s, a jelszó "
+#~ "'%s' lesz újra."

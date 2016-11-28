@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-24 11:28+0000\n"
+"POT-Creation-Date: 2016-11-28 15:25+0000\n"
 "PO-Revision-Date: 2016-11-26 12:13+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-28 14:13+0000\n"
+"X-Launchpad-Export-Date: 2016-11-28 15:41+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -631,6 +631,9 @@ msgstr "Додаткові налаштування"
 msgid "Advertisement skew"
 msgstr "Затримка об'явлення"
 
+msgid "Afrikaans"
+msgstr ""
+
 msgid "After"
 msgstr "Після"
 
@@ -902,11 +905,11 @@ msgstr "Архівування"
 msgid "Archive mode."
 msgstr "Режим архівування."
 
-msgid "Are you sure you want to proceed?"
-msgstr "Ви впевнені, що хочете продовжити?"
-
 msgid "Are you sure you want to reboot the server?"
 msgstr "Ви впевнені, що хочете перезавантажити сервер?"
+
+msgid "Are you sure you want to reset the server to factory defaults?"
+msgstr ""
 
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Ви впевнені, що хочете вимкнути сервер?"
@@ -4208,17 +4211,6 @@ msgid ""
 msgstr ""
 "Якщо цей параметр дозволений, знімки стану будуть відображені в каталозі "
 ".zfs."
-
-#, php-format
-msgid ""
-"If you click 'Yes', The server will be reset to factory defaults and will "
-"reboot immediately. The entire system configuration will be overwritten. The "
-"LAN IP address will be reset to %s and the password will be set to '%s'."
-msgstr ""
-"При натисканні кнопки \"Так\", сервер буде повернуто до заводських "
-"налаштувань і він буде негайно перезавантажений. Вся конфігурація системи "
-"перезапишеться. IP адреса буде скинута до %s і пароль буде встановлений на "
-"'%s'."
 
 msgid ""
 "If you want to change the password for accessing the WebGUI, enter it here "
@@ -7816,6 +7808,9 @@ msgstr "IP адреса контролера БДЖ."
 msgid "The IP address that this hostname represents."
 msgstr "IP адреса цього хоста."
 
+msgid "The LAN IP address will be reset to"
+msgstr ""
+
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
 msgstr "MIB '%s' не існує в sysctl."
@@ -7853,6 +7848,9 @@ msgstr ""
 
 msgid "The administrator has been notified to apply your changes."
 msgstr "Адміністратора боло повідомлено для затвердження ваших змін."
+
+msgid "The administrator password will be reset to"
+msgstr ""
 
 #, php-format
 msgid "The associated MIB files can be found at %s."
@@ -8214,6 +8212,9 @@ msgstr "Драйвер, що використовується для підкл�
 msgid "The encrypted device is currently mounted!"
 msgstr "Захищений пристрій в даний час змонтовано!"
 
+msgid "The entire system configuration will be overwritten."
+msgstr ""
+
 msgid "The extent name already exists."
 msgstr "Таке ім'я екстента вже існує."
 
@@ -8496,18 +8497,17 @@ msgstr "Послідовний або USB порт, до якого підклю
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr "Представлятися сервером точного часу для Windows клієнтів"
 
-msgid ""
-"The server has been reset to factory defaults and is now rebooting. This may "
-"take one minute."
-msgstr ""
-"Сервер був скиданий до заводських налаштувань і тепер перезавантажується. Це "
-"може зайняти одну хвилину."
-
 msgid "The server is halting now."
 msgstr "Сервер в процесі зупинки."
 
+msgid "The server is now reset to factory defaults and will reboot."
+msgstr ""
+
 msgid "The server is rebooting now."
 msgstr "Сервер зараз перезавантажується."
+
+msgid "The server will be reset to factory defaults and will reboot."
+msgstr ""
 
 msgid "The server will reboot after restoring the configuration."
 msgstr "Сервер перезавантажиться після відновлення конфігурації."
@@ -10407,3 +10407,24 @@ msgstr "користувач"
 
 msgid "version:"
 msgstr "версія:"
+
+#~ msgid "Are you sure you want to proceed?"
+#~ msgstr "Ви впевнені, що хочете продовжити?"
+
+#, php-format
+#~ msgid ""
+#~ "If you click 'Yes', The server will be reset to factory defaults and will "
+#~ "reboot immediately. The entire system configuration will be overwritten. The "
+#~ "LAN IP address will be reset to %s and the password will be set to '%s'."
+#~ msgstr ""
+#~ "При натисканні кнопки \"Так\", сервер буде повернуто до заводських "
+#~ "налаштувань і він буде негайно перезавантажений. Вся конфігурація системи "
+#~ "перезапишеться. IP адреса буде скинута до %s і пароль буде встановлений на "
+#~ "'%s'."
+
+#~ msgid ""
+#~ "The server has been reset to factory defaults and is now rebooting. This may "
+#~ "take one minute."
+#~ msgstr ""
+#~ "Сервер був скиданий до заводських налаштувань і тепер перезавантажується. Це "
+#~ "може зайняти одну хвилину."

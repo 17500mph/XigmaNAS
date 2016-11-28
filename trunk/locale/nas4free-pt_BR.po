@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-24 11:28+0000\n"
+"POT-Creation-Date: 2016-11-28 15:25+0000\n"
 "PO-Revision-Date: 2015-06-11 17:41+0000\n"
 "Last-Translator: Flavio Peinado <flavio@peinado.com.br>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-28 14:13+0000\n"
+"X-Launchpad-Export-Date: 2016-11-28 15:42+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "X-Poedit-Country: Brazilian Portuguese\n"
 "Language: \n"
@@ -605,6 +605,9 @@ msgstr "Configurações avançadas"
 msgid "Advertisement skew"
 msgstr "Propaganda disfarçada"
 
+msgid "Afrikaans"
+msgstr ""
+
 msgid "After"
 msgstr ""
 
@@ -855,10 +858,10 @@ msgstr "Arquivo"
 msgid "Archive mode."
 msgstr "Modo de arquivamento"
 
-msgid "Are you sure you want to proceed?"
-msgstr "Deseja realmente continuar?"
-
 msgid "Are you sure you want to reboot the server?"
+msgstr ""
+
+msgid "Are you sure you want to reset the server to factory defaults?"
 msgstr ""
 
 msgid "Are you sure you want to shutdown the server?"
@@ -4028,17 +4031,6 @@ msgid ""
 msgstr ""
 "Se esta propriedade estiver ativada, os pontos de recuperação serão "
 "mostrados no diretório .zfs."
-
-#, php-format
-msgid ""
-"If you click 'Yes', The server will be reset to factory defaults and will "
-"reboot immediately. The entire system configuration will be overwritten. The "
-"LAN IP address will be reset to %s and the password will be set to '%s'."
-msgstr ""
-"Se você clicar em 'Sim', o servidor retornará às configurações de fábrica e "
-"será reiniciado imediatamente. A configuração inteira do sistema será "
-"sobrescrita. O endereço IP de LAN será ajustado para %s e a senha será "
-"ajustada para '%s'."
 
 msgid ""
 "If you want to change the password for accessing the WebGUI, enter it here "
@@ -7556,6 +7548,9 @@ msgstr "Endereço IP mestre do UPS."
 msgid "The IP address that this hostname represents."
 msgstr "O endereço IP que este hostname representa."
 
+msgid "The LAN IP address will be reset to"
+msgstr ""
+
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
 msgstr "A MIB '%s'  não existe no sysctl."
@@ -7588,6 +7583,9 @@ msgstr ""
 
 msgid "The administrator has been notified to apply your changes."
 msgstr "O administrador foi notificado para aplicar as suas alterações."
+
+msgid "The administrator password will be reset to"
+msgstr ""
 
 #, php-format
 msgid "The associated MIB files can be found at %s."
@@ -7928,6 +7926,9 @@ msgstr ""
 msgid "The encrypted device is currently mounted!"
 msgstr ""
 
+msgid "The entire system configuration will be overwritten."
+msgstr ""
+
 msgid "The extent name already exists."
 msgstr "O nome de 'extent já existe."
 
@@ -8209,17 +8210,16 @@ msgid "The server advertises itself as a time server to Windows clients."
 msgstr ""
 "O servidor se anuncia como um servidor de horário para clientes Windows."
 
-msgid ""
-"The server has been reset to factory defaults and is now rebooting. This may "
-"take one minute."
-msgstr ""
-"O servidor foi restaurado para os padrões de fábrica e agora está "
-"reiniciando. Isto pode levar um minuto."
-
 msgid "The server is halting now."
 msgstr ""
 
+msgid "The server is now reset to factory defaults and will reboot."
+msgstr ""
+
 msgid "The server is rebooting now."
+msgstr ""
+
+msgid "The server will be reset to factory defaults and will reboot."
 msgstr ""
 
 msgid "The server will reboot after restoring the configuration."
@@ -10012,3 +10012,24 @@ msgstr ""
 
 msgid "version:"
 msgstr "versão:"
+
+#~ msgid "Are you sure you want to proceed?"
+#~ msgstr "Deseja realmente continuar?"
+
+#, php-format
+#~ msgid ""
+#~ "If you click 'Yes', The server will be reset to factory defaults and will "
+#~ "reboot immediately. The entire system configuration will be overwritten. The "
+#~ "LAN IP address will be reset to %s and the password will be set to '%s'."
+#~ msgstr ""
+#~ "Se você clicar em 'Sim', o servidor retornará às configurações de fábrica e "
+#~ "será reiniciado imediatamente. A configuração inteira do sistema será "
+#~ "sobrescrita. O endereço IP de LAN será ajustado para %s e a senha será "
+#~ "ajustada para '%s'."
+
+#~ msgid ""
+#~ "The server has been reset to factory defaults and is now rebooting. This may "
+#~ "take one minute."
+#~ msgstr ""
+#~ "O servidor foi restaurado para os padrões de fábrica e agora está "
+#~ "reiniciando. Isto pode levar um minuto."

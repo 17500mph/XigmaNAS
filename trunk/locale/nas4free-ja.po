@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-24 11:28+0000\n"
+"POT-Creation-Date: 2016-11-28 15:25+0000\n"
 "PO-Revision-Date: 2016-11-21 20:27+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-28 14:12+0000\n"
+"X-Launchpad-Export-Date: 2016-11-28 15:41+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -593,6 +593,9 @@ msgstr "高度な設定"
 msgid "Advertisement skew"
 msgstr "広告スキュー"
 
+msgid "Afrikaans"
+msgstr ""
+
 msgid "After"
 msgstr ""
 
@@ -831,10 +834,10 @@ msgstr "アーカイブ"
 msgid "Archive mode."
 msgstr "アーカイブモード"
 
-msgid "Are you sure you want to proceed?"
-msgstr "処理を進めても宜しいですか?"
-
 msgid "Are you sure you want to reboot the server?"
+msgstr ""
+
+msgid "Are you sure you want to reset the server to factory defaults?"
 msgstr ""
 
 msgid "Are you sure you want to shutdown the server?"
@@ -3931,15 +3934,6 @@ msgstr "このプロパティを無効にすると、ファイルシステムは
 msgid ""
 "If this property is enabled, the snapshots are displayed into .zfs directory."
 msgstr "このプロパティを有効にすると、スナップショットが .zfs ディレクトリ内に表示されます。"
-
-#, php-format
-msgid ""
-"If you click 'Yes', The server will be reset to factory defaults and will "
-"reboot immediately. The entire system configuration will be overwritten. The "
-"LAN IP address will be reset to %s and the password will be set to '%s'."
-msgstr ""
-"'Yes' をクリックするとサーバーは工場出荷設定にリセットされ、直ちにリブートされます。全てのシステム構成が上書きされます。LAN IP アドレスは "
-"%s にリセットされ、パスワードは '%s' に設定されます。"
 
 msgid ""
 "If you want to change the password for accessing the WebGUI, enter it here "
@@ -7362,6 +7356,9 @@ msgstr "UPSマスターのIPアドレス。"
 msgid "The IP address that this hostname represents."
 msgstr "このホストに割り当てられている IP アドレスを入力して下さい。"
 
+msgid "The LAN IP address will be reset to"
+msgstr ""
+
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
 msgstr "MIB '%s' は sysctl 内に存在しません。"
@@ -7393,6 +7390,9 @@ msgstr "パケットが指定されたルールに当てはまる場合に実行
 
 msgid "The administrator has been notified to apply your changes."
 msgstr "貴方の変更が適用された事を管理者に通知しました。"
+
+msgid "The administrator password will be reset to"
+msgstr ""
 
 #, php-format
 msgid "The associated MIB files can be found at %s."
@@ -7708,6 +7708,9 @@ msgstr ""
 msgid "The encrypted device is currently mounted!"
 msgstr ""
 
+msgid "The entire system configuration will be overwritten."
+msgstr ""
+
 msgid "The extent name already exists."
 msgstr "エクステント名は既に存在しています。"
 
@@ -7959,15 +7962,16 @@ msgstr ""
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr "このサーバを Windows クライアントにタイムサーバとして公告します。"
 
-msgid ""
-"The server has been reset to factory defaults and is now rebooting. This may "
-"take one minute."
-msgstr "サーバーを初期状態にリストアした後、リブートを実行中です。しばらくお待ちください。"
-
 msgid "The server is halting now."
 msgstr ""
 
+msgid "The server is now reset to factory defaults and will reboot."
+msgstr ""
+
 msgid "The server is rebooting now."
+msgstr ""
+
+msgid "The server will be reset to factory defaults and will reboot."
 msgstr ""
 
 msgid "The server will reboot after restoring the configuration."
@@ -9667,3 +9671,20 @@ msgstr ""
 
 msgid "version:"
 msgstr "バージョン:"
+
+#~ msgid "Are you sure you want to proceed?"
+#~ msgstr "処理を進めても宜しいですか?"
+
+#, php-format
+#~ msgid ""
+#~ "If you click 'Yes', The server will be reset to factory defaults and will "
+#~ "reboot immediately. The entire system configuration will be overwritten. The "
+#~ "LAN IP address will be reset to %s and the password will be set to '%s'."
+#~ msgstr ""
+#~ "'Yes' をクリックするとサーバーは工場出荷設定にリセットされ、直ちにリブートされます。全てのシステム構成が上書きされます。LAN IP アドレスは "
+#~ "%s にリセットされ、パスワードは '%s' に設定されます。"
+
+#~ msgid ""
+#~ "The server has been reset to factory defaults and is now rebooting. This may "
+#~ "take one minute."
+#~ msgstr "サーバーを初期状態にリストアした後、リブートを実行中です。しばらくお待ちください。"
