@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-11-24 11:28+0000\n"
-"PO-Revision-Date: 2016-11-28 14:18+0000\n"
+"POT-Creation-Date: 2016-11-28 15:25+0000\n"
+"PO-Revision-Date: 2016-11-28 15:30+0000\n"
 "Last-Translator: Hein von Brandis <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-28 14:20+0000\n"
+"X-Launchpad-Export-Date: 2016-11-28 15:41+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 
 msgid " interfaces:"
@@ -613,6 +613,9 @@ msgstr "Gevorderde instellings"
 msgid "Advertisement skew"
 msgstr ""
 
+msgid "Afrikaans"
+msgstr ""
+
 msgid "After"
 msgstr "Na"
 
@@ -865,11 +868,11 @@ msgstr "Argief"
 msgid "Archive mode."
 msgstr "Argief mode."
 
-msgid "Are you sure you want to proceed?"
-msgstr "Is jy seker dat jy wil voortgaan?"
-
 msgid "Are you sure you want to reboot the server?"
 msgstr "Is jy seker dat jy die bediener wil herlaai?"
+
+msgid "Are you sure you want to reset the server to factory defaults?"
+msgstr ""
 
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Is jy seker dat jy die bediener wil afsit?"
@@ -4015,16 +4018,6 @@ msgstr ""
 msgid ""
 "If this property is enabled, the snapshots are displayed into .zfs directory."
 msgstr ""
-
-#, php-format
-msgid ""
-"If you click 'Yes', The server will be reset to factory defaults and will "
-"reboot immediately. The entire system configuration will be overwritten. The "
-"LAN IP address will be reset to %s and the password will be set to '%s'."
-msgstr ""
-"As jy 'Ja' kliek sal die bediener na sy fabriek instellings terug geskakel "
-"word en dadelik oorlai. Die hele sisteem instelling sal oorgeskryf word. Die "
-"LAN IP adres sal terug gestel word na %s end die wagwoord na '%s'."
 
 msgid ""
 "If you want to change the password for accessing the WebGUI, enter it here "
@@ -7487,6 +7480,9 @@ msgstr "Die IP adres van die UPS meester."
 msgid "The IP address that this hostname represents."
 msgstr ""
 
+msgid "The LAN IP address will be reset to"
+msgstr ""
+
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
 msgstr ""
@@ -7520,6 +7516,9 @@ msgid ""
 msgstr ""
 
 msgid "The administrator has been notified to apply your changes."
+msgstr ""
+
+msgid "The administrator password will be reset to"
 msgstr ""
 
 #, php-format
@@ -7857,6 +7856,9 @@ msgstr "Die aandrywer wat gebruik word om met die LCD te konnekteer."
 msgid "The encrypted device is currently mounted!"
 msgstr "Die gekodeerde toestel is huidiglik gemonteer!"
 
+msgid "The entire system configuration will be overwritten."
+msgstr ""
+
 msgid "The extent name already exists."
 msgstr ""
 
@@ -7958,7 +7960,7 @@ msgid ""
 msgstr ""
 
 msgid "The method can be accepted in the controller."
-msgstr ""
+msgstr "Die metode kan in die beheerder aanvaar word."
 
 msgid ""
 "The minimum amount of space guaranteed to a dataset (usually empty). To "
@@ -7979,34 +7981,37 @@ msgid ""
 msgstr ""
 
 msgid "The name of the RAID cannot be changed."
-msgstr ""
+msgstr "Die naam van die RAID kan nie verander word nie."
 
 msgid "The name of the RAID is already in use."
-msgstr ""
+msgstr "Die naam van die RAID is reeds in gebruik."
 
 msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr ""
+"Die naam van die RAID mag sleg bestaan uit die karakters a-z, A-Z, 0-9."
 
 msgid "The name of the pool cannot be changed."
 msgstr ""
 
 msgid "The name of this virtual device cannot be changed."
-msgstr ""
+msgstr "Die naam van hierdie virtuele toestel kan nie verander word nie."
 
 #, php-format
 msgid "The network '%s' is invalid."
-msgstr ""
+msgstr "Die netwerk '%s' is ongeldig."
 
 msgid ""
 "The new password does not match. Please ensure the passwords match exactly."
 msgstr ""
+"Die nuwe wagwoord stem nie ooreen nie. Maak asseblief seker dat die "
+"wagwoorde presies ooreen stem."
 
 msgid "The new password is also the default root password of the system!"
 msgstr ""
 
 msgid "The number of clients must be between 1 and 50."
-msgstr ""
+msgstr "Die hoeveelheid kliënte moet tussen 1 en 50 wees."
 
 msgid ""
 "The number of errors caused by incorrect checksum during the error "
@@ -8014,28 +8019,28 @@ msgid ""
 msgstr ""
 
 msgid "The old password is not correct."
-msgstr ""
+msgstr "Die ou wagwoord is verkeerd."
 
 msgid "The password contains the illegal character ':'."
-msgstr ""
+msgstr "Die wagwoord bevat die onwettige karakter ':'."
 
 msgid "The password encryption protocol to use."
 msgstr ""
 
 msgid "The passwords do not match."
-msgstr ""
+msgstr "Die wagwoorde stem nie ooreen nie."
 
 #, php-format
 msgid "The path '%s' does not exist."
-msgstr ""
+msgstr "Die lêerpad '%s' bestaan nie."
 
 #, php-format
 msgid "The path '%s' is a directory."
-msgstr ""
+msgstr "Die lêerpad '%s' is 'n lêergids."
 
 #, php-format
 msgid "The path '%s' is not a directory."
-msgstr ""
+msgstr "Die lêerpad '%s' is nie 'n lêergids nie."
 
 msgid "The peer connection encryption mode."
 msgstr ""
@@ -8051,10 +8056,12 @@ msgid ""
 "The port to listen to. The default is to listen to the tftp port specified "
 "in /etc/services."
 msgstr ""
+"Die poort om na te luister. Die standaard is om na die tftp poort "
+"gespesifiseer in /etc/dienste te luister."
 
 #, php-format
 msgid "The portal '%s' is invalid."
-msgstr ""
+msgstr "Die portaal '%s' is ongeldig."
 
 msgid ""
 "The portal takes the form of 'address:port'. for example '192.168.1.1:3260' "
@@ -8073,7 +8080,7 @@ msgstr ""
 
 #, php-format
 msgid "The recommended length for compatibility is %d."
-msgstr ""
+msgstr "Die voorgestelde lengte vir versoenbaarheid is %d."
 
 #, php-format
 msgid "The recommended queue depth is %d."
@@ -8094,20 +8101,23 @@ msgstr ""
 
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr ""
-
-msgid ""
-"The server has been reset to factory defaults and is now rebooting. This may "
-"take one minute."
-msgstr ""
+"Die bediener adverteer homself aan Windows kliënte as 'n tyd bediener."
 
 msgid "The server is halting now."
-msgstr ""
+msgstr "Die bediener staak tans."
+
+msgid "The server is now reset to factory defaults and will reboot."
+msgstr "Die bediener is nou herstel na fabriek standaard en sal nou herlaai."
 
 msgid "The server is rebooting now."
+msgstr "Die bediener herlaai tans."
+
+msgid "The server will be reset to factory defaults and will reboot."
 msgstr ""
+"Die bediener sal na fabriek standaard herstel word en sal dan herlaai."
 
 msgid "The server will reboot after restoring the configuration."
-msgstr ""
+msgstr "Die bediener sal herlaai nadat die instellings herstel is."
 
 msgid "The share name is already used."
 msgstr ""
@@ -8123,39 +8133,44 @@ msgid "The storage area mapped to LUN%d."
 msgstr ""
 
 msgid "The subject of the email."
-msgstr ""
+msgstr "Die onderwerp van die epos."
 
 msgid "The tag range is invalid."
-msgstr ""
+msgstr "Die etiket omvangs is ongeldig."
 
 msgid "The target name already exists."
-msgstr ""
+msgstr "Die teiken naam bestaan reeds."
 
 msgid ""
 "The time in seconds until shutdown is initiated. If the UPS happens to come "
 "back before the time is up the shutdown is canceled."
 msgstr ""
+"Die tyd in sekondes totdat afskakel begin. As die UPS dalk weer aanskakel "
+"voordat hierdie tyd verlopp het, word die afskakel gekanseleer."
 
 msgid "The time update interval must be either between 6 and 1440."
-msgstr ""
+msgstr "Die tyd opdateer interval moet tussen 6 en 1440 wees."
 
 msgid "The total count of errors when writing a sector."
-msgstr ""
+msgstr "Die totale hoeveelheid foute wanneer 'n sektor geskryf word."
 
 msgid ""
 "The total count of uncorrectable errors when reading/writing a sector. A "
 "rise in the value of this attribute indicates defects of the disk surface "
 "and/or problems in the mechanical subsystem."
 msgstr ""
+"Die totale hoeveelheid onherstelbare foute terwyl 'n sektor gelees/geskryf "
+"word. 'n Styging van die waarde wan hierdie eienskap wys op defekte op die "
+"skyf oppervlak en/of probleme in die meganiese subsisteem."
 
 msgid "The unique group ID is already used."
-msgstr ""
+msgstr "Die unieke groep ID word reeds gebruik."
 
 msgid "The unique rule number is already used."
-msgstr ""
+msgstr "Die unieke reël nommer word reeds gebruik."
 
 msgid "The unique user ID is already used."
-msgstr ""
+msgstr "Die unieke gebruiker ID word reeds gebruik."
 
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
@@ -8167,16 +8182,16 @@ msgid ""
 msgstr ""
 
 msgid "The uploaded file was only partially uploaded."
-msgstr ""
+msgstr "Die opgelaaide lêer was slegs gedeeltelik gelaai."
 
 msgid "The user's login shell."
 msgstr ""
 
 msgid "The value of the variable."
-msgstr ""
+msgstr "Die waarde van die veranderlike."
 
 msgid "The volume must be detached before it can be deleted."
-msgstr ""
+msgstr "Die volume moet losgemaak word voor dit uitgevee kan word."
 
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
@@ -8187,17 +8202,17 @@ msgid "The working directory does not exist."
 msgstr ""
 
 msgid "There are too many additional groups."
-msgstr ""
+msgstr "Daar is te veel addisionele groepe."
 
 msgid "There is no error, the file uploaded with success."
-msgstr ""
+msgstr "Daar was geen foute nie, die lêer is met sukses opgelaai."
 
 msgid ""
 "There is no need to start a RAID volume from here (It starts automatically)."
 msgstr ""
 
 msgid "There must be at least 1 disks selected."
-msgstr ""
+msgstr "Daar moet ten minste 1 skyf geselekteer wees."
 
 msgid "There must be at least 2 disks in a mirror."
 msgstr ""
@@ -8212,7 +8227,7 @@ msgid "There must be at least 4 disks in a raidz3."
 msgstr ""
 
 msgid "There must be selected a minimum of 1 interface."
-msgstr ""
+msgstr "Daar moet 'n minimum van 1 koppelvlak geselekteer wees."
 
 msgid ""
 "There should be enough to handle the maximum level of concurrency from its "
@@ -8242,7 +8257,7 @@ msgstr ""
 
 #, php-format
 msgid "These parameters are added to %s."
-msgstr ""
+msgstr "Hierdie parameters word bygevoeg by %s."
 
 #, php-format
 msgid "These parameters are added to [Global] section of %s."
@@ -8254,7 +8269,7 @@ msgstr ""
 
 #, php-format
 msgid "These parameters will be added to %s."
-msgstr ""
+msgstr "Hierdie parameters sal by %s bygevoeg word."
 
 #, php-format
 msgid "These parameters will be added to [global] settings in %s."
@@ -8269,35 +8284,47 @@ msgid ""
 msgstr ""
 
 msgid "These parameters will be added to the ping command."
-msgstr ""
+msgstr "Hierdie parameters sal by die pieng bevel bygevoeg word."
 
 msgid ""
 "This Bridge cannot be deleted because it is still being used as an interface."
 msgstr ""
+"Hierdie Brug kan nie uitgevee word nie want dit word steeds as 'n koppelvlak "
+"gebruik."
 
 msgid ""
 "This CARP cannot be deleted because it is still being used as an interface."
 msgstr ""
+"Hierdie CARP kan nie uitgevee word nie want dit word steeds as 'n koppelvlak "
+"gebruik."
 
 msgid ""
 "This LAGG cannot be deleted because it is still being used as an interface."
 msgstr ""
+"Hierdie LAGG kan nie uitgevee word nie want dit word steeds as 'n koppelvlak "
+"gebruik."
 
 msgid "This URL is already configured."
-msgstr ""
+msgstr "Hierdie URL is reeds opgestel."
 
 msgid ""
 "This VLAN cannot be deleted because it is still being used as an interface."
 msgstr ""
+"Hierdie VLAN kan nie uitgevee word nie want dit word steeds as 'n koppelvlak "
+"gebruik."
 
 msgid ""
 "This WLAN cannot be deleted because it is still being used as an interface."
 msgstr ""
+"Hierdie WLAN kan nie uitgevee word nie want dit word steeds as 'n koppelvlak "
+"gebruik."
 
 msgid ""
 "This allows you to lower the power consumption of the disk, at the expense "
 "of performance."
 msgstr ""
+"Hierdie laat jou toe om die kragverbruik van die skyf te verminder, ten "
+"koste van werksverrigting."
 
 msgid "This allows you to set how loud the drive is while it's operating."
 msgstr ""
@@ -8312,17 +8339,22 @@ msgstr ""
 
 msgid ""
 "This attribute determines the behavior of Access Control List inheritance."
-msgstr ""
+msgstr "Hierdie eienskap bepaal die gedrag van Toeganb Beheer Lys erf."
 
 msgid ""
 "This attribute indicates the count of full hard disk power on/off cycles."
 msgstr ""
+"Hierdie eienskap wys die telling volle hardeskyf krag aan/af siklusse."
 
 msgid ""
 "This attribute indicates the count that recalibration was requested (under "
 "the condition that the first attempt was unsuccessful). An increase of this "
 "attribute value is a sign of problems in the hard disk mechanical subsystem."
 msgstr ""
+"Hierdie eienskap wys die hoeveelheid keer wat herkalibrasie aangevra (met "
+"die voorwaarde dat die eerste probeerslag misluk het). 'n Verhooging van "
+"hierdie eienskap se waarde dui op probleme met die hardeskyf se meganiese "
+"subsisteem."
 
 msgid ""
 "This attribute is a part of Hewlett-Packard's SMART IV technology, as well "
@@ -8333,6 +8365,8 @@ msgstr ""
 
 msgid "This can cause a huge delay in loading the log page!"
 msgstr ""
+"Hierie kan 'n groot vertraaging veroorsaak terwyl die aanmelding bladsy "
+"gelaai word!"
 
 msgid ""
 "This configuration settings are used to generate the ups.conf configuration "
@@ -8357,24 +8391,27 @@ msgid "This couple targetname/targetaddress already exists in the disk list."
 msgstr ""
 
 msgid "This disk already exists in the disk list."
-msgstr ""
+msgstr "Hierdie skyf bestaan reeds in die skyf lys."
 
 msgid "This email has been sent to validate your email configuration."
-msgstr ""
+msgstr "Hierdie epos is gestuur om jou epos instellings te bevestig."
 
 msgid "This extent is used."
 msgstr ""
 
 msgid "This group already exists in the group list."
-msgstr ""
+msgstr "Hierdie groep bestaan reeds in die groep lys."
 
 msgid "This is a very powerful tool. Use it on your own risk!"
 msgstr ""
+"Hierdie is 'n baie kragtige stuk gereedskap. Gebruik dit op eie risiko!"
 
 msgid ""
 "This is a way to take an existing insecure connection, and upgrade it to a "
 "secure connection using SSL/TLS."
 msgstr ""
+"Hierdie is 'n manier om 'n bestaande onveilige konneksie te neem en dit na "
+"'n veilige konneksie op te gradeer deur gebruik te maak van SSL/TSL."
 
 msgid ""
 "This is both the name of the server as advertised via "
@@ -8390,21 +8427,22 @@ msgid ""
 msgstr ""
 
 msgid "This name already exists in the disk list."
-msgstr ""
+msgstr "Hierdie naam bestaan reeds in die skyf lys."
 
 #, php-format
 msgid "This name is for example: %s."
-msgstr ""
+msgstr "Hierdie naam is byvoorbeeld: %s."
 
 msgid "This name is for example: iqn.2005-01.il.ac.huji.cs:somebody."
-msgstr ""
+msgstr "Hierdie naam is byvoorbeeld: iqn.2005-01.il.ac.huji.cs:iemadn."
 
 msgid "This name is used to uniquely identify your UPS on this system."
-msgstr ""
+msgstr "Hierdie naam is gebruik om jou UPS uniek in die sisteem uit te ken."
 
 msgid ""
 "This name is used to uniquely identify your second UPS on this system."
 msgstr ""
+"Hierdie naam is gebruik om jou tweede UPS uniek in die sisteem uit te ken."
 
 msgid ""
 "This option allows the users and groups that access a share to be specified. "
@@ -8438,6 +8476,9 @@ msgid ""
 "for a listing of available modules. By setting this to false you can create "
 "hidden modules."
 msgstr ""
+"Hierdie opsie bepaal of hierdie module gelys moet word wanneer die kliënt "
+"vra vir 'n lys van beskikbare modules. Deur dit na fals toe te stel kan hy "
+"versteekte modules skep."
 
 msgid ""
 "This option is a comma, space, or tab delimited set of host which are NOT "
@@ -8484,11 +8525,12 @@ msgid ""
 msgstr ""
 
 msgid "This page is for maintenance only."
-msgstr ""
+msgstr "Hierdie blatsy is slegs vir instandhouding."
 
 msgid ""
 "This page reflects the configuration that has been created with the WebGUI."
 msgstr ""
+"Hierdie bladsy reflekteer die instelling wat met die WebGUI geskep is."
 
 msgid ""
 "This page reflects the current system configuration. It may be different to "
@@ -8500,6 +8542,8 @@ msgid ""
 "This parameter controls whether files starting with a dot appear as hidden "
 "files."
 msgstr ""
+"Hierdie parameter beheer of lêers wat met 'n punt begin, gesien as "
+"versteekte lêers of nie."
 
 msgid ""
 "This parameter says that if N occurrences of the event happen within the "
@@ -8510,11 +8554,15 @@ msgid ""
 "This parameter sets the highest protocol level that will be supported by the "
 "client."
 msgstr ""
+"Hierdie parameter stel die hoogste protokol vlak wat deur die kliënt "
+"ondersteun sal word."
 
 msgid ""
 "This parameter sets the highest protocol level that will be supported by the "
 "server."
 msgstr ""
+"Hierdie parameter stel die hoogste protokol vlak wat deur die bediener "
+"ondersteun sal word."
 
 #, php-format
 msgid ""
@@ -8559,29 +8607,33 @@ msgid ""
 "This setting controls the minimum protocol version that the client will "
 "attempt to use."
 msgstr ""
+"Hierdie verstelling beheer die minimum protokol weergawe wat die kliënt sal "
+"probeer gebruik."
 
 msgid ""
 "This setting controls the minimum protocol version that the server will "
 "allow the client to use."
 msgstr ""
+"Hierdie verstelling beheer die minimum protokol weergawe wat die beidiener "
+"die kliënt toe sal laat om te gebruik."
 
 msgid "This tag already exists."
-msgstr ""
+msgstr "Hierdie etiket bestaan reeds."
 
 msgid "This tag is used."
-msgstr ""
+msgstr "Hierdie etiket is gebruik."
 
 msgid "This the IP address or DNS name of the iSCSI target."
-msgstr ""
+msgstr "Hierdie is die IP adres of DNS naam van die iSCSI teiken."
 
 msgid "This user already exists in the user list."
-msgstr ""
+msgstr "Hierdie gebruiker besaan reeds in die gebruiker lys."
 
 msgid "This user already exists."
-msgstr ""
+msgstr "Hierdie gebruiker bestaan reeds."
 
 msgid "This virtual device name already exists."
-msgstr ""
+msgstr "Hierdie virtuele toestel naam bestaan reeds."
 
 msgid ""
 "This will allow server-side downscaling of very large JPEG images, it can "
@@ -8595,6 +8647,8 @@ msgid ""
 "This will erase ALL data on your disk! Do not use this option if you want to "
 "add an existing encrypted disk."
 msgstr ""
+"Hierdie sal AL die data op jou skyf uitvee! Moet nie hierdie opsie gebruik "
+"as jy 'n bestaande gekodeerde skyf wil gebruik nie."
 
 msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
 msgstr ""
@@ -8613,16 +8667,16 @@ msgid "Thu"
 msgstr ""
 
 msgid "Thursday"
-msgstr ""
+msgstr "Donderdag"
 
 msgid "TiB"
 msgstr ""
 
 msgid "TiVo support"
-msgstr ""
+msgstr "TiVo ondersteuning"
 
 msgid "Time"
-msgstr ""
+msgstr "Tyd"
 
 msgid "Time Machine"
 msgstr ""
@@ -8631,52 +8685,54 @@ msgid "Time Synchronization"
 msgstr ""
 
 msgid "Time before the load will be rebooted"
-msgstr ""
+msgstr "Tyd voordat die las herlaai sal word"
 
 msgid "Time before the load will be shutdown"
-msgstr ""
+msgstr "Tyd voordat die las afgeskakel sal word"
 
 msgid "Time before the load will be started"
-msgstr ""
+msgstr "Tyd voordat die las aangeskakel sal word"
 
 msgid "Time interval"
-msgstr ""
+msgstr "Tydsinterval"
 
 msgid "Time server"
-msgstr ""
+msgstr "Tyd bediener"
 
 msgid "Time spent during the positioning of the drive heads."
-msgstr ""
+msgstr "Tyd verloop tydens die posisionering van die skyf koppe."
 
 msgid ""
 "Time spent operating under data load (movement of magnetic head armature)."
 msgstr ""
 
 msgid "Time update interval"
-msgstr ""
+msgstr "Tyd opdateer interval"
 
 msgid "Time zone"
-msgstr ""
+msgstr "Tydsone"
 
 msgid "Timeout"
 msgstr ""
 
 msgid "Times"
-msgstr ""
+msgstr "Tye"
 
 msgid "TitleSpeed"
 msgstr ""
 
 msgid "To Email Address"
-msgstr ""
+msgstr "Na Epos Adres"
 
 msgid "To e-mail"
-msgstr ""
+msgstr "Na epos"
 
 msgid ""
 "To get detailed informations about writing firewall rules check the FreeBSD "
 "documentation"
 msgstr ""
+"Om meer omvangende inligting oor die skryf van brandmuur kontroles te kry, "
+"kyk na die FreeBSD dokumentasie"
 
 msgid ""
 "To get more information how to configure LCDproc check the LCDproc "
@@ -8689,7 +8745,7 @@ msgid ""
 msgstr ""
 
 msgid "To increase CIFS performance try the following:"
-msgstr ""
+msgstr "Om die CIFS werksverrigting te verbeter, probeer die volgende."
 
 msgid "To match any IP address leave this field empty."
 msgstr ""
@@ -8720,7 +8776,7 @@ msgid "Toolbox"
 msgstr ""
 
 msgid "Tools"
-msgstr ""
+msgstr "Gereedskap"
 
 msgid ""
 "Total LBAs Read Expanded. The upper 5 bytes of the 12-byte total number of "
@@ -8748,12 +8804,14 @@ msgid "Total count of LBAs written."
 msgstr ""
 
 msgid "Total count of load cycles."
-msgstr ""
+msgstr "Totale telling las siklusse."
 
 msgid ""
 "Total number of Flash program operation failures since the drive was "
 "deployed."
 msgstr ""
+"Totale hoeveelheid Flits programering operase mislukkings sedert die skyf "
+"ontplooi is."
 
 msgid ""
 "Total time of loading on the magnetic heads actuator (time not spent in "
@@ -8762,11 +8820,11 @@ msgstr ""
 
 #, php-format
 msgid "Total: %s | Alloc: %s | Free: %s | State: %s"
-msgstr ""
+msgstr "Totaal: %s | Geallok: %s | Beskikbaar: %s | Staat: %s"
 
 #, php-format
 msgid "Total: %s | Used: %s | Free: %s"
-msgstr ""
+msgstr "Totaal: %s | Gebruik: %s | Beskikbaar: %s"
 
 msgid "Traceroute"
 msgstr ""
@@ -8788,7 +8846,7 @@ msgid "Transcoding"
 msgstr ""
 
 msgid "Transfer Rate"
-msgstr ""
+msgstr "Oordrag Koers"
 
 msgid "Transfer mode"
 msgstr ""
@@ -8797,49 +8855,49 @@ msgid "Trap host"
 msgstr ""
 
 msgid "Trap port"
-msgstr ""
+msgstr "Lokval poort"
 
 msgid "Trap string"
-msgstr ""
+msgstr "Lokval string"
 
 msgid "Trap string."
-msgstr ""
+msgstr "Lokval string."
 
 msgid "Traps"
-msgstr ""
+msgstr "Lokvalle"
 
 msgid "Trivial File Transfer Protocol"
 msgstr ""
 
 msgid "Trusted domains"
-msgstr ""
+msgstr "Vertroude domeine"
 
 msgid "Try to force import."
-msgstr ""
+msgstr "Propeer om invoer te vorseer."
 
 msgid "Try to import from on-disk ZFS config."
 msgstr ""
 
 msgid "Tue"
-msgstr ""
+msgstr "Din"
 
 msgid "Tuesday"
-msgstr ""
+msgstr "Dinsdag"
 
 msgid "Tuning"
-msgstr ""
+msgstr "Instemming"
 
 msgid "Turkish"
-msgstr ""
+msgstr "Turks"
 
 msgid "Turn access time on or off for this dataset."
-msgstr ""
+msgstr "Skakel toegang tyd vir hierdoe datastel aan of af."
 
 msgid "Turn the monitor to standby after N seconds."
-msgstr ""
+msgstr "Skakel die monitor oor na bystaan na N sekondes."
 
 msgid "Type"
-msgstr ""
+msgstr "Tipe"
 
 msgid "Type used as extent."
 msgstr ""
@@ -8848,7 +8906,7 @@ msgid "UCD-SNMP-MIB"
 msgstr ""
 
 msgid "UFS"
-msgstr ""
+msgstr "UFS"
 
 msgid "UFS (GPT and Soft Updates)"
 msgstr ""
@@ -8859,6 +8917,9 @@ msgid ""
 "filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in "
 "unpredictable results, file corruption and the loss of data!"
 msgstr ""
+"UFS en ZFS is INHEEMSE lêersisteme van %s. Om ander lêersisteme  soos EXT2, "
+"EXT3, EXT4, FAT, FAT32 of NTFS te probeer gebruik kan lei tot onvoorspelbare "
+"resultate, lêer korrupsie en data verlies!"
 
 #, php-format
 msgid ""
@@ -9764,3 +9825,16 @@ msgstr ""
 
 msgid "version:"
 msgstr ""
+
+#~ msgid "Are you sure you want to proceed?"
+#~ msgstr "Is jy seker dat jy wil voortgaan?"
+
+#, php-format
+#~ msgid ""
+#~ "If you click 'Yes', The server will be reset to factory defaults and will "
+#~ "reboot immediately. The entire system configuration will be overwritten. The "
+#~ "LAN IP address will be reset to %s and the password will be set to '%s'."
+#~ msgstr ""
+#~ "As jy 'Ja' kliek sal die bediener na sy fabriek instellings terug geskakel "
+#~ "word en dadelik oorlai. Die hele sisteem instelling sal oorgeskryf word. Die "
+#~ "LAN IP adres sal terug gestel word na %s end die wagwoord na '%s'."

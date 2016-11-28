@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-24 11:28+0000\n"
+"POT-Creation-Date: 2016-11-28 15:25+0000\n"
 "PO-Revision-Date: 2016-11-24 10:20+0000\n"
 "Last-Translator: 罗建涛 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-28 14:12+0000\n"
+"X-Launchpad-Export-Date: 2016-11-28 15:41+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -578,6 +578,9 @@ msgstr "高级设置"
 msgid "Advertisement skew"
 msgstr "廣告的毫秒級值"
 
+msgid "Afrikaans"
+msgstr ""
+
 msgid "After"
 msgstr ""
 
@@ -812,11 +815,11 @@ msgstr "存档"
 msgid "Archive mode."
 msgstr "存档模式。"
 
-msgid "Are you sure you want to proceed?"
-msgstr "您确定要继续进行？"
-
 msgid "Are you sure you want to reboot the server?"
 msgstr "是否确定重启系统？"
+
+msgid "Are you sure you want to reset the server to factory defaults?"
+msgstr ""
 
 msgid "Are you sure you want to shutdown the server?"
 msgstr "是否确定关闭系统？"
@@ -3884,14 +3887,6 @@ msgstr "如果关闭此属性，文件系统将不能挂载。"
 msgid ""
 "If this property is enabled, the snapshots are displayed into .zfs directory."
 msgstr "如果启用此属性，.zfs 目录里会显示快照。"
-
-#, php-format
-msgid ""
-"If you click 'Yes', The server will be reset to factory defaults and will "
-"reboot immediately. The entire system configuration will be overwritten. The "
-"LAN IP address will be reset to %s and the password will be set to '%s'."
-msgstr ""
-"如果单击“是”，服务器将被重置到出厂默认设置，接着将立即重新启动。整个系统的配置将被覆盖。 LAN IP 位址将被重置为%s 和密码将被设置为'%s' 。"
 
 msgid ""
 "If you want to change the password for accessing the WebGUI, enter it here "
@@ -7288,6 +7283,9 @@ msgstr "主模式 UPS (UPS master) 的 IP 地址。"
 msgid "The IP address that this hostname represents."
 msgstr "主机名称所代表的 IP 位址。"
 
+msgid "The LAN IP address will be reset to"
+msgstr ""
+
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
 msgstr "MIB '%s' 不存在 sysctl 中。"
@@ -7319,6 +7317,9 @@ msgstr "数据包（packet）符合以下规定的标准时，将执行该动作
 
 msgid "The administrator has been notified to apply your changes."
 msgstr "已通知来管理员套用您的更改。"
+
+msgid "The administrator password will be reset to"
+msgstr ""
 
 #, php-format
 msgid "The associated MIB files can be found at %s."
@@ -7627,6 +7628,9 @@ msgstr ""
 msgid "The encrypted device is currently mounted!"
 msgstr ""
 
+msgid "The entire system configuration will be overwritten."
+msgstr ""
+
 msgid "The extent name already exists."
 msgstr "Extent 名称已经存在。"
 
@@ -7871,15 +7875,16 @@ msgstr ""
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr "向Windows客户端广播本时间伺服器。"
 
-msgid ""
-"The server has been reset to factory defaults and is now rebooting. This may "
-"take one minute."
-msgstr "伺服器已被重置到出厂默认设置，现在重新启动。这可能需要一分钟的时间。"
-
 msgid "The server is halting now."
 msgstr ""
 
+msgid "The server is now reset to factory defaults and will reboot."
+msgstr ""
+
 msgid "The server is rebooting now."
+msgstr ""
+
+msgid "The server will be reset to factory defaults and will reboot."
 msgstr ""
 
 msgid "The server will reboot after restoring the configuration."
@@ -9549,3 +9554,19 @@ msgstr ""
 
 msgid "version:"
 msgstr "版本："
+
+#~ msgid "Are you sure you want to proceed?"
+#~ msgstr "您确定要继续进行？"
+
+#, php-format
+#~ msgid ""
+#~ "If you click 'Yes', The server will be reset to factory defaults and will "
+#~ "reboot immediately. The entire system configuration will be overwritten. The "
+#~ "LAN IP address will be reset to %s and the password will be set to '%s'."
+#~ msgstr ""
+#~ "如果单击“是”，服务器将被重置到出厂默认设置，接着将立即重新启动。整个系统的配置将被覆盖。 LAN IP 位址将被重置为%s 和密码将被设置为'%s' 。"
+
+#~ msgid ""
+#~ "The server has been reset to factory defaults and is now rebooting. This may "
+#~ "take one minute."
+#~ msgstr "伺服器已被重置到出厂默认设置，现在重新启动。这可能需要一分钟的时间。"

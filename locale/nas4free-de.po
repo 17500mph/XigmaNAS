@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-24 11:28+0000\n"
+"POT-Creation-Date: 2016-11-28 15:25+0000\n"
 "PO-Revision-Date: 2016-11-27 12:16+0000\n"
 "Last-Translator: Denis Graipel <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-28 14:13+0000\n"
+"X-Launchpad-Export-Date: 2016-11-28 15:42+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -654,6 +654,9 @@ msgstr "Erweiterte Einstellungen"
 msgid "Advertisement skew"
 msgstr "Advertisement skew"
 
+msgid "Afrikaans"
+msgstr ""
+
 msgid "After"
 msgstr "Hinterher"
 
@@ -927,11 +930,11 @@ msgstr "Archiv"
 msgid "Archive mode."
 msgstr "Archivmodus"
 
-msgid "Are you sure you want to proceed?"
-msgstr "Sind Sie sicher, dass Sie fortfahren möchten?"
-
 msgid "Are you sure you want to reboot the server?"
 msgstr "Sind Sie sicher, dass Sie den Server rebooten wollen ?"
+
+msgid "Are you sure you want to reset the server to factory defaults?"
+msgstr ""
 
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Sind Sie sicher, dass Sie den Server herunterfahren  wollen ?"
@@ -4206,16 +4209,6 @@ msgid ""
 msgstr ""
 "Wenn diese Einstellung aktiviert ist, werden die Schnappschüsse im .zfs-"
 "Verzeichnis angezeigt."
-
-#, php-format
-msgid ""
-"If you click 'Yes', The server will be reset to factory defaults and will "
-"reboot immediately. The entire system configuration will be overwritten. The "
-"LAN IP address will be reset to %s and the password will be set to '%s'."
-msgstr ""
-"Wenn Sie mit 'Ja' bestätigen, wird die Serverkonfiguration auf die "
-"Standardwerte zurückgesetzt. Die aktuelle Konfiguration geht verloren. Die "
-"LAN IP Adresse wird auf %s und das Passwort auf '%s' geändert."
 
 msgid ""
 "If you want to change the password for accessing the WebGUI, enter it here "
@@ -7830,6 +7823,9 @@ msgstr "Die IP-Adresse vom UPS master."
 msgid "The IP address that this hostname represents."
 msgstr "Die IP Adresse, welche diesen Hostnamen repräsentiert."
 
+msgid "The LAN IP address will be reset to"
+msgstr ""
+
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
 msgstr "Das MIB '%s' existiert nicht in sysctl."
@@ -7866,6 +7862,9 @@ msgstr ""
 
 msgid "The administrator has been notified to apply your changes."
 msgstr "Der Administrator wurde benachrichtigt die Änderungen zu bestätigen."
+
+msgid "The administrator password will be reset to"
+msgstr ""
 
 #, php-format
 msgid "The associated MIB files can be found at %s."
@@ -8238,6 +8237,9 @@ msgstr "Der Display-Treiber."
 msgid "The encrypted device is currently mounted!"
 msgstr "Das verschlüsselte Gerät ist momentan eingehängt."
 
+msgid "The entire system configuration will be overwritten."
+msgstr ""
+
 msgid "The extent name already exists."
 msgstr "Dieser Name existiert bereits"
 
@@ -8529,18 +8531,17 @@ msgid "The server advertises itself as a time server to Windows clients."
 msgstr ""
 "Der Server deklariert sich gegenüber dem Windowsclient als Zeitserver"
 
-msgid ""
-"The server has been reset to factory defaults and is now rebooting. This may "
-"take one minute."
-msgstr ""
-"Der Server wurde auf Werkseinstellungen zurückgesetzt und startet jetzt neu. "
-"Dies kann eine Minute dauern."
-
 msgid "The server is halting now."
 msgstr "Der Server wird nun angehalten."
 
+msgid "The server is now reset to factory defaults and will reboot."
+msgstr ""
+
 msgid "The server is rebooting now."
 msgstr "Der Server wird jetzt neu gestartet."
+
+msgid "The server will be reset to factory defaults and will reboot."
+msgstr ""
 
 msgid "The server will reboot after restoring the configuration."
 msgstr ""
@@ -10477,3 +10478,23 @@ msgstr "Benutzer"
 
 msgid "version:"
 msgstr "Version:"
+
+#~ msgid "Are you sure you want to proceed?"
+#~ msgstr "Sind Sie sicher, dass Sie fortfahren möchten?"
+
+#~ msgid ""
+#~ "The server has been reset to factory defaults and is now rebooting. This may "
+#~ "take one minute."
+#~ msgstr ""
+#~ "Der Server wurde auf Werkseinstellungen zurückgesetzt und startet jetzt neu. "
+#~ "Dies kann eine Minute dauern."
+
+#, php-format
+#~ msgid ""
+#~ "If you click 'Yes', The server will be reset to factory defaults and will "
+#~ "reboot immediately. The entire system configuration will be overwritten. The "
+#~ "LAN IP address will be reset to %s and the password will be set to '%s'."
+#~ msgstr ""
+#~ "Wenn Sie mit 'Ja' bestätigen, wird die Serverkonfiguration auf die "
+#~ "Standardwerte zurückgesetzt. Die aktuelle Konfiguration geht verloren. Die "
+#~ "LAN IP Adresse wird auf %s und das Passwort auf '%s' geändert."

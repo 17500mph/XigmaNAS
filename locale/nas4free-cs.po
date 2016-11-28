@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-11-24 11:28+0000\n"
+"POT-Creation-Date: 2016-11-28 15:25+0000\n"
 "PO-Revision-Date: 2016-11-27 15:51+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-28 14:13+0000\n"
+"X-Launchpad-Export-Date: 2016-11-28 15:41+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -641,6 +641,9 @@ msgstr "Pokročilá nastavení"
 msgid "Advertisement skew"
 msgstr "Pořadí v propagaci (skew)"
 
+msgid "Afrikaans"
+msgstr ""
+
 msgid "After"
 msgstr ""
 
@@ -910,11 +913,11 @@ msgstr "Archivace"
 msgid "Archive mode."
 msgstr "Režim archivace"
 
-msgid "Are you sure you want to proceed?"
-msgstr "Opravdu chcete pokračovat?"
-
 msgid "Are you sure you want to reboot the server?"
 msgstr "Opravdu chcete tento server restartovat?"
+
+msgid "Are you sure you want to reset the server to factory defaults?"
+msgstr ""
 
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Opravdu chcete tento server vypnout?"
@@ -4219,17 +4222,6 @@ msgid ""
 msgstr ""
 "Jestliže je tato položka zapnuta, jsou zachycené stavy zobrazované ve složce "
 ".zfs."
-
-#, php-format
-msgid ""
-"If you click 'Yes', The server will be reset to factory defaults and will "
-"reboot immediately. The entire system configuration will be overwritten. The "
-"LAN IP address will be reset to %s and the password will be set to '%s'."
-msgstr ""
-"Kliknutím na Ano budou veškerá nastavení serveru vrácena na výchozí hodnoty "
-"a bude okamžitě restartován. Veškerá nastavení systému budou přepsána. IP "
-"adresa rozhraní do místní sítě bude nastavena na výchozí hodnotu %s a heslo "
-"bude nastaveno na %s."
 
 msgid ""
 "If you want to change the password for accessing the WebGUI, enter it here "
@@ -7841,6 +7833,9 @@ msgstr "IP adresa stroje, ovládajícího zdroj nepřerušovaného napájení (U
 msgid "The IP address that this hostname represents."
 msgstr "IP adresa, příslušející k tomuto názvu stroje."
 
+msgid "The LAN IP address will be reset to"
+msgstr ""
+
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
 msgstr "MIB %s v sysctl neexistuje."
@@ -7878,6 +7873,9 @@ msgstr "Akce, která bude vykonána pokud paket splní níže uvedená kritéria
 
 msgid "The administrator has been notified to apply your changes."
 msgstr "Správce systému byl upozorněn ohledně přijetí vámi navržených změn."
+
+msgid "The administrator password will be reset to"
+msgstr ""
 
 #, php-format
 msgid "The associated MIB files can be found at %s."
@@ -8242,6 +8240,9 @@ msgstr "Ovladač sloužící pro ovládání informačního displeje."
 msgid "The encrypted device is currently mounted!"
 msgstr "Toto šifrované zařízení je nyní připojené (mount)!"
 
+msgid "The entire system configuration will be overwritten."
+msgstr ""
+
 msgid "The extent name already exists."
 msgstr "Název úložné jednotky je užpoužíván."
 
@@ -8527,18 +8528,17 @@ msgstr "Sériový nebo USB port, ke kterému je druhý UPS zdroj připojený."
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr "Server se propaguje jako časový server pro Windows klienty."
 
-msgid ""
-"The server has been reset to factory defaults and is now rebooting. This may "
-"take one minute."
-msgstr ""
-"Nastavení serveru byla vrácena na výchozí hodnoty a ten se nyní restartuje. "
-"Může nějakou minutu trvat."
-
 msgid "The server is halting now."
+msgstr ""
+
+msgid "The server is now reset to factory defaults and will reboot."
 msgstr ""
 
 msgid "The server is rebooting now."
 msgstr "Server se nyní restartuje."
+
+msgid "The server will be reset to factory defaults and will reboot."
+msgstr ""
 
 msgid "The server will reboot after restoring the configuration."
 msgstr "Po obnovení nastavení bude server restartován."
@@ -10433,3 +10433,24 @@ msgstr "uživatel"
 
 msgid "version:"
 msgstr "verze:"
+
+#~ msgid "Are you sure you want to proceed?"
+#~ msgstr "Opravdu chcete pokračovat?"
+
+#, php-format
+#~ msgid ""
+#~ "If you click 'Yes', The server will be reset to factory defaults and will "
+#~ "reboot immediately. The entire system configuration will be overwritten. The "
+#~ "LAN IP address will be reset to %s and the password will be set to '%s'."
+#~ msgstr ""
+#~ "Kliknutím na Ano budou veškerá nastavení serveru vrácena na výchozí hodnoty "
+#~ "a bude okamžitě restartován. Veškerá nastavení systému budou přepsána. IP "
+#~ "adresa rozhraní do místní sítě bude nastavena na výchozí hodnotu %s a heslo "
+#~ "bude nastaveno na %s."
+
+#~ msgid ""
+#~ "The server has been reset to factory defaults and is now rebooting. This may "
+#~ "take one minute."
+#~ msgstr ""
+#~ "Nastavení serveru byla vrácena na výchozí hodnoty a ten se nyní restartuje. "
+#~ "Může nějakou minutu trvat."
