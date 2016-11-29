@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-11-28 15:25+0000\n"
-"PO-Revision-Date: 2016-11-24 16:53+0000\n"
+"PO-Revision-Date: 2016-11-28 17:06+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-28 15:41+0000\n"
+"X-Launchpad-Export-Date: 2016-11-29 11:33+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -624,7 +624,7 @@ msgid "Advertisement skew"
 msgstr "Annonseringsfördröjning (Advertisment skew)"
 
 msgid "Afrikaans"
-msgstr ""
+msgstr "Afrikaans"
 
 msgid "After"
 msgstr "Efter"
@@ -896,6 +896,7 @@ msgstr "Är du säker att du vill starta om servern?"
 
 msgid "Are you sure you want to reset the server to factory defaults?"
 msgstr ""
+"Är du säker på att du vill återställa servern till fabriksinställningarna?"
 
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Är du säker att du vill stänga av servern?"
@@ -7721,7 +7722,7 @@ msgid "The IP address that this hostname represents."
 msgstr "IP-adressen som det här värdnamnet representerar."
 
 msgid "The LAN IP address will be reset to"
-msgstr ""
+msgstr "Nätverkets IP-adress kommer också återstllas"
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -7762,7 +7763,7 @@ msgid "The administrator has been notified to apply your changes."
 msgstr "Administratören har blivit meddelad om att aktivera dina ändringar."
 
 msgid "The administrator password will be reset to"
-msgstr ""
+msgstr "Administratörslösenordet kommer också återställas"
 
 #, php-format
 msgid "The associated MIB files can be found at %s."
@@ -8122,7 +8123,7 @@ msgid "The encrypted device is currently mounted!"
 msgstr "Den krypterade enheten är för närvarande monterad!"
 
 msgid "The entire system configuration will be overwritten."
-msgstr ""
+msgstr "Hela systemkonfigurationen kommer att skrivas över."
 
 msgid "The extent name already exists."
 msgstr "Namnet på utökningen finns redan"
@@ -8405,12 +8406,14 @@ msgstr "Servern stoppas nu."
 
 msgid "The server is now reset to factory defaults and will reboot."
 msgstr ""
+"Servern är nu återställd till fabriksinställningarna och kommer startas om"
 
 msgid "The server is rebooting now."
 msgstr "Servern startar om nu."
 
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr ""
+"Servern kommer återställas till fabriksinställningarna och startas om."
 
 msgid "The server will reboot after restoring the configuration."
 msgstr "Servern återstartar efter återställning av konfigurationen."
@@ -10293,24 +10296,3 @@ msgstr "användare"
 
 msgid "version:"
 msgstr "version:"
-
-#~ msgid "Are you sure you want to proceed?"
-#~ msgstr "Är du säker på att du vill fortsätta?"
-
-#, php-format
-#~ msgid ""
-#~ "If you click 'Yes', The server will be reset to factory defaults and will "
-#~ "reboot immediately. The entire system configuration will be overwritten. The "
-#~ "LAN IP address will be reset to %s and the password will be set to '%s'."
-#~ msgstr ""
-#~ "Om du klickar 'Ja', kommer servern att återställas till fabriksinställningar "
-#~ "och startas om omedelbart. Hela systemkonfigurationen kommer att skrivas "
-#~ "över. Nätverks IP-adressen kommer att återställas till %s och lösenordet "
-#~ "sättas till '%s'."
-
-#~ msgid ""
-#~ "The server has been reset to factory defaults and is now rebooting. This may "
-#~ "take one minute."
-#~ msgstr ""
-#~ "Servern har återställts till fabriksinställningar och startar nu om. Detta "
-#~ "kan ta någon minut."
