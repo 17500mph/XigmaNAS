@@ -51,7 +51,7 @@ include("fbegin.inc");?>
 	</td>
 </tr>
 <td class="tabcont">
-<form name="form2" action="rrd_graph_lan.php" method="get">
+<form name="form2" action="status_graph_network.php" method="get">
 <?=sprintf(gtext("Graph updates every %d seconds"), $refresh);?>.&nbsp;<?=gtext("Selected interface:");?>&nbsp;&nbsp;&nbsp;
 <select name="if" class="formfld" onchange="submit()">
 	<?php
