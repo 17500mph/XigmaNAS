@@ -75,6 +75,24 @@ while [ "${1}" != "" ]; do
 done
 }
 
+# function creates rrdtool update command for network interfaces -> parameters: interface_name(=$1)
+CREATE_INTERFACE_CMD ()
+{
+while [ "${1}" != "" ]; do
+	FILE="${STORAGE_PATH}/rrd/${1}.rrd"
+	if [ ! -f "$FILE" ]; then
+		/usr/local/bin/rrdtool create "$FILE" \
+			-s 300 \
+			'DS:in:COUNTER:600:0:U' 'DS:out:COUNTER:600:0:U' \
+			'RRA:AVERAGE:0.5:1:576' 'RRA:AVERAGE:0.5:6:672' 'RRA:AVERAGE:0.5:24:732' 'RRA:AVERAGE:0.5:144:1460'
+	fi
+	if [ -f "$FILE" ]; then
+		/usr/local/bin/rrdtool update "$FILE" N:`netstat -I ${1} -nWb -f link | grep -v Name | awk '{print $8":"$11}'` 2>> /tmp/rrdgraphs-error.log
+	fi
+	shift 1
+done
+}
+
 # function extracts values from 'top' for ARC usage -> parameters: var_name(=$1) var_value(=$2)
 CREATE_AVARS ()
 {
@@ -192,22 +210,9 @@ if [ $RUN_AVG -eq 1 ] || [ $RUN_PRO -eq 1 ] || [ $RUN_CPU -eq 1 ] || [ $RUN_MEM 
 
 # network interfaces
 if [ $RUN_LAN -eq 1 ]; then 
-	x=0
-	while [ -e "${STORAGE_PATH}/rrd/${INTERFACE0}.rrd" ]
-	do
-		FILE="${STORAGE_PATH}/rrd/${INTERFACE0}.rrd"
-		if [ ! -f "$FILE" ]; then
-			/usr/local/bin/rrdtool create "$FILE" \
-				-s 300 \
-				'DS:in:COUNTER:600:0:U' 'DS:out:COUNTER:600:0:U' \
-				'RRA:AVERAGE:0.5:1:576' 'RRA:AVERAGE:0.5:6:672' 'RRA:AVERAGE:0.5:24:732' 'RRA:AVERAGE:0.5:144:1460'
-		fi
-		if [ -f "$FILE" ]; then
-			/usr/local/bin/rrdtool update "$FILE" N:`netstat -I ${INTERFACE0} -nWb -f link | grep -v Name | awk '{print $8":"$11}'` 2>> /tmp/rrdgraphs-error.log
-		fi
-		x=$((x+1))
-		INTERFACE0=`/usr/local/bin/xml sel -t -v "//interfaces/opt${x}/if" /conf/config.xml`
-	done
+# interfaces, LAN & OPTx
+	interfaces=`/usr/local/bin/xml sel -t -v "//interfaces/.//if" /conf/config.xml`
+	CREATE_INTERFACE_CMD ${interfaces}
 fi
 # system load averages
 if [ $RUN_AVG -eq 1 ]; then 
@@ -253,7 +258,6 @@ if [ $RUN_FRQ -eq 1 ]; then
 		/usr/local/bin/rrdtool update "$FILE" N:$F:0 2>> /tmp/rrdgraphs-error.log
 	fi
 fi
-
 # Processes
 if [ $RUN_PRO -eq 1 ]; then 
 	NP=`echo -e "$TOP" | awk '/processes:/ {gsub("[:,]", ""); print $2" "$1"  "$4" "$3"  "$6" "$5"  "$8" "$7"  "$10" "$9"  "$12" "$11"  "$14" "$13; exit}'`
@@ -270,7 +274,6 @@ if [ $RUN_PRO -eq 1 ]; then
 		/usr/local/bin/rrdtool update "$FILE" N:$total:$running:$sleeping:$waiting:$starting:$stopped:$zombie 2>> /tmp/rrdgraphs-error.log
 	fi
 fi
-
 # CPU usage
 if [ $RUN_CPU -eq 1 ]; then 
 	CP=`echo -e "$TOP" | awk '/CPU:/ {gsub("[%,]", ""); print $3" "$2" "$5" "$4" "$7" "$6" "$9" "$8" "$11" "$10; exit}'`
@@ -287,7 +290,6 @@ if [ $RUN_CPU -eq 1 ]; then
 		/usr/local/bin/rrdtool update "$FILE" N:$user:$nice:$system:$interrupt:$idle 2>> /tmp/rrdgraphs-error.log
 	fi
 fi
-
 # Disk usage
 if [ $RUN_DUS -eq 1 ]; then 
 	mount=`df -h | awk '!/jail/ && /\/mnt\// {gsub("/mnt/",""); print $6, $3, $4}' | awk '!/\// {print}'`
