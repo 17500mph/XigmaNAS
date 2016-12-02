@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-11-28 15:25+0000\n"
-"PO-Revision-Date: 2016-11-09 22:08+0000\n"
+"PO-Revision-Date: 2016-12-01 21:12+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-29 11:32+0000\n"
+"X-Launchpad-Export-Date: 2016-12-02 21:48+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -114,7 +114,7 @@ msgstr "%sB foglalt a(z) %sB-ból"
 
 #, php-format
 msgid "'%s' deletes all statistical data from the graphs!"
-msgstr ""
+msgstr "'%s' törli az összes statisztikai adatot a diagramból!"
 
 msgid "(Change if needed)"
 msgstr "(Szükség esetén módosítsd)"
@@ -422,7 +422,7 @@ msgid "Activate"
 msgstr "Aktivál"
 
 msgid "Activate S.M.A.R.T. monitoring for this device."
-msgstr "Aktív S.M.A.R.T. megfigyelés ehhez az eszközhöz."
+msgstr "Aktív S.M.A.R.T. figyelés ehhez az eszközhöz."
 
 msgid ""
 "Activate email report if you want to be notified if a failure or a new error "
@@ -631,7 +631,7 @@ msgid "Advertisement skew"
 msgstr "Advertisement skew"
 
 msgid "Afrikaans"
-msgstr ""
+msgstr "afrikai"
 
 msgid "After"
 msgstr "Utána"
@@ -851,7 +851,7 @@ msgid "An interface with the specified description already exists."
 msgstr "Ilyen leírású interfész már létezik."
 
 msgid "Anonymous access has been deprecated starting from SMB2."
-msgstr ""
+msgstr "Anonim hozzáférés SMB2-tól kezdve elavult."
 
 msgid "Anonymous bind"
 msgstr "Anonymus kötés"
@@ -905,7 +905,7 @@ msgid "Are you sure you want to reboot the server?"
 msgstr "Biztos, hogy újraindítod a szervert?"
 
 msgid "Are you sure you want to reset the server to factory defaults?"
-msgstr ""
+msgstr "Biztos, hogy visszaállítod a gyári alapértelmezett értékeit?"
 
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Biztos, hogy kikapcsolod a szervert?"
@@ -1012,7 +1012,7 @@ msgid "Available"
 msgstr "Elérhető"
 
 msgid "Available Graphs"
-msgstr ""
+msgstr "Elérhető diagramok"
 
 msgid ""
 "Average performance of seek operations of the magnetic heads. If this "
@@ -1031,7 +1031,7 @@ msgid "Back"
 msgstr "Vissza"
 
 msgid "Background"
-msgstr ""
+msgstr "Háttér"
 
 msgid "Backup Configuration"
 msgstr "Beállítások biztonsági mentése"
@@ -1449,10 +1449,10 @@ msgid "Client"
 msgstr "Kliens"
 
 msgid "Client Max Protocol"
-msgstr ""
+msgstr "Kliens maximális protokoll"
 
 msgid "Client Min Protocol"
-msgstr ""
+msgstr "Kliens minimális protokoll"
 
 msgid "Clone"
 msgstr "Klón"
@@ -1591,7 +1591,7 @@ msgid "Content"
 msgstr "Tartalom"
 
 msgid "Continue"
-msgstr ""
+msgstr "Folytatás"
 
 msgid "Controller"
 msgstr "Vezérlő"
@@ -2978,7 +2978,7 @@ msgid "Email Reports"
 msgstr "E-mail jelentések"
 
 msgid "Email Reports Setup"
-msgstr ""
+msgstr "E-mail jelentések beállításai"
 
 msgid "Email Setup"
 msgstr "E-mail beállítások"
@@ -3026,8 +3026,8 @@ msgid ""
 "Enable S.M.A.R.T. monitoring of S.M.A.R.T. capable devices when they are "
 "added to the configuration."
 msgstr ""
-"S.M.A.R.T. monitorozás bekapcsolása a S.M.A.R.T. kompatibilis eszközön, "
-"amikor azt a beállításokhoz hozzáadjuk."
+"S.M.A.R.T. figyelés bekapcsolása a S.M.A.R.T. kompatibilis eszközön, amikor "
+"azt a beállításokhoz hozzáadjuk."
 
 msgid "Enable SMTP authentication."
 msgstr "SMTP hitelesítés engedélyezése"
@@ -3070,40 +3070,40 @@ msgid "Enable authentication."
 msgstr "Hitelesítés engedélyezése"
 
 msgid "Enable collecting CPU frequency statistics."
-msgstr ""
+msgstr "CPU frekvencia statisztika gyűjtésének engedélyezése."
 
 msgid "Enable collecting CPU temperature statistics."
-msgstr ""
+msgstr "CPU hőmérséklet statisztika gyűjtésének engedélyezése."
 
 msgid "Enable collecting CPU usage statistics."
-msgstr ""
+msgstr "CPU használat statisztika gyűjtésének engedélyezése."
 
 msgid "Enable collecting UPS statistics."
-msgstr ""
+msgstr "Szünetmentes statisztika gyűjtésének engedélyezése."
 
 msgid "Enable collecting ZFS ARC usage statistics."
-msgstr ""
+msgstr "ZFS ARC használat statisztika gyűjtésének engedélyezése."
 
 msgid "Enable collecting average system load statistics."
-msgstr ""
+msgstr "Átlagos rendszerterhelés statisztika gyűjtésének engedélyezése."
 
 msgid "Enable collecting disk space usage statistics."
-msgstr ""
+msgstr "Lemezhasználati statisztika gyűjtésének engedélyezése."
 
 msgid "Enable collecting memory usage statistics."
-msgstr ""
+msgstr "Memóriahasználati statisztika gyűjtésének engedélyezése."
 
 msgid "Enable collecting network latency statistics."
-msgstr ""
+msgstr "Hálózati várakozási idő statisztika gyűjtésének engedélyezése."
 
 msgid "Enable collecting network trafic statistics."
-msgstr ""
+msgstr "Hálózati forgalom statisztika gyűjtésének engedélyezése."
 
 msgid "Enable collecting system process statistics."
-msgstr ""
+msgstr "Rendszerfolyamat statisztika gyűjtésének engedélyezése."
 
 msgid "Enable collecting uptime statistics."
-msgstr ""
+msgstr "Működési idő statisztika gyűjtésének engedélyezése."
 
 msgid "Enable compression."
 msgstr "Tömörítés engedélyezése."
@@ -3231,7 +3231,7 @@ msgid "Enable tuning switch"
 msgstr "Tuning kapcsoló engedélyezése"
 
 msgid "Enable white background graphs. (black by default)"
-msgstr ""
+msgstr "Fehér hátterű diagramok engedélyezés (alapértelmezetten fekete)."
 
 msgid "Enable write cache mode."
 msgstr "Írás cache engedélyezése."
@@ -3259,10 +3259,10 @@ msgid "Encryption"
 msgstr "Titkosítás (encryption)"
 
 msgid "Encryption Setup"
-msgstr ""
+msgstr "Titkosítás beállításai"
 
 msgid "Encryption Tools"
-msgstr ""
+msgstr "Titkosító eszközök"
 
 msgid "Encryption algorithm"
 msgstr "Titkosítási algoritmus"
@@ -3277,7 +3277,7 @@ msgid "Enhanced compatibility with Netatalk AFP server"
 msgstr "Továbbfejlesztett kompatibilitás Netatalk AFP szerverrel"
 
 msgid "Enter a comment"
-msgstr ""
+msgstr "Írj egy hozzászólást"
 
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
@@ -3290,7 +3290,7 @@ msgid "Enter a description for your reference."
 msgstr "Add meg a hivatkozás leírását."
 
 msgid "Enter a name"
-msgstr ""
+msgstr "Adj meg egy nevet"
 
 msgid "Enter a name for the command."
 msgstr "Add meg a parancs nevét."
@@ -3316,9 +3316,11 @@ msgid ""
 "Enter the UPS identifier and host IP address of the machine where the UPS is "
 "connected to. (this also can be a remote host)"
 msgstr ""
+"Add meg a gép szünetmentesének azonosítóját és kiszolgálójának IP címét "
+"ahová a szünetmentes csatlakozik (ez egy távoli kiszolgáló is lehet)."
 
 msgid "Enter the command"
-msgstr ""
+msgstr "Adj meg egy parancsot"
 
 msgid ""
 "Enter the passphrase that will be used in WPA-PSK mode. This must be between "
@@ -3338,6 +3340,8 @@ msgid ""
 "Enter the path to the home directory of rrdgraphs. This directory stores the "
 "statistical data for the graphs and will be updated every 5 minutes."
 msgstr ""
+"Add meg az rrdgraphs home könyvtárának útvonalát. Ez a könyvtár tárolja a "
+"diagramok adatait és 5 percenként frissül."
 
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
@@ -4127,6 +4131,8 @@ msgid ""
 "If only specific statistics needs to be reset, clear all other check boxes "
 "before performing '%s'."
 msgstr ""
+"Ha csak néhány statisztikát resetelsz, vedd le az összes pipát a "
+"jelölőnégyzetekről mielőtt '%s' lefut."
 
 msgid ""
 "If the server is behind a proxy set these parameters to give local services "
@@ -4808,7 +4814,7 @@ msgid "Log packets that are handled by this rule to syslog."
 msgstr "Naplózd készítése a syslog-ba."
 
 msgid "Logarithmic Scaling"
-msgstr ""
+msgstr "Logaritmikus skálázás"
 
 msgid "Logical Block Length"
 msgstr "Logikai Blokk Hossza"
@@ -5190,7 +5196,7 @@ msgid "Monitoring"
 msgstr "Figyelés"
 
 msgid "Monitoring Setup"
-msgstr ""
+msgstr "Figyelés beállításai"
 
 msgid "Months"
 msgstr "Hónap"
@@ -5199,10 +5205,10 @@ msgid "Mount Point"
 msgstr "Csatolási pont (Mount Point)"
 
 msgid "Mount Point Fsck"
-msgstr ""
+msgstr "Csatolási pont Fsck"
 
 msgid "Mount Point Tools"
-msgstr ""
+msgstr "Csatolási pont eszközei"
 
 msgid "Mount Points"
 msgstr "Csatolási pontok"
@@ -5268,7 +5274,7 @@ msgid "NOTE"
 msgstr "MEGJEGYZÉS"
 
 msgid "NT1 (CIFS)"
-msgstr ""
+msgstr "NT1 (CIFS)"
 
 msgid "NTP is not enabled."
 msgstr "NTP nincs bekapcsolva."
@@ -5521,6 +5527,9 @@ msgid ""
 "Normally this option should not be set as the automatic negotiation phase in "
 "the SMB protocol takes care of choosing the appropriate protocol."
 msgstr ""
+"Normális esetben ezt a lehetőség nem szükséges beállítani, mint automatikus "
+"tárgyalási szakaszt az SMB protokollban, ami gondoskodik a megfelelő "
+"protokoll a választásáról."
 
 msgid "Norwegian (Bokmal)"
 msgstr "Norvég (Bokmål)"
@@ -6466,7 +6475,7 @@ msgid "Remote module name"
 msgstr "Távoli modul neve"
 
 msgid "Remote monitoring"
-msgstr "Távoli megfigyelés"
+msgstr "Távoli felügyelet"
 
 msgid ""
 "Remote monitoring password. Must be equal on both master and slave system."
@@ -6695,7 +6704,7 @@ msgid "S.M.A.R.T."
 msgstr "S.M.A.R.T."
 
 msgid "S.M.A.R.T. Monitoring"
-msgstr "S.M.A.R.T. monitorozás"
+msgstr "S.M.A.R.T. figyelés"
 
 msgid "S.M.A.R.T. events"
 msgstr "S.M.A.R.T. események"
@@ -6716,13 +6725,13 @@ msgid "SMB3"
 msgstr "SMB3"
 
 msgid "SMB3 (Windows 8)"
-msgstr ""
+msgstr "SMB3 (Windows 8)"
 
 msgid "SMB3 (Windows 8.1)"
-msgstr ""
+msgstr "SMB3 (Windows 8.1)"
 
 msgid "SMB3_11 (Windows 10)"
-msgstr ""
+msgstr "SMB3_11 (Windows 10)"
 
 msgid "SMTP Server"
 msgstr "SMTP szerver"
@@ -6906,7 +6915,7 @@ msgid "Select a device"
 msgstr "Válassz egy eszközt"
 
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
-msgstr "Válassza ki a monitorozandó lemezt."
+msgstr "Válassz ki egy a S.M.A.R.T. által figyelendő lemezt."
 
 msgid "Select a log device"
 msgstr "Válassz egy naplóeszközt"
@@ -7047,10 +7056,10 @@ msgid "Server"
 msgstr "Szerver"
 
 msgid "Server Max Protocol"
-msgstr ""
+msgstr "Szerver max. protokoll"
 
 msgid "Server Min Protocol"
-msgstr ""
+msgstr "Szerver min. protokoll"
 
 msgid "Server Name"
 msgstr "Kiszolgálónév"
@@ -7188,6 +7197,8 @@ msgid ""
 "Show positive/negative values for %s graphs. (can not be used together with "
 "logarithmic scaling)"
 msgstr ""
+"%s diagram pozitív/negatív értékeinek megjelenítése (logaritmikus skálával "
+"együtt nem használható)."
 
 msgid "Shutdown"
 msgstr "Leállítás"
@@ -7571,7 +7582,7 @@ msgid "System"
 msgstr "Rendszer"
 
 msgid "System Email Report Settings"
-msgstr ""
+msgstr "Rendszer e-mail jelentések beállításai"
 
 msgid "System Email Settings"
 msgstr "Rendszer e-mail beállítások"
@@ -7586,10 +7597,10 @@ msgid "System Message"
 msgstr "Rendszerüzenet"
 
 msgid "System Monitoring Settings"
-msgstr ""
+msgstr "Rendszerfigyelés beállításai"
 
 msgid "System Processes"
-msgstr ""
+msgstr "Rendszerfolyamatok"
 
 msgid "System Settings"
 msgstr "Rendszerbeállítások"
@@ -7776,7 +7787,7 @@ msgid "The IP address that this hostname represents."
 msgstr "Erre az állomásnévre mutató IP cím."
 
 msgid "The LAN IP address will be reset to"
-msgstr ""
+msgstr "A LAN IP címét visszaállítjuk erre:"
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -7802,7 +7813,7 @@ msgid "The TCP port must be a valid port number."
 msgstr "A TCP portnak érvényes port számnak kell lennie."
 
 msgid "The UPS identifier and IP address"
-msgstr ""
+msgstr "A szünetmentes azonosítója és IP címe"
 
 msgid "The VLAN ID must be between 1 and 4094."
 msgstr "A VLAN azonosítónak 1 és 4094 között kell lennie."
@@ -7816,7 +7827,7 @@ msgid "The administrator has been notified to apply your changes."
 msgstr "A rendszergazda értesítést kapott, hogy módosításaidat alkalmazza."
 
 msgid "The administrator password will be reset to"
-msgstr ""
+msgstr "Az admin jelszót visszaállítjuk erre:"
 
 #, php-format
 msgid "The associated MIB files can be found at %s."
@@ -7967,7 +7978,7 @@ msgstr ""
 "'%s' attribútum: használj portot a következő a(z) %d-%d tartományból."
 
 msgid "The attribute 'Data directory' is required."
-msgstr ""
+msgstr "Az 'Adatkönyvtár' attribútum kötelező."
 
 #, php-format
 msgid "The attribute 'Port': port '%ld' is already taken by another service."
@@ -8172,7 +8183,7 @@ msgid "The encrypted device is currently mounted!"
 msgstr "Az titkosított eszköz jelenleg be van csatolva!"
 
 msgid "The entire system configuration will be overwritten."
-msgstr ""
+msgstr "A teljes rendszerbeállítást felülírjuk."
 
 msgid "The extent name already exists."
 msgstr "A extent már létezik"
@@ -8465,12 +8476,16 @@ msgstr "A szerver most leáll."
 
 msgid "The server is now reset to factory defaults and will reboot."
 msgstr ""
+"A szerver gyári alapértékeit visszaállítottuk és a rendszer hamarosan "
+"újraindul."
 
 msgid "The server is rebooting now."
 msgstr "A szerver újraindul."
 
 msgid "The server will be reset to factory defaults and will reboot."
 msgstr ""
+"A szerver gyári alapértékeit visszaállítjuk és a rendszer hamarosan "
+"újraindul."
 
 msgid "The server will reboot after restoring the configuration."
 msgstr "A szerver a beállítások visszaállítása után újraindul."
@@ -8975,12 +8990,13 @@ msgstr ""
 msgid ""
 "This parameter sets the highest protocol level that will be supported by the "
 "client."
-msgstr ""
+msgstr "Ez a legmagasabb protokollverziót állítja be, amit a kliens támogat."
 
 msgid ""
 "This parameter sets the highest protocol level that will be supported by the "
 "server."
 msgstr ""
+"Ez a legmagasabb protokollverziót állítja be, amit a szerver támogat."
 
 #, php-format
 msgid ""
@@ -9036,11 +9052,15 @@ msgid ""
 "This setting controls the minimum protocol version that the client will "
 "attempt to use."
 msgstr ""
+"Ez a minimális protokollverziót állítja be, amit a kliens megpróbál "
+"használni."
 
 msgid ""
 "This setting controls the minimum protocol version that the server will "
 "allow the client to use."
 msgstr ""
+"Ez a minimális protokollverziót állítja be, amit a szerver megenged, hogy a "
+"kliens használjon."
 
 msgid "This tag already exists."
 msgstr "Ez az elem már létezik."
@@ -9390,10 +9410,10 @@ msgid "UPS"
 msgstr "Szünetmentes táp (UPS)"
 
 msgid "UPS Identifier"
-msgstr ""
+msgstr "Szünetmentes azonosítója"
 
 msgid "UPS Identifier and IP address"
-msgstr ""
+msgstr "Szünetmentes azonosítója és IP címe"
 
 msgid "UPS Information & Status"
 msgstr "Szünetmentes információ & állapot"
@@ -9408,7 +9428,7 @@ msgid "UPS On Line"
 msgstr "Szünetmentes bekapcsolva"
 
 msgid "UPS Statistics"
-msgstr ""
+msgstr "Szünetmentes statisztikái"
 
 msgid "UPS Status"
 msgstr "Szünetmentes állapota"
@@ -9569,10 +9589,12 @@ msgid "Uptime"
 msgstr "Működési idő"
 
 msgid "Uptime Statistics"
-msgstr ""
+msgstr "Működési idő statisztikái"
 
 msgid "Use Bytes/sec instead of Bits/sec for network throughput display."
 msgstr ""
+"Byte/másodperc használata bit/másodperc helyett az átviteli sebességet "
+"megjelenítéséhez."
 
 msgid ""
 "Use a space to separate multiple hosts (only one required). Remember to set "
@@ -9588,13 +9610,15 @@ msgid "Use different container as root of the tree."
 msgstr "Másik tárolót válassz a fa gyökerének."
 
 msgid "Use inotify monitoring to automatically discover new files."
-msgstr "Inotify használata új fájlok automatikus felfedezésére."
+msgstr "Inotify figyelés használata új fájlok automatikus felderítésére."
 
 #, php-format
 msgid ""
 "Use logarithmic y-axis scaling for %s graphs. (can not be used together with "
 "positive/negative y-axis range)"
 msgstr ""
+"%s diagram y-tengelyéhez logaritmikus skála használata (pozitív/negatív y-"
+"tengely tartománnyal együtt nem használható)."
 
 msgid ""
 "Use the following IP address as the source address in outgoing packets."
@@ -10127,7 +10151,7 @@ msgid "ZFS ARC"
 msgstr "ZFS ARC"
 
 msgid "ZFS ARC Usage"
-msgstr ""
+msgstr "ZFS ARC használat"
 
 msgid "ZFS Dataset Information & Status"
 msgstr "ZFS Adattár információ & állapot"
@@ -10270,7 +10294,7 @@ msgid "n/a"
 msgstr "nem elérhető"
 
 msgid "network traffic"
-msgstr ""
+msgstr "Hálózati forgalom"
 
 msgid "no new encrypted disk found."
 msgstr "nincs új encrypted lemez."

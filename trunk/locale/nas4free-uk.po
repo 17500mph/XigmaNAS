@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
 "POT-Creation-Date: 2016-11-28 15:25+0000\n"
-"PO-Revision-Date: 2016-11-26 12:13+0000\n"
+"PO-Revision-Date: 2016-12-02 19:09+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-29 11:33+0000\n"
+"X-Launchpad-Export-Date: 2016-12-02 21:49+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -632,7 +632,7 @@ msgid "Advertisement skew"
 msgstr "Затримка об'явлення"
 
 msgid "Afrikaans"
-msgstr ""
+msgstr "Африкаанс"
 
 msgid "After"
 msgstr "Після"
@@ -726,7 +726,8 @@ msgid "Allow TLS connections only."
 msgstr "Дозволяти лише TLS з'єднання."
 
 msgid "Allow client access to accounts that have null passwords."
-msgstr "Дозволити клієнтський доступ для акаунтів, що мають пустий пароль."
+msgstr ""
+"Дозволити клієнтський доступ для облікових записів, що мають пустий пароль."
 
 msgid ""
 "Allow clients to attempt to store OS/2 style extended attributes on a share."
@@ -909,7 +910,7 @@ msgid "Are you sure you want to reboot the server?"
 msgstr "Ви впевнені, що хочете перезавантажити сервер?"
 
 msgid "Are you sure you want to reset the server to factory defaults?"
-msgstr ""
+msgstr "Ви впевнені, що хочете скинути сервер до заводських налаштувань?"
 
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Ви впевнені, що хочете вимкнути сервер?"
@@ -1990,7 +1991,7 @@ msgid "Daemon events"
 msgstr "Події демона"
 
 msgid "Daemon log"
-msgstr "Лог(журнал) демона"
+msgstr "Журнал демона"
 
 msgid "Danish"
 msgstr "Датський"
@@ -2879,7 +2880,7 @@ msgid "Dynamic IP (DHCP) can not be used for HAST resources."
 msgstr "Динамічний IP (DHCP) не може використовуватися для ресурсів HAST."
 
 msgid "EA support"
-msgstr "Підтримка EA"
+msgstr "Підтримка розширених атрибутів"
 
 msgid "EFI/GPT partition can be use with UFS only."
 msgstr "EFI/GPT розділ може використовуватись лише з UFS."
@@ -3308,8 +3309,8 @@ msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr ""
-"Введіть номер порта для веб інтерфейсу, якщо ви хочете змінити значення на "
-"типове (80 для HTTP, 443 для HTTPS)."
+"Введіть номер порта для веб інтерфейсу, якщо ви хочете змінити значення за "
+"замовчуванням (80 для HTTP, 443 для HTTPS)."
 
 msgid "Enter a description for your reference."
 msgstr "Введіть опис для вашого посилання."
@@ -3356,8 +3357,8 @@ msgid ""
 "Enter the path to the home directory of VirtualBox. VM config and HDD image "
 "will be created under the specified directory."
 msgstr ""
-"Введіть шлях до домашньої директорії VirtualBox. VM конфігурацію і HDD образ "
-"буде створений у вказаній директорії."
+"Введіть шлях до домашньої директорії VirtualBox. Файл конфігурації "
+"віртуальної машини та образ диску будуть створені у вказаній директорії."
 
 msgid ""
 "Enter the path to the home directory of rrdgraphs. This directory stores the "
@@ -3527,10 +3528,10 @@ msgid "FTP Proxy"
 msgstr "FTP Proxy"
 
 msgid "FTP events"
-msgstr "події FTP"
+msgstr "Події FTP"
 
 msgid "FTP log"
-msgstr "журнал FTP"
+msgstr "Журнал FTP"
 
 msgid "FTP server disabled"
 msgstr "FTP-сервер відключений"
@@ -3875,7 +3876,7 @@ msgid "Guest"
 msgstr "Гість"
 
 msgid "Guest account"
-msgstr "Госльовий екаунт"
+msgstr "Гостьовий обліковий запис"
 
 msgid "HAST"
 msgstr "HAST"
@@ -4755,7 +4756,7 @@ msgid "List or import pools"
 msgstr "Список або імпорт пулів"
 
 msgid "Load"
-msgstr "Поточне навантаження на ДБЖ"
+msgstr "Поточне навантаження"
 
 msgid "Load Averages"
 msgstr "Середнє навантаження"
@@ -5350,7 +5351,7 @@ msgid "Nested HVM"
 msgstr "Вкладені HVM"
 
 msgid "NetBIOS domain"
-msgstr "NetBIOS domain"
+msgstr "NetBIOS домен"
 
 msgid "NetBIOS name"
 msgstr "NetBIOS ім'я"
@@ -6377,7 +6378,7 @@ msgid "RSYNC events"
 msgstr "Події RSYNC"
 
 msgid "RSYNC log"
-msgstr "Протокол RSYNC"
+msgstr "Журнал RSYNC"
 
 msgid "Ramdisk"
 msgstr "Ramdisk"
@@ -7631,7 +7632,7 @@ msgid "System bios"
 msgstr "BIOS"
 
 msgid "System events"
-msgstr "Системні події"
+msgstr "Події системи"
 
 msgid "System info"
 msgstr "Відомості про систему"
@@ -7809,7 +7810,7 @@ msgid "The IP address that this hostname represents."
 msgstr "IP адреса цього хоста."
 
 msgid "The LAN IP address will be reset to"
-msgstr ""
+msgstr "IP-адреса LAN буде скинута в"
 
 #, php-format
 msgid "The MIB '%s' doesn't exist in sysctl."
@@ -7850,7 +7851,7 @@ msgid "The administrator has been notified to apply your changes."
 msgstr "Адміністратора боло повідомлено для затвердження ваших змін."
 
 msgid "The administrator password will be reset to"
-msgstr ""
+msgstr "Пароль адміністратора буде скинутий в"
 
 #, php-format
 msgid "The associated MIB files can be found at %s."
@@ -8213,7 +8214,7 @@ msgid "The encrypted device is currently mounted!"
 msgstr "Захищений пристрій в даний час змонтовано!"
 
 msgid "The entire system configuration will be overwritten."
-msgstr ""
+msgstr "Вся конфігурація системи буде перезаписана."
 
 msgid "The extent name already exists."
 msgstr "Таке ім'я екстента вже існує."
@@ -8501,13 +8502,13 @@ msgid "The server is halting now."
 msgstr "Сервер в процесі зупинки."
 
 msgid "The server is now reset to factory defaults and will reboot."
-msgstr ""
+msgstr "Сервер зараз відновить заводські налаштування і перезавантажиться."
 
 msgid "The server is rebooting now."
 msgstr "Сервер зараз перезавантажується."
 
 msgid "The server will be reset to factory defaults and will reboot."
-msgstr ""
+msgstr "Сервер буде повернуто до заводських налаштувань і перезавантажено."
 
 msgid "The server will reboot after restoring the configuration."
 msgstr "Сервер перезавантажиться після відновлення конфігурації."
