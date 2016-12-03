@@ -136,7 +136,7 @@ case $1 in
 			fi
 		fi
 
-		# Check backedup config.xml file integrity before dd firmware image
+		# Check backup config.xml file integrity before dd firmware image
 		CONFBAKCHECKSUM=`sha256 /tmp/configbak/config.xml | cut -d= -f2`
 
 		if [ ! ${CONFBAKCHECKSUM} == ${CONFCHECKSUM} ]; then
@@ -151,6 +151,7 @@ case $1 in
 			msg="ERROR: Failed to umount '/cf'!"
 			printf "\33[31m%s\33[0m\n" "${msg}"
 			/usr/bin/logger "UPGRADE ${msg}"
+			exit 1
 		fi
 
 		# Remove swap on booting device if any
@@ -179,6 +180,9 @@ case $1 in
 			fi
 		fi
 
+		# Sync and wait 2 second after dd
+		sync; sleep 2
+
 		#if [ -f /etc/swapdevice ]; then
 		#	SWAPDEVICE=`cat /etc/swapdevice`
 		#	if [ "${SWAPDEVICE}" != "NONE" -a -e "${SWAPDEVICE}" ]; then
@@ -189,6 +193,17 @@ case $1 in
 
 		# Mount /cf read-write
 		/sbin/mount -w -o noatime /cf
+
+		# Try force mount /cf read-write and check file system consistency
+		if [ 0 != $? ]; then
+			/sbin/mount -f -w -o noatime /cf && fsck -y -B /cf
+		fi
+		if [ 0 != $? ]; then
+			msg="ERROR: Failed to umount '/cf' in read-write!"
+			printf "\33[31m%s\33[0m\n" "${msg}"
+			/usr/bin/logger "UPGRADE ${msg}"
+			exit 1
+		fi
 
 		# Restore config
 		cp -p /tmp/configbak/* /conf
@@ -219,10 +234,16 @@ case $1 in
 		CONFNEWCHECKSUM=`sha256 /conf/config.xml | cut -d= -f2`
 
 		# Check restored config.xml file integrity
-		if [ ! ${CONFNEWCHECKSUM} == ${CONFCHECKSUM} ]; then
+		if [ -f /conf/config.xml ]; then
+			if [ ! ${CONFNEWCHECKSUM} == ${CONFCHECKSUM} ]; then
 				msg="ERROR: Restored configuration corrupted."
 				printf "\33[31m%s\33[0m\n" "${msg}"
 				exit 1
+			fi
+		else
+			msg="ERROR: System configuration not found."
+			printf "\33[31m%s\33[0m\n" "${msg}"
+			exit 1
 		fi
 
 		# Update boot partition
