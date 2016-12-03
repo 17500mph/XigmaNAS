@@ -7,6 +7,9 @@
 #date
 WORKING_DIR="/var/run/rrdgraphs"
 STORAGE_PATH=`/usr/local/bin/xml sel -t -v "//rrdgraphs/storage_path" /conf/config.xml`
+if [ ! -d "${STORAGE_PATH}" ] || [ ! -d  "${STORAGE_PATH}/rrd" ]; then
+	exit 1
+fi
 . $STORAGE_PATH/rrd_config
 
 # function converts SI units (K, M, G, T bits/bytes) to bits/bytes: factor 1000 instead of 1024 because RRDTool converts not binary
@@ -212,6 +215,8 @@ if [ $RUN_AVG -eq 1 ] || [ $RUN_PRO -eq 1 ] || [ $RUN_CPU -eq 1 ] || [ $RUN_MEM 
 if [ $RUN_LAN -eq 1 ]; then 
 # interfaces, LAN & OPTx
 	interfaces=`/usr/local/bin/xml sel -t -v "//interfaces/.//if" /conf/config.xml`
+	CREATE_INTERFACE_CMD ${interfaces}
+	interfaces=`/usr/local/bin/xml sel -t -v "//vinterfaces/.//if" /conf/config.xml`
 	CREATE_INTERFACE_CMD ${interfaces}
 fi
 # system load averages
