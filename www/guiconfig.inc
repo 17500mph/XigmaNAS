@@ -224,20 +224,20 @@ function do_input_validation_type($postdata, $reqdfields, $reqdfieldsn, $reqdfie
 }
 
 function do_input_validate_synctime($postdata, &$input_errors) {
-	$data = array();
-	$data[] = array("field" => "minute", "all" => "all_mins", "text" => "minutes");
-	$data[] = array("field" => "hour", "all" => "all_hours", "text" => "hours");
-	$data[] = array("field" => "day", "all" => "all_days", "text" => "days");
-	$data[] = array("field" => "month", "all" => "all_months", "text" => "months");
-	$data[] = array("field" => "weekday", "all" => "all_weekdays", "text" => "week days");
+	$data = [];
+	$data[] = ['field' => 'minute' ,'all' => 'all_mins'    , 'text' => gtext('minutes')];
+	$data[] = ['field' => 'hour'   ,'all' => 'all_hours'   , 'text' => gtext('hours')];
+	$data[] = ['field' => 'day'    ,'all' => 'all_days'    , 'text' => gtext('days')];
+	$data[] = ['field' => 'month'  ,'all' => 'all_months'  , 'text' => gtext('months')];
+	$data[] = ['field' => 'weekday','all' => 'all_weekdays', 'text' => gtext('week days')];
 
-	foreach ($data as $datak => $datav) {
-		if (!$postdata[$datav['all']]) {
-			if (!isset($postdata[$datav['field']]) || empty($postdata[$datav['field']])) {
+	foreach($data as $datak => $datav):
+		if(!$postdata[$datav['all']]):
+			if(!isset($postdata[$datav['field']]) || empty($postdata[$datav['field']])):
 				$input_errors[] = sprintf(gtext("You have to select at least one item for '%s'."), $datav['text']);
-			}
-		}
-	}
+			endif;
+		endif;
+	endforeach;
 }
 
 function print_input_errors($input_errors) {
