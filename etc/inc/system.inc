@@ -402,17 +402,19 @@ function system_get_uptime() {
 	$upmins = (int)($uptime / 60);
 	$upsecs = $uptime % 60;
 
-	if (($updays < 1) && ($uphours < 1)) {
-		$uptime = sprintf("%d %s %d %s", $upmins, gtext("minute(s)"), $upsecs, gtext("second(s)"));
-	} else if ($updays < 1) {
-		$uptime = sprintf("%d %s %d %s %d %s", $uphours, gtext("hour(s)"),
-			$upmins, gtext("minute(s)"), $upsecs, gtext("second(s)"));
-	} else {
-		$uptime = sprintf("%d %s %d %s %d %s %d %s", $updays, gtext("day(s)"),
-			$uphours, gtext("hour(s)"), $upmins, gtext("minute(s)"), $upsecs,
-			gtext("second(s)"));
-	}
-	return htmlspecialchars($uptime);
+	$gt_seconds = (1 === $upsecs) ? gtext('Second') : gtext('Seconds');
+	$gt_minutes = (1 === $upmins) ? gtext('Minute') : gtext('Minutes');
+	$gt_hours = (1 === $uphours) ? gtext('Hour') : gtext('Hours');
+	$gt_days = (1 === $updays) ? gtext('Day') : gtext('Days');
+
+	if(($updays < 1) && ($uphours < 1)):
+		$uptime = sprintf('%d %s %d %s',$upmins,$gt_minutes,$upsecs,$gt_seconds);
+	elseif($updays < 1):
+		$uptime = sprintf('%d %s %d %s %d %s',$uphours,$gt_hours,$upmins,$gt_minutes,$upsecs,$gt_seconds);
+	else:
+		$uptime = sprintf('%d %s %d %s %d %s %d %s',$updays,$gt_days,$uphours,$gt_hours,$upmins,$gt_minutes,$upsecs,$gt_seconds);
+	endif;
+	return $uptime;
 }
 
 /**
