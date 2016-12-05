@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-12-03 02:34+0000\n"
+"POT-Creation-Date: 2016-12-06 00:14+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -1091,19 +1091,10 @@ msgstr ""
 msgid "CPU Usage"
 msgstr ""
 
-msgid "CPU frequency"
-msgstr ""
-
 msgid "CPU frequency:"
 msgstr ""
 
 msgid "CPU load"
-msgstr ""
-
-msgid "CPU temperature"
-msgstr ""
-
-msgid "CPU usage"
 msgstr ""
 
 msgid "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC error)."
@@ -1402,6 +1393,12 @@ msgstr ""
 msgid "Convert DOS attributes to UNIX execution bits when Store DOS attributes is disabled."
 msgstr ""
 
+msgid "Core"
+msgstr ""
+
+msgid "Core Usage"
+msgstr ""
+
 msgid "Count"
 msgstr ""
 
@@ -1656,6 +1653,9 @@ msgid "Date & Time"
 msgstr ""
 
 msgid "Date format"
+msgstr ""
+
+msgid "Day"
 msgstr ""
 
 msgid "Days"
@@ -2078,10 +2078,10 @@ msgstr ""
 msgid "Disk Selection"
 msgstr ""
 
-msgid "Disk Usage"
+msgid "Disk Space Usage"
 msgstr ""
 
-msgid "Disk space usage"
+msgid "Disk Usage"
 msgstr ""
 
 msgid "Disks"
@@ -3441,6 +3441,9 @@ msgstr ""
 msgid "Hosts deny"
 msgstr ""
 
+msgid "Hour"
+msgstr ""
+
 msgid "Hours"
 msgstr ""
 
@@ -3948,6 +3951,9 @@ msgstr ""
 msgid "Large read/write"
 msgstr ""
 
+msgid "Last Configuration Change"
+msgstr ""
+
 msgid "Last test result as microseconds to discharge cap, saturated at its maximum value. Also logs minutes since last test and lifetime number of tests. Raw value contains the following data: Bytes 0-1: Last test result as microseconds to discharge cap, saturates at max value. Test result expected in range 25 <= result <= 5000000, lower indicates specific error code. Bytes 2-3: Minutes since last test, saturates at max value. Bytes 4-5: Lifetime number of tests, not incremented on power cycle, saturates at max value. Normalized value is set to one on test failure or 11 if the capacitor has been tested in an excessive temperature condition, otherwise 100."
 msgstr ""
 
@@ -3984,10 +3990,6 @@ msgid "Level 254 - Maximum Performance, Maximum Power Usage"
 msgstr ""
 
 msgid "Level 64 - Intermediate Power Usage with Standby"
-msgstr ""
-
-#, php-format
-msgid "Levels (MHz/mW): %s"
 msgstr ""
 
 msgid "License"
@@ -4372,9 +4374,6 @@ msgstr ""
 msgid "Memory Usage"
 msgstr ""
 
-msgid "Memory usage"
-msgstr ""
-
 msgid "Message Board"
 msgstr ""
 
@@ -4427,6 +4426,9 @@ msgid "Minimum relative humidity seen (percent)"
 msgstr ""
 
 msgid "Minimum temperature seen (degrees C)"
+msgstr ""
+
+msgid "Minute"
 msgstr ""
 
 msgid "Minutes"
@@ -5987,7 +5989,13 @@ msgstr ""
 msgid "Search for and import all disks found"
 msgstr ""
 
+msgid "Second"
+msgstr ""
+
 msgid "Secondary"
+msgstr ""
+
+msgid "Seconds"
 msgstr ""
 
 msgid "Secret"
@@ -6552,10 +6560,10 @@ msgstr ""
 msgid "Swap Memory"
 msgstr ""
 
-msgid "Swap disabled"
+msgid "Swap Usage"
 msgstr ""
 
-msgid "Swap usage"
+msgid "Swap disabled"
 msgstr ""
 
 msgid "Swedish"
@@ -6598,6 +6606,9 @@ msgstr ""
 msgid "System"
 msgstr ""
 
+msgid "System BIOS"
+msgstr ""
+
 msgid "System Email Report Settings"
 msgstr ""
 
@@ -6622,16 +6633,16 @@ msgstr ""
 msgid "System Settings"
 msgstr ""
 
-msgid "System bios"
+msgid "System Time"
+msgstr ""
+
+msgid "System Uptime"
 msgstr ""
 
 msgid "System events"
 msgstr ""
 
 msgid "System info"
-msgstr ""
-
-msgid "System last config change"
 msgstr ""
 
 msgid "System log"
@@ -6644,9 +6655,6 @@ msgid "System time"
 msgstr ""
 
 msgid "System tuning"
-msgstr ""
-
-msgid "System uptime"
 msgstr ""
 
 msgid "TCP forwarding"
@@ -6739,6 +6747,9 @@ msgid "Target side user name. It is usually the initiator name by default."
 msgstr ""
 
 msgid "Targets"
+msgstr ""
+
+msgid "Temp"
 msgstr ""
 
 msgid "Temperature"
@@ -8056,9 +8067,6 @@ msgstr ""
 msgid "Update period"
 msgstr ""
 
-msgid "Updating in 5 seconds."
-msgstr ""
-
 msgid "Upgrade Firmware"
 msgstr ""
 
@@ -8604,7 +8612,7 @@ msgstr ""
 msgid "chroot() everyone, but root."
 msgstr ""
 
-msgid "day(s)"
+msgid "days"
 msgstr ""
 
 msgid "debug"
@@ -8632,7 +8640,7 @@ msgstr ""
 msgid "greatest settable low voltage transfer point"
 msgstr ""
 
-msgid "hour(s)"
+msgid "hours"
 msgstr ""
 
 msgid "iSCSI Initiator"
@@ -8666,7 +8674,10 @@ msgstr ""
 msgid "loader.conf"
 msgstr ""
 
-msgid "minute(s)"
+msgid "minutes"
+msgstr ""
+
+msgid "months"
 msgstr ""
 
 msgid "mount"
@@ -8712,9 +8723,6 @@ msgstr ""
 msgid "scan target failed."
 msgstr ""
 
-msgid "second(s)"
-msgstr ""
-
 msgid "seconds"
 msgstr ""
 
@@ -8746,4 +8754,7 @@ msgid "user"
 msgstr ""
 
 msgid "version:"
+msgstr ""
+
+msgid "week days"
 msgstr ""
