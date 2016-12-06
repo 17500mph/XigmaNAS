@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2016-12-06 00:14+0000\n"
+"POT-Creation-Date: 2016-12-06 17:07+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -122,6 +122,10 @@ msgid "(Vendor specific raw value.) Stores data related to the rate of hardware 
 msgstr ""
 
 msgid "(Vendor-specific raw value.) The raw value has different structure for different vendors and is often not meaningful as a decimal number."
+msgstr ""
+
+#, php-format
+msgid "(default %s %s"
 msgstr ""
 
 msgid "*** Imported duplicate ***"
@@ -675,6 +679,9 @@ msgstr ""
 msgid "An Initiator Group is identified by a tag number and defines authorised initiator names and networks."
 msgstr ""
 
+msgid "An empty field is default."
+msgstr ""
+
 msgid "An error occured."
 msgstr ""
 
@@ -787,7 +794,7 @@ msgstr ""
 msgid "Authentication"
 msgstr ""
 
-msgid "Authentication method"
+msgid "Authentication Method"
 msgstr ""
 
 msgid "Authorised network"
@@ -800,6 +807,9 @@ msgid "Auto"
 msgstr ""
 
 msgid "Auto Snapshot"
+msgstr ""
+
+msgid "Auto page refresh."
 msgstr ""
 
 msgid "Auto size"
@@ -815,6 +825,9 @@ msgid "Autoscale for graphs."
 msgstr ""
 
 msgid "Autoselect"
+msgstr ""
+
+msgid "Auxiliary Parameters"
 msgstr ""
 
 msgid "Auxiliary device firmware"
@@ -942,6 +955,9 @@ msgstr ""
 
 #, php-format
 msgid "BitTorrent needs at least read & execute permissions at the mount point for directory %s!"
+msgstr ""
+
+msgid "Blank Time"
 msgstr ""
 
 msgid "Blank time"
@@ -1085,13 +1101,19 @@ msgstr ""
 msgid "CPU Load"
 msgstr ""
 
+msgid "CPU Maximum Frequency"
+msgstr ""
+
+msgid "CPU Minimum Frequency"
+msgstr ""
+
 msgid "CPU Temperature"
 msgstr ""
 
 msgid "CPU Usage"
 msgstr ""
 
-msgid "CPU frequency:"
+msgid "CPU frequencies:"
 msgstr ""
 
 msgid "CPU load"
@@ -1327,10 +1349,10 @@ msgstr ""
 msgid "Console Menu"
 msgstr ""
 
-msgid "Console Settings"
+msgid "Console Screensaver"
 msgstr ""
 
-msgid "Console screensaver"
+msgid "Console Settings"
 msgstr ""
 
 msgid "Contact"
@@ -1372,9 +1394,6 @@ msgstr ""
 msgid "Controller TCP Port"
 msgstr ""
 
-msgid "Controls power consumption."
-msgstr ""
-
 msgid "Controls the behavior of synchronous requests."
 msgstr ""
 
@@ -1385,6 +1404,9 @@ msgid "Controls the compression algorithm used for this volume. The 'lzjb' compr
 msgstr ""
 
 msgid "Controls the dedup method."
+msgstr ""
+
+msgid "Controls the power consumption mode."
 msgstr ""
 
 msgid "Controls whether this dataset can be modified."
@@ -1622,9 +1644,6 @@ msgstr ""
 msgid "Data digest"
 msgstr ""
 
-msgid "Data directory"
-msgstr ""
-
 msgid "Data integrity"
 msgstr ""
 
@@ -1692,10 +1711,6 @@ msgid "Default - Rsync will choose the 'during' algorithm when talking to rsync 
 msgstr ""
 
 msgid "Default Device Settings"
-msgstr ""
-
-#, php-format
-msgid "Default is %s %s."
 msgstr ""
 
 #, php-format
@@ -2544,9 +2559,6 @@ msgstr ""
 msgid "Emergency Level"
 msgstr ""
 
-msgid "Empty as default."
-msgstr ""
-
 msgid "Enable"
 msgstr ""
 
@@ -2772,7 +2784,7 @@ msgstr ""
 msgid "Enable tuning switch"
 msgstr ""
 
-msgid "Enable white background graphs. (black by default)"
+msgid "Enable white background graphs. (black as default)"
 msgstr ""
 
 msgid "Enable write cache mode."
@@ -2854,13 +2866,13 @@ msgstr ""
 msgid "Enter the path to the home directory of VirtualBox. VM config and HDD image will be created under the specified directory."
 msgstr ""
 
-msgid "Enter the path to the home directory of rrdgraphs. This directory stores the statistical data for the graphs and will be updated every 5 minutes."
-msgstr ""
-
 msgid "Enter the path to the home directory of that user. Leave this field empty to use default path /mnt."
 msgstr ""
 
 msgid "Enter the path to the home directory. The config will be created under the specified directory."
+msgstr ""
+
+msgid "Enter the path to the home directory. This directory will store the statistical data and gets updated every 5 minutes!"
 msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
@@ -3284,7 +3296,7 @@ msgstr ""
 msgid "Graph updates every %d seconds"
 msgstr ""
 
-msgid "Graphs height"
+msgid "Graphs Height"
 msgstr ""
 
 msgid "Greek"
@@ -3381,7 +3393,7 @@ msgid "Height of heads above the disk surface. A flying height that's too low in
 msgstr ""
 
 #, php-format
-msgid "Height of the graphs. Default is %s pixel."
+msgid "Height of the graphs. (default %s pixels)"
 msgstr ""
 
 msgid "Help"
@@ -3406,6 +3418,9 @@ msgid "Highlighting"
 msgstr ""
 
 msgid "Hint"
+msgstr ""
+
+msgid "Home Directory"
 msgstr ""
 
 msgid "Home directory"
@@ -3764,6 +3779,9 @@ msgid "Interface"
 msgstr ""
 
 msgid "Interface Management"
+msgstr ""
+
+msgid "Interface Selection"
 msgstr ""
 
 msgid "Interface selection"
@@ -5011,6 +5029,9 @@ msgstr ""
 msgid "Packages"
 msgstr ""
 
+msgid "Page Refresh"
+msgstr ""
+
 msgid "Painfully aggressive"
 msgstr ""
 
@@ -5225,7 +5246,7 @@ msgstr ""
 msgid "Polish"
 msgstr ""
 
-msgid "Polling time"
+msgid "Polling Time"
 msgstr ""
 
 msgid "Pool"
@@ -5606,12 +5627,6 @@ msgid "Recycle bin"
 msgstr ""
 
 msgid "Refresh"
-msgstr ""
-
-msgid "Refresh time"
-msgstr ""
-
-msgid "Refresh time for graph pages."
 msgstr ""
 
 msgid "Reject"
@@ -6681,10 +6696,10 @@ msgstr ""
 msgid "TLS"
 msgstr ""
 
-msgid "TLS Server Certificate Check"
+msgid "TLS Mode"
 msgstr ""
 
-msgid "TLS mode"
+msgid "TLS Server Certificate Check"
 msgstr ""
 
 msgid "TLS only"
@@ -8468,7 +8483,7 @@ msgstr ""
 msgid "Xen Virtual Machine"
 msgstr ""
 
-msgid "Y-axis range"
+msgid "Y-axis Range"
 msgstr ""
 
 msgid "Yes"
@@ -8723,7 +8738,7 @@ msgstr ""
 msgid "scan target failed."
 msgstr ""
 
-msgid "seconds"
+msgid "seconds)"
 msgstr ""
 
 msgid "smallest settable high voltage transfer point"
