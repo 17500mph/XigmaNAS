@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-12-03 02:34+0000\n"
+"POT-Creation-Date: 2016-12-06 00:14+0000\n"
 "PO-Revision-Date: 2016-08-31 21:50+0000\n"
 "Last-Translator: Mustafa DAĞCI <mustafa.matrix@gmail.com>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-03 16:05+0000\n"
+"X-Launchpad-Export-Date: 2016-12-05 23:57+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
@@ -1207,20 +1207,11 @@ msgstr ""
 msgid "CPU Usage"
 msgstr ""
 
-msgid "CPU frequency"
-msgstr "İşlemci Hızı"
-
 msgid "CPU frequency:"
 msgstr ""
 
 msgid "CPU load"
 msgstr "İşlemci Yükü"
-
-msgid "CPU temperature"
-msgstr "İşlemci sıcaklığı"
-
-msgid "CPU usage"
-msgstr "CPU kullanımı"
 
 msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
@@ -1550,6 +1541,12 @@ msgid ""
 "disabled."
 msgstr ""
 
+msgid "Core"
+msgstr ""
+
+msgid "Core Usage"
+msgstr ""
+
 msgid "Count"
 msgstr "Sayı"
 
@@ -1852,6 +1849,9 @@ msgid "Date & Time"
 msgstr "Tarih & Saat"
 
 msgid "Date format"
+msgstr ""
+
+msgid "Day"
 msgstr ""
 
 msgid "Days"
@@ -2296,11 +2296,11 @@ msgstr "Disk"
 msgid "Disk Selection"
 msgstr ""
 
-msgid "Disk Usage"
+msgid "Disk Space Usage"
 msgstr ""
 
-msgid "Disk space usage"
-msgstr "Diskteki boş alan"
+msgid "Disk Usage"
+msgstr ""
 
 msgid "Disks"
 msgstr "Diskler"
@@ -3740,6 +3740,9 @@ msgstr "Bilgisayarlara izin ver"
 msgid "Hosts deny"
 msgstr "Bilgisayarlara reddet"
 
+msgid "Hour"
+msgstr ""
+
 msgid "Hours"
 msgstr ""
 
@@ -4303,6 +4306,9 @@ msgstr ""
 msgid "Large read/write"
 msgstr "Büyük okuma/yazma"
 
+msgid "Last Configuration Change"
+msgstr ""
+
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
 "value. Also logs minutes since last test and lifetime number of tests. Raw "
@@ -4349,10 +4355,6 @@ msgstr ""
 
 msgid "Level 64 - Intermediate Power Usage with Standby"
 msgstr ""
-
-#, php-format
-msgid "Levels (MHz/mW): %s"
-msgstr "Seviyeler (MHz/mW): %s"
 
 msgid "License"
 msgstr "Lisans"
@@ -4756,9 +4758,6 @@ msgstr ""
 msgid "Memory Usage"
 msgstr ""
 
-msgid "Memory usage"
-msgstr "Bellek kullanımı"
-
 msgid "Message Board"
 msgstr ""
 
@@ -4813,6 +4812,9 @@ msgid "Minimum relative humidity seen (percent)"
 msgstr ""
 
 msgid "Minimum temperature seen (degrees C)"
+msgstr ""
+
+msgid "Minute"
 msgstr ""
 
 msgid "Minutes"
@@ -6436,7 +6438,13 @@ msgstr ""
 msgid "Search for and import all disks found"
 msgstr ""
 
+msgid "Second"
+msgstr ""
+
 msgid "Secondary"
+msgstr ""
+
+msgid "Seconds"
 msgstr ""
 
 msgid "Secret"
@@ -7048,10 +7056,10 @@ msgstr ""
 msgid "Swap Memory"
 msgstr ""
 
-msgid "Swap disabled"
+msgid "Swap Usage"
 msgstr ""
 
-msgid "Swap usage"
+msgid "Swap disabled"
 msgstr ""
 
 msgid "Swedish"
@@ -7097,6 +7105,9 @@ msgstr ""
 msgid "System"
 msgstr "Sistem"
 
+msgid "System BIOS"
+msgstr ""
+
 msgid "System Email Report Settings"
 msgstr ""
 
@@ -7121,7 +7132,10 @@ msgstr ""
 msgid "System Settings"
 msgstr ""
 
-msgid "System bios"
+msgid "System Time"
+msgstr ""
+
+msgid "System Uptime"
 msgstr ""
 
 msgid "System events"
@@ -7129,9 +7143,6 @@ msgstr "Sistem Olayları"
 
 msgid "System info"
 msgstr "Sistem Bilgisi"
-
-msgid "System last config change"
-msgstr ""
 
 msgid "System log"
 msgstr "Sistem günlükleri"
@@ -7143,9 +7154,6 @@ msgid "System time"
 msgstr "Sistem zamanı"
 
 msgid "System tuning"
-msgstr ""
-
-msgid "System uptime"
 msgstr ""
 
 msgid "TCP forwarding"
@@ -7238,6 +7246,9 @@ msgid "Target side user name. It is usually the initiator name by default."
 msgstr ""
 
 msgid "Targets"
+msgstr ""
+
+msgid "Temp"
 msgstr ""
 
 msgid "Temperature"
@@ -8813,9 +8824,6 @@ msgstr ""
 msgid "Update period"
 msgstr ""
 
-msgid "Updating in 5 seconds."
-msgstr ""
-
 msgid "Upgrade Firmware"
 msgstr ""
 
@@ -9407,8 +9415,8 @@ msgstr "değişiklik yapılamadı."
 msgid "chroot() everyone, but root."
 msgstr ""
 
-msgid "day(s)"
-msgstr "Gün"
+msgid "days"
+msgstr ""
 
 msgid "debug"
 msgstr ""
@@ -9437,7 +9445,7 @@ msgstr ""
 msgid "greatest settable low voltage transfer point"
 msgstr ""
 
-msgid "hour(s)"
+msgid "hours"
 msgstr ""
 
 msgid "iSCSI Initiator"
@@ -9471,8 +9479,11 @@ msgstr ""
 msgid "loader.conf"
 msgstr ""
 
-msgid "minute(s)"
-msgstr "dakika(lar)"
+msgid "minutes"
+msgstr ""
+
+msgid "months"
+msgstr ""
 
 msgid "mount"
 msgstr ""
@@ -9517,9 +9528,6 @@ msgstr "revizyon"
 msgid "scan target failed."
 msgstr "hedef tarama başarısız"
 
-msgid "second(s)"
-msgstr "saniye(ler)"
-
 msgid "seconds"
 msgstr ""
 
@@ -9552,3 +9560,34 @@ msgstr ""
 
 msgid "version:"
 msgstr ""
+
+msgid "week days"
+msgstr ""
+
+#~ msgid "CPU frequency"
+#~ msgstr "İşlemci Hızı"
+
+#~ msgid "CPU temperature"
+#~ msgstr "İşlemci sıcaklığı"
+
+#~ msgid "CPU usage"
+#~ msgstr "CPU kullanımı"
+
+#~ msgid "Disk space usage"
+#~ msgstr "Diskteki boş alan"
+
+#, php-format
+#~ msgid "Levels (MHz/mW): %s"
+#~ msgstr "Seviyeler (MHz/mW): %s"
+
+#~ msgid "Memory usage"
+#~ msgstr "Bellek kullanımı"
+
+#~ msgid "day(s)"
+#~ msgstr "Gün"
+
+#~ msgid "minute(s)"
+#~ msgstr "dakika(lar)"
+
+#~ msgid "second(s)"
+#~ msgstr "saniye(ler)"

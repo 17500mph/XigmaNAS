@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-03 02:34+0000\n"
+"POT-Creation-Date: 2016-12-06 00:14+0000\n"
 "PO-Revision-Date: 2016-12-03 06:47+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-03 16:05+0000\n"
+"X-Launchpad-Export-Date: 2016-12-05 23:57+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -1281,20 +1281,11 @@ msgstr "CPU temperatur"
 msgid "CPU Usage"
 msgstr "Processoranvändning"
 
-msgid "CPU frequency"
-msgstr "CPU frekvens"
-
 msgid "CPU frequency:"
 msgstr "CPU frekvens:"
 
 msgid "CPU load"
 msgstr "CPU belastning"
-
-msgid "CPU temperature"
-msgstr "CPU temperatur"
-
-msgid "CPU usage"
-msgstr "CPU användning"
 
 msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
@@ -1649,6 +1640,12 @@ msgstr ""
 "Konvertera DOS-attribut till UNIX rättigheter när lagring av DOS-attribut är "
 "frånslaget."
 
+msgid "Core"
+msgstr ""
+
+msgid "Core Usage"
+msgstr ""
+
 msgid "Count"
 msgstr "Antal"
 
@@ -1994,6 +1991,9 @@ msgstr "Datum och tid"
 
 msgid "Date format"
 msgstr "Datumformat"
+
+msgid "Day"
+msgstr ""
 
 msgid "Days"
 msgstr "Dagar"
@@ -2460,11 +2460,11 @@ msgstr "Disk"
 msgid "Disk Selection"
 msgstr "Diskval"
 
+msgid "Disk Space Usage"
+msgstr ""
+
 msgid "Disk Usage"
 msgstr "Använt diskutrymme"
-
-msgid "Disk space usage"
-msgstr "Diskutrymmesanvändning"
 
 msgid "Disks"
 msgstr "Diskar"
@@ -3962,6 +3962,9 @@ msgstr "Tillåtna värdar"
 msgid "Hosts deny"
 msgstr "Nekade värdar"
 
+msgid "Hour"
+msgstr ""
+
 msgid "Hours"
 msgstr "Timmar"
 
@@ -4572,6 +4575,9 @@ msgstr "Språk för frontpanel"
 msgid "Large read/write"
 msgstr "Stor läs/skriv (read/write)"
 
+msgid "Last Configuration Change"
+msgstr ""
+
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
 "value. Also logs minutes since last test and lifetime number of tests. Raw "
@@ -4618,10 +4624,6 @@ msgstr "Nivå 254 - Maximal prestanda, maximal effektförbrukning"
 
 msgid "Level 64 - Intermediate Power Usage with Standby"
 msgstr "Nivå 64 - Medel effektförbrukning med strömsparläge"
-
-#, php-format
-msgid "Levels (MHz/mW): %s"
-msgstr "Nivåer (MHz/mW): %s"
 
 msgid "License"
 msgstr "Licens"
@@ -5044,9 +5046,6 @@ msgstr "Minne (MiB)"
 msgid "Memory Usage"
 msgstr "Minnesanvändning"
 
-msgid "Memory usage"
-msgstr "Minnesanvändning"
-
 msgid "Message Board"
 msgstr "Anslagstavla"
 
@@ -5104,6 +5103,9 @@ msgstr "Lägsta uppmätta relativa luftfuktighet"
 
 msgid "Minimum temperature seen (degrees C)"
 msgstr "Lägsta uppmätta temperatur (grader C)"
+
+msgid "Minute"
+msgstr ""
 
 msgid "Minutes"
 msgstr "Minuter"
@@ -6796,8 +6798,14 @@ msgstr "Sök händelse"
 msgid "Search for and import all disks found"
 msgstr "Sök efter och importera alla diskar som hittas"
 
+msgid "Second"
+msgstr ""
+
 msgid "Secondary"
 msgstr "Sekundär"
+
+msgid "Seconds"
+msgstr ""
 
 msgid "Secret"
 msgstr "Hemlighet"
@@ -7466,11 +7474,11 @@ msgstr "Växlingsfil Information & Status"
 msgid "Swap Memory"
 msgstr "Växlingsfil"
 
+msgid "Swap Usage"
+msgstr ""
+
 msgid "Swap disabled"
 msgstr "Växlingsutrymme inaktiverat"
-
-msgid "Swap usage"
-msgstr "Användning av växlingsutrymme"
 
 msgid "Swedish"
 msgstr "Svenska"
@@ -7518,6 +7526,9 @@ msgstr ""
 msgid "System"
 msgstr "System"
 
+msgid "System BIOS"
+msgstr ""
+
 msgid "System Email Report Settings"
 msgstr "System e-postrapportinställningar"
 
@@ -7542,17 +7553,17 @@ msgstr "Systemprocesser"
 msgid "System Settings"
 msgstr "Systeminställningar"
 
-msgid "System bios"
-msgstr "Systembios"
+msgid "System Time"
+msgstr ""
+
+msgid "System Uptime"
+msgstr ""
 
 msgid "System events"
 msgstr "Systemhändelser"
 
 msgid "System info"
 msgstr "Systeminfo"
-
-msgid "System last config change"
-msgstr "Senaste ändring av systemkonfiguration"
 
 msgid "System log"
 msgstr "Systemlogg"
@@ -7565,9 +7576,6 @@ msgstr "Systemtid"
 
 msgid "System tuning"
 msgstr "Finjustering av systemet"
-
-msgid "System uptime"
-msgstr "Systemets upptid"
 
 msgid "TCP forwarding"
 msgstr "Vidarebefodran av TCP"
@@ -7661,6 +7669,9 @@ msgstr ""
 
 msgid "Targets"
 msgstr "Mål"
+
+msgid "Temp"
+msgstr ""
 
 msgid "Temperature"
 msgstr "Temperatur"
@@ -9494,9 +9505,6 @@ msgstr "Uppåt"
 msgid "Update period"
 msgstr "Uppdateringsperiod"
 
-msgid "Updating in 5 seconds."
-msgstr "Uppdaterar inom 5 sekunder."
-
 msgid "Upgrade Firmware"
 msgstr "Uppgradera systemmjukvara"
 
@@ -10149,8 +10157,8 @@ msgstr "Ändringen misslyckades."
 msgid "chroot() everyone, but root."
 msgstr "chroot() för alla, förutom root."
 
-msgid "day(s)"
-msgstr "dag(ar)"
+msgid "days"
+msgstr ""
 
 msgid "debug"
 msgstr "felsök"
@@ -10181,8 +10189,8 @@ msgstr "Högsta inställningen till hög spänning till överförings punkten."
 msgid "greatest settable low voltage transfer point"
 msgstr "Högsta inställningen för låg spänning till överförings punkten."
 
-msgid "hour(s)"
-msgstr "timma(r)"
+msgid "hours"
+msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI Initierare"
@@ -10215,8 +10223,11 @@ msgstr "load/unload misslyckades."
 msgid "loader.conf"
 msgstr "loader.conf"
 
-msgid "minute(s)"
-msgstr "minut(er)"
+msgid "minutes"
+msgstr ""
+
+msgid "months"
+msgstr ""
 
 msgid "mount"
 msgstr "montera"
@@ -10261,9 +10272,6 @@ msgstr "revision"
 msgid "scan target failed."
 msgstr "skanning av målet misslyckades."
 
-msgid "second(s)"
-msgstr "sekund(er)"
-
 msgid "seconds"
 msgstr "sekunder"
 
@@ -10297,5 +10305,51 @@ msgstr "användare"
 msgid "version:"
 msgstr "version:"
 
-#~ msgid "Enable collecting network trafic statistics."
-#~ msgstr "Aktivera insamling av nätverkstrafiksstatistik."
+msgid "week days"
+msgstr ""
+
+#~ msgid "CPU frequency"
+#~ msgstr "CPU frekvens"
+
+#~ msgid "CPU temperature"
+#~ msgstr "CPU temperatur"
+
+#~ msgid "Disk space usage"
+#~ msgstr "Diskutrymmesanvändning"
+
+#, php-format
+#~ msgid "Levels (MHz/mW): %s"
+#~ msgstr "Nivåer (MHz/mW): %s"
+
+#~ msgid "Memory usage"
+#~ msgstr "Minnesanvändning"
+
+#~ msgid "Swap usage"
+#~ msgstr "Användning av växlingsutrymme"
+
+#~ msgid "Updating in 5 seconds."
+#~ msgstr "Uppdaterar inom 5 sekunder."
+
+#~ msgid "day(s)"
+#~ msgstr "dag(ar)"
+
+#~ msgid "hour(s)"
+#~ msgstr "timma(r)"
+
+#~ msgid "minute(s)"
+#~ msgstr "minut(er)"
+
+#~ msgid "second(s)"
+#~ msgstr "sekund(er)"
+
+#~ msgid "System uptime"
+#~ msgstr "Systemets upptid"
+
+#~ msgid "System bios"
+#~ msgstr "Systembios"
+
+#~ msgid "CPU usage"
+#~ msgstr "CPU användning"
+
+#~ msgid "System last config change"
+#~ msgstr "Senaste ändring av systemkonfiguration"

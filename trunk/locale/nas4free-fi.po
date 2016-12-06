@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-12-03 02:34+0000\n"
+"POT-Creation-Date: 2016-12-06 00:14+0000\n"
 "PO-Revision-Date: 2016-10-16 11:58+0000\n"
 "Last-Translator: Janne <Unknown>\n"
 "Language-Team: NAS4Free <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-03 16:05+0000\n"
+"X-Launchpad-Export-Date: 2016-12-05 23:57+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "X-Poedit-Country: FINLAND\n"
 "X-Poedit-Language: Finnish\n"
@@ -1241,20 +1241,11 @@ msgstr ""
 msgid "CPU Usage"
 msgstr ""
 
-msgid "CPU frequency"
-msgstr "Prosessorin taajuus"
-
 msgid "CPU frequency:"
 msgstr "Prosessorin taajuus:"
 
 msgid "CPU load"
 msgstr "Prosessorin kuorma"
-
-msgid "CPU temperature"
-msgstr "Prosessorin lämpötila"
-
-msgid "CPU usage"
-msgstr "Prosessorin käyttö"
 
 msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
@@ -1584,6 +1575,12 @@ msgid ""
 "disabled."
 msgstr ""
 
+msgid "Core"
+msgstr ""
+
+msgid "Core Usage"
+msgstr ""
+
 msgid "Count"
 msgstr "Laskuri"
 
@@ -1887,6 +1884,9 @@ msgstr "Päivämäärä ja aika"
 
 msgid "Date format"
 msgstr "Päiväyksen muoto"
+
+msgid "Day"
+msgstr ""
 
 msgid "Days"
 msgstr ""
@@ -2328,11 +2328,11 @@ msgstr "Levy"
 msgid "Disk Selection"
 msgstr ""
 
-msgid "Disk Usage"
+msgid "Disk Space Usage"
 msgstr ""
 
-msgid "Disk space usage"
-msgstr "Levytilan käyttö"
+msgid "Disk Usage"
+msgstr ""
 
 msgid "Disks"
 msgstr "Levyt"
@@ -3765,6 +3765,9 @@ msgstr "Palvelimen sallinnat"
 msgid "Hosts deny"
 msgstr "Palvelimen estot"
 
+msgid "Hour"
+msgstr ""
+
 msgid "Hours"
 msgstr "Tuntia"
 
@@ -4325,6 +4328,9 @@ msgstr ""
 msgid "Large read/write"
 msgstr ""
 
+msgid "Last Configuration Change"
+msgstr ""
+
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
 "value. Also logs minutes since last test and lifetime number of tests. Raw "
@@ -4370,10 +4376,6 @@ msgid "Level 254 - Maximum Performance, Maximum Power Usage"
 msgstr ""
 
 msgid "Level 64 - Intermediate Power Usage with Standby"
-msgstr ""
-
-#, php-format
-msgid "Levels (MHz/mW): %s"
 msgstr ""
 
 msgid "License"
@@ -4784,9 +4786,6 @@ msgstr ""
 msgid "Memory Usage"
 msgstr ""
 
-msgid "Memory usage"
-msgstr "Muistinkäyttö"
-
 msgid "Message Board"
 msgstr ""
 
@@ -4841,6 +4840,9 @@ msgid "Minimum relative humidity seen (percent)"
 msgstr ""
 
 msgid "Minimum temperature seen (degrees C)"
+msgstr ""
+
+msgid "Minute"
 msgstr ""
 
 msgid "Minutes"
@@ -6466,8 +6468,14 @@ msgstr ""
 msgid "Search for and import all disks found"
 msgstr ""
 
+msgid "Second"
+msgstr ""
+
 msgid "Secondary"
 msgstr "Toissijainen"
+
+msgid "Seconds"
+msgstr ""
 
 msgid "Secret"
 msgstr "Salainen"
@@ -7078,11 +7086,11 @@ msgstr ""
 msgid "Swap Memory"
 msgstr "Sivutusmuisti"
 
+msgid "Swap Usage"
+msgstr ""
+
 msgid "Swap disabled"
 msgstr "Swap poistettu käytöstä"
-
-msgid "Swap usage"
-msgstr "Swapin käyttö"
 
 msgid "Swedish"
 msgstr "Ruotsi"
@@ -7127,6 +7135,9 @@ msgstr ""
 msgid "System"
 msgstr "Järjestelmä"
 
+msgid "System BIOS"
+msgstr ""
+
 msgid "System Email Report Settings"
 msgstr ""
 
@@ -7151,7 +7162,10 @@ msgstr ""
 msgid "System Settings"
 msgstr "Järjestelmän asetukset"
 
-msgid "System bios"
+msgid "System Time"
+msgstr ""
+
+msgid "System Uptime"
 msgstr ""
 
 msgid "System events"
@@ -7159,9 +7173,6 @@ msgstr "Järjestelmän tapahtumat"
 
 msgid "System info"
 msgstr "Järjestelmän tiedot"
-
-msgid "System last config change"
-msgstr ""
 
 msgid "System log"
 msgstr "Järjestelmän loki"
@@ -7174,9 +7185,6 @@ msgstr "Järjestelmän aika"
 
 msgid "System tuning"
 msgstr "Järjestelmän hienosäätö"
-
-msgid "System uptime"
-msgstr "Järjestelmän päälläoloaika"
 
 msgid "TCP forwarding"
 msgstr ""
@@ -7269,6 +7277,9 @@ msgstr ""
 
 msgid "Targets"
 msgstr "Kohteet"
+
+msgid "Temp"
+msgstr ""
 
 msgid "Temperature"
 msgstr "Lämpötila"
@@ -8841,9 +8852,6 @@ msgstr "Ylös"
 msgid "Update period"
 msgstr "Päivitysväli"
 
-msgid "Updating in 5 seconds."
-msgstr "Päivitetään 5 sekunnissa."
-
 msgid "Upgrade Firmware"
 msgstr ""
 
@@ -9438,7 +9446,7 @@ msgstr ""
 msgid "chroot() everyone, but root."
 msgstr ""
 
-msgid "day(s)"
+msgid "days"
 msgstr ""
 
 msgid "debug"
@@ -9468,7 +9476,7 @@ msgstr ""
 msgid "greatest settable low voltage transfer point"
 msgstr ""
 
-msgid "hour(s)"
+msgid "hours"
 msgstr ""
 
 msgid "iSCSI Initiator"
@@ -9502,7 +9510,10 @@ msgstr ""
 msgid "loader.conf"
 msgstr ""
 
-msgid "minute(s)"
+msgid "minutes"
+msgstr ""
+
+msgid "months"
 msgstr ""
 
 msgid "mount"
@@ -9548,9 +9559,6 @@ msgstr ""
 msgid "scan target failed."
 msgstr ""
 
-msgid "second(s)"
-msgstr ""
-
 msgid "seconds"
 msgstr ""
 
@@ -9583,3 +9591,30 @@ msgstr ""
 
 msgid "version:"
 msgstr ""
+
+msgid "week days"
+msgstr ""
+
+#~ msgid "CPU frequency"
+#~ msgstr "Prosessorin taajuus"
+
+#~ msgid "CPU temperature"
+#~ msgstr "Prosessorin lämpötila"
+
+#~ msgid "CPU usage"
+#~ msgstr "Prosessorin käyttö"
+
+#~ msgid "Disk space usage"
+#~ msgstr "Levytilan käyttö"
+
+#~ msgid "Memory usage"
+#~ msgstr "Muistinkäyttö"
+
+#~ msgid "Swap usage"
+#~ msgstr "Swapin käyttö"
+
+#~ msgid "Updating in 5 seconds."
+#~ msgstr "Päivitetään 5 sekunnissa."
+
+#~ msgid "System uptime"
+#~ msgstr "Järjestelmän päälläoloaika"
