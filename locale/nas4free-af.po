@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-12-03 02:34+0000\n"
+"POT-Creation-Date: 2016-12-06 00:14+0000\n"
 "PO-Revision-Date: 2016-11-29 10:02+0000\n"
 "Last-Translator: Hein von Brandis <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-03 16:06+0000\n"
+"X-Launchpad-Export-Date: 2016-12-05 23:58+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 
 msgid " interfaces:"
@@ -1270,20 +1270,11 @@ msgstr "SVE Temperatuur"
 msgid "CPU Usage"
 msgstr "SVE gebruik"
 
-msgid "CPU frequency"
-msgstr "SVE frekwensie"
-
 msgid "CPU frequency:"
 msgstr "SVE frekwensie:"
 
 msgid "CPU load"
 msgstr "SVE las"
-
-msgid "CPU temperature"
-msgstr "SVE temperatuur"
-
-msgid "CPU usage"
-msgstr "SVE gebruik"
 
 msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
@@ -1640,6 +1631,12 @@ msgid ""
 "disabled."
 msgstr ""
 
+msgid "Core"
+msgstr ""
+
+msgid "Core Usage"
+msgstr ""
+
 msgid "Count"
 msgstr "Tel"
 
@@ -1961,6 +1958,9 @@ msgstr "Datum en Tyd"
 
 msgid "Date format"
 msgstr "Datum formaat"
+
+msgid "Day"
+msgstr ""
 
 msgid "Days"
 msgstr "Dae"
@@ -2410,11 +2410,11 @@ msgstr "Skyf"
 msgid "Disk Selection"
 msgstr "Skyf Seleksie"
 
+msgid "Disk Space Usage"
+msgstr ""
+
 msgid "Disk Usage"
 msgstr "Skyf Gebruik"
-
-msgid "Disk space usage"
-msgstr "Skyf spasie gebruik"
 
 msgid "Disks"
 msgstr "Skywe"
@@ -3887,6 +3887,9 @@ msgstr "Gasheer laat toe"
 msgid "Hosts deny"
 msgstr "Gasheer weier"
 
+msgid "Hour"
+msgstr ""
+
 msgid "Hours"
 msgstr "Ure"
 
@@ -4473,6 +4476,9 @@ msgstr "Taal om op die voorste paneel te gebruik"
 msgid "Large read/write"
 msgstr "Groot lees/skryf"
 
+msgid "Last Configuration Change"
+msgstr ""
+
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
 "value. Also logs minutes since last test and lifetime number of tests. Raw "
@@ -4519,10 +4525,6 @@ msgstr "Vlak 254 - Maksimum Werksverrigting, Maksimum Krag Verbruik"
 
 msgid "Level 64 - Intermediate Power Usage with Standby"
 msgstr "Vlak 64 - Intermediêre Krag Verbruik met Bystaan"
-
-#, php-format
-msgid "Levels (MHz/mW): %s"
-msgstr "Vlakke (MHz/mW): %s"
 
 msgid "License"
 msgstr "Lisensie"
@@ -4928,9 +4930,6 @@ msgstr "Geheu (MiG)"
 msgid "Memory Usage"
 msgstr "Geheue Gebruik"
 
-msgid "Memory usage"
-msgstr "Geheu gebruik"
-
 msgid "Message Board"
 msgstr "Boodskap Bord"
 
@@ -4986,6 +4985,9 @@ msgstr "Minimum relatiewe humiditeit waargeneem (persenasie)"
 
 msgid "Minimum temperature seen (degrees C)"
 msgstr "Minimum temperatuur waargeneem (grade Celcius)"
+
+msgid "Minute"
+msgstr ""
 
 msgid "Minutes"
 msgstr "Minute"
@@ -6637,8 +6639,14 @@ msgstr "Vind gebeurtenis"
 msgid "Search for and import all disks found"
 msgstr "Soek vir en voer alle opgespoorde skywe in"
 
+msgid "Second"
+msgstr ""
+
 msgid "Secondary"
 msgstr "Sekondêre"
+
+msgid "Seconds"
+msgstr ""
 
 msgid "Secret"
 msgstr "Geheim"
@@ -7278,10 +7286,10 @@ msgstr ""
 msgid "Swap Memory"
 msgstr ""
 
-msgid "Swap disabled"
+msgid "Swap Usage"
 msgstr ""
 
-msgid "Swap usage"
+msgid "Swap disabled"
 msgstr ""
 
 msgid "Swedish"
@@ -7327,6 +7335,9 @@ msgstr ""
 msgid "System"
 msgstr "Sisteem"
 
+msgid "System BIOS"
+msgstr ""
+
 msgid "System Email Report Settings"
 msgstr "Sisteem Epos Verslag Instellings"
 
@@ -7351,17 +7362,17 @@ msgstr "Stelsel Prosesse"
 msgid "System Settings"
 msgstr "Stelsel Instellings"
 
-msgid "System bios"
-msgstr "Stelsel BIOS"
+msgid "System Time"
+msgstr ""
+
+msgid "System Uptime"
+msgstr ""
 
 msgid "System events"
 msgstr "Stelsel gebeure"
 
 msgid "System info"
 msgstr "Stelsel inligting"
-
-msgid "System last config change"
-msgstr "Stelsel laaste instelling verandering"
 
 msgid "System log"
 msgstr ""
@@ -7374,9 +7385,6 @@ msgstr "Sisteem tyd"
 
 msgid "System tuning"
 msgstr "Sisteem instemming"
-
-msgid "System uptime"
-msgstr "Sisteem aantyd"
 
 msgid "TCP forwarding"
 msgstr ""
@@ -7469,6 +7477,9 @@ msgstr ""
 
 msgid "Targets"
 msgstr "Teikens"
+
+msgid "Temp"
+msgstr ""
 
 msgid "Temperature"
 msgstr "Temperatuur"
@@ -9134,9 +9145,6 @@ msgstr "Op"
 msgid "Update period"
 msgstr "Opdateer periode"
 
-msgid "Updating in 5 seconds."
-msgstr "Opdateer oor 5 sekondes."
-
 msgid "Upgrade Firmware"
 msgstr ""
 
@@ -9768,8 +9776,8 @@ msgstr "verandering het misluk."
 msgid "chroot() everyone, but root."
 msgstr ""
 
-msgid "day(s)"
-msgstr "dag/dae"
+msgid "days"
+msgstr ""
 
 msgid "debug"
 msgstr ""
@@ -9798,8 +9806,8 @@ msgstr "grootste stelbare hoë spanning oordrag punt"
 msgid "greatest settable low voltage transfer point"
 msgstr "grootste stelbare lae spanning oordrag pun"
 
-msgid "hour(s)"
-msgstr "uur/ure"
+msgid "hours"
+msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr ""
@@ -9832,8 +9840,11 @@ msgstr "laai/aflaai het misluk."
 msgid "loader.conf"
 msgstr ""
 
-msgid "minute(s)"
-msgstr "minuut/minute"
+msgid "minutes"
+msgstr ""
+
+msgid "months"
+msgstr ""
 
 msgid "mount"
 msgstr ""
@@ -9878,9 +9889,6 @@ msgstr "hersiening"
 msgid "scan target failed."
 msgstr "skandeer teiken het misluk"
 
-msgid "second(s)"
-msgstr "sekonde(s)"
-
 msgid "seconds"
 msgstr "sekondes"
 
@@ -9914,5 +9922,48 @@ msgstr "gebruiker"
 msgid "version:"
 msgstr "weergawe:"
 
-#~ msgid "Enable collecting network trafic statistics."
-#~ msgstr "Aktiveer insamel van netwerk verkeer statistieke."
+msgid "week days"
+msgstr ""
+
+#~ msgid "CPU usage"
+#~ msgstr "SVE gebruik"
+
+#~ msgid "CPU frequency"
+#~ msgstr "SVE frekwensie"
+
+#~ msgid "CPU temperature"
+#~ msgstr "SVE temperatuur"
+
+#~ msgid "Disk space usage"
+#~ msgstr "Skyf spasie gebruik"
+
+#, php-format
+#~ msgid "Levels (MHz/mW): %s"
+#~ msgstr "Vlakke (MHz/mW): %s"
+
+#~ msgid "Memory usage"
+#~ msgstr "Geheu gebruik"
+
+#~ msgid "System bios"
+#~ msgstr "Stelsel BIOS"
+
+#~ msgid "System last config change"
+#~ msgstr "Stelsel laaste instelling verandering"
+
+#~ msgid "System uptime"
+#~ msgstr "Sisteem aantyd"
+
+#~ msgid "Updating in 5 seconds."
+#~ msgstr "Opdateer oor 5 sekondes."
+
+#~ msgid "day(s)"
+#~ msgstr "dag/dae"
+
+#~ msgid "hour(s)"
+#~ msgstr "uur/ure"
+
+#~ msgid "minute(s)"
+#~ msgstr "minuut/minute"
+
+#~ msgid "second(s)"
+#~ msgstr "sekonde(s)"

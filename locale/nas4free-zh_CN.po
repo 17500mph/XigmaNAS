@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-03 02:34+0000\n"
+"POT-Creation-Date: 2016-12-06 00:14+0000\n"
 "PO-Revision-Date: 2016-11-24 10:20+0000\n"
 "Last-Translator: 罗建涛 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-03 16:05+0000\n"
+"X-Launchpad-Export-Date: 2016-12-05 23:57+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -1193,20 +1193,11 @@ msgstr ""
 msgid "CPU Usage"
 msgstr ""
 
-msgid "CPU frequency"
-msgstr "CPU 频率"
-
 msgid "CPU frequency:"
 msgstr "CPU 频率："
 
 msgid "CPU load"
 msgstr "CPU 负载"
-
-msgid "CPU temperature"
-msgstr "CPU 温度"
-
-msgid "CPU usage"
-msgstr "CPU 使用率"
 
 msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
@@ -1539,6 +1530,12 @@ msgid ""
 "disabled."
 msgstr ""
 
+msgid "Core"
+msgstr ""
+
+msgid "Core Usage"
+msgstr ""
+
 msgid "Count"
 msgstr "次数"
 
@@ -1842,6 +1839,9 @@ msgstr "日期与时间"
 
 msgid "Date format"
 msgstr "日期格式"
+
+msgid "Day"
+msgstr ""
 
 msgid "Days"
 msgstr "天"
@@ -2285,11 +2285,11 @@ msgstr "硬盘"
 msgid "Disk Selection"
 msgstr "选择磁盘"
 
-msgid "Disk Usage"
+msgid "Disk Space Usage"
 msgstr ""
 
-msgid "Disk space usage"
-msgstr "磁盘空间使用情况"
+msgid "Disk Usage"
+msgstr ""
 
 msgid "Disks"
 msgstr "硬盘"
@@ -3718,6 +3718,9 @@ msgstr "允许主机"
 msgid "Hosts deny"
 msgstr "拒绝主机"
 
+msgid "Hour"
+msgstr ""
+
 msgid "Hours"
 msgstr "小时"
 
@@ -4278,6 +4281,9 @@ msgstr "前置面板的语言"
 msgid "Large read/write"
 msgstr "大笔资料 读／写"
 
+msgid "Last Configuration Change"
+msgstr ""
+
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
 "value. Also logs minutes since last test and lifetime number of tests. Raw "
@@ -4324,10 +4330,6 @@ msgstr ""
 
 msgid "Level 64 - Intermediate Power Usage with Standby"
 msgstr ""
-
-#, php-format
-msgid "Levels (MHz/mW): %s"
-msgstr "水平 (MHz/mW): %s"
 
 msgid "License"
 msgstr "授权"
@@ -4733,9 +4735,6 @@ msgstr ""
 msgid "Memory Usage"
 msgstr ""
 
-msgid "Memory usage"
-msgstr "内存使用情况"
-
 msgid "Message Board"
 msgstr ""
 
@@ -4791,6 +4790,9 @@ msgstr "最低相对湿度（百分比）"
 
 msgid "Minimum temperature seen (degrees C)"
 msgstr "最低气温（摄氏度）"
+
+msgid "Minute"
+msgstr ""
 
 msgid "Minutes"
 msgstr "分钟"
@@ -6418,8 +6420,14 @@ msgstr ""
 msgid "Search for and import all disks found"
 msgstr ""
 
+msgid "Second"
+msgstr ""
+
 msgid "Secondary"
 msgstr "次要"
+
+msgid "Seconds"
+msgstr ""
 
 msgid "Secret"
 msgstr "秘密"
@@ -7032,11 +7040,11 @@ msgstr "交换分区信息和状态"
 msgid "Swap Memory"
 msgstr "交换内存"
 
+msgid "Swap Usage"
+msgstr ""
+
 msgid "Swap disabled"
 msgstr "关闭 Swap"
-
-msgid "Swap usage"
-msgstr "Swap 使用量"
 
 msgid "Swedish"
 msgstr "瑞典语"
@@ -7083,6 +7091,9 @@ msgstr ""
 msgid "System"
 msgstr "系统"
 
+msgid "System BIOS"
+msgstr ""
+
 msgid "System Email Report Settings"
 msgstr ""
 
@@ -7107,17 +7118,17 @@ msgstr ""
 msgid "System Settings"
 msgstr ""
 
-msgid "System bios"
-msgstr "系統BIOS"
+msgid "System Time"
+msgstr ""
+
+msgid "System Uptime"
+msgstr ""
 
 msgid "System events"
 msgstr "系统事件"
 
 msgid "System info"
 msgstr "系统信息"
-
-msgid "System last config change"
-msgstr "系统最后一次配置更改"
 
 msgid "System log"
 msgstr "系统记录"
@@ -7130,9 +7141,6 @@ msgstr "系统时间"
 
 msgid "System tuning"
 msgstr "系统微调"
-
-msgid "System uptime"
-msgstr "系统运行时间"
 
 msgid "TCP forwarding"
 msgstr "TCP 转送"
@@ -7225,6 +7233,9 @@ msgstr "目标端的用户名。它通常是默认的启动器名称。"
 
 msgid "Targets"
 msgstr "目标器（Targets）"
+
+msgid "Temp"
+msgstr ""
 
 msgid "Temperature"
 msgstr "温度"
@@ -8813,9 +8824,6 @@ msgstr "上"
 msgid "Update period"
 msgstr "更新间隔"
 
-msgid "Updating in 5 seconds."
-msgstr "五秒内更新"
-
 msgid "Upgrade Firmware"
 msgstr "升级固件"
 
@@ -9409,8 +9417,8 @@ msgstr "更改失败。"
 msgid "chroot() everyone, but root."
 msgstr "chroot() 所有用户，除了 root。"
 
-msgid "day(s)"
-msgstr "天"
+msgid "days"
+msgstr ""
 
 msgid "debug"
 msgstr "调试"
@@ -9439,8 +9447,8 @@ msgstr "最大可设定高电压转换点"
 msgid "greatest settable low voltage transfer point"
 msgstr "最大可设置的低电压转换点"
 
-msgid "hour(s)"
-msgstr "小时"
+msgid "hours"
+msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI 启动器（iSCSI Initiator）"
@@ -9473,8 +9481,11 @@ msgstr "加载/卸载失败。"
 msgid "loader.conf"
 msgstr "loader.conf"
 
-msgid "minute(s)"
-msgstr "分"
+msgid "minutes"
+msgstr ""
+
+msgid "months"
+msgstr ""
 
 msgid "mount"
 msgstr "挂载"
@@ -9519,9 +9530,6 @@ msgstr "修订版本"
 msgid "scan target failed."
 msgstr "扫描目标失败"
 
-msgid "second(s)"
-msgstr "秒"
-
 msgid "seconds"
 msgstr ""
 
@@ -9554,3 +9562,52 @@ msgstr ""
 
 msgid "version:"
 msgstr "版本："
+
+msgid "week days"
+msgstr ""
+
+#~ msgid "CPU frequency"
+#~ msgstr "CPU 频率"
+
+#~ msgid "CPU temperature"
+#~ msgstr "CPU 温度"
+
+#~ msgid "Swap usage"
+#~ msgstr "Swap 使用量"
+
+#~ msgid "Updating in 5 seconds."
+#~ msgstr "五秒内更新"
+
+#~ msgid "day(s)"
+#~ msgstr "天"
+
+#~ msgid "hour(s)"
+#~ msgstr "小时"
+
+#~ msgid "second(s)"
+#~ msgstr "秒"
+
+#~ msgid "CPU usage"
+#~ msgstr "CPU 使用率"
+
+#~ msgid "Disk space usage"
+#~ msgstr "磁盘空间使用情况"
+
+#, php-format
+#~ msgid "Levels (MHz/mW): %s"
+#~ msgstr "水平 (MHz/mW): %s"
+
+#~ msgid "System bios"
+#~ msgstr "系統BIOS"
+
+#~ msgid "System uptime"
+#~ msgstr "系统运行时间"
+
+#~ msgid "minute(s)"
+#~ msgstr "分"
+
+#~ msgid "Memory usage"
+#~ msgstr "内存使用情况"
+
+#~ msgid "System last config change"
+#~ msgstr "系统最后一次配置更改"

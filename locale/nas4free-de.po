@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-03 02:34+0000\n"
+"POT-Creation-Date: 2016-12-06 00:14+0000\n"
 "PO-Revision-Date: 2016-12-03 15:50+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-03 16:04+0000\n"
+"X-Launchpad-Export-Date: 2016-12-05 23:56+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -1329,20 +1329,11 @@ msgstr "CPU Temperatur"
 msgid "CPU Usage"
 msgstr "CPU Auslastung"
 
-msgid "CPU frequency"
-msgstr "Prozessortaktfrequenz"
-
 msgid "CPU frequency:"
 msgstr "CPU Frequenz:"
 
 msgid "CPU load"
 msgstr "CPU-Auslastung"
-
-msgid "CPU temperature"
-msgstr "Prozessortemperatur"
-
-msgid "CPU usage"
-msgstr "Prozessorauslastung"
 
 msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
@@ -1706,6 +1697,12 @@ msgstr ""
 "Konvertiere DOS Attribute in UNIX execution bits, wenn die Funktion 'Store "
 "DOS attributes' deaktivert wird."
 
+msgid "Core"
+msgstr ""
+
+msgid "Core Usage"
+msgstr ""
+
 msgid "Count"
 msgstr "Zähler"
 
@@ -2029,6 +2026,9 @@ msgstr "Datum & Zeit"
 
 msgid "Date format"
 msgstr "Datumsformat"
+
+msgid "Day"
+msgstr ""
 
 msgid "Days"
 msgstr "Tage"
@@ -2497,10 +2497,10 @@ msgstr "Festplatte"
 msgid "Disk Selection"
 msgstr "Festpalttenauswahl"
 
-msgid "Disk Usage"
-msgstr "Festplattenauslastung"
+msgid "Disk Space Usage"
+msgstr ""
 
-msgid "Disk space usage"
+msgid "Disk Usage"
 msgstr "Festplattenauslastung"
 
 msgid "Disks"
@@ -4010,6 +4010,9 @@ msgstr "zuzulassende Hosts"
 msgid "Hosts deny"
 msgstr "abzuweisende Hosts"
 
+msgid "Hour"
+msgstr ""
+
 msgid "Hours"
 msgstr "Stunden"
 
@@ -4627,6 +4630,9 @@ msgstr "Sprache der Displayanzeige"
 msgid "Large read/write"
 msgstr "Large read/write"
 
+msgid "Last Configuration Change"
+msgstr ""
+
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
 "value. Also logs minutes since last test and lifetime number of tests. Raw "
@@ -4690,10 +4696,6 @@ msgstr ""
 
 msgid "Level 64 - Intermediate Power Usage with Standby"
 msgstr "Stufe 64 - Mittlerer Stromverbrauch mit Standby"
-
-#, php-format
-msgid "Levels (MHz/mW): %s"
-msgstr "Niveaus (MHz/mW): %s"
 
 msgid "License"
 msgstr "Lizenz"
@@ -5129,9 +5131,6 @@ msgstr "Speicher in (MiB)"
 msgid "Memory Usage"
 msgstr "Speicherverwendung"
 
-msgid "Memory usage"
-msgstr "Speicherbelegung"
-
 msgid "Message Board"
 msgstr "Forum"
 
@@ -5188,6 +5187,9 @@ msgstr "Minmale gemessene Luftfeuchtigkeit"
 
 msgid "Minimum temperature seen (degrees C)"
 msgstr "Minimale hgemesene Temperatur (in C)"
+
+msgid "Minute"
+msgstr ""
 
 msgid "Minutes"
 msgstr "Minuten"
@@ -6889,8 +6891,14 @@ msgstr "Ereignis suchen"
 msgid "Search for and import all disks found"
 msgstr "Suche und Importiere alle gefundenen Geräte"
 
+msgid "Second"
+msgstr ""
+
 msgid "Secondary"
 msgstr "Sekundärer"
+
+msgid "Seconds"
+msgstr ""
 
 msgid "Secret"
 msgstr "Geheimnis"
@@ -7564,11 +7572,11 @@ msgstr "Swap Information & Status"
 msgid "Swap Memory"
 msgstr "Auslagerungsspeicher"
 
+msgid "Swap Usage"
+msgstr ""
+
 msgid "Swap disabled"
 msgstr "Swap deaktiviert"
-
-msgid "Swap usage"
-msgstr "Nutzungsgrad des Auslagerungsspeichers (Swap)"
 
 msgid "Swedish"
 msgstr "Schwedisch"
@@ -7616,6 +7624,9 @@ msgstr ""
 msgid "System"
 msgstr "System"
 
+msgid "System BIOS"
+msgstr ""
+
 msgid "System Email Report Settings"
 msgstr "Systembericht-Email Einstellung"
 
@@ -7640,17 +7651,17 @@ msgstr "Systemprozesse"
 msgid "System Settings"
 msgstr "Systemeinstellungen"
 
-msgid "System bios"
-msgstr "System-Bios"
+msgid "System Time"
+msgstr ""
+
+msgid "System Uptime"
+msgstr ""
 
 msgid "System events"
 msgstr "Systemereignisse"
 
 msgid "System info"
 msgstr "Systeminformation"
-
-msgid "System last config change"
-msgstr "Letzte Änderung der Systemkonfiguration"
 
 msgid "System log"
 msgstr "System log"
@@ -7663,9 +7674,6 @@ msgstr "Systemzeit"
 
 msgid "System tuning"
 msgstr "Systemfeineinstellungen"
-
-msgid "System uptime"
-msgstr "Systemlaufzeit"
 
 msgid "TCP forwarding"
 msgstr "TCP forwarding"
@@ -7759,6 +7767,9 @@ msgstr ""
 
 msgid "Targets"
 msgstr "Ziele"
+
+msgid "Temp"
+msgstr ""
 
 msgid "Temperature"
 msgstr "Temperatur"
@@ -9665,9 +9676,6 @@ msgstr "Auf"
 msgid "Update period"
 msgstr "Aktualisierungszeitraum"
 
-msgid "Updating in 5 seconds."
-msgstr "Aktualisierung in 5 Sekunden"
-
 msgid "Upgrade Firmware"
 msgstr "Upgrade Firmware"
 
@@ -10334,8 +10342,8 @@ msgstr "Die Änderungen wurden nicht durchgeführt"
 msgid "chroot() everyone, but root."
 msgstr "Wurzel-Verzeichnis für alle Benutzer ändern, bis auf den root."
 
-msgid "day(s)"
-msgstr "Tag(e)"
+msgid "days"
+msgstr ""
 
 msgid "debug"
 msgstr "Fehlersuche"
@@ -10366,8 +10374,8 @@ msgstr "größter einstellbarer maximaler Spannungserhöhungsschwellwert"
 msgid "greatest settable low voltage transfer point"
 msgstr "größter einstellbarer minimaler Spannungserhöhungsschwellwert"
 
-msgid "hour(s)"
-msgstr "Stunde(n)"
+msgid "hours"
+msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI Initiator"
@@ -10400,8 +10408,11 @@ msgstr "iSCSI Target konnte nicht geladen/entladen werden"
 msgid "loader.conf"
 msgstr "loader.conf"
 
-msgid "minute(s)"
-msgstr "Minute(n)"
+msgid "minutes"
+msgstr ""
+
+msgid "months"
+msgstr ""
 
 msgid "mount"
 msgstr "Einhängen"
@@ -10446,9 +10457,6 @@ msgstr "Revision"
 msgid "scan target failed."
 msgstr "Die Überprüfung des Ziels ist fehlgeschlagen."
 
-msgid "second(s)"
-msgstr "Sekunde(n)"
-
 msgid "seconds"
 msgstr "Sekunden"
 
@@ -10482,5 +10490,51 @@ msgstr "Benutzer"
 msgid "version:"
 msgstr "Version:"
 
-#~ msgid "Enable collecting network trafic statistics."
-#~ msgstr "Aktiviere das Sammeln von Netzwerk-Traffic-Werten"
+msgid "week days"
+msgstr ""
+
+#~ msgid "CPU frequency"
+#~ msgstr "Prozessortaktfrequenz"
+
+#~ msgid "CPU temperature"
+#~ msgstr "Prozessortemperatur"
+
+#~ msgid "CPU usage"
+#~ msgstr "Prozessorauslastung"
+
+#~ msgid "Disk space usage"
+#~ msgstr "Festplattenauslastung"
+
+#, php-format
+#~ msgid "Levels (MHz/mW): %s"
+#~ msgstr "Niveaus (MHz/mW): %s"
+
+#~ msgid "Memory usage"
+#~ msgstr "Speicherbelegung"
+
+#~ msgid "Swap usage"
+#~ msgstr "Nutzungsgrad des Auslagerungsspeichers (Swap)"
+
+#~ msgid "Updating in 5 seconds."
+#~ msgstr "Aktualisierung in 5 Sekunden"
+
+#~ msgid "day(s)"
+#~ msgstr "Tag(e)"
+
+#~ msgid "hour(s)"
+#~ msgstr "Stunde(n)"
+
+#~ msgid "minute(s)"
+#~ msgstr "Minute(n)"
+
+#~ msgid "second(s)"
+#~ msgstr "Sekunde(n)"
+
+#~ msgid "System uptime"
+#~ msgstr "Systemlaufzeit"
+
+#~ msgid "System bios"
+#~ msgstr "System-Bios"
+
+#~ msgid "System last config change"
+#~ msgstr "Letzte Änderung der Systemkonfiguration"

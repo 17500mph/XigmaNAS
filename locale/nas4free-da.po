@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-03 02:34+0000\n"
+"POT-Creation-Date: 2016-12-06 00:14+0000\n"
 "PO-Revision-Date: 2016-09-17 16:31+0000\n"
 "Last-Translator: Timm Lagoni <tila@tl-designs.dk>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-03 16:04+0000\n"
+"X-Launchpad-Export-Date: 2016-12-05 23:56+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
@@ -1226,20 +1226,11 @@ msgstr ""
 msgid "CPU Usage"
 msgstr ""
 
-msgid "CPU frequency"
-msgstr "CPU frekens"
-
 msgid "CPU frequency:"
 msgstr "CPU-frekvens:"
 
 msgid "CPU load"
 msgstr "CPU belastning"
-
-msgid "CPU temperature"
-msgstr "CPU temperatur"
-
-msgid "CPU usage"
-msgstr "CPU forbrug"
 
 msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
@@ -1590,6 +1581,12 @@ msgid ""
 "disabled."
 msgstr ""
 
+msgid "Core"
+msgstr ""
+
+msgid "Core Usage"
+msgstr ""
+
 msgid "Count"
 msgstr "Antal"
 
@@ -1894,6 +1891,9 @@ msgid "Date & Time"
 msgstr "Dato & tid"
 
 msgid "Date format"
+msgstr ""
+
+msgid "Day"
 msgstr ""
 
 msgid "Days"
@@ -2344,11 +2344,11 @@ msgstr "Disk"
 msgid "Disk Selection"
 msgstr ""
 
-msgid "Disk Usage"
+msgid "Disk Space Usage"
 msgstr ""
 
-msgid "Disk space usage"
-msgstr "Diskplads forbrug"
+msgid "Disk Usage"
+msgstr ""
 
 msgid "Disks"
 msgstr "Diske"
@@ -3812,6 +3812,9 @@ msgstr "Tilladte værter"
 msgid "Hosts deny"
 msgstr "Nægtede værter"
 
+msgid "Hour"
+msgstr ""
+
 msgid "Hours"
 msgstr "Timer"
 
@@ -4396,6 +4399,9 @@ msgstr "Anvendt sprog på front panel"
 msgid "Large read/write"
 msgstr "Stor læsning/skrivning"
 
+msgid "Last Configuration Change"
+msgstr ""
+
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
 "value. Also logs minutes since last test and lifetime number of tests. Raw "
@@ -4442,10 +4448,6 @@ msgstr ""
 
 msgid "Level 64 - Intermediate Power Usage with Standby"
 msgstr ""
-
-#, php-format
-msgid "Levels (MHz/mW): %s"
-msgstr "Niveauer (MHz/mW): %s"
 
 msgid "License"
 msgstr "Licens"
@@ -4862,9 +4864,6 @@ msgstr ""
 msgid "Memory Usage"
 msgstr ""
 
-msgid "Memory usage"
-msgstr "Hukommelsesforbrug"
-
 msgid "Message Board"
 msgstr ""
 
@@ -4920,6 +4919,9 @@ msgstr "Mindst detekteret fugtighed (procent)"
 
 msgid "Minimum temperature seen (degrees C)"
 msgstr "Mindste temperatur detekteret (grader C)"
+
+msgid "Minute"
+msgstr ""
 
 msgid "Minutes"
 msgstr "Minutter"
@@ -6591,8 +6593,14 @@ msgstr ""
 msgid "Search for and import all disks found"
 msgstr ""
 
+msgid "Second"
+msgstr ""
+
 msgid "Secondary"
 msgstr "Sekundær"
+
+msgid "Seconds"
+msgstr ""
 
 msgid "Secret"
 msgstr "Hemmelighed"
@@ -7226,11 +7234,11 @@ msgstr ""
 msgid "Swap Memory"
 msgstr ""
 
+msgid "Swap Usage"
+msgstr ""
+
 msgid "Swap disabled"
 msgstr "Swap deaktiveret"
-
-msgid "Swap usage"
-msgstr "Swap forbrug"
 
 msgid "Swedish"
 msgstr "Svensk"
@@ -7275,6 +7283,9 @@ msgstr ""
 msgid "System"
 msgstr "System"
 
+msgid "System BIOS"
+msgstr ""
+
 msgid "System Email Report Settings"
 msgstr ""
 
@@ -7299,17 +7310,17 @@ msgstr ""
 msgid "System Settings"
 msgstr ""
 
-msgid "System bios"
-msgstr "System bios"
+msgid "System Time"
+msgstr ""
+
+msgid "System Uptime"
+msgstr ""
 
 msgid "System events"
 msgstr "Systemhændelser"
 
 msgid "System info"
 msgstr "System info"
-
-msgid "System last config change"
-msgstr ""
 
 msgid "System log"
 msgstr "System log"
@@ -7322,9 +7333,6 @@ msgstr "System tid"
 
 msgid "System tuning"
 msgstr "System finjustering"
-
-msgid "System uptime"
-msgstr "System oppetid"
 
 msgid "TCP forwarding"
 msgstr "TCP fremsendelse"
@@ -7418,6 +7426,9 @@ msgstr ""
 
 msgid "Targets"
 msgstr "Mål"
+
+msgid "Temp"
+msgstr ""
 
 msgid "Temperature"
 msgstr "Temperatur"
@@ -9135,9 +9146,6 @@ msgstr "Op"
 msgid "Update period"
 msgstr "Updaterings periode"
 
-msgid "Updating in 5 seconds."
-msgstr "Opdaterer om 5 sekunder."
-
 msgid "Upgrade Firmware"
 msgstr ""
 
@@ -9758,8 +9766,8 @@ msgstr "ændring fejlede."
 msgid "chroot() everyone, but root."
 msgstr "chroot() alle, undtagen root."
 
-msgid "day(s)"
-msgstr "dag(e)"
+msgid "days"
+msgstr ""
 
 msgid "debug"
 msgstr ""
@@ -9788,8 +9796,8 @@ msgstr ""
 msgid "greatest settable low voltage transfer point"
 msgstr ""
 
-msgid "hour(s)"
-msgstr "time(r)"
+msgid "hours"
+msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI initiator"
@@ -9822,8 +9830,11 @@ msgstr "Indlæsning/Udlæsning fejlede."
 msgid "loader.conf"
 msgstr "loader.conf"
 
-msgid "minute(s)"
-msgstr "minut(ter)"
+msgid "minutes"
+msgstr ""
+
+msgid "months"
+msgstr ""
 
 msgid "mount"
 msgstr "mount"
@@ -9868,9 +9879,6 @@ msgstr "revision"
 msgid "scan target failed."
 msgstr "Kunne ikke scanne målet."
 
-msgid "second(s)"
-msgstr "sekund(er)"
-
 msgid "seconds"
 msgstr ""
 
@@ -9903,3 +9911,49 @@ msgstr ""
 
 msgid "version:"
 msgstr "version:"
+
+msgid "week days"
+msgstr ""
+
+#~ msgid "CPU frequency"
+#~ msgstr "CPU frekens"
+
+#~ msgid "CPU temperature"
+#~ msgstr "CPU temperatur"
+
+#~ msgid "CPU usage"
+#~ msgstr "CPU forbrug"
+
+#~ msgid "Disk space usage"
+#~ msgstr "Diskplads forbrug"
+
+#, php-format
+#~ msgid "Levels (MHz/mW): %s"
+#~ msgstr "Niveauer (MHz/mW): %s"
+
+#~ msgid "Memory usage"
+#~ msgstr "Hukommelsesforbrug"
+
+#~ msgid "Swap usage"
+#~ msgstr "Swap forbrug"
+
+#~ msgid "Updating in 5 seconds."
+#~ msgstr "Opdaterer om 5 sekunder."
+
+#~ msgid "day(s)"
+#~ msgstr "dag(e)"
+
+#~ msgid "hour(s)"
+#~ msgstr "time(r)"
+
+#~ msgid "minute(s)"
+#~ msgstr "minut(ter)"
+
+#~ msgid "second(s)"
+#~ msgstr "sekund(er)"
+
+#~ msgid "System uptime"
+#~ msgstr "System oppetid"
+
+#~ msgid "System bios"
+#~ msgstr "System bios"

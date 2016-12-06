@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-03 02:34+0000\n"
-"PO-Revision-Date: 2016-12-03 15:21+0000\n"
+"POT-Creation-Date: 2016-12-06 00:14+0000\n"
+"PO-Revision-Date: 2016-12-05 23:51+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-03 16:04+0000\n"
+"X-Launchpad-Export-Date: 2016-12-05 23:56+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -1323,19 +1323,10 @@ msgstr "CPU Temperatuur"
 msgid "CPU Usage"
 msgstr "CPU Gebruik"
 
-msgid "CPU frequency"
-msgstr "CPU kloksnelheid"
-
 msgid "CPU frequency:"
 msgstr "CPU frequentie:"
 
 msgid "CPU load"
-msgstr "CPU belasting"
-
-msgid "CPU temperature"
-msgstr "CPU temperatuur"
-
-msgid "CPU usage"
 msgstr "CPU belasting"
 
 msgid ""
@@ -1700,6 +1691,12 @@ msgstr ""
 "Omzetten DOS attributen naar UNIX execution bitten indien Store DOS "
 "attributen is uitgeschakeld."
 
+msgid "Core"
+msgstr "Core"
+
+msgid "Core Usage"
+msgstr "Core Gebruik"
+
 msgid "Count"
 msgstr "Aantal"
 
@@ -2063,6 +2060,9 @@ msgstr "Datum & Tijd"
 
 msgid "Date format"
 msgstr "Datumformaat"
+
+msgid "Day"
+msgstr "Dag"
 
 msgid "Days"
 msgstr "Dagen"
@@ -2533,11 +2533,11 @@ msgstr "Schijf"
 msgid "Disk Selection"
 msgstr "Schijf Selectie"
 
+msgid "Disk Space Usage"
+msgstr "Schijfruimte Gebruik"
+
 msgid "Disk Usage"
 msgstr "Schijfgebruik"
-
-msgid "Disk space usage"
-msgstr "Schijfruimte gebruik"
 
 msgid "Disks"
 msgstr "Schijven"
@@ -4065,6 +4065,9 @@ msgstr "Hosten toestaan"
 msgid "Hosts deny"
 msgstr "Hosten afwijzen"
 
+msgid "Hour"
+msgstr "Uur"
+
 msgid "Hours"
 msgstr "Uren"
 
@@ -4683,6 +4686,9 @@ msgstr "Taal die wordt gebruikt op het voorpaneel"
 msgid "Large read/write"
 msgstr "Groot lezen/schrijven"
 
+msgid "Last Configuration Change"
+msgstr "Systeem configuratiewijziging"
+
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
 "value. Also logs minutes since last test and lifetime number of tests. Raw "
@@ -4740,10 +4746,6 @@ msgstr "Niveau 254 - Maximale Prestaties, Maximaal Energieverbruik"
 
 msgid "Level 64 - Intermediate Power Usage with Standby"
 msgstr "Niveau 64 - Intermediair Energieverbruik met Standby"
-
-#, php-format
-msgid "Levels (MHz/mW): %s"
-msgstr "Stappen (MHz/mW): %s"
 
 msgid "License"
 msgstr "Licentie"
@@ -5182,9 +5184,6 @@ msgstr "Geheugen (MiB)"
 msgid "Memory Usage"
 msgstr "Geheugengebruik"
 
-msgid "Memory usage"
-msgstr "Geheugen gebruik"
-
 msgid "Message Board"
 msgstr "Berichten"
 
@@ -5242,6 +5241,9 @@ msgstr "Minimum relatieve luchtvochtigheid gezien (procent)"
 
 msgid "Minimum temperature seen (degrees C)"
 msgstr "Minimum temperatuur gezien (graden C)"
+
+msgid "Minute"
+msgstr "Minuut"
 
 msgid "Minutes"
 msgstr "Minuten"
@@ -6954,8 +6956,14 @@ msgstr "Zoek gebeurtenis"
 msgid "Search for and import all disks found"
 msgstr "Zoek en importeer alle gevonden schijven"
 
+msgid "Second"
+msgstr "Seconde"
+
 msgid "Secondary"
 msgstr "Secundair"
+
+msgid "Seconds"
+msgstr "Seconden"
 
 msgid "Secret"
 msgstr "Wachtwoord"
@@ -7635,11 +7643,11 @@ msgstr "Swap Informatie & Status"
 msgid "Swap Memory"
 msgstr "Swapgeheugen"
 
+msgid "Swap Usage"
+msgstr "Wisselbestand Gebruik"
+
 msgid "Swap disabled"
 msgstr "Het wisselbestand is uitgeschakeld"
-
-msgid "Swap usage"
-msgstr "Wisselbestand gebruik"
 
 msgid "Swedish"
 msgstr "Zweeds"
@@ -7687,6 +7695,9 @@ msgstr ""
 msgid "System"
 msgstr "Systeem"
 
+msgid "System BIOS"
+msgstr "Systeem BIOS"
+
 msgid "System Email Report Settings"
 msgstr "Systeem E-mail Repportage Instellingen"
 
@@ -7711,17 +7722,17 @@ msgstr "Systeemprocessen"
 msgid "System Settings"
 msgstr "Systeem Instellingen"
 
-msgid "System bios"
-msgstr "Systeem bios"
+msgid "System Time"
+msgstr "Systeemtijd"
+
+msgid "System Uptime"
+msgstr "Bedrijfstijd"
 
 msgid "System events"
 msgstr "Systeem gebeurtenissen"
 
 msgid "System info"
 msgstr "Systeem-info"
-
-msgid "System last config change"
-msgstr "Systeem configuratiewijziging"
 
 msgid "System log"
 msgstr "Systeem log"
@@ -7734,9 +7745,6 @@ msgstr "Systeemtijd"
 
 msgid "System tuning"
 msgstr "Systeem optimalisatie"
-
-msgid "System uptime"
-msgstr "Systeem beschikbaar"
 
 msgid "TCP forwarding"
 msgstr "TCP forwarding"
@@ -7830,6 +7838,9 @@ msgstr ""
 
 msgid "Targets"
 msgstr "Doelen"
+
+msgid "Temp"
+msgstr "Temp"
 
 msgid "Temperature"
 msgstr "Temperatuur"
@@ -9725,9 +9736,6 @@ msgstr "Boven"
 msgid "Update period"
 msgstr "Update periode"
 
-msgid "Updating in 5 seconds."
-msgstr "Bijwerken in 5 seconden"
-
 msgid "Upgrade Firmware"
 msgstr "Update Firmware"
 
@@ -10392,8 +10400,8 @@ msgstr "wijziging mislukt."
 msgid "chroot() everyone, but root."
 msgstr "chroot() iedereen, maar niet de root."
 
-msgid "day(s)"
-msgstr "dag(en)"
+msgid "days"
+msgstr "dagen"
 
 msgid "debug"
 msgstr "foutopsporing"
@@ -10424,8 +10432,8 @@ msgstr "grootste instelbare hoogspanning overschakelpunt"
 msgid "greatest settable low voltage transfer point"
 msgstr "grootste instelbare laagspanning overschakelpunt"
 
-msgid "hour(s)"
-msgstr "(u)ur(en)"
+msgid "hours"
+msgstr "uren"
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI Initiator"
@@ -10458,8 +10466,11 @@ msgstr "load/unload mislukt."
 msgid "loader.conf"
 msgstr "loader.conf"
 
-msgid "minute(s)"
-msgstr "minu(u)t(en)"
+msgid "minutes"
+msgstr "minuten"
+
+msgid "months"
+msgstr "maanden"
 
 msgid "mount"
 msgstr "aankoppelen"
@@ -10504,9 +10515,6 @@ msgstr "revisie"
 msgid "scan target failed."
 msgstr "doel scannen is mislukt."
 
-msgid "second(s)"
-msgstr "seconde(n)"
-
 msgid "seconds"
 msgstr "seconden"
 
@@ -10540,5 +10548,51 @@ msgstr "gebruiker"
 msgid "version:"
 msgstr "versie:"
 
-#~ msgid "Enable collecting network trafic statistics."
-#~ msgstr "Inschakelen verzamelen van netwerkverkeer statistieken."
+msgid "week days"
+msgstr "weekdagen"
+
+#~ msgid "CPU frequency"
+#~ msgstr "CPU kloksnelheid"
+
+#~ msgid "CPU temperature"
+#~ msgstr "CPU temperatuur"
+
+#~ msgid "CPU usage"
+#~ msgstr "CPU belasting"
+
+#~ msgid "Disk space usage"
+#~ msgstr "Schijfruimte gebruik"
+
+#, php-format
+#~ msgid "Levels (MHz/mW): %s"
+#~ msgstr "Stappen (MHz/mW): %s"
+
+#~ msgid "Swap usage"
+#~ msgstr "Wisselbestand gebruik"
+
+#~ msgid "day(s)"
+#~ msgstr "dag(en)"
+
+#~ msgid "hour(s)"
+#~ msgstr "(u)ur(en)"
+
+#~ msgid "minute(s)"
+#~ msgstr "minu(u)t(en)"
+
+#~ msgid "second(s)"
+#~ msgstr "seconde(n)"
+
+#~ msgid "System bios"
+#~ msgstr "Systeem bios"
+
+#~ msgid "Memory usage"
+#~ msgstr "Geheugen gebruik"
+
+#~ msgid "System uptime"
+#~ msgstr "Systeem beschikbaar"
+
+#~ msgid "Updating in 5 seconds."
+#~ msgstr "Bijwerken in 5 seconden"
+
+#~ msgid "System last config change"
+#~ msgstr "Systeem configuratiewijziging"

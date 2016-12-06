@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-03 02:34+0000\n"
+"POT-Creation-Date: 2016-12-06 00:14+0000\n"
 "PO-Revision-Date: 2015-06-11 17:41+0000\n"
 "Last-Translator: Flavio Peinado <flavio@peinado.com.br>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-03 16:04+0000\n"
+"X-Launchpad-Export-Date: 2016-12-05 23:57+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "X-Poedit-Country: Brazilian Portuguese\n"
 "Language: \n"
@@ -1243,20 +1243,11 @@ msgstr ""
 msgid "CPU Usage"
 msgstr ""
 
-msgid "CPU frequency"
-msgstr "Frequência da CPU"
-
 msgid "CPU frequency:"
 msgstr "Frequência da CPU:"
 
 msgid "CPU load"
 msgstr "Carga da CPU"
-
-msgid "CPU temperature"
-msgstr "Temperatura da CPU"
-
-msgid "CPU usage"
-msgstr "Uso da CPU"
 
 msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
@@ -1611,6 +1602,12 @@ msgid ""
 "disabled."
 msgstr ""
 
+msgid "Core"
+msgstr ""
+
+msgid "Core Usage"
+msgstr ""
+
 msgid "Count"
 msgstr "Contagem"
 
@@ -1913,6 +1910,9 @@ msgid "Date & Time"
 msgstr "Data & Hora"
 
 msgid "Date format"
+msgstr ""
+
+msgid "Day"
 msgstr ""
 
 msgid "Days"
@@ -2363,11 +2363,11 @@ msgstr "Disco"
 msgid "Disk Selection"
 msgstr ""
 
-msgid "Disk Usage"
+msgid "Disk Space Usage"
 msgstr ""
 
-msgid "Disk space usage"
-msgstr "Espaço utilizado no disco"
+msgid "Disk Usage"
+msgstr ""
 
 msgid "Disks"
 msgstr "Discos"
@@ -3839,6 +3839,9 @@ msgstr "Hosts permitidos"
 msgid "Hosts deny"
 msgstr "Hosts negados"
 
+msgid "Hour"
+msgstr ""
+
 msgid "Hours"
 msgstr "Horas"
 
@@ -4438,6 +4441,9 @@ msgstr "Linguagem para usar no painel frontal"
 msgid "Large read/write"
 msgstr "Leitura/Escrita em blocos grandes"
 
+msgid "Last Configuration Change"
+msgstr ""
+
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
 "value. Also logs minutes since last test and lifetime number of tests. Raw "
@@ -4484,10 +4490,6 @@ msgstr ""
 
 msgid "Level 64 - Intermediate Power Usage with Standby"
 msgstr ""
-
-#, php-format
-msgid "Levels (MHz/mW): %s"
-msgstr "Níveis (MHz/mW): %s"
 
 msgid "License"
 msgstr "Licença"
@@ -4911,9 +4913,6 @@ msgstr ""
 msgid "Memory Usage"
 msgstr ""
 
-msgid "Memory usage"
-msgstr "Uso da Memória"
-
 msgid "Message Board"
 msgstr ""
 
@@ -4969,6 +4968,9 @@ msgstr "Umidade relativa mínima vista (porcentagem)"
 
 msgid "Minimum temperature seen (degrees C)"
 msgstr "Temperatura mínima vista (graus C)"
+
+msgid "Minute"
+msgstr ""
 
 msgid "Minutes"
 msgstr "Minutos"
@@ -6643,8 +6645,14 @@ msgstr ""
 msgid "Search for and import all disks found"
 msgstr ""
 
+msgid "Second"
+msgstr ""
+
 msgid "Secondary"
 msgstr "Secundário"
+
+msgid "Seconds"
+msgstr ""
 
 msgid "Secret"
 msgstr "Senha"
@@ -7290,11 +7298,11 @@ msgstr ""
 msgid "Swap Memory"
 msgstr ""
 
+msgid "Swap Usage"
+msgstr ""
+
 msgid "Swap disabled"
 msgstr "Swap desativado"
-
-msgid "Swap usage"
-msgstr "Utilização do swap"
 
 msgid "Swedish"
 msgstr "Sueco"
@@ -7342,6 +7350,9 @@ msgstr ""
 msgid "System"
 msgstr "Sistema"
 
+msgid "System BIOS"
+msgstr ""
+
 msgid "System Email Report Settings"
 msgstr ""
 
@@ -7366,17 +7377,17 @@ msgstr ""
 msgid "System Settings"
 msgstr ""
 
-msgid "System bios"
-msgstr "Bios do sistema"
+msgid "System Time"
+msgstr ""
+
+msgid "System Uptime"
+msgstr ""
 
 msgid "System events"
 msgstr "Eventos do sistema"
 
 msgid "System info"
 msgstr "Info do Sistema"
-
-msgid "System last config change"
-msgstr ""
 
 msgid "System log"
 msgstr "Logs do Sistema"
@@ -7389,9 +7400,6 @@ msgstr "Horário do sistema"
 
 msgid "System tuning"
 msgstr "Ajustes do sistema"
-
-msgid "System uptime"
-msgstr "Tempo ativo"
 
 msgid "TCP forwarding"
 msgstr "Encaminhamento TCP"
@@ -7486,6 +7494,9 @@ msgstr ""
 
 msgid "Targets"
 msgstr "Targets"
+
+msgid "Temp"
+msgstr ""
 
 msgid "Temperature"
 msgstr "Temperatura"
@@ -9238,9 +9249,6 @@ msgstr "Para cima"
 msgid "Update period"
 msgstr "Período de atualização"
 
-msgid "Updating in 5 seconds."
-msgstr "Atualizando em 5 segundos."
-
 msgid "Upgrade Firmware"
 msgstr ""
 
@@ -9867,8 +9875,8 @@ msgstr "alteração falhou."
 msgid "chroot() everyone, but root."
 msgstr "chroot() todos, exceto root."
 
-msgid "day(s)"
-msgstr "dia(s)"
+msgid "days"
+msgstr ""
 
 msgid "debug"
 msgstr ""
@@ -9897,8 +9905,8 @@ msgstr "ajuste de maior ponto de transferência para alta tensão"
 msgid "greatest settable low voltage transfer point"
 msgstr "ajuste de maior ponto de transferência para baixa tensão"
 
-msgid "hour(s)"
-msgstr "hora(s)"
+msgid "hours"
+msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI Initiator"
@@ -9931,8 +9939,11 @@ msgstr "Carga/descarga falhou."
 msgid "loader.conf"
 msgstr "loader.conf"
 
-msgid "minute(s)"
-msgstr "minuto(s)"
+msgid "minutes"
+msgstr ""
+
+msgid "months"
+msgstr ""
 
 msgid "mount"
 msgstr "montar"
@@ -9977,9 +9988,6 @@ msgstr "revisão"
 msgid "scan target failed."
 msgstr "scan target falhou."
 
-msgid "second(s)"
-msgstr "segundo(s)"
-
 msgid "seconds"
 msgstr ""
 
@@ -10012,3 +10020,49 @@ msgstr ""
 
 msgid "version:"
 msgstr "versão:"
+
+msgid "week days"
+msgstr ""
+
+#~ msgid "CPU frequency"
+#~ msgstr "Frequência da CPU"
+
+#~ msgid "CPU temperature"
+#~ msgstr "Temperatura da CPU"
+
+#~ msgid "CPU usage"
+#~ msgstr "Uso da CPU"
+
+#, php-format
+#~ msgid "Levels (MHz/mW): %s"
+#~ msgstr "Níveis (MHz/mW): %s"
+
+#~ msgid "Memory usage"
+#~ msgstr "Uso da Memória"
+
+#~ msgid "Swap usage"
+#~ msgstr "Utilização do swap"
+
+#~ msgid "Updating in 5 seconds."
+#~ msgstr "Atualizando em 5 segundos."
+
+#~ msgid "day(s)"
+#~ msgstr "dia(s)"
+
+#~ msgid "hour(s)"
+#~ msgstr "hora(s)"
+
+#~ msgid "minute(s)"
+#~ msgstr "minuto(s)"
+
+#~ msgid "second(s)"
+#~ msgstr "segundo(s)"
+
+#~ msgid "Disk space usage"
+#~ msgstr "Espaço utilizado no disco"
+
+#~ msgid "System uptime"
+#~ msgstr "Tempo ativo"
+
+#~ msgid "System bios"
+#~ msgstr "Bios do sistema"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-03 02:34+0000\n"
+"POT-Creation-Date: 2016-12-06 00:14+0000\n"
 "PO-Revision-Date: 2016-12-03 15:54+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-03 16:04+0000\n"
+"X-Launchpad-Export-Date: 2016-12-05 23:57+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -1294,20 +1294,11 @@ msgstr "Processzorhőmérséklet"
 msgid "CPU Usage"
 msgstr "Processzorhasználat"
 
-msgid "CPU frequency"
-msgstr "CPU (processzor) frekvencia"
-
 msgid "CPU frequency:"
 msgstr "Processzor-frekvenciák:"
 
 msgid "CPU load"
 msgstr "CPU használat"
-
-msgid "CPU temperature"
-msgstr "CPU (processzor) hőmérséklet"
-
-msgid "CPU usage"
-msgstr "CPU (processzor) kihasználtság"
 
 msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
@@ -1666,6 +1657,12 @@ msgstr ""
 "DOS attribútumok konvertálása UNIX futtatható bitekké, ha a DOS attribútumok "
 "tárolása nincs engedélyezve."
 
+msgid "Core"
+msgstr ""
+
+msgid "Core Usage"
+msgstr ""
+
 msgid "Count"
 msgstr "Számláló"
 
@@ -2006,6 +2003,9 @@ msgstr "Dátum & idő"
 
 msgid "Date format"
 msgstr "Dátumformátum"
+
+msgid "Day"
+msgstr ""
 
 msgid "Days"
 msgstr "Nap"
@@ -2472,10 +2472,10 @@ msgstr "Lemez"
 msgid "Disk Selection"
 msgstr "Lemez kiválasztása"
 
-msgid "Disk Usage"
-msgstr "Lemezhasználat"
+msgid "Disk Space Usage"
+msgstr ""
 
-msgid "Disk space usage"
+msgid "Disk Usage"
 msgstr "Lemezhasználat"
 
 msgid "Disks"
@@ -3986,6 +3986,9 @@ msgstr "Állomások engedélyezése"
 msgid "Hosts deny"
 msgstr "Állomások tiltása"
 
+msgid "Hour"
+msgstr ""
+
 msgid "Hours"
 msgstr "Óra"
 
@@ -4593,6 +4596,9 @@ msgstr "Első panelen használt nyelv"
 msgid "Large read/write"
 msgstr "Nagy olvasás/írás"
 
+msgid "Last Configuration Change"
+msgstr ""
+
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
 "value. Also logs minutes since last test and lifetime number of tests. Raw "
@@ -4655,10 +4661,6 @@ msgstr "254-es szint - Maximális teljesítmény, maximális energiafelhasznál�
 
 msgid "Level 64 - Intermediate Power Usage with Standby"
 msgstr "192-es szint - Közbülső energiafelhasználás készenléti üzemmóddal"
-
-#, php-format
-msgid "Levels (MHz/mW): %s"
-msgstr "Szintek (MHz/mW): %s"
 
 msgid "License"
 msgstr "Licensz"
@@ -5081,9 +5083,6 @@ msgstr "Memória (MiB)"
 msgid "Memory Usage"
 msgstr "Memóriafelhasználás"
 
-msgid "Memory usage"
-msgstr "Memóriahasználat"
-
 msgid "Message Board"
 msgstr "Üzenőfal"
 
@@ -5143,6 +5142,9 @@ msgstr "Valaha legkisebb relatív páratartalom (százalék)"
 
 msgid "Minimum temperature seen (degrees C)"
 msgstr "Valaha minimum hőmérséklet (fok Celsius)"
+
+msgid "Minute"
+msgstr ""
 
 msgid "Minutes"
 msgstr "Perc"
@@ -6853,8 +6855,14 @@ msgstr "Esemény keresése"
 msgid "Search for and import all disks found"
 msgstr "Keresés és összes talált eszköz importálása"
 
+msgid "Second"
+msgstr ""
+
 msgid "Secondary"
 msgstr "Másodlagos"
+
+msgid "Seconds"
+msgstr ""
 
 msgid "Secret"
 msgstr "Titkos"
@@ -7529,11 +7537,11 @@ msgstr "Cserehely információ & állapot"
 msgid "Swap Memory"
 msgstr "Cserehely memória"
 
+msgid "Swap Usage"
+msgstr ""
+
 msgid "Swap disabled"
 msgstr "Cserehely kikapcsolva"
-
-msgid "Swap usage"
-msgstr "Cserehely használata"
 
 msgid "Swedish"
 msgstr "Svéd"
@@ -7581,6 +7589,9 @@ msgstr ""
 msgid "System"
 msgstr "Rendszer"
 
+msgid "System BIOS"
+msgstr ""
+
 msgid "System Email Report Settings"
 msgstr "Rendszer e-mail jelentések beállításai"
 
@@ -7605,17 +7616,17 @@ msgstr "Rendszerfolyamatok"
 msgid "System Settings"
 msgstr "Rendszerbeállítások"
 
-msgid "System bios"
-msgstr "BIOS"
+msgid "System Time"
+msgstr ""
+
+msgid "System Uptime"
+msgstr ""
 
 msgid "System events"
 msgstr "Rendszeresemények"
 
 msgid "System info"
 msgstr "Rendszerinformáció"
-
-msgid "System last config change"
-msgstr "Utolsó rendszermódosítás ideje"
 
 msgid "System log"
 msgstr "Rendszernapló"
@@ -7628,9 +7639,6 @@ msgstr "Rendszeridő"
 
 msgid "System tuning"
 msgstr "Rendszer tuning"
-
-msgid "System uptime"
-msgstr "Működési idő"
 
 msgid "TCP forwarding"
 msgstr "TCP továbbítás"
@@ -7723,6 +7731,9 @@ msgstr "Cél oldali felhasználónév. Ez alapértelmezetten a kezdeményező ne
 
 msgid "Targets"
 msgstr "Célok"
+
+msgid "Temp"
+msgstr ""
 
 msgid "Temperature"
 msgstr "Hőmérséklet"
@@ -9559,9 +9570,6 @@ msgstr "Felfelé"
 msgid "Update period"
 msgstr "Frissítési időköz"
 
-msgid "Updating in 5 seconds."
-msgstr "Frissítés 5 másodpercen belül."
-
 msgid "Upgrade Firmware"
 msgstr "Firmware frissítése"
 
@@ -10208,8 +10216,8 @@ msgstr "változtatás sikertelen"
 msgid "chroot() everyone, but root."
 msgstr "chroot() mindenki, kivéve root."
 
-msgid "day(s)"
-msgstr "nap"
+msgid "days"
+msgstr ""
 
 msgid "debug"
 msgstr "hibakeresés"
@@ -10240,8 +10248,8 @@ msgstr "legnagyobb beállítható magas feszültségű átviteli pont"
 msgid "greatest settable low voltage transfer point"
 msgstr "legnagyobb beállítható alacsony feszültségű átviteli pont"
 
-msgid "hour(s)"
-msgstr "óra"
+msgid "hours"
+msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI Kezdeményező"
@@ -10274,8 +10282,11 @@ msgstr "töltési hiba"
 msgid "loader.conf"
 msgstr "loader.conf"
 
-msgid "minute(s)"
-msgstr "perc"
+msgid "minutes"
+msgstr ""
+
+msgid "months"
+msgstr ""
 
 msgid "mount"
 msgstr "csatolás"
@@ -10320,9 +10331,6 @@ msgstr "revízió"
 msgid "scan target failed."
 msgstr "cél keresés sikertelen."
 
-msgid "second(s)"
-msgstr "másodperc"
-
 msgid "seconds"
 msgstr "másodperc"
 
@@ -10356,5 +10364,51 @@ msgstr "felhasználó"
 msgid "version:"
 msgstr "verzió:"
 
-#~ msgid "Enable collecting network trafic statistics."
-#~ msgstr "Hálózati forgalom statisztika gyűjtésének engedélyezése."
+msgid "week days"
+msgstr ""
+
+#~ msgid "CPU frequency"
+#~ msgstr "CPU (processzor) frekvencia"
+
+#~ msgid "CPU temperature"
+#~ msgstr "CPU (processzor) hőmérséklet"
+
+#~ msgid "CPU usage"
+#~ msgstr "CPU (processzor) kihasználtság"
+
+#~ msgid "Disk space usage"
+#~ msgstr "Lemezhasználat"
+
+#, php-format
+#~ msgid "Levels (MHz/mW): %s"
+#~ msgstr "Szintek (MHz/mW): %s"
+
+#~ msgid "Swap usage"
+#~ msgstr "Cserehely használata"
+
+#~ msgid "Updating in 5 seconds."
+#~ msgstr "Frissítés 5 másodpercen belül."
+
+#~ msgid "day(s)"
+#~ msgstr "nap"
+
+#~ msgid "hour(s)"
+#~ msgstr "óra"
+
+#~ msgid "minute(s)"
+#~ msgstr "perc"
+
+#~ msgid "second(s)"
+#~ msgstr "másodperc"
+
+#~ msgid "Memory usage"
+#~ msgstr "Memóriahasználat"
+
+#~ msgid "System bios"
+#~ msgstr "BIOS"
+
+#~ msgid "System uptime"
+#~ msgstr "Működési idő"
+
+#~ msgid "System last config change"
+#~ msgstr "Utolsó rendszermódosítás ideje"

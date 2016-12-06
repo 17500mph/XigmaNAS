@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-03 02:34+0000\n"
+"POT-Creation-Date: 2016-12-06 00:14+0000\n"
 "PO-Revision-Date: 2016-11-27 15:51+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-03 16:04+0000\n"
+"X-Launchpad-Export-Date: 2016-12-05 23:56+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -1311,20 +1311,11 @@ msgstr "Teplota procesoru"
 msgid "CPU Usage"
 msgstr "Využití procesoru"
 
-msgid "CPU frequency"
-msgstr "Frekvence procesoru"
-
 msgid "CPU frequency:"
 msgstr "Frekvence procesoru:"
 
 msgid "CPU load"
 msgstr "Vytížení procesoru"
-
-msgid "CPU temperature"
-msgstr "Teplota procesoru"
-
-msgid "CPU usage"
-msgstr "Využití procesoru"
 
 msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
@@ -1690,6 +1681,12 @@ msgstr ""
 "V případě, že není zapnuto uchovávání atributů ze systému DOS, převádět je "
 "na unixové právo spouštění."
 
+msgid "Core"
+msgstr ""
+
+msgid "Core Usage"
+msgstr ""
+
 msgid "Count"
 msgstr "Počet"
 
@@ -2052,6 +2049,9 @@ msgstr "Datum a čas"
 
 msgid "Date format"
 msgstr "Formát datumu"
+
+msgid "Day"
+msgstr ""
 
 msgid "Days"
 msgstr "Dny"
@@ -2511,11 +2511,11 @@ msgstr "Disk"
 msgid "Disk Selection"
 msgstr "Výběr disku"
 
+msgid "Disk Space Usage"
+msgstr ""
+
 msgid "Disk Usage"
 msgstr "Využití disku"
-
-msgid "Disk space usage"
-msgstr "Obsazený prostor"
 
 msgid "Disks"
 msgstr "Disky"
@@ -4029,6 +4029,9 @@ msgstr "Stroje, kterým umožnit přístup"
 msgid "Hosts deny"
 msgstr "Stroje, kterým odepřít přístup"
 
+msgid "Hour"
+msgstr ""
+
 msgid "Hours"
 msgstr "Hodiny"
 
@@ -4642,6 +4645,9 @@ msgstr "Jazyk pro zobrazení na čelním panelu"
 msgid "Large read/write"
 msgstr "Velké čtení/zápis"
 
+msgid "Last Configuration Change"
+msgstr ""
+
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
 "value. Also logs minutes since last test and lifetime number of tests. Raw "
@@ -4705,10 +4711,6 @@ msgstr "Úroveň 254 – nejvyšší výkon, nejvyšší spotřeba energie"
 
 msgid "Level 64 - Intermediate Power Usage with Standby"
 msgstr "Úroveň 64 – střední spotřeba energie s pohotovostním režimem"
-
-#, php-format
-msgid "Levels (MHz/mW): %s"
-msgstr "Úrovně (MHz/mW): %s"
 
 msgid "License"
 msgstr "Licence"
@@ -5148,9 +5150,6 @@ msgstr "Paměť (MiB)"
 msgid "Memory Usage"
 msgstr ""
 
-msgid "Memory usage"
-msgstr "Využití operační paměti"
-
 msgid "Message Board"
 msgstr "Vzkazník"
 
@@ -5210,6 +5209,9 @@ msgstr "Nejnižší zaznamenaná relativní vlhkost (procenta)"
 
 msgid "Minimum temperature seen (degrees C)"
 msgstr "Nejnižší zaznamenaná teplota (stupně Celsia)"
+
+msgid "Minute"
+msgstr ""
 
 msgid "Minutes"
 msgstr "Minuty"
@@ -6915,8 +6917,14 @@ msgstr "Vyhledat událost"
 msgid "Search for and import all disks found"
 msgstr "Vyhledat a importovat veškeré nalezené disky"
 
+msgid "Second"
+msgstr ""
+
 msgid "Secondary"
 msgstr "Vedlejší"
+
+msgid "Seconds"
+msgstr ""
 
 msgid "Secret"
 msgstr "Heslo"
@@ -7574,11 +7582,11 @@ msgstr "Odkládací prostor – informace a stav"
 msgid "Swap Memory"
 msgstr "Odkládací prostor"
 
+msgid "Swap Usage"
+msgstr ""
+
 msgid "Swap disabled"
 msgstr "Stránkování na disk vypnuto"
-
-msgid "Swap usage"
-msgstr "Využití odkládacího prostoru stránek"
 
 msgid "Swedish"
 msgstr "švédština"
@@ -7626,6 +7634,9 @@ msgstr ""
 msgid "System"
 msgstr "Počítač"
 
+msgid "System BIOS"
+msgstr ""
+
 msgid "System Email Report Settings"
 msgstr ""
 
@@ -7650,17 +7661,17 @@ msgstr ""
 msgid "System Settings"
 msgstr "Nastavení systému"
 
-msgid "System bios"
-msgstr "BIOS/(U)EFI"
+msgid "System Time"
+msgstr ""
+
+msgid "System Uptime"
+msgstr ""
 
 msgid "System events"
 msgstr "Systémové události"
 
 msgid "System info"
 msgstr "Informace o systému"
-
-msgid "System last config change"
-msgstr "Změna v nastaveních byla naposledy provedena v(e)"
 
 msgid "System log"
 msgstr "Záznam událostí v systému"
@@ -7673,9 +7684,6 @@ msgstr "Systémový čas"
 
 msgid "System tuning"
 msgstr "Vyladění systému"
-
-msgid "System uptime"
-msgstr "Jak dlouho je systém spuštěný (uptime)"
 
 msgid "TCP forwarding"
 msgstr "Přesměrování TCP"
@@ -7770,6 +7778,9 @@ msgstr ""
 
 msgid "Targets"
 msgstr "Cíle"
+
+msgid "Temp"
+msgstr ""
 
 msgid "Temperature"
 msgstr "Teplota"
@@ -9626,9 +9637,6 @@ msgstr "Funkční"
 msgid "Update period"
 msgstr "Interval aktualizace"
 
-msgid "Updating in 5 seconds."
-msgstr "Aktualizace začne za 5 sekund."
-
 msgid "Upgrade Firmware"
 msgstr "Aktualizovat firmware"
 
@@ -10278,8 +10286,8 @@ msgstr "změna se nezdařila."
 msgid "chroot() everyone, but root."
 msgstr "použít funkci chroot() pro každého s výjimkou správce systému."
 
-msgid "day(s)"
-msgstr "dnů"
+msgid "days"
+msgstr ""
 
 msgid "debug"
 msgstr "ladění"
@@ -10314,8 +10322,8 @@ msgstr ""
 "až jak „vysoko“ lze nastavit hranici podpětí, při poklesu pod kterou "
 "přepnout na akumulátory"
 
-msgid "hour(s)"
-msgstr "hodin"
+msgid "hours"
+msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI iniciátor"
@@ -10348,8 +10356,11 @@ msgstr "načtení/uvolnění se nezdařilo."
 msgid "loader.conf"
 msgstr "loader.conf"
 
-msgid "minute(s)"
-msgstr "minut"
+msgid "minutes"
+msgstr ""
+
+msgid "months"
+msgstr ""
 
 msgid "mount"
 msgstr "připojit (mount)"
@@ -10394,9 +10405,6 @@ msgstr "revize"
 msgid "scan target failed."
 msgstr "skenování cíle se nezdařilo."
 
-msgid "second(s)"
-msgstr "sekund"
-
 msgid "seconds"
 msgstr ""
 
@@ -10433,3 +10441,52 @@ msgstr "uživatel"
 
 msgid "version:"
 msgstr "verze:"
+
+msgid "week days"
+msgstr ""
+
+#~ msgid "CPU frequency"
+#~ msgstr "Frekvence procesoru"
+
+#~ msgid "CPU temperature"
+#~ msgstr "Teplota procesoru"
+
+#~ msgid "CPU usage"
+#~ msgstr "Využití procesoru"
+
+#~ msgid "Disk space usage"
+#~ msgstr "Obsazený prostor"
+
+#, php-format
+#~ msgid "Levels (MHz/mW): %s"
+#~ msgstr "Úrovně (MHz/mW): %s"
+
+#~ msgid "hour(s)"
+#~ msgstr "hodin"
+
+#~ msgid "day(s)"
+#~ msgstr "dnů"
+
+#~ msgid "Updating in 5 seconds."
+#~ msgstr "Aktualizace začne za 5 sekund."
+
+#~ msgid "Swap usage"
+#~ msgstr "Využití odkládacího prostoru stránek"
+
+#~ msgid "minute(s)"
+#~ msgstr "minut"
+
+#~ msgid "second(s)"
+#~ msgstr "sekund"
+
+#~ msgid "Memory usage"
+#~ msgstr "Využití operační paměti"
+
+#~ msgid "System bios"
+#~ msgstr "BIOS/(U)EFI"
+
+#~ msgid "System uptime"
+#~ msgstr "Jak dlouho je systém spuštěný (uptime)"
+
+#~ msgid "System last config change"
+#~ msgstr "Změna v nastaveních byla naposledy provedena v(e)"

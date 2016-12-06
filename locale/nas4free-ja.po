@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-03 02:34+0000\n"
+"POT-Creation-Date: 2016-12-06 00:14+0000\n"
 "PO-Revision-Date: 2016-11-21 20:27+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-03 16:04+0000\n"
+"X-Launchpad-Export-Date: 2016-12-05 23:57+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -1214,20 +1214,11 @@ msgstr ""
 msgid "CPU Usage"
 msgstr ""
 
-msgid "CPU frequency"
-msgstr "CPU 周波数"
-
 msgid "CPU frequency:"
 msgstr "CPU 周波数："
 
 msgid "CPU load"
 msgstr "CPU 負荷"
-
-msgid "CPU temperature"
-msgstr "CPU 温度"
-
-msgid "CPU usage"
-msgstr "CPU 使用率"
 
 msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
@@ -1564,6 +1555,12 @@ msgid ""
 "disabled."
 msgstr "DOS属性の保存が無効な場合にDOS属性をUNIX実行ビットに割り当てます。"
 
+msgid "Core"
+msgstr ""
+
+msgid "Core Usage"
+msgstr ""
+
 msgid "Count"
 msgstr "カウント"
 
@@ -1875,6 +1872,9 @@ msgstr "日付と時間"
 
 msgid "Date format"
 msgstr "日付書式"
+
+msgid "Day"
+msgstr ""
 
 msgid "Days"
 msgstr "日"
@@ -2319,11 +2319,11 @@ msgstr "ディスク"
 msgid "Disk Selection"
 msgstr ""
 
-msgid "Disk Usage"
+msgid "Disk Space Usage"
 msgstr ""
 
-msgid "Disk space usage"
-msgstr "ディスク使用率"
+msgid "Disk Usage"
+msgstr ""
 
 msgid "Disks"
 msgstr "ディスク"
@@ -3761,6 +3761,9 @@ msgstr "許可するホスト"
 msgid "Hosts deny"
 msgstr "拒否するホスト"
 
+msgid "Hour"
+msgstr ""
+
 msgid "Hours"
 msgstr "時"
 
@@ -4327,6 +4330,9 @@ msgstr "フロントパネルで利用する言語"
 msgid "Large read/write"
 msgstr "Large read/write"
 
+msgid "Last Configuration Change"
+msgstr ""
+
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
 "value. Also logs minutes since last test and lifetime number of tests. Raw "
@@ -4379,10 +4385,6 @@ msgstr "レベル 254 - 最大のパフォーマンス、最大の消費電力"
 
 msgid "Level 64 - Intermediate Power Usage with Standby"
 msgstr "レベル 64 - スタンバイ有りの中間の消費電力"
-
-#, php-format
-msgid "Levels (MHz/mW): %s"
-msgstr "レベル (MHz/mW): %s"
 
 msgid "License"
 msgstr "ライセンス"
@@ -4792,9 +4794,6 @@ msgstr "メモリ (MiB)"
 msgid "Memory Usage"
 msgstr ""
 
-msgid "Memory usage"
-msgstr "メモリ使用率"
-
 msgid "Message Board"
 msgstr ""
 
@@ -4850,6 +4849,9 @@ msgstr "最少相対湿度(%)"
 
 msgid "Minimum temperature seen (degrees C)"
 msgstr "最少温度(セ氏)"
+
+msgid "Minute"
+msgstr ""
 
 msgid "Minutes"
 msgstr "分"
@@ -6483,8 +6485,14 @@ msgstr ""
 msgid "Search for and import all disks found"
 msgstr ""
 
+msgid "Second"
+msgstr ""
+
 msgid "Secondary"
 msgstr "セカンダリ"
+
+msgid "Seconds"
+msgstr ""
 
 msgid "Secret"
 msgstr "シークレット"
@@ -7105,11 +7113,11 @@ msgstr "スワップ情報とステータス"
 msgid "Swap Memory"
 msgstr "スワップメモリ"
 
+msgid "Swap Usage"
+msgstr ""
+
 msgid "Swap disabled"
 msgstr "スワップ無効"
-
-msgid "Swap usage"
-msgstr "スワップ使用率"
 
 msgid "Swedish"
 msgstr "スウェーデン語"
@@ -7156,6 +7164,9 @@ msgstr ""
 msgid "System"
 msgstr "システム"
 
+msgid "System BIOS"
+msgstr ""
+
 msgid "System Email Report Settings"
 msgstr ""
 
@@ -7180,17 +7191,17 @@ msgstr ""
 msgid "System Settings"
 msgstr ""
 
-msgid "System bios"
-msgstr "システムBIOS"
+msgid "System Time"
+msgstr ""
+
+msgid "System Uptime"
+msgstr ""
 
 msgid "System events"
 msgstr "システムイベント"
 
 msgid "System info"
 msgstr "システム情報"
-
-msgid "System last config change"
-msgstr "最終設定変更日"
 
 msgid "System log"
 msgstr "システムログ"
@@ -7203,9 +7214,6 @@ msgstr "システム時刻"
 
 msgid "System tuning"
 msgstr "システムチューニング"
-
-msgid "System uptime"
-msgstr "システムのアップタイム"
 
 msgid "TCP forwarding"
 msgstr "TCP転送"
@@ -7298,6 +7306,9 @@ msgstr "ターゲット側のユーザ名。通常イニシエータ名がデフ
 
 msgid "Targets"
 msgstr "ターゲット"
+
+msgid "Temp"
+msgstr ""
 
 msgid "Temperature"
 msgstr "温度"
@@ -8926,9 +8937,6 @@ msgstr "Up"
 msgid "Update period"
 msgstr "アップデート間隔"
 
-msgid "Updating in 5 seconds."
-msgstr "5秒毎に更新"
-
 msgid "Upgrade Firmware"
 msgstr "ファームウェアアップグレード"
 
@@ -9526,8 +9534,8 @@ msgstr "変更に失敗しました。"
 msgid "chroot() everyone, but root."
 msgstr "root 以外のユーザに chroot() を有効にします。"
 
-msgid "day(s)"
-msgstr "日"
+msgid "days"
+msgstr ""
 
 msgid "debug"
 msgstr "デバッグ"
@@ -9556,8 +9564,8 @@ msgstr "設定可能な最大切り替え電圧上限値"
 msgid "greatest settable low voltage transfer point"
 msgstr "設定可能な最大切り替え電圧下限値"
 
-msgid "hour(s)"
-msgstr "時間"
+msgid "hours"
+msgstr ""
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI イニシエータ"
@@ -9590,8 +9598,11 @@ msgstr "ロード/アンロードに失敗しました。"
 msgid "loader.conf"
 msgstr "loader.conf"
 
-msgid "minute(s)"
-msgstr "分"
+msgid "minutes"
+msgstr ""
+
+msgid "months"
+msgstr ""
 
 msgid "mount"
 msgstr "マウント"
@@ -9636,9 +9647,6 @@ msgstr "revision"
 msgid "scan target failed."
 msgstr "ターゲットスキャンに失敗しました。"
 
-msgid "second(s)"
-msgstr "秒"
-
 msgid "seconds"
 msgstr ""
 
@@ -9671,3 +9679,52 @@ msgstr ""
 
 msgid "version:"
 msgstr "バージョン:"
+
+msgid "week days"
+msgstr ""
+
+#~ msgid "CPU frequency"
+#~ msgstr "CPU 周波数"
+
+#~ msgid "CPU temperature"
+#~ msgstr "CPU 温度"
+
+#~ msgid "CPU usage"
+#~ msgstr "CPU 使用率"
+
+#~ msgid "Disk space usage"
+#~ msgstr "ディスク使用率"
+
+#, php-format
+#~ msgid "Levels (MHz/mW): %s"
+#~ msgstr "レベル (MHz/mW): %s"
+
+#~ msgid "Memory usage"
+#~ msgstr "メモリ使用率"
+
+#~ msgid "Swap usage"
+#~ msgstr "スワップ使用率"
+
+#~ msgid "Updating in 5 seconds."
+#~ msgstr "5秒毎に更新"
+
+#~ msgid "day(s)"
+#~ msgstr "日"
+
+#~ msgid "hour(s)"
+#~ msgstr "時間"
+
+#~ msgid "minute(s)"
+#~ msgstr "分"
+
+#~ msgid "second(s)"
+#~ msgstr "秒"
+
+#~ msgid "System uptime"
+#~ msgstr "システムのアップタイム"
+
+#~ msgid "System bios"
+#~ msgstr "システムBIOS"
+
+#~ msgid "System last config change"
+#~ msgstr "最終設定変更日"

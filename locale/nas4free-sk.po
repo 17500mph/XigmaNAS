@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-03 02:34+0000\n"
+"POT-Creation-Date: 2016-12-06 00:14+0000\n"
 "PO-Revision-Date: 2016-07-13 23:35+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-03 16:05+0000\n"
+"X-Launchpad-Export-Date: 2016-12-05 23:57+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 "X-Poedit-Country: SLOVAKIA\n"
 "Language: \n"
@@ -1229,20 +1229,11 @@ msgstr ""
 msgid "CPU Usage"
 msgstr ""
 
-msgid "CPU frequency"
-msgstr "Frekvencia CPU"
-
 msgid "CPU frequency:"
 msgstr ""
 
 msgid "CPU load"
 msgstr "Záťaž CPU"
-
-msgid "CPU temperature"
-msgstr "Teplota CPU"
-
-msgid "CPU usage"
-msgstr "Využitie CPU"
 
 msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
@@ -1586,6 +1577,12 @@ msgid ""
 "disabled."
 msgstr ""
 
+msgid "Core"
+msgstr ""
+
+msgid "Core Usage"
+msgstr ""
+
 msgid "Count"
 msgstr "Počet"
 
@@ -1888,6 +1885,9 @@ msgid "Date & Time"
 msgstr "Dátum a čas"
 
 msgid "Date format"
+msgstr ""
+
+msgid "Day"
 msgstr ""
 
 msgid "Days"
@@ -2338,11 +2338,11 @@ msgstr "Disk"
 msgid "Disk Selection"
 msgstr ""
 
-msgid "Disk Usage"
+msgid "Disk Space Usage"
 msgstr ""
 
-msgid "Disk space usage"
-msgstr "Využitie diskového priestoru"
+msgid "Disk Usage"
+msgstr ""
 
 msgid "Disks"
 msgstr "Disky"
@@ -3799,6 +3799,9 @@ msgstr "Povolené stroje"
 msgid "Hosts deny"
 msgstr "Zakázané stroje"
 
+msgid "Hour"
+msgstr ""
+
 msgid "Hours"
 msgstr ""
 
@@ -4377,6 +4380,9 @@ msgstr ""
 msgid "Large read/write"
 msgstr "Veľké čítanie/zápis"
 
+msgid "Last Configuration Change"
+msgstr ""
+
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
 "value. Also logs minutes since last test and lifetime number of tests. Raw "
@@ -4423,10 +4429,6 @@ msgstr ""
 
 msgid "Level 64 - Intermediate Power Usage with Standby"
 msgstr ""
-
-#, php-format
-msgid "Levels (MHz/mW): %s"
-msgstr "Úrovne (MHz/mW): %s"
 
 msgid "License"
 msgstr "Licencia"
@@ -4840,9 +4842,6 @@ msgstr ""
 msgid "Memory Usage"
 msgstr ""
 
-msgid "Memory usage"
-msgstr "Využitie pamäte"
-
 msgid "Message Board"
 msgstr ""
 
@@ -4897,6 +4896,9 @@ msgid "Minimum relative humidity seen (percent)"
 msgstr ""
 
 msgid "Minimum temperature seen (degrees C)"
+msgstr ""
+
+msgid "Minute"
 msgstr ""
 
 msgid "Minutes"
@@ -6557,7 +6559,13 @@ msgstr ""
 msgid "Search for and import all disks found"
 msgstr ""
 
+msgid "Second"
+msgstr ""
+
 msgid "Secondary"
+msgstr ""
+
+msgid "Seconds"
 msgstr ""
 
 msgid "Secret"
@@ -7188,11 +7196,11 @@ msgstr ""
 msgid "Swap Memory"
 msgstr ""
 
+msgid "Swap Usage"
+msgstr ""
+
 msgid "Swap disabled"
 msgstr "Odkladanie vypnuté"
-
-msgid "Swap usage"
-msgstr "Využitie odkladacieho pristoru"
 
 msgid "Swedish"
 msgstr "švédčina"
@@ -7237,6 +7245,9 @@ msgstr ""
 msgid "System"
 msgstr "Systém"
 
+msgid "System BIOS"
+msgstr ""
+
 msgid "System Email Report Settings"
 msgstr ""
 
@@ -7261,7 +7272,10 @@ msgstr ""
 msgid "System Settings"
 msgstr ""
 
-msgid "System bios"
+msgid "System Time"
+msgstr ""
+
+msgid "System Uptime"
 msgstr ""
 
 msgid "System events"
@@ -7269,9 +7283,6 @@ msgstr "Systémové udalosti"
 
 msgid "System info"
 msgstr "Systémové informácie"
-
-msgid "System last config change"
-msgstr ""
 
 msgid "System log"
 msgstr "Systémový záznam"
@@ -7284,9 +7295,6 @@ msgstr "Čas systému"
 
 msgid "System tuning"
 msgstr "Ladenie systému"
-
-msgid "System uptime"
-msgstr ""
 
 msgid "TCP forwarding"
 msgstr "TCP forwarding"
@@ -7378,6 +7386,9 @@ msgid "Target side user name. It is usually the initiator name by default."
 msgstr ""
 
 msgid "Targets"
+msgstr ""
+
+msgid "Temp"
 msgstr ""
 
 msgid "Temperature"
@@ -9052,9 +9063,6 @@ msgstr "Hore"
 msgid "Update period"
 msgstr "Interval aktualizácie"
 
-msgid "Updating in 5 seconds."
-msgstr "Aktualizácia o 5 sekúnd."
-
 msgid "Upgrade Firmware"
 msgstr ""
 
@@ -9666,7 +9674,7 @@ msgstr ""
 msgid "chroot() everyone, but root."
 msgstr "dať každého okrem roota do chrootu"
 
-msgid "day(s)"
+msgid "days"
 msgstr ""
 
 msgid "debug"
@@ -9696,7 +9704,7 @@ msgstr ""
 msgid "greatest settable low voltage transfer point"
 msgstr ""
 
-msgid "hour(s)"
+msgid "hours"
 msgstr ""
 
 msgid "iSCSI Initiator"
@@ -9730,7 +9738,10 @@ msgstr ""
 msgid "loader.conf"
 msgstr ""
 
-msgid "minute(s)"
+msgid "minutes"
+msgstr ""
+
+msgid "months"
 msgstr ""
 
 msgid "mount"
@@ -9776,9 +9787,6 @@ msgstr ""
 msgid "scan target failed."
 msgstr ""
 
-msgid "second(s)"
-msgstr ""
-
 msgid "seconds"
 msgstr ""
 
@@ -9811,3 +9819,31 @@ msgstr ""
 
 msgid "version:"
 msgstr ""
+
+msgid "week days"
+msgstr ""
+
+#~ msgid "CPU frequency"
+#~ msgstr "Frekvencia CPU"
+
+#~ msgid "CPU temperature"
+#~ msgstr "Teplota CPU"
+
+#~ msgid "CPU usage"
+#~ msgstr "Využitie CPU"
+
+#~ msgid "Disk space usage"
+#~ msgstr "Využitie diskového priestoru"
+
+#, php-format
+#~ msgid "Levels (MHz/mW): %s"
+#~ msgstr "Úrovne (MHz/mW): %s"
+
+#~ msgid "Memory usage"
+#~ msgstr "Využitie pamäte"
+
+#~ msgid "Swap usage"
+#~ msgstr "Využitie odkladacieho pristoru"
+
+#~ msgid "Updating in 5 seconds."
+#~ msgstr "Aktualizácia o 5 sekúnd."
