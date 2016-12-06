@@ -418,11 +418,11 @@ function enable_change(enable_change) {
 		</thead>
 		<tbody>
 			<?php
-			html_filechooser2('storage_path', gtext('Data directory'), $pconfig['storage_path'], gtext('Enter the path to the home directory of rrdgraphs. This directory stores the statistical data for the graphs and will be updated every 5 minutes.'), $g['media_path'], true, 60);
-			html_inputbox2('refresh_time', gtext('Refresh time'), $pconfig['refresh_time'], gtext('Refresh time for graph pages.')." ".sprintf(gtext('Default is %s %s.'), 300, gtext('seconds')), false, 5);
-			html_inputbox2('graph_h', gtext('Graphs height'), $pconfig['graph_h'], sprintf(gtext('Height of the graphs. Default is %s pixel.'), 200), false, 5);
+			html_filechooser2('storage_path', gtext('Home Directory'), $pconfig['storage_path'], gtext('Enter the path to the home directory. This directory will store the statistical data and gets updated every 5 minutes!'), $g['media_path'], true, 60);
+			html_inputbox2('refresh_time', gtext('Page Refresh'), $pconfig['refresh_time'], gtext('Auto page refresh.')." ".sprintf(gtext('(default %s %s'), 300, gtext('seconds)')), false, 5);
+			html_inputbox2('graph_h', gtext('Graphs Height'), $pconfig['graph_h'], sprintf(gtext('Height of the graphs. (default %s pixels)'), 200), false, 5);
 			html_checkbox2('autoscale', gtext('Autoscale'), $pconfig['autoscale'], gtext('Autoscale for graphs.'), "", false);
-			html_checkbox2('background_white', gettext('Background'), $pconfig['background_white'], gettext('Enable white background graphs. (black by default)'), '', false);
+			html_checkbox2('background_white', gettext('Background'), $pconfig['background_white'], gettext('Enable white background graphs. (black as default)'), '', false);
 			html_separator2();
 			html_titleline2(gtext('Available Graphs'));
 			html_checkbox2('cpu_frequency', gtext('CPU Frequency'), $pconfig['cpu_frequency'], gtext('Enable collecting CPU frequency statistics.'), '', false);
@@ -443,17 +443,17 @@ function enable_change(enable_change) {
 					}
 				}
 			}
-			html_combobox2('latency_interface', gtext('Interface selection'), $s_option, $a_option, gtext('Select the interface (only selectable if your server has more than one) to use for the source IP address in outgoing packets.'));
+			html_combobox2('latency_interface', gtext('Interface Selection'), $s_option, $a_option, gtext('Select the interface (only selectable if your server has more than one) to use for the source IP address in outgoing packets.'));
 			$latency_a_count = [];
 			for ($i = 1; $i <= 20; $i++) {
 				$latency_a_count[$i] = $i;
 			}
 			html_combobox2('latency_count', gtext('Count'), $pconfig['latency_count'], $latency_a_count, gtext('Stop after sending (and receiving) N packets.'), false);
-			html_inputbox2('latency_parameters', gtext('Auxiliary parameters'), $pconfig['latency_parameters'], gtext('These parameters will be added to the ping command.')." ".sprintf(gtext('Please check the %s documentation%s.'), "<a href=http://www.freebsd.org/cgi/man.cgi?query=ping&amp;apropos=0&amp;sektion=0&amp;format=html target='_blank'>", "</a>"), false, 60);
+			html_inputbox2('latency_parameters', gtext('Auxiliary Parameters'), $pconfig['latency_parameters'], gtext('These parameters will be added to the ping command.')." ".sprintf(gtext('Please check the %s documentation%s.'), "<a href=http://www.freebsd.org/cgi/man.cgi?query=ping&amp;apropos=0&amp;sektion=0&amp;format=html target='_blank'>", "</a>"), false, 60);
 			html_checkbox2('lan_load', gtext('Network Traffic'), $pconfig['lan_load'], gtext('Enable collecting network traffic statistics.'), '', false, false, 'lan_change()');
 			html_checkbox2('bytes_per_second', gtext('Bytes/sec'), $pconfig['bytes_per_second'], gtext('Use Bytes/sec instead of Bits/sec for network throughput display.'), "", false);
 			html_checkbox2('logarithmic', gtext('Logarithmic Scaling'), $pconfig['logarithmic'], sprintf(gtext('Use logarithmic y-axis scaling for %s graphs. (can not be used together with positive/negative y-axis range)'), gtext('network traffic')), "", false, false, 'logarithmic_change()');
-			html_checkbox2('axis', gtext('Y-axis range'), $pconfig['axis'], sprintf(gtext('Show positive/negative values for %s graphs. (can not be used together with logarithmic scaling)'), gtext('network traffic')), '', false, false, 'axis_change()');
+			html_checkbox2('axis', gtext('Y-axis Range'), $pconfig['axis'], sprintf(gtext('Show positive/negative values for %s graphs. (can not be used together with logarithmic scaling)'), gtext('network traffic')), '', false, false, 'axis_change()');
 			html_checkbox2('no_processes', gtext('System Processes'), $pconfig['no_processes'], gtext('Enable collecting system process statistics.'), '', false);
 			html_checkbox2('ups', gtext('UPS Statistics'), $pconfig['ups'], gtext('Enable collecting UPS statistics.'), '', false, false, 'ups_change()');
 			html_inputbox2('ups_at', gtext('UPS Identifier'), $pconfig['ups_at'], gtext('Enter the UPS identifier and host IP address of the machine where the UPS is connected to. (this also can be a remote host)')."<br> ".gtext('The UPS identifier and IP address')." ".sprintf(gtext('must be in the format: %s.'), 'identifier@host-ip-address or identifier@localhost'), false, 60);
