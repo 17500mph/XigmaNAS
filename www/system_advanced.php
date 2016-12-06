@@ -347,7 +347,7 @@ function powerd_change() {
 					<?php html_checkbox("tune_enable", gtext("Tuning"), !empty($pconfig['tune_enable']) ? true : false, gtext("Enable tuning of some kernel variables."));?>
 					<?php html_checkbox("powerd", gtext("Power Daemon"), !empty($pconfig['powerd']) ? true : false, gtext("Enable the server power control utility."), gtext("The powerd utility monitors the server state and sets various power control options accordingly."), false, "powerd_change()");?>
 					<?php $a_pwmode = array("maximum" => gtext("Maximum (Highest Performance)"), "hiadaptive" => gtext("Hiadaptive (High Performance)"), "adaptive" => gtext("Adaptive (Low Power Consumption)"), "minimum" => gtext("Minimum (Lowest Performance)")); ?>
-					<?php html_combobox("pwmode", gtext("Power Mode"), $pconfig['pwmode'], $a_pwmode, gtext("Controls power consumption."), false);?>
+					<?php html_combobox("pwmode", gtext("Power Mode"), $pconfig['pwmode'], $a_pwmode, gtext("Controls the power consumption mode."), false);?>
 					<?php $clocks = @exec("/sbin/sysctl -q -n dev.cpu.0.freq_levels");
 						$a_freq = array();
 						if (!empty($clocks)) {
@@ -359,14 +359,14 @@ function powerd_change() {
 						}
 						}
 					?>
-					<?php html_inputbox("pwmax", gtext("Maximum frequency"), $pconfig['pwmax'], sprintf("%s %s", gtext("CPU frequency:"), join(", ", $a_freq)).".<br />".gtext("Empty as default."), false, 5);?>
-					<?php html_inputbox("pwmin", gtext("Minimum frequency"), $pconfig['pwmin'], gtext("Empty as default."), false, 5);?>
+					<?php html_inputbox("pwmax", gtext("CPU Maximum Frequency"), $pconfig['pwmax'], sprintf("%s %s", gtext("CPU frequencies:"), join(", ", $a_freq)).".<br />".gtext("An empty field is default."), false, 5);?>
+					<?php html_inputbox("pwmin", gtext("CPU Minimum Frequency"), $pconfig['pwmin'], gtext("An empty field is default."), false, 5);?>
 					<?php html_separator();?>
 			    		<?php html_titleline(gtext("Console Settings"));?>
 					<?php html_checkbox("disableconsolemenu", gtext("Console Menu"), !empty($pconfig['disableconsolemenu']) ? true : false, gtext("Disable console menu."), gtext("Changes to this option will take effect after a reboot."));?>
 					<?php html_checkbox("enableserialconsole", gtext("Serial Console"), !empty($pconfig['enableserialconsole']) ? true : false, gtext("Enable serial console."), sprintf("<span class='red'><strong>%s</strong></span><br />%s", gtext("The COM port in BIOS has to be enabled before enabling this option."), gtext("Changes to this option will take effect after a reboot.")));?>
-					<?php html_checkbox("sysconsaver", gtext("Console screensaver"), !empty($pconfig['sysconsaver']) ? true : false, gtext("Enable console screensaver."), "", false, "sysconsaver_change()");?>
-					<?php html_inputbox("sysconsaverblanktime", gtext("Blank time"), $pconfig['sysconsaverblanktime'], gtext("Turn the monitor to standby after N seconds."), true, 5);?>
+					<?php html_checkbox("sysconsaver", gtext("Console Screensaver"), !empty($pconfig['sysconsaver']) ? true : false, gtext("Enable console screensaver."), "", false, "sysconsaver_change()");?>
+					<?php html_inputbox("sysconsaverblanktime", gtext("Blank Time"), $pconfig['sysconsaverblanktime'], gtext("Turn the monitor to standby after N seconds."), true, 5);?>
 					<?php html_textarea("motd", gtext("MOTD"), $pconfig['motd'], gtext("Message of the day."), false, 65, 7, false, false);?>
 
 				</table>

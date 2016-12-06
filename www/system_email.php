@@ -202,7 +202,7 @@ function enable_change(enable_change) {
 				"tls" => 'TLS'
 			];
 			html_combobox2('security', gtext('Security'), $pconfig['security'], $l_security, '', true);
-			html_checkbox2('starttls', gtext('TLS mode'), !empty($pconfig['starttls']) ? true : false, gtext("Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can use SSL."), gtext('This is a way to take an existing insecure connection, and upgrade it to a secure connection using SSL/TLS.'), false);
+			html_checkbox2('starttls', gtext('TLS Mode'), !empty($pconfig['starttls']) ? true : false, gtext("Enable STARTTLS encryption. This doesn't mean you have to use TLS, you can use SSL."), gtext('This is a way to take an existing insecure connection, and upgrade it to a secure connection using SSL/TLS.'), false);
 			$l_tls_certcheck = [
 				'tls_certcheck off' => gtext('Off'),
 				'tls_certcheck on' => gtext('On')
@@ -221,7 +221,7 @@ function enable_change(enable_change) {
 				'ntlm' => 'NTLM',
 				'on' => gtext('Best available')
 			];
-			html_combobox2('authmethod', gtext('Authentication method'), $pconfig['authmethod'], $l_authmethod, '', true);
+			html_combobox2('authmethod', gtext('Authentication Method'), $pconfig['authmethod'], $l_authmethod, '', true);
 			?>
 		</tbody>
 	</table>
