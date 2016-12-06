@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-06 00:14+0000\n"
+"POT-Creation-Date: 2016-12-06 17:07+0000\n"
 "PO-Revision-Date: 2016-09-17 16:31+0000\n"
 "Last-Translator: Timm Lagoni <tila@tl-designs.dk>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-05 23:56+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
+"X-Launchpad-Export-Date: 2016-12-06 22:12+0000\n"
+"X-Generator: Launchpad (build 18292)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
 "X-Poedit-Language: Danish\n"
@@ -148,6 +148,10 @@ msgstr ""
 msgid ""
 "(Vendor-specific raw value.) The raw value has different structure for "
 "different vendors and is often not meaningful as a decimal number."
+msgstr ""
+
+#, php-format
+msgid "(default %s %s"
 msgstr ""
 
 msgid "*** Imported duplicate ***"
@@ -787,6 +791,9 @@ msgid ""
 "initiator names and networks."
 msgstr ""
 
+msgid "An empty field is default."
+msgstr ""
+
 msgid "An error occured."
 msgstr ""
 
@@ -910,8 +917,8 @@ msgstr ""
 msgid "Authentication"
 msgstr "Godkendelse"
 
-msgid "Authentication method"
-msgstr "Godkendelses metode"
+msgid "Authentication Method"
+msgstr ""
 
 msgid "Authorised network"
 msgstr "Godkendt netværk"
@@ -924,6 +931,9 @@ msgstr "Automatisk"
 
 msgid "Auto Snapshot"
 msgstr "Auto snapshot"
+
+msgid "Auto page refresh."
+msgstr ""
 
 msgid "Auto size"
 msgstr "Automatisk størrelse"
@@ -939,6 +949,9 @@ msgstr ""
 
 msgid "Autoselect"
 msgstr "Vælg automatisk"
+
+msgid "Auxiliary Parameters"
+msgstr ""
 
 msgid "Auxiliary device firmware"
 msgstr "Ekstern enhed firmware"
@@ -1073,6 +1086,9 @@ msgstr "BitTorrent"
 msgid ""
 "BitTorrent needs at least read & execute permissions at the mount point for "
 "directory %s!"
+msgstr ""
+
+msgid "Blank Time"
 msgstr ""
 
 msgid "Blank time"
@@ -1220,14 +1236,20 @@ msgstr ""
 msgid "CPU Load"
 msgstr ""
 
+msgid "CPU Maximum Frequency"
+msgstr ""
+
+msgid "CPU Minimum Frequency"
+msgstr ""
+
 msgid "CPU Temperature"
 msgstr ""
 
 msgid "CPU Usage"
 msgstr ""
 
-msgid "CPU frequency:"
-msgstr "CPU-frekvens:"
+msgid "CPU frequencies:"
+msgstr ""
 
 msgid "CPU load"
 msgstr "CPU belastning"
@@ -1485,11 +1507,11 @@ msgstr ""
 msgid "Console Menu"
 msgstr "Konsol Menu"
 
-msgid "Console Settings"
+msgid "Console Screensaver"
 msgstr ""
 
-msgid "Console screensaver"
-msgstr "Konsol pauseskærm"
+msgid "Console Settings"
+msgstr ""
 
 msgid "Contact"
 msgstr "Kontakt"
@@ -1534,9 +1556,6 @@ msgstr ""
 msgid "Controller TCP Port"
 msgstr "Controller TCP port"
 
-msgid "Controls power consumption."
-msgstr "Styrer strømforbrug"
-
 msgid "Controls the behavior of synchronous requests."
 msgstr "Styrer indstillinger ved synkrone forespørgsler"
 
@@ -1571,6 +1590,9 @@ msgstr ""
 "tidspunkt er 'gzip' det samme som 'gzip-6'."
 
 msgid "Controls the dedup method."
+msgstr ""
+
+msgid "Controls the power consumption mode."
 msgstr ""
 
 msgid "Controls whether this dataset can be modified."
@@ -1860,9 +1882,6 @@ msgstr "Dansk"
 msgid "Data digest"
 msgstr "Data digest"
 
-msgid "Data directory"
-msgstr ""
-
 msgid "Data integrity"
 msgstr "Data integritet"
 
@@ -1936,10 +1955,6 @@ msgid ""
 msgstr ""
 
 msgid "Default Device Settings"
-msgstr ""
-
-#, php-format
-msgid "Default is %s %s."
 msgstr ""
 
 #, php-format
@@ -2839,9 +2854,6 @@ msgstr ""
 msgid "Emergency Level"
 msgstr ""
 
-msgid "Empty as default."
-msgstr "Normalt tom."
-
 msgid "Enable"
 msgstr "Aktiver"
 
@@ -3079,7 +3091,7 @@ msgstr ""
 msgid "Enable tuning switch"
 msgstr ""
 
-msgid "Enable white background graphs. (black by default)"
+msgid "Enable white background graphs. (black as default)"
 msgstr ""
 
 msgid "Enable write cache mode."
@@ -3180,11 +3192,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Enter the path to the home directory of rrdgraphs. This directory stores the "
-"statistical data for the graphs and will be updated every 5 minutes."
-msgstr ""
-
-msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
 msgstr ""
@@ -3194,6 +3201,11 @@ msgstr ""
 msgid ""
 "Enter the path to the home directory. The config will be created under the "
 "specified directory."
+msgstr ""
+
+msgid ""
+"Enter the path to the home directory. This directory will store the "
+"statistical data and gets updated every 5 minutes!"
 msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
@@ -3643,7 +3655,7 @@ msgstr "Grafen viser sidste 120 sekunder"
 msgid "Graph updates every %d seconds"
 msgstr ""
 
-msgid "Graphs height"
+msgid "Graphs Height"
 msgstr ""
 
 msgid "Greek"
@@ -3752,7 +3764,7 @@ msgid ""
 msgstr ""
 
 #, php-format
-msgid "Height of the graphs. Default is %s pixel."
+msgid "Height of the graphs. (default %s pixels)"
 msgstr ""
 
 msgid "Help"
@@ -3778,6 +3790,9 @@ msgstr "Fremhævning"
 
 msgid "Hint"
 msgstr "Tip"
+
+msgid "Home Directory"
+msgstr ""
 
 msgid "Home directory"
 msgstr "Hjemmemappe"
@@ -4196,6 +4211,9 @@ msgstr "Grænseflade"
 
 msgid "Interface Management"
 msgstr "Grænseflade håndtering"
+
+msgid "Interface Selection"
+msgstr ""
 
 msgid "Interface selection"
 msgstr "Interface valg"
@@ -5551,6 +5569,9 @@ msgstr "Pakke upload fejlede (løbet tør for ledig hukommelse?)"
 msgid "Packages"
 msgstr "Pakker"
 
+msgid "Page Refresh"
+msgstr ""
+
 msgid "Painfully aggressive"
 msgstr "Smertefuld agressiv"
 
@@ -5780,8 +5801,8 @@ msgstr ""
 msgid "Polish"
 msgstr "Polsk"
 
-msgid "Polling time"
-msgstr "Kontrol tid"
+msgid "Polling Time"
+msgstr ""
 
 msgid "Pool"
 msgstr "Pulje"
@@ -6182,12 +6203,6 @@ msgstr "Papirkurv"
 
 msgid "Refresh"
 msgstr "Opdater"
-
-msgid "Refresh time"
-msgstr ""
-
-msgid "Refresh time for graph pages."
-msgstr ""
 
 msgid "Reject"
 msgstr "Afvis"
@@ -7358,11 +7373,11 @@ msgstr "TKIP"
 msgid "TLS"
 msgstr ""
 
-msgid "TLS Server Certificate Check"
+msgid "TLS Mode"
 msgstr ""
 
-msgid "TLS mode"
-msgstr "TLS tilstand"
+msgid "TLS Server Certificate Check"
+msgstr ""
 
 msgid "TLS only"
 msgstr ""
@@ -9605,7 +9620,7 @@ msgstr ""
 msgid "Xen Virtual Machine"
 msgstr ""
 
-msgid "Y-axis range"
+msgid "Y-axis Range"
 msgstr ""
 
 msgid "Yes"
@@ -9879,7 +9894,7 @@ msgstr "revision"
 msgid "scan target failed."
 msgstr "Kunne ikke scanne målet."
 
-msgid "seconds"
+msgid "seconds)"
 msgstr ""
 
 msgid "smallest settable high voltage transfer point"
@@ -9915,6 +9930,9 @@ msgstr "version:"
 msgid "week days"
 msgstr ""
 
+#~ msgid "Authentication method"
+#~ msgstr "Godkendelses metode"
+
 #~ msgid "CPU frequency"
 #~ msgstr "CPU frekens"
 
@@ -9923,6 +9941,9 @@ msgstr ""
 
 #~ msgid "CPU usage"
 #~ msgstr "CPU forbrug"
+
+#~ msgid "Console screensaver"
+#~ msgstr "Konsol pauseskærm"
 
 #~ msgid "Disk space usage"
 #~ msgstr "Diskplads forbrug"
@@ -9933,6 +9954,9 @@ msgstr ""
 
 #~ msgid "Memory usage"
 #~ msgstr "Hukommelsesforbrug"
+
+#~ msgid "Polling time"
+#~ msgstr "Kontrol tid"
 
 #~ msgid "Swap usage"
 #~ msgstr "Swap forbrug"
@@ -9955,5 +9979,17 @@ msgstr ""
 #~ msgid "System uptime"
 #~ msgstr "System oppetid"
 
+#~ msgid "CPU frequency:"
+#~ msgstr "CPU-frekvens:"
+
+#~ msgid "Controls power consumption."
+#~ msgstr "Styrer strømforbrug"
+
+#~ msgid "Empty as default."
+#~ msgstr "Normalt tom."
+
 #~ msgid "System bios"
 #~ msgstr "System bios"
+
+#~ msgid "TLS mode"
+#~ msgstr "TLS tilstand"

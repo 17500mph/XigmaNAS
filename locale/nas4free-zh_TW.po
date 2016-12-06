@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-06 00:14+0000\n"
+"POT-Creation-Date: 2016-12-06 17:07+0000\n"
 "PO-Revision-Date: 2016-03-03 17:10+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-05 23:57+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
+"X-Launchpad-Export-Date: 2016-12-06 22:13+0000\n"
+"X-Generator: Launchpad (build 18292)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -147,6 +147,10 @@ msgstr ""
 msgid ""
 "(Vendor-specific raw value.) The raw value has different structure for "
 "different vendors and is often not meaningful as a decimal number."
+msgstr ""
+
+#, php-format
+msgid "(default %s %s"
 msgstr ""
 
 msgid "*** Imported duplicate ***"
@@ -759,6 +763,9 @@ msgid ""
 "initiator names and networks."
 msgstr ""
 
+msgid "An empty field is default."
+msgstr ""
+
 msgid "An error occured."
 msgstr ""
 
@@ -878,8 +885,8 @@ msgstr ""
 msgid "Authentication"
 msgstr "驗證方式"
 
-msgid "Authentication method"
-msgstr "驗證模式"
+msgid "Authentication Method"
+msgstr ""
 
 msgid "Authorised network"
 msgstr "認可網路"
@@ -892,6 +899,9 @@ msgstr "自動"
 
 msgid "Auto Snapshot"
 msgstr "自動快照"
+
+msgid "Auto page refresh."
+msgstr ""
 
 msgid "Auto size"
 msgstr "自動大小"
@@ -907,6 +917,9 @@ msgstr ""
 
 msgid "Autoselect"
 msgstr "自動選擇"
+
+msgid "Auxiliary Parameters"
+msgstr ""
 
 msgid "Auxiliary device firmware"
 msgstr "輔助設備韌體"
@@ -1040,6 +1053,9 @@ msgstr "BitTorrent"
 msgid ""
 "BitTorrent needs at least read & execute permissions at the mount point for "
 "directory %s!"
+msgstr ""
+
+msgid "Blank Time"
 msgstr ""
 
 msgid "Blank time"
@@ -1187,14 +1203,20 @@ msgstr ""
 msgid "CPU Load"
 msgstr "CPU 負載"
 
+msgid "CPU Maximum Frequency"
+msgstr ""
+
+msgid "CPU Minimum Frequency"
+msgstr ""
+
 msgid "CPU Temperature"
 msgstr ""
 
 msgid "CPU Usage"
 msgstr ""
 
-msgid "CPU frequency:"
-msgstr "CPU 頻率："
+msgid "CPU frequencies:"
+msgstr ""
 
 msgid "CPU load"
 msgstr "CPU 負載"
@@ -1443,11 +1465,11 @@ msgstr "考慮更換此驅動器"
 msgid "Console Menu"
 msgstr "控制台菜單"
 
-msgid "Console Settings"
+msgid "Console Screensaver"
 msgstr ""
 
-msgid "Console screensaver"
-msgstr "控制台螢幕保護程式"
+msgid "Console Settings"
+msgstr ""
 
 msgid "Contact"
 msgstr "聯絡人"
@@ -1490,9 +1512,6 @@ msgstr "控制器型號"
 msgid "Controller TCP Port"
 msgstr "控制器的TCP Port"
 
-msgid "Controls power consumption."
-msgstr "控制電源模式。"
-
 msgid "Controls the behavior of synchronous requests."
 msgstr "控制同步請求。"
 
@@ -1521,6 +1540,9 @@ msgstr ""
 "6' 。"
 
 msgid "Controls the dedup method."
+msgstr ""
+
+msgid "Controls the power consumption mode."
 msgstr ""
 
 msgid "Controls whether this dataset can be modified."
@@ -1808,9 +1830,6 @@ msgstr "丹麥文"
 msgid "Data digest"
 msgstr "數據摘要"
 
-msgid "Data directory"
-msgstr ""
-
 msgid "Data integrity"
 msgstr "數據完整性"
 
@@ -1884,10 +1903,6 @@ msgid ""
 msgstr ""
 
 msgid "Default Device Settings"
-msgstr ""
-
-#, php-format
-msgid "Default is %s %s."
 msgstr ""
 
 #, php-format
@@ -2770,9 +2785,6 @@ msgstr ""
 msgid "Emergency Level"
 msgstr ""
 
-msgid "Empty as default."
-msgstr "默認值為空白。"
-
 msgid "Enable"
 msgstr "啟動"
 
@@ -3007,7 +3019,7 @@ msgstr ""
 msgid "Enable tuning switch"
 msgstr ""
 
-msgid "Enable white background graphs. (black by default)"
+msgid "Enable white background graphs. (black as default)"
 msgstr ""
 
 msgid "Enable write cache mode."
@@ -3102,11 +3114,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Enter the path to the home directory of rrdgraphs. This directory stores the "
-"statistical data for the graphs and will be updated every 5 minutes."
-msgstr ""
-
-msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
 msgstr "請輸入該用戶的主目錄的路徑。將此字段留空以使用默認的路徑到 /mnt。"
@@ -3114,6 +3121,11 @@ msgstr "請輸入該用戶的主目錄的路徑。將此字段留空以使用默
 msgid ""
 "Enter the path to the home directory. The config will be created under the "
 "specified directory."
+msgstr ""
+
+msgid ""
+"Enter the path to the home directory. This directory will store the "
+"statistical data and gets updated every 5 minutes!"
 msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
@@ -3552,7 +3564,7 @@ msgstr "圖表顯示最近120秒"
 msgid "Graph updates every %d seconds"
 msgstr ""
 
-msgid "Graphs height"
+msgid "Graphs Height"
 msgstr ""
 
 msgid "Greek"
@@ -3659,7 +3671,7 @@ msgid ""
 msgstr ""
 
 #, php-format
-msgid "Height of the graphs. Default is %s pixel."
+msgid "Height of the graphs. (default %s pixels)"
 msgstr ""
 
 msgid "Help"
@@ -3685,6 +3697,9 @@ msgstr "語法高亮度顯示"
 
 msgid "Hint"
 msgstr "提示"
+
+msgid "Home Directory"
+msgstr ""
 
 msgid "Home directory"
 msgstr "個人目錄（ Home ）"
@@ -4083,6 +4098,9 @@ msgstr "介面"
 
 msgid "Interface Management"
 msgstr "網絡介面管理"
+
+msgid "Interface Selection"
+msgstr ""
 
 msgid "Interface selection"
 msgstr "介面選擇"
@@ -5404,6 +5422,9 @@ msgstr "套件上傳失敗（記憶體不足？）"
 msgid "Packages"
 msgstr "套件"
 
+msgid "Page Refresh"
+msgstr ""
+
 msgid "Painfully aggressive"
 msgstr "Painfully aggressive"
 
@@ -5628,8 +5649,8 @@ msgstr ""
 msgid "Polish"
 msgstr "波蘭文"
 
-msgid "Polling time"
-msgstr "輪詢時間"
+msgid "Polling Time"
+msgstr ""
 
 msgid "Pool"
 msgstr "存儲池"
@@ -6022,12 +6043,6 @@ msgstr "垃圾桶"
 
 msgid "Refresh"
 msgstr "更新"
-
-msgid "Refresh time"
-msgstr ""
-
-msgid "Refresh time for graph pages."
-msgstr ""
 
 msgid "Reject"
 msgstr "拒絕"
@@ -7167,11 +7182,11 @@ msgstr "TKIP"
 msgid "TLS"
 msgstr "TLS"
 
-msgid "TLS Server Certificate Check"
+msgid "TLS Mode"
 msgstr ""
 
-msgid "TLS mode"
-msgstr "TLS模式"
+msgid "TLS Server Certificate Check"
+msgstr ""
 
 msgid "TLS only"
 msgstr "只是TLS"
@@ -9262,7 +9277,7 @@ msgstr "Xen"
 msgid "Xen Virtual Machine"
 msgstr "Xen 虛擬機"
 
-msgid "Y-axis range"
+msgid "Y-axis Range"
 msgstr ""
 
 msgid "Yes"
@@ -9531,7 +9546,7 @@ msgstr "修訂版本"
 msgid "scan target failed."
 msgstr "掃描目標失敗。"
 
-msgid "seconds"
+msgid "seconds)"
 msgstr ""
 
 msgid "smallest settable high voltage transfer point"
@@ -9579,6 +9594,9 @@ msgstr ""
 #~ msgid "CPU temperature"
 #~ msgstr "CPU 溫度"
 
+#~ msgid "CPU frequency:"
+#~ msgstr "CPU 頻率："
+
 #~ msgid "CPU frequency"
 #~ msgstr "CPU 頻率"
 
@@ -9588,6 +9606,9 @@ msgstr ""
 #, php-format
 #~ msgid "Levels (MHz/mW): %s"
 #~ msgstr "水平 (MHz/mW): %s"
+
+#~ msgid "Polling time"
+#~ msgstr "輪詢時間"
 
 #~ msgid "System bios"
 #~ msgstr "系統BIOS"
@@ -9601,8 +9622,23 @@ msgstr ""
 #~ msgid "second(s)"
 #~ msgstr "秒"
 
+#~ msgid "Controls power consumption."
+#~ msgstr "控制電源模式。"
+
+#~ msgid "Empty as default."
+#~ msgstr "默認值為空白。"
+
 #~ msgid "minute(s)"
 #~ msgstr "分"
+
+#~ msgid "TLS mode"
+#~ msgstr "TLS模式"
+
+#~ msgid "Authentication method"
+#~ msgstr "驗證模式"
+
+#~ msgid "Console screensaver"
+#~ msgstr "控制台螢幕保護程式"
 
 #~ msgid "Disk space usage"
 #~ msgstr "磁碟使用狀況"

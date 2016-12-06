@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-06 00:14+0000\n"
+"POT-Creation-Date: 2016-12-06 17:07+0000\n"
 "PO-Revision-Date: 2016-12-03 15:54+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-05 23:57+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
+"X-Launchpad-Export-Date: 2016-12-06 22:12+0000\n"
+"X-Generator: Launchpad (build 18292)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -170,6 +170,10 @@ msgid ""
 msgstr ""
 "(Gyártófüggő nyers érték.) Nyers érték, aminek felépítése gyártófüggő, azaz "
 "önmagában gyakran nem értékelhető tízedes szám."
+
+#, php-format
+msgid "(default %s %s"
+msgstr ""
 
 msgid "*** Imported duplicate ***"
 msgstr "*** Importált duplikátum ***"
@@ -841,6 +845,9 @@ msgstr ""
 "Egy Kezdeményező csoportot egy címke száma határozza meg és hitelesített "
 "kezdeményezők neveit és hálózatát határozza meg."
 
+msgid "An empty field is default."
+msgstr ""
+
 msgid "An error occured."
 msgstr "Hiba történt."
 
@@ -969,8 +976,8 @@ msgstr "Hitelesítő útvonal & terület"
 msgid "Authentication"
 msgstr "Hitelesítés"
 
-msgid "Authentication method"
-msgstr "Hitelesítési módszer"
+msgid "Authentication Method"
+msgstr ""
 
 msgid "Authorised network"
 msgstr "Hitelesített hálózat"
@@ -983,6 +990,9 @@ msgstr "Automatikus"
 
 msgid "Auto Snapshot"
 msgstr "Automatikus pillanatkép"
+
+msgid "Auto page refresh."
+msgstr ""
 
 msgid "Auto size"
 msgstr "Automatikus méret"
@@ -998,6 +1008,9 @@ msgstr "Grafikonok automatikus skálázása"
 
 msgid "Autoselect"
 msgstr "Automatikus választás"
+
+msgid "Auxiliary Parameters"
+msgstr ""
 
 msgid "Auxiliary device firmware"
 msgstr "Auxiliary eszköz firmware"
@@ -1139,6 +1152,9 @@ msgid ""
 msgstr ""
 "BitTorrentnek legalább olvasási és futtatási jogosultságra van szüksége a "
 "csatolási pont %s könyvtárán."
+
+msgid "Blank Time"
+msgstr ""
 
 msgid "Blank time"
 msgstr "Üres idő"
@@ -1288,14 +1304,20 @@ msgstr "CPU frekvencia"
 msgid "CPU Load"
 msgstr "Processzorterhelés"
 
+msgid "CPU Maximum Frequency"
+msgstr ""
+
+msgid "CPU Minimum Frequency"
+msgstr ""
+
 msgid "CPU Temperature"
 msgstr "Processzorhőmérséklet"
 
 msgid "CPU Usage"
 msgstr "Processzorhasználat"
 
-msgid "CPU frequency:"
-msgstr "Processzor-frekvenciák:"
+msgid "CPU frequencies:"
+msgstr ""
 
 msgid "CPU load"
 msgstr "CPU használat"
@@ -1559,11 +1581,11 @@ msgstr "Fontold meg a meghajtó cseréjét"
 msgid "Console Menu"
 msgstr "Konzol menü"
 
+msgid "Console Screensaver"
+msgstr ""
+
 msgid "Console Settings"
 msgstr "Konzolbeállítások"
-
-msgid "Console screensaver"
-msgstr "Konzol képernyőkímélő"
 
 msgid "Contact"
 msgstr "Elérhetőség"
@@ -1608,9 +1630,6 @@ msgstr "Kontroller modell"
 msgid "Controller TCP Port"
 msgstr "Kontroller IP port"
 
-msgid "Controls power consumption."
-msgstr "Ez szabályozza az energiafogyasztást."
-
 msgid "Controls the behavior of synchronous requests."
 msgstr "Egyidejű kérések viselkedésének szabályozása."
 
@@ -1646,6 +1665,9 @@ msgstr ""
 
 msgid "Controls the dedup method."
 msgstr "Egyszerűsítés eljárását felügyeli."
+
+msgid "Controls the power consumption mode."
+msgstr ""
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Azt szabályozza, hogy az adattárat lehessen-e módosítani."
@@ -1971,9 +1993,6 @@ msgstr "Dán"
 msgid "Data digest"
 msgstr "Adat kivonat"
 
-msgid "Data directory"
-msgstr "Adatkönyvtár"
-
 msgid "Data integrity"
 msgstr "Adatsértetlenség"
 
@@ -2056,10 +2075,6 @@ msgstr ""
 
 msgid "Default Device Settings"
 msgstr "Alapértelmezett eszközbeállítások"
-
-#, php-format
-msgid "Default is %s %s."
-msgstr "%s %s az alapértelmezett."
 
 #, php-format
 msgid "Default is %s."
@@ -2986,9 +3001,6 @@ msgstr "E-mail beállítások"
 msgid "Emergency Level"
 msgstr "Sürgős szint"
 
-msgid "Empty as default."
-msgstr "Alapértelmezetten üres"
-
 msgid "Enable"
 msgstr "Engedélyezés"
 
@@ -3230,8 +3242,8 @@ msgstr "Néhány kernelváltozó hangolásának engedélyezése"
 msgid "Enable tuning switch"
 msgstr "Tuning kapcsoló engedélyezése"
 
-msgid "Enable white background graphs. (black by default)"
-msgstr "Fehér hátterű diagramok engedélyezés (alapértelmezetten fekete)."
+msgid "Enable white background graphs. (black as default)"
+msgstr ""
 
 msgid "Enable write cache mode."
 msgstr "Írás cache engedélyezése."
@@ -3337,13 +3349,6 @@ msgstr ""
 "HDD képfájl a megadott könyvtárba kerül."
 
 msgid ""
-"Enter the path to the home directory of rrdgraphs. This directory stores the "
-"statistical data for the graphs and will be updated every 5 minutes."
-msgstr ""
-"Add meg az rrdgraphs home könyvtárának útvonalát. Ez a könyvtár tárolja a "
-"diagramok adatait és 5 percenként frissül."
-
-msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
 msgstr ""
@@ -3356,6 +3361,11 @@ msgid ""
 msgstr ""
 "Add meg a saját könyvtár útvonalát. A konfigurációs állomány a megadott "
 "könyvtárba kerül."
+
+msgid ""
+"Enter the path to the home directory. This directory will store the "
+"statistical data and gets updated every 5 minutes!"
+msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Adja meg a csapdák portját (alapértelmezett 162)."
@@ -3808,8 +3818,8 @@ msgstr "Grafikon az utolsó 120 mp-et mutatja"
 msgid "Graph updates every %d seconds"
 msgstr "A grafikon minden %d másodpercben frissül."
 
-msgid "Graphs height"
-msgstr "Grafikon magassága"
+msgid "Graphs Height"
+msgstr ""
 
 msgid "Greek"
 msgstr "Görög"
@@ -3926,8 +3936,8 @@ msgstr ""
 "valószínűségét."
 
 #, php-format
-msgid "Height of the graphs. Default is %s pixel."
-msgstr "A grafikon magassága, alapértelmezetten %s pixel."
+msgid "Height of the graphs. (default %s pixels)"
+msgstr ""
 
 msgid "Help"
 msgstr "Súgó"
@@ -3952,6 +3962,9 @@ msgstr "Kiemelés"
 
 msgid "Hint"
 msgstr "Tipp"
+
+msgid "Home Directory"
+msgstr ""
 
 msgid "Home directory"
 msgstr "Saját könyvtár"
@@ -4385,6 +4398,9 @@ msgstr "Interfész"
 
 msgid "Interface Management"
 msgstr "Interfész kezelése"
+
+msgid "Interface Selection"
+msgstr ""
 
 msgid "Interface selection"
 msgstr "Interfész kiválasztása"
@@ -5789,6 +5805,9 @@ msgstr "Csomag feltöltés sikertelen (elfogyott a memória?)"
 msgid "Packages"
 msgstr "Csomagok"
 
+msgid "Page Refresh"
+msgstr ""
+
 msgid "Painfully aggressive"
 msgstr "Sajnálatosan agresszív"
 
@@ -6023,8 +6042,8 @@ msgstr "Kérem, próbálkozz újra."
 msgid "Polish"
 msgstr "Lengyel"
 
-msgid "Polling time"
-msgstr "Lekérdezési idő"
+msgid "Polling Time"
+msgstr ""
 
 msgid "Pool"
 msgstr "Tároló"
@@ -6433,12 +6452,6 @@ msgstr "Lomtár"
 
 msgid "Refresh"
 msgstr "Frissítés"
-
-msgid "Refresh time"
-msgstr "Frissítési idő"
-
-msgid "Refresh time for graph pages."
-msgstr "Grafikus oldalak frissítési ideje."
 
 msgid "Reject"
 msgstr "Elvetés"
@@ -7664,11 +7677,11 @@ msgstr "TKIP"
 msgid "TLS"
 msgstr "TLS"
 
+msgid "TLS Mode"
+msgstr ""
+
 msgid "TLS Server Certificate Check"
 msgstr "TLS Szerver Hitelesítés Ellenőrzés"
-
-msgid "TLS mode"
-msgstr "TLS mód"
 
 msgid "TLS only"
 msgstr "Csak TLS"
@@ -10047,8 +10060,8 @@ msgstr "Xen"
 msgid "Xen Virtual Machine"
 msgstr "Xen Virtuális Gép"
 
-msgid "Y-axis range"
-msgstr "Y-tengely tartománya"
+msgid "Y-axis Range"
+msgstr ""
 
 msgid "Yes"
 msgstr "Igen"
@@ -10331,8 +10344,8 @@ msgstr "revízió"
 msgid "scan target failed."
 msgstr "cél keresés sikertelen."
 
-msgid "seconds"
-msgstr "másodperc"
+msgid "seconds)"
+msgstr ""
 
 msgid "smallest settable high voltage transfer point"
 msgstr "legkisebb beállítható magas felszültségű átviteli pont"
@@ -10367,6 +10380,9 @@ msgstr "verzió:"
 msgid "week days"
 msgstr ""
 
+#~ msgid "Authentication method"
+#~ msgstr "Hitelesítési módszer"
+
 #~ msgid "CPU frequency"
 #~ msgstr "CPU (processzor) frekvencia"
 
@@ -10375,6 +10391,9 @@ msgstr ""
 
 #~ msgid "CPU usage"
 #~ msgstr "CPU (processzor) kihasználtság"
+
+#~ msgid "Console screensaver"
+#~ msgstr "Konzol képernyőkímélő"
 
 #~ msgid "Disk space usage"
 #~ msgstr "Lemezhasználat"
@@ -10401,6 +10420,18 @@ msgstr ""
 #~ msgid "second(s)"
 #~ msgstr "másodperc"
 
+#~ msgid "Empty as default."
+#~ msgstr "Alapértelmezetten üres"
+
+#~ msgid "Polling time"
+#~ msgstr "Lekérdezési idő"
+
+#~ msgid "CPU frequency:"
+#~ msgstr "Processzor-frekvenciák:"
+
+#~ msgid "Controls power consumption."
+#~ msgstr "Ez szabályozza az energiafogyasztást."
+
 #~ msgid "Memory usage"
 #~ msgstr "Memóriahasználat"
 
@@ -10410,5 +10441,44 @@ msgstr ""
 #~ msgid "System uptime"
 #~ msgstr "Működési idő"
 
+#~ msgid "TLS mode"
+#~ msgstr "TLS mód"
+
 #~ msgid "System last config change"
 #~ msgstr "Utolsó rendszermódosítás ideje"
+
+#~ msgid "Data directory"
+#~ msgstr "Adatkönyvtár"
+
+#, php-format
+#~ msgid "Default is %s %s."
+#~ msgstr "%s %s az alapértelmezett."
+
+#~ msgid "Graphs height"
+#~ msgstr "Grafikon magassága"
+
+#, php-format
+#~ msgid "Height of the graphs. Default is %s pixel."
+#~ msgstr "A grafikon magassága, alapértelmezetten %s pixel."
+
+#~ msgid "Refresh time"
+#~ msgstr "Frissítési idő"
+
+#~ msgid "Refresh time for graph pages."
+#~ msgstr "Grafikus oldalak frissítési ideje."
+
+#~ msgid "Y-axis range"
+#~ msgstr "Y-tengely tartománya"
+
+#~ msgid "seconds"
+#~ msgstr "másodperc"
+
+#~ msgid "Enable white background graphs. (black by default)"
+#~ msgstr "Fehér hátterű diagramok engedélyezés (alapértelmezetten fekete)."
+
+#~ msgid ""
+#~ "Enter the path to the home directory of rrdgraphs. This directory stores the "
+#~ "statistical data for the graphs and will be updated every 5 minutes."
+#~ msgstr ""
+#~ "Add meg az rrdgraphs home könyvtárának útvonalát. Ez a könyvtár tárolja a "
+#~ "diagramok adatait és 5 percenként frissül."

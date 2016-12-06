@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-06 00:14+0000\n"
-"PO-Revision-Date: 2016-12-03 06:47+0000\n"
+"POT-Creation-Date: 2016-12-06 17:07+0000\n"
+"PO-Revision-Date: 2016-12-06 16:40+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-05 23:57+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
+"X-Launchpad-Export-Date: 2016-12-06 22:13+0000\n"
+"X-Generator: Launchpad (build 18292)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -167,6 +167,10 @@ msgid ""
 msgstr ""
 "(Tillverkarspecifikt råvärde.)  Råvärdet har olika struktur för olika "
 "tillverkare och är ofta inte meningsfullt som decimaltal."
+
+#, php-format
+msgid "(default %s %s"
+msgstr "(standard %s %s"
 
 msgid "*** Imported duplicate ***"
 msgstr "*** Importerad dubblett ***"
@@ -831,6 +835,9 @@ msgstr ""
 "En Initierargrupp identifieras av en nummer och definierar godkända "
 "initiatornamn och nätverk."
 
+msgid "An empty field is default."
+msgstr "Ett tomt fält är standard."
+
 msgid "An error occured."
 msgstr "Ett fel inträffade."
 
@@ -959,8 +966,8 @@ msgstr "Autentisera sökväg och omgivning"
 msgid "Authentication"
 msgstr "Autentisering"
 
-msgid "Authentication method"
-msgstr "Autentisieringsmetod"
+msgid "Authentication Method"
+msgstr "Autentiseringsmetod"
 
 msgid "Authorised network"
 msgstr "Behörigt nätverk"
@@ -973,6 +980,9 @@ msgstr "Automatiskt"
 
 msgid "Auto Snapshot"
 msgstr "Automatisk avbildning"
+
+msgid "Auto page refresh."
+msgstr "Automatisk siduppdatering."
 
 msgid "Auto size"
 msgstr "Automatisk storlek"
@@ -988,6 +998,9 @@ msgstr "Autoskala för grafer."
 
 msgid "Autoselect"
 msgstr "Välj automatiskt"
+
+msgid "Auxiliary Parameters"
+msgstr "Extra parametrar"
 
 msgid "Auxiliary device firmware"
 msgstr "Auxiliary firmware"
@@ -1126,6 +1139,9 @@ msgid ""
 msgstr ""
 "BitTorrent kräver minst läs- & körrättigheter i monteringspunkten för "
 "katalog %s!"
+
+msgid "Blank Time"
+msgstr "Rensa tid"
 
 msgid "Blank time"
 msgstr "Blank tid"
@@ -1275,14 +1291,20 @@ msgstr "CPU Frekvens"
 msgid "CPU Load"
 msgstr "Processorbelastning"
 
+msgid "CPU Maximum Frequency"
+msgstr "Maximal CPU frekvens"
+
+msgid "CPU Minimum Frequency"
+msgstr "Minimal CPU frekvens"
+
 msgid "CPU Temperature"
 msgstr "CPU temperatur"
 
 msgid "CPU Usage"
 msgstr "Processoranvändning"
 
-msgid "CPU frequency:"
-msgstr "CPU frekvens:"
+msgid "CPU frequencies:"
+msgstr "CPU frekvenser:"
 
 msgid "CPU load"
 msgstr "CPU belastning"
@@ -1543,11 +1565,11 @@ msgstr "Överväg att byta denna disk"
 msgid "Console Menu"
 msgstr "Konsolmeny"
 
+msgid "Console Screensaver"
+msgstr "Konsolskärmsläckare"
+
 msgid "Console Settings"
 msgstr "Konsolinställningar"
-
-msgid "Console screensaver"
-msgstr "Konsollskärmsläckare"
 
 msgid "Contact"
 msgstr "Kontakt"
@@ -1592,9 +1614,6 @@ msgstr "Diskkontrollermodell"
 msgid "Controller TCP Port"
 msgstr "TCP Port för hanterare"
 
-msgid "Controls power consumption."
-msgstr "Styr effektförbrukningen"
-
 msgid "Controls the behavior of synchronous requests."
 msgstr "Styr uppförandet för synkroniseringsbegäran"
 
@@ -1630,6 +1649,9 @@ msgstr ""
 msgid "Controls the dedup method."
 msgstr "Kontrollerar \"dedup\" metoden."
 
+msgid "Controls the power consumption mode."
+msgstr "Kontrollerar effektförbrukningsläget."
+
 msgid "Controls whether this dataset can be modified."
 msgstr "Kontrollerar huruvida detta Dataset kan modifieras"
 
@@ -1641,10 +1663,10 @@ msgstr ""
 "frånslaget."
 
 msgid "Core"
-msgstr ""
+msgstr "Kärna"
 
 msgid "Core Usage"
-msgstr ""
+msgstr "Kärnanvändning"
 
 msgid "Count"
 msgstr "Antal"
@@ -1959,9 +1981,6 @@ msgstr "Danska"
 msgid "Data digest"
 msgstr "Datasammandrag"
 
-msgid "Data directory"
-msgstr "Datakatalog"
-
 msgid "Data integrity"
 msgstr "Dataintegritet"
 
@@ -1993,7 +2012,7 @@ msgid "Date format"
 msgstr "Datumformat"
 
 msgid "Day"
-msgstr ""
+msgstr "Dag"
 
 msgid "Days"
 msgstr "Dagar"
@@ -2044,10 +2063,6 @@ msgstr ""
 
 msgid "Default Device Settings"
 msgstr "Standardinställningar"
-
-#, php-format
-msgid "Default is %s %s."
-msgstr "Standard är %s %s."
 
 #, php-format
 msgid "Default is %s."
@@ -2461,7 +2476,7 @@ msgid "Disk Selection"
 msgstr "Diskval"
 
 msgid "Disk Space Usage"
-msgstr ""
+msgstr "Diskutrymmesanvädning"
 
 msgid "Disk Usage"
 msgstr "Använt diskutrymme"
@@ -2961,9 +2976,6 @@ msgstr "Epostinstallation"
 msgid "Emergency Level"
 msgstr "Nödnivå"
 
-msgid "Empty as default."
-msgstr "Tom som standard"
-
 msgid "Enable"
 msgstr "Aktivera"
 
@@ -3207,8 +3219,8 @@ msgstr "Aktivera justering av vissa kärnvariabler."
 msgid "Enable tuning switch"
 msgstr "Aktivera tunings val"
 
-msgid "Enable white background graphs. (black by default)"
-msgstr "Aktivera grafer med vit bakgrund. (svarta normalt)"
+msgid "Enable white background graphs. (black as default)"
+msgstr "Aktivera vit bakgrund för grafer. (svart som standard)"
 
 msgid "Enable write cache mode."
 msgstr "Aktivera skrivcache"
@@ -3314,13 +3326,6 @@ msgstr ""
 "kommer att skapas under denna."
 
 msgid ""
-"Enter the path to the home directory of rrdgraphs. This directory stores the "
-"statistical data for the graphs and will be updated every 5 minutes."
-msgstr ""
-"Mata in sökvägen till hemkatalogen för rrdgraphs. Katalogen sparar "
-"statistiska data för graferna och kommer uppdateras var femte minut."
-
-msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
 msgstr ""
@@ -3333,6 +3338,13 @@ msgid ""
 msgstr ""
 "Mata in sökvägen till hemmakatalogen. Konfigurationen kommer att skapas "
 "under den aktuella katalogen."
+
+msgid ""
+"Enter the path to the home directory. This directory will store the "
+"statistical data and gets updated every 5 minutes!"
+msgstr ""
+"Mata in sökvägen till hemkatalogen. Denna katalog kommer lagra statistisk "
+"data och uppdateras var femte minut!"
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Ange port att sända fällor (traps) (standard 162)."
@@ -3786,7 +3798,7 @@ msgstr "Diagrammet visar senaste 120 sekunder"
 msgid "Graph updates every %d seconds"
 msgstr "Grafen uppdateras var %d sekund"
 
-msgid "Graphs height"
+msgid "Graphs Height"
 msgstr "Grafhöjd"
 
 msgid "Greek"
@@ -3902,8 +3914,8 @@ msgstr ""
 "huvudkrasch medan en för hög ökar risken för läs-/skrivfel."
 
 #, php-format
-msgid "Height of the graphs. Default is %s pixel."
-msgstr "Höjden på grafer. Standard är %s pixlar."
+msgid "Height of the graphs. (default %s pixels)"
+msgstr "Höjden på grafer. (standard %s pixlar)"
 
 msgid "Help"
 msgstr "Hjälp"
@@ -3928,6 +3940,9 @@ msgstr "Markering"
 
 msgid "Hint"
 msgstr "Tips"
+
+msgid "Home Directory"
+msgstr "Hemkatalog"
 
 msgid "Home directory"
 msgstr "Hemkatalog"
@@ -3963,7 +3978,7 @@ msgid "Hosts deny"
 msgstr "Nekade värdar"
 
 msgid "Hour"
-msgstr ""
+msgstr "Timme"
 
 msgid "Hours"
 msgstr "Timmar"
@@ -4362,6 +4377,9 @@ msgstr "Gränssnitt"
 msgid "Interface Management"
 msgstr "Gränssnittshantering"
 
+msgid "Interface Selection"
+msgstr "Val av gränssnitt"
+
 msgid "Interface selection"
 msgstr "Val av gränssnitt"
 
@@ -4576,7 +4594,7 @@ msgid "Large read/write"
 msgstr "Stor läs/skriv (read/write)"
 
 msgid "Last Configuration Change"
-msgstr ""
+msgstr "Senaste konfigurationsändring"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -5105,7 +5123,7 @@ msgid "Minimum temperature seen (degrees C)"
 msgstr "Lägsta uppmätta temperatur (grader C)"
 
 msgid "Minute"
-msgstr ""
+msgstr "Minut"
 
 msgid "Minutes"
 msgstr "Minuter"
@@ -5745,6 +5763,9 @@ msgstr "Uppladdning av paket misslyckades (minnet slut?)"
 msgid "Packages"
 msgstr "Paket"
 
+msgid "Page Refresh"
+msgstr "Uppdatera sida"
+
 msgid "Painfully aggressive"
 msgstr "Onödigt aggressiv"
 
@@ -5976,8 +5997,8 @@ msgstr "Försök igen."
 msgid "Polish"
 msgstr "Polska"
 
-msgid "Polling time"
-msgstr "Körtid (Polling tid)"
+msgid "Polling Time"
+msgstr "Avfrågningstid"
 
 msgid "Pool"
 msgstr "Pool"
@@ -6383,12 +6404,6 @@ msgstr "Papperskorgen"
 
 msgid "Refresh"
 msgstr "Uppdatera"
-
-msgid "Refresh time"
-msgstr "Uppdateringstid"
-
-msgid "Refresh time for graph pages."
-msgstr "Uppdateringstid för grafsidor"
 
 msgid "Reject"
 msgstr "Avböj"
@@ -6799,13 +6814,13 @@ msgid "Search for and import all disks found"
 msgstr "Sök efter och importera alla diskar som hittas"
 
 msgid "Second"
-msgstr ""
+msgstr "Sekund"
 
 msgid "Secondary"
 msgstr "Sekundär"
 
 msgid "Seconds"
-msgstr ""
+msgstr "Sekunder"
 
 msgid "Secret"
 msgstr "Hemlighet"
@@ -7475,7 +7490,7 @@ msgid "Swap Memory"
 msgstr "Växlingsfil"
 
 msgid "Swap Usage"
-msgstr ""
+msgstr "Användning av växlingsfil"
 
 msgid "Swap disabled"
 msgstr "Växlingsutrymme inaktiverat"
@@ -7527,7 +7542,7 @@ msgid "System"
 msgstr "System"
 
 msgid "System BIOS"
-msgstr ""
+msgstr "System BIOS"
 
 msgid "System Email Report Settings"
 msgstr "System e-postrapportinställningar"
@@ -7554,10 +7569,10 @@ msgid "System Settings"
 msgstr "Systeminställningar"
 
 msgid "System Time"
-msgstr ""
+msgstr "Systemtid"
 
 msgid "System Uptime"
-msgstr ""
+msgstr "Systemets drifttid"
 
 msgid "System events"
 msgstr "Systemhändelser"
@@ -7601,11 +7616,11 @@ msgstr "TKIP"
 msgid "TLS"
 msgstr "TLS"
 
+msgid "TLS Mode"
+msgstr "TLS Mod"
+
 msgid "TLS Server Certificate Check"
 msgstr "TLS Servercertifikatkontroll"
-
-msgid "TLS mode"
-msgstr "TLS mod"
 
 msgid "TLS only"
 msgstr "Endast TLS"
@@ -7671,7 +7686,7 @@ msgid "Targets"
 msgstr "Mål"
 
 msgid "Temp"
-msgstr ""
+msgstr "Temp"
 
 msgid "Temperature"
 msgstr "Temperatur"
@@ -9983,8 +9998,8 @@ msgstr "Xen"
 msgid "Xen Virtual Machine"
 msgstr "Xen Virtuell Maskin"
 
-msgid "Y-axis range"
-msgstr "Y-axelomfång"
+msgid "Y-axis Range"
+msgstr "Y-axelns intervall"
 
 msgid "Yes"
 msgstr "Ja"
@@ -10158,7 +10173,7 @@ msgid "chroot() everyone, but root."
 msgstr "chroot() för alla, förutom root."
 
 msgid "days"
-msgstr ""
+msgstr "dagar"
 
 msgid "debug"
 msgstr "felsök"
@@ -10190,7 +10205,7 @@ msgid "greatest settable low voltage transfer point"
 msgstr "Högsta inställningen för låg spänning till överförings punkten."
 
 msgid "hours"
-msgstr ""
+msgstr "timmar"
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI Initierare"
@@ -10224,10 +10239,10 @@ msgid "loader.conf"
 msgstr "loader.conf"
 
 msgid "minutes"
-msgstr ""
+msgstr "minuter"
 
 msgid "months"
-msgstr ""
+msgstr "månader"
 
 msgid "mount"
 msgstr "montera"
@@ -10272,8 +10287,8 @@ msgstr "revision"
 msgid "scan target failed."
 msgstr "skanning av målet misslyckades."
 
-msgid "seconds"
-msgstr "sekunder"
+msgid "seconds)"
+msgstr "sekunder)"
 
 msgid "smallest settable high voltage transfer point"
 msgstr "Minsta inställningen för hög spänning till överförings punkt."
@@ -10306,13 +10321,19 @@ msgid "version:"
 msgstr "version:"
 
 msgid "week days"
-msgstr ""
+msgstr "veckodagar"
+
+#~ msgid "Authentication method"
+#~ msgstr "Autentisieringsmetod"
 
 #~ msgid "CPU frequency"
 #~ msgstr "CPU frekvens"
 
 #~ msgid "CPU temperature"
 #~ msgstr "CPU temperatur"
+
+#~ msgid "Console screensaver"
+#~ msgstr "Konsollskärmsläckare"
 
 #~ msgid "Disk space usage"
 #~ msgstr "Diskutrymmesanvändning"
@@ -10345,11 +10366,62 @@ msgstr ""
 #~ msgid "System uptime"
 #~ msgstr "Systemets upptid"
 
+#~ msgid "CPU frequency:"
+#~ msgstr "CPU frekvens:"
+
+#~ msgid "Empty as default."
+#~ msgstr "Tom som standard"
+
 #~ msgid "System bios"
 #~ msgstr "Systembios"
+
+#~ msgid "Controls power consumption."
+#~ msgstr "Styr effektförbrukningen"
 
 #~ msgid "CPU usage"
 #~ msgstr "CPU användning"
 
 #~ msgid "System last config change"
 #~ msgstr "Senaste ändring av systemkonfiguration"
+
+#~ msgid "TLS mode"
+#~ msgstr "TLS mod"
+
+#~ msgid "Polling time"
+#~ msgstr "Körtid (Polling tid)"
+
+#~ msgid "Data directory"
+#~ msgstr "Datakatalog"
+
+#, php-format
+#~ msgid "Default is %s %s."
+#~ msgstr "Standard är %s %s."
+
+#~ msgid "Graphs height"
+#~ msgstr "Grafhöjd"
+
+#, php-format
+#~ msgid "Height of the graphs. Default is %s pixel."
+#~ msgstr "Höjden på grafer. Standard är %s pixlar."
+
+#~ msgid "Refresh time for graph pages."
+#~ msgstr "Uppdateringstid för grafsidor"
+
+#~ msgid "Refresh time"
+#~ msgstr "Uppdateringstid"
+
+#~ msgid "Y-axis range"
+#~ msgstr "Y-axelomfång"
+
+#~ msgid "seconds"
+#~ msgstr "sekunder"
+
+#~ msgid "Enable white background graphs. (black by default)"
+#~ msgstr "Aktivera grafer med vit bakgrund. (svarta normalt)"
+
+#~ msgid ""
+#~ "Enter the path to the home directory of rrdgraphs. This directory stores the "
+#~ "statistical data for the graphs and will be updated every 5 minutes."
+#~ msgstr ""
+#~ "Mata in sökvägen till hemkatalogen för rrdgraphs. Katalogen sparar "
+#~ "statistiska data för graferna och kommer uppdateras var femte minut."

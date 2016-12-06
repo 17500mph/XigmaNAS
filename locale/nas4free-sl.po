@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-06 00:14+0000\n"
+"POT-Creation-Date: 2016-12-06 17:07+0000\n"
 "PO-Revision-Date: 2016-11-08 14:34+0000\n"
 "Last-Translator: Kini <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-05 23:57+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
+"X-Launchpad-Export-Date: 2016-12-06 22:13+0000\n"
+"X-Generator: Launchpad (build 18292)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
 "X-Poedit-Language: Slovenian\n"
@@ -151,6 +151,10 @@ msgstr ""
 msgid ""
 "(Vendor-specific raw value.) The raw value has different structure for "
 "different vendors and is often not meaningful as a decimal number."
+msgstr ""
+
+#, php-format
+msgid "(default %s %s"
 msgstr ""
 
 msgid "*** Imported duplicate ***"
@@ -780,6 +784,9 @@ msgid ""
 "initiator names and networks."
 msgstr ""
 
+msgid "An empty field is default."
+msgstr ""
+
 msgid "An error occured."
 msgstr "Prišlo je do napake."
 
@@ -905,8 +912,8 @@ msgstr ""
 msgid "Authentication"
 msgstr "Overjanje"
 
-msgid "Authentication method"
-msgstr "Način prijave"
+msgid "Authentication Method"
+msgstr ""
 
 msgid "Authorised network"
 msgstr "Dovoljeno omrežje"
@@ -918,6 +925,9 @@ msgid "Auto"
 msgstr "Samodejno"
 
 msgid "Auto Snapshot"
+msgstr ""
+
+msgid "Auto page refresh."
 msgstr ""
 
 msgid "Auto size"
@@ -934,6 +944,9 @@ msgstr ""
 
 msgid "Autoselect"
 msgstr "Samodejna izbira"
+
+msgid "Auxiliary Parameters"
+msgstr ""
 
 msgid "Auxiliary device firmware"
 msgstr ""
@@ -1067,6 +1080,9 @@ msgstr "BitTorrent"
 msgid ""
 "BitTorrent needs at least read & execute permissions at the mount point for "
 "directory %s!"
+msgstr ""
+
+msgid "Blank Time"
 msgstr ""
 
 msgid "Blank time"
@@ -1214,14 +1230,20 @@ msgstr ""
 msgid "CPU Load"
 msgstr "Obremenitev CPE"
 
+msgid "CPU Maximum Frequency"
+msgstr ""
+
+msgid "CPU Minimum Frequency"
+msgstr ""
+
 msgid "CPU Temperature"
 msgstr ""
 
 msgid "CPU Usage"
 msgstr ""
 
-msgid "CPU frequency:"
-msgstr "Frekvenca procesorja:"
+msgid "CPU frequencies:"
+msgstr ""
 
 msgid "CPU load"
 msgstr "Obremenitev CPE"
@@ -1478,11 +1500,11 @@ msgstr ""
 msgid "Console Menu"
 msgstr ""
 
+msgid "Console Screensaver"
+msgstr ""
+
 msgid "Console Settings"
 msgstr "Nastavitve konzole"
-
-msgid "Console screensaver"
-msgstr "Ohranjevalnik zaslona na konzoli"
 
 msgid "Contact"
 msgstr "Stik"
@@ -1526,9 +1548,6 @@ msgstr "Model krmilnika"
 msgid "Controller TCP Port"
 msgstr "TCP vrata kontrolerja"
 
-msgid "Controls power consumption."
-msgstr "Nadzira porabo energije"
-
 msgid "Controls the behavior of synchronous requests."
 msgstr ""
 
@@ -1556,6 +1575,9 @@ msgid ""
 msgstr ""
 
 msgid "Controls the dedup method."
+msgstr ""
+
+msgid "Controls the power consumption mode."
 msgstr ""
 
 msgid "Controls whether this dataset can be modified."
@@ -1843,9 +1865,6 @@ msgstr "Danščina"
 msgid "Data digest"
 msgstr "Povzetek podatkov"
 
-msgid "Data directory"
-msgstr ""
-
 msgid "Data integrity"
 msgstr "Neokrnjenost podatkov"
 
@@ -1920,10 +1939,6 @@ msgstr ""
 
 msgid "Default Device Settings"
 msgstr "Privzete nastavitve naprave"
-
-#, php-format
-msgid "Default is %s %s."
-msgstr ""
 
 #, php-format
 msgid "Default is %s."
@@ -2819,9 +2834,6 @@ msgstr ""
 msgid "Emergency Level"
 msgstr ""
 
-msgid "Empty as default."
-msgstr "Privzeto je prazno"
-
 msgid "Enable"
 msgstr "Omogoči"
 
@@ -3058,7 +3070,7 @@ msgstr ""
 msgid "Enable tuning switch"
 msgstr ""
 
-msgid "Enable white background graphs. (black by default)"
+msgid "Enable white background graphs. (black as default)"
 msgstr ""
 
 msgid "Enable write cache mode."
@@ -3157,11 +3169,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Enter the path to the home directory of rrdgraphs. This directory stores the "
-"statistical data for the graphs and will be updated every 5 minutes."
-msgstr ""
-
-msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
 msgstr ""
@@ -3171,6 +3178,11 @@ msgstr ""
 msgid ""
 "Enter the path to the home directory. The config will be created under the "
 "specified directory."
+msgstr ""
+
+msgid ""
+"Enter the path to the home directory. This directory will store the "
+"statistical data and gets updated every 5 minutes!"
 msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
@@ -3620,7 +3632,7 @@ msgstr "Graf prikazuje zadnjih 120 sekund"
 msgid "Graph updates every %d seconds"
 msgstr ""
 
-msgid "Graphs height"
+msgid "Graphs Height"
 msgstr ""
 
 msgid "Greek"
@@ -3728,7 +3740,7 @@ msgid ""
 msgstr ""
 
 #, php-format
-msgid "Height of the graphs. Default is %s pixel."
+msgid "Height of the graphs. (default %s pixels)"
 msgstr ""
 
 msgid "Help"
@@ -3754,6 +3766,9 @@ msgstr "Poudarjanje"
 
 msgid "Hint"
 msgstr "Namig"
+
+msgid "Home Directory"
+msgstr ""
 
 msgid "Home directory"
 msgstr "Domača mapa"
@@ -4167,6 +4182,9 @@ msgstr "Vmesnik"
 
 msgid "Interface Management"
 msgstr "Upravljanje omrežnih kartic"
+
+msgid "Interface Selection"
+msgstr ""
 
 msgid "Interface selection"
 msgstr "Izbira vmesnika"
@@ -5518,6 +5536,9 @@ msgstr "Nalaganje paketa ni uspelo (ni dovolj pomnilnika?)"
 msgid "Packages"
 msgstr "Paketi"
 
+msgid "Page Refresh"
+msgstr ""
+
 msgid "Painfully aggressive"
 msgstr "Zelo agresiven"
 
@@ -5745,8 +5766,8 @@ msgstr "Prosimo, poskusite znova."
 msgid "Polish"
 msgstr "Poljščina"
 
-msgid "Polling time"
-msgstr "Čas preverjanja"
+msgid "Polling Time"
+msgstr ""
 
 msgid "Pool"
 msgstr "Preverjanje"
@@ -6145,12 +6166,6 @@ msgstr "Koš"
 
 msgid "Refresh"
 msgstr "Osveži"
-
-msgid "Refresh time"
-msgstr ""
-
-msgid "Refresh time for graph pages."
-msgstr ""
 
 msgid "Reject"
 msgstr "Zavrni"
@@ -7316,11 +7331,11 @@ msgstr "TKIP"
 msgid "TLS"
 msgstr "TLS"
 
-msgid "TLS Server Certificate Check"
+msgid "TLS Mode"
 msgstr ""
 
-msgid "TLS mode"
-msgstr "TLS način"
+msgid "TLS Server Certificate Check"
+msgstr ""
 
 msgid "TLS only"
 msgstr "Samo TLS"
@@ -9413,7 +9428,7 @@ msgstr ""
 msgid "Xen Virtual Machine"
 msgstr ""
 
-msgid "Y-axis range"
+msgid "Y-axis Range"
 msgstr ""
 
 msgid "Yes"
@@ -9683,7 +9698,7 @@ msgstr ""
 msgid "scan target failed."
 msgstr ""
 
-msgid "seconds"
+msgid "seconds)"
 msgstr ""
 
 msgid "smallest settable high voltage transfer point"
@@ -9719,6 +9734,9 @@ msgstr "različica:"
 msgid "week days"
 msgstr ""
 
+#~ msgid "Authentication method"
+#~ msgstr "Način prijave"
+
 #~ msgid "CPU frequency"
 #~ msgstr "Frekvenca procesorja"
 
@@ -9727,6 +9745,9 @@ msgstr ""
 
 #~ msgid "CPU usage"
 #~ msgstr "Raba CPE"
+
+#~ msgid "Console screensaver"
+#~ msgstr "Ohranjevalnik zaslona na konzoli"
 
 #~ msgid "Disk space usage"
 #~ msgstr "Uporaba diska"
@@ -9738,6 +9759,9 @@ msgstr ""
 #~ msgid "Memory usage"
 #~ msgstr "Poraba spomina"
 
+#~ msgid "Polling time"
+#~ msgstr "Čas preverjanja"
+
 #~ msgid "System bios"
 #~ msgstr "BIOS sistema"
 
@@ -9746,6 +9770,18 @@ msgstr ""
 
 #~ msgid "System last config change"
 #~ msgstr "Zadnja sprememba konfiguracije sistema"
+
+#~ msgid "CPU frequency:"
+#~ msgstr "Frekvenca procesorja:"
+
+#~ msgid "Controls power consumption."
+#~ msgstr "Nadzira porabo energije"
+
+#~ msgid "Empty as default."
+#~ msgstr "Privzeto je prazno"
+
+#~ msgid "TLS mode"
+#~ msgstr "TLS način"
 
 #~ msgid "Swap usage"
 #~ msgstr "Uporaba izmenjevalnega pomnilnika"

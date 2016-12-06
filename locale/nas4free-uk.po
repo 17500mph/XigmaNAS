@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-06 00:14+0000\n"
+"POT-Creation-Date: 2016-12-06 17:07+0000\n"
 "PO-Revision-Date: 2016-12-03 10:57+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-05 23:57+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
+"X-Launchpad-Export-Date: 2016-12-06 22:13+0000\n"
+"X-Generator: Launchpad (build 18292)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -169,6 +169,10 @@ msgstr ""
 "(Специфічне для постачальників початкове значення.) Початкове значення має "
 "різну структуру для різних постачальників і часто не має сенсу у вигляді "
 "десяткового числа."
+
+#, php-format
+msgid "(default %s %s"
+msgstr ""
 
 msgid "*** Imported duplicate ***"
 msgstr "*** Імпортований дублікат ***"
@@ -846,6 +850,9 @@ msgstr ""
 "Група ініціаторів ідентифікується номером мітки і визначає дозволені імена "
 "ініціатора і мереж."
 
+msgid "An empty field is default."
+msgstr ""
+
 msgid "An error occured."
 msgstr "Сталася помилка."
 
@@ -974,8 +981,8 @@ msgstr "Шлях з аутентифікацією і область (Realm)"
 msgid "Authentication"
 msgstr "Автентифікація"
 
-msgid "Authentication method"
-msgstr "Метод автентифікації"
+msgid "Authentication Method"
+msgstr ""
 
 msgid "Authorised network"
 msgstr "Авторизовані мережі"
@@ -988,6 +995,9 @@ msgstr "Автоматично"
 
 msgid "Auto Snapshot"
 msgstr "Автоматичний знимок"
+
+msgid "Auto page refresh."
+msgstr ""
 
 msgid "Auto size"
 msgstr "Авто розмір"
@@ -1003,6 +1013,9 @@ msgstr "Автомасштабування графіків."
 
 msgid "Autoselect"
 msgstr "Автовибір"
+
+msgid "Auxiliary Parameters"
+msgstr ""
 
 msgid "Auxiliary device firmware"
 msgstr "Прошивка допоміжного пристрою"
@@ -1144,6 +1157,9 @@ msgid ""
 msgstr ""
 "BitTorrent необхідні дозволи принаймні на читання і на виконання в точці "
 "монтування каталогу %s!"
+
+msgid "Blank Time"
+msgstr ""
 
 msgid "Blank time"
 msgstr "Пусте значення часу"
@@ -1295,14 +1311,20 @@ msgstr "Частота процесора"
 msgid "CPU Load"
 msgstr "Навантаження ЦП"
 
+msgid "CPU Maximum Frequency"
+msgstr ""
+
+msgid "CPU Minimum Frequency"
+msgstr ""
+
 msgid "CPU Temperature"
 msgstr "Температура ЦП"
 
 msgid "CPU Usage"
 msgstr "Використання ЦП"
 
-msgid "CPU frequency:"
-msgstr "Частота ЦП:"
+msgid "CPU frequencies:"
+msgstr ""
 
 msgid "CPU load"
 msgstr "Навантаження ЦП"
@@ -1566,11 +1588,11 @@ msgstr "Розгляньте можливість заміни цього дис
 msgid "Console Menu"
 msgstr "Консольне меню"
 
+msgid "Console Screensaver"
+msgstr ""
+
 msgid "Console Settings"
 msgstr "Налаштування консолі"
-
-msgid "Console screensaver"
-msgstr "Консольний скрінсейвер"
 
 msgid "Contact"
 msgstr "Контакт"
@@ -1615,9 +1637,6 @@ msgstr "Модель контролера"
 msgid "Controller TCP Port"
 msgstr "TCP порт контролера"
 
-msgid "Controls power consumption."
-msgstr "Керує енергоспоживанням."
-
 msgid "Controls the behavior of synchronous requests."
 msgstr "Керує поведінкою синхронних запитів."
 
@@ -1653,6 +1672,9 @@ msgstr ""
 
 msgid "Controls the dedup method."
 msgstr "Керування методом dedup"
+
+msgid "Controls the power consumption mode."
+msgstr ""
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Керує можливістю змінювати цей набір даних."
@@ -1996,9 +2018,6 @@ msgstr "Датський"
 msgid "Data digest"
 msgstr "Дайджест даних"
 
-msgid "Data directory"
-msgstr "Каталог даних"
-
 msgid "Data integrity"
 msgstr "Цілісність даних"
 
@@ -2082,10 +2101,6 @@ msgstr ""
 
 msgid "Default Device Settings"
 msgstr "Налаштування пристрою за замовчуванням"
-
-#, php-format
-msgid "Default is %s %s."
-msgstr "За замовчуванням %s %s."
 
 #, php-format
 msgid "Default is %s."
@@ -3009,9 +3024,6 @@ msgstr "Налаштування електронної пошти"
 msgid "Emergency Level"
 msgstr "Рівень сповіщення"
 
-msgid "Empty as default."
-msgstr "Порожньо за замовчуванням."
-
 msgid "Enable"
 msgstr "Дозволити"
 
@@ -3256,8 +3268,8 @@ msgstr "Увімкнути налаштування деяких змінних 
 msgid "Enable tuning switch"
 msgstr "Увімкнути перемикач налаштування"
 
-msgid "Enable white background graphs. (black by default)"
-msgstr "Дозволяє біле тло графіків. (чорне за замовчуванням)"
+msgid "Enable white background graphs. (black as default)"
+msgstr ""
 
 msgid "Enable write cache mode."
 msgstr "Увімкнути режим кешування запису."
@@ -3361,13 +3373,6 @@ msgstr ""
 "віртуальної машини та образ диску будуть створені у вказаній директорії."
 
 msgid ""
-"Enter the path to the home directory of rrdgraphs. This directory stores the "
-"statistical data for the graphs and will be updated every 5 minutes."
-msgstr ""
-"Введіть шлях до домашньої директорії RRDGraphs. Ця директорія утримує "
-"статистичні данні для графіків та буде оновлюватися кожні 5 хвилин."
-
-msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
 msgstr ""
@@ -3380,6 +3385,11 @@ msgid ""
 msgstr ""
 "Введіть шлях до домашньої директорії. Конфігурацію буде створено у вказаній "
 "директорії."
+
+msgid ""
+"Enter the path to the home directory. This directory will store the "
+"statistical data and gets updated every 5 minutes!"
+msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr ""
@@ -3838,8 +3848,8 @@ msgstr "Графік показує останні 120 секунд"
 msgid "Graph updates every %d seconds"
 msgstr "Графік оновлюється раз на %d секунд"
 
-msgid "Graphs height"
-msgstr "Висота графіку"
+msgid "Graphs Height"
+msgstr ""
 
 msgid "Greek"
 msgstr "Грецька"
@@ -3957,8 +3967,8 @@ msgstr ""
 "помилки читання / запису."
 
 #, php-format
-msgid "Height of the graphs. Default is %s pixel."
-msgstr "Висота графіків. За замовчуванням %s пікселів."
+msgid "Height of the graphs. (default %s pixels)"
+msgstr ""
 
 msgid "Help"
 msgstr "Допомога"
@@ -3983,6 +3993,9 @@ msgstr "Підсвічування"
 
 msgid "Hint"
 msgstr "Підказка"
+
+msgid "Home Directory"
+msgstr ""
 
 msgid "Home directory"
 msgstr "Домашня директорія"
@@ -4421,6 +4434,9 @@ msgstr "Інтерфейс"
 
 msgid "Interface Management"
 msgstr "Керування інтерфейсом"
+
+msgid "Interface Selection"
+msgstr ""
 
 msgid "Interface selection"
 msgstr "Вибір інтерфуйсу"
@@ -5824,6 +5840,9 @@ msgstr "Відмова завантаження пакета (недостатн
 msgid "Packages"
 msgstr "Пакети"
 
+msgid "Page Refresh"
+msgstr ""
+
 msgid "Painfully aggressive"
 msgstr "Дуже агресивний"
 
@@ -6054,8 +6073,8 @@ msgstr "Спробуйте ще раз."
 msgid "Polish"
 msgstr "Польська"
 
-msgid "Polling time"
-msgstr "Час опитування"
+msgid "Polling Time"
+msgstr ""
 
 msgid "Pool"
 msgstr "Список"
@@ -6461,12 +6480,6 @@ msgstr "Смітник"
 
 msgid "Refresh"
 msgstr "Оновити"
-
-msgid "Refresh time"
-msgstr "Час оновлення"
-
-msgid "Refresh time for graph pages."
-msgstr "Час оновлення для сторінок графіків."
 
 msgid "Reject"
 msgstr "Відхилити"
@@ -7687,11 +7700,11 @@ msgstr "TKIP"
 msgid "TLS"
 msgstr "TLS"
 
+msgid "TLS Mode"
+msgstr ""
+
 msgid "TLS Server Certificate Check"
 msgstr "Перевірка TLS сертифіката сервера"
-
-msgid "TLS mode"
-msgstr "TLS режим"
 
 msgid "TLS only"
 msgstr "Лише TLS"
@@ -10094,8 +10107,8 @@ msgstr "Xen"
 msgid "Xen Virtual Machine"
 msgstr "Віртуальна машина Xen"
 
-msgid "Y-axis range"
-msgstr "Межі по осі y"
+msgid "Y-axis Range"
+msgstr ""
 
 msgid "Yes"
 msgstr "Так"
@@ -10384,8 +10397,8 @@ msgstr "ревізія"
 msgid "scan target failed."
 msgstr "збій сканування об'єкта."
 
-msgid "seconds"
-msgstr "секунд"
+msgid "seconds)"
+msgstr ""
 
 msgid "smallest settable high voltage transfer point"
 msgstr "найменше значення високої напруги для перемикання що встановлюється"
@@ -10420,6 +10433,12 @@ msgstr "версія:"
 msgid "week days"
 msgstr ""
 
+#~ msgid "Authentication method"
+#~ msgstr "Метод автентифікації"
+
+#~ msgid "CPU frequency:"
+#~ msgstr "Частота ЦП:"
+
 #~ msgid "CPU frequency"
 #~ msgstr "Частота ЦП"
 
@@ -10428,6 +10447,9 @@ msgstr ""
 
 #~ msgid "CPU temperature"
 #~ msgstr "Температура ЦП"
+
+#~ msgid "Controls power consumption."
+#~ msgstr "Керує енергоспоживанням."
 
 #~ msgid "second(s)"
 #~ msgstr "сек."
@@ -10442,6 +10464,9 @@ msgstr ""
 #~ msgid "Memory usage"
 #~ msgstr "Використання пам'яті"
 
+#~ msgid "Polling time"
+#~ msgstr "Час опитування"
+
 #~ msgid "Swap usage"
 #~ msgstr "Використання Swap"
 
@@ -10451,8 +10476,17 @@ msgstr ""
 #~ msgid "System bios"
 #~ msgstr "BIOS"
 
+#~ msgid "TLS mode"
+#~ msgstr "TLS режим"
+
 #~ msgid "System last config change"
 #~ msgstr "Остання зміна конфігурації системи"
+
+#~ msgid "Empty as default."
+#~ msgstr "Порожньо за замовчуванням."
+
+#~ msgid "Console screensaver"
+#~ msgstr "Консольний скрінсейвер"
 
 #~ msgid "day(s)"
 #~ msgstr "дн."
@@ -10465,3 +10499,39 @@ msgstr ""
 
 #~ msgid "Updating in 5 seconds."
 #~ msgstr "Оновлюється кожні 5 секунд."
+
+#, php-format
+#~ msgid "Default is %s %s."
+#~ msgstr "За замовчуванням %s %s."
+
+#~ msgid "Graphs height"
+#~ msgstr "Висота графіку"
+
+#~ msgid "Refresh time for graph pages."
+#~ msgstr "Час оновлення для сторінок графіків."
+
+#~ msgid "Refresh time"
+#~ msgstr "Час оновлення"
+
+#~ msgid "Y-axis range"
+#~ msgstr "Межі по осі y"
+
+#~ msgid "seconds"
+#~ msgstr "секунд"
+
+#~ msgid "Data directory"
+#~ msgstr "Каталог даних"
+
+#, php-format
+#~ msgid "Height of the graphs. Default is %s pixel."
+#~ msgstr "Висота графіків. За замовчуванням %s пікселів."
+
+#~ msgid "Enable white background graphs. (black by default)"
+#~ msgstr "Дозволяє біле тло графіків. (чорне за замовчуванням)"
+
+#~ msgid ""
+#~ "Enter the path to the home directory of rrdgraphs. This directory stores the "
+#~ "statistical data for the graphs and will be updated every 5 minutes."
+#~ msgstr ""
+#~ "Введіть шлях до домашньої директорії RRDGraphs. Ця директорія утримує "
+#~ "статистичні данні для графіків та буде оновлюватися кожні 5 хвилин."

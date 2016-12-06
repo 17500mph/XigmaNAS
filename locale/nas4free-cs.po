@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-06 00:14+0000\n"
+"POT-Creation-Date: 2016-12-06 17:07+0000\n"
 "PO-Revision-Date: 2016-11-27 15:51+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-05 23:56+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
+"X-Launchpad-Export-Date: 2016-12-06 22:12+0000\n"
+"X-Generator: Launchpad (build 18292)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
 "X-Poedit-Language: Czech\n"
@@ -172,6 +172,10 @@ msgid ""
 msgstr ""
 "(Výrobci specifická nezpracovaná hodnota.) Struktura se mezi výrobci různí a "
 "převedena na desítkové číslo mnohdy nedává smysl."
+
+#, php-format
+msgid "(default %s %s"
+msgstr ""
 
 msgid "*** Imported duplicate ***"
 msgstr "*** Importovaný duplikát ***"
@@ -853,6 +857,9 @@ msgstr ""
 "Skupina iniciátorů je určena číslem značky (tag) a určuje názvy a sítě "
 "pověřených iniciátorů."
 
+msgid "An empty field is default."
+msgstr ""
+
 msgid "An error occured."
 msgstr "Vyskytla se chyba."
 
@@ -981,8 +988,8 @@ msgstr "Ověřovací umístění a oblast (realm)"
 msgid "Authentication"
 msgstr "Ověření"
 
-msgid "Authentication method"
-msgstr "Způsob ověřování"
+msgid "Authentication Method"
+msgstr ""
 
 msgid "Authorised network"
 msgstr "Síť ze které je umožněn přístup"
@@ -995,6 +1002,9 @@ msgstr "Automaticky"
 
 msgid "Auto Snapshot"
 msgstr "Automatické zachycení stavu"
+
+msgid "Auto page refresh."
+msgstr ""
 
 msgid "Auto size"
 msgstr "Velikost automaticky"
@@ -1010,6 +1020,9 @@ msgstr "Automatické měřítko grafů"
 
 msgid "Autoselect"
 msgstr "Automatický výběr"
+
+msgid "Auxiliary Parameters"
+msgstr ""
 
 msgid "Auxiliary device firmware"
 msgstr "Pomocný firmware zařízení"
@@ -1152,6 +1165,9 @@ msgstr "BitTorrent"
 msgid ""
 "BitTorrent needs at least read & execute permissions at the mount point for "
 "directory %s!"
+msgstr ""
+
+msgid "Blank Time"
 msgstr ""
 
 msgid "Blank time"
@@ -1305,14 +1321,20 @@ msgstr "Frekvence procesoru"
 msgid "CPU Load"
 msgstr "Vytížení procesoru"
 
+msgid "CPU Maximum Frequency"
+msgstr ""
+
+msgid "CPU Minimum Frequency"
+msgstr ""
+
 msgid "CPU Temperature"
 msgstr "Teplota procesoru"
 
 msgid "CPU Usage"
 msgstr "Využití procesoru"
 
-msgid "CPU frequency:"
-msgstr "Frekvence procesoru:"
+msgid "CPU frequencies:"
+msgstr ""
 
 msgid "CPU load"
 msgstr "Vytížení procesoru"
@@ -1582,11 +1604,11 @@ msgstr "Zvažte výměnu této jednotky (disku, SSD)"
 msgid "Console Menu"
 msgstr "Nabídka v textové konzoli"
 
+msgid "Console Screensaver"
+msgstr ""
+
 msgid "Console Settings"
 msgstr "Nastavení konzole"
-
-msgid "Console screensaver"
-msgstr "Šetřič obrazovky v textové konzoli"
 
 msgid "Contact"
 msgstr "Kontakt"
@@ -1631,9 +1653,6 @@ msgstr "Model řadiče"
 msgid "Controller TCP Port"
 msgstr "TCP port řadiče"
 
-msgid "Controls power consumption."
-msgstr "Řídí spotřebu energie."
-
 msgid "Controls the behavior of synchronous requests."
 msgstr "Určuje chování synchronních požadavků."
 
@@ -1670,6 +1689,9 @@ msgstr ""
 
 msgid "Controls the dedup method."
 msgstr "Ovládá metodu deduplikace."
+
+msgid "Controls the power consumption mode."
+msgstr ""
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Určuje, zda bude možné tuto datovou sadu upravovat."
@@ -2017,9 +2039,6 @@ msgstr "dánština"
 msgid "Data digest"
 msgstr "Otisk dat"
 
-msgid "Data directory"
-msgstr "Složka s daty"
-
 msgid "Data integrity"
 msgstr "Celistvost dat"
 
@@ -2096,10 +2115,6 @@ msgstr ""
 
 msgid "Default Device Settings"
 msgstr "Výchozí nastavení pro zařízení"
-
-#, php-format
-msgid "Default is %s %s."
-msgstr "Výchozí je %s %s."
 
 #, php-format
 msgid "Default is %s."
@@ -3018,9 +3033,6 @@ msgstr ""
 msgid "Emergency Level"
 msgstr "Úroveň nouze"
 
-msgid "Empty as default."
-msgstr "Ve výchozím stavu nevyplněno."
-
 msgid "Enable"
 msgstr "Zapnout"
 
@@ -3267,7 +3279,7 @@ msgstr "Umožnit ladění některých proměnných jádra systému."
 msgid "Enable tuning switch"
 msgstr "Zapnout přepínač vyladění"
 
-msgid "Enable white background graphs. (black by default)"
+msgid "Enable white background graphs. (black as default)"
 msgstr ""
 
 msgid "Enable write cache mode."
@@ -3372,11 +3384,6 @@ msgstr ""
 "nastavení a obrazy úložišť virtuálnich strojů."
 
 msgid ""
-"Enter the path to the home directory of rrdgraphs. This directory stores the "
-"statistical data for the graphs and will be updated every 5 minutes."
-msgstr ""
-
-msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
 msgstr ""
@@ -3388,6 +3395,11 @@ msgid ""
 "specified directory."
 msgstr ""
 "Zadejte umístění domovské složky. Právě zde bude vytvořeno nastavení."
+
+msgid ""
+"Enter the path to the home directory. This directory will store the "
+"statistical data and gets updated every 5 minutes!"
+msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr ""
@@ -3848,7 +3860,7 @@ msgstr "Graf zobrazuje předchozích 120 sekund"
 msgid "Graph updates every %d seconds"
 msgstr ""
 
-msgid "Graphs height"
+msgid "Graphs Height"
 msgstr ""
 
 msgid "Greek"
@@ -3965,7 +3977,7 @@ msgstr ""
 "vzdálenost zvyšuje pravděpodobnost výskytu chyb čtení/zápisu."
 
 #, php-format
-msgid "Height of the graphs. Default is %s pixel."
+msgid "Height of the graphs. (default %s pixels)"
 msgstr ""
 
 msgid "Help"
@@ -3995,6 +4007,9 @@ msgstr "Zvýrazňování"
 
 msgid "Hint"
 msgstr "Tip"
+
+msgid "Home Directory"
+msgstr ""
 
 msgid "Home directory"
 msgstr "Domovská složka"
@@ -4431,6 +4446,9 @@ msgstr "Rozhraní"
 
 msgid "Interface Management"
 msgstr "Správa rozhraní"
+
+msgid "Interface Selection"
+msgstr ""
 
 msgid "Interface selection"
 msgstr "Výběr rozhraní"
@@ -5858,6 +5876,9 @@ msgstr "Nahrání balíčku se nezdařilo (nedostatek paměti?)"
 msgid "Packages"
 msgstr "Balíčky"
 
+msgid "Page Refresh"
+msgstr ""
+
 msgid "Painfully aggressive"
 msgstr "Nejpodrobněji (nejpomalejší)"
 
@@ -6089,8 +6110,8 @@ msgstr "Zkuste to znovu."
 msgid "Polish"
 msgstr "polština"
 
-msgid "Polling time"
-msgstr "Interval dotazování"
+msgid "Polling Time"
+msgstr ""
 
 msgid "Pool"
 msgstr "Fond"
@@ -6497,12 +6518,6 @@ msgstr "Koš"
 
 msgid "Refresh"
 msgstr "Načíst znovu"
-
-msgid "Refresh time"
-msgstr ""
-
-msgid "Refresh time for graph pages."
-msgstr ""
 
 msgid "Reject"
 msgstr "Odmítnout"
@@ -7709,11 +7724,11 @@ msgstr "TKIP"
 msgid "TLS"
 msgstr "TLS"
 
+msgid "TLS Mode"
+msgstr ""
+
 msgid "TLS Server Certificate Check"
 msgstr "Kontrola TLS certifikátu serveru"
-
-msgid "TLS mode"
-msgstr "Režim TLS"
 
 msgid "TLS only"
 msgstr "Pouze TLS"
@@ -10115,7 +10130,7 @@ msgstr "Xen"
 msgid "Xen Virtual Machine"
 msgstr "Xen virtuální stroj"
 
-msgid "Y-axis range"
+msgid "Y-axis Range"
 msgstr ""
 
 msgid "Yes"
@@ -10405,7 +10420,7 @@ msgstr "revize"
 msgid "scan target failed."
 msgstr "skenování cíle se nezdařilo."
 
-msgid "seconds"
+msgid "seconds)"
 msgstr ""
 
 msgid "smallest settable high voltage transfer point"
@@ -10464,8 +10479,20 @@ msgstr ""
 #~ msgid "hour(s)"
 #~ msgstr "hodin"
 
+#~ msgid "TLS mode"
+#~ msgstr "Režim TLS"
+
 #~ msgid "day(s)"
 #~ msgstr "dnů"
+
+#~ msgid "Controls power consumption."
+#~ msgstr "Řídí spotřebu energie."
+
+#~ msgid "CPU frequency:"
+#~ msgstr "Frekvence procesoru:"
+
+#~ msgid "Polling time"
+#~ msgstr "Interval dotazování"
 
 #~ msgid "Updating in 5 seconds."
 #~ msgstr "Aktualizace začne za 5 sekund."
@@ -10479,8 +10506,17 @@ msgstr ""
 #~ msgid "second(s)"
 #~ msgstr "sekund"
 
+#~ msgid "Console screensaver"
+#~ msgstr "Šetřič obrazovky v textové konzoli"
+
 #~ msgid "Memory usage"
 #~ msgstr "Využití operační paměti"
+
+#~ msgid "Empty as default."
+#~ msgstr "Ve výchozím stavu nevyplněno."
+
+#~ msgid "Authentication method"
+#~ msgstr "Způsob ověřování"
 
 #~ msgid "System bios"
 #~ msgstr "BIOS/(U)EFI"
@@ -10490,3 +10526,10 @@ msgstr ""
 
 #~ msgid "System last config change"
 #~ msgstr "Změna v nastaveních byla naposledy provedena v(e)"
+
+#~ msgid "Data directory"
+#~ msgstr "Složka s daty"
+
+#, php-format
+#~ msgid "Default is %s %s."
+#~ msgstr "Výchozí je %s %s."
