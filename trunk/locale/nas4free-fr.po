@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-06 00:14+0000\n"
-"PO-Revision-Date: 2016-12-03 04:49+0000\n"
+"POT-Creation-Date: 2016-12-06 17:07+0000\n"
+"PO-Revision-Date: 2016-12-06 19:47+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-05 23:57+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
+"X-Launchpad-Export-Date: 2016-12-06 22:12+0000\n"
+"X-Generator: Launchpad (build 18292)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
 "X-Poedit-Language: French\n"
@@ -172,6 +172,10 @@ msgstr ""
 "(valeur brute spécifique à chaque fabricant) Le format de la valeur brute "
 "est propre à chaque fabricant, et souvent n'est pas explicite (valeur "
 "numérique)."
+
+#, php-format
+msgid "(default %s %s"
+msgstr "(defaut %s %s"
 
 msgid "*** Imported duplicate ***"
 msgstr "*** Règle importée dupliquée ***"
@@ -858,6 +862,9 @@ msgstr ""
 "Un groupe initiateur est identifié par un numéro de tag et définit un nom "
 "d'initiateur autorisé ainsi qu'un réseau."
 
+msgid "An empty field is default."
+msgstr "Un champ vide par défaut."
+
 msgid "An error occured."
 msgstr "Une erreur s'est produite."
 
@@ -987,7 +994,7 @@ msgstr "Chemin et nom de domaine d'authentification"
 msgid "Authentication"
 msgstr "Authentification"
 
-msgid "Authentication method"
+msgid "Authentication Method"
 msgstr "Méthode d'authentification"
 
 msgid "Authorised network"
@@ -1001,6 +1008,9 @@ msgstr "Automatique"
 
 msgid "Auto Snapshot"
 msgstr "Capture Instantanée Automatique"
+
+msgid "Auto page refresh."
+msgstr "Rafraîchissement automatique de la page."
 
 msgid "Auto size"
 msgstr "Taille automatique"
@@ -1016,6 +1026,9 @@ msgstr "Échelle automatique pour les graphiques"
 
 msgid "Autoselect"
 msgstr "Sélection automatique"
+
+msgid "Auxiliary Parameters"
+msgstr "Paramètres auxiliaires"
 
 msgid "Auxiliary device firmware"
 msgstr "Firmware auxiliaire"
@@ -1162,6 +1175,9 @@ msgid ""
 msgstr ""
 "BitTorrent a besoin au moins d'être autorisé à lire et exécuter  au point de "
 "montage pour le répertoire% s!"
+
+msgid "Blank Time"
+msgstr "Temps vide"
 
 msgid "Blank time"
 msgstr "Délai de mise en veille"
@@ -1314,14 +1330,20 @@ msgstr "Fréquence du processeur"
 msgid "CPU Load"
 msgstr "Charge du processeur"
 
+msgid "CPU Maximum Frequency"
+msgstr "Fréquence Maximale du CPU"
+
+msgid "CPU Minimum Frequency"
+msgstr "Fréquence Minimale du CPU"
+
 msgid "CPU Temperature"
 msgstr "Température du processeur"
 
 msgid "CPU Usage"
 msgstr "Utilisation du processeur"
 
-msgid "CPU frequency:"
-msgstr "Fréquence CPU"
+msgid "CPU frequencies:"
+msgstr "Fréquences CPU:"
 
 msgid "CPU load"
 msgstr "Charge CPU"
@@ -1588,11 +1610,11 @@ msgstr "Penser à remplacer ce disque"
 msgid "Console Menu"
 msgstr "Menu de la Console"
 
+msgid "Console Screensaver"
+msgstr "économiseur d'écran de la Console"
+
 msgid "Console Settings"
 msgstr "Paramètres de la console"
-
-msgid "Console screensaver"
-msgstr "Veille de la console"
 
 msgid "Contact"
 msgstr "Contact"
@@ -1637,9 +1659,6 @@ msgstr "Modèle de contrôleur"
 msgid "Controller TCP Port"
 msgstr "Port TCP du contrôleur"
 
-msgid "Controls power consumption."
-msgstr "Contrôle la consommation de puissance."
-
 msgid "Controls the behavior of synchronous requests."
 msgstr "Contrôle le comportement des requêtes synchrones"
 
@@ -1678,6 +1697,9 @@ msgstr ""
 msgid "Controls the dedup method."
 msgstr "Contrôle la méthode dedup."
 
+msgid "Controls the power consumption mode."
+msgstr "Contrôle le mode de consommation d'énergie."
+
 msgid "Controls whether this dataset can be modified."
 msgstr "Controle si ce dataset peut être modifié."
 
@@ -1689,10 +1711,10 @@ msgstr ""
 "Store DOS sont désactivés."
 
 msgid "Core"
-msgstr ""
+msgstr "Noyau"
 
 msgid "Core Usage"
-msgstr ""
+msgstr "Utilisation du noyau"
 
 msgid "Count"
 msgstr "Nombre"
@@ -2023,9 +2045,6 @@ msgstr "Danois"
 msgid "Data digest"
 msgstr "Digest des données"
 
-msgid "Data directory"
-msgstr "Répertoire de données"
-
 msgid "Data integrity"
 msgstr "Intégrité des données"
 
@@ -2057,7 +2076,7 @@ msgid "Date format"
 msgstr "Format de la date"
 
 msgid "Day"
-msgstr ""
+msgstr "Jour"
 
 msgid "Days"
 msgstr "Jours"
@@ -2108,10 +2127,6 @@ msgstr ""
 
 msgid "Default Device Settings"
 msgstr "Paramètres par défaut du dispositif"
-
-#, php-format
-msgid "Default is %s %s."
-msgstr "Par défaut c'est %s %s."
 
 #, php-format
 msgid "Default is %s."
@@ -2530,7 +2545,7 @@ msgid "Disk Selection"
 msgstr "sélection du disque"
 
 msgid "Disk Space Usage"
-msgstr ""
+msgstr "Utilisation de l'espace disque"
 
 msgid "Disk Usage"
 msgstr "Utilisation du disque"
@@ -3049,9 +3064,6 @@ msgstr "Configuration du courrier électronique"
 msgid "Emergency Level"
 msgstr "Niveau d'urgence"
 
-msgid "Empty as default."
-msgstr "Vide par défaut"
-
 msgid "Enable"
 msgstr "Activer"
 
@@ -3297,8 +3309,8 @@ msgstr "Activer le réglage de certaines variables du noyau."
 msgid "Enable tuning switch"
 msgstr "Cochez  -  Activer le réglage de certaines variables du noyau."
 
-msgid "Enable white background graphs. (black by default)"
-msgstr "Activer les graphiques avec le  fond blanc. (Noir par défaut)"
+msgid "Enable white background graphs. (black as default)"
+msgstr "Activer le fond blanc des graphiques . (Noir par défaut)"
 
 msgid "Enable write cache mode."
 msgstr "Activer le mode cache en écriture."
@@ -3404,14 +3416,6 @@ msgstr ""
 "images disque seront créées sous le répertoire spécifié."
 
 msgid ""
-"Enter the path to the home directory of rrdgraphs. This directory stores the "
-"statistical data for the graphs and will be updated every 5 minutes."
-msgstr ""
-"Entrez le chemin d'accès au répertoire de base des rrdgraphs. Ce répertoire "
-"stocke les données statistiques des graphiques et sera mis à jour toutes les "
-"5 minutes."
-
-msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
 msgstr ""
@@ -3424,6 +3428,13 @@ msgid ""
 msgstr ""
 "Entrer le chemin vers le dossier \"home\". La configuration sera créée dans "
 "le dossier spécifié."
+
+msgid ""
+"Enter the path to the home directory. This directory will store the "
+"statistical data and gets updated every 5 minutes!"
+msgstr ""
+"Entrez le chemin d'accès au répertoire personnel. Ce répertoire stockera les "
+"données statistiques et sera mis à jour toutes les 5 minutes!"
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Port sur lequel envoyer les traps SNMP (162 par défaut)."
@@ -3878,8 +3889,8 @@ msgstr "Le graphique montre les dernières 120 secondes"
 msgid "Graph updates every %d seconds"
 msgstr "Graphiques mis à jour toutes les %d seconds"
 
-msgid "Graphs height"
-msgstr "Hauteur des graphiques"
+msgid "Graphs Height"
+msgstr "Hauteur des Graphiques"
 
 msgid "Greek"
 msgstr "Grec"
@@ -3997,8 +4008,8 @@ msgstr ""
 "augmente les risques d'erreur de lecture/écriture."
 
 #, php-format
-msgid "Height of the graphs. Default is %s pixel."
-msgstr "Hauteur des graphiques. Par défaut c'est %s pixel."
+msgid "Height of the graphs. (default %s pixels)"
+msgstr "Hauteur des graphiques.(defaut %s pixels)"
 
 msgid "Help"
 msgstr "Aide"
@@ -4023,6 +4034,9 @@ msgstr "Surlignage"
 
 msgid "Hint"
 msgstr "Information"
+
+msgid "Home Directory"
+msgstr "Dossier personnel"
 
 msgid "Home directory"
 msgstr "Dossier personnel"
@@ -4058,7 +4072,7 @@ msgid "Hosts deny"
 msgstr "Hôtes refusés"
 
 msgid "Hour"
-msgstr ""
+msgstr "Heure"
 
 msgid "Hours"
 msgstr "Heures"
@@ -4470,6 +4484,9 @@ msgstr "Interface"
 msgid "Interface Management"
 msgstr "Gestion des interfaces"
 
+msgid "Interface Selection"
+msgstr "Sélection d'interface"
+
 msgid "Interface selection"
 msgstr "Sélection de l'interface"
 
@@ -4685,7 +4702,7 @@ msgid "Large read/write"
 msgstr "Lecture/écriture élargie"
 
 msgid "Last Configuration Change"
-msgstr ""
+msgstr "Dernière modification de la configuration"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -5234,7 +5251,7 @@ msgid "Minimum temperature seen (degrees C)"
 msgstr "plus petite temperature vu (degrés Celsius)"
 
 msgid "Minute"
-msgstr ""
+msgstr "Minute"
 
 msgid "Minutes"
 msgstr "Minutes"
@@ -5878,6 +5895,9 @@ msgstr "Chargement du paquetage échoué (manque de mémoire?)"
 msgid "Packages"
 msgstr "Paquets"
 
+msgid "Page Refresh"
+msgstr "Rafraichissement de page"
+
 msgid "Painfully aggressive"
 msgstr "Très agressif"
 
@@ -6111,8 +6131,8 @@ msgstr "Veuillez essayer à nouveau."
 msgid "Polish"
 msgstr "Polonais"
 
-msgid "Polling time"
-msgstr "Planification"
+msgid "Polling Time"
+msgstr "Temps d'interrogation"
 
 msgid "Pool"
 msgstr "Pool"
@@ -6527,12 +6547,6 @@ msgstr "Poubelle"
 
 msgid "Refresh"
 msgstr "Rafraichir"
-
-msgid "Refresh time"
-msgstr "Période de rafraichissement"
-
-msgid "Refresh time for graph pages."
-msgstr "Période de rafraichissement pour les pages graphiques"
 
 msgid "Reject"
 msgstr "Rejeter"
@@ -6950,13 +6964,13 @@ msgid "Search for and import all disks found"
 msgstr "Rechercher et importer tous les disques trouvés"
 
 msgid "Second"
-msgstr ""
+msgstr "Seconde"
 
 msgid "Secondary"
 msgstr "Secondaire"
 
 msgid "Seconds"
-msgstr ""
+msgstr "Secondes"
 
 msgid "Secret"
 msgstr "Secret"
@@ -7633,7 +7647,7 @@ msgid "Swap Memory"
 msgstr "Mémoire d'échange"
 
 msgid "Swap Usage"
-msgstr ""
+msgstr "Utilisation du Swap"
 
 msgid "Swap disabled"
 msgstr "Pagination désactivée"
@@ -7686,7 +7700,7 @@ msgid "System"
 msgstr "Système"
 
 msgid "System BIOS"
-msgstr ""
+msgstr "BIOS Système"
 
 msgid "System Email Report Settings"
 msgstr "paramètres du courrier de rapports système"
@@ -7713,10 +7727,10 @@ msgid "System Settings"
 msgstr "Configuration du système"
 
 msgid "System Time"
-msgstr ""
+msgstr "Temps Système"
 
 msgid "System Uptime"
-msgstr ""
+msgstr "Temps de fonctionnement du système"
 
 msgid "System events"
 msgstr "Evénements système"
@@ -7760,11 +7774,11 @@ msgstr "TKIP"
 msgid "TLS"
 msgstr "TLS"
 
+msgid "TLS Mode"
+msgstr "Mode TLS"
+
 msgid "TLS Server Certificate Check"
 msgstr "TLS contrôle du certificat du serveur"
-
-msgid "TLS mode"
-msgstr "Mode TLS"
 
 msgid "TLS only"
 msgstr "TLS seulement"
@@ -7831,7 +7845,7 @@ msgid "Targets"
 msgstr "Cibles"
 
 msgid "Temp"
-msgstr ""
+msgstr "Température"
 
 msgid "Temperature"
 msgstr "Température"
@@ -10207,8 +10221,8 @@ msgstr "Xen"
 msgid "Xen Virtual Machine"
 msgstr "Machine Virtuelle Xen"
 
-msgid "Y-axis range"
-msgstr "Echelle de l'axe Y"
+msgid "Y-axis Range"
+msgstr "Etendue de l'axe des Y"
 
 msgid "Yes"
 msgstr "Oui"
@@ -10385,7 +10399,7 @@ msgid "chroot() everyone, but root."
 msgstr "Emprisonner (chroot) tout le monde, sauf root."
 
 msgid "days"
-msgstr ""
+msgstr "jour(s)"
 
 msgid "debug"
 msgstr "déboguer"
@@ -10417,7 +10431,7 @@ msgid "greatest settable low voltage transfer point"
 msgstr "Plus grande valeur du point de transfert tension basse configurable"
 
 msgid "hours"
-msgstr ""
+msgstr "heures"
 
 msgid "iSCSI Initiator"
 msgstr "Initiateur iSCSI"
@@ -10451,10 +10465,10 @@ msgid "loader.conf"
 msgstr "loader.conf"
 
 msgid "minutes"
-msgstr ""
+msgstr "minutes"
 
 msgid "months"
-msgstr ""
+msgstr "mois"
 
 msgid "mount"
 msgstr "montage"
@@ -10499,8 +10513,8 @@ msgstr "revision"
 msgid "scan target failed."
 msgstr "Echecs du scan de la cible."
 
-msgid "seconds"
-msgstr "secondes"
+msgid "seconds)"
+msgstr "secondes)"
 
 msgid "smallest settable high voltage transfer point"
 msgstr ""
@@ -10535,7 +10549,10 @@ msgid "version:"
 msgstr "version:"
 
 msgid "week days"
-msgstr ""
+msgstr "jours de la semaine"
+
+#~ msgid "Authentication method"
+#~ msgstr "Méthode d'authentification"
 
 #~ msgid "CPU frequency"
 #~ msgstr "Fréquence CPU"
@@ -10546,6 +10563,9 @@ msgstr ""
 #~ msgid "CPU usage"
 #~ msgstr "Utilisation CPU"
 
+#~ msgid "Console screensaver"
+#~ msgstr "Veille de la console"
+
 #~ msgid "Disk space usage"
 #~ msgstr "Utilisation des disques"
 
@@ -10555,6 +10575,9 @@ msgstr ""
 
 #~ msgid "Memory usage"
 #~ msgstr "Utilisation de la mémoire"
+
+#~ msgid "Polling time"
+#~ msgstr "Planification"
 
 #~ msgid "Swap usage"
 #~ msgstr "Utilisation de la pagination"
@@ -10577,8 +10600,57 @@ msgstr ""
 #~ msgid "System uptime"
 #~ msgstr "Disponibilité du système"
 
+#~ msgid "Controls power consumption."
+#~ msgstr "Contrôle la consommation de puissance."
+
+#~ msgid "CPU frequency:"
+#~ msgstr "Fréquence CPU"
+
+#~ msgid "Empty as default."
+#~ msgstr "Vide par défaut"
+
+#~ msgid "TLS mode"
+#~ msgstr "Mode TLS"
+
 #~ msgid "System last config change"
 #~ msgstr "Dernier changement de la configuration du système"
 
 #~ msgid "System bios"
 #~ msgstr "Le système BIOS"
+
+#~ msgid "Data directory"
+#~ msgstr "Répertoire de données"
+
+#, php-format
+#~ msgid "Default is %s %s."
+#~ msgstr "Par défaut c'est %s %s."
+
+#~ msgid "Graphs height"
+#~ msgstr "Hauteur des graphiques"
+
+#~ msgid "Refresh time for graph pages."
+#~ msgstr "Période de rafraichissement pour les pages graphiques"
+
+#~ msgid "Refresh time"
+#~ msgstr "Période de rafraichissement"
+
+#~ msgid "Y-axis range"
+#~ msgstr "Echelle de l'axe Y"
+
+#~ msgid "seconds"
+#~ msgstr "secondes"
+
+#, php-format
+#~ msgid "Height of the graphs. Default is %s pixel."
+#~ msgstr "Hauteur des graphiques. Par défaut c'est %s pixel."
+
+#~ msgid "Enable white background graphs. (black by default)"
+#~ msgstr "Activer les graphiques avec le  fond blanc. (Noir par défaut)"
+
+#~ msgid ""
+#~ "Enter the path to the home directory of rrdgraphs. This directory stores the "
+#~ "statistical data for the graphs and will be updated every 5 minutes."
+#~ msgstr ""
+#~ "Entrez le chemin d'accès au répertoire de base des rrdgraphs. Ce répertoire "
+#~ "stocke les données statistiques des graphiques et sera mis à jour toutes les "
+#~ "5 minutes."

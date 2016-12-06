@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-06 00:14+0000\n"
+"POT-Creation-Date: 2016-12-06 17:07+0000\n"
 "PO-Revision-Date: 2016-11-06 21:25+0000\n"
 "Last-Translator: acidlord <acidlord_34@abv.bg>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-05 23:56+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
+"X-Launchpad-Export-Date: 2016-12-06 22:12+0000\n"
+"X-Generator: Launchpad (build 18292)\n"
 "X-Poedit-Country: BULGARIA\n"
 "Language: \n"
 "X-Poedit-Language: Bulgarian\n"
@@ -150,6 +150,10 @@ msgstr ""
 msgid ""
 "(Vendor-specific raw value.) The raw value has different structure for "
 "different vendors and is often not meaningful as a decimal number."
+msgstr ""
+
+#, php-format
+msgid "(default %s %s"
 msgstr ""
 
 msgid "*** Imported duplicate ***"
@@ -811,6 +815,9 @@ msgstr ""
 "Инициатор Групата  е обозначена с номер на етикет и определя разрешените "
 "имена на инициатори и мрежи."
 
+msgid "An empty field is default."
+msgstr ""
+
 msgid "An error occured."
 msgstr "Възникна грешка."
 
@@ -939,8 +946,8 @@ msgstr "Authenticate path & realm"
 msgid "Authentication"
 msgstr "Идентификация"
 
-msgid "Authentication method"
-msgstr "Метод на идентифициране"
+msgid "Authentication Method"
+msgstr ""
 
 msgid "Authorised network"
 msgstr "Разрешена мрежа"
@@ -953,6 +960,9 @@ msgstr "Автоматично"
 
 msgid "Auto Snapshot"
 msgstr "Авто Snapshot"
+
+msgid "Auto page refresh."
+msgstr ""
 
 msgid "Auto size"
 msgstr "Автоматичен размер"
@@ -968,6 +978,9 @@ msgstr ""
 
 msgid "Autoselect"
 msgstr "Автоматичен избор"
+
+msgid "Auxiliary Parameters"
+msgstr ""
 
 msgid "Auxiliary device firmware"
 msgstr "Помощен firmware на устройство"
@@ -1113,6 +1126,9 @@ msgid ""
 msgstr ""
 "BitTorrent се нуждае поне от разрешения за четене & изпълнение на the mount "
 "point за директория %s!"
+
+msgid "Blank Time"
+msgstr ""
 
 msgid "Blank time"
 msgstr "Празно време"
@@ -1264,14 +1280,20 @@ msgstr ""
 msgid "CPU Load"
 msgstr "Натоварване на процесора"
 
+msgid "CPU Maximum Frequency"
+msgstr ""
+
+msgid "CPU Minimum Frequency"
+msgstr ""
+
 msgid "CPU Temperature"
 msgstr ""
 
 msgid "CPU Usage"
 msgstr ""
 
-msgid "CPU frequency:"
-msgstr "CPU честота:"
+msgid "CPU frequencies:"
+msgstr ""
 
 msgid "CPU load"
 msgstr "натоварване на CPU"
@@ -1536,11 +1558,11 @@ msgstr "Помислете за замяна на това устройство"
 msgid "Console Menu"
 msgstr "Конзолно Меню"
 
+msgid "Console Screensaver"
+msgstr ""
+
 msgid "Console Settings"
 msgstr "Конзолна Установка"
-
-msgid "Console screensaver"
-msgstr "Конзолен скрийнсейвър"
 
 msgid "Contact"
 msgstr "Контакт"
@@ -1585,9 +1607,6 @@ msgstr ""
 msgid "Controller TCP Port"
 msgstr "Контролер на TCP порт"
 
-msgid "Controls power consumption."
-msgstr "Контролира консумацията на енергия."
-
 msgid "Controls the behavior of synchronous requests."
 msgstr "Контролира поведението на синхронни искания."
 
@@ -1625,6 +1644,9 @@ msgstr ""
 
 msgid "Controls the dedup method."
 msgstr "Controls the dedup method."
+
+msgid "Controls the power consumption mode."
+msgstr ""
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Определя дали този набор от данни може да бъде модифициран."
@@ -1965,9 +1987,6 @@ msgstr "Датски"
 msgid "Data digest"
 msgstr "Справочник на данни"
 
-msgid "Data directory"
-msgstr ""
-
 msgid "Data integrity"
 msgstr "Цялост на данните"
 
@@ -2041,10 +2060,6 @@ msgid ""
 msgstr ""
 
 msgid "Default Device Settings"
-msgstr ""
-
-#, php-format
-msgid "Default is %s %s."
 msgstr ""
 
 #, php-format
@@ -2934,9 +2949,6 @@ msgstr "Имейл настройка"
 msgid "Emergency Level"
 msgstr ""
 
-msgid "Empty as default."
-msgstr ""
-
 msgid "Enable"
 msgstr "Позволи"
 
@@ -3171,7 +3183,7 @@ msgstr ""
 msgid "Enable tuning switch"
 msgstr ""
 
-msgid "Enable white background graphs. (black by default)"
+msgid "Enable white background graphs. (black as default)"
 msgstr ""
 
 msgid "Enable write cache mode."
@@ -3266,11 +3278,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Enter the path to the home directory of rrdgraphs. This directory stores the "
-"statistical data for the graphs and will be updated every 5 minutes."
-msgstr ""
-
-msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
 msgstr ""
@@ -3278,6 +3285,11 @@ msgstr ""
 msgid ""
 "Enter the path to the home directory. The config will be created under the "
 "specified directory."
+msgstr ""
+
+msgid ""
+"Enter the path to the home directory. This directory will store the "
+"statistical data and gets updated every 5 minutes!"
 msgstr ""
 
 msgid "Enter the port to send the traps to (default 162)."
@@ -3718,7 +3730,7 @@ msgstr ""
 msgid "Graph updates every %d seconds"
 msgstr ""
 
-msgid "Graphs height"
+msgid "Graphs Height"
 msgstr ""
 
 msgid "Greek"
@@ -3825,7 +3837,7 @@ msgid ""
 msgstr ""
 
 #, php-format
-msgid "Height of the graphs. Default is %s pixel."
+msgid "Height of the graphs. (default %s pixels)"
 msgstr ""
 
 msgid "Help"
@@ -3851,6 +3863,9 @@ msgstr "Открояване на синтаксиса"
 
 msgid "Hint"
 msgstr "Съвет"
+
+msgid "Home Directory"
+msgstr ""
 
 msgid "Home directory"
 msgstr ""
@@ -4244,6 +4259,9 @@ msgid "Interface"
 msgstr "Интерфейс"
 
 msgid "Interface Management"
+msgstr ""
+
+msgid "Interface Selection"
 msgstr ""
 
 msgid "Interface selection"
@@ -5565,6 +5583,9 @@ msgstr ""
 msgid "Packages"
 msgstr ""
 
+msgid "Page Refresh"
+msgstr ""
+
 msgid "Painfully aggressive"
 msgstr ""
 
@@ -5787,7 +5808,7 @@ msgstr ""
 msgid "Polish"
 msgstr ""
 
-msgid "Polling time"
+msgid "Polling Time"
 msgstr ""
 
 msgid "Pool"
@@ -6180,12 +6201,6 @@ msgid "Recycle bin"
 msgstr ""
 
 msgid "Refresh"
-msgstr ""
-
-msgid "Refresh time"
-msgstr ""
-
-msgid "Refresh time for graph pages."
 msgstr ""
 
 msgid "Reject"
@@ -7322,10 +7337,10 @@ msgstr ""
 msgid "TLS"
 msgstr ""
 
-msgid "TLS Server Certificate Check"
+msgid "TLS Mode"
 msgstr ""
 
-msgid "TLS mode"
+msgid "TLS Server Certificate Check"
 msgstr ""
 
 msgid "TLS only"
@@ -9408,7 +9423,7 @@ msgstr ""
 msgid "Xen Virtual Machine"
 msgstr ""
 
-msgid "Y-axis range"
+msgid "Y-axis Range"
 msgstr ""
 
 msgid "Yes"
@@ -9678,7 +9693,7 @@ msgstr "ревизия"
 msgid "scan target failed."
 msgstr ""
 
-msgid "seconds"
+msgid "seconds)"
 msgstr ""
 
 msgid "smallest settable high voltage transfer point"
@@ -9720,6 +9735,9 @@ msgstr ""
 #~ msgid "Memory usage"
 #~ msgstr "Използвана памет"
 
+#~ msgid "CPU frequency:"
+#~ msgstr "CPU честота:"
+
 #~ msgid "CPU frequency"
 #~ msgstr "CPU честота"
 
@@ -9728,6 +9746,15 @@ msgstr ""
 
 #~ msgid "CPU temperature"
 #~ msgstr "Температура на процесора"
+
+#~ msgid "Console screensaver"
+#~ msgstr "Конзолен скрийнсейвър"
+
+#~ msgid "Authentication method"
+#~ msgstr "Метод на идентифициране"
+
+#~ msgid "Controls power consumption."
+#~ msgstr "Контролира консумацията на енергия."
 
 #~ msgid "second(s)"
 #~ msgstr "секунди(s)"

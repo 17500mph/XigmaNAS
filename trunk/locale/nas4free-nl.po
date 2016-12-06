@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-06 00:14+0000\n"
-"PO-Revision-Date: 2016-12-05 23:51+0000\n"
+"POT-Creation-Date: 2016-12-06 17:07+0000\n"
+"PO-Revision-Date: 2016-12-06 22:05+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-05 23:56+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
+"X-Launchpad-Export-Date: 2016-12-06 22:12+0000\n"
+"X-Generator: Launchpad (build 18292)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
 "X-Poedit-Language: Dutch\n"
@@ -173,6 +173,10 @@ msgstr ""
 "(Fabrikant specifieke ruwe waarde.) De ruwe waarde heeft een verschillende "
 "structuur voor verschillende fabrikanten en is vaak van weinig betekenis als "
 "decimaal getal."
+
+#, php-format
+msgid "(default %s %s"
+msgstr "(standaard %s %s"
 
 msgid "*** Imported duplicate ***"
 msgstr "*** Geïmporteerde duplicaat ***"
@@ -863,6 +867,9 @@ msgstr ""
 "Een Initiator Groep wordt geïdentificeerd door een tag-nummer en definieert "
 "geautoriseerde initiator namen en netwerken."
 
+msgid "An empty field is default."
+msgstr "Een leeg veld is standaard."
+
 msgid "An error occured."
 msgstr "Er is een fout opgetreden."
 
@@ -992,8 +999,8 @@ msgstr "Authenticatie locatie en dialoog text"
 msgid "Authentication"
 msgstr "Verificatie"
 
-msgid "Authentication method"
-msgstr "Verificatie methode"
+msgid "Authentication Method"
+msgstr "Authenticatiemethode"
 
 msgid "Authorised network"
 msgstr "Geautoriseerd netwerk"
@@ -1006,6 +1013,9 @@ msgstr "Automatisch"
 
 msgid "Auto Snapshot"
 msgstr "Auto Snapshots"
+
+msgid "Auto page refresh."
+msgstr "Automatische pagina verversing."
 
 msgid "Auto size"
 msgstr "Auto grootte"
@@ -1021,6 +1031,9 @@ msgstr "Automatisch schalen voor grafieken."
 
 msgid "Autoselect"
 msgstr "Automatisch Selecteren"
+
+msgid "Auxiliary Parameters"
+msgstr "Aanvullende Parameters"
 
 msgid "Auxiliary device firmware"
 msgstr "Ondersteunde apparaat firmware"
@@ -1167,6 +1180,9 @@ msgid ""
 msgstr ""
 "BitTorrent moet ten minste lees & schrijf machtigingen hebben op het "
 "koppelpunt voor de map %s!"
+
+msgid "Blank Time"
+msgstr "Wachttijd Schermbeveiliging"
 
 msgid "Blank time"
 msgstr "Wachttijd Schermbeveiliging"
@@ -1317,14 +1333,20 @@ msgstr "CPU Frequentie"
 msgid "CPU Load"
 msgstr "CPU Belasting"
 
+msgid "CPU Maximum Frequency"
+msgstr "CPU Maximale Frequentie"
+
+msgid "CPU Minimum Frequency"
+msgstr "CPU Minimale Frequentie"
+
 msgid "CPU Temperature"
 msgstr "CPU Temperatuur"
 
 msgid "CPU Usage"
 msgstr "CPU Gebruik"
 
-msgid "CPU frequency:"
-msgstr "CPU frequentie:"
+msgid "CPU frequencies:"
+msgstr "CPU frequenties:"
 
 msgid "CPU load"
 msgstr "CPU belasting"
@@ -1593,11 +1615,11 @@ msgstr "Overweeg vervanging van deze schijf"
 msgid "Console Menu"
 msgstr "Console Menu"
 
+msgid "Console Screensaver"
+msgstr "Console Screensaver"
+
 msgid "Console Settings"
 msgstr "Console Instellingen"
-
-msgid "Console screensaver"
-msgstr "Console Screensaver"
 
 msgid "Contact"
 msgstr "Contact"
@@ -1642,9 +1664,6 @@ msgstr "Controller Model"
 msgid "Controller TCP Port"
 msgstr "TCP-poort Controller"
 
-msgid "Controls power consumption."
-msgstr "Instelling van het energieverbruik."
-
 msgid "Controls the behavior of synchronous requests."
 msgstr "Bepaalt het gedrag van synchrone aanvragen."
 
@@ -1680,6 +1699,9 @@ msgstr ""
 
 msgid "Controls the dedup method."
 msgstr "Hiermee bepaalt u de dedup methode."
+
+msgid "Controls the power consumption mode."
+msgstr "Hiermee bepaalt u de energie verbruik modus."
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Controleert of deze dataset kan worden gewijzigd."
@@ -2028,9 +2050,6 @@ msgstr "Deens"
 msgid "Data digest"
 msgstr "Gegevens overzicht"
 
-msgid "Data directory"
-msgstr "Gegevensmap"
-
 msgid "Data integrity"
 msgstr "Data integriteit"
 
@@ -2113,10 +2132,6 @@ msgstr ""
 
 msgid "Default Device Settings"
 msgstr "Standaard Schijf Instellingen"
-
-#, php-format
-msgid "Default is %s %s."
-msgstr "Standaard is %s %s."
 
 #, php-format
 msgid "Default is %s."
@@ -3050,9 +3065,6 @@ msgstr "E-mail Instellingen"
 msgid "Emergency Level"
 msgstr "Noodgevallen niveau"
 
-msgid "Empty as default."
-msgstr "Standaard leeg."
-
 msgid "Enable"
 msgstr "Inschakelen"
 
@@ -3301,8 +3313,8 @@ msgstr "Inschakelen kernel optimalisatie (aanbevolen)."
 msgid "Enable tuning switch"
 msgstr "Inschakelen tuning"
 
-msgid "Enable white background graphs. (black by default)"
-msgstr "Inschakelen witte achtergronden in de grafieken. (zwart standaard)"
+msgid "Enable white background graphs. (black as default)"
+msgstr "Inschakelen witte achtergrond grafieken. (standaard zwart)"
 
 msgid "Enable write cache mode."
 msgstr "Inschakelen schrijf cache mode."
@@ -3408,15 +3420,6 @@ msgstr ""
 "worden de VM configuratie en HDD images opgeslagen."
 
 msgid ""
-"Enter the path to the home directory of rrdgraphs. This directory stores the "
-"statistical data for the graphs and will be updated every 5 minutes."
-msgstr ""
-"Vul de locatie in naar de gegevensmap voor rrdgraphs. This directory stores "
-"the statistical data for the graphs and will be updated every 5 minutes. In "
-"deze gegevensmap worden de statistische gegevens van de grafieken opgeslagen "
-"en elke 5 minuten bijgewerkt."
-
-msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
 msgstr ""
@@ -3429,6 +3432,13 @@ msgid ""
 msgstr ""
 "Vul de locatie in naar de gegevensmap. De configuratie zal onder de "
 "opgegeven map worden aangemaakt."
+
+msgid ""
+"Enter the path to the home directory. This directory will store the "
+"statistical data and gets updated every 5 minutes!"
+msgstr ""
+"Vul de locatie in naar de gegevensmap. In deze gegevensmap worden de "
+"statistische gegevens opgeslagen en elke 5 minuten bijgewerkt!"
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr ""
@@ -3885,8 +3895,8 @@ msgstr "Grafiek van de laatste 120 seconden"
 msgid "Graph updates every %d seconds"
 msgstr "Grafiek ververst elke %d seconden"
 
-msgid "Graphs height"
-msgstr "Grafiek hoogte"
+msgid "Graphs Height"
+msgstr "Grafiek Hoogte"
 
 msgid "Greek"
 msgstr "Grieks"
@@ -4005,8 +4015,8 @@ msgstr ""
 "te hoog is de kans op lees/schrijf fouten aanzienlijk verhoogt."
 
 #, php-format
-msgid "Height of the graphs. Default is %s pixel."
-msgstr "Hoogte van de grafieken. Standaard is %s pixels."
+msgid "Height of the graphs. (default %s pixels)"
+msgstr "Hoogte van de grafieken. (standaard %s pixels)"
 
 msgid "Help"
 msgstr "Help"
@@ -4031,6 +4041,9 @@ msgstr "Oplichten"
 
 msgid "Hint"
 msgstr "Tip"
+
+msgid "Home Directory"
+msgstr "Gegevensmap"
 
 msgid "Home directory"
 msgstr "Gegevensmap"
@@ -4472,6 +4485,9 @@ msgstr "Netwerk"
 
 msgid "Interface Management"
 msgstr "Netwerk Management"
+
+msgid "Interface Selection"
+msgstr "Netwerk Selectie"
 
 msgid "Interface selection"
 msgstr "Netwerk selectie"
@@ -5891,6 +5907,9 @@ msgstr "Pakket uploaden is mislukt (niet genoeg geheugen?)"
 msgid "Packages"
 msgstr "Pakketten"
 
+msgid "Page Refresh"
+msgstr "Pagina Verversen"
+
 msgid "Painfully aggressive"
 msgstr "Moeizaam agressief"
 
@@ -6125,8 +6144,8 @@ msgstr "Probeer het opnieuw."
 msgid "Polish"
 msgstr "Pools"
 
-msgid "Polling time"
-msgstr "Verzendtijd rapportage"
+msgid "Polling Time"
+msgstr "Verzendtijd Rapportage"
 
 msgid "Pool"
 msgstr "Pool"
@@ -6535,12 +6554,6 @@ msgstr "Prullenbak"
 
 msgid "Refresh"
 msgstr "Verversen"
-
-msgid "Refresh time"
-msgstr "Verversingstijd"
-
-msgid "Refresh time for graph pages."
-msgstr "Verversingstijd voor de grafiek pagina's."
 
 msgid "Reject"
 msgstr "Afwijzen"
@@ -7770,11 +7783,11 @@ msgstr "TKIP"
 msgid "TLS"
 msgstr "TLS"
 
+msgid "TLS Mode"
+msgstr "TLS Mode"
+
 msgid "TLS Server Certificate Check"
 msgstr "TLS Server Certificaat Controle"
-
-msgid "TLS mode"
-msgstr "TLS modus"
 
 msgid "TLS only"
 msgstr "Alleen TLS"
@@ -10220,8 +10233,8 @@ msgstr "Xen"
 msgid "Xen Virtual Machine"
 msgstr "Xen Virtuele Machine"
 
-msgid "Y-axis range"
-msgstr "Y-as bereik"
+msgid "Y-axis Range"
+msgstr "Y-as Bereik"
 
 msgid "Yes"
 msgstr "Ja"
@@ -10515,8 +10528,8 @@ msgstr "revisie"
 msgid "scan target failed."
 msgstr "doel scannen is mislukt."
 
-msgid "seconds"
-msgstr "seconden"
+msgid "seconds)"
+msgstr "seconden)"
 
 msgid "smallest settable high voltage transfer point"
 msgstr "kleinste instelbare hoogspanning overschakelpunt"
@@ -10551,6 +10564,9 @@ msgstr "versie:"
 msgid "week days"
 msgstr "weekdagen"
 
+#~ msgid "Authentication method"
+#~ msgstr "Verificatie methode"
+
 #~ msgid "CPU frequency"
 #~ msgstr "CPU kloksnelheid"
 
@@ -10560,12 +10576,18 @@ msgstr "weekdagen"
 #~ msgid "CPU usage"
 #~ msgstr "CPU belasting"
 
+#~ msgid "Console screensaver"
+#~ msgstr "Console Screensaver"
+
 #~ msgid "Disk space usage"
 #~ msgstr "Schijfruimte gebruik"
 
 #, php-format
 #~ msgid "Levels (MHz/mW): %s"
 #~ msgstr "Stappen (MHz/mW): %s"
+
+#~ msgid "Polling time"
+#~ msgstr "Verzendtijd rapportage"
 
 #~ msgid "Swap usage"
 #~ msgstr "Wisselbestand gebruik"
@@ -10582,8 +10604,20 @@ msgstr "weekdagen"
 #~ msgid "second(s)"
 #~ msgstr "seconde(n)"
 
+#~ msgid "CPU frequency:"
+#~ msgstr "CPU frequentie:"
+
+#~ msgid "Empty as default."
+#~ msgstr "Standaard leeg."
+
+#~ msgid "Controls power consumption."
+#~ msgstr "Instelling van het energieverbruik."
+
 #~ msgid "System bios"
 #~ msgstr "Systeem bios"
+
+#~ msgid "TLS mode"
+#~ msgstr "TLS modus"
 
 #~ msgid "Memory usage"
 #~ msgstr "Geheugen gebruik"
@@ -10596,3 +10630,41 @@ msgstr "weekdagen"
 
 #~ msgid "System last config change"
 #~ msgstr "Systeem configuratiewijziging"
+
+#, php-format
+#~ msgid "Default is %s %s."
+#~ msgstr "Standaard is %s %s."
+
+#~ msgid "Graphs height"
+#~ msgstr "Grafiek hoogte"
+
+#, php-format
+#~ msgid "Height of the graphs. Default is %s pixel."
+#~ msgstr "Hoogte van de grafieken. Standaard is %s pixels."
+
+#~ msgid "Refresh time for graph pages."
+#~ msgstr "Verversingstijd voor de grafiek pagina's."
+
+#~ msgid "Refresh time"
+#~ msgstr "Verversingstijd"
+
+#~ msgid "Y-axis range"
+#~ msgstr "Y-as bereik"
+
+#~ msgid "seconds"
+#~ msgstr "seconden"
+
+#~ msgid "Enable white background graphs. (black by default)"
+#~ msgstr "Inschakelen witte achtergronden in de grafieken. (zwart standaard)"
+
+#~ msgid "Data directory"
+#~ msgstr "Gegevensmap"
+
+#~ msgid ""
+#~ "Enter the path to the home directory of rrdgraphs. This directory stores the "
+#~ "statistical data for the graphs and will be updated every 5 minutes."
+#~ msgstr ""
+#~ "Vul de locatie in naar de gegevensmap voor rrdgraphs. This directory stores "
+#~ "the statistical data for the graphs and will be updated every 5 minutes. In "
+#~ "deze gegevensmap worden de statistische gegevens van de grafieken opgeslagen "
+#~ "en elke 5 minuten bijgewerkt."
