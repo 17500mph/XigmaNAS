@@ -102,9 +102,9 @@ $pgtitle = array(gtext("Help"), gtext("License & Credits"));
 	    <hr size="1" />
 	    <p>The following persons have contributed to NAS4Free support:</p>
 	    <div>Tony Cat (<a href="mailto:tony1@nas4free.org">tony1@nas4free.org</a>) irc alias tony1<br />
-	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">User guide and Live support on irc #nas4free|IRC Freenode <a href="http://webchat.freenode.net/?channels=#nas4free">http://webchat.freenode.net</a></font></em></div><br />
+	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">User guide and Live support on irc #nas4free|IRC Freenode <a href="http://webchat.freenode.net/?channels=#nas4free" target="_blank">http://webchat.freenode.net</a></font></em></div><br />
 	    <div>Rhett Hillary (<a href="mailto:siftu@nas4free.org">siftu@nas4free.org</a>) irc alias SIFTU<br />
-	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">User guide and Live support on irc #nas4free|IRC Freenode <a href="http://webchat.freenode.net/?channels=#nas4free">http://webchat.freenode.net</a></font></em></div><br />
+	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">User guide and Live support on irc #nas4free|IRC Freenode <a href="http://webchat.freenode.net/?channels=#nas4free" target="_blank">http://webchat.freenode.net</a></font></em></div><br />
 
 	    <hr size="1" />
 	    <p>The following persons have contributed to NAS4Free documentation and/or webgui translations:</p>
@@ -153,7 +153,7 @@ $pgtitle = array(gtext("Help"), gtext("License & Credits"));
 	    <hr size="1" />
 	      <p>The following persons have contributed to NAS4Free in the past:</p>
 	    <div>Samuel Tunis (<a href="mailto:killermist@gmail.com">killermist@gmail.com</a>) irc alias killermist<br />
-	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">User guide and Live support on irc #nas4free|IRC Freenode <a href="http://webchat.freenode.net/?channels=#nas4free">http://webchat.freenode.net</a></font></em></div><br />
+	      &nbsp;&nbsp;&nbsp;&nbsp;<em><font color="#666666">User guide and Live support on irc</font></em></div><br />
 	</td>
 </tr>
 	    <?php html_separator();?>
