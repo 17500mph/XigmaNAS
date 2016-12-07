@@ -115,4 +115,22 @@ function array_remove_duplicate($array, $key) {
 	}
 	return $result;
 }
+function &array_make_branch(array &$branch,string ...$leaves) {
+// this function creates a chain of arrays in a given array if they don't exist
+// array_make_branch($config,'vinterfaces','carp') will create
+// - $config['vinterfaces'] = [] if vinterfaces doesn't exist or if it is not an array
+// - $config['vinterfaces']['carp'] = [] if carp doesn't exist or if it is not an array
+// - the last leaf of the chain of leaves is returned by reference.
+	$active_leaf = &$branch;
+	foreach($leaves as $leaf):
+		if(!(isset($active_leaf[$leaf]) && is_array($active_leaf[$leaf]))):
+			$active_leaf[$leaf] = [];
+		endif;
+		$next_leaf = &$active_leaf[$leaf];
+		unset($active_leaf);
+		$active_leaf = &$next_leaf;
+		unset($next_leaf);
+	endforeach;
+	return $active_leaf;
+}
 ?>
