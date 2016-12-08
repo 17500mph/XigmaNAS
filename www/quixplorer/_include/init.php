@@ -140,6 +140,8 @@ function _load_language($lang) {
 	$f2 = sprintf('./_lang/%s_mimes.php',$lang);
 	if(!(file_exists($f1) and file_exists($f2))):
         $lang = 'en_US';
+		$f1 = sprintf('./_lang/%s.php',$lang);
+		$f2 = sprintf('./_lang/%s_mimes.php',$lang);
 	endif;
 	require $f1;
 	require $f2;
