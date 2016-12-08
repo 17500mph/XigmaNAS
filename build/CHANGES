@@ -1,7 +1,7 @@
 NAS4Free 11.0.0.4 - Sayyadina
 -----------------------------
 Changes:
-- Upgrade to FreeBSD 11.0-RELEASE-P4.
+- Upgrade to FreeBSD 11.0-RELEASE-P5.
 - Change XMD driver has been replaced for MD.
 - Add system RRDGraphs monitoring.
 - Webgui design improvements.
@@ -35,6 +35,7 @@ Fixes:
 - Fix identify boot/configuration device.
 - Fix create htpasswd file only when web service is enabled.
 - Fix system screensaver.
+- Fix allow large file downloads in file manager.
 
 Permanent restrictions:
 - No more x86 versions of NAS4Free 11 series will be made, 32-bits users need 10.3 than.
