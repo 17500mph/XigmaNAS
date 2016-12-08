@@ -38,7 +38,7 @@
 // NAS4Free Code
 // footer for html-page
 function show_footer() {
-	echo '</div>';
+	echo '</td></tr></tbody></table>';
 	echo '</div>';
 	echo '</div>';
 	echo '</main>';

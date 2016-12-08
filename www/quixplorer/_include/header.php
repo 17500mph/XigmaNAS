@@ -368,6 +368,6 @@ function show_header($title, $additional_header_content = null)
 	echo "Powered by QuiXplorer";
 	echo "</td>\n";
 	echo "</tr></tbody></table>\n";
-	echo '<div id="area_data">';
+	echo '<table id="area_data"><tbody><tr><td id="area_data_frame">';
 }
 ?>
