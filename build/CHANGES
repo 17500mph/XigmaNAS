@@ -36,6 +36,7 @@ Fixes:
 - Fix create htpasswd file only when web service is enabled.
 - Fix system screensaver.
 - Fix allow large file downloads in file manager.
+- Fix don't add domain parameter to msmtp configuration when domain is empty.
 
 Permanent restrictions:
 - No more x86 versions of NAS4Free 11 series will be made, 32-bits users need 10.3 than.
