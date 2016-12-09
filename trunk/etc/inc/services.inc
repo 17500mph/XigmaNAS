@@ -45,6 +45,8 @@ function services_is_port_used($port, $except = "") {
 		"daap" => $config['daap']['port'],
 		"websrv" => $config['websrv']['port'],
 		"upnp" => $config['upnp']['port'],
+		"minidlna" => $config['minidlna']['port'],
+		"rsyncd" => $config['rsyncd']['port'],
 		"bittorrent" => $config['bittorrent']['port']
 	);
 
