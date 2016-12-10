@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-12-06 17:07+0000\n"
-"PO-Revision-Date: 2016-12-06 17:03+0000\n"
+"PO-Revision-Date: 2016-12-09 17:42+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-06 22:13+0000\n"
+"X-Launchpad-Export-Date: 2016-12-10 08:49+0000\n"
 "X-Generator: Launchpad (build 18292)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -2513,7 +2513,7 @@ msgid "Disk Selection"
 msgstr "Выбор диска"
 
 msgid "Disk Space Usage"
-msgstr "Использования дискового пространства"
+msgstr "Использование дискового пространства"
 
 msgid "Disk Usage"
 msgstr "Использование дисков"
@@ -4036,10 +4036,10 @@ msgid "Hosts deny"
 msgstr "Запрещенные хосты"
 
 msgid "Hour"
-msgstr "Час"
+msgstr "Час."
 
 msgid "Hours"
-msgstr "Часы"
+msgstr "Час."
 
 msgid ""
 "How often the IP is checked. The period is in seconds (max. is 10 days)."
@@ -5206,10 +5206,10 @@ msgstr ""
 "Минимальное зафиксированное значение температуры (в градусах Цельсия)"
 
 msgid "Minute"
-msgstr "Минут"
+msgstr "мин."
 
 msgid "Minutes"
-msgstr "Минуты"
+msgstr "мин."
 
 msgid "Minutes between the next network time synchronization."
 msgstr "Период синхронизации времени через интернет (минут)."
@@ -6912,7 +6912,7 @@ msgid "Secondary"
 msgstr "Вторичный (Secondary)"
 
 msgid "Seconds"
-msgstr "Секунды"
+msgstr "сек."
 
 msgid "Secret"
 msgstr "Ключ безопасности"
@@ -10342,7 +10342,7 @@ msgstr ""
 "наибольшее устанавливаемое значение низкого напряжения для переключения"
 
 msgid "hours"
-msgstr "часов"
+msgstr "час."
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI-инициатор"
@@ -10376,7 +10376,7 @@ msgid "loader.conf"
 msgstr "loader.conf"
 
 msgid "minutes"
-msgstr "минут"
+msgstr "мин."
 
 msgid "months"
 msgstr "месяцев"
@@ -10461,106 +10461,3 @@ msgstr "версия:"
 
 msgid "week days"
 msgstr "дней недели"
-
-#~ msgid "Authentication method"
-#~ msgstr "Способ аутентификации"
-
-#~ msgid "CPU frequency"
-#~ msgstr "Частота ЦП"
-
-#~ msgid "CPU temperature"
-#~ msgstr "Температура ЦП"
-
-#~ msgid "CPU usage"
-#~ msgstr "Загрузка процессора"
-
-#~ msgid "Console screensaver"
-#~ msgstr "Консольный хранитель экрана"
-
-#~ msgid "Disk space usage"
-#~ msgstr "Использование дискового пространства"
-
-#, php-format
-#~ msgid "Levels (MHz/mW): %s"
-#~ msgstr "Уровни (MHz/mW): %s"
-
-#~ msgid "Memory usage"
-#~ msgstr "Использование памяти"
-
-#~ msgid "Polling time"
-#~ msgstr "Интервал опроса"
-
-#~ msgid "Swap usage"
-#~ msgstr "Использование подкачки"
-
-#~ msgid "Updating in 5 seconds."
-#~ msgstr "обновляется каждые 5 секунд"
-
-#~ msgid "day(s)"
-#~ msgstr "дн."
-
-#~ msgid "hour(s)"
-#~ msgstr "час."
-
-#~ msgid "minute(s)"
-#~ msgstr "мин."
-
-#~ msgid "second(s)"
-#~ msgstr "сек."
-
-#~ msgid "System uptime"
-#~ msgstr "Время работы системы"
-
-#~ msgid "CPU frequency:"
-#~ msgstr "Частота ЦПУ:"
-
-#~ msgid "Controls power consumption."
-#~ msgstr "Управление энергопотреблением"
-
-#~ msgid "Empty as default."
-#~ msgstr "Пустое по умолчанию"
-
-#~ msgid "System bios"
-#~ msgstr "BIOS системы"
-
-#~ msgid "TLS mode"
-#~ msgstr "Режим TLS"
-
-#~ msgid "System last config change"
-#~ msgstr "Последнее изменение конфигурации системы"
-
-#~ msgid "Data directory"
-#~ msgstr "Каталог данных"
-
-#, php-format
-#~ msgid "Default is %s %s."
-#~ msgstr "По умолчанию %s %s."
-
-#~ msgid "Graphs height"
-#~ msgstr "Высота графика"
-
-#, php-format
-#~ msgid "Height of the graphs. Default is %s pixel."
-#~ msgstr "Высота графиков. По умолчанию %s пикселей."
-
-#~ msgid "Refresh time for graph pages."
-#~ msgstr "Время обновления для страниц графика."
-
-#~ msgid "Refresh time"
-#~ msgstr "Время обновления"
-
-#~ msgid "Y-axis range"
-#~ msgstr "Диапазон по оси y"
-
-#~ msgid "seconds"
-#~ msgstr "сек."
-
-#~ msgid "Enable white background graphs. (black by default)"
-#~ msgstr "Включить белый фон графиков. (Черный по умолчанию)"
-
-#~ msgid ""
-#~ "Enter the path to the home directory of rrdgraphs. This directory stores the "
-#~ "statistical data for the graphs and will be updated every 5 minutes."
-#~ msgstr ""
-#~ "Введите путь к домашней директории rrdgraphs. Этот каталог хранит "
-#~ "статистические данные для графиков и будет обновляться каждые 5 минут."

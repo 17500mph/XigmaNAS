@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-12-06 17:07+0000\n"
-"PO-Revision-Date: 2016-12-03 15:54+0000\n"
-"Last-Translator: zoon01 <Unknown>\n"
+"PO-Revision-Date: 2016-12-08 18:13+0000\n"
+"Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-06 22:12+0000\n"
+"X-Launchpad-Export-Date: 2016-12-10 08:49+0000\n"
 "X-Generator: Launchpad (build 18292)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -173,7 +173,7 @@ msgstr ""
 
 #, php-format
 msgid "(default %s %s"
-msgstr ""
+msgstr "(alapértelmezett %s %s"
 
 msgid "*** Imported duplicate ***"
 msgstr "*** Importált duplikátum ***"
@@ -846,7 +846,7 @@ msgstr ""
 "kezdeményezők neveit és hálózatát határozza meg."
 
 msgid "An empty field is default."
-msgstr ""
+msgstr "Alapértelmezetten üres."
 
 msgid "An error occured."
 msgstr "Hiba történt."
@@ -977,7 +977,7 @@ msgid "Authentication"
 msgstr "Hitelesítés"
 
 msgid "Authentication Method"
-msgstr ""
+msgstr "Hitelesítési eljárás"
 
 msgid "Authorised network"
 msgstr "Hitelesített hálózat"
@@ -992,7 +992,7 @@ msgid "Auto Snapshot"
 msgstr "Automatikus pillanatkép"
 
 msgid "Auto page refresh."
-msgstr ""
+msgstr "Automatikus oldal-újratöltés."
 
 msgid "Auto size"
 msgstr "Automatikus méret"
@@ -1010,7 +1010,7 @@ msgid "Autoselect"
 msgstr "Automatikus választás"
 
 msgid "Auxiliary Parameters"
-msgstr ""
+msgstr "Auxiliary parameterek"
 
 msgid "Auxiliary device firmware"
 msgstr "Auxiliary eszköz firmware"
@@ -1154,7 +1154,7 @@ msgstr ""
 "csatolási pont %s könyvtárán."
 
 msgid "Blank Time"
-msgstr ""
+msgstr "Üres idő"
 
 msgid "Blank time"
 msgstr "Üres idő"
@@ -1305,10 +1305,10 @@ msgid "CPU Load"
 msgstr "Processzorterhelés"
 
 msgid "CPU Maximum Frequency"
-msgstr ""
+msgstr "CPU maximális frekvencia"
 
 msgid "CPU Minimum Frequency"
-msgstr ""
+msgstr "CPU minimális frekvencia"
 
 msgid "CPU Temperature"
 msgstr "Processzorhőmérséklet"
@@ -1317,7 +1317,7 @@ msgid "CPU Usage"
 msgstr "Processzorhasználat"
 
 msgid "CPU frequencies:"
-msgstr ""
+msgstr "CPU frekvenciák:"
 
 msgid "CPU load"
 msgstr "CPU használat"
@@ -1582,7 +1582,7 @@ msgid "Console Menu"
 msgstr "Konzol menü"
 
 msgid "Console Screensaver"
-msgstr ""
+msgstr "Konzol-képernyővédők"
 
 msgid "Console Settings"
 msgstr "Konzolbeállítások"
@@ -1667,7 +1667,7 @@ msgid "Controls the dedup method."
 msgstr "Egyszerűsítés eljárását felügyeli."
 
 msgid "Controls the power consumption mode."
-msgstr ""
+msgstr "Szabályozza az energiafogyasztási módot."
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Azt szabályozza, hogy az adattárat lehessen-e módosítani."
@@ -1680,10 +1680,10 @@ msgstr ""
 "tárolása nincs engedélyezve."
 
 msgid "Core"
-msgstr ""
+msgstr "Rendszermag"
 
 msgid "Core Usage"
-msgstr ""
+msgstr "Rendszermag-használat"
 
 msgid "Count"
 msgstr "Számláló"
@@ -2024,7 +2024,7 @@ msgid "Date format"
 msgstr "Dátumformátum"
 
 msgid "Day"
-msgstr ""
+msgstr "Nap"
 
 msgid "Days"
 msgstr "Nap"
@@ -2488,7 +2488,7 @@ msgid "Disk Selection"
 msgstr "Lemez kiválasztása"
 
 msgid "Disk Space Usage"
-msgstr ""
+msgstr "Lemezhasználat"
 
 msgid "Disk Usage"
 msgstr "Lemezhasználat"
@@ -3244,6 +3244,7 @@ msgstr "Tuning kapcsoló engedélyezése"
 
 msgid "Enable white background graphs. (black as default)"
 msgstr ""
+"Fehér hátterű diagramok bekapcsolása (alapértelmezetten a háttér fekete)"
 
 msgid "Enable write cache mode."
 msgstr "Írás cache engedélyezése."
@@ -3366,6 +3367,8 @@ msgid ""
 "Enter the path to the home directory. This directory will store the "
 "statistical data and gets updated every 5 minutes!"
 msgstr ""
+"Add meg a saját könyvtár útvonalát. Ez a könyvtár tárolja az 5 percenként "
+"frissülő statisztikai adatokat."
 
 msgid "Enter the port to send the traps to (default 162)."
 msgstr "Adja meg a csapdák portját (alapértelmezett 162)."
@@ -3819,7 +3822,7 @@ msgid "Graph updates every %d seconds"
 msgstr "A grafikon minden %d másodpercben frissül."
 
 msgid "Graphs Height"
-msgstr ""
+msgstr "Diagramok magassága"
 
 msgid "Greek"
 msgstr "Görög"
@@ -3937,7 +3940,7 @@ msgstr ""
 
 #, php-format
 msgid "Height of the graphs. (default %s pixels)"
-msgstr ""
+msgstr "A diagramok magassága (alapértelmezetten %s pixel)."
 
 msgid "Help"
 msgstr "Súgó"
@@ -3964,7 +3967,7 @@ msgid "Hint"
 msgstr "Tipp"
 
 msgid "Home Directory"
-msgstr ""
+msgstr "Saját mappa"
 
 msgid "Home directory"
 msgstr "Saját könyvtár"
@@ -4000,7 +4003,7 @@ msgid "Hosts deny"
 msgstr "Állomások tiltása"
 
 msgid "Hour"
-msgstr ""
+msgstr "Óra"
 
 msgid "Hours"
 msgstr "Óra"
@@ -4400,7 +4403,7 @@ msgid "Interface Management"
 msgstr "Interfész kezelése"
 
 msgid "Interface Selection"
-msgstr ""
+msgstr "Interfész kiválasztása"
 
 msgid "Interface selection"
 msgstr "Interfész kiválasztása"
@@ -4613,7 +4616,7 @@ msgid "Large read/write"
 msgstr "Nagy olvasás/írás"
 
 msgid "Last Configuration Change"
-msgstr ""
+msgstr "Beállítások utolsó módosítása"
 
 msgid ""
 "Last test result as microseconds to discharge cap, saturated at its maximum "
@@ -5160,7 +5163,7 @@ msgid "Minimum temperature seen (degrees C)"
 msgstr "Valaha minimum hőmérséklet (fok Celsius)"
 
 msgid "Minute"
-msgstr ""
+msgstr "Perc"
 
 msgid "Minutes"
 msgstr "Perc"
@@ -5806,7 +5809,7 @@ msgid "Packages"
 msgstr "Csomagok"
 
 msgid "Page Refresh"
-msgstr ""
+msgstr "Oldalfrissítés"
 
 msgid "Painfully aggressive"
 msgstr "Sajnálatosan agresszív"
@@ -6043,7 +6046,7 @@ msgid "Polish"
 msgstr "Lengyel"
 
 msgid "Polling Time"
-msgstr ""
+msgstr "Lekérdezési idő"
 
 msgid "Pool"
 msgstr "Tároló"
@@ -6869,13 +6872,13 @@ msgid "Search for and import all disks found"
 msgstr "Keresés és összes talált eszköz importálása"
 
 msgid "Second"
-msgstr ""
+msgstr "Másodperc"
 
 msgid "Secondary"
 msgstr "Másodlagos"
 
 msgid "Seconds"
-msgstr ""
+msgstr "Másodperc"
 
 msgid "Secret"
 msgstr "Titkos"
@@ -7551,7 +7554,7 @@ msgid "Swap Memory"
 msgstr "Cserehely memória"
 
 msgid "Swap Usage"
-msgstr ""
+msgstr "Cserehely-használat"
 
 msgid "Swap disabled"
 msgstr "Cserehely kikapcsolva"
@@ -7603,7 +7606,7 @@ msgid "System"
 msgstr "Rendszer"
 
 msgid "System BIOS"
-msgstr ""
+msgstr "Rendszer BIOS"
 
 msgid "System Email Report Settings"
 msgstr "Rendszer e-mail jelentések beállításai"
@@ -7630,10 +7633,10 @@ msgid "System Settings"
 msgstr "Rendszerbeállítások"
 
 msgid "System Time"
-msgstr ""
+msgstr "Rendszeridő"
 
 msgid "System Uptime"
-msgstr ""
+msgstr "Rendszer működési ideje"
 
 msgid "System events"
 msgstr "Rendszeresemények"
@@ -7678,7 +7681,7 @@ msgid "TLS"
 msgstr "TLS"
 
 msgid "TLS Mode"
-msgstr ""
+msgstr "TLS mód"
 
 msgid "TLS Server Certificate Check"
 msgstr "TLS Szerver Hitelesítés Ellenőrzés"
@@ -7746,7 +7749,7 @@ msgid "Targets"
 msgstr "Célok"
 
 msgid "Temp"
-msgstr ""
+msgstr "Hőmérséklet"
 
 msgid "Temperature"
 msgstr "Hőmérséklet"
@@ -10061,7 +10064,7 @@ msgid "Xen Virtual Machine"
 msgstr "Xen Virtuális Gép"
 
 msgid "Y-axis Range"
-msgstr ""
+msgstr "Y tengely tartománya"
 
 msgid "Yes"
 msgstr "Igen"
@@ -10230,7 +10233,7 @@ msgid "chroot() everyone, but root."
 msgstr "chroot() mindenki, kivéve root."
 
 msgid "days"
-msgstr ""
+msgstr "nap"
 
 msgid "debug"
 msgstr "hibakeresés"
@@ -10262,7 +10265,7 @@ msgid "greatest settable low voltage transfer point"
 msgstr "legnagyobb beállítható alacsony feszültségű átviteli pont"
 
 msgid "hours"
-msgstr ""
+msgstr "óra"
 
 msgid "iSCSI Initiator"
 msgstr "iSCSI Kezdeményező"
@@ -10296,10 +10299,10 @@ msgid "loader.conf"
 msgstr "loader.conf"
 
 msgid "minutes"
-msgstr ""
+msgstr "perc"
 
 msgid "months"
-msgstr ""
+msgstr "hónap"
 
 msgid "mount"
 msgstr "csatolás"
@@ -10345,7 +10348,7 @@ msgid "scan target failed."
 msgstr "cél keresés sikertelen."
 
 msgid "seconds)"
-msgstr ""
+msgstr "másodperc)"
 
 msgid "smallest settable high voltage transfer point"
 msgstr "legkisebb beállítható magas felszültségű átviteli pont"
@@ -10378,107 +10381,4 @@ msgid "version:"
 msgstr "verzió:"
 
 msgid "week days"
-msgstr ""
-
-#~ msgid "Authentication method"
-#~ msgstr "Hitelesítési módszer"
-
-#~ msgid "CPU frequency"
-#~ msgstr "CPU (processzor) frekvencia"
-
-#~ msgid "CPU temperature"
-#~ msgstr "CPU (processzor) hőmérséklet"
-
-#~ msgid "CPU usage"
-#~ msgstr "CPU (processzor) kihasználtság"
-
-#~ msgid "Console screensaver"
-#~ msgstr "Konzol képernyőkímélő"
-
-#~ msgid "Disk space usage"
-#~ msgstr "Lemezhasználat"
-
-#, php-format
-#~ msgid "Levels (MHz/mW): %s"
-#~ msgstr "Szintek (MHz/mW): %s"
-
-#~ msgid "Swap usage"
-#~ msgstr "Cserehely használata"
-
-#~ msgid "Updating in 5 seconds."
-#~ msgstr "Frissítés 5 másodpercen belül."
-
-#~ msgid "day(s)"
-#~ msgstr "nap"
-
-#~ msgid "hour(s)"
-#~ msgstr "óra"
-
-#~ msgid "minute(s)"
-#~ msgstr "perc"
-
-#~ msgid "second(s)"
-#~ msgstr "másodperc"
-
-#~ msgid "Empty as default."
-#~ msgstr "Alapértelmezetten üres"
-
-#~ msgid "Polling time"
-#~ msgstr "Lekérdezési idő"
-
-#~ msgid "CPU frequency:"
-#~ msgstr "Processzor-frekvenciák:"
-
-#~ msgid "Controls power consumption."
-#~ msgstr "Ez szabályozza az energiafogyasztást."
-
-#~ msgid "Memory usage"
-#~ msgstr "Memóriahasználat"
-
-#~ msgid "System bios"
-#~ msgstr "BIOS"
-
-#~ msgid "System uptime"
-#~ msgstr "Működési idő"
-
-#~ msgid "TLS mode"
-#~ msgstr "TLS mód"
-
-#~ msgid "System last config change"
-#~ msgstr "Utolsó rendszermódosítás ideje"
-
-#~ msgid "Data directory"
-#~ msgstr "Adatkönyvtár"
-
-#, php-format
-#~ msgid "Default is %s %s."
-#~ msgstr "%s %s az alapértelmezett."
-
-#~ msgid "Graphs height"
-#~ msgstr "Grafikon magassága"
-
-#, php-format
-#~ msgid "Height of the graphs. Default is %s pixel."
-#~ msgstr "A grafikon magassága, alapértelmezetten %s pixel."
-
-#~ msgid "Refresh time"
-#~ msgstr "Frissítési idő"
-
-#~ msgid "Refresh time for graph pages."
-#~ msgstr "Grafikus oldalak frissítési ideje."
-
-#~ msgid "Y-axis range"
-#~ msgstr "Y-tengely tartománya"
-
-#~ msgid "seconds"
-#~ msgstr "másodperc"
-
-#~ msgid "Enable white background graphs. (black by default)"
-#~ msgstr "Fehér hátterű diagramok engedélyezés (alapértelmezetten fekete)."
-
-#~ msgid ""
-#~ "Enter the path to the home directory of rrdgraphs. This directory stores the "
-#~ "statistical data for the graphs and will be updated every 5 minutes."
-#~ msgstr ""
-#~ "Add meg az rrdgraphs home könyvtárának útvonalát. Ez a könyvtár tárolja a "
-#~ "diagramok adatait és 5 percenként frissül."
+msgstr "hétköznap"
