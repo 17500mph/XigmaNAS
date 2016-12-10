@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-12-06 17:07+0000\n"
-"PO-Revision-Date: 2016-12-06 19:47+0000\n"
+"PO-Revision-Date: 2016-12-09 16:15+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-06 22:12+0000\n"
+"X-Launchpad-Export-Date: 2016-12-10 08:49+0000\n"
 "X-Generator: Launchpad (build 18292)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
@@ -1711,10 +1711,10 @@ msgstr ""
 "Store DOS sont désactivés."
 
 msgid "Core"
-msgstr "Noyau"
+msgstr "Cœur"
 
 msgid "Core Usage"
-msgstr "Utilisation du noyau"
+msgstr "Utilisation de chaque cœur"
 
 msgid "Count"
 msgstr "Nombre"
@@ -3887,7 +3887,7 @@ msgstr "Le graphique montre les dernières 120 secondes"
 
 #, php-format
 msgid "Graph updates every %d seconds"
-msgstr "Graphiques mis à jour toutes les %d seconds"
+msgstr "Graphiques mis à jour toutes les %d secondes"
 
 msgid "Graphs Height"
 msgstr "Hauteur des Graphiques"
@@ -10550,107 +10550,3 @@ msgstr "version:"
 
 msgid "week days"
 msgstr "jours de la semaine"
-
-#~ msgid "Authentication method"
-#~ msgstr "Méthode d'authentification"
-
-#~ msgid "CPU frequency"
-#~ msgstr "Fréquence CPU"
-
-#~ msgid "CPU temperature"
-#~ msgstr "Température CPU"
-
-#~ msgid "CPU usage"
-#~ msgstr "Utilisation CPU"
-
-#~ msgid "Console screensaver"
-#~ msgstr "Veille de la console"
-
-#~ msgid "Disk space usage"
-#~ msgstr "Utilisation des disques"
-
-#, php-format
-#~ msgid "Levels (MHz/mW): %s"
-#~ msgstr "Niveaux (MHz/mW): %s"
-
-#~ msgid "Memory usage"
-#~ msgstr "Utilisation de la mémoire"
-
-#~ msgid "Polling time"
-#~ msgstr "Planification"
-
-#~ msgid "Swap usage"
-#~ msgstr "Utilisation de la pagination"
-
-#~ msgid "Updating in 5 seconds."
-#~ msgstr "Mise à jour dans 5 secondes."
-
-#~ msgid "day(s)"
-#~ msgstr "jour(s)"
-
-#~ msgid "hour(s)"
-#~ msgstr "heure(s)"
-
-#~ msgid "minute(s)"
-#~ msgstr "minutes(s)"
-
-#~ msgid "second(s)"
-#~ msgstr "seconde(s)"
-
-#~ msgid "System uptime"
-#~ msgstr "Disponibilité du système"
-
-#~ msgid "Controls power consumption."
-#~ msgstr "Contrôle la consommation de puissance."
-
-#~ msgid "CPU frequency:"
-#~ msgstr "Fréquence CPU"
-
-#~ msgid "Empty as default."
-#~ msgstr "Vide par défaut"
-
-#~ msgid "TLS mode"
-#~ msgstr "Mode TLS"
-
-#~ msgid "System last config change"
-#~ msgstr "Dernier changement de la configuration du système"
-
-#~ msgid "System bios"
-#~ msgstr "Le système BIOS"
-
-#~ msgid "Data directory"
-#~ msgstr "Répertoire de données"
-
-#, php-format
-#~ msgid "Default is %s %s."
-#~ msgstr "Par défaut c'est %s %s."
-
-#~ msgid "Graphs height"
-#~ msgstr "Hauteur des graphiques"
-
-#~ msgid "Refresh time for graph pages."
-#~ msgstr "Période de rafraichissement pour les pages graphiques"
-
-#~ msgid "Refresh time"
-#~ msgstr "Période de rafraichissement"
-
-#~ msgid "Y-axis range"
-#~ msgstr "Echelle de l'axe Y"
-
-#~ msgid "seconds"
-#~ msgstr "secondes"
-
-#, php-format
-#~ msgid "Height of the graphs. Default is %s pixel."
-#~ msgstr "Hauteur des graphiques. Par défaut c'est %s pixel."
-
-#~ msgid "Enable white background graphs. (black by default)"
-#~ msgstr "Activer les graphiques avec le  fond blanc. (Noir par défaut)"
-
-#~ msgid ""
-#~ "Enter the path to the home directory of rrdgraphs. This directory stores the "
-#~ "statistical data for the graphs and will be updated every 5 minutes."
-#~ msgstr ""
-#~ "Entrez le chemin d'accès au répertoire de base des rrdgraphs. Ce répertoire "
-#~ "stocke les données statistiques des graphiques et sera mis à jour toutes les "
-#~ "5 minutes."
