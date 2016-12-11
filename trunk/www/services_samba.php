@@ -54,10 +54,10 @@ $pconfig['netbiosname'] = $config['samba']['netbiosname'];
 $pconfig['workgroup'] = $config['samba']['workgroup'];
 $pconfig['serverdesc'] = $config['samba']['serverdesc'];
 $pconfig['security'] = $config['samba']['security'];
-$pconfig['maxprotocol'] = $config['samba']['maxprotocol'] ?? 'default';
-$pconfig['minprotocol'] = $config['samba']['minprotocol'] ?? 'default';
-$pconfig['clientmaxprotocol'] = $config['samba']['clientmaxprotocol'] ?? 'default';
-$pconfig['clientminprotocol'] = $config['samba']['clientminprotocol'] ?? 'default';
+$pconfig['maxprotocol'] = $config['samba']['maxprotocol'] ?? '';
+$pconfig['minprotocol'] = $config['samba']['minprotocol'] ?? '';
+$pconfig['clientmaxprotocol'] = $config['samba']['clientmaxprotocol'] ?? '';
+$pconfig['clientminprotocol'] = $config['samba']['clientminprotocol'] ?? '';
 $pconfig['if'] = !empty($config['samba']['if']) ? $config['samba']['if'] : "";
 $pconfig['localmaster'] = $config['samba']['localmaster'];
 $pconfig['pwdsrv'] = !empty($config['samba']['pwdsrv']) ? $config['samba']['pwdsrv'] : "";
@@ -143,15 +143,15 @@ if ($_POST) {
 		if ($_POST['security'] == 'share') {
 			$config['samba']['maxprotocol'] = 'NT1';
 		} else {
-			$config['samba']['maxprotocol'] = $_POST['maxprotocol'] ?? 'default';
+			$config['samba']['maxprotocol'] = $_POST['maxprotocol'] ?? '';
 		}
 		if ($_POST['security'] == 'share') {
 			$config['samba']['minprotocol'] = 'NT1';
 		} else {
-			$config['samba']['minprotocol'] = $_POST['minprotocol'] ?? 'default';
+			$config['samba']['minprotocol'] = $_POST['minprotocol'] ?? '';
 		}
-		$config['samba']['clientmaxprotocol'] = $_POST['clientmaxprotocol'] ?? 'default';
-		$config['samba']['clientminprotocol'] = $_POST['clientminprotocol'] ?? 'default';
+		$config['samba']['clientmaxprotocol'] = $_POST['clientmaxprotocol'] ?? '';
+		$config['samba']['clientminprotocol'] = $_POST['clientminprotocol'] ?? '';
 		$config['samba']['if'] = $_POST['if'];
 		$config['samba']['localmaster'] = $_POST['localmaster'];
 		$config['samba']['pwdsrv'] = $_POST['pwdsrv'];
@@ -210,7 +210,7 @@ if ($_POST) {
 	}
 }
 $l_protocol = [
-	'default' => gtext('Default'),
+	'' => gtext('Default'),
 	'SMB3' => gtext('SMB3'),
 	'SMB3_11' => gtext('SMB3_11 (Windows 10)'),
 	'SMB3_02' => gtext('SMB3 (Windows 8.1)'),
