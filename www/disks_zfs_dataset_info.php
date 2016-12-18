@@ -3,11 +3,7 @@
 	disks_zfs_dataset_info.php
 
 	Part of NAS4Free (http://www.nas4free.org).
-	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
-	All rights reserved.
-
-	Portions of freenas (http://www.freenas.org).
-	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
+	Copyright (c) 2012-2017 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
 	Redistribution and use in source and binary forms, with or without
@@ -15,6 +11,7 @@
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -34,15 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-
-$pgtitle = array(gtext("Disks"), gtext("ZFS"), gtext("Datasets"), gtext("Information"));
-
-if (!isset($config['zfs']['datasets']['dataset']) || !is_array($config['zfs']['datasets']['dataset']))
-	$config['zfs']['datasets']['dataset'] = array();
-
-$a_dataset = &$config['zfs']['datasets']['dataset'];
+require 'auth.inc';
+require 'guiconfig.inc';
 
 function zfs_dataset_display_list() {
 	mwexec2("zfs list -t filesystem 2>&1", $rawdata);
@@ -55,9 +45,10 @@ function zfs_dataset_display_properties() {
 	mwexec2("zfs get all $vols 2>&1", $rawdata2);
 	return implode("\n", $rawdata2);
 }
+$pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Datasets'),gtext('Information')];
 ?>
-<?php include("fbegin.inc");?>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<?php include 'fbegin.inc';?>
+<table id="area_navigator"><tbody>
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
@@ -77,23 +68,44 @@ function zfs_dataset_display_properties() {
 			</ul>
 		</td>
 	</tr>
-	<tr>
-		<td class="tabcont">
-			<table width="100%" border="0">
-				<?php html_titleline(gtext("ZFS Dataset Information & Status"));?>
-				<tr>
-					<td class="listt">
-						<pre><span id="zfs_dataset_list"><?=zfs_dataset_display_list();?></span></pre>
-					</td>
-				</tr>
-				<?php html_titleline(gtext("ZFS Dataset Properties"));?>
-				<tr>
-					<td class="listt">
-						<pre><span id="zfs_dataset_properties"><?=zfs_dataset_display_properties();?></span></pre>
-					</td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-</table>
-<?php include("fend.inc");?>
+</tbody></table>
+<table id="area_data"><tbody><tr><td id="area_data_frame">
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+			<?php html_titleline2(gtext('ZFS Dataset Information & Status'));?>
+		</thead>
+		<tfoot>
+			<?php html_separator2();?>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td class="celltag"><?=gtext('Information & Status');?></td>
+				<td class="celldata">
+					<pre><span id="zfs_dataset_list"><?=zfs_dataset_display_list();?></span></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+			<?php html_titleline(gtext('ZFS Dataset Properties'));?>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="celltag"><?=gtext('Properties');?></td>
+				<td class="celldata">
+					<pre><span id="zfs_dataset_properties"><?=zfs_dataset_display_properties();?></span></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</td></tr></tbody></table>
+<?php include 'fend.inc';?>
