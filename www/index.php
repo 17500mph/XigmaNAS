@@ -43,9 +43,7 @@ $gt_temp = gtext('Temp');
 $pgtitle = [gtext('System Information')];
 $pgtitle_omit = true;
 
-if (!isset($config['vinterfaces']['carp']) || !is_array($config['vinterfaces']['carp'])):
-	$config['vinterfaces']['carp'] = [];
-endif;
+array_make_branch($config,'vinterfaces','carp');
 
 $smbios = get_smbios_info();
 $cpuinfo = system_get_cpu_info();
@@ -483,7 +481,7 @@ $(document).ready(function(){
 			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline(gtext('System Information'));?>
+			<?php html_titleline2(gtext('System Information'));?>
 		</thead>
 		<tbody>
 			<?php
@@ -520,18 +518,16 @@ $(document).ready(function(){
 				<tr>
 					<td class="celltag"><?=gtext('CPU Usage');?></td>
 					<td class="celldata">
-						<table width="100%" border="0" cellspacing="0" cellpadding="0">
-							<tr><td>
-								<?php
-								$percentage = 0;
-								echo '<img src="images/bar_left.gif" class="progbarl" alt=""/>';
-								echo '<img src="images/bar_blue.gif" name="cpuusageu" id="cpuusageu" width="',$percentage,'" class="progbarcf" alt="" />';
-								echo '<img src="images/bar_gray.gif" name="cpuusagef" id="cpuusagef" width="',(100 - $percentage),'" class="progbarc" alt=""/>';
-								echo '<img src="images/bar_right.gif" class="progbarr" alt="" style="padding-right:8px"/>';
-								echo '<span id="cpuusagep"></span>';
-								?>
-							</td></tr>
-						</table>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+							<?php
+							$percentage = 0;
+							echo '<img src="images/bar_left.gif" class="progbarl" alt=""/>';
+							echo '<img src="images/bar_blue.gif" name="cpuusageu" id="cpuusageu" width="',$percentage,'" class="progbarcf" alt="" />';
+							echo '<img src="images/bar_gray.gif" name="cpuusagef" id="cpuusagef" width="',(100 - $percentage),'" class="progbarc" alt=""/>';
+							echo '<img src="images/bar_right.gif" class="progbarr" alt="" style="padding-right:8px"/>';
+							echo '<span id="cpuusagep"></span>';
+							?>
+						</td></tr></table>
 					</td>
 				</tr>
 				<?php
