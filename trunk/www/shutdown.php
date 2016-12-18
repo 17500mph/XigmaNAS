@@ -3,7 +3,7 @@
 	shutdown.php
 
 	Part of NAS4Free (http://www.nas4free.org).
-	Copyright (c) 2012-2016 The NAS4Free Project <info@nas4free.org>.
+	Copyright (c) 2012-2017 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
 	Redistribution and use in source and binary forms, with or without
@@ -42,9 +42,9 @@ $gt_shutdown_confirm = gtext('Are you sure you want to shutdown the server?');
 $gt_yes = gtext('Yes');
 $gt_no = gtext('No');
 $cmd_system_shutdown = false;
-if ($_POST) {
-	if($_POST['submit']) {
-		switch($_POST['submit']) {
+if($_POST):
+	if($_POST['submit']):
+		switch($_POST['submit']):
 			case 'save':
 				$cmd_system_shutdown = true;
 				break;
@@ -56,10 +56,10 @@ if ($_POST) {
 				header($sphere_header_parent);
 				exit;
 				break;
-		}
-	}
-}
-$pgtitle =  [gtext('System'), gtext('Shutdown'), gtext('Now')];
+		endswitch;
+	endif;
+endif;
+$pgtitle = [gtext('System'),gtext('Shutdown'),gtext('Now')];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">
@@ -70,39 +70,43 @@ $(window).on("load", function() {
 });
 //]]>
 </script>
-<table id="area_navigator"><tbody>
-	<tr><td class="tabnavtbl"><ul id="tabnav">
+<table id="area_navigator"><tbody><tr><td class="tabnavtbl">
+	<ul id="tabnav">
 		<li class="tabact"><a href="shutdown.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Now');?></span></a></li>
 		<li class="tabinact"><a href="shutdown_sched.php"><span><?=gtext('Scheduled');?></span></a></li>
-	</ul></td></tr>
-</tbody></table>
+	</ul>
+</td></tr></tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
+	<?php 
+	if($cmd_system_shutdown):
+		echo print_info_box($gt_shutdown);
+	endif;
+	?>
 	<table id="area_data_selection">
 		<colgroup>
 			<col style="width:100%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Shutdown'), 1);?>
+			<?php html_titleline2(gtext('Shutdown'),1);?>
 		</thead>
 	</table>
-	<?php if($cmd_system_shutdown):;?>
-		<?php echo print_info_box($gt_shutdown);?>
-	<?php else:?>
-		<?php echo print_warning_box($gt_shutdown_confirm);?>
-		<div id="submit">
-			<?php
+	<?php
+	if(!$cmd_system_shutdown):
+		echo print_warning_box($gt_shutdown_confirm);
+		echo '<div id="submit">';
 			echo html_button_save($gt_yes);
 			echo html_button_cancel($gt_no);
-			?>
-		</div>
-	<?php endif;?>
-	<?php include 'formend.inc';?>
+		echo '</div>';
+	endif;
+	include 'formend.inc';
+	?>
 </form></td></tr></tbody></table>
-<?php include 'fend.inc';?>
 <?php
-if($cmd_system_shutdown) {
+include 'fend.inc';
+if($cmd_system_shutdown):
+	ob_flush();
 	flush();
 	sleep(5);
 	system_halt();
-}
+endif;
 ?>
