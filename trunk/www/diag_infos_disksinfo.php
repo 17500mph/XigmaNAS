@@ -67,8 +67,6 @@ $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('Disks (Info)')];
 			</ul>
 		</td>
 	</tr>
-	
-  <tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
 	<?php if(empty($a_disk)):?>
@@ -97,19 +95,20 @@ $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('Disks (Info)')];
 					<?php html_titleline2(sprintf(gtext("Device /dev/%s - %s"),$diskv['name'],$diskv['desc']));?>
 				</thead>
 				<tbody>
-					<tr>
-						<?php
-						exec(sprintf('diskinfo -v %s', escapeshellarg($diskv['devicespecialfile'])),$rawdata);
-						$rawdata = array_slice($rawdata,1); // remove first line
-						foreach($rawdata as $line):
-							$a_line = explode('#',$line);
-							if(2 === count($a_line)):
-								html_text2($diskv['name'],htmlspecialchars(trim($a_line[1])),htmlspecialchars(trim($a_line[0])));
-							endif;
-						endforeach;
-						unset($rawdata);
-						?>
-					</tr>
+					<?php
+					exec(sprintf('diskinfo -v %s', escapeshellarg($diskv['devicespecialfile'])),$rawdata);
+					$rawdata = array_slice($rawdata,1); // remove first line
+					foreach($rawdata as $line):
+						$a_line = explode('#',$line);
+						if(2 === count($a_line)):
+							echo '<tr>';
+							echo '<td class="celltag">',htmlspecialchars(ucfirst(trim($a_line[1]))),'</td>';
+							echo '<td class="celldata">',htmlspecialchars(trim($a_line[0])),'</td>';
+							echo "</tr>\n";
+						endif;
+					endforeach;
+					unset($rawdata);
+					?>
 				</tbody>
 			</table>
 		<?php endforeach;?>
