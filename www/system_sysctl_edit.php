@@ -43,9 +43,9 @@ $sphere_record = [];
 $prerequisites_ok = true;
 
 $mode_page = ($_POST) ? PAGE_MODE_POST : (($_GET) ? PAGE_MODE_EDIT : PAGE_MODE_ADD); // detect page mode
-if (PAGE_MODE_POST == $mode_page) { // POST is Cancel or not Submit => cleanup
-	if(isset($_POST['submit'])) {
-		switch($_POST['submit']) {
+if(PAGE_MODE_POST == $mode_page): // POST is Cancel or not Submit => cleanup
+	if(isset($_POST['submit'])):
+		switch($_POST['submit']):
 			case 'save':
 				break;
 			case 'cancel':
@@ -56,39 +56,28 @@ if (PAGE_MODE_POST == $mode_page) { // POST is Cancel or not Submit => cleanup
 				header($sphere_header_parent);
 				exit;
 				break;
-		}
-	}
-}
+		endswitch;
+	endif;
+endif;
 
-if ((PAGE_MODE_POST == $mode_page) && isset($_POST['uuid']) && is_uuid_v4($_POST['uuid'])) {
+if((PAGE_MODE_POST == $mode_page) && isset($_POST['uuid']) && is_uuid_v4($_POST['uuid'])):
 	$sphere_record['uuid'] = $_POST['uuid'];
-} else {
-	if ((PAGE_MODE_EDIT == $mode_page) && isset($_GET['uuid']) && is_uuid_v4($_GET['uuid'])) {
+else:
+	if((PAGE_MODE_EDIT == $mode_page) && isset($_GET['uuid']) && is_uuid_v4($_GET['uuid'])):
 		$sphere_record['uuid'] = $_GET['uuid'];
-	} else {
+	else:
 		$mode_page = PAGE_MODE_ADD; // Force ADD
 		$sphere_record['uuid'] = uuid();
-	}
-}
-
-if (!(isset($config['system']) && is_array($config['system']))) {
-	$config['system'] = [];
-}
-if (!(isset($config['system']['sysctl']) && is_array($config['system']['sysctl']))) {
-	$config['system']['sysctl'] = [];
-}
-if (!(isset($config['system']['sysctl']['param']) && is_array($config['system']['sysctl']['param']))) {
-	$config['system']['sysctl']['param'] = [];
-}
-array_sort_key($config['system']['sysctl']['param'], 'name');
-$sphere_array = &$config['system']['sysctl']['param'];
-
-$index_uuid = array_search_ex($sphere_record['uuid'], $sphere_array, 'uuid');
-$mode_updatenotify = updatenotify_get_mode("sysctl", $sphere_record['uuid']); // get updatenotify mode for uuid
+	endif;
+endif;
+$sphere_array = &array_make_branch($config,'system','sysctl','param');
+array_sort_key($sphere_array,'name');
+$index_uuid = array_search_ex($sphere_record['uuid'],$sphere_array,'uuid');
+$mode_updatenotify = updatenotify_get_mode($sphere_notifier,$sphere_record['uuid']); // get updatenotify mode for uuid
 $mode_record = RECORD_ERROR;
-if (false !== $index_uuid) { // uuid found
-	if ((PAGE_MODE_POST == $mode_page || (PAGE_MODE_EDIT == $mode_page))) { // POST or EDIT
-		switch ($mode_updatenotify) {
+if(false !== $index_uuid): // uuid found
+	if((PAGE_MODE_POST == $mode_page || (PAGE_MODE_EDIT == $mode_page))): // POST or EDIT
+		switch ($mode_updatenotify):
 			case UPDATENOTIFY_MODE_NEW:
 				$mode_record = RECORD_NEW_MODIFY;
 				break;
@@ -96,27 +85,28 @@ if (false !== $index_uuid) { // uuid found
 			case UPDATENOTIFY_MODE_UNKNOWN:
 				$mode_record = RECORD_MODIFY;
 				break;
-		}
-	}
-} else { // uuid not found
-	if ((PAGE_MODE_POST == $mode_page) || (PAGE_MODE_ADD == $mode_page)) { // POST or ADD
-		switch ($mode_updatenotify) {
+		endswitch;
+	endif;
+else: // uuid not found
+	if((PAGE_MODE_POST == $mode_page) || (PAGE_MODE_ADD == $mode_page)): // POST or ADD
+		switch ($mode_updatenotify):
 			case UPDATENOTIFY_MODE_UNKNOWN:
 				$mode_record = RECORD_NEW;
 				break;
-		}
-	}
-}
-if (RECORD_ERROR == $mode_record) { // oops, someone tries to cheat, over and out
+		endswitch;
+	endif;
+endif;
+if(RECORD_ERROR == $mode_record): // oops, someone tries to cheat, over and out
 	header($sphere_header_parent);
 	exit;
-}
+endif;
+
 $isrecordnew = (RECORD_NEW === $mode_record);
 $isrecordnewmodify = (RECORD_NEW_MODIFY === $mode_record);
 $isrecordmodify = (RECORD_MODIFY === $mode_record);
 $isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
 
-if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
+if(PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 	unset($input_errors);
 	$sphere_record['enable'] = isset($_POST['enable']);
 	$sphere_record['name'] = isset($_POST['name']) ? trim($_POST['name']) : '';
@@ -132,28 +122,28 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 	do_input_validation_type($sphere_record, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
 	// Check if MIB name is known to the OS.
-	if ($prerequisites_ok && empty($input_errors)) {
+	if($prerequisites_ok && empty($input_errors)):
 		exec("/sbin/sysctl -NA", $helper);
-		if (!in_array($sphere_record['name'], $helper)) {
+		if (!in_array($sphere_record['name'], $helper)):
 			$input_errors[] = sprintf(gtext("The MIB '%s' doesn't exist in sysctl."), $sphere_record['name']);
-		}
-	}
-	if ($prerequisites_ok && empty($input_errors)) {
-		if ($isrecordnew) {
+		endif;
+	endif;
+	if($prerequisites_ok && empty($input_errors)):
+		if ($isrecordnew):
 			$sphere_array[] = $sphere_record;
 			updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_NEW, $sphere_record['uuid']);
-		} else {
+		else:
 			$sphere_array[$index_uuid] = $sphere_record;
-			if (UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify) {
+			if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
 				updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_record['uuid']);
-			}
-		}
+			endif;
+		endif;
 		write_config();
 		header($sphere_header_parent);
 		exit;
-	}
-} else { // EDIT / ADD
-	switch ($mode_record) {
+	endif;
+else: // EDIT / ADD
+	switch ($mode_record):
 		case RECORD_NEW:
 			$sphere_record['enable'] = true;
 			$sphere_record['name'] = '';
@@ -167,8 +157,8 @@ if (PAGE_MODE_POST == $mode_page) { // POST Submit, already confirmed
 			$sphere_record['value'] = $sphere_array[$index_uuid]['value'] ?? '';
 			$sphere_record['comment'] = $sphere_array[$index_uuid]['comment'] ?? '';
 			break;
-	}
-}
+	endswitch;
+endif;
 $pgtitle = [gtext('System'), gtext('Advanced'), gtext('sysctl.conf'), $isrecordnew ? gtext('Add') : gtext('Edit')];
 ?>
 <?php include 'fbegin.inc';?>
@@ -196,15 +186,15 @@ $(window).on("load", function() {
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
 	<?php
-		if (!empty($errormsg)) {
+		if(!empty($errormsg)):
 			print_error_box($errormsg);
-		}
-		if (!empty($input_errors)) {
+		endif;
+		if(!empty($input_errors)):
 			print_input_errors($input_errors);
-		}
-		if (file_exists($d_sysrebootreqd_path)) {
+		endif;
+		if(file_exists($d_sysrebootreqd_path)):
 			print_info_box(get_std_save_message(0));
-		}
+		endif;
 	?>
 	<table class="area_data_settings">
 		<colgroup>
@@ -216,9 +206,9 @@ $(window).on("load", function() {
 		</thead>
 		<tbody>
 			<?php
-				html_inputbox2('name', gtext('Name'), $sphere_record['name'], gtext('Enter a valid sysctl MIB name.'), true, 60);
-				html_inputbox2('value', gtext('Value'), $sphere_record['value'], gtext('A valid systctl MIB value.'), true, 60);
-				html_inputbox2('comment', gtext('Comment'), $sphere_record['comment'], gtext('You may enter a description here for your reference.'), false, 60);
+			html_inputbox2('name', gtext('Name'), $sphere_record['name'], gtext('Enter a valid sysctl MIB name.'), true, 60);
+			html_inputbox2('value', gtext('Value'), $sphere_record['value'], gtext('A valid systctl MIB value.'), true, 60);
+			html_inputbox2('comment', gtext('Comment'), $sphere_record['comment'], gtext('You may enter a description here for your reference.'), false, 60);
 			?>
 		</tbody>
 	</table>
