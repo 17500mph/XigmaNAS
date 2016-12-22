@@ -31,8 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
 if (isset($_GET['uuid']))
 	$uuid = $_GET['uuid'];
@@ -192,7 +192,7 @@ if ($_POST) {
 				updatenotify_clear("rsyncclient", $rsyncclient['uuid']);
 			}
 
-			$retval |= rc_exec_script("su -m {$rsyncclient['who']} -c '/bin/sh /var/run/rsync_client_{$rsyncclient['uuid']}.sh'");
+			$retval |= rc_exec_script_async("su -m {$rsyncclient['who']} -c '/bin/sh /var/run/rsync_client_{$rsyncclient['uuid']}.sh'");
 
 			$savemsg = get_std_save_message($retval);
 		} else {
@@ -232,8 +232,8 @@ function delete_change() {
 			</ul>
 		</td>
 	</tr>
-  <tr>
-    <td class="tabcont">
+	<tr>
+		<td class="tabcont">
 			<form action="services_rsyncd_client_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
@@ -247,7 +247,7 @@ function delete_change() {
 							<span class="vexpl"><?=gtext("Path to be shared.");?></span>
 					  </td>
 					</tr>
-			    <tr>
+					<tr>
 						<td width="22%" valign="top" class="vncellreq"><strong><?=gtext("Remote Rsync Server");?></strong></td>
 						<td width="78%" class="vtable">
 							<input name="rsyncserverip" id="rsyncserverip" type="text" class="formfld" size="20" value="<?=htmlspecialchars($pconfig['rsyncserverip']);?>" />
@@ -256,13 +256,13 @@ function delete_change() {
 					</tr>
 					<tr>
 						<td width="22%" valign="top" class="vncellreq"><?=gtext("Remote module (source)");?></td>
-			      <td width="78%" class="vtable">
-			        <input name="remoteshare" type="text" class="formfld" id="remoteshare" size="20" value="<?=htmlspecialchars($pconfig['remoteshare']);?>" />
-			      </td>
-			    </tr>
-			    <?php $a_user = array(); foreach (system_get_user_list() as $userk => $userv) { $a_user[$userk] = htmlspecialchars($userk); }?>
-			    <?php html_combobox("who", gtext("Who"), $pconfig['who'], $a_user, "", true);?>
-			    <tr>
+						<td width="78%" class="vtable">
+							<input name="remoteshare" type="text" class="formfld" id="remoteshare" size="20" value="<?=htmlspecialchars($pconfig['remoteshare']);?>" />
+						</td>
+					</tr>
+					<?php $a_user = array(); foreach (system_get_user_list() as $userk => $userv) { $a_user[$userk] = htmlspecialchars($userk); }?>
+					<?php html_combobox("who", gtext("Who"), $pconfig['who'], $a_user, "", true);?>
+					<tr>
 						<td width="22%" valign="top" class="vncellreq"><?=gtext("Synchronization time");?></td>
 						<td width="78%" class="vtable">
 							<table width="100%" border="0" cellpadding="5" cellspacing="0">
@@ -478,7 +478,7 @@ function delete_change() {
 					<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
 					<?php endif;?>
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
@@ -488,4 +488,4 @@ function delete_change() {
 delete_change();
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
