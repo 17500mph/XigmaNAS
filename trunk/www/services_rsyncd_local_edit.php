@@ -183,7 +183,7 @@ if ($_POST) {
 				updatenotify_clear("rsynclocal", $rsynclocal['uuid']);
 			}
 
-			$retval |= rc_exec_script("su -m {$rsynclocal['who']} -c '/bin/sh /var/run/rsync_local_{$rsynclocal['uuid']}.sh'");
+			$retval |= rc_exec_script_async("su -m {$rsynclocal['who']} -c '/bin/sh /var/run/rsync_local_{$rsynclocal['uuid']}.sh'");
 
 			$savemsg = get_std_save_message($retval);
 		} else {
