@@ -66,13 +66,13 @@ else:
 	endif;
 endif;
 
-$sphere_array = &$array_make_branch($config,'zfs','datasets','dataset');
+$sphere_array = &array_make_branch($config,'zfs','datasets','dataset');
 array_sort_key($sphere_array,'name');
 
-$a_volume = &$array_make_branch($config,'zfs','volumes','volume');
+$a_volume = &array_make_branch($config,'zfs','volumes','volume');
 array_sort_key($a_volume,'name');
 
-$a_pool = &$array_make_branch($config,'zfs','pools','pool');
+$a_pool = &array_make_branch($config,'zfs','pools','pool');
 array_sort_key($a_pool,'name');
 if(empty($a_pool)):
 	$errormsg = gtext('No configured pools.') . ' ' . '<a href="' . 'disks_zfs_zpool.php' . '">' . gtext('Please add new pools first.') . '</a>';
