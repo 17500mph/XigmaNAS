@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2016-12-06 17:07+0000\n"
-"PO-Revision-Date: 2016-07-13 23:35+0000\n"
-"Last-Translator: zoon01 <Unknown>\n"
+"PO-Revision-Date: 2016-12-29 18:46+0000\n"
+"Last-Translator: Lukas Vescicik <lukas.vescicik@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-12-22 16:57+0000\n"
+"X-Launchpad-Export-Date: 2016-12-30 06:21+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
 "X-Poedit-Country: SLOVAKIA\n"
 "Language: \n"
@@ -56,7 +56,7 @@ msgstr "%dB / blok"
 
 #, php-format
 msgid "%s Interface"
-msgstr "%s royhranie"
+msgstr "%s rozhranie"
 
 #, php-format
 msgid "%s already exists as a %s."
@@ -82,6 +82,7 @@ msgstr "%s je píliš dlhý."
 msgid ""
 "%s must be enabled for Unison to work, and the %s must have shell access."
 msgstr ""
+"%s musí byť povolený aby Unison fungoval, a %s musí mať shell prístup."
 
 #, php-format
 msgid "%s of %sB"
@@ -89,7 +90,7 @@ msgstr "%s z %s B"
 
 #, php-format
 msgid "%s on %s"
-msgstr "%s na %s"
+msgstr "%s zo %s"
 
 #, php-format
 msgid "%s%% available"
@@ -109,7 +110,7 @@ msgstr "%s B využitých z %sB"
 
 #, php-format
 msgid "'%s' deletes all statistical data from the graphs!"
-msgstr ""
+msgstr "'%s' vymaže všetky štatistické data z grafu!"
 
 msgid "(Change if needed)"
 msgstr "(Zmeň ak je to potrebné)"
@@ -131,6 +132,9 @@ msgid ""
 "returns the total number of Flash program operation failures since the drive "
 "was deployed. This attribute is identical to attribute 181."
 msgstr ""
+"(Kingston) Počíta chyby flash programu. Tento atribút vracia celkový počet "
+"pracovných chýb flash programu od zapojenia disku. Tento atribút je "
+"identický s atribútom 181."
 
 msgid ""
 "(Vendor specific raw value.) Rate of seek errors of the magnetic heads. If "
@@ -140,6 +144,12 @@ msgid ""
 "different structure for different vendors and is often not meaningful as a "
 "decimal number."
 msgstr ""
+"(špecifická hodnota výrobcu) Miera vyhľadávacích chýb magnetickej hlavy. Ak "
+"nastane čiastočné zlyhanie v mechanickom pozičnom systéme, potom sa zvýši "
+"hodnota vyhľadávacích chýb. Zlyhanie môže nastať z mnohých dôvodov, ako sú "
+"napríklad poškodenie serva, alebo prehriatie hard disku. Hodnota má rôznu "
+"štruktúru pre rôznych výrobcov a preto nie je možné ju často vyjadriť ako "
+"desatinné  číslo."
 
 msgid ""
 "(Vendor specific raw value.) Stores data related to the rate of hardware "
@@ -147,15 +157,20 @@ msgid ""
 "value has different structure for different vendors and is often not "
 "meaningful as a decimal number."
 msgstr ""
+"(špecifická hodnota výrobcu) Obsahuje hodnotu vyjadrujúcu mechanickú chybu "
+"pri čítaní, ktorá vzniká pri čítaní z disku. Hodnota má rôznu štruktúru pre "
+"rôznych výrobcov a preto nie je možné ju často vyjadriť ako desatinné  číslo."
 
 msgid ""
 "(Vendor-specific raw value.) The raw value has different structure for "
 "different vendors and is often not meaningful as a decimal number."
 msgstr ""
+"(špecifická hodnota výrobcu) Hodnota má rôznu štruktúru pre rôznych výrobcov "
+"a preto nie je možné ju často vyjadriť ako desatinné  číslo."
 
 #, php-format
 msgid "(default %s %s"
-msgstr ""
+msgstr "(štandardné %s %s"
 
 msgid "*** Imported duplicate ***"
 msgstr "*** Importovaný duplikát ***"
@@ -214,6 +229,8 @@ msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
 "listening TCP ports."
 msgstr ""
+"Portálová skupina je identifikovaná príznakovým číslom a definuje IP adresu "
+"a TCP portom."
 
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
@@ -246,15 +263,17 @@ msgstr ""
 "alebo ako postupnosť hexadecimálnych číslic s predponou „0x”."
 
 msgid "A mounted RAID volume cannot be deleted."
-msgstr ""
+msgstr "Pripojený RAID oddiel nemôže byť zmazaný"
 
 msgid ""
 "A mounted disk or partition will be unmounted temporarily to perform the "
 "requested action."
 msgstr ""
+"Pripojený disk alebo partícia bude dočasne odpojená, aby bolo možné vykonať "
+"požadovanú akciu."
 
 msgid "A reload request has been sent to the daemon."
-msgstr ""
+msgstr "Žiadosť o znovunačítanie bola zaslaná."
 
 msgid "A route to this destination network already exists."
 msgstr "Cesta k tejto cieľovej sietu už existuje."
@@ -272,6 +291,7 @@ msgstr "Je potrebné zadať platnú IP adresu."
 msgid ""
 "A valid IP address or CIDR notation must be specified for the hosts allow."
 msgstr ""
+"Musí byť zadaná správna IP adresa alebo CIDR notácia pre povolenie hosťa."
 
 msgid ""
 "A valid IPv4 address must be specified for the primary/secondary DNS server."
@@ -317,16 +337,16 @@ msgid "A valid systctl MIB value."
 msgstr "Platná hodnota sysctl MIB."
 
 msgid "ACL Inherit"
-msgstr ""
+msgstr "Dedenie ACL"
 
 msgid "ACL Mode"
-msgstr ""
+msgstr "Mód ACL"
 
 msgid "ACL inherit"
-msgstr ""
+msgstr "Dedenie ACl"
 
 msgid "ACL mode"
-msgstr ""
+msgstr "Mód ACL"
 
 msgid "AD authentication disabled"
 msgstr "Overenie voči AD vypnuté"
@@ -338,55 +358,55 @@ msgid "AFP"
 msgstr "AFP"
 
 msgid "AFP compatibility"
-msgstr ""
+msgstr "Kompatibilita AFP"
 
 msgid "AG"
 msgstr "AS"
 
 msgid "AIO module"
-msgstr ""
+msgstr "Modul AIO"
 
 msgid "AIO read size"
-msgstr ""
+msgstr "Veľkosť čítania AIO"
 
 msgid "AIO write size"
-msgstr ""
+msgstr "Veľkosť zápisu AIO"
 
 msgid "ALL Interfaces"
-msgstr ""
+msgstr "Všetky rozhrania"
 
 msgid "AP mode"
-msgstr ""
+msgstr "Mód AP"
 
 msgid "ARP Tables"
 msgstr "ARP tabuľky"
 
 msgid "ARP Tables List"
-msgstr ""
+msgstr "Tabuľka ARP"
 
 msgid "ATTRIBUTE NAME"
-msgstr ""
+msgstr "MENO ATRIBÚTU"
 
 msgid "Accept remote syslog messages."
-msgstr ""
+msgstr "Akceptuj správy zo vzdialeného syslog servera."
 
 msgid "Access"
 msgstr "Prístup"
 
 msgid "Access Mode"
-msgstr ""
+msgstr "Mód prístupu"
 
 msgid "Access Restrictions"
 msgstr "Obmedzenia prístupu"
 
 msgid "Access Time (atime)"
-msgstr ""
+msgstr "Čas prístupu (atime)"
 
 msgid "Access mode"
 msgstr "Režim prístupu"
 
 msgid "Access the webGUI with the new IP address"
-msgstr ""
+msgstr "Prístup do webGUI s novou IP adresov"
 
 msgid "Acoustic level"
 msgstr "Úroveň hlasitosti"
@@ -408,34 +428,34 @@ msgstr ""
 "alebo novej chyby či zlyhania S.M.A.R.T. príkazu disku."
 
 msgid "Active"
-msgstr ""
+msgstr "Aktívny"
 
 msgid "Active Directory"
 msgstr "Active Directory"
 
 msgid "Active Directory List"
-msgstr ""
+msgstr "Active Directory List"
 
 msgid "Active Shares"
-msgstr ""
+msgstr "Aktívne zdieľania"
 
 msgid "Active Users"
-msgstr ""
+msgstr "Aktívny užívatelia"
 
 msgid "Activities"
-msgstr ""
+msgstr "Aktivity"
 
 msgid "Activity"
-msgstr ""
+msgstr "Aktivita"
 
 msgid "Adaptive (Low Power Consumption)"
-msgstr ""
+msgstr "Adaptívne (Nízka spotreba energie)"
 
 msgid "Add"
 msgstr "Pridať"
 
 msgid "Add Dataset"
-msgstr ""
+msgstr "Pridať Dataset"
 
 msgid "Add Host"
 msgstr "Pridať hostiteľa"
@@ -453,40 +473,40 @@ msgid "Add Rsync job"
 msgstr "Pridať úlohu rsync"
 
 msgid "Add Snapshot"
-msgstr ""
+msgstr "Pridať Snapshot(obraz)"
 
 msgid "Add URL"
 msgstr "Pridať odkaz"
 
 msgid "Add Virtual Device"
-msgstr ""
+msgstr "Pridať virtuálne zariadenie"
 
 msgid "Add Volume"
-msgstr ""
+msgstr "Pridať oddiel"
 
 msgid "Add a cache device to a pool"
-msgstr ""
+msgstr "Pridať cache zariadenie do poolu"
 
 msgid "Add a log device to a pool"
-msgstr ""
+msgstr "Pridať logovacie zariadenie do poolu"
 
 msgid "Add a spare device to a pool"
-msgstr ""
+msgstr "Pridať záložné zariadenie do poolu"
 
 msgid "Add a virtual device to a pool"
-msgstr ""
+msgstr "Pridať virtuálne zariadenie do poolu"
 
 msgid "Add additional scheduled self-test."
 msgstr "Pridať ďalší plánovaný automatický test tohto zariadenia."
 
 msgid "Add any supplemental parameters."
-msgstr ""
+msgstr "Pridať ďalšie podporné parametre"
 
 msgid "Add auth group"
 msgstr "Pridať autentifikačnú skupinu"
 
 msgid "Add auto snapshot"
-msgstr ""
+msgstr "Pridať auto snapshot(automatické vytváranie obrazu)"
 
 msgid "Add command"
 msgstr "Pridať príkaz"
@@ -528,7 +548,7 @@ msgid "Add portal group"
 msgstr "Pridať skupinu portálov"
 
 msgid "Add resource"
-msgstr ""
+msgstr "Pridať prostriedky"
 
 msgid "Add rule"
 msgstr "Pridať pravidlo"
@@ -546,10 +566,10 @@ msgid "Add user"
 msgstr "Pridať používateľa"
 
 msgid "Additional Network"
-msgstr ""
+msgstr "Ďalšia sieť"
 
 msgid "Additional Storage"
-msgstr ""
+msgstr "Ďalší úložný priestor"
 
 msgid "Additional group"
 msgstr "Ďalšia skupina"
@@ -558,6 +578,7 @@ msgid ""
 "Additional parameters to the hardware-specific part of the driver for second "
 "UPS."
 msgstr ""
+"dodatočné parametre pre  hardwarovo-špecifické časti ovládača pre druhú UPS."
 
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr "Dodatočné parametre hardvérovej časti ovládača."
@@ -566,7 +587,7 @@ msgid "Address"
 msgstr "Adresa"
 
 msgid "Address of the remote hastd daemon. It must be a static IP address."
-msgstr ""
+msgstr "Adresa vzdialeného hastd démona. Musí to byť statická IP adresa."
 
 msgid "Admin password"
 msgstr ""
@@ -608,7 +629,7 @@ msgid "Afrikaans"
 msgstr ""
 
 msgid "After"
-msgstr ""
+msgstr "Po"
 
 msgid "After - File-deletions will be done after the transfer has completed."
 msgstr ""
@@ -9818,22 +9839,22 @@ msgid "sysctl.conf"
 msgstr "sysctl.conf"
 
 msgid "sysvol exist in path."
-msgstr ""
+msgstr "sysvol existuje na zadanej ceste"
 
 msgid "to"
-msgstr ""
+msgstr "do"
 
 msgid "umask"
 msgstr "umask"
 
 msgid "umount"
-msgstr "odpojiť"
+msgstr "umount"
 
 msgid "user"
-msgstr ""
+msgstr "užívateľ"
 
 msgid "version:"
-msgstr ""
+msgstr "verzia:"
 
 msgid "week days"
-msgstr ""
+msgstr "dní v týždni"
