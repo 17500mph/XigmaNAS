@@ -234,7 +234,7 @@ $pgtitle = array(gtext("Help"), gtext("License & Credits"));
 	    Copyright &copy; 1989, 1991 Free Software Foundation. All Rights Reserved.</p>
 
 	    <p> Fuse - Filesystem in Userspace (<a href="https://github.com/libfuse/libfuse" target="_blank">https://github.com/libfuse/libfuse</a>)<br />
-	    Copyright &copy;GNU General Public License. All Rights Reserved.</p>
+	    Copyright &copy; GNU General Public License. All Rights Reserved.</p>
 
 	    <p> e2fsprogs (<a href="http://e2fsprogs.sourceforge.net" target="_blank">http://e2fsprogs.sourceforge.net</a>)<br />
 	    Copyright &copy; 2007 Theodore Ts'o. All Rights Reserved.</p>
