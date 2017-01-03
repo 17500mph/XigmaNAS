@@ -39,7 +39,7 @@ $sphere_header = 'Location: '.$sphere_scriptname;
 
 function get_ipmi_sensor() {
 	$a_sensor = [];
-	mwexec2("ipmitool sensor list all", $a_output);
+	mwexec2("ipmitool sensor", $a_output);
 	foreach ($a_output as $r_output) {
 		$r_sensor = explode('|', $r_output);
 		$c_sensor = count($r_sensor);
@@ -120,9 +120,9 @@ $(window).on("load", function() {
 				<col style="width:12%"><!-- // Upper Critical [8] -->
 			</colgroup>
 			<thead>
-				<?php html_titleline2(gtext('IPMI Sensor'), 9);?>
+				<?php html_titleline2(gtext('Sensor Information'), 9);?>
 				<tr>
-					<td class="lhelc" colspan="3">&nbsp;</th>
+					<td class="lhelc" colspan="3"><?=gtext('Sensor List');?></td>
 					<td class="lhelc" colspan="2"><?=gtext('Non-Recoverable');?></td>
 					<td class="lhelc" colspan="2"><?=gtext('Non-Critical');?></td>
 					<td class="lhebc" colspan="2"><?=gtext('Critical');?></td>
@@ -169,7 +169,7 @@ $(window).on("load", function() {
 			<thead>
 				<?php
 				html_separator2();
-				html_titleline2(gtext('IPMI FRU'), 2);
+				html_titleline2(gtext('FRU Information'), 2);
 				?>
 				<tr>
 					<td class="lhell"><?=gtext('Tag');?></td>
