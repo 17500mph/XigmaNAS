@@ -46,13 +46,13 @@ if (isset($omit_nocacheheaders) && $omit_nocacheheaders) {
 }
 
 /* parse the configuration and include all configuration functions */
-require_once("config.inc");
-require_once("functions.inc");
-require_once("rc.inc");
-require_once("wui.inc");
-require_once('wui2.php');
-require_once("updatenotify.inc");
-require_once("session.inc");
+require_once 'config.inc';
+require_once 'functions.inc';
+require_once 'rc.inc';
+require_once 'wui.inc';
+require_once 'wui2.php';
+require_once 'updatenotify.inc';
+require_once 'session.inc';
 
 /* Set the current language */
 system_language_load();

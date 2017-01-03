@@ -31,15 +31,15 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
 if (isset($_GET['uuid']))
 	$uuid = $_GET['uuid'];
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = array(gtext("Network"), gtext("Interface Management"), gtext("CARP"), isset($uuid) ? gtext("Edit") : gtext("Add"));
+$pgtitle = [gtext('Network'), gtext('Interface Management'), gtext('CARP'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
 if (!isset($config['vinterfaces']['carp']) || !is_array($config['vinterfaces']['carp']))
 	$config['vinterfaces']['carp'] = array();
@@ -151,7 +151,7 @@ function get_nextcarp_id() {
 	return $id;
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 <tr>
 	<td class="tabnavtbl">
@@ -170,6 +170,7 @@ function get_nextcarp_id() {
 		<form action="interfaces_carp_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 			<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 			<table width="100%" border="0" cellpadding="6" cellspacing="0">
+			<?php html_titleline(gtext("Carp Settings"));?>
 				<?php $a_if = array(); foreach (get_interface_list() as $ifk => $ifv) { $a_if[$ifk] = htmlspecialchars("{$ifk} ({$ifv['mac']})"); };?>
 				<?php html_combobox("if", gtext("Interface"), $pconfig['if'], $a_if, "", true);?>
 				<?php html_inputbox("vhid", gtext("Virtual Host ID"), $pconfig['vhid'], "", true, 5);?>
@@ -187,9 +188,9 @@ function get_nextcarp_id() {
 				<input name="enable" type="hidden" value="<?=$pconfig['enable'];?>" />
 				<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
 			</div>
-		<?php include("formend.inc");?>
+		<?php include 'formend.inc';?>
 		</form>
 	</td>
 </tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

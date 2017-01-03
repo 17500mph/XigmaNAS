@@ -31,15 +31,15 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
 if (isset($_GET['uuid']))
 	$uuid = $_GET['uuid'];
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = array(gtext("Network"), gtext("Interface Management"), gtext("VLAN"), isset($uuid) ? gtext("Edit") : gtext("Add"));
+$pgtitle = [gtext('Network'), gtext('Interface Management'), gtext('VLAN'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
 if (!isset($config['vinterfaces']['vlan']) || !is_array($config['vinterfaces']['vlan']))
 	$config['vinterfaces']['vlan'] = array();
@@ -135,7 +135,7 @@ function get_nextvlan_id() {
 	return $id;
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabnavtbl">
@@ -152,8 +152,9 @@ function get_nextvlan_id() {
 	<tr>
 		<td class="tabcont">
 			<form action="interfaces_vlan_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-				<?php if ($input_errors) print_input_errors($input_errors);?>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
+			<?php if ($input_errors) print_input_errors($input_errors);?>
+			<table width="100%" border="0" cellpadding="6" cellspacing="0">
+			<?php html_titleline(gtext("VLAN Settings"));?>
 					<?php html_inputbox("tag", gtext("VLAN tag"), $pconfig['tag'], gtext("802.1Q VLAN tag (between 1 and 4094)."), true, 4);?>
 					<?php $a_if = array(); foreach (get_interface_list() as $ifk => $ifv) { if (preg_match('/vlan/i', $ifk)) { continue; } $a_if[$ifk] = htmlspecialchars("{$ifk} ({$ifv['mac']})"); };?>
 					<?php html_combobox("vlandev", gtext("Physical interface"), $pconfig['vlandev'], $a_if, "", true);?>
@@ -166,9 +167,9 @@ function get_nextvlan_id() {
 					<input name="if" type="hidden" value="<?=$pconfig['if'];?>" />
 					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

@@ -31,16 +31,16 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-require("interfaces.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
+require 'interfaces.inc';
 
 if (isset($_GET['uuid']))
 	$uuid = $_GET['uuid'];
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = array(gtext("Network"), gtext("Interface Management"), gtext("WLAN"), isset($uuid) ? gtext("Edit") : gtext("Add"));
+$pgtitle = [gtext('Network'), gtext('Interface Management'), gtext('WLAN'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
 if (!isset($config['vinterfaces']['wlan']) || !is_array($config['vinterfaces']['wlan']))
 	$config['vinterfaces']['wlan'] = array();
@@ -171,7 +171,7 @@ function get_nextwlan_id() {
 	return $id;
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">//<![CDATA[
 $(document).ready(function(){
 	function apmode_change(apmode_change) {
@@ -213,6 +213,7 @@ $(document).ready(function(){
 		<form action="interfaces_wlan_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 			<?php if ($input_errors) print_input_errors($input_errors);?>
 			<table width="100%" border="0" cellpadding="6" cellspacing="0">
+			<?php html_titleline(gtext("WLAN Settings"));?>
 				<?php
 				$a_if = array(); foreach (get_interface_wlist() as $ifk => $ifv) { if (preg_match('/wlan/i', $ifk)) { continue; } $a_if[$ifk] = htmlspecialchars("{$ifk} ({$ifv['mac']})"); };
 				html_combobox("wlandev", gtext("Physical interface"), $pconfig['wlandev'], $a_if, "", true);
@@ -241,9 +242,9 @@ $(document).ready(function(){
 				<input name="if" type="hidden" value="<?=$pconfig['if'];?>" />
 				<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
 			</div>
-			<?php include("formend.inc");?>
+			<?php include 'formend.inc';?>
 		</form>
 	</td>
 </tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

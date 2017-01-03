@@ -31,10 +31,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Network"), gtext("Interface Management"), gtext("VLAN"));
+$pgtitle = [gtext('Network'), gtext('Interface Management'), gtext('VLAN')];
 
 if (!isset($config['vinterfaces']['vlan']) || !is_array($config['vinterfaces']['vlan']))
 	$config['vinterfaces']['vlan'] = array();
@@ -83,7 +83,7 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 	}
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabnavtbl">
@@ -132,9 +132,9 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 				<div id="remarks">
 					<?php html_remark("note", gtext("Note"), gtext("Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do not explicitly support it, VLAN tagging will still work, but the reduced MTU may cause problems."));?>
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

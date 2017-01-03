@@ -34,9 +34,9 @@
 // Configure page permission
 $pgperm['allowuser'] = TRUE;
 
-require("auth.inc");
-require("guiconfig.inc");
-require("zfs.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
+require 'zfs.inc';
 
 $gt_core = gtext('Core');
 $gt_temp = gtext('Temp');

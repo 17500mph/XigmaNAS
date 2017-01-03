@@ -34,19 +34,19 @@
 // Configure page permission
 $pgperm['allowuser'] = TRUE;
 
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Help"), gtext("License & Credits"));
+$pgtitle = [gtext('Help'), gtext('License & Credits')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 	<table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabcont">
-			<table width="100%" border="0" cellspacing="0" cellpadding="0">
-				<?php html_titleline(gtext("License"));?>
-			<tr>
-<td class="listt">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<?php html_titleline(gtext("License"));?>
+	<tr>
+	<td class="listt">
 	     <p><strong>NAS4Free is Copyright &copy; 2012-2017 The NAS4Free Project
               (<a href="mailto:info@nas4free.org">info@nas4free.org</a>).<br />
               All rights reserved.</strong></p>
@@ -77,8 +77,7 @@ $pgtitle = array(gtext("Help"), gtext("License & Credits"));
               <p>The views and conclusions contained in the software and documentation are those of the authors and should<br /> 
                not be interpreted as representing official policies, either expressed or implied, of the NAS4Free Project.</p>
 	</td>
-							
-</tr>
+	</tr>
             <?php html_separator();?>
             <?php html_titleline(gtext("Credits"));?>
             <tr>
@@ -316,4 +315,4 @@ $pgtitle = array(gtext("Help"), gtext("License & Credits"));
   </td>
 </tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

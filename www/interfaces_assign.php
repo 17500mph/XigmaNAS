@@ -31,10 +31,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Network"), gtext("Interface Management"));
+$pgtitle = [gtext('Network'), gtext('Interface Management')];
 
 /*
 	In this file, "port" refers to the physical port name,
@@ -284,9 +284,9 @@ if (isset($_GET['act']) && $_GET['act'] == "add") {
 					html_remark("warning", gtext('Warning'), $helpinghand);
 					?>
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

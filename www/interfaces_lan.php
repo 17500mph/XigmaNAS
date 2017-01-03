@@ -31,8 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
 $pgtitle = array(gtext("Network"), gtext("LAN Management"));
 
@@ -154,7 +154,7 @@ if ($_POST) {
 	}
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function enable_change(enable_change) {
@@ -298,19 +298,19 @@ function encryption_change() {
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save");?>" onclick="enable_change(true)" />
 				</div>
 				<div id="remarks">
-					<?php
-					$helpinghand = gtext('After you click "Save" you may also have to do one or more of the following steps before you can access this server again:')
-						. '<ul>'
-						. '<li>' . gtext('Change the IP address of your computer') . '</li>'
-						. '<li>' . gtext('Access the webGUI with the new IP address') . '</li>'
-						. '</ul>';
-					html_remark('warning', gtext('Warning'), $helpinghand);
-					?>
-				</div>
-			</td>
-		</tr>
-	</table>
-	<?php include("formend.inc");?>
+				<?php
+				$helpinghand = gtext('After you click "Save" you may also have to do one or more of the following steps before you can access this server again:')
+					. '<ul>'
+					. '<li>' . gtext('Change the IP address of your computer') . '</li>'
+					. '<li>' . gtext('Access the webGUI with the new IP address') . '</li>'
+					. '</ul>';
+				html_remark('warning', gtext('Warning'), $helpinghand);
+				?>
+			</div>
+		</td>
+	</tr>
+</table>
+<?php include 'formend.inc';?>
 </form>
 <script type="text/javascript">
 <!--
@@ -323,4 +323,4 @@ encryption_change();
 <?php endif;?>
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

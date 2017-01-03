@@ -31,10 +31,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Network"), gtext("Interface Management"), gtext("WLAN"));
+$pgtitle = [gtext('Network'), gtext('Interface Management'), gtext('WLAN')];
 
 if (!isset($config['vinterfaces']['wlan']) || !is_array($config['vinterfaces']['wlan']))
 	$config['vinterfaces']['wlan'] = array();
@@ -83,7 +83,7 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 	}
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 <tr>
 	<td class="tabnavtbl">
@@ -127,9 +127,9 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 				</td>
 			</tr>
 			</table>
-			<?php include("formend.inc");?>
+			<?php include 'formend.inc';?>
 		</form>
 	</td>
 </tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
