@@ -31,10 +31,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Network"), gtext("Hosts"));
+$pgtitle = [gtext('Network'), gtext('Hosts')];
 
 if ($_POST) {
 	if (isset($_POST['Submit']) && $_POST['Submit']) {
@@ -109,7 +109,7 @@ function hosts_process_updatenotification($mode, $data) {
 	return $retval;
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabcont">
@@ -163,9 +163,9 @@ function hosts_process_updatenotification($mode, $data) {
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save and Restart");?>" />
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

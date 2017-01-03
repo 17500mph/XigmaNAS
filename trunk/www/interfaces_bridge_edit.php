@@ -31,15 +31,15 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
 if (isset($_GET['uuid']))
 	$uuid = $_GET['uuid'];
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = array(gtext("Network"), gtext("Interface Management"), gtext("Bridge"), isset($uuid) ? gtext("Edit") : gtext("Add"));
+$pgtitle = [gtext('Network'), gtext('Interface Management'), gtext('Bridge'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
 if (!isset($config['vinterfaces']['bridge']) || !is_array($config['vinterfaces']['bridge']))
 	$config['vinterfaces']['bridge'] = array();
@@ -133,7 +133,7 @@ function get_nextbridge_id() {
 	return $id;
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 <tr>
 	<td class="tabnavtbl">
@@ -152,6 +152,7 @@ function get_nextbridge_id() {
 		<form action="interfaces_bridge_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 			<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 			<table width="100%" border="0" cellpadding="6" cellspacing="0">
+			<?php html_titleline(gtext("Bridge Settings"));?>
 				<?php html_inputbox("if", gtext("Interface"), $pconfig['if'], "", true, 5, true);?>
 				<?php $a_bridgeif = array(); foreach (get_interface_list() as $ifk => $ifv) { if (preg_match('/bridge/i', $ifk)) { continue; } if (!(isset($uuid) && (FALSE !== $cnid)) && false !== array_search_ex($ifk, $a_bridge, "bridgeif")) { continue; } $a_bridgeif[$ifk] = htmlspecialchars("{$ifk} ({$ifv['mac']})"); }
 				foreach ($a_wlans as $ifk => $ifv) { if (!(isset($uuid) && (FALSE !== $cnid)) && false !== array_search_ex($ifk, $a_bridge, "bridgeif")) { continue; } $a_bridgeif[$ifk] = htmlspecialchars("{$ifk} ({$ifv['wlandev']})"); } ?>
@@ -168,9 +169,9 @@ function get_nextbridge_id() {
 				<input name="if" type="hidden" value="<?=$pconfig['if'];?>" />
 				<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
 			</div>
-		<?php include("formend.inc");?>
+		<?php include 'formend.inc';?>
 		</form>
 	</td>
 </tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

@@ -34,10 +34,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Tools"), gtext("Execute command"));
+$pgtitle = [gtext('Tools'), gtext('Execute command')];
 
 if ((isset($_POST['submit']) && $_POST['submit'] == gtext("Download")) && file_exists($_POST['dlPath'])) {
 	session_cache_limiter('public');
@@ -70,7 +70,7 @@ pre {
 </style>
 EOD;
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <?php
 // Function: is Blank
 // Returns true or false depending on blankness of argument.
@@ -211,58 +211,58 @@ if (isset($_POST['txtPHPCommand']) && !isBlank($_POST['txtPHPCommand'])) {
 }
 ?>
 <form action="<?=$_SERVER['SCRIPT_NAME'];?>" method="post" enctype="multipart/form-data" name="frmExecPlus" id="frmExecPlus" onsubmit="return frmExecPlus_onSubmit( this );">
-  <table>
-    <tr>
-      <td class="label" align="right"><?=gtext("Command");?></td>
-      <td class="type"><input name="txtCommand" type="text" size="80" value="" onkeypress="txtCommand_onKey(event);" /></td>
-    </tr>
-    <tr>
-      <td valign="top">&nbsp;</td>
-      <td valign="top" class="label">
-         <input type="hidden" name="txtRecallBuffer" value="<?=!empty($_POST['txtRecallBuffer']) ? $_POST['txtRecallBuffer'] : "" ?>" />
-         <input type="button" class="formbtn" name="btnRecallPrev" value="&lt;" onclick="btnRecall_onClick( this.form, -1 );" />
-         <input type="submit" class="formbtn" value="<?=gtext("Execute");?>" />
-         <input type="button" class="formbtn" name="btnRecallNext" value="&gt;" onclick="btnRecall_onClick( this.form,  1 );" />
-         <input type="button"  class="formbtn" value="<?=gtext("Clear");?>" onclick="return Reset_onClick( this.form );" />
-      </td>
-    </tr>
-    <tr>
-      <td height="8"></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td align="right"><?=gtext("Download");?></td>
-      <td>
+<table>
+	<tr>
+	<td class="label" align="right"><?=gtext("Command");?></td>
+	<td class="type"><input name="txtCommand" type="text" size="80" value="" onkeypress="txtCommand_onKey(event);" /></td>
+	</tr>
+	<tr>
+	<td valign="top">&nbsp;</td>
+	<td valign="top" class="label">
+	<input type="hidden" name="txtRecallBuffer" value="<?=!empty($_POST['txtRecallBuffer']) ? $_POST['txtRecallBuffer'] : "" ?>" />
+	<input type="button" class="formbtn" name="btnRecallPrev" value="&lt;" onclick="btnRecall_onClick( this.form, -1 );" />
+	<input type="submit" class="formbtn" value="<?=gtext("Execute");?>" />
+	<input type="button" class="formbtn" name="btnRecallNext" value="&gt;" onclick="btnRecall_onClick( this.form,  1 );" />
+	<input type="button"  class="formbtn" value="<?=gtext("Clear");?>" onclick="return Reset_onClick( this.form );" />
+	</td>
+	</tr>
+	<tr>
+	<td height="8"></td>
+	<td></td>
+	</tr>
+	<tr>
+	<td align="right"><?=gtext("Download");?></td>
+	<td>
         <input name="dlPath" type="text" id="dlPath" size="56" value="" />
         <input name="browse" type="button" class="formbtn" id="Browse" onclick='ifield = form.dlPath; filechooser = window.open("filechooser.php?p="+encodeURIComponent(ifield.value), "filechooser", "scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300"); filechooser.ifield = ifield; window.ifield = ifield;' value="..." />
         <input name="submit" type="submit" class="formbtn" id="download" value="<?=gtext("Download");?>" />
         </td>
-    </tr>
-    <tr>
-      <td align="right"><?=gtext("Upload");?></td>
-      <td valign="top" class="label">
-        <input name="ulfile" type="file" class="formbtn" id="ulfile" />
-        <input name="submit" type="submit"  class="formbtn" id="upload" value="<?=gtext("Upload");?>" /></td>
-    </tr>
-		<tr>
-			<td colspan="2" valign="top" height="16"></td>
-		</tr>
-		<tr>
-			<td align="right"><?=gtext("PHP Command");?></td>
-			<td class="type"><textarea id="txtPHPCommand" name="txtPHPCommand" rows="3" cols="49" wrap="off"><?=htmlspecialchars(!empty($_POST['txtPHPCommand']) ? $_POST['txtPHPCommand'] : "");?></textarea></td>
-		</tr>
-		<tr>
-			<td valign="top">&nbsp;&nbsp;&nbsp;</td>
-			<td valign="top" class="label">
-				<input type="submit" class="button" value="<?=gtext("Execute");?>" />
-			</td>
-		</tr>
-  </table>
-  <?php include("formend.inc");?>
+	</tr>
+	<tr>
+	<td align="right"><?=gtext("Upload");?></td>
+	<td valign="top" class="label">
+	<input name="ulfile" type="file" class="formbtn" id="ulfile" />
+	<input name="submit" type="submit"  class="formbtn" id="upload" value="<?=gtext("Upload");?>" /></td>
+	</tr>
+	<tr>
+	<td colspan="2" valign="top" height="16"></td>
+	</tr>
+	<tr>
+	<td align="right"><?=gtext("PHP Command");?></td>
+	<td class="type"><textarea id="txtPHPCommand" name="txtPHPCommand" rows="3" cols="49" wrap="off"><?=htmlspecialchars(!empty($_POST['txtPHPCommand']) ? $_POST['txtPHPCommand'] : "");?></textarea></td>
+	</tr>
+	<tr>
+	<td valign="top">&nbsp;&nbsp;&nbsp;</td>
+	<td valign="top" class="label">
+	<input type="submit" class="button" value="<?=gtext("Execute");?>" />
+	</td>
+	</tr>
+</table>
+<?php include 'formend.inc';?>
 </form>
 <script type="text/javascript">
 <!--
   document.forms[0].txtCommand.focus();
 //-->
 </script>
-<?php include("fend.inc"); ?>
+<?php include 'fend.inc';?>
