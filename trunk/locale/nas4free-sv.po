@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-06 17:07+0000\n"
+"POT-Creation-Date: 2017-01-03 18:29+0000\n"
 "PO-Revision-Date: 2016-12-10 10:52+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-01 21:09+0000\n"
+"X-Launchpad-Export-Date: 2017-01-03 19:25+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -871,6 +871,11 @@ msgstr ""
 msgid "Anonymous users only"
 msgstr "Endast anonyma användare"
 
+msgid ""
+"Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
+"issues."
+msgstr ""
+
 msgid "Any"
 msgstr "Vilken som helst"
 
@@ -879,6 +884,9 @@ msgstr "Lägg till användardefinierade delningar"
 
 msgid "Apple Filing Protocol"
 msgstr "Apple Filprotokoll"
+
+msgid "Apply"
+msgstr ""
 
 msgid "Apply Filter"
 msgstr "Använd filter"
@@ -1149,9 +1157,6 @@ msgstr "Blank tid"
 msgid "Block Size"
 msgstr "Blockstorlek"
 
-msgid "Block size"
-msgstr "Blockstorlek"
-
 msgid "Blocksize"
 msgstr "Blockstorlek"
 
@@ -1182,6 +1187,9 @@ msgstr "Starthanterare"
 
 msgid "Bridge"
 msgstr "Brygga"
+
+msgid "Bridge Settings"
+msgstr ""
 
 msgid "Bring a device online"
 msgstr "Ta en enhet online"
@@ -1341,8 +1349,14 @@ msgstr "Kan inte använda DHCP för nätverksgränssnittet."
 msgid "Capacity"
 msgstr "Kapacitet"
 
+msgid "Carp Settings"
+msgstr ""
+
 msgid "Case Sensitivity"
 msgstr "Skiftlägeskänslighet"
+
+msgid "Catalan"
+msgstr ""
 
 msgid ""
 "Causes the server to display the network information for the specified IP "
@@ -1984,6 +1998,9 @@ msgstr "Datasammandrag"
 msgid "Data integrity"
 msgstr "Dataintegritet"
 
+msgid "Database Directory"
+msgstr ""
+
 msgid "Database directory"
 msgstr "Databaskatalog"
 
@@ -2487,8 +2504,8 @@ msgstr "Diskar"
 msgid "Disks (Info)"
 msgstr "Diskar (Info)"
 
-msgid "Disks (Info) information"
-msgstr "Diskar (Info) information"
+msgid "Disks (Info) Information"
+msgstr ""
 
 msgid "Disks | Mount Point | Management"
 msgstr "Diskar | Monteringspunkt | Hantering"
@@ -3275,6 +3292,9 @@ msgstr ""
 "Mata in ett portnummer för webgränssnittet om du vill ändra "
 "standardinställningen (80 för HTTP, 443 för HTTPS)"
 
+msgid "Enter a description"
+msgstr ""
+
 msgid "Enter a description for your reference."
 msgstr "Mata in en beskrivning för din referens."
 
@@ -3283,6 +3303,9 @@ msgstr "Mata in namn"
 
 msgid "Enter a name for the command."
 msgstr "Mata in ett namn för kommandot."
+
+msgid "Enter a name for this volume"
+msgstr ""
 
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
@@ -3478,6 +3501,9 @@ msgstr "FAT32"
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
+
+msgid "FRU Information"
+msgstr ""
 
 msgid "FTP"
 msgstr "FTP"
@@ -3727,6 +3753,9 @@ msgstr "Fuppes"
 
 msgid "Fuppes Media Server"
 msgstr "Fuppes Media Server"
+
+msgid "Fuppes Media Server Administration"
+msgstr ""
 
 msgid ""
 "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
@@ -4037,12 +4066,6 @@ msgstr "IP eller FQDN adress på den fjärranslutna rsync-servern."
 msgid "IP type mismatch for network and gateway."
 msgstr "IP adressen stämmer inte överens mellan nätverket och \"gateway\""
 
-msgid "IPMI FRU"
-msgstr "IPMI FRU"
-
-msgid "IPMI Sensor"
-msgstr "IPMI Sensor"
-
 msgid "IPMI Stats"
 msgstr "IPMI Stats"
 
@@ -4251,6 +4274,9 @@ msgstr "Information & Manual"
 
 msgid "Information & Manuals"
 msgstr "Information och Manualer"
+
+msgid "Information & Status"
+msgstr ""
 
 msgid "Inherit ACL"
 msgstr "Ärv ACL"
@@ -4554,6 +4580,9 @@ msgstr "LACP (Link Aggregation Control Protocol)"
 msgid "LAGG"
 msgstr "LAGG"
 
+msgid "LAGG Settings"
+msgstr ""
+
 msgid "LAN Management"
 msgstr "LAN Hantering"
 
@@ -4671,9 +4700,6 @@ msgstr ""
 "inklusive filsystem och ögonblicksbilder. För att ange storleken använd "
 "följande läsbara suffix (till exempel \"k\", \"KB\", \"M\", \"GB \", etc.)."
 
-msgid "Link Aggregation and Failover"
-msgstr "Länk sammansättning och växling vid fel"
-
 msgid "Link down action"
 msgstr "Länk nere, åtgärd"
 
@@ -4764,6 +4790,9 @@ msgstr ""
 
 msgid "Location of the files to share."
 msgstr "Sökväg till filerna som skall delas."
+
+msgid "Location of the media content database."
+msgstr ""
 
 msgid "Location where the content database file will be stored."
 msgstr "Platsen där filen för innhållsdatabasen ska lagras."
@@ -5046,8 +5075,14 @@ msgstr "Media"
 msgid "Media Directory"
 msgstr "Media Katalog"
 
+msgid "Media Library"
+msgstr ""
+
 msgid "Media library"
 msgstr "Mediebibliotek"
+
+msgid "Media server name"
+msgstr ""
 
 msgid "Medium Acoustic Output"
 msgstr "Medel ljudnivå"
@@ -5084,13 +5119,6 @@ msgstr "MiniDLNA"
 
 msgid "MiniDLNA A/V Media Server"
 msgstr "MiniDLNA A/V Media Server"
-
-msgid ""
-"MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
-"MiniDLNA first."
-msgstr ""
-"MiniDLNA är aktiverat. Om du vill använda Fuppes måste du inaktivera "
-"MiniDNLA."
 
 msgid "Minidlna configuration has been updated."
 msgstr "MiniDNLA konfigurationen har uppdaterats."
@@ -5155,6 +5183,9 @@ msgstr "Modellnamn"
 msgid "Modified"
 msgstr "Ändrad"
 
+msgid "Modify Service"
+msgstr ""
+
 msgid "Modifying"
 msgstr "Modifierar"
 
@@ -5181,6 +5212,11 @@ msgstr "Övervakningsinställning"
 
 msgid "Months"
 msgstr "Månader"
+
+msgid ""
+"More than one DLNA/UPnP service is active. This configuration might cause "
+"issues."
+msgstr ""
 
 msgid "Mount Point"
 msgstr "Monteringspunkt"
@@ -5402,12 +5438,8 @@ msgstr "Ingen disk konfigurerad"
 msgid "No disks available."
 msgstr "Inga diskar tillgängliga."
 
-msgid ""
-"No disks configured, please add disks to see the diagnostic information of "
-"disks!"
+msgid "No disks configured, please add disks to view diagnostic information!"
 msgstr ""
-"Inga diskar är konfigurerade.  Lägg till diskar för att kunna se "
-"diagnosinformation för diskar."
 
 msgid "No file was uploaded."
 msgstr "Ingen fil laddades upp."
@@ -6167,6 +6199,9 @@ msgstr "Produkt-ID"
 
 msgid "Profile"
 msgstr "Profil"
+
+msgid "Properties"
+msgstr ""
 
 msgid "Proto"
 msgstr "Proto"
@@ -6947,6 +6982,11 @@ msgstr ""
 
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
+"one interface)"
+msgstr ""
+
+msgid ""
+"Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
 "Välj vilket gränssnitt som skall användas: (Endast valbart om servern har "
@@ -6996,6 +7036,12 @@ msgstr "Känslig"
 
 msgid "Sensor"
 msgstr "Sensor"
+
+msgid "Sensor Information"
+msgstr ""
+
+msgid "Sensor List"
+msgstr ""
 
 msgid "Sep"
 msgstr "sep"
@@ -7390,11 +7436,8 @@ msgstr "Statisk"
 msgid "Static Routes"
 msgstr "Statiska Rutter"
 
-msgid "Static Routes Setup"
-msgstr "Inställningar för statiska rutter"
-
-msgid "Static routes"
-msgstr "Statiska rutter"
+msgid "Static Routes Settings"
+msgstr ""
 
 msgid "Status"
 msgstr "Status"
@@ -7744,6 +7787,9 @@ msgstr "HAST-volymer kan inte nås förrän HAST-noden blir Primär."
 msgid "The IP address of the UPS master."
 msgstr "UPS masterns IP-adress."
 
+msgid "The IP address of the device."
+msgstr ""
+
 msgid "The IP address that this hostname represents."
 msgstr "IP-adressen som det här värdnamnet representerar."
 
@@ -8091,9 +8137,6 @@ msgstr ""
 
 msgid "The default time in seconds to display a screen."
 msgstr "Grundinställning för tid i sekunder att visa skärmbild."
-
-msgid "The device's IP address."
-msgstr "Enhetens IP-adress."
 
 msgid ""
 "The device(s) in config are different to actual device(s). Please remove the "
@@ -9277,6 +9320,9 @@ msgstr ""
 msgid "Transcoding"
 msgstr "Omkodning"
 
+msgid "Transcoding Directory"
+msgstr ""
+
 msgid "Transfer Rate"
 msgstr "Överföringshastighet"
 
@@ -9712,6 +9758,9 @@ msgstr "VHID"
 msgid "VLAN"
 msgstr "VLAN"
 
+msgid "VLAN Settings"
+msgstr ""
+
 msgid "VLAN Tag"
 msgstr "VLAN etikett"
 
@@ -9809,6 +9858,9 @@ msgstr "Volym"
 msgid "Volume Label"
 msgstr "Volymetikett"
 
+msgid "Volume Mode"
+msgstr ""
+
 msgid "Volume Name"
 msgstr "Volymnamn"
 
@@ -9833,9 +9885,6 @@ msgstr ""
 "en räknare som startar på n, använd [n för de n tecknen längst till höger i "
 "enhetens serienummer."
 
-msgid "Volume mode"
-msgstr "Volymmod"
-
 msgid "Volumes"
 msgstr "Volymer"
 
@@ -9856,6 +9905,9 @@ msgstr "WINS server IP adress (t.ex från MS Active Directory server)"
 
 msgid "WLAN"
 msgstr "WLAN"
+
+msgid "WLAN Settings"
+msgstr ""
 
 msgid "WPA"
 msgstr "WPA"
@@ -10322,3 +10374,44 @@ msgstr "version:"
 
 msgid "week days"
 msgstr "veckodagar"
+
+#~ msgid "Link Aggregation and Failover"
+#~ msgstr "Länk sammansättning och växling vid fel"
+
+#~ msgid "Static routes"
+#~ msgstr "Statiska rutter"
+
+#~ msgid "The device's IP address."
+#~ msgstr "Enhetens IP-adress."
+
+#~ msgid ""
+#~ "No disks configured, please add disks to see the diagnostic information of "
+#~ "disks!"
+#~ msgstr ""
+#~ "Inga diskar är konfigurerade.  Lägg till diskar för att kunna se "
+#~ "diagnosinformation för diskar."
+
+#~ msgid "Block size"
+#~ msgstr "Blockstorlek"
+
+#~ msgid ""
+#~ "MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
+#~ "MiniDLNA first."
+#~ msgstr ""
+#~ "MiniDLNA är aktiverat. Om du vill använda Fuppes måste du inaktivera "
+#~ "MiniDNLA."
+
+#~ msgid "Volume mode"
+#~ msgstr "Volymmod"
+
+#~ msgid "IPMI Sensor"
+#~ msgstr "IPMI Sensor"
+
+#~ msgid "IPMI FRU"
+#~ msgstr "IPMI FRU"
+
+#~ msgid "Static Routes Setup"
+#~ msgstr "Inställningar för statiska rutter"
+
+#~ msgid "Disks (Info) information"
+#~ msgstr "Diskar (Info) information"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-06 17:07+0000\n"
+"POT-Creation-Date: 2017-01-03 18:29+0000\n"
 "PO-Revision-Date: 2016-11-08 14:34+0000\n"
 "Last-Translator: Kini <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-01 21:09+0000\n"
+"X-Launchpad-Export-Date: 2017-01-03 19:25+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
@@ -820,6 +820,11 @@ msgstr ""
 msgid "Anonymous users only"
 msgstr "Samo anonimni uporabniki"
 
+msgid ""
+"Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
+"issues."
+msgstr ""
+
 msgid "Any"
 msgstr "Karkoli"
 
@@ -828,6 +833,9 @@ msgstr ""
 
 msgid "Apple Filing Protocol"
 msgstr "Apple polnilni protokol"
+
+msgid "Apply"
+msgstr ""
 
 msgid "Apply Filter"
 msgstr "Uveljavi filter"
@@ -1091,9 +1099,6 @@ msgstr "Brez časa"
 msgid "Block Size"
 msgstr "Velikost bloka"
 
-msgid "Block size"
-msgstr "Velikost bloka"
-
 msgid "Blocksize"
 msgstr ""
 
@@ -1121,6 +1126,9 @@ msgid "Bootloader"
 msgstr "Zagonski nalagalnik"
 
 msgid "Bridge"
+msgstr ""
+
+msgid "Bridge Settings"
 msgstr ""
 
 msgid "Bring a device online"
@@ -1281,7 +1289,13 @@ msgstr ""
 msgid "Capacity"
 msgstr "Kapaciteta"
 
+msgid "Carp Settings"
+msgstr ""
+
 msgid "Case Sensitivity"
+msgstr ""
+
+msgid "Catalan"
 msgstr ""
 
 msgid ""
@@ -1868,6 +1882,9 @@ msgstr "Povzetek podatkov"
 msgid "Data integrity"
 msgstr "Neokrnjenost podatkov"
 
+msgid "Database Directory"
+msgstr ""
+
 msgid "Database directory"
 msgstr "Direktorij baze podatkov"
 
@@ -2353,7 +2370,7 @@ msgstr "Diski"
 msgid "Disks (Info)"
 msgstr ""
 
-msgid "Disks (Info) information"
+msgid "Disks (Info) Information"
 msgstr ""
 
 msgid "Disks | Mount Point | Management"
@@ -3124,6 +3141,9 @@ msgid ""
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr ""
 
+msgid "Enter a description"
+msgstr ""
+
 msgid "Enter a description for your reference."
 msgstr ""
 
@@ -3131,6 +3151,9 @@ msgid "Enter a name"
 msgstr ""
 
 msgid "Enter a name for the command."
+msgstr ""
+
+msgid "Enter a name for this volume"
 msgstr ""
 
 msgid ""
@@ -3313,6 +3336,9 @@ msgstr "FAT32"
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
+
+msgid "FRU Information"
+msgstr ""
 
 msgid "FTP"
 msgstr "FTP"
@@ -3560,6 +3586,9 @@ msgstr "Fuppes"
 
 msgid "Fuppes Media Server"
 msgstr "Medijski strežnik Fuppes"
+
+msgid "Fuppes Media Server Administration"
+msgstr ""
 
 msgid ""
 "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
@@ -3862,12 +3891,6 @@ msgstr "IP ali FQDN naslov oddaljenega Rsync serverja."
 msgid "IP type mismatch for network and gateway."
 msgstr "IP naslov se ne ujema z omrežjem in prehodom."
 
-msgid "IPMI FRU"
-msgstr "IPMI FRU"
-
-msgid "IPMI Sensor"
-msgstr "IPMI senzor"
-
 msgid "IPMI Stats"
 msgstr ""
 
@@ -4063,6 +4086,9 @@ msgid "Information & Manual"
 msgstr "Informacije in navodila"
 
 msgid "Information & Manuals"
+msgstr ""
+
+msgid "Information & Status"
 msgstr ""
 
 msgid "Inherit ACL"
@@ -4349,6 +4375,9 @@ msgstr "LACP (Link Aggregation Control Protocol)"
 msgid "LAGG"
 msgstr "LAGG"
 
+msgid "LAGG Settings"
+msgstr ""
+
 msgid "LAN Management"
 msgstr "Upravljanje omrežja"
 
@@ -4464,9 +4493,6 @@ msgstr ""
 "prostora. Uporabite naslednje pripone, pri omejevanju prostora (npr. 'k', "
 "'KB', 'M', 'Gb', itd.)."
 
-msgid "Link Aggregation and Failover"
-msgstr "Združevanje povezav in rezervne povezave"
-
 msgid "Link down action"
 msgstr ""
 
@@ -4558,6 +4584,9 @@ msgstr ""
 
 msgid "Location of the files to share."
 msgstr "Mesto datotek, ki jih želite deliti."
+
+msgid "Location of the media content database."
+msgstr ""
 
 msgid "Location where the content database file will be stored."
 msgstr "Mesto, kjer bo shranjena podatkovna baza."
@@ -4835,7 +4864,13 @@ msgstr "Medija"
 msgid "Media Directory"
 msgstr "Media direktorij"
 
+msgid "Media Library"
+msgstr ""
+
 msgid "Media library"
+msgstr ""
+
+msgid "Media server name"
 msgstr ""
 
 msgid "Medium Acoustic Output"
@@ -4873,13 +4908,6 @@ msgstr "MiniDLNA"
 
 msgid "MiniDLNA A/V Media Server"
 msgstr "MiniDLNA A/V Medijski strežnik"
-
-msgid ""
-"MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
-"MiniDLNA first."
-msgstr ""
-"MiniDLNA je omogočen. Če želite uporabiti Fuppes, morate najprej onemogočiti "
-"MiniDLNA."
 
 msgid "Minidlna configuration has been updated."
 msgstr ""
@@ -4944,6 +4972,9 @@ msgstr "Ime modela"
 msgid "Modified"
 msgstr "Spremenjeno"
 
+msgid "Modify Service"
+msgstr ""
+
 msgid "Modifying"
 msgstr "Spreminjanje"
 
@@ -4970,6 +5001,11 @@ msgstr ""
 
 msgid "Months"
 msgstr "Meseci"
+
+msgid ""
+"More than one DLNA/UPnP service is active. This configuration might cause "
+"issues."
+msgstr ""
 
 msgid "Mount Point"
 msgstr "Točka priklopa"
@@ -5188,9 +5224,7 @@ msgstr "Ni nastavljenih diskov"
 msgid "No disks available."
 msgstr "Diski niso na voljo."
 
-msgid ""
-"No disks configured, please add disks to see the diagnostic information of "
-"disks!"
+msgid "No disks configured, please add disks to view diagnostic information!"
 msgstr ""
 
 msgid "No file was uploaded."
@@ -5935,6 +5969,9 @@ msgstr "ID izdelka"
 
 msgid "Profile"
 msgstr "Profil"
+
+msgid "Properties"
+msgstr ""
 
 msgid "Proto"
 msgstr "Protokol"
@@ -6692,6 +6729,11 @@ msgstr ""
 
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
+"one interface)"
+msgstr ""
+
+msgid ""
+"Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
 
@@ -6738,6 +6780,12 @@ msgid "Sensitive"
 msgstr "Občutljivo"
 
 msgid "Sensor"
+msgstr ""
+
+msgid "Sensor Information"
+msgstr ""
+
+msgid "Sensor List"
 msgstr ""
 
 msgid "Sep"
@@ -7110,11 +7158,8 @@ msgstr "Statično"
 msgid "Static Routes"
 msgstr "Statične smeri (routes)"
 
-msgid "Static Routes Setup"
+msgid "Static Routes Settings"
 msgstr ""
-
-msgid "Static routes"
-msgstr "Statične poti"
 
 msgid "Status"
 msgstr "Stanje"
@@ -7459,6 +7504,9 @@ msgstr ""
 msgid "The IP address of the UPS master."
 msgstr ""
 
+msgid "The IP address of the device."
+msgstr ""
+
 msgid "The IP address that this hostname represents."
 msgstr "IP naslov, ki ga predstavlja to ime gostitelja."
 
@@ -7763,9 +7811,6 @@ msgstr ""
 
 msgid "The default time in seconds to display a screen."
 msgstr ""
-
-msgid "The device's IP address."
-msgstr "IP naslov naprav"
 
 msgid ""
 "The device(s) in config are different to actual device(s). Please remove the "
@@ -8753,6 +8798,9 @@ msgstr ""
 msgid "Transcoding"
 msgstr ""
 
+msgid "Transcoding Directory"
+msgstr ""
+
 msgid "Transfer Rate"
 msgstr ""
 
@@ -9159,6 +9207,9 @@ msgstr ""
 msgid "VLAN"
 msgstr ""
 
+msgid "VLAN Settings"
+msgstr ""
+
 msgid "VLAN Tag"
 msgstr ""
 
@@ -9254,6 +9305,9 @@ msgstr ""
 msgid "Volume Label"
 msgstr ""
 
+msgid "Volume Mode"
+msgstr ""
+
 msgid "Volume Name"
 msgstr "Ime polja"
 
@@ -9275,9 +9329,6 @@ msgid ""
 "serial number."
 msgstr ""
 
-msgid "Volume mode"
-msgstr ""
-
 msgid "Volumes"
 msgstr ""
 
@@ -9297,6 +9348,9 @@ msgid "WINS server IP address (e.g. from MS Active Directory server)."
 msgstr ""
 
 msgid "WLAN"
+msgstr ""
+
+msgid "WLAN Settings"
 msgstr ""
 
 msgid "WPA"
@@ -9733,3 +9787,28 @@ msgstr "različica:"
 
 msgid "week days"
 msgstr ""
+
+#~ msgid "Link Aggregation and Failover"
+#~ msgstr "Združevanje povezav in rezervne povezave"
+
+#~ msgid "Static routes"
+#~ msgstr "Statične poti"
+
+#~ msgid "Block size"
+#~ msgstr "Velikost bloka"
+
+#~ msgid "IPMI Sensor"
+#~ msgstr "IPMI senzor"
+
+#~ msgid ""
+#~ "MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
+#~ "MiniDLNA first."
+#~ msgstr ""
+#~ "MiniDLNA je omogočen. Če želite uporabiti Fuppes, morate najprej onemogočiti "
+#~ "MiniDLNA."
+
+#~ msgid "IPMI FRU"
+#~ msgstr "IPMI FRU"
+
+#~ msgid "The device's IP address."
+#~ msgstr "IP naslov naprav"

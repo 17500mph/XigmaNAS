@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-06 17:07+0000\n"
+"POT-Creation-Date: 2017-01-03 18:29+0000\n"
 "PO-Revision-Date: 2016-12-29 18:46+0000\n"
 "Last-Translator: Lukas Vescicik <lukas.vescicik@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-01 21:09+0000\n"
+"X-Launchpad-Export-Date: 2017-01-03 19:25+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
 "X-Poedit-Country: SLOVAKIA\n"
 "Language: \n"
@@ -850,6 +850,11 @@ msgstr ""
 msgid "Anonymous users only"
 msgstr "Iba anonymní používatelia"
 
+msgid ""
+"Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
+"issues."
+msgstr ""
+
 msgid "Any"
 msgstr "Ľubovoľné"
 
@@ -858,6 +863,9 @@ msgstr ""
 
 msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
+
+msgid "Apply"
+msgstr ""
 
 msgid "Apply Filter"
 msgstr ""
@@ -1121,9 +1129,6 @@ msgstr "Čas čiernej obrazovky"
 msgid "Block Size"
 msgstr ""
 
-msgid "Block size"
-msgstr ""
-
 msgid "Blocksize"
 msgstr ""
 
@@ -1151,6 +1156,9 @@ msgid "Bootloader"
 msgstr ""
 
 msgid "Bridge"
+msgstr ""
+
+msgid "Bridge Settings"
 msgstr ""
 
 msgid "Bring a device online"
@@ -1310,7 +1318,13 @@ msgstr ""
 msgid "Capacity"
 msgstr "Kapacita"
 
+msgid "Carp Settings"
+msgstr ""
+
 msgid "Case Sensitivity"
+msgstr ""
+
+msgid "Catalan"
 msgstr ""
 
 msgid ""
@@ -1900,6 +1914,9 @@ msgstr "Odtlačok dát"
 msgid "Data integrity"
 msgstr "Integrita dát"
 
+msgid "Database Directory"
+msgstr ""
+
 msgid "Database directory"
 msgstr "Adresár databázy"
 
@@ -2386,7 +2403,7 @@ msgstr "Disky"
 msgid "Disks (Info)"
 msgstr ""
 
-msgid "Disks (Info) information"
+msgid "Disks (Info) Information"
 msgstr ""
 
 msgid "Disks | Mount Point | Management"
@@ -3159,6 +3176,9 @@ msgid ""
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr ""
 
+msgid "Enter a description"
+msgstr ""
+
 msgid "Enter a description for your reference."
 msgstr ""
 
@@ -3166,6 +3186,9 @@ msgid "Enter a name"
 msgstr ""
 
 msgid "Enter a name for the command."
+msgstr ""
+
+msgid "Enter a name for this volume"
 msgstr ""
 
 msgid ""
@@ -3348,6 +3371,9 @@ msgstr ""
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
+
+msgid "FRU Information"
+msgstr ""
 
 msgid "FTP"
 msgstr "FTP"
@@ -3593,6 +3619,9 @@ msgid "Fuppes"
 msgstr ""
 
 msgid "Fuppes Media Server"
+msgstr ""
+
+msgid "Fuppes Media Server Administration"
 msgstr ""
 
 msgid ""
@@ -3894,12 +3923,6 @@ msgstr "IP alebo FQDN adresa vzdialeného rsync servera."
 msgid "IP type mismatch for network and gateway."
 msgstr "Nezhoda v type IP siete a brány"
 
-msgid "IPMI FRU"
-msgstr ""
-
-msgid "IPMI Sensor"
-msgstr ""
-
 msgid "IPMI Stats"
 msgstr ""
 
@@ -4095,6 +4118,9 @@ msgid "Information & Manual"
 msgstr ""
 
 msgid "Information & Manuals"
+msgstr ""
+
+msgid "Information & Status"
 msgstr ""
 
 msgid "Inherit ACL"
@@ -4380,6 +4406,9 @@ msgstr "LACP (Link Aggregation Control Protocol)"
 msgid "LAGG"
 msgstr "LAGG"
 
+msgid "LAGG Settings"
+msgstr ""
+
 msgid "LAN Management"
 msgstr ""
 
@@ -4492,9 +4521,6 @@ msgid ""
 "'k', 'KB', 'M', 'Gb', etc.)."
 msgstr ""
 
-msgid "Link Aggregation and Failover"
-msgstr "Link Aggregation and Failover"
-
 msgid "Link down action"
 msgstr ""
 
@@ -4586,6 +4612,9 @@ msgstr ""
 
 msgid "Location of the files to share."
 msgstr "Umiestnenie zdieľaných súborov"
+
+msgid "Location of the media content database."
+msgstr ""
 
 msgid "Location where the content database file will be stored."
 msgstr "Umiestnenie databázového súboru s obsahom."
@@ -4863,7 +4892,13 @@ msgstr "Nosiče"
 msgid "Media Directory"
 msgstr ""
 
+msgid "Media Library"
+msgstr ""
+
 msgid "Media library"
+msgstr ""
+
+msgid "Media server name"
 msgstr ""
 
 msgid "Medium Acoustic Output"
@@ -4900,11 +4935,6 @@ msgid "MiniDLNA"
 msgstr ""
 
 msgid "MiniDLNA A/V Media Server"
-msgstr ""
-
-msgid ""
-"MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
-"MiniDLNA first."
 msgstr ""
 
 msgid "Minidlna configuration has been updated."
@@ -4970,6 +5000,9 @@ msgstr ""
 msgid "Modified"
 msgstr ""
 
+msgid "Modify Service"
+msgstr ""
+
 msgid "Modifying"
 msgstr "Prebieha modifikácia"
 
@@ -4995,6 +5028,11 @@ msgid "Monitoring Setup"
 msgstr ""
 
 msgid "Months"
+msgstr ""
+
+msgid ""
+"More than one DLNA/UPnP service is active. This configuration might cause "
+"issues."
 msgstr ""
 
 msgid "Mount Point"
@@ -5214,9 +5252,7 @@ msgstr "Nebol nakonfigurovaný žiadny disk"
 msgid "No disks available."
 msgstr ""
 
-msgid ""
-"No disks configured, please add disks to see the diagnostic information of "
-"disks!"
+msgid "No disks configured, please add disks to view diagnostic information!"
 msgstr ""
 
 msgid "No file was uploaded."
@@ -5969,6 +6005,9 @@ msgstr ""
 msgid "Profile"
 msgstr "Profil"
 
+msgid "Properties"
+msgstr ""
+
 msgid "Proto"
 msgstr "Proto"
 
@@ -6716,6 +6755,11 @@ msgstr ""
 
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
+"one interface)"
+msgstr ""
+
+msgid ""
+"Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
 
@@ -6762,6 +6806,12 @@ msgid "Sensitive"
 msgstr ""
 
 msgid "Sensor"
+msgstr ""
+
+msgid "Sensor Information"
+msgstr ""
+
+msgid "Sensor List"
 msgstr ""
 
 msgid "Sep"
@@ -7134,11 +7184,8 @@ msgstr ""
 msgid "Static Routes"
 msgstr "Statické cesty"
 
-msgid "Static Routes Setup"
+msgid "Static Routes Settings"
 msgstr ""
-
-msgid "Static routes"
-msgstr "Statické cesty"
 
 msgid "Status"
 msgstr "Stav"
@@ -7483,6 +7530,9 @@ msgstr ""
 msgid "The IP address of the UPS master."
 msgstr ""
 
+msgid "The IP address of the device."
+msgstr ""
+
 msgid "The IP address that this hostname represents."
 msgstr "IP adresy, ktoré tento názov zastupuje."
 
@@ -7790,9 +7840,6 @@ msgstr ""
 
 msgid "The default time in seconds to display a screen."
 msgstr ""
-
-msgid "The device's IP address."
-msgstr "IP adresa zariadenia."
 
 msgid ""
 "The device(s) in config are different to actual device(s). Please remove the "
@@ -8861,6 +8908,9 @@ msgstr ""
 msgid "Transcoding"
 msgstr "Prekódovanie"
 
+msgid "Transcoding Directory"
+msgstr ""
+
 msgid "Transfer Rate"
 msgstr ""
 
@@ -9277,6 +9327,9 @@ msgstr ""
 msgid "VLAN"
 msgstr "VLAN"
 
+msgid "VLAN Settings"
+msgstr ""
+
 msgid "VLAN Tag"
 msgstr ""
 
@@ -9372,6 +9425,9 @@ msgstr ""
 msgid "Volume Label"
 msgstr ""
 
+msgid "Volume Mode"
+msgstr ""
+
 msgid "Volume Name"
 msgstr "Názov zväzku"
 
@@ -9393,9 +9449,6 @@ msgid ""
 "serial number."
 msgstr ""
 
-msgid "Volume mode"
-msgstr ""
-
 msgid "Volumes"
 msgstr ""
 
@@ -9415,6 +9468,9 @@ msgid "WINS server IP address (e.g. from MS Active Directory server)."
 msgstr "IP adresa WINS servera (napr. servera MS Active Directory)."
 
 msgid "WLAN"
+msgstr ""
+
+msgid "WLAN Settings"
 msgstr ""
 
 msgid "WPA"
@@ -9858,3 +9914,12 @@ msgstr "verzia:"
 
 msgid "week days"
 msgstr "dní v týždni"
+
+#~ msgid "Link Aggregation and Failover"
+#~ msgstr "Link Aggregation and Failover"
+
+#~ msgid "Static routes"
+#~ msgstr "Statické cesty"
+
+#~ msgid "The device's IP address."
+#~ msgstr "IP adresa zariadenia."

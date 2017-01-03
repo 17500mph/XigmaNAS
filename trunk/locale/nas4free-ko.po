@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-06 17:07+0000\n"
+"POT-Creation-Date: 2017-01-03 18:29+0000\n"
 "PO-Revision-Date: 2016-10-12 06:40+0000\n"
 "Last-Translator: Dingle28 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-01 21:09+0000\n"
+"X-Launchpad-Export-Date: 2017-01-03 19:25+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -804,6 +804,11 @@ msgstr "KB/s 단위의 익명 사용자 업로드 대역 폭. 빈 필드는 무�
 msgid "Anonymous users only"
 msgstr "익명 사용자만"
 
+msgid ""
+"Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
+"issues."
+msgstr ""
+
 msgid "Any"
 msgstr "모두"
 
@@ -812,6 +817,9 @@ msgstr ""
 
 msgid "Apple Filing Protocol"
 msgstr "애플 파일링 프로토콜"
+
+msgid "Apply"
+msgstr ""
 
 msgid "Apply Filter"
 msgstr ""
@@ -1073,9 +1081,6 @@ msgstr "빈 시간"
 msgid "Block Size"
 msgstr ""
 
-msgid "Block size"
-msgstr ""
-
 msgid "Blocksize"
 msgstr ""
 
@@ -1103,6 +1108,9 @@ msgid "Bootloader"
 msgstr ""
 
 msgid "Bridge"
+msgstr ""
+
+msgid "Bridge Settings"
 msgstr ""
 
 msgid "Bring a device online"
@@ -1262,7 +1270,13 @@ msgstr ""
 msgid "Capacity"
 msgstr "용량"
 
+msgid "Carp Settings"
+msgstr ""
+
 msgid "Case Sensitivity"
+msgstr ""
+
+msgid "Catalan"
 msgstr ""
 
 msgid ""
@@ -1842,6 +1856,9 @@ msgstr "데이터 digest"
 msgid "Data integrity"
 msgstr "데이터 무결성"
 
+msgid "Database Directory"
+msgstr ""
+
 msgid "Database directory"
 msgstr "데이터베이스 디렉터리"
 
@@ -2324,7 +2341,7 @@ msgstr "디스크"
 msgid "Disks (Info)"
 msgstr ""
 
-msgid "Disks (Info) information"
+msgid "Disks (Info) Information"
 msgstr ""
 
 msgid "Disks | Mount Point | Management"
@@ -3085,6 +3102,9 @@ msgid ""
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr ""
 
+msgid "Enter a description"
+msgstr ""
+
 msgid "Enter a description for your reference."
 msgstr ""
 
@@ -3092,6 +3112,9 @@ msgid "Enter a name"
 msgstr ""
 
 msgid "Enter a name for the command."
+msgstr ""
+
+msgid "Enter a name for this volume"
 msgstr ""
 
 msgid ""
@@ -3264,6 +3287,9 @@ msgstr ""
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC(빠른 EtherChannel)"
+
+msgid "FRU Information"
+msgstr ""
 
 msgid "FTP"
 msgstr "FTP"
@@ -3509,6 +3535,9 @@ msgid "Fuppes"
 msgstr ""
 
 msgid "Fuppes Media Server"
+msgstr ""
+
+msgid "Fuppes Media Server Administration"
 msgstr ""
 
 msgid ""
@@ -3806,12 +3835,6 @@ msgstr "원격 Rsync 서버의 IP나 FQDN 주소."
 msgid "IP type mismatch for network and gateway."
 msgstr "IP 타입이 네트워크, 게이트웨이와 일치하지 않습니다."
 
-msgid "IPMI FRU"
-msgstr ""
-
-msgid "IPMI Sensor"
-msgstr ""
-
 msgid "IPMI Stats"
 msgstr ""
 
@@ -4000,6 +4023,9 @@ msgid "Information & Manual"
 msgstr "정보와 매뉴얼"
 
 msgid "Information & Manuals"
+msgstr ""
+
+msgid "Information & Status"
 msgstr ""
 
 msgid "Inherit ACL"
@@ -4280,6 +4306,9 @@ msgstr "LACP(링크 통합 제어 프로토콜)"
 msgid "LAGG"
 msgstr "LAGG"
 
+msgid "LAGG Settings"
+msgstr ""
+
 msgid "LAN Management"
 msgstr "LAN 관리"
 
@@ -4395,9 +4424,6 @@ msgstr ""
 "스냅샷을 포함한 하위 부류들에 의해 소비되는 모든 공간을 포함합니다. 크기를 명세 하기 위해 아래의 인간 친화형 접미사(예컨대 'k', "
 "'KB', 'M', 'Gb' 등)를 이용하시기 바랍니다."
 
-msgid "Link Aggregation and Failover"
-msgstr "링크 통합과 장애 조치"
-
 msgid "Link down action"
 msgstr ""
 
@@ -4483,6 +4509,9 @@ msgstr "위치 정보. 예컨대 이 시스템의 물리적 위치: '건물의 �
 
 msgid "Location of the files to share."
 msgstr "공유할 파일들의 위치."
+
+msgid "Location of the media content database."
+msgstr ""
 
 msgid "Location where the content database file will be stored."
 msgstr "컨텐츠 데이터베이스 파일이 저장될 위치."
@@ -4757,7 +4786,13 @@ msgstr "매체"
 msgid "Media Directory"
 msgstr "매체 디렉터리"
 
+msgid "Media Library"
+msgstr ""
+
 msgid "Media library"
+msgstr ""
+
+msgid "Media server name"
 msgstr ""
 
 msgid "Medium Acoustic Output"
@@ -4794,11 +4829,6 @@ msgid "MiniDLNA"
 msgstr ""
 
 msgid "MiniDLNA A/V Media Server"
-msgstr ""
-
-msgid ""
-"MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
-"MiniDLNA first."
 msgstr ""
 
 msgid "Minidlna configuration has been updated."
@@ -4864,6 +4894,9 @@ msgstr ""
 msgid "Modified"
 msgstr ""
 
+msgid "Modify Service"
+msgstr ""
+
 msgid "Modifying"
 msgstr "변경 중"
 
@@ -4890,6 +4923,11 @@ msgstr ""
 
 msgid "Months"
 msgstr "월"
+
+msgid ""
+"More than one DLNA/UPnP service is active. This configuration might cause "
+"issues."
+msgstr ""
 
 msgid "Mount Point"
 msgstr "마운트 지점"
@@ -5104,9 +5142,7 @@ msgstr "디스크가 구성되지 않았습니다"
 msgid "No disks available."
 msgstr ""
 
-msgid ""
-"No disks configured, please add disks to see the diagnostic information of "
-"disks!"
+msgid "No disks configured, please add disks to view diagnostic information!"
 msgstr ""
 
 msgid "No file was uploaded."
@@ -5841,6 +5877,9 @@ msgstr ""
 
 msgid "Profile"
 msgstr "프로파일"
+
+msgid "Properties"
+msgstr ""
 
 msgid "Proto"
 msgstr "프로토콜"
@@ -6583,6 +6622,11 @@ msgstr ""
 
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
+"one interface)"
+msgstr ""
+
+msgid ""
+"Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
 
@@ -6629,6 +6673,12 @@ msgid "Sensitive"
 msgstr ""
 
 msgid "Sensor"
+msgstr ""
+
+msgid "Sensor Information"
+msgstr ""
+
+msgid "Sensor List"
 msgstr ""
 
 msgid "Sep"
@@ -6987,11 +7037,8 @@ msgstr "스태틱"
 msgid "Static Routes"
 msgstr "스태틱 라우트"
 
-msgid "Static Routes Setup"
+msgid "Static Routes Settings"
 msgstr ""
-
-msgid "Static routes"
-msgstr "스태틱 라우트"
 
 msgid "Status"
 msgstr "상태"
@@ -7333,6 +7380,9 @@ msgstr ""
 msgid "The IP address of the UPS master."
 msgstr ""
 
+msgid "The IP address of the device."
+msgstr ""
+
 msgid "The IP address that this hostname represents."
 msgstr "이 호스트 명이 가리키는 IP 주소."
 
@@ -7637,9 +7687,6 @@ msgstr "기본 키 길이는 다음과 같습니다. AES 128, Blowfish 128, Came
 
 msgid "The default time in seconds to display a screen."
 msgstr ""
-
-msgid "The device's IP address."
-msgstr "장치의 IP 주소."
 
 msgid ""
 "The device(s) in config are different to actual device(s). Please remove the "
@@ -8647,6 +8694,9 @@ msgstr ""
 msgid "Transcoding"
 msgstr "트랜스코딩"
 
+msgid "Transcoding Directory"
+msgstr ""
+
 msgid "Transfer Rate"
 msgstr ""
 
@@ -9056,6 +9106,9 @@ msgstr ""
 msgid "VLAN"
 msgstr "VLAN"
 
+msgid "VLAN Settings"
+msgstr ""
+
 msgid "VLAN Tag"
 msgstr ""
 
@@ -9151,6 +9204,9 @@ msgstr ""
 msgid "Volume Label"
 msgstr ""
 
+msgid "Volume Mode"
+msgstr ""
+
 msgid "Volume Name"
 msgstr "볼륨 명"
 
@@ -9172,9 +9228,6 @@ msgid ""
 "serial number."
 msgstr ""
 
-msgid "Volume mode"
-msgstr ""
-
 msgid "Volumes"
 msgstr ""
 
@@ -9194,6 +9247,9 @@ msgid "WINS server IP address (e.g. from MS Active Directory server)."
 msgstr "WINS 서버 IP 주소(예컨대 MS 액티브 디렉터리 서버에서)."
 
 msgid "WLAN"
+msgstr ""
+
+msgid "WLAN Settings"
 msgstr ""
 
 msgid "WPA"
@@ -9630,3 +9686,12 @@ msgstr ""
 
 msgid "week days"
 msgstr ""
+
+#~ msgid "Link Aggregation and Failover"
+#~ msgstr "링크 통합과 장애 조치"
+
+#~ msgid "Static routes"
+#~ msgstr "스태틱 라우트"
+
+#~ msgid "The device's IP address."
+#~ msgstr "장치의 IP 주소."

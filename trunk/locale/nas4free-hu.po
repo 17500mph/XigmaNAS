@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-06 17:07+0000\n"
+"POT-Creation-Date: 2017-01-03 18:29+0000\n"
 "PO-Revision-Date: 2016-12-08 18:13+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-01 21:09+0000\n"
+"X-Launchpad-Export-Date: 2017-01-03 19:24+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -881,6 +881,11 @@ msgstr ""
 msgid "Anonymous users only"
 msgstr "Csak névtelen felhasználók"
 
+msgid ""
+"Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
+"issues."
+msgstr ""
+
 msgid "Any"
 msgstr "Bármely"
 
@@ -889,6 +894,9 @@ msgstr "Felhasználó által létrehozott megosztás hozzáfűzése"
 
 msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protokoll"
+
+msgid "Apply"
+msgstr ""
 
 msgid "Apply Filter"
 msgstr "Szűrő alkalmazása"
@@ -1162,9 +1170,6 @@ msgstr "Üres idő"
 msgid "Block Size"
 msgstr "Blokkméret"
 
-msgid "Block size"
-msgstr "Blokkméret"
-
 msgid "Blocksize"
 msgstr "Blokkméret"
 
@@ -1195,6 +1200,9 @@ msgstr "Rendszerbetöltő"
 
 msgid "Bridge"
 msgstr "Híd (bridge)"
+
+msgid "Bridge Settings"
+msgstr ""
 
 msgid "Bring a device online"
 msgstr "Eszköz online-ra állítása"
@@ -1355,8 +1363,14 @@ msgstr "LAN interfészhez nem használható DHCP."
 msgid "Capacity"
 msgstr "Kapacitás"
 
+msgid "Carp Settings"
+msgstr ""
+
 msgid "Case Sensitivity"
 msgstr "Kis- és nagybetű érzékenység"
+
+msgid "Catalan"
+msgstr ""
 
 msgid ""
 "Causes the server to display the network information for the specified IP "
@@ -1996,6 +2010,9 @@ msgstr "Adat kivonat"
 msgid "Data integrity"
 msgstr "Adatsértetlenség"
 
+msgid "Database Directory"
+msgstr ""
+
 msgid "Database directory"
 msgstr "Adatbázis könyvtár"
 
@@ -2499,8 +2516,8 @@ msgstr "Lemezek"
 msgid "Disks (Info)"
 msgstr "Lemezek (információ)"
 
-msgid "Disks (Info) information"
-msgstr "Lemezinformációk (információ)"
+msgid "Disks (Info) Information"
+msgstr ""
 
 msgid "Disks | Mount Point | Management"
 msgstr "Lemez | Csatolási pont | Kezelés"
@@ -3299,6 +3316,9 @@ msgstr ""
 "WebGUI port száma, amennyiben ez az alapértelmezettől eltér (80 HTTP, 443 "
 "HTTPS esetén)."
 
+msgid "Enter a description"
+msgstr ""
+
 msgid "Enter a description for your reference."
 msgstr "Add meg a hivatkozás leírását."
 
@@ -3307,6 +3327,9 @@ msgstr "Adj meg egy nevet"
 
 msgid "Enter a name for the command."
 msgstr "Add meg a parancs nevét."
+
+msgid "Enter a name for this volume"
+msgstr ""
 
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
@@ -3502,6 +3525,9 @@ msgstr "FAT32"
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
+
+msgid "FRU Information"
+msgstr ""
 
 msgid "FTP"
 msgstr "FTP"
@@ -3750,6 +3776,9 @@ msgstr "Fuppes"
 
 msgid "Fuppes Media Server"
 msgstr "Fuppes Média Szerver"
+
+msgid "Fuppes Media Server Administration"
+msgstr ""
 
 msgid ""
 "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
@@ -4064,12 +4093,6 @@ msgstr "Távoli rsync szerver IP vagy FQDN címe."
 msgid "IP type mismatch for network and gateway."
 msgstr "IP típusú eltérés a hálózathoz és az átjáróhoz."
 
-msgid "IPMI FRU"
-msgstr "IPMI FRU"
-
-msgid "IPMI Sensor"
-msgstr "IPMI érzékelő"
-
 msgid "IPMI Stats"
 msgstr "IPMI statisztikák"
 
@@ -4280,6 +4303,9 @@ msgstr "Információ"
 
 msgid "Information & Manual"
 msgstr "Információk és leírás"
+
+msgid "Information & Status"
+msgstr ""
 
 msgid "Inherit ACL"
 msgstr "ACL öröklődése"
@@ -4576,6 +4602,9 @@ msgstr "LACP (Link Aggregation Control Protokoll)"
 msgid "LAGG"
 msgstr "LAGG"
 
+msgid "LAGG Settings"
+msgstr ""
+
 msgid "LAN Management"
 msgstr "Hálózat kezelése"
 
@@ -4709,9 +4738,6 @@ msgstr ""
 "és a pillanatképeket. Megadásához használd a hagyományos utótag formátumokat "
 "(pl. 'k', 'KB', 'M', 'Gb', stb.)."
 
-msgid "Link Aggregation and Failover"
-msgstr "Linkek összefűzése és hibatűrése"
-
 msgid "Link down action"
 msgstr "Kikapcsolás (link down) művelet"
 
@@ -4801,6 +4827,9 @@ msgstr ""
 
 msgid "Location of the files to share."
 msgstr "Megosztandó fájlok helye"
+
+msgid "Location of the media content database."
+msgstr ""
 
 msgid "Location where the content database file will be stored."
 msgstr "Az adatbázis tartalom fájl helye."
@@ -5084,8 +5113,14 @@ msgstr "Adathordozó"
 msgid "Media Directory"
 msgstr "Média könyvtár"
 
+msgid "Media Library"
+msgstr ""
+
 msgid "Media library"
 msgstr "Média library"
+
+msgid "Media server name"
+msgstr ""
 
 msgid "Medium Acoustic Output"
 msgstr "Közepes zajszint kimenet"
@@ -5122,13 +5157,6 @@ msgstr "MiniDLNA"
 
 msgid "MiniDLNA A/V Media Server"
 msgstr "MiniDLNA A/V Médiaszerver"
-
-msgid ""
-"MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
-"MiniDLNA first."
-msgstr ""
-"MiniDLNA engedélyezve van. A Fuppes használatához a MiniDLNA-t le kell "
-"tiltani."
 
 msgid "Minidlna configuration has been updated."
 msgstr "MiniDLNA konfigurációja sikeresen módosult."
@@ -5195,6 +5223,9 @@ msgstr "Modell neve"
 msgid "Modified"
 msgstr "Módosítva"
 
+msgid "Modify Service"
+msgstr ""
+
 msgid "Modifying"
 msgstr "Módosítás"
 
@@ -5221,6 +5252,11 @@ msgstr "Figyelés beállításai"
 
 msgid "Months"
 msgstr "Hónap"
+
+msgid ""
+"More than one DLNA/UPnP service is active. This configuration might cause "
+"issues."
+msgstr ""
 
 msgid "Mount Point"
 msgstr "Csatolási pont (Mount Point)"
@@ -5441,12 +5477,8 @@ msgstr "Nincs lemez beállítva"
 msgid "No disks available."
 msgstr "Egy lemez sem érhető el."
 
-msgid ""
-"No disks configured, please add disks to see the diagnostic information of "
-"disks!"
+msgid "No disks configured, please add disks to view diagnostic information!"
 msgstr ""
-"Nincs lemez konfigurálva, kérem adj hozzá lemezeket, hogy azok látszódjanak "
-"a lemezek diagnosztikai információjában."
 
 msgid "No file was uploaded."
 msgstr "Nem lett fájl feltöltve."
@@ -6215,6 +6247,9 @@ msgstr "Termékazonosító"
 
 msgid "Profile"
 msgstr "Profil"
+
+msgid "Properties"
+msgstr ""
 
 msgid "Proto"
 msgstr "Proto"
@@ -7009,6 +7044,11 @@ msgstr ""
 
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
+"one interface)"
+msgstr ""
+
+msgid ""
+"Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
 "Válaszd ki, melyik csatolót használjuk (csak akkor, ha egynél több van.)"
@@ -7057,6 +7097,12 @@ msgstr "Érzékenység"
 
 msgid "Sensor"
 msgstr "Érzékelő"
+
+msgid "Sensor Information"
+msgstr ""
+
+msgid "Sensor List"
+msgstr ""
 
 msgid "Sep"
 msgstr "Szept"
@@ -7454,11 +7500,8 @@ msgstr "Statikus"
 msgid "Static Routes"
 msgstr "Statikus útvonalak"
 
-msgid "Static Routes Setup"
-msgstr "Statikus útvonal beállítások"
-
-msgid "Static routes"
-msgstr "Statikus útvonalak"
+msgid "Static Routes Settings"
+msgstr ""
 
 msgid "Status"
 msgstr "Állapot"
@@ -7810,6 +7853,9 @@ msgstr ""
 msgid "The IP address of the UPS master."
 msgstr "A szünetmentes mester IP címe."
 
+msgid "The IP address of the device."
+msgstr ""
+
 msgid "The IP address that this hostname represents."
 msgstr "Erre az állomásnévre mutató IP cím."
 
@@ -8156,9 +8202,6 @@ msgstr ""
 
 msgid "The default time in seconds to display a screen."
 msgstr "A képernyő megjelenésének alapértelmezett ideje másodpercben."
-
-msgid "The device's IP address."
-msgstr "Az eszköz IP címe."
 
 msgid ""
 "The device(s) in config are different to actual device(s). Please remove the "
@@ -9343,6 +9386,9 @@ msgstr ""
 msgid "Transcoding"
 msgstr "Átkódolás"
 
+msgid "Transcoding Directory"
+msgstr ""
+
 msgid "Transfer Rate"
 msgstr "Átviteli sebesség"
 
@@ -9774,6 +9820,9 @@ msgstr "VHID"
 msgid "VLAN"
 msgstr "VLAN"
 
+msgid "VLAN Settings"
+msgstr ""
+
 msgid "VLAN Tag"
 msgstr "VLAN címke"
 
@@ -9872,6 +9921,9 @@ msgstr "Kötet"
 msgid "Volume Label"
 msgstr "Kötet címkéje"
 
+msgid "Volume Mode"
+msgstr ""
+
 msgid "Volume Name"
 msgstr "Kötetnév"
 
@@ -9895,9 +9947,6 @@ msgstr ""
 "Új fájlrendszer kötetcíme. % = számláló, %n = n-től induló számláló, [n = "
 "eszköz sorozatszámának utolsó n karaktere."
 
-msgid "Volume mode"
-msgstr "Kötet mód"
-
 msgid "Volumes"
 msgstr "Kötetek (volumes)"
 
@@ -9918,6 +9967,9 @@ msgstr "WINS kiszolgáló IP címe (pl. MS Címtárszolgáltató kiszolgáló)."
 
 msgid "WLAN"
 msgstr "WLAN"
+
+msgid "WLAN Settings"
+msgstr ""
 
 msgid "WPA"
 msgstr "WPA"
@@ -10382,3 +10434,44 @@ msgstr "verzió:"
 
 msgid "week days"
 msgstr "hétköznap"
+
+#~ msgid "Static routes"
+#~ msgstr "Statikus útvonalak"
+
+#~ msgid "The device's IP address."
+#~ msgstr "Az eszköz IP címe."
+
+#~ msgid ""
+#~ "No disks configured, please add disks to see the diagnostic information of "
+#~ "disks!"
+#~ msgstr ""
+#~ "Nincs lemez konfigurálva, kérem adj hozzá lemezeket, hogy azok látszódjanak "
+#~ "a lemezek diagnosztikai információjában."
+
+#~ msgid "Link Aggregation and Failover"
+#~ msgstr "Linkek összefűzése és hibatűrése"
+
+#~ msgid ""
+#~ "MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
+#~ "MiniDLNA first."
+#~ msgstr ""
+#~ "MiniDLNA engedélyezve van. A Fuppes használatához a MiniDLNA-t le kell "
+#~ "tiltani."
+
+#~ msgid "Block size"
+#~ msgstr "Blokkméret"
+
+#~ msgid "Volume mode"
+#~ msgstr "Kötet mód"
+
+#~ msgid "IPMI Sensor"
+#~ msgstr "IPMI érzékelő"
+
+#~ msgid "IPMI FRU"
+#~ msgstr "IPMI FRU"
+
+#~ msgid "Static Routes Setup"
+#~ msgstr "Statikus útvonal beállítások"
+
+#~ msgid "Disks (Info) information"
+#~ msgstr "Lemezinformációk (információ)"

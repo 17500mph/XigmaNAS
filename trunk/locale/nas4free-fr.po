@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-06 17:07+0000\n"
-"PO-Revision-Date: 2016-12-16 19:20+0000\n"
+"POT-Creation-Date: 2017-01-03 18:29+0000\n"
+"PO-Revision-Date: 2017-01-03 18:58+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-01 21:09+0000\n"
+"X-Launchpad-Export-Date: 2017-01-03 19:24+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
@@ -898,6 +898,13 @@ msgstr ""
 msgid "Anonymous users only"
 msgstr "Utilisateurs anonymes seulement"
 
+msgid ""
+"Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
+"issues."
+msgstr ""
+"Un autre service DLNA / UPnP est déjà en cours d'exécution. L'activation de "
+"Fuppes peut provoquer des problèmes."
+
 msgid "Any"
 msgstr "Tous"
 
@@ -906,6 +913,9 @@ msgstr "Ajout d'actions définies par l'utilisateur"
 
 msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol (AFP)"
+
+msgid "Apply"
+msgstr "Appliquer"
 
 msgid "Apply Filter"
 msgstr "Appliquer le filtre"
@@ -1185,9 +1195,6 @@ msgstr "Délai de mise en veille"
 msgid "Block Size"
 msgstr "Taille de bloc"
 
-msgid "Block size"
-msgstr "Taille des blocs"
-
 msgid "Blocksize"
 msgstr "Taille de bloc"
 
@@ -1219,6 +1226,9 @@ msgstr "chargeur d'amorçage"
 
 msgid "Bridge"
 msgstr "Jonction"
+
+msgid "Bridge Settings"
+msgstr "Paramètres Bridge"
 
 msgid "Bring a device online"
 msgstr "Mettre un périphérique en ligne"
@@ -1384,8 +1394,14 @@ msgstr "Ne peut utiliser DHCP pour l'interface réseau"
 msgid "Capacity"
 msgstr "Capacité"
 
+msgid "Carp Settings"
+msgstr "Paramètres CARP"
+
 msgid "Case Sensitivity"
 msgstr "Sensibilité à la casse"
+
+msgid "Catalan"
+msgstr "Catalan"
 
 msgid ""
 "Causes the server to display the network information for the specified IP "
@@ -2048,6 +2064,9 @@ msgstr "Digest des données"
 msgid "Data integrity"
 msgstr "Intégrité des données"
 
+msgid "Database Directory"
+msgstr "Répertoire de base de données"
+
 msgid "Database directory"
 msgstr "Répertoire de base de données"
 
@@ -2556,8 +2575,8 @@ msgstr "Disques"
 msgid "Disks (Info)"
 msgstr "Disques (Infos)"
 
-msgid "Disks (Info) information"
-msgstr "Disques (Infos) information"
+msgid "Disks (Info) Information"
+msgstr "Disques (Info) Informations"
 
 msgid "Disks | Mount Point | Management"
 msgstr "Disques | Point de Montage | Gestion"
@@ -3365,6 +3384,9 @@ msgstr ""
 "Saisissez un autre numéro de port pour l'interface Web si vous voulez "
 "remplacer le numéro de port par défaut (80 pour HTTP, 443 pour HTTPS)."
 
+msgid "Enter a description"
+msgstr "Entrez une description"
+
 msgid "Enter a description for your reference."
 msgstr "Entrez une description pour votre référence."
 
@@ -3373,6 +3395,9 @@ msgstr "Entrez un nom"
 
 msgid "Enter a name for the command."
 msgstr "Entrez un nom pour la commande."
+
+msgid "Enter a name for this volume"
+msgstr "Saisissez un nom pour ce volume"
 
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
@@ -3566,6 +3591,9 @@ msgstr "FAT 32"
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "Fast Ethernet Channel (FEC)"
+
+msgid "FRU Information"
+msgstr "Informations FRU"
 
 msgid "FTP"
 msgstr "FTP"
@@ -3817,6 +3845,9 @@ msgstr "Fuppes"
 
 msgid "Fuppes Media Server"
 msgstr "Fuppes Media Server"
+
+msgid "Fuppes Media Server Administration"
+msgstr "Administration du serveur de médias Fuppes"
 
 msgid ""
 "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
@@ -4132,12 +4163,6 @@ msgstr "Adress IP ou FQDN du serveur Rsync distant."
 msgid "IP type mismatch for network and gateway."
 msgstr "Le type d'IP ne correspond pas au réseau et à la passerelle."
 
-msgid "IPMI FRU"
-msgstr "IPMI FRU"
-
-msgid "IPMI Sensor"
-msgstr "Capteur  IPMI"
-
 msgid "IPMI Stats"
 msgstr "Statistiques IPMI"
 
@@ -4354,6 +4379,9 @@ msgstr "Informations & Manuel"
 
 msgid "Information & Manuals"
 msgstr "Informations & Manuel"
+
+msgid "Information & Status"
+msgstr "Informations et Statut"
 
 msgid "Inherit ACL"
 msgstr "ACL héritée"
@@ -4662,6 +4690,9 @@ msgstr "Agrégation de lien (LACP)"
 msgid "LAGG"
 msgstr "LAGG"
 
+msgid "LAGG Settings"
+msgstr "Paramètres de LAGG"
+
 msgid "LAN Management"
 msgstr "Gestion du LAN"
 
@@ -4790,9 +4821,6 @@ msgstr ""
 "les systèmes de fichiers et les snapshots. Pour spécifier la taille, "
 "utiliser les suffixes usuels (par exemple : 'k', 'KB', 'M', 'Gb', etc...)"
 
-msgid "Link Aggregation and Failover"
-msgstr "Agrégation de lien et basculement"
-
 msgid "Link down action"
 msgstr "Stopper le lien"
 
@@ -4884,6 +4912,9 @@ msgstr ""
 
 msgid "Location of the files to share."
 msgstr "Localisation des fichiers à partager."
+
+msgid "Location of the media content database."
+msgstr "Emplacement de la base de données de contenu multimédia."
 
 msgid "Location where the content database file will be stored."
 msgstr ""
@@ -5174,8 +5205,14 @@ msgstr "Media"
 msgid "Media Directory"
 msgstr "Répertoire des media"
 
+msgid "Media Library"
+msgstr "Médiathèque"
+
 msgid "Media library"
 msgstr "Librairie média"
+
+msgid "Media server name"
+msgstr "Nom du serveur de médias"
 
 msgid "Medium Acoustic Output"
 msgstr "Bruit médian"
@@ -5212,13 +5249,6 @@ msgstr "MiniDLNA"
 
 msgid "MiniDLNA A/V Media Server"
 msgstr "MiniDLNA A/V Media Server"
-
-msgid ""
-"MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
-"MiniDLNA first."
-msgstr ""
-"MiniDLNA est activé. Si vous souhaitez utiliser Fuppes, vous devrez d'abord "
-"désactiver MiniDLNA."
 
 msgid "Minidlna configuration has been updated."
 msgstr "La configuration de Minidlna a été mise à jour."
@@ -5283,6 +5313,9 @@ msgstr "Nom du modèle"
 msgid "Modified"
 msgstr "Modifié le"
 
+msgid "Modify Service"
+msgstr "Modifier le service"
+
 msgid "Modifying"
 msgstr "Modification"
 
@@ -5309,6 +5342,13 @@ msgstr "Configuration de la surveillance"
 
 msgid "Months"
 msgstr "Mois"
+
+msgid ""
+"More than one DLNA/UPnP service is active. This configuration might cause "
+"issues."
+msgstr ""
+"Plus d'un service DLNA / UPnP est actif. Cette configuration peut provoquer "
+"des problèmes."
 
 msgid "Mount Point"
 msgstr "Point de montage"
@@ -5529,12 +5569,10 @@ msgstr "Aucun disque configuré"
 msgid "No disks available."
 msgstr "Pas de disques disponible."
 
-msgid ""
-"No disks configured, please add disks to see the diagnostic information of "
-"disks!"
+msgid "No disks configured, please add disks to view diagnostic information!"
 msgstr ""
-"Aucun disque configuré, veuillez ajouter un disque pour afficher les "
-"informations de diagnostique des disques !"
+"Aucun disque configuré, veuillez ajouter des disques pour afficher les "
+"informations de diagnostic!"
 
 msgid "No file was uploaded."
 msgstr "Aucun fichier n'a été uploadé."
@@ -6307,6 +6345,9 @@ msgstr "ID du produit"
 
 msgid "Profile"
 msgstr "Profil"
+
+msgid "Properties"
+msgstr "Propriétés"
 
 msgid "Proto"
 msgstr "Protocole"
@@ -7100,6 +7141,13 @@ msgstr ""
 
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
+"one interface)"
+msgstr ""
+"Sélectionnez l'interface à utiliser. (Sélectionnable seulement si votre "
+"serveur a plus d'une interface)"
+
+msgid ""
+"Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
 "Sélectionnez l'interface à utiliser. (Uniquement sélectionnable si votre "
@@ -7149,6 +7197,12 @@ msgstr "Sensible"
 
 msgid "Sensor"
 msgstr "Capteur"
+
+msgid "Sensor Information"
+msgstr "Informations du capteur"
+
+msgid "Sensor List"
+msgstr "Liste des capteurs"
 
 msgid "Sep"
 msgstr "Sept"
@@ -7547,11 +7601,8 @@ msgstr "Statique"
 msgid "Static Routes"
 msgstr "Routes statiques"
 
-msgid "Static Routes Setup"
-msgstr "Installation des routes statiques"
-
-msgid "Static routes"
-msgstr "Routes statiques"
+msgid "Static Routes Settings"
+msgstr "Paramètres des itinéraires statiques"
 
 msgid "Status"
 msgstr "Statut"
@@ -7906,6 +7957,9 @@ msgstr ""
 
 msgid "The IP address of the UPS master."
 msgstr "L'adresse IP du maître UPS"
+
+msgid "The IP address of the device."
+msgstr "Adresse IP du périphérique."
 
 msgid "The IP address that this hostname represents."
 msgstr "L'adresse IP que ce nom d'hôte représente."
@@ -8267,9 +8321,6 @@ msgstr ""
 
 msgid "The default time in seconds to display a screen."
 msgstr "Temps en secondes par défaut pour afficher l'écran."
-
-msgid "The device's IP address."
-msgstr "Adresse IP du matériel."
 
 msgid ""
 "The device(s) in config are different to actual device(s). Please remove the "
@@ -9492,6 +9543,9 @@ msgstr ""
 msgid "Transcoding"
 msgstr "Transcodage"
 
+msgid "Transcoding Directory"
+msgstr "Répertoire Transcodage"
+
 msgid "Transfer Rate"
 msgstr "Taux de transfert"
 
@@ -9931,6 +9985,9 @@ msgstr "Identifiant de l'Hôte Virtuel (Virtual Host ID)"
 msgid "VLAN"
 msgstr "VLAN"
 
+msgid "VLAN Settings"
+msgstr "Paramètres VLAN"
+
 msgid "VLAN Tag"
 msgstr "Tag VLAN"
 
@@ -10028,6 +10085,9 @@ msgstr "Volume"
 msgid "Volume Label"
 msgstr "Nom de volume"
 
+msgid "Volume Mode"
+msgstr "Mode volume"
+
 msgid "Volume Name"
 msgstr "Nom de volume"
 
@@ -10052,9 +10112,6 @@ msgstr ""
 "%n pour un compteur à partant du chiffre n, Utiliser [n pour les n "
 "caractères les plus à droite du numéro de série de l'appareil."
 
-msgid "Volume mode"
-msgstr "Mode du volume"
-
 msgid "Volumes"
 msgstr "Volumes"
 
@@ -10076,6 +10133,9 @@ msgstr ""
 
 msgid "WLAN"
 msgstr "WLAN"
+
+msgid "WLAN Settings"
+msgstr "Paramètres WLAN"
 
 msgid "WPA"
 msgstr "WPA"
@@ -10550,3 +10610,44 @@ msgstr "version:"
 
 msgid "week days"
 msgstr "jours de la semaine"
+
+#~ msgid "Link Aggregation and Failover"
+#~ msgstr "Agrégation de lien et basculement"
+
+#~ msgid "Static routes"
+#~ msgstr "Routes statiques"
+
+#~ msgid "The device's IP address."
+#~ msgstr "Adresse IP du matériel."
+
+#~ msgid ""
+#~ "No disks configured, please add disks to see the diagnostic information of "
+#~ "disks!"
+#~ msgstr ""
+#~ "Aucun disque configuré, veuillez ajouter un disque pour afficher les "
+#~ "informations de diagnostique des disques !"
+
+#~ msgid ""
+#~ "MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
+#~ "MiniDLNA first."
+#~ msgstr ""
+#~ "MiniDLNA est activé. Si vous souhaitez utiliser Fuppes, vous devrez d'abord "
+#~ "désactiver MiniDLNA."
+
+#~ msgid "Block size"
+#~ msgstr "Taille des blocs"
+
+#~ msgid "Volume mode"
+#~ msgstr "Mode du volume"
+
+#~ msgid "IPMI Sensor"
+#~ msgstr "Capteur  IPMI"
+
+#~ msgid "IPMI FRU"
+#~ msgstr "IPMI FRU"
+
+#~ msgid "Static Routes Setup"
+#~ msgstr "Installation des routes statiques"
+
+#~ msgid "Disks (Info) information"
+#~ msgstr "Disques (Infos) information"

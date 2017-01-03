@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-06 17:07+0000\n"
+"POT-Creation-Date: 2017-01-03 18:29+0000\n"
 "PO-Revision-Date: 2016-11-21 20:27+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-01 21:09+0000\n"
+"X-Launchpad-Export-Date: 2017-01-03 19:24+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -814,6 +814,11 @@ msgstr "匿名ユーザへのアップロード帯域を KB/s に制限します
 msgid "Anonymous users only"
 msgstr "匿名ユーザ専用"
 
+msgid ""
+"Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
+"issues."
+msgstr ""
+
 msgid "Any"
 msgstr "すべて"
 
@@ -822,6 +827,9 @@ msgstr "ユーザー定義の共有を追加します"
 
 msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
+
+msgid "Apply"
+msgstr ""
 
 msgid "Apply Filter"
 msgstr ""
@@ -1083,9 +1091,6 @@ msgstr "待機時間"
 msgid "Block Size"
 msgstr ""
 
-msgid "Block size"
-msgstr "ブロックサイズ"
-
 msgid "Blocksize"
 msgstr "ブロックサイズ"
 
@@ -1116,6 +1121,9 @@ msgstr "ブートローダ"
 
 msgid "Bridge"
 msgstr "ブリッジ"
+
+msgid "Bridge Settings"
+msgstr ""
 
 msgid "Bring a device online"
 msgstr ""
@@ -1274,7 +1282,13 @@ msgstr "LANインタフェースに DHCP は利用できません。"
 msgid "Capacity"
 msgstr "容量"
 
+msgid "Carp Settings"
+msgstr ""
+
 msgid "Case Sensitivity"
+msgstr ""
+
+msgid "Catalan"
 msgstr ""
 
 msgid ""
@@ -1865,6 +1879,9 @@ msgstr "データダイジェスト"
 msgid "Data integrity"
 msgstr "データの完全性"
 
+msgid "Database Directory"
+msgstr ""
+
 msgid "Database directory"
 msgstr "データベース ディレクトリ"
 
@@ -2346,7 +2363,7 @@ msgstr "ディスク"
 msgid "Disks (Info)"
 msgstr ""
 
-msgid "Disks (Info) information"
+msgid "Disks (Info) Information"
 msgstr ""
 
 msgid "Disks | Mount Point | Management"
@@ -3109,6 +3126,9 @@ msgid ""
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr "WebGUIデフォルトポート(HTTP 80, HTTPS 443)を変更したい場合は、カスタムポート番号を入力してください。"
 
+msgid "Enter a description"
+msgstr ""
+
 msgid "Enter a description for your reference."
 msgstr ""
 
@@ -3116,6 +3136,9 @@ msgid "Enter a name"
 msgstr ""
 
 msgid "Enter a name for the command."
+msgstr ""
+
+msgid "Enter a name for this volume"
 msgstr ""
 
 msgid ""
@@ -3287,6 +3310,9 @@ msgstr ""
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (ファストイーサチャネル)"
+
+msgid "FRU Information"
+msgstr ""
 
 msgid "FTP"
 msgstr "FTP"
@@ -3533,6 +3559,9 @@ msgstr "Fuppes"
 
 msgid "Fuppes Media Server"
 msgstr "Fuppes メディアサーバ"
+
+msgid "Fuppes Media Server Administration"
+msgstr ""
 
 msgid ""
 "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
@@ -3832,12 +3861,6 @@ msgstr "リモート Rsync サーバの IP もしくは FQDN を入力します�
 msgid "IP type mismatch for network and gateway."
 msgstr "ネットワークとゲートウェイの IP タイプが違います。"
 
-msgid "IPMI FRU"
-msgstr ""
-
-msgid "IPMI Sensor"
-msgstr ""
-
 msgid "IPMI Stats"
 msgstr ""
 
@@ -4028,6 +4051,9 @@ msgstr "情報とマニュアル"
 
 msgid "Information & Manuals"
 msgstr "情報＆マニュアル"
+
+msgid "Information & Status"
+msgstr ""
 
 msgid "Inherit ACL"
 msgstr "ACL継承"
@@ -4309,6 +4335,9 @@ msgstr "LACP (リンクアグリゲーション制御プロトコル)"
 msgid "LAGG"
 msgstr "アグリゲーション"
 
+msgid "LAGG Settings"
+msgstr ""
+
 msgid "LAN Management"
 msgstr "LAN マネージメント"
 
@@ -4430,9 +4459,6 @@ msgstr ""
 "ショットを含む子孫によるすべての容量を含みます。サイズを指定するには、以下の人間が読める接尾語を使用してください。(例えば、'k', 'KB', "
 "'M', 'Gb', など)"
 
-msgid "Link Aggregation and Failover"
-msgstr "リンクアグリゲーションとフェイルオーバ"
-
 msgid "Link down action"
 msgstr "リンクダウン時の処理"
 
@@ -4518,6 +4544,9 @@ msgstr "このシステムの設置されている場所の情報。 例. XXXビ
 
 msgid "Location of the files to share."
 msgstr "共有ファイルの場所を指定します。"
+
+msgid "Location of the media content database."
+msgstr ""
 
 msgid "Location where the content database file will be stored."
 msgstr "コンテンツデータベースファイルが保存される場所を指定します。"
@@ -4794,8 +4823,14 @@ msgstr "メディア"
 msgid "Media Directory"
 msgstr "メディアディレクトリ"
 
+msgid "Media Library"
+msgstr ""
+
 msgid "Media library"
 msgstr "メディアライブラリ"
+
+msgid "Media server name"
+msgstr ""
 
 msgid "Medium Acoustic Output"
 msgstr "中間の音響出力"
@@ -4832,11 +4867,6 @@ msgstr "MiniDLNA"
 
 msgid "MiniDLNA A/V Media Server"
 msgstr "MiniDLNA AV メディアサーバ"
-
-msgid ""
-"MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
-"MiniDLNA first."
-msgstr "MiniDLNAが有効になっています。Fuppesを使用したい場合は、まずMiniDLNAを無効にする必要があります。"
 
 msgid "Minidlna configuration has been updated."
 msgstr "Minidlna構成が更新されました。"
@@ -4901,6 +4931,9 @@ msgstr "モデル名"
 msgid "Modified"
 msgstr "変更日"
 
+msgid "Modify Service"
+msgstr ""
+
 msgid "Modifying"
 msgstr "修正"
 
@@ -4927,6 +4960,11 @@ msgstr ""
 
 msgid "Months"
 msgstr "月"
+
+msgid ""
+"More than one DLNA/UPnP service is active. This configuration might cause "
+"issues."
+msgstr ""
 
 msgid "Mount Point"
 msgstr "マウントポイント"
@@ -5141,10 +5179,8 @@ msgstr "ディスクが設定されていません"
 msgid "No disks available."
 msgstr ""
 
-msgid ""
-"No disks configured, please add disks to see the diagnostic information of "
-"disks!"
-msgstr "ディスクが構成されていません。ディスクの診断情報を見るためにディスクを追加してください。"
+msgid "No disks configured, please add disks to view diagnostic information!"
+msgstr ""
 
 msgid "No file was uploaded."
 msgstr "ファイルはアップロードされていませんでした。"
@@ -5878,6 +5914,9 @@ msgstr "製品ID"
 
 msgid "Profile"
 msgstr "プロファイル"
+
+msgid "Properties"
+msgstr ""
 
 msgid "Proto"
 msgstr "プロトコル"
@@ -6623,6 +6662,11 @@ msgstr "暗号化された GZIP ファイルまたは XML ファイルのサー�
 
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
+"one interface)"
+msgstr ""
+
+msgid ""
+"Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr "利用するインターフェースを選択してください。(2個以上サーバーに装着してある場合にのみ選択可能)"
 
@@ -6669,6 +6713,12 @@ msgid "Sensitive"
 msgstr ""
 
 msgid "Sensor"
+msgstr ""
+
+msgid "Sensor Information"
+msgstr ""
+
+msgid "Sensor List"
 msgstr ""
 
 msgid "Sep"
@@ -7031,11 +7081,8 @@ msgstr "スタティック"
 msgid "Static Routes"
 msgstr "スタティックルート"
 
-msgid "Static Routes Setup"
+msgid "Static Routes Settings"
 msgstr ""
-
-msgid "Static routes"
-msgstr "スタティックルート"
 
 msgid "Status"
 msgstr "ステータス"
@@ -7379,6 +7426,9 @@ msgstr "HASTノードがプライマリになるまでHASTボリュームには�
 msgid "The IP address of the UPS master."
 msgstr "UPSマスターのIPアドレス。"
 
+msgid "The IP address of the device."
+msgstr ""
+
 msgid "The IP address that this hostname represents."
 msgstr "このホストに割り当てられている IP アドレスを入力して下さい。"
 
@@ -7686,9 +7736,6 @@ msgstr "デフォルトの鍵長は次の通りです: AES 128、Blowfish 128、
 
 msgid "The default time in seconds to display a screen."
 msgstr "スクリーンを表示するデフォルトの秒数。"
-
-msgid "The device's IP address."
-msgstr "デバイスの IP アドレス"
 
 msgid ""
 "The device(s) in config are different to actual device(s). Please remove the "
@@ -8712,6 +8759,9 @@ msgstr "カンマ区切りのパスをコンピレーションとして取り扱
 msgid "Transcoding"
 msgstr "トランスコーディング"
 
+msgid "Transcoding Directory"
+msgstr ""
+
 msgid "Transfer Rate"
 msgstr "転送速度"
 
@@ -9122,6 +9172,9 @@ msgstr "VHID"
 msgid "VLAN"
 msgstr "VLAN"
 
+msgid "VLAN Settings"
+msgstr ""
+
 msgid "VLAN Tag"
 msgstr "VLAN タグ"
 
@@ -9217,6 +9270,9 @@ msgstr "ボリューム"
 msgid "Volume Label"
 msgstr ""
 
+msgid "Volume Mode"
+msgstr ""
+
 msgid "Volume Name"
 msgstr "ボリューム名"
 
@@ -9238,9 +9294,6 @@ msgid ""
 "serial number."
 msgstr ""
 
-msgid "Volume mode"
-msgstr "ボリュームモード"
-
 msgid "Volumes"
 msgstr "ボリューム"
 
@@ -9261,6 +9314,9 @@ msgstr "WINS サーバのIPアドレス (例: ActiveDirectory サーバ等)"
 
 msgid "WLAN"
 msgstr "WLAN"
+
+msgid "WLAN Settings"
+msgstr ""
 
 msgid "WPA"
 msgstr "WPA"
@@ -9697,3 +9753,28 @@ msgstr "バージョン:"
 
 msgid "week days"
 msgstr ""
+
+#~ msgid "Link Aggregation and Failover"
+#~ msgstr "リンクアグリゲーションとフェイルオーバ"
+
+#~ msgid "Static routes"
+#~ msgstr "スタティックルート"
+
+#~ msgid "The device's IP address."
+#~ msgstr "デバイスの IP アドレス"
+
+#~ msgid ""
+#~ "No disks configured, please add disks to see the diagnostic information of "
+#~ "disks!"
+#~ msgstr "ディスクが構成されていません。ディスクの診断情報を見るためにディスクを追加してください。"
+
+#~ msgid ""
+#~ "MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
+#~ "MiniDLNA first."
+#~ msgstr "MiniDLNAが有効になっています。Fuppesを使用したい場合は、まずMiniDLNAを無効にする必要があります。"
+
+#~ msgid "Block size"
+#~ msgstr "ブロックサイズ"
+
+#~ msgid "Volume mode"
+#~ msgstr "ボリュームモード"
