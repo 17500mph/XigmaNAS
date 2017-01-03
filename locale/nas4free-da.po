@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-06 17:07+0000\n"
+"POT-Creation-Date: 2017-01-03 18:29+0000\n"
 "PO-Revision-Date: 2016-09-17 16:31+0000\n"
 "Last-Translator: Timm Lagoni <tila@tl-designs.dk>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-01 21:08+0000\n"
+"X-Launchpad-Export-Date: 2017-01-03 19:24+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
@@ -825,6 +825,11 @@ msgstr ""
 msgid "Anonymous users only"
 msgstr "Kun anonyme brugere"
 
+msgid ""
+"Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
+"issues."
+msgstr ""
+
 msgid "Any"
 msgstr "Alle"
 
@@ -833,6 +838,9 @@ msgstr ""
 
 msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protokol"
+
+msgid "Apply"
+msgstr ""
 
 msgid "Apply Filter"
 msgstr ""
@@ -1097,9 +1105,6 @@ msgstr "Blank tid"
 msgid "Block Size"
 msgstr ""
 
-msgid "Block size"
-msgstr ""
-
 msgid "Blocksize"
 msgstr "Blok størrelse"
 
@@ -1128,6 +1133,9 @@ msgstr ""
 
 msgid "Bridge"
 msgstr "Bro"
+
+msgid "Bridge Settings"
+msgstr ""
 
 msgid "Bring a device online"
 msgstr ""
@@ -1286,7 +1294,13 @@ msgstr "Kan ikke bruge DHCP for LAN grænseflade."
 msgid "Capacity"
 msgstr "Kapacitet"
 
+msgid "Carp Settings"
+msgstr ""
+
 msgid "Case Sensitivity"
+msgstr ""
+
+msgid "Catalan"
 msgstr ""
 
 msgid ""
@@ -1885,6 +1899,9 @@ msgstr "Data digest"
 msgid "Data integrity"
 msgstr "Data integritet"
 
+msgid "Database Directory"
+msgstr ""
+
 msgid "Database directory"
 msgstr "Database mappe"
 
@@ -2371,7 +2388,7 @@ msgstr "Diske"
 msgid "Disks (Info)"
 msgstr ""
 
-msgid "Disks (Info) information"
+msgid "Disks (Info) Information"
 msgstr ""
 
 msgid "Disks | Mount Point | Management"
@@ -3147,6 +3164,9 @@ msgstr ""
 "Angiv valgfri port nummer for WebGUI hvis du ikke ønsker at anvende "
 "standarden (80 for HTTP, 443 for HTTPS)."
 
+msgid "Enter a description"
+msgstr ""
+
 msgid "Enter a description for your reference."
 msgstr ""
 
@@ -3154,6 +3174,9 @@ msgid "Enter a name"
 msgstr ""
 
 msgid "Enter a name for the command."
+msgstr ""
+
+msgid "Enter a name for this volume"
 msgstr ""
 
 msgid ""
@@ -3336,6 +3359,9 @@ msgstr ""
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
+
+msgid "FRU Information"
+msgstr ""
 
 msgid "FTP"
 msgstr "FTP"
@@ -3584,6 +3610,9 @@ msgid "Fuppes"
 msgstr ""
 
 msgid "Fuppes Media Server"
+msgstr ""
+
+msgid "Fuppes Media Server Administration"
 msgstr ""
 
 msgid ""
@@ -3887,12 +3916,6 @@ msgstr "IP eller FQDN adresse til fjern Rsync server."
 msgid "IP type mismatch for network and gateway."
 msgstr "IP typen for netværk og gateway passer ikke sammen."
 
-msgid "IPMI FRU"
-msgstr ""
-
-msgid "IPMI Sensor"
-msgstr ""
-
 msgid "IPMI Stats"
 msgstr ""
 
@@ -4092,6 +4115,9 @@ msgstr "Information & Manual"
 
 msgid "Information & Manuals"
 msgstr "Information & Manualer"
+
+msgid "Information & Status"
+msgstr ""
 
 msgid "Inherit ACL"
 msgstr ""
@@ -4378,6 +4404,9 @@ msgstr "LACP (Link Aggregation Control Protokol)"
 msgid "LAGG"
 msgstr "LAGG"
 
+msgid "LAGG Settings"
+msgstr ""
+
 msgid "LAN Management"
 msgstr "LAN Management"
 
@@ -4495,9 +4524,6 @@ msgstr ""
 "For at angive størrelsen, bruges der følgende menneske-læselige suffikser "
 "(for eksempel 'k', 'KB', 'M', 'Gb' osv.)."
 
-msgid "Link Aggregation and Failover"
-msgstr "Link Aggregering og Failover"
-
 msgid "Link down action"
 msgstr "Link nede hændelse"
 
@@ -4586,6 +4612,9 @@ msgstr ""
 
 msgid "Location of the files to share."
 msgstr "Placering på filerne der skal deles."
+
+msgid "Location of the media content database."
+msgstr ""
 
 msgid "Location where the content database file will be stored."
 msgstr "Placering hvor indholds database filen skal gemmes."
@@ -4864,8 +4893,14 @@ msgstr "Medie"
 msgid "Media Directory"
 msgstr "Medie mappe"
 
+msgid "Media Library"
+msgstr ""
+
 msgid "Media library"
 msgstr "Medie bibliotek"
+
+msgid "Media server name"
+msgstr ""
 
 msgid "Medium Acoustic Output"
 msgstr ""
@@ -4901,11 +4936,6 @@ msgid "MiniDLNA"
 msgstr ""
 
 msgid "MiniDLNA A/V Media Server"
-msgstr ""
-
-msgid ""
-"MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
-"MiniDLNA first."
 msgstr ""
 
 msgid "Minidlna configuration has been updated."
@@ -4971,6 +5001,9 @@ msgstr ""
 msgid "Modified"
 msgstr "Ændret"
 
+msgid "Modify Service"
+msgstr ""
+
 msgid "Modifying"
 msgstr "Modificerer"
 
@@ -4997,6 +5030,11 @@ msgstr ""
 
 msgid "Months"
 msgstr "Måneder"
+
+msgid ""
+"More than one DLNA/UPnP service is active. This configuration might cause "
+"issues."
+msgstr ""
 
 msgid "Mount Point"
 msgstr "Monterings punkt"
@@ -5216,12 +5254,8 @@ msgstr "Ingen diske konfigureret"
 msgid "No disks available."
 msgstr ""
 
-msgid ""
-"No disks configured, please add disks to see the diagnostic information of "
-"disks!"
+msgid "No disks configured, please add disks to view diagnostic information!"
 msgstr ""
-"Ingen disk konfigureret, venligts tilføj disks for at se diagnotisk "
-"information på disks!"
 
 msgid "No file was uploaded."
 msgstr "Ingen fil blev oploaded."
@@ -5972,6 +6006,9 @@ msgstr "Produkt ID"
 
 msgid "Profile"
 msgstr "Profil"
+
+msgid "Properties"
+msgstr ""
 
 msgid "Proto"
 msgstr "Proto"
@@ -6731,6 +6768,11 @@ msgstr ""
 
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
+"one interface)"
+msgstr ""
+
+msgid ""
+"Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
 
@@ -6777,6 +6819,12 @@ msgid "Sensitive"
 msgstr ""
 
 msgid "Sensor"
+msgstr ""
+
+msgid "Sensor Information"
+msgstr ""
+
+msgid "Sensor List"
 msgstr ""
 
 msgid "Sep"
@@ -7152,11 +7200,8 @@ msgstr "Statisk"
 msgid "Static Routes"
 msgstr "Statiske Ruter"
 
-msgid "Static Routes Setup"
+msgid "Static Routes Settings"
 msgstr ""
-
-msgid "Static routes"
-msgstr "Statiske ruter"
 
 msgid "Status"
 msgstr "Status"
@@ -7501,6 +7546,9 @@ msgstr ""
 msgid "The IP address of the UPS master."
 msgstr "UPS master IP adresse"
 
+msgid "The IP address of the device."
+msgstr ""
+
 msgid "The IP address that this hostname represents."
 msgstr "IP-adressen som dette værtsnavn repræsenterer."
 
@@ -7826,9 +7874,6 @@ msgstr ""
 
 msgid "The default time in seconds to display a screen."
 msgstr "Standard tiden i sekunder for at vise et skærmbillede."
-
-msgid "The device's IP address."
-msgstr "Enhedens IP-adresse."
 
 msgid ""
 "The device(s) in config are different to actual device(s). Please remove the "
@@ -8923,6 +8968,9 @@ msgstr ""
 msgid "Transcoding"
 msgstr "Omkodning"
 
+msgid "Transcoding Directory"
+msgstr ""
+
 msgid "Transfer Rate"
 msgstr ""
 
@@ -9344,6 +9392,9 @@ msgstr "VHID"
 msgid "VLAN"
 msgstr "VLAN"
 
+msgid "VLAN Settings"
+msgstr ""
+
 msgid "VLAN Tag"
 msgstr ""
 
@@ -9439,6 +9490,9 @@ msgstr "Diskenhed"
 msgid "Volume Label"
 msgstr ""
 
+msgid "Volume Mode"
+msgstr ""
+
 msgid "Volume Name"
 msgstr "Volume navn"
 
@@ -9458,9 +9512,6 @@ msgid ""
 "Volume label of the new file system. Use % for a counter or %n for a counter "
 "starting at number n, Use [n for the rightmost n characters of the device "
 "serial number."
-msgstr ""
-
-msgid "Volume mode"
 msgstr ""
 
 msgid "Volumes"
@@ -9483,6 +9534,9 @@ msgstr "WINS server IP-adresse (f.eks. fra en MS Active Directory server)."
 
 msgid "WLAN"
 msgstr "WLAN"
+
+msgid "WLAN Settings"
+msgstr ""
 
 msgid "WPA"
 msgstr "WPA"
@@ -9929,3 +9983,19 @@ msgstr "version:"
 
 msgid "week days"
 msgstr ""
+
+#~ msgid "Link Aggregation and Failover"
+#~ msgstr "Link Aggregering og Failover"
+
+#~ msgid "Static routes"
+#~ msgstr "Statiske ruter"
+
+#~ msgid "The device's IP address."
+#~ msgstr "Enhedens IP-adresse."
+
+#~ msgid ""
+#~ "No disks configured, please add disks to see the diagnostic information of "
+#~ "disks!"
+#~ msgstr ""
+#~ "Ingen disk konfigureret, venligts tilføj disks for at se diagnotisk "
+#~ "information på disks!"

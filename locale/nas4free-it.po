@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-06 17:07+0000\n"
+"POT-Creation-Date: 2017-01-03 18:29+0000\n"
 "PO-Revision-Date: 2016-12-21 12:52+0000\n"
 "Last-Translator: misterredman <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-01 21:09+0000\n"
+"X-Launchpad-Export-Date: 2017-01-03 19:24+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
@@ -874,6 +874,11 @@ msgstr ""
 msgid "Anonymous users only"
 msgstr "Solo utenti anonimi"
 
+msgid ""
+"Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
+"issues."
+msgstr ""
+
 msgid "Any"
 msgstr "Qualsiasi"
 
@@ -882,6 +887,9 @@ msgstr "Aggiungi le condivisioni definite dall'utente."
 
 msgid "Apple Filing Protocol"
 msgstr "Apple Filing Protocol"
+
+msgid "Apply"
+msgstr ""
 
 msgid "Apply Filter"
 msgstr "Applica Filtro"
@@ -1159,9 +1167,6 @@ msgstr "Intervallo di tempo"
 msgid "Block Size"
 msgstr "Dimensione dei blocchi"
 
-msgid "Block size"
-msgstr "Dimensione blocco"
-
 msgid "Blocksize"
 msgstr "Dimensione blocchi"
 
@@ -1192,6 +1197,9 @@ msgstr "Bootloader"
 
 msgid "Bridge"
 msgstr "Bridge"
+
+msgid "Bridge Settings"
+msgstr ""
 
 msgid "Bring a device online"
 msgstr "Metti online una device"
@@ -1356,8 +1364,14 @@ msgstr "Non puoi usare DHCP per l'interfaccia LAN."
 msgid "Capacity"
 msgstr "Capacità"
 
+msgid "Carp Settings"
+msgstr ""
+
 msgid "Case Sensitivity"
 msgstr "Tiene conto delle maiuscole e/o minuscole"
+
+msgid "Catalan"
+msgstr ""
 
 msgid ""
 "Causes the server to display the network information for the specified IP "
@@ -2000,6 +2014,9 @@ msgstr "Digest dei dati"
 msgid "Data integrity"
 msgstr "Integrita' dei dati"
 
+msgid "Database Directory"
+msgstr ""
+
 msgid "Database directory"
 msgstr "Cartella Database"
 
@@ -2497,8 +2514,8 @@ msgstr "Dischi"
 msgid "Disks (Info)"
 msgstr "Disco (Info)"
 
-msgid "Disks (Info) information"
-msgstr "Disco (Info) Informazioni"
+msgid "Disks (Info) Information"
+msgstr ""
 
 msgid "Disks | Mount Point | Management"
 msgstr "DIschi | Punto di mount | Gestione"
@@ -3292,6 +3309,9 @@ msgstr ""
 "Inserisci una numero di porta personalizzato per la webGUI se vuoi "
 "modificare quella di default (80 per HTTP, 443 per HTTPS)."
 
+msgid "Enter a description"
+msgstr ""
+
 msgid "Enter a description for your reference."
 msgstr "Inserisci una descrizione per propria referenza."
 
@@ -3300,6 +3320,9 @@ msgstr "Inserisci un nome"
 
 msgid "Enter a name for the command."
 msgstr "Inserisci un nome per il comando."
+
+msgid "Enter a name for this volume"
+msgstr ""
 
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
@@ -3493,6 +3516,9 @@ msgstr "FAT32"
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
+
+msgid "FRU Information"
+msgstr ""
 
 msgid "FTP"
 msgstr "FTP"
@@ -3743,6 +3769,9 @@ msgstr "Fuppes"
 
 msgid "Fuppes Media Server"
 msgstr "Fuppes Media Server"
+
+msgid "Fuppes Media Server Administration"
+msgstr ""
 
 msgid ""
 "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
@@ -4045,12 +4074,6 @@ msgstr "Indirizzo IP o FQDN del server remoto Rsync."
 msgid "IP type mismatch for network and gateway."
 msgstr "IP errato per la rete ed il gateway."
 
-msgid "IPMI FRU"
-msgstr "IPMI FRU"
-
-msgid "IPMI Sensor"
-msgstr "Sensore IPMI"
-
 msgid "IPMI Stats"
 msgstr "Statistiche IPMI"
 
@@ -4265,6 +4288,9 @@ msgstr "Informazioni e manuale"
 
 msgid "Information & Manuals"
 msgstr "Informazioni e Manuali"
+
+msgid "Information & Status"
+msgstr ""
 
 msgid "Inherit ACL"
 msgstr "Eredità ACL"
@@ -4569,6 +4595,9 @@ msgstr "LACP (Link Aggregation Control Protocol)"
 msgid "LAGG"
 msgstr "LAGG"
 
+msgid "LAGG Settings"
+msgstr ""
+
 msgid "LAN Management"
 msgstr "Gestione LAN"
 
@@ -4686,9 +4715,6 @@ msgstr ""
 "dimensione, utilizzare i seguenti suffissi 'human-readable' (for example, "
 "'k', 'KB', 'M', 'Gb', etc.)."
 
-msgid "Link Aggregation and Failover"
-msgstr "Aggregazione di link e failover"
-
 msgid "Link down action"
 msgstr "Link down (azione)"
 
@@ -4781,6 +4807,9 @@ msgstr ""
 
 msgid "Location of the files to share."
 msgstr "Posizione dei file da condividere."
+
+msgid "Location of the media content database."
+msgstr ""
 
 msgid "Location where the content database file will be stored."
 msgstr "Posizione del file di database dei contenuti."
@@ -5063,8 +5092,14 @@ msgstr "Dischi"
 msgid "Media Directory"
 msgstr "Cartella dei media"
 
+msgid "Media Library"
+msgstr ""
+
 msgid "Media library"
 msgstr "Libreria multimediale"
+
+msgid "Media server name"
+msgstr ""
 
 msgid "Medium Acoustic Output"
 msgstr "Output acustico medio"
@@ -5101,13 +5136,6 @@ msgstr "MiniDLNA"
 
 msgid "MiniDLNA A/V Media Server"
 msgstr "MiniDLNA A/V Media Server"
-
-msgid ""
-"MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
-"MiniDLNA first."
-msgstr ""
-"MiniDLNA è attivo, Se desideri utilizzare Fuppes devi prima disattivare "
-"MINIDLNA."
 
 msgid "Minidlna configuration has been updated."
 msgstr "La configurazione di MiniDLNA è stata aggiornata."
@@ -5173,6 +5201,9 @@ msgstr "Nome Modello"
 msgid "Modified"
 msgstr "Modificato"
 
+msgid "Modify Service"
+msgstr ""
+
 msgid "Modifying"
 msgstr "Modifica"
 
@@ -5199,6 +5230,11 @@ msgstr "Impostazioni monitoraggio"
 
 msgid "Months"
 msgstr "Mesi"
+
+msgid ""
+"More than one DLNA/UPnP service is active. This configuration might cause "
+"issues."
+msgstr ""
 
 msgid "Mount Point"
 msgstr "Punto di Mount"
@@ -5418,12 +5454,8 @@ msgstr "Nessun disco configurato"
 msgid "No disks available."
 msgstr "Nessun disco disponibile."
 
-msgid ""
-"No disks configured, please add disks to see the diagnostic information of "
-"disks!"
+msgid "No disks configured, please add disks to view diagnostic information!"
 msgstr ""
-"Nessun disco configurato, per favore aggiungere i dischi per visualizzare le "
-"informazioni di diagnostica!"
 
 msgid "No file was uploaded."
 msgstr "Nessun file è stato caricato."
@@ -6180,6 +6212,9 @@ msgstr "ID Prodotto"
 
 msgid "Profile"
 msgstr "Profilo"
+
+msgid "Properties"
+msgstr ""
 
 msgid "Proto"
 msgstr "Proto"
@@ -6944,6 +6979,11 @@ msgstr ""
 
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
+"one interface)"
+msgstr ""
+
+msgid ""
+"Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
 
@@ -6990,6 +7030,12 @@ msgid "Sensitive"
 msgstr "Sensibile"
 
 msgid "Sensor"
+msgstr ""
+
+msgid "Sensor Information"
+msgstr ""
+
+msgid "Sensor List"
 msgstr ""
 
 msgid "Sep"
@@ -7378,11 +7424,8 @@ msgstr "Statico"
 msgid "Static Routes"
 msgstr "Route statiche"
 
-msgid "Static Routes Setup"
+msgid "Static Routes Settings"
 msgstr ""
-
-msgid "Static routes"
-msgstr "Route statiche"
 
 msgid "Status"
 msgstr "Stato"
@@ -7737,6 +7780,9 @@ msgstr ""
 msgid "The IP address of the UPS master."
 msgstr "Indirizzo IP dell'UPS master."
 
+msgid "The IP address of the device."
+msgstr ""
+
 msgid "The IP address that this hostname represents."
 msgstr "L'indirizzo IP che questo nome di host rappresenta."
 
@@ -8077,9 +8123,6 @@ msgstr ""
 
 msgid "The default time in seconds to display a screen."
 msgstr "Il tempo in secondi per visualizzare una schermata."
-
-msgid "The device's IP address."
-msgstr "L'indirizzo IP del dispositivo."
 
 msgid ""
 "The device(s) in config are different to actual device(s). Please remove the "
@@ -9224,6 +9267,9 @@ msgstr "Tracce il cui percorso contiene uno o più di queste"
 msgid "Transcoding"
 msgstr "Transcodifica"
 
+msgid "Transcoding Directory"
+msgstr ""
+
 msgid "Transfer Rate"
 msgstr "Velocità di trasferimento"
 
@@ -9654,6 +9700,9 @@ msgstr "VHID"
 msgid "VLAN"
 msgstr "VLAN"
 
+msgid "VLAN Settings"
+msgstr ""
+
 msgid "VLAN Tag"
 msgstr "VLAN Tag"
 
@@ -9751,6 +9800,9 @@ msgstr "Volume"
 msgid "Volume Label"
 msgstr ""
 
+msgid "Volume Mode"
+msgstr ""
+
 msgid "Volume Name"
 msgstr "Nome volume"
 
@@ -9771,9 +9823,6 @@ msgid ""
 "starting at number n, Use [n for the rightmost n characters of the device "
 "serial number."
 msgstr ""
-
-msgid "Volume mode"
-msgstr "Volume mode"
 
 msgid "Volumes"
 msgstr "Volumi"
@@ -9796,6 +9845,9 @@ msgstr ""
 
 msgid "WLAN"
 msgstr "WLAN"
+
+msgid "WLAN Settings"
+msgstr ""
 
 msgid "WPA"
 msgstr "WPA"
@@ -10256,3 +10308,41 @@ msgstr "versione:"
 
 msgid "week days"
 msgstr ""
+
+#~ msgid "Link Aggregation and Failover"
+#~ msgstr "Aggregazione di link e failover"
+
+#~ msgid "Static routes"
+#~ msgstr "Route statiche"
+
+#~ msgid "The device's IP address."
+#~ msgstr "L'indirizzo IP del dispositivo."
+
+#~ msgid ""
+#~ "No disks configured, please add disks to see the diagnostic information of "
+#~ "disks!"
+#~ msgstr ""
+#~ "Nessun disco configurato, per favore aggiungere i dischi per visualizzare le "
+#~ "informazioni di diagnostica!"
+
+#~ msgid "Volume mode"
+#~ msgstr "Volume mode"
+
+#~ msgid "Block size"
+#~ msgstr "Dimensione blocco"
+
+#~ msgid "Disks (Info) information"
+#~ msgstr "Disco (Info) Informazioni"
+
+#~ msgid "IPMI Sensor"
+#~ msgstr "Sensore IPMI"
+
+#~ msgid "IPMI FRU"
+#~ msgstr "IPMI FRU"
+
+#~ msgid ""
+#~ "MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
+#~ "MiniDLNA first."
+#~ msgstr ""
+#~ "MiniDLNA è attivo, Se desideri utilizzare Fuppes devi prima disattivare "
+#~ "MINIDLNA."

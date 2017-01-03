@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2016-12-06 17:07+0000\n"
+"POT-Creation-Date: 2017-01-03 18:29+0000\n"
 "PO-Revision-Date: 2016-03-03 17:10+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-01 21:10+0000\n"
+"X-Launchpad-Export-Date: 2017-01-03 19:25+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -795,6 +795,11 @@ msgstr "匿名用戶上傳頻寬，以 KB/s 為單位。空白表示沒限制。
 msgid "Anonymous users only"
 msgstr "只允許匿名用戶"
 
+msgid ""
+"Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
+"issues."
+msgstr ""
+
 msgid "Any"
 msgstr "任何"
 
@@ -803,6 +808,9 @@ msgstr "追加用戶自定義的用戶共享"
 
 msgid "Apple Filing Protocol"
 msgstr "AFP 通訊協定"
+
+msgid "Apply"
+msgstr ""
 
 msgid "Apply Filter"
 msgstr ""
@@ -1064,9 +1072,6 @@ msgstr "空白時間"
 msgid "Block Size"
 msgstr "區塊大小"
 
-msgid "Block size"
-msgstr "區塊大小"
-
 msgid "Blocksize"
 msgstr "區塊大小"
 
@@ -1095,6 +1100,9 @@ msgstr "啟動程序"
 
 msgid "Bridge"
 msgstr "橋接"
+
+msgid "Bridge Settings"
+msgstr ""
 
 msgid "Bring a device online"
 msgstr ""
@@ -1253,7 +1261,13 @@ msgstr "LAN 的網絡介面不能使用DHCP。"
 msgid "Capacity"
 msgstr "容量"
 
+msgid "Carp Settings"
+msgstr ""
+
 msgid "Case Sensitivity"
+msgstr ""
+
+msgid "Catalan"
 msgstr ""
 
 msgid ""
@@ -1833,6 +1847,9 @@ msgstr "數據摘要"
 msgid "Data integrity"
 msgstr "數據完整性"
 
+msgid "Database Directory"
+msgstr ""
+
 msgid "Database directory"
 msgstr "數據庫目錄"
 
@@ -2313,7 +2330,7 @@ msgstr "磁碟"
 msgid "Disks (Info)"
 msgstr ""
 
-msgid "Disks (Info) information"
+msgid "Disks (Info) Information"
 msgstr ""
 
 msgid "Disks | Mount Point | Management"
@@ -3073,6 +3090,9 @@ msgid ""
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr "如果您想覆蓋默認值的話，請輸入自定的網頁界面的端口編號（80為HTTP，HTTPS為443）。"
 
+msgid "Enter a description"
+msgstr ""
+
 msgid "Enter a description for your reference."
 msgstr ""
 
@@ -3080,6 +3100,9 @@ msgid "Enter a name"
 msgstr ""
 
 msgid "Enter a name for the command."
+msgstr ""
+
+msgid "Enter a name for this volume"
 msgstr ""
 
 msgid ""
@@ -3250,6 +3273,9 @@ msgstr ""
 
 msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
+
+msgid "FRU Information"
+msgstr ""
 
 msgid "FTP"
 msgstr "FTP"
@@ -3493,6 +3519,9 @@ msgid "Fuppes"
 msgstr "Fuppes"
 
 msgid "Fuppes Media Server"
+msgstr ""
+
+msgid "Fuppes Media Server Administration"
 msgstr ""
 
 msgid ""
@@ -3790,12 +3819,6 @@ msgstr "Rsync 遠程伺服器的 IP 或 FQDN 位址"
 msgid "IP type mismatch for network and gateway."
 msgstr "網路與閘道的 IP 類型不符合"
 
-msgid "IPMI FRU"
-msgstr ""
-
-msgid "IPMI Sensor"
-msgstr ""
-
 msgid "IPMI Stats"
 msgstr ""
 
@@ -3982,6 +4005,9 @@ msgstr "資訊和手冊"
 
 msgid "Information & Manuals"
 msgstr "資訊和手冊"
+
+msgid "Information & Status"
+msgstr ""
 
 msgid "Inherit ACL"
 msgstr "繼承ACL"
@@ -4261,6 +4287,9 @@ msgstr "LACP （鏈路匯聚控制協議）"
 msgid "LAGG"
 msgstr "LAGG"
 
+msgid "LAGG Settings"
+msgstr ""
+
 msgid "LAN Management"
 msgstr "區域網路管理"
 
@@ -4375,9 +4404,6 @@ msgstr ""
 "限制數據集與其所有後代的可用空間。此屬性強硬限制可用空間量。這包括其所有後代，文件系統和快照佔用的空間。請使用以下的後綴來指定大小（例如 "
 "'k'，'KB'，'M'，'Gb' 等）。"
 
-msgid "Link Aggregation and Failover"
-msgstr "鏈路聚合和故障切換"
-
 msgid "Link down action"
 msgstr "未連接動作"
 
@@ -4462,6 +4488,9 @@ msgstr "位置資訊，例如：這台機器實際存放的地點：'哪棟大�
 
 msgid "Location of the files to share."
 msgstr "檔案的分享位置。"
+
+msgid "Location of the media content database."
+msgstr ""
 
 msgid "Location where the content database file will be stored."
 msgstr "儲存內容資料庫檔案的位置。"
@@ -4736,8 +4765,14 @@ msgstr "介质（Media）"
 msgid "Media Directory"
 msgstr "媒體目錄"
 
+msgid "Media Library"
+msgstr ""
+
 msgid "Media library"
 msgstr "媒體庫"
+
+msgid "Media server name"
+msgstr ""
 
 msgid "Medium Acoustic Output"
 msgstr ""
@@ -4773,11 +4808,6 @@ msgid "MiniDLNA"
 msgstr "MiniDLNA"
 
 msgid "MiniDLNA A/V Media Server"
-msgstr ""
-
-msgid ""
-"MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
-"MiniDLNA first."
 msgstr ""
 
 msgid "Minidlna configuration has been updated."
@@ -4843,6 +4873,9 @@ msgstr "型號名"
 msgid "Modified"
 msgstr "已修改"
 
+msgid "Modify Service"
+msgstr ""
+
 msgid "Modifying"
 msgstr "更改中"
 
@@ -4869,6 +4902,11 @@ msgstr ""
 
 msgid "Months"
 msgstr "月"
+
+msgid ""
+"More than one DLNA/UPnP service is active. This configuration might cause "
+"issues."
+msgstr ""
 
 msgid "Mount Point"
 msgstr "掛載點"
@@ -5081,10 +5119,8 @@ msgstr "尚未加入磁碟"
 msgid "No disks available."
 msgstr ""
 
-msgid ""
-"No disks configured, please add disks to see the diagnostic information of "
-"disks!"
-msgstr "沒有磁碟設定。請先新增磁碟再來看磁碟診斷資訊!"
+msgid "No disks configured, please add disks to view diagnostic information!"
+msgstr ""
 
 msgid "No file was uploaded."
 msgstr "沒有檔案被上傳。"
@@ -5816,6 +5852,9 @@ msgstr "產品編號"
 
 msgid "Profile"
 msgstr "設定檔"
+
+msgid "Properties"
+msgstr ""
 
 msgid "Proto"
 msgstr "協議"
@@ -6557,6 +6596,11 @@ msgstr "選擇已加密的伺服器配置GZIP文件或XML文件，並點擊下�
 
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
+"one interface)"
+msgstr ""
+
+msgid ""
+"Select which interface to use. (Only selectable if your server has more than "
 "one)"
 msgstr ""
 
@@ -6603,6 +6647,12 @@ msgid "Sensitive"
 msgstr ""
 
 msgid "Sensor"
+msgstr ""
+
+msgid "Sensor Information"
+msgstr ""
+
+msgid "Sensor List"
 msgstr ""
 
 msgid "Sep"
@@ -6959,11 +7009,8 @@ msgstr "靜態"
 msgid "Static Routes"
 msgstr "靜態路由"
 
-msgid "Static Routes Setup"
+msgid "Static Routes Settings"
 msgstr ""
-
-msgid "Static routes"
-msgstr "靜態路由"
 
 msgid "Status"
 msgstr "狀態"
@@ -7307,6 +7354,9 @@ msgstr "在HAST 成為主節點（Primary node）之前無法使用HAST 卷。"
 msgid "The IP address of the UPS master."
 msgstr "主要UPS的IP位址"
 
+msgid "The IP address of the device."
+msgstr ""
+
 msgid "The IP address that this hostname represents."
 msgstr "主機名稱所代表的 IP 位址。"
 
@@ -7609,9 +7659,6 @@ msgstr "預設的密鑰長度是：AES 為 128，Blowfish 為 128，Camellia 為
 
 msgid "The default time in seconds to display a screen."
 msgstr "顯示在屏幕的時間的默認值（秒）。"
-
-msgid "The device's IP address."
-msgstr "裝置的 IP 位址。"
 
 msgid ""
 "The device(s) in config are different to actual device(s). Please remove the "
@@ -8602,6 +8649,9 @@ msgstr ""
 msgid "Transcoding"
 msgstr "轉碼"
 
+msgid "Transcoding Directory"
+msgstr ""
+
 msgid "Transfer Rate"
 msgstr "傳輸速率"
 
@@ -9008,6 +9058,9 @@ msgstr "VHID"
 msgid "VLAN"
 msgstr "虛擬局域網（VLAN）"
 
+msgid "VLAN Settings"
+msgstr ""
+
 msgid "VLAN Tag"
 msgstr "VLAN 標籤"
 
@@ -9103,6 +9156,9 @@ msgstr "卷（Volume）"
 msgid "Volume Label"
 msgstr ""
 
+msgid "Volume Mode"
+msgstr ""
+
 msgid "Volume Name"
 msgstr "卷名"
 
@@ -9122,9 +9178,6 @@ msgid ""
 "Volume label of the new file system. Use % for a counter or %n for a counter "
 "starting at number n, Use [n for the rightmost n characters of the device "
 "serial number."
-msgstr ""
-
-msgid "Volume mode"
 msgstr ""
 
 msgid "Volumes"
@@ -9147,6 +9200,9 @@ msgstr "WINS 伺服器位置 (AD Server)"
 
 msgid "WLAN"
 msgstr "無線區域網路"
+
+msgid "WLAN Settings"
+msgstr ""
 
 msgid "WPA"
 msgstr "WPA"
@@ -9581,3 +9637,20 @@ msgstr "版本："
 
 msgid "week days"
 msgstr ""
+
+#~ msgid "Static routes"
+#~ msgstr "靜態路由"
+
+#~ msgid "The device's IP address."
+#~ msgstr "裝置的 IP 位址。"
+
+#~ msgid "Link Aggregation and Failover"
+#~ msgstr "鏈路聚合和故障切換"
+
+#~ msgid ""
+#~ "No disks configured, please add disks to see the diagnostic information of "
+#~ "disks!"
+#~ msgstr "沒有磁碟設定。請先新增磁碟再來看磁碟診斷資訊!"
+
+#~ msgid "Block size"
+#~ msgstr "區塊大小"
