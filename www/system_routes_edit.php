@@ -147,7 +147,7 @@ if ($_POST) {
 	<form action="system_routes_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 	<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
 	<table width="100%" border="0" cellpadding="6" cellspacing="0">
-	<?php html_titleline2(gtext('Static Routes Setup'), 2);?>
+	<?php html_titleline2(gtext('Static Routes Settings'), 2);?>
 	<?php $interfaces = array('lan' => 'LAN'); for ($i = 1; isset($config['interfaces']['opt' . $i]); $i++) { $interfaces['opt' . $i] = $config['interfaces']['opt' . $i]['descr']; }?>
 	<?php html_combobox("interface", gtext("Interface"), !empty($pconfig['interface']) ? $pconfig['interface'] : "", $interfaces, gtext("Choose which interface this route applies to."), true);?>
 	<tr>
