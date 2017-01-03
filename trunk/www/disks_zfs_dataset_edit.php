@@ -295,19 +295,19 @@ endforeach;
 $l_compressionmode = [
 	'on' => gtext('On'),
 	'off' => gtext('Off'),
-	'lz4' => 'lz4',
-	'lzjb' => 'lzjb',
-	'gzip' => 'gzip',
-	'gzip-1' => 'gzip-1',
-	'gzip-2' => 'gzip-2',
-	'gzip-3' => 'gzip-3',
-	'gzip-4' => 'gzip-4',
-	'gzip-5' => 'gzip-5',
-	'gzip-6' => 'gzip-6',
-	'gzip-7' => 'gzip-7',
-	'gzip-8' => 'gzip-8',
-	'gzip-9' => 'gzip-9',
-	'zle' => 'zle'
+	'lz4' => 'LZ4',
+	'lzjb' => 'LZJB',
+	'gzip' => 'GZIP',
+	'gzip-1' => 'GZIP-1',
+	'gzip-2' => 'GZIP-2',
+	'gzip-3' => 'GZIP-3',
+	'gzip-4' => 'GZIP-4',
+	'gzip-5' => 'GZIP-5',
+	'gzip-6' => 'GZIP-6',
+	'gzip-7' => 'GZIP-7',
+	'gzip-8' => 'GZIP-8',
+	'gzip-9' => 'GZIP-9',
+	'zle' => 'ZLE'
 ];
 $l_dedup = [
 	'on' => gtext('On'),
@@ -414,7 +414,7 @@ $(window).on("load", function() {
 			<?php
 				html_inputbox2('name', gtext('Name'), $sphere_record['name'], '', true, 60, $isrecordmodify, false, 60);
 				html_combobox2('pool', gtext('Pool'), $sphere_record['pool'], $l_poollist, '', true, $isrecordmodify);
-				html_combobox2('compression', gtext('Compression'), $sphere_record['compression'], $l_compressionmode, gtext("Controls the compression algorithm used for this dataset. The 'lzjb' compression algorithm is optimized for performance while providing decent data compression. Setting compression to 'On' uses the 'lzjb' compression algorithm. You can specify the 'gzip' level by using the value 'gzip-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'gzip' is equivalent to 'gzip-6'."), true);
+				html_combobox2('compression', gtext('Compression'), $sphere_record['compression'], $l_compressionmode, gtext("Controls the compression algorithm used for this dataset. 'LZ4' is now the recommended compression algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if the feature flag lz4_compress is active, otherwise LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is equivalent to 'GZIP-6'."), true);
 				$helpinghand = gtext('Controls the dedup method.')
 					. ' '
 					. '<br><b>'
@@ -426,7 +426,7 @@ $(window).on("load", function() {
 					. '</b></br>';
 				html_combobox2('dedup', gtext('Dedup'), $sphere_record['dedup'], $l_dedup, $helpinghand, true);
 				html_combobox2('sync', gtext('Sync'), $sphere_record['sync'], $l_sync, gtext('Controls the behavior of synchronous requests.'), true);
-				html_combobox2('atime', gtext('Access Time (atime)'), $sphere_record['atime'], $l_atime, gtext('Turn access time on or off for this dataset.'), true);
+				html_combobox2('atime', gtext('Access Time (atime)'), $sphere_record['atime'], $l_atime, gtext('Controls whether the access time for files is updated when they are read. Turning this Off avoids producing write traffic when reading files and can result in significant performance gains.'), true);
 				html_combobox2('aclinherit', gtext('ACL inherit'), $sphere_record['aclinherit'], $l_aclinherit, gtext('This attribute determines the behavior of Access Control List inheritance.'), true);
 				html_combobox2('aclmode', gtext('ACL mode'), $sphere_record['aclmode'], $l_aclmode, gtext('This attribute controls the ACL behavior when a file is created or whenever the mode of a file or a directory is modified.'), true);
 				if ($isrecordnewornewmodify) {
