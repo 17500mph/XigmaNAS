@@ -31,220 +31,259 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-require("services.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
+require 'services.inc';
 
-$pgtitle = array(gtext("Services"),gtext("DLNA/UPnP Fuppes"));
+$sphere_scriptname = basename(__FILE__);
+$sphere_header = 'Location: '.$sphere_scriptname;
+$sphere_header_parent = 'Location: index.php';
+$sphere_array = [];
+$sphere_record = [];
 
-if (!isset($config['upnp']) || !is_array($config['upnp']))
-	$config['upnp'] = array();
+$mode_page = ($_POST) ? PAGE_MODE_POST : PAGE_MODE_EDIT; // detect page mode
+if(PAGE_MODE_POST == $mode_page):
+	if(isset($_POST['submit'])):
+		switch($_POST['submit']):
+			case 'save':
+				break;
+			case 'cancel':
+				header($sphere_header_parent);
+				exit;
+				break;
+			default:
+				header($sphere_header_parent);
+				exit;
+				break;
+		endswitch;
+	endif;
+endif;
 
-if (!isset($config['upnp']['content']) || !is_array($config['upnp']['content']))
-	$config['upnp']['content'] = array();
-
+$sphere_array = &array_make_branch($config,'upnp');
+array_make_branch($config,'upnp','content');
 sort($config['upnp']['content']);
+// we need information about other DLNA services
+array_make_branch($config,'minidlna','content');
 
-$pconfig['enable'] = isset($config['upnp']['enable']);
-$pconfig['name'] = !empty($config['upnp']['name']) ? $config['upnp']['name'] : "";
-$pconfig['if'] = !empty($config['upnp']['if']) ? $config['upnp']['if'] : "";
-$pconfig['port'] = $config['upnp']['port'];
-$pconfig['web'] = isset($config['upnp']['web']);
-$pconfig['home'] = !empty($config['upnp']['home']) ? $config['upnp']['home'] : "";
-$pconfig['profile'] = $config['upnp']['profile'];
-$pconfig['deviceip'] = !empty($config['upnp']['deviceip']) ? $config['upnp']['deviceip'] : "";
-$pconfig['transcoding'] = isset($config['upnp']['transcoding']);
-$pconfig['tempdir'] = !empty($config['upnp']['tempdir']) ? $config['upnp']['tempdir'] : "";
-$pconfig['content'] = $config['upnp']['content'];
-
-// Set name to configured hostname if it is not set.
-if (empty($pconfig['name']))
-	$pconfig['name'] = $config['system']['hostname'];
-
-if ($_POST) {
+if(PAGE_MODE_POST === $mode_page):
 	unset($input_errors);
-	$pconfig = $_POST;
+
+	$sphere_record['enable'] = isset($_POST['enable']);
+	$sphere_record['name'] = $_POST['name'] ?? '';	
+	$sphere_record['if'] = $_POST['if'] ?? '';
+	$sphere_record['port'] = $_POST['port'] ?? '';
+	$sphere_record['home'] = $_POST['home'] ?? '';
+	$sphere_record['profile'] = $_POST['profile'] ?? '';
+	$sphere_record['deviceip'] = $_POST['deviceip'] ?? '';
+	$sphere_record['transcoding'] = isset($_POST['transcoding']);
+	$sphere_record['tempdir'] = $_POST['tempdir'] ?? '';
+	$sphere_record['content'] = is_array($_POST['content']) ? $_POST['content'] : [];
 
 	// Input validation.
-	if (isset($_POST['enable']) && $_POST['enable']) {
-		$reqdfields = explode(" ", "name if port content home");
-		$reqdfieldsn = array(gtext("Name"), gtext("Interface"), gtext("Port"), gtext("Media library"), gtext("Database directory"));
-		$reqdfieldst = explode(" ", "string string port array string");
+	$reqdfields = ['name','if','port','content','home'];
+	$reqdfieldsn = [gtext('Name'),gtext('Interface'),gtext('Port'),gtext('Media library'),gtext('Database directory')];
+	$reqdfieldst = ['string','string','port','array','string'];
+	if(0 === strcmp('Terratec_Noxon_iRadio',$sphere_record['profile'])):
+		$reqdfields[] = 'deviceip';
+		$reqdfieldsn[] = gtext('Device IP');
+		$reqdfieldst[] = 'ipaddr';
+	endif;
+	if($sphere_record['transcoding']):
+		$reqdfields[] = 'tempdir';
+		$reqdfieldsn[] = gtext('Temporary directory');
+		$reqdfieldst[] = 'string';
+	endif;
+	do_input_validation($sphere_record,$reqdfields,$reqdfieldsn,$input_errors);
+	do_input_validation_type($sphere_record,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
 
-		if ("Terratec_Noxon_iRadio" === $_POST['profile']) {
-			$reqdfields = array_merge($reqdfields, array("deviceip"));
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Device IP")));
-			$reqdfieldst = array_merge($reqdfieldst, array("ipaddr"));
-		}
-
-		if (isset($_POST['transcoding'])) {
-			$reqdfields = array_merge($reqdfields, array("tempdir"));
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Temporary directory")));
-			$reqdfieldst = array_merge($reqdfieldst, array("string"));
-		}
-
-		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
-		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
-
-		// Check if port is already used.
-		if (services_is_port_used($_POST['port'], "upnp"))
-			$input_errors[] = sprintf(gtext("The attribute 'Port': port '%ld' is already taken by another service."), $_POST['port']);
-
-		// Check port range.
-		if ($_POST['port'] && ((1024 > $_POST['port']) || (65535 < $_POST['port']))) {
-			$input_errors[] = sprintf(gtext("The attribute '%s': use a port in the range from %d to %d."), gtext("Port"), 1025, 65535);
-		}
-	}
-
-	if (empty($input_errors)) {
-		$config['upnp']['enable'] = isset($_POST['enable']) ? true : false;
-		$config['upnp']['name'] = $_POST['name'];
-		$config['upnp']['if'] = $_POST['if'];
-		$config['upnp']['port'] = $_POST['port'];
-		$config['upnp']['home'] = $_POST['home'];
-		$config['upnp']['profile'] = $_POST['profile'];
-		$config['upnp']['deviceip'] = $_POST['deviceip'];
-		$config['upnp']['transcoding'] = isset($_POST['transcoding']) ? true : false;
-		$config['upnp']['tempdir'] = $_POST['tempdir'];
-		$config['upnp']['content'] = !empty($_POST['content']) ? $_POST['content'] : array();
-
+	// Check if port is already used.
+	if(services_is_port_used($sphere_record['port'],'upnp')):
+		$input_errors[] = sprintf(gtext("The attribute 'Port': port '%ld' is already taken by another service."),$sphere_record['port']);
+	endif;
+	
+	// Check port range.
+	if($sphere_record['port'] && ((1024 > $sphere_record['port']) || (65535 < $sphere_record['port']))):
+		$input_errors[] = sprintf(gtext("The attribute '%s': use a port in the range from %d to %d."),gtext('Port'),1025,65535);
+	endif;
+	
+	// all checks passed
+	if(empty($input_errors)):
+		$sphere_array = $sphere_record;
 		write_config();
-
 		$retval = 0;
-		if (!file_exists($d_sysrebootreqd_path)) {
+		if(!file_exists($d_sysrebootreqd_path)):
 			config_lock();
-			$retval |= rc_update_service("fuppes");
-			$retval |= rc_update_service("mdnsresponder");
+			$retval |= rc_update_service('fuppes');
+			$retval |= rc_update_service('mdnsresponder');
 			config_unlock();
-		}
-
+		endif;
 		$savemsg = get_std_save_message($retval);
-
-		if ($retval == 0) {
-			if (file_exists($d_upnpconfdirty_path))
+		if($retval == 0):
+			if(file_exists($d_upnpconfdirty_path)):
 				unlink($d_upnpconfdirty_path);
-		}
-	}
-}
-
+			endif;
+		endif;
+	endif;
+else:
+	$sphere_record['enable'] = isset($sphere_array['enable']);
+	$sphere_record['name'] = $sphere_array['name'] ?? '';
+	$sphere_record['if'] = $sphere_array['if'] ?? '';
+	$sphere_record['port'] = $sphere_array['port'] ?? '';
+	$sphere_record['home'] = $sphere_array['home'] ?? '';
+	$sphere_record['profile'] = $sphere_array['profile'] ?? '';
+	$sphere_record['deviceip'] = $sphere_array['deviceip'] ?? '';
+	$sphere_record['transcoding'] = isset($sphere_array['transcoding']);
+	$sphere_record['tempdir'] = $sphere_array['tempdir'] ?? '';
+	$sphere_record['content'] = $sphere_array['content'] ?? [];
+endif;
 $a_interface = get_interface_list();
-
-// Use first interface as default if it is not set.
-if (empty($pconfig['if']) && is_array($a_interface))
-	$pconfig['if'] = key($a_interface);
+$l_interfaces = [];
+foreach($a_interface as $k_interface => $ifinfo):
+	$ifinfo = get_interface_info($k_interface);
+	switch($ifinfo['status']):
+		case 'up':
+		case 'associated':
+			$l_interfaces[$k_interface] = $k_interface;
+			break;
+	endswitch;
+endforeach;
+$l_dlna = [
+	'default' => gtext('Default'),
+	'DLNA' => 'DLNA',
+	'Denon_AVR' => 'DENON Network A/V Receiver',
+	'PS3' => 'Sony Playstation 3',
+	'Telegent_TG100' => 'Telegent TG100',
+	'ZyXEL_DMA1000' => 'ZyXEL DMA-1000',
+	'Helios_X3000' => 'Helios X3000',
+	'DLink_DSM320' => 'D-Link DSM-320',
+	'Microsoft_XBox360' => 'Microsoft XBox 360',
+	'Terratec_Noxon_iRadio' => 'Terratec Noxon iRadio',
+	'Yamaha_RXN600' => 'Yamaha RX-N600',
+	'Loewe_Connect' => 'Loewe Connect'
+];
+// Identifiy enabled DLNA services
+$dlna_count = 0;
+if(isset($config['upnp']['enable'])):
+	$dlna_count += 1;
+endif;
+if(isset($config['minidlna']['enable'])):
+	$dlna_count += 2;
+endif;
+// everything greater than 1 indicates that another DLNA service is running somewhere else
+// every odd number  indicates that this DLNA service is enabled.
+switch($dlna_count):
+	case 0:
+		$dlna_option = 0; // DLNA can be enabled, no access to link
+		break;
+	case 1:
+		$dlna_option = 1; // DLNA can be disabled, access to link
+		break;
+	default:
+		if($dlna_count & 1):
+			$dlna_option = 3; // Warning, DLNA can be disabled, access to link
+			$savemsg = gtext('More than one DLNA/UPnP service is active. This configuration might cause issues.');
+		else:
+			$dlna_option = 2; // Warning, DLNA no access to enable, no access to link
+			$savemsg = gtext('Another DLNA/UPnP service is already running. Enabling Fuppes might cause issues.');
+		endif;
+		break;
+endswitch;
+$pgtitle = [gtext('Services'),gtext('DLNA/UPnP Fuppes')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
-<!--
-function enable_change(enable_change) {
-	var endis = !(document.iform.enable.checked || enable_change);
-	document.iform.name.disabled = endis;
-	document.iform.xif.disabled = endis;
-	document.iform.port.disabled = endis;
-	document.iform.home.disabled = endis;
-	document.iform.homebrowsebtn.disabled = endis;
-	document.iform.content.disabled = endis;
-	document.iform.contentaddbtn.disabled = endis;
-	document.iform.contentchangebtn.disabled = endis;
-	document.iform.contentdeletebtn.disabled = endis;
-	document.iform.contentdata.disabled = endis;
-	document.iform.contentbrowsebtn.disabled = endis;
-	document.iform.profile.disabled = endis;
-	document.iform.deviceip.disabled = endis;
-	document.iform.transcoding.disabled = endis;
-	document.iform.tempdir.disabled = endis;
-}
-
+//<![CDATA[
+$(window).on("load", function() {
+	// Init onsubmit()
+	$("#iform").submit(function() {
+		onsubmit_content();
+		spinner();
+	});
+});
 function profile_change() {
 	switch(document.iform.profile.value) {
 		case "Terratec_Noxon_iRadio":
 			showElementById('deviceip_tr','show');
 			break;
-
 		default:
 			showElementById('deviceip_tr','hide');
 			break;
 	}
 }
-
 function transcoding_change() {
 	switch(document.iform.transcoding.checked) {
 		case false:
 			showElementById('tempdir_tr','hide');
 			break;
-
 		case true:
 			showElementById('tempdir_tr','show');
 			break;
 	}
 }
-
-//-->
+//]]>
 </script>
-<form action="services_fuppes.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-	<table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr id="tabnavtbl"><td class="tabnavtbl">
-		<ul id="tabnav">
-			<li class="tabact"><a href="services_fuppes.php"><span><?=gtext("Fuppes")?></span></a></li>
-		    	<li class="tabinact"><a href="services_minidlna.php"><span><?=gtext("MiniDLNA");?></span></a></li>
-			</ul>
-		</td></tr>
-		   <tr>
-			<td class="tabcont">
-				<?php if (true === isset($config['minidlna']['enable'])) {
-					$savemsg = gtext("MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable MiniDLNA first.");
-					if (!empty($savemsg)) print_info_box($savemsg);					
-					}else{?>
-				<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
-				<?php if (!empty($savemsg)) print_info_box($savemsg); ?>
-				<?php if (file_exists($d_upnpconfdirty_path)) print_config_change_box();?>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-				<?php html_titleline_checkbox("enable", gtext("Fuppes Media Server"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
-					<?php html_inputbox("name", gtext("Name"), $pconfig['name'], gtext("Give your media library a friendly name."), true, 35);?>
-				<tr>
-					<td width="22%" valign="top" class="vncellreq"><?=gtext("Interface selection");?></td>
-					<td width="78%" class="vtable">
-					<select name="if" class="formfld" id="xif">
-						<?php foreach($a_interface as $if => $ifinfo):?>
-							<?php $ifinfo = get_interface_info($if); if (("up" == $ifinfo['status']) || ("associated" == $ifinfo['status'])):?>
-							<option value="<?=$if;?>"<?php if ($if == $pconfig['if']) echo "selected=\"selected\"";?>><?=$if?></option>
-							<?php endif;?>
-						<?php endforeach;?>
-					</select>
-					<br /><?=gtext("Select which interface to use. (Only selectable if your server has more than one)");?>
-					</td>
-				</tr>
-					<?php html_inputbox("port", gtext("Port"), $pconfig['port'], sprintf(gtext("Port to listen on. Only dynamic or private ports can be used (from %d through %d). Default port is %d."), 1025, 65535, 49152), true, 5);?>
-					<?php html_filechooser("home", gtext("Database directory"), $pconfig['home'], gtext("Location where the database with media contents will be stored."), $g['media_path'], true, 67);?>
-					<?php html_folderbox("content", gtext("Media library"), !empty($pconfig['content']) ? $pconfig['content'] : array(), gtext("Set the content location(s) to or from the media library."), $g['media_path'], true);?>
-					<?php html_combobox("profile", gtext("Profile"), $pconfig['profile'], array("default" => gtext("Default"), "DLNA" => "DLNA", "Denon_AVR" => "DENON Network A/V Receiver", "PS3" => "Sony Playstation 3", "Telegent_TG100" => "Telegent TG100", "ZyXEL_DMA1000" => "ZyXEL DMA-1000", "Helios_X3000" => "Helios X3000", "DLink_DSM320" => "D-Link DSM320", "Microsoft_XBox360" => "Microsoft XBox 360", "Terratec_Noxon_iRadio" => "Terratec Noxon iRadio", "Yamaha_RXN600" => "Yamaha RX-N600", "Loewe_Connect" => "Loewe Connect"), gtext("Compliant profile to be used."), true, false, "profile_change()");?>
-					<?php html_inputbox("deviceip", gtext("Device IP"), $pconfig['deviceip'], gtext("The device's IP address."), true, 20);?>
-					<?php html_checkbox("transcoding", gtext("Transcoding"), !empty($pconfig['transcoding']) ? true : false, gtext("Enable transcoding."), "", false, "transcoding_change()");?>
-					<?php html_filechooser("tempdir", gtext("Temporary directory"), $pconfig['tempdir'], gtext("Temporary directory to store transcoded files."), $g['media_path'], true, 67);?>
-					<?php html_separator();?>
-					<?php html_titleline(gtext("Administrative WebGUI"));?>
-					<?php
-					$if = get_ifname($pconfig['if']);
-					$ipaddr = get_ipaddr($if);
-					$url = htmlspecialchars("http://{$ipaddr}:{$pconfig['port']}");
-					$text = "<a href='{$url}' target='_blank'>{$url}</a>";
-					?>
-					<?php html_text("url", gtext("URL"), $text);?>
-				</table>
-				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="onsubmit_content(); enable_change(true)" />
-				</div>
-			</td>
-		</tr>
+<table id="area_navigator"><tbody><tr><td class="tabnavtbl">
+	<ul id="tabnav">
+		<li class="tabact"><a href="services_fuppes.php"><span><?=gtext('Fuppes')?></span></a></li>
+		<li class="tabinact"><a href="services_minidlna.php"><span><?=gtext('MiniDLNA');?></span></a></li>
+	</ul>
+</td></tr></tbody></table>
+<table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
+	<?php
+	if(!empty($input_errors)):
+		print_input_errors($input_errors);
+	endif;
+	if(!empty($savemsg)):
+		print_info_box($savemsg);
+	endif;
+	if(file_exists($d_upnpconfdirty_path)):
+		print_config_change_box();
+	endif;
+	?>
+	<table class="area_data_settings">
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+			<?php html_titleline_checkbox2('enable',gtext('Fuppes Media Server'),$sphere_record['enable'],gtext('Enable'));?>
+		</thead>
+		<tbody>
+			<?php
+			html_inputbox2('name',gtext('Name'),$sphere_record['name'],gtext('Give your media library a friendly name.'),true,35,false,false,35,gtext('Media server name'));
+			html_combobox2('if',gtext('Interface Selection'),$sphere_record['if'],$l_interfaces,gtext('Select which interface to use. (Only selectable if your server has more than one interface)'),true);
+			html_inputbox2('port',gtext('Port'),$sphere_record['port'],sprintf(gtext('Port to listen on. Only dynamic or private ports can be used (from %d through %d). Default port is %d.'),1025,65535,49152),true,5);
+			html_filechooser2('home',gtext('Database Directory'),$sphere_record['home'],gtext('Location of the media content database.'), $g['media_path'],true,67);
+			html_folderbox2('content',gtext('Media Library'),$sphere_record['content'],gtext("Set the content location(s) to or from the media library."),$g['media_path'],true);
+			html_combobox2('profile',gtext('Profile'), $sphere_record['profile'],$l_dlna,gtext('Compliant profile to be used.'),true,false,'profile_change()');
+			html_inputbox2('deviceip',gtext('Device IP'),$sphere_record['deviceip'], gtext('The IP address of the device.'),true,20);
+			html_checkbox2('transcoding',gtext('Transcoding'),$sphere_record['transcoding'],gtext('Enable transcoding.'),'',false,false,'transcoding_change()');
+			html_filechooser2('tempdir',gtext('Transcoding Directory'),$sphere_record['tempdir'],gtext('Temporary directory to store transcoded files.'),$g['media_path'],true,67);
+			if($dlna_option & 1):
+				html_separator2();
+				html_titleline2(gtext('Fuppes Media Server Administration'));
+				$if = get_ifname($sphere_record['if']);
+				$ipaddr = get_ipaddr($if);
+				$url = htmlspecialchars(sprintf('http://%s:%s',$ipaddr,$sphere_record['port']));
+				$text = sprintf('<a href="%s" target="_blank">%s</a>',$url,$url);
+				html_text2('url',gtext('URL'),$text);
+			endif;
+			?>
+		</tbody>
 	</table>
-	<?php include("formend.inc");?>
-</form>
-<?php } ?>
+	<div id="submit">
+		<?php
+		echo html_button_save(gtext('Apply'));
+		echo html_button_cancel(gtext('Cancel'));
+		?>
+	</div>
+	<?php
+	include 'formend.inc';?>
+</form></td></tr></tbody></table>
 <script type="text/javascript">
-<!--
+//<![CDATA[
 profile_change();
 transcoding_change();
-enable_change(false);
-//-->
+//]]>
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
