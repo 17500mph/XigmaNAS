@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-03 18:29+0000\n"
-"PO-Revision-Date: 2017-01-01 15:40+0000\n"
+"POT-Creation-Date: 2017-01-03 23:55+0000\n"
+"PO-Revision-Date: 2017-01-03 23:54+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-03 19:26+0000\n"
+"X-Launchpad-Export-Date: 2017-01-04 10:37+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
 "Language: ca_ES\n"
 
@@ -900,6 +900,8 @@ msgid ""
 "Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
 "issues."
 msgstr ""
+"Un altre servei DLNA / UPnP ja s'està executant. Si habilita Fuppes podria "
+"causar problemes."
 
 msgid "Any"
 msgstr "Qualsevol"
@@ -911,7 +913,7 @@ msgid "Apple Filing Protocol"
 msgstr "Protocol de presentació d'Apple."
 
 msgid "Apply"
-msgstr ""
+msgstr "Aplicar"
 
 msgid "Apply Filter"
 msgstr "Aplicar filtre"
@@ -1219,7 +1221,7 @@ msgid "Bridge"
 msgstr "Pont"
 
 msgid "Bridge Settings"
-msgstr ""
+msgstr "Configuració del pont"
 
 msgid "Bring a device online"
 msgstr "Porta el dispositiu en línia"
@@ -1383,13 +1385,13 @@ msgid "Capacity"
 msgstr "Capacitat"
 
 msgid "Carp Settings"
-msgstr ""
+msgstr "Configuració de CARP"
 
 msgid "Case Sensitivity"
 msgstr "Entre majúscules i minúscules"
 
 msgid "Catalan"
-msgstr ""
+msgstr "Català"
 
 msgid ""
 "Causes the server to display the network information for the specified IP "
@@ -1666,19 +1668,20 @@ msgid "Controls the behavior of synchronous requests."
 msgstr "Controla el comportament de les peticions sincronas"
 
 msgid ""
-"Controls the compression algorithm used for this dataset. The 'lzjb' "
-"compression algorithm is optimized for performance while providing decent "
-"data compression. Setting compression to 'On' uses the 'lzjb' compression "
-"algorithm. You can specify the 'gzip' level by using the value 'gzip-N', "
+"Controls the compression algorithm used for this dataset. 'LZ4' is now the "
+"recommended compression algorithm. Setting compression to 'On' uses the LZ4 "
+"compression algorithm if the feature flag lz4_compress is active, otherwise "
+"LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', "
 "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-"Currently, 'gzip' is equivalent to 'gzip-6'."
+"Currently, 'GZIP' is equivalent to 'GZIP-6'."
 msgstr ""
-"Controla l'algoritme utilitzat per el conjunt de dades. L'algoritme de "
-"compressió 'lzjb' està optimitzat per rendiment a la vegada que proveeix "
-"compressió de dades acurada. Al fixar compressió 'ON' fa servir l'algoritme "
-"de compressió 'lzjb'. Pot especificar el nivell 'gzip' fent servir el valor "
-"'gzip-N', N es un integral des de 1 (ràpid) a 9 (millor percentatge de "
-"compressió). Normalment 'gzip' es equivalent a 'gzip-6'."
+"Controla l'algoritme de compressió usat per a aquest conjunt de dades. 'LZ4' "
+"és ara l'algoritme de compressió recomanada. Ajust de compressió a 'On' fa "
+"ús de l'algoritme de compressió LZ4 si el lz4_compress indicador de la "
+"funció està activa, si no s'utilitza lzjb. Es pot especificar el nivell de "
+"'GZIP' utilitzant el valor 'GZIP-N', on N és un nombre enter d'1 (la més "
+"ràpida) a 9 (millor relació de compressió). En l'actualitat, 'GZIP' és "
+"equivalent a 'GZIP-6'."
 
 msgid ""
 "Controls the compression algorithm used for this volume. The 'lzjb' "
@@ -1700,6 +1703,16 @@ msgstr "Controla el mètode dedup"
 
 msgid "Controls the power consumption mode."
 msgstr "Controla el mode de consum d'energia."
+
+msgid ""
+"Controls whether the access time for files is updated when they are read. "
+"Turning this Off avoids producing write traffic when reading files and can "
+"result in significant performance gains."
+msgstr ""
+"Per controlar si el temps d'accés per als arxius s'actualitza quan es "
+"llegeixen. Si desactiveu aquesta opció evita la producció de trànsit "
+"d'escriptura en llegir arxius i pot resultar en guanys significatius en el "
+"rendiment."
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Controla si el conjunt de dades pot ser modificat"
@@ -2057,7 +2070,7 @@ msgid "Data integrity"
 msgstr "Integritat de dades"
 
 msgid "Database Directory"
-msgstr ""
+msgstr "Directori de la base de dades"
 
 msgid "Database directory"
 msgstr "Directori de la base de dades"
@@ -2564,7 +2577,7 @@ msgid "Disks (Info)"
 msgstr "Discos (Info)"
 
 msgid "Disks (Info) Information"
-msgstr ""
+msgstr "Discs (Info) Informació"
 
 msgid "Disks | Mount Point | Management"
 msgstr "Discos | Punt de muntatge | Gestió"
@@ -3364,7 +3377,7 @@ msgstr ""
 "defecte (80 per HTTP, 443 per HTTPS)."
 
 msgid "Enter a description"
-msgstr ""
+msgstr "Introduïu una descripció"
 
 msgid "Enter a description for your reference."
 msgstr "Introduïu una descripció per la teva referència."
@@ -3376,7 +3389,7 @@ msgid "Enter a name for the command."
 msgstr "Introduïu un nom per la ordre"
 
 msgid "Enter a name for this volume"
-msgstr ""
+msgstr "Introduïu un nom per a aquest volum"
 
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
@@ -3576,7 +3589,7 @@ msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
 
 msgid "FRU Information"
-msgstr ""
+msgstr "Informació FRU"
 
 msgid "FTP"
 msgstr "FTP"
@@ -3834,7 +3847,7 @@ msgid "Fuppes Media Server"
 msgstr "Servidor de mitjans Fuppes"
 
 msgid "Fuppes Media Server Administration"
-msgstr ""
+msgstr "Administració servidor de mitjans Fuppes"
 
 msgid ""
 "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
@@ -4371,7 +4384,7 @@ msgid "Information & Manuals"
 msgstr "Manuals i informació"
 
 msgid "Information & Status"
-msgstr ""
+msgstr "Informació i Estat"
 
 msgid "Inherit ACL"
 msgstr "ACL heretat"
@@ -4675,7 +4688,7 @@ msgid "LAGG"
 msgstr "LAGG"
 
 msgid "LAGG Settings"
-msgstr ""
+msgstr "Ajustos Lagg"
 
 msgid "LAN Management"
 msgstr "Gestió LAN"
@@ -4899,7 +4912,7 @@ msgid "Location of the files to share."
 msgstr "Ubicació dels arxius a compartir."
 
 msgid "Location of the media content database."
-msgstr ""
+msgstr "Ubicació de la base de dades de contingut dels mitjans."
 
 msgid "Location where the content database file will be stored."
 msgstr "Lloc on s'emmagatzemarà l'arxiu de dades de contingut."
@@ -5191,13 +5204,13 @@ msgid "Media Directory"
 msgstr "Directori de Mitjans"
 
 msgid "Media Library"
-msgstr ""
+msgstr "Biblioteca multimèdia"
 
 msgid "Media library"
 msgstr "Mediateca"
 
 msgid "Media server name"
-msgstr ""
+msgstr "Nom del servidor multimèdia"
 
 msgid "Medium Acoustic Output"
 msgstr "Emissió acústica mitjà"
@@ -5299,7 +5312,7 @@ msgid "Modified"
 msgstr "Modificat"
 
 msgid "Modify Service"
-msgstr ""
+msgstr "Modifica Servei"
 
 msgid "Modifying"
 msgstr "Modificant"
@@ -5332,6 +5345,8 @@ msgid ""
 "More than one DLNA/UPnP service is active. This configuration might cause "
 "issues."
 msgstr ""
+"Més d'un servei DLNA / UPnP està actiu. Aquesta configuració podria causar "
+"problemes."
 
 msgid "Mount Point"
 msgstr "Punt de muntatge"
@@ -5557,6 +5572,8 @@ msgstr "No hi ha discos disponibles."
 
 msgid "No disks configured, please add disks to view diagnostic information!"
 msgstr ""
+"No hi ha discos configurats, si us plau afegir discos per veure la "
+"informació de diagnòstic!"
 
 msgid "No file was uploaded."
 msgstr "No s'ha pujat cap fitxer."
@@ -6328,7 +6345,7 @@ msgid "Profile"
 msgstr "Perfil"
 
 msgid "Properties"
-msgstr ""
+msgstr "Propietats"
 
 msgid "Proto"
 msgstr "Proto"
@@ -7121,6 +7138,8 @@ msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one interface)"
 msgstr ""
+"Seleccioneu la interfície que ha d'utilitzar. (Només es pot seleccionar si "
+"el servidor té més d'una interfície)"
 
 msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
@@ -7175,10 +7194,10 @@ msgid "Sensor"
 msgstr "Sensor"
 
 msgid "Sensor Information"
-msgstr ""
+msgstr "Informació del sensor"
 
 msgid "Sensor List"
-msgstr ""
+msgstr "Llista de sensors"
 
 msgid "Sep"
 msgstr "Set"
@@ -7581,7 +7600,7 @@ msgid "Static Routes"
 msgstr "Rutes estàtiques"
 
 msgid "Static Routes Settings"
-msgstr ""
+msgstr "Configuració de rutes estàtiques"
 
 msgid "Status"
 msgstr "Estat"
@@ -7937,7 +7956,7 @@ msgid "The IP address of the UPS master."
 msgstr "L'adreça IP del mestre SAI."
 
 msgid "The IP address of the device."
-msgstr ""
+msgstr "L'adreça IP del dispositiu."
 
 msgid "The IP address that this hostname represents."
 msgstr "L'adreça IP que representa aquest nom d'amfitrió."
@@ -9513,7 +9532,7 @@ msgid "Transcoding"
 msgstr "Recodificació"
 
 msgid "Transcoding Directory"
-msgstr ""
+msgstr "Directori de transcodificació"
 
 msgid "Transfer Rate"
 msgstr "Ràtio de transferència"
@@ -9559,9 +9578,6 @@ msgstr "Afinament"
 
 msgid "Turkish"
 msgstr "Turc"
-
-msgid "Turn access time on or off for this dataset."
-msgstr "Convertir el temps d'accés dins o fora d'aquest conjunt de dades."
 
 msgid "Turn the monitor to standby after N seconds."
 msgstr "Posa el monitor en mode d'espera després de N segons"
@@ -9957,7 +9973,7 @@ msgid "VLAN"
 msgstr "VLAN"
 
 msgid "VLAN Settings"
-msgstr ""
+msgstr "Configuració de VLAN"
 
 msgid "VLAN Tag"
 msgstr "Etiqueta VLAN"
@@ -10057,7 +10073,7 @@ msgid "Volume Label"
 msgstr "Etiqueta de volum"
 
 msgid "Volume Mode"
-msgstr ""
+msgstr "Mode de volum"
 
 msgid "Volume Name"
 msgstr "Nom del volum"
@@ -10107,7 +10123,7 @@ msgid "WLAN"
 msgstr "WLAN"
 
 msgid "WLAN Settings"
-msgstr ""
+msgstr "Configuració WLAN"
 
 msgid "WPA"
 msgstr "WPA"
@@ -10573,44 +10589,3 @@ msgstr "versió:"
 
 msgid "week days"
 msgstr "dias de la setmana"
-
-#~ msgid "Static routes"
-#~ msgstr "Rutes estàtiques"
-
-#~ msgid "Link Aggregation and Failover"
-#~ msgstr "Agregació d'enllaç i commutació per error"
-
-#~ msgid ""
-#~ "No disks configured, please add disks to see the diagnostic information of "
-#~ "disks!"
-#~ msgstr ""
-#~ "No hi ha discos configurats, si us plau afegir discos per veure la "
-#~ "informació de diagnòstic de discos!"
-
-#~ msgid "Block size"
-#~ msgstr "Mida del bloc"
-
-#~ msgid "IPMI Sensor"
-#~ msgstr "Sensor IPMI"
-
-#~ msgid "IPMI FRU"
-#~ msgstr "IPMI FRU"
-
-#~ msgid "Disks (Info) information"
-#~ msgstr "Discos (Info) informació"
-
-#~ msgid ""
-#~ "MiniDLNA is enabled. If you wish to use Fuppes, you will need to disable "
-#~ "MiniDLNA first."
-#~ msgstr ""
-#~ "MiniDLNA està habilitada. Si voleu utilitzar Fuppes, hauràs de desactivar "
-#~ "MiniDLNA primer."
-
-#~ msgid "Static Routes Setup"
-#~ msgstr "Configuració de rutes estàtiques"
-
-#~ msgid "The device's IP address."
-#~ msgstr "L'adreça IP del dispositiu."
-
-#~ msgid "Volume mode"
-#~ msgstr "Mode del volum"
