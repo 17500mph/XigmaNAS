@@ -31,10 +31,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Disks"), gtext("Encryption"), gtext("Tools"));
+$pgtitle = [gtext('Disks'),gtext('Encryption'),gtext('Tools')];
 
 // Omit no-cache headers because it confuses IE with file downloads.
 $omit_nocacheheaders = true;
@@ -134,7 +134,7 @@ if ("restore" === $pconfig['action']) {
 	}
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function action_change() {
@@ -263,7 +263,7 @@ function action_change() {
 
 					echo('</pre>');
 				}?>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
@@ -273,4 +273,4 @@ function action_change() {
 action_change();
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

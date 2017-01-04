@@ -31,10 +31,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Disks"), gtext("Mount Point"), gtext("Management"));
+$pgtitle = [gtext('Disks'),gtext('Mount Point'),gtext('Management')];
 
 if ($_POST) {
 	$pconfig = $_POST;
@@ -135,7 +135,7 @@ function mountmanagement_process_updatenotification($mode, $data) {
 	}
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <?php if(!empty($errormsg)) print_input_errors($errormsg);?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
@@ -153,12 +153,13 @@ function mountmanagement_process_updatenotification($mode, $data) {
         <?php if ($savemsg) print_info_box($savemsg);?>
         <?php if (updatenotify_exists("mountpoint")) print_config_change_box();?>
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<?php html_titleline2(gtext('Mount Points'), 6);?>
           <tr>
-            <td width="30%" class="listhdrlr"><?=gtext("Disk");?></td>
-            <td width="15%" class="listhdrr"><?=gtext("File system");?></td>
-            <td width="15%" class="listhdrr"><?=gtext("Name");?></td>
-            <td width="20%" class="listhdrr"><?=gtext("Description");?></td>
-            <td width="13%" class="listhdrr"><?=gtext("Status");?></td>
+            <td width="30%" class="listhdrlr"><?=gtext('Disk');?></td>
+            <td width="15%" class="listhdrr"><?=gtext('File system');?></td>
+            <td width="15%" class="listhdrr"><?=gtext('Name');?></td>
+            <td width="20%" class="listhdrr"><?=gtext('Description');?></td>
+            <td width="13%" class="listhdrr"><?=gtext('Status');?></td>
             <td width="7%" class="list"></td>
           </tr>
 					<?php foreach($a_mount as $mount):?>
@@ -217,9 +218,9 @@ function mountmanagement_process_updatenotification($mode, $data) {
         <div id="remarks">
 		<?php html_remark("Warning", gtext("Warning"), sprintf(gtext("UFS and ZFS are NATIVE filesystems of %s. Attempting to use other filesystems such as EXT2, EXT3, EXT4, FAT, FAT32, or NTFS can result in unpredictable results, file corruption and the loss of data!"), get_product_name()));?>
         </div>
-        <?php include("formend.inc");?>
-      </form>
-    </td>
-  </tr>
+<?php include 'formend.inc';?>
+</form>
+</td>
+</tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

@@ -31,15 +31,15 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
 if (isset($_GET['uuid']))
 	$uuid = $_GET['uuid'];
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = array(gtext("Disks"), gtext("Management"), gtext("Disk"), isset($uuid) ? gtext("Edit") : gtext("Add"));
+$pgtitle = [gtext('Disks'),gtext('Management'),gtext('Disk'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
 // Get all physical disks including CDROM.
 $a_phy_disk = array_merge((array)get_physical_disks_list(), (array)get_cdrom_list());
@@ -156,7 +156,7 @@ if ($_POST) {
 	}
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function enable_change(enable_change) {
@@ -192,22 +192,23 @@ function smart_enable_change() {
 			<form action="disks_manage_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 				<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Disk");?></td>
-						<td width="78%" class="vtable">
-							<select name="name" class="formfld" id="name">
-								<?php foreach ($a_phy_disk as $diskk => $diskv):?>
-								<?php // Do not display disks that are already configured. (Create mode);?>
-								<?php if (!isset($uuid) && (false !== array_search_ex($diskk, $a_disk, "name"))) continue;?>
-								<option value="<?=$diskk;?>" <?php if ($diskk == $pconfig['name']) echo "selected=\"selected\"";?>><?php echo htmlspecialchars($diskk . ": " .$diskv['size'] . " (" . $diskv['model'] . ")");?></option>
-								<?php endforeach;?>
-							</select>
+				<?php html_titleline(gtext("Disk Settings"));?>
+			<tr>
+				<td width="22%" valign="top" class="vncellreq"><?=gtext("Disk");?></td>
+				<td width="78%" class="vtable">
+						<select name="name" class="formfld" id="name">
+						<?php foreach ($a_phy_disk as $diskk => $diskv):?>
+						<?php // Do not display disks that are already configured. (Create mode);?>
+						<?php if (!isset($uuid) && (false !== array_search_ex($diskk, $a_disk, "name"))) continue;?>
+						<option value="<?=$diskk;?>" <?php if ($diskk == $pconfig['name']) echo "selected=\"selected\"";?>><?php echo htmlspecialchars($diskk . ": " .$diskv['size'] . " (" . $diskv['model'] . ")");?></option>
+						<?php endforeach;?>
+						</select>
 					  </td>
 					</tr>
 					<?php
 					html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("You may enter a description here for your reference."), false, 40);
-					$options = array("auto" => "Auto", "PIO0" => "PIO0", "PIO1" => "PIO1", "PIO2" => "PIO2", "PIO3" => "PIO3", "PIO4" => "PIO4", "WDMA2" => "WDMA2", "UDMA2" => "UDMA-33", "UDMA4" => "UDMA-66", "UDMA5" => "UDMA-100", "UDMA6" => "UDMA-133");
-					html_combobox("transfermode", gtext("Transfer mode"), $pconfig['transfermode'], $options, gtext("This allows you to set the transfer mode for ATA/IDE disks."), false);
+					$options = array("auto" => "Automatic", "PIO0" => "PIO0", "PIO1" => "PIO1", "PIO2" => "PIO2", "PIO3" => "PIO3", "PIO4" => "PIO4", "WDMA2" => "WDMA2", "UDMA2" => "UDMA-33", "UDMA4" => "UDMA-66", "UDMA5" => "UDMA-100", "UDMA6" => "UDMA-133");
+					html_combobox("transfermode", gtext("Transfer mode"), $pconfig['transfermode'], $options, gtext("This allows you to set the transfer mode for ATA/IDE disks. You can set 'Automatic' to enable the automatic mode for all SATA/ATA/IDE disks."), false);
 					$options = array(0 => gtext("Always On")); foreach(array(5, 10, 20, 30, 60, 120, 180, 240, 300, 360) as $vsbtime) { $options[$vsbtime] = sprintf("%d %s", $vsbtime, gtext("Minutes")); }
 					html_combobox("harddiskstandby", gtext("HDD standby time"), $pconfig['harddiskstandby'], $options, gtext("Puts the disk into standby mode when the selected amount of time after the last disk access has been elapsed."), false);
 					$options = array(0 => gtext("Disabled"), 1 => gtext("Level 1 - Minimum Power Usage with Standby (Spindown)"), 64 => gtext("Level 64 - Intermediate Power Usage with Standby"), 127 => gtext("Level 127 - Intermediate Power Usage with Standby"), 128 => gtext("Level 128 - Minimum Power Usage without Standby (No Spindown)"), 192 => gtext("Level 192 - Intermediate Power Usage without Standby"), 254 => gtext("Level 254 - Maximum Performance, Maximum Power Usage"));
@@ -237,7 +238,7 @@ function smart_enable_change() {
 					<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
 					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
@@ -249,4 +250,4 @@ enable_change(false);
 smart_enable_change();
 </script>
 <?php endif;?>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

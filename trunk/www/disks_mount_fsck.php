@@ -31,14 +31,14 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
 $gt_remark_1 = gtext('A mounted disk or partition will be unmounted temporarily to perform the requested action.')
 	. '<br />'
 	. gtext('Users will notice a service disruption when trying to access this mount while the file system check is running.');
 
-$pgtitle = array(gtext("Disks"),gtext("Mount Point"),gtext("Fsck"));
+$pgtitle = [gtext('Disks'),gtext('Mount Point'),gtext('Fsck')];
 
 if (!isset($config['mounts']['mount']) || !is_array($config['mounts']['mount']))
 	$config['mounts']['mount'] = array();
@@ -70,7 +70,7 @@ if (!isset($do_action)) {
 	$umount = false;
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabnavtbl">
@@ -127,9 +127,9 @@ if (!isset($do_action)) {
 				<div id="remarks">
 					<?php html_remark("note", gtext("Note"), gtext("You can't unmount a drive which is used by swap file, a iSCSI-target file or any other running process!"));?>
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

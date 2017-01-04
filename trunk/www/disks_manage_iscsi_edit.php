@@ -31,15 +31,15 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
 if (isset($_GET['uuid']))
 	$uuid = $_GET['uuid'];
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = array(gtext("Disks"), gtext("Management"), gtext("iSCSI Initiator"), isset($uuid) ? gtext("Edit") : gtext("Add"));
+$pgtitle = [gtext('Disks'),gtext('Management'),gtext('iSCSI Initiator'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
 if (!isset($config['iscsiinit']['vdisk']) || !is_array($config['iscsiinit']['vdisk']))
 	$config['iscsiinit']['vdisk'] = array();
@@ -127,7 +127,7 @@ if ($_POST) {
 	}
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 <tr>
     <td class="tabnavtbl">
@@ -141,22 +141,23 @@ if ($_POST) {
   </tr>
   <tr>
     <td class="tabcont">
-			<form action="disks_manage_iscsi_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-			  <table width="100%" border="0" cellpadding="6" cellspacing="0">
-			  	<?php html_inputbox("name", gtext("Name"), $pconfig['name'], gtext("This is for information only (not using during iSCSI negotiation)."), true, 20);?>
-					<?php html_inputbox("initiatorname", gtext("Initiator name"), $pconfig['initiatorname'], gtext("This name is for example: iqn.2005-01.il.ac.huji.cs:somebody."), true, 60);?>			
-					<?php html_inputbox("targetname", gtext("Target name"), $pconfig['targetname'], sprintf(gtext("This name is for example: %s."), $ex_iscsitarget), true, 60);?>
-					<?php html_inputbox("targetaddress", gtext("Target address"), $pconfig['targetaddress'], gtext("This the IP address or DNS name of the iSCSI target."), true, 20);?>
-			  </table>
-				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" />
-					<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
-					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
-				</div>
-				<?php include("formend.inc");?>
-			</form>
-		</td>
-	</tr>
+		<form action="disks_manage_iscsi_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
+		<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
+		<table width="100%" border="0" cellpadding="6" cellspacing="0">
+		<?php html_titleline(gtext("iSCSI Initiator Settings"));?>
+		<?php html_inputbox("name", gtext("Name"), $pconfig['name'], gtext("This is for information only (not using during iSCSI negotiation)."), true, 20);?>
+		<?php html_inputbox("initiatorname", gtext("Initiator name"), $pconfig['initiatorname'], gtext("This name is for example: iqn.2005-01.il.ac.huji.cs:somebody."), true, 60);?>			
+		<?php html_inputbox("targetname", gtext("Target name"), $pconfig['targetname'], sprintf(gtext("This name is for example: %s."), $ex_iscsitarget), true, 60);?>
+		<?php html_inputbox("targetaddress", gtext("Target address"), $pconfig['targetaddress'], gtext("This the IP address or DNS name of the iSCSI target."), true, 20);?>
+		</table>
+		<div id="submit">
+		<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" />
+		<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
+		<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
+		</div>
+		<?php include 'formend.inc';?>
+		</form>
+	</td>
+</tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
