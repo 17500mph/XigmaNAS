@@ -15,6 +15,7 @@
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -39,72 +40,72 @@
 $GLOBALS["mimes"]=array(
 
 	// dir, exe, file
-	"dir"		=> "Directory",
-	"exe"		=> "Executable File",
-	"file"		=> "File",
-	"link"		=> "Link",
+	"dir"		=> "Directori",
+	"exe"		=> "Arxiu Executable",
+	"file"		=> "Arxiu",
+	"link"		=> "Enllaç",
 
 	// text
-	"text"		=> "Text File",
+	"text"		=> "Arxiu de text",
 
 	// programming
-	"php"		=> "PHP Script",
-	"sql"		=> "SQL File",
-	"perl"		=> "PERL Script",
-	"html"		=> "HTML Page",
-	"js"		=> "Javascript File",
-	"css"		=> "CSS File",
-	"cgi"		=> "CGI Script",
+	"php"		=> "Script PHP",
+	"sql"		=> "Arxiu SQL",
+	"perl"		=> "Script PERL",
+	"html"		=> "Pàgina HTML",
+	"js"		=> "Arxiu Javascript",
+	"css"		=> "Arxiu CSS",
+	"cgi"		=> "Script CGI",
 
 	// C++
-	"cpps"		=> "C++ Source File",
-	"cpph"		=> "C++ Header File",
+	"cpps"		=> "C++ Arxiu Font",
+	"cpph"		=> "C++ Arxiu Capçalera",
 
 	// Java
-	"javas"		=> "Java Source File",
-	"javac"		=> "Java Class File",
+	"javas"		=> "Arxiu Font Java",
+	"javac"		=> "Arxiu Clase Java",
 
 	// Pascal
-	"pas"		=> "Pascal File",
+	"pas"		=> "Arxiu Pascal",
 
 	// images
-	"gif"		=> "GIF Picture",
-	"jpg"		=> "JPG Picture",
-	"bmp"		=> "BMP Picture",
-	"png"		=> "PNG Picture",
+	"gif"		=> "Imatge GIF",
+	"jpg"		=> "Imatge JPG",
+	"bmp"		=> "Imatge BMP",
+	"png"		=> "Imatge PNG",
 
 	// compressed
-	"zip"		=> "ZIP Archive",
-	"tar"		=> "TAR Archive",
-	"gzip"		=> "GZIP Archive",
-	"bzip2"		=> "BZIP2 Archive",
-	"rar"		=> "RAR Archive",
-	"iso"		=> "ISO File",
-	"mds"		=> "MDS File",
+	"zip"		=> "Arxiu ZIP",
+	"tar"		=> "Arxiu TAR",
+	"gzip"		=> "Arxiu GZIP",
+	"bzip2"		=> "Arxiu BZIP2",
+	"rar"		=> "Arxiu RAR",
+	"iso"		=> "Arxiu ISO",
+	"mds"		=> "Arxiu MDS",
 
 	// music
-	"mp3"		=> "MP3 Audio File",
-	"wav"		=> "WAV Audio File",
-	"midi"		=> "MIDI Audio File",
-	"real"		=> "RealAudio File",
-	"flac"		=> "FLAC Audio File",
+	"mp3"		=> "Arxiu Audio MP3",
+	"wav"		=> "Arxiu Audio WAV",
+	"midi"		=> "Arxiu Audio MIDI",
+	"real"		=> "Arxiu RealAudio",
+	"flac"		=> "Arxiu Audio FLAC",
 
 	// movie
-	"mpg"		=> "MPG File",
-	"mov"		=> "MOV File",
-	"avi"		=> "AVI File",
-	"flash"		=> "Flash File",
-	"mkv"		=> "MKV File",
-	"vob"		=> "VOB File",
+	"mpg"		=> "Arxiu MPG",
+	"mov"		=> "Arxiu MOV",
+	"avi"		=> "Arxiu AVI",
+	"flash"		=> "Arxiu Flash",
+	"mkv"		=> "Arxiu MKV",
+	"vob"		=> "Arxiu VOB",
 
 	// Micosoft / Adobe
-	"word"		=> "Word Document",
-	"excel"		=> "Excel Document",
-	"pdf"		=> "PDF File",
-	"xml"		=> "XML File",
-	"c"		=> "C File",
-	"psd"		=> "Photoshop File",
-	"point"		=> "PowerPoint Presentation"
+	"word"		=> "Document Word",
+	"excel"		=> "Document Excel",
+	"pdf"		=> "Arxiu PDF",
+	"xml"		=> "Arxiu XML",
+	"c"		=> "Arxiu C",
+	"psd"		=> "Arxiu Photoshop",
+	"point"		=> "Presentació PowerPoint"
 );
 
 ?>
