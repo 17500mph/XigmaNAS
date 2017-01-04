@@ -31,15 +31,15 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
 if (isset($_GET['uuid']))
 	$uuid = $_GET['uuid'];
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = array(gtext("Disks"), gtext("Mount Point"), isset($uuid) ? gtext("Edit") : gtext("Add"));
+$pgtitle = [gtext('Disks'),gtext('Mount Point'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
 if (!isset($config['mounts']['mount']) || !is_array($config['mounts']['mount']))
 	$config['mounts']['mount'] = array();
@@ -450,7 +450,7 @@ function getmodectrl($owner, $group, $others) {
     return $newmode;
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function type_change() {
@@ -662,7 +662,7 @@ function enable_change(enable_change) {
 					html_remark("warning", gtext('Warning'), $helpinghand);
 					?>
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
@@ -676,4 +676,4 @@ enable_change(false);
 <?php endif;?>
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

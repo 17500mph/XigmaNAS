@@ -31,10 +31,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Disks"),gtext("Encryption"),gtext("Management"));
+$pgtitle = [gtext('Disks'),gtext('Encryption'),gtext('Management')];
 
 if ($_POST) {
 	unset($input_errors);
@@ -116,14 +116,14 @@ function geli_process_updatenotification($mode, $data) {
 	return $retval;
 }
 ?>
-<?php include("fbegin.inc"); ?>
+<?php include 'fbegin.inc';?>
 <?php if(!empty($errormsg)) print_input_errors($errormsg);?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-        <li class="tabact"><a href="disks_crypt.php" title="<?=gtext('Reload page');?>" ><span><?=gtext("Management");?></span></a></li>
-        <li class="tabinact"><a href="disks_crypt_tools.php"><span><?=gtext("Tools");?></span></a></li>
+        <li class="tabact"><a href="disks_crypt.php" title="<?=gtext('Reload page');?>" ><span><?=gtext('Management');?></span></a></li>
+        <li class="tabinact"><a href="disks_crypt_tools.php"><span><?=gtext('Tools');?></span></a></li>
       </ul>
     </td>
   </tr>
@@ -136,6 +136,7 @@ function geli_process_updatenotification($mode, $data) {
         <?php if (updatenotify_exists_mode("geli", UPDATENOTIFY_MODE_DIRTY)) print_warning_box(gtext("Warning: You are going to delete an encrypted volume. All data will get lost and can not be recovered."));?>
         <?php if (updatenotify_exists("geli")) print_config_change_box();?>
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<?php html_titleline2(gtext('Encryption'), 5);?>
           <tr>
             <td width="25%" class="listhdrlr"><?=gtext("Disk"); ?></td>
             <td width="25%" class="listhdrr"><?=gtext("Data integrity"); ?></td>
@@ -192,9 +193,9 @@ function geli_process_updatenotification($mode, $data) {
 		<input name="import" type="submit" class="formbtn" value="<?=gtext("Import disks");?>" onclick="return confirm('<?=gtext("Do you really want to import?\\nThe existing config may be overwritten.");?>');" />
 		<input name="clear_import" type="submit" class="formbtn" value="<?=gtext("Clear config and Import disks");?>" onclick="return confirm('<?=gtext("Do you really want to clear and import?\\nThe existing config will be cleared and overwritten.");?>');" />
 	</div>
-        <?php include("formend.inc");?>
+        <?php include 'formend.inc';?>
       </form>
 	  </td>
   </tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

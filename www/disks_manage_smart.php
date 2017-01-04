@@ -31,11 +31,11 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-require("email.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
+require 'email.inc';
 
-$pgtitle = array(gtext("Disks"), gtext("Management"), gtext("S.M.A.R.T."));
+$pgtitle = [gtext('Disks'),gtext('Management'),gtext('S.M.A.R.T.')];
 
 $pconfig['enable'] = isset($config['smartd']['enable']);
 $pconfig['interval'] = $config['smartd']['interval'];
@@ -143,7 +143,7 @@ function smartssd_process_updatenotification($mode, $data) {
 	return $retval;
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function enable_change(enable_change) {
@@ -323,7 +323,7 @@ function enable_change(enable_change) {
 				<div id="remarks">
 					<?php html_remark("note", gtext("Note"), gtext("Activate email report if you want to be notified if a failure or a new error has been detected, or if a S.M.A.R.T. command to a disk fails."));?>
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
@@ -333,4 +333,4 @@ function enable_change(enable_change) {
 enable_change(false);
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

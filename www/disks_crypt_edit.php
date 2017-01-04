@@ -31,10 +31,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Disks"),gtext("Encryption"),gtext("Add"));
+$pgtitle = [gtext('Disks'),gtext('Encryption'),gtext('Add')];
 
 if (!isset($config['geli']['vdisk']) || !is_array($config['geli']['vdisk']))
 	$config['geli']['vdisk'] = array();
@@ -136,7 +136,7 @@ if (!isset($pconfig['do_action'])) {
 	$pconfig['devicespecialfile'] = "";
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function ealgo_change() {
@@ -167,8 +167,8 @@ function ealgo_change() {
 	<tr>
     <td class="tabnavtbl">
       <ul id="tabnav">
-        <li class="tabact"><a href="disks_crypt.php" title="<?=gtext('Reload page');?>" ><span><?=gtext("Management");?></span></a></li>
-        <li class="tabinact"><a href="disks_crypt_tools.php"><span><?=gtext("Tools");?></span></a></li>
+        <li class="tabact"><a href="disks_crypt.php" title="<?=gtext('Reload page');?>" ><span><?=gtext('Management');?></span></a></li>
+        <li class="tabinact"><a href="disks_crypt_tools.php"><span><?=gtext('Tools');?></span></a></li>
       </ul>
     </td>
   </tr>
@@ -180,9 +180,9 @@ function ealgo_change() {
 				<?php if (!empty($errormsg)) print_error_box($errormsg);?>
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-				<?php html_titleline(gtext("Encryption Setup"));?>
+				<?php html_titleline(gtext('Encryption Setup'));?>
 			    <tr>
-			      <td valign="top" class="vncellreq"><?=gtext("Disk");?></td>
+			      <td valign="top" class="vncellreq"><?=gtext('Disk');?></td>
 			      <td class="vtable">
 							<select name="disk" class="formfld" id="disk">
 								<option value=""><?=gtext("Must choose one");?></option>
@@ -245,7 +245,7 @@ function ealgo_change() {
 				echo('</pre>');
 				}
 				?>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
@@ -255,4 +255,4 @@ function ealgo_change() {
 ealgo_change();
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
