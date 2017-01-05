@@ -43,7 +43,7 @@ $GLOBALS["mimes"]=array(
 	"dir"		=> "Directori",
 	"exe"		=> "Arxiu Executable",
 	"file"		=> "Arxiu",
-	"link"		=> "Enllaç",
+	"link"		=> "EnllaÃ§",
 
 	// text
 	"text"		=> "Arxiu de text",
@@ -52,14 +52,14 @@ $GLOBALS["mimes"]=array(
 	"php"		=> "Script PHP",
 	"sql"		=> "Arxiu SQL",
 	"perl"		=> "Script PERL",
-	"html"		=> "Pàgina HTML",
+	"html"		=> "PÃ gina HTML",
 	"js"		=> "Arxiu Javascript",
 	"css"		=> "Arxiu CSS",
 	"cgi"		=> "Script CGI",
 
 	// C++
 	"cpps"		=> "C++ Arxiu Font",
-	"cpph"		=> "C++ Arxiu Capçalera",
+	"cpph"		=> "C++ Arxiu CapÃ§alera",
 
 	// Java
 	"javas"		=> "Arxiu Font Java",
@@ -105,7 +105,7 @@ $GLOBALS["mimes"]=array(
 	"xml"		=> "Arxiu XML",
 	"c"		=> "Arxiu C",
 	"psd"		=> "Arxiu Photoshop",
-	"point"		=> "Presentació PowerPoint"
+	"point"		=> "PresentaciÃ³ PowerPoint"
 );
 
 ?>
