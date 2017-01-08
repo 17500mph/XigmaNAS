@@ -124,7 +124,7 @@ setifconfig()
 			-b \
 		-b \
 		${configxml_file} | /usr/local/bin/xml unesc`
-	_ifconfig_args="${ifconfig_args#"${ifconfig_args%%[![:space:]]*}"}"
+	_ifconfig_args="${_ifconfig_args#"${_ifconfig_args%%[![:space:]]*}"}"
 	_ipaddr=`configxml_get "//interfaces/lan/ipaddr"`
 	_subnet=`configxml_get "//interfaces/lan/subnet"`
 	if [ "${_ifn}" = "${_ifn_isboot}" ]; then
@@ -194,7 +194,7 @@ setifconfig()
 					-b \
 				-b \
 				${configxml_file} | /usr/local/bin/xml unesc`
-			_ifconfig_args="${ifconfig_args#"${ifconfig_args%%[![:space:]]*}"}"
+			_ifconfig_args="${_ifconfig_args#"${_ifconfig_args%%[![:space:]]*}"}"
 			_ipaddr=`configxml_get "//interfaces/*[name() = 'opt${_id}']/ipaddr"`
 			_subnet=`configxml_get "//interfaces/*[name() = 'opt${_id}']/subnet"`
 			# "ifconfig hostname" is valid syntax, so it should not set a string.
