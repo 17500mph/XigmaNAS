@@ -38,231 +38,241 @@ require 'auth.inc';
 require 'guiconfig.inc';
 
 $pgtitle = [gtext('Tools'), gtext('Execute command')];
-
-if ((isset($_POST['submit']) && $_POST['submit'] == gtext("Download")) && file_exists($_POST['dlPath'])) {
-	session_cache_limiter('public');
-	$fd = fopen($_POST['dlPath'], "rb");
-	header("Content-Type: application/octet-stream");
-	header("Content-Length: " . get_filesize($_POST['dlPath']));
-	header("Content-Disposition: attachment; filename=\"" . trim(htmlentities(basename($_POST['dlPath']))) . "\"");
-
-	fpassthru($fd);
-	exit;
-} else if ((isset($_POST['submit']) && $_POST['submit'] == gtext("Upload")) && is_uploaded_file($_FILES['ulfile']['tmp_name'])) {
-	move_uploaded_file($_FILES['ulfile']['tmp_name'], "/tmp/" . $_FILES['ulfile']['name']);
-	$ulmsg = "Uploaded file to /tmp/{$_FILES['ulfile']['name']}";
-	unset($_POST['txtCommand']);
-}
-
-$pglocalheader = <<< EOD
-<style type="text/css">
-<!--
-pre {
-   border: 2px solid #555555;
-   background: #F0F0F0;
-   padding: 1em;
-   font-family: courier new, courier;
-   white-space: pre;
-   line-height: 10pt;
-   font-size: 10pt;
-}
--->
-</style>
-EOD;
 ?>
 <?php include 'fbegin.inc';?>
 <?php
 // Function: is Blank
 // Returns true or false depending on blankness of argument.
-function isBlank( $arg ) { return preg_match( "/^\s*$/", $arg ); }
+function isBlank($arg) {
+	return preg_match("/^\s*$/",$arg);
+}
 
-// Function: Puts
-// Put string, Ruby-style.
-function puts( $arg ) { echo "$arg\n"; }
 ?>
 <script type="text/javascript">
-<!--
-   // Create recall buffer array (of encoded strings).
-<?php
-if (!isset($_POST['txtRecallBuffer']) || isBlank( $_POST['txtRecallBuffer'] )) {
-   puts( "   var arrRecallBuffer = new Array;" );
-} else {
-   puts( "   var arrRecallBuffer = new Array(" );
-   $arrBuffer = explode( "&", $_POST['txtRecallBuffer'] );
-   for ($i=0; $i < (count( $arrBuffer ) - 1); $i++) puts( "      '" . $arrBuffer[$i] . "'," );
-   puts( "      '" . $arrBuffer[count( $arrBuffer ) - 1] . "'" );
-   puts( "   );" );
-}
-?>
-   // Set pointer to end of recall buffer.
-   var intRecallPtr = arrRecallBuffer.length;
+//<![CDATA[
+$(window).on("load", function() {
+	// Init onsubmit()
+	$("#iform").submit(function() {
+		onsubmit_content();
+		spinner();
+	});
+	$("#txtCommand").click(function () { txtCommand_onKey(event) });
+});
 
-   // Functions to extend String class.
-   function str_encode() { return escape( this ) }
-   function str_decode() { return unescape( this ) }
+	// Create recall buffer array (of encoded strings).
+	<?php
+	if(!isset($_POST['txtRecallBuffer']) || isBlank( $_POST['txtRecallBuffer'] )):
+		echo "   var arrRecallBuffer = new Array;\n";
+	else:
+		echo "   var arrRecallBuffer = new Array(\n";
+		$arrBuffer = explode( "&", $_POST['txtRecallBuffer'] );
+		for ($i=0;$i < (count($arrBuffer)-1);$i++):
+			echo "      '",$arrBuffer[$i],"',\n";
+		endfor;
+		echo "      '",$arrBuffer[count( $arrBuffer ) - 1],"'\n";
+		echo "   );\n";
+	endif;
+	?>
+	// Set pointer to end of recall buffer.
+	var intRecallPtr = arrRecallBuffer.length;
 
-   // Extend string class to include encode() and decode() functions.
-   String.prototype.encode = str_encode
-   String.prototype.decode = str_decode
+	// Functions to extend String class.
+	function str_encode() { return escape( this ) }
+	function str_decode() { return unescape( this ) }
 
-   // Function: is Blank
-   // Returns boolean true or false if argument is blank.
-   function isBlank( strArg ) { return strArg.match( /^\s*$/ ) }
+	// Extend string class to include encode() and decode() functions.
+	String.prototype.encode = str_encode
+	String.prototype.decode = str_decode
 
-   // Function: frmExecPlus onSubmit (event handler)
-   // Builds the recall buffer from the command string on submit.
-   function frmExecPlus_onSubmit( form ) {
-      if (!isBlank(form.txtCommand.value)) {
-		  // If this command is repeat of last command, then do not store command.
-		  if (form.txtCommand.value.encode() == arrRecallBuffer[arrRecallBuffer.length-1]) { return true }
+	// Function: is Blank
+	// Returns boolean true or false if argument is blank.
+	function isBlank( strArg ) { return strArg.match( /^\s*$/ ) }
 
-		  // Stuff encoded command string into the recall buffer.
-		  if (isBlank(form.txtRecallBuffer.value))
-			 form.txtRecallBuffer.value = form.txtCommand.value.encode();
-		  else
-			 form.txtRecallBuffer.value += '&' + form.txtCommand.value.encode();
-	  }
+	// Function: frmExecPlus onSubmit (event handler)
+	// Builds the recall buffer from the command string on submit.
+	function frmExecPlus_onSubmit( form ) {
+		if (!isBlank(form.txtCommand.value)) {
+			// If this command is repeat of last command, then do not store command.
+			if (form.txtCommand.value.encode() == arrRecallBuffer[arrRecallBuffer.length-1]) { return true }
+			// Stuff encoded command string into the recall buffer.
+			if (isBlank(form.txtRecallBuffer.value))
+				form.txtRecallBuffer.value = form.txtCommand.value.encode();
+			else
+				form.txtRecallBuffer.value += '&' + form.txtCommand.value.encode();
+		}
+		return true;
+	}
 
-    return true;
-   }
+	// Function: btnRecall onClick (event handler)
+	// Recalls command buffer going either up or down.
+	function btnRecall_onClick( form, n ) {
+		// If nothing in recall buffer, then error.
+		if (!arrRecallBuffer.length) {
+			alert( 'Nothing to recall!' );
+			form.txtCommand.focus();
+			return;
+		}
+		// Increment recall buffer pointer in positive or negative direction
+		// according to <n>.
+		intRecallPtr += n;
+		// Make sure the buffer stays circular.
+		if (intRecallPtr < 0) { intRecallPtr = arrRecallBuffer.length - 1 }
+		if (intRecallPtr > (arrRecallBuffer.length - 1)) { intRecallPtr = 0 }
+		// Recall the command.
+		form.txtCommand.value = arrRecallBuffer[intRecallPtr].decode();
+	}
 
-   // Function: btnRecall onClick (event handler)
-   // Recalls command buffer going either up or down.
-   function btnRecall_onClick( form, n ) {
-      // If nothing in recall buffer, then error.
-      if (!arrRecallBuffer.length) {
-         alert( 'Nothing to recall!' );
-         form.txtCommand.focus();
-         return;
-      }
+	// Function: Reset onClick (event handler)
+	// Resets form on reset button click event.
+	function Reset_onClick( form ) {
+		// Reset recall buffer pointer.
+		intRecallPtr = arrRecallBuffer.length;
+		// Clear form (could have spaces in it) and return focus ready for cmd.
+		form.txtCommand.value = '';
+		form.txtCommand.focus();
+		return true;
+	}
 
-      // Increment recall buffer pointer in positive or negative direction
-      // according to <n>.
-      intRecallPtr += n;
-
-      // Make sure the buffer stays circular.
-      if (intRecallPtr < 0) { intRecallPtr = arrRecallBuffer.length - 1 }
-      if (intRecallPtr > (arrRecallBuffer.length - 1)) { intRecallPtr = 0 }
-
-      // Recall the command.
-      form.txtCommand.value = arrRecallBuffer[intRecallPtr].decode();
-   }
-
-   // Function: Reset onClick (event handler)
-   // Resets form on reset button click event.
-   function Reset_onClick( form ) {
-      // Reset recall buffer pointer.
-      intRecallPtr = arrRecallBuffer.length;
-
-      // Clear form (could have spaces in it) and return focus ready for cmd.
-      form.txtCommand.value = '';
-      form.txtCommand.focus();
-
-      return true;
-   }
-
-   // hansmi, 2005-01-13
-   function txtCommand_onKey(e) {
-       if(!e) var e = window.event; // IE-Fix
-       var code = (e.keyCode?e.keyCode:(e.which?e.which:0));
-       if(!code) return;
-       var f = document.getElementsByName('frmExecPlus')[0];
-       if(!f) return;
-       switch(code) {
-       case 38: // up
-           btnRecall_onClick(f, -1);
-           break;
-       case 40: // down
-           btnRecall_onClick(f, 1);
-           break;
-       }
-   }
-//-->
+	// hansmi, 2005-01-13
+	function txtCommand_onKey(e) {
+		if(!e) var e = window.event; // IE-Fix
+		var code = (e.keyCode?e.keyCode:(e.which?e.which:0));
+		if(!code) return;
+		var f = document.getElementsByName('frmExecPlus')[0];
+		if(!f) return;
+		switch(code) {
+			case 38: // up
+				btnRecall_onClick(f, -1);
+				break;
+			case 40: // down
+				btnRecall_onClick(f, 1);
+				break;
+		}
+	}
+//]]>
 </script>
-<?php if (!isset($_POST['txtCommand']) || isBlank($_POST['txtCommand'])): ?>
-<p class="red"><strong><?=gtext('Warning');?>: <?=gtext("This is a very powerful tool. Use it on your own risk!");?></strong></p>
-<?php endif; ?>
-<?php if (!empty($ulmsg)) echo "<p><strong>" . $ulmsg . "</strong></p>\n"; ?>
-<?php
-if (isset($_POST['txtCommand']) && !isBlank($_POST['txtCommand'])) {
-	puts("<pre>");
-	puts("\$ " . htmlspecialchars($_POST['txtCommand']));
-	putenv("PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin");
-	putenv("SCRIPT_FILENAME=" . strtok($_POST['txtCommand'], " "));	/* PHP scripts */
-	$ph = popen($_POST['txtCommand'], "r" );
-	while ($line = fgets($ph)) echo htmlspecialchars($line);
-	pclose($ph);
-	puts("</pre>");
-}
-
-if (isset($_POST['txtPHPCommand']) && !isBlank($_POST['txtPHPCommand'])) {
-	puts("<pre>");
-	require_once("config.inc");
-	require_once("functions.inc");
-	require_once("util.inc");
-	require_once("rc.inc");
-	require_once("email.inc");
-	require_once("tui.inc");
-	require_once("array.inc");
-	require_once("services.inc");
-	require_once("zfs.inc");
-	echo eval($_POST['txtPHPCommand']);
-	puts("</pre>");
-}
-?>
-<form action="<?=$_SERVER['SCRIPT_NAME'];?>" method="post" enctype="multipart/form-data" name="frmExecPlus" id="frmExecPlus" onsubmit="return frmExecPlus_onSubmit( this );">
-<table>
-	<tr>
-	<td class="label" align="right"><?=gtext("Command");?></td>
-	<td class="type"><input name="txtCommand" type="text" size="80" value="" onkeypress="txtCommand_onKey(event);" /></td>
-	</tr>
-	<tr>
-	<td valign="top">&nbsp;</td>
-	<td valign="top" class="label">
-	<input type="hidden" name="txtRecallBuffer" value="<?=!empty($_POST['txtRecallBuffer']) ? $_POST['txtRecallBuffer'] : "" ?>" />
-	<input type="button" class="formbtn" name="btnRecallPrev" value="&lt;" onclick="btnRecall_onClick( this.form, -1 );" />
-	<input type="submit" class="formbtn" value="<?=gtext("Execute");?>" />
-	<input type="button" class="formbtn" name="btnRecallNext" value="&gt;" onclick="btnRecall_onClick( this.form,  1 );" />
-	<input type="button"  class="formbtn" value="<?=gtext("Clear");?>" onclick="return Reset_onClick( this.form );" />
-	</td>
-	</tr>
-	<tr>
-	<td height="8"></td>
-	<td></td>
-	</tr>
-	<tr>
-	<td align="right"><?=gtext("Download");?></td>
-	<td>
-        <input name="dlPath" type="text" id="dlPath" size="56" value="" />
-        <input name="browse" type="button" class="formbtn" id="Browse" onclick='ifield = form.dlPath; filechooser = window.open("filechooser.php?p="+encodeURIComponent(ifield.value), "filechooser", "scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300"); filechooser.ifield = ifield; window.ifield = ifield;' value="..." />
-        <input name="submit" type="submit" class="formbtn" id="download" value="<?=gtext("Download");?>" />
-        </td>
-	</tr>
-	<tr>
-	<td align="right"><?=gtext("Upload");?></td>
-	<td valign="top" class="label">
-	<input name="ulfile" type="file" class="formbtn" id="ulfile" />
-	<input name="submit" type="submit"  class="formbtn" id="upload" value="<?=gtext("Upload");?>" /></td>
-	</tr>
-	<tr>
-	<td colspan="2" valign="top" height="16"></td>
-	</tr>
-	<tr>
-	<td align="right"><?=gtext("PHP Command");?></td>
-	<td class="type"><textarea id="txtPHPCommand" name="txtPHPCommand" rows="3" cols="49" wrap="off"><?=htmlspecialchars(!empty($_POST['txtPHPCommand']) ? $_POST['txtPHPCommand'] : "");?></textarea></td>
-	</tr>
-	<tr>
-	<td valign="top">&nbsp;&nbsp;&nbsp;</td>
-	<td valign="top" class="label">
-	<input type="submit" class="button" value="<?=gtext("Execute");?>" />
-	</td>
-	</tr>
-</table>
-<?php include 'formend.inc';?>
+<form action="<?=$_SERVER['SCRIPT_NAME'];?>" method="post" enctype="multipart/form-data" name="frmExecPlus" id="frmExecPlus" onsubmit="return frmExecPlus_onSubmit(this);">
+	<table id="area_data"><tbody><tr><td id="area_data_frame">
+		<?php
+		print_info_box(gtext('This is a very powerful tool. Use it on your own risk!'));
+		?>
+		<table class="area_data_settings">
+			<colgroup>
+				<col class="area_data_settings_col_tag">
+				<col class="area_data_settings_col_data">
+			</colgroup>
+			<thead>
+				<?php html_titleline2(gtext('Command'));?>
+			</thead>
+			<tfoot>
+			</tfoot>
+			<tbody>
+				<?php
+				html_inputbox2('txtCommand',gtext('Command'),'','',false,80,false,false,1024,gtext('Enter Command'))
+				?>
+				<tr>
+					<td class="celltag"><?=gtext('Control');?></td>
+					<td class="celldata">
+						<input type="hidden" name="txtRecallBuffer" value="<?=!empty($_POST['txtRecallBuffer']) ? $_POST['txtRecallBuffer'] : "" ?>" />
+						<input type="button" class="formbtn" name="btnRecallPrev" value="&lt;" onclick="btnRecall_onClick( this.form, -1 );"/>
+						<input type="submit" class="formbtn" value="<?=gtext('Execute');?>" />
+						<input type="button" class="formbtn" name="btnRecallNext" value="&gt;" onclick="btnRecall_onClick( this.form,  1 );"/>
+						<input type="button" class="formbtn" value="<?=gtext("Clear");?>" onclick="return Reset_onClick( this.form );"/>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="area_data_settings">
+			<colgroup>
+				<col class="area_data_settings_col_tag">
+				<col class="area_data_settings_col_data">
+			</colgroup>
+			<thead>
+				<?php html_separator2();?>
+				<?php html_titleline2(gtext('PHP Command'));?>
+			</thead>
+			<tfoot>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td class="celltag"><?=gtext('PHP Command');?></td>
+					<td class="celldata"><textarea id="txtPHPCommand" name="txtPHPCommand" rows="3" cols="49" wrap="off"><?=htmlspecialchars(!empty($_POST['txtPHPCommand']) ? $_POST['txtPHPCommand'] : '');?></textarea></td>
+				</tr>
+				<tr>
+					<td class="celltag"><?=gtext('Control');?></td>
+					<td class="celldata">
+						<input type="submit" class="formbtn" value="<?=gtext('Execute');?>" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<?php
+		if(isset($_POST['txtCommand'])):
+			if(!isBlank($_POST['txtCommand'])):?>
+				<table class="area_data_settings">
+					<colgroup>
+						<col class="area_data_settings_col_tag">
+						<col class="area_data_settings_col_data">
+					</colgroup>
+					<thead>
+						<?php html_separator2();?>
+						<?php html_titleline2(gtext('Command Output'));?>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+				<?php
+				echo '<div>','<pre class="celldata">';
+						echo "\$ ",htmlspecialchars($_POST['txtCommand']);
+						putenv('PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin');
+						putenv('COLUMNS=1024');
+						putenv("SCRIPT_FILENAME=" .strtok($_POST['txtCommand'],' ')); /* PHP scripts */
+						$ph = popen($_POST['txtCommand'],'r');
+						while($line = fgets($ph)):
+							echo htmlspecialchars($line);
+						endwhile;
+						pclose($ph);
+					echo '</pre>','</div>';
+			endif;
+		endif;
+		?>
+		<?php
+		if(isset($_POST['txtPHPCommand'])):
+			if(!isBlank($_POST['txtPHPCommand'])):?>
+				<table class="area_data_settings">
+					<colgroup>
+						<col class="area_data_settings_col_tag">
+						<col class="area_data_settings_col_data">
+					</colgroup>
+					<thead>
+						<?php html_separator2();?>
+						<?php html_titleline2(gtext('PHP Command Output'));?>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+				<?php
+				echo '<div>','<pre class="celldata">';
+					require_once('config.inc');
+					require_once('functions.inc');
+					require_once('util.inc');
+					require_once('rc.inc');
+					require_once('email.inc');
+					require_once('tui.inc');
+					require_once('array.inc');
+					require_once('services.inc');
+					require_once('zfs.inc');
+					echo eval($_POST['txtPHPCommand']);
+				echo '</pre>','</div>';
+			endif;
+		endif;
+		?>
+	</td></tr></tbody></table>
+	<?php include 'formend.inc';?>
 </form>
 <script type="text/javascript">
-<!--
-  document.forms[0].txtCommand.focus();
-//-->
+//<![CDATA[
+document.forms[0].txtCommand.focus();
+//]]>
 </script>
 <?php include 'fend.inc';?>
