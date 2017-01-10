@@ -92,6 +92,7 @@ mkdir usr ;
 mkdir usr/bin ;
 mkdir usr/lib ;
 mkdir usr/lib/aout ;
+mkdir usr/lib/engines ;
 mkdir usr/libexec ;
 mkdir usr/libexec/bsdconfig ;
 mkdir usr/libexec/bsdconfig/include ;

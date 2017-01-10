@@ -983,8 +983,15 @@ usr/share/locale/en_US.UTF-8/
 usr/lib/pam_*.so.*
 usr/lib/libcasper.so
 
+####### contents of /usr/lib/engines
+# needed for samba-nsupdate
+usr/lib/engines/libgost.so
+
 ####### contents of /lib/casper
 lib/casper/libcap_*.so
+
+# SNMP modules
+usr/lib/snmp_hostres.so.*:usr/lib/snmp_hostres.so
 
 # SNMP modules
 usr/lib/snmp_hostres.so.*:usr/lib/snmp_hostres.so
