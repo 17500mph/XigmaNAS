@@ -37,7 +37,7 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-$pgtitle = [gtext('Tools'), gtext('Execute command')];
+$pgtitle = [gtext('Tools'), gtext('Execute Command')];
 ?>
 <?php include 'fbegin.inc';?>
 <?php
