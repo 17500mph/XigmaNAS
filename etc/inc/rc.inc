@@ -106,6 +106,19 @@ function rc_reload_service($name) {
 	return $retval;
 }
 
+// Rescan service.
+// Return 0 if successful, otherwise 1.
+function rc_rescan_service($name) {
+	// Execute script.
+	$retval = rc_exec_script(sprintf('/etc/rc.d/%s rescan',$name));
+	if(0 == $retval):
+		write_log(sprintf('%s: rescan command issued',$name));
+	else:
+		write_log(sprintf('%s: rescan command failed',$name));
+	endif;
+	return $retval;
+}
+
 // Stop service.
 // Return 0 if successful, otherwise 1.
 function rc_stop_service($name) {
