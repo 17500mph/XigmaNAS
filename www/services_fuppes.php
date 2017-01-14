@@ -40,6 +40,7 @@ $sphere_header = 'Location: '.$sphere_scriptname;
 $sphere_header_parent = 'Location: index.php';
 $sphere_array = [];
 $sphere_record = [];
+$gt_apply_confirm = gtext('Do you want to apply these settings?');
 
 $mode_page = ($_POST) ? PAGE_MODE_POST : PAGE_MODE_EDIT; // detect page mode
 if(PAGE_MODE_POST == $mode_page):
@@ -198,6 +199,9 @@ $(window).on("load", function() {
 	$("#iform").submit(function() {
 		onsubmit_content();
 		spinner();
+	});
+	$("#button_save").click(function () {
+		return confirm('<?=$gt_apply_confirm;?>');
 	});
 });
 function profile_change() {
