@@ -696,6 +696,13 @@ function html_button_cancel(string $value = NULL) {
 	$o_button = $root->addElement($element, $attributes, $value);
 	return $root->render();
 }
+function html_button_rescan(string $value = NULL) {
+	$root = new co_DOMDocument();
+	$element = 'button';
+	$attributes = ['name' => 'submit', 'type' => 'submit', 'class' => 'formbtn', 'value' => 'rescan', 'id' => 'button_rescan'];
+	$o_button = $root->addElement($element, $attributes, $value);
+	return $root->render();
+}
 function html_button_toggle_rows(string $value = NULL) {
 	$root = new co_DOMDocument();
 	$element = 'button';
