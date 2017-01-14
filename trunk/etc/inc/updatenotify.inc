@@ -55,6 +55,7 @@ define("RECORD_DELETE_MODIFY", 32);
 define("RECORD_DELETE_DELETE", 33);
 
 // Parameter to define the mode of a page
+define("PAGE_MODE_VIEW", 0);
 define("PAGE_MODE_ADD", 1);
 define("PAGE_MODE_EDIT", 2);
 define("PAGE_MODE_POST", 3);
