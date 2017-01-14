@@ -685,14 +685,14 @@ function html_minidlnabox2($ctrlname, $title, $value, $desc, $path, $required = 
 function html_button_save(string $value = NULL) {
 	$root = new co_DOMDocument();
 	$element = 'button';
-	$attributes = ['name' => 'submit', 'type' => 'submit', 'class' => 'formbtn', 'value' => 'save', 'id' => 'button.save'];
+	$attributes = ['name' => 'submit', 'type' => 'submit', 'class' => 'formbtn', 'value' => 'save', 'id' => 'button_save'];
 	$o_button = $root->addElement($element, $attributes, $value);
 	return $root->render();
 }
 function html_button_cancel(string $value = NULL) {
 	$root = new co_DOMDocument();
 	$element = 'button';
-	$attributes = ['name' => 'submit', 'type' => 'submit', 'class' => 'formbtn', 'value' => 'cancel', 'id' => 'button.cancel'];
+	$attributes = ['name' => 'submit', 'type' => 'submit', 'class' => 'formbtn', 'value' => 'cancel', 'id' => 'button_cancel'];
 	$o_button = $root->addElement($element, $attributes, $value);
 	return $root->render();
 }
