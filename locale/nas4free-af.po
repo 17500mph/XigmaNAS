@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-14 15:25+0000\n"
-"PO-Revision-Date: 2017-01-05 21:17+0000\n"
-"Last-Translator: zoon01 <Unknown>\n"
+"POT-Creation-Date: 2017-01-15 01:10+0000\n"
+"PO-Revision-Date: 2017-01-15 00:15+0000\n"
+"Last-Translator: winston <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-14 14:42+0000\n"
+"X-Launchpad-Export-Date: 2017-01-15 00:42+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 
 msgid " interfaces:"
@@ -217,6 +217,8 @@ msgid ""
 "A Initiator Group contains authorised initiator names and networks to access "
 "the target."
 msgstr ""
+"Die inisieerder groep bevat  gemagtigde inisieerder name en netwerke om "
+"toegang tot die teiken te kry"
 
 msgid ""
 "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
@@ -228,6 +230,8 @@ msgid ""
 "A Portal Group contains IP addresses and listening TCP ports to connect the "
 "target from the initiator."
 msgstr ""
+"Die portaal groep bevat IP addresse en luister neem plaas op TCP poorte om "
+"te konnekteer met die teiken vanaf die inisieerder"
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -499,7 +503,7 @@ msgid "Add Volume"
 msgstr "Voeg Volume by"
 
 msgid "Add a cache device to a pool"
-msgstr ""
+msgstr "Voeg 'n kasgeheue toestel by die poel"
 
 msgid "Add a log device to a pool"
 msgstr "Voeg 'n aanmeld toestel by die poel"
@@ -535,10 +539,10 @@ msgid "Add group"
 msgstr "Voeg groep by"
 
 msgid "Add initiator"
-msgstr ""
+msgstr "Voeg  inisieerder by"
 
 msgid "Add initiator group"
-msgstr ""
+msgstr "Voeg  inisieerder groep by"
 
 msgid "Add interface"
 msgstr "Voeg koppelvlak by"
@@ -641,7 +645,7 @@ msgid "Advanced settings"
 msgstr "Gevorderde instellings"
 
 msgid "Advertisement skew"
-msgstr ""
+msgstr "Advertensie skeefheid"
 
 msgid "Afrikaans"
 msgstr "Afrikaans"
@@ -838,6 +842,8 @@ msgid ""
 "Amplitude of 'thrashing' (distance of repetitive forward/reverse head "
 "motion)."
 msgstr ""
+"Amplitude van 'ransel' (distansie van herhalende voorwaarts/teenoorgesteld "
+"hoof beweging)"
 
 msgid ""
 "An Auth Group is identified by a tag number and is optional. If the Target "
@@ -855,6 +861,8 @@ msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
 "initiator names and networks."
 msgstr ""
+"Die inisieerder groep word geidentifiseer met 'n adreskaart nommer en "
+"definieer die gemagtigde inisieerder name en netwerke"
 
 msgid "An empty field is default."
 msgstr "'n Leë veld is standaard."
@@ -894,6 +902,8 @@ msgid ""
 "Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
 "issues."
 msgstr ""
+"No 'n DLNA/UPnP diens hardloop alreeds. Om Fuppes te magtig mag probleme "
+"veroorsaak"
 
 msgid "Any"
 msgstr "Enige"
@@ -905,7 +915,7 @@ msgid "Apple Filing Protocol"
 msgstr "Apple Indiening Protokol"
 
 msgid "Apply"
-msgstr ""
+msgstr "Wend aan"
 
 msgid "Apply Filter"
 msgstr "Pas Filter Toe"
@@ -936,12 +946,14 @@ msgid "Are you sure you want to shutdown the server?"
 msgstr "Is jy seker dat jy die bediener wil afsit?"
 
 msgid "Asynchronous I/O (AIO)"
-msgstr ""
+msgstr "Asynchrone Inset/Uitset I/O (AIO)"
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
 "made up of one or more extents."
 msgstr ""
+"Op die hoogste vlak, word 'n teiken by die inisieerder voorgestel, en dit "
+"bestaan uit een of meer beslagleggings"
 
 msgid "Attach a data device"
 msgstr "Heg 'n data toestel aan"
@@ -989,16 +1001,16 @@ msgid "Authenticate path & realm"
 msgstr "Kontroleer pad en ryk"
 
 msgid "Authentication"
-msgstr ""
+msgstr "Bekragtiging"
 
 msgid "Authentication Method"
-msgstr ""
+msgstr "Bekragtiging's metode"
 
 msgid "Authorised network"
 msgstr "Gemagtige netwek"
 
 msgid "Auths"
-msgstr ""
+msgstr "Bekragtigings"
 
 msgid "Auto"
 msgstr "Outomaties"
@@ -1007,7 +1019,7 @@ msgid "Auto Snapshot"
 msgstr "Outomatiese Momentopname"
 
 msgid "Auto page refresh."
-msgstr ""
+msgstr "Automaties bladsy verfrissing"
 
 msgid "Auto size"
 msgstr "Outomatiese grootte"
@@ -1025,13 +1037,13 @@ msgid "Autoselect"
 msgstr "Sekekteer outomaties"
 
 msgid "Auxiliary Parameters"
-msgstr ""
+msgstr "Hulp parameters"
 
 msgid "Auxiliary device firmware"
-msgstr ""
+msgstr "Hulp toestel fermware"
 
 msgid "Auxiliary parameters"
-msgstr ""
+msgstr "Hulp parameters"
 
 msgid "Avail"
 msgstr "Beskikbaar"
@@ -1052,6 +1064,8 @@ msgstr ""
 
 msgid "Average time of spindle spin up (from zero RPM to fully operational)."
 msgstr ""
+"Gemiddelde tyd vir aandryfas om te begin draai (van nul RPM tot volle "
+"werking)"
 
 msgid "Back"
 msgstr "Terug"
@@ -1084,7 +1098,7 @@ msgid "Banner"
 msgstr "Bannier"
 
 msgid "Base DN"
-msgstr ""
+msgstr "Basis DN"
 
 msgid "Base Name"
 msgstr "Basis Naam"
@@ -1092,6 +1106,7 @@ msgstr "Basis Naam"
 msgid ""
 "Base Name will be appended automatically when starting without 'iqn.'."
 msgstr ""
+"Basis Naam sal automaties toegevoeg word wanneer daar sonder 'ign' begin word"
 
 msgid "Battery Details"
 msgstr "Battery Besonderhede"
@@ -1154,7 +1169,7 @@ msgid "Best available"
 msgstr "Beste beskikbaar"
 
 msgid "Bind DN"
-msgstr ""
+msgstr "Koppeling DN"
 
 msgid "Bind password"
 msgstr "Bind wagwoord"
@@ -1171,10 +1186,10 @@ msgstr ""
 "vir die lêergids %s!"
 
 msgid "Blank Time"
-msgstr ""
+msgstr "Blanko Tyd"
 
 msgid "Blank time"
-msgstr ""
+msgstr "Blanko tyd"
 
 msgid "Block Size"
 msgstr "Blok Grootte"
@@ -1183,33 +1198,39 @@ msgid "Blocksize"
 msgstr "blokgrootte"
 
 msgid "Boot Arguments"
-msgstr ""
+msgstr "Selflaai Parameters"
 
 msgid "Boot Loader"
-msgstr ""
+msgstr "Selflaaiprogram"
 
 #, php-format
 msgid "Boot argument (e.g. %s)."
-msgstr ""
+msgstr "Selflaai parameters (bv. %s)."
 
 #, php-format
 msgid "Boot loader (e.g. %s)."
-msgstr ""
+msgstr "Selflaaiprogram (bv. %s)."
 
 #, php-format
 msgid ""
 "Boot partition is too small. You need reinstall from LiveCD or LiveUSB, or "
 "resize boot partition of %s.\n"
 msgstr ""
+"Selflaai partisie is te klein. Dit is nodig dat jy herinstalleer van die "
+"lewende CD of USB, of hervormuleer die groote van die selflaai partisie of "
+"%s\n"
+"\n"
+"verteenwoordig a lyn breek. Begin 'n nuwe lyn in die gelystaande posisie in "
+"die vertaling\n"
 
 msgid "Bootloader"
-msgstr ""
+msgstr "Selflaaier"
 
 msgid "Bridge"
 msgstr "Brug"
 
 msgid "Bridge Settings"
-msgstr ""
+msgstr "Brug instellings"
 
 msgid "Bring a device online"
 msgstr "Bring 'n toestel aanlyn"
@@ -1243,25 +1264,25 @@ msgid "Bytes/sec"
 msgstr "Grepe/sekonde"
 
 msgid "CACHE"
-msgstr ""
+msgstr "KASGEHEUE"
 
 msgid "CARP"
-msgstr ""
+msgstr "CARP"
 
 msgid "CARP only"
-msgstr ""
+msgstr "CARP alleenlik"
 
 msgid "CCMP"
 msgstr "CCMP"
 
 msgid "CCMP TKIP"
-msgstr ""
+msgstr "CCMP TKIP"
 
 msgid "CD/DVD"
 msgstr "CD/DVD"
 
 msgid "CD/DVD drive"
-msgstr ""
+msgstr "CD/DVD drywer"
 
 msgid "CHANGED"
 msgstr "IS/HET VERANDER"
@@ -1321,10 +1342,10 @@ msgid "CPU Load"
 msgstr "SVE-las"
 
 msgid "CPU Maximum Frequency"
-msgstr ""
+msgstr "CPU/SVE (Sentrale verwerkingseenheid) maksimum frekwensie"
 
 msgid "CPU Minimum Frequency"
-msgstr ""
+msgstr "CPU/SVE (Sentrale verwerkingseenheid) minimum frekwensie"
 
 msgid "CPU Temperature"
 msgstr "SVE Temperatuur"
@@ -1333,7 +1354,7 @@ msgid "CPU Usage"
 msgstr "SVE gebruik"
 
 msgid "CPU frequencies:"
-msgstr ""
+msgstr "CPU/SVE (Sentrale verwerkingseenheid) frekwensies"
 
 msgid "CPU load"
 msgstr "SVE las"
@@ -1359,7 +1380,7 @@ msgid "Cancel"
 msgstr "Kanselleer"
 
 msgid "Canmount"
-msgstr ""
+msgstr "Mag monteer"
 
 msgid "Cannot get CPU load"
 msgstr "Kan nie SVE las kry nie"
@@ -1374,13 +1395,13 @@ msgid "Capacity"
 msgstr "Kapasiteit"
 
 msgid "Carp Settings"
-msgstr ""
+msgstr "Carp instellings"
 
 msgid "Case Sensitivity"
 msgstr "Kas Sensitiviteit"
 
 msgid "Catalan"
-msgstr ""
+msgstr "Katalaans"
 
 msgid ""
 "Causes the server to display the network information for the specified IP "
@@ -1388,6 +1409,10 @@ msgid ""
 "address or DNS host is acting as a NAT gateway or port forwarder for the "
 "server."
 msgstr ""
+"Veroorsaak dat die lêerbediener die netwerk informasie vir die kliënt wys "
+"vir die spesifieke IP adres of DNS gasheer naam, op die veronderstelling dat "
+"die IP adres of DNS gasheer voorkom as a NAT portaalkoppelvlak of poort  "
+"aanstuur vir die lêerbediener"
 
 msgid "Certificate"
 msgstr "Sertifikaat"
@@ -1432,6 +1457,7 @@ msgstr "Kyk na gedeelde geheim:"
 msgid ""
 "Check the FreeBSD documentation for detailed information about TCP Wrappers"
 msgstr ""
+"Hersien die FreeBSD dokumentasie vir detail besonderhede oor TCP verpakkers"
 
 msgid "Check the list of available drivers"
 msgstr "Kyk na die lys van beskikbare drywers"
@@ -1510,24 +1536,24 @@ msgid "Command"
 msgstr "Bevel"
 
 msgid "Command Output"
-msgstr ""
+msgstr "Bevel Afvoer"
 
 msgid "Command Scripts"
-msgstr ""
+msgstr "Bevel skrif"
 
 msgid "Command Scripts (Maintenance Only)"
-msgstr ""
+msgstr "Bevel skrifte ( Instandhouding Alleenlik)"
 
 msgid "Command execution was successful"
 msgstr "Bevel uitvoering was suksesvol"
 
 #, php-format
 msgid "Command for LINK_DOWN event (e.g. %s)."
-msgstr ""
+msgstr "Bevel vir LINK_DOWN voorval (bv. %s)."
 
 #, php-format
 msgid "Command for LINK_UP event (e.g. %s)."
-msgstr ""
+msgstr "Bevel vir LINK_UP voorval (bv. %s)."
 
 msgid "Command is marked for removal"
 msgstr "Bevel is vir verwydering gemerk"
@@ -1822,16 +1848,19 @@ msgstr ""
 "oordrag."
 
 msgid "Counts the maximum worst erase count on any block."
-msgstr ""
+msgstr "Tel die maksimum slegste uitwis telling van enige blok"
 
 msgid ""
 "Counts the number of SATA PHY errors. This value includes all PHY error "
 "counts, ex data FIS CRC , code errors, disparity errors, command FIS crc. "
 "Value clears upon system power-down."
 msgstr ""
+"Tel die aantal SATA PHY foute. Die waarde sluit in al die PHY foute "
+"tellings, vorige data FIS CRC, kode foute, wanverhouding foute, bevel FIS "
+"crc. Waardes afwisseling kom voor met stelsel afskakel"
 
 msgid "Create 4KB wrapper (nop device)."
-msgstr ""
+msgstr "Skep 4KB bedekking (nop toestel)"
 
 msgid "Create Date"
 msgstr "Skep Datum"
@@ -1843,7 +1872,7 @@ msgid "Create PV Guest"
 msgstr "Skep PV Gas"
 
 msgid "Create ZFS on a GPT partition."
-msgstr ""
+msgstr "Skep ZFS op a GPT partisie"
 
 msgid "Create and initialize RAID."
 msgstr "Skep en inisialiseer RAID"
@@ -1861,16 +1890,16 @@ msgid "Created UFS file system:"
 msgstr "Het 'n UFS lêersisteem geskep:"
 
 msgid "Creates the pool with an alternate root."
-msgstr ""
+msgstr "Skep die poel met alternatiewe wortel"
 
 msgid "Creates the recursive snapshot."
-msgstr ""
+msgstr "Skep rekursiewe foto"
 
 msgid "Creating filesystem"
 msgstr "Besig om 'n lêersisteem te skep"
 
 msgid "Creating filesystem with 'Soft Updates'"
-msgstr ""
+msgstr "Skep lêerstelsel met \"Sagte opdatering \""
 
 msgid "Creating partition"
 msgstr "Besig om 'n verdeling te skep"
@@ -1888,10 +1917,10 @@ msgid "Critical Error Level"
 msgstr "Kritiese Fout Vlak"
 
 msgid "Cron"
-msgstr ""
+msgstr "Chron"
 
 msgid "Cron job"
-msgstr ""
+msgstr "Chron werkstuk"
 
 msgid "Current"
 msgstr "Huidige"
@@ -1927,19 +1956,19 @@ msgid "Custom device"
 msgstr "Aangepasde toestel"
 
 msgid "Custom script"
-msgstr ""
+msgstr "Doelgemaakte skrif"
 
 msgid "Custom script is not found."
-msgstr ""
+msgstr "Doelgemaakte skrif is nie gevind nie"
 
 msgid "Custom script is required."
-msgstr ""
+msgstr "Doelgemaakte skrif word benodig"
 
 msgid "Czech"
-msgstr ""
+msgstr "Tsjeggies"
 
 msgid "DAAP"
-msgstr ""
+msgstr "DAAP"
 
 msgid "DESCRIPTION"
 msgstr "BESKRYWING"
@@ -1951,13 +1980,13 @@ msgid "DHCP cannot be used for LAN interface."
 msgstr "DHCP kan nie as LAN koppelvlak gebruik word nie."
 
 msgid "DLNA/UPnP"
-msgstr ""
+msgstr "DLNA/UPnP"
 
 msgid "DLNA/UPnP Fuppes"
-msgstr ""
+msgstr "DLNA/UPnP Fuppes"
 
 msgid "DLNA/UPnP MiniDLNA"
-msgstr ""
+msgstr "DLNA/UPnP MiniDLNA"
 
 msgid "DNS"
 msgstr "DNS"
@@ -1966,13 +1995,14 @@ msgid "DNS domain"
 msgstr "DNS domein"
 
 msgid "DNS forwarder"
-msgstr ""
+msgstr "DNS aanstuurder"
 
 msgid "DNS server is empty."
 msgstr "DNS bediener is leeg."
 
 msgid "DO NOT abort the firmware upgrade process once it has started."
 msgstr ""
+"MOENIE die fermware opgradering staak as dit reeds van stapel gestuur is"
 
 #, php-format
 msgid ""
@@ -1997,13 +2027,13 @@ msgid "Danish"
 msgstr "Deens"
 
 msgid "Data digest"
-msgstr ""
+msgstr "Data bondel"
 
 msgid "Data integrity"
 msgstr "Data integriteit"
 
 msgid "Database Directory"
-msgstr ""
+msgstr "Databasis lêergids"
 
 msgid "Database directory"
 msgstr "Databasis lêergids"
@@ -2033,7 +2063,7 @@ msgid "Date format"
 msgstr "Datum formaat"
 
 msgid "Day"
-msgstr ""
+msgstr "Dag"
 
 msgid "Days"
 msgstr "Dae"
@@ -2059,7 +2089,7 @@ msgid "Decrypt password"
 msgstr "Dekodeer wagwoord"
 
 msgid "Dedup"
-msgstr ""
+msgstr "Dedupliseer"
 
 msgid "Default"
 msgstr "Standaard"
@@ -2068,11 +2098,17 @@ msgid ""
 "Default - Rsync will choose the 'during' algorithm when talking to rsync "
 "3.0.0 or newer and the 'before' algorithm when talking to an older rsync."
 msgstr ""
+"Verstek -Rsync gaan die \"gedurende\" algoritme  kies wanneer dit koppel met "
+"rsync 3.0 of nuwer en die \"voor\" algoritm wanneer dit me 'n ouer weergawe "
+"van rsync koppel"
 
 msgid ""
 "Default - Rsync will choose the 'during' algorithm when talking to rsync "
 "3.0.0 or newer, and the 'before' algorithm when talking to an older rsync."
 msgstr ""
+"Verstek -Rsync gaan die \"gedurende\" algoritme  kies wanneer dit koppel met "
+"rsync 3.0 of nuwer en die \"voor\" algoritm wanneer dit me 'n ouer weergawe "
+"van rsync koppel"
 
 msgid "Default Device Settings"
 msgstr "Standaard Toestel Verstellings"
@@ -2082,22 +2118,22 @@ msgid "Default is %s."
 msgstr "Standaard is %s."
 
 msgid "Default root"
-msgstr ""
+msgstr "Verstek wortel"
 
 msgid "Default user name is 'admin'."
 msgstr "Standaard gebruiker naam is 'admin'."
 
 msgid "DefaultTime2Retain"
-msgstr ""
+msgstr "VerstekTyd2Behou"
 
 msgid "DefaultTime2Wait"
-msgstr ""
+msgstr "VerstekTyd2Wag"
 
 msgid "Define directories/URL's that require authentication."
-msgstr ""
+msgstr "Definieer lêergids/URL's wat magtiging benodig"
 
 msgid "Defines when the shutdown is initiated."
-msgstr ""
+msgstr "Definieer wanneer afskakeling initieer word"
 
 msgid "Delay"
 msgstr "Vertraging"
@@ -2123,7 +2159,7 @@ msgid "Delete ARP entry"
 msgstr "Vee ARP inskrywing uit"
 
 msgid "Delete Host"
-msgstr ""
+msgstr "Wis Gasheer Uit"
 
 msgid "Delete Login Info"
 msgstr "Vee Inteken Inligting uit"
@@ -2132,7 +2168,7 @@ msgid "Delete Route"
 msgstr "Vee Roete Uit"
 
 msgid "Delete Rsync job"
-msgstr ""
+msgstr "Wis Rsync uit"
 
 msgid "Delete Selected Commands"
 msgstr "Vee Geselekteerde Bevelle Uit"
@@ -2141,13 +2177,13 @@ msgid "Delete Selected Datasets"
 msgstr "Vee Geselekteerde Datastelle Uit"
 
 msgid "Delete Selected Jobs"
-msgstr ""
+msgstr "Wis Geselekteerde Werkstuk Uit"
 
 msgid "Delete Selected Options"
 msgstr "Vee Geselekteerde Opsies Uit"
 
 msgid "Delete Selected Pools"
-msgstr ""
+msgstr "Wis Geselekteerde Poels"
 
 msgid "Delete Selected RAID Volumes"
 msgstr "Vee Geselekteerde RAID Volumes Uit"
@@ -2192,7 +2228,7 @@ msgid "Delete disk"
 msgstr "Vee skyf uit"
 
 msgid "Delete extent"
-msgstr ""
+msgstr "Wis omvang uit"
 
 msgid "Delete files on the receiving side that don't exist on sender."
 msgstr "Vee lêers wat nie op die stuurder bestaan nie, op die ontvanger uit."
@@ -2201,10 +2237,10 @@ msgid "Delete group"
 msgstr "Verwyder groep"
 
 msgid "Delete initiator"
-msgstr ""
+msgstr "Wis inisieerder uit"
 
 msgid "Delete initiator group"
-msgstr ""
+msgstr "Wis inisieerder groep uit"
 
 msgid "Delete interface"
 msgstr "Verwyder koppelvlak"
@@ -2216,7 +2252,7 @@ msgid "Delete mount point"
 msgstr "Verwyder monteer punt"
 
 msgid "Delete portal group"
-msgstr ""
+msgstr "Wis poort groep uit"
 
 msgid "Delete resource"
 msgstr "Verwyder hulpbron"
@@ -2228,7 +2264,7 @@ msgid "Delete self-test"
 msgstr "Verwyder self-toets"
 
 msgid "Delete share"
-msgstr ""
+msgstr "Wis deel uit"
 
 msgid "Delete target"
 msgstr "Verwyder teiken"
@@ -2237,16 +2273,16 @@ msgid "Delete user"
 msgstr "Verwyder gebruiker"
 
 msgid "Deletes the recursive snapshot."
-msgstr ""
+msgstr "Wis rekursiewe foto uit"
 
 msgid "Deleting"
 msgstr "Besig om te skrap"
 
 msgid "Deleting GEOM metadata"
-msgstr ""
+msgstr "Wis GEOM metadata"
 
 msgid "Deleting MBR and partition table"
-msgstr ""
+msgstr "Wis MBR en partisie tafel"
 
 msgid ""
 "Delta between most-worn and least-worn Flash blocks. It describes how "
@@ -2263,7 +2299,7 @@ msgid "Destination"
 msgstr "Bestemming"
 
 msgid "Destination Share"
-msgstr ""
+msgstr "Doelwit porsie"
 
 msgid "Destination email address."
 msgstr "Bestemming epos adres."
@@ -2272,10 +2308,10 @@ msgid "Destination email address. Separate email addresses by semi-colon."
 msgstr "Bestemming epos adres. Skei epos adresse met 'n kommapunt."
 
 msgid "Destination host name or IP address."
-msgstr ""
+msgstr "Doelwit gasheer naam of IP adres"
 
 msgid "Destination host name or IP number."
-msgstr ""
+msgstr "Doelwit gasheer naam of IP adres"
 
 msgid "Destination network"
 msgstr "Bestemming netwerk"
@@ -2290,10 +2326,10 @@ msgid "Destination port"
 msgstr "Bestemming poort"
 
 msgid "Destination share"
-msgstr ""
+msgstr "Doelwit porsie"
 
 msgid "Destroy a pool"
-msgstr ""
+msgstr "Wis 'n poel uit"
 
 msgid ""
 "Destroy any snapshots and bookmarks more recent than the one specified."
@@ -2305,13 +2341,13 @@ msgid "Destroyed"
 msgstr "Vernietig"
 
 msgid "Detach a data device from a mirror"
-msgstr ""
+msgstr "Maak 'n data toestel los van weerspieling"
 
 msgid "Detach a log device from a mirrored log"
-msgstr ""
+msgstr "Maak log toestel los van weerspielde log"
 
 msgid "Detailed"
-msgstr ""
+msgstr "Uitvoerig"
 
 msgid "Detected"
 msgstr "Opgespoor"
@@ -2320,7 +2356,7 @@ msgid "Detected Language:"
 msgstr "Bespeurde Taal:"
 
 msgid "Detected RSYNC remote shares"
-msgstr ""
+msgstr "Bemerkte RSYNC afgeleë dele"
 
 msgid "Detected an error while importing."
 msgstr "'n Fout is opgespoor terwyl daar ingevoer is."
@@ -2340,7 +2376,7 @@ msgstr "Toestel / Etiket"
 
 #, php-format
 msgid "Device /dev/%s - %s"
-msgstr ""
+msgstr "Toestel  /dev/%s - %s"
 
 msgid "Device IP"
 msgstr "Toestel IP"
@@ -2355,7 +2391,7 @@ msgid "Device Name"
 msgstr "Toestel Naam"
 
 msgid "Device Pass-through"
-msgstr ""
+msgstr "Toestel deurvoering"
 
 msgid "Device Path"
 msgstr "Toestel Pad"
@@ -2364,7 +2400,7 @@ msgid "Device Serial"
 msgstr "Toestel Reeksnommer"
 
 msgid "Device contains boot partition"
-msgstr ""
+msgstr "Toestel bevat selflaai partisie"
 
 msgid "Device is mounted"
 msgstr "Toestel is gemonteer"
@@ -2373,7 +2409,7 @@ msgid "Device not found"
 msgstr "Toestel nie gevind"
 
 msgid "Device polling"
-msgstr ""
+msgstr "Toestel stemming"
 
 msgid ""
 "Device polling is a technique that lets the system periodically poll network "
@@ -2382,6 +2418,11 @@ msgid ""
 "forwarding delay (the devices are polled 1000 times per second). Not all "
 "NICs support polling."
 msgstr ""
+"Toestel polsing is 'n tegniek wat perodies die netwerk toestelle pols vir "
+"nuwe data instede om te vertrou op onderbrekings. Dit kan die CPU belading "
+"verminder en ook die deurvoering vermeerder, ten koste van 'n effens hoër "
+"aanstuur vertraging (die toestelle word gepols  teen 1000 keer per sekonde). "
+"Nie alle Netwerk Koppelvlak  Kaarte (NICs) steun polsing nie."
 
 #, php-format
 msgid "Device: %s | Total: %s | Used: %s | Free: %s"
@@ -2425,13 +2466,13 @@ msgid "Directory to watch for new .torrent files."
 msgstr "Lêergids om vir nuwe .torrent lêers op te let."
 
 msgid "Disable Firmware Update"
-msgstr ""
+msgstr "Versper fermware bywerking"
 
 msgid "Disable Selected Commands"
 msgstr "Deaktiveer Geselekteerde Bevelle"
 
 msgid "Disable Selected Jobs"
-msgstr ""
+msgstr "Versper geselekteerde werkstukke"
 
 msgid "Disable Selected Options"
 msgstr "Deaktiveer Geselekteerde Opsies"
@@ -2446,7 +2487,7 @@ msgid "Disable file manager completely."
 msgstr "Deaktifeer lêer bestuurder heeltemal."
 
 msgid "Disable firmware version check."
-msgstr ""
+msgstr "Versper fermware weergawe opslaan"
 
 msgid "Disable speaker beep on startup and shutdowns."
 msgstr "Deaktiveer luidspreker biep gedurende aansit en afsit."
@@ -2480,10 +2521,10 @@ msgid "Disk Selection"
 msgstr "Skyf Seleksie"
 
 msgid "Disk Settings"
-msgstr ""
+msgstr "Skyf bepalings"
 
 msgid "Disk Space Usage"
-msgstr ""
+msgstr "Skyf ruimte verbruik"
 
 msgid "Disk Usage"
 msgstr "Skyf Gebruik"
@@ -2495,7 +2536,7 @@ msgid "Disks (Info)"
 msgstr "Skywe (Inligting)"
 
 msgid "Disks (Info) Information"
-msgstr ""
+msgstr "Skyf (Info) Informasie"
 
 msgid "Disks | Mount Point | Management"
 msgstr "Skywe | Monteer Punt | Bestuur"
@@ -2514,7 +2555,7 @@ msgstr ""
 "gevolg van skok of temperatuur). Die maateenheid is onbekend."
 
 msgid "Distributed hash table"
-msgstr ""
+msgstr "Verspreide huts tafel"
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
@@ -2523,12 +2564,16 @@ msgstr ""
 msgid ""
 "Do not erase the Master Boot Record (useful for some RAID controller cards)."
 msgstr ""
+"Moenie die Master Boot Record uitwis nie (dit word benodig deur sommige RAID "
+"kontrolleer kaarte)"
 
 #, php-format
 msgid ""
 "Do not let the server check for newer firmware versions when the %s page "
 "gets loaded."
 msgstr ""
+"Moenie dat die bediener vir nuwe fermware weergawes soek nie wanneer die %s "
+"bladsy laai nie."
 
 msgid ""
 "Do you really want to clear and import?\\nThe existing config will be "
@@ -2547,7 +2592,7 @@ msgid "Do you really want to delete all scheduled self-tests?"
 msgstr "Wil jy regtig al die geskeduleerde self-toetse uitvee?"
 
 msgid "Do you really want to delete this Rsync job?"
-msgstr ""
+msgstr "Wil jy regtig hierdie Rsync werkstuk uitwis?"
 
 msgid "Do you really want to delete this URL?"
 msgstr "Wil jy regtig hierdie URL uitvee?"
@@ -2568,23 +2613,27 @@ msgid ""
 "Do you really want to delete this disk? All elements that still use it will "
 "become invalid (e.g. share)!"
 msgstr ""
+"Wil jy regtig hierdie skyf uitwis?  Al die elemente wat dit steeds gebruik "
+"sal verval (bv. deling)!"
 
 msgid "Do you really want to delete this extent?"
-msgstr ""
+msgstr "Wil jy regtig hierdie omvang uitwis?"
 
 msgid "Do you really want to delete this group?"
 msgstr "Wil jy rerig die groep verwyder?"
 
 msgid "Do you really want to delete this host?"
-msgstr ""
+msgstr "Wil jy regtig hierdie gasheer uitwis?"
 
 msgid "Do you really want to delete this initiator group?"
-msgstr ""
+msgstr "Wil jy regtig hierdie inisieerder groep uitwis?"
 
 msgid ""
 "Do you really want to delete this initiator? All elements that still use it "
 "will become invalid (e.g. share)!"
 msgstr ""
+"Wil jy regtig hierdie inisieerder uitwis? Al die elemente wat dit steeds "
+"gebruik sal verval (bv. deling)!"
 
 msgid "Do you really want to delete this interface?"
 msgstr "Wil jy regtig hierdie koppelvlak verwyder?"
@@ -2596,6 +2645,8 @@ msgid ""
 "Do you really want to delete this mount point? All elements that still use "
 "it will become invalid (e.g. share)!"
 msgstr ""
+"Wil jy regtig hierdie monteer punt uitwis?  Al die elemente wat dit steeds "
+"gebruik sal verval (bv. deling)!"
 
 msgid "Do you really want to delete this portal group?"
 msgstr "Wil jy regtig hierdie portaal groep verwyder?"
@@ -2613,7 +2664,7 @@ msgid "Do you really want to delete this scheduled self-test?"
 msgstr "Wil jy regtig hierdie geskeduleerde self-toets verwyder?"
 
 msgid "Do you really want to delete this share?"
-msgstr ""
+msgstr "Wil jy regtig hierdie deling uitwis?"
 
 msgid "Do you really want to delete this target?"
 msgstr "Wil jy regtig hierdie teiken uitvee?"
@@ -2638,6 +2689,9 @@ msgstr "Wil jy regtig die geselekteerde item van die lys af verwyder?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Wil jy regtig hierdie paket verwyder?"
+
+msgid "Do you want to apply these settings?"
+msgstr ""
 
 msgid "Do you want to create a JBOD from selected disks?"
 msgstr ""
@@ -10038,9 +10092,3 @@ msgstr "weergawe:"
 
 msgid "week days"
 msgstr "weeskdae"
-
-#~ msgid "Execute command"
-#~ msgstr "Voer bevel uit"
-
-#~ msgid "Upload"
-#~ msgstr "Oplaai"
