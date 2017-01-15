@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-14 15:25+0000\n"
-"PO-Revision-Date: 2016-11-20 18:15+0000\n"
-"Last-Translator: Luzemário <luzemario@gmail.com>\n"
+"POT-Creation-Date: 2017-01-15 01:10+0000\n"
+"PO-Revision-Date: 2017-01-15 00:16+0000\n"
+"Last-Translator: Pedro Grave <pedro.grave.abt@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-14 14:41+0000\n"
+"X-Launchpad-Export-Date: 2017-01-15 00:41+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "X-Poedit-Country: PORTUGAL\n"
 "Language: \n"
@@ -642,26 +642,30 @@ msgid "Advertisement skew"
 msgstr "Frequência de divulgação"
 
 msgid "Afrikaans"
-msgstr ""
+msgstr "Afrikaans"
 
 msgid "After"
 msgstr "Depois"
 
 msgid "After - File-deletions will be done after the transfer has completed."
-msgstr ""
+msgstr "English"
 
 msgid ""
 "After you click \"Save\" you may also have to do one or more of the "
 "following steps before you can access this server again:"
 msgstr ""
+"Depois de clicar em \"Salvar\" também poderá ser necessário proceder a um ou "
+"mais dos seguinte passos, antes de poder aceder novamente ao servidor:"
 
 msgid ""
 "After you click \"Save\" you must reboot the server to make the changes take "
 "effect."
 msgstr ""
+"Depois de clicar em \"Salvar\" terá de reiniciar o servidor para guardar as "
+"alterações."
 
 msgid "Age"
-msgstr ""
+msgstr "Idade"
 
 msgid "Aggregation protocol"
 msgstr "Protocolo de agregação"
@@ -683,15 +687,17 @@ msgid "All"
 msgstr "Todos"
 
 msgid "All data from the following statistics have been deleted:"
-msgstr ""
+msgstr "Foram apagados todos os dados relativos às seguintes estatisticas:"
 
 msgid ""
 "All data in the path is overwritten. To avoid invalid data/permission, using "
 "an empty UFS directory is recommended."
 msgstr ""
+"Todos os dados na \"path\" foram re-escritos. PAra evitar dados/permissões "
+"inválidos, é recomendado utilizar um directório UFS vazio."
 
 msgid "All data will be lost when you activate this option!"
-msgstr ""
+msgstr "Todos os dados serão perdidos quando activar esta opção!"
 
 msgid "All dirs"
 msgstr "Todas as directorias"
@@ -703,7 +709,7 @@ msgstr ""
 "%s não está montada."
 
 msgid "All disks are imported."
-msgstr ""
+msgstr "Todos os discos foram importados"
 
 msgid ""
 "All shares use the option 'usedots' thus making the filenames .Parent and "
@@ -713,19 +719,19 @@ msgstr ""
 "ficheiro. Directoria pai e qualquer coisa começando com .Apple é ilegal."
 
 msgid "All software raid disks are imported."
-msgstr ""
+msgstr "Todos os discos raid software foram importados"
 
 msgid "All users will have the root privilege."
 msgstr "Todos os utilizadores terão previlégios de administrador (root)"
 
 msgid "Alloc"
-msgstr ""
+msgstr "(Allocate Storage) Designar espaço de arquivo"
 
 msgid "Allow"
 msgstr "Permitir"
 
 msgid "Allow TLS connections only."
-msgstr ""
+msgstr "Permitir apenas ligações TLS."
 
 msgid "Allow client access to accounts that have null passwords."
 msgstr "Permitir o acesso a clientes com palavras-passe em branco."
@@ -739,7 +745,7 @@ msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "Permitir aos clientes continuar uploads e downloads interrompidos."
 
 msgid "Allow group"
-msgstr ""
+msgstr "Permitir grupo"
 
 msgid "Allow new files"
 msgstr "Permitir novos ficheiros"
@@ -748,10 +754,10 @@ msgid "Allow new files to be created."
 msgstr "Permitir novos ficheiros serem criados."
 
 msgid "Allow to start UPS from battery"
-msgstr ""
+msgstr "Permitir iniciar UPS a partir da bateria"
 
 msgid "Allow trusted domains."
-msgstr ""
+msgstr "Permitir \"Trusted Domains\"."
 
 msgid ""
 "Allows  certain  users and groups to have read/write access to a share. This "
@@ -768,10 +774,10 @@ msgstr ""
 "de leitura. Esta opção segue o formato permissivo."
 
 msgid "Allows the server to try and become a local master browser."
-msgstr ""
+msgstr "Permite ao servidor tentar tornar-se um \"Local Master Browser\""
 
 msgid "Allows to connect to a hidden network"
-msgstr ""
+msgstr "Permite ligação a redes não visiveis"
 
 msgid ""
 "Also known as 'Power-off Retract Count' per conventional HDD terminology. "
@@ -780,6 +786,12 @@ msgid ""
 "STANDBY IMMEDIATE as the last command (regardless of PLI activity using "
 "capacitor power). Normalized value is always 100."
 msgstr ""
+"Também conhecido como 'Power-off Retract Count', por terminologia "
+"convencional de HDD. O valor em bruto reporta o numero de apagões não "
+"limpos, cumulativos, durante a vida de um SSD, onde um \"apagão não limpo\" "
+"significa a remoção de alimentação a um disco, sem o ultimo comando ter sido "
+"\"STANDBY IMMEDIATE\" (independentemente da actividade PLI, usando energia "
+"de condensadores). O valor normalizado é sempre 100."
 
 msgid "AltRoot"
 msgstr "AltRoot"
@@ -794,30 +806,31 @@ msgid "Alternative configuration directory (usually empty)."
 msgstr "Configuração alternativa de directório (normalmente vazio)."
 
 msgid "Always"
-msgstr ""
+msgstr "Sempre"
 
 msgid "Always On"
-msgstr ""
+msgstr "Sempre Activos"
 
 msgid "Always scan"
 msgstr "Procurar Sempre"
 
 msgid "Ambient Conditions From External Probe Equipment"
-msgstr ""
+msgstr "Condições Ambientais a partir de Equipamentos de Medição Externos"
 
 msgid "Ambient relative humidity (percent)"
-msgstr ""
+msgstr "Humidade Relativa Ambiente (percentagem)"
 
 msgid "Ambient temperature (degrees C)"
-msgstr ""
+msgstr "Temperatura Ambiente (graus C)"
 
 msgid "Amount of surge current used to spin up the drive."
-msgstr ""
+msgstr "Quantidade de corrente de pico usada para iniciar a rotação do disco"
 
 msgid ""
 "Amplitude of 'thrashing' (distance of repetitive forward/reverse head "
 "motion)."
 msgstr ""
+"Amplitude de 'thrashing' (movimento repetitivo frente/trás das cabeças)"
 
 msgid ""
 "An Auth Group is identified by a tag number and is optional. If the Target "
@@ -834,10 +847,10 @@ msgid ""
 msgstr ""
 
 msgid "An empty field is default."
-msgstr ""
+msgstr "Por defeito é campo vazio."
 
 msgid "An error occured."
-msgstr ""
+msgstr "Ocorreu um erro."
 
 msgid "An host with this name already exists."
 msgstr "Um anfitrião com este nome já existe."
@@ -884,10 +897,10 @@ msgid "Apple Filing Protocol"
 msgstr "Protocolo 'Apple Filing'"
 
 msgid "Apply"
-msgstr ""
+msgstr "Aplicar"
 
 msgid "Apply Filter"
-msgstr ""
+msgstr "Aplicar Filtro"
 
 msgid "Apply changes"
 msgstr "Aplicar as alterações"
@@ -896,7 +909,7 @@ msgid "Apr"
 msgstr ""
 
 msgid "April"
-msgstr ""
+msgstr "Abril"
 
 msgid "Archive"
 msgstr "Arquivo"
@@ -2590,6 +2603,9 @@ msgstr "Tem a certeza que pretende remover o item seleccionado da lista?"
 
 msgid "Do you really want to uninstall this package?"
 msgstr "Quer realmente desinstalar este pacote?"
+
+msgid "Do you want to apply these settings?"
+msgstr ""
 
 msgid "Do you want to create a JBOD from selected disks?"
 msgstr ""
@@ -10112,9 +10128,3 @@ msgstr "versão:"
 
 msgid "week days"
 msgstr ""
-
-#~ msgid "Execute command"
-#~ msgstr "Executar o comando"
-
-#~ msgid "Upload"
-#~ msgstr "Enviar"
