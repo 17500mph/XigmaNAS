@@ -192,6 +192,7 @@ $pgtitle = [gtext('Services'),gtext('DLNA/UPnP Fuppes')];
 $(window).on("load", function() {
 	// Init onsubmit()
 	$("#iform").submit(function() {
+		onsubmit_content();
 		spinner();
 	});
 	$("#button_save").click(function () {
