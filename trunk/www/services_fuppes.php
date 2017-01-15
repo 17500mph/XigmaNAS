@@ -119,11 +119,6 @@ if(PAGE_MODE_POST === $mode_page):
 			config_unlock();
 		endif;
 		$savemsg = get_std_save_message($retval);
-		if($retval == 0):
-			if(file_exists($d_upnpconfdirty_path)):
-				unlink($d_upnpconfdirty_path);
-			endif;
-		endif;
 	endif;
 else:
 	$sphere_record['enable'] = isset($sphere_array['enable']);
@@ -197,7 +192,6 @@ $pgtitle = [gtext('Services'),gtext('DLNA/UPnP Fuppes')];
 $(window).on("load", function() {
 	// Init onsubmit()
 	$("#iform").submit(function() {
-		onsubmit_content();
 		spinner();
 	});
 	$("#button_save").click(function () {
@@ -239,9 +233,6 @@ function transcoding_change() {
 	endif;
 	if(!empty($savemsg)):
 		print_info_box($savemsg);
-	endif;
-	if(file_exists($d_upnpconfdirty_path)):
-		print_config_change_box();
 	endif;
 	?>
 	<table class="area_data_settings">
