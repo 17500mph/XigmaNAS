@@ -221,7 +221,7 @@ switch($page_action):
 				$input_errors[] = gtext('The location of the "Database Directory" is not a valid location.');
 			endif;
 		else:
-			$input_errors[] = gtext('Please define the location for the media library.');
+			$input_errors[] = gtext('Please define the location for the database directory.');
 		endif;
 		if(!is_string($sphere_record['notify_int'])):
 			$sphere_record['notify_int'] = '300';
