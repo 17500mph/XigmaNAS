@@ -37,17 +37,30 @@ require 'services.inc';
 
 $sphere_scriptname = basename(__FILE__);
 $sphere_header = 'Location: '.$sphere_scriptname;
-$sphere_header_parent = 'Location: index.php';
 $sphere_record = [];
 $a_message = [];
+$sphere_default = [
+	'enable' => false,
+	'name' => '',
+	'if' => '',
+	'port' => '8200',
+	'home' => '',
+	'notify_int' => '300',
+	'strict' => false,
+	'loglevel' => 'info',
+	'tivo' => false,
+	'content' => [],
+	'container' => 'B',
+	'inotify' => true
+];
 $gt_apply_confirm = gtext('Do you want to apply these settings?');
-
+$input_errors = [];
+//	sunrise
 array_make_branch($config,'minidlna','content');
 $sphere_array = &$config['minidlna'];
 sort($sphere_array['content']);
 // we need information about other DLNA services
 array_make_branch($config,'upnp','content');
-
 /*	calculate initial page mode and page action.
  *	at the end of this section a valid page mode and a valid page action are available.
  *	page_action cancel is switched to view mode.
@@ -67,7 +80,7 @@ switch($mode_page):
 					break;
 				case 'rescan':
 					break;
-				case 'save': // save = edit < POST and save
+				case 'save':
 					break;
 				case 'rows.enable':
 					$page_action = 'enable';
@@ -101,47 +114,30 @@ switch($mode_page):
 		$page_action = 'view';
 		break;
 endswitch;
-/*	
- *	initial source of data
- *	only page_action save takes information from _POST
- */
+//	get configuration data, depending on the source
 switch($page_action):
-	case 'save': 
-		$sphere_record['enable'] = isset($_POST['enable']);
-		$sphere_record['name'] = $_POST['name'] ?? '';
-		$sphere_record['if'] = $_POST['if'] ?? '';
-		$sphere_record['port'] = $_POST['port'] ?? '8200';
-		$sphere_record['home'] = $_POST['home'] ?? '';
-		$sphere_record['notify_int'] = $_POST['notify_int'] ?? '300';
-		$sphere_record['strict'] = isset($_POST['strict']);
-		$sphere_record['loglevel'] = $_POST['loglevel'] ?? 'info';
-		$sphere_record['tivo'] = isset($_POST['tivo']);
-		$sphere_record['content'] = $_POST['content'] ?? [];
-		$sphere_record['container'] = $_POST['container'] ?? 'B';
-		$sphere_record['inotify'] = isset($_POST['inotify']);
+	case 'save':
+		$source = $_POST;
 		break;
 	default:
-		$sphere_record['enable'] = isset($sphere_array['enable']);
-		$sphere_record['name'] = $sphere_array['name'] ?? '';
-		$sphere_record['if'] = $sphere_array['if'] ?? '';
-		$sphere_record['port'] = $sphere_array['port'] ?? '8200';
-		$sphere_record['home'] = $sphere_array['home'] ?? '';
-		$sphere_record['notify_int'] = $sphere_array['notify_int'] ?? '300';
-		$sphere_record['strict'] = isset($sphere_array['strict']);
-		$sphere_record['loglevel'] = $sphere_array['loglevel'] ?? 'info';
-		$sphere_record['tivo'] = isset($$sphere_array['tivo']);
-		$sphere_record['content'] = $sphere_array['content'] ?? [];
-		$sphere_record['container'] = $sphere_array['container'] ?? 'B';
-		$sphere_record['inotify'] = isset($sphere_array['inotify']);
+		$source = $sphere_array;
 		break;
 endswitch;
-
+$sphere_record['enable'] = isset($source['enable']);
+$sphere_record['name'] = $source['name'] ?? $sphere_default['name'];
+$sphere_record['if'] = $source['if'] ?? $sphere_default['if'];
+$sphere_record['port'] = $source['port'] ?? $sphere_default['port'];
+$sphere_record['home'] = $source['home'] ?? $sphere_default['home'];
+$sphere_record['notify_int'] = $source['notify_int'] ?? $sphere_default['notify_int'];
+$sphere_record['strict'] = isset($source['strict']);
+$sphere_record['loglevel'] = $source['loglevel'] ?? $sphere_default['loglevel'];
+$sphere_record['tivo'] = isset($source['tivo']);
+$sphere_record['content'] = $source['content'] ?? $sphere_default['content'];
+$sphere_record['container'] = $source['container'] ?? $sphere_default['container'];
+$sphere_record['inotify'] = isset($source['inotify']);
+//	process enable and rescan
 switch($page_action):
 	case 'enable':
-/*	
- *	page_action enable requires full validation of parameter.
- *	switch to page mode view if it's already enabled.
- */
 		if($sphere_record['enable']):
 			$mode_page = PAGE_MODE_VIEW;
 			$page_action = 'view'; 
@@ -150,43 +146,19 @@ switch($page_action):
 			$page_action = 'save'; // continue with save procedure
 		endif;
 		break;
-	case 'disable':
-/*
- *	page_action disable modifies $config but doesn't require validation.
- *	switch to page mode view if it's already disabled.
- */
-		if($sphere_record['enable']): // if enabled, disable it
-			$sphere_record['enable'] = false;
-			$sphere_array = $sphere_record;
-			write_config();
-			$retval = 0;
-			config_lock();
-			$retval |= rc_update_service('minidlna');
-			$retval |= rc_update_service('mdnsresponder');
-			config_unlock();
-			$a_message[] = gtext('MniDLNA has been disabled.');
-		endif;
-		$mode_page = PAGE_MODE_VIEW;
-		$page_action = 'view';
-		break;
 	case 'rescan':
-/*
- *	page action rescan calls the rescan option of the service
- *	switch to page mode view after that.
- */
 		if($sphere_record['enable']):
-			$retval = rc_rescan_service('minidlna'); 
+			mwexec_bg('service minidlna rescan');
 			$a_message[] = gtext('A rescan has been issued.');
 		endif;
 		$mode_page = PAGE_MODE_VIEW;
 		$page_action = 'view';
 		break;
 endswitch;
-
+//	process save and disable
 switch($page_action):
 	case 'save':
-		$input_errors = [];
-		// Validate content.
+		//	validate name
 		if(is_string($sphere_record['name'])):
 			if(preg_match('/\S/',$sphere_record['name'])):
 			else:
@@ -197,6 +169,7 @@ switch($page_action):
 			$input_errors[] = gtext('The name of the media server is missing.');
 			$sphere_record['name'] = '';
 		endif;
+		//	validate interface
 		if(is_string($sphere_record['if'])):
 			if(preg_match('/\S/',$sphere_record['if'])):
 				// check if if is on the list of interfaces
@@ -208,15 +181,19 @@ switch($page_action):
 		else:
 			$sphere_record['if'] = '';
 		endif;
+		//	check port range.
 		if(!is_string($sphere_record['port'])):
-			$sphere_record['port'] = '8200';
+			$sphere_record['port'] = $sphere_default['port'];
 		endif;
+		if((1024 > $sphere_record['port']) || (65535 < $sphere_record['port'])):
+			$input_errors[] = sprintf(gtext("Port number must be in the range between %d and %d."),1024,65535);
+		endif;
+		//	check home folder
 		if(!is_string($sphere_record['home'])):
 			$sphere_record['home'] = '';
 		endif;
 		if(preg_match('/\S/',$sphere_record['home'])):
 			if(is_dir($sphere_record['home'])):
-				var_dump(sprintf('Value of home: [%s]',$sphere_record['home']));
 			else:
 				$input_errors[] = gtext('The location of the "Database Directory" is not a valid location.');
 			endif;
@@ -238,7 +215,7 @@ switch($page_action):
 		if(!is_string($sphere_record['container'])):
 			$sphere_record['container'] = 'B';
 		endif;
-		//	process if no errors
+		// all checks passed
 		if(empty($input_errors)):
 			$sphere_array = $sphere_record;
 			write_config();
@@ -260,16 +237,35 @@ switch($page_action):
 			$page_action = 'edit';
 		endif;
 		break;
+	case 'disable':
+		if($sphere_record['enable']): // if enabled, disable it
+			$sphere_record['enable'] = false;
+			$sphere_array = $sphere_record;
+			write_config();
+			$retval = 0;
+			config_lock();
+			$retval |= rc_update_service('minidlna');
+			$retval |= rc_update_service('mdnsresponder');
+			config_unlock();
+			$a_message[] = gtext('MniDLNA has been disabled.');
+		endif;
+		$mode_page = PAGE_MODE_VIEW;
+		$page_action = 'view';
+		break;
 endswitch;
-
+//	list of configured interfaces
 $a_interface = get_interface_list();
 $l_interfaces = [];
-foreach($a_interface as $if => $ifinfo):
-	$ifinfo = get_interface_info($if);
-	if(('up' == $ifinfo['status']) || ('associated' == $ifinfo['status'])):
-		$l_interfaces[$if] = $if;
-	endif;
+foreach($a_interface as $k_interface => $ifinfo):
+	$ifinfo = get_interface_info($k_interface);
+	switch($ifinfo['status']):
+		case 'up':
+		case 'associated':
+			$l_interfaces[$k_interface] = $k_interface;
+			break;
+	endswitch;
 endforeach;
+//	list of container types
 $l_container = [
 	'.' => gtext('Standard'),
 	'B' => gtext('Browse Directory'),
@@ -277,6 +273,7 @@ $l_container = [
 	'V' => gtext('Video'),
 	'P' => gtext('Pictures')
 ];
+//	list of log levels
 $l_loglevel = [
 	'off' => gtext('Off'),
 	'fatal' => gtext('Fatal'),
@@ -285,13 +282,12 @@ $l_loglevel = [
 	'info' => gtext('Info'),
 	'debug' => gtext('Debug')
 ];
-// Identifiy enabled DLNA services
+//	identifiy enabled DLNA services
 $dlna_count = 0;
 $dlna_count += (isset($config['minidlna']['enable'])) ? 1 : 0;
 $dlna_count += (isset($config['upnp']['enable'])) ? 2 : 0;
-
-// everything greater than 1 indicates that another DLNA service is running somewhere else
-// every odd number indicates that this DLNA service is enabled.
+//	everything greater than 1 indicates that another DLNA service is running somewhere else
+//	every odd number indicates that this DLNA service is enabled.
 switch($dlna_count):
 	case 0:
 		$dlna_option = 0; // DLNA can be enabled, no access to link
@@ -382,12 +378,12 @@ endswitch;
 			<?php
 			switch($mode_page):
 				case PAGE_MODE_VIEW:
-					html_checkbox2('enable',gtext('Service Enabled'),$sphere_record['enable'],'','',false,true);
-					html_text2('name',gtext('Name'),$sphere_record['name']);
-					html_text2('if',gtext('Interface Selection'),$sphere_record['if']);
-					html_text2('port',gtext('Port'),$sphere_record['port']);
-					html_text2('notify_int',gtext('Broadcast Interval'),$sphere_record['notify_int']);
-					html_text2('home',gtext('Database Directory'),$sphere_record['home']);
+					html_text2('enable',gtext('Service Enabled'),$sphere_record['enable'] ? gtext('Yes') : gtext('No'));
+					html_text2('name',gtext('Name'), htmlspecialchars($sphere_record['name']));
+					html_text2('if',gtext('Interface Selection'), htmlspecialchars($sphere_record['if']));
+					html_text2('port',gtext('Port'), htmlspecialchars($sphere_record['port']));
+					html_text2('notify_int',gtext('Broadcast Interval'), htmlspecialchars($sphere_record['notify_int']));
+					html_text2('home',gtext('Database Directory'), htmlspecialchars($sphere_record['home']));
 					$helpinghand = implode("\n",$sphere_record['content']);
 					html_textarea2('content',gtext('Content Locations'),$helpinghand,'',false,67,5,true,false);
 					html_checkbox2('inotify',gtext('Inotify'),$sphere_record['inotify'],'','',false,true);
