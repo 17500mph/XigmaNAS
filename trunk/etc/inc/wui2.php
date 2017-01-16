@@ -297,7 +297,7 @@ class HTMLTextArea2 extends HTMLEditBox2 {
 	var $_rows = 5;
 	var $_wrap = true;
 	var $_classtextarea = 'formpre';
-	var $_classtextarearo = 'formpre';
+	var $_classtextarearo = 'formprero';
 	// constructor method
 	function __construct($ctrlname, $title, $value, $description, $columns, $rows) {
 		$this->SetCtrlName($ctrlname);
