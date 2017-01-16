@@ -218,7 +218,7 @@ switch($page_action):
 			if(is_dir($sphere_record['home'])):
 				var_dump(sprintf('Value of home: [%s]',$sphere_record['home']));
 			else:
-				$input_errors[] = gtext('The location of the media library is not a valid folder.');
+				$input_errors[] = gtext('The location of the "Database Directory" is not a valid location.');
 			endif;
 		else:
 			$input_errors[] = gtext('Please define the location for the media library.');
@@ -387,7 +387,7 @@ endswitch;
 					html_text2('if',gtext('Interface Selection'),$sphere_record['if']);
 					html_text2('port',gtext('Port'),$sphere_record['port']);
 					html_text2('notify_int',gtext('Broadcast Interval'),$sphere_record['notify_int']);
-					html_text2('home',gtext('Library Folder'),$sphere_record['home']);
+					html_text2('home',gtext('Database Directory'),$sphere_record['home']);
 					$helpinghand = implode("\n",$sphere_record['content']);
 					html_textarea2('content',gtext('Content Locations'),$helpinghand,'',false,67,5,true,false);
 					html_checkbox2('inotify',gtext('Inotify'),$sphere_record['inotify'],'','',false,true);
@@ -410,7 +410,7 @@ endswitch;
 					html_combobox2('if',gtext('Interface Selection'),$sphere_record['if'],$l_interfaces,gtext('Select which interface to use. (Only selectable if your server has more than one interface)'),true);
 					html_inputbox2('port',gtext('Port'),$sphere_record['port'],sprintf(gtext('Port to listen on. Only dynamic or private ports can be used (from %d through %d). Default port is %d.'),1025,65535, 8200),true,5);
 					html_inputbox2('notify_int',gtext('Broadcast Interval'),$sphere_record['notify_int'],gtext('Broadcasts its availability every N seconds on the network. (Default 300 seconds)'),true,5);
-					html_filechooser2('home',gtext('Library Folder'),$sphere_record['home'],gtext('Location of the media content database.'),$g['media_path'],true,67);
+					html_filechooser2('home',gtext('Database Directory'),$sphere_record['home'],gtext('Location of the media content database.'),$g['media_path'],true,67);
 					html_minidlnabox2('content',gtext('Content Locations'),$sphere_record['content'],gtext('Manage content locations.'),$g['media_path'],true);
 					html_checkbox2('inotify',gtext('Inotify'),$sphere_record['inotify'],gtext('Enable inotify.'),gtext('Use inotify monitoring to automatically discover new files.'),false);
 					html_combobox2('container',gtext('Container'),$sphere_record['container'],$l_container,gtext('Use different container as root of the tree.'),false,false,'');
