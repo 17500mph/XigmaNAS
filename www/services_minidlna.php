@@ -194,7 +194,7 @@ switch($page_action):
 				$sphere_record['name'] = '';
 			endif;
 		else:
-			$input_errors[] = gtext('Then name of the media server is missing.');
+			$input_errors[] = gtext('The name of the media server is missing.');
 			$sphere_record['name'] = '';
 		endif;
 		if(is_string($sphere_record['if'])):
