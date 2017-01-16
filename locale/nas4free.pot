@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2017-01-15 01:10+0000\n"
+"POT-Creation-Date: 2017-01-16 05:03+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -190,6 +190,9 @@ msgid "A mounted disk or partition will be unmounted temporarily to perform the 
 msgstr ""
 
 msgid "A reload request has been sent to the daemon."
+msgstr ""
+
+msgid "A rescan has been issued."
 msgstr ""
 
 msgid "A route to this destination network already exists."
@@ -712,6 +715,9 @@ msgstr ""
 msgid "Another DLNA/UPnP service is already running. Enabling Fuppes might cause issues."
 msgstr ""
 
+msgid "Another DLNA/UPnP service is already running. Enabling MiniDLNA might cause issues."
+msgstr ""
+
 msgid "Any"
 msgstr ""
 
@@ -1005,7 +1011,7 @@ msgstr ""
 msgid "Bring a device online"
 msgstr ""
 
-msgid "Broadcast interval"
+msgid "Broadcast Interval"
 msgstr ""
 
 msgid "Broadcasts its availability every N seconds on the network. (Default 300 seconds)"
@@ -1015,9 +1021,6 @@ msgid "Browse Directory"
 msgstr ""
 
 msgid "Browseable"
-msgstr ""
-
-msgid "Building database in progress"
 msgstr ""
 
 msgid "Bulgarian"
@@ -1183,6 +1186,9 @@ msgid "Change the IP address of your computer"
 msgstr ""
 
 msgid "Change the IP address of your server"
+msgstr ""
+
+msgid "Changes have been applied."
 msgstr ""
 
 msgid "Changes to this option will take effect after a reboot."
@@ -1380,6 +1386,9 @@ msgid "Container"
 msgstr ""
 
 msgid "Content"
+msgstr ""
+
+msgid "Content Locations"
 msgstr ""
 
 msgid "Continue"
@@ -2060,6 +2069,9 @@ msgid "Directory that contains removable media. (e.g /mnt/iscsi/)"
 msgstr ""
 
 msgid "Directory to watch for new .torrent files."
+msgstr ""
+
+msgid "Disable"
 msgstr ""
 
 msgid "Disable Firmware Update"
@@ -3274,9 +3286,6 @@ msgstr ""
 msgid "Fuppes Media Server Administration"
 msgstr ""
 
-msgid "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable Fuppes first."
-msgstr ""
-
 msgid "GEOM"
 msgstr ""
 
@@ -4055,6 +4064,9 @@ msgstr ""
 msgid "Level 64 - Intermediate Power Usage with Standby"
 msgstr ""
 
+msgid "Library Folder"
+msgstr ""
+
 msgid "License"
 msgstr ""
 
@@ -4157,9 +4169,6 @@ msgstr ""
 msgid "Location where the content database file will be stored."
 msgstr ""
 
-msgid "Location where the database with media contents will be stored."
-msgstr ""
-
 #, php-format
 msgid "Location where the working files will be stored, e.g. %s/backup/.unison"
 msgstr ""
@@ -4174,9 +4183,6 @@ msgid "Log Settings"
 msgstr ""
 
 msgid "Log file is empty."
-msgstr ""
-
-msgid "Log level"
 msgstr ""
 
 msgid "Log order"
@@ -4288,6 +4294,9 @@ msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr ""
 
 msgid "Make sure you have already configured your email settings"
+msgstr ""
+
+msgid "Manage content locations."
 msgstr ""
 
 msgid "Management"
@@ -4464,7 +4473,7 @@ msgstr ""
 msgid "MiniDLNA A/V Media Server"
 msgstr ""
 
-msgid "Minidlna configuration has been updated."
+msgid "MiniDLNA Media Server WebGUI"
 msgstr ""
 
 msgid "Minimum"
@@ -4510,6 +4519,9 @@ msgid "Missing parameter"
 msgstr ""
 
 msgid "Mixed"
+msgstr ""
+
+msgid "MniDLNA has been disabled."
 msgstr ""
 
 msgid "Mode"
@@ -5288,10 +5300,10 @@ msgstr ""
 msgid "Please check the log files"
 msgstr ""
 
-msgid "Please define the Database directory location."
+msgid "Please define one or more content locations."
 msgstr ""
 
-msgid "Please define the Media library location."
+msgid "Please define the location for the media library."
 msgstr ""
 
 msgid "Please note that blanks in path names are not allowed."
@@ -5422,9 +5434,6 @@ msgid "Prefix"
 msgstr ""
 
 msgid "Preformatted file system"
-msgstr ""
-
-msgid "Presentation WebGUI"
 msgstr ""
 
 msgid "Preserve extended attributes"
@@ -5786,10 +5795,10 @@ msgstr ""
 msgid "Required"
 msgstr ""
 
-msgid "Rescan Disks"
+msgid "Rescan"
 msgstr ""
 
-msgid "Rescan database in progress"
+msgid "Rescan Disks"
 msgstr ""
 
 msgid "Rescan interval"
@@ -6175,9 +6184,6 @@ msgstr ""
 msgid "Select which interface to use. (Only selectable if your server has more than one interface)"
 msgstr ""
 
-msgid "Select which interface to use. (Only selectable if your server has more than one)"
-msgstr ""
-
 msgid "Selected"
 msgstr ""
 
@@ -6272,6 +6278,9 @@ msgid "Server version"
 msgstr ""
 
 msgid "Service"
+msgstr ""
+
+msgid "Service Enabled"
 msgstr ""
 
 msgid "Services"
@@ -7222,7 +7231,13 @@ msgstr ""
 msgid "The initiator can discover the targets with correct user and secret in specific Auth Group."
 msgstr ""
 
+msgid "The interface is unknown."
+msgstr ""
+
 msgid "The istgtcontrol can access the targets with correct user and secret in specific Auth Group."
+msgstr ""
+
+msgid "The location of the media library is not a valid folder."
 msgstr ""
 
 msgid "The login name contains invalid characters."
@@ -7448,6 +7463,12 @@ msgid "The workgroup in which the server will appear when queried by Windows or 
 msgstr ""
 
 msgid "The working directory does not exist."
+msgstr ""
+
+msgid "Then name of the media server cannot be empty."
+msgstr ""
+
+msgid "Then name of the media server is missing."
 msgstr ""
 
 msgid "There are too many additional groups."
@@ -7741,7 +7762,7 @@ msgstr ""
 msgid "This virtual device name already exists."
 msgstr ""
 
-msgid "This will allow server-side downscaling of very large JPEG images, it can hurt JPEG serving performance on (at least) Sony DLNA products."
+msgid "This will allow server-side downscaling of very large JPEG images, it can impact JPEG serving performance on some DLNA products."
 msgstr ""
 
 msgid "This will create a recycle bin on the share."
@@ -7771,7 +7792,7 @@ msgstr ""
 msgid "TiB"
 msgstr ""
 
-msgid "TiVo support"
+msgid "TiVo Support"
 msgstr ""
 
 msgid "Time"
@@ -8697,9 +8718,6 @@ msgid "chroot() everyone, but root."
 msgstr ""
 
 msgid "days"
-msgstr ""
-
-msgid "debug"
 msgstr ""
 
 msgid "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = system(free) block count."
