@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-15 01:10+0000\n"
-"PO-Revision-Date: 2017-01-04 18:46+0000\n"
+"POT-Creation-Date: 2017-01-16 07:22+0000\n"
+"PO-Revision-Date: 2017-01-15 22:26+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-15 00:41+0000\n"
+"X-Launchpad-Export-Date: 2017-01-16 06:42+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "Language: ca_ES\n"
 
@@ -284,6 +284,9 @@ msgstr ""
 
 msgid "A reload request has been sent to the daemon."
 msgstr "La petició de recarregà ha estat enviada al dimoni."
+
+msgid "A rescan has been issued."
+msgstr ""
 
 msgid "A route to this destination network already exists."
 msgstr "Ja existeix una ruta a aquesta xarxa de destinació."
@@ -903,6 +906,11 @@ msgstr ""
 "Un altre servei DLNA / UPnP ja s'està executant. Si habilita Fuppes podria "
 "causar problemes."
 
+msgid ""
+"Another DLNA/UPnP service is already running. Enabling MiniDLNA might cause "
+"issues."
+msgstr ""
+
 msgid "Any"
 msgstr "Qualsevol"
 
@@ -1226,8 +1234,8 @@ msgstr "Configuració del pont"
 msgid "Bring a device online"
 msgstr "Porta el dispositiu en línia"
 
-msgid "Broadcast interval"
-msgstr "Interval d'emissió"
+msgid "Broadcast Interval"
+msgstr ""
 
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
@@ -1240,9 +1248,6 @@ msgstr "Navega directori"
 
 msgid "Browseable"
 msgstr "Navegable"
-
-msgid "Building database in progress"
-msgstr "Construcció de la base de dades en curs"
 
 msgid "Bulgarian"
 msgstr "Búlgar"
@@ -1421,6 +1426,9 @@ msgstr "Canviar l'adreça IP del ordinador"
 msgid "Change the IP address of your server"
 msgstr "Canviar l'adreça IP del servidor"
 
+msgid "Changes have been applied."
+msgstr ""
+
 msgid "Changes to this option will take effect after a reboot."
 msgstr "Canvis d'aquesta opció seran efectius després de un reinicii."
 
@@ -1524,7 +1532,7 @@ msgid "Command"
 msgstr "Comandament"
 
 msgid "Command Output"
-msgstr ""
+msgstr "Sortida del comandament"
 
 msgid "Command Scripts"
 msgstr "Lots d'instruccions"
@@ -1640,11 +1648,14 @@ msgstr "Contenidor"
 msgid "Content"
 msgstr "Contingut"
 
+msgid "Content Locations"
+msgstr ""
+
 msgid "Continue"
 msgstr "Continueu"
 
 msgid "Control"
-msgstr ""
+msgstr "Control"
 
 msgid "Controller"
 msgstr "Controlador"
@@ -2515,6 +2526,9 @@ msgstr ""
 msgid "Directory to watch for new .torrent files."
 msgstr "Directori per veure els nous fitxers .torrent."
 
+msgid "Disable"
+msgstr ""
+
 msgid "Disable Firmware Update"
 msgstr "Desactivar l'actualització de firmware"
 
@@ -2741,7 +2755,7 @@ msgid "Do you really want to uninstall this package?"
 msgstr "Realment vol desinstal·lar aquest paquet?"
 
 msgid "Do you want to apply these settings?"
-msgstr ""
+msgstr "Vols aplicar aquests ajustos?"
 
 msgid "Do you want to create a JBOD from selected disks?"
 msgstr "Vols crear un JBOD des de els discos seleccionats?"
@@ -3379,7 +3393,7 @@ msgid "Enhanced compatibility with Netatalk AFP server"
 msgstr "Compatibilitat millorada amb el servidor netatalk AFP"
 
 msgid "Enter Command"
-msgstr ""
+msgstr "Introduïu l'ordre"
 
 msgid "Enter a comment"
 msgstr "Introduïu un comentari"
@@ -3510,7 +3524,7 @@ msgid "Execute"
 msgstr "Executar"
 
 msgid "Execute Command"
-msgstr ""
+msgstr "Executa ordre"
 
 msgid ""
 "Execute command pre or post system initialization (booting) or before system "
@@ -3863,13 +3877,6 @@ msgstr "Servidor de mitjans Fuppes"
 
 msgid "Fuppes Media Server Administration"
 msgstr "Administració servidor de mitjans Fuppes"
-
-msgid ""
-"Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
-"Fuppes first."
-msgstr ""
-"Fuppes està habilitada. Si vols utilitzar MiniDLNA, hauràs de desactivar "
-"Fuppes primer."
 
 msgid "GEOM"
 msgstr "GEOM"
@@ -4932,9 +4939,6 @@ msgstr "Ubicació de la base de dades de contingut dels mitjans."
 msgid "Location where the content database file will be stored."
 msgstr "Lloc on s'emmagatzemarà l'arxiu de dades de contingut."
 
-msgid "Location where the database with media contents will be stored."
-msgstr "Lloc on s'emmagatzemarà la base de dades amb contingut multimèdia."
-
 #, php-format
 msgid ""
 "Location where the working files will be stored, e.g. %s/backup/.unison"
@@ -4953,9 +4957,6 @@ msgstr "Opcions del registre"
 
 msgid "Log file is empty."
 msgstr "El fitxer de registre és buid."
-
-msgid "Log level"
-msgstr "Nivell del registre"
 
 msgid "Log order"
 msgstr "Ordre del registres"
@@ -5073,6 +5074,9 @@ msgstr "Assegureu-vos que ha activat S.M.A.R.T. per als seus dispositius."
 
 msgid "Make sure you have already configured your email settings"
 msgstr "Assegureu-vos que ja ha configurat els paràmetres de email"
+
+msgid "Manage content locations."
+msgstr ""
 
 msgid "Management"
 msgstr "Gestió"
@@ -5263,8 +5267,8 @@ msgstr "MiniDLNA"
 msgid "MiniDLNA A/V Media Server"
 msgstr "Servidor de mitjans SMiniDLNA A/V"
 
-msgid "Minidlna configuration has been updated."
-msgstr "La configuració de Minidlna s'ha actualitzat."
+msgid "MiniDLNA Media Server WebGUI"
+msgstr ""
 
 msgid "Minimum"
 msgstr "Mínim"
@@ -5310,6 +5314,9 @@ msgstr "Paràmetre que falta"
 
 msgid "Mixed"
 msgstr "Barrejat"
+
+msgid "MniDLNA has been disabled."
+msgstr ""
 
 msgid "Mode"
 msgstr "Mode"
@@ -5920,7 +5927,7 @@ msgid "PHP Command"
 msgstr "Ordre PHP"
 
 msgid "PHP Command Output"
-msgstr ""
+msgstr "Soritida de comandament PHP"
 
 msgid "PPPoE"
 msgstr "PPPoE"
@@ -6172,11 +6179,11 @@ msgstr "Si us plau, consulteu la documentació"
 msgid "Please check the log files"
 msgstr "Si us plau, consulteu els arxius de registre"
 
-msgid "Please define the Database directory location."
-msgstr "Si us plau, defineixi la ubicació del directori de base de dades."
+msgid "Please define one or more content locations."
+msgstr ""
 
-msgid "Please define the Media library location."
-msgstr "Si us plau, defineixi la ubicació de la biblioteca de mitjans."
+msgid "Please define the location for the database directory."
+msgstr ""
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr ""
@@ -6316,9 +6323,6 @@ msgstr "Prefix"
 
 msgid "Preformatted file system"
 msgstr "Sistema d'arxius preformatejat"
-
-msgid "Presentation WebGUI"
-msgstr "Presentació de l'interfície gràfica d'usuari Web"
 
 msgid "Preserve extended attributes"
 msgstr "Conservar atributs estesos"
@@ -6716,11 +6720,11 @@ msgstr "Requereix autenticació."
 msgid "Required"
 msgstr "Necessari"
 
+msgid "Rescan"
+msgstr ""
+
 msgid "Rescan Disks"
 msgstr "Torna a examinar els discs"
-
-msgid "Rescan database in progress"
-msgstr "Torna a analitzar la base de dades en curs"
 
 msgid "Rescan interval"
 msgstr "Interval del anàlisi"
@@ -7159,13 +7163,6 @@ msgstr ""
 "Seleccioneu la interfície que ha d'utilitzar. (Només es pot seleccionar si "
 "el servidor té més d'una interfície)"
 
-msgid ""
-"Select which interface to use. (Only selectable if your server has more than "
-"one)"
-msgstr ""
-"Seleccioneu la interfície que ha d'utilitzar. (Només es pot seleccionar si "
-"el servidor té més d'un)"
-
 msgid "Selected"
 msgstr "Seleccionat"
 
@@ -7261,6 +7258,9 @@ msgstr "Versió del servidor"
 
 msgid "Service"
 msgstr "Servei"
+
+msgid "Service Enabled"
+msgstr ""
 
 msgid "Services"
 msgstr "Serveis"
@@ -8452,12 +8452,18 @@ msgstr ""
 "L'iniciador pot descobrir els objectius amb usuari correcte i secret en el "
 "Grup específic d'autenticació."
 
+msgid "The interface is unknown."
+msgstr ""
+
 msgid ""
 "The istgtcontrol can access the targets with correct user and secret in "
 "specific Auth Group."
 msgstr ""
 "El istgtcontrol pot accedir als objectius amb l'usuari correcte i secret en "
 "el Grup específic d'autenticació."
+
+msgid "The location of the \"Database Directory\" is not a valid location."
+msgstr ""
 
 msgid "The login name contains invalid characters."
 msgstr "El nom d'usuari conté caràcters no vàlids."
@@ -8544,6 +8550,12 @@ msgstr "El nom del RAID ja està en ús."
 msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr "El nom del RAID només pot constar dels caràcters a-z, A-Z, 0-9."
+
+msgid "The name of the media server cannot be empty."
+msgstr ""
+
+msgid "The name of the media server is missing."
+msgstr ""
 
 msgid "The name of the pool cannot be changed."
 msgstr "El nom de la piscina no es pot canviar."
@@ -9312,11 +9324,8 @@ msgstr "Aquest nom de dispositiu virtual ja existeix."
 
 msgid ""
 "This will allow server-side downscaling of very large JPEG images, it can "
-"hurt JPEG serving performance on (at least) Sony DLNA products."
+"impact JPEG serving performance on some DLNA products."
 msgstr ""
-"Això permetrà la reducció d'escala del costat del servidor d'imatges molt "
-"grans JPEG, pot perjudicar el rendiment que serveix JPEG en (almenys) els "
-"productes Sony DLNA."
 
 msgid "This will create a recycle bin on the share."
 msgstr "Això crearà una paperera de reciclatge en el recurs compartit."
@@ -9353,8 +9362,8 @@ msgstr "Dijous"
 msgid "TiB"
 msgstr "TiB"
 
-msgid "TiVo support"
-msgstr "Suport TiVo"
+msgid "TiVo Support"
+msgstr ""
 
 msgid "Time"
 msgstr "Hora"
@@ -10461,9 +10470,6 @@ msgstr "chroot() per tothom excepte root."
 msgid "days"
 msgstr "dies"
 
-msgid "debug"
-msgstr "depurar"
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -10611,3 +10617,58 @@ msgstr "versió:"
 
 msgid "week days"
 msgstr "dias de la setmana"
+
+#~ msgid "Location where the database with media contents will be stored."
+#~ msgstr "Lloc on s'emmagatzemarà la base de dades amb contingut multimèdia."
+
+#~ msgid "Broadcast interval"
+#~ msgstr "Interval d'emissió"
+
+#~ msgid "Building database in progress"
+#~ msgstr "Construcció de la base de dades en curs"
+
+#~ msgid "Log level"
+#~ msgstr "Nivell del registre"
+
+#~ msgid ""
+#~ "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
+#~ "Fuppes first."
+#~ msgstr ""
+#~ "Fuppes està habilitada. Si vols utilitzar MiniDLNA, hauràs de desactivar "
+#~ "Fuppes primer."
+
+#~ msgid "Minidlna configuration has been updated."
+#~ msgstr "La configuració de Minidlna s'ha actualitzat."
+
+#~ msgid "Please define the Database directory location."
+#~ msgstr "Si us plau, defineixi la ubicació del directori de base de dades."
+
+#~ msgid "Please define the Media library location."
+#~ msgstr "Si us plau, defineixi la ubicació de la biblioteca de mitjans."
+
+#~ msgid "Presentation WebGUI"
+#~ msgstr "Presentació de l'interfície gràfica d'usuari Web"
+
+#~ msgid "Rescan database in progress"
+#~ msgstr "Torna a analitzar la base de dades en curs"
+
+#~ msgid ""
+#~ "Select which interface to use. (Only selectable if your server has more than "
+#~ "one)"
+#~ msgstr ""
+#~ "Seleccioneu la interfície que ha d'utilitzar. (Només es pot seleccionar si "
+#~ "el servidor té més d'un)"
+
+#~ msgid "TiVo support"
+#~ msgstr "Suport TiVo"
+
+#~ msgid ""
+#~ "This will allow server-side downscaling of very large JPEG images, it can "
+#~ "hurt JPEG serving performance on (at least) Sony DLNA products."
+#~ msgstr ""
+#~ "Això permetrà la reducció d'escala del costat del servidor d'imatges molt "
+#~ "grans JPEG, pot perjudicar el rendiment que serveix JPEG en (almenys) els "
+#~ "productes Sony DLNA."
+
+#~ msgid "debug"
+#~ msgstr "depurar"

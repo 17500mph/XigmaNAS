@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-15 01:10+0000\n"
+"POT-Creation-Date: 2017-01-16 07:22+0000\n"
 "PO-Revision-Date: 2016-09-17 16:31+0000\n"
 "Last-Translator: Timm Lagoni <tila@tl-designs.dk>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-15 00:41+0000\n"
+"X-Launchpad-Export-Date: 2017-01-16 06:41+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
@@ -251,6 +251,9 @@ msgid ""
 msgstr ""
 
 msgid "A reload request has been sent to the daemon."
+msgstr ""
+
+msgid "A rescan has been issued."
 msgstr ""
 
 msgid "A route to this destination network already exists."
@@ -830,6 +833,11 @@ msgid ""
 "issues."
 msgstr ""
 
+msgid ""
+"Another DLNA/UPnP service is already running. Enabling MiniDLNA might cause "
+"issues."
+msgstr ""
+
 msgid "Any"
 msgstr "Alle"
 
@@ -1140,7 +1148,7 @@ msgstr ""
 msgid "Bring a device online"
 msgstr ""
 
-msgid "Broadcast interval"
+msgid "Broadcast Interval"
 msgstr ""
 
 msgid ""
@@ -1153,9 +1161,6 @@ msgstr ""
 
 msgid "Browseable"
 msgstr "Kan gennemses"
-
-msgid "Building database in progress"
-msgstr ""
 
 msgid "Bulgarian"
 msgstr "Bulgarsk"
@@ -1329,6 +1334,9 @@ msgid "Change the IP address of your computer"
 msgstr ""
 
 msgid "Change the IP address of your server"
+msgstr ""
+
+msgid "Changes have been applied."
 msgstr ""
 
 msgid "Changes to this option will take effect after a reboot."
@@ -1545,6 +1553,9 @@ msgstr ""
 
 msgid "Content"
 msgstr "Indhold"
+
+msgid "Content Locations"
+msgstr ""
 
 msgid "Continue"
 msgstr ""
@@ -2326,6 +2337,9 @@ msgstr "Mappe der indeholder flytbare medier. (F.eks. /mnt/iscsi/)"
 
 msgid "Directory to watch for new .torrent files."
 msgstr "Mappe der skal overvåges for nye .torrent-filer."
+
+msgid "Disable"
+msgstr ""
 
 msgid "Disable Firmware Update"
 msgstr ""
@@ -3630,11 +3644,6 @@ msgstr ""
 msgid "Fuppes Media Server Administration"
 msgstr ""
 
-msgid ""
-"Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
-"Fuppes first."
-msgstr ""
-
 msgid "GEOM"
 msgstr ""
 
@@ -4634,9 +4643,6 @@ msgstr ""
 msgid "Location where the content database file will be stored."
 msgstr "Placering hvor indholds database filen skal gemmes."
 
-msgid "Location where the database with media contents will be stored."
-msgstr "Placering hvor databasen over medie indhold bliver gemt."
-
 #, php-format
 msgid ""
 "Location where the working files will be stored, e.g. %s/backup/.unison"
@@ -4652,9 +4658,6 @@ msgid "Log Settings"
 msgstr ""
 
 msgid "Log file is empty."
-msgstr ""
-
-msgid "Log level"
 msgstr ""
 
 msgid "Log order"
@@ -4770,6 +4773,9 @@ msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "Sørg for at du har aktiveret S.M.A.R.T. for dine enheder."
 
 msgid "Make sure you have already configured your email settings"
+msgstr ""
+
+msgid "Manage content locations."
 msgstr ""
 
 msgid "Management"
@@ -4953,7 +4959,7 @@ msgstr ""
 msgid "MiniDLNA A/V Media Server"
 msgstr ""
 
-msgid "Minidlna configuration has been updated."
+msgid "MiniDLNA Media Server WebGUI"
 msgstr ""
 
 msgid "Minimum"
@@ -4999,6 +5005,9 @@ msgid "Missing parameter"
 msgstr ""
 
 msgid "Mixed"
+msgstr ""
+
+msgid "MniDLNA has been disabled."
 msgstr ""
 
 msgid "Mode"
@@ -5838,10 +5847,10 @@ msgstr ""
 msgid "Please check the log files"
 msgstr ""
 
-msgid "Please define the Database directory location."
+msgid "Please define one or more content locations."
 msgstr ""
 
-msgid "Please define the Media library location."
+msgid "Please define the location for the database directory."
 msgstr ""
 
 msgid "Please note that blanks in path names are not allowed."
@@ -5979,9 +5988,6 @@ msgstr "Præfiks"
 
 msgid "Preformatted file system"
 msgstr "Preformateret filsystem"
-
-msgid "Presentation WebGUI"
-msgstr ""
 
 msgid "Preserve extended attributes"
 msgstr "Bevar udvidede attributter"
@@ -6366,10 +6372,10 @@ msgstr "Kræver godkendelse."
 msgid "Required"
 msgstr "Påkrævet"
 
-msgid "Rescan Disks"
+msgid "Rescan"
 msgstr ""
 
-msgid "Rescan database in progress"
+msgid "Rescan Disks"
 msgstr ""
 
 msgid "Rescan interval"
@@ -6789,11 +6795,6 @@ msgid ""
 "one interface)"
 msgstr ""
 
-msgid ""
-"Select which interface to use. (Only selectable if your server has more than "
-"one)"
-msgstr ""
-
 msgid "Selected"
 msgstr "Valgt"
 
@@ -6889,6 +6890,9 @@ msgstr "Server version"
 
 msgid "Service"
 msgstr "Tjeneste"
+
+msgid "Service Enabled"
+msgstr ""
 
 msgid "Services"
 msgstr "Tjenester"
@@ -8006,12 +8010,18 @@ msgstr ""
 "Initiatoren kan opdage målet med den korrekte bruger og secret i den angivne "
 "Auth Gruppe."
 
+msgid "The interface is unknown."
+msgstr ""
+
 msgid ""
 "The istgtcontrol can access the targets with correct user and secret in "
 "specific Auth Group."
 msgstr ""
 "istgtcontrol kan tilgå målene med det korrekte brugernavn og hemmeligt i den "
 "angivne Auth Gruppe."
+
+msgid "The location of the \"Database Directory\" is not a valid location."
+msgstr ""
 
 msgid "The login name contains invalid characters."
 msgstr "Login navnet indeholder ugyldige tegn."
@@ -8092,6 +8102,12 @@ msgstr ""
 
 msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
+msgstr ""
+
+msgid "The name of the media server cannot be empty."
+msgstr ""
+
+msgid "The name of the media server is missing."
 msgstr ""
 
 msgid "The name of the pool cannot be changed."
@@ -8782,7 +8798,7 @@ msgstr "Det virtualle enheds navn eksisterer allerede."
 
 msgid ""
 "This will allow server-side downscaling of very large JPEG images, it can "
-"hurt JPEG serving performance on (at least) Sony DLNA products."
+"impact JPEG serving performance on some DLNA products."
 msgstr ""
 
 msgid "This will create a recycle bin on the share."
@@ -8817,7 +8833,7 @@ msgstr ""
 msgid "TiB"
 msgstr "TiB"
 
-msgid "TiVo support"
+msgid "TiVo Support"
 msgstr ""
 
 msgid "Time"
@@ -9852,9 +9868,6 @@ msgstr "chroot() alle, undtagen root."
 msgid "days"
 msgstr ""
 
-msgid "debug"
-msgstr ""
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -10000,3 +10013,6 @@ msgstr "version:"
 
 msgid "week days"
 msgstr ""
+
+#~ msgid "Location where the database with media contents will be stored."
+#~ msgstr "Placering hvor databasen over medie indhold bliver gemt."

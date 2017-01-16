@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-15 01:10+0000\n"
+"POT-Creation-Date: 2017-01-16 07:22+0000\n"
 "PO-Revision-Date: 2017-01-05 21:10+0000\n"
 "Last-Translator: Tomfro <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-15 00:41+0000\n"
+"X-Launchpad-Export-Date: 2017-01-16 06:41+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -291,6 +291,9 @@ msgstr ""
 
 msgid "A reload request has been sent to the daemon."
 msgstr "Ein 'Neuladen' - Befehl wurde an den Hintergrunddienst geschickt."
+
+msgid "A rescan has been issued."
+msgstr ""
 
 msgid "A route to this destination network already exists."
 msgstr "Eine Route zu diesem Netzwerk besteht bereits."
@@ -911,6 +914,11 @@ msgstr ""
 "Es läuft bereits ein DLNA/UPnP Dienst. Das Einschalten von Fuppes könnte "
 "Probleme bereiten."
 
+msgid ""
+"Another DLNA/UPnP service is already running. Enabling MiniDLNA might cause "
+"issues."
+msgstr ""
+
 msgid "Any"
 msgstr "Alle"
 
@@ -1238,8 +1246,8 @@ msgstr "Bridge Einstellung"
 msgid "Bring a device online"
 msgstr "Ein Gerät online schalten"
 
-msgid "Broadcast interval"
-msgstr "Intervall des Netzwerk Boradcast"
+msgid "Broadcast Interval"
+msgstr ""
 
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
@@ -1252,9 +1260,6 @@ msgstr "Verzeichnisliste anzeigen"
 
 msgid "Browseable"
 msgstr "Sichtbar"
-
-msgid "Building database in progress"
-msgstr "Die Datenbank wird gerade erstellt"
 
 msgid "Bulgarian"
 msgstr "Bulgarisch"
@@ -1436,6 +1441,9 @@ msgstr "Ändern sie die IP-Adresse ihres Computers"
 
 msgid "Change the IP address of your server"
 msgstr "Ändern sie die IP-Adresse ihres Servers"
+
+msgid "Changes have been applied."
+msgstr ""
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr ""
@@ -1655,6 +1663,9 @@ msgstr "Container"
 
 msgid "Content"
 msgstr "Inhalt"
+
+msgid "Content Locations"
+msgstr ""
 
 msgid "Continue"
 msgstr "Fortsetzen"
@@ -2485,6 +2496,9 @@ msgstr "Verzeichnis, welches wechselbare Medien enthält (bspw. /mnt/iscsi/)"
 
 msgid "Directory to watch for new .torrent files."
 msgstr "Zu beobachtendes Verzeichnis für neue .torrent Dateien."
+
+msgid "Disable"
+msgstr ""
 
 msgid "Disable Firmware Update"
 msgstr "Firmware Update deaktivieren"
@@ -3831,12 +3845,6 @@ msgstr "Fuppes Media Server"
 msgid "Fuppes Media Server Administration"
 msgstr "Fuppes Medien Server Verwaltung"
 
-msgid ""
-"Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
-"Fuppes first."
-msgstr ""
-"Fuppes is aktiv. Zur Nutzung von MiniDLNA, muss Fuppes deaktiviert werden."
-
 msgid "GEOM"
 msgstr "GEOM"
 
@@ -4896,9 +4904,6 @@ msgstr "Speicherort der Medieninhaltsdatenbank"
 msgid "Location where the content database file will be stored."
 msgstr "Standort an welchem die Inhalte-Datenbank gespeichert werden soll."
 
-msgid "Location where the database with media contents will be stored."
-msgstr "Speicherort der Übersicht der Medieninhalte"
-
 #, php-format
 msgid ""
 "Location where the working files will be stored, e.g. %s/backup/.unison"
@@ -4917,9 +4922,6 @@ msgstr "Protokoll-Einstellungen"
 
 msgid "Log file is empty."
 msgstr "Log-Datei ist leer."
-
-msgid "Log level"
-msgstr "Protokollierungsstufe"
 
 msgid "Log order"
 msgstr "Sortierreihenfolge des Protokolls"
@@ -5041,6 +5043,9 @@ msgstr "Aktivieren Sie S.M.A.R.T. für  Ihre Geräte."
 msgid "Make sure you have already configured your email settings"
 msgstr ""
 "Stellen Sie sicher, dass die E-Mail-Einstellungen bereits konfiguriert sind."
+
+msgid "Manage content locations."
+msgstr ""
 
 msgid "Management"
 msgstr "Management"
@@ -5232,8 +5237,8 @@ msgstr "MiniDLNA"
 msgid "MiniDLNA A/V Media Server"
 msgstr "MiniDLNA A/V Media Server"
 
-msgid "Minidlna configuration has been updated."
-msgstr "Die MiniDLNA Konfiguration wurde aktualisiert"
+msgid "MiniDLNA Media Server WebGUI"
+msgstr ""
 
 msgid "Minimum"
 msgstr "Minimum"
@@ -5279,6 +5284,9 @@ msgstr "Fehlender Parameter"
 
 msgid "Mixed"
 msgstr "Gemischt"
+
+msgid "MniDLNA has been disabled."
+msgstr ""
 
 msgid "Mode"
 msgstr "Modus"
@@ -6132,11 +6140,11 @@ msgstr "Bitte schauen Sie in die Dokumentation."
 msgid "Please check the log files"
 msgstr "Bitte die Log-Dateien überprüfen"
 
-msgid "Please define the Database directory location."
-msgstr "Bitte den Datenbank-Pfad festlegen"
+msgid "Please define one or more content locations."
+msgstr ""
 
-msgid "Please define the Media library location."
-msgstr "Bitte den Medien-Pfad festlegen"
+msgid "Please define the location for the database directory."
+msgstr ""
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr "Bitte beachten, dass Leerstellen in Pfadnamen nicht erlaubt sind."
@@ -6273,9 +6281,6 @@ msgstr "Präfix"
 
 msgid "Preformatted file system"
 msgstr "Vorformatiertes Dateisystem"
-
-msgid "Presentation WebGUI"
-msgstr "Weboberfläche"
 
 msgid "Preserve extended attributes"
 msgstr "Erhalte erweiterte Attribute"
@@ -6672,11 +6677,11 @@ msgstr "Erfordert Authentifikation."
 msgid "Required"
 msgstr "Erforderlich"
 
+msgid "Rescan"
+msgstr ""
+
 msgid "Rescan Disks"
 msgstr "Festplatten wiedereinlesen"
-
-msgid "Rescan database in progress"
-msgstr "Dei Datenbank wird aktualisiert"
 
 msgid "Rescan interval"
 msgstr "Durchsuchungsintervall"
@@ -7116,13 +7121,6 @@ msgid ""
 "one interface)"
 msgstr ""
 
-msgid ""
-"Select which interface to use. (Only selectable if your server has more than "
-"one)"
-msgstr ""
-"Wählen Sie die Schnittstelle aus ( nur wählbar bei mehreren vorhanden "
-"Schnittstellen)"
-
 msgid "Selected"
 msgstr "Ausgewählt"
 
@@ -7218,6 +7216,9 @@ msgstr "Serverversion"
 
 msgid "Service"
 msgstr "Service"
+
+msgid "Service Enabled"
+msgstr ""
 
 msgid "Services"
 msgstr "Dienste"
@@ -8409,12 +8410,18 @@ msgstr ""
 "Der Initiator kann das Ziel mit dem richtigen Benutzer und Passwort in der "
 "spezifizierten Authentifizierungsgruppe feststellen."
 
+msgid "The interface is unknown."
+msgstr ""
+
 msgid ""
 "The istgtcontrol can access the targets with correct user and secret in "
 "specific Auth Group."
 msgstr ""
 "Der isgtcontroll kann das Target mit korrektem Username und Password auf die "
 "spezifische Auth_Gruppe zugreifen."
+
+msgid "The location of the \"Database Directory\" is not a valid location."
+msgstr ""
 
 msgid "The login name contains invalid characters."
 msgstr "Der Login-Name enthält ungültige Zeichen."
@@ -8506,6 +8513,12 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr ""
 "Der Name des RAIDs darf nur aus den Zeichen a-z, A-Z und 0-9 bestehen."
+
+msgid "The name of the media server cannot be empty."
+msgstr ""
+
+msgid "The name of the media server is missing."
+msgstr ""
 
 msgid "The name of the pool cannot be changed."
 msgstr "Der Name des Pools kann nicht geändert werden."
@@ -9283,11 +9296,8 @@ msgstr "Der virtuelle Gerätename existiert bereits."
 
 msgid ""
 "This will allow server-side downscaling of very large JPEG images, it can "
-"hurt JPEG serving performance on (at least) Sony DLNA products."
+"impact JPEG serving performance on some DLNA products."
 msgstr ""
-"Dadurch wird das serverseitige Herunterskalieren sehr großer JPEG-Bilder "
-"eingeschaltet, das ihre Bereitstellungsgeschwindigkeit (zumindest) bei Sony "
-"DLNA-Produkten beeinträchtigen kann."
 
 msgid "This will create a recycle bin on the share."
 msgstr "Papierkorb auf der Freigabe wird eingereichtet."
@@ -9327,8 +9337,8 @@ msgstr "Donnerstag"
 msgid "TiB"
 msgstr "TiB"
 
-msgid "TiVo support"
-msgstr "TiVo Unterstützung"
+msgid "TiVo Support"
+msgstr ""
 
 msgid "Time"
 msgstr "Zeit"
@@ -10438,9 +10448,6 @@ msgstr "Wurzel-Verzeichnis für alle Benutzer ändern, bis auf den root."
 msgid "days"
 msgstr "Tage"
 
-msgid "debug"
-msgstr "Fehlersuche"
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -10588,3 +10595,57 @@ msgstr "Version:"
 
 msgid "week days"
 msgstr "wochentagen"
+
+#~ msgid "Location where the database with media contents will be stored."
+#~ msgstr "Speicherort der Übersicht der Medieninhalte"
+
+#~ msgid "Broadcast interval"
+#~ msgstr "Intervall des Netzwerk Boradcast"
+
+#~ msgid ""
+#~ "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
+#~ "Fuppes first."
+#~ msgstr ""
+#~ "Fuppes is aktiv. Zur Nutzung von MiniDLNA, muss Fuppes deaktiviert werden."
+
+#~ msgid "Log level"
+#~ msgstr "Protokollierungsstufe"
+
+#~ msgid "Minidlna configuration has been updated."
+#~ msgstr "Die MiniDLNA Konfiguration wurde aktualisiert"
+
+#~ msgid "Please define the Database directory location."
+#~ msgstr "Bitte den Datenbank-Pfad festlegen"
+
+#~ msgid "Please define the Media library location."
+#~ msgstr "Bitte den Medien-Pfad festlegen"
+
+#~ msgid "Presentation WebGUI"
+#~ msgstr "Weboberfläche"
+
+#~ msgid "Rescan database in progress"
+#~ msgstr "Dei Datenbank wird aktualisiert"
+
+#~ msgid ""
+#~ "Select which interface to use. (Only selectable if your server has more than "
+#~ "one)"
+#~ msgstr ""
+#~ "Wählen Sie die Schnittstelle aus ( nur wählbar bei mehreren vorhanden "
+#~ "Schnittstellen)"
+
+#~ msgid "TiVo support"
+#~ msgstr "TiVo Unterstützung"
+
+#~ msgid "debug"
+#~ msgstr "Fehlersuche"
+
+#~ msgid ""
+#~ "This will allow server-side downscaling of very large JPEG images, it can "
+#~ "hurt JPEG serving performance on (at least) Sony DLNA products."
+#~ msgstr ""
+#~ "Dadurch wird das serverseitige Herunterskalieren sehr großer JPEG-Bilder "
+#~ "eingeschaltet, das ihre Bereitstellungsgeschwindigkeit (zumindest) bei Sony "
+#~ "DLNA-Produkten beeinträchtigen kann."
+
+#~ msgid "Building database in progress"
+#~ msgstr "Die Datenbank wird gerade erstellt"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-15 01:10+0000\n"
+"POT-Creation-Date: 2017-01-16 07:22+0000\n"
 "PO-Revision-Date: 2017-01-05 17:17+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-15 00:41+0000\n"
+"X-Launchpad-Export-Date: 2017-01-16 06:42+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -276,6 +276,9 @@ msgstr ""
 
 msgid "A reload request has been sent to the daemon."
 msgstr "Запит перезавантаження відправлений демону."
+
+msgid "A rescan has been issued."
+msgstr ""
 
 msgid "A route to this destination network already exists."
 msgstr "Маршрут до цієї підмережі вже існує."
@@ -892,6 +895,11 @@ msgid ""
 msgstr ""
 "Інша служба DLNA/UPnP вже запущена. Включення Fuppes може викликати проблеми."
 
+msgid ""
+"Another DLNA/UPnP service is already running. Enabling MiniDLNA might cause "
+"issues."
+msgstr ""
+
 msgid "Any"
 msgstr "Будь-який"
 
@@ -1213,8 +1221,8 @@ msgstr "Налаштування мосту"
 msgid "Bring a device online"
 msgstr "Перевести пристрій в онлайн"
 
-msgid "Broadcast interval"
-msgstr "Інтервал віщання"
+msgid "Broadcast Interval"
+msgstr ""
 
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
@@ -1228,9 +1236,6 @@ msgstr "Переглянути директорію"
 
 msgid "Browseable"
 msgstr "Доступний для перегляду"
-
-msgid "Building database in progress"
-msgstr "Триває створення бази даних"
 
 msgid "Bulgarian"
 msgstr "Болгарська"
@@ -1407,6 +1412,9 @@ msgstr "Змінити IP адресу вашого комп'ютера."
 
 msgid "Change the IP address of your server"
 msgstr "Змінити IP адресу вашого сервера."
+
+msgid "Changes have been applied."
+msgstr ""
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr "Зміна цього налаштування набуде чинності після перезавантаження."
@@ -1626,6 +1634,9 @@ msgstr "Контейнер"
 
 msgid "Content"
 msgstr "Вміст"
+
+msgid "Content Locations"
+msgstr ""
 
 msgid "Continue"
 msgstr "Продовжити"
@@ -2491,6 +2502,9 @@ msgstr "Директорія, що містить змінний носій. (e.
 
 msgid "Directory to watch for new .torrent files."
 msgstr "Директорія очікування нових .torrent-файлів."
+
+msgid "Disable"
+msgstr ""
 
 msgid "Disable Firmware Update"
 msgstr "Заборонити оновлення прошивки"
@@ -3833,13 +3847,6 @@ msgstr "Медіа сервер Fuppes"
 msgid "Fuppes Media Server Administration"
 msgstr "Адміністрування медіасерверу Fuppes"
 
-msgid ""
-"Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
-"Fuppes first."
-msgstr ""
-"Fuppes включено. Якщо ви хочете використовувати MiniDLNA, вам потрібно буде "
-"відключити Fuppes в першу чергу."
-
 msgid "GEOM"
 msgstr "GEOM"
 
@@ -4897,9 +4904,6 @@ msgstr "Розміщення бази даних медіа контенту."
 msgid "Location where the content database file will be stored."
 msgstr "Місце, де файл бази даних контенту буде зберігатися."
 
-msgid "Location where the database with media contents will be stored."
-msgstr "Місце, де буде збережена база даних мультимедіа."
-
 #, php-format
 msgid ""
 "Location where the working files will be stored, e.g. %s/backup/.unison"
@@ -4917,9 +4921,6 @@ msgstr "Параметри журналу"
 
 msgid "Log file is empty."
 msgstr "Файл журнала пустий"
-
-msgid "Log level"
-msgstr "Рівень журналу"
 
 msgid "Log order"
 msgstr "Порядок логування"
@@ -5036,6 +5037,9 @@ msgstr "Переконайтесь, що ви активували S.M.A.R.T. д
 
 msgid "Make sure you have already configured your email settings"
 msgstr "Переконайтеся, що ви вже налаштували параметри електронної пошти"
+
+msgid "Manage content locations."
+msgstr ""
 
 msgid "Management"
 msgstr "Керування"
@@ -5219,8 +5223,8 @@ msgstr "MiniDLNA"
 msgid "MiniDLNA A/V Media Server"
 msgstr "MiniDLNA аудіо/відео медіа сервер"
 
-msgid "Minidlna configuration has been updated."
-msgstr "Налаштування MiniDLNA оновлено."
+msgid "MiniDLNA Media Server WebGUI"
+msgstr ""
 
 msgid "Minimum"
 msgstr "Мінімум"
@@ -5267,6 +5271,9 @@ msgstr "Відсутній параметр"
 
 msgid "Mixed"
 msgstr "Змішаний"
+
+msgid "MniDLNA has been disabled."
+msgstr ""
 
 msgid "Mode"
 msgstr "Режим"
@@ -6125,11 +6132,11 @@ msgstr "Будь ласка, дивіться документацію."
 msgid "Please check the log files"
 msgstr "Будь ласка, перевірте файли журналів"
 
-msgid "Please define the Database directory location."
-msgstr "Будь ласка, влажіть директорію де знаходиться база даних."
+msgid "Please define one or more content locations."
+msgstr ""
 
-msgid "Please define the Media library location."
-msgstr "Будь ласка, вкажіть шлях до медіа-бібліотеки."
+msgid "Please define the location for the database directory."
+msgstr ""
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr "Зауважте, що пробіли в іменах шляхів не дозволені."
@@ -6264,9 +6271,6 @@ msgstr "Префікс"
 
 msgid "Preformatted file system"
 msgstr "Попередньо форматована файлова система"
-
-msgid "Presentation WebGUI"
-msgstr "Подання веб інтерфейсу"
 
 msgid "Preserve extended attributes"
 msgstr "Зберегти розширені атрибути"
@@ -6663,11 +6667,11 @@ msgstr "Вимагати автентифікацію."
 msgid "Required"
 msgstr "Вимагається"
 
+msgid "Rescan"
+msgstr ""
+
 msgid "Rescan Disks"
 msgstr "Пересканувати диски"
-
-msgid "Rescan database in progress"
-msgstr "Триває оновлення бази даних"
 
 msgid "Rescan interval"
 msgstr "Інтервал пересканування"
@@ -7106,13 +7110,6 @@ msgstr ""
 "Обрати інтерфейс для використання (Вибір можливий тільки, якщо ваш сервер "
 "має більше одного інтерфейсу)."
 
-msgid ""
-"Select which interface to use. (Only selectable if your server has more than "
-"one)"
-msgstr ""
-"Виберіть, який інтерфейс використовувати. (Виберіть тільки якщо ваш сервер "
-"має більше одного інтерфейсу)"
-
 msgid "Selected"
 msgstr "Вибрано"
 
@@ -7208,6 +7205,9 @@ msgstr "Версія сервера"
 
 msgid "Service"
 msgstr "Служба"
+
+msgid "Service Enabled"
+msgstr ""
 
 msgid "Services"
 msgstr "Служби"
@@ -8386,12 +8386,18 @@ msgstr ""
 "Ініціатор може здійснювати пошук цілей, використовуючи чинні ім'я "
 "користувача і ключ безпеки із зазначеної групи автентифікації."
 
+msgid "The interface is unknown."
+msgstr ""
+
 msgid ""
 "The istgtcontrol can access the targets with correct user and secret in "
 "specific Auth Group."
 msgstr ""
 "istgtcontrol зможе отримати доступ до цілей, якщо правильно поставити ім'я "
 "користувача і ключ безпеки в певній групі аутентифікації."
+
+msgid "The location of the \"Database Directory\" is not a valid location."
+msgstr ""
 
 msgid "The login name contains invalid characters."
 msgstr "Логін містить неприйнятні символи."
@@ -8477,6 +8483,12 @@ msgstr "Ім'я RAID вже використовується."
 msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr "Ім'я RAID може складатися тільки з символів A-Z, A-Z, 0-9."
+
+msgid "The name of the media server cannot be empty."
+msgstr ""
+
+msgid "The name of the media server is missing."
+msgstr ""
 
 msgid "The name of the pool cannot be changed."
 msgstr "Ім'я пулу не може бути змінено."
@@ -9224,11 +9236,8 @@ msgstr "Таке ім'я віртуального пристрою вже існ
 
 msgid ""
 "This will allow server-side downscaling of very large JPEG images, it can "
-"hurt JPEG serving performance on (at least) Sony DLNA products."
+"impact JPEG serving performance on some DLNA products."
 msgstr ""
-"Встановіть для суворого відповідності стандартам DLNA. Це дозволить "
-"зменшення розміру занадто великих JPEG-зображень на стороні сервера, що може "
-"зашкодити продуктивності (щонайменше) DLNA-продуктів Sony."
 
 msgid "This will create a recycle bin on the share."
 msgstr "Це створить смітник у загальному ресурсі."
@@ -9265,8 +9274,8 @@ msgstr "Четвер"
 msgid "TiB"
 msgstr "ТіБ"
 
-msgid "TiVo support"
-msgstr "Підтримка TiVo"
+msgid "TiVo Support"
+msgstr ""
 
 msgid "Time"
 msgstr "Час"
@@ -10373,9 +10382,6 @@ msgstr "Використовувати chroot() для всіх, крім root"
 msgid "days"
 msgstr "дні(в)"
 
-msgid "debug"
-msgstr "debug"
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -10523,3 +10529,58 @@ msgstr "версія:"
 
 msgid "week days"
 msgstr "днів тижня"
+
+#~ msgid "Location where the database with media contents will be stored."
+#~ msgstr "Місце, де буде збережена база даних мультимедіа."
+
+#~ msgid "Building database in progress"
+#~ msgstr "Триває створення бази даних"
+
+#~ msgid "Log level"
+#~ msgstr "Рівень журналу"
+
+#~ msgid "Minidlna configuration has been updated."
+#~ msgstr "Налаштування MiniDLNA оновлено."
+
+#~ msgid "Rescan database in progress"
+#~ msgstr "Триває оновлення бази даних"
+
+#~ msgid ""
+#~ "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
+#~ "Fuppes first."
+#~ msgstr ""
+#~ "Fuppes включено. Якщо ви хочете використовувати MiniDLNA, вам потрібно буде "
+#~ "відключити Fuppes в першу чергу."
+
+#~ msgid "TiVo support"
+#~ msgstr "Підтримка TiVo"
+
+#~ msgid ""
+#~ "Select which interface to use. (Only selectable if your server has more than "
+#~ "one)"
+#~ msgstr ""
+#~ "Виберіть, який інтерфейс використовувати. (Виберіть тільки якщо ваш сервер "
+#~ "має більше одного інтерфейсу)"
+
+#~ msgid ""
+#~ "This will allow server-side downscaling of very large JPEG images, it can "
+#~ "hurt JPEG serving performance on (at least) Sony DLNA products."
+#~ msgstr ""
+#~ "Встановіть для суворого відповідності стандартам DLNA. Це дозволить "
+#~ "зменшення розміру занадто великих JPEG-зображень на стороні сервера, що може "
+#~ "зашкодити продуктивності (щонайменше) DLNA-продуктів Sony."
+
+#~ msgid "debug"
+#~ msgstr "debug"
+
+#~ msgid "Presentation WebGUI"
+#~ msgstr "Подання веб інтерфейсу"
+
+#~ msgid "Broadcast interval"
+#~ msgstr "Інтервал віщання"
+
+#~ msgid "Please define the Database directory location."
+#~ msgstr "Будь ласка, влажіть директорію де знаходиться база даних."
+
+#~ msgid "Please define the Media library location."
+#~ msgstr "Будь ласка, вкажіть шлях до медіа-бібліотеки."

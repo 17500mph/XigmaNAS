@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-15 01:10+0000\n"
-"PO-Revision-Date: 2017-01-05 21:57+0000\n"
+"POT-Creation-Date: 2017-01-16 07:22+0000\n"
+"PO-Revision-Date: 2017-01-15 15:29+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-15 00:41+0000\n"
+"X-Launchpad-Export-Date: 2017-01-16 06:41+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -278,6 +278,9 @@ msgstr ""
 
 msgid "A reload request has been sent to the daemon."
 msgstr "Betöltési kérést elküldtük a démonnak."
+
+msgid "A rescan has been issued."
+msgstr ""
 
 msgid "A route to this destination network already exists."
 msgstr "Az útvonal ehhez a célhálózathoz már létezik."
@@ -888,6 +891,11 @@ msgstr ""
 "Egy másik DLNA/UPnP szolgáltatás már fut. Fuppes bekapcsolása problémát "
 "okozhat."
 
+msgid ""
+"Another DLNA/UPnP service is already running. Enabling MiniDLNA might cause "
+"issues."
+msgstr ""
+
 msgid "Any"
 msgstr "Bármely"
 
@@ -1209,8 +1217,8 @@ msgstr "Hídbeállítások"
 msgid "Bring a device online"
 msgstr "Eszköz online-ra állítása"
 
-msgid "Broadcast interval"
-msgstr "Broadcast időköz"
+msgid "Broadcast Interval"
+msgstr ""
 
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
@@ -1223,9 +1231,6 @@ msgstr "Könyvtár tallózása"
 
 msgid "Browseable"
 msgstr "Böngészhető"
-
-msgid "Building database in progress"
-msgstr "Adatbázis felépítése folyamatban"
 
 msgid "Bulgarian"
 msgstr "Bulgár"
@@ -1402,6 +1407,9 @@ msgstr "Számítógéped IP címének módosítása"
 msgid "Change the IP address of your server"
 msgstr "Szerver IP címének módosítása"
 
+msgid "Changes have been applied."
+msgstr ""
+
 msgid "Changes to this option will take effect after a reboot."
 msgstr ""
 "Ezeknek a beállításoknak a módosításai újraindítás után lépnek életbe."
@@ -1506,7 +1514,7 @@ msgid "Command"
 msgstr "Parancs"
 
 msgid "Command Output"
-msgstr ""
+msgstr "Parancskimenet"
 
 msgid "Command Scripts"
 msgstr "Parancsszkript"
@@ -1622,11 +1630,14 @@ msgstr "Tároló"
 msgid "Content"
 msgstr "Tartalom"
 
+msgid "Content Locations"
+msgstr ""
+
 msgid "Continue"
 msgstr "Folytatás"
 
 msgid "Control"
-msgstr ""
+msgstr "Felügyelet"
 
 msgid "Controller"
 msgstr "Vezérlő"
@@ -2466,6 +2477,9 @@ msgstr "Cserélhető médiát tartalmazó könyvtár. (pl.: /mnt/iscsi/)"
 msgid "Directory to watch for new .torrent files."
 msgstr "Könyvtár a .torrent fájlok figyelésére."
 
+msgid "Disable"
+msgstr ""
+
 msgid "Disable Firmware Update"
 msgstr "Firmware frissítés tiltása"
 
@@ -2689,7 +2703,7 @@ msgid "Do you really want to uninstall this package?"
 msgstr "Valóban el akarja távolítani ezt a csomagot?"
 
 msgid "Do you want to apply these settings?"
-msgstr ""
+msgstr "Alkalmazzuk ezeket a beállításokat?"
 
 msgid "Do you want to create a JBOD from selected disks?"
 msgstr "Biztos, hogy létrehozol egy JBOD-ot a kiválasztott lemezekből?"
@@ -3330,7 +3344,7 @@ msgid "Enhanced compatibility with Netatalk AFP server"
 msgstr "Továbbfejlesztett kompatibilitás Netatalk AFP szerverrel"
 
 msgid "Enter Command"
-msgstr ""
+msgstr "Parancs megadása"
 
 msgid "Enter a comment"
 msgstr "Írj egy hozzászólást"
@@ -3460,7 +3474,7 @@ msgid "Execute"
 msgstr "Futtatás"
 
 msgid "Execute Command"
-msgstr ""
+msgstr "Parancs végrehajtása"
 
 msgid ""
 "Execute command pre or post system initialization (booting) or before system "
@@ -3805,12 +3819,6 @@ msgstr "Fuppes Média Szerver"
 
 msgid "Fuppes Media Server Administration"
 msgstr "Fuppes Médiaszerver Kezelése"
-
-msgid ""
-"Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
-"Fuppes first."
-msgstr ""
-"Fuppes engedélyezve van. A MiniDLNA használatához a Fuppes-t le kell tiltani."
 
 msgid "GEOM"
 msgstr "GEOM"
@@ -4860,9 +4868,6 @@ msgstr "Médiatartalom-adatbázis helye."
 msgid "Location where the content database file will be stored."
 msgstr "Az adatbázis tartalom fájl helye."
 
-msgid "Location where the database with media contents will be stored."
-msgstr "A média tartalmú adatbázis helye."
-
 #, php-format
 msgid ""
 "Location where the working files will be stored, e.g. %s/backup/.unison"
@@ -4879,9 +4884,6 @@ msgstr "Naplózási beállítások"
 
 msgid "Log file is empty."
 msgstr "Log fájl üres."
-
-msgid "Log level"
-msgstr "Naplózás szintje"
 
 msgid "Log order"
 msgstr "Naplózás sorrendje"
@@ -4998,6 +5000,9 @@ msgstr "Bizonyosodjon meg róla, hogy a S.M.A.R.T.-ot aktiválta eszközein."
 
 msgid "Make sure you have already configured your email settings"
 msgstr "Győződj meg arról, hogy az e-mail tulajdonságokat beállítottad."
+
+msgid "Manage content locations."
+msgstr ""
 
 msgid "Management"
 msgstr "Kezelés"
@@ -5184,8 +5189,8 @@ msgstr "MiniDLNA"
 msgid "MiniDLNA A/V Media Server"
 msgstr "MiniDLNA A/V Médiaszerver"
 
-msgid "Minidlna configuration has been updated."
-msgstr "MiniDLNA konfigurációja sikeresen módosult."
+msgid "MiniDLNA Media Server WebGUI"
+msgstr ""
 
 msgid "Minimum"
 msgstr "Minimum"
@@ -5233,6 +5238,9 @@ msgstr "Hiányzó paraméter"
 
 msgid "Mixed"
 msgstr "Vegyes"
+
+msgid "MniDLNA has been disabled."
+msgstr ""
 
 msgid "Mode"
 msgstr "Mód"
@@ -5841,7 +5849,7 @@ msgid "PHP Command"
 msgstr "PHP Parancs"
 
 msgid "PHP Command Output"
-msgstr ""
+msgstr "PHP parancskimenet"
 
 msgid "PPPoE"
 msgstr "PPPoE"
@@ -6093,11 +6101,11 @@ msgstr "Ellenőrizd a dokumentációt."
 msgid "Please check the log files"
 msgstr "Ellenőrizd a naplófájlt."
 
-msgid "Please define the Database directory location."
-msgstr "Add meg az adatbázis  könyvtárának helyét."
+msgid "Please define one or more content locations."
+msgstr ""
 
-msgid "Please define the Media library location."
-msgstr "Add meg a Médiakönyvtár helyét."
+msgid "Please define the location for the database directory."
+msgstr ""
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr ""
@@ -6234,9 +6242,6 @@ msgstr "Előtag"
 
 msgid "Preformatted file system"
 msgstr "Előreformázott fájlrendszer"
-
-msgid "Presentation WebGUI"
-msgstr "WebGUI megjelenítése"
 
 msgid "Preserve extended attributes"
 msgstr "Kiterjesztett attribútumok megtartása"
@@ -6635,11 +6640,11 @@ msgstr "Hitelesítést igényel."
 msgid "Required"
 msgstr "Kötelező"
 
+msgid "Rescan"
+msgstr ""
+
 msgid "Rescan Disks"
 msgstr "Lemezek újrakeresése"
-
-msgid "Rescan database in progress"
-msgstr "Adatbázis újravizsgálása folyamatban."
 
 msgid "Rescan interval"
 msgstr "Újrakeresési időköz"
@@ -7082,12 +7087,6 @@ msgstr ""
 "Válaszd ki, melyik interfészt használjuk (csak akkor választható, ha a "
 "szerverednek több interfésze van)."
 
-msgid ""
-"Select which interface to use. (Only selectable if your server has more than "
-"one)"
-msgstr ""
-"Válaszd ki, melyik csatolót használjuk (csak akkor, ha egynél több van.)"
-
 msgid "Selected"
 msgstr "Kiválasztott"
 
@@ -7183,6 +7182,9 @@ msgstr "Szerver verzió"
 
 msgid "Service"
 msgstr "Szolgáltatás"
+
+msgid "Service Enabled"
+msgstr ""
 
 msgid "Services"
 msgstr "Szolgáltatások"
@@ -8358,12 +8360,18 @@ msgstr ""
 "A kezdeményező felfedezheti a célokat a megfelelő felhasználóval és titokkal "
 "a Hitelesítő csoportban megadottak szerint."
 
+msgid "The interface is unknown."
+msgstr ""
+
 msgid ""
 "The istgtcontrol can access the targets with correct user and secret in "
 "specific Auth Group."
 msgstr ""
 "A istgtcontrol elérheti a célokat a jelenlegi felhasználóval és titokkal a "
 "Hitelesítő csoportban megadottak szerint."
+
+msgid "The location of the \"Database Directory\" is not a valid location."
+msgstr ""
 
 msgid "The login name contains invalid characters."
 msgstr "A bejelentkezési név érvénytelen karaktereket tartalmaz."
@@ -8452,6 +8460,12 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr ""
 "RAID neve csak a következő karaktereket tartalmazhatja:  a-z, A-Z, 0-9."
+
+msgid "The name of the media server cannot be empty."
+msgstr ""
+
+msgid "The name of the media server is missing."
+msgstr ""
 
 msgid "The name of the pool cannot be changed."
 msgstr "Tárolók száma nem módosítható."
@@ -9192,11 +9206,8 @@ msgstr "A virtuális meghajtó neve már foglalt."
 
 msgid ""
 "This will allow server-side downscaling of very large JPEG images, it can "
-"hurt JPEG serving performance on (at least) Sony DLNA products."
+"impact JPEG serving performance on some DLNA products."
 msgstr ""
-"Ez engedélyezi szerver oldalon a nagyméretű JPEG képek kicsinyítését, ami "
-"visszavetheti (legalább) a Sony DLNA-termékek JPEG-szolgáltatási "
-"teljesítményét."
 
 msgid "This will create a recycle bin on the share."
 msgstr "Ez csinál egy lomtárat a megosztáson."
@@ -9234,8 +9245,8 @@ msgstr "Csütörtök"
 msgid "TiB"
 msgstr "TiB"
 
-msgid "TiVo support"
-msgstr "TiVo támogatás"
+msgid "TiVo Support"
+msgstr ""
 
 msgid "Time"
 msgstr "idő"
@@ -10321,9 +10332,6 @@ msgstr "chroot() mindenki, kivéve root."
 msgid "days"
 msgstr "nap"
 
-msgid "debug"
-msgstr "hibakeresés"
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -10471,3 +10479,56 @@ msgstr "verzió:"
 
 msgid "week days"
 msgstr "hétköznap"
+
+#~ msgid "Location where the database with media contents will be stored."
+#~ msgstr "A média tartalmú adatbázis helye."
+
+#~ msgid "Broadcast interval"
+#~ msgstr "Broadcast időköz"
+
+#~ msgid "Building database in progress"
+#~ msgstr "Adatbázis felépítése folyamatban"
+
+#~ msgid "Please define the Database directory location."
+#~ msgstr "Add meg az adatbázis  könyvtárának helyét."
+
+#~ msgid "TiVo support"
+#~ msgstr "TiVo támogatás"
+
+#~ msgid "debug"
+#~ msgstr "hibakeresés"
+
+#~ msgid "Please define the Media library location."
+#~ msgstr "Add meg a Médiakönyvtár helyét."
+
+#~ msgid "Presentation WebGUI"
+#~ msgstr "WebGUI megjelenítése"
+
+#~ msgid "Rescan database in progress"
+#~ msgstr "Adatbázis újravizsgálása folyamatban."
+
+#~ msgid ""
+#~ "Select which interface to use. (Only selectable if your server has more than "
+#~ "one)"
+#~ msgstr ""
+#~ "Válaszd ki, melyik csatolót használjuk (csak akkor, ha egynél több van.)"
+
+#~ msgid "Log level"
+#~ msgstr "Naplózás szintje"
+
+#~ msgid ""
+#~ "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
+#~ "Fuppes first."
+#~ msgstr ""
+#~ "Fuppes engedélyezve van. A MiniDLNA használatához a Fuppes-t le kell tiltani."
+
+#~ msgid ""
+#~ "This will allow server-side downscaling of very large JPEG images, it can "
+#~ "hurt JPEG serving performance on (at least) Sony DLNA products."
+#~ msgstr ""
+#~ "Ez engedélyezi szerver oldalon a nagyméretű JPEG képek kicsinyítését, ami "
+#~ "visszavetheti (legalább) a Sony DLNA-termékek JPEG-szolgáltatási "
+#~ "teljesítményét."
+
+#~ msgid "Minidlna configuration has been updated."
+#~ msgstr "MiniDLNA konfigurációja sikeresen módosult."
