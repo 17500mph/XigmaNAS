@@ -190,7 +190,7 @@ switch($page_action):
 		if(is_string($sphere_record['name'])):
 			if(preg_match('/\S/',$sphere_record['name'])):
 			else:
-				$input_errors[] = gtext('Then name of the media server cannot be empty.');
+				$input_errors[] = gtext('The name of the media server cannot be empty.');
 				$sphere_record['name'] = '';
 			endif;
 		else:
