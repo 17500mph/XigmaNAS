@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-15 01:10+0000\n"
+"POT-Creation-Date: 2017-01-16 07:22+0000\n"
 "PO-Revision-Date: 2016-12-12 09:02+0000\n"
 "Last-Translator: JieTing Xu <xu.jieting@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-15 00:41+0000\n"
+"X-Launchpad-Export-Date: 2017-01-16 06:41+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -237,6 +237,9 @@ msgstr "为执行需求的动作，已挂载的磁盘或分区将临时取消挂
 
 msgid "A reload request has been sent to the daemon."
 msgstr "已重新发送需求至守护进程。"
+
+msgid "A rescan has been issued."
+msgstr ""
 
 msgid "A route to this destination network already exists."
 msgstr "到目标网段的路由设置已经存在。"
@@ -800,6 +803,11 @@ msgid ""
 "issues."
 msgstr ""
 
+msgid ""
+"Another DLNA/UPnP service is already running. Enabling MiniDLNA might cause "
+"issues."
+msgstr ""
+
 msgid "Any"
 msgstr "任何"
 
@@ -1107,8 +1115,8 @@ msgstr ""
 msgid "Bring a device online"
 msgstr ""
 
-msgid "Broadcast interval"
-msgstr "广播间隔"
+msgid "Broadcast Interval"
+msgstr ""
 
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
@@ -1120,9 +1128,6 @@ msgstr "浏览目录"
 
 msgid "Browseable"
 msgstr "可浏览"
-
-msgid "Building database in progress"
-msgstr "正在建设数据库中"
 
 msgid "Bulgarian"
 msgstr "保加利亚文"
@@ -1294,6 +1299,9 @@ msgstr "更改你的电脑IP地址"
 
 msgid "Change the IP address of your server"
 msgstr "更改你的服务器IP地址"
+
+msgid "Changes have been applied."
+msgstr ""
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr "重新启动系统之后，更改的设置才会生效。"
@@ -1501,6 +1509,9 @@ msgstr "容器"
 
 msgid "Content"
 msgstr "内容"
+
+msgid "Content Locations"
+msgstr ""
 
 msgid "Continue"
 msgstr "继续"
@@ -2270,6 +2281,9 @@ msgstr "含有可移动媒体的目录。 （例如 /mnt/iscsi/）"
 
 msgid "Directory to watch for new .torrent files."
 msgstr "监视新 .torrent 文件的目录。"
+
+msgid "Disable"
+msgstr ""
 
 msgid "Disable Firmware Update"
 msgstr "关闭固件更新"
@@ -3541,11 +3555,6 @@ msgstr ""
 msgid "Fuppes Media Server Administration"
 msgstr ""
 
-msgid ""
-"Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
-"Fuppes first."
-msgstr ""
-
 msgid "GEOM"
 msgstr ""
 
@@ -4512,9 +4521,6 @@ msgstr ""
 msgid "Location where the content database file will be stored."
 msgstr "储存内容资料库文件的位置。"
 
-msgid "Location where the database with media contents will be stored."
-msgstr "媒体内容的数据库的储存位置。"
-
 #, php-format
 msgid ""
 "Location where the working files will be stored, e.g. %s/backup/.unison"
@@ -4531,9 +4537,6 @@ msgstr ""
 
 msgid "Log file is empty."
 msgstr ""
-
-msgid "Log level"
-msgstr "记录档层级"
 
 msgid "Log order"
 msgstr ""
@@ -4646,6 +4649,9 @@ msgid "Make sure you have activated S.M.A.R.T. for your devices."
 msgstr "请确定您已经启用装置的 S.M.A.R.T.。"
 
 msgid "Make sure you have already configured your email settings"
+msgstr ""
+
+msgid "Manage content locations."
 msgstr ""
 
 msgid "Management"
@@ -4827,7 +4833,7 @@ msgstr "MiniDLNA"
 msgid "MiniDLNA A/V Media Server"
 msgstr ""
 
-msgid "Minidlna configuration has been updated."
+msgid "MiniDLNA Media Server WebGUI"
 msgstr ""
 
 msgid "Minimum"
@@ -4873,6 +4879,9 @@ msgid "Missing parameter"
 msgstr ""
 
 msgid "Mixed"
+msgstr ""
+
+msgid "MniDLNA has been disabled."
 msgstr ""
 
 msgid "Mode"
@@ -5690,10 +5699,10 @@ msgstr ""
 msgid "Please check the log files"
 msgstr ""
 
-msgid "Please define the Database directory location."
+msgid "Please define one or more content locations."
 msgstr ""
 
-msgid "Please define the Media library location."
+msgid "Please define the location for the database directory."
 msgstr ""
 
 msgid "Please note that blanks in path names are not allowed."
@@ -5827,9 +5836,6 @@ msgstr "前缀"
 
 msgid "Preformatted file system"
 msgstr "已格式化的文件系统"
-
-msgid "Presentation WebGUI"
-msgstr ""
 
 msgid "Preserve extended attributes"
 msgstr "保留扩展属性"
@@ -6206,11 +6212,11 @@ msgstr "需要认证。"
 msgid "Required"
 msgstr "必填"
 
+msgid "Rescan"
+msgstr ""
+
 msgid "Rescan Disks"
 msgstr "重新扫描磁盘"
-
-msgid "Rescan database in progress"
-msgstr "重新扫描数据库正在进行"
 
 msgid "Rescan interval"
 msgstr "重新扫描间隔"
@@ -6619,11 +6625,6 @@ msgid ""
 "one interface)"
 msgstr ""
 
-msgid ""
-"Select which interface to use. (Only selectable if your server has more than "
-"one)"
-msgstr ""
-
 msgid "Selected"
 msgstr "已选择"
 
@@ -6719,6 +6720,9 @@ msgstr "伺服器版本"
 
 msgid "Service"
 msgstr "服务"
+
+msgid "Service Enabled"
+msgstr ""
 
 msgid "Services"
 msgstr "服务"
@@ -7782,10 +7786,16 @@ msgid ""
 "specific Auth Group."
 msgstr "启动器可以以正确的用户和特定认证组的秘密发现目标器。"
 
+msgid "The interface is unknown."
+msgstr ""
+
 msgid ""
 "The istgtcontrol can access the targets with correct user and secret in "
 "specific Auth Group."
 msgstr "istgtcontrol 可以以正确的用户和特定认证组的秘密访问目标器。"
+
+msgid "The location of the \"Database Directory\" is not a valid location."
+msgstr ""
 
 msgid "The login name contains invalid characters."
 msgstr "登入帐号含有无效的字元。"
@@ -7855,6 +7865,12 @@ msgstr ""
 
 msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
+msgstr ""
+
+msgid "The name of the media server cannot be empty."
+msgstr ""
+
+msgid "The name of the media server is missing."
 msgstr ""
 
 msgid "The name of the pool cannot be changed."
@@ -8469,7 +8485,7 @@ msgstr "此虚拟设备的名称已经存在。"
 
 msgid ""
 "This will allow server-side downscaling of very large JPEG images, it can "
-"hurt JPEG serving performance on (at least) Sony DLNA products."
+"impact JPEG serving performance on some DLNA products."
 msgstr ""
 
 msgid "This will create a recycle bin on the share."
@@ -8502,8 +8518,8 @@ msgstr ""
 msgid "TiB"
 msgstr "TiB"
 
-msgid "TiVo support"
-msgstr "TiVo 支持"
+msgid "TiVo Support"
+msgstr ""
 
 msgid "Time"
 msgstr "时间"
@@ -9508,9 +9524,6 @@ msgstr "chroot() 所有用户，除了 root。"
 msgid "days"
 msgstr ""
 
-msgid "debug"
-msgstr "调试"
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -9656,3 +9669,24 @@ msgstr "版本："
 
 msgid "week days"
 msgstr ""
+
+#~ msgid "Location where the database with media contents will be stored."
+#~ msgstr "媒体内容的数据库的储存位置。"
+
+#~ msgid "Broadcast interval"
+#~ msgstr "广播间隔"
+
+#~ msgid "Building database in progress"
+#~ msgstr "正在建设数据库中"
+
+#~ msgid "Log level"
+#~ msgstr "记录档层级"
+
+#~ msgid "Rescan database in progress"
+#~ msgstr "重新扫描数据库正在进行"
+
+#~ msgid "TiVo support"
+#~ msgstr "TiVo 支持"
+
+#~ msgid "debug"
+#~ msgstr "调试"

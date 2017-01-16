@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-15 01:10+0000\n"
-"PO-Revision-Date: 2017-01-15 00:39+0000\n"
+"POT-Creation-Date: 2017-01-16 07:22+0000\n"
+"PO-Revision-Date: 2017-01-16 06:37+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-15 00:41+0000\n"
+"X-Launchpad-Export-Date: 2017-01-16 06:41+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -289,6 +289,9 @@ msgstr ""
 
 msgid "A reload request has been sent to the daemon."
 msgstr "Een herlaad verzoek is verstuurd naar de daemon."
+
+msgid "A rescan has been issued."
+msgstr "Een herscan wordt uitgevoerd."
 
 msgid "A route to this destination network already exists."
 msgstr "Een route naar dit bestemmingsnetwerk bestaat reeds."
@@ -910,6 +913,13 @@ msgstr ""
 "Een andere DLNA/UPnP service wordt al uitgevoerd. Het inschakelen van Fuppes "
 "kan tot problemen leiden."
 
+msgid ""
+"Another DLNA/UPnP service is already running. Enabling MiniDLNA might cause "
+"issues."
+msgstr ""
+"Een andere DLNA/UPnP service wordt al uitgevoerd. Het inschakelen van "
+"MiniDLNA kan tot problemen leiden."
+
 msgid "Any"
 msgstr "Alle"
 
@@ -1237,8 +1247,8 @@ msgstr "Bridge Instellingen"
 msgid "Bring a device online"
 msgstr "Breng een schijf online"
 
-msgid "Broadcast interval"
-msgstr "Uitzend interval"
+msgid "Broadcast Interval"
+msgstr "Uitzend Interval"
 
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
@@ -1252,9 +1262,6 @@ msgstr "Blader Map"
 
 msgid "Browseable"
 msgstr "Verkenbaar"
-
-msgid "Building database in progress"
-msgstr "De database wordt nu op de achtergrond opgebouwd"
 
 msgid "Bulgarian"
 msgstr "Bulgaars"
@@ -1433,6 +1440,9 @@ msgstr "Verander het IP-adres van uw computer"
 
 msgid "Change the IP address of your server"
 msgstr "Verander het IP-adres van uw server"
+
+msgid "Changes have been applied."
+msgstr "De wijzigingen zijn uitgevoerd."
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr ""
@@ -1655,6 +1665,9 @@ msgstr "Houder"
 
 msgid "Content"
 msgstr "Mediabibliotheek"
+
+msgid "Content Locations"
+msgstr "Content Locatie"
 
 msgid "Continue"
 msgstr "Doorgaan"
@@ -2529,6 +2542,9 @@ msgstr "De locatie die de verwijderbare media bevat . (bijv. /mnt/iscsi/)"
 
 msgid "Directory to watch for new .torrent files."
 msgstr "Map om in te kijken voor nieuwe .torrent bestanden."
+
+msgid "Disable"
+msgstr "Uitschakelen"
 
 msgid "Disable Firmware Update"
 msgstr "Uitschakelen Firmware Update"
@@ -3882,13 +3898,6 @@ msgstr "Fuppes Media Server"
 msgid "Fuppes Media Server Administration"
 msgstr "Fuppes Media Server Administratie"
 
-msgid ""
-"Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
-"Fuppes first."
-msgstr ""
-"Fuppes is ingeschakeld. Wilt u MiniDLNA gebruiken, moet u Fuppes eerst "
-"uitschakelen."
-
 msgid "GEOM"
 msgstr "GEOM"
 
@@ -4953,9 +4962,6 @@ msgstr ""
 "Geef de locatie op waar de database van de mediabibliotheek opgeslagen moet "
 "worden."
 
-msgid "Location where the database with media contents will be stored."
-msgstr "Locatie waar de database met media inhoud opgeslagen moet worden."
-
 #, php-format
 msgid ""
 "Location where the working files will be stored, e.g. %s/backup/.unison"
@@ -4974,9 +4980,6 @@ msgstr "Log Instellingen"
 
 msgid "Log file is empty."
 msgstr "Logbestand is leeg."
-
-msgid "Log level"
-msgstr "Log niveau"
 
 msgid "Log order"
 msgstr "Log volgorde"
@@ -5095,6 +5098,9 @@ msgstr ""
 msgid "Make sure you have already configured your email settings"
 msgstr ""
 "Zorg ervoor dat u uw email-instellingen al correct heeft geconfigureerd"
+
+msgid "Manage content locations."
+msgstr "Beheer Content Locaties."
 
 msgid "Management"
 msgstr "Management"
@@ -5285,8 +5291,8 @@ msgstr "MiniDLNA"
 msgid "MiniDLNA A/V Media Server"
 msgstr "MiniDLNA A/V Media Server"
 
-msgid "Minidlna configuration has been updated."
-msgstr "Minidlna configuratie is bijgewerkt."
+msgid "MiniDLNA Media Server WebGUI"
+msgstr "MiniDLNA Media Server WebGUI"
 
 msgid "Minimum"
 msgstr "Minimaal"
@@ -5332,6 +5338,9 @@ msgstr "Ontbrekende parameter"
 
 msgid "Mixed"
 msgstr "Gemengd"
+
+msgid "MniDLNA has been disabled."
+msgstr "MniDLNA is uitgeschakeld."
 
 msgid "Mode"
 msgstr "Mode"
@@ -6197,11 +6206,11 @@ msgstr "Bekijk de documentatie."
 msgid "Please check the log files"
 msgstr "Controleer de logbestanden"
 
-msgid "Please define the Database directory location."
-msgstr "Definieer de database locatie."
+msgid "Please define one or more content locations."
+msgstr "Geef één of meer content locaties."
 
-msgid "Please define the Media library location."
-msgstr "Definieer de Mediatheek locatie."
+msgid "Please define the location for the database directory."
+msgstr "Geef de locatie van de database degevensmap op."
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr "Spaties in de naam van de locatie zijn niet toegestaan."
@@ -6337,9 +6346,6 @@ msgstr "Voorvoegsel"
 
 msgid "Preformatted file system"
 msgstr "Reeds geformatteerd bestandssyteem"
-
-msgid "Presentation WebGUI"
-msgstr "Presentatie WebGUI"
 
 msgid "Preserve extended attributes"
 msgstr "Reserveer externe attubuten"
@@ -6737,11 +6743,11 @@ msgstr "Verificatie vereist."
 msgid "Required"
 msgstr "Vereist"
 
+msgid "Rescan"
+msgstr "Herscannen"
+
 msgid "Rescan Disks"
 msgstr "Herscan Schijven"
-
-msgid "Rescan database in progress"
-msgstr "Bezig met het bijwerken van de database"
 
 msgid "Rescan interval"
 msgstr "Opnieuw scannen interval"
@@ -7183,13 +7189,6 @@ msgstr ""
 "Selecteer het netwerk om te gebruiken. (Alleen te selecteren indien uw "
 "server er meer dan één heeft)"
 
-msgid ""
-"Select which interface to use. (Only selectable if your server has more than "
-"one)"
-msgstr ""
-"Selecteer het netwerk om te gebruiken. (Alleen te selecteren indien uw "
-"server er meer dan één heeft)"
-
 msgid "Selected"
 msgstr "Geselecteerd"
 
@@ -7287,6 +7286,9 @@ msgstr "Server versie"
 
 msgid "Service"
 msgstr "Service"
+
+msgid "Service Enabled"
+msgstr "Service Ingeschakeld"
 
 msgid "Services"
 msgstr "Services"
@@ -8478,12 +8480,18 @@ msgstr ""
 "De initiator kan de doelen met correcte gebruikersnaam en wachtwoord in de "
 "specifieke Auth Groep ontdekken."
 
+msgid "The interface is unknown."
+msgstr "Het netwerk is onbekend."
+
 msgid ""
 "The istgtcontrol can access the targets with correct user and secret in "
 "specific Auth Group."
 msgstr ""
 "De istgtcontrol kan toegang krijgen tot de doelen met de juiste gebruiker en "
 "wachtwoord in de specifieke Auth Groep."
+
+msgid "The location of the \"Database Directory\" is not a valid location."
+msgstr "De locatie van de \"Database Gegevensmap\" is geen geldige locatie."
 
 msgid "The login name contains invalid characters."
 msgstr "De inlognaam bevat ongeldige karakters."
@@ -8573,6 +8581,12 @@ msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr ""
 "De naam van de RAID mag alleen bestaan uit de karakters a-z, A-Z, 0-9."
+
+msgid "The name of the media server cannot be empty."
+msgstr "De naam van de media server mag niet leeg gelaten worden."
+
+msgid "The name of the media server is missing."
+msgstr "The naam van de media server ontbreekt."
 
 msgid "The name of the pool cannot be changed."
 msgstr "De naam van de pool kan niet worden gewijzigd."
@@ -9350,11 +9364,11 @@ msgstr "Deze virtuele schijfnaam bestaat reeds."
 
 msgid ""
 "This will allow server-side downscaling of very large JPEG images, it can "
-"hurt JPEG serving performance on (at least) Sony DLNA products."
+"impact JPEG serving performance on some DLNA products."
 msgstr ""
 "Dit zal aan de server-kant downscaling  toelaten van zeer grote JPEG "
-"afbeeldingen, het kan de JPEG aanbied prestaties negatief beïnvloeden op "
-"(minstens) Sony DLNA producten."
+"afbeeldingen, het kan de JPEG aanbied prestaties beïnvloeden op sommige DLNA "
+"producten."
 
 msgid "This will create a recycle bin on the share."
 msgstr "Dit creëert een prullenbak op het gedeeld station."
@@ -9393,8 +9407,8 @@ msgstr "Donderdag"
 msgid "TiB"
 msgstr "TiB"
 
-msgid "TiVo support"
-msgstr "TiVo ondersteuning"
+msgid "TiVo Support"
+msgstr "TiVo Ondersteuning"
 
 msgid "Time"
 msgstr "Tijd"
@@ -10504,9 +10518,6 @@ msgstr "chroot() iedereen, maar niet de root."
 msgid "days"
 msgstr "dagen"
 
-msgid "debug"
-msgstr "foutopsporing"
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -10654,3 +10665,58 @@ msgstr "versie:"
 
 msgid "week days"
 msgstr "weekdagen"
+
+#~ msgid "Location where the database with media contents will be stored."
+#~ msgstr "Locatie waar de database met media inhoud opgeslagen moet worden."
+
+#~ msgid "Building database in progress"
+#~ msgstr "De database wordt nu op de achtergrond opgebouwd"
+
+#~ msgid "Log level"
+#~ msgstr "Log niveau"
+
+#~ msgid "Minidlna configuration has been updated."
+#~ msgstr "Minidlna configuratie is bijgewerkt."
+
+#~ msgid "Presentation WebGUI"
+#~ msgstr "Presentatie WebGUI"
+
+#~ msgid "TiVo support"
+#~ msgstr "TiVo ondersteuning"
+
+#~ msgid "Rescan database in progress"
+#~ msgstr "Bezig met het bijwerken van de database"
+
+#~ msgid ""
+#~ "Select which interface to use. (Only selectable if your server has more than "
+#~ "one)"
+#~ msgstr ""
+#~ "Selecteer het netwerk om te gebruiken. (Alleen te selecteren indien uw "
+#~ "server er meer dan één heeft)"
+
+#~ msgid "Broadcast interval"
+#~ msgstr "Uitzend interval"
+
+#~ msgid "Please define the Database directory location."
+#~ msgstr "Definieer de database locatie."
+
+#~ msgid "debug"
+#~ msgstr "foutopsporing"
+
+#~ msgid ""
+#~ "This will allow server-side downscaling of very large JPEG images, it can "
+#~ "hurt JPEG serving performance on (at least) Sony DLNA products."
+#~ msgstr ""
+#~ "Dit zal aan de server-kant downscaling  toelaten van zeer grote JPEG "
+#~ "afbeeldingen, het kan de JPEG aanbied prestaties negatief beïnvloeden op "
+#~ "(minstens) Sony DLNA producten."
+
+#~ msgid "Please define the Media library location."
+#~ msgstr "Definieer de Mediatheek locatie."
+
+#~ msgid ""
+#~ "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
+#~ "Fuppes first."
+#~ msgstr ""
+#~ "Fuppes is ingeschakeld. Wilt u MiniDLNA gebruiken, moet u Fuppes eerst "
+#~ "uitschakelen."

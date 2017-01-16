@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-15 01:10+0000\n"
-"PO-Revision-Date: 2017-01-14 15:41+0000\n"
+"POT-Creation-Date: 2017-01-16 07:22+0000\n"
+"PO-Revision-Date: 2017-01-16 05:14+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-15 00:41+0000\n"
+"X-Launchpad-Export-Date: 2017-01-16 06:41+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
@@ -286,6 +286,9 @@ msgstr ""
 
 msgid "A reload request has been sent to the daemon."
 msgstr "Une demande de rechargement a été envoyée au démon"
+
+msgid "A rescan has been issued."
+msgstr "Un réexamen a été lancé."
 
 msgid "A route to this destination network already exists."
 msgstr "Une route pour cette destination existe déjà."
@@ -905,6 +908,13 @@ msgstr ""
 "Un autre service DLNA / UPnP est déjà en cours d'exécution. L'activation de "
 "Fuppes peut provoquer des problèmes."
 
+msgid ""
+"Another DLNA/UPnP service is already running. Enabling MiniDLNA might cause "
+"issues."
+msgstr ""
+"Un autre service DLNA / UPnP est déjà en cours d'exécution. L'activation de "
+"MiniDLNA peut causer des problèmes."
+
 msgid "Any"
 msgstr "Tous"
 
@@ -1233,7 +1243,7 @@ msgstr "Paramètres Bridge"
 msgid "Bring a device online"
 msgstr "Mettre un périphérique en ligne"
 
-msgid "Broadcast interval"
+msgid "Broadcast Interval"
 msgstr "Intervalle de diffusion"
 
 msgid ""
@@ -1248,9 +1258,6 @@ msgstr "Parcourir le répertoire"
 
 msgid "Browseable"
 msgstr "Navigable"
-
-msgid "Building database in progress"
-msgstr "Construction de la base de données en cours"
 
 msgid "Bulgarian"
 msgstr "Bulgare"
@@ -1430,6 +1437,9 @@ msgstr "Modifier l'adresse IP de votre ordinateur"
 
 msgid "Change the IP address of your server"
 msgstr "Modifier l'adresse IP de votre serveur"
+
+msgid "Changes have been applied."
+msgstr "Les modifications ont été apportées."
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr "Ce changement ne prend effet qu'au prochain redémarrage."
@@ -1650,6 +1660,9 @@ msgstr "Conteneur"
 
 msgid "Content"
 msgstr "Contenu"
+
+msgid "Content Locations"
+msgstr "Emplacements de contenu"
 
 msgid "Continue"
 msgstr "Continuer"
@@ -2524,6 +2537,9 @@ msgstr "Répertoire contenant des media amovibles. (e.g /mnt/iscsi/)"
 msgid "Directory to watch for new .torrent files."
 msgstr "Répertoire où rechercher des nouveaux fichiers .torrent."
 
+msgid "Disable"
+msgstr "Désactiver"
+
 msgid "Disable Firmware Update"
 msgstr "Désactiver la mise à jour du logiciel"
 
@@ -2753,7 +2769,7 @@ msgid "Do you really want to uninstall this package?"
 msgstr "Voulez-vous vraiment désinstaller ce paquet?"
 
 msgid "Do you want to apply these settings?"
-msgstr ""
+msgstr "Voulez-vous appliquer ces paramètres?"
 
 msgid "Do you want to create a JBOD from selected disks?"
 msgstr "Voulez-vous créer un JBOD avec les disques sélectionnés?"
@@ -3874,13 +3890,6 @@ msgstr "Fuppes Media Server"
 msgid "Fuppes Media Server Administration"
 msgstr "Administration du serveur de médias Fuppes"
 
-msgid ""
-"Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
-"Fuppes first."
-msgstr ""
-"Fuppes est activé. Si vous souhaitez utiliser MiniDLNA, vous devrez d'abord "
-"désactiver Fuppes."
-
 msgid "GEOM"
 msgstr "GEOM"
 
@@ -4946,10 +4955,6 @@ msgstr ""
 "Emplacement où le contenu du fichier de la base de données doit être "
 "sauvegardé."
 
-msgid "Location where the database with media contents will be stored."
-msgstr ""
-"Emplacement où la base de données qui contient les médias sera stockée."
-
 #, php-format
 msgid ""
 "Location where the working files will be stored, e.g. %s/backup/.unison"
@@ -4967,9 +4972,6 @@ msgstr "Configurations du journal"
 
 msgid "Log file is empty."
 msgstr "fichier journal est vide."
-
-msgid "Log level"
-msgstr "Niveau de journalisation"
 
 msgid "Log order"
 msgstr "Ordre des journaux"
@@ -5087,6 +5089,9 @@ msgstr "Assurez-vous que vous avez activé S.M.A.R.T. pour vos périphériques."
 msgid "Make sure you have already configured your email settings"
 msgstr ""
 "Assurez-vous que vous avez déjà configuré vos paramètres de messagerie"
+
+msgid "Manage content locations."
+msgstr "Gérer les emplacements de contenu."
 
 msgid "Management"
 msgstr "Gestion"
@@ -5275,8 +5280,8 @@ msgstr "MiniDLNA"
 msgid "MiniDLNA A/V Media Server"
 msgstr "MiniDLNA A/V Media Server"
 
-msgid "Minidlna configuration has been updated."
-msgstr "La configuration de Minidlna a été mise à jour."
+msgid "MiniDLNA Media Server WebGUI"
+msgstr "MiniDLNA Media Server WebGUI"
 
 msgid "Minimum"
 msgstr "Minimum"
@@ -5322,6 +5327,9 @@ msgstr "Paramètre manquant"
 
 msgid "Mixed"
 msgstr "Mixte"
+
+msgid "MniDLNA has been disabled."
+msgstr "MiniDLNA a été désactivé."
 
 msgid "Mode"
 msgstr "Mode"
@@ -6180,11 +6188,11 @@ msgstr "S'il vous plaît consulter la documentation."
 msgid "Please check the log files"
 msgstr "S'il vous plaît vérifier les fichiers journaux"
 
-msgid "Please define the Database directory location."
-msgstr "Veuillez définir l'emplacement du répertoire de la base de données."
+msgid "Please define one or more content locations."
+msgstr "Veuillez définir un ou plusieurs emplacements de contenu."
 
-msgid "Please define the Media library location."
-msgstr "Veuillez définir l'emplacement de la librairie Media"
+msgid "Please define the location for the database directory."
+msgstr ""
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr ""
@@ -6327,9 +6335,6 @@ msgstr "Préfixe"
 
 msgid "Preformatted file system"
 msgstr "Système de fichiers préformaté"
-
-msgid "Presentation WebGUI"
-msgstr "Présentation de l'interface web"
 
 msgid "Preserve extended attributes"
 msgstr "Conserver les attributs étendus"
@@ -6728,11 +6733,11 @@ msgstr "Activer l'authentification."
 msgid "Required"
 msgstr "Requis"
 
+msgid "Rescan"
+msgstr "Rescanner"
+
 msgid "Rescan Disks"
 msgstr "Re-balayer les disques"
-
-msgid "Rescan database in progress"
-msgstr "Re-scanne de la base de données en cours"
 
 msgid "Rescan interval"
 msgstr "Intervalle de balayage"
@@ -7174,13 +7179,6 @@ msgstr ""
 "Sélectionnez l'interface à utiliser. (Sélectionnable seulement si votre "
 "serveur a plus d'une interface)"
 
-msgid ""
-"Select which interface to use. (Only selectable if your server has more than "
-"one)"
-msgstr ""
-"Sélectionnez l'interface à utiliser. (Uniquement sélectionnable si votre "
-"serveur en a plus d'une)"
-
 msgid "Selected"
 msgstr "Sélectionné"
 
@@ -7276,6 +7274,9 @@ msgstr "Version du serveur"
 
 msgid "Service"
 msgstr "Service"
+
+msgid "Service Enabled"
+msgstr "Service activé"
 
 msgid "Services"
 msgstr "Services"
@@ -8474,12 +8475,20 @@ msgstr ""
 "L'initiateur peut découvrir les cibles avec un nom et un secret corrects "
 "dans le groupe Auth spécifique."
 
+msgid "The interface is unknown."
+msgstr "L'interface est inconnue."
+
 msgid ""
 "The istgtcontrol can access the targets with correct user and secret in "
 "specific Auth Group."
 msgstr ""
 "Istgtcontrol peut accéder aux cibles avec un nom d'utilisateur et un secret "
 "dans un groupe Auth spécifique."
+
+msgid "The location of the \"Database Directory\" is not a valid location."
+msgstr ""
+"L'emplacement du «Répertoire de base de données» n'est pas un emplacement "
+"valide."
 
 msgid "The login name contains invalid characters."
 msgstr "L'identifiant contient un caractère invalide."
@@ -8567,6 +8576,12 @@ msgstr "Le nom du RAID est déja utilisé."
 msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr "Le nom du RAID ne peut utiliser que les caractères  a-z, A-Z, 0-9."
+
+msgid "The name of the media server cannot be empty."
+msgstr ""
+
+msgid "The name of the media server is missing."
+msgstr ""
 
 msgid "The name of the pool cannot be changed."
 msgstr "Le nom du pool ne peut être changé."
@@ -9333,11 +9348,11 @@ msgstr "Ce nom de périphérique virtuel existe déjà."
 
 msgid ""
 "This will allow server-side downscaling of very large JPEG images, it can "
-"hurt JPEG serving performance on (at least) Sony DLNA products."
+"impact JPEG serving performance on some DLNA products."
 msgstr ""
-"Ceci permettra la réduction de taille des très grosses images JPEG côté "
-"serveur. Peut nuire aux performances du service JPEG  (entre autres) sur les "
-"produits DLNA Sony."
+"Cela permettra de réduire sur le serveur de très grandes images JPEG, il "
+"peut y  avoir un impact sur les performances du service JPEG  sur certains "
+"produits DLNA."
 
 msgid "This will create a recycle bin on the share."
 msgstr "Ceci créera une poubelle dans le partage."
@@ -9375,8 +9390,8 @@ msgstr "Jeudi"
 msgid "TiB"
 msgstr "Tio"
 
-msgid "TiVo support"
-msgstr "Prise en charge TiVo"
+msgid "TiVo Support"
+msgstr "Support de TiVo"
 
 msgid "Time"
 msgstr "Planification"
@@ -10487,9 +10502,6 @@ msgstr "Emprisonner (chroot) tout le monde, sauf root."
 msgid "days"
 msgstr "jour(s)"
 
-msgid "debug"
-msgstr "déboguer"
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -10639,3 +10651,71 @@ msgstr "version:"
 
 msgid "week days"
 msgstr "jours de la semaine"
+
+#~ msgid "Log level"
+#~ msgstr "Niveau de journalisation"
+
+#~ msgid "TiVo support"
+#~ msgstr "Prise en charge TiVo"
+
+#~ msgid "debug"
+#~ msgstr "déboguer"
+
+#~ msgid "Minidlna configuration has been updated."
+#~ msgstr "La configuration de Minidlna a été mise à jour."
+
+#~ msgid "Building database in progress"
+#~ msgstr "Construction de la base de données en cours"
+
+#~ msgid ""
+#~ "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
+#~ "Fuppes first."
+#~ msgstr ""
+#~ "Fuppes est activé. Si vous souhaitez utiliser MiniDLNA, vous devrez d'abord "
+#~ "désactiver Fuppes."
+
+#~ msgid "Please define the Database directory location."
+#~ msgstr "Veuillez définir l'emplacement du répertoire de la base de données."
+
+#~ msgid "Please define the Media library location."
+#~ msgstr "Veuillez définir l'emplacement de la librairie Media"
+
+#~ msgid "Broadcast interval"
+#~ msgstr "Intervalle de diffusion"
+
+#~ msgid "Rescan database in progress"
+#~ msgstr "Re-scanne de la base de données en cours"
+
+#~ msgid "Presentation WebGUI"
+#~ msgstr "Présentation de l'interface web"
+
+#~ msgid ""
+#~ "Select which interface to use. (Only selectable if your server has more than "
+#~ "one)"
+#~ msgstr ""
+#~ "Sélectionnez l'interface à utiliser. (Uniquement sélectionnable si votre "
+#~ "serveur en a plus d'une)"
+
+#~ msgid "Location where the database with media contents will be stored."
+#~ msgstr ""
+#~ "Emplacement où la base de données qui contient les médias sera stockée."
+
+#~ msgid ""
+#~ "This will allow server-side downscaling of very large JPEG images, it can "
+#~ "hurt JPEG serving performance on (at least) Sony DLNA products."
+#~ msgstr ""
+#~ "Ceci permettra la réduction de taille des très grosses images JPEG côté "
+#~ "serveur. Peut nuire aux performances du service JPEG  (entre autres) sur les "
+#~ "produits DLNA Sony."
+
+#~ msgid "Library Folder"
+#~ msgstr "Dossier de bibliothèque"
+
+#~ msgid "Please define the location for the media library."
+#~ msgstr "Veuillez définir l'emplacement de la médiathèque."
+
+#~ msgid "Then name of the media server is missing."
+#~ msgstr "Le nom du serveur de médias est manquant."
+
+#~ msgid "Then name of the media server cannot be empty."
+#~ msgstr "Le nom du serveur de médias ne peut pas être vide."

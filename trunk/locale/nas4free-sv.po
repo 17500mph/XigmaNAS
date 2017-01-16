@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-15 01:10+0000\n"
-"PO-Revision-Date: 2017-01-04 17:44+0000\n"
+"POT-Creation-Date: 2017-01-16 07:22+0000\n"
+"PO-Revision-Date: 2017-01-15 09:24+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-15 00:41+0000\n"
+"X-Launchpad-Export-Date: 2017-01-16 06:41+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -273,6 +273,9 @@ msgstr ""
 
 msgid "A reload request has been sent to the daemon."
 msgstr "En omladdningbegäran har sänts till demonen."
+
+msgid "A rescan has been issued."
+msgstr ""
 
 msgid "A route to this destination network already exists."
 msgstr "Nätverks destinationen finns redan."
@@ -877,6 +880,11 @@ msgid ""
 msgstr ""
 "En annan DLNA/UPnP tjänst körs redan. Att aktivera Fuppes kan orsaka problem"
 
+msgid ""
+"Another DLNA/UPnP service is already running. Enabling MiniDLNA might cause "
+"issues."
+msgstr ""
+
 msgid "Any"
 msgstr "Vilken som helst"
 
@@ -1195,8 +1203,8 @@ msgstr "Brygginställningar"
 msgid "Bring a device online"
 msgstr "Ta en enhet online"
 
-msgid "Broadcast interval"
-msgstr "Sändningsintervall"
+msgid "Broadcast Interval"
+msgstr ""
 
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
@@ -1209,9 +1217,6 @@ msgstr "Bläddra i katalog"
 
 msgid "Browseable"
 msgstr "Bläddringsbar"
-
-msgid "Building database in progress"
-msgstr "Databas skapas"
 
 msgid "Bulgarian"
 msgstr "Bulgariska"
@@ -1387,6 +1392,9 @@ msgstr "Byt IP-adress på din dator"
 msgid "Change the IP address of your server"
 msgstr "Byt IP-adress på din server"
 
+msgid "Changes have been applied."
+msgstr ""
+
 msgid "Changes to this option will take effect after a reboot."
 msgstr ""
 "Ändringar i det här alternativet kommer att aktiveras efter en omstart."
@@ -1439,10 +1447,10 @@ msgid "Clear"
 msgstr "Rensa"
 
 msgid "Clear Config & Import Disks"
-msgstr "Nollställ konfiguration & importera diskar"
+msgstr "Rensa konfiguration & importera diskar"
 
 msgid "Clear Config & Import Software Raid Disks"
-msgstr "Nollställ konfiguration & importera mjukvaruraiddiskar"
+msgstr "Rensa konfiguration & importera mjukvaruraiddiskar"
 
 msgid "Clear config and Import disks"
 msgstr "Rensa inställningar och importera diskar"
@@ -1489,10 +1497,10 @@ msgid "Command"
 msgstr "Kommando"
 
 msgid "Command Output"
-msgstr ""
+msgstr "Kommandoutmatning"
 
 msgid "Command Scripts"
-msgstr "Kommando skript"
+msgstr "Kommandoskript"
 
 msgid "Command Scripts (Maintenance Only)"
 msgstr "Kommandoskript (endast underhåll)"
@@ -1605,11 +1613,14 @@ msgstr "Behållare"
 msgid "Content"
 msgstr "Innehåll"
 
+msgid "Content Locations"
+msgstr ""
+
 msgid "Continue"
 msgstr "Fortsätt"
 
 msgid "Control"
-msgstr ""
+msgstr "Kontroll"
 
 msgid "Controller"
 msgstr "Diskkontroller"
@@ -2453,6 +2464,9 @@ msgstr "Katalog som innehåller flyttbar media"
 msgid "Directory to watch for new .torrent files."
 msgstr "Katalog att bevaka efter .torrentfiler"
 
+msgid "Disable"
+msgstr ""
+
 msgid "Disable Firmware Update"
 msgstr "Inaktivera mjukvaruuppdatering"
 
@@ -2512,7 +2526,7 @@ msgid "Disk Settings"
 msgstr "Diskinställningar"
 
 msgid "Disk Space Usage"
-msgstr "Diskutrymmesanvädning"
+msgstr "Diskutrymmesanvändning"
 
 msgid "Disk Usage"
 msgstr "Använt diskutrymme"
@@ -2677,7 +2691,7 @@ msgid "Do you really want to uninstall this package?"
 msgstr "Vill du verkligen avinstallera detta paketet?"
 
 msgid "Do you want to apply these settings?"
-msgstr ""
+msgstr "Vill du applicera dessa inställningar?"
 
 msgid "Do you want to create a JBOD from selected disks?"
 msgstr "Vill du skapa en JBOD från valda diskar?"
@@ -3109,7 +3123,7 @@ msgid "Enable collecting UPS statistics."
 msgstr "Aktivera insamling av UPS-statistik."
 
 msgid "Enable collecting ZFS ARC usage statistics."
-msgstr "Aktivera insamling av ZFS ARC anvöndningsstatistik."
+msgstr "Aktivera insamling av ZFS ARC användningsstatistik."
 
 msgid "Enable collecting average system load statistics."
 msgstr "Aktivera insamling av genomsnittlig systembelastningsstatistik."
@@ -3305,7 +3319,7 @@ msgid "Enhanced compatibility with Netatalk AFP server"
 msgstr "Utökad kompatibilitet med Netatalk server"
 
 msgid "Enter Command"
-msgstr ""
+msgstr "Mata in kommando"
 
 msgid "Enter a comment"
 msgstr "Skriv en kommentar"
@@ -3435,7 +3449,7 @@ msgid "Execute"
 msgstr "Kör"
 
 msgid "Execute Command"
-msgstr ""
+msgstr "Kör kommando"
 
 msgid ""
 "Execute command pre or post system initialization (booting) or before system "
@@ -3781,12 +3795,6 @@ msgstr "Fuppes Media Server"
 
 msgid "Fuppes Media Server Administration"
 msgstr "Fuppes Media Server Administration"
-
-msgid ""
-"Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
-"Fuppes first."
-msgstr ""
-"Fuppes är aktiverat. Om du vill använda MiniDLNA måste du inaktivera Fuppes."
 
 msgid "GEOM"
 msgstr "GEOM"
@@ -4289,7 +4297,7 @@ msgid "Info Level"
 msgstr "Informationsnivå"
 
 msgid "Informal"
-msgstr "Informell"
+msgstr "Varning"
 
 msgid "Information"
 msgstr "Information"
@@ -4822,9 +4830,6 @@ msgstr "Placering av mediainnehållsdatabasen."
 msgid "Location where the content database file will be stored."
 msgstr "Platsen där filen för innhållsdatabasen ska lagras."
 
-msgid "Location where the database with media contents will be stored."
-msgstr "Plats där databas med medieinnehåll kommer att sparas."
-
 #, php-format
 msgid ""
 "Location where the working files will be stored, e.g. %s/backup/.unison"
@@ -4841,9 +4846,6 @@ msgstr "Logginställningar"
 
 msgid "Log file is empty."
 msgstr "Loggfilen är tom."
-
-msgid "Log level"
-msgstr "Loggningsnivå"
 
 msgid "Log order"
 msgstr "Loggordning"
@@ -4959,6 +4961,9 @@ msgstr "Se till att du har aktiverat S.M.A.R.T. för dina enheter."
 
 msgid "Make sure you have already configured your email settings"
 msgstr "Se till att du har gjort dina e-postinställningar"
+
+msgid "Manage content locations."
+msgstr ""
 
 msgid "Management"
 msgstr "Hantering"
@@ -5145,8 +5150,8 @@ msgstr "MiniDLNA"
 msgid "MiniDLNA A/V Media Server"
 msgstr "MiniDLNA A/V Media Server"
 
-msgid "Minidlna configuration has been updated."
-msgstr "MiniDNLA konfigurationen har uppdaterats."
+msgid "MiniDLNA Media Server WebGUI"
+msgstr ""
 
 msgid "Minimum"
 msgstr "Minimum"
@@ -5192,6 +5197,9 @@ msgstr "Saknad parameter"
 
 msgid "Mixed"
 msgstr "Blandad"
+
+msgid "MniDLNA has been disabled."
+msgstr ""
 
 msgid "Mode"
 msgstr "Läge"
@@ -5794,7 +5802,7 @@ msgid "PHP Command"
 msgstr "PHP Kommando"
 
 msgid "PHP Command Output"
-msgstr ""
+msgstr "PHP Kommandoutmatning"
 
 msgid "PPPoE"
 msgstr "PPPoE"
@@ -6045,11 +6053,11 @@ msgstr "Kontrollera dokumentationen."
 msgid "Please check the log files"
 msgstr "Kolla i logfilerna"
 
-msgid "Please define the Database directory location."
-msgstr "Ange platsen för databasen."
+msgid "Please define one or more content locations."
+msgstr ""
 
-msgid "Please define the Media library location."
-msgstr "Ange platsen för mediabiblioteket."
+msgid "Please define the location for the database directory."
+msgstr ""
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr "Notera att blanktecken i sökvägarna inte är tillåtet."
@@ -6185,9 +6193,6 @@ msgstr "Prefix"
 
 msgid "Preformatted file system"
 msgstr "Förformaterat filsystem"
-
-msgid "Presentation WebGUI"
-msgstr "Webgränssnitt"
 
 msgid "Preserve extended attributes"
 msgstr "Bevara utökade attribut"
@@ -6580,11 +6585,11 @@ msgstr "Kräv autentisering."
 msgid "Required"
 msgstr "Obligatorisk"
 
+msgid "Rescan"
+msgstr ""
+
 msgid "Rescan Disks"
 msgstr "Skanna om diskar"
-
-msgid "Rescan database in progress"
-msgstr "Omskanning av databas pågår"
 
 msgid "Rescan interval"
 msgstr "Intervall för omskanning"
@@ -7018,13 +7023,6 @@ msgstr ""
 "Välj vilket gränssnitt som skall användas. (Endast valbart om det finns fler "
 "än ett)"
 
-msgid ""
-"Select which interface to use. (Only selectable if your server has more than "
-"one)"
-msgstr ""
-"Välj vilket gränssnitt som skall användas: (Endast valbart om servern har "
-"fler än ett)"
-
 msgid "Selected"
 msgstr "Markerade"
 
@@ -7120,6 +7118,9 @@ msgstr "Serverversion"
 
 msgid "Service"
 msgstr "Tjänst"
+
+msgid "Service Enabled"
+msgstr ""
 
 msgid "Services"
 msgstr "Tjänster"
@@ -7624,7 +7625,7 @@ msgid "System Email Report Settings"
 msgstr "System e-postrapportinställningar"
 
 msgid "System Email Settings"
-msgstr "Systemepostinställningar"
+msgstr "Systeme-postinställningar"
 
 msgid "System Information"
 msgstr "Systeminformation"
@@ -8176,8 +8177,8 @@ msgid ""
 "device(s) and re-add it or use 'Clear config and Import disks'."
 msgstr ""
 "Enheten (enheterna) i konfigurationen stämmer ej med faktiska enheter. Ta "
-"bort enheterna och lägg till dem på nytt eller använd 'Nollställ "
-"konfiguration och importera diskar'."
+"bort enheterna och lägg till dem på nytt eller använd 'Rensa konfiguration "
+"och importera diskar'."
 
 msgid ""
 "The directory containing the files you want to publish. The remote host does "
@@ -8293,12 +8294,18 @@ msgstr ""
 "Initiatorn kan upptäcka målen med korrekt användare och lösenord i "
 "specificerad Auth-grupp"
 
+msgid "The interface is unknown."
+msgstr ""
+
 msgid ""
 "The istgtcontrol can access the targets with correct user and secret in "
 "specific Auth Group."
 msgstr ""
 "istgt-kontrollen kan skapa tillgång till målen med korrekt användare och "
 "lösenord i specificerad Auth-grupp."
+
+msgid "The location of the \"Database Directory\" is not a valid location."
+msgstr ""
 
 msgid "The login name contains invalid characters."
 msgstr "Inloggningsnamnet innehåller ogiltiga tecken."
@@ -8381,6 +8388,12 @@ msgstr "Namnet på RAID enheten används redan."
 msgid ""
 "The name of the RAID may only consist of the characters a-z, A-Z, 0-9."
 msgstr "Namnet på RAID enheten kan bestå av tecknen a-z, A-Z, 0-9."
+
+msgid "The name of the media server cannot be empty."
+msgstr ""
+
+msgid "The name of the media server is missing."
+msgstr ""
 
 msgid "The name of the pool cannot be changed."
 msgstr "Namnet på poolen kan inte ändras"
@@ -9122,11 +9135,8 @@ msgstr "Namnet på den virtuella enheten finns redan."
 
 msgid ""
 "This will allow server-side downscaling of very large JPEG images, it can "
-"hurt JPEG serving performance on (at least) Sony DLNA products."
+"impact JPEG serving performance on some DLNA products."
 msgstr ""
-"Detta medger att servern skalar ner väldigt stora JPEG-bilder, det kan "
-"påverka prestanda vid visning av JPEG-bilder (i alla fall) på Sony DLNA "
-"produkter."
 
 msgid "This will create a recycle bin on the share."
 msgstr "Detta kommer skapa en papperskorg i delningen."
@@ -9163,8 +9173,8 @@ msgstr "torsdag"
 msgid "TiB"
 msgstr "TiB"
 
-msgid "TiVo support"
-msgstr "TiVo stöd"
+msgid "TiVo Support"
+msgstr ""
 
 msgid "Time"
 msgstr "Tid"
@@ -10257,9 +10267,6 @@ msgstr "chroot() för alla, förutom root."
 msgid "days"
 msgstr "dagar"
 
-msgid "debug"
-msgstr "felsök"
-
 msgid ""
 "decoded as: byte 0-1-2 = good block count (big endian) and byte 3-4 = "
 "system(free) block count."
@@ -10407,3 +10414,57 @@ msgstr "version:"
 
 msgid "week days"
 msgstr "veckodagar"
+
+#~ msgid "Location where the database with media contents will be stored."
+#~ msgstr "Plats där databas med medieinnehåll kommer att sparas."
+
+#~ msgid "Broadcast interval"
+#~ msgstr "Sändningsintervall"
+
+#~ msgid "Building database in progress"
+#~ msgstr "Databas skapas"
+
+#~ msgid ""
+#~ "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
+#~ "Fuppes first."
+#~ msgstr ""
+#~ "Fuppes är aktiverat. Om du vill använda MiniDLNA måste du inaktivera Fuppes."
+
+#~ msgid "Minidlna configuration has been updated."
+#~ msgstr "MiniDNLA konfigurationen har uppdaterats."
+
+#~ msgid ""
+#~ "Select which interface to use. (Only selectable if your server has more than "
+#~ "one)"
+#~ msgstr ""
+#~ "Välj vilket gränssnitt som skall användas: (Endast valbart om servern har "
+#~ "fler än ett)"
+
+#~ msgid "TiVo support"
+#~ msgstr "TiVo stöd"
+
+#~ msgid "Log level"
+#~ msgstr "Loggningsnivå"
+
+#~ msgid "Please define the Database directory location."
+#~ msgstr "Ange platsen för databasen."
+
+#~ msgid "Please define the Media library location."
+#~ msgstr "Ange platsen för mediabiblioteket."
+
+#~ msgid "Rescan database in progress"
+#~ msgstr "Omskanning av databas pågår"
+
+#~ msgid ""
+#~ "This will allow server-side downscaling of very large JPEG images, it can "
+#~ "hurt JPEG serving performance on (at least) Sony DLNA products."
+#~ msgstr ""
+#~ "Detta medger att servern skalar ner väldigt stora JPEG-bilder, det kan "
+#~ "påverka prestanda vid visning av JPEG-bilder (i alla fall) på Sony DLNA "
+#~ "produkter."
+
+#~ msgid "Presentation WebGUI"
+#~ msgstr "Webgränssnitt"
+
+#~ msgid "debug"
+#~ msgstr "felsök"
