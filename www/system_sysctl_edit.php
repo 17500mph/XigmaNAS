@@ -114,28 +114,28 @@ if(PAGE_MODE_POST == $mode_page): // POST Submit, already confirmed
 	$sphere_record['comment'] = $_POST['comment'] ?? '';
 				
 	// Input validation.
-	$reqdfields = ['name', 'value'];
-	$reqdfieldsn = [gtext('Name'), gtext('Value')];
-	$reqdfieldst = ['string', 'string'];
+	$reqdfields = ['name','value'];
+	$reqdfieldsn = [gtext('Name'),gtext('Value')];
+	$reqdfieldst = ['string','string'];
 
-	do_input_validation($sphere_record, $reqdfields, $reqdfieldsn, $input_errors);
-	do_input_validation_type($sphere_record, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
+	do_input_validation($sphere_record,$reqdfields,$reqdfieldsn,$input_errors);
+	do_input_validation_type($sphere_record,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
 
 	// Check if MIB name is known to the OS.
 	if($prerequisites_ok && empty($input_errors)):
-		exec("/sbin/sysctl -NA", $helper);
-		if (!in_array($sphere_record['name'], $helper)):
-			$input_errors[] = sprintf(gtext("The MIB '%s' doesn't exist in sysctl."), $sphere_record['name']);
+		exec("/sbin/sysctl -NA",$helper);
+		if (!in_array($sphere_record['name'],$helper)):
+			$input_errors[] = sprintf(gtext("The MIB '%s' doesn't exist in sysctl."),$sphere_record['name']);
 		endif;
 	endif;
 	if($prerequisites_ok && empty($input_errors)):
 		if ($isrecordnew):
 			$sphere_array[] = $sphere_record;
-			updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_NEW, $sphere_record['uuid']);
+			updatenotify_set($sphere_notifier,UPDATENOTIFY_MODE_NEW,$sphere_record['uuid']);
 		else:
 			$sphere_array[$index_uuid] = $sphere_record;
 			if(UPDATENOTIFY_MODE_UNKNOWN == $mode_updatenotify):
-				updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_MODIFIED, $sphere_record['uuid']);
+				updatenotify_set($sphere_notifier,UPDATENOTIFY_MODE_MODIFIED,$sphere_record['uuid']);
 			endif;
 		endif;
 		write_config();
@@ -159,12 +159,12 @@ else: // EDIT / ADD
 			break;
 	endswitch;
 endif;
-$pgtitle = [gtext('System'), gtext('Advanced'), gtext('sysctl.conf'), $isrecordnew ? gtext('Add') : gtext('Edit')];
+$pgtitle = [gtext('System'),gtext('Advanced'),gtext('sysctl.conf'),$isrecordnew ? gtext('Add') : gtext('Edit')];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
-$(window).on("load", function() {
+$(window).on("load",function() {
 <?php	// Init spinner onsubmit()?>
 	$("#iform").submit(function() { spinner(); });
 });
@@ -186,15 +186,15 @@ $(window).on("load", function() {
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
 	<?php
-		if(!empty($errormsg)):
-			print_error_box($errormsg);
-		endif;
-		if(!empty($input_errors)):
-			print_input_errors($input_errors);
-		endif;
-		if(file_exists($d_sysrebootreqd_path)):
-			print_info_box(get_std_save_message(0));
-		endif;
+	if(!empty($errormsg)):
+		print_error_box($errormsg);
+	endif;
+	if(!empty($input_errors)):
+		print_input_errors($input_errors);
+	endif;
+	if(file_exists($d_sysrebootreqd_path)):
+		print_info_box(get_std_save_message(0));
+	endif;
 	?>
 	<table class="area_data_settings">
 		<colgroup>
@@ -202,13 +202,13 @@ $(window).on("load", function() {
 			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline_checkbox2('enable', gtext('Configuration'), $sphere_record['enable'], gtext('Enable'));?>
+			<?php html_titleline_checkbox2('enable',gtext('Configuration'),$sphere_record['enable'],gtext('Enable'));?>
 		</thead>
 		<tbody>
 			<?php
-			html_inputbox2('name', gtext('Name'), $sphere_record['name'], gtext('Enter a valid sysctl MIB name.'), true, 60);
-			html_inputbox2('value', gtext('Value'), $sphere_record['value'], gtext('A valid systctl MIB value.'), true, 60);
-			html_inputbox2('comment', gtext('Comment'), $sphere_record['comment'], gtext('You may enter a description here for your reference.'), false, 60);
+			html_inputbox2('name',gtext('Name'),$sphere_record['name'],gtext('Enter a valid sysctl MIB name.'),true,60,false,false,60,gtext('Name'));
+			html_inputbox2('value',gtext('Value'),$sphere_record['value'],gtext('A valid systctl MIB value.'),true,60,false,false,60,gtext('Value'));
+			html_inputbox2('comment',gtext('Comment'),$sphere_record['comment'],gtext('You may enter a description here for your reference.'),false,60,false,false,60,gtext('Description'));
 			?>
 		</tbody>
 	</table>
