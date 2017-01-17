@@ -50,7 +50,6 @@ $gt_record_del = gtext('User account is marked for deletion');
 $gt_record_loc = gtext('User account is locked');
 $gt_selection_delete = gtext('Delete Selected User Accounts');
 $gt_selection_delete_confirm = gtext('Do you want to delete selected user accounts?');
-
 //	sunrise
 $sphere_array = &array_make_branch($config,'access','user');
 array_sort_key($sphere_array,'login');
@@ -116,6 +115,7 @@ function userdbuser_process_updatenotification($mode,$data) {
 		case UPDATENOTIFY_MODE_MODIFIED:
 			break;
 		case UPDATENOTIFY_MODE_DIRTY:
+		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
 			if(false !== ($index_uuid = array_search_ex($data,$config['access']['user'],'uuid'))):
 				unset($config['access']['user'][$index_uuid]);
 				write_config();
@@ -146,6 +146,8 @@ $(window).on("load",function() {
 	});
 <?php // Init spinner on submit for id form.?>
 	$("#iform").submit(function() { spinner(); });
+<?php // Init spinner on click for class spin.?>
+	$(".spin").click(function() { spinner(); });
 }); 
 function disableactionbuttons(ab_disable) {
 	var ab_element;
