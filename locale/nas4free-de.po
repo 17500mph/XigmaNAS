@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-16 07:22+0000\n"
-"PO-Revision-Date: 2017-01-05 21:10+0000\n"
-"Last-Translator: Tomfro <Unknown>\n"
+"POT-Creation-Date: 2017-01-17 18:47+0000\n"
+"PO-Revision-Date: 2017-01-16 23:15+0000\n"
+"Last-Translator: Florian Kühne <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-16 06:41+0000\n"
+"X-Launchpad-Export-Date: 2017-01-17 18:56+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -293,7 +293,7 @@ msgid "A reload request has been sent to the daemon."
 msgstr "Ein 'Neuladen' - Befehl wurde an den Hintergrunddienst geschickt."
 
 msgid "A rescan has been issued."
-msgstr ""
+msgstr "Ein erneutes scannen wurde veranlasst"
 
 msgid "A route to this destination network already exists."
 msgstr "Eine Route zu diesem Netzwerk besteht bereits."
@@ -485,6 +485,9 @@ msgstr "Hinzufügen"
 msgid "Add Dataset"
 msgstr "Datensatz hinzufügen"
 
+msgid "Add Group"
+msgstr ""
+
 msgid "Add Host"
 msgstr "Host hinzufügen"
 
@@ -505,6 +508,9 @@ msgstr "Schnappschuß hinzufügen"
 
 msgid "Add URL"
 msgstr "URL hinzufügen"
+
+msgid "Add User Account"
+msgstr ""
 
 msgid "Add Virtual Device"
 msgstr "Virtual Device hinzufügen"
@@ -544,9 +550,6 @@ msgstr "Festplatte hinzufügen"
 
 msgid "Add extent"
 msgstr "Extent hinzufügen"
-
-msgid "Add group"
-msgstr "Lege Gruppe an"
 
 msgid "Add initiator"
 msgstr "Initiator hinzufügen"
@@ -589,9 +592,6 @@ msgstr "Eine Freigabe hinzufügen"
 
 msgid "Add target"
 msgstr "Füge target hinzu"
-
-msgid "Add user"
-msgstr "Lege Benutzer an"
 
 msgid "Additional Network"
 msgstr "zusätzliches Netzwerk"
@@ -918,6 +918,8 @@ msgid ""
 "Another DLNA/UPnP service is already running. Enabling MiniDLNA might cause "
 "issues."
 msgstr ""
+"Ein anderer DLNA/UPNP Service läuft bereits. MiniDLNA zu aktivieren könnte "
+"zu Problemen führen."
 
 msgid "Any"
 msgstr "Alle"
@@ -1247,7 +1249,7 @@ msgid "Bring a device online"
 msgstr "Ein Gerät online schalten"
 
 msgid "Broadcast Interval"
-msgstr ""
+msgstr "Sendeintervall"
 
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
@@ -1443,7 +1445,7 @@ msgid "Change the IP address of your server"
 msgstr "Ändern sie die IP-Adresse ihres Servers"
 
 msgid "Changes have been applied."
-msgstr ""
+msgstr "Änderungen wurden übernommen."
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr ""
@@ -1548,7 +1550,7 @@ msgid "Command"
 msgstr "Befehl"
 
 msgid "Command Output"
-msgstr ""
+msgstr "Befehlsausgabe"
 
 msgid "Command Scripts"
 msgstr "Befehlsskripte"
@@ -1671,7 +1673,7 @@ msgid "Continue"
 msgstr "Fortsetzen"
 
 msgid "Control"
-msgstr ""
+msgstr "Steuerung"
 
 msgid "Controller"
 msgstr "Controller"
@@ -2203,6 +2205,9 @@ msgstr "Entfernt ausgewählte Kommandos"
 msgid "Delete Selected Datasets"
 msgstr "Ausgewählte Datensätze löschen"
 
+msgid "Delete Selected Groups"
+msgstr ""
+
 msgid "Delete Selected Jobs"
 msgstr "Ausgewählte Aufträge löschen"
 
@@ -2217,6 +2222,9 @@ msgstr "Lösche die ausgewählten RAID Laufwerke"
 
 msgid "Delete Selected Snapshots"
 msgstr "Ausgewählte Snapshots löschen"
+
+msgid "Delete Selected User Accounts"
+msgstr ""
 
 msgid "Delete Selected Virtual Devices"
 msgstr "Ausgewählte Virtuelle Geräte löschen"
@@ -2261,9 +2269,6 @@ msgid "Delete files on the receiving side that don't exist on sender."
 msgstr ""
 "Lösche Dateien auf der Empfängerseite die beim Sender nicht existieren."
 
-msgid "Delete group"
-msgstr "Lösche Gruppe"
-
 msgid "Delete initiator"
 msgstr "Lösche Initiator"
 
@@ -2296,9 +2301,6 @@ msgstr "Freigabe löschen"
 
 msgid "Delete target"
 msgstr "Lösche Target"
-
-msgid "Delete user"
-msgstr "Lösche Benutzer"
 
 msgid "Deletes the recursive snapshot."
 msgstr "Rekursiven Schnappschuss löschen"
@@ -2498,7 +2500,7 @@ msgid "Directory to watch for new .torrent files."
 msgstr "Zu beobachtendes Verzeichnis für neue .torrent Dateien."
 
 msgid "Disable"
-msgstr ""
+msgstr "Deaktivieren"
 
 msgid "Disable Firmware Update"
 msgstr "Firmware Update deaktivieren"
@@ -2657,9 +2659,6 @@ msgstr ""
 msgid "Do you really want to delete this extent?"
 msgstr "Wollen Sie diesen Extent wirklich löschen?"
 
-msgid "Do you really want to delete this group?"
-msgstr "Diese Gruppe wirklich löschen?"
-
 msgid "Do you really want to delete this host?"
 msgstr "Wollen Sie diesen Host wirklich löschen?"
 
@@ -2707,9 +2706,6 @@ msgstr "Soll diese Freigabe wirklich gelöscht werden?"
 msgid "Do you really want to delete this target?"
 msgstr "Wollen Sie wirklich dieses iSCSI-target löschen?"
 
-msgid "Do you really want to delete this user?"
-msgstr "Benutzer wirklich löschen?"
-
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
 "and can not be recovered. !!!"
@@ -2731,7 +2727,7 @@ msgid "Do you really want to uninstall this package?"
 msgstr "Soll das Paket wirklich deinstalliert werden?"
 
 msgid "Do you want to apply these settings?"
-msgstr ""
+msgstr "Sollen die Einstellungen gespeichert werden?"
 
 msgid "Do you want to create a JBOD from selected disks?"
 msgstr ""
@@ -2788,6 +2784,9 @@ msgstr "Sollen  alle ausgewählten Kommandos gelöscht werden?"
 msgid "Do you want to delete selected datasets?"
 msgstr "Wollen Sie die ausgewählten Datensätze löschen?"
 
+msgid "Do you want to delete selected groups?"
+msgstr ""
+
 msgid "Do you want to delete selected jobs?"
 msgstr "Wollen Sie die ausgewählten Aufträge löschen?"
 
@@ -2799,6 +2798,9 @@ msgstr "Wollen Sie die ausgewählten ZFS-Pools löschen ?"
 
 msgid "Do you want to delete selected snapshots?"
 msgstr "Wollen sie die ausgewählten 'Snapshots' wirklich löschen ?"
+
+msgid "Do you want to delete selected user accounts?"
+msgstr ""
 
 msgid "Do you want to delete selected virtual devices?"
 msgstr "Wollen Sie die ausgewählten virtuellen Geräte  löschen ?"
@@ -2964,6 +2966,9 @@ msgstr "Ändern"
 msgid "Edit Dataset"
 msgstr "Datensatz bearbeiten"
 
+msgid "Edit Group"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "Host bearbeiten"
 
@@ -2984,6 +2989,9 @@ msgstr "Snapshot editieren"
 
 msgid "Edit URL"
 msgstr "URL bearbeiten"
+
+msgid "Edit User Account"
+msgstr ""
 
 msgid "Edit VM"
 msgstr "VM bearbeiten"
@@ -3008,9 +3016,6 @@ msgstr "Bearbeite Festplatte"
 
 msgid "Edit extent"
 msgstr "Extent bearbeiten"
-
-msgid "Edit group"
-msgstr "Bearbeite Gruppe"
 
 msgid "Edit initiator"
 msgstr "Initiator bearbeiten"
@@ -3053,9 +3058,6 @@ msgstr "Bearbeite Freigabe"
 
 msgid "Edit target"
 msgstr "Target bearbeiten"
-
-msgid "Edit user"
-msgstr "Bearbeite Benutzer"
 
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
@@ -3369,7 +3371,7 @@ msgid "Enhanced compatibility with Netatalk AFP server"
 msgstr "erhöhte Kompatibilität zum Netatalk AFP Server"
 
 msgid "Enter Command"
-msgstr ""
+msgstr "Befehl eingeben"
 
 msgid "Enter a comment"
 msgstr "Kommentar eingeben"
@@ -3497,7 +3499,7 @@ msgid "Execute"
 msgstr "Ausführen"
 
 msgid "Execute Command"
-msgstr ""
+msgstr "Befehl ausführen"
 
 msgid ""
 "Execute command pre or post system initialization (booting) or before system "
@@ -3610,8 +3612,8 @@ msgstr "FTP-Ereignisse"
 msgid "FTP log"
 msgstr "FTP-Log"
 
-msgid "FTP server disabled"
-msgstr "FTP Server deaktiviert"
+msgid "FTP service is disabled."
+msgstr ""
 
 msgid "FXP"
 msgstr "FXP"
@@ -3845,6 +3847,9 @@ msgstr "Fuppes Media Server"
 msgid "Fuppes Media Server Administration"
 msgstr "Fuppes Medien Server Verwaltung"
 
+msgid "Fuppes has been disabled."
+msgstr ""
+
 msgid "GEOM"
 msgstr "GEOM"
 
@@ -3927,6 +3932,12 @@ msgstr "Gruppenkennung"
 
 msgid "Group compilations"
 msgstr "Aufstellungsgruppe"
+
+msgid "Group is locked"
+msgstr ""
+
+msgid "Group is marked for deletion"
+msgstr ""
 
 msgid "Group name."
 msgstr "Gruppenname."
@@ -4034,6 +4045,9 @@ msgstr "Hilfe"
 
 msgid "Hiadaptive (High Performance)"
 msgstr "hoch adaptiv (optimiert auf Leistung)"
+
+msgid "Hide Default Groups"
+msgstr ""
 
 msgid "Hide dot files"
 msgstr "Dateien verstecken, deren Namen mit einem Punkt beginnen"
@@ -5045,7 +5059,7 @@ msgstr ""
 "Stellen Sie sicher, dass die E-Mail-Einstellungen bereits konfiguriert sind."
 
 msgid "Manage content locations."
-msgstr ""
+msgstr "Speicherpfade verwalten"
 
 msgid "Management"
 msgstr "Management"
@@ -5199,7 +5213,7 @@ msgid "Media library"
 msgstr "Mediendatenbank"
 
 msgid "Media server name"
-msgstr ""
+msgstr "Medienserver Bezeichnung"
 
 msgid "Medium Acoustic Output"
 msgstr "Mittlere Geräuschkulisse"
@@ -5238,7 +5252,7 @@ msgid "MiniDLNA A/V Media Server"
 msgstr "MiniDLNA A/V Media Server"
 
 msgid "MiniDLNA Media Server WebGUI"
-msgstr ""
+msgstr "MiniDLNA Medienserver WebGUI"
 
 msgid "Minimum"
 msgstr "Minimum"
@@ -5286,7 +5300,7 @@ msgid "Mixed"
 msgstr "Gemischt"
 
 msgid "MniDLNA has been disabled."
-msgstr ""
+msgstr "MiniDLNA wurde deaktiviert."
 
 msgid "Mode"
 msgstr "Modus"
@@ -5337,6 +5351,8 @@ msgid ""
 "More than one DLNA/UPnP service is active. This configuration might cause "
 "issues."
 msgstr ""
+"Mehr als ein DLNA/UPnP Service ist aktiv. Diese konfiguration kann zu "
+"Problemen führen."
 
 msgid "Mount Point"
 msgstr "Einhängepunkt"
@@ -5559,6 +5575,8 @@ msgstr "Keine Festplatten verfügbar."
 
 msgid "No disks configured, please add disks to view diagnostic information!"
 msgstr ""
+"Keine Festplatten eingerichtet, bitte Festplatten hinzufügen um "
+"Diagnoseinformationen zu bekommen"
 
 msgid "No file was uploaded."
 msgstr "Es wurde keine Datei hochgeladen."
@@ -5887,7 +5905,7 @@ msgid "PHP Command"
 msgstr "PHP Befehl"
 
 msgid "PHP Command Output"
-msgstr ""
+msgstr "PHP Befehlsausgabe"
 
 msgid "PPPoE"
 msgstr "PPPoE"
@@ -6141,10 +6159,10 @@ msgid "Please check the log files"
 msgstr "Bitte die Log-Dateien überprüfen"
 
 msgid "Please define one or more content locations."
-msgstr ""
+msgstr "Bitte einen oder mehrere Speicherpfade angeben"
 
 msgid "Please define the location for the database directory."
-msgstr ""
+msgstr "Bitte den Pfad für das Datenbankverzeichniss angeben."
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr "Bitte beachten, dass Leerstellen in Pfadnamen nicht erlaubt sind."
@@ -6203,6 +6221,10 @@ msgstr "Port %ld wird bereits von einem anderen Dienst verwendet."
 
 msgid "Port forwarding"
 msgstr "Portweiterleitung"
+
+#, php-format
+msgid "Port number must be in the range between %d and %d."
+msgstr ""
 
 #, php-format
 msgid "Port to listen for incoming peer connections. Default port is %d."
@@ -6269,9 +6291,6 @@ msgstr "\"Pre-Fail\"-Attribut (zumindest bei Samsung-Geräten genutzt)"
 
 msgid "PreInit"
 msgstr "PreInit"
-
-msgid "Predefined Groups"
-msgstr "Vordefinierte Gruppen"
 
 msgid "Preferred"
 msgstr "Bevorzugt"
@@ -6678,7 +6697,7 @@ msgid "Required"
 msgstr "Erforderlich"
 
 msgid "Rescan"
-msgstr ""
+msgstr "Erneut Scannen"
 
 msgid "Rescan Disks"
 msgstr "Festplatten wiedereinlesen"
@@ -7027,6 +7046,15 @@ msgstr ""
 "formatierte Festplatten einhängen oder Festplatten aus anderen "
 "Betriebssystemen importieren wollen."
 
+msgid "Select Cache Device"
+msgstr ""
+
+msgid "Select Data Device"
+msgstr ""
+
+msgid "Select Device"
+msgstr ""
+
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
 "Secure (HTTPS) for the WebGUI."
@@ -7034,33 +7062,27 @@ msgstr ""
 "Wahlen sie die Zugriffsmethode auf die NAS4Free Weboberfläche aus (HTTP oder "
 "HTTPS)."
 
-msgid "Select a cache device"
-msgstr "Ein Cache Gerät auswählen"
+msgid "Select Log Device"
+msgstr ""
 
-msgid "Select a data device"
-msgstr "Ein Daten Gerät auswählen"
+msgid "Select Pool"
+msgstr ""
+
+msgid "Select Pool Device"
+msgstr ""
+
+msgid "Select Pools"
+msgstr ""
+
+msgid "Select Spare Device"
+msgstr ""
 
 msgid "Select a date format."
 msgstr "Datumsformat auswählen"
 
-msgid "Select a device"
-msgstr "Ein Gerät auswählen"
-
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr ""
 "Wähle ein Gerät welches für die S.M.A.R.T. Überwachung aktiviert wurde."
-
-msgid "Select a log device"
-msgstr "Ein Log Gerät auswählen"
-
-msgid "Select a pool"
-msgstr "Einen Pool auswählen"
-
-msgid "Select a pool device"
-msgstr "Ein Pool Gerät auswählen"
-
-msgid "Select a spare device"
-msgstr "Ein Ersatz Gerät auswählen"
 
 msgid "Select file system format."
 msgstr "Wählen Sie das Dateisystem Format"
@@ -7074,20 +7096,11 @@ msgstr "Objekt auswählen, welches von der Liste entfernt werden soll"
 msgid "Select mount point where to create the swap file."
 msgstr "Wählen Sie den Einhängpunkt wo die Swap Datei erzeugt werden soll."
 
-msgid "Select one or more spare devices"
-msgstr "Ein oder mehrere Ersatz Geräte auswählen"
-
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
 "Wählen Sie 'unformatiert' für unformatierte Festplatten und formatieren Sie "
 "diese mit dem"
-
-msgid "Select pool device"
-msgstr "Ein Pool Gerät auswählen"
-
-msgid "Select pools"
-msgstr "Einen Pool auswählen"
 
 msgid "Select read balance algorithm."
 msgstr "Wählen Sie den Read-Balance Algorithmus"
@@ -7120,6 +7133,8 @@ msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one interface)"
 msgstr ""
+"Auswählen welche Schnittstelle benutzt werden soll. (Kann nur ausgewählt "
+"werden wenn der Server mehr als eine Schnittstelle hat)"
 
 msgid "Selected"
 msgstr "Ausgewählt"
@@ -7218,7 +7233,7 @@ msgid "Service"
 msgstr "Service"
 
 msgid "Service Enabled"
-msgstr ""
+msgstr "Dienst aktiviert"
 
 msgid "Services"
 msgstr "Dienste"
@@ -7320,6 +7335,9 @@ msgstr "Shell"
 
 msgid "Shock During Write."
 msgstr "Schocks während Schreiboperationen"
+
+msgid "Show Default Groups"
+msgstr ""
 
 msgid "Show Process Information"
 msgstr "Prozessinformationen anzeigen"
@@ -8119,10 +8137,6 @@ msgstr "Das Attribut '%s' muss kleiner als '%s' sein."
 msgid "The attribute '%s' must contain at least one entry."
 msgstr "Das Attribut '%s' muss mindestens einen Eintrag enthalten."
 
-#, php-format
-msgid "The attribute '%s': use a port in the range from %d to %d."
-msgstr "Das Attribut '%s': muss im Bereich von %d und %d liegen."
-
 msgid "The attribute 'Data directory' is required."
 msgstr "Das Attribut 'Data directory' ist erforderlich."
 
@@ -8411,7 +8425,7 @@ msgstr ""
 "spezifizierten Authentifizierungsgruppe feststellen."
 
 msgid "The interface is unknown."
-msgstr ""
+msgstr "Die Schnittstelle ist unbekannt."
 
 msgid ""
 "The istgtcontrol can access the targets with correct user and secret in "
@@ -8421,7 +8435,7 @@ msgstr ""
 "spezifische Auth_Gruppe zugreifen."
 
 msgid "The location of the \"Database Directory\" is not a valid location."
-msgstr ""
+msgstr "Der Speicherort des Datenbank Verzeichnisses ist nicht Gültig."
 
 msgid "The login name contains invalid characters."
 msgstr "Der Login-Name enthält ungültige Zeichen."
@@ -8515,10 +8529,10 @@ msgstr ""
 "Der Name des RAIDs darf nur aus den Zeichen a-z, A-Z und 0-9 bestehen."
 
 msgid "The name of the media server cannot be empty."
-msgstr ""
+msgstr "Die Bezeichnung des Medien Servers kann nicht leer sein."
 
 msgid "The name of the media server is missing."
-msgstr ""
+msgstr "Der Name des Medien Servers ist nicht bekannt."
 
 msgid "The name of the pool cannot be changed."
 msgstr "Der Name des Pools kann nicht geändert werden."
@@ -8904,6 +8918,9 @@ msgid ""
 "This allows you to set the transfer mode for ATA/IDE disks. You can set "
 "'Automatic' to enable the automatic mode for all SATA/ATA/IDE disks."
 msgstr ""
+"Dies ermöglicht den Transfermodus für ATA/IDE Platten einzustellen. Es kann "
+"auf \"automatisch\" gestellt werden um den automatischen Modus für alle "
+"SATA/ATA/IDE Festplatten zu aktivieren."
 
 msgid ""
 "This attribute controls the ACL behavior when a file is created or whenever "
@@ -9298,6 +9315,8 @@ msgid ""
 "This will allow server-side downscaling of very large JPEG images, it can "
 "impact JPEG serving performance on some DLNA products."
 msgstr ""
+"Dies wird das Server seitige herunterskalieren von sehr großen JPEG Bildern "
+"erlauben. Es kann die Performance von einigen DLNA Produkten beinflussen."
 
 msgid "This will create a recycle bin on the share."
 msgstr "Papierkorb auf der Freigabe wird eingereichtet."
@@ -9338,7 +9357,7 @@ msgid "TiB"
 msgstr "TiB"
 
 msgid "TiVo Support"
-msgstr ""
+msgstr "TiVo unterstützung"
 
 msgid "Time"
 msgstr "Zeit"
@@ -9902,14 +9921,14 @@ msgstr "Benutzt"
 msgid "User"
 msgstr "Benutzer"
 
-msgid "User Defined Groups"
-msgstr "Benutzerdefinierte Gruppen"
-
 msgid "User ID"
 msgstr "Benutzerkennung"
 
-msgid "User Setup"
-msgstr "Benutzer Verwaltung"
+msgid "User account is locked"
+msgstr ""
+
+msgid "User account is marked for deletion"
+msgstr ""
 
 msgid "User full name."
 msgstr "Vollständiger Name."
@@ -10596,56 +10615,72 @@ msgstr "Version:"
 msgid "week days"
 msgstr "wochentagen"
 
-#~ msgid "Location where the database with media contents will be stored."
-#~ msgstr "Speicherort der Übersicht der Medieninhalte"
+#~ msgid "Add group"
+#~ msgstr "Lege Gruppe an"
 
-#~ msgid "Broadcast interval"
-#~ msgstr "Intervall des Netzwerk Boradcast"
+#~ msgid "Add user"
+#~ msgstr "Lege Benutzer an"
 
-#~ msgid ""
-#~ "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
-#~ "Fuppes first."
-#~ msgstr ""
-#~ "Fuppes is aktiv. Zur Nutzung von MiniDLNA, muss Fuppes deaktiviert werden."
+#~ msgid "Delete group"
+#~ msgstr "Lösche Gruppe"
 
-#~ msgid "Log level"
-#~ msgstr "Protokollierungsstufe"
+#~ msgid "Delete user"
+#~ msgstr "Lösche Benutzer"
 
-#~ msgid "Minidlna configuration has been updated."
-#~ msgstr "Die MiniDLNA Konfiguration wurde aktualisiert"
+#~ msgid "Do you really want to delete this group?"
+#~ msgstr "Diese Gruppe wirklich löschen?"
 
-#~ msgid "Please define the Database directory location."
-#~ msgstr "Bitte den Datenbank-Pfad festlegen"
+#~ msgid "Do you really want to delete this user?"
+#~ msgstr "Benutzer wirklich löschen?"
 
-#~ msgid "Please define the Media library location."
-#~ msgstr "Bitte den Medien-Pfad festlegen"
+#~ msgid "Edit group"
+#~ msgstr "Bearbeite Gruppe"
 
-#~ msgid "Presentation WebGUI"
-#~ msgstr "Weboberfläche"
+#~ msgid "Edit user"
+#~ msgstr "Bearbeite Benutzer"
 
-#~ msgid "Rescan database in progress"
-#~ msgstr "Dei Datenbank wird aktualisiert"
+#~ msgid "FTP server disabled"
+#~ msgstr "FTP Server deaktiviert"
 
-#~ msgid ""
-#~ "Select which interface to use. (Only selectable if your server has more than "
-#~ "one)"
-#~ msgstr ""
-#~ "Wählen Sie die Schnittstelle aus ( nur wählbar bei mehreren vorhanden "
-#~ "Schnittstellen)"
+#, php-format
+#~ msgid "The attribute '%s': use a port in the range from %d to %d."
+#~ msgstr "Das Attribut '%s': muss im Bereich von %d und %d liegen."
 
-#~ msgid "TiVo support"
-#~ msgstr "TiVo Unterstützung"
+#~ msgid "Predefined Groups"
+#~ msgstr "Vordefinierte Gruppen"
 
-#~ msgid "debug"
-#~ msgstr "Fehlersuche"
+#~ msgid "User Defined Groups"
+#~ msgstr "Benutzerdefinierte Gruppen"
 
-#~ msgid ""
-#~ "This will allow server-side downscaling of very large JPEG images, it can "
-#~ "hurt JPEG serving performance on (at least) Sony DLNA products."
-#~ msgstr ""
-#~ "Dadurch wird das serverseitige Herunterskalieren sehr großer JPEG-Bilder "
-#~ "eingeschaltet, das ihre Bereitstellungsgeschwindigkeit (zumindest) bei Sony "
-#~ "DLNA-Produkten beeinträchtigen kann."
+#~ msgid "User Setup"
+#~ msgstr "Benutzer Verwaltung"
 
-#~ msgid "Building database in progress"
-#~ msgstr "Die Datenbank wird gerade erstellt"
+#~ msgid "Select a device"
+#~ msgstr "Ein Gerät auswählen"
+
+#~ msgid "Select a data device"
+#~ msgstr "Ein Daten Gerät auswählen"
+
+#~ msgid "Select a cache device"
+#~ msgstr "Ein Cache Gerät auswählen"
+
+#~ msgid "Select a log device"
+#~ msgstr "Ein Log Gerät auswählen"
+
+#~ msgid "Select pools"
+#~ msgstr "Einen Pool auswählen"
+
+#~ msgid "Select a pool"
+#~ msgstr "Einen Pool auswählen"
+
+#~ msgid "Select one or more spare devices"
+#~ msgstr "Ein oder mehrere Ersatz Geräte auswählen"
+
+#~ msgid "Select pool device"
+#~ msgstr "Ein Pool Gerät auswählen"
+
+#~ msgid "Select a pool device"
+#~ msgstr "Ein Pool Gerät auswählen"
+
+#~ msgid "Select a spare device"
+#~ msgstr "Ein Ersatz Gerät auswählen"

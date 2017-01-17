@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-16 07:22+0000\n"
+"POT-Creation-Date: 2017-01-17 18:47+0000\n"
 "PO-Revision-Date: 2016-11-08 14:34+0000\n"
 "Last-Translator: Kini <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-16 06:41+0000\n"
+"X-Launchpad-Export-Date: 2017-01-17 18:57+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
@@ -435,6 +435,9 @@ msgstr "Dodaj"
 msgid "Add Dataset"
 msgstr ""
 
+msgid "Add Group"
+msgstr ""
+
 msgid "Add Host"
 msgstr "Dodaj gostitelja"
 
@@ -455,6 +458,9 @@ msgstr ""
 
 msgid "Add URL"
 msgstr "Dodaj URL"
+
+msgid "Add User Account"
+msgstr ""
 
 msgid "Add Virtual Device"
 msgstr "Dodaj virtualno napravo"
@@ -494,9 +500,6 @@ msgstr "Dodaj disk"
 
 msgid "Add extent"
 msgstr "Dodaj obseg"
-
-msgid "Add group"
-msgstr "Dodaj skupino"
 
 msgid "Add initiator"
 msgstr "Dodaj sprožitelja"
@@ -539,9 +542,6 @@ msgstr "Dodaj deljeno mapo"
 
 msgid "Add target"
 msgstr "Dodaj cilj"
-
-msgid "Add user"
-msgstr "Dodaj uporabnika"
 
 msgid "Additional Network"
 msgstr "Dodatno omrežje"
@@ -2034,6 +2034,9 @@ msgstr ""
 msgid "Delete Selected Datasets"
 msgstr ""
 
+msgid "Delete Selected Groups"
+msgstr ""
+
 msgid "Delete Selected Jobs"
 msgstr ""
 
@@ -2047,6 +2050,9 @@ msgid "Delete Selected RAID Volumes"
 msgstr ""
 
 msgid "Delete Selected Snapshots"
+msgstr ""
+
+msgid "Delete Selected User Accounts"
 msgstr ""
 
 msgid "Delete Selected Virtual Devices"
@@ -2091,9 +2097,6 @@ msgstr "Pobriši vse stopnje"
 msgid "Delete files on the receiving side that don't exist on sender."
 msgstr "Pobriši datoteke na cilju, če ne obstajajo na pošiljatelju."
 
-msgid "Delete group"
-msgstr "Odstrani skupino"
-
 msgid "Delete initiator"
 msgstr "Pobriši sprožitelja"
 
@@ -2126,9 +2129,6 @@ msgstr "Izbriši deljeno mapo"
 
 msgid "Delete target"
 msgstr "Odstrani cilj"
-
-msgid "Delete user"
-msgstr "Odstrani uporabnika"
 
 msgid "Deletes the recursive snapshot."
 msgstr ""
@@ -2469,9 +2469,6 @@ msgstr ""
 msgid "Do you really want to delete this extent?"
 msgstr "Res želite izbrisati ta obseg?"
 
-msgid "Do you really want to delete this group?"
-msgstr "Ali res želite odstraniti to skupino?"
-
 msgid "Do you really want to delete this host?"
 msgstr "Res želite odstraniti tega gostitelja?"
 
@@ -2518,9 +2515,6 @@ msgstr "Ali res želite izbrisati to deljeno mapo?"
 
 msgid "Do you really want to delete this target?"
 msgstr "Res želite odstraniti ta cilj?"
-
-msgid "Do you really want to delete this user?"
-msgstr "Ali res želite izbrisati tega uporabnika?"
 
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
@@ -2590,6 +2584,9 @@ msgstr ""
 msgid "Do you want to delete selected datasets?"
 msgstr ""
 
+msgid "Do you want to delete selected groups?"
+msgstr ""
+
 msgid "Do you want to delete selected jobs?"
 msgstr ""
 
@@ -2600,6 +2597,9 @@ msgid "Do you want to delete selected pools?"
 msgstr ""
 
 msgid "Do you want to delete selected snapshots?"
+msgstr ""
+
+msgid "Do you want to delete selected user accounts?"
 msgstr ""
 
 msgid "Do you want to delete selected virtual devices?"
@@ -2763,6 +2763,9 @@ msgstr "Uredi"
 msgid "Edit Dataset"
 msgstr ""
 
+msgid "Edit Group"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "Uredi gostitelja"
 
@@ -2783,6 +2786,9 @@ msgstr ""
 
 msgid "Edit URL"
 msgstr "Uredi URL"
+
+msgid "Edit User Account"
+msgstr ""
 
 msgid "Edit VM"
 msgstr "Uredi VM"
@@ -2807,9 +2813,6 @@ msgstr "Uredi disk"
 
 msgid "Edit extent"
 msgstr "Uredi obseg"
-
-msgid "Edit group"
-msgstr "Uredi skupino"
 
 msgid "Edit initiator"
 msgstr "Uredi sprožitelja"
@@ -2852,9 +2855,6 @@ msgstr "Uredi deljeno mapo"
 
 msgid "Edit target"
 msgstr "Uredi cilj"
-
-msgid "Edit user"
-msgstr "Uredi uporabnika"
 
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
@@ -3388,8 +3388,8 @@ msgstr "FTP dogodki"
 msgid "FTP log"
 msgstr "FTP dnevnik"
 
-msgid "FTP server disabled"
-msgstr "FTP strežnik onemogočen"
+msgid "FTP service is disabled."
+msgstr ""
 
 msgid "FXP"
 msgstr "FXP"
@@ -3620,6 +3620,9 @@ msgstr "Medijski strežnik Fuppes"
 msgid "Fuppes Media Server Administration"
 msgstr ""
 
+msgid "Fuppes has been disabled."
+msgstr ""
+
 msgid "GEOM"
 msgstr "GEOM"
 
@@ -3701,6 +3704,12 @@ msgid "Group ID"
 msgstr "ID skupine"
 
 msgid "Group compilations"
+msgstr ""
+
+msgid "Group is locked"
+msgstr ""
+
+msgid "Group is marked for deletion"
 msgstr ""
 
 msgid "Group name."
@@ -3799,6 +3808,9 @@ msgid "Help"
 msgstr "Pomoč"
 
 msgid "Hiadaptive (High Performance)"
+msgstr ""
+
+msgid "Hide Default Groups"
 msgstr ""
 
 msgid "Hide dot files"
@@ -5876,6 +5888,10 @@ msgid "Port forwarding"
 msgstr "Posredovanje vrat"
 
 #, php-format
+msgid "Port number must be in the range between %d and %d."
+msgstr ""
+
+#, php-format
 msgid "Port to listen for incoming peer connections. Default port is %d."
 msgstr "Vrata, na katerem čakam na povezave pijavk. Privzeta so %d."
 
@@ -5938,9 +5954,6 @@ msgstr ""
 
 msgid "PreInit"
 msgstr "PreInit"
-
-msgid "Predefined Groups"
-msgstr ""
 
 msgid "Preferred"
 msgstr "Željen"
@@ -6670,37 +6683,40 @@ msgid ""
 "formatted drive or if you want to import disks from other OS."
 msgstr ""
 
+msgid "Select Cache Device"
+msgstr ""
+
+msgid "Select Data Device"
+msgstr ""
+
+msgid "Select Device"
+msgstr ""
+
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
 "Secure (HTTPS) for the WebGUI."
 msgstr ""
 
-msgid "Select a cache device"
+msgid "Select Log Device"
 msgstr ""
 
-msgid "Select a data device"
+msgid "Select Pool"
+msgstr ""
+
+msgid "Select Pool Device"
+msgstr ""
+
+msgid "Select Pools"
+msgstr ""
+
+msgid "Select Spare Device"
 msgstr ""
 
 msgid "Select a date format."
 msgstr "Izberite obliko datuma"
 
-msgid "Select a device"
-msgstr "Izberite napravo"
-
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Izberite disk, ki je omogočen za S.M.A.R.T. nadzor."
-
-msgid "Select a log device"
-msgstr ""
-
-msgid "Select a pool"
-msgstr ""
-
-msgid "Select a pool device"
-msgstr ""
-
-msgid "Select a spare device"
-msgstr ""
 
 msgid "Select file system format."
 msgstr "Izberi format datotečnega sistema"
@@ -6715,17 +6731,8 @@ msgid "Select mount point where to create the swap file."
 msgstr ""
 "Izberite priklopno točko, kjer ustvarim datoteko za izmenljiv prostor."
 
-msgid "Select one or more spare devices"
-msgstr ""
-
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
-msgstr ""
-
-msgid "Select pool device"
-msgstr ""
-
-msgid "Select pools"
 msgstr ""
 
 msgid "Select read balance algorithm."
@@ -6946,6 +6953,9 @@ msgid "Shell"
 msgstr "Lupina"
 
 msgid "Shock During Write."
+msgstr ""
+
+msgid "Show Default Groups"
 msgstr ""
 
 msgid "Show Process Information"
@@ -7699,10 +7709,6 @@ msgstr "Atribut '%s' mora biti manjši od '%s'."
 #, php-format
 msgid "The attribute '%s' must contain at least one entry."
 msgstr "Atribut '%s' mora vsebovati vsaj en vnos."
-
-#, php-format
-msgid "The attribute '%s': use a port in the range from %d to %d."
-msgstr ""
 
 msgid "The attribute 'Data directory' is required."
 msgstr ""
@@ -9173,14 +9179,14 @@ msgstr ""
 msgid "User"
 msgstr "Uporabnik"
 
-msgid "User Defined Groups"
-msgstr ""
-
 msgid "User ID"
 msgstr ""
 
-msgid "User Setup"
-msgstr "Nastavitev uporabnikov"
+msgid "User account is locked"
+msgstr ""
+
+msgid "User account is marked for deletion"
+msgstr ""
 
 msgid "User full name."
 msgstr "Uporabnikovo polno ime."
@@ -9817,9 +9823,35 @@ msgstr "različica:"
 msgid "week days"
 msgstr ""
 
-#~ msgid ""
-#~ "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
-#~ "Fuppes first."
-#~ msgstr ""
-#~ "Fuppes je omogočen. Če želite uporabiti MiniDLNA, morate najprej onemogočiti "
-#~ "Fuppes."
+#~ msgid "Add group"
+#~ msgstr "Dodaj skupino"
+
+#~ msgid "Add user"
+#~ msgstr "Dodaj uporabnika"
+
+#~ msgid "Delete group"
+#~ msgstr "Odstrani skupino"
+
+#~ msgid "Delete user"
+#~ msgstr "Odstrani uporabnika"
+
+#~ msgid "Do you really want to delete this group?"
+#~ msgstr "Ali res želite odstraniti to skupino?"
+
+#~ msgid "Do you really want to delete this user?"
+#~ msgstr "Ali res želite izbrisati tega uporabnika?"
+
+#~ msgid "Edit group"
+#~ msgstr "Uredi skupino"
+
+#~ msgid "Edit user"
+#~ msgstr "Uredi uporabnika"
+
+#~ msgid "FTP server disabled"
+#~ msgstr "FTP strežnik onemogočen"
+
+#~ msgid "Select a device"
+#~ msgstr "Izberite napravo"
+
+#~ msgid "User Setup"
+#~ msgstr "Nastavitev uporabnikov"

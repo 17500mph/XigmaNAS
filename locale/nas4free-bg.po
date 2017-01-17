@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-16 07:22+0000\n"
+"POT-Creation-Date: 2017-01-17 18:47+0000\n"
 "PO-Revision-Date: 2016-11-06 21:25+0000\n"
 "Last-Translator: acidlord <acidlord_34@abv.bg>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-16 06:41+0000\n"
+"X-Launchpad-Export-Date: 2017-01-17 18:56+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "X-Poedit-Country: BULGARIA\n"
 "Language: \n"
@@ -441,6 +441,9 @@ msgstr "Добави"
 msgid "Add Dataset"
 msgstr "Добави Dataset"
 
+msgid "Add Group"
+msgstr ""
+
 msgid "Add Host"
 msgstr "Добавяне на хост"
 
@@ -461,6 +464,9 @@ msgstr "Добави Snapshot"
 
 msgid "Add URL"
 msgstr "Добавяне на URL"
+
+msgid "Add User Account"
+msgstr ""
 
 msgid "Add Virtual Device"
 msgstr "Добави Виртуално Устройство"
@@ -500,9 +506,6 @@ msgstr "Добави диск"
 
 msgid "Add extent"
 msgstr "Добави пространство"
-
-msgid "Add group"
-msgstr "Добваи група"
 
 msgid "Add initiator"
 msgstr "Добави инициатор"
@@ -545,9 +548,6 @@ msgstr "Добави споделяне"
 
 msgid "Add target"
 msgstr "Добави цел"
-
-msgid "Add user"
-msgstr "Добави потребител"
 
 msgid "Additional Network"
 msgstr "Допълнителна Мрежа"
@@ -2154,6 +2154,9 @@ msgstr ""
 msgid "Delete Selected Datasets"
 msgstr ""
 
+msgid "Delete Selected Groups"
+msgstr ""
+
 msgid "Delete Selected Jobs"
 msgstr "Изтрий Избраните Задачи"
 
@@ -2168,6 +2171,9 @@ msgstr "Изтрий Избраните RAID Томове"
 
 msgid "Delete Selected Snapshots"
 msgstr "Изтрий Избраните Snapshots"
+
+msgid "Delete Selected User Accounts"
+msgstr ""
 
 msgid "Delete Selected Virtual Devices"
 msgstr "Изтрий Избраните Виртуални Устройства"
@@ -2213,9 +2219,6 @@ msgstr ""
 "Изтрий всички файлове върху приемащата страна, които не съществуват на "
 "изпращащата."
 
-msgid "Delete group"
-msgstr "Изтрий група"
-
 msgid "Delete initiator"
 msgstr "Изтрий инициатор"
 
@@ -2248,9 +2251,6 @@ msgstr "Изтрий споделеното"
 
 msgid "Delete target"
 msgstr "Изтрий целта"
-
-msgid "Delete user"
-msgstr "изтрий потребителя"
 
 msgid "Deletes the recursive snapshot."
 msgstr ""
@@ -2584,9 +2584,6 @@ msgstr ""
 msgid "Do you really want to delete this extent?"
 msgstr ""
 
-msgid "Do you really want to delete this group?"
-msgstr "Наистина ли искате да изтриете тази група?"
-
 msgid "Do you really want to delete this host?"
 msgstr "Do you really want to delete this host?"
 
@@ -2631,9 +2628,6 @@ msgstr ""
 
 msgid "Do you really want to delete this target?"
 msgstr "Do you really want to delete this target?"
-
-msgid "Do you really want to delete this user?"
-msgstr "Наистина ли искате да изтриете този потребител?"
 
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
@@ -2702,6 +2696,9 @@ msgstr "Искате ли да изтриете избраните команд�
 msgid "Do you want to delete selected datasets?"
 msgstr ""
 
+msgid "Do you want to delete selected groups?"
+msgstr ""
+
 msgid "Do you want to delete selected jobs?"
 msgstr "Искате ли да изтриете избраните задачи?"
 
@@ -2712,6 +2709,9 @@ msgid "Do you want to delete selected pools?"
 msgstr ""
 
 msgid "Do you want to delete selected snapshots?"
+msgstr ""
+
+msgid "Do you want to delete selected user accounts?"
 msgstr ""
 
 msgid "Do you want to delete selected virtual devices?"
@@ -2876,6 +2876,9 @@ msgstr "Редакция"
 msgid "Edit Dataset"
 msgstr ""
 
+msgid "Edit Group"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "Редактиране на хост"
 
@@ -2896,6 +2899,9 @@ msgstr ""
 
 msgid "Edit URL"
 msgstr "Редактирай URL"
+
+msgid "Edit User Account"
+msgstr ""
 
 msgid "Edit VM"
 msgstr "Редактирай VM"
@@ -2920,9 +2926,6 @@ msgstr "промени настрйките на диска"
 
 msgid "Edit extent"
 msgstr ""
-
-msgid "Edit group"
-msgstr "Промени групата"
 
 msgid "Edit initiator"
 msgstr "Редактирай инициатор"
@@ -2965,9 +2968,6 @@ msgstr "промени споделените папки"
 
 msgid "Edit target"
 msgstr "Редактирай цел"
-
-msgid "Edit user"
-msgstr "Помени потребителя"
 
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
@@ -3487,7 +3487,7 @@ msgstr "FTP събития"
 msgid "FTP log"
 msgstr ""
 
-msgid "FTP server disabled"
+msgid "FTP service is disabled."
 msgstr ""
 
 msgid "FXP"
@@ -3718,6 +3718,9 @@ msgstr ""
 msgid "Fuppes Media Server Administration"
 msgstr ""
 
+msgid "Fuppes has been disabled."
+msgstr ""
+
 msgid "GEOM"
 msgstr ""
 
@@ -3798,6 +3801,12 @@ msgid "Group ID"
 msgstr ""
 
 msgid "Group compilations"
+msgstr ""
+
+msgid "Group is locked"
+msgstr ""
+
+msgid "Group is marked for deletion"
 msgstr ""
 
 msgid "Group name."
@@ -3896,6 +3905,9 @@ msgid "Help"
 msgstr "Помощ"
 
 msgid "Hiadaptive (High Performance)"
+msgstr ""
+
+msgid "Hide Default Groups"
 msgstr ""
 
 msgid "Hide dot files"
@@ -5920,6 +5932,10 @@ msgid "Port forwarding"
 msgstr ""
 
 #, php-format
+msgid "Port number must be in the range between %d and %d."
+msgstr ""
+
+#, php-format
 msgid "Port to listen for incoming peer connections. Default port is %d."
 msgstr ""
 
@@ -5979,9 +5995,6 @@ msgid "Pre-Fail' Attribute used at least in Samsung devices."
 msgstr ""
 
 msgid "PreInit"
-msgstr ""
-
-msgid "Predefined Groups"
 msgstr ""
 
 msgid "Preferred"
@@ -6696,36 +6709,39 @@ msgid ""
 "formatted drive or if you want to import disks from other OS."
 msgstr ""
 
+msgid "Select Cache Device"
+msgstr ""
+
+msgid "Select Data Device"
+msgstr ""
+
+msgid "Select Device"
+msgstr ""
+
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
 "Secure (HTTPS) for the WebGUI."
 msgstr ""
 
-msgid "Select a cache device"
+msgid "Select Log Device"
 msgstr ""
 
-msgid "Select a data device"
+msgid "Select Pool"
+msgstr ""
+
+msgid "Select Pool Device"
+msgstr ""
+
+msgid "Select Pools"
+msgstr ""
+
+msgid "Select Spare Device"
 msgstr ""
 
 msgid "Select a date format."
 msgstr ""
 
-msgid "Select a device"
-msgstr ""
-
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
-msgstr ""
-
-msgid "Select a log device"
-msgstr ""
-
-msgid "Select a pool"
-msgstr ""
-
-msgid "Select a pool device"
-msgstr ""
-
-msgid "Select a spare device"
 msgstr ""
 
 msgid "Select file system format."
@@ -6740,17 +6756,8 @@ msgstr ""
 msgid "Select mount point where to create the swap file."
 msgstr ""
 
-msgid "Select one or more spare devices"
-msgstr ""
-
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
-msgstr ""
-
-msgid "Select pool device"
-msgstr ""
-
-msgid "Select pools"
 msgstr ""
 
 msgid "Select read balance algorithm."
@@ -6963,6 +6970,9 @@ msgid "Shell"
 msgstr ""
 
 msgid "Shock During Write."
+msgstr ""
+
+msgid "Show Default Groups"
 msgstr ""
 
 msgid "Show Process Information"
@@ -7702,10 +7712,6 @@ msgstr ""
 
 #, php-format
 msgid "The attribute '%s' must contain at least one entry."
-msgstr ""
-
-#, php-format
-msgid "The attribute '%s': use a port in the range from %d to %d."
 msgstr ""
 
 msgid "The attribute 'Data directory' is required."
@@ -9170,13 +9176,13 @@ msgstr ""
 msgid "User"
 msgstr "потребител"
 
-msgid "User Defined Groups"
-msgstr ""
-
 msgid "User ID"
 msgstr ""
 
-msgid "User Setup"
+msgid "User account is locked"
+msgstr ""
+
+msgid "User account is marked for deletion"
 msgstr ""
 
 msgid "User full name."
@@ -9814,8 +9820,26 @@ msgstr "версия:"
 msgid "week days"
 msgstr ""
 
-#~ msgid "Broadcast interval"
-#~ msgstr "Интервал на предаване"
+#~ msgid "Delete group"
+#~ msgstr "Изтрий група"
 
-#~ msgid "Building database in progress"
-#~ msgstr "Изграждане на база данни е в ход"
+#~ msgid "Delete user"
+#~ msgstr "изтрий потребителя"
+
+#~ msgid "Do you really want to delete this group?"
+#~ msgstr "Наистина ли искате да изтриете тази група?"
+
+#~ msgid "Edit group"
+#~ msgstr "Промени групата"
+
+#~ msgid "Edit user"
+#~ msgstr "Помени потребителя"
+
+#~ msgid "Add group"
+#~ msgstr "Добваи група"
+
+#~ msgid "Add user"
+#~ msgstr "Добави потребител"
+
+#~ msgid "Do you really want to delete this user?"
+#~ msgstr "Наистина ли искате да изтриете този потребител?"

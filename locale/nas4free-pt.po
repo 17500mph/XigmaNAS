@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-16 07:22+0000\n"
+"POT-Creation-Date: 2017-01-17 18:47+0000\n"
 "PO-Revision-Date: 2017-01-15 00:16+0000\n"
 "Last-Translator: Pedro Grave <pedro.grave.abt@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-16 06:41+0000\n"
+"X-Launchpad-Export-Date: 2017-01-17 18:57+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "X-Poedit-Country: PORTUGAL\n"
 "Language: \n"
@@ -474,6 +474,9 @@ msgstr "Adicionar"
 msgid "Add Dataset"
 msgstr "Adicionar Dataset"
 
+msgid "Add Group"
+msgstr ""
+
 msgid "Add Host"
 msgstr "Adicionar anfitrião"
 
@@ -494,6 +497,9 @@ msgstr "Adicionar Snapshot"
 
 msgid "Add URL"
 msgstr "Adicionar URL"
+
+msgid "Add User Account"
+msgstr ""
 
 msgid "Add Virtual Device"
 msgstr "Adicionar Dispositivo Virtual"
@@ -533,9 +539,6 @@ msgstr "Adicionar disco"
 
 msgid "Add extent"
 msgstr "Adicionar medida"
-
-msgid "Add group"
-msgstr "Adicionar um grupo"
 
 msgid "Add initiator"
 msgstr "Adicionar activador"
@@ -578,9 +581,6 @@ msgstr "Adicionar partilha"
 
 msgid "Add target"
 msgstr "adicionar destino"
-
-msgid "Add user"
-msgstr "Adicionar utilizador"
 
 msgid "Additional Network"
 msgstr "Rede Adicional"
@@ -2107,6 +2107,9 @@ msgstr ""
 msgid "Delete Selected Datasets"
 msgstr ""
 
+msgid "Delete Selected Groups"
+msgstr ""
+
 msgid "Delete Selected Jobs"
 msgstr ""
 
@@ -2120,6 +2123,9 @@ msgid "Delete Selected RAID Volumes"
 msgstr ""
 
 msgid "Delete Selected Snapshots"
+msgstr ""
+
+msgid "Delete Selected User Accounts"
 msgstr ""
 
 msgid "Delete Selected Virtual Devices"
@@ -2166,9 +2172,6 @@ msgstr ""
 "Apagar todos os ficheiro do lado do receptor que não existam do lado de quem "
 "envia."
 
-msgid "Delete group"
-msgstr "Eliminar grupo"
-
 msgid "Delete initiator"
 msgstr "Excluir iniciador"
 
@@ -2201,9 +2204,6 @@ msgstr "Excluir partilha"
 
 msgid "Delete target"
 msgstr "Excluir alvo"
-
-msgid "Delete user"
-msgstr "Eliminar utilizador"
 
 msgid "Deletes the recursive snapshot."
 msgstr "Apaga snapshot recursivo"
@@ -2546,9 +2546,6 @@ msgstr ""
 msgid "Do you really want to delete this extent?"
 msgstr "De certeza que deseja excluir esta medida?"
 
-msgid "Do you really want to delete this group?"
-msgstr "Deseja realmente eliminar este grupo?"
-
 msgid "Do you really want to delete this host?"
 msgstr "Tem a certeza que pretende eliminar este anfitrião?"
 
@@ -2596,9 +2593,6 @@ msgstr "Quer realmente apagar esta partilha?"
 
 msgid "Do you really want to delete this target?"
 msgstr "Deseja realmente eliminar este destino?"
-
-msgid "Do you really want to delete this user?"
-msgstr "Quer realmente apagar este utilizador?"
 
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
@@ -2669,6 +2663,9 @@ msgstr ""
 msgid "Do you want to delete selected datasets?"
 msgstr ""
 
+msgid "Do you want to delete selected groups?"
+msgstr ""
+
 msgid "Do you want to delete selected jobs?"
 msgstr ""
 
@@ -2679,6 +2676,9 @@ msgid "Do you want to delete selected pools?"
 msgstr ""
 
 msgid "Do you want to delete selected snapshots?"
+msgstr ""
+
+msgid "Do you want to delete selected user accounts?"
 msgstr ""
 
 msgid "Do you want to delete selected virtual devices?"
@@ -2841,6 +2841,9 @@ msgstr "Editar"
 msgid "Edit Dataset"
 msgstr ""
 
+msgid "Edit Group"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "Editar anfitrião"
 
@@ -2861,6 +2864,9 @@ msgstr ""
 
 msgid "Edit URL"
 msgstr "Editar URL"
+
+msgid "Edit User Account"
+msgstr ""
 
 msgid "Edit VM"
 msgstr ""
@@ -2885,9 +2891,6 @@ msgstr "Editar disco"
 
 msgid "Edit extent"
 msgstr "Editar blocos contíguos"
-
-msgid "Edit group"
-msgstr "Editar grupo"
 
 msgid "Edit initiator"
 msgstr "Editar iniciador"
@@ -2930,9 +2933,6 @@ msgstr "Editar Partilha"
 
 msgid "Edit target"
 msgstr "Editar alvo"
-
-msgid "Edit user"
-msgstr "Editar utilizador"
 
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
@@ -3469,8 +3469,8 @@ msgstr "Eventos FTP"
 msgid "FTP log"
 msgstr "Registo FTP"
 
-msgid "FTP server disabled"
-msgstr "Servidor FTP desactivado"
+msgid "FTP service is disabled."
+msgstr ""
 
 msgid "FXP"
 msgstr "FXP"
@@ -3702,6 +3702,9 @@ msgstr ""
 msgid "Fuppes Media Server Administration"
 msgstr ""
 
+msgid "Fuppes has been disabled."
+msgstr ""
+
 msgid "GEOM"
 msgstr ""
 
@@ -3784,6 +3787,12 @@ msgid "Group ID"
 msgstr "ID do grupo (GID)"
 
 msgid "Group compilations"
+msgstr ""
+
+msgid "Group is locked"
+msgstr ""
+
+msgid "Group is marked for deletion"
 msgstr ""
 
 msgid "Group name."
@@ -3882,6 +3891,9 @@ msgid "Help"
 msgstr "Ajuda"
 
 msgid "Hiadaptive (High Performance)"
+msgstr ""
+
+msgid "Hide Default Groups"
 msgstr ""
 
 msgid "Hide dot files"
@@ -5987,6 +5999,10 @@ msgid "Port forwarding"
 msgstr "Porto de encaminhamento"
 
 #, php-format
+msgid "Port number must be in the range between %d and %d."
+msgstr ""
+
+#, php-format
 msgid "Port to listen for incoming peer connections. Default port is %d."
 msgstr "Porto de escuta para ligação peer de entrada. Porto padrão é %d."
 
@@ -6049,9 +6065,6 @@ msgstr ""
 
 msgid "PreInit"
 msgstr "Antes do arranque"
-
-msgid "Predefined Groups"
-msgstr ""
 
 msgid "Preferred"
 msgstr "Preferido"
@@ -6781,37 +6794,40 @@ msgid ""
 "formatted drive or if you want to import disks from other OS."
 msgstr ""
 
+msgid "Select Cache Device"
+msgstr ""
+
+msgid "Select Data Device"
+msgstr ""
+
+msgid "Select Device"
+msgstr ""
+
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
 "Secure (HTTPS) for the WebGUI."
 msgstr ""
 
-msgid "Select a cache device"
+msgid "Select Log Device"
 msgstr ""
 
-msgid "Select a data device"
+msgid "Select Pool"
+msgstr ""
+
+msgid "Select Pool Device"
+msgstr ""
+
+msgid "Select Pools"
+msgstr ""
+
+msgid "Select Spare Device"
 msgstr ""
 
 msgid "Select a date format."
 msgstr ""
 
-msgid "Select a device"
-msgstr ""
-
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Seleccione disco com capacidade de monitorização S.M.A.R.T."
-
-msgid "Select a log device"
-msgstr ""
-
-msgid "Select a pool"
-msgstr ""
-
-msgid "Select a pool device"
-msgstr ""
-
-msgid "Select a spare device"
-msgstr ""
 
 msgid "Select file system format."
 msgstr ""
@@ -6826,17 +6842,8 @@ msgid "Select mount point where to create the swap file."
 msgstr ""
 "Escolha a localização onde deseja criar o ficheiro de memória virtual."
 
-msgid "Select one or more spare devices"
-msgstr ""
-
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
-msgstr ""
-
-msgid "Select pool device"
-msgstr ""
-
-msgid "Select pools"
 msgstr ""
 
 msgid "Select read balance algorithm."
@@ -7062,6 +7069,9 @@ msgid "Shell"
 msgstr "Consola"
 
 msgid "Shock During Write."
+msgstr ""
+
+msgid "Show Default Groups"
 msgstr ""
 
 msgid "Show Process Information"
@@ -7828,10 +7838,6 @@ msgstr "O atributo '%s' deve ser inferior a '%s'."
 #, php-format
 msgid "The attribute '%s' must contain at least one entry."
 msgstr "O atributo '%s' deve conter pelo menos uma entrada."
-
-#, php-format
-msgid "The attribute '%s': use a port in the range from %d to %d."
-msgstr ""
 
 msgid "The attribute 'Data directory' is required."
 msgstr ""
@@ -9458,14 +9464,14 @@ msgstr "Usado"
 msgid "User"
 msgstr "Utilizador"
 
-msgid "User Defined Groups"
-msgstr "Grupos Definidos pelo Utilizador"
-
 msgid "User ID"
 msgstr "ID do utilizador (UID)"
 
-msgid "User Setup"
-msgstr "Configuração do Utilizador"
+msgid "User account is locked"
+msgstr ""
+
+msgid "User account is marked for deletion"
+msgstr ""
 
 msgid "User full name."
 msgstr "Nome completo do utilizador."
@@ -10142,5 +10148,35 @@ msgstr "versão:"
 msgid "week days"
 msgstr ""
 
-#~ msgid "debug"
-#~ msgstr "depurar"
+#~ msgid "Add group"
+#~ msgstr "Adicionar um grupo"
+
+#~ msgid "Add user"
+#~ msgstr "Adicionar utilizador"
+
+#~ msgid "Delete group"
+#~ msgstr "Eliminar grupo"
+
+#~ msgid "Delete user"
+#~ msgstr "Eliminar utilizador"
+
+#~ msgid "Do you really want to delete this group?"
+#~ msgstr "Deseja realmente eliminar este grupo?"
+
+#~ msgid "Do you really want to delete this user?"
+#~ msgstr "Quer realmente apagar este utilizador?"
+
+#~ msgid "Edit group"
+#~ msgstr "Editar grupo"
+
+#~ msgid "Edit user"
+#~ msgstr "Editar utilizador"
+
+#~ msgid "FTP server disabled"
+#~ msgstr "Servidor FTP desactivado"
+
+#~ msgid "User Defined Groups"
+#~ msgstr "Grupos Definidos pelo Utilizador"
+
+#~ msgid "User Setup"
+#~ msgstr "Configuração do Utilizador"

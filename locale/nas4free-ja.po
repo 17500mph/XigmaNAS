@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-16 07:22+0000\n"
+"POT-Creation-Date: 2017-01-17 18:47+0000\n"
 "PO-Revision-Date: 2016-11-21 20:27+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-16 06:41+0000\n"
+"X-Launchpad-Export-Date: 2017-01-17 18:57+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -433,6 +433,9 @@ msgstr "追加"
 msgid "Add Dataset"
 msgstr ""
 
+msgid "Add Group"
+msgstr ""
+
 msgid "Add Host"
 msgstr "ホストを追加"
 
@@ -453,6 +456,9 @@ msgstr ""
 
 msgid "Add URL"
 msgstr "URLを追加"
+
+msgid "Add User Account"
+msgstr ""
 
 msgid "Add Virtual Device"
 msgstr ""
@@ -492,9 +498,6 @@ msgstr "ディスクの追加"
 
 msgid "Add extent"
 msgstr "エクステントの追加"
-
-msgid "Add group"
-msgstr "グループの追加"
 
 msgid "Add initiator"
 msgstr "イニシエータの追加"
@@ -537,9 +540,6 @@ msgstr "共有の追加"
 
 msgid "Add target"
 msgstr "ターゲットの追加"
-
-msgid "Add user"
-msgstr "ユーザの追加"
 
 msgid "Additional Network"
 msgstr "追加のネットワーク"
@@ -2033,6 +2033,9 @@ msgstr ""
 msgid "Delete Selected Datasets"
 msgstr ""
 
+msgid "Delete Selected Groups"
+msgstr ""
+
 msgid "Delete Selected Jobs"
 msgstr ""
 
@@ -2046,6 +2049,9 @@ msgid "Delete Selected RAID Volumes"
 msgstr ""
 
 msgid "Delete Selected Snapshots"
+msgstr ""
+
+msgid "Delete Selected User Accounts"
 msgstr ""
 
 msgid "Delete Selected Virtual Devices"
@@ -2090,9 +2096,6 @@ msgstr "エクステントの削除"
 msgid "Delete files on the receiving side that don't exist on sender."
 msgstr "送信側に存在しないファイルを受信側で削除します。"
 
-msgid "Delete group"
-msgstr "グループの削除"
-
 msgid "Delete initiator"
 msgstr "イニシエータを削除"
 
@@ -2125,9 +2128,6 @@ msgstr "共有を削除"
 
 msgid "Delete target"
 msgstr "ターゲットの削除"
-
-msgid "Delete user"
-msgstr "ユーザの削除"
 
 msgid "Deletes the recursive snapshot."
 msgstr "再帰的にスナップショットを削除する。"
@@ -2462,9 +2462,6 @@ msgstr "このディスクを削除しても宜しいですか? それを使用�
 msgid "Do you really want to delete this extent?"
 msgstr "このエクステントを削除してもよろしいですか?"
 
-msgid "Do you really want to delete this group?"
-msgstr "このグループを削除してもよろしいですか?!"
-
 msgid "Do you really want to delete this host?"
 msgstr "このホストを削除してもよろしいですか?"
 
@@ -2507,9 +2504,6 @@ msgstr "この共有を削除してもよろしいですか?"
 
 msgid "Do you really want to delete this target?"
 msgstr "このターゲットを削除してもよろしいですか?"
-
-msgid "Do you really want to delete this user?"
-msgstr "このユーザを削除してもよろしいですか?"
 
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
@@ -2579,6 +2573,9 @@ msgstr ""
 msgid "Do you want to delete selected datasets?"
 msgstr ""
 
+msgid "Do you want to delete selected groups?"
+msgstr ""
+
 msgid "Do you want to delete selected jobs?"
 msgstr ""
 
@@ -2589,6 +2586,9 @@ msgid "Do you want to delete selected pools?"
 msgstr ""
 
 msgid "Do you want to delete selected snapshots?"
+msgstr ""
+
+msgid "Do you want to delete selected user accounts?"
 msgstr ""
 
 msgid "Do you want to delete selected virtual devices?"
@@ -2751,6 +2751,9 @@ msgstr "編集"
 msgid "Edit Dataset"
 msgstr ""
 
+msgid "Edit Group"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "ホストを編集"
 
@@ -2771,6 +2774,9 @@ msgstr ""
 
 msgid "Edit URL"
 msgstr "URL を編集"
+
+msgid "Edit User Account"
+msgstr ""
 
 msgid "Edit VM"
 msgstr "VM 編集"
@@ -2795,9 +2801,6 @@ msgstr "ディスクを編集"
 
 msgid "Edit extent"
 msgstr "エクステントを編集"
-
-msgid "Edit group"
-msgstr "グループを編集"
 
 msgid "Edit initiator"
 msgstr "イニシエータを編集"
@@ -2840,9 +2843,6 @@ msgstr "共有を編集"
 
 msgid "Edit target"
 msgstr "ターゲットを編集"
-
-msgid "Edit user"
-msgstr "ユーザを編集"
 
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
@@ -3364,8 +3364,8 @@ msgstr "FTP イベント"
 msgid "FTP log"
 msgstr "FTP ログ"
 
-msgid "FTP server disabled"
-msgstr "FTP サーバは無効です"
+msgid "FTP service is disabled."
+msgstr ""
 
 msgid "FXP"
 msgstr "FXP"
@@ -3595,6 +3595,9 @@ msgstr "Fuppes メディアサーバ"
 msgid "Fuppes Media Server Administration"
 msgstr ""
 
+msgid "Fuppes has been disabled."
+msgstr ""
+
 msgid "GEOM"
 msgstr ""
 
@@ -3676,6 +3679,12 @@ msgstr "グループ ID"
 
 msgid "Group compilations"
 msgstr "グループ コンピレーション"
+
+msgid "Group is locked"
+msgstr ""
+
+msgid "Group is marked for deletion"
+msgstr ""
 
 msgid "Group name."
 msgstr "グループ名"
@@ -3776,6 +3785,9 @@ msgid "Help"
 msgstr "ヘルプ"
 
 msgid "Hiadaptive (High Performance)"
+msgstr ""
+
+msgid "Hide Default Groups"
 msgstr ""
 
 msgid "Hide dot files"
@@ -5827,6 +5839,10 @@ msgid "Port forwarding"
 msgstr "ポートフォワーディング"
 
 #, php-format
+msgid "Port number must be in the range between %d and %d."
+msgstr ""
+
+#, php-format
 msgid "Port to listen for incoming peer connections. Default port is %d."
 msgstr "ピアコネクションを待ち受けるポート番号。デフォルトは %d です。"
 
@@ -5887,9 +5903,6 @@ msgstr "少なくともサムスンのデバイスで使用されている属性
 
 msgid "PreInit"
 msgstr "初期化前"
-
-msgid "Predefined Groups"
-msgstr "定義済みグループ"
 
 msgid "Preferred"
 msgstr "優先"
@@ -6606,6 +6619,15 @@ msgid ""
 "formatted drive or if you want to import disks from other OS."
 msgstr ""
 
+msgid "Select Cache Device"
+msgstr ""
+
+msgid "Select Data Device"
+msgstr ""
+
+msgid "Select Device"
+msgstr ""
+
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
 "Secure (HTTPS) for the WebGUI."
@@ -6613,32 +6635,26 @@ msgstr ""
 "WebGUIに利用するプロトコルを HTTP(Hypertext Transfer Protocol) もしくは HTTPS(Hypertext "
 "Transfer Protocol Secure) から選択してください。"
 
-msgid "Select a cache device"
+msgid "Select Log Device"
 msgstr ""
 
-msgid "Select a data device"
+msgid "Select Pool"
+msgstr ""
+
+msgid "Select Pool Device"
+msgstr ""
+
+msgid "Select Pools"
+msgstr ""
+
+msgid "Select Spare Device"
 msgstr ""
 
 msgid "Select a date format."
 msgstr ""
 
-msgid "Select a device"
-msgstr ""
-
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "S.M.A.R.T. を有効にするディスクを選択してください。"
-
-msgid "Select a log device"
-msgstr ""
-
-msgid "Select a pool"
-msgstr ""
-
-msgid "Select a pool device"
-msgstr ""
-
-msgid "Select a spare device"
-msgstr ""
 
 msgid "Select file system format."
 msgstr ""
@@ -6652,17 +6668,8 @@ msgstr "リストから削除するアイテムを選択"
 msgid "Select mount point where to create the swap file."
 msgstr "スワップファイルを作成するディレクトリを選択してください。"
 
-msgid "Select one or more spare devices"
-msgstr ""
-
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
-msgstr ""
-
-msgid "Select pool device"
-msgstr ""
-
-msgid "Select pools"
 msgstr ""
 
 msgid "Select read balance algorithm."
@@ -6879,6 +6886,9 @@ msgstr "シェル"
 
 msgid "Shock During Write."
 msgstr "書き込み中の衝撃。"
+
+msgid "Show Default Groups"
+msgstr ""
 
 msgid "Show Process Information"
 msgstr "プロセス情報の表示"
@@ -7624,10 +7634,6 @@ msgstr "属性 '%s' は '%s' より小さくなければいけません。"
 #, php-format
 msgid "The attribute '%s' must contain at least one entry."
 msgstr "属性 '%s' は最低ひとつのエントリーを含む必要があります。"
-
-#, php-format
-msgid "The attribute '%s': use a port in the range from %d to %d."
-msgstr "属性 '%s': %d から %d の範囲のポートを使ってください。"
 
 msgid "The attribute 'Data directory' is required."
 msgstr ""
@@ -9140,13 +9146,13 @@ msgstr "使用量"
 msgid "User"
 msgstr "ユーザ"
 
-msgid "User Defined Groups"
-msgstr "ユーザ定義グループ"
-
 msgid "User ID"
 msgstr "ユーザ ID"
 
-msgid "User Setup"
+msgid "User account is locked"
+msgstr ""
+
+msgid "User account is marked for deletion"
 msgstr ""
 
 msgid "User full name."
@@ -9785,52 +9791,39 @@ msgstr "バージョン:"
 msgid "week days"
 msgstr ""
 
-#~ msgid "Location where the database with media contents will be stored."
-#~ msgstr "コンテンツデータベースファイルが保存される場所を指定します。"
+#~ msgid "Add group"
+#~ msgstr "グループの追加"
 
-#~ msgid "Building database in progress"
-#~ msgstr "データベース構築中"
+#~ msgid "Add user"
+#~ msgstr "ユーザの追加"
 
-#~ msgid "Log level"
-#~ msgstr "ログレベル"
+#~ msgid "Delete group"
+#~ msgstr "グループの削除"
 
-#~ msgid "Minidlna configuration has been updated."
-#~ msgstr "Minidlna構成が更新されました。"
+#~ msgid "Delete user"
+#~ msgstr "ユーザの削除"
 
-#~ msgid "Please define the Database directory location."
-#~ msgstr "データベースディレクトリの場所を定義してください。"
+#~ msgid "Do you really want to delete this group?"
+#~ msgstr "このグループを削除してもよろしいですか?!"
 
-#~ msgid "Please define the Media library location."
-#~ msgstr "メディアライブラリの場所を定義してください。"
+#~ msgid "Do you really want to delete this user?"
+#~ msgstr "このユーザを削除してもよろしいですか?"
 
-#~ msgid "Presentation WebGUI"
-#~ msgstr "プレゼンテーション WebGUI"
+#~ msgid "Edit group"
+#~ msgstr "グループを編集"
 
-#~ msgid "Rescan database in progress"
-#~ msgstr "データベース再スキャン中"
+#~ msgid "Edit user"
+#~ msgstr "ユーザを編集"
 
-#~ msgid ""
-#~ "Select which interface to use. (Only selectable if your server has more than "
-#~ "one)"
-#~ msgstr "利用するインターフェースを選択してください。(2個以上サーバーに装着してある場合にのみ選択可能)"
+#~ msgid "FTP server disabled"
+#~ msgstr "FTP サーバは無効です"
 
-#~ msgid "TiVo support"
-#~ msgstr "TiVoサポート"
+#, php-format
+#~ msgid "The attribute '%s': use a port in the range from %d to %d."
+#~ msgstr "属性 '%s': %d から %d の範囲のポートを使ってください。"
 
-#~ msgid "debug"
-#~ msgstr "デバッグ"
+#~ msgid "Predefined Groups"
+#~ msgstr "定義済みグループ"
 
-#~ msgid ""
-#~ "This will allow server-side downscaling of very large JPEG images, it can "
-#~ "hurt JPEG serving performance on (at least) Sony DLNA products."
-#~ msgstr ""
-#~ "非常に大きなJPEG画像のサーバー側でのダウンスケールを許可します。それは少なくともソニーのDLNA製品のJPEGサービスのパフォーマンスを損なう可能性が"
-#~ "あります。"
-
-#~ msgid "Broadcast interval"
-#~ msgstr "ブロードキャスト間隔"
-
-#~ msgid ""
-#~ "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
-#~ "Fuppes first."
-#~ msgstr "Fuppesが有効になっています。MiniDLNAを使用したい場合は、まずFuppesを無効にする必要があります。"
+#~ msgid "User Defined Groups"
+#~ msgstr "ユーザ定義グループ"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-16 07:22+0000\n"
+"POT-Creation-Date: 2017-01-17 18:47+0000\n"
 "PO-Revision-Date: 2016-12-10 19:28+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-16 06:41+0000\n"
+"X-Launchpad-Export-Date: 2017-01-17 18:57+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -472,6 +472,9 @@ msgstr "Adăugare"
 msgid "Add Dataset"
 msgstr "Adăugare set date"
 
+msgid "Add Group"
+msgstr ""
+
 msgid "Add Host"
 msgstr "Adăugare sistem"
 
@@ -492,6 +495,9 @@ msgstr "Adăugare Snapshot"
 
 msgid "Add URL"
 msgstr "Adăugare URL"
+
+msgid "Add User Account"
+msgstr ""
 
 msgid "Add Virtual Device"
 msgstr "Adăugare Dispozitiv virtual"
@@ -531,9 +537,6 @@ msgstr "Adăugare disc"
 
 msgid "Add extent"
 msgstr "Adăugare extensie"
-
-msgid "Add group"
-msgstr "Adăugare grup"
 
 msgid "Add initiator"
 msgstr "Adăugare inițiator"
@@ -576,9 +579,6 @@ msgstr "Adăugare partajare"
 
 msgid "Add target"
 msgstr "Adăugare destinație"
-
-msgid "Add user"
-msgstr "Adăugare utilizator"
 
 msgid "Additional Network"
 msgstr "Rețele adiționale"
@@ -2214,6 +2214,9 @@ msgstr "Ștergere comenzi selectate"
 msgid "Delete Selected Datasets"
 msgstr "Ștergere seturi de date selectate"
 
+msgid "Delete Selected Groups"
+msgstr ""
+
 msgid "Delete Selected Jobs"
 msgstr "Ștergere activități selectate"
 
@@ -2228,6 +2231,9 @@ msgstr "Ștergere volume RAID selectate"
 
 msgid "Delete Selected Snapshots"
 msgstr "Ștergere Snapshot-uri selectate"
+
+msgid "Delete Selected User Accounts"
+msgstr ""
 
 msgid "Delete Selected Virtual Devices"
 msgstr "Ștergere Dispozitive virtuale selectate"
@@ -2271,9 +2277,6 @@ msgstr "Ștergere extensie"
 msgid "Delete files on the receiving side that don't exist on sender."
 msgstr "Ștergerea fișierelor la destinație care nu apar și la sursă."
 
-msgid "Delete group"
-msgstr "Ștergere grup"
-
 msgid "Delete initiator"
 msgstr "Ștergere inițiator"
 
@@ -2306,9 +2309,6 @@ msgstr "Ștergere partajare"
 
 msgid "Delete target"
 msgstr "Ștergere destinație"
-
-msgid "Delete user"
-msgstr "Ștergere utilizator"
 
 msgid "Deletes the recursive snapshot."
 msgstr "Ștergere imagine sistem (snapshot) recursivă."
@@ -2662,9 +2662,6 @@ msgstr ""
 msgid "Do you really want to delete this extent?"
 msgstr "Doriți să ștergeți această extensie?"
 
-msgid "Do you really want to delete this group?"
-msgstr "Doriți să ștergeți acest grup?!"
-
 msgid "Do you really want to delete this host?"
 msgstr "Doriți să ștergeți acest sistem?"
 
@@ -2711,9 +2708,6 @@ msgstr "Doriți să ștergeți această partajare?"
 
 msgid "Do you really want to delete this target?"
 msgstr "Doriți să ștergeți această destinație?"
-
-msgid "Do you really want to delete this user?"
-msgstr "Doriți să ștergeți acest utilizator?"
 
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
@@ -2786,6 +2780,9 @@ msgstr "Ștergeți comenzile selectate?"
 msgid "Do you want to delete selected datasets?"
 msgstr "Ștergeți seturile de date selectate?"
 
+msgid "Do you want to delete selected groups?"
+msgstr ""
+
 msgid "Do you want to delete selected jobs?"
 msgstr "Ștergeți activitățile selectate?"
 
@@ -2797,6 +2794,9 @@ msgstr "Ștergeți structurile pool selectate?"
 
 msgid "Do you want to delete selected snapshots?"
 msgstr "Ștergeți snapshot-urile selectate?"
+
+msgid "Do you want to delete selected user accounts?"
+msgstr ""
 
 msgid "Do you want to delete selected virtual devices?"
 msgstr "Ștergeți dispozitivele virtuale selectate?"
@@ -2960,6 +2960,9 @@ msgstr "Editare"
 msgid "Edit Dataset"
 msgstr "Editare set de date"
 
+msgid "Edit Group"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "Editare sistem"
 
@@ -2980,6 +2983,9 @@ msgstr "Editare snapshot"
 
 msgid "Edit URL"
 msgstr "Editare URL"
+
+msgid "Edit User Account"
+msgstr ""
 
 msgid "Edit VM"
 msgstr "Editare VM"
@@ -3004,9 +3010,6 @@ msgstr "Editare disc"
 
 msgid "Edit extent"
 msgstr "Editare extensie"
-
-msgid "Edit group"
-msgstr "Editare grup"
 
 msgid "Edit initiator"
 msgstr "Editare inițiator"
@@ -3049,9 +3052,6 @@ msgstr "Editare partajare"
 
 msgid "Edit target"
 msgstr "Editare destinație"
-
-msgid "Edit user"
-msgstr "Editare utilizator"
 
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
@@ -3608,8 +3608,8 @@ msgstr "Evenimente FTP"
 msgid "FTP log"
 msgstr "Jurnal FTP"
 
-msgid "FTP server disabled"
-msgstr "Server FTP dezactivat"
+msgid "FTP service is disabled."
+msgstr ""
 
 msgid "FXP"
 msgstr "FXP"
@@ -3843,6 +3843,9 @@ msgstr "Server media Fuppes"
 msgid "Fuppes Media Server Administration"
 msgstr ""
 
+msgid "Fuppes has been disabled."
+msgstr ""
+
 msgid "GEOM"
 msgstr "GEOM"
 
@@ -3926,6 +3929,12 @@ msgstr "ID Grup"
 
 msgid "Group compilations"
 msgstr "Colecții Grupuri"
+
+msgid "Group is locked"
+msgstr ""
+
+msgid "Group is marked for deletion"
+msgstr ""
 
 msgid "Group name."
 msgstr "Nume grup."
@@ -4037,6 +4046,9 @@ msgstr "Asistență"
 
 msgid "Hiadaptive (High Performance)"
 msgstr "Hiadaptive (Înaltă performanță)"
+
+msgid "Hide Default Groups"
+msgstr ""
 
 msgid "Hide dot files"
 msgstr "Ascundere fișiere cu punct (dot files)"
@@ -6202,6 +6214,10 @@ msgid "Port forwarding"
 msgstr "Redirecționare Port"
 
 #, php-format
+msgid "Port number must be in the range between %d and %d."
+msgstr ""
+
+#, php-format
 msgid "Port to listen for incoming peer connections. Default port is %d."
 msgstr ""
 "Portul de utilizat pentru conexiuni de intrare în cadrul grupului. Portul "
@@ -6270,9 +6286,6 @@ msgstr ""
 
 msgid "PreInit"
 msgstr "PreInițializare"
-
-msgid "Predefined Groups"
-msgstr "Grupuri predefinite"
 
 msgid "Preferred"
 msgstr "Preferat"
@@ -7026,6 +7039,15 @@ msgstr ""
 "Selectați 'Partiție MBR' dacă doriți să montați un disc formatat UFS sau "
 "doriți să importați un disc formatat cu un alt sistem de operare."
 
+msgid "Select Cache Device"
+msgstr ""
+
+msgid "Select Data Device"
+msgstr ""
+
+msgid "Select Device"
+msgstr ""
+
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
 "Secure (HTTPS) for the WebGUI."
@@ -7033,33 +7055,27 @@ msgstr ""
 "Selectați protocolul Hypertext Transfer Protocol (HTTP) sau Hypertext "
 "Transfer Protocol Secure (HTTPS) pentru accesarea Interfeței Grafice."
 
-msgid "Select a cache device"
-msgstr "Selectare dispozitiv cache"
+msgid "Select Log Device"
+msgstr ""
 
-msgid "Select a data device"
-msgstr "Selectare dispozitiv date"
+msgid "Select Pool"
+msgstr ""
+
+msgid "Select Pool Device"
+msgstr ""
+
+msgid "Select Pools"
+msgstr ""
+
+msgid "Select Spare Device"
+msgstr ""
 
 msgid "Select a date format."
 msgstr "Selectare format dată."
 
-msgid "Select a device"
-msgstr "Selectare dispozitiv"
-
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr ""
 "Selectați un disc care are activată opțiunea de monitorizare S.M.A.R.T."
-
-msgid "Select a log device"
-msgstr "Selectare dispozitiv pentru loguri"
-
-msgid "Select a pool"
-msgstr "Selectare pool"
-
-msgid "Select a pool device"
-msgstr "Selectare dispozitiv pool"
-
-msgid "Select a spare device"
-msgstr "Selectare dispozitiv rezervă"
 
 msgid "Select file system format."
 msgstr "Selectare format sistem fișiere."
@@ -7073,20 +7089,11 @@ msgstr "Selectați un element din listă pentru eliminare"
 msgid "Select mount point where to create the swap file."
 msgstr "Selectați un punct de montare unde va fi creat fișierul 'swap'."
 
-msgid "Select one or more spare devices"
-msgstr "Selectați unul sau mai multe dispozitive de rezervă"
-
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
 "Selectați opțiunea 'Neformatat' pentru discuri neformatate și formatați-le "
 "folosind"
-
-msgid "Select pool device"
-msgstr "Selectare dispozitiv pool"
-
-msgid "Select pools"
-msgstr "Selectare dispozitive pool"
 
 msgid "Select read balance algorithm."
 msgstr "Selectați algoritmul de balans."
@@ -7320,6 +7327,9 @@ msgstr "Shell"
 
 msgid "Shock During Write."
 msgstr "Șoc în timpul operației de scriere."
+
+msgid "Show Default Groups"
+msgstr ""
 
 msgid "Show Process Information"
 msgstr "Afișare informații procese"
@@ -8116,10 +8126,6 @@ msgstr "Atributul '%s' trebuie să fie mai mic ca '%s'."
 #, php-format
 msgid "The attribute '%s' must contain at least one entry."
 msgstr "Atributul '%s' trebuie să aibă cel puţin o valoare."
-
-#, php-format
-msgid "The attribute '%s': use a port in the range from %d to %d."
-msgstr "Atributul '%s': folosește un port în intervalul %d - %d."
 
 msgid "The attribute 'Data directory' is required."
 msgstr "Definiți directorul 'Date'"
@@ -9860,14 +9866,14 @@ msgstr "Utilizat"
 msgid "User"
 msgstr "Utilizator"
 
-msgid "User Defined Groups"
-msgstr "Grupuri definite de utilizator"
-
 msgid "User ID"
 msgstr "ID Utilizator"
 
-msgid "User Setup"
-msgstr "Setare utilizator"
+msgid "User account is locked"
+msgstr ""
+
+msgid "User account is marked for deletion"
+msgstr ""
 
 msgid "User full name."
 msgstr "Nume complet utilizator."
@@ -10549,55 +10555,72 @@ msgstr "versiune:"
 msgid "week days"
 msgstr "zilele saptaminii"
 
-#~ msgid "Location where the database with media contents will be stored."
-#~ msgstr "Locația de stocare pentru baza de date a conținutului media."
+#~ msgid "Edit group"
+#~ msgstr "Editare grup"
 
-#~ msgid "Broadcast interval"
-#~ msgstr "Interval transmisie"
+#~ msgid "Edit user"
+#~ msgstr "Editare utilizator"
 
-#~ msgid "Building database in progress"
-#~ msgstr "Se construiește baza de date"
+#~ msgid "FTP server disabled"
+#~ msgstr "Server FTP dezactivat"
 
-#~ msgid "Log level"
-#~ msgstr "Nivel jurnal"
+#~ msgid "Add group"
+#~ msgstr "Adăugare grup"
 
-#~ msgid ""
-#~ "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
-#~ "Fuppes first."
-#~ msgstr ""
-#~ "Serverul Fuppes este activ. Dacă doriți să folosiți MiniDLNA va trebui să "
-#~ "dezactivați mai întâi serverul Fuppes."
+#~ msgid "Add user"
+#~ msgstr "Adăugare utilizator"
 
-#~ msgid ""
-#~ "Select which interface to use. (Only selectable if your server has more than "
-#~ "one)"
-#~ msgstr ""
-#~ "Selectați interfața. (Opțiune valabilă doar dacă aveți mai multe interfețe)"
+#~ msgid "Delete group"
+#~ msgstr "Ștergere grup"
 
-#~ msgid "Minidlna configuration has been updated."
-#~ msgstr "Configurația MiniDLNA a fost actualizată."
+#~ msgid "Delete user"
+#~ msgstr "Ștergere utilizator"
 
-#~ msgid "Please define the Database directory location."
-#~ msgstr "Introduceți directorul pentru baza de date."
+#~ msgid "Do you really want to delete this group?"
+#~ msgstr "Doriți să ștergeți acest grup?!"
 
-#~ msgid "Please define the Media library location."
-#~ msgstr "Introduceți directorul pentru biblioteca media."
+#~ msgid "Do you really want to delete this user?"
+#~ msgstr "Doriți să ștergeți acest utilizator?"
 
-#~ msgid "Presentation WebGUI"
-#~ msgstr "WebGUI de prezentare"
+#, php-format
+#~ msgid "The attribute '%s': use a port in the range from %d to %d."
+#~ msgstr "Atributul '%s': folosește un port în intervalul %d - %d."
 
-#~ msgid "Rescan database in progress"
-#~ msgstr "Se rescanează baza de date"
+#~ msgid "Predefined Groups"
+#~ msgstr "Grupuri predefinite"
 
-#~ msgid "TiVo support"
-#~ msgstr "Suport TiVo"
+#~ msgid "User Defined Groups"
+#~ msgstr "Grupuri definite de utilizator"
 
-#~ msgid "debug"
-#~ msgstr "debug"
+#~ msgid "User Setup"
+#~ msgstr "Setare utilizator"
 
-#~ msgid ""
-#~ "This will allow server-side downscaling of very large JPEG images, it can "
-#~ "hurt JPEG serving performance on (at least) Sony DLNA products."
-#~ msgstr ""
-#~ "Permite redimensionarea de către server a imaginilor JPEG foarte mari, cu "
-#~ "scăderea performanțelor (cel puțin) pentru produsele Sony DLNA."
+#~ msgid "Select a data device"
+#~ msgstr "Selectare dispozitiv date"
+
+#~ msgid "Select a cache device"
+#~ msgstr "Selectare dispozitiv cache"
+
+#~ msgid "Select pools"
+#~ msgstr "Selectare dispozitive pool"
+
+#~ msgid "Select a log device"
+#~ msgstr "Selectare dispozitiv pentru loguri"
+
+#~ msgid "Select a pool"
+#~ msgstr "Selectare pool"
+
+#~ msgid "Select a device"
+#~ msgstr "Selectare dispozitiv"
+
+#~ msgid "Select one or more spare devices"
+#~ msgstr "Selectați unul sau mai multe dispozitive de rezervă"
+
+#~ msgid "Select pool device"
+#~ msgstr "Selectare dispozitiv pool"
+
+#~ msgid "Select a pool device"
+#~ msgstr "Selectare dispozitiv pool"
+
+#~ msgid "Select a spare device"
+#~ msgstr "Selectare dispozitiv rezervă"
