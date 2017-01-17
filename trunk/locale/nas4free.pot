@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2017-01-16 07:22+0000\n"
+"POT-Creation-Date: 2017-01-17 15:00+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -363,6 +363,9 @@ msgstr ""
 msgid "Add Dataset"
 msgstr ""
 
+msgid "Add Group"
+msgstr ""
+
 msgid "Add Host"
 msgstr ""
 
@@ -382,6 +385,9 @@ msgid "Add Snapshot"
 msgstr ""
 
 msgid "Add URL"
+msgstr ""
+
+msgid "Add User Account"
 msgstr ""
 
 msgid "Add Virtual Device"
@@ -421,9 +427,6 @@ msgid "Add disk"
 msgstr ""
 
 msgid "Add extent"
-msgstr ""
-
-msgid "Add group"
 msgstr ""
 
 msgid "Add initiator"
@@ -466,9 +469,6 @@ msgid "Add share"
 msgstr ""
 
 msgid "Add target"
-msgstr ""
-
-msgid "Add user"
 msgstr ""
 
 msgid "Additional Network"
@@ -1801,6 +1801,9 @@ msgstr ""
 msgid "Delete Selected Datasets"
 msgstr ""
 
+msgid "Delete Selected Groups"
+msgstr ""
+
 msgid "Delete Selected Jobs"
 msgstr ""
 
@@ -1814,6 +1817,9 @@ msgid "Delete Selected RAID Volumes"
 msgstr ""
 
 msgid "Delete Selected Snapshots"
+msgstr ""
+
+msgid "Delete Selected User Accounts"
 msgstr ""
 
 msgid "Delete Selected Virtual Devices"
@@ -1858,9 +1864,6 @@ msgstr ""
 msgid "Delete files on the receiving side that don't exist on sender."
 msgstr ""
 
-msgid "Delete group"
-msgstr ""
-
 msgid "Delete initiator"
 msgstr ""
 
@@ -1892,9 +1895,6 @@ msgid "Delete share"
 msgstr ""
 
 msgid "Delete target"
-msgstr ""
-
-msgid "Delete user"
 msgstr ""
 
 msgid "Deletes the recursive snapshot."
@@ -2208,9 +2208,6 @@ msgstr ""
 msgid "Do you really want to delete this extent?"
 msgstr ""
 
-msgid "Do you really want to delete this group?"
-msgstr ""
-
 msgid "Do you really want to delete this host?"
 msgstr ""
 
@@ -2248,9 +2245,6 @@ msgid "Do you really want to delete this share?"
 msgstr ""
 
 msgid "Do you really want to delete this target?"
-msgstr ""
-
-msgid "Do you really want to delete this user?"
 msgstr ""
 
 msgid "Do you really want to delete this volume?\\n!!! Note, all data will get lost and can not be recovered. !!!"
@@ -2316,6 +2310,9 @@ msgstr ""
 msgid "Do you want to delete selected datasets?"
 msgstr ""
 
+msgid "Do you want to delete selected groups?"
+msgstr ""
+
 msgid "Do you want to delete selected jobs?"
 msgstr ""
 
@@ -2326,6 +2323,9 @@ msgid "Do you want to delete selected pools?"
 msgstr ""
 
 msgid "Do you want to delete selected snapshots?"
+msgstr ""
+
+msgid "Do you want to delete selected user accounts?"
 msgstr ""
 
 msgid "Do you want to delete selected virtual devices?"
@@ -2487,6 +2487,9 @@ msgstr ""
 msgid "Edit Dataset"
 msgstr ""
 
+msgid "Edit Group"
+msgstr ""
+
 msgid "Edit Host"
 msgstr ""
 
@@ -2506,6 +2509,9 @@ msgid "Edit Snapshot"
 msgstr ""
 
 msgid "Edit URL"
+msgstr ""
+
+msgid "Edit User Account"
 msgstr ""
 
 msgid "Edit VM"
@@ -2530,9 +2536,6 @@ msgid "Edit disk"
 msgstr ""
 
 msgid "Edit extent"
-msgstr ""
-
-msgid "Edit group"
 msgstr ""
 
 msgid "Edit initiator"
@@ -2575,9 +2578,6 @@ msgid "Edit share"
 msgstr ""
 
 msgid "Edit target"
-msgstr ""
-
-msgid "Edit user"
 msgstr ""
 
 msgid "Efficiency of the UPS (Ratio of the output current on the input current)"
@@ -3286,6 +3286,9 @@ msgstr ""
 msgid "Fuppes Media Server Administration"
 msgstr ""
 
+msgid "Fuppes has been disabled."
+msgstr ""
+
 msgid "GEOM"
 msgstr ""
 
@@ -3366,6 +3369,12 @@ msgid "Group ID"
 msgstr ""
 
 msgid "Group compilations"
+msgstr ""
+
+msgid "Group is locked"
+msgstr ""
+
+msgid "Group is marked for deletion"
 msgstr ""
 
 msgid "Group name."
@@ -3454,6 +3463,9 @@ msgid "Help"
 msgstr ""
 
 msgid "Hiadaptive (High Performance)"
+msgstr ""
+
+msgid "Hide Default Groups"
 msgstr ""
 
 msgid "Hide dot files"
@@ -5362,6 +5374,10 @@ msgid "Port forwarding"
 msgstr ""
 
 #, php-format
+msgid "Port number must be in the range between %d and %d."
+msgstr ""
+
+#, php-format
 msgid "Port to listen for incoming peer connections. Default port is %d."
 msgstr ""
 
@@ -5419,9 +5435,6 @@ msgid "Pre-Fail' Attribute used at least in Samsung devices."
 msgstr ""
 
 msgid "PreInit"
-msgstr ""
-
-msgid "Predefined Groups"
 msgstr ""
 
 msgid "Preferred"
@@ -6356,6 +6369,9 @@ msgstr ""
 msgid "Shock During Write."
 msgstr ""
 
+msgid "Show Default Groups"
+msgstr ""
+
 msgid "Show Process Information"
 msgstr ""
 
@@ -7042,10 +7058,6 @@ msgstr ""
 
 #, php-format
 msgid "The attribute '%s' must contain at least one entry."
-msgstr ""
-
-#, php-format
-msgid "The attribute '%s': use a port in the range from %d to %d."
 msgstr ""
 
 msgid "The attribute 'Data directory' is required."
@@ -8250,13 +8262,13 @@ msgstr ""
 msgid "User"
 msgstr ""
 
-msgid "User Defined Groups"
-msgstr ""
-
 msgid "User ID"
 msgstr ""
 
-msgid "User Setup"
+msgid "User account is locked"
+msgstr ""
+
+msgid "User account is marked for deletion"
 msgstr ""
 
 msgid "User full name."
