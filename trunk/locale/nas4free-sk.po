@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-16 07:22+0000\n"
+"POT-Creation-Date: 2017-01-17 18:47+0000\n"
 "PO-Revision-Date: 2016-12-29 18:46+0000\n"
 "Last-Translator: Lukas Vescicik <lukas.vescicik@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-16 06:41+0000\n"
+"X-Launchpad-Export-Date: 2017-01-17 18:57+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "X-Poedit-Country: SLOVAKIA\n"
 "Language: \n"
@@ -460,6 +460,9 @@ msgstr "Pridať"
 msgid "Add Dataset"
 msgstr "Pridať Dataset"
 
+msgid "Add Group"
+msgstr ""
+
 msgid "Add Host"
 msgstr "Pridať hostiteľa"
 
@@ -480,6 +483,9 @@ msgstr "Pridať Snapshot(obraz)"
 
 msgid "Add URL"
 msgstr "Pridať odkaz"
+
+msgid "Add User Account"
+msgstr ""
 
 msgid "Add Virtual Device"
 msgstr "Pridať virtuálne zariadenie"
@@ -519,9 +525,6 @@ msgstr "Pridať disk"
 
 msgid "Add extent"
 msgstr "Pridať rozsah"
-
-msgid "Add group"
-msgstr "Pridať skupinu"
 
 msgid "Add initiator"
 msgstr "Pridať iniciátor"
@@ -564,9 +567,6 @@ msgstr "Pridať zdieľanie"
 
 msgid "Add target"
 msgstr "Pridať cieľ"
-
-msgid "Add user"
-msgstr "Pridať používateľa"
 
 msgid "Additional Network"
 msgstr "Ďalšia sieť"
@@ -2065,6 +2065,9 @@ msgstr ""
 msgid "Delete Selected Datasets"
 msgstr ""
 
+msgid "Delete Selected Groups"
+msgstr ""
+
 msgid "Delete Selected Jobs"
 msgstr ""
 
@@ -2078,6 +2081,9 @@ msgid "Delete Selected RAID Volumes"
 msgstr ""
 
 msgid "Delete Selected Snapshots"
+msgstr ""
+
+msgid "Delete Selected User Accounts"
 msgstr ""
 
 msgid "Delete Selected Virtual Devices"
@@ -2123,9 +2129,6 @@ msgid "Delete files on the receiving side that don't exist on sender."
 msgstr ""
 "Zmazať súbory na strane príjemcu, ktoré neexistujú na strane odosielateľa."
 
-msgid "Delete group"
-msgstr "Odstrániť skupinu"
-
 msgid "Delete initiator"
 msgstr "Zmazať iniciátor"
 
@@ -2158,9 +2161,6 @@ msgstr "Zmazať zdieľanie"
 
 msgid "Delete target"
 msgstr "Zmazať cieľ"
-
-msgid "Delete user"
-msgstr "Zmazať používateľa"
 
 msgid "Deletes the recursive snapshot."
 msgstr ""
@@ -2501,9 +2501,6 @@ msgstr ""
 msgid "Do you really want to delete this extent?"
 msgstr "Naozaj chcete zmazať tento rozsah?"
 
-msgid "Do you really want to delete this group?"
-msgstr "Naozaj chcete túto skupinu odstrániť?"
-
 msgid "Do you really want to delete this host?"
 msgstr "Naozaj chcete zmazať tento stroj?"
 
@@ -2550,9 +2547,6 @@ msgstr "Naozaj chcete zmazať tento zdieľaný priečinok?"
 
 msgid "Do you really want to delete this target?"
 msgstr "Naozaj chcete zmazať tento cieľ?"
-
-msgid "Do you really want to delete this user?"
-msgstr "Naozaj chcete zmazať tohto používateľa?"
 
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
@@ -2622,6 +2616,9 @@ msgstr ""
 msgid "Do you want to delete selected datasets?"
 msgstr ""
 
+msgid "Do you want to delete selected groups?"
+msgstr ""
+
 msgid "Do you want to delete selected jobs?"
 msgstr ""
 
@@ -2632,6 +2629,9 @@ msgid "Do you want to delete selected pools?"
 msgstr ""
 
 msgid "Do you want to delete selected snapshots?"
+msgstr ""
+
+msgid "Do you want to delete selected user accounts?"
 msgstr ""
 
 msgid "Do you want to delete selected virtual devices?"
@@ -2795,6 +2795,9 @@ msgstr "Upraviť"
 msgid "Edit Dataset"
 msgstr ""
 
+msgid "Edit Group"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "Upraviť stroj"
 
@@ -2815,6 +2818,9 @@ msgstr ""
 
 msgid "Edit URL"
 msgstr "Upraviť URL"
+
+msgid "Edit User Account"
+msgstr ""
 
 msgid "Edit VM"
 msgstr ""
@@ -2839,9 +2845,6 @@ msgstr "Upraviť disk"
 
 msgid "Edit extent"
 msgstr "Upraviť rozsah"
-
-msgid "Edit group"
-msgstr "Upraviť skupinu"
 
 msgid "Edit initiator"
 msgstr "Upraviť inicátor"
@@ -2884,9 +2887,6 @@ msgstr "Upraviť zdieľaný priečinok"
 
 msgid "Edit target"
 msgstr "Upraviť cieľ"
-
-msgid "Edit user"
-msgstr "Upraviť používateľa"
 
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
@@ -3422,8 +3422,8 @@ msgstr "Udalosti FTP"
 msgid "FTP log"
 msgstr "Záznam FTP"
 
-msgid "FTP server disabled"
-msgstr "FTP server je vypnutý"
+msgid "FTP service is disabled."
+msgstr ""
 
 msgid "FXP"
 msgstr "FXP"
@@ -3653,6 +3653,9 @@ msgstr ""
 msgid "Fuppes Media Server Administration"
 msgstr ""
 
+msgid "Fuppes has been disabled."
+msgstr ""
+
 msgid "GEOM"
 msgstr ""
 
@@ -3734,6 +3737,12 @@ msgid "Group ID"
 msgstr "ID skupiny"
 
 msgid "Group compilations"
+msgstr ""
+
+msgid "Group is locked"
+msgstr ""
+
+msgid "Group is marked for deletion"
 msgstr ""
 
 msgid "Group name."
@@ -3832,6 +3841,9 @@ msgid "Help"
 msgstr "Pomocník"
 
 msgid "Hiadaptive (High Performance)"
+msgstr ""
+
+msgid "Hide Default Groups"
 msgstr ""
 
 msgid "Hide dot files"
@@ -5910,6 +5922,10 @@ msgid "Port forwarding"
 msgstr "Presmerovanie portov"
 
 #, php-format
+msgid "Port number must be in the range between %d and %d."
+msgstr ""
+
+#, php-format
 msgid "Port to listen for incoming peer connections. Default port is %d."
 msgstr ""
 "Na ktorom porte počúvať prichádzajúce spojenia od rovesníkov. Predvolený "
@@ -5974,9 +5990,6 @@ msgstr ""
 
 msgid "PreInit"
 msgstr "pred inicializáciou"
-
-msgid "Predefined Groups"
-msgstr ""
 
 msgid "Preferred"
 msgstr "Uprednostňované"
@@ -6698,37 +6711,40 @@ msgid ""
 "formatted drive or if you want to import disks from other OS."
 msgstr ""
 
+msgid "Select Cache Device"
+msgstr ""
+
+msgid "Select Data Device"
+msgstr ""
+
+msgid "Select Device"
+msgstr ""
+
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
 "Secure (HTTPS) for the WebGUI."
 msgstr ""
 
-msgid "Select a cache device"
+msgid "Select Log Device"
 msgstr ""
 
-msgid "Select a data device"
+msgid "Select Pool"
+msgstr ""
+
+msgid "Select Pool Device"
+msgstr ""
+
+msgid "Select Pools"
+msgstr ""
+
+msgid "Select Spare Device"
 msgstr ""
 
 msgid "Select a date format."
 msgstr ""
 
-msgid "Select a device"
-msgstr ""
-
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Vyberte disk, ktorý má zapnuté monitorovanie S.M.A.R.T."
-
-msgid "Select a log device"
-msgstr ""
-
-msgid "Select a pool"
-msgstr ""
-
-msgid "Select a pool device"
-msgstr ""
-
-msgid "Select a spare device"
-msgstr ""
 
 msgid "Select file system format."
 msgstr ""
@@ -6742,17 +6758,8 @@ msgstr "yberte položku, ktorú chcete odstrániť zo zoznamu"
 msgid "Select mount point where to create the swap file."
 msgstr "Zvoľte miesto pripojenia, kde sa má vytvoriť odkladací súbor"
 
-msgid "Select one or more spare devices"
-msgstr ""
-
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
-msgstr ""
-
-msgid "Select pool device"
-msgstr ""
-
-msgid "Select pools"
 msgstr ""
 
 msgid "Select read balance algorithm."
@@ -6974,6 +6981,9 @@ msgid "Shell"
 msgstr ""
 
 msgid "Shock During Write."
+msgstr ""
+
+msgid "Show Default Groups"
 msgstr ""
 
 msgid "Show Process Information"
@@ -7725,10 +7735,6 @@ msgstr ""
 #, php-format
 msgid "The attribute '%s' must contain at least one entry."
 msgstr "Atribút „%s“ musí obsahovať aspoň jednu položku."
-
-#, php-format
-msgid "The attribute '%s': use a port in the range from %d to %d."
-msgstr ""
 
 msgid "The attribute 'Data directory' is required."
 msgstr ""
@@ -9294,13 +9300,13 @@ msgstr ""
 msgid "User"
 msgstr "Používateľ"
 
-msgid "User Defined Groups"
-msgstr ""
-
 msgid "User ID"
 msgstr "ID používateľa"
 
-msgid "User Setup"
+msgid "User account is locked"
+msgstr ""
+
+msgid "User account is marked for deletion"
 msgstr ""
 
 msgid "User full name."
@@ -9944,3 +9950,30 @@ msgstr "verzia:"
 
 msgid "week days"
 msgstr "dní v týždni"
+
+#~ msgid "Add group"
+#~ msgstr "Pridať skupinu"
+
+#~ msgid "Add user"
+#~ msgstr "Pridať používateľa"
+
+#~ msgid "Delete group"
+#~ msgstr "Odstrániť skupinu"
+
+#~ msgid "Delete user"
+#~ msgstr "Zmazať používateľa"
+
+#~ msgid "Do you really want to delete this group?"
+#~ msgstr "Naozaj chcete túto skupinu odstrániť?"
+
+#~ msgid "Do you really want to delete this user?"
+#~ msgstr "Naozaj chcete zmazať tohto používateľa?"
+
+#~ msgid "Edit group"
+#~ msgstr "Upraviť skupinu"
+
+#~ msgid "Edit user"
+#~ msgstr "Upraviť používateľa"
+
+#~ msgid "FTP server disabled"
+#~ msgstr "FTP server je vypnutý"

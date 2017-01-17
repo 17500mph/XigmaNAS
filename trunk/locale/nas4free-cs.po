@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-16 07:22+0000\n"
+"POT-Creation-Date: 2017-01-17 18:47+0000\n"
 "PO-Revision-Date: 2016-11-27 15:51+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-16 06:41+0000\n"
+"X-Launchpad-Export-Date: 2017-01-17 18:56+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -477,6 +477,9 @@ msgstr "Přidat"
 msgid "Add Dataset"
 msgstr "Přidat datovou sadu"
 
+msgid "Add Group"
+msgstr ""
+
 msgid "Add Host"
 msgstr "Přidat stroj"
 
@@ -497,6 +500,9 @@ msgstr "Přidat zachycený stav"
 
 msgid "Add URL"
 msgstr "Přidat URL adresu"
+
+msgid "Add User Account"
+msgstr ""
 
 msgid "Add Virtual Device"
 msgstr "Přidat virtuální zařízení"
@@ -536,9 +542,6 @@ msgstr "Přidat disk"
 
 msgid "Add extent"
 msgstr "Přidat úložnou jednotku"
-
-msgid "Add group"
-msgstr "Přidat skupinu"
 
 msgid "Add initiator"
 msgstr "Přidat iniciátor"
@@ -581,9 +584,6 @@ msgstr "Přidat sdílení"
 
 msgid "Add target"
 msgstr "Přidat cíl"
-
-msgid "Add user"
-msgstr "Přidat uživatele"
 
 msgid "Additional Network"
 msgstr "Další síť"
@@ -2208,6 +2208,9 @@ msgstr ""
 msgid "Delete Selected Datasets"
 msgstr "Smazat označené datové sady"
 
+msgid "Delete Selected Groups"
+msgstr ""
+
 msgid "Delete Selected Jobs"
 msgstr "Smazat označené úlohy"
 
@@ -2222,6 +2225,9 @@ msgstr "Smazat označené RAID svazky"
 
 msgid "Delete Selected Snapshots"
 msgstr "Smazat označené zachycené stavy"
+
+msgid "Delete Selected User Accounts"
+msgstr ""
 
 msgid "Delete Selected Virtual Devices"
 msgstr "Smazat označená virtuální zařízení"
@@ -2267,9 +2273,6 @@ msgstr ""
 "Na přijímající straně odstranit ty soubory, které neexistují na straně "
 "odesílající."
 
-msgid "Delete group"
-msgstr "Odstranit skupinu"
-
 msgid "Delete initiator"
 msgstr "Odstranit iniciátor"
 
@@ -2302,9 +2305,6 @@ msgstr "Odstranit sdílení"
 
 msgid "Delete target"
 msgstr "Odstranit cíl"
-
-msgid "Delete user"
-msgstr "Zrušit uživatelský účet"
 
 msgid "Deletes the recursive snapshot."
 msgstr "Smaže vnořený zachycený stav."
@@ -2661,9 +2661,6 @@ msgstr ""
 msgid "Do you really want to delete this extent?"
 msgstr "Opravdu chcete odstranit tuto úložnou jednotku?"
 
-msgid "Do you really want to delete this group?"
-msgstr "Opravdu chcete smazat tuto skupinu?"
-
 msgid "Do you really want to delete this host?"
 msgstr "Opravdu chcete smazat záznam pro tento stroj?"
 
@@ -2710,9 +2707,6 @@ msgstr "Opravdu chcete odstranit toto sdílení?"
 
 msgid "Do you really want to delete this target?"
 msgstr "Opravdu chcete odstranit tento cíl?"
-
-msgid "Do you really want to delete this user?"
-msgstr "Opravdu chcete zrušit účet tohoto uživatele?"
 
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
@@ -2787,6 +2781,9 @@ msgstr ""
 msgid "Do you want to delete selected datasets?"
 msgstr "Opravdu smazat označené datové sady?"
 
+msgid "Do you want to delete selected groups?"
+msgstr ""
+
 msgid "Do you want to delete selected jobs?"
 msgstr "Opravdu smazat označené úlohy?"
 
@@ -2798,6 +2795,9 @@ msgstr "Chcete smazat označené fondy úložišť?"
 
 msgid "Do you want to delete selected snapshots?"
 msgstr "Opravdu chcete smazat označené zachycené stavy?"
+
+msgid "Do you want to delete selected user accounts?"
+msgstr ""
 
 msgid "Do you want to delete selected virtual devices?"
 msgstr "Opravdu chcete smazat označené virtuální zařízení?"
@@ -2960,6 +2960,9 @@ msgstr "Upravit"
 msgid "Edit Dataset"
 msgstr "Upravit datovou sadu"
 
+msgid "Edit Group"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "Upravit záznam o stroji"
 
@@ -2980,6 +2983,9 @@ msgstr "Upravit zachycený stav"
 
 msgid "Edit URL"
 msgstr "Upravit URL adresu"
+
+msgid "Edit User Account"
+msgstr ""
 
 msgid "Edit VM"
 msgstr "Upravit virt. stroj"
@@ -3004,9 +3010,6 @@ msgstr "Upravit disk"
 
 msgid "Edit extent"
 msgstr "Upravit úložnou jednotku"
-
-msgid "Edit group"
-msgstr "Upravit skupinu"
 
 msgid "Edit initiator"
 msgstr "Upravit iniciátor"
@@ -3049,9 +3052,6 @@ msgstr "Upravit sdílení"
 
 msgid "Edit target"
 msgstr "Upravit cíl"
-
-msgid "Edit user"
-msgstr "Upravit účet uživatele"
 
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
@@ -3607,8 +3607,8 @@ msgstr "Události FTP"
 msgid "FTP log"
 msgstr "Záznam událostí na FTP"
 
-msgid "FTP server disabled"
-msgstr "FTP server je vypnutý"
+msgid "FTP service is disabled."
+msgstr ""
 
 msgid "FXP"
 msgstr "FXP"
@@ -3844,6 +3844,9 @@ msgstr "Multimediální server Fuppes"
 msgid "Fuppes Media Server Administration"
 msgstr ""
 
+msgid "Fuppes has been disabled."
+msgstr ""
+
 msgid "GEOM"
 msgstr ""
 
@@ -3927,6 +3930,12 @@ msgstr "Identifikátor skupiny"
 
 msgid "Group compilations"
 msgstr "Sbírky skupiny"
+
+msgid "Group is locked"
+msgstr ""
+
+msgid "Group is marked for deletion"
+msgstr ""
 
 msgid "Group name."
 msgstr "Název skupiny"
@@ -4035,6 +4044,9 @@ msgstr "Nápověda"
 
 msgid "Hiadaptive (High Performance)"
 msgstr "Vysoce přizpůsobivé (vysoký výkon)"
+
+msgid "Hide Default Groups"
+msgstr ""
 
 msgid "Hide dot files"
 msgstr "Nezobrazovat skryté soubory (s názvy začínajícími tečkou)"
@@ -6216,6 +6228,10 @@ msgid "Port forwarding"
 msgstr "Přesměrování portů"
 
 #, php-format
+msgid "Port number must be in the range between %d and %d."
+msgstr ""
+
+#, php-format
 msgid "Port to listen for incoming peer connections. Default port is %d."
 msgstr ""
 "Port na kterém očekávat příchozí spojení z protějšku. Výchozím portem je %d."
@@ -6284,9 +6300,6 @@ msgstr ""
 
 msgid "PreInit"
 msgstr "Před inicializací"
-
-msgid "Predefined Groups"
-msgstr "Předdefinované skupiny"
 
 msgid "Preferred"
 msgstr "Upřednostňováno"
@@ -7030,6 +7043,15 @@ msgid ""
 "formatted drive or if you want to import disks from other OS."
 msgstr ""
 
+msgid "Select Cache Device"
+msgstr ""
+
+msgid "Select Data Device"
+msgstr ""
+
+msgid "Select Device"
+msgstr ""
+
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
 "Secure (HTTPS) for the WebGUI."
@@ -7038,32 +7060,26 @@ msgstr ""
 "(protokol přenosu hypertextu) nebo HTTPS (stejné jako předchozí, ale "
 "zabezpečené)."
 
-msgid "Select a cache device"
-msgstr "Vyberte zařízení pro mezipaměť"
+msgid "Select Log Device"
+msgstr ""
 
-msgid "Select a data device"
-msgstr "Vyberte zařízení pro data"
+msgid "Select Pool"
+msgstr ""
+
+msgid "Select Pool Device"
+msgstr ""
+
+msgid "Select Pools"
+msgstr ""
+
+msgid "Select Spare Device"
+msgstr ""
 
 msgid "Select a date format."
 msgstr "Vyberte formát datumu."
 
-msgid "Select a device"
-msgstr "Vyberte zařízení"
-
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Vyberte disk, který má zapnuté dohledování hodnot SMART diagnostiky."
-
-msgid "Select a log device"
-msgstr "Vyberte zařízení pro záznamy událostí"
-
-msgid "Select a pool"
-msgstr "Vyberte fond"
-
-msgid "Select a pool device"
-msgstr ""
-
-msgid "Select a spare device"
-msgstr "Vyberte pohotovostní náhradní zařízení"
 
 msgid "Select file system format."
 msgstr "Vyberte formát souborového systému."
@@ -7077,20 +7093,11 @@ msgstr "Vyberte položku, kterou chcete ze seznamu odstranit"
 msgid "Select mount point where to create the swap file."
 msgstr "Vyberte přípojný bod, ve kterém má být vytvořen odkládací soubor."
 
-msgid "Select one or more spare devices"
-msgstr "Vyberte jedno a více zařízení pro pohotovostní náhradu"
-
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
 "V případě předem nepřipravených disků vyberte možnost „nenaformátovaný“ a "
 "připravte je tak pomocí"
-
-msgid "Select pool device"
-msgstr ""
-
-msgid "Select pools"
-msgstr "Vyberte fondy"
 
 msgid "Select read balance algorithm."
 msgstr "Vyberte vyvažovací algoritmus pro čtení."
@@ -7318,6 +7325,9 @@ msgstr "Terminál"
 
 msgid "Shock During Write."
 msgstr "Otřes v průběhu zápisu"
+
+msgid "Show Default Groups"
+msgstr ""
 
 msgid "Show Process Information"
 msgstr "Zobrazit informace o procesu"
@@ -8110,10 +8120,6 @@ msgstr "Hodnota atributu %s nemůže převyšovat %s."
 #, php-format
 msgid "The attribute '%s' must contain at least one entry."
 msgstr "Je třeba vyplnit alespoň jednu položku atributu %s."
-
-#, php-format
-msgid "The attribute '%s': use a port in the range from %d to %d."
-msgstr "Atribut %s: použijte port z rozsahu %d až %d."
 
 msgid "The attribute 'Data directory' is required."
 msgstr ""
@@ -9845,14 +9851,14 @@ msgstr "Použito"
 msgid "User"
 msgstr "Uživatel"
 
-msgid "User Defined Groups"
-msgstr "Uživatelem definované skupiny"
-
 msgid "User ID"
 msgstr "Identifikátor uživatele"
 
-msgid "User Setup"
-msgstr "Nastavení uživatele"
+msgid "User account is locked"
+msgstr ""
+
+msgid "User account is marked for deletion"
+msgstr ""
 
 msgid "User full name."
 msgstr "Celé jméno uživatele"
@@ -10534,56 +10540,66 @@ msgstr "verze:"
 msgid "week days"
 msgstr ""
 
-#~ msgid "Location where the database with media contents will be stored."
-#~ msgstr "Umístění kde bude uložena databáze s multimediálním obsahem."
+#~ msgid "Add group"
+#~ msgstr "Přidat skupinu"
 
-#~ msgid "Building database in progress"
-#~ msgstr "Probíhá vytváření databáze"
+#~ msgid "Add user"
+#~ msgstr "Přidat uživatele"
 
-#~ msgid "Log level"
-#~ msgstr "Úroveň podrobností zaznamenávání událostí"
+#~ msgid "Delete group"
+#~ msgstr "Odstranit skupinu"
 
-#~ msgid "Minidlna configuration has been updated."
-#~ msgstr "Nastavení minidlna byla zaktualizována"
+#~ msgid "Edit group"
+#~ msgstr "Upravit skupinu"
 
-#~ msgid "Please define the Database directory location."
-#~ msgstr "Zadejte umístění složky databáze"
+#, php-format
+#~ msgid "The attribute '%s': use a port in the range from %d to %d."
+#~ msgstr "Atribut %s: použijte port z rozsahu %d až %d."
 
-#~ msgid "Please define the Media library location."
-#~ msgstr "Zadejte umístění knihovny médií"
+#~ msgid "Delete user"
+#~ msgstr "Zrušit uživatelský účet"
 
-#~ msgid "TiVo support"
-#~ msgstr "Podpora TiVo"
+#~ msgid "Do you really want to delete this group?"
+#~ msgstr "Opravdu chcete smazat tuto skupinu?"
 
-#~ msgid "debug"
-#~ msgstr "ladění"
+#~ msgid "Do you really want to delete this user?"
+#~ msgstr "Opravdu chcete zrušit účet tohoto uživatele?"
 
-#~ msgid "Broadcast interval"
-#~ msgstr "Interval všesměrového vysílání"
+#~ msgid "Edit user"
+#~ msgstr "Upravit účet uživatele"
 
-#~ msgid "Rescan database in progress"
-#~ msgstr "Probíhá opětovný sken databáze"
+#~ msgid "FTP server disabled"
+#~ msgstr "FTP server je vypnutý"
 
-#~ msgid ""
-#~ "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
-#~ "Fuppes first."
-#~ msgstr ""
-#~ "Je zapnuto Fuppes. Pokud namísto něj chcete používat MiniDLNA, je třeba "
-#~ "Fuppes nejprve vypnout."
+#~ msgid "Predefined Groups"
+#~ msgstr "Předdefinované skupiny"
 
-#~ msgid "Presentation WebGUI"
-#~ msgstr "Předváděcí webové rozhraní"
+#~ msgid "User Defined Groups"
+#~ msgstr "Uživatelem definované skupiny"
 
-#~ msgid ""
-#~ "Select which interface to use. (Only selectable if your server has more than "
-#~ "one)"
-#~ msgstr ""
-#~ "Vyberte, které síťové rozhraní použít (k dispozici pouze v případě, že tento "
-#~ "server disponuje více než jedním)."
+#~ msgid "User Setup"
+#~ msgstr "Nastavení uživatele"
 
-#~ msgid ""
-#~ "This will allow server-side downscaling of very large JPEG images, it can "
-#~ "hurt JPEG serving performance on (at least) Sony DLNA products."
-#~ msgstr ""
-#~ "Toto umožní snižování rozlišení u opravdu velkých jpeg obrázků, může "
-#~ "zpomalit dodávání na (přinejmenším) DLNA zařízení od Sony."
+#~ msgid "Select a device"
+#~ msgstr "Vyberte zařízení"
+
+#~ msgid "Select a spare device"
+#~ msgstr "Vyberte pohotovostní náhradní zařízení"
+
+#~ msgid "Select pools"
+#~ msgstr "Vyberte fondy"
+
+#~ msgid "Select a log device"
+#~ msgstr "Vyberte zařízení pro záznamy událostí"
+
+#~ msgid "Select a pool"
+#~ msgstr "Vyberte fond"
+
+#~ msgid "Select a data device"
+#~ msgstr "Vyberte zařízení pro data"
+
+#~ msgid "Select one or more spare devices"
+#~ msgstr "Vyberte jedno a více zařízení pro pohotovostní náhradu"
+
+#~ msgid "Select a cache device"
+#~ msgstr "Vyberte zařízení pro mezipaměť"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-16 07:22+0000\n"
-"PO-Revision-Date: 2017-01-15 15:29+0000\n"
+"POT-Creation-Date: 2017-01-17 18:47+0000\n"
+"PO-Revision-Date: 2017-01-16 20:03+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-16 06:41+0000\n"
+"X-Launchpad-Export-Date: 2017-01-17 18:57+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -280,7 +280,7 @@ msgid "A reload request has been sent to the daemon."
 msgstr "Betöltési kérést elküldtük a démonnak."
 
 msgid "A rescan has been issued."
-msgstr ""
+msgstr "Egy újrakeresést kezdeményezett."
 
 msgid "A route to this destination network already exists."
 msgstr "Az útvonal ehhez a célhálózathoz már létezik."
@@ -468,6 +468,9 @@ msgstr "Hozzáadás"
 msgid "Add Dataset"
 msgstr "Adattár hozzáadása"
 
+msgid "Add Group"
+msgstr ""
+
 msgid "Add Host"
 msgstr "Állomás hozzáadása"
 
@@ -488,6 +491,9 @@ msgstr "Pillanatkép létrehozása"
 
 msgid "Add URL"
 msgstr "URL hozzáadása"
+
+msgid "Add User Account"
+msgstr ""
 
 msgid "Add Virtual Device"
 msgstr "Virtuális eszköz hozzáadása"
@@ -527,9 +533,6 @@ msgstr "Lemez hozzáadása"
 
 msgid "Add extent"
 msgstr "extent hozzáadása"
-
-msgid "Add group"
-msgstr "Csoport hozzáadása"
 
 msgid "Add initiator"
 msgstr "Kezdeményező létrehozása"
@@ -572,9 +575,6 @@ msgstr "Megosztás hozzáadása"
 
 msgid "Add target"
 msgstr "Cél hozzáadása"
-
-msgid "Add user"
-msgstr "Felhasználó hozzáadása"
 
 msgid "Additional Network"
 msgstr "Kiegészítő hálózat"
@@ -895,6 +895,8 @@ msgid ""
 "Another DLNA/UPnP service is already running. Enabling MiniDLNA might cause "
 "issues."
 msgstr ""
+"Egy másik DLNA/UPnP szolgáltatás már fut. A MiniDLNA engedélyezése problémát "
+"okozhat."
 
 msgid "Any"
 msgstr "Bármely"
@@ -1218,7 +1220,7 @@ msgid "Bring a device online"
 msgstr "Eszköz online-ra állítása"
 
 msgid "Broadcast Interval"
-msgstr ""
+msgstr "Broadcast időköz"
 
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
@@ -1408,7 +1410,7 @@ msgid "Change the IP address of your server"
 msgstr "Szerver IP címének módosítása"
 
 msgid "Changes have been applied."
-msgstr ""
+msgstr "Változásokat sikeresen alkalmazta."
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr ""
@@ -1631,7 +1633,7 @@ msgid "Content"
 msgstr "Tartalom"
 
 msgid "Content Locations"
-msgstr ""
+msgstr "Tartalomhelyek"
 
 msgid "Continue"
 msgstr "Folytatás"
@@ -2184,6 +2186,9 @@ msgstr "Kijelölt parancsok törlése"
 msgid "Delete Selected Datasets"
 msgstr "Kiválasztott kötetek törlése"
 
+msgid "Delete Selected Groups"
+msgstr ""
+
 msgid "Delete Selected Jobs"
 msgstr "Kiválasztott feladatok törlése"
 
@@ -2198,6 +2203,9 @@ msgstr "Kiválasztott RAID kötetek törlése"
 
 msgid "Delete Selected Snapshots"
 msgstr "Kiválasztott pillanatképek törlése"
+
+msgid "Delete Selected User Accounts"
+msgstr ""
 
 msgid "Delete Selected Virtual Devices"
 msgstr "Kiválasztott virtuális eszközök törlése"
@@ -2241,9 +2249,6 @@ msgstr "Extent törlése"
 msgid "Delete files on the receiving side that don't exist on sender."
 msgstr "Fájlok törlése a fogadó oldalon, ha nem létezik a küldő oldalon."
 
-msgid "Delete group"
-msgstr "Csoport törlése"
-
 msgid "Delete initiator"
 msgstr "Kezdeményező törlése"
 
@@ -2276,9 +2281,6 @@ msgstr "Megosztás törlése"
 
 msgid "Delete target"
 msgstr "Cél törlése"
-
-msgid "Delete user"
-msgstr "Felhasználó törlése"
 
 msgid "Deletes the recursive snapshot."
 msgstr "Rekurzív snapshot törlése."
@@ -2478,7 +2480,7 @@ msgid "Directory to watch for new .torrent files."
 msgstr "Könyvtár a .torrent fájlok figyelésére."
 
 msgid "Disable"
-msgstr ""
+msgstr "Kikapcsolás"
 
 msgid "Disable Firmware Update"
 msgstr "Firmware frissítés tiltása"
@@ -2632,9 +2634,6 @@ msgstr ""
 msgid "Do you really want to delete this extent?"
 msgstr "Valóban törölni akarja ezt az extent?-et"
 
-msgid "Do you really want to delete this group?"
-msgstr "Biztos, hogy törli ezt a csoportot?"
-
 msgid "Do you really want to delete this host?"
 msgstr "Biztos, hogy törlöd ezt az állomást?"
 
@@ -2681,9 +2680,6 @@ msgstr "Valóban törölni akarja ezt a megosztást?"
 
 msgid "Do you really want to delete this target?"
 msgstr "Bizto, hogy törlöd ezt a célt?"
-
-msgid "Do you really want to delete this user?"
-msgstr "Valóban törölni akarja ezt a felhasználót?"
 
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
@@ -2767,6 +2763,9 @@ msgstr "Biztos, hogy törlöd a kijelölt parancsokat?"
 msgid "Do you want to delete selected datasets?"
 msgstr "Biztos, hogy törlöd a kiválasztott adattárakat?"
 
+msgid "Do you want to delete selected groups?"
+msgstr ""
+
 msgid "Do you want to delete selected jobs?"
 msgstr "Biztos, hogy törlöd a kiválasztott feladatokat?"
 
@@ -2778,6 +2777,9 @@ msgstr "Biztos, hogy törlöd a kiválasztott tárolókat?"
 
 msgid "Do you want to delete selected snapshots?"
 msgstr "Biztos törlöd a kiválasztott pillanatképeket?"
+
+msgid "Do you want to delete selected user accounts?"
+msgstr ""
 
 msgid "Do you want to delete selected virtual devices?"
 msgstr "Biztos, hogy törlöd a kiválasztott virtuális eszközöket?"
@@ -2940,6 +2942,9 @@ msgstr "Szerkesztés"
 msgid "Edit Dataset"
 msgstr "Adattár módosítása"
 
+msgid "Edit Group"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "Állomásnév módosítása"
 
@@ -2960,6 +2965,9 @@ msgstr "Pillanatkép módosítása"
 
 msgid "Edit URL"
 msgstr "URL szerkesztése"
+
+msgid "Edit User Account"
+msgstr ""
 
 msgid "Edit VM"
 msgstr "VM módosítása"
@@ -2984,9 +2992,6 @@ msgstr "Lemez módosítása"
 
 msgid "Edit extent"
 msgstr "Extent szerkesztése"
-
-msgid "Edit group"
-msgstr "Csoport szerkesztése"
 
 msgid "Edit initiator"
 msgstr "Kezdeményező szerkesztése"
@@ -3029,9 +3034,6 @@ msgstr "Magosztás szerkesztése"
 
 msgid "Edit target"
 msgstr "Cél szerkesztése"
-
-msgid "Edit user"
-msgstr "Felhasználó szerkesztése"
 
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
@@ -3587,8 +3589,8 @@ msgstr "FTP események"
 msgid "FTP log"
 msgstr "Ftp napló"
 
-msgid "FTP server disabled"
-msgstr "FTP szerver kikapcsolva"
+msgid "FTP service is disabled."
+msgstr ""
 
 msgid "FXP"
 msgstr "FXP"
@@ -3820,6 +3822,9 @@ msgstr "Fuppes Média Szerver"
 msgid "Fuppes Media Server Administration"
 msgstr "Fuppes Médiaszerver Kezelése"
 
+msgid "Fuppes has been disabled."
+msgstr ""
+
 msgid "GEOM"
 msgstr "GEOM"
 
@@ -3901,6 +3906,12 @@ msgstr "Csoportazonosító"
 
 msgid "Group compilations"
 msgstr "Válogatások csoportosítása"
+
+msgid "Group is locked"
+msgstr ""
+
+msgid "Group is marked for deletion"
+msgstr ""
 
 msgid "Group name."
 msgstr "Csoportnév."
@@ -4010,6 +4021,9 @@ msgstr "Súgó"
 
 msgid "Hiadaptive (High Performance)"
 msgstr "Nagy teljesítményű (Nagy teljesítmény)"
+
+msgid "Hide Default Groups"
+msgstr ""
 
 msgid "Hide dot files"
 msgstr "Pont fájlok elrejtése"
@@ -5002,7 +5016,7 @@ msgid "Make sure you have already configured your email settings"
 msgstr "Győződj meg arról, hogy az e-mail tulajdonságokat beállítottad."
 
 msgid "Manage content locations."
-msgstr ""
+msgstr "Tartalomhelyek kezelése"
 
 msgid "Management"
 msgstr "Kezelés"
@@ -5190,7 +5204,7 @@ msgid "MiniDLNA A/V Media Server"
 msgstr "MiniDLNA A/V Médiaszerver"
 
 msgid "MiniDLNA Media Server WebGUI"
-msgstr ""
+msgstr "MiniDLNA Médiaszerver WebGUI"
 
 msgid "Minimum"
 msgstr "Minimum"
@@ -5240,7 +5254,7 @@ msgid "Mixed"
 msgstr "Vegyes"
 
 msgid "MniDLNA has been disabled."
-msgstr ""
+msgstr "MniDLNA sikeresen kikapcsolta."
 
 msgid "Mode"
 msgstr "Mód"
@@ -6102,10 +6116,10 @@ msgid "Please check the log files"
 msgstr "Ellenőrizd a naplófájlt."
 
 msgid "Please define one or more content locations."
-msgstr ""
+msgstr "Legalább egy tartalomhelyet adjon meg."
 
 msgid "Please define the location for the database directory."
-msgstr ""
+msgstr "Adja meg az adatbáziskönyvtár helyét."
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr ""
@@ -6166,6 +6180,10 @@ msgstr "A %ld portot már egy másik szolgáltatás használja."
 
 msgid "Port forwarding"
 msgstr "Port továbbítás"
+
+#, php-format
+msgid "Port number must be in the range between %d and %d."
+msgstr ""
 
 #, php-format
 msgid "Port to listen for incoming peer connections. Default port is %d."
@@ -6230,9 +6248,6 @@ msgstr "Hiba-előrejelző attribútum, legalábbis Samsung eszközökben."
 
 msgid "PreInit"
 msgstr "Indítás előtt"
-
-msgid "Predefined Groups"
-msgstr "Előre definiált csoportok"
 
 msgid "Preferred"
 msgstr "Preferált"
@@ -6641,7 +6656,7 @@ msgid "Required"
 msgstr "Kötelező"
 
 msgid "Rescan"
-msgstr ""
+msgstr "Újrakeresés"
 
 msgid "Rescan Disks"
 msgstr "Lemezek újrakeresése"
@@ -6992,6 +7007,15 @@ msgstr ""
 "meghajtót kívánsz becsatolni vagy másik operációs rendszer lemezét kívánod "
 "importálni."
 
+msgid "Select Cache Device"
+msgstr ""
+
+msgid "Select Data Device"
+msgstr ""
+
+msgid "Select Device"
+msgstr ""
+
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
 "Secure (HTTPS) for the WebGUI."
@@ -6999,32 +7023,26 @@ msgstr ""
 "Válassz a WebGUI-hoz Hypertext Transfer Protokoll (HTTP) vagy Biztonságos "
 "Hypertext Transfer Protokoll (HTTPS) közül."
 
-msgid "Select a cache device"
-msgstr "Gyorsítóeszköz kiválasztása"
+msgid "Select Log Device"
+msgstr ""
 
-msgid "Select a data device"
-msgstr "Adateszköz kiválasztása"
+msgid "Select Pool"
+msgstr ""
+
+msgid "Select Pool Device"
+msgstr ""
+
+msgid "Select Pools"
+msgstr ""
+
+msgid "Select Spare Device"
+msgstr ""
 
 msgid "Select a date format."
 msgstr "Válassz dátumformátumot"
 
-msgid "Select a device"
-msgstr "Válassz egy eszközt"
-
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "Válassz ki egy a S.M.A.R.T. által figyelendő lemezt."
-
-msgid "Select a log device"
-msgstr "Válassz egy naplóeszközt"
-
-msgid "Select a pool"
-msgstr "Válassz egy tárolót"
-
-msgid "Select a pool device"
-msgstr "Válassz egy tárolóeszközt"
-
-msgid "Select a spare device"
-msgstr "Válassz egy tartalék eszközt"
 
 msgid "Select file system format."
 msgstr "Válassz fájlrendszer formátumot."
@@ -7038,20 +7056,11 @@ msgstr "Válaszd ki a listáról eltávolítandó elemet."
 msgid "Select mount point where to create the swap file."
 msgstr "Válassz csatolást, ahová a cserefájl létrehozható."
 
-msgid "Select one or more spare devices"
-msgstr "Válassz egy vagy több tartalék eszközt"
-
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
 "Válaszd a 'Formázatlan' beállítást a nem formázott lemezekhez, majd formázd "
 "meg őket"
-
-msgid "Select pool device"
-msgstr "Válassz egy tárolóeszközt"
-
-msgid "Select pools"
-msgstr "Válassz tárolókat"
 
 msgid "Select read balance algorithm."
 msgstr "Olvasó egyensúly algoritmus kiválasztása"
@@ -7184,7 +7193,7 @@ msgid "Service"
 msgstr "Szolgáltatás"
 
 msgid "Service Enabled"
-msgstr ""
+msgstr "Szolgáltatás bekacsolva"
 
 msgid "Services"
 msgstr "Szolgáltatások"
@@ -7285,6 +7294,9 @@ msgstr "Parancsértelmező"
 
 msgid "Shock During Write."
 msgstr "Írás közbeni ütés."
+
+msgid "Show Default Groups"
+msgstr ""
 
 msgid "Show Process Information"
 msgstr "Folyamatinformációk megjelenítése"
@@ -8082,11 +8094,6 @@ msgstr "'%s' attribútum kisebb kell hogy legyen mint '%s'."
 msgid "The attribute '%s' must contain at least one entry."
 msgstr "'%s' attribútum legalább egy bejáratot kell hogy tartalmazzon."
 
-#, php-format
-msgid "The attribute '%s': use a port in the range from %d to %d."
-msgstr ""
-"'%s' attribútum: használj portot a következő a(z) %d-%d tartományból."
-
 msgid "The attribute 'Data directory' is required."
 msgstr "Az 'Adatkönyvtár' attribútum kötelező."
 
@@ -8361,7 +8368,7 @@ msgstr ""
 "a Hitelesítő csoportban megadottak szerint."
 
 msgid "The interface is unknown."
-msgstr ""
+msgstr "Az interfész ismeretlen."
 
 msgid ""
 "The istgtcontrol can access the targets with correct user and secret in "
@@ -8371,7 +8378,7 @@ msgstr ""
 "Hitelesítő csoportban megadottak szerint."
 
 msgid "The location of the \"Database Directory\" is not a valid location."
-msgstr ""
+msgstr "Az \"adatbáziskönyvtár helyen\" nem valós hely."
 
 msgid "The login name contains invalid characters."
 msgstr "A bejelentkezési név érvénytelen karaktereket tartalmaz."
@@ -8462,10 +8469,10 @@ msgstr ""
 "RAID neve csak a következő karaktereket tartalmazhatja:  a-z, A-Z, 0-9."
 
 msgid "The name of the media server cannot be empty."
-msgstr ""
+msgstr "A médiaszerver neve nem lehet üres."
 
 msgid "The name of the media server is missing."
-msgstr ""
+msgstr "A médiaszerver neve hiányzik."
 
 msgid "The name of the pool cannot be changed."
 msgstr "Tárolók száma nem módosítható."
@@ -9208,6 +9215,8 @@ msgid ""
 "This will allow server-side downscaling of very large JPEG images, it can "
 "impact JPEG serving performance on some DLNA products."
 msgstr ""
+"Ez bekapcsolja a nagy képek szerveroldali kisebbre méretezését, ami néhány "
+"DLNA termék esetén hatással lehet a JPEG-kiszolgálás teljesítményére."
 
 msgid "This will create a recycle bin on the share."
 msgstr "Ez csinál egy lomtárat a megosztáson."
@@ -9246,7 +9255,7 @@ msgid "TiB"
 msgstr "TiB"
 
 msgid "TiVo Support"
-msgstr ""
+msgstr "TiVo támogatás"
 
 msgid "Time"
 msgstr "idő"
@@ -9800,14 +9809,14 @@ msgstr "Felhasznált"
 msgid "User"
 msgstr "Felhasználó"
 
-msgid "User Defined Groups"
-msgstr "Felhasználó által definiált csoportok"
-
 msgid "User ID"
 msgstr "Felhasználó-azonosító (ID)"
 
-msgid "User Setup"
-msgstr "Felhasználók beállítása"
+msgid "User account is locked"
+msgstr ""
+
+msgid "User account is marked for deletion"
+msgstr ""
 
 msgid "User full name."
 msgstr "A felhasználó teljes neve."
@@ -10480,55 +10489,73 @@ msgstr "verzió:"
 msgid "week days"
 msgstr "hétköznap"
 
-#~ msgid "Location where the database with media contents will be stored."
-#~ msgstr "A média tartalmú adatbázis helye."
+#~ msgid "Add group"
+#~ msgstr "Csoport hozzáadása"
 
-#~ msgid "Broadcast interval"
-#~ msgstr "Broadcast időköz"
+#~ msgid "Add user"
+#~ msgstr "Felhasználó hozzáadása"
 
-#~ msgid "Building database in progress"
-#~ msgstr "Adatbázis felépítése folyamatban"
+#~ msgid "Delete group"
+#~ msgstr "Csoport törlése"
 
-#~ msgid "Please define the Database directory location."
-#~ msgstr "Add meg az adatbázis  könyvtárának helyét."
+#~ msgid "Delete user"
+#~ msgstr "Felhasználó törlése"
 
-#~ msgid "TiVo support"
-#~ msgstr "TiVo támogatás"
+#~ msgid "Do you really want to delete this group?"
+#~ msgstr "Biztos, hogy törli ezt a csoportot?"
 
-#~ msgid "debug"
-#~ msgstr "hibakeresés"
+#~ msgid "Do you really want to delete this user?"
+#~ msgstr "Valóban törölni akarja ezt a felhasználót?"
 
-#~ msgid "Please define the Media library location."
-#~ msgstr "Add meg a Médiakönyvtár helyét."
+#~ msgid "Edit group"
+#~ msgstr "Csoport szerkesztése"
 
-#~ msgid "Presentation WebGUI"
-#~ msgstr "WebGUI megjelenítése"
+#~ msgid "Edit user"
+#~ msgstr "Felhasználó szerkesztése"
 
-#~ msgid "Rescan database in progress"
-#~ msgstr "Adatbázis újravizsgálása folyamatban."
+#~ msgid "FTP server disabled"
+#~ msgstr "FTP szerver kikapcsolva"
 
-#~ msgid ""
-#~ "Select which interface to use. (Only selectable if your server has more than "
-#~ "one)"
+#, php-format
+#~ msgid "The attribute '%s': use a port in the range from %d to %d."
 #~ msgstr ""
-#~ "Válaszd ki, melyik csatolót használjuk (csak akkor, ha egynél több van.)"
+#~ "'%s' attribútum: használj portot a következő a(z) %d-%d tartományból."
 
-#~ msgid "Log level"
-#~ msgstr "Naplózás szintje"
+#~ msgid "Predefined Groups"
+#~ msgstr "Előre definiált csoportok"
 
-#~ msgid ""
-#~ "Fuppes is enabled. If you wish to use MiniDLNA, you will need to disable "
-#~ "Fuppes first."
-#~ msgstr ""
-#~ "Fuppes engedélyezve van. A MiniDLNA használatához a Fuppes-t le kell tiltani."
+#~ msgid "User Defined Groups"
+#~ msgstr "Felhasználó által definiált csoportok"
 
-#~ msgid ""
-#~ "This will allow server-side downscaling of very large JPEG images, it can "
-#~ "hurt JPEG serving performance on (at least) Sony DLNA products."
-#~ msgstr ""
-#~ "Ez engedélyezi szerver oldalon a nagyméretű JPEG képek kicsinyítését, ami "
-#~ "visszavetheti (legalább) a Sony DLNA-termékek JPEG-szolgáltatási "
-#~ "teljesítményét."
+#~ msgid "User Setup"
+#~ msgstr "Felhasználók beállítása"
 
-#~ msgid "Minidlna configuration has been updated."
-#~ msgstr "MiniDLNA konfigurációja sikeresen módosult."
+#~ msgid "Select a device"
+#~ msgstr "Válassz egy eszközt"
+
+#~ msgid "Select pools"
+#~ msgstr "Válassz tárolókat"
+
+#~ msgid "Select a log device"
+#~ msgstr "Válassz egy naplóeszközt"
+
+#~ msgid "Select a pool"
+#~ msgstr "Válassz egy tárolót"
+
+#~ msgid "Select one or more spare devices"
+#~ msgstr "Válassz egy vagy több tartalék eszközt"
+
+#~ msgid "Select pool device"
+#~ msgstr "Válassz egy tárolóeszközt"
+
+#~ msgid "Select a pool device"
+#~ msgstr "Válassz egy tárolóeszközt"
+
+#~ msgid "Select a spare device"
+#~ msgstr "Válassz egy tartalék eszközt"
+
+#~ msgid "Select a data device"
+#~ msgstr "Adateszköz kiválasztása"
+
+#~ msgid "Select a cache device"
+#~ msgstr "Gyorsítóeszköz kiválasztása"

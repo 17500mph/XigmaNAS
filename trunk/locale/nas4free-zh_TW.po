@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-16 07:22+0000\n"
+"POT-Creation-Date: 2017-01-17 18:47+0000\n"
 "PO-Revision-Date: 2016-03-03 17:10+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-16 06:41+0000\n"
+"X-Launchpad-Export-Date: 2017-01-17 18:57+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -418,6 +418,9 @@ msgstr "新增"
 msgid "Add Dataset"
 msgstr "添加資料集"
 
+msgid "Add Group"
+msgstr ""
+
 msgid "Add Host"
 msgstr "新增主機"
 
@@ -438,6 +441,9 @@ msgstr ""
 
 msgid "Add URL"
 msgstr "新增 URL"
+
+msgid "Add User Account"
+msgstr ""
 
 msgid "Add Virtual Device"
 msgstr ""
@@ -477,9 +483,6 @@ msgstr "新增磁碟"
 
 msgid "Add extent"
 msgstr "新增 extent"
-
-msgid "Add group"
-msgstr "新增群組"
 
 msgid "Add initiator"
 msgstr "新增啟動器"
@@ -522,9 +525,6 @@ msgstr "新增分享區"
 
 msgid "Add target"
 msgstr "新增目標"
-
-msgid "Add user"
-msgstr "新增用戶"
 
 msgid "Additional Network"
 msgstr "其他網絡"
@@ -2001,6 +2001,9 @@ msgstr ""
 msgid "Delete Selected Datasets"
 msgstr ""
 
+msgid "Delete Selected Groups"
+msgstr ""
+
 msgid "Delete Selected Jobs"
 msgstr ""
 
@@ -2014,6 +2017,9 @@ msgid "Delete Selected RAID Volumes"
 msgstr ""
 
 msgid "Delete Selected Snapshots"
+msgstr ""
+
+msgid "Delete Selected User Accounts"
 msgstr ""
 
 msgid "Delete Selected Virtual Devices"
@@ -2058,9 +2064,6 @@ msgstr "刪除 extent"
 msgid "Delete files on the receiving side that don't exist on sender."
 msgstr "刪除存在接收端但不存在發送端的檔案。"
 
-msgid "Delete group"
-msgstr "刪除群組"
-
 msgid "Delete initiator"
 msgstr "刪除啟動器"
 
@@ -2093,9 +2096,6 @@ msgstr "刪除分享區"
 
 msgid "Delete target"
 msgstr "刪除目標"
-
-msgid "Delete user"
-msgstr "刪除用戶"
 
 msgid "Deletes the recursive snapshot."
 msgstr "刪除遞歸快照"
@@ -2429,9 +2429,6 @@ msgstr "您確定要刪除這個磁碟嗎？所有使用此磁碟的元件都會
 msgid "Do you really want to delete this extent?"
 msgstr "您確定要刪除這個 extent 嗎？"
 
-msgid "Do you really want to delete this group?"
-msgstr "您確定要刪除此組嗎？"
-
 msgid "Do you really want to delete this host?"
 msgstr "您確定要刪除這個主機嗎？"
 
@@ -2474,9 +2471,6 @@ msgstr "您確定要刪除這個分享區嗎？"
 
 msgid "Do you really want to delete this target?"
 msgstr "您確定要刪除這個iSCSI目標嗎？"
-
-msgid "Do you really want to delete this user?"
-msgstr "您確定要刪除這個用戶嗎？"
 
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
@@ -2544,6 +2538,9 @@ msgstr ""
 msgid "Do you want to delete selected datasets?"
 msgstr ""
 
+msgid "Do you want to delete selected groups?"
+msgstr ""
+
 msgid "Do you want to delete selected jobs?"
 msgstr ""
 
@@ -2554,6 +2551,9 @@ msgid "Do you want to delete selected pools?"
 msgstr ""
 
 msgid "Do you want to delete selected snapshots?"
+msgstr ""
+
+msgid "Do you want to delete selected user accounts?"
 msgstr ""
 
 msgid "Do you want to delete selected virtual devices?"
@@ -2716,6 +2716,9 @@ msgstr "編輯"
 msgid "Edit Dataset"
 msgstr ""
 
+msgid "Edit Group"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "編輯主機資訊"
 
@@ -2736,6 +2739,9 @@ msgstr ""
 
 msgid "Edit URL"
 msgstr "編輯 URL"
+
+msgid "Edit User Account"
+msgstr ""
 
 msgid "Edit VM"
 msgstr "編輯 VM"
@@ -2760,9 +2766,6 @@ msgstr "編輯磁碟"
 
 msgid "Edit extent"
 msgstr "編輯 extent"
-
-msgid "Edit group"
-msgstr "編輯群組"
 
 msgid "Edit initiator"
 msgstr "編輯啟動器"
@@ -2805,9 +2808,6 @@ msgstr "編輯分享區"
 
 msgid "Edit target"
 msgstr "編輯目標"
-
-msgid "Edit user"
-msgstr "編輯用戶"
 
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
@@ -3327,8 +3327,8 @@ msgstr "FTP事件"
 msgid "FTP log"
 msgstr "FTP 記錄"
 
-msgid "FTP server disabled"
-msgstr "關閉 FTP 伺服器"
+msgid "FTP service is disabled."
+msgstr ""
 
 msgid "FXP"
 msgstr "FXP"
@@ -3556,6 +3556,9 @@ msgstr ""
 msgid "Fuppes Media Server Administration"
 msgstr ""
 
+msgid "Fuppes has been disabled."
+msgstr ""
+
 msgid "GEOM"
 msgstr ""
 
@@ -3636,6 +3639,12 @@ msgid "Group ID"
 msgstr "群組 ID"
 
 msgid "Group compilations"
+msgstr ""
+
+msgid "Group is locked"
+msgstr ""
+
+msgid "Group is marked for deletion"
 msgstr ""
 
 msgid "Group name."
@@ -3734,6 +3743,9 @@ msgid "Help"
 msgstr "說明"
 
 msgid "Hiadaptive (High Performance)"
+msgstr ""
+
+msgid "Hide Default Groups"
 msgstr ""
 
 msgid "Hide dot files"
@@ -5765,6 +5777,10 @@ msgid "Port forwarding"
 msgstr "端口轉發"
 
 #, php-format
+msgid "Port number must be in the range between %d and %d."
+msgstr ""
+
+#, php-format
 msgid "Port to listen for incoming peer connections. Default port is %d."
 msgstr "用來偵聽接收對等連接的端口。默認端口是 %d。"
 
@@ -5825,9 +5841,6 @@ msgstr ""
 
 msgid "PreInit"
 msgstr "前置初始動作（PreInit）"
-
-msgid "Predefined Groups"
-msgstr ""
 
 msgid "Preferred"
 msgstr "首選"
@@ -6542,37 +6555,40 @@ msgid ""
 "formatted drive or if you want to import disks from other OS."
 msgstr ""
 
+msgid "Select Cache Device"
+msgstr ""
+
+msgid "Select Data Device"
+msgstr ""
+
+msgid "Select Device"
+msgstr ""
+
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
 "Secure (HTTPS) for the WebGUI."
 msgstr "請在網頁界面中選擇超文本傳輸協議（HTTP）或安全超文本傳輸協議（HTTPS）。"
 
-msgid "Select a cache device"
+msgid "Select Log Device"
 msgstr ""
 
-msgid "Select a data device"
+msgid "Select Pool"
+msgstr ""
+
+msgid "Select Pool Device"
+msgstr ""
+
+msgid "Select Pools"
+msgstr ""
+
+msgid "Select Spare Device"
 msgstr ""
 
 msgid "Select a date format."
 msgstr ""
 
-msgid "Select a device"
-msgstr ""
-
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "選擇要開啟 S.M.A.R.T. 監測的磁碟。"
-
-msgid "Select a log device"
-msgstr ""
-
-msgid "Select a pool"
-msgstr ""
-
-msgid "Select a pool device"
-msgstr ""
-
-msgid "Select a spare device"
-msgstr ""
 
 msgid "Select file system format."
 msgstr ""
@@ -6586,17 +6602,8 @@ msgstr "請從列表中選擇要刪除的項目"
 msgid "Select mount point where to create the swap file."
 msgstr "請選擇欲創建 Swap 檔的掛載點。"
 
-msgid "Select one or more spare devices"
-msgstr ""
-
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
-msgstr ""
-
-msgid "Select pool device"
-msgstr ""
-
-msgid "Select pools"
 msgstr ""
 
 msgid "Select read balance algorithm."
@@ -6810,6 +6817,9 @@ msgid "Shell"
 msgstr "命令殼 (shell)"
 
 msgid "Shock During Write."
+msgstr ""
+
+msgid "Show Default Groups"
 msgstr ""
 
 msgid "Show Process Information"
@@ -7552,10 +7562,6 @@ msgstr "'%s' 必須小於 '%s'。"
 #, php-format
 msgid "The attribute '%s' must contain at least one entry."
 msgstr "'%s' 必須有至少一個項目。"
-
-#, php-format
-msgid "The attribute '%s': use a port in the range from %d to %d."
-msgstr "屬性'%s'：從 %d 到 %d 的範圍使用一個端口。"
 
 msgid "The attribute 'Data directory' is required."
 msgstr ""
@@ -9028,13 +9034,13 @@ msgstr "已用空間"
 msgid "User"
 msgstr "用戶"
 
-msgid "User Defined Groups"
-msgstr "用戶定義的群組"
-
 msgid "User ID"
 msgstr "用戶ID"
 
-msgid "User Setup"
+msgid "User account is locked"
+msgstr ""
+
+msgid "User account is marked for deletion"
 msgstr ""
 
 msgid "User full name."
@@ -9671,23 +9677,36 @@ msgstr "版本："
 msgid "week days"
 msgstr ""
 
-#~ msgid "Location where the database with media contents will be stored."
-#~ msgstr "媒體內容的數據庫的儲存位置。"
+#~ msgid "Add group"
+#~ msgstr "新增群組"
 
-#~ msgid "Broadcast interval"
-#~ msgstr "廣播間隔"
+#~ msgid "Delete group"
+#~ msgstr "刪除群組"
 
-#~ msgid "Building database in progress"
-#~ msgstr "正在建設數據庫中"
+#~ msgid "Edit group"
+#~ msgstr "編輯群組"
 
-#~ msgid "Log level"
-#~ msgstr "記錄檔層級"
+#~ msgid "Add user"
+#~ msgstr "新增用戶"
 
-#~ msgid "Rescan database in progress"
-#~ msgstr "重新掃描數據庫正在進行"
+#~ msgid "Delete user"
+#~ msgstr "刪除用戶"
 
-#~ msgid "TiVo support"
-#~ msgstr "TiVo 支持"
+#~ msgid "Do you really want to delete this user?"
+#~ msgstr "您確定要刪除這個用戶嗎？"
 
-#~ msgid "debug"
-#~ msgstr "調試"
+#~ msgid "Edit user"
+#~ msgstr "編輯用戶"
+
+#~ msgid "Do you really want to delete this group?"
+#~ msgstr "您確定要刪除此組嗎？"
+
+#~ msgid "FTP server disabled"
+#~ msgstr "關閉 FTP 伺服器"
+
+#, php-format
+#~ msgid "The attribute '%s': use a port in the range from %d to %d."
+#~ msgstr "屬性'%s'：從 %d 到 %d 的範圍使用一個端口。"
+
+#~ msgid "User Defined Groups"
+#~ msgstr "用戶定義的群組"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-16 07:22+0000\n"
-"PO-Revision-Date: 2016-12-12 09:02+0000\n"
-"Last-Translator: JieTing Xu <xu.jieting@gmail.com>\n"
+"POT-Creation-Date: 2017-01-17 18:47+0000\n"
+"PO-Revision-Date: 2017-01-17 15:29+0000\n"
+"Last-Translator: Yuchen Guo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-16 06:41+0000\n"
+"X-Launchpad-Export-Date: 2017-01-17 18:57+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -108,7 +108,7 @@ msgstr "%sB 已用，于 %sB"
 
 #, php-format
 msgid "'%s' deletes all statistical data from the graphs!"
-msgstr ""
+msgstr "'%s' 清除图表中所有统计数据"
 
 msgid "(Change if needed)"
 msgstr "(如果需要则改变)"
@@ -201,7 +201,7 @@ msgstr "门户组含有可从启动器（initiator）连接目标器（target）
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
 "listening TCP ports."
-msgstr ""
+msgstr "端口组由标记识别并定义IP地址和监听的TCP端口"
 
 #, php-format
 msgid "A VLAN with the tag %s is already defined on this interface."
@@ -239,7 +239,7 @@ msgid "A reload request has been sent to the daemon."
 msgstr "已重新发送需求至守护进程。"
 
 msgid "A rescan has been issued."
-msgstr ""
+msgstr "已经进行重复扫描"
 
 msgid "A route to this destination network already exists."
 msgstr "到目标网段的路由设置已经存在。"
@@ -389,7 +389,7 @@ msgid ""
 msgstr "如果您想在检测到新的错误或SMART命令失败时获得通知，请开启电邮报告功能。"
 
 msgid "Active"
-msgstr ""
+msgstr "活动"
 
 msgid "Active Directory"
 msgstr "活动目录"
@@ -404,7 +404,7 @@ msgid "Active Users"
 msgstr "活跃用户"
 
 msgid "Activities"
-msgstr ""
+msgstr "活动事件"
 
 msgid "Activity"
 msgstr "Activity(活动)"
@@ -417,6 +417,9 @@ msgstr "添加"
 
 msgid "Add Dataset"
 msgstr "添加数据集"
+
+msgid "Add Group"
+msgstr "新增群组"
 
 msgid "Add Host"
 msgstr "添加主机"
@@ -438,6 +441,9 @@ msgstr "增加快照"
 
 msgid "Add URL"
 msgstr "添加 URL"
+
+msgid "Add User Account"
+msgstr "添加用户账户"
 
 msgid "Add Virtual Device"
 msgstr "添加虚拟设备"
@@ -477,9 +483,6 @@ msgstr "添加磁盘"
 
 msgid "Add extent"
 msgstr "添加 extent"
-
-msgid "Add group"
-msgstr "添加组群"
 
 msgid "Add initiator"
 msgstr "添加启动器"
@@ -523,9 +526,6 @@ msgstr "添加分享区"
 msgid "Add target"
 msgstr "添加目标"
 
-msgid "Add user"
-msgstr "添加用户"
-
 msgid "Additional Network"
 msgstr "其他网络"
 
@@ -568,7 +568,7 @@ msgid "Advanced Configuration"
 msgstr "高级配置"
 
 msgid "Advanced Format"
-msgstr ""
+msgstr "高级格式化"
 
 msgid "Advanced Options"
 msgstr "高级选项"
@@ -586,13 +586,13 @@ msgid "Advertisement skew"
 msgstr "廣告的毫秒級值"
 
 msgid "Afrikaans"
-msgstr ""
+msgstr "南非荷兰语(Afrikaans)"
 
 msgid "After"
-msgstr ""
+msgstr "在此之后"
 
 msgid "After - File-deletions will be done after the transfer has completed."
-msgstr ""
+msgstr "在传输完成后将 -File-deletions"
 
 msgid ""
 "After you click \"Save\" you may also have to do one or more of the "
@@ -605,7 +605,7 @@ msgid ""
 msgstr "点击保存后必须重启服务器来让改变生效。"
 
 msgid "Age"
-msgstr ""
+msgstr "时间"
 
 msgid "Aggregation protocol"
 msgstr "聚合协议"
@@ -767,7 +767,7 @@ msgid ""
 msgstr ""
 
 msgid "An empty field is default."
-msgstr ""
+msgstr "默认空白"
 
 msgid "An error occured."
 msgstr "发生错误。"
@@ -801,12 +801,12 @@ msgstr "只允许匿名用户"
 msgid ""
 "Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
 "issues."
-msgstr ""
+msgstr "另一个 DLNA/UPnP 服务已在运行。开启 Fuppes 可能导致问题。"
 
 msgid ""
 "Another DLNA/UPnP service is already running. Enabling MiniDLNA might cause "
 "issues."
-msgstr ""
+msgstr "另一个 DLNA/UPnP 服务已在运行。开启 MiniDLNA 可能导致问题。"
 
 msgid "Any"
 msgstr "任何"
@@ -818,7 +818,7 @@ msgid "Apple Filing Protocol"
 msgstr "苹果文件协议（Apple Filing Protocol）"
 
 msgid "Apply"
-msgstr ""
+msgstr "应用"
 
 msgid "Apply Filter"
 msgstr "应用过滤器"
@@ -2000,6 +2000,9 @@ msgstr ""
 msgid "Delete Selected Datasets"
 msgstr "删除选中的数据集"
 
+msgid "Delete Selected Groups"
+msgstr ""
+
 msgid "Delete Selected Jobs"
 msgstr "删除选中的任务"
 
@@ -2013,6 +2016,9 @@ msgid "Delete Selected RAID Volumes"
 msgstr "删除选中的RAID卷"
 
 msgid "Delete Selected Snapshots"
+msgstr ""
+
+msgid "Delete Selected User Accounts"
 msgstr ""
 
 msgid "Delete Selected Virtual Devices"
@@ -2057,9 +2063,6 @@ msgstr "删除 extent"
 msgid "Delete files on the receiving side that don't exist on sender."
 msgstr "删除存在接收端但不存在发送端的文件。"
 
-msgid "Delete group"
-msgstr "删除群组"
-
 msgid "Delete initiator"
 msgstr "删除启动器"
 
@@ -2092,9 +2095,6 @@ msgstr "删除共享区"
 
 msgid "Delete target"
 msgstr "删除目标"
-
-msgid "Delete user"
-msgstr "删除用户"
 
 msgid "Deletes the recursive snapshot."
 msgstr "删除递归快照"
@@ -2428,9 +2428,6 @@ msgstr "您确定要删除这个硬盘吗？所有使用此硬盘的元件都会
 msgid "Do you really want to delete this extent?"
 msgstr "您确定要删除这个 extent 吗？"
 
-msgid "Do you really want to delete this group?"
-msgstr "您确定要删这个组吗？"
-
 msgid "Do you really want to delete this host?"
 msgstr "您确定要删除这个主机吗？"
 
@@ -2473,9 +2470,6 @@ msgstr "您确定要删除这个分享区吗？"
 
 msgid "Do you really want to delete this target?"
 msgstr "您确定要删除这个iSCSI目标吗？"
-
-msgid "Do you really want to delete this user?"
-msgstr "您确定要删除这个用户吗？"
 
 msgid ""
 "Do you really want to delete this volume?\\n!!! Note, all data will get lost "
@@ -2543,6 +2537,9 @@ msgstr ""
 msgid "Do you want to delete selected datasets?"
 msgstr ""
 
+msgid "Do you want to delete selected groups?"
+msgstr ""
+
 msgid "Do you want to delete selected jobs?"
 msgstr ""
 
@@ -2553,6 +2550,9 @@ msgid "Do you want to delete selected pools?"
 msgstr ""
 
 msgid "Do you want to delete selected snapshots?"
+msgstr ""
+
+msgid "Do you want to delete selected user accounts?"
 msgstr ""
 
 msgid "Do you want to delete selected virtual devices?"
@@ -2715,6 +2715,9 @@ msgstr "编辑"
 msgid "Edit Dataset"
 msgstr ""
 
+msgid "Edit Group"
+msgstr ""
+
 msgid "Edit Host"
 msgstr "编辑主机资讯"
 
@@ -2735,6 +2738,9 @@ msgstr ""
 
 msgid "Edit URL"
 msgstr "编辑 URL"
+
+msgid "Edit User Account"
+msgstr ""
 
 msgid "Edit VM"
 msgstr "编辑 VM"
@@ -2759,9 +2765,6 @@ msgstr "编辑硬盘"
 
 msgid "Edit extent"
 msgstr "编辑 extent"
-
-msgid "Edit group"
-msgstr "编辑群组"
 
 msgid "Edit initiator"
 msgstr "编辑启动器"
@@ -2804,9 +2807,6 @@ msgstr "编辑分享区"
 
 msgid "Edit target"
 msgstr "编辑目标"
-
-msgid "Edit user"
-msgstr "编辑用户"
 
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
@@ -3326,8 +3326,8 @@ msgstr "FTP 事件"
 msgid "FTP log"
 msgstr "FTP 记录"
 
-msgid "FTP server disabled"
-msgstr "关闭 FTP 伺服器"
+msgid "FTP service is disabled."
+msgstr ""
 
 msgid "FXP"
 msgstr "FXP"
@@ -3555,6 +3555,9 @@ msgstr ""
 msgid "Fuppes Media Server Administration"
 msgstr ""
 
+msgid "Fuppes has been disabled."
+msgstr ""
+
 msgid "GEOM"
 msgstr ""
 
@@ -3635,6 +3638,12 @@ msgid "Group ID"
 msgstr "群组 ID"
 
 msgid "Group compilations"
+msgstr ""
+
+msgid "Group is locked"
+msgstr ""
+
+msgid "Group is marked for deletion"
 msgstr ""
 
 msgid "Group name."
@@ -3733,6 +3742,9 @@ msgid "Help"
 msgstr "说明"
 
 msgid "Hiadaptive (High Performance)"
+msgstr ""
+
+msgid "Hide Default Groups"
 msgstr ""
 
 msgid "Hide dot files"
@@ -5764,6 +5776,10 @@ msgid "Port forwarding"
 msgstr "端口映射"
 
 #, php-format
+msgid "Port number must be in the range between %d and %d."
+msgstr ""
+
+#, php-format
 msgid "Port to listen for incoming peer connections. Default port is %d."
 msgstr "侦听接收对等连接的端口。默认端口是 %d。"
 
@@ -5824,9 +5840,6 @@ msgstr ""
 
 msgid "PreInit"
 msgstr "前置初始动作（PreInit）"
-
-msgid "Predefined Groups"
-msgstr ""
 
 msgid "Preferred"
 msgstr "首选"
@@ -6541,37 +6554,40 @@ msgid ""
 "formatted drive or if you want to import disks from other OS."
 msgstr ""
 
+msgid "Select Cache Device"
+msgstr ""
+
+msgid "Select Data Device"
+msgstr ""
+
+msgid "Select Device"
+msgstr ""
+
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
 "Secure (HTTPS) for the WebGUI."
 msgstr "请在网页界面中选择超文本传输​​协议（HTTP）或安全超文本传输​​协议（HTTPS）。"
 
-msgid "Select a cache device"
+msgid "Select Log Device"
 msgstr ""
 
-msgid "Select a data device"
+msgid "Select Pool"
+msgstr ""
+
+msgid "Select Pool Device"
+msgstr ""
+
+msgid "Select Pools"
+msgstr ""
+
+msgid "Select Spare Device"
 msgstr ""
 
 msgid "Select a date format."
 msgstr ""
 
-msgid "Select a device"
-msgstr ""
-
 msgid "Select a disk that is enabled for S.M.A.R.T. monitoring."
 msgstr "请选择已开启 S.M.A.R.T. 监测的硬盘。"
-
-msgid "Select a log device"
-msgstr ""
-
-msgid "Select a pool"
-msgstr ""
-
-msgid "Select a pool device"
-msgstr ""
-
-msgid "Select a spare device"
-msgstr ""
 
 msgid "Select file system format."
 msgstr ""
@@ -6585,17 +6601,8 @@ msgstr "请从列表中选择要删除的项目"
 msgid "Select mount point where to create the swap file."
 msgstr "请选择欲创建 Swap 档的挂载点。"
 
-msgid "Select one or more spare devices"
-msgstr ""
-
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
-msgstr ""
-
-msgid "Select pool device"
-msgstr ""
-
-msgid "Select pools"
 msgstr ""
 
 msgid "Select read balance algorithm."
@@ -6809,6 +6816,9 @@ msgid "Shell"
 msgstr "命令壳 (shell)"
 
 msgid "Shock During Write."
+msgstr ""
+
+msgid "Show Default Groups"
 msgstr ""
 
 msgid "Show Process Information"
@@ -7551,10 +7561,6 @@ msgstr "'%s' 必须小于 '%s'。"
 #, php-format
 msgid "The attribute '%s' must contain at least one entry."
 msgstr "'%s' 必须有至少一个项目。"
-
-#, php-format
-msgid "The attribute '%s': use a port in the range from %d to %d."
-msgstr "属性'%s'：从 %d 到 %d 的范围使用一个端口。"
 
 msgid "The attribute 'Data directory' is required."
 msgstr ""
@@ -9027,13 +9033,13 @@ msgstr "已用空间"
 msgid "User"
 msgstr "用户"
 
-msgid "User Defined Groups"
-msgstr "用户定义的群组"
-
 msgid "User ID"
 msgstr "用户 ID"
 
-msgid "User Setup"
+msgid "User account is locked"
+msgstr ""
+
+msgid "User account is marked for deletion"
 msgstr ""
 
 msgid "User full name."
@@ -9670,23 +9676,36 @@ msgstr "版本："
 msgid "week days"
 msgstr ""
 
-#~ msgid "Location where the database with media contents will be stored."
-#~ msgstr "媒体内容的数据库的储存位置。"
+#~ msgid "Add group"
+#~ msgstr "添加组群"
 
-#~ msgid "Broadcast interval"
-#~ msgstr "广播间隔"
+#~ msgid "Add user"
+#~ msgstr "添加用户"
 
-#~ msgid "Building database in progress"
-#~ msgstr "正在建设数据库中"
+#~ msgid "Delete group"
+#~ msgstr "删除群组"
 
-#~ msgid "Log level"
-#~ msgstr "记录档层级"
+#~ msgid "Delete user"
+#~ msgstr "删除用户"
 
-#~ msgid "Rescan database in progress"
-#~ msgstr "重新扫描数据库正在进行"
+#~ msgid "Edit group"
+#~ msgstr "编辑群组"
 
-#~ msgid "TiVo support"
-#~ msgstr "TiVo 支持"
+#~ msgid "Edit user"
+#~ msgstr "编辑用户"
 
-#~ msgid "debug"
-#~ msgstr "调试"
+#~ msgid "Do you really want to delete this group?"
+#~ msgstr "您确定要删这个组吗？"
+
+#~ msgid "Do you really want to delete this user?"
+#~ msgstr "您确定要删除这个用户吗？"
+
+#~ msgid "FTP server disabled"
+#~ msgstr "关闭 FTP 伺服器"
+
+#, php-format
+#~ msgid "The attribute '%s': use a port in the range from %d to %d."
+#~ msgstr "属性'%s'：从 %d 到 %d 的范围使用一个端口。"
+
+#~ msgid "User Defined Groups"
+#~ msgstr "用户定义的群组"
