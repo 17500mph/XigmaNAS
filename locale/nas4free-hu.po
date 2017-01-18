@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-01-17 18:47+0000\n"
-"PO-Revision-Date: 2017-01-16 20:03+0000\n"
+"PO-Revision-Date: 2017-01-18 20:27+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-17 18:57+0000\n"
+"X-Launchpad-Export-Date: 2017-01-18 23:22+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -469,7 +469,7 @@ msgid "Add Dataset"
 msgstr "Adattár hozzáadása"
 
 msgid "Add Group"
-msgstr ""
+msgstr "Csoport hozzáadása"
 
 msgid "Add Host"
 msgstr "Állomás hozzáadása"
@@ -493,7 +493,7 @@ msgid "Add URL"
 msgstr "URL hozzáadása"
 
 msgid "Add User Account"
-msgstr ""
+msgstr "Felhasználói fiók hozzáadása"
 
 msgid "Add Virtual Device"
 msgstr "Virtuális eszköz hozzáadása"
@@ -2187,7 +2187,7 @@ msgid "Delete Selected Datasets"
 msgstr "Kiválasztott kötetek törlése"
 
 msgid "Delete Selected Groups"
-msgstr ""
+msgstr "Kiválasztott csoportok törlése"
 
 msgid "Delete Selected Jobs"
 msgstr "Kiválasztott feladatok törlése"
@@ -2205,7 +2205,7 @@ msgid "Delete Selected Snapshots"
 msgstr "Kiválasztott pillanatképek törlése"
 
 msgid "Delete Selected User Accounts"
-msgstr ""
+msgstr "Kiválasztott felhasználói fiókok törlése"
 
 msgid "Delete Selected Virtual Devices"
 msgstr "Kiválasztott virtuális eszközök törlése"
@@ -2764,7 +2764,7 @@ msgid "Do you want to delete selected datasets?"
 msgstr "Biztos, hogy törlöd a kiválasztott adattárakat?"
 
 msgid "Do you want to delete selected groups?"
-msgstr ""
+msgstr "Biztos, hogy törli a kiválasztott csoportokat?"
 
 msgid "Do you want to delete selected jobs?"
 msgstr "Biztos, hogy törlöd a kiválasztott feladatokat?"
@@ -2779,7 +2779,7 @@ msgid "Do you want to delete selected snapshots?"
 msgstr "Biztos törlöd a kiválasztott pillanatképeket?"
 
 msgid "Do you want to delete selected user accounts?"
-msgstr ""
+msgstr "Biztos, hogy törli a kiválasztott felhasználói fiókokat?"
 
 msgid "Do you want to delete selected virtual devices?"
 msgstr "Biztos, hogy törlöd a kiválasztott virtuális eszközöket?"
@@ -2943,7 +2943,7 @@ msgid "Edit Dataset"
 msgstr "Adattár módosítása"
 
 msgid "Edit Group"
-msgstr ""
+msgstr "Csoport módosítása"
 
 msgid "Edit Host"
 msgstr "Állomásnév módosítása"
@@ -2967,7 +2967,7 @@ msgid "Edit URL"
 msgstr "URL szerkesztése"
 
 msgid "Edit User Account"
-msgstr ""
+msgstr "Felhasználói fiók törlése"
 
 msgid "Edit VM"
 msgstr "VM módosítása"
@@ -3590,7 +3590,7 @@ msgid "FTP log"
 msgstr "Ftp napló"
 
 msgid "FTP service is disabled."
-msgstr ""
+msgstr "FTP szolgáltatást sikeresen kikapcsolta."
 
 msgid "FXP"
 msgstr "FXP"
@@ -3823,7 +3823,7 @@ msgid "Fuppes Media Server Administration"
 msgstr "Fuppes Médiaszerver Kezelése"
 
 msgid "Fuppes has been disabled."
-msgstr ""
+msgstr "Fuppes szolgáltatást sikeresen kikapcsolta."
 
 msgid "GEOM"
 msgstr "GEOM"
@@ -3908,10 +3908,10 @@ msgid "Group compilations"
 msgstr "Válogatások csoportosítása"
 
 msgid "Group is locked"
-msgstr ""
+msgstr "Csoport zárolva"
 
 msgid "Group is marked for deletion"
-msgstr ""
+msgstr "Csoport törlésre megjelölve"
 
 msgid "Group name."
 msgstr "Csoportnév."
@@ -4023,7 +4023,7 @@ msgid "Hiadaptive (High Performance)"
 msgstr "Nagy teljesítményű (Nagy teljesítmény)"
 
 msgid "Hide Default Groups"
-msgstr ""
+msgstr "Alapértelmezett csoportok elrejtése"
 
 msgid "Hide dot files"
 msgstr "Pont fájlok elrejtése"
@@ -4602,7 +4602,7 @@ msgid "Job is locked"
 msgstr "Feladat zárolva"
 
 msgid "Job is marked for deletion"
-msgstr "Feladat törlésre megjelölve."
+msgstr "Feladat törlésre megjelölve"
 
 msgid "Jul"
 msgstr "Júl"
@@ -6183,7 +6183,7 @@ msgstr "Port továbbítás"
 
 #, php-format
 msgid "Port number must be in the range between %d and %d."
-msgstr ""
+msgstr "A port értékének %d és %d közötti egész számnak kell lennie."
 
 #, php-format
 msgid "Port to listen for incoming peer connections. Default port is %d."
@@ -7008,13 +7008,13 @@ msgstr ""
 "importálni."
 
 msgid "Select Cache Device"
-msgstr ""
+msgstr "Gyorsítótár-eszköz kiválasztása"
 
 msgid "Select Data Device"
-msgstr ""
+msgstr "Adateszköz kiválasztása"
 
 msgid "Select Device"
-msgstr ""
+msgstr "Eszköz kiválasztása"
 
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
@@ -7024,19 +7024,19 @@ msgstr ""
 "Hypertext Transfer Protokoll (HTTPS) közül."
 
 msgid "Select Log Device"
-msgstr ""
+msgstr "Naplóeszköz kiválasztása"
 
 msgid "Select Pool"
-msgstr ""
+msgstr "Naplóeszköz kiválasztása"
 
 msgid "Select Pool Device"
-msgstr ""
+msgstr "Tárolóeszköz kiválasztása"
 
 msgid "Select Pools"
-msgstr ""
+msgstr "Tárolók kiválasztása"
 
 msgid "Select Spare Device"
-msgstr ""
+msgstr "Tartalékeszköz kiválasztása"
 
 msgid "Select a date format."
 msgstr "Válassz dátumformátumot"
@@ -7296,7 +7296,7 @@ msgid "Shock During Write."
 msgstr "Írás közbeni ütés."
 
 msgid "Show Default Groups"
-msgstr ""
+msgstr "Alapértelmezett csoportok megjelenítése"
 
 msgid "Show Process Information"
 msgstr "Folyamatinformációk megjelenítése"
@@ -9813,10 +9813,10 @@ msgid "User ID"
 msgstr "Felhasználó-azonosító (ID)"
 
 msgid "User account is locked"
-msgstr ""
+msgstr "Felhasználói fiók zárolva"
 
 msgid "User account is marked for deletion"
-msgstr ""
+msgstr "Felhasználói fiók törlésre megjelölve"
 
 msgid "User full name."
 msgstr "A felhasználó teljes neve."
@@ -10488,74 +10488,3 @@ msgstr "verzió:"
 
 msgid "week days"
 msgstr "hétköznap"
-
-#~ msgid "Add group"
-#~ msgstr "Csoport hozzáadása"
-
-#~ msgid "Add user"
-#~ msgstr "Felhasználó hozzáadása"
-
-#~ msgid "Delete group"
-#~ msgstr "Csoport törlése"
-
-#~ msgid "Delete user"
-#~ msgstr "Felhasználó törlése"
-
-#~ msgid "Do you really want to delete this group?"
-#~ msgstr "Biztos, hogy törli ezt a csoportot?"
-
-#~ msgid "Do you really want to delete this user?"
-#~ msgstr "Valóban törölni akarja ezt a felhasználót?"
-
-#~ msgid "Edit group"
-#~ msgstr "Csoport szerkesztése"
-
-#~ msgid "Edit user"
-#~ msgstr "Felhasználó szerkesztése"
-
-#~ msgid "FTP server disabled"
-#~ msgstr "FTP szerver kikapcsolva"
-
-#, php-format
-#~ msgid "The attribute '%s': use a port in the range from %d to %d."
-#~ msgstr ""
-#~ "'%s' attribútum: használj portot a következő a(z) %d-%d tartományból."
-
-#~ msgid "Predefined Groups"
-#~ msgstr "Előre definiált csoportok"
-
-#~ msgid "User Defined Groups"
-#~ msgstr "Felhasználó által definiált csoportok"
-
-#~ msgid "User Setup"
-#~ msgstr "Felhasználók beállítása"
-
-#~ msgid "Select a device"
-#~ msgstr "Válassz egy eszközt"
-
-#~ msgid "Select pools"
-#~ msgstr "Válassz tárolókat"
-
-#~ msgid "Select a log device"
-#~ msgstr "Válassz egy naplóeszközt"
-
-#~ msgid "Select a pool"
-#~ msgstr "Válassz egy tárolót"
-
-#~ msgid "Select one or more spare devices"
-#~ msgstr "Válassz egy vagy több tartalék eszközt"
-
-#~ msgid "Select pool device"
-#~ msgstr "Válassz egy tárolóeszközt"
-
-#~ msgid "Select a pool device"
-#~ msgstr "Válassz egy tárolóeszközt"
-
-#~ msgid "Select a spare device"
-#~ msgstr "Válassz egy tartalék eszközt"
-
-#~ msgid "Select a data device"
-#~ msgstr "Adateszköz kiválasztása"
-
-#~ msgid "Select a cache device"
-#~ msgstr "Gyorsítóeszköz kiválasztása"

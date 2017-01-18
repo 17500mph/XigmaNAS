@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-01-17 18:47+0000\n"
-"PO-Revision-Date: 2017-01-17 18:20+0000\n"
+"PO-Revision-Date: 2017-01-18 09:18+0000\n"
 "Last-Translator: winston <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-17 18:58+0000\n"
+"X-Launchpad-Export-Date: 2017-01-18 23:21+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 
 msgid " interfaces:"
@@ -5719,10 +5719,14 @@ msgstr ""
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select and deselect groups."
 msgstr ""
+"Aandag: Ctrl-klik (of bevel-klik op die Mac) om groepe te aktiveer of de-"
+"aktiveer"
 
 msgid ""
 "Note: Ctrl-click (or command-click on the Mac) to select multiple entries."
 msgstr ""
+"Aandag: Ctrl-klik (of bevel-klik op die Mac) om veeltallige inskrywings te "
+"aktiveer"
 
 msgid "Nothing to synchronize"
 msgstr "Niks om te sinchroniseer nie"
@@ -5903,7 +5907,7 @@ msgid "Owner"
 msgstr "Eienaar"
 
 msgid "PG"
-msgstr ""
+msgstr "PG"
 
 msgid "PHP Command"
 msgstr "PHP bevel"
@@ -5936,7 +5940,7 @@ msgid "Package is already installed."
 msgstr "Pakket is reeds geinstalleer"
 
 msgid "Package upload failed (out of memory?)"
-msgstr ""
+msgstr "Paket oplaai onsuksesvol (geheue ontklaar?)"
 
 msgid "Packages"
 msgstr "Pakette"
@@ -5954,7 +5958,7 @@ msgid "Parameter"
 msgstr "Eienskap"
 
 msgid "Parameter xxx (ups.conf or cmdline -x) setting"
-msgstr ""
+msgstr "Parameter xxx (ups.conf of cmdline-x) vir opset"
 
 msgid "Parent Directory"
 msgstr "Ouer Gids"
@@ -5983,6 +5987,14 @@ msgid ""
 "enough to handle many simultaneous passive connections (for example, 49152-"
 "65534, the IANA-registered ephemeral port range)."
 msgstr ""
+"Die passiewe poorte versper die strek van poorte van waar die bediener kan "
+"kies wanneer dit die PASV bevel ontvang van 'n klient. Die bediener sal "
+"ewetoeganklik 'n nommer kies vanaf 'n spesifieke strek tot 'n oop poort "
+"gevind is. Die poort strek wat geselekteer word moet in die boonste-"
+"vooregtelike strek wees (bv. grote as of gelyk aan 1024). Die word streng "
+"aanbeveel dat die gekose strek groot genoef wees om alle gelyktydige "
+"konneksies te kan hanteer (byvoorbeeld,  49152-65534, in die IANA-"
+"geregistreerde  efemerel poort strek)."
 
 msgid "Passphrase"
 msgstr "Wagwoordfrase"
@@ -6154,10 +6166,10 @@ msgid "Please check the log files"
 msgstr "Kyk asseblief na die aanmeld lêers"
 
 msgid "Please define one or more content locations."
-msgstr ""
+msgstr "Definieer asseblief een of meer inhouds gebiede."
 
 msgid "Please define the location for the database directory."
-msgstr ""
+msgstr "Definieer asseblief die gebied vir die databasis lêer stelsel."
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr ""
@@ -6220,7 +6232,7 @@ msgstr "Poort aanstuur"
 
 #, php-format
 msgid "Port number must be in the range between %d and %d."
-msgstr ""
+msgstr "Poort nommers moet in die strek tussed %d en %d wees."
 
 #, php-format
 msgid "Port to listen for incoming peer connections. Default port is %d."
@@ -6280,9 +6292,11 @@ msgstr "Krag Mode"
 
 msgid "Pre-Fail' Attribute used at least in HP devices."
 msgstr ""
+"Voor-ontklaar raak eienskap word ten minste gebruik in die HP toestelle."
 
 msgid "Pre-Fail' Attribute used at least in Samsung devices."
 msgstr ""
+"Voor-ontklaar raak eienskap word ten minste in die Samsung toestelle gebruik."
 
 msgid "PreInit"
 msgstr "PreInit"
@@ -6470,6 +6484,12 @@ msgid ""
 "Point | Management</a> or <a href='disks_zfs_dataset.php'>Disks | ZFS | "
 "Datasets</a>) and hit Save in order to take them effect."
 msgstr ""
+"RRDGrafieke nodig ten minste lees en skryf toestemming by die monteer punt "
+"van die  lêer stelsel %s.  Stel die Lees en Uitvoer bissies vir Andere "
+"(Toegang Beperking | Mode) vir die monteer punt %s (in <a "
+"href='disks_mount.php'>Disks | Mount Point | Management</a> or <a "
+"href='disks_zfs_dataset.php'>Disks | ZFS | Datasets</a>) en klik Stoor sodat "
+"dit effek kan neem."
 
 msgid "RSYNC"
 msgstr "RSYNC"
@@ -6526,10 +6546,14 @@ msgid ""
 "Read/Write (rw,dynamic) for removable types file size grow and shrink "
 "automatically by EOF (ignore specified size)"
 msgstr ""
+"Lees/Skryf (rw,dynamic) vir verwydebare tipes lêer groottes; sal automaties "
+"krimp by EOF (ignoreer spesifieke groote)"
 
 msgid ""
 "Read/Write (rw,extend) for removable types extend file size if EOM reached"
 msgstr ""
+"Lees/Skryf (rw,dynamic) vir verwydebare tipes vergroot lêer groottes as EOM "
+"bereik word"
 
 msgid "Read/Write Access"
 msgstr "Lees/Skryf Toegang"
@@ -6547,19 +6571,19 @@ msgid "Reason Code"
 msgstr "Rede kode"
 
 msgid "Reason for last transfer to battery (* opaque)"
-msgstr ""
+msgstr "Rede vir last oordraf na die battery (* vaag)"
 
 msgid "Reboot"
 msgstr "Herlaai"
 
 msgid "Receive Buffer Size"
-msgstr ""
+msgstr "Ontvang Buffer Groote"
 
 msgid "Record is locked"
 msgstr "Rekord is gesluit"
 
 msgid "Recurse into directories."
-msgstr ""
+msgstr "Herhaal weer terug in lêer stelsels."
 
 msgid "Recursive"
 msgstr "Rekursief"
@@ -6682,7 +6706,7 @@ msgid "Required"
 msgstr "Benodig"
 
 msgid "Rescan"
-msgstr ""
+msgstr "Her-tasting"
 
 msgid "Rescan Disks"
 msgstr "Herskandeer Skywe"
@@ -6731,10 +6755,10 @@ msgid "Restricted"
 msgstr "Beperk"
 
 msgid "Restricted - Inherit all but \"write ACL\" and \"change owner\""
-msgstr ""
+msgstr "Verbode - Erf alles maar nie \"skryf ACL\" en \"Verander Eienaar\""
 
 msgid "Results for net rpc testjoin:"
-msgstr ""
+msgstr "Resultate vir net rpc toetsaansluit:"
 
 msgid "Results of last self test"
 msgstr "Resultate van vorige self toets"
@@ -6776,16 +6800,16 @@ msgid "Rotation Rate"
 msgstr "Rotasie Koers"
 
 msgid "Round-robin read"
-msgstr ""
+msgstr "Rondomtalie lees"
 
 msgid "Roundrobin"
-msgstr ""
+msgstr "Rondomtalie"
 
 msgid "Routes"
 msgstr "Roetes"
 
 msgid "Routing tables"
-msgstr ""
+msgstr "Roetering tafels"
 
 msgid "Rows"
 msgstr "Rye"
@@ -6813,6 +6837,7 @@ msgstr "Hardloop nou"
 
 msgid "Run without requiring remote rsync daemon. (Disabled by default)"
 msgstr ""
+"Lopend sonder dat dit vergelee rsync daemon nodig. (Afgeskakel by verstek)"
 
 msgid "Running"
 msgstr "Besig om te loop"
@@ -6821,6 +6846,8 @@ msgid ""
 "Running the service as user root is not recommended for security reasons, "
 "use at your own risk!"
 msgstr ""
+"Om die diens te aktiveer as wortel gebruiker word nie aanbeveel vir "
+"sekuriteits redes, gebruik op eie risiko!"
 
 msgid "Russian"
 msgstr "Russies"
@@ -6896,12 +6923,16 @@ msgid ""
 "Samba will read from file asynchronously when size of request is bigger than "
 "this value. (%d by default)"
 msgstr ""
+"Samba sal die asinchronisties  lees van die lêer wanneer die grote van die "
+"versoek groter is as die waarde. (%d by verstek)"
 
 #, php-format
 msgid ""
 "Samba will write to file asynchronously when size of request is bigger than "
 "this value. (%d by default)"
 msgstr ""
+"Samba sal  asinchronisties skryf in die lêer wanneer die grote van die "
+"versoek groter is as die waarde. (%d by verstek)"
 
 msgid "Sat"
 msgstr "Sat"
@@ -6933,6 +6964,10 @@ msgid ""
 "is disabled, a scan can still be forced from the status page of the "
 "administrative web interface."
 msgstr ""
+"Aftas die lêer stelsel elke N sekondes om te sien of enige lêers bygevoeg of "
+"verwyder was. Stel dit as 0 om die agtergrond aftassing af te skakel. As "
+"agtergrond aftassing afgeskakel is, dan kan aftassing not steeds gevorseer "
+"word van die status bladsy van die administratiewe koppelvlak."
 
 msgid "Scan type"
 msgstr "Skandeer tipe"
@@ -7013,35 +7048,39 @@ msgid ""
 "Select 'MBR partition' default partition if you want to mount a UFS "
 "formatted drive or if you want to import disks from other OS."
 msgstr ""
+"Selekteer 'MBR partisie' as verstek partisie as 'n UFS geformateerde skyf "
+"wil monteerof of as jy skywe wil invoer van 'n ander bedryfsisteem."
 
 msgid "Select Cache Device"
-msgstr ""
+msgstr "Selekteer Kasgeheue Toestel"
 
 msgid "Select Data Device"
-msgstr ""
+msgstr "Selekteer Data Toestel"
 
 msgid "Select Device"
-msgstr ""
+msgstr "Selekteer Toestel"
 
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
 "Secure (HTTPS) for the WebGUI."
 msgstr ""
+"Selekteer Hiperteks-oordragprotokool (HTTP) of Hiperteks-oordragprotokool "
+"Sekuur (HTTPS) vir die WebGUI"
 
 msgid "Select Log Device"
-msgstr ""
+msgstr "Selekteer Register Toestel"
 
 msgid "Select Pool"
-msgstr ""
+msgstr "Selekteer die Poel"
 
 msgid "Select Pool Device"
-msgstr ""
+msgstr "Selekteer die Poel Toestel"
 
 msgid "Select Pools"
-msgstr ""
+msgstr "Selekteer die Poele"
 
 msgid "Select Spare Device"
-msgstr ""
+msgstr "Selekteer Spaar Toestel"
 
 msgid "Select a date format."
 msgstr "Kies 'n datum formaat."
@@ -7059,11 +7098,13 @@ msgid "Select item to remove from the list"
 msgstr "Kies 'n item om van die lys af te verwyder"
 
 msgid "Select mount point where to create the swap file."
-msgstr ""
+msgstr "Selekteer die monteer punt waar die uitruil lêer geskep moet word"
 
 msgid ""
 "Select option 'Unformatted' for unformatted disks and format them with the"
 msgstr ""
+"Kies die opsie 'Ongeformatteerd' vir ongeformatteerde skywe en formateer "
+"hulle met die keuse"
 
 msgid "Select read balance algorithm."
 msgstr "Kies 'n lees ballanseer algoritme."
@@ -7095,6 +7136,8 @@ msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one interface)"
 msgstr ""
+"Selekteer watter koppelvlakke om te gebruik. (Dit is sleg kiesbaar as jou "
+"bediener meer as een koppelvlak het)"
 
 msgid "Selected"
 msgstr "Geselekteerde"
@@ -7115,13 +7158,13 @@ msgid "Selected interface:"
 msgstr "Geselekteerde koppelvlak:"
 
 msgid "Self-Monitoring, Analysis & Reporting Technology"
-msgstr ""
+msgstr "Self-monitering, Analise & Verslag Tegnologie"
 
 msgid "Self-tests Management"
 msgstr "Self-toets Bestuur"
 
 msgid "Send Buffer Size"
-msgstr ""
+msgstr "Stuur Buffer Groote"
 
 msgid "Send Command!"
 msgstr "Stuur Bevel!"
@@ -7142,10 +7185,10 @@ msgid "Sensor"
 msgstr "Sensor"
 
 msgid "Sensor Information"
-msgstr ""
+msgstr "Sensor informasie"
 
 msgid "Sensor List"
-msgstr ""
+msgstr "Sensor Lys"
 
 msgid "Sep"
 msgstr "Sep"
@@ -7157,7 +7200,7 @@ msgid "September"
 msgstr "September"
 
 msgid "Serial Console"
-msgstr ""
+msgstr "Serieel Konsole"
 
 msgid "Serial Number"
 msgstr "Reeksnommer"
@@ -7193,7 +7236,7 @@ msgid "Service"
 msgstr "Diens"
 
 msgid "Service Enabled"
-msgstr ""
+msgstr "Diens is Aangeskakel"
 
 msgid "Services"
 msgstr "Dienste"
@@ -7208,16 +7251,18 @@ msgid "Set read only"
 msgstr "Stel leesalleen"
 
 msgid "Set share password."
-msgstr ""
+msgstr "Stel die deel wagwoord"
 
 #, php-format
 msgid ""
 "Set the Read and Execute bits permission for Others (Access Restrictions | "
 "Mode) for the mount point %s in %s and hit Save in order to take them effect."
 msgstr ""
+"Stel die Lees en Uitvoer bisse toestemming vir Anderer (Toegang Beperk "
+"|Mode) vir die monteer punt %s in %s and druk Stoor sodate dit effek kan neem"
 
 msgid "Set the account's primary group to the given group."
-msgstr ""
+msgstr "Stel die rekening se primere groep vir die gegewe groep"
 
 msgid "Set the content location(s) to or from the media library."
 msgstr ""
@@ -10269,64 +10314,3 @@ msgstr "weergawe:"
 
 msgid "week days"
 msgstr "weeksdae"
-
-#~ msgid "Add group"
-#~ msgstr "Voeg groep by"
-
-#~ msgid "Add user"
-#~ msgstr "Voeg gebruiker by"
-
-#~ msgid "Delete group"
-#~ msgstr "Verwyder groep"
-
-#~ msgid "Delete user"
-#~ msgstr "Verwyder gebruiker"
-
-#~ msgid "Do you really want to delete this group?"
-#~ msgstr "Wil jy rerig die groep verwyder?"
-
-#~ msgid "Do you really want to delete this user?"
-#~ msgstr "Wil jy regtig hierdie gebruiker verwyder?"
-
-#~ msgid "Edit group"
-#~ msgstr "Reigeer groep"
-
-#~ msgid "Edit user"
-#~ msgstr "Redigeer gebruiker"
-
-#~ msgid "FTP server disabled"
-#~ msgstr "FTP bediener afgeskakel"
-
-#~ msgid "Select a data device"
-#~ msgstr "Kies 'n data toestel"
-
-#~ msgid "Select a device"
-#~ msgstr "Kies 'n toestel"
-
-#~ msgid "Select a spare device"
-#~ msgstr "Kies 'n spaar toestel."
-
-#~ msgid "Select one or more spare devices"
-#~ msgstr "Kies een of meer spaar toestele"
-
-#, php-format
-#~ msgid "The attribute '%s': use a port in the range from %d to %d."
-#~ msgstr "Die eienskap '%s': gebruik 'n poort in die omvang van %d tot %d."
-
-#~ msgid "User Setup"
-#~ msgstr "Gebruiker Opstel"
-
-#~ msgid "User Defined Groups"
-#~ msgstr "Gebruiker Gedefinieerde Groepe"
-
-#~ msgid "Predefined Groups"
-#~ msgstr "Gedefineerde Groepe"
-
-#~ msgid "Select a pool"
-#~ msgstr "Selekteer 'n poel"
-
-#~ msgid "Select a pool device"
-#~ msgstr "Selekteer 'n poel toestel"
-
-#~ msgid "Select a cache device"
-#~ msgstr "Selekteer 'n kasgeheue toestel"
