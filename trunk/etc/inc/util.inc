@@ -2170,24 +2170,22 @@ function get_fstype_shortdesc($fstype) {
 //		[ssid] => xxx
 //	)
 function get_interface_info($if) {
-	global $config;
+//	global $config;
 
-	$ifinfo = array();
-
+	$ifinfo = [];	
 	$ifinfo['hwif'] = get_ifname($if);
 	$ifinfo['if'] = $ifinfo['hwif'];
 
 	/* run netstat to determine link info */
 	unset($linkinfo);
-	exec("/usr/bin/netstat -I " . $ifinfo['hwif'] . " -nWb -f link", $linkinfo);
-	$linkinfo = preg_split("/\s+/", ltrim($linkinfo[1]));
-	if (preg_match("/\*$/", $linkinfo[0]) || preg_match("/^$/", $linkinfo[0])) {
+	exec("/usr/bin/netstat -I " . $ifinfo['hwif'] . " -nWb -f link",$linkinfo);
+	$linkinfo = preg_split("/\s+/",ltrim($linkinfo[1]));
+	if(preg_match("/\*$/",$linkinfo[0]) || preg_match("/^$/",$linkinfo[0])):
 		$ifinfo['status'] = "down";
-	} else {
+	else:
 		$ifinfo['status'] = "up";
-	}
-
-	if (!strstr($ifinfo['if'],'tun')) {
+	endif;
+	if(!strstr($ifinfo['if'],'tun')):
 		$ifinfo['mtu'] = $linkinfo[1];
 		$ifinfo['macaddr'] = $linkinfo[3];
 		$ifinfo['inpkts'] = $linkinfo[4];
@@ -2198,72 +2196,81 @@ function get_interface_info($if) {
 		$ifinfo['outerrs'] = $linkinfo[9];
 		$ifinfo['outbytes'] = $linkinfo[10];
 		$ifinfo['collisions'] = $linkinfo[11];
-	} else {
+	else:
 		$ifinfo['inpkts'] = $linkinfo[3];
 		$ifinfo['inbytes'] = $linkinfo[6];
 		$ifinfo['outpkts'] = $linkinfo[7];
 		$ifinfo['outbytes'] = $linkinfo[9];
-	}
-
-	if ($ifinfo['status'] === "up") {
+	endif;
+	if($ifinfo['status'] === "up"):
 		/* try to determine media with ifconfig */
 		unset($ifconfiginfo);
-		exec("/sbin/ifconfig -m " . $ifinfo['hwif'], $ifconfiginfo);
+		exec("/sbin/ifconfig -m " . $ifinfo['hwif'],$ifconfiginfo);
 
-		foreach ($ifconfiginfo as $ici) {
-			if (preg_match("/media: .*? \((.*?)\)/", $ici, $matches)) {
+		foreach($ifconfiginfo as $ici):
+			if(preg_match("/media: .*? \((.*?)\)/",$ici,$matches)):
 				$ifinfo['media'] = $matches[1];
-			} else if (preg_match("/media: Ethernet (.*)/", $ici, $matches)) {
-				$ifinfo['media'] = $matches[1];
-			}
-			if (preg_match("/status: (.*)$/", $ici, $matches)) {
+			else: 
+				if(preg_match("/media: Ethernet (.*)/",$ici,$matches)):
+					$ifinfo['media'] = $matches[1];
+				endif;
+			endif;
+			if(preg_match("/status: (.*)$/",$ici,$matches)):
 				if ($matches[1] != "active")
 					$ifinfo['status'] = $matches[1];
-			}
-			if (preg_match("/channel (\S*)/", $ici, $matches)) {
+			endif;
+			if(preg_match("/channel (\S*)/",$ici,$matches)):
 				$ifinfo['channel'] = $matches[1];
-			}
-			if (preg_match("/ssid (\".*?\"|\S*)/", $ici, $matches)) {
-				if ($matches[1][0] == '"')
-					$ifinfo['ssid'] = substr($matches[1], 1, -1);
-				else
+			endif;
+			if(preg_match("/ssid (\".*?\"|\S*)/",$ici,$matches)):
+				if($matches[1][0] == '"'):
+					$ifinfo['ssid'] = substr($matches[1],1,-1);
+				else:
 					$ifinfo['ssid'] = $matches[1];
-			}
-			if (preg_match("/supported wake events: (.*)$/", $ici, $matches)) {
-				$ifinfo['wolevents'] = explode(" ", $matches[1]);
-			}
-			if (preg_match("/capabilities=.*<(.*)>$/", $ici, $matches)) {
-				$info = explode(",", $matches[1]);
-				$ifinfo['wolevents'] = preg_grep("/^WOL/", $info);
-			}
-		}
-
-		if (isset($ifinfo['pppoelink']) && $ifinfo['pppoelink'] != "down" && isset($ifinfo['pptplink']) && $ifinfo['pptplink'] != "down") {
+				endif;
+			endif;
+			if(preg_match("/supported wake events: (.*)$/",$ici,$matches)):
+				$ifinfo['wolevents'] = explode(' ',$matches[1]);
+			endif;
+			if(preg_match("/capabilities=.*<(.*)>$/",$ici,$matches)):
+				$info = explode(",",$matches[1]);
+				$ifinfo['wolevents'] = preg_grep("/^WOL/",$info);
+			endif;
+		endforeach;
+		$gather_ipinfo = true;
+		if(isset($ifinfo['dhcplink']) && ('down' === $ifinfo['dhcplink'])):
+			$gather_ipinfo = false;
+		endif;
+		if(isset($ifinfo['pppoelink']) && ('down' === $ifinfo['pppoelink'])):
+			$gather_ipinfo = false;
+		endif;
+		if(isset($ifinfo['pptplink']) && ('down' === $ifinfo['pptplink'])):
+			$gather_ipinfo = false;
+		endif;
+		if($gather_ipinfo):
 			/* try to determine IP address and netmask with ifconfig */
 			unset($ifconfiginfo);
-			exec("/sbin/ifconfig " . $ifinfo['if'], $ifconfiginfo);
-
-			foreach ($ifconfiginfo as $ici) {
-				if (preg_match("/inet (\S+)/", $ici, $matches)) {
+			exec("/sbin/ifconfig " . $ifinfo['if'],$ifconfiginfo);
+			foreach($ifconfiginfo as $ici):
+				if(preg_match("/inet (\S+)/",$ici,$matches)):
 					$ifinfo['ipaddr'] = $matches[1];
-				}
-				if (preg_match("/netmask (\S+)/", $ici, $matches)) {
-					if (preg_match("/^0x/", $matches[1]))
+				endif;
+				if(preg_match("/netmask (\S+)/",$ici,$matches)):
+					if(preg_match("/^0x/",$matches[1])):
 						$ifinfo['subnet'] = long2ip(hexdec($matches[1]));
-				}
-				if (preg_match("/inet6 (\S+)%/", $ici, $matches)) {
+					endif;
+				endif;
+				if(preg_match("/inet6 (\S+)%/",$ici,$matches)):
 					$ifinfo['ipv6addr'] = $matches[1];
-				}
-				if (preg_match("/prefixlen (\S+)/", $ici, $matches)) {
+				endif;
+				if(preg_match("/prefixlen (\S+)/",$ici,$matches)):
 					$ifinfo['ipv6subnet'] = $matches[1];
-				}
-			}
-		}
-	}
-
+				endif;
+			endforeach;
+		endif;
+	endif;
 	return $ifinfo;
 }
-
 // Get interface information.
 // $iftype - interface type (e.g. lan, opt[n], ...)
 // Result: Array
@@ -2273,33 +2280,29 @@ function get_interface_info($if) {
 //    [gateway] => 192.168.178.1
 //	)
 function get_interface_info_ex($iftype) {
-  global $config;
+	global $config;
 
-  // Get interface information
+	// Get interface information
 	$ifinfo = get_interface_info($config['interfaces'][$iftype]['if']);
-
 	// Get the default gateway if necessary
-	if ($iftype === "lan") {
+	if('lan' === $iftype):
 		// Run netstat to determine the default IPv4 gateway
 		unset($netstatrninfo);
-		exec("/usr/bin/netstat -rnf inet", $netstatrninfo);
-
-		foreach ($netstatrninfo as $nsr) {
-			if (preg_match("/^default\s*(\S+)/", $nsr, $matches)) {
+		exec("/usr/bin/netstat -rnf inet",$netstatrninfo);
+		foreach($netstatrninfo as $nsr):
+			if(preg_match("/^default\s*(\S+)/",$nsr,$matches)):
 				$ifinfo['gateway'] = $matches[1];
-			}
-		}
+			endif;
+		endforeach;
 		// Run netstat to determine the default IPv6 gateway
 		unset($netstatrninfo);
-		exec("/usr/bin/netstat -rnf inet6", $netstatrninfo);
-
-		foreach ($netstatrninfo as $nsr) {
-			if (preg_match("/^default\s*(\S+)/", $nsr, $matches)) {
+		exec("/usr/bin/netstat -rnf inet6",$netstatrninfo);
+		foreach($netstatrninfo as $nsr):
+			if(preg_match("/^default\s*(\S+)/",$nsr,$matches)):
 				$ifinfo['ipv6gateway'] = $matches[1];
-			}
-		}
-	}
-
+			endif;
+		endforeach;
+	endif;
 	return $ifinfo;
 }
 
