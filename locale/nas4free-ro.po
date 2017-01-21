@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-17 18:47+0000\n"
-"PO-Revision-Date: 2016-12-10 19:28+0000\n"
+"PO-Revision-Date: 2017-01-19 19:36+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-18 23:21+0000\n"
+"X-Launchpad-Export-Date: 2017-01-21 16:42+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -283,7 +283,7 @@ msgid "A reload request has been sent to the daemon."
 msgstr "O cerere de reâncărcare a fost trimisă la daemon."
 
 msgid "A rescan has been issued."
-msgstr ""
+msgstr "A fost pornită o rescanare."
 
 msgid "A route to this destination network already exists."
 msgstr "Exista deja o rută către această destinație."
@@ -473,7 +473,7 @@ msgid "Add Dataset"
 msgstr "Adăugare set date"
 
 msgid "Add Group"
-msgstr ""
+msgstr "Adăugare grup"
 
 msgid "Add Host"
 msgstr "Adăugare sistem"
@@ -497,7 +497,7 @@ msgid "Add URL"
 msgstr "Adăugare URL"
 
 msgid "Add User Account"
-msgstr ""
+msgstr "Adăugare cont utilizator"
 
 msgid "Add Virtual Device"
 msgstr "Adăugare Dispozitiv virtual"
@@ -894,11 +894,13 @@ msgid ""
 "Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
 "issues."
 msgstr ""
+"Un servicu DLNA/IPnP rulează deja. Activarea Fuppes poate crea probleme."
 
 msgid ""
 "Another DLNA/UPnP service is already running. Enabling MiniDLNA might cause "
 "issues."
 msgstr ""
+"Un servicu DLNA/IPnP rulează deja. Activarea MiniDNLA poate crea probleme."
 
 msgid "Any"
 msgstr "Oricare"
@@ -910,7 +912,7 @@ msgid "Apple Filing Protocol"
 msgstr "Protocol Apple Filing"
 
 msgid "Apply"
-msgstr ""
+msgstr "Aplică"
 
 msgid "Apply Filter"
 msgstr "Aplicare filtru"
@@ -1218,13 +1220,13 @@ msgid "Bridge"
 msgstr "Bridge"
 
 msgid "Bridge Settings"
-msgstr ""
+msgstr "Setări conexiune bridge"
 
 msgid "Bring a device online"
 msgstr "Aducere dispozitiv online"
 
 msgid "Broadcast Interval"
-msgstr ""
+msgstr "Interval broadcast"
 
 msgid ""
 "Broadcasts its availability every N seconds on the network. (Default 300 "
@@ -1380,13 +1382,13 @@ msgid "Capacity"
 msgstr "Capacitate"
 
 msgid "Carp Settings"
-msgstr ""
+msgstr "Setări CARP"
 
 msgid "Case Sensitivity"
 msgstr "Diferențiere literă mare/mică"
 
 msgid "Catalan"
-msgstr ""
+msgstr "Catalană"
 
 msgid ""
 "Causes the server to display the network information for the specified IP "
@@ -1418,7 +1420,7 @@ msgid "Change the IP address of your server"
 msgstr "Modifică adresa IP a serverului"
 
 msgid "Changes have been applied."
-msgstr ""
+msgstr "Modificările au fost aplicate."
 
 msgid "Changes to this option will take effect after a reboot."
 msgstr "Modificările efectuate vor deveni active după repornirea sistemului."
@@ -1525,7 +1527,7 @@ msgid "Command"
 msgstr "Comandă"
 
 msgid "Command Output"
-msgstr ""
+msgstr "Rezultat comandă"
 
 msgid "Command Scripts"
 msgstr "Scripturi comenzi"
@@ -1642,13 +1644,13 @@ msgid "Content"
 msgstr "Conținut"
 
 msgid "Content Locations"
-msgstr ""
+msgstr "Locație conținut"
 
 msgid "Continue"
 msgstr "Continuă"
 
 msgid "Control"
-msgstr ""
+msgstr "Control"
 
 msgid "Controller"
 msgstr "Controler"
@@ -1685,6 +1687,13 @@ msgid ""
 "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
 "Currently, 'GZIP' is equivalent to 'GZIP-6'."
 msgstr ""
+"Controlează algoritmul de compresie folosit pentru acest set de date, "
+"algoritmul 'LZ4' fiind cel recomandat. 'Activ' înseamnă că va fi folosit "
+"acest algoritm (dacă este activată și opțiunea 'lz4_compress') în caz "
+"contrar fiind folosit algoritmul 'LZJB'. Puteți specifica nivelul de "
+"compresie 'GZIP' pe baza valorii 'GZIP-N', unde N este un întreg care poate "
+"lua valori în intervalul 1 (cel mai rapid) la 9 (cea mai bună compresie). "
+"Valoarea implicită este 'GZIP-6'."
 
 msgid ""
 "Controls the compression algorithm used for this volume. The 'lzjb' "
@@ -1712,6 +1721,9 @@ msgid ""
 "Turning this Off avoids producing write traffic when reading files and can "
 "result in significant performance gains."
 msgstr ""
+"Controlează dacă timpul de acces este actualizat la citirea fișierului. "
+"Dezactivarea acestei opțiuni reduce traficul de date putând duce la creșteri "
+"importante de viteză."
 
 msgid "Controls whether this dataset can be modified."
 msgstr "Controlează dacă acest set de date poate fi modificat."
@@ -2069,7 +2081,7 @@ msgid "Data integrity"
 msgstr "Integritate Date"
 
 msgid "Database Directory"
-msgstr ""
+msgstr "Baza de date Directory"
 
 msgid "Database directory"
 msgstr "Folderul bazei de date"
@@ -2215,7 +2227,7 @@ msgid "Delete Selected Datasets"
 msgstr "Ștergere seturi de date selectate"
 
 msgid "Delete Selected Groups"
-msgstr ""
+msgstr "Ștergere grupuri selectate"
 
 msgid "Delete Selected Jobs"
 msgstr "Ștergere activități selectate"
@@ -2233,7 +2245,7 @@ msgid "Delete Selected Snapshots"
 msgstr "Ștergere Snapshot-uri selectate"
 
 msgid "Delete Selected User Accounts"
-msgstr ""
+msgstr "Ștergere conturi utilizator selectate"
 
 msgid "Delete Selected Virtual Devices"
 msgstr "Ștergere Dispozitive virtuale selectate"
@@ -2510,7 +2522,7 @@ msgid "Directory to watch for new .torrent files."
 msgstr "Folder pentru urmărirea apariției fișierelor noi tip .torrent."
 
 msgid "Disable"
-msgstr ""
+msgstr "Dezactivare"
 
 msgid "Disable Firmware Update"
 msgstr "Dezactivare actualizare firmware"
@@ -2568,7 +2580,7 @@ msgid "Disk Selection"
 msgstr "Selecție disc"
 
 msgid "Disk Settings"
-msgstr ""
+msgstr "Setări disc"
 
 msgid "Disk Space Usage"
 msgstr "Utilizare spațiu disc"
@@ -2583,7 +2595,7 @@ msgid "Disks (Info)"
 msgstr "Discuri (Info)"
 
 msgid "Disks (Info) Information"
-msgstr ""
+msgstr "Informații (Info) Disc"
 
 msgid "Disks | Mount Point | Management"
 msgstr "Discuri | Punct de montare | Management"
@@ -2729,7 +2741,7 @@ msgid "Do you really want to uninstall this package?"
 msgstr "Doriți să ștergeți acest pachet?"
 
 msgid "Do you want to apply these settings?"
-msgstr ""
+msgstr "Aplicați aceste setări?"
 
 msgid "Do you want to create a JBOD from selected disks?"
 msgstr "Creați un disc JBOD din discurile selectate?"
@@ -2781,7 +2793,7 @@ msgid "Do you want to delete selected datasets?"
 msgstr "Ștergeți seturile de date selectate?"
 
 msgid "Do you want to delete selected groups?"
-msgstr ""
+msgstr "Ștergeți grupurile selectate?"
 
 msgid "Do you want to delete selected jobs?"
 msgstr "Ștergeți activitățile selectate?"
@@ -2796,7 +2808,7 @@ msgid "Do you want to delete selected snapshots?"
 msgstr "Ștergeți snapshot-urile selectate?"
 
 msgid "Do you want to delete selected user accounts?"
-msgstr ""
+msgstr "Ștergeți conturile de utilizator selectate?"
 
 msgid "Do you want to delete selected virtual devices?"
 msgstr "Ștergeți dispozitivele virtuale selectate?"
@@ -2961,7 +2973,7 @@ msgid "Edit Dataset"
 msgstr "Editare set de date"
 
 msgid "Edit Group"
-msgstr ""
+msgstr "Editare grup"
 
 msgid "Edit Host"
 msgstr "Editare sistem"
@@ -2985,7 +2997,7 @@ msgid "Edit URL"
 msgstr "Editare URL"
 
 msgid "Edit User Account"
-msgstr ""
+msgstr "Editare cont utilizator"
 
 msgid "Edit VM"
 msgstr "Editare VM"
@@ -3365,7 +3377,7 @@ msgid "Enhanced compatibility with Netatalk AFP server"
 msgstr "Compatibilitate extinsă cu serverul Netatalk AFP"
 
 msgid "Enter Command"
-msgstr ""
+msgstr "Introducere comandă"
 
 msgid "Enter a comment"
 msgstr "Introduceți un comentariu"
@@ -3378,7 +3390,7 @@ msgstr ""
 "locul portului implicit (80 pentru HTTP, 443 pentru HTTPS)."
 
 msgid "Enter a description"
-msgstr ""
+msgstr "Introducere descriere"
 
 msgid "Enter a description for your reference."
 msgstr "Introduceți o scurtă descriere"
@@ -3390,7 +3402,7 @@ msgid "Enter a name for the command."
 msgstr "Introduceți un nume pentru comandă"
 
 msgid "Enter a name for this volume"
-msgstr ""
+msgstr "Introduceți un nume pentru volum"
 
 msgid ""
 "Enter a space-separated list of tap devices. The devices will be created and "
@@ -3496,7 +3508,7 @@ msgid "Execute"
 msgstr "Executare"
 
 msgid "Execute Command"
-msgstr ""
+msgstr "Executare comandă"
 
 msgid ""
 "Execute command pre or post system initialization (booting) or before system "
@@ -3588,7 +3600,7 @@ msgid "FEC (Fast EtherChannel)"
 msgstr "FEC (Fast EtherChannel)"
 
 msgid "FRU Information"
-msgstr ""
+msgstr "Informații FRU"
 
 msgid "FTP"
 msgstr "FTP"
@@ -3609,7 +3621,7 @@ msgid "FTP log"
 msgstr "Jurnal FTP"
 
 msgid "FTP service is disabled."
-msgstr ""
+msgstr "Servicul FTP este dezactivat."
 
 msgid "FXP"
 msgstr "FXP"
@@ -3841,10 +3853,10 @@ msgid "Fuppes Media Server"
 msgstr "Server media Fuppes"
 
 msgid "Fuppes Media Server Administration"
-msgstr ""
+msgstr "Administrare Server Media Fuppes"
 
 msgid "Fuppes has been disabled."
-msgstr ""
+msgstr "Fuppes a fost dezactivat."
 
 msgid "GEOM"
 msgstr "GEOM"
@@ -3931,10 +3943,10 @@ msgid "Group compilations"
 msgstr "Colecții Grupuri"
 
 msgid "Group is locked"
-msgstr ""
+msgstr "Grupul este blocat"
 
 msgid "Group is marked for deletion"
-msgstr ""
+msgstr "Grupul este marcat pentru ștergere"
 
 msgid "Group name."
 msgstr "Nume grup."
@@ -4048,7 +4060,7 @@ msgid "Hiadaptive (High Performance)"
 msgstr "Hiadaptive (Înaltă performanță)"
 
 msgid "Hide Default Groups"
-msgstr ""
+msgstr "Ascudere grupuri implicite"
 
 msgid "Hide dot files"
 msgstr "Ascundere fișiere cu punct (dot files)"
@@ -4385,7 +4397,7 @@ msgid "Information & Manuals"
 msgstr "Informații & Manuale"
 
 msgid "Information & Status"
-msgstr ""
+msgstr "Informații & Stare"
 
 msgid "Inherit ACL"
 msgstr "permise mostenite ACL"
@@ -4691,7 +4703,7 @@ msgid "LAGG"
 msgstr "LAGG"
 
 msgid "LAGG Settings"
-msgstr ""
+msgstr "Setări LAGG"
 
 msgid "LAN Management"
 msgstr "Management LAN"
@@ -4916,7 +4928,7 @@ msgid "Location of the files to share."
 msgstr "Locația fișierelor de partajat."
 
 msgid "Location of the media content database."
-msgstr ""
+msgstr "Locația bazei de date media"
 
 msgid "Location where the content database file will be stored."
 msgstr "Locația unde va fi stocată baza de date."
@@ -5056,7 +5068,7 @@ msgid "Make sure you have already configured your email settings"
 msgstr "Asigurați-vă că ați configurat deja adresa de email"
 
 msgid "Manage content locations."
-msgstr ""
+msgstr "Managementul locației conținutului."
 
 msgid "Management"
 msgstr "Configurare"
@@ -5200,13 +5212,13 @@ msgid "Media Directory"
 msgstr "Folder Media"
 
 msgid "Media Library"
-msgstr ""
+msgstr "Bibliotecă media"
 
 msgid "Media library"
 msgstr "Bibliotecă media"
 
 msgid "Media server name"
-msgstr ""
+msgstr "Nume server media"
 
 msgid "Medium Acoustic Output"
 msgstr "Nivel mediu acustic"
@@ -5245,7 +5257,7 @@ msgid "MiniDLNA A/V Media Server"
 msgstr "Server media MiniDLNA A/V"
 
 msgid "MiniDLNA Media Server WebGUI"
-msgstr ""
+msgstr "WebGUI server media MiniDLNA"
 
 msgid "Minimum"
 msgstr "Minim"
@@ -5295,7 +5307,7 @@ msgid "Mixed"
 msgstr "Amestecate"
 
 msgid "MniDLNA has been disabled."
-msgstr ""
+msgstr "MniDLNA a fost dezactivat."
 
 msgid "Mode"
 msgstr "Mod"
@@ -5313,7 +5325,7 @@ msgid "Modified"
 msgstr "Modificat"
 
 msgid "Modify Service"
-msgstr ""
+msgstr "Modificare serviciu"
 
 msgid "Modifying"
 msgstr "Modificare"
@@ -5346,6 +5358,8 @@ msgid ""
 "More than one DLNA/UPnP service is active. This configuration might cause "
 "issues."
 msgstr ""
+"Sunt active mai multe servicii DLNA/IPnP. Această configurație poate crea "
+"probleme."
 
 msgid "Mount Point"
 msgstr "Punct Montare"
@@ -5568,6 +5582,8 @@ msgstr "Niciun disc disponibil."
 
 msgid "No disks configured, please add disks to view diagnostic information!"
 msgstr ""
+"Nu aveți niciun disc configurat, va trebui să adăugați un disc pentru a "
+"vedea informațiile de diagnosticare!"
 
 msgid "No file was uploaded."
 msgstr "Niciun fișier nu a fost încărcat."
@@ -5897,7 +5913,7 @@ msgid "PHP Command"
 msgstr "Comandă PHP"
 
 msgid "PHP Command Output"
-msgstr ""
+msgstr "Ieșire comandă PHP"
 
 msgid "PPPoE"
 msgstr "PPPoE"
@@ -6149,10 +6165,10 @@ msgid "Please check the log files"
 msgstr "Verificați fișierele log"
 
 msgid "Please define one or more content locations."
-msgstr ""
+msgstr "Definiți una sau mai multe locații de conținut."
 
 msgid "Please define the location for the database directory."
-msgstr ""
+msgstr "Definiți locația bazei directory."
 
 msgid "Please note that blanks in path names are not allowed."
 msgstr ""
@@ -6215,7 +6231,7 @@ msgstr "Redirecționare Port"
 
 #, php-format
 msgid "Port number must be in the range between %d and %d."
-msgstr ""
+msgstr "Portul trebuie să fie în intervalul %d - %d."
 
 #, php-format
 msgid "Port to listen for incoming peer connections. Default port is %d."
@@ -6339,7 +6355,7 @@ msgid "Profile"
 msgstr "Profil"
 
 msgid "Properties"
-msgstr ""
+msgstr "Proprietăți"
 
 msgid "Proto"
 msgstr "Protocol"
@@ -6691,7 +6707,7 @@ msgid "Required"
 msgstr "Necesar"
 
 msgid "Rescan"
-msgstr ""
+msgstr "Rescanare"
 
 msgid "Rescan Disks"
 msgstr "Rescanare discuri"
@@ -7040,13 +7056,13 @@ msgstr ""
 "doriți să importați un disc formatat cu un alt sistem de operare."
 
 msgid "Select Cache Device"
-msgstr ""
+msgstr "Selectare dispozitiv cache"
 
 msgid "Select Data Device"
-msgstr ""
+msgstr "Selectare dispozitiv de date"
 
 msgid "Select Device"
-msgstr ""
+msgstr "Selectare dispozitiv"
 
 msgid ""
 "Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol "
@@ -7056,19 +7072,19 @@ msgstr ""
 "Transfer Protocol Secure (HTTPS) pentru accesarea Interfeței Grafice."
 
 msgid "Select Log Device"
-msgstr ""
+msgstr "Selectare dispozitiv log-uri"
 
 msgid "Select Pool"
-msgstr ""
+msgstr "Selectare Pool"
 
 msgid "Select Pool Device"
-msgstr ""
+msgstr "Selectare dispozitiv Pool"
 
 msgid "Select Pools"
-msgstr ""
+msgstr "Selectare Pools"
 
 msgid "Select Spare Device"
-msgstr ""
+msgstr "Selectare dispozitiv spare"
 
 msgid "Select a date format."
 msgstr "Selectare format dată."
@@ -7125,6 +7141,7 @@ msgid ""
 "Select which interface to use. (Only selectable if your server has more than "
 "one interface)"
 msgstr ""
+"Selectare interfață (doar dacă serverul are mai multe interfețe disponibile)."
 
 msgid "Selected"
 msgstr "Selectat"
@@ -7172,10 +7189,10 @@ msgid "Sensor"
 msgstr "Senzor"
 
 msgid "Sensor Information"
-msgstr ""
+msgstr "Informații senzor"
 
 msgid "Sensor List"
-msgstr ""
+msgstr "Listă senzori"
 
 msgid "Sep"
 msgstr "Sep"
@@ -7223,7 +7240,7 @@ msgid "Service"
 msgstr "Serviciu"
 
 msgid "Service Enabled"
-msgstr ""
+msgstr "Serviciu activ"
 
 msgid "Services"
 msgstr "Servicii"
@@ -7329,7 +7346,7 @@ msgid "Shock During Write."
 msgstr "Șoc în timpul operației de scriere."
 
 msgid "Show Default Groups"
-msgstr ""
+msgstr "Afișare grupuri implicite"
 
 msgid "Show Process Information"
 msgstr "Afișare informații procese"
@@ -7583,7 +7600,7 @@ msgid "Static Routes"
 msgstr "Rute Statice"
 
 msgid "Static Routes Settings"
-msgstr ""
+msgstr "Setări rute statice"
 
 msgid "Status"
 msgstr "Stare"
@@ -7934,7 +7951,7 @@ msgid "The IP address of the UPS master."
 msgstr "Adresa IP a UPS-ului master."
 
 msgid "The IP address of the device."
-msgstr ""
+msgstr "Adresa IP a dispozitivului."
 
 msgid "The IP address that this hostname represents."
 msgstr "Adresa IP corespunzătoare sistemului."
@@ -8405,7 +8422,7 @@ msgstr ""
 "baza utilizatorului și a secretului."
 
 msgid "The interface is unknown."
-msgstr ""
+msgstr "Interfață necunoscută."
 
 msgid ""
 "The istgtcontrol can access the targets with correct user and secret in "
@@ -8415,7 +8432,7 @@ msgstr ""
 "secretului, în Grupul Autorizat specificat."
 
 msgid "The location of the \"Database Directory\" is not a valid location."
-msgstr ""
+msgstr "Locația pentru baza de date Directory nu este validă."
 
 msgid "The login name contains invalid characters."
 msgstr "Numele pentru autentificarecontine caractere invalide."
@@ -8503,10 +8520,10 @@ msgid ""
 msgstr "Numele pentru RAID poate conține doar caracterele a-z, A-Z, 0-9."
 
 msgid "The name of the media server cannot be empty."
-msgstr ""
+msgstr "Numele serverului media nu poate fi blank (nul)."
 
 msgid "The name of the media server is missing."
-msgstr ""
+msgstr "Lipsește numele serverului media."
 
 msgid "The name of the pool cannot be changed."
 msgstr "Numele structurii pool nu poate fi modificat."
@@ -8876,6 +8893,9 @@ msgid ""
 "This allows you to set the transfer mode for ATA/IDE disks. You can set "
 "'Automatic' to enable the automatic mode for all SATA/ATA/IDE disks."
 msgstr ""
+"Permite setarea modului de transfer pentru discurile ATA/IDE. Puteți selecta "
+"modul 'Automat' pentru activarea modului automat pentru toate discurile "
+"SATA/ATA/IDE."
 
 msgid ""
 "This attribute controls the ACL behavior when a file is created or whenever "
@@ -9256,6 +9276,8 @@ msgid ""
 "This will allow server-side downscaling of very large JPEG images, it can "
 "impact JPEG serving performance on some DLNA products."
 msgstr ""
+"Permite scalarea/micșorarea imaginilor JPEG foarte mari în server, "
+"operațiune care poate avea impact asupra performanțelor DLNA."
 
 msgid "This will create a recycle bin on the share."
 msgstr ""
@@ -9298,7 +9320,7 @@ msgid "TiB"
 msgstr "TiB"
 
 msgid "TiVo Support"
-msgstr ""
+msgstr "Suport TiVo"
 
 msgid "Time"
 msgstr "Timp"
@@ -9494,7 +9516,7 @@ msgid "Transcoding"
 msgstr "Transcodare"
 
 msgid "Transcoding Directory"
-msgstr ""
+msgstr "Director conversie"
 
 msgid "Transfer Rate"
 msgstr "Rata de transfer"
@@ -9870,10 +9892,10 @@ msgid "User ID"
 msgstr "ID Utilizator"
 
 msgid "User account is locked"
-msgstr ""
+msgstr "Contul de utilizator este blocat"
 
 msgid "User account is marked for deletion"
-msgstr ""
+msgstr "Contul de utilizator este marcat pentru ștergere"
 
 msgid "User full name."
 msgstr "Nume complet utilizator."
@@ -9932,7 +9954,7 @@ msgid "VLAN"
 msgstr "VLAN"
 
 msgid "VLAN Settings"
-msgstr ""
+msgstr "Setări VLAN"
 
 msgid "VLAN Tag"
 msgstr "Tag VLAN"
@@ -10033,7 +10055,7 @@ msgid "Volume Label"
 msgstr "Etichetă volum"
 
 msgid "Volume Mode"
-msgstr ""
+msgstr "Mod volum"
 
 msgid "Volume Name"
 msgstr "Nume Volum"
@@ -10082,7 +10104,7 @@ msgid "WLAN"
 msgstr "WLAN-Retea virtuala"
 
 msgid "WLAN Settings"
-msgstr ""
+msgstr "Setări WLAN"
 
 msgid "WPA"
 msgstr "WPA"
@@ -10440,7 +10462,7 @@ msgid "iSCSI Initiator"
 msgstr "Inițiator iSCSI"
 
 msgid "iSCSI Initiator Settings"
-msgstr ""
+msgstr "Setări Inițiator iSCSI"
 
 msgid "iSCSI Target"
 msgstr "Destinație iSCSI"

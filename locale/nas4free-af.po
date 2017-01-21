@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-01-17 18:47+0000\n"
-"PO-Revision-Date: 2017-01-18 09:18+0000\n"
+"PO-Revision-Date: 2017-01-20 02:14+0000\n"
 "Last-Translator: winston <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-18 23:21+0000\n"
+"X-Launchpad-Export-Date: 2017-01-21 16:41+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 
 msgid " interfaces:"
@@ -7265,10 +7265,11 @@ msgid "Set the account's primary group to the given group."
 msgstr "Stel die rekening se primere groep vir die gegewe groep"
 
 msgid "Set the content location(s) to or from the media library."
-msgstr ""
+msgstr "Stel die inhoud lokasie(s) in vanaf and na die media bibilioteek"
 
 msgid "Set the desired Service Set Identifier (aka network name)."
 msgstr ""
+"Stel die gewenste Diens Stel Identifiseerder in (aka die netwerk naam)"
 
 msgid ""
 "Set the maximum transmission unit of the interface to n, default is "
@@ -7276,6 +7277,11 @@ msgid ""
 "transmitted on an interface. Not all interfaces support setting the MTU, and "
 "some interfaces have range restrictions."
 msgstr ""
+"Stel die maksimum transmissie eenheid van die koppelvlak tot n, die verstek "
+"is koppelvlak spesifiek. Die MTU word gebruik om 'n beperking te stel op die "
+"aantal pakkies wat deur die koppelvlak gestuur word. Nie alle koppelvlakke "
+"ondersteun die instelling van die MTU nie en ander koppelvlakke het omvang "
+"beperkings."
 
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "Stel die titel rollees spoed tussen 0-10 (standaard 10)."
@@ -7285,6 +7291,8 @@ msgstr "Stel onder watter gebruiker die diens moet loop (www as standaard)."
 
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
+"Stel 'n alternatiewe monteer punt in vir die wortel datastel. Die verstek "
+"monteer punt is /mnt."
 
 msgid ""
 "Sets the interval between disk checks to N seconds. The minimum allowed "
@@ -7297,6 +7305,8 @@ msgid ""
 "Sets the umask for newly created files to the specified value. The default "
 "is zero (anyone can read or write)."
 msgstr ""
+"Stel die umask vir nuut geskepte lêers tot 'n spesifieke waarde.  Die "
+"verstek is nul (in anderwoorde enige iemand kan lees of skryf)"
 
 msgid "Settings"
 msgstr "Verstellings"
@@ -7308,40 +7318,41 @@ msgid "Shadow Copy format"
 msgstr "Skadu Kopie formaat"
 
 msgid "Share"
-msgstr ""
+msgstr "Deel"
 
 msgid "Share Character Set"
-msgstr ""
+msgstr "Deel Karakter Stel"
 
 msgid "Share Password"
-msgstr ""
+msgstr "Deel wagwoord"
 
 msgid "Share passwords can not be more than 8 characters."
-msgstr ""
+msgstr "Deel wagwoorde kan nie meer as 8 karakters wees nie"
 
 msgid "Shares"
-msgstr ""
+msgstr "Dele"
 
 msgid "Shell"
-msgstr ""
+msgstr "Tolk"
 
 msgid "Shock During Write."
-msgstr ""
+msgstr "Skok Gedurende Skryf"
 
 msgid "Show Default Groups"
-msgstr ""
+msgstr "Vertoon die Verstek Groepe"
 
 msgid "Show Process Information"
 msgstr "Wys Proses Inligting"
 
 msgid "Show RAW UPS Info"
-msgstr ""
+msgstr "Vertoon RAW UPS Informasie"
 
 msgid "Show UPS Information"
 msgstr "Wys UPS Inligting"
 
 msgid "Show log entries in reverse order (newest entries on top)."
 msgstr ""
+"Vertoon register inskrywings in omgekeerde orde (nuutste inskrywings bo)"
 
 #, php-format
 msgid ""
@@ -7355,38 +7366,40 @@ msgid "Shutdown"
 msgstr "Skakel Af"
 
 msgid "Shutdown mode"
-msgstr ""
+msgstr "Afskakel mode"
 
 msgid "Shutdown timer"
-msgstr ""
+msgstr "Afskakel tydhouer"
 
 msgid "Simple Network Management Protocol"
-msgstr ""
+msgstr "Eenvoudige Netwerk Administrasie Protokool"
 
 msgid "Size"
 msgstr "Grootte"
 
 #, php-format
 msgid "Size of receive buffer (%d by default)."
-msgstr ""
+msgstr "Groote van die ontvang buffer (%d by verstek)"
 
 #, php-format
 msgid "Size of send buffer (%d by default)."
-msgstr ""
+msgstr "Groote van versend buffer (%d by verstek)"
 
 msgid ""
 "Size offered to the initiator. (up to 8EiB=8388608TiB. actual size is depend "
 "on your disks.)"
 msgstr ""
+"Groote aangebied vir die inisieerder. (to op 8EiB=8388608TiB. Die eintlike "
+"grote is afhanklik van your skywe.)"
 
 msgid "Skew"
-msgstr ""
+msgstr "Skeef"
 
 msgid "Skip first scan"
 msgstr "Slaan eerste skandeer oor"
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
-msgstr ""
+msgstr "Slaap - bedwing die toestel tensy dit in SLAAP mode is."
 
 msgid "Slovak"
 msgstr "Slowaaks"
@@ -7395,37 +7408,37 @@ msgid "Slovenian"
 msgstr "Sloweens"
 
 msgid "Smart Outlet Management"
-msgstr ""
+msgstr "Slim Afsetpunt Bestuur"
 
 msgid "SmartBoost"
-msgstr ""
+msgstr "SlimStoot"
 
 msgid "SmartTrim"
-msgstr ""
+msgstr "SlimVerstelling"
 
 msgid "Snapshot"
-msgstr ""
+msgstr "Foto"
 
 msgid "Snapshot Visibility"
-msgstr ""
+msgstr "Foto Sigbaarheid"
 
 msgid "Snapshot is locked"
-msgstr ""
+msgstr "Foto is gesluit"
 
 msgid "Snapshot is marked for deletion"
-msgstr ""
+msgstr "Foto is gemerk om uitgewise te word"
 
 msgid "Snapshot is unlocked"
-msgstr ""
+msgstr "Foto is oopgesluit"
 
 msgid "Snapshots"
-msgstr ""
+msgstr "Fotos"
 
 msgid "Sockets"
-msgstr ""
+msgstr "Sokke"
 
 msgid "SoftRaid"
-msgstr ""
+msgstr "SagteRaid"
 
 msgid "Software RAID"
 msgstr "Sagteware RAID"
@@ -7440,16 +7453,16 @@ msgid "Source"
 msgstr "Bron"
 
 msgid "Source Share"
-msgstr ""
+msgstr "Hulpbron Deel"
 
 msgid "Source directory to be synchronized."
-msgstr ""
+msgstr "Hulpbron lêerstelsel wat gesinchroniseer moet word"
 
 msgid "Source port"
 msgstr "Bron Poort"
 
 msgid "Source share"
-msgstr ""
+msgstr "Hulpbron deel"
 
 msgid "Space Usage"
 msgstr "Spasie Verbruik"
@@ -7469,10 +7482,10 @@ msgid "Spare"
 msgstr "Spaar"
 
 msgid "Sparse"
-msgstr ""
+msgstr "Yl versprei"
 
 msgid "Sparse Volume"
-msgstr ""
+msgstr "Yl Volume"
 
 msgid ""
 "Specific Helium Level. The Helium, so says the literature, allows the drives "
@@ -7779,13 +7792,13 @@ msgid "TCP wrapper"
 msgstr ""
 
 msgid "TFTP"
-msgstr ""
+msgstr "TFTP"
 
 msgid "TKIP"
-msgstr ""
+msgstr "TKIP"
 
 msgid "TLS"
-msgstr ""
+msgstr "TLS"
 
 msgid "TLS Mode"
 msgstr ""
@@ -8210,12 +8223,14 @@ msgid ""
 "The count of times the magnetic armature was retracted automatically as a "
 "result of cutting power."
 msgstr ""
+"Die aantal keer toe die magneties poolstuk automaties terug getrek was as "
+"gevolg van 'n krag onderbreuking."
 
 msgid "The credentials with which to bind."
-msgstr ""
+msgstr "Die geloofsbriewe nodig om te bind"
 
 msgid "The cron job has been executed successfully."
-msgstr ""
+msgstr "Die cron werkstukis suskesvol afgehandel"
 
 msgid "The current password is incorrectly entered."
 msgstr "Die huidige wagwoord is nie reg ingesleutel nie."
@@ -8225,6 +8240,8 @@ msgid ""
 "The custom format of the snapshot for shadow copy service can be specified. "
 "The default format is %s used for ZFS auto snapshot."
 msgstr ""
+"Jy kan die doelgemaakte formaat van die foto vir die skadu kopie diens "
+"spesifiseer. Die verstek formaat is %s wat gerbuik word vir ZFS auto fotos."
 
 msgid "The default SMTP mail server port, e.g. 25 or 587."
 msgstr "Die stansaarde SMTO pos bediener poort, b.v. 25 of 587."
@@ -8232,6 +8249,8 @@ msgstr "Die stansaarde SMTO pos bediener poort, b.v. 25 of 587."
 #, php-format
 msgid "The default base distinguished name (DN) to use for searches, e.g. %s"
 msgstr ""
+"Die verstek basis afsonderlike naam (DN) wat moet gebruik word om te soek, "
+"bv. %s"
 
 msgid ""
 "The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia "
@@ -8247,11 +8266,17 @@ msgid ""
 "The device(s) in config are different to actual device(s). Please remove the "
 "device(s) and re-add it or use 'Clear config and Import disks'."
 msgstr ""
+"Die toestel(le) in konfigurasie is verskillend van die werklike toestel(le). "
+"Verwyder asseblief die toestel(le) en voeg dit weer by of gerbuik 'Wis "
+"konfigurasie en voer skywe weer in'"
 
 msgid ""
 "The directory containing the files you want to publish. The remote host does "
 "not need to pass along the directory as part of the transfer."
 msgstr ""
+"Die lêerstelsel want die lêers bevat wat jy wil publiseer. Die vergelee "
+"gasheer nodig nie om deur die lêerstelsel te gaan nie as deel van die "
+"oordrag nie."
 
 msgid "The disk is currently mounted!"
 msgstr "Die skyf is huidiglik gemonteer!"
@@ -8268,12 +8293,13 @@ msgstr "Die skyf/verdeling is reeds opgestel."
 
 #, php-format
 msgid "The distinguished name to bind to the directory server, e.g. %s"
-msgstr ""
+msgstr "Die uitsonderlike naam wat met die lêerstelsel bediener bind, bv. %s"
 
 #, php-format
 msgid ""
 "The distinguished name with which to bind to the directory server, e.g. %s"
 msgstr ""
+"Die uitsonderlike naam om met die lêerstelsel bediener te bind, bv. %s"
 
 msgid "The driver used to communicate with your UPS."
 msgstr "Die aandrywer wat gebruik word om met jou UPS te kommunikeer."
@@ -8288,26 +8314,29 @@ msgid "The encrypted device is currently mounted!"
 msgstr "Die gekodeerde toestel is huidiglik gemonteer!"
 
 msgid "The entire system configuration will be overwritten."
-msgstr ""
+msgstr "Die volledige stelsel konfigurasie kan oorskryf word."
 
 msgid "The extent name already exists."
-msgstr ""
+msgstr "Die omgang naam bestaan alreeds"
 
 msgid "The file you try to flash is not for this platform"
 msgstr ""
+"Die lêers waarop jy probeer 'n oorlegging doen is nie vir hierdie platform "
+"nie."
 
 msgid "The firmware file is corrupt"
-msgstr ""
+msgstr "Die fermware se lêer is korrupt."
 
 msgid ""
 "The firmware is now being installed. The server will reboot automatically."
 msgstr ""
+"Die fermware word nou geinstalleer. Die bediener sal automaties selflaai."
 
 msgid "The following input errors were detected"
 msgstr "Die volgende inset foute is opgespoor."
 
 msgid "The following services will use AD authentication:"
-msgstr ""
+msgstr "Die volgende dienste sal AD toestemming gebruik:"
 
 msgid "The full name contains invalid characters."
 msgstr "Die volle naam bevat ongeldige karakters."
@@ -8319,12 +8348,14 @@ msgid "The group name contains invalid characters."
 msgstr "Die groep naam bevat ongeldige karakters."
 
 msgid "The host name contain invalid characters."
-msgstr ""
+msgstr "Die gasheer naam bevat ongeldige karakters."
 
 msgid ""
 "The host name may only consist of the characters a-z, A-Z and 0-9, - , _ and "
 "."
 msgstr ""
+"Die gasheer naam mag slegs die volgende karakters bevat a-z, A-Z en 0-9, - , "
+"_ en."
 
 msgid "The initial digest mode negotiated with the initiator."
 msgstr ""
@@ -8404,11 +8435,16 @@ msgid ""
 "specify the size use the following human-readable suffixes (for example, "
 "'k', 'KB', 'M', 'Gb', etc.)."
 msgstr ""
+"Dit is die minimum spasie gewaarborg vir 'n data stelsel (gewoonlik is dit "
+"leeg). Om die grote van die spasie te bepaal gebruik die volgende mens "
+"leesbare agtervoegsel (byvoorbeeld,  'k', 'KB', 'M', 'Gb', ens.)."
 
 msgid ""
 "The minimum port to allocate for PASV style data connections (0 = use any "
 "port)."
 msgstr ""
+"Die minimum poort om te allokeer vir PASV styl data konneksies (0 = gebruik "
+"enige poort)."
 
 msgid ""
 "The module provides automatic bans that are triggered based on configurable "
@@ -8416,6 +8452,10 @@ msgid ""
 "the server, it does not prevent the banned user, host, or class from "
 "connecting to the server."
 msgstr ""
+"Die module veskaf automatiese verbanning wat veroorsaak word deur "
+"gekonfigureerde kriteria. A verbanning vehoed dat die verbande gebruiker, "
+"gasheer, of klas kan aanteken by die bediener, maar dit verhoed nie dat die "
+"verbande gebruiker, gasheer, of klas kan konnekteer aan die bediener."
 
 msgid "The name of the RAID cannot be changed."
 msgstr "Die naam van die RAID kan nie verander word nie."
@@ -8429,13 +8469,13 @@ msgstr ""
 "Die naam van die RAID mag sleg bestaan uit die karakters a-z, A-Z, 0-9."
 
 msgid "The name of the media server cannot be empty."
-msgstr ""
+msgstr "Die naam van die media bediener kan nie leeg wees nie."
 
 msgid "The name of the media server is missing."
-msgstr ""
+msgstr "Die naam van die media bediener ontbreek."
 
 msgid "The name of the pool cannot be changed."
-msgstr ""
+msgstr "Die naam van die poel kan nie verander word nie."
 
 msgid "The name of this virtual device cannot be changed."
 msgstr "Die naam van hierdie virtuele toestel kan nie verander word nie."
@@ -8452,6 +8492,7 @@ msgstr ""
 
 msgid "The new password is also the default root password of the system!"
 msgstr ""
+"Die nuwe wagwoord is ook die wagwoord vir die wortel van die stelsel!"
 
 msgid "The number of clients must be between 1 and 50."
 msgstr "Die hoeveelheid kliënte moet tussen 1 en 50 wees."
@@ -8460,6 +8501,8 @@ msgid ""
 "The number of errors caused by incorrect checksum during the error "
 "correction."
 msgstr ""
+"Die aantal foute wat veroorsaak word deur die verkeerde kontrolesom "
+"gedurende fout korrigering."
 
 msgid "The old password is not correct."
 msgstr "Die ou wagwoord is verkeerd."
@@ -8468,7 +8511,7 @@ msgid "The password contains the illegal character ':'."
 msgstr "Die wagwoord bevat die onwettige karakter ':'."
 
 msgid "The password encryption protocol to use."
-msgstr ""
+msgstr "Die wagwoord enkripsie protokool word gebruik"
 
 msgid "The passwords do not match."
 msgstr "Die wagwoorde stem nie ooreen nie."
@@ -8486,7 +8529,7 @@ msgid "The path '%s' is not a directory."
 msgstr "Die lêerpad '%s' is nie 'n lêergids nie."
 
 msgid "The peer connection encryption mode."
-msgstr ""
+msgstr "Die eweknie konneksie enkripsie modus."
 
 msgid ""
 "The permissions on new files and directories are normally governed by create "
@@ -8494,6 +8537,10 @@ msgid ""
 "this. This can be particularly useful on systems with many users to allow a "
 "single share to be used flexibly by each user."
 msgstr ""
+"Die toestemming op nuwe lêers and lêerstelsels word normaalweg deur die skep "
+"masker en lêerstelsel masker gehandhaaf maar die erf toestemmings parameter "
+"oorheers dit. Dit kan baie behulpsaam wees op stelsels met baie gebruikers "
+"sodat 'n enkele deel buigbaar gebruik kan word deur elke gebruiker."
 
 msgid ""
 "The port to listen to. The default is to listen to the tftp port specified "
@@ -8512,14 +8559,20 @@ msgid ""
 "port number. For any IPs (wildcard address), use '0.0.0.0:3260' and/or "
 "'[::]:3260'. Do not mix wildcard and other IPs at same address family."
 msgstr ""
+"Die portaal neem die vorm van die 'adres:poort' byvoorbeeld "
+"'192.168.1.1:3260' vir IPv4, '[2001:db8:1:1::1]:3260' vir IPv6.  Die poort "
+"3260 is die standaard iSCSI poort nommer. Vir enige IPs (oorheerstring "
+"adres), gebruike '0.0.0.0:3260' en/of '[::]:3260'."
 
 msgid ""
 "The powerd utility monitors the server state and sets various power control "
 "options accordingly."
 msgstr ""
+"Die powerd nutsprogram monitor die bediener se huidige status en stel "
+"gevolglik verskillend krag kontrole opsies."
 
 msgid "The queuedepth range is invalid."
-msgstr ""
+msgstr "Die toudiepte se gebied is ongeldig."
 
 #, php-format
 msgid "The recommended length for compatibility is %d."
@@ -8527,20 +8580,21 @@ msgstr "Die voorgestelde lengte vir versoenbaarheid is %d."
 
 #, php-format
 msgid "The recommended queue depth is %d."
-msgstr ""
+msgstr "Die voorgestelde tou diepte is %d."
 
 #, php-format
 msgid "The removable area mapped to LUN%d."
-msgstr ""
+msgstr "Die verweiderbare area word afgebeeld na LUN%d."
 
 msgid "The rule number determines the order of the rule."
-msgstr ""
+msgstr "Die reël nommer stel die volgorde van die reël  vas."
 
 msgid "The serial or USB port where your UPS is connected."
-msgstr ""
+msgstr "Die serieel poort of die USB poort waar jou UPS aangekoppel is."
 
 msgid "The serial or USB port where your second UPS is connected."
 msgstr ""
+"Die serieel poort of die USB poort waaraan  jou tweede UPS aangekoppel is."
 
 msgid "The server advertises itself as a time server to Windows clients."
 msgstr ""
@@ -8563,17 +8617,17 @@ msgid "The server will reboot after restoring the configuration."
 msgstr "Die bediener sal herlaai nadat die instellings herstel is."
 
 msgid "The share name is already used."
-msgstr ""
+msgstr "Die deel naam is alreeds in gebruik"
 
 msgid "The size of the swap file in MB."
-msgstr ""
+msgstr "Die grote van die  lêer in MB."
 
 msgid "The space-separated list of URIs for the LDAP server."
-msgstr ""
+msgstr "Die spasie afgesonderde lys van URIs van die LDAP bediener"
 
 #, php-format
 msgid "The storage area mapped to LUN%d."
-msgstr ""
+msgstr "Die stoor area afgebeeld tot LUN%d"
 
 msgid "The subject of the email."
 msgstr "Die onderwerp van die epos."
@@ -8619,16 +8673,19 @@ msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form."
 msgstr ""
+"Die opgelaaide lêer oorskrei die MAX_FILE_SIZE riglyn wat gespesifiseer was "
+"in die HTML vorm"
 
 msgid ""
 "The uploaded file exceeds the upload_max_filesize directive in php.ini."
 msgstr ""
+"Die opgelaaide lêer oorskry die upload_max_filesize riglyne in php.ini"
 
 msgid "The uploaded file was only partially uploaded."
 msgstr "Die opgelaaide lêer was slegs gedeeltelik gelaai."
 
 msgid "The user's login shell."
-msgstr ""
+msgstr "Die gebruiker aanlog se skil"
 
 msgid "The value of the variable."
 msgstr "Die waarde van die veranderlike."
@@ -8640,9 +8697,11 @@ msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
 "clients (maximum 15 characters)."
 msgstr ""
+"Die werkgroep waarin die bediener sal voorkom as daar navraag gedoen word by "
+"Windows of SMD kliente (maximum 15 karakters)"
 
 msgid "The working directory does not exist."
-msgstr ""
+msgstr "Die werkende  lêerstelsel bestaan nie"
 
 msgid "There are too many additional groups."
 msgstr "Daar is te veel addisionele groepe."
@@ -8653,21 +8712,23 @@ msgstr "Daar was geen foute nie, die lêer is met sukses opgelaai."
 msgid ""
 "There is no need to start a RAID volume from here (It starts automatically)."
 msgstr ""
+"Dit is nie nodig om die RAID volume hier aan te skakel nie (Dit word "
+"automaties aangeskakel)"
 
 msgid "There must be at least 1 disks selected."
 msgstr "Daar moet ten minste 1 skyf geselekteer wees."
 
 msgid "There must be at least 2 disks in a mirror."
-msgstr ""
+msgstr "Daar moet ten minste 2 skywe in 'n spieëlbeeld wees"
 
 msgid "There must be at least 2 disks in a raidz."
-msgstr ""
+msgstr "Daar moet ten minste 2 skywe wees in raidz"
 
 msgid "There must be at least 3 disks in a raidz2."
-msgstr ""
+msgstr "Daar moet ten minste 3 skywe wees in raidz2"
 
 msgid "There must be at least 4 disks in a raidz3."
-msgstr ""
+msgstr "Daar moet ten minste 4 skywe in 'n raidz3 wees"
 
 msgid "There must be selected a minimum of 1 interface."
 msgstr "Daar moet 'n minimum van 1 koppelvlak geselekteer wees."
@@ -8676,27 +8737,38 @@ msgid ""
 "There should be enough to handle the maximum level of concurrency from its "
 "clients, typically four to six."
 msgstr ""
+"Daar moet genoeg wees om die maksimum vlak van saamlopenheid te hanteeer vir "
+"die kliente, tipies vier tot ses"
 
 msgid ""
 "These MIBs will be added to /etc/sysctl.conf. This allows you to make "
 "changes to a running system."
 msgstr ""
+"Die MIBs sal bygetel word by /etc/sysctl.conf. Dit laat jou toe om "
+"verandering aan die lopende stelsel te bring"
 
 msgid ""
 "These commands will be executed pre or post system initialization (booting) "
 "or before system shutdown."
 msgstr ""
+"Die bevelle sal uitgevoer word pre of post die stelsel inisialisering "
+"(selflaai) of voor die stelsel afskakeling."
 
 msgid ""
 "These option(s) will be added to /boot/loader.conf.local. This allows you to "
 "specify parameters to be passed to kernel, and additional modules to be "
 "loaded."
 msgstr ""
+"Die opsie(s) sal bygevoeg word by /boot/loader.conf.local. Dit sal jou "
+"toelaat om die parameters te spesifiseer wat na die kern aangepas moet word, "
+"en additionele modules wat gelaai moet word."
 
 msgid ""
 "These option(s) will be added to /etc/rc.conf. This allow you to overwrite "
 "options used by various generic startup scripts."
 msgstr ""
+"Die opsie(s) sal bygevoeg word by /etc/rc.conf. Die laat jou toe om die "
+"opsies wat deur die verskeie generiese opstart skrifte te vervangskryf."
 
 #, php-format
 msgid "These parameters are added to %s."
@@ -8704,11 +8776,11 @@ msgstr "Hierdie parameters word bygevoeg by %s."
 
 #, php-format
 msgid "These parameters are added to [Global] section of %s."
-msgstr ""
+msgstr "Die parameters word bygevoeg tot die [Global] seksie van %s."
 
 #, php-format
 msgid "These parameters are added to [Share] section of %s."
-msgstr ""
+msgstr "Die parameters word bygevoeg tot die [Deel] seksie van %s."
 
 #, php-format
 msgid "These parameters will be added to %s."
@@ -8716,15 +8788,16 @@ msgstr "Hierdie parameters sal by %s bygevoeg word."
 
 #, php-format
 msgid "These parameters will be added to [global] settings in %s."
-msgstr ""
+msgstr "Die parameters word bygevoeg tot die [Globale] seksie in %s."
 
 #, php-format
 msgid "These parameters will be added to global settings in %s."
-msgstr ""
+msgstr "Die parameters word bygevoeg tot die globale seksieo in %s."
 
 msgid ""
 "These parameters will be added to the module configuration in rsyncd.conf."
 msgstr ""
+"Die parameters word bygevoeg tot die module konfigurasie in rsyncd.conf"
 
 msgid "These parameters will be added to the ping command."
 msgstr "Hierdie parameters sal by die pieng bevel bygevoeg word."
@@ -8771,6 +8844,8 @@ msgstr ""
 
 msgid "This allows you to set how loud the drive is while it's operating."
 msgstr ""
+"Dit laat jou toe of die klank sterkte van die skyf te stel terwyl dit bedryf "
+"word."
 
 msgid ""
 "This allows you to set the transfer mode for ATA/IDE disks. You can set "
