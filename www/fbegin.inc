@@ -158,7 +158,7 @@ $menu['status']['visible'] = $isAdminSession;
 $menu['status']['link'] = 'index.php';
 $menu['status']['menuitem'] = [];
 $menu['status']['menuitem'][] = ['desc' => gtext('System'), 'link' => 'index.php', 'visible' => true];
-$menu['status']['menuitem'][] = ['desc' => gtext('Process'), 'link' => 'status_process.php', 'visible' => true];
+$menu['status']['menuitem'][] = ['desc' => gtext('Processes'), 'link' => 'status_process.php', 'visible' => true];
 $menu['status']['menuitem'][] = ['desc' => gtext('Services'), 'link' => 'status_services.php', 'visible' => true];
 $menu['status']['menuitem'][] = ['desc' => gtext('Interfaces'), 'link' => 'status_interfaces.php', 'visible' => true];
 $menu['status']['menuitem'][] = ['desc' => gtext('Disks'), 'link' => 'status_disks.php', 'visible' => true];
