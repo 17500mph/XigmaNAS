@@ -373,9 +373,9 @@ $(window).on("load", function() {
 			<?php
 			html_inputbox2('name',gtext('Name'),$sphere_record['name'],'',true,60,$isrecordmodify,false,128,gtext('Enter a name for this volume'));
 			html_combobox2('pool',gtext('Pool'),$sphere_record['pool'],$l_poollist,'',true,$isrecordmodify);
-			html_inputbox2('volsize',gtext('Size'),$sphere_record['volsize'],gtext("ZFS volume size. To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."),true,10);
+			html_inputbox2('volsize',gtext('Size'),$sphere_record['volsize'],gtext("ZFS volume size. To specify the size use the following human-readable suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."),true,10);
 			html_combobox2('volmode',gtext('Volume Mode'),$sphere_record['volmode'],$l_volmode, gtext('Specifies how the volume should be exposed to the OS.'),true);
-			html_combobox2('compression',gtext('Compression'),$sphere_record['compression'],$l_compressionmode,gtext("Controls the compression algorithm used for this volume. The 'lzjb' compression algorithm is optimized for performance while providing decent data compression. Setting compression to 'On' uses the 'lzjb' compression algorithm. You can specify the 'gzip' level by using the value 'gzip-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'gzip' is equivalent to 'gzip-6'."),true);
+			html_combobox2('compression',gtext('Compression'),$sphere_record['compression'],$l_compressionmode,gtext("Controls the compression algorithm used for this volume. 'LZ4' is now the recommended compression algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if the feature flag lz4_compress is active, otherwise LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is equivalent to 'GZIP-6'."),true);
 			$helpinghand = gtext('Controls the dedup method.')
 				. ' '
 				. '<br><b>'
