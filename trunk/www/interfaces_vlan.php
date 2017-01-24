@@ -86,55 +86,56 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 <?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
-		<td class="tabnavtbl">
-		  <ul id="tabnav">
-				<li class="tabinact"><a href="interfaces_assign.php"><span><?=gtext("Management");?></span></a></li>
-				<li class="tabinact"><a href="interfaces_wlan.php"><span><?=gtext("WLAN");?></span></a></li>
-				<li class="tabact"><a href="interfaces_vlan.php" title="<?=gtext('Reload page');?>"><span><?=gtext("VLAN");?></span></a></li>
-				<li class="tabinact"><a href="interfaces_lagg.php"><span><?=gtext("LAGG");?></span></a></li>
-				<li class="tabinact"><a href="interfaces_bridge.php"><span><?=gtext("Bridge");?></span></a></li>
-				<li class="tabinact"><a href="interfaces_carp.php"><span><?=gtext("CARP");?></span></a></li>
+	<td class="tabnavtbl">
+		 <ul id="tabnav">
+			<li class="tabinact"><a href="interfaces_assign.php"><span><?=gtext("Management");?></span></a></li>
+			<li class="tabinact"><a href="interfaces_wlan.php"><span><?=gtext("WLAN");?></span></a></li>
+			<li class="tabact"><a href="interfaces_vlan.php" title="<?=gtext('Reload page');?>"><span><?=gtext("VLAN");?></span></a></li>
+			<li class="tabinact"><a href="interfaces_lagg.php"><span><?=gtext("LAGG");?></span></a></li>
+			<li class="tabinact"><a href="interfaces_bridge.php"><span><?=gtext("Bridge");?></span></a></li>
+			<li class="tabinact"><a href="interfaces_carp.php"><span><?=gtext("CARP");?></span></a></li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
 		<td class="tabcont">
 			<form action="interfaces_vlan.php" method="post">
-				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-				<?php if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));?>
-				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-					<tr>
-						<td width="20%" class="listhdrlr"><?=gtext("Virtual Interface");?></td>
-						<td width="20%" class="listhdrr"><?=gtext("Physical Interface");?></td>
-						<td width="7%" class="listhdrr"><?=gtext("VLAN Tag");?></td>
-						<td width="43%" class="listhdrr"><?=gtext("Description");?></td>
-						<td width="10%" class="list"></td>
-					</tr>
+			<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
+			<?php if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));?>
+			<table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<?php html_titleline2(gtext('Overview'), 5);?>
+				<tr>
+					<td width="20%" class="listhdrlr"><?=gtext("Virtual Interface");?></td>
+					<td width="20%" class="listhdrr"><?=gtext("Physical Interface");?></td>
+					<td width="8%" class="listhdrr"><?=gtext("VLAN Tag");?></td>
+					<td width="42%" class="listhdrr"><?=gtext("Description");?></td>
+					<td width="10%" class="list"></td>
+				</tr>
 					<?php foreach ($a_vlan as $vlan):?>
-					<tr>
-						<td class="listlr"><?=htmlspecialchars($vlan['if']);?></td>
-						<td class="listr"><?=htmlspecialchars($vlan['vlandev']);?></td>
-						<td class="listr"><?=htmlspecialchars($vlan['tag']);?></td>
-						<td class="listbg"><?=htmlspecialchars($vlan['desc']);?>&nbsp;</td>
-						<td valign="middle" nowrap="nowrap" class="list">
-							<a href="interfaces_vlan_edit.php?uuid=<?=$vlan['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit interface");?>" border="0" alt="<?=gtext("Edit interface");?>" /></a>&nbsp;
-							<a href="interfaces_vlan.php?act=del&amp;uuid=<?=$vlan['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this interface?");?>')"><img src="images/delete.png" title="<?=gtext("Delete interface");?>" border="0" alt="<?=gtext("Delete interface");?>" /></a>
-						</td>
-					</tr>
+				<tr>
+					<td class="listlr"><?=htmlspecialchars($vlan['if']);?></td>
+					<td class="listr"><?=htmlspecialchars($vlan['vlandev']);?></td>
+					<td class="listr"><?=htmlspecialchars($vlan['tag']);?></td>
+					<td class="listbg"><?=htmlspecialchars($vlan['desc']);?>&nbsp;</td>
+					<td valign="middle" nowrap="nowrap" class="list">
+					<a href="interfaces_vlan_edit.php?uuid=<?=$vlan['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit interface");?>" border="0" alt="<?=gtext("Edit interface");?>" /></a>&nbsp;
+					<a href="interfaces_vlan.php?act=del&amp;uuid=<?=$vlan['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this interface?");?>')"><img src="images/delete.png" title="<?=gtext("Delete interface");?>" border="0" alt="<?=gtext("Delete interface");?>" /></a>
+					</td>
+				</tr>
 					<?php endforeach;?>
-					<tr>
-						<td class="list" colspan="4">&nbsp;</td>
-						<td class="list">
-							<a href="interfaces_vlan_edit.php"><img src="images/add.png" title="<?=gtext("Add interface");?>" border="0" alt="<?=gtext("Add interface");?>" /></a>
-						</td>
-					</tr>
+				<tr>
+					<td class="list" colspan="4">&nbsp;</td>
+					<td class="list">
+					<a href="interfaces_vlan_edit.php"><img src="images/add.png" title="<?=gtext("Add interface");?>" border="0" alt="<?=gtext("Add interface");?>" /></a>
+					</td>
+				</tr>
 				</table>
 				<div id="remarks">
-					<?php html_remark("note", gtext("Note"), gtext("Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do not explicitly support it, VLAN tagging will still work, but the reduced MTU may cause problems."));?>
-				</div>
-				<?php include 'formend.inc';?>
-			</form>
-		</td>
-	</tr>
+				<?php html_remark("note", gtext("Note"), gtext("Not all drivers/NICs support 802.1Q VLAN tagging properly. On cards that do not explicitly support it, VLAN tagging will still work, but the reduced MTU may cause problems."));?>
+			</div>
+			<?php include 'formend.inc';?>
+		</form>
+	</td>
+</tr>
 </table>
 <?php include 'fend.inc';?>

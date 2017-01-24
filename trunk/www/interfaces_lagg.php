@@ -100,37 +100,38 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 	</tr>
 	<tr>
 		<td class="tabcont">
-			<form action="interfaces_lagg.php" method="post">
+				<form action="interfaces_lagg.php" method="post">
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<?php if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));?>
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-					<tr>
-						<td width="20%" class="listhdrlr"><?=gtext("Virtual Interface");?></td>
-						<td width="35%" class="listhdrr"><?=gtext("Ports");?></td>
-						<td width="35%" class="listhdrr"><?=gtext("Description");?></td>
-						<td width="10%" class="list"></td>
-					</tr>
-					<?php foreach ($a_lagg as $lagg):?>
-					<tr>
-						<td class="listlr"><?=htmlspecialchars($lagg['if']);?></td>
-						<td class="listr"><?=htmlspecialchars(implode(" ", $lagg['laggport']));?></td>
-						<td class="listbg"><?=htmlspecialchars($lagg['desc']);?>&nbsp;</td>
-						<td valign="middle" nowrap="nowrap" class="list">
-							<a href="interfaces_lagg_edit.php?uuid=<?=$lagg['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit interface");?>" border="0" alt="<?=gtext("Edit interface");?>" /></a>&nbsp;
-							<a href="interfaces_lagg.php?act=del&amp;uuid=<?=$lagg['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this interface?");?>')"><img src="images/delete.png" title="<?=gtext("Delete interface");?>" border="0" alt="<?=gtext("Delete interface");?>" /></a>
-						</td>
-					</tr>
-					<?php endforeach;?>
-					<tr>
-						<td class="list" colspan="3">&nbsp;</td>
-						<td class="list">
-							<a href="interfaces_lagg_edit.php"><img src="images/add.png" title="<?=gtext("Add interface");?>" border="0" alt="<?=gtext("Add interface");?>" /></a>
-						</td>
-					</tr>
-				</table>
-				<?php include 'formend.inc';?>
-			</form>
-		</td>
-	</tr>
+				<?php html_titleline2(gtext('Overview'), 4);?>
+			<tr>
+				<td width="20%" class="listhdrlr"><?=gtext("Virtual Interface");?></td>
+				<td width="35%" class="listhdrr"><?=gtext("Ports");?></td>
+				<td width="35%" class="listhdrr"><?=gtext("Description");?></td>
+				<td width="10%" class="list"></td>
+			</tr>
+				<?php foreach ($a_lagg as $lagg):?>
+			<tr>
+				<td class="listlr"><?=htmlspecialchars($lagg['if']);?></td>
+				<td class="listr"><?=htmlspecialchars(implode(" ", $lagg['laggport']));?></td>
+				<td class="listbg"><?=htmlspecialchars($lagg['desc']);?>&nbsp;</td>
+				<td valign="middle" nowrap="nowrap" class="list">
+				<a href="interfaces_lagg_edit.php?uuid=<?=$lagg['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit interface");?>" border="0" alt="<?=gtext("Edit interface");?>" /></a>&nbsp;
+				<a href="interfaces_lagg.php?act=del&amp;uuid=<?=$lagg['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this interface?");?>')"><img src="images/delete.png" title="<?=gtext("Delete interface");?>" border="0" alt="<?=gtext("Delete interface");?>" /></a>
+			</td>
+		</tr>
+				<?php endforeach;?>
+			<tr>
+				<td class="list" colspan="3">&nbsp;</td>
+				<td class="list">
+				<a href="interfaces_lagg_edit.php"><img src="images/add.png" title="<?=gtext("Add interface");?>" border="0" alt="<?=gtext("Add interface");?>" /></a>
+				</td>
+			</tr>
+		</table>
+	<?php include 'formend.inc';?>
+</form>
+</td>
+</tr>
 </table>
 <?php include 'fend.inc';?>
