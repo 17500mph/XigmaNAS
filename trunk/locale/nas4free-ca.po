@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-21 18:59+0000\n"
-"PO-Revision-Date: 2017-01-21 20:34+0000\n"
+"POT-Creation-Date: 2017-01-24 02:10+0000\n"
+"PO-Revision-Date: 2017-01-24 12:19+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-22 17:42+0000\n"
-"X-Generator: Launchpad (build 18302)\n"
+"X-Launchpad-Export-Date: 2017-01-24 19:56+0000\n"
+"X-Generator: Launchpad (build 18312)\n"
 "Language: ca_ES\n"
 
 msgid " interfaces:"
@@ -58,7 +58,7 @@ msgstr "%dB / bloc"
 
 #, php-format
 msgid "%s Interface"
-msgstr "%s Interficíe"
+msgstr "%s Interfície"
 
 #, php-format
 msgid "%s already exists as a %s."
@@ -119,16 +119,16 @@ msgid "(Change if needed)"
 msgstr "(Canviar si cal)"
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
-msgstr "Es troba en uns discos Maxtor 6B200M0 200 GB i 15GB Maxtor 2R015H1"
+msgstr "Es troba en discs Maxtor 6B200M0 200 GB i 15GB Maxtor 2R015H1"
 
 msgid ""
 "(Kingston)Counts the number of flash erase failures. This Attribute returns "
 "the total number of Flash erase operation failures since the drive was "
 "deployed. This Attribute is identical to Attribute 182."
 msgstr ""
-"(Kingston) Compta el nombre de fallades de flash d'esborrat. Aquest atribut "
-"retorna el nombre total de falles d'operació d'esborrat de Flash des que es "
-"va desplegar la unitat. Aquest atribut és idèntic al Atribut 182."
+"(Kingston) Compta el nombre de fallades al esborrart el flash. Aquest "
+"atribut retorna el nombre total de falles d'operació d'esborrat del Flash "
+"des que es va instalar l'unitat. Aquest atribut és idèntic al Atribut 182."
 
 msgid ""
 "(Kingston)Counts the number of flash program failures. This Attribute "
@@ -150,8 +150,8 @@ msgid ""
 msgstr ""
 "(Valor brut de proveïdor específic.) Taxa de errors de cerca dels capçals "
 "magnètics. Si es produeix un tall parcial en el sistema de posicionament "
-"mecànic, sorgiran errors de cerca. Un error d'aquest tipus pot ser causa de "
-"nombrosos factors, com ara un servo malament, o dilatació tèrmica del disc "
+"mecànic, surgirán errors de cerca. Un error d'aquest tipus pot ser causa de "
+"nombrosos factors, com ara un servo dolent, o la dilatació tèrmica del disc "
 "dur. El valor brut té una estructura diferent per als diferents proveïdors i "
 "amb freqüència no és significativa com un nombre decimal."
 
@@ -598,7 +598,7 @@ msgid ""
 "UPS."
 msgstr ""
 "Paràmetres addicionals a la part específica del maquinari del controlador "
-"per al segon UPS"
+"per al segon SAI"
 
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr ""
@@ -611,7 +611,7 @@ msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr "Adreça del dimoni remot hastd. Ha de esser una adreça IP estàtica."
 
 msgid "Admin password"
-msgstr "Mot de pas de l'administrador"
+msgstr "Contrasenya de l'administrador"
 
 msgid "Administration password"
 msgstr "Clau d'administració"
@@ -765,7 +765,7 @@ msgid "Allow new files to be created."
 msgstr "Permet que nous arxius pugin ser creats"
 
 msgid "Allow to start UPS from battery"
-msgstr "Permet iniciar el UPS des-de la bateria"
+msgstr "Permet iniciar el SAI  des de la bateria"
 
 msgid "Allow trusted domains."
 msgstr "Permet dominis certificats"
@@ -826,7 +826,7 @@ msgid "Always scan"
 msgstr "Sempre analitzant"
 
 msgid "Ambient Conditions From External Probe Equipment"
-msgstr "Condicions ambientals des-de equipament-proba extern"
+msgstr "Condicions ambientals des de l'equipament de proba extern"
 
 msgid "Ambient relative humidity (percent)"
 msgstr "Humitat ambient relativa (percentual)"
@@ -841,7 +841,7 @@ msgid ""
 "Amplitude of 'thrashing' (distance of repetitive forward/reverse head "
 "motion)."
 msgstr ""
-"Amplitud de 'trateijt' (distància d'avanç repetitiu endevant/enrere del "
+"Amplitud de 'pallissa' (distància d'avanç repetitiu endevant/enrere del "
 "capçal)."
 
 msgid ""
@@ -870,7 +870,7 @@ msgid "An error occured."
 msgstr "S'ha produït un error."
 
 msgid "An host with this name already exists."
-msgstr "Ja existeix un equip amb aquest nom."
+msgstr "Ja existeix un amfitrió amb aquest nom."
 
 msgid "An interface with the specified description already exists."
 msgstr "Ja existeix una interfície amb la descripció especificada."
@@ -1049,7 +1049,7 @@ msgid "Auxiliary Parameters"
 msgstr "Paràmetres auxiliars"
 
 msgid "Auxiliary device firmware"
-msgstr "Firmware de dispositiu auxiliar"
+msgstr "Microprogamari de dispositiu auxiliar"
 
 msgid "Auxiliary parameters"
 msgstr "Parametres auxiliars"
@@ -1084,7 +1084,7 @@ msgid "Backup Configuration"
 msgstr "Configuració de còpia de seguretat"
 
 msgid "Backup file"
-msgstr "Còpia de seguretat"
+msgstr "Fitxer de còpia de seguretat"
 
 msgid "Backup/Restore"
 msgstr "Còpia/Restaura"
@@ -1126,7 +1126,7 @@ msgstr "Bateria baixa"
 msgid ""
 "Battery Remaining level when UPS switches to Shutdown mode (Low Battery)"
 msgstr ""
-"Nivell remanent de bateria quand la UPS canvia al mode de tancament (Bateria "
+"Nivell remanent de bateria quan la SAI canvia al mode de tancament (Bateria "
 "baixa)"
 
 msgid "Battery alarm threshold"
@@ -1148,7 +1148,7 @@ msgid "Battery level"
 msgstr "Nivell de la bateria"
 
 msgid "Battery level when UPS switches to \"Warning\" state"
-msgstr "Nivell de la bateria quan la UPS conmuta a estat \"Warning\""
+msgstr "Nivell de la bateria quan la SAI conmuta a estat \"Warning\""
 
 msgid "Battery manufacturing date"
 msgstr "Data de fabricació de la bateria"
@@ -1177,7 +1177,7 @@ msgid "Bind DN"
 msgstr "DN cega"
 
 msgid "Bind password"
-msgstr "Mot de pass ceg"
+msgstr "Contrasenya cega"
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
@@ -1191,7 +1191,7 @@ msgstr ""
 "muntatge per al directori %s!"
 
 msgid "Blank Time"
-msgstr "Temps blanc"
+msgstr "Temps en blanc"
 
 msgid "Blank time"
 msgstr "Temps en blanc"
@@ -1354,7 +1354,7 @@ msgid "CPU frequencies:"
 msgstr "Freqüències de la CPU:"
 
 msgid "CPU load"
-msgstr "Ocupació CPU"
+msgstr "Càrrega de la CPU"
 
 msgid ""
 "CRC Error Count. Counts the number of CRC error (read/write data FIS CRC "
@@ -1367,7 +1367,7 @@ msgid "Calibration Battery"
 msgstr "Calibra-cio bateria"
 
 msgid "Can't get UFS ID."
-msgstr "No es pot obtenir l'informació del UFS"
+msgstr "No es pot obtenir ID del UFS"
 
 msgid "Can't mount the system partition 1, the DATA partition is the 2."
 msgstr ""
@@ -1420,7 +1420,7 @@ msgid "Change below file"
 msgstr "Canvia arxiu a continuació"
 
 msgid "Change password"
-msgstr "Canviar el mot de pas"
+msgstr "Canviar contrasenya"
 
 msgid "Change the IP address of your computer"
 msgstr "Canviar l'adreça IP del ordinador"
@@ -1435,7 +1435,7 @@ msgid "Changes to this option will take effect after a reboot."
 msgstr "Canvis d'aquesta opció seran efectius després de un reinicii."
 
 msgid "Channel"
-msgstr "Cancel·lar"
+msgstr "Canal"
 
 msgid "Charging Battery"
 msgstr "Carregant bateria"
@@ -1462,13 +1462,13 @@ msgid "Check the list of available drivers"
 msgstr "Comproveu la llista de controladors disponibles"
 
 msgid "Chinese (Simplified)"
-msgstr "xinès (sSimplificat)"
+msgstr "xinès (Simplificat)"
 
 msgid "Chinese (Traditional)"
-msgstr "xinès (tradicional)"
+msgstr "xinès (Tradicional)"
 
 msgid "Choose UPS mode."
-msgstr "Tria mode del UPS"
+msgstr "Tria mode del SAI"
 
 msgid "Choose on which interface packets must come in to match this rule."
 msgstr ""
@@ -1481,16 +1481,16 @@ msgid "Choose which interface this route applies to."
 msgstr "Trieu a quin interfície s'aplica aquesta regla"
 
 msgid "Clear"
-msgstr "Neteja"
+msgstr "Esborrar"
 
 msgid "Clear Config & Import Disks"
-msgstr "Esborrar configuració i  importar discs"
+msgstr "Esborrar configuració i  importa discs"
 
 msgid "Clear Config & Import Software Raid Disks"
 msgstr "Esborrar configuració i  importar discs de programari Raid"
 
 msgid "Clear config and Import disks"
-msgstr "Esborra configuració i importa discs"
+msgstr "Esborrar configuració i importa discs"
 
 msgid "Clear device errors"
 msgstr "Esborra els errors del dispositiu"
@@ -1537,7 +1537,7 @@ msgid "Command Output"
 msgstr "Sortida del comandament"
 
 msgid "Command Scripts"
-msgstr "Lots d'instruccions"
+msgstr "Lots d'ordres"
 
 msgid "Command Scripts (Maintenance Only)"
 msgstr "Lots d'ordres (Només Manteniment)"
@@ -1575,7 +1575,7 @@ msgid "Common Internet File System"
 msgstr "Sistema d'arxiu comú d'Internet"
 
 msgid "Community"
-msgstr "Comunidade"
+msgstr "Comunitat"
 
 msgid "Compilations directories"
 msgstr "Directoris de recopilacions"
@@ -1587,13 +1587,13 @@ msgid "Compliant profile to be used."
 msgstr "Perfil complex a ser utilitzat."
 
 msgid "Compress"
-msgstr "Compressió"
+msgstr "Comprimir"
 
 msgid "Compress file data during the transfer."
 msgstr "Comprimeix arxiu de dades durant la transferència."
 
 msgid "Compression"
-msgstr "Compression"
+msgstr "Compressió"
 
 msgid ""
 "Compression is worth using if your connection is slow. The efficiency of the "
@@ -1703,19 +1703,20 @@ msgstr ""
 "equivalent a 'GZIP-6'."
 
 msgid ""
-"Controls the compression algorithm used for this volume. The 'lzjb' "
-"compression algorithm is optimized for performance while providing decent "
-"data compression. Setting compression to 'On' uses the 'lzjb' compression "
-"algorithm. You can specify the 'gzip' level by using the value 'gzip-N', "
+"Controls the compression algorithm used for this volume. 'LZ4' is now the "
+"recommended compression algorithm. Setting compression to 'On' uses the LZ4 "
+"compression algorithm if the feature flag lz4_compress is active, otherwise "
+"LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', "
 "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-"Currently, 'gzip' is equivalent to 'gzip-6'."
+"Currently, 'GZIP' is equivalent to 'GZIP-6'."
 msgstr ""
-"Controla l'algoritme utilitzat per aquest volum. L'algoritme de compressió "
-"'lzjb' està optimitzat per rendiment a la vegada que proveeix compressió de "
-"dades acurada. Al fixar compressió 'ON' fa servir l'algoritme de compressió "
-"'lzjb'. Pot especificar el nivell 'gzip' fent servir el valor 'gzip-N', N es "
-"un integral des de 1 (ràpid) a 9 (millor percentatge de compressió). "
-"Normalment 'gzip' es equivalent a 'gzip-6'."
+"Controla l'algoritme de compressió usat per a aquest volum. 'LZ4' és ara "
+"l'algoritme de compressió recomanada. L'ajust de compressió a 'On' fa ús de "
+"l'algoritme de compressió LZ4 si l'indicador lz4_compress de la funció està "
+"actiu, si no s'utilitza LZJB. Es pot especificar el nivell de 'GZIP' "
+"utilitzant el valor 'GZIP-N', on N és un nombre enter d'1 (la més ràpida) a "
+"9 (millor relació de compressió). En l'actualitat, 'GZIP' és equivalent a "
+"'GZIP-6'."
 
 msgid "Controls the dedup method."
 msgstr "Controla el mètode dedup"
@@ -1747,7 +1748,7 @@ msgid "Core"
 msgstr "Nucli"
 
 msgid "Core Usage"
-msgstr "Us del nucli"
+msgstr "Ús del nucli"
 
 msgid "Count"
 msgstr "Compte"
@@ -1983,16 +1984,16 @@ msgid "Current Version:"
 msgstr "Versió actual:"
 
 msgid "Current internal temperature."
-msgstr "Temperatura interna actual"
+msgstr "Temperatura interna actual."
 
 msgid "Current password"
-msgstr "Mot de pas actual"
+msgstr "Contrasenya actual"
 
 msgid ""
 "Current password is default password. You should use your own password."
 msgstr ""
-"Mot de pas actual es el mot per defecte.  Has de fer servir el teu mot de "
-"pas."
+"Contrasenya actual es el mot per defecte.  Has de fer servir la teva "
+"contrasenya."
 
 msgid "Current state of drive operation based upon the Life Curve."
 msgstr ""
@@ -2077,7 +2078,7 @@ msgid "Daemon events"
 msgstr "Events del Dimoni"
 
 msgid "Daemon log"
-msgstr "Registre del dimoni"
+msgstr "Registre del Dimoni"
 
 msgid "Danish"
 msgstr "Danès"
@@ -2144,7 +2145,7 @@ msgstr ""
 "byte 3-4-5 = recompte d'esborrat max (big endian)."
 
 msgid "Decrypt password"
-msgstr "Desxifrar mot de pas"
+msgstr "Desxifrar contrasenya"
 
 msgid "Dedup"
 msgstr "Deduplicar"
@@ -2335,7 +2336,7 @@ msgid "Deleting"
 msgstr "Suprimint"
 
 msgid "Deleting GEOM metadata"
-msgstr "Suprimint GEOM metadata"
+msgstr "Suprimint metadades GEOM"
 
 msgid "Deleting MBR and partition table"
 msgstr "Suprimint el MBR i la taula de particions"
@@ -2568,7 +2569,7 @@ msgid "Discard - Discard ACL"
 msgstr "Descarta - Descartar ACL"
 
 msgid "Discard - Do not inherit entries"
-msgstr "Descarta - no hereten les entrades"
+msgstr "Descarta - No hereten les entrades"
 
 #, php-format
 msgid "Discovered iSCSI target for %s"
@@ -2590,7 +2591,7 @@ msgid "Disk Settings"
 msgstr "Configuració del disc"
 
 msgid "Disk Space Usage"
-msgstr "Us d'espai del disc"
+msgstr "Ús d'espai del disc"
 
 msgid "Disk Usage"
 msgstr "Ús de disc"
@@ -2599,13 +2600,13 @@ msgid "Disks"
 msgstr "Discs"
 
 msgid "Disks (Info)"
-msgstr "Discos (Info)"
+msgstr "Discs (Info)"
 
 msgid "Disks (Info) Information"
 msgstr "Discs (Info) Informació"
 
 msgid "Disks | Mount Point | Management"
-msgstr "Discos | Punt de muntatge | Gestió"
+msgstr "Discs | Punt de muntatge | Gestió"
 
 msgid "Display"
 msgstr "Visualització"
@@ -2664,7 +2665,7 @@ msgid "Do you really want to delete this URL?"
 msgstr "Realment voleu eliminar aquest URL?"
 
 msgid "Do you really want to delete this VM?"
-msgstr "De veritat vols esborrar aquest MV?"
+msgstr "Realment vol esborrar aquest MV?"
 
 msgid "Do you really want to delete this auth group?"
 msgstr "Realment voleu eliminar aquest grup d'autenticació?"
@@ -2718,16 +2719,16 @@ msgid "Do you really want to delete this resource?"
 msgstr "Realment voleu eliminar aquest recurs?"
 
 msgid "Do you really want to delete this route?"
-msgstr "De veritat vol eliminar aquesta ruta?"
+msgstr "Realment vol eliminar aquesta ruta?"
 
 msgid "Do you really want to delete this rule?"
-msgstr "De veritat vol eliminar aquesta regla?"
+msgstr "Realment vol eliminar aquesta regla?"
 
 msgid "Do you really want to delete this scheduled self-test?"
 msgstr "Realment vol eliminar aquesta auto-prova programada?"
 
 msgid "Do you really want to delete this share?"
-msgstr "De veritat vol eliminar aquesta compartició?"
+msgstr "Realment vol eliminar aquesta compartició?"
 
 msgid "Do you really want to delete this target?"
 msgstr "Realment voleu eliminar aquest objectiu?"
@@ -3083,7 +3084,8 @@ msgstr "Editar objetiu"
 msgid ""
 "Efficiency of the UPS (Ratio of the output current on the input current)"
 msgstr ""
-"Eficiència del UPS (Relació del corrent de sortida versus corrent d'entrada)"
+"Eficiència de la SAI (Relació del corrent de sortida versus corrent "
+"d'entrada)"
 
 msgid "Email"
 msgstr "Correu electrónic"
@@ -3193,7 +3195,7 @@ msgid "Enable collecting CPU usage statistics."
 msgstr "Habilitar la recollida d'estadístiques d'ús de la CPU."
 
 msgid "Enable collecting UPS statistics."
-msgstr "Habilitar la recopilació d'estadístiques d'UPS."
+msgstr "Habilitar la recopilació d'estadístiques de la SAI."
 
 msgid "Enable collecting ZFS ARC usage statistics."
 msgstr "Habilitar la recollida d'estadístiques d'ús de ZFS ARC."
@@ -3224,7 +3226,7 @@ msgid "Enable compression."
 msgstr "Habilita la compressió."
 
 msgid "Enable console screensaver."
-msgstr "Activa estalvi de pantalla de la consola."
+msgstr "Habilita estalvi de pantalla de la consola."
 
 msgid "Enable device polling"
 msgstr "Habilitar el sondeig del dispositiu"
@@ -3233,7 +3235,7 @@ msgid "Enable directory listing."
 msgstr "Habilitar llista de directoris."
 
 msgid "Enable distributed hash table."
-msgstr "Activar taula hash distribuïda."
+msgstr "Habilitar taula hash distribuïda."
 
 msgid "Enable domain wildcarding."
 msgstr "Habilitar els comodins de domini."
@@ -3301,7 +3303,7 @@ msgid "Enable recycle bin"
 msgstr "Habilita la paperera de reciclatge"
 
 msgid "Enable remote monitoring of the local connected UPS."
-msgstr "Activa la supervisió remota dels UPS connectats locals."
+msgstr "Activa la supervisió remota dels SAI connectats locals."
 
 msgid ""
 "Enable reverse DNS lookup performed on the remote host's IP address for "
@@ -3316,7 +3318,7 @@ msgid "Enable reverse DNS lookup."
 msgstr "Habilita la cerca de DNS inversa."
 
 msgid "Enable second local connected UPS."
-msgstr "Activa el segon UPS connectats localment."
+msgstr "Activa el segon SAI connectat localment."
 
 msgid "Enable serial console."
 msgstr "Activa consola serie."
@@ -3358,10 +3360,10 @@ msgid "Enabled"
 msgstr "Activat"
 
 msgid "Encrypt password"
-msgstr "Xifrar mot de pas"
+msgstr "Xifrar contrasenya"
 
 msgid "Encrypt password (confirmed)"
-msgstr "Xifrar mot de pas (confirmat)"
+msgstr "Xifrar contrasenya (confirmat)"
 
 msgid "Encrypted"
 msgstr "Encriptat"
@@ -3443,8 +3445,8 @@ msgid ""
 "Enter the UPS identifier and host IP address of the machine where the UPS is "
 "connected to. (this also can be a remote host)"
 msgstr ""
-"Introduïu l'identificador d'UPS i adreça IP de la màquina en la qual el SAI "
-"està connectat. (Això també pot ser un host remot)"
+"Introduïu l'identificador de la SAI i adreça IP de la màquina en la qual el "
+"SAI està connectat. (Això també pot ser un host remot)"
 
 msgid "Enter the command"
 msgstr "Introduïu l'ordre"
@@ -3578,7 +3580,7 @@ msgid "Extent Name"
 msgstr "Nom estès"
 
 msgid "Extent name"
-msgstr "nom estès"
+msgstr "Nom estès"
 
 msgid ""
 "Extents must be defined before they can be used, and extents cannot be used "
@@ -3917,7 +3919,7 @@ msgid "Generate a new unique identifier for a pool"
 msgstr "Genera un nou identificador únic per la piscina"
 
 msgid "Generate password if leave empty."
-msgstr "Generar mot de pas si es deixa buid."
+msgstr "Generar contrasenya si es deixa buid."
 
 msgid "German"
 msgstr "Alemany"
@@ -3963,6 +3965,9 @@ msgstr "Grup"
 
 msgid "Group ID"
 msgstr "Identificador del Grup"
+
+msgid "Group Settings"
+msgstr "Configuració del grup"
 
 msgid "Group compilations"
 msgstr "Compilacions de grup"
@@ -4383,7 +4388,7 @@ msgid "In most cases, 'public' is used here."
 msgstr "En la majoria dels casos, \"públic\" s'utilitza aquí."
 
 msgid "In slave mode it is the UPS name (Identifier) at the UPS master."
-msgstr "En mode esclau és el nom UPS (identificador) en el mestre UPS."
+msgstr "En mode esclau és el nom SAI (identificador) a la SAI mestre."
 
 msgid "In/Out Errors"
 msgstr "Errors d'Entrada/Sortida"
@@ -4566,10 +4571,10 @@ msgid "Internal Speaker"
 msgstr "Altaveu intern"
 
 msgid "Internal UPS clock date"
-msgstr "Data interna del UPS"
+msgstr "Data interna de la SAI"
 
 msgid "Internal UPS clock time"
-msgstr "Hora interna del UPS"
+msgstr "Hora interna de la SAI"
 
 msgid "Interval between self tests"
 msgstr "Interval entre comprovacions automàtiques"
@@ -4581,7 +4586,7 @@ msgid "Interval to wait after shutdown with delay command"
 msgstr "Interval d'espera després de la ordre d'aturada amb retard"
 
 msgid "Interval to wait before rebooting the UPS)"
-msgstr "Interval d'espera abans de reiniciar el UPS)"
+msgstr "Interval d'espera abans de reiniciar la SAI)"
 
 msgid "Interval to wait before restarting the load"
 msgstr "Interval d'espera abans de reiniciar la càrrega"
@@ -4590,7 +4595,7 @@ msgid "Invalid command line option"
 msgstr "Opció de línia de comanda no vàlid"
 
 msgid "Invalid file format or incorrect password."
-msgstr "Format de fitxer no vàlid o mot de pas incorrecta."
+msgstr "Format de fitxer no vàlid o contrasenya incorrecta."
 
 msgid "Invalid file format."
 msgstr "Format de fitxer no vàlid."
@@ -4895,10 +4900,10 @@ msgid "Load averages"
 msgstr "Mitjanes de càrrega"
 
 msgid "Load on UPS"
-msgstr "Carga a la UPS"
+msgstr "Carga a la SAI"
 
 msgid "Load when UPS switches to overload condition (\"OVER\")"
-msgstr "Carga quan la UPS commuta a condició de sobrecarga (\"OVER\")"
+msgstr "Carga quan la SAI commuta a condició de sobrecarga (\"OVER\")"
 
 msgid "Loadbalance"
 msgstr "Equilibri de carga"
@@ -5191,7 +5196,7 @@ msgstr "Tensió d'entrada màxima observada"
 
 msgid "Maximum number of allowed password attempts before disconnection."
 msgstr ""
-"El nombre màxim d'intents d'introducció del mot de pas abans de la "
+"El nombre màxim d'intents d'introducció de la contrasenya abans de la "
 "desconnexió."
 
 #, php-format
@@ -5297,7 +5302,7 @@ msgid "Minimum Performance, Minimum Acoustic Output"
 msgstr "Rendiment mínim, soroll acústic mínim"
 
 msgid "Minimum battery level for UPS restart after power-off"
-msgstr "Nivell de la bateria mínima per reinici del UPS després d'apagada"
+msgstr "Nivell de la bateria mínima per reinici de la SAI després d'apagada"
 
 msgid "Minimum frequency"
 msgstr "freqüència mínima"
@@ -5774,7 +5779,7 @@ msgid "Now"
 msgstr "Ara"
 
 msgid "Null passwords"
-msgstr "Mot de pas nuls"
+msgstr "Contrasenya nules"
 
 msgid "Number of bad battery packs"
 msgstr "Nombre de paquets de bateries dolents"
@@ -5833,7 +5838,7 @@ msgid "Off"
 msgstr "OFF"
 
 msgid "Old passphrase"
-msgstr "Mot de pas antic"
+msgstr "Contarsenya antiga"
 
 msgid "Old password"
 msgstr "Contrasenya antic"
@@ -6025,10 +6030,10 @@ msgstr ""
 "ports efímers registrat en IANA)."
 
 msgid "Passphrase"
-msgstr "Mot de pas"
+msgstr "Contrasenya"
 
 msgid "Passphrase don't match."
-msgstr "Frases del mot de pas no coincideixen."
+msgstr "Frases de contrasenya no coincideixen."
 
 msgid "Passthrough - Do not change ACL"
 msgstr "Pass directe - No canvieu ACL"
@@ -6043,10 +6048,10 @@ msgid "Password"
 msgstr "Contrasenya"
 
 msgid "Password (confirmed)"
-msgstr "Mot de pas (confirmat)"
+msgstr "Contrasenya (confirmat)"
 
 msgid "Password authentication"
-msgstr "Autenticació del mot de pas"
+msgstr "Autenticació de la contrasenya"
 
 msgid "Password don't match."
 msgstr "Les contrassenyas no coincideixen"
@@ -6055,22 +6060,22 @@ msgid "Password encryption"
 msgstr "Xifrat de contrasenyes"
 
 msgid "Password for the administrative pages."
-msgstr "Mot de pas per les pàgines administratives"
+msgstr "Contrasenya per les pàgines administratives"
 
 msgid "Password of domain administrator account."
-msgstr "Mot de pas del compte d'administrador de domini."
+msgstr "Contrasenya del compte d'administrador de domini."
 
 msgid "Password server"
-msgstr "Mot de pas del servidor"
+msgstr "Contrasenya del servidor"
 
 msgid ""
 "Password server name or IP address (e.g. Active Directory domain controller)."
 msgstr ""
-"Mot de pas del servidor o adreça IP (per exemple, controlador de domini "
+"Contrasenya del servidor o adreça IP (per exemple, controlador de domini "
 "d'Active Directory)."
 
 msgid "Password suffix"
-msgstr "Sufix del mot de pas"
+msgstr "Sufix de contrasenya"
 
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
 msgstr "Enganxar una clau privada RSA en format PEM aquí."
@@ -7284,7 +7289,7 @@ msgid "Set read only"
 msgstr "Fixar-ho de només lectura"
 
 msgid "Set share password."
-msgstr "Establir un mot de pas compartit."
+msgstr "Establir una contrasenya compartida."
 
 #, php-format
 msgid ""
@@ -7361,7 +7366,7 @@ msgid "Share Character Set"
 msgstr "Compartir joc de caràcters"
 
 msgid "Share Password"
-msgstr "Compartir mot de pas"
+msgstr "Compartir contrasenya"
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr "Comparteix contrasenyes no poden tenir més de 8 caràcters."
@@ -8246,7 +8251,7 @@ msgid ""
 "The confirmation password does not match. Please ensure the passwords match "
 "exactly."
 msgstr ""
-"La confirmació del mot de pas no coincideix. Si us plau assegureu-vos que "
+"La confirmació de contrasenya no coincideix. Si us plau assegureu-vos que "
 "les contrasenyes coincideixen exactament."
 
 msgid ""
@@ -9949,6 +9954,9 @@ msgstr "Usuari"
 msgid "User ID"
 msgstr "ID d'usuari"
 
+msgid "User Settings"
+msgstr "Configuració de l'usuari"
+
 msgid "User account is locked"
 msgstr "El compte del usuari està bloquejat"
 
@@ -10459,10 +10467,10 @@ msgstr ""
 
 msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
-"suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."
+"suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
 msgstr ""
-"ZFS tamany del volum. Per especificar la mida, utilitzeu els següents "
-"sufixos llegibles (per exemple, 'k', 'KB \",\" M \",\" Gb \", etc.)."
+"Mida del volum ZFS. Per especificar la mida utilitzi els següents sufixos "
+"llegibles (per exemple, \"K\", \"KB\", \"M\", \"I\", etc.)."
 
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
@@ -10629,3 +10637,25 @@ msgstr "versió:"
 
 msgid "week days"
 msgstr "dias de la setmana"
+
+#~ msgid ""
+#~ "Controls the compression algorithm used for this volume. The 'lzjb' "
+#~ "compression algorithm is optimized for performance while providing decent "
+#~ "data compression. Setting compression to 'On' uses the 'lzjb' compression "
+#~ "algorithm. You can specify the 'gzip' level by using the value 'gzip-N', "
+#~ "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
+#~ "Currently, 'gzip' is equivalent to 'gzip-6'."
+#~ msgstr ""
+#~ "Controla l'algoritme utilitzat per aquest volum. L'algoritme de compressió "
+#~ "'lzjb' està optimitzat per rendiment a la vegada que proveeix compressió de "
+#~ "dades acurada. Al fixar compressió 'ON' fa servir l'algoritme de compressió "
+#~ "'lzjb'. Pot especificar el nivell 'gzip' fent servir el valor 'gzip-N', N es "
+#~ "un integral des de 1 (ràpid) a 9 (millor percentatge de compressió). "
+#~ "Normalment 'gzip' es equivalent a 'gzip-6'."
+
+#~ msgid ""
+#~ "ZFS volume size. To specify the size use the following human-readable "
+#~ "suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."
+#~ msgstr ""
+#~ "ZFS tamany del volum. Per especificar la mida, utilitzeu els següents "
+#~ "sufixos llegibles (per exemple, 'k', 'KB \",\" M \",\" Gb \", etc.)."
