@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2017-01-21 18:59+0000\n"
+"POT-Creation-Date: 2017-01-24 02:10+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -1427,7 +1427,7 @@ msgstr ""
 msgid "Controls the compression algorithm used for this dataset. 'LZ4' is now the recommended compression algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if the feature flag lz4_compress is active, otherwise LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is equivalent to 'GZIP-6'."
 msgstr ""
 
-msgid "Controls the compression algorithm used for this volume. The 'lzjb' compression algorithm is optimized for performance while providing decent data compression. Setting compression to 'On' uses the 'lzjb' compression algorithm. You can specify the 'gzip' level by using the value 'gzip-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'gzip' is equivalent to 'gzip-6'."
+msgid "Controls the compression algorithm used for this volume. 'LZ4' is now the recommended compression algorithm. Setting compression to 'On' uses the LZ4 compression algorithm if the feature flag lz4_compress is active, otherwise LZJB is used. You can specify the 'GZIP' level by using the value 'GZIP-N', where N is an integer from 1 (fastest) to 9 (best compression ratio). Currently, 'GZIP' is equivalent to 'GZIP-6'."
 msgstr ""
 
 msgid "Controls the dedup method."
@@ -3366,6 +3366,9 @@ msgid "Group"
 msgstr ""
 
 msgid "Group ID"
+msgstr ""
+
+msgid "Group Settings"
 msgstr ""
 
 msgid "Group compilations"
@@ -8259,6 +8262,9 @@ msgstr ""
 msgid "User ID"
 msgstr ""
 
+msgid "User Settings"
+msgstr ""
+
 msgid "User account is locked"
 msgstr ""
 
@@ -8702,7 +8708,7 @@ msgstr ""
 msgid "ZFS volume block size. This value can not be changed after creation."
 msgstr ""
 
-msgid "ZFS volume size. To specify the size use the following human-readable suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."
+msgid "ZFS volume size. To specify the size use the following human-readable suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
 msgstr ""
 
 msgid "Zeroconf/Bonjour"
