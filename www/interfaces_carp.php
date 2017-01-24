@@ -104,6 +104,7 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 			<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 			<?php if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));?>
 			<table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<?php html_titleline2(gtext('Overview'), 6);?>
 			<tr>
 				<td width="17%" class="listhdrlr"><?=gtext("Interface");?></td>
 				<td width="9%" class="listhdrr"><?=gtext("VHID");?></td>

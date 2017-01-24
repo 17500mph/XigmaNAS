@@ -103,6 +103,7 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 			<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 			<?php if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));?>
 			<table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<?php html_titleline2(gtext('Overview'), 5);?>
 			<tr>
 				<td width="20%" class="listhdrlr"><?=gtext("Virtual Interface");?></td>
 				<td width="25%" class="listhdrr"><?=gtext("Physical Interface");?></td>
@@ -115,15 +116,15 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 				<td class="listr"><?=htmlspecialchars($wlan['wlandev']);?></td>
 				<td class="listbg"><?=htmlspecialchars($wlan['desc']);?>&nbsp;</td>
 				<td valign="middle" nowrap="nowrap" class="list">
-					<a href="interfaces_wlan_edit.php?uuid=<?=$wlan['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit interface");?>" border="0" alt="<?=gtext("Edit interface");?>" /></a>&nbsp;
-					<a href="interfaces_wlan.php?act=del&amp;uuid=<?=$wlan['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this interface?");?>')"><img src="images/delete.png" title="<?=gtext("Delete interface");?>" border="0" alt="<?=gtext("Delete interface");?>" /></a>
+				<a href="interfaces_wlan_edit.php?uuid=<?=$wlan['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit interface");?>" border="0" alt="<?=gtext("Edit interface");?>" /></a>&nbsp;
+				<a href="interfaces_wlan.php?act=del&amp;uuid=<?=$wlan['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this interface?");?>')"><img src="images/delete.png" title="<?=gtext("Delete interface");?>" border="0" alt="<?=gtext("Delete interface");?>" /></a>
 				</td>
 			</tr>
 			<?php endforeach;?>
 			<tr>
 				<td class="list" colspan="3">&nbsp;</td>
 				<td class="list">
-					<a href="interfaces_wlan_edit.php"><img src="images/add.png" title="<?=gtext("Add interface");?>" border="0" alt="<?=gtext("Add interface");?>" /></a>
+				<a href="interfaces_wlan_edit.php"><img src="images/add.png" title="<?=gtext("Add interface");?>" border="0" alt="<?=gtext("Add interface");?>" /></a>
 				</td>
 			</tr>
 			</table>

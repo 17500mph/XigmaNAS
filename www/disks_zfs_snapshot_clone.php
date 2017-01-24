@@ -6,15 +6,12 @@
 	Copyright (c) 2012-2017 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
-	Portions of freenas (http://www.freenas.org).
-	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
-	All rights reserved.
-
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
 	1. Redistributions of source code must retain the above copyright notice, this
 	   list of conditions and the following disclaimer.
+
 	2. Redistributions in binary form must reproduce the above copyright notice,
 	   this list of conditions and the following disclaimer in the documentation
 	   and/or other materials provided with the distribution.
@@ -34,11 +31,11 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-require("zfs.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
+require 'zfs.inc';
 
-$pgtitle = array(gtext("Disks"), gtext("ZFS"), gtext("Snapshots"), gtext("Clone"));
+$pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Snapshots'),gtext('Clone')];
 
 if (!isset($config['zfs']['snapshots']['snapshot']) || !is_array($config['zfs']['snapshots']['snapshot']))
 	$config['zfs']['snapshots']['snapshot'] = array();
@@ -123,7 +120,7 @@ function zfsclone_process_updatenotification($mode, $data) {
 	return $ret;
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabnavtbl">
@@ -153,6 +150,7 @@ function zfsclone_process_updatenotification($mode, $data) {
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<?php if (updatenotify_exists("zfsclone")) print_config_change_box();?>
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<?php html_titleline2(gtext('Overview'), 4);?>
 					<tr>
 						<td width="30%" class="listhdrlr"><?=gtext("Path");?></td>
 						<td width="40%" class="listhdrr"><?=gtext("Origin");?></td>
@@ -178,9 +176,9 @@ function zfsclone_process_updatenotification($mode, $data) {
 					</tr>
 					<?php endforeach;?>
 				</table>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
