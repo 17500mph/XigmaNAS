@@ -41,22 +41,17 @@ if (isset($_POST['uuid']))
 
 $pgtitle = [gtext('Network'), gtext('Interface Management'), gtext('Bridge'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
-if (!isset($config['vinterfaces']['bridge']) || !is_array($config['vinterfaces']['bridge']))
-	$config['vinterfaces']['bridge'] = array();
-
-$a_bridge = &$config['vinterfaces']['bridge'];
+$a_bridge = &array_make_branch($config,'vinterfaces','bridge');
 array_sort_key($a_bridge, "if");
 
 // WLAN interfaces.
 $a_wlans = array();
-if (isset($config['vinterfaces']['wlan']) && is_array($config['vinterfaces']['wlan']) && count($config['vinterfaces']['wlan'])) {
-	foreach ($config['vinterfaces']['wlan'] as $wlanv) {
-		$a_wlans[$wlanv['if']] = array(
-			'wlandev' => $wlanv['wlandev'],
-		);
-	}
-}
-
+array_make_branch($config,'vinterfaces','wlan');
+if(count($config['vinterfaces']['wlan'])):
+	foreach($config['vinterfaces']['wlan'] as $wlanv):
+		$a_wlans[$wlanv['if']] = ['wlandev' => $wlanv['wlandev']];
+	endforeach;
+endif;
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_bridge, "uuid")))) {
 	$pconfig['enable'] = isset($a_bridge[$cnid]['enable']);
 	$pconfig['uuid'] = $a_bridge[$cnid]['uuid'];
