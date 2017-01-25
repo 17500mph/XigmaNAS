@@ -41,11 +41,11 @@ if (isset($_POST['uuid']))
 
 $pgtitle = [gtext('Disks'),gtext('Management'),gtext('iSCSI Initiator'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
-if (!isset($config['iscsiinit']['vdisk']) || !is_array($config['iscsiinit']['vdisk']))
-	$config['iscsiinit']['vdisk'] = array();
-
-array_sort_key($config['iscsiinit']['vdisk'], "name");
-$a_iscsiinit = &$config['iscsiinit']['vdisk'];
+$a_iscsiinit = &array_make_branch($config,'iscsiinit','vdisk');
+if(empty($a_iscsiinit)):
+else:
+	array_sort_key($$a_iscsiinit,'name');
+endif;
 
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_iscsiinit, "uuid")))) {
 	$pconfig['uuid'] = $a_iscsiinit[$cnid]['uuid'];
