@@ -78,11 +78,11 @@ if ((PAGE_MODE_POST == $mode_page) && isset($_POST['uuid']) && is_uuid_v4($_POST
 	}
 }
 // read configuration data
-if (!(isset($config['gvinum']['vdisk']) && is_array($config['gvinum']['vdisk']))) {
-	$config['gvinum']['vdisk'] = [];
-}
-array_sort_key($config['gvinum']['vdisk'], 'name');
-$sphere_array = &$config['gvinum']['vdisk'];
+$sphere_array = &array_make_branch($config,'gvinum','vdisk');
+if(empty($sphere_array)):
+else:
+	array_sort_key($sphere_array,'name');
+endif;
 // get additional processing information
 $a_process = gvinum_processinfo_get();
 // scan for pending tasks

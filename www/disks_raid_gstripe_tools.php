@@ -36,11 +36,11 @@ require("guiconfig.inc");
 
 $pgtitle = array(gtext("Disks"), gtext("Software RAID"), gtext("RAID-0"), gtext("Maintenance"));
 
-if (!isset($config['gstripe']['vdisk']) || !is_array($config['gstripe']['vdisk']))
-	$config['gstripe']['vdisk'] = array();
-
-array_sort_key($config['gstripe']['vdisk'], "name");
-$a_raid = &$config['gstripe']['vdisk'];
+$a_raid = &array_make_branch($config,'gstripe','vdisk');
+if(empty($a_raid)):
+else:
+	array_sort_key($a_raid,'name');
+endif;
 
 if ($_POST) {
 	unset($input_errors);

@@ -31,8 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 require 'disks_raid_gvinum_fun.inc';
 
 $sphere_scriptname = basename(__FILE__);
@@ -61,16 +61,12 @@ $img_path = [
 ];
 
 // sunrise: verify if setting exists, otherwise run init tasks
-if (!(isset($config['gvinum']['vdisk']) && is_array($config['gvinum']['vdisk']))) {
-	$config['gvinum']['vdisk'] = [];
-}
-array_sort_key($config['gvinum']['vdisk'], 'name');
-$sphere_array = &$config['gvinum']['vdisk'];
+$sphere_array = &array_make_branch($config,'gvinum','vdisk');
+// $sphere_array = &$config['gvinum']['vdisk'];
+array_sort_key($sphere_array,'name');
 // get mounts from config
-if (!(isset($config['mounts']['mount']) && is_array($config['mounts']['mount']))) {
-	$config['mounts']['mount'] = [];
-}
-$a_config_mount = &$config['mounts']['mount'];
+$a_config_mount = &array_make_branch($config,'mounts','mount');
+// $a_config_mount = &$config['mounts']['mount'];
 // collect geom additional information
 $a_process = gvinum_processinfo_get();
 
