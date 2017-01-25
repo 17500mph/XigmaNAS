@@ -541,20 +541,14 @@ class HTMLMountComboBox extends HTMLComboBox {
 		global $config;
 
 		// Generate options.
-		if (!(isset($config['mounts']) && is_array($config['mounts']))) {
-			$config['mounts'] = [];
-		}
-		if (!(isset($config['mounts']['mount']) && is_array($config['mounts']['mount']))) {
-			$config['mounts']['mount'] = [];
-		}
-		array_sort_key($config['mounts']['mount'], "devicespecialfile");
+		array_make_branch($config,'mounts','mount');
+		array_sort_key($config['mounts']['mount'],'devicespecialfile');
 
 		$options = [];
 		$options[""] = gtext("Must choose one");
 		foreach ($config['mounts']['mount'] as $mountv) {
 			$options[$mountv['uuid']] = $mountv['sharename'];
 		}
-
 		parent::__construct($ctrlname, $title, $value, $options, $description);
 	}
 }
