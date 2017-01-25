@@ -41,11 +41,12 @@ if (isset($_GET['uuid']))
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-if (!isset($config['access']['user']) || !is_array($config['access']['user']))
-	$config['access']['user'] = array();
+$a_user = &array_make_branch($config,'access','user');
+if(empty($a_user)):
+else:
+	array_sort_key($a_user,'login');
+endif;
 
-array_sort_key($config['access']['user'], "login");
-$a_user = &$config['access']['user'];
 $a_user_system = system_get_user_list();
 $a_group = system_get_group_list();
 

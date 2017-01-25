@@ -41,12 +41,11 @@ if (isset($_POST['uuid']))
 
 $pgtitle = [gtext('Access'),gtext('Groups'),isset($uuid) ? gtext('Edit') : gtext('Add')];
 
-if (!isset($config['access']['group']) || !is_array($config['access']['group']))
-    $config['access']['group'] = array();
-	
-array_sort_key($config['access']['group'], "name");
-
-$a_group = &$config['access']['group'];
+$a_group = &array_make_branch($config,'access','group');
+if(empty($a_group)):
+else:
+	array_sort_key($a_group,'name');
+endif;
 $a_group_system = system_get_group_list();
 
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_group, "uuid")))) {
