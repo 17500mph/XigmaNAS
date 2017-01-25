@@ -39,11 +39,7 @@ $sphere_scriptname = basename(__FILE__);
 
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('Email Setup')];
 $gt_sendtestemailbuttonvalue = gtext('Send Test Email');
-
-if (!isset($config['system']['email']) || !is_array($config['system']['email'])) {
-	$config['system']['email'] = [];
-};
-
+array_make_branch($config,'system','email');
 $pconfig['server'] = $config['system']['email']['server'];
 $pconfig['port'] = $config['system']['email']['port'];
 $pconfig['auth'] = isset($config['system']['email']['auth']);
