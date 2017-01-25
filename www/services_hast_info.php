@@ -36,10 +36,8 @@ require("guiconfig.inc");
 
 $pgtitle = array(gtext("Services"), gtext("HAST"), gtext("Information"));
 
-if (!isset($config['hast']['auxparam']) || !is_array($config['hast']['auxparam']))
-	$config['hast']['auxparam'] = array();
-//if (!isset($config['hast']['hastresource']) || !is_array($config['hast']['hastresource']))
-//	$config['hast']['hastresource'] = array();
+array_make_branch($config,'hast','auxparam');
+//	array_make_branch($config,'hast','hastresource');
 
 function hast_get_status() {
 	global $config;

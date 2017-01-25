@@ -41,10 +41,7 @@ if (isset($_POST['uuid']))
 
 $pgtitle = [gtext('Services'),gtext('FTP'),gtext('Ban List Rule'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
-if (!isset($config['ftpd']['mod_ban']['rule']) || !is_array($config['ftpd']['mod_ban']['rule']))
-	$config['ftpd']['mod_ban']['rule'] = array();
-
-$a_rule = &$config['ftpd']['mod_ban']['rule'];
+$a_rule = &array_make_branch($config,'ftpd','mod_ban','rule');
 
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_rule, "uuid")))) {
 	$pconfig['uuid'] = $a_rule[$cnid]['uuid'];
