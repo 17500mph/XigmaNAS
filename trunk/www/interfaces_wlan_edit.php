@@ -42,11 +42,11 @@ if (isset($_POST['uuid']))
 
 $pgtitle = [gtext('Network'), gtext('Interface Management'), gtext('WLAN'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
-if (!isset($config['vinterfaces']['wlan']) || !is_array($config['vinterfaces']['wlan']))
-	$config['vinterfaces']['wlan'] = array();
-
-$a_wlans = &$config['vinterfaces']['wlan'];
-array_sort_key($a_wlans, "if");
+$a_wlans = &array_make_branch($config,'vinterfaces','wlan');
+if(empty($a_wlans)):
+else:
+	array_sort_key($a_wlans,'if');
+endif;
 
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_wlans, "uuid")))) {
 	$pconfig['enable'] = isset($a_wlans[$cnid]['enable']);
