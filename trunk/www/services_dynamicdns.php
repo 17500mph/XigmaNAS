@@ -36,8 +36,7 @@ require("guiconfig.inc");
 
 $pgtitle = array(gtext("Services"), gtext("Dynamic DNS"));
 
-if (!isset($config['dynamicdns']) || !is_array($config['dynamicdns']))
-	$config['dynamicdns'] = array();
+array_make_branch($config,'dynamicdns');
 
 $pconfig['enable'] = isset($config['dynamicdns']['enable']);
 $pconfig['provider'] = !empty($config['dynamicdns']['provider']) ? $config['dynamicdns']['provider'] : "";

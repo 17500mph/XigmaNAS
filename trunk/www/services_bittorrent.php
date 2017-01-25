@@ -37,8 +37,7 @@ require("services.inc");
 
 $pgtitle = array(gtext("Services"), gtext("BitTorrent"));
 
-if (!isset($config['bittorrent']) || !is_array($config['bittorrent']))
-	$config['bittorrent'] = array();
+array_make_branch($config,'bittorrent');
 
 $os_release = exec('uname -r | cut -d - -f1');
 
