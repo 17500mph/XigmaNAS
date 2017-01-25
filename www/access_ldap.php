@@ -36,19 +36,11 @@ require("guiconfig.inc");
 
 $pgtitle = array(gtext("Access"), gtext("LDAP"));
 
-if (!isset($config['ldap']) || !is_array($config['ldap'])) {
-	$config['ldap'] = array();
-}
-
-if (!isset($config['samba']) || !is_array($config['samba'])) {
-	$config['samba'] = array();
-
-}
+array_make_branch($config,'ldap');
+array_make_branch($config,'samba');
 
 //LDAP take priority over MS ActiveDirectory (NAS4Free choicee), then disable AD:
-if (!isset($config['ad']) || !is_array($config['ad'])) {
-	$config['ad'] = array();
-}
+array_make_branch($config,'ad');
 
 $pconfig['enable'] = isset($config['ldap']['enable']);
 $pconfig['hostname'] = $config['ldap']['hostname'];
