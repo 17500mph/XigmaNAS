@@ -36,11 +36,11 @@ require 'guiconfig.inc';
 
 $pgtitle = [gtext('Network'), gtext('Interface Management'), gtext('VLAN')];
 
-if (!isset($config['vinterfaces']['vlan']) || !is_array($config['vinterfaces']['vlan']))
-	$config['vinterfaces']['vlan'] = array();
-
-$a_vlan = &$config['vinterfaces']['vlan'];
-array_sort_key($a_vlan, "if");
+$a_vlan = &array_make_branch($config,'vinterfaces','vlan');
+if(empty($a_vlan)):
+else:
+	array_sort_key($a_vlan,'if');
+endif;
 
 function vlan_inuse($ifn) {
 	global $config, $g;

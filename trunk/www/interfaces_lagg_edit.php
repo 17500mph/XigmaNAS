@@ -41,11 +41,11 @@ if (isset($_POST['uuid']))
 
 $pgtitle = [gtext('Network'), gtext('Interface Management'), gtext('LAGG'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
-if (!isset($config['vinterfaces']['lagg']) || !is_array($config['vinterfaces']['lagg']))
-	$config['vinterfaces']['lagg'] = array();
-
-$a_lagg = &$config['vinterfaces']['lagg'];
-array_sort_key($a_lagg, "if");
+$a_lagg = &array_make_branch($config,'vinterfaces','lagg');
+if(empty($a_lagg)):
+else:
+	array_sort_key($a_lagg,'if');
+endif;
 
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_lagg, "uuid")))) {
 	$pconfig['enable'] = isset($a_lagg[$cnid]['enable']);
