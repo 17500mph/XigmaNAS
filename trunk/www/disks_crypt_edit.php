@@ -36,11 +36,11 @@ require 'guiconfig.inc';
 
 $pgtitle = [gtext('Disks'),gtext('Encryption'),gtext('Add')];
 
-if (!isset($config['geli']['vdisk']) || !is_array($config['geli']['vdisk']))
-	$config['geli']['vdisk'] = array();
-
-array_sort_key($config['geli']['vdisk'], "devicespecialfile");
-$a_geli = &$config['geli']['vdisk'];
+$a_geli = &array_make_branch($config,'geli','vdisk');
+if(empty($a_geli)):
+else:
+	array_sort_key($a_geli,'devicespecialfile');
+endif;
 
 // Get list of all configured disks (physical and virtual).
 $a_alldisk = get_conf_all_disks_list_filtered();
