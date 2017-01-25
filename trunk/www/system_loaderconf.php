@@ -197,13 +197,12 @@ function loaderconf_process_updatenotification($mode, $data) {
 			break;
 		case UPDATENOTIFY_MODE_DIRTY:
 		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
-			if (is_array($config['system']['loaderconf']['param'])) {
-				$index = array_search_ex($data, $config['system']['loaderconf']['param'], 'uuid');
-				if (false !== $index) {
-					unset($config['system']['loaderconf']['param'][$index]);
-					write_loader_config();
-					write_config();
-				}
+			array_make_branch($config,'system','loaderconf','param');
+			$index = array_search_ex($data, $config['system']['loaderconf']['param'], 'uuid');
+			if (false !== $index) {
+				unset($config['system']['loaderconf']['param'][$index]);
+				write_loader_config();
+				write_config();
 			}
 			break;
 	}
