@@ -41,11 +41,11 @@ if (isset($_POST['uuid']))
 
 $pgtitle = array(gtext("Services"), gtext("HAST"), isset($uuid) ? gtext("Edit") : gtext("Add"));
 
-if (!isset($config['hast']['hastresource']) || !is_array($config['hast']['hastresource']))
-	$config['hast']['hastresource'] = array();
-
-array_sort_key($config['hast']['hastresource'], "name");
-$a_resource = &$config['hast']['hastresource'];
+$a_resource = &array_make_branch($config,'hast','hastresource');
+if(empty($a_resource)):
+else:
+	array_sort_key($a_resource,'name');
+endif;
 
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_resource, "uuid")))) {
 	$pconfig['uuid'] = $a_resource[$cnid]['uuid'];
