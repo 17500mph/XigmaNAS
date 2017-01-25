@@ -41,11 +41,11 @@ if (isset($_POST['uuid']))
 
 $pgtitle = [gtext('Network'), gtext('Hosts'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
-if (!isset($config['system']['hosts']) || !is_array($config['system']['hosts']))
-	$config['system']['hosts'] = array();
-
-array_sort_key($config['system']['hosts'], "name");
-$a_hosts = &$config['system']['hosts'];
+$a_hosts = &array_make_branch($config,'system','hosts');
+if(empty($a_hosts)):
+else:
+	array_sort_key($a_hosts,'name');
+endif;
 
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_hosts, "uuid")))) {
 	$pconfig['uuid'] = $a_hosts[$cnid]['uuid'];
