@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-24 02:10+0000\n"
+"POT-Creation-Date: 2017-01-25 18:33+0000\n"
 "PO-Revision-Date: 2016-03-03 17:10+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-24 19:57+0000\n"
-"X-Generator: Launchpad (build 18312)\n"
+"X-Launchpad-Export-Date: 2017-01-25 18:49+0000\n"
+"X-Generator: Launchpad (build 18315)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -886,6 +886,9 @@ msgstr "八月"
 msgid "Auth Group"
 msgstr "驗證群組"
 
+msgid "Auth Group Settings"
+msgstr ""
+
 msgid "Auth Groups"
 msgstr "驗證群組"
 
@@ -985,8 +988,11 @@ msgstr ""
 msgid "Ban List"
 msgstr "封禁名單"
 
-msgid "Ban list rule"
-msgstr "封禁名單規則"
+msgid "Ban List Rule"
+msgstr ""
+
+msgid "Ban List Rule Settings"
+msgstr ""
 
 msgid "Banner"
 msgstr "歡迎文字"
@@ -3268,6 +3274,9 @@ msgstr "Extent"
 msgid "Extent Name"
 msgstr "Extent 名稱"
 
+msgid "Extent Settings"
+msgstr ""
+
 msgid "Extent name"
 msgstr "Extent 名稱"
 
@@ -4082,6 +4091,9 @@ msgstr "初始化中..."
 msgid "Initiator Group"
 msgstr "啟動器組"
 
+msgid "Initiator Group Settings"
+msgstr ""
+
 msgid "Initiator Groups"
 msgstr "啟動器群組"
 
@@ -4545,6 +4557,9 @@ msgstr "存儲使用文件的位置，例如：%s/backup/.unison"
 msgid "Log"
 msgstr "記錄檔"
 
+msgid "Log Filter"
+msgstr ""
+
 msgid "Log Level"
 msgstr "記錄檔層級"
 
@@ -4920,6 +4935,9 @@ msgstr "更改中"
 
 msgid "Module"
 msgstr "模組"
+
+msgid "Module Settings"
+msgstr ""
 
 msgid "Modules"
 msgstr "模組"
@@ -5799,6 +5817,9 @@ msgstr "用來偵聽的端口。只有動態的或私人的端口可以使用(�
 
 msgid "Portal Group"
 msgstr "門戶組（Portal Group）"
+
+msgid "Portal Group Settings"
+msgstr ""
 
 msgid "Portal Groups"
 msgstr "門戶群組"
@@ -6806,6 +6827,9 @@ msgstr "分享區字元編碼"
 
 msgid "Share Password"
 msgstr "分享密碼"
+
+msgid "Share Settings"
+msgstr ""
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr "分享區密碼不能夠超過 8 個字元。"
@@ -9680,19 +9704,5 @@ msgstr "版本："
 msgid "week days"
 msgstr ""
 
-#~ msgid ""
-#~ "Controls the compression algorithm used for this volume. The 'lzjb' "
-#~ "compression algorithm is optimized for performance while providing decent "
-#~ "data compression. Setting compression to 'On' uses the 'lzjb' compression "
-#~ "algorithm. You can specify the 'gzip' level by using the value 'gzip-N', "
-#~ "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-#~ "Currently, 'gzip' is equivalent to 'gzip-6'."
-#~ msgstr ""
-#~ "控制卷的壓縮算法。'lzjb' 壓縮算法優化了性能，同時提供良好的數據壓縮。壓縮設置為 'On' (開)，使用 'lzjb' 壓縮算法。您可以使用 "
-#~ "gzip-N 值來指定 'gzip' 的壓縮算法階段，其中N是一個整數，從1（最快）到 9（最好壓縮比）。目前，'gzip' 的壓縮階段是 'gzip-"
-#~ "6' 。"
-
-#~ msgid ""
-#~ "ZFS volume size. To specify the size use the following human-readable "
-#~ "suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."
-#~ msgstr "ZFS 卷的容量。要指定的容量大小使用以下後綴（例如 'k'，'KB'，'M'，'Gb' 等）。"
+#~ msgid "Ban list rule"
+#~ msgstr "封禁名單規則"

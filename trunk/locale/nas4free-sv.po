@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-24 02:10+0000\n"
+"POT-Creation-Date: 2017-01-25 18:33+0000\n"
 "PO-Revision-Date: 2017-01-24 06:27+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-24 19:57+0000\n"
-"X-Generator: Launchpad (build 18312)\n"
+"X-Launchpad-Export-Date: 2017-01-25 18:49+0000\n"
+"X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
 "X-Poedit-Language: Swedish\n"
@@ -970,6 +970,9 @@ msgstr "augusti"
 msgid "Auth Group"
 msgstr "Auktoriserad grupp"
 
+msgid "Auth Group Settings"
+msgstr ""
+
 msgid "Auth Groups"
 msgstr "Auktoriserade grupper"
 
@@ -1071,8 +1074,11 @@ msgstr "Balanseringsalgoritm"
 msgid "Ban List"
 msgstr "Spärrlista"
 
-msgid "Ban list rule"
-msgstr "Regel för bannlistning"
+msgid "Ban List Rule"
+msgstr ""
+
+msgid "Ban List Rule Settings"
+msgstr ""
 
 msgid "Banner"
 msgstr "Banderoll"
@@ -3503,6 +3509,9 @@ msgstr "Extent"
 msgid "Extent Name"
 msgstr "Namn på utökning"
 
+msgid "Extent Settings"
+msgstr ""
+
 msgid "Extent name"
 msgstr "Extent namn"
 
@@ -4365,6 +4374,9 @@ msgstr "Initierar..."
 msgid "Initiator Group"
 msgstr "Initieringsgruppen"
 
+msgid "Initiator Group Settings"
+msgstr ""
+
 msgid "Initiator Groups"
 msgstr "Initierargrupper"
 
@@ -4859,6 +4871,9 @@ msgstr "Platsen där arbetsfilerna ska lagras, t.ex. %s/backup/.unison"
 msgid "Log"
 msgstr "Logg"
 
+msgid "Log Filter"
+msgstr ""
+
 msgid "Log Level"
 msgstr "Loggnivå"
 
@@ -5242,6 +5257,9 @@ msgstr "Modifierar"
 
 msgid "Module"
 msgstr "Modul"
+
+msgid "Module Settings"
+msgstr ""
 
 msgid "Modules"
 msgstr "Moduler"
@@ -6161,6 +6179,9 @@ msgstr ""
 
 msgid "Portal Group"
 msgstr "Portalgrupp"
+
+msgid "Portal Group Settings"
+msgstr ""
 
 msgid "Portal Groups"
 msgstr "Portalgrupper"
@@ -7219,6 +7240,9 @@ msgstr "Dela teckenuppsättning"
 
 msgid "Share Password"
 msgstr "Dela Lösenord"
+
+msgid "Share Settings"
+msgstr ""
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr "Delade lösenord kan inte innehålla fler än 8 tecken."
@@ -10432,23 +10456,5 @@ msgstr "version:"
 msgid "week days"
 msgstr "veckodagar"
 
-#~ msgid ""
-#~ "Controls the compression algorithm used for this volume. The 'lzjb' "
-#~ "compression algorithm is optimized for performance while providing decent "
-#~ "data compression. Setting compression to 'On' uses the 'lzjb' compression "
-#~ "algorithm. You can specify the 'gzip' level by using the value 'gzip-N', "
-#~ "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-#~ "Currently, 'gzip' is equivalent to 'gzip-6'."
-#~ msgstr ""
-#~ "Styr komprimeringsalgoritmerna för den här volymen. Komprimeringsalgoritmen "
-#~ "'lzjb' är optimerad för prestanda och har måttlig komprimeringsgrad. 'lzjb' -"
-#~ "algoritmen används när komprimering är inställd på 'På'. Du kan ange 'gzip' "
-#~ "nivå med 'gzip-N' där N är ett heltal från 1 (snabbast) till 9 (bästa "
-#~ "komprimeringsgrad). För nuvarande är 'gzip' ekvivalent med 'gzip-6'."
-
-#~ msgid ""
-#~ "ZFS volume size. To specify the size use the following human-readable "
-#~ "suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."
-#~ msgstr ""
-#~ "Storlek för ZFS volym. Använd någon av följande suffix för att ange storlek "
-#~ "(till exempel \"k\", \"KB\", \"M\", \"GB \", etc.)-"
+#~ msgid "Ban list rule"
+#~ msgstr "Regel för bannlistning"

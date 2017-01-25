@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-24 02:10+0000\n"
+"POT-Creation-Date: 2017-01-25 18:33+0000\n"
 "PO-Revision-Date: 2017-01-05 23:54+0000\n"
 "Last-Translator: Piotr Łobuz <ericsson@go2.pl>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-24 19:57+0000\n"
-"X-Generator: Launchpad (build 18312)\n"
+"X-Launchpad-Export-Date: 2017-01-25 18:49+0000\n"
+"X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: POLAND\n"
 "Language: \n"
 "X-Poedit-Language: Polish\n"
@@ -961,6 +961,9 @@ msgstr "Sierpień"
 msgid "Auth Group"
 msgstr "Grupa zabezpieczeń"
 
+msgid "Auth Group Settings"
+msgstr ""
+
 msgid "Auth Groups"
 msgstr "Grupy zabezpieczeń"
 
@@ -1064,8 +1067,11 @@ msgstr ""
 msgid "Ban List"
 msgstr "Lista zablokowanych"
 
-msgid "Ban list rule"
-msgstr "Zasady czarnej listy"
+msgid "Ban List Rule"
+msgstr ""
+
+msgid "Ban List Rule Settings"
+msgstr ""
 
 msgid "Banner"
 msgstr "Baner"
@@ -3411,6 +3417,9 @@ msgstr "Zakres"
 msgid "Extent Name"
 msgstr "Nazwa zakresu"
 
+msgid "Extent Settings"
+msgstr ""
+
 msgid "Extent name"
 msgstr "Nazwa zakresu"
 
@@ -4255,6 +4264,9 @@ msgstr "Inicjalizacja..."
 msgid "Initiator Group"
 msgstr "Grupa inicjatorów"
 
+msgid "Initiator Group Settings"
+msgstr ""
+
 msgid "Initiator Groups"
 msgstr "Grupy inicjatorów"
 
@@ -4741,6 +4753,9 @@ msgstr ""
 msgid "Log"
 msgstr "Dziennik"
 
+msgid "Log Filter"
+msgstr ""
+
 msgid "Log Level"
 msgstr "Poziom logowania"
 
@@ -5121,6 +5136,9 @@ msgstr "Modyfikacja"
 
 msgid "Module"
 msgstr "Moduł"
+
+msgid "Module Settings"
+msgstr ""
 
 msgid "Modules"
 msgstr "Moduły"
@@ -6024,6 +6042,9 @@ msgstr ""
 
 msgid "Portal Group"
 msgstr "Grupa portali"
+
+msgid "Portal Group Settings"
+msgstr ""
 
 msgid "Portal Groups"
 msgstr "Grupy portali"
@@ -7059,6 +7080,9 @@ msgstr "Kodowanie znaków dla udziału"
 
 msgid "Share Password"
 msgstr "Hasło udziału"
+
+msgid "Share Settings"
+msgstr ""
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr "Hasła udziału nie mogą być dłuższe niż 8 znaków."
@@ -10074,24 +10098,5 @@ msgstr "wersja:"
 msgid "week days"
 msgstr ""
 
-#~ msgid ""
-#~ "ZFS volume size. To specify the size use the following human-readable "
-#~ "suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."
-#~ msgstr ""
-#~ "WIelkość woluminu ZFS. Do sprecyzowania wielkości użyj jednostek (na "
-#~ "przykład 'k','kB','M','Gb' itd.)."
-
-#~ msgid ""
-#~ "Controls the compression algorithm used for this volume. The 'lzjb' "
-#~ "compression algorithm is optimized for performance while providing decent "
-#~ "data compression. Setting compression to 'On' uses the 'lzjb' compression "
-#~ "algorithm. You can specify the 'gzip' level by using the value 'gzip-N', "
-#~ "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-#~ "Currently, 'gzip' is equivalent to 'gzip-6'."
-#~ msgstr ""
-#~ "Kontroluje algorytm kompresji użyty w tym dataset'cie. Kompresja 'lzjb' jest "
-#~ "zoptymalizowana dla szybkości, jednakże wciąż daje dobry poziom pakowania. "
-#~ "Ustawienie na 'Włączony' użyje 'lzjb' algorytm. Możesz specyfikować 'gzip' "
-#~ "poziomprzez używanie wartości 'gzip-N', gdzie N jest liczba całkowitą od 1 "
-#~ "(najszybszy) do 9 (najlepsza kompresja). W tej chwili 'gzip' jest ustawiony "
-#~ "na poziomie 'gzip-6'."
+#~ msgid "Ban list rule"
+#~ msgstr "Zasady czarnej listy"

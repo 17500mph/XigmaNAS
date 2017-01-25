@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-24 02:10+0000\n"
+"POT-Creation-Date: 2017-01-25 18:33+0000\n"
 "PO-Revision-Date: 2016-11-21 20:27+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-24 19:57+0000\n"
-"X-Generator: Launchpad (build 18312)\n"
+"X-Launchpad-Export-Date: 2017-01-25 18:49+0000\n"
+"X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
 "X-Poedit-Language: Japanese\n"
@@ -905,6 +905,9 @@ msgstr "8月"
 msgid "Auth Group"
 msgstr "認証グループ"
 
+msgid "Auth Group Settings"
+msgstr ""
+
 msgid "Auth Groups"
 msgstr "認証グループ"
 
@@ -1004,8 +1007,11 @@ msgstr ""
 msgid "Ban List"
 msgstr "接続拒否リスト"
 
-msgid "Ban list rule"
-msgstr "接続拒否ルール"
+msgid "Ban List Rule"
+msgstr ""
+
+msgid "Ban List Rule Settings"
+msgstr ""
 
 msgid "Banner"
 msgstr "バナー"
@@ -3304,6 +3310,9 @@ msgstr "エクステント"
 msgid "Extent Name"
 msgstr "エクステント名"
 
+msgid "Extent Settings"
+msgstr ""
+
 msgid "Extent name"
 msgstr "エクステント名"
 
@@ -4128,6 +4137,9 @@ msgstr "初期化しています..."
 msgid "Initiator Group"
 msgstr "イニシエータグループ"
 
+msgid "Initiator Group Settings"
+msgstr ""
+
 msgid "Initiator Groups"
 msgstr "イニシエータグループ"
 
@@ -4601,6 +4613,9 @@ msgstr "作業ファイルが保存される場所を指定します。例) %s/b
 msgid "Log"
 msgstr "ログ"
 
+msgid "Log Filter"
+msgstr ""
+
 msgid "Log Level"
 msgstr "ログレベル"
 
@@ -4978,6 +4993,9 @@ msgstr "修正"
 
 msgid "Module"
 msgstr "モジュール"
+
+msgid "Module Settings"
+msgstr ""
 
 msgid "Modules"
 msgstr "モジュール"
@@ -5861,6 +5879,9 @@ msgstr "待ち受けるポート番号。専用もしくは動的な範囲 (%d �
 
 msgid "Portal Group"
 msgstr "ポータルグループ"
+
+msgid "Portal Group Settings"
+msgstr ""
 
 msgid "Portal Groups"
 msgstr "ポータルグループ"
@@ -6874,6 +6895,9 @@ msgstr "共有文字セット"
 
 msgid "Share Password"
 msgstr "共有パスワード"
+
+msgid "Share Settings"
+msgstr ""
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr "共有パスワードは 8 文字以内にしてください。"
@@ -9794,19 +9818,5 @@ msgstr "バージョン:"
 msgid "week days"
 msgstr ""
 
-#~ msgid ""
-#~ "Controls the compression algorithm used for this volume. The 'lzjb' "
-#~ "compression algorithm is optimized for performance while providing decent "
-#~ "data compression. Setting compression to 'On' uses the 'lzjb' compression "
-#~ "algorithm. You can specify the 'gzip' level by using the value 'gzip-N', "
-#~ "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-#~ "Currently, 'gzip' is equivalent to 'gzip-6'."
-#~ msgstr ""
-#~ "ボリュームで使用される圧縮アルゴリズムを制御します。'lzjb' 圧縮アルゴリズムはデータ圧縮のパフォーマンスに最適化します。'On' は 'lzjb' "
-#~ "圧縮アルゴリズムを使用します。'gzip-N' で 'gzip' の圧縮レベルを指定できます。N は数値で、1 (最速) から 9 (最高圧縮率) "
-#~ "です。現在、'gzip' は 'gzip-6' の指定と同じです。"
-
-#~ msgid ""
-#~ "ZFS volume size. To specify the size use the following human-readable "
-#~ "suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."
-#~ msgstr "サイズを指定するには、以下の人間が読める接尾語を使用してください。(例えば、'k', 'KB', 'M', 'Gb', など)"
+#~ msgid "Ban list rule"
+#~ msgstr "接続拒否ルール"

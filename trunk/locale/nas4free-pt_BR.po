@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-24 02:10+0000\n"
-"PO-Revision-Date: 2015-06-11 17:41+0000\n"
-"Last-Translator: Flavio Peinado <flavio@peinado.com.br>\n"
+"POT-Creation-Date: 2017-01-25 18:33+0000\n"
+"PO-Revision-Date: 2017-01-25 01:04+0000\n"
+"Last-Translator: Mostrow S. <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-24 19:57+0000\n"
-"X-Generator: Launchpad (build 18312)\n"
+"X-Launchpad-Export-Date: 2017-01-25 18:49+0000\n"
+"X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: Brazilian Portuguese\n"
 "Language: \n"
 "X-Poedit-Language: Brazilian Portuguese\n"
@@ -24,7 +24,7 @@ msgstr " foi atribuído a "
 
 #, php-format
 msgid "%1$s is used to create %2$s volumes."
-msgstr ""
+msgstr "%1$s é utilizado para criar %2$s volumes."
 
 #, php-format
 msgid "%d days"
@@ -56,23 +56,23 @@ msgstr "%dB / bloco"
 
 #, php-format
 msgid "%s Interface"
-msgstr ""
+msgstr "%s Interface"
 
 #, php-format
 msgid "%s already exists as a %s."
-msgstr ""
+msgstr "%s já existe como %s."
 
 #, php-format
 msgid "%s already exists."
-msgstr ""
+msgstr "%s já existe."
 
 #, php-format
 msgid "%s is already configured as a filesystem."
-msgstr ""
+msgstr "%s já está configurado como um sistema de arquivos."
 
 #, php-format
 msgid "%s is already configured as a volume."
-msgstr ""
+msgstr "%s já está configurado como um volume."
 
 #, php-format
 msgid "%s is too long."
@@ -82,6 +82,8 @@ msgstr "%s é demasiadamente longo."
 msgid ""
 "%s must be enabled for Unison to work, and the %s must have shell access."
 msgstr ""
+"%s deve estar ativado para o Unison funcionar, e %s deve ter permissão para "
+"o shell."
 
 #, php-format
 msgid "%s of %sB"
@@ -109,13 +111,14 @@ msgstr "%sB usados de %sB"
 
 #, php-format
 msgid "'%s' deletes all statistical data from the graphs!"
-msgstr ""
+msgstr "'%s' apaga todos os dados estatísticos dos gráficos!"
 
 msgid "(Change if needed)"
-msgstr ""
+msgstr "(Alterar se necessário)"
 
 msgid "(Found in a Maxtor 6B200M0 200GB and Maxtor 2R015H1 15GB disks)."
 msgstr ""
+"(Encontrado(a) nos discos Maxtor 6B200M0 200GB e Maxtor 2R015H1 de 15GB )."
 
 msgid ""
 "(Kingston)Counts the number of flash erase failures. This Attribute returns "
@@ -137,6 +140,13 @@ msgid ""
 "different structure for different vendors and is often not meaningful as a "
 "decimal number."
 msgstr ""
+"(Valor bruto específico de fabricante.) A taxa de erros de busca dos "
+"cabeçotes magnéticos. Se há alguma falha parcial no sistema de "
+"posicionamento mecânico, erros de busca ocorrerão. Tal falha pode ser "
+"consequência de diversos fatores, como um (motor)servo estragado, ou "
+"enlargamento térmico do disco rígido. O valor bruto possui estruturas "
+"diferentes dependendo de cada fabricante, e normalmente não possui "
+"significado como um número decimal."
 
 msgid ""
 "(Vendor specific raw value.) Stores data related to the rate of hardware "
@@ -144,15 +154,22 @@ msgid ""
 "value has different structure for different vendors and is often not "
 "meaningful as a decimal number."
 msgstr ""
+"(Valor bruto específico de fabricante.) Armazena dados relacionados à taxa "
+"de falha de leitura de hardware que ocorreram enquanto eram lidos dados da "
+"superfície do disco.O valor bruto possui estruturas diferentes dependendo de "
+"cada fabricante, e normalmente não possui significado como um número decimal."
 
 msgid ""
 "(Vendor-specific raw value.) The raw value has different structure for "
 "different vendors and is often not meaningful as a decimal number."
 msgstr ""
+"(Valor bruto específico de fabricante.) O valor bruto possui estruturas "
+"diferentes dependendo de cada fabricante, e normalmente não possui "
+"significado como um número decimal."
 
 #, php-format
 msgid "(default %s %s"
-msgstr ""
+msgstr "(padrão %s %s"
 
 msgid "*** Imported duplicate ***"
 msgstr "*** Importação duplicada ***"
@@ -163,19 +180,19 @@ msgstr ""
 "especificada"
 
 msgid "1 or more disks are required to build a JBOD volume."
-msgstr ""
+msgstr "1 ou mais discos são necessários para construir um volume JBOD."
 
 msgid "1 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "1 ou mais discos são necessários para construir um volume RAID-1."
 
 msgid "2 or more disks are required to build a RAID-0 volume."
-msgstr ""
+msgstr "2 ou mais discos são necessários para construir um volume RAID-0"
 
 msgid "2 or more disks are required to build a RAID-1 volume."
-msgstr ""
+msgstr "2 ou mais discos são necessários para construir um volume RAID-1"
 
 msgid "3 or more disks are required to build a RAID-5 volume."
-msgstr ""
+msgstr "3 ou mais discos são necessários para construir um volume RAID-5."
 
 msgid "4KB wrapper"
 msgstr "4KB envólucro"
@@ -247,18 +264,20 @@ msgstr ""
 "precedidos por '0x'."
 
 msgid "A mounted RAID volume cannot be deleted."
-msgstr ""
+msgstr "Um volume RAID montado não pode ser apagado."
 
 msgid ""
 "A mounted disk or partition will be unmounted temporarily to perform the "
 "requested action."
 msgstr ""
+"Um disco ou partição montado será desmontado temporariamente para realizar a "
+"ação solicitada."
 
 msgid "A reload request has been sent to the daemon."
-msgstr ""
+msgstr "Uma solicitação de recarregar foi enviada para o daemon."
 
 msgid "A rescan has been issued."
-msgstr ""
+msgstr "Uma re-varredura foi expedida."
 
 msgid "A route to this destination network already exists."
 msgstr "Já existe uma rota para esta rede de destino."
@@ -269,6 +288,10 @@ msgid ""
 "been turned entirely off (disconnected from power source) and when the hard "
 "disk returns from having previously been put to sleep mode."
 msgstr ""
+"Contagem dos ciclos de início/parada do eixo do disco. Quando o eixo é "
+"ligado, a contagem é incrementada, tanto quando o disco é ligado após ter "
+"sido completamente desligado (desconectado da fonte de energia) como quando "
+"o disco retorna do modo de suspensão."
 
 msgid "A valid IP address must be specified."
 msgstr "Um endereço IP válido deve ser especificado."
@@ -370,19 +393,19 @@ msgid "ARP Tables"
 msgstr "Tabelas ARP"
 
 msgid "ARP Tables List"
-msgstr ""
+msgstr "Lista de Tabelas ARP"
 
 msgid "ATTRIBUTE NAME"
-msgstr ""
+msgstr "NOME DO ATRIBUTO"
 
 msgid "Accept remote syslog messages."
-msgstr ""
+msgstr "Aceitas mensagens remotas do syslog."
 
 msgid "Access"
 msgstr "Acesso"
 
 msgid "Access Mode"
-msgstr ""
+msgstr "Modo de Acesso"
 
 msgid "Access Restrictions"
 msgstr "Restrições de acesso"
@@ -394,7 +417,7 @@ msgid "Access mode"
 msgstr "Modo de Acesso"
 
 msgid "Access the webGUI with the new IP address"
-msgstr ""
+msgstr "Acesse a interface web (webGUI) do novo endereço IP"
 
 msgid "Acoustic level"
 msgstr "Nível acústico"
@@ -416,7 +439,7 @@ msgstr ""
 "erro foi detectado, ou se um comando S.M.A.R.T. para um disco falhar."
 
 msgid "Active"
-msgstr ""
+msgstr "Ativo"
 
 msgid "Active Directory"
 msgstr "Diretório Ativo"
@@ -431,19 +454,19 @@ msgid "Active Users"
 msgstr "Usuários Ativos"
 
 msgid "Activities"
-msgstr ""
+msgstr "Atividades"
 
 msgid "Activity"
-msgstr ""
+msgstr "Atividade"
 
 msgid "Adaptive (Low Power Consumption)"
-msgstr ""
+msgstr "Adaptativo (Baixo Consumo de Energia)"
 
 msgid "Add"
 msgstr "Adicionar"
 
 msgid "Add Dataset"
-msgstr ""
+msgstr "Criar Conjunto de Dados"
 
 msgid "Add Group"
 msgstr ""
@@ -931,6 +954,9 @@ msgstr ""
 msgid "Auth Group"
 msgstr "Grupo de Autenticação"
 
+msgid "Auth Group Settings"
+msgstr ""
+
 msgid "Auth Groups"
 msgstr "Grupos de Autenticação"
 
@@ -1030,8 +1056,11 @@ msgstr ""
 msgid "Ban List"
 msgstr ""
 
-msgid "Ban list rule"
-msgstr "Regra da lista de banidos"
+msgid "Ban List Rule"
+msgstr ""
+
+msgid "Ban List Rule Settings"
+msgstr ""
 
 msgid "Banner"
 msgstr "Faixa"
@@ -3369,6 +3398,9 @@ msgstr "Extent"
 msgid "Extent Name"
 msgstr "Nome do 'extent'"
 
+msgid "Extent Settings"
+msgstr ""
+
 msgid "Extent name"
 msgstr "Nome do 'extent'"
 
@@ -4222,6 +4254,9 @@ msgstr ""
 msgid "Initiator Group"
 msgstr "Grupo de Initiator"
 
+msgid "Initiator Group Settings"
+msgstr ""
+
 msgid "Initiator Groups"
 msgstr "Grupos de Initiators"
 
@@ -4710,6 +4745,9 @@ msgstr ""
 msgid "Log"
 msgstr "Log"
 
+msgid "Log Filter"
+msgstr ""
+
 msgid "Log Level"
 msgstr "Nível de Log"
 
@@ -5090,6 +5128,9 @@ msgstr "Modificando"
 
 msgid "Module"
 msgstr "Módulo"
+
+msgid "Module Settings"
+msgstr ""
 
 msgid "Modules"
 msgstr "Módulos"
@@ -5999,6 +6040,9 @@ msgstr ""
 
 msgid "Portal Group"
 msgstr "Grupo de Portal"
+
+msgid "Portal Group Settings"
+msgstr ""
 
 msgid "Portal Groups"
 msgstr "Grupos de Portal"
@@ -7037,6 +7081,9 @@ msgstr "Conjunto de Caracteres do Compartilhamento"
 
 msgid "Share Password"
 msgstr "Senha do compartilhamento"
+
+msgid "Share Settings"
+msgstr ""
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr "Senhas de compartilhamentos não pode ter mais do que 8 caracteres."
@@ -10126,24 +10173,5 @@ msgstr "versão:"
 msgid "week days"
 msgstr ""
 
-#~ msgid ""
-#~ "Controls the compression algorithm used for this volume. The 'lzjb' "
-#~ "compression algorithm is optimized for performance while providing decent "
-#~ "data compression. Setting compression to 'On' uses the 'lzjb' compression "
-#~ "algorithm. You can specify the 'gzip' level by using the value 'gzip-N', "
-#~ "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-#~ "Currently, 'gzip' is equivalent to 'gzip-6'."
-#~ msgstr ""
-#~ "Controla o algoritmo de compressão usado para este volume. O algoritmo de "
-#~ "compressão 'lzjb' é otimizado para melhor desempenho, mantendo uma taxa de "
-#~ "compressão razoável. Defina a compressão como 'Ligado' para usar o algoritmo "
-#~ "de compressão 'lzjb'. Você pode também especificar o nível de 'gzip' "
-#~ "alterando o valor de 'gzip-N', onde N é um número inteiro de 1 (mais rápido) "
-#~ "a 9 (melhor taxa de compressão). O valor atual de 'gzip' é 6."
-
-#~ msgid ""
-#~ "ZFS volume size. To specify the size use the following human-readable "
-#~ "suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."
-#~ msgstr ""
-#~ "Tamanho do volume ZFS. Para especificar o tamanho use os seguintes sufixos "
-#~ "(por exemplo, 'k', 'KB', 'M', 'Gb', etc.)."
+#~ msgid "Ban list rule"
+#~ msgstr "Regra da lista de banidos"
