@@ -41,12 +41,11 @@ if (isset($_POST['uuid']))
 
 $pgtitle = array(gtext("Network"), gtext("Firewall"), gtext("Rule"), isset($uuid) ? gtext("Edit") : gtext("Add"));
 
-if (!isset($config['system']['firewall']['rule']) || !is_array($config['system']['firewall']['rule']))
-	$config['system']['firewall']['rule'] = array();
-
-array_sort_key($config['system']['firewall']['rule'], "ruleno");
-$a_rule = &$config['system']['firewall']['rule'];
-
+$a_rule = &array_make_branch($config,'system','firewall','rule');
+if(empty($a_rule)):
+else:
+	array_sort_key($a_rule,'ruleno');
+endif;
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_rule, "uuid")))) {
 	$pconfig['uuid'] = $a_rule[$cnid]['uuid'];
 	$pconfig['enable'] = isset($a_rule[$cnid]['enable']);

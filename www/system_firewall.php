@@ -101,9 +101,7 @@ if (isset($_POST['export']) && $_POST['export']) {
 			$errormsg = gtext("Invalid file format.");
 		} else {
 			// Take care array already exists.
-			if (!isset($config['system']['firewall']['rule']) || !is_array($config['system']['firewall']['rule']))
-				$config['system']['firewall']['rule'] = array();
-
+			array_make_branch($config,'system','firewall','rule');
 			// Import rules.
 			foreach ($data['rule'] as $rule) {
 				// Check if rule already exists.
@@ -147,12 +145,11 @@ if (isset($_POST['export']) && $_POST['export']) {
 	}
 }
 
-if (!isset($config['system']['firewall']['rule']) || !is_array($config['system']['firewall']['rule']))
-	$config['system']['firewall']['rule'] = array();
-
-
-array_sort_key($config['system']['firewall']['rule'], "ruleno");
-$a_rule = &$config['system']['firewall']['rule'];
+$a_rule = &array_make_branch($config,'system','firewall','rule');
+if(empty($a_rule)):
+else:
+	array_sort_key($a_rule,'ruleno');
+endif;
 
 if (isset($_GET['act']) && $_GET['act'] === "del") {
 	if ($_GET['uuid'] === "all") {
