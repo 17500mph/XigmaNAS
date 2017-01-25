@@ -35,10 +35,7 @@ require("auth.inc");
 require("guiconfig.inc");
 
 $pgtitle = array(gtext("System"), gtext("Shutdown"), gtext("Scheduled"));
-
-if (!isset($config['shutdown']) || !is_array($config['shutdown']))
-	$config['shutdown'] = array();
-
+array_make_branch($config,'shutdown');
 $pconfig['enable'] = isset($config['shutdown']['enable']);
 $pconfig['minute'] = $config['shutdown']['minute'];
 $pconfig['hour'] = $config['shutdown']['hour'];
