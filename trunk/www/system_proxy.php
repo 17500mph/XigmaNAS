@@ -36,11 +36,8 @@ require 'guiconfig.inc';
 
 $pgtitle = [gtext('Network'), gtext('Proxy')];
 
-if (!isset($config['system']['proxy']['http']) || !is_array($config['system']['proxy']['http']))
-	$config['system']['proxy']['http'] = array();
-
-if (!isset($config['system']['proxy']['ftp']) || !is_array($config['system']['proxy']['ftp']))
-	$config['system']['proxy']['ftp'] = array();
+array_make_branch($config,'system','proxy','http');
+array_make_branch($config,'system','proxy','ftp');
 
 $pconfig['http_enable'] = isset($config['system']['proxy']['http']['enable']);
 $pconfig['http_address'] = $config['system']['proxy']['http']['address'];
