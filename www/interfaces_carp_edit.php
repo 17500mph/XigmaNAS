@@ -41,11 +41,11 @@ if (isset($_POST['uuid']))
 
 $pgtitle = [gtext('Network'), gtext('Interface Management'), gtext('CARP'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
-if (!isset($config['vinterfaces']['carp']) || !is_array($config['vinterfaces']['carp']))
-	$config['vinterfaces']['carp'] = array();
-
-$a_carp = &$config['vinterfaces']['carp'];
-array_sort_key($a_carp, "if");
+$a_carp = &array_make_branch($config,'vinterfaces','carp');
+if(empty($a_carp)):
+else:
+	array_sort_key($a_carp,'if');
+endif;
 
 $default_linkup = "/usr/local/sbin/carp-hast-switch master";
 $default_linkdown = "/usr/local/sbin/carp-hast-switch slave";

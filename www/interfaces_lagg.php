@@ -36,12 +36,11 @@ require 'guiconfig.inc';
 
 $pgtitle = [gtext('Network'), gtext('Interface Management'), gtext('LAGG')];
 
-if (!isset($config['vinterfaces']['lagg']) || !is_array($config['vinterfaces']['lagg']))
-	$config['vinterfaces']['lagg'] = array();
-
-
-$a_lagg = &$config['vinterfaces']['lagg'];
-array_sort_key($a_lagg, "if");
+$a_lagg = &array_make_branch($config,'vinterfaces','lagg');
+if(empty($a_lagg)):
+else:
+	array_sort_key($a_lagg,'if');
+endif;
 
 function lagg_inuse($ifn) {
 	global $config, $g;
