@@ -31,16 +31,13 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Diagnostics"), gtext("Information"), gtext("MS Active Directory"));
-
-if (!isset($config['ad']) || !is_array($config['ad']))
-	$config['ad'] = array();
-
+array_make_branch($config,'ad');
+$pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('MS Active Directory')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
 	<td class="tabnavtbl">
@@ -110,4 +107,4 @@ if (!isset($config['ad']) || !is_array($config['ad']))
 		</td>
 	</tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
