@@ -47,8 +47,7 @@ if (isset($_GET['action'])) {
 	$action = $_GET['action'];
 }
 
-if (!isset($config['mounts']['mount']) || !is_array($config['mounts']['mount']))
-	$config['mounts']['mount'] = array();
+array_make_branch($config,'mounts','mount');
 
 if ($_POST) {
 	unset($input_errors);

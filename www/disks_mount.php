@@ -65,13 +65,11 @@ if ($_POST) {
 		exit;
 	}
 }
-
-if (!isset($config['mounts']['mount']) || !is_array($config['mounts']['mount']))
-	$config['mounts']['mount'] = array();
-
-array_sort_key($config['mounts']['mount'], "devicespecialfile");
-$a_mount = &$config['mounts']['mount'];
-
+$a_mount = &array_make_branch($config,'mounts','mount');
+if(empty($a_mount)):
+else:
+	array_sort_key($a_mount,'devicespecialfile');
+endif;
 if (isset($_GET['act']) && $_GET['act'] === "del") {
 	$index = array_search_ex($_GET['uuid'], $config['mounts']['mount'], "uuid");
 	if (false !== $index) {

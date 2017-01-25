@@ -40,12 +40,11 @@ $gt_remark_1 = gtext('A mounted disk or partition will be unmounted temporarily 
 
 $pgtitle = [gtext('Disks'),gtext('Mount Point'),gtext('Fsck')];
 
-if (!isset($config['mounts']['mount']) || !is_array($config['mounts']['mount']))
-	$config['mounts']['mount'] = array();
-
-array_sort_key($config['mounts']['mount'], "devicespecialfile");
-
-$a_mount = $config['mounts']['mount'];
+$a_mount = &array_make_branch($config,'mounts','mount');
+if(empty($a_mount)):
+else:
+	array_sort_key($a_mount,'devicespecialfile');
+endif;
 
 if ($_POST) {
 	unset($input_errors);
