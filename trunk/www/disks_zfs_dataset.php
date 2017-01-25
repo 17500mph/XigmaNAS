@@ -58,7 +58,10 @@ $gt_selection_delete_confirm = gtext('Do you want to delete selected datasets?')
 
 // sunrise: verify if setting exists, otherwise run init tasks
 $sphere_array = &array_make_branch($config,'zfs','datasets','dataset');
-array_sort_key($sphere_array,'name');
+if(empty($sphere_array)):
+else:
+	array_sort_key($sphere_array,'name');
+endif;
 
 if ($_POST):
 	if(isset($_POST['apply']) && $_POST['apply']):
