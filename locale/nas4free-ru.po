@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-24 02:10+0000\n"
+"POT-Creation-Date: 2017-01-25 18:33+0000\n"
 "PO-Revision-Date: 2017-01-24 07:07+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-24 19:57+0000\n"
-"X-Generator: Launchpad (build 18312)\n"
+"X-Launchpad-Export-Date: 2017-01-25 18:49+0000\n"
+"X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
 "X-Poedit-Language: Russian\n"
@@ -982,6 +982,9 @@ msgstr "августа"
 msgid "Auth Group"
 msgstr "Группа аутентификации"
 
+msgid "Auth Group Settings"
+msgstr ""
+
 msgid "Auth Groups"
 msgstr "Группы аутентификации (AG)"
 
@@ -1084,8 +1087,11 @@ msgstr "Алгоритм баланса"
 msgid "Ban List"
 msgstr "Черный список"
 
-msgid "Ban list rule"
-msgstr "Правило 'Ban list'"
+msgid "Ban List Rule"
+msgstr ""
+
+msgid "Ban List Rule Settings"
+msgstr ""
 
 msgid "Banner"
 msgstr "Приветствие"
@@ -3553,6 +3559,9 @@ msgstr "Экстент"
 msgid "Extent Name"
 msgstr "Название экстента"
 
+msgid "Extent Settings"
+msgstr ""
+
 msgid "Extent name"
 msgstr "Название экстента"
 
@@ -4422,6 +4431,9 @@ msgstr "Инициализация…"
 msgid "Initiator Group"
 msgstr "Группа инициаторов"
 
+msgid "Initiator Group Settings"
+msgstr ""
+
 msgid "Initiator Groups"
 msgstr "Группы инициаторов (IG)"
 
@@ -4935,6 +4947,9 @@ msgstr ""
 msgid "Log"
 msgstr "Журнал"
 
+msgid "Log Filter"
+msgstr ""
+
 msgid "Log Level"
 msgstr "Уровень журналирования"
 
@@ -5323,6 +5338,9 @@ msgstr "Изменение"
 
 msgid "Module"
 msgstr "Модуль"
+
+msgid "Module Settings"
+msgstr ""
 
 msgid "Modules"
 msgstr "Модули"
@@ -6246,6 +6264,9 @@ msgstr ""
 
 msgid "Portal Group"
 msgstr "Группа порталов"
+
+msgid "Portal Group Settings"
+msgstr ""
 
 msgid "Portal Groups"
 msgstr "Группы порталов (PG)"
@@ -7320,6 +7341,9 @@ msgstr "Кодировка общего ресурса"
 
 msgid "Share Password"
 msgstr "Пароль общего ресурса"
+
+msgid "Share Settings"
+msgstr ""
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr "Пароли общих ресурсов не могут быть больше 8 символов."
@@ -10571,24 +10595,5 @@ msgstr "версия:"
 msgid "week days"
 msgstr "дней недели"
 
-#~ msgid ""
-#~ "Controls the compression algorithm used for this volume. The 'lzjb' "
-#~ "compression algorithm is optimized for performance while providing decent "
-#~ "data compression. Setting compression to 'On' uses the 'lzjb' compression "
-#~ "algorithm. You can specify the 'gzip' level by using the value 'gzip-N', "
-#~ "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-#~ "Currently, 'gzip' is equivalent to 'gzip-6'."
-#~ msgstr ""
-#~ "Алгоритм сжатия данного раздела. Алгоритм 'lzjb' оптимизирован по "
-#~ "производительности и обеспечивает достаточное сжатие данных. Установка "
-#~ "сжатия в 'Включено' использует алгоритм 'lzjb'. Вы можете задать "
-#~ "использование уровня сжатия алгоритма  'gzip' указав 'gzip-N', где N -- это "
-#~ "цифра от 1 (максимальная скорость сжатия) до 9 (максимальное сжатие данных). "
-#~ "На данный момент 'gzip' эквивалентен 'gzip-6'."
-
-#~ msgid ""
-#~ "ZFS volume size. To specify the size use the following human-readable "
-#~ "suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."
-#~ msgstr ""
-#~ "Размер раздела ZFS. Испльзуйте человеческие суффиксы для указания размера "
-#~ "(например 'k', 'KB', 'M', 'Gb', и т.д.)."
+#~ msgid "Ban list rule"
+#~ msgstr "Правило 'Ban list'"

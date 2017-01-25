@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-24 02:10+0000\n"
-"PO-Revision-Date: 2017-01-24 01:36+0000\n"
+"POT-Creation-Date: 2017-01-25 18:33+0000\n"
+"PO-Revision-Date: 2017-01-25 18:44+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-24 19:57+0000\n"
-"X-Generator: Launchpad (build 18312)\n"
+"X-Launchpad-Export-Date: 2017-01-25 18:49+0000\n"
+"X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
 "X-Poedit-Language: Dutch\n"
@@ -548,7 +548,7 @@ msgid "Add disk"
 msgstr "Schijf toevoegen"
 
 msgid "Add extent"
-msgstr "Extentie toevoegen"
+msgstr "Extent toevoegen"
 
 msgid "Add initiator"
 msgstr "Initiator toevoegen"
@@ -861,7 +861,7 @@ msgstr ""
 "gebruikers en wachtwoorden als extra beveiliging."
 
 msgid "An Extent defines the storage area of the Target."
-msgstr "Extenties definiëren het opslaggebied van de Doel."
+msgstr "Een Extent definieërt het opslaggebied van de Doel."
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
@@ -968,7 +968,7 @@ msgid ""
 "made up of one or more extents."
 msgstr ""
 "Op het hoogste niveau, een doel is wat is gepresenteerd aan de initiator, en "
-"bestaat uit één of meer extentie's."
+"bestaat uit één of meer extents."
 
 msgid "Attach a data device"
 msgstr "Koppel een data schijf"
@@ -1003,6 +1003,9 @@ msgstr "Augustus"
 
 msgid "Auth Group"
 msgstr "Auth Groep"
+
+msgid "Auth Group Settings"
+msgstr "Auth Groep Instellingen"
 
 msgid "Auth Groups"
 msgstr "Auth Groepen"
@@ -1106,8 +1109,11 @@ msgstr "Balans Algoritme"
 msgid "Ban List"
 msgstr "Banlijst"
 
-msgid "Ban list rule"
-msgstr "Banlijst regels"
+msgid "Ban List Rule"
+msgstr "Banlijst Regel"
+
+msgid "Ban List Rule Settings"
+msgstr "Banlijst Regel Instellingen"
 
 msgid "Banner"
 msgstr "Banner"
@@ -2305,7 +2311,7 @@ msgid "Delete disk"
 msgstr "Schijf verwijderen"
 
 msgid "Delete extent"
-msgstr "Verwijder extentie"
+msgstr "Verwijder extent"
 
 msgid "Delete files on the receiving side that don't exist on sender."
 msgstr ""
@@ -2698,7 +2704,7 @@ msgstr ""
 "gebruik van maken zullen ongeldig worden. (bijv. gedeelde mappen)!"
 
 msgid "Do you really want to delete this extent?"
-msgstr "Weet u zeker dat u deze extentie wilt verwijderen?"
+msgstr "Weet u zeker dat u deze extent wilt verwijderen?"
 
 msgid "Do you really want to delete this host?"
 msgstr "Weet u zeker dat u deze host wil verwijderen?"
@@ -3058,7 +3064,7 @@ msgid "Edit disk"
 msgstr "Schijf bewerken"
 
 msgid "Edit extent"
-msgstr "Extentie bewerken"
+msgstr "Extent bewerken"
 
 msgid "Edit initiator"
 msgstr "Initiator bewerken"
@@ -3597,20 +3603,23 @@ msgid "Extensions"
 msgstr "Uitbreidingen"
 
 msgid "Extent"
-msgstr "Extentie"
+msgstr "Extent"
 
 msgid "Extent Name"
-msgstr "Extentie Naam"
+msgstr "Extent Naam"
+
+msgid "Extent Settings"
+msgstr "Extent Instellingen"
 
 msgid "Extent name"
-msgstr "Extentie naam"
+msgstr "Extent naam"
 
 msgid ""
 "Extents must be defined before they can be used, and extents cannot be used "
 "more than once."
 msgstr ""
-"Een extentie moeten gedefinieerd zijn voordat deze gebruikt kan worden en "
-"extentie's kunnen niet vaker dan één keer gebruikt worden."
+"Extents moeten gedefinieerd zijn voordat deze gebruikt kan worden en extents "
+"kunnen niet vaker dan één keer gebruikt worden."
 
 msgid "Extra options"
 msgstr "Extra opties"
@@ -3758,7 +3767,7 @@ msgstr ""
 
 #, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
-msgstr "Bestands pad (bijv. /mnt/deelnaam/omvang/%s) gebruikt als omvang."
+msgstr "Bestands pad (bijv. /mnt/deelnaam/extent/%s) gebruikt als extent."
 
 msgid "File size"
 msgstr "bestands grootte"
@@ -4477,6 +4486,9 @@ msgstr "Initialiseren…"
 msgid "Initiator Group"
 msgstr "Initiator Groep"
 
+msgid "Initiator Group Settings"
+msgstr "Initiator Groep Instellingen"
+
 msgid "Initiator Groups"
 msgstr "Initiator Groepen"
 
@@ -4991,6 +5003,9 @@ msgstr ""
 msgid "Log"
 msgstr "Logboek"
 
+msgid "Log Filter"
+msgstr "Logboek Filter"
+
 msgid "Log Level"
 msgstr "Log niveau"
 
@@ -5382,6 +5397,9 @@ msgstr "Wijzigen"
 msgid "Module"
 msgstr "Module"
 
+msgid "Module Settings"
+msgstr "Module Instellingen"
+
 msgid "Modules"
 msgstr "Ban Module"
 
@@ -5591,7 +5609,7 @@ msgid "No DNS setting found."
 msgstr "Geen DNS instellingen gevonden."
 
 msgid "No Extent has been configured."
-msgstr "Er is geen extentie geconfigureerd."
+msgstr "Er is geen Extent geconfigureerd."
 
 msgid "No IPMI FRU data available."
 msgstr "Geen IPMI FRU gegevens beschikbaar."
@@ -6188,7 +6206,7 @@ msgid "Please add a new CARP interface first"
 msgstr "U dient eerst een nieuw CARP netwerk toe te voegen"
 
 msgid "Please add a new Extent first."
-msgstr "Voeg eerst een nieuwe Extentie toe."
+msgstr "Voeg eerst een nieuwe Extent toe."
 
 msgid "Please add a new Initiator Group first."
 msgstr "Voeg eerst een nieuwe Initiator Groep toe."
@@ -6312,6 +6330,9 @@ msgstr ""
 
 msgid "Portal Group"
 msgstr "Portaal Groep"
+
+msgid "Portal Group Settings"
+msgstr "Portaal Groepen Instellingen"
 
 msgid "Portal Groups"
 msgstr "Portaal Groepen"
@@ -7389,6 +7410,9 @@ msgstr "Gedeeld Karakter Reeks"
 msgid "Share Password"
 msgstr "Gedeeld Wachtwoord"
 
+msgid "Share Settings"
+msgstr "Deel Instellingen"
+
 msgid "Share passwords can not be more than 8 characters."
 msgstr "Gedeelde wachtwoorden mogen niet langer zijn dan 8 karakters."
 
@@ -7708,7 +7732,7 @@ msgstr ""
 "de toegang naar de URL."
 
 msgid "String identifier of the extent."
-msgstr "Text identificatie van de extentie."
+msgstr "Text identificatie van de extent."
 
 msgid "Subject"
 msgstr "Onderwerp"
@@ -8424,7 +8448,7 @@ msgid "The entire system configuration will be overwritten."
 msgstr "De volledige systeemconfiguratie wordt overschreven."
 
 msgid "The extent name already exists."
-msgstr "Deze extentie naam bestaat reeds."
+msgstr "De extent naam bestaat reeds."
 
 msgid "The file you try to flash is not for this platform"
 msgstr "Het bestand dat u probeert te flashen is niet voor dit platform"
@@ -9066,7 +9090,7 @@ msgstr ""
 "Dit e-mail bericht is verzonden om uw email configuratie te valideren."
 
 msgid "This extent is used."
-msgstr "Deze extentie is gebruikt."
+msgstr "Deze extent wordt gebruikt."
 
 msgid "This group already exists in the group list."
 msgstr "Deze groep bestaat al in de groepenlijst."
@@ -9668,7 +9692,7 @@ msgid "Type"
 msgstr "Type"
 
 msgid "Type used as extent."
-msgstr "Type gebruikt als extentie."
+msgstr "Type gebruikt als extent."
 
 msgid "UCD-SNMP-MIB"
 msgstr "UCD-SNMP-MIB"
@@ -10422,8 +10446,8 @@ msgid ""
 "You must add at least a Portal Group, an Initiator Group and an Extent "
 "before you can configure a Target."
 msgstr ""
-"U dient u ten minste een Portaal Groep, een Initiator Groep en een Extentie "
-"toe te voegen voor u een Doel kunt configureren."
+"U dient minstens een Portaal Groep, een Initiator Groep en een Extent toe te "
+"voegen voordat u een Doel kunt configureren."
 
 msgid "You must add disks first."
 msgstr "U moet eerst de hardeschijven toevoegen."
@@ -10438,7 +10462,7 @@ msgstr ""
 
 #, php-format
 msgid "You must have a minimum of %dMiB RAM for using iSCSI target."
-msgstr "U heeft minimaal  %dMiB RAM nodig om iSCSI doel te gebruiken."
+msgstr "U heeft minimaal  %dMiB RAM nodig om iSCSI doel te kunnen gebruiken."
 
 msgid "You must initialize data before enabling."
 msgstr "U moet de data eerst initialiseren alvorens in te schakelen."
@@ -10678,24 +10702,5 @@ msgstr "versie:"
 msgid "week days"
 msgstr "weekdagen"
 
-#~ msgid ""
-#~ "ZFS volume size. To specify the size use the following human-readable "
-#~ "suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."
-#~ msgstr ""
-#~ "ZFS volume groote. Om de groote te specificeren gebruikt u de volgende "
-#~ "toevoegingen (bijvoorbeeld, 'k', 'KB', 'M', 'Gb', etc.)."
-
-#~ msgid ""
-#~ "Controls the compression algorithm used for this volume. The 'lzjb' "
-#~ "compression algorithm is optimized for performance while providing decent "
-#~ "data compression. Setting compression to 'On' uses the 'lzjb' compression "
-#~ "algorithm. You can specify the 'gzip' level by using the value 'gzip-N', "
-#~ "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-#~ "Currently, 'gzip' is equivalent to 'gzip-6'."
-#~ msgstr ""
-#~ "Beheert het compressie algoritme gebruikt voor dit volume. Het "
-#~ "'ljzb'compressie algoritme is geoptimaliseerd voor prestatie en geeft een "
-#~ "fatsoenlijke datacompressie. Compressie op 'AAN' zetten activeert het 'lzjb' "
-#~ "algoritme. U kunt het 'gzip' niveau instellen door de 'gzip-N' waarde te "
-#~ "gebruiken. N bestaat uit een nummer van 1 (snelste) tot 9 (beste compressie "
-#~ "verhouding). Op dit moment is 'gzip' gelijk aan 'gzip-6'."
+#~ msgid "Ban list rule"
+#~ msgstr "Banlijst regels"

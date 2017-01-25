@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-24 02:10+0000\n"
+"POT-Creation-Date: 2017-01-25 18:33+0000\n"
 "PO-Revision-Date: 2017-01-22 15:23+0000\n"
 "Last-Translator: ChriZathens <c_kan1@hotmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-24 19:57+0000\n"
-"X-Generator: Launchpad (build 18312)\n"
+"X-Launchpad-Export-Date: 2017-01-25 18:49+0000\n"
+"X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: Greece\n"
 "Language: \n"
 "X-Poedit-Language: Greek\n"
@@ -1017,6 +1017,9 @@ msgstr "Αύγουστος"
 msgid "Auth Group"
 msgstr "Ομάδα πιστοποίησης"
 
+msgid "Auth Group Settings"
+msgstr ""
+
 msgid "Auth Groups"
 msgstr "Ομάδες πιστοποίησης"
 
@@ -1120,8 +1123,11 @@ msgstr "Αλγόριθμος Ισορροπίας"
 msgid "Ban List"
 msgstr "Λίστα απαγόρευσης εισόδου"
 
-msgid "Ban list rule"
-msgstr "Κανόνας λίστας αποκλεισμού"
+msgid "Ban List Rule"
+msgstr ""
+
+msgid "Ban List Rule Settings"
+msgstr ""
 
 msgid "Banner"
 msgstr "Κείμενο υποδοχής"
@@ -3625,6 +3631,9 @@ msgstr "Επέκταση"
 msgid "Extent Name"
 msgstr "Όνομα επέκτασης"
 
+msgid "Extent Settings"
+msgstr ""
+
 msgid "Extent name"
 msgstr "Όνομα επέκτασης"
 
@@ -4515,6 +4524,9 @@ msgstr "Γίνεται αρχικοποίηση..."
 msgid "Initiator Group"
 msgstr "Ομάδα Εκκινητή"
 
+msgid "Initiator Group Settings"
+msgstr ""
+
 msgid "Initiator Groups"
 msgstr "Ομάδες Εκκινητή"
 
@@ -5032,6 +5044,9 @@ msgstr "Περιοχή που αποθηκεύονται τα αρχεία ερ�
 msgid "Log"
 msgstr "Αρχείο καταγραφής"
 
+msgid "Log Filter"
+msgstr ""
+
 msgid "Log Level"
 msgstr "Επίπεδο Καταγραφής"
 
@@ -5422,6 +5437,9 @@ msgstr "Τροποποιείται"
 
 msgid "Module"
 msgstr "Άρθρωμα"
+
+msgid "Module Settings"
+msgstr ""
 
 msgid "Modules"
 msgstr "Αρθρώματα"
@@ -6356,6 +6374,9 @@ msgstr ""
 
 msgid "Portal Group"
 msgstr "Ομάδα Πύλης"
+
+msgid "Portal Group Settings"
+msgstr ""
 
 msgid "Portal Groups"
 msgstr "Ομάδες Πύλης"
@@ -7445,6 +7466,9 @@ msgstr "Σετ χαρακτήρων κοινόχρηστου"
 
 msgid "Share Password"
 msgstr "Κωδικός κοινόχρηστου"
+
+msgid "Share Settings"
+msgstr ""
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr ""
@@ -10797,26 +10821,5 @@ msgstr "έκδοση:"
 msgid "week days"
 msgstr "ημέρες εβδομάδας"
 
-#~ msgid ""
-#~ "ZFS volume size. To specify the size use the following human-readable "
-#~ "suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."
-#~ msgstr ""
-#~ "Μέγεθος του ZFS τόμου. Για να καθορίσετε το μέγεθος χρησιμοποιήσετε τα "
-#~ "ακόλουθα, αναγνωρίσιμα από τους ανθρώπους, επιθέματα (για παράδειγμα, 'k', "
-#~ "'KB', 'M', 'Gb', κλπ.)."
-
-#~ msgid ""
-#~ "Controls the compression algorithm used for this volume. The 'lzjb' "
-#~ "compression algorithm is optimized for performance while providing decent "
-#~ "data compression. Setting compression to 'On' uses the 'lzjb' compression "
-#~ "algorithm. You can specify the 'gzip' level by using the value 'gzip-N', "
-#~ "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-#~ "Currently, 'gzip' is equivalent to 'gzip-6'."
-#~ msgstr ""
-#~ "Ελέγχει τον αλγόριθμο συμπίεσης που χρησιμοποιείται για τον συγκεκριμένο "
-#~ "τόμο. Ο 'lzjb' αλγόριθμος συμπίεσης έχει βελτιστοποιηθεί για απόδοση, "
-#~ "παρέχοντας παράλληλα αξιοπρεπή συμπίεση δεδομένων. Ρυθμίζοντας τη συμπίεση "
-#~ "σε 'On' χρησιμοποιεί τον 'lzjb' αλγόριθμο συμπίεσης. Μπορείτε να καθορίσετε "
-#~ "το επίπεδο του 'gzip', χρησιμοποιώντας την τιμή 'gzip-N', όπου N είναι ένας "
-#~ "ακέραιος αριθμός από 1 (ταχύτερο) έως 9 (βέλτιστη αναλογία συμπίεσης). Αυτή "
-#~ "τη στιγμή, η ρύθμιση του 'gzip' ισοδυναμεί με 'gzip-6'."
+#~ msgid "Ban list rule"
+#~ msgstr "Κανόνας λίστας αποκλεισμού"

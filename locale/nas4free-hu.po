@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-24 02:10+0000\n"
+"POT-Creation-Date: 2017-01-25 18:33+0000\n"
 "PO-Revision-Date: 2017-01-22 18:07+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-24 19:57+0000\n"
-"X-Generator: Launchpad (build 18312)\n"
+"X-Launchpad-Export-Date: 2017-01-25 18:49+0000\n"
+"X-Generator: Launchpad (build 18315)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -981,6 +981,9 @@ msgstr "Augusztus"
 msgid "Auth Group"
 msgstr "Hitelesítő csoport"
 
+msgid "Auth Group Settings"
+msgstr ""
+
 msgid "Auth Groups"
 msgstr "Hitelesítő csoportok"
 
@@ -1084,8 +1087,11 @@ msgstr "Egyensúly algoritmus"
 msgid "Ban List"
 msgstr "Kitiltási lista"
 
-msgid "Ban list rule"
-msgstr "Tiltó lista szabály"
+msgid "Ban List Rule"
+msgstr ""
+
+msgid "Ban List Rule Settings"
+msgstr ""
 
 msgid "Banner"
 msgstr "Fejléc"
@@ -3521,6 +3527,9 @@ msgstr "Hatókör"
 msgid "Extent Name"
 msgstr "Hatókörnév"
 
+msgid "Extent Settings"
+msgstr ""
+
 msgid "Extent name"
 msgstr "Hatókörnév"
 
@@ -4384,6 +4393,9 @@ msgstr "Inicializálás..."
 msgid "Initiator Group"
 msgstr "Kezdeményező csoport"
 
+msgid "Initiator Group Settings"
+msgstr ""
+
 msgid "Initiator Groups"
 msgstr "Kezdeményező csoportok"
 
@@ -4890,6 +4902,9 @@ msgstr "Munka fájlok helye, pl. %s/backup/.unison"
 msgid "Log"
 msgstr "Napló"
 
+msgid "Log Filter"
+msgstr ""
+
 msgid "Log Level"
 msgstr "Naplózás szintje"
 
@@ -5276,6 +5291,9 @@ msgstr "Módosítás"
 
 msgid "Module"
 msgstr "Modul"
+
+msgid "Module Settings"
+msgstr ""
 
 msgid "Modules"
 msgstr "Modulok"
@@ -6203,6 +6221,9 @@ msgstr ""
 
 msgid "Portal Group"
 msgstr "Portálcsoport"
+
+msgid "Portal Group Settings"
+msgstr ""
 
 msgid "Portal Groups"
 msgstr "Portálcsoportok"
@@ -7279,6 +7300,9 @@ msgstr "Megosztási karakterkészlet"
 
 msgid "Share Password"
 msgstr "Megosztási jelszó"
+
+msgid "Share Settings"
+msgstr ""
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr "Megosztási jelszó nem lehet több 8 karakternél."
@@ -10487,24 +10511,5 @@ msgstr "verzió:"
 msgid "week days"
 msgstr "hétköznap"
 
-#~ msgid ""
-#~ "Controls the compression algorithm used for this volume. The 'lzjb' "
-#~ "compression algorithm is optimized for performance while providing decent "
-#~ "data compression. Setting compression to 'On' uses the 'lzjb' compression "
-#~ "algorithm. You can specify the 'gzip' level by using the value 'gzip-N', "
-#~ "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-#~ "Currently, 'gzip' is equivalent to 'gzip-6'."
-#~ msgstr ""
-#~ "Ezen a köteten használt tömörítő algoritmust állítja. Az 'lzjb' tömörítő "
-#~ "algoritmus teljesítményre optimalizált, elég jó adattömörítéssel. A "
-#~ "tömörítés 'Be' állapotban 'lzjb' tömörítést használ. Beállíthatod a 'gzip' "
-#~ "szintet 'gzip-N' kiválasztásával, ahol az N 1 (leggyorsabb) és 9 (legjobb "
-#~ "tömörítés) közötti egész szám. Jelenleg 'gzip' azonos a 'gzip-6' "
-#~ "beállítással."
-
-#~ msgid ""
-#~ "ZFS volume size. To specify the size use the following human-readable "
-#~ "suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."
-#~ msgstr ""
-#~ "ZFS kötet mérete. A méret magdásához használd a hagyományos utótag "
-#~ "formátumokat (pl. 'k', 'KB', 'M', 'Gb', stb.)."
+#~ msgid "Ban list rule"
+#~ msgstr "Tiltó lista szabály"

@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-24 02:10+0000\n"
-"PO-Revision-Date: 2017-01-24 05:51+0000\n"
+"POT-Creation-Date: 2017-01-25 18:33+0000\n"
+"PO-Revision-Date: 2017-01-25 17:57+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-24 19:57+0000\n"
-"X-Generator: Launchpad (build 18312)\n"
+"X-Launchpad-Export-Date: 2017-01-25 18:49+0000\n"
+"X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
 "X-Poedit-Language: French\n"
@@ -999,6 +999,9 @@ msgstr "Août"
 msgid "Auth Group"
 msgstr "Groupe Auth"
 
+msgid "Auth Group Settings"
+msgstr "Paramètres d'authentification du groupe"
+
 msgid "Auth Groups"
 msgstr "Groupes Auth"
 
@@ -1102,8 +1105,11 @@ msgstr "Algeorithm de Balance"
 msgid "Ban List"
 msgstr "Liste des bannis"
 
-msgid "Ban list rule"
-msgstr "Règle d'interdiction"
+msgid "Ban List Rule"
+msgstr "Règle de la liste d'interdiction"
+
+msgid "Ban List Rule Settings"
+msgstr "Paramètres de règle de la liste d'interdiction"
 
 msgid "Banner"
 msgstr "Bannière"
@@ -3592,6 +3598,9 @@ msgstr "Extension"
 msgid "Extent Name"
 msgstr "Nom d'extension"
 
+msgid "Extent Settings"
+msgstr "Paramètres d'extension"
+
 msgid "Extent name"
 msgstr "Nom d'extension"
 
@@ -4468,6 +4477,9 @@ msgstr "Initialisation..."
 msgid "Initiator Group"
 msgstr "Groupe initiateur"
 
+msgid "Initiator Group Settings"
+msgstr "Paramètres du groupe d'initiateurs"
+
 msgid "Initiator Groups"
 msgstr "Groupes Initiateur"
 
@@ -4982,6 +4994,9 @@ msgstr ""
 msgid "Log"
 msgstr "Journal"
 
+msgid "Log Filter"
+msgstr "Filtre de journal"
+
 msgid "Log Level"
 msgstr "Niveau de journalisation"
 
@@ -5369,6 +5384,9 @@ msgstr "Modification"
 
 msgid "Module"
 msgstr "Module"
+
+msgid "Module Settings"
+msgstr "Paramètres du module"
 
 msgid "Modules"
 msgstr "Modules"
@@ -6296,6 +6314,9 @@ msgstr ""
 
 msgid "Portal Group"
 msgstr "Groupe Portail"
+
+msgid "Portal Group Settings"
+msgstr "Paramètres du groupe de portail"
 
 msgid "Portal Groups"
 msgstr "Groupes Portails"
@@ -7376,6 +7397,9 @@ msgstr "Encodage de caractères du partage"
 
 msgid "Share Password"
 msgstr "Mot de passe du partage"
+
+msgid "Share Settings"
+msgstr "Paramètres de partage"
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr "Les mots de passe de partage ne peuvent avoir plus de 8 caractères."
@@ -10664,25 +10688,5 @@ msgstr "version:"
 msgid "week days"
 msgstr "jours de la semaine"
 
-#~ msgid ""
-#~ "Controls the compression algorithm used for this volume. The 'lzjb' "
-#~ "compression algorithm is optimized for performance while providing decent "
-#~ "data compression. Setting compression to 'On' uses the 'lzjb' compression "
-#~ "algorithm. You can specify the 'gzip' level by using the value 'gzip-N', "
-#~ "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
-#~ "Currently, 'gzip' is equivalent to 'gzip-6'."
-#~ msgstr ""
-#~ "Contrôles de l'algorithme de compression utilisé pour ce volume. "
-#~ "L'algorithme de compression  'lzjb' est optimisé pour des performances "
-#~ "décentes tout en offrant la compression des données. Réglage de la "
-#~ "compression sur On' uses the 'lzjb' utilise l'algorithme de compression. "
-#~ "Vous pouvez spécifier le niveau de la 'gzip'  en utilisant la valeur 'gzip-"
-#~ "N' , où N est un entier de 1 (rapide) à 9 (meilleur ratio de compression). "
-#~ "Actuellement,, 'gzip' est équivalent à 'gzip-6'."
-
-#~ msgid ""
-#~ "ZFS volume size. To specify the size use the following human-readable "
-#~ "suffixes (for example, 'k', 'KB', 'M', 'Gb', etc.)."
-#~ msgstr ""
-#~ "La taille du volume ZFS. Pour spécifier la taille, utiliser les suffixes  "
-#~ "suivants lisibles (par exemple, 'k', 'Ko', 'M', 'Go', etc.)"
+#~ msgid "Ban list rule"
+#~ msgstr "Règle d'interdiction"
