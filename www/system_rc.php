@@ -78,13 +78,7 @@ $img_path = [
 ];
 
 // sunrise: verify if setting exists, otherwise run init tasks
-if(!(isset($config['rc']) && is_array($config['rc']))) {
-	$config['rc'] = [];
-}
-if(!(isset($config['rc']['param']) && is_array($config['rc']['param']))) {
-	$config['rc']['param'] = [];
-}
-$sphere_array = &$config['rc']['param'];
+$sphere_array = &array_make_branch($config,'rc','param');
 
 if($_POST) {
 	if(isset($_POST['apply']) && $_POST['apply']) {
@@ -199,11 +193,10 @@ function rc_process_updatenotification($mode, $data) {
 			break;
 		case UPDATENOTIFY_MODE_DIRTY:
 		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
-			if(is_array($config['rc']['param'])) {
-				if(false !== ($index = array_search_ex($data, $config['rc']['param'], 'uuid'))) {
-					unset($config['rc']['param'][$index]);
-					write_config();
-				}
+			array_make_branch($config,'rc','param');
+			if(false !== ($index = array_search_ex($data, $config['rc']['param'], 'uuid'))) {
+				unset($config['rc']['param'][$index]);
+				write_config();
 			}
 			break;
 	}
