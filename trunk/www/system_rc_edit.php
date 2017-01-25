@@ -61,11 +61,7 @@ if ((PAGE_MODE_POST == $mode_page) && isset($_POST['uuid']) && is_uuid_v4($_POST
 	}
 }
 
-if (!(isset($config['rc']['param']) && is_array($config['rc']['param']))) {
-	$config['rc']['param'] = [];
-}
-$sphere_array = &$config['rc']['param'];
-
+$sphere_array = &array_make_branch($config,'rc','param');
 $index = array_search_ex($sphere_record['uuid'], $sphere_array, 'uuid'); // find index of uuid
 $mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']); // get updatenotify mode for uuid
 $mode_record = RECORD_ERROR;

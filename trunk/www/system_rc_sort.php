@@ -71,13 +71,7 @@ $img_path = [
 ];
 
 // sunrise: verify if setting exists, otherwise run init tasks
-if (!(isset($config['rc']) && is_array($config['rc']))) {
-	$config['rc'] = [];
-}
-if (!(isset($config['rc']['param']) && is_array($config['rc']['param']))) {
-	$config['rc']['param'] = [];
-}
-$sphere_array = &$config['rc']['param'];
+$sphere_array = &array_make_branch($config,'rc','param');
 
 if ($_POST) {
 	if(isset($_POST['Submit'])) {
