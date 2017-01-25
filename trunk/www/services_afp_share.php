@@ -31,10 +31,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Services"), gtext("AFP"), gtext("Shares"));
+$pgtitle = [gtext('Services'),gtext('AFP'),gtext('Shares')];
 
 if ($_POST) {
 	$pconfig = $_POST;
@@ -88,59 +88,60 @@ function afpshare_process_updatenotification($mode, $data) {
 	return $retval;
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td class="tabnavtbl">
-      <ul id="tabnav">
-        <li class="tabinact"><a href="services_afp.php"><span><?=gtext("Settings");?></span></a></li>
-        <li class="tabact"><a href="services_afp_share.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Shares");?></span></a></li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td class="tabcont">
-      <form action="services_afp_share.php" method="post">
-        <?php if (!empty($savemsg)) print_info_box($savemsg); ?>
-        <?php if (updatenotify_exists("afpshare")) print_config_change_box();?>
-        <table width="100%" border="0" cellpadding="0" cellspacing="0">
-          <tr>
-          	<td width="15%" class="listhdrlr"><?=gtext("Name");?></td>
-            <td width="35%" class="listhdrr"><?=gtext("Path");?></td>
-            <td width="40%" class="listhdrr"><?=gtext("Comment");?></td>
-            <td width="10%" class="list"></td>
-          </tr>
-  			  <?php foreach ($a_share as $sharev):?>
-  			  <?php $notificationmode = updatenotify_get_mode("afpshare", $sharev['uuid']);?>
-          <tr>
-            <td class="listlr"><?=htmlspecialchars($sharev['name']);?>&nbsp;</td>
-            <td class="listr"><?=htmlspecialchars($sharev['path']);?>&nbsp;</td>
-            <td class="listr"><?=htmlspecialchars($sharev['comment']);?>&nbsp;</td>
-            <?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
-            <td valign="middle" nowrap="nowrap" class="list">
-              <a href="services_afp_share_edit.php?uuid=<?=$sharev['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit share");?>" border="0" alt="<?=gtext("Edit share");?>" /></a>
-              <a href="services_afp_share.php?act=del&amp;uuid=<?=$sharev['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this share?");?>')"><img src="images/delete.png" title="<?=gtext("Delete share");?>" border="0" alt="<?=gtext("Delete share");?>" /></a>
-            </td>
-            <?php else:?>
-						<td valign="middle" nowrap="nowrap" class="list">
-							<img src="images/delete.png" border="0" alt="" />
-						</td>
-						<?php endif;?>
-          </tr>
-          <?php endforeach;?>
-          <tr>
-            <td class="list" colspan="3"></td>
-            <td class="list">
-							<a href="services_afp_share_edit.php"><img src="images/add.png" title="<?=gtext("Add share");?>" border="0" alt="<?=gtext("Add share");?>" /></a>
-						</td>
-          </tr>
-        </table>
-        <div id="remarks">
-        	<?php html_remark("note", gtext("Note"), gtext("All shares use the option 'usedots' thus making the filenames .Parent and anything beginning with .Apple illegal."));?>
-        </div>
-        <?php include("formend.inc");?>
-      </form>
-    </td>
-  </tr>
+<tr>
+	<td class="tabnavtbl">
+			<ul id="tabnav">
+			<li class="tabinact"><a href="services_afp.php"><span><?=gtext("Settings");?></span></a></li>
+			<li class="tabact"><a href="services_afp_share.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Shares");?></span></a></li>
+			</ul>
+		</td>
+	</tr>
+<tr>
+	<td class="tabcont">
+			<form action="services_afp_share.php" method="post">
+			<?php if (!empty($savemsg)) print_info_box($savemsg); ?>
+			<?php if (updatenotify_exists("afpshare")) print_config_change_box();?>
+			<table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<?php html_titleline2(gtext('Overview'), 4);?>
+		<tr>
+			<td width="15%" class="listhdrlr"><?=gtext("Name");?></td>
+			<td width="35%" class="listhdrr"><?=gtext("Path");?></td>
+			<td width="40%" class="listhdrr"><?=gtext("Comment");?></td>
+			<td width="10%" class="list"></td>
+		</tr>
+			<?php foreach ($a_share as $sharev):?>
+			<?php $notificationmode = updatenotify_get_mode("afpshare", $sharev['uuid']);?>
+		<tr>
+			<td class="listlr"><?=htmlspecialchars($sharev['name']);?>&nbsp;</td>
+			<td class="listr"><?=htmlspecialchars($sharev['path']);?>&nbsp;</td>
+			<td class="listr"><?=htmlspecialchars($sharev['comment']);?>&nbsp;</td>
+			<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
+			<td valign="middle" nowrap="nowrap" class="list">
+			<a href="services_afp_share_edit.php?uuid=<?=$sharev['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit share");?>" border="0" alt="<?=gtext("Edit share");?>" /></a>
+			<a href="services_afp_share.php?act=del&amp;uuid=<?=$sharev['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this share?");?>')"><img src="images/delete.png" title="<?=gtext("Delete share");?>" border="0" alt="<?=gtext("Delete share");?>" /></a>
+		</td>
+			<?php else:?>
+			<td valign="middle" nowrap="nowrap" class="list">
+			<img src="images/delete.png" border="0" alt="" />
+		</td>
+			<?php endif;?>
+		</tr>
+			<?php endforeach;?>
+		<tr>
+			<td class="list" colspan="3"></td>
+			<td class="list">
+			<a href="services_afp_share_edit.php"><img src="images/add.png" title="<?=gtext("Add share");?>" border="0" alt="<?=gtext("Add share");?>" /></a>
+		</td>
+	</tr>
 </table>
-<?php include("fend.inc");?>
+		<div id="remarks">
+			<?php html_remark("note", gtext("Note"), gtext("All shares use the option 'usedots' thus making the filenames .Parent and anything beginning with .Apple illegal."));?>
+		</div>
+		<?php include 'formend.inc';?>
+		</form>
+	</td>
+</tr>
+</table>
+<?php include 'fend.inc';?>
