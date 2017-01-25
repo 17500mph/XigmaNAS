@@ -103,11 +103,11 @@ if (!isset($do_action)) {
 // Get all physical disks including CDROM.
 $a_phy_disk = array_merge((array)get_physical_disks_list(), (array)get_cdrom_list());
 
-if (!isset($config['disks']['disk']) || !is_array($config['disks']['disk']))
-	$config['disks']['disk'] = array();
-
-array_sort_key($config['disks']['disk'], "name");
-$a_disk_conf = &$config['disks']['disk'];
+$a_disk_conf = &array_make_branch($config,'disks','disk');
+if(empty($a_disk_conf)):
+else:
+	array_sort_key($a_disk_conf,'name');
+endif;
 
 if (isset($_GET['act']) && $_GET['act'] === "del") {
 	updatenotify_set("device", UPDATENOTIFY_MODE_DIRTY, $_GET['uuid']);

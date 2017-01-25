@@ -56,12 +56,10 @@ if ($_POST) {
 		}
 	}
 }
-
-if (!isset($config['iscsiinit']['vdisk']) || !is_array($config['iscsiinit']['vdisk']))
-	$config['iscsiinit']['vdisk'] = array();
-
-array_sort_key($config['iscsiinit']['vdisk'], "name");
-$a_iscsiinit = &$config['iscsiinit']['vdisk'];
+$a_iscsiinit = &array_make_branch($config,'iscsiinit','vdisk');
+if(empty($a_iscsiinit)):
+	array_sort_key($a_iscsiinit,'name');
+endif;
 
 if (isset($_GET['act']) && $_GET['act'] === "del") {
 	updatenotify_set("iscsiinitiator", UPDATENOTIFY_MODE_DIRTY, $_GET['uuid']);
