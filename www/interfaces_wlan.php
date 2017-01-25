@@ -36,11 +36,11 @@ require 'guiconfig.inc';
 
 $pgtitle = [gtext('Network'), gtext('Interface Management'), gtext('WLAN')];
 
-if (!isset($config['vinterfaces']['wlan']) || !is_array($config['vinterfaces']['wlan']))
-	$config['vinterfaces']['wlan'] = array();
-
-$a_wlan = &$config['vinterfaces']['wlan'];
-array_sort_key($a_wlan, "if");
+$a_wlan = &array_make_branch($config,'vinterfaces','wlan');
+if(empty($a_wlan)):
+else:
+	array_sort_key($a_wlan,'if');
+endif;
 
 function wlan_inuse($ifn) {
 	global $config, $g;
