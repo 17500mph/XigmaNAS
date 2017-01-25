@@ -64,11 +64,11 @@ $img_path = [
 	'inf' => 'images/info.png'
 ];
 // sunrise: verify if setting exists, otherwise run init tasks
-if (!(isset($config['zfs']['vdevices']['vdevice']) && is_array($config['zfs']['vdevices']['vdevice']))) {
-	$config['zfs']['vdevices']['vdevice'] = [];
-}
-array_sort_key($config['zfs']['vdevices']['vdevice'], 'name');
-$sphere_array = &$config['zfs']['vdevices']['vdevice'];
+$sphere_array = &array_make_branch($config,'zfs','vdevices','vdevice');
+if(empty($sphere_array)):
+else:
+	array_sort_key($sphere_array,'name');
+endif;
 
 if ($_POST) {
 	if (isset($_POST['apply']) && $_POST['apply']) {
@@ -127,15 +127,10 @@ function zfsvdev_process_updatenotification($mode, $data) {
 	}
 	return $retval;
 }
-
-if (!(isset($config['zfs']['pools']['pool']) && is_array($config['zfs']['pools']['pool']))) {
-	$config['zfs']['pools']['pool'] = [];
-}
-$a_pool = &$config['zfs']['pools']['pool'];
- 
-$pgtitle = array(gtext('Disks'), gtext('ZFS'), gtext('Pools'), gtext('Virtual Device'));
+$a_pool = &array_make_branch($config,'zfs','pools','pool');
+$pgtitle = [gtext('Disks'), gtext('ZFS'), gtext('Pools'), gtext('Virtual Device')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
@@ -220,14 +215,15 @@ function controlactionbuttons(ego, triggerbyname) {
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
 	<?php
-		if (!empty($savemsg)) {
-			print_info_box($savemsg);
-		} else {
-			if (file_exists($d_sysrebootreqd_path)) {
-				print_info_box(get_std_save_message(0));
-			}
-		}
-		if (updatenotify_exists($sphere_notifier)) { print_config_change_box(); }
+	if(!empty($savemsg)):
+		print_info_box($savemsg);
+	endif;
+	if(file_exists($d_sysrebootreqd_path)):
+		print_info_box(get_std_save_message(0));
+	endif;
+	if(updatenotify_exists($sphere_notifier)):
+		print_config_change_box();
+	endif;
 	?>
 	<table id="area_data_selection">
 		<colgroup>
@@ -296,6 +292,6 @@ function controlactionbuttons(ego, triggerbyname) {
 	<div id="submit">
 		<input name="delete_selected_rows" id="delete_selected_rows" type="submit" class="formbtn" value="<?=$gt_selection_delete;?>"/>
 	</div>
-	<?php include("formend.inc");?>
+	<?php include 'formend.inc';?>
 </form></td></tr></tbody></table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
