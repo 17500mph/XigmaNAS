@@ -71,13 +71,7 @@ $img_path = [
 ];
 
 // sunrise: verify if setting exists, otherwise run init tasks
-if (!(isset($config['cron']) && is_array($config['cron']))) {
-	$config['cron'] = [];
-}
-if (!(isset($config['cron']['job']) && is_array($config['cron']['job']))) {
-	$config['cron']['job'] = [];
-}
-$sphere_array = &$config['cron']['job'];
+$sphere_array = &array_make_branch($config,'cron','job');
 
 if ($_POST) {
 	if (isset($_POST['apply']) && $_POST['apply']) {
@@ -198,12 +192,11 @@ function cronjob_process_updatenotification($mode, $data) {
 			break;
 		case UPDATENOTIFY_MODE_DIRTY:
 		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
-			if (is_array($config['cron']['job'])) {
-				$index = array_search_ex($data, $config['cron']['job'], 'uuid');
-				if (false !== $index) {
-					unset($config['cron']['job'][$index]);
-					write_config();
-				}
+			array_make_branch($config,'cron','job');
+			$index = array_search_ex($data, $config['cron']['job'], 'uuid');
+			if (false !== $index) {
+				unset($config['cron']['job'][$index]);
+				write_config();
 			}
 			break;
 	}
