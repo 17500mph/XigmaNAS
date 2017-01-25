@@ -41,17 +41,17 @@ if (isset($_POST['uuid']))
 
 $pgtitle = [gtext('Services'),gtext('AFP'),gtext('Share'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
-if (!isset($config['mounts']['mount']) || !is_array($config['mounts']['mount']))
-	$config['mounts']['mount'] = array();
+$a_mount = &array_make_branch($config,'mounts','mount');
+if(empty($a_mount)):
+else:
+	array_sort_key($a_mount,'devicespecialfile');
+endif;
 
-if (!isset($config['afp']['share']) || !is_array($config['afp']['share']))
-	$config['afp']['share'] = array();
-
-array_sort_key($config['mounts']['mount'], "devicespecialfile");
-$a_mount = &$config['mounts']['mount'];
-
-array_sort_key($config['afp']['share'], "name");
-$a_share = &$config['afp']['share'];
+$a_share = &array_make_branch($config,'afp','share');
+if(empty($a_share)):
+else:
+	array_sort_key($a_share,'name');
+endif;
 
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_share, "uuid")))) {
 	$pconfig['uuid'] = $a_share[$cnid]['uuid'];

@@ -36,12 +36,7 @@ require("guiconfig.inc");
 
 $pgtitle = array(gtext("Services"),gtext("AFP"));
 
-if (!(isset($config['afp']) && is_array($config['afp']))) {
-	$config['afp'] = [];
-}
-if (!(isset($config['afp']['auxparam']) && is_array($config['afp']['auxparam']))) {
-	$config['afp']['auxparam'] = [];
-}
+array_make_branch($config,'afp','auxparam');
 
 $pconfig['enable'] = isset($config['afp']['enable']);
 $pconfig['afpname'] = !empty($config['afp']['afpname']) ? $config['afp']['afpname'] : "";

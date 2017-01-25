@@ -55,11 +55,11 @@ if ($_POST) {
 	}
 }
 
-if (!isset($config['afp']['share']) || !is_array($config['afp']['share']))
-	$config['afp']['share'] = array();
-
-array_sort_key($config['afp']['share'], "name");
-$a_share = &$config['afp']['share'];
+$a_share = &array_make_branch($config,'afp','share');
+if(empty($a_share)):
+else:
+	array_sort_key($a_share,'name');
+endif;
 
 if (isset($_GET['act']) && $_GET['act'] === "del") {
 	updatenotify_set("afpshare", UPDATENOTIFY_MODE_DIRTY, $_GET['uuid']);
