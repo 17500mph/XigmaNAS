@@ -31,15 +31,15 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
 if (isset($_GET['uuid']))
 	$uuid = $_GET['uuid'];
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = array(gtext("Services"), gtext("FTP"), gtext("Ban list rule"), isset($uuid) ? gtext("Edit") : gtext("Add"));
+$pgtitle = [gtext('Services'),gtext('FTP'),gtext('Ban List Rule'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
 if (!isset($config['ftpd']['mod_ban']['rule']) || !is_array($config['ftpd']['mod_ban']['rule']))
 	$config['ftpd']['mod_ban']['rule'] = array();
@@ -101,7 +101,7 @@ if ($_POST) {
 	}
 }
 ?>
-<?php include("fbegin.inc"); ?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabnavtbl">
@@ -116,6 +116,7 @@ if ($_POST) {
 			<form action="services_ftp_mod_ban_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 				<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
+		<?php html_titleline(gtext("Ban List Rule Settings"));?>
 					<?php html_combobox("event", gtext("Event"), $pconfig['event'], array("AnonRejectPasswords" => "AnonRejectPasswords", "ClientConnectRate" => "ClientConnectRate", "MaxClientsPerClass" => "MaxClientsPerClass", "MaxClientsPerHost" => "MaxClientsPerHost", "MaxClientsPerUser" => "MaxClientsPerUser", "MaxConnectionsPerHost" => "MaxConnectionsPerHost", "MaxHostsPerUser" => "MaxHostsPerUser", "MaxLoginAttempts" => "MaxLoginAttempts", "TimeoutIdle" => "TimeoutIdle", "TimeoutNoTransfer" => "TimeoutNoTransfer"), gtext("This rule is triggered whenever the selected event directive occurs."), true);?>
 					<?php html_inputbox("occurrence", gtext("Occurrence"), $pconfig['occurrence'], gtext("This parameter says that if N occurrences of the event happen within the given time interval, then a ban is automatically added."), true, 2);?>
 					<?php html_inputbox("timeinterval", gtext("Time interval"), $pconfig['timeinterval'], gtext("Specifies the time interval in hh:mm:ss in which the given number of occurrences must happen to add the ban."), true, 8);?>
@@ -126,9 +127,9 @@ if ($_POST) {
 					<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
 					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
