@@ -65,31 +65,31 @@ $img_path = [
 	'inf' => 'images/info.png'
 ];
 // sunrise: verify if setting exists, otherwise run init tasks
-if (!(isset($config['zfs']['pools']['pool']) && is_array($config['zfs']['pools']['pool']))) {
-	$config['zfs']['pools']['pool'] = [];
-}
-array_sort_key($config['zfs']['pools']['pool'], 'name');
-$sphere_array = &$config['zfs']['pools']['pool'];
+$sphere_array = &array_make_branch($config,'zfs','pools','pool');
+if(empty($sphere_array)):
+else:
+	array_sort_key($sphere_array,'name');
+endif;
 
-if ($_POST) {
-	if (isset($_POST['apply']) && $_POST['apply']) {
+if($_POST):
+	if(isset($_POST['apply']) && $_POST['apply']):
 		$retval = 0;
-//		if (!file_exists($d_sysrebootreqd_path)) {
+//		if(!file_exists($d_sysrebootreqd_path)):
 			$retval |= updatenotify_process($sphere_notifier, $sphere_notifier_processor);
 			$savemsg = get_std_save_message($retval);
-			if ($retval == 0) {
+			if($retval == 0):
 				updatenotify_delete($sphere_notifier);
-			}
+			endif;
 			header($sphere_header);
 			exit;
-//		}
-	}
-	if (isset($_POST['delete_selected_rows']) && $_POST['delete_selected_rows']) {
-		$checkbox_member_array = isset($_POST[$checkbox_member_name]) ? $_POST[$checkbox_member_name] : [];
-		foreach ($checkbox_member_array as $checkbox_member_record) {
-			if (false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))) {
+//		endif;
+	endif;
+	if(isset($_POST['delete_selected_rows']) && $_POST['delete_selected_rows']):
+		$checkbox_member_array = $_POST[$checkbox_member_name] ?? [];
+		foreach($checkbox_member_array as $checkbox_member_record):
+			if(false !== ($index = array_search_ex($checkbox_member_record, $sphere_array, 'uuid'))):
 				$mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_array[$index]['uuid']);
-				switch ($mode_updatenotify) {
+				switch ($mode_updatenotify):
 					case UPDATENOTIFY_MODE_NEW:
 						updatenotify_clear($sphere_notifier, $sphere_array[$index]['uuid']);
 						updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY_CONFIG, $sphere_array[$index]['uuid']);
@@ -101,19 +101,19 @@ if ($_POST) {
 					case UPDATENOTIFY_MODE_UNKNOWN:
 						updatenotify_set($sphere_notifier, UPDATENOTIFY_MODE_DIRTY, $sphere_array[$index]['uuid']);
 						break;
-				}
-			}
-		}
+				endswitch;
+			endif;
+		endforeach;
 		header($sphere_header);
 		exit;
-	}
-}
+	endif;
+endif;
 
 function zfszpool_process_updatenotification($mode, $data) {
 	global $config;
 	global $g;
 	$retval = 0;
-	switch ($mode) {
+	switch($mode):
 		case UPDATENOTIFY_MODE_NEW:
 			$retval |= zfs_zpool_configure($data);
 			break;
@@ -121,24 +121,24 @@ function zfszpool_process_updatenotification($mode, $data) {
 			$retval |= zfs_zpool_properties($data);
 			break;
 		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
-			if (false !== ($index = array_search_ex($data, $config['zfs']['pools']['pool'], 'uuid'))) {
+			if(false !== ($index = array_search_ex($data, $config['zfs']['pools']['pool'], 'uuid'))):
 				unset($config['zfs']['pools']['pool'][$index]);
 				write_config();
-			}
+			endif;
 			break;
 		case UPDATENOTIFY_MODE_DIRTY:
-			if (false !== ($index = array_search_ex($data, $config['zfs']['pools']['pool'], 'uuid'))) {
+			if(false !== ($index = array_search_ex($data, $config['zfs']['pools']['pool'], 'uuid'))):
 				$retval |= zfs_zpool_destroy($data);
-				if ($retval === 0) {
+				if($retval === 0):
 					unset($config['zfs']['pools']['pool'][$index]);
 					write_config();
 					conf_mount_rw(); // remove existing pool cache
 					unlink_if_exists("{$g['cf_path']}/boot/zfs/zpool.cache");
 					conf_mount_ro();
-				}
-			}
+				endif;
+			endif;
 			break;
-	}
+	endswitch;
 	return $retval;
 }
 
@@ -231,28 +231,29 @@ function controlactionbuttons(ego, triggerbyname) {
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
 	<?php
-		if (!empty($savemsg)) {
-			print_info_box($savemsg);
-		} else {
-			if (file_exists($d_sysrebootreqd_path)) {
-				print_info_box(get_std_save_message(0));
-			}
-		}
-		if (updatenotify_exists($sphere_notifier)) { print_config_change_box(); }
+	if(!empty($savemsg)):
+		print_info_box($savemsg);
+	endif;
+	if(file_exists($d_sysrebootreqd_path)):
+		print_info_box(get_std_save_message(0));
+	endif;
+	if(updatenotify_exists($sphere_notifier)):
+		print_config_change_box();
+	endif;
 	?>
 	<table id="area_data_selection">
 		<colgroup>
-			<col style="width:5%"> <!--// Checkbox -->
-			<col style="width:15%"><!--// Name -->
-			<col style="width:10%"><!--// Size -->
-			<col style="width:10%"><!--// Used / Alloc -->
-			<col style="width:10%"><!--// Avail / Free -->
-			<col style="width:6%"><!--// Frag -->
-			<col style="width:6%"><!--// Capacity -->
-			<col style="width:6%"><!--// Dedup -->
-			<col style="width:7%"><!--// Health -->
-			<col style="width:15%"><!--// AltRoot -->
-			<col style="width:10%"><!--// Toolbox -->
+			<col style="width:5%"> 
+			<col style="width:15%">
+			<col style="width:10%">
+			<col style="width:10%">
+			<col style="width:10%">
+			<col style="width:6%">
+			<col style="width:6%">
+			<col style="width:6%">
+			<col style="width:7%">
+			<col style="width:15%">
+			<col style="width:10%">
 		</colgroup>
 		<thead>
 			<?php html_titleline2(gtext('Overview'), 11);?>
@@ -260,7 +261,7 @@ function controlactionbuttons(ego, triggerbyname) {
 				<td class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></td>
 				<td class="lhell"><?=gtext('Name');?></td>
 				<td class="lhell"><?=gtext('Size');?></td>
-				<?php if ($showusedavail):?>
+				<?php if($showusedavail):?>
 					<td class="lhell"><?=gtext('Used');?></td>
 					<td class="lhell"><?=gtext('Avail');?></td>
 				<?php else:?>
@@ -276,10 +277,7 @@ function controlactionbuttons(ego, triggerbyname) {
 			</tr>
 		</thead>
 		<tfoot>
-			<tr>
-				<th class="lcenl" colspan="10"></th>
-				<th class="lceadd"><a href="<?=$sphere_scriptname_child;?>"><img src="<?=$img_path['add'];?>" title="<?=$gt_record_add;?>" alt="<?=$gt_record_add;?>"/></a></th>
-			</tr>
+			<?=html_row_add($sphere_scriptname_child,$gt_record_add,11);?>
 		</tfoot>
 		<tbody>
 			<?php foreach ($sphere_array as $sphere_record):?>
@@ -335,17 +333,10 @@ function controlactionbuttons(ego, triggerbyname) {
 					<td class="lcell"><?=$altroot;?>&nbsp;</td>
 					<td class="lcebld">
 						<table id="area_data_selection_toolbox"><tbody><tr>
-							<td>
-								<?php if ($notdirty && $notprotected):?>
-									<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
-								<?php else:?>
-									<?php if ($notprotected):?>
-										<img src="<?=$img_path['del'];?>" title="<?=$gt_record_del;?>" alt="<?=$gt_record_del;?>"/>
-									<?php else:?>
-										<img src="<?=$img_path['loc'];?>" title="<?=$gt_record_loc;?>" alt="<?=$gt_record_loc;?>"/>
-									<?php endif;?>
-								<?php endif;?>
-							</td>
+							<?php
+							$helpinghand = sprintf('%s?uuid=%s',$sphere_scriptname_child,$sphere_record['uuid']);
+							echo html_row_toolbox($helpinghand,$gt_record_mod,$gt_record_del,$gt_record_loc,$notprotected,$notdirty);
+							?>
 							<td></td>
 							<td></td>
 						</tr></tbody></table>
