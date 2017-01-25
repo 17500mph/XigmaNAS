@@ -36,11 +36,11 @@ require("guiconfig.inc");
 
 $pgtitle = array(gtext("Disks"), gtext("Software RAID"), gtext("RAID-1"), gtext("Maintenance"));
 
-if (!isset($config['gmirror']['vdisk']) || !is_array($config['gmirror']['vdisk']))
-	$config['gmirror']['vdisk'] = array();
-
-array_sort_key($config['gmirror']['vdisk'], "name");
-$a_raid = &$config['gmirror']['vdisk'];
+$a_raid = &array_make_branch($config,'gmirror','vdisk');
+if(empty($a_raid)):
+else: 
+	array_sort_key($a_raid,'name');
+endif;
 
 if ($_POST) {
 	unset($input_errors);

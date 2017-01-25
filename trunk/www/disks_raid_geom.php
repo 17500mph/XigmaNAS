@@ -67,10 +67,7 @@ $img_path = [
 geomraid_config_get($sphere_array);
 array_sort_key($sphere_array, 'name');
 // get mounts from config
-if (!(isset($config['mounts']['mount']) && is_array($config['mounts']['mount']))) {
-	$config['mounts']['mount'] = [];
-}
-$a_config_mount = &$config['mounts']['mount'];
+$a_config_mount = &array_make_branch($config,'mounts','mount');
 // get all softraids (cli)
 $a_system_sraid = get_sraid_disks_list();
 // collect geom additional information
