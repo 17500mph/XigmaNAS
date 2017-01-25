@@ -73,11 +73,11 @@ if ((PAGE_MODE_POST == $mode_page) && isset($_POST['uuid']) && is_uuid_v4($_POST
 	}
 }
 
-if (!(isset($config['zfs']['pools']['pool']) && is_array($config['zfs']['pools']['pool']))) {
-	$config['zfs']['pools']['pool'] = [];
-}
-array_sort_key($config['zfs']['pools']['pool'], 'name');
-$sphere_array = &$config['zfs']['pools']['pool'];
+$sphere_array = &array_make_branch($config,'zfs','pools','pool');
+if(empty($sphere_array)):
+else:
+	array_sort_key($sphere_array,'name');
+endif;
 
 $index = array_search_ex($sphere_record['uuid'], $sphere_array, 'uuid'); // find index of uuid
 $mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']); // get updatenotify mode for uuid
@@ -112,17 +112,17 @@ $isrecordnewmodify = (RECORD_NEW_MODIFY == $mode_record);
 $isrecordmodify = (RECORD_MODIFY === $mode_record);
 $isrecordnewornewmodify = ($isrecordnew || $isrecordnewmodify);
 
-if (!(isset($config['zfs']['vdevices']['vdevice']) && is_array($config['zfs']['vdevices']['vdevice']))) {
-	$config['zfs']['vdevices']['vdevice'] = [];
+$a_vdevice = &array_make_branch($config,'zfs','vdevices','vdevice');
+if(empty($a_vdevice)):
 	$errormsg = gtext('No configured virtual devices.')
 		. ' '
 		. '<a href="' . 'disks_zfs_zpool_vdevice.php' . '">'
 		. gtext('Please add a virtual device first.')
 		. '</a>';
 	$prerequisites_ok = false;
-}
-array_sort_key($config['zfs']['vdevices']['vdevice'], 'name');
-$a_vdevice = &$config['zfs']['vdevices']['vdevice'];
+else:
+	array_sort_key($a_vdevice,'name');
+endif;
 
 if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 	unset($input_errors);
