@@ -39,19 +39,18 @@ $pgtitle = [gtext('Disks'),gtext('Encryption'),gtext('Tools')];
 // Omit no-cache headers because it confuses IE with file downloads.
 $omit_nocacheheaders = true;
 
-if (!isset($config['geli']['vdisk']) || !is_array($config['geli']['vdisk']))
-	$config['geli']['vdisk'] = array();
+$a_geli = &array_make_branch($config,'geli','vdisk');
+if(empty($a_geli)):
+else:
+	array_sort_key($a_geli,'devicespecialfile');
+endif;
+$a_mount = &array_make_branch($config,'mounts','mount');
+if(empty($a_mount)):
+else:
+	array_sort_key($a_mount,'devicespecialfile');
+endif;
 
-if (!isset($config['mounts']['mount']) || !is_array($config['mounts']['mount']))
-	$config['mounts']['mount'] = array();
-
-array_sort_key($config['geli']['vdisk'], "devicespecialfile");
-$a_geli = &$config['geli']['vdisk'];
-
-array_sort_key($config['mounts']['mount'], "devicespecialfile");
-$a_mount = &$config['mounts']['mount'];
-
-if ($config['system']['webgui']['protocol'] === "http") {
+if($config['system']['webgui']['protocol'] === "http") {
 	$nohttps_error = gtext("You should use HTTPS as WebGUI protocol for sending passphrase.");
 }
 
