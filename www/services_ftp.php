@@ -46,8 +46,7 @@ $l_sysloglevel = [
 	'info' => gtext('Info Level'),
 	'debug' => gtext('Debug Level')
 ];
-if (!isset($config['ftpd']) || !is_array($config['ftpd']))
-	$config['ftpd'] = array();
+array_make_branch($config,'ftpd');
 
 $pconfig['enable'] = isset($config['ftpd']['enable']);
 $pconfig['port'] = $config['ftpd']['port'];

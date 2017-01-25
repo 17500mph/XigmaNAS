@@ -363,7 +363,7 @@ EOD;
 		foreach($files as $file) {
 			$ret .= $this->row($file['rowType'], $dir, $rowcount, $file);
 			$rowcount++;
-			$totalsize += $file['size'];
+			$totalsize += (int)$file['size'];
 		}
 		$ret .= '</tbody>';
 		$ret .= '<tfoot>';

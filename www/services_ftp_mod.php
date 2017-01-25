@@ -58,10 +58,7 @@ if ($_POST) {
 	}
 }
 
-if (!isset($config['ftpd']['mod_ban']['rule']) || !is_array($config['ftpd']['mod_ban']['rule']))
-	$config['ftpd']['mod_ban']['rule'] = array();
-
-$a_rule = &$config['ftpd']['mod_ban']['rule'];
+$a_rule = &array_make_branch($config,'ftpd','mod_ban','rule');
 
 if (isset($_GET['act']) && $_GET['act'] === "del") {
 	if ($_GET['uuid'] === "all") {
