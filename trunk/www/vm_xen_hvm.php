@@ -40,24 +40,17 @@ if (isset($_POST['uuid']))
 
 $pgtitle = array(gtext("Virtualization"), gtext("Xen"), gtext("HVM Guest"), isset($uuid) ? gtext("Edit") : gtext("Add"));
 
-if (!isset($config['xen']['vms']['param']) || !is_array($config['xen']['vms']['param']))
-	$config['xen']['vms']['param'] = array();
-
-if (!isset($config['vinterfaces']['bridge']) || !is_array($config['vinterfaces']['bridge']))
-	$config['vinterfaces']['bridge'] = array();
-
-$a_vms = &$config['xen']['vms']['param'];
-
-$a_bridge = &$config['vinterfaces']['bridge'];
-array_sort_key($a_bridge, "if");
-
-if (!sizeof($a_bridge)) {
+$a_vms = &array_make_branch($config,'xen','vms','param');
+$a_bridge = &array_make_branch($config,'vinterfaces','bridge');
+if(empty($a_bridge)):
 	$errormsg = gtext('No configured bridge interfaces.')
 		. ' '
 		. '<a href="' . 'interfaces_bridge.php' . '">'
 		. gtext('Please add a bridge interface first.')
 		. '</a>';
-}
+else:
+	array_sort_key($a_bridge, "if");
+endif;
 
 function get_vnic_mac_base()
 {
