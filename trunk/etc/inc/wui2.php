@@ -584,13 +584,8 @@ class HTMLMountComboBox2 extends HTMLComboBox2 {
 		global $config;
 
 		// Generate options.
-		if (!(isset($config['mounts']) && is_array($config['mounts']))) {
-			$config['mounts'] = [];
-		}
-		if (!(isset($config['mounts']['mount']) && is_array($config['mounts']['mount']))) {
-			$config['mounts']['mount'] = [];
-		}
-		array_sort_key($config['mounts']['mount'], "devicespecialfile");
+		array_make_branch($config,'mounts','mount');
+		array_sort_key($config['mounts']['mount'],'devicespecialfile');
 
 		$options = [];
 		$options[""] = gtext("Must choose one");
@@ -709,7 +704,7 @@ class HTMLTitleLine2 extends HTMLBaseControl2 {
 		$colspan = $this->GetColSpan();
 		$classtopic = $this->GetClassOfTopic();
 		echo ($this->_idname != '') ? "<tr id='{$this->_idname}'>\n" : "<tr>\n";
-		echo "	<td colspan='{$colspan}' class='{$classtopic}'>{$title}</td>\n";
+		echo "	<th colspan='{$colspan}' class='{$classtopic}'>{$title}</th>\n";
 		echo "</tr>\n";
 	}
 }
