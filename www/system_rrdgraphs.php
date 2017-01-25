@@ -37,9 +37,7 @@ require 'guiconfig.inc';
 $sphere_scriptname = basename(__FILE__);
 $sphere_notifier = 'rrdgraphs';
 
-if (!(isset($config['rrdgraphs']) && is_array($config['rrdgraphs']))) {
-	$config['rrdgraphs'] = [];
-}
+array_make_branch($config,'rrdgraphs');
 
 $upsname = !empty($config['ups']['upsname']) ? $config['ups']['upsname'] : "identifier";
 $upsip = !empty($config['ups']['ip']) ? $config['ups']['ip'] : "host-ip-address";
@@ -250,23 +248,23 @@ $pconfig['arc_usage'] = isset($config['rrdgraphs']['arc_usage']) ? true : false;
 
 $a_interface = get_interface_list();
 // Add VLAN interfaces
-if (isset($config['vinterfaces']['vlan']) && is_array($config['vinterfaces']['vlan']) && count($config['vinterfaces']['vlan'])) {
+array_make_branch($config,'vinterfaces','vlan');
+if(!empty($config['vinterfaces']['vlan'])) {
 	foreach ($config['vinterfaces']['vlan'] as $vlanv) {
 		$a_interface[$vlanv['if']] = $vlanv;
 		$a_interface[$vlanv['if']]['isvirtual'] = true;
 	}
 }
 // Add LAGG interfaces
-if (isset($config['vinterfaces']['lagg']) && is_array($config['vinterfaces']['lagg']) && count($config['vinterfaces']['lagg'])) {
+array_make_branch($config,'vfinterfaces','lagg');
+if(!empty($config['vinterfaces']['lagg'])) {
 	foreach ($config['vinterfaces']['lagg'] as $laggv) {
 		$a_interface[$laggv['if']] = $laggv;
 		$a_interface[$laggv['if']]['isvirtual'] = true;
 	}
 }
-
 // Use first interface as default if it is not set.
 if (empty($pconfig['latency_interface']) && is_array($a_interface)) $pconfig['latency_interface'] = key($a_interface);
-
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">
