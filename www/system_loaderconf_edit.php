@@ -65,17 +65,11 @@ if ((PAGE_MODE_POST == $mode_page) && isset($_POST['uuid']) && is_uuid_v4($_POST
 	}
 }
 
-if (!(isset($config['system']) && is_array($config['system']))) {
-	$config['system'] = [];
-}
-if (!(isset($config['system']['loaderconf']) && is_array($config['system']['loaderconf']))) {
-	$config['system']['loaderconf'] = [];
-}
-if (!(isset($config['system']['loaderconf']['param']) && is_array($config['system']['loaderconf']['param']))) {
-	$config['system']['loaderconf']['param'] = [];
-}
-array_sort_key($config['system']['loaderconf']['param'], 'name');
-$sphere_array = &$config['system']['loaderconf']['param'];
+$sphere_array = &array_make_branch($config,'system','loaderconf','param');
+if(empty($sphere_array)):
+else:	
+	array_sort_key($sphere_array,'name');
+endif;
 
 $index = array_search_ex($sphere_record['uuid'], $sphere_array, "uuid"); // find index of uuid
 $mode_updatenotify = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']); // get updatenotify mode for uuid

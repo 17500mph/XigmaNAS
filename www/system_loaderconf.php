@@ -71,21 +71,13 @@ $img_path = [
 ];
 
 // sunrise: verify if setting exists, otherwise run init tasks
-if (!(isset($config['system']) && is_array($config['system']))) {
-	$config['system'] = [];
-}
-if (!(isset($config['system']['loaderconf']) && is_array($config['system']['loaderconf']))) {
-	$config['system']['loaderconf'] = [];
-}
-if (!(isset($config['system']['loaderconf']['param']) && is_array($config['system']['loaderconf']['param']))) {
-	$config['system']['loaderconf']['param'] = [];
-}
-$sphere_array = &$config['system']['loaderconf']['param'];
-if (!empty($sphere_array)) {
-	$key1 = array_column($sphere_array, 'name');
-	$key2 = array_column($sphere_array, 'uuid');
+$sphere_array = &array_make_branch($config,'system','loaderconf','param');
+if(empty($sphere_array)):
+else:	
+	$key1 = array_column($sphere_array,'name');
+	$key2 = array_column($sphere_array,'uuid');
 	array_multisort($key1, SORT_ASC, SORT_NATURAL | SORT_FLAG_CASE, $key2, SORT_ASC, SORT_STRING | SORT_FLAG_CASE, $sphere_array);
-}
+endif;
 
 if ($_POST) {
 	if (isset($_POST['apply']) && $_POST['apply']) {
