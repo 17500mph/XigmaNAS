@@ -68,19 +68,13 @@ if ($_POST) {
 	}
 }
 
-if (!isset($config['system']['hosts']) || !is_array($config['system']['hosts']))
-	$config['system']['hosts'] = array();
-
-if (!isset($config['system']['hostsacl']['rule']) || !is_array($config['system']['hostsacl']['rule']))
-	$config['system']['hostsacl']['rule'] = array();
-
-
-array_sort_key($config['system']['hosts'], "name");
-
-$a_hosts = $config['system']['hosts'];
-
-if (is_array($config['system']['hostsacl']['rule']))
-	$pconfig['hostsacl'] = implode("\n", $config['system']['hostsacl']['rule']);
+$a_hosts = &array_make_branch($config,'system','hosts');
+if(empty($a_hosts)):
+else:
+	array_sort_key($a_hosts,'name');
+endif;
+array_make_branch($config,'system','hostsacl','rule');
+$pconfig['hostsacl'] = implode("\n", $config['system']['hostsacl']['rule']);
 
 if (isset($_GET['act']) && $_GET['act'] === "del") {
 	updatenotify_set("hosts", UPDATENOTIFY_MODE_DIRTY, $_GET['uuid']);
