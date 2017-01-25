@@ -37,11 +37,11 @@ require 'zfs.inc';
 
 $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Snapshots'),gtext('Clone')];
 
-if (!isset($config['zfs']['snapshots']['snapshot']) || !is_array($config['zfs']['snapshots']['snapshot']))
-	$config['zfs']['snapshots']['snapshot'] = array();
-
-array_sort_key($config['zfs']['snapshots']['snapshot'], "name");
-$a_snapshot = &$config['zfs']['snapshots']['snapshot'];
+$a_snapshot = &array_make_branch($config,'zfs','snapshots','snapshot');
+if(empty($a_snapshot)):
+else:
+	array_sort_key($a_snapshot,'name');
+endif;
 
 function get_zfs_clones() {
 	$result = array();

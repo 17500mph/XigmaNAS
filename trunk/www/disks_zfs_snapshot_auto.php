@@ -37,17 +37,17 @@ require 'zfs.inc';
 
 $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Snapshots'),gtext('Auto Snapshot')];
 
-if (!isset($config['zfs']['autosnapshots']['autosnapshot']) || !is_array($config['zfs']['autosnapshots']['autosnapshot']))
-	$config['zfs']['autosnapshots']['autosnapshot'] = array();
+$a_autosnapshot = &array_make_branch($config,'zfs','autosnapshots','autosnapshot');
+if(empty($a_autosnapshot)):
+else:
+	array_sort_key($a_autosnapshot,'path');
+endif;
 
-array_sort_key($config['zfs']['autosnapshots']['autosnapshot'], "path");
-$a_autosnapshot = &$config['zfs']['autosnapshots']['autosnapshot'];
-
-if (!isset($config['zfs']['pools']['pool']) || !is_array($config['zfs']['pools']['pool']))
-	$config['zfs']['pools']['pool'] = array();
-
-array_sort_key($config['zfs']['pools']['pool'], "name");
-$a_pool = &$config['zfs']['pools']['pool'];
+$a_pool = &array_make_branch($config,'zfs','pools','pool');
+if(empty($a_pool)):
+else:
+	array_sort_key($a_pool,'name');
+endif;
 
 if (!isset($uuid) && (!sizeof($a_pool))) {
 	$link = sprintf('<a href="%1$s">%2$s</a>', 'disks_zfs_zpool.php', gtext('pools'));
