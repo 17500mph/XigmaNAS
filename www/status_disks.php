@@ -31,10 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-
-$pgtitle = array(gtext("Status"), gtext("Disks"));
+require 'auth.inc';
+require 'guiconfig.inc';
 
 // Get all physical disks.
 $a_phy_disk = array_merge((array)get_conf_physical_disks_list());
@@ -43,15 +41,16 @@ $a_phy_hast = array_merge((array)get_hast_disks_list());
 $pconfig['temp_info'] = $config['smartd']['temp']['info'];
 $pconfig['temp_crit'] = $config['smartd']['temp']['crit'];
 
-if (!isset($config['disks']['disk']) || !is_array($config['disks']['disk']))
-	$config['disks']['disk'] = array();
-
-array_sort_key($config['disks']['disk'], "name");
-$a_disk_conf = &$config['disks']['disk'];
+$a_disk_conf = &array_make_branch($config,'disks','disk');
+if(empty($a_disk_conf)):
+else:
+	array_sort_key($a_disk_conf,'name');
+endif;
 
 $raidstatus = get_sraid_disks_list();
+$pgtitle = [gtext('Status'),gtext('Disks')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabcont">
@@ -118,17 +117,19 @@ $raidstatus = get_sraid_disks_list();
 					<td class="listr"><?=($diskv['fstype']) ? htmlspecialchars(get_fstype_shortdesc($diskv['fstype'])) : gtext("UFS")?>&nbsp;</td>
 					<td class="listr"><?=htmlspecialchars($iostat);?>&nbsp;</td>
 					<td class="listr"><?php
-					if ($temp <> gtext("n/a")){
-						if (!empty($pconfig['temp_crit']) && $temp >= $pconfig['temp_crit']){
+					if($temp <> gtext("n/a")) {
+						if(!empty($pconfig['temp_crit']) && $temp >= $pconfig['temp_crit']) {
 							print "<div class=\"errortext\">".$temp."</div>";
-							}		
-						else if (!empty($pconfig['temp_info']) && $temp >= $pconfig['temp_info']){
-							print "<div class=\"warningtext\">".$temp."</div>";
+						} else {
+							if(!empty($pconfig['temp_info']) && $temp >= $pconfig['temp_info']) {
+								print "<div class=\"warningtext\">".$temp."</div>";
+							} else {
+								print $temp;
 							}
-						else{
-						      print $temp;
-						      } 
-					} else { print gtext("n/a"); }
+						}
+					} else {
+						print gtext("n/a");
+					}
 					?>&nbsp;</td>
 					<td class="listbg"><?=htmlspecialchars($diskv['state']);?>&nbsp;</td>
 				</tr>
@@ -138,4 +139,4 @@ $raidstatus = get_sraid_disks_list();
 			</td>
 		</tr>
 	</table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
