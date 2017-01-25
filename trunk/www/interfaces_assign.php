@@ -45,28 +45,31 @@ $pgtitle = [gtext('Network'), gtext('Interface Management')];
 $portlist = get_interface_list();
 
 // Add WLAN interfaces.
-if (isset($config['vinterfaces']['wlan']) && is_array($config['vinterfaces']['wlan']) && count($config['vinterfaces']['wlan'])) {
-	foreach ($config['vinterfaces']['wlan'] as $wlanv) {
+array_make_branch($config,'vinterfaces','wlan');
+if(count($config['vinterfaces']['wlan'])):
+	foreach($config['vinterfaces']['wlan'] as $wlanv):
 		$portlist[$wlanv['if']] = $wlanv;
 		$portlist[$wlanv['if']]['isvirtual'] = true;
-	}
-}
+	endforeach;
+endif;
 
 // Add VLAN interfaces.
-if (isset($config['vinterfaces']['vlan']) && is_array($config['vinterfaces']['vlan']) && count($config['vinterfaces']['vlan'])) {
-	foreach ($config['vinterfaces']['vlan'] as $vlanv) {
+array_make_branch($config,'vinterfaces','vlan');
+if(count($config['vinterfaces']['vlan'])):
+	foreach($config['vinterfaces']['vlan'] as $vlanv):
 		$portlist[$vlanv['if']] = $vlanv;
 		$portlist[$vlanv['if']]['isvirtual'] = true;
-	}
-}
+	endforeach;
+endif;
 
 // Add LAGG interfaces.
-if (isset($config['vinterfaces']['lagg']) && is_array($config['vinterfaces']['lagg']) && count($config['vinterfaces']['lagg'])) {
-	foreach ($config['vinterfaces']['lagg'] as $laggv) {
+array_make_branch($config,'vinterfaces','lagg');
+if(count($config['vinterfaces']['lagg'])):
+	foreach($config['vinterfaces']['lagg'] as $laggv):
 		$portlist[$laggv['if']] = $laggv;
 		$portlist[$laggv['if']]['isvirtual'] = true;
-	}
-}
+	endforeach;
+endif;
 
 if ($_POST) {
 	unset($input_errors);
