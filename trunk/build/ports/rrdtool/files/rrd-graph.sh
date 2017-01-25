@@ -23,13 +23,13 @@ fi
 CREATE_GRAPHS()
 {
     GRAPH=${1}
-    GRAPH_NAME="daily";    START_TIME="-1day";    TITLE_STRING="${2} - by day (5 minute averages)"
+    GRAPH_NAME="daily";    START_TIME="-1day";    TITLE_STRING="${2} - By Day (5 Minute Average)"
     . ${TEMPLATE_DIR}/templates/${1}.sh
-    GRAPH_NAME="weekly";    START_TIME="-1week";    TITLE_STRING="${2} - by week (30 minute averages)"
+    GRAPH_NAME="weekly";    START_TIME="-1week";    TITLE_STRING="${2} - By Week (30 Minute Average)"
     . ${TEMPLATE_DIR}/templates/${1}.sh
-    GRAPH_NAME="monthly";    START_TIME="-1month";    TITLE_STRING="${2} - by month (2 hour averages)"
+    GRAPH_NAME="monthly";    START_TIME="-1month";    TITLE_STRING="${2} - By Month (2 Hour Average)"
     . ${TEMPLATE_DIR}/templates/${1}.sh
-    GRAPH_NAME="yearly";    START_TIME="-1year";    TITLE_STRING="${2} - by year (12 hour averages)"
+    GRAPH_NAME="yearly";    START_TIME="-1year";    TITLE_STRING="${2} - By Year (12 Hour Average)"
     . ${TEMPLATE_DIR}/templates/${1}.sh
 }
 
@@ -52,7 +52,7 @@ if [ "$1" == "traffic" ] || ( [ "$1" == "" ] && [ "${RUN_LAN}" == "1" ] ); then
     x=0
     while [ -e "${STORAGE_PATH}/rrd/${INTERFACE0}.rrd" ]
     do
-        CREATE_GRAPHS "network_traffic" "Traffic on Interface ${INTERFACE0}"
+        CREATE_GRAPHS "network_traffic" "Traffic Interface ${INTERFACE0}"
         x=$((x+1))
         INTERFACE0=`/usr/local/bin/xml sel -t -v "//interfaces/opt${x}/if" /conf/config.xml`
     done
