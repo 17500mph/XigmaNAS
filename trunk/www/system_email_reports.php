@@ -37,11 +37,7 @@ require("email.inc");
 require("report.inc");
 
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('Email Reports Setup')];
-
-
-if (!isset($config['statusreport']) || !is_array($config['statusreport']))
-	$config['statusreport'] = array();
-
+array_make_branch($config,'statusreport');
 $pconfig['enable'] = isset($config['statusreport']['enable']);
 $pconfig['to'] = $config['statusreport']['to'];
 $pconfig['subject'] = $config['statusreport']['subject'];
