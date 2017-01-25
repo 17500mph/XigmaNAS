@@ -68,15 +68,21 @@ else:
 endif;
 
 $a_dataset = &array_make_branch($config,'zfs','datasets','dataset');
-array_sort_key($a_dataset,'name');
+if(empty($a_dataset)):
+else:	
+	array_sort_key($a_dataset,'name');
+endif;
 $sphere_array = &array_make_branch($config,'zfs','volumes','volume');
-array_sort_key($sphere_array,'name');
+if(empty($sphere_array)):
+else:
+	array_sort_key($sphere_array,'name');
+endif;
 $a_pool = &array_make_branch($config,'zfs','pools','pool');
-array_sort_key($a_pool,'name');
-
 if(empty($a_pool)): // Throw error message if no pool exists
 	$errormsg = gtext('No configured pools.') . ' ' . '<a href="' . 'disks_zfs_zpool.php' . '">' . gtext('Please add new pools first.') . '</a>';
 	$prerequisites_ok = false;
+else:
+	array_sort_key($a_pool,'name');
 endif;
 
 $index = array_search_ex($sphere_record['uuid'], $sphere_array, 'uuid'); // get index from config for volume by looking up uuid

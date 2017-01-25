@@ -65,11 +65,11 @@ $img_path = [
 	'inf' => 'images/info.png'
 ];
 // sunrise: verify if setting exists, otherwise run init tasks
-if (!(isset($config['zfs']['volumes']['volume']) && is_array($config['zfs']['volumes']['volume']))) {
-	$config['zfs']['volumes']['volume'] = [];
-}
-array_sort_key($config['zfs']['volumes']['volume'], 'name');
-$sphere_array = &$config['zfs']['volumes']['volume'];
+$sphere_array = &array_make_branch($config,'zfs','volumes','volume');
+if(empty($sphere_array)):
+else:
+	array_sort_key($sphere_array,'name');
+endif;
 
 if ($_POST) {
 	if (isset($_POST['apply']) && $_POST['apply']) {
