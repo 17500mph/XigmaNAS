@@ -43,14 +43,7 @@ $pgtitle = [gtext('Disks'),gtext('Management'),gtext('S.M.A.R.T.'),gtext('Schedu
 
 $a_months = explode(" ",gtext("January February March April May June July August September October November December"));
 $a_weekdays = explode(" ",gtext("Monday Tuesday Wednesday Thursday Friday Saturday Sunday"));
-
-if (!isset($config['smartd']) || !is_array($config['smartd']))
-	$config['smartd'] = array();
-
-if (!isset($config['smartd']['selftest']) || !is_array($config['smartd']['selftest']))
-	$config['smartd']['selftest'] = array();
-
-$a_selftest = &$config['smartd']['selftest'];
+$a_selftest = &array_make_branch($config,'smartd','selftest');
 
 // Get list of all configured physical disks.
 $a_disk = get_conf_physical_disks_list();

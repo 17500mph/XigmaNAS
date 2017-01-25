@@ -98,14 +98,8 @@ if ($_POST) {
 		}
 	}
 }
-
-if (!isset($config['disks']['disk']) || !is_array($config['disks']['disk']))
-	$config['disks']['disk'] = array();
-
-if (!isset($config['smartd']['selftest']) || !is_array($config['smartd']['selftest']))
-	$config['smartd']['selftest'] = array();
-
-$a_selftest = &$config['smartd']['selftest'];
+array_make_branch($config,'disks','disk');
+$a_selftest = &array_make_branch($config,'smartd','selftest');
 $a_type = array( "S" => "Short Self-Test", "L" => "Long Self-Test", "C" => "Conveyance Self-Test", "O" => "Offline Immediate Test");
 
 if (isset($_GET['act']) && $_GET['act'] === "del") {
