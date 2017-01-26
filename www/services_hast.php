@@ -34,8 +34,6 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-$pgtitle = [gtext('Services'),gtext('HAST')];
-
 array_make_branch($config,'hast','auxparam');
 //	array_make_branch($config,'hast','hastresource');
 array_make_branch($config,'vinterfaces','carp');
@@ -222,6 +220,7 @@ if ($_POST) {
 		$savemsg = get_std_save_message($retval);
 	}
 }
+$pgtitle = [gtext('Services'),gtext('HAST')];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">//<![CDATA[
@@ -296,6 +295,9 @@ $(document).ready(function(){
 				<div id="remarks">
 					<?php html_remark("note", gtext('Note'), sprintf("<div id='enumeration'><ul><li>%s</li><li>%s</li><li>%s</li></ul></div>", gtext("When HAST is enabled, the local devices, the local services and the additional packages which do not support HAST volume cannot be used."), gtext("The HAST volumes can not be accessed until HAST node becomes Primary."), gtext("Dynamic IP (DHCP) can not be used for HAST resources.")));?>
 				</div>
-<?php include 'formend.inc';?>
-</form></td></tr></table>
+				<?php include 'formend.inc';?>
+			</form>
+		</td>
+	</tr>
+</table>
 <?php include 'fend.inc';?>
