@@ -35,10 +35,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-
-$pgtitle = array(gtext('Disks'), gtext('Software RAID'), gtext('JBOD'), gtext('Information'));
+require 'auth.inc';
+require 'guiconfig.inc';
 
 function get_raidinfo() {
 	exec("/sbin/gconcat list",$rawdata);
@@ -49,8 +47,10 @@ if (is_ajax()) {
 	$raidinfo = get_raidinfo();
 	render_ajax($raidinfo);
 }
+$pgtitle = [gtext('Disks'),gtext('Software RAID'),gtext('JBOD'),gtext('Information')];
+
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(document).ready(function(){
@@ -62,23 +62,15 @@ $(document).ready(function(){
 //]]>
 </script>
 <table id="area_navigator"><tbody>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabact"><a href="disks_raid_geom.php" title="<?=gtext('Reload page');?>"><span><?=gtext('GEOM');?></span></a></li>
-				<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?=gtext('RAID 0/1/5');?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav2">
-				<li class="tabinact"><a href="disks_raid_geom.php"><span><?=gtext('Management'); ?></span></a></li>
-				<li class="tabinact"><a href="disks_raid_gconcat_tools.php"><span><?=gtext('Maintenance'); ?></span></a></li>
-				<li class="tabact"><a href="disks_raid_gconcat_info.php" title="<?=gtext('Reload page');?>" ><span><?=gtext('Information');?></span></a></li>
-			</ul>
-		</td>
-	</tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabact"><a href="disks_raid_geom.php" title="<?=gtext('Reload page');?>"><span><?=gtext('GEOM');?></span></a></li>
+		<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?=gtext('RAID 0/1/5');?></span></a></li>
+	</ul></td></tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav2">
+		<li class="tabinact"><a href="disks_raid_geom.php"><span><?=gtext('Management'); ?></span></a></li>
+		<li class="tabinact"><a href="disks_raid_gconcat_tools.php"><span><?=gtext('Maintenance'); ?></span></a></li>
+		<li class="tabact"><a href="disks_raid_gconcat_info.php" title="<?=gtext('Reload page');?>" ><span><?=gtext('Information');?></span></a></li>
+	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
 	<table id="area_data_settings">
@@ -90,4 +82,4 @@ $(document).ready(function(){
 		</tr>
 	</table>
 </td></tr></tbody></table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
