@@ -31,8 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 require 'disks_raid_geom_fun.inc';
 
 $sphere_scriptname = basename(__FILE__);
@@ -302,9 +302,9 @@ $l_balance = [
 	'prefer' => gtext('Read from biggest priority')
 ];
 // give it a title
-$pgtitle = array(gtext('Disks'), gtext('Software RAID'), gtext('GEOM'), ($isrecordnew) ? gtext('Add') : gtext('Edit'));
+$pgtitle = [gtext('Disks'),gtext('Software RAID'),gtext('GEOM'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
 ?>
-<?php include("fbegin.inc"); ?>
+<?php include 'fbegin.inc';?>
 <?php if ($isrecordnewornewmodify):?>
 <script type="text/javascript">
 //<![CDATA[
@@ -515,6 +515,6 @@ function toggleselection(ego, triggerbyname) {
 		<input name="Cancel" id="cancel_button" type="submit" class="formbtn" value="<?=gtext('Cancel');?>" />
 		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>" />
 	</div>
-	<?php include("formend.inc");?>
+	<?php include 'formend.inc';?>
 </form></td></tr></tbody></table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
