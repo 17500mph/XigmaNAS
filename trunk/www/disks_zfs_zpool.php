@@ -31,9 +31,9 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-require("zfs.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
+require 'zfs.inc';
 
 $sphere_scriptname = basename(__FILE__);
 $sphere_scriptname_child = 'disks_zfs_zpool_edit.php';
@@ -144,9 +144,9 @@ function zfszpool_process_updatenotification($mode, $data) {
 
 $sphere_addon_array = zfs_get_pool_list();
 $showusedavail = isset($config['zfs']['settings']['showusedavail']);
-$pgtitle = array(gtext('Disks'), gtext('ZFS'), gtext('Pools'), gtext('Management'));
+$pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Pools'),gtext('Management')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
@@ -348,6 +348,6 @@ function controlactionbuttons(ego, triggerbyname) {
 	<div id="submit">
 		<input name="delete_selected_rows" id="delete_selected_rows" type="submit" class="formbtn" value="<?=$gt_selection_delete;?>"/>
 	</div>
-	<?php include("formend.inc");?>
+	<?php include 'formend.inc';?>
 </form></td></tr></tbody></table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
