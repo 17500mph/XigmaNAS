@@ -31,10 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-
-$pgtitle = array(gtext("Disks"), gtext("Software RAID"), gtext("RAID-0"), gtext("Maintenance"));
+require 'auth.inc';
+require 'guiconfig.inc';
 
 $a_raid = &array_make_branch($config,'gstripe','vdisk');
 if(empty($a_raid)):
@@ -66,8 +64,9 @@ if (!isset($do_action)) {
 	$raid = '';
 	$disk = '';
 }
+$pgtitle = [gtext('Disks'),gtext('Software RAID'),gtext('RAID-0'),gtext('Maintenance')];
 ?>
-<?php include("fbegin.inc"); ?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
@@ -177,7 +176,7 @@ function raid_change() {
 						html_remark('warning', gtext('Warning'), $helpinghand);
 						?>
 					</div>
-					<?php include("formend.inc"); ?>
+					<?php include 'formend.inc';?>
 				</form>
 			</td></tr>
 		</table>
@@ -188,4 +187,4 @@ function raid_change() {
 raid_change();
 //]]>
 </script>
-<?php include("fend.inc"); ?>
+<?php include 'fend.inc';?>
