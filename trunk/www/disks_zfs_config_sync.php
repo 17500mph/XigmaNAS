@@ -35,8 +35,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
 $zfs = [
 	'vdevices' => ['vdevice' => []],
@@ -464,9 +464,9 @@ if (!$health) {
 	$message_box_text .= gtext('It is not recommanded to import non healthy pools nor virtual devices that are part of a non healthy pool.');
 }
 
-$pgtitle = array(gtext('Disks'), gtext('ZFS'), gtext('Configuration'), gtext('Synchronize'));
+$pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Synchronize')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
 		<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext("Pools");?></span></a></li>
@@ -711,6 +711,6 @@ $pgtitle = array(gtext('Disks'), gtext('ZFS'), gtext('Configuration'), gtext('Sy
 	<div id="submit">
 		<input type="submit" name="import_config" value="<?=gtext('Synchronize');?>"/>
 	</div>
-	<?php include("formend.inc");?>
+	<?php include 'formend.inc';?>
 </form></td></tr></tbody></table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
