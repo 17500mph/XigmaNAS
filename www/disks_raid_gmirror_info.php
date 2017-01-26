@@ -35,10 +35,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-
-$pgtitle = array(gtext("Disks"), gtext("Software RAID"), gtext("RAID1"), gtext("Information"));
+require 'auth.inc';
+require 'guiconfig.inc';
 
 function get_raidinfo() {
 	exec("/sbin/gmirror list",$rawdata);
@@ -49,8 +47,9 @@ if (is_ajax()) {
 	$raidinfo = get_raidinfo();
 	render_ajax($raidinfo);
 }
+$pgtitle = [gtext('Disks'),gtext('Software RAID'),gtext('RAID1'),gtext('Information')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(document).ready(function(){
@@ -66,7 +65,7 @@ $(document).ready(function(){
 		<td class="tabnavtbl">
 			<ul id="tabnav">
 				<li class="tabact"><a href="disks_raid_geom.php" title="<?=gtext('Reload page');?>"><span><?=gtext('GEOM');?></span></a></li>
-				<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?=gtext("RAID 0/1/5");?></span></a></li>
+				<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?=gtext('RAID 0/1/5');?></span></a></li>
 			</ul>
 		</td>
 	</tr>
@@ -82,7 +81,7 @@ $(document).ready(function(){
 	<tr>
 		<td class="tabcont">
 			<table width="100%" border="0" cellspacing="0" cellpadding="0">
-				<?php html_titleline(gtext("RAID 1 Information & Status"));?>
+				<?php html_titleline(gtext('RAID 1 Information & Status'));?>
 				<tr>
 					<td class="listt">
 						<pre><span id="raidinfo"></span></pre>
@@ -92,4 +91,4 @@ $(document).ready(function(){
 		</td>
 	</tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
