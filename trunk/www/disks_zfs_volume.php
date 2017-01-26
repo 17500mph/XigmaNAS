@@ -31,8 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 require("zfs.inc");
 
 $sphere_scriptname = basename(__FILE__);
@@ -154,9 +154,9 @@ function zfsvolume_process_updatenotification($mode, $data) {
 	return $retval;
 }
 
-$pgtitle = array(gtext('Disks'), gtext('ZFS'), gtext('Volumes'), gtext('Volume'));
+$pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Volumes'),gtext('Volume')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
@@ -332,6 +332,6 @@ function controlactionbuttons(ego, triggerbyname) {
 	<div id="submit">
 		<input name="delete_selected_rows" id="delete_selected_rows" type="submit" class="formbtn" value="<?=$gt_selection_delete;?>"/>
 	</div>
-	<?php include("formend.inc");?>
+	<?php include 'formend.inc';?>
 </form></td></tr></tbody></table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
