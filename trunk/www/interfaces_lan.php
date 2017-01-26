@@ -34,8 +34,6 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Network"), gtext("LAN Management"));
-
 $lancfg = &$config['interfaces']['lan'];
 $optcfg = &$config['interfaces']['lan']; // Required for WLAN.
 
@@ -67,12 +65,13 @@ $pconfig['media'] = !empty($lancfg['media']) ? $lancfg['media'] : "autoselect";
 $pconfig['mediaopt'] = !empty($lancfg['mediaopt']) ? $lancfg['mediaopt'] : "";
 $pconfig['polling'] = isset($lancfg['polling']);
 $pconfig['extraoptions'] = !empty($lancfg['extraoptions']) ? $lancfg['extraoptions'] : "";
-if (!empty($ifinfo['wolevents']))
+if(!empty($ifinfo['wolevents'])):
 	$pconfig['wakeon'] = $lancfg['wakeon'];
+endif;
 
 /* Wireless interface? */
 if (isset($lancfg['wireless'])) {
-	require("interfaces_wlan.inc");
+	require 'interfaces_wlan.inc';
 	wireless_config_init();
 }
 
@@ -153,6 +152,7 @@ if ($_POST) {
 		touch($d_sysrebootreqd_path);
 	}
 }
+$pgtitle = [gtext('Network'),gtext('LAN Management')];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">
