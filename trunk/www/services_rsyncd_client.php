@@ -114,9 +114,9 @@ function rsyncclient_process_updatenotification($mode, $data) {
 	<tr>
 		<td width="20%" class="listhdrlr"><?=gtext("Remote Module (Source)");?></td>
 		<td width="15%" class="listhdrr"><?=gtext("Remote Address");?></td>
-		<td width="15%" class="listhdrr"><?=gtext("Local Share (Destination)");?></td>
+		<td width="18%" class="listhdrr"><?=gtext("Local Share (Destination)");?></td>
 		<td width="10%" class="listhdrr"><?=gtext("Who");?></td>
-		<td width="30%" class="listhdrr"><?=gtext("Description");?></td>
+		<td width="27%" class="listhdrr"><?=gtext("Description");?></td>
 		<td width="10%" class="list"></td>
 	</tr>
 		<?php foreach($a_rsyncclient as $rsyncclient):?>
