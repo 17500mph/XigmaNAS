@@ -31,15 +31,15 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
 if (isset($_GET['uuid']))
 	$uuid = $_GET['uuid'];
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = array(gtext("Services"), gtext("HAST"), isset($uuid) ? gtext("Edit") : gtext("Add"));
+$pgtitle = [gtext('Services'),gtext('HAST'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
 $a_resource = &array_make_branch($config,'hast','hastresource');
 if(empty($a_resource)):
@@ -124,7 +124,7 @@ if ($_POST) {
 	}
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabnavtbl">
@@ -146,13 +146,13 @@ if ($_POST) {
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php
 					html_titleline(gtext("HAST Resource"));
-					html_inputbox("name", gtext("Resource name"), $pconfig['name'], "", false, 30);
+					html_inputbox("name", gtext("Resource Name"), $pconfig['name'], "", false, 30);
 					$helpinghand = '<a href="'
 						. 'http://www.freebsd.org/cgi/man.cgi?query=hast.conf&sektion=5'
 						. '" target="_blank">'
 						. gtext('Please check the documentation')
 						. '</a>.';
-					html_textarea("auxparam", gtext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gtext("These parameters are added to %s."), "hast.conf") . " " . $helpinghand, false, 65, 5, false, false);
+					html_textarea("auxparam", gtext("Auxiliary Parameters"), $pconfig['auxparam'], sprintf(gtext("These parameters are added to %s."), "hast.conf") . " " . $helpinghand, false, 65, 5, false, false);
 					html_separator();
 					html_titleline(gtext("Node A Settings"));
 					html_inputbox("aname", gtext("Node Name"), $pconfig['aname'], "", false, 40);
@@ -170,9 +170,6 @@ if ($_POST) {
 					<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
 					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
 				</div>
-				<?php include("formend.inc");?>
-			</form>
-		</td>
-	</tr>
-</table>
-<?php include("fend.inc");?>
+<?php include 'formend.inc';?>
+</form></td></tr></table>
+<?php include 'fend.inc';?>

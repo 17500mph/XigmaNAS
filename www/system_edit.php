@@ -155,7 +155,7 @@ $(window).on("load", function() {
 			</tr>
 		</tbody>
 	</table>
-	<?php include 'formend.inc';?>
+<?php include 'formend.inc';?>
 </form></td></tr></tbody></table>
 <script type="text/javascript" src="syntaxhighlighter/shCore.js"></script>
 <script type="text/javascript" src="syntaxhighlighter/shBrushCSharp.js"></script>

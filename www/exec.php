@@ -37,7 +37,7 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-$pgtitle = [gtext('Tools'), gtext('Execute Command')];
+$pgtitle = [gtext('Tools'),gtext('Execute Command')];
 ?>
 <?php include 'fbegin.inc';?>
 <?php
@@ -267,8 +267,8 @@ $(window).on("load", function() {
 			endif;
 		endif;
 		?>
-	</td></tr></tbody></table>
-	<?php include 'formend.inc';?>
+</td></tr></tbody></table>
+<?php include 'formend.inc';?>
 </form>
 <script type="text/javascript">
 //<![CDATA[

@@ -439,6 +439,6 @@ endswitch;
 		endswitch;
 		?>
 	</div>
-	<?php include 'formend.inc';?>
+<?php include 'formend.inc';?>
 </form></td></tr></tbody></table>
 <?php include 'fend.inc';?>

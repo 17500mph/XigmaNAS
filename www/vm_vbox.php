@@ -31,10 +31,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Virtualization"), gtext("VirtualBox"));
+$pgtitle = [gtext('Virtualization'),gtext('VirtualBox')];
 
 $pconfig['enable'] = isset($config['vbox']['enable']);
 $pconfig['homedir'] = $config['vbox']['homedir'];
@@ -104,7 +104,7 @@ if ($_POST) {
 	}
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">//<![CDATA[
 $(document).ready(function(){
 	function enable_change(enable_change) {
@@ -139,7 +139,7 @@ $(document).ready(function(){
 	<?php $enabled = isset($config['vbox']['enable']);?>
 	<table width="100%" border="0" cellpadding="6" cellspacing="0">
 	<?php html_titleline_checkbox("enable", gtext("VirtualBox"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "");?>
-	<?php html_filechooser("homedir", gtext("Home directory"), $pconfig['homedir'], gtext("Enter the path to the home directory of VirtualBox. VM config and HDD image will be created under the specified directory."), $g['media_path'], false, 60);?>
+	<?php html_filechooser("homedir", gtext("Home Directory"), $pconfig['homedir'], gtext("Enter the path to the home directory of VirtualBox. VM config and HDD image will be created under the specified directory."), $g['media_path'], false, 60);?>
 	<?php if ($enabled):?>
 		<?php html_separator();?>
 		<?php html_titleline(sprintf("%s (%s)", gtext("Administrative WebGUI"), gtext("phpVirtualBox")));?>
@@ -157,14 +157,14 @@ $(document).ready(function(){
 			$text = "<a href='${url}?host=$ipaddr' id='a_url2' target='_blank'>{$url}</a>";
 		?>
 		<?php html_text("url2", gtext("URL"), $text);?>
-	<?php endif;?>
-	</table>
-	<div id="submit">
-	  <input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" />
-	</div>
-	<?php include("formend.inc");?>
-      </form>
-    </td>
-  </tr>
+		<?php endif;?>
+		</table>
+			<div id="submit">
+				<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" />
+			</div>
+<?php include 'formend.inc';?>
+</form>
+</td>
+</tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

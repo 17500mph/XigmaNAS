@@ -143,7 +143,7 @@ $pgtitle = [gtext('Status'),gtext('Interfaces')];
 				?>
 			</tbody>
 		</table>
-	<?php endforeach;?>
-	<?php include 'formend.inc';?>
+<?php endforeach;?>
+<?php include 'formend.inc';?>
 </form></td></tr></tbody></table>
 <?php include 'fend.inc';?>
