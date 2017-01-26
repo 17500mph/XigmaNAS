@@ -100,7 +100,7 @@ $loginfo = [
 		]],
 	[
 		'visible' => isset($config['ftpd']['mod_ban']['enable']),
-		'desc' => gtext('FTP - Ban module'),
+		'desc' => gtext('FTP - Ban Module'),
 		'logfile' => $proftpd_modban_logfile,
 		'filename' => 'ban.log',
 		'type' => 'plain',
@@ -111,7 +111,7 @@ $loginfo = [
 		]],
 	[
 		'visible' => true,
-		'desc' => gtext('FTP - File transfer'),
+		'desc' => gtext('FTP - File Transfer'),
 		'logfile' => "{$g['varlog_path']}/xferlog",
 		'filename' => 'xferlog',
 		'type' => 'plain',
