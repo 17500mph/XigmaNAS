@@ -34,15 +34,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Services"), gtext("LCDproc"));
-
-if (!isset($config['lcdproc']) || !is_array($config['lcdproc']))
-	$config['lcdproc'] = array();
-if (!isset($config['lcdproc']['lcdproc']) || !is_array($config['lcdproc']['lcdproc']))
-	$config['lcdproc']['lcdproc'] = array();
+array_make_branch($config,'lcdproc','lcdproc');
 
 $pconfig['enable'] = isset($config['lcdproc']['enable']);
 $pconfig['driver'] = $config['lcdproc']['driver'];
@@ -118,8 +113,10 @@ if ($_POST) {
 		$savemsg = get_std_save_message($retval);
 	}
 }
+$pgtitle = array(gtext("Services"), gtext("LCDproc"));
+
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function enable_change(enable_change) {
@@ -183,7 +180,7 @@ function lcdproc_enable_change(enable_change) {
 					html_remark("note", gtext('Note'), $helpinghand);
 					?>
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
@@ -194,4 +191,4 @@ enable_change(false);
 lcdproc_enable_change(false);
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
