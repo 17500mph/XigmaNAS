@@ -31,10 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-
-$pgtitle = array(gtext("Disks"), gtext("Software RAID"), gtext("RAID 0/1/5"), gtext("Maintenance"));
+require 'auth.inc';
+require 'guiconfig.inc';
 
 if ($_POST) {
 	unset($input_errors);
@@ -57,8 +55,9 @@ if (!isset($do_action)) {
 	$action = '';
 	$object = '';
 }
+$pgtitle = [gtext('Disks'),gtext('Software RAID'),gtext('RAID 0/1/5'),gtext('Maintenance')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
@@ -143,9 +142,9 @@ $(window).on("load", function() {
 					html_remark('warning', gtext('Warning'), $helpinghand);
 					?>
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td></tr></table>
 	</td></tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
