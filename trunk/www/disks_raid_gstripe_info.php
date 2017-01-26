@@ -34,22 +34,21 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-
-$pgtitle = array(gtext("Disks"), gtext("Software RAID"), gtext("RAID0"), gtext("Information"));
+require 'auth.inc';
+require 'guiconfig.inc';
 
 function get_raidinfo() {
 	exec("/sbin/gstripe list", $rawdata);
 	return implode("\n", $rawdata);
 }
 
-if (is_ajax()) {
+if(is_ajax()):
 	$raidinfo = get_raidinfo();
 	render_ajax($raidinfo);
-}
+endif;
+$pgtitle = [gtext('Disks'),gtext('Software RAID'),gtext('RAID0'),gtext('Information')];
 ?>
-<?php include("fbegin.inc"); ?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(document).ready(function(){
@@ -91,4 +90,4 @@ $(document).ready(function(){
 		</td>
 	</tr>
 </table>
-<?php include("fend.inc"); ?>
+<?php include 'fend.inc';?>
