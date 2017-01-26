@@ -31,10 +31,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Services"), gtext("Samba AD"), gtext("Initialize"));
+$pgtitle = [gtext('Services'),gtext('Samba AD'),gtext('Initialize')];
 
 $errormsg="";
 $do_init = false;
@@ -153,7 +153,7 @@ if ($_POST) {
 	}
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">//<![CDATA[
 $(document).ready(function(){
 	function enable_change(enable_change) {
@@ -196,15 +196,15 @@ $(document).ready(function(){
 					<?php
 					html_titleline(gtext("Samba Active Directory Domain Controller"));
 					html_text("hostname", gtext("Hostname"), htmlspecialchars($hostname));
-					html_text("netniosname", gtext("NetBIOS name"), htmlspecialchars($netbiosname));
-					html_inputbox("dns_forwarder", gtext("DNS forwarder"), $pconfig['dns_forwarder'], "", true, 40);
-					html_inputbox("dns_domain", gtext("DNS domain"), $pconfig['dns_domain'], "", true, 40);
-					html_inputbox("netbios_domain", gtext("NetBIOS domain"), $pconfig['netbios_domain'], "", true, 40);
+					html_text("netniosname", gtext("NetBIOS Name"), htmlspecialchars($netbiosname));
+					html_inputbox("dns_forwarder", gtext("DNS Forwarder"), $pconfig['dns_forwarder'], "", true, 40);
+					html_inputbox("dns_domain", gtext("DNS Domain"), $pconfig['dns_domain'], "", true, 40);
+					html_inputbox("netbios_domain", gtext("NetBIOS Domain"), $pconfig['netbios_domain'], "", true, 40);
 					//html_text("realm", gtext("Kerberos realm"), htmlspecialchars($realm));
-					html_passwordconfbox("password", "password_confirm", gtext("Admin password"), "", "", gtext("Generate password if leave empty."), true);
+					html_passwordconfbox("password", "password_confirm", gtext("Admin Password"), "", "", gtext("Generate password if leave empty."), true);
 					html_filechooser("path", gtext("Path"), $pconfig['path'], sprintf(gtext("Permanent samba data path (e.g. %s)."), "/mnt/data/samba4"), $g['media_path'], true);
 					html_combobox("fstype", gtext("Fileserver"), $pconfig['fstype'], array("s3fs" => "s3fs", "ntvfs" => "ntvfs"), "", true);
-					html_checkbox("user_shares", gtext("User shares"), !empty($pconfig['user_shares']) ? true : false, gtext("Append user defined shares"), "", false);
+					html_checkbox("user_shares", gtext("User Shares"), !empty($pconfig['user_shares']) ? true : false, gtext("Append user defined shares"), "", false);
 					?>
 				</table>
 				<div id="submit">
@@ -247,9 +247,9 @@ $(document).ready(function(){
 					html_remark("note", gtext('Note'), sprintf("<div id='enumeration'><ul><li>%s</li><li>%s</li></ul></div>", gtext("All data in the path is overwritten. To avoid invalid data/permission, using an empty UFS directory is recommended."), $helpinghand));
 					?>
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
