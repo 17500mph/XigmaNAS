@@ -31,13 +31,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Services"), gtext("TFTP"));
-
-if (!isset($config['tftpd']) || !is_array($config['tftpd']))
-	$config['tftpd'] = array();
+array_make_branch($config,'tftpd');
 
 $pconfig['enable'] = isset($config['tftpd']['enable']);
 $pconfig['dir'] = $config['tftpd']['dir'];
@@ -99,8 +96,9 @@ if ($_POST) {
 		$savemsg = get_std_save_message($retval);
 	}
 }
+$pgtitle = [gtext('Services'),gtext('TFTP')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function enable_change(enable_change) {
@@ -121,26 +119,30 @@ function enable_change(enable_change) {
 	<tr>
 		<td class="tabcont">
 			<form action="services_tftp.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
+				<?php
+				if (!empty($input_errors)) print_input_errors($input_errors);
+				if (!empty($savemsg)) print_info_box($savemsg);
+				?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<?php html_titleline_checkbox("enable", gtext("Trivial File Transfer Protocol"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
-					<?php html_filechooser("dir", gtext("Directory"), $pconfig['dir'], gtext("The directory containing the files you want to publish. The remote host does not need to pass along the directory as part of the transfer."), $g['media_path'], true, 60);?>
-					<?php html_checkbox("allowfilecreation", gtext("Allow new files"), !empty($pconfig['allowfilecreation']) ? true : false, gtext("Allow new files to be created."), gtext("By default, only already existing files can be uploaded."), false);?>
-					<?php html_separator();?>
-					<?php html_titleline(gtext("Advanced Settings"));?>
-					<?php html_inputbox("port", gtext("Port"), $pconfig['port'], gtext("The port to listen to. The default is to listen to the tftp port specified in /etc/services."), false, 5);?>
-					<?php $a_user = array(); foreach (system_get_user_list() as $userk => $userv) { $a_user[$userk] = htmlspecialchars($userk); }?>
-					<?php html_combobox("username", gtext("Username"), $pconfig['username'], $a_user, gtext("Specifies the username which the service will run as."), false);?>
-					<?php html_inputbox("umask", gtext("umask"), $pconfig['umask'], gtext("Sets the umask for newly created files to the specified value. The default is zero (anyone can read or write)."), false, 4);?>
-					<?php html_inputbox("timeout", gtext("Timeout"), $pconfig['timeout'], gtext("Determine the default timeout, in microseconds, before the first packet is retransmitted. The default is 1000000 (1 second)."), false, 10);?>
-					<?php html_inputbox("maxblocksize", gtext("Max. block size"), $pconfig['maxblocksize'], gtext("Specifies the maximum permitted block size. The permitted range for this parameter is from 512 to 65464."), false, 5);?>
-					<?php html_inputbox("extraoptions", gtext("Extra options"), $pconfig['extraoptions'], gtext("Extra options (usually empty)."), false, 40);?>
+					<?php
+					html_titleline_checkbox("enable", gtext("Trivial File Transfer Protocol"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");
+					html_filechooser("dir", gtext("Directory"), $pconfig['dir'], gtext("The directory containing the files you want to publish. The remote host does not need to pass along the directory as part of the transfer."), $g['media_path'], true, 60);
+					html_checkbox("allowfilecreation", gtext("Allow new files"), !empty($pconfig['allowfilecreation']) ? true : false, gtext("Allow new files to be created."), gtext("By default, only already existing files can be uploaded."), false);
+					html_separator();
+					html_titleline(gtext("Advanced Settings"));
+					html_inputbox("port", gtext("Port"), $pconfig['port'], gtext("The port to listen to. The default is to listen to the tftp port specified in /etc/services."), false, 5);
+					$a_user = array(); foreach (system_get_user_list() as $userk => $userv) { $a_user[$userk] = htmlspecialchars($userk); }
+					html_combobox("username", gtext("Username"), $pconfig['username'], $a_user, gtext("Specifies the username which the service will run as."), false);
+					html_inputbox("umask", gtext("umask"), $pconfig['umask'], gtext("Sets the umask for newly created files to the specified value. The default is zero (anyone can read or write)."), false, 4);
+					html_inputbox("timeout", gtext("Timeout"), $pconfig['timeout'], gtext("Determine the default timeout, in microseconds, before the first packet is retransmitted. The default is 1000000 (1 second)."), false, 10);
+					html_inputbox("maxblocksize", gtext("Max. block size"), $pconfig['maxblocksize'], gtext("Specifies the maximum permitted block size. The permitted range for this parameter is from 512 to 65464."), false, 5);
+					html_inputbox("extraoptions", gtext("Extra options"), $pconfig['extraoptions'], gtext("Extra options (usually empty)."), false, 40);
+					?>
 				</table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="enable_change(true)" />
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
@@ -150,4 +152,4 @@ function enable_change(enable_change) {
 enable_change();
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
