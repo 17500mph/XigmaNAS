@@ -499,7 +499,7 @@ $(document).ready(function(){
 			else:
 				html_textinfo2('system',gtext('System'),sprintf('%s %s',htmlspecialchars($smbios['system']['maker']),htmlspecialchars($smbios['system']['product'])));
 			endif;
-			html_textinfo2('system_bios',gtext('System BIOS'),sprintf('%s %s %s %s',htmlspecialchars($smbios['bios']['vendor']),gtext('version:'),htmlspecialchars($smbios['bios']['version']),htmlspecialchars($smbios['bios']['reldate'])));
+			html_textinfo2('system_bios',gtext('System BIOS'),sprintf('%s %s %s %s',htmlspecialchars($smbios['bios']['vendor']),gtext('Version:'),htmlspecialchars($smbios['bios']['version']),htmlspecialchars($smbios['bios']['reldate'])));
 			html_textinfo2('system_datetime',gtext('System Time'),htmlspecialchars(get_datetime_locale()));
 			html_textinfo2('system_uptime',gtext('System Uptime'),htmlspecialchars(system_get_uptime()));
 			if (Session::isAdmin()):
