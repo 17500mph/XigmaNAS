@@ -35,8 +35,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
 $zfs = [
 	'vdevices' => ['vdevice' => []],
@@ -68,7 +68,7 @@ foreach($rawdata as $line) {
 	if ($line == 'no datasets available') {
 		continue;
 	}
-	list($fname, $mpoint, $compress, $canmount, $quota, $used, $avail, $xattr, $snapdir, $readonly, $origin, $reservation, $dedup, $sync, $atime, $aclinherit, $aclmode, $primarycache, $secondarycache) = explode("\t", $line);
+	list($fname,$mpoint,$compress,$canmount,$quota,$used,$avail,$xattr,$snapdir,$readonly,$origin,$reservation,$dedup,$sync,$atime,$aclinherit,$aclmode,$primarycache,$secondarycache) = explode("\t",$line);
 	if (strpos($fname, '/') !== false) { // dataset
 		if (empty($origin) || $origin != '-') {
 			continue;
@@ -341,9 +341,9 @@ if (!$health) {
 	$message_box_text = gtext('Your ZFS system is not healthy.');
 }
 
-$pgtitle = array(gtext('Disks'), gtext('ZFS'), gtext('Configuration'), gtext('Detected'));
+$pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Detected')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
 		<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Pools');?></span></a></li>
@@ -360,22 +360,22 @@ $pgtitle = array(gtext('Disks'), gtext('ZFS'), gtext('Configuration'), gtext('De
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
 	<?php 
-		if (!empty($message_box_text)) {
-			print_core_box($message_box_type, $message_box_text);
-		}
+	if (!empty($message_box_text)) {
+		print_core_box($message_box_type, $message_box_text);
+	}
 	?>
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
-			<col style="width:16%"><!-- // Name -->
-			<col style="width:10%"><!-- // Size -->
-			<col style="width:9%"><!-- // Alloc -->
-			<col style="width:9%"><!-- // Free -->
-			<col style="width:9%"><!-- // Expandsz -->
-			<col style="width:9%"><!-- // Frag -->
-			<col style="width:9%"><!-- // Dedup -->
-			<col style="width:9%"><!-- // Health -->
-			<col style="width:10%"><!-- // Mount Point -->
-			<col style="width:10%"><!-- // AltRoot -->
+			<col style="width:16%">
+			<col style="width:10%">
+			<col style="width:9%">
+			<col style="width:9%">
+			<col style="width:9%">
+			<col style="width:9%">
+			<col style="width:9%">
+			<col style="width:9%">
+			<col style="width:10%">
+			<col style="width:10%">
 		</colgroup>
 		<thead>
 			<?php html_titleline2(gtext('Pools').' ('.count($zfs['pools']['pool']).')', 10);?>
@@ -414,12 +414,12 @@ $pgtitle = array(gtext('Disks'), gtext('ZFS'), gtext('Configuration'), gtext('De
 			<?php endforeach;?>
 		</tbody>
 	</table>
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
-			<col style="width:16%"><!-- // Name -->
-			<col style="width:21%"><!-- // Type -->
-			<col style="width:21%"><!-- // Pool -->
-			<col style="width:42%"><!-- // Devices -->
+			<col style="width:16%">
+			<col style="width:21%">
+			<col style="width:21%">
+			<col style="width:42%">
 		</colgroup>
 		<thead>
 			<?php html_titleline2(gtext('Virtual Devices').' ('.count($zfs['vdevices']['vdevice']).')', 4);?>
@@ -446,17 +446,17 @@ $pgtitle = array(gtext('Disks'), gtext('ZFS'), gtext('Configuration'), gtext('De
 			<?php endforeach;?>
 		</tbody>
 	</table>
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
-			<col style="width:14%"><!-- // Name -->
-			<col style="width:14%"><!-- // Pool -->
-			<col style="width:7%"><!-- // Compression -->
-			<col style="width:7%"><!-- // Dedup -->
-			<col style="width:9%"><!-- // Sync -->
-			<col style="width:9%"><!-- // ACL Inherit -->
-			<col style="width:9%"><!-- // ACL Mode -->
-			<col style="width:7%"><!-- // Canmount -->
-			<col style="width:8%"><!-- // Quota -->
+			<col style="width:14%">
+			<col style="width:14%">
+			<col style="width:7%">
+			<col style="width:7%">
+			<col style="width:9%">
+			<col style="width:9%">
+			<col style="width:9%">
+			<col style="width:7%">
+			<col style="width:8%">
 <!--
 			<col style="width:8%">
 -->
@@ -508,7 +508,7 @@ $pgtitle = array(gtext('Disks'), gtext('ZFS'), gtext('Configuration'), gtext('De
 			<?php endforeach;?>
 		</tbody>
 	</table>
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:16%"><!-- // Name -->
 			<col style="width:12%"><!-- // Pool -->
@@ -556,4 +556,4 @@ $pgtitle = array(gtext('Disks'), gtext('ZFS'), gtext('Configuration'), gtext('De
 		<?php html_remark2('note', gtext('Note'), gtext('This page reflects the current system configuration. It may be different to the configuration which has been created with the WebGUI if changes has been done via command line'));?>
 	</div>
 </td></tr></tbody></table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
