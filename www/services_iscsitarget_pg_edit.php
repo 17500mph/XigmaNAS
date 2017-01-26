@@ -41,11 +41,11 @@ if (isset($_POST['uuid']))
 
 $pgtitle = [gtext('Services'),gtext('iSCSI Target'),gtext('Portal Group'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
-if (!isset($config['iscsitarget']['portalgroup']) || !is_array($config['iscsitarget']['portalgroup']))
-	$config['iscsitarget']['portalgroup'] = array();
-
-array_sort_key($config['iscsitarget']['portalgroup'], "tag");
-$a_iscsitarget_pg = &$config['iscsitarget']['portalgroup'];
+$a_iscsitarget_pg = &array_make_branch($config,'iscsitarget','portalgroup');
+if(empty($a_iscsitarget_pg)):
+else:
+	array_sort_key($a_iscsitarget_pg,'tag');
+endif;
 
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_iscsitarget_pg, "uuid")))) {
 	$pconfig['uuid'] = $a_iscsitarget_pg[$cnid]['uuid'];

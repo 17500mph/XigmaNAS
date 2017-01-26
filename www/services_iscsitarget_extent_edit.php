@@ -50,11 +50,11 @@ if (!isset($uuid))
 
 $pgtitle = [gtext('Services'),gtext('iSCSI Target'),gtext('Extent'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
-if (!isset($config['iscsitarget']['extent']) || !is_array($config['iscsitarget']['extent']))
-	$config['iscsitarget']['extent'] = array();
-
-array_sort_key($config['iscsitarget']['extent'], "name");
-$a_iscsitarget_extent = &$config['iscsitarget']['extent'];
+$a_iscsitarget_extent = &array_make_branch($config,'iscsitarget','extent');
+if(empty($a_iscsitarget_extent)):
+else:
+	array_sort_key($a_iscsitarget_extent,'name');
+endif;
 
 function get_all_device($a_extent,$uuid) {
 	$a = array();

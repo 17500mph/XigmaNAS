@@ -36,14 +36,9 @@ require("guiconfig.inc");
 
 $pgtitle = array(gtext("Services"), gtext("iSCSI Target"));
 
-if (!isset($config['iscsitarget']['portalgroup']) || !is_array($config['iscsitarget']['portalgroup']))
-	$config['iscsitarget']['portalgroup'] = array();
-
-if (!isset($config['iscsitarget']['initiatorgroup']) || !is_array($config['iscsitarget']['initiatorgroup']))
-	$config['iscsitarget']['initiatorgroup'] = array();
-
-if (!isset($config['iscsitarget']['authgroup']) || !is_array($config['iscsitarget']['authgroup']))
-	$config['iscsitarget']['authgroup'] = array();
+array_make_branch($config,'iscsitarget','portalgroup');
+array_make_branch($config,'iscsitarget','initiatorgroup');
+array_make_branch($config,'iscsitarget','authgroup');
 
 function cmp_tag($a, $b) {
 	if ($a['tag'] == $b['tag'])
@@ -196,15 +191,9 @@ if ($_POST) {
 		$savemsg = get_std_save_message($retval);
 	}
 }
-
-if (!isset($config['iscsitarget']['portalgroup']) || !is_array($config['iscsitarget']['portalgroup']))
-	$config['iscsitarget']['portalgroup'] = array();
-
-if (!isset($config['iscsitarget']['initiatorgroup']) || !is_array($config['iscsitarget']['initiatorgroup']))
-	$config['iscsitarget']['initiatorgroup'] = array();
-
-if (!isset($config['iscsitarget']['authgroup']) || !is_array($config['iscsitarget']['authgroup']))
-	$config['iscsitarget']['authgroup'] = array();
+array_make_branch($config,'iscsitarget','portalgroup');
+array_make_branch($config,'iscsitarget','initiatorgroup');
+array_make_branch($config,'iscsitarget','authgroup');
 ?>
 <?php include("fbegin.inc");?>
 <script type="text/javascript">

@@ -44,11 +44,11 @@ $pgtitle = [gtext('Services'), gtext('iSCSI Target'), gtext('Auth Group'), isset
 $MAX_AUTHUSERS = 4;
 $GROW_AUTHUSERS = 4;
 
-if (!isset($config['iscsitarget']['authgroup']) || !is_array($config['iscsitarget']['authgroup']))
-	$config['iscsitarget']['authgroup'] = array();
-
-array_sort_key($config['iscsitarget']['authgroup'], "tag");
-$a_iscsitarget_ag = &$config['iscsitarget']['authgroup'];
+$a_iscsitarget_ag = &array_make_branch($config,'iscsitarget','authgroup');
+if(empty($a_iscsitarget_ag)):
+else:
+	array_sort_key($a_iscsitarget_ag,'tag');
+endif;
 
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_iscsitarget_ag, "uuid")))) {
 	$pconfig['uuid'] = $a_iscsitarget_ag[$cnid]['uuid'];
