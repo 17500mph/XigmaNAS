@@ -31,15 +31,15 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
 if (isset($_GET['uuid']))
 	$uuid = $_GET['uuid'];
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = array(gtext("Services"), gtext("CIFS/SMB"), gtext("Share"), isset($uuid) ? gtext("Edit") : gtext("Add"));
+$pgtitle = [gtext('Services'),gtext('CIFS/SMB'),gtext('Share'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
 if (!isset($config['mounts']['mount']) || !is_array($config['mounts']['mount']))
 	$config['mounts']['mount'] = array();
@@ -230,151 +230,152 @@ if ($_POST) {
 ?>
 <?php include("fbegin.inc");?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabinact"><a href="services_samba.php"><span><?=gtext("Settings");?></span></a></li>
-				<li class="tabact"><a href="services_samba_share.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Shares");?></span></a></li>
+<tr>
+	<td class="tabnavtbl">
+		<ul id="tabnav">
+			<li class="tabinact"><a href="services_samba.php"><span><?=gtext("Settings");?></span></a></li>
+			<li class="tabact"><a href="services_samba_share.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Shares");?></span></a></li>
 			</ul>
-			</td>
+		</td>
 	</tr>
 	<tr>
-		<td class="tabcont">
+	<td class="tabcont">
 			<form action="services_samba_share_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-				<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
-				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Name");?></td>
-						<td width="78%" class="vtable">
-							<input name="name" type="text" class="formfld" id="name" size="30" value="<?=htmlspecialchars($pconfig['name']);?>" />
+			<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
+			<table width="100%" border="0" cellpadding="6" cellspacing="0">
+			<?php html_titleline(gtext("Share Settings"));?>
+				<tr>
+					<td width="22%" valign="top" class="vncellreq"><?=gtext("Name");?></td>
+					<td width="78%" class="vtable">
+					<input name="name" type="text" class="formfld" id="name" size="30" value="<?=htmlspecialchars($pconfig['name']);?>" />
+					</td>
+					</tr>
+				<tr>
+					<td width="22%" valign="top" class="vncellreq"><?=gtext("Comment");?></td>
+					<td width="78%" class="vtable">
+					<input name="comment" type="text" class="formfld" id="comment" size="30" value="<?=htmlspecialchars($pconfig['comment']);?>" />
+					</td>
+					</tr>
+				<tr>
+					<td width="22%" valign="top" class="vncellreq"><?=gtext("Path"); ?></td>
+					<td width="78%" class="vtable">
+					<input name="path" type="text" class="formfld" id="path" size="60" value="<?=htmlspecialchars($pconfig['path']);?>" />
+					<input name="browse" type="button" class="formbtn" id="Browse" onclick='ifield = form.path; filechooser = window.open("filechooser.php?p="+encodeURIComponent(ifield.value)+"&amp;sd=<?=$g['media_path'];?>", "filechooser", "scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300"); filechooser.ifield = ifield; window.ifield = ifield;' value="..." /><br />
+					<span class="vexpl"><?=gtext("Path to be shared.");?></span>
+					</td>
+					</tr>
+				<tr>
+					<td width="22%" valign="top" class="vncell"><?=gtext("Read only");?></td>
+					<td width="78%" class="vtable">
+					<input name="readonly" type="checkbox" id="readonly" value="yes" <?php if (isset($pconfig['readonly']) && $pconfig['readonly']) echo "checked=\"checked\""; ?> />
+					<?=gtext("Set read only");?><br />
+					<span class="vexpl"><?=gtext("If this parameter is set, then users may not create or modify files in the share.");?></span>
+					</td>
+					</tr>
+				<tr>
+					<td width="22%" valign="top" class="vncell"><?=gtext("Browseable");?></td>
+					<td width="78%" class="vtable">
+					<input name="browseable" type="checkbox" id="browseable" value="yes" <?php if (isset($pconfig['browseable']) && $pconfig['browseable']) echo "checked=\"checked\""; ?> />
+					<?=gtext("Set browseable");?><br />
+					<span class="vexpl"><?=gtext("This controls whether this share is seen in the list of available shares in a net view and in the browse list.");?></span>
 						</td>
 					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Comment");?></td>
-						<td width="78%" class="vtable">
-							<input name="comment" type="text" class="formfld" id="comment" size="30" value="<?=htmlspecialchars($pconfig['comment']);?>" />
-						</td>
+				<tr>
+					<td width="22%" valign="top" class="vncell"><?=gtext("Guest");?></td>
+					<td width="78%" class="vtable">
+					<input name="guest" type="checkbox" id="guest" value="yes" <?php if (isset($pconfig['guest']) && $pconfig['guest']) echo "checked=\"checked\""; ?> />
+					<?=gtext("Enable guest access");?><br />
+					<span class="vexpl"><?=gtext("This controls whether this share is accessible by guest account.");?></span>
+					</td>
 					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Path"); ?></td>
-						<td width="78%" class="vtable">
-							<input name="path" type="text" class="formfld" id="path" size="60" value="<?=htmlspecialchars($pconfig['path']);?>" />
-							<input name="browse" type="button" class="formbtn" id="Browse" onclick='ifield = form.path; filechooser = window.open("filechooser.php?p="+encodeURIComponent(ifield.value)+"&amp;sd=<?=$g['media_path'];?>", "filechooser", "scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300"); filechooser.ifield = ifield; window.ifield = ifield;' value="..." /><br />
-							<span class="vexpl"><?=gtext("Path to be shared.");?></span>
-						</td>
+				<tr>
+					<td width="22%" valign="top" class="vncell"><?=gtext("Inherit permissions");?></td>
+					<td width="78%" class="vtable">
+					<input name="inheritpermissions" type="checkbox" id="inheritpermissions" value="yes" <?php if (isset($pconfig['inheritpermissions']) && $pconfig['inheritpermissions']) echo "checked=\"checked\""; ?> />
+					<?=gtext("Enable permission inheritance");?><br />
+					<span class="vexpl"><?=gtext("The permissions on new files and directories are normally governed by create mask and directory mask but the inherit permissions parameter overrides this. This can be particularly useful on systems with many users to allow a single share to be used flexibly by each user.");?></span>
+					</td>
 					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Read only");?></td>
-						<td width="78%" class="vtable">
-							<input name="readonly" type="checkbox" id="readonly" value="yes" <?php if (isset($pconfig['readonly']) && $pconfig['readonly']) echo "checked=\"checked\""; ?> />
-							<?=gtext("Set read only");?><br />
-							<span class="vexpl"><?=gtext("If this parameter is set, then users may not create or modify files in the share.");?></span>
-						</td>
+				<tr>
+					<td width="22%" valign="top" class="vncell"><?=gtext("Recycle bin");?></td>
+					<td width="78%" class="vtable">
+					<input name="recyclebin" type="checkbox" id="recyclebin" value="yes" <?php if (isset($pconfig['recyclebin']) && $pconfig['recyclebin']) echo "checked=\"checked\""; ?> />
+					<?=gtext("Enable recycle bin");?><br />
+					<span class="vexpl"><?=gtext("This will create a recycle bin on the share.");?></span>
+					</td>
 					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Browseable");?></td>
-						<td width="78%" class="vtable">
-								<input name="browseable" type="checkbox" id="browseable" value="yes" <?php if (isset($pconfig['browseable']) && $pconfig['browseable']) echo "checked=\"checked\""; ?> />
-								<?=gtext("Set browseable");?><br />
-								<span class="vexpl"><?=gtext("This controls whether this share is seen in the list of available shares in a net view and in the browse list.");?></span>
-						</td>
+				<tr>
+					<td width="22%" valign="top" class="vncell"><?=gtext("Hide dot files");?></td>
+					<td width="78%" class="vtable">
+					<input name="hidedotfiles" type="checkbox" id="hidedotfiles" value="yes" <?php if (isset($pconfig['hidedotfiles']) && $pconfig['hidedotfiles']) echo "checked=\"checked\"";?> />
+					<span class="vexpl"><?=gtext("This parameter controls whether files starting with a dot appear as hidden files.");?></span>
+					</td>
 					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Guest");?></td>
-						<td width="78%" class="vtable">
-							<input name="guest" type="checkbox" id="guest" value="yes" <?php if (isset($pconfig['guest']) && $pconfig['guest']) echo "checked=\"checked\""; ?> />
-							<?=gtext("Enable guest access");?><br />
-							<span class="vexpl"><?=gtext("This controls whether this share is accessible by guest account.");?></span>
-						</td>
+				<tr>
+					<td width="22%" valign="top" class="vncell"><?=gtext("Shadow Copy");?></td>
+					<td width="78%" class="vtable">
+					<input name="shadowcopy" type="checkbox" id="shadowcopy" value="yes" <?php if (isset($pconfig['shadowcopy']) && $pconfig['shadowcopy']) echo "checked=\"checked\""; ?> />
+					<?=gtext("Enable shadow copy");?><br />
+					<span class="vexpl"><?=gtext("This will provide shadow copy created by auto snapshot. (ZFS only)");?></span>
+					</td>
 					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Inherit permissions");?></td>
-						<td width="78%" class="vtable">
-							<input name="inheritpermissions" type="checkbox" id="inheritpermissions" value="yes" <?php if (isset($pconfig['inheritpermissions']) && $pconfig['inheritpermissions']) echo "checked=\"checked\""; ?> />
-							<?=gtext("Enable permission inheritance");?><br />
-							<span class="vexpl"><?=gtext("The permissions on new files and directories are normally governed by create mask and directory mask but the inherit permissions parameter overrides this. This can be particularly useful on systems with many users to allow a single share to be used flexibly by each user.");?></span>
-						</td>
+				<tr>
+					<td width="22%" valign="top" class="vncell"><?=gtext("Shadow Copy format");?></td>
+					<td width="78%" class="vtable">
+					<input name="shadowformat" type="text" class="formfld" id="shadowformat" size="60" value="<?=htmlspecialchars($pconfig['shadowformat']);?>" /><br />
+					<span class="vexpl"><?=sprintf(gtext("The custom format of the snapshot for shadow copy service can be specified. The default format is %s used for ZFS auto snapshot."), $default_shadowformat);?></span>
+					</td>
 					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Recycle bin");?></td>
-						<td width="78%" class="vtable">
-							<input name="recyclebin" type="checkbox" id="recyclebin" value="yes" <?php if (isset($pconfig['recyclebin']) && $pconfig['recyclebin']) echo "checked=\"checked\""; ?> />
-							<?=gtext("Enable recycle bin");?><br />
-							<span class="vexpl"><?=gtext("This will create a recycle bin on the share.");?></span>
-						</td>
+				<tr>
+					<td width="22%" valign="top" class="vncell"><?=gtext("ZFS ACL");?></td>
+					<td width="78%" class="vtable">
+					<input name="zfsacl" type="checkbox" id="zfsacl" value="yes" <?php if (isset($pconfig['zfsacl']) && $pconfig['zfsacl']) echo "checked=\"checked\""; ?> />
+					<?=gtext("Enable ZFS ACL");?><br />
+					<span class="vexpl"><?=gtext("This will provide ZFS ACL support. (ZFS only)");?></span>
+					</td>
 					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Hide dot files");?></td>
-						<td width="78%" class="vtable">
-							<input name="hidedotfiles" type="checkbox" id="hidedotfiles" value="yes" <?php if (isset($pconfig['hidedotfiles']) && $pconfig['hidedotfiles']) echo "checked=\"checked\"";?> />
-							<span class="vexpl"><?=gtext("This parameter controls whether files starting with a dot appear as hidden files.");?></span>
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Shadow Copy");?></td>
-						<td width="78%" class="vtable">
-							<input name="shadowcopy" type="checkbox" id="shadowcopy" value="yes" <?php if (isset($pconfig['shadowcopy']) && $pconfig['shadowcopy']) echo "checked=\"checked\""; ?> />
-							<?=gtext("Enable shadow copy");?><br />
-							<span class="vexpl"><?=gtext("This will provide shadow copy created by auto snapshot. (ZFS only)");?></span>
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Shadow Copy format");?></td>
-						<td width="78%" class="vtable">
-							<input name="shadowformat" type="text" class="formfld" id="shadowformat" size="60" value="<?=htmlspecialchars($pconfig['shadowformat']);?>" /><br />
-							<span class="vexpl"><?=sprintf(gtext("The custom format of the snapshot for shadow copy service can be specified. The default format is %s used for ZFS auto snapshot."), $default_shadowformat);?></span>
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("ZFS ACL");?></td>
-						<td width="78%" class="vtable">
-							<input name="zfsacl" type="checkbox" id="zfsacl" value="yes" <?php if (isset($pconfig['zfsacl']) && $pconfig['zfsacl']) echo "checked=\"checked\""; ?> />
-							<?=gtext("Enable ZFS ACL");?><br />
-							<span class="vexpl"><?=gtext("This will provide ZFS ACL support. (ZFS only)");?></span>
-						</td>
-					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Inherit ACL");?></td>
-						<td width="78%" class="vtable">
-							<input name="inheritacls" type="checkbox" id="inheritacls" value="yes" <?php if (isset($pconfig['inheritacls']) && $pconfig['inheritacls']) echo "checked=\"checked\""; ?> />
-							<?=gtext("Enable ACL inheritance");?>
-						</td>
-					</tr>
+				<tr>
+					<td width="22%" valign="top" class="vncell"><?=gtext("Inherit ACL");?></td>
+					<td width="78%" class="vtable">
+					<input name="inheritacls" type="checkbox" id="inheritacls" value="yes" <?php if (isset($pconfig['inheritacls']) && $pconfig['inheritacls']) echo "checked=\"checked\""; ?> />
+					<?=gtext("Enable ACL inheritance");?>
+					</td>
+				</tr>
 					<?php html_checkbox("storealternatedatastreams", gtext("Store alternate data streams"), !empty($pconfig['storealternatedatastreams']) ? true : false, gtext("Store alternate data streams in Extended Attributes"), "", false);?>
 					<?php html_checkbox("storentfsacls", gtext("Store NTFS acls"), !empty($pconfig['storentfsacls']) ? true : false, gtext("Store NTFS acls in Extended Attributes"), gtext("This will provide NTFS acls without ZFS ACL support such as UFS."), false);?>
 					<?php html_checkbox("afpcompat", gtext("AFP compatibility"), !empty($pconfig['afpcompat']) ? true : false, gtext("Enhanced compatibility with Netatalk AFP server"), "", false);?>
 					<?php html_combobox("aiomodule", gtext("AIO module"), $pconfig['aiomodule'], array("aio_pthread" => "aio_pthread", "aio_posix" => "aio_posix"), "", false, false, "");?>
 					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Hosts allow");?></td>
-						<td width="78%" class="vtable">
-							<input name="hostsallow" type="text" class="formfld" id="hostsallow" size="60" value="<?=htmlspecialchars($pconfig['hostsallow']);?>" /><br />
-							<span class="vexpl"><?=gtext("This option is a comma, space, or tab delimited set of hosts which are permitted to access this share. You can specify the hosts by name or IP number. Leave this field empty to use default settings.");?></span>
-						</td>
+					<td width="22%" valign="top" class="vncell"><?=gtext("Hosts allow");?></td>
+					<td width="78%" class="vtable">
+					<input name="hostsallow" type="text" class="formfld" id="hostsallow" size="60" value="<?=htmlspecialchars($pconfig['hostsallow']);?>" /><br />
+					<span class="vexpl"><?=gtext("This option is a comma, space, or tab delimited set of hosts which are permitted to access this share. You can specify the hosts by name or IP number. Leave this field empty to use default settings.");?></span>
+					</td>
 					</tr>
-					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Hosts deny");?></td>
-						<td width="78%" class="vtable">
-							<input name="hostsdeny" type="text" class="formfld" id="hostsdeny" size="60" value="<?=htmlspecialchars($pconfig['hostsdeny']);?>" /><br />
-							<span class="vexpl"><?=gtext("This option is a comma, space, or tab delimited set of host which are NOT permitted to access this share. Where the lists conflict, the allow list takes precedence. In the event that it is necessary to deny all by default, use the keyword ALL (or the netmask 0.0.0.0/0) and then explicitly specify to the hosts allow parameter those hosts that should be permitted access. Leave this field empty to use default settings.");?></span>
-						</td>
+				<tr>
+					<td width="22%" valign="top" class="vncell"><?=gtext("Hosts deny");?></td>
+					<td width="78%" class="vtable">
+					<input name="hostsdeny" type="text" class="formfld" id="hostsdeny" size="60" value="<?=htmlspecialchars($pconfig['hostsdeny']);?>" /><br />
+					<span class="vexpl"><?=gtext("This option is a comma, space, or tab delimited set of host which are NOT permitted to access this share. Where the lists conflict, the allow list takes precedence. In the event that it is necessary to deny all by default, use the keyword ALL (or the netmask 0.0.0.0/0) and then explicitly specify to the hosts allow parameter those hosts that should be permitted access. Leave this field empty to use default settings.");?></span>
+					</td>
 					</tr>
-					<?php
+				<?php
 					$helpinghand =  '<a href="'
-						. 'http://us1.samba.org/samba/docs/man/manpages-3/smb.conf.5.html'
-						. '" target="_blank">'
-						. gtext('Please check the documentation')
-						. '</a>.';
+					. 'http://us1.samba.org/samba/docs/man/manpages-3/smb.conf.5.html'
+					. '" target="_blank">'
+					. gtext('Please check the documentation')
+					. '</a>.';
 					html_textarea("auxparam", gtext("Auxiliary parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", sprintf(gtext("These parameters are added to [Share] section of %s."), "smb4.conf") . " " . $helpinghand, false, 65, 5, false, false);
 					?>
 				</table>
-				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" />
-					<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
-					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
-				</div>
-				<?php include("formend.inc");?>
-			</form>
-		</td>
-	</tr>
+			<div id="submit">
+				<input name="Submit" type="submit" class="formbtn" value="<?=(isset($uuid) && (FALSE !== $cnid)) ? gtext("Save") : gtext("Add")?>" />
+				<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
+				<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
+			</div>
+<?php include 'formend.inc';?>
+</form>
+</td>
+</tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

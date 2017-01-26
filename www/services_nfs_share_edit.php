@@ -31,15 +31,15 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
 if (isset($_GET['uuid']))
 	$uuid = $_GET['uuid'];
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = array(gtext("Services"), gtext("NFS"), isset($uuid) ? gtext("Edit") : gtext("Add"));
+$pgtitle = [gtext('Services'),gtext('NFS'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
 if (!isset($config['nfsd']['share']) || !is_array($config['nfsd']['share']))
 	$config['nfsd']['share'] = array();
@@ -142,22 +142,23 @@ if ($_POST) {
 	}
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabnavtbl">
 			<ul id="tabnav">
 				<li class="tabinact"><a href="services_nfs.php"><span><?=gtext("Settings");?></span></a></li>
 				<li class="tabact"><a href="services_nfs_share.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Shares");?></span></a></li>
-			</ul>
-		</td>
+				</ul>
+			</td>
 	</tr>
-	<tr>
+		<tr>
 		<td class="tabcont">
 			<form action="services_nfs_share_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-				<?php if ($input_errors) print_input_errors($input_errors);?>
-			  <table width="100%" border="0" cellpadding="6" cellspacing="0">
-			    <tr>
+			<?php if ($input_errors) print_input_errors($input_errors);?>
+			<table width="100%" border="0" cellpadding="6" cellspacing="0">
+			<?php html_titleline(gtext("Share Settings"));?>
+				<tr>
   				  <td width="22%" valign="top" class="vncellreq"><?=gtext("Path");?></td>
   				  <td width="78%" class="vtable">
   				  	<input name="path" type="text" class="formfld" id="path" size="60" value="<?=htmlspecialchars($pconfig['path']);?>" />
@@ -233,9 +234,9 @@ if ($_POST) {
 					<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
 					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
