@@ -31,10 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-
-$pgtitle = array(gtext("Diagnostics"), gtext("ARP Tables"));
+require 'auth.inc';
+require 'guiconfig.inc';
 
 if (isset($_GET['id']))
   $id = $_GET['id'];
@@ -197,19 +195,21 @@ function get_HostName($mac, $ip) {
 	else
 		return "";
 }
+$pgtitle = [gtext('Diagnostics'),gtext('ARP Tables')];
+
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
 	<table id="area_data_selection">
 		<colgroup>
-			<col style="width:20%"><!-- IP Address -->
-			<col style="width:20%"><!-- MAC Address -->
-			<col style="width:30%"><!-- Hostname -->
-			<col style="width:20%"><!-- Interface -->
-			<col style="width:10%"><!-- Toolbox -->
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:30%">
+			<col style="width:20%">
+			<col style="width:10%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('ARP Tables List'), 5);?>
+			<?php html_titleline2(gtext('ARP Tables List'),5);?>
 			<tr>
 				<th class="lhell"><?=gtext('IP Address');?></th>
 				<th class="lhell"><?=gtext('MAC Address');?></th>
@@ -254,4 +254,4 @@ function get_HostName($mac, $ip) {
 		?>
 	</div>
 </td></tr></tbody></table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
