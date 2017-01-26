@@ -31,10 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-
-$pgtitle = array(gtext("Services"), gtext("FTP"));
+require 'auth.inc';
+require 'guiconfig.inc';
 
 $l_sysloglevel = [
 	'emerg' => gtext('Emergency Level'),
@@ -47,7 +45,6 @@ $l_sysloglevel = [
 	'debug' => gtext('Debug Level')
 ];
 array_make_branch($config,'ftpd');
-
 $pconfig['enable'] = isset($config['ftpd']['enable']);
 $pconfig['port'] = $config['ftpd']['port'];
 $pconfig['numberclients'] = $config['ftpd']['numberclients'];
@@ -87,8 +84,9 @@ $pconfig['tlsrequired'] = isset($config['ftpd']['tlsrequired']);
 $pconfig['privatekey'] = base64_decode($config['ftpd']['privatekey']);
 $pconfig['certificate'] = base64_decode($config['ftpd']['certificate']);
 $pconfig['sysloglevel'] = isset($config['ftpd']['sysloglevel']) ? $config['ftpd']['sysloglevel'] : 'notice';
-if (isset($config['ftpd']['auxparam']) && is_array($config['ftpd']['auxparam']))
+if(isset($config['ftpd']['auxparam']) && is_array($config['ftpd']['auxparam'])):
 	$pconfig['auxparam'] = implode("\n", $config['ftpd']['auxparam']);
+endif;
 
 if ($_POST) {
 	unset($input_errors);
@@ -197,8 +195,9 @@ if ($_POST) {
 		$savemsg = get_std_save_message($retval);
 	}
 }
+$pgtitle = [gtext('Services'),gtext('FTP')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function enable_change(enable_change) {
@@ -349,7 +348,7 @@ function anonymousonly_change() {
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="enable_change(true)" />
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
@@ -362,4 +361,4 @@ localusersonly_change();
 tls_change();
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
