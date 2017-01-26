@@ -34,8 +34,6 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-$pgtitle = [gtext('Services'),gtext('HAST'),gtext('Information')];
-
 array_make_branch($config,'hast','auxparam');
 //	array_make_branch($config,'hast','hastresource');
 
@@ -59,6 +57,7 @@ if (is_ajax()) {
 	$status = hast_get_status();
 	render_ajax($status);
 }
+$pgtitle = [gtext('Services'),gtext('HAST'),gtext('Information')];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">//<![CDATA[
@@ -71,23 +70,22 @@ $(document).ready(function(){
 //]]>
 </script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-			<li class="tabinact"><a href="services_hast.php"><span><?=gtext("Settings");?></span></a></li>
-			<li class="tabinact"><a href="services_hast_resource.php"><span><?=gtext("Resources");?></span></a></li>
-			<li class="tabact"><a href="services_hast_info.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Information");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-<tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabinact"><a href="services_hast.php"><span><?=gtext("Settings");?></span></a></li>
+		<li class="tabinact"><a href="services_hast_resource.php"><span><?=gtext("Resources");?></span></a></li>
+		<li class="tabact"><a href="services_hast_info.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Information");?></span></a></li>
+	</ul></td></tr>
+	<tr>
 		<td class="tabcont">
 			<table width="100%" border="0" cellspacing="0" cellpadding="0">
-			<?php html_titleline(gtext("HAST Information & Status Configured Resources"));?>
-		<tr>
-		<td class="listt">
-		<pre><span id="hast_status"></span></pre>
-	</td>
-</tr>
-</table></td></tr></table>
+				<?php html_titleline(gtext("HAST Information & Status Configured Resources"));?>
+				<tr>
+					<td class="listt">
+						<pre><span id="hast_status"></span></pre>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
 <?php include 'fend.inc';?>
