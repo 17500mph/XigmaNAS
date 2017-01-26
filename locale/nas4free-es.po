@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-25 18:33+0000\n"
-"PO-Revision-Date: 2017-01-24 20:15+0000\n"
+"POT-Creation-Date: 2017-01-26 02:52+0000\n"
+"PO-Revision-Date: 2017-01-26 08:50+0000\n"
 "Last-Translator: raul fernandez garcia <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-25 18:49+0000\n"
+"X-Launchpad-Export-Date: 2017-01-26 13:28+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -537,7 +537,7 @@ msgid "Add disk"
 msgstr "Añadir disco"
 
 msgid "Add extent"
-msgstr "Añadir una extensión"
+msgstr "Añadir extent"
 
 msgid "Add initiator"
 msgstr "Añadir iniciador"
@@ -846,7 +846,7 @@ msgstr ""
 "usuarios autorizados y secretos para mayor seguridad."
 
 msgid "An Extent defines the storage area of the Target."
-msgstr "Una extensión define el área de almacenamiento del objetivo."
+msgstr "Un extent define el area de almacenamiento en el destino."
 
 msgid ""
 "An Initiator Group is identified by a tag number and defines authorised "
@@ -953,8 +953,8 @@ msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
 "made up of one or more extents."
 msgstr ""
-"En el nivel más alto, un objetivo es lo que es presentado al iniciador, y "
-"esta compuesto de uno o más extensiones."
+"En el nivel más alto, un objetivo es presentado al iniciador, y esta "
+"compuesto de uno o más extent."
 
 msgid "Attach a data device"
 msgstr "Conecta un dispositivo para datos"
@@ -991,7 +991,7 @@ msgid "Auth Group"
 msgstr "Grupo de Autenticacion"
 
 msgid "Auth Group Settings"
-msgstr ""
+msgstr "Opciones Grupo Auth"
 
 msgid "Auth Groups"
 msgstr "Grupos de Autenticacion"
@@ -1022,6 +1022,9 @@ msgstr "Auto"
 
 msgid "Auto Snapshot"
 msgstr "Snapshot automatico"
+
+msgid "Auto Snapshot Settings"
+msgstr "Opciones Snapshot Automático"
 
 msgid "Auto page refresh."
 msgstr "Refresco de página automático"
@@ -1097,10 +1100,10 @@ msgid "Ban List"
 msgstr "Lista de expulsados"
 
 msgid "Ban List Rule"
-msgstr ""
+msgstr "Lista de baneados"
 
 msgid "Ban List Rule Settings"
-msgstr ""
+msgstr "Opciones de la lista de baneados"
 
 msgid "Banner"
 msgstr "Banner"
@@ -2295,7 +2298,7 @@ msgid "Delete disk"
 msgstr "Eliminar disco"
 
 msgid "Delete extent"
-msgstr "Eliminar extensión"
+msgstr "Eliminar extent"
 
 msgid "Delete files on the receiving side that don't exist on sender."
 msgstr "Eliminar archivos del receptor que no existen en el enviador."
@@ -2683,7 +2686,7 @@ msgstr ""
 "usen dejarán de ser válidos (Ej: los elementos compartidos)"
 
 msgid "Do you really want to delete this extent?"
-msgstr "¿Realmente desea eliminar esta extensión?"
+msgstr "¿Realmente desea eliminar este extent?"
 
 msgid "Do you really want to delete this host?"
 msgstr "Realmente quiere borrar esta máquina?"
@@ -3037,7 +3040,7 @@ msgid "Edit disk"
 msgstr "Editar disco"
 
 msgid "Edit extent"
-msgstr "Editar extension"
+msgstr "Editar extent"
 
 msgid "Edit initiator"
 msgstr "Editar iniciador"
@@ -3573,23 +3576,23 @@ msgid "Extensions"
 msgstr "Complementos"
 
 msgid "Extent"
-msgstr "Extension"
+msgstr "Extent"
 
 msgid "Extent Name"
-msgstr "Nombre extendido"
+msgstr "Nombre del extent"
 
 msgid "Extent Settings"
-msgstr ""
+msgstr "Opciones Extent"
 
 msgid "Extent name"
-msgstr "Nombre de extensión"
+msgstr "Nombre del  extent"
 
 msgid ""
 "Extents must be defined before they can be used, and extents cannot be used "
 "more than once."
 msgstr ""
-"Las extensiones deben ser definidas antes de poder ser usadas, y las mismas "
-"no pueden ser usadas mas de una vez."
+"Los extent deben ser definidos antes de poder ser usados, y los mismos no "
+"pueden ser usados mas de una vez."
 
 msgid "Extra options"
 msgstr "Opciones extras"
@@ -3737,7 +3740,7 @@ msgstr ""
 
 #, php-format
 msgid "File path (e.g. /mnt/sharename/extent/%s) used as extent."
-msgstr "Ruta de archivo (ej. /mnt/sharename/extent/%s) usada como extensión."
+msgstr "Ruta de archivo (ej. /mnt/sharename/extent/%s) usada como extent."
 
 msgid "File size"
 msgstr "Tamaño de archivo"
@@ -4460,7 +4463,7 @@ msgid "Initiator Group"
 msgstr "Grupo Iniciador"
 
 msgid "Initiator Group Settings"
-msgstr ""
+msgstr "Opciones del grupo iniciador"
 
 msgid "Initiator Groups"
 msgstr "Grupos Iniciadores"
@@ -4974,7 +4977,7 @@ msgid "Log"
 msgstr "Registro (Log)"
 
 msgid "Log Filter"
-msgstr ""
+msgstr "Filtro del Log"
 
 msgid "Log Level"
 msgstr "Nivel de registro"
@@ -5366,7 +5369,7 @@ msgid "Module"
 msgstr "Módulo"
 
 msgid "Module Settings"
-msgstr ""
+msgstr "Opciones de módulos"
 
 msgid "Modules"
 msgstr "Módulos"
@@ -6295,7 +6298,7 @@ msgid "Portal Group"
 msgstr "Grupo de Portal"
 
 msgid "Portal Group Settings"
-msgstr ""
+msgstr "Opciones del grupo Portal"
 
 msgid "Portal Groups"
 msgstr "Grupos de Portal"
@@ -7032,6 +7035,9 @@ msgstr "reinicio programado"
 msgid "Scheduled Self-Test"
 msgstr "Auto-Test planificado"
 
+msgid "Scheduled Self-Test Settings"
+msgstr "Opciones de Auto-Test programados"
+
 msgid "Scheduled Shutdown"
 msgstr "Apagado programado"
 
@@ -7376,7 +7382,7 @@ msgid "Share Password"
 msgstr "Contraseña de recurso compartido"
 
 msgid "Share Settings"
-msgstr ""
+msgstr "Opciones de compartidos"
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr ""
@@ -7693,7 +7699,7 @@ msgstr ""
 "la URL."
 
 msgid "String identifier of the extent."
-msgstr "Cadena identificadora de la extensión."
+msgstr "Cadena identificadora del extent."
 
 msgid "Subject"
 msgstr "Asunto"
@@ -8408,7 +8414,7 @@ msgid "The entire system configuration will be overwritten."
 msgstr "La configuración del ssitema será sobrescrita."
 
 msgid "The extent name already exists."
-msgstr "El nombre de extensión ya existe."
+msgstr "El nombre del extent ya existe."
 
 msgid "The file you try to flash is not for this platform"
 msgstr "El archivo flash no es compatible con esta plataforma"
@@ -9030,7 +9036,7 @@ msgid "This email has been sent to validate your email configuration."
 msgstr "Este email ha sido enviado para validar su configuración de email."
 
 msgid "This extent is used."
-msgstr "Esta extension es utilizada."
+msgstr "Este extent ya está en uso."
 
 msgid "This group already exists in the group list."
 msgstr "Este grupo ya existe en la lista de grupos."
@@ -9623,7 +9629,7 @@ msgid "Type"
 msgstr "Tipo"
 
 msgid "Type used as extent."
-msgstr "Tipo usado como medida"
+msgstr "Tipo usado como extent"
 
 msgid "UCD-SNMP-MIB"
 msgstr "UCD-SNMP-MIB"
@@ -10623,6 +10629,3 @@ msgstr "versión:"
 
 msgid "week days"
 msgstr "días de la semana"
-
-#~ msgid "Ban list rule"
-#~ msgstr "Regla de la lista de rechazados"
