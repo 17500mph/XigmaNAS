@@ -34,65 +34,67 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Disks"), gtext("ZFS"), gtext("Configuration"), gtext("Current"));
-
+array_make_branch($config,'zfs','pools','pool');
+array_make_branch($config,'zfs','vdevices','vdevice');
+array_make_branch($config,'zfs','datasets','dataset');
+array_make_branch($config,'zfs','volumes','volume');
 $zfs = $config['zfs'];
 
-if (empty($zfs['pools']) || !is_array($zfs['pools'])) $zfs['pools']['pool'] = array();
-if (empty($zfs['vdevices']) || !is_array($zfs['vdevices'])) $zfs['vdevices']['vdevice'] = array();
-if (empty($zfs['datasets']) || !is_array($zfs['datasets'])) $zfs['datasets']['dataset'] = array();
-if (empty($zfs['volumes']) || !is_array($zfs['volumes'])) $zfs['volumes']['volume'] = array();
-
-foreach ($zfs['pools']['pool'] as $index => $pool)
-{
-	$zfs['pools']['pool'][$index]['size']   = gtext('Unknown');
-	$zfs['pools']['pool'][$index]['used']   = gtext('Unknown');
-	$zfs['pools']['pool'][$index]['avail']  = gtext('Unknown');
-	$zfs['pools']['pool'][$index]['cap']    = gtext('Unknown');
+foreach ($zfs['pools']['pool'] as $index => $pool):
+	$zfs['pools']['pool'][$index]['size'] = gtext('Unknown');
+	$zfs['pools']['pool'][$index]['used'] = gtext('Unknown');
+	$zfs['pools']['pool'][$index]['avail'] = gtext('Unknown');
+	$zfs['pools']['pool'][$index]['cap'] = gtext('Unknown');
 	$zfs['pools']['pool'][$index]['health'] = gtext('Unknown');
-
-	foreach ($pool['vdevice'] as $vdevice)
-	{
-		if (false === ($index = array_search_ex($vdevice, $zfs['vdevices']['vdevice'], 'name'))) { continue; }
+	foreach ($pool['vdevice'] as $vdevice):
+		if (false === ($index = array_search_ex($vdevice, $zfs['vdevices']['vdevice'], 'name'))):
+			continue;
+		endif;
 		$zfs['vdevices']['vdevice'][$index]['pool'] = $pool['name'];
-	}
-}
+	endforeach;
+endforeach;
 
 $rawdata = null;
 mwexec2("zfs list -H -t filesystem -o name,used,available", $rawdata);
-foreach($rawdata as $line)
-{
-	if ($line == 'no datasets available') { continue; }
+foreach($rawdata as $line):
+	if($line == 'no datasets available'):
+		continue;
+	endif;
 	list($fname, $used, $avail) = explode("\t", $line);
-	if (false === ($index = array_search_ex($fname, $zfs['pools']['pool'], 'name'))) { continue; }
-	if (strpos($fname, '/') === false) // zpool
-	{
+	if(false === ($index = array_search_ex($fname, $zfs['pools']['pool'], 'name'))):
+		continue;
+	endif;
+	if(strpos($fname, '/') === false): // zpool
 		$zfs['pools']['pool'][$index]['used'] = $used;
 		$zfs['pools']['pool'][$index]['avail'] = $avail;
-	}
-}
+	endif;
+endforeach;
 
 $rawdata = null;
 $spa = @exec("sysctl -q -n vfs.zfs.version.spa");
-if ($spa == '') {
+if($spa == ''):
 	mwexec2("zpool list -H -o name,root,size,allocated,free,capacity,health", $rawdata);
-} else if ($spa < 21) {
-	mwexec2("zpool list -H -o name,altroot,size,allocated,free,capacity,health", $rawdata);
-} else {
-	mwexec2("zpool list -H -o name,altroot,size,allocated,free,capacity,expandsz,frag,health,dedup", $rawdata);
-}
-foreach ($rawdata as $line)
-{
-	if ($line == 'no pools available') { continue; }
+else:
+	if($spa < 21):
+		mwexec2("zpool list -H -o name,altroot,size,allocated,free,capacity,health", $rawdata);
+	else:
+		mwexec2("zpool list -H -o name,altroot,size,allocated,free,capacity,expandsz,frag,health,dedup", $rawdata);
+	endif;
+endif;
+foreach ($rawdata as $line):
+	if($line == 'no pools available'):
+		continue;
+	endif;
 	list($pool, $root, $size, $alloc, $free, $cap, $expandsz, $frag, $health, $dedup) = explode("\t", $line);
-	if (false === ($index = array_search_ex($pool, $zfs['pools']['pool'], 'name'))) { continue; }
-	if ($root != '-')
-	{
+	if(false === ($index = array_search_ex($pool, $zfs['pools']['pool'], 'name'))):
+		continue;
+	endif;
+	if($root != '-'):
 		$zfs['pools']['pool'][$index]['root'] = $root;
-	}
+	endif;
 	$zfs['pools']['pool'][$index]['size'] = $size;
 	$zfs['pools']['pool'][$index]['alloc'] = $alloc;
 	$zfs['pools']['pool'][$index]['free'] = $free;
@@ -101,46 +103,34 @@ foreach ($rawdata as $line)
 	$zfs['pools']['pool'][$index]['cap'] = $cap;
 	$zfs['pools']['pool'][$index]['health'] = $health;
 	$zfs['pools']['pool'][$index]['dedup'] = $dedup;
-}
-
-if (updatenotify_exists('zfs_import_config'))
-{
+endforeach;
+if(updatenotify_exists('zfs_import_config')):
 	$notifications = updatenotify_get('zfs_import_config');
 	$retval = 0;
-	foreach ($notifications as $notification)
-	{
+	foreach ($notifications as $notification):
 		$retval |= !($notification['data'] == true);
-	}
+	endforeach;
 	$savemsg = get_std_save_message($retval);
-	if ($retval == 0)
-	{
+	if ($retval == 0):
 		updatenotify_delete("zfs_import_config");
-	}
-}
-
+	endif;
+endif;
+$pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Current')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td class="tabnavtbl">
-		<ul id="tabnav">
-			<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext("Pools");?></span></a></li>
-			<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext("Datasets");?></span></a></li>
-			<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext("Volumes");?></span></a></li>
-			<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext("Snapshots");?></span></a></li>
-			<li class="tabact"><a href="disks_zfs_config.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Configuration");?></span></a></li>
-		</ul>
-		</td>
-	</tr>
-	<tr>
-		<td class="tabnavtbl">
-		<ul id="tabnav2">
-			<li class="tabact"><a href="disks_zfs_config_current.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Current");?></span></a></li>
-			<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext("Detected");?></span></a></li>
-			<li class="tabinact"><a href="disks_zfs_config_sync.php"><span><?=gtext("Synchronize");?></span></a></li>
-		</ul>
-		</td>
-	</tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext("Pools");?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext("Datasets");?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext("Volumes");?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext("Snapshots");?></span></a></li>
+		<li class="tabact"><a href="disks_zfs_config.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Configuration");?></span></a></li>
+	</ul></td></tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav2">
+		<li class="tabact"><a href="disks_zfs_config_current.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Current");?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext("Detected");?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_config_sync.php"><span><?=gtext("Synchronize");?></span></a></li>
+	</ul></td></tr>
 	<tr>
 		<td class="tabcont">
 			<?php if (!empty($savemsg)) print_info_box($savemsg); ?>
@@ -261,4 +251,4 @@ if (updatenotify_exists('zfs_import_config'))
 		</td>
 	</tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
