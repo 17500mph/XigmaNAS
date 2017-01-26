@@ -31,10 +31,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("System"),gtext("General"),gtext("Password"));
+$pgtitle = [gtext('System'),gtext('General'),gtext('Password')];
 
 if ($_POST) {
 	unset($input_errors);
@@ -82,7 +82,7 @@ if ($_POST) {
 	}
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
     <td class="tabnavtbl">
@@ -99,8 +99,8 @@ if ($_POST) {
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 			    <?php html_titleline(gtext("WebGUI"));?>
-					<?php html_passwordbox("password_old", gtext("Current password"), "", "", true);?>
-					<?php html_passwordconfbox("password_new", "password_confirm", gtext("New password"), "", "", gtext("If you want to change the password for accessing the WebGUI, enter it here twice."), true);?>
+					<?php html_passwordbox("password_old", gtext("Current Password"), "", "", true);?>
+					<?php html_passwordconfbox("password_new", "password_confirm", gtext("New Password"), "", "", gtext("If you want to change the password for accessing the WebGUI, enter it here twice."), true);?>
 			  </table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save");?>" />
@@ -117,9 +117,9 @@ if ($_POST) {
 				?>
 				</div>
 				</br>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
   </tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
