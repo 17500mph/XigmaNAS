@@ -64,7 +64,7 @@ if($_POST) {
 		}
 	}
 }
-$pgtitle = [gtext('System'), gtext('Factory Defaults')];
+$pgtitle = [gtext('System'),gtext('Factory Defaults')];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">
@@ -108,7 +108,7 @@ $(window).on("load", function() {
 			?>
 			</div>
 		<?php endif;?>
-	<?php include 'formend.inc';?>
+<?php include 'formend.inc';?>
 </form></td></tr></tbody></table>
 <?php include 'fend.inc';?>
 <?php

@@ -132,6 +132,6 @@ $(window).on("load", function() {
 			<?php endforeach;?>
 		</tbody>
 	</table>
-	<?php include 'formend.inc';?>
+<?php include 'formend.inc';?>
 </form></td></tr></tbody></table>
 <?php include 'fend.inc';?>

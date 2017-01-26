@@ -31,10 +31,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Services"), gtext("HAST"));
+$pgtitle = [gtext('Services'),gtext('HAST')];
 
 array_make_branch($config,'hast','auxparam');
 //	array_make_branch($config,'hast','hastresource');
@@ -223,7 +223,7 @@ if ($_POST) {
 	}
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">//<![CDATA[
 $(document).ready(function(){
 	function enable_change(enable_change) {
@@ -268,7 +268,7 @@ $(document).ready(function(){
 						$a_vipaddrs[] = $carp['vipaddr']." ({$ifinfo['state']})";
 					}
 					?>
-					<?php echo html_text("vipaddr", gtext("Virtual IP address"), (!empty($a_vipaddrs) ? htmlspecialchars(join(', ', $a_vipaddrs)) : sprintf("<span class='red'>%s</span>", gtext("No configured CARP interfaces.")))); ?>
+					<?php echo html_text("vipaddr", gtext("Virtual IP Address"), (!empty($a_vipaddrs) ? htmlspecialchars(join(', ', $a_vipaddrs)) : sprintf("<span class='red'>%s</span>", gtext("No configured CARP interfaces.")))); ?>
 					<?php //html_combobox("role", gtext("HAST role"), $pconfig['role'], array("primary" => gtext("Primary"), "secondary" => gtext("Secondary")), "", true);?>
 					<tr id="control_btn">
 						<td colspan="2">
@@ -283,11 +283,11 @@ $(document).ready(function(){
 					html_titleline(gtext("Advanced Settings"));
 					
 					$helpinghand = '<a href="'
-						. 'http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/disks-hast.html'
-						. '" target="_blank">'
-						. gtext('Please check the documentation')
-						. '</a>.';
-					html_textarea("auxparam", gtext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gtext("These parameters are added to %s."), "hast.conf") . " " . $helpinghand, false, 65, 5, false, false);
+					. 'http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/disks-hast.html'
+					. '" target="_blank">'
+					. gtext('Please check the documentation')
+					. '</a>.';
+					html_textarea("auxparam", gtext("Auxiliary Parameters"), $pconfig['auxparam'], sprintf(gtext("These parameters are added to %s."), "hast.conf") . " " . $helpinghand, false, 65, 5, false, false);
 					?>
 				</table>
 				<div id="submit">
@@ -296,9 +296,6 @@ $(document).ready(function(){
 				<div id="remarks">
 					<?php html_remark("note", gtext('Note'), sprintf("<div id='enumeration'><ul><li>%s</li><li>%s</li><li>%s</li></ul></div>", gtext("When HAST is enabled, the local devices, the local services and the additional packages which do not support HAST volume cannot be used."), gtext("The HAST volumes can not be accessed until HAST node becomes Primary."), gtext("Dynamic IP (DHCP) can not be used for HAST resources.")));?>
 				</div>
-				<?php include("formend.inc");?>
-			</form>
-		</td>
-	</tr>
-</table>
-<?php include("fend.inc");?>
+<?php include 'formend.inc';?>
+</form></td></tr></table>
+<?php include 'fend.inc';?>
