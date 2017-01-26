@@ -31,15 +31,15 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
 if (isset($_GET['uuid']))
 	$uuid = $_GET['uuid'];
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = array(gtext("System"), gtext("Advanced"), gtext("Cron"), isset($uuid) ? gtext("Edit") : gtext("Add"));
+$pgtitle = [gtext('System'),gtext('Advanced'),gtext('Cron'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
 if (!isset($config['cron']['job']) || !is_array($config['cron']['job']))
 	$config['cron']['job'] = array();
@@ -146,7 +146,7 @@ if ($_POST) {
 	}
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function set_selected(name) {
@@ -160,7 +160,7 @@ function set_selected(name) {
 		<ul id="tabnav">
 			<li class="tabinact"><a href="system_advanced.php"><span><?=gtext("Advanced");?></span></a></li>
 			<li class="tabinact"><a href="system_email.php"><span><?=gtext("Email");?></span></a></li>
-			<li class="tabinact"><a href="system_rrdgraphs.php"><span><?=gtext("Monitoring");?></span></a></li>
+			<li class="tabinact"><a href="system_monitoring.php"><span><?=gtext("Monitoring");?></span></a></li>
 			<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
 			<li class="tabinact"><a href="system_swap.php"><span><?=gtext("Swap");?></span></a></li>
 			<li class="tabinact"><a href="system_rc.php"><span><?=gtext("Command Scripts");?></span></a></li>
@@ -342,9 +342,9 @@ function set_selected(name) {
 					<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
 					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
 				</div>
-<?php include("formend.inc");?>
+<?php include 'formend.inc';?>
 </form>
 </td>
 </tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

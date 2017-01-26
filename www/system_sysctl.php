@@ -286,7 +286,7 @@ function controlactionbuttons(ego,triggerbyname) {
 		<li class="tabinact"><a href="system_advanced.php"><span><?=gtext('Advanced');?></span></a></li>
 		<li class="tabinact"><a href="system_email.php"><span><?=gtext('Email');?></span></a></li>
 		<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
-		<li class="tabinact"><a href="system_rrdgraphs.php"><span><?=gtext("Monitoring");?></span></a></li>
+		<li class="tabinact"><a href="system_monitoring.php"><span><?=gtext("Monitoring");?></span></a></li>
 		<li class="tabinact"><a href="system_swap.php"><span><?=gtext('Swap');?></span></a></li>
 		<li class="tabinact"><a href="system_rc.php"><span><?=gtext('Command Scripts');?></span></a></li>
 		<li class="tabinact"><a href="system_cron.php"><span><?=gtext('Cron');?></span></a></li>
@@ -385,6 +385,6 @@ function controlactionbuttons(ego,triggerbyname) {
 	<div id="remarks">
 		<?php html_remark2('note',gtext('Note'),gtext('These MIBs will be added to /etc/sysctl.conf. This allows you to make changes to a running system.'));?>
 	</div>
-	<?php include 'formend.inc';?>
+<?php include 'formend.inc';?>
 </form></td></tr></tbody></table>
 <?php include 'fend.inc';?>

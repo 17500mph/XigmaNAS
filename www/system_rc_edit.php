@@ -151,7 +151,7 @@ $l_type = [
 	'3' => gtext('Shutdown')
 ];
 
-$pgtitle = [gtext('System'), gtext('Advanced'), gtext('Command Scripts'), (RECORD_NEW !== $mode_record) ? gtext('Edit') : gtext('Add')];
+$pgtitle = [gtext('System'),gtext('Advanced'),gtext('Command Scripts'), (RECORD_NEW !== $mode_record) ? gtext('Edit') : gtext('Add')];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">
@@ -169,7 +169,7 @@ $(window).on("load", function() {
 		<li class="tabinact"><a href="system_advanced.php"><span><?=gtext('Advanced');?></span></a></li>
 		<li class="tabinact"><a href="system_email.php"><span><?=gtext('Email');?></span></a></li>
 		<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
-		<li class="tabinact"><a href="system_rrdgraphs.php"><span><?=gtext("Monitoring");?></span></a></li>
+		<li class="tabinact"><a href="system_monitoring.php"><span><?=gtext("Monitoring");?></span></a></li>
 		<li class="tabinact"><a href="system_swap.php"><span><?=gtext('Swap');?></span></a></li>
 		<li class="tabact"><a href="system_rc.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Command Scripts');?></span></a></li>
 		<li class="tabinact"><a href="system_cron.php"><span><?=gtext('Cron');?></span></a></li>
@@ -208,6 +208,6 @@ $(window).on("load", function() {
 		<input name="Cancel" type="submit" class="formbtn" value="<?=gtext('Cancel');?>"/>
 		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>"/>
 	</div>
-	<?php include 'formend.inc';?>
+<?php include 'formend.inc';?>
 </form></td></tr></tbody></table>
 <?php include 'fend.inc';?>

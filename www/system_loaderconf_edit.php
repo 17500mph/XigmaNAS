@@ -150,7 +150,7 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 			break;
 	}
 }
-$pgtitle = [gtext('System'), gtext('Advanced'), gtext('loader.conf'), $isrecordnew ? gtext('Add') : gtext('Edit')];
+$pgtitle = [gtext('System'),gtext('Advanced'),gtext('loader.conf'), $isrecordnew ? gtext('Add') : gtext('Edit')];
 ?>
 <?php include 'fbegin.inc';?>
 <table id="area_navigator"><tbody>
@@ -158,7 +158,7 @@ $pgtitle = [gtext('System'), gtext('Advanced'), gtext('loader.conf'), $isrecordn
 		<li class="tabinact"><a href="system_advanced.php"><span><?=gtext('Advanced');?></span></a></li>
 		<li class="tabinact"><a href="system_email.php"><span><?=gtext('Email');?></span></a></li>
 		<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
-		<li class="tabinact"><a href="system_rrdgraphs.php"><span><?=gtext("Monitoring");?></span></a></li>
+		<li class="tabinact"><a href="system_monitoring.php"><span><?=gtext("Monitoring");?></span></a></li>
 		<li class="tabinact"><a href="system_swap.php"><span><?=gtext('Swap');?></span></a></li>
 		<li class="tabinact"><a href="system_rc.php"><span><?=gtext('Command Scripts');?></span></a></li>
 		<li class="tabinact"><a href="system_cron.php"><span><?=gtext('Cron');?></span></a></li>
@@ -200,6 +200,6 @@ $pgtitle = [gtext('System'), gtext('Advanced'), gtext('loader.conf'), $isrecordn
 		<input name="Cancel" type="submit" class="formbtn" value="<?=gtext('Cancel');?>"/>
 		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>"/>
 	</div>
-	<?php require 'formend.inc';?>
+<?php require 'formend.inc';?>
 </form></td></tr></tbody></table>
 <?php include 'fend.inc';?>
