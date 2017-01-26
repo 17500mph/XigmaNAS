@@ -154,7 +154,7 @@ function enable_change(enable_change) {
 			<li class="tabinact"><a href="system_advanced.php"><span><?=gtext('Advanced');?></span></a></li>
 			<li class="tabact"><a href="system_email.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Email');?></span></a></li>
 			<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
-			<li class="tabinact"><a href="system_rrdgraphs.php"><span><?=gtext("Monitoring");?></span></a></li>
+			<li class="tabinact"><a href="system_monitoring.php"><span><?=gtext("Monitoring");?></span></a></li>
 			<li class="tabinact"><a href="system_swap.php"><span><?=gtext('Swap');?></span></a></li>
 			<li class="tabinact"><a href="system_rc.php"><span><?=gtext('Command Scripts');?></span></a></li>
 			<li class="tabinact"><a href="system_cron.php"><span><?=gtext('Cron');?></span></a></li>
@@ -225,6 +225,6 @@ function enable_change(enable_change) {
 		<input name="Submit" type="submit" class="formbtn" value="<?=gtext('Save');?>" />
 		<input name="SendTestEmail" id="sendnow" type="submit" class="formbtn" value="<?=$gt_sendtestemailbuttonvalue;?>"/>
 	</div>
-	<?php include 'formend.inc';?>
+<?php include 'formend.inc';?>
 </form></td></tr></tbody></table>
 <?php include 'fend.inc';?>

@@ -31,10 +31,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("System"), gtext("Advanced"), gtext("Swap"));
+$pgtitle = [gtext('System'),gtext('Advanced'),gtext('Swap')];
 
 $pconfig['enable'] = isset($config['system']['swap']['enable']);
 $pconfig['type'] = $config['system']['swap']['type'];
@@ -97,7 +97,7 @@ if ($_POST) {
 	}
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function enable_change(enable_change) {
@@ -132,7 +132,7 @@ function type_change() {
 			<li class="tabinact"><a href="system_advanced.php"><span><?=gtext("Advanced");?></span></a></li>
 			<li class="tabinact"><a href="system_email.php"><span><?=gtext("Email");?></span></a></li>
 			<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
-			<li class="tabinact"><a href="system_rrdgraphs.php"><span><?=gtext("Monitoring");?></span></a></li>
+			<li class="tabinact"><a href="system_monitoring.php"><span><?=gtext("Monitoring");?></span></a></li>
 			<li class="tabact"><a href="system_swap.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Swap");?></span></a></li>
 			<li class="tabinact"><a href="system_rc.php"><span><?=gtext("Command Scripts");?></span></a></li>
 			<li class="tabinact"><a href="system_cron.php"><span><?=gtext("Cron");?></span></a></li>
@@ -196,7 +196,7 @@ function type_change() {
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save");?>" onclick="enable_change(true)" />
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
@@ -207,4 +207,4 @@ enable_change(false);
 type_change(false);
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

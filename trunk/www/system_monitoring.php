@@ -1,6 +1,6 @@
 <?php
 /* 
-	system_rrdgraphs.php
+	system_monitoring.php
 
 	Part of NAS4Free (http://www.nas4free.org).
 	Copyright (c) 2012-2017 The NAS4Free Project <info@nas4free.org>.
@@ -379,7 +379,7 @@ function enable_change(enable_change) {
 			<li class="tabinact"><a href="system_advanced.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Advanced");?></span></a></li>
 			<li class="tabinact"><a href="system_email.php"><span><?=gtext("Email");?></span></a></li>
 			<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
-			<li class="tabact"><a href="system_rrdgraphs.php"><span><?=gtext("Monitoring");?></span></a></li>
+			<li class="tabact"><a href="system_monitoring.php"><span><?=gtext("Monitoring");?></span></a></li>
 			<li class="tabinact"><a href="system_swap.php"><span><?=gtext("Swap");?></span></a></li>
 			<li class="tabinact"><a href="system_rc.php"><span><?=gtext("Command Scripts");?></span></a></li>
 			<li class="tabinact"><a href="system_cron.php"><span><?=gtext("Cron");?></span></a></li>

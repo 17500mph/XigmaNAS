@@ -92,7 +92,7 @@ if ($_POST) {
 	}
 }
 
-$pgtitle = [gtext('System'), gtext('Advanced'), gtext('Command Scripts'), gtext('Sort')];
+$pgtitle = [gtext('System'),gtext('Advanced'),gtext('Command Scripts'),gtext('Sort')];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">
@@ -116,7 +116,7 @@ $(window).on("load", function() {
 		<li class="tabinact"><a href="system_advanced.php"><span><?=gtext('Advanced');?></span></a></li>
 		<li class="tabinact"><a href="system_email.php"><span><?=gtext('Email');?></span></a></li>
 		<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
-		<li class="tabinact"><a href="system_rrdgraphs.php"><span><?=gtext("Monitoring");?></span></a></li>
+		<li class="tabinact"><a href="system_monitoring.php"><span><?=gtext("Monitoring");?></span></a></li>
 		<li class="tabinact"><a href="system_swap.php"><span><?=gtext('Swap');?></span></a></li>
 		<li class="tabact"><a href="system_rc.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Command Scripts');?></span></a></li>
 		<li class="tabinact"><a href="system_cron.php"><span><?=gtext('Cron');?></span></a></li>
@@ -215,6 +215,6 @@ $(window).on("load", function() {
 	<div id="remarks">
 		<?php html_remark('note', gtext('Note'), gtext('These commands will be executed pre or post system initialization (booting) or before system shutdown.'));?>
 	</div>
-	<?php include 'formend.inc';?>
+<?php include 'formend.inc';?>
 </form></td></tr></tbody></table>
 <?php include 'fend.inc';?>
