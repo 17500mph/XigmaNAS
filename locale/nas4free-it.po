@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-26 02:52+0000\n"
+"POT-Creation-Date: 2017-01-26 21:12+0000\n"
 "PO-Revision-Date: 2016-12-21 12:52+0000\n"
 "Last-Translator: misterredman <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 13:28+0000\n"
+"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: ITALY\n"
 "Language: \n"
@@ -601,8 +601,8 @@ msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr ""
 "Indirizzo del daemon remoto hastd. Deve essere un indirizzo IP statico."
 
-msgid "Admin password"
-msgstr "Password amministratore"
+msgid "Admin Password"
+msgstr ""
 
 msgid "Administration password"
 msgstr "Password di amministrazione"
@@ -979,11 +979,11 @@ msgstr "Auth Groups"
 msgid "Auth Method"
 msgstr "Metodo di Autenticazione"
 
+msgid "Authenticate Path & Realm"
+msgstr ""
+
 msgid "Authenticate URL"
 msgstr "Autentica URL"
-
-msgid "Authenticate path & realm"
-msgstr "Autentica percorso e realm"
 
 msgid "Authentication"
 msgstr "Autenticazione"
@@ -1927,6 +1927,9 @@ msgstr "Attivita' Cron"
 msgid "Current"
 msgstr "Corrente"
 
+msgid "Current Password"
+msgstr ""
+
 msgid "Current Version:"
 msgstr "Versione Corrente:"
 
@@ -1994,11 +1997,11 @@ msgstr "DLNA/UPnP MiniDLNA"
 msgid "DNS"
 msgstr "DNS"
 
-msgid "DNS domain"
-msgstr "Dominio DNS"
+msgid "DNS Domain"
+msgstr ""
 
-msgid "DNS forwarder"
-msgstr "Forwarder DNS"
+msgid "DNS Forwarder"
+msgstr ""
 
 msgid "DNS server is empty."
 msgstr "Server DNS vuoto."
@@ -2060,8 +2063,8 @@ msgstr "Data"
 msgid "Date & Time"
 msgstr "Data & Ora"
 
-msgid "Date format"
-msgstr "Formato data"
+msgid "Date Format"
+msgstr ""
 
 msgid "Day"
 msgstr "Giorno"
@@ -2088,8 +2091,8 @@ msgstr ""
 "Decodifica come: byte 0-1-2 = conteggio medio di cancellazione (big endian) "
 "e byte 3-4-5 = Max numero di cancellazione (big endian)."
 
-msgid "Decrypt password"
-msgstr "Decrittazione password"
+msgid "Decrypt Password"
+msgstr ""
 
 msgid "Dedup"
 msgstr "Deduplicazione"
@@ -2349,6 +2352,9 @@ msgstr "Dettagliato"
 
 msgid "Detected"
 msgstr "Rilevato"
+
+msgid "Detected Disks"
+msgstr ""
 
 msgid "Detected Language:"
 msgstr "Lingua rilevata:"
@@ -3289,6 +3295,9 @@ msgstr "Abilità la modalità write cache."
 msgid "Enabled"
 msgstr "Abilitato"
 
+msgid "Encrypt Password"
+msgstr ""
+
 msgid "Encrypt password"
 msgstr "Codifica la password"
 
@@ -3446,8 +3455,8 @@ msgstr "Livello Errore"
 msgid "Event"
 msgstr "Evento"
 
-msgid "Event selection"
-msgstr "Selezione Evento"
+msgid "Event Selection"
+msgstr ""
 
 msgid "Example: pkg add packagename."
 msgstr "Esempio: pkg add packagename."
@@ -3557,11 +3566,11 @@ msgstr ""
 msgid "FTP"
 msgstr "FTP"
 
-msgid "FTP - Ban module"
-msgstr "FTP - Modulo ban"
+msgid "FTP - Ban Module"
+msgstr ""
 
-msgid "FTP - File transfer"
-msgstr "FTP - Trasferimento file"
+msgid "FTP - File Transfer"
+msgstr ""
 
 msgid "FTP Proxy"
 msgstr "Proxy FTP"
@@ -4048,6 +4057,9 @@ msgstr "Database dei nomi host"
 msgid "Hosts"
 msgstr "Host"
 
+msgid "Hosts Allow"
+msgstr ""
+
 msgid "Hosts Setup"
 msgstr ""
 
@@ -4122,8 +4134,8 @@ msgstr "Statistiche IPMI"
 msgid "IPv4 Configuration"
 msgstr "Configurazione IPv4"
 
-msgid "IPv4 DNS servers"
-msgstr "Server DNS IPv4"
+msgid "IPv4 DNS Servers"
+msgstr ""
 
 msgid "IPv4 addresses"
 msgstr "Indirizzi IPv4"
@@ -4134,8 +4146,8 @@ msgstr ""
 msgid "IPv6 Configuration"
 msgstr "Configurazione IPv6"
 
-msgid "IPv6 DNS servers"
-msgstr "Server DNS IPv6"
+msgid "IPv6 DNS Servers"
+msgstr ""
 
 msgid "IPv6 Gateway"
 msgstr "Gateway IPv6"
@@ -4772,9 +4784,6 @@ msgstr "Link up (azione)"
 msgid "List"
 msgstr "Elenco"
 
-msgid "List Detected Disks"
-msgstr "Elenca i dischi rilevati"
-
 msgid "List Imported Users"
 msgstr "Elenca gli utenti importati"
 
@@ -4876,14 +4885,14 @@ msgstr ""
 msgid "Log Level"
 msgstr "Livello di Log"
 
+msgid "Log Order"
+msgstr ""
+
 msgid "Log Settings"
 msgstr "Impostazioni di Log"
 
 msgid "Log file is empty."
 msgstr "Il file di log è vuoto."
-
-msgid "Log order"
-msgstr "Ordinamento del log"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Pacchetti registro gestiti da questa regola nel syslog."
@@ -5032,7 +5041,7 @@ msgstr ""
 msgid "Masquerade address"
 msgstr "Indirizzo maschera"
 
-msgid "Max entries"
+msgid "Max Entries"
 msgstr ""
 
 msgid "Max. TTL"
@@ -5362,6 +5371,9 @@ msgstr "NOTA"
 msgid "NT1 (CIFS)"
 msgstr "NT1 (CIFS)"
 
+msgid "NTP Time Server"
+msgstr ""
+
 msgid "NTP is not enabled."
 msgstr "NTP non è attivato."
 
@@ -5398,8 +5410,11 @@ msgstr "Nome della variabile"
 msgid "Nested HVM"
 msgstr "HVM annidato"
 
-msgid "NetBIOS domain"
-msgstr "Domain NetBIOS"
+msgid "NetBIOS Domain"
+msgstr ""
+
+msgid "NetBIOS Name"
+msgstr ""
 
 msgid "NetBIOS name"
 msgstr "Nome NetBIOS"
@@ -5450,6 +5465,9 @@ msgid ""
 msgstr ""
 "Mai - Controlla la periferica indipendentemente dalla modalità di "
 "alimentazione. Ciò può causare la riattivazione di un disco in spin-down."
+
+msgid "New Password"
+msgstr ""
 
 msgid "New password"
 msgstr "Nuova password"
@@ -6529,6 +6547,9 @@ msgstr ""
 msgid "Remote Rsync Server"
 msgstr "Server Remoto Rsync"
 
+msgid "Remote Syslog Messages"
+msgstr ""
+
 msgid "Remote Syslog Server"
 msgstr "Syslog Server remoto"
 
@@ -6551,9 +6572,6 @@ msgstr ""
 
 msgid "Remote rsync daemon"
 msgstr "Daemon rsync remoto"
-
-msgid "Remote syslog messages"
-msgstr ""
 
 msgid "Removable"
 msgstr "Rimovibile"
@@ -6641,6 +6659,9 @@ msgstr "Risoluzioni IP in nome host"
 
 msgid "Resource"
 msgstr "Risorsa"
+
+msgid "Resource Name"
+msgstr ""
 
 msgid "Resource name"
 msgstr "Nome della risorsa"
@@ -7674,9 +7695,6 @@ msgstr "Log di sistema"
 
 msgid "System message buffer"
 msgstr "Buffer dei messaggi di sistema"
-
-msgid "System time"
-msgstr "Ora di sistema"
 
 msgid "System tuning"
 msgstr "Tuning di sistema"
@@ -9165,6 +9183,9 @@ msgstr "Time Machine"
 msgid "Time Synchronization"
 msgstr ""
 
+msgid "Time Zone"
+msgstr ""
+
 msgid "Time before the load will be rebooted"
 msgstr "Tempo prima del riavvio del carico."
 
@@ -9189,9 +9210,6 @@ msgstr ""
 
 msgid "Time update interval"
 msgstr "Intervallo di aggiornamento dell'ora"
-
-msgid "Time zone"
-msgstr "Fuso orario"
 
 msgid "Timeout"
 msgstr "Timeout"
@@ -9701,6 +9719,9 @@ msgstr "ID utente"
 msgid "User Settings"
 msgstr ""
 
+msgid "User Shares"
+msgstr ""
+
 msgid "User account is locked"
 msgstr ""
 
@@ -9721,9 +9742,6 @@ msgstr "Password utente."
 
 msgid "User portal"
 msgstr "Portale utente"
-
-msgid "User shares"
-msgstr "Condivisioni utenti"
 
 msgid "User suffix"
 msgstr "Suffisso utente"
@@ -9800,6 +9818,9 @@ msgstr ""
 
 msgid "Version"
 msgstr "Versione"
+
+msgid "Version:"
+msgstr ""
 
 msgid "Vibration During Write."
 msgstr "Vibrazioni durante scrittura."
@@ -10362,8 +10383,59 @@ msgstr "smonta"
 msgid "user"
 msgstr ""
 
-msgid "version:"
-msgstr "versione:"
-
 msgid "week days"
 msgstr ""
+
+#~ msgid "FTP - Ban module"
+#~ msgstr "FTP - Modulo ban"
+
+#~ msgid "FTP - File transfer"
+#~ msgstr "FTP - Trasferimento file"
+
+#~ msgid "IPv4 DNS servers"
+#~ msgstr "Server DNS IPv4"
+
+#~ msgid "IPv6 DNS servers"
+#~ msgstr "Server DNS IPv6"
+
+#~ msgid "System time"
+#~ msgstr "Ora di sistema"
+
+#~ msgid "Time zone"
+#~ msgstr "Fuso orario"
+
+#~ msgid "version:"
+#~ msgstr "versione:"
+
+#~ msgid "Decrypt password"
+#~ msgstr "Decrittazione password"
+
+#~ msgid "Admin password"
+#~ msgstr "Password amministratore"
+
+#~ msgid "DNS forwarder"
+#~ msgstr "Forwarder DNS"
+
+#~ msgid "DNS domain"
+#~ msgstr "Dominio DNS"
+
+#~ msgid "NetBIOS domain"
+#~ msgstr "Domain NetBIOS"
+
+#~ msgid "User shares"
+#~ msgstr "Condivisioni utenti"
+
+#~ msgid "Date format"
+#~ msgstr "Formato data"
+
+#~ msgid "Event selection"
+#~ msgstr "Selezione Evento"
+
+#~ msgid "Authenticate path & realm"
+#~ msgstr "Autentica percorso e realm"
+
+#~ msgid "List Detected Disks"
+#~ msgstr "Elenca i dischi rilevati"
+
+#~ msgid "Log order"
+#~ msgstr "Ordinamento del log"

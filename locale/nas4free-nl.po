@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-26 02:52+0000\n"
-"PO-Revision-Date: 2017-01-26 02:40+0000\n"
+"POT-Creation-Date: 2017-01-26 21:12+0000\n"
+"PO-Revision-Date: 2017-01-26 21:12+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 13:28+0000\n"
+"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -619,8 +619,8 @@ msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr ""
 "Adres van de remote hastd daemon. Het moet een statisch IP-adres zijn."
 
-msgid "Admin password"
-msgstr "Admin wachtwoord"
+msgid "Admin Password"
+msgstr "Admin Wachtwoord"
 
 msgid "Administration password"
 msgstr "Administrator wachtwoord"
@@ -1013,11 +1013,11 @@ msgstr "Auth Groepen"
 msgid "Auth Method"
 msgstr "Auth Methode"
 
+msgid "Authenticate Path & Realm"
+msgstr "Verifiëren Pad & Rijk"
+
 msgid "Authenticate URL"
 msgstr "Authenticeer URL"
-
-msgid "Authenticate path & realm"
-msgstr "Authenticatie locatie en dialoog text"
 
 msgid "Authentication"
 msgstr "Verificatie"
@@ -2004,6 +2004,9 @@ msgstr "Cron taak"
 msgid "Current"
 msgstr "Huidige"
 
+msgid "Current Password"
+msgstr "Huidig Wachtwoord"
+
 msgid "Current Version:"
 msgstr "Huidige Versie:"
 
@@ -2056,7 +2059,7 @@ msgid "DHCP"
 msgstr "DHCP"
 
 msgid "DHCP cannot be used for LAN interface."
-msgstr "DHCP kan niet worden gebruikt voor de LAN-interface."
+msgstr "DHCP kan niet worden gebruikt voor het LAN-netwerk."
 
 msgid "DLNA/UPnP"
 msgstr "DLNA/UPnP"
@@ -2070,11 +2073,11 @@ msgstr "DLNA/UPnP MiniDLNA"
 msgid "DNS"
 msgstr "DNS"
 
-msgid "DNS domain"
-msgstr "DNS domein"
+msgid "DNS Domain"
+msgstr "DNS Domein"
 
-msgid "DNS forwarder"
-msgstr "DNS forwarder"
+msgid "DNS Forwarder"
+msgstr "DNS Forwarder"
 
 msgid "DNS server is empty."
 msgstr "DNS server is leeg."
@@ -2137,7 +2140,7 @@ msgstr "Datum"
 msgid "Date & Time"
 msgstr "Datum & Tijd"
 
-msgid "Date format"
+msgid "Date Format"
 msgstr "Datumformaat"
 
 msgid "Day"
@@ -2165,8 +2168,8 @@ msgstr ""
 "Gedecodeerd als: byte 0-1-2 = gemiddelde wis telling (big endian) en byte 3-"
 "4-5 = max wis telling (big endian)."
 
-msgid "Decrypt password"
-msgstr "Ontsleutel wachtwoord"
+msgid "Decrypt Password"
+msgstr "Ontsleutel Wachtwoord"
 
 msgid "Dedup"
 msgstr "Dedup"
@@ -2436,6 +2439,9 @@ msgstr "Gedetailleerd"
 
 msgid "Detected"
 msgstr "Gedetecteerd"
+
+msgid "Detected Disks"
+msgstr "Gedetecteerde Schijven"
 
 msgid "Detected Language:"
 msgstr "Gedetecteerde Taal:"
@@ -3380,7 +3386,7 @@ msgid "Enable tuning of some kernel variables."
 msgstr "Inschakelen kernel optimalisatie (aanbevolen)."
 
 msgid "Enable tuning switch"
-msgstr "Inschakelen tuning"
+msgstr "Inschakelen prestatie optimalisatie"
 
 msgid "Enable white background graphs. (black as default)"
 msgstr "Inschakelen witte achtergrond grafieken. (standaard zwart)"
@@ -3390,6 +3396,9 @@ msgstr "Inschakelen schrijf cache mode."
 
 msgid "Enabled"
 msgstr "Ingeschakeld"
+
+msgid "Encrypt Password"
+msgstr "Wachtwoord Versleutelen"
 
 msgid "Encrypt password"
 msgstr "Wachtwoord versleutelen"
@@ -3550,8 +3559,8 @@ msgstr "Fout niveau"
 msgid "Event"
 msgstr "Gebeurtenis"
 
-msgid "Event selection"
-msgstr "Gebeurtenis selectie"
+msgid "Event Selection"
+msgstr "Gebeurtenis Selecteren"
 
 msgid "Example: pkg add packagename."
 msgstr "Voorbeeld: pkg add pakketnaam."
@@ -3661,10 +3670,10 @@ msgstr "FRU Informatie"
 msgid "FTP"
 msgstr "FTP"
 
-msgid "FTP - Ban module"
-msgstr "FTP - Ban module"
+msgid "FTP - Ban Module"
+msgstr "FTP - Ban Module"
 
-msgid "FTP - File transfer"
+msgid "FTP - File Transfer"
 msgstr "FTP - Bestandsoverdracht"
 
 msgid "FTP Proxy"
@@ -4164,6 +4173,9 @@ msgstr "Hostnaam database"
 msgid "Hosts"
 msgstr "Hosten"
 
+msgid "Hosts Allow"
+msgstr "Hosten Toestaan"
+
 msgid "Hosts Setup"
 msgstr "Hosts Instellen"
 
@@ -4241,8 +4253,8 @@ msgstr "IPMI Stats"
 msgid "IPv4 Configuration"
 msgstr "IPv4 Configuratie"
 
-msgid "IPv4 DNS servers"
-msgstr "IPv4 DNS servers"
+msgid "IPv4 DNS Servers"
+msgstr "IPv4 DNS Servers"
 
 msgid "IPv4 addresses"
 msgstr "IPv4-adressen"
@@ -4253,8 +4265,8 @@ msgstr "IPv6 Adres"
 msgid "IPv6 Configuration"
 msgstr "IPv6 Configuratie"
 
-msgid "IPv6 DNS servers"
-msgstr "IPv6 DNS servers"
+msgid "IPv6 DNS Servers"
+msgstr "IPv6 DNS Servers"
 
 msgid "IPv6 Gateway"
 msgstr "IPv6 Gateway"
@@ -4902,9 +4914,6 @@ msgstr "Link up actie"
 msgid "List"
 msgstr "Lijst"
 
-msgid "List Detected Disks"
-msgstr "Lijst Gedetecteerde Schijven"
-
 msgid "List Imported Users"
 msgstr "Lijst Geimporteerde Gebruikers"
 
@@ -5012,14 +5021,14 @@ msgstr "Logboek Filter"
 msgid "Log Level"
 msgstr "Log niveau"
 
+msgid "Log Order"
+msgstr "Volgorde Logboek"
+
 msgid "Log Settings"
 msgstr "Log Instellingen"
 
 msgid "Log file is empty."
 msgstr "Logbestand is leeg."
-
-msgid "Log order"
-msgstr "Log volgorde"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr ""
@@ -5173,8 +5182,8 @@ msgstr ""
 msgid "Masquerade address"
 msgstr "Masquerade adres"
 
-msgid "Max entries"
-msgstr "Max logboekregels"
+msgid "Max Entries"
+msgstr "Max Logboekregels"
 
 msgid "Max. TTL"
 msgstr "Max. TTL"
@@ -5507,6 +5516,9 @@ msgstr "Opmerking"
 msgid "NT1 (CIFS)"
 msgstr "NT1 (CIFS)"
 
+msgid "NTP Time Server"
+msgstr "NTP Tijdservers"
+
 msgid "NTP is not enabled."
 msgstr "NTP is niet ingeschakeld."
 
@@ -5545,8 +5557,11 @@ msgstr "Naam van de variable."
 msgid "Nested HVM"
 msgstr "Geneste HVM"
 
-msgid "NetBIOS domain"
-msgstr "NetBIOS domein"
+msgid "NetBIOS Domain"
+msgstr "NetBIOS Domein"
+
+msgid "NetBIOS Name"
+msgstr "NetBIOS Naam"
 
 msgid "NetBIOS name"
 msgstr "NetBIOS naam"
@@ -5598,6 +5613,9 @@ msgstr ""
 "Never - Poll (controle) van de harde schijf ongeacht zijn energie mode. Dit "
 "kan een schijf die een spin-down heeft opnieuw een spin-up geven wanneer "
 "deze keuze geselecteerd is."
+
+msgid "New Password"
+msgstr "Nieuw Wachtwoord"
 
 msgid "New password"
 msgstr "Nieuw wachtwoord"
@@ -6699,6 +6717,9 @@ msgstr "Remote Module (Bron)"
 msgid "Remote Rsync Server"
 msgstr "Remote Rsync Server"
 
+msgid "Remote Syslog Messages"
+msgstr "Externe Syslog Berichten"
+
 msgid "Remote Syslog Server"
 msgstr "Externe Syslog Server"
 
@@ -6714,20 +6735,17 @@ msgstr "Remote monitoring"
 msgid ""
 "Remote monitoring password. Must be equal on both master and slave system."
 msgstr ""
-"Remote monitoring wachtwoord. Moet gelijk zijn op zowel de master als de "
+"Externe monitoring wachtwoord. Moet gelijk zijn op zowel de master als de "
 "slave systeem."
 
 msgid ""
 "Remote monitoring username. Must be equal on both master and slave system."
 msgstr ""
-"Remote monitoring gebruikersnaam. Moet gelijk zijn op zowel de master als de "
-"slave systeem."
+"Externe monitoring gebruikersnaam. Moet gelijk zijn op zowel de master als "
+"de slave systeem."
 
 msgid "Remote rsync daemon"
 msgstr "Remote rsync daemon"
-
-msgid "Remote syslog messages"
-msgstr "Externe syslog berichten"
 
 msgid "Removable"
 msgstr "Verwijderbaar"
@@ -6816,6 +6834,9 @@ msgstr "IP-adressen omzetten naar hostnamen."
 
 msgid "Resource"
 msgstr "Bron"
+
+msgid "Resource Name"
+msgstr "Bronnaam"
 
 msgid "Resource name"
 msgstr "Bron naam"
@@ -7871,16 +7892,13 @@ msgid "System events"
 msgstr "Systeem gebeurtenissen"
 
 msgid "System info"
-msgstr "Systeem-info"
+msgstr "Systeem info"
 
 msgid "System log"
 msgstr "Systeem log"
 
 msgid "System message buffer"
 msgstr "Systeemberichten buffer"
-
-msgid "System time"
-msgstr "Systeemtijd"
 
 msgid "System tuning"
 msgstr "Systeem optimalisatie"
@@ -8036,8 +8054,8 @@ msgstr ""
 
 msgid "The HAST volumes can not be accessed until HAST node becomes Primary."
 msgstr ""
-"De HAST volumes kunnen niet worden geopend voor dat de HAST knooppunt "
-"primair is geworden."
+"De HAST volumes kunnen niet worden benaderd voordat de HAST node primair is "
+"geworden."
 
 msgid "The IP address of the UPS master."
 msgstr "Het IP-adres van de UPS master."
@@ -9458,6 +9476,9 @@ msgstr "Time Machine"
 msgid "Time Synchronization"
 msgstr "Tijdsynchronisatie"
 
+msgid "Time Zone"
+msgstr "Tijdzone"
+
 msgid "Time before the load will be rebooted"
 msgstr "Tijd voordat de belasting opnieuw zal worden opgestart"
 
@@ -9483,9 +9504,6 @@ msgstr ""
 
 msgid "Time update interval"
 msgstr "Interval bijwerken tijd"
-
-msgid "Time zone"
-msgstr "Tijdzone"
 
 msgid "Timeout"
 msgstr "Tijdsoverschrijding"
@@ -9801,7 +9819,7 @@ msgid "UPS status"
 msgstr "UPS status"
 
 msgid "UPS system identifier"
-msgstr "UPS-systeem-id"
+msgstr "UPS systeem-id"
 
 msgid "UPS temperature"
 msgstr "UPS temperatuur"
@@ -10019,6 +10037,9 @@ msgstr "Gebruiker ID"
 msgid "User Settings"
 msgstr "Gebruikersinstellingen"
 
+msgid "User Shares"
+msgstr "Gebruiker Gedeelde Mappen"
+
 msgid "User account is locked"
 msgstr "Gebruikersaccount is vergrendeld"
 
@@ -10039,9 +10060,6 @@ msgstr "Wachtwoord gebruiker."
 
 msgid "User portal"
 msgstr "Gebruikers portaal"
-
-msgid "User shares"
-msgstr "Gebruiker gedeelde mappen"
 
 msgid "User suffix"
 msgstr "Gebruiker achtervoegsel"
@@ -10121,6 +10139,9 @@ msgstr "Verifiëren"
 
 msgid "Version"
 msgstr "Versie"
+
+msgid "Version:"
+msgstr "Versie:"
 
 msgid "Vibration During Write."
 msgstr "Trillingen Tijdens Schrijven."
@@ -10303,15 +10324,15 @@ msgid ""
 "When HAST is enabled, the local devices, the local services and the "
 "additional packages which do not support HAST volume cannot be used."
 msgstr ""
-"Wanneer HAST is ingeschakeld, kunnen de lokale apparaten en de lokale "
-"diensten met aanvullende pakketten die geen ondersteuning voor HAST volumes "
-"bieden niet worden gebruikt."
+"Wanneer HAST is ingeschakeld, kunnen de lokale schijven, de lokale services "
+"en de aanvullende pakketten die geen HAST volumes ondersteunen niet worden "
+"gebruikt."
 
 msgid ""
 "When Samba AD is enabled, stand-alone CIFS/SMB file sharing cannot be used."
 msgstr ""
 "Indien Samba AD is ingeschakeld, kan de zelfstandige CIFS/SMB bestandsdeling "
-"service niet gebruikt worden."
+"niet worden gebruikt."
 
 msgid "When UPS switches to Low Battery"
 msgstr "Tijd overschakelen naar Laag Batterij Niveau"
@@ -10702,8 +10723,65 @@ msgstr "loskoppelen"
 msgid "user"
 msgstr "gebruiker"
 
-msgid "version:"
-msgstr "versie:"
-
 msgid "week days"
 msgstr "weekdagen"
+
+#~ msgid "FTP - Ban module"
+#~ msgstr "FTP - Ban module"
+
+#~ msgid "FTP - File transfer"
+#~ msgstr "FTP - Bestandsoverdracht"
+
+#~ msgid "IPv4 DNS servers"
+#~ msgstr "IPv4 DNS servers"
+
+#~ msgid "IPv6 DNS servers"
+#~ msgstr "IPv6 DNS servers"
+
+#~ msgid "System time"
+#~ msgstr "Systeemtijd"
+
+#~ msgid "Time zone"
+#~ msgstr "Tijdzone"
+
+#~ msgid "version:"
+#~ msgstr "versie:"
+
+#~ msgid "Decrypt password"
+#~ msgstr "Ontsleutel wachtwoord"
+
+#~ msgid "DNS forwarder"
+#~ msgstr "DNS forwarder"
+
+#~ msgid "Admin password"
+#~ msgstr "Admin wachtwoord"
+
+#~ msgid "NetBIOS domain"
+#~ msgstr "NetBIOS domein"
+
+#~ msgid "DNS domain"
+#~ msgstr "DNS domein"
+
+#~ msgid "User shares"
+#~ msgstr "Gebruiker gedeelde mappen"
+
+#~ msgid "List Detected Disks"
+#~ msgstr "Lijst Gedetecteerde Schijven"
+
+#~ msgid "Authenticate path & realm"
+#~ msgstr "Authenticatie locatie en dialoog text"
+
+#~ msgid "Date format"
+#~ msgstr "Datumformaat"
+
+#~ msgid "Event selection"
+#~ msgstr "Gebeurtenis selectie"
+
+#~ msgid "Log order"
+#~ msgstr "Log volgorde"
+
+#~ msgid "Max entries"
+#~ msgstr "Max logboekregels"
+
+#~ msgid "Remote syslog messages"
+#~ msgstr "Externe syslog berichten"

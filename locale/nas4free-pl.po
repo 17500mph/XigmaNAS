@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-26 02:52+0000\n"
+"POT-Creation-Date: 2017-01-26 21:12+0000\n"
 "PO-Revision-Date: 2017-01-05 23:54+0000\n"
 "Last-Translator: Piotr Łobuz <ericsson@go2.pl>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 13:28+0000\n"
+"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: POLAND\n"
 "Language: \n"
@@ -597,8 +597,8 @@ msgstr "Adres"
 msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr "Adres zdalnego demona hastd. Musi być statycznym adresem IP"
 
-msgid "Admin password"
-msgstr "Hasło administratora"
+msgid "Admin Password"
+msgstr ""
 
 msgid "Administration password"
 msgstr "Hasło administratora"
@@ -970,11 +970,11 @@ msgstr "Grupy zabezpieczeń"
 msgid "Auth Method"
 msgstr "Metoda Autentykacji"
 
+msgid "Authenticate Path & Realm"
+msgstr ""
+
 msgid "Authenticate URL"
 msgstr "URL Autentykacji"
-
-msgid "Authenticate path & realm"
-msgstr "Uwierzytelnienie ścieżki oraz obszaru"
 
 msgid "Authentication"
 msgstr "Uwierzytelnianie"
@@ -1871,6 +1871,9 @@ msgstr "Zadanie Cron"
 msgid "Current"
 msgstr "Bieżący"
 
+msgid "Current Password"
+msgstr ""
+
 msgid "Current Version:"
 msgstr "Aktualna wersja:"
 
@@ -1935,11 +1938,11 @@ msgstr "DLNA/UPnP MiniDLNA"
 msgid "DNS"
 msgstr "DNS"
 
-msgid "DNS domain"
-msgstr "Domena DNS"
+msgid "DNS Domain"
+msgstr ""
 
-msgid "DNS forwarder"
-msgstr "Forwarder DNS"
+msgid "DNS Forwarder"
+msgstr ""
 
 msgid "DNS server is empty."
 msgstr "Brak określonego serwera DNS"
@@ -2001,8 +2004,8 @@ msgstr "Data"
 msgid "Date & Time"
 msgstr "Data i czas"
 
-msgid "Date format"
-msgstr "Format daty"
+msgid "Date Format"
+msgstr ""
 
 msgid "Day"
 msgstr "Dzień"
@@ -2027,8 +2030,8 @@ msgid ""
 "max erase count (big endian)."
 msgstr ""
 
-msgid "Decrypt password"
-msgstr "Odszyfrowanie hasła"
+msgid "Decrypt Password"
+msgstr ""
 
 msgid "Dedup"
 msgstr "Dedup"
@@ -2281,6 +2284,9 @@ msgstr "Szczegóły"
 
 msgid "Detected"
 msgstr "Wykryty"
+
+msgid "Detected Disks"
+msgstr ""
 
 msgid "Detected Language:"
 msgstr "Wykryty język"
@@ -3212,6 +3218,9 @@ msgstr "Włącz tryb zapisywania cache."
 msgid "Enabled"
 msgstr "Włączone"
 
+msgid "Encrypt Password"
+msgstr ""
+
 msgid "Encrypt password"
 msgstr "Zaszyfruj hasło"
 
@@ -3359,7 +3368,7 @@ msgstr ""
 msgid "Event"
 msgstr "Zdarzenie"
 
-msgid "Event selection"
+msgid "Event Selection"
 msgstr ""
 
 msgid "Example: pkg add packagename."
@@ -3470,11 +3479,11 @@ msgstr ""
 msgid "FTP"
 msgstr "FTP"
 
-msgid "FTP - Ban module"
-msgstr "FTP - moduł blokowania"
+msgid "FTP - Ban Module"
+msgstr ""
 
-msgid "FTP - File transfer"
-msgstr "FTP - Transfer plików"
+msgid "FTP - File Transfer"
+msgstr ""
 
 msgid "FTP Proxy"
 msgstr "Proxy FTP"
@@ -3958,6 +3967,9 @@ msgstr "Baza danych nazw hostów"
 msgid "Hosts"
 msgstr "Hosty"
 
+msgid "Hosts Allow"
+msgstr ""
+
 msgid "Hosts Setup"
 msgstr ""
 
@@ -4031,8 +4043,8 @@ msgstr ""
 msgid "IPv4 Configuration"
 msgstr "Konfiguracja IPv4"
 
-msgid "IPv4 DNS servers"
-msgstr "Serwery DNS IPv4"
+msgid "IPv4 DNS Servers"
+msgstr ""
 
 msgid "IPv4 addresses"
 msgstr "Adresy IPv4"
@@ -4043,8 +4055,8 @@ msgstr ""
 msgid "IPv6 Configuration"
 msgstr "Konfiguracja IPv6"
 
-msgid "IPv6 DNS servers"
-msgstr "Serwery DNS IPv6"
+msgid "IPv6 DNS Servers"
+msgstr ""
 
 msgid "IPv6 Gateway"
 msgstr "Brama IPv6"
@@ -4660,9 +4672,6 @@ msgstr "Działanie w momencie pojawienia się połączenia"
 msgid "List"
 msgstr "Pokaż"
 
-msgid "List Detected Disks"
-msgstr "Lista wykrytych dysków."
-
 msgid "List Imported Users"
 msgstr "Lista zaimportowanych dysków"
 
@@ -4762,14 +4771,14 @@ msgstr ""
 msgid "Log Level"
 msgstr "Poziom logowania"
 
+msgid "Log Order"
+msgstr ""
+
 msgid "Log Settings"
 msgstr "Ustawienia dziennika."
 
 msgid "Log file is empty."
 msgstr "Plik dziennika jest pusty."
-
-msgid "Log order"
-msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Loguj do syslog pakiety, które zostały zatrzymane przez tą regułę."
@@ -4918,8 +4927,8 @@ msgstr ""
 msgid "Masquerade address"
 msgstr "Adres maskarady"
 
-msgid "Max entries"
-msgstr "Maksymalna ilość wpisów"
+msgid "Max Entries"
+msgstr ""
 
 msgid "Max. TTL"
 msgstr "Maksymalna wielkość TTL pakietu danych"
@@ -5244,6 +5253,9 @@ msgstr ""
 msgid "NT1 (CIFS)"
 msgstr ""
 
+msgid "NTP Time Server"
+msgstr ""
+
 msgid "NTP is not enabled."
 msgstr "NTP nie jest włączone."
 
@@ -5279,8 +5291,11 @@ msgstr "Nazwa zmiennej."
 msgid "Nested HVM"
 msgstr ""
 
-msgid "NetBIOS domain"
-msgstr "Domena NetBIOS"
+msgid "NetBIOS Domain"
+msgstr ""
+
+msgid "NetBIOS Name"
+msgstr ""
 
 msgid "NetBIOS name"
 msgstr "Nazwa NetBIOS"
@@ -5332,6 +5347,9 @@ msgstr ""
 "Nigdy - Sonda (sprawdzenie) urządzenia niezależnie od sposobu zasilania. "
 "Może to spowodować że dysk który zwalnia zacznie przyspieszać, gdy funkcja "
 "jest zaznaczona."
+
+msgid "New Password"
+msgstr ""
 
 msgid "New password"
 msgstr "Nowe hasło"
@@ -6402,6 +6420,9 @@ msgstr ""
 msgid "Remote Rsync Server"
 msgstr "Zdalny serwer Rsync"
 
+msgid "Remote Syslog Messages"
+msgstr ""
+
 msgid "Remote Syslog Server"
 msgstr "Zdalny Serwer Syslog"
 
@@ -6423,9 +6444,6 @@ msgid ""
 msgstr ""
 
 msgid "Remote rsync daemon"
-msgstr ""
-
-msgid "Remote syslog messages"
 msgstr ""
 
 msgid "Removable"
@@ -6514,6 +6532,9 @@ msgstr ""
 
 msgid "Resource"
 msgstr "Zasób"
+
+msgid "Resource Name"
+msgstr ""
 
 msgid "Resource name"
 msgstr "Nazwa zasobu"
@@ -7533,9 +7554,6 @@ msgstr "Dziennik systemowy"
 
 msgid "System message buffer"
 msgstr "Bufor komunikatów systemowych"
-
-msgid "System time"
-msgstr "Czas systemowy"
 
 msgid "System tuning"
 msgstr "Dostrajanie systemu"
@@ -8930,6 +8948,9 @@ msgstr ""
 msgid "Time Synchronization"
 msgstr "Synchronizacja czasu"
 
+msgid "Time Zone"
+msgstr ""
+
 msgid "Time before the load will be rebooted"
 msgstr ""
 
@@ -8954,9 +8975,6 @@ msgstr ""
 
 msgid "Time update interval"
 msgstr "Czas pomiędzy aktualizacjami czasu"
-
-msgid "Time zone"
-msgstr "Strefa czasowa"
 
 msgid "Timeout"
 msgstr "Przekroczony limit czasu"
@@ -9450,6 +9468,9 @@ msgstr "ID użytkownika"
 msgid "User Settings"
 msgstr ""
 
+msgid "User Shares"
+msgstr ""
+
 msgid "User account is locked"
 msgstr ""
 
@@ -9470,9 +9491,6 @@ msgstr "Hasło użytkownika."
 
 msgid "User portal"
 msgstr "Portal użytkownika"
-
-msgid "User shares"
-msgstr "Udziały użytkownika"
 
 msgid "User suffix"
 msgstr "Użytkownicy"
@@ -9547,6 +9565,9 @@ msgstr "Weryfikuj"
 
 msgid "Version"
 msgstr "Wersja"
+
+msgid "Version:"
+msgstr ""
 
 msgid "Vibration During Write."
 msgstr ""
@@ -10098,8 +10119,56 @@ msgstr "odmontuj"
 msgid "user"
 msgstr ""
 
-msgid "version:"
-msgstr "wersja:"
-
 msgid "week days"
 msgstr ""
+
+#~ msgid "FTP - Ban module"
+#~ msgstr "FTP - moduł blokowania"
+
+#~ msgid "FTP - File transfer"
+#~ msgstr "FTP - Transfer plików"
+
+#~ msgid "IPv4 DNS servers"
+#~ msgstr "Serwery DNS IPv4"
+
+#~ msgid "IPv6 DNS servers"
+#~ msgstr "Serwery DNS IPv6"
+
+#~ msgid "System time"
+#~ msgstr "Czas systemowy"
+
+#~ msgid "Time zone"
+#~ msgstr "Strefa czasowa"
+
+#~ msgid "version:"
+#~ msgstr "wersja:"
+
+#~ msgid "Decrypt password"
+#~ msgstr "Odszyfrowanie hasła"
+
+#~ msgid "Admin password"
+#~ msgstr "Hasło administratora"
+
+#~ msgid "DNS domain"
+#~ msgstr "Domena DNS"
+
+#~ msgid "NetBIOS domain"
+#~ msgstr "Domena NetBIOS"
+
+#~ msgid "DNS forwarder"
+#~ msgstr "Forwarder DNS"
+
+#~ msgid "User shares"
+#~ msgstr "Udziały użytkownika"
+
+#~ msgid "Authenticate path & realm"
+#~ msgstr "Uwierzytelnienie ścieżki oraz obszaru"
+
+#~ msgid "Date format"
+#~ msgstr "Format daty"
+
+#~ msgid "List Detected Disks"
+#~ msgstr "Lista wykrytych dysków."
+
+#~ msgid "Max entries"
+#~ msgstr "Maksymalna ilość wpisów"

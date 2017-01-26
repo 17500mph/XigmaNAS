@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-26 02:52+0000\n"
-"PO-Revision-Date: 2017-01-26 07:23+0000\n"
+"POT-Creation-Date: 2017-01-26 21:12+0000\n"
+"PO-Revision-Date: 2017-01-26 20:34+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 13:29+0000\n"
+"X-Launchpad-Export-Date: 2017-01-26 21:48+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "Language: ca_ES\n"
 
@@ -610,8 +610,8 @@ msgstr "Adreça"
 msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr "Adreça del dimoni remot hastd. Ha de esser una adreça IP estàtica."
 
-msgid "Admin password"
-msgstr "Contrasenya de l'administrador"
+msgid "Admin Password"
+msgstr "Contrasenya d'administrador"
 
 msgid "Administration password"
 msgstr "Clau d'administració"
@@ -1006,11 +1006,11 @@ msgstr "Grups autenticats"
 msgid "Auth Method"
 msgstr "Mètode de autenticació"
 
+msgid "Authenticate Path & Realm"
+msgstr "Autenticar senda i área"
+
 msgid "Authenticate URL"
 msgstr "Adressa de autenticació"
-
-msgid "Authenticate path & realm"
-msgstr "Autenticar ruta i regne"
 
 msgid "Authentication"
 msgstr "Autenticació:"
@@ -1989,6 +1989,9 @@ msgstr "Treball cron"
 msgid "Current"
 msgstr "Present"
 
+msgid "Current Password"
+msgstr "Contrasenya actual"
+
 msgid "Current Version:"
 msgstr "Versió actual:"
 
@@ -2056,11 +2059,11 @@ msgstr "DLNA/UPnP MiniDLNA"
 msgid "DNS"
 msgstr "DNS"
 
-msgid "DNS domain"
+msgid "DNS Domain"
 msgstr "Domini DNS"
 
-msgid "DNS forwarder"
-msgstr "Promotor de DNS"
+msgid "DNS Forwarder"
+msgstr "Re-enviament DNS"
 
 msgid "DNS server is empty."
 msgstr "Servidor DNS està buida."
@@ -2125,8 +2128,8 @@ msgstr "Data"
 msgid "Date & Time"
 msgstr "Data i hora"
 
-msgid "Date format"
-msgstr "Format de la data"
+msgid "Date Format"
+msgstr "Format de data"
 
 msgid "Day"
 msgstr "Dia"
@@ -2153,8 +2156,8 @@ msgstr ""
 "Descodificat com: Byte 0-1-2 = recompte mitjà d'esborrat (big endian) i el "
 "byte 3-4-5 = recompte d'esborrat max (big endian)."
 
-msgid "Decrypt password"
-msgstr "Desxifrar contrasenya"
+msgid "Decrypt Password"
+msgstr "Desxifrar la contrasenya"
 
 msgid "Dedup"
 msgstr "Deduplicar"
@@ -2422,6 +2425,9 @@ msgstr "Detallat"
 
 msgid "Detected"
 msgstr "Detetcat"
+
+msgid "Detected Disks"
+msgstr "Discs seleccionats"
 
 msgid "Detected Language:"
 msgstr "Idioma Detectat:"
@@ -3368,6 +3374,9 @@ msgstr "Activa mode de memòria cau d'escriptura."
 msgid "Enabled"
 msgstr "Activat"
 
+msgid "Encrypt Password"
+msgstr "Xifrar la contrasenya"
+
 msgid "Encrypt password"
 msgstr "Xifrar contrasenya"
 
@@ -3527,8 +3536,8 @@ msgstr "Nivell d'error"
 msgid "Event"
 msgstr "Esdeveniment"
 
-msgid "Event selection"
-msgstr "Selecció d'esdeveniments"
+msgid "Event Selection"
+msgstr "Selecció del event"
 
 msgid "Example: pkg add packagename."
 msgstr "Exemple: pkg add packagename."
@@ -3639,11 +3648,11 @@ msgstr "Informació FRU"
 msgid "FTP"
 msgstr "FTP"
 
-msgid "FTP - Ban module"
-msgstr "FTP - Mòdul expulsió"
+msgid "FTP - Ban Module"
+msgstr "Módul de exclosos - FTP"
 
-msgid "FTP - File transfer"
-msgstr "FTP - Transferència d'arxius"
+msgid "FTP - File Transfer"
+msgstr "Transfeencia d'arxius - FTP"
 
 msgid "FTP Proxy"
 msgstr "FTP Proxy"
@@ -4149,6 +4158,9 @@ msgstr "Base de dades del amfitrió"
 msgid "Hosts"
 msgstr "Màquinas"
 
+msgid "Hosts Allow"
+msgstr "Amfitrions permessos"
+
 msgid "Hosts Setup"
 msgstr "Configuració de hosts"
 
@@ -4226,7 +4238,7 @@ msgstr "Estat IPMI"
 msgid "IPv4 Configuration"
 msgstr "Configuració IPv4"
 
-msgid "IPv4 DNS servers"
+msgid "IPv4 DNS Servers"
 msgstr "Servidors DNS IPv4"
 
 msgid "IPv4 addresses"
@@ -4238,7 +4250,7 @@ msgstr "Adreça IPv6"
 msgid "IPv6 Configuration"
 msgstr "Configuració IPv6"
 
-msgid "IPv6 DNS servers"
+msgid "IPv6 DNS Servers"
 msgstr "Servidors DNS IPv6"
 
 msgid "IPv6 Gateway"
@@ -4887,9 +4899,6 @@ msgstr "Acció d'enllaç actiu"
 msgid "List"
 msgstr "Llista"
 
-msgid "List Detected Disks"
-msgstr "Llista discs detectats"
-
 msgid "List Imported Users"
 msgstr "Llista usuaris importats"
 
@@ -4992,14 +5001,14 @@ msgstr "Filtre registre"
 msgid "Log Level"
 msgstr "Nivell de registre"
 
+msgid "Log Order"
+msgstr "Sentit del registre"
+
 msgid "Log Settings"
 msgstr "Opcions del registre"
 
 msgid "Log file is empty."
 msgstr "El fitxer de registre és buid."
-
-msgid "Log order"
-msgstr "Ordre del registres"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr ""
@@ -5152,8 +5161,8 @@ msgstr ""
 msgid "Masquerade address"
 msgstr "Adreça enmascarada"
 
-msgid "Max entries"
-msgstr "Nombre màxim d'entrades"
+msgid "Max Entries"
+msgstr "Máximes entrades"
 
 msgid "Max. TTL"
 msgstr "Máx. TTL"
@@ -5486,6 +5495,9 @@ msgstr "NOTA"
 msgid "NT1 (CIFS)"
 msgstr "NT1 (CIFS)"
 
+msgid "NTP Time Server"
+msgstr "Servidor de temps NTP"
+
 msgid "NTP is not enabled."
 msgstr "NTP no està habilitat."
 
@@ -5524,8 +5536,11 @@ msgstr "Nom de la variable."
 msgid "Nested HVM"
 msgstr "HVM anidad"
 
-msgid "NetBIOS domain"
+msgid "NetBIOS Domain"
 msgstr "Domini NetBIOS"
+
+msgid "NetBIOS Name"
+msgstr "Nom NetBIOS"
 
 msgid "NetBIOS name"
 msgstr "Nom NetBIOS"
@@ -5577,6 +5592,9 @@ msgstr ""
 "Mai - Enquesta (xeca) el dispositiu independentment del seu mode "
 "d'alimentació. Això pot fer que un disc que s'ha de aturar canvi a estat de "
 "gir quan es comprova."
+
+msgid "New Password"
+msgstr "Nova contrasenya"
 
 msgid "New password"
 msgstr "Nova contrasenya"
@@ -6680,6 +6698,9 @@ msgstr "Mòdul remot (Font)"
 msgid "Remote Rsync Server"
 msgstr "Servidor Rsync remot"
 
+msgid "Remote Syslog Messages"
+msgstr "Missatges de registre remot"
+
 msgid "Remote Syslog Server"
 msgstr "Servidor de registre del sistema remot"
 
@@ -6706,9 +6727,6 @@ msgstr ""
 
 msgid "Remote rsync daemon"
 msgstr "Dimoni remot de rsync"
-
-msgid "Remote syslog messages"
-msgstr "Missatges de registre del sistema remot"
 
 msgid "Removable"
 msgstr "Extraïble"
@@ -6798,6 +6816,9 @@ msgstr "Resoldre adreces IP a noms de host"
 
 msgid "Resource"
 msgstr "Recurs"
+
+msgid "Resource Name"
+msgstr "Nom del recurs"
 
 msgid "Resource name"
 msgstr "Nom del recurs"
@@ -7858,9 +7879,6 @@ msgstr "Registre del sistema"
 
 msgid "System message buffer"
 msgstr "Memòria intermitja de missatges del sistema"
-
-msgid "System time"
-msgstr "Hora del sistema"
 
 msgid "System tuning"
 msgstr "Ajustos fins del sistema"
@@ -9421,6 +9439,9 @@ msgstr "Màquina del temps"
 msgid "Time Synchronization"
 msgstr "Sincronització horària"
 
+msgid "Time Zone"
+msgstr "Zona horària"
+
 msgid "Time before the load will be rebooted"
 msgstr "Hora abans que la càrrega es reiniciarà"
 
@@ -9447,9 +9468,6 @@ msgstr ""
 
 msgid "Time update interval"
 msgstr "Interval de temps d'actualització"
-
-msgid "Time zone"
-msgstr "Zona horària"
 
 msgid "Timeout"
 msgstr "Temps esgotat"
@@ -9987,6 +10005,9 @@ msgstr "ID d'usuari"
 msgid "User Settings"
 msgstr "Configuració de l'usuari"
 
+msgid "User Shares"
+msgstr "Compartits d'usuari"
+
 msgid "User account is locked"
 msgstr "El compte del usuari està bloquejat"
 
@@ -10007,9 +10028,6 @@ msgstr "Contrasenya d'usuari."
 
 msgid "User portal"
 msgstr "Portal d'usuari"
-
-msgid "User shares"
-msgstr "Comparticions d'usuari"
 
 msgid "User suffix"
 msgstr "Sufix d'usuari"
@@ -10089,6 +10107,9 @@ msgstr "Verificar"
 
 msgid "Version"
 msgstr "Versió"
+
+msgid "Version:"
+msgstr "Versió:"
 
 msgid "Vibration During Write."
 msgstr "Vibracions durant escriptura."
@@ -10662,8 +10683,65 @@ msgstr "desmontar"
 msgid "user"
 msgstr "usuari"
 
-msgid "version:"
-msgstr "versió:"
-
 msgid "week days"
 msgstr "dias de la setmana"
+
+#~ msgid "FTP - Ban module"
+#~ msgstr "FTP - Mòdul expulsió"
+
+#~ msgid "version:"
+#~ msgstr "versió:"
+
+#~ msgid "FTP - File transfer"
+#~ msgstr "FTP - Transferència d'arxius"
+
+#~ msgid "IPv4 DNS servers"
+#~ msgstr "Servidors DNS IPv4"
+
+#~ msgid "IPv6 DNS servers"
+#~ msgstr "Servidors DNS IPv6"
+
+#~ msgid "System time"
+#~ msgstr "Hora del sistema"
+
+#~ msgid "DNS domain"
+#~ msgstr "Domini DNS"
+
+#~ msgid "DNS forwarder"
+#~ msgstr "Promotor de DNS"
+
+#~ msgid "NetBIOS domain"
+#~ msgstr "Domini NetBIOS"
+
+#~ msgid "Date format"
+#~ msgstr "Format de la data"
+
+#~ msgid "Authenticate path & realm"
+#~ msgstr "Autenticar ruta i regne"
+
+#~ msgid "Log order"
+#~ msgstr "Ordre del registres"
+
+#~ msgid "Event selection"
+#~ msgstr "Selecció d'esdeveniments"
+
+#~ msgid "List Detected Disks"
+#~ msgstr "Llista discs detectats"
+
+#~ msgid "Max entries"
+#~ msgstr "Nombre màxim d'entrades"
+
+#~ msgid "Remote syslog messages"
+#~ msgstr "Missatges de registre del sistema remot"
+
+#~ msgid "Time zone"
+#~ msgstr "Zona horària"
+
+#~ msgid "User shares"
+#~ msgstr "Comparticions d'usuari"
+
+#~ msgid "Admin password"
+#~ msgstr "Contrasenya de l'administrador"
+
+#~ msgid "Decrypt password"
+#~ msgstr "Desxifrar contrasenya"

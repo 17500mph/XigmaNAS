@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-26 02:52+0000\n"
+"POT-Creation-Date: 2017-01-26 21:12+0000\n"
 "PO-Revision-Date: 2016-09-17 16:31+0000\n"
 "Last-Translator: Timm Lagoni <tila@tl-designs.dk>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 13:28+0000\n"
+"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
@@ -570,8 +570,8 @@ msgstr "Adresse"
 msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr "Adresse på remote hastd daemon. Det skal være en fast IP adresse."
 
-msgid "Admin password"
-msgstr "Admin kodeord"
+msgid "Admin Password"
+msgstr ""
 
 msgid "Administration password"
 msgstr "Administrations kodeord"
@@ -927,11 +927,11 @@ msgstr "Auth grupper"
 msgid "Auth Method"
 msgstr "Auth metode"
 
+msgid "Authenticate Path & Realm"
+msgstr ""
+
 msgid "Authenticate URL"
 msgstr "Godkend URL"
-
-msgid "Authenticate path & realm"
-msgstr ""
 
 msgid "Authentication"
 msgstr "Godkendelse"
@@ -1815,6 +1815,9 @@ msgstr "Cron opgave"
 msgid "Current"
 msgstr "Nuværende"
 
+msgid "Current Password"
+msgstr ""
+
 msgid "Current Version:"
 msgstr "Nuværende Version"
 
@@ -1881,10 +1884,10 @@ msgstr ""
 msgid "DNS"
 msgstr ""
 
-msgid "DNS domain"
-msgstr "DNS domæne"
+msgid "DNS Domain"
+msgstr ""
 
-msgid "DNS forwarder"
+msgid "DNS Forwarder"
 msgstr ""
 
 msgid "DNS server is empty."
@@ -1946,7 +1949,7 @@ msgstr ""
 msgid "Date & Time"
 msgstr "Dato & tid"
 
-msgid "Date format"
+msgid "Date Format"
 msgstr ""
 
 msgid "Day"
@@ -1972,8 +1975,8 @@ msgid ""
 "max erase count (big endian)."
 msgstr ""
 
-msgid "Decrypt password"
-msgstr "Dekryptere kodeord"
+msgid "Decrypt Password"
+msgstr ""
 
 msgid "Dedup"
 msgstr "Dedup"
@@ -2227,6 +2230,9 @@ msgstr ""
 
 msgid "Detected"
 msgstr "Fundet"
+
+msgid "Detected Disks"
+msgstr ""
 
 msgid "Detected Language:"
 msgstr ""
@@ -3146,6 +3152,9 @@ msgstr "Anvend skrive cache."
 msgid "Enabled"
 msgstr "Aktiveret"
 
+msgid "Encrypt Password"
+msgstr ""
+
 msgid "Encrypt password"
 msgstr "Krypter kodeord"
 
@@ -3292,7 +3301,7 @@ msgstr ""
 msgid "Event"
 msgstr "Hændelse"
 
-msgid "Event selection"
+msgid "Event Selection"
 msgstr ""
 
 msgid "Example: pkg add packagename."
@@ -3401,11 +3410,11 @@ msgstr ""
 msgid "FTP"
 msgstr "FTP"
 
-msgid "FTP - Ban module"
-msgstr "FTP - Ban modul"
+msgid "FTP - Ban Module"
+msgstr ""
 
-msgid "FTP - File transfer"
-msgstr "FTP - Fil overførsel"
+msgid "FTP - File Transfer"
+msgstr ""
 
 msgid "FTP Proxy"
 msgstr "FTP proxy"
@@ -3892,6 +3901,9 @@ msgstr "Værtsnavn database"
 msgid "Hosts"
 msgstr "Værter"
 
+msgid "Hosts Allow"
+msgstr ""
+
 msgid "Hosts Setup"
 msgstr ""
 
@@ -3967,8 +3979,8 @@ msgstr ""
 msgid "IPv4 Configuration"
 msgstr "IPv4 Opsætning"
 
-msgid "IPv4 DNS servers"
-msgstr "IPv4 DNS servere"
+msgid "IPv4 DNS Servers"
+msgstr ""
 
 msgid "IPv4 addresses"
 msgstr "IPv4 adresser"
@@ -3979,8 +3991,8 @@ msgstr ""
 msgid "IPv6 Configuration"
 msgstr "IPv6 Opsætning"
 
-msgid "IPv6 DNS servers"
-msgstr "IPv6 DNS servere"
+msgid "IPv6 DNS Servers"
+msgstr ""
 
 msgid "IPv6 Gateway"
 msgstr "IPv6 gateway"
@@ -4584,9 +4596,6 @@ msgstr "Link oppe hændelse"
 msgid "List"
 msgstr "Liste"
 
-msgid "List Detected Disks"
-msgstr ""
-
 msgid "List Imported Users"
 msgstr ""
 
@@ -4684,13 +4693,13 @@ msgstr ""
 msgid "Log Level"
 msgstr "Log niveau"
 
+msgid "Log Order"
+msgstr ""
+
 msgid "Log Settings"
 msgstr ""
 
 msgid "Log file is empty."
-msgstr ""
-
-msgid "Log order"
 msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
@@ -4840,7 +4849,7 @@ msgstr ""
 msgid "Masquerade address"
 msgstr "Masquerade adresse"
 
-msgid "Max entries"
+msgid "Max Entries"
 msgstr ""
 
 msgid "Max. TTL"
@@ -5166,6 +5175,9 @@ msgstr ""
 msgid "NT1 (CIFS)"
 msgstr ""
 
+msgid "NTP Time Server"
+msgstr ""
+
 msgid "NTP is not enabled."
 msgstr "NTP er ikke aktiveret."
 
@@ -5201,8 +5213,11 @@ msgstr "Variablens navn"
 msgid "Nested HVM"
 msgstr ""
 
-msgid "NetBIOS domain"
-msgstr "NetBIOS domæne"
+msgid "NetBIOS Domain"
+msgstr ""
+
+msgid "NetBIOS Name"
+msgstr ""
 
 msgid "NetBIOS name"
 msgstr "NetBIOS navn"
@@ -5253,6 +5268,9 @@ msgid ""
 msgstr ""
 "Aldrig - Kontroller enheden uanset dens strømtilstand. Dette kan få en disk, "
 "der er holdt op med at køre, til at køre rundt igen når den kontrolleres"
+
+msgid "New Password"
+msgstr ""
 
 msgid "New password"
 msgstr "Ny adgangskode"
@@ -6326,6 +6344,9 @@ msgstr ""
 msgid "Remote Rsync Server"
 msgstr "Remote Rsync server"
 
+msgid "Remote Syslog Messages"
+msgstr ""
+
 msgid "Remote Syslog Server"
 msgstr ""
 
@@ -6347,9 +6368,6 @@ msgid ""
 msgstr ""
 
 msgid "Remote rsync daemon"
-msgstr ""
-
-msgid "Remote syslog messages"
 msgstr ""
 
 msgid "Removable"
@@ -6438,6 +6456,9 @@ msgstr ""
 
 msgid "Resource"
 msgstr "Ressource"
+
+msgid "Resource Name"
+msgstr ""
 
 msgid "Resource name"
 msgstr "Ressourcenavn"
@@ -7446,9 +7467,6 @@ msgstr "System log"
 
 msgid "System message buffer"
 msgstr "System besked buffer"
-
-msgid "System time"
-msgstr "System tid"
 
 msgid "System tuning"
 msgstr "System finjustering"
@@ -8878,6 +8896,9 @@ msgstr "Time Machine"
 msgid "Time Synchronization"
 msgstr ""
 
+msgid "Time Zone"
+msgstr ""
+
 msgid "Time before the load will be rebooted"
 msgstr "Tid før lasten vil blive genstartet"
 
@@ -8902,9 +8923,6 @@ msgstr ""
 
 msgid "Time update interval"
 msgstr "Tids opdaterings interval"
-
-msgid "Time zone"
-msgstr "Tidszone"
 
 msgid "Timeout"
 msgstr "Timeout"
@@ -9398,6 +9416,9 @@ msgstr "Bruger ID"
 msgid "User Settings"
 msgstr ""
 
+msgid "User Shares"
+msgstr ""
+
 msgid "User account is locked"
 msgstr ""
 
@@ -9418,9 +9439,6 @@ msgstr "Bruger adgangskode"
 
 msgid "User portal"
 msgstr "Bruger potal"
-
-msgid "User shares"
-msgstr ""
 
 msgid "User suffix"
 msgstr "Bruger endelse"
@@ -9495,6 +9513,9 @@ msgstr ""
 
 msgid "Version"
 msgstr "Version"
+
+msgid "Version:"
+msgstr ""
 
 msgid "Vibration During Write."
 msgstr ""
@@ -10042,8 +10063,38 @@ msgstr "umount"
 msgid "user"
 msgstr ""
 
-msgid "version:"
-msgstr "version:"
-
 msgid "week days"
 msgstr ""
+
+#~ msgid "FTP - Ban module"
+#~ msgstr "FTP - Ban modul"
+
+#~ msgid "FTP - File transfer"
+#~ msgstr "FTP - Fil overførsel"
+
+#~ msgid "IPv4 DNS servers"
+#~ msgstr "IPv4 DNS servere"
+
+#~ msgid "IPv6 DNS servers"
+#~ msgstr "IPv6 DNS servere"
+
+#~ msgid "System time"
+#~ msgstr "System tid"
+
+#~ msgid "Time zone"
+#~ msgstr "Tidszone"
+
+#~ msgid "version:"
+#~ msgstr "version:"
+
+#~ msgid "Admin password"
+#~ msgstr "Admin kodeord"
+
+#~ msgid "DNS domain"
+#~ msgstr "DNS domæne"
+
+#~ msgid "NetBIOS domain"
+#~ msgstr "NetBIOS domæne"
+
+#~ msgid "Decrypt password"
+#~ msgstr "Dekryptere kodeord"
