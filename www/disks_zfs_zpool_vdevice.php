@@ -31,8 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
 $sphere_scriptname = basename(__FILE__);
 $sphere_scriptname_child = 'disks_zfs_zpool_vdevice_edit.php';
@@ -128,7 +128,7 @@ function zfsvdev_process_updatenotification($mode, $data) {
 	return $retval;
 }
 $a_pool = &array_make_branch($config,'zfs','pools','pool');
-$pgtitle = [gtext('Disks'), gtext('ZFS'), gtext('Pools'), gtext('Virtual Device')];
+$pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Pools'),gtext('Virtual Device')];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">
@@ -190,28 +190,20 @@ function controlactionbuttons(ego, triggerbyname) {
 //]]>
 </script>
 <table id="area_navigator"><tbody>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Pools');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext('Volumes');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav2">
-				<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Virtual Device');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Management');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_zpool_tools.php"><span><?=gtext('Tools');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_zpool_info.php"><span><?=gtext('Information');?></span></a></li>
-				<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gtext('I/O Statistics');?></span></a></li>
-			</ul>
-		</td>
-	</tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabact"><a href="disks_zfs_zpool.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Pools');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_dataset.php"><span><?=gtext('Datasets');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_volume.php"><span><?=gtext('Volumes');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_snapshot.php"><span><?=gtext('Snapshots');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_config.php"><span><?=gtext('Configuration');?></span></a></li>
+	</ul></td></tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav2">
+		<li class="tabact"><a href="<?=$sphere_scriptname;?>" title="<?=gtext('Reload page');?>"><span><?=gtext('Virtual Device');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_zpool.php"><span><?=gtext('Management');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_zpool_tools.php"><span><?=gtext('Tools');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_zpool_info.php"><span><?=gtext('Information');?></span></a></li>
+		<li class="tabinact"><a href="disks_zfs_zpool_io.php"><span><?=gtext('I/O Statistics');?></span></a></li>
+	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
 	<?php
@@ -225,13 +217,13 @@ function controlactionbuttons(ego, triggerbyname) {
 		print_config_change_box();
 	endif;
 	?>
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
-			<col style="width:5%"><!-- // Checkbox -->
-			<col style="width:15%"><!-- // Name -->
-			<col style="width:15%"><!-- // Type -->
-			<col style="width:55%"><!-- // Description -->
-			<col style="width:10%"><!-- // Toolbox -->
+			<col style="width:5%">
+			<col style="width:15%">
+			<col style="width:15%">
+			<col style="width:55%">
+			<col style="width:10%">
 		</colgroup>
 		<thead>
 			<?php html_titleline2(gtext('Overview'), 5);?>
@@ -250,12 +242,12 @@ function controlactionbuttons(ego, triggerbyname) {
 			</tr>
 		</tfoot>
 		<tbody>
-			<?php foreach ($sphere_array as $sphere_record):?>
+			<?php foreach($sphere_array as $sphere_record):?>
 				<?php
-					$notificationmode = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']);
-					$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
-					$notprotected = !isset($sphere_record['protected']);
-					$isnotmemberofapool = (false === array_search_ex($sphere_record['name'], $a_pool, 'vdevice'));
+				$notificationmode = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']);
+				$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
+				$notprotected = !isset($sphere_record['protected']);
+				$isnotmemberofapool = (false === array_search_ex($sphere_record['name'], $a_pool, 'vdevice'));
 				?>
 				<tr>
 					<td class="lcelc">
