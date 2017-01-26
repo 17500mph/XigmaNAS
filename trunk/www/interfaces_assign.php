@@ -217,47 +217,48 @@ if (isset($_GET['act']) && $_GET['act'] == "add") {
 	<tr>
 		<td class="tabcont">
 			<form action="interfaces_assign.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-				<?php if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));?>
-				<table border="0" cellpadding="0" cellspacing="0">
-					<tr>
-						<td class="listhdrlr"><?=gtext("Interface");?></td>
-						<td class="listhdrr"><?=gtext("Network port");?></td>
-						<td class="list">&nbsp;</td>
-					</tr>
-					<?php foreach ($config['interfaces'] as $ifname => $iface):
-					if (isset($iface['descr']) && $iface['descr'])
-						$ifdescr = $iface['descr'];
-					else
-						$ifdescr = strtoupper($ifname);
-					?>
-					<tr>
-						<td class="listlr" valign="middle"><strong><?=$ifdescr;?></strong></td>
-						<td valign="middle" class="listr">
-							<select name="<?=$ifname;?>" class="formfld" id="<?=$ifname;?>">
-							  <?php foreach ($portlist as $portname => $portinfo):?>
-							  <option value="<?=$portname;?>" <?php if ($portname == $iface['if']) echo "selected=\"selected\"";?>>
-							  	<?php
-									if (isset($portinfo['isvirtual']) && $portinfo['isvirtual']) {
-										$descr = $portinfo['if'];
-										if ($portinfo['desc']) {
-											$descr .= " ({$portinfo['desc']})";
-										}
-										echo htmlspecialchars($descr);
-									} else {
-										echo htmlspecialchars($portname . " (" . $portinfo['mac'] . ")");
-									}
-							  	?>
-							  </option>
-							  <?php endforeach;?>
-							</select>
-						</td>
-						<td valign="middle" class="list">
-							<?php if (($ifname != 'lan') && ($ifname != 'wan')):?>
-							<a href="interfaces_assign.php?act=del&amp;id=<?=$ifname;?>"><img src="images/delete.png" title="<?=gtext("Delete interface");?>" border="0" alt="<?=gtext("Delete interface");?>" /></a>
-							<?php endif;?>
-						</td>
-					</tr>
+			<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
+			<?php if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));?>
+			<table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<?php html_titleline2(gtext('Overview'), 3);?>
+			<tr>
+				<td class="listhdrlr"><?=gtext("Interface");?></td>
+				<td class="listhdrr"><?=gtext("Network port");?></td>
+				<td class="list">&nbsp;</td>
+				</tr>
+				<?php foreach ($config['interfaces'] as $ifname => $iface):
+				if (isset($iface['descr']) && $iface['descr'])
+					$ifdescr = $iface['descr'];
+				else
+					$ifdescr = strtoupper($ifname);
+				?>
+				<tr>
+				<td class="listlr" valign="middle"><strong><?=$ifdescr;?></strong></td>
+				<td valign="middle" class="listr">
+					<select name="<?=$ifname;?>" class="formfld" id="<?=$ifname;?>">
+					<?php foreach ($portlist as $portname => $portinfo):?>
+					<option value="<?=$portname;?>" <?php if ($portname == $iface['if']) echo "selected=\"selected\"";?>>
+				<?php
+					if (isset($portinfo['isvirtual']) && $portinfo['isvirtual']) {
+					$descr = $portinfo['if'];
+					if ($portinfo['desc']) {
+					$descr .= " ({$portinfo['desc']})";
+				}
+					echo htmlspecialchars($descr);
+				} else {
+					echo htmlspecialchars($portname . " (" . $portinfo['mac'] . ")");
+				}
+				?>
+			</option>
+				<?php endforeach;?>
+					</select>
+					</td>
+					<td valign="middle" class="list">
+					<?php if (($ifname != 'lan') && ($ifname != 'wan')):?>
+					<a href="interfaces_assign.php?act=del&amp;id=<?=$ifname;?>"><img src="images/delete.png" title="<?=gtext("Delete interface");?>" border="0" alt="<?=gtext("Delete interface");?>" /></a>
+					<?php endif;?>
+					</td>
+				</tr>
 					<?php endforeach;?>
 					<?php if (count($config['interfaces']) < count($portlist)):?>
 					<tr>
@@ -276,20 +277,20 @@ if (isset($_GET['act']) && $_GET['act'] == "add") {
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save");?>" />
 				</div>
 				<div id="remarks">
-					<?php
-					$helpinghand = gtext('After you click "Save" you must reboot the server to make the changes take effect.')
-						. ' '
-						. gtext('You may also have to do one or more of the following steps before you can access your server again:')
-						. '<ul>'
-						. '<li><span class="vexpl">' . gtext('Change the IP address of your server') . '</span></li>'
-						. '<li><span class="vexpl">' . gtext('Access the webGUI with the new IP address') . '</span></li>'
-						. '</ul>';
-					html_remark("warning", gtext('Warning'), $helpinghand);
-					?>
+				<?php
+				$helpinghand = gtext('After you click "Save" you must reboot the server to make the changes take effect.')
+				. ' '
+				. gtext('You may also have to do one or more of the following steps before you can access your server again:')
+				. '<ul>'
+				. '<li><span class="vexpl">' . gtext('Change the IP address of your server') . '</span></li>'
+				. '<li><span class="vexpl">' . gtext('Access the webGUI with the new IP address') . '</span></li>'
+				. '</ul>';
+				html_remark("warning", gtext('Warning'), $helpinghand);
+				?>
 				</div>
-				<?php include 'formend.inc';?>
-			</form>
-		</td>
-	</tr>
+			<?php include 'formend.inc';?>
+		</form>
+	</td>
+</tr>
 </table>
 <?php include 'fend.inc';?>

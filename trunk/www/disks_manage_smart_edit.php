@@ -153,6 +153,7 @@ function enable_change(enable_change) {
 		<form action="disks_manage_smart_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 		<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 		<table width="100%" border="0" cellpadding="6" cellspacing="0">
+		<?php html_titleline(gtext("Scheduled Self-Test Settings"));?>
 		<tr>
 			<td valign="top" class="vncellreq"><?=gtext("Disk"); ?></td>
 			<td class="vtable">

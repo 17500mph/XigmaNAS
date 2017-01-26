@@ -213,7 +213,7 @@ function enable_change(enable_change) {
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<?php if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-				<?php html_titleline(gtext("Auto Snapshot"));?>
+				<?php html_titleline(gtext("Auto Snapshot Settings"));?>
 					<?php $a_pathlist = array(); foreach ($a_path as $pathv) { $a_pathlist[$pathv['path']] = htmlspecialchars($pathv['path']); }?>
 					<?php html_combobox("path", gtext("Path"), $pconfig['path'], $a_pathlist, "", true);?>
 					<?php html_inputbox("name", gtext("Name"), $pconfig['name'], "", true, 40);?>
