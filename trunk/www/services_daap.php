@@ -31,14 +31,11 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-require("services.inc");
-
-$pgtitle = array(gtext("Services"), gtext("iTunes/DAAP"));
+require 'auth.inc';
+require 'guiconfig.inc';
+require 'services.inc';
 
 array_make_branch($config,'daap');
-
 $pconfig['enable'] = isset($config['daap']['enable']);
 $pconfig['servername'] = !empty($config['daap']['servername']) ? $config['daap']['servername'] : "";
 $pconfig['port'] = $config['daap']['port'];
@@ -112,8 +109,9 @@ if ($_POST) {
 		$savemsg = get_std_save_message($retval);
 	}
 }
+$pgtitle = [gtext('Services'),gtext('iTunes/DAAP')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function enable_change(enable_change) {
@@ -197,11 +195,11 @@ function enable_change(enable_change) {
 			</td>
 		</tr>
 	</table>
-	<?php include("formend.inc");?>
+	<?php include 'formend.inc';?>
 </form>
 <script type="text/javascript">
 <!--
 enable_change(false);
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
