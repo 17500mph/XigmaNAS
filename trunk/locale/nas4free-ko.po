@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-26 02:52+0000\n"
+"POT-Creation-Date: 2017-01-26 21:12+0000\n"
 "PO-Revision-Date: 2016-10-12 06:40+0000\n"
 "Last-Translator: Dingle28 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 13:28+0000\n"
+"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -556,7 +556,7 @@ msgstr "주소"
 msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr ""
 
-msgid "Admin password"
+msgid "Admin Password"
 msgstr ""
 
 msgid "Administration password"
@@ -904,11 +904,11 @@ msgstr "인증 그룹들"
 msgid "Auth Method"
 msgstr "인증 방법"
 
+msgid "Authenticate Path & Realm"
+msgstr ""
+
 msgid "Authenticate URL"
 msgstr "URL 인증하기"
-
-msgid "Authenticate path & realm"
-msgstr ""
 
 msgid "Authentication"
 msgstr "인증"
@@ -1783,6 +1783,9 @@ msgstr "Cron 작업"
 msgid "Current"
 msgstr "현 설정"
 
+msgid "Current Password"
+msgstr ""
+
 msgid "Current Version:"
 msgstr ""
 
@@ -1847,10 +1850,10 @@ msgstr ""
 msgid "DNS"
 msgstr ""
 
-msgid "DNS domain"
+msgid "DNS Domain"
 msgstr ""
 
-msgid "DNS forwarder"
+msgid "DNS Forwarder"
 msgstr ""
 
 msgid "DNS server is empty."
@@ -1912,7 +1915,7 @@ msgstr ""
 msgid "Date & Time"
 msgstr "날짜와 시간"
 
-msgid "Date format"
+msgid "Date Format"
 msgstr ""
 
 msgid "Day"
@@ -1938,7 +1941,7 @@ msgid ""
 "max erase count (big endian)."
 msgstr ""
 
-msgid "Decrypt password"
+msgid "Decrypt Password"
 msgstr ""
 
 msgid "Dedup"
@@ -2192,6 +2195,9 @@ msgstr ""
 
 msgid "Detected"
 msgstr "탐지 내용"
+
+msgid "Detected Disks"
+msgstr ""
 
 msgid "Detected Language:"
 msgstr ""
@@ -3095,6 +3101,9 @@ msgstr ""
 msgid "Enabled"
 msgstr "활성화됨"
 
+msgid "Encrypt Password"
+msgstr ""
+
 msgid "Encrypt password"
 msgstr ""
 
@@ -3233,7 +3242,7 @@ msgstr ""
 msgid "Event"
 msgstr "이벤트"
 
-msgid "Event selection"
+msgid "Event Selection"
 msgstr ""
 
 msgid "Example: pkg add packagename."
@@ -3338,11 +3347,11 @@ msgstr ""
 msgid "FTP"
 msgstr "FTP"
 
-msgid "FTP - Ban module"
-msgstr "FTP - 추방 모듈"
+msgid "FTP - Ban Module"
+msgstr ""
 
-msgid "FTP - File transfer"
-msgstr "FTP - 파일 전송"
+msgid "FTP - File Transfer"
+msgstr ""
 
 msgid "FTP Proxy"
 msgstr "FTP 프록시"
@@ -3824,6 +3833,9 @@ msgstr "호스트 명 데이터베이스"
 msgid "Hosts"
 msgstr "호스트"
 
+msgid "Hosts Allow"
+msgstr ""
+
 msgid "Hosts Setup"
 msgstr ""
 
@@ -3895,8 +3907,8 @@ msgstr ""
 msgid "IPv4 Configuration"
 msgstr "IPv4 설정"
 
-msgid "IPv4 DNS servers"
-msgstr "IPv4 DNS 서버"
+msgid "IPv4 DNS Servers"
+msgstr ""
 
 msgid "IPv4 addresses"
 msgstr "IPv4 주소"
@@ -3907,8 +3919,8 @@ msgstr ""
 msgid "IPv6 Configuration"
 msgstr "IPv6 설정"
 
-msgid "IPv6 DNS servers"
-msgstr "IPv6 DNS 서버"
+msgid "IPv6 DNS Servers"
+msgstr ""
 
 msgid "IPv6 Gateway"
 msgstr "IPv6 게이트웨이"
@@ -4493,9 +4505,6 @@ msgstr ""
 msgid "List"
 msgstr "리스트"
 
-msgid "List Detected Disks"
-msgstr ""
-
 msgid "List Imported Users"
 msgstr ""
 
@@ -4590,13 +4599,13 @@ msgstr ""
 msgid "Log Level"
 msgstr "로그 수준"
 
+msgid "Log Order"
+msgstr ""
+
 msgid "Log Settings"
 msgstr ""
 
 msgid "Log file is empty."
-msgstr ""
-
-msgid "Log order"
 msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
@@ -4744,7 +4753,7 @@ msgstr ""
 msgid "Masquerade address"
 msgstr "매스커레이드 주소"
 
-msgid "Max entries"
+msgid "Max Entries"
 msgstr ""
 
 msgid "Max. TTL"
@@ -5066,6 +5075,9 @@ msgstr ""
 msgid "NT1 (CIFS)"
 msgstr ""
 
+msgid "NTP Time Server"
+msgstr ""
+
 msgid "NTP is not enabled."
 msgstr ""
 
@@ -5100,7 +5112,10 @@ msgstr "변수의 이름."
 msgid "Nested HVM"
 msgstr ""
 
-msgid "NetBIOS domain"
+msgid "NetBIOS Domain"
+msgstr ""
+
+msgid "NetBIOS Name"
 msgstr ""
 
 msgid "NetBIOS name"
@@ -5150,6 +5165,9 @@ msgid ""
 "a disk which is spun-down to be spun-up when it is checked."
 msgstr ""
 "전혀 - 파워 모드와 관계 없이 장치를 check 합니다. check 될 때 디스크가 회전 정지라면 다시 회전하도록 할 것입니다."
+
+msgid "New Password"
+msgstr ""
 
 msgid "New password"
 msgstr ""
@@ -6202,6 +6220,9 @@ msgstr ""
 msgid "Remote Rsync Server"
 msgstr "원격 Rsync 서버"
 
+msgid "Remote Syslog Messages"
+msgstr ""
+
 msgid "Remote Syslog Server"
 msgstr ""
 
@@ -6223,9 +6244,6 @@ msgid ""
 msgstr ""
 
 msgid "Remote rsync daemon"
-msgstr ""
-
-msgid "Remote syslog messages"
 msgstr ""
 
 msgid "Removable"
@@ -6309,6 +6327,9 @@ msgid "Resolve IP addresses to hostnames."
 msgstr ""
 
 msgid "Resource"
+msgstr ""
+
+msgid "Resource Name"
 msgstr ""
 
 msgid "Resource name"
@@ -7292,9 +7313,6 @@ msgstr "시스템 로그"
 
 msgid "System message buffer"
 msgstr "시스템 메시지 버퍼"
-
-msgid "System time"
-msgstr "시스템 시간"
 
 msgid "System tuning"
 msgstr "시스템 미세 조정"
@@ -8613,6 +8631,9 @@ msgstr ""
 msgid "Time Synchronization"
 msgstr ""
 
+msgid "Time Zone"
+msgstr ""
+
 msgid "Time before the load will be rebooted"
 msgstr ""
 
@@ -8637,9 +8658,6 @@ msgstr ""
 
 msgid "Time update interval"
 msgstr "시간 갱신 간격"
-
-msgid "Time zone"
-msgstr "타임 존"
 
 msgid "Timeout"
 msgstr "타임아웃"
@@ -9121,6 +9139,9 @@ msgstr "사용자 ID"
 msgid "User Settings"
 msgstr ""
 
+msgid "User Shares"
+msgstr ""
+
 msgid "User account is locked"
 msgstr ""
 
@@ -9141,9 +9162,6 @@ msgstr "사용자 암호."
 
 msgid "User portal"
 msgstr "사용자 포털"
-
-msgid "User shares"
-msgstr ""
 
 msgid "User suffix"
 msgstr "사용자 접미사"
@@ -9218,6 +9236,9 @@ msgstr ""
 
 msgid "Version"
 msgstr "버전"
+
+msgid "Version:"
+msgstr ""
 
 msgid "Vibration During Write."
 msgstr ""
@@ -9756,8 +9777,23 @@ msgstr "마운트 해제"
 msgid "user"
 msgstr ""
 
-msgid "version:"
-msgstr ""
-
 msgid "week days"
 msgstr ""
+
+#~ msgid "FTP - Ban module"
+#~ msgstr "FTP - 추방 모듈"
+
+#~ msgid "FTP - File transfer"
+#~ msgstr "FTP - 파일 전송"
+
+#~ msgid "IPv4 DNS servers"
+#~ msgstr "IPv4 DNS 서버"
+
+#~ msgid "IPv6 DNS servers"
+#~ msgstr "IPv6 DNS 서버"
+
+#~ msgid "System time"
+#~ msgstr "시스템 시간"
+
+#~ msgid "Time zone"
+#~ msgstr "타임 존"

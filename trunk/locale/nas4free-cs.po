@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-26 02:52+0000\n"
+"POT-Creation-Date: 2017-01-26 21:12+0000\n"
 "PO-Revision-Date: 2016-11-27 15:51+0000\n"
 "Last-Translator: Pavel Borecki <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 13:28+0000\n"
+"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "Language: \n"
@@ -612,8 +612,8 @@ msgstr ""
 "IP adresa hastd procesu služby na protějšku. Je třeba, aby se jednalo o "
 "statickou adresu."
 
-msgid "Admin password"
-msgstr "Heslo správce"
+msgid "Admin Password"
+msgstr ""
 
 msgid "Administration password"
 msgstr "Heslo pro správu"
@@ -998,11 +998,11 @@ msgstr "Skupiny pověřených"
 msgid "Auth Method"
 msgstr "Způsob ověř."
 
+msgid "Authenticate Path & Realm"
+msgstr ""
+
 msgid "Authenticate URL"
 msgstr "Ověřovací URL adresa"
-
-msgid "Authenticate path & realm"
-msgstr "Ověřovací umístění a oblast (realm)"
 
 msgid "Authentication"
 msgstr "Ověření"
@@ -1964,6 +1964,9 @@ msgstr "Naplánovaná úloha"
 msgid "Current"
 msgstr "Stávající"
 
+msgid "Current Password"
+msgstr ""
+
 msgid "Current Version:"
 msgstr "Stávající verze:"
 
@@ -2035,11 +2038,11 @@ msgstr "DLNA/UPnP MiniDLNA"
 msgid "DNS"
 msgstr "DNS"
 
-msgid "DNS domain"
-msgstr "DNS doména"
+msgid "DNS Domain"
+msgstr ""
 
-msgid "DNS forwarder"
-msgstr "DNS přeposílání"
+msgid "DNS Forwarder"
+msgstr ""
 
 msgid "DNS server is empty."
 msgstr "Není vyplněn DNS server."
@@ -2102,8 +2105,8 @@ msgstr "Datum"
 msgid "Date & Time"
 msgstr "Datum a čas"
 
-msgid "Date format"
-msgstr "Formát datumu"
+msgid "Date Format"
+msgstr ""
 
 msgid "Day"
 msgstr ""
@@ -2130,8 +2133,8 @@ msgstr ""
 "Dekódováno jako: bajt 0-1-2 (velká endianita) = průměrný počet výmazů a bajt "
 "3-4-5 (velká endianita) = nejvyšší zaznamenaný počet výmazů."
 
-msgid "Decrypt password"
-msgstr "Heslo pro dešifrování"
+msgid "Decrypt Password"
+msgstr ""
 
 msgid "Dedup"
 msgstr "Deduplikace"
@@ -2391,6 +2394,9 @@ msgstr "Podrobné"
 
 msgid "Detected"
 msgstr "Rozpoznáno"
+
+msgid "Detected Disks"
+msgstr ""
 
 msgid "Detected Language:"
 msgstr "Zjištěný jazyk:"
@@ -3333,6 +3339,9 @@ msgstr "Zapnout režim zápisu s mezipamětí."
 msgid "Enabled"
 msgstr "Zapnuto"
 
+msgid "Encrypt Password"
+msgstr ""
+
 msgid "Encrypt password"
 msgstr "Heslo pro šifrování"
 
@@ -3487,8 +3496,8 @@ msgstr "Úroveň chybových stavů"
 msgid "Event"
 msgstr "Událost"
 
-msgid "Event selection"
-msgstr "Výběr události"
+msgid "Event Selection"
+msgstr ""
 
 msgid "Example: pkg add packagename."
 msgstr "Příklad: pkg add nazevbalicku."
@@ -3598,11 +3607,11 @@ msgstr ""
 msgid "FTP"
 msgstr "FTP"
 
-msgid "FTP - Ban module"
-msgstr "FTP – modul udělení vyloučení (ban)"
+msgid "FTP - Ban Module"
+msgstr ""
 
-msgid "FTP - File transfer"
-msgstr "FTP – přenos souborů"
+msgid "FTP - File Transfer"
+msgstr ""
 
 msgid "FTP Proxy"
 msgstr "FTP Proxy"
@@ -4106,6 +4115,9 @@ msgstr "Databáze názvů strojů"
 msgid "Hosts"
 msgstr "Stroje"
 
+msgid "Hosts Allow"
+msgstr ""
+
 msgid "Hosts Setup"
 msgstr ""
 
@@ -4183,8 +4195,8 @@ msgstr "Statistiky z IPMI"
 msgid "IPv4 Configuration"
 msgstr "Nastavení IPv4"
 
-msgid "IPv4 DNS servers"
-msgstr "IPv4 DNS servery"
+msgid "IPv4 DNS Servers"
+msgstr ""
 
 msgid "IPv4 addresses"
 msgstr "IPv4 adresy"
@@ -4195,8 +4207,8 @@ msgstr ""
 msgid "IPv6 Configuration"
 msgstr "Nastavení IPv6"
 
-msgid "IPv6 DNS servers"
-msgstr "IPv6 DNS servery"
+msgid "IPv6 DNS Servers"
+msgstr ""
 
 msgid "IPv6 Gateway"
 msgstr "IPv6 brána"
@@ -4846,9 +4858,6 @@ msgstr "Akce při obnovení spojení"
 msgid "List"
 msgstr "Seznam"
 
-msgid "List Detected Disks"
-msgstr "Vypsat zjištěné disky"
-
 msgid "List Imported Users"
 msgstr "Vypsat importované uživatele"
 
@@ -4950,14 +4959,14 @@ msgstr ""
 msgid "Log Level"
 msgstr "Podrobnost protokolování"
 
+msgid "Log Order"
+msgstr ""
+
 msgid "Log Settings"
 msgstr "Nastavení zaznamenávání událostí"
 
 msgid "Log file is empty."
 msgstr "Soubor se záznamy událostí je prázdný."
-
-msgid "Log order"
-msgstr "Pořadí záznamů"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Zaznamenávat pakety, odpovídající tomuto pravidlu, do syslog."
@@ -5113,8 +5122,8 @@ msgstr "Přesah kanálu při čtení dat. Funkce tohoto atributu není známa."
 msgid "Masquerade address"
 msgstr "Vnější (veřejná) adresa"
 
-msgid "Max entries"
-msgstr "Nanejvýš položek"
+msgid "Max Entries"
+msgstr ""
 
 msgid "Max. TTL"
 msgstr "Nejvyšší umožněný počet skoků (TTL)"
@@ -5453,6 +5462,9 @@ msgstr ""
 msgid "NT1 (CIFS)"
 msgstr ""
 
+msgid "NTP Time Server"
+msgstr ""
+
 msgid "NTP is not enabled."
 msgstr "NTP není zapnuto."
 
@@ -5489,8 +5501,11 @@ msgstr "Název proměnné"
 msgid "Nested HVM"
 msgstr "Vnořený HVM virt. stroj"
 
-msgid "NetBIOS domain"
-msgstr "NetBIOS doména"
+msgid "NetBIOS Domain"
+msgstr ""
+
+msgid "NetBIOS Name"
+msgstr ""
 
 msgid "NetBIOS name"
 msgstr "NetBIOS název"
@@ -5542,6 +5557,9 @@ msgid ""
 msgstr ""
 "Nikdy – Dotazovat (kontrolovat) zařízení bez ohledu na to, v jakém režimu "
 "napájení se nachází Tato volba může způsobovat roztáčení zastavených disků."
+
+msgid "New Password"
+msgstr ""
 
 msgid "New password"
 msgstr "Nové heslo"
@@ -6637,6 +6655,9 @@ msgstr "Modul na protějšku (zdroj)"
 msgid "Remote Rsync Server"
 msgstr "Rsync server na protějšku"
 
+msgid "Remote Syslog Messages"
+msgstr ""
+
 msgid "Remote Syslog Server"
 msgstr "Vzdálený syslog server"
 
@@ -6663,9 +6684,6 @@ msgstr ""
 
 msgid "Remote rsync daemon"
 msgstr "Proces služby rsync na protějšku"
-
-msgid "Remote syslog messages"
-msgstr "Zprávy vzdáleného syslog"
 
 msgid "Removable"
 msgstr "Vyjímatelné"
@@ -6753,6 +6771,9 @@ msgstr "(zpětně) přeložit IP adresy na DNS názvy strojů"
 
 msgid "Resource"
 msgstr "Prostředek"
+
+msgid "Resource Name"
+msgstr ""
 
 msgid "Resource name"
 msgstr "Název prostředku"
@@ -7790,9 +7811,6 @@ msgstr "Záznam událostí v systému"
 
 msgid "System message buffer"
 msgstr "Vyrovnávací paměť zpráv systému"
-
-msgid "System time"
-msgstr "Systémový čas"
 
 msgid "System tuning"
 msgstr "Vyladění systému"
@@ -9326,6 +9344,9 @@ msgstr "Apple Time Machine"
 msgid "Time Synchronization"
 msgstr "Synchronizace času"
 
+msgid "Time Zone"
+msgstr ""
+
 msgid "Time before the load will be rebooted"
 msgstr "Prodleva restartu napájení připojených zařízení"
 
@@ -9350,9 +9371,6 @@ msgstr "Doba strávená při práci s daty (při pohybu ramínky s hlavičkami).
 
 msgid "Time update interval"
 msgstr "Interval aktualizace času"
-
-msgid "Time zone"
-msgstr "Časové pásmo"
 
 msgid "Timeout"
 msgstr "Časový limit prodlevy"
@@ -9884,6 +9902,9 @@ msgstr "Identifikátor uživatele"
 msgid "User Settings"
 msgstr ""
 
+msgid "User Shares"
+msgstr ""
+
 msgid "User account is locked"
 msgstr ""
 
@@ -9904,9 +9925,6 @@ msgstr "Heslo uživatele"
 
 msgid "User portal"
 msgstr "Portál uživatele"
-
-msgid "User shares"
-msgstr "Uživatelova sdílení"
 
 msgid "User suffix"
 msgstr "Přípona uživatele"
@@ -9985,6 +10003,9 @@ msgstr "Ověřit"
 
 msgid "Version"
 msgstr "Verze systému"
+
+msgid "Version:"
+msgstr ""
 
 msgid "Vibration During Write."
 msgstr "Vibrace při zápisu"
@@ -10562,8 +10583,65 @@ msgstr "odpojit (umount)"
 msgid "user"
 msgstr "uživatel"
 
-msgid "version:"
-msgstr "verze:"
-
 msgid "week days"
 msgstr ""
+
+#~ msgid "IPv4 DNS servers"
+#~ msgstr "IPv4 DNS servery"
+
+#~ msgid "IPv6 DNS servers"
+#~ msgstr "IPv6 DNS servery"
+
+#~ msgid "System time"
+#~ msgstr "Systémový čas"
+
+#~ msgid "Time zone"
+#~ msgstr "Časové pásmo"
+
+#~ msgid "version:"
+#~ msgstr "verze:"
+
+#~ msgid "DNS domain"
+#~ msgstr "DNS doména"
+
+#~ msgid "NetBIOS domain"
+#~ msgstr "NetBIOS doména"
+
+#~ msgid "DNS forwarder"
+#~ msgstr "DNS přeposílání"
+
+#~ msgid "Admin password"
+#~ msgstr "Heslo správce"
+
+#~ msgid "Decrypt password"
+#~ msgstr "Heslo pro dešifrování"
+
+#~ msgid "FTP - File transfer"
+#~ msgstr "FTP – přenos souborů"
+
+#~ msgid "User shares"
+#~ msgstr "Uživatelova sdílení"
+
+#~ msgid "Authenticate path & realm"
+#~ msgstr "Ověřovací umístění a oblast (realm)"
+
+#~ msgid "FTP - Ban module"
+#~ msgstr "FTP – modul udělení vyloučení (ban)"
+
+#~ msgid "List Detected Disks"
+#~ msgstr "Vypsat zjištěné disky"
+
+#~ msgid "Date format"
+#~ msgstr "Formát datumu"
+
+#~ msgid "Log order"
+#~ msgstr "Pořadí záznamů"
+
+#~ msgid "Event selection"
+#~ msgstr "Výběr události"
+
+#~ msgid "Max entries"
+#~ msgstr "Nanejvýš položek"
+
+#~ msgid "Remote syslog messages"
+#~ msgstr "Zprávy vzdáleného syslog"

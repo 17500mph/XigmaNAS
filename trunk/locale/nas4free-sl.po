@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-26 02:52+0000\n"
+"POT-Creation-Date: 2017-01-26 21:12+0000\n"
 "PO-Revision-Date: 2016-11-08 14:34+0000\n"
 "Last-Translator: Kini <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 13:29+0000\n"
+"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
@@ -566,8 +566,8 @@ msgstr "Naslov"
 msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr ""
 
-msgid "Admin password"
-msgstr "Administratorsko geslo"
+msgid "Admin Password"
+msgstr ""
 
 msgid "Administration password"
 msgstr "Skrbniško geslo"
@@ -922,11 +922,11 @@ msgstr "Skupine dovoljenj"
 msgid "Auth Method"
 msgstr "Način prijave"
 
+msgid "Authenticate Path & Realm"
+msgstr ""
+
 msgid "Authenticate URL"
 msgstr "Povezava do prijave"
-
-msgid "Authenticate path & realm"
-msgstr ""
 
 msgid "Authentication"
 msgstr "Overjanje"
@@ -1807,6 +1807,9 @@ msgstr "Samodejno opravilo"
 msgid "Current"
 msgstr "Trenutno"
 
+msgid "Current Password"
+msgstr ""
+
 msgid "Current Version:"
 msgstr "Trenutna različica:"
 
@@ -1871,10 +1874,10 @@ msgstr "DLNA/UPnP MiniDLNA"
 msgid "DNS"
 msgstr "DNS"
 
-msgid "DNS domain"
-msgstr "Domena DNS"
+msgid "DNS Domain"
+msgstr ""
 
-msgid "DNS forwarder"
+msgid "DNS Forwarder"
 msgstr ""
 
 msgid "DNS server is empty."
@@ -1936,8 +1939,8 @@ msgstr "Datum"
 msgid "Date & Time"
 msgstr "Datum in čas"
 
-msgid "Date format"
-msgstr "Oblika datuma"
+msgid "Date Format"
+msgstr ""
 
 msgid "Day"
 msgstr ""
@@ -1962,8 +1965,8 @@ msgid ""
 "max erase count (big endian)."
 msgstr ""
 
-msgid "Decrypt password"
-msgstr "Geslo za dešifriranje"
+msgid "Decrypt Password"
+msgstr ""
 
 msgid "Dedup"
 msgstr ""
@@ -2216,6 +2219,9 @@ msgstr ""
 
 msgid "Detected"
 msgstr "Zaznano"
+
+msgid "Detected Disks"
+msgstr ""
 
 msgid "Detected Language:"
 msgstr "Zaznan jezik:"
@@ -3132,6 +3138,9 @@ msgstr ""
 msgid "Enabled"
 msgstr "Omogočen"
 
+msgid "Encrypt Password"
+msgstr ""
+
 msgid "Encrypt password"
 msgstr "Geslo za šifriranje"
 
@@ -3276,7 +3285,7 @@ msgstr ""
 msgid "Event"
 msgstr "Dogodek"
 
-msgid "Event selection"
+msgid "Event Selection"
 msgstr ""
 
 msgid "Example: pkg add packagename."
@@ -3385,11 +3394,11 @@ msgstr ""
 msgid "FTP"
 msgstr "FTP"
 
-msgid "FTP - Ban module"
-msgstr "FTP - module prepovedanih"
+msgid "FTP - Ban Module"
+msgstr ""
 
-msgid "FTP - File transfer"
-msgstr "FTP - prenos datotek"
+msgid "FTP - File Transfer"
+msgstr ""
 
 msgid "FTP Proxy"
 msgstr "FTP posrednik"
@@ -3873,6 +3882,9 @@ msgstr "Podatkovna baza imen"
 msgid "Hosts"
 msgstr "Gostitelji"
 
+msgid "Hosts Allow"
+msgstr ""
+
 msgid "Hosts Setup"
 msgstr ""
 
@@ -3947,8 +3959,8 @@ msgstr ""
 msgid "IPv4 Configuration"
 msgstr "IPv4 nastavitve"
 
-msgid "IPv4 DNS servers"
-msgstr "IPv4 DNS strežniki"
+msgid "IPv4 DNS Servers"
+msgstr ""
 
 msgid "IPv4 addresses"
 msgstr "IPv4 naslov"
@@ -3959,8 +3971,8 @@ msgstr ""
 msgid "IPv6 Configuration"
 msgstr "IPv6 nastavitve"
 
-msgid "IPv6 DNS servers"
-msgstr "IPv6 DNS strežniki"
+msgid "IPv6 DNS Servers"
+msgstr ""
 
 msgid "IPv6 Gateway"
 msgstr "IPv6 prehod"
@@ -4558,9 +4570,6 @@ msgstr ""
 msgid "List"
 msgstr "Seznam"
 
-msgid "List Detected Disks"
-msgstr "Spisek zaznanih diskov"
-
 msgid "List Imported Users"
 msgstr ""
 
@@ -4661,13 +4670,13 @@ msgstr ""
 msgid "Log Level"
 msgstr "Nivo dnevnika"
 
+msgid "Log Order"
+msgstr ""
+
 msgid "Log Settings"
 msgstr ""
 
 msgid "Log file is empty."
-msgstr ""
-
-msgid "Log order"
 msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
@@ -4815,7 +4824,7 @@ msgstr ""
 msgid "Masquerade address"
 msgstr "Prikrij naslove"
 
-msgid "Max entries"
+msgid "Max Entries"
 msgstr ""
 
 msgid "Max. TTL"
@@ -5142,6 +5151,9 @@ msgstr ""
 msgid "NT1 (CIFS)"
 msgstr ""
 
+msgid "NTP Time Server"
+msgstr ""
+
 msgid "NTP is not enabled."
 msgstr "NTP ni omogočen."
 
@@ -5176,8 +5188,11 @@ msgstr "Ime spremenljivke"
 msgid "Nested HVM"
 msgstr "Vgnezden HVM"
 
-msgid "NetBIOS domain"
-msgstr "NetBIOS domena"
+msgid "NetBIOS Domain"
+msgstr ""
+
+msgid "NetBIOS Name"
+msgstr ""
 
 msgid "NetBIOS name"
 msgstr "NetBIOS ime"
@@ -5228,6 +5243,9 @@ msgid ""
 msgstr ""
 "Nikoli ne preveri (poll) naprave, neglede v katerem stanju je. To lahko "
 "povzroči zagon diska, če je pred tem že izklopljen."
+
+msgid "New Password"
+msgstr ""
 
 msgid "New password"
 msgstr "Novo geslo"
@@ -6294,6 +6312,9 @@ msgstr ""
 msgid "Remote Rsync Server"
 msgstr "Oddaljen Rsync strežnik"
 
+msgid "Remote Syslog Messages"
+msgstr ""
+
 msgid "Remote Syslog Server"
 msgstr ""
 
@@ -6315,9 +6336,6 @@ msgid ""
 msgstr ""
 
 msgid "Remote rsync daemon"
-msgstr ""
-
-msgid "Remote syslog messages"
 msgstr ""
 
 msgid "Removable"
@@ -6405,6 +6423,9 @@ msgid "Resolve IP addresses to hostnames."
 msgstr ""
 
 msgid "Resource"
+msgstr ""
+
+msgid "Resource Name"
 msgstr ""
 
 msgid "Resource name"
@@ -7409,9 +7430,6 @@ msgstr "Dnevnik sistema"
 
 msgid "System message buffer"
 msgstr "Predpomnilnik sistemskih sporočil"
-
-msgid "System time"
-msgstr "Čas sistema"
 
 msgid "System tuning"
 msgstr "Natančno prirejanje sistema"
@@ -8713,6 +8731,9 @@ msgstr ""
 msgid "Time Synchronization"
 msgstr "Usklajevanje časa"
 
+msgid "Time Zone"
+msgstr ""
+
 msgid "Time before the load will be rebooted"
 msgstr ""
 
@@ -8737,9 +8758,6 @@ msgstr ""
 
 msgid "Time update interval"
 msgstr "Interval posodobitve časa"
-
-msgid "Time zone"
-msgstr "Časovni pas"
 
 msgid "Timeout"
 msgstr "Časovna omejitev"
@@ -9218,6 +9236,9 @@ msgstr ""
 msgid "User Settings"
 msgstr ""
 
+msgid "User Shares"
+msgstr ""
+
 msgid "User account is locked"
 msgstr ""
 
@@ -9237,9 +9258,6 @@ msgid "User password."
 msgstr "Uporabnikovo geslo."
 
 msgid "User portal"
-msgstr ""
-
-msgid "User shares"
 msgstr ""
 
 msgid "User suffix"
@@ -9315,6 +9333,9 @@ msgstr ""
 
 msgid "Version"
 msgstr "Različica"
+
+msgid "Version:"
+msgstr ""
 
 msgid "Vibration During Write."
 msgstr ""
@@ -9853,8 +9874,44 @@ msgstr "izvrzi"
 msgid "user"
 msgstr "uporabnik"
 
-msgid "version:"
-msgstr "različica:"
-
 msgid "week days"
 msgstr ""
+
+#~ msgid "FTP - Ban module"
+#~ msgstr "FTP - module prepovedanih"
+
+#~ msgid "FTP - File transfer"
+#~ msgstr "FTP - prenos datotek"
+
+#~ msgid "IPv4 DNS servers"
+#~ msgstr "IPv4 DNS strežniki"
+
+#~ msgid "IPv6 DNS servers"
+#~ msgstr "IPv6 DNS strežniki"
+
+#~ msgid "System time"
+#~ msgstr "Čas sistema"
+
+#~ msgid "Time zone"
+#~ msgstr "Časovni pas"
+
+#~ msgid "List Detected Disks"
+#~ msgstr "Spisek zaznanih diskov"
+
+#~ msgid "Admin password"
+#~ msgstr "Administratorsko geslo"
+
+#~ msgid "DNS domain"
+#~ msgstr "Domena DNS"
+
+#~ msgid "Date format"
+#~ msgstr "Oblika datuma"
+
+#~ msgid "version:"
+#~ msgstr "različica:"
+
+#~ msgid "NetBIOS domain"
+#~ msgstr "NetBIOS domena"
+
+#~ msgid "Decrypt password"
+#~ msgstr "Geslo za dešifriranje"

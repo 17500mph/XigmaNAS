@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-26 02:52+0000\n"
+"POT-Creation-Date: 2017-01-26 21:12+0000\n"
 "PO-Revision-Date: 2016-10-16 11:58+0000\n"
 "Last-Translator: Janne <Unknown>\n"
 "Language-Team: NAS4Free <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 13:29+0000\n"
+"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: FINLAND\n"
 "X-Poedit-Language: Finnish\n"
@@ -594,8 +594,8 @@ msgstr "Osoite"
 msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr ""
 
-msgid "Admin password"
-msgstr "Pääkäyttäjän salasana"
+msgid "Admin Password"
+msgstr ""
 
 msgid "Administration password"
 msgstr "Laitehallinnan salasana"
@@ -943,11 +943,11 @@ msgstr ""
 msgid "Auth Method"
 msgstr ""
 
+msgid "Authenticate Path & Realm"
+msgstr ""
+
 msgid "Authenticate URL"
 msgstr "URL todennus"
-
-msgid "Authenticate path & realm"
-msgstr ""
 
 msgid "Authentication"
 msgstr "Todennus"
@@ -1821,6 +1821,9 @@ msgstr "Ajastettu työ"
 msgid "Current"
 msgstr "Nykyinen"
 
+msgid "Current Password"
+msgstr ""
+
 msgid "Current Version:"
 msgstr "Nykyinen versio:"
 
@@ -1885,10 +1888,10 @@ msgstr ""
 msgid "DNS"
 msgstr "Nimipalvelin (DNS)"
 
-msgid "DNS domain"
+msgid "DNS Domain"
 msgstr ""
 
-msgid "DNS forwarder"
+msgid "DNS Forwarder"
 msgstr ""
 
 msgid "DNS server is empty."
@@ -1950,8 +1953,8 @@ msgstr ""
 msgid "Date & Time"
 msgstr "Päivämäärä ja aika"
 
-msgid "Date format"
-msgstr "Päiväyksen muoto"
+msgid "Date Format"
+msgstr ""
 
 msgid "Day"
 msgstr ""
@@ -1976,7 +1979,7 @@ msgid ""
 "max erase count (big endian)."
 msgstr ""
 
-msgid "Decrypt password"
+msgid "Decrypt Password"
 msgstr ""
 
 msgid "Dedup"
@@ -2230,6 +2233,9 @@ msgstr ""
 
 msgid "Detected"
 msgstr "Havaittu"
+
+msgid "Detected Disks"
+msgstr ""
 
 msgid "Detected Language:"
 msgstr ""
@@ -3130,6 +3136,9 @@ msgstr ""
 msgid "Enabled"
 msgstr "Käytössä"
 
+msgid "Encrypt Password"
+msgstr ""
+
 msgid "Encrypt password"
 msgstr ""
 
@@ -3270,7 +3279,7 @@ msgstr ""
 msgid "Event"
 msgstr "Tapahtuma"
 
-msgid "Event selection"
+msgid "Event Selection"
 msgstr ""
 
 msgid "Example: pkg add packagename."
@@ -3373,10 +3382,10 @@ msgstr ""
 msgid "FTP"
 msgstr "FTP"
 
-msgid "FTP - Ban module"
+msgid "FTP - Ban Module"
 msgstr ""
 
-msgid "FTP - File transfer"
+msgid "FTP - File Transfer"
 msgstr ""
 
 msgid "FTP Proxy"
@@ -3857,6 +3866,9 @@ msgstr "Palvelimien tietokanta"
 msgid "Hosts"
 msgstr "Palvelimet"
 
+msgid "Hosts Allow"
+msgstr ""
+
 msgid "Hosts Setup"
 msgstr ""
 
@@ -3928,8 +3940,8 @@ msgstr ""
 msgid "IPv4 Configuration"
 msgstr "IPv4 Määritykset"
 
-msgid "IPv4 DNS servers"
-msgstr "IPv4 DNS palvelimet"
+msgid "IPv4 DNS Servers"
+msgstr ""
 
 msgid "IPv4 addresses"
 msgstr "IPv4 osoitteet"
@@ -3940,8 +3952,8 @@ msgstr ""
 msgid "IPv6 Configuration"
 msgstr "IPv6 Määritykset"
 
-msgid "IPv6 DNS servers"
-msgstr "IPv6 DNS palvelimet"
+msgid "IPv6 DNS Servers"
+msgstr ""
 
 msgid "IPv6 Gateway"
 msgstr "IPv6 Yhdyskäytävä"
@@ -4520,9 +4532,6 @@ msgstr ""
 msgid "List"
 msgstr "Luettelo"
 
-msgid "List Detected Disks"
-msgstr ""
-
 msgid "List Imported Users"
 msgstr ""
 
@@ -4620,14 +4629,14 @@ msgstr ""
 msgid "Log Level"
 msgstr "Lokitustaso"
 
+msgid "Log Order"
+msgstr ""
+
 msgid "Log Settings"
 msgstr "Lokiasetukset"
 
 msgid "Log file is empty."
 msgstr ""
-
-msgid "Log order"
-msgstr "Lokin järjestys"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr ""
@@ -4775,7 +4784,7 @@ msgstr ""
 msgid "Masquerade address"
 msgstr ""
 
-msgid "Max entries"
+msgid "Max Entries"
 msgstr ""
 
 msgid "Max. TTL"
@@ -5098,6 +5107,9 @@ msgstr ""
 msgid "NT1 (CIFS)"
 msgstr ""
 
+msgid "NTP Time Server"
+msgstr ""
+
 msgid "NTP is not enabled."
 msgstr "NTP-aikaprotokolla ei ole päällä."
 
@@ -5132,7 +5144,10 @@ msgstr "Muuttujan nimi"
 msgid "Nested HVM"
 msgstr ""
 
-msgid "NetBIOS domain"
+msgid "NetBIOS Domain"
+msgstr ""
+
+msgid "NetBIOS Name"
 msgstr ""
 
 msgid "NetBIOS name"
@@ -5179,6 +5194,9 @@ msgstr "Ei koskaan - (Vakioasetus)"
 msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
 "a disk which is spun-down to be spun-up when it is checked."
+msgstr ""
+
+msgid "New Password"
 msgstr ""
 
 msgid "New password"
@@ -6228,6 +6246,9 @@ msgstr ""
 msgid "Remote Rsync Server"
 msgstr ""
 
+msgid "Remote Syslog Messages"
+msgstr ""
+
 msgid "Remote Syslog Server"
 msgstr ""
 
@@ -6249,9 +6270,6 @@ msgid ""
 msgstr ""
 
 msgid "Remote rsync daemon"
-msgstr ""
-
-msgid "Remote syslog messages"
 msgstr ""
 
 msgid "Removable"
@@ -6336,6 +6354,9 @@ msgstr ""
 
 msgid "Resource"
 msgstr "Resurssi"
+
+msgid "Resource Name"
+msgstr ""
 
 msgid "Resource name"
 msgstr "Resurssin nimi"
@@ -7312,9 +7333,6 @@ msgstr "Järjestelmän loki"
 
 msgid "System message buffer"
 msgstr "Järjestelmän  viesti puskuri"
-
-msgid "System time"
-msgstr "Järjestelmän aika"
 
 msgid "System tuning"
 msgstr "Järjestelmän hienosäätö"
@@ -8600,6 +8618,9 @@ msgstr ""
 msgid "Time Synchronization"
 msgstr ""
 
+msgid "Time Zone"
+msgstr ""
+
 msgid "Time before the load will be rebooted"
 msgstr ""
 
@@ -8624,9 +8645,6 @@ msgstr ""
 
 msgid "Time update interval"
 msgstr "Ajan päivitysväli"
-
-msgid "Time zone"
-msgstr "Aikavyöhyke"
 
 msgid "Timeout"
 msgstr "Aikakatkaisu"
@@ -9101,6 +9119,9 @@ msgstr "Käyttäjän ID"
 msgid "User Settings"
 msgstr ""
 
+msgid "User Shares"
+msgstr ""
+
 msgid "User account is locked"
 msgstr ""
 
@@ -9120,9 +9141,6 @@ msgid "User password."
 msgstr "Käyttäjän salasana."
 
 msgid "User portal"
-msgstr ""
-
-msgid "User shares"
 msgstr ""
 
 msgid "User suffix"
@@ -9198,6 +9216,9 @@ msgstr ""
 
 msgid "Version"
 msgstr "Versio"
+
+msgid "Version:"
+msgstr ""
 
 msgid "Vibration During Write."
 msgstr ""
@@ -9738,8 +9759,26 @@ msgstr ""
 msgid "user"
 msgstr ""
 
-msgid "version:"
-msgstr ""
-
 msgid "week days"
 msgstr ""
+
+#~ msgid "IPv4 DNS servers"
+#~ msgstr "IPv4 DNS palvelimet"
+
+#~ msgid "IPv6 DNS servers"
+#~ msgstr "IPv6 DNS palvelimet"
+
+#~ msgid "System time"
+#~ msgstr "Järjestelmän aika"
+
+#~ msgid "Time zone"
+#~ msgstr "Aikavyöhyke"
+
+#~ msgid "Admin password"
+#~ msgstr "Pääkäyttäjän salasana"
+
+#~ msgid "Date format"
+#~ msgstr "Päiväyksen muoto"
+
+#~ msgid "Log order"
+#~ msgstr "Lokin järjestys"

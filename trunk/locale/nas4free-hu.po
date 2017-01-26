@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-26 02:52+0000\n"
-"PO-Revision-Date: 2017-01-22 18:07+0000\n"
+"POT-Creation-Date: 2017-01-26 21:12+0000\n"
+"PO-Revision-Date: 2017-01-26 20:09+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 13:28+0000\n"
+"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -601,8 +601,8 @@ msgstr "Cím"
 msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr "Remote hastd daemon címe. Statikus IP címnek kell lennie."
 
-msgid "Admin password"
-msgstr "Admin jelszava"
+msgid "Admin Password"
+msgstr ""
 
 msgid "Administration password"
 msgstr "Rendszergazdai jelszó"
@@ -982,7 +982,7 @@ msgid "Auth Group"
 msgstr "Hitelesítő csoport"
 
 msgid "Auth Group Settings"
-msgstr ""
+msgstr "Hitelesítő csoport beállításai"
 
 msgid "Auth Groups"
 msgstr "Hitelesítő csoportok"
@@ -990,11 +990,11 @@ msgstr "Hitelesítő csoportok"
 msgid "Auth Method"
 msgstr "Auth eljárás"
 
+msgid "Authenticate Path & Realm"
+msgstr ""
+
 msgid "Authenticate URL"
 msgstr "Autentikációs URL"
-
-msgid "Authenticate path & realm"
-msgstr "Hitelesítő útvonal & terület"
 
 msgid "Authentication"
 msgstr "Hitelesítés"
@@ -1015,7 +1015,7 @@ msgid "Auto Snapshot"
 msgstr "Automatikus pillanatkép"
 
 msgid "Auto Snapshot Settings"
-msgstr ""
+msgstr "Automatikus pillanatkép beállításai"
 
 msgid "Auto page refresh."
 msgstr "Automatikus oldal-újratöltés."
@@ -1091,10 +1091,10 @@ msgid "Ban List"
 msgstr "Kitiltási lista"
 
 msgid "Ban List Rule"
-msgstr ""
+msgstr "Tiltólista-szabály"
 
 msgid "Ban List Rule Settings"
-msgstr ""
+msgstr "Tiltólista-szabály beállításai"
 
 msgid "Banner"
 msgstr "Fejléc"
@@ -1700,6 +1700,12 @@ msgid ""
 "where N is an integer from 1 (fastest) to 9 (best compression ratio). "
 "Currently, 'GZIP' is equivalent to 'GZIP-6'."
 msgstr ""
+"Ezen az köteten használt tömörítő algoritmust állítja. Az 'LZ4' a javasolt "
+"tömörítési algoritmus. Ha az lz4_compress tulajdonság aktív, akkor a "
+"tömörítés 'Be' állapotban LZ4 tömörítést használ, különben LZJB-t. "
+"Beállíthatod a 'GZIP' szintet 'GZIP-N' kiválasztásával, ahol az N 1 "
+"(leggyorsabb) és 9 (legjobb tömörítés) közötti egész szám. Jelenleg 'GZIP' "
+"azonos a 'GZIP-6' beállítással."
 
 msgid "Controls the dedup method."
 msgstr "Egyszerűsítés eljárását felügyeli."
@@ -1938,6 +1944,9 @@ msgstr "Ütemezett feladat"
 msgid "Current"
 msgstr "Aktuális"
 
+msgid "Current Password"
+msgstr "Jelenlegi jelszó"
+
 msgid "Current Version:"
 msgstr "Jelenlegi verzió:"
 
@@ -2004,11 +2013,11 @@ msgstr "DLNA/UPnP MiniDLNA"
 msgid "DNS"
 msgstr "DNS"
 
-msgid "DNS domain"
-msgstr "DNS domain"
+msgid "DNS Domain"
+msgstr ""
 
-msgid "DNS forwarder"
-msgstr "DNS továbbító"
+msgid "DNS Forwarder"
+msgstr ""
 
 msgid "DNS server is empty."
 msgstr "DNS szerver üres."
@@ -2070,7 +2079,7 @@ msgstr "Dátum"
 msgid "Date & Time"
 msgstr "Dátum & idő"
 
-msgid "Date format"
+msgid "Date Format"
 msgstr "Dátumformátum"
 
 msgid "Day"
@@ -2098,8 +2107,8 @@ msgstr ""
 "Visszakódolás: 0-1-2 byte = átlagos törlésszám (nagy endian típusú) és a 3-4-"
 "5 = maximális törlésszám (nagy endian típusú)"
 
-msgid "Decrypt password"
-msgstr "Dekódoló jelszó"
+msgid "Decrypt Password"
+msgstr "Jelszó visszafejtése"
 
 msgid "Dedup"
 msgstr "Egyszeresítés"
@@ -2366,6 +2375,9 @@ msgstr "Részletes"
 
 msgid "Detected"
 msgstr "Észlelt"
+
+msgid "Detected Disks"
+msgstr ""
 
 msgid "Detected Language:"
 msgstr "Érzékelt nyelv:"
@@ -3311,6 +3323,9 @@ msgstr "Írás cache engedélyezése."
 msgid "Enabled"
 msgstr "Engedélyezve"
 
+msgid "Encrypt Password"
+msgstr "Jelszó titkosítása"
+
 msgid "Encrypt password"
 msgstr "Titkosító jelszó"
 
@@ -3469,7 +3484,7 @@ msgstr "Hiba szint"
 msgid "Event"
 msgstr "Esemény"
 
-msgid "Event selection"
+msgid "Event Selection"
 msgstr "Esemény kiválasztása"
 
 msgid "Example: pkg add packagename."
@@ -3531,7 +3546,7 @@ msgid "Extent Name"
 msgstr "Hatókörnév"
 
 msgid "Extent Settings"
-msgstr ""
+msgstr "Extent beállításai"
 
 msgid "Extent name"
 msgstr "Hatókörnév"
@@ -3580,11 +3595,11 @@ msgstr "FRU információ"
 msgid "FTP"
 msgstr "FTP"
 
-msgid "FTP - Ban module"
-msgstr "FTP - tiltó modul"
+msgid "FTP - Ban Module"
+msgstr "FTP - kitiltó modul"
 
-msgid "FTP - File transfer"
-msgstr "FTP - Fájlátvitel"
+msgid "FTP - File Transfer"
+msgstr "FTP - Fájltranszfer"
 
 msgid "FTP Proxy"
 msgstr "Ftp proxy"
@@ -3911,7 +3926,7 @@ msgid "Group ID"
 msgstr "Csoportazonosító"
 
 msgid "Group Settings"
-msgstr ""
+msgstr "Csoportbeállítások"
 
 msgid "Group compilations"
 msgstr "Válogatások csoportosítása"
@@ -4079,6 +4094,9 @@ msgstr "Állomásnév-adatbázis"
 msgid "Hosts"
 msgstr "Állomásnevek (Hosts)"
 
+msgid "Hosts Allow"
+msgstr "Engedélyezett kiszolgálók"
+
 msgid "Hosts Setup"
 msgstr "Kiszolgálók beállítása"
 
@@ -4156,7 +4174,7 @@ msgstr "IPMI statisztikák"
 msgid "IPv4 Configuration"
 msgstr "IPv4 beállítás"
 
-msgid "IPv4 DNS servers"
+msgid "IPv4 DNS Servers"
 msgstr "IPv4 DNS szerverek"
 
 msgid "IPv4 addresses"
@@ -4168,7 +4186,7 @@ msgstr "IPv6 cím"
 msgid "IPv6 Configuration"
 msgstr "IPv6 beállítás"
 
-msgid "IPv6 DNS servers"
+msgid "IPv6 DNS Servers"
 msgstr "IPv6 DNS szerverek"
 
 msgid "IPv6 Gateway"
@@ -4397,7 +4415,7 @@ msgid "Initiator Group"
 msgstr "Kezdeményező csoport"
 
 msgid "Initiator Group Settings"
-msgstr ""
+msgstr "Kezdeményező csoport beállításai"
 
 msgid "Initiator Groups"
 msgstr "Kezdeményező csoportok"
@@ -4810,9 +4828,6 @@ msgstr "Bekapcsolás (link up) művelet"
 msgid "List"
 msgstr "Lista"
 
-msgid "List Detected Disks"
-msgstr "Észlelt lemezek felsorolása"
-
 msgid "List Imported Users"
 msgstr "Importált felhasználók felsorolása"
 
@@ -4906,19 +4921,19 @@ msgid "Log"
 msgstr "Napló"
 
 msgid "Log Filter"
-msgstr ""
+msgstr "Naplószűrő"
 
 msgid "Log Level"
 msgstr "Naplózás szintje"
+
+msgid "Log Order"
+msgstr "Naplórendező"
 
 msgid "Log Settings"
 msgstr "Naplózási beállítások"
 
 msgid "Log file is empty."
 msgstr "Log fájl üres."
-
-msgid "Log order"
-msgstr "Naplózás sorrendje"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Naplózd készítése a syslog-ba."
@@ -5070,8 +5085,8 @@ msgstr ""
 msgid "Masquerade address"
 msgstr "Álcím"
 
-msgid "Max entries"
-msgstr "Max bejegyzések"
+msgid "Max Entries"
+msgstr "Maximális bejegyzésszám"
 
 msgid "Max. TTL"
 msgstr "Maximális TTL"
@@ -5296,7 +5311,7 @@ msgid "Module"
 msgstr "Modul"
 
 msgid "Module Settings"
-msgstr ""
+msgstr "Modulbeállítások"
 
 msgid "Modules"
 msgstr "Modulok"
@@ -5401,6 +5416,9 @@ msgstr "MEGJEGYZÉS"
 msgid "NT1 (CIFS)"
 msgstr "NT1 (CIFS)"
 
+msgid "NTP Time Server"
+msgstr "NTP időszerver"
+
 msgid "NTP is not enabled."
 msgstr "NTP nincs bekapcsolva."
 
@@ -5437,8 +5455,11 @@ msgstr "A változó neve."
 msgid "Nested HVM"
 msgstr "Egymásba ágyazott HVM"
 
-msgid "NetBIOS domain"
-msgstr "NetBIOS domain"
+msgid "NetBIOS Domain"
+msgstr ""
+
+msgid "NetBIOS Name"
+msgstr ""
 
 msgid "NetBIOS name"
 msgstr "NetBIOS név"
@@ -5490,6 +5511,9 @@ msgstr ""
 "Soha (Never) - Ellenőrzi az eszközt, függetlenül az milyen teljesítmény "
 "üzemmódban van. A leállított lemezt is újra felpörgetheti az ellenőrzés "
 "idejére."
+
+msgid "New Password"
+msgstr "Új jelszó"
 
 msgid "New password"
 msgstr "Új jelszó"
@@ -6226,7 +6250,7 @@ msgid "Portal Group"
 msgstr "Portálcsoport"
 
 msgid "Portal Group Settings"
-msgstr ""
+msgstr "Portal csoport beállításai"
 
 msgid "Portal Groups"
 msgstr "Portálcsoportok"
@@ -6592,6 +6616,9 @@ msgstr "Távoli modul (forrás)"
 msgid "Remote Rsync Server"
 msgstr "Távoli Rsync Kiszolgáló"
 
+msgid "Remote Syslog Messages"
+msgstr "Távoli rendszernapló-üzenetek"
+
 msgid "Remote Syslog Server"
 msgstr "Távoli rendszernapló-szerver"
 
@@ -6618,9 +6645,6 @@ msgstr ""
 
 msgid "Remote rsync daemon"
 msgstr "Távoli rsync démon"
-
-msgid "Remote syslog messages"
-msgstr "Távoli rendszernapló-üzenetek"
 
 msgid "Removable"
 msgstr "Eltávolítható"
@@ -6710,6 +6734,9 @@ msgstr "IP címek feloldása kiszolgálónévvé."
 
 msgid "Resource"
 msgstr "Erőforrás"
+
+msgid "Resource Name"
+msgstr ""
 
 msgid "Resource name"
 msgstr "Erőforrás neve"
@@ -6963,7 +6990,7 @@ msgid "Scheduled Self-Test"
 msgstr "Ütemezett önteszt"
 
 msgid "Scheduled Self-Test Settings"
-msgstr ""
+msgstr "Időzített önellenőrző beállításai"
 
 msgid "Scheduled Shutdown"
 msgstr "Ütemezett leállítása"
@@ -7308,7 +7335,7 @@ msgid "Share Password"
 msgstr "Megosztási jelszó"
 
 msgid "Share Settings"
-msgstr ""
+msgstr "Megosztás beállításai"
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr "Megosztási jelszó nem lehet több 8 karakternél."
@@ -7768,9 +7795,6 @@ msgstr "Rendszernapló"
 
 msgid "System message buffer"
 msgstr "Rendszerüzenet buffer"
-
-msgid "System time"
-msgstr "Rendszeridő"
 
 msgid "System tuning"
 msgstr "Rendszer tuning"
@@ -9293,6 +9317,9 @@ msgstr "Időkiszolgáló"
 msgid "Time Synchronization"
 msgstr "Időszinkronizáció"
 
+msgid "Time Zone"
+msgstr "Időzóna"
+
 msgid "Time before the load will be rebooted"
 msgstr "Idő mielőtt a töltés újraindul"
 
@@ -9317,9 +9344,6 @@ msgstr "Adattöltés (mágneses fejarmatúra mozgása) alatti műveleti idő."
 
 msgid "Time update interval"
 msgstr "Időfrissítési gyakoriság"
-
-msgid "Time zone"
-msgstr "Időzóna"
 
 msgid "Timeout"
 msgstr "Időtúllépés"
@@ -9840,6 +9864,9 @@ msgid "User ID"
 msgstr "Felhasználó-azonosító (ID)"
 
 msgid "User Settings"
+msgstr "Felhasználói beállítások"
+
+msgid "User Shares"
 msgstr ""
 
 msgid "User account is locked"
@@ -9862,9 +9889,6 @@ msgstr "A felhasználó jelszava."
 
 msgid "User portal"
 msgstr "Felhasználó portal"
-
-msgid "User shares"
-msgstr "Felhasználói megosztások"
 
 msgid "User suffix"
 msgstr "Felhasználó utótag"
@@ -9944,6 +9968,9 @@ msgstr "Ellenőrzés"
 
 msgid "Version"
 msgstr "Verzió"
+
+msgid "Version:"
+msgstr "Verzió:"
 
 msgid "Vibration During Write."
 msgstr "Írás közbeni rezgés."
@@ -10350,6 +10377,8 @@ msgid ""
 "ZFS volume size. To specify the size use the following human-readable "
 "suffixes (for example, 'K', 'KB', 'M', 'GB', etc.)."
 msgstr ""
+"ZFS kötetméret. Megadásához használd a hagyományos utótag formátumokat (pl. "
+"'k', 'KB', 'M', 'Gb', stb.)."
 
 msgid "Zeroconf/Bonjour"
 msgstr "Zeroconf/Bonjour"
@@ -10511,8 +10540,65 @@ msgstr "leválasztás"
 msgid "user"
 msgstr "felhasználó"
 
-msgid "version:"
-msgstr "verzió:"
-
 msgid "week days"
 msgstr "hétköznap"
+
+#~ msgid "FTP - Ban module"
+#~ msgstr "FTP - tiltó modul"
+
+#~ msgid "IPv4 DNS servers"
+#~ msgstr "IPv4 DNS szerverek"
+
+#~ msgid "IPv6 DNS servers"
+#~ msgstr "IPv6 DNS szerverek"
+
+#~ msgid "System time"
+#~ msgstr "Rendszeridő"
+
+#~ msgid "Time zone"
+#~ msgstr "Időzóna"
+
+#~ msgid "version:"
+#~ msgstr "verzió:"
+
+#~ msgid "Decrypt password"
+#~ msgstr "Dekódoló jelszó"
+
+#~ msgid "DNS domain"
+#~ msgstr "DNS domain"
+
+#~ msgid "DNS forwarder"
+#~ msgstr "DNS továbbító"
+
+#~ msgid "Admin password"
+#~ msgstr "Admin jelszava"
+
+#~ msgid "User shares"
+#~ msgstr "Felhasználói megosztások"
+
+#~ msgid "NetBIOS domain"
+#~ msgstr "NetBIOS domain"
+
+#~ msgid "Authenticate path & realm"
+#~ msgstr "Hitelesítő útvonal & terület"
+
+#~ msgid "List Detected Disks"
+#~ msgstr "Észlelt lemezek felsorolása"
+
+#~ msgid "Date format"
+#~ msgstr "Dátumformátum"
+
+#~ msgid "FTP - File transfer"
+#~ msgstr "FTP - Fájlátvitel"
+
+#~ msgid "Event selection"
+#~ msgstr "Esemény kiválasztása"
+
+#~ msgid "Log order"
+#~ msgstr "Naplózás sorrendje"
+
+#~ msgid "Max entries"
+#~ msgstr "Max bejegyzések"
+
+#~ msgid "Remote syslog messages"
+#~ msgstr "Távoli rendszernapló-üzenetek"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-26 02:52+0000\n"
+"POT-Creation-Date: 2017-01-26 21:12+0000\n"
 "PO-Revision-Date: 2016-08-31 21:50+0000\n"
 "Last-Translator: Mustafa DAĞCI <mustafa.matrix@gmail.com>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 13:29+0000\n"
+"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
@@ -556,7 +556,7 @@ msgstr "Adres"
 msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr ""
 
-msgid "Admin password"
+msgid "Admin Password"
 msgstr ""
 
 msgid "Administration password"
@@ -909,11 +909,11 @@ msgstr "Doğrulama Gruplar"
 msgid "Auth Method"
 msgstr "Doğrulama Methodu"
 
+msgid "Authenticate Path & Realm"
+msgstr ""
+
 msgid "Authenticate URL"
 msgstr "URL Doğrula"
-
-msgid "Authenticate path & realm"
-msgstr ""
 
 msgid "Authentication"
 msgstr "Kimlik Denetimi"
@@ -1787,6 +1787,9 @@ msgstr "Cron Görevi"
 msgid "Current"
 msgstr ""
 
+msgid "Current Password"
+msgstr ""
+
 msgid "Current Version:"
 msgstr ""
 
@@ -1851,10 +1854,10 @@ msgstr ""
 msgid "DNS"
 msgstr ""
 
-msgid "DNS domain"
+msgid "DNS Domain"
 msgstr ""
 
-msgid "DNS forwarder"
+msgid "DNS Forwarder"
 msgstr ""
 
 msgid "DNS server is empty."
@@ -1916,7 +1919,7 @@ msgstr ""
 msgid "Date & Time"
 msgstr "Tarih & Saat"
 
-msgid "Date format"
+msgid "Date Format"
 msgstr ""
 
 msgid "Day"
@@ -1942,7 +1945,7 @@ msgid ""
 "max erase count (big endian)."
 msgstr ""
 
-msgid "Decrypt password"
+msgid "Decrypt Password"
 msgstr ""
 
 msgid "Dedup"
@@ -2196,6 +2199,9 @@ msgstr ""
 
 msgid "Detected"
 msgstr "Algılandı"
+
+msgid "Detected Disks"
+msgstr ""
 
 msgid "Detected Language:"
 msgstr ""
@@ -3105,6 +3111,9 @@ msgstr ""
 msgid "Enabled"
 msgstr "Etkinleştirildi"
 
+msgid "Encrypt Password"
+msgstr ""
+
 msgid "Encrypt password"
 msgstr ""
 
@@ -3243,7 +3252,7 @@ msgstr ""
 msgid "Event"
 msgstr "Olay"
 
-msgid "Event selection"
+msgid "Event Selection"
 msgstr ""
 
 msgid "Example: pkg add packagename."
@@ -3346,11 +3355,11 @@ msgstr ""
 msgid "FTP"
 msgstr "FTP"
 
-msgid "FTP - Ban module"
-msgstr "FTP - Yasaklama modulü"
+msgid "FTP - Ban Module"
+msgstr ""
 
-msgid "FTP - File transfer"
-msgstr "FTP - Dosya transferi"
+msgid "FTP - File Transfer"
+msgstr ""
 
 msgid "FTP Proxy"
 msgstr "FTP Proxy"
@@ -3832,6 +3841,9 @@ msgstr ""
 msgid "Hosts"
 msgstr "Bilgisayarlar"
 
+msgid "Hosts Allow"
+msgstr ""
+
 msgid "Hosts Setup"
 msgstr ""
 
@@ -3904,8 +3916,8 @@ msgstr ""
 msgid "IPv4 Configuration"
 msgstr "IPv4 Yapılandırması"
 
-msgid "IPv4 DNS servers"
-msgstr "IPv4 DNS sunucuları"
+msgid "IPv4 DNS Servers"
+msgstr ""
 
 msgid "IPv4 addresses"
 msgstr "IPv4 adresleri"
@@ -3916,8 +3928,8 @@ msgstr ""
 msgid "IPv6 Configuration"
 msgstr "IPv6 yapılandırması"
 
-msgid "IPv6 DNS servers"
-msgstr "IPv6 DNS sunucuları"
+msgid "IPv6 DNS Servers"
+msgstr ""
 
 msgid "IPv6 Gateway"
 msgstr "IPv6 Ağ geçidi"
@@ -4498,9 +4510,6 @@ msgstr ""
 msgid "List"
 msgstr "Liste"
 
-msgid "List Detected Disks"
-msgstr ""
-
 msgid "List Imported Users"
 msgstr ""
 
@@ -4594,13 +4603,13 @@ msgstr ""
 msgid "Log Level"
 msgstr "Günlükleme Seviyesi"
 
+msgid "Log Order"
+msgstr ""
+
 msgid "Log Settings"
 msgstr ""
 
 msgid "Log file is empty."
-msgstr ""
-
-msgid "Log order"
 msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
@@ -4748,7 +4757,7 @@ msgstr ""
 msgid "Masquerade address"
 msgstr ""
 
-msgid "Max entries"
+msgid "Max Entries"
 msgstr ""
 
 msgid "Max. TTL"
@@ -5070,6 +5079,9 @@ msgstr ""
 msgid "NT1 (CIFS)"
 msgstr ""
 
+msgid "NTP Time Server"
+msgstr ""
+
 msgid "NTP is not enabled."
 msgstr ""
 
@@ -5104,7 +5116,10 @@ msgstr "Değişken ismi"
 msgid "Nested HVM"
 msgstr ""
 
-msgid "NetBIOS domain"
+msgid "NetBIOS Domain"
+msgstr ""
+
+msgid "NetBIOS Name"
 msgstr ""
 
 msgid "NetBIOS name"
@@ -5151,6 +5166,9 @@ msgstr ""
 msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
 "a disk which is spun-down to be spun-up when it is checked."
+msgstr ""
+
+msgid "New Password"
 msgstr ""
 
 msgid "New password"
@@ -6198,6 +6216,9 @@ msgstr ""
 msgid "Remote Rsync Server"
 msgstr ""
 
+msgid "Remote Syslog Messages"
+msgstr ""
+
 msgid "Remote Syslog Server"
 msgstr ""
 
@@ -6219,9 +6240,6 @@ msgid ""
 msgstr ""
 
 msgid "Remote rsync daemon"
-msgstr ""
-
-msgid "Remote syslog messages"
 msgstr ""
 
 msgid "Removable"
@@ -6305,6 +6323,9 @@ msgid "Resolve IP addresses to hostnames."
 msgstr ""
 
 msgid "Resource"
+msgstr ""
+
+msgid "Resource Name"
 msgstr ""
 
 msgid "Resource name"
@@ -7282,9 +7303,6 @@ msgstr "Sistem günlükleri"
 
 msgid "System message buffer"
 msgstr "Sistem mesaj belleği"
-
-msgid "System time"
-msgstr "Sistem zamanı"
 
 msgid "System tuning"
 msgstr ""
@@ -8572,6 +8590,9 @@ msgstr ""
 msgid "Time Synchronization"
 msgstr ""
 
+msgid "Time Zone"
+msgstr ""
+
 msgid "Time before the load will be rebooted"
 msgstr ""
 
@@ -8596,9 +8617,6 @@ msgstr ""
 
 msgid "Time update interval"
 msgstr "Saat güncelleme aralığı"
-
-msgid "Time zone"
-msgstr "Zaman dilimi"
 
 msgid "Timeout"
 msgstr "Zaman aşımı"
@@ -9073,6 +9091,9 @@ msgstr ""
 msgid "User Settings"
 msgstr ""
 
+msgid "User Shares"
+msgstr ""
+
 msgid "User account is locked"
 msgstr ""
 
@@ -9092,9 +9113,6 @@ msgid "User password."
 msgstr "Kullanıcı parolası."
 
 msgid "User portal"
-msgstr ""
-
-msgid "User shares"
 msgstr ""
 
 msgid "User suffix"
@@ -9170,6 +9188,9 @@ msgstr ""
 
 msgid "Version"
 msgstr "Sürüm"
+
+msgid "Version:"
+msgstr ""
 
 msgid "Vibration During Write."
 msgstr ""
@@ -9707,8 +9728,23 @@ msgstr "umount"
 msgid "user"
 msgstr ""
 
-msgid "version:"
-msgstr ""
-
 msgid "week days"
 msgstr ""
+
+#~ msgid "FTP - Ban module"
+#~ msgstr "FTP - Yasaklama modulü"
+
+#~ msgid "FTP - File transfer"
+#~ msgstr "FTP - Dosya transferi"
+
+#~ msgid "IPv4 DNS servers"
+#~ msgstr "IPv4 DNS sunucuları"
+
+#~ msgid "IPv6 DNS servers"
+#~ msgstr "IPv6 DNS sunucuları"
+
+#~ msgid "System time"
+#~ msgstr "Sistem zamanı"
+
+#~ msgid "Time zone"
+#~ msgstr "Zaman dilimi"

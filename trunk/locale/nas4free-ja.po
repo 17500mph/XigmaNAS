@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-26 02:52+0000\n"
+"POT-Creation-Date: 2017-01-26 21:12+0000\n"
 "PO-Revision-Date: 2016-11-21 20:27+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 13:28+0000\n"
+"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -564,8 +564,8 @@ msgstr "アドレス"
 msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr "リモート hastd デーモンのアドレス。固定IPアドレスでなければいけません。"
 
-msgid "Admin password"
-msgstr "管理者パスワード"
+msgid "Admin Password"
+msgstr ""
 
 msgid "Administration password"
 msgstr "管理者パスワード"
@@ -914,11 +914,11 @@ msgstr "認証グループ"
 msgid "Auth Method"
 msgstr "認証方法"
 
+msgid "Authenticate Path & Realm"
+msgstr ""
+
 msgid "Authenticate URL"
 msgstr "認証 URL"
-
-msgid "Authenticate path & realm"
-msgstr "認証パスとレルム"
 
 msgid "Authentication"
 msgstr "認証"
@@ -1803,6 +1803,9 @@ msgstr "Cron ジョブ"
 msgid "Current"
 msgstr "現在"
 
+msgid "Current Password"
+msgstr ""
+
 msgid "Current Version:"
 msgstr "現在のバージョン:"
 
@@ -1867,11 +1870,11 @@ msgstr "DLNA/UPnP MiniDLNA"
 msgid "DNS"
 msgstr "DNS"
 
-msgid "DNS domain"
-msgstr "DNS ドメイン"
+msgid "DNS Domain"
+msgstr ""
 
-msgid "DNS forwarder"
-msgstr "DNS フォワーダ"
+msgid "DNS Forwarder"
+msgstr ""
 
 msgid "DNS server is empty."
 msgstr "DNS サーバが空欄です。"
@@ -1932,8 +1935,8 @@ msgstr "日付"
 msgid "Date & Time"
 msgstr "日付と時間"
 
-msgid "Date format"
-msgstr "日付書式"
+msgid "Date Format"
+msgstr ""
 
 msgid "Day"
 msgstr ""
@@ -1958,8 +1961,8 @@ msgid ""
 "max erase count (big endian)."
 msgstr "バイト0-1-2=平均消去回数(ビッグエンディアン)とバイト3-4-5=最大消去回数(ビッグエンディアン)としてデコード。"
 
-msgid "Decrypt password"
-msgstr "復号化パスワード"
+msgid "Decrypt Password"
+msgstr ""
 
 msgid "Dedup"
 msgstr "重複排除"
@@ -2212,6 +2215,9 @@ msgstr ""
 
 msgid "Detected"
 msgstr "検出"
+
+msgid "Detected Disks"
+msgstr ""
 
 msgid "Detected Language:"
 msgstr ""
@@ -3116,6 +3122,9 @@ msgstr "書き込みキャッシュモードを有効にします。"
 msgid "Enabled"
 msgstr "有効"
 
+msgid "Encrypt Password"
+msgstr ""
+
 msgid "Encrypt password"
 msgstr "暗号化パスワード"
 
@@ -3254,7 +3263,7 @@ msgstr ""
 msgid "Event"
 msgstr "イベント"
 
-msgid "Event selection"
+msgid "Event Selection"
 msgstr ""
 
 msgid "Example: pkg add packagename."
@@ -3358,11 +3367,11 @@ msgstr ""
 msgid "FTP"
 msgstr "FTP"
 
-msgid "FTP - Ban module"
-msgstr "FTP - バン (BAN) モジュール"
+msgid "FTP - Ban Module"
+msgstr ""
 
-msgid "FTP - File transfer"
-msgstr "FTP - ファイル転送"
+msgid "FTP - File Transfer"
+msgstr ""
 
 msgid "FTP Proxy"
 msgstr "FTP プロキシ"
@@ -3847,6 +3856,9 @@ msgstr "ホスト名データベース"
 msgid "Hosts"
 msgstr "ホスト"
 
+msgid "Hosts Allow"
+msgstr ""
+
 msgid "Hosts Setup"
 msgstr ""
 
@@ -3918,8 +3930,8 @@ msgstr ""
 msgid "IPv4 Configuration"
 msgstr "IPv4 設定"
 
-msgid "IPv4 DNS servers"
-msgstr "IPv4 DNS サーバ"
+msgid "IPv4 DNS Servers"
+msgstr ""
 
 msgid "IPv4 addresses"
 msgstr "IPv4 アドレス"
@@ -3930,8 +3942,8 @@ msgstr ""
 msgid "IPv6 Configuration"
 msgstr "IPv6 設定"
 
-msgid "IPv6 DNS servers"
-msgstr "IPv6 DNS サーバ"
+msgid "IPv6 DNS Servers"
+msgstr ""
 
 msgid "IPv6 Gateway"
 msgstr "IPv6 ゲートウェイ"
@@ -4525,9 +4537,6 @@ msgstr "リンクアップ時の処理"
 msgid "List"
 msgstr "リスト"
 
-msgid "List Detected Disks"
-msgstr "検出されたディスクのリスト"
-
 msgid "List Imported Users"
 msgstr "インポートされたユーザ一覧"
 
@@ -4622,13 +4631,13 @@ msgstr ""
 msgid "Log Level"
 msgstr "ログレベル"
 
+msgid "Log Order"
+msgstr ""
+
 msgid "Log Settings"
 msgstr ""
 
 msgid "Log file is empty."
-msgstr ""
-
-msgid "Log order"
 msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
@@ -4778,7 +4787,7 @@ msgstr "データ読み取り中のチャンネルのマージン。この属性
 msgid "Masquerade address"
 msgstr "マスカレードアドレス"
 
-msgid "Max entries"
+msgid "Max Entries"
 msgstr ""
 
 msgid "Max. TTL"
@@ -5100,6 +5109,9 @@ msgstr ""
 msgid "NT1 (CIFS)"
 msgstr ""
 
+msgid "NTP Time Server"
+msgstr ""
+
 msgid "NTP is not enabled."
 msgstr "NTP が有効になっていません。"
 
@@ -5134,8 +5146,11 @@ msgstr "変数の名前"
 msgid "Nested HVM"
 msgstr "ネストしたHVM"
 
-msgid "NetBIOS domain"
-msgstr "NetBIOS ドメイン"
+msgid "NetBIOS Domain"
+msgstr ""
+
+msgid "NetBIOS Name"
+msgstr ""
 
 msgid "NetBIOS name"
 msgstr "NetBIOS 名"
@@ -5184,6 +5199,9 @@ msgid ""
 msgstr ""
 "Never - 電源モードに関わらず、デバイスをポーリング (チェック) "
 "します。これは、スピンダウンしているディスクに対してのチェックが行われる際にスピンアップする可能性があります。"
+
+msgid "New Password"
+msgstr ""
 
 msgid "New password"
 msgstr "新しいパスワード"
@@ -6236,6 +6254,9 @@ msgstr "リモートモジュール (ソース)"
 msgid "Remote Rsync Server"
 msgstr "リモート Rsync サーバ"
 
+msgid "Remote Syslog Messages"
+msgstr ""
+
 msgid "Remote Syslog Server"
 msgstr ""
 
@@ -6258,9 +6279,6 @@ msgstr ""
 
 msgid "Remote rsync daemon"
 msgstr "リモート rsync デーモン"
-
-msgid "Remote syslog messages"
-msgstr ""
 
 msgid "Removable"
 msgstr "リムーバブル"
@@ -6344,6 +6362,9 @@ msgstr ""
 
 msgid "Resource"
 msgstr "リソース"
+
+msgid "Resource Name"
+msgstr ""
 
 msgid "Resource name"
 msgstr "リソース名"
@@ -7335,9 +7356,6 @@ msgstr "システムログ"
 
 msgid "System message buffer"
 msgstr "システムメッセージバッファ"
-
-msgid "System time"
-msgstr "システム時刻"
 
 msgid "System tuning"
 msgstr "システムチューニング"
@@ -8673,6 +8691,9 @@ msgstr "Time Machine"
 msgid "Time Synchronization"
 msgstr ""
 
+msgid "Time Zone"
+msgstr ""
+
 msgid "Time before the load will be rebooted"
 msgstr "リブートする前の時間"
 
@@ -8697,9 +8718,6 @@ msgstr "稼働中（磁気ヘッドアーマチュアの動き）の経過した
 
 msgid "Time update interval"
 msgstr "時間更新間隔"
-
-msgid "Time zone"
-msgstr "タイムゾーン"
 
 msgid "Timeout"
 msgstr "タイムアウト"
@@ -9182,6 +9200,9 @@ msgstr "ユーザ ID"
 msgid "User Settings"
 msgstr ""
 
+msgid "User Shares"
+msgstr ""
+
 msgid "User account is locked"
 msgstr ""
 
@@ -9202,9 +9223,6 @@ msgstr "ユーザのパスワード。"
 
 msgid "User portal"
 msgstr "ユーザポータル"
-
-msgid "User shares"
-msgstr "ユーザー共有"
 
 msgid "User suffix"
 msgstr "ユーザサフィックス"
@@ -9279,6 +9297,9 @@ msgstr ""
 
 msgid "Version"
 msgstr "バージョン"
+
+msgid "Version:"
+msgstr ""
 
 msgid "Vibration During Write."
 msgstr "書き込み中の振動。"
@@ -9818,8 +9839,53 @@ msgstr "アンマウント"
 msgid "user"
 msgstr ""
 
-msgid "version:"
-msgstr "バージョン:"
-
 msgid "week days"
 msgstr ""
+
+#~ msgid "FTP - Ban module"
+#~ msgstr "FTP - バン (BAN) モジュール"
+
+#~ msgid "FTP - File transfer"
+#~ msgstr "FTP - ファイル転送"
+
+#~ msgid "IPv4 DNS servers"
+#~ msgstr "IPv4 DNS サーバ"
+
+#~ msgid "IPv6 DNS servers"
+#~ msgstr "IPv6 DNS サーバ"
+
+#~ msgid "System time"
+#~ msgstr "システム時刻"
+
+#~ msgid "Time zone"
+#~ msgstr "タイムゾーン"
+
+#~ msgid "version:"
+#~ msgstr "バージョン:"
+
+#~ msgid "Decrypt password"
+#~ msgstr "復号化パスワード"
+
+#~ msgid "DNS domain"
+#~ msgstr "DNS ドメイン"
+
+#~ msgid "DNS forwarder"
+#~ msgstr "DNS フォワーダ"
+
+#~ msgid "Admin password"
+#~ msgstr "管理者パスワード"
+
+#~ msgid "NetBIOS domain"
+#~ msgstr "NetBIOS ドメイン"
+
+#~ msgid "User shares"
+#~ msgstr "ユーザー共有"
+
+#~ msgid "Authenticate path & realm"
+#~ msgstr "認証パスとレルム"
+
+#~ msgid "List Detected Disks"
+#~ msgstr "検出されたディスクのリスト"
+
+#~ msgid "Date format"
+#~ msgstr "日付書式"

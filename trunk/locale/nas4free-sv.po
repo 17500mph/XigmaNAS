@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-26 02:52+0000\n"
+"POT-Creation-Date: 2017-01-26 21:12+0000\n"
 "PO-Revision-Date: 2017-01-26 04:51+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 13:29+0000\n"
+"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -594,8 +594,8 @@ msgstr "Adress"
 msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr "Adress till fjärr hastd demonen. Det måste vara en fast IP-adress."
 
-msgid "Admin password"
-msgstr "Administratörslösenord"
+msgid "Admin Password"
+msgstr ""
 
 msgid "Administration password"
 msgstr "Administratörslösenord"
@@ -979,11 +979,11 @@ msgstr "Auktoriserade grupper"
 msgid "Auth Method"
 msgstr "Auktoriseringsmetod"
 
+msgid "Authenticate Path & Realm"
+msgstr ""
+
 msgid "Authenticate URL"
 msgstr "Autentisera URL"
-
-msgid "Authenticate path & realm"
-msgstr "Autentisera sökväg och omgivning"
 
 msgid "Authentication"
 msgstr "Autentisering"
@@ -1932,6 +1932,9 @@ msgstr "Cron-jobb"
 msgid "Current"
 msgstr "Aktuellt"
 
+msgid "Current Password"
+msgstr ""
+
 msgid "Current Version:"
 msgstr "Nuvarande version:"
 
@@ -1997,11 +2000,11 @@ msgstr "DLNA/UPnP MiniDLNA"
 msgid "DNS"
 msgstr "DNS"
 
-msgid "DNS domain"
-msgstr "DNS-domän"
+msgid "DNS Domain"
+msgstr ""
 
-msgid "DNS forwarder"
-msgstr "DNS förmedlare"
+msgid "DNS Forwarder"
+msgstr ""
 
 msgid "DNS server is empty."
 msgstr "DNS-server är tom."
@@ -2064,8 +2067,8 @@ msgstr "Datum"
 msgid "Date & Time"
 msgstr "Datum och tid"
 
-msgid "Date format"
-msgstr "Datumformat"
+msgid "Date Format"
+msgstr ""
 
 msgid "Day"
 msgstr "Dag"
@@ -2092,8 +2095,8 @@ msgstr ""
 "Kodat som: byte 0-1-2 = medel antal raderingar (big endian) och byte 3-4-5 = "
 "max antal raderingar (big endian)."
 
-msgid "Decrypt password"
-msgstr "Dekrypteringslösenord"
+msgid "Decrypt Password"
+msgstr ""
 
 msgid "Dedup"
 msgstr "Deduplicering"
@@ -2360,6 +2363,9 @@ msgstr "Detaljerad"
 
 msgid "Detected"
 msgstr "Identifierad"
+
+msgid "Detected Disks"
+msgstr ""
 
 msgid "Detected Language:"
 msgstr "Detekterat språk:"
@@ -3293,6 +3299,9 @@ msgstr "Aktivera skrivcache"
 msgid "Enabled"
 msgstr "Aktiverad"
 
+msgid "Encrypt Password"
+msgstr ""
+
 msgid "Encrypt password"
 msgstr "Krypteringslösenord"
 
@@ -3451,8 +3460,8 @@ msgstr "Felnivå"
 msgid "Event"
 msgstr "Händelse"
 
-msgid "Event selection"
-msgstr "Val av händelse"
+msgid "Event Selection"
+msgstr ""
 
 msgid "Example: pkg add packagename."
 msgstr "Exempel: pkg add paketnamn."
@@ -3562,11 +3571,11 @@ msgstr "FRU Information"
 msgid "FTP"
 msgstr "FTP"
 
-msgid "FTP - Ban module"
-msgstr "FTP - Bann modul"
+msgid "FTP - Ban Module"
+msgstr ""
 
-msgid "FTP - File transfer"
-msgstr "FTP - File Transfer Protocol"
+msgid "FTP - File Transfer"
+msgstr ""
 
 msgid "FTP Proxy"
 msgstr "FTP Proxy"
@@ -4060,6 +4069,9 @@ msgstr "Värdnamndatabas"
 msgid "Hosts"
 msgstr "Värdar"
 
+msgid "Hosts Allow"
+msgstr ""
+
 msgid "Hosts Setup"
 msgstr "Hosts Inställningar"
 
@@ -4135,8 +4147,8 @@ msgstr "IPMI Stats"
 msgid "IPv4 Configuration"
 msgstr "IPv4-konfiguration"
 
-msgid "IPv4 DNS servers"
-msgstr "IPv4 DNS-servrar"
+msgid "IPv4 DNS Servers"
+msgstr ""
 
 msgid "IPv4 addresses"
 msgstr "IPv4-adresser"
@@ -4147,8 +4159,8 @@ msgstr "IPv6-adress"
 msgid "IPv6 Configuration"
 msgstr "IPv6-konfiguration"
 
-msgid "IPv6 DNS servers"
-msgstr "IPv6 DNS-servrar"
+msgid "IPv6 DNS Servers"
+msgstr ""
 
 msgid "IPv6 Gateway"
 msgstr "IPv6 Gateway"
@@ -4778,9 +4790,6 @@ msgstr "Länk uppe, åtgärd"
 msgid "List"
 msgstr "Lista"
 
-msgid "List Detected Disks"
-msgstr "Lista detekterade diskar"
-
 msgid "List Imported Users"
 msgstr "Lista importerade användare"
 
@@ -4880,14 +4889,14 @@ msgstr "Loggfilter"
 msgid "Log Level"
 msgstr "Loggnivå"
 
+msgid "Log Order"
+msgstr ""
+
 msgid "Log Settings"
 msgstr "Logginställningar"
 
 msgid "Log file is empty."
 msgstr "Loggfilen är tom."
-
-msgid "Log order"
-msgstr "Loggordning"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Logga paket som hanteras av denna regel till syslog."
@@ -5038,8 +5047,8 @@ msgstr ""
 msgid "Masquerade address"
 msgstr "Maskerad adress"
 
-msgid "Max entries"
-msgstr "Max antal poster"
+msgid "Max Entries"
+msgstr ""
 
 msgid "Max. TTL"
 msgstr "Max. TTL"
@@ -5367,6 +5376,9 @@ msgstr "OBS"
 msgid "NT1 (CIFS)"
 msgstr "NT1 (CIFS)"
 
+msgid "NTP Time Server"
+msgstr ""
+
 msgid "NTP is not enabled."
 msgstr "NTP är inte aktiverat"
 
@@ -5403,8 +5415,11 @@ msgstr "Namn på variabeln."
 msgid "Nested HVM"
 msgstr "Nested HVM"
 
-msgid "NetBIOS domain"
-msgstr "NetBios domän"
+msgid "NetBIOS Domain"
+msgstr ""
+
+msgid "NetBIOS Name"
+msgstr ""
 
 msgid "NetBIOS name"
 msgstr "NetBIOS namn"
@@ -5456,6 +5471,9 @@ msgstr ""
 "Never (Aldrig) - kontrollera enheten oavsett dess "
 "strömförbrukningsinställning. Detta kan komma att medföra att en disk i "
 "vilolåge spinner igång när den blir kontrollerad."
+
+msgid "New Password"
+msgstr ""
 
 msgid "New password"
 msgstr "Nytt lösenord"
@@ -6546,6 +6564,9 @@ msgstr "Fjärrmodul (Källa)"
 msgid "Remote Rsync Server"
 msgstr "Fjärr-server för Rsync"
 
+msgid "Remote Syslog Messages"
+msgstr ""
+
 msgid "Remote Syslog Server"
 msgstr "Extern syslogserver"
 
@@ -6570,9 +6591,6 @@ msgstr ""
 
 msgid "Remote rsync daemon"
 msgstr "Fjärr rsync demon"
-
-msgid "Remote syslog messages"
-msgstr "Externa syslogmeddelanden"
 
 msgid "Removable"
 msgstr "Flyttbar"
@@ -6660,6 +6678,9 @@ msgstr "Lös upp IP-adresser till värdnamn"
 
 msgid "Resource"
 msgstr "Resurs"
+
+msgid "Resource Name"
+msgstr ""
 
 msgid "Resource name"
 msgstr "Resursnamn"
@@ -7708,9 +7729,6 @@ msgstr "Systemlogg"
 
 msgid "System message buffer"
 msgstr "Systemets medelandebuffert"
-
-msgid "System time"
-msgstr "Systemtid"
 
 msgid "System tuning"
 msgstr "Finjustering av systemet"
@@ -9229,6 +9247,9 @@ msgstr "Time Machine"
 msgid "Time Synchronization"
 msgstr "Tidssynkronisering"
 
+msgid "Time Zone"
+msgstr ""
+
 msgid "Time before the load will be rebooted"
 msgstr "Tid innan lasten kommer att startas om"
 
@@ -9254,9 +9275,6 @@ msgstr ""
 
 msgid "Time update interval"
 msgstr "Intervall för tidsuppdatering"
-
-msgid "Time zone"
-msgstr "Tidszon"
 
 msgid "Timeout"
 msgstr "Tidsgräns"
@@ -9783,6 +9801,9 @@ msgstr "Användar-ID"
 msgid "User Settings"
 msgstr "Användarinställningar"
 
+msgid "User Shares"
+msgstr ""
+
 msgid "User account is locked"
 msgstr "Användarkontot är låst"
 
@@ -9803,9 +9824,6 @@ msgstr "Användarens lösenord."
 
 msgid "User portal"
 msgstr "Användarportal"
-
-msgid "User shares"
-msgstr "Användarutdelningar"
 
 msgid "User suffix"
 msgstr "Användarändelse"
@@ -9884,6 +9902,9 @@ msgstr "Verifiera"
 
 msgid "Version"
 msgstr "Version"
+
+msgid "Version:"
+msgstr ""
 
 msgid "Vibration During Write."
 msgstr "Vibration under skrivning."
@@ -10456,8 +10477,65 @@ msgstr "umount"
 msgid "user"
 msgstr "användare"
 
-msgid "version:"
-msgstr "version:"
-
 msgid "week days"
 msgstr "veckodagar"
+
+#~ msgid "FTP - Ban module"
+#~ msgstr "FTP - Bann modul"
+
+#~ msgid "FTP - File transfer"
+#~ msgstr "FTP - File Transfer Protocol"
+
+#~ msgid "IPv4 DNS servers"
+#~ msgstr "IPv4 DNS-servrar"
+
+#~ msgid "IPv6 DNS servers"
+#~ msgstr "IPv6 DNS-servrar"
+
+#~ msgid "System time"
+#~ msgstr "Systemtid"
+
+#~ msgid "Time zone"
+#~ msgstr "Tidszon"
+
+#~ msgid "version:"
+#~ msgstr "version:"
+
+#~ msgid "Admin password"
+#~ msgstr "Administratörslösenord"
+
+#~ msgid "DNS domain"
+#~ msgstr "DNS-domän"
+
+#~ msgid "NetBIOS domain"
+#~ msgstr "NetBios domän"
+
+#~ msgid "User shares"
+#~ msgstr "Användarutdelningar"
+
+#~ msgid "DNS forwarder"
+#~ msgstr "DNS förmedlare"
+
+#~ msgid "List Detected Disks"
+#~ msgstr "Lista detekterade diskar"
+
+#~ msgid "Date format"
+#~ msgstr "Datumformat"
+
+#~ msgid "Event selection"
+#~ msgstr "Val av händelse"
+
+#~ msgid "Log order"
+#~ msgstr "Loggordning"
+
+#~ msgid "Remote syslog messages"
+#~ msgstr "Externa syslogmeddelanden"
+
+#~ msgid "Max entries"
+#~ msgstr "Max antal poster"
+
+#~ msgid "Authenticate path & realm"
+#~ msgstr "Autentisera sökväg och omgivning"
+
+#~ msgid "Decrypt password"
+#~ msgstr "Dekrypteringslösenord"

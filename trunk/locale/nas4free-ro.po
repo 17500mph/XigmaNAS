@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-26 02:52+0000\n"
+"POT-Creation-Date: 2017-01-26 21:12+0000\n"
 "PO-Revision-Date: 2017-01-24 11:43+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 13:28+0000\n"
+"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -605,8 +605,8 @@ msgstr "Adresa"
 msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr "Adresa daemon-ului hastd (trebuie să fie o adresă IP statică)."
 
-msgid "Admin password"
-msgstr "Parola Admin"
+msgid "Admin Password"
+msgstr ""
 
 msgid "Administration password"
 msgstr "Parola Administrare"
@@ -994,11 +994,11 @@ msgstr "Grupuri Auth"
 msgid "Auth Method"
 msgstr "Metodă Autentificare"
 
+msgid "Authenticate Path & Realm"
+msgstr ""
+
 msgid "Authenticate URL"
 msgstr "URL Autentificare"
-
-msgid "Authenticate path & realm"
-msgstr "Cale & realm ptr. autentificare"
 
 msgid "Authentication"
 msgstr "Autentificare"
@@ -1984,6 +1984,9 @@ msgstr "Lista Cron"
 msgid "Current"
 msgstr "Curent"
 
+msgid "Current Password"
+msgstr ""
+
 msgid "Current Version:"
 msgstr "Versiunea curentă:"
 
@@ -2050,11 +2053,11 @@ msgstr "DLNA/UPnP MiniDLNA"
 msgid "DNS"
 msgstr "DNS"
 
-msgid "DNS domain"
-msgstr "Domeniu DNS"
+msgid "DNS Domain"
+msgstr ""
 
-msgid "DNS forwarder"
-msgstr "Forwarder DNS"
+msgid "DNS Forwarder"
+msgstr ""
 
 msgid "DNS server is empty."
 msgstr "Serverul DNS este nul."
@@ -2117,8 +2120,8 @@ msgstr "Data"
 msgid "Date & Time"
 msgstr "Data şi Ora"
 
-msgid "Date format"
-msgstr "Format dată"
+msgid "Date Format"
+msgstr ""
 
 msgid "Day"
 msgstr "Zi"
@@ -2145,8 +2148,8 @@ msgstr ""
 "Semnificație: biții 0-1-2 = numărul mediu de ștergeri (big endian) iar biții "
 "3-4-5 = numărul maxim de ștergeri (big endian)."
 
-msgid "Decrypt password"
-msgstr "Parolă decriptare"
+msgid "Decrypt Password"
+msgstr ""
 
 msgid "Dedup"
 msgstr "Dedup"
@@ -2414,6 +2417,9 @@ msgstr "Detaliat"
 
 msgid "Detected"
 msgstr "Detectat"
+
+msgid "Detected Disks"
+msgstr ""
 
 msgid "Detected Language:"
 msgstr "Detecție limbă:"
@@ -3349,6 +3355,9 @@ msgstr "Activare mod cache la scriere."
 msgid "Enabled"
 msgstr "Activat"
 
+msgid "Encrypt Password"
+msgstr ""
+
 msgid "Encrypt password"
 msgstr "Parolă criptare"
 
@@ -3508,8 +3517,8 @@ msgstr "Nivel eroare"
 msgid "Event"
 msgstr "Eveniment"
 
-msgid "Event selection"
-msgstr "Selecție eveniment"
+msgid "Event Selection"
+msgstr ""
 
 msgid "Example: pkg add packagename."
 msgstr "Examplu: pkg adaugă packagename."
@@ -3618,11 +3627,11 @@ msgstr "Informații FRU"
 msgid "FTP"
 msgstr "FTP"
 
-msgid "FTP - Ban module"
-msgstr "Modul Blocare (Ban) - FTP"
+msgid "FTP - Ban Module"
+msgstr ""
 
-msgid "FTP - File transfer"
-msgstr "FTP - Transfer Fișiere"
+msgid "FTP - File Transfer"
+msgstr ""
 
 msgid "FTP Proxy"
 msgstr "Proxy FTP"
@@ -4123,6 +4132,9 @@ msgstr "Bază de date cu nume de sisteme (hostname)"
 msgid "Hosts"
 msgstr "Sisteme"
 
+msgid "Hosts Allow"
+msgstr ""
+
 msgid "Hosts Setup"
 msgstr "Setări sisteme"
 
@@ -4201,8 +4213,8 @@ msgstr "Stare IPMI"
 msgid "IPv4 Configuration"
 msgstr "Configurație IPv4"
 
-msgid "IPv4 DNS servers"
-msgstr "Servere DNS IPv4"
+msgid "IPv4 DNS Servers"
+msgstr ""
 
 msgid "IPv4 addresses"
 msgstr "Adrese IPv4"
@@ -4213,8 +4225,8 @@ msgstr "Adresă IPv6"
 msgid "IPv6 Configuration"
 msgstr "Configurație IPv6"
 
-msgid "IPv6 DNS servers"
-msgstr "Servere DNS IPv6"
+msgid "IPv6 DNS Servers"
+msgstr ""
 
 msgid "IPv6 Gateway"
 msgstr "Gateway IPv6"
@@ -4865,9 +4877,6 @@ msgstr "Acțiune link pornit"
 msgid "List"
 msgstr "Listă"
 
-msgid "List Detected Disks"
-msgstr "Afișare discuri detectate"
-
 msgid "List Imported Users"
 msgstr "Afișare utilizatori importați"
 
@@ -4970,14 +4979,14 @@ msgstr ""
 msgid "Log Level"
 msgstr "Nivel Jurnal"
 
+msgid "Log Order"
+msgstr ""
+
 msgid "Log Settings"
 msgstr "Setări jurnal"
 
 msgid "Log file is empty."
 msgstr "Fișierul log este gol."
-
-msgid "Log order"
-msgstr "Ordine jurnal"
 
 msgid "Log packets that are handled by this rule to syslog."
 msgstr "Memorare pachete gestionate de această regulă în syslog."
@@ -5129,8 +5138,8 @@ msgstr ""
 msgid "Masquerade address"
 msgstr "Adresă de masguerade"
 
-msgid "Max entries"
-msgstr "Nr. maxim înregistrări"
+msgid "Max Entries"
+msgstr ""
 
 msgid "Max. TTL"
 msgstr "TTL max."
@@ -5461,6 +5470,9 @@ msgstr "NOTĂ"
 msgid "NT1 (CIFS)"
 msgstr "NT1 (CIFS)"
 
+msgid "NTP Time Server"
+msgstr ""
+
 msgid "NTP is not enabled."
 msgstr "NTP nu este activ."
 
@@ -5497,8 +5509,11 @@ msgstr "Numele variabilei."
 msgid "Nested HVM"
 msgstr "Nested HVM"
 
-msgid "NetBIOS domain"
-msgstr "Domeniu NetBIOS"
+msgid "NetBIOS Domain"
+msgstr ""
+
+msgid "NetBIOS Name"
+msgstr ""
 
 msgid "NetBIOS name"
 msgstr "Nume NetBIOS"
@@ -5550,6 +5565,9 @@ msgstr ""
 "Niciodată - Nu se verifică starea dispozitivului indiferent de modul "
 "energetic. Verificarea dispozitivului poate determina ca un disc care are "
 "platanele oprite să le pună în funcțiune."
+
+msgid "New Password"
+msgstr ""
 
 msgid "New password"
 msgstr "Parola nouă"
@@ -6650,6 +6668,9 @@ msgstr "Modul remote (sursă)"
 msgid "Remote Rsync Server"
 msgstr "Server Rsync Destinație"
 
+msgid "Remote Syslog Messages"
+msgstr ""
+
 msgid "Remote Syslog Server"
 msgstr "Server syslog remote"
 
@@ -6676,9 +6697,6 @@ msgstr ""
 
 msgid "Remote rsync daemon"
 msgstr "Daemon reomote sync"
-
-msgid "Remote syslog messages"
-msgstr "Mesaje syslog remote"
 
 msgid "Removable"
 msgstr "Detașabil"
@@ -6767,6 +6785,9 @@ msgstr "Afișare nume sistem pe baza adresei IP"
 
 msgid "Resource"
 msgstr "Resursă"
+
+msgid "Resource Name"
+msgstr ""
 
 msgid "Resource name"
 msgstr "Nume resursă"
@@ -7823,9 +7844,6 @@ msgstr "Jurnal Sistem"
 
 msgid "System message buffer"
 msgstr "Buffer mesaje sistem"
-
-msgid "System time"
-msgstr "Data/ora sistemului"
 
 msgid "System tuning"
 msgstr "Reglare fină Sistem"
@@ -9365,6 +9383,9 @@ msgstr "Time Machine"
 msgid "Time Synchronization"
 msgstr "Sincronizare oră"
 
+msgid "Time Zone"
+msgstr ""
+
 msgid "Time before the load will be rebooted"
 msgstr "Timpul pînă la repornirea sarcinii"
 
@@ -9391,9 +9412,6 @@ msgstr ""
 
 msgid "Time update interval"
 msgstr "Interval actualizare"
-
-msgid "Time zone"
-msgstr "Fus Orar"
 
 msgid "Timeout"
 msgstr "Timeout"
@@ -9928,6 +9946,9 @@ msgstr "ID Utilizator"
 msgid "User Settings"
 msgstr "Setări utilizator"
 
+msgid "User Shares"
+msgstr ""
+
 msgid "User account is locked"
 msgstr "Contul de utilizator este blocat"
 
@@ -9948,9 +9969,6 @@ msgstr "Parola Utilizator."
 
 msgid "User portal"
 msgstr "Portal utilizator"
-
-msgid "User shares"
-msgstr "Partajări utilizator"
 
 msgid "User suffix"
 msgstr "Sufix user"
@@ -10030,6 +10048,9 @@ msgstr "Verificare"
 
 msgid "Version"
 msgstr "Versiune NAS4Free"
+
+msgid "Version:"
+msgstr ""
 
 msgid "Vibration During Write."
 msgstr "Vibrații în timpul scrierii"
@@ -10609,8 +10630,65 @@ msgstr "demontare"
 msgid "user"
 msgstr "utilizator"
 
-msgid "version:"
-msgstr "versiune:"
-
 msgid "week days"
 msgstr "zilele saptaminii"
+
+#~ msgid "Time zone"
+#~ msgstr "Fus Orar"
+
+#~ msgid "FTP - File transfer"
+#~ msgstr "FTP - Transfer Fișiere"
+
+#~ msgid "version:"
+#~ msgstr "versiune:"
+
+#~ msgid "FTP - Ban module"
+#~ msgstr "Modul Blocare (Ban) - FTP"
+
+#~ msgid "IPv4 DNS servers"
+#~ msgstr "Servere DNS IPv4"
+
+#~ msgid "IPv6 DNS servers"
+#~ msgstr "Servere DNS IPv6"
+
+#~ msgid "Admin password"
+#~ msgstr "Parola Admin"
+
+#~ msgid "DNS domain"
+#~ msgstr "Domeniu DNS"
+
+#~ msgid "DNS forwarder"
+#~ msgstr "Forwarder DNS"
+
+#~ msgid "NetBIOS domain"
+#~ msgstr "Domeniu NetBIOS"
+
+#~ msgid "Decrypt password"
+#~ msgstr "Parolă decriptare"
+
+#~ msgid "User shares"
+#~ msgstr "Partajări utilizator"
+
+#~ msgid "Authenticate path & realm"
+#~ msgstr "Cale & realm ptr. autentificare"
+
+#~ msgid "List Detected Disks"
+#~ msgstr "Afișare discuri detectate"
+
+#~ msgid "Date format"
+#~ msgstr "Format dată"
+
+#~ msgid "Event selection"
+#~ msgstr "Selecție eveniment"
+
+#~ msgid "Log order"
+#~ msgstr "Ordine jurnal"
+
+#~ msgid "Max entries"
+#~ msgstr "Nr. maxim înregistrări"
+
+#~ msgid "Remote syslog messages"
+#~ msgstr "Mesaje syslog remote"
+
+#~ msgid "System time"
+#~ msgstr "Data/ora sistemului"

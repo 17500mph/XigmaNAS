@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-26 02:52+0000\n"
+"POT-Creation-Date: 2017-01-26 21:12+0000\n"
 "PO-Revision-Date: 2017-01-17 15:29+0000\n"
 "Last-Translator: Yuchen Guo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 13:29+0000\n"
+"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -549,8 +549,8 @@ msgstr "位址"
 msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr "hastd 远程守护进程的位址。它必须是一个静态IP位址。"
 
-msgid "Admin password"
-msgstr "管理员密码"
+msgid "Admin Password"
+msgstr ""
 
 msgid "Administration password"
 msgstr "管理员密码"
@@ -895,11 +895,11 @@ msgstr "认证群组（Auth Groups）"
 msgid "Auth Method"
 msgstr "认证模式"
 
+msgid "Authenticate Path & Realm"
+msgstr ""
+
 msgid "Authenticate URL"
 msgstr "认证 URL"
-
-msgid "Authenticate path & realm"
-msgstr ""
 
 msgid "Authentication"
 msgstr "认证方式"
@@ -1771,6 +1771,9 @@ msgstr "定时任务"
 msgid "Current"
 msgstr "目前"
 
+msgid "Current Password"
+msgstr ""
+
 msgid "Current Version:"
 msgstr "目前版本："
 
@@ -1835,11 +1838,11 @@ msgstr "DLNA/UPnP MiniDLNA"
 msgid "DNS"
 msgstr "DNS"
 
-msgid "DNS domain"
-msgstr "DNS域名"
+msgid "DNS Domain"
+msgstr ""
 
-msgid "DNS forwarder"
-msgstr "DNS转发器"
+msgid "DNS Forwarder"
+msgstr ""
 
 msgid "DNS server is empty."
 msgstr "DNS伺服器是空白的。"
@@ -1900,8 +1903,8 @@ msgstr ""
 msgid "Date & Time"
 msgstr "日期与时间"
 
-msgid "Date format"
-msgstr "日期格式"
+msgid "Date Format"
+msgstr ""
 
 msgid "Day"
 msgstr ""
@@ -1926,8 +1929,8 @@ msgid ""
 "max erase count (big endian)."
 msgstr ""
 
-msgid "Decrypt password"
-msgstr "解码"
+msgid "Decrypt Password"
+msgstr ""
 
 msgid "Dedup"
 msgstr "重复数据删除（Dedup）"
@@ -2180,6 +2183,9 @@ msgstr ""
 
 msgid "Detected"
 msgstr "检测到"
+
+msgid "Detected Disks"
+msgstr ""
 
 msgid "Detected Language:"
 msgstr ""
@@ -3080,6 +3086,9 @@ msgstr "开启写入缓存模式。"
 msgid "Enabled"
 msgstr "已启用"
 
+msgid "Encrypt Password"
+msgstr ""
+
 msgid "Encrypt password"
 msgstr "加密密码"
 
@@ -3218,7 +3227,7 @@ msgstr ""
 msgid "Event"
 msgstr "事件"
 
-msgid "Event selection"
+msgid "Event Selection"
 msgstr ""
 
 msgid "Example: pkg add packagename."
@@ -3321,11 +3330,11 @@ msgstr ""
 msgid "FTP"
 msgstr "FTP"
 
-msgid "FTP - Ban module"
-msgstr "FTP - 封禁模组"
+msgid "FTP - Ban Module"
+msgstr ""
 
-msgid "FTP - File transfer"
-msgstr "FTP - 文件传输"
+msgid "FTP - File Transfer"
+msgstr ""
 
 msgid "FTP Proxy"
 msgstr "FTP 代理伺服器"
@@ -3805,6 +3814,9 @@ msgstr "主机名数据库"
 msgid "Hosts"
 msgstr "主机列表"
 
+msgid "Hosts Allow"
+msgstr ""
+
 msgid "Hosts Setup"
 msgstr ""
 
@@ -3876,8 +3888,8 @@ msgstr ""
 msgid "IPv4 Configuration"
 msgstr "IPv4 配置"
 
-msgid "IPv4 DNS servers"
-msgstr "IPv4 DNS 伺服器"
+msgid "IPv4 DNS Servers"
+msgstr ""
 
 msgid "IPv4 addresses"
 msgstr "IPv4 地址"
@@ -3888,8 +3900,8 @@ msgstr ""
 msgid "IPv6 Configuration"
 msgstr "IPv6 配置"
 
-msgid "IPv6 DNS servers"
-msgstr "IPv6 DNS 伺服器"
+msgid "IPv6 DNS Servers"
+msgstr ""
 
 msgid "IPv6 Gateway"
 msgstr "IPv6 网关"
@@ -4470,9 +4482,6 @@ msgstr "连接动作"
 msgid "List"
 msgstr "列表"
 
-msgid "List Detected Disks"
-msgstr "列出检测到的磁盘"
-
 msgid "List Imported Users"
 msgstr "列出导入的用户"
 
@@ -4566,13 +4575,13 @@ msgstr ""
 msgid "Log Level"
 msgstr "记录档层级"
 
+msgid "Log Order"
+msgstr ""
+
 msgid "Log Settings"
 msgstr ""
 
 msgid "Log file is empty."
-msgstr ""
-
-msgid "Log order"
 msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
@@ -4720,7 +4729,7 @@ msgstr ""
 msgid "Masquerade address"
 msgstr "伪装位址"
 
-msgid "Max entries"
+msgid "Max Entries"
 msgstr ""
 
 msgid "Max. TTL"
@@ -5042,6 +5051,9 @@ msgstr ""
 msgid "NT1 (CIFS)"
 msgstr ""
 
+msgid "NTP Time Server"
+msgstr ""
+
 msgid "NTP is not enabled."
 msgstr "必须启用NTP。"
 
@@ -5076,8 +5088,11 @@ msgstr "改名名称。"
 msgid "Nested HVM"
 msgstr ""
 
-msgid "NetBIOS domain"
-msgstr "NetBIOS域名"
+msgid "NetBIOS Domain"
+msgstr ""
+
+msgid "NetBIOS Name"
+msgstr ""
 
 msgid "NetBIOS name"
 msgstr "NetBIOS 名称"
@@ -5124,6 +5139,9 @@ msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
 "a disk which is spun-down to be spun-up when it is checked."
 msgstr "永不- 任何功耗模式都轮询（检查）装置。这可能会导致降速中的磁盘增速。"
+
+msgid "New Password"
+msgstr ""
 
 msgid "New password"
 msgstr "新密码"
@@ -6174,6 +6192,9 @@ msgstr ""
 msgid "Remote Rsync Server"
 msgstr "远端 Rsync 伺服器"
 
+msgid "Remote Syslog Messages"
+msgstr ""
+
 msgid "Remote Syslog Server"
 msgstr ""
 
@@ -6196,9 +6217,6 @@ msgstr ""
 
 msgid "Remote rsync daemon"
 msgstr "远程rsync进程"
-
-msgid "Remote syslog messages"
-msgstr ""
 
 msgid "Removable"
 msgstr "可移除"
@@ -6282,6 +6300,9 @@ msgstr ""
 
 msgid "Resource"
 msgstr "资源"
+
+msgid "Resource Name"
+msgstr ""
 
 msgid "Resource name"
 msgstr "资源名称"
@@ -7263,9 +7284,6 @@ msgstr "系统记录"
 
 msgid "System message buffer"
 msgstr "系统消息缓冲区"
-
-msgid "System time"
-msgstr "系统时间"
 
 msgid "System tuning"
 msgstr "系统微调"
@@ -8567,6 +8585,9 @@ msgstr "Time Machine"
 msgid "Time Synchronization"
 msgstr ""
 
+msgid "Time Zone"
+msgstr ""
+
 msgid "Time before the load will be rebooted"
 msgstr "负载将重新启动之前的时间"
 
@@ -8591,9 +8612,6 @@ msgstr ""
 
 msgid "Time update interval"
 msgstr "时间同步间隔"
-
-msgid "Time zone"
-msgstr "时区"
 
 msgid "Timeout"
 msgstr "失效时间"
@@ -9070,6 +9088,9 @@ msgstr "用户 ID"
 msgid "User Settings"
 msgstr ""
 
+msgid "User Shares"
+msgstr ""
+
 msgid "User account is locked"
 msgstr ""
 
@@ -9090,9 +9111,6 @@ msgstr "用户密码"
 
 msgid "User portal"
 msgstr "用户门户网站"
-
-msgid "User shares"
-msgstr "用户共享"
 
 msgid "User suffix"
 msgstr "用户名称后缀"
@@ -9167,6 +9185,9 @@ msgstr ""
 
 msgid "Version"
 msgstr "版本"
+
+msgid "Version:"
+msgstr ""
 
 msgid "Vibration During Write."
 msgstr ""
@@ -9704,8 +9725,50 @@ msgstr "卸载"
 msgid "user"
 msgstr ""
 
-msgid "version:"
-msgstr "版本："
-
 msgid "week days"
 msgstr ""
+
+#~ msgid "FTP - File transfer"
+#~ msgstr "FTP - 文件传输"
+
+#~ msgid "System time"
+#~ msgstr "系统时间"
+
+#~ msgid "Time zone"
+#~ msgstr "时区"
+
+#~ msgid "FTP - Ban module"
+#~ msgstr "FTP - 封禁模组"
+
+#~ msgid "IPv6 DNS servers"
+#~ msgstr "IPv6 DNS 伺服器"
+
+#~ msgid "IPv4 DNS servers"
+#~ msgstr "IPv4 DNS 伺服器"
+
+#~ msgid "version:"
+#~ msgstr "版本："
+
+#~ msgid "Decrypt password"
+#~ msgstr "解码"
+
+#~ msgid "Admin password"
+#~ msgstr "管理员密码"
+
+#~ msgid "DNS domain"
+#~ msgstr "DNS域名"
+
+#~ msgid "User shares"
+#~ msgstr "用户共享"
+
+#~ msgid "NetBIOS domain"
+#~ msgstr "NetBIOS域名"
+
+#~ msgid "DNS forwarder"
+#~ msgstr "DNS转发器"
+
+#~ msgid "List Detected Disks"
+#~ msgstr "列出检测到的磁盘"
+
+#~ msgid "Date format"
+#~ msgstr "日期格式"

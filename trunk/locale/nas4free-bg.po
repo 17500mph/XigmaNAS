@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-26 02:52+0000\n"
+"POT-Creation-Date: 2017-01-26 21:12+0000\n"
 "PO-Revision-Date: 2016-11-06 21:25+0000\n"
 "Last-Translator: acidlord <acidlord_34@abv.bg>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 13:28+0000\n"
+"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: BULGARIA\n"
 "Language: \n"
@@ -574,8 +574,8 @@ msgstr "Адрес"
 msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr "Адрес на отдалечения hastd демон. Трябва да бъде статичен IP адрес."
 
-msgid "Admin password"
-msgstr "Админ парола"
+msgid "Admin Password"
+msgstr ""
 
 msgid "Administration password"
 msgstr "Парола на администратора"
@@ -956,11 +956,11 @@ msgstr "Auth Groups"
 msgid "Auth Method"
 msgstr "Auth Method"
 
+msgid "Authenticate Path & Realm"
+msgstr ""
+
 msgid "Authenticate URL"
 msgstr "Authenticate URL"
-
-msgid "Authenticate path & realm"
-msgstr "Authenticate path & realm"
 
 msgid "Authentication"
 msgstr "Идентификация"
@@ -1916,6 +1916,9 @@ msgstr "Cron задача"
 msgid "Current"
 msgstr "Текущ"
 
+msgid "Current Password"
+msgstr ""
+
 msgid "Current Version:"
 msgstr "Текуща версия:"
 
@@ -1982,11 +1985,11 @@ msgstr "DLNA/UPnP MiniDLNA"
 msgid "DNS"
 msgstr "DNS"
 
-msgid "DNS domain"
-msgstr "DNS домейн"
+msgid "DNS Domain"
+msgstr ""
 
-msgid "DNS forwarder"
-msgstr "DNS forwarder"
+msgid "DNS Forwarder"
+msgstr ""
 
 msgid "DNS server is empty."
 msgstr "DNS сървъра е празен."
@@ -2049,8 +2052,8 @@ msgstr "Дата"
 msgid "Date & Time"
 msgstr "Дата и Час"
 
-msgid "Date format"
-msgstr "Формат на датата"
+msgid "Date Format"
+msgstr ""
 
 msgid "Day"
 msgstr ""
@@ -2075,7 +2078,7 @@ msgid ""
 "max erase count (big endian)."
 msgstr ""
 
-msgid "Decrypt password"
+msgid "Decrypt Password"
 msgstr ""
 
 msgid "Dedup"
@@ -2331,6 +2334,9 @@ msgstr ""
 
 msgid "Detected"
 msgstr "Засечен"
+
+msgid "Detected Disks"
+msgstr ""
 
 msgid "Detected Language:"
 msgstr "Засечен Език:"
@@ -3236,6 +3242,9 @@ msgstr ""
 msgid "Enabled"
 msgstr "Позволи"
 
+msgid "Encrypt Password"
+msgstr ""
+
 msgid "Encrypt password"
 msgstr ""
 
@@ -3374,7 +3383,7 @@ msgstr ""
 msgid "Event"
 msgstr ""
 
-msgid "Event selection"
+msgid "Event Selection"
 msgstr ""
 
 msgid "Example: pkg add packagename."
@@ -3477,10 +3486,10 @@ msgstr ""
 msgid "FTP"
 msgstr "FTP"
 
-msgid "FTP - Ban module"
+msgid "FTP - Ban Module"
 msgstr ""
 
-msgid "FTP - File transfer"
+msgid "FTP - File Transfer"
 msgstr ""
 
 msgid "FTP Proxy"
@@ -3963,6 +3972,9 @@ msgstr ""
 msgid "Hosts"
 msgstr "Хостове"
 
+msgid "Hosts Allow"
+msgstr ""
+
 msgid "Hosts Setup"
 msgstr ""
 
@@ -4034,7 +4046,7 @@ msgstr ""
 msgid "IPv4 Configuration"
 msgstr ""
 
-msgid "IPv4 DNS servers"
+msgid "IPv4 DNS Servers"
 msgstr ""
 
 msgid "IPv4 addresses"
@@ -4046,7 +4058,7 @@ msgstr ""
 msgid "IPv6 Configuration"
 msgstr ""
 
-msgid "IPv6 DNS servers"
+msgid "IPv6 DNS Servers"
 msgstr ""
 
 msgid "IPv6 Gateway"
@@ -4624,9 +4636,6 @@ msgstr ""
 msgid "List"
 msgstr ""
 
-msgid "List Detected Disks"
-msgstr ""
-
 msgid "List Imported Users"
 msgstr ""
 
@@ -4718,13 +4727,13 @@ msgstr ""
 msgid "Log Level"
 msgstr "ниво на логване"
 
+msgid "Log Order"
+msgstr ""
+
 msgid "Log Settings"
 msgstr ""
 
 msgid "Log file is empty."
-msgstr ""
-
-msgid "Log order"
 msgstr ""
 
 msgid "Log packets that are handled by this rule to syslog."
@@ -4872,7 +4881,7 @@ msgstr ""
 msgid "Masquerade address"
 msgstr ""
 
-msgid "Max entries"
+msgid "Max Entries"
 msgstr ""
 
 msgid "Max. TTL"
@@ -5195,6 +5204,9 @@ msgstr ""
 msgid "NT1 (CIFS)"
 msgstr ""
 
+msgid "NTP Time Server"
+msgstr ""
+
 msgid "NTP is not enabled."
 msgstr ""
 
@@ -5229,7 +5241,10 @@ msgstr ""
 msgid "Nested HVM"
 msgstr ""
 
-msgid "NetBIOS domain"
+msgid "NetBIOS Domain"
+msgstr ""
+
+msgid "NetBIOS Name"
 msgstr ""
 
 msgid "NetBIOS name"
@@ -5276,6 +5291,9 @@ msgstr ""
 msgid ""
 "Never - Poll (check) the device regardless of its power mode. This may cause "
 "a disk which is spun-down to be spun-up when it is checked."
+msgstr ""
+
+msgid "New Password"
 msgstr ""
 
 msgid "New password"
@@ -6325,6 +6343,9 @@ msgstr ""
 msgid "Remote Rsync Server"
 msgstr ""
 
+msgid "Remote Syslog Messages"
+msgstr ""
+
 msgid "Remote Syslog Server"
 msgstr ""
 
@@ -6346,9 +6367,6 @@ msgid ""
 msgstr ""
 
 msgid "Remote rsync daemon"
-msgstr ""
-
-msgid "Remote syslog messages"
 msgstr ""
 
 msgid "Removable"
@@ -6432,6 +6450,9 @@ msgid "Resolve IP addresses to hostnames."
 msgstr ""
 
 msgid "Resource"
+msgstr ""
+
+msgid "Resource Name"
 msgstr ""
 
 msgid "Resource name"
@@ -7409,9 +7430,6 @@ msgid "System log"
 msgstr ""
 
 msgid "System message buffer"
-msgstr ""
-
-msgid "System time"
 msgstr ""
 
 msgid "System tuning"
@@ -8703,6 +8721,9 @@ msgstr ""
 msgid "Time Synchronization"
 msgstr ""
 
+msgid "Time Zone"
+msgstr ""
+
 msgid "Time before the load will be rebooted"
 msgstr ""
 
@@ -8727,9 +8748,6 @@ msgstr ""
 
 msgid "Time update interval"
 msgstr "Time update interval"
-
-msgid "Time zone"
-msgstr "Часова зона"
 
 msgid "Timeout"
 msgstr "Максимално изчакване"
@@ -9208,6 +9226,9 @@ msgstr ""
 msgid "User Settings"
 msgstr ""
 
+msgid "User Shares"
+msgstr ""
+
 msgid "User account is locked"
 msgstr ""
 
@@ -9227,9 +9248,6 @@ msgid "User password."
 msgstr "Потребителска парола."
 
 msgid "User portal"
-msgstr ""
-
-msgid "User shares"
 msgstr ""
 
 msgid "User suffix"
@@ -9305,6 +9323,9 @@ msgstr ""
 
 msgid "Version"
 msgstr "Версия"
+
+msgid "Version:"
+msgstr ""
 
 msgid "Vibration During Write."
 msgstr ""
@@ -9843,8 +9864,26 @@ msgstr ""
 msgid "user"
 msgstr "потребител"
 
-msgid "version:"
-msgstr "версия:"
-
 msgid "week days"
 msgstr ""
+
+#~ msgid "Time zone"
+#~ msgstr "Часова зона"
+
+#~ msgid "version:"
+#~ msgstr "версия:"
+
+#~ msgid "Admin password"
+#~ msgstr "Админ парола"
+
+#~ msgid "Authenticate path & realm"
+#~ msgstr "Authenticate path & realm"
+
+#~ msgid "DNS domain"
+#~ msgstr "DNS домейн"
+
+#~ msgid "DNS forwarder"
+#~ msgstr "DNS forwarder"
+
+#~ msgid "Date format"
+#~ msgstr "Формат на датата"
