@@ -31,8 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 require 'disks_raid_gvinum_fun.inc';
 
 $sphere_scriptname = basename(__FILE__);
@@ -289,9 +289,9 @@ foreach ($a_sdisk as $r_sdisk) {
 	$a_device[$helpinghand] = $r_device;
 }
 
-$pgtitle = [gtext('Disks'), gtext('Software RAID'), gtext('RAID 0/1/5'), ($isrecordnew) ? gtext('Add') : gtext('Edit')];
+$pgtitle = [gtext('Disks'),gtext('Software RAID'),gtext('RAID 0/1/5'),($isrecordnew) ? gtext('Add') : gtext('Edit')];
 ?>
-<?php include("fbegin.inc"); ?>
+<?php include 'fbegin.inc';?>
 <?php if ($isrecordnewornewmodify):?>
 <script type="text/javascript">
 //<![CDATA[
@@ -375,9 +375,15 @@ function toggleselection(ego, triggerbyname) {
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
 	<?php 
-		if (!empty($nodisk_errors)) print_input_errors($nodisk_errors);
-		if (!empty($input_errors)) print_input_errors($input_errors);
-		if (file_exists($d_sysrebootreqd_path)) { print_info_box(get_std_save_message(0)); }
+	if(!empty($nodisk_errors)):
+		print_input_errors($nodisk_errors);
+	endif;
+	if(!empty($input_errors)):
+		print_input_errors($input_errors);
+	endif;
+	if(file_exists($d_sysrebootreqd_path)):
+		print_info_box(get_std_save_message(0));
+	endif;
 	?>
 	<?php if ($isrecordnewornewmodify):?>
 		<div id="submit" style="margin-bottom:10px">
@@ -414,15 +420,15 @@ function toggleselection(ego, triggerbyname) {
 	</table>
 	<table id="area_data_selection">
 		<colgroup>
-			<col style="width:5%"> <!--// checkbox -->
-			<col style="width:10%"><!--// Device -->
-			<col style="width:10%"><!--// Partition -->
-			<col style="width:15%"><!--// Model -->
-			<col style="width:10%"><!--// Serial -->
-			<col style="width:10%"><!--// Size -->
-			<col style="width:20%"><!--// Controller -->
-			<col style="width:15%"><!--// Description -->
-			<col style="width:5%"> <!--// Icons -->
+			<col style="width:5%">
+			<col style="width:10%">
+			<col style="width:10%">
+			<col style="width:15%">
+			<col style="width:10%">
+			<col style="width:10%">
+			<col style="width:20%">
+			<col style="width:15%">
+			<col style="width:5%">
 		</colgroup>
 		<thead>
 			<?php html_titleline2(gtext('Device List'), 9);?>
@@ -506,6 +512,6 @@ function toggleselection(ego, triggerbyname) {
 		<input name="Cancel" id="cancel_button" type="submit" class="formbtn" value="<?=gtext('Cancel');?>" />
 		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>" />
 	</div>
-	<?php include("formend.inc"); ?>
+	<?php include 'formend.inc';?>
 </form></td></tr></tbody></table>
-<?php include("fend.inc"); ?>
+<?php include 'fend.inc';?>
