@@ -31,10 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-
-$pgtitle = array(gtext("Diagnostics"), gtext("Traceroute"));
+require 'auth.inc';
+require 'guiconfig.inc';
 
 if ($_POST) {
 	unset($input_errors);
@@ -60,8 +58,9 @@ if (!isset($do_traceroute)) {
 	$ttl = 18;
 	$resolve = false;
 }
+$pgtitle = [gtext('Diagnostics'),gtext('Traceroute')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabnavtbl">
@@ -76,7 +75,7 @@ if (!isset($do_traceroute)) {
 			<form action="diag_traceroute.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-			    		<?php html_titleline(gtext("Traceroute Test"));?>
+					<?php html_titleline(gtext('Traceroute Test'));?>
 					<?php html_inputbox("host", gtext("Host"), $host, gtext("Destination host name or IP number."), true, 20);?>
 					<?php $a_ttl = array(); for ($i = 1; $i <= 64; $i++) { $a_ttl[$i] = $i; }?>
 					<?php html_combobox("ttl", gtext("Max. TTL"), $ttl, $a_ttl, gtext("Max. time-to-live (max. number of hops) used in outgoing probe packets."), true);?>
@@ -85,22 +84,23 @@ if (!isset($do_traceroute)) {
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Traceroute");?>" />
 				</div>
-				<?php if ($do_traceroute) {
-				echo(sprintf("<div id='cmdoutput'>%s</div>", gtext("Command output:")));
-				echo('<pre class="cmdoutput">');
-				//ob_end_flush();
-				exec("/usr/sbin/traceroute " . ($resolve ? "" : "-n ") . "-w 2 -m " . escapeshellarg($ttl) . " " . escapeshellarg($host), $rawdata);
-				echo htmlspecialchars(implode("\n", $rawdata));
-				unset($rawdata);
-				echo('</pre>');
-				}
+				<?php
+				if ($do_traceroute):
+					echo(sprintf("<div id='cmdoutput'>%s</div>", gtext("Command output:")));
+					echo('<pre class="cmdoutput">');
+					//ob_end_flush();
+					exec("/usr/sbin/traceroute " . ($resolve ? "" : "-n ") . "-w 2 -m " . escapeshellarg($ttl) . " " . escapeshellarg($host), $rawdata);
+					echo htmlspecialchars(implode("\n", $rawdata));
+					unset($rawdata);
+					echo('</pre>');
+				endif;
 				?>
 				<div id="remarks">
 					<?php html_remark("note", gtext("Note"), gtext("Traceroute may take a while to complete. You may hit the Stop button on your browser at any time to see the progress of failed traceroutes."));?>
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
