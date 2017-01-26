@@ -111,9 +111,9 @@ if ($_POST) {
 	}
 }
 
-$pgtitle = [gtext('Disks'), gtext('Software RAID'), gtext('RAID 0/1/5'), gtext('Management')];
+$pgtitle = [gtext('Disks'),gtext('Software RAID'),gtext('RAID 0/1/5'),gtext('Management')];
 ?>
-<?php include("fbegin.inc"); ?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
@@ -199,13 +199,13 @@ function controlactionbuttons(ego, triggerbyname) {
 	?>
 	<table id="area_data_selection">
 		<colgroup>
-			<col style="width:5%"><!-- checkbox -->
-			<col style="width:20%"><!-- Volume Name -->
-			<col style="width:10%"><!-- Type -->
-			<col style="width:15%"><!-- Size -->
-			<col style="width:30%"><!-- Description -->
-			<col style="width:10%"><!-- Status -->
-			<col style="width:10%"><!-- Icons -->
+			<col style="width:5%">
+			<col style="width:20%">
+			<col style="width:10%">
+			<col style="width:15%">
+			<col style="width:30%">
+			<col style="width:10%">
+			<col style="width:10%">
 		</colgroup>
 		<thead>
 			<?php html_titleline2(gtext('Overview'), 7);?>
@@ -312,6 +312,6 @@ function controlactionbuttons(ego, triggerbyname) {
 			?>
 		</tbody>
 	</table>
-	<?php include("formend.inc"); ?>
+	<?php include 'formend.inc';?>
 </form></td></tr></tbody></table>
-<?php include("fend.inc"); ?>
+<?php include 'fend.inc';?>
