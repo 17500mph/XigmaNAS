@@ -33,7 +33,7 @@
 */
 require 'auth.inc';
 require 'guiconfig.inc';
-require("zfs.inc");
+require 'zfs.inc';
 
 $sphere_scriptname = basename(__FILE__);
 $sphere_scriptname_child = 'disks_zfs_volume_edit.php';
