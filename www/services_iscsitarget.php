@@ -31,10 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-
-$pgtitle = array(gtext("Services"), gtext("iSCSI Target"));
+require 'auth.inc';
+require 'guiconfig.inc';
 
 array_make_branch($config,'iscsitarget','portalgroup');
 array_make_branch($config,'iscsitarget','initiatorgroup');
@@ -191,11 +189,9 @@ if ($_POST) {
 		$savemsg = get_std_save_message($retval);
 	}
 }
-array_make_branch($config,'iscsitarget','portalgroup');
-array_make_branch($config,'iscsitarget','initiatorgroup');
-array_make_branch($config,'iscsitarget','authgroup');
+$pgtitle = [gtext('Services'),gtext("iSCSI Target")];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function enable_change(enable_change) {
@@ -246,18 +242,14 @@ function uctlenable_change(enable_change) {
 //-->
 </script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabact"><a href="services_iscsitarget.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Settings");?></span></a></li>
-				<li class="tabinact"><a href="services_iscsitarget_target.php"><span><?=gtext("Targets");?></span></a></li>
-				<li class="tabinact"><a href="services_iscsitarget_pg.php"><span><?=gtext("Portals");?></span></a></li>
-				<li class="tabinact"><a href="services_iscsitarget_ig.php"><span><?=gtext("Initiators");?></span></a></li>
-				<li class="tabinact"><a href="services_iscsitarget_ag.php"><span><?=gtext("Auths");?></span></a></li>
-				<li class="tabinact"><a href="services_iscsitarget_media.php"><span><?=gtext("Media");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabact"><a href="services_iscsitarget.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Settings");?></span></a></li>
+		<li class="tabinact"><a href="services_iscsitarget_target.php"><span><?=gtext("Targets");?></span></a></li>
+		<li class="tabinact"><a href="services_iscsitarget_pg.php"><span><?=gtext("Portals");?></span></a></li>
+		<li class="tabinact"><a href="services_iscsitarget_ig.php"><span><?=gtext("Initiators");?></span></a></li>
+		<li class="tabinact"><a href="services_iscsitarget_ag.php"><span><?=gtext("Auths");?></span></a></li>
+		<li class="tabinact"><a href="services_iscsitarget_media.php"><span><?=gtext("Media");?></span></a></li>
+	</ul></td></tr>
 	<tr>
 		<td class="tabcont">
 			<form action="services_iscsitarget.php" method="post" name="iform" id="iform" onsubmit="spinner()">
@@ -319,7 +311,7 @@ function uctlenable_change(enable_change) {
 				<div id="remarks">
 					<?php html_remark("note", gtext("Note"), sprintf(gtext("You must have a minimum of %dMiB RAM for using iSCSI target."), 512));?>
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
@@ -330,4 +322,4 @@ enable_change();
 uctlenable_change();
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
