@@ -31,11 +31,11 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-require("services.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
+require 'services.inc';
 
-$pgtitle = array(gtext("System"), gtext("General Setup"));
+$pgtitle = [gtext('System'),gtext('General Setup')];
 
 $pconfig['hostname'] = $config['system']['hostname'];
 $pconfig['domain'] = $config['system']['domain'];
@@ -288,7 +288,7 @@ $pglocalheader = <<< EOD
 <script type="text/javascript" src="js/datechooser.js"></script>
 EOD;
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function ntp_change() {
@@ -345,16 +345,16 @@ function webguiproto_change() {
 					html_inputbox("username", gtext("Username"), $pconfig['username'], gtext("It's recommended to change the default username and password for accessing the WebGUI, enter the username here."), false, 21);
 					html_combobox("webguiproto", gtext("Protocol"), $pconfig['webguiproto'], array("http" => "HTTP", "https" => "HTTPS"), gtext("Select Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol Secure (HTTPS) for the WebGUI."), false, false, "webguiproto_change()");
 					html_inputbox("webguiport", gtext("Port"), $pconfig['webguiport'], gtext("Enter a custom port number for the WebGUI if you want to override the default (80 for HTTP, 443 for HTTPS)."), false, 6);
-					html_inputbox("webguihostsallow", gtext("Hosts allow"), $pconfig['webguihostsallow'], gtext("Space delimited set of IP or CIDR notation that permitted to access the WebGUI. (empty is the same network of LAN interface)"), false, 60);
+					html_inputbox("webguihostsallow", gtext("Hosts Allow"), $pconfig['webguihostsallow'], gtext("Space delimited set of IP or CIDR notation that permitted to access the WebGUI. (empty is the same network of LAN interface)"), false, 60);
 					html_textarea("certificate", gtext("Certificate"), $pconfig['certificate'], gtext("Paste a signed certificate in X.509 PEM format here."), true, 65, 7, false, false);
-					html_textarea("privatekey", gtext("Private key"), $pconfig['privatekey'], gtext("Paste an private key in PEM format here."), true, 65, 7, false, false);
+					html_textarea("privatekey", gtext("Private Key"), $pconfig['privatekey'], gtext("Paste an private key in PEM format here."), true, 65, 7, false, false);
 					html_languagecombobox("language", gtext("Language"), $pconfig['language'], gtext("Select the language of the WebGUI."), "", false);
 					$helpinghand = '<a href="'
 						. 'http://redmine.lighttpd.net/projects/lighttpd/wiki'
 						. '" target="_blank">'
 						. gtext('Please check the documentation')
 						. '</a>.';
-					html_textarea('auxparam', gtext('Auxiliary parameters'), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : '', sprintf(gtext('These parameters will be added to %s.'), 'lighttpd.conf')  . ' ' . $helpinghand, false, 85, 7, false, false);
+					html_textarea('auxparam', gtext('Auxiliary Parameters'), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : '', sprintf(gtext('These parameters will be added to %s.'), 'lighttpd.conf')  . ' ' . $helpinghand, false, 85, 7, false, false);
 					html_separator();
 					?>
 					<tr>
@@ -367,7 +367,7 @@ function webguiproto_change() {
 					html_titleline(gtext("DNS"));
 					?>
 					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("IPv4 DNS servers");?></td>
+						<td width="22%" valign="top" class="vncell"><?=gtext("IPv4 DNS Servers");?></td>
 						<td width="78%" class="vtable">
 							<?php $readonly = ("dhcp" === $config['interfaces']['lan']['ipaddr']) ? "readonly=\"readonly\"" : "";?>
 							<input name="dns1" type="text" class="formfld" id="dns1" size="20" value="<?=htmlspecialchars($pconfig['dns1']);?>" <?=$readonly;?> /><br />
@@ -376,7 +376,7 @@ function webguiproto_change() {
 						</td>
 					</tr>
 					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("IPv6 DNS servers");?></td>
+						<td width="22%" valign="top" class="vncell"><?=gtext("IPv6 DNS Servers");?></td>
 						<td width="78%" class="vtable">
 							<?php $readonly = (!isset($config['interfaces']['lan']['ipv6_enable']) || ("auto" === $config['interfaces']['lan']['ipv6addr'])) ? "readonly=\"readonly\"" : "";?>
 							<input name="ipv6dns1" type="text" class="formfld" id="ipv6dns1" size="20" value="<?=htmlspecialchars($pconfig['ipv6dns1']);?>" <?=$readonly;?> /><br />
@@ -386,10 +386,10 @@ function webguiproto_change() {
 					</tr>
 					<?php html_separator();?>
 					<?php html_titleline(gtext("Time"));?>
-					<?php html_timezonecombobox("timezone", gtext("Time zone"), $pconfig['timezone'], gtext("Select the location closest to you."), false);?>
-					<?php html_combobox("datetimeformat", gtext("Date format"), $pconfig['datetimeformat'], get_datetime_locale_samples(), gtext("Select a date format."), false);?>
+					<?php html_timezonecombobox("timezone", gtext("Time Zone"), $pconfig['timezone'], gtext("Select the location closest to you."), false);?>
+					<?php html_combobox("datetimeformat", gtext("Date Format"), $pconfig['datetimeformat'], get_datetime_locale_samples(), gtext("Select a date format."), false);?>
 					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("System time");?></td>
+						<td width="22%" valign="top" class="vncell"><?=gtext("System Time");?></td>
 						<td width="78%" class="vtable">
 							<input id="systime" size="20" maxlength="20" name="systime" type="text" value="" />
 							<img src="images/cal.gif" onclick="showChooser(this, 'systime', 'chooserSpan', 2000, 2050, Date.patterns.Default, true);" alt="" />							
@@ -398,13 +398,13 @@ function webguiproto_change() {
 						</td>
 					</tr>
 					<?php html_checkbox("ntp_enable", gtext("Enable NTP"), !empty($pconfig['ntp_enable']) ? true : false, gtext("Use the specified NTP server."), "", false, "ntp_change()");?>
-					<?php html_inputbox("ntp_timeservers", gtext("NTP time server"), $pconfig['ntp_timeservers'], gtext("Use a space to separate multiple hosts (only one required). Remember to set up at least one DNS server if you enter a host name here!"), true, 40);?>
+					<?php html_inputbox("ntp_timeservers", gtext("NTP Time Server"), $pconfig['ntp_timeservers'], gtext("Use a space to separate multiple hosts (only one required). Remember to set up at least one DNS server if you enter a host name here!"), true, 40);?>
 					<?php html_inputbox("ntp_updateinterval", gtext("Time Synchronization"), $pconfig['ntp_updateinterval'], gtext("Minutes between the next network time synchronization."), true, 20);?>
 				</table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save");?>" />
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
@@ -415,4 +415,4 @@ ntp_change();
 webguiproto_change();
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
