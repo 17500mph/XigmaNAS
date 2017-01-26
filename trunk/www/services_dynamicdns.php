@@ -31,13 +31,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-
-$pgtitle = array(gtext("Services"), gtext("Dynamic DNS"));
+require 'auth.inc';
+require 'guiconfig.inc';
 
 array_make_branch($config,'dynamicdns');
-
 $pconfig['enable'] = isset($config['dynamicdns']['enable']);
 $pconfig['provider'] = !empty($config['dynamicdns']['provider']) ? $config['dynamicdns']['provider'] : "";
 $pconfig['domainname'] = !empty($config['dynamicdns']['domainname']) ? $config['dynamicdns']['domainname'] : "";
@@ -46,8 +43,9 @@ $pconfig['password'] = !empty($config['dynamicdns']['password']) ? $config['dyna
 $pconfig['updateperiod'] = !empty($config['dynamicdns']['updateperiod']) ? $config['dynamicdns']['updateperiod'] : "";
 $pconfig['forcedupdateperiod'] = !empty($config['dynamicdns']['forcedupdateperiod']) ? $config['dynamicdns']['forcedupdateperiod'] : "";
 $pconfig['wildcard'] = isset($config['dynamicdns']['wildcard']);
-if (isset($config['dynamicdns']['auxparam']) && is_array($config['dynamicdns']['auxparam']))
+if(isset($config['dynamicdns']['auxparam']) && is_array($config['dynamicdns']['auxparam'])): 
 	$pconfig['auxparam'] = implode("\n", $config['dynamicdns']['auxparam']);
+endif;
 
 if ($_POST) {
 	unset($input_errors);
@@ -98,8 +96,9 @@ if ($_POST) {
 }
 // Get list of available interfaces.
 $a_interface = get_interface_list();
+$pgtitle = [gtext('Services'),gtext('Dynamic DNS')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function enable_change(enable_change) {
@@ -153,7 +152,7 @@ function provider_change() {
 			</td>
 		</tr>
 	</table>
-	<?php include("formend.inc");?>
+	<?php include 'formend.inc';?>
 </form>
 <script type="text/javascript">
 <!--
@@ -161,4 +160,4 @@ enable_change(false);
 provider_change();
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
