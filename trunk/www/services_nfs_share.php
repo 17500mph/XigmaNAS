@@ -34,8 +34,6 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-$pgtitle = [gtext('Services'),gtext('NFS'),gtext('Shares')];
-
 if ($_POST) {
 	$pconfig = $_POST;
 
@@ -59,11 +57,11 @@ if ($_POST) {
 	}
 }
 
-if (!isset($config['nfsd']['share']) || !is_array($config['nfsd']['share']))
-	$config['nfsd']['share'] = array();
-
-array_sort_key($config['nfsd']['share'], "path");
-$a_share = &$config['nfsd']['share'];
+$a_share = &array_make_branch($config,'nfsd','share');
+if(empty($a_share)):
+else:
+	array_sort_key($a_share,'path');
+endif;
 
 if (isset($_GET['act']) && $_GET['act'] === "del") {
 	updatenotify_set("nfsshare", UPDATENOTIFY_MODE_DIRTY, $_GET['uuid']);
@@ -91,6 +89,7 @@ function nfsshare_process_updatenotification($mode, $data) {
 
 	return $retval;
 }
+$pgtitle = [gtext('Services'),gtext('NFS'),gtext('Shares')];
 ?>
 <?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
@@ -105,42 +104,42 @@ function nfsshare_process_updatenotification($mode, $data) {
 		<tr>
 		<td class="tabcont">
 			<form action="services_nfs_share.php" method="post">
-			<?php if (!empty($savemsg)) print_info_box($savemsg);?>
-			<?php if (updatenotify_exists("nfsshare")) print_config_change_box();?>
-			<table width="100%" border="0" cellpadding="0" cellspacing="0">
-			<?php html_titleline2(gtext('Overview'), 4);?>
-		<tr>
-			<td width="30%" class="listhdrlr"><?=gtext("Path");?></td>
-			<td width="30%" class="listhdrr"><?=gtext("Network");?></td>
-			<td width="30%" class="listhdrr"><?=gtext("Comment");?></td>
-			<td width="10%" class="list"></td>
-			</tr>
-  			<?php foreach ($a_share as $sharev):?>
-			<?php $notificationmode = updatenotify_get_mode("nfsshare", $sharev['uuid']);?>
-		<tr>
-			<td class="listlr"><?=htmlspecialchars(isset($sharev['v4rootdir']) ? "V4: " : "");?><?=htmlspecialchars($sharev['path']);?>&nbsp;</td>
-			<td class="listr"><?=htmlspecialchars($sharev['network']);?>&nbsp;</td>
-			<td class="listr"><?=htmlspecialchars($sharev['comment']);?>&nbsp;</td>
-			<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
-			<td valign="middle" nowrap="nowrap" class="list">
-			<a href="services_nfs_share_edit.php?uuid=<?=$sharev['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit share");?>" border="0" alt="<?=gtext("Edit share");?>" /></a>
-			<a href="services_nfs_share.php?act=del&amp;uuid=<?=$sharev['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this share?");?>')"><img src="images/delete.png" title="<?=gtext("Delete share");?>" border="0" alt="<?=gtext("Delete share");?>" /></a>
-			</td>
-			<?php else:?>
-			<td valign="middle" nowrap="nowrap" class="list">
-			<img src="images/delete.png" border="0" alt="" />
-			</td>
-	<?php endif;?>
-</tr>
-	<?php endforeach;?>
-		<tr>
-		<td class="list" colspan="3"></td>
-		<td class="list"><a href="services_nfs_share_edit.php"><img src="images/add.png" title="<?=gtext("Add share");?>" border="0" alt="<?=gtext("Add share");?>" /></a></td>
+				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
+				<?php if (updatenotify_exists("nfsshare")) print_config_change_box();?>
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+					<?php html_titleline2(gtext('Overview'), 4);?>
+					<tr>
+						<td width="30%" class="listhdrlr"><?=gtext("Path");?></td>
+						<td width="30%" class="listhdrr"><?=gtext("Network");?></td>
+						<td width="30%" class="listhdrr"><?=gtext("Comment");?></td>
+						<td width="10%" class="list"></td>
+					</tr>
+					<?php foreach ($a_share as $sharev):?>
+						<?php $notificationmode = updatenotify_get_mode("nfsshare", $sharev['uuid']);?>
+						<tr>
+							<td class="listlr"><?=htmlspecialchars(isset($sharev['v4rootdir']) ? "V4: " : "");?><?=htmlspecialchars($sharev['path']);?>&nbsp;</td>
+							<td class="listr"><?=htmlspecialchars($sharev['network']);?>&nbsp;</td>
+							<td class="listr"><?=htmlspecialchars($sharev['comment']);?>&nbsp;</td>
+							<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
+								<td valign="middle" nowrap="nowrap" class="list">
+									<a href="services_nfs_share_edit.php?uuid=<?=$sharev['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit share");?>" border="0" alt="<?=gtext("Edit share");?>" /></a>
+									<a href="services_nfs_share.php?act=del&amp;uuid=<?=$sharev['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this share?");?>')"><img src="images/delete.png" title="<?=gtext("Delete share");?>" border="0" alt="<?=gtext("Delete share");?>" /></a>
+								</td>
+							<?php else:?>
+								<td valign="middle" nowrap="nowrap" class="list">
+									<img src="images/delete.png" border="0" alt="" />
+								</td>
+							<?php endif;?>
+						</tr>
+					<?php endforeach;?>
+					<tr>
+						<td class="list" colspan="3"></td>
+						<td class="list"><a href="services_nfs_share_edit.php"><img src="images/add.png" title="<?=gtext("Add share");?>" border="0" alt="<?=gtext("Add share");?>" /></a></td>
+					</tr>
+				</table>
+				<?php include 'formend.inc';?>
+			</form>
+		</td>
 	</tr>
-</table>
-<?php include 'formend.inc';?>
-</form>
-</td>
-</tr>
 </table>
 <?php include 'fend.inc';?>
