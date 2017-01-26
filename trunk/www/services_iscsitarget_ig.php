@@ -64,14 +64,12 @@ if ($_POST) {
 	}
 }
 
-if (!isset($config['iscsitarget']['initiatorgroup']) || !is_array($config['iscsitarget']['initiatorgroup']))
-	$config['iscsitarget']['initiatorgroup'] = array();
-
-array_sort_key($config['iscsitarget']['initiatorgroup'], "tag");
-$a_iscsitarget_ig = &$config['iscsitarget']['initiatorgroup'];
-
-if (!isset($config['iscsitarget']['target']) || !is_array($config['iscsitarget']['target']))
-	$config['iscsitarget']['target'] = array();
+$a_iscsitarget_ig = &array_make_branch($config,'iscsitarget','initiatorgroup');
+if(empty($a_iscsitarget_ig)):
+else:
+	array_sort_key($a_iscsitarget_ig,'tag');
+endif;
+array_make_branch($config,'iscsitarget','target');
 
 if (isset($_GET['act']) && $_GET['act'] === "del") {
 	$index = array_search_ex($_GET['uuid'], $config['iscsitarget']['initiatorgroup'], "uuid");

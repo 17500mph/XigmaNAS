@@ -64,15 +64,12 @@ if ($_POST) {
 	}
 }
 
-if (!isset($config['iscsitarget']['portalgroup']) || !is_array($config['iscsitarget']['portalgroup']))
-	$config['iscsitarget']['portalgroup'] = array();
-
-
-array_sort_key($config['iscsitarget']['portalgroup'], "tag");
-$a_iscsitarget_pg = &$config['iscsitarget']['portalgroup'];
-
-if (!isset($config['iscsitarget']['target']) || !is_array($config['iscsitarget']['target']))
-	$config['iscsitarget']['target'] = array();
+$a_iscsitarget_pg = &array_make_branch($config,'iscsitarget','portalgroup');
+if(empty($a_iscsitarget_pg)):
+else:
+	array_sort_key($a_iscsitarget_pg,'tag');
+endif;
+array_make_branch($config,'iscsitarget','target');
 
 if (isset($_GET['act']) && $_GET['act'] === "del") {
 	$index = array_search_ex($_GET['uuid'], $config['iscsitarget']['portalgroup'], "uuid");
