@@ -34,46 +34,70 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-$pgtitle = [gtext('Services'),gtext('Samba AD'),gtext('Initialize')];
-
 $errormsg="";
 $do_init = false;
 
 list($pconfig['dns_forwarder']) = get_ipv4dnsserver();
-if ($pconfig['dns_forwarder'] == "127.0.0.1")
-	$pconfig['dns_forwarder'] = "";
-$pconfig['dns_domain'] = strtolower($config['system']['domain']);
-if (preg_match('/^([^\.]+)\./', $pconfig['dns_domain'], $m)) {
+if($pconfig['dns_forwarder'] == '127.0.0.1'):
+	$pconfig['dns_forwarder'] = '';
+endif;
+$pconfig['dns_domain'] = strtolower($config['system']['domain'] ?? '');
+if(preg_match('/^([^\.]+)\./', $pconfig['dns_domain'], $m)):
 	$pconfig['netbios_domain'] = strtoupper($m[1]);
-} else {
+else:
 	$pconfig['netbios_domain'] = strtoupper($pconfig['dns_domain']);
-	$errormsg .= gtext("Domain have no 2nd level name.");
+	$errormsg .= gtext('Domain is missing 2nd level name.');
 	$errormsg .= "<br/>";
-}
-$pconfig['path'] = "";
-$pconfig['fstype'] = "s3fs";
+endif;
+$pconfig['path'] = '';
+$pconfig['fstype'] = 's3fs';
 $pconfig['user_shares'] = false;
 $realm = strtoupper($pconfig['dns_domain']);
-$hostname = $config['system']['hostname'];
-$netbiosname = strtoupper($config['system']['hostname']);
-
-if ($config['interfaces']['lan']['ipaddr'] == "dhcp") {
-	$errormsg .= gtext("Cannot use DHCP for LAN interface.");
+$hostname = $config['system']['hostname'] ?? '';
+$netbiosname = strtoupper($config['system']['hostname'] ?? '');
+if(isset($config['interfaces']['lan']['ipaddr'])):
+	if($config['interfaces']['lan']['ipaddr'] == "dhcp"):
+		$errormsg .= gtext('Cannot use DHCP for LAN interface.');
+		$errormsg .= "<br/>";
+	endif;
+else:
+	$errormsg .= gtext('LAN interface is not configured.');
 	$errormsg .= "<br/>";
-}
-if ((!empty($config['system']['dnsserver']) && $config['system']['dnsserver'][0] == "")
-   && (!empty($config['system']['ipv6dnsserver']) && $config['system']['ipv6dnsserver'][0] == "")) {
+endif;
+array_make_branch($config,'system','dnsserver');
+array_make_branch($config,'system','ipv6dnsserver');
+$dns_configured = false;
+foreach($config['system']['dnsserver'] as $dnsserver):
+	if(is_string($dnsserver) && preg_match('/\S',$dnsserver)):
+		$dns_configured = true;
+		break; // break loop
+	endif;
+endforeach;
+foreach($config['system']['ipv6dnsserver'] as $dnsserver):
+	if(is_string($dnsserver) && preg_match('/\S',$dnsserver)):
+		$dns_configured = true;
+		break; // break loop
+	endif;
+endforeach;
+if(!dns_configured):
+	$errormsg .= gtext('No DNS server have been configured.');
+	$errormsg .= "<br/>";
+endif;
+/*
+if((!empty($config['system']['dnsserver']) && $config['system']['dnsserver'][0] == "") && (!empty($config['system']['ipv6dnsserver']) && $config['system']['ipv6dnsserver'][0] == "")) {
 	$errormsg .= gtext("DNS server is empty.");
 	$errormsg .= "<br/>";
 }
-if (!isset($config['system']['ntp']['enable'])) {
-	$errormsg .= gtext("NTP is not enabled.");
+*/
+if(isset($config['system']['ntp']['enable'])):
+else:
+	$errormsg .= gtext('NTP is not enabled.');
 	$errormsg .= "<br/>";
-}
-if (isset($config['samba']['enable'])) {
+endif;
+if(isset($config['samba']['enable'])):
 	$errormsg .= gtext("CIFS/SMB is enabled.");
 	$errormsg .= "<br/>";
-}
+endif;
 
 if ($_POST) {
 	unset($input_errors);
@@ -152,6 +176,7 @@ if ($_POST) {
 		}
 	}
 }
+$pgtitle = [gtext('Services'),gtext('Samba AD'),gtext('Initialize')];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">//<![CDATA[
@@ -170,14 +195,10 @@ $(document).ready(function(){
 //]]>
 </script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabinact"><a href="services_samba_ad.php"><span><?=gtext("Settings");?></span></a></li>
-				<li class="tabact"><a href="services_samba_ad_init.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Initialize");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabinact"><a href="services_samba_ad.php"><span><?=gtext("Settings");?></span></a></li>
+		<li class="tabact"><a href="services_samba_ad_init.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Initialize");?></span></a></li>
+	</ul></td></tr>
 	<tr>
 		<td class="tabcont">
 			<form action="services_samba_ad_init.php" method="post" name="iform" id="iform" onsubmit="spinner()">
