@@ -31,10 +31,10 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Services"), gtext("HAST"), gtext("Resources"));
+$pgtitle = [gtext('Services'),gtext('HAST'),gtext('Resources')];
 
 if ($_POST) {
 	$pconfig = $_POST;
@@ -87,7 +87,7 @@ function hastresource_process_updatenotification($mode, $data) {
 	return $retval;
 }
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td class="tabnavtbl">
@@ -104,6 +104,7 @@ function hastresource_process_updatenotification($mode, $data) {
 	<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 	<?php if (updatenotify_exists("hastresource")) print_config_change_box();?>
 	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<?php html_titleline2(gtext('Overview'), 7);?>
 	  <tr>
 	    <td width="12%" class="listhdrlr"><?=gtext("Resource");?></td>
 	    <td width="10%" class="listhdrr"><?=gtext("Role");?></td>
@@ -144,9 +145,9 @@ function hastresource_process_updatenotification($mode, $data) {
 	<div id="submit">
 	  <input id="reload" name="reload" type="submit" class="formbtn" value="<?php echo gtext("Reload page"); ?>" />
 	</div>
-	<?php include("formend.inc");?>
+	<?php include 'formend.inc';?>
       </form>
     </td>
   </tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
