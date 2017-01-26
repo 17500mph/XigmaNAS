@@ -39,8 +39,6 @@ if (isset($_GET['uuid']))
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = [gtext('Services'),gtext('HAST'), isset($uuid) ? gtext('Edit') : gtext('Add')];
-
 $a_resource = &array_make_branch($config,'hast','hastresource');
 if(empty($a_resource)):
 else:
@@ -123,18 +121,15 @@ if ($_POST) {
 		exit;
 	}
 }
+$pgtitle = [gtext('Services'),gtext('HAST'),isset($uuid) ? gtext('Edit') : gtext('Add')];
 ?>
 <?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabinact"><a href="services_hast.php"><span><?=gtext("Settings");?></span></a></li>
-				<li class="tabact"><a href="services_hast_resource.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Resources");?></span></a></li>
-				<li class="tabinact"><a href="services_hast_info.php"><span><?=gtext("Information");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabinact"><a href="services_hast.php"><span><?=gtext("Settings");?></span></a></li>
+		<li class="tabact"><a href="services_hast_resource.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Resources");?></span></a></li>
+		<li class="tabinact"><a href="services_hast_info.php"><span><?=gtext("Information");?></span></a></li>
+	</ul></td></tr>
 	<tr>
 		<td class="tabcont">
 			<form action="services_hast_resource_edit.php" method="post" name="iform" id="iform">
@@ -170,6 +165,9 @@ if ($_POST) {
 					<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
 					<input name="uuid" type="hidden" value="<?=$pconfig['uuid'];?>" />
 				</div>
-<?php include 'formend.inc';?>
-</form></td></tr></table>
+				<?php include 'formend.inc';?>
+			</form>
+		</td>
+	</tr>
+</table>
 <?php include 'fend.inc';?>
