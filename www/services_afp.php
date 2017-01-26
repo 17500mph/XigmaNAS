@@ -31,10 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-
-$pgtitle = array(gtext("Services"),gtext("AFP"));
+require 'auth.inc';
+require 'guiconfig.inc';
 
 array_make_branch($config,'afp','auxparam');
 
@@ -78,8 +76,9 @@ if ($_POST) {
 		$savemsg = get_std_save_message($retval);
 	}
 }
+$pgtitle = [gtext('Services'),gtext('AFP')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function enable_change(enable_change) {
@@ -148,14 +147,14 @@ function enable_change(enable_change) {
 					html_remark("note", gtext('Note'), sprintf(gtext("You have to activate %s to advertise this service to clients."), $link));
 					?>
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
-  </tr>
+	</tr>
 </table>
 <script type="text/javascript">
 <!--
 enable_change(false);
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
