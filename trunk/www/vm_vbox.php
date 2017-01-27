@@ -34,7 +34,7 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-array_make_branch('vbox');
+array_make_branch($config,'vbox');
 $pconfig['enable'] = isset($config['vbox']['enable']);
 $pconfig['homedir'] = $config['vbox']['homedir'] ?? '';
 $vbox_user = rc_getenv_ex("vbox_user", "vboxusers");
