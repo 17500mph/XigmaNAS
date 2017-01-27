@@ -40,6 +40,7 @@ $sphere_scriptname = basename(__FILE__);
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('Email Setup')];
 $gt_sendtestemailbuttonvalue = gtext('Send Test Email');
 array_make_branch($config,'system','email');
+$pconfig['from'] = $config['system']['email']['from'];
 $pconfig['server'] = $config['system']['email']['server'];
 $pconfig['port'] = $config['system']['email']['port'];
 $pconfig['auth'] = isset($config['system']['email']['auth']);
@@ -50,7 +51,6 @@ $pconfig['security'] = $config['system']['email']['security'];
 $pconfig['username'] = $config['system']['email']['username'];
 $pconfig['password'] = $config['system']['email']['password'];
 $pconfig['passwordconf'] = $pconfig['password'];
-$pconfig['from'] = $config['system']['email']['from'];
 $pconfig['sendto'] = isset($config['system']['email']['sendto']) ? $config['system']['email']['sendto'] : (isset($config['system']['email']['from']) ? $config['system']['email']['from'] : '');
 
 
@@ -62,11 +62,19 @@ if ($_POST) {
 	$reqdfieldsn = [];
 	$reqdfieldst = [];
 
+	// Input validation.
 	if (isset($_POST['auth'])) {
 		$reqdfields = ['username', 'password'];
 		$reqdfieldsn = [gtext('Username'), gtext('Password')];
 		$reqdfieldst = ['string','string'];
 	}
+
+	$reqdfields = explode(" ", "from sendto server port");
+	$reqdfieldsn = [gtext('From Email Address'),
+		gtext('To Email Address'),
+		gtext('SMTP Server'),
+		gtext('Port')];
+	$reqdfieldst = explode(" ", "string string string string");
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
@@ -77,6 +85,8 @@ if ($_POST) {
 	}
 
 	if (empty($input_errors)) {
+		$config['system']['email']['from'] = $_POST['from'];
+		$config['system']['email']['sendto'] = $_POST['sendto'];
 		$config['system']['email']['server'] = $_POST['server'];
 		$config['system']['email']['port'] = $_POST['port'];
 		$config['system']['email']['auth'] = isset($_POST['auth']) ? true : false;
@@ -86,8 +96,6 @@ if ($_POST) {
 		$config['system']['email']['tls_certcheck'] = $_POST['tls_certcheck'];
 		$config['system']['email']['username'] = $_POST['username'];
 		$config['system']['email']['password'] = $_POST['password'];
-		$config['system']['email']['from'] = $_POST['from'];
-		$config['system']['email']['sendto'] = $_POST['sendto'];
 
 		write_config();
 
