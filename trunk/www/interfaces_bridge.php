@@ -34,13 +34,7 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-$pgtitle = [gtext('Network'), gtext('Interface Management'), gtext('Bridge')];
-
-if (!isset($config['vinterfaces']['bridge']) || !is_array($config['vinterfaces']['bridge']))
-	$config['vinterfaces']['bridge'] = array();
-
-
-$a_bridge = &$config['vinterfaces']['bridge'];
+$a_bridge = &array_make_branch($config,'vinterfaces','bridge');
 array_sort_key($a_bridge, "if");
 
 function bridge_inuse($ifn) {
@@ -83,6 +77,7 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 		exit;
 	}
 }
+$pgtitle = [gtext('Network'),gtext('Interface Management'),gtext('Bridge')];
 ?>
 <?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
