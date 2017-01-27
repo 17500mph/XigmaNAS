@@ -87,7 +87,7 @@ if ($_POST) {
 		$config['daap']['servername'] = $_POST['servername'];
 		$config['daap']['port'] = $_POST['port'];
 		$config['daap']['dbdir'] = $_POST['dbdir'];
-		$config['daap']['content'] = !empty($_POST['content']) ? $_POST['content'] : array();
+		$config['daap']['content'] = !empty($_POST['content']) ? $_POST['content'] : [];
 		$config['daap']['compdirs'] = $_POST['compdirs'];
 		$config['daap']['concatcomps'] = isset($_POST['concatcomps']) ? true : false;
 		$config['daap']['rescaninterval'] = $_POST['rescaninterval'];
@@ -95,14 +95,12 @@ if ($_POST) {
 		$config['daap']['skipfirst'] = isset($_POST['skipfirst']) ? true : false;
 		$config['daap']['scantype'] = $_POST['scantype'];
 		$config['daap']['admin_pw'] = $_POST['admin_pw'];
-
 		write_config();
-
 		$retval = 0;
 		if (!file_exists($d_sysrebootreqd_path)) {
 			config_lock();
-			$retval |= rc_update_service("mt-daapd");
-			$retval |= rc_update_service("mdnsresponder");
+			$retval |= rc_update_service('mt-daapd');
+			$retval |= rc_update_service('mdnsresponder');
 			config_unlock();
 		}
 
@@ -141,20 +139,20 @@ function enable_change(enable_change) {
 		<tr>
 			<td class="tabcont">
 				<?php 
-				if (!empty($input_errors)) print_input_errors($input_errors);
-				?>
-				<?php
-				if (!empty($savemsg)) print_info_box($savemsg);
-				?>
-				<?php
-				if (!isset($config['system']['zeroconf'])) {
+				if(!empty($input_errors)):
+					print_input_errors($input_errors);
+				endif;
+				if(!empty($savemsg)):
+					print_info_box($savemsg);
+				endif;
+				if (!isset($config['system']['zeroconf'])):
 					$link = '<a href="'
 						. 'system_advanced.php'
 						. '">'
 						. gtext('Zeroconf/Bonjour')
 						. '</a>';
 					print_error_box(sprintf(gtext('You have to activate %s to advertise this service to clients.'), $link));
-				}
+				endif;
 				?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php
