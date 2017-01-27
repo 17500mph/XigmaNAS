@@ -50,7 +50,7 @@ $(window).on("load", function() {
 //]]>
 </script>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:100%">
 		</colgroup>
