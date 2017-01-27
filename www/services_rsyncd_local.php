@@ -34,8 +34,6 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-$pgtitle = [gtext('Services'),gtext('Rsync'),gtext('Local')];
-
 if ($_POST) {
 	$pconfig = $_POST;
 
@@ -55,15 +53,7 @@ if ($_POST) {
 	}
 }
 
-if (!isset($config['rsync']) || !is_array($config['rsync'])) {
-	$config['rsync'] = array();
-	if (!isset($config['rsync']['rsynclocal']) || !is_array($config['rsync']['rsynclocal']))
-		$config['rsync']['rsynclocal'] = array();
-} else if (!isset($config['rsync']['rsynclocal']) || !is_array($config['rsync']['rsynclocal'])) {
-	$config['rsync']['rsynclocal'] = array();
-}
-
-$a_rsynclocal = &$config['rsync']['rsynclocal'];
+$a_rsynclocal = &array_make_branch($config,'rsync','rsynclocal');
 
 if (isset($_GET['act']) && $_GET['act'] === "del") {
 	updatenotify_set("rsynclocal", UPDATENOTIFY_MODE_DIRTY, $_GET['uuid']);
@@ -92,60 +82,57 @@ function rsynclocal_process_updatenotification($mode, $data) {
 
 	return $retval;
 }
+$pgtitle = [gtext('Services'),gtext('Rsync'),gtext('Local')];
 ?>
 <?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-<tr>
-	<td class="tabnavtbl">
-		<ul id="tabnav">
+	<tr><td class="tabnavtbl"><ul id="tabnav">
 			<li class="tabinact"><a href="services_rsyncd.php"><span><?=gtext("Server") ;?></span></a></li>
 			<li class="tabinact"><a href="services_rsyncd_client.php"><span><?=gtext("Client") ;?></span></a></li>
 			<li class="tabact"><a href="services_rsyncd_local.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Local") ;?></span></a></li>
-			</ul>
+	</ul></td></tr>
+	<tr>
+		<td class="tabcont">
+			<form action="services_rsyncd_local.php" method="post">
+				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
+				<?php if (updatenotify_exists("rsynclocal")) print_config_change_box();?>
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+					<?php html_titleline2(gtext('Overview'), 6);?>
+					<tr>
+						<td width="25%" class="listhdrlr"><?=gtext("Source Share");?></td>
+						<td width="25%" class="listhdrr"><?=gtext("Destination Share");?></td>
+						<td width="10%" class="listhdrr"><?=gtext("Who");?></td>
+						<td width="30%" class="listhdrr"><?=gtext("Description");?></td>
+						<td width="10%" class="list"></td>
+					</tr>
+					<?php foreach($a_rsynclocal as $rsynclocal):?>
+						<?php $notificationmode = updatenotify_get_mode("rsynclocal", $rsynclocal['uuid']);?>
+						<tr>
+							<?php $enable = isset($rsynclocal['enable']);?>
+							<td class="<?=$enable?"listlr":"listlrd";?>"><?=htmlspecialchars($rsynclocal['source']);?>&nbsp;</td>
+							<td class="<?=$enable?"listr":"listrd";?>"><?=htmlspecialchars($rsynclocal['destination']);?>&nbsp;</td>
+							<td class="<?=$enable?"listr":"listrd";?>"><?=htmlspecialchars($rsynclocal['who']);?>&nbsp;</td>
+							<td class="listbg"><?=htmlspecialchars($rsynclocal['description']);?>&nbsp;</td>
+							<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
+								<td valign="middle" nowrap="nowrap" class="list">
+									<a href="services_rsyncd_local_edit.php?uuid=<?=$rsynclocal['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit Rsync job");?>" border="0" alt="<?=gtext("Edit Rsync job");?>" /></a>&nbsp;
+									<a href="services_rsyncd_local.php?act=del&amp;uuid=<?=$rsynclocal['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this Rsync job?");?>')"><img src="images/delete.png" title="<?=gtext("Delete Rsync job");?>" border="0" alt="<?=gtext("Delete Rsync job");?>" /></a>
+								</td>
+							<?php else:?>
+								<td valign="middle" nowrap="nowrap" class="list">
+									<img src="images/delete.png" border="0" alt="" />
+								</td>
+							<?php endif;?>
+						</tr>
+					<?php endforeach;?>
+					<tr>
+						<td class="list" colspan="4"></td>
+						<td class="list"><a href="services_rsyncd_local_edit.php"><img src="images/add.png" title="<?=gtext("Add Rsync job");?>" border="0" alt="<?=gtext("Add Rsync job");?>" /></a></td>
+					</tr>
+				</table>
+				<?php include 'formend.inc';?>
+			</form>
 		</td>
 	</tr>
-	<tr>
-	<td class="tabcont">
-		<form action="services_rsyncd_local.php" method="post">
-		<?php if (!empty($savemsg)) print_info_box($savemsg);?>
-		<?php if (updatenotify_exists("rsynclocal")) print_config_change_box();?>
-		<table width="100%" border="0" cellpadding="0" cellspacing="0">
-		<?php html_titleline2(gtext('Overview'), 6);?>
-	<tr>
-		<td width="25%" class="listhdrlr"><?=gtext("Source Share");?></td>
-		<td width="25%" class="listhdrr"><?=gtext("Destination Share");?></td>
-		<td width="10%" class="listhdrr"><?=gtext("Who");?></td>
-		<td width="30%" class="listhdrr"><?=gtext("Description");?></td>
-		<td width="10%" class="list"></td>
-	</tr>
-		<?php foreach($a_rsynclocal as $rsynclocal):?>
-		<?php $notificationmode = updatenotify_get_mode("rsynclocal", $rsynclocal['uuid']);?>
-	<tr>
-		<?php $enable = isset($rsynclocal['enable']);?>
-		<td class="<?=$enable?"listlr":"listlrd";?>"><?=htmlspecialchars($rsynclocal['source']);?>&nbsp;</td>
-		<td class="<?=$enable?"listr":"listrd";?>"><?=htmlspecialchars($rsynclocal['destination']);?>&nbsp;</td>
-		<td class="<?=$enable?"listr":"listrd";?>"><?=htmlspecialchars($rsynclocal['who']);?>&nbsp;</td>
-		<td class="listbg"><?=htmlspecialchars($rsynclocal['description']);?>&nbsp;</td>
-		<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
-		<td valign="middle" nowrap="nowrap" class="list">
-		<a href="services_rsyncd_local_edit.php?uuid=<?=$rsynclocal['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit Rsync job");?>" border="0" alt="<?=gtext("Edit Rsync job");?>" /></a>&nbsp;
-		<a href="services_rsyncd_local.php?act=del&amp;uuid=<?=$rsynclocal['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this Rsync job?");?>')"><img src="images/delete.png" title="<?=gtext("Delete Rsync job");?>" border="0" alt="<?=gtext("Delete Rsync job");?>" /></a>
-	</td>
-	<?php else:?>
-		<td valign="middle" nowrap="nowrap" class="list">
-		<img src="images/delete.png" border="0" alt="" />
-	</td>
-		<?php endif;?>
-	</tr>
-		<?php endforeach;?>
-	<tr> 
-		<td class="list" colspan="4"></td>
-		<td class="list"><a href="services_rsyncd_local_edit.php"><img src="images/add.png" title="<?=gtext("Add Rsync job");?>" border="0" alt="<?=gtext("Add Rsync job");?>" /></a></td>
-	</tr>
-</table>
-<?php include 'formend.inc';?>
-</form>
-</td>
-</tr>
 </table>
 <?php include 'fend.inc';?>
