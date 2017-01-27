@@ -486,7 +486,7 @@ class HTMLCheckBox2 extends HTMLBaseControlJS2 {
 }
 class HTMLSelectControl2 extends HTMLBaseControlJS2 {
 	var $_ctrlclass = "";
-	var $_options = array();
+	var $_options = [];
 
 	function __construct($ctrlclass, $ctrlname, $title, $value, $options, $description) {
 		parent::__construct($ctrlname, $title, $value, $description);
@@ -510,7 +510,7 @@ class HTMLSelectControl2 extends HTMLBaseControlJS2 {
 		$this->_options = $options;
 		if (empty($this->_options)) {
 			unset($this->_options);
-			$this->_options = array();
+			$this->_options = [];
 		}
 	}
 
@@ -608,7 +608,7 @@ class HTMLTimeZoneComboBox2 extends HTMLComboBox2 {
 		sort($timezonelist);
 
 		// Generate options.
-		$options = array();
+		$options = [];
 		foreach ($timezonelist as $tzv) {
 			if (!empty($tzv)) {
 				$tzv = substr($tzv, 2); // Remove leading './'
@@ -624,7 +624,7 @@ class HTMLLanguageComboBox2 extends HTMLComboBox2 {
 		global $g_languages;
 
 		// Generate options.
-		$options = array();
+		$options = [];
 		foreach ($g_languages as $languagek => $languagev) {
 			$options[$languagek] = gtext($languagev['desc']);
 		}
