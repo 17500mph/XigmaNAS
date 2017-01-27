@@ -58,7 +58,7 @@ $a_param['name'] = 'name="src"';
 
 $gt_notsupported = gtext('Your browser does not support this svg object type.') .
 		'<br />' .
-		gtext('You need to update your browser or use Internet Explorer 9 or higher.') .
+		gtext('You need to update your browser or use Internet Explorer 10 or higher.') .
 		'<br/>';
 
 $pgtitle = [gtext('Status'),gtext('Monitoring'),gtext('System Load')];
