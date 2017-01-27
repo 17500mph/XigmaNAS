@@ -309,7 +309,7 @@ function controlactionbuttons(ego, triggerbyname) {
 			print_config_change_box();
 		}
 	?>
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%">
 			<col style="width:35%">
@@ -362,7 +362,7 @@ function controlactionbuttons(ego, triggerbyname) {
 					</td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['desc']);?>&nbsp;</td>
 					<td class="lcebld">
-						<table id="area_data_selection_toolbox"><tbody><tr>
+						<table class="area_data_selection_toolbox"><tbody><tr>
 							<td>
 								<?php if ($notdirty && $notprotected):?>
 									<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>

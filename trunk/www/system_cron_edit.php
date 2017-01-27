@@ -39,13 +39,7 @@ if (isset($_GET['uuid']))
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = [gtext('System'),gtext('Advanced'),gtext('Cron'), isset($uuid) ? gtext('Edit') : gtext('Add')];
-
-if (!isset($config['cron']['job']) || !is_array($config['cron']['job']))
-	$config['cron']['job'] = array();
-
-$a_cronjob = &$config['cron']['job'];
-
+$a_cronjob = &array_make_branch($config,'cron','job');
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_cronjob, "uuid")))) {
 	$pconfig['enable'] = isset($a_cronjob[$cnid]['enable']);
 	$pconfig['uuid'] = $a_cronjob[$cnid]['uuid'];
@@ -145,6 +139,7 @@ if ($_POST) {
 		}
 	}
 }
+$pgtitle = [gtext('System'),gtext('Advanced'),gtext('Cron'),isset($uuid) ? gtext('Edit') : gtext('Add')];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">
