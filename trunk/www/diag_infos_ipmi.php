@@ -107,17 +107,17 @@ $(window).on("load", function() {
 	<?php if(empty($a_ipmi_sensor)):?>
 		<?php html_remark2('sensor', gtext('System Message'), gtext('No IPMI sensor data available.'));?>
 	<?php else:?>
-		<table id="area_data_selection">
+		<table class="area_data_selection">
 			<colgroup>
-				<col style="width:11%"><!-- // Sensor -->
-				<col style="width:12%"><!-- // Reading -->
-				<col style="width:5%"><!-- // Status-->
-				<col style="width:12%"><!-- // Lower Non-Recoverable [4] -->
-				<col style="width:12%"><!-- // Upper Non-Recoverable [9] -->
-				<col style="width:12%"><!-- // Lower Non-Critical [6] -->
-				<col style="width:12%"><!-- // Upper Non-Critical [7] -->
-				<col style="width:12%"><!-- // Lower Critical [5] -->
-				<col style="width:12%"><!-- // Upper Critical [8] -->
+				<col style="width:11%">
+				<col style="width:12%">
+				<col style="width:5%">
+				<col style="width:12%">
+				<col style="width:12%">
+				<col style="width:12%">
+				<col style="width:12%">
+				<col style="width:12%">
+				<col style="width:12%">
 			</colgroup>
 			<thead>
 				<?php html_titleline2(gtext('Sensor Information'), 9);?>
@@ -161,10 +161,10 @@ $(window).on("load", function() {
 	<?php if(empty($a_ipmi_fru)):?>
 		<?php html_remark2('sensor', gtext('System Message'), gtext('No IPMI FRU data available.'));?>
 	<?php else:?>
-		<table id="area_data_settings">
+		<table class="area_data_settings">
 			<colgroup>
-				<col id="area_data_settings_col_tag">
-				<col id="area_data_settings_col_data">
+				<col class="area_data_settings_col_tag">
+				<col class="area_data_settings_col_data">
 			</colgroup>
 			<thead>
 				<?php
