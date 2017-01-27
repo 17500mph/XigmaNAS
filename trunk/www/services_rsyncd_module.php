@@ -34,122 +34,105 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-$pgtitle = [gtext('Services'),gtext('Rsync'),gtext('Server'),gtext('Modules')];
-
-if ($_POST) {
-	$pconfig = $_POST;
-
-	if (isset($_POST['apply']) && $_POST['apply']) {
-		$retval = 0;
-		if (!file_exists($d_sysrebootreqd_path)) {
-			$retval |= updatenotify_process("rsyncd", "rsyncd_process_updatenotification");
-			config_lock();
-			$retval |= rc_update_service("rsyncd");
-			$retval |= rc_update_service("mdnsresponder");
-			config_unlock();
-		}
-		$savemsg = get_std_save_message($retval);
-		if ($retval == 0) {
-			updatenotify_delete("rsyncd");
-		}
-	}
-}
-
-if (!isset($config['rsyncd']['module']) || !is_array($config['rsyncd']['module']))
-	$config['rsyncd']['module'] = array();
-
-array_sort_key($config['rsyncd']['module'], "name");
-$a_module = &$config['rsyncd']['module'];
-
-if (isset($_GET['act']) && $_GET['act'] === "del") {
-	updatenotify_set("rsyncd", UPDATENOTIFY_MODE_DIRTY, $_GET['uuid']);
-	header("Location: services_rsyncd_module.php");
-	exit;
-}
-
 function rsyncd_process_updatenotification($mode, $data) {
 	global $config;
 
 	$retval = 0;
-
-	switch ($mode) {
+	switch ($mode):
 		case UPDATENOTIFY_MODE_NEW:
 		case UPDATENOTIFY_MODE_MODIFIED:
 			break;
 		case UPDATENOTIFY_MODE_DIRTY:
-			$cnid = array_search_ex($data, $config['rsyncd']['module'], "uuid");
-			if (FALSE !== $cnid) {
-				unset($config['rsyncd']['module'][$cnid]);
+			if(false !== ($index_uuid = array_search_ex($data,$config['rsyncd']['module'],'uuid'))):
+				unset($config['rsyncd']['module'][$index_uuid]);
 				write_config();
-			}
+			endif;
 			break;
-	}
-
+	endswitch;
 	return $retval;
 }
+if($_POST):
+	$pconfig = $_POST;
+	if(isset($_POST['apply']) && $_POST['apply']):
+		$retval = 0;
+		if(!file_exists($d_sysrebootreqd_path)):
+			$retval |= updatenotify_process('rsyncd','rsyncd_process_updatenotification');
+			config_lock();
+			$retval |= rc_update_service('rsyncd');
+			$retval |= rc_update_service('mdnsresponder');
+			config_unlock();
+		endif;
+		$savemsg = get_std_save_message($retval);
+		if ($retval == 0):
+			updatenotify_delete('rsyncd');
+		endif;
+	endif;
+endif;
+$a_module = &array_make_branch($config,'rsyncd','module');
+array_sort_key($a_module,'name');
+
+if (isset($_GET['act']) && $_GET['act'] === 'del'):
+	updatenotify_set('rsyncd',UPDATENOTIFY_MODE_DIRTY, $_GET['uuid']);
+	header('Location: services_rsyncd_module.php');
+	exit;
+endif;
+
+$pgtitle = [gtext('Services'),gtext('Rsync'),gtext('Server'),gtext('Modules')];
 ?>
 <?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-		<td class="tabnavtbl">
-  		<ul id="tabnav">
-			<li class="tabact"><a href="services_rsyncd.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Server");?></span></a></li>
-			<li class="tabinact"><a href="services_rsyncd_client.php"><span><?=gtext("Client");?></span></a></li>
-			<li class="tabinact"><a href="services_rsyncd_local.php"><span><?=gtext("Local");?></span></a></li>
-			</ul>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabact"><a href="services_rsyncd.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Server");?></span></a></li>
+		<li class="tabinact"><a href="services_rsyncd_client.php"><span><?=gtext("Client");?></span></a></li>
+		<li class="tabinact"><a href="services_rsyncd_local.php"><span><?=gtext("Local");?></span></a></li>
+	</ul></td></tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav2">
+		<li class="tabinact"><a href="services_rsyncd.php"><span><?=gtext("Settings");?></span></a></li>
+		<li class="tabact"><a href="services_rsyncd_module.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Modules");?></span></a></li>
+	</ul></td></tr>
+	<tr>
+		<td class="tabcont">
+			<form action="services_rsyncd_module.php" method="post">
+				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
+				<?php if (updatenotify_exists("rsyncd")) print_config_change_box();?>
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+					<?php html_titleline2(gtext('Overview'), 6);?>
+					<tr>
+						<td width="15%" class="listhdrlr"><?=gtext("Name");?></td>
+						<td width="35%" class="listhdrr"><?=gtext("Path");?></td>
+						<td width="20%" class="listhdrr"><?=gtext("Comment");?></td>
+						<td width="10%" class="listhdrr"><?=gtext("List");?></td>
+						<td width="10%" class="listhdrr"><?=gtext("Access Mode");?></td>
+						<td width="10%" class="list"></td>
+					</tr>
+					<?php foreach($a_module as $modulev):?>
+						<?php $notificationmode = updatenotify_get_mode("rsyncd", $modulev['uuid']);?>
+						<tr>
+							<td class="listlr"><?=htmlspecialchars($modulev['name']);?>&nbsp;</td>
+							<td class="listr"><?=htmlspecialchars($modulev['path']);?>&nbsp;</td>
+							<td class="listr"><?=htmlspecialchars($modulev['comment']);?>&nbsp;</td>
+							<td class="listbg"><?=htmlspecialchars(isset($modulev['list'])?gtext("Yes"):gtext("No"));?></td>
+							<td class="listbg"><?=htmlspecialchars($modulev['rwmode']);?>&nbsp;</td>
+							<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
+								<td valign="middle" nowrap="nowrap" class="list">
+									<a href="services_rsyncd_module_edit.php?uuid=<?=$modulev['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit module");?>" border="0" alt="<?=gtext("Edit module");?>" /></a>
+									<a href="services_rsyncd_module.php?act=del&amp;uuid=<?=$modulev['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this module?");?>')"><img src="images/delete.png" title="<?=gtext("Delete module");?>" border="0" alt="<?=gtext("Delete module");?>" /></a>
+								</td>
+							<?php else:?>
+								<td valign="middle" nowrap="nowrap" class="list">
+									<img src="images/delete.png" border="0" alt="" />
+								</td>
+							<?php endif;?>
+						</tr>
+					<?php endforeach;?>
+					<tr>
+						<td class="list" colspan="5"></td>
+						<td class="list"><a href="services_rsyncd_module_edit.php"><img src="images/add.png" title="<?=gtext("Add module");?>" border="0" alt="<?=gtext("Add module");?>" /></a></td>
+					</tr>
+				</table>
+				<?php include 'formend.inc';?>
+			</form>
 		</td>
 	</tr>
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav2">
-			<li class="tabinact"><a href="services_rsyncd.php"><span><?=gtext("Settings");?></span></a></li>
-			<li class="tabact"><a href="services_rsyncd_module.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Modules");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-	<td class="tabcont">
-		<form action="services_rsyncd_module.php" method="post">
-		<?php if (!empty($savemsg)) print_info_box($savemsg);?>
-		<?php if (updatenotify_exists("rsyncd")) print_config_change_box();?>
-		<table width="100%" border="0" cellpadding="0" cellspacing="0">
-		<?php html_titleline2(gtext('Overview'), 6);?>
-	<tr>
-		<td width="15%" class="listhdrlr"><?=gtext("Name");?></td>
-		<td width="35%" class="listhdrr"><?=gtext("Path");?></td>
-		<td width="20%" class="listhdrr"><?=gtext("Comment");?></td>
-		<td width="10%" class="listhdrr"><?=gtext("List");?></td>
-		<td width="10%" class="listhdrr"><?=gtext("Access Mode");?></td>
-		<td width="10%" class="list"></td>
-	</tr>
-		<?php foreach($a_module as $modulev):?>
-		<?php $notificationmode = updatenotify_get_mode("rsyncd", $modulev['uuid']);?>
-	<tr>
-		<td class="listlr"><?=htmlspecialchars($modulev['name']);?>&nbsp;</td>
-		<td class="listr"><?=htmlspecialchars($modulev['path']);?>&nbsp;</td>
-		<td class="listr"><?=htmlspecialchars($modulev['comment']);?>&nbsp;</td>
-		<td class="listbg"><?=htmlspecialchars(isset($modulev['list'])?gtext("Yes"):gtext("No"));?></td>
-		<td class="listbg"><?=htmlspecialchars($modulev['rwmode']);?>&nbsp;</td>
-		<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
-		<td valign="middle" nowrap="nowrap" class="list">
-		<a href="services_rsyncd_module_edit.php?uuid=<?=$modulev['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit module");?>" border="0" alt="<?=gtext("Edit module");?>" /></a>
-		<a href="services_rsyncd_module.php?act=del&amp;uuid=<?=$modulev['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this module?");?>')"><img src="images/delete.png" title="<?=gtext("Delete module");?>" border="0" alt="<?=gtext("Delete module");?>" /></a>
-	</td>
-		<?php else:?>
-		<td valign="middle" nowrap="nowrap" class="list">
-		<img src="images/delete.png" border="0" alt="" />
-	</td>
-		<?php endif;?>
-	</tr>
-		<?php endforeach;?>
-	<tr>
-		<td class="list" colspan="5"></td>
-		<td class="list"><a href="services_rsyncd_module_edit.php"><img src="images/add.png" title="<?=gtext("Add module");?>" border="0" alt="<?=gtext("Add module");?>" /></a></td>
-	</tr>
-</table>
-<?php include 'formend.inc';?>
-</form>
-</td>
-</tr>
 </table>
 <?php include 'fend.inc';?>
