@@ -39,19 +39,11 @@ if (isset($_GET['uuid']))
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = array(gtext("Services"), gtext("Rsync"), gtext("Client"), isset($uuid) ? gtext("Edit") : gtext("Add"));
-
 /* Global arrays. */
 $a_months = explode(" ",gtext("January February March April May June July August September October November December"));
 $a_weekdays = explode(" ",gtext("Sunday Monday Tuesday Wednesday Thursday Friday Saturday"));
 
-if (!isset($config['rsync']) || !is_array($config['rsync']))
-	$config['rsync'] = array();
-
-if (!isset($config['rsync']['rsyncclient']) || !is_array($config['rsync']['rsyncclient']))
-	$config['rsync']['rsyncclient'] = array();
-
-$a_rsyncclient = &$config['rsync']['rsyncclient'];
+$a_rsyncclient = &array_make_branch($config,'rsync','rsyncclient');
 
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_rsyncclient, "uuid")))) {
 	$pconfig['enable'] = isset($a_rsyncclient[$cnid]['enable']);
@@ -201,8 +193,9 @@ if ($_POST) {
 		}
 	}
 }
+$pgtitle = [gtext('Services'),gtext('Rsync'),gtext('Client'),isset($uuid) ? gtext('Edit') : gtext('Add')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function set_selected(name) {
