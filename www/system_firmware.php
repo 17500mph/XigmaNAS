@@ -33,10 +33,8 @@
 */
 $d_isfwfile = 1;
 
-require("auth.inc");
-require("guiconfig.inc");
-
-$pgtitle = array(gtext("System"), gtext("Firmware Update"));
+require 'auth.inc';
+require 'guiconfig.inc';
 
 // check boot partition
 $part1size = $g_install['part1size_embedded'];
@@ -350,8 +348,9 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 		}
 	}
 }
+$pgtitle = [gtext('System'),gtext('Firmware Update')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabcont">
@@ -371,29 +370,29 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 					}
 				?>
 			</table>
-			<?php if (!in_array($g['platform'], $fwupplatforms)): ?>
+			<?php if(!in_array($g['platform'], $fwupplatforms)):?>
 				<?php print_error_box(gtext("Firmware uploading is not supported on this platform."));?>
-			<?php elseif (!empty($sig_warning) && empty($input_errors)): ?>
+			<?php elseif (!empty($sig_warning) && empty($input_errors)):?>
 				<form action="system_firmware.php" method="post">
 					<?php
-						$sig_warning = '<strong>' . $sig_warning . '</strong>'
-							. '<br />'
-							. gtext('This means that the firmware you flashed is not an official/supported firmware and may lead to unexpected behavior or security compromises.')
-							. ' '
-							. gtext('Only install firmwares that come from sources that you trust, and make sure that the firmware has not been tampered with.')
-							. '<br /><br />'
-							. gtext('Do you want to install this firmware anyway (at your own risk)?');
-						print_info_box($sig_warning);
+					$sig_warning = '<strong>' . $sig_warning . '</strong>'
+						. '<br />'
+						. gtext('This means that the firmware you flashed is not an official/supported firmware and may lead to unexpected behavior or security compromises.')
+						. ' '
+						. gtext('Only install firmwares that come from sources that you trust, and make sure that the firmware has not been tampered with.')
+						. '<br /><br />'
+						. gtext('Do you want to install this firmware anyway (at your own risk)?');
+					print_info_box($sig_warning);
 					?>
 					<input name="sig_override" type="submit" class="formbtn" id="sig_override" value=" Yes ">
 					<input name="sig_no" type="submit" class="formbtn" id="sig_no" value=" No ">
-					<?php include("formend.inc");?>
+					<?php include 'formend.inc';?>
 				</form>
 			<?php else:?>
 				<?php if ($part1ok): ?>
 					<?php if (!file_exists($d_firmwarelock_path)):?>
-					<form action="system_firmware.php" method="post" enctype="multipart/form-data" onsubmit="spinner()">
-						<?php if (!file_exists($d_sysrebootreqd_path)):?>
+						<form action="system_firmware.php" method="post" enctype="multipart/form-data" onsubmit="spinner()">
+							<?php if (!file_exists($d_sysrebootreqd_path)):?>
 								<?php if (!file_exists($d_fwupenabled_path)):?>
 									<div id="submit">
 										<input name="EnableFirmwareUpdate" id="Enable" type="submit" class="formbtn" value="<?=gtext("Enable Firmware Update");?>" />
@@ -430,7 +429,7 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 								?>
 								<strong><?=$helpinghand;?></strong>
 							<?php endif;?>
-							<?php include("formend.inc");?>
+							<?php include 'formend.inc';?>
 						</form>
 					<?php endif;?>
 				<?php endif;?>
@@ -438,4 +437,4 @@ if ($mode === "default" || $mode === "enable" || $mode === "disable") {
 		</td>
 	</tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

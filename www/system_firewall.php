@@ -31,10 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-
-$pgtitle = array(gtext("Network"), gtext("Firewall"));
+require 'auth.inc';
+require 'guiconfig.inc';
 
 $pconfig['enable'] = isset($config['system']['firewall']['enable']);
 
@@ -183,8 +181,9 @@ function firewall_process_updatenotification($mode, $data) {
 
 	return $retval;
 }
+$pgtitle = [gtext('Network'),gtext('Firewall')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function enable_change(enable_change) {
@@ -299,6 +298,6 @@ spinner();
 			</td>
 		</tr>
 	</table>
-	<?php include("formend.inc");?>
+	<?php include 'formend.inc';?>
 </form>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

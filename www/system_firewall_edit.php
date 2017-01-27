@@ -31,15 +31,13 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
 if (isset($_GET['uuid']))
 	$uuid = $_GET['uuid'];
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
-
-$pgtitle = array(gtext("Network"), gtext("Firewall"), gtext("Rule"), isset($uuid) ? gtext("Edit") : gtext("Add"));
 
 $a_rule = &array_make_branch($config,'system','firewall','rule');
 if(empty($a_rule)):
@@ -145,8 +143,9 @@ function get_next_rulenumber() {
 
 	return $ruleno;
 }
+$pgtitle = [gtext('Network'),gtext('Firewall'),gtext('Rule'),isset($uuid) ? gtext('Edit') : gtext('Add')];
 ?>
-<?php include("fbegin.inc"); ?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabcont">
@@ -183,9 +182,9 @@ function get_next_rulenumber() {
 					html_remark("note", gtext('Note'), $helpinghand);
 					?>
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
