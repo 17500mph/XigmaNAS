@@ -31,14 +31,13 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-require("email.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
+require 'email.inc';
 
-$pgtitle = array(gtext("Services"), gtext("UPS"));
 
-if (!isset($config['ups']) || !is_array($config['ups']))
-	$config['ups'] = array();
+array_make_branch($config,'ups','auxparam');
+array_make_branch($config,'ups','ups2_auxparam');
 
 $pconfig['enable'] = isset($config['ups']['enable']);
 $pconfig['mode'] = $config['ups']['mode'];
@@ -55,43 +54,38 @@ $pconfig['ip'] = !empty($config['ups']['ip']) ? $config['ups']['ip'] : "localhos
 $pconfig['shutdownmode'] = $config['ups']['shutdownmode'];
 $pconfig['shutdowntimer'] = $config['ups']['shutdowntimer'];
 $pconfig['remotemonitor'] = isset($config['ups']['remotemonitor']);
-$pconfig['monitoruser'] = !empty($config['ups']['monitoruser']) ? $config['ups']['monitoruser'] : "upsmon";                 // remote monitoring user name
-if ($pconfig['monitoruser'] == "root") $pconfig['monitoruser'] = "upsmon";                                                  // prevent using root twice - as master and monitoring user 
-$pconfig['monitorpassword'] = !empty($config['ups']['monitorpassword']) ? $config['ups']['monitorpassword'] : "upsmon";     // remote monitoring user password
-$pconfig['user'] = !empty($config['ups']['user']) ? $config['ups']['user'] : "root";                                        // local master user
-$pconfig['password'] = !empty($config['ups']['password']) ? $config['ups']['password'] : $config['system']['password'];     // local master password
+$pconfig['monitoruser'] = !empty($config['ups']['monitoruser']) ? $config['ups']['monitoruser'] : 'upsmon'; // remote monitoring user name
+if($pconfig['monitoruser'] == "root") $pconfig['monitoruser'] = "upsmon"; // prevent using root twice - as master and monitoring user 
+$pconfig['monitorpassword'] = !empty($config['ups']['monitorpassword']) ? $config['ups']['monitorpassword'] : "upsmon"; // remote monitoring user password
+$pconfig['user'] = !empty($config['ups']['user']) ? $config['ups']['user'] : 'root'; // local master user
+$pconfig['password'] = !empty($config['ups']['password']) ? $config['ups']['password'] : $config['system']['password']; // local master password
 $pconfig['email_enable'] = isset($config['ups']['email']['enable']);
 $pconfig['email_to'] = $config['ups']['email']['to'];
 $pconfig['email_subject'] = $config['ups']['email']['subject'];
-if (isset($config['ups']['auxparam']) && is_array($config['ups']['auxparam'])) $pconfig['auxparam'] = implode("\n", $config['ups']['auxparam']);
-if (isset($config['ups']['ups2_auxparam']['auxparam']) && is_array($config['ups']['ups2_auxparam']['auxparam'])) $pconfig['ups2_auxparam'] = implode("\n", $config['ups']['ups2_auxparam']['auxparam']);
+if(isset($config['ups']['auxparam']) && is_array($config['ups']['auxparam'])) $pconfig['auxparam'] = implode("\n", $config['ups']['auxparam']);
+if(isset($config['ups']['ups2_auxparam']['auxparam']) && is_array($config['ups']['ups2_auxparam']['auxparam'])) $pconfig['ups2_auxparam'] = implode("\n", $config['ups']['ups2_auxparam']['auxparam']);
 
 if ($_POST) {
 	unset($input_errors);
 	$pconfig = $_POST;
-
 	// Input validation.
 	if (isset($_POST['enable']) && $_POST['enable']) {
 		$reqdfields = explode(" ", "upsname driver port shutdownmode monitoruser monitorpassword");
 		$reqdfieldsn = array(gtext("Identifier"), gtext("Driver"), gtext("Port"), gtext("Shutdown mode"), gtext("Username"), gtext("Password"));
 		$reqdfieldst = explode(" ", "alias string string string string string");
-
 		if ("onbatt" === $_POST['shutdownmode']) {
 			$reqdfields = array_merge($reqdfields, explode(" ", "shutdowntimer"));
 			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Shutdown timer")));
 			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "numericint"));
 		}
-
 		if (!empty($_POST['email_enable'])) {
 			$reqdfields = array_merge($reqdfields, explode(" ", "email_to email_subject"));
 			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("To Email Address"), gtext("Subject")));
 			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "string string"));
 		}
-
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 	}
-
 	if (empty($input_errors)) {
 		$config['ups']['enable'] = isset($_POST['enable']) ? true : false;
 		$config['ups']['mode'] = $_POST['mode'];
@@ -110,28 +104,25 @@ if ($_POST) {
 		$config['ups']['remotemonitor'] = isset($_POST['remotemonitor']) ? true : false;
 		$config['ups']['monitoruser'] = $_POST['monitoruser'];
 		$config['ups']['monitorpassword'] = $_POST['monitorpassword'];
-		$config['ups']['user'] = "root";                                                      // local master user, always root
-		$config['ups']['password'] = $config['system']['password'];                           // local master password, always system password
+		$config['ups']['user'] = "root"; // local master user, always root
+		$config['ups']['password'] = $config['system']['password']; // local master password, always system password
 		$config['ups']['email']['enable'] = isset($_POST['email_enable']) ? true : false;
 		$config['ups']['email']['to'] = $_POST['email_to'];
 		$config['ups']['email']['subject'] = $_POST['email_subject'];
-
 		# Write additional parameters.
 		unset($config['ups']['auxparam']);
 		foreach (explode("\n", $_POST['auxparam']) as $auxparam) {
 			$auxparam = trim($auxparam, "\t\n\r");
 			if (!empty($auxparam)) $config['ups']['auxparam'][] = $auxparam;
 		}
-        unset($config['ups']['ups2_auxparam']);
-        if (isset($config['ups']['ups2'])) {
-    		foreach (explode("\n", $_POST['ups2_auxparam']) as $ups2_auxparam) {
-            $ups2_auxparam = trim($ups2_auxparam, "\t\n\r");
-            if (!empty($ups2_auxparam)) $config['ups']['ups2_auxparam']['auxparam'][] = $ups2_auxparam;
-    		}
-        }
-
+		unset($config['ups']['ups2_auxparam']);
+		if (isset($config['ups']['ups2'])) {
+			foreach (explode("\n", $_POST['ups2_auxparam']) as $ups2_auxparam) {
+				$ups2_auxparam = trim($ups2_auxparam, "\t\n\r");
+				if (!empty($ups2_auxparam)) $config['ups']['ups2_auxparam']['auxparam'][] = $ups2_auxparam;
+			}
+		}
 		write_config();
-
 		$retval = 0;
 		if (!file_exists($d_sysrebootreqd_path)) {
 			config_lock();
@@ -140,20 +131,24 @@ if ($_POST) {
 			$retval |= rc_update_service("nut_upsmon");
 			config_unlock();
 		}
-
 		$savemsg = get_std_save_message($retval);
 	}
 }
+$pgtitle = [gtext('Services'), gtext('UPS')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
-<!--
+//<![CDATA[
+$(window).on("load",function() {
+<?php // Init spinner.?>
+	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
+}); 
 function enable_change(enable_change) {
 	var endis = !(document.iform.enable.checked || enable_change);
 
 	if (enable_change.name == "email_enable") {
 		endis = !enable_change.checked;
-
 		document.iform.email_to.disabled = endis;
 		document.iform.email_subject.disabled = endis;
 	} else {
@@ -183,19 +178,16 @@ function enable_change(enable_change) {
 		document.iform.email_subject.disabled = endis;
 	}
 }
-
 function shutdownmode_change() {
 	switch(document.iform.shutdownmode.value) {
 		case "onbatt":
 			showElementById('shutdowntimer_tr','show');
 			break;
-
 		default:
 			showElementById('shutdowntimer_tr','hide');
 			break;
 	}
 }
-
 function mode_change() {
 	switch(document.iform.mode.value) {
 		case "slave":
@@ -214,10 +206,9 @@ function mode_change() {
 			showElementById('shutdownmode_tr','show');
 			showElementById('shutdowntimer_tr','show');
 			showElementById('remotemonitor_tr','hide');
-            showElementById('monitoruser_tr','show');
-            showElementById('monitorpassword_tr','show');
+			showElementById('monitoruser_tr','show');
+			showElementById('monitorpassword_tr','show');
 			break;
-
 		default:
 			showElementById('upsname_tr','show');
 			showElementById('driver_tr','show');
@@ -225,47 +216,42 @@ function mode_change() {
 			showElementById('auxparam_tr','show');
 			showElementById('desc_tr','show');
 			showElementById('ups2_tr','show');
-        	if (document.iform.ups2.checked) {
-    			showElementById('ups2_upsname_tr','show');
-    			showElementById('ups2_driver_tr','show');
-    			showElementById('ups2_port_tr','show');
-    			showElementById('ups2_auxparam_tr','show');
-    			showElementById('ups2_desc_tr','show');
-            }
-            else {
-    			showElementById('ups2_upsname_tr','hide');
-    			showElementById('ups2_driver_tr','hide');
-    			showElementById('ups2_port_tr','hide');
-    			showElementById('ups2_auxparam_tr','hide');
-    			showElementById('ups2_desc_tr','hide');
-        	}
+			if (document.iform.ups2.checked) {
+				showElementById('ups2_upsname_tr','show');
+				showElementById('ups2_driver_tr','show');
+				showElementById('ups2_port_tr','show');
+				showElementById('ups2_auxparam_tr','show');
+				showElementById('ups2_desc_tr','show');
+			} else {
+				showElementById('ups2_upsname_tr','hide');
+				showElementById('ups2_driver_tr','hide');
+				showElementById('ups2_port_tr','hide');
+				showElementById('ups2_auxparam_tr','hide');
+				showElementById('ups2_desc_tr','hide');
+			}
 			showElementById('ip_tr','hide');
 			showElementById('shutdownmode_tr','show');
 			showElementById('shutdowntimer_tr','show');
 			showElementById('remotemonitor_tr','show');
-        	if (document.iform.remotemonitor.checked) {
-                showElementById('monitoruser_tr','show');
-                showElementById('monitorpassword_tr','show');
-            }
-            else {
-                showElementById('monitoruser_tr','hide');
-                showElementById('monitorpassword_tr','hide');
-        	}
+			if (document.iform.remotemonitor.checked) {
+				showElementById('monitoruser_tr','show');
+				showElementById('monitorpassword_tr','show');
+			} else {
+				showElementById('monitoruser_tr','hide');
+				showElementById('monitorpassword_tr','hide');
+			}
 			break;
 	}
 }
-
 function monitoring_change() {
 	if (document.iform.remotemonitor.checked) {
-        showElementById('monitoruser_tr','show');
-        showElementById('monitorpassword_tr','show');
-    }
-    else {
-        showElementById('monitoruser_tr','hide');
-        showElementById('monitorpassword_tr','hide');
+		showElementById('monitoruser_tr','show');
+		showElementById('monitorpassword_tr','show');
+	} else {
+		showElementById('monitoruser_tr','hide');
+		showElementById('monitorpassword_tr','hide');
 	}
 }
-
 function ups2_change() {
 	if (document.iform.ups2.checked) {
 		showElementById('ups2_upsname_tr','show');
@@ -273,8 +259,7 @@ function ups2_change() {
 		showElementById('ups2_port_tr','show');
 		showElementById('ups2_auxparam_tr','show');
 		showElementById('ups2_desc_tr','show');
-    }
-    else {
+	} else {
 		showElementById('ups2_upsname_tr','hide');
 		showElementById('ups2_driver_tr','hide');
 		showElementById('ups2_port_tr','hide');
@@ -282,12 +267,12 @@ function ups2_change() {
 		showElementById('ups2_desc_tr','hide');
 	}
 }
-//-->
+//]]>
 </script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td class="tabcont">
-			<form action="services_ups.php" method="post" name="iform" id="iform" onsubmit="spinner()">
+			<form action="services_ups.php" method="post" name="iform" id="iform">
 				<?php
 				if (!empty($pconfig['enable']) && !empty($pconfig['email_enable']) && (0 !== email_validate_settings())) {
 					$helpinghand = '<a href="' . 'system_email.php' . '">'
@@ -345,7 +330,6 @@ function ups2_change() {
 				</div>
 				<div id="remarks">
 					<?php
-
 					$helpinghand = gtext('This configuration settings are used to generate the ups.conf configuration file which is required by the NUT UPS daemon.')
 						. ' '
 						. '<br><a href="' . 'http://www.networkupstools.org' . '" target="_blank">'
@@ -354,18 +338,18 @@ function ups2_change() {
 					html_remark("note", gtext('Note'), $helpinghand);
 					?>
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
 </table>
 <script type="text/javascript">
-<!--
+//<![CDATA[
 monitoring_change();
 mode_change();
 shutdownmode_change();
 enable_change(false);
 ups2_change();
-//-->
+//]]>
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
