@@ -31,26 +31,21 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Services"), gtext("Rsync"), gtext("Server"), gtext("Settings"));
-
-if (!isset($config['access']['user']) || !is_array($config['access']['user']))
-	$config['access']['user'] = array();
-
-array_sort_key($config['access']['user'], "login");
+array_make_branch($config,'access','user');
+array_sort_key($config['access']['user'],'login');
 $a_user = &$config['access']['user'];
-
-if (!isset($config['rsync']) || !is_array($config['rsync']))
-	$config['rsync'] = array();
+array_make_branch($config,'rsync');
 
 $pconfig['enable'] = isset($config['rsyncd']['enable']);
 $pconfig['port'] = $config['rsyncd']['port'];
 $pconfig['motd'] = base64_decode($config['rsyncd']['motd']);
 $pconfig['rsyncd_user'] = $config['rsyncd']['rsyncd_user'];
-if (isset($config['rsyncd']['auxparam']) && is_array($config['rsyncd']['auxparam']))
-	$pconfig['auxparam'] = implode("\n", $config['rsyncd']['auxparam']);
+if(isset($config['rsyncd']['auxparam']) && is_array($config['rsyncd']['auxparam'])):
+	$pconfig['auxparam'] = implode("\n",$config['rsyncd']['auxparam']);
+endif;
 
 if ($_POST) {
 	unset($input_errors);
@@ -92,8 +87,9 @@ if ($_POST) {
 		$savemsg = get_std_save_message($retval);
 	}
 }
+$pgtitle = [gtext('Services'),gtext('Rsync'),gtext('Server'),gtext('Settings')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function enable_change(enable_change) {
@@ -161,7 +157,7 @@ function enable_change(enable_change) {
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="enable_change(true)" />
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
@@ -171,4 +167,4 @@ function enable_change(enable_change) {
 enable_change(false);
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
