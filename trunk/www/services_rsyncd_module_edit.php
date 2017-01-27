@@ -39,19 +39,10 @@ if (isset($_GET['uuid']))
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = [gtext('Services'),gtext('Rsync'),gtext('Server'),gtext('Module'), isset($uuid) ? gtext('Edit') : gtext('Add')];
-
-if (!isset($config['mounts']['mount']) || !is_array($config['mounts']['mount']))
-	$config['mounts']['mount'] = array();
-
-if (!isset($config['rsyncd']['module']) || !is_array($config['rsyncd']['module']))
-	$config['rsyncd']['module'] = array();
-
-array_sort_key($config['mounts']['mount'], "devicespecialfile");
-array_sort_key($config['rsyncd']['module'], "name");
-
-$a_mount = &$config['mounts']['mount'];
-$a_module = &$config['rsyncd']['module'];
+$a_mount = &array_make_branch($config,'mounts','mount');
+array_sort_key($a_mount,'devicespecialfile');
+$a_module = &array_make_branch($config,'rsyncd','module');
+array_sort_key($a_module,'name');
 
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_module, "uuid")))) {
 	$pconfig['uuid'] = $a_module[$cnid]['uuid'];
@@ -120,7 +111,6 @@ if ($_POST) {
 			if (!empty($auxparam))
 				$module['auxparam'][] = $auxparam;
 		}
-
 		if (isset($uuid) && (FALSE !== $cnid)) {
 			$a_module[$cnid] = $module;
 			$mode = UPDATENOTIFY_MODE_MODIFIED;
@@ -128,14 +118,13 @@ if ($_POST) {
 			$a_module[] = $module;
 			$mode = UPDATENOTIFY_MODE_NEW;
 		}
-
 		updatenotify_set("rsyncd", $mode, $module['uuid']);
 		write_config();
-
-    header("Location: services_rsyncd_module.php");
+		header("Location: services_rsyncd_module.php");
 		exit;
 	}
 }
+$pgtitle = [gtext('Services'),gtext('Rsync'),gtext('Server'),gtext('Module'),isset($uuid) ? gtext('Edit') : gtext('Add')];
 ?>
 <?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
