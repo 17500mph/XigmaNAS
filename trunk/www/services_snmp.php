@@ -31,16 +31,11 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Services"), gtext("SNMP"));
-
-if (!isset($config['snmpd']) || !is_array($config['snmpd']))
-	$config['snmpd'] = array();
-
+array_make_branch($config,'snmpd','auxparam');
 $os_release = exec('uname -r | cut -d - -f1');
-
 $pconfig['enable'] = isset($config['snmpd']['enable']);
 $pconfig['location'] = $config['snmpd']['location'];
 $pconfig['contact'] = $config['snmpd']['contact'];
@@ -53,8 +48,9 @@ $pconfig['mibii'] = isset($config['snmpd']['modules']['mibii']);
 $pconfig['netgraph'] = isset($config['snmpd']['modules']['netgraph']);
 $pconfig['hostres'] = isset($config['snmpd']['modules']['hostres']);
 $pconfig['ucd'] = isset($config['snmpd']['modules']['ucd']);
-if (isset($config['snmpd']['auxparam']) && is_array($config['snmpd']['auxparam']))
+if (isset($config['snmpd']['auxparam']) && is_array($config['snmpd']['auxparam'])):
 	$pconfig['auxparam'] = implode("\n", $config['snmpd']['auxparam']);
+endif;
 
 if ($_POST) {
 	unset($input_errors);
@@ -109,8 +105,9 @@ if ($_POST) {
 		$savemsg = get_std_save_message($retval);
 	}
 }
+$pgtitle = [gtext('Services'),gtext('SNMP')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function enable_change(enable_change) {
@@ -146,10 +143,10 @@ function trapenable_change() {
 }
 //-->
 </script>
-<form action="services_snmp.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-	<table width="100%" border="0" cellpadding="0" cellspacing="0">
-		<tr>
-			<td class="tabcont">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="tabcont">
+			<form action="services_snmp.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
@@ -180,22 +177,22 @@ function trapenable_change() {
 							<input name="ucd" type="checkbox" id="ucd" value="yes" <?php if (!empty($pconfig['ucd'])) echo "checked=\"checked\""; ?> /><?=gtext("UCD-SNMP-MIB");?>
 						</td>
 					</tr>
-			  </table>
+				</table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="enable_change(true)" />
 				</div>
 				<div id="remarks">
 					<?php html_remark("note", gtext("Note"), sprintf(gtext("The associated MIB files can be found at %s."), "/usr/share/snmp/mibs"));?>
 				</div>
-			</td>
-		</tr>
-	</table>
-	<?php include("formend.inc");?>
-</form>
+				<?php include 'formend.inc';?>
+			</form>
+		</td>
+	</tr>
+</table>
 <script type="text/javascript">
 <!--
 trapenable_change();
 enable_change(false);
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
