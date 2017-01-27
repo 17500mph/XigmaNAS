@@ -31,27 +31,19 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
 if (isset($_GET['uuid']))
 	$uuid = $_GET['uuid'];
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = array(gtext("Services"), gtext("Rsync"), gtext("Local"), isset($uuid) ? gtext("Edit") : gtext("Add"));
-
 /* Global arrays. */
 $a_months = explode(" ",gtext("January February March April May June July August September October November December"));
 $a_weekdays = explode(" ",gtext("Sunday Monday Tuesday Wednesday Thursday Friday Saturday"));
 
-if (!isset($config['rsync']) || !is_array($config['rsync']))
-	$config['rsync'] = array();
-
-if (!isset($config['rsync']['rsynclocal']) || !is_array($config['rsync']['rsynclocal']))
-	$config['rsync']['rsynclocal'] = array();
-
-$a_rsynclocal = &$config['rsync']['rsynclocal'];
+$a_rsynclocal = &array_make_branch($config,'rsync','rsynclocal');
 
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_rsynclocal, "uuid")))) {
 	$pconfig['enable'] = isset($a_rsynclocal[$cnid]['enable']);
@@ -192,8 +184,9 @@ if ($_POST) {
 		}
 	}
 }
+$pgtitle = [gtext('Services'),gtext('Rsync'),gtext('Local'),isset($uuid) ? gtext('Edit') : gtext('Add')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function set_selected(name) {
@@ -223,14 +216,14 @@ function delete_change() {
 			</ul>
 		</td>
 	</tr>
-  <tr>
-    <td class="tabcont">
+	<tr>
+		<td class="tabcont">
 			<form action="services_rsyncd_local_edit.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_titleline_checkbox("enable", gtext("Rsync Job"), !empty($pconfig['enable']) ? true : false, gtext("Enable"));?>
-	    		<tr>
+					<tr>
 						<td width="22%" valign="top" class="vncellreq"><?=gtext("Source share");?></td>
 						<td width="78%" class="vtable">
 							<input name="source" type="text" class="formfld" id="source" size="60" value="<?=htmlspecialchars($pconfig['source']);?>" />
@@ -238,7 +231,7 @@ function delete_change() {
 							<span class="vexpl"><?=gtext("Source directory to be synchronized.");?></span>
 					  </td>
 					</tr>
-    			<tr>
+					<tr>
 						<td width="22%" valign="top" class="vncellreq"><?=gtext("Destination share");?></td>
 						<td width="78%" class="vtable">
 							<input name="destination" type="text" class="formfld" id="destination" size="60" value="<?=htmlspecialchars($pconfig['destination']);?>" />
@@ -248,7 +241,7 @@ function delete_change() {
 					</tr>
 					<?php $a_user = array(); foreach (system_get_user_list() as $userk => $userv) { $a_user[$userk] = htmlspecialchars($userk); }?>
 					<?php html_combobox("who", gtext("Who"), $pconfig['who'], $a_user, "", true);?>
-    			<tr>
+					<tr>
 						<td width="22%" valign="top" class="vncellreq"><?=gtext("Synchronization time");?></td>
 						<td width="78%" class="vtable">
 							<table width="100%" border="0" cellpadding="5" cellspacing="0">
@@ -457,7 +450,7 @@ function delete_change() {
 					<input name="Cancel" type="submit" class="formbtn" value="<?=gtext("Cancel");?>" />
 					<?php endif;?>
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
@@ -467,4 +460,4 @@ function delete_change() {
 delete_change();
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
