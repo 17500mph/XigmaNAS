@@ -31,10 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-
-$pgtitle = array(gtext("Services"), gtext("UPS"), gtext("Driver list"));
+require 'auth.inc';
+require 'guiconfig.inc';
 
 function nut_get_driverlist() {
 	$a_driverinfo = array();
@@ -60,31 +58,32 @@ function nut_get_driverlist() {
 
 	return $a_driverinfo;
 }
+$pgtitle = [gtext('Services'),gtext('UPS'),gtext('Driver List')];
 ?>
-<?php include("fbegin.inc");?>
-<form action="services_ups_drv.php" method="post" name="iform" id="iform">
-	<table width="100%" border="0" cellpadding="0" cellspacing="0">
-	  <tr>
-	    <td class="tabcont">
+<?php include 'fbegin.inc';?>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="tabcont">
+			<form action="services_ups_drv.php" method="post" name="iform" id="iform">
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-          <tr>
-          	<td width="25%" class="listhdrlr"><?=gtext("Manufacturer");?></td>
-            <td width="25%" class="listhdrr"><?=gtext("Model Name");?></td>
-            <td width="25%" class="listhdrr"><?=gtext("Model Extra");?></td>
-            <td width="25%" class="listhdrr"><?=gtext("Driver");?></td>
-          </tr>
-  			  <?php foreach(nut_get_driverlist() as $driverinfov):?>
-          <tr>
-          	<td class="listlr"><?=htmlspecialchars($driverinfov['manufacturer']);?>&nbsp;</td>
-            <td class="listr"><?=htmlspecialchars($driverinfov['modelname']);?>&nbsp;</td>
-            <td class="listr"><?=htmlspecialchars($driverinfov['modelextra']);?>&nbsp;</td>
-            <td class="listr"><?=htmlspecialchars($driverinfov['driver']);?>&nbsp;</td>
-          </tr>
-          <?php endforeach;?>
-        </table>
-			</td>
-		</tr>
-	</table>
-	<?php include("formend.inc");?>
-</form>
-<?php include("fend.inc");?>
+					<tr>
+						<td width="25%" class="listhdrlr"><?=gtext("Manufacturer");?></td>
+						<td width="25%" class="listhdrr"><?=gtext("Model Name");?></td>
+						<td width="25%" class="listhdrr"><?=gtext("Model Extra");?></td>
+						<td width="25%" class="listhdrr"><?=gtext("Driver");?></td>
+					</tr>
+					<?php foreach(nut_get_driverlist() as $driverinfov):?>
+						<tr>
+							<td class="listlr"><?=htmlspecialchars($driverinfov['manufacturer']);?>&nbsp;</td>
+							<td class="listr"><?=htmlspecialchars($driverinfov['modelname']);?>&nbsp;</td>
+							<td class="listr"><?=htmlspecialchars($driverinfov['modelextra']);?>&nbsp;</td>
+							<td class="listr"><?=htmlspecialchars($driverinfov['driver']);?>&nbsp;</td>
+						</tr>
+					<?php endforeach;?>
+				</table>
+				<?php include 'formend.inc';?>
+			</form>
+		</td>
+	</tr>
+</table>
+<?php include 'fend.inc';?>
