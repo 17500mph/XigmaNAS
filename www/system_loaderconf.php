@@ -314,7 +314,7 @@ function controlactionbuttons(ego, triggerbyname) {
 			print_config_change_box();
 		}
 	?>
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%">
 			<col style="width:30%">
@@ -367,7 +367,7 @@ function controlactionbuttons(ego, triggerbyname) {
 					</td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['comment']);?>&nbsp;</td>
 					<td class="lcebld">
-						<table id="area_data_selection_toolbox"><tbody><tr>
+						<table class="area_data_selection_toolbox"><tbody><tr>
 							<td>
 								<?php if ($notdirty && $notprotected):?>
 									<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
@@ -399,6 +399,6 @@ function controlactionbuttons(ego, triggerbyname) {
 	<div id="remarks">
 		<?php html_remark2('note', gtext('Note'), gtext('These option(s) will be added to /boot/loader.conf.local. This allows you to specify parameters to be passed to kernel, and additional modules to be loaded.'));?>
 	</div>
-<?php require 'formend.inc';?>
+	<?php require 'formend.inc';?>
 </form></td></tr></tbody></table>
 <?php include 'fend.inc';?>

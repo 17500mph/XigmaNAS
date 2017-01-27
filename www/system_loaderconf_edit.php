@@ -150,7 +150,7 @@ if (PAGE_MODE_POST == $mode_page) { // We know POST is "Submit", already checked
 			break;
 	}
 }
-$pgtitle = [gtext('System'),gtext('Advanced'),gtext('loader.conf'), $isrecordnew ? gtext('Add') : gtext('Edit')];
+$pgtitle = [gtext('System'),gtext('Advanced'),gtext('loader.conf'),$isrecordnew ? gtext('Add') : gtext('Edit')];
 ?>
 <?php include 'fbegin.inc';?>
 <table id="area_navigator"><tbody>
@@ -169,20 +169,20 @@ $pgtitle = [gtext('System'),gtext('Advanced'),gtext('loader.conf'), $isrecordnew
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform" onsubmit="spinner()">
 	<?php
-		if (!empty($errormsg)) {
-			print_error_box($errormsg);
-		}
-		if (!empty($input_errors)) {
-			print_input_errors($input_errors);
-		}
-		if (file_exists($d_sysrebootreqd_path)) {
-			print_info_box(get_std_save_message(0));
-		}
+	if (!empty($errormsg)) {
+		print_error_box($errormsg);
+	}
+	if (!empty($input_errors)) {
+		print_input_errors($input_errors);
+	}
+	if (file_exists($d_sysrebootreqd_path)) {
+		print_info_box(get_std_save_message(0));
+	}
 	?>
-	<table id="area_data_settings">
+	<table class="area_data_settings">
 		<colgroup>
-			<col id="area_data_settings_col_tag">
-			<col id="area_data_settings_col_data">
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
 			<?php html_titleline_checkbox2('enable', gtext('Configuration'), $sphere_record['enable'], gtext('Enable'));?>
@@ -200,6 +200,6 @@ $pgtitle = [gtext('System'),gtext('Advanced'),gtext('loader.conf'), $isrecordnew
 		<input name="Cancel" type="submit" class="formbtn" value="<?=gtext('Cancel');?>"/>
 		<input name="uuid" type="hidden" value="<?=$sphere_record['uuid'];?>"/>
 	</div>
-<?php require 'formend.inc';?>
+	<?php require 'formend.inc';?>
 </form></td></tr></tbody></table>
 <?php include 'fend.inc';?>
