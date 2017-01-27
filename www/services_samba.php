@@ -31,23 +31,13 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Services"),gtext("CIFS/SMB"),gtext("Settings"));
-
-if (!isset($config['samba']) || !is_array($config['samba']))
-	$config['samba'] = array();
-
-if (!isset($config['samba']['auxparam']) || !is_array($config['samba']['auxparam']))
-	$config['samba']['auxparam'] = array();
-
+array_make_branch($config,'samba','auxparam');
 sort($config['samba']['auxparam']);
-
-if (!isset($config['mounts']['mount']) || !is_array($config['mounts']['mount']))
-	$config['mounts']['mount'] = array();
-
-array_sort_key($config['mounts']['mount'], "devicespecialfile");
+array_make_branch($config,'mounts','mount');
+array_sort_key($config['mounts']['mount'],'devicespecialfile');
 $a_mount = &$config['mounts']['mount'];
 
 $pconfig['netbiosname'] = $config['samba']['netbiosname'];
@@ -83,8 +73,9 @@ $pconfig['aio'] = isset($config['samba']['aio']);
 $pconfig['aiorsize'] = $config['samba']['aiorsize'];
 $pconfig['aiowsize'] = $config['samba']['aiowsize'];
 $pconfig['aiowbehind'] = $config['samba']['aiowbehind'];
-if (is_array($config['samba']['auxparam']))
+if(is_array($config['samba']['auxparam'])):
 	$pconfig['auxparam'] = implode("\n", $config['samba']['auxparam']);
+endif;
 
 if ($_POST) {
 	unset($input_errors);
@@ -223,8 +214,9 @@ $desc_srvmaxprot = gtext('This parameter sets the highest protocol level that wi
 $desc_srvminprot = gtext('This setting controls the minimum protocol version that the server will allow the client to use.');
 $desc_climaxprot = gtext('This parameter sets the highest protocol level that will be supported by the client.');
 $desc_climinprot = gtext('This setting controls the minimum protocol version that the client will attempt to use.');
+$pgtitle = [gtext('Services'),gtext('CIFS/SMB'),gtext('Settings')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function enable_change(enable_change) {
@@ -502,7 +494,7 @@ function aio_change() {
 					html_remark("note", gtext('Note'), $helpinghand );
 					?>
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
@@ -514,4 +506,4 @@ authentication_change();
 aio_change();
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
