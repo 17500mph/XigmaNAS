@@ -68,7 +68,7 @@ if ($_POST) {
 
 	// Input validation
 	$reqdfields = explode(" ", "event occurrence timeinterval expire");
-	$reqdfieldsn = array(gtext("Event"), gtext("Occurrence"), gtext("Time interval"), gtext("Expire"));
+	$reqdfieldsn = [gtext('Event'),gtext('Occurrence'),gtext('Time interval'),gtext('Expire')];
 	$reqdfieldst = explode(" ", "string numeric time time");
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -116,7 +116,7 @@ if ($_POST) {
 				<?php html_titleline(gtext("Ban List Rule Settings"));?>
 					<?php html_combobox("event", gtext("Event"), $pconfig['event'], array("AnonRejectPasswords" => "AnonRejectPasswords", "ClientConnectRate" => "ClientConnectRate", "MaxClientsPerClass" => "MaxClientsPerClass", "MaxClientsPerHost" => "MaxClientsPerHost", "MaxClientsPerUser" => "MaxClientsPerUser", "MaxConnectionsPerHost" => "MaxConnectionsPerHost", "MaxHostsPerUser" => "MaxHostsPerUser", "MaxLoginAttempts" => "MaxLoginAttempts", "TimeoutIdle" => "TimeoutIdle", "TimeoutNoTransfer" => "TimeoutNoTransfer"), gtext("This rule is triggered whenever the selected event directive occurs."), true);?>
 					<?php html_inputbox("occurrence", gtext("Occurrence"), $pconfig['occurrence'], gtext("This parameter says that if N occurrences of the event happen within the given time interval, then a ban is automatically added."), true, 2);?>
-					<?php html_inputbox("timeinterval", gtext("Time interval"), $pconfig['timeinterval'], gtext("Specifies the time interval in hh:mm:ss in which the given number of occurrences must happen to add the ban."), true, 8);?>
+					<?php html_inputbox("timeinterval", gtext("Time Interval"), $pconfig['timeinterval'], gtext("Specifies the time interval in hh:mm:ss in which the given number of occurrences must happen to add the ban."), true, 8);?>
 					<?php html_inputbox("expire", gtext("Expire"), $pconfig['expire'], gtext("Specifies the time in hh:mm:ss after which the ban expires."), true, 8);?>
 				</table>
 				<div id="submit">
