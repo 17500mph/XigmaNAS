@@ -68,13 +68,13 @@ array_make_branch($config,'system','dnsserver');
 array_make_branch($config,'system','ipv6dnsserver');
 $dns_configured = false;
 foreach($config['system']['dnsserver'] as $dnsserver):
-	if(is_string($dnsserver) && preg_match('/\S',$dnsserver)):
+	if(is_string($dnsserver) && preg_match('/\S/',$dnsserver)):
 		$dns_configured = true;
 		break; // break loop
 	endif;
 endforeach;
 foreach($config['system']['ipv6dnsserver'] as $dnsserver):
-	if(is_string($dnsserver) && preg_match('/\S',$dnsserver)):
+	if(is_string($dnsserver) && preg_match('/\S/',$dnsserver)):
 		$dns_configured = true;
 		break; // break loop
 	endif;
