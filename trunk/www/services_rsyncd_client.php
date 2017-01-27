@@ -54,16 +54,7 @@ if ($_POST) {
 		}
 	}
 }
-
-if (!isset($config['rsync']) || !is_array($config['rsync'])) {
-	$config['rsync'] = array();
-	if (!isset($config['rsync']['rsyncclient']) || !is_array($config['rsync']['rsyncclient']))
-		$config['rsync']['rsyncclient'] = array();
-} else if (!isset($config['rsync']['rsyncclient']) || !is_array($config['rsync']['rsyncclient'])) {
-	$config['rsync']['rsyncclient'] = array();
-}
-
-$a_rsyncclient = &$config['rsync']['rsyncclient'];
+$a_rsyncclient = &array_make_branch($config,'rsync','rsyncclient');
 
 if (isset($_GET['act']) && $_GET['act'] === "del") {
 	updatenotify_set("rsyncclient", UPDATENOTIFY_MODE_DIRTY, $_GET['uuid']);
@@ -95,59 +86,55 @@ function rsyncclient_process_updatenotification($mode, $data) {
 ?>
 <?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-<tr>
-	<td class="tabnavtbl">
-		<ul id="tabnav">
-			<li class="tabinact"><a href="services_rsyncd.php"><span><?=gtext("Server");?></span></a></li>
-			<li class="tabact"><a href="services_rsyncd_client.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Client");?></span></a></li>
-			<li class="tabinact"><a href="services_rsyncd_local.php"><span><?=gtext("Local");?></span></a></li>
-			</ul>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabinact"><a href="services_rsyncd.php"><span><?=gtext("Server");?></span></a></li>
+		<li class="tabact"><a href="services_rsyncd_client.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Client");?></span></a></li>
+		<li class="tabinact"><a href="services_rsyncd_local.php"><span><?=gtext("Local");?></span></a></li>
+	</ul></td></tr>
+	<tr>
+		<td class="tabcont">
+			<form action="services_rsyncd_client.php" method="post">
+				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
+				<?php if (updatenotify_exists("rsyncclient")) print_config_change_box();?>
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+					<?php html_titleline2(gtext('Overview'), 6);?>
+					<tr>
+						<td width="20%" class="listhdrlr"><?=gtext("Remote Module (Source)");?></td>
+						<td width="15%" class="listhdrr"><?=gtext("Remote Address");?></td>
+						<td width="18%" class="listhdrr"><?=gtext("Local Share (Destination)");?></td>
+						<td width="10%" class="listhdrr"><?=gtext("Who");?></td>
+						<td width="27%" class="listhdrr"><?=gtext("Description");?></td>
+						<td width="10%" class="list"></td>
+					</tr>
+					<?php foreach($a_rsyncclient as $rsyncclient):?>
+						<?php $notificationmode = updatenotify_get_mode("rsyncclient", $rsyncclient['uuid']);?>
+						<tr>
+							<?php $enable = isset($rsyncclient['enable']);?>
+							<td class="<?=$enable?"listlr":"listlrd";?>"><?=htmlspecialchars($rsyncclient['remoteshare']);?>&nbsp;</td>
+							<td class="<?=$enable?"listr":"listrd";?>"><?=htmlspecialchars($rsyncclient['rsyncserverip']);?>&nbsp;</td>
+							<td class="<?=$enable?"listr":"listrd";?>"><?=htmlspecialchars($rsyncclient['localshare']);?>&nbsp;</td>
+							<td class="<?=$enable?"listr":"listrd";?>"><?=htmlspecialchars($rsyncclient['who']);?>&nbsp;</td>
+							<td class="listbg"><?=htmlspecialchars($rsyncclient['description']);?>&nbsp;</td>
+							<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
+								<td valign="middle" nowrap="nowrap" class="list">
+									<a href="services_rsyncd_client_edit.php?uuid=<?=$rsyncclient['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit Rsync job");?>" border="0" alt="<?=gtext("Edit Rsync job");?>" /></a>&nbsp;
+									<a href="services_rsyncd_client.php?act=del&amp;uuid=<?=$rsyncclient['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this Rsync job?");?>')"><img src="images/delete.png" title="<?=gtext("Delete Rsync job"); ?>" border="0" alt="<?=gtext("Delete Rsync job"); ?>" /></a>
+								</td>
+							<?php else:?>
+								<td valign="middle" nowrap="nowrap" class="list">
+									<img src="images/delete.png" border="0" alt="" />
+								</td>
+							<?php endif;?>
+						</tr>
+					<?php endforeach;?>
+					<tr>
+						<td class="list" colspan="5"></td>
+						<td class="list"><a href="services_rsyncd_client_edit.php"><img src="images/add.png" title="<?=gtext("Add Rsync job");?>" border="0" alt="<?=gtext("Add Rsync job");?>" /></a></td>
+					</tr>
+				</table>
+				<?php include 'formend.inc';?>
+			</form>
 		</td>
 	</tr>
-	<tr>
-	<td class="tabcont">
-		<form action="services_rsyncd_client.php" method="post">
-		<?php if (!empty($savemsg)) print_info_box($savemsg);?>
-		<?php if (updatenotify_exists("rsyncclient")) print_config_change_box();?>
-		<table width="100%" border="0" cellpadding="0" cellspacing="0">
-		<?php html_titleline2(gtext('Overview'), 6);?>
-	<tr>
-		<td width="20%" class="listhdrlr"><?=gtext("Remote Module (Source)");?></td>
-		<td width="15%" class="listhdrr"><?=gtext("Remote Address");?></td>
-		<td width="18%" class="listhdrr"><?=gtext("Local Share (Destination)");?></td>
-		<td width="10%" class="listhdrr"><?=gtext("Who");?></td>
-		<td width="27%" class="listhdrr"><?=gtext("Description");?></td>
-		<td width="10%" class="list"></td>
-	</tr>
-		<?php foreach($a_rsyncclient as $rsyncclient):?>
-		<?php $notificationmode = updatenotify_get_mode("rsyncclient", $rsyncclient['uuid']);?>
-	<tr>
-		<?php $enable = isset($rsyncclient['enable']);?>
-		<td class="<?=$enable?"listlr":"listlrd";?>"><?=htmlspecialchars($rsyncclient['remoteshare']);?>&nbsp;</td>
-		<td class="<?=$enable?"listr":"listrd";?>"><?=htmlspecialchars($rsyncclient['rsyncserverip']);?>&nbsp;</td>
-		<td class="<?=$enable?"listr":"listrd";?>"><?=htmlspecialchars($rsyncclient['localshare']);?>&nbsp;</td>
-		<td class="<?=$enable?"listr":"listrd";?>"><?=htmlspecialchars($rsyncclient['who']);?>&nbsp;</td>
-		<td class="listbg"><?=htmlspecialchars($rsyncclient['description']);?>&nbsp;</td>
-		<?php if (UPDATENOTIFY_MODE_DIRTY != $notificationmode):?>
-		<td valign="middle" nowrap="nowrap" class="list">
-		<a href="services_rsyncd_client_edit.php?uuid=<?=$rsyncclient['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit Rsync job");?>" border="0" alt="<?=gtext("Edit Rsync job");?>" /></a>&nbsp;
-		<a href="services_rsyncd_client.php?act=del&amp;uuid=<?=$rsyncclient['uuid'];?>" onclick="return confirm('<?=gtext("Do you really want to delete this Rsync job?");?>')"><img src="images/delete.png" title="<?=gtext("Delete Rsync job"); ?>" border="0" alt="<?=gtext("Delete Rsync job"); ?>" /></a>
-	</td>
-	<?php else:?>
-		<td valign="middle" nowrap="nowrap" class="list">
-		<img src="images/delete.png" border="0" alt="" />
-	</td>
-		<?php endif;?>
-	</tr>
-		<?php endforeach;?>
-	<tr> 
-		<td class="list" colspan="5"></td>
-		<td class="list"><a href="services_rsyncd_client_edit.php"><img src="images/add.png" title="<?=gtext("Add Rsync job");?>" border="0" alt="<?=gtext("Add Rsync job");?>" /></a></td>
-	</tr>
-</table>
-<?php include 'formend.inc';?>
-</form>
-</td>
-</tr>
 </table>
 <?php include 'fend.inc';?>
