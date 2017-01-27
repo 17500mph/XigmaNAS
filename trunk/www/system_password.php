@@ -40,20 +40,20 @@ if ($_POST) {
 	unset($input_errors);
 
 	$reqdfields = explode(" ", "password_old password_new password_confirm");
-	$reqdfieldsn = array(gtext("Old password"), gtext("Password"), gtext("Password (confirmed)"));
+	$reqdfieldsn = array(gtext("Current Password"), gtext("New Password"), gtext("New Password (Confirmation)"));
 	$reqdfieldst = explode(" ", "password password password");
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
-	// Validate old password.
+	// Validate current password.
 	if (!password_verify($_POST['password_old'], $config['system']['password'])) {
 		$input_errors[] = gtext("The current password is incorrectly entered.");
 	}
 
 	// Validate new password.
 	if ($_POST['password_new'] !== $_POST['password_confirm']) {
-		$input_errors[] = gtext("The new password does not match. Please ensure the passwords match exactly.");
+		$input_errors[] = gtext("Password does not match the confirmation password. Please ensure both passwords are the same.");
 	}
 
 	// Check Webserver document root if auth is required
