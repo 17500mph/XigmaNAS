@@ -34,12 +34,7 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-$pgtitle = [gtext('Network'), gtext('Interface Management'), gtext('CARP')];
-
-if (!isset($config['vinterfaces']['carp']) || !is_array($config['vinterfaces']['carp']))
-	$config['vinterfaces']['carp'] = array();
-
-
+array_make_branch($config,'vinterfaces','carp');
 $a_carp = &$config['vinterfaces']['carp'];
 array_sort_key($a_carp, "if");
 
@@ -83,6 +78,7 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 		exit;
 	}
 }
+$pgtitle = [gtext('Network'),gtext('Interface Management'),gtext('CARP')];
 ?>
 <?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
