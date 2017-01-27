@@ -31,10 +31,8 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-
-$pgtitle = array(gtext("Virtualization"), gtext("Xen"));
+require 'auth.inc';
+require 'guiconfig.inc';
 
 $a_vms = &array_make_branch($config,'xen','vms','param');
 $a_bridge = &array_make_branch($config,'vinterfaces','bridge');
@@ -345,8 +343,9 @@ function create_vm_config($vmuuid) {
 	fclose($fp);
 	return $cfgname;
 }
+$pgtitle = [gtext('Virtualization'),gtext('Xen')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">//<![CDATA[
 $(document).ready(function(){
 	$('#CreatePV').click(function(){ location.href='vm_xen_pv.php'; });
@@ -507,9 +506,9 @@ $(document).ready(function(){
 	  <button type="button" id="CreatePV" class="formbtn"><?=gtext("Create PV Guest");?></button>
 	  <button type="button" id="CreateHVM" class="formbtn"><?=gtext("Create HVM Guest");?></button>
 	</div>
-	<?php include("formend.inc");?>
+	<?php include 'formend.inc';?>
       </form>
     </td>
   </tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
