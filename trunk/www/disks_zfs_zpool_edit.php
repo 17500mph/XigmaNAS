@@ -295,10 +295,10 @@ $(window).on("load", function() {
 		if (!empty($input_errors)) { print_input_errors($input_errors); }
 		if (file_exists($d_sysrebootreqd_path)) { print_info_box(get_std_save_message(0)); }
 	?>
-	<table id="area_data_settings">
+	<table class="area_data_settings">
 		<colgroup>
-			<col id="area_data_settings_col_tag">
-			<col id="area_data_settings_col_data">
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
 			<?php html_titleline2(gtext('Settings'));?>
@@ -314,7 +314,7 @@ $(window).on("load", function() {
 			?>
 		</tbody>
 	</table>
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%">
 			<col style="width:20%">

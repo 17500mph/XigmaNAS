@@ -297,10 +297,10 @@ function controlactionbuttons(ego, triggerbyname) {
 			print_config_change_box();
 		}
 	?>
-	<table id="area_data_settings">
+	<table class="area_data_settings">
 		<colgroup>
-			<col id="area_data_settings_col_tag">
-			<col id="area_data_settings_col_data">
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
 			<?php html_titleline2(gtext('Filter'));?>
@@ -314,7 +314,7 @@ function controlactionbuttons(ego, triggerbyname) {
 	<div id="submit">
 		<input type="submit" class="formbtn" id="filter" name="filter" value="<?=gtext('Apply Filter');?>"/>
 	</div>
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%"><!-- // Checkbox -->
 			<col style="width:35%"><!-- // Path -->
@@ -372,7 +372,7 @@ function controlactionbuttons(ego, triggerbyname) {
 					</td>
 					<td class="lcell"><?=htmlspecialchars($sphere_record['creation']);?>&nbsp;</td>
 					<td class="lcebld">
-						<table id="area_data_selection_toolbox"><tbody><tr>
+						<table class="area_data_selection_toolbox"><tbody><tr>
 							<td>
 								<?php if ($notdirty && $notprotected):?>
 									<a href="<?=$sphere_scriptname_child;?>?snapshot=<?=urlencode($sphere_record['snapshot']);?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
