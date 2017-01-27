@@ -67,17 +67,17 @@ switch($mode_page):
 		$sphere_record['password_new'] = $_POST['password_new'] ?? '';
 		$sphere_record['password_confirm'] = $_POST['password_confirm'] ?? '';
 		$reqdfields = ['password_old','password_new','password_confirm'];
-		$reqdfieldsn = [gtext('Current Password'),gtext('New Password'),gtext('New Password (Confirmation)')];
+		$reqdfieldsn = [gtext('Current Password'),gtext('New Password'),gtext('Confirm New Password')];
 		$reqdfieldst = ['password','password','password'];
 		do_input_validation($sphere_record,$reqdfields,$reqdfieldsn,$input_errors);
 		do_input_validation_type($sphere_record,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
 		//	Validate current password.
 		if(!password_verify($sphere_record['password_old'],$config['system']['password'])):
-			$input_errors[] = gtext('The current password is incorrectly entered.');
+			$input_errors[] = gtext('Current password is incorrectly entered.');
 		endif;
 		//	Validate new password.
 		if($sphere_record['password_new'] !== $sphere_record['password_confirm']):
-			$input_errors[] = gtext('Password does not match the confirmation password. Please ensure both passwords are the same.');
+			$input_errors[] = gtext('New Password does not match the confirmation password. Please ensure both passwords are the same.');
 		endif;
 		//	Check Webserver document root if auth is required
 		if(isset($config['websrv']['enable']) &&
