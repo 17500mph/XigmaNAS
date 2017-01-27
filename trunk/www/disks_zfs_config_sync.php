@@ -490,7 +490,7 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Synchroniz
 			print_error_box(gtext('Nothing to synchronize'));
 		}
 	?>
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%"><!-- // Checkbox -->
 			<col style="width:14%"><!-- // Name -->
@@ -544,7 +544,7 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Synchroniz
 		</tbody>
 	</table>
 
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%"><!-- // Checkbox -->
 			<col style="width:15%"><!-- // Name -->
@@ -580,7 +580,7 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Synchroniz
 		</tbody>
 	</table>
 					
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%"><!-- // Checkbox -->
 			<col style="width:15%"><!-- // Name -->
@@ -645,7 +645,7 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Synchroniz
 			<?php endforeach;?>
 		</tbody>
 	</table>
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%"><!-- // Checkbox -->
 			<col style="width:15%"><!-- // Name -->
@@ -692,10 +692,10 @@ $pgtitle = [gtext('Disks'),gtext('ZFS'),gtext('Configuration'),gtext('Synchroniz
 			<?php endforeach;?>
 		</tbody>
 	</table>
-	<table id="area_data_settings">
+	<table class="area_data_settings">
 		<colgroup>
-			<col id="area_data_settings_col_tag">
-			<col id="area_data_settings_col_data">
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
 			<?php html_titleline2(gtext('Options'));?>

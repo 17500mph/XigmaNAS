@@ -392,10 +392,10 @@ function toggleselection(ego, triggerbyname) {
 			<?php endforeach;?>
 		</div>
 	<?php endif;?>
-	<table id="area_data_settings">
+	<table class="area_data_settings">
 		<colgroup>
-			<col id="area_data_settings_col_tag">
-			<col id="area_data_settings_col_data">
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
 			<?php html_titleline2(gtext('Settings'));?>
@@ -418,7 +418,7 @@ function toggleselection(ego, triggerbyname) {
 			?>
 		</tbody>
 	</table>
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%">
 			<col style="width:10%">

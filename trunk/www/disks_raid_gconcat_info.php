@@ -73,7 +73,7 @@ $(document).ready(function(){
 	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
-	<table id="area_data_settings">
+	<table class="area_data_settings">
 		<?php html_titleline(gtext('JBOD Information & Status'));?>
 		<tr>
 			<td class="listt">
