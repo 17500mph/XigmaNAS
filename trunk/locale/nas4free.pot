@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2017-01-26 21:12+0000\n"
+"POT-Creation-Date: 2017-01-27 06:28+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -694,10 +694,10 @@ msgstr ""
 msgid "An interface with the specified description already exists."
 msgstr ""
 
-msgid "Anonymous access has been deprecated starting from SMB2."
+msgid "Anonymous Bind"
 msgstr ""
 
-msgid "Anonymous bind"
+msgid "Anonymous access has been deprecated starting from SMB2."
 msgstr ""
 
 msgid "Anonymous user bandwidth"
@@ -845,6 +845,9 @@ msgstr ""
 msgid "Autoselect"
 msgstr ""
 
+msgid "Auxiliary Parameter"
+msgstr ""
+
 msgid "Auxiliary Parameters"
 msgstr ""
 
@@ -968,7 +971,7 @@ msgstr ""
 msgid "Bind DN"
 msgstr ""
 
-msgid "Bind password"
+msgid "Bind Password"
 msgstr ""
 
 msgid "BitTorrent"
@@ -1074,10 +1077,10 @@ msgstr ""
 msgid "CIFS/SMB"
 msgstr ""
 
-msgid "CIFS/SMB disabled"
+msgid "CIFS/SMB Information"
 msgstr ""
 
-msgid "CIFS/SMB informations"
+msgid "CIFS/SMB disabled"
 msgstr ""
 
 msgid "CIFS/SMB is enabled."
@@ -1358,7 +1361,7 @@ msgstr ""
 msgid "Configuration"
 msgstr ""
 
-msgid "Configuration directory"
+msgid "Configuration Directory"
 msgstr ""
 
 msgid "Configuring"
@@ -2174,7 +2177,7 @@ msgstr ""
 msgid "Distance the disk has shifted relative to the spindle (usually due to shock or temperature). Unit of measure is unknown."
 msgstr ""
 
-msgid "Distributed hash table"
+msgid "Distributed Hash Table"
 msgstr ""
 
 msgid "Do not activate this option if you want to add an existing RAID."
@@ -2397,7 +2400,7 @@ msgstr ""
 msgid "Domain controller name"
 msgstr ""
 
-msgid "Domain have no 2nd level name."
+msgid "Domain is missing 2nd level name."
 msgstr ""
 
 msgid "Domain name"
@@ -2430,10 +2433,13 @@ msgstr ""
 msgid "Download"
 msgstr ""
 
+msgid "Download Bandwidth"
+msgstr ""
+
 msgid "Download Configuration"
 msgstr ""
 
-msgid "Download bandwidth"
+msgid "Download Directory"
 msgstr ""
 
 msgid "Download directory"
@@ -2451,10 +2457,10 @@ msgstr ""
 msgid "Driver"
 msgstr ""
 
-msgid "Driver list"
+msgid "Driver Parameter"
 msgstr ""
 
-msgid "Driver parameters"
+msgid "Driver list"
 msgstr ""
 
 msgid "Driver used"
@@ -3037,6 +3043,9 @@ msgstr ""
 msgid "Extents must be defined before they can be used, and extents cannot be used more than once."
 msgstr ""
 
+msgid "Extra Options"
+msgstr ""
+
 msgid "Extra options"
 msgstr ""
 
@@ -3392,6 +3401,9 @@ msgstr ""
 msgid "Group Settings"
 msgstr ""
 
+msgid "Group Suffix"
+msgstr ""
+
 msgid "Group compilations"
 msgstr ""
 
@@ -3405,9 +3417,6 @@ msgid "Group name."
 msgstr ""
 
 msgid "Group numeric id."
-msgstr ""
-
-msgid "Group suffix"
 msgstr ""
 
 msgid "Groupmask - Mask ACL with mode"
@@ -3520,9 +3529,6 @@ msgid "Host"
 msgstr ""
 
 msgid "Host access control"
-msgstr ""
-
-msgid "Host name"
 msgstr ""
 
 msgid "Host resources"
@@ -3738,7 +3744,7 @@ msgstr ""
 msgid "Incoming Line/Power Information"
 msgstr ""
 
-msgid "Incomplete directory"
+msgid "Incomplete Directory"
 msgstr ""
 
 msgid "Indicates the approximate SSD life left, in terms of program/erase cycles or Flash blocks currently available for use."
@@ -4035,6 +4041,9 @@ msgstr ""
 msgid "LAN Only"
 msgstr ""
 
+msgid "LAN interface is not configured."
+msgstr ""
+
 msgid "LAN net"
 msgstr ""
 
@@ -4320,7 +4329,7 @@ msgstr ""
 msgid "MTU"
 msgstr ""
 
-msgid "Machine suffix"
+msgid "Machine Suffix"
 msgstr ""
 
 msgid "Maintenance"
@@ -4773,6 +4782,9 @@ msgstr ""
 msgid "New Password"
 msgstr ""
 
+msgid "New Password (Confirmation)"
+msgstr ""
+
 msgid "New password"
 msgstr ""
 
@@ -4780,6 +4792,9 @@ msgid "Next"
 msgstr ""
 
 msgid "No"
+msgstr ""
+
+msgid "No DNS server have been configured."
 msgstr ""
 
 msgid "No DNS setting found."
@@ -5029,9 +5044,6 @@ msgstr ""
 msgid "Old passphrase"
 msgstr ""
 
-msgid "Old password"
-msgstr ""
-
 msgid "On"
 msgstr ""
 
@@ -5206,13 +5218,19 @@ msgstr ""
 msgid "Password (confirmed)"
 msgstr ""
 
+msgid "Password Encryption"
+msgstr ""
+
+msgid "Password Suffix"
+msgstr ""
+
 msgid "Password authentication"
 msgstr ""
 
-msgid "Password don't match."
+msgid "Password does not match the confirmation password. Please ensure both passwords are the same."
 msgstr ""
 
-msgid "Password encryption"
+msgid "Password don't match."
 msgstr ""
 
 msgid "Password for the administrative pages."
@@ -5225,9 +5243,6 @@ msgid "Password server"
 msgstr ""
 
 msgid "Password server name or IP address (e.g. Active Directory domain controller)."
-msgstr ""
-
-msgid "Password suffix"
 msgstr ""
 
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
@@ -5252,13 +5267,16 @@ msgstr ""
 msgid "Path to the local device. (e.g. %s)"
 msgstr ""
 
+msgid "Peer Exchange"
+msgstr ""
+
+msgid "Peer Port"
+msgstr ""
+
 msgid "Peer Secret"
 msgstr ""
 
 msgid "Peer User"
-msgstr ""
-
-msgid "Peer exchange"
 msgstr ""
 
 msgid "Peer port"
@@ -5412,7 +5430,7 @@ msgstr ""
 msgid "Port %ld is already used by another service."
 msgstr ""
 
-msgid "Port forwarding"
+msgid "Port Forwarding"
 msgstr ""
 
 #, php-format
@@ -5937,10 +5955,10 @@ msgstr ""
 msgid "Root"
 msgstr ""
 
-msgid "Root bind DN"
+msgid "Root Bind DN"
 msgstr ""
 
-msgid "Root bind password"
+msgid "Root Bind Password"
 msgstr ""
 
 msgid "Rotation Rate"
@@ -5955,7 +5973,7 @@ msgstr ""
 msgid "Routes"
 msgstr ""
 
-msgid "Routing tables"
+msgid "Routing Tables"
 msgstr ""
 
 msgid "Rows"
@@ -7361,9 +7379,6 @@ msgstr ""
 msgid "The network '%s' is invalid."
 msgstr ""
 
-msgid "The new password does not match. Please ensure the passwords match exactly."
-msgstr ""
-
 msgid "The new password is also the default root password of the system!"
 msgstr ""
 
@@ -7891,6 +7906,9 @@ msgstr ""
 msgid "Times"
 msgstr ""
 
+msgid "Title Speed"
+msgstr ""
+
 msgid "TitleSpeed"
 msgstr ""
 
@@ -8229,7 +8247,7 @@ msgstr ""
 msgid "Upgrade ZFS and add all supported feature flags on a pool"
 msgstr ""
 
-msgid "Upload bandwidth"
+msgid "Upload Bandwidth"
 msgstr ""
 
 msgid "Upload directory"
@@ -8310,10 +8328,16 @@ msgstr ""
 msgid "User ID"
 msgstr ""
 
+msgid "User Mask"
+msgstr ""
+
 msgid "User Settings"
 msgstr ""
 
 msgid "User Shares"
+msgstr ""
+
+msgid "User Suffix"
 msgstr ""
 
 msgid "User account is locked"
@@ -8335,9 +8359,6 @@ msgid "User password."
 msgstr ""
 
 msgid "User portal"
-msgstr ""
-
-msgid "User suffix"
 msgstr ""
 
 msgid "Username"
@@ -8530,6 +8551,9 @@ msgstr ""
 msgid "WPA2"
 msgstr ""
 
+msgid "Wait Time"
+msgstr ""
+
 msgid "Wait time"
 msgstr ""
 
@@ -8545,7 +8569,7 @@ msgstr ""
 msgid "Warning: You are going to delete an encrypted volume. All data will get lost and can not be recovered."
 msgstr ""
 
-msgid "Watch directory"
+msgid "Watch Directory"
 msgstr ""
 
 msgid "WebGUI"
