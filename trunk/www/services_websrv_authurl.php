@@ -39,8 +39,6 @@ if (isset($_GET['uuid']))
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-if (!isset($config['websrv']['authentication']['url']) || !is_array($config['websrv']['authentication']['url']))
-	$config['websrv']['authentication']['url'] = array();
 $a_authurl = &array_make_branch($config,'websrv','authentication','url');
 if(empty($a_authurl)):
 else:
