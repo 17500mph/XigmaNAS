@@ -206,7 +206,7 @@ function controlactionbuttons(ego,triggerbyname) {
 		print_config_change_box();
 	endif;
 	?>
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%">
 			<col style="width:25%">

@@ -200,7 +200,7 @@ $pgtitle = [gtext('Diagnostics'),gtext('ARP Tables')];
 ?>
 <?php include 'fbegin.inc';?>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:20%">
 			<col style="width:20%">
@@ -232,7 +232,7 @@ $pgtitle = [gtext('Diagnostics'),gtext('ARP Tables')];
 					<td class="lcell"><?=htmlspecialchars(get_HostName($entry['mac'], $entry['ip']));?>&nbsp;</td>
 					<td class="lcell"><?=htmlspecialchars($hwif[$entry['interface']]);?>&nbsp;</td>
 					<td class="lcebld">
-						<table id="area_data_selection_toolbox"><tbody><tr>
+						<table class="area_data_selection_toolbox"><tbody><tr>
 							<td>
 								<a href="diag_arp.php?act=del&amp;id=<?=$entry['ip'];?>"><img src="images/delete.png" title="<?=gtext("Delete ARP entry");?>" border="0" alt="<?=gtext("Delete ARP entry");?>" /></a>
 							</td>

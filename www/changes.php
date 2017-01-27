@@ -32,19 +32,19 @@
 	either expressed or implied, of the NAS4Free Project.
 */
 // Configure page permission
-$pgperm['allowuser'] = TRUE;
+$pgperm['allowuser'] = true;
 
 require 'auth.inc';
 require 'guiconfig.inc';
 
-$pgtitle = [gtext('Help'), gtext('Release Notes')];
+$pgtitle = [gtext('Help'),gtext('Release Notes')];
 ?>
 <?php include 'fbegin.inc';?>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
-	<table id="area_data_settings">
+	<table class="area_data_settings">
 		<colgroup>
-			<col id="area_data_settings_col_tag">
-			<col id="area_data_settings_col_data">
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
 			<?php html_titleline2(gtext('Release Notes'));?>
@@ -54,8 +54,8 @@ $pgtitle = [gtext('Help'), gtext('Release Notes')];
 				<td class="celltag"><?=gtext('Information');?></td>
 				<td class="celldata">
 					<?php 
-						unset($rawdata);
-						exec("/bin/cat {$g['www_path']}/CHANGES", $rawdata);
+					unset($rawdata);
+					exec("/bin/cat {$g['www_path']}/CHANGES", $rawdata);
 					?>
 					<pre><?php echo htmlspecialchars(implode("\n", $rawdata));?></pre>
 				</td>
