@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2017-01-27 06:28+0000\n"
+"POT-Creation-Date: 2017-01-27 21:43+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -607,9 +607,6 @@ msgstr ""
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr ""
 
-msgid "Allow group"
-msgstr ""
-
 msgid "Allow new files"
 msgstr ""
 
@@ -697,19 +694,16 @@ msgstr ""
 msgid "Anonymous Bind"
 msgstr ""
 
-msgid "Anonymous access has been deprecated starting from SMB2."
+msgid "Anonymous Users"
 msgstr ""
 
-msgid "Anonymous user bandwidth"
+msgid "Anonymous access has been deprecated starting from SMB2."
 msgstr ""
 
 msgid "Anonymous user download bandwith in KB/s. An empty field means infinity."
 msgstr ""
 
 msgid "Anonymous user upload bandwith in KB/s. An empty field means infinity."
-msgstr ""
-
-msgid "Anonymous users only"
 msgstr ""
 
 msgid "Another DLNA/UPnP service is already running. Enabling Fuppes might cause issues."
@@ -804,6 +798,15 @@ msgid "Authenticate Path & Realm"
 msgstr ""
 
 msgid "Authenticate URL"
+msgstr ""
+
+msgid "Authenticated Users"
+msgstr ""
+
+msgid "Authenticated user download bandwith in KB/s. An empty field means infinity."
+msgstr ""
+
+msgid "Authenticated user upload bandwith in KB/s. An empty field means infinity."
 msgstr ""
 
 msgid "Authentication"
@@ -1287,7 +1290,7 @@ msgstr ""
 msgid "Cols"
 msgstr ""
 
-msgid "Comma-separated list of group names that are permitted to login to the FTP server. (empty is ftp group)"
+msgid "Comma-separated list of group names that are permitted to login to the FTP server. (empty = ftp group)."
 msgstr ""
 
 msgid "Command"
@@ -1365,6 +1368,9 @@ msgid "Configuration Directory"
 msgstr ""
 
 msgid "Configuring"
+msgstr ""
+
+msgid "Confirm New Password"
 msgstr ""
 
 msgid "Confirmation"
@@ -1604,6 +1610,9 @@ msgstr ""
 msgid "Current password is default password. You should use your own password."
 msgstr ""
 
+msgid "Current password is incorrectly entered."
+msgstr ""
+
 msgid "Current state of drive operation based upon the Life Curve."
 msgstr ""
 
@@ -1761,11 +1770,7 @@ msgstr ""
 msgid "Default Device Settings"
 msgstr ""
 
-#, php-format
-msgid "Default is %s."
-msgstr ""
-
-msgid "Default root"
+msgid "Default Root"
 msgstr ""
 
 msgid "Default user name is 'admin'."
@@ -2072,6 +2077,9 @@ msgstr ""
 
 #, php-format
 msgid "Directory %s doesn't exist!"
+msgstr ""
+
+msgid "Directory Mask"
 msgstr ""
 
 msgid "Directory for incomplete files. An empty field means disable."
@@ -2457,10 +2465,10 @@ msgstr ""
 msgid "Driver"
 msgstr ""
 
-msgid "Driver Parameter"
+msgid "Driver List"
 msgstr ""
 
-msgid "Driver list"
+msgid "Driver Parameter"
 msgstr ""
 
 msgid "Driver used"
@@ -2905,6 +2913,10 @@ msgstr ""
 msgid "Enter a custom port number for the WebGUI if you want to override the default (80 for HTTP, 443 for HTTPS)."
 msgstr ""
 
+#, php-format
+msgid "Enter a custom port number if you want to override the default port. Default port is %s."
+msgstr ""
+
 msgid "Enter a description"
 msgstr ""
 
@@ -3161,6 +3173,9 @@ msgstr ""
 msgid "File Manager"
 msgstr ""
 
+msgid "File Mask"
+msgstr ""
+
 msgid "File Path"
 msgstr ""
 
@@ -3389,10 +3404,13 @@ msgstr ""
 msgid "Greek"
 msgstr ""
 
-msgid "Greeting banner displayed by FTP when a connection first comes in."
+msgid "Greeting banner displayed to client when firts connection comes in."
 msgstr ""
 
 msgid "Group"
+msgstr ""
+
+msgid "Group Allow"
 msgstr ""
 
 msgid "Group ID"
@@ -3656,7 +3674,7 @@ msgstr ""
 msgid "ISP DNS Servers"
 msgstr ""
 
-msgid "Ident protocol"
+msgid "IdentLookups"
 msgstr ""
 
 msgid "Identifier"
@@ -3694,9 +3712,6 @@ msgid "If this property is disabled, the file system cannot be mounted."
 msgstr ""
 
 msgid "If this property is enabled, the snapshots are displayed into .zfs directory."
-msgstr ""
-
-msgid "If you want to change the password for accessing the WebGUI, enter it here twice."
 msgstr ""
 
 msgid "Import"
@@ -3941,7 +3956,7 @@ msgstr ""
 msgid "It can be changed from the client side by standard SCSI mode page at any time."
 msgstr ""
 
-msgid "It is impossible to enable 'Anonymous users only' and 'Local users only' authentication simultaneously."
+msgid "It is impossible to enable 'Anonymous Users' and 'Authenticated Users' both at the same time."
 msgstr ""
 
 msgid "It is not recommanded to import non healthy pools nor virtual devices that are part of a non healthy pool."
@@ -4190,18 +4205,6 @@ msgstr ""
 msgid "Local shares to be synchronized"
 msgstr ""
 
-msgid "Local user bandwidth"
-msgstr ""
-
-msgid "Local user download bandwith in KB/s. An empty field means infinity."
-msgstr ""
-
-msgid "Local user upload bandwith in KB/s. An empty field means infinity."
-msgstr ""
-
-msgid "Local users only"
-msgstr ""
-
 msgid "Location"
 msgstr ""
 
@@ -4377,10 +4380,22 @@ msgstr ""
 msgid "Margin of a channel while reading data. The function of this attribute is not specified."
 msgstr ""
 
-msgid "Masquerade address"
+msgid "Masquerade Address"
 msgstr ""
 
 msgid "Max Entries"
+msgstr ""
+
+msgid "Max. Clients"
+msgstr ""
+
+msgid "Max. Connections Per Host"
+msgstr ""
+
+msgid "Max. Login Attempts"
+msgstr ""
+
+msgid "Max. Passive Port"
 msgstr ""
 
 msgid "Max. TTL"
@@ -4389,16 +4404,7 @@ msgstr ""
 msgid "Max. block size"
 msgstr ""
 
-msgid "Max. conn. per IP"
-msgstr ""
-
 msgid "Max. connections"
-msgstr ""
-
-msgid "Max. login attempts"
-msgstr ""
-
-msgid "Max. passive port"
 msgstr ""
 
 msgid "Max. pre-send R2T"
@@ -4440,11 +4446,11 @@ msgstr ""
 msgid "Maximum number of allowed password attempts before disconnection."
 msgstr ""
 
-#, php-format
-msgid "Maximum number of connections in each session (%d by default)."
+msgid "Maximum number of connections allowed per IP address. (0 = unlimited)."
 msgstr ""
 
-msgid "Maximum number of connections per IP address (0 = unlimited)."
+#, php-format
+msgid "Maximum number of connections in each session (%d by default)."
 msgstr ""
 
 #, php-format
@@ -4455,10 +4461,10 @@ msgstr ""
 msgid "Maximum number of sessions holding at same time (%d by default)."
 msgstr ""
 
-msgid "Maximum number of simultaneous clients."
+msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
 msgstr ""
 
-msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
+msgid "Maximum number of users that can connect to the server."
 msgstr ""
 
 msgid "Maximum relative humidity seen (percent)"
@@ -4512,7 +4518,7 @@ msgstr ""
 msgid "MibII"
 msgstr ""
 
-msgid "Min. passive port"
+msgid "Min. Passive Port"
 msgstr ""
 
 msgid "MiniDLNA"
@@ -4782,7 +4788,7 @@ msgstr ""
 msgid "New Password"
 msgstr ""
 
-msgid "New Password (Confirmation)"
+msgid "New Password does not match the confirmation password. Please ensure both passwords are the same."
 msgstr ""
 
 msgid "New password"
@@ -4996,9 +5002,6 @@ msgstr ""
 msgid "Number of battery packs"
 msgstr ""
 
-msgid "Number of clients"
-msgstr ""
-
 msgid "Number of hours elapsed in the power-on state."
 msgstr ""
 
@@ -5191,7 +5194,7 @@ msgstr ""
 msgid "Partitions"
 msgstr ""
 
-msgid "Passive ports"
+msgid "Passive Port"
 msgstr ""
 
 msgid "Passive ports restricts the range of ports from which the server will select when sent the PASV command from a client. The server will randomly choose a number from within the specified range until an open port is found. The port range selected must be in the non-privileged range (eg. greater than or equal to 1024). It is strongly recommended that the chosen range be large enough to handle many simultaneous passive connections (for example, 49152-65534, the IANA-registered ephemeral port range)."
@@ -5287,6 +5290,9 @@ msgstr ""
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
+msgstr ""
+
+msgid "Permit Root Login"
 msgstr ""
 
 msgid "Permit root login"
@@ -6823,6 +6829,12 @@ msgstr ""
 msgid "System tuning"
 msgstr ""
 
+msgid "TCP Port"
+msgstr ""
+
+msgid "TCP Wrapper"
+msgstr ""
+
 msgid "TCP forwarding"
 msgstr ""
 
@@ -6833,9 +6845,6 @@ msgid "TCP port is 5900+N, where N is VNC display number."
 msgstr ""
 
 msgid "TCP port to bind the server to."
-msgstr ""
-
-msgid "TCP wrapper"
 msgstr ""
 
 msgid "TFTP"
@@ -6850,10 +6859,10 @@ msgstr ""
 msgid "TLS Mode"
 msgstr ""
 
-msgid "TLS Server Certificate Check"
+msgid "TLS Only"
 msgstr ""
 
-msgid "TLS only"
+msgid "TLS Server Certificate Check"
 msgstr ""
 
 msgid "Tag"
@@ -6989,7 +6998,7 @@ msgstr ""
 msgid "The Newly Added Bad Flash Block attribute indicates the total number of bad flash blocks the drive detected since it was first initialized in manufacturing."
 msgstr ""
 
-msgid "The TCP port must be a valid port number."
+msgid "The TCP Port must be a valid port number."
 msgstr ""
 
 msgid "The UPS identifier and IP address"
@@ -7197,9 +7206,6 @@ msgstr ""
 msgid "The cron job has been executed successfully."
 msgstr ""
 
-msgid "The current password is incorrectly entered."
-msgstr ""
-
 #, php-format
 msgid "The custom format of the snapshot for shadow copy service can be specified. The default format is %s used for ZFS auto snapshot."
 msgstr ""
@@ -7321,13 +7327,16 @@ msgstr ""
 msgid "The login name is limited to 16 characters."
 msgstr ""
 
-msgid "The max. connection per IP must be either 0 (unlimited) or greater."
+msgid "The max. connections per IP address must be either 0 (unlimited) or greater."
+msgstr ""
+
+msgid "The max. number of clients must be in the range from 1 to 50."
 msgstr ""
 
 msgid "The maximum download bandwith in KiB/s. An empty field means infinity."
 msgstr ""
 
-msgid "The maximum idle time be a number."
+msgid "The maximum idle time must be a number."
 msgstr ""
 
 msgid "The maximum port to allocate for PASV style data connections (0 = use any port)."
@@ -7377,12 +7386,6 @@ msgstr ""
 
 #, php-format
 msgid "The network '%s' is invalid."
-msgstr ""
-
-msgid "The new password is also the default root password of the system!"
-msgstr ""
-
-msgid "The number of clients must be between 1 and 50."
 msgstr ""
 
 msgid "The number of errors caused by incorrect checksum during the error correction."
@@ -7795,6 +7798,12 @@ msgstr ""
 msgid "This parameter specifies the suffix that is used for users when these are added to the LDAP directory, e.g. %s"
 msgstr ""
 
+msgid "This password is required to access the admin web interface."
+msgstr ""
+
+msgid "This password is the root password of the system."
+msgstr ""
+
 msgid "This pool name already exists."
 msgstr ""
 
@@ -7865,6 +7874,9 @@ msgid "TiVo Support"
 msgstr ""
 
 msgid "Time"
+msgstr ""
+
+msgid "Time Interval"
 msgstr ""
 
 msgid "Time Machine"
@@ -8575,6 +8587,9 @@ msgstr ""
 msgid "WebGUI"
 msgstr ""
 
+msgid "WebGUI and Root Password"
+msgstr ""
+
 msgid "Webserver"
 msgstr ""
 
@@ -8630,6 +8645,9 @@ msgid "Wireless configuration"
 msgstr ""
 
 msgid "Workgroup"
+msgstr ""
+
+msgid "Working Directory"
 msgstr ""
 
 msgid "Working directory"
@@ -8732,10 +8750,16 @@ msgstr ""
 msgid "You must select at least one authentication method."
 msgstr ""
 
+msgid "You need to update your browser or use Internet Explorer 9 or higher."
+msgstr ""
+
 msgid "You should use HTTPS as WebGUI protocol for sending passphrase."
 msgstr ""
 
 msgid "Your ZFS system is not healthy."
+msgstr ""
+
+msgid "Your browser does not support this svg object type."
 msgstr ""
 
 msgid "ZFS"
