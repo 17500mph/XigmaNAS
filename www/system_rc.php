@@ -209,44 +209,44 @@ $pgtitle = [gtext('System'),gtext('Advanced'),gtext('Command Scripts')];
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
-	// Init action buttons
-	<?php if ($enabletogglemode):?>
-		$("#toggle_selected_rows").click(function () {
-			return confirm('<?=$gt_selection_toggle_confirm;?>');
-		});
-	<?php else:?>
-		$("#enable_selected_rows").click(function () {
-			return confirm('<?=$gt_selection_enable_confirm;?>');
-		});
-		$("#disable_selected_rows").click(function () {
-			return confirm('<?=$gt_selection_disable_confirm;?>');
-		});
-	<?php endif;?>
+<?php // Init action buttons.?>
+<?php if ($enabletogglemode):?>
+	$("#toggle_selected_rows").click(function () {
+		return confirm('<?=$gt_selection_toggle_confirm;?>');
+	});
+<?php else:?>
+	$("#enable_selected_rows").click(function () {
+		return confirm('<?=$gt_selection_enable_confirm;?>');
+	});
+	$("#disable_selected_rows").click(function () {
+		return confirm('<?=$gt_selection_disable_confirm;?>');
+	});
+<?php endif;?>
 	$("#delete_selected_rows").click(function () {
 		return confirm('<?=$gt_selection_delete_confirm;?>');
 	});
-	// Disable action buttons.
+<?php // Disable action buttons.?>
 	disableactionbuttons(true);
 	// Init toggle checkbox
 	$("#togglemembers").click(function() {
 		togglecheckboxesbyname(this, "<?=$checkbox_member_name;?>[]");
 	});
-	// Init member checkboxes
+<?php // Init member checkboxes.?>
 	$("input[name='<?=$checkbox_member_name;?>[]").click(function() {
 		controlactionbuttons(this, '<?=$checkbox_member_name;?>[]');
 	});
-	// Init spinner onsubmit()
+<?php // Init spinner.?>
 	$("#iform").submit(function() { spinner(); });
-	// Init move row capability
+	$(".spin").click(function() { spinner(); });
 });
 function disableactionbuttons(ab_disable) {
 	var ab_element;
-	<?php if ($enabletogglemode):?>
-		ab_element = document.getElementById('toggle_selected_rows'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable)) { ab_element.disabled = ab_disable; }
-	<?php else:?>
-		ab_element = document.getElementById('enable_selected_rows'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable)) { ab_element.disabled = ab_disable; }
-		ab_element = document.getElementById('disable_selected_rows'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable)) { ab_element.disabled = ab_disable; }
-	<?php endif;?>
+<?php if ($enabletogglemode):?>
+	ab_element = document.getElementById('toggle_selected_rows'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable)) { ab_element.disabled = ab_disable; }
+<?php else:?>
+	ab_element = document.getElementById('enable_selected_rows'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable)) { ab_element.disabled = ab_disable; }
+	ab_element = document.getElementById('disable_selected_rows'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable)) { ab_element.disabled = ab_disable; }
+<?php endif;?>
 	ab_element = document.getElementById('delete_selected_rows'); if ((ab_element !== null) && (ab_element.disabled !== ab_disable)) { ab_element.disabled = ab_disable; }
 }
 function togglecheckboxesbyname(ego, triggerbyname) {
@@ -285,35 +285,32 @@ function controlactionbuttons(ego, triggerbyname) {
 //]]>
 </script>
 <table id="area_navigator"><tbody>
-	<tr>
-	<td class="tabnavtbl">
-		<ul id="tabnav">
-			<li class="tabinact"><a href="system_advanced.php"><span><?=gtext('Advanced');?></span></a></li>
-			<li class="tabinact"><a href="system_email.php"><span><?=gtext('Email');?></span></a></li>
-			<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
-			<li class="tabinact"><a href="system_monitoring.php"><span><?=gtext("Monitoring");?></span></a></li>
-			<li class="tabinact"><a href="system_swap.php"><span><?=gtext('Swap');?></span></a></li>
-			<li class="tabact"><a href="system_rc.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Command Scripts');?></span></a></li>
-			<li class="tabinact"><a href="system_cron.php"><span><?=gtext('Cron');?></span></a></li>
-			<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext('loader.conf');?></span></a></li>
-			<li class="tabinact"><a href="system_rcconf.php"><span><?=gtext('rc.conf');?></span></a></li>
-			<li class="tabinact"><a href="system_sysctl.php"><span><?=gtext('sysctl.conf');?></span></a></li>
-			</ul>
-		</td>
-	</tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabinact"><a href="system_advanced.php"><span><?=gtext('Advanced');?></span></a></li>
+		<li class="tabinact"><a href="system_email.php"><span><?=gtext('Email');?></span></a></li>
+		<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
+		<li class="tabinact"><a href="system_monitoring.php"><span><?=gtext("Monitoring");?></span></a></li>
+		<li class="tabinact"><a href="system_swap.php"><span><?=gtext('Swap');?></span></a></li>
+		<li class="tabact"><a href="system_rc.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Command Scripts');?></span></a></li>
+		<li class="tabinact"><a href="system_cron.php"><span><?=gtext('Cron');?></span></a></li>
+		<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext('loader.conf');?></span></a></li>
+		<li class="tabinact"><a href="system_rcconf.php"><span><?=gtext('rc.conf');?></span></a></li>
+		<li class="tabinact"><a href="system_sysctl.php"><span><?=gtext('sysctl.conf');?></span></a></li>
+	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
 	<?php
-		if(!empty($savemsg)) {
-			print_info_box($savemsg);
-		} else {
-			if(file_exists($d_sysrebootreqd_path)) {
-				print_info_box(get_std_save_message(0));
-			}
-		}
-		if(updatenotify_exists($sphere_notifier)) { print_config_change_box(); } 
+	if(!empty($savemsg)):
+		print_info_box($savemsg);
+	endif;
+	if(file_exists($d_sysrebootreqd_path)):
+		print_info_box(get_std_save_message(0));
+	endif;
+	if(updatenotify_exists($sphere_notifier)):
+		print_config_change_box();
+	endif;
 	?>
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%">
 			<col style="width:15%">
@@ -344,24 +341,24 @@ function controlactionbuttons(ego, triggerbyname) {
 		<tbody>
 			<?php foreach($sphere_array as $sphere_record):?>
 				<?php
-					$notificationmode = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']);
-					$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
-					$enabled = isset($sphere_record['enable']);
-					$notprotected = !isset($sphere_record['protected']);
-					switch ($sphere_record['typeid']) {
-						case 1:
-							$gt_type = gtext('PreInit');
-							break;
-						case 2:
-							$gt_type = gtext('PostInit');
-							break;
-						case 3:
-							$gt_type = gtext('Shutdown');
-							break;
-						default:
-							$gt_type = gtext('Unknown');
-							break;
-					}
+				$notificationmode = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']);
+				$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
+				$enabled = isset($sphere_record['enable']);
+				$notprotected = !isset($sphere_record['protected']);
+				switch ($sphere_record['typeid']):
+					case 1:
+						$gt_type = gtext('PreInit');
+						break;
+					case 2:
+						$gt_type = gtext('PostInit');
+						break;
+					case 3:
+						$gt_type = gtext('Shutdown');
+						break;
+					default:
+						$gt_type = gtext('Unknown');
+						break;
+				endswitch;
 				?>
 				<tr>
 					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
@@ -383,7 +380,7 @@ function controlactionbuttons(ego, triggerbyname) {
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['comment']);?></td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=$gt_type;?></td>
 					<td class="lcebld">
-						<table id="area_data_selection_toolbox"><tbody><tr>
+						<table class="area_data_selection_toolbox"><tbody><tr>
 							<td>
 								<?php if($notdirty && $notprotected):?>
 									<a href="<?=$sphere_scriptname_child;?>?uuid=<?=$sphere_record['uuid'];?>"><img src="<?=$img_path['mod'];?>" title="<?=$gt_record_mod;?>" alt="<?=$gt_record_mod;?>" /></a>
@@ -417,6 +414,6 @@ function controlactionbuttons(ego, triggerbyname) {
 	<div id="remarks">
 		<?php html_remark('note', gtext('Note'), gtext('These commands will be executed pre or post system initialization (booting) or before system shutdown.'));?>
 	</div>
-<?php include 'formend.inc';?>
+	<?php include 'formend.inc';?>
 </form></td></tr></tbody></table>
 <?php include 'fend.inc';?>

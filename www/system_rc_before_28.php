@@ -53,37 +53,34 @@ $img_path = [
 	'ena' => 'images/status_enabled.png',
 	'dis' => 'images/status_disabled.png'
 ];
-
 $oldstufffound = false;
-if(!(isset($config['rc']['preinit']['cmd']) && is_array($config['rc']['preinit']['cmd']))) {
+if(!(isset($config['rc']['preinit']['cmd']) && is_array($config['rc']['preinit']['cmd']))):
 	$sphere_array['preinit'] = [];
-} else {
+else:
 	$sphere_array['preinit'] = &$config['rc']['preinit']['cmd'];
 	$oldstufffound = true;
-}
-
+endif;
 $sphere_array['postinit'] = [];
-if(!(isset($config['rc']['postinit']['cmd']) && is_array($config['rc']['postinit']['cmd']))) {
+if(!(isset($config['rc']['postinit']['cmd']) && is_array($config['rc']['postinit']['cmd']))):
 	$sphere_array['postinit'] = [];
-} else {
+else:
 	$sphere_array['postinit'] = &$config['rc']['postinit']['cmd'];
 	$oldstufffound = true;
-}
-
+endif;
 $sphere_array['shutdown'] = [];
-if(!(isset($config['rc']['shutdown']['cmd']) && is_array($config['rc']['shutdown']['cmd']))) {
+if(!(isset($config['rc']['shutdown']['cmd']) && is_array($config['rc']['shutdown']['cmd']))):
 	$sphere_array['shutdown'] = [];
-} else {
+else:
 	$sphere_array['shutdown'] = &$config['rc']['shutdown']['cmd'];
 	$oldstufffound = true;
-}
-if(!$oldstufffound) {
+endif;
+if(!$oldstufffound):
 	header($sphere_header_regular);
 	exit;
-}
+endif;
 
-if(isset($_GET['act']) && $_GET['act'] == 'del') {
-	switch($_GET['type']) {
+if(isset($_GET['act']) && $_GET['act'] == 'del'):
+	switch($_GET['type']):
 		case "PREINIT":
 			$a_cmd = &$sphere_array['preinit'];
 			break;
@@ -93,15 +90,14 @@ if(isset($_GET['act']) && $_GET['act'] == 'del') {
 		case "SHUTDOWN":
 			$a_cmd = &$sphere_array['shutdown'];
 			break;
-	}
-
-	if($a_cmd[$_GET['id']]) {
+	endswitch;
+	if($a_cmd[$_GET['id']]):
 		unset($a_cmd[$_GET['id']]);
 		write_config();
 		header($sphere_header);
 		exit;
-	}
-}
+	endif;
+endif;
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('Command Scripts')];
 ?>
 <?php include 'fbegin.inc';?>
@@ -125,7 +121,7 @@ $pgtitle = [gtext('System'),gtext('Advanced'),gtext('Command Scripts')];
 </tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:80%">
 			<col style="width:10%">
@@ -140,7 +136,6 @@ $pgtitle = [gtext('System'),gtext('Advanced'),gtext('Command Scripts')];
 			</tr>
 		</thead>
 		<tbody>
-		
 			<?php $i = 0; foreach($sphere_array['preinit'] as $cmd):?>
 				<tr>
 					<td class="lcelld"><?=htmlspecialchars($cmd);?>&nbsp;</td>
