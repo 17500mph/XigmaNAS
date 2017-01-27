@@ -208,7 +208,7 @@ function rcconf_process_updatenotification($mode, $data) {
 	return $retval;
 }
 $enabletogglemode = isset($config['system']['enabletogglemode']);
-$pgtitle = array(gtext('System'), gtext('Advanced'), gtext('rc.conf'));
+$pgtitle = [gtext('System'),gtext('Advanced'), gtext('rc.conf')];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">
@@ -306,18 +306,17 @@ function controlactionbuttons(ego, triggerbyname) {
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iform" name="iform">
 	<?php
-		if (!empty($savemsg)) {
-			print_info_box($savemsg);
-		} else {
-			if (file_exists($d_sysrebootreqd_path)) {
-				print_info_box(get_std_save_message(0));
-			}
-		}
-		if (updatenotify_exists($sphere_notifier)) {
-			print_config_change_box();
-		}
+	if(!empty($savemsg)):
+		print_info_box($savemsg);
+	endif;
+	if(file_exists($d_sysrebootreqd_path)):
+		print_info_box(get_std_save_message(0));
+	endif;
+	if(updatenotify_exists($sphere_notifier)):
+		print_config_change_box();
+	endif;
 	?>
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%">
 			<col style="width:30%">
