@@ -241,7 +241,7 @@ function controlactionbuttons(ego, triggerbyname) {
 		print_config_change_box();
 	endif;
 	?>
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%"> 
 			<col style="width:15%">
@@ -332,7 +332,7 @@ function controlactionbuttons(ego, triggerbyname) {
 					<td class="lcell"><a href="disks_zfs_zpool_info.php?pool=<?=$sphere_record['name']?>"><?=$health;?></a>&nbsp;</td>
 					<td class="lcell"><?=$altroot;?>&nbsp;</td>
 					<td class="lcebld">
-						<table id="area_data_selection_toolbox"><tbody><tr>
+						<table class="area_data_selection_toolbox"><tbody><tr>
 							<?php
 							$helpinghand = sprintf('%s?uuid=%s',$sphere_scriptname_child,$sphere_record['uuid']);
 							echo html_row_toolbox($helpinghand,$gt_record_mod,$gt_record_del,$gt_record_loc,$notprotected,$notdirty);

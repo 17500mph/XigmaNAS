@@ -85,10 +85,10 @@ $(document).ready(function(){
 	</tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
-	<table id="area_data_settings">
+	<table class="area_data_settings">
 		<colgroup>
-			<col id="area_data_settings_col_tag">
-			<col id="area_data_settings_col_data">
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
 			<?php html_titleline2(gtext('ZFS Pool I/O Statistics'));?>
