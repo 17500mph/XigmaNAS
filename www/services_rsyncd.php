@@ -37,7 +37,7 @@ require 'guiconfig.inc';
 array_make_branch($config,'access','user');
 array_sort_key($config['access']['user'],'login');
 $a_user = &$config['access']['user'];
-array_make_branch($config,'rsync');
+array_make_branch($config,'rsyncd');
 
 $pconfig['enable'] = isset($config['rsyncd']['enable']);
 $pconfig['port'] = $config['rsyncd']['port'];
