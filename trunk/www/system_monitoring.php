@@ -42,8 +42,6 @@ array_make_branch($config,'rrdgraphs');
 $upsname = !empty($config['ups']['upsname']) ? $config['ups']['upsname'] : "identifier";
 $upsip = !empty($config['ups']['ip']) ? $config['ups']['ip'] : "host-ip-address";
 
-$pgtitle = [gtext('System'), gtext('Advanced'), gtext('Monitoring Setup')];
-
 /* Check if the directory exists, the mountpoint has at least o=rx permissions and
  * set the permission to 775 for the last directory in the path.
  */
@@ -134,7 +132,7 @@ if (isset($_POST['save']) && $_POST['save']) {
 			$retval |= rc_update_service("cron");
 			config_unlock();
 		}
-			require_once('/usr/local/share/rrdgraphs/rrd-start.php');
+			require_once '/usr/local/share/rrdgraphs/rrd-start.php';
 		} else {
 			$config['rrdgraphs']['enable'] = isset($_POST['enable']) ? true : false;
 
@@ -214,7 +212,7 @@ if (isset($_POST['reset_graphs']) && $_POST['reset_graphs']) {
 		exec("logger rrdgraphs service deleted zfs arc usage statistics");
 		$savemsg .= "<br />- ".gtext("ZFS ARC Usage");
 	}
-	require_once("/usr/local/share/rrdgraphs/rrd-start.php");
+	require_once '/usr/local/share/rrdgraphs/rrd-start.php';
 }
 
 $pconfig['enable'] = isset($config['rrdgraphs']['enable']) ? true : false;
@@ -264,14 +262,18 @@ if(!empty($config['vinterfaces']['lagg'])) {
 	}
 }
 // Use first interface as default if it is not set.
-if (empty($pconfig['latency_interface']) && is_array($a_interface)) $pconfig['latency_interface'] = key($a_interface);
+if(empty($pconfig['latency_interface']) && is_array($a_interface)):
+	$pconfig['latency_interface'] = key($a_interface);
+endif;
+$pgtitle = [gtext('System'), gtext('Advanced'), gtext('Monitoring Setup')];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load", function() {
-<?php // Init spinner onsubmit().?>
+<?php // Init spinner.?>
 	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
 });
 function axis_change() {
 	switch(document.iform.axis.checked) {
@@ -372,44 +374,39 @@ function enable_change(enable_change) {
 }
 //]]>
 </script>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-<tr>
-	<td class="tabnavtbl">
-		<ul id="tabnav">
-			<li class="tabinact"><a href="system_advanced.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Advanced");?></span></a></li>
-			<li class="tabinact"><a href="system_email.php"><span><?=gtext("Email");?></span></a></li>
-			<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
-			<li class="tabact"><a href="system_monitoring.php"><span><?=gtext("Monitoring");?></span></a></li>
-			<li class="tabinact"><a href="system_swap.php"><span><?=gtext("Swap");?></span></a></li>
-			<li class="tabinact"><a href="system_rc.php"><span><?=gtext("Command Scripts");?></span></a></li>
-			<li class="tabinact"><a href="system_cron.php"><span><?=gtext("Cron");?></span></a></li>
-			<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext("loader.conf");?></span></a></li>
-			<li class="tabinact"><a href="system_rcconf.php"><span><?=gtext("rc.conf");?></span></a></li>
-			<li class="tabinact"><a href="system_sysctl.php"><span><?=gtext("sysctl.conf");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
-<tr>
+<table id="area_navigator"><tbody>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabinact"><a href="system_advanced.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Advanced");?></span></a></li>
+		<li class="tabinact"><a href="system_email.php"><span><?=gtext("Email");?></span></a></li>
+		<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
+		<li class="tabact"><a href="system_monitoring.php"><span><?=gtext("Monitoring");?></span></a></li>
+		<li class="tabinact"><a href="system_swap.php"><span><?=gtext("Swap");?></span></a></li>
+		<li class="tabinact"><a href="system_rc.php"><span><?=gtext("Command Scripts");?></span></a></li>
+		<li class="tabinact"><a href="system_cron.php"><span><?=gtext("Cron");?></span></a></li>
+		<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext("loader.conf");?></span></a></li>
+		<li class="tabinact"><a href="system_rcconf.php"><span><?=gtext("rc.conf");?></span></a></li>
+		<li class="tabinact"><a href="system_sysctl.php"><span><?=gtext("sysctl.conf");?></span></a></li>
+	</ul></td></tr>
+</tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iform" name="iform">
-<?php
-		if (!empty($savemsg)) {
-			print_info_box($savemsg);
-		} else {
-		if (!empty($errormsg)) {
-			print_error_box($errormsg);
-		}
-		if (!empty($input_errors)) {
-			print_input_errors($input_errors);
-		}
-		if (file_exists($d_sysrebootreqd_path)) {
-			print_info_box(get_std_save_message(0));
-		}
-	}
-?>
-	<table id="area_data_settings">
+	<?php
+	if(!empty($savemsg)):
+		print_info_box($savemsg);
+	endif;
+	if(!empty($errormsg)):
+		print_error_box($errormsg);
+	endif;
+	if(!empty($input_errors)):
+		print_input_errors($input_errors);
+	endif;
+	if(file_exists($d_sysrebootreqd_path)):
+		print_info_box(get_std_save_message(0));
+	endif;
+	?>
+	<table class="area_data_settings">
 		<colgroup>
-			<col id="area_data_settings_col_tag">
-			<col id="area_data_settings_col_data">
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
 			<?php html_titleline_checkbox2('enable', gtext('System Monitoring Settings'), $pconfig['enable'], gtext('Enable'), "enable_change(false)");?>
@@ -457,10 +454,9 @@ function enable_change(enable_change) {
 			html_inputbox2('ups_at', gtext('UPS Identifier'), $pconfig['ups_at'], gtext('Enter the UPS identifier and host IP address of the machine where the UPS is connected to. (this also can be a remote host)')."<br> ".gtext('The UPS identifier and IP address')." ".sprintf(gtext('must be in the format: %s.'), 'identifier@host-ip-address or identifier@localhost'), false, 60);
 			html_checkbox2('uptime', gtext('Uptime Statistics'), $pconfig['uptime'], gtext('Enable collecting uptime statistics.'), '', false);
 			html_checkbox2('arc_usage', gtext('ZFS ARC Usage'), $pconfig['arc_usage'], gtext('Enable collecting ZFS ARC usage statistics.'), '', false);
-?>
+			?>
 		</tbody>
 	</table>
-</div>
 	<div id="submit">
 		<input id="save" name="save" type="submit" class="formbtn" value="<?=gtext('Save & Restart');?>"/>
 		<input id="reset_graphs" name="reset_graphs" type="submit" class="formbtn" value="<?=gtext('Reset Graphs');?>" onclick="return confirm('<?=gtext('Do you really want to delete all data from the selected statistics?');?>')" />
@@ -472,8 +468,9 @@ function enable_change(enable_change) {
 			. '<li>' . sprintf(gtext("If only specific statistics needs to be reset, clear all other check boxes before performing '%s'."), gtext('Reset Graphs')) . '</li>'
 			. '</ul></div>';
 		html_remark("warning", gtext('Warning'), $helpinghand );
-?>
-<?php require 'formend.inc';?>
+		?>
+	</div>
+	<?php require 'formend.inc';?>
 </form></td></tr></tbody></table>
 <script type="text/javascript">
 //<![CDATA[
