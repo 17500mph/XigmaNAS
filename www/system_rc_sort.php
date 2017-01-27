@@ -69,29 +69,26 @@ $img_path = [
 	'ena' => 'images/status_enabled.png',
 	'dis' => 'images/status_disabled.png'
 ];
-
 // sunrise: verify if setting exists, otherwise run init tasks
 $sphere_array = &array_make_branch($config,'rc','param');
-
-if ($_POST) {
-	if(isset($_POST['Submit'])) {
-		if($_POST[$checkbox_member_name] && is_array($_POST[$checkbox_member_name])) {
+if($_POST):
+	if(isset($_POST['Submit'])):
+		if($_POST[$checkbox_member_name] && is_array($_POST[$checkbox_member_name])):
 			$a_param =[];
-			foreach($_POST[$checkbox_member_name] as $r_member) {
-				if(is_string($r_member)) {
-					if(false !== ($index = array_search_ex($r_member, $sphere_array, 'uuid'))) {
+			foreach($_POST[$checkbox_member_name] as $r_member):
+				if(is_string($r_member)):
+					if(false !== ($index = array_search_ex($r_member, $sphere_array, 'uuid'))):
 						$a_param[] = $sphere_array[$index];
-					}
-				}
-			}
+					endif;
+				endif;
+			endforeach;
 			$sphere_array = $a_param;
 			write_config();
-		}
+		endif;
 		header($sphere_header_parent);
 		exit;
-	}
-}
-
+	endif;
+endif;
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('Command Scripts'),gtext('Sort')];
 ?>
 <?php include 'fbegin.inc';?>
@@ -110,9 +107,7 @@ $(window).on("load", function() {
 //]]>
 </script>
 <table id="area_navigator"><tbody>
-	<tr>
-	<td class="tabnavtbl">
-		<ul id="tabnav">
+	<tr><td class="tabnavtbl"><ul id="tabnav">
 		<li class="tabinact"><a href="system_advanced.php"><span><?=gtext('Advanced');?></span></a></li>
 		<li class="tabinact"><a href="system_email.php"><span><?=gtext('Email');?></span></a></li>
 		<li class="tabinact"><a href="system_email_reports.php"><span><?=gtext("Email Reports");?></span></a></li>
@@ -123,22 +118,21 @@ $(window).on("load", function() {
 		<li class="tabinact"><a href="system_loaderconf.php"><span><?=gtext('loader.conf');?></span></a></li>
 		<li class="tabinact"><a href="system_rcconf.php"><span><?=gtext('rc.conf');?></span></a></li>
 		<li class="tabinact"><a href="system_sysctl.php"><span><?=gtext('sysctl.conf');?></span></a></li>
-		</ul>
-	</td>
-</tr>
+	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
 	<?php
-		if (!empty($savemsg)) {
-			print_info_box($savemsg);
-		} else {
-			if (file_exists($d_sysrebootreqd_path)) {
-				print_info_box(get_std_save_message(0));
-			}
-		}
-		if (updatenotify_exists($sphere_notifier)) { print_config_change_box(); } 
+	if(!empty($savemsg)):
+		print_info_box($savemsg);
+	endif;
+	if(file_exists($d_sysrebootreqd_path)):
+		print_info_box(get_std_save_message(0));
+	endif;
+	if(updatenotify_exists($sphere_notifier)):
+		print_config_change_box();
+	endif;
 	?>
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%">
 			<col style="width:15%">
@@ -163,24 +157,24 @@ $(window).on("load", function() {
 		<tbody id="system_rc_list">
 			<?php foreach($sphere_array as $sphere_record):?>
 				<?php
-					$notificationmode = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']);
-					$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
-					$enabled = isset($sphere_record['enable']);
-					$notprotected = !isset($sphere_record['protected']);
-					switch ($sphere_record['typeid']) {
-						case 1:
-							$gt_type = gtext('PreInit');
-							break;
-						case 2:
-							$gt_type = gtext('PostInit');
-							break;
-						case 3:
-							$gt_type = gtext('Shutdown');
-							break;
-						default:
-							$gt_type = gtext('Unknown');
-							break;
-					}
+				$notificationmode = updatenotify_get_mode($sphere_notifier, $sphere_record['uuid']);
+				$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
+				$enabled = isset($sphere_record['enable']);
+				$notprotected = !isset($sphere_record['protected']);
+				switch ($sphere_record['typeid']) {
+					case 1:
+						$gt_type = gtext('PreInit');
+						break;
+					case 2:
+						$gt_type = gtext('PostInit');
+						break;
+					case 3:
+						$gt_type = gtext('Shutdown');
+						break;
+					default:
+						$gt_type = gtext('Unknown');
+						break;
+				}
 				?>
 				<tr>
 					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
@@ -198,7 +192,7 @@ $(window).on("load", function() {
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['comment']);?></td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=$gt_type;?></td>
 					<td class="lcebld">
-						<table id="area_data_selection_toolbox"><tbody><tr>
+						<table class="area_data_selection_toolbox"><tbody><tr>
 							<td>
 								<img src="<?=$img_path['up'];?>" title="<?=$gt_record_up;?>" alt="<?=$gt_record_up;?>" class="move up"/>
 								<img src="<?=$img_path['dow'];?>" title="<?=$gt_record_dow;?>" alt="<?=$gt_record_dow;?>" class="move down"/>
@@ -215,6 +209,6 @@ $(window).on("load", function() {
 	<div id="remarks">
 		<?php html_remark('note', gtext('Note'), gtext('These commands will be executed pre or post system initialization (booting) or before system shutdown.'));?>
 	</div>
-<?php include 'formend.inc';?>
+	<?php include 'formend.inc';?>
 </form></td></tr></tbody></table>
 <?php include 'fend.inc';?>
