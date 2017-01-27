@@ -99,7 +99,7 @@ if ($_POST) {
 	}
 
 	if (empty($input_errors)) {
-		$groups = array();
+		$groups = [];
 		$groups['uuid'] = $_POST['uuid'];
 		$groups['id'] = $_POST['groupid'];
 		$groups['name'] = $_POST['name'];
