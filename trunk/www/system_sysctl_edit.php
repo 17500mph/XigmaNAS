@@ -165,8 +165,9 @@ $pgtitle = [gtext('System'),gtext('Advanced'),gtext('sysctl.conf'),$isrecordnew 
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load",function() {
-<?php	// Init spinner onsubmit()?>
+<?php // Init spinner.?>
 	$("#iform").submit(function() { spinner(); });
+	$(".spin").click(function() { spinner(); });
 });
 //]]>
 </script>
@@ -186,9 +187,6 @@ $(window).on("load",function() {
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" name="iform" id="iform">
 	<?php
-	if(!empty($errormsg)):
-		print_error_box($errormsg);
-	endif;
 	if(!empty($input_errors)):
 		print_input_errors($input_errors);
 	endif;

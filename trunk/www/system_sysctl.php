@@ -231,9 +231,8 @@ $(window).on("load",function() {
 	$("input[name='<?=$checkbox_member_name;?>[]").click(function() {
 		controlactionbuttons(this,'<?=$checkbox_member_name;?>[]');
 	});
-<?php // Init spinner on submit for id form.?>
+<?php // Init spinner.?>
 	$("#iform").submit(function() { spinner(); });
-<?php // Init spinner on click for class spin.?>
 	$(".spin").click(function() { spinner(); });
 }); 
 function disableactionbuttons(ab_disable) {
@@ -308,7 +307,7 @@ function controlactionbuttons(ego,triggerbyname) {
 		print_config_change_box();
 	endif;
 	?>
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%">
 			<col style="width:30%">
