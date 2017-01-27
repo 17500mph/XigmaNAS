@@ -37,31 +37,31 @@ require 'guiconfig.inc';
 $sphere_scriptname = basename(__FILE__);
 function status_process_ajax() {
 	$cmd = 'top -d1 25';
-	mwexec2($cmd, $rawdata);
-	return implode("\n", $rawdata);
+	mwexec2($cmd,$rawdata);
+	return implode("\n",$rawdata);
 }
-if (is_ajax()) {
+if(is_ajax()):
 	$status = status_process_ajax();
 	render_ajax($status);
-}
-$pgtitle = [gtext('Status'), gtext('Processes')];
+endif;
+$pgtitle = [gtext('Status'),gtext('Processes')];
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(document).ready(function(){
 	var gui = new GUI;
-	gui.recall(0, 5000, '<?=$sphere_scriptname;?>', null, function(data) {
+	gui.recall(5000, 5000, '<?=$sphere_scriptname;?>', null, function(data) {
 		$('#area_refresh').text(data.data);
 	});
 });
 //]]>
 </script>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
-	<table id="area_data_settings">
+	<table class="area_data_settings">
 		<colgroup>
-			<col id="area_data_settings_col_tag">
-			<col id="area_data_settings_col_data">
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
 			<?php html_titleline2(gtext('Process Status'));?>
@@ -70,7 +70,7 @@ $(document).ready(function(){
 			<tr>
 				<td class="celltag"><?=gtext('Information');?></td>
 				<td class="celldata">
-					<pre><span id="area_refresh"></span></pre>
+					<pre><span id="area_refresh"><?=status_process_ajax();?></span></pre>
 				</td>
 			</tr>
 		</tbody>
