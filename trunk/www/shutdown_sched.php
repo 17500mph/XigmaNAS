@@ -31,10 +31,9 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("System"), gtext("Shutdown"), gtext("Scheduled"));
 array_make_branch($config,'shutdown');
 $pconfig['enable'] = isset($config['shutdown']['enable']);
 $pconfig['minute'] = $config['shutdown']['minute'];
@@ -86,8 +85,9 @@ if ($_POST){
 		$savemsg = get_std_save_message($retval);
 	}
 }
+$pgtitle = [gtext('System'),gtext('Shutdown'),gtext('Scheduled')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function set_selected(name) {
@@ -122,21 +122,17 @@ function enable_change(enable_change) {
 //-->
 </script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td class="tabnavtbl">
-      <ul id="tabnav">
-        <li class="tabinact"><a href="shutdown.php"><span><?=gtext("Now");?></span></a></li>
-        <li class="tabact"><a href="shutdown_sched.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Scheduled");?></span></a></li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td class="tabcont">
-      <form action="shutdown_sched.php" method="post" name="iform" id="iform" onsubmit="spinner()">
-      	<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
-        <table width="100%" border="0" cellpadding="6" cellspacing="0">
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabinact"><a href="shutdown.php"><span><?=gtext("Now");?></span></a></li>
+		<li class="tabact"><a href="shutdown_sched.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Scheduled");?></span></a></li>
+	</ul></td></tr>
+	<tr>
+		<td class="tabcont">
+			<form action="shutdown_sched.php" method="post" name="iform" id="iform" onsubmit="spinner()">
+				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
+				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_titleline_checkbox("enable", gtext("Scheduled Shutdown"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
-          <tr>
+					<tr>
 						<td width="22%" valign="top" class="vncellreq"><?=gtext("Time");?></td>
 						<td width="78%" class="vtable">
 							<table width="100%" border="0" cellpadding="5" cellspacing="0">
@@ -292,7 +288,7 @@ function enable_change(enable_change) {
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save");?>" onclick="enable_change(true)" />
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
@@ -302,4 +298,4 @@ function enable_change(enable_change) {
 enable_change(false);
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>

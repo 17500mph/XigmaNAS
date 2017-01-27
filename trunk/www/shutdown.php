@@ -82,7 +82,7 @@ $(window).on("load", function() {
 		echo print_info_box($gt_shutdown);
 	endif;
 	?>
-	<table id="area_data_selection">
+	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:100%">
 		</colgroup>
