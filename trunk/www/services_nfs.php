@@ -31,16 +31,14 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Services"),gtext("NFS"));
-
-if (!isset($config['nfsd']['share']) || !is_array($config['nfsd']['share']))
-	$config['nfsd']['share'] = array();
-
-array_sort_key($config['nfsd']['share'], "path");
-$a_share = &$config['nfsd']['share'];
+$a_share = &array_make_branch($config,'nfsd','share');
+if(empty($a_share)):
+else:
+	array_sort_key($a_share,'path');
+endif;
 
 $pconfig['enable'] = isset($config['nfsd']['enable']);
 $pconfig['v4enable'] = isset($config['nfsd']['v4enable']);
@@ -89,8 +87,9 @@ if ($_POST) {
 		$savemsg = get_std_save_message($retval);
 	}
 }
+$pgtitle = [gtext('Services'),gtext('NFS')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <script type="text/javascript">
 <!--
 function enable_change(enable_change) {
@@ -122,7 +121,7 @@ function enable_change(enable_change) {
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="enable_change(true)" />
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
@@ -132,4 +131,4 @@ function enable_change(enable_change) {
 enable_change(false);
 //-->
 </script>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
