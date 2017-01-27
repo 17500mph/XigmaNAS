@@ -31,11 +31,9 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
-require("packages.inc");
-
-$pgtitle = array(gtext("System"),gtext("Packages"),gtext("Install"));
+require 'auth.inc';
+require 'guiconfig.inc';
+require 'packages.inc';
 
 if (isset($_POST) && $_POST) {
 	unset($input_errors);
@@ -64,16 +62,13 @@ if(!isset($do_action)) {
 	$do_action = false;
 	$packagename = "";
 }
+$pgtitle = [gtext('System'),gtext('Packages'),gtext('Install')];
 ?>
-<?php include("fbegin.inc");?>
+<?php include 'fbegin.inc';?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td class="tabnavtbl">
-			<ul id="tabnav">
-				<li class="tabact"><a href="system_packages.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Packages");?></span></a></li>
-			</ul>
-		</td>
-	</tr>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+		<li class="tabact"><a href="system_packages.php" title="<?=gtext('Reload page');?>"><span><?=gtext("Packages");?></span></a></li>
+	</ul></td></tr>
 	<tr>
 		<td class="tabcont">
 			<form action="system_packages_edit.php" method="post" enctype="multipart/form-data">
@@ -91,25 +86,21 @@ if(!isset($do_action)) {
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Install")?>" />
 				</div>
-				<?php if($do_action)
-				{
-				echo(sprintf("<div id='cmdoutput'>%s</div>", gtext("Command output:")));
-				echo('<pre class="cmdoutput">');
-				//ob_end_flush();
-				ob_start();
-				
-				// Install package.
-				packages_install($packagename);
-				
-				// Delete file.
-				@unlink($packagename);
-				
-				$cmdoutput = ob_get_contents();
-				ob_end_clean();
-				echo htmlspecialchars($cmdoutput);
-				
-				echo('</pre>');
-				}
+				<?php
+				if($do_action):
+					echo(sprintf("<div id='cmdoutput'>%s</div>",gtext('Command output:')));
+					echo('<pre class="cmdoutput">');
+						//ob_end_flush();
+						ob_start();
+						// Install package.
+						packages_install($packagename);
+						// Delete file.
+						@unlink($packagename);
+						$cmdoutput = ob_get_contents();
+						ob_end_clean();
+						echo htmlspecialchars($cmdoutput);
+					echo('</pre>');
+				endif;
 				?>
 				<div id="remarks">
 					<?php
@@ -119,9 +110,9 @@ if(!isset($do_action)) {
 					html_remark("note", gtext('Note'), $helpinghand);
 					?>
 				</div>
-				<?php include("formend.inc");?>
+				<?php include 'formend.inc';?>
 			</form>
 		</td>
 	</tr>
 </table>
-<?php include("fend.inc");?>
+<?php include 'fend.inc';?>
