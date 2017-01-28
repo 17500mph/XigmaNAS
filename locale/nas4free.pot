@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2017-01-28 02:17+0000\n"
+"POT-Creation-Date: 2017-01-28 08:24+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -318,9 +318,6 @@ msgstr ""
 msgid "Access Time (atime)"
 msgstr ""
 
-msgid "Access mode"
-msgstr ""
-
 msgid "Access the webGUI with the new IP address"
 msgstr ""
 
@@ -567,6 +564,9 @@ msgstr ""
 msgid "All"
 msgstr ""
 
+msgid "All Dirs"
+msgstr ""
+
 msgid "All data from the following statistics have been deleted:"
 msgstr ""
 
@@ -574,9 +574,6 @@ msgid "All data in the path is overwritten. To avoid invalid data/permission, us
 msgstr ""
 
 msgid "All data will be lost when you activate this option!"
-msgstr ""
-
-msgid "All dirs"
 msgstr ""
 
 #, php-format
@@ -592,13 +589,13 @@ msgstr ""
 msgid "All software raid disks are imported."
 msgstr ""
 
-msgid "All users will have the root privilege."
-msgstr ""
-
 msgid "Alloc"
 msgstr ""
 
 msgid "Allow"
+msgstr ""
+
+msgid "Allow New Files"
 msgstr ""
 
 msgid "Allow TLS connections only."
@@ -611,9 +608,6 @@ msgid "Allow clients to attempt to store OS/2 style extended attributes on a sha
 msgstr ""
 
 msgid "Allow clients to resume interrupted uploads and downloads."
-msgstr ""
-
-msgid "Allow new files"
 msgstr ""
 
 msgid "Allow new files to be created."
@@ -646,10 +640,7 @@ msgstr ""
 msgid "Alternate Data Streams"
 msgstr ""
 
-msgid "Alternate TCP port. Default is 22"
-msgstr ""
-
-msgid "Alternate TCP port. Default is 873"
+msgid "Alternate TCP port. (Default is 873)."
 msgstr ""
 
 msgid "Alternative configuration directory (usually empty)."
@@ -822,6 +813,9 @@ msgid "Authentication"
 msgstr ""
 
 msgid "Authentication Method"
+msgstr ""
+
+msgid "Authorised Network"
 msgstr ""
 
 msgid "Authorised network"
@@ -1977,9 +1971,6 @@ msgstr ""
 msgid "Destination port"
 msgstr ""
 
-msgid "Destination share"
-msgstr ""
-
 msgid "Destroy a pool"
 msgstr ""
 
@@ -2917,7 +2908,13 @@ msgid "Enter a custom port number for the WebGUI if you want to override the def
 msgstr ""
 
 #, php-format
-msgid "Enter a custom port number if you want to override the default port. Default port is %s."
+msgid "Enter a custom port number if you want to override the default port. (Default is %s)."
+msgstr ""
+
+msgid "Enter a custom port number if you want to override the default port. (Default is 22)."
+msgstr ""
+
+msgid "Enter a custom port number if you want to override the default port. (Default is 69). "
 msgstr ""
 
 msgid "Enter a description"
@@ -3573,12 +3570,6 @@ msgstr ""
 msgid "Hosts Setup"
 msgstr ""
 
-msgid "Hosts allow"
-msgstr ""
-
-msgid "Hosts deny"
-msgstr ""
-
 msgid "Hour"
 msgstr ""
 
@@ -4202,12 +4193,6 @@ msgstr ""
 msgid "Local User"
 msgstr ""
 
-msgid "Local share (destination)"
-msgstr ""
-
-msgid "Local shares to be synchronized"
-msgstr ""
-
 msgid "Location"
 msgstr ""
 
@@ -4362,13 +4347,16 @@ msgstr ""
 msgid "Manufacturing date"
 msgstr ""
 
-msgid "Map all users to root"
+msgid "Map all users to root, all users will have root privileges."
 msgstr ""
 
 msgid "Map to Guest"
 msgstr ""
 
-msgid "Map to user"
+msgid "Map to Root"
+msgstr ""
+
+msgid "Map to User"
 msgstr ""
 
 msgid "Mapping DOS Attributes"
@@ -4389,7 +4377,13 @@ msgstr ""
 msgid "Max Entries"
 msgstr ""
 
+msgid "Max. Block Size"
+msgstr ""
+
 msgid "Max. Clients"
+msgstr ""
+
+msgid "Max. Connections"
 msgstr ""
 
 msgid "Max. Connections Per Host"
@@ -4402,9 +4396,6 @@ msgid "Max. Passive Port"
 msgstr ""
 
 msgid "Max. TTL"
-msgstr ""
-
-msgid "Max. block size"
 msgstr ""
 
 msgid "Max. connections"
@@ -4432,9 +4423,6 @@ msgid "Maximum (Highest Performance)"
 msgstr ""
 
 msgid "Maximum Performance, Maximum Acoustic Output"
-msgstr ""
-
-msgid "Maximum connections"
 msgstr ""
 
 msgid "Maximum frequency"
@@ -4752,6 +4740,9 @@ msgstr ""
 msgid "Netgraph"
 msgstr ""
 
+msgid "Netstat"
+msgstr ""
+
 msgid "Network"
 msgstr ""
 
@@ -5017,9 +5008,6 @@ msgstr ""
 msgid "Number of physical erase cycles completed on the drive as a percentage of the maximum physical erase cycles the drive is designed to endure."
 msgstr ""
 
-msgid "Number of servers"
-msgstr ""
-
 msgid "Numeric identifier of the group."
 msgstr ""
 
@@ -5224,6 +5212,9 @@ msgstr ""
 msgid "Password (confirmed)"
 msgstr ""
 
+msgid "Password Authentication"
+msgstr ""
+
 msgid "Password Encryption"
 msgstr ""
 
@@ -5231,9 +5222,6 @@ msgid "Password Server"
 msgstr ""
 
 msgid "Password Suffix"
-msgstr ""
-
-msgid "Password authentication"
 msgstr ""
 
 msgid "Password does not match the confirmation password. Please ensure both passwords are the same."
@@ -5266,6 +5254,9 @@ msgstr ""
 msgid "Path of the URL relative to document root."
 msgstr ""
 
+msgid "Path to be shared to be synchronized."
+msgstr ""
+
 msgid "Path to be shared."
 msgstr ""
 
@@ -5296,9 +5287,6 @@ msgid "Permanent samba data path (e.g. %s)."
 msgstr ""
 
 msgid "Permit Root Login"
-msgstr ""
-
-msgid "Permit root login"
 msgstr ""
 
 msgid "Permit to do SSH Tunneling."
@@ -5518,13 +5506,16 @@ msgstr ""
 msgid "Preformatted file system"
 msgstr ""
 
-msgid "Preserve extended attributes"
+msgid "Preserve Extended Attributes"
+msgstr ""
+
+msgid "Preserve Extended attributes"
+msgstr ""
+
+msgid "Preserve Permissions"
 msgstr ""
 
 msgid "Preserve modification times."
-msgstr ""
-
-msgid "Preserve permissions"
 msgstr ""
 
 msgid "Prevent deep discharge of battery"
@@ -5807,6 +5798,9 @@ msgstr ""
 msgid "Remote Module (Source)"
 msgstr ""
 
+msgid "Remote Rsync Saemon"
+msgstr ""
+
 msgid "Remote Rsync Server"
 msgstr ""
 
@@ -5814,9 +5808,6 @@ msgid "Remote Syslog Messages"
 msgstr ""
 
 msgid "Remote Syslog Server"
-msgstr ""
-
-msgid "Remote module (source)"
 msgstr ""
 
 msgid "Remote module name"
@@ -5829,9 +5820,6 @@ msgid "Remote monitoring password. Must be equal on both master and slave system
 msgstr ""
 
 msgid "Remote monitoring username. Must be equal on both master and slave system."
-msgstr ""
-
-msgid "Remote rsync daemon"
 msgstr ""
 
 msgid "Removable"
@@ -5952,7 +5940,7 @@ msgstr ""
 msgid "Reverse DNS lookup"
 msgstr ""
 
-msgid "Reverse direction"
+msgid "Reverse Direction"
 msgstr ""
 
 msgid "Role"
@@ -6362,6 +6350,9 @@ msgstr ""
 msgid "Server version"
 msgstr ""
 
+msgid "Servers"
+msgstr ""
+
 msgid "Service"
 msgstr ""
 
@@ -6537,6 +6528,9 @@ msgstr ""
 msgid "Sockets"
 msgstr ""
 
+msgid "Sockstat"
+msgstr ""
+
 msgid "SoftRaid"
 msgstr ""
 
@@ -6559,9 +6553,6 @@ msgid "Source directory to be synchronized."
 msgstr ""
 
 msgid "Source port"
-msgstr ""
-
-msgid "Source share"
 msgstr ""
 
 msgid "Space Usage"
@@ -6763,7 +6754,7 @@ msgstr ""
 msgid "Sync"
 msgstr ""
 
-msgid "Synchronization time"
+msgid "Synchronization Time"
 msgstr ""
 
 msgid "Synchronize"
@@ -6829,13 +6820,13 @@ msgstr ""
 msgid "System tuning"
 msgstr ""
 
+msgid "TCP Forwarding"
+msgstr ""
+
 msgid "TCP Port"
 msgstr ""
 
 msgid "TCP Wrapper"
-msgstr ""
-
-msgid "TCP forwarding"
 msgstr ""
 
 msgid "TCP port"
@@ -7419,9 +7410,6 @@ msgid "The peer connection encryption mode."
 msgstr ""
 
 msgid "The permissions on new files and directories are normally governed by create mask and directory mask but the inherit permissions parameter overrides this. This can be particularly useful on systems with many users to allow a single share to be used flexibly by each user."
-msgstr ""
-
-msgid "The port to listen to. The default is to listen to the tftp port specified in /etc/services."
 msgstr ""
 
 #, php-format
@@ -8193,6 +8181,9 @@ msgstr ""
 msgid "Ukrainian"
 msgstr ""
 
+msgid "Umask"
+msgstr ""
+
 msgid "Unavailable"
 msgstr ""
 
@@ -8955,9 +8946,6 @@ msgid "sysvol exist in path."
 msgstr ""
 
 msgid "to"
-msgstr ""
-
-msgid "umask"
 msgstr ""
 
 msgid "umount"
