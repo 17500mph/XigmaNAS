@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2017-01-27 23:56+0000\n"
+"POT-Creation-Date: 2017-01-28 01:53+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -207,7 +207,10 @@ msgstr ""
 msgid "A valid IP address or CIDR notation must be specified for the hosts allow."
 msgstr ""
 
-msgid "A valid IPv4 address must be specified for the primary/secondary DNS server."
+msgid "A valid IPv4 address must be specified for the primary DNS server."
+msgstr ""
+
+msgid "A valid IPv4 address must be specified for the secondary DNS server."
 msgstr ""
 
 msgid "A valid IPv4 address must be specified."
@@ -219,7 +222,10 @@ msgstr ""
 msgid "A valid IPv6 Gateway address must be specified."
 msgstr ""
 
-msgid "A valid IPv6 address must be specified for the primary/secondary DNS server."
+msgid "A valid IPv6 address must be specified for the primary DNS server."
+msgstr ""
+
+msgid "A valid IPv6 address must be specified for the secondary DNS server."
 msgstr ""
 
 msgid "A valid IPv6 address must be specified."
@@ -267,19 +273,22 @@ msgstr ""
 msgid "AFP"
 msgstr ""
 
-msgid "AFP compatibility"
+msgid "AFP Compatibility"
 msgstr ""
 
 msgid "AG"
 msgstr ""
 
-msgid "AIO module"
+msgid "AIO Module"
 msgstr ""
 
-msgid "AIO read size"
+msgid "AIO Read Size"
 msgstr ""
 
-msgid "AIO write size"
+msgid "AIO Rrite Size"
+msgstr ""
+
+msgid "AIO Write Size"
 msgstr ""
 
 msgid "ALL Interfaces"
@@ -637,6 +646,9 @@ msgstr ""
 msgid "AltRoot"
 msgstr ""
 
+msgid "Alternate Data Streams"
+msgstr ""
+
 msgid "Alternate TCP port. Default is 22"
 msgstr ""
 
@@ -751,7 +763,7 @@ msgstr ""
 msgid "Are you sure you want to shutdown the server?"
 msgstr ""
 
-msgid "Asynchronous I/O (AIO)"
+msgid "Asynchronous I/O"
 msgstr ""
 
 msgid "At the highest level, a target is what is presented to the initiator, and is made up of one or more extents."
@@ -1272,10 +1284,10 @@ msgstr ""
 msgid "Client"
 msgstr ""
 
-msgid "Client Max Protocol"
+msgid "Client Max. Protocol"
 msgstr ""
 
-msgid "Client Min Protocol"
+msgid "Client Min. Protocol"
 msgstr ""
 
 msgid "Clone"
@@ -1538,6 +1550,9 @@ msgstr ""
 msgid "Create HVM Guest"
 msgstr ""
 
+msgid "Create Mask"
+msgstr ""
+
 msgid "Create PV Guest"
 msgstr ""
 
@@ -1548,9 +1563,6 @@ msgid "Create and initialize RAID."
 msgstr ""
 
 msgid "Create encrypted volume"
-msgstr ""
-
-msgid "Create mask"
 msgstr ""
 
 msgid "Create work directory if it doesn't exist."
@@ -2088,9 +2100,6 @@ msgstr ""
 msgid "Directory listing"
 msgstr ""
 
-msgid "Directory mask"
-msgstr ""
-
 msgid "Directory that contains removable media. (e.g /mnt/iscsi/)"
 msgstr ""
 
@@ -2435,7 +2444,7 @@ msgstr ""
 msgid "Done."
 msgstr ""
 
-msgid "Dos charset"
+msgid "Dos Charset"
 msgstr ""
 
 msgid "Download"
@@ -2501,7 +2510,7 @@ msgstr ""
 msgid "Dynamic IP (DHCP) can not be used for HAST resources."
 msgstr ""
 
-msgid "EA support"
+msgid "EA Support"
 msgstr ""
 
 msgid "EFI/GPT partition can be use with UFS only."
@@ -2633,19 +2642,19 @@ msgstr ""
 msgid "Enable"
 msgstr ""
 
-msgid "Enable 'Asynchronous I/O (AIO)' switch."
+msgid "Enable 'Asynchronous I/O (AIO).' switch."
 msgstr ""
 
 msgid "Enable 'Large read/write' switch."
 msgstr ""
 
-msgid "Enable ACL inheritance"
+msgid "Enable ACL inheritance."
 msgstr ""
 
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr ""
 
-msgid "Enable Asynchronous I/O (AIO)"
+msgid "Enable Asynchronous I/O. (AIO)."
 msgstr ""
 
 msgid "Enable Challenge-Response Authentication"
@@ -2690,7 +2699,7 @@ msgstr ""
 msgid "Enable Time Machine support"
 msgstr ""
 
-msgid "Enable ZFS ACL"
+msgid "Enable ZFS ACL."
 msgstr ""
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
@@ -2759,16 +2768,13 @@ msgstr ""
 msgid "Enable encryption."
 msgstr ""
 
-msgid "Enable extended attribute support"
+msgid "Enable extended attribute support."
 msgstr ""
 
 msgid "Enable extended attributes for this file system."
 msgstr ""
 
 msgid "Enable foreground/background file system consistency check during boot process."
-msgstr ""
-
-msgid "Enable guest access"
 msgstr ""
 
 msgid "Enable guest access."
@@ -2780,13 +2786,13 @@ msgstr ""
 msgid "Enable keyboard-interactive authentication."
 msgstr ""
 
-msgid "Enable large read/write"
+msgid "Enable large read/write."
 msgstr ""
 
 msgid "Enable local user authentication."
 msgstr ""
 
-msgid "Enable mapping DOS attributes"
+msgid "Enable mapping DOS attributes."
 msgstr ""
 
 msgid "Enable module listing."
@@ -2801,7 +2807,7 @@ msgstr ""
 msgid "Enable peer exchange (PEX)."
 msgstr ""
 
-msgid "Enable permission inheritance"
+msgid "Enable permission inheritance."
 msgstr ""
 
 msgid "Enable port forwarding via NAT-PMP or UPnP."
@@ -2810,7 +2816,7 @@ msgstr ""
 msgid "Enable proxy authentication."
 msgstr ""
 
-msgid "Enable recycle bin"
+msgid "Enable recycle bin."
 msgstr ""
 
 msgid "Enable remote monitoring of the local connected UPS."
@@ -2828,10 +2834,10 @@ msgstr ""
 msgid "Enable serial console."
 msgstr ""
 
-msgid "Enable shadow copy"
+msgid "Enable shadow copy."
 msgstr ""
 
-msgid "Enable store DOS attributes"
+msgid "Enable store DOS attributes."
 msgstr ""
 
 msgid "Enable the ident protocol (RFC1413)."
@@ -2901,7 +2907,7 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-msgid "Enhanced compatibility with Netatalk AFP server"
+msgid "Enhanced compatibility with Netatalk AFP server."
 msgstr ""
 
 msgid "Enter Command"
@@ -3446,7 +3452,7 @@ msgstr ""
 msgid "Guest"
 msgstr ""
 
-msgid "Guest account"
+msgid "Guest Account"
 msgstr ""
 
 msgid "HAST"
@@ -3519,7 +3525,7 @@ msgstr ""
 msgid "Hide Default Groups"
 msgstr ""
 
-msgid "Hide dot files"
+msgid "Hide Dot Files"
 msgstr ""
 
 msgid "High voltage boosting transfer point"
@@ -3562,6 +3568,9 @@ msgid "Hosts"
 msgstr ""
 
 msgid "Hosts Allow"
+msgstr ""
+
+msgid "Hosts Deny"
 msgstr ""
 
 msgid "Hosts Setup"
@@ -3789,7 +3798,7 @@ msgstr ""
 msgid "Inherit ACL"
 msgstr ""
 
-msgid "Inherit permissions"
+msgid "Inherit Permissions"
 msgstr ""
 
 msgid "Inhibit some of the syslog diagnostics for bad lines in /etc/exports."
@@ -3899,9 +3908,6 @@ msgid "Interface Management"
 msgstr ""
 
 msgid "Interface Selection"
-msgstr ""
-
-msgid "Interface selection"
 msgstr ""
 
 msgid "Interfaces"
@@ -4089,7 +4095,7 @@ msgstr ""
 msgid "Language to use on front panel"
 msgstr ""
 
-msgid "Large read/write"
+msgid "Large Read/Write"
 msgstr ""
 
 msgid "Last Configuration Change"
@@ -4362,13 +4368,13 @@ msgstr ""
 msgid "Map all users to root"
 msgstr ""
 
-msgid "Map to guest"
+msgid "Map to Guest"
 msgstr ""
 
 msgid "Map to user"
 msgstr ""
 
-msgid "Mapping DOS attributes"
+msgid "Mapping DOS Attributes"
 msgstr ""
 
 msgid "Mar"
@@ -4702,6 +4708,9 @@ msgstr ""
 msgid "NT1 (CIFS)"
 msgstr ""
 
+msgid "NTFS ACLs"
+msgstr ""
+
 msgid "NTP Time Server"
 msgstr ""
 
@@ -4741,9 +4750,6 @@ msgid "NetBIOS Domain"
 msgstr ""
 
 msgid "NetBIOS Name"
-msgstr ""
-
-msgid "NetBIOS name"
 msgstr ""
 
 msgid "Netgraph"
@@ -4993,7 +4999,7 @@ msgstr ""
 msgid "Now"
 msgstr ""
 
-msgid "Null passwords"
+msgid "Null Passwords"
 msgstr ""
 
 msgid "Number of bad battery packs"
@@ -5224,6 +5230,9 @@ msgstr ""
 msgid "Password Encryption"
 msgstr ""
 
+msgid "Password Server"
+msgstr ""
+
 msgid "Password Suffix"
 msgstr ""
 
@@ -5240,9 +5249,6 @@ msgid "Password for the administrative pages."
 msgstr ""
 
 msgid "Password of domain administrator account."
-msgstr ""
-
-msgid "Password server"
 msgstr ""
 
 msgid "Password server name or IP address (e.g. Active Directory domain controller)."
@@ -5711,6 +5717,9 @@ msgstr ""
 msgid "Read"
 msgstr ""
 
+msgid "Read Only"
+msgstr ""
+
 msgid "Read Only (ro)"
 msgstr ""
 
@@ -5759,7 +5768,7 @@ msgstr ""
 msgid "Reboot"
 msgstr ""
 
-msgid "Receive Buffer Size"
+msgid "Receive Buffer"
 msgstr ""
 
 msgid "Record is locked"
@@ -5771,7 +5780,7 @@ msgstr ""
 msgid "Recursive"
 msgstr ""
 
-msgid "Recycle bin"
+msgid "Recycle Bin"
 msgstr ""
 
 msgid "Refresh"
@@ -6085,11 +6094,11 @@ msgid "Samba Active Directory Domain Controller"
 msgstr ""
 
 #, php-format
-msgid "Samba will read from file asynchronously when size of request is bigger than this value. (%d by default)"
+msgid "Samba will read from file asynchronously when size of request is bigger than this value. (%d by default)."
 msgstr ""
 
 #, php-format
-msgid "Samba will write to file asynchronously when size of request is bigger than this value. (%d by default)"
+msgid "Samba will write to file asynchronously when size of request is bigger than this value. (%d by default)."
 msgstr ""
 
 msgid "Sat"
@@ -6287,7 +6296,7 @@ msgstr ""
 msgid "Self-tests Management"
 msgstr ""
 
-msgid "Send Buffer Size"
+msgid "Send Buffer"
 msgstr ""
 
 msgid "Send Command!"
@@ -6335,10 +6344,10 @@ msgstr ""
 msgid "Server"
 msgstr ""
 
-msgid "Server Max Protocol"
+msgid "Server Max. Protocol"
 msgstr ""
 
-msgid "Server Min Protocol"
+msgid "Server Min. Protocol"
 msgstr ""
 
 msgid "Server Name"
@@ -6368,10 +6377,10 @@ msgstr ""
 msgid "Set additional group memberships for this account."
 msgstr ""
 
-msgid "Set browseable"
+msgid "Set browseable."
 msgstr ""
 
-msgid "Set read only"
+msgid "Set read only."
 msgstr ""
 
 msgid "Set share password."
@@ -6414,7 +6423,7 @@ msgstr ""
 msgid "Shadow Copy"
 msgstr ""
 
-msgid "Shadow Copy format"
+msgid "Shadow Copy Format"
 msgstr ""
 
 msgid "Share"
@@ -6669,19 +6678,13 @@ msgstr ""
 msgid "Storage"
 msgstr ""
 
-msgid "Store DOS attributes"
+msgid "Store DOS Attributes"
 msgstr ""
 
-msgid "Store NTFS acls"
+msgid "Store NTFS ACLs in Extended Attributes."
 msgstr ""
 
-msgid "Store NTFS acls in Extended Attributes"
-msgstr ""
-
-msgid "Store alternate data streams"
-msgstr ""
-
-msgid "Store alternate data streams in Extended Attributes"
+msgid "Store alternate data streams in Extended Attributes."
 msgstr ""
 
 msgid "Strict DLNA"
@@ -7537,7 +7540,7 @@ msgstr ""
 msgid "The volume must be detached before it can be deleted."
 msgstr ""
 
-msgid "The workgroup in which the server will appear when queried by Windows or SMB clients (maximum 15 characters)."
+msgid "The workgroup in which the server will appear when queried by Windows or SMB clients. (maximum 15 characters)."
 msgstr ""
 
 msgid "The working directory does not exist."
@@ -7849,13 +7852,13 @@ msgstr ""
 msgid "This will erase ALL data on your disk! Do not use this option if you want to add an existing encrypted disk."
 msgstr ""
 
-msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
+msgid "This will provide NTFS ACLs without ZFS ACL support such as UFS."
 msgstr ""
 
-msgid "This will provide ZFS ACL support. (ZFS only)"
+msgid "This will provide ZFS ACL support. (ZFS only)."
 msgstr ""
 
-msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
+msgid "This will provide shadow copy created by auto snapshot. (ZFS only)."
 msgstr ""
 
 msgid "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
@@ -7882,6 +7885,9 @@ msgstr ""
 msgid "Time Machine"
 msgstr ""
 
+msgid "Time Server"
+msgstr ""
+
 msgid "Time Synchronization"
 msgstr ""
 
@@ -7898,9 +7904,6 @@ msgid "Time before the load will be started"
 msgstr ""
 
 msgid "Time interval"
-msgstr ""
-
-msgid "Time server"
 msgstr ""
 
 msgid "Time spent during the positioning of the drive heads."
@@ -8047,7 +8050,7 @@ msgstr ""
 msgid "Trivial File Transfer Protocol"
 msgstr ""
 
-msgid "Trusted domains"
+msgid "Trusted Domains"
 msgstr ""
 
 msgid "Try to force import."
@@ -8217,10 +8220,10 @@ msgstr ""
 msgid "Unison File Synchronisation"
 msgstr ""
 
-msgid "Unix Command"
+msgid "Unix Charset"
 msgstr ""
 
-msgid "Unix charset"
+msgid "Unix Command"
 msgstr ""
 
 msgid "Unknown"
@@ -8536,7 +8539,7 @@ msgstr ""
 msgid "WEP"
 msgstr ""
 
-msgid "WINS server"
+msgid "WINS Server"
 msgstr ""
 
 msgid "WINS server IP address (e.g. from MS Active Directory server)."
