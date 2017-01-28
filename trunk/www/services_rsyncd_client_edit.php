@@ -421,7 +421,7 @@ function delete_change() {
 					</tr>
 					<?php
 					html_checkbox("recursive", gtext("Recursive"), !empty($pconfig['recursive']) ? true : false, gtext("Recurse into directories."), "", false);
-					html_checkbox("nodaemonreq", gtext("Remote Rsync Saemon"), !empty($pconfig['nodaemonreq']) ? true : false, gtext("Run without requiring remote rsync daemon. (Disabled by default)"), "", false);
+					html_checkbox("nodaemonreq", gtext("Remote Rsync Daemon"), !empty($pconfig['nodaemonreq']) ? true : false, gtext("Run without requiring remote rsync daemon. (Disabled by default)"), "", false);
 					html_checkbox("times", gtext("Times"), !empty($pconfig['times']) ? true : false, gtext("Preserve modification times."), "", false);
 					html_checkbox("compress", gtext("Compress"), !empty($pconfig['compress']) ? true : false, gtext("Compress file data during the transfer."), "", false);
 					html_checkbox("archive", gtext("Archive"), !empty($pconfig['archive']) ? true : false, gtext("Archive mode."), "", false);
