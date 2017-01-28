@@ -470,7 +470,7 @@ function aio_change() {
 					<?php
 					html_checkbox("aio", gtext("Asynchronous I/O"), !empty($pconfig['aio']) ? true : false, gtext("Enable Asynchronous I/O. (AIO)."), "", false, "aio_change()");
 					html_inputbox("aiorsize", gtext("AIO Read Size"), $pconfig['aiorsize'], sprintf(gtext("Samba will read from file asynchronously when size of request is bigger than this value. (%d by default)."), 1024), true, 30);
-					html_inputbox("aiowsize", gtext("AIO Rrite Size"), $pconfig['aiowsize'], sprintf(gtext("Samba will write to file asynchronously when size of request is bigger than this value. (%d by default)."), 1024), true, 30);
+					html_inputbox("aiowsize", gtext("AIO Write Size"), $pconfig['aiowsize'], sprintf(gtext("Samba will write to file asynchronously when size of request is bigger than this value. (%d by default)."), 1024), true, 30);
 					/*html_inputbox("aiowbehind", gtext("AIO write behind"), $pconfig['aiowbehind'], "", false, 60);*/
 					$helpinghand = '<a href="'
 						. 'http://us1.samba.org/samba/docs/man/manpages-3/smb.conf.5.html'
