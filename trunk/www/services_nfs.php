@@ -51,7 +51,7 @@ if ($_POST) {
 
 	if (isset($_POST['enable']) && $_POST['enable']) {
 		$reqdfields = explode(" ", "numproc");
-		$reqdfieldsn = array(gtext("Number of servers"));
+		$reqdfieldsn = array(gtext("Servers"));
 		$reqdfieldst = explode(" ", "numeric");
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -115,7 +115,7 @@ function enable_change(enable_change) {
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_titleline_checkbox("enable", gtext("Network File System"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
-					<?php html_inputbox("numproc", gtext("Number of servers"), $pconfig['numproc'], gtext("Specifies how many servers to create.") . " " . gtext("There should be enough to handle the maximum level of concurrency from its clients, typically four to six."), false, 2);?>
+					<?php html_inputbox("numproc", gtext("Servers"), $pconfig['numproc'], gtext("Specifies how many servers to create.") . " " . gtext("There should be enough to handle the maximum level of concurrency from its clients, typically four to six."), false, 2);?>
 					<?php html_checkbox("v4enable", gtext("NFSv4"), !empty($pconfig['v4enable']) ? true : false, gtext("Enable NFSv4 server."), "", false);?>
 				</table>
 				<div id="submit">
