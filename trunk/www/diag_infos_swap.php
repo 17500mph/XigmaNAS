@@ -83,8 +83,8 @@ $pgtitle = [gtext('Diagnostics'),gtext('Information'),gtext('Swap')];
 						echo gtext('Swap is disabled.');
 					else:
 						unset($rawdata);
-						exec('/usr/sbin/swapinfo', $rawdata);
-						echo htmlspecialchars(implode("\n", $rawdata));
+						exec('/usr/sbin/swapinfo',$rawdata);
+						echo htmlspecialchars(implode("\n",$rawdata));
 					endif;
 					echo '</pre>';
 					?>
