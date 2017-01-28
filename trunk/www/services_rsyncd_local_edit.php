@@ -115,7 +115,7 @@ if ($_POST) {
 
 	// Input validation
 	$reqdfields = explode(" ", "source destination who");
-	$reqdfieldsn = array(gtext("Source share"), gtext("Destination share"), gtext("Who"));
+	$reqdfieldsn = array(gtext("Source Share"), gtext("Destination Share"), gtext("Who"));
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 	if (!empty($_POST['Submit']) && gtext("Execute now") !== $_POST['Submit']) {
@@ -224,7 +224,7 @@ function delete_change() {
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_titleline_checkbox("enable", gtext("Rsync Job"), !empty($pconfig['enable']) ? true : false, gtext("Enable"));?>
 					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Source share");?></td>
+						<td width="22%" valign="top" class="vncellreq"><?=gtext("Source Share");?></td>
 						<td width="78%" class="vtable">
 							<input name="source" type="text" class="formfld" id="source" size="60" value="<?=htmlspecialchars($pconfig['source']);?>" />
 							<input name="browse" type="button" class="formbtn" id="Browse" onclick='ifield = form.source; filechooser = window.open("filechooser.php?p="+encodeURIComponent(ifield.value)+"&amp;sd=<?=$g['media_path'];?>", "filechooser", "scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300"); filechooser.ifield = ifield; window.ifield = ifield; window.slash_source = 1;' value="..." /><br />
@@ -232,7 +232,7 @@ function delete_change() {
 					  </td>
 					</tr>
 					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Destination share");?></td>
+						<td width="22%" valign="top" class="vncellreq"><?=gtext("Destination Share");?></td>
 						<td width="78%" class="vtable">
 							<input name="destination" type="text" class="formfld" id="destination" size="60" value="<?=htmlspecialchars($pconfig['destination']);?>" />
 							<input name="browse2" type="button" class="formbtn" id="Browse2" onclick='ifield2 = form.destination; filechooser = window.open("filechooser.php?p="+encodeURIComponent(ifield2.value)+"&amp;sd=<?=$g['media_path'];?>", "filechooser", "scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300"); filechooser.ifield = ifield2; window.ifield = ifield2; window.slash_destination = 1;' value="..." /><br />
@@ -242,7 +242,7 @@ function delete_change() {
 					<?php $a_user = array(); foreach (system_get_user_list() as $userk => $userv) { $a_user[$userk] = htmlspecialchars($userk); }?>
 					<?php html_combobox("who", gtext("Who"), $pconfig['who'], $a_user, "", true);?>
 					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Synchronization time");?></td>
+						<td width="22%" valign="top" class="vncellreq"><?=gtext("Synchronization Time");?></td>
 						<td width="78%" class="vtable">
 							<table width="100%" border="0" cellpadding="5" cellspacing="0">
 								<tr>
@@ -434,12 +434,12 @@ function delete_change() {
 						</td>
 					</tr>
 					<?php
-					html_checkbox("perms", gtext("Preserve permissions"), !empty($pconfig['perms']) ? true : false, gtext("This option causes the receiving rsync to set the destination permissions to be the same as the source permissions."), "", false);
-					html_checkbox("xattrs", gtext("Preserve extended attributes"), !empty($pconfig['xattrs']) ? true : false, gtext("This option causes rsync to update the remote extended attributes to be the same as the local ones."), "", false);
+					html_checkbox("perms", gtext("Preserve Permissions"), !empty($pconfig['perms']) ? true : false, gtext("This option causes the receiving rsync to set the destination permissions to be the same as the source permissions."), "", false);
+					html_checkbox("xattrs", gtext("Preserve Extended attributes"), !empty($pconfig['xattrs']) ? true : false, gtext("This option causes rsync to update the remote extended attributes to be the same as the local ones."), "", false);
 					$helpinghand = '<a href="' . 'http://rsync.samba.org/ftp/rsync/rsync.html' . '" target="_blank">'
 						. gtext('Please check the documentation')
 						. '</a>.';
-					html_inputbox("extraoptions", gtext("Extra options"), !empty($pconfig['extraoptions']) ? $pconfig['extraoptions'] : "", gtext("Extra options to rsync (usually empty).") . " " . $helpinghand, false, 40);
+					html_inputbox("extraoptions", gtext("Extra Options"), !empty($pconfig['extraoptions']) ? $pconfig['extraoptions'] : "", gtext("Extra options to rsync (usually empty).") . " " . $helpinghand, false, 40);
 					?>
 				</table>
 				<div id="submit">
