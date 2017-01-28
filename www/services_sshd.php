@@ -55,17 +55,17 @@ if ($_POST) {
 
 	/* input validation */
 	$reqdfields = array();
-	$reqdfieldsn = array();
+	$reqdfieldsn = [];
 
 	if (isset($_POST['enable']) && $_POST['enable']) {
 		$reqdfields = array_merge($reqdfields, explode(" ", "port"));
-		$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("TCP port")));
+		$reqdfieldsn = [gtext('TCP Port')];
 		$reqdfieldst = explode(" ", "port");
 		
 		if (!empty($_POST['key'])) {
-			$reqdfields = array_merge($reqdfields, array("key"));
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Private Key")));
-			$reqdfieldst = array_merge($reqdfieldst, array("privatekey"));
+			$reqdfields = array_merge($reqdfields, ['key']);
+			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('Private Key')]);
+			$reqdfieldst = array_merge($reqdfieldst, ['privatekey']);
 		}
 	}
 
@@ -134,7 +134,7 @@ function enable_change(enable_change) {
 						<td width="22%" valign="top" class="vncellreq"><?=gtext("TCP port");?></td>
 						<td width="78%" class="vtable">
 							<input name="port" type="text" class="formfld" id="port" size="20" value="<?=htmlspecialchars($pconfig['port']);?>" />
-							<br /><?=gtext("Alternate TCP port. Default is 22");?>
+							<br /><?=gtext("Enter a custom port number if you want to override the default port. (Default is 22).");?>
 						</td>
 					</tr>
 					<tr>
@@ -145,21 +145,21 @@ function enable_change(enable_change) {
 						</td>
 					</tr>
 					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Permit root login");?></td>
+						<td width="22%" valign="top" class="vncell"><?=gtext("Permit Root Login");?></td>
 						<td width="78%" class="vtable">
 						<input name="permitrootlogin" type="checkbox" id="permitrootlogin" value="yes" <?php if (!empty($pconfig['permitrootlogin'])) echo "checked=\"checked\""; ?> />
 							<?=gtext("Specifies whether it is allowed to login as superuser (root) directly.");?>
 						</td>
 					</tr>
 					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Password authentication");?></td>
+						<td width="22%" valign="top" class="vncell"><?=gtext("Password Authentication");?></td>
 						<td width="78%" class="vtable">
 							<input name="passwordauthentication" type="checkbox" id="passwordauthentication" value="yes" <?php if (!empty($pconfig['passwordauthentication'])) echo "checked=\"checked\""; ?> />
 							<?=gtext("Enable keyboard-interactive authentication.");?>
 						</td>
 					</tr>
 					<tr>
-					<td width="22%" valign="top" class="vncell"><?=gtext("TCP forwarding");?></td>
+					<td width="22%" valign="top" class="vncell"><?=gtext("TCP Forwarding");?></td>
 						<td width="78%" class="vtable">
 							<input name="tcpforwarding" type="checkbox" id="tcpforwarding" value="yes" <?php if (!empty($pconfig['tcpforwarding'])) echo "checked=\"checked\""; ?> />
 							<?=gtext("Permit to do SSH Tunneling.");?>
@@ -181,7 +181,7 @@ function enable_change(enable_change) {
 							'" target="_blank">' .
 							gtext('Please check the documentation').
 							'</a>.';
-					html_textarea("auxparam", gtext("Extra options"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", gtext("Extra options to /etc/ssh/sshd_config (usually empty). Note, incorrect entered options prevent SSH service to be started.") . " " . $helpinghand, false, 65, 5, false, false);
+					html_textarea("auxparam", gtext("Auxiliary Parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", gtext("Extra options to /etc/ssh/sshd_config (usually empty). Note, incorrect entered options prevent SSH service to be started.") . " " . $helpinghand, false, 65, 5, false, false);
 					?>
 				</table>
 				<div id="submit">

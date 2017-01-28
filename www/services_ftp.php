@@ -305,7 +305,7 @@ function anonymousonly_change() {
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php 
 					html_titleline_checkbox("enable", gtext("File Transfer Protocol"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");
-					html_inputbox("port", gtext("TCP Port"), $pconfig['port'], sprintf(gtext("Enter a custom port number if you want to override the default port. Default port is %s."), "21"), true, 4);
+					html_inputbox("port", gtext("TCP Port"), $pconfig['port'], sprintf(gtext("Enter a custom port number if you want to override the default port. (Default is %s)."), "21"), true, 4);
 					html_inputbox("numberclients", gtext("Max. Clients"), $pconfig['numberclients'], gtext("Maximum number of users that can connect to the server."), true, 3);
 					html_inputbox("maxconperip", gtext("Max. Connections Per Host"), $pconfig['maxconperip'], gtext("Maximum number of connections allowed per IP address. (0 = unlimited)."), true, 3);
 					html_inputbox("maxloginattempts", gtext("Max. Login Attempts"), $pconfig['maxloginattempts'], gtext("Maximum number of allowed password attempts before disconnection."), true, 3);
