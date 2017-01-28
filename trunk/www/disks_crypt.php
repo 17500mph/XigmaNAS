@@ -34,7 +34,8 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-$pgtitle = [gtext('Disks'),gtext('Encryption'),gtext('Management')];
+$a_geli = &array_make_branch($config,'geli','vdisk');
+array_sort_key($config['geli']['vdisk'],'devicespecialfile');
 
 if ($_POST) {
 	unset($input_errors);
@@ -75,12 +76,6 @@ if ($_POST) {
 	}
 }
 
-if (!isset($config['geli']['vdisk']) || !is_array($config['geli']['vdisk']))
-	$config['geli']['vdisk'] = array();
-
-array_sort_key($config['geli']['vdisk'], "devicespecialfile");
-$a_geli = &$config['geli']['vdisk'];
-
 if (isset($_GET['act']) && $_GET['act'] === "del") {
 	if (FALSE !== ($cnid = array_search_ex($_GET['uuid'], $config['geli']['vdisk'], "uuid"))) {
 		if (disks_exists($config['geli']['vdisk'][$cnid]['devicespecialfile'])) {
@@ -115,6 +110,7 @@ function geli_process_updatenotification($mode, $data) {
 	
 	return $retval;
 }
+$pgtitle = [gtext('Disks'),gtext('Encryption'),gtext('Management')];
 ?>
 <?php include 'fbegin.inc';?>
 <?php if(!empty($errormsg)) print_input_errors($errormsg);?>
