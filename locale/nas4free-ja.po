@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-26 21:12+0000\n"
+"POT-Creation-Date: 2017-01-28 02:17+0000\n"
 "PO-Revision-Date: 2016-11-21 20:27+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
+"X-Launchpad-Export-Date: 2017-01-28 01:56+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -271,9 +271,11 @@ msgid ""
 "A valid IP address or CIDR notation must be specified for the hosts allow."
 msgstr "許可するホストには有効な IP アドレスか CIDR 表記を指定してください。"
 
-msgid ""
-"A valid IPv4 address must be specified for the primary/secondary DNS server."
-msgstr "プライマリ/セカンダリ DNS サーバは有効な IPv4 アドレスを指定してください。"
+msgid "A valid IPv4 address must be specified for the primary DNS server."
+msgstr ""
+
+msgid "A valid IPv4 address must be specified for the secondary DNS server."
+msgstr ""
 
 msgid "A valid IPv4 address must be specified."
 msgstr "有効な IPv4 アドレスを指定してください。"
@@ -284,9 +286,11 @@ msgstr "有効な IPv4 ネットワークのビット数を指定してくださ
 msgid "A valid IPv6 Gateway address must be specified."
 msgstr "有効な IPv6 ゲートウェイアドレスを指定してください。"
 
-msgid ""
-"A valid IPv6 address must be specified for the primary/secondary DNS server."
-msgstr "プライマリ/セカンダリ DNS サーバは有効な IPv6 アドレスを指定してください。"
+msgid "A valid IPv6 address must be specified for the primary DNS server."
+msgstr ""
+
+msgid "A valid IPv6 address must be specified for the secondary DNS server."
+msgstr ""
 
 msgid "A valid IPv6 address must be specified."
 msgstr "有効な IPv6 アドレスを指定してください。"
@@ -333,20 +337,20 @@ msgstr "AD 又は PDC 名"
 msgid "AFP"
 msgstr "AFP"
 
-msgid "AFP compatibility"
-msgstr "AFP 互換性"
+msgid "AFP Compatibility"
+msgstr ""
 
 msgid "AG"
 msgstr "AG"
 
-msgid "AIO module"
-msgstr "AIO モジュール"
+msgid "AIO Module"
+msgstr ""
 
-msgid "AIO read size"
-msgstr "AIO 読み込みサイズ"
+msgid "AIO Read Size"
+msgstr ""
 
-msgid "AIO write size"
-msgstr "AIO 書き込みサイズ"
+msgid "AIO Write Size"
+msgstr ""
 
 msgid "ALL Interfaces"
 msgstr "全てのインターフェース"
@@ -541,14 +545,14 @@ msgstr "共有の追加"
 msgid "Add target"
 msgstr "ターゲットの追加"
 
+msgid "Additional Group"
+msgstr ""
+
 msgid "Additional Network"
 msgstr "追加のネットワーク"
 
 msgid "Additional Storage"
 msgstr "追加のストレージ"
-
-msgid "Additional group"
-msgstr "グループの追加"
 
 msgid ""
 "Additional parameters to the hardware-specific part of the driver for second "
@@ -691,9 +695,6 @@ msgstr "クライアントが、OS/2 スタイルの拡張属性の保存を試�
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "クライアントが、中断されたアップロード及びダウンロードの再開 (リジューム) を許可します。"
 
-msgid "Allow group"
-msgstr "許可グループ"
-
 msgid "Allow new files"
 msgstr "新しいファイルを許可します。"
 
@@ -735,6 +736,9 @@ msgstr ""
 
 msgid "AltRoot"
 msgstr "代替ルート (AltRoot)"
+
+msgid "Alternate Data Streams"
+msgstr ""
 
 msgid "Alternate TCP port. Default is 22"
 msgstr "代わりの TCP ポート。デフォルトは 22"
@@ -797,14 +801,14 @@ msgstr "この名前がつけられたホストは既に存在しています。
 msgid "An interface with the specified description already exists."
 msgstr "指定された説明がつけられたインタフェースは既に存在しています。"
 
-msgid "Anonymous access has been deprecated starting from SMB2."
+msgid "Anonymous Bind"
 msgstr ""
 
-msgid "Anonymous bind"
-msgstr "匿名バインド"
+msgid "Anonymous Users"
+msgstr ""
 
-msgid "Anonymous user bandwidth"
-msgstr "匿名ユーザの帯域"
+msgid "Anonymous access has been deprecated starting from SMB2."
+msgstr ""
 
 msgid ""
 "Anonymous user download bandwith in KB/s. An empty field means infinity."
@@ -813,9 +817,6 @@ msgstr "匿名ユーザへのダウンロード帯域を KB/s に制限します
 msgid ""
 "Anonymous user upload bandwith in KB/s. An empty field means infinity."
 msgstr "匿名ユーザへのアップロード帯域を KB/s に制限します。空の場合は無制限となります。"
-
-msgid "Anonymous users only"
-msgstr "匿名ユーザ専用"
 
 msgid ""
 "Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
@@ -866,8 +867,8 @@ msgstr ""
 msgid "Are you sure you want to shutdown the server?"
 msgstr ""
 
-msgid "Asynchronous I/O (AIO)"
-msgstr "非同期I/O (AIO)"
+msgid "Asynchronous I/O"
+msgstr ""
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
@@ -920,6 +921,17 @@ msgstr ""
 msgid "Authenticate URL"
 msgstr "認証 URL"
 
+msgid "Authenticated Users"
+msgstr ""
+
+msgid ""
+"Authenticated user download bandwith in KB/s. An empty field means infinity."
+msgstr ""
+
+msgid ""
+"Authenticated user upload bandwith in KB/s. An empty field means infinity."
+msgstr ""
+
 msgid "Authentication"
 msgstr "認証"
 
@@ -958,6 +970,9 @@ msgstr ""
 
 msgid "Autoselect"
 msgstr "自動選択"
+
+msgid "Auxiliary Parameter"
+msgstr ""
 
 msgid "Auxiliary Parameters"
 msgstr ""
@@ -1087,8 +1102,8 @@ msgstr "最も良いものを自動選択"
 msgid "Bind DN"
 msgstr "Bind DN"
 
-msgid "Bind password"
-msgstr "バインドパスワード"
+msgid "Bind Password"
+msgstr ""
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
@@ -1201,11 +1216,11 @@ msgstr "CHAP ユーザ"
 msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
 
+msgid "CIFS/SMB Information"
+msgstr ""
+
 msgid "CIFS/SMB disabled"
 msgstr "CIFS/SMB は無効です"
-
-msgid "CIFS/SMB informations"
-msgstr "CIFS/SMB の情報"
 
 msgid "CIFS/SMB is enabled."
 msgstr "CIFS/SMB が有効になっています。"
@@ -1404,10 +1419,10 @@ msgstr "暗号化された GZIP ファイルまたは XML 形式でサーバー�
 msgid "Client"
 msgstr "クライアント"
 
-msgid "Client Max Protocol"
+msgid "Client Max. Protocol"
 msgstr ""
 
-msgid "Client Min Protocol"
+msgid "Client Min. Protocol"
 msgstr ""
 
 msgid "Clone"
@@ -1424,8 +1439,8 @@ msgstr "行"
 
 msgid ""
 "Comma-separated list of group names that are permitted to login to the FTP "
-"server. (empty is ftp group)"
-msgstr "FTPサーバーにログインすることが許可されているグループ名のカンマ区切りリスト。(空欄はftpグループ)"
+"server. (empty = ftp group)."
+msgstr ""
 
 msgid "Command"
 msgstr "コマンド"
@@ -1502,11 +1517,14 @@ msgstr ""
 msgid "Configuration"
 msgstr "設定"
 
-msgid "Configuration directory"
-msgstr "設定ディレクトリ"
+msgid "Configuration Directory"
+msgstr ""
 
 msgid "Configuring"
 msgstr "設定"
+
+msgid "Confirm New Password"
+msgstr ""
 
 msgid "Confirmation"
 msgstr "確認"
@@ -1746,6 +1764,9 @@ msgstr ""
 msgid "Create HVM Guest"
 msgstr "HVM ゲスト作成"
 
+msgid "Create Mask"
+msgstr ""
+
 msgid "Create PV Guest"
 msgstr "PV ゲスト作成"
 
@@ -1757,9 +1778,6 @@ msgstr "RAIDの作成と初期化"
 
 msgid "Create encrypted volume"
 msgstr "暗号化ボリュームの作成"
-
-msgid "Create mask"
-msgstr "Create mask"
 
 msgid "Create work directory if it doesn't exist."
 msgstr "作業用ディレクトリが存在しない場合は作成する。"
@@ -1818,6 +1836,9 @@ msgstr "現在のパスワード"
 msgid ""
 "Current password is default password. You should use your own password."
 msgstr "現在のパスワードはデフォルトのパスワードです。自分のパスワードを使用する必要があります。"
+
+msgid "Current password is incorrectly entered."
+msgstr ""
 
 msgid "Current state of drive operation based upon the Life Curve."
 msgstr "ライフ曲線に基づいたドライブ運用の現在の状態。"
@@ -1983,12 +2004,8 @@ msgstr ""
 msgid "Default Device Settings"
 msgstr ""
 
-#, php-format
-msgid "Default is %s."
-msgstr "デフォルトは %s。"
-
-msgid "Default root"
-msgstr "デフォルトルートディレクトリ"
+msgid "Default Root"
+msgstr ""
 
 msgid "Default user name is 'admin'."
 msgstr "初期ユーザ名は「admin」です"
@@ -2313,14 +2330,14 @@ msgstr "ディレクトリ"
 msgid "Directory %s doesn't exist!"
 msgstr ""
 
+msgid "Directory Mask"
+msgstr ""
+
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr "未完了ファイルの保存ディレクトリ。空欄は無効です。"
 
 msgid "Directory listing"
 msgstr "ディレクトリリスト"
-
-msgid "Directory mask"
-msgstr "Directory mask"
 
 msgid "Directory that contains removable media. (e.g /mnt/iscsi/)"
 msgstr "リムーバブルメディアを格納するディレクトリ。(例: /mnt/iscsi/)"
@@ -2418,8 +2435,8 @@ msgid ""
 "or temperature). Unit of measure is unknown."
 msgstr "ディスクが（通常は原因衝撃や温度により）スピンドルに対してシフトした距離。測定単位は不明です。"
 
-msgid "Distributed hash table"
-msgstr "分散ハッシュテーブル"
+msgid "Distributed Hash Table"
+msgstr ""
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
@@ -2657,8 +2674,8 @@ msgstr "ドメイン"
 msgid "Domain controller name"
 msgstr "ドメインコントローラ名"
 
-msgid "Domain have no 2nd level name."
-msgstr "ドメインにセカンドレベル名がありません。"
+msgid "Domain is missing 2nd level name."
+msgstr ""
 
 msgid "Domain name"
 msgstr "ドメイン名"
@@ -2684,17 +2701,20 @@ msgstr "完了"
 msgid "Done."
 msgstr "完了"
 
-msgid "Dos charset"
-msgstr "Dos 文字セット"
+msgid "Dos Charset"
+msgstr ""
 
 msgid "Download"
 msgstr "ダウンロード"
 
+msgid "Download Bandwidth"
+msgstr ""
+
 msgid "Download Configuration"
 msgstr "設定のダウンロード"
 
-msgid "Download bandwidth"
-msgstr "ダウンロード帯域"
+msgid "Download Directory"
+msgstr ""
 
 msgid "Download directory"
 msgstr "ダウンロードディレクトリ"
@@ -2711,11 +2731,11 @@ msgstr "内部テスト中のドライブのシークパフォーマンス。"
 msgid "Driver"
 msgstr "ドライバ"
 
-msgid "Driver list"
-msgstr "ドライバの一覧"
+msgid "Driver List"
+msgstr ""
 
-msgid "Driver parameters"
-msgstr "ドライバパラメータ"
+msgid "Driver Parameter"
+msgstr ""
 
 msgid "Driver used"
 msgstr "利用ドライバー"
@@ -2748,8 +2768,8 @@ msgstr "ダイナミック DNS"
 msgid "Dynamic IP (DHCP) can not be used for HAST resources."
 msgstr "動的IP (DHCP) はHASTリソースに使うことが出来ません。"
 
-msgid "EA support"
-msgstr "拡張属性サポート"
+msgid "EA Support"
+msgstr ""
 
 msgid "EFI/GPT partition can be use with UFS only."
 msgstr "EFI/GPT パーティションは UFS 専用です。"
@@ -2881,20 +2901,20 @@ msgstr ""
 msgid "Enable"
 msgstr "有効"
 
-msgid "Enable 'Asynchronous I/O (AIO)' switch."
+msgid "Enable 'Asynchronous I/O (AIO).' switch."
 msgstr ""
 
 msgid "Enable 'Large read/write' switch."
 msgstr ""
 
-msgid "Enable ACL inheritance"
-msgstr "ACL継承を有効化"
+msgid "Enable ACL inheritance."
+msgstr ""
 
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr ""
 
-msgid "Enable Asynchronous I/O (AIO)"
-msgstr "非同期I/O (AIO)を有効にします。"
+msgid "Enable Asynchronous I/O. (AIO)."
+msgstr ""
 
 msgid "Enable Challenge-Response Authentication"
 msgstr ""
@@ -2942,8 +2962,8 @@ msgstr "TiVoサポートを有効にします。"
 msgid "Enable Time Machine support"
 msgstr "Time Machine サポートを有効にします。"
 
-msgid "Enable ZFS ACL"
-msgstr "ZFS ACLを有効化"
+msgid "Enable ZFS ACL."
+msgstr ""
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
 msgstr ""
@@ -3011,8 +3031,8 @@ msgstr "ワイルドカードドメインを有効にします。"
 msgid "Enable encryption."
 msgstr "暗号化を有効にします。"
 
-msgid "Enable extended attribute support"
-msgstr "拡張属性サポートを有効にします"
+msgid "Enable extended attribute support."
+msgstr ""
 
 msgid "Enable extended attributes for this file system."
 msgstr "ファイルシステムの拡張属性を有効にします。"
@@ -3021,9 +3041,6 @@ msgid ""
 "Enable foreground/background file system consistency check during boot "
 "process."
 msgstr "ブートプロセス内で、フォアグラウンド/バックグラウンドでのファイルシステムの一貫性検査を有効にします。"
-
-msgid "Enable guest access"
-msgstr "ゲストアクセスの有効化"
 
 msgid "Enable guest access."
 msgstr "ゲストアクセスを許可。"
@@ -3034,14 +3051,14 @@ msgstr "inotifyを有効にします。"
 msgid "Enable keyboard-interactive authentication."
 msgstr "キーボードインタラクティブでの認証を有効にします。"
 
-msgid "Enable large read/write"
-msgstr "大きな単位での読み書きを有効にします。"
+msgid "Enable large read/write."
+msgstr ""
 
 msgid "Enable local user authentication."
 msgstr "ローカルユーザ認証を許可。"
 
-msgid "Enable mapping DOS attributes"
-msgstr "DOS属性のマッピングを有効化にします"
+msgid "Enable mapping DOS attributes."
+msgstr ""
 
 msgid "Enable module listing."
 msgstr "モジュールリストを有効にします。"
@@ -3055,8 +3072,8 @@ msgstr ""
 msgid "Enable peer exchange (PEX)."
 msgstr "ピアエクスチェンジ(PEX)を有効にする。"
 
-msgid "Enable permission inheritance"
-msgstr "パーミッションの継承の有効化"
+msgid "Enable permission inheritance."
+msgstr ""
 
 msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr "NAT-PMP もしくは UPnP によるポートフォワーディングを有効にする。"
@@ -3064,8 +3081,8 @@ msgstr "NAT-PMP もしくは UPnP によるポートフォワーディングを�
 msgid "Enable proxy authentication."
 msgstr "Proxy認証の有効化"
 
-msgid "Enable recycle bin"
-msgstr "ごみ箱機能を有効化"
+msgid "Enable recycle bin."
+msgstr ""
 
 msgid "Enable remote monitoring of the local connected UPS."
 msgstr "ローカルに接続されているUPSのリモート監視を有効にする。"
@@ -3086,11 +3103,11 @@ msgstr ""
 msgid "Enable serial console."
 msgstr ""
 
-msgid "Enable shadow copy"
-msgstr "シャドウコピーを有効にします。"
+msgid "Enable shadow copy."
+msgstr ""
 
-msgid "Enable store DOS attributes"
-msgstr "DOS 属性の保存を有効にします"
+msgid "Enable store DOS attributes."
+msgstr ""
 
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Ident プロトコル (RFC1413) を有効にします。"
@@ -3159,8 +3176,8 @@ msgstr "使用する暗号化アルゴリズム"
 msgid "English"
 msgstr "英語"
 
-msgid "Enhanced compatibility with Netatalk AFP server"
-msgstr "NetatalkのAFPサーバとの互換性の強化"
+msgid "Enhanced compatibility with Netatalk AFP server."
+msgstr ""
 
 msgid "Enter Command"
 msgstr ""
@@ -3172,6 +3189,12 @@ msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr "WebGUIデフォルトポート(HTTP 80, HTTPS 443)を変更したい場合は、カスタムポート番号を入力してください。"
+
+#, php-format
+msgid ""
+"Enter a custom port number if you want to override the default port. Default "
+"port is %s."
+msgstr ""
 
 msgid "Enter a description"
 msgstr ""
@@ -3333,6 +3356,9 @@ msgid ""
 "more than once."
 msgstr "使用する為にはまず、エクステントを定義する必要があります。エクステントは何度も使用する事は出来ません。"
 
+msgid "Extra Options"
+msgstr ""
+
 msgid "Extra options"
 msgstr "拡張オプション"
 
@@ -3455,6 +3481,9 @@ msgstr "ファイルエディタ"
 
 msgid "File Manager"
 msgstr "ファイルマネージャ"
+
+msgid "File Mask"
+msgstr ""
 
 msgid "File Path"
 msgstr "ファイルパス"
@@ -3686,16 +3715,22 @@ msgstr ""
 msgid "Greek"
 msgstr "ギリシャ語"
 
-msgid "Greeting banner displayed by FTP when a connection first comes in."
-msgstr "FTP 接続の際に最初に表示される挨拶のバナー。"
+msgid "Greeting banner displayed to client when firts connection comes in."
+msgstr ""
 
 msgid "Group"
 msgstr "グループ"
+
+msgid "Group Allow"
+msgstr ""
 
 msgid "Group ID"
 msgstr "グループ ID"
 
 msgid "Group Settings"
+msgstr ""
+
+msgid "Group Suffix"
 msgstr ""
 
 msgid "Group compilations"
@@ -3713,9 +3748,6 @@ msgstr "グループ名"
 msgid "Group numeric id."
 msgstr "グループ ID"
 
-msgid "Group suffix"
-msgstr "グループサフィックス"
-
 msgid "Groupmask - Mask ACL with mode"
 msgstr ""
 
@@ -3725,8 +3757,8 @@ msgstr "グループ"
 msgid "Guest"
 msgstr "ゲスト"
 
-msgid "Guest account"
-msgstr "ゲストアカウント"
+msgid "Guest Account"
+msgstr ""
 
 msgid "HAST"
 msgstr "HAST"
@@ -3811,8 +3843,8 @@ msgstr ""
 msgid "Hide Default Groups"
 msgstr ""
 
-msgid "Hide dot files"
-msgstr "ドットファイルを隠す"
+msgid "Hide Dot Files"
+msgstr ""
 
 msgid "High voltage boosting transfer point"
 msgstr "電圧上昇補正の戻り値"
@@ -3841,9 +3873,6 @@ msgstr "ホスト"
 msgid "Host access control"
 msgstr "ホストのアクセスコントロール"
 
-msgid "Host name"
-msgstr "ホスト名"
-
 msgid "Host resources"
 msgstr "ホストリソース"
 
@@ -3857,6 +3886,9 @@ msgid "Hosts"
 msgstr "ホスト"
 
 msgid "Hosts Allow"
+msgstr ""
+
+msgid "Hosts Deny"
 msgstr ""
 
 msgid "Hosts Setup"
@@ -3973,8 +4005,8 @@ msgstr "マウントする ISO ファイル。"
 msgid "ISP DNS Servers"
 msgstr ""
 
-msgid "Ident protocol"
-msgstr "Ident プロトコル"
+msgid "IdentLookups"
+msgstr ""
 
 msgid "Identifier"
 msgstr "識別名"
@@ -4042,11 +4074,6 @@ msgid ""
 "If this property is enabled, the snapshots are displayed into .zfs directory."
 msgstr "このプロパティを有効にすると、スナップショットが .zfs ディレクトリ内に表示されます。"
 
-msgid ""
-"If you want to change the password for accessing the WebGUI, enter it here "
-"twice."
-msgstr "WebGUIにアクセスする為のパスワードを変更するには、ここに同じパスワードを2回入力してください。"
-
 msgid "Import"
 msgstr "インポート"
 
@@ -4092,8 +4119,8 @@ msgstr ""
 msgid "Incoming Line/Power Information"
 msgstr "入力電源情報"
 
-msgid "Incomplete directory"
-msgstr "未完了ディレクトリ"
+msgid "Incomplete Directory"
+msgstr ""
 
 msgid ""
 "Indicates the approximate SSD life left, in terms of program/erase cycles or "
@@ -4124,8 +4151,8 @@ msgstr ""
 msgid "Inherit ACL"
 msgstr "ACL継承"
 
-msgid "Inherit permissions"
-msgstr "パーミッションを引き継ぐ"
+msgid "Inherit Permissions"
+msgstr ""
 
 msgid "Inhibit some of the syslog diagnostics for bad lines in /etc/exports."
 msgstr "/etc/exports 内で間違った行があった際、syslog への診断メッセージをいくつか抑制します。"
@@ -4245,9 +4272,6 @@ msgstr "インタフェースの管理"
 msgid "Interface Selection"
 msgstr ""
 
-msgid "Interface selection"
-msgstr "インターフェース選択"
-
 msgid "Interfaces"
 msgstr "インタフェース"
 
@@ -4303,9 +4327,9 @@ msgid ""
 msgstr "標準SCSIモードページによってクライアント側からいつでも変更することができます。"
 
 msgid ""
-"It is impossible to enable 'Anonymous users only' and 'Local users only' "
-"authentication simultaneously."
-msgstr "同時に '匿名ユーザ専用' と 'ローカルユーザ専用' の両方を有効にする事は出来ません。"
+"It is impossible to enable 'Anonymous Users' and 'Authenticated Users' both "
+"at the same time."
+msgstr ""
 
 msgid ""
 "It is not recommanded to import non healthy pools nor virtual devices that "
@@ -4413,6 +4437,9 @@ msgstr "LAN マネージメント"
 msgid "LAN Only"
 msgstr "LAN のみ"
 
+msgid "LAN interface is not configured."
+msgstr ""
+
 msgid "LAN net"
 msgstr "LAN net"
 
@@ -4443,8 +4470,8 @@ msgstr "言語"
 msgid "Language to use on front panel"
 msgstr "フロントパネルで利用する言語"
 
-msgid "Large read/write"
-msgstr "Large read/write"
+msgid "Large Read/Write"
+msgstr ""
 
 msgid "Last Configuration Change"
 msgstr ""
@@ -4588,18 +4615,6 @@ msgstr "ローカル共有 (接続先)"
 msgid "Local shares to be synchronized"
 msgstr "ローカル共有は同期されました"
 
-msgid "Local user bandwidth"
-msgstr "ローカルユーザの帯域"
-
-msgid "Local user download bandwith in KB/s. An empty field means infinity."
-msgstr "ユーザへのダウンロード帯域を KB/s に制限します。空の場合は無制限となります。"
-
-msgid "Local user upload bandwith in KB/s. An empty field means infinity."
-msgstr "ユーザへのアップロード帯域を KB/s に制限します。空の場合は無制限となります。"
-
-msgid "Local users only"
-msgstr "ローカルユーザのみ"
-
 msgid "Location"
 msgstr "場所"
 
@@ -4734,8 +4749,8 @@ msgstr "MS ドメイン"
 msgid "MTU"
 msgstr "MTU"
 
-msgid "Machine suffix"
-msgstr "マシンサフィックス"
+msgid "Machine Suffix"
+msgstr ""
 
 msgid "Maintenance"
 msgstr ""
@@ -4764,14 +4779,14 @@ msgstr "製造日"
 msgid "Map all users to root"
 msgstr "全てのユーザを root にマッピングします。"
 
-msgid "Map to guest"
-msgstr "ゲストのマッピング"
+msgid "Map to Guest"
+msgstr ""
 
 msgid "Map to user"
 msgstr "ユーザのマッピング"
 
-msgid "Mapping DOS attributes"
-msgstr "DOS属性の割当"
+msgid "Mapping DOS Attributes"
+msgstr ""
 
 msgid "Mar"
 msgstr ""
@@ -4784,10 +4799,22 @@ msgid ""
 "not specified."
 msgstr "データ読み取り中のチャンネルのマージン。この属性の機能は指定されていません。"
 
-msgid "Masquerade address"
-msgstr "マスカレードアドレス"
+msgid "Masquerade Address"
+msgstr ""
 
 msgid "Max Entries"
+msgstr ""
+
+msgid "Max. Clients"
+msgstr ""
+
+msgid "Max. Connections Per Host"
+msgstr ""
+
+msgid "Max. Login Attempts"
+msgstr ""
+
+msgid "Max. Passive Port"
 msgstr ""
 
 msgid "Max. TTL"
@@ -4796,17 +4823,8 @@ msgstr "最大 TTL"
 msgid "Max. block size"
 msgstr "ブロックサイズの最大値"
 
-msgid "Max. conn. per IP"
-msgstr "IP 毎の最大接続数"
-
 msgid "Max. connections"
 msgstr "最大接続数"
-
-msgid "Max. login attempts"
-msgstr "最大ログイン試行数"
-
-msgid "Max. passive port"
-msgstr "パッシブモードで使用するポート (最大)"
 
 msgid "Max. pre-send R2T"
 msgstr "最大R2T事前送信数"
@@ -4848,12 +4866,13 @@ msgstr "最大入力電圧"
 msgid "Maximum number of allowed password attempts before disconnection."
 msgstr "セッションの切断までに、この値までパスワードの再入力を試行出来ます。"
 
+msgid ""
+"Maximum number of connections allowed per IP address. (0 = unlimited)."
+msgstr ""
+
 #, php-format
 msgid "Maximum number of connections in each session (%d by default)."
 msgstr "セッションあたりの最大接続数(初期値:%d)"
-
-msgid "Maximum number of connections per IP address (0 = unlimited)."
-msgstr "1つの IP アドレスあたりの最大接続数 (0 = 無制限)。"
 
 #, php-format
 msgid ""
@@ -4865,11 +4884,11 @@ msgstr "コネクション毎の最大R2T事前送信数(初期値:%d)。実際�
 msgid "Maximum number of sessions holding at same time (%d by default)."
 msgstr "同時に維持する最大セッション数(初期値:%d)"
 
-msgid "Maximum number of simultaneous clients."
-msgstr "同時接続クライアントの最大値。"
-
 msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
 msgstr "最大の同時接続数。初期値は 0 (無制限)。"
+
+msgid "Maximum number of users that can connect to the server."
+msgstr ""
 
 msgid "Maximum relative humidity seen (percent)"
 msgstr "最大相対湿度"
@@ -4922,8 +4941,8 @@ msgstr "MiB"
 msgid "MibII"
 msgstr "MibII"
 
-msgid "Min. passive port"
-msgstr "パッシブモードで使用するポート(最小)"
+msgid "Min. Passive Port"
+msgstr ""
 
 msgid "MiniDLNA"
 msgstr "MiniDLNA"
@@ -5109,6 +5128,9 @@ msgstr ""
 msgid "NT1 (CIFS)"
 msgstr ""
 
+msgid "NTFS ACLs"
+msgstr ""
+
 msgid "NTP Time Server"
 msgstr ""
 
@@ -5151,9 +5173,6 @@ msgstr ""
 
 msgid "NetBIOS Name"
 msgstr ""
-
-msgid "NetBIOS name"
-msgstr "NetBIOS 名"
 
 msgid "Netgraph"
 msgstr "Netgraph"
@@ -5203,6 +5222,11 @@ msgstr ""
 msgid "New Password"
 msgstr ""
 
+msgid ""
+"New Password does not match the confirmation password. Please ensure both "
+"passwords are the same."
+msgstr ""
+
 msgid "New password"
 msgstr "新しいパスワード"
 
@@ -5211,6 +5235,9 @@ msgstr ""
 
 msgid "No"
 msgstr "No"
+
+msgid "No DNS server have been configured."
+msgstr ""
 
 msgid "No DNS setting found."
 msgstr "DNS 設定が見つかりません。"
@@ -5413,17 +5440,14 @@ msgstr ""
 msgid "Now"
 msgstr "今すぐ"
 
-msgid "Null passwords"
-msgstr "空のパスワード"
+msgid "Null Passwords"
+msgstr ""
 
 msgid "Number of bad battery packs"
 msgstr "不良バッテリーパック数"
 
 msgid "Number of battery packs"
 msgstr "バッテリーパック数"
-
-msgid "Number of clients"
-msgstr "クライアントの数"
 
 msgid "Number of hours elapsed in the power-on state."
 msgstr "電源オンの状態で経過した時間。"
@@ -5471,9 +5495,6 @@ msgstr "Off"
 
 msgid "Old passphrase"
 msgstr "古いパスフレーズ"
-
-msgid "Old password"
-msgstr "古いパスワード"
 
 msgid "On"
 msgstr "On"
@@ -5629,8 +5650,8 @@ msgstr "パーティションタイプ"
 msgid "Partitions"
 msgstr "パーティション"
 
-msgid "Passive ports"
-msgstr "パッシブポート"
+msgid "Passive Port"
+msgstr ""
 
 msgid ""
 "Passive ports restricts the range of ports from which the server will select "
@@ -5667,14 +5688,25 @@ msgstr "パスワード"
 msgid "Password (confirmed)"
 msgstr "パスワード (確認)"
 
+msgid "Password Encryption"
+msgstr ""
+
+msgid "Password Server"
+msgstr ""
+
+msgid "Password Suffix"
+msgstr ""
+
 msgid "Password authentication"
 msgstr "パスワード認証"
 
+msgid ""
+"Password does not match the confirmation password. Please ensure both "
+"passwords are the same."
+msgstr ""
+
 msgid "Password don't match."
 msgstr "パスワードが一致しません。"
-
-msgid "Password encryption"
-msgstr "パスワード暗号形式"
 
 msgid "Password for the administrative pages."
 msgstr "管理画面のパスワード"
@@ -5682,15 +5714,9 @@ msgstr "管理画面のパスワード"
 msgid "Password of domain administrator account."
 msgstr "ドメイン管理者アカウントのパスワードを入力して下さい。"
 
-msgid "Password server"
-msgstr "パスワードサーバ"
-
 msgid ""
 "Password server name or IP address (e.g. Active Directory domain controller)."
 msgstr "パスワードサーバ名、またはIPアドレス。 (例: Active Directory ドメインコントローラ)"
-
-msgid "Password suffix"
-msgstr "パスワードサフィックス"
 
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
 msgstr "ここにPEMフォーマットのRSA秘密鍵をペーストして下さい。"
@@ -5714,14 +5740,17 @@ msgstr "共有するパス。"
 msgid "Path to the local device. (e.g. %s)"
 msgstr "ローカルデバイスのパス。 (例: %s)"
 
+msgid "Peer Exchange"
+msgstr ""
+
+msgid "Peer Port"
+msgstr ""
+
 msgid "Peer Secret"
 msgstr "ピアシークレット"
 
 msgid "Peer User"
 msgstr "ピアユーザ"
-
-msgid "Peer exchange"
-msgstr "ピアエクスチェンジ"
 
 msgid "Peer port"
 msgstr "ピアポート"
@@ -5732,6 +5761,9 @@ msgstr ""
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
 msgstr "恒久的な Sambaデータのパス。(例 %s)"
+
+msgid "Permit Root Login"
+msgstr ""
 
 msgid "Permit root login"
 msgstr "root ログインを許可"
@@ -5874,8 +5906,8 @@ msgstr "ポート "
 msgid "Port %ld is already used by another service."
 msgstr "ポート番号 %ld は既に他のサービスで使用されています。"
 
-msgid "Port forwarding"
-msgstr "ポートフォワーディング"
+msgid "Port Forwarding"
+msgstr ""
 
 #, php-format
 msgid "Port number must be in the range between %d and %d."
@@ -6158,6 +6190,9 @@ msgstr "RAMディスク"
 msgid "Read"
 msgstr "読込み"
 
+msgid "Read Only"
+msgstr ""
+
 msgid "Read Only (ro)"
 msgstr "読込のみ (ro)"
 
@@ -6209,8 +6244,8 @@ msgstr "最新バッテリー切替理由"
 msgid "Reboot"
 msgstr "リブート"
 
-msgid "Receive Buffer Size"
-msgstr "受信バッファサイズ"
+msgid "Receive Buffer"
+msgstr ""
 
 msgid "Record is locked"
 msgstr ""
@@ -6221,8 +6256,8 @@ msgstr "ディレクトリの再帰を行います。"
 msgid "Recursive"
 msgstr "再帰"
 
-msgid "Recycle bin"
-msgstr "ごみ箱"
+msgid "Recycle Bin"
+msgstr ""
 
 msgid "Refresh"
 msgstr "更新"
@@ -6417,11 +6452,11 @@ msgstr "ルーマニア語"
 msgid "Root"
 msgstr "Root"
 
-msgid "Root bind DN"
-msgstr "Root bind DN"
+msgid "Root Bind DN"
+msgstr ""
 
-msgid "Root bind password"
-msgstr "Root bind パスワード"
+msgid "Root Bind Password"
+msgstr ""
 
 msgid "Rotation Rate"
 msgstr "回転数"
@@ -6435,8 +6470,8 @@ msgstr "ラウンドロビン"
 msgid "Routes"
 msgstr "ルーティング"
 
-msgid "Routing tables"
-msgstr "ルーティングテーブル"
+msgid "Routing Tables"
+msgstr ""
 
 msgid "Rows"
 msgstr "列"
@@ -6545,14 +6580,14 @@ msgstr "Samba Active Directory ドメインコントローラ"
 #, php-format
 msgid ""
 "Samba will read from file asynchronously when size of request is bigger than "
-"this value. (%d by default)"
-msgstr "Samba は要求サイズがこの値より大きい場合に非同期ファイル読み込みを行います。(デフォルトは %d)"
+"this value. (%d by default)."
+msgstr ""
 
 #, php-format
 msgid ""
 "Samba will write to file asynchronously when size of request is bigger than "
-"this value. (%d by default)"
-msgstr "Samba は要求サイズがこの値より大きい場合に非同期ファイル書き込みを行います。(デフォルトは %d)"
+"this value. (%d by default)."
+msgstr ""
 
 msgid "Sat"
 msgstr ""
@@ -6771,8 +6806,8 @@ msgstr "セルフモニタリング、分析及びレポート"
 msgid "Self-tests Management"
 msgstr "セルフテスト管理"
 
-msgid "Send Buffer Size"
-msgstr "送信バッファサイズ"
+msgid "Send Buffer"
+msgstr ""
 
 msgid "Send Command!"
 msgstr "コマンド送信!"
@@ -6819,10 +6854,10 @@ msgstr "シリアル番号"
 msgid "Server"
 msgstr "サーバ"
 
-msgid "Server Max Protocol"
+msgid "Server Max. Protocol"
 msgstr ""
 
-msgid "Server Min Protocol"
+msgid "Server Min. Protocol"
 msgstr ""
 
 msgid "Server Name"
@@ -6852,11 +6887,11 @@ msgstr "サービス"
 msgid "Set additional group memberships for this account."
 msgstr "このアカウントを他のグループのメンバーにします。"
 
-msgid "Set browseable"
-msgstr "参照可能に設定します。"
+msgid "Set browseable."
+msgstr ""
 
-msgid "Set read only"
-msgstr "読込み専用に設定します。"
+msgid "Set read only."
+msgstr ""
 
 msgid "Set share password."
 msgstr "共有パスワードを設定します。"
@@ -6911,8 +6946,8 @@ msgstr "設定"
 msgid "Shadow Copy"
 msgstr "シャドウコピー"
 
-msgid "Shadow Copy format"
-msgstr "シャドウコピー書式"
+msgid "Shadow Copy Format"
+msgstr ""
 
 msgid "Share"
 msgstr "共有"
@@ -7194,20 +7229,14 @@ msgstr "停止"
 msgid "Storage"
 msgstr "ストレージ"
 
-msgid "Store DOS attributes"
-msgstr "DOS属性の保存"
+msgid "Store DOS Attributes"
+msgstr ""
 
-msgid "Store NTFS acls"
-msgstr "NTFSアクセス権の保存"
+msgid "Store NTFS ACLs in Extended Attributes."
+msgstr ""
 
-msgid "Store NTFS acls in Extended Attributes"
-msgstr "NTFSアクセス権を拡張属性に保存する"
-
-msgid "Store alternate data streams"
-msgstr "代替データストリームの保存"
-
-msgid "Store alternate data streams in Extended Attributes"
-msgstr "代替データストリームを拡張属性に保存する"
+msgid "Store alternate data streams in Extended Attributes."
+msgstr ""
 
 msgid "Strict DLNA"
 msgstr "厳密なDLNA"
@@ -7264,8 +7293,8 @@ msgstr "スワップメモリ"
 msgid "Swap Usage"
 msgstr ""
 
-msgid "Swap disabled"
-msgstr "スワップ無効"
+msgid "Swap is disabled."
+msgstr ""
 
 msgid "Swedish"
 msgstr "スウェーデン語"
@@ -7360,6 +7389,12 @@ msgstr "システムメッセージバッファ"
 msgid "System tuning"
 msgstr "システムチューニング"
 
+msgid "TCP Port"
+msgstr ""
+
+msgid "TCP Wrapper"
+msgstr ""
+
 msgid "TCP forwarding"
 msgstr "TCP転送"
 
@@ -7371,9 +7406,6 @@ msgstr "TCP ポートは 5900+N (N は VNC ディスプレイ番号)。"
 
 msgid "TCP port to bind the server to."
 msgstr "サーバが待ち受ける TCP ポート。"
-
-msgid "TCP wrapper"
-msgstr "TCP wrapper"
 
 msgid "TFTP"
 msgstr "TFTP"
@@ -7387,11 +7419,11 @@ msgstr "TLS"
 msgid "TLS Mode"
 msgstr ""
 
-msgid "TLS Server Certificate Check"
+msgid "TLS Only"
 msgstr ""
 
-msgid "TLS only"
-msgstr "TLS 専用"
+msgid "TLS Server Certificate Check"
+msgstr ""
 
 msgid "Tag"
 msgstr "タグ"
@@ -7533,8 +7565,8 @@ msgid ""
 "manufacturing."
 msgstr "新しく追加された不良フラッシュブロック属性は、製造時の初期化以降にドライブが検出した不良フラッシュブロックの合計数を示します。"
 
-msgid "The TCP port must be a valid port number."
-msgstr "有効な TCP ポート番号を指定して下さい。"
+msgid "The TCP Port must be a valid port number."
+msgstr ""
 
 msgid "The UPS identifier and IP address"
 msgstr ""
@@ -7791,9 +7823,6 @@ msgstr "バインドする際に使用するパスワードを入力して下さ
 msgid "The cron job has been executed successfully."
 msgstr "Cron ジョブは正常に実行されました。"
 
-msgid "The current password is incorrectly entered."
-msgstr "現在のパスワードが正しくありません。"
-
 #, php-format
 msgid ""
 "The custom format of the snapshot for shadow copy service can be specified. "
@@ -7943,15 +7972,19 @@ msgstr "このログイン名は予約されているログイン名です。"
 msgid "The login name is limited to 16 characters."
 msgstr "ログイン名は16文字に制限されています。"
 
-msgid "The max. connection per IP must be either 0 (unlimited) or greater."
-msgstr "同一IPアドレスからの最大接続数は0(無制限)かそれより大きな数字である必要があります。"
+msgid ""
+"The max. connections per IP address must be either 0 (unlimited) or greater."
+msgstr ""
+
+msgid "The max. number of clients must be in the range from 1 to 50."
+msgstr ""
 
 msgid ""
 "The maximum download bandwith in KiB/s. An empty field means infinity."
 msgstr "ダウンロード時の最大帯域を KiB/s で指定してください。空の場合は制限無しとなります。"
 
-msgid "The maximum idle time be a number."
-msgstr "アイドル時間の最大数は数字で指定して下さい。"
+msgid "The maximum idle time must be a number."
+msgstr ""
 
 msgid ""
 "The maximum port to allocate for PASV style data connections (0 = use any "
@@ -8021,16 +8054,6 @@ msgstr ""
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "ネットワーク名 '%s' は無効です。"
-
-msgid ""
-"The new password does not match. Please ensure the passwords match exactly."
-msgstr "新しいパスワードが一致しません。正しいパスワードを入力してください。"
-
-msgid "The new password is also the default root password of the system!"
-msgstr ""
-
-msgid "The number of clients must be between 1 and 50."
-msgstr "クライアント数は 1 から 50 の範囲で指定してください。"
 
 msgid ""
 "The number of errors caused by incorrect checksum during the error "
@@ -8213,8 +8236,8 @@ msgstr "ボリュームは削除する前に切り離しを行う必要があり
 
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
-"clients (maximum 15 characters)."
-msgstr "サーバがクライアントからのクエリによって表示されるワークグループ名 (最大 15文字)。"
+"clients. (maximum 15 characters)."
+msgstr ""
 
 msgid "The working directory does not exist."
 msgstr "作業用ディレクトリーが存在していません。"
@@ -8601,6 +8624,12 @@ msgid ""
 "added to the LDAP directory, e.g. %s"
 msgstr "ユーザで使用されるサフィックスを指定します。例) %s"
 
+msgid "This password is required to access the admin web interface."
+msgstr ""
+
+msgid "This password is the root password of the system."
+msgstr ""
+
 msgid "This pool name already exists."
 msgstr "このプール名は既に存在しています。"
 
@@ -8657,14 +8686,14 @@ msgid ""
 "add an existing encrypted disk."
 msgstr "既存の暗号化されたディスクを追加するのに、このオプションは使用しないでください。(ディスク上のデータが消去されてしまいます)"
 
-msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
-msgstr "これは、UFS など ZFS ACLサポートなしで NTFS ACL を提供します。"
+msgid "This will provide NTFS ACLs without ZFS ACL support such as UFS."
+msgstr ""
 
-msgid "This will provide ZFS ACL support. (ZFS only)"
-msgstr "ZFS ACLサポートを提供します。(ZFS専用)"
+msgid "This will provide ZFS ACL support. (ZFS only)."
+msgstr ""
 
-msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
-msgstr "自動スナップショットにより作成されたシャドウコピーを提供します。(ZFS専用)"
+msgid "This will provide shadow copy created by auto snapshot. (ZFS only)."
+msgstr ""
 
 msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
@@ -8685,8 +8714,14 @@ msgstr ""
 msgid "Time"
 msgstr "時間"
 
+msgid "Time Interval"
+msgstr ""
+
 msgid "Time Machine"
 msgstr "Time Machine"
+
+msgid "Time Server"
+msgstr ""
 
 msgid "Time Synchronization"
 msgstr ""
@@ -8706,9 +8741,6 @@ msgstr "起動前の時間"
 msgid "Time interval"
 msgstr "インターバル"
 
-msgid "Time server"
-msgstr "タイムサーバ"
-
 msgid "Time spent during the positioning of the drive heads."
 msgstr "ドライブヘッドの位置決めに費やした時間。"
 
@@ -8724,6 +8756,9 @@ msgstr "タイムアウト"
 
 msgid "Times"
 msgstr "時刻"
+
+msgid "Title Speed"
+msgstr ""
 
 msgid "TitleSpeed"
 msgstr "タイトル時間"
@@ -8877,8 +8912,8 @@ msgstr "トラップ"
 msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol"
 
-msgid "Trusted domains"
-msgstr "信頼するドメイン"
+msgid "Trusted Domains"
+msgstr ""
 
 msgid "Try to force import."
 msgstr "強制インポートを試す。"
@@ -9054,11 +9089,11 @@ msgstr "Unison"
 msgid "Unison File Synchronisation"
 msgstr "Unison ファイル同期"
 
+msgid "Unix Charset"
+msgstr ""
+
 msgid "Unix Command"
 msgstr "Unix コマンド"
-
-msgid "Unix charset"
-msgstr "Unix 文字セット"
 
 msgid "Unknown"
 msgstr "不明"
@@ -9096,8 +9131,8 @@ msgstr "ファームウェアアップグレード"
 msgid "Upgrade ZFS and add all supported feature flags on a pool"
 msgstr ""
 
-msgid "Upload bandwidth"
-msgstr "アップロード帯域"
+msgid "Upload Bandwidth"
+msgstr ""
 
 msgid "Upload directory"
 msgstr "アップロードディレクトリ"
@@ -9197,10 +9232,19 @@ msgstr "ユーザ"
 msgid "User ID"
 msgstr "ユーザ ID"
 
+msgid "User Mask"
+msgstr ""
+
+msgid "User Portal"
+msgstr ""
+
 msgid "User Settings"
 msgstr ""
 
 msgid "User Shares"
+msgstr ""
+
+msgid "User Suffix"
 msgstr ""
 
 msgid "User account is locked"
@@ -9220,12 +9264,6 @@ msgstr "ユーザ ID の整数値"
 
 msgid "User password."
 msgstr "ユーザのパスワード。"
-
-msgid "User portal"
-msgstr "ユーザポータル"
-
-msgid "User suffix"
-msgstr "ユーザサフィックス"
 
 msgid "Username"
 msgstr "ユーザ名"
@@ -9397,8 +9435,8 @@ msgstr ""
 msgid "WEP"
 msgstr "WEP"
 
-msgid "WINS server"
-msgstr "WINS サーバ"
+msgid "WINS Server"
+msgstr ""
 
 msgid "WINS server IP address (e.g. from MS Active Directory server)."
 msgstr "WINS サーバのIPアドレス (例: ActiveDirectory サーバ等)"
@@ -9424,6 +9462,9 @@ msgstr "WPA-PSK WPA-EAP"
 msgid "WPA2"
 msgstr "WPA2"
 
+msgid "Wait Time"
+msgstr ""
+
 msgid "Wait time"
 msgstr "待ち時間"
 
@@ -9441,11 +9482,14 @@ msgid ""
 "and can not be recovered."
 msgstr "警告: 暗号化されたボリュームを削除しようとしています。このボリュームを削除すると含まれているデータはすべて消え復旧できなくなります。"
 
-msgid "Watch directory"
-msgstr "監視ディレクトリ"
+msgid "Watch Directory"
+msgstr ""
 
 msgid "WebGUI"
 msgstr "WebGUI"
+
+msgid "WebGUI and Root Password"
+msgstr ""
 
 msgid "Webserver"
 msgstr "ウェブサーバ"
@@ -9514,6 +9558,9 @@ msgstr "無線の設定"
 
 msgid "Workgroup"
 msgstr "ワークグループ"
+
+msgid "Working Directory"
+msgstr ""
 
 msgid "Working directory"
 msgstr "作業ディレクトリ"
@@ -9625,11 +9672,18 @@ msgstr ""
 msgid "You must select at least one authentication method."
 msgstr "少なくとも 1つの認証方法を選択して下さい。"
 
+msgid ""
+"You need to update your browser or use Internet Explorer 10 or higher."
+msgstr ""
+
 msgid "You should use HTTPS as WebGUI protocol for sending passphrase."
 msgstr "パスフレーズの送信には WebGUI プロトコルに HTTPS を使用すべきです。"
 
 msgid "Your ZFS system is not healthy."
 msgstr "ZFS システムが良好な状態ではありません。"
+
+msgid "Your browser does not support this svg object type."
+msgstr ""
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -9842,50 +9896,177 @@ msgstr ""
 msgid "week days"
 msgstr ""
 
-#~ msgid "FTP - Ban module"
-#~ msgstr "FTP - バン (BAN) モジュール"
+#~ msgid ""
+#~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
+#~ msgstr "プライマリ/セカンダリ DNS サーバは有効な IPv4 アドレスを指定してください。"
 
-#~ msgid "FTP - File transfer"
-#~ msgstr "FTP - ファイル転送"
+#~ msgid ""
+#~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
+#~ msgstr "プライマリ/セカンダリ DNS サーバは有効な IPv6 アドレスを指定してください。"
 
-#~ msgid "IPv4 DNS servers"
-#~ msgstr "IPv4 DNS サーバ"
+#~ msgid "AIO read size"
+#~ msgstr "AIO 読み込みサイズ"
 
-#~ msgid "IPv6 DNS servers"
-#~ msgstr "IPv6 DNS サーバ"
+#~ msgid "AIO write size"
+#~ msgstr "AIO 書き込みサイズ"
 
-#~ msgid "System time"
-#~ msgstr "システム時刻"
+#~ msgid "Asynchronous I/O (AIO)"
+#~ msgstr "非同期I/O (AIO)"
 
-#~ msgid "Time zone"
-#~ msgstr "タイムゾーン"
+#~ msgid "Create mask"
+#~ msgstr "Create mask"
 
-#~ msgid "version:"
-#~ msgstr "バージョン:"
+#~ msgid "Directory mask"
+#~ msgstr "Directory mask"
 
-#~ msgid "Decrypt password"
-#~ msgstr "復号化パスワード"
+#~ msgid "Dos charset"
+#~ msgstr "Dos 文字セット"
 
-#~ msgid "DNS domain"
-#~ msgstr "DNS ドメイン"
+#~ msgid "EA support"
+#~ msgstr "拡張属性サポート"
 
-#~ msgid "DNS forwarder"
-#~ msgstr "DNS フォワーダ"
+#~ msgid "Enable Asynchronous I/O (AIO)"
+#~ msgstr "非同期I/O (AIO)を有効にします。"
 
-#~ msgid "Admin password"
-#~ msgstr "管理者パスワード"
+#~ msgid "Enable ZFS ACL"
+#~ msgstr "ZFS ACLを有効化"
 
-#~ msgid "NetBIOS domain"
-#~ msgstr "NetBIOS ドメイン"
+#~ msgid "Enable extended attribute support"
+#~ msgstr "拡張属性サポートを有効にします"
 
-#~ msgid "User shares"
-#~ msgstr "ユーザー共有"
+#~ msgid "Enable guest access"
+#~ msgstr "ゲストアクセスの有効化"
 
-#~ msgid "Authenticate path & realm"
-#~ msgstr "認証パスとレルム"
+#~ msgid "Enable large read/write"
+#~ msgstr "大きな単位での読み書きを有効にします。"
 
-#~ msgid "List Detected Disks"
-#~ msgstr "検出されたディスクのリスト"
+#~ msgid "Enable permission inheritance"
+#~ msgstr "パーミッションの継承の有効化"
 
-#~ msgid "Date format"
-#~ msgstr "日付書式"
+#~ msgid "Enable recycle bin"
+#~ msgstr "ごみ箱機能を有効化"
+
+#~ msgid "Enable shadow copy"
+#~ msgstr "シャドウコピーを有効にします。"
+
+#~ msgid "Enable store DOS attributes"
+#~ msgstr "DOS 属性の保存を有効にします"
+
+#~ msgid "Guest account"
+#~ msgstr "ゲストアカウント"
+
+#~ msgid "Hide dot files"
+#~ msgstr "ドットファイルを隠す"
+
+#~ msgid "Inherit permissions"
+#~ msgstr "パーミッションを引き継ぐ"
+
+#~ msgid "Large read/write"
+#~ msgstr "Large read/write"
+
+#~ msgid "Map to guest"
+#~ msgstr "ゲストのマッピング"
+
+#~ msgid "NetBIOS name"
+#~ msgstr "NetBIOS 名"
+
+#~ msgid "Null passwords"
+#~ msgstr "空のパスワード"
+
+#~ msgid "Receive Buffer Size"
+#~ msgstr "受信バッファサイズ"
+
+#~ msgid "Recycle bin"
+#~ msgstr "ごみ箱"
+
+#, php-format
+#~ msgid ""
+#~ "Samba will read from file asynchronously when size of request is bigger than "
+#~ "this value. (%d by default)"
+#~ msgstr "Samba は要求サイズがこの値より大きい場合に非同期ファイル読み込みを行います。(デフォルトは %d)"
+
+#, php-format
+#~ msgid ""
+#~ "Samba will write to file asynchronously when size of request is bigger than "
+#~ "this value. (%d by default)"
+#~ msgstr "Samba は要求サイズがこの値より大きい場合に非同期ファイル書き込みを行います。(デフォルトは %d)"
+
+#~ msgid "Send Buffer Size"
+#~ msgstr "送信バッファサイズ"
+
+#~ msgid "Set browseable"
+#~ msgstr "参照可能に設定します。"
+
+#~ msgid "Set read only"
+#~ msgstr "読込み専用に設定します。"
+
+#~ msgid "Shadow Copy format"
+#~ msgstr "シャドウコピー書式"
+
+#~ msgid "Swap disabled"
+#~ msgstr "スワップ無効"
+
+#~ msgid "This will provide ZFS ACL support. (ZFS only)"
+#~ msgstr "ZFS ACLサポートを提供します。(ZFS専用)"
+
+#~ msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
+#~ msgstr "自動スナップショットにより作成されたシャドウコピーを提供します。(ZFS専用)"
+
+#~ msgid "Time server"
+#~ msgstr "タイムサーバ"
+
+#~ msgid "Unix charset"
+#~ msgstr "Unix 文字セット"
+
+#~ msgid "WINS server"
+#~ msgstr "WINS サーバ"
+
+#~ msgid "Password server"
+#~ msgstr "パスワードサーバ"
+
+#~ msgid "Trusted domains"
+#~ msgstr "信頼するドメイン"
+
+#~ msgid ""
+#~ "The workgroup in which the server will appear when queried by Windows or SMB "
+#~ "clients (maximum 15 characters)."
+#~ msgstr "サーバがクライアントからのクエリによって表示されるワークグループ名 (最大 15文字)。"
+
+#~ msgid "Interface selection"
+#~ msgstr "インターフェース選択"
+
+#~ msgid "Enable ACL inheritance"
+#~ msgstr "ACL継承を有効化"
+
+#~ msgid "Store NTFS acls in Extended Attributes"
+#~ msgstr "NTFSアクセス権を拡張属性に保存する"
+
+#~ msgid "Store alternate data streams in Extended Attributes"
+#~ msgstr "代替データストリームを拡張属性に保存する"
+
+#~ msgid "Store alternate data streams"
+#~ msgstr "代替データストリームの保存"
+
+#~ msgid "AIO module"
+#~ msgstr "AIO モジュール"
+
+#~ msgid "Store NTFS acls"
+#~ msgstr "NTFSアクセス権の保存"
+
+#~ msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
+#~ msgstr "これは、UFS など ZFS ACLサポートなしで NTFS ACL を提供します。"
+
+#~ msgid "Enable mapping DOS attributes"
+#~ msgstr "DOS属性のマッピングを有効化にします"
+
+#~ msgid "Store DOS attributes"
+#~ msgstr "DOS属性の保存"
+
+#~ msgid "Mapping DOS attributes"
+#~ msgstr "DOS属性の割当"
+
+#~ msgid "AFP compatibility"
+#~ msgstr "AFP 互換性"
+
+#~ msgid "Enhanced compatibility with Netatalk AFP server"
+#~ msgstr "NetatalkのAFPサーバとの互換性の強化"

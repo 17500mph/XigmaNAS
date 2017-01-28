@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-26 21:12+0000\n"
+"POT-Creation-Date: 2017-01-28 02:17+0000\n"
 "PO-Revision-Date: 2016-10-12 06:40+0000\n"
 "Last-Translator: Dingle28 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
+"X-Launchpad-Export-Date: 2017-01-28 01:56+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -263,9 +263,11 @@ msgid ""
 "A valid IP address or CIDR notation must be specified for the hosts allow."
 msgstr ""
 
-msgid ""
-"A valid IPv4 address must be specified for the primary/secondary DNS server."
-msgstr "일차/이차 DNS 서버에 유효한 IPv4 주소가 명세 되어야 합니다."
+msgid "A valid IPv4 address must be specified for the primary DNS server."
+msgstr ""
+
+msgid "A valid IPv4 address must be specified for the secondary DNS server."
+msgstr ""
 
 msgid "A valid IPv4 address must be specified."
 msgstr "유효한 IPv4 주소가 명세 되어야 합니다."
@@ -276,9 +278,11 @@ msgstr "유효한 IPv4 네트워크 비트 카운트가 명세 되어야 합니�
 msgid "A valid IPv6 Gateway address must be specified."
 msgstr "유효한 IPv6 게이트웨이 주소를 명세 해야 합니다."
 
-msgid ""
-"A valid IPv6 address must be specified for the primary/secondary DNS server."
-msgstr "일차/이차 DNS 서버에 유효한 IPv6 주소가 명세 되어야 합니다."
+msgid "A valid IPv6 address must be specified for the primary DNS server."
+msgstr ""
+
+msgid "A valid IPv6 address must be specified for the secondary DNS server."
+msgstr ""
 
 msgid "A valid IPv6 address must be specified."
 msgstr "유효한 IPv6 주소가 명세 되어야 합니다."
@@ -325,20 +329,20 @@ msgstr "AD 또는 PDA 명."
 msgid "AFP"
 msgstr "AFP"
 
-msgid "AFP compatibility"
-msgstr "AFP 호환성"
+msgid "AFP Compatibility"
+msgstr ""
 
 msgid "AG"
 msgstr "AG"
 
-msgid "AIO module"
-msgstr "AIO 모듈"
+msgid "AIO Module"
+msgstr ""
 
-msgid "AIO read size"
-msgstr "AIO 읽기 크기"
+msgid "AIO Read Size"
+msgstr ""
 
-msgid "AIO write size"
-msgstr "AIO 쓰기 크기"
+msgid "AIO Write Size"
+msgstr ""
 
 msgid "ALL Interfaces"
 msgstr ""
@@ -533,14 +537,14 @@ msgstr "공유 추가"
 msgid "Add target"
 msgstr "타겟 추가"
 
+msgid "Additional Group"
+msgstr ""
+
 msgid "Additional Network"
 msgstr ""
 
 msgid "Additional Storage"
 msgstr ""
-
-msgid "Additional group"
-msgstr "추가 그룹"
 
 msgid ""
 "Additional parameters to the hardware-specific part of the driver for second "
@@ -684,9 +688,6 @@ msgstr "클라이언트가 공유에 OS/2 스타일의 확장된 속성을 저�
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "클라이언트가 중단된 업로드와 다운로드를 계속 진행하는 것 허용."
 
-msgid "Allow group"
-msgstr ""
-
 msgid "Allow new files"
 msgstr "새 파일 허용"
 
@@ -725,6 +726,9 @@ msgstr ""
 
 msgid "AltRoot"
 msgstr "대체 루트"
+
+msgid "Alternate Data Streams"
+msgstr ""
 
 msgid "Alternate TCP port. Default is 22"
 msgstr "다른 TCP 포트. 기본 값은 22"
@@ -787,14 +791,14 @@ msgstr "해당 이름을 가지고 있는 호스트가 존재합니다."
 msgid "An interface with the specified description already exists."
 msgstr "명세 된 설명을 가지고 있는 인터페이스가 이미 존재합니다"
 
-msgid "Anonymous access has been deprecated starting from SMB2."
+msgid "Anonymous Bind"
 msgstr ""
 
-msgid "Anonymous bind"
-msgstr "익명 bind"
+msgid "Anonymous Users"
+msgstr ""
 
-msgid "Anonymous user bandwidth"
-msgstr "익명 사용자 대역 폭"
+msgid "Anonymous access has been deprecated starting from SMB2."
+msgstr ""
 
 msgid ""
 "Anonymous user download bandwith in KB/s. An empty field means infinity."
@@ -803,9 +807,6 @@ msgstr "KB/s 단위의 익명 사용자 다운로드 대역 폭. 빈 필드는 �
 msgid ""
 "Anonymous user upload bandwith in KB/s. An empty field means infinity."
 msgstr "KB/s 단위의 익명 사용자 업로드 대역 폭. 빈 필드는 무한을 의미합니다."
-
-msgid "Anonymous users only"
-msgstr "익명 사용자만"
 
 msgid ""
 "Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
@@ -856,8 +857,8 @@ msgstr ""
 msgid "Are you sure you want to shutdown the server?"
 msgstr ""
 
-msgid "Asynchronous I/O (AIO)"
-msgstr "비동기적 I/O(AIO)"
+msgid "Asynchronous I/O"
+msgstr ""
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
@@ -910,6 +911,17 @@ msgstr ""
 msgid "Authenticate URL"
 msgstr "URL 인증하기"
 
+msgid "Authenticated Users"
+msgstr ""
+
+msgid ""
+"Authenticated user download bandwith in KB/s. An empty field means infinity."
+msgstr ""
+
+msgid ""
+"Authenticated user upload bandwith in KB/s. An empty field means infinity."
+msgstr ""
+
 msgid "Authentication"
 msgstr "인증"
 
@@ -948,6 +960,9 @@ msgstr ""
 
 msgid "Autoselect"
 msgstr "자동 선택"
+
+msgid "Auxiliary Parameter"
+msgstr ""
 
 msgid "Auxiliary Parameters"
 msgstr ""
@@ -1077,8 +1092,8 @@ msgstr "가장 적합한 것"
 msgid "Bind DN"
 msgstr "bind DN"
 
-msgid "Bind password"
-msgstr "bind 비밀번호"
+msgid "Bind Password"
+msgstr ""
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
@@ -1189,11 +1204,11 @@ msgstr "CHAP 사용자"
 msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
 
+msgid "CIFS/SMB Information"
+msgstr ""
+
 msgid "CIFS/SMB disabled"
 msgstr "CIFS/SMB 비활성화"
-
-msgid "CIFS/SMB informations"
-msgstr "CIFS/SMB 정보"
 
 msgid "CIFS/SMB is enabled."
 msgstr ""
@@ -1392,10 +1407,10 @@ msgstr ""
 msgid "Client"
 msgstr "클라이언트"
 
-msgid "Client Max Protocol"
+msgid "Client Max. Protocol"
 msgstr ""
 
-msgid "Client Min Protocol"
+msgid "Client Min. Protocol"
 msgstr ""
 
 msgid "Clone"
@@ -1412,7 +1427,7 @@ msgstr "열"
 
 msgid ""
 "Comma-separated list of group names that are permitted to login to the FTP "
-"server. (empty is ftp group)"
+"server. (empty = ftp group)."
 msgstr ""
 
 msgid "Command"
@@ -1490,11 +1505,14 @@ msgstr ""
 msgid "Configuration"
 msgstr "설정"
 
-msgid "Configuration directory"
-msgstr "구성 디렉터리"
+msgid "Configuration Directory"
+msgstr ""
 
 msgid "Configuring"
 msgstr "설정 중"
+
+msgid "Confirm New Password"
+msgstr ""
 
 msgid "Confirmation"
 msgstr "확인"
@@ -1726,6 +1744,9 @@ msgstr ""
 msgid "Create HVM Guest"
 msgstr ""
 
+msgid "Create Mask"
+msgstr ""
+
 msgid "Create PV Guest"
 msgstr ""
 
@@ -1737,9 +1758,6 @@ msgstr "RAID 생성 및 초기화."
 
 msgid "Create encrypted volume"
 msgstr "암호화된 볼륨 생성"
-
-msgid "Create mask"
-msgstr "mask 생성"
 
 msgid "Create work directory if it doesn't exist."
 msgstr "존재하지 않을 경우 작업 디렉터리를 생성합니다."
@@ -1797,6 +1815,9 @@ msgstr ""
 
 msgid ""
 "Current password is default password. You should use your own password."
+msgstr ""
+
+msgid "Current password is incorrectly entered."
 msgstr ""
 
 msgid "Current state of drive operation based upon the Life Curve."
@@ -1963,12 +1984,8 @@ msgstr ""
 msgid "Default Device Settings"
 msgstr ""
 
-#, php-format
-msgid "Default is %s."
-msgstr "기본 값은 %s입니다."
-
-msgid "Default root"
-msgstr "기본 루트"
+msgid "Default Root"
+msgstr ""
 
 msgid "Default user name is 'admin'."
 msgstr "기본 사용자 명은 'admin'입니다."
@@ -2294,14 +2311,14 @@ msgstr "디렉터리"
 msgid "Directory %s doesn't exist!"
 msgstr ""
 
+msgid "Directory Mask"
+msgstr ""
+
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr ""
 
 msgid "Directory listing"
 msgstr "디렉터리 리스트"
-
-msgid "Directory mask"
-msgstr "디렉터리 마스크"
 
 msgid "Directory that contains removable media. (e.g /mnt/iscsi/)"
 msgstr "이동식 미디어를 포함하는 디렉터리.(예 /mnt/iscsi/)"
@@ -2399,8 +2416,8 @@ msgid ""
 "or temperature). Unit of measure is unknown."
 msgstr ""
 
-msgid "Distributed hash table"
-msgstr "분산 해쉬 테이블"
+msgid "Distributed Hash Table"
+msgstr ""
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
@@ -2636,7 +2653,7 @@ msgstr "도메인"
 msgid "Domain controller name"
 msgstr "도메인 컨트롤러 명"
 
-msgid "Domain have no 2nd level name."
+msgid "Domain is missing 2nd level name."
 msgstr ""
 
 msgid "Domain name"
@@ -2663,17 +2680,20 @@ msgstr "완료"
 msgid "Done."
 msgstr "완료."
 
-msgid "Dos charset"
-msgstr "도스 문자 셋"
+msgid "Dos Charset"
+msgstr ""
 
 msgid "Download"
 msgstr "다운로드"
 
+msgid "Download Bandwidth"
+msgstr ""
+
 msgid "Download Configuration"
 msgstr ""
 
-msgid "Download bandwidth"
-msgstr "다운로드 대역 폭"
+msgid "Download Directory"
+msgstr ""
 
 msgid "Download directory"
 msgstr "다운로드 디렉터리"
@@ -2690,10 +2710,10 @@ msgstr ""
 msgid "Driver"
 msgstr "드라이버"
 
-msgid "Driver list"
-msgstr "드라이버 리스트"
+msgid "Driver List"
+msgstr ""
 
-msgid "Driver parameters"
+msgid "Driver Parameter"
 msgstr ""
 
 msgid "Driver used"
@@ -2727,8 +2747,8 @@ msgstr "Dynamic DNS"
 msgid "Dynamic IP (DHCP) can not be used for HAST resources."
 msgstr ""
 
-msgid "EA support"
-msgstr "EA 지원"
+msgid "EA Support"
+msgstr ""
 
 msgid "EFI/GPT partition can be use with UFS only."
 msgstr "EFI/GPT 파티션은 UFS에서만 이용할 수 있습니다."
@@ -2860,20 +2880,20 @@ msgstr ""
 msgid "Enable"
 msgstr "활성화"
 
-msgid "Enable 'Asynchronous I/O (AIO)' switch."
+msgid "Enable 'Asynchronous I/O (AIO).' switch."
 msgstr ""
 
 msgid "Enable 'Large read/write' switch."
 msgstr ""
 
-msgid "Enable ACL inheritance"
+msgid "Enable ACL inheritance."
 msgstr ""
 
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr ""
 
-msgid "Enable Asynchronous I/O (AIO)"
-msgstr "비동기적 I/O 활성화(AIO)"
+msgid "Enable Asynchronous I/O. (AIO)."
+msgstr ""
 
 msgid "Enable Challenge-Response Authentication"
 msgstr ""
@@ -2921,7 +2941,7 @@ msgstr ""
 msgid "Enable Time Machine support"
 msgstr ""
 
-msgid "Enable ZFS ACL"
+msgid "Enable ZFS ACL."
 msgstr ""
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
@@ -2990,8 +3010,8 @@ msgstr "도메인 와일드 카드 활성화."
 msgid "Enable encryption."
 msgstr ""
 
-msgid "Enable extended attribute support"
-msgstr "확장 속성 지원 활성화"
+msgid "Enable extended attribute support."
+msgstr ""
 
 msgid "Enable extended attributes for this file system."
 msgstr "이 파일 시스템에 확장 속성 활성화."
@@ -3000,9 +3020,6 @@ msgid ""
 "Enable foreground/background file system consistency check during boot "
 "process."
 msgstr "부트 과정에서 foreground/background 파일 시스템 일관성 체크 활성화."
-
-msgid "Enable guest access"
-msgstr ""
 
 msgid "Enable guest access."
 msgstr "guest 접근 활성화."
@@ -3013,13 +3030,13 @@ msgstr ""
 msgid "Enable keyboard-interactive authentication."
 msgstr "키보드 대화형 인증 활성화."
 
-msgid "Enable large read/write"
-msgstr "대용량 읽기/쓰기 활성화"
+msgid "Enable large read/write."
+msgstr ""
 
 msgid "Enable local user authentication."
 msgstr "로컬 사용자 인증 활성화."
 
-msgid "Enable mapping DOS attributes"
+msgid "Enable mapping DOS attributes."
 msgstr ""
 
 msgid "Enable module listing."
@@ -3034,8 +3051,8 @@ msgstr ""
 msgid "Enable peer exchange (PEX)."
 msgstr "피어 간 교환(PEX) 활성화."
 
-msgid "Enable permission inheritance"
-msgstr "권한 상속 활성화"
+msgid "Enable permission inheritance."
+msgstr ""
 
 msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr "NAT-PMP나 UPnp를 경유한 포트 포워딩 활성화."
@@ -3043,8 +3060,8 @@ msgstr "NAT-PMP나 UPnp를 경유한 포트 포워딩 활성화."
 msgid "Enable proxy authentication."
 msgstr "프록시 인증 활성화."
 
-msgid "Enable recycle bin"
-msgstr "휴지통 활성화"
+msgid "Enable recycle bin."
+msgstr ""
 
 msgid "Enable remote monitoring of the local connected UPS."
 msgstr "로컬 연결된 UPS의 원격 모니터링 활성화."
@@ -3065,11 +3082,11 @@ msgstr ""
 msgid "Enable serial console."
 msgstr ""
 
-msgid "Enable shadow copy"
+msgid "Enable shadow copy."
 msgstr ""
 
-msgid "Enable store DOS attributes"
-msgstr "도스 속성 저장 활성화"
+msgid "Enable store DOS attributes."
+msgstr ""
 
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "ident 프로토콜(RFC1413) 활성화."
@@ -3138,7 +3155,7 @@ msgstr "이용할 암호화 알고리즘."
 msgid "English"
 msgstr "영어"
 
-msgid "Enhanced compatibility with Netatalk AFP server"
+msgid "Enhanced compatibility with Netatalk AFP server."
 msgstr ""
 
 msgid "Enter Command"
@@ -3150,6 +3167,12 @@ msgstr ""
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
 "default (80 for HTTP, 443 for HTTPS)."
+msgstr ""
+
+#, php-format
+msgid ""
+"Enter a custom port number if you want to override the default port. Default "
+"port is %s."
 msgstr ""
 
 msgid "Enter a description"
@@ -3312,6 +3335,9 @@ msgid ""
 "more than once."
 msgstr "범위는 이용되기 전에 정의되어야 하며 한번 이상 이용될 수 없습니다."
 
+msgid "Extra Options"
+msgstr ""
+
 msgid "Extra options"
 msgstr "추가 옵션"
 
@@ -3435,6 +3461,9 @@ msgstr "파일 편집기"
 
 msgid "File Manager"
 msgstr "파일 관리자"
+
+msgid "File Mask"
+msgstr ""
 
 msgid "File Path"
 msgstr ""
@@ -3666,16 +3695,22 @@ msgstr ""
 msgid "Greek"
 msgstr "그리스어"
 
-msgid "Greeting banner displayed by FTP when a connection first comes in."
-msgstr "처음 연결이 될 때 표시되는 환영 문구."
+msgid "Greeting banner displayed to client when firts connection comes in."
+msgstr ""
 
 msgid "Group"
 msgstr "그룹"
+
+msgid "Group Allow"
+msgstr ""
 
 msgid "Group ID"
 msgstr "그룹 ID"
 
 msgid "Group Settings"
+msgstr ""
+
+msgid "Group Suffix"
 msgstr ""
 
 msgid "Group compilations"
@@ -3693,9 +3728,6 @@ msgstr "그룹 명."
 msgid "Group numeric id."
 msgstr "그룹 숫자 id."
 
-msgid "Group suffix"
-msgstr "그룹 접미사"
-
 msgid "Groupmask - Mask ACL with mode"
 msgstr ""
 
@@ -3705,8 +3737,8 @@ msgstr "그룹"
 msgid "Guest"
 msgstr "게스트"
 
-msgid "Guest account"
-msgstr "게스트 계정"
+msgid "Guest Account"
+msgstr ""
 
 msgid "HAST"
 msgstr ""
@@ -3788,8 +3820,8 @@ msgstr ""
 msgid "Hide Default Groups"
 msgstr ""
 
-msgid "Hide dot files"
-msgstr "숨김 파일 감추기"
+msgid "Hide Dot Files"
+msgstr ""
 
 msgid "High voltage boosting transfer point"
 msgstr ""
@@ -3818,9 +3850,6 @@ msgstr "호스트"
 msgid "Host access control"
 msgstr "호스트 접근 제어"
 
-msgid "Host name"
-msgstr "호스트 명"
-
 msgid "Host resources"
 msgstr "호스트 자원"
 
@@ -3834,6 +3863,9 @@ msgid "Hosts"
 msgstr "호스트"
 
 msgid "Hosts Allow"
+msgstr ""
+
+msgid "Hosts Deny"
 msgstr ""
 
 msgid "Hosts Setup"
@@ -3950,8 +3982,8 @@ msgstr "마운트 될 ISO 파일."
 msgid "ISP DNS Servers"
 msgstr ""
 
-msgid "Ident protocol"
-msgstr "Ident 프로토콜"
+msgid "IdentLookups"
+msgstr ""
 
 msgid "Identifier"
 msgstr "식별자"
@@ -4018,11 +4050,6 @@ msgid ""
 "If this property is enabled, the snapshots are displayed into .zfs directory."
 msgstr ""
 
-msgid ""
-"If you want to change the password for accessing the WebGUI, enter it here "
-"twice."
-msgstr "WebGUI를 접근하기 위한 비밀번호를 변경하려면 여기에 두 번 입력하십시오."
-
 msgid "Import"
 msgstr "가져오기"
 
@@ -4068,8 +4095,8 @@ msgstr ""
 msgid "Incoming Line/Power Information"
 msgstr ""
 
-msgid "Incomplete directory"
-msgstr "불완전 파일 디렉터리"
+msgid "Incomplete Directory"
+msgstr ""
 
 msgid ""
 "Indicates the approximate SSD life left, in terms of program/erase cycles or "
@@ -4100,8 +4127,8 @@ msgstr ""
 msgid "Inherit ACL"
 msgstr ""
 
-msgid "Inherit permissions"
-msgstr "권한 상속"
+msgid "Inherit Permissions"
+msgstr ""
 
 msgid "Inhibit some of the syslog diagnostics for bad lines in /etc/exports."
 msgstr "/etc/exports의 잘못된 줄에 대한 몇 가지의 syslog 진단을 금지합니다."
@@ -4219,9 +4246,6 @@ msgstr "인터페이스 관리"
 msgid "Interface Selection"
 msgstr ""
 
-msgid "Interface selection"
-msgstr ""
-
 msgid "Interfaces"
 msgstr "인터페이스"
 
@@ -4277,9 +4301,9 @@ msgid ""
 msgstr ""
 
 msgid ""
-"It is impossible to enable 'Anonymous users only' and 'Local users only' "
-"authentication simultaneously."
-msgstr "'로컬 사용자만'과 '익명 사용자만'의 인증을 동시에 활성화 할 수 없습니다."
+"It is impossible to enable 'Anonymous Users' and 'Authenticated Users' both "
+"at the same time."
+msgstr ""
 
 msgid ""
 "It is not recommanded to import non healthy pools nor virtual devices that "
@@ -4387,6 +4411,9 @@ msgstr "LAN 관리"
 msgid "LAN Only"
 msgstr ""
 
+msgid "LAN interface is not configured."
+msgstr ""
+
 msgid "LAN net"
 msgstr "LAN 네트"
 
@@ -4417,8 +4444,8 @@ msgstr "언어"
 msgid "Language to use on front panel"
 msgstr ""
 
-msgid "Large read/write"
-msgstr "대용량 읽기/쓰기"
+msgid "Large Read/Write"
+msgstr ""
 
 msgid "Last Configuration Change"
 msgstr ""
@@ -4556,18 +4583,6 @@ msgstr "로컬 공유(대상)"
 msgid "Local shares to be synchronized"
 msgstr "동기화 될 로컬 공유들"
 
-msgid "Local user bandwidth"
-msgstr "로컬 사용자 대역폭"
-
-msgid "Local user download bandwith in KB/s. An empty field means infinity."
-msgstr "로컬 사용자 다운로드 대역 폭(KB/s 단위). 빈 필드는 무한을 의미합니다."
-
-msgid "Local user upload bandwith in KB/s. An empty field means infinity."
-msgstr "로컬 사용자 업로드 대역 폭(KB/s 단위). 빈 필드는 무한을 의미합니다."
-
-msgid "Local users only"
-msgstr "로컬 사용자만"
-
 msgid "Location"
 msgstr "위치"
 
@@ -4700,8 +4715,8 @@ msgstr "MS 도메인"
 msgid "MTU"
 msgstr "MTU"
 
-msgid "Machine suffix"
-msgstr "머신 접미사"
+msgid "Machine Suffix"
+msgstr ""
 
 msgid "Maintenance"
 msgstr ""
@@ -4730,13 +4745,13 @@ msgstr ""
 msgid "Map all users to root"
 msgstr "모든 사용자를 root로 mapping"
 
-msgid "Map to guest"
+msgid "Map to Guest"
 msgstr ""
 
 msgid "Map to user"
 msgstr "사용자로 mapping"
 
-msgid "Mapping DOS attributes"
+msgid "Mapping DOS Attributes"
 msgstr ""
 
 msgid "Mar"
@@ -4750,10 +4765,22 @@ msgid ""
 "not specified."
 msgstr ""
 
-msgid "Masquerade address"
-msgstr "매스커레이드 주소"
+msgid "Masquerade Address"
+msgstr ""
 
 msgid "Max Entries"
+msgstr ""
+
+msgid "Max. Clients"
+msgstr ""
+
+msgid "Max. Connections Per Host"
+msgstr ""
+
+msgid "Max. Login Attempts"
+msgstr ""
+
+msgid "Max. Passive Port"
 msgstr ""
 
 msgid "Max. TTL"
@@ -4762,17 +4789,8 @@ msgstr "최대 TTL"
 msgid "Max. block size"
 msgstr "최대 블록 크기"
 
-msgid "Max. conn. per IP"
-msgstr "IP 당 최대 연결"
-
 msgid "Max. connections"
 msgstr "최대 연결"
-
-msgid "Max. login attempts"
-msgstr "최대 로그인 시도 값"
-
-msgid "Max. passive port"
-msgstr "최대  passive 포트"
 
 msgid "Max. pre-send R2T"
 msgstr "최대 pre-send R2T"
@@ -4814,12 +4832,13 @@ msgstr ""
 msgid "Maximum number of allowed password attempts before disconnection."
 msgstr "연결을 해제할 때까지 허용된 비밀번호 재 시도의 최대 수."
 
+msgid ""
+"Maximum number of connections allowed per IP address. (0 = unlimited)."
+msgstr ""
+
 #, php-format
 msgid "Maximum number of connections in each session (%d by default)."
 msgstr "각 세션에서의 최대 연결 수(기본 값은 %d)."
-
-msgid "Maximum number of connections per IP address (0 = unlimited)."
-msgstr "IP 주소 당의 최대 연결 수(0 - 무한)."
 
 #, php-format
 msgid ""
@@ -4831,11 +4850,11 @@ msgstr "각 연결에서 미리 전송되는 R2T의 최대 수(기본 값은 %d)
 msgid "Maximum number of sessions holding at same time (%d by default)."
 msgstr "동시에 유지되는 최대 세션 수(기본 값은 %d)."
 
-msgid "Maximum number of simultaneous clients."
-msgstr "동시 클라이언트의 최대 수."
-
 msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
 msgstr "동시 연결의 최대 수. 기본 값은 0(무한)."
+
+msgid "Maximum number of users that can connect to the server."
+msgstr ""
 
 msgid "Maximum relative humidity seen (percent)"
 msgstr ""
@@ -4888,8 +4907,8 @@ msgstr "MiB"
 msgid "MibII"
 msgstr "MibII"
 
-msgid "Min. passive port"
-msgstr "최소 passive 포트"
+msgid "Min. Passive Port"
+msgstr ""
 
 msgid "MiniDLNA"
 msgstr ""
@@ -5075,6 +5094,9 @@ msgstr ""
 msgid "NT1 (CIFS)"
 msgstr ""
 
+msgid "NTFS ACLs"
+msgstr ""
+
 msgid "NTP Time Server"
 msgstr ""
 
@@ -5117,9 +5139,6 @@ msgstr ""
 
 msgid "NetBIOS Name"
 msgstr ""
-
-msgid "NetBIOS name"
-msgstr "NetBIOS 명"
 
 msgid "Netgraph"
 msgstr "네트 그래프"
@@ -5169,6 +5188,11 @@ msgstr ""
 msgid "New Password"
 msgstr ""
 
+msgid ""
+"New Password does not match the confirmation password. Please ensure both "
+"passwords are the same."
+msgstr ""
+
 msgid "New password"
 msgstr ""
 
@@ -5177,6 +5201,9 @@ msgstr ""
 
 msgid "No"
 msgstr "아니오"
+
+msgid "No DNS server have been configured."
+msgstr ""
 
 msgid "No DNS setting found."
 msgstr ""
@@ -5379,17 +5406,14 @@ msgstr ""
 msgid "Now"
 msgstr "지금"
 
-msgid "Null passwords"
-msgstr "비밀번호 없는 계정"
+msgid "Null Passwords"
+msgstr ""
 
 msgid "Number of bad battery packs"
 msgstr ""
 
 msgid "Number of battery packs"
 msgstr ""
-
-msgid "Number of clients"
-msgstr "클라이언트 수"
 
 msgid "Number of hours elapsed in the power-on state."
 msgstr ""
@@ -5437,9 +5461,6 @@ msgstr "오프"
 
 msgid "Old passphrase"
 msgstr "기존 암호"
-
-msgid "Old password"
-msgstr "기존 비밀번호"
 
 msgid "On"
 msgstr "온"
@@ -5595,8 +5616,8 @@ msgstr "파티션 타입"
 msgid "Partitions"
 msgstr "파티션"
 
-msgid "Passive ports"
-msgstr "passive 포트"
+msgid "Passive Port"
+msgstr ""
 
 msgid ""
 "Passive ports restricts the range of ports from which the server will select "
@@ -5633,14 +5654,25 @@ msgstr "비밀번호"
 msgid "Password (confirmed)"
 msgstr "비밀번호(확인됨)"
 
+msgid "Password Encryption"
+msgstr ""
+
+msgid "Password Server"
+msgstr ""
+
+msgid "Password Suffix"
+msgstr ""
+
 msgid "Password authentication"
 msgstr "비밀번호 인증"
 
+msgid ""
+"Password does not match the confirmation password. Please ensure both "
+"passwords are the same."
+msgstr ""
+
 msgid "Password don't match."
 msgstr "비밀번호가 맞지 않습니다."
-
-msgid "Password encryption"
-msgstr "비밀번호 암호화"
 
 msgid "Password for the administrative pages."
 msgstr "관리자 페이지를 위한 비밀번호."
@@ -5648,15 +5680,9 @@ msgstr "관리자 페이지를 위한 비밀번호."
 msgid "Password of domain administrator account."
 msgstr "도메인 관리 계정의 비밀번호."
 
-msgid "Password server"
-msgstr ""
-
 msgid ""
 "Password server name or IP address (e.g. Active Directory domain controller)."
 msgstr ""
-
-msgid "Password suffix"
-msgstr "비밀번호 접미사"
 
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
 msgstr ""
@@ -5680,14 +5706,17 @@ msgstr "공유될 경로."
 msgid "Path to the local device. (e.g. %s)"
 msgstr ""
 
+msgid "Peer Exchange"
+msgstr ""
+
+msgid "Peer Port"
+msgstr ""
+
 msgid "Peer Secret"
 msgstr "피어 비밀"
 
 msgid "Peer User"
 msgstr "피어 사용자"
-
-msgid "Peer exchange"
-msgstr "피어 교환"
 
 msgid "Peer port"
 msgstr "피어 포트"
@@ -5697,6 +5726,9 @@ msgstr ""
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
+msgstr ""
+
+msgid "Permit Root Login"
 msgstr ""
 
 msgid "Permit root login"
@@ -5840,8 +5872,8 @@ msgstr "포트 "
 msgid "Port %ld is already used by another service."
 msgstr "포트 %ld은(는) 다른 서비스에 의해 이미 이용되고 있습니다."
 
-msgid "Port forwarding"
-msgstr "포트 포워딩"
+msgid "Port Forwarding"
+msgstr ""
 
 #, php-format
 msgid "Port number must be in the range between %d and %d."
@@ -6124,6 +6156,9 @@ msgstr ""
 msgid "Read"
 msgstr "읽기"
 
+msgid "Read Only"
+msgstr ""
+
 msgid "Read Only (ro)"
 msgstr "읽기 전용(ro)"
 
@@ -6175,8 +6210,8 @@ msgstr ""
 msgid "Reboot"
 msgstr "리붓"
 
-msgid "Receive Buffer Size"
-msgstr "수신 버퍼 크기"
+msgid "Receive Buffer"
+msgstr ""
 
 msgid "Record is locked"
 msgstr ""
@@ -6187,8 +6222,8 @@ msgstr "디렉터리로 재귀 순환."
 msgid "Recursive"
 msgstr "재귀적"
 
-msgid "Recycle bin"
-msgstr "휴지통"
+msgid "Recycle Bin"
+msgstr ""
 
 msgid "Refresh"
 msgstr "갱신"
@@ -6383,11 +6418,11 @@ msgstr "루마니아어"
 msgid "Root"
 msgstr "루트"
 
-msgid "Root bind DN"
-msgstr "루트 bind DN"
+msgid "Root Bind DN"
+msgstr ""
 
-msgid "Root bind password"
-msgstr "루트 바인트 암호"
+msgid "Root Bind Password"
+msgstr ""
 
 msgid "Rotation Rate"
 msgstr ""
@@ -6401,8 +6436,8 @@ msgstr "라운드 로빈"
 msgid "Routes"
 msgstr "라우트"
 
-msgid "Routing tables"
-msgstr "라우팅 테이블"
+msgid "Routing Tables"
+msgstr ""
 
 msgid "Rows"
 msgstr "행"
@@ -6511,14 +6546,14 @@ msgstr ""
 #, php-format
 msgid ""
 "Samba will read from file asynchronously when size of request is bigger than "
-"this value. (%d by default)"
-msgstr "요청된 크기가 이 값보다 클 때 삼바는 파일을 비동기적으로 읽을 것입니다. (기본 값은 %d)"
+"this value. (%d by default)."
+msgstr ""
 
 #, php-format
 msgid ""
 "Samba will write to file asynchronously when size of request is bigger than "
-"this value. (%d by default)"
-msgstr "요청된 크기가 이 값보다 클 때 삼바는 파일을 비동기적으로 기록할 것입니다. (기본 값은 %d)"
+"this value. (%d by default)."
+msgstr ""
 
 msgid "Sat"
 msgstr ""
@@ -6734,8 +6769,8 @@ msgstr ""
 msgid "Self-tests Management"
 msgstr ""
 
-msgid "Send Buffer Size"
-msgstr "버퍼 크기 전송"
+msgid "Send Buffer"
+msgstr ""
 
 msgid "Send Command!"
 msgstr "명령 전송!"
@@ -6782,10 +6817,10 @@ msgstr "일련 번호"
 msgid "Server"
 msgstr "서버"
 
-msgid "Server Max Protocol"
+msgid "Server Max. Protocol"
 msgstr ""
 
-msgid "Server Min Protocol"
+msgid "Server Min. Protocol"
 msgstr ""
 
 msgid "Server Name"
@@ -6815,11 +6850,11 @@ msgstr "서비스"
 msgid "Set additional group memberships for this account."
 msgstr "이 계정에 추가적인 그룹 멤버십을 설정합니다."
 
-msgid "Set browseable"
-msgstr "검색 가능 설정"
+msgid "Set browseable."
+msgstr ""
 
-msgid "Set read only"
-msgstr "읽기 전용으로 설정"
+msgid "Set read only."
+msgstr ""
 
 msgid "Set share password."
 msgstr "공유 암호 설정."
@@ -6873,7 +6908,7 @@ msgstr "설정"
 msgid "Shadow Copy"
 msgstr ""
 
-msgid "Shadow Copy format"
+msgid "Shadow Copy Format"
 msgstr ""
 
 msgid "Share"
@@ -7153,19 +7188,13 @@ msgstr "정지됨"
 msgid "Storage"
 msgstr "저장 공간"
 
-msgid "Store DOS attributes"
-msgstr "도스 속성 저장"
-
-msgid "Store NTFS acls"
+msgid "Store DOS Attributes"
 msgstr ""
 
-msgid "Store NTFS acls in Extended Attributes"
+msgid "Store NTFS ACLs in Extended Attributes."
 msgstr ""
 
-msgid "Store alternate data streams"
-msgstr ""
-
-msgid "Store alternate data streams in Extended Attributes"
+msgid "Store alternate data streams in Extended Attributes."
 msgstr ""
 
 msgid "Strict DLNA"
@@ -7223,8 +7252,8 @@ msgstr ""
 msgid "Swap Usage"
 msgstr ""
 
-msgid "Swap disabled"
-msgstr "스왑 비활성화됨"
+msgid "Swap is disabled."
+msgstr ""
 
 msgid "Swedish"
 msgstr "스웨덴어"
@@ -7317,6 +7346,12 @@ msgstr "시스템 메시지 버퍼"
 msgid "System tuning"
 msgstr "시스템 미세 조정"
 
+msgid "TCP Port"
+msgstr ""
+
+msgid "TCP Wrapper"
+msgstr ""
+
 msgid "TCP forwarding"
 msgstr "TCP 포워딩"
 
@@ -7328,9 +7363,6 @@ msgstr ""
 
 msgid "TCP port to bind the server to."
 msgstr "서버가 bind 할 TCP 포트."
-
-msgid "TCP wrapper"
-msgstr ""
 
 msgid "TFTP"
 msgstr "TFTP"
@@ -7344,10 +7376,10 @@ msgstr ""
 msgid "TLS Mode"
 msgstr ""
 
-msgid "TLS Server Certificate Check"
+msgid "TLS Only"
 msgstr ""
 
-msgid "TLS only"
+msgid "TLS Server Certificate Check"
 msgstr ""
 
 msgid "Tag"
@@ -7490,8 +7522,8 @@ msgid ""
 "manufacturing."
 msgstr ""
 
-msgid "The TCP port must be a valid port number."
-msgstr "TCP 포트는 유효한 포트 번호여야 합니다."
+msgid "The TCP Port must be a valid port number."
+msgstr ""
 
 msgid "The UPS identifier and IP address"
 msgstr ""
@@ -7746,9 +7778,6 @@ msgstr "bind 할 때 이용할 자격 증명서."
 msgid "The cron job has been executed successfully."
 msgstr "cron 작업이 성공적으로 실행되었습니다."
 
-msgid "The current password is incorrectly entered."
-msgstr ""
-
 #, php-format
 msgid ""
 "The custom format of the snapshot for shadow copy service can be specified. "
@@ -7892,15 +7921,19 @@ msgstr "이 로그인 명은 예약된 로그인 명입니다."
 msgid "The login name is limited to 16 characters."
 msgstr "로그인 명은 16자로 제한되어 있습니다."
 
-msgid "The max. connection per IP must be either 0 (unlimited) or greater."
-msgstr "IP 당의 치대 연결은 0(무제한) 또는 0 이상이어야 합니다."
+msgid ""
+"The max. connections per IP address must be either 0 (unlimited) or greater."
+msgstr ""
+
+msgid "The max. number of clients must be in the range from 1 to 50."
+msgstr ""
 
 msgid ""
 "The maximum download bandwith in KiB/s. An empty field means infinity."
 msgstr "KB/s 단위의 최대 다운로드 대역 폭. 빈 필드는 무한을 의미합니다."
 
-msgid "The maximum idle time be a number."
-msgstr "최대 유휴 시간은 숫자여야 합니다."
+msgid "The maximum idle time must be a number."
+msgstr ""
 
 msgid ""
 "The maximum port to allocate for PASV style data connections (0 = use any "
@@ -7968,16 +8001,6 @@ msgstr ""
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "네트워크 '%s'은(는) 무효합니다."
-
-msgid ""
-"The new password does not match. Please ensure the passwords match exactly."
-msgstr ""
-
-msgid "The new password is also the default root password of the system!"
-msgstr ""
-
-msgid "The number of clients must be between 1 and 50."
-msgstr "클라이언트의 수는 1에서 50까지의 사이여야 합니다."
 
 msgid ""
 "The number of errors caused by incorrect checksum during the error "
@@ -8157,7 +8180,7 @@ msgstr "볼륨이 먼저 분리되어야 삭제될 수 있습니다."
 
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
-"clients (maximum 15 characters)."
+"clients. (maximum 15 characters)."
 msgstr ""
 
 msgid "The working directory does not exist."
@@ -8541,6 +8564,12 @@ msgid ""
 "added to the LDAP directory, e.g. %s"
 msgstr "이 인자는 사용자들이 LDAP 디렉터리에 추가될 때 사용자들을 위해 이용되는 접미사를 명세 합니다. 예. %s"
 
+msgid "This password is required to access the admin web interface."
+msgstr ""
+
+msgid "This password is the root password of the system."
+msgstr ""
+
 msgid "This pool name already exists."
 msgstr "이 풀 이름은 이미 존재합니다."
 
@@ -8597,13 +8626,13 @@ msgid ""
 "add an existing encrypted disk."
 msgstr "이것은 디스크의 모든 데이터를 삭제할 것입니다. 기존의 암호화된 디스크를 추가하려면 이 옵션을 이용하지 마십시오."
 
-msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
+msgid "This will provide NTFS ACLs without ZFS ACL support such as UFS."
 msgstr ""
 
-msgid "This will provide ZFS ACL support. (ZFS only)"
+msgid "This will provide ZFS ACL support. (ZFS only)."
 msgstr ""
 
-msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
+msgid "This will provide shadow copy created by auto snapshot. (ZFS only)."
 msgstr ""
 
 msgid ""
@@ -8625,7 +8654,13 @@ msgstr ""
 msgid "Time"
 msgstr "시간"
 
+msgid "Time Interval"
+msgstr ""
+
 msgid "Time Machine"
+msgstr ""
+
+msgid "Time Server"
 msgstr ""
 
 msgid "Time Synchronization"
@@ -8646,9 +8681,6 @@ msgstr ""
 msgid "Time interval"
 msgstr "시간 간격"
 
-msgid "Time server"
-msgstr "타임 서버"
-
 msgid "Time spent during the positioning of the drive heads."
 msgstr ""
 
@@ -8664,6 +8696,9 @@ msgstr "타임아웃"
 
 msgid "Times"
 msgstr "시간"
+
+msgid "Title Speed"
+msgstr ""
 
 msgid "TitleSpeed"
 msgstr ""
@@ -8817,7 +8852,7 @@ msgstr "트랩"
 msgid "Trivial File Transfer Protocol"
 msgstr "Trivial 파일 전송 프로토콜"
 
-msgid "Trusted domains"
+msgid "Trusted Domains"
 msgstr ""
 
 msgid "Try to force import."
@@ -8992,11 +9027,11 @@ msgstr "Unison"
 msgid "Unison File Synchronisation"
 msgstr "Unison 파일 동기화"
 
+msgid "Unix Charset"
+msgstr ""
+
 msgid "Unix Command"
 msgstr "유닉스 명령"
-
-msgid "Unix charset"
-msgstr "유닉스 문자 셋"
 
 msgid "Unknown"
 msgstr "알 수 없음"
@@ -9034,8 +9069,8 @@ msgstr ""
 msgid "Upgrade ZFS and add all supported feature flags on a pool"
 msgstr ""
 
-msgid "Upload bandwidth"
-msgstr "업로드 대역 폭"
+msgid "Upload Bandwidth"
+msgstr ""
 
 msgid "Upload directory"
 msgstr ""
@@ -9136,10 +9171,19 @@ msgstr "사용자"
 msgid "User ID"
 msgstr "사용자 ID"
 
+msgid "User Mask"
+msgstr ""
+
+msgid "User Portal"
+msgstr ""
+
 msgid "User Settings"
 msgstr ""
 
 msgid "User Shares"
+msgstr ""
+
+msgid "User Suffix"
 msgstr ""
 
 msgid "User account is locked"
@@ -9159,12 +9203,6 @@ msgstr "사용자 숫자 id."
 
 msgid "User password."
 msgstr "사용자 암호."
-
-msgid "User portal"
-msgstr "사용자 포털"
-
-msgid "User suffix"
-msgstr "사용자 접미사"
 
 msgid "Username"
 msgstr "사용자 명"
@@ -9336,8 +9374,8 @@ msgstr ""
 msgid "WEP"
 msgstr "WEP"
 
-msgid "WINS server"
-msgstr "WINS 서버"
+msgid "WINS Server"
+msgstr ""
 
 msgid "WINS server IP address (e.g. from MS Active Directory server)."
 msgstr "WINS 서버 IP 주소(예컨대 MS 액티브 디렉터리 서버에서)."
@@ -9363,6 +9401,9 @@ msgstr "WPA-PSK WPA-EAP"
 msgid "WPA2"
 msgstr ""
 
+msgid "Wait Time"
+msgstr ""
+
 msgid "Wait time"
 msgstr ""
 
@@ -9380,11 +9421,14 @@ msgid ""
 "and can not be recovered."
 msgstr "경고: 암호화된 볼륨을 삭제하려고 합니다. 모든 데이터를 잃게 되고 복구할 수 없게 됩니다."
 
-msgid "Watch directory"
-msgstr "감시 디렉터리"
+msgid "Watch Directory"
+msgstr ""
 
 msgid "WebGUI"
 msgstr "WebGUI"
+
+msgid "WebGUI and Root Password"
+msgstr ""
 
 msgid "Webserver"
 msgstr "웹서버"
@@ -9452,6 +9496,9 @@ msgstr "무선 설정"
 
 msgid "Workgroup"
 msgstr "작업 그룹"
+
+msgid "Working Directory"
+msgstr ""
 
 msgid "Working directory"
 msgstr "작업 디렉터리"
@@ -9563,11 +9610,18 @@ msgstr ""
 msgid "You must select at least one authentication method."
 msgstr "최소 한 개 이상의 인증 방법을 선택해야 합니다."
 
+msgid ""
+"You need to update your browser or use Internet Explorer 10 or higher."
+msgstr ""
+
 msgid "You should use HTTPS as WebGUI protocol for sending passphrase."
 msgstr "암호를 전송하려면 WebGUI 프로토콜로서 HTTPS를 이용해야 합니다."
 
 msgid "Your ZFS system is not healthy."
 msgstr "ZFS 시스템이 건강하지 않습니다."
+
+msgid "Your browser does not support this svg object type."
+msgstr ""
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -9780,20 +9834,115 @@ msgstr ""
 msgid "week days"
 msgstr ""
 
-#~ msgid "FTP - Ban module"
-#~ msgstr "FTP - 추방 모듈"
+#~ msgid ""
+#~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
+#~ msgstr "일차/이차 DNS 서버에 유효한 IPv4 주소가 명세 되어야 합니다."
 
-#~ msgid "FTP - File transfer"
-#~ msgstr "FTP - 파일 전송"
+#~ msgid ""
+#~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
+#~ msgstr "일차/이차 DNS 서버에 유효한 IPv6 주소가 명세 되어야 합니다."
 
-#~ msgid "IPv4 DNS servers"
-#~ msgstr "IPv4 DNS 서버"
+#~ msgid "AIO read size"
+#~ msgstr "AIO 읽기 크기"
 
-#~ msgid "IPv6 DNS servers"
-#~ msgstr "IPv6 DNS 서버"
+#~ msgid "AIO write size"
+#~ msgstr "AIO 쓰기 크기"
 
-#~ msgid "System time"
-#~ msgstr "시스템 시간"
+#~ msgid "Asynchronous I/O (AIO)"
+#~ msgstr "비동기적 I/O(AIO)"
 
-#~ msgid "Time zone"
-#~ msgstr "타임 존"
+#~ msgid "Create mask"
+#~ msgstr "mask 생성"
+
+#~ msgid "Directory mask"
+#~ msgstr "디렉터리 마스크"
+
+#~ msgid "Dos charset"
+#~ msgstr "도스 문자 셋"
+
+#~ msgid "EA support"
+#~ msgstr "EA 지원"
+
+#~ msgid "Enable Asynchronous I/O (AIO)"
+#~ msgstr "비동기적 I/O 활성화(AIO)"
+
+#~ msgid "Enable extended attribute support"
+#~ msgstr "확장 속성 지원 활성화"
+
+#~ msgid "Enable large read/write"
+#~ msgstr "대용량 읽기/쓰기 활성화"
+
+#~ msgid "Enable permission inheritance"
+#~ msgstr "권한 상속 활성화"
+
+#~ msgid "Enable recycle bin"
+#~ msgstr "휴지통 활성화"
+
+#~ msgid "Enable store DOS attributes"
+#~ msgstr "도스 속성 저장 활성화"
+
+#~ msgid "Guest account"
+#~ msgstr "게스트 계정"
+
+#~ msgid "Hide dot files"
+#~ msgstr "숨김 파일 감추기"
+
+#~ msgid "Inherit permissions"
+#~ msgstr "권한 상속"
+
+#~ msgid "Large read/write"
+#~ msgstr "대용량 읽기/쓰기"
+
+#~ msgid "NetBIOS name"
+#~ msgstr "NetBIOS 명"
+
+#~ msgid "Null passwords"
+#~ msgstr "비밀번호 없는 계정"
+
+#~ msgid "Receive Buffer Size"
+#~ msgstr "수신 버퍼 크기"
+
+#~ msgid "Recycle bin"
+#~ msgstr "휴지통"
+
+#, php-format
+#~ msgid ""
+#~ "Samba will read from file asynchronously when size of request is bigger than "
+#~ "this value. (%d by default)"
+#~ msgstr "요청된 크기가 이 값보다 클 때 삼바는 파일을 비동기적으로 읽을 것입니다. (기본 값은 %d)"
+
+#, php-format
+#~ msgid ""
+#~ "Samba will write to file asynchronously when size of request is bigger than "
+#~ "this value. (%d by default)"
+#~ msgstr "요청된 크기가 이 값보다 클 때 삼바는 파일을 비동기적으로 기록할 것입니다. (기본 값은 %d)"
+
+#~ msgid "Send Buffer Size"
+#~ msgstr "버퍼 크기 전송"
+
+#~ msgid "Set browseable"
+#~ msgstr "검색 가능 설정"
+
+#~ msgid "Set read only"
+#~ msgstr "읽기 전용으로 설정"
+
+#~ msgid "Store DOS attributes"
+#~ msgstr "도스 속성 저장"
+
+#~ msgid "Swap disabled"
+#~ msgstr "스왑 비활성화됨"
+
+#~ msgid "Time server"
+#~ msgstr "타임 서버"
+
+#~ msgid "Unix charset"
+#~ msgstr "유닉스 문자 셋"
+
+#~ msgid "WINS server"
+#~ msgstr "WINS 서버"
+
+#~ msgid "AFP compatibility"
+#~ msgstr "AFP 호환성"
+
+#~ msgid "AIO module"
+#~ msgstr "AIO 모듈"

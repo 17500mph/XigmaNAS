@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-26 21:12+0000\n"
-"PO-Revision-Date: 2017-01-26 20:34+0000\n"
+"POT-Creation-Date: 2017-01-28 02:17+0000\n"
+"PO-Revision-Date: 2017-01-27 06:08+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 21:48+0000\n"
+"X-Launchpad-Export-Date: 2017-01-28 01:57+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "Language: ca_ES\n"
 
@@ -309,11 +309,11 @@ msgid ""
 "A valid IP address or CIDR notation must be specified for the hosts allow."
 msgstr "Cal indicar una adreça IP o notació CIDR per permetre els hosts."
 
-msgid ""
-"A valid IPv4 address must be specified for the primary/secondary DNS server."
+msgid "A valid IPv4 address must be specified for the primary DNS server."
 msgstr ""
-"Una adreça IPv4 vàlida ha de ser especificats per al servidor DNS primari / "
-"secundari."
+
+msgid "A valid IPv4 address must be specified for the secondary DNS server."
+msgstr ""
 
 msgid "A valid IPv4 address must be specified."
 msgstr "Una adreça IPv4 vàlida ha de ser especificat."
@@ -324,11 +324,11 @@ msgstr "Un compatdor de bit per la xarxa IPv4 vàlida ha de ser especificat."
 msgid "A valid IPv6 Gateway address must be specified."
 msgstr "Una adressa de porta IPv6 ha de ser especificat."
 
-msgid ""
-"A valid IPv6 address must be specified for the primary/secondary DNS server."
+msgid "A valid IPv6 address must be specified for the primary DNS server."
 msgstr ""
-"Una adreça IPv6 vàlida ha de ser especificats per al servidor DNS primari / "
-"secundari."
+
+msgid "A valid IPv6 address must be specified for the secondary DNS server."
+msgstr ""
 
 msgid "A valid IPv6 address must be specified."
 msgstr "Una adreça IPv4 vàlida ha de ser especificat."
@@ -375,20 +375,20 @@ msgstr "Nom ADC o PDC"
 msgid "AFP"
 msgstr "AFP"
 
-msgid "AFP compatibility"
-msgstr "Compatibilitat AFP"
+msgid "AFP Compatibility"
+msgstr ""
 
 msgid "AG"
 msgstr "AG"
 
-msgid "AIO module"
-msgstr "Mòdul AIO"
+msgid "AIO Module"
+msgstr ""
 
-msgid "AIO read size"
-msgstr "Mida de lectura AIO"
+msgid "AIO Read Size"
+msgstr ""
 
-msgid "AIO write size"
-msgstr "Mida d'escriptura AIO"
+msgid "AIO Write Size"
+msgstr ""
 
 msgid "ALL Interfaces"
 msgstr "Totes les interfícies"
@@ -584,14 +584,14 @@ msgstr "Afegeix compartició"
 msgid "Add target"
 msgstr "Afegir objetiu"
 
+msgid "Additional Group"
+msgstr ""
+
 msgid "Additional Network"
 msgstr "Xarxa adicional"
 
 msgid "Additional Storage"
 msgstr "Emmagatzemament adicional"
-
-msgid "Additional group"
-msgstr "Grup adicional"
 
 msgid ""
 "Additional parameters to the hardware-specific part of the driver for second "
@@ -755,9 +755,6 @@ msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr ""
 "Permet de reprendre pujades interrompudes i descàrregues als clients."
 
-msgid "Allow group"
-msgstr "Grup permès"
-
 msgid "Allow new files"
 msgstr "Permet nous arxius"
 
@@ -806,6 +803,9 @@ msgstr ""
 
 msgid "AltRoot"
 msgstr "AltRoot"
+
+msgid "Alternate Data Streams"
+msgstr ""
 
 msgid "Alternate TCP port. Default is 22"
 msgstr "Port TCP alternatiu. Per defecte ès 22"
@@ -875,14 +875,14 @@ msgstr "Ja existeix un amfitrió amb aquest nom."
 msgid "An interface with the specified description already exists."
 msgstr "Ja existeix una interfície amb la descripció especificada."
 
+msgid "Anonymous Bind"
+msgstr "Enllaç anònim"
+
+msgid "Anonymous Users"
+msgstr ""
+
 msgid "Anonymous access has been deprecated starting from SMB2."
 msgstr "L'accés anònim ha deixat d'utilitzar-se a partir de SMB2."
-
-msgid "Anonymous bind"
-msgstr "Anònim obligat."
-
-msgid "Anonymous user bandwidth"
-msgstr "Ample de banda d'un usuari anònim"
 
 msgid ""
 "Anonymous user download bandwith in KB/s. An empty field means infinity."
@@ -895,9 +895,6 @@ msgid ""
 msgstr ""
 "Ample de banda de pujada per un usuari anònim en KB/s. Un camp buit "
 "significa l'infinit."
-
-msgid "Anonymous users only"
-msgstr "Només usuaris anònims"
 
 msgid ""
 "Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
@@ -953,8 +950,8 @@ msgstr ""
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Esteu segur que voleu apagar el servidor?"
 
-msgid "Asynchronous I/O (AIO)"
-msgstr "E / S asíncrona (AIO)"
+msgid "Asynchronous I/O"
+msgstr ""
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
@@ -1012,6 +1009,17 @@ msgstr "Autenticar senda i área"
 msgid "Authenticate URL"
 msgstr "Adressa de autenticació"
 
+msgid "Authenticated Users"
+msgstr ""
+
+msgid ""
+"Authenticated user download bandwith in KB/s. An empty field means infinity."
+msgstr ""
+
+msgid ""
+"Authenticated user upload bandwith in KB/s. An empty field means infinity."
+msgstr ""
+
 msgid "Authentication"
 msgstr "Autenticació:"
 
@@ -1050,6 +1058,9 @@ msgstr "Autoescala per gràfics"
 
 msgid "Autoselect"
 msgstr "Auto selecció"
+
+msgid "Auxiliary Parameter"
+msgstr "Paràmetre auxiliar"
 
 msgid "Auxiliary Parameters"
 msgstr "Paràmetres auxiliars"
@@ -1185,8 +1196,8 @@ msgstr "el millor disponible"
 msgid "Bind DN"
 msgstr "DN cega"
 
-msgid "Bind password"
-msgstr "Contrasenya cega"
+msgid "Bind Password"
+msgstr "Contrasenya anònima"
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
@@ -1302,11 +1313,11 @@ msgstr "Usuaris CHAP"
 msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
 
+msgid "CIFS/SMB Information"
+msgstr "Informació CIFS/SMB"
+
 msgid "CIFS/SMB disabled"
 msgstr "CIFS/SMB inactiu"
-
-msgid "CIFS/SMB informations"
-msgstr "Informacions CIFS/SMB"
 
 msgid "CIFS/SMB is enabled."
 msgstr "CIFS/SMB està habilitada."
@@ -1514,11 +1525,11 @@ msgstr ""
 msgid "Client"
 msgstr "Client"
 
-msgid "Client Max Protocol"
-msgstr "Protocol Max client"
+msgid "Client Max. Protocol"
+msgstr ""
 
-msgid "Client Min Protocol"
-msgstr "Protocol Min client"
+msgid "Client Min. Protocol"
+msgstr ""
 
 msgid "Clone"
 msgstr "Clonar"
@@ -1534,10 +1545,8 @@ msgstr "Columnes"
 
 msgid ""
 "Comma-separated list of group names that are permitted to login to the FTP "
-"server. (empty is ftp group)"
+"server. (empty = ftp group)."
 msgstr ""
-"Llista de noms de grups que tenen permís per iniciar sessió al servidor FTP "
-"separada per comes. (Buit és un grup ftp)"
 
 msgid "Command"
 msgstr "Comandament"
@@ -1616,11 +1625,14 @@ msgstr ""
 msgid "Configuration"
 msgstr "Configuració"
 
-msgid "Configuration directory"
+msgid "Configuration Directory"
 msgstr "Directori de configuració"
 
 msgid "Configuring"
 msgstr "Configuració"
+
+msgid "Confirm New Password"
+msgstr ""
 
 msgid "Confirmation"
 msgstr "Confirmació"
@@ -1932,6 +1944,9 @@ msgstr "Crea data"
 msgid "Create HVM Guest"
 msgstr "Crea un hoste HVM"
 
+msgid "Create Mask"
+msgstr ""
+
 msgid "Create PV Guest"
 msgstr "Crea un hoste PV"
 
@@ -1943,9 +1958,6 @@ msgstr "Crea i inicialitza el RAID"
 
 msgid "Create encrypted volume"
 msgstr "Crea un volum encriptat"
-
-msgid "Create mask"
-msgstr "Crea màscara"
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Crea directori de treball si no existia."
@@ -2006,6 +2018,9 @@ msgid ""
 msgstr ""
 "Contrasenya actual es el mot per defecte.  Has de fer servir la teva "
 "contrasenya."
+
+msgid "Current password is incorrectly entered."
+msgstr ""
 
 msgid "Current state of drive operation based upon the Life Curve."
 msgstr ""
@@ -2182,12 +2197,8 @@ msgstr ""
 msgid "Default Device Settings"
 msgstr "Configuració del dispositiu per defecte"
 
-#, php-format
-msgid "Default is %s."
-msgstr "Per defecte es %s."
-
-msgid "Default root"
-msgstr "Arrel per defecte"
+msgid "Default Root"
+msgstr ""
 
 msgid "Default user name is 'admin'."
 msgstr "Nom d'usuari per defecte es 'admin'"
@@ -2528,14 +2539,14 @@ msgstr "Directori"
 msgid "Directory %s doesn't exist!"
 msgstr "Directori %s no existeix!"
 
+msgid "Directory Mask"
+msgstr ""
+
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr "Directori d'arxius incomplets. Un camp buit indica deshabilitat."
 
 msgid "Directory listing"
 msgstr "Llista de directori."
-
-msgid "Directory mask"
-msgstr "Màscara de directori"
 
 msgid "Directory that contains removable media. (e.g /mnt/iscsi/)"
 msgstr ""
@@ -2636,8 +2647,8 @@ msgstr ""
 "Distància del disc s'ha desplaçat respecte al eix (en general a causa d'un "
 "cop o temperatura). Unitat de mesura és desconeguda."
 
-msgid "Distributed hash table"
-msgstr "Taula hash distribuïda"
+msgid "Distributed Hash Table"
+msgstr "Tabla hash distribuida"
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr "No activeu aquesta opció si voleu afegir un RAID existent."
@@ -2895,8 +2906,8 @@ msgstr "Domini"
 msgid "Domain controller name"
 msgstr "Nom del controlador de domini"
 
-msgid "Domain have no 2nd level name."
-msgstr "El domini no tenen segon nom de nivell."
+msgid "Domain is missing 2nd level name."
+msgstr "No es troba segon nom de nivell de domini."
 
 msgid "Domain name"
 msgstr "Nom de domini"
@@ -2922,17 +2933,20 @@ msgstr "Fet"
 msgid "Done."
 msgstr "Fet."
 
-msgid "Dos charset"
-msgstr "Joc de caracteres Dos"
+msgid "Dos Charset"
+msgstr ""
 
 msgid "Download"
 msgstr "Descarregar"
 
+msgid "Download Bandwidth"
+msgstr "Ample de banda de descàrrega"
+
 msgid "Download Configuration"
 msgstr "Descàrrega de la configuració"
 
-msgid "Download bandwidth"
-msgstr "Ample de banda de descarregar"
+msgid "Download Directory"
+msgstr "Directori de descàrrega"
 
 msgid "Download directory"
 msgstr "Directori de descarregar"
@@ -2949,11 +2963,11 @@ msgstr "El disc busca el rendiment durant les proves internes."
 msgid "Driver"
 msgstr "Controlador"
 
-msgid "Driver list"
-msgstr "Llista de controladors"
+msgid "Driver List"
+msgstr ""
 
-msgid "Driver parameters"
-msgstr "Paràmetres de controlador"
+msgid "Driver Parameter"
+msgstr "Paràmetres del controlador"
 
 msgid "Driver used"
 msgstr "Controlador usat"
@@ -2988,8 +3002,8 @@ msgstr "DNS dinàmica"
 msgid "Dynamic IP (DHCP) can not be used for HAST resources."
 msgstr "IP dinàmica (DHCP) no pot ser utilitzat pels recursos HAST."
 
-msgid "EA support"
-msgstr "Suport EA"
+msgid "EA Support"
+msgstr ""
 
 msgid "EFI/GPT partition can be use with UFS only."
 msgstr "Partició EFI/GPT es pot utilitzar només amb UFS."
@@ -3123,20 +3137,20 @@ msgstr "Nivell d'emergencia"
 msgid "Enable"
 msgstr "Activar"
 
-msgid "Enable 'Asynchronous I/O (AIO)' switch."
-msgstr "Habilitar interruptor 'E/S asíncrona (AIO)'."
+msgid "Enable 'Asynchronous I/O (AIO).' switch."
+msgstr ""
 
 msgid "Enable 'Large read/write' switch."
 msgstr "Habilitar commutador 'gran de lectura / escriptura'."
 
-msgid "Enable ACL inheritance"
-msgstr "Permetre heretar ACL"
+msgid "Enable ACL inheritance."
+msgstr ""
 
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr "Habilitar el format avançat (Mida de sector de 4 KB)."
 
-msgid "Enable Asynchronous I/O (AIO)"
-msgstr "Habilita E/S asíncrona (AIO)"
+msgid "Enable Asynchronous I/O. (AIO)."
+msgstr ""
 
 msgid "Enable Challenge-Response Authentication"
 msgstr "Habilitar l'autenticació de desafiament-resposta"
@@ -3188,8 +3202,8 @@ msgstr "Habilitar suport TiVo."
 msgid "Enable Time Machine support"
 msgstr "Habilita el suport de Time Machine"
 
-msgid "Enable ZFS ACL"
-msgstr "Habilita ZFS ACL"
+msgid "Enable ZFS ACL."
+msgstr ""
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
 msgstr "Habilitar Zeroconf/Bonjour per anunciar serveis d'aquest dispositiu."
@@ -3258,8 +3272,8 @@ msgstr "Habilitar els comodins de domini."
 msgid "Enable encryption."
 msgstr "Habilitar el xifrat."
 
-msgid "Enable extended attribute support"
-msgstr "Habilitar el suport de atribut estès"
+msgid "Enable extended attribute support."
+msgstr ""
 
 msgid "Enable extended attributes for this file system."
 msgstr "Habilitar els atributs estesos d'aquest sistema d'arxius."
@@ -3271,9 +3285,6 @@ msgstr ""
 "Habilita primer pla/fons la comprovació de coherència del sistema de fitxers "
 "durant el procés d'arrencada."
 
-msgid "Enable guest access"
-msgstr "Habilitar access a convidat."
-
 msgid "Enable guest access."
 msgstr "Habilitar access a convidat."
 
@@ -3283,14 +3294,14 @@ msgstr "Activa inotify."
 msgid "Enable keyboard-interactive authentication."
 msgstr "Habilitar l'autenticació de teclat interactiu."
 
-msgid "Enable large read/write"
-msgstr "Habilita gran lectura/escriptura"
+msgid "Enable large read/write."
+msgstr ""
 
 msgid "Enable local user authentication."
 msgstr "Habilitar l'autenticació d'usuari local."
 
-msgid "Enable mapping DOS attributes"
-msgstr "Habilitar l'assignació d'atributs DOS"
+msgid "Enable mapping DOS attributes."
+msgstr ""
 
 msgid "Enable module listing."
 msgstr "Habilitar llista de mòduls."
@@ -3305,8 +3316,8 @@ msgstr ""
 msgid "Enable peer exchange (PEX)."
 msgstr "Activar l'intercanvi entre parells (PEX)."
 
-msgid "Enable permission inheritance"
-msgstr "Habilitar l'herència de permisos"
+msgid "Enable permission inheritance."
+msgstr ""
 
 msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr "Habilita el reenviament de ports a través de NAT-PMP o UPnP."
@@ -3314,8 +3325,8 @@ msgstr "Habilita el reenviament de ports a través de NAT-PMP o UPnP."
 msgid "Enable proxy authentication."
 msgstr "Habilitar l'autenticació de proxy."
 
-msgid "Enable recycle bin"
-msgstr "Habilita la paperera de reciclatge"
+msgid "Enable recycle bin."
+msgstr ""
 
 msgid "Enable remote monitoring of the local connected UPS."
 msgstr "Activa la supervisió remota dels SAI connectats locals."
@@ -3338,11 +3349,11 @@ msgstr "Activa el segon SAI connectat localment."
 msgid "Enable serial console."
 msgstr "Activa consola serie."
 
-msgid "Enable shadow copy"
-msgstr "Activar la còpia d'ombra"
+msgid "Enable shadow copy."
+msgstr ""
 
-msgid "Enable store DOS attributes"
-msgstr "Activar amagatzamar atributs DOS"
+msgid "Enable store DOS attributes."
+msgstr ""
 
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Activar el protocol d'identificació (RFC1413)."
@@ -3411,8 +3422,8 @@ msgstr "Algoritme d'encriptació a fer servir"
 msgid "English"
 msgstr "Anglés"
 
-msgid "Enhanced compatibility with Netatalk AFP server"
-msgstr "Compatibilitat millorada amb el servidor netatalk AFP"
+msgid "Enhanced compatibility with Netatalk AFP server."
+msgstr ""
 
 msgid "Enter Command"
 msgstr "Introduïu l'ordre"
@@ -3426,6 +3437,12 @@ msgid ""
 msgstr ""
 "Entrar un port personalitzat per el WEBGUI si vol sobreescriure el port per "
 "defecte (80 per HTTP, 443 per HTTPS)."
+
+#, php-format
+msgid ""
+"Enter a custom port number if you want to override the default port. Default "
+"port is %s."
+msgstr ""
 
 msgid "Enter a description"
 msgstr "Introduïu una descripció"
@@ -3610,6 +3627,9 @@ msgstr ""
 "Les extensions han de ser definits abans que puguin ser utilitzats, i les "
 "extensions no es poden utilitzar més d'una vegada."
 
+msgid "Extra Options"
+msgstr "Opcions addicionals"
+
 msgid "Extra options"
 msgstr "Opcions extra"
 
@@ -3737,6 +3757,9 @@ msgstr "Editor de fitxers"
 
 msgid "File Manager"
 msgstr "Gestor de fitxers"
+
+msgid "File Mask"
+msgstr ""
 
 msgid "File Path"
 msgstr "Ruta del fitxer"
@@ -3976,19 +3999,23 @@ msgstr "Alçada dels gràfics"
 msgid "Greek"
 msgstr "Grec"
 
-msgid "Greeting banner displayed by FTP when a connection first comes in."
+msgid "Greeting banner displayed to client when firts connection comes in."
 msgstr ""
-"Banderola de salutació mostrada per el FTP quan una connexió és conecta en "
-"primer lloc."
 
 msgid "Group"
 msgstr "Grup"
+
+msgid "Group Allow"
+msgstr ""
 
 msgid "Group ID"
 msgstr "Identificador del Grup"
 
 msgid "Group Settings"
 msgstr "Configuració del grup"
+
+msgid "Group Suffix"
+msgstr "Sufix de grup"
 
 msgid "Group compilations"
 msgstr "Compilacions de grup"
@@ -4005,9 +4032,6 @@ msgstr "Nom de grup"
 msgid "Group numeric id."
 msgstr "Identificació númerica del grup"
 
-msgid "Group suffix"
-msgstr "Sufix de grup"
-
 msgid "Groupmask - Mask ACL with mode"
 msgstr "Máscara de grup - Màscara de l'LCA amb mode"
 
@@ -4017,8 +4041,8 @@ msgstr "Grups"
 msgid "Guest"
 msgstr "Convidat"
 
-msgid "Guest account"
-msgstr "Compte de convidat"
+msgid "Guest Account"
+msgstr ""
 
 msgid "HAST"
 msgstr "HAST"
@@ -4113,8 +4137,8 @@ msgstr "Hiadaptive (alt rendiment)"
 msgid "Hide Default Groups"
 msgstr "Amaga grups predeterminats"
 
-msgid "Hide dot files"
-msgstr "Amaga arxius punt"
+msgid "Hide Dot Files"
+msgstr ""
 
 msgid "High voltage boosting transfer point"
 msgstr "Punt de transferència d'impuls d'alta tensió"
@@ -4143,9 +4167,6 @@ msgstr "Amfitrió"
 msgid "Host access control"
 msgstr "Control d'access de máquina"
 
-msgid "Host name"
-msgstr "Nom de la màquina"
-
 msgid "Host resources"
 msgstr "Recursos de máquina"
 
@@ -4160,6 +4181,9 @@ msgstr "Màquinas"
 
 msgid "Hosts Allow"
 msgstr "Amfitrions permessos"
+
+msgid "Hosts Deny"
+msgstr ""
 
 msgid "Hosts Setup"
 msgstr "Configuració de hosts"
@@ -4282,8 +4306,8 @@ msgstr "Arxiu ISO per a ser muntat."
 msgid "ISP DNS Servers"
 msgstr "Servidors DNS del ISP"
 
-msgid "Ident protocol"
-msgstr "Protocol Ident"
+msgid "IdentLookups"
+msgstr ""
 
 msgid "Identifier"
 msgstr "Identificador"
@@ -4371,13 +4395,6 @@ msgstr ""
 "Si aquesta propietat està activada, les instantànies es mostren en el "
 "directori .zfs."
 
-msgid ""
-"If you want to change the password for accessing the WebGUI, enter it here "
-"twice."
-msgstr ""
-"Si voleu canviar la contrasenya per accedir a la WebGUI, introduir aquí dues "
-"vegades."
-
 msgid "Import"
 msgstr "Importar"
 
@@ -4423,7 +4440,7 @@ msgstr "Paquets d'Entrada/Sortida"
 msgid "Incoming Line/Power Information"
 msgstr "Informació d'entrada de linea/alimentació"
 
-msgid "Incomplete directory"
+msgid "Incomplete Directory"
 msgstr "Directori incomplet"
 
 msgid ""
@@ -4457,8 +4474,8 @@ msgstr "Informació i Estat"
 msgid "Inherit ACL"
 msgstr "ACL heretat"
 
-msgid "Inherit permissions"
-msgstr "Permisos heretats"
+msgid "Inherit Permissions"
+msgstr ""
 
 msgid "Inhibit some of the syslog diagnostics for bad lines in /etc/exports."
 msgstr ""
@@ -4585,9 +4602,6 @@ msgstr "Gestió de la interficie"
 msgid "Interface Selection"
 msgstr "Selecció de la interfície"
 
-msgid "Interface selection"
-msgstr "Selecció de la interficie"
-
 msgid "Interfaces"
 msgstr "Interfícies"
 
@@ -4645,11 +4659,9 @@ msgstr ""
 "qualsevol moment."
 
 msgid ""
-"It is impossible to enable 'Anonymous users only' and 'Local users only' "
-"authentication simultaneously."
+"It is impossible to enable 'Anonymous Users' and 'Authenticated Users' both "
+"at the same time."
 msgstr ""
-"És impossible activar 'només els usuaris anònims' i 'usuaris locals només' "
-"en l'autenticació de forma simultània."
 
 msgid ""
 "It is not recommanded to import non healthy pools nor virtual devices that "
@@ -4767,6 +4779,9 @@ msgstr "Gestió LAN"
 msgid "LAN Only"
 msgstr "Només LAN"
 
+msgid "LAN interface is not configured."
+msgstr "Interfície LAN no està configurat."
+
 msgid "LAN net"
 msgstr "Xarxa LAN"
 
@@ -4797,8 +4812,8 @@ msgstr "Idioma"
 msgid "Language to use on front panel"
 msgstr "Idioma utilitzar en el panell frontal"
 
-msgid "Large read/write"
-msgstr "Lectura/escriptura llarga"
+msgid "Large Read/Write"
+msgstr ""
 
 msgid "Last Configuration Change"
 msgstr "Últim canvi de configuració"
@@ -4950,22 +4965,6 @@ msgstr "Compartició local (destí)"
 msgid "Local shares to be synchronized"
 msgstr "Compartició local a esser sincronitzada"
 
-msgid "Local user bandwidth"
-msgstr "Ample de banda d'usuari local"
-
-msgid "Local user download bandwith in KB/s. An empty field means infinity."
-msgstr ""
-"Ample de banda de descàrrega d'usuari local en KB/s. Un camp buit significa "
-"infinit."
-
-msgid "Local user upload bandwith in KB/s. An empty field means infinity."
-msgstr ""
-"Ample de banda de pujada d'usuari local en KB/s. Un camp buit significa "
-"infinit."
-
-msgid "Local users only"
-msgstr "Només usuaris locals"
-
 msgid "Location"
 msgstr "Ubicació"
 
@@ -5106,7 +5105,7 @@ msgstr "Domini MS"
 msgid "MTU"
 msgstr "MTU"
 
-msgid "Machine suffix"
+msgid "Machine Suffix"
 msgstr "Sufix de màquina"
 
 msgid "Maintenance"
@@ -5136,14 +5135,14 @@ msgstr "Data de fabricació"
 msgid "Map all users to root"
 msgstr "Mapeja tots els usuaris a l'arrel"
 
-msgid "Map to guest"
-msgstr "Mapeja a convidats"
+msgid "Map to Guest"
+msgstr ""
 
 msgid "Map to user"
 msgstr "Mapeja a usuari"
 
-msgid "Mapping DOS attributes"
-msgstr "Atributs del mapatge DOS"
+msgid "Mapping DOS Attributes"
+msgstr ""
 
 msgid "Mar"
 msgstr "Mar"
@@ -5158,11 +5157,23 @@ msgstr ""
 "Marge d'un canal durant la lectura de dades. La funció d'aquest atribut no "
 "ès especificada."
 
-msgid "Masquerade address"
-msgstr "Adreça enmascarada"
+msgid "Masquerade Address"
+msgstr ""
 
 msgid "Max Entries"
 msgstr "Máximes entrades"
+
+msgid "Max. Clients"
+msgstr ""
+
+msgid "Max. Connections Per Host"
+msgstr ""
+
+msgid "Max. Login Attempts"
+msgstr ""
+
+msgid "Max. Passive Port"
+msgstr ""
 
 msgid "Max. TTL"
 msgstr "Máx. TTL"
@@ -5170,17 +5181,8 @@ msgstr "Máx. TTL"
 msgid "Max. block size"
 msgstr "Màxima mida de bloc"
 
-msgid "Max. conn. per IP"
-msgstr "Màximes connexions per IP"
-
 msgid "Max. connections"
 msgstr "Màximes connexions"
-
-msgid "Max. login attempts"
-msgstr "Màxims intents d'inici"
-
-msgid "Max. passive port"
-msgstr "Màxims ports passius"
 
 msgid "Max. pre-send R2T"
 msgstr "Màxims pre-enviament R2T"
@@ -5226,12 +5228,13 @@ msgstr ""
 "El nombre màxim d'intents d'introducció de la contrasenya abans de la "
 "desconnexió."
 
+msgid ""
+"Maximum number of connections allowed per IP address. (0 = unlimited)."
+msgstr ""
+
 #, php-format
 msgid "Maximum number of connections in each session (%d by default)."
 msgstr "Nombre màxim de connexions en cada sessió (%d per defecte)."
-
-msgid "Maximum number of connections per IP address (0 = unlimited)."
-msgstr "Nombre màxim de connexions per adreça IP (0 = sense límit)."
 
 #, php-format
 msgid ""
@@ -5246,12 +5249,12 @@ msgid "Maximum number of sessions holding at same time (%d by default)."
 msgstr ""
 "Nombre màxim de sessions mantingudes al mateix temps (%d per defecte)."
 
-msgid "Maximum number of simultaneous clients."
-msgstr "Nombre màxim de clients simultanis."
-
 msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
 msgstr ""
 "Nombre màxim de connexions simultanis. Per defecte es 0 (sense límit)."
+
+msgid "Maximum number of users that can connect to the server."
+msgstr ""
 
 msgid "Maximum relative humidity seen (percent)"
 msgstr "Humitat relativa màxima observada (per cent)"
@@ -5304,8 +5307,8 @@ msgstr "MiB"
 msgid "MibII"
 msgstr "Mib||"
 
-msgid "Min. passive port"
-msgstr "Por passiu minim"
+msgid "Min. Passive Port"
+msgstr ""
 
 msgid "MiniDLNA"
 msgstr "MiniDLNA"
@@ -5495,6 +5498,9 @@ msgstr "NOTA"
 msgid "NT1 (CIFS)"
 msgstr "NT1 (CIFS)"
 
+msgid "NTFS ACLs"
+msgstr ""
+
 msgid "NTP Time Server"
 msgstr "Servidor de temps NTP"
 
@@ -5540,9 +5546,6 @@ msgid "NetBIOS Domain"
 msgstr "Domini NetBIOS"
 
 msgid "NetBIOS Name"
-msgstr "Nom NetBIOS"
-
-msgid "NetBIOS name"
 msgstr "Nom NetBIOS"
 
 msgid "Netgraph"
@@ -5596,6 +5599,11 @@ msgstr ""
 msgid "New Password"
 msgstr "Nova contrasenya"
 
+msgid ""
+"New Password does not match the confirmation password. Please ensure both "
+"passwords are the same."
+msgstr ""
+
 msgid "New password"
 msgstr "Nova contrasenya"
 
@@ -5604,6 +5612,9 @@ msgstr "Següent"
 
 msgid "No"
 msgstr "No"
+
+msgid "No DNS server have been configured."
+msgstr "No s'ha configurat servidor DNS."
 
 msgid "No DNS setting found."
 msgstr "Ajustos DNS no trobats"
@@ -5817,17 +5828,14 @@ msgstr "Novembre"
 msgid "Now"
 msgstr "Ara"
 
-msgid "Null passwords"
-msgstr "Contrasenya nules"
+msgid "Null Passwords"
+msgstr ""
 
 msgid "Number of bad battery packs"
 msgstr "Nombre de paquets de bateries dolents"
 
 msgid "Number of battery packs"
 msgstr "Nombre de paquets de bateries"
-
-msgid "Number of clients"
-msgstr "Nombre de clients"
 
 msgid "Number of hours elapsed in the power-on state."
 msgstr "Nombre d'hores transcorregudes en estat en martxa."
@@ -5878,9 +5886,6 @@ msgstr "OFF"
 
 msgid "Old passphrase"
 msgstr "Contarsenya antiga"
-
-msgid "Old password"
-msgstr "Contrasenya antic"
 
 msgid "On"
 msgstr "ON"
@@ -6047,8 +6052,8 @@ msgstr "Tipus de partició"
 msgid "Partitions"
 msgstr "Particions"
 
-msgid "Passive ports"
-msgstr "Ports passius"
+msgid "Passive Port"
+msgstr ""
 
 msgid ""
 "Passive ports restricts the range of ports from which the server will select "
@@ -6089,14 +6094,27 @@ msgstr "Contrasenya"
 msgid "Password (confirmed)"
 msgstr "Contrasenya (confirmat)"
 
+msgid "Password Encryption"
+msgstr "Xifrat de la contrasenya"
+
+msgid "Password Server"
+msgstr ""
+
+msgid "Password Suffix"
+msgstr "Sufix de contrasenya"
+
 msgid "Password authentication"
 msgstr "Autenticació de la contrasenya"
 
+msgid ""
+"Password does not match the confirmation password. Please ensure both "
+"passwords are the same."
+msgstr ""
+"La contrasenya no coincideix amb la contrasenya de confirmació. Si us plau "
+"assegureu-vos de totes dues contrasenyes són els mateixos."
+
 msgid "Password don't match."
 msgstr "Les contrassenyas no coincideixen"
-
-msgid "Password encryption"
-msgstr "Xifrat de contrasenyes"
 
 msgid "Password for the administrative pages."
 msgstr "Contrasenya per les pàgines administratives"
@@ -6104,17 +6122,11 @@ msgstr "Contrasenya per les pàgines administratives"
 msgid "Password of domain administrator account."
 msgstr "Contrasenya del compte d'administrador de domini."
 
-msgid "Password server"
-msgstr "Contrasenya del servidor"
-
 msgid ""
 "Password server name or IP address (e.g. Active Directory domain controller)."
 msgstr ""
 "Contrasenya del servidor o adreça IP (per exemple, controlador de domini "
 "d'Active Directory)."
-
-msgid "Password suffix"
-msgstr "Sufix de contrasenya"
 
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
 msgstr "Enganxar una clau privada RSA en format PEM aquí."
@@ -6138,14 +6150,17 @@ msgstr "Camí a compartir."
 msgid "Path to the local device. (e.g. %s)"
 msgstr "Camí al dispositiu local. (Per exemple, %s)"
 
+msgid "Peer Exchange"
+msgstr "Intercanvi de parells"
+
+msgid "Peer Port"
+msgstr "Port de parells"
+
 msgid "Peer Secret"
 msgstr "Col-lega Secret"
 
 msgid "Peer User"
 msgstr "Usuari Col-lega"
-
-msgid "Peer exchange"
-msgstr "Intercanvi entre col-leges."
 
 msgid "Peer port"
 msgstr "Port Col-lega"
@@ -6156,6 +6171,9 @@ msgstr "Preferències de rendiment"
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
 msgstr "Ruta de dades permanent de Samba (per exemple,%s)."
+
+msgid "Permit Root Login"
+msgstr ""
 
 msgid "Permit root login"
 msgstr "Permetre inici de sessió de root"
@@ -6300,8 +6318,8 @@ msgstr "Port "
 msgid "Port %ld is already used by another service."
 msgstr "El port %ld està en ús per un altre servei"
 
-msgid "Port forwarding"
-msgstr "Reenviament de port"
+msgid "Port Forwarding"
+msgstr "Redireccionament de ports"
 
 #, php-format
 msgid "Port number must be in the range between %d and %d."
@@ -6597,6 +6615,9 @@ msgstr "Disc RAM"
 msgid "Read"
 msgstr "Llegir"
 
+msgid "Read Only"
+msgstr ""
+
 msgid "Read Only (ro)"
 msgstr "Només lectura (ro)"
 
@@ -6653,8 +6674,8 @@ msgstr "Raó per la ultma commutació a bateria (* opac)"
 msgid "Reboot"
 msgstr "Rearrenca"
 
-msgid "Receive Buffer Size"
-msgstr "Mida del Buffer de recepció"
+msgid "Receive Buffer"
+msgstr ""
 
 msgid "Record is locked"
 msgstr "Registre està bloquejat"
@@ -6665,8 +6686,8 @@ msgstr "Recursivament en directoris."
 msgid "Recursive"
 msgstr "Recursiu"
 
-msgid "Recycle bin"
-msgstr "Paperera"
+msgid "Recycle Bin"
+msgstr ""
 
 msgid "Refresh"
 msgstr "Actualitza"
@@ -6872,11 +6893,11 @@ msgstr "Romanès"
 msgid "Root"
 msgstr "Root"
 
-msgid "Root bind DN"
-msgstr "Unió de l'arrel DN"
+msgid "Root Bind DN"
+msgstr "Arrel DN oculta."
 
-msgid "Root bind password"
-msgstr "Contrasenya arrel d'enllaç"
+msgid "Root Bind Password"
+msgstr "Contrasenya arrel oculta"
 
 msgid "Rotation Rate"
 msgstr "Taxa de rotació"
@@ -6890,7 +6911,7 @@ msgstr "Roundrobin"
 msgid "Routes"
 msgstr "Rutas"
 
-msgid "Routing tables"
+msgid "Routing Tables"
 msgstr "Taules d'enrutament"
 
 msgid "Rows"
@@ -7003,18 +7024,14 @@ msgstr "Controlador de domini d'Active Directory Samba"
 #, php-format
 msgid ""
 "Samba will read from file asynchronously when size of request is bigger than "
-"this value. (%d by default)"
+"this value. (%d by default)."
 msgstr ""
-"Samba llegeix l'arxiu de forma asíncrona quan la mida de la sol·licitud és "
-"més gran que aquest valor. (%d per defecte)"
 
 #, php-format
 msgid ""
 "Samba will write to file asynchronously when size of request is bigger than "
-"this value. (%d by default)"
+"this value. (%d by default)."
 msgstr ""
-"Samba escriurà l'arxiu de forma asíncrona quan la mida de la sol·licitud és "
-"més gran que aquest valor. (%d per defecte)"
 
 msgid "Sat"
 msgstr "Ds"
@@ -7249,8 +7266,8 @@ msgstr "Auto-Monitorització, Anàlisis i Tecnologia d'Informes"
 msgid "Self-tests Management"
 msgstr "Gestió de proves automàtiques"
 
-msgid "Send Buffer Size"
-msgstr "Enviar mida de la memòria intermèdia"
+msgid "Send Buffer"
+msgstr ""
 
 msgid "Send Command!"
 msgstr "Enviar comando!"
@@ -7297,11 +7314,11 @@ msgstr "Número de sèrie"
 msgid "Server"
 msgstr "Servidor"
 
-msgid "Server Max Protocol"
-msgstr "Protocol Max servidor"
+msgid "Server Max. Protocol"
+msgstr ""
 
-msgid "Server Min Protocol"
-msgstr "Protocol Minìm servidor"
+msgid "Server Min. Protocol"
+msgstr ""
 
 msgid "Server Name"
 msgstr "Nom del servidor"
@@ -7330,11 +7347,11 @@ msgstr "Serveis"
 msgid "Set additional group memberships for this account."
 msgstr "Establir grup addicional afiliacions d'aquest compte."
 
-msgid "Set browseable"
-msgstr "Establir navegable"
+msgid "Set browseable."
+msgstr ""
 
-msgid "Set read only"
-msgstr "Fixar-ho de només lectura"
+msgid "Set read only."
+msgstr ""
 
 msgid "Set share password."
 msgstr "Establir una contrasenya compartida."
@@ -7404,8 +7421,8 @@ msgstr "Configuracions"
 msgid "Shadow Copy"
 msgstr "Copia a l'ombra"
 
-msgid "Shadow Copy format"
-msgstr "Format de copia a l'ombra"
+msgid "Shadow Copy Format"
+msgstr ""
 
 msgid "Share"
 msgstr "Recurs compartit"
@@ -7712,21 +7729,14 @@ msgstr "Aturat"
 msgid "Storage"
 msgstr "Emmagatzematge"
 
-msgid "Store DOS attributes"
-msgstr "Desa atributs DOS"
-
-msgid "Store NTFS acls"
-msgstr "Desa ACLS NTFS"
-
-msgid "Store NTFS acls in Extended Attributes"
-msgstr "Desa ACLS de NTFS en atributs extesos"
-
-msgid "Store alternate data streams"
-msgstr "Emmagatzemar seqüències de dades alternatives"
-
-msgid "Store alternate data streams in Extended Attributes"
+msgid "Store DOS Attributes"
 msgstr ""
-"Emmagatzemar seqüències de dades alternatives en els atributs estesos"
+
+msgid "Store NTFS ACLs in Extended Attributes."
+msgstr ""
+
+msgid "Store alternate data streams in Extended Attributes."
+msgstr ""
 
 msgid "Strict DLNA"
 msgstr "DLNA estricte"
@@ -7785,8 +7795,8 @@ msgstr "Memòria d'intercanvi"
 msgid "Swap Usage"
 msgstr "Ús de l'intercanvi"
 
-msgid "Swap disabled"
-msgstr "Intercanvi desactivat"
+msgid "Swap is disabled."
+msgstr ""
 
 msgid "Swedish"
 msgstr "Suec"
@@ -7883,6 +7893,12 @@ msgstr "Memòria intermitja de missatges del sistema"
 msgid "System tuning"
 msgstr "Ajustos fins del sistema"
 
+msgid "TCP Port"
+msgstr ""
+
+msgid "TCP Wrapper"
+msgstr ""
+
 msgid "TCP forwarding"
 msgstr "Reenviament TCP"
 
@@ -7894,9 +7910,6 @@ msgstr "Port TCP és 5900+N, on N és el nombre del monitor VNC."
 
 msgid "TCP port to bind the server to."
 msgstr "Port TCP per enllaçar amb el servidor per."
-
-msgid "TCP wrapper"
-msgstr "Embolcall de TCP"
 
 msgid "TFTP"
 msgstr "TFTP"
@@ -7910,11 +7923,11 @@ msgstr "Xifrat TLS"
 msgid "TLS Mode"
 msgstr "Mode TLS"
 
+msgid "TLS Only"
+msgstr ""
+
 msgid "TLS Server Certificate Check"
 msgstr "Comprovar certificat de servidor TLS"
-
-msgid "TLS only"
-msgstr "Només TLS"
 
 msgid "Tag"
 msgstr "Marcador"
@@ -8067,8 +8080,8 @@ msgstr ""
 "blocs defectuosos en el flash del dispositiu des de que es va inicialitzar "
 "per primera vegada a la fabricació."
 
-msgid "The TCP port must be a valid port number."
-msgstr "El port TCP ha de ser un número de port vàlid."
+msgid "The TCP Port must be a valid port number."
+msgstr ""
 
 msgid "The UPS identifier and IP address"
 msgstr "L'identificador del SAI i adreça IP"
@@ -8361,9 +8374,6 @@ msgstr "Les credencials amb què s'uneixen."
 msgid "The cron job has been executed successfully."
 msgstr "La tasca de cron s'ha executat amb èxit."
 
-msgid "The current password is incorrectly entered."
-msgstr "S'ha introdueit incorrectament la contrasenya actual."
-
 #, php-format
 msgid ""
 "The custom format of the snapshot for shadow copy service can be specified. "
@@ -8536,8 +8546,12 @@ msgstr "El nom d'usuari és un nom d'inici de sessió reservada."
 msgid "The login name is limited to 16 characters."
 msgstr "El nom d'usuari està limitat a 16 caràcters."
 
-msgid "The max. connection per IP must be either 0 (unlimited) or greater."
-msgstr "La màx. connexió per IP ha de ser 0 (sense límit) o més gran."
+msgid ""
+"The max. connections per IP address must be either 0 (unlimited) or greater."
+msgstr ""
+
+msgid "The max. number of clients must be in the range from 1 to 50."
+msgstr ""
 
 msgid ""
 "The maximum download bandwith in KiB/s. An empty field means infinity."
@@ -8545,8 +8559,8 @@ msgstr ""
 "L'ample de banda màxim de descàrrega en KiB/s. Un camp buit significa "
 "l'infinit."
 
-msgid "The maximum idle time be a number."
-msgstr "El temps màxim d'inactivitat ha d'ésser un nombre."
+msgid "The maximum idle time must be a number."
+msgstr ""
 
 msgid ""
 "The maximum port to allocate for PASV style data connections (0 = use any "
@@ -8628,19 +8642,6 @@ msgstr "El nom d'aquest dispositiu virtual no es pot canviar."
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "La xarxa de '% s' no és vàlida."
-
-msgid ""
-"The new password does not match. Please ensure the passwords match exactly."
-msgstr ""
-"La nova contrasenya no coincideix. Si us plau assegureu-vos que les "
-"contrasenyes coincideixen exactament."
-
-msgid "The new password is also the default root password of the system!"
-msgstr ""
-"La nova contrasenya és també la clau de root per defecte del sistema!"
-
-msgid "The number of clients must be between 1 and 50."
-msgstr "El nombre de clients ha d'estar entre 1 i 50."
 
 msgid ""
 "The number of errors caused by incorrect checksum during the error "
@@ -8843,10 +8844,8 @@ msgstr "El volum ha de ser separat abans que pugui ser eliminat."
 
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
-"clients (maximum 15 characters)."
+"clients. (maximum 15 characters)."
 msgstr ""
-"El grup de treball en què apareixerà el servidor quan se'ls pregunta per "
-"Windows o clients SMB (màxim 15 caràcters)."
 
 msgid "The working directory does not exist."
 msgstr "El directori de treball no existeix."
@@ -9332,6 +9331,12 @@ msgstr ""
 "Aquest paràmetre especifica el sufix que s'utilitza per als usuaris quan "
 "aquests s'afegeixen al directori LDAP, per exemple, %s"
 
+msgid "This password is required to access the admin web interface."
+msgstr ""
+
+msgid "This password is the root password of the system."
+msgstr ""
+
 msgid "This pool name already exists."
 msgstr "Aquest nom de la piscina ja existeix."
 
@@ -9402,15 +9407,14 @@ msgstr ""
 "Això esborrarà totes les dades en el disc! No utilitzeu aquesta opció si "
 "voleu afegir un disc encriptat existent."
 
-msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
-msgstr "Això proporcionarà ACL NTFS sense suport de ZFS ACL UFS."
-
-msgid "This will provide ZFS ACL support. (ZFS only)"
-msgstr "Això proporcionarà el suport de ZFS ACL. (Només ZFS)"
-
-msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
+msgid "This will provide NTFS ACLs without ZFS ACL support such as UFS."
 msgstr ""
-"Això proporcionarà còpia de l'ombra creada per auto instantànies. (Només ZFS)"
+
+msgid "This will provide ZFS ACL support. (ZFS only)."
+msgstr ""
+
+msgid "This will provide shadow copy created by auto snapshot. (ZFS only)."
+msgstr ""
 
 msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
@@ -9433,8 +9437,14 @@ msgstr "Suport TiVO"
 msgid "Time"
 msgstr "Hora"
 
+msgid "Time Interval"
+msgstr ""
+
 msgid "Time Machine"
 msgstr "Màquina del temps"
+
+msgid "Time Server"
+msgstr ""
 
 msgid "Time Synchronization"
 msgstr "Sincronització horària"
@@ -9454,9 +9464,6 @@ msgstr "Hora a la que es posarà en marxa la càrrega"
 msgid "Time interval"
 msgstr "Interval de temps"
 
-msgid "Time server"
-msgstr "Servidor d'hora"
-
 msgid "Time spent during the positioning of the drive heads."
 msgstr "El temps dedicat durant el posicionament dels caps de la unitat."
 
@@ -9474,6 +9481,9 @@ msgstr "Temps esgotat"
 
 msgid "Times"
 msgstr "Hores"
+
+msgid "Title Speed"
+msgstr "Velocitat del títol"
 
 msgid "TitleSpeed"
 msgstr "TitleSpeed"
@@ -9654,8 +9664,8 @@ msgstr "Captures"
 msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol"
 
-msgid "Trusted domains"
-msgstr "Dominis de confiança"
+msgid "Trusted Domains"
+msgstr ""
 
 msgid "Try to force import."
 msgstr "Tracta de forçar la importació."
@@ -9834,11 +9844,11 @@ msgstr "Unison"
 msgid "Unison File Synchronisation"
 msgstr "Sincronització d'arxius Uníson"
 
+msgid "Unix Charset"
+msgstr ""
+
 msgid "Unix Command"
 msgstr "Comando Unix"
-
-msgid "Unix charset"
-msgstr "Joc de caracters Unix"
 
 msgid "Unknown"
 msgstr "Desconegut"
@@ -9878,7 +9888,7 @@ msgstr ""
 "Actualitzar ZFS i afegir totes les banderes de característiques suportades "
 "en una piscina"
 
-msgid "Upload bandwidth"
+msgid "Upload Bandwidth"
 msgstr "Ample de banda de pujada"
 
 msgid "Upload directory"
@@ -10002,11 +10012,20 @@ msgstr "Usuari"
 msgid "User ID"
 msgstr "ID d'usuari"
 
+msgid "User Mask"
+msgstr "Màscara d'usuari"
+
+msgid "User Portal"
+msgstr ""
+
 msgid "User Settings"
 msgstr "Configuració de l'usuari"
 
 msgid "User Shares"
 msgstr "Compartits d'usuari"
+
+msgid "User Suffix"
+msgstr "Sufix d'usuari"
 
 msgid "User account is locked"
 msgstr "El compte del usuari està bloquejat"
@@ -10025,12 +10044,6 @@ msgstr "Identificació nombre del usuari"
 
 msgid "User password."
 msgstr "Contrasenya d'usuari."
-
-msgid "User portal"
-msgstr "Portal d'usuari"
-
-msgid "User suffix"
-msgstr "Sufix d'usuari"
 
 msgid "Username"
 msgstr "Nom d'usuari"
@@ -10210,8 +10223,8 @@ msgstr "ADVERTÈNCIA"
 msgid "WEP"
 msgstr "WEP"
 
-msgid "WINS server"
-msgstr "Servidor WINS"
+msgid "WINS Server"
+msgstr ""
 
 msgid "WINS server IP address (e.g. from MS Active Directory server)."
 msgstr ""
@@ -10239,6 +10252,9 @@ msgstr "WPA-PSK WPA-EAP"
 msgid "WPA2"
 msgstr "WPA2"
 
+msgid "Wait Time"
+msgstr "Temps d'espera"
+
 msgid "Wait time"
 msgstr "Temps d'espera"
 
@@ -10258,11 +10274,14 @@ msgstr ""
 "Avís: Va a eliminar un volum xifrat. Totes les dades es perden i no es poden "
 "recuperar."
 
-msgid "Watch directory"
-msgstr "Directory de supervisió."
+msgid "Watch Directory"
+msgstr "Directori de vigilancia"
 
 msgid "WebGUI"
 msgstr "Interfície Web gràfica d'usuari"
+
+msgid "WebGUI and Root Password"
+msgstr ""
 
 msgid "Webserver"
 msgstr "Servidor Web"
@@ -10341,6 +10360,9 @@ msgstr "Configuració sense fils"
 
 msgid "Workgroup"
 msgstr "Grup de treball"
+
+msgid "Working Directory"
+msgstr ""
 
 msgid "Working directory"
 msgstr "Directori de treball"
@@ -10464,11 +10486,18 @@ msgstr ""
 msgid "You must select at least one authentication method."
 msgstr "Heu de seleccionar almenys un mètode d'autenticació."
 
+msgid ""
+"You need to update your browser or use Internet Explorer 10 or higher."
+msgstr ""
+
 msgid "You should use HTTPS as WebGUI protocol for sending passphrase."
 msgstr "Ha d'utilitzar HTTPS com a protocol WebGUI per enviar contrasenya."
 
 msgid "Your ZFS system is not healthy."
 msgstr "El seu sistema ZFS no és saludable."
+
+msgid "Your browser does not support this svg object type."
+msgstr ""
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -10686,62 +10715,204 @@ msgstr "usuari"
 msgid "week days"
 msgstr "dias de la setmana"
 
-#~ msgid "FTP - Ban module"
-#~ msgstr "FTP - Mòdul expulsió"
+#~ msgid ""
+#~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
+#~ msgstr ""
+#~ "Una adreça IPv6 vàlida ha de ser especificats per al servidor DNS primari / "
+#~ "secundari."
 
-#~ msgid "version:"
-#~ msgstr "versió:"
+#~ msgid ""
+#~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
+#~ msgstr ""
+#~ "Una adreça IPv4 vàlida ha de ser especificats per al servidor DNS primari / "
+#~ "secundari."
 
-#~ msgid "FTP - File transfer"
-#~ msgstr "FTP - Transferència d'arxius"
+#~ msgid "AIO write size"
+#~ msgstr "Mida d'escriptura AIO"
 
-#~ msgid "IPv4 DNS servers"
-#~ msgstr "Servidors DNS IPv4"
+#~ msgid "AIO read size"
+#~ msgstr "Mida de lectura AIO"
 
-#~ msgid "IPv6 DNS servers"
-#~ msgstr "Servidors DNS IPv6"
+#~ msgid "Asynchronous I/O (AIO)"
+#~ msgstr "E / S asíncrona (AIO)"
 
-#~ msgid "System time"
-#~ msgstr "Hora del sistema"
+#~ msgid "Create mask"
+#~ msgstr "Crea màscara"
 
-#~ msgid "DNS domain"
-#~ msgstr "Domini DNS"
+#~ msgid "Directory mask"
+#~ msgstr "Màscara de directori"
 
-#~ msgid "DNS forwarder"
-#~ msgstr "Promotor de DNS"
+#~ msgid "Dos charset"
+#~ msgstr "Joc de caracteres Dos"
 
-#~ msgid "NetBIOS domain"
-#~ msgstr "Domini NetBIOS"
+#~ msgid "EA support"
+#~ msgstr "Suport EA"
 
-#~ msgid "Date format"
-#~ msgstr "Format de la data"
+#~ msgid "Enable ZFS ACL"
+#~ msgstr "Habilita ZFS ACL"
 
-#~ msgid "Authenticate path & realm"
-#~ msgstr "Autenticar ruta i regne"
+#~ msgid "Enable guest access"
+#~ msgstr "Habilitar access a convidat."
 
-#~ msgid "Log order"
-#~ msgstr "Ordre del registres"
+#~ msgid "Enable large read/write"
+#~ msgstr "Habilita gran lectura/escriptura"
 
-#~ msgid "Event selection"
-#~ msgstr "Selecció d'esdeveniments"
+#~ msgid "Enable permission inheritance"
+#~ msgstr "Habilitar l'herència de permisos"
 
-#~ msgid "List Detected Disks"
-#~ msgstr "Llista discs detectats"
+#~ msgid "Enable recycle bin"
+#~ msgstr "Habilita la paperera de reciclatge"
 
-#~ msgid "Max entries"
-#~ msgstr "Nombre màxim d'entrades"
+#~ msgid "Enable shadow copy"
+#~ msgstr "Activar la còpia d'ombra"
 
-#~ msgid "Remote syslog messages"
-#~ msgstr "Missatges de registre del sistema remot"
+#~ msgid "Enable store DOS attributes"
+#~ msgstr "Activar amagatzamar atributs DOS"
 
-#~ msgid "Time zone"
-#~ msgstr "Zona horària"
+#, php-format
+#~ msgid ""
+#~ "Samba will read from file asynchronously when size of request is bigger than "
+#~ "this value. (%d by default)"
+#~ msgstr ""
+#~ "Samba llegeix l'arxiu de forma asíncrona quan la mida de la sol·licitud és "
+#~ "més gran que aquest valor. (%d per defecte)"
 
-#~ msgid "User shares"
-#~ msgstr "Comparticions d'usuari"
+#, php-format
+#~ msgid ""
+#~ "Samba will write to file asynchronously when size of request is bigger than "
+#~ "this value. (%d by default)"
+#~ msgstr ""
+#~ "Samba escriurà l'arxiu de forma asíncrona quan la mida de la sol·licitud és "
+#~ "més gran que aquest valor. (%d per defecte)"
 
-#~ msgid "Admin password"
-#~ msgstr "Contrasenya de l'administrador"
+#~ msgid "Enable Asynchronous I/O (AIO)"
+#~ msgstr "Habilita E/S asíncrona (AIO)"
 
-#~ msgid "Decrypt password"
-#~ msgstr "Desxifrar contrasenya"
+#~ msgid "Enable extended attribute support"
+#~ msgstr "Habilitar el suport de atribut estès"
+
+#~ msgid "Guest account"
+#~ msgstr "Compte de convidat"
+
+#~ msgid "Recycle bin"
+#~ msgstr "Paperera"
+
+#~ msgid "Inherit permissions"
+#~ msgstr "Permisos heretats"
+
+#~ msgid "Hide dot files"
+#~ msgstr "Amaga arxius punt"
+
+#~ msgid "Interface selection"
+#~ msgstr "Selecció de la interficie"
+
+#~ msgid "Large read/write"
+#~ msgstr "Lectura/escriptura llarga"
+
+#~ msgid "Map to guest"
+#~ msgstr "Mapeja a convidats"
+
+#~ msgid "Enable ACL inheritance"
+#~ msgstr "Permetre heretar ACL"
+
+#~ msgid "AIO module"
+#~ msgstr "Mòdul AIO"
+
+#~ msgid "NetBIOS name"
+#~ msgstr "Nom NetBIOS"
+
+#~ msgid "AFP compatibility"
+#~ msgstr "Compatibilitat AFP"
+
+#~ msgid "Enable 'Asynchronous I/O (AIO)' switch."
+#~ msgstr "Habilitar interruptor 'E/S asíncrona (AIO)'."
+
+#~ msgid "Enable mapping DOS attributes"
+#~ msgstr "Habilitar l'assignació d'atributs DOS"
+
+#~ msgid "Enhanced compatibility with Netatalk AFP server"
+#~ msgstr "Compatibilitat millorada amb el servidor netatalk AFP"
+
+#~ msgid "Mapping DOS attributes"
+#~ msgstr "Atributs del mapatge DOS"
+
+#~ msgid "Client Min Protocol"
+#~ msgstr "Protocol Min client"
+
+#~ msgid "Client Max Protocol"
+#~ msgstr "Protocol Max client"
+
+#~ msgid "Receive Buffer Size"
+#~ msgstr "Mida del Buffer de recepció"
+
+#~ msgid "Server Max Protocol"
+#~ msgstr "Protocol Max servidor"
+
+#~ msgid "Server Min Protocol"
+#~ msgstr "Protocol Minìm servidor"
+
+#~ msgid "Set read only"
+#~ msgstr "Fixar-ho de només lectura"
+
+#~ msgid "Send Buffer Size"
+#~ msgstr "Enviar mida de la memòria intermèdia"
+
+#~ msgid "Set browseable"
+#~ msgstr "Establir navegable"
+
+#~ msgid "Shadow Copy format"
+#~ msgstr "Format de copia a l'ombra"
+
+#~ msgid "Store NTFS acls"
+#~ msgstr "Desa ACLS NTFS"
+
+#~ msgid "Store DOS attributes"
+#~ msgstr "Desa atributs DOS"
+
+#~ msgid "Store NTFS acls in Extended Attributes"
+#~ msgstr "Desa ACLS de NTFS en atributs extesos"
+
+#~ msgid "Store alternate data streams"
+#~ msgstr "Emmagatzemar seqüències de dades alternatives"
+
+#~ msgid "Store alternate data streams in Extended Attributes"
+#~ msgstr ""
+#~ "Emmagatzemar seqüències de dades alternatives en els atributs estesos"
+
+#~ msgid "Swap disabled"
+#~ msgstr "Intercanvi desactivat"
+
+#~ msgid ""
+#~ "The workgroup in which the server will appear when queried by Windows or SMB "
+#~ "clients (maximum 15 characters)."
+#~ msgstr ""
+#~ "El grup de treball en què apareixerà el servidor quan se'ls pregunta per "
+#~ "Windows o clients SMB (màxim 15 caràcters)."
+
+#~ msgid "This will provide ZFS ACL support. (ZFS only)"
+#~ msgstr "Això proporcionarà el suport de ZFS ACL. (Només ZFS)"
+
+#~ msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
+#~ msgstr ""
+#~ "Això proporcionarà còpia de l'ombra creada per auto instantànies. (Només ZFS)"
+
+#~ msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
+#~ msgstr "Això proporcionarà ACL NTFS sense suport de ZFS ACL UFS."
+
+#~ msgid "Time server"
+#~ msgstr "Servidor d'hora"
+
+#~ msgid "Unix charset"
+#~ msgstr "Joc de caracters Unix"
+
+#~ msgid "WINS server"
+#~ msgstr "Servidor WINS"
+
+#~ msgid "Trusted domains"
+#~ msgstr "Dominis de confiança"
+
+#~ msgid "Null passwords"
+#~ msgstr "Contrasenya nules"
+
+#~ msgid "Password server"
+#~ msgstr "Contrasenya del servidor"

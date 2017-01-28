@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-26 21:12+0000\n"
+"POT-Creation-Date: 2017-01-28 02:17+0000\n"
 "PO-Revision-Date: 2016-11-08 14:34+0000\n"
 "Last-Translator: Kini <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
+"X-Launchpad-Export-Date: 2017-01-28 01:57+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
@@ -271,10 +271,11 @@ msgid ""
 "A valid IP address or CIDR notation must be specified for the hosts allow."
 msgstr ""
 
-msgid ""
-"A valid IPv4 address must be specified for the primary/secondary DNS server."
+msgid "A valid IPv4 address must be specified for the primary DNS server."
 msgstr ""
-"Določen mora biti veljaven IPv4 naslov primarnega/sekundarnega DNS strežnika."
+
+msgid "A valid IPv4 address must be specified for the secondary DNS server."
+msgstr ""
 
 msgid "A valid IPv4 address must be specified."
 msgstr "Določen mora biti veljaven IPv4 naslov."
@@ -285,10 +286,11 @@ msgstr "Vnešeno mora biti veljavno IPv4 omrežje."
 msgid "A valid IPv6 Gateway address must be specified."
 msgstr "Določen mora biti veljaven naslov IPv6 prehoda."
 
-msgid ""
-"A valid IPv6 address must be specified for the primary/secondary DNS server."
+msgid "A valid IPv6 address must be specified for the primary DNS server."
 msgstr ""
-"Določen mora biti veljaven IPv6 naslov primarnega/sekundarnega DNS strežnika."
+
+msgid "A valid IPv6 address must be specified for the secondary DNS server."
+msgstr ""
 
 msgid "A valid IPv6 address must be specified."
 msgstr "Določen mora biti veljaven IPv6 naslov."
@@ -335,20 +337,20 @@ msgstr "AD ali PDC ime."
 msgid "AFP"
 msgstr "AFP"
 
-msgid "AFP compatibility"
-msgstr "AFP kompatibilnost"
+msgid "AFP Compatibility"
+msgstr ""
 
 msgid "AG"
 msgstr "AG"
 
-msgid "AIO module"
-msgstr "AIO modul"
+msgid "AIO Module"
+msgstr ""
 
-msgid "AIO read size"
-msgstr "AIO velikost branja"
+msgid "AIO Read Size"
+msgstr ""
 
-msgid "AIO write size"
-msgstr "AIO velikost pisanja"
+msgid "AIO Write Size"
+msgstr ""
 
 msgid "ALL Interfaces"
 msgstr "VSI vmesniki"
@@ -543,14 +545,14 @@ msgstr "Dodaj deljeno mapo"
 msgid "Add target"
 msgstr "Dodaj cilj"
 
+msgid "Additional Group"
+msgstr ""
+
 msgid "Additional Network"
 msgstr "Dodatno omrežje"
 
 msgid "Additional Storage"
 msgstr "Dodatna shramba"
-
-msgid "Additional group"
-msgstr "Dodatna skupina"
 
 msgid ""
 "Additional parameters to the hardware-specific part of the driver for second "
@@ -696,9 +698,6 @@ msgstr "Dovoli uporabnikom, da shranijo OS/2 pravila na deljenih mapah."
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "Dovoli uporabnikom, da nadaljujejo prekinjene prenose."
 
-msgid "Allow group"
-msgstr ""
-
 msgid "Allow new files"
 msgstr "Dovoli nove datoteke"
 
@@ -737,6 +736,9 @@ msgstr ""
 
 msgid "AltRoot"
 msgstr "AltRoot"
+
+msgid "Alternate Data Streams"
+msgstr ""
 
 msgid "Alternate TCP port. Default is 22"
 msgstr "Alternativna TCP vrata. Privzeta so 22."
@@ -799,14 +801,14 @@ msgstr "Gostitelj s tem imenom že obstaja."
 msgid "An interface with the specified description already exists."
 msgstr "Vmesnik s tem opisom že obstaja."
 
-msgid "Anonymous access has been deprecated starting from SMB2."
+msgid "Anonymous Bind"
 msgstr ""
 
-msgid "Anonymous bind"
-msgstr "Priklop kot anonimen"
+msgid "Anonymous Users"
+msgstr ""
 
-msgid "Anonymous user bandwidth"
-msgstr "Poraba pasovne širine anonimnih"
+msgid "Anonymous access has been deprecated starting from SMB2."
+msgstr ""
 
 msgid ""
 "Anonymous user download bandwith in KB/s. An empty field means infinity."
@@ -819,9 +821,6 @@ msgid ""
 msgstr ""
 "Poraba pasovne širine nalaganja anonimnih v KB/s. Prazno polje pomeni "
 "neomejeno."
-
-msgid "Anonymous users only"
-msgstr "Samo anonimni uporabniki"
 
 msgid ""
 "Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
@@ -872,8 +871,8 @@ msgstr ""
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Ali ste prepričani, da želite zaustaviti strežnik?"
 
-msgid "Asynchronous I/O (AIO)"
-msgstr "Asinhron I/O (AIO)"
+msgid "Asynchronous I/O"
+msgstr ""
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
@@ -928,6 +927,17 @@ msgstr ""
 msgid "Authenticate URL"
 msgstr "Povezava do prijave"
 
+msgid "Authenticated Users"
+msgstr ""
+
+msgid ""
+"Authenticated user download bandwith in KB/s. An empty field means infinity."
+msgstr ""
+
+msgid ""
+"Authenticated user upload bandwith in KB/s. An empty field means infinity."
+msgstr ""
+
 msgid "Authentication"
 msgstr "Overjanje"
 
@@ -966,6 +976,9 @@ msgstr ""
 
 msgid "Autoselect"
 msgstr "Samodejna izbira"
+
+msgid "Auxiliary Parameter"
+msgstr ""
 
 msgid "Auxiliary Parameters"
 msgstr ""
@@ -1095,8 +1108,8 @@ msgstr "Najboljši na voljo"
 msgid "Bind DN"
 msgstr "Priklopi DN"
 
-msgid "Bind password"
-msgstr "Priklopi ime"
+msgid "Bind Password"
+msgstr ""
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
@@ -1207,11 +1220,11 @@ msgstr "CHAP uporabniki"
 msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
 
+msgid "CIFS/SMB Information"
+msgstr ""
+
 msgid "CIFS/SMB disabled"
 msgstr "CIFS/SMB onemogočen"
-
-msgid "CIFS/SMB informations"
-msgstr "CIFS/SMB informacije"
 
 msgid "CIFS/SMB is enabled."
 msgstr "CIFS/SMB je omogočen."
@@ -1413,10 +1426,10 @@ msgstr ""
 msgid "Client"
 msgstr "Odjemalec"
 
-msgid "Client Max Protocol"
+msgid "Client Max. Protocol"
 msgstr ""
 
-msgid "Client Min Protocol"
+msgid "Client Min. Protocol"
 msgstr ""
 
 msgid "Clone"
@@ -1433,7 +1446,7 @@ msgstr "Stolpci"
 
 msgid ""
 "Comma-separated list of group names that are permitted to login to the FTP "
-"server. (empty is ftp group)"
+"server. (empty = ftp group)."
 msgstr ""
 
 msgid "Command"
@@ -1513,11 +1526,14 @@ msgstr ""
 msgid "Configuration"
 msgstr "Nastavitve"
 
-msgid "Configuration directory"
-msgstr "Direktorij nastavitev"
+msgid "Configuration Directory"
+msgstr ""
 
 msgid "Configuring"
 msgstr "Nastavljanje"
+
+msgid "Confirm New Password"
+msgstr ""
 
 msgid "Confirmation"
 msgstr "Potrditev"
@@ -1750,6 +1766,9 @@ msgstr "Datum nastanka"
 msgid "Create HVM Guest"
 msgstr ""
 
+msgid "Create Mask"
+msgstr ""
+
 msgid "Create PV Guest"
 msgstr ""
 
@@ -1761,9 +1780,6 @@ msgstr "Nastavi in vklopi RAID."
 
 msgid "Create encrypted volume"
 msgstr "Ustvari šifrirano particijo"
-
-msgid "Create mask"
-msgstr "Maska ustvarjanj"
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Ustvari delovni direktorij, če ne obstaja."
@@ -1822,6 +1838,9 @@ msgstr "Trenutno geslo"
 msgid ""
 "Current password is default password. You should use your own password."
 msgstr "Trenutno geslo je privzeto geslo. Uporabite svoje lastno geslo."
+
+msgid "Current password is incorrectly entered."
+msgstr ""
 
 msgid "Current state of drive operation based upon the Life Curve."
 msgstr ""
@@ -1987,12 +2006,8 @@ msgstr ""
 msgid "Default Device Settings"
 msgstr "Privzete nastavitve naprave"
 
-#, php-format
-msgid "Default is %s."
-msgstr "Privzeto %s."
-
-msgid "Default root"
-msgstr "Privzet root"
+msgid "Default Root"
+msgstr ""
 
 msgid "Default user name is 'admin'."
 msgstr "Privzeto uporabniško ime je 'admin'."
@@ -2321,14 +2336,14 @@ msgstr "Mapa"
 msgid "Directory %s doesn't exist!"
 msgstr ""
 
+msgid "Directory Mask"
+msgstr ""
+
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr ""
 
 msgid "Directory listing"
 msgstr "Seznam map"
-
-msgid "Directory mask"
-msgstr "Maska map"
 
 msgid "Directory that contains removable media. (e.g /mnt/iscsi/)"
 msgstr "Mapa, ki vsebuje odstranljiv medij. (npr. /mnt/iscsi/)"
@@ -2426,8 +2441,8 @@ msgid ""
 "or temperature). Unit of measure is unknown."
 msgstr ""
 
-msgid "Distributed hash table"
-msgstr "Razdeljena hash tabela"
+msgid "Distributed Hash Table"
+msgstr ""
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
@@ -2672,7 +2687,7 @@ msgstr "Domena"
 msgid "Domain controller name"
 msgstr "Ime domenskega kontrolerja"
 
-msgid "Domain have no 2nd level name."
+msgid "Domain is missing 2nd level name."
 msgstr ""
 
 msgid "Domain name"
@@ -2699,17 +2714,20 @@ msgstr "Narejeno"
 msgid "Done."
 msgstr "Opravljeno."
 
-msgid "Dos charset"
-msgstr "Dos kodna tabela"
+msgid "Dos Charset"
+msgstr ""
 
 msgid "Download"
 msgstr "Prenos"
 
+msgid "Download Bandwidth"
+msgstr ""
+
 msgid "Download Configuration"
 msgstr ""
 
-msgid "Download bandwidth"
-msgstr "Pasovna širina prenosa"
+msgid "Download Directory"
+msgstr ""
 
 msgid "Download directory"
 msgstr "Mapa prenosov"
@@ -2726,10 +2744,10 @@ msgstr ""
 msgid "Driver"
 msgstr "Gonilnik"
 
-msgid "Driver list"
-msgstr "Seznam gonilnikov"
+msgid "Driver List"
+msgstr ""
 
-msgid "Driver parameters"
+msgid "Driver Parameter"
 msgstr ""
 
 msgid "Driver used"
@@ -2763,8 +2781,8 @@ msgstr "Dinamični DNS"
 msgid "Dynamic IP (DHCP) can not be used for HAST resources."
 msgstr ""
 
-msgid "EA support"
-msgstr "EA podpora"
+msgid "EA Support"
+msgstr ""
 
 msgid "EFI/GPT partition can be use with UFS only."
 msgstr "EFI/GPT particije lahko uporabite samo z UFS."
@@ -2896,20 +2914,20 @@ msgstr ""
 msgid "Enable"
 msgstr "Omogoči"
 
-msgid "Enable 'Asynchronous I/O (AIO)' switch."
-msgstr "Omogoči stikalo 'Asinhron I/O (AIO)'"
+msgid "Enable 'Asynchronous I/O (AIO).' switch."
+msgstr ""
 
 msgid "Enable 'Large read/write' switch."
 msgstr "Omogoči stikalo 'veliko branje/pisanje'"
 
-msgid "Enable ACL inheritance"
+msgid "Enable ACL inheritance."
 msgstr ""
 
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr ""
 
-msgid "Enable Asynchronous I/O (AIO)"
-msgstr "Omogoči asinhron I/O (AIO)"
+msgid "Enable Asynchronous I/O. (AIO)."
+msgstr ""
 
 msgid "Enable Challenge-Response Authentication"
 msgstr ""
@@ -2957,8 +2975,8 @@ msgstr "Omogoči podporo TiVO"
 msgid "Enable Time Machine support"
 msgstr ""
 
-msgid "Enable ZFS ACL"
-msgstr "Omogoči ZFS ACL"
+msgid "Enable ZFS ACL."
+msgstr ""
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
 msgstr ""
@@ -3026,8 +3044,8 @@ msgstr "Dovoli nepopolne domene (wildcard)."
 msgid "Enable encryption."
 msgstr "Omogoči šifriranje"
 
-msgid "Enable extended attribute support"
-msgstr "Omogoči napredno podporo atributov"
+msgid "Enable extended attribute support."
+msgstr ""
 
 msgid "Enable extended attributes for this file system."
 msgstr "Omogoči napredne atribute za ta datotečni sistem."
@@ -3036,9 +3054,6 @@ msgid ""
 "Enable foreground/background file system consistency check during boot "
 "process."
 msgstr "Omogoči preverjanje datotečnih sistemov med zagonom sistema."
-
-msgid "Enable guest access"
-msgstr ""
 
 msgid "Enable guest access."
 msgstr "Omogoči dostop gostom."
@@ -3049,13 +3064,13 @@ msgstr ""
 msgid "Enable keyboard-interactive authentication."
 msgstr "Omogoči prijavo s tipkovnico."
 
-msgid "Enable large read/write"
-msgstr "Omogoči veliko branje/pisanje"
+msgid "Enable large read/write."
+msgstr ""
 
 msgid "Enable local user authentication."
 msgstr "Omogoči preverjanje lokalnih uporabnikov."
 
-msgid "Enable mapping DOS attributes"
+msgid "Enable mapping DOS attributes."
 msgstr ""
 
 msgid "Enable module listing."
@@ -3070,8 +3085,8 @@ msgstr ""
 msgid "Enable peer exchange (PEX)."
 msgstr "Omogoči izmenjavo soležnikov (PEX)."
 
-msgid "Enable permission inheritance"
-msgstr "Omogoči posvojitev dovoljenj"
+msgid "Enable permission inheritance."
+msgstr ""
 
 msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr "Omogoči posredovanje portov z NAT-PMP ali UPnP."
@@ -3079,8 +3094,8 @@ msgstr "Omogoči posredovanje portov z NAT-PMP ali UPnP."
 msgid "Enable proxy authentication."
 msgstr "Omogoči proxy prijavo."
 
-msgid "Enable recycle bin"
-msgstr "Omogoči koš"
+msgid "Enable recycle bin."
+msgstr ""
 
 msgid "Enable remote monitoring of the local connected UPS."
 msgstr "Omogoči oddaljen nadzor nad priključenimi UPS napravami."
@@ -3102,11 +3117,11 @@ msgstr "Omogoči drugi lokalno priključeni UPS"
 msgid "Enable serial console."
 msgstr "Omogoči serijsko konzolo"
 
-msgid "Enable shadow copy"
+msgid "Enable shadow copy."
 msgstr ""
 
-msgid "Enable store DOS attributes"
-msgstr "Omogoči shranjevanje DOS atributov"
+msgid "Enable store DOS attributes."
+msgstr ""
 
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Omogoči ident protokol (RFC1413)."
@@ -3175,7 +3190,7 @@ msgstr "Uporabljen šifrirni algoritem."
 msgid "English"
 msgstr "Angleščina"
 
-msgid "Enhanced compatibility with Netatalk AFP server"
+msgid "Enhanced compatibility with Netatalk AFP server."
 msgstr ""
 
 msgid "Enter Command"
@@ -3187,6 +3202,12 @@ msgstr ""
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
 "default (80 for HTTP, 443 for HTTPS)."
+msgstr ""
+
+#, php-format
+msgid ""
+"Enter a custom port number if you want to override the default port. Default "
+"port is %s."
 msgstr ""
 
 msgid "Enter a description"
@@ -3359,6 +3380,9 @@ msgstr ""
 "Obseg mora biti definiran, preden je lahko uporabljen. Enak obseg ne more "
 "biti večkrat uporabljen."
 
+msgid "Extra Options"
+msgstr ""
+
 msgid "Extra options"
 msgstr "Dodatne možnosti"
 
@@ -3482,6 +3506,9 @@ msgstr "Urejevalnik datotek"
 
 msgid "File Manager"
 msgstr "Upravljalnik datotek"
+
+msgid "File Mask"
+msgstr ""
 
 msgid "File Path"
 msgstr "Pot do datoteke"
@@ -3714,17 +3741,22 @@ msgstr ""
 msgid "Greek"
 msgstr "Grščina"
 
-msgid "Greeting banner displayed by FTP when a connection first comes in."
+msgid "Greeting banner displayed to client when firts connection comes in."
 msgstr ""
-"Pozdravno sporočilo, ki bo prikazano pri prvi povezavi na FTP strežnik."
 
 msgid "Group"
 msgstr "Skupina"
+
+msgid "Group Allow"
+msgstr ""
 
 msgid "Group ID"
 msgstr "ID skupine"
 
 msgid "Group Settings"
+msgstr ""
+
+msgid "Group Suffix"
 msgstr ""
 
 msgid "Group compilations"
@@ -3742,9 +3774,6 @@ msgstr "Ime skupine."
 msgid "Group numeric id."
 msgstr "Numerični identifikator skupine"
 
-msgid "Group suffix"
-msgstr "Pripona skupine"
-
 msgid "Groupmask - Mask ACL with mode"
 msgstr ""
 
@@ -3754,8 +3783,8 @@ msgstr "Skupine"
 msgid "Guest"
 msgstr "Gost"
 
-msgid "Guest account"
-msgstr "Gost"
+msgid "Guest Account"
+msgstr ""
 
 msgid "HAST"
 msgstr "HAST"
@@ -3837,8 +3866,8 @@ msgstr ""
 msgid "Hide Default Groups"
 msgstr ""
 
-msgid "Hide dot files"
-msgstr "Skrij datoteke s piko"
+msgid "Hide Dot Files"
+msgstr ""
 
 msgid "High voltage boosting transfer point"
 msgstr ""
@@ -3867,9 +3896,6 @@ msgstr "Gostitelj"
 msgid "Host access control"
 msgstr "Nadzor dostopa"
 
-msgid "Host name"
-msgstr "Ime gostitelja"
-
 msgid "Host resources"
 msgstr "Viri"
 
@@ -3883,6 +3909,9 @@ msgid "Hosts"
 msgstr "Gostitelji"
 
 msgid "Hosts Allow"
+msgstr ""
+
+msgid "Hosts Deny"
 msgstr ""
 
 msgid "Hosts Setup"
@@ -4002,8 +4031,8 @@ msgstr "ISO datoteka, ki bo priklopljena."
 msgid "ISP DNS Servers"
 msgstr ""
 
-msgid "Ident protocol"
-msgstr "Ident protokol"
+msgid "IdentLookups"
+msgstr ""
 
 msgid "Identifier"
 msgstr "Označevalec"
@@ -4076,12 +4105,6 @@ msgid ""
 "If this property is enabled, the snapshots are displayed into .zfs directory."
 msgstr ""
 
-msgid ""
-"If you want to change the password for accessing the WebGUI, enter it here "
-"twice."
-msgstr ""
-"Če želite spremeniti geslo za dostop do spletnega vmesnika, ga vnesite tukaj."
-
 msgid "Import"
 msgstr "Uvoz"
 
@@ -4127,8 +4150,8 @@ msgstr ""
 msgid "Incoming Line/Power Information"
 msgstr ""
 
-msgid "Incomplete directory"
-msgstr "Nepopoln direktorij"
+msgid "Incomplete Directory"
+msgstr ""
 
 msgid ""
 "Indicates the approximate SSD life left, in terms of program/erase cycles or "
@@ -4159,8 +4182,8 @@ msgstr ""
 msgid "Inherit ACL"
 msgstr ""
 
-msgid "Inherit permissions"
-msgstr "Podeduj dovoljenja"
+msgid "Inherit Permissions"
+msgstr ""
 
 msgid "Inhibit some of the syslog diagnostics for bad lines in /etc/exports."
 msgstr "Zadrži nekatere syslog diagnostike za napačne vrstice v /etc/exports"
@@ -4280,9 +4303,6 @@ msgstr "Upravljanje omrežnih kartic"
 msgid "Interface Selection"
 msgstr ""
 
-msgid "Interface selection"
-msgstr "Izbira vmesnika"
-
 msgid "Interfaces"
 msgstr "Vmesniki"
 
@@ -4338,11 +4358,9 @@ msgid ""
 msgstr ""
 
 msgid ""
-"It is impossible to enable 'Anonymous users only' and 'Local users only' "
-"authentication simultaneously."
+"It is impossible to enable 'Anonymous Users' and 'Authenticated Users' both "
+"at the same time."
 msgstr ""
-"Hkrati ne morete omogočiti 'samo anonimne uporabnike' in 'samo lokalne "
-"uporabnike'."
 
 msgid ""
 "It is not recommanded to import non healthy pools nor virtual devices that "
@@ -4452,6 +4470,9 @@ msgstr "Upravljanje omrežja"
 msgid "LAN Only"
 msgstr "Samo LAN"
 
+msgid "LAN interface is not configured."
+msgstr ""
+
 msgid "LAN net"
 msgstr "LAN omrežje"
 
@@ -4482,8 +4503,8 @@ msgstr "Jezik"
 msgid "Language to use on front panel"
 msgstr ""
 
-msgid "Large read/write"
-msgstr "Veliko branje/pisanje"
+msgid "Large Read/Write"
+msgstr ""
 
 msgid "Last Configuration Change"
 msgstr ""
@@ -4621,22 +4642,6 @@ msgstr "Lokalni deljeni vir (cilj)"
 msgid "Local shares to be synchronized"
 msgstr "Lokala deljena mapa, ki naj bo sinhronizirana"
 
-msgid "Local user bandwidth"
-msgstr "Omejitev prenosa lokalnemu uporabniku"
-
-msgid "Local user download bandwith in KB/s. An empty field means infinity."
-msgstr ""
-"Omejitev prenosa lokalnemu uporabniku, v KB/s. Prazno polje pomeni, da "
-"omejitve ni."
-
-msgid "Local user upload bandwith in KB/s. An empty field means infinity."
-msgstr ""
-"Omejitev nalaganja lokalnemu uporabniku, v KB/s. Prazno polje pomeni, da "
-"omejitve ni."
-
-msgid "Local users only"
-msgstr "Samo lokalni uporabniki"
-
 msgid "Location"
 msgstr "Lokacija"
 
@@ -4771,8 +4776,8 @@ msgstr "MS domena"
 msgid "MTU"
 msgstr "MTU"
 
-msgid "Machine suffix"
-msgstr "Pripona"
+msgid "Machine Suffix"
+msgstr ""
 
 msgid "Maintenance"
 msgstr "Vzdrževanje"
@@ -4801,13 +4806,13 @@ msgstr "Datum proizvodnje"
 msgid "Map all users to root"
 msgstr "Dodaj vse uporabnike k root-u"
 
-msgid "Map to guest"
+msgid "Map to Guest"
 msgstr ""
 
 msgid "Map to user"
 msgstr "Dodeli uporabniku"
 
-msgid "Mapping DOS attributes"
+msgid "Mapping DOS Attributes"
 msgstr ""
 
 msgid "Mar"
@@ -4821,10 +4826,22 @@ msgid ""
 "not specified."
 msgstr ""
 
-msgid "Masquerade address"
-msgstr "Prikrij naslove"
+msgid "Masquerade Address"
+msgstr ""
 
 msgid "Max Entries"
+msgstr ""
+
+msgid "Max. Clients"
+msgstr ""
+
+msgid "Max. Connections Per Host"
+msgstr ""
+
+msgid "Max. Login Attempts"
+msgstr ""
+
+msgid "Max. Passive Port"
 msgstr ""
 
 msgid "Max. TTL"
@@ -4833,17 +4850,8 @@ msgstr "Največji TTL"
 msgid "Max. block size"
 msgstr "Največja velikost bloka"
 
-msgid "Max. conn. per IP"
-msgstr "Največje število povezav na IP"
-
 msgid "Max. connections"
 msgstr "Največ povezav"
-
-msgid "Max. login attempts"
-msgstr "Največ poizkusov prijav"
-
-msgid "Max. passive port"
-msgstr "Najvišji pasiv port"
 
 msgid "Max. pre-send R2T"
 msgstr "Največ predposlanih R2T"
@@ -4886,12 +4894,13 @@ msgstr ""
 msgid "Maximum number of allowed password attempts before disconnection."
 msgstr "Največ dovoljenih poizkusov prijave, pred prekinitvijo."
 
+msgid ""
+"Maximum number of connections allowed per IP address. (0 = unlimited)."
+msgstr ""
+
 #, php-format
 msgid "Maximum number of connections in each session (%d by default)."
 msgstr "Največ povezav v vsaki seji (%d privzeto)."
-
-msgid "Maximum number of connections per IP address (0 = unlimited)."
-msgstr "Največje število povezav na IP naslov (0 = neomejeno)."
 
 #, php-format
 msgid ""
@@ -4905,11 +4914,11 @@ msgstr ""
 msgid "Maximum number of sessions holding at same time (%d by default)."
 msgstr "Najvišje število sej (%d privzeto)."
 
-msgid "Maximum number of simultaneous clients."
-msgstr "Največje število hkratnih klientov."
-
 msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
 msgstr "Največje število hkratnih povezav. Privzeto je 0 (neomejeno)."
+
+msgid "Maximum number of users that can connect to the server."
+msgstr ""
 
 msgid "Maximum relative humidity seen (percent)"
 msgstr ""
@@ -4962,8 +4971,8 @@ msgstr "MiB"
 msgid "MibII"
 msgstr "MibII"
 
-msgid "Min. passive port"
-msgstr "Najnižji pasiv port"
+msgid "Min. Passive Port"
+msgstr ""
 
 msgid "MiniDLNA"
 msgstr "MiniDLNA"
@@ -5151,6 +5160,9 @@ msgstr ""
 msgid "NT1 (CIFS)"
 msgstr ""
 
+msgid "NTFS ACLs"
+msgstr ""
+
 msgid "NTP Time Server"
 msgstr ""
 
@@ -5193,9 +5205,6 @@ msgstr ""
 
 msgid "NetBIOS Name"
 msgstr ""
-
-msgid "NetBIOS name"
-msgstr "NetBIOS ime"
 
 msgid "Netgraph"
 msgstr "Netgraph"
@@ -5247,6 +5256,11 @@ msgstr ""
 msgid "New Password"
 msgstr ""
 
+msgid ""
+"New Password does not match the confirmation password. Please ensure both "
+"passwords are the same."
+msgstr ""
+
 msgid "New password"
 msgstr "Novo geslo"
 
@@ -5255,6 +5269,9 @@ msgstr "Naprej"
 
 msgid "No"
 msgstr "Ne"
+
+msgid "No DNS server have been configured."
+msgstr ""
 
 msgid "No DNS setting found."
 msgstr ""
@@ -5462,17 +5479,14 @@ msgstr "november"
 msgid "Now"
 msgstr "Zdaj"
 
-msgid "Null passwords"
-msgstr "Prazna gesla"
+msgid "Null Passwords"
+msgstr ""
 
 msgid "Number of bad battery packs"
 msgstr ""
 
 msgid "Number of battery packs"
 msgstr ""
-
-msgid "Number of clients"
-msgstr "Število klientov"
 
 msgid "Number of hours elapsed in the power-on state."
 msgstr ""
@@ -5519,9 +5533,6 @@ msgid "Off"
 msgstr "Izključeno"
 
 msgid "Old passphrase"
-msgstr "Trenutno geslo"
-
-msgid "Old password"
 msgstr "Trenutno geslo"
 
 msgid "On"
@@ -5680,8 +5691,8 @@ msgstr "Tip particije"
 msgid "Partitions"
 msgstr "Particije"
 
-msgid "Passive ports"
-msgstr "Pasiv porti"
+msgid "Passive Port"
+msgstr ""
 
 msgid ""
 "Passive ports restricts the range of ports from which the server will select "
@@ -5719,14 +5730,25 @@ msgstr "Geslo"
 msgid "Password (confirmed)"
 msgstr "Geslo (potrjeno)"
 
+msgid "Password Encryption"
+msgstr ""
+
+msgid "Password Server"
+msgstr ""
+
+msgid "Password Suffix"
+msgstr ""
+
 msgid "Password authentication"
 msgstr "Prijava z geslom"
 
+msgid ""
+"Password does not match the confirmation password. Please ensure both "
+"passwords are the same."
+msgstr ""
+
 msgid "Password don't match."
 msgstr "Gesli se ne ujemata"
-
-msgid "Password encryption"
-msgstr "Šifriranje gesla"
 
 msgid "Password for the administrative pages."
 msgstr "Geslo za administrativne strani."
@@ -5734,15 +5756,9 @@ msgstr "Geslo za administrativne strani."
 msgid "Password of domain administrator account."
 msgstr "Geslo za domenskega administratorja."
 
-msgid "Password server"
-msgstr ""
-
 msgid ""
 "Password server name or IP address (e.g. Active Directory domain controller)."
 msgstr ""
-
-msgid "Password suffix"
-msgstr "Pripona gesla"
 
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
 msgstr ""
@@ -5766,14 +5782,17 @@ msgstr "Pot, ki bo deljena."
 msgid "Path to the local device. (e.g. %s)"
 msgstr "Pot do lokalne naprave. (npr. %s)"
 
+msgid "Peer Exchange"
+msgstr ""
+
+msgid "Peer Port"
+msgstr ""
+
 msgid "Peer Secret"
 msgstr "Peer geslo"
 
 msgid "Peer User"
 msgstr "Peer uporabnik"
-
-msgid "Peer exchange"
-msgstr "Izmenjava pijavk"
 
 msgid "Peer port"
 msgstr "Peer port"
@@ -5783,6 +5802,9 @@ msgstr "Nastavitve delovanja"
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
+msgstr ""
+
+msgid "Permit Root Login"
 msgstr ""
 
 msgid "Permit root login"
@@ -5926,8 +5948,8 @@ msgstr "Vrata "
 msgid "Port %ld is already used by another service."
 msgstr "Vrata %ld uporablja že drug servis"
 
-msgid "Port forwarding"
-msgstr "Posredovanje vrat"
+msgid "Port Forwarding"
+msgstr ""
 
 #, php-format
 msgid "Port number must be in the range between %d and %d."
@@ -6212,6 +6234,9 @@ msgstr "Ramdisk"
 msgid "Read"
 msgstr "Preberi"
 
+msgid "Read Only"
+msgstr ""
+
 msgid "Read Only (ro)"
 msgstr "Samo za branje (ro)"
 
@@ -6267,8 +6292,8 @@ msgstr ""
 msgid "Reboot"
 msgstr "Ponovni zagon"
 
-msgid "Receive Buffer Size"
-msgstr "Velikost predpomnilnika sprejemanja"
+msgid "Receive Buffer"
+msgstr ""
 
 msgid "Record is locked"
 msgstr ""
@@ -6279,8 +6304,8 @@ msgstr "Vrnitev v direktorije."
 msgid "Recursive"
 msgstr "Rekurziven"
 
-msgid "Recycle bin"
-msgstr "Koš"
+msgid "Recycle Bin"
+msgstr ""
 
 msgid "Refresh"
 msgstr "Osveži"
@@ -6479,11 +6504,11 @@ msgstr "Romunsko"
 msgid "Root"
 msgstr "Root"
 
-msgid "Root bind DN"
-msgstr "Root priklop DN"
+msgid "Root Bind DN"
+msgstr ""
 
-msgid "Root bind password"
-msgstr "Root priklopno geslo"
+msgid "Root Bind Password"
+msgstr ""
 
 msgid "Rotation Rate"
 msgstr ""
@@ -6497,8 +6522,8 @@ msgstr "Roundrobin"
 msgid "Routes"
 msgstr "Poti"
 
-msgid "Routing tables"
-msgstr "Routing tabele"
+msgid "Routing Tables"
+msgstr ""
 
 msgid "Rows"
 msgstr "Vrstice"
@@ -6607,18 +6632,14 @@ msgstr ""
 #, php-format
 msgid ""
 "Samba will read from file asynchronously when size of request is bigger than "
-"this value. (%d by default)"
+"this value. (%d by default)."
 msgstr ""
-"Samba bo brala iz datoteke asinhrono, ko je velikost zahtevka višja, kot ta "
-"vrednost. (%d privzeto)"
 
 #, php-format
 msgid ""
 "Samba will write to file asynchronously when size of request is bigger than "
-"this value. (%d by default)"
+"this value. (%d by default)."
 msgstr ""
-"Samba bo pisala v datoteko asinhrono, ko je velikost zahtevka večja od "
-"nastavljene vrednosti. (%d privzeto)"
 
 msgid "Sat"
 msgstr "sob"
@@ -6837,8 +6858,8 @@ msgstr ""
 msgid "Self-tests Management"
 msgstr ""
 
-msgid "Send Buffer Size"
-msgstr "Velikost predpomnilnika pošiljanja"
+msgid "Send Buffer"
+msgstr ""
 
 msgid "Send Command!"
 msgstr "Pošlji ukaz!"
@@ -6885,10 +6906,10 @@ msgstr "Serijska številka"
 msgid "Server"
 msgstr "Strežnik"
 
-msgid "Server Max Protocol"
+msgid "Server Max. Protocol"
 msgstr ""
 
-msgid "Server Min Protocol"
+msgid "Server Min. Protocol"
 msgstr ""
 
 msgid "Server Name"
@@ -6918,11 +6939,11 @@ msgstr "Storitve"
 msgid "Set additional group memberships for this account."
 msgstr "Nastavi dodatne skupine temu uporabniku."
 
-msgid "Set browseable"
-msgstr "Lahko se brska"
+msgid "Set browseable."
+msgstr ""
 
-msgid "Set read only"
-msgstr "Samo za branje"
+msgid "Set read only."
+msgstr ""
 
 msgid "Set share password."
 msgstr "Nastavi geslo skupni mapi"
@@ -6982,7 +7003,7 @@ msgstr "Nastavitve"
 msgid "Shadow Copy"
 msgstr ""
 
-msgid "Shadow Copy format"
+msgid "Shadow Copy Format"
 msgstr ""
 
 msgid "Share"
@@ -7270,19 +7291,13 @@ msgstr "Ustavljeno"
 msgid "Storage"
 msgstr "Shramba"
 
-msgid "Store DOS attributes"
-msgstr "Shani DOS atribute"
-
-msgid "Store NTFS acls"
+msgid "Store DOS Attributes"
 msgstr ""
 
-msgid "Store NTFS acls in Extended Attributes"
+msgid "Store NTFS ACLs in Extended Attributes."
 msgstr ""
 
-msgid "Store alternate data streams"
-msgstr ""
-
-msgid "Store alternate data streams in Extended Attributes"
+msgid "Store alternate data streams in Extended Attributes."
 msgstr ""
 
 msgid "Strict DLNA"
@@ -7340,8 +7355,8 @@ msgstr "Izmenjevalni pomnilnik"
 msgid "Swap Usage"
 msgstr ""
 
-msgid "Swap disabled"
-msgstr "Izmenjevalni pomnilnik je onemogočen"
+msgid "Swap is disabled."
+msgstr ""
 
 msgid "Swedish"
 msgstr "Švedščina"
@@ -7434,6 +7449,12 @@ msgstr "Predpomnilnik sistemskih sporočil"
 msgid "System tuning"
 msgstr "Natančno prirejanje sistema"
 
+msgid "TCP Port"
+msgstr ""
+
+msgid "TCP Wrapper"
+msgstr ""
+
 msgid "TCP forwarding"
 msgstr "TCP posredovanje"
 
@@ -7445,9 +7466,6 @@ msgstr ""
 
 msgid "TCP port to bind the server to."
 msgstr "TCP vrata, na katerih strežnik posluša."
-
-msgid "TCP wrapper"
-msgstr ""
 
 msgid "TFTP"
 msgstr "TFTP"
@@ -7461,11 +7479,11 @@ msgstr "TLS"
 msgid "TLS Mode"
 msgstr ""
 
-msgid "TLS Server Certificate Check"
+msgid "TLS Only"
 msgstr ""
 
-msgid "TLS only"
-msgstr "Samo TLS"
+msgid "TLS Server Certificate Check"
+msgstr ""
 
 msgid "Tag"
 msgstr "Oznaka"
@@ -7610,8 +7628,8 @@ msgid ""
 "manufacturing."
 msgstr ""
 
-msgid "The TCP port must be a valid port number."
-msgstr "Vrata TCP mora biti veljavna štrevilka vrat."
+msgid "The TCP Port must be a valid port number."
+msgstr ""
 
 msgid "The UPS identifier and IP address"
 msgstr ""
@@ -7864,9 +7882,6 @@ msgstr ""
 msgid "The cron job has been executed successfully."
 msgstr ""
 
-msgid "The current password is incorrectly entered."
-msgstr ""
-
 #, php-format
 msgid ""
 "The custom format of the snapshot for shadow copy service can be specified. "
@@ -8015,15 +8030,19 @@ msgstr "Prijavno ime je rezervirano."
 msgid "The login name is limited to 16 characters."
 msgstr ""
 
-msgid "The max. connection per IP must be either 0 (unlimited) or greater."
+msgid ""
+"The max. connections per IP address must be either 0 (unlimited) or greater."
+msgstr ""
+
+msgid "The max. number of clients must be in the range from 1 to 50."
 msgstr ""
 
 msgid ""
 "The maximum download bandwith in KiB/s. An empty field means infinity."
 msgstr ""
 
-msgid "The maximum idle time be a number."
-msgstr "Najdaljši čas neaktivnosti mora biti številka."
+msgid "The maximum idle time must be a number."
+msgstr ""
 
 msgid ""
 "The maximum port to allocate for PASV style data connections (0 = use any "
@@ -8090,16 +8109,6 @@ msgstr ""
 
 #, php-format
 msgid "The network '%s' is invalid."
-msgstr ""
-
-msgid ""
-"The new password does not match. Please ensure the passwords match exactly."
-msgstr ""
-
-msgid "The new password is also the default root password of the system!"
-msgstr "Novo geslo je tudi privzeto root geslo sistema!"
-
-msgid "The number of clients must be between 1 and 50."
 msgstr ""
 
 msgid ""
@@ -8278,7 +8287,7 @@ msgstr ""
 
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
-"clients (maximum 15 characters)."
+"clients. (maximum 15 characters)."
 msgstr ""
 
 msgid "The working directory does not exist."
@@ -8641,6 +8650,12 @@ msgid ""
 "added to the LDAP directory, e.g. %s"
 msgstr ""
 
+msgid "This password is required to access the admin web interface."
+msgstr ""
+
+msgid "This password is the root password of the system."
+msgstr ""
+
 msgid "This pool name already exists."
 msgstr ""
 
@@ -8697,13 +8712,13 @@ msgid ""
 "add an existing encrypted disk."
 msgstr ""
 
-msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
+msgid "This will provide NTFS ACLs without ZFS ACL support such as UFS."
 msgstr ""
 
-msgid "This will provide ZFS ACL support. (ZFS only)"
+msgid "This will provide ZFS ACL support. (ZFS only)."
 msgstr ""
 
-msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
+msgid "This will provide shadow copy created by auto snapshot. (ZFS only)."
 msgstr ""
 
 msgid ""
@@ -8725,7 +8740,13 @@ msgstr ""
 msgid "Time"
 msgstr "Čas"
 
+msgid "Time Interval"
+msgstr ""
+
 msgid "Time Machine"
+msgstr ""
+
+msgid "Time Server"
 msgstr ""
 
 msgid "Time Synchronization"
@@ -8746,9 +8767,6 @@ msgstr ""
 msgid "Time interval"
 msgstr ""
 
-msgid "Time server"
-msgstr "Časovni strežnik"
-
 msgid "Time spent during the positioning of the drive heads."
 msgstr ""
 
@@ -8763,6 +8781,9 @@ msgid "Timeout"
 msgstr "Časovna omejitev"
 
 msgid "Times"
+msgstr ""
+
+msgid "Title Speed"
 msgstr ""
 
 msgid "TitleSpeed"
@@ -8917,7 +8938,7 @@ msgstr ""
 msgid "Trivial File Transfer Protocol"
 msgstr ""
 
-msgid "Trusted domains"
+msgid "Trusted Domains"
 msgstr ""
 
 msgid "Try to force import."
@@ -9092,11 +9113,11 @@ msgstr "Unison"
 msgid "Unison File Synchronisation"
 msgstr "Unison datotečna sinhronizacija"
 
-msgid "Unix Command"
+msgid "Unix Charset"
 msgstr ""
 
-msgid "Unix charset"
-msgstr "Unix kodna tabela"
+msgid "Unix Command"
+msgstr ""
 
 msgid "Unknown"
 msgstr ""
@@ -9134,7 +9155,7 @@ msgstr "Posodobi strojno programsko opremo"
 msgid "Upgrade ZFS and add all supported feature flags on a pool"
 msgstr ""
 
-msgid "Upload bandwidth"
+msgid "Upload Bandwidth"
 msgstr ""
 
 msgid "Upload directory"
@@ -9233,10 +9254,19 @@ msgstr "Uporabnik"
 msgid "User ID"
 msgstr ""
 
+msgid "User Mask"
+msgstr ""
+
+msgid "User Portal"
+msgstr ""
+
 msgid "User Settings"
 msgstr ""
 
 msgid "User Shares"
+msgstr ""
+
+msgid "User Suffix"
 msgstr ""
 
 msgid "User account is locked"
@@ -9256,12 +9286,6 @@ msgstr ""
 
 msgid "User password."
 msgstr "Uporabnikovo geslo."
-
-msgid "User portal"
-msgstr ""
-
-msgid "User suffix"
-msgstr "Uporabniška pripona"
 
 msgid "Username"
 msgstr "Uporabniško ime"
@@ -9433,8 +9457,8 @@ msgstr ""
 msgid "WEP"
 msgstr ""
 
-msgid "WINS server"
-msgstr "WINS strežnik"
+msgid "WINS Server"
+msgstr ""
 
 msgid "WINS server IP address (e.g. from MS Active Directory server)."
 msgstr ""
@@ -9460,6 +9484,9 @@ msgstr ""
 msgid "WPA2"
 msgstr ""
 
+msgid "Wait Time"
+msgstr ""
+
 msgid "Wait time"
 msgstr ""
 
@@ -9477,11 +9504,14 @@ msgid ""
 "and can not be recovered."
 msgstr ""
 
-msgid "Watch directory"
+msgid "Watch Directory"
 msgstr ""
 
 msgid "WebGUI"
 msgstr "Spletni vmesnik"
+
+msgid "WebGUI and Root Password"
+msgstr ""
 
 msgid "Webserver"
 msgstr ""
@@ -9548,6 +9578,9 @@ msgstr ""
 
 msgid "Workgroup"
 msgstr "Delovna skupina"
+
+msgid "Working Directory"
+msgstr ""
 
 msgid "Working directory"
 msgstr ""
@@ -9660,10 +9693,17 @@ msgstr ""
 msgid "You must select at least one authentication method."
 msgstr "Izbrati morate vsaj eno metodo preverjanja."
 
+msgid ""
+"You need to update your browser or use Internet Explorer 10 or higher."
+msgstr ""
+
 msgid "You should use HTTPS as WebGUI protocol for sending passphrase."
 msgstr "Za pošiljanje gesla WebGUI priporočamo uporabo HTTPS protokola."
 
 msgid "Your ZFS system is not healthy."
+msgstr ""
+
+msgid "Your browser does not support this svg object type."
 msgstr ""
 
 msgid "ZFS"
@@ -9877,41 +9917,130 @@ msgstr "uporabnik"
 msgid "week days"
 msgstr ""
 
-#~ msgid "FTP - Ban module"
-#~ msgstr "FTP - module prepovedanih"
+#~ msgid ""
+#~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
+#~ msgstr ""
+#~ "Določen mora biti veljaven IPv4 naslov primarnega/sekundarnega DNS strežnika."
 
-#~ msgid "FTP - File transfer"
-#~ msgstr "FTP - prenos datotek"
+#~ msgid ""
+#~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
+#~ msgstr ""
+#~ "Določen mora biti veljaven IPv6 naslov primarnega/sekundarnega DNS strežnika."
 
-#~ msgid "IPv4 DNS servers"
-#~ msgstr "IPv4 DNS strežniki"
+#~ msgid "AIO read size"
+#~ msgstr "AIO velikost branja"
 
-#~ msgid "IPv6 DNS servers"
-#~ msgstr "IPv6 DNS strežniki"
+#~ msgid "AIO write size"
+#~ msgstr "AIO velikost pisanja"
 
-#~ msgid "System time"
-#~ msgstr "Čas sistema"
+#~ msgid "Asynchronous I/O (AIO)"
+#~ msgstr "Asinhron I/O (AIO)"
 
-#~ msgid "Time zone"
-#~ msgstr "Časovni pas"
+#~ msgid "Create mask"
+#~ msgstr "Maska ustvarjanj"
 
-#~ msgid "List Detected Disks"
-#~ msgstr "Spisek zaznanih diskov"
+#~ msgid "Directory mask"
+#~ msgstr "Maska map"
 
-#~ msgid "Admin password"
-#~ msgstr "Administratorsko geslo"
+#~ msgid "Dos charset"
+#~ msgstr "Dos kodna tabela"
 
-#~ msgid "DNS domain"
-#~ msgstr "Domena DNS"
+#~ msgid "EA support"
+#~ msgstr "EA podpora"
 
-#~ msgid "Date format"
-#~ msgstr "Oblika datuma"
+#~ msgid "Enable Asynchronous I/O (AIO)"
+#~ msgstr "Omogoči asinhron I/O (AIO)"
 
-#~ msgid "version:"
-#~ msgstr "različica:"
+#~ msgid "Enable extended attribute support"
+#~ msgstr "Omogoči napredno podporo atributov"
 
-#~ msgid "NetBIOS domain"
-#~ msgstr "NetBIOS domena"
+#~ msgid "Enable large read/write"
+#~ msgstr "Omogoči veliko branje/pisanje"
 
-#~ msgid "Decrypt password"
-#~ msgstr "Geslo za dešifriranje"
+#~ msgid "Enable permission inheritance"
+#~ msgstr "Omogoči posvojitev dovoljenj"
+
+#~ msgid "Enable recycle bin"
+#~ msgstr "Omogoči koš"
+
+#~ msgid "Enable store DOS attributes"
+#~ msgstr "Omogoči shranjevanje DOS atributov"
+
+#~ msgid "Guest account"
+#~ msgstr "Gost"
+
+#~ msgid "Hide dot files"
+#~ msgstr "Skrij datoteke s piko"
+
+#~ msgid "Inherit permissions"
+#~ msgstr "Podeduj dovoljenja"
+
+#~ msgid "Large read/write"
+#~ msgstr "Veliko branje/pisanje"
+
+#~ msgid "NetBIOS name"
+#~ msgstr "NetBIOS ime"
+
+#~ msgid "Null passwords"
+#~ msgstr "Prazna gesla"
+
+#~ msgid "Receive Buffer Size"
+#~ msgstr "Velikost predpomnilnika sprejemanja"
+
+#~ msgid "Recycle bin"
+#~ msgstr "Koš"
+
+#, php-format
+#~ msgid ""
+#~ "Samba will read from file asynchronously when size of request is bigger than "
+#~ "this value. (%d by default)"
+#~ msgstr ""
+#~ "Samba bo brala iz datoteke asinhrono, ko je velikost zahtevka višja, kot ta "
+#~ "vrednost. (%d privzeto)"
+
+#, php-format
+#~ msgid ""
+#~ "Samba will write to file asynchronously when size of request is bigger than "
+#~ "this value. (%d by default)"
+#~ msgstr ""
+#~ "Samba bo pisala v datoteko asinhrono, ko je velikost zahtevka večja od "
+#~ "nastavljene vrednosti. (%d privzeto)"
+
+#~ msgid "Send Buffer Size"
+#~ msgstr "Velikost predpomnilnika pošiljanja"
+
+#~ msgid "Set browseable"
+#~ msgstr "Lahko se brska"
+
+#~ msgid "Set read only"
+#~ msgstr "Samo za branje"
+
+#~ msgid "Store DOS attributes"
+#~ msgstr "Shani DOS atribute"
+
+#~ msgid "Time server"
+#~ msgstr "Časovni strežnik"
+
+#~ msgid "Unix charset"
+#~ msgstr "Unix kodna tabela"
+
+#~ msgid "WINS server"
+#~ msgstr "WINS strežnik"
+
+#~ msgid "Enable 'Asynchronous I/O (AIO)' switch."
+#~ msgstr "Omogoči stikalo 'Asinhron I/O (AIO)'"
+
+#~ msgid "Interface selection"
+#~ msgstr "Izbira vmesnika"
+
+#~ msgid "AIO module"
+#~ msgstr "AIO modul"
+
+#~ msgid "Enable ZFS ACL"
+#~ msgstr "Omogoči ZFS ACL"
+
+#~ msgid "AFP compatibility"
+#~ msgstr "AFP kompatibilnost"
+
+#~ msgid "Swap disabled"
+#~ msgstr "Izmenjevalni pomnilnik je onemogočen"

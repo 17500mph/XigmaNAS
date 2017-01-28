@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-26 21:12+0000\n"
+"POT-Creation-Date: 2017-01-28 02:17+0000\n"
 "PO-Revision-Date: 2016-08-31 21:50+0000\n"
 "Last-Translator: Mustafa DAĞCI <mustafa.matrix@gmail.com>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
+"X-Launchpad-Export-Date: 2017-01-28 01:57+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
@@ -262,9 +262,11 @@ msgid ""
 "A valid IP address or CIDR notation must be specified for the hosts allow."
 msgstr ""
 
-msgid ""
-"A valid IPv4 address must be specified for the primary/secondary DNS server."
-msgstr "Birincil ve ikincil DNS sunucusu için bir geçerli IPv4 adresi girin"
+msgid "A valid IPv4 address must be specified for the primary DNS server."
+msgstr ""
+
+msgid "A valid IPv4 address must be specified for the secondary DNS server."
+msgstr ""
 
 msgid "A valid IPv4 address must be specified."
 msgstr "Geçerli bir IPv4 adresinin belirtilmiş olması gerekir."
@@ -275,10 +277,11 @@ msgstr "Geçerli bir IPv4 network bit hesaplaması belirtilmiş olması gerekir.
 msgid "A valid IPv6 Gateway address must be specified."
 msgstr "Geçerli bir IPv6 Ağ Geçidi adresi belirtilmiş olması gerekir."
 
-msgid ""
-"A valid IPv6 address must be specified for the primary/secondary DNS server."
+msgid "A valid IPv6 address must be specified for the primary DNS server."
 msgstr ""
-"Birincil ve İkincil DNS Server için geçerli bir IPv6 adresi belirtilmelidir."
+
+msgid "A valid IPv6 address must be specified for the secondary DNS server."
+msgstr ""
 
 msgid "A valid IPv6 address must be specified."
 msgstr "Geçerli bir IPv6 adresi belirtilmelidir."
@@ -325,20 +328,20 @@ msgstr "AD veya PDC ismi"
 msgid "AFP"
 msgstr "AFP"
 
-msgid "AFP compatibility"
+msgid "AFP Compatibility"
 msgstr ""
 
 msgid "AG"
 msgstr "AG"
 
-msgid "AIO module"
+msgid "AIO Module"
 msgstr ""
 
-msgid "AIO read size"
-msgstr "AIO okuma boyutu"
+msgid "AIO Read Size"
+msgstr ""
 
-msgid "AIO write size"
-msgstr "AIO yazma boyutu"
+msgid "AIO Write Size"
+msgstr ""
 
 msgid "ALL Interfaces"
 msgstr ""
@@ -533,14 +536,14 @@ msgstr "Paylaşım Ekle"
 msgid "Add target"
 msgstr "Hedef Ekle"
 
+msgid "Additional Group"
+msgstr ""
+
 msgid "Additional Network"
 msgstr ""
 
 msgid "Additional Storage"
 msgstr ""
-
-msgid "Additional group"
-msgstr "Ek Grup"
 
 msgid ""
 "Additional parameters to the hardware-specific part of the driver for second "
@@ -684,9 +687,6 @@ msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr ""
 "Kullanıcıların yükleme ve indirmelerini durdurup devam etmelerine izin ver."
 
-msgid "Allow group"
-msgstr ""
-
 msgid "Allow new files"
 msgstr "Yeni dosyalara izin ver"
 
@@ -728,6 +728,9 @@ msgstr ""
 
 msgid "AltRoot"
 msgstr "AltRoot"
+
+msgid "Alternate Data Streams"
+msgstr ""
 
 msgid "Alternate TCP port. Default is 22"
 msgstr "Varsayılan alternatif TCP Port 22'dir."
@@ -790,14 +793,14 @@ msgstr "Bu isim ile zaten bir bilgisayar mevcut"
 msgid "An interface with the specified description already exists."
 msgstr "Belirtmiş olduğunuz tanım zaten bir arayüzde tanımlanmış."
 
+msgid "Anonymous Bind"
+msgstr ""
+
+msgid "Anonymous Users"
+msgstr ""
+
 msgid "Anonymous access has been deprecated starting from SMB2."
 msgstr ""
-
-msgid "Anonymous bind"
-msgstr ""
-
-msgid "Anonymous user bandwidth"
-msgstr "Blinmeyen kullanıcı bağlantıgenişliği"
 
 msgid ""
 "Anonymous user download bandwith in KB/s. An empty field means infinity."
@@ -808,9 +811,6 @@ msgid ""
 "Anonymous user upload bandwith in KB/s. An empty field means infinity."
 msgstr ""
 "Blinmeyen kullanıcı yükleme KB/s belirtilmiştir. Boş alan sonsuz demektir."
-
-msgid "Anonymous users only"
-msgstr "Sadece anonim kullanıcılar"
 
 msgid ""
 "Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
@@ -861,8 +861,8 @@ msgstr ""
 msgid "Are you sure you want to shutdown the server?"
 msgstr ""
 
-msgid "Asynchronous I/O (AIO)"
-msgstr "Asenkronize I/O (AIO)"
+msgid "Asynchronous I/O"
+msgstr ""
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
@@ -915,6 +915,17 @@ msgstr ""
 msgid "Authenticate URL"
 msgstr "URL Doğrula"
 
+msgid "Authenticated Users"
+msgstr ""
+
+msgid ""
+"Authenticated user download bandwith in KB/s. An empty field means infinity."
+msgstr ""
+
+msgid ""
+"Authenticated user upload bandwith in KB/s. An empty field means infinity."
+msgstr ""
+
 msgid "Authentication"
 msgstr "Kimlik Denetimi"
 
@@ -953,6 +964,9 @@ msgstr ""
 
 msgid "Autoselect"
 msgstr "Otomatik seçim"
+
+msgid "Auxiliary Parameter"
+msgstr ""
 
 msgid "Auxiliary Parameters"
 msgstr ""
@@ -1082,8 +1096,8 @@ msgstr "Mümkün olan en iyisi"
 msgid "Bind DN"
 msgstr "DN ekle"
 
-msgid "Bind password"
-msgstr "Parolayı ekle"
+msgid "Bind Password"
+msgstr ""
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
@@ -1194,11 +1208,11 @@ msgstr "CHAP Kullanıcıları"
 msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
 
+msgid "CIFS/SMB Information"
+msgstr ""
+
 msgid "CIFS/SMB disabled"
 msgstr "CIFS/SMB etkin değil"
-
-msgid "CIFS/SMB informations"
-msgstr "CIFS/SMB bilgileri"
 
 msgid "CIFS/SMB is enabled."
 msgstr ""
@@ -1395,10 +1409,10 @@ msgstr ""
 msgid "Client"
 msgstr "İstemci"
 
-msgid "Client Max Protocol"
+msgid "Client Max. Protocol"
 msgstr ""
 
-msgid "Client Min Protocol"
+msgid "Client Min. Protocol"
 msgstr ""
 
 msgid "Clone"
@@ -1415,7 +1429,7 @@ msgstr "Cols"
 
 msgid ""
 "Comma-separated list of group names that are permitted to login to the FTP "
-"server. (empty is ftp group)"
+"server. (empty = ftp group)."
 msgstr ""
 
 msgid "Command"
@@ -1492,11 +1506,14 @@ msgstr ""
 msgid "Configuration"
 msgstr "Yapılandırma"
 
-msgid "Configuration directory"
-msgstr "Yapılandırma dizini"
+msgid "Configuration Directory"
+msgstr ""
 
 msgid "Configuring"
 msgstr "Ayarla"
+
+msgid "Confirm New Password"
+msgstr ""
 
 msgid "Confirmation"
 msgstr "Doğrulama"
@@ -1730,6 +1747,9 @@ msgstr ""
 msgid "Create HVM Guest"
 msgstr ""
 
+msgid "Create Mask"
+msgstr ""
+
 msgid "Create PV Guest"
 msgstr ""
 
@@ -1741,9 +1761,6 @@ msgstr "RAID oluştur ve başlat"
 
 msgid "Create encrypted volume"
 msgstr "Şifrelenmiş Volume Oluşturuldu"
-
-msgid "Create mask"
-msgstr "Maske Oluşturuldu"
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Çalışma dizini yoksa oluştur."
@@ -1801,6 +1818,9 @@ msgstr ""
 
 msgid ""
 "Current password is default password. You should use your own password."
+msgstr ""
+
+msgid "Current password is incorrectly entered."
 msgstr ""
 
 msgid "Current state of drive operation based upon the Life Curve."
@@ -1967,12 +1987,8 @@ msgstr ""
 msgid "Default Device Settings"
 msgstr ""
 
-#, php-format
-msgid "Default is %s."
-msgstr "Varsayılan %s."
-
-msgid "Default root"
-msgstr "Varsayılan root"
+msgid "Default Root"
+msgstr ""
 
 msgid "Default user name is 'admin'."
 msgstr "İlk geçerli kullanıcı adı 'admin' dir."
@@ -2296,14 +2312,14 @@ msgstr "Dizin"
 msgid "Directory %s doesn't exist!"
 msgstr ""
 
+msgid "Directory Mask"
+msgstr ""
+
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr ""
 
 msgid "Directory listing"
 msgstr "Dizin listeleme"
-
-msgid "Directory mask"
-msgstr "Dizin Maskesi"
 
 msgid "Directory that contains removable media. (e.g /mnt/iscsi/)"
 msgstr "Dizin çıkartılabilir aygıtlar içeriyor. (örn /mnt/iscsi/)"
@@ -2401,7 +2417,7 @@ msgid ""
 "or temperature). Unit of measure is unknown."
 msgstr ""
 
-msgid "Distributed hash table"
+msgid "Distributed Hash Table"
 msgstr ""
 
 msgid "Do not activate this option if you want to add an existing RAID."
@@ -2645,7 +2661,7 @@ msgstr "Alan Adı"
 msgid "Domain controller name"
 msgstr ""
 
-msgid "Domain have no 2nd level name."
+msgid "Domain is missing 2nd level name."
 msgstr ""
 
 msgid "Domain name"
@@ -2672,17 +2688,20 @@ msgstr ""
 msgid "Done."
 msgstr "Bitti"
 
-msgid "Dos charset"
-msgstr "Dos karakter seti"
+msgid "Dos Charset"
+msgstr ""
 
 msgid "Download"
 msgstr "İndir"
 
+msgid "Download Bandwidth"
+msgstr ""
+
 msgid "Download Configuration"
 msgstr ""
 
-msgid "Download bandwidth"
-msgstr "İndirme hızı"
+msgid "Download Directory"
+msgstr ""
 
 msgid "Download directory"
 msgstr "İndirme dizini"
@@ -2699,10 +2718,10 @@ msgstr ""
 msgid "Driver"
 msgstr "Sürücü"
 
-msgid "Driver list"
-msgstr "Sürücü listesi"
+msgid "Driver List"
+msgstr ""
 
-msgid "Driver parameters"
+msgid "Driver Parameter"
 msgstr ""
 
 msgid "Driver used"
@@ -2736,8 +2755,8 @@ msgstr "Dinamik DNS"
 msgid "Dynamic IP (DHCP) can not be used for HAST resources."
 msgstr ""
 
-msgid "EA support"
-msgstr "EA desteği"
+msgid "EA Support"
+msgstr ""
 
 msgid "EFI/GPT partition can be use with UFS only."
 msgstr "EFI/GPT bölümü sadece UFS ile kullanılabilir"
@@ -2869,20 +2888,20 @@ msgstr ""
 msgid "Enable"
 msgstr "Etkinleştir"
 
-msgid "Enable 'Asynchronous I/O (AIO)' switch."
+msgid "Enable 'Asynchronous I/O (AIO).' switch."
 msgstr ""
 
 msgid "Enable 'Large read/write' switch."
 msgstr ""
 
-msgid "Enable ACL inheritance"
+msgid "Enable ACL inheritance."
 msgstr ""
 
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr ""
 
-msgid "Enable Asynchronous I/O (AIO)"
-msgstr "Asynchronous I/O (AIO) Etkinleştir"
+msgid "Enable Asynchronous I/O. (AIO)."
+msgstr ""
 
 msgid "Enable Challenge-Response Authentication"
 msgstr ""
@@ -2930,7 +2949,7 @@ msgstr ""
 msgid "Enable Time Machine support"
 msgstr ""
 
-msgid "Enable ZFS ACL"
+msgid "Enable ZFS ACL."
 msgstr ""
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
@@ -2999,8 +3018,8 @@ msgstr ""
 msgid "Enable encryption."
 msgstr ""
 
-msgid "Enable extended attribute support"
-msgstr "Genişletilmiş öztenlik desteğini aktifleştir"
+msgid "Enable extended attribute support."
+msgstr ""
 
 msgid "Enable extended attributes for this file system."
 msgstr "Bu dosya sisteminde genişletilmiş öznitelikleri etkinleştir."
@@ -3012,9 +3031,6 @@ msgstr ""
 "Boot işlemi süresinde dosya sistem kontrol uyumunu önplan/arka plan da "
 "aktifleştir"
 
-msgid "Enable guest access"
-msgstr ""
-
 msgid "Enable guest access."
 msgstr "Misafir erişimini Aktifleştir"
 
@@ -3024,13 +3040,13 @@ msgstr ""
 msgid "Enable keyboard-interactive authentication."
 msgstr "Keyboard-interactivedoğrulamayı aktifleştir"
 
-msgid "Enable large read/write"
-msgstr "Büyük yazma ve okumayı Aktifleştir"
+msgid "Enable large read/write."
+msgstr ""
 
 msgid "Enable local user authentication."
 msgstr "Lokal kullanıcı yetkilendirmesini Aktifleştir"
 
-msgid "Enable mapping DOS attributes"
+msgid "Enable mapping DOS attributes."
 msgstr ""
 
 msgid "Enable module listing."
@@ -3045,8 +3061,8 @@ msgstr ""
 msgid "Enable peer exchange (PEX)."
 msgstr "Kaynak değiş-tokuşunu etkinleştir (PEX)."
 
-msgid "Enable permission inheritance"
-msgstr "miras iznini etkin kıl"
+msgid "Enable permission inheritance."
+msgstr ""
 
 msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr "NAT-PMP veya UPnP üzerinden port yanıtlamayı etkinleştir."
@@ -3054,8 +3070,8 @@ msgstr "NAT-PMP veya UPnP üzerinden port yanıtlamayı etkinleştir."
 msgid "Enable proxy authentication."
 msgstr "Proxy üzerinden kimlik doğrulamasını etkinleştir"
 
-msgid "Enable recycle bin"
-msgstr "Geri Dönüşüm Kutusunu Aktifleştir"
+msgid "Enable recycle bin."
+msgstr ""
 
 msgid "Enable remote monitoring of the local connected UPS."
 msgstr ""
@@ -3075,11 +3091,11 @@ msgstr ""
 msgid "Enable serial console."
 msgstr ""
 
-msgid "Enable shadow copy"
+msgid "Enable shadow copy."
 msgstr ""
 
-msgid "Enable store DOS attributes"
-msgstr "DOS simgelerini yedeklemeyi etkin kıl"
+msgid "Enable store DOS attributes."
+msgstr ""
 
 msgid "Enable the ident protocol (RFC1413)."
 msgstr ""
@@ -3148,7 +3164,7 @@ msgstr ""
 msgid "English"
 msgstr "İngilizce"
 
-msgid "Enhanced compatibility with Netatalk AFP server"
+msgid "Enhanced compatibility with Netatalk AFP server."
 msgstr ""
 
 msgid "Enter Command"
@@ -3160,6 +3176,12 @@ msgstr ""
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
 "default (80 for HTTP, 443 for HTTPS)."
+msgstr ""
+
+#, php-format
+msgid ""
+"Enter a custom port number if you want to override the default port. Default "
+"port is %s."
 msgstr ""
 
 msgid "Enter a description"
@@ -3322,6 +3344,9 @@ msgid ""
 "more than once."
 msgstr ""
 
+msgid "Extra Options"
+msgstr ""
+
 msgid "Extra options"
 msgstr "Extra ayarlar"
 
@@ -3443,6 +3468,9 @@ msgstr "Dosya Düzenleyici"
 
 msgid "File Manager"
 msgstr "Dosya Yöneticisi"
+
+msgid "File Mask"
+msgstr ""
 
 msgid "File Path"
 msgstr ""
@@ -3674,16 +3702,22 @@ msgstr ""
 msgid "Greek"
 msgstr "Yunanca"
 
-msgid "Greeting banner displayed by FTP when a connection first comes in."
-msgstr "Bağlantı gerçekleştiğinde FTP üzerinden  ekranda kutucuk göster"
+msgid "Greeting banner displayed to client when firts connection comes in."
+msgstr ""
 
 msgid "Group"
 msgstr "Grup"
+
+msgid "Group Allow"
+msgstr ""
 
 msgid "Group ID"
 msgstr "Grup Kimliği"
 
 msgid "Group Settings"
+msgstr ""
+
+msgid "Group Suffix"
 msgstr ""
 
 msgid "Group compilations"
@@ -3701,9 +3735,6 @@ msgstr "Grup ismi"
 msgid "Group numeric id."
 msgstr "Grup sayı kimliği"
 
-msgid "Group suffix"
-msgstr "Grup soneki"
-
 msgid "Groupmask - Mask ACL with mode"
 msgstr ""
 
@@ -3713,8 +3744,8 @@ msgstr "Gruplar"
 msgid "Guest"
 msgstr "Misafir"
 
-msgid "Guest account"
-msgstr "Misafir hesabı"
+msgid "Guest Account"
+msgstr ""
 
 msgid "HAST"
 msgstr ""
@@ -3796,7 +3827,7 @@ msgstr ""
 msgid "Hide Default Groups"
 msgstr ""
 
-msgid "Hide dot files"
+msgid "Hide Dot Files"
 msgstr ""
 
 msgid "High voltage boosting transfer point"
@@ -3826,9 +3857,6 @@ msgstr "Bilgisayar"
 msgid "Host access control"
 msgstr "Sunucu erişim kontrolü"
 
-msgid "Host name"
-msgstr "Sunucu adu"
-
 msgid "Host resources"
 msgstr "Host kaynakları"
 
@@ -3842,6 +3870,9 @@ msgid "Hosts"
 msgstr "Bilgisayarlar"
 
 msgid "Hosts Allow"
+msgstr ""
+
+msgid "Hosts Deny"
 msgstr ""
 
 msgid "Hosts Setup"
@@ -3959,7 +3990,7 @@ msgstr ""
 msgid "ISP DNS Servers"
 msgstr ""
 
-msgid "Ident protocol"
+msgid "IdentLookups"
 msgstr ""
 
 msgid "Identifier"
@@ -4020,12 +4051,6 @@ msgid ""
 "If this property is enabled, the snapshots are displayed into .zfs directory."
 msgstr ""
 
-msgid ""
-"If you want to change the password for accessing the WebGUI, enter it here "
-"twice."
-msgstr ""
-"WebGUI'ye erişmek için parola değiştirmek istiyorsanız, iki kere girin."
-
 msgid "Import"
 msgstr "İçe aktart"
 
@@ -4071,7 +4096,7 @@ msgstr ""
 msgid "Incoming Line/Power Information"
 msgstr ""
 
-msgid "Incomplete directory"
+msgid "Incomplete Directory"
 msgstr ""
 
 msgid ""
@@ -4103,8 +4128,8 @@ msgstr ""
 msgid "Inherit ACL"
 msgstr ""
 
-msgid "Inherit permissions"
-msgstr "İzinleri miras olarak al"
+msgid "Inherit Permissions"
+msgstr ""
 
 msgid "Inhibit some of the syslog diagnostics for bad lines in /etc/exports."
 msgstr ""
@@ -4224,9 +4249,6 @@ msgstr "Arayüz Yönetimi"
 msgid "Interface Selection"
 msgstr ""
 
-msgid "Interface selection"
-msgstr ""
-
 msgid "Interfaces"
 msgstr "Arayüzler"
 
@@ -4282,11 +4304,9 @@ msgid ""
 msgstr ""
 
 msgid ""
-"It is impossible to enable 'Anonymous users only' and 'Local users only' "
-"authentication simultaneously."
+"It is impossible to enable 'Anonymous Users' and 'Authenticated Users' both "
+"at the same time."
 msgstr ""
-"Aynı anda hem \"Yalnızca yerel kullanıcılar\" ve \"Yalnızca adı bilinmeyen "
-"kullanıcılar\"ı etkinleştirmek olanaksız."
 
 msgid ""
 "It is not recommanded to import non healthy pools nor virtual devices that "
@@ -4395,6 +4415,9 @@ msgstr "Lan Yönetimi"
 msgid "LAN Only"
 msgstr ""
 
+msgid "LAN interface is not configured."
+msgstr ""
+
 msgid "LAN net"
 msgstr "LAN ağı"
 
@@ -4425,8 +4448,8 @@ msgstr "Dil"
 msgid "Language to use on front panel"
 msgstr ""
 
-msgid "Large read/write"
-msgstr "Büyük okuma/yazma"
+msgid "Large Read/Write"
+msgstr ""
 
 msgid "Last Configuration Change"
 msgstr ""
@@ -4557,18 +4580,6 @@ msgstr "Yerel paylaşım (hedef)"
 
 msgid "Local shares to be synchronized"
 msgstr "Senkronize edilmiş olan paylaşımların listesi"
-
-msgid "Local user bandwidth"
-msgstr ""
-
-msgid "Local user download bandwith in KB/s. An empty field means infinity."
-msgstr ""
-
-msgid "Local user upload bandwith in KB/s. An empty field means infinity."
-msgstr ""
-
-msgid "Local users only"
-msgstr "Sadece yerek kullanıcılar"
 
 msgid "Location"
 msgstr "Konum"
@@ -4704,7 +4715,7 @@ msgstr "MS Domain"
 msgid "MTU"
 msgstr "MTU"
 
-msgid "Machine suffix"
+msgid "Machine Suffix"
 msgstr ""
 
 msgid "Maintenance"
@@ -4734,13 +4745,13 @@ msgstr ""
 msgid "Map all users to root"
 msgstr "Tüm kullanıcıları roota yönlendir"
 
-msgid "Map to guest"
+msgid "Map to Guest"
 msgstr ""
 
 msgid "Map to user"
 msgstr "Kullanıcıya yönlendir"
 
-msgid "Mapping DOS attributes"
+msgid "Mapping DOS Attributes"
 msgstr ""
 
 msgid "Mar"
@@ -4754,10 +4765,22 @@ msgid ""
 "not specified."
 msgstr ""
 
-msgid "Masquerade address"
+msgid "Masquerade Address"
 msgstr ""
 
 msgid "Max Entries"
+msgstr ""
+
+msgid "Max. Clients"
+msgstr ""
+
+msgid "Max. Connections Per Host"
+msgstr ""
+
+msgid "Max. Login Attempts"
+msgstr ""
+
+msgid "Max. Passive Port"
 msgstr ""
 
 msgid "Max. TTL"
@@ -4766,17 +4789,8 @@ msgstr "Max. TTL"
 msgid "Max. block size"
 msgstr "Max. blok boyutu"
 
-msgid "Max. conn. per IP"
-msgstr "IP başıma maksimum bağlantı"
-
 msgid "Max. connections"
 msgstr "Max. bağlantı"
-
-msgid "Max. login attempts"
-msgstr ""
-
-msgid "Max. passive port"
-msgstr "Max. pasif port"
 
 msgid "Max. pre-send R2T"
 msgstr ""
@@ -4818,12 +4832,13 @@ msgstr ""
 msgid "Maximum number of allowed password attempts before disconnection."
 msgstr ""
 
+msgid ""
+"Maximum number of connections allowed per IP address. (0 = unlimited)."
+msgstr ""
+
 #, php-format
 msgid "Maximum number of connections in each session (%d by default)."
 msgstr ""
-
-msgid "Maximum number of connections per IP address (0 = unlimited)."
-msgstr "IP adresi başına en fazla bağlantı sayısı (0=limitsiz)."
 
 #, php-format
 msgid ""
@@ -4835,11 +4850,11 @@ msgstr ""
 msgid "Maximum number of sessions holding at same time (%d by default)."
 msgstr ""
 
-msgid "Maximum number of simultaneous clients."
-msgstr "Aynı anda en fazla istemci sayısı"
-
 msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
 msgstr "Aynı anda en fazla bağlantı sayısı.Varsayılan 0'dır.(Limitsiz)"
+
+msgid "Maximum number of users that can connect to the server."
+msgstr ""
 
 msgid "Maximum relative humidity seen (percent)"
 msgstr ""
@@ -4892,7 +4907,7 @@ msgstr "MiB"
 msgid "MibII"
 msgstr "MibII"
 
-msgid "Min. passive port"
+msgid "Min. Passive Port"
 msgstr ""
 
 msgid "MiniDLNA"
@@ -5079,6 +5094,9 @@ msgstr ""
 msgid "NT1 (CIFS)"
 msgstr ""
 
+msgid "NTFS ACLs"
+msgstr ""
+
 msgid "NTP Time Server"
 msgstr ""
 
@@ -5121,9 +5139,6 @@ msgstr ""
 
 msgid "NetBIOS Name"
 msgstr ""
-
-msgid "NetBIOS name"
-msgstr "NetBIOS ismi"
 
 msgid "Netgraph"
 msgstr "Netgraph"
@@ -5171,6 +5186,11 @@ msgstr ""
 msgid "New Password"
 msgstr ""
 
+msgid ""
+"New Password does not match the confirmation password. Please ensure both "
+"passwords are the same."
+msgstr ""
+
 msgid "New password"
 msgstr ""
 
@@ -5179,6 +5199,9 @@ msgstr ""
 
 msgid "No"
 msgstr "Hayır"
+
+msgid "No DNS server have been configured."
+msgstr ""
 
 msgid "No DNS setting found."
 msgstr ""
@@ -5379,17 +5402,14 @@ msgstr ""
 msgid "Now"
 msgstr "Şimdi"
 
-msgid "Null passwords"
-msgstr "Boş parolalar"
+msgid "Null Passwords"
+msgstr ""
 
 msgid "Number of bad battery packs"
 msgstr ""
 
 msgid "Number of battery packs"
 msgstr ""
-
-msgid "Number of clients"
-msgstr "İstemcilerin numarası"
 
 msgid "Number of hours elapsed in the power-on state."
 msgstr ""
@@ -5437,9 +5457,6 @@ msgstr "Açık"
 
 msgid "Old passphrase"
 msgstr ""
-
-msgid "Old password"
-msgstr "Eski parola"
 
 msgid "On"
 msgstr "Açık"
@@ -5595,8 +5612,8 @@ msgstr "Birim türü"
 msgid "Partitions"
 msgstr "Disk bölümleri"
 
-msgid "Passive ports"
-msgstr "Pasif portlar"
+msgid "Passive Port"
+msgstr ""
 
 msgid ""
 "Passive ports restricts the range of ports from which the server will select "
@@ -5629,14 +5646,25 @@ msgstr "Parola"
 msgid "Password (confirmed)"
 msgstr "Parola (doğrulanmış)"
 
+msgid "Password Encryption"
+msgstr ""
+
+msgid "Password Server"
+msgstr ""
+
+msgid "Password Suffix"
+msgstr ""
+
 msgid "Password authentication"
 msgstr "Parola doğrulaması"
 
+msgid ""
+"Password does not match the confirmation password. Please ensure both "
+"passwords are the same."
+msgstr ""
+
 msgid "Password don't match."
 msgstr "Parola eşleşmiyor."
-
-msgid "Password encryption"
-msgstr "Parola şifrelemesi"
 
 msgid "Password for the administrative pages."
 msgstr "Yönetici sayfaları için parola"
@@ -5644,15 +5672,9 @@ msgstr "Yönetici sayfaları için parola"
 msgid "Password of domain administrator account."
 msgstr ""
 
-msgid "Password server"
-msgstr ""
-
 msgid ""
 "Password server name or IP address (e.g. Active Directory domain controller)."
 msgstr ""
-
-msgid "Password suffix"
-msgstr "Parola son eki"
 
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
 msgstr ""
@@ -5676,13 +5698,16 @@ msgstr ""
 msgid "Path to the local device. (e.g. %s)"
 msgstr ""
 
+msgid "Peer Exchange"
+msgstr ""
+
+msgid "Peer Port"
+msgstr ""
+
 msgid "Peer Secret"
 msgstr ""
 
 msgid "Peer User"
-msgstr ""
-
-msgid "Peer exchange"
 msgstr ""
 
 msgid "Peer port"
@@ -5693,6 +5718,9 @@ msgstr ""
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
+msgstr ""
+
+msgid "Permit Root Login"
 msgstr ""
 
 msgid "Permit root login"
@@ -5836,7 +5864,7 @@ msgstr "Port "
 msgid "Port %ld is already used by another service."
 msgstr "%ld portunu başka bir hizmet kullanılıyor."
 
-msgid "Port forwarding"
+msgid "Port Forwarding"
 msgstr ""
 
 #, php-format
@@ -6120,6 +6148,9 @@ msgstr ""
 msgid "Read"
 msgstr ""
 
+msgid "Read Only"
+msgstr ""
+
 msgid "Read Only (ro)"
 msgstr ""
 
@@ -6171,7 +6202,7 @@ msgstr ""
 msgid "Reboot"
 msgstr "Yeniden Başlat"
 
-msgid "Receive Buffer Size"
+msgid "Receive Buffer"
 msgstr ""
 
 msgid "Record is locked"
@@ -6183,8 +6214,8 @@ msgstr ""
 msgid "Recursive"
 msgstr ""
 
-msgid "Recycle bin"
-msgstr "Çöp kutusu"
+msgid "Recycle Bin"
+msgstr ""
 
 msgid "Refresh"
 msgstr "Yenile"
@@ -6379,10 +6410,10 @@ msgstr ""
 msgid "Root"
 msgstr "Root"
 
-msgid "Root bind DN"
+msgid "Root Bind DN"
 msgstr ""
 
-msgid "Root bind password"
+msgid "Root Bind Password"
 msgstr ""
 
 msgid "Rotation Rate"
@@ -6397,8 +6428,8 @@ msgstr ""
 msgid "Routes"
 msgstr "Rotalar"
 
-msgid "Routing tables"
-msgstr "Yönlendirme tabloları"
+msgid "Routing Tables"
+msgstr ""
 
 msgid "Rows"
 msgstr "Satırlar"
@@ -6507,13 +6538,13 @@ msgstr ""
 #, php-format
 msgid ""
 "Samba will read from file asynchronously when size of request is bigger than "
-"this value. (%d by default)"
+"this value. (%d by default)."
 msgstr ""
 
 #, php-format
 msgid ""
 "Samba will write to file asynchronously when size of request is bigger than "
-"this value. (%d by default)"
+"this value. (%d by default)."
 msgstr ""
 
 msgid "Sat"
@@ -6728,7 +6759,7 @@ msgstr ""
 msgid "Self-tests Management"
 msgstr ""
 
-msgid "Send Buffer Size"
+msgid "Send Buffer"
 msgstr ""
 
 msgid "Send Command!"
@@ -6776,10 +6807,10 @@ msgstr ""
 msgid "Server"
 msgstr "Sunuc"
 
-msgid "Server Max Protocol"
+msgid "Server Max. Protocol"
 msgstr ""
 
-msgid "Server Min Protocol"
+msgid "Server Min. Protocol"
 msgstr ""
 
 msgid "Server Name"
@@ -6809,10 +6840,10 @@ msgstr "Hizmetler"
 msgid "Set additional group memberships for this account."
 msgstr "Bu grup için ek olarak grup üyeliği ayarla"
 
-msgid "Set browseable"
-msgstr "Gezilebilebilir olarak ayarla"
+msgid "Set browseable."
+msgstr ""
 
-msgid "Set read only"
+msgid "Set read only."
 msgstr ""
 
 msgid "Set share password."
@@ -6865,7 +6896,7 @@ msgstr "Ayarlar"
 msgid "Shadow Copy"
 msgstr ""
 
-msgid "Shadow Copy format"
+msgid "Shadow Copy Format"
 msgstr ""
 
 msgid "Share"
@@ -7143,19 +7174,13 @@ msgstr "Durduruldu"
 msgid "Storage"
 msgstr ""
 
-msgid "Store DOS attributes"
+msgid "Store DOS Attributes"
 msgstr ""
 
-msgid "Store NTFS acls"
+msgid "Store NTFS ACLs in Extended Attributes."
 msgstr ""
 
-msgid "Store NTFS acls in Extended Attributes"
-msgstr ""
-
-msgid "Store alternate data streams"
-msgstr ""
-
-msgid "Store alternate data streams in Extended Attributes"
+msgid "Store alternate data streams in Extended Attributes."
 msgstr ""
 
 msgid "Strict DLNA"
@@ -7213,7 +7238,7 @@ msgstr ""
 msgid "Swap Usage"
 msgstr ""
 
-msgid "Swap disabled"
+msgid "Swap is disabled."
 msgstr ""
 
 msgid "Swedish"
@@ -7307,6 +7332,12 @@ msgstr "Sistem mesaj belleği"
 msgid "System tuning"
 msgstr ""
 
+msgid "TCP Port"
+msgstr ""
+
+msgid "TCP Wrapper"
+msgstr ""
+
 msgid "TCP forwarding"
 msgstr ""
 
@@ -7317,9 +7348,6 @@ msgid "TCP port is 5900+N, where N is VNC display number."
 msgstr ""
 
 msgid "TCP port to bind the server to."
-msgstr ""
-
-msgid "TCP wrapper"
 msgstr ""
 
 msgid "TFTP"
@@ -7334,10 +7362,10 @@ msgstr ""
 msgid "TLS Mode"
 msgstr ""
 
-msgid "TLS Server Certificate Check"
+msgid "TLS Only"
 msgstr ""
 
-msgid "TLS only"
+msgid "TLS Server Certificate Check"
 msgstr ""
 
 msgid "Tag"
@@ -7480,8 +7508,8 @@ msgid ""
 "manufacturing."
 msgstr ""
 
-msgid "The TCP port must be a valid port number."
-msgstr "TCP portu geçerli bir port numarası olmalıdır."
+msgid "The TCP Port must be a valid port number."
+msgstr ""
 
 msgid "The UPS identifier and IP address"
 msgstr ""
@@ -7732,9 +7760,6 @@ msgstr ""
 msgid "The cron job has been executed successfully."
 msgstr ""
 
-msgid "The current password is incorrectly entered."
-msgstr ""
-
 #, php-format
 msgid ""
 "The custom format of the snapshot for shadow copy service can be specified. "
@@ -7880,14 +7905,18 @@ msgstr ""
 msgid "The login name is limited to 16 characters."
 msgstr ""
 
-msgid "The max. connection per IP must be either 0 (unlimited) or greater."
+msgid ""
+"The max. connections per IP address must be either 0 (unlimited) or greater."
+msgstr ""
+
+msgid "The max. number of clients must be in the range from 1 to 50."
 msgstr ""
 
 msgid ""
 "The maximum download bandwith in KiB/s. An empty field means infinity."
 msgstr ""
 
-msgid "The maximum idle time be a number."
+msgid "The maximum idle time must be a number."
 msgstr ""
 
 msgid ""
@@ -7954,16 +7983,6 @@ msgstr ""
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "'%s'ağı geçersiz."
-
-msgid ""
-"The new password does not match. Please ensure the passwords match exactly."
-msgstr ""
-
-msgid "The new password is also the default root password of the system!"
-msgstr ""
-
-msgid "The number of clients must be between 1 and 50."
-msgstr "İstemci sayısı 1 ile 50 arasında olmalıdır."
 
 msgid ""
 "The number of errors caused by incorrect checksum during the error "
@@ -8138,7 +8157,7 @@ msgstr ""
 
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
-"clients (maximum 15 characters)."
+"clients. (maximum 15 characters)."
 msgstr ""
 
 msgid "The working directory does not exist."
@@ -8500,6 +8519,12 @@ msgid ""
 "added to the LDAP directory, e.g. %s"
 msgstr ""
 
+msgid "This password is required to access the admin web interface."
+msgstr ""
+
+msgid "This password is the root password of the system."
+msgstr ""
+
 msgid "This pool name already exists."
 msgstr ""
 
@@ -8556,13 +8581,13 @@ msgid ""
 "add an existing encrypted disk."
 msgstr ""
 
-msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
+msgid "This will provide NTFS ACLs without ZFS ACL support such as UFS."
 msgstr ""
 
-msgid "This will provide ZFS ACL support. (ZFS only)"
+msgid "This will provide ZFS ACL support. (ZFS only)."
 msgstr ""
 
-msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
+msgid "This will provide shadow copy created by auto snapshot. (ZFS only)."
 msgstr ""
 
 msgid ""
@@ -8584,7 +8609,13 @@ msgstr ""
 msgid "Time"
 msgstr "Süre"
 
+msgid "Time Interval"
+msgstr ""
+
 msgid "Time Machine"
+msgstr ""
+
+msgid "Time Server"
 msgstr ""
 
 msgid "Time Synchronization"
@@ -8605,9 +8636,6 @@ msgstr ""
 msgid "Time interval"
 msgstr "Zaman aralığı"
 
-msgid "Time server"
-msgstr "Saat sunucusu"
-
 msgid "Time spent during the positioning of the drive heads."
 msgstr ""
 
@@ -8623,6 +8651,9 @@ msgstr "Zaman aşımı"
 
 msgid "Times"
 msgstr "Süreler"
+
+msgid "Title Speed"
+msgstr ""
 
 msgid "TitleSpeed"
 msgstr ""
@@ -8774,7 +8805,7 @@ msgstr ""
 msgid "Trivial File Transfer Protocol"
 msgstr ""
 
-msgid "Trusted domains"
+msgid "Trusted Domains"
 msgstr ""
 
 msgid "Try to force import."
@@ -8949,10 +8980,10 @@ msgstr "Unison"
 msgid "Unison File Synchronisation"
 msgstr ""
 
-msgid "Unix Command"
+msgid "Unix Charset"
 msgstr ""
 
-msgid "Unix charset"
+msgid "Unix Command"
 msgstr ""
 
 msgid "Unknown"
@@ -8991,7 +9022,7 @@ msgstr ""
 msgid "Upgrade ZFS and add all supported feature flags on a pool"
 msgstr ""
 
-msgid "Upload bandwidth"
+msgid "Upload Bandwidth"
 msgstr ""
 
 msgid "Upload directory"
@@ -9088,10 +9119,19 @@ msgstr "Kullanıcı"
 msgid "User ID"
 msgstr ""
 
+msgid "User Mask"
+msgstr ""
+
+msgid "User Portal"
+msgstr ""
+
 msgid "User Settings"
 msgstr ""
 
 msgid "User Shares"
+msgstr ""
+
+msgid "User Suffix"
 msgstr ""
 
 msgid "User account is locked"
@@ -9111,12 +9151,6 @@ msgstr ""
 
 msgid "User password."
 msgstr "Kullanıcı parolası."
-
-msgid "User portal"
-msgstr ""
-
-msgid "User suffix"
-msgstr ""
 
 msgid "Username"
 msgstr "Kullanıcı Adı"
@@ -9288,8 +9322,8 @@ msgstr ""
 msgid "WEP"
 msgstr "WEP"
 
-msgid "WINS server"
-msgstr "WINS sunucu"
+msgid "WINS Server"
+msgstr ""
 
 msgid "WINS server IP address (e.g. from MS Active Directory server)."
 msgstr "WINS server IP address (e.g. from MS Active Directory server)."
@@ -9315,6 +9349,9 @@ msgstr "WPA-PSK WPA-EAP"
 msgid "WPA2"
 msgstr ""
 
+msgid "Wait Time"
+msgstr ""
+
 msgid "Wait time"
 msgstr ""
 
@@ -9332,11 +9369,14 @@ msgid ""
 "and can not be recovered."
 msgstr ""
 
-msgid "Watch directory"
-msgstr "Dizini gözetle"
+msgid "Watch Directory"
+msgstr ""
 
 msgid "WebGUI"
 msgstr "WebGUI"
+
+msgid "WebGUI and Root Password"
+msgstr ""
 
 msgid "Webserver"
 msgstr "Webserver"
@@ -9402,6 +9442,9 @@ msgid "Wireless configuration"
 msgstr "Kablosuz yapılandırma"
 
 msgid "Workgroup"
+msgstr ""
+
+msgid "Working Directory"
 msgstr ""
 
 msgid "Working directory"
@@ -9514,10 +9557,17 @@ msgstr ""
 msgid "You must select at least one authentication method."
 msgstr "En az bir tane doğrulama methodu seçmelisiniz."
 
+msgid ""
+"You need to update your browser or use Internet Explorer 10 or higher."
+msgstr ""
+
 msgid "You should use HTTPS as WebGUI protocol for sending passphrase."
 msgstr ""
 
 msgid "Your ZFS system is not healthy."
+msgstr ""
+
+msgid "Your browser does not support this svg object type."
 msgstr ""
 
 msgid "ZFS"
@@ -9731,20 +9781,77 @@ msgstr ""
 msgid "week days"
 msgstr ""
 
-#~ msgid "FTP - Ban module"
-#~ msgstr "FTP - Yasaklama modulü"
+#~ msgid ""
+#~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
+#~ msgstr "Birincil ve ikincil DNS sunucusu için bir geçerli IPv4 adresi girin"
 
-#~ msgid "FTP - File transfer"
-#~ msgstr "FTP - Dosya transferi"
+#~ msgid ""
+#~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
+#~ msgstr ""
+#~ "Birincil ve İkincil DNS Server için geçerli bir IPv6 adresi belirtilmelidir."
 
-#~ msgid "IPv4 DNS servers"
-#~ msgstr "IPv4 DNS sunucuları"
+#~ msgid "AIO read size"
+#~ msgstr "AIO okuma boyutu"
 
-#~ msgid "IPv6 DNS servers"
-#~ msgstr "IPv6 DNS sunucuları"
+#~ msgid "AIO write size"
+#~ msgstr "AIO yazma boyutu"
 
-#~ msgid "System time"
-#~ msgstr "Sistem zamanı"
+#~ msgid "Asynchronous I/O (AIO)"
+#~ msgstr "Asenkronize I/O (AIO)"
 
-#~ msgid "Time zone"
-#~ msgstr "Zaman dilimi"
+#~ msgid "Create mask"
+#~ msgstr "Maske Oluşturuldu"
+
+#~ msgid "Directory mask"
+#~ msgstr "Dizin Maskesi"
+
+#~ msgid "Dos charset"
+#~ msgstr "Dos karakter seti"
+
+#~ msgid "EA support"
+#~ msgstr "EA desteği"
+
+#~ msgid "Enable Asynchronous I/O (AIO)"
+#~ msgstr "Asynchronous I/O (AIO) Etkinleştir"
+
+#~ msgid "Enable extended attribute support"
+#~ msgstr "Genişletilmiş öztenlik desteğini aktifleştir"
+
+#~ msgid "Enable large read/write"
+#~ msgstr "Büyük yazma ve okumayı Aktifleştir"
+
+#~ msgid "Enable permission inheritance"
+#~ msgstr "miras iznini etkin kıl"
+
+#~ msgid "Enable recycle bin"
+#~ msgstr "Geri Dönüşüm Kutusunu Aktifleştir"
+
+#~ msgid "Enable store DOS attributes"
+#~ msgstr "DOS simgelerini yedeklemeyi etkin kıl"
+
+#~ msgid "Guest account"
+#~ msgstr "Misafir hesabı"
+
+#~ msgid "Inherit permissions"
+#~ msgstr "İzinleri miras olarak al"
+
+#~ msgid "Large read/write"
+#~ msgstr "Büyük okuma/yazma"
+
+#~ msgid "NetBIOS name"
+#~ msgstr "NetBIOS ismi"
+
+#~ msgid "Recycle bin"
+#~ msgstr "Çöp kutusu"
+
+#~ msgid "Set browseable"
+#~ msgstr "Gezilebilebilir olarak ayarla"
+
+#~ msgid "Time server"
+#~ msgstr "Saat sunucusu"
+
+#~ msgid "WINS server"
+#~ msgstr "WINS sunucu"
+
+#~ msgid "Null passwords"
+#~ msgstr "Boş parolalar"
