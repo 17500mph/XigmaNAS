@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-26 21:12+0000\n"
-"PO-Revision-Date: 2017-01-26 15:53+0000\n"
+"POT-Creation-Date: 2017-01-28 02:17+0000\n"
+"PO-Revision-Date: 2017-01-27 06:43+0000\n"
 "Last-Translator: Evgeny Sokolov <sea1.150@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
+"X-Launchpad-Export-Date: 2017-01-28 01:57+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 "Language: \n"
@@ -304,10 +304,11 @@ msgstr ""
 "Действительный IP адрес или CIDR выражение должны быть указаны для "
 "допустимых хостов."
 
-msgid ""
-"A valid IPv4 address must be specified for the primary/secondary DNS server."
+msgid "A valid IPv4 address must be specified for the primary DNS server."
 msgstr ""
-"Должен быть указан верный IPv4-адрес первичного/вторичного DNS-сервера."
+
+msgid "A valid IPv4 address must be specified for the secondary DNS server."
+msgstr ""
 
 msgid "A valid IPv4 address must be specified."
 msgstr "Должен быть указан верный IPv4-адрес."
@@ -318,10 +319,11 @@ msgstr "Должна быть указана правильная маска с�
 msgid "A valid IPv6 Gateway address must be specified."
 msgstr "Должен быть указан верный IPv6-адрес шлюза."
 
-msgid ""
-"A valid IPv6 address must be specified for the primary/secondary DNS server."
+msgid "A valid IPv6 address must be specified for the primary DNS server."
 msgstr ""
-"Должен быть указан верный IPv6-адрес первичного/вторичного DNS-сервера."
+
+msgid "A valid IPv6 address must be specified for the secondary DNS server."
+msgstr ""
 
 msgid "A valid IPv6 address must be specified."
 msgstr "Должен быть указан верный IPv6-адрес."
@@ -368,20 +370,20 @@ msgstr "Имя AD или PDC."
 msgid "AFP"
 msgstr "AFP"
 
-msgid "AFP compatibility"
-msgstr "Совместимость AFP"
+msgid "AFP Compatibility"
+msgstr ""
 
 msgid "AG"
 msgstr "AG"
 
-msgid "AIO module"
-msgstr "Модуль AIO"
+msgid "AIO Module"
+msgstr ""
 
-msgid "AIO read size"
-msgstr "AIO при чтении"
+msgid "AIO Read Size"
+msgstr ""
 
-msgid "AIO write size"
-msgstr "AIO при записи"
+msgid "AIO Write Size"
+msgstr ""
 
 msgid "ALL Interfaces"
 msgstr "Все интерфейсы"
@@ -576,14 +578,14 @@ msgstr "Добавить общий ресурс"
 msgid "Add target"
 msgstr "Добавить цель"
 
+msgid "Additional Group"
+msgstr ""
+
 msgid "Additional Network"
 msgstr "Дополнительная сеть"
 
 msgid "Additional Storage"
 msgstr "Дополнительное хранилище"
-
-msgid "Additional group"
-msgstr "Дополнительная группа"
 
 msgid ""
 "Additional parameters to the hardware-specific part of the driver for second "
@@ -601,7 +603,7 @@ msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr "Адрес удалённой службы hastd. Это должен быть статический IP-адрес."
 
 msgid "Admin Password"
-msgstr ""
+msgstr "Пароль администратора"
 
 msgid "Administration password"
 msgstr "Пароль администратора"
@@ -741,9 +743,6 @@ msgstr "Разрешить клиентам хранить атрибуты в �
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "Разрешить клиентам возобновление прерванных закачек и загрузок"
 
-msgid "Allow group"
-msgstr "Разрешенные группы"
-
 msgid "Allow new files"
 msgstr "Новые файлы"
 
@@ -792,6 +791,9 @@ msgstr ""
 
 msgid "AltRoot"
 msgstr "Альтернативный корневой каталог"
+
+msgid "Alternate Data Streams"
+msgstr ""
 
 msgid "Alternate TCP port. Default is 22"
 msgstr "Другой TCP-порт, по умолчанию 22-й."
@@ -862,14 +864,14 @@ msgstr "Хост с таким именем уже существует."
 msgid "An interface with the specified description already exists."
 msgstr "Интерфейс с таким описанием уже существует."
 
-msgid "Anonymous access has been deprecated starting from SMB2."
-msgstr "Анонимный доступ является устаревшим, начиная с SMB2."
-
-msgid "Anonymous bind"
+msgid "Anonymous Bind"
 msgstr "Анонимный доступ"
 
-msgid "Anonymous user bandwidth"
-msgstr "Ограничение скорости анонимных пользователей"
+msgid "Anonymous Users"
+msgstr ""
+
+msgid "Anonymous access has been deprecated starting from SMB2."
+msgstr "Анонимный доступ является устаревшим, начиная с SMB2."
 
 msgid ""
 "Anonymous user download bandwith in KB/s. An empty field means infinity."
@@ -882,9 +884,6 @@ msgid ""
 msgstr ""
 "Ограничение скорости закачки для анонимных пользователей (кбайт/с). Пустое "
 "поле - без ограничений."
-
-msgid "Anonymous users only"
-msgstr "Только анонимные пользователи"
 
 msgid ""
 "Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
@@ -938,8 +937,8 @@ msgstr "Вы уверены, что хотите сбросить сервер �
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Вы уверены, что хотите выключить сервер?"
 
-msgid "Asynchronous I/O (AIO)"
-msgstr "Асинхронный ввод/вывод (AIO)"
+msgid "Asynchronous I/O"
+msgstr ""
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
@@ -992,10 +991,21 @@ msgid "Auth Method"
 msgstr "Способ аутентификации"
 
 msgid "Authenticate Path & Realm"
-msgstr ""
+msgstr "Аутентификация пути и области"
 
 msgid "Authenticate URL"
 msgstr "URL с аутентификацией"
+
+msgid "Authenticated Users"
+msgstr ""
+
+msgid ""
+"Authenticated user download bandwith in KB/s. An empty field means infinity."
+msgstr ""
+
+msgid ""
+"Authenticated user upload bandwith in KB/s. An empty field means infinity."
+msgstr ""
 
 msgid "Authentication"
 msgstr "Аутентификация"
@@ -1035,6 +1045,9 @@ msgstr "Автомасштабирование для графиков"
 
 msgid "Autoselect"
 msgstr "Автоматически"
+
+msgid "Auxiliary Parameter"
+msgstr "Дополнительные параметры"
 
 msgid "Auxiliary Parameters"
 msgstr "Дополнительные параметры"
@@ -1172,7 +1185,7 @@ msgstr "Наилучший доступный"
 msgid "Bind DN"
 msgstr "DN для связи"
 
-msgid "Bind password"
+msgid "Bind Password"
 msgstr "Пароль для связи"
 
 msgid "BitTorrent"
@@ -1290,11 +1303,11 @@ msgstr "Пользователи CHAP"
 msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
 
+msgid "CIFS/SMB Information"
+msgstr "Информация CIFS/SMB"
+
 msgid "CIFS/SMB disabled"
 msgstr "CIFS/SMB отключен"
-
-msgid "CIFS/SMB informations"
-msgstr "Информация CIFS/SMB"
 
 msgid "CIFS/SMB is enabled."
 msgstr "CIFS/SMB включен."
@@ -1502,11 +1515,11 @@ msgstr ""
 msgid "Client"
 msgstr "Клиент"
 
-msgid "Client Max Protocol"
-msgstr "Максимальный протокол клиента"
+msgid "Client Max. Protocol"
+msgstr ""
 
-msgid "Client Min Protocol"
-msgstr "Минимальный протокол клиента"
+msgid "Client Min. Protocol"
+msgstr ""
 
 msgid "Clone"
 msgstr "Клоны"
@@ -1522,10 +1535,8 @@ msgstr "Колонки"
 
 msgid ""
 "Comma-separated list of group names that are permitted to login to the FTP "
-"server. (empty is ftp group)"
+"server. (empty = ftp group)."
 msgstr ""
-"Разделенный запятыми список групп, которым разрешен доступ на сервер FTP. "
-"(пустое значение - ftp группа)"
 
 msgid "Command"
 msgstr "Команда"
@@ -1604,11 +1615,14 @@ msgstr ""
 msgid "Configuration"
 msgstr "Конфигурация"
 
-msgid "Configuration directory"
-msgstr "Каталог настроек"
+msgid "Configuration Directory"
+msgstr "Каталог конфигурации"
 
 msgid "Configuring"
 msgstr "Настраивается"
+
+msgid "Confirm New Password"
+msgstr ""
 
 msgid "Confirmation"
 msgstr "подтверждение"
@@ -1910,6 +1924,9 @@ msgstr "Дата Создания"
 msgid "Create HVM Guest"
 msgstr "Создать гостевую систему HVM"
 
+msgid "Create Mask"
+msgstr ""
+
 msgid "Create PV Guest"
 msgstr "Создать гостевую систему PV"
 
@@ -1921,9 +1938,6 @@ msgstr "Создать и инициализировать RAID"
 
 msgid "Create encrypted volume"
 msgstr "Создать зашифрованный том"
-
-msgid "Create mask"
-msgstr "Создать маску"
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Создать рабочий каталог, если он не существует"
@@ -1984,6 +1998,9 @@ msgid ""
 msgstr ""
 "Текущий пароль - пароль по умолчанию. Вы должны использовать свой пароль."
 
+msgid "Current password is incorrectly entered."
+msgstr ""
+
 msgid "Current state of drive operation based upon the Life Curve."
 msgstr "Текущее состояние работы привода на основе Life Curve."
 
@@ -2036,10 +2053,10 @@ msgid "DNS"
 msgstr "DNS-серверы"
 
 msgid "DNS Domain"
-msgstr ""
+msgstr "DNS домен"
 
 msgid "DNS Forwarder"
-msgstr ""
+msgstr "DNS Forwarder"
 
 msgid "DNS server is empty."
 msgstr "DNS сервер пуст."
@@ -2158,12 +2175,8 @@ msgstr ""
 msgid "Default Device Settings"
 msgstr "Настройки устройства по умолчанию"
 
-#, php-format
-msgid "Default is %s."
-msgstr "По умолчанию %s."
-
-msgid "Default root"
-msgstr "Корневой каталог по умолчанию"
+msgid "Default Root"
+msgstr ""
 
 msgid "Default user name is 'admin'."
 msgstr "По умолчанию имя пользователя 'admin'."
@@ -2400,7 +2413,7 @@ msgid "Detected"
 msgstr "Определенная"
 
 msgid "Detected Disks"
-msgstr ""
+msgstr "Обнаруженные диски"
 
 msgid "Detected Language:"
 msgstr "Обнаружен язык:"
@@ -2501,6 +2514,9 @@ msgstr "Каталог"
 msgid "Directory %s doesn't exist!"
 msgstr "Каталог %s не существует!"
 
+msgid "Directory Mask"
+msgstr ""
+
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr ""
 "Каталог для незавершенных файлов. Пустое поле означает, что функция будет "
@@ -2508,9 +2524,6 @@ msgstr ""
 
 msgid "Directory listing"
 msgstr "Список файлов каталога"
-
-msgid "Directory mask"
-msgstr "Маска каталога"
 
 msgid "Directory that contains removable media. (e.g /mnt/iscsi/)"
 msgstr "Каталог, содержащий съемные носители (например, /mnt/iscsi/)."
@@ -2610,8 +2623,8 @@ msgstr ""
 "Расстояние смещения диска по отношению к шпинделю (обычно из-за шока или "
 "температуры). Единица измерения неизвестна."
 
-msgid "Distributed hash table"
-msgstr "DHT"
+msgid "Distributed Hash Table"
+msgstr "Распределенная хэш-таблица (DHT)"
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr "Не включайте эту опцию, если вы хотите добавить существующий RAID."
@@ -2871,8 +2884,8 @@ msgstr "Домен"
 msgid "Domain controller name"
 msgstr "Имя контролера домена"
 
-msgid "Domain have no 2nd level name."
-msgstr "Домен не имеет имя 2 уровня."
+msgid "Domain is missing 2nd level name."
+msgstr "У домена отсутствует имя 2-го уровня."
 
 msgid "Domain name"
 msgstr "Доменное имя"
@@ -2898,17 +2911,20 @@ msgstr "Готово"
 msgid "Done."
 msgstr "Выполнено"
 
-msgid "Dos charset"
-msgstr "Кодовая страница DOS"
+msgid "Dos Charset"
+msgstr ""
 
 msgid "Download"
 msgstr "Скачать"
 
+msgid "Download Bandwidth"
+msgstr "Скорость загрузки"
+
 msgid "Download Configuration"
 msgstr "Сохранить конфигурацию"
 
-msgid "Download bandwidth"
-msgstr "Скорость загрузки"
+msgid "Download Directory"
+msgstr "Каталог для скачивания"
 
 msgid "Download directory"
 msgstr "Каталог скачиваемых файлов"
@@ -2925,11 +2941,11 @@ msgstr "Производительность поиска диска по вну
 msgid "Driver"
 msgstr "Драйвер"
 
-msgid "Driver list"
-msgstr "Список драйверов"
+msgid "Driver List"
+msgstr ""
 
-msgid "Driver parameters"
-msgstr "Параметры драйвера"
+msgid "Driver Parameter"
+msgstr "Параметры диска"
 
 msgid "Driver used"
 msgstr "Используемый драйвер"
@@ -2965,8 +2981,8 @@ msgid "Dynamic IP (DHCP) can not be used for HAST resources."
 msgstr ""
 "Динамический IP-адрес (DHCP) не может использоваться для ресурсов HAST."
 
-msgid "EA support"
-msgstr "Поддержка расширенных атрибутов"
+msgid "EA Support"
+msgstr ""
 
 msgid "EFI/GPT partition can be use with UFS only."
 msgstr "На EFI/GPT-разделах поддерживается только файловая система UFS."
@@ -3098,20 +3114,20 @@ msgstr "Уровень аварии"
 msgid "Enable"
 msgstr "Включить"
 
-msgid "Enable 'Asynchronous I/O (AIO)' switch."
-msgstr "Включить асинхронный ввод/вывод (AIO)"
+msgid "Enable 'Asynchronous I/O (AIO).' switch."
+msgstr ""
 
 msgid "Enable 'Large read/write' switch."
 msgstr "Включить чтение/запись большими блоками"
 
-msgid "Enable ACL inheritance"
-msgstr "Включить наследование ACL"
+msgid "Enable ACL inheritance."
+msgstr ""
 
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr "Включить расширенное форматирование (4КБ сектор)."
 
-msgid "Enable Asynchronous I/O (AIO)"
-msgstr "Включить асинхронный ввод/вывод (AIO)"
+msgid "Enable Asynchronous I/O. (AIO)."
+msgstr ""
 
 msgid "Enable Challenge-Response Authentication"
 msgstr "Включить проверку подлинности Challenge-Response"
@@ -3163,8 +3179,8 @@ msgstr "Включить поддержку TiVo."
 msgid "Enable Time Machine support"
 msgstr "Включить поддержку Time Machine"
 
-msgid "Enable ZFS ACL"
-msgstr "Включить ZFS ACL"
+msgid "Enable ZFS ACL."
+msgstr ""
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
 msgstr "Включить Zeroconf/Bonjour для объявления служб этого устройства"
@@ -3234,8 +3250,8 @@ msgstr "Разрешить подстановочные символы для д
 msgid "Enable encryption."
 msgstr "Включить шифрование."
 
-msgid "Enable extended attribute support"
-msgstr "Разрешить поддержку расширенных атрибутов"
+msgid "Enable extended attribute support."
+msgstr ""
 
 msgid "Enable extended attributes for this file system."
 msgstr ""
@@ -3248,9 +3264,6 @@ msgstr ""
 "Включить приоритетную/фоновую проверку состояния файловой системы во время "
 "процесса загрузки"
 
-msgid "Enable guest access"
-msgstr "Разрешить гостевой доступ"
-
 msgid "Enable guest access."
 msgstr "Разрешить гостевой доступ"
 
@@ -3260,14 +3273,14 @@ msgstr "Включить Inotify."
 msgid "Enable keyboard-interactive authentication."
 msgstr "Разрешить интерактивную проверку подлинности"
 
-msgid "Enable large read/write"
-msgstr "Разрешить чтение/запись большими блоками"
+msgid "Enable large read/write."
+msgstr ""
 
 msgid "Enable local user authentication."
 msgstr "Разрешить локальную аутентификацию пользователя"
 
-msgid "Enable mapping DOS attributes"
-msgstr "Включить преобразование атрибутов DOS"
+msgid "Enable mapping DOS attributes."
+msgstr ""
 
 msgid "Enable module listing."
 msgstr "Включить перечисление модулей"
@@ -3281,8 +3294,8 @@ msgstr "Включить или отключить проверку сертиф
 msgid "Enable peer exchange (PEX)."
 msgstr "Разрешить обмен списками участников (PEX)"
 
-msgid "Enable permission inheritance"
-msgstr "Разрешить наследование прав"
+msgid "Enable permission inheritance."
+msgstr ""
 
 msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr "Разрешить port forwarding через NAT-PMP или UPnP"
@@ -3290,8 +3303,8 @@ msgstr "Разрешить port forwarding через NAT-PMP или UPnP"
 msgid "Enable proxy authentication."
 msgstr "Включить аутентификацию на прокси-сервере"
 
-msgid "Enable recycle bin"
-msgstr "Включить 'корзину'"
+msgid "Enable recycle bin."
+msgstr ""
 
 msgid "Enable remote monitoring of the local connected UPS."
 msgstr "Включить удаленный мониторинг локально подключенного UPS"
@@ -3313,11 +3326,11 @@ msgstr "Включение второго локального подключе�
 msgid "Enable serial console."
 msgstr "Включить доступ к консоли по последовательному интерфейсу."
 
-msgid "Enable shadow copy"
-msgstr "Включить теневое копирование"
+msgid "Enable shadow copy."
+msgstr ""
 
-msgid "Enable store DOS attributes"
-msgstr "Включить хранение атрибутов DOS"
+msgid "Enable store DOS attributes."
+msgstr ""
 
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Разрешить протокол идентификации (RFC1413)"
@@ -3386,8 +3399,8 @@ msgstr "Используемый алгоритм шифрования."
 msgid "English"
 msgstr "Английский"
 
-msgid "Enhanced compatibility with Netatalk AFP server"
-msgstr "Улучшение совместимости с сервером Netatalk AFP"
+msgid "Enhanced compatibility with Netatalk AFP server."
+msgstr ""
 
 msgid "Enter Command"
 msgstr "Введите Команду"
@@ -3401,6 +3414,12 @@ msgid ""
 msgstr ""
 "Укажите номер порта вебинтерфейса, если не желаете использовать значение по "
 "умолчанию (80 для HTTP, 443 для HTTPS)"
+
+#, php-format
+msgid ""
+"Enter a custom port number if you want to override the default port. Default "
+"port is %s."
+msgstr ""
 
 msgid "Enter a description"
 msgstr "Введите описание"
@@ -3584,6 +3603,9 @@ msgstr ""
 "Экстент должен быть определен до использования, а также не может быть "
 "задействован дважды."
 
+msgid "Extra Options"
+msgstr "Дополнительные параметры"
+
 msgid "Extra options"
 msgstr "Дополнительные настройки"
 
@@ -3710,6 +3732,9 @@ msgstr "Файловый редактор"
 
 msgid "File Manager"
 msgstr "Файловый менеджер"
+
+msgid "File Mask"
+msgstr ""
 
 msgid "File Path"
 msgstr "Путь к файлу"
@@ -3948,17 +3973,23 @@ msgstr "Высота графиков"
 msgid "Greek"
 msgstr "Греческий"
 
-msgid "Greeting banner displayed by FTP when a connection first comes in."
-msgstr "Приветствие, показываемое FTP-сервером в начале сеанса."
+msgid "Greeting banner displayed to client when firts connection comes in."
+msgstr ""
 
 msgid "Group"
 msgstr "Группа"
+
+msgid "Group Allow"
+msgstr ""
 
 msgid "Group ID"
 msgstr "ID группы"
 
 msgid "Group Settings"
 msgstr "Параметры группы"
+
+msgid "Group Suffix"
+msgstr "Суффикс группы"
 
 msgid "Group compilations"
 msgstr "Группа сборников"
@@ -3975,9 +4006,6 @@ msgstr "Имя группы."
 msgid "Group numeric id."
 msgstr "Цифровой индентификатор группы."
 
-msgid "Group suffix"
-msgstr "Суффикс группы"
-
 msgid "Groupmask - Mask ACL with mode"
 msgstr "Groupmask  - Маска ACL с режимом"
 
@@ -3987,8 +4015,8 @@ msgstr "Группы"
 msgid "Guest"
 msgstr "Гость"
 
-msgid "Guest account"
-msgstr "Гостевая учетная запись"
+msgid "Guest Account"
+msgstr ""
 
 msgid "HAST"
 msgstr "HAST"
@@ -4081,8 +4109,8 @@ msgstr "Hiadaptive (высокая производительность)"
 msgid "Hide Default Groups"
 msgstr "Скрыть группы по умолчанию"
 
-msgid "Hide dot files"
-msgstr "Скрывать файлы \".\""
+msgid "Hide Dot Files"
+msgstr ""
 
 msgid "High voltage boosting transfer point"
 msgstr "Верхняя граница напряжения для режима подпитки (boosting)"
@@ -4111,9 +4139,6 @@ msgstr "Хост"
 msgid "Host access control"
 msgstr "Управление доступом хостов"
 
-msgid "Host name"
-msgstr "Имя компьютера"
-
 msgid "Host resources"
 msgstr "Ресурсы хоста"
 
@@ -4128,6 +4153,9 @@ msgstr "Хосты"
 
 msgid "Hosts Allow"
 msgstr "Разрешенные хосты"
+
+msgid "Hosts Deny"
+msgstr ""
 
 msgid "Hosts Setup"
 msgstr "Настройка хостов"
@@ -4248,8 +4276,8 @@ msgstr "Файл ISO будет смонтирован"
 msgid "ISP DNS Servers"
 msgstr "ISP DNS-серверы"
 
-msgid "Ident protocol"
-msgstr "Протокол идентификации"
+msgid "IdentLookups"
+msgstr ""
 
 msgid "Identifier"
 msgstr "Идентификатор"
@@ -4332,11 +4360,6 @@ msgid ""
 "If this property is enabled, the snapshots are displayed into .zfs directory."
 msgstr "Если эта настройка включена, снимки показываются в директории .zfs."
 
-msgid ""
-"If you want to change the password for accessing the WebGUI, enter it here "
-"twice."
-msgstr "Для смены пароля доступа к WebGUI дважды введите его здесь."
-
 msgid "Import"
 msgstr "Импортировать"
 
@@ -4382,7 +4405,7 @@ msgstr "Пакеты ввода/вывода"
 msgid "Incoming Line/Power Information"
 msgstr "Информация о входной линии"
 
-msgid "Incomplete directory"
+msgid "Incomplete Directory"
 msgstr "Каталог неполных файлов"
 
 msgid ""
@@ -4417,8 +4440,8 @@ msgstr "Информация и статус"
 msgid "Inherit ACL"
 msgstr "Наследовать ACL"
 
-msgid "Inherit permissions"
-msgstr "Наследование прав"
+msgid "Inherit Permissions"
+msgstr ""
 
 msgid "Inhibit some of the syslog diagnostics for bad lines in /etc/exports."
 msgstr ""
@@ -4547,9 +4570,6 @@ msgstr "Управление интерфейсами"
 msgid "Interface Selection"
 msgstr "Выбор интерфейса"
 
-msgid "Interface selection"
-msgstr "Выбор интерфейса"
-
 msgid "Interfaces"
 msgstr "Интерфейсы"
 
@@ -4609,11 +4629,9 @@ msgstr ""
 "страницы настройки параметров SCSI"
 
 msgid ""
-"It is impossible to enable 'Anonymous users only' and 'Local users only' "
-"authentication simultaneously."
+"It is impossible to enable 'Anonymous Users' and 'Authenticated Users' both "
+"at the same time."
 msgstr ""
-"Невозможно одновременно включить \"Только анонимные пользователи\" и "
-"\"Только локальные пользователи\"."
 
 msgid ""
 "It is not recommanded to import non healthy pools nor virtual devices that "
@@ -4730,6 +4748,9 @@ msgstr "Настройки LAN"
 msgid "LAN Only"
 msgstr "Только LAN"
 
+msgid "LAN interface is not configured."
+msgstr "LAN интерфейс не сконфигурирован."
+
 msgid "LAN net"
 msgstr "Локальная сеть"
 
@@ -4760,8 +4781,8 @@ msgstr "Язык"
 msgid "Language to use on front panel"
 msgstr "Язык, используемый на лицевой панели"
 
-msgid "Large read/write"
-msgstr "Чтение/запись большими блоками"
+msgid "Large Read/Write"
+msgstr ""
 
 msgid "Last Configuration Change"
 msgstr "Последнее изменение конфигурации"
@@ -4915,22 +4936,6 @@ msgstr "Локальный каталог (получатель)"
 msgid "Local shares to be synchronized"
 msgstr "Локальные ресурсы будут синхронизированы."
 
-msgid "Local user bandwidth"
-msgstr "Ограничение скорости локальных пользователей"
-
-msgid "Local user download bandwith in KB/s. An empty field means infinity."
-msgstr ""
-"Ограничение скорости скачивания для локальных пользователей (кбайт/с). "
-"Пустое поле - без ограничений."
-
-msgid "Local user upload bandwith in KB/s. An empty field means infinity."
-msgstr ""
-"Ограничение скорости закачки для локальных пользователей (кбайт/с). Пустое "
-"поле - без ограничений."
-
-msgid "Local users only"
-msgstr "Только локальные пользователи"
-
 msgid "Location"
 msgstr "Расположение"
 
@@ -5070,7 +5075,7 @@ msgstr "Домен Microsoft"
 msgid "MTU"
 msgstr "Размер MTU"
 
-msgid "Machine suffix"
+msgid "Machine Suffix"
 msgstr "Суффикс компьютера"
 
 msgid "Maintenance"
@@ -5100,14 +5105,14 @@ msgstr "Дата изготовления"
 msgid "Map all users to root"
 msgstr "Присвоить всем пользователям права учетной записи root"
 
-msgid "Map to guest"
-msgstr "Подключить к гостевому эккаунту"
+msgid "Map to Guest"
+msgstr ""
 
 msgid "Map to user"
 msgstr "Пользователь"
 
-msgid "Mapping DOS attributes"
-msgstr "Преобразование атрибутов DOS"
+msgid "Mapping DOS Attributes"
+msgstr ""
 
 msgid "Mar"
 msgstr "мар."
@@ -5121,11 +5126,23 @@ msgid ""
 msgstr ""
 "Запас в канале во время чтения данных. Функция этого атрибута не указана."
 
-msgid "Masquerade address"
-msgstr "Маскарадный адрес"
+msgid "Masquerade Address"
+msgstr ""
 
 msgid "Max Entries"
 msgstr "Максимальное количество записей"
+
+msgid "Max. Clients"
+msgstr ""
+
+msgid "Max. Connections Per Host"
+msgstr ""
+
+msgid "Max. Login Attempts"
+msgstr ""
+
+msgid "Max. Passive Port"
+msgstr ""
 
 msgid "Max. TTL"
 msgstr "Максимальный TTL"
@@ -5133,17 +5150,8 @@ msgstr "Максимальный TTL"
 msgid "Max. block size"
 msgstr "Максимальный размер блока"
 
-msgid "Max. conn. per IP"
-msgstr "Количество соединений с IP-адреса"
-
 msgid "Max. connections"
 msgstr "Максимум подключений"
-
-msgid "Max. login attempts"
-msgstr "Максимум попыток входа"
-
-msgid "Max. passive port"
-msgstr "Максимальный порт пассивного режима"
 
 msgid "Max. pre-send R2T"
 msgstr "предпосылка R2T"
@@ -5185,13 +5193,13 @@ msgstr "Максимальное зафиксированное значение
 msgid "Maximum number of allowed password attempts before disconnection."
 msgstr "Максимально допустимое число попыток ввода пароля перед отключением."
 
+msgid ""
+"Maximum number of connections allowed per IP address. (0 = unlimited)."
+msgstr ""
+
 #, php-format
 msgid "Maximum number of connections in each session (%d by default)."
 msgstr "Максимальное число подключений для каждой сессии (по умолчанию%d)."
-
-msgid "Maximum number of connections per IP address (0 = unlimited)."
-msgstr ""
-"Максимальное количество соединений с одного IP-адреса (0 = неограничено)."
 
 #, php-format
 msgid ""
@@ -5206,13 +5214,13 @@ msgid "Maximum number of sessions holding at same time (%d by default)."
 msgstr ""
 "Максимальное число одновременно подключенных сессий (по умолчанию %d)."
 
-msgid "Maximum number of simultaneous clients."
-msgstr "Максимальное количество одновременно подключенных клиентов."
-
 msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
 msgstr ""
 "Максимальное количество одновременных соединений. По умолчанию - 0 (не "
 "ограничено)."
+
+msgid "Maximum number of users that can connect to the server."
+msgstr ""
 
 msgid "Maximum relative humidity seen (percent)"
 msgstr "Максимальное зафиксированное значение влажности"
@@ -5266,8 +5274,8 @@ msgstr "МБ"
 msgid "MibII"
 msgstr "MibII"
 
-msgid "Min. passive port"
-msgstr "Минимальный порт пассивного режима"
+msgid "Min. Passive Port"
+msgstr ""
 
 msgid "MiniDLNA"
 msgstr "MiniDLNA"
@@ -5458,6 +5466,9 @@ msgstr "ПРИМЕЧАНИЕ"
 msgid "NT1 (CIFS)"
 msgstr "NT1 (CIFS)"
 
+msgid "NTFS ACLs"
+msgstr ""
+
 msgid "NTP Time Server"
 msgstr "Сервер времени NTP"
 
@@ -5499,13 +5510,10 @@ msgid "Nested HVM"
 msgstr "Встроенная HVM"
 
 msgid "NetBIOS Domain"
-msgstr ""
+msgstr "NetBIOS домен"
 
 msgid "NetBIOS Name"
-msgstr ""
-
-msgid "NetBIOS name"
-msgstr "NetBIOS-имя"
+msgstr "NetBIOS имя"
 
 msgid "Netgraph"
 msgstr "Netgraph"
@@ -5558,6 +5566,11 @@ msgstr ""
 msgid "New Password"
 msgstr "Новый пароль"
 
+msgid ""
+"New Password does not match the confirmation password. Please ensure both "
+"passwords are the same."
+msgstr ""
+
 msgid "New password"
 msgstr "Новый пароль"
 
@@ -5566,6 +5579,9 @@ msgstr "Далее"
 
 msgid "No"
 msgstr "Нет"
+
+msgid "No DNS server have been configured."
+msgstr "DNS-серверы не сконфигурированы."
 
 msgid "No DNS setting found."
 msgstr "Настройка DNS не найдена."
@@ -5779,17 +5795,14 @@ msgstr "ноября"
 msgid "Now"
 msgstr "Сейчас"
 
-msgid "Null passwords"
-msgstr "Пустые пароли"
+msgid "Null Passwords"
+msgstr ""
 
 msgid "Number of bad battery packs"
 msgstr "Количество плохих батарейных блоков"
 
 msgid "Number of battery packs"
 msgstr "Количество батарейных блоков"
-
-msgid "Number of clients"
-msgstr "Количество клиентов"
 
 msgid "Number of hours elapsed in the power-on state."
 msgstr "Количество часов, прошедших в состоянии включения питания."
@@ -5839,9 +5852,6 @@ msgstr "Выкл."
 
 msgid "Old passphrase"
 msgstr "Старая парольная фраза"
-
-msgid "Old password"
-msgstr "Старый пароль"
 
 msgid "On"
 msgstr "Вкл."
@@ -6007,8 +6017,8 @@ msgstr "Тип раздела"
 msgid "Partitions"
 msgstr "Разделы"
 
-msgid "Passive ports"
-msgstr "Номера портов в пассивном режиме"
+msgid "Passive Port"
+msgstr ""
 
 msgid ""
 "Passive ports restricts the range of ports from which the server will select "
@@ -6048,14 +6058,27 @@ msgstr "Пароль"
 msgid "Password (confirmed)"
 msgstr "Пароль (подтвержден)"
 
+msgid "Password Encryption"
+msgstr "Шифрование пароля"
+
+msgid "Password Server"
+msgstr ""
+
+msgid "Password Suffix"
+msgstr "Суффикс пароля"
+
 msgid "Password authentication"
 msgstr "Проверка подлинности паролем"
 
+msgid ""
+"Password does not match the confirmation password. Please ensure both "
+"passwords are the same."
+msgstr ""
+"Пароль не совпадает с паролем подтверждения. Пожалуйста, убедитесь, что оба "
+"пароля совпадают."
+
 msgid "Password don't match."
 msgstr "Пароли не совпадают."
-
-msgid "Password encryption"
-msgstr "Шифрование пароля"
 
 msgid "Password for the administrative pages."
 msgstr "Пароль на web-интерфейс управления."
@@ -6063,17 +6086,11 @@ msgstr "Пароль на web-интерфейс управления."
 msgid "Password of domain administrator account."
 msgstr "Пароль администратора домена."
 
-msgid "Password server"
-msgstr "Сервер паролей"
-
 msgid ""
 "Password server name or IP address (e.g. Active Directory domain controller)."
 msgstr ""
 "Имя или IP адрес сервера паролей (например, контроллер домена Active "
 "Directory)"
-
-msgid "Password suffix"
-msgstr "Суффикс пароля"
 
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
 msgstr "Вставьте RSA PRIVATE KEY в формате PEM здесь."
@@ -6097,14 +6114,17 @@ msgstr "Путь к общему ресурсу."
 msgid "Path to the local device. (e.g. %s)"
 msgstr "Адрес локального устройства (например %s)"
 
+msgid "Peer Exchange"
+msgstr "Обмен списками участников"
+
+msgid "Peer Port"
+msgstr "Используемый порт"
+
 msgid "Peer Secret"
 msgstr "Ключ безопасности инициатора"
 
 msgid "Peer User"
 msgstr "Имя инициатора"
-
-msgid "Peer exchange"
-msgstr "Обмен списками участников"
 
 msgid "Peer port"
 msgstr "Порт входящих соединений"
@@ -6115,6 +6135,9 @@ msgstr "Настройки производительности"
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
 msgstr "Постоянный путь данных Samba (например %s)."
+
+msgid "Permit Root Login"
+msgstr ""
 
 msgid "Permit root login"
 msgstr "Разрешать вход с учетной записью root"
@@ -6257,8 +6280,8 @@ msgstr "Порт "
 msgid "Port %ld is already used by another service."
 msgstr "Порт %ld уже используется другой службой."
 
-msgid "Port forwarding"
-msgstr "Port forwarding"
+msgid "Port Forwarding"
+msgstr "Перенаправление портов"
 
 #, php-format
 msgid "Port number must be in the range between %d and %d."
@@ -6554,6 +6577,9 @@ msgstr "Ramdisk"
 msgid "Read"
 msgstr "Чтение"
 
+msgid "Read Only"
+msgstr ""
+
 msgid "Read Only (ro)"
 msgstr "Только чтение (RO)"
 
@@ -6609,8 +6635,8 @@ msgstr "Причина последнего перехода на батарею
 msgid "Reboot"
 msgstr "Перезагрузка"
 
-msgid "Receive Buffer Size"
-msgstr "Размер буфера приема"
+msgid "Receive Buffer"
+msgstr ""
 
 msgid "Record is locked"
 msgstr "Запись заблокирована"
@@ -6621,8 +6647,8 @@ msgstr "Рекурсивно внутри каталогов"
 msgid "Recursive"
 msgstr "Рекурсивно"
 
-msgid "Recycle bin"
-msgstr "Корзина"
+msgid "Recycle Bin"
+msgstr ""
 
 msgid "Refresh"
 msgstr "Обновить"
@@ -6772,7 +6798,7 @@ msgid "Resource"
 msgstr "Ресурс"
 
 msgid "Resource Name"
-msgstr ""
+msgstr "Имя ресурса"
 
 msgid "Resource name"
 msgstr "Имя ресурса"
@@ -6826,10 +6852,10 @@ msgstr "Румынский"
 msgid "Root"
 msgstr "Корневой каталог"
 
-msgid "Root bind DN"
+msgid "Root Bind DN"
 msgstr "DN администратора каталогов"
 
-msgid "Root bind password"
+msgid "Root Bind Password"
 msgstr "Пароль администратора каталогов"
 
 msgid "Rotation Rate"
@@ -6844,8 +6870,8 @@ msgstr "Round-robin"
 msgid "Routes"
 msgstr "Маршруты"
 
-msgid "Routing tables"
-msgstr "Таблицы маршрутизации"
+msgid "Routing Tables"
+msgstr "Таблица маршрутизации"
 
 msgid "Rows"
 msgstr "Строки"
@@ -6956,18 +6982,14 @@ msgstr "Контроллер домена Samba Active Directory"
 #, php-format
 msgid ""
 "Samba will read from file asynchronously when size of request is bigger than "
-"this value. (%d by default)"
+"this value. (%d by default)."
 msgstr ""
-"Samba будет производить чтение из файла асинхронно в случае, если размер "
-"запроса больше данного значения (по умолчанию %d)."
 
 #, php-format
 msgid ""
 "Samba will write to file asynchronously when size of request is bigger than "
-"this value. (%d by default)"
+"this value. (%d by default)."
 msgstr ""
-"Samba будет производить запись в файл асинхронно в случае, если размер "
-"запроса больше данного значения (по умолчанию %d)."
 
 msgid "Sat"
 msgstr "сб."
@@ -7200,8 +7222,8 @@ msgstr "Мониторинг, технология анализа и отчет�
 msgid "Self-tests Management"
 msgstr "Управление самотестированием"
 
-msgid "Send Buffer Size"
-msgstr "Размер буфера отправки"
+msgid "Send Buffer"
+msgstr ""
 
 msgid "Send Command!"
 msgstr "Отправить команду"
@@ -7248,11 +7270,11 @@ msgstr "Серийный номер"
 msgid "Server"
 msgstr "Сервер"
 
-msgid "Server Max Protocol"
-msgstr "Максимальный протокол сервера"
+msgid "Server Max. Protocol"
+msgstr ""
 
-msgid "Server Min Protocol"
-msgstr "Минимальный протокол сервера"
+msgid "Server Min. Protocol"
+msgstr ""
 
 msgid "Server Name"
 msgstr "Имя сервера"
@@ -7281,11 +7303,11 @@ msgstr "Службы"
 msgid "Set additional group memberships for this account."
 msgstr "Установить принадлежность этой учетной записи к другим группам."
 
-msgid "Set browseable"
-msgstr "Установить атрибут 'просматриваемый'"
+msgid "Set browseable."
+msgstr ""
 
-msgid "Set read only"
-msgstr "Установить атрибут 'только для чтения'"
+msgid "Set read only."
+msgstr ""
 
 msgid "Set share password."
 msgstr "Установить пароль общего ресурса"
@@ -7357,8 +7379,8 @@ msgstr "Параметры"
 msgid "Shadow Copy"
 msgstr "Теневое копирование"
 
-msgid "Shadow Copy format"
-msgstr "Формат теневого копирования"
+msgid "Shadow Copy Format"
+msgstr ""
 
 msgid "Share"
 msgstr "Общий ресурс"
@@ -7660,20 +7682,14 @@ msgstr "Остановлено"
 msgid "Storage"
 msgstr "Хранилище"
 
-msgid "Store DOS attributes"
-msgstr "Сохранять атрибуты DOS"
+msgid "Store DOS Attributes"
+msgstr ""
 
-msgid "Store NTFS acls"
-msgstr "Хранить NTFS списки ACL"
+msgid "Store NTFS ACLs in Extended Attributes."
+msgstr ""
 
-msgid "Store NTFS acls in Extended Attributes"
-msgstr "Хранить NTFS списки ACL в расширенных атрибутах"
-
-msgid "Store alternate data streams"
-msgstr "Хранить альтернативные потоки данных"
-
-msgid "Store alternate data streams in Extended Attributes"
-msgstr "Хранить альтернативные потоки данных в расширенных атрибутах"
+msgid "Store alternate data streams in Extended Attributes."
+msgstr ""
 
 msgid "Strict DLNA"
 msgstr "Строгое DLNA"
@@ -7732,8 +7748,8 @@ msgstr "Подкачка"
 msgid "Swap Usage"
 msgstr "Использование подкачки"
 
-msgid "Swap disabled"
-msgstr "Подкачка отключена."
+msgid "Swap is disabled."
+msgstr ""
 
 msgid "Swedish"
 msgstr "Шведский"
@@ -7829,6 +7845,12 @@ msgstr "Буфер сообщений системы"
 msgid "System tuning"
 msgstr "Настройка системы"
 
+msgid "TCP Port"
+msgstr ""
+
+msgid "TCP Wrapper"
+msgstr ""
+
 msgid "TCP forwarding"
 msgstr "TCP forwarding"
 
@@ -7840,9 +7862,6 @@ msgstr "Порт TCP 5900+N, где N номер VNC дисплея."
 
 msgid "TCP port to bind the server to."
 msgstr "Порт TCP, закрепленный за сервером."
-
-msgid "TCP wrapper"
-msgstr "TCP wrapper(оболочка)"
 
 msgid "TFTP"
 msgstr "TFTP"
@@ -7856,11 +7875,11 @@ msgstr "TLS"
 msgid "TLS Mode"
 msgstr "Режим TLS"
 
+msgid "TLS Only"
+msgstr ""
+
 msgid "TLS Server Certificate Check"
 msgstr "Проверка TLS сертификата сервера"
-
-msgid "TLS only"
-msgstr "Только TLS"
 
 msgid "Tag"
 msgstr "Метка"
@@ -8011,8 +8030,8 @@ msgstr ""
 "Атрибут Newly Added Bad Flash Block указывает общее количество плохих блоков "
 "флэш диска, обнаруженных с момента его первой инициализации в производстве."
 
-msgid "The TCP port must be a valid port number."
-msgstr "TCP-порт должен быть задан правильно."
+msgid "The TCP Port must be a valid port number."
+msgstr ""
 
 msgid "The UPS identifier and IP address"
 msgstr "Идентификатор ИБП и IP-адрес"
@@ -8309,9 +8328,6 @@ msgstr "Пароль DN для связи с сервером каталогов
 msgid "The cron job has been executed successfully."
 msgstr "Задание Сron'а было выполнено успешно."
 
-msgid "The current password is incorrectly entered."
-msgstr "Старый пароль неверен."
-
 #, php-format
 msgid ""
 "The custom format of the snapshot for shadow copy service can be specified. "
@@ -8480,18 +8496,20 @@ msgstr "Логин является зарезервированным."
 msgid "The login name is limited to 16 characters."
 msgstr "Длина логина ограничена 16 символами."
 
-msgid "The max. connection per IP must be either 0 (unlimited) or greater."
+msgid ""
+"The max. connections per IP address must be either 0 (unlimited) or greater."
 msgstr ""
-"Число соединений с одного IP-адреса должно быть либо 0 (не ограничено), либо "
-"больше."
+
+msgid "The max. number of clients must be in the range from 1 to 50."
+msgstr ""
 
 msgid ""
 "The maximum download bandwith in KiB/s. An empty field means infinity."
 msgstr ""
 "Максимальная скорость загрузки (кбайт/с). Пустое поле - без ограничений."
 
-msgid "The maximum idle time be a number."
-msgstr "Максимальное время простоя должно быть числом."
+msgid "The maximum idle time must be a number."
+msgstr ""
 
 msgid ""
 "The maximum port to allocate for PASV style data connections (0 = use any "
@@ -8574,19 +8592,6 @@ msgstr "Имя этого виртуального устройства не м�
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "Сеть '%s' задана некорректно."
-
-msgid ""
-"The new password does not match. Please ensure the passwords match exactly."
-msgstr ""
-"Новый пароль не совпадает. Пожалуйста, убедитесь, что пароли точно совпадают."
-
-msgid "The new password is also the default root password of the system!"
-msgstr ""
-"Новый пароль будет являться также паролем по умолчанию для пользователя root "
-"системы!"
-
-msgid "The number of clients must be between 1 and 50."
-msgstr "Количество клиентов должно быть от 1 до 50."
 
 msgid ""
 "The number of errors caused by incorrect checksum during the error "
@@ -8786,10 +8791,8 @@ msgstr "Том должен быть отсоединен перед удале�
 
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
-"clients (maximum 15 characters)."
+"clients. (maximum 15 characters)."
 msgstr ""
-"Рабочая группа, в которой сервер будет виден для Windows или SMB клиентов "
-"(максимум 15 символов)"
 
 msgid "The working directory does not exist."
 msgstr "Рабочий каталог не существует."
@@ -9257,6 +9260,12 @@ msgstr ""
 "Этот параметр устанавливает суффикс, который используется для пользователей "
 "при их добавлении в каталог LDAP, например %s"
 
+msgid "This password is required to access the admin web interface."
+msgstr ""
+
+msgid "This password is the root password of the system."
+msgstr ""
+
 msgid "This pool name already exists."
 msgstr "Задано существующее имя пула."
 
@@ -9325,16 +9334,14 @@ msgstr ""
 "Внимание! Все данные на вашем диске будут УДАЛЕНЫ! Не используйте эту опцию, "
 "если вы просто хотите добавить уже зашифрованный диск."
 
-msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
-msgstr "Это обеспечит NTFS ACL без поддержки ZFS ACL, такие как UFS."
-
-msgid "This will provide ZFS ACL support. (ZFS only)"
-msgstr "Это обеспечит поддержку ZFS ACL (только для ZFS)."
-
-msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
+msgid "This will provide NTFS ACLs without ZFS ACL support such as UFS."
 msgstr ""
-"Это обеспечит теневое копирование при создании автоматических снимков. "
-"(Только ZFS)"
+
+msgid "This will provide ZFS ACL support. (ZFS only)."
+msgstr ""
+
+msgid "This will provide shadow copy created by auto snapshot. (ZFS only)."
+msgstr ""
 
 msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
@@ -9357,8 +9364,14 @@ msgstr "Поддержка TiVo"
 msgid "Time"
 msgstr "Время"
 
+msgid "Time Interval"
+msgstr ""
+
 msgid "Time Machine"
 msgstr "Time Machine"
+
+msgid "Time Server"
+msgstr ""
 
 msgid "Time Synchronization"
 msgstr "Синхронизация времени"
@@ -9378,9 +9391,6 @@ msgstr "Время до подключения нагрузки"
 msgid "Time interval"
 msgstr "Временной интервал"
 
-msgid "Time server"
-msgstr "Сервер времени"
-
 msgid "Time spent during the positioning of the drive heads."
 msgstr "Время, проведенное во время позиционирования головок диска."
 
@@ -9397,6 +9407,9 @@ msgstr "Таймаут"
 
 msgid "Times"
 msgstr "Время"
+
+msgid "Title Speed"
+msgstr "Title Speed (скорость длинных заголовков)"
 
 msgid "TitleSpeed"
 msgstr "TitleSpeed (скорость длинных заголовков)"
@@ -9575,8 +9588,8 @@ msgstr "Сообщения (traps)"
 msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol (TFTP)"
 
-msgid "Trusted domains"
-msgstr "Доверенные домены"
+msgid "Trusted Domains"
+msgstr ""
 
 msgid "Try to force import."
 msgstr "Попытаться импортировать принудительно"
@@ -9759,11 +9772,11 @@ msgstr "Unison"
 msgid "Unison File Synchronisation"
 msgstr "Служба синхронизации файлов Unison"
 
+msgid "Unix Charset"
+msgstr ""
+
 msgid "Unix Command"
 msgstr "Команда Unix"
-
-msgid "Unix charset"
-msgstr "Кодовая страница Unix"
 
 msgid "Unknown"
 msgstr "Неизвестно"
@@ -9803,7 +9816,7 @@ msgstr ""
 "Обновить ZFS и добавить все поддерживаемые флаги объектов в пуле (Upgrade "
 "ZFS and add all supported feature flags on a pool)"
 
-msgid "Upload bandwidth"
+msgid "Upload Bandwidth"
 msgstr "Скорость раздачи"
 
 msgid "Upload directory"
@@ -9928,11 +9941,20 @@ msgstr "Пользователь"
 msgid "User ID"
 msgstr "Идентификатор пользователя"
 
+msgid "User Mask"
+msgstr "Маска пользователя"
+
+msgid "User Portal"
+msgstr ""
+
 msgid "User Settings"
 msgstr "Параметры пользователя"
 
 msgid "User Shares"
-msgstr ""
+msgstr "Пользовательские общие ресурсы"
+
+msgid "User Suffix"
+msgstr "Суффикс пользователя"
 
 msgid "User account is locked"
 msgstr "Учетная запись пользователя заблокирована"
@@ -9951,12 +9973,6 @@ msgstr "Числовой индентификатор пользователя."
 
 msgid "User password."
 msgstr "Пароль пользователя."
-
-msgid "User portal"
-msgstr "Портал пользователя"
-
-msgid "User suffix"
-msgstr "Суффикс пользователя"
 
 msgid "Username"
 msgstr "Имя пользователя"
@@ -10136,8 +10152,8 @@ msgstr "ВНИМАНИЕ"
 msgid "WEP"
 msgstr "WEP"
 
-msgid "WINS server"
-msgstr "Сервер WINS"
+msgid "WINS Server"
+msgstr ""
 
 msgid "WINS server IP address (e.g. from MS Active Directory server)."
 msgstr ""
@@ -10164,6 +10180,9 @@ msgstr "WPA-PSK WPA-EAP"
 msgid "WPA2"
 msgstr "WPA2"
 
+msgid "Wait Time"
+msgstr "Время ожидания"
+
 msgid "Wait time"
 msgstr "Время ожидания"
 
@@ -10183,11 +10202,14 @@ msgstr ""
 "Внимание: Вы собираетесь удалить зашифрованный раздел. Все данные будут "
 "потеряны и не могут быть восстановлены."
 
-msgid "Watch directory"
+msgid "Watch Directory"
 msgstr "Дежурный каталог"
 
 msgid "WebGUI"
 msgstr "Web-интерфейс"
+
+msgid "WebGUI and Root Password"
+msgstr ""
 
 msgid "Webserver"
 msgstr "Web Server"
@@ -10266,6 +10288,9 @@ msgstr "Настройка беспроводной сети"
 
 msgid "Workgroup"
 msgstr "Рабочая группа"
+
+msgid "Working Directory"
+msgstr ""
 
 msgid "Working directory"
 msgstr "Рабочий каталог"
@@ -10391,6 +10416,10 @@ msgstr "Вы должны перезагрузить сервер перед о�
 msgid "You must select at least one authentication method."
 msgstr "Вы должны выбрать как минимум один из способов аутентификации."
 
+msgid ""
+"You need to update your browser or use Internet Explorer 10 or higher."
+msgstr ""
+
 msgid "You should use HTTPS as WebGUI protocol for sending passphrase."
 msgstr ""
 "Следует использовать HTTPS в качестве протокола WebGUI для отправки "
@@ -10398,6 +10427,9 @@ msgstr ""
 
 msgid "Your ZFS system is not healthy."
 msgstr "Ваша система ZFS повреждена."
+
+msgid "Your browser does not support this svg object type."
+msgstr ""
 
 msgid "ZFS"
 msgstr "ZFS (Zettabyte File System)"
@@ -10619,62 +10651,202 @@ msgstr "пользователь"
 msgid "week days"
 msgstr "дней недели"
 
-#~ msgid "FTP - Ban module"
-#~ msgstr "FTP - модуль 'Ban list'"
+#~ msgid ""
+#~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
+#~ msgstr ""
+#~ "Должен быть указан верный IPv4-адрес первичного/вторичного DNS-сервера."
 
-#~ msgid "FTP - File transfer"
-#~ msgstr "FTP - передача файлов"
+#~ msgid ""
+#~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
+#~ msgstr ""
+#~ "Должен быть указан верный IPv6-адрес первичного/вторичного DNS-сервера."
 
-#~ msgid "IPv4 DNS servers"
-#~ msgstr "IPv4 DNS-серверы"
+#~ msgid "AIO read size"
+#~ msgstr "AIO при чтении"
 
-#~ msgid "IPv6 DNS servers"
-#~ msgstr "IPv6 DNS-серверы"
+#~ msgid "AIO write size"
+#~ msgstr "AIO при записи"
 
-#~ msgid "System time"
-#~ msgstr "Системное время"
+#~ msgid "Asynchronous I/O (AIO)"
+#~ msgstr "Асинхронный ввод/вывод (AIO)"
 
-#~ msgid "Time zone"
-#~ msgstr "Часовой пояс"
+#~ msgid "Create mask"
+#~ msgstr "Создать маску"
 
-#~ msgid "version:"
-#~ msgstr "версия:"
+#~ msgid "Directory mask"
+#~ msgstr "Маска каталога"
 
-#~ msgid "Decrypt password"
-#~ msgstr "Пароль для расшифровки"
+#~ msgid "Dos charset"
+#~ msgstr "Кодовая страница DOS"
 
-#~ msgid "DNS domain"
-#~ msgstr "Домен DNS"
+#~ msgid "EA support"
+#~ msgstr "Поддержка расширенных атрибутов"
 
-#~ msgid "DNS forwarder"
-#~ msgstr "DNS forwarder"
+#~ msgid "Enable Asynchronous I/O (AIO)"
+#~ msgstr "Включить асинхронный ввод/вывод (AIO)"
 
-#~ msgid "Admin password"
-#~ msgstr "Пароль администратора"
+#~ msgid "Enable extended attribute support"
+#~ msgstr "Разрешить поддержку расширенных атрибутов"
 
-#~ msgid "NetBIOS domain"
-#~ msgstr "Домен NetBIOS"
+#~ msgid "Enable large read/write"
+#~ msgstr "Разрешить чтение/запись большими блоками"
 
-#~ msgid "User shares"
-#~ msgstr "Пользовательские общие ресурсы"
+#~ msgid "Enable permission inheritance"
+#~ msgstr "Разрешить наследование прав"
 
-#~ msgid "Authenticate path & realm"
-#~ msgstr "Путь с аутентификацией и область (Realm)"
+#~ msgid "Enable recycle bin"
+#~ msgstr "Включить 'корзину'"
 
-#~ msgid "List Detected Disks"
-#~ msgstr "Список обнаруженных дисков"
+#~ msgid "Enable store DOS attributes"
+#~ msgstr "Включить хранение атрибутов DOS"
 
-#~ msgid "Date format"
-#~ msgstr "Формат Даты"
+#~ msgid "Guest account"
+#~ msgstr "Гостевая учетная запись"
 
-#~ msgid "Event selection"
-#~ msgstr "Выбор события"
+#~ msgid "Hide dot files"
+#~ msgstr "Скрывать файлы \".\""
 
-#~ msgid "Log order"
-#~ msgstr "Порядок логирования"
+#~ msgid "Inherit permissions"
+#~ msgstr "Наследование прав"
 
-#~ msgid "Max entries"
-#~ msgstr "Максимальное количество записей"
+#~ msgid "Large read/write"
+#~ msgstr "Чтение/запись большими блоками"
 
-#~ msgid "Remote syslog messages"
-#~ msgstr "Удаленные syslog сообщения"
+#~ msgid "NetBIOS name"
+#~ msgstr "NetBIOS-имя"
+
+#~ msgid "Null passwords"
+#~ msgstr "Пустые пароли"
+
+#~ msgid "Receive Buffer Size"
+#~ msgstr "Размер буфера приема"
+
+#~ msgid "Recycle bin"
+#~ msgstr "Корзина"
+
+#, php-format
+#~ msgid ""
+#~ "Samba will read from file asynchronously when size of request is bigger than "
+#~ "this value. (%d by default)"
+#~ msgstr ""
+#~ "Samba будет производить чтение из файла асинхронно в случае, если размер "
+#~ "запроса больше данного значения (по умолчанию %d)."
+
+#, php-format
+#~ msgid ""
+#~ "Samba will write to file asynchronously when size of request is bigger than "
+#~ "this value. (%d by default)"
+#~ msgstr ""
+#~ "Samba будет производить запись в файл асинхронно в случае, если размер "
+#~ "запроса больше данного значения (по умолчанию %d)."
+
+#~ msgid "Send Buffer Size"
+#~ msgstr "Размер буфера отправки"
+
+#~ msgid "Set browseable"
+#~ msgstr "Установить атрибут 'просматриваемый'"
+
+#~ msgid "Set read only"
+#~ msgstr "Установить атрибут 'только для чтения'"
+
+#~ msgid "Store DOS attributes"
+#~ msgstr "Сохранять атрибуты DOS"
+
+#~ msgid "Swap disabled"
+#~ msgstr "Подкачка отключена."
+
+#~ msgid "Time server"
+#~ msgstr "Сервер времени"
+
+#~ msgid "Unix charset"
+#~ msgstr "Кодовая страница Unix"
+
+#~ msgid "WINS server"
+#~ msgstr "Сервер WINS"
+
+#~ msgid "Enable guest access"
+#~ msgstr "Разрешить гостевой доступ"
+
+#~ msgid "This will provide ZFS ACL support. (ZFS only)"
+#~ msgstr "Это обеспечит поддержку ZFS ACL (только для ZFS)."
+
+#~ msgid "Map to guest"
+#~ msgstr "Подключить к гостевому эккаунту"
+
+#~ msgid "Trusted domains"
+#~ msgstr "Доверенные домены"
+
+#~ msgid ""
+#~ "The workgroup in which the server will appear when queried by Windows or SMB "
+#~ "clients (maximum 15 characters)."
+#~ msgstr ""
+#~ "Рабочая группа, в которой сервер будет виден для Windows или SMB клиентов "
+#~ "(максимум 15 символов)"
+
+#~ msgid "Password server"
+#~ msgstr "Сервер паролей"
+
+#~ msgid "Interface selection"
+#~ msgstr "Выбор интерфейса"
+
+#~ msgid "Enable ZFS ACL"
+#~ msgstr "Включить ZFS ACL"
+
+#~ msgid "Enable ACL inheritance"
+#~ msgstr "Включить наследование ACL"
+
+#~ msgid "Store NTFS acls in Extended Attributes"
+#~ msgstr "Хранить NTFS списки ACL в расширенных атрибутах"
+
+#~ msgid "Store alternate data streams in Extended Attributes"
+#~ msgstr "Хранить альтернативные потоки данных в расширенных атрибутах"
+
+#~ msgid "Store alternate data streams"
+#~ msgstr "Хранить альтернативные потоки данных"
+
+#~ msgid "Store NTFS acls"
+#~ msgstr "Хранить NTFS списки ACL"
+
+#~ msgid "AIO module"
+#~ msgstr "Модуль AIO"
+
+#~ msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
+#~ msgstr "Это обеспечит NTFS ACL без поддержки ZFS ACL, такие как UFS."
+
+#~ msgid "Shadow Copy format"
+#~ msgstr "Формат теневого копирования"
+
+#~ msgid "Enable shadow copy"
+#~ msgstr "Включить теневое копирование"
+
+#~ msgid "Enable mapping DOS attributes"
+#~ msgstr "Включить преобразование атрибутов DOS"
+
+#~ msgid "Mapping DOS attributes"
+#~ msgstr "Преобразование атрибутов DOS"
+
+#~ msgid "AFP compatibility"
+#~ msgstr "Совместимость AFP"
+
+#~ msgid "Enhanced compatibility with Netatalk AFP server"
+#~ msgstr "Улучшение совместимости с сервером Netatalk AFP"
+
+#~ msgid "Enable 'Asynchronous I/O (AIO)' switch."
+#~ msgstr "Включить асинхронный ввод/вывод (AIO)"
+
+#~ msgid "Server Min Protocol"
+#~ msgstr "Минимальный протокол сервера"
+
+#~ msgid "Server Max Protocol"
+#~ msgstr "Максимальный протокол сервера"
+
+#~ msgid "Client Min Protocol"
+#~ msgstr "Минимальный протокол клиента"
+
+#~ msgid "Client Max Protocol"
+#~ msgstr "Максимальный протокол клиента"
+
+#~ msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
+#~ msgstr ""
+#~ "Это обеспечит теневое копирование при создании автоматических снимков. "
+#~ "(Только ZFS)"

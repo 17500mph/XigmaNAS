@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon1@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-26 21:12+0000\n"
+"POT-Creation-Date: 2017-01-28 02:17+0000\n"
 "PO-Revision-Date: 2017-01-26 17:29+0000\n"
 "Last-Translator: uniss <uniss@ua.fm>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
+"X-Launchpad-Export-Date: 2017-01-28 01:57+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: Ukrainian\n"
 "Language: \n"
@@ -303,11 +303,11 @@ msgstr ""
 "Правильна IP адреса або CIDR позначення має бути визначено для дозволених "
 "хостів."
 
-msgid ""
-"A valid IPv4 address must be specified for the primary/secondary DNS server."
+msgid "A valid IPv4 address must be specified for the primary DNS server."
 msgstr ""
-"Повинна бути вказана дійсна адреса IPv4  для первинного / вторинного DNS-"
-"сервера."
+
+msgid "A valid IPv4 address must be specified for the secondary DNS server."
+msgstr ""
 
 msgid "A valid IPv4 address must be specified."
 msgstr "Повинна бути вказана дійсна адреса IPv4 ."
@@ -318,11 +318,11 @@ msgstr "Повинна бути вказана дійсна маска мере�
 msgid "A valid IPv6 Gateway address must be specified."
 msgstr "Дійсна адреса шлюза IPv6 повинна бути вказана."
 
-msgid ""
-"A valid IPv6 address must be specified for the primary/secondary DNS server."
+msgid "A valid IPv6 address must be specified for the primary DNS server."
 msgstr ""
-"Дійсна адреса IPv6 повинна бути вказана для первинного / вторинного DNS-"
-"сервера."
+
+msgid "A valid IPv6 address must be specified for the secondary DNS server."
+msgstr ""
 
 msgid "A valid IPv6 address must be specified."
 msgstr "Дійсна адреса IPv6 повинна бути вказана."
@@ -369,20 +369,20 @@ msgstr "Ім'я AD або PDC."
 msgid "AFP"
 msgstr "AFP"
 
-msgid "AFP compatibility"
-msgstr "AFP сумісність"
+msgid "AFP Compatibility"
+msgstr ""
 
 msgid "AG"
 msgstr "AG"
 
-msgid "AIO module"
-msgstr "Модуль AIO"
+msgid "AIO Module"
+msgstr ""
 
-msgid "AIO read size"
-msgstr "Розмір читання AIO"
+msgid "AIO Read Size"
+msgstr ""
 
-msgid "AIO write size"
-msgstr "Розмір запису AIO"
+msgid "AIO Write Size"
+msgstr ""
 
 msgid "ALL Interfaces"
 msgstr "ВСІ інтерфейси"
@@ -577,14 +577,14 @@ msgstr "Додати загальний ресурс"
 msgid "Add target"
 msgstr "Додати ціль"
 
+msgid "Additional Group"
+msgstr ""
+
 msgid "Additional Network"
 msgstr "Додаткова мережа"
 
 msgid "Additional Storage"
 msgstr "Додаткова пам'ять"
-
-msgid "Additional group"
-msgstr "Додаткові групи"
 
 msgid ""
 "Additional parameters to the hardware-specific part of the driver for second "
@@ -744,9 +744,6 @@ msgstr ""
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "Дозволити клієнтам продовжувати перервані закачування і скачування."
 
-msgid "Allow group"
-msgstr "Група дозволених"
-
 msgid "Allow new files"
 msgstr "Дозволити нові файли"
 
@@ -796,6 +793,9 @@ msgstr ""
 
 msgid "AltRoot"
 msgstr "AltRoot"
+
+msgid "Alternate Data Streams"
+msgstr ""
 
 msgid "Alternate TCP port. Default is 22"
 msgstr "Альтернативний TCP порт. За умовчанням 22"
@@ -865,14 +865,14 @@ msgstr "Хост із таким іменем вже існує"
 msgid "An interface with the specified description already exists."
 msgstr "Інтерфейс із вказаним описом вже існує."
 
+msgid "Anonymous Bind"
+msgstr ""
+
+msgid "Anonymous Users"
+msgstr ""
+
 msgid "Anonymous access has been deprecated starting from SMB2."
 msgstr "Анонімний доступ є застарілим, починаючи з SMB2."
-
-msgid "Anonymous bind"
-msgstr "Анонімний доступ"
-
-msgid "Anonymous user bandwidth"
-msgstr "Швидкість підключення для анонімного користувача"
 
 msgid ""
 "Anonymous user download bandwith in KB/s. An empty field means infinity."
@@ -885,9 +885,6 @@ msgid ""
 msgstr ""
 "Швидкість закачування для анонімного користувача в КБ/с. Пусте поле - без "
 "обмежень"
-
-msgid "Anonymous users only"
-msgstr "Тільки анонімні користувачі"
 
 msgid ""
 "Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
@@ -941,8 +938,8 @@ msgstr "Ви впевнені, що хочете скинути сервер д�
 msgid "Are you sure you want to shutdown the server?"
 msgstr "Ви впевнені, що хочете вимкнути сервер?"
 
-msgid "Asynchronous I/O (AIO)"
-msgstr "Асинхронний I/O (AIO)"
+msgid "Asynchronous I/O"
+msgstr ""
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
@@ -1000,6 +997,17 @@ msgstr ""
 msgid "Authenticate URL"
 msgstr "URL аутентифікації"
 
+msgid "Authenticated Users"
+msgstr ""
+
+msgid ""
+"Authenticated user download bandwith in KB/s. An empty field means infinity."
+msgstr ""
+
+msgid ""
+"Authenticated user upload bandwith in KB/s. An empty field means infinity."
+msgstr ""
+
 msgid "Authentication"
 msgstr "Автентифікація"
 
@@ -1038,6 +1046,9 @@ msgstr "Автомасштабування графіків."
 
 msgid "Autoselect"
 msgstr "Автовибір"
+
+msgid "Auxiliary Parameter"
+msgstr ""
 
 msgid "Auxiliary Parameters"
 msgstr "Допоміжні параметри"
@@ -1171,8 +1182,8 @@ msgstr "Найкраще з доступного"
 msgid "Bind DN"
 msgstr "Приєднати(прив'язати) доменне ім'я"
 
-msgid "Bind password"
-msgstr "Приєднати(прив'язати) пароль"
+msgid "Bind Password"
+msgstr ""
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
@@ -1290,11 +1301,11 @@ msgstr "Користувачі CHAP"
 msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
 
+msgid "CIFS/SMB Information"
+msgstr ""
+
 msgid "CIFS/SMB disabled"
 msgstr "CIFS/SMB заборонено"
-
-msgid "CIFS/SMB informations"
-msgstr "Інформація CIFS/SMB"
 
 msgid "CIFS/SMB is enabled."
 msgstr "CIFS/SMB увімкнено."
@@ -1501,11 +1512,11 @@ msgstr ""
 msgid "Client"
 msgstr "Клієнт"
 
-msgid "Client Max Protocol"
-msgstr "Максимальний протокол клієнта"
+msgid "Client Max. Protocol"
+msgstr ""
 
-msgid "Client Min Protocol"
-msgstr "Мінімальний протокол клієнта"
+msgid "Client Min. Protocol"
+msgstr ""
 
 msgid "Clone"
 msgstr "Клонувати"
@@ -1521,10 +1532,8 @@ msgstr "Стовпчики"
 
 msgid ""
 "Comma-separated list of group names that are permitted to login to the FTP "
-"server. (empty is ftp group)"
+"server. (empty = ftp group)."
 msgstr ""
-"Список імен груп з дозволом логування на FTP сервер розділених комою. "
-"(пустий - група ftp)"
 
 msgid "Command"
 msgstr "Команда"
@@ -1603,11 +1612,14 @@ msgstr ""
 msgid "Configuration"
 msgstr "Конфігурація"
 
-msgid "Configuration directory"
-msgstr "Директорія конфігурації"
+msgid "Configuration Directory"
+msgstr ""
 
 msgid "Configuring"
 msgstr "Налаштування"
+
+msgid "Confirm New Password"
+msgstr ""
 
 msgid "Confirmation"
 msgstr "Підтвердждення"
@@ -1911,6 +1923,9 @@ msgstr "Дата створення"
 msgid "Create HVM Guest"
 msgstr "Створює HVM Гістя"
 
+msgid "Create Mask"
+msgstr ""
+
 msgid "Create PV Guest"
 msgstr "Створює PV Гістя"
 
@@ -1922,9 +1937,6 @@ msgstr "Створити та ініціалізувати RAID."
 
 msgid "Create encrypted volume"
 msgstr "Створити шифрований том"
-
-msgid "Create mask"
-msgstr "Створити маску"
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Створити робочий каталог, якщо він не існує."
@@ -1985,6 +1997,9 @@ msgid ""
 msgstr ""
 "Поточний пароль співпадає з паролем за замовчуванням. Ви повинні "
 "використовувати ваш власний пароль."
+
+msgid "Current password is incorrectly entered."
+msgstr ""
 
 msgid "Current state of drive operation based upon the Life Curve."
 msgstr "Поточний стан роботи приводу заснований на кривій життя."
@@ -2161,12 +2176,8 @@ msgstr ""
 msgid "Default Device Settings"
 msgstr "Налаштування пристрою за замовчуванням"
 
-#, php-format
-msgid "Default is %s."
-msgstr "За замовчуванням %s."
-
-msgid "Default root"
-msgstr "Кореневий каталог за замовчуванням"
+msgid "Default Root"
+msgstr ""
 
 msgid "Default user name is 'admin'."
 msgstr "За замовчуванням ім'я користувача 'admin'."
@@ -2505,15 +2516,15 @@ msgstr "Директорія"
 msgid "Directory %s doesn't exist!"
 msgstr "Директорія %s не існує!"
 
+msgid "Directory Mask"
+msgstr ""
+
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr ""
 "Директорія для недокачаних файлів. Не вказано одначає не використовувати."
 
 msgid "Directory listing"
 msgstr "Список директорій"
-
-msgid "Directory mask"
-msgstr "Маска директорій"
 
 msgid "Directory that contains removable media. (e.g /mnt/iscsi/)"
 msgstr "Директорія, що містить змінний носій. (e.g /mnt/iscsi/)"
@@ -2613,8 +2624,8 @@ msgstr ""
 "Відстань, на яку зрушився диск відносно шпинделя (зазвичай через поштовх або "
 "температуру). Одиниці виміру - невідомі."
 
-msgid "Distributed hash table"
-msgstr "Розподілена таблиця хешування"
+msgid "Distributed Hash Table"
+msgstr ""
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr "Не вмикайте цю опцію, якщо ви хочете додати існуючий RAID."
@@ -2872,8 +2883,8 @@ msgstr "Домен"
 msgid "Domain controller name"
 msgstr "Ім'я доменного контролера"
 
-msgid "Domain have no 2nd level name."
-msgstr "Домен не має імені другого рівня."
+msgid "Domain is missing 2nd level name."
+msgstr ""
 
 msgid "Domain name"
 msgstr "Ім'я домену"
@@ -2899,17 +2910,20 @@ msgstr "Готово"
 msgid "Done."
 msgstr "Готово."
 
-msgid "Dos charset"
-msgstr "Набір символів DOS"
+msgid "Dos Charset"
+msgstr ""
 
 msgid "Download"
 msgstr "Завантажити"
 
+msgid "Download Bandwidth"
+msgstr ""
+
 msgid "Download Configuration"
 msgstr "Зберегти конфігурацію"
 
-msgid "Download bandwidth"
-msgstr "Ширина смуги завантаження"
+msgid "Download Directory"
+msgstr ""
 
 msgid "Download directory"
 msgstr "Директорія для завантаження"
@@ -2926,11 +2940,11 @@ msgstr "Швидкість позиціонування згідно внутр�
 msgid "Driver"
 msgstr "Драйвер"
 
-msgid "Driver list"
-msgstr "Список драйверів"
+msgid "Driver List"
+msgstr ""
 
-msgid "Driver parameters"
-msgstr "Параметри драйвера"
+msgid "Driver Parameter"
+msgstr ""
 
 msgid "Driver used"
 msgstr "Драйвер, що використовується"
@@ -2965,8 +2979,8 @@ msgstr "Динамічний DNS"
 msgid "Dynamic IP (DHCP) can not be used for HAST resources."
 msgstr "Динамічний IP (DHCP) не може використовуватися для ресурсів HAST."
 
-msgid "EA support"
-msgstr "Підтримка розширених атрибутів"
+msgid "EA Support"
+msgstr ""
 
 msgid "EFI/GPT partition can be use with UFS only."
 msgstr "EFI/GPT розділ може використовуватись лише з UFS."
@@ -3098,20 +3112,20 @@ msgstr "Рівень сповіщення"
 msgid "Enable"
 msgstr "Дозволити"
 
-msgid "Enable 'Asynchronous I/O (AIO)' switch."
-msgstr "Дозволити перемикач 'Асинхронне введення / виведення (AIO)'."
+msgid "Enable 'Asynchronous I/O (AIO).' switch."
+msgstr ""
 
 msgid "Enable 'Large read/write' switch."
 msgstr "Дозволити перемикач \"Велике читання/запис\""
 
-msgid "Enable ACL inheritance"
-msgstr "Дозволити успадкування ACL"
+msgid "Enable ACL inheritance."
+msgstr ""
 
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr "Дозволити Advanced Forma (розмір сектора 4КБ)"
 
-msgid "Enable Asynchronous I/O (AIO)"
-msgstr "Дозволити асинхронний ввід/вивід (AIO)"
+msgid "Enable Asynchronous I/O. (AIO)."
+msgstr ""
 
 msgid "Enable Challenge-Response Authentication"
 msgstr "Увімкнути перевірку Challenge-Response"
@@ -3163,8 +3177,8 @@ msgstr "Увімкнути підтримку TiVo."
 msgid "Enable Time Machine support"
 msgstr "Увімкнути підтримку Time Machine"
 
-msgid "Enable ZFS ACL"
-msgstr "Увімкнути ZFS ACL"
+msgid "Enable ZFS ACL."
+msgstr ""
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
 msgstr ""
@@ -3233,8 +3247,8 @@ msgstr "Дозволити шаблони у домені."
 msgid "Enable encryption."
 msgstr "Увімкнути шифруванння."
 
-msgid "Enable extended attribute support"
-msgstr "Дозволити викорстання розширених атрибутів"
+msgid "Enable extended attribute support."
+msgstr ""
 
 msgid "Enable extended attributes for this file system."
 msgstr ""
@@ -3247,9 +3261,6 @@ msgstr ""
 "Дозволити пріоритетну/фонову перевірку файлової системи під час процесу "
 "завантаження."
 
-msgid "Enable guest access"
-msgstr "Дозволити гостьовий доступ"
-
 msgid "Enable guest access."
 msgstr "Дозволити гостьовий доступ."
 
@@ -3259,14 +3270,14 @@ msgstr "Дозволити inotify."
 msgid "Enable keyboard-interactive authentication."
 msgstr "Увімкнути інтерактивну клавіатурну автентифікацію."
 
-msgid "Enable large read/write"
-msgstr "Увімкнути читання/запис великими блоками"
+msgid "Enable large read/write."
+msgstr ""
 
 msgid "Enable local user authentication."
 msgstr "Дозволити локальну автентифікацію користувачів"
 
-msgid "Enable mapping DOS attributes"
-msgstr "Дозволити DOS атрибути"
+msgid "Enable mapping DOS attributes."
+msgstr ""
 
 msgid "Enable module listing."
 msgstr "Увімкнути список модулів"
@@ -3280,8 +3291,8 @@ msgstr "Включити або відключити перевірку серт
 msgid "Enable peer exchange (PEX)."
 msgstr "Увімкнути обмін списками учасників (PEX)"
 
-msgid "Enable permission inheritance"
-msgstr "Дозволити успадкування прав"
+msgid "Enable permission inheritance."
+msgstr ""
 
 msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr "Увімкнути перенаправлення порітв через NAT-PMP або UPnP."
@@ -3289,8 +3300,8 @@ msgstr "Увімкнути перенаправлення порітв чере�
 msgid "Enable proxy authentication."
 msgstr "Увімкнути автентифікацію проксі-сервера"
 
-msgid "Enable recycle bin"
-msgstr "Увімкнути смітник"
+msgid "Enable recycle bin."
+msgstr ""
 
 msgid "Enable remote monitoring of the local connected UPS."
 msgstr "Увімкнути віддалений моніторинг локально під'єднаного UPS."
@@ -3312,11 +3323,11 @@ msgstr "Включити другий локальний підключений 
 msgid "Enable serial console."
 msgstr "Увімкнути консоль послідовного порту (COM)."
 
-msgid "Enable shadow copy"
-msgstr "Увімкнути shadow copy"
+msgid "Enable shadow copy."
+msgstr ""
 
-msgid "Enable store DOS attributes"
-msgstr "Увімкнути зберігання атрибутів DOS"
+msgid "Enable store DOS attributes."
+msgstr ""
 
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Увімкнути протокол ідентифікації (RFC1413)."
@@ -3385,8 +3396,8 @@ msgstr "Алгоритм шифрування, який потрібно вик�
 msgid "English"
 msgstr "Англійська"
 
-msgid "Enhanced compatibility with Netatalk AFP server"
-msgstr "Розширена сумісність з сервером Netatalk AFP"
+msgid "Enhanced compatibility with Netatalk AFP server."
+msgstr ""
 
 msgid "Enter Command"
 msgstr "Уведіть команду"
@@ -3400,6 +3411,12 @@ msgid ""
 msgstr ""
 "Введіть номер порта для веб інтерфейсу, якщо ви хочете змінити значення за "
 "замовчуванням (80 для HTTP, 443 для HTTPS)."
+
+#, php-format
+msgid ""
+"Enter a custom port number if you want to override the default port. Default "
+"port is %s."
+msgstr ""
 
 msgid "Enter a description"
 msgstr "Введіть опис"
@@ -3582,6 +3599,9 @@ msgstr ""
 "Розширення повинні бути визначені перш, ніж вони можуть бути використані, "
 "розширення не можуть бути використані більш ніж один раз."
 
+msgid "Extra Options"
+msgstr ""
+
 msgid "Extra options"
 msgstr "Додаткові опції"
 
@@ -3707,6 +3727,9 @@ msgstr "Редактор файлів"
 
 msgid "File Manager"
 msgstr "Менеджер файлів"
+
+msgid "File Mask"
+msgstr ""
 
 msgid "File Path"
 msgstr "Шлях до файла"
@@ -3944,18 +3967,23 @@ msgstr "Висота графіків"
 msgid "Greek"
 msgstr "Грецька"
 
-msgid "Greeting banner displayed by FTP when a connection first comes in."
+msgid "Greeting banner displayed to client when firts connection comes in."
 msgstr ""
-"Привітальне повідомлення, що буде показано FTP сервером при з'єднанні."
 
 msgid "Group"
 msgstr "Група"
+
+msgid "Group Allow"
+msgstr ""
 
 msgid "Group ID"
 msgstr "ID групи"
 
 msgid "Group Settings"
 msgstr "Налаштування групи"
+
+msgid "Group Suffix"
+msgstr ""
 
 msgid "Group compilations"
 msgstr "Об'єднання груп"
@@ -3972,9 +4000,6 @@ msgstr "Ім'я групи."
 msgid "Group numeric id."
 msgstr "Цифровий ідентифікатор групи."
 
-msgid "Group suffix"
-msgstr "Суфікс групи"
-
 msgid "Groupmask - Mask ACL with mode"
 msgstr "Groupmask - Маска ACL з режимом"
 
@@ -3984,8 +4009,8 @@ msgstr "Групи"
 msgid "Guest"
 msgstr "Гість"
 
-msgid "Guest account"
-msgstr "Гостьовий обліковий запис"
+msgid "Guest Account"
+msgstr ""
 
 msgid "HAST"
 msgstr "HAST"
@@ -4078,8 +4103,8 @@ msgstr "Hiadaptive (висока ефективність)"
 msgid "Hide Default Groups"
 msgstr "Приховати групи за замовчуванням"
 
-msgid "Hide dot files"
-msgstr "Приховати файли, що починаються з крапки."
+msgid "Hide Dot Files"
+msgstr ""
 
 msgid "High voltage boosting transfer point"
 msgstr "Верхня межа напруги для режиму підживлення (boosting)"
@@ -4108,9 +4133,6 @@ msgstr "Хост"
 msgid "Host access control"
 msgstr "Контроль доступу до хоста"
 
-msgid "Host name"
-msgstr "Ім'я комп'ютера"
-
 msgid "Host resources"
 msgstr "Ресурси хоста"
 
@@ -4125,6 +4147,9 @@ msgstr "Хости"
 
 msgid "Hosts Allow"
 msgstr "Дозволені хости"
+
+msgid "Hosts Deny"
+msgstr ""
 
 msgid "Hosts Setup"
 msgstr "Встановлення хостів"
@@ -4243,8 +4268,8 @@ msgstr "ISO файл для монтування."
 msgid "ISP DNS Servers"
 msgstr "Сервери DNS ISP"
 
-msgid "Ident protocol"
-msgstr "Протокол ідентифікації"
+msgid "IdentLookups"
+msgstr ""
 
 msgid "Identifier"
 msgstr "Ідентифікатор"
@@ -4331,13 +4356,6 @@ msgstr ""
 "Якщо цей параметр дозволений, знімки стану будуть відображені в каталозі "
 ".zfs."
 
-msgid ""
-"If you want to change the password for accessing the WebGUI, enter it here "
-"twice."
-msgstr ""
-"Якщо ви хочете змінити пароль для доступу до веб інтерфейсу, введіть його "
-"тут двічі."
-
 msgid "Import"
 msgstr "Імпортувати"
 
@@ -4383,8 +4401,8 @@ msgstr "Пакети вводу/виводу"
 msgid "Incoming Line/Power Information"
 msgstr "Інформація про вхідну лінію/потужність"
 
-msgid "Incomplete directory"
-msgstr "Директорія для незакінченних"
+msgid "Incomplete Directory"
+msgstr ""
 
 msgid ""
 "Indicates the approximate SSD life left, in terms of program/erase cycles or "
@@ -4417,8 +4435,8 @@ msgstr "Інформація та статус"
 msgid "Inherit ACL"
 msgstr "Успадкувати ACL"
 
-msgid "Inherit permissions"
-msgstr "Наслідувати дозволи"
+msgid "Inherit Permissions"
+msgstr ""
 
 msgid "Inhibit some of the syslog diagnostics for bad lines in /etc/exports."
 msgstr ""
@@ -4546,9 +4564,6 @@ msgstr "Керування інтерфейсом"
 msgid "Interface Selection"
 msgstr "Обрання інтерфейсу"
 
-msgid "Interface selection"
-msgstr "Вибір інтерфуйсу"
-
 msgid "Interfaces"
 msgstr "Інтерфейси"
 
@@ -4607,11 +4622,9 @@ msgstr ""
 "сторінки налаштування параметрів SCSI"
 
 msgid ""
-"It is impossible to enable 'Anonymous users only' and 'Local users only' "
-"authentication simultaneously."
+"It is impossible to enable 'Anonymous Users' and 'Authenticated Users' both "
+"at the same time."
 msgstr ""
-"Неможливо одночасно увімкнути 'Лише анонімні користувачі' і 'Лише локальні "
-"користувачі'."
 
 msgid ""
 "It is not recommanded to import non healthy pools nor virtual devices that "
@@ -4728,6 +4741,9 @@ msgstr "Керування локальною мережею (LAN)"
 msgid "LAN Only"
 msgstr "Тільки LAN"
 
+msgid "LAN interface is not configured."
+msgstr ""
+
 msgid "LAN net"
 msgstr "Локальна мережа (LAN)"
 
@@ -4758,8 +4774,8 @@ msgstr "Мова"
 msgid "Language to use on front panel"
 msgstr "Мова, яку використовувати на передній панелі"
 
-msgid "Large read/write"
-msgstr "Читання/запис великими блоками"
+msgid "Large Read/Write"
+msgstr ""
 
 msgid "Last Configuration Change"
 msgstr "Остання зміна конфігурації"
@@ -4914,22 +4930,6 @@ msgstr "Локальний загальний ресурс (розміщення
 msgid "Local shares to be synchronized"
 msgstr "Локальні ресурси, що будуть синхронізовані"
 
-msgid "Local user bandwidth"
-msgstr "Пропускна здатність для локального користувача"
-
-msgid "Local user download bandwith in KB/s. An empty field means infinity."
-msgstr ""
-"Полоса пропускання на завантаження для локального користувача в КБ/с. Пусте "
-"поле - без обмеження."
-
-msgid "Local user upload bandwith in KB/s. An empty field means infinity."
-msgstr ""
-"Полоса пропускання на вивантаження для локального користувача в КБ/с. Пусте "
-"поле - без обмеження."
-
-msgid "Local users only"
-msgstr "Лише локальні користувачі"
-
 msgid "Location"
 msgstr "Розташування"
 
@@ -5068,8 +5068,8 @@ msgstr "MS домен"
 msgid "MTU"
 msgstr "MTU"
 
-msgid "Machine suffix"
-msgstr "Суфікс комп'ютера"
+msgid "Machine Suffix"
+msgstr ""
 
 msgid "Maintenance"
 msgstr "Обслуговування"
@@ -5098,14 +5098,14 @@ msgstr "Дата виробництва"
 msgid "Map all users to root"
 msgstr "Переназначити всіх користувачів на root"
 
-msgid "Map to guest"
-msgstr "Як гість"
+msgid "Map to Guest"
+msgstr ""
 
 msgid "Map to user"
 msgstr "Як користувач"
 
-msgid "Mapping DOS attributes"
-msgstr "Перетворення атрибутів DOS"
+msgid "Mapping DOS Attributes"
+msgstr ""
 
 msgid "Mar"
 msgstr "Бер."
@@ -5118,11 +5118,23 @@ msgid ""
 "not specified."
 msgstr "Межа каналу при читанні даних. Функція цього атрибута не вказано."
 
-msgid "Masquerade address"
-msgstr "Маскарадна адреса"
+msgid "Masquerade Address"
+msgstr ""
 
 msgid "Max Entries"
 msgstr "Макс. кількість записів"
+
+msgid "Max. Clients"
+msgstr ""
+
+msgid "Max. Connections Per Host"
+msgstr ""
+
+msgid "Max. Login Attempts"
+msgstr ""
+
+msgid "Max. Passive Port"
+msgstr ""
 
 msgid "Max. TTL"
 msgstr "Макс. TTL"
@@ -5130,17 +5142,8 @@ msgstr "Макс. TTL"
 msgid "Max. block size"
 msgstr "Макс. розмір блока"
 
-msgid "Max. conn. per IP"
-msgstr "Макс. з'єднань на клієнта"
-
 msgid "Max. connections"
 msgstr "Максимально з'єднань"
-
-msgid "Max. login attempts"
-msgstr "Макс. кількість спроб входу"
-
-msgid "Max. passive port"
-msgstr "Макс. номер пасивного порта"
 
 msgid "Max. pre-send R2T"
 msgstr "Попередня посилка R2T (макс.)"
@@ -5182,12 +5185,13 @@ msgstr "Максимальна зафіксована вхідна напруг�
 msgid "Maximum number of allowed password attempts before disconnection."
 msgstr "Максимальна кількість спроб вводу пароля до роз'єднання."
 
+msgid ""
+"Maximum number of connections allowed per IP address. (0 = unlimited)."
+msgstr ""
+
 #, php-format
 msgid "Maximum number of connections in each session (%d by default)."
 msgstr "Максимальна кількість з'єднань в кожній сесії (за замовчуванням %d)."
-
-msgid "Maximum number of connections per IP address (0 = unlimited)."
-msgstr "Максимальна кількість  IP адрес (0 = без обмежень)."
 
 #, php-format
 msgid ""
@@ -5201,12 +5205,12 @@ msgstr ""
 msgid "Maximum number of sessions holding at same time (%d by default)."
 msgstr "Максимальна кількість одночасних сесій (за замовчуванням %d)."
 
-msgid "Maximum number of simultaneous clients."
-msgstr "Максимальна кількість одочасних клієнтів."
-
 msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
 msgstr ""
 "Максимальна кількість одночасних з'єднань. За замовчуванням 0 (без обмежень)."
+
+msgid "Maximum number of users that can connect to the server."
+msgstr ""
 
 msgid "Maximum relative humidity seen (percent)"
 msgstr "Максимальне зафіксоване значення відносної вологості"
@@ -5259,8 +5263,8 @@ msgstr "МіБ"
 msgid "MibII"
 msgstr "MibII"
 
-msgid "Min. passive port"
-msgstr "Мінімальний пасивний порт"
+msgid "Min. Passive Port"
+msgstr ""
 
 msgid "MiniDLNA"
 msgstr "MiniDLNA"
@@ -5451,6 +5455,9 @@ msgstr "ПРИМІТКА"
 msgid "NT1 (CIFS)"
 msgstr "NT1 (CIFS)"
 
+msgid "NTFS ACLs"
+msgstr ""
+
 msgid "NTP Time Server"
 msgstr "Сервер часу NTP"
 
@@ -5497,9 +5504,6 @@ msgstr ""
 
 msgid "NetBIOS Name"
 msgstr ""
-
-msgid "NetBIOS name"
-msgstr "NetBIOS ім'я"
 
 msgid "Netgraph"
 msgstr "Netgraph"
@@ -5553,6 +5557,11 @@ msgstr ""
 msgid "New Password"
 msgstr "Новий пароль"
 
+msgid ""
+"New Password does not match the confirmation password. Please ensure both "
+"passwords are the same."
+msgstr ""
+
 msgid "New password"
 msgstr "Новий пароль"
 
@@ -5561,6 +5570,9 @@ msgstr "Наступне"
 
 msgid "No"
 msgstr "Ні"
+
+msgid "No DNS server have been configured."
+msgstr ""
 
 msgid "No DNS setting found."
 msgstr "DNS налаштавання не знайдені"
@@ -5774,17 +5786,14 @@ msgstr "Листопад"
 msgid "Now"
 msgstr "Зараз"
 
-msgid "Null passwords"
-msgstr "Пусті паролі"
+msgid "Null Passwords"
+msgstr ""
 
 msgid "Number of bad battery packs"
 msgstr "Кількість поганих блоків батареї"
 
 msgid "Number of battery packs"
 msgstr "Кількість блоків батареї"
-
-msgid "Number of clients"
-msgstr "Кількість клієнтів"
 
 msgid "Number of hours elapsed in the power-on state."
 msgstr "Кількість годин у включеному стані."
@@ -5834,9 +5843,6 @@ msgstr "Вимкнено"
 
 msgid "Old passphrase"
 msgstr "Стара парольна фраза"
-
-msgid "Old password"
-msgstr "Старий пароль"
 
 msgid "On"
 msgstr "Увімкнено"
@@ -6001,8 +6007,8 @@ msgstr "Тип розділу"
 msgid "Partitions"
 msgstr "Розділи"
 
-msgid "Passive ports"
-msgstr "Пасивні порти"
+msgid "Passive Port"
+msgstr ""
 
 msgid ""
 "Passive ports restricts the range of ports from which the server will select "
@@ -6042,14 +6048,25 @@ msgstr "Пароль"
 msgid "Password (confirmed)"
 msgstr "Пароль (підтверджений)"
 
+msgid "Password Encryption"
+msgstr ""
+
+msgid "Password Server"
+msgstr ""
+
+msgid "Password Suffix"
+msgstr ""
+
 msgid "Password authentication"
 msgstr "Авторизація паролем"
 
+msgid ""
+"Password does not match the confirmation password. Please ensure both "
+"passwords are the same."
+msgstr ""
+
 msgid "Password don't match."
 msgstr "Паролі не однакові"
-
-msgid "Password encryption"
-msgstr "Шифрування пароля"
 
 msgid "Password for the administrative pages."
 msgstr "Пароль для адміністративних сторінок"
@@ -6057,16 +6074,10 @@ msgstr "Пароль для адміністративних сторінок"
 msgid "Password of domain administrator account."
 msgstr "Пароль адміністратора домену."
 
-msgid "Password server"
-msgstr "Сервер паролів"
-
 msgid ""
 "Password server name or IP address (e.g. Active Directory domain controller)."
 msgstr ""
 "Пароль Ім'я сервера або IP адреса (типа контролер домену Active Directory)."
-
-msgid "Password suffix"
-msgstr "Суфікс пароля"
 
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
 msgstr "Вставте тут приватний ключ RSA в PEM форматі."
@@ -6090,14 +6101,17 @@ msgstr "Шлях до ресурса, що буде спільним."
 msgid "Path to the local device. (e.g. %s)"
 msgstr "Адреса локального пристрою (напр. %s)."
 
+msgid "Peer Exchange"
+msgstr ""
+
+msgid "Peer Port"
+msgstr ""
+
 msgid "Peer Secret"
 msgstr "Ключ безпеки ініціатора"
 
 msgid "Peer User"
 msgstr "Користувач вузла"
-
-msgid "Peer exchange"
-msgstr "Обмін вузлами"
 
 msgid "Peer port"
 msgstr "Порт вузла"
@@ -6108,6 +6122,9 @@ msgstr "Налаштування продуктивності"
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
 msgstr "Постійний шлях до даних samba (напр. %s)."
+
+msgid "Permit Root Login"
+msgstr ""
 
 msgid "Permit root login"
 msgstr "Дозволити користувача root"
@@ -6250,8 +6267,8 @@ msgstr "Порт "
 msgid "Port %ld is already used by another service."
 msgstr "Порт %ld вже використовується іншим сервісом."
 
-msgid "Port forwarding"
-msgstr "Перенаправлення портів"
+msgid "Port Forwarding"
+msgstr ""
 
 #, php-format
 msgid "Port number must be in the range between %d and %d."
@@ -6542,6 +6559,9 @@ msgstr "Ramdisk"
 msgid "Read"
 msgstr "Читати"
 
+msgid "Read Only"
+msgstr ""
+
 msgid "Read Only (ro)"
 msgstr "Тільки для читання (RO)"
 
@@ -6598,8 +6618,8 @@ msgstr "Причина останнього переходу на батарею
 msgid "Reboot"
 msgstr "Перезавантаження"
 
-msgid "Receive Buffer Size"
-msgstr "Розмір вхідного буфера"
+msgid "Receive Buffer"
+msgstr ""
 
 msgid "Record is locked"
 msgstr "Запис заблоковано"
@@ -6610,8 +6630,8 @@ msgstr "Рекурсивно для директорій"
 msgid "Recursive"
 msgstr "Рекурсивно"
 
-msgid "Recycle bin"
-msgstr "Смітник"
+msgid "Recycle Bin"
+msgstr ""
 
 msgid "Refresh"
 msgstr "Оновити"
@@ -6816,11 +6836,11 @@ msgstr "Румунська"
 msgid "Root"
 msgstr "Root"
 
-msgid "Root bind DN"
-msgstr "DN адміністратора каталогу"
+msgid "Root Bind DN"
+msgstr ""
 
-msgid "Root bind password"
-msgstr "Пароль кореня каталогу"
+msgid "Root Bind Password"
+msgstr ""
 
 msgid "Rotation Rate"
 msgstr "Швидкість ротації"
@@ -6834,8 +6854,8 @@ msgstr "Round-robin"
 msgid "Routes"
 msgstr "Маршрути"
 
-msgid "Routing tables"
-msgstr "Таблиці маршрутизації"
+msgid "Routing Tables"
+msgstr ""
 
 msgid "Rows"
 msgstr "Рядки"
@@ -6948,18 +6968,14 @@ msgstr "Контролер домену Samba Active Directory"
 #, php-format
 msgid ""
 "Samba will read from file asynchronously when size of request is bigger than "
-"this value. (%d by default)"
+"this value. (%d by default)."
 msgstr ""
-"Samba буде читати файл асинхронно, якщо розмір запиту більший ніж вказане "
-"значення. (за замовчуванням %d)"
 
 #, php-format
 msgid ""
 "Samba will write to file asynchronously when size of request is bigger than "
-"this value. (%d by default)"
+"this value. (%d by default)."
 msgstr ""
-"Samba буде писати файл асинхронно, якщо розмір запиту більший ніж вказане "
-"значення. (за замовчуванням %d)"
 
 msgid "Sat"
 msgstr "Сб"
@@ -7195,8 +7211,8 @@ msgstr "Моніторинг, технологія аналізу і звітн�
 msgid "Self-tests Management"
 msgstr "Керування самотестуванням"
 
-msgid "Send Buffer Size"
-msgstr "Розмір вихідного буфера"
+msgid "Send Buffer"
+msgstr ""
 
 msgid "Send Command!"
 msgstr "Надіслати команду!"
@@ -7243,11 +7259,11 @@ msgstr "Серійний номер"
 msgid "Server"
 msgstr "Сервер"
 
-msgid "Server Max Protocol"
-msgstr "Максимальний протокол сервера"
+msgid "Server Max. Protocol"
+msgstr ""
 
-msgid "Server Min Protocol"
-msgstr "Мінімальний протокол сервера"
+msgid "Server Min. Protocol"
+msgstr ""
 
 msgid "Server Name"
 msgstr "Назва сервера"
@@ -7276,11 +7292,11 @@ msgstr "Служби"
 msgid "Set additional group memberships for this account."
 msgstr "Встановити приналежність цього облікового запису до інших груп."
 
-msgid "Set browseable"
-msgstr "Доступний для переглядання"
+msgid "Set browseable."
+msgstr ""
 
-msgid "Set read only"
-msgstr "Лише для читання"
+msgid "Set read only."
+msgstr ""
 
 msgid "Set share password."
 msgstr "Пароль на ресурс"
@@ -7351,8 +7367,8 @@ msgstr "Налаштування"
 msgid "Shadow Copy"
 msgstr "Приховане копіювання"
 
-msgid "Shadow Copy format"
-msgstr "Формат прихованого копіювання"
+msgid "Shadow Copy Format"
+msgstr ""
 
 msgid "Share"
 msgstr "Спільний доступ"
@@ -7650,20 +7666,14 @@ msgstr "Зупинено"
 msgid "Storage"
 msgstr "Накопичувач"
 
-msgid "Store DOS attributes"
-msgstr "Зберігати DOS атрибути"
+msgid "Store DOS Attributes"
+msgstr ""
 
-msgid "Store NTFS acls"
-msgstr "Зберегти ACL списки NTFS"
+msgid "Store NTFS ACLs in Extended Attributes."
+msgstr ""
 
-msgid "Store NTFS acls in Extended Attributes"
-msgstr "Зберігати ACL списки NTFS в розширених атрибутах"
-
-msgid "Store alternate data streams"
-msgstr "Зберігати альтернативні потоки даних"
-
-msgid "Store alternate data streams in Extended Attributes"
-msgstr "Зберігати альтернативні потоки даних в розширених атрибутах"
+msgid "Store alternate data streams in Extended Attributes."
+msgstr ""
 
 msgid "Strict DLNA"
 msgstr "Строгий DLNA"
@@ -7722,8 +7732,8 @@ msgstr "Пам'ять для Swap"
 msgid "Swap Usage"
 msgstr "Використання Swap"
 
-msgid "Swap disabled"
-msgstr "Swap вимкнено"
+msgid "Swap is disabled."
+msgstr ""
 
 msgid "Swedish"
 msgstr "Шведська"
@@ -7820,6 +7830,12 @@ msgstr "Буфер системних повідомлень"
 msgid "System tuning"
 msgstr "Налаштування системи"
 
+msgid "TCP Port"
+msgstr ""
+
+msgid "TCP Wrapper"
+msgstr ""
+
 msgid "TCP forwarding"
 msgstr "TCP forwarding"
 
@@ -7831,9 +7847,6 @@ msgstr "TCP порт 5900+N, де N - номер VNC дисплею."
 
 msgid "TCP port to bind the server to."
 msgstr "TCP порт на якому працюватиме сервер."
-
-msgid "TCP wrapper"
-msgstr "TCP wrapper"
 
 msgid "TFTP"
 msgstr "TFTP"
@@ -7847,11 +7860,11 @@ msgstr "TLS"
 msgid "TLS Mode"
 msgstr "Режим TLS"
 
+msgid "TLS Only"
+msgstr ""
+
 msgid "TLS Server Certificate Check"
 msgstr "Перевірка TLS сертифіката сервера"
-
-msgid "TLS only"
-msgstr "Лише TLS"
 
 msgid "Tag"
 msgstr "Мітка"
@@ -8003,8 +8016,8 @@ msgstr ""
 "блоків флеш диска, виявлених з моменту його першої ініціалізації в "
 "виробництві."
 
-msgid "The TCP port must be a valid port number."
-msgstr "Значення TCP порта має бути коректним номером порта."
+msgid "The TCP Port must be a valid port number."
+msgstr ""
 
 msgid "The UPS identifier and IP address"
 msgstr "Ідентифікатор та IP адреса ДБЖ"
@@ -8294,9 +8307,6 @@ msgstr "Облікові дані, з якими зв'язуватися."
 msgid "The cron job has been executed successfully."
 msgstr "Завдання cron виконано успішно."
 
-msgid "The current password is incorrectly entered."
-msgstr "Неправильно введено поточний пароль."
-
 #, php-format
 msgid ""
 "The custom format of the snapshot for shadow copy service can be specified. "
@@ -8468,16 +8478,19 @@ msgstr "Ім'я вказане як логін є зарезервованим �
 msgid "The login name is limited to 16 characters."
 msgstr "Довжина логіна обмежена 16 символами."
 
-msgid "The max. connection per IP must be either 0 (unlimited) or greater."
+msgid ""
+"The max. connections per IP address must be either 0 (unlimited) or greater."
 msgstr ""
-"Число з'єднань з однієї IP адреси має бути або 0 (необмежена), або більше."
+
+msgid "The max. number of clients must be in the range from 1 to 50."
+msgstr ""
 
 msgid ""
 "The maximum download bandwith in KiB/s. An empty field means infinity."
 msgstr "Максимальна швидкість скачування в KiB/s. Пусте поле - без обмежень."
 
-msgid "The maximum idle time be a number."
-msgstr "Максимальний час простою повинен бути числом."
+msgid "The maximum idle time must be a number."
+msgstr ""
 
 msgid ""
 "The maximum port to allocate for PASV style data connections (0 = use any "
@@ -8559,18 +8572,6 @@ msgstr "Ім'я цього віртуального пристрою не мож
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "Неправильна мережа '%s'."
-
-msgid ""
-"The new password does not match. Please ensure the passwords match exactly."
-msgstr ""
-"Нові паролі не однакові. Переконайтесь, що паролі повністю співпадають."
-
-msgid "The new password is also the default root password of the system!"
-msgstr ""
-"Новий пароль є також за замовчуванням кореневим (root) паролем системи!"
-
-msgid "The number of clients must be between 1 and 50."
-msgstr "Кількість клієнтів повинна бути від 1 до 50."
 
 msgid ""
 "The number of errors caused by incorrect checksum during the error "
@@ -8767,10 +8768,8 @@ msgstr "Диск потрібно від'єднати перед видален�
 
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
-"clients (maximum 15 characters)."
+"clients. (maximum 15 characters)."
 msgstr ""
-"Робоча група, в якій сервер буде відображатися при запиті від Windows, або "
-"SMB клієнтів (не більше 15 символів)."
 
 msgid "The working directory does not exist."
 msgstr "Робочої директорії не існує."
@@ -9243,6 +9242,12 @@ msgstr ""
 "Цей параметр вказує суфікс, який використовується для користувачів, коли "
 "вони додаються в каталог LDAP, наприклад %s"
 
+msgid "This password is required to access the admin web interface."
+msgstr ""
+
+msgid "This password is the root password of the system."
+msgstr ""
+
 msgid "This pool name already exists."
 msgstr "Pool з таким ім'ям вже існує."
 
@@ -9311,15 +9316,14 @@ msgstr ""
 "Це видалить всі дані на жорсткому диску! Не використовуйте цю опцію, якщо ви "
 "хочете додати існуючий зашифрований диск."
 
-msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
-msgstr "Це забезпечить NTFS ACL без підтримки ZFS ACL, таких як UFS."
-
-msgid "This will provide ZFS ACL support. (ZFS only)"
-msgstr "Це забезпечує підтримку ZFS ACL (только ZFS)."
-
-msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
+msgid "This will provide NTFS ACLs without ZFS ACL support such as UFS."
 msgstr ""
-"Це забезпечить тіньову копію створену автоматичним знімком (тільки ZFS)."
+
+msgid "This will provide ZFS ACL support. (ZFS only)."
+msgstr ""
+
+msgid "This will provide shadow copy created by auto snapshot. (ZFS only)."
+msgstr ""
 
 msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
@@ -9342,8 +9346,14 @@ msgstr "Підтримка TiVo"
 msgid "Time"
 msgstr "Час"
 
+msgid "Time Interval"
+msgstr ""
+
 msgid "Time Machine"
 msgstr "Time Machine"
+
+msgid "Time Server"
+msgstr ""
 
 msgid "Time Synchronization"
 msgstr "Синхронізація часу"
@@ -9363,9 +9373,6 @@ msgstr "Час перед тим, як навантага буде увімкн�
 msgid "Time interval"
 msgstr "Проміжок часу"
 
-msgid "Time server"
-msgstr "Сервер часу"
-
 msgid "Time spent during the positioning of the drive heads."
 msgstr "Час, витрачений на позиціонування головок приводу."
 
@@ -9383,6 +9390,9 @@ msgstr "Тайм-аут"
 
 msgid "Times"
 msgstr "Час"
+
+msgid "Title Speed"
+msgstr ""
 
 msgid "TitleSpeed"
 msgstr "TitleSpeed"
@@ -9560,8 +9570,8 @@ msgstr "Пастки (Traps)"
 msgid "Trivial File Transfer Protocol"
 msgstr "Тривіальний протокол передавання файлів"
 
-msgid "Trusted domains"
-msgstr "Довірені домени"
+msgid "Trusted Domains"
+msgstr ""
 
 msgid "Try to force import."
 msgstr "Спробувати імпортувати примусово."
@@ -9743,11 +9753,11 @@ msgstr "Unison"
 msgid "Unison File Synchronisation"
 msgstr "Unison File Synchronisation"
 
+msgid "Unix Charset"
+msgstr ""
+
 msgid "Unix Command"
 msgstr "Команда Unix"
-
-msgid "Unix charset"
-msgstr "Набір символів Unix"
 
 msgid "Unknown"
 msgstr "Невідомо"
@@ -9785,8 +9795,8 @@ msgstr "Оновлення прошивки"
 msgid "Upgrade ZFS and add all supported feature flags on a pool"
 msgstr "Оновити ZFS і додати всі підтримувані прапори об'єктів в пулі"
 
-msgid "Upload bandwidth"
-msgstr "Швидкість вивантаження"
+msgid "Upload Bandwidth"
+msgstr ""
 
 msgid "Upload directory"
 msgstr "Директорія для вивантаження"
@@ -9909,10 +9919,19 @@ msgstr "Користувач"
 msgid "User ID"
 msgstr "Ідентифікатор користувача"
 
+msgid "User Mask"
+msgstr ""
+
+msgid "User Portal"
+msgstr ""
+
 msgid "User Settings"
 msgstr "Налаштування користувача"
 
 msgid "User Shares"
+msgstr ""
+
+msgid "User Suffix"
 msgstr ""
 
 msgid "User account is locked"
@@ -9932,12 +9951,6 @@ msgstr "Ідентифікаційний номер користувача"
 
 msgid "User password."
 msgstr "Пароль користувача."
-
-msgid "User portal"
-msgstr "Портал користувач"
-
-msgid "User suffix"
-msgstr "Суфікс користувача"
 
 msgid "Username"
 msgstr "Ім'я користувача"
@@ -10117,8 +10130,8 @@ msgstr "ПОПЕРЕДЖЕННЯ"
 msgid "WEP"
 msgstr "WEP"
 
-msgid "WINS server"
-msgstr "Сервер WINS"
+msgid "WINS Server"
+msgstr ""
 
 msgid "WINS server IP address (e.g. from MS Active Directory server)."
 msgstr "IP адреса сервера WINS (наприклад, з сервера MS Active Directory)."
@@ -10144,6 +10157,9 @@ msgstr "WPA-PSK WPA-EAP"
 msgid "WPA2"
 msgstr "WPA2"
 
+msgid "Wait Time"
+msgstr ""
+
 msgid "Wait time"
 msgstr "Час очікування"
 
@@ -10163,11 +10179,14 @@ msgstr ""
 "Увага: Ви збираєтеся видалити зашифрований том. Всі дані будуть загублені і "
 "не можуть бути відновлені."
 
-msgid "Watch directory"
-msgstr "Каталог спостерігання"
+msgid "Watch Directory"
+msgstr ""
 
 msgid "WebGUI"
 msgstr "Веб інтерфейс"
+
+msgid "WebGUI and Root Password"
+msgstr ""
 
 msgid "Webserver"
 msgstr "Веб-сервер"
@@ -10246,6 +10265,9 @@ msgstr "Безпровідна конфігурація"
 
 msgid "Workgroup"
 msgstr "Робоча група"
+
+msgid "Working Directory"
+msgstr ""
 
 msgid "Working directory"
 msgstr "Робоча директорія"
@@ -10371,6 +10393,10 @@ msgstr ""
 msgid "You must select at least one authentication method."
 msgstr "Треба вибрати принаймні один метод авторизації."
 
+msgid ""
+"You need to update your browser or use Internet Explorer 10 or higher."
+msgstr ""
+
 msgid "You should use HTTPS as WebGUI protocol for sending passphrase."
 msgstr ""
 "Слід використовувати HTTPS в якості протоколу веб інтерфейсу для відправки "
@@ -10378,6 +10404,9 @@ msgstr ""
 
 msgid "Your ZFS system is not healthy."
 msgstr "Ваша система ZFS дещо не здорова."
+
+msgid "Your browser does not support this svg object type."
+msgstr ""
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -10595,62 +10624,203 @@ msgstr "користувач"
 msgid "week days"
 msgstr "днів тижня"
 
-#~ msgid "version:"
-#~ msgstr "версія:"
+#~ msgid "AIO read size"
+#~ msgstr "Розмір читання AIO"
 
-#~ msgid "System time"
-#~ msgstr "Системний час"
+#~ msgid "AIO write size"
+#~ msgstr "Розмір запису AIO"
 
-#~ msgid "Time zone"
-#~ msgstr "Часовий пояс"
+#~ msgid "Asynchronous I/O (AIO)"
+#~ msgstr "Асинхронний I/O (AIO)"
 
-#~ msgid "Decrypt password"
-#~ msgstr "Пароль для розшифрування"
+#~ msgid "Create mask"
+#~ msgstr "Створити маску"
 
-#~ msgid "FTP - Ban module"
-#~ msgstr "FTP - модуль \"Ban-list\""
+#~ msgid "Directory mask"
+#~ msgstr "Маска директорій"
 
-#~ msgid "FTP - File transfer"
-#~ msgstr "FTP - передача файлів"
+#~ msgid "Dos charset"
+#~ msgstr "Набір символів DOS"
 
-#~ msgid "IPv4 DNS servers"
-#~ msgstr "Сервери імен (DNS) IPv4"
+#~ msgid "Enable ZFS ACL"
+#~ msgstr "Увімкнути ZFS ACL"
 
-#~ msgid "IPv6 DNS servers"
-#~ msgstr "Сервери імен (DNS) IPv6"
+#~ msgid "Enable Asynchronous I/O (AIO)"
+#~ msgstr "Дозволити асинхронний ввід/вивід (AIO)"
 
-#~ msgid "Admin password"
-#~ msgstr "Пароль адміністратора"
+#~ msgid "Enable guest access"
+#~ msgstr "Дозволити гостьовий доступ"
 
-#~ msgid "DNS domain"
-#~ msgstr "DNS домен"
+#~ msgid "Enable extended attribute support"
+#~ msgstr "Дозволити викорстання розширених атрибутів"
 
-#~ msgid "Date format"
-#~ msgstr "Формат дати"
+#~ msgid "Enable large read/write"
+#~ msgstr "Увімкнути читання/запис великими блоками"
 
-#~ msgid "Max entries"
-#~ msgstr "Максимальна кількість записів"
+#~ msgid "Enable permission inheritance"
+#~ msgstr "Дозволити успадкування прав"
 
-#~ msgid "Remote syslog messages"
-#~ msgstr "Віддалені syslog повідомлення"
+#~ msgid "Inherit permissions"
+#~ msgstr "Наслідувати дозволи"
 
-#~ msgid "DNS forwarder"
-#~ msgstr "DNS форвардер"
+#~ msgid "Interface selection"
+#~ msgstr "Вибір інтерфуйсу"
 
-#~ msgid "Event selection"
-#~ msgstr "Обрання події"
+#~ msgid "NetBIOS name"
+#~ msgstr "NetBIOS ім'я"
 
-#~ msgid "User shares"
-#~ msgstr "Загальні ресурси користувача"
+#~ msgid "Null passwords"
+#~ msgstr "Пусті паролі"
 
-#~ msgid "Authenticate path & realm"
-#~ msgstr "Шлях з аутентифікацією і область (Realm)"
+#~ msgid "Password server"
+#~ msgstr "Сервер паролів"
 
-#~ msgid "Log order"
-#~ msgstr "Порядок логування"
+#~ msgid "Shadow Copy format"
+#~ msgstr "Формат прихованого копіювання"
 
-#~ msgid "List Detected Disks"
-#~ msgstr "Список виявлених дисків"
+#~ msgid "Store DOS attributes"
+#~ msgstr "Зберігати DOS атрибути"
 
-#~ msgid "NetBIOS domain"
-#~ msgstr "NetBIOS домен"
+#~ msgid "Swap disabled"
+#~ msgstr "Swap вимкнено"
+
+#~ msgid "Time server"
+#~ msgstr "Сервер часу"
+
+#~ msgid "Unix charset"
+#~ msgstr "Набір символів Unix"
+
+#~ msgid "AIO module"
+#~ msgstr "Модуль AIO"
+
+#~ msgid "Enable ACL inheritance"
+#~ msgstr "Дозволити успадкування ACL"
+
+#~ msgid "Enable store DOS attributes"
+#~ msgstr "Увімкнути зберігання атрибутів DOS"
+
+#~ msgid "Enable shadow copy"
+#~ msgstr "Увімкнути shadow copy"
+
+#~ msgid "Hide dot files"
+#~ msgstr "Приховати файли, що починаються з крапки."
+
+#~ msgid "Large read/write"
+#~ msgstr "Читання/запис великими блоками"
+
+#~ msgid "Map to guest"
+#~ msgstr "Як гість"
+
+#~ msgid "Receive Buffer Size"
+#~ msgstr "Розмір вхідного буфера"
+
+#~ msgid "AFP compatibility"
+#~ msgstr "AFP сумісність"
+
+#~ msgid "Enable mapping DOS attributes"
+#~ msgstr "Дозволити DOS атрибути"
+
+#~ msgid "Send Buffer Size"
+#~ msgstr "Розмір вихідного буфера"
+
+#~ msgid "Set read only"
+#~ msgstr "Лише для читання"
+
+#~ msgid "Set browseable"
+#~ msgstr "Доступний для переглядання"
+
+#~ msgid "Store alternate data streams"
+#~ msgstr "Зберігати альтернативні потоки даних"
+
+#~ msgid "Store NTFS acls"
+#~ msgstr "Зберегти ACL списки NTFS"
+
+#, php-format
+#~ msgid ""
+#~ "Samba will read from file asynchronously when size of request is bigger than "
+#~ "this value. (%d by default)"
+#~ msgstr ""
+#~ "Samba буде читати файл асинхронно, якщо розмір запиту більший ніж вказане "
+#~ "значення. (за замовчуванням %d)"
+
+#, php-format
+#~ msgid ""
+#~ "Samba will write to file asynchronously when size of request is bigger than "
+#~ "this value. (%d by default)"
+#~ msgstr ""
+#~ "Samba буде писати файл асинхронно, якщо розмір запиту більший ніж вказане "
+#~ "значення. (за замовчуванням %d)"
+
+#~ msgid "Store alternate data streams in Extended Attributes"
+#~ msgstr "Зберігати альтернативні потоки даних в розширених атрибутах"
+
+#~ msgid "Store NTFS acls in Extended Attributes"
+#~ msgstr "Зберігати ACL списки NTFS в розширених атрибутах"
+
+#~ msgid "Enable 'Asynchronous I/O (AIO)' switch."
+#~ msgstr "Дозволити перемикач 'Асинхронне введення / виведення (AIO)'."
+
+#~ msgid "Enhanced compatibility with Netatalk AFP server"
+#~ msgstr "Розширена сумісність з сервером Netatalk AFP"
+
+#~ msgid ""
+#~ "The workgroup in which the server will appear when queried by Windows or SMB "
+#~ "clients (maximum 15 characters)."
+#~ msgstr ""
+#~ "Робоча група, в якій сервер буде відображатися при запиті від Windows, або "
+#~ "SMB клієнтів (не більше 15 символів)."
+
+#~ msgid "This will provide ZFS ACL support. (ZFS only)"
+#~ msgstr "Це забезпечує підтримку ZFS ACL (только ZFS)."
+
+#~ msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
+#~ msgstr ""
+#~ "Це забезпечить тіньову копію створену автоматичним знімком (тільки ZFS)."
+
+#~ msgid "Trusted domains"
+#~ msgstr "Довірені домени"
+
+#~ msgid "WINS server"
+#~ msgstr "Сервер WINS"
+
+#~ msgid "Mapping DOS attributes"
+#~ msgstr "Перетворення атрибутів DOS"
+
+#~ msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
+#~ msgstr "Це забезпечить NTFS ACL без підтримки ZFS ACL, таких як UFS."
+
+#~ msgid ""
+#~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
+#~ msgstr ""
+#~ "Дійсна адреса IPv6 повинна бути вказана для первинного / вторинного DNS-"
+#~ "сервера."
+
+#~ msgid ""
+#~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
+#~ msgstr ""
+#~ "Повинна бути вказана дійсна адреса IPv4  для первинного / вторинного DNS-"
+#~ "сервера."
+
+#~ msgid "Enable recycle bin"
+#~ msgstr "Увімкнути смітник"
+
+#~ msgid "Recycle bin"
+#~ msgstr "Смітник"
+
+#~ msgid "Client Min Protocol"
+#~ msgstr "Мінімальний протокол клієнта"
+
+#~ msgid "Client Max Protocol"
+#~ msgstr "Максимальний протокол клієнта"
+
+#~ msgid "Server Max Protocol"
+#~ msgstr "Максимальний протокол сервера"
+
+#~ msgid "Server Min Protocol"
+#~ msgstr "Мінімальний протокол сервера"
+
+#~ msgid "Guest account"
+#~ msgstr "Гостьовий обліковий запис"
+
+#~ msgid "EA support"
+#~ msgstr "Підтримка розширених атрибутів"

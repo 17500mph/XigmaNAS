@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-26 21:12+0000\n"
+"POT-Creation-Date: 2017-01-28 02:17+0000\n"
 "PO-Revision-Date: 2016-09-17 16:31+0000\n"
 "Last-Translator: Timm Lagoni <tila@tl-designs.dk>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
+"X-Launchpad-Export-Date: 2017-01-28 01:56+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: DENMARK\n"
 "Language: \n"
@@ -275,10 +275,11 @@ msgstr ""
 "En gyldig IP adresse eller CIDR notation skal specificeres for tilladte "
 "værter."
 
-msgid ""
-"A valid IPv4 address must be specified for the primary/secondary DNS server."
+msgid "A valid IPv4 address must be specified for the primary DNS server."
 msgstr ""
-"En gyldig IPv4 addresse skal angives for den primære/sekundære DNS server."
+
+msgid "A valid IPv4 address must be specified for the secondary DNS server."
+msgstr ""
 
 msgid "A valid IPv4 address must be specified."
 msgstr "En gyldig IPv4 addresse skal angives."
@@ -289,10 +290,11 @@ msgstr "Et gyligt IPv4 netværks bit antal skal angives."
 msgid "A valid IPv6 Gateway address must be specified."
 msgstr "En gyldig IPv6 Gateway adresse skal angives."
 
-msgid ""
-"A valid IPv6 address must be specified for the primary/secondary DNS server."
+msgid "A valid IPv6 address must be specified for the primary DNS server."
 msgstr ""
-"En gyldig IPv6 addresse skal angives for den primære/sekundære DNS server."
+
+msgid "A valid IPv6 address must be specified for the secondary DNS server."
+msgstr ""
 
 msgid "A valid IPv6 address must be specified."
 msgstr "En gyldig IPv6 addresse skal angives."
@@ -339,20 +341,20 @@ msgstr "AD eller PDC navn."
 msgid "AFP"
 msgstr "AFP"
 
-msgid "AFP compatibility"
+msgid "AFP Compatibility"
 msgstr ""
 
 msgid "AG"
 msgstr "AG"
 
-msgid "AIO module"
-msgstr "AIO modul"
+msgid "AIO Module"
+msgstr ""
 
-msgid "AIO read size"
-msgstr "AIO læse størrelse"
+msgid "AIO Read Size"
+msgstr ""
 
-msgid "AIO write size"
-msgstr "AIO skrive størrelse"
+msgid "AIO Write Size"
+msgstr ""
 
 msgid "ALL Interfaces"
 msgstr ""
@@ -547,14 +549,14 @@ msgstr "Tilføj share"
 msgid "Add target"
 msgstr "Tilføj mål"
 
+msgid "Additional Group"
+msgstr ""
+
 msgid "Additional Network"
 msgstr ""
 
 msgid "Additional Storage"
 msgstr ""
-
-msgid "Additional group"
-msgstr "Ekstra gruppe"
 
 msgid ""
 "Additional parameters to the hardware-specific part of the driver for second "
@@ -699,9 +701,6 @@ msgstr ""
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "Tillad kilenter at genoptage afbrudte uploads og downloads."
 
-msgid "Allow group"
-msgstr ""
-
 msgid "Allow new files"
 msgstr "Tillad nye filer"
 
@@ -744,6 +743,9 @@ msgstr ""
 
 msgid "AltRoot"
 msgstr "AltRoot"
+
+msgid "Alternate Data Streams"
+msgstr ""
 
 msgid "Alternate TCP port. Default is 22"
 msgstr "Alternativ TCP port. Standard er 22"
@@ -806,14 +808,14 @@ msgstr "En vært med dette navn eksisterer allerede."
 msgid "An interface with the specified description already exists."
 msgstr "En grænseflade med den angivne beskrivelse eksisterer allerede."
 
-msgid "Anonymous access has been deprecated starting from SMB2."
+msgid "Anonymous Bind"
 msgstr ""
 
-msgid "Anonymous bind"
-msgstr "Anonym bind"
+msgid "Anonymous Users"
+msgstr ""
 
-msgid "Anonymous user bandwidth"
-msgstr "Anonym bruger båndbredde"
+msgid "Anonymous access has been deprecated starting from SMB2."
+msgstr ""
 
 msgid ""
 "Anonymous user download bandwith in KB/s. An empty field means infinity."
@@ -824,9 +826,6 @@ msgid ""
 "Anonymous user upload bandwith in KB/s. An empty field means infinity."
 msgstr ""
 "Anonym bruger upload båndbredde i KB/s. Et tomt felt betyder uendeligt."
-
-msgid "Anonymous users only"
-msgstr "Kun anonyme brugere"
 
 msgid ""
 "Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
@@ -877,8 +876,8 @@ msgstr ""
 msgid "Are you sure you want to shutdown the server?"
 msgstr ""
 
-msgid "Asynchronous I/O (AIO)"
-msgstr "Asynkron I/O (AIO)"
+msgid "Asynchronous I/O"
+msgstr ""
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
@@ -933,6 +932,17 @@ msgstr ""
 msgid "Authenticate URL"
 msgstr "Godkend URL"
 
+msgid "Authenticated Users"
+msgstr ""
+
+msgid ""
+"Authenticated user download bandwith in KB/s. An empty field means infinity."
+msgstr ""
+
+msgid ""
+"Authenticated user upload bandwith in KB/s. An empty field means infinity."
+msgstr ""
+
 msgid "Authentication"
 msgstr "Godkendelse"
 
@@ -971,6 +981,9 @@ msgstr ""
 
 msgid "Autoselect"
 msgstr "Vælg automatisk"
+
+msgid "Auxiliary Parameter"
+msgstr ""
 
 msgid "Auxiliary Parameters"
 msgstr ""
@@ -1101,8 +1114,8 @@ msgstr "Bedst tilgængelige"
 msgid "Bind DN"
 msgstr "Bind DN"
 
-msgid "Bind password"
-msgstr "Bind kodeord"
+msgid "Bind Password"
+msgstr ""
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
@@ -1213,11 +1226,11 @@ msgstr "CHAP brugere"
 msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
 
+msgid "CIFS/SMB Information"
+msgstr ""
+
 msgid "CIFS/SMB disabled"
 msgstr "CIFS/SMB deaktiveret"
-
-msgid "CIFS/SMB informations"
-msgstr "CIFS/SMB informationer"
 
 msgid "CIFS/SMB is enabled."
 msgstr "CIFS/SMB er aktiveret"
@@ -1420,10 +1433,10 @@ msgstr ""
 msgid "Client"
 msgstr "Klient"
 
-msgid "Client Max Protocol"
+msgid "Client Max. Protocol"
 msgstr ""
 
-msgid "Client Min Protocol"
+msgid "Client Min. Protocol"
 msgstr ""
 
 msgid "Clone"
@@ -1440,7 +1453,7 @@ msgstr "Kolonner"
 
 msgid ""
 "Comma-separated list of group names that are permitted to login to the FTP "
-"server. (empty is ftp group)"
+"server. (empty = ftp group)."
 msgstr ""
 
 msgid "Command"
@@ -1520,11 +1533,14 @@ msgstr ""
 msgid "Configuration"
 msgstr "Konfiguration"
 
-msgid "Configuration directory"
-msgstr "Konfigurations mappe"
+msgid "Configuration Directory"
+msgstr ""
 
 msgid "Configuring"
 msgstr "Konfigurerer"
+
+msgid "Confirm New Password"
+msgstr ""
 
 msgid "Confirmation"
 msgstr "Bekræftelse"
@@ -1758,6 +1774,9 @@ msgstr ""
 msgid "Create HVM Guest"
 msgstr ""
 
+msgid "Create Mask"
+msgstr ""
+
 msgid "Create PV Guest"
 msgstr ""
 
@@ -1769,9 +1788,6 @@ msgstr "Opret og initialiser RAID."
 
 msgid "Create encrypted volume"
 msgstr "Opret krypteret volume"
-
-msgid "Create mask"
-msgstr "Opret maske"
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Opret arbejdsmappen, hvis den ikke eksisterer."
@@ -1832,6 +1848,9 @@ msgid ""
 msgstr ""
 "Nuværende adgangskode er standard adgangskode. Du bør anvende din egen "
 "adgangskode."
+
+msgid "Current password is incorrectly entered."
+msgstr ""
 
 msgid "Current state of drive operation based upon the Life Curve."
 msgstr ""
@@ -1997,12 +2016,8 @@ msgstr ""
 msgid "Default Device Settings"
 msgstr ""
 
-#, php-format
-msgid "Default is %s."
-msgstr "Standard er %s."
-
-msgid "Default root"
-msgstr "Standard rod"
+msgid "Default Root"
+msgstr ""
 
 msgid "Default user name is 'admin'."
 msgstr "Standard brugernavn er 'admin'."
@@ -2332,14 +2347,14 @@ msgstr "Mappe"
 msgid "Directory %s doesn't exist!"
 msgstr ""
 
+msgid "Directory Mask"
+msgstr ""
+
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr "Folder for u-fuldstændige filer. Tomt felt betyder \"anvendes ikke\""
 
 msgid "Directory listing"
 msgstr "Indholdsliste"
-
-msgid "Directory mask"
-msgstr "Mappe maske"
 
 msgid "Directory that contains removable media. (e.g /mnt/iscsi/)"
 msgstr "Mappe der indeholder flytbare medier. (F.eks. /mnt/iscsi/)"
@@ -2437,8 +2452,8 @@ msgid ""
 "or temperature). Unit of measure is unknown."
 msgstr ""
 
-msgid "Distributed hash table"
-msgstr "Distribueret hash tabel"
+msgid "Distributed Hash Table"
+msgstr ""
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
@@ -2685,7 +2700,7 @@ msgstr "Domæne"
 msgid "Domain controller name"
 msgstr "Domæne controller navn"
 
-msgid "Domain have no 2nd level name."
+msgid "Domain is missing 2nd level name."
 msgstr ""
 
 msgid "Domain name"
@@ -2712,17 +2727,20 @@ msgstr "Færdig"
 msgid "Done."
 msgstr "Færdig."
 
-msgid "Dos charset"
-msgstr "DOS tegnsæt"
+msgid "Dos Charset"
+msgstr ""
 
 msgid "Download"
 msgstr "Download"
 
+msgid "Download Bandwidth"
+msgstr ""
+
 msgid "Download Configuration"
 msgstr ""
 
-msgid "Download bandwidth"
-msgstr "Download båndbredde"
+msgid "Download Directory"
+msgstr ""
 
 msgid "Download directory"
 msgstr "Download mappe"
@@ -2739,11 +2757,11 @@ msgstr ""
 msgid "Driver"
 msgstr "Driver"
 
-msgid "Driver list"
-msgstr "Driverliste"
+msgid "Driver List"
+msgstr ""
 
-msgid "Driver parameters"
-msgstr "Driver parametre"
+msgid "Driver Parameter"
+msgstr ""
 
 msgid "Driver used"
 msgstr "Anvendt driver"
@@ -2776,8 +2794,8 @@ msgstr "Dynamisk DNS"
 msgid "Dynamic IP (DHCP) can not be used for HAST resources."
 msgstr "Dynamisk IP (DHCP) kan ikke anvendes for HAST ressourcer."
 
-msgid "EA support"
-msgstr "EA understøttelse"
+msgid "EA Support"
+msgstr ""
 
 msgid "EFI/GPT partition can be use with UFS only."
 msgstr "EFI/GPT partition kan kun bruges med UFS."
@@ -2909,20 +2927,20 @@ msgstr ""
 msgid "Enable"
 msgstr "Aktiver"
 
-msgid "Enable 'Asynchronous I/O (AIO)' switch."
+msgid "Enable 'Asynchronous I/O (AIO).' switch."
 msgstr ""
 
 msgid "Enable 'Large read/write' switch."
 msgstr ""
 
-msgid "Enable ACL inheritance"
+msgid "Enable ACL inheritance."
 msgstr ""
 
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr ""
 
-msgid "Enable Asynchronous I/O (AIO)"
-msgstr "Aktiver Asynkron I/O (AIO)"
+msgid "Enable Asynchronous I/O. (AIO)."
+msgstr ""
 
 msgid "Enable Challenge-Response Authentication"
 msgstr ""
@@ -2971,8 +2989,8 @@ msgstr ""
 msgid "Enable Time Machine support"
 msgstr "Time Machine understøttelse"
 
-msgid "Enable ZFS ACL"
-msgstr "Aktiver ZFS ACL"
+msgid "Enable ZFS ACL."
+msgstr ""
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
 msgstr ""
@@ -3040,8 +3058,8 @@ msgstr "Aktiver domæne jokertegn."
 msgid "Enable encryption."
 msgstr "Kryptering."
 
-msgid "Enable extended attribute support"
-msgstr "Aktiver understøttelse for udvidede attributter"
+msgid "Enable extended attribute support."
+msgstr ""
 
 msgid "Enable extended attributes for this file system."
 msgstr "Aktiver udvidede attributter for dette filsystem."
@@ -3050,9 +3068,6 @@ msgid ""
 "Enable foreground/background file system consistency check during boot "
 "process."
 msgstr "Aktiver forgrunds/baggrunds filsystem kontrol under opstarten."
-
-msgid "Enable guest access"
-msgstr "Aktiver gæst adgang"
 
 msgid "Enable guest access."
 msgstr "Aktiver gæste adgang."
@@ -3063,13 +3078,13 @@ msgstr ""
 msgid "Enable keyboard-interactive authentication."
 msgstr "Aktiver tastatur-interaktiv godkendelse."
 
-msgid "Enable large read/write"
-msgstr "Aktiver stor læsning/skrivning"
+msgid "Enable large read/write."
+msgstr ""
 
 msgid "Enable local user authentication."
 msgstr "Aktiver lokale brugere godkendelse"
 
-msgid "Enable mapping DOS attributes"
+msgid "Enable mapping DOS attributes."
 msgstr ""
 
 msgid "Enable module listing."
@@ -3084,8 +3099,8 @@ msgstr ""
 msgid "Enable peer exchange (PEX)."
 msgstr "Aktiver peer exchange (PEX)."
 
-msgid "Enable permission inheritance"
-msgstr "Aktiver at tilladelser kan arves"
+msgid "Enable permission inheritance."
+msgstr ""
 
 msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr "Aktiver port fremsendelse via NAT-PMP eller UPnP."
@@ -3093,8 +3108,8 @@ msgstr "Aktiver port fremsendelse via NAT-PMP eller UPnP."
 msgid "Enable proxy authentication."
 msgstr "Aktiver proxy godkendelse."
 
-msgid "Enable recycle bin"
-msgstr "Aktiver papirkurv"
+msgid "Enable recycle bin."
+msgstr ""
 
 msgid "Enable remote monitoring of the local connected UPS."
 msgstr "Aktiver fjernovervågning af den lokalt forbundne UPS."
@@ -3116,11 +3131,11 @@ msgstr ""
 msgid "Enable serial console."
 msgstr ""
 
-msgid "Enable shadow copy"
-msgstr "Aktiver shadow kopi"
+msgid "Enable shadow copy."
+msgstr ""
 
-msgid "Enable store DOS attributes"
-msgstr "Aktiver lagring af DOS attributter"
+msgid "Enable store DOS attributes."
+msgstr ""
 
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Aktiver ident protokollen (RFC1413)."
@@ -3189,7 +3204,7 @@ msgstr "Krypterings algoritme der skal bruges."
 msgid "English"
 msgstr "Engelsk"
 
-msgid "Enhanced compatibility with Netatalk AFP server"
+msgid "Enhanced compatibility with Netatalk AFP server."
 msgstr ""
 
 msgid "Enter Command"
@@ -3204,6 +3219,12 @@ msgid ""
 msgstr ""
 "Angiv valgfri port nummer for WebGUI hvis du ikke ønsker at anvende "
 "standarden (80 for HTTP, 443 for HTTPS)."
+
+#, php-format
+msgid ""
+"Enter a custom port number if you want to override the default port. Default "
+"port is %s."
+msgstr ""
 
 msgid "Enter a description"
 msgstr ""
@@ -3375,6 +3396,9 @@ msgstr ""
 "Extents skal defineres inden de kan bruges, og extents kan ikke bruge mere "
 "end en gang."
 
+msgid "Extra Options"
+msgstr ""
+
 msgid "Extra options"
 msgstr "Ekstra indstillinger"
 
@@ -3498,6 +3522,9 @@ msgstr "Filredigering"
 
 msgid "File Manager"
 msgstr "Filhåndtering"
+
+msgid "File Mask"
+msgstr ""
 
 msgid "File Path"
 msgstr ""
@@ -3732,18 +3759,22 @@ msgstr ""
 msgid "Greek"
 msgstr "Græsk"
 
-msgid "Greeting banner displayed by FTP when a connection first comes in."
+msgid "Greeting banner displayed to client when firts connection comes in."
 msgstr ""
-"Velkomst besked der vises af FTP tjenesten når en forbindelse bliver "
-"oprettet."
 
 msgid "Group"
 msgstr "Gruppe"
+
+msgid "Group Allow"
+msgstr ""
 
 msgid "Group ID"
 msgstr "Gruppe ID"
 
 msgid "Group Settings"
+msgstr ""
+
+msgid "Group Suffix"
 msgstr ""
 
 msgid "Group compilations"
@@ -3761,9 +3792,6 @@ msgstr "Gruppe navn."
 msgid "Group numeric id."
 msgstr "Gruppe numerisk id."
 
-msgid "Group suffix"
-msgstr "Gruppe endelse"
-
 msgid "Groupmask - Mask ACL with mode"
 msgstr ""
 
@@ -3773,8 +3801,8 @@ msgstr "Grupper"
 msgid "Guest"
 msgstr "Gæst"
 
-msgid "Guest account"
-msgstr "Gæste konto"
+msgid "Guest Account"
+msgstr ""
 
 msgid "HAST"
 msgstr "HAST"
@@ -3856,8 +3884,8 @@ msgstr ""
 msgid "Hide Default Groups"
 msgstr ""
 
-msgid "Hide dot files"
-msgstr "Skjul filer der starter med punktum"
+msgid "Hide Dot Files"
+msgstr ""
 
 msgid "High voltage boosting transfer point"
 msgstr ""
@@ -3886,9 +3914,6 @@ msgstr "Vært"
 msgid "Host access control"
 msgstr "Værts adgangs kontrol"
 
-msgid "Host name"
-msgstr "Værtsnavn"
-
 msgid "Host resources"
 msgstr "Værts resourcer"
 
@@ -3902,6 +3927,9 @@ msgid "Hosts"
 msgstr "Værter"
 
 msgid "Hosts Allow"
+msgstr ""
+
+msgid "Hosts Deny"
 msgstr ""
 
 msgid "Hosts Setup"
@@ -4022,8 +4050,8 @@ msgstr "ISO-fil der skal monteres."
 msgid "ISP DNS Servers"
 msgstr ""
 
-msgid "Ident protocol"
-msgstr "Ident protokol"
+msgid "IdentLookups"
+msgstr ""
 
 msgid "Identifier"
 msgstr "Identifikator"
@@ -4099,12 +4127,6 @@ msgid ""
 "If this property is enabled, the snapshots are displayed into .zfs directory."
 msgstr "Hvis denne indstilling er valgt, så vises snapshots i .zfs mappen."
 
-msgid ""
-"If you want to change the password for accessing the WebGUI, enter it here "
-"twice."
-msgstr ""
-"Hvis du vil ændre adgangskoden til WebGUI, skal du indtaste den her to gange."
-
 msgid "Import"
 msgstr "Importer"
 
@@ -4150,8 +4172,8 @@ msgstr ""
 msgid "Incoming Line/Power Information"
 msgstr ""
 
-msgid "Incomplete directory"
-msgstr "Ikke-færdig mappe"
+msgid "Incomplete Directory"
+msgstr ""
 
 msgid ""
 "Indicates the approximate SSD life left, in terms of program/erase cycles or "
@@ -4182,8 +4204,8 @@ msgstr ""
 msgid "Inherit ACL"
 msgstr ""
 
-msgid "Inherit permissions"
-msgstr "Arv tilladelser"
+msgid "Inherit Permissions"
+msgstr ""
 
 msgid "Inhibit some of the syslog diagnostics for bad lines in /etc/exports."
 msgstr ""
@@ -4304,9 +4326,6 @@ msgstr "Grænseflade håndtering"
 msgid "Interface Selection"
 msgstr ""
 
-msgid "Interface selection"
-msgstr "Interface valg"
-
 msgid "Interfaces"
 msgstr "Grænseflader"
 
@@ -4362,11 +4381,9 @@ msgid ""
 msgstr "Kan ændres når som helst af bruger med standard SCSI mode page."
 
 msgid ""
-"It is impossible to enable 'Anonymous users only' and 'Local users only' "
-"authentication simultaneously."
+"It is impossible to enable 'Anonymous Users' and 'Authenticated Users' both "
+"at the same time."
 msgstr ""
-"Det er umuligt at aktiver 'Kun anonyme brugere' og 'Kun lokale brugere' "
-"godkendelserne samtidig."
 
 msgid ""
 "It is not recommanded to import non healthy pools nor virtual devices that "
@@ -4476,6 +4493,9 @@ msgstr "LAN Management"
 msgid "LAN Only"
 msgstr ""
 
+msgid "LAN interface is not configured."
+msgstr ""
+
 msgid "LAN net"
 msgstr "LAN net"
 
@@ -4506,8 +4526,8 @@ msgstr "Sprog"
 msgid "Language to use on front panel"
 msgstr "Anvendt sprog på front panel"
 
-msgid "Large read/write"
-msgstr "Stor læsning/skrivning"
+msgid "Large Read/Write"
+msgstr ""
 
 msgid "Last Configuration Change"
 msgstr ""
@@ -4647,19 +4667,6 @@ msgstr "Lokal share (destination)"
 msgid "Local shares to be synchronized"
 msgstr "Lokale shares der skal synkroniseres"
 
-msgid "Local user bandwidth"
-msgstr "Lokal bruger båndbredde"
-
-msgid "Local user download bandwith in KB/s. An empty field means infinity."
-msgstr "Lokal bruger båndbredde i KB/s. Et tomt felt betyder uendeligt."
-
-msgid "Local user upload bandwith in KB/s. An empty field means infinity."
-msgstr ""
-"Lokal bruger upload båndbredde i KB/s. Et tomt felt betyder uendeligt."
-
-msgid "Local users only"
-msgstr "Kun lokale brugere"
-
 msgid "Location"
 msgstr "Lokation"
 
@@ -4796,8 +4803,8 @@ msgstr "MS Domæne"
 msgid "MTU"
 msgstr "MTU"
 
-msgid "Machine suffix"
-msgstr "Maskine endelse"
+msgid "Machine Suffix"
+msgstr ""
 
 msgid "Maintenance"
 msgstr ""
@@ -4826,13 +4833,13 @@ msgstr "Fremstillingsdato"
 msgid "Map all users to root"
 msgstr "Kortlæg alle brugere som root"
 
-msgid "Map to guest"
-msgstr "Kæde til gæst"
+msgid "Map to Guest"
+msgstr ""
 
 msgid "Map to user"
 msgstr "Kortlæg til bruger"
 
-msgid "Mapping DOS attributes"
+msgid "Mapping DOS Attributes"
 msgstr ""
 
 msgid "Mar"
@@ -4846,10 +4853,22 @@ msgid ""
 "not specified."
 msgstr ""
 
-msgid "Masquerade address"
-msgstr "Masquerade adresse"
+msgid "Masquerade Address"
+msgstr ""
 
 msgid "Max Entries"
+msgstr ""
+
+msgid "Max. Clients"
+msgstr ""
+
+msgid "Max. Connections Per Host"
+msgstr ""
+
+msgid "Max. Login Attempts"
+msgstr ""
+
+msgid "Max. Passive Port"
 msgstr ""
 
 msgid "Max. TTL"
@@ -4858,17 +4877,8 @@ msgstr "Maks. TTL"
 msgid "Max. block size"
 msgstr "Maks. blok størrelse"
 
-msgid "Max. conn. per IP"
-msgstr "Maks. forb. per IP"
-
 msgid "Max. connections"
 msgstr "Maks. forbindelser"
-
-msgid "Max. login attempts"
-msgstr "Maks. login forsøg"
-
-msgid "Max. passive port"
-msgstr "Maks. passiv port"
 
 msgid "Max. pre-send R2T"
 msgstr "Max. pre-send R2T"
@@ -4910,12 +4920,13 @@ msgstr ""
 msgid "Maximum number of allowed password attempts before disconnection."
 msgstr "Maksimum antal tilladte login forsøg inden afbrydelse."
 
+msgid ""
+"Maximum number of connections allowed per IP address. (0 = unlimited)."
+msgstr ""
+
 #, php-format
 msgid "Maximum number of connections in each session (%d by default)."
 msgstr "Maksimum antal forbindelser for hver session (%d som standard.)"
-
-msgid "Maximum number of connections per IP address (0 = unlimited)."
-msgstr "Maksimum antal forbindelser per IP-adresse (0 = uendeligt)."
 
 #, php-format
 msgid ""
@@ -4929,11 +4940,11 @@ msgstr ""
 msgid "Maximum number of sessions holding at same time (%d by default)."
 msgstr "Maksimum antal sessions i kø på samme tid (%d som standard)."
 
-msgid "Maximum number of simultaneous clients."
-msgstr "Maksimum antal samtidige klienter."
-
 msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
 msgstr "Maksimum antal samtidige forbindelser. Standard er 0 (uendeligt)."
+
+msgid "Maximum number of users that can connect to the server."
+msgstr ""
 
 msgid "Maximum relative humidity seen (percent)"
 msgstr ""
@@ -4986,8 +4997,8 @@ msgstr "MiB"
 msgid "MibII"
 msgstr "MibII"
 
-msgid "Min. passive port"
-msgstr "Min. passiv port"
+msgid "Min. Passive Port"
+msgstr ""
 
 msgid "MiniDLNA"
 msgstr ""
@@ -5175,6 +5186,9 @@ msgstr ""
 msgid "NT1 (CIFS)"
 msgstr ""
 
+msgid "NTFS ACLs"
+msgstr ""
+
 msgid "NTP Time Server"
 msgstr ""
 
@@ -5218,9 +5232,6 @@ msgstr ""
 
 msgid "NetBIOS Name"
 msgstr ""
-
-msgid "NetBIOS name"
-msgstr "NetBIOS navn"
 
 msgid "Netgraph"
 msgstr "Netgraph"
@@ -5272,6 +5283,11 @@ msgstr ""
 msgid "New Password"
 msgstr ""
 
+msgid ""
+"New Password does not match the confirmation password. Please ensure both "
+"passwords are the same."
+msgstr ""
+
 msgid "New password"
 msgstr "Ny adgangskode"
 
@@ -5280,6 +5296,9 @@ msgstr ""
 
 msgid "No"
 msgstr "Nej"
+
+msgid "No DNS server have been configured."
+msgstr ""
 
 msgid "No DNS setting found."
 msgstr "Ingen DNS indstillinger fundet"
@@ -5488,17 +5507,14 @@ msgstr ""
 msgid "Now"
 msgstr "Nu"
 
-msgid "Null passwords"
-msgstr "Tomme kodeord"
+msgid "Null Passwords"
+msgstr ""
 
 msgid "Number of bad battery packs"
 msgstr "Antal dårlige batteri pakker"
 
 msgid "Number of battery packs"
 msgstr "Antal batteri pakker"
-
-msgid "Number of clients"
-msgstr "Antal klienter"
 
 msgid "Number of hours elapsed in the power-on state."
 msgstr ""
@@ -5546,9 +5562,6 @@ msgid "Off"
 msgstr "Fra"
 
 msgid "Old passphrase"
-msgstr "Gammelt kodeord"
-
-msgid "Old password"
 msgstr "Gammelt kodeord"
 
 msgid "On"
@@ -5708,8 +5721,8 @@ msgstr "Partitions type"
 msgid "Partitions"
 msgstr "Partitioner"
 
-msgid "Passive ports"
-msgstr "Passive porte"
+msgid "Passive Port"
+msgstr ""
 
 msgid ""
 "Passive ports restricts the range of ports from which the server will select "
@@ -5749,14 +5762,25 @@ msgstr "Kodeord"
 msgid "Password (confirmed)"
 msgstr "Kodeord (bekræftet)"
 
+msgid "Password Encryption"
+msgstr ""
+
+msgid "Password Server"
+msgstr ""
+
+msgid "Password Suffix"
+msgstr ""
+
 msgid "Password authentication"
 msgstr "Kodeords godkendelse"
 
+msgid ""
+"Password does not match the confirmation password. Please ensure both "
+"passwords are the same."
+msgstr ""
+
 msgid "Password don't match."
 msgstr "Kodeorderne passer ikke sammen."
-
-msgid "Password encryption"
-msgstr "Kodeords kryptering"
 
 msgid "Password for the administrative pages."
 msgstr "Kodeord til de administrative sider."
@@ -5764,15 +5788,9 @@ msgstr "Kodeord til de administrative sider."
 msgid "Password of domain administrator account."
 msgstr "Kodeord til domæne administratorens konto."
 
-msgid "Password server"
-msgstr "Adgangskode server"
-
 msgid ""
 "Password server name or IP address (e.g. Active Directory domain controller)."
 msgstr ""
-
-msgid "Password suffix"
-msgstr "Kodeords endelse"
 
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
 msgstr ""
@@ -5796,14 +5814,17 @@ msgstr "Sti der skal deles."
 msgid "Path to the local device. (e.g. %s)"
 msgstr "Sti til lokal enhed (f. eks. %s)."
 
+msgid "Peer Exchange"
+msgstr ""
+
+msgid "Peer Port"
+msgstr ""
+
 msgid "Peer Secret"
 msgstr "Peer hemmelighed"
 
 msgid "Peer User"
 msgstr "Peer bruger"
-
-msgid "Peer exchange"
-msgstr "Peer exchange"
 
 msgid "Peer port"
 msgstr "Peer port"
@@ -5813,6 +5834,9 @@ msgstr ""
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
+msgstr ""
+
+msgid "Permit Root Login"
 msgstr ""
 
 msgid "Permit root login"
@@ -5956,8 +5980,8 @@ msgstr "Port "
 msgid "Port %ld is already used by another service."
 msgstr "Porten %ld bruges allerede af en anden tjeneste."
 
-msgid "Port forwarding"
-msgstr "Port fremsendelse"
+msgid "Port Forwarding"
+msgstr ""
 
 #, php-format
 msgid "Port number must be in the range between %d and %d."
@@ -6244,6 +6268,9 @@ msgstr ""
 msgid "Read"
 msgstr "Læse"
 
+msgid "Read Only"
+msgstr ""
+
 msgid "Read Only (ro)"
 msgstr "Skrivebeskyttet (ro)"
 
@@ -6299,8 +6326,8 @@ msgstr "Årsag for sidste skift til batteri (* gennemsigtig)"
 msgid "Reboot"
 msgstr "Genstart"
 
-msgid "Receive Buffer Size"
-msgstr "Modtage buffer størrelse"
+msgid "Receive Buffer"
+msgstr ""
 
 msgid "Record is locked"
 msgstr ""
@@ -6311,8 +6338,8 @@ msgstr "Medtag undermapper"
 msgid "Recursive"
 msgstr "Rekursiv"
 
-msgid "Recycle bin"
-msgstr "Papirkurv"
+msgid "Recycle Bin"
+msgstr ""
 
 msgid "Refresh"
 msgstr "Opdater"
@@ -6511,11 +6538,11 @@ msgstr "Rumænsk"
 msgid "Root"
 msgstr "Rod"
 
-msgid "Root bind DN"
-msgstr "Rod bind DN"
+msgid "Root Bind DN"
+msgstr ""
 
-msgid "Root bind password"
-msgstr "Rod bind kodeord"
+msgid "Root Bind Password"
+msgstr ""
 
 msgid "Rotation Rate"
 msgstr ""
@@ -6529,8 +6556,8 @@ msgstr "Roundrobin"
 msgid "Routes"
 msgstr "Ruter"
 
-msgid "Routing tables"
-msgstr "Rute tabeller"
+msgid "Routing Tables"
+msgstr ""
 
 msgid "Rows"
 msgstr "Rækker"
@@ -6639,18 +6666,14 @@ msgstr ""
 #, php-format
 msgid ""
 "Samba will read from file asynchronously when size of request is bigger than "
-"this value. (%d by default)"
+"this value. (%d by default)."
 msgstr ""
-"Samba vil læse asynkront fra filen, når størrelse på forespørgslen er mere "
-"end denne værdi. (%d som standard)"
 
 #, php-format
 msgid ""
 "Samba will write to file asynchronously when size of request is bigger than "
-"this value. (%d by default)"
+"this value. (%d by default)."
 msgstr ""
-"Samba vil skrive asynkront til filen, når størrelse på forespørgslen er mere "
-"end denne værdi. (%d som standard)"
 
 msgid "Sat"
 msgstr ""
@@ -6871,8 +6894,8 @@ msgstr ""
 msgid "Self-tests Management"
 msgstr ""
 
-msgid "Send Buffer Size"
-msgstr "Sende buffer størrelse"
+msgid "Send Buffer"
+msgstr ""
 
 msgid "Send Command!"
 msgstr "Send kommando!"
@@ -6919,10 +6942,10 @@ msgstr "Serienummer"
 msgid "Server"
 msgstr "Server"
 
-msgid "Server Max Protocol"
+msgid "Server Max. Protocol"
 msgstr ""
 
-msgid "Server Min Protocol"
+msgid "Server Min. Protocol"
 msgstr ""
 
 msgid "Server Name"
@@ -6952,11 +6975,11 @@ msgstr "Tjenester"
 msgid "Set additional group memberships for this account."
 msgstr "Vælg yderligere gruppe medlemsskaber for denne konto."
 
-msgid "Set browseable"
-msgstr "Kan gennemsøges"
+msgid "Set browseable."
+msgstr ""
 
-msgid "Set read only"
-msgstr "Skrivebeskyttet"
+msgid "Set read only."
+msgstr ""
 
 msgid "Set share password."
 msgstr "Share kodeord"
@@ -7017,8 +7040,8 @@ msgstr "Indstillinger"
 msgid "Shadow Copy"
 msgstr "Skygge kopi"
 
-msgid "Shadow Copy format"
-msgstr "Skygge kopi format"
+msgid "Shadow Copy Format"
+msgstr ""
 
 msgid "Share"
 msgstr "Share"
@@ -7307,19 +7330,13 @@ msgstr "Stoppet"
 msgid "Storage"
 msgstr "Lagring"
 
-msgid "Store DOS attributes"
-msgstr "Gem DOS attributter"
-
-msgid "Store NTFS acls"
-msgstr "Gem NTFS acls"
-
-msgid "Store NTFS acls in Extended Attributes"
+msgid "Store DOS Attributes"
 msgstr ""
 
-msgid "Store alternate data streams"
-msgstr "Gem alternative data strømme"
+msgid "Store NTFS ACLs in Extended Attributes."
+msgstr ""
 
-msgid "Store alternate data streams in Extended Attributes"
+msgid "Store alternate data streams in Extended Attributes."
 msgstr ""
 
 msgid "Strict DLNA"
@@ -7377,8 +7394,8 @@ msgstr ""
 msgid "Swap Usage"
 msgstr ""
 
-msgid "Swap disabled"
-msgstr "Swap deaktiveret"
+msgid "Swap is disabled."
+msgstr ""
 
 msgid "Swedish"
 msgstr "Svensk"
@@ -7471,6 +7488,12 @@ msgstr "System besked buffer"
 msgid "System tuning"
 msgstr "System finjustering"
 
+msgid "TCP Port"
+msgstr ""
+
+msgid "TCP Wrapper"
+msgstr ""
+
 msgid "TCP forwarding"
 msgstr "TCP fremsendelse"
 
@@ -7482,9 +7505,6 @@ msgstr ""
 
 msgid "TCP port to bind the server to."
 msgstr "TCP port serveren skal bindes til."
-
-msgid "TCP wrapper"
-msgstr "TCP wrapper"
 
 msgid "TFTP"
 msgstr "TFTP"
@@ -7498,10 +7518,10 @@ msgstr ""
 msgid "TLS Mode"
 msgstr ""
 
-msgid "TLS Server Certificate Check"
+msgid "TLS Only"
 msgstr ""
 
-msgid "TLS only"
+msgid "TLS Server Certificate Check"
 msgstr ""
 
 msgid "Tag"
@@ -7647,8 +7667,8 @@ msgid ""
 "manufacturing."
 msgstr ""
 
-msgid "The TCP port must be a valid port number."
-msgstr "TCP porten skal gøre et gyldigt port nummer."
+msgid "The TCP Port must be a valid port number."
+msgstr ""
 
 msgid "The UPS identifier and IP address"
 msgstr ""
@@ -7919,9 +7939,6 @@ msgstr "Legitimationsoplysningerne der skal tilkobles."
 msgid "The cron job has been executed successfully."
 msgstr "Cron opgaven blev udført korrekt."
 
-msgid "The current password is incorrectly entered."
-msgstr "Nuværende adgangskode ikke korrekt angivet."
-
 #, php-format
 msgid ""
 "The custom format of the snapshot for shadow copy service can be specified. "
@@ -8083,17 +8100,20 @@ msgstr "Login navnet er et reserveret login navn."
 msgid "The login name is limited to 16 characters."
 msgstr "Login navnet er begrænset til 16 tegn."
 
-msgid "The max. connection per IP must be either 0 (unlimited) or greater."
+msgid ""
+"The max. connections per IP address must be either 0 (unlimited) or greater."
 msgstr ""
-"Maks. antal forbindelser per IP skal enten være 0 (uendeligt) eller større."
+
+msgid "The max. number of clients must be in the range from 1 to 50."
+msgstr ""
 
 msgid ""
 "The maximum download bandwith in KiB/s. An empty field means infinity."
 msgstr ""
 "Maksimum download båndbredde i KiB/s. Et tomt felt betyder uendeligt."
 
-msgid "The maximum idle time be a number."
-msgstr "Maksimum ledig tid skal være et tal."
+msgid "The maximum idle time must be a number."
+msgstr ""
 
 msgid ""
 "The maximum port to allocate for PASV style data connections (0 = use any "
@@ -8170,16 +8190,6 @@ msgstr ""
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr "Netværket '%s' er ugyldigt."
-
-msgid ""
-"The new password does not match. Please ensure the passwords match exactly."
-msgstr "Det nye kodeord er ikke ens. Kontroller venligst at kodeord er ens."
-
-msgid "The new password is also the default root password of the system!"
-msgstr ""
-
-msgid "The number of clients must be between 1 and 50."
-msgstr "Antallet af klienter skal være mellem 1 og 50."
 
 msgid ""
 "The number of errors caused by incorrect checksum during the error "
@@ -8369,7 +8379,7 @@ msgstr "Volumen skal frakobles inden den kan slettes."
 
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
-"clients (maximum 15 characters)."
+"clients. (maximum 15 characters)."
 msgstr ""
 
 msgid "The working directory does not exist."
@@ -8804,6 +8814,12 @@ msgstr ""
 "Denne parameter angiver endelsen der bruges til brugere, når disse bliver "
 "tilføjet i LDAP mappen, f.eks. %s"
 
+msgid "This password is required to access the admin web interface."
+msgstr ""
+
+msgid "This password is the root password of the system."
+msgstr ""
+
 msgid "This pool name already exists."
 msgstr "Pulje navnet eksisterer allerede."
 
@@ -8862,14 +8878,14 @@ msgstr ""
 "Dette vil slette ALT data på din disk! Brug ikke denne valgmulighed, hvis du "
 "vil tilføje en eksisterende krypteret disk."
 
-msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
+msgid "This will provide NTFS ACLs without ZFS ACL support such as UFS."
 msgstr ""
 
-msgid "This will provide ZFS ACL support. (ZFS only)"
-msgstr "Dette vil tilføje ZFS ACL udvidelse. (Kun ZFS)"
+msgid "This will provide ZFS ACL support. (ZFS only)."
+msgstr ""
 
-msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
-msgstr "Dette vil tilbyde en skygge kopi lavet af auto snapshot. (kun ZFS)"
+msgid "This will provide shadow copy created by auto snapshot. (ZFS only)."
+msgstr ""
 
 msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
@@ -8890,8 +8906,14 @@ msgstr ""
 msgid "Time"
 msgstr "Tid"
 
+msgid "Time Interval"
+msgstr ""
+
 msgid "Time Machine"
 msgstr "Time Machine"
+
+msgid "Time Server"
+msgstr ""
 
 msgid "Time Synchronization"
 msgstr ""
@@ -8911,9 +8933,6 @@ msgstr "Tid før lasten vil blive startet"
 msgid "Time interval"
 msgstr "Tidsinterval"
 
-msgid "Time server"
-msgstr "Tidsserver"
-
 msgid "Time spent during the positioning of the drive heads."
 msgstr ""
 
@@ -8929,6 +8948,9 @@ msgstr "Timeout"
 
 msgid "Times"
 msgstr "Antal"
+
+msgid "Title Speed"
+msgstr ""
 
 msgid "TitleSpeed"
 msgstr "TitleSpeed"
@@ -9082,8 +9104,8 @@ msgstr "Traps"
 msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protokol"
 
-msgid "Trusted domains"
-msgstr "Sikre domæner"
+msgid "Trusted Domains"
+msgstr ""
 
 msgid "Try to force import."
 msgstr "Prøv at gennemtvinge import."
@@ -9257,11 +9279,11 @@ msgstr "Unison"
 msgid "Unison File Synchronisation"
 msgstr "Unison Fil Synkronisering"
 
+msgid "Unix Charset"
+msgstr ""
+
 msgid "Unix Command"
 msgstr "Unix kommando"
-
-msgid "Unix charset"
-msgstr "Unix tegnsæt"
 
 msgid "Unknown"
 msgstr "Ukendt"
@@ -9299,8 +9321,8 @@ msgstr ""
 msgid "Upgrade ZFS and add all supported feature flags on a pool"
 msgstr ""
 
-msgid "Upload bandwidth"
-msgstr "Upload båndbredde"
+msgid "Upload Bandwidth"
+msgstr ""
 
 msgid "Upload directory"
 msgstr ""
@@ -9413,10 +9435,19 @@ msgstr "Bruger"
 msgid "User ID"
 msgstr "Bruger ID"
 
+msgid "User Mask"
+msgstr ""
+
+msgid "User Portal"
+msgstr ""
+
 msgid "User Settings"
 msgstr ""
 
 msgid "User Shares"
+msgstr ""
+
+msgid "User Suffix"
 msgstr ""
 
 msgid "User account is locked"
@@ -9436,12 +9467,6 @@ msgstr "Bruger nummerisk id."
 
 msgid "User password."
 msgstr "Bruger adgangskode"
-
-msgid "User portal"
-msgstr "Bruger potal"
-
-msgid "User suffix"
-msgstr "Bruger endelse"
 
 msgid "Username"
 msgstr "Brugernavn"
@@ -9613,8 +9638,8 @@ msgstr ""
 msgid "WEP"
 msgstr "WEP"
 
-msgid "WINS server"
-msgstr "WINS server"
+msgid "WINS Server"
+msgstr ""
 
 msgid "WINS server IP address (e.g. from MS Active Directory server)."
 msgstr "WINS server IP-adresse (f.eks. fra en MS Active Directory server)."
@@ -9640,6 +9665,9 @@ msgstr "WPA-PSK WPA-EAP"
 msgid "WPA2"
 msgstr "WPA2"
 
+msgid "Wait Time"
+msgstr ""
+
 msgid "Wait time"
 msgstr "Vente tid"
 
@@ -9659,11 +9687,14 @@ msgstr ""
 "Advarsel: Du er ved at slette en krypteret volume. Alt data bliver tabt, og "
 "kan ikke gendannes."
 
-msgid "Watch directory"
-msgstr "Overvåget mappe"
+msgid "Watch Directory"
+msgstr ""
 
 msgid "WebGUI"
 msgstr "WebGUI"
+
+msgid "WebGUI and Root Password"
+msgstr ""
 
 msgid "Webserver"
 msgstr "Webserver"
@@ -9735,6 +9766,9 @@ msgstr "Trådløs opsætning"
 
 msgid "Workgroup"
 msgstr "Arbejdsgruppe"
+
+msgid "Working Directory"
+msgstr ""
 
 msgid "Working directory"
 msgstr "Arbejdsmappe"
@@ -9849,11 +9883,18 @@ msgstr ""
 msgid "You must select at least one authentication method."
 msgstr "Du skal vælge mindst en godkendelses metode."
 
+msgid ""
+"You need to update your browser or use Internet Explorer 10 or higher."
+msgstr ""
+
 msgid "You should use HTTPS as WebGUI protocol for sending passphrase."
 msgstr "Du bør bruge HTTPS som WebGUI protokol for at sende adgangskoden."
 
 msgid "Your ZFS system is not healthy."
 msgstr "Dit ZFS system er ikke sundt."
+
+msgid "Your browser does not support this svg object type."
+msgstr ""
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -10066,35 +10107,154 @@ msgstr ""
 msgid "week days"
 msgstr ""
 
-#~ msgid "FTP - Ban module"
-#~ msgstr "FTP - Ban modul"
+#~ msgid ""
+#~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
+#~ msgstr ""
+#~ "En gyldig IPv4 addresse skal angives for den primære/sekundære DNS server."
 
-#~ msgid "FTP - File transfer"
-#~ msgstr "FTP - Fil overførsel"
+#~ msgid ""
+#~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
+#~ msgstr ""
+#~ "En gyldig IPv6 addresse skal angives for den primære/sekundære DNS server."
 
-#~ msgid "IPv4 DNS servers"
-#~ msgstr "IPv4 DNS servere"
+#~ msgid "AIO read size"
+#~ msgstr "AIO læse størrelse"
 
-#~ msgid "IPv6 DNS servers"
-#~ msgstr "IPv6 DNS servere"
+#~ msgid "AIO write size"
+#~ msgstr "AIO skrive størrelse"
 
-#~ msgid "System time"
-#~ msgstr "System tid"
+#~ msgid "Asynchronous I/O (AIO)"
+#~ msgstr "Asynkron I/O (AIO)"
 
-#~ msgid "Time zone"
-#~ msgstr "Tidszone"
+#~ msgid "Create mask"
+#~ msgstr "Opret maske"
 
-#~ msgid "version:"
-#~ msgstr "version:"
+#~ msgid "Directory mask"
+#~ msgstr "Mappe maske"
 
-#~ msgid "Admin password"
-#~ msgstr "Admin kodeord"
+#~ msgid "Dos charset"
+#~ msgstr "DOS tegnsæt"
 
-#~ msgid "DNS domain"
-#~ msgstr "DNS domæne"
+#~ msgid "EA support"
+#~ msgstr "EA understøttelse"
 
-#~ msgid "NetBIOS domain"
-#~ msgstr "NetBIOS domæne"
+#~ msgid "Enable Asynchronous I/O (AIO)"
+#~ msgstr "Aktiver Asynkron I/O (AIO)"
 
-#~ msgid "Decrypt password"
-#~ msgstr "Dekryptere kodeord"
+#~ msgid "Enable extended attribute support"
+#~ msgstr "Aktiver understøttelse for udvidede attributter"
+
+#~ msgid "Enable large read/write"
+#~ msgstr "Aktiver stor læsning/skrivning"
+
+#~ msgid "Enable permission inheritance"
+#~ msgstr "Aktiver at tilladelser kan arves"
+
+#~ msgid "Enable recycle bin"
+#~ msgstr "Aktiver papirkurv"
+
+#~ msgid "Enable store DOS attributes"
+#~ msgstr "Aktiver lagring af DOS attributter"
+
+#~ msgid "Guest account"
+#~ msgstr "Gæste konto"
+
+#~ msgid "Hide dot files"
+#~ msgstr "Skjul filer der starter med punktum"
+
+#~ msgid "Inherit permissions"
+#~ msgstr "Arv tilladelser"
+
+#~ msgid "Large read/write"
+#~ msgstr "Stor læsning/skrivning"
+
+#~ msgid "NetBIOS name"
+#~ msgstr "NetBIOS navn"
+
+#~ msgid "Null passwords"
+#~ msgstr "Tomme kodeord"
+
+#~ msgid "Receive Buffer Size"
+#~ msgstr "Modtage buffer størrelse"
+
+#~ msgid "Recycle bin"
+#~ msgstr "Papirkurv"
+
+#, php-format
+#~ msgid ""
+#~ "Samba will read from file asynchronously when size of request is bigger than "
+#~ "this value. (%d by default)"
+#~ msgstr ""
+#~ "Samba vil læse asynkront fra filen, når størrelse på forespørgslen er mere "
+#~ "end denne værdi. (%d som standard)"
+
+#, php-format
+#~ msgid ""
+#~ "Samba will write to file asynchronously when size of request is bigger than "
+#~ "this value. (%d by default)"
+#~ msgstr ""
+#~ "Samba vil skrive asynkront til filen, når størrelse på forespørgslen er mere "
+#~ "end denne værdi. (%d som standard)"
+
+#~ msgid "Send Buffer Size"
+#~ msgstr "Sende buffer størrelse"
+
+#~ msgid "Set browseable"
+#~ msgstr "Kan gennemsøges"
+
+#~ msgid "Set read only"
+#~ msgstr "Skrivebeskyttet"
+
+#~ msgid "Store DOS attributes"
+#~ msgstr "Gem DOS attributter"
+
+#~ msgid "Swap disabled"
+#~ msgstr "Swap deaktiveret"
+
+#~ msgid "Time server"
+#~ msgstr "Tidsserver"
+
+#~ msgid "Unix charset"
+#~ msgstr "Unix tegnsæt"
+
+#~ msgid "WINS server"
+#~ msgstr "WINS server"
+
+#~ msgid "Enable guest access"
+#~ msgstr "Aktiver gæst adgang"
+
+#~ msgid "Enable ZFS ACL"
+#~ msgstr "Aktiver ZFS ACL"
+
+#~ msgid "Enable shadow copy"
+#~ msgstr "Aktiver shadow kopi"
+
+#~ msgid "Map to guest"
+#~ msgstr "Kæde til gæst"
+
+#~ msgid "Shadow Copy format"
+#~ msgstr "Skygge kopi format"
+
+#~ msgid "This will provide ZFS ACL support. (ZFS only)"
+#~ msgstr "Dette vil tilføje ZFS ACL udvidelse. (Kun ZFS)"
+
+#~ msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
+#~ msgstr "Dette vil tilbyde en skygge kopi lavet af auto snapshot. (kun ZFS)"
+
+#~ msgid "Interface selection"
+#~ msgstr "Interface valg"
+
+#~ msgid "Store NTFS acls"
+#~ msgstr "Gem NTFS acls"
+
+#~ msgid "Store alternate data streams"
+#~ msgstr "Gem alternative data strømme"
+
+#~ msgid "Trusted domains"
+#~ msgstr "Sikre domæner"
+
+#~ msgid "AIO module"
+#~ msgstr "AIO modul"
+
+#~ msgid "Password server"
+#~ msgstr "Adgangskode server"

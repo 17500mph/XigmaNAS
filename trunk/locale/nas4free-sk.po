@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-26 21:12+0000\n"
+"POT-Creation-Date: 2017-01-28 02:17+0000\n"
 "PO-Revision-Date: 2016-12-29 18:46+0000\n"
 "Last-Translator: Lukas Vescicik <lukas.vescicik@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 21:49+0000\n"
+"X-Launchpad-Export-Date: 2017-01-28 01:57+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: SLOVAKIA\n"
 "Language: \n"
@@ -296,10 +296,11 @@ msgid ""
 msgstr ""
 "Musí byť zadaná správna IP adresa alebo CIDR notácia pre povolenie hosťa."
 
-msgid ""
-"A valid IPv4 address must be specified for the primary/secondary DNS server."
+msgid "A valid IPv4 address must be specified for the primary DNS server."
 msgstr ""
-"Musí byť uvedená platná IPv6 adresa primárneho/sekundárneho DNS servera."
+
+msgid "A valid IPv4 address must be specified for the secondary DNS server."
+msgstr ""
 
 msgid "A valid IPv4 address must be specified."
 msgstr "Musí byť uvedená platná IPv4 adresa."
@@ -310,10 +311,11 @@ msgstr "Musí byť uvedená platná IPv4 sieť."
 msgid "A valid IPv6 Gateway address must be specified."
 msgstr "Musí byť uvedená platná IPv6 brána."
 
-msgid ""
-"A valid IPv6 address must be specified for the primary/secondary DNS server."
+msgid "A valid IPv6 address must be specified for the primary DNS server."
 msgstr ""
-"Musí byť uvedená platná IPv6 adresa primárneho/sekundárneho DNS servera."
+
+msgid "A valid IPv6 address must be specified for the secondary DNS server."
+msgstr ""
 
 msgid "A valid IPv6 address must be specified."
 msgstr "Musí byť uvedená platná IPv6 adresa."
@@ -360,20 +362,20 @@ msgstr "Názov AD alebo PDC."
 msgid "AFP"
 msgstr "AFP"
 
-msgid "AFP compatibility"
-msgstr "Kompatibilita AFP"
+msgid "AFP Compatibility"
+msgstr ""
 
 msgid "AG"
 msgstr "AS"
 
-msgid "AIO module"
-msgstr "Modul AIO"
+msgid "AIO Module"
+msgstr ""
 
-msgid "AIO read size"
-msgstr "Veľkosť čítania AIO"
+msgid "AIO Read Size"
+msgstr ""
 
-msgid "AIO write size"
-msgstr "Veľkosť zápisu AIO"
+msgid "AIO Write Size"
+msgstr ""
 
 msgid "ALL Interfaces"
 msgstr "Všetky rozhrania"
@@ -568,14 +570,14 @@ msgstr "Pridať zdieľanie"
 msgid "Add target"
 msgstr "Pridať cieľ"
 
+msgid "Additional Group"
+msgstr ""
+
 msgid "Additional Network"
 msgstr "Ďalšia sieť"
 
 msgid "Additional Storage"
 msgstr "Ďalší úložný priestor"
-
-msgid "Additional group"
-msgstr "Ďalšia skupina"
 
 msgid ""
 "Additional parameters to the hardware-specific part of the driver for second "
@@ -722,9 +724,6 @@ msgstr ""
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "Umožniť klientom pokračovať v prerušenom sťahovaní a nahrávaní."
 
-msgid "Allow group"
-msgstr ""
-
 msgid "Allow new files"
 msgstr "Povoliť nové súbory"
 
@@ -767,6 +766,9 @@ msgstr ""
 
 msgid "AltRoot"
 msgstr "AltKoreň"
+
+msgid "Alternate Data Streams"
+msgstr ""
 
 msgid "Alternate TCP port. Default is 22"
 msgstr "Alternatívny TCP port. Štandardný je 22"
@@ -829,14 +831,14 @@ msgstr "Hostiteľ s týmto názvom už existuje."
 msgid "An interface with the specified description already exists."
 msgstr "Rozhranie s uvedeným popisom už existuje."
 
-msgid "Anonymous access has been deprecated starting from SMB2."
+msgid "Anonymous Bind"
 msgstr ""
 
-msgid "Anonymous bind"
-msgstr "Anonymné pripojenie"
+msgid "Anonymous Users"
+msgstr ""
 
-msgid "Anonymous user bandwidth"
-msgstr "Šírka pásma anonymného používateľa"
+msgid "Anonymous access has been deprecated starting from SMB2."
+msgstr ""
 
 msgid ""
 "Anonymous user download bandwith in KB/s. An empty field means infinity."
@@ -849,9 +851,6 @@ msgid ""
 msgstr ""
 "Šírka pásma na nahrávanie pre anonymného používateľa v KB/s. Prázdne pole "
 "značí neobmedzená."
-
-msgid "Anonymous users only"
-msgstr "Iba anonymní používatelia"
 
 msgid ""
 "Another DLNA/UPnP service is already running. Enabling Fuppes might cause "
@@ -902,7 +901,7 @@ msgstr ""
 msgid "Are you sure you want to shutdown the server?"
 msgstr ""
 
-msgid "Asynchronous I/O (AIO)"
+msgid "Asynchronous I/O"
 msgstr ""
 
 msgid ""
@@ -958,6 +957,17 @@ msgstr ""
 msgid "Authenticate URL"
 msgstr "URL na overenie"
 
+msgid "Authenticated Users"
+msgstr ""
+
+msgid ""
+"Authenticated user download bandwith in KB/s. An empty field means infinity."
+msgstr ""
+
+msgid ""
+"Authenticated user upload bandwith in KB/s. An empty field means infinity."
+msgstr ""
+
 msgid "Authentication"
 msgstr "Autentifikácia"
 
@@ -996,6 +1006,9 @@ msgstr ""
 
 msgid "Autoselect"
 msgstr "Automatický výber"
+
+msgid "Auxiliary Parameter"
+msgstr ""
 
 msgid "Auxiliary Parameters"
 msgstr ""
@@ -1125,8 +1138,8 @@ msgstr "Najlepšie dostupné"
 msgid "Bind DN"
 msgstr "DN pre pripojenie"
 
-msgid "Bind password"
-msgstr "Heslo pre pripojenie"
+msgid "Bind Password"
+msgstr ""
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
@@ -1237,11 +1250,11 @@ msgstr "Používatelia CHAP"
 msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
 
+msgid "CIFS/SMB Information"
+msgstr ""
+
 msgid "CIFS/SMB disabled"
 msgstr "CIFS/SMB vypnuté"
-
-msgid "CIFS/SMB informations"
-msgstr "Informácie o CIFS/SMB"
 
 msgid "CIFS/SMB is enabled."
 msgstr ""
@@ -1443,10 +1456,10 @@ msgstr ""
 msgid "Client"
 msgstr "Klient"
 
-msgid "Client Max Protocol"
+msgid "Client Max. Protocol"
 msgstr ""
 
-msgid "Client Min Protocol"
+msgid "Client Min. Protocol"
 msgstr ""
 
 msgid "Clone"
@@ -1463,7 +1476,7 @@ msgstr "Stĺpce"
 
 msgid ""
 "Comma-separated list of group names that are permitted to login to the FTP "
-"server. (empty is ftp group)"
+"server. (empty = ftp group)."
 msgstr ""
 
 msgid "Command"
@@ -1543,11 +1556,14 @@ msgstr ""
 msgid "Configuration"
 msgstr "Konfigurácia"
 
-msgid "Configuration directory"
-msgstr "Konfiguračný priečinok"
+msgid "Configuration Directory"
+msgstr ""
 
 msgid "Configuring"
 msgstr "Konfiguruje sa"
+
+msgid "Confirm New Password"
+msgstr ""
 
 msgid "Confirmation"
 msgstr "Potvrdenie"
@@ -1781,6 +1797,9 @@ msgstr ""
 msgid "Create HVM Guest"
 msgstr ""
 
+msgid "Create Mask"
+msgstr ""
+
 msgid "Create PV Guest"
 msgstr ""
 
@@ -1792,9 +1811,6 @@ msgstr "Vytvoriť a inicializovať RAID."
 
 msgid "Create encrypted volume"
 msgstr "Vytvoriť kryptovaný zväzok"
-
-msgid "Create mask"
-msgstr "Vytvoriť masku"
 
 msgid "Create work directory if it doesn't exist."
 msgstr "Vytvoriť pracovný adresár ak neexistuje"
@@ -1852,6 +1868,9 @@ msgstr ""
 
 msgid ""
 "Current password is default password. You should use your own password."
+msgstr ""
+
+msgid "Current password is incorrectly entered."
 msgstr ""
 
 msgid "Current state of drive operation based upon the Life Curve."
@@ -2018,12 +2037,8 @@ msgstr ""
 msgid "Default Device Settings"
 msgstr ""
 
-#, php-format
-msgid "Default is %s."
-msgstr "Štandardná hodnota je %s."
-
-msgid "Default root"
-msgstr "Štandardný koreňový adresár"
+msgid "Default Root"
+msgstr ""
 
 msgid "Default user name is 'admin'."
 msgstr "Štandardné používateľské meno je „admin“."
@@ -2353,14 +2368,14 @@ msgstr "Adresár"
 msgid "Directory %s doesn't exist!"
 msgstr ""
 
+msgid "Directory Mask"
+msgstr ""
+
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr ""
 
 msgid "Directory listing"
 msgstr "Výpis adresára"
-
-msgid "Directory mask"
-msgstr "Maska adresára"
 
 msgid "Directory that contains removable media. (e.g /mnt/iscsi/)"
 msgstr ""
@@ -2458,8 +2473,8 @@ msgid ""
 "or temperature). Unit of measure is unknown."
 msgstr ""
 
-msgid "Distributed hash table"
-msgstr "Distribuovaná hašovacia tabuľka"
+msgid "Distributed Hash Table"
+msgstr ""
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
@@ -2704,7 +2719,7 @@ msgstr "Doména"
 msgid "Domain controller name"
 msgstr "Názov radiča domény"
 
-msgid "Domain have no 2nd level name."
+msgid "Domain is missing 2nd level name."
 msgstr ""
 
 msgid "Domain name"
@@ -2731,17 +2746,20 @@ msgstr "Hotovo"
 msgid "Done."
 msgstr "Hotovo."
 
-msgid "Dos charset"
-msgstr "Znaková sada DOS"
+msgid "Dos Charset"
+msgstr ""
 
 msgid "Download"
 msgstr "Stiahnuť"
 
+msgid "Download Bandwidth"
+msgstr ""
+
 msgid "Download Configuration"
 msgstr ""
 
-msgid "Download bandwidth"
-msgstr "Šírka pásma sťahovania"
+msgid "Download Directory"
+msgstr ""
 
 msgid "Download directory"
 msgstr "Priečinok na sťahovanie"
@@ -2758,10 +2776,10 @@ msgstr ""
 msgid "Driver"
 msgstr "Ovládač"
 
-msgid "Driver list"
-msgstr "Zoznam ovládačov"
+msgid "Driver List"
+msgstr ""
 
-msgid "Driver parameters"
+msgid "Driver Parameter"
 msgstr ""
 
 msgid "Driver used"
@@ -2795,8 +2813,8 @@ msgstr "Dynamické DNS"
 msgid "Dynamic IP (DHCP) can not be used for HAST resources."
 msgstr ""
 
-msgid "EA support"
-msgstr "Podpora rozš. atrib."
+msgid "EA Support"
+msgstr ""
 
 msgid "EFI/GPT partition can be use with UFS only."
 msgstr "Oddiel EFI/GPT je možné použiť iba s UFS."
@@ -2928,19 +2946,19 @@ msgstr ""
 msgid "Enable"
 msgstr "Zapnúť"
 
-msgid "Enable 'Asynchronous I/O (AIO)' switch."
+msgid "Enable 'Asynchronous I/O (AIO).' switch."
 msgstr ""
 
 msgid "Enable 'Large read/write' switch."
 msgstr ""
 
-msgid "Enable ACL inheritance"
+msgid "Enable ACL inheritance."
 msgstr ""
 
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr ""
 
-msgid "Enable Asynchronous I/O (AIO)"
+msgid "Enable Asynchronous I/O. (AIO)."
 msgstr ""
 
 msgid "Enable Challenge-Response Authentication"
@@ -2989,7 +3007,7 @@ msgstr ""
 msgid "Enable Time Machine support"
 msgstr ""
 
-msgid "Enable ZFS ACL"
+msgid "Enable ZFS ACL."
 msgstr ""
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
@@ -3058,8 +3076,8 @@ msgstr "Zapnúť substitúcie v názvoch domén."
 msgid "Enable encryption."
 msgstr ""
 
-msgid "Enable extended attribute support"
-msgstr "Zapnúť podporu rozšírených atribútov."
+msgid "Enable extended attribute support."
+msgstr ""
 
 msgid "Enable extended attributes for this file system."
 msgstr "Povoliť rozšírené atribúty tohto súborového systému."
@@ -3071,9 +3089,6 @@ msgstr ""
 "Zapnúť kontrolu konzistencie súborového systému v popredí/pozadí počas "
 "štartovania systému."
 
-msgid "Enable guest access"
-msgstr ""
-
 msgid "Enable guest access."
 msgstr "Zapnúť hosťovský prístup."
 
@@ -3083,13 +3098,13 @@ msgstr ""
 msgid "Enable keyboard-interactive authentication."
 msgstr "Zapnúť interaktívnu autentifikáciu pomocou klávesnice."
 
-msgid "Enable large read/write"
-msgstr "Zapnúť veľké čitanie/zápis"
+msgid "Enable large read/write."
+msgstr ""
 
 msgid "Enable local user authentication."
 msgstr "Zapnúť lokálne overovanie používateľov."
 
-msgid "Enable mapping DOS attributes"
+msgid "Enable mapping DOS attributes."
 msgstr ""
 
 msgid "Enable module listing."
@@ -3104,8 +3119,8 @@ msgstr ""
 msgid "Enable peer exchange (PEX)."
 msgstr "Povoliť Peer exchange (PEX)."
 
-msgid "Enable permission inheritance"
-msgstr "Zapnúť dedičnosť práv"
+msgid "Enable permission inheritance."
+msgstr ""
 
 msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr "Povoliť presmerovanie portov pomocou NAT-PMP alebo UPnP."
@@ -3113,8 +3128,8 @@ msgstr "Povoliť presmerovanie portov pomocou NAT-PMP alebo UPnP."
 msgid "Enable proxy authentication."
 msgstr "Zapnúť overenie prostredníctvom proxy."
 
-msgid "Enable recycle bin"
-msgstr "Zapnúť odpadkový kôš"
+msgid "Enable recycle bin."
+msgstr ""
 
 msgid "Enable remote monitoring of the local connected UPS."
 msgstr "Zapnúť vzdialené monitorovanie"
@@ -3136,11 +3151,11 @@ msgstr ""
 msgid "Enable serial console."
 msgstr ""
 
-msgid "Enable shadow copy"
+msgid "Enable shadow copy."
 msgstr ""
 
-msgid "Enable store DOS attributes"
-msgstr "Zapnúť ukladanie DOS atribútov."
+msgid "Enable store DOS attributes."
+msgstr ""
 
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Zapnúť protokol ident (RFC1413)."
@@ -3209,7 +3224,7 @@ msgstr "Ktorý šifrovací algoritmus použiť"
 msgid "English"
 msgstr "angličtina"
 
-msgid "Enhanced compatibility with Netatalk AFP server"
+msgid "Enhanced compatibility with Netatalk AFP server."
 msgstr ""
 
 msgid "Enter Command"
@@ -3221,6 +3236,12 @@ msgstr ""
 msgid ""
 "Enter a custom port number for the WebGUI if you want to override the "
 "default (80 for HTTP, 443 for HTTPS)."
+msgstr ""
+
+#, php-format
+msgid ""
+"Enter a custom port number if you want to override the default port. Default "
+"port is %s."
 msgstr ""
 
 msgid "Enter a description"
@@ -3393,6 +3414,9 @@ msgstr ""
 "Rozsahy musia byť definvoané predtým, než sú použité, a nie je možné rozsah "
 "použiť viac ako raz."
 
+msgid "Extra Options"
+msgstr ""
+
 msgid "Extra options"
 msgstr "Ďalšie voľby"
 
@@ -3516,6 +3540,9 @@ msgstr "Editor súborov"
 
 msgid "File Manager"
 msgstr "Správca súborov"
+
+msgid "File Mask"
+msgstr ""
 
 msgid "File Path"
 msgstr ""
@@ -3747,17 +3774,22 @@ msgstr ""
 msgid "Greek"
 msgstr "gréčtina"
 
-msgid "Greeting banner displayed by FTP when a connection first comes in."
+msgid "Greeting banner displayed to client when firts connection comes in."
 msgstr ""
-"Oznam s pozdravom, ktorý sa zobrazuje klientovi na začiatku FTP spojenia."
 
 msgid "Group"
 msgstr "Skupina"
+
+msgid "Group Allow"
+msgstr ""
 
 msgid "Group ID"
 msgstr "ID skupiny"
 
 msgid "Group Settings"
+msgstr ""
+
+msgid "Group Suffix"
 msgstr ""
 
 msgid "Group compilations"
@@ -3775,9 +3807,6 @@ msgstr "Názov skupiny."
 msgid "Group numeric id."
 msgstr "Numerický ID skupiny."
 
-msgid "Group suffix"
-msgstr "Prípona skupiny"
-
 msgid "Groupmask - Mask ACL with mode"
 msgstr ""
 
@@ -3787,8 +3816,8 @@ msgstr "Skupiny"
 msgid "Guest"
 msgstr "Hosť"
 
-msgid "Guest account"
-msgstr "Účet hosťa"
+msgid "Guest Account"
+msgstr ""
 
 msgid "HAST"
 msgstr ""
@@ -3870,8 +3899,8 @@ msgstr ""
 msgid "Hide Default Groups"
 msgstr ""
 
-msgid "Hide dot files"
-msgstr "Skryť súbory s bodkou"
+msgid "Hide Dot Files"
+msgstr ""
 
 msgid "High voltage boosting transfer point"
 msgstr ""
@@ -3900,9 +3929,6 @@ msgstr "Názov počítača"
 msgid "Host access control"
 msgstr "Riadenie prístupu k hostiteľovi"
 
-msgid "Host name"
-msgstr "Názov počítača"
-
 msgid "Host resources"
 msgstr "Zdroje hostiteľa"
 
@@ -3916,6 +3942,9 @@ msgid "Hosts"
 msgstr "Počítače"
 
 msgid "Hosts Allow"
+msgstr ""
+
+msgid "Hosts Deny"
 msgstr ""
 
 msgid "Hosts Setup"
@@ -4035,8 +4064,8 @@ msgstr "Pripojiť ISO súbor."
 msgid "ISP DNS Servers"
 msgstr ""
 
-msgid "Ident protocol"
-msgstr "Protokol ident"
+msgid "IdentLookups"
+msgstr ""
 
 msgid "Identifier"
 msgstr "Identifikátor"
@@ -4109,12 +4138,6 @@ msgid ""
 "If this property is enabled, the snapshots are displayed into .zfs directory."
 msgstr ""
 
-msgid ""
-"If you want to change the password for accessing the WebGUI, enter it here "
-"twice."
-msgstr ""
-"Ak chcete zmeniť heslo pre prístup do WebGUI, zadajte ho sem dvakrát."
-
 msgid "Import"
 msgstr "Importovať"
 
@@ -4160,7 +4183,7 @@ msgstr ""
 msgid "Incoming Line/Power Information"
 msgstr ""
 
-msgid "Incomplete directory"
+msgid "Incomplete Directory"
 msgstr ""
 
 msgid ""
@@ -4192,8 +4215,8 @@ msgstr ""
 msgid "Inherit ACL"
 msgstr ""
 
-msgid "Inherit permissions"
-msgstr "Dedičnosť práv"
+msgid "Inherit Permissions"
+msgstr ""
 
 msgid "Inhibit some of the syslog diagnostics for bad lines in /etc/exports."
 msgstr ""
@@ -4312,9 +4335,6 @@ msgstr "Správa rozhraní"
 msgid "Interface Selection"
 msgstr ""
 
-msgid "Interface selection"
-msgstr ""
-
 msgid "Interfaces"
 msgstr "Rozhrania"
 
@@ -4370,11 +4390,9 @@ msgid ""
 msgstr ""
 
 msgid ""
-"It is impossible to enable 'Anonymous users only' and 'Local users only' "
-"authentication simultaneously."
+"It is impossible to enable 'Anonymous Users' and 'Authenticated Users' both "
+"at the same time."
 msgstr ""
-"Nie je možné naraz zapnúť overovanie „Iba anonymní používatelia“ a „Iba "
-"lokálni používatelia“."
 
 msgid ""
 "It is not recommanded to import non healthy pools nor virtual devices that "
@@ -4484,6 +4502,9 @@ msgstr ""
 msgid "LAN Only"
 msgstr ""
 
+msgid "LAN interface is not configured."
+msgstr ""
+
 msgid "LAN net"
 msgstr "Sieť LAN"
 
@@ -4514,8 +4535,8 @@ msgstr "Jazyk"
 msgid "Language to use on front panel"
 msgstr ""
 
-msgid "Large read/write"
-msgstr "Veľké čítanie/zápis"
+msgid "Large Read/Write"
+msgstr ""
 
 msgid "Last Configuration Change"
 msgstr ""
@@ -4649,22 +4670,6 @@ msgstr "Miestny zdieľaný priečinok (cieľ)"
 
 msgid "Local shares to be synchronized"
 msgstr "Miestne zdieľané priečinky, ktoré sa majú synchronizovať"
-
-msgid "Local user bandwidth"
-msgstr "Šírka pásma lokálneho používateľa"
-
-msgid "Local user download bandwith in KB/s. An empty field means infinity."
-msgstr ""
-"Šírka pásma na sťahovanie pre lokálneho používateľa v KB/s. Prázdne pole "
-"značí neobmedzená."
-
-msgid "Local user upload bandwith in KB/s. An empty field means infinity."
-msgstr ""
-"Šírka pásma na nahrávanie pre lokálneho používateľa v KB/s. Prázdne pole "
-"značí neobmedzená."
-
-msgid "Local users only"
-msgstr "Iba lokálni používatelia"
 
 msgid "Location"
 msgstr "Umiestnenie"
@@ -4801,8 +4806,8 @@ msgstr "MS doména"
 msgid "MTU"
 msgstr "MTU"
 
-msgid "Machine suffix"
-msgstr "Prípona stroja"
+msgid "Machine Suffix"
+msgstr ""
 
 msgid "Maintenance"
 msgstr ""
@@ -4831,13 +4836,13 @@ msgstr ""
 msgid "Map all users to root"
 msgstr "Mapovať všetkých používateľov na roota."
 
-msgid "Map to guest"
+msgid "Map to Guest"
 msgstr ""
 
 msgid "Map to user"
 msgstr "Mapovať na používateľa"
 
-msgid "Mapping DOS attributes"
+msgid "Mapping DOS Attributes"
 msgstr ""
 
 msgid "Mar"
@@ -4851,10 +4856,22 @@ msgid ""
 "not specified."
 msgstr ""
 
-msgid "Masquerade address"
-msgstr "Verejná adresa"
+msgid "Masquerade Address"
+msgstr ""
 
 msgid "Max Entries"
+msgstr ""
+
+msgid "Max. Clients"
+msgstr ""
+
+msgid "Max. Connections Per Host"
+msgstr ""
+
+msgid "Max. Login Attempts"
+msgstr ""
+
+msgid "Max. Passive Port"
 msgstr ""
 
 msgid "Max. TTL"
@@ -4863,16 +4880,7 @@ msgstr "Max. TTL"
 msgid "Max. block size"
 msgstr "Max. veľkosť bloku"
 
-msgid "Max. conn. per IP"
-msgstr "Max. pripojení na IP"
-
 msgid "Max. connections"
-msgstr ""
-
-msgid "Max. login attempts"
-msgstr ""
-
-msgid "Max. passive port"
 msgstr ""
 
 msgid "Max. pre-send R2T"
@@ -4917,12 +4925,13 @@ msgstr ""
 msgid "Maximum number of allowed password attempts before disconnection."
 msgstr ""
 
+msgid ""
+"Maximum number of connections allowed per IP address. (0 = unlimited)."
+msgstr ""
+
 #, php-format
 msgid "Maximum number of connections in each session (%d by default)."
 msgstr ""
-
-msgid "Maximum number of connections per IP address (0 = unlimited)."
-msgstr "Maximálny počet pripojení na IP (0 = neobmedzený)."
 
 #, php-format
 msgid ""
@@ -4934,11 +4943,11 @@ msgstr ""
 msgid "Maximum number of sessions holding at same time (%d by default)."
 msgstr ""
 
-msgid "Maximum number of simultaneous clients."
-msgstr "Maximálny počet súčasne pripojených klientov."
-
 msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
 msgstr "Maximálny počet súčasných pripojení. Štandardne 0 (neobmedzený)."
+
+msgid "Maximum number of users that can connect to the server."
+msgstr ""
 
 msgid "Maximum relative humidity seen (percent)"
 msgstr ""
@@ -4991,7 +5000,7 @@ msgstr ""
 msgid "MibII"
 msgstr "MibII"
 
-msgid "Min. passive port"
+msgid "Min. Passive Port"
 msgstr ""
 
 msgid "MiniDLNA"
@@ -5180,6 +5189,9 @@ msgstr ""
 msgid "NT1 (CIFS)"
 msgstr ""
 
+msgid "NTFS ACLs"
+msgstr ""
+
 msgid "NTP Time Server"
 msgstr ""
 
@@ -5223,9 +5235,6 @@ msgstr ""
 
 msgid "NetBIOS Name"
 msgstr ""
-
-msgid "NetBIOS name"
-msgstr "NetBIOS názov"
 
 msgid "Netgraph"
 msgstr "Graf siete"
@@ -5276,6 +5285,11 @@ msgstr ""
 msgid "New Password"
 msgstr ""
 
+msgid ""
+"New Password does not match the confirmation password. Please ensure both "
+"passwords are the same."
+msgstr ""
+
 msgid "New password"
 msgstr ""
 
@@ -5284,6 +5298,9 @@ msgstr ""
 
 msgid "No"
 msgstr "Nie"
+
+msgid "No DNS server have been configured."
+msgstr ""
 
 msgid "No DNS setting found."
 msgstr ""
@@ -5493,17 +5510,14 @@ msgstr ""
 msgid "Now"
 msgstr "Teraz"
 
-msgid "Null passwords"
-msgstr "Prázdne heslá"
+msgid "Null Passwords"
+msgstr ""
 
 msgid "Number of bad battery packs"
 msgstr ""
 
 msgid "Number of battery packs"
 msgstr ""
-
-msgid "Number of clients"
-msgstr "Počet klientov"
 
 msgid "Number of hours elapsed in the power-on state."
 msgstr ""
@@ -5550,9 +5564,6 @@ msgid "Off"
 msgstr ""
 
 msgid "Old passphrase"
-msgstr "Staré heslo"
-
-msgid "Old password"
 msgstr "Staré heslo"
 
 msgid "On"
@@ -5712,8 +5723,8 @@ msgstr "Typ oblasti"
 msgid "Partitions"
 msgstr "Oddiely"
 
-msgid "Passive ports"
-msgstr "Pasívne porty"
+msgid "Passive Port"
+msgstr ""
 
 msgid ""
 "Passive ports restricts the range of ports from which the server will select "
@@ -5753,14 +5764,25 @@ msgstr "Heslo"
 msgid "Password (confirmed)"
 msgstr "Heslo (potvrdené)"
 
+msgid "Password Encryption"
+msgstr ""
+
+msgid "Password Server"
+msgstr ""
+
+msgid "Password Suffix"
+msgstr ""
+
 msgid "Password authentication"
 msgstr "Autentifikácia pomocou hesla"
 
+msgid ""
+"Password does not match the confirmation password. Please ensure both "
+"passwords are the same."
+msgstr ""
+
 msgid "Password don't match."
 msgstr "Heslá sa nezhodujú."
-
-msgid "Password encryption"
-msgstr "Kryptovanie hesla"
 
 msgid "Password for the administrative pages."
 msgstr "Heslo webového rozhrania na správu."
@@ -5768,15 +5790,9 @@ msgstr "Heslo webového rozhrania na správu."
 msgid "Password of domain administrator account."
 msgstr "Heslo účtu správcu domény."
 
-msgid "Password server"
-msgstr ""
-
 msgid ""
 "Password server name or IP address (e.g. Active Directory domain controller)."
 msgstr ""
-
-msgid "Password suffix"
-msgstr "Prípona hesla"
 
 msgid "Paste a RSA PRIVATE KEY in PEM format here."
 msgstr ""
@@ -5800,14 +5816,17 @@ msgstr "Cesta, ktorá sa má zdieľať."
 msgid "Path to the local device. (e.g. %s)"
 msgstr ""
 
+msgid "Peer Exchange"
+msgstr ""
+
+msgid "Peer Port"
+msgstr ""
+
 msgid "Peer Secret"
 msgstr ""
 
 msgid "Peer User"
 msgstr ""
-
-msgid "Peer exchange"
-msgstr "Peer exchange"
 
 msgid "Peer port"
 msgstr "Port rovesníka"
@@ -5817,6 +5836,9 @@ msgstr ""
 
 #, php-format
 msgid "Permanent samba data path (e.g. %s)."
+msgstr ""
+
+msgid "Permit Root Login"
 msgstr ""
 
 msgid "Permit root login"
@@ -5960,8 +5982,8 @@ msgstr "Port "
 msgid "Port %ld is already used by another service."
 msgstr "Port %ld už využíva iné zariadenie."
 
-msgid "Port forwarding"
-msgstr "Presmerovanie portov"
+msgid "Port Forwarding"
+msgstr ""
 
 #, php-format
 msgid "Port number must be in the range between %d and %d."
@@ -6248,6 +6270,9 @@ msgstr ""
 msgid "Read"
 msgstr "Čítanie"
 
+msgid "Read Only"
+msgstr ""
+
 msgid "Read Only (ro)"
 msgstr ""
 
@@ -6299,8 +6324,8 @@ msgstr ""
 msgid "Reboot"
 msgstr "Reštartovať"
 
-msgid "Receive Buffer Size"
-msgstr "Veľkosť prijímacieho bufera"
+msgid "Receive Buffer"
+msgstr ""
 
 msgid "Record is locked"
 msgstr ""
@@ -6311,8 +6336,8 @@ msgstr "Prehľadávať podadresáre."
 msgid "Recursive"
 msgstr "Rekurzívne"
 
-msgid "Recycle bin"
-msgstr "Odpadkový kôš"
+msgid "Recycle Bin"
+msgstr ""
 
 msgid "Refresh"
 msgstr ""
@@ -6511,11 +6536,11 @@ msgstr "rumunčina"
 msgid "Root"
 msgstr ""
 
-msgid "Root bind DN"
-msgstr "Koreňový DN pre pripojenie"
+msgid "Root Bind DN"
+msgstr ""
 
-msgid "Root bind password"
-msgstr "Koreňové heslo pre pripojenie"
+msgid "Root Bind Password"
+msgstr ""
 
 msgid "Rotation Rate"
 msgstr ""
@@ -6529,8 +6554,8 @@ msgstr "Roundrobin"
 msgid "Routes"
 msgstr "Cesty"
 
-msgid "Routing tables"
-msgstr "Smerovacie tabuľky"
+msgid "Routing Tables"
+msgstr ""
 
 msgid "Rows"
 msgstr "Riadky"
@@ -6639,13 +6664,13 @@ msgstr ""
 #, php-format
 msgid ""
 "Samba will read from file asynchronously when size of request is bigger than "
-"this value. (%d by default)"
+"this value. (%d by default)."
 msgstr ""
 
 #, php-format
 msgid ""
 "Samba will write to file asynchronously when size of request is bigger than "
-"this value. (%d by default)"
+"this value. (%d by default)."
 msgstr ""
 
 msgid "Sat"
@@ -6864,8 +6889,8 @@ msgstr ""
 msgid "Self-tests Management"
 msgstr ""
 
-msgid "Send Buffer Size"
-msgstr "Veľkosť odosielacieho bufera"
+msgid "Send Buffer"
+msgstr ""
 
 msgid "Send Command!"
 msgstr "Poslať príkaz!"
@@ -6912,10 +6937,10 @@ msgstr ""
 msgid "Server"
 msgstr "Server"
 
-msgid "Server Max Protocol"
+msgid "Server Max. Protocol"
 msgstr ""
 
-msgid "Server Min Protocol"
+msgid "Server Min. Protocol"
 msgstr ""
 
 msgid "Server Name"
@@ -6945,11 +6970,11 @@ msgstr "Služby"
 msgid "Set additional group memberships for this account."
 msgstr "Nastaviť členstvo tohto účtu v ďalších skupinách."
 
-msgid "Set browseable"
-msgstr "Nastaviť prehliadateľnosť"
+msgid "Set browseable."
+msgstr ""
 
-msgid "Set read only"
-msgstr "Nastaviť len na čítanie"
+msgid "Set read only."
+msgstr ""
 
 msgid "Set share password."
 msgstr "Nastaviť heslo zdieľaného priečinka"
@@ -7010,7 +7035,7 @@ msgstr "Nastavenia"
 msgid "Shadow Copy"
 msgstr ""
 
-msgid "Shadow Copy format"
+msgid "Shadow Copy Format"
 msgstr ""
 
 msgid "Share"
@@ -7297,19 +7322,13 @@ msgstr "Zastavené"
 msgid "Storage"
 msgstr "Ukladanie"
 
-msgid "Store DOS attributes"
-msgstr "Ukladať atribúty DOS"
-
-msgid "Store NTFS acls"
+msgid "Store DOS Attributes"
 msgstr ""
 
-msgid "Store NTFS acls in Extended Attributes"
+msgid "Store NTFS ACLs in Extended Attributes."
 msgstr ""
 
-msgid "Store alternate data streams"
-msgstr ""
-
-msgid "Store alternate data streams in Extended Attributes"
+msgid "Store alternate data streams in Extended Attributes."
 msgstr ""
 
 msgid "Strict DLNA"
@@ -7368,8 +7387,8 @@ msgstr ""
 msgid "Swap Usage"
 msgstr ""
 
-msgid "Swap disabled"
-msgstr "Odkladanie vypnuté"
+msgid "Swap is disabled."
+msgstr ""
 
 msgid "Swedish"
 msgstr "švédčina"
@@ -7462,6 +7481,12 @@ msgstr "Vyrovnávacia pamäť systémových správ"
 msgid "System tuning"
 msgstr "Ladenie systému"
 
+msgid "TCP Port"
+msgstr ""
+
+msgid "TCP Wrapper"
+msgstr ""
+
 msgid "TCP forwarding"
 msgstr "TCP forwarding"
 
@@ -7473,9 +7498,6 @@ msgstr ""
 
 msgid "TCP port to bind the server to."
 msgstr "TCP port, na ktorý sa server viaže."
-
-msgid "TCP wrapper"
-msgstr ""
 
 msgid "TFTP"
 msgstr "TFTP"
@@ -7489,10 +7511,10 @@ msgstr ""
 msgid "TLS Mode"
 msgstr ""
 
-msgid "TLS Server Certificate Check"
+msgid "TLS Only"
 msgstr ""
 
-msgid "TLS only"
+msgid "TLS Server Certificate Check"
 msgstr ""
 
 msgid "Tag"
@@ -7637,8 +7659,8 @@ msgid ""
 "manufacturing."
 msgstr ""
 
-msgid "The TCP port must be a valid port number."
-msgstr "TCP port musí byť platné číslo portu."
+msgid "The TCP Port must be a valid port number."
+msgstr ""
 
 msgid "The UPS identifier and IP address"
 msgstr ""
@@ -7896,9 +7918,6 @@ msgstr "Prihlasovacie údaje na pripojenie."
 msgid "The cron job has been executed successfully."
 msgstr "Cron úloha bola úspešne vykonaná."
 
-msgid "The current password is incorrectly entered."
-msgstr ""
-
 #, php-format
 msgid ""
 "The custom format of the snapshot for shadow copy service can be specified. "
@@ -8044,16 +8063,20 @@ msgstr "Prihlasovacie meno je rezervované prihlasovacie meno."
 msgid "The login name is limited to 16 characters."
 msgstr ""
 
-msgid "The max. connection per IP must be either 0 (unlimited) or greater."
-msgstr "Max. počet spojení na IP musí byť buď 0 (neobmedzený) alebo viac."
+msgid ""
+"The max. connections per IP address must be either 0 (unlimited) or greater."
+msgstr ""
+
+msgid "The max. number of clients must be in the range from 1 to 50."
+msgstr ""
 
 msgid ""
 "The maximum download bandwith in KiB/s. An empty field means infinity."
 msgstr ""
 "Maximálna šírka pásma na sťahovanie v KiB/s. Prázdne pole znamená nekonečno."
 
-msgid "The maximum idle time be a number."
-msgstr "Maximálny čas nečinnosti musí byť číslo."
+msgid "The maximum idle time must be a number."
+msgstr ""
 
 msgid ""
 "The maximum port to allocate for PASV style data connections (0 = use any "
@@ -8128,16 +8151,6 @@ msgstr ""
 #, php-format
 msgid "The network '%s' is invalid."
 msgstr ""
-
-msgid ""
-"The new password does not match. Please ensure the passwords match exactly."
-msgstr ""
-
-msgid "The new password is also the default root password of the system!"
-msgstr ""
-
-msgid "The number of clients must be between 1 and 50."
-msgstr "Počet klientov musí byť medzi 1 a 50."
 
 msgid ""
 "The number of errors caused by incorrect checksum during the error "
@@ -8320,7 +8333,7 @@ msgstr "Jednotku je potrebné pred zmazaním odobrať."
 
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
-"clients (maximum 15 characters)."
+"clients. (maximum 15 characters)."
 msgstr ""
 
 msgid "The working directory does not exist."
@@ -8749,6 +8762,12 @@ msgstr ""
 "Tento parameter udáva príponu, ktorá sa použije pre použvateľov pridaných do "
 "adresára LDAP, napr. %s"
 
+msgid "This password is required to access the admin web interface."
+msgstr ""
+
+msgid "This password is the root password of the system."
+msgstr ""
+
 msgid "This pool name already exists."
 msgstr ""
 
@@ -8807,13 +8826,13 @@ msgstr ""
 "Týmto sa vymažú VŠETKY údaje na vašom disku! Nepoužívajte túto voľbu ak "
 "chcete pridať existujúci šifrovaný disk."
 
-msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
+msgid "This will provide NTFS ACLs without ZFS ACL support such as UFS."
 msgstr ""
 
-msgid "This will provide ZFS ACL support. (ZFS only)"
+msgid "This will provide ZFS ACL support. (ZFS only)."
 msgstr ""
 
-msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
+msgid "This will provide shadow copy created by auto snapshot. (ZFS only)."
 msgstr ""
 
 msgid ""
@@ -8835,7 +8854,13 @@ msgstr ""
 msgid "Time"
 msgstr "Čas"
 
+msgid "Time Interval"
+msgstr ""
+
 msgid "Time Machine"
+msgstr ""
+
+msgid "Time Server"
 msgstr ""
 
 msgid "Time Synchronization"
@@ -8856,9 +8881,6 @@ msgstr ""
 msgid "Time interval"
 msgstr "Časový interval"
 
-msgid "Time server"
-msgstr "Časový server"
-
 msgid "Time spent during the positioning of the drive heads."
 msgstr ""
 
@@ -8874,6 +8896,9 @@ msgstr "Časový limit"
 
 msgid "Times"
 msgstr "Časy"
+
+msgid "Title Speed"
+msgstr ""
 
 msgid "TitleSpeed"
 msgstr ""
@@ -9028,7 +9053,7 @@ msgstr "Zachytávanie"
 msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol"
 
-msgid "Trusted domains"
+msgid "Trusted Domains"
 msgstr ""
 
 msgid "Try to force import."
@@ -9203,11 +9228,11 @@ msgstr "Unison"
 msgid "Unison File Synchronisation"
 msgstr "Synchronizácia súborov Unison"
 
+msgid "Unix Charset"
+msgstr ""
+
 msgid "Unix Command"
 msgstr "unixový príkaz"
-
-msgid "Unix charset"
-msgstr "Znaková sada Unix"
 
 msgid "Unknown"
 msgstr "Neznáme"
@@ -9245,8 +9270,8 @@ msgstr ""
 msgid "Upgrade ZFS and add all supported feature flags on a pool"
 msgstr ""
 
-msgid "Upload bandwidth"
-msgstr "Šírka pásma na nahrávanie"
+msgid "Upload Bandwidth"
+msgstr ""
 
 msgid "Upload directory"
 msgstr ""
@@ -9354,10 +9379,19 @@ msgstr "Používateľ"
 msgid "User ID"
 msgstr "ID používateľa"
 
+msgid "User Mask"
+msgstr ""
+
+msgid "User Portal"
+msgstr ""
+
 msgid "User Settings"
 msgstr ""
 
 msgid "User Shares"
+msgstr ""
+
+msgid "User Suffix"
 msgstr ""
 
 msgid "User account is locked"
@@ -9377,12 +9411,6 @@ msgstr "Numerický ID používateľa"
 
 msgid "User password."
 msgstr "Heslo používateľa."
-
-msgid "User portal"
-msgstr ""
-
-msgid "User suffix"
-msgstr "Prípona používateľa"
 
 msgid "Username"
 msgstr "Meno používateľa:"
@@ -9554,8 +9582,8 @@ msgstr ""
 msgid "WEP"
 msgstr "WEP"
 
-msgid "WINS server"
-msgstr "WINS server"
+msgid "WINS Server"
+msgstr ""
 
 msgid "WINS server IP address (e.g. from MS Active Directory server)."
 msgstr "IP adresa WINS servera (napr. servera MS Active Directory)."
@@ -9581,6 +9609,9 @@ msgstr "WPA-PSK WPA-EAP"
 msgid "WPA2"
 msgstr ""
 
+msgid "Wait Time"
+msgstr ""
+
 msgid "Wait time"
 msgstr ""
 
@@ -9600,11 +9631,14 @@ msgstr ""
 "Upozornenie: Chystáte sa zmazať šifrovaný zväzok. Všetky údaje sa stratia a "
 "nebude možné ich obnoviť."
 
-msgid "Watch directory"
+msgid "Watch Directory"
 msgstr ""
 
 msgid "WebGUI"
 msgstr "Webové rozhranie"
+
+msgid "WebGUI and Root Password"
+msgstr ""
 
 msgid "Webserver"
 msgstr "Webový server"
@@ -9675,6 +9709,9 @@ msgstr "Konfigurácia bezdrôtových sietí"
 
 msgid "Workgroup"
 msgstr "Pracovná skupina"
+
+msgid "Working Directory"
+msgstr ""
 
 msgid "Working directory"
 msgstr ""
@@ -9788,10 +9825,17 @@ msgstr ""
 msgid "You must select at least one authentication method."
 msgstr "Musíte zvoliť aspoň jednu metódu autentifikácie."
 
+msgid ""
+"You need to update your browser or use Internet Explorer 10 or higher."
+msgstr ""
+
 msgid "You should use HTTPS as WebGUI protocol for sending passphrase."
 msgstr "Na posielanie hesla by ste mali používať HTTPS ako protokol WebGUI."
 
 msgid "Your ZFS system is not healthy."
+msgstr ""
+
+msgid "Your browser does not support this svg object type."
 msgstr ""
 
 msgid "ZFS"
@@ -10005,17 +10049,99 @@ msgstr "užívateľ"
 msgid "week days"
 msgstr "dní v týždni"
 
-#~ msgid "IPv4 DNS servers"
-#~ msgstr "IPv4 DNS servery"
+#~ msgid ""
+#~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
+#~ msgstr ""
+#~ "Musí byť uvedená platná IPv6 adresa primárneho/sekundárneho DNS servera."
 
-#~ msgid "IPv6 DNS servers"
-#~ msgstr "IPv6 DNS servery"
+#~ msgid ""
+#~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
+#~ msgstr ""
+#~ "Musí byť uvedená platná IPv6 adresa primárneho/sekundárneho DNS servera."
 
-#~ msgid "System time"
-#~ msgstr "Čas systému"
+#~ msgid "Create mask"
+#~ msgstr "Vytvoriť masku"
 
-#~ msgid "Time zone"
-#~ msgstr "Časové pásmo"
+#~ msgid "Directory mask"
+#~ msgstr "Maska adresára"
 
-#~ msgid "version:"
-#~ msgstr "verzia:"
+#~ msgid "Dos charset"
+#~ msgstr "Znaková sada DOS"
+
+#~ msgid "EA support"
+#~ msgstr "Podpora rozš. atrib."
+
+#~ msgid "Enable extended attribute support"
+#~ msgstr "Zapnúť podporu rozšírených atribútov."
+
+#~ msgid "Enable large read/write"
+#~ msgstr "Zapnúť veľké čitanie/zápis"
+
+#~ msgid "Enable permission inheritance"
+#~ msgstr "Zapnúť dedičnosť práv"
+
+#~ msgid "Enable recycle bin"
+#~ msgstr "Zapnúť odpadkový kôš"
+
+#~ msgid "Enable store DOS attributes"
+#~ msgstr "Zapnúť ukladanie DOS atribútov."
+
+#~ msgid "Guest account"
+#~ msgstr "Účet hosťa"
+
+#~ msgid "Hide dot files"
+#~ msgstr "Skryť súbory s bodkou"
+
+#~ msgid "Inherit permissions"
+#~ msgstr "Dedičnosť práv"
+
+#~ msgid "Large read/write"
+#~ msgstr "Veľké čítanie/zápis"
+
+#~ msgid "NetBIOS name"
+#~ msgstr "NetBIOS názov"
+
+#~ msgid "Null passwords"
+#~ msgstr "Prázdne heslá"
+
+#~ msgid "Receive Buffer Size"
+#~ msgstr "Veľkosť prijímacieho bufera"
+
+#~ msgid "Recycle bin"
+#~ msgstr "Odpadkový kôš"
+
+#~ msgid "Send Buffer Size"
+#~ msgstr "Veľkosť odosielacieho bufera"
+
+#~ msgid "Set browseable"
+#~ msgstr "Nastaviť prehliadateľnosť"
+
+#~ msgid "Set read only"
+#~ msgstr "Nastaviť len na čítanie"
+
+#~ msgid "Store DOS attributes"
+#~ msgstr "Ukladať atribúty DOS"
+
+#~ msgid "Swap disabled"
+#~ msgstr "Odkladanie vypnuté"
+
+#~ msgid "Time server"
+#~ msgstr "Časový server"
+
+#~ msgid "Unix charset"
+#~ msgstr "Znaková sada Unix"
+
+#~ msgid "WINS server"
+#~ msgstr "WINS server"
+
+#~ msgid "AFP compatibility"
+#~ msgstr "Kompatibilita AFP"
+
+#~ msgid "AIO module"
+#~ msgstr "Modul AIO"
+
+#~ msgid "AIO write size"
+#~ msgstr "Veľkosť zápisu AIO"
+
+#~ msgid "AIO read size"
+#~ msgstr "Veľkosť čítania AIO"
