@@ -54,7 +54,7 @@ if ($_POST) {
 	if (isset($_POST['enable']) && $_POST['enable']) {
 		// Input validation.
 		$reqdfields = explode(" ", "rsyncd_user port");
-		$reqdfieldsn = array(gtext("Map to user"), gtext("TCP port"));
+		$reqdfieldsn = array(gtext("Map to User"), gtext("TCP Port"));
 		$reqdfieldst = explode(" ", "string port");
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -127,7 +127,7 @@ function enable_change(enable_change) {
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_titleline_checkbox("enable", gtext("Rsync"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
 					<tr>
-						<td valign="top" class="vncellreq"><?=gtext("Map to user");?></td>
+						<td valign="top" class="vncellreq"><?=gtext("Map to User");?></td>
 						<td class="vtable">
 							<select name="rsyncd_user" class="formfld" id="rsyncd_user">
 								<option value="ftp" <?php if ("ftp" === $pconfig['rsyncd_user']) echo "selected=\"selected\"";?>><?=gtext("Guest");?></option>
@@ -138,10 +138,10 @@ function enable_change(enable_change) {
 						</td>
 					</tr>
 					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("TCP port");?></td>
+						<td width="22%" valign="top" class="vncellreq"><?=gtext("TCP Port");?></td>
 						<td width="78%" class="vtable">
 							<input name="port" type="text" class="formfld" id="port" size="20" value="<?=htmlspecialchars($pconfig['port']);?>" />
-							<br /><?=gtext("Alternate TCP port. Default is 873");?>
+							<br /><?=gtext("Alternate TCP port. (Default is 873).");?>
 						</td>
 					</tr>
 					<?php
@@ -151,7 +151,7 @@ function enable_change(enable_change) {
 						. '" target="_blank">'
 						. gtext('Please check the documentation')
 						. '</a>.';
-					html_textarea("auxparam", gtext("Auxiliary parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", sprintf(gtext("These parameters will be added to [global] settings in %s."), "rsyncd.conf") . " " . $helpinghand, false, 65, 5, false, false);
+					html_textarea("auxparam", gtext("Auxiliary Parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", sprintf(gtext("These parameters will be added to [global] settings in %s."), "rsyncd.conf") . " " . $helpinghand, false, 65, 5, false, false);
 					?>
 				</table>
 				<div id="submit">

@@ -180,7 +180,7 @@ $pgtitle = [gtext('Services'),gtext('Rsync'),gtext('Server'),gtext('Module'),iss
 					</td>
 				</tr>
 				<tr>
-					<td width="22%" valign="top" class="vncell"><?=gtext("Access mode");?></td>
+					<td width="22%" valign="top" class="vncell"><?=gtext("Access Mode");?></td>
 					<td width="78%" class="vtable">
 						<select name="rwmode" size="1" id="rwmode">
 						<option value="ro" <?php if ("ro" === $pconfig['rwmode']) echo "selected=\"selected\"";?>><?=gtext("Read only");?></option>
@@ -191,7 +191,7 @@ $pgtitle = [gtext('Services'),gtext('Rsync'),gtext('Server'),gtext('Module'),iss
 					</td>
 				</tr>
 				<tr>
-					<td width="22%" valign="top" class="vncell"><?=gtext("Maximum connections");?></td>
+					<td width="22%" valign="top" class="vncell"><?=gtext("Max. Connections");?></td>
 					<td width="78%" class="vtable">
 					<input name="maxconnections" type="text" id="maxconnections" size="5" value="<?=htmlspecialchars($pconfig['maxconnections']);?>" /><br />
 					<span class="vexpl"><?=gtext("Maximum number of simultaneous connections. Default is 0 (unlimited).");?></span>
@@ -212,14 +212,14 @@ $pgtitle = [gtext('Services'),gtext('Rsync'),gtext('Server'),gtext('Module'),iss
 					</td>
 				</tr>
 				<tr>
-					<td width="22%" valign="top" class="vncell"><?=gtext("Hosts allow");?></td>
+					<td width="22%" valign="top" class="vncell"><?=gtext("Hosts Allow");?></td>
 					<td width="78%" class="vtable">
 					<input name="hostsallow" type="text" class="formfld" id="hostsallow" size="60" value="<?=htmlspecialchars($pconfig['hostsallow']);?>" /><br />
 					<span class="vexpl"><?=gtext("This option is a comma, space, or tab delimited set of hosts which are permitted to access this module. You can specify the hosts by name or IP number. Leave this field empty to use default settings.");?></span>
 					</td>
 				</tr>
 				<tr>
-					<td width="22%" valign="top" class="vncell"><?=gtext("Hosts deny");?></td>
+					<td width="22%" valign="top" class="vncell"><?=gtext("Hosts Deny");?></td>
 					<td width="78%" class="vtable">
 					<input name="hostsdeny" type="text" class="formfld" id="hostsdeny" size="60" value="<?=htmlspecialchars($pconfig['hostsdeny']);?>" /><br />
 					<span class="vexpl"><?=gtext("This option is a comma, space, or tab delimited set of host which are NOT permitted to access this module. Where the lists conflict, the allow list takes precedence. In the event that it is necessary to deny all by default, use the keyword ALL (or the netmask 0.0.0.0/0) and then explicitly specify to the hosts allow parameter those hosts that should be permitted access. Leave this field empty to use default settings.");?></span>
@@ -231,7 +231,7 @@ $pgtitle = [gtext('Services'),gtext('Rsync'),gtext('Server'),gtext('Module'),iss
 					. '" target="_blank">'
 					. gtext('Please check the documentation')
 					. '</a>.';
-					html_textarea("auxparam", gtext("Auxiliary parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", gtext("These parameters will be added to the module configuration in rsyncd.conf.") . " " . $helpinghand, false, 65, 5, false, false);
+					html_textarea("auxparam", gtext("Auxiliary Parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", gtext("These parameters will be added to the module configuration in rsyncd.conf.") . " " . $helpinghand, false, 65, 5, false, false);
 					?>
 				</table>
 		<div id="submit">

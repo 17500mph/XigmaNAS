@@ -120,8 +120,8 @@ if ($_POST) {
 	}
 
 	// Input validation
-	$reqdfields = explode(" ", "rsyncserverip localshare remoteshare who");
-	$reqdfieldsn = array(gtext("Remote Rsync Server"), gtext("Local shares to be synchronized"), gtext("Remote module name"), gtext("Who"));
+	$reqdfields = explode(" ", "localshare rsyncserverip remoteshare who");
+	$reqdfieldsn = array(gtext("Local Share (Destination)"),gtext("Remote Rsync Server"), gtext("Remote module name"), gtext("Who"));
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 	if (!empty($_POST['Submit']) && gtext("Execute now") !== $_POST['Submit']) {
@@ -233,11 +233,11 @@ function delete_change() {
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_titleline_checkbox("enable", gtext("Rsync Job"), !empty($pconfig['enable']) ? true : false, gtext("Enable"));?>
 					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Local share (destination)");?></td>
+						<td width="22%" valign="top" class="vncellreq"><?=gtext("Local Share (Destination)");?></td>
 						<td width="78%" class="vtable">
 							<input name="localshare" type="text" class="formfld" id="localshare" size="60" value="<?=htmlspecialchars($pconfig['localshare']);?>" />
 							<input name="browse" type="button" class="formbtn" id="Browse" onclick='ifield = form.localshare; filechooser = window.open("filechooser.php?p="+encodeURIComponent(ifield.value)+"&amp;sd=<?=$g['media_path'];?>", "filechooser", "scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300"); filechooser.ifield = ifield; window.ifield = ifield; window.slash_localshare = 1;' value="..." /><br />
-							<span class="vexpl"><?=gtext("Path to be shared.");?></span>
+							<span class="vexpl"><?=gtext("Path to be shared to be synchronized.");?></span>
 					  </td>
 					</tr>
 					<tr>
@@ -248,7 +248,7 @@ function delete_change() {
 						</td>
 					</tr>
 					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Remote module (source)");?></td>
+						<td width="22%" valign="top" class="vncellreq"><?=gtext("Remote Module (Source)");?></td>
 						<td width="78%" class="vtable">
 							<input name="remoteshare" type="text" class="formfld" id="remoteshare" size="20" value="<?=htmlspecialchars($pconfig['remoteshare']);?>" />
 						</td>
@@ -256,7 +256,7 @@ function delete_change() {
 					<?php $a_user = array(); foreach (system_get_user_list() as $userk => $userv) { $a_user[$userk] = htmlspecialchars($userk); }?>
 					<?php html_combobox("who", gtext("Who"), $pconfig['who'], $a_user, "", true);?>
 					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Synchronization time");?></td>
+						<td width="22%" valign="top" class="vncellreq"><?=gtext("Synchronization Time");?></td>
 						<td width="78%" class="vtable">
 							<table width="100%" border="0" cellpadding="5" cellspacing="0">
 								<tr>
@@ -421,7 +421,7 @@ function delete_change() {
 					</tr>
 					<?php
 					html_checkbox("recursive", gtext("Recursive"), !empty($pconfig['recursive']) ? true : false, gtext("Recurse into directories."), "", false);
-					html_checkbox("nodaemonreq", gtext("Remote rsync daemon"), !empty($pconfig['nodaemonreq']) ? true : false, gtext("Run without requiring remote rsync daemon. (Disabled by default)"), "", false);
+					html_checkbox("nodaemonreq", gtext("Remote Rsync Saemon"), !empty($pconfig['nodaemonreq']) ? true : false, gtext("Run without requiring remote rsync daemon. (Disabled by default)"), "", false);
 					html_checkbox("times", gtext("Times"), !empty($pconfig['times']) ? true : false, gtext("Preserve modification times."), "", false);
 					html_checkbox("compress", gtext("Compress"), !empty($pconfig['compress']) ? true : false, gtext("Compress file data during the transfer."), "", false);
 					html_checkbox("archive", gtext("Archive"), !empty($pconfig['archive']) ? true : false, gtext("Archive mode."), "", false);
@@ -452,15 +452,15 @@ function delete_change() {
 						</td>
 					</tr>
 					<?php
-					html_checkbox("perms", gtext("Preserve permissions"), !empty($pconfig['perms']) ? true : false, gtext("This option causes the receiving rsync to set the destination permissions to be the same as the source permissions."), "", false);
-					html_checkbox("xattrs", gtext("Preserve extended attributes"), !empty($pconfig['xattrs']) ? true : false, gtext("This option causes rsync to update the remote extended attributes to be the same as the local ones."), "", false);
-					html_checkbox("reversedirection", gtext("Reverse direction"), !empty($pconfig['reversedirection']) ? true : false, gtext("This option causes rsync to copy the local data to the remote server."), "", false);
+					html_checkbox("perms", gtext("Preserve Permissions"), !empty($pconfig['perms']) ? true : false, gtext("This option causes the receiving rsync to set the destination permissions to be the same as the source permissions."), "", false);
+					html_checkbox("xattrs", gtext("Preserve Extended Attributes"), !empty($pconfig['xattrs']) ? true : false, gtext("This option causes rsync to update the remote extended attributes to be the same as the local ones."), "", false);
+					html_checkbox("reversedirection", gtext("Reverse Direction"), !empty($pconfig['reversedirection']) ? true : false, gtext("This option causes rsync to copy the local data to the remote server."), "", false);
 					$helpinghand = '<a href="'
 						. 'http://rsync.samba.org/ftp/rsync/rsync.html'
 						. '" target="_blank">'
 						. gtext('Please check the documentation')
 						. '</a>.';
-					html_inputbox("extraoptions", gtext("Extra options"), !empty($pconfig['extraoptions']) ? $pconfig['extraoptions'] : "", gtext("Extra options to rsync (usually empty).") . " " . $helpinghand, false, 40);
+					html_inputbox("extraoptions", gtext("Extra Options"), !empty($pconfig['extraoptions']) ? $pconfig['extraoptions'] : "", gtext("Extra options to rsync (usually empty).") . " " . $helpinghand, false, 40);
 					?>
 				</table>
 				<div id="submit">
