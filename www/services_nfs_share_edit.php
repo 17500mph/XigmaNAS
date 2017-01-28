@@ -96,7 +96,7 @@ if ($_POST) {
 
 	// Input validation.
 	$reqdfields = explode(" ", "path network mask");
-	$reqdfieldsn = array(gtext("Path"), gtext("Authorised network"), gtext("Network mask"));
+	$reqdfieldsn = array(gtext("Share"), gtext("Authorised network"), gtext("Network mask"));
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 	// remove last slash and check alldirs option
@@ -158,7 +158,7 @@ $pgtitle = [gtext('Services'),gtext('NFS'),isset($uuid) ? gtext('Edit') : gtext(
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_titleline(gtext("Share Settings"));?>
 					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Path");?></td>
+						<td width="22%" valign="top" class="vncellreq"><?=gtext("Share");?></td>
 						<td width="78%" class="vtable">
 							<input name="path" type="text" class="formfld" id="path" size="60" value="<?=htmlspecialchars($pconfig['path']);?>" />
 							<input name="browse" type="button" class="formbtn" id="Browse" onclick='ifield = form.path; filechooser = window.open("filechooser.php?p="+encodeURIComponent(ifield.value)+"&amp;sd=<?=$g['media_path'];?>", "filechooser", "scrollbars=yes,toolbar=no,menubar=no,statusbar=no,width=550,height=300"); filechooser.ifield = ifield; window.ifield = ifield;' value="..." /><br />
@@ -166,7 +166,7 @@ $pgtitle = [gtext('Services'),gtext('NFS'),isset($uuid) ? gtext('Edit') : gtext(
 						</td>
 					</tr>
 					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Map all users to root"); ?></td>
+						<td width="22%" valign="top" class="vncellreq"><?=gtext("Map to Root"); ?></td>
 						<td width="78%" class="vtable">
 							<select name="mapall" class="formfld" id="mapall">
 								<?php $types = array(gtext("Yes"),gtext("No"));?>
@@ -177,11 +177,11 @@ $pgtitle = [gtext('Services'),gtext('NFS'),isset($uuid) ? gtext('Edit') : gtext(
 								</option>
 								<?php endfor; ?>
 							</select><br />
-							<span class="vexpl"><?=gtext("All users will have the root privilege.");?></span>
+							<span class="vexpl"><?=gtext("Map all users to root, all users will have root privileges.");?></span>
 						</td>
 					</tr>
 					<tr>
-						<td width="22%" valign="top" class="vncellreq"><?=gtext("Authorised network");?></td>
+						<td width="22%" valign="top" class="vncellreq"><?=gtext("Authorised Network");?></td>
 						<td width="78%" class="vtable">
 							<input name="network" type="text" class="formfld" id="network" size="20" value="<?=htmlspecialchars($pconfig['network']);?>" /> /
 							<select name="mask" class="formfld" id="mask">
@@ -206,7 +206,7 @@ $pgtitle = [gtext('Services'),gtext('NFS'),isset($uuid) ? gtext('Edit') : gtext(
 						</td>
 					</tr>
 					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("All dirs");?></td>
+						<td width="22%" valign="top" class="vncell"><?=gtext("All Dirs");?></td>
 						<td width="78%" class="vtable">
 							<input name="alldirs" type="checkbox" id="alldirs" value="yes" <?php if (!empty($pconfig['alldirs'])) echo "checked=\"checked\"";?> />
 							<span class="vexpl"><?=gtext("Export all the directories in the specified path.");?></span><br />
@@ -214,7 +214,7 @@ $pgtitle = [gtext('Services'),gtext('NFS'),isset($uuid) ? gtext('Edit') : gtext(
 						</td>
 					</tr>
 					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Read only");?></td>
+						<td width="22%" valign="top" class="vncell"><?=gtext("Read Only");?></td>
 						<td width="78%" class="vtable">
 							<input name="readonly" type="checkbox" id="readonly" value="yes" <?php if (!empty($pconfig['readonly'])) echo "checked=\"checked\"";?> />
 							<span class="vexpl"><?=gtext("Specifies that the file system should be exported read-only.");?></span>
