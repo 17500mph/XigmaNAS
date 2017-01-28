@@ -57,13 +57,13 @@ if ($_POST) {
 	// Input validation.
 	if (isset($_POST['enable']) && $_POST['enable']) {
 		$reqdfields = explode(" ", "dir");
-		$reqdfieldsn = array(gtext("Directory"));
+		$reqdfieldsn = [gtext('Directory')];
 		$reqdfieldst = explode(" ", "string");
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 		$reqdfields = array_merge($reqdfields, explode(" ", "port umask timeout maxblocksize"));
-		$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Port"), gtext("umask"), gtext("Timeout"), gtext("Max. block size")));
+		$reqdfieldsn = [gtext('Port'),gtext('Umask'),gtext('Timeout'),gtext('Max. Block Size')];
 		$reqdfieldst = array_merge($reqdfieldst, explode(" ", "port numeric numeric numeric"));
 
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
@@ -127,16 +127,16 @@ function enable_change(enable_change) {
 					<?php
 					html_titleline_checkbox("enable", gtext("Trivial File Transfer Protocol"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");
 					html_filechooser("dir", gtext("Directory"), $pconfig['dir'], gtext("The directory containing the files you want to publish. The remote host does not need to pass along the directory as part of the transfer."), $g['media_path'], true, 60);
-					html_checkbox("allowfilecreation", gtext("Allow new files"), !empty($pconfig['allowfilecreation']) ? true : false, gtext("Allow new files to be created."), gtext("By default, only already existing files can be uploaded."), false);
+					html_checkbox("allowfilecreation", gtext("Allow New Files"), !empty($pconfig['allowfilecreation']) ? true : false, gtext("Allow new files to be created."), gtext("By default, only already existing files can be uploaded."), false);
 					html_separator();
 					html_titleline(gtext("Advanced Settings"));
-					html_inputbox("port", gtext("Port"), $pconfig['port'], gtext("The port to listen to. The default is to listen to the tftp port specified in /etc/services."), false, 5);
+					html_inputbox("port", gtext("Port"), $pconfig['port'], gtext("Enter a custom port number if you want to override the default port. (Default is 69). "), false, 5);
 					$a_user = array(); foreach (system_get_user_list() as $userk => $userv) { $a_user[$userk] = htmlspecialchars($userk); }
 					html_combobox("username", gtext("Username"), $pconfig['username'], $a_user, gtext("Specifies the username which the service will run as."), false);
-					html_inputbox("umask", gtext("umask"), $pconfig['umask'], gtext("Sets the umask for newly created files to the specified value. The default is zero (anyone can read or write)."), false, 4);
+					html_inputbox("umask", gtext("Umask"), $pconfig['umask'], gtext("Sets the umask for newly created files to the specified value. The default is zero (anyone can read or write)."), false, 4);
 					html_inputbox("timeout", gtext("Timeout"), $pconfig['timeout'], gtext("Determine the default timeout, in microseconds, before the first packet is retransmitted. The default is 1000000 (1 second)."), false, 10);
-					html_inputbox("maxblocksize", gtext("Max. block size"), $pconfig['maxblocksize'], gtext("Specifies the maximum permitted block size. The permitted range for this parameter is from 512 to 65464."), false, 5);
-					html_inputbox("extraoptions", gtext("Extra options"), $pconfig['extraoptions'], gtext("Extra options (usually empty)."), false, 40);
+					html_inputbox("maxblocksize", gtext("Max. Block Size"), $pconfig['maxblocksize'], gtext("Specifies the maximum permitted block size. The permitted range for this parameter is from 512 to 65464."), false, 5);
+					html_inputbox("extraoptions", gtext("Extra Options"), $pconfig['extraoptions'], gtext("Extra options (usually empty)."), false, 40);
 					?>
 				</table>
 				<div id="submit">
