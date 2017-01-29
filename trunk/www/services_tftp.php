@@ -59,6 +59,7 @@ $sphere->default = [
 $sphere->array = &array_make_branch($config,'tftpd');
 // local variables
 $input_errors = [];
+$a_message = [];
 // identify page mode
 $mode_page = ($_POST) ? PAGE_MODE_POST : PAGE_MODE_VIEW;
 switch($mode_page):
@@ -70,6 +71,12 @@ switch($mode_page):
 					$mode_page = PAGE_MODE_EDIT;
 					break;
 				case 'save':
+					break;
+				case 'rows.enable':
+					$page_action = 'enable';
+					break;
+				case 'rows.disable':
+					$page_action = 'disable';
 					break;
 				case 'cancel':
 					$mode_page = PAGE_MODE_VIEW;
@@ -120,7 +127,19 @@ if(preg_match('/\S/',$sphere->record['username'])):
 else:
 	$sphere->record['username'] = $sphere->default['username'];
 endif;
-
+//	process enable
+switch($page_action):
+	case 'enable':
+		if($sphere->record['enable']):
+			$mode_page = PAGE_MODE_VIEW;
+			$page_action = 'view'; 
+		else: // enable and run a full validation
+			$sphere->record['enable'] = true;
+			$page_action = 'save'; // continue with save procedure
+		endif;
+		break;
+endswitch;
+//	process save and disable
 switch($page_action):
 	case 'save':
 		// Input validation.
@@ -132,25 +151,37 @@ switch($page_action):
 		$reqdfieldsn = array_merge($reqdfieldsn,[gtext('Port'),gtext('Umask'),gtext('Timeout'),gtext('Max. Block Size')]);
 		$reqdfieldst = array_merge($reqdfieldst,['port','numeric','numeric','numeric']);
 		do_input_validation_type($sphere->record,$reqdfields,$reqdfieldsn,$reqdfieldst,$input_errors);
-		if((512 > $_POST['maxblocksize']) || (65464 < $_POST['maxblocksize'])):
+		if((512 > $sphere->record['maxblocksize']) || (65464 < $sphere->record['maxblocksize'])):
 			$input_errors[] = sprintf(gtext('Invalid maximum block size! It must be in the range from %d to %d.'),512,65464);
 		endif;
 		if(empty($input_errors)):
 			$sphere->array = $sphere->record;
 			write_config();
 			$retval = 0;
-			if(!file_exists($d_sysrebootreqd_path)):
-				config_lock();
-				$retval |= rc_update_service('tftpd');
-				config_unlock();
-			endif;
-			$savemsg = get_std_save_message($retval);
+			config_lock();
+			$retval |= rc_update_service('tftpd');
+			config_unlock();
+			$a_message[] = get_std_save_message($retval);
 			$mode_page = PAGE_MODE_VIEW;
 			$page_action = 'view';
 		else:
 			$mode_page = PAGE_MODE_EDIT;
 			$page_action = 'edit';
 		endif;
+		break;
+	case 'disable':
+		if($sphere->record['enable']): // if enabled, disable it
+			$sphere->record['enable'] = false;
+			$sphere->array = $sphere->record;
+			write_config();
+			$retval = 0;
+			config_lock();
+			$retval |= rc_update_service('tftpd');
+			config_unlock();
+			$a_message[] = gtext('TFTP has been disabled.');
+		endif;
+		$mode_page = PAGE_MODE_VIEW;
+		$page_action = 'view';
 		break;
 endswitch;
 $pgtitle = [gtext('Services'),gtext('TFTP')];
@@ -197,9 +228,9 @@ endswitch;
 	if(!empty($input_errors)):
 		print_input_errors($input_errors);
 	endif;
-	if(!empty($savemsg)):
-		print_info_box($savemsg);
-	endif;
+	foreach($a_message as $r_message):
+		print_info_box($r_message);
+	endforeach;
 ?>
 	<table class="area_data_settings">
 		<colgroup>
@@ -259,6 +290,11 @@ endswitch;
 		switch($mode_page):
 			case PAGE_MODE_VIEW;
 				echo html_button_edit(gtext('Edit'));
+				if($sphere->record['enable']):
+					echo html_button_disable_rows(gtext('Disable'));
+				else:
+					echo html_button_enable_rows(gtext('Enable'));
+				endif;
 				break;
 			case PAGE_MODE_EDIT:
 				echo html_button_save(gtext('Apply'));
