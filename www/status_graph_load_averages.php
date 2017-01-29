@@ -31,36 +31,60 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Status"), gtext("Monitoring"), gtext("Load Averages"));
+array_make_branch($config,'rrdgraphs');
+
 $rrd_load_averages = true;
-
-$refresh = !empty($config['rrdgraphs']['refresh_time']) ? $config['rrdgraphs']['refresh_time'] : 300;
-mwexec("/usr/local/share/rrdgraphs/rrd-graph.sh load", true);
-
-include("fbegin.inc");?>
+$refresh = 300;
+if(isset($config['rrdgraphs']['refresh_time'])):
+	if(!empty($config['rrdgraphs']['refresh_time'])):
+		$refresh = $config['rrdgraphs']['refresh_time'];
+	endif;
+endif;
+mwexec('/usr/local/share/rrdgraphs/rrd-graph.sh load',true);
+$pgtitle = [gtext('Status'),gtext('Monitoring'),gtext('Load Averages')];
+?>
+<?php
+include
+'fbegin.inc';
+?>
 <meta http-equiv="refresh" content="<?=$refresh?>">
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-<tr>
-	<td class="tabnavtbl">
-		<ul id="tabnav">
-<?php require("status_graph_tabs.inc");?>
-		</ul>
-	</td>
-</tr>
-<td class="tabcont">
-<?=sprintf(gtext("Graph updates every %d seconds"), $refresh);?>
-<div align="center" style="min-width:840px;">
-	<br>
-	<img src="/images/rrd/rrd-load_averages_daily.png?rand=<?=time()?>" alt="RRDGraphs Daily Load Averages Graph" width="graph_width" height="graph_height">
-	<br><br>
-	<img src="/images/rrd/rrd-load_averages_weekly.png?rand=<?=time()?>" alt="RRDGraphs Weekly Load Averages Graph" width="graph_width" height="graph_height">
-	<br><br>
-	<img src="/images/rrd/rrd-load_averages_monthly.png?rand=<?=time()?>" alt="RRDGraphs Monthly Load Averages Graph" width="graph_width" height="graph_height">
-	<br><br>
-	<img src="/images/rrd/rrd-load_averages_yearly.png?rand=<?=time()?>" alt="RRDGraphs Yearly Load Averages Graph" width="graph_width" height="graph_height">
-</div>
-</td></tr></table>
-<?php include("fend.inc");?>
+<table id="area_navigator"><tbody>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+<?php
+		include 'status_graph_tabs.inc';
+?>
+	</ul></td></tr>
+</tbody></table>
+<table id="area_data"><tbody><tr><td id="area_data_frame">
+	<table class="area_data_settings">
+		<colgroup>
+			<col style="width:100%">
+		</colgroup>
+		<thead>
+<?php
+			html_titleline(gtext('Load Averages'),1);
+?>
+		</thead>
+		<tbody>
+			<tr><td><?=sprintf(gtext('Graph updates every %d seconds.'),$refresh);?></td></tr>
+			<tr><td>
+				<div align="center" style="min-width:840px;">
+					<br>
+					<img src="/images/rrd/rrd-load_averages_daily.png?rand=<?=time()?>" alt="RRDGraphs Daily Load Averages Graph">
+					<br><br>
+					<img src="/images/rrd/rrd-load_averages_weekly.png?rand=<?=time()?>" alt="RRDGraphs Weekly Load Averages Graph">
+					<br><br>
+					<img src="/images/rrd/rrd-load_averages_monthly.png?rand=<?=time()?>" alt="RRDGraphs Monthly Load Averages Graph">
+					<br><br>
+					<img src="/images/rrd/rrd-load_averages_yearly.png?rand=<?=time()?>" alt="RRDGraphs Yearly Load Averages Graph">
+				</div>
+			</td></tr>
+		</tbody>
+	</table>
+</td></tr></tbody></table>
+<?php
+include 'fend.inc';
+?>
