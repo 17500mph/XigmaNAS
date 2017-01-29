@@ -147,7 +147,7 @@ $pgtitle = [gtext('Services'),gtext('HAST'),isset($uuid) ? gtext('Edit') : gtext
 						. '" target="_blank">'
 						. gtext('Please check the documentation')
 						. '</a>.';
-					html_textarea("auxparam", gtext("Auxiliary Parameters"), $pconfig['auxparam'], sprintf(gtext("These parameters are added to %s."), "hast.conf") . " " . $helpinghand, false, 65, 5, false, false);
+					html_textarea("auxparam", gtext("Additional Parameters"), $pconfig['auxparam'], sprintf(gtext("These parameters are added to %s."), "hast.conf") . " " . $helpinghand, false, 65, 5, false, false);
 					html_separator();
 					html_titleline(gtext("Node A Settings"));
 					html_inputbox("aname", gtext("Node Name"), $pconfig['aname'], "", false, 40);

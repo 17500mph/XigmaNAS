@@ -232,7 +232,7 @@ $(document).ready(function(){
 					. '" target="_blank">'
 					. gtext('Please check the documentation')
 					. '</a>.';
-				html_textarea("auxparam", gtext("Auxiliary parameters"), $pconfig['auxparam'], sprintf(gtext("These parameters are added to %s."), "hostapd.conf") . " " . $helpinghand, false, 65, 5, false, false);
+				html_textarea("auxparam", gtext("Additional Parameters"), $pconfig['auxparam'], sprintf(gtext("These parameters are added to %s."), "hostapd.conf") . " " . $helpinghand, false, 65, 5, false, false);
 				?>
 			</table>
 			<div id="submit">

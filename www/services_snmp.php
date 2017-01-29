@@ -164,7 +164,7 @@ function trapenable_change() {
 						. '" target="_blank">'
 						. gtext('Please check the documentation')
 						. '</a>.';
-					html_textarea("auxparam", gtext("Auxiliary parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", sprintf(gtext("These parameters will be added to %s."), "snmpd.config") . ' ' . $helpinghand, false, 65, 5, false, false);
+					html_textarea("auxparam", gtext("Additional Parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", sprintf(gtext("These parameters will be added to %s."), "snmpd.config") . ' ' . $helpinghand, false, 65, 5, false, false);
 					html_separator();
 					html_titleline(gtext("Modules"));
 					?>

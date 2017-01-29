@@ -275,7 +275,7 @@ function authentication_change() {
 						. '" target="_blank">'
 						. gtext('Please check the documentation')
 						. '</a>.';
-					html_textarea("auxparam", gtext("Auxiliary parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", sprintf(gtext("These parameters will be added to %s."), "websrv.conf")  . " " . $helpinghand, false, 85, 7, false, false);
+					html_textarea("auxparam", gtext("Additional Parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", sprintf(gtext("These parameters will be added to %s."), "websrv.conf")  . " " . $helpinghand, false, 85, 7, false, false);
 					?>
 				</table>
 				<div id="submit">

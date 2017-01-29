@@ -299,19 +299,19 @@ function ups2_change() {
 						. '</a>.';
 					html_inputbox("driver", gtext("Driver"), $pconfig['driver'], $helpinghand , true, 30);
 					html_inputbox("port", gtext("Port"), $pconfig['port'], gtext("The serial or USB port where your UPS is connected."), true, 30);
-					html_textarea("auxparam", gtext("Auxiliary parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", gtext("Additional parameters to the hardware-specific part of the driver."), false, 65, 5, false, false);
+					html_textarea("auxparam", gtext("Additional Parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", gtext("These parameters are added to the hardware-specific part of the driver."), false, 65, 5, false, false);
 					html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("You may enter a description here for your reference."), false, 40);
 					html_checkbox("ups2", gtext("UPS")." 2", !empty($pconfig['ups2']) ? true : false, gtext("Enable second local connected UPS."), "", false, "ups2_change()");
-					html_inputbox("ups2_upsname", gtext("Identifier"), $pconfig['ups2_upsname'], gtext("This name is used to uniquely identify your second UPS on this system.")." ".gtext("In slave mode it is the UPS name (Identifier) at the UPS master."), false, 30);
+					html_inputbox("ups2_upsname", gtext("Identifier"), $pconfig['ups2_upsname'], gtext("This name is used to uniquely identify your second UPS on this system.")." ".gtext("In slave mode it is the UPS name (Identifier) at the UPS master."), true, 30);
 
 					$helpinghand = gtext('The driver used to communicate with your second UPS.')
 						. ' '
 						. '<a href="' . 'services_ups_drv.php' . '" target="_blank">'
 						. gtext('Get a list of available drivers')
 						. '</a>.';
-					html_inputbox("ups2_driver", gtext("Driver"), $pconfig['ups2_driver'], $helpinghand, false, 30);
-					html_inputbox("ups2_port", gtext("Port"), $pconfig['ups2_port'], gtext("The serial or USB port where your second UPS is connected."), false, 30);
-					html_textarea("ups2_auxparam", gtext("Auxiliary parameters"), !empty($pconfig['ups2_auxparam']) ? $pconfig['ups2_auxparam'] : "", gtext("Additional parameters to the hardware-specific part of the driver for second UPS."), false, 65, 5, false, false);
+					html_inputbox("ups2_driver", gtext("Driver"), $pconfig['ups2_driver'], $helpinghand, true, 30);
+					html_inputbox("ups2_port", gtext("Port"), $pconfig['ups2_port'], gtext("The serial or USB port where your second UPS is connected."), true, 30);
+					html_textarea("ups2_auxparam", gtext("Additional Parameters"), !empty($pconfig['ups2_auxparam']) ? $pconfig['ups2_auxparam'] : "", gtext("These parameters are added to the hardware-specific part of the driver for the second UPS."), false, 65, 5, false, false);
 					html_inputbox("ups2_desc", gtext("Description"), $pconfig['ups2_desc'], gtext("You may enter a description here for your reference."), false, 40);
 					html_inputbox("ip", gtext("IP address"), $pconfig['ip'], gtext("The IP address of the UPS master."), true, 30);
 					html_combobox("shutdownmode", gtext("Shutdown mode"), $pconfig['shutdownmode'], array("fsd" => gtext("UPS reaches low battery"), "onbatt" => gtext("UPS goes on battery")), gtext("Defines when the shutdown is initiated."), true, false, "shutdownmode_change()");

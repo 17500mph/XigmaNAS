@@ -186,7 +186,7 @@ function anonymousbind_change() {
 					html_inputbox("group_suffix", gtext("Group Suffix"), $pconfig['group_suffix'], sprintf(gtext("This parameter specifies the suffix that is used for groups when these are added to the LDAP directory, e.g. %s"), "ou=Groups"), true, 20);
 					html_inputbox("password_suffix", gtext("Password Suffix"), $pconfig['password_suffix'], sprintf(gtext("This parameter specifies the suffix that is used for passwords when these are added to the LDAP directory, e.g. %s"), "ou=Users"), true, 20);
 					html_inputbox("machine_suffix", gtext("Machine Suffix"), $pconfig['machine_suffix'], sprintf(gtext("This parameter specifies the suffix that is used for machines when these are added to the LDAP directory, e.g. %s"), "ou=Computers"), true, 20);
-					html_textarea("auxparam", gtext("Auxiliary Parameters"), $pconfig['auxparam'], sprintf(gtext("These parameters are added to %s."), "ldap.conf"), false, 65, 5, false, false);
+					html_textarea("auxparam", gtext("Additional Parameters"), $pconfig['auxparam'], sprintf(gtext("These parameters are added to %s."), "ldap.conf"), false, 65, 5, false, false);
 					?>
 				</table>
 				<div id="submit">

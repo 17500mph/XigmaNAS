@@ -161,11 +161,11 @@ function lcdproc_enable_change(enable_change) {
 					html_inputbox("waittime", gtext("Wait Time"), $pconfig['waittime'], gtext("The default time in seconds to display a screen."), true, 10);
 					html_inputbox("titlespeed", gtext("Title Speed"), $pconfig['titlespeed'], gtext("Set title scrolling speed between 0-10 (default 10)."), true, 10);
 					html_textarea("param", gtext("Driver Parameter"), !empty($pconfig['param']) ? $pconfig['param'] : "", gtext("Additional parameters to the hardware-specific part of the driver."), false, 65, 10, false, false);
-					html_textarea("auxparam", gtext("Auxiliary Parameter"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", "", false, 65, 5, false, false);
+					html_textarea("auxparam", gtext("Additional Parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", "", false, 65, 5, false, false);
 					html_separator();
 					html_titleline_checkbox("lcdproc_enable", gtext("LCDproc (Client)"), !empty($pconfig['lcdproc_enable']) ? true : false, gtext("Enable"), "lcdproc_enable_change(false)");
 					html_textarea("lcdproc_param", gtext("Extra Options"), !empty($pconfig['lcdproc_param']) ? $pconfig['lcdproc_param'] : "", "", false, 65, 10, false, false);
-					html_textarea("lcdproc_auxparam", gtext("Auxiliary Parameter"), !empty($pconfig['lcdproc_auxparam']) ? $pconfig['lcdproc_auxparam'] : "", "", false, 65, 5, false, false);
+					html_textarea("lcdproc_auxparam", gtext("Additional Parameters"), !empty($pconfig['lcdproc_auxparam']) ? $pconfig['lcdproc_auxparam'] : "", "", false, 65, 5, false, false);
 					?>
 				</table>
 				<div id="submit">
