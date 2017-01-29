@@ -56,7 +56,7 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_iscsitarget_ag
 	$pconfig['comment'] = $a_iscsitarget_ag[$cnid]['comment'];
 	$i = 1;
 	if (!isset($a_iscsitarget_ag[$cnid]['agauth']) || !is_array($a_iscsitarget_ag[$cnid]['agauth']))
-		$a_iscsitarget_ag[$cnid]['agauth'] = array();
+		$a_iscsitarget_ag[$cnid]['agauth'] = [];
 	array_sort_key($a_iscsitarget_ag[$cnid]['agauth'], "authuser");
 	foreach ($a_iscsitarget_ag[$cnid]['agauth'] as $agauth) {
 		$pconfig["user$i"] = $agauth['authuser'];
@@ -73,7 +73,7 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_iscsitarget_ag
 } else {
 	// Find next unused tag.
 	$tag = 1;
-	$a_tags = array();
+	$a_tags = [];
 	foreach($a_iscsitarget_ag as $ag)
 		$a_tags[] = $ag['tag'];
 
@@ -113,7 +113,7 @@ if ($_POST) {
 		}
 	}
 
-	$auths = array();
+	$auths = [];
 	for ($i = 1; $i <= $MAX_AUTHUSERS; $i++) {
 		$delete = isset($_POST["delete$i"]) ? true : false;
 		$user = $_POST["user$i"];
@@ -149,7 +149,7 @@ if ($_POST) {
 			if ($index !== false) {
 				$input_errors[] = sprintf("%s%d: %s", gtext("User"), $i, gtext("This user already exists."));
 			} else {
-				$tmp = array();
+				$tmp = [];
 				$tmp['authuser'] = $user;
 				$tmp['authsecret'] = $secret;
 				$tmp['authmuser'] = $muser;
@@ -160,7 +160,7 @@ if ($_POST) {
 	}
 
 	if (empty($input_errors)) {
-		$iscsitarget_ag = array();
+		$iscsitarget_ag = [];
 		$iscsitarget_ag['uuid'] = $_POST['uuid'];
 		$iscsitarget_ag['tag'] = $_POST['tag'];
 		$iscsitarget_ag['comment'] = $_POST['comment'];

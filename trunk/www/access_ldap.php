@@ -65,12 +65,12 @@ if ($_POST) {
 	// Input validation.
 	if (isset($_POST['enable']) && $_POST['enable']) {
 		$reqdfields = explode(" ", "hostname base rootbinddn rootbindpw user_suffix group_suffix password_suffix machine_suffix");
-		$reqdfieldsn = array(gtext("URI"), gtext("Base DN"), gtext("Root Bind DN"), gtext("Root Bind Password"), gtext("User Suffix"), gtext("Group Suffix"), gtext("Password Suffix"), gtext("Machine Suffix"));
+		$reqdfieldsn = [gtext('URI'),gtext('Base DN'),gtext('Root Bind DN'),gtext('Root Bind Password'),gtext('User Suffix'),gtext('Group Suffix'),gtext('Password Suffix'),gtext('Machine Suffix')];
 		$reqdfieldst = explode(" ", "string string string password string string string string");
 
 		if (empty($_POST['anonymousbind'])) {
 			$reqdfields = array_merge($reqdfields, explode(" ", "binddn bindpw"));
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Bind DN"), gtext("Bind Password")));
+			$reqdfieldsn = array_merge($reqdfieldsn,[gtext('Bind DN'),gtext('Bind Password')]);
 			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "string password"));
 		}
 

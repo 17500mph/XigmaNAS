@@ -167,7 +167,7 @@ $pgtitle = [gtext('Services'),gtext('iSCSI Target'),gtext('Portal Group')];
 									<td class="list"><a href="services_iscsitarget_pg_edit.php"><img src="images/add.png" title="<?=gtext("Add portal group");?>" border="0" alt="<?=gtext("Add portal group");?>" /></a></td>
 								</tr>
 							</table>
-							<?=gtext("A Portal Group contains IP addresses and listening TCP ports to connect the target from the initiator.");?>
+							<?=gtext("Portal Groups contains IP addresses and listening on TCP ports to connect the target from the initiator.");?>
 						</td>
 					</tr>
 				</table>

@@ -58,7 +58,7 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_iscsitarget_pg
 } else {
 	// Find next unused tag.
 	$tag = 1;
-	$a_tags = array();
+	$a_tags = [];
 	foreach($a_iscsitarget_pg as $pg)
 		$a_tags[] = $pg['tag'];
 
@@ -117,7 +117,7 @@ if ($_POST) {
 
 	// Input validation.
 	$reqdfields = explode(" ", "tag");
-	$reqdfieldsn = array(gtext("Tag number"));
+	$reqdfieldsn = array(gtext("Tag Number"));
 	$reqdfieldst = explode(" ", "numericint");
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -135,7 +135,7 @@ if ($_POST) {
 		}
 	}
 
-	$portals = array();
+	$portals = [];
 	foreach (explode("\n", $_POST['portals']) as $portal) {
 		$portal = trim($portal, " \t\r\n");
 		if (!empty($portal)) {
@@ -165,7 +165,7 @@ if ($_POST) {
 	}
 
 	if (empty($input_errors)) {
-		$iscsitarget_pg = array();
+		$iscsitarget_pg = [];
 		$iscsitarget_pg['uuid'] = $_POST['uuid'];
 		$iscsitarget_pg['tag'] = $_POST['tag'];
 		$iscsitarget_pg['comment'] = $_POST['comment'];

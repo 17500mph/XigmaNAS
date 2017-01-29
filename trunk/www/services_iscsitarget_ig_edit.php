@@ -62,7 +62,7 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_iscsitarget_ig
 } else {
 	// Find next unused tag.
 	$tag = 1;
-	$a_tags = array();
+	$a_tags = [];
 	foreach($a_iscsitarget_ig as $ig)
 		$a_tags[] = $ig['tag'];
 
@@ -127,7 +127,7 @@ if ($_POST) {
 
 	// Input validation.
 	$reqdfields = explode(" ", "tag");
-	$reqdfieldsn = array(gtext("Tag number"));
+	$reqdfieldsn = [gtext('Tag Number')];
 	$reqdfieldst = explode(" ", "numericint");
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -145,7 +145,7 @@ if ($_POST) {
 		}
 	}
 
-	$initiators = array();
+	$initiators = [];
 	foreach (explode("\n", $_POST['initiators']) as $initiator) {
 		$initiator = trim($initiator, " \t\r\n");
 		if (!empty($initiator)) {
@@ -156,7 +156,7 @@ if ($_POST) {
 		$input_errors[] = sprintf(gtext("The attribute '%s' is required."), gtext("Initiators"));
 	}
 
-	$netmasks = array();
+	$netmasks = [];
 	foreach (explode("\n", $_POST['netmasks']) as $netmask) {
 		$netmask = trim($netmask, " \t\r\n");
 		if (!empty($netmask)) {
@@ -184,11 +184,11 @@ if ($_POST) {
 		}
 	}
 	if (count($netmasks) == 0) {
-		$input_errors[] = sprintf(gtext("The attribute '%s' is required."), gtext("Authorised network"));
+		$input_errors[] = sprintf(gtext("The attribute '%s' is required."), gtext("Authorised Network"));
 	}
 
 	if (empty($input_errors)) {
-		$iscsitarget_ig = array();
+		$iscsitarget_ig = [];
 		$iscsitarget_ig['uuid'] = $_POST['uuid'];
 		$iscsitarget_ig['tag'] = $_POST['tag'];
 		$iscsitarget_ig['comment'] = $_POST['comment'];
@@ -373,9 +373,9 @@ function get_ipv6network($v6addr, $mask) {
 		<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 		<table width="100%" border="0" cellpadding="6" cellspacing="0">
 		<?php html_titleline(gtext("Initiator Group Settings"));?>
-		<?php html_inputbox("tag", gtext("Tag number"), $pconfig['tag'], gtext("Numeric identifier of the group."), true, 10, (isset($uuid) && (FALSE !== $cnid)));?>
+		<?php html_inputbox("tag", gtext("Tag Number"), $pconfig['tag'], gtext("Numeric identifier of the group."), true, 10, (isset($uuid) && (FALSE !== $cnid)));?>
 		<?php html_textarea("initiators", gtext("Initiators"), $pconfig['initiators'], gtext("Initiator authorised to access to the iSCSI target.  It takes a name or 'ALL' for any initiators."), true, 65, 7, false, false);?>
-		<?php html_textarea("netmasks", gtext("Authorised network"), $pconfig['netmasks'], gtext("Network authorised to access to the iSCSI target. It takes IP or CIDR addresses or 'ALL' for any IPs."), true, 65, 7, false, false);?>
+		<?php html_textarea("netmasks", gtext("Authorised Network"), $pconfig['netmasks'], gtext("Network authorised to access to the iSCSI target. It takes IP or CIDR addresses or 'ALL' for any IPs."), true, 65, 7, false, false);?>
 		<?php html_inputbox("comment", gtext("Comment"), $pconfig['comment'], gtext("You may enter a description here for your reference."), false, 40);?>
 	</table>
 		<div id="submit">

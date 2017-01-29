@@ -64,7 +64,7 @@ if ($_POST) {
 		
 		if (!empty($_POST['key'])) {
 			$reqdfields = array_merge($reqdfields, ['key']);
-			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('Private Key')]);
+			$reqdfieldsn = array_merge($reqdfieldsn,[gtext('Private Key')]);
 			$reqdfieldst = array_merge($reqdfieldst, ['privatekey']);
 		}
 	}

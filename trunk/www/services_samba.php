@@ -102,7 +102,7 @@ if ($_POST) {
 		}
 		if (!empty($_POST['createmask']) || !empty($_POST['directorymask'])) {
 			$reqdfields = array_merge($reqdfields, explode(" ", "createmask directorymask"));
-			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('Create Mask'),gtext('Directory Mask')]);
+			$reqdfieldsn = array_merge($reqdfieldsn,[gtext('Create Mask'),gtext('Directory Mask')]);
 			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "filemode filemode"));
 		}
 		if (!empty($_POST['pwdsrv'])) {

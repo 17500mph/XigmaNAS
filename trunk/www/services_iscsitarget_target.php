@@ -251,7 +251,7 @@ $pgtitle = [gtext('Services'),gtext('iSCSI Target'),gtext('Target')];
 							</table>
 							<?=gtext("Extents must be defined before they can be used, and extents cannot be used more than once.");?>
 						</td>
-					/tr>
+					</tr>
 					<tr>
 						<td width="22%" valign="top" class="vncell"><?=gtext("Target");?></td>
 						<td width="78%" class="vtable">

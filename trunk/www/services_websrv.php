@@ -69,12 +69,12 @@ if ($_POST) {
 	// Input validation.
 	if (isset($_POST['enable']) && $_POST['enable']) {
 		$reqdfields = explode(" ", "port documentroot");
-		$reqdfieldsn = array(gtext("Port"), gtext("Document root"));
+		$reqdfieldsn = [gtext('Port'),gtext('Document Root')];
 		$reqdfieldst = explode(" ", "port string");
 
 		if ("https" === $_POST['protocol']) {
 			$reqdfields = array_merge($reqdfields, explode(" ", "certificate privatekey"));
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Certificate"), gtext("Private key")));
+			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('Certificate'),gtext('Private key')]);
 			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "certificate privatekey"));
 		}
 
@@ -218,16 +218,16 @@ function authentication_change() {
 					html_titleline_checkbox("enable", gtext("Webserver"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");
 					html_combobox("protocol", gtext("Protocol"), $pconfig['protocol'], array("http" => "HTTP", "https" => "HTTPS"), "", true, false, "protocol_change()");
 					html_inputbox("port", gtext("Port"), $pconfig['port'], gtext("TCP port to bind the server to."), true, 5);
-					$helpinghand = gtext('Set under which user the service should run (www by default).')
+					$helpinghand = gtext('Select the permission for running this service. (www by default).')
 						. '<br><b>'
 						. '<font color="red">' . gtext('NOTE') . '</font>: '
-						. gtext('Running the service as user root is not recommended for security reasons, use at your own risk!')
+						. gtext('Running this service as root is not recommended for security reasons, use at your own risk!')
 						. '</b></br>';
-					html_combobox("runasuser", gtext("Run as"), $pconfig['runasuser'], array("server.username = \"www\"" => "www", "" => "root"), $helpinghand, true);
+					html_combobox("runasuser", gtext("Permission"), $pconfig['runasuser'], array("server.username = \"www\"" => "www", "" => "root"), $helpinghand, true);
 					html_textarea("certificate", gtext("Certificate"), $pconfig['certificate'], gtext("Paste a signed certificate in X.509 PEM format here."), true, 76, 7, false, false);
 					html_textarea("privatekey", gtext("Private key"), $pconfig['privatekey'], gtext("Paste an private key in PEM format here."), true, 76, 7, false, false);
-					html_filechooser("documentroot", gtext("Document root"), $pconfig['documentroot'], gtext("Document root of the webserver. Home of the web page files."), $g['media_path'], true, 76);
-					html_filechooser("uploaddir", gtext("Upload directory"), $pconfig['uploaddir'], sprintf(gtext("Upload directory of the webserver. The default is %s."), $default_uploaddir), $default_uploaddir, true, 76);
+					html_filechooser("documentroot", gtext("Document Root"), $pconfig['documentroot'], gtext("Document root of the webserver. Home of the web page files."), $g['media_path'], true, 76);
+					html_filechooser("uploaddir", gtext("Upload Directory"), $pconfig['uploaddir'], sprintf(gtext("Upload directory of the webserver. The default is %s."), $default_uploaddir), $default_uploaddir, true, 76);
 					html_checkbox("authentication", gtext("Authentication"), !empty($pconfig['authentication']) ? true : false, gtext("Enable authentication."), gtext("Give only local users access to the web page."), false, "authentication_change()");
 					?>
 					<tr id="authdirs_tr">
@@ -269,7 +269,7 @@ function authentication_change() {
 						</td>
 					</tr>
 					<?php
-					html_checkbox("dirlisting", gtext("Directory listing"), !empty($pconfig['dirlisting']) ? true : false, gtext("Enable directory listing."), gtext("A directory listing is generated if a directory is requested and no index-file (index.php, index.html, index.htm or default.htm) was found in that directory."), false);
+					html_checkbox("dirlisting", gtext("Directory listing"), !empty($pconfig['dirlisting']) ? true : false, gtext("Enable directory listing."), gtext("A directory listing is generated when no index-files (index.php, index.html, index.htm or default.htm) are found in a directory."), false);
 					$helpinghand = '<a href="'
 						. 'http://redmine.lighttpd.net/projects/lighttpd/wiki'
 						. '" target="_blank">'
