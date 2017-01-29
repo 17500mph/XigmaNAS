@@ -100,9 +100,7 @@ $(document).ready(function(){
 	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
-<?php
-	if (!isset($config['samba']['enable'])):
-?>
+<?php if (!isset($config['samba']['enable'])):?>
 		<table class="area_data_selection">
 			<colgroup>
 				<col style="width:100%">
@@ -114,9 +112,7 @@ $(document).ready(function(){
 				<pre><?=gtext('CIFS/SMB is disabled.');?></pre>;
 			</td></tr></tbody>
 		</table>
-<?php
-	else:
-?>
+<?php else:?>
 		<table class="area_data_selection">
 			<colgroup>
 				<col style="width:100%">
@@ -148,8 +144,6 @@ $(document).ready(function(){
 				<pre><span id="area_refresh_3"><?=diag_infos_samba_3_ajax();?></span></pre>
 			</td></tr></tbody>
 		</table>
-<?php
-	endif;
-?>
+<?php endif;?>
 </td></tr></tbody></table>
 <?php include 'fend.inc';?>
