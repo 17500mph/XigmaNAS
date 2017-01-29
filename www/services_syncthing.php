@@ -53,7 +53,7 @@ if ($_POST) {
 
 	if (isset($_POST['enable'])) {
 		$reqdfields = explode(" ", "homedir");
-		$reqdfieldsn = array(gtext("Home directory"));
+		$reqdfieldsn = [gtext('Database Directory')];
 		$reqdfieldst = explode(" ", "string");
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
@@ -132,19 +132,28 @@ $(document).ready(function(){
 		<td class="tabcont">
 			<form action="services_syncthing.php" method="post" name="iform" id="iform" onsubmit="spinner()">
 				<?php
-				if (!empty($errormsg)) print_error_box($errormsg);
-				if (!empty($input_errors)) print_input_errors($input_errors);
-				if (!empty($savemsg)) print_info_box($savemsg);
+				if (!empty($errormsg)):
+					print_error_box($errormsg);
+				endif;
+				if (!empty($input_errors)):
+					print_input_errors($input_errors);
+				endif;
+				if (!empty($savemsg)):
+					print_info_box($savemsg);
+				endif;
+				$enabled = isset($config['syncthing']['enable']);
 				?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php
 					html_titleline_checkbox("enable", gtext("Syncthing"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "");
-					html_filechooser("homedir", gtext("Home directory"), $pconfig['homedir'], gtext("Enter the path to the home directory. The config will be created under the specified directory."), $g['media_path'], false, 60);
-					html_separator();
-					html_titleline(gtext("Administrative WebGUI"));
-					$url = "http://${gui_ipaddr}:${gui_port}/";
-					$text = "<a href='${url}' id='a_url' target='_blank'>{$url}</a>";
-					html_text("url", gtext("URL"), $text);
+					html_filechooser("homedir", gtext("Database Directory"), $pconfig['homedir'], gtext("Enter the path to the database directory. The config files will be created under the specified directory."), $g['media_path'], false, 60);
+					if ($enabled):
+						html_separator();
+						html_titleline(gtext("Administrative WebGUI"));
+						$url = "http://${gui_ipaddr}:${gui_port}/";
+						$text = "<a href='${url}' id='a_url' target='_blank'>{$url}</a>";
+						html_text("url", gtext("URL"), $text);
+					endif;
 					?>
 				</table>
 				<div id="submit">
