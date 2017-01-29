@@ -40,7 +40,7 @@ if ($_POST) {
 
 	// Input validation.
 	$reqdfields = explode(" ", "host ttl");
-	$reqdfieldsn = array(gtext("Host"), gtext("Max. TTL"));
+	$reqdfieldsn = [gtext('Host'),gtext('Max. TTL')];
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
@@ -77,7 +77,7 @@ $pgtitle = [gtext('Diagnostics'),gtext('Traceroute')];
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_titleline(gtext('Traceroute Test'));?>
 					<?php html_inputbox("host", gtext("Host"), $host, gtext("Destination host name or IP number."), true, 20);?>
-					<?php $a_ttl = array(); for ($i = 1; $i <= 64; $i++) { $a_ttl[$i] = $i; }?>
+					<?php $a_ttl = []; for ($i = 1; $i <= 64; $i++) { $a_ttl[$i] = $i; }?>
 					<?php html_combobox("ttl", gtext("Max. TTL"), $ttl, $a_ttl, gtext("Max. time-to-live (max. number of hops) used in outgoing probe packets."), true);?>
 					<?php html_checkbox("resolve", gtext("Resolve"), $resolve ? true : false, gtext("Resolve IP addresses to hostnames"), "", false);?>
 				</table>

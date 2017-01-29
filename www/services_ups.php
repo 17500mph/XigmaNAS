@@ -71,16 +71,16 @@ if ($_POST) {
 	// Input validation.
 	if (isset($_POST['enable']) && $_POST['enable']) {
 		$reqdfields = explode(" ", "upsname driver port shutdownmode monitoruser monitorpassword");
-		$reqdfieldsn = array(gtext("Identifier"), gtext("Driver"), gtext("Port"), gtext("Shutdown mode"), gtext("Username"), gtext("Password"));
+		$reqdfieldsn = [gtext("Identifier"), gtext("Driver"), gtext("Port"), gtext("Shutdown mode"), gtext("Username"), gtext("Password")];
 		$reqdfieldst = explode(" ", "alias string string string string string");
 		if ("onbatt" === $_POST['shutdownmode']) {
 			$reqdfields = array_merge($reqdfields, explode(" ", "shutdowntimer"));
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Shutdown timer")));
+			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('Shutdown timer')]);
 			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "numericint"));
 		}
 		if (!empty($_POST['email_enable'])) {
 			$reqdfields = array_merge($reqdfields, explode(" ", "email_to email_subject"));
-			$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("To Email Address"), gtext("Subject")));
+			$reqdfieldsn = array_merge($reqdfieldsn, [gtext('To Email Address'), gtext('Subject')]);
 			$reqdfieldst = array_merge($reqdfieldst, explode(" ", "string string"));
 		}
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);

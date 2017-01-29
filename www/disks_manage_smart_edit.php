@@ -53,7 +53,7 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_selftest, "uui
 	$pconfig['devicespecialfile'] = $a_selftest[$cnid]['devicespecialfile'];
 	$pconfig['type'] = $a_selftest[$cnid]['type'];
 	//$pconfig['minute'] = $a_selftest[$cnid]['minute'];
-	$pconfig['minute'] = array();
+	$pconfig['minute'] = [];
 	$pconfig['hour'] = $a_selftest[$cnid]['hour'];
 	$pconfig['day'] = $a_selftest[$cnid]['day'];
 	$pconfig['month'] = $a_selftest[$cnid]['month'];
@@ -90,12 +90,12 @@ if ($_POST) {
 	$pconfig['all_mins'] = $_POST['all_mins'] = 1;
 
 	$reqdfields = explode(" ", "disk type");
-	$reqdfieldsn = array(gtext("Disk"), gtext("Type"));
+	$reqdfieldsn = [gtext('Disk'),gtext('Type')];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validate_synctime($_POST, $input_errors);
 
 	if (empty($input_errors)) {
-		$selftest = array();
+		$selftest = [];
 		$selftest['uuid'] = $_POST['uuid'];
 		$selftest['devicespecialfile'] = $_POST['disk'];
 		$selftest['type'] = $_POST['type'];

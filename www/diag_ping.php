@@ -40,7 +40,7 @@ if ($_POST) {
 
 	// Input validation.
 	$reqdfields = explode(" ", "host count");
-	$reqdfieldsn = array(gtext("Host"), gtext("Count"));
+	$reqdfieldsn = [gtext('Host'),gtext('Count')];
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
@@ -87,7 +87,7 @@ $pgtitle = [gtext('Diagnostics'),gtext('Ping')];
 					html_titleline(gtext("Ping Test"));
 					html_inputbox("host", gtext("Host"), $host, gtext("Destination host name or IP number."), true, 20);
 					html_interfacecombobox("interface", gtext("Interface"), !empty($interface) ? $interface : "", gtext("Use the following IP address as the source address in outgoing packets."), true);
-					$a_count = array(); for ($i = 1; $i <= 10; $i++) { $a_count[$i] = $i; }
+					$a_count = []; for ($i = 1; $i <= 10; $i++) { $a_count[$i] = $i; }
 					html_combobox("count", gtext("Count"), $count, $a_count, gtext("Stop after sending (and receiving) N packets."), true);
 					?>
 				</table>

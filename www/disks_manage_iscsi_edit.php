@@ -97,14 +97,14 @@ if ($_POST) {
 
 	// Input validation
 	$reqdfields = explode(" ", "name targetname targetaddress initiatorname");
-	$reqdfieldsn = array(gtext("Name"), gtext("Target name"), gtext("Target address"), gtext("Initiator name"));
+	$reqdfieldsn = [gtext('Name'),gtext('Target name'),gtext('Target address'),gtext('Initiator name')];
 	$reqdfieldst = explode(" ", "alias string string string");
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
 	if (empty($input_errors)) {
-		$iscsiinit = array();
+		$iscsiinit = [];
 		$iscsiinit['uuid'] = $_POST['uuid'];
 		$iscsiinit['name'] = $_POST['name'];
 		$iscsiinit['targetname'] = $_POST['targetname'];

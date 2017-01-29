@@ -107,7 +107,7 @@ if ($_POST) {
 	if (empty($input_errors)) {
 		$devname = $_POST['name'];
 
-		$disks = array();
+		$disks = [];
 		$disks['uuid'] = $_POST['uuid'];
 		$disks['name'] = $devname;
 		$disks['id'] = $a_phy_disk[$devname]['id'];
@@ -206,13 +206,13 @@ function smart_enable_change() {
 					</tr>
 					<?php
 					html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("You may enter a description here for your reference."), false, 40);
-					$options = array("auto" => "Automatic", "PIO0" => "PIO0", "PIO1" => "PIO1", "PIO2" => "PIO2", "PIO3" => "PIO3", "PIO4" => "PIO4", "WDMA2" => "WDMA2", "UDMA2" => "UDMA-33", "UDMA4" => "UDMA-66", "UDMA5" => "UDMA-100", "UDMA6" => "UDMA-133");
+					$options = ['auto' => 'Automatic','PIO0' => 'PIO0','PIO1' => 'PIO1','PIO2' => 'PIO2','PIO3' => 'PIO3','PIO4' => 'PIO4','WDMA2' => 'WDMA2','UDMA2' => 'UDMA-33','UDMA4' => 'UDMA-66','UDMA5' => 'UDMA-100','UDMA6' => 'UDMA-133'];
 					html_combobox("transfermode", gtext("Transfer mode"), $pconfig['transfermode'], $options, gtext("This allows you to set the transfer mode for ATA/IDE disks. You can set 'Automatic' to enable the automatic mode for all SATA/ATA/IDE disks."), false);
-					$options = array(0 => gtext("Always On")); foreach(array(5, 10, 20, 30, 60, 120, 180, 240, 300, 360) as $vsbtime) { $options[$vsbtime] = sprintf("%d %s", $vsbtime, gtext("Minutes")); }
+					$options = [0 => gtext('Always On')]; foreach([5,10,20,30,60,120,180,240,300,360] as $vsbtime) { $options[$vsbtime] = sprintf("%d %s", $vsbtime, gtext("Minutes")); }
 					html_combobox("harddiskstandby", gtext("HDD standby time"), $pconfig['harddiskstandby'], $options, gtext("Puts the disk into standby mode when the selected amount of time after the last disk access has been elapsed."), false);
-					$options = array(0 => gtext("Disabled"), 1 => gtext("Level 1 - Minimum Power Usage with Standby (Spindown)"), 64 => gtext("Level 64 - Intermediate Power Usage with Standby"), 127 => gtext("Level 127 - Intermediate Power Usage with Standby"), 128 => gtext("Level 128 - Minimum Power Usage without Standby (No Spindown)"), 192 => gtext("Level 192 - Intermediate Power Usage without Standby"), 254 => gtext("Level 254 - Maximum Performance, Maximum Power Usage"));
+					$options = [0 => gtext('Disabled'),1 => gtext('Level 1 - Minimum Power Usage with Standby (Spindown)'),64 => gtext('Level 64 - Intermediate Power Usage with Standby'),127 => gtext('Level 127 - Intermediate Power Usage with Standby'),128 => gtext('Level 128 - Minimum Power Usage without Standby (No Spindown)'),192 => gtext('Level 192 - Intermediate Power Usage without Standby'),254 => gtext('Level 254 - Maximum Performance, Maximum Power Usage')];
 					html_combobox("apm", gtext("Power management"), $pconfig['apm'], $options, gtext("This allows you to lower the power consumption of the disk, at the expense of performance."), false);
-					$options = array(0 => gtext("Disabled"), 1 => gtext("Minimum Performance, Minimum Acoustic Output"), 64 => gtext("Medium Acoustic Output"), 127 => gtext("Maximum Performance, Maximum Acoustic Output"));
+					$options = [0 => gtext('Disabled'),1 => gtext('Minimum Performance, Minimum Acoustic Output'),64 => gtext('Medium Acoustic Output'),127 => gtext('Maximum Performance, Maximum Acoustic Output')];
 					html_combobox("acoustic", gtext("Acoustic level"), $pconfig['acoustic'], $options, gtext("This allows you to set how loud the drive is while it's operating."), false);
 					html_checkbox("smart_enable", gtext("S.M.A.R.T."), !empty($pconfig['smart_enable']) ? true : false, gtext("Activate S.M.A.R.T. monitoring for this device."), "", false, "smart_enable_change()");
 					$helpinghand = gtext('Extra options (usually empty).')

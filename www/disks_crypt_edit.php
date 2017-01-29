@@ -106,7 +106,7 @@ if ($_POST) {
 			// Get disk information.
 			$diskinfo = disks_get_diskinfo($pconfig['devicespecialfile']);
 
-			$geli = array();
+			$geli = [];
 			$geli['uuid'] = uuid();
 			$geli['name'] = $pconfig['name'];
 			$geli['device'] = $pconfig['devicespecialfile'];
@@ -216,9 +216,9 @@ function ealgo_change() {
 			    </tr>
 					*/
 					?>
-					<?php $options = array("AES" => "AES-XTS", "AES-CBC" => "AES-CBC", "Blowfish" => "Blowfish", "Camellia" => "Camellia", "3DES" => "3DES");?>
+					<?php $options = ['AES' => 'AES-XTS','AES-CBC' => 'AES-CBC','Blowfish' => 'Blowfish','Camellia' => 'Camellia','3DES' => '3DES'];?>
 					<?php html_combobox("ealgo", gtext("Encryption Algorithm"), $pconfig['ealgo'], $options, gtext("Encryption algorithm to use."), true, false, "ealgo_change()");?>
-					<?php $options = array("" => gtext("Default"), 128 => "128", 192 => "192", 256 => "256", 448 => "448");?>
+					<?php $options = ["" => gtext('Default'),128 => '128',192 => '192',256 => '256',448 => '448'];?>
 					<?php html_combobox("keylen", gtext("Key Length"), $pconfig['keylen'], $options, gtext("Key length to use with the given cryptographic algorithm.") . " " . gtext("The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and 192 for 3DES."), false);?>
 					<?php html_passwordconfbox("passphrase", "passphraseconf", gtext("Passphrase"), "", "", "", true);?>
 					<?php html_checkbox("init", gtext("Initialize"), $pconfig['init'] ? true : false, gtext("Initialize and encrypt disk."), gtext("This will erase ALL data on your disk! Do not use this option if you want to add an existing encrypted disk."));?>
