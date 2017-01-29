@@ -39,7 +39,7 @@ if (isset($_GET['uuid']))
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = [gtext('Network'), gtext('Hosts'), isset($uuid) ? gtext('Edit') : gtext('Add')];
+$pgtitle = [gtext('Network'),gtext('Hosts'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
 $a_hosts = &array_make_branch($config,'system','hosts');
 if(empty($a_hosts)):
@@ -70,7 +70,7 @@ if ($_POST) {
 
 	// Input validation.
 	$reqdfields = explode(" ", "name address");
-	$reqdfieldsn = array(gtext("Hostname"),gtext("IP address"));
+	$reqdfieldsn = array(gtext("Hostname"),gtext("IP Address"));
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
@@ -121,7 +121,7 @@ if ($_POST) {
 	<table width="100%" border="0" cellpadding="6" cellspacing="0">
 	<?php html_titleline2(gtext('Hosts Setup'), 2);?>
 		<?php html_inputbox("name", gtext("Hostname"), $pconfig['name'], gtext("The host name may only consist of the characters a-z, A-Z and 0-9, - , _ and ."), true, 40);?>
-		<?php html_inputbox("address", gtext("IP address"), $pconfig['address'], gtext("The IP address that this hostname represents."), true, 20);?>
+		<?php html_inputbox("address", gtext("IP Address"), $pconfig['address'], gtext("The IP address that this hostname represents."), true, 20);?>
 		<?php html_inputbox("descr", gtext("Description"), $pconfig['descr'], gtext("You may enter a description here for your reference."), false, 20);?>
 		</table>
 		<div id="submit">
