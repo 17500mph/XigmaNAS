@@ -39,9 +39,10 @@ array_make_branch($config,'iscsitarget','initiatorgroup');
 array_make_branch($config,'iscsitarget','authgroup');
 
 function cmp_tag($a, $b) {
-	if ($a['tag'] == $b['tag'])
-		return 0;
-	return ($a['tag'] > $b['tag']) ? 1 : -1;
+    if ($a['tag'] == $b['tag']) {
+        return 0;
+    }
+    return ($a['tag'] > $b['tag']) ? 1 : -1;
 }
 usort($config['iscsitarget']['portalgroup'], "cmp_tag");
 usort($config['iscsitarget']['initiatorgroup'], "cmp_tag");
@@ -83,31 +84,19 @@ if (!isset($pconfig['uctladdress']) || $pconfig['uctladdress'] == '') {
 if ($_POST) {
 	unset($input_errors);
 	unset($errormsg);
-
 	$pconfig = $_POST;
 
 	// Input validation.
 	$reqdfields = explode(" ", "nodebase discoveryauthmethod discoveryauthgroup");
-	$reqdfieldsn = array(gtext("Node Base"),
-		gtext("Discovery Auth Method"),
-		gtext("Discovery Auth Group"));
+	$reqdfieldsn = [gtext('Node Base'),gtext('Discovery Auth Method'),gtext('Discovery Auth Group')];
 	$reqdfieldst = explode(" ", "string string numericint");
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
 	$reqdfields = explode(" ", "timeout nopininterval maxr2t maxsessions maxconnections firstburstlength maxburstlength maxrecvdatasegmentlength maxoutstandingr2t defaulttime2wait defaulttime2retain");
-	$reqdfieldsn = array(gtext("I/O Timeout"),
-		gtext("NOPIN Interval"),
-		gtext("Max. sessions"),
-		gtext("Max. connections"),
-		gtext("Max. pre-send R2T"),
-		gtext("FirstBurstLength"),
-		gtext("MaxBurstLength"),
-		gtext("MaxRecvDataSegmentLength"),
-		gtext("MaxOutstandingR2T"),
-		gtext("DefaultTime2Wait"),
-		gtext("DefaultTime2Retain"));
+	$reqdfieldsn = [gtext('I/O Timeout'),gtext('NOPIN Interval'),gtext('Max. Sessions'),gtext('Max. Connections'),gtext('Max. pre-send R2T'),gtext('FirstBurstLength'),gtext('MaxBurstLength'),
+	gtext('MaxRecvDataSegmentLength'),gtext('MaxOutstandingR2T'),gtext('DefaultTime2Wait'),gtext('DefaultTime2Retain')];
 	$reqdfieldst = explode(" ", "numericint numericint numericint numericint numericint numericint numericint numericint numericint numericint numericint");
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -120,12 +109,7 @@ if ($_POST) {
 	}
 
 	$reqdfields = explode(" ", "uctladdress uctlport uctlnetmask uctlauthmethod uctlauthgroup mediadirectory");
-	$reqdfieldsn = array(gtext("Controller IP address"),
-		gtext("Controller TCP Port"),
-		gtext("Controller Authorised network"),
-		gtext("Controller Auth Method"),
-		gtext("Controller Auth Group"),
-		gtext("Media Directory"));
+	$reqdfieldsn = [gtext('Controller IP address'),gtext('Controller TCP Port'),gtext('Controller Authorised network'),gtext('Controller Auth Method'),gtext('Controller Auth Group'),gtext('Media Directory')];
 	$reqdfieldst = explode(" ", "string numericint string string numericint string");
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -261,7 +245,7 @@ function uctlenable_change(enable_change) {
 					<?php html_inputbox("nodebase", gtext("Base Name"), $pconfig['nodebase'], gtext("The base name (e.g. iqn.2007-09.jp.ne.peach.istgt) will append the target name that is not starting with 'iqn.'."), true, 60, false);?>
 					<?php html_combobox("discoveryauthmethod", gtext("Discovery Auth Method"), $pconfig['discoveryauthmethod'], array("Auto" => gtext("Auto"), "CHAP" => gtext("CHAP"), "CHAP Mutual" => gtext("Mutual CHAP"), "None" => gtext("None")), gtext("The method can be accepted in discovery session. Auto means both none and authentication."), true);?>
 					<?php
-					$ag_list = array();
+					$ag_list = [];
 					$ag_list['0'] = gtext("None");
 					foreach($config['iscsitarget']['authgroup'] as $ag) {
 						if ($ag['comment']) {
@@ -276,8 +260,8 @@ function uctlenable_change(enable_change) {
 					html_titleline(gtext("Advanced Settings"));
 					html_inputbox("timeout", gtext("I/O Timeout"), $pconfig['timeout'], sprintf(gtext("I/O timeout in seconds (%d by default)."), 30), true, 30, false);
 					html_inputbox("nopininterval", gtext("NOPIN Interval"), $pconfig['nopininterval'], sprintf(gtext("NOPIN sending interval in seconds (%d by default)."), 20), true, 30, false);
-					html_inputbox("maxsessions", gtext("Max. sessions"), $pconfig['maxsessions'], sprintf(gtext("Maximum number of sessions holding at same time (%d by default)."), 16), true, 30, false);
-					html_inputbox("maxconnections", gtext("Max. connections"), $pconfig['maxconnections'], sprintf(gtext("Maximum number of connections in each session (%d by default)."), 4), true, 30, false);
+					html_inputbox("maxsessions", gtext("Max. Sessions"), $pconfig['maxsessions'], sprintf(gtext("Maximum number of sessions holding at same time (%d by default)."), 16), true, 30, false);
+					html_inputbox("maxconnections", gtext("Max. Connections"), $pconfig['maxconnections'], sprintf(gtext("Maximum number of connections in each session (%d by default)."), 4), true, 30, false);
 					html_inputbox("maxr2t", gtext("Max. pre-send R2T"), $pconfig['maxr2t'], sprintf(gtext("Maximum number of pre-send R2T in each connection (%d by default). The actual number is limited to QueueDepth of the target."), 32), true, 30, false);
 					html_inputbox("firstburstlength", gtext("FirstBurstLength"), $pconfig['firstburstlength'], sprintf(gtext("iSCSI initial parameter (%d by default)."), 262144), true, 30, false);
 					html_inputbox("maxburstlength", gtext("MaxBurstLength"), $pconfig['maxburstlength'], sprintf(gtext("iSCSI initial parameter (%d by default)."), 1048576), true, 30, false);
@@ -291,7 +275,7 @@ function uctlenable_change(enable_change) {
 					html_inputbox("uctlport", gtext("Controller TCP Port"), $pconfig['uctlport'], sprintf(gtext("Logical Unit Controller TCP port (%d by default)"), 3261), true, 15, false);
 					html_inputbox("uctlnetmask", gtext("Controller Authorised network"), $pconfig['uctlnetmask'], sprintf(gtext("Logical Unit Controller Authorised network (%s by default)"), "127.0.0.1/8"), true, 30, false);
 					html_combobox("uctlauthmethod", gtext("Controller Auth Method"), $pconfig['uctlauthmethod'], array("CHAP" => gtext("CHAP"), "CHAP mutual" => gtext("Mutual CHAP"), "None" => gtext("None")), gtext("The method can be accepted in the controller."), true);
-					$ag_list = array();
+					$ag_list = [];
 					$ag_list['0'] = gtext("Must choose one");
 					foreach($config['iscsitarget']['authgroup'] as $ag) {
 						if ($ag['comment']) {

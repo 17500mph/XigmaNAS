@@ -61,15 +61,15 @@ if ($_POST) {
 	unset($input_errors);
 	$pconfig = $_POST;
 	// Input validation
-	$reqdfields = array();
-	$reqdfieldsn = array();
+	$reqdfields = [];
+	$reqdfieldsn = [];
 	if (isset($_POST['enable']) && $_POST['enable']) {
 		$reqdfields = array_merge($reqdfields, explode(" ", "workdir"));
-		$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Working directory")));
+		$reqdfieldsn = array_merge($reqdfieldsn,[gtext('Work Directory')]);
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		// Check if working directory exists
 		if (empty($_POST['mkdir']) && !file_exists($_POST['workdir'])) {
-			$input_errors[] = gtext("The working directory does not exist.");
+			$input_errors[] = gtext("The work directory does not exist.");
 		}
 	}
 	if (empty($input_errors)) {
@@ -110,18 +110,21 @@ function enable_change(enable_change) {
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php
 					html_titleline_checkbox('enable', gtext("Unison File Synchronisation"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");
-					html_filechooser("workdir", gtext("Working Directory"), $pconfig['workdir'], sprintf(gtext("Location where the working files will be stored, e.g. %s/backup/.unison"), $g['media_path']), $g['media_path'], true, 60);
+					html_filechooser("workdir", gtext("Work Directory"), $pconfig['workdir'], sprintf(gtext("Location where the work files will be stored, e.g. %s/backup/.unison"), $g['media_path']), $g['media_path'], true, 60);
 					html_checkbox("mkdir", "", !empty($pconfig['mkdir']) ? true : false, gtext("Create work directory if it doesn't exist."), "", false);
 					?>
 				</table>
 				<div id="submit">
-					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save and Restart");?>" onclick="enable_change(true)" />
+				<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save and Restart");?>" onclick="enable_change(true)" />
 				</div>
 				<div id="remarks">
 					<?php
-					$link1 = '<a href="' . 'services_sshd.php' . '">' . gtext('SSHD') . '</a>';
-					$link2 = '<a href="' . 'access_users.php' . '">' . gtext('user') . '</a>';
-					html_remark("note", gtext('Note'), sprintf(gtext("%s must be enabled for Unison to work, and the %s must have shell access."), $link1, $link2));
+					$helpinghand = gtext('Before a Unison Client can start to work, you need to perform the following:')
+					. '<div id="enumeration"><ul>'
+					. '<li>' . '<a href="' . 'services_sshd.php' . '">' . gtext('Enable service SSH when disabled') . '</a>.' . '</li>'
+					. '<li>' . '<a href="' . 'access_users.php' . '">' . gtext('Setup user to get shell access') . '</a>.' . '</li>'
+					. '</ul></div>';
+					html_remark("note", gtext('Note'), $helpinghand );
 					?>
 				</div>
 				<?php include 'formend.inc';?>

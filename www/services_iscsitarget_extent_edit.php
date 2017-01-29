@@ -57,7 +57,7 @@ else:
 endif;
 
 function get_all_device($a_extent,$uuid) {
-	$a = array();
+	$a = [];
 	$a[''] = gtext("Must choose one");
 	foreach (get_conf_all_disks_list_filtered() as $diskv) {
 		$file = $diskv['devicespecialfile'];
@@ -79,7 +79,7 @@ function get_all_device($a_extent,$uuid) {
 
 // TODO: handle SCSI pass-through device
 function get_all_scsi_device($a_extent,$uuid) {
-	$a = array();
+	$a = [];
 	$a[''] = gtext("Must choose one");
 	foreach (get_conf_all_disks_list_filtered() as $diskv) {
 		$file = $diskv['devicespecialfile'];
@@ -100,7 +100,7 @@ function get_all_scsi_device($a_extent,$uuid) {
 }
 
 function get_all_zvol($a_extent,$uuid) {
-	$a = array();
+	$a = [];
 	$a[''] = gtext("Must choose one");
 	mwexec2("zfs list -H -t volume -o name,volsize,sharenfs,org.freebsd:swap", $rawdata);
 	foreach ($rawdata as $line) {
@@ -123,7 +123,7 @@ function get_all_zvol($a_extent,$uuid) {
 }
 
 function get_all_hast($a_extent,$uuid) {
-	$a = array();
+	$a = [];
 	$a[''] = gtext("Must choose one");
 	mwexec2("hastctl dump | grep resource", $rawdata);
 	foreach ($rawdata as $line) {
@@ -171,7 +171,7 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_iscsitarget_ex
 } else {
 	// Find next unused ID.
 	$extentid = 0;
-	$a_id = array();
+	$a_id = [];
 	foreach($a_iscsitarget_extent as $extent)
 		$a_id[] = (int)str_replace("extent", "", $extent['name']); // Extract ID.
 	while (true === in_array($extentid, $a_id))
@@ -203,7 +203,7 @@ if ($_POST) {
 		$pconfig['size'] = "";
 		$_POST['size'] = "";
 		$reqdfields = explode(" ", "name device");
-		$reqdfieldsn = array(gtext("Extent name"), gtext("Device"));
+		$reqdfieldsn = [gtext('Extent name'),gtext('Device')];
 		$reqdfieldst = explode(" ", "string string");
 	} else if ($_POST['type'] == 'zvol') {
 		$pconfig['sizeunit'] = "auto";
@@ -211,7 +211,7 @@ if ($_POST) {
 		$pconfig['size'] = "";
 		$_POST['size'] = "";
 		$reqdfields = explode(" ", "name zvol");
-		$reqdfieldsn = array(gtext("Extent name"), gtext("ZFS volume"));
+		$reqdfieldsn = [gtext('Extent name'),gtext('ZFS volume')];
 		$reqdfieldst = explode(" ", "string string");
 	} else if ($_POST['type'] == 'hast') {
 		$pconfig['sizeunit'] = "auto";
@@ -219,18 +219,18 @@ if ($_POST) {
 		$pconfig['size'] = "";
 		$_POST['size'] = "";
 		$reqdfields = explode(" ", "name hast");
-		$reqdfieldsn = array(gtext("Extent name"), gtext("HAST volume"));
+		$reqdfieldsn = [gtext('Extent name'),gtext('HAST volume')];
 		$reqdfieldst = explode(" ", "string string");
 	} else {
 		if ($pconfig['sizeunit'] == 'auto'){
 			$pconfig['size'] = "";
 			$_POST['size'] = "";
 			$reqdfields = explode(" ", "name path sizeunit");
-			$reqdfieldsn = array(gtext("Extent name"), gtext("Path"), gtext("Auto size"));
+			$reqdfieldsn = [gtext('Extent name'),gtext('Path'),gtext('Auto size')];
 			$reqdfieldst = explode(" ", "string string string");
 		}else{
 			$reqdfields = explode(" ", "name path size sizeunit");
-			$reqdfieldsn = array(gtext("Extent name"), gtext("Path"), gtext("File size"), gtext("File sizeunit"));
+			$reqdfieldsn = [gtext('Extent name'),gtext('Path'),gtext('Size'),gtext('File sizeunit')];
 			$reqdfieldst = explode(" ", "string string numericint string");
 		}
 	}
@@ -274,7 +274,7 @@ if ($_POST) {
 	$pconfig['path'] = $path;
 
 	if (empty($input_errors)) {
-		$iscsitarget_extent = array();
+		$iscsitarget_extent = [];
 		$iscsitarget_extent['uuid'] = $_POST['uuid'];
 		$iscsitarget_extent['name'] = $_POST['name'];
 		$iscsitarget_extent['path'] = $path;
@@ -373,7 +373,7 @@ function sizeunit_change() {
 			<?php html_combobox("zvol", gtext("ZFS volume"), $pconfig['path'], $a_zvol, "", true);?>
 			<?php html_combobox("hast", gtext("HAST volume"), $pconfig['path'], $a_hast, "", true);?>
 			<tr id="size_tr">
-			<td width="22%" valign="top" class="vncellreq"><?=gtext("File size");?></td>
+			<td width="22%" valign="top" class="vncellreq"><?=gtext("Size");?></td>
 			<td width="78%" class="vtable">
 			<input name="size" type="text" class="formfld" id="size" size="10" value="<?=htmlspecialchars($pconfig['size']);?>" />
 			<select name="sizeunit" onclick="sizeunit_change()"> 
@@ -382,7 +382,7 @@ function sizeunit_change() {
 			<option value="TB" <?php if ($pconfig['sizeunit'] === "TB") echo "selected=\"selected\"";?>><?=gtext("TiB");?></option>
 			<option value="auto" <?php if ($pconfig['sizeunit'] === "auto") echo "selected=\"selected\"";?>><?=gtext("Auto");?></option>
 	</select><br />
-			<span class="vexpl"><?=gtext("Size offered to the initiator. (up to 8EiB=8388608TiB. actual size is depend on your disks.)");?></span>
+			<span class="vexpl"><?=gtext("Size offered to the initiator. (up to 8EiB=8388608TiB).");?><br><?=gtext("The actual size is depend on your disks.");?></br>
 		</td>
 		</tr>
 			<?php html_inputbox("comment", gtext("Comment"), $pconfig['comment'], gtext("You may enter a description here for your reference."), false, 40);?>

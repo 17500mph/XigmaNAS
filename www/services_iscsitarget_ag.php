@@ -147,7 +147,7 @@ $pgtitle = [gtext('Services'),gtext('iSCSI Target'),gtext('Auth Group')];
 								<?php foreach($config['iscsitarget']['authgroup'] as $ag):?>
 									<?php
 									if (!isset($ag['agauth']) || !is_array($ag['agauth']))
-										$ag['agauth'] = array();
+										$ag['agauth'] = [];
 									array_sort_key($ag['agauth'], "authuser");
 									?>
 									<?php $notificationmode = updatenotify_get_mode("iscsitarget_ag", $ag['uuid']);?>
@@ -191,7 +191,7 @@ $pgtitle = [gtext('Services'),gtext('iSCSI Target'),gtext('Auth Group')];
 									<td class="list"><a href="services_iscsitarget_ag_edit.php"><img src="images/add.png" title="<?=gtext("Add auth group");?>" border="0" alt="<?=gtext("Add auth group");?>" /></a></td>
 								</tr>
 							</table>
-							<?=gtext("A Auth Group contains authorised users and secrets for additional security.");?>
+							<?=gtext("Auth Groups contains authorised users and secrets for additional security.");?>
 						</td>
 					</tr>
 				</table>

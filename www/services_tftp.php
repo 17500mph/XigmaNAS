@@ -63,7 +63,7 @@ if ($_POST) {
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 		$reqdfields = array_merge($reqdfields, explode(" ", "port umask timeout maxblocksize"));
-		$reqdfieldsn = [gtext('Port'),gtext('Umask'),gtext('Timeout'),gtext('Max. Block Size')];
+		$reqdfieldsn = array_merge($reqdfieldsn,[gtext('Port'),gtext('Umask'),gtext('Timeout'),gtext('Max. Block Size')];
 		$reqdfieldst = array_merge($reqdfieldst, explode(" ", "port numeric numeric numeric"));
 
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);

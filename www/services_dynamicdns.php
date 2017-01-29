@@ -55,11 +55,11 @@ if ($_POST) {
 	/* input validation */
 	if (isset($_POST['enable']) && $_POST['enable']) {
 		$reqdfields = explode(" ", "provider domainname username password");
-		$reqdfieldsn = array(gtext("Provider"), gtext("Domain name"), gtext("Username"), gtext("Password"));
+		$reqdfieldsn = [gtext('Provider'),gtext('Domain Name'),gtext('Username'),gtext('Password')];
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 		$reqdfields = array_merge($reqdfields, explode(" ", "updateperiod forcedupdateperiod"));
-		$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Update period"),gtext("Forced update period")));
+		$reqdfieldsn = array_merge($reqdfieldsn, [gtext('Update period'),gtext('Forced Update Period')]);
 		$reqdfieldst = explode(" ", "string string string string numeric numeric");
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 	}
@@ -137,12 +137,12 @@ function provider_change() {
 				<?php if (!empty($savemsg)) print_info_box($savemsg);?>
 			  <table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_titleline_checkbox("enable", gtext("Dynamic DNS"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");?>
-					<?php html_combobox("provider", gtext("Provider"), $pconfig['provider'], array("dyndns.org" => "dyndns.org", "freedns.afraid.org" => "freedns.afraid.org", "zoneedit.com" => "zoneedit.com", "no-ip.com" => "no-ip.com", "3322.org" => "3322.org", "easydns.com" => "easydns.com", "dnsdynamic.org" => "dnsdynamic.org", "dhis.org" => "dhis.org", "dnsexit.com" => "dnsexit.com", "ipv6tb.he.net" => "ipv6tb.he.net", "tzo.com" => "tzo.com", "dynsip.org" => "dynsip.org", "dtdns.com" => "dtdns.com", "changeip.com" => "changeip.com", "dy.fi" => "dy.fi", "two-dns.de" => "two-dns.de", "custom" => gtext("Custom")), "", true, false, "provider_change()");?>
-					<?php html_inputbox("domainname", gtext("Domain name"), $pconfig['domainname'], gtext("A host name alias. This option can appear multiple times, for each domain that has the same IP. Use a space to separate multiple alias names."), true, 40);?>
+					<?php html_combobox("provider", gtext("Provider"), $pconfig['provider'],['dyndns.org' => 'dyndns.org', 'freedns.afraid.org' => 'freedns.afraid.org', 'zoneedit.com' => 'zoneedit.com', 'no-ip.com' => 'no-ip.com', '3322.org' => '3322.org', 'easydns.com' => 'easydns.com', 'dnsdynamic.org' => 'dnsdynamic.org', 'dhis.org' => 'dhis.org', 'dnsexit.com' => 'dnsexit.com', 'ipv6tb.he.net' => 'ipv6tb.he.net', 'tzo.com' => 'tzo.com', 'dynsip.org' => 'dynsip.org', 'dtdns.com' => 'dtdns.com', 'changeip.com' => 'changeip.com', 'dy.fi' => 'dy.fi', 'two-dns.de' => 'two-dns.de', 'custom' => gtext('Custom')], "", true, false, "provider_change()");?>
+					<?php html_inputbox("domainname", gtext("Domain Name"), $pconfig['domainname'], gtext("A host name alias. This option can appear multiple times, for each domain that has the same IP. Use a space to separate multiple alias names."), true, 40);?>
 					<?php html_inputbox("username", gtext("Username"), $pconfig['username'], "", true, 20);?>
 					<?php html_passwordbox("password", gtext("Password"), $pconfig['password'], "", true, 20);?>
-					<?php html_inputbox("updateperiod", gtext("Update period"), $pconfig['updateperiod'], gtext("How often the IP is checked. The period is in seconds (max. is 10 days)."), false, 20);?>
-					<?php html_inputbox("forcedupdateperiod", gtext("Forced update period"), $pconfig['forcedupdateperiod'], gtext("How often the IP is updated even if it is not changed. The period is in seconds (max. is 10 days)."), false, 20);?>
+					<?php html_inputbox("updateperiod", gtext("Update Period"), $pconfig['updateperiod'], gtext("How often the IP is checked. The period is in seconds (max. is 10 days)."), false, 20);?>
+					<?php html_inputbox("forcedupdateperiod", gtext("Forced Update Period"), $pconfig['forcedupdateperiod'], gtext("How often the IP is updated even if it is not changed. The period is in seconds (max. is 10 days)."), false, 20);?>
 					<?php html_checkbox("wildcard", gtext("Wildcard"), !empty($pconfig['wildcard']) ? true : false, gtext("Enable domain wildcarding."), "", false);?>
 					<?php html_textarea("auxparam", gtext("Additional Parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", sprintf(gtext("These parameters will be added to global settings in %s."), "inadyn.conf"), false, 65, 3, false, false);?>
 			  </table>

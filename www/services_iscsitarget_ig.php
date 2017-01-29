@@ -175,7 +175,7 @@ $pgtitle = [gtext('Services'),gtext('iSCSI Target'),gtext('Initiator Group')];
 									</td>
 								</tr>
 							</table>
-							<?=gtext("A Initiator Group contains authorised initiator names and networks to access the target.");?>
+							<?=gtext("Initiator Groups contains authorised initiator names and networks to access the target.");?>
 						</td>
 					</tr>
 				</table>

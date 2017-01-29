@@ -81,7 +81,7 @@ if (!isset($pconfig['media_uctladdress']) || $pconfig['media_uctladdress'] == ''
 	reset_uctlinfo($pconfig);
 }
 
-$pconfig['target_list'] = array();
+$pconfig['target_list'] = [];
 
 function scan_target(&$pconfig) {
 	$address = $pconfig['media_uctladdress'];
@@ -112,14 +112,14 @@ function scan_target(&$pconfig) {
 		return -1;
 	}
 
-	$pconfig['target_list'] = array();
+	$pconfig['target_list'] = [];
 	foreach ($rawdata as $line) {
 		$pconfig['target_list'][]['name'] = $line;
 	}
 	return 0;
 }
 
-$pconfig['target_info'] = array();
+$pconfig['target_info'] = [];
 function get_target_info(&$pconfig) {
 	$address = $pconfig['media_uctladdress'];
 	$port = $pconfig['media_uctlport'];
@@ -148,7 +148,7 @@ function get_target_info(&$pconfig) {
 		return -1;
 	}
 
-	$pconfig['target_info'] = array();
+	$pconfig['target_info'] = [];
 	$index = 0;
 	foreach ($rawdata as $line) {
 		$pconfig['target_info'][$index]['line'] = $line;
@@ -259,8 +259,8 @@ if ($_POST) {
 	unset($input_errors);
 	unset($errormsg);
 	$pconfig = $_POST;
-	$pconfig['target_list'] = array();
-	$pconfig['target_info'] = array();
+	$pconfig['target_list'] = [];
+	$pconfig['target_info'] = [];
 	$pconfig['mediadirectory'] = $config['iscsitarget']['mediadirectory'];
 
 	if (isset($_POST['Cancel']) && $_POST['Cancel']) {
@@ -293,8 +293,7 @@ if ($_POST) {
 		if ($_POST['media_uctlauthmethod'] == 'CHAP'
 		    || $_POST['media_uctlauthmethod'] == 'CHAP mutual') {
 			$reqdfields = explode(" ", "media_uctluser media_uctlsecret");
-			$reqdfieldsn = array(gtext("User"),
-				     gtext("Secret"));
+			$reqdfieldsn = [gtext('User'),gtext('Secret')];
 			$reqdfieldst = explode(" ", "string string");
 
 			do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -302,8 +301,7 @@ if ($_POST) {
 		}
 		if ($_POST['media_uctlauthmethod'] == 'CHAP mutual') {
 			$reqdfields = explode(" ", "media_uctlmuser media_uctlmsecret");
-			$reqdfieldsn = array(gtext("Peer User"),
-				     gtext("Peer Secret"));
+			$reqdfieldsn = [gtext('Peer User'),gtext('Peer Secret')];
 			$reqdfieldst = explode(" ", "string string");
 
 			do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -410,10 +408,7 @@ if ($_POST) {
 			$reqdfieldst = explode(" ", "string string string");
 		}else{
 			$reqdfields = explode(" ", "path size sizeunit flags");
-			$reqdfieldsn = array(gtext("Path"),
-				     gtext("File size"),
-				     gtext("File sizeunit"),
-				     gtext("Flags"));
+			$reqdfieldsn = [gtext('Path'),gtext('File size'),gtext('File sizeunit'),gtext('Flags')];
 			$reqdfieldst = explode(" ", "string numericint string");
 		}
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);

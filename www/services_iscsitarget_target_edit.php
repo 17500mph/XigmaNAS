@@ -191,7 +191,7 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_iscsitarget_ta
 		$stype = "Removable";
 	}
 	if (!is_array($pconfig['lunmap'])) {
-		$pconfig['lunmap'] = array();
+		$pconfig['lunmap'] = [];
 		$pconfig['lunmap'][0]['lun'] = "0";
 		$pconfig['lunmap'][0]['type'] = "$stype";
 		$pconfig['lunmap'][0]['extentname'] = $pconfig['storage'];
@@ -206,7 +206,7 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_iscsitarget_ta
 	$stype = "Storage";
 	// Find next unused ID.
 	$targetid = 0;
-	$a_id = array();
+	$a_id = [];
 	foreach($a_iscsitarget_target as $target) {
 		$tmpa = explode(":", $target['name']);
 		$name = $tmpa[count($tmpa)-1];
@@ -225,14 +225,14 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_iscsitarget_ta
 	$pconfig['flags'] = "rw";
 	$pconfig['comment'] = "";
 	$pconfig['storage'] = "";
-	$pconfig['pgigmap'] = array();
+	$pconfig['pgigmap'] = [];
 	$pconfig['pgigmap'][0]['pgtag'] = 0;
 	$pconfig['pgigmap'][0]['igtag'] = 0;
 	$pconfig['pgigmap'][1]['pgtag'] = 0;
 	$pconfig['pgigmap'][1]['igtag'] = 0;
-	$pconfig['agmap'] = array();
+	$pconfig['agmap'] = [];
 	$pconfig['agmap'][0]['agtag'] = 0;
-	$pconfig['lunmap'] = array();
+	$pconfig['lunmap'] = [];
 	$pconfig['lunmap'][0]['lun'] = "0";
 	$pconfig['lunmap'][0]['type'] = "$stype";
 	$pconfig['lunmap'][0]['extentname'] = "";
@@ -290,7 +290,7 @@ if ($_POST) {
 	$tgtname = $_POST['name'];
 	$tgtname = preg_replace('/\s/', '', $tgtname);
 	$pconfig['name'] = $tgtname;
-	$pgigmap = array();
+	$pgigmap = [];
 	$pgigmap[0]['pgtag'] = $_POST['portalgroup'];
 	$pgigmap[0]['igtag'] = $_POST['initiatorgroup'];
 	if (!empty($_POST['portalgroup2']) || !empty($_POST['initiatorgroup2'])) {
@@ -298,10 +298,10 @@ if ($_POST) {
 		$pgigmap[1]['igtag'] = $_POST['initiatorgroup2'];
 	}
 	$pconfig['pgigmap'] = $pgigmap;
-	$agmap = array();
+	$agmap = [];
 	$agmap[0]['agtag'] = $_POST['authgroup'];
 	$pconfig['agmap'] = $agmap;
-	$lunmap = array();
+	$lunmap = [];
 	$lunmap[0]['lun'] = "0";
 	$lunmap[0]['type'] = "$stype";
 	if ($stype == "Removable") {
@@ -344,7 +344,7 @@ if ($_POST) {
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
 	$reqdfields = ['authmethod','authgroup','digest','queuedepth','blocklen'];
-	$reqdfieldsn = [gtext('Auth Method'),gtext('Auth Group'),gtext('Initial Digest'),gtext('Queue Depth'),gtext('Logical Block Length')];
+	$reqdfieldsn = [gtext('Auth Method'),gtext('Auth Group'),gtext('Initial Digest'),gtext('Queue Depth'),gtext('Logical Block')];
 	$reqdfieldst = ['string','numericint','string','numericint','numericint'];
 	//do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
@@ -407,7 +407,7 @@ if ($_POST) {
 	}
 
 	if (empty($input_errors)) {
-		$iscsitarget_target = array();
+		$iscsitarget_target = [];
 		$iscsitarget_target['uuid'] = $_POST['uuid'];
 		$iscsitarget_target['enable'] = isset($_POST['enable']) ? true : false;
 		$iscsitarget_target['name'] = $tgtname;
@@ -617,7 +617,7 @@ function enable_change(enable_change) {
 					html_inputbox("alias", gtext("Target Alias"), $pconfig['alias'], gtext("Optional user-friendly string of the target."), false, 70, false);
 					html_combobox("type", gtext("Type"), $pconfig['type'], array("Disk" => gtext("Disk"),"DVD" => gtext("DVD"),"Tape" => gtext("Tape"),"Pass" => gtext("Device Pass-through")), gtext("Logical Unit Type mapped to LUN."), true, false, "type_change()");
 					html_combobox("flags", gtext("Flags"), $pconfig['flags'], array("rw" => gtext("Read/Write (rw)"),"rw,dynamic" => gtext("Read/Write (rw,dynamic) for removable types file size grow and shrink automatically by EOF (ignore specified size)"),"rw,extend" => gtext("Read/Write (rw,extend) for removable types extend file size if EOM reached"), "ro" => gtext("Read Only (ro)")), "", true);
-					$pg_list = array();
+					$pg_list = [];
 					//$pg_list['0'] = gtext("None");
 					foreach($config['iscsitarget']['portalgroup'] as $pg):
 						if ($pg['comment']):
@@ -628,7 +628,7 @@ function enable_change(enable_change) {
 						$pg_list[$pg['tag']] = htmlspecialchars($l);
 					endforeach;
 					html_combobox("portalgroup", sprintf("%s (%s)", gtext("Portal Group"), gtext("Primary")), $pconfig['portalgroup'], $pg_list, gtext("The initiator can connect to the portals in specific Portal Group."), true);
-					$ig_list = array();
+					$ig_list = [];
 					//$ig_list['0'] = gtext("None");
 					foreach($config['iscsitarget']['initiatorgroup'] as $ig):
 						if ($ig['comment']):
@@ -642,8 +642,8 @@ function enable_change(enable_change) {
 					html_combobox("portalgroup2", sprintf("%s (%s)", gtext("Portal Group"), gtext("Secondary")), $pconfig['portalgroup2'], array_merge(array("0" => gtext("None")), $pg_list), "", true);
 					html_combobox("initiatorgroup2", sprintf("%s (%s)", gtext("Initiator Group"), gtext("Secondary")), $pconfig['initiatorgroup2'], array_merge(array("0" => gtext("None")), $ig_list), "", true);
 					html_inputbox("comment", gtext("Comment"), $pconfig['comment'], gtext("You may enter a description here for your reference."), false, 40);
-					$a_storage_add = array();
-					$a_storage_edit = array();
+					$a_storage_add = [];
+					$a_storage_edit = [];
 					foreach ($a_iscsitarget_extent as $extent):
 						$index = array_search_ex($extent['name'], $a_iscsitarget_target, "storage");
 						if (false !== $index):
@@ -719,7 +719,7 @@ function enable_change(enable_change) {
 					html_separator();
 					html_titleline(gtext("Advanced settings"));
 					html_combobox("authmethod", gtext("Auth Method"), $pconfig['authmethod'], array("Auto" => gtext("Auto"), "CHAP" => gtext("CHAP"), "CHAP Mutual" => gtext("Mutual CHAP"), "None" => gtext("None")), gtext("The method can be accepted by the target. Auto means both none and authentication."), false);
-					$ag_list = array();
+					$ag_list = [];
 					$ag_list['0'] = gtext("None");
 					foreach($config['iscsitarget']['authgroup'] as $ag):
 						if($ag['comment']):
@@ -738,13 +738,13 @@ function enable_change(enable_change) {
 					html_inputbox("inqrevision", gtext("Inquiry Revision"), $pconfig['inqrevision'], sprintf(gtext("You may specify as SCSI INQUIRY data. Empty as default. (up to %d ASCII chars)"), 4), false, 20);
 					html_inputbox("inqserial", gtext("Inquiry Serial"), $pconfig['inqserial'], sprintf(gtext("You may specify as SCSI INQUIRY data. Empty as default. (up to %d ASCII chars)"), 16), false, 20);
 					if($MAX_BLOCKLEN > 512):
-						$a_blocklen = array();
+						$a_blocklen = [];
 						for($x = 0; (512 << $x) <= $MAX_BLOCKLEN; $x++):
 							$a_blocklen[(512 << $x)] = sprintf(gtext("%dB / block"), (512 << $x));
 						endfor;
 						?>
 						<?php
-						html_combobox("blocklen", gtext("Logical Block Length"), $pconfig['blocklen'], $a_blocklen, sprintf("%s %s", sprintf(gtext("You may specify logical block length (%d by default)."), 512), sprintf(gtext("The recommended length for compatibility is %d."), 512)), false, false, "");
+						html_combobox("blocklen", gtext("Logical Block"), $pconfig['blocklen'], $a_blocklen, sprintf(gtext("You may specify logical block size. (default is %dB for compatibility)."), 512), false, "");
 					else:?>
 						<input name="blocklen" type="hidden" value="512" />
 					<?php endif; ?>
