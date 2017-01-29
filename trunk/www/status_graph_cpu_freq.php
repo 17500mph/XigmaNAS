@@ -34,14 +34,17 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
+array_make_branch($config,'rrdgraphs');
+
+$rrd_cpu_freq = true;
 $refresh = 300;
 if(isset($config['rrdgraphs']['refresh_time'])):
 	if(!empty($config['rrdgraphs']['refresh_time'])):
 		$refresh = $config['rrdgraphs']['refresh_time'];
 	endif;
 endif;
-mwexec("/usr/local/share/rrdgraphs/rrd-graph.sh frequency",true);
-$pgtitle = [gtext("Status"), gtext("Monitoring"), gtext("CPU Frequency")];
+mwexec('/usr/local/share/rrdgraphs/rrd-graph.sh frequency',true);
+$pgtitle = [gtext('Status'),gtext('Monitoring'),gtext('CPU Frequency')];
 ?>
 <?php
 include 'fbegin.inc';
@@ -50,7 +53,7 @@ include 'fbegin.inc';
 <table id="area_navigator"><tbody>
 	<tr><td class="tabnavtbl"><ul id="tabnav">
 <?php
-		require 'status_graph_tabs.inc';
+		include 'status_graph_tabs.inc';
 ?>
 	</ul></td></tr>
 </tbody></table>
@@ -65,7 +68,7 @@ include 'fbegin.inc';
 ?>
 		</thead>
 		<tbody>
-			<tr><td><?=sprintf(gtext('Graph updates every %d seconds'),$refresh);?></td></tr>
+			<tr><td><?=sprintf(gtext('Graph updates every %d seconds.'),$refresh);?></td></tr>
 			<tr><td>
 				<div align="center" style="min-width:840px;">
 					<br>

@@ -31,55 +31,86 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Status"), gtext("Monitoring"), gtext("Network Traffic"));
+array_make_branch($config,'rrdgraphs');
 
 $rrd_lan = true;
-$refresh = !empty($config['rrdgraphs']['refresh_time']) ? $config['rrdgraphs']['refresh_time'] : 300;
-mwexec("/usr/local/share/rrdgraphs/rrd-graph.sh traffic", true);
-
-include("fbegin.inc");?>
+$refresh = 300;
+if(isset($config['rrdgraphs']['refresh_time'])):
+	if(!empty($config['rrdgraphs']['refresh_time'])):
+		$refresh = $config['rrdgraphs']['refresh_time'];
+	endif;
+endif;
+mwexec('/usr/local/share/rrdgraphs/rrd-graph.sh traffic',true);
+$pgtitle = [gtext('Status'),gtext('Monitoring'),gtext('Network Traffic')];
+?>
+<?php
+include 'fbegin.inc';
+?>
 <meta http-equiv="refresh" content="<?=$refresh?>">
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-<tr>
-	<td class="tabnavtbl">
-		<ul id="tabnav">
-<?php require("status_graph_tabs.inc");?>
-		</ul>
-	</td>
-</tr>
-<td class="tabcont">
-<form name="form2" action="status_graph_network.php" method="get">
-<?=sprintf(gtext("Graph updates every %d seconds"), $refresh);?>.&nbsp;<?=gtext("Selected interface:");?>&nbsp;&nbsp;&nbsp;
-<select name="if" class="formfld" onchange="submit()">
-	<?php
-		$curif = "lan";
-		if (isset($_GET['if']) && $_GET['if'])
-			$curif = $_GET['if'];
-		$ifnum = get_ifname($config['interfaces'][$curif]['if']);
-		$ifdescrs = array('lan' => 'LAN');
-		for ($j = 1; isset($config['interfaces']['opt' . $j]); $j++) {
-			$ifdescrs['opt' . $j] = $config['interfaces']['opt' . $j]['descr'];
-		}
-		foreach ($ifdescrs as $ifn => $ifd) {
-			echo "<option value=\"$ifn\"";
-			if ($ifn == $curif) echo " selected=\"selected\"";
-			echo ">" . htmlspecialchars($ifd) . "</option>\n";
-		}
-	?>
-</select>
-</form>
-<div align="center" style="min-width:840px;">
-	<br>
-	<img src="/images/rrd/rrd-<?=$ifnum;?>_daily.png?rand=<?=time()?>" alt="RRDGraphs Daily Bandwidth <?=$ifnum;?> Graph" width="graph_width" height="graph_height">
-	<br><br>
-	<img src="/images/rrd/rrd-<?=$ifnum;?>_weekly.png?rand=<?=time()?>" alt="RRDGraphs Weekly Bandwidth Graph" width="graph_width" height="graph_height">
-	<br><br>
-	<img src="/images/rrd/rrd-<?=$ifnum;?>_monthly.png?rand=<?=time()?>" alt="RRDGraphs Monthly Bandwidth Graph" width="graph_width" height="graph_height">
-	<br><br>
-	<img src="/images/rrd/rrd-<?=$ifnum;?>_yearly.png?rand=<?=time()?>" alt="RRDGraphs Yearly Bandwidth Graph" width="graph_width" height="graph_height">
-</div>
-</td></tr></table>
-<?php include("fend.inc");?>
+<table id="area_navigator"><tbody>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+<?php
+		include 'status_graph_tabs.inc';
+?>
+	</ul></td></tr>
+</tbody></table>
+<table id="area_data"><tbody><tr><td id="area_data_frame"><form name="form2" action="status_graph_network.php" method="get">
+	<table class="area_data_settings">
+		<colgroup>
+			<col style="width:100%">
+		</colgroup>
+		<thead>
+<?php
+			html_titleline(gtext('Network Traffic'),1);
+?>
+		</thead>
+		<tbody>
+			<tr><td>
+<?php
+				echo sprintf(gtext('Graph updates every %d seconds.'),$refresh);
+				echo '&nbsp;';
+				echo gtext('Selected interface:');
+				echo '&nbsp;&nbsp;&nbsp;';
+?>
+				<select name="if" class="formfld" onchange="submit()">
+<?php
+					$curif = "lan";
+					if(isset($_GET['if']) && $_GET['if']):
+						$curif = $_GET['if'];
+					endif;
+					$ifnum = get_ifname($config['interfaces'][$curif]['if']);
+					$ifdescrs = array('lan' => 'LAN');
+					for($j = 1;isset($config['interfaces']['opt' . $j]);$j++):
+						$ifdescrs['opt' . $j] = $config['interfaces']['opt' . $j]['descr'];
+					endfor;
+					foreach($ifdescrs as $ifn => $ifd):
+						echo '<option value="',$ifn,'"';
+						if($ifn == $curif):
+							echo ' selected="selected"';
+						endif;
+						echo '>',htmlspecialchars($ifd),'</option>',"\n";
+					endforeach;
+?>
+				</select>
+			</td></tr>
+			<tr><td>
+			<div align="center" style="min-width:840px;">
+				<br>
+				<img src="/images/rrd/rrd-<?=$ifnum;?>_daily.png?rand=<?=time()?>" alt="RRDGraphs Daily Bandwidth <?=$ifnum;?> Graph">
+				<br><br>
+				<img src="/images/rrd/rrd-<?=$ifnum;?>_weekly.png?rand=<?=time()?>" alt="RRDGraphs Weekly Bandwidth Graph">
+				<br><br>
+				<img src="/images/rrd/rrd-<?=$ifnum;?>_monthly.png?rand=<?=time()?>" alt="RRDGraphs Monthly Bandwidth Graph">
+				<br><br>
+				<img src="/images/rrd/rrd-<?=$ifnum;?>_yearly.png?rand=<?=time()?>" alt="RRDGraphs Yearly Bandwidth Graph">
+			</div>
+			</td></tr>
+		</tbody>
+	</table>
+</form></td></tr></tbody></table>
+<?php
+include 'fend.inc';
+?>
