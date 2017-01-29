@@ -135,7 +135,6 @@ if ($_POST) {
 	$nodebase = $_POST['nodebase'];
 	$nodebase = preg_replace('/\s/', '', $nodebase);
 	$pconfig['nodebase'] = $nodebase;
-
 	if (empty($input_errors)) {
 		$config['iscsitarget']['enable'] = isset($_POST['enable']) ? true : false;
 		$config['iscsitarget']['nodebase'] = $nodebase;
@@ -160,17 +159,16 @@ if ($_POST) {
 		$config['iscsitarget']['uctlauthmethod'] = $_POST['uctlauthmethod'];
 		$config['iscsitarget']['uctlauthgroup'] = $_POST['uctlauthgroup'];
 		$config['iscsitarget']['mediadirectory'] = $_POST['mediadirectory'];
-
 		write_config();
-
 		$retval = 0;
 		if (!file_exists($d_sysrebootreqd_path)) {
 			config_lock();
 			$retval |= rc_update_service("iscsi_target");
 			config_unlock();
 		}
-
 		$savemsg = get_std_save_message($retval);
+		header('Location: services_iscsitarget.php');
+		exit;
 	}
 }
 $pgtitle = [gtext('Services'),gtext("iSCSI Target")];
