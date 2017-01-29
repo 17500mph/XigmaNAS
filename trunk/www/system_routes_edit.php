@@ -39,12 +39,10 @@ if (isset($_GET['uuid']))
 if (isset($_POST['uuid']))
 	$uuid = $_POST['uuid'];
 
-$pgtitle = [gtext('Network'), gtext('Static Routes'), isset($uuid) ? gtext('Edit') : gtext('Add')];
+$pgtitle = [gtext('Network'),gtext('Static Routes'), isset($uuid) ? gtext('Edit') : gtext('Add')];
 
-if (!isset($config['staticroutes']['route']) || !is_array($config['staticroutes']['route']))
-	$config['staticroutes']['route'] = array();
-
-array_sort_key($config['staticroutes']['route'], "network");
+$a_routes = &array_make_branch($config,'staticroutes','route');
+array_sort_key($config['staticroutes']['route'],'network');
 $a_routes = &$config['staticroutes']['route'];
 
 if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_routes, "uuid")))) {
@@ -71,7 +69,7 @@ if ($_POST) {
 
 	// Input validation
 	$reqdfields = explode(" ", "interface network network_subnet gateway");
-	$reqdfieldsn = array(gtext("Interface"), gtext("Destination network"), gtext("Destination network bit count"), gtext("Gateway"));
+	$reqdfieldsn = [gtext('Interface'),gtext('Destination Network'),gtext('Destination network bit count'),gtext('Gateway')];
 	
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	
@@ -151,7 +149,7 @@ if ($_POST) {
 	<?php $interfaces = array('lan' => 'LAN'); for ($i = 1; isset($config['interfaces']['opt' . $i]); $i++) { $interfaces['opt' . $i] = $config['interfaces']['opt' . $i]['descr']; }?>
 	<?php html_combobox("interface", gtext("Interface"), !empty($pconfig['interface']) ? $pconfig['interface'] : "", $interfaces, gtext("Choose which interface this route applies to."), true);?>
 	<tr>
-	<td width="22%" valign="top" class="vncellreq"><?=gtext("Destination network");?></td>
+	<td width="22%" valign="top" class="vncellreq"><?=gtext("Destination Network");?></td>
 	<td width="78%" class="vtable"> 
 	<input name="network" type="text" class="formfld" id="network" size="20" value="<?=htmlspecialchars(!empty($pconfig['network']) ? $pconfig['network'] : "");?>" /> 
 	/
@@ -160,7 +158,7 @@ if ($_POST) {
 	<option value="<?=$i;?>" <?php if ($i == $pconfig['network_subnet']) echo "selected=\"selected\"";?>><?=$i;?></option>
 	<?php endfor;?>
 	</select>
-	<br /><span class="vexpl"><?=gtext("Destination network for this static route");?></span>
+	<br /><span class="vexpl"><?=gtext("Destination network for this static route.");?></span>
 	</td>
 	</tr>
 	<?php html_inputbox("gateway", gtext("Gateway"), $pconfig['gateway'], gtext("Gateway to be used to reach the destination network."), true, 40);?>

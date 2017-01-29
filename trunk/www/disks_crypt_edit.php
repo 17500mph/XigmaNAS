@@ -67,7 +67,7 @@ if ($_POST) {
 
 	// Input validation.
   $reqdfields = explode(" ", "disk ealgo passphrase passphraseconf");
-  $reqdfieldsn = array(gtext("Disk"),gtext("Encryption algorithm"),gtext("Passphrase"),gtext("Passphrase"));
+  $reqdfieldsn = [gtext('Disk'),gtext('Encryption algorithm'),gtext('Passphrase'),gtext('Passphrase')];
   do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 	// Check for duplicate disks.
@@ -180,7 +180,7 @@ function ealgo_change() {
 				<?php if (!empty($errormsg)) print_error_box($errormsg);?>
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
-				<?php html_titleline(gtext('Encryption Setup'));?>
+				<?php html_titleline(gtext('Encryption Settings'));?>
 			    <tr>
 			      <td valign="top" class="vncellreq"><?=gtext('Disk');?></td>
 			      <td class="vtable">
@@ -201,7 +201,7 @@ function ealgo_change() {
 					<?php
 					/* Remove Data Intergrity Algorithhm : there is a bug when enabled
 					<tr>
-						<td valign="top" class="vncellreq"><?=gtext("Data integrity algorithm");?></td>
+						<td valign="top" class="vncellreq"><?=gtext("Data Integrity Algorithm");?></td>
 			      <td class="vtable">
 			        <select name="aalgo" class="formfld" id="aalgo">
 								<option value="none" <?php if ($pconfig['aalgo'] === "none") echo "selected=\"selected\""; ?>>none</option>
@@ -217,9 +217,9 @@ function ealgo_change() {
 					*/
 					?>
 					<?php $options = array("AES" => "AES-XTS", "AES-CBC" => "AES-CBC", "Blowfish" => "Blowfish", "Camellia" => "Camellia", "3DES" => "3DES");?>
-					<?php html_combobox("ealgo", gtext("Encryption algorithm"), $pconfig['ealgo'], $options, gtext("Encryption algorithm to use."), true, false, "ealgo_change()");?>
+					<?php html_combobox("ealgo", gtext("Encryption Algorithm"), $pconfig['ealgo'], $options, gtext("Encryption algorithm to use."), true, false, "ealgo_change()");?>
 					<?php $options = array("" => gtext("Default"), 128 => "128", 192 => "192", 256 => "256", 448 => "448");?>
-					<?php html_combobox("keylen", gtext("Key length"), $pconfig['keylen'], $options, gtext("Key length to use with the given cryptographic algorithm.") . " " . gtext("The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and 192 for 3DES."), false);?>
+					<?php html_combobox("keylen", gtext("Key Length"), $pconfig['keylen'], $options, gtext("Key length to use with the given cryptographic algorithm.") . " " . gtext("The default key lengths are: 128 for AES, 128 for Blowfish, 128 for Camellia and 192 for 3DES."), false);?>
 					<?php html_passwordconfbox("passphrase", "passphraseconf", gtext("Passphrase"), "", "", "", true);?>
 					<?php html_checkbox("init", gtext("Initialize"), $pconfig['init'] ? true : false, gtext("Initialize and encrypt disk."), gtext("This will erase ALL data on your disk! Do not use this option if you want to add an existing encrypted disk."));?>
 			  </table>
