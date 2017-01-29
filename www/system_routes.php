@@ -34,7 +34,7 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-$pgtitle = [gtext('Network'), gtext('Static Routes')];
+$pgtitle = [gtext('Network'),gtext('Static Routes')];
 
 if ($_POST) {
 	$pconfig = $_POST;
@@ -52,11 +52,8 @@ if ($_POST) {
 	}
 }
 
-if (!isset($config['staticroutes']['route']) || !is_array($config['staticroutes']['route']))
-	$config['staticroutes']['route'] = array();
-
-array_sort_key($config['staticroutes']['route'], "network");
-$a_routes = &$config['staticroutes']['route'];
+$a_routes = &array_make_branch($config,'staticroutes','route');
+array_sort_key($config['staticroutes']['route'],'network');
 
 if (isset($_GET['act']) && $_GET['act'] === "del") {
 	updatenotify_set("routes", UPDATENOTIFY_MODE_DIRTY, $_GET['uuid']);
@@ -94,7 +91,7 @@ function routes_process_updatenotification($mode, $data) {
 				<?php if (!empty($savemsg)) print_info_box($savemsg); ?>
 				<?php if (updatenotify_exists("routes")) print_config_change_box();?>
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-				<?php html_titleline2(gtext('Static Routes'), 5);?>
+				<?php html_titleline2(gtext('Overview'), 5);?>
 				<tr>
 					<td width="15%" class="listhdrlr"><?=gtext("Interface");?></td>
 					<td width="25%" class="listhdrr"><?=gtext("Network");?></td>
