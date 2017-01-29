@@ -6,10 +6,6 @@
 	Copyright (c) 2012-2017 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
-	Portions of freenas (http://www.freenas.org).
-	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
-	All rights reserved.
-
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
@@ -49,7 +45,9 @@ if(is_ajax()):
 endif;
 $pgtitle = [gtext('Disks'),gtext('Software RAID'),gtext('JBOD'),gtext('Information')];
 ?>
-<?php include 'fbegin.inc';?>
+<?php
+include 'fbegin.inc';
+?>
 <script type="text/javascript">
 //<![CDATA[
 $(document).ready(function(){
@@ -68,9 +66,9 @@ $(document).ready(function(){
 		<li class="tabinact"><a href="disks_raid_gvinum.php"><span><?=gtext('RAID 0/1/5');?></span></a></li>
 	</ul></td></tr>
 	<tr><td class="tabnavtbl"><ul id="tabnav2">
-		<li class="tabinact"><a href="disks_raid_geom.php"><span><?=gtext('Management'); ?></span></a></li>
-		<li class="tabinact"><a href="disks_raid_gconcat_tools.php"><span><?=gtext('Maintenance'); ?></span></a></li>
-		<li class="tabact"><a href="disks_raid_gconcat_info.php" title="<?=gtext('Reload page');?>" ><span><?=gtext('Information');?></span></a></li>
+		<li class="tabinact"><a href="disks_raid_geom.php"><span><?=gtext('Management');?></span></a></li>
+		<li class="tabinact"><a href="disks_raid_gconcat_tools.php"><span><?=gtext('Maintenance');?></span></a></li>
+		<li class="tabact"><a href="disks_raid_gconcat_info.php" title="<?=gtext('Reload page');?>"><span><?=gtext('Information');?></span></a></li>
 	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
@@ -80,7 +78,9 @@ $(document).ready(function(){
 			<col class="area_data_settings_col_data">
 		</colgroup>
 		<thead>
-			<?php html_titleline(gtext('JBOD Information & Status'));?>
+<?php
+			html_titleline(gtext('JBOD Information & Status'));
+?>
 		</thead>
 		<tbody>
 			<tr>
@@ -92,4 +92,6 @@ $(document).ready(function(){
 		</tbody>
 	</table>
 </td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
+?>
