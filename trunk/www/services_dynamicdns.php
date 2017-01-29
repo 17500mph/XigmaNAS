@@ -144,7 +144,7 @@ function provider_change() {
 					<?php html_inputbox("updateperiod", gtext("Update period"), $pconfig['updateperiod'], gtext("How often the IP is checked. The period is in seconds (max. is 10 days)."), false, 20);?>
 					<?php html_inputbox("forcedupdateperiod", gtext("Forced update period"), $pconfig['forcedupdateperiod'], gtext("How often the IP is updated even if it is not changed. The period is in seconds (max. is 10 days)."), false, 20);?>
 					<?php html_checkbox("wildcard", gtext("Wildcard"), !empty($pconfig['wildcard']) ? true : false, gtext("Enable domain wildcarding."), "", false);?>
-					<?php html_textarea("auxparam", gtext("Auxiliary parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", sprintf(gtext("These parameters will be added to global settings in %s."), "inadyn.conf"), false, 65, 3, false, false);?>
+					<?php html_textarea("auxparam", gtext("Additional Parameters"), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : "", sprintf(gtext("These parameters will be added to global settings in %s."), "inadyn.conf"), false, 65, 3, false, false);?>
 			  </table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save & Restart");?>" onclick="enable_change(true)" />

@@ -274,7 +274,7 @@ function adisk_change() {
 					. '" target="_blank">'
 					. gtext('Please check the documentation')
 					. '</a>.';
-					html_textarea("auxparam", gtext("Auxiliary Parameters"), $pconfig['auxparam'], sprintf(gtext("Add any supplemental parameters.")) . " " . $helpinghand, false, 65, 5, false, false);
+					html_textarea("auxparam", gtext("Additional Parameters"), $pconfig['auxparam'], sprintf(gtext("Add any supplemental parameters.")) . " " . $helpinghand, false, 65, 5, false, false);
 					?>
 			</tr>
 			</table>

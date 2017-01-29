@@ -351,7 +351,7 @@ function webguiproto_change() {
 						. '" target="_blank">'
 						. gtext('Please check the documentation')
 						. '</a>.';
-					html_textarea('auxparam', gtext('Auxiliary Parameters'), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : '', sprintf(gtext('These parameters will be added to %s.'), 'lighttpd.conf')  . ' ' . $helpinghand, false, 85, 7, false, false);
+					html_textarea('auxparam', gtext('Additional Parameters'), !empty($pconfig['auxparam']) ? $pconfig['auxparam'] : '', sprintf(gtext('These parameters will be added to %s.'), 'lighttpd.conf')  . ' ' . $helpinghand, false, 85, 7, false, false);
 					html_separator();
 					?>
 					<tr>
