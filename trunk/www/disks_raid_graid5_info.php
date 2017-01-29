@@ -80,7 +80,7 @@ $(document).ready(function(){
 		</colgroup>
 		<thead>
 <?php
-			html_titleline(gtext('RAID 5 Information & Status'));
+			html_titleline2(gtext('RAID 5 Information & Status'));
 ?>
 		</thead>
 		<tbody>

@@ -6,10 +6,6 @@
 	Copyright (c) 2012-2017 The NAS4Free Project <info@nas4free.org>.
 	All rights reserved.
 
-	Portions of freenas (http://www.freenas.org).
-	Copyright (c) 2005-2011 by Olivier Cochard <olivier@freenas.org>.
-	All rights reserved.
-
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
 
@@ -42,10 +38,10 @@ function disks_raid_gmirror_info_ajax() {
 	exec("/sbin/gmirror list",$rawdata);
 	return implode("\n",$rawdata);
 }
-if (is_ajax()) {
+if(is_ajax()):
 	$status = disks_raid_gmirror_info_ajax();
 	render_ajax($status);
-}
+endif;
 $pgtitle = [gtext('Disks'),gtext('Software RAID'),gtext('RAID1'),gtext('Information')];
 ?>
 <?php
@@ -80,7 +76,7 @@ $(document).ready(function(){
 		</colgroup>
 		<thead>
 <?php
-			html_titleline(gtext('RAID 1 Information & Status'));
+			html_titleline2(gtext('RAID 1 Information & Status'));
 ?>
 		</thead>
 		<tbody>
