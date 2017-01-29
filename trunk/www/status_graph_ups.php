@@ -31,36 +31,59 @@
 	of the authors and should not be interpreted as representing official policies,
 	either expressed or implied, of the NAS4Free Project.
 */
-require("auth.inc");
-require("guiconfig.inc");
+require 'auth.inc';
+require 'guiconfig.inc';
 
-$pgtitle = array(gtext("Status"), gtext("Monitoring"), gtext("UPS"));
+array_make_branch($config,'rrdgraphs');
+
 $rrd_ups = true;
-
-$refresh = !empty($config['rrdgraphs']['refresh_time']) ? $config['rrdgraphs']['refresh_time'] : 300;
-mwexec("/usr/local/share/rrdgraphs/rrd-graph.sh ups", true);
-
-include("fbegin.inc");?>
+$refresh = 300;
+if(isset($config['rrdgraphs']['refresh_time'])):
+	if(!empty($config['rrdgraphs']['refresh_time'])):
+		$refresh = $config['rrdgraphs']['refresh_time'];
+	endif;
+endif;
+mwexec('/usr/local/share/rrdgraphs/rrd-graph.sh ups',true);
+$pgtitle = [gtext('Status'),gtext('Monitoring'),gtext('UPS')];
+?>
+<?php
+include 'fbegin.inc';
+?>
 <meta http-equiv="refresh" content="<?=$refresh?>">
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-<tr>
-	<td class="tabnavtbl">
-		<ul id="tabnav">
-<?php require("status_graph_tabs.inc");?>
-		</ul>
-	</td>
-</tr>
-<td class="tabcont">
-<?=sprintf(gtext("Graph updates every %d seconds"), $refresh);?>
-<div align="center" style="min-width:840px;">
-	<br>
-	<img src="/images/rrd/rrd-ups_daily.png?rand=<?=time()?>" alt="RRDGraphs Daily UPS Graph" width="graph_width" height="graph_height">
-	<br><br>
-	<img src="/images/rrd/rrd-ups_weekly.png?rand=<?=time()?>" alt="RRDGraphs Weekly UPS Graph" width="graph_width" height="graph_height">
-	<br><br>
-	<img src="/images/rrd/rrd-ups_monthly.png?rand=<?=time()?>" alt="RRDGraphs Monthly UPS Graph" width="graph_width" height="graph_height">
-	<br><br>
-	<img src="/images/rrd/rrd-ups_yearly.png?rand=<?=time()?>" alt="RRDGraphs Yearly UPS Graph" width="graph_width" height="graph_height">
-</div>
-</td></tr></table>
-<?php include("fend.inc");?>
+<table id="area_navigator"><tbody>
+	<tr><td class="tabnavtbl"><ul id="tabnav">
+<?php
+		include 'status_graph_tabs.inc';
+?>
+	</ul></td></tr>
+</tbody></table>
+<table id="area_data"><tbody><tr><td id="area_data_frame">
+	<table class="area_data_settings">
+		<colgroup>
+			<col style="width:100%">
+		</colgroup>
+		<thead>
+<?php
+			html_titleline(gtext('UPS'),1);
+?>
+		</thead>
+		<tbody>
+			<tr><td><?=sprintf(gtext('Graph updates every %d seconds.'),$refresh);?></td></tr>
+			<tr><td>
+				<div align="center" style="min-width:840px;">
+					<br>
+					<img src="/images/rrd/rrd-ups_daily.png?rand=<?=time()?>" alt="RRDGraphs Daily UPS Graph">
+					<br><br>
+					<img src="/images/rrd/rrd-ups_weekly.png?rand=<?=time()?>" alt="RRDGraphs Weekly UPS Graph">
+					<br><br>
+					<img src="/images/rrd/rrd-ups_monthly.png?rand=<?=time()?>" alt="RRDGraphs Monthly UPS Graph">
+					<br><br>
+					<img src="/images/rrd/rrd-ups_yearly.png?rand=<?=time()?>" alt="RRDGraphs Yearly UPS Graph">
+				</div>
+			</td></tr>
+		</tbody>
+	</table>
+</td></tr></tbody></table>
+<?php
+include 'fend.inc';
+?>

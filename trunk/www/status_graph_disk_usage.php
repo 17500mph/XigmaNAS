@@ -92,7 +92,7 @@ include 'fbegin.inc';
 		</colgroup>
 		<thead>
 <?php
-			html_titleline(gtext('CPU Temperature'),1);
+			html_titleline(gtext('Disk Usage'),1);
 ?>
 		</thead>
 		<tbody>
