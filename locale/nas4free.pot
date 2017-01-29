@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
-"POT-Creation-Date: 2017-01-28 08:24+0000\n"
+"POT-Creation-Date: 2017-01-29 11:35+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -69,10 +69,6 @@ msgstr ""
 
 #, php-format
 msgid "%s is too long."
-msgstr ""
-
-#, php-format
-msgid "%s must be enabled for Unison to work, and the %s must have shell access."
 msgstr ""
 
 #, php-format
@@ -155,16 +151,7 @@ msgstr ""
 msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr ""
 
-msgid "A Auth Group contains authorised users and secrets for additional security."
-msgstr ""
-
-msgid "A Initiator Group contains authorised initiator names and networks to access the target."
-msgstr ""
-
 msgid "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
-msgstr ""
-
-msgid "A Portal Group contains IP addresses and listening TCP ports to connect the target from the initiator."
 msgstr ""
 
 msgid "A Portal Group is identified by a tag number and defines IP addresses and listening TCP ports."
@@ -174,7 +161,7 @@ msgstr ""
 msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr ""
 
-msgid "A directory listing is generated if a directory is requested and no index-file (index.php, index.html, index.htm or default.htm) was found in that directory."
+msgid "A directory listing is generated when no index-files (index.php, index.html, index.htm or default.htm) are found in a directory."
 msgstr ""
 
 msgid "A host name alias. This option can appear multiple times, for each domain that has the same IP. Use a space to separate multiple alias names."
@@ -342,9 +329,6 @@ msgstr ""
 msgid "Active Directory"
 msgstr ""
 
-msgid "Active Directory List"
-msgstr ""
-
 msgid "Active Shares"
 msgstr ""
 
@@ -480,10 +464,10 @@ msgstr ""
 msgid "Additional Network"
 msgstr ""
 
-msgid "Additional Storage"
+msgid "Additional Parameters"
 msgstr ""
 
-msgid "Additional parameters to the hardware-specific part of the driver for second UPS."
+msgid "Additional Storage"
 msgstr ""
 
 msgid "Additional parameters to the hardware-specific part of the driver."
@@ -652,7 +636,7 @@ msgstr ""
 msgid "Always On"
 msgstr ""
 
-msgid "Always scan"
+msgid "Always Scan"
 msgstr ""
 
 msgid "Ambient Conditions From External Probe Equipment"
@@ -791,6 +775,9 @@ msgstr ""
 msgid "Auth Groups"
 msgstr ""
 
+msgid "Auth Groups contains authorised users and secrets for additional security."
+msgstr ""
+
 msgid "Auth Method"
 msgstr ""
 
@@ -851,16 +838,7 @@ msgstr ""
 msgid "Autoselect"
 msgstr ""
 
-msgid "Auxiliary Parameter"
-msgstr ""
-
-msgid "Auxiliary Parameters"
-msgstr ""
-
 msgid "Auxiliary device firmware"
-msgstr ""
-
-msgid "Auxiliary parameters"
 msgstr ""
 
 msgid "Avail"
@@ -969,6 +947,9 @@ msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
 
 msgid "Before - File-deletions will be performed before the transfer starts."
+msgstr ""
+
+msgid "Before a Unison Client can start to work, you need to perform the following:"
 msgstr ""
 
 msgid "Best available"
@@ -1086,7 +1067,7 @@ msgstr ""
 msgid "CIFS/SMB Information"
 msgstr ""
 
-msgid "CIFS/SMB disabled"
+msgid "CIFS/SMB is disabled."
 msgstr ""
 
 msgid "CIFS/SMB is enabled."
@@ -1343,7 +1324,7 @@ msgstr ""
 msgid "Community"
 msgstr ""
 
-msgid "Compilations directories"
+msgid "Compilations Directories"
 msgstr ""
 
 msgid "Compiled"
@@ -2390,7 +2371,7 @@ msgstr ""
 msgid "Do you want to toggle selected options?"
 msgstr ""
 
-msgid "Document root"
+msgid "Document Root"
 msgstr ""
 
 msgid "Document root of the webserver. Home of the web page files."
@@ -2402,13 +2383,13 @@ msgstr ""
 msgid "Domain"
 msgstr ""
 
+msgid "Domain Name"
+msgstr ""
+
 msgid "Domain controller name"
 msgstr ""
 
 msgid "Domain is missing 2nd level name."
-msgstr ""
-
-msgid "Domain name"
 msgstr ""
 
 msgid "Domain name (DNS/Realm-Name)"
@@ -2822,6 +2803,9 @@ msgstr ""
 msgid "Enable serial console."
 msgstr ""
 
+msgid "Enable service SSH when disabled"
+msgstr ""
+
 msgid "Enable shadow copy."
 msgstr ""
 
@@ -2950,13 +2934,13 @@ msgstr ""
 msgid "Enter the passphrase that will be used in WPA-PSK mode. This must be between 8 and 63 characters long."
 msgstr ""
 
+msgid "Enter the path to the database directory. The config files will be created under the specified directory."
+msgstr ""
+
 msgid "Enter the path to the home directory of VirtualBox. VM config and HDD image will be created under the specified directory."
 msgstr ""
 
 msgid "Enter the path to the home directory of that user. Leave this field empty to use default path /mnt."
-msgstr ""
-
-msgid "Enter the path to the home directory. The config will be created under the specified directory."
 msgstr ""
 
 msgid "Enter the path to the home directory. This directory will store the statistical data and gets updated every 5 minutes!"
@@ -3271,7 +3255,7 @@ msgstr ""
 msgid "Force use"
 msgstr ""
 
-msgid "Forced update period"
+msgid "Forced Update Period"
 msgstr ""
 
 msgid "Forces use of vdevs, even if they appear in use or specify different size. (This is not recommended.)"
@@ -3413,6 +3397,9 @@ msgstr ""
 msgid "Group Allow"
 msgstr ""
 
+msgid "Group Compilations"
+msgstr ""
+
 msgid "Group ID"
 msgstr ""
 
@@ -3420,9 +3407,6 @@ msgid "Group Settings"
 msgstr ""
 
 msgid "Group Suffix"
-msgstr ""
-
-msgid "Group compilations"
 msgstr ""
 
 msgid "Group is locked"
@@ -3820,6 +3804,9 @@ msgstr ""
 msgid "Initiator Groups"
 msgstr ""
 
+msgid "Initiator Groups contains authorised initiator names and networks to access the target."
+msgstr ""
+
 msgid "Initiator authorised to access to the iSCSI target.  It takes a name or 'ALL' for any initiators."
 msgstr ""
 
@@ -4209,7 +4196,10 @@ msgid "Location where the content database file will be stored."
 msgstr ""
 
 #, php-format
-msgid "Location where the working files will be stored, e.g. %s/backup/.unison"
+msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
+msgstr ""
+
+msgid "Locked Files"
 msgstr ""
 
 msgid "Log"
@@ -4236,7 +4226,7 @@ msgstr ""
 msgid "Logarithmic Scaling"
 msgstr ""
 
-msgid "Logical Block Length"
+msgid "Logical Block"
 msgstr ""
 
 #, php-format
@@ -4395,16 +4385,13 @@ msgstr ""
 msgid "Max. Passive Port"
 msgstr ""
 
+msgid "Max. Sessions"
+msgstr ""
+
 msgid "Max. TTL"
 msgstr ""
 
-msgid "Max. connections"
-msgstr ""
-
 msgid "Max. pre-send R2T"
-msgstr ""
-
-msgid "Max. sessions"
 msgstr ""
 
 msgid "Max. time-to-live (max. number of hops) used in outgoing probe packets."
@@ -5286,6 +5273,9 @@ msgstr ""
 msgid "Permanent samba data path (e.g. %s)."
 msgstr ""
 
+msgid "Permission"
+msgstr ""
+
 msgid "Permit Root Login"
 msgstr ""
 
@@ -5456,6 +5446,9 @@ msgid "Portal Group Settings"
 msgstr ""
 
 msgid "Portal Groups"
+msgstr ""
+
+msgid "Portal Groups contains IP addresses and listening on TCP ports to connect the target from the initiator."
 msgstr ""
 
 msgid "Portals"
@@ -5798,7 +5791,7 @@ msgstr ""
 msgid "Remote Module (Source)"
 msgstr ""
 
-msgid "Remote Rsync Saemon"
+msgid "Remote Rsync Daemon"
 msgstr ""
 
 msgid "Remote Rsync Server"
@@ -5872,6 +5865,9 @@ msgid "Rescan"
 msgstr ""
 
 msgid "Rescan Disks"
+msgstr ""
+
+msgid "Rescan Interval"
 msgstr ""
 
 msgid "Rescan interval"
@@ -5994,9 +5990,6 @@ msgstr ""
 msgid "Rules"
 msgstr ""
 
-msgid "Run as"
-msgstr ""
-
 msgid "Run now"
 msgstr ""
 
@@ -6006,7 +5999,7 @@ msgstr ""
 msgid "Running"
 msgstr ""
 
-msgid "Running the service as user root is not recommended for security reasons, use at your own risk!"
+msgid "Running this service as root is not recommended for security reasons, use at your own risk!"
 msgstr ""
 
 msgid "Russian"
@@ -6060,9 +6053,6 @@ msgstr ""
 msgid "SSH events"
 msgstr ""
 
-msgid "SSHD"
-msgstr ""
-
 msgid "SSHD log"
 msgstr ""
 
@@ -6110,10 +6100,10 @@ msgstr ""
 msgid "Scan Targets"
 msgstr ""
 
-msgid "Scan file system every N seconds to see if any files have been added or removed. Set to 0 to disable background scanning. If background rescanning is disabled, a scan can still be forced from the status page of the administrative web interface."
+msgid "Scan Type"
 msgstr ""
 
-msgid "Scan type"
+msgid "Scan file system every N seconds to see if any files have been added or removed. Set to 0 to disable background scanning. If background rescanning is disabled, a scan can still be forced from the status page of the administrative web interface."
 msgstr ""
 
 msgid "Schedule Time"
@@ -6251,6 +6241,9 @@ msgstr ""
 msgid "Select the location closest to you."
 msgstr ""
 
+msgid "Select the permission for running this service. (www by default)."
+msgstr ""
+
 msgid "Select the server configuration encrypted GZIP file or XML file and click the button below to restore the configuration."
 msgstr ""
 
@@ -6344,9 +6337,6 @@ msgstr ""
 msgid "Server information"
 msgstr ""
 
-msgid "Server name"
-msgstr ""
-
 msgid "Server version"
 msgstr ""
 
@@ -6393,9 +6383,6 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
 
-msgid "Set under which user the service should run (www by default)."
-msgstr ""
-
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
 
@@ -6406,6 +6393,9 @@ msgid "Sets the umask for newly created files to the specified value. The defaul
 msgstr ""
 
 msgid "Settings"
+msgstr ""
+
+msgid "Setup user to get shell access"
 msgstr ""
 
 msgid "Shadow Copy"
@@ -6480,13 +6470,16 @@ msgstr ""
 msgid "Size of send buffer (%d by default)."
 msgstr ""
 
+msgid "Size offered to the initiator. (up to 8EiB=8388608TiB)."
+msgstr ""
+
 msgid "Size offered to the initiator. (up to 8EiB=8388608TiB. actual size is depend on your disks.)"
 msgstr ""
 
 msgid "Skew"
 msgstr ""
 
-msgid "Skip first scan"
+msgid "Skip First Scan"
 msgstr ""
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
@@ -6859,6 +6852,9 @@ msgstr ""
 msgid "Tag"
 msgstr ""
 
+msgid "Tag Number"
+msgstr ""
+
 msgid "Tag number"
 msgstr ""
 
@@ -6999,6 +6995,9 @@ msgid "The VLAN ID must be between 1 and 4094."
 msgstr ""
 
 msgid "The action which will be executed when the packet match the criteria specified below."
+msgstr ""
+
+msgid "The actual size is depend on your disks."
 msgstr ""
 
 msgid "The administrator has been notified to apply your changes."
@@ -7426,10 +7425,6 @@ msgid "The queuedepth range is invalid."
 msgstr ""
 
 #, php-format
-msgid "The recommended length for compatibility is %d."
-msgstr ""
-
-#, php-format
 msgid "The recommended queue depth is %d."
 msgstr ""
 
@@ -7525,10 +7520,10 @@ msgstr ""
 msgid "The volume must be detached before it can be deleted."
 msgstr ""
 
-msgid "The workgroup in which the server will appear when queried by Windows or SMB clients. (maximum 15 characters)."
+msgid "The work directory does not exist."
 msgstr ""
 
-msgid "The working directory does not exist."
+msgid "The workgroup in which the server will appear when queried by Windows or SMB clients. (maximum 15 characters)."
 msgstr ""
 
 msgid "There are too many additional groups."
@@ -7583,6 +7578,12 @@ msgstr ""
 
 #, php-format
 msgid "These parameters are added to [Share] section of %s."
+msgstr ""
+
+msgid "These parameters are added to the hardware-specific part of the driver for the second UPS."
+msgstr ""
+
+msgid "These parameters are added to the hardware-specific part of the driver."
 msgstr ""
 
 #, php-format
@@ -8241,6 +8242,9 @@ msgstr ""
 msgid "Up"
 msgstr ""
 
+msgid "Update Period"
+msgstr ""
+
 msgid "Update period"
 msgstr ""
 
@@ -8253,7 +8257,7 @@ msgstr ""
 msgid "Upload Bandwidth"
 msgstr ""
 
-msgid "Upload directory"
+msgid "Upload Directory"
 msgstr ""
 
 #, php-format
@@ -8635,13 +8639,10 @@ msgstr ""
 msgid "Wireless configuration"
 msgstr ""
 
+msgid "Work Directory"
+msgstr ""
+
 msgid "Workgroup"
-msgstr ""
-
-msgid "Working Directory"
-msgstr ""
-
-msgid "Working directory"
 msgstr ""
 
 msgid "Write"
@@ -8713,7 +8714,7 @@ msgid "You may specify as SCSI INQUIRY data. Empty as default. (up to %d ASCII c
 msgstr ""
 
 #, php-format
-msgid "You may specify logical block length (%d by default)."
+msgid "You may specify logical block size. (default is %dB for compatibility)."
 msgstr ""
 
 msgid "You must add at least a Portal Group, an Initiator Group and an Extent before you can configure a Target."
@@ -8949,9 +8950,6 @@ msgid "to"
 msgstr ""
 
 msgid "umount"
-msgstr ""
-
-msgid "user"
 msgstr ""
 
 msgid "week days"
