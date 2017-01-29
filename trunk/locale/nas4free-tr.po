@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-28 02:17+0000\n"
+"POT-Creation-Date: 2017-01-29 13:11+0000\n"
 "PO-Revision-Date: 2016-08-31 21:50+0000\n"
 "Last-Translator: Mustafa DAĞCI <mustafa.matrix@gmail.com>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-28 01:57+0000\n"
+"X-Launchpad-Export-Date: 2017-01-29 12:22+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
@@ -76,11 +76,6 @@ msgstr "%s zaten bölüm olarak ayarlandı."
 #, php-format
 msgid "%s is too long."
 msgstr "%s çok uzun."
-
-#, php-format
-msgid ""
-"%s must be enabled for Unison to work, and the %s must have shell access."
-msgstr ""
 
 #, php-format
 msgid "%s of %sB"
@@ -181,28 +176,10 @@ msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN etiketi (1 ve 4094 arası)."
 
 msgid ""
-"A Auth Group contains authorised users and secrets for additional security."
-msgstr ""
-"Bir Auth Group yetkili kullanıcıları ve ek güvenlik için sırları içerir."
-
-msgid ""
-"A Initiator Group contains authorised initiator names and networks to access "
-"the target."
-msgstr ""
-"Initiator Grubu hedef erişimine isim ve ağları için yetkileri içerir."
-
-msgid ""
 "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
 msgstr ""
 "Bir NTP saat sunucu adı sadece a'dan z'ye harf 0'dan 9'a rakam \"-\" ve "
 "\".\" içerebilir."
-
-msgid ""
-"A Portal Group contains IP addresses and listening TCP ports to connect the "
-"target from the initiator."
-msgstr ""
-"Hedefe bağlanmak için Portal grubunun Ip adreslerini içerir ve Tcp "
-"portlarını dinler."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -214,9 +191,8 @@ msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr "etiketi %s olan VLAN zaten bu arabirimde tanımlanır."
 
 msgid ""
-"A directory listing is generated if a directory is requested and no index-"
-"file (index.php, index.html, index.htm or default.htm) was found in that "
-"directory."
+"A directory listing is generated when no index-files (index.php, index.html, "
+"index.htm or default.htm) are found in a directory."
 msgstr ""
 
 msgid ""
@@ -373,9 +349,6 @@ msgstr "Erişim Kısıtlamaları"
 msgid "Access Time (atime)"
 msgstr "Erişim Zamanı"
 
-msgid "Access mode"
-msgstr "Erişim Modu"
-
 msgid "Access the webGUI with the new IP address"
 msgstr ""
 
@@ -403,9 +376,6 @@ msgstr ""
 
 msgid "Active Directory"
 msgstr "Active Directory"
-
-msgid "Active Directory List"
-msgstr ""
 
 msgid "Active Shares"
 msgstr ""
@@ -542,12 +512,10 @@ msgstr ""
 msgid "Additional Network"
 msgstr ""
 
-msgid "Additional Storage"
+msgid "Additional Parameters"
 msgstr ""
 
-msgid ""
-"Additional parameters to the hardware-specific part of the driver for second "
-"UPS."
+msgid "Additional Storage"
 msgstr ""
 
 msgid "Additional parameters to the hardware-specific part of the driver."
@@ -634,6 +602,9 @@ msgstr ""
 msgid "All"
 msgstr "Tümü"
 
+msgid "All Dirs"
+msgstr ""
+
 msgid "All data from the following statistics have been deleted:"
 msgstr ""
 
@@ -644,9 +615,6 @@ msgstr ""
 
 msgid "All data will be lost when you activate this option!"
 msgstr ""
-
-msgid "All dirs"
-msgstr "Tüm Dizinler"
 
 #, php-format
 msgid "All dirs requires mounted path, but Path %s is not mounted."
@@ -664,14 +632,14 @@ msgstr ""
 msgid "All software raid disks are imported."
 msgstr ""
 
-msgid "All users will have the root privilege."
-msgstr "Tüm kullanıcılar root hakkına sahip olacak."
-
 msgid "Alloc"
 msgstr ""
 
 msgid "Allow"
 msgstr "İzin ver"
+
+msgid "Allow New Files"
+msgstr ""
 
 msgid "Allow TLS connections only."
 msgstr ""
@@ -686,9 +654,6 @@ msgstr ""
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr ""
 "Kullanıcıların yükleme ve indirmelerini durdurup devam etmelerine izin ver."
-
-msgid "Allow new files"
-msgstr "Yeni dosyalara izin ver"
 
 msgid "Allow new files to be created."
 msgstr "Yeni dosyalar oluşturulmasına izin ver."
@@ -732,11 +697,8 @@ msgstr "AltRoot"
 msgid "Alternate Data Streams"
 msgstr ""
 
-msgid "Alternate TCP port. Default is 22"
-msgstr "Varsayılan alternatif TCP Port 22'dir."
-
-msgid "Alternate TCP port. Default is 873"
-msgstr "Varsayılan Alternatif TCP port 873'tür."
+msgid "Alternate TCP port. (Default is 873)."
+msgstr ""
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr "Alternaif yapılandırma dizini (genelde boştur)"
@@ -747,8 +709,8 @@ msgstr ""
 msgid "Always On"
 msgstr ""
 
-msgid "Always scan"
-msgstr "Her zaman tara"
+msgid "Always Scan"
+msgstr ""
 
 msgid "Ambient Conditions From External Probe Equipment"
 msgstr ""
@@ -906,6 +868,10 @@ msgstr ""
 msgid "Auth Groups"
 msgstr "Doğrulama Gruplar"
 
+msgid ""
+"Auth Groups contains authorised users and secrets for additional security."
+msgstr ""
+
 msgid "Auth Method"
 msgstr "Doğrulama Methodu"
 
@@ -930,6 +896,9 @@ msgid "Authentication"
 msgstr "Kimlik Denetimi"
 
 msgid "Authentication Method"
+msgstr ""
+
+msgid "Authorised Network"
 msgstr ""
 
 msgid "Authorised network"
@@ -965,17 +934,8 @@ msgstr ""
 msgid "Autoselect"
 msgstr "Otomatik seçim"
 
-msgid "Auxiliary Parameter"
-msgstr ""
-
-msgid "Auxiliary Parameters"
-msgstr ""
-
 msgid "Auxiliary device firmware"
 msgstr ""
-
-msgid "Auxiliary parameters"
-msgstr "Yardımcı Parametreler"
 
 msgid "Avail"
 msgstr ""
@@ -1088,6 +1048,10 @@ msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
 
 msgid "Before - File-deletions will be performed before the transfer starts."
+msgstr ""
+
+msgid ""
+"Before a Unison Client can start to work, you need to perform the following:"
 msgstr ""
 
 msgid "Best available"
@@ -1211,8 +1175,8 @@ msgstr "CIFS/SMB"
 msgid "CIFS/SMB Information"
 msgstr ""
 
-msgid "CIFS/SMB disabled"
-msgstr "CIFS/SMB etkin değil"
+msgid "CIFS/SMB is disabled."
+msgstr ""
 
 msgid "CIFS/SMB is enabled."
 msgstr ""
@@ -1479,7 +1443,7 @@ msgstr "Ortak İnternet Dosya Sistemi"
 msgid "Community"
 msgstr "Topluluk"
 
-msgid "Compilations directories"
+msgid "Compilations Directories"
 msgstr ""
 
 msgid "Compiled"
@@ -2191,9 +2155,6 @@ msgstr "Bu statik Roue için hedef network"
 msgid "Destination port"
 msgstr "Hedef port"
 
-msgid "Destination share"
-msgstr "Hedef Paylaşım"
-
 msgid "Destroy a pool"
 msgstr ""
 
@@ -2646,7 +2607,7 @@ msgstr ""
 msgid "Do you want to toggle selected options?"
 msgstr ""
 
-msgid "Document root"
+msgid "Document Root"
 msgstr ""
 
 msgid "Document root of the webserver. Home of the web page files."
@@ -2658,14 +2619,14 @@ msgstr ""
 msgid "Domain"
 msgstr "Alan Adı"
 
+msgid "Domain Name"
+msgstr ""
+
 msgid "Domain controller name"
 msgstr ""
 
 msgid "Domain is missing 2nd level name."
 msgstr ""
-
-msgid "Domain name"
-msgstr "Alan adı"
 
 msgid "Domain name (DNS/Realm-Name)"
 msgstr "Domain adı (DNS/Realm-Name)"
@@ -3091,6 +3052,9 @@ msgstr ""
 msgid "Enable serial console."
 msgstr ""
 
+msgid "Enable service SSH when disabled"
+msgstr ""
+
 msgid "Enable shadow copy."
 msgstr ""
 
@@ -3180,8 +3144,18 @@ msgstr ""
 
 #, php-format
 msgid ""
-"Enter a custom port number if you want to override the default port. Default "
-"port is %s."
+"Enter a custom port number if you want to override the default port. "
+"(Default is %s)."
+msgstr ""
+
+msgid ""
+"Enter a custom port number if you want to override the default port. "
+"(Default is 22)."
+msgstr ""
+
+msgid ""
+"Enter a custom port number if you want to override the default port. "
+"(Default is 69). "
 msgstr ""
 
 msgid "Enter a description"
@@ -3226,6 +3200,11 @@ msgid ""
 msgstr ""
 
 msgid ""
+"Enter the path to the database directory. The config files will be created "
+"under the specified directory."
+msgstr ""
+
+msgid ""
 "Enter the path to the home directory of VirtualBox. VM config and HDD image "
 "will be created under the specified directory."
 msgstr ""
@@ -3233,11 +3212,6 @@ msgstr ""
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
-msgstr ""
-
-msgid ""
-"Enter the path to the home directory. The config will be created under the "
-"specified directory."
 msgstr ""
 
 msgid ""
@@ -3567,8 +3541,8 @@ msgstr ""
 msgid "Force use"
 msgstr ""
 
-msgid "Forced update period"
-msgstr "Periyodik olarak güncellemeye zorla"
+msgid "Forced Update Period"
+msgstr ""
 
 msgid ""
 "Forces use of vdevs, even if they appear in use or specify different size. "
@@ -3711,6 +3685,9 @@ msgstr "Grup"
 msgid "Group Allow"
 msgstr ""
 
+msgid "Group Compilations"
+msgstr ""
+
 msgid "Group ID"
 msgstr "Grup Kimliği"
 
@@ -3718,9 +3695,6 @@ msgid "Group Settings"
 msgstr ""
 
 msgid "Group Suffix"
-msgstr ""
-
-msgid "Group compilations"
 msgstr ""
 
 msgid "Group is locked"
@@ -3877,12 +3851,6 @@ msgstr ""
 
 msgid "Hosts Setup"
 msgstr ""
-
-msgid "Hosts allow"
-msgstr "Bilgisayarlara izin ver"
-
-msgid "Hosts deny"
-msgstr "Bilgisayarlara reddet"
 
 msgid "Hour"
 msgstr ""
@@ -4163,6 +4131,11 @@ msgstr ""
 
 msgid "Initiator Groups"
 msgstr "Başlatıcı Gruplar"
+
+msgid ""
+"Initiator Groups contains authorised initiator names and networks to access "
+"the target."
+msgstr ""
 
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
@@ -4575,12 +4548,6 @@ msgstr ""
 msgid "Local User"
 msgstr "Yerel Kullanıcı"
 
-msgid "Local share (destination)"
-msgstr "Yerel paylaşım (hedef)"
-
-msgid "Local shares to be synchronized"
-msgstr "Senkronize edilmiş olan paylaşımların listesi"
-
 msgid "Location"
 msgstr "Konum"
 
@@ -4601,8 +4568,10 @@ msgid "Location where the content database file will be stored."
 msgstr ""
 
 #, php-format
-msgid ""
-"Location where the working files will be stored, e.g. %s/backup/.unison"
+msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
+msgstr ""
+
+msgid "Locked Files"
 msgstr ""
 
 msgid "Log"
@@ -4629,8 +4598,8 @@ msgstr ""
 msgid "Logarithmic Scaling"
 msgstr ""
 
-msgid "Logical Block Length"
-msgstr "Matıksal Blok Uzunluğu"
+msgid "Logical Block"
+msgstr ""
 
 #, php-format
 msgid "Logical Unit Controller Authorised network (%s by default)"
@@ -4742,14 +4711,17 @@ msgstr "Üretici"
 msgid "Manufacturing date"
 msgstr ""
 
-msgid "Map all users to root"
-msgstr "Tüm kullanıcıları roota yönlendir"
+msgid "Map all users to root, all users will have root privileges."
+msgstr ""
 
 msgid "Map to Guest"
 msgstr ""
 
-msgid "Map to user"
-msgstr "Kullanıcıya yönlendir"
+msgid "Map to Root"
+msgstr ""
+
+msgid "Map to User"
+msgstr ""
 
 msgid "Mapping DOS Attributes"
 msgstr ""
@@ -4771,7 +4743,13 @@ msgstr ""
 msgid "Max Entries"
 msgstr ""
 
+msgid "Max. Block Size"
+msgstr ""
+
 msgid "Max. Clients"
+msgstr ""
+
+msgid "Max. Connections"
 msgstr ""
 
 msgid "Max. Connections Per Host"
@@ -4783,20 +4761,14 @@ msgstr ""
 msgid "Max. Passive Port"
 msgstr ""
 
+msgid "Max. Sessions"
+msgstr ""
+
 msgid "Max. TTL"
 msgstr "Max. TTL"
 
-msgid "Max. block size"
-msgstr "Max. blok boyutu"
-
-msgid "Max. connections"
-msgstr "Max. bağlantı"
-
 msgid "Max. pre-send R2T"
 msgstr ""
-
-msgid "Max. sessions"
-msgstr "Max. oturum"
 
 msgid ""
 "Max. time-to-live (max. number of hops) used in outgoing probe packets."
@@ -4816,9 +4788,6 @@ msgstr ""
 
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr ""
-
-msgid "Maximum connections"
-msgstr "Maksimum bağlantılar"
 
 msgid "Maximum frequency"
 msgstr ""
@@ -5143,6 +5112,9 @@ msgstr ""
 msgid "Netgraph"
 msgstr "Netgraph"
 
+msgid "Netstat"
+msgstr ""
+
 msgid "Network"
 msgstr "Network"
 
@@ -5425,9 +5397,6 @@ msgid ""
 "the maximum physical erase cycles the drive is designed to endure."
 msgstr ""
 
-msgid "Number of servers"
-msgstr "Serverların numarası"
-
 msgid "Numeric identifier of the group."
 msgstr ""
 
@@ -5646,6 +5615,9 @@ msgstr "Parola"
 msgid "Password (confirmed)"
 msgstr "Parola (doğrulanmış)"
 
+msgid "Password Authentication"
+msgstr ""
+
 msgid "Password Encryption"
 msgstr ""
 
@@ -5654,9 +5626,6 @@ msgstr ""
 
 msgid "Password Suffix"
 msgstr ""
-
-msgid "Password authentication"
-msgstr "Parola doğrulaması"
 
 msgid ""
 "Password does not match the confirmation password. Please ensure both "
@@ -5691,6 +5660,9 @@ msgstr "Dosya yolu"
 msgid "Path of the URL relative to document root."
 msgstr ""
 
+msgid "Path to be shared to be synchronized."
+msgstr ""
+
 msgid "Path to be shared."
 msgstr ""
 
@@ -5720,10 +5692,10 @@ msgstr ""
 msgid "Permanent samba data path (e.g. %s)."
 msgstr ""
 
-msgid "Permit Root Login"
+msgid "Permission"
 msgstr ""
 
-msgid "Permit root login"
+msgid "Permit Root Login"
 msgstr ""
 
 msgid "Permit to do SSH Tunneling."
@@ -5897,6 +5869,11 @@ msgstr ""
 msgid "Portal Groups"
 msgstr "Portal Grupları"
 
+msgid ""
+"Portal Groups contains IP addresses and listening on TCP ports to connect "
+"the target from the initiator."
+msgstr ""
+
 msgid "Portals"
 msgstr "Portallar"
 
@@ -5945,13 +5922,16 @@ msgstr ""
 msgid "Preformatted file system"
 msgstr ""
 
-msgid "Preserve extended attributes"
+msgid "Preserve Extended Attributes"
+msgstr ""
+
+msgid "Preserve Extended attributes"
+msgstr ""
+
+msgid "Preserve Permissions"
 msgstr ""
 
 msgid "Preserve modification times."
-msgstr ""
-
-msgid "Preserve permissions"
 msgstr ""
 
 msgid "Prevent deep discharge of battery"
@@ -6244,6 +6224,9 @@ msgstr ""
 msgid "Remote Module (Source)"
 msgstr ""
 
+msgid "Remote Rsync Daemon"
+msgstr ""
+
 msgid "Remote Rsync Server"
 msgstr ""
 
@@ -6251,9 +6234,6 @@ msgid "Remote Syslog Messages"
 msgstr ""
 
 msgid "Remote Syslog Server"
-msgstr ""
-
-msgid "Remote module (source)"
 msgstr ""
 
 msgid "Remote module name"
@@ -6268,9 +6248,6 @@ msgstr ""
 
 msgid ""
 "Remote monitoring username. Must be equal on both master and slave system."
-msgstr ""
-
-msgid "Remote rsync daemon"
 msgstr ""
 
 msgid "Removable"
@@ -6327,6 +6304,9 @@ msgid "Rescan"
 msgstr ""
 
 msgid "Rescan Disks"
+msgstr ""
+
+msgid "Rescan Interval"
 msgstr ""
 
 msgid "Rescan interval"
@@ -6395,7 +6375,7 @@ msgstr ""
 msgid "Reverse DNS lookup"
 msgstr ""
 
-msgid "Reverse direction"
+msgid "Reverse Direction"
 msgstr ""
 
 msgid "Role"
@@ -6449,9 +6429,6 @@ msgstr "Kural numarası"
 msgid "Rules"
 msgstr "Kurallar"
 
-msgid "Run as"
-msgstr ""
-
 msgid "Run now"
 msgstr "Şimdi çalıştır"
 
@@ -6462,8 +6439,8 @@ msgid "Running"
 msgstr "Çalışıyor"
 
 msgid ""
-"Running the service as user root is not recommended for security reasons, "
-"use at your own risk!"
+"Running this service as root is not recommended for security reasons, use at "
+"your own risk!"
 msgstr ""
 
 msgid "Russian"
@@ -6517,9 +6494,6 @@ msgstr "SSH"
 msgid "SSH events"
 msgstr "SSH olayları"
 
-msgid "SSHD"
-msgstr ""
-
 msgid "SSHD log"
 msgstr "SSHD günlüğü"
 
@@ -6568,6 +6542,9 @@ msgstr "Oturum açma bilgilerini yapılandırma dosyasına kaydet"
 msgid "Saved file to"
 msgstr ""
 
+msgid "Scan Mode"
+msgstr ""
+
 msgid "Scan Targets"
 msgstr "Hedefi Tara"
 
@@ -6577,9 +6554,6 @@ msgid ""
 "is disabled, a scan can still be forced from the status page of the "
 "administrative web interface."
 msgstr ""
-
-msgid "Scan type"
-msgstr "Tarama tipi"
 
 msgid "Schedule Time"
 msgstr ""
@@ -6725,6 +6699,9 @@ msgstr ""
 msgid "Select the location closest to you."
 msgstr ""
 
+msgid "Select the permission for running this service. (www by default)."
+msgstr ""
+
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
 "the button below to restore the configuration."
@@ -6822,10 +6799,10 @@ msgstr "Sunucu açıklaması. Genelde boş bırakılır"
 msgid "Server information"
 msgstr ""
 
-msgid "Server name"
-msgstr "Sunucu adı"
-
 msgid "Server version"
+msgstr ""
+
+msgid "Servers"
 msgstr ""
 
 msgid "Service"
@@ -6874,9 +6851,6 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
 
-msgid "Set under which user the service should run (www by default)."
-msgstr ""
-
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
 
@@ -6892,6 +6866,9 @@ msgstr ""
 
 msgid "Settings"
 msgstr "Ayarlar"
+
+msgid "Setup user to get shell access"
+msgstr ""
 
 msgid "Shadow Copy"
 msgstr ""
@@ -6967,6 +6944,9 @@ msgstr ""
 msgid "Size of send buffer (%d by default)."
 msgstr ""
 
+msgid "Size offered to the initiator. (up to 8EiB=8388608TiB)."
+msgstr ""
+
 msgid ""
 "Size offered to the initiator. (up to 8EiB=8388608TiB. actual size is depend "
 "on your disks.)"
@@ -6975,7 +6955,7 @@ msgstr ""
 msgid "Skew"
 msgstr ""
 
-msgid "Skip first scan"
+msgid "Skip First Scan"
 msgstr ""
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
@@ -7017,6 +6997,9 @@ msgstr ""
 msgid "Sockets"
 msgstr ""
 
+msgid "Sockstat"
+msgstr ""
+
 msgid "SoftRaid"
 msgstr ""
 
@@ -7039,9 +7022,6 @@ msgid "Source directory to be synchronized."
 msgstr ""
 
 msgid "Source port"
-msgstr ""
-
-msgid "Source share"
 msgstr ""
 
 msgid "Space Usage"
@@ -7263,7 +7243,7 @@ msgstr ""
 msgid "Sync"
 msgstr ""
 
-msgid "Synchronization time"
+msgid "Synchronization Time"
 msgstr ""
 
 msgid "Synchronize"
@@ -7332,13 +7312,13 @@ msgstr "Sistem mesaj belleği"
 msgid "System tuning"
 msgstr ""
 
+msgid "TCP Forwarding"
+msgstr ""
+
 msgid "TCP Port"
 msgstr ""
 
 msgid "TCP Wrapper"
-msgstr ""
-
-msgid "TCP forwarding"
 msgstr ""
 
 msgid "TCP port"
@@ -7369,6 +7349,9 @@ msgid "TLS Server Certificate Check"
 msgstr ""
 
 msgid "Tag"
+msgstr ""
+
+msgid "Tag Number"
 msgstr ""
 
 msgid "Tag number"
@@ -7520,6 +7503,9 @@ msgstr "VLAN ID 1 ile 4094 arasında bir değer olmalıdır."
 msgid ""
 "The action which will be executed when the packet match the criteria "
 "specified below."
+msgstr ""
+
+msgid "The actual size is depend on your disks."
 msgstr ""
 
 msgid "The administrator has been notified to apply your changes."
@@ -8023,11 +8009,6 @@ msgid ""
 "single share to be used flexibly by each user."
 msgstr ""
 
-msgid ""
-"The port to listen to. The default is to listen to the tftp port specified "
-"in /etc/services."
-msgstr ""
-
 #, php-format
 msgid "The portal '%s' is invalid."
 msgstr "'%s' portalı geçersiz."
@@ -8045,10 +8026,6 @@ msgid ""
 msgstr ""
 
 msgid "The queuedepth range is invalid."
-msgstr ""
-
-#, php-format
-msgid "The recommended length for compatibility is %d."
 msgstr ""
 
 #, php-format
@@ -8155,12 +8132,12 @@ msgstr "Değişkenin değeri"
 msgid "The volume must be detached before it can be deleted."
 msgstr ""
 
+msgid "The work directory does not exist."
+msgstr ""
+
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
 "clients. (maximum 15 characters)."
-msgstr ""
-
-msgid "The working directory does not exist."
 msgstr ""
 
 msgid "There are too many additional groups."
@@ -8228,6 +8205,15 @@ msgstr ""
 #, php-format
 msgid "These parameters are added to [Share] section of %s."
 msgstr "Parametreler %s'in [Paylaşım]'ına eklendi."
+
+msgid ""
+"These parameters are added to the hardware-specific part of the driver for "
+"the second UPS."
+msgstr ""
+
+msgid ""
+"These parameters are added to the hardware-specific part of the driver."
+msgstr ""
 
 #, php-format
 msgid "These parameters will be added to %s."
@@ -8956,6 +8942,9 @@ msgstr "URL"
 msgid "Ukrainian"
 msgstr ""
 
+msgid "Umask"
+msgstr ""
+
 msgid "Unavailable"
 msgstr ""
 
@@ -9013,6 +9002,9 @@ msgstr ""
 msgid "Up"
 msgstr ""
 
+msgid "Update Period"
+msgstr ""
+
 msgid "Update period"
 msgstr ""
 
@@ -9025,7 +9017,7 @@ msgstr ""
 msgid "Upload Bandwidth"
 msgstr ""
 
-msgid "Upload directory"
+msgid "Upload Directory"
 msgstr ""
 
 #, php-format
@@ -9441,13 +9433,10 @@ msgstr ""
 msgid "Wireless configuration"
 msgstr "Kablosuz yapılandırma"
 
+msgid "Work Directory"
+msgstr ""
+
 msgid "Workgroup"
-msgstr ""
-
-msgid "Working Directory"
-msgstr ""
-
-msgid "Working directory"
 msgstr ""
 
 msgid "Write"
@@ -9527,7 +9516,8 @@ msgid ""
 msgstr ""
 
 #, php-format
-msgid "You may specify logical block length (%d by default)."
+msgid ""
+"You may specify logical block size. (default is %dB for compatibility)."
 msgstr ""
 
 msgid ""
@@ -9769,17 +9759,29 @@ msgstr ""
 msgid "to"
 msgstr ""
 
-msgid "umask"
-msgstr "umask"
-
 msgid "umount"
 msgstr "umount"
 
-msgid "user"
-msgstr ""
-
 msgid "week days"
 msgstr ""
+
+#~ msgid ""
+#~ "A Auth Group contains authorised users and secrets for additional security."
+#~ msgstr ""
+#~ "Bir Auth Group yetkili kullanıcıları ve ek güvenlik için sırları içerir."
+
+#~ msgid ""
+#~ "A Initiator Group contains authorised initiator names and networks to access "
+#~ "the target."
+#~ msgstr ""
+#~ "Initiator Grubu hedef erişimine isim ve ağları için yetkileri içerir."
+
+#~ msgid ""
+#~ "A Portal Group contains IP addresses and listening TCP ports to connect the "
+#~ "target from the initiator."
+#~ msgstr ""
+#~ "Hedefe bağlanmak için Portal grubunun Ip adreslerini içerir ve Tcp "
+#~ "portlarını dinler."
 
 #~ msgid ""
 #~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
@@ -9796,14 +9798,47 @@ msgstr ""
 #~ msgid "AIO write size"
 #~ msgstr "AIO yazma boyutu"
 
+#~ msgid "Access mode"
+#~ msgstr "Erişim Modu"
+
+#~ msgid "All dirs"
+#~ msgstr "Tüm Dizinler"
+
+#~ msgid "All users will have the root privilege."
+#~ msgstr "Tüm kullanıcılar root hakkına sahip olacak."
+
+#~ msgid "Allow new files"
+#~ msgstr "Yeni dosyalara izin ver"
+
+#~ msgid "Alternate TCP port. Default is 22"
+#~ msgstr "Varsayılan alternatif TCP Port 22'dir."
+
+#~ msgid "Alternate TCP port. Default is 873"
+#~ msgstr "Varsayılan Alternatif TCP port 873'tür."
+
+#~ msgid "Always scan"
+#~ msgstr "Her zaman tara"
+
 #~ msgid "Asynchronous I/O (AIO)"
 #~ msgstr "Asenkronize I/O (AIO)"
+
+#~ msgid "Auxiliary parameters"
+#~ msgstr "Yardımcı Parametreler"
+
+#~ msgid "CIFS/SMB disabled"
+#~ msgstr "CIFS/SMB etkin değil"
 
 #~ msgid "Create mask"
 #~ msgstr "Maske Oluşturuldu"
 
+#~ msgid "Destination share"
+#~ msgstr "Hedef Paylaşım"
+
 #~ msgid "Directory mask"
 #~ msgstr "Dizin Maskesi"
+
+#~ msgid "Domain name"
+#~ msgstr "Alan adı"
 
 #~ msgid "Dos charset"
 #~ msgstr "Dos karakter seti"
@@ -9829,8 +9864,17 @@ msgstr ""
 #~ msgid "Enable store DOS attributes"
 #~ msgstr "DOS simgelerini yedeklemeyi etkin kıl"
 
+#~ msgid "Forced update period"
+#~ msgstr "Periyodik olarak güncellemeye zorla"
+
 #~ msgid "Guest account"
 #~ msgstr "Misafir hesabı"
+
+#~ msgid "Hosts allow"
+#~ msgstr "Bilgisayarlara izin ver"
+
+#~ msgid "Hosts deny"
+#~ msgstr "Bilgisayarlara reddet"
 
 #~ msgid "Inherit permissions"
 #~ msgstr "İzinleri miras olarak al"
@@ -9838,11 +9882,47 @@ msgstr ""
 #~ msgid "Large read/write"
 #~ msgstr "Büyük okuma/yazma"
 
+#~ msgid "Local share (destination)"
+#~ msgstr "Yerel paylaşım (hedef)"
+
+#~ msgid "Local shares to be synchronized"
+#~ msgstr "Senkronize edilmiş olan paylaşımların listesi"
+
+#~ msgid "Logical Block Length"
+#~ msgstr "Matıksal Blok Uzunluğu"
+
+#~ msgid "Map all users to root"
+#~ msgstr "Tüm kullanıcıları roota yönlendir"
+
+#~ msgid "Map to user"
+#~ msgstr "Kullanıcıya yönlendir"
+
+#~ msgid "Max. block size"
+#~ msgstr "Max. blok boyutu"
+
+#~ msgid "Max. connections"
+#~ msgstr "Max. bağlantı"
+
+#~ msgid "Max. sessions"
+#~ msgstr "Max. oturum"
+
+#~ msgid "Maximum connections"
+#~ msgstr "Maksimum bağlantılar"
+
 #~ msgid "NetBIOS name"
 #~ msgstr "NetBIOS ismi"
 
+#~ msgid "Number of servers"
+#~ msgstr "Serverların numarası"
+
 #~ msgid "Recycle bin"
 #~ msgstr "Çöp kutusu"
+
+#~ msgid "Scan type"
+#~ msgstr "Tarama tipi"
+
+#~ msgid "Server name"
+#~ msgstr "Sunucu adı"
 
 #~ msgid "Set browseable"
 #~ msgstr "Gezilebilebilir olarak ayarla"
@@ -9853,5 +9933,11 @@ msgstr ""
 #~ msgid "WINS server"
 #~ msgstr "WINS sunucu"
 
+#~ msgid "umask"
+#~ msgstr "umask"
+
 #~ msgid "Null passwords"
 #~ msgstr "Boş parolalar"
+
+#~ msgid "Password authentication"
+#~ msgstr "Parola doğrulaması"

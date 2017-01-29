@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-28 02:17+0000\n"
-"PO-Revision-Date: 2017-01-27 16:52+0000\n"
+"POT-Creation-Date: 2017-01-29 13:11+0000\n"
+"PO-Revision-Date: 2017-01-29 10:53+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-28 01:57+0000\n"
+"X-Launchpad-Export-Date: 2017-01-29 12:21+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -77,13 +77,6 @@ msgstr "%s är redan konfigurerad som en volym."
 #, php-format
 msgid "%s is too long."
 msgstr "%s är för lång."
-
-#, php-format
-msgid ""
-"%s must be enabled for Unison to work, and the %s must have shell access."
-msgstr ""
-"%s måste aktiveras för att Unison skall fungera, och %s måste ha access till "
-"kommandonivå (Shell)."
 
 #, php-format
 msgid "%s of %sB"
@@ -200,28 +193,8 @@ msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN etikett (mellan 1 och 4094)."
 
 msgid ""
-"A Auth Group contains authorised users and secrets for additional security."
-msgstr ""
-"En auktoriserad grupp innehåller auktoriserade användare och hemligheter för "
-"ytterligare säkerhet."
-
-msgid ""
-"A Initiator Group contains authorised initiator names and networks to access "
-"the target."
-msgstr ""
-"En initiatorgrupp innehåller tillåtna initiator namn och nätverk för åtkomst "
-"till destinationen."
-
-msgid ""
 "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
 msgstr "Ett NTP server får enbart innehålla tecknen a-z, 0-9, '-' and '.'."
-
-msgid ""
-"A Portal Group contains IP addresses and listening TCP ports to connect the "
-"target from the initiator."
-msgstr ""
-"En portalgrupp innehåller IP adresser och lyssnar på TCP portar för att "
-"ansluta till målet från initiatorn."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -235,13 +208,11 @@ msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr "Ett VLAN med etiketten %s är redan definierat för detta gränssnitt."
 
 msgid ""
-"A directory listing is generated if a directory is requested and no index-"
-"file (index.php, index.html, index.htm or default.htm) was found in that "
-"directory."
+"A directory listing is generated when no index-files (index.php, index.html, "
+"index.htm or default.htm) are found in a directory."
 msgstr ""
-"En katalogförteckning genereras om en katalog efterfrågas men ingen index "
-"fil (index.php, index.html, index.htm eller default.htm) återfanns i "
-"katalogen."
+"En kataloglistning skapas när inga index-filer (index.php, index.html eller "
+"default.htm) hittas i en katalog."
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -297,10 +268,10 @@ msgid ""
 msgstr "En giltig IP-adress eller CIDR måste specificeras för värden."
 
 msgid "A valid IPv4 address must be specified for the primary DNS server."
-msgstr ""
+msgstr "En giltig IPv4 adress måste anges för den primära DNS servern."
 
 msgid "A valid IPv4 address must be specified for the secondary DNS server."
-msgstr ""
+msgstr "En giltig IPv4 adress måste anges för den sekundära DNS servern."
 
 msgid "A valid IPv4 address must be specified."
 msgstr "En giltig IPv4-adress måste anges"
@@ -312,10 +283,10 @@ msgid "A valid IPv6 Gateway address must be specified."
 msgstr "En giltig IPv6 gateway adress måste anges."
 
 msgid "A valid IPv6 address must be specified for the primary DNS server."
-msgstr ""
+msgstr "En giltig IPv6 adress måste anges för den primära DNS servern."
 
 msgid "A valid IPv6 address must be specified for the secondary DNS server."
-msgstr ""
+msgstr "En giltig IPv6 adress måste anges för den sekundära DNS servern."
 
 msgid "A valid IPv6 address must be specified."
 msgstr "En giltig IPv6-adress måste anges"
@@ -363,19 +334,19 @@ msgid "AFP"
 msgstr "AFP"
 
 msgid "AFP Compatibility"
-msgstr ""
+msgstr "AFP kompabilitiet"
 
 msgid "AG"
 msgstr "AG"
 
 msgid "AIO Module"
-msgstr ""
+msgstr "AIO Modul"
 
 msgid "AIO Read Size"
-msgstr ""
+msgstr "AIO Lässtorlek"
 
 msgid "AIO Write Size"
-msgstr ""
+msgstr "AIO Skrivstorlek"
 
 msgid "ALL Interfaces"
 msgstr "Alla gränssnitt"
@@ -407,9 +378,6 @@ msgstr "Åtkomstbegränsningar"
 msgid "Access Time (atime)"
 msgstr "Åtkomsttid (atime)"
 
-msgid "Access mode"
-msgstr "Åtkomst läge"
-
 msgid "Access the webGUI with the new IP address"
 msgstr "Kom åt webgränssnittet med den nya IP-adressen"
 
@@ -438,9 +406,6 @@ msgstr "Aktiv"
 
 msgid "Active Directory"
 msgstr "Active Directory"
-
-msgid "Active Directory List"
-msgstr "Active Directory förteckning"
 
 msgid "Active Shares"
 msgstr "Aktiva delningar"
@@ -572,19 +537,16 @@ msgid "Add target"
 msgstr "Lägg till mål"
 
 msgid "Additional Group"
-msgstr ""
+msgstr "Extra grupp"
 
 msgid "Additional Network"
 msgstr "Extra nätverk"
 
+msgid "Additional Parameters"
+msgstr "Extra parametrar"
+
 msgid "Additional Storage"
 msgstr "Extra lagringsutrymme"
-
-msgid ""
-"Additional parameters to the hardware-specific part of the driver for second "
-"UPS."
-msgstr ""
-"Extra parametrar för de hårdvaruspecifika delarna av drivrutinen för UPS två."
 
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr ""
@@ -677,6 +639,9 @@ msgstr "Varningsnivå"
 msgid "All"
 msgstr "Alla"
 
+msgid "All Dirs"
+msgstr "Alla kataloger"
+
 msgid "All data from the following statistics have been deleted:"
 msgstr "All data från följande statistik har tagits bort"
 
@@ -689,9 +654,6 @@ msgstr ""
 
 msgid "All data will be lost when you activate this option!"
 msgstr "All data kommer att förloras när du aktiverar denna option!"
-
-msgid "All dirs"
-msgstr "Alla kataloger"
 
 #, php-format
 msgid "All dirs requires mounted path, but Path %s is not mounted."
@@ -710,14 +672,14 @@ msgstr ""
 msgid "All software raid disks are imported."
 msgstr "Alla hårddiskarna i mjukvaruraiden är importerade."
 
-msgid "All users will have the root privilege."
-msgstr "Alla användare kommer att ha root behörighet."
-
 msgid "Alloc"
 msgstr "Allokerat"
 
 msgid "Allow"
 msgstr "Tillåt"
+
+msgid "Allow New Files"
+msgstr "Tillåt nya filer"
 
 msgid "Allow TLS connections only."
 msgstr "Tillåt endast TLS anslutningar."
@@ -733,9 +695,6 @@ msgstr ""
 
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "Tillåt klienter att återuppta avbrutna upp- och nedladdningar"
-
-msgid "Allow new files"
-msgstr "Tillåt nya filer"
 
 msgid "Allow new files to be created."
 msgstr "Tillåt att nya filer att skapas."
@@ -782,13 +741,10 @@ msgid "AltRoot"
 msgstr "AltRoot"
 
 msgid "Alternate Data Streams"
-msgstr ""
+msgstr "Alaternativa dataströmmar"
 
-msgid "Alternate TCP port. Default is 22"
-msgstr "Alternativ TCP port. Standard är 22."
-
-msgid "Alternate TCP port. Default is 873"
-msgstr "Alternativ TCP port. Standard är 873."
+msgid "Alternate TCP port. (Default is 873)."
+msgstr "Alternativ TCP-port. (standard är 873)"
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr "Alternativ konfigurationskatalog (vanligtvis tom)."
@@ -799,7 +755,7 @@ msgstr "Alltid"
 msgid "Always On"
 msgstr "Alltid på"
 
-msgid "Always scan"
+msgid "Always Scan"
 msgstr "Skanna alltid"
 
 msgid "Ambient Conditions From External Probe Equipment"
@@ -856,7 +812,7 @@ msgid "Anonymous Bind"
 msgstr "Anonym koppling"
 
 msgid "Anonymous Users"
-msgstr ""
+msgstr "Anonym användare"
 
 msgid "Anonymous access has been deprecated starting from SMB2."
 msgstr "Anonym åtkomst har tagits bort f.o.m. SMB2."
@@ -927,7 +883,7 @@ msgid "Are you sure you want to shutdown the server?"
 msgstr "Är du säker att du vill stänga av servern?"
 
 msgid "Asynchronous I/O"
-msgstr ""
+msgstr "Asynkron I/O"
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
@@ -975,6 +931,12 @@ msgstr "Inställningar Autentiseringsgrupp"
 msgid "Auth Groups"
 msgstr "Auktoriserade grupper"
 
+msgid ""
+"Auth Groups contains authorised users and secrets for additional security."
+msgstr ""
+"Auth grupper innehåller auktoriserade användare och hemligheter för extra "
+"säkerhet."
+
 msgid "Auth Method"
 msgstr "Auktoriseringsmetod"
 
@@ -985,21 +947,28 @@ msgid "Authenticate URL"
 msgstr "Autentisera URL"
 
 msgid "Authenticated Users"
-msgstr ""
+msgstr "Autentiserade användare"
 
 msgid ""
 "Authenticated user download bandwith in KB/s. An empty field means infinity."
 msgstr ""
+"Nedladdningsbandbredd för autentiserade användare i KB/s. Ett tomt fält "
+"innebär obegränsad."
 
 msgid ""
 "Authenticated user upload bandwith in KB/s. An empty field means infinity."
 msgstr ""
+"Uppladdningsbandbredd för autentiserade användare i KB/s. Ett tomt fält "
+"innebär obegränsad."
 
 msgid "Authentication"
 msgstr "Autentisering"
 
 msgid "Authentication Method"
 msgstr "Autentiseringsmetod"
+
+msgid "Authorised Network"
+msgstr "Godkännt nätverk"
 
 msgid "Authorised network"
 msgstr "Behörigt nätverk"
@@ -1034,17 +1003,8 @@ msgstr "Autoskala för grafer."
 msgid "Autoselect"
 msgstr "Välj automatiskt"
 
-msgid "Auxiliary Parameter"
-msgstr "Tilläggsparametrar"
-
-msgid "Auxiliary Parameters"
-msgstr "Extra parametrar"
-
 msgid "Auxiliary device firmware"
 msgstr "Auxiliary firmware"
-
-msgid "Auxiliary parameters"
-msgstr "Yttre parametrar"
 
 msgid "Avail"
 msgstr "Ledigt"
@@ -1160,6 +1120,10 @@ msgstr "Före - Filborttagning kommer att ske innan överföringen startar."
 
 msgid "Before - File-deletions will be performed before the transfer starts."
 msgstr "Före - Filborttagning kommer att ske innan överföringen startar."
+
+msgid ""
+"Before a Unison Client can start to work, you need to perform the following:"
+msgstr "Innan en Unisonklient kan börja fungera måste du göra följande:"
 
 msgid "Best available"
 msgstr "Bästa tillgängliga"
@@ -1287,8 +1251,8 @@ msgstr "CIFS/SMB"
 msgid "CIFS/SMB Information"
 msgstr "CIFS/SMB Information"
 
-msgid "CIFS/SMB disabled"
-msgstr "CIFS/SMB avaktiverad"
+msgid "CIFS/SMB is disabled."
+msgstr "CIFS/SMB är inaktiverat"
 
 msgid "CIFS/SMB is enabled."
 msgstr "CIFS/SMB är aktiverat."
@@ -1493,10 +1457,10 @@ msgid "Client"
 msgstr "Klient"
 
 msgid "Client Max. Protocol"
-msgstr ""
+msgstr "Klient högsta protokoll"
 
 msgid "Client Min. Protocol"
-msgstr ""
+msgstr "Klient lägsta protokoll"
 
 msgid "Clone"
 msgstr "Klona"
@@ -1514,6 +1478,8 @@ msgid ""
 "Comma-separated list of group names that are permitted to login to the FTP "
 "server. (empty = ftp group)."
 msgstr ""
+"Kommaseparerad lista med gruppnamn som tillåts logga in på FTP-servern. "
+"(tomt = FTP gruppen)"
 
 msgid "Command"
 msgstr "Kommando"
@@ -1562,8 +1528,8 @@ msgstr "Vanligt internet filsystem"
 msgid "Community"
 msgstr "Community"
 
-msgid "Compilations directories"
-msgstr "Katalog för samlingar"
+msgid "Compilations Directories"
+msgstr "Samlingskataloger"
 
 msgid "Compiled"
 msgstr "Kompilerad"
@@ -1599,7 +1565,7 @@ msgid "Configuring"
 msgstr "Konfigurering"
 
 msgid "Confirm New Password"
-msgstr ""
+msgstr "Bekräfta nytt lösenord"
 
 msgid "Confirmation"
 msgstr "Bekräftelse"
@@ -1890,7 +1856,7 @@ msgid "Create HVM Guest"
 msgstr "Skapa HVM gäst"
 
 msgid "Create Mask"
-msgstr ""
+msgstr "Skapa mask"
 
 msgid "Create PV Guest"
 msgstr "Skapa PV gäst"
@@ -1964,7 +1930,7 @@ msgstr ""
 "Nuvarande lösenord är standard lösenord. Du bör använda ditt eget lösenord."
 
 msgid "Current password is incorrectly entered."
-msgstr ""
+msgstr "Lösenordet är felaktigt inmatat."
 
 msgid "Current state of drive operation based upon the Life Curve."
 msgstr "Aktuell status på diskfunktion baserat på livskurvan."
@@ -2141,7 +2107,7 @@ msgid "Default Device Settings"
 msgstr "Standardinställningar"
 
 msgid "Default Root"
-msgstr ""
+msgstr "Standard Root"
 
 msgid "Default user name is 'admin'."
 msgstr "Standardanvändarnamn är 'admin'."
@@ -2350,9 +2316,6 @@ msgstr "Destinationsnätverk för denna statiska väg"
 msgid "Destination port"
 msgstr "Målport"
 
-msgid "Destination share"
-msgstr "Destination utdelning"
-
 msgid "Destroy a pool"
 msgstr "Förstör en pool"
 
@@ -2480,7 +2443,7 @@ msgid "Directory %s doesn't exist!"
 msgstr "Katalog %s finns inte!"
 
 msgid "Directory Mask"
-msgstr ""
+msgstr "Katalogmask"
 
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr ""
@@ -2823,7 +2786,7 @@ msgstr "Vill du ändra status på valda jobb?"
 msgid "Do you want to toggle selected options?"
 msgstr "Vill du ändra status på valda optioner?"
 
-msgid "Document root"
+msgid "Document Root"
 msgstr "Dokumentrot"
 
 msgid "Document root of the webserver. Home of the web page files."
@@ -2835,14 +2798,14 @@ msgstr "DomID"
 msgid "Domain"
 msgstr "Domän"
 
+msgid "Domain Name"
+msgstr "Domännamn"
+
 msgid "Domain controller name"
 msgstr "Domänkontrollernamn"
 
 msgid "Domain is missing 2nd level name."
 msgstr "Domänen saknar nivå 2 namn."
-
-msgid "Domain name"
-msgstr "Domännamn"
 
 msgid "Domain name (DNS/Realm-Name)"
 msgstr "Domännamn (DNS/Realm-Namn)"
@@ -2866,7 +2829,7 @@ msgid "Done."
 msgstr "Klart."
 
 msgid "Dos Charset"
-msgstr ""
+msgstr "Dos teckenuppsättning"
 
 msgid "Download"
 msgstr "Ladda ner"
@@ -2896,7 +2859,7 @@ msgid "Driver"
 msgstr "Drivrutin"
 
 msgid "Driver List"
-msgstr ""
+msgstr "Drivrutinslista"
 
 msgid "Driver Parameter"
 msgstr "Drivrutinsparameter"
@@ -2934,7 +2897,7 @@ msgid "Dynamic IP (DHCP) can not be used for HAST resources."
 msgstr "Dynamisk IP (DHCP) kan inte användas för HAST resurser."
 
 msgid "EA Support"
-msgstr ""
+msgstr "EA Support"
 
 msgid "EFI/GPT partition can be use with UFS only."
 msgstr "EFI/GPT partition kan enbart användas med UFS."
@@ -3067,19 +3030,19 @@ msgid "Enable"
 msgstr "Aktivera"
 
 msgid "Enable 'Asynchronous I/O (AIO).' switch."
-msgstr ""
+msgstr "Aktivera 'Asynkron I/O (AIO)' valet."
 
 msgid "Enable 'Large read/write' switch."
 msgstr "Aktivera 'Stor läs/skriv' val."
 
 msgid "Enable ACL inheritance."
-msgstr ""
+msgstr "Aktiera ACL arv. (åtkomsträttogheter)"
 
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr "Aktivera avancerat format (4KB sektorstorlek)"
 
 msgid "Enable Asynchronous I/O. (AIO)."
-msgstr ""
+msgstr "Aktivera Asynkron I/O (AIO)."
 
 msgid "Enable Challenge-Response Authentication"
 msgstr "Aktivera Challenge-Respons (fråga-svar) autentisering"
@@ -3132,7 +3095,7 @@ msgid "Enable Time Machine support"
 msgstr "Aktivera stöd för Time Machine"
 
 msgid "Enable ZFS ACL."
-msgstr ""
+msgstr "Aktivera ZFS ACL. (åtkomsträttigheter)"
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
 msgstr ""
@@ -3202,7 +3165,7 @@ msgid "Enable encryption."
 msgstr "Tillåt kryptering"
 
 msgid "Enable extended attribute support."
-msgstr ""
+msgstr "Aktivera stöd för utökade attribut."
 
 msgid "Enable extended attributes for this file system."
 msgstr "Aktivera utökade attribut för detta filsystem."
@@ -3224,13 +3187,13 @@ msgid "Enable keyboard-interactive authentication."
 msgstr "Aktivera tangentbordsinteraktiv autentisering."
 
 msgid "Enable large read/write."
-msgstr ""
+msgstr "Aktivera stor läs/skriv."
 
 msgid "Enable local user authentication."
 msgstr "Aktivera lokal användarautentisering."
 
 msgid "Enable mapping DOS attributes."
-msgstr ""
+msgstr "Aktivera översättning av DOS attribut."
 
 msgid "Enable module listing."
 msgstr "Aktivera modullistning"
@@ -3245,7 +3208,7 @@ msgid "Enable peer exchange (PEX)."
 msgstr "Aktivera peer exchange (PEX)."
 
 msgid "Enable permission inheritance."
-msgstr ""
+msgstr "Aktivera ärvning av rättigheter."
 
 msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr "Aktivera vidarebefodring av port via NAT-PMP eller UPnP."
@@ -3254,7 +3217,7 @@ msgid "Enable proxy authentication."
 msgstr "Aktivera proxy autentisering."
 
 msgid "Enable recycle bin."
-msgstr ""
+msgstr "Aktivera papperskorg."
 
 msgid "Enable remote monitoring of the local connected UPS."
 msgstr "Aktivera fjärrövervakning av lokalt ansluten UPS."
@@ -3276,11 +3239,14 @@ msgstr "Aktivera en andra lokalt ansluten UPS."
 msgid "Enable serial console."
 msgstr "Aktivera seriell konsol."
 
+msgid "Enable service SSH when disabled"
+msgstr "Aktivera tjänsten SSH när den är inaktiv"
+
 msgid "Enable shadow copy."
-msgstr ""
+msgstr "Aktivera skuggkopior."
 
 msgid "Enable store DOS attributes."
-msgstr ""
+msgstr "Aktivera lagring av DOS attribut."
 
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Aktivera identifieringsprotokoll (RFC1413)."
@@ -3350,7 +3316,7 @@ msgid "English"
 msgstr "Engelska"
 
 msgid "Enhanced compatibility with Netatalk AFP server."
-msgstr ""
+msgstr "Utökad kompatibilitet med Netata´lk AFP server."
 
 msgid "Enter Command"
 msgstr "Mata in kommando"
@@ -3367,9 +3333,22 @@ msgstr ""
 
 #, php-format
 msgid ""
-"Enter a custom port number if you want to override the default port. Default "
-"port is %s."
+"Enter a custom port number if you want to override the default port. "
+"(Default is %s)."
 msgstr ""
+"Mata in ett portnummer om du vill frångå standardporten. (standard är %s)"
+
+msgid ""
+"Enter a custom port number if you want to override the default port. "
+"(Default is 22)."
+msgstr ""
+"Mata in ett portnummer om du vill frångå standardporten. (standard är 23)"
+
+msgid ""
+"Enter a custom port number if you want to override the default port. "
+"(Default is 69). "
+msgstr ""
+"Mata in ett portnummer om du vill frångå standardporten. (standard är 69) "
 
 msgid "Enter a description"
 msgstr "Ange en beskrivning"
@@ -3421,6 +3400,13 @@ msgstr ""
 "vara mellan 8 och 63 tecken långt."
 
 msgid ""
+"Enter the path to the database directory. The config files will be created "
+"under the specified directory."
+msgstr ""
+"Mata in sökvägen till databaskatalogen. Konfigurationsfilerna kommer att "
+"skapas i denna katalog."
+
+msgid ""
 "Enter the path to the home directory of VirtualBox. VM config and HDD image "
 "will be created under the specified directory."
 msgstr ""
@@ -3433,13 +3419,6 @@ msgid ""
 msgstr ""
 "Ange sökvägen för hemmakatalogen för den användaren. Lämna fältet blankt för "
 "standard sökväg /mnt."
-
-msgid ""
-"Enter the path to the home directory. The config will be created under the "
-"specified directory."
-msgstr ""
-"Mata in sökvägen till hemmakatalogen. Konfigurationen kommer att skapas "
-"under den aktuella katalogen."
 
 msgid ""
 "Enter the path to the home directory. This directory will store the "
@@ -3683,7 +3662,7 @@ msgid "File Manager"
 msgstr "Filhanterare"
 
 msgid "File Mask"
-msgstr ""
+msgstr "Filmask"
 
 msgid "File Path"
 msgstr "Filsökväg"
@@ -3781,7 +3760,7 @@ msgstr "Tvinga borttagning"
 msgid "Force use"
 msgstr "Tvinga"
 
-msgid "Forced update period"
+msgid "Forced Update Period"
 msgstr "Tvingande uppdateringsperiod"
 
 msgid ""
@@ -3919,13 +3898,16 @@ msgid "Greek"
 msgstr "Grekiska"
 
 msgid "Greeting banner displayed to client when firts connection comes in."
-msgstr ""
+msgstr "Hälsningsmeddelande som visas för klient när denne ansluter."
 
 msgid "Group"
 msgstr "Grupp"
 
 msgid "Group Allow"
-msgstr ""
+msgstr "Tillåtna grupper"
+
+msgid "Group Compilations"
+msgstr "Gruppsamlingar"
 
 msgid "Group ID"
 msgstr "Grupp ID"
@@ -3935,9 +3917,6 @@ msgstr "Gruppinställningar"
 
 msgid "Group Suffix"
 msgstr "Gruppändelse"
-
-msgid "Group compilations"
-msgstr "Gruppsamlingar"
 
 msgid "Group is locked"
 msgstr "Gruppen är låst"
@@ -3961,7 +3940,7 @@ msgid "Guest"
 msgstr "Gäst"
 
 msgid "Guest Account"
-msgstr ""
+msgstr "Gästkonto"
 
 msgid "HAST"
 msgstr "HAST"
@@ -4052,7 +4031,7 @@ msgid "Hide Default Groups"
 msgstr "Göm standardgrupper"
 
 msgid "Hide Dot Files"
-msgstr ""
+msgstr "Dölj punktfiler"
 
 msgid "High voltage boosting transfer point"
 msgstr "Hög spänning ökar överförings punkten"
@@ -4097,16 +4076,10 @@ msgid "Hosts Allow"
 msgstr "Tillåtna värdar"
 
 msgid "Hosts Deny"
-msgstr ""
+msgstr "Nekade värdar"
 
 msgid "Hosts Setup"
 msgstr "Hosts Inställningar"
-
-msgid "Hosts allow"
-msgstr "Tillåtna värdar"
-
-msgid "Hosts deny"
-msgstr "Nekade värdar"
 
 msgid "Hour"
 msgstr "Timme"
@@ -4218,7 +4191,7 @@ msgid "ISP DNS Servers"
 msgstr "ISP DNS Servrar"
 
 msgid "IdentLookups"
-msgstr ""
+msgstr "Kintrollerade identiteter"
 
 msgid "Identifier"
 msgstr "Identifierare"
@@ -4381,7 +4354,7 @@ msgid "Inherit ACL"
 msgstr "Ärv ACL"
 
 msgid "Inherit Permissions"
-msgstr ""
+msgstr "Ärv rättigheter"
 
 msgid "Inhibit some of the syslog diagnostics for bad lines in /etc/exports."
 msgstr ""
@@ -4415,6 +4388,13 @@ msgstr "Inställningar Initiatorgrupp"
 
 msgid "Initiator Groups"
 msgstr "Initierargrupper"
+
+msgid ""
+"Initiator Groups contains authorised initiator names and networks to access "
+"the target."
+msgstr ""
+"Initierargrupper innehåller auktoriserade initiatornamn och nätverk för att "
+"nå målet."
 
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
@@ -4569,6 +4549,8 @@ msgid ""
 "It is impossible to enable 'Anonymous Users' and 'Authenticated Users' both "
 "at the same time."
 msgstr ""
+"Det går inte att aktivera 'Anonyma användare' samtidigt som 'Autentiserade "
+"användare'."
 
 msgid ""
 "It is not recommanded to import non healthy pools nor virtual devices that "
@@ -4720,7 +4702,7 @@ msgid "Language to use on front panel"
 msgstr "Språk för frontpanel"
 
 msgid "Large Read/Write"
-msgstr ""
+msgstr "Stor Läs/skriv"
 
 msgid "Last Configuration Change"
 msgstr "Senaste konfigurationsändring"
@@ -4854,12 +4836,6 @@ msgstr "Lokal utdelning (Destination)"
 msgid "Local User"
 msgstr "Lokal användare"
 
-msgid "Local share (destination)"
-msgstr "Lokal utdelning (destination)"
-
-msgid "Local shares to be synchronized"
-msgstr "Lokala utdelningar som ska synkroniseras"
-
 msgid "Location"
 msgstr "Placering"
 
@@ -4879,9 +4855,11 @@ msgid "Location where the content database file will be stored."
 msgstr "Platsen där filen för innhållsdatabasen ska lagras."
 
 #, php-format
-msgid ""
-"Location where the working files will be stored, e.g. %s/backup/.unison"
-msgstr "Platsen där arbetsfilerna ska lagras, t.ex. %s/backup/.unison"
+msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
+msgstr "Plats där arbetsfiler kommer lagras, t.ex.  %s/backup/.unison"
+
+msgid "Locked Files"
+msgstr "Låsta filer"
 
 msgid "Log"
 msgstr "Logg"
@@ -4907,8 +4885,8 @@ msgstr "Logga paket som hanteras av denna regel till syslog."
 msgid "Logarithmic Scaling"
 msgstr "Logaritmisk skala"
 
-msgid "Logical Block Length"
-msgstr "Logisk Blocklängd"
+msgid "Logical Block"
+msgstr "Logiska block"
 
 #, php-format
 msgid "Logical Unit Controller Authorised network (%s by default)"
@@ -5022,17 +5000,21 @@ msgstr "Tillverkare"
 msgid "Manufacturing date"
 msgstr "Tillverkningsdatum"
 
-msgid "Map all users to root"
-msgstr "Mappa alla användare till root"
+msgid "Map all users to root, all users will have root privileges."
+msgstr ""
+"Mappa alla användare till root, alla användare kommer att ha rooträttigheter."
 
 msgid "Map to Guest"
-msgstr ""
+msgstr "Mappa till Gäster"
 
-msgid "Map to user"
-msgstr "Koppla till användare"
+msgid "Map to Root"
+msgstr "Mappa till root"
+
+msgid "Map to User"
+msgstr "Mappa till användare"
 
 msgid "Mapping DOS Attributes"
-msgstr ""
+msgstr "Översätter DOS attribut"
 
 msgid "Mar"
 msgstr "mar"
@@ -5048,37 +5030,37 @@ msgstr ""
 "specificerad."
 
 msgid "Masquerade Address"
-msgstr ""
+msgstr "Dölj Adress"
 
 msgid "Max Entries"
 msgstr "Mas antal poster"
 
+msgid "Max. Block Size"
+msgstr "Max. blockstorlek"
+
 msgid "Max. Clients"
-msgstr ""
+msgstr "Max. klieter"
+
+msgid "Max. Connections"
+msgstr "Max. anslutningar"
 
 msgid "Max. Connections Per Host"
-msgstr ""
+msgstr "Max. anslutningar per värd"
 
 msgid "Max. Login Attempts"
-msgstr ""
+msgstr "Max. inloggningsförsök"
 
 msgid "Max. Passive Port"
-msgstr ""
+msgstr "Max. passiva portar"
+
+msgid "Max. Sessions"
+msgstr "Max. Sessioner"
 
 msgid "Max. TTL"
 msgstr "Max. TTL"
 
-msgid "Max. block size"
-msgstr "Max. blockstorlek"
-
-msgid "Max. connections"
-msgstr "Max. anslutningar"
-
 msgid "Max. pre-send R2T"
 msgstr "Maximal försänd R2T"
-
-msgid "Max. sessions"
-msgstr "Maximalt antal sessioner"
 
 msgid ""
 "Max. time-to-live (max. number of hops) used in outgoing probe packets."
@@ -5101,9 +5083,6 @@ msgstr "Maximal (Högsta prestanda)"
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr "Max prestanda, högsta ljudnivå"
 
-msgid "Maximum connections"
-msgstr "Maximalt antal anslutningar"
-
 msgid "Maximum frequency"
 msgstr "Maxfrekvens"
 
@@ -5118,7 +5097,7 @@ msgstr "Maximalt antal tillåtna lösenordsförsök innan nedkoppling."
 
 msgid ""
 "Maximum number of connections allowed per IP address. (0 = unlimited)."
-msgstr ""
+msgstr "Max. anslutningar per IP-adress. (0 = obegränsat)"
 
 #, php-format
 msgid "Maximum number of connections in each session (%d by default)."
@@ -5140,7 +5119,7 @@ msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
 msgstr "Maximalt antal simultana anslutningar. Standard är 0 (obegränsat)."
 
 msgid "Maximum number of users that can connect to the server."
-msgstr ""
+msgstr "Maximalt antal användare som kan ansluta till servern."
 
 msgid "Maximum relative humidity seen (percent)"
 msgstr "Högsta uppmätta relativa fuktighet"
@@ -5194,7 +5173,7 @@ msgid "MibII"
 msgstr "MibII"
 
 msgid "Min. Passive Port"
-msgstr ""
+msgstr "Min. passiva portar"
 
 msgid "MiniDLNA"
 msgstr "MiniDLNA"
@@ -5384,7 +5363,7 @@ msgid "NT1 (CIFS)"
 msgstr "NT1 (CIFS)"
 
 msgid "NTFS ACLs"
-msgstr ""
+msgstr "NTFS ACL:er (åtkomsträttigheter)"
 
 msgid "NTP Time Server"
 msgstr "NTP Tidsserver"
@@ -5433,6 +5412,9 @@ msgstr "NetBIOS Namn"
 
 msgid "Netgraph"
 msgstr "Nätverksgraf"
+
+msgid "Netstat"
+msgstr "Netstat"
 
 msgid "Network"
 msgstr "Nätverk"
@@ -5486,6 +5468,8 @@ msgid ""
 "New Password does not match the confirmation password. Please ensure both "
 "passwords are the same."
 msgstr ""
+"Det nya lösenordet är inte lika som bekräftelselösenordet. Se till att du "
+"matar in samma lösenord."
 
 msgid "New password"
 msgstr "Nytt lösenord"
@@ -5711,7 +5695,7 @@ msgid "Now"
 msgstr "Nu"
 
 msgid "Null Passwords"
-msgstr ""
+msgstr "Tomt lösenord"
 
 msgid "Number of bad battery packs"
 msgstr "Antal dåliga batteripack"
@@ -5734,9 +5718,6 @@ msgid ""
 msgstr ""
 "Antal fysiska raderingscykler utförda på disken som procent av det maximala "
 "antal raderingar som disken är designad att klara."
-
-msgid "Number of servers"
-msgstr "Antal servrar"
 
 msgid "Numeric identifier of the group."
 msgstr "Numerisk identifierare för gruppen."
@@ -5931,7 +5912,7 @@ msgid "Partitions"
 msgstr "Partitioner"
 
 msgid "Passive Port"
-msgstr ""
+msgstr "Passiv port"
 
 msgid ""
 "Passive ports restricts the range of ports from which the server will select "
@@ -5972,17 +5953,17 @@ msgstr "Lösenord"
 msgid "Password (confirmed)"
 msgstr "Lösenord (bekräftat)"
 
+msgid "Password Authentication"
+msgstr "Lösenordsautentisering"
+
 msgid "Password Encryption"
 msgstr "Lösenordskryptering"
 
 msgid "Password Server"
-msgstr ""
+msgstr "Lösenordsserver"
 
 msgid "Password Suffix"
 msgstr "Lösenordsändelse"
-
-msgid "Password authentication"
-msgstr "Lösenords autentisering"
 
 msgid ""
 "Password does not match the confirmation password. Please ensure both "
@@ -6018,6 +5999,9 @@ msgstr "Sökväg"
 msgid "Path of the URL relative to document root."
 msgstr "Sökväg för URL relativt till dokumentroten."
 
+msgid "Path to be shared to be synchronized."
+msgstr "Sökväg som skall delas och synkroniseras."
+
 msgid "Path to be shared."
 msgstr "Sökväg för utdelning."
 
@@ -6047,11 +6031,11 @@ msgstr "Prestandainställningar"
 msgid "Permanent samba data path (e.g. %s)."
 msgstr "Permanent samba datasökväg (ex. %s)."
 
-msgid "Permit Root Login"
-msgstr ""
+msgid "Permission"
+msgstr "Rättighet"
 
-msgid "Permit root login"
-msgstr "Tillåt root inloggning"
+msgid "Permit Root Login"
+msgstr "Tillåt rootinloggning"
 
 msgid "Permit to do SSH Tunneling."
 msgstr "Tillåt att köra SSH-tunnelering."
@@ -6227,6 +6211,13 @@ msgstr "Inställningar Portalgrupp"
 msgid "Portal Groups"
 msgstr "Portalgrupper"
 
+msgid ""
+"Portal Groups contains IP addresses and listening on TCP ports to connect "
+"the target from the initiator."
+msgstr ""
+"Portalgrupper innehåller IP-adresser och lyssnar på TCP portar för att "
+"ansluta målet från initiatorn."
+
 msgid "Portals"
 msgstr "Portaler"
 
@@ -6275,14 +6266,17 @@ msgstr "Prefix"
 msgid "Preformatted file system"
 msgstr "Förformaterat filsystem"
 
-msgid "Preserve extended attributes"
+msgid "Preserve Extended Attributes"
 msgstr "Bevara utökade attribut"
+
+msgid "Preserve Extended attributes"
+msgstr "Bevara utökade attribut"
+
+msgid "Preserve Permissions"
+msgstr "Bevara rättigheter"
 
 msgid "Preserve modification times."
 msgstr "Bevara modifieringstidsstämplar."
-
-msgid "Preserve permissions"
-msgstr "Bevara rättigheter"
 
 msgid "Prevent deep discharge of battery"
 msgstr "Undvik djupurladdning av batteri"
@@ -6485,7 +6479,7 @@ msgid "Read"
 msgstr "Läs"
 
 msgid "Read Only"
-msgstr ""
+msgstr "Skrivskyddad"
 
 msgid "Read Only (ro)"
 msgstr "Endast-läsning"
@@ -6543,7 +6537,7 @@ msgid "Reboot"
 msgstr "Starta om"
 
 msgid "Receive Buffer"
-msgstr ""
+msgstr "Mottagningsbuffert"
 
 msgid "Record is locked"
 msgstr "Spåret är låst"
@@ -6555,7 +6549,7 @@ msgid "Recursive"
 msgstr "Rekursiv"
 
 msgid "Recycle Bin"
-msgstr ""
+msgstr "Papperskorg"
 
 msgid "Refresh"
 msgstr "Uppdatera"
@@ -6584,6 +6578,9 @@ msgstr "Fjärradress"
 msgid "Remote Module (Source)"
 msgstr "Fjärrmodul (Källa)"
 
+msgid "Remote Rsync Daemon"
+msgstr "Fjärr Rsync Demon"
+
 msgid "Remote Rsync Server"
 msgstr "Fjärr-server för Rsync"
 
@@ -6592,9 +6589,6 @@ msgstr "Fjärrsysloggmedelanden"
 
 msgid "Remote Syslog Server"
 msgstr "Extern syslogserver"
-
-msgid "Remote module (source)"
-msgstr "Fjärrmodul (källa)"
 
 msgid "Remote module name"
 msgstr "Namn för fjärrmodul"
@@ -6611,9 +6605,6 @@ msgid ""
 "Remote monitoring username. Must be equal on both master and slave system."
 msgstr ""
 "Användarnamn för fjärrövervakning. Måste vara lika på master och slavsystem."
-
-msgid "Remote rsync daemon"
-msgstr "Fjärr rsync demon"
 
 msgid "Removable"
 msgstr "Flyttbar"
@@ -6674,6 +6665,9 @@ msgstr "Sök igen"
 
 msgid "Rescan Disks"
 msgstr "Skanna om diskar"
+
+msgid "Rescan Interval"
+msgstr "Omskanningsintervall"
 
 msgid "Rescan interval"
 msgstr "Intervall för omskanning"
@@ -6742,8 +6736,8 @@ msgstr "Återgå till kommando sidan"
 msgid "Reverse DNS lookup"
 msgstr "Omvänd DNS-uppslagning"
 
-msgid "Reverse direction"
-msgstr "Motsatt riktning"
+msgid "Reverse Direction"
+msgstr "Omvänd ordning"
 
 msgid "Role"
 msgstr "Roll"
@@ -6796,9 +6790,6 @@ msgstr "Regelnummer"
 msgid "Rules"
 msgstr "Regler"
 
-msgid "Run as"
-msgstr "Kör som"
-
 msgid "Run now"
 msgstr "Kör nu"
 
@@ -6809,11 +6800,11 @@ msgid "Running"
 msgstr "Kör"
 
 msgid ""
-"Running the service as user root is not recommended for security reasons, "
-"use at your own risk!"
+"Running this service as root is not recommended for security reasons, use at "
+"your own risk!"
 msgstr ""
-"Att köra tjänsten som rootanvändare är inte att rekommendera av "
-"säkerhetsskäl, används på egen risk!"
+"Att köra denna tjänst som root är inte att rekommendera av säkerhetsskäl, "
+"används på egen risk!"
 
 msgid "Russian"
 msgstr "Ryska"
@@ -6866,9 +6857,6 @@ msgstr "SSH"
 msgid "SSH events"
 msgstr "SSH händelser"
 
-msgid "SSHD"
-msgstr "SSHD"
-
 msgid "SSHD log"
 msgstr "SSHD logg"
 
@@ -6889,12 +6877,16 @@ msgid ""
 "Samba will read from file asynchronously when size of request is bigger than "
 "this value. (%d by default)."
 msgstr ""
+"Samba kommer att läsa filen asynkront när storleken på förfrågan är större "
+"än detta värde. (%d som standard)"
 
 #, php-format
 msgid ""
 "Samba will write to file asynchronously when size of request is bigger than "
 "this value. (%d by default)."
 msgstr ""
+"Samba kommer att skriva till filen asynkront när storleken på förfrågan är "
+"större än detta värde. (%d som standard)"
 
 msgid "Sat"
 msgstr "lör"
@@ -6917,6 +6909,9 @@ msgstr "Spara inloggningsinformation i konfigurationsfilen"
 msgid "Saved file to"
 msgstr "Sparade filen till"
 
+msgid "Scan Mode"
+msgstr ""
+
 msgid "Scan Targets"
 msgstr "Skanna Mål"
 
@@ -6930,9 +6925,6 @@ msgstr ""
 "eller tagits bort. Sätt till 0 för att inaktivera genomsökning i bakgrunden. "
 "Om bakgrundsgenomsökning är inaktiverat kan en genomsökning fortfarande "
 "tvingas fram från Statussidan för det administrativa webbgränssnittet."
-
-msgid "Scan type"
-msgstr "Typ av genomsökning"
 
 msgid "Schedule Time"
 msgstr "Körtid"
@@ -7089,6 +7081,9 @@ msgstr "Välj språk för webgränssnittet."
 msgid "Select the location closest to you."
 msgstr "Välj den plats som är närmast dig."
 
+msgid "Select the permission for running this service. (www by default)."
+msgstr "Välj villkoret för att köra denna tjänst. (www som standard)"
+
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
 "the button below to restore the configuration."
@@ -7128,7 +7123,7 @@ msgid "Self-tests Management"
 msgstr "Hantering av självtester"
 
 msgid "Send Buffer"
-msgstr ""
+msgstr "Sändbuffert"
 
 msgid "Send Command!"
 msgstr "Skicka kommando!"
@@ -7176,10 +7171,10 @@ msgid "Server"
 msgstr "Server"
 
 msgid "Server Max. Protocol"
-msgstr ""
+msgstr "Server Max. protokoll"
 
 msgid "Server Min. Protocol"
-msgstr ""
+msgstr "Server Min. protokoll"
 
 msgid "Server Name"
 msgstr "Servernamn"
@@ -7190,11 +7185,11 @@ msgstr "Serverbeskrivning. Det här kan vanligtvis lämnas tomt."
 msgid "Server information"
 msgstr "Serverstatus"
 
-msgid "Server name"
-msgstr "Servernamn"
-
 msgid "Server version"
 msgstr "Serverversion"
+
+msgid "Servers"
+msgstr "Servrar"
 
 msgid "Service"
 msgstr "Tjänst"
@@ -7209,10 +7204,10 @@ msgid "Set additional group memberships for this account."
 msgstr "Välj kompletterande gruppmedlemskap för detta konto."
 
 msgid "Set browseable."
-msgstr ""
+msgstr "Sätt bläddringsbar."
 
 msgid "Set read only."
-msgstr ""
+msgstr "Sätt skrivskyddad."
 
 msgid "Set share password."
 msgstr "Välj lösenord för utdelningen."
@@ -7248,9 +7243,6 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "Ställ in rullhastiget mellan 0-10 (förval är 10)."
 
-msgid "Set under which user the service should run (www by default)."
-msgstr "Välj under vilken användare tjänsten skall köras (www som standard)."
-
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
 "Välj en alternativ monteringspunkt för root dataset. Standard är /mnt."
@@ -7272,11 +7264,14 @@ msgstr ""
 msgid "Settings"
 msgstr "Inställningar"
 
+msgid "Setup user to get shell access"
+msgstr "Ställ in användare som skall ha \"shell\"-åtkomst"
+
 msgid "Shadow Copy"
 msgstr "Skuggkopia"
 
 msgid "Shadow Copy Format"
-msgstr ""
+msgstr "Format för skuggkopior"
 
 msgid "Share"
 msgstr "Utdelning"
@@ -7348,6 +7343,9 @@ msgstr "Storlek på mottagningsbufferten (%d är standard)"
 msgid "Size of send buffer (%d by default)."
 msgstr "Storlek på sändbufferten (%d är standard)"
 
+msgid "Size offered to the initiator. (up to 8EiB=8388608TiB)."
+msgstr "Storlek erbjuden till initiatorn. (upp till 8EiB=8388608TiB)."
+
 msgid ""
 "Size offered to the initiator. (up to 8EiB=8388608TiB. actual size is depend "
 "on your disks.)"
@@ -7358,7 +7356,7 @@ msgstr ""
 msgid "Skew"
 msgstr "Fördröjning"
 
-msgid "Skip first scan"
+msgid "Skip First Scan"
 msgstr "Hoppa över första skanningen"
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
@@ -7401,6 +7399,9 @@ msgstr "Avbilder"
 msgid "Sockets"
 msgstr "Anslutningar (sockets)"
 
+msgid "Sockstat"
+msgstr "Sockstat"
+
 msgid "SoftRaid"
 msgstr "MjukvaruRaid"
 
@@ -7424,9 +7425,6 @@ msgstr "Källkatalog som ska synkroniseras."
 
 msgid "Source port"
 msgstr "Källport"
-
-msgid "Source share"
-msgstr "Källa för delning"
 
 msgid "Space Usage"
 msgstr "Utrymmesanvändning"
@@ -7584,13 +7582,13 @@ msgid "Storage"
 msgstr "Lagring"
 
 msgid "Store DOS Attributes"
-msgstr ""
+msgstr "Lagra DOS attribut"
 
 msgid "Store NTFS ACLs in Extended Attributes."
-msgstr ""
+msgstr "Lagra NTFS ACL:er i utökade attribut."
 
 msgid "Store alternate data streams in Extended Attributes."
-msgstr ""
+msgstr "Lagra alternativa dataströmmar i utökade attribut."
 
 msgid "Strict DLNA"
 msgstr "Strikt DLNA"
@@ -7650,7 +7648,7 @@ msgid "Swap Usage"
 msgstr "Användning av växlingsfil"
 
 msgid "Swap is disabled."
-msgstr ""
+msgstr "Växlingsfil (swap) är inaktiverad."
 
 msgid "Swedish"
 msgstr "Svenska"
@@ -7674,7 +7672,7 @@ msgstr "Skifta till %s/s"
 msgid "Sync"
 msgstr "Synkronisera"
 
-msgid "Synchronization time"
+msgid "Synchronization Time"
 msgstr "Synkroniseringstid"
 
 msgid "Synchronize"
@@ -7746,14 +7744,14 @@ msgstr "Systemets medelandebuffert"
 msgid "System tuning"
 msgstr "Finjustering av systemet"
 
+msgid "TCP Forwarding"
+msgstr "TCP vidarebefordran"
+
 msgid "TCP Port"
-msgstr ""
+msgstr "TCP-port"
 
 msgid "TCP Wrapper"
-msgstr ""
-
-msgid "TCP forwarding"
-msgstr "Vidarebefodran av TCP"
+msgstr "TCP ram"
 
 msgid "TCP port"
 msgstr "TCP-port"
@@ -7777,13 +7775,16 @@ msgid "TLS Mode"
 msgstr "TLS Mod"
 
 msgid "TLS Only"
-msgstr ""
+msgstr "Endast TLS"
 
 msgid "TLS Server Certificate Check"
 msgstr "TLS Servercertifikatkontroll"
 
 msgid "Tag"
 msgstr "Etikett"
+
+msgid "Tag Number"
+msgstr "Tag nummer"
 
 msgid "Tag number"
 msgstr "Etikettnummer"
@@ -7930,7 +7931,7 @@ msgstr ""
 "dåliga flashblock sedan disken först initierades."
 
 msgid "The TCP Port must be a valid port number."
-msgstr ""
+msgstr "TCP-porten måste vara ett giltigt portnummer."
 
 msgid "The UPS identifier and IP address"
 msgstr "UPS-namn och IP-adress"
@@ -7944,6 +7945,9 @@ msgid ""
 msgstr ""
 "Den händelse som kommer att utföras när paketet stämmer överens med "
 "nedanstående angivna kriterier."
+
+msgid "The actual size is depend on your disks."
+msgstr "Den verkliga storleken beror på dina diskar."
 
 msgid "The administrator has been notified to apply your changes."
 msgstr "Administratören har blivit meddelad om att aktivera dina ändringar."
@@ -8392,16 +8396,18 @@ msgstr "Inloggningsnamnet är begränsat till 16 tecken."
 msgid ""
 "The max. connections per IP address must be either 0 (unlimited) or greater."
 msgstr ""
+"Maximalt antal anslutningar pet IP-adress måste vara 0 (obegränsat) eller "
+"högre."
 
 msgid "The max. number of clients must be in the range from 1 to 50."
-msgstr ""
+msgstr "Maximalt antal klienter måste vara mellan 1 och 50."
 
 msgid ""
 "The maximum download bandwith in KiB/s. An empty field means infinity."
 msgstr "Max bandbredd vid nedladdning i KiB/s. Tomt fält innebär oändligt."
 
 msgid "The maximum idle time must be a number."
-msgstr ""
+msgstr "Maximal vilotid måste vara ett nummer."
 
 msgid ""
 "The maximum port to allocate for PASV style data connections (0 = use any "
@@ -8524,13 +8530,6 @@ msgstr ""
 "särskilt användbart på system med många användare för att möjliggöra en enda "
 "delning som kan användas flexibelt av varje användare."
 
-msgid ""
-"The port to listen to. The default is to listen to the tftp port specified "
-"in /etc/services."
-msgstr ""
-"Porten att lyssna på. Standard är att lyssna till tftp-porten som anges i "
-"/etc/services."
-
 #, php-format
 msgid "The portal '%s' is invalid."
 msgstr "Portalen '%s' är giltig."
@@ -8556,10 +8555,6 @@ msgstr ""
 
 msgid "The queuedepth range is invalid."
 msgstr "Ködjups-spannet är ogiltigt."
-
-#, php-format
-msgid "The recommended length for compatibility is %d."
-msgstr "Det rekommenderade värdet för kompatibilitet är %d."
 
 #, php-format
 msgid "The recommended queue depth is %d."
@@ -8675,13 +8670,15 @@ msgstr "Värdet på variabeln."
 msgid "The volume must be detached before it can be deleted."
 msgstr "Volymen måste frånkopplas innan den kan raderas."
 
+msgid "The work directory does not exist."
+msgstr "Arbetskatalogen finns inte."
+
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
 "clients. (maximum 15 characters)."
 msgstr ""
-
-msgid "The working directory does not exist."
-msgstr "Arbetskatalogen finns inte."
+"Arbetsgruppen i vilken servern visas vid sökning från Windows- eller SMB-"
+"klienter. (max 15 tecken)"
 
 msgid "There are too many additional groups."
 msgstr "Det finns för många extragrupper."
@@ -8760,6 +8757,18 @@ msgstr "Dessa värden kommer läggas till i den globala delen [Global] av %s."
 #, php-format
 msgid "These parameters are added to [Share] section of %s."
 msgstr "Dessa värden kommer läggas till i utdelningsavsnittet [Share] av %s."
+
+msgid ""
+"These parameters are added to the hardware-specific part of the driver for "
+"the second UPS."
+msgstr ""
+"Dessa parametrar läggs till den hårdvaruspecifika delen av drivrutinen för "
+"den andra UPS:en."
+
+msgid ""
+"These parameters are added to the hardware-specific part of the driver."
+msgstr ""
+"Dessa parametrar läggs till den hårdvaruspecifika delen av drivrutinen."
 
 #, php-format
 msgid "These parameters will be added to %s."
@@ -9148,10 +9157,10 @@ msgstr ""
 "läggs till i LDAP katalogen, t.ex. %s"
 
 msgid "This password is required to access the admin web interface."
-msgstr ""
+msgstr "Detta lösenord krävs för att nå det administrativa webgränssnittet."
 
 msgid "This password is the root password of the system."
-msgstr ""
+msgstr "Detta lösenord är rootlösenordet för systemet."
 
 msgid "This pool name already exists."
 msgstr "Poolnamnet finns redan."
@@ -9220,13 +9229,15 @@ msgstr ""
 "vill lägga till en existerande krypterad disk."
 
 msgid "This will provide NTFS ACLs without ZFS ACL support such as UFS."
-msgstr ""
+msgstr "Detta kommer tillhandahålla NTFS ACL:er utan ZFS ACL stöd som UFS."
 
 msgid "This will provide ZFS ACL support. (ZFS only)."
-msgstr ""
+msgstr "Detta kommer tillhandahålla ZFSACL:er stöd. (endast ZFS)"
 
 msgid "This will provide shadow copy created by auto snapshot. (ZFS only)."
 msgstr ""
+"Detta kommer tillhandahålla skuggkopior skapade med automatiska "
+"ögonblicksbilder. (endast ZFS)"
 
 msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
@@ -9249,13 +9260,13 @@ msgid "Time"
 msgstr "Tid"
 
 msgid "Time Interval"
-msgstr ""
+msgstr "Tidsintervall"
 
 msgid "Time Machine"
 msgstr "Time Machine"
 
 msgid "Time Server"
-msgstr ""
+msgstr "Tidserver"
 
 msgid "Time Synchronization"
 msgstr "Tidssynkronisering"
@@ -9469,7 +9480,7 @@ msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol"
 
 msgid "Trusted Domains"
-msgstr ""
+msgstr "Pålitliga Domäner"
 
 msgid "Try to force import."
 msgstr "Försöker tvinga fram en import."
@@ -9624,6 +9635,9 @@ msgstr "URL"
 msgid "Ukrainian"
 msgstr "Ukrainska"
 
+msgid "Umask"
+msgstr "Ta fram"
+
 msgid "Unavailable"
 msgstr "Otillgänglig"
 
@@ -9649,7 +9663,7 @@ msgid "Unison File Synchronisation"
 msgstr "Unison Filsynkronisering"
 
 msgid "Unix Charset"
-msgstr ""
+msgstr "Unix teckenuppsättning"
 
 msgid "Unix Command"
 msgstr "Unix Kommando"
@@ -9681,6 +9695,9 @@ msgstr "Avmonterar..."
 msgid "Up"
 msgstr "Uppåt"
 
+msgid "Update Period"
+msgstr "Uppdateringsperiod"
+
 msgid "Update period"
 msgstr "Uppdateringsperiod"
 
@@ -9693,8 +9710,8 @@ msgstr "Uppgradera ZFS och lägg till alla stödda finessflaggor på en pool"
 msgid "Upload Bandwidth"
 msgstr "Uppladdningsbandbredd"
 
-msgid "Upload directory"
-msgstr "Uppladningskatalog"
+msgid "Upload Directory"
+msgstr "Uppladdningskatalog"
 
 #, php-format
 msgid "Upload directory of the webserver. The default is %s."
@@ -9815,7 +9832,7 @@ msgid "User Mask"
 msgstr "Användar Mask"
 
 msgid "User Portal"
-msgstr ""
+msgstr "Portalanvändare"
 
 msgid "User Settings"
 msgstr "Användarinställningar"
@@ -10022,7 +10039,7 @@ msgid "WEP"
 msgstr "WEP"
 
 msgid "WINS Server"
-msgstr ""
+msgstr "WINS-server"
 
 msgid "WINS server IP address (e.g. from MS Active Directory server)."
 msgstr "WINS server IP adress (t.ex från MS Active Directory server)"
@@ -10077,7 +10094,7 @@ msgid "WebGUI"
 msgstr "WebGUI"
 
 msgid "WebGUI and Root Password"
-msgstr ""
+msgstr "WebGUI och rootlösenord"
 
 msgid "Webserver"
 msgstr "Webbserver"
@@ -10152,14 +10169,11 @@ msgstr "Jokertecken"
 msgid "Wireless configuration"
 msgstr "Trådlös konfiguration"
 
+msgid "Work Directory"
+msgstr "Arbetskatalog"
+
 msgid "Workgroup"
 msgstr "Arbetsgrupp"
-
-msgid "Working Directory"
-msgstr ""
-
-msgid "Working directory"
-msgstr "Arbetskatalog"
 
 msgid "Write"
 msgstr "Skriv"
@@ -10247,8 +10261,10 @@ msgstr ""
 "standard. (upp till %d ASCII tecken)"
 
 #, php-format
-msgid "You may specify logical block length (%d by default)."
-msgstr "Du kan ange logisk block-längd (%d som standard)."
+msgid ""
+"You may specify logical block size. (default is %dB for compatibility)."
+msgstr ""
+"Du kan specificera logisk blockstorlek. (standard är %dB för kompatibilitet)"
 
 msgid ""
 "You must add at least a Portal Group, an Initiator Group and an Extent "
@@ -10283,6 +10299,8 @@ msgstr "Du måste välja åtminstone en autentiseringsmetod."
 msgid ""
 "You need to update your browser or use Internet Explorer 10 or higher."
 msgstr ""
+"Du behöver uppdatera din webbläsare eller använda Internet Explorer 10 eller "
+"senare."
 
 msgid "You should use HTTPS as WebGUI protocol for sending passphrase."
 msgstr ""
@@ -10293,7 +10311,7 @@ msgid "Your ZFS system is not healthy."
 msgstr "Ditt ZFS-system mår inte bra."
 
 msgid "Your browser does not support this svg object type."
-msgstr ""
+msgstr "Din webbläsare stödjer inte den här svgobjekttypen."
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -10500,26 +10518,50 @@ msgstr "sysvol finns med i sökvägen."
 msgid "to"
 msgstr "till"
 
-msgid "umask"
-msgstr "umask"
-
 msgid "umount"
 msgstr "umount"
-
-msgid "user"
-msgstr "användare"
 
 msgid "week days"
 msgstr "veckodagar"
 
+#~ msgid ""
+#~ "A Auth Group contains authorised users and secrets for additional security."
+#~ msgstr ""
+#~ "En auktoriserad grupp innehåller auktoriserade användare och hemligheter för "
+#~ "ytterligare säkerhet."
+
+#~ msgid "All dirs"
+#~ msgstr "Alla kataloger"
+
+#~ msgid "Allow new files"
+#~ msgstr "Tillåt nya filer"
+
+#~ msgid "Always scan"
+#~ msgstr "Skanna alltid"
+
 #~ msgid "Asynchronous I/O (AIO)"
 #~ msgstr "Asynkron I/O (AIO)"
+
+#~ msgid "Auxiliary parameters"
+#~ msgstr "Yttre parametrar"
+
+#~ msgid "CIFS/SMB disabled"
+#~ msgstr "CIFS/SMB avaktiverad"
 
 #~ msgid "Create mask"
 #~ msgstr "Skapa mask"
 
+#~ msgid "Destination share"
+#~ msgstr "Destination utdelning"
+
 #~ msgid "Directory mask"
 #~ msgstr "Katalogmask"
+
+#~ msgid "Document root"
+#~ msgstr "Dokumentrot"
+
+#~ msgid "Domain name"
+#~ msgstr "Domännamn"
 
 #~ msgid "Dos charset"
 #~ msgstr "Dos-teckenuppsättning"
@@ -10542,17 +10584,70 @@ msgstr "veckodagar"
 #~ msgid "Hide dot files"
 #~ msgstr "Dölj punktfiler"
 
+#~ msgid "Hosts allow"
+#~ msgstr "Tillåtna värdar"
+
+#~ msgid "Hosts deny"
+#~ msgstr "Nekade värdar"
+
 #~ msgid "Inherit permissions"
 #~ msgstr "Ärv rättigheter"
 
 #~ msgid "Large read/write"
 #~ msgstr "Stor läs/skriv (read/write)"
 
+#~ msgid "Local share (destination)"
+#~ msgstr "Lokal utdelning (destination)"
+
+#~ msgid "Local shares to be synchronized"
+#~ msgstr "Lokala utdelningar som ska synkroniseras"
+
+#, php-format
+#~ msgid ""
+#~ "Location where the working files will be stored, e.g. %s/backup/.unison"
+#~ msgstr "Platsen där arbetsfilerna ska lagras, t.ex. %s/backup/.unison"
+
+#~ msgid "Logical Block Length"
+#~ msgstr "Logisk Blocklängd"
+
+#~ msgid "Map all users to root"
+#~ msgstr "Mappa alla användare till root"
+
+#~ msgid "Map to user"
+#~ msgstr "Koppla till användare"
+
+#~ msgid "Max. block size"
+#~ msgstr "Max. blockstorlek"
+
+#~ msgid "Max. connections"
+#~ msgstr "Max. anslutningar"
+
+#~ msgid "Max. sessions"
+#~ msgstr "Maximalt antal sessioner"
+
+#~ msgid "Maximum connections"
+#~ msgstr "Maximalt antal anslutningar"
+
 #~ msgid "NetBIOS name"
 #~ msgstr "NetBIOS namn"
 
 #~ msgid "Null passwords"
 #~ msgstr "Tomma lösenord"
+
+#~ msgid "Number of servers"
+#~ msgstr "Antal servrar"
+
+#~ msgid "Password authentication"
+#~ msgstr "Lösenords autentisering"
+
+#~ msgid "Permit root login"
+#~ msgstr "Tillåt root inloggning"
+
+#~ msgid "Preserve extended attributes"
+#~ msgstr "Bevara utökade attribut"
+
+#~ msgid "Preserve permissions"
+#~ msgstr "Bevara rättigheter"
 
 #~ msgid "Receive Buffer Size"
 #~ msgstr "Storlek på mottagningsbuffert"
@@ -10576,17 +10671,46 @@ msgstr "veckodagar"
 #~ "Samba kommer att skriva till filen asynkront när storleken på begäran är "
 #~ "större än detta värde. (%d som standard)"
 
+#~ msgid "Scan type"
+#~ msgstr "Typ av genomsökning"
+
+#~ msgid "Server name"
+#~ msgstr "Servernamn"
+
 #~ msgid "Set browseable"
 #~ msgstr "Välj bläddringsbarhet"
 
 #~ msgid "Set read only"
 #~ msgstr "Välj endast läsning (read-only)"
 
+#~ msgid "Source share"
+#~ msgstr "Källa för delning"
+
 #~ msgid "Store DOS attributes"
 #~ msgstr "Lagra DOS attribut"
 
 #~ msgid "Swap disabled"
 #~ msgstr "Växlingsutrymme inaktiverat"
+
+#~ msgid "Synchronization time"
+#~ msgstr "Synkroniseringstid"
+
+#~ msgid "TCP forwarding"
+#~ msgstr "Vidarebefodran av TCP"
+
+#~ msgid ""
+#~ "The port to listen to. The default is to listen to the tftp port specified "
+#~ "in /etc/services."
+#~ msgstr ""
+#~ "Porten att lyssna på. Standard är att lyssna till tftp-porten som anges i "
+#~ "/etc/services."
+
+#, php-format
+#~ msgid "The recommended length for compatibility is %d."
+#~ msgstr "Det rekommenderade värdet för kompatibilitet är %d."
+
+#~ msgid "The working directory does not exist."
+#~ msgstr "Arbetskatalogen finns inte."
 
 #~ msgid "Time server"
 #~ msgstr "Tidsserver"
@@ -10597,11 +10721,21 @@ msgstr "veckodagar"
 #~ msgid "WINS server"
 #~ msgstr "WINS-server"
 
+#~ msgid "Working directory"
+#~ msgstr "Arbetskatalog"
+
+#, php-format
+#~ msgid "You may specify logical block length (%d by default)."
+#~ msgstr "Du kan ange logisk block-längd (%d som standard)."
+
 #~ msgid "Enable ZFS ACL"
 #~ msgstr "Aktivera ZFS ACL"
 
 #~ msgid "Enable shadow copy"
 #~ msgstr "Aktivera skuggkopia"
+
+#~ msgid "Reverse direction"
+#~ msgstr "Motsatt riktning"
 
 #~ msgid "Shadow Copy format"
 #~ msgstr "Format för skuggkopia"
@@ -10617,6 +10751,12 @@ msgstr "veckodagar"
 #~ "Detta aktiverar tillgång till skuggkopia skapad med automatisk avbild "
 #~ "(endast ZFS)"
 
+#~ msgid "Run as"
+#~ msgstr "Kör som"
+
+#~ msgid "umask"
+#~ msgstr "umask"
+
 #~ msgid "Password server"
 #~ msgstr "Lösenordsserver"
 
@@ -10626,6 +10766,9 @@ msgstr "veckodagar"
 #~ msgstr ""
 #~ "Arbetsgruppen som servern tillhör vid frågor från Windows- eller SM-klienter "
 #~ "(max. 15 tecken)."
+
+#~ msgid "Upload directory"
+#~ msgstr "Uppladningskatalog"
 
 #~ msgid "Trusted domains"
 #~ msgstr "Betrodda domäner"
@@ -10638,6 +10781,9 @@ msgstr "veckodagar"
 
 #~ msgid "Enable large read/write"
 #~ msgstr "Aktivering av stora läs/skriv"
+
+#~ msgid "Forced update period"
+#~ msgstr "Tvingande uppdateringsperiod"
 
 #~ msgid ""
 #~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
@@ -10655,8 +10801,29 @@ msgstr "veckodagar"
 #~ msgid "AIO write size"
 #~ msgstr "AIO skriv storlek"
 
+#~ msgid "Access mode"
+#~ msgstr "Åtkomst läge"
+
+#~ msgid "Active Directory List"
+#~ msgstr "Active Directory förteckning"
+
+#~ msgid "All users will have the root privilege."
+#~ msgstr "Alla användare kommer att ha root behörighet."
+
+#~ msgid "Alternate TCP port. Default is 873"
+#~ msgstr "Alternativ TCP port. Standard är 873."
+
+#~ msgid "Alternate TCP port. Default is 22"
+#~ msgstr "Alternativ TCP port. Standard är 22."
+
+#~ msgid "Skip first scan"
+#~ msgstr "Hoppa över första skanningen"
+
 #~ msgid "AIO module"
 #~ msgstr "AIO modul"
+
+#~ msgid "Remote rsync daemon"
+#~ msgstr "Fjärr rsync demon"
 
 #~ msgid "Store NTFS acls"
 #~ msgstr "Lagra NTFS acls"
@@ -10673,6 +10840,12 @@ msgstr "veckodagar"
 #~ msgid "Enable ACL inheritance"
 #~ msgstr "Aktivera ärvning av ACL"
 
+#~ msgid "Compilations directories"
+#~ msgstr "Katalog för samlingar"
+
+#~ msgid "Group compilations"
+#~ msgstr "Gruppsamlingar"
+
 #~ msgid "Enable mapping DOS attributes"
 #~ msgstr "Aktivera översättning av DOS-attribut"
 
@@ -10681,6 +10854,13 @@ msgstr "veckodagar"
 
 #~ msgid "AFP compatibility"
 #~ msgstr "AFP kompatibilitet"
+
+#~ msgid ""
+#~ "Enter the path to the home directory. The config will be created under the "
+#~ "specified directory."
+#~ msgstr ""
+#~ "Mata in sökvägen till hemmakatalogen. Konfigurationen kommer att skapas "
+#~ "under den aktuella katalogen."
 
 #~ msgid "Enable extended attribute support"
 #~ msgstr "Aktivera utökad attributsupport"
@@ -10697,8 +10877,54 @@ msgstr "veckodagar"
 #~ msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
 #~ msgstr "Detta ger NTFS acls utan ZFS ACL stöd som UFS."
 
+#~ msgid "Remote module (source)"
+#~ msgstr "Fjärrmodul (källa)"
+
+#~ msgid ""
+#~ "A Portal Group contains IP addresses and listening TCP ports to connect the "
+#~ "target from the initiator."
+#~ msgstr ""
+#~ "En portalgrupp innehåller IP adresser och lyssnar på TCP portar för att "
+#~ "ansluta till målet från initiatorn."
+
+#~ msgid ""
+#~ "A Initiator Group contains authorised initiator names and networks to access "
+#~ "the target."
+#~ msgstr ""
+#~ "En initiatorgrupp innehåller tillåtna initiator namn och nätverk för åtkomst "
+#~ "till destinationen."
+
+#~ msgid ""
+#~ "Additional parameters to the hardware-specific part of the driver for second "
+#~ "UPS."
+#~ msgstr ""
+#~ "Extra parametrar för de hårdvaruspecifika delarna av drivrutinen för UPS två."
+
+#, php-format
+#~ msgid ""
+#~ "%s must be enabled for Unison to work, and the %s must have shell access."
+#~ msgstr ""
+#~ "%s måste aktiveras för att Unison skall fungera, och %s måste ha access till "
+#~ "kommandonivå (Shell)."
+
 #~ msgid "Enable 'Asynchronous I/O (AIO)' switch."
 #~ msgstr "Aktivera 'Asynkron I/O (AIO)' val."
+
+#~ msgid "SSHD"
+#~ msgstr "SSHD"
+
+#~ msgid "Set under which user the service should run (www by default)."
+#~ msgstr "Välj under vilken användare tjänsten skall köras (www som standard)."
+
+#~ msgid ""
+#~ "Running the service as user root is not recommended for security reasons, "
+#~ "use at your own risk!"
+#~ msgstr ""
+#~ "Att köra tjänsten som rootanvändare är inte att rekommendera av "
+#~ "säkerhetsskäl, används på egen risk!"
+
+#~ msgid "user"
+#~ msgstr "användare"
 
 #~ msgid "Server Max Protocol"
 #~ msgstr "Högsta protokoll för server"
@@ -10711,3 +10937,34 @@ msgstr "veckodagar"
 
 #~ msgid "Client Max Protocol"
 #~ msgstr "Högsta protokoll för klient"
+
+#~ msgid "Auxiliary Parameters"
+#~ msgstr "Extra parametrar"
+
+#~ msgid ""
+#~ "A directory listing is generated if a directory is requested and no index-"
+#~ "file (index.php, index.html, index.htm or default.htm) was found in that "
+#~ "directory."
+#~ msgstr ""
+#~ "En katalogförteckning genereras om en katalog efterfrågas men ingen index "
+#~ "fil (index.php, index.html, index.htm eller default.htm) återfanns i "
+#~ "katalogen."
+
+#~ msgid "Auxiliary Parameter"
+#~ msgstr "Tilläggsparametrar"
+
+#, php-format
+#~ msgid ""
+#~ "Enter a custom port number if you want to override the default port. Default "
+#~ "port is %s."
+#~ msgstr ""
+#~ "Mata in ett portnummer om du vill frångå standardporten. Standard är %s."
+
+#~ msgid "Working Directory"
+#~ msgstr "Arbetskatalog"
+
+#~ msgid "Remote Rsync Saemon"
+#~ msgstr "Fjärr Rsync Saemon"
+
+#~ msgid "Scan Type"
+#~ msgstr "Skanningstyp"

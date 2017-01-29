@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-28 02:17+0000\n"
-"PO-Revision-Date: 2017-01-24 11:43+0000\n"
+"POT-Creation-Date: 2017-01-29 13:11+0000\n"
+"PO-Revision-Date: 2017-01-29 06:57+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-28 01:57+0000\n"
+"X-Launchpad-Export-Date: 2017-01-29 12:22+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -75,13 +75,6 @@ msgstr "%s este deja configurat ca volum."
 #, php-format
 msgid "%s is too long."
 msgstr "%s este prea lung."
-
-#, php-format
-msgid ""
-"%s must be enabled for Unison to work, and the %s must have shell access."
-msgstr ""
-"%s trebuie activat pentru funcționarea Unison iar %s trebuie să aibă acces "
-"de tip shell."
 
 #, php-format
 msgid "%s of %sB"
@@ -205,29 +198,9 @@ msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "Etichetă VLAN 802.1Q (între 1 și 4094)."
 
 msgid ""
-"A Auth Group contains authorised users and secrets for additional security."
-msgstr ""
-"Un Auth Grup conține utilizatorii autorizați și secretele corespunzătoare "
-"pentru un nivel de securitate suplimentară."
-
-msgid ""
-"A Initiator Group contains authorised initiator names and networks to access "
-"the target."
-msgstr ""
-"Un Grup Inițiator conține numele inițiatorilor și rețelelor autorizate care "
-"pot accesa rețeaua destinație."
-
-msgid ""
 "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
 msgstr ""
 "Numele serverului NTP poate conține doar caracterele a-z, 0-9, '-' şi '.'."
-
-msgid ""
-"A Portal Group contains IP addresses and listening TCP ports to connect the "
-"target from the initiator."
-msgstr ""
-"Un Group Portal conține adresele IP și porturile TCP folosite de inițiator "
-"pentru a se conecta la destinație."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -242,13 +215,9 @@ msgstr ""
 "Rețeaua VLAN cu eticheta %s este deja definită pentru această interfață."
 
 msgid ""
-"A directory listing is generated if a directory is requested and no index-"
-"file (index.php, index.html, index.htm or default.htm) was found in that "
-"directory."
+"A directory listing is generated when no index-files (index.php, index.html, "
+"index.htm or default.htm) are found in a directory."
 msgstr ""
-"O listă cu fișierele și folderele curente este generată dacă se solicită un "
-"folder care nu conține niciun fişier specific (index.php, index.html, "
-"index.htm sau default.htm)."
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -308,9 +277,11 @@ msgstr "O adresa IP sau o nota CIDR este necesara pentru fisierul host allow"
 
 msgid "A valid IPv4 address must be specified for the primary DNS server."
 msgstr ""
+"Trebuie să specificați o adresă IPv4 validă pentru serverul DNS primar."
 
 msgid "A valid IPv4 address must be specified for the secondary DNS server."
 msgstr ""
+"Trebuie să specificați o adresă IPv4 validă pentru serverul DNS secundar."
 
 msgid "A valid IPv4 address must be specified."
 msgstr "Trebuie să introduceți o adresă IPv4 validă."
@@ -323,9 +294,11 @@ msgstr "Trebuie să introduceți o adresă de gateway IPv6 validă."
 
 msgid "A valid IPv6 address must be specified for the primary DNS server."
 msgstr ""
+"Trebuie să specificați o adresă IPv6 validă pentru serverul DNS primar."
 
 msgid "A valid IPv6 address must be specified for the secondary DNS server."
 msgstr ""
+"Trebuie să specificați o adresă IPv6 validă pentru serverul DNS secundar."
 
 msgid "A valid IPv6 address must be specified."
 msgstr "Trebuie să introduceți o adresă IPv6 validă."
@@ -373,19 +346,19 @@ msgid "AFP"
 msgstr "AFP"
 
 msgid "AFP Compatibility"
-msgstr ""
+msgstr "Compatibilitate AFP"
 
 msgid "AG"
 msgstr "AG"
 
 msgid "AIO Module"
-msgstr ""
+msgstr "Modul AIO"
 
 msgid "AIO Read Size"
-msgstr ""
+msgstr "Dimensiune AIO la citire"
 
 msgid "AIO Write Size"
-msgstr ""
+msgstr "Dimensiune AIO la scriere"
 
 msgid "ALL Interfaces"
 msgstr "TOATE interfețele"
@@ -417,9 +390,6 @@ msgstr "Restricții Acces"
 msgid "Access Time (atime)"
 msgstr "Timp Acces (atime)"
 
-msgid "Access mode"
-msgstr "Mod de acces"
-
 msgid "Access the webGUI with the new IP address"
 msgstr "Acesați interfața Web la noua adresă IP"
 
@@ -447,9 +417,6 @@ msgstr "Activ"
 
 msgid "Active Directory"
 msgstr "Active Directory (AD)"
-
-msgid "Active Directory List"
-msgstr "Lista Active Directory"
 
 msgid "Active Shares"
 msgstr "Partajări active"
@@ -581,20 +548,16 @@ msgid "Add target"
 msgstr "Adăugare destinație"
 
 msgid "Additional Group"
-msgstr ""
+msgstr "Grup adițional"
 
 msgid "Additional Network"
 msgstr "Rețele adiționale"
 
+msgid "Additional Parameters"
+msgstr ""
+
 msgid "Additional Storage"
 msgstr "Spațiu stocare adițional"
-
-msgid ""
-"Additional parameters to the hardware-specific part of the driver for second "
-"UPS."
-msgstr ""
-"PArametri adiționali pentru partea hardware a driverului pentru UPS-ul "
-"secundar."
 
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr "Parametri suplimentari pentru partea hardware specifică driverului."
@@ -606,7 +569,7 @@ msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr "Adresa daemon-ului hastd (trebuie să fie o adresă IP statică)."
 
 msgid "Admin Password"
-msgstr ""
+msgstr "Parola Admin"
 
 msgid "Administration password"
 msgstr "Parola Administrare"
@@ -688,6 +651,9 @@ msgstr "Nivel alertă"
 msgid "All"
 msgstr "Toate"
 
+msgid "All Dirs"
+msgstr "Toate Directoarele"
+
 msgid "All data from the following statistics have been deleted:"
 msgstr "Toate datele pentru următoarele statistici au fost șterse:"
 
@@ -700,9 +666,6 @@ msgstr ""
 
 msgid "All data will be lost when you activate this option!"
 msgstr "Toate datele vor fi pierdute la activarea acestei opțiuni!"
-
-msgid "All dirs"
-msgstr "Toate directoarele"
 
 #, php-format
 msgid "All dirs requires mounted path, but Path %s is not mounted."
@@ -722,14 +685,14 @@ msgstr ""
 msgid "All software raid disks are imported."
 msgstr "toate dispozitivele RAID-Soft atasate"
 
-msgid "All users will have the root privilege."
-msgstr "Toți utilizatorii vor avea privilegii de root."
-
 msgid "Alloc"
 msgstr "Alocare"
 
 msgid "Allow"
 msgstr "Permite"
+
+msgid "Allow New Files"
+msgstr "Permite fișiere noi"
 
 msgid "Allow TLS connections only."
 msgstr "Permite doar conexiuni TLS."
@@ -744,9 +707,6 @@ msgstr "Permite clienților să utilizeze atribute extinse tip OS/2"
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr ""
 "Permite clienților să continue încărcările și descărcările întrerupte."
-
-msgid "Allow new files"
-msgstr "Permite fișiere noi"
 
 msgid "Allow new files to be created."
 msgstr "Permite crearea de fișiere noi."
@@ -795,13 +755,10 @@ msgid "AltRoot"
 msgstr "AltRoot"
 
 msgid "Alternate Data Streams"
-msgstr ""
+msgstr "Flux de date alternativ"
 
-msgid "Alternate TCP port. Default is 22"
-msgstr "Port TCP Alternativ. Portul implicit este 22"
-
-msgid "Alternate TCP port. Default is 873"
-msgstr "Port TCP Alternativ. Portul implicit este 873"
+msgid "Alternate TCP port. (Default is 873)."
+msgstr "Port TCP alternativ (Implicit 873)."
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr ""
@@ -813,8 +770,8 @@ msgstr "Întodeauna"
 msgid "Always On"
 msgstr "Pornit permanent"
 
-msgid "Always scan"
-msgstr "Scanează întotdeauna"
+msgid "Always Scan"
+msgstr ""
 
 msgid "Ambient Conditions From External Probe Equipment"
 msgstr "Parametri ambientali de la echipamentul de probă extern"
@@ -867,10 +824,10 @@ msgid "An interface with the specified description already exists."
 msgstr "O interfață cu această descriere există deja."
 
 msgid "Anonymous Bind"
-msgstr ""
+msgstr "Legare anonimă"
 
 msgid "Anonymous Users"
-msgstr ""
+msgstr "Utilizatori anonimi"
 
 msgid "Anonymous access has been deprecated starting from SMB2."
 msgstr "Accesul anonim a fost depreciat începând cu SMB2."
@@ -939,7 +896,7 @@ msgid "Are you sure you want to shutdown the server?"
 msgstr "Opriți serverul?"
 
 msgid "Asynchronous I/O"
-msgstr ""
+msgstr "I/O asincrone"
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
@@ -983,36 +940,47 @@ msgid "Auth Group"
 msgstr "Grup Auth"
 
 msgid "Auth Group Settings"
-msgstr ""
+msgstr "Setări Grup autorizat"
 
 msgid "Auth Groups"
 msgstr "Grupuri Auth"
+
+msgid ""
+"Auth Groups contains authorised users and secrets for additional security."
+msgstr ""
 
 msgid "Auth Method"
 msgstr "Metodă Autentificare"
 
 msgid "Authenticate Path & Realm"
-msgstr ""
+msgstr "Autentificare Path & Realm"
 
 msgid "Authenticate URL"
 msgstr "URL Autentificare"
 
 msgid "Authenticated Users"
-msgstr ""
+msgstr "Utilizatori autentificați"
 
 msgid ""
 "Authenticated user download bandwith in KB/s. An empty field means infinity."
 msgstr ""
+"Bandă download pentru utilizatori autentificați. Câmp necompletat inseamnă "
+"nelimitat."
 
 msgid ""
 "Authenticated user upload bandwith in KB/s. An empty field means infinity."
 msgstr ""
+"Bandă upload pentru utilizatori autentificați. Câmp necompletat inseamnă "
+"nelimitat."
 
 msgid "Authentication"
 msgstr "Autentificare"
 
 msgid "Authentication Method"
 msgstr "Metodă de autentificare"
+
+msgid "Authorised Network"
+msgstr "Rețea autorizată"
 
 msgid "Authorised network"
 msgstr "Rețea Autorizată"
@@ -1027,7 +995,7 @@ msgid "Auto Snapshot"
 msgstr "Imagine sistem automată"
 
 msgid "Auto Snapshot Settings"
-msgstr ""
+msgstr "Setări Snapshot automat"
 
 msgid "Auto page refresh."
 msgstr "Reactualizare automată pagină."
@@ -1047,17 +1015,8 @@ msgstr "Autoscalare pentru grafice."
 msgid "Autoselect"
 msgstr "Selectare automată"
 
-msgid "Auxiliary Parameter"
-msgstr ""
-
-msgid "Auxiliary Parameters"
-msgstr "Parametri auxiliari"
-
 msgid "Auxiliary device firmware"
 msgstr "Firmware dispozitiv auxiliar"
-
-msgid "Auxiliary parameters"
-msgstr "Parametri auxiliari"
 
 msgid "Avail"
 msgstr "Disponibil"
@@ -1106,10 +1065,10 @@ msgid "Ban List"
 msgstr "Listă interdicţii"
 
 msgid "Ban List Rule"
-msgstr ""
+msgstr "Regulă listă Ban"
 
 msgid "Ban List Rule Settings"
-msgstr ""
+msgstr "Setări regulă listă Ban"
 
 msgid "Banner"
 msgstr "Banner"
@@ -1179,6 +1138,10 @@ msgstr "Înainte - Fișierele vor fi șterse înainte de începerea transferului
 msgid "Before - File-deletions will be performed before the transfer starts."
 msgstr "Înainte - Fișierele vor fi șterse înainte de începerea transferului."
 
+msgid ""
+"Before a Unison Client can start to work, you need to perform the following:"
+msgstr ""
+
 msgid "Best available"
 msgstr "Cel mai bun disponibil"
 
@@ -1186,7 +1149,7 @@ msgid "Bind DN"
 msgstr "DN legare"
 
 msgid "Bind Password"
-msgstr ""
+msgstr "Parolă legare"
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
@@ -1304,10 +1267,10 @@ msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
 
 msgid "CIFS/SMB Information"
-msgstr ""
+msgstr "Informație CIFS/SMS"
 
-msgid "CIFS/SMB disabled"
-msgstr "CIFS/SMB dezactivat"
+msgid "CIFS/SMB is disabled."
+msgstr ""
 
 msgid "CIFS/SMB is enabled."
 msgstr "Serviciu CIFS/SMS activat."
@@ -1519,10 +1482,10 @@ msgid "Client"
 msgstr "Client"
 
 msgid "Client Max. Protocol"
-msgstr ""
+msgstr "Protocol Max. client"
 
 msgid "Client Min. Protocol"
-msgstr ""
+msgstr "Protocol Min. client"
 
 msgid "Clone"
 msgstr "Clonă"
@@ -1540,6 +1503,8 @@ msgid ""
 "Comma-separated list of group names that are permitted to login to the FTP "
 "server. (empty = ftp group)."
 msgstr ""
+"Lista grupurilor separate prin virgulă care se pot conecta la serverul FTP "
+"(câmp necompletat = grupul ftp)."
 
 msgid "Command"
 msgstr "Comandă"
@@ -1588,8 +1553,8 @@ msgstr "Sistemul de Fișiere utilizat"
 msgid "Community"
 msgstr "Comunitate"
 
-msgid "Compilations directories"
-msgstr "Director colecții"
+msgid "Compilations Directories"
+msgstr ""
 
 msgid "Compiled"
 msgstr "Data compilării"
@@ -1619,13 +1584,13 @@ msgid "Configuration"
 msgstr "Configurație"
 
 msgid "Configuration Directory"
-msgstr ""
+msgstr "Director configurare"
 
 msgid "Configuring"
 msgstr "Configurare"
 
 msgid "Confirm New Password"
-msgstr ""
+msgstr "Confirmare parolă"
 
 msgid "Confirmation"
 msgstr "Confirmare"
@@ -1940,7 +1905,7 @@ msgid "Create HVM Guest"
 msgstr "Creare cont HVM Guest"
 
 msgid "Create Mask"
-msgstr ""
+msgstr "Creare Mască"
 
 msgid "Create PV Guest"
 msgstr "Creare cont PV Guest"
@@ -1997,7 +1962,7 @@ msgid "Current"
 msgstr "Curent"
 
 msgid "Current Password"
-msgstr ""
+msgstr "Parolă curentă"
 
 msgid "Current Version:"
 msgstr "Versiunea curentă:"
@@ -2015,7 +1980,7 @@ msgstr ""
 "utilizarea unui cod de acces propriu."
 
 msgid "Current password is incorrectly entered."
-msgstr ""
+msgstr "Parola curentă a fost introdusă greșit."
 
 msgid "Current state of drive operation based upon the Life Curve."
 msgstr "Starea curentă a discului pe baza curbei de viață."
@@ -2069,10 +2034,10 @@ msgid "DNS"
 msgstr "DNS"
 
 msgid "DNS Domain"
-msgstr ""
+msgstr "Domeniu DNS"
 
 msgid "DNS Forwarder"
-msgstr ""
+msgstr "Forwarder DNS"
 
 msgid "DNS server is empty."
 msgstr "Serverul DNS este nul."
@@ -2136,7 +2101,7 @@ msgid "Date & Time"
 msgstr "Data şi Ora"
 
 msgid "Date Format"
-msgstr ""
+msgstr "Format dată"
 
 msgid "Day"
 msgstr "Zi"
@@ -2164,7 +2129,7 @@ msgstr ""
 "3-4-5 = numărul maxim de ștergeri (big endian)."
 
 msgid "Decrypt Password"
-msgstr ""
+msgstr "Decriptare parolă"
 
 msgid "Dedup"
 msgstr "Dedup"
@@ -2192,7 +2157,7 @@ msgid "Default Device Settings"
 msgstr "Setări implicite dispozitiv"
 
 msgid "Default Root"
-msgstr ""
+msgstr "Root implicit"
 
 msgid "Default user name is 'admin'."
 msgstr "Numele de utilizator implicit este 'admin'"
@@ -2403,9 +2368,6 @@ msgstr "Rețeaua destinație pentru această rută statică"
 msgid "Destination port"
 msgstr "Port destinație"
 
-msgid "Destination share"
-msgstr "Partajare Destinație"
-
 msgid "Destroy a pool"
 msgstr "Distrugere pool"
 
@@ -2430,7 +2392,7 @@ msgid "Detected"
 msgstr "Detectat"
 
 msgid "Detected Disks"
-msgstr ""
+msgstr "Discuri detectate"
 
 msgid "Detected Language:"
 msgstr "Detecție limbă:"
@@ -2532,7 +2494,7 @@ msgid "Directory %s doesn't exist!"
 msgstr "Directorul %s nu există!"
 
 msgid "Directory Mask"
-msgstr ""
+msgstr "MAscă directoare"
 
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr ""
@@ -2641,7 +2603,7 @@ msgstr ""
 "șoc mecanic sau a a temperaturii). Unitatea de măsură nu este cunoscută."
 
 msgid "Distributed Hash Table"
-msgstr ""
+msgstr "Tabelă Hash distribuită"
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
@@ -2876,8 +2838,8 @@ msgstr "Inversați activitățile selectate?"
 msgid "Do you want to toggle selected options?"
 msgstr "Inversați opțiunile selectate?"
 
-msgid "Document root"
-msgstr "Folderul rădăcină"
+msgid "Document Root"
+msgstr ""
 
 msgid "Document root of the webserver. Home of the web page files."
 msgstr "Folderul rădăcină a fișierele pentru serverul web."
@@ -2888,14 +2850,14 @@ msgstr "DomID"
 msgid "Domain"
 msgstr "Domeniu"
 
+msgid "Domain Name"
+msgstr ""
+
 msgid "Domain controller name"
 msgstr "Numele controlerului de domeniu"
 
 msgid "Domain is missing 2nd level name."
-msgstr ""
-
-msgid "Domain name"
-msgstr "Nume Domeniu"
+msgstr "Domeniul nu are definit numele de nivel 2."
 
 msgid "Domain name (DNS/Realm-Name)"
 msgstr "Numele de Domeniu (DNS/Realm-Name)"
@@ -2919,19 +2881,19 @@ msgid "Done."
 msgstr "Gata."
 
 msgid "Dos Charset"
-msgstr ""
+msgstr "Set de caractere Dos"
 
 msgid "Download"
 msgstr "Descărcare"
 
 msgid "Download Bandwidth"
-msgstr ""
+msgstr "Lățime de bandă pentru download"
 
 msgid "Download Configuration"
 msgstr "Descărcare configurație"
 
 msgid "Download Directory"
-msgstr ""
+msgstr "Director pentru download"
 
 msgid "Download directory"
 msgstr "Folder de descărcare"
@@ -2949,10 +2911,10 @@ msgid "Driver"
 msgstr "Driver"
 
 msgid "Driver List"
-msgstr ""
+msgstr "Listă dispozitiv"
 
 msgid "Driver Parameter"
-msgstr ""
+msgstr "Parametru dispozitiv"
 
 msgid "Driver used"
 msgstr "Driver utilizat"
@@ -2988,7 +2950,7 @@ msgid "Dynamic IP (DHCP) can not be used for HAST resources."
 msgstr "Pentru HAST nu pot fi utilizate IP-uri Dinamice (DHCP)."
 
 msgid "EA Support"
-msgstr ""
+msgstr "Suport EA"
 
 msgid "EFI/GPT partition can be use with UFS only."
 msgstr "Partitiile EFI/GPT pot fi folosite doar cu UFS."
@@ -3121,19 +3083,19 @@ msgid "Enable"
 msgstr "Activare"
 
 msgid "Enable 'Asynchronous I/O (AIO).' switch."
-msgstr ""
+msgstr "Activare opțiune ”I/O asincrone”."
 
 msgid "Enable 'Large read/write' switch."
 msgstr "Avtivare opțiune 'Large read/write'"
 
 msgid "Enable ACL inheritance."
-msgstr ""
+msgstr "Activare propagare ACL."
 
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr "Activare Advanced Format (sectoare de 4KB)."
 
 msgid "Enable Asynchronous I/O. (AIO)."
-msgstr ""
+msgstr "Activare I/O asincrone (AIO)."
 
 msgid "Enable Challenge-Response Authentication"
 msgstr "Activare autentificare Challenge-Response"
@@ -3186,7 +3148,7 @@ msgid "Enable Time Machine support"
 msgstr "Activare compatibilitate Time Machine"
 
 msgid "Enable ZFS ACL."
-msgstr ""
+msgstr "Acrivare ZFS ACL."
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
 msgstr "Activare Zeroconf/Bonjour pentru promovarea serviciilor sistemului."
@@ -3255,7 +3217,7 @@ msgid "Enable encryption."
 msgstr "Activare criptare."
 
 msgid "Enable extended attribute support."
-msgstr ""
+msgstr "Activare suport atribute extinse."
 
 msgid "Enable extended attributes for this file system."
 msgstr "Activare atribute extinse pentru acest sistem de fișiere."
@@ -3277,13 +3239,13 @@ msgid "Enable keyboard-interactive authentication."
 msgstr "Activare autentificare interactivă de la tastatură."
 
 msgid "Enable large read/write."
-msgstr ""
+msgstr "Activare citiri/scrieri în blocuri mari."
 
 msgid "Enable local user authentication."
 msgstr "Activare autentificare locală."
 
 msgid "Enable mapping DOS attributes."
-msgstr ""
+msgstr "Activare mapare atribute DOS."
 
 msgid "Enable module listing."
 msgstr "Activare listare module."
@@ -3298,7 +3260,7 @@ msgid "Enable peer exchange (PEX)."
 msgstr "Activare schimburi în grup (PEX)."
 
 msgid "Enable permission inheritance."
-msgstr ""
+msgstr "Activare propagare permisiuni."
 
 msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr "Activare transmitere port prin NAT-PMP sau UPnP."
@@ -3307,7 +3269,7 @@ msgid "Enable proxy authentication."
 msgstr "Activare autentificare proxy."
 
 msgid "Enable recycle bin."
-msgstr ""
+msgstr "Activare recycle bin."
 
 msgid "Enable remote monitoring of the local connected UPS."
 msgstr "Activare monitorizare la distanță pentru UPS-urile locale."
@@ -3329,6 +3291,9 @@ msgstr "Activare UPS secundar."
 
 msgid "Enable serial console."
 msgstr "Activare consolă serială."
+
+msgid "Enable service SSH when disabled"
+msgstr ""
 
 msgid "Enable shadow copy."
 msgstr ""
@@ -3421,8 +3386,18 @@ msgstr ""
 
 #, php-format
 msgid ""
-"Enter a custom port number if you want to override the default port. Default "
-"port is %s."
+"Enter a custom port number if you want to override the default port. "
+"(Default is %s)."
+msgstr ""
+
+msgid ""
+"Enter a custom port number if you want to override the default port. "
+"(Default is 22)."
+msgstr ""
+
+msgid ""
+"Enter a custom port number if you want to override the default port. "
+"(Default is 69). "
 msgstr ""
 
 msgid "Enter a description"
@@ -3476,6 +3451,11 @@ msgstr ""
 "Expresia utilizată la criptare trebuie să aibă între 8 și 63 de caractere."
 
 msgid ""
+"Enter the path to the database directory. The config files will be created "
+"under the specified directory."
+msgstr ""
+
+msgid ""
 "Enter the path to the home directory of VirtualBox. VM config and HDD image "
 "will be created under the specified directory."
 msgstr ""
@@ -3488,13 +3468,6 @@ msgid ""
 msgstr ""
 "Introduceți calea către folderul de bază pentru acest utilizator. Valoarea "
 "implicită este /mnt."
-
-msgid ""
-"Enter the path to the home directory. The config will be created under the "
-"specified directory."
-msgstr ""
-"Introduceți calea către directorul home. Fișierul de configurare va fi creat "
-"în directorul specificat."
 
 msgid ""
 "Enter the path to the home directory. This directory will store the "
@@ -3836,8 +3809,8 @@ msgstr "Forțare ștergere"
 msgid "Force use"
 msgstr "Forțare utilizare"
 
-msgid "Forced update period"
-msgstr "Perioada de actualizare forțată"
+msgid "Forced Update Period"
+msgstr ""
 
 msgid ""
 "Forces use of vdevs, even if they appear in use or specify different size. "
@@ -3983,6 +3956,9 @@ msgstr "Grup"
 msgid "Group Allow"
 msgstr ""
 
+msgid "Group Compilations"
+msgstr ""
+
 msgid "Group ID"
 msgstr "ID Grup"
 
@@ -3991,9 +3967,6 @@ msgstr "Setări grup"
 
 msgid "Group Suffix"
 msgstr ""
-
-msgid "Group compilations"
-msgstr "Colecții Grupuri"
 
 msgid "Group is locked"
 msgstr "Grupul este blocat"
@@ -4162,12 +4135,6 @@ msgstr ""
 
 msgid "Hosts Setup"
 msgstr "Setări sisteme"
-
-msgid "Hosts allow"
-msgstr "Adrese permise"
-
-msgid "Hosts deny"
-msgstr "Adrese blocate"
 
 msgid "Hour"
 msgstr "Oră"
@@ -4484,6 +4451,11 @@ msgstr ""
 
 msgid "Initiator Groups"
 msgstr "Grupuri Inițiatori"
+
+msgid ""
+"Initiator Groups contains authorised initiator names and networks to access "
+"the target."
+msgstr ""
 
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
@@ -4939,12 +4911,6 @@ msgstr "Partajare locală (Destinație)"
 msgid "Local User"
 msgstr "Utilizator Local"
 
-msgid "Local share (destination)"
-msgstr "Partajare locală (destinație)"
-
-msgid "Local shares to be synchronized"
-msgstr "Partajările locale pentru sincronizare"
-
 msgid "Location"
 msgstr "Locația"
 
@@ -4965,10 +4931,11 @@ msgid "Location where the content database file will be stored."
 msgstr "Locația unde va fi stocată baza de date."
 
 #, php-format
-msgid ""
-"Location where the working files will be stored, e.g. %s/backup/.unison"
+msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
 msgstr ""
-"Locația unde vor fi stocate fișierele de lucru, ex. %s/backup/.unison"
+
+msgid "Locked Files"
+msgstr ""
 
 msgid "Log"
 msgstr "Jurnal"
@@ -4994,8 +4961,8 @@ msgstr "Memorare pachete gestionate de această regulă în syslog."
 msgid "Logarithmic Scaling"
 msgstr "Scală logaritmică"
 
-msgid "Logical Block Length"
-msgstr "Lungime Block Logic"
+msgid "Logical Block"
+msgstr ""
 
 #, php-format
 msgid "Logical Unit Controller Authorised network (%s by default)"
@@ -5110,14 +5077,17 @@ msgstr "Producător"
 msgid "Manufacturing date"
 msgstr "Data de fabricație"
 
-msgid "Map all users to root"
-msgstr "Maparea tuturor utilizatorilor în root"
+msgid "Map all users to root, all users will have root privileges."
+msgstr ""
 
 msgid "Map to Guest"
 msgstr ""
 
-msgid "Map to user"
-msgstr "Mapare la utilizator"
+msgid "Map to Root"
+msgstr ""
+
+msgid "Map to User"
+msgstr ""
 
 msgid "Mapping DOS Attributes"
 msgstr ""
@@ -5141,7 +5111,13 @@ msgstr ""
 msgid "Max Entries"
 msgstr ""
 
+msgid "Max. Block Size"
+msgstr ""
+
 msgid "Max. Clients"
+msgstr ""
+
+msgid "Max. Connections"
 msgstr ""
 
 msgid "Max. Connections Per Host"
@@ -5153,20 +5129,14 @@ msgstr ""
 msgid "Max. Passive Port"
 msgstr ""
 
+msgid "Max. Sessions"
+msgstr ""
+
 msgid "Max. TTL"
 msgstr "TTL max."
 
-msgid "Max. block size"
-msgstr "Dimensiune maximă block"
-
-msgid "Max. connections"
-msgstr "Număr maxim Conexiuni"
-
 msgid "Max. pre-send R2T"
 msgstr "Pre-send R2T maxim"
-
-msgid "Max. sessions"
-msgstr "Număr maxim de sesiuni"
 
 msgid ""
 "Max. time-to-live (max. number of hops) used in outgoing probe packets."
@@ -5188,9 +5158,6 @@ msgstr "Maxim (Performanță Maximă)"
 
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr "Performanță maximă, nivel acustic maxim"
-
-msgid "Maximum connections"
-msgstr "Număr maxim conexiuni"
 
 msgid "Maximum frequency"
 msgstr "Frecvență maximă"
@@ -5525,6 +5492,9 @@ msgstr ""
 msgid "Netgraph"
 msgstr "Grafice rețea"
 
+msgid "Netstat"
+msgstr ""
+
 msgid "Network"
 msgstr "Rețea"
 
@@ -5827,9 +5797,6 @@ msgstr ""
 "Numărul de cicluri de ștergere realizate ca procent din numărul maxim de "
 "cicluri de ștergere pentru care a fost proiectat discul."
 
-msgid "Number of servers"
-msgstr "Numărul de servere"
-
 msgid "Numeric identifier of the group."
 msgstr "Identificatorul numeric al grupului."
 
@@ -6067,6 +6034,9 @@ msgstr "Parola"
 msgid "Password (confirmed)"
 msgstr "Parola nouă (confirmare)"
 
+msgid "Password Authentication"
+msgstr ""
+
 msgid "Password Encryption"
 msgstr ""
 
@@ -6075,9 +6045,6 @@ msgstr ""
 
 msgid "Password Suffix"
 msgstr ""
-
-msgid "Password authentication"
-msgstr "Parola de autentificare"
 
 msgid ""
 "Password does not match the confirmation password. Please ensure both "
@@ -6112,6 +6079,9 @@ msgstr "Cale"
 msgid "Path of the URL relative to document root."
 msgstr "Calea relativă către folderul rădăcină."
 
+msgid "Path to be shared to be synchronized."
+msgstr ""
+
 msgid "Path to be shared."
 msgstr "Calea de partajat."
 
@@ -6141,11 +6111,11 @@ msgstr "Setări de performanță"
 msgid "Permanent samba data path (e.g. %s)."
 msgstr "Cale permanentă samba (ex. %s)."
 
-msgid "Permit Root Login"
+msgid "Permission"
 msgstr ""
 
-msgid "Permit root login"
-msgstr "Permisiune autentificare directă root"
+msgid "Permit Root Login"
+msgstr ""
 
 msgid "Permit to do SSH Tunneling."
 msgstr "Permite SSH Tunneling."
@@ -6323,6 +6293,11 @@ msgstr ""
 msgid "Portal Groups"
 msgstr "Grupuri Portal"
 
+msgid ""
+"Portal Groups contains IP addresses and listening on TCP ports to connect "
+"the target from the initiator."
+msgstr ""
+
 msgid "Portals"
 msgstr "Portaluri"
 
@@ -6375,14 +6350,17 @@ msgstr "Prefix"
 msgid "Preformatted file system"
 msgstr "Sistem de fișiere preformatat"
 
-msgid "Preserve extended attributes"
-msgstr "Păstrare atribute extinse"
+msgid "Preserve Extended Attributes"
+msgstr ""
+
+msgid "Preserve Extended attributes"
+msgstr ""
+
+msgid "Preserve Permissions"
+msgstr ""
 
 msgid "Preserve modification times."
 msgstr "Păstrare timpi modificări."
-
-msgid "Preserve permissions"
-msgstr "Păstrează permisiunile"
 
 msgid "Prevent deep discharge of battery"
 msgstr "Prevenire descărcare totală acumulator"
@@ -6685,6 +6663,9 @@ msgstr "Adresă sistem remote"
 msgid "Remote Module (Source)"
 msgstr "Modul remote (sursă)"
 
+msgid "Remote Rsync Daemon"
+msgstr ""
+
 msgid "Remote Rsync Server"
 msgstr "Server Rsync Destinație"
 
@@ -6693,9 +6674,6 @@ msgstr ""
 
 msgid "Remote Syslog Server"
 msgstr "Server syslog remote"
-
-msgid "Remote module (source)"
-msgstr "Modul destinație (sursă)"
 
 msgid "Remote module name"
 msgstr "Nume destinație"
@@ -6714,9 +6692,6 @@ msgid ""
 msgstr ""
 "Nume utilizator pentru monitorizare remote. Trebuie să introduceți același "
 "nume și pentru sistemul master și pentru cel slave."
-
-msgid "Remote rsync daemon"
-msgstr "Daemon reomote sync"
 
 msgid "Removable"
 msgstr "Detașabil"
@@ -6777,6 +6752,9 @@ msgstr "Rescanare"
 
 msgid "Rescan Disks"
 msgstr "Rescanare discuri"
+
+msgid "Rescan Interval"
+msgstr ""
 
 msgid "Rescan interval"
 msgstr "Interval scanare"
@@ -6847,8 +6825,8 @@ msgstr "Inapoi la pgina de comenzi"
 msgid "Reverse DNS lookup"
 msgstr "Căutare DNS inversă"
 
-msgid "Reverse direction"
-msgstr "Direcție inversă"
+msgid "Reverse Direction"
+msgstr ""
 
 msgid "Role"
 msgstr "Rol"
@@ -6901,9 +6879,6 @@ msgstr "Numărul regulei"
 msgid "Rules"
 msgstr "Reguli"
 
-msgid "Run as"
-msgstr "Rulează ca"
-
 msgid "Run now"
 msgstr "Execută acum"
 
@@ -6914,11 +6889,9 @@ msgid "Running"
 msgstr "În execuție"
 
 msgid ""
-"Running the service as user root is not recommended for security reasons, "
-"use at your own risk!"
+"Running this service as root is not recommended for security reasons, use at "
+"your own risk!"
 msgstr ""
-"Rularea serviciilor ca user root nu este recomandată, faceți acest lucru pe "
-"propria răspundere!"
 
 msgid "Russian"
 msgstr "Rusă"
@@ -6971,9 +6944,6 @@ msgstr "SSH"
 msgid "SSH events"
 msgstr "Evenimente SSH"
 
-msgid "SSHD"
-msgstr "SSHD"
-
 msgid "SSHD log"
 msgstr "Jurnal SSHD"
 
@@ -7022,6 +6992,9 @@ msgstr "Salvare informații autentificare în fișierul de configurare."
 msgid "Saved file to"
 msgstr "Fișer salvat la"
 
+msgid "Scan Mode"
+msgstr ""
+
 msgid "Scan Targets"
 msgstr "Scanare Destinații"
 
@@ -7035,9 +7008,6 @@ msgstr ""
 "adăugate sau modificate. Introduceți valorea 0 pentru a dezactiva scanarea "
 "fișierelor în fundal. Dacă scanarea automată în fundal este dezactivată se "
 "poate forța o scanare a sistemului din pagina de stare a interfeței grafice."
-
-msgid "Scan type"
-msgstr "Tip scanare"
 
 msgid "Schedule Time"
 msgstr "Timp programat"
@@ -7198,6 +7168,9 @@ msgstr "Selectați limba folosită pentru Interfața Grafică."
 msgid "Select the location closest to you."
 msgstr "Selectați cea mai apropiată locație de dumneavoastră."
 
+msgid "Select the permission for running this service. (www by default)."
+msgstr ""
+
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
 "the button below to restore the configuration."
@@ -7298,11 +7271,11 @@ msgstr "Descriere server. Cîmpul poate fi lăsat necompletat."
 msgid "Server information"
 msgstr "Informații server"
 
-msgid "Server name"
-msgstr "Nume server"
-
 msgid "Server version"
 msgstr "Versiune server"
+
+msgid "Servers"
+msgstr ""
 
 msgid "Service"
 msgstr "Serviciu"
@@ -7359,11 +7332,6 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "Valoarea vitezei de scroll (între 0 și 10). Implicit este 10."
 
-msgid "Set under which user the service should run (www by default)."
-msgstr ""
-"Definiți utilizatorul sub care va rula serviciul (utilizatorulimplicit este "
-"www)."
-
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
 "Definire punct alternativ de montare pentru rădăcina bazei de date. Implicit "
@@ -7385,6 +7353,9 @@ msgstr ""
 
 msgid "Settings"
 msgstr "Setări"
+
+msgid "Setup user to get shell access"
+msgstr ""
 
 msgid "Shadow Copy"
 msgstr "Copie de Siguranță"
@@ -7463,6 +7434,9 @@ msgstr "Dimensiune bufer recepție (implicit %d)."
 msgid "Size of send buffer (%d by default)."
 msgstr "Dimensiune bufer transmisie (implicit %d)."
 
+msgid "Size offered to the initiator. (up to 8EiB=8388608TiB)."
+msgstr ""
+
 msgid ""
 "Size offered to the initiator. (up to 8EiB=8388608TiB. actual size is depend "
 "on your disks.)"
@@ -7473,8 +7447,8 @@ msgstr ""
 msgid "Skew"
 msgstr "Skew"
 
-msgid "Skip first scan"
-msgstr "Salta prima scanare"
+msgid "Skip First Scan"
+msgstr ""
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr "Sleep - Verificare dispozitiv doar dacă nu este deja în modul Sleep."
@@ -7515,6 +7489,9 @@ msgstr "Imagini Sistem"
 msgid "Sockets"
 msgstr "Socket-uri"
 
+msgid "Sockstat"
+msgstr ""
+
 msgid "SoftRaid"
 msgstr "Raid Software"
 
@@ -7538,9 +7515,6 @@ msgstr "Directorul sursă pentru sincronizare."
 
 msgid "Source port"
 msgstr "Port sursă"
-
-msgid "Source share"
-msgstr "Sursă Partajare"
 
 msgid "Space Usage"
 msgstr "Utilizare spațiu"
@@ -7786,8 +7760,8 @@ msgstr "Comutare la %s/s"
 msgid "Sync"
 msgstr "Sync"
 
-msgid "Synchronization time"
-msgstr "Timp sincronizare"
+msgid "Synchronization Time"
+msgstr ""
 
 msgid "Synchronize"
 msgstr "Sincronizare"
@@ -7858,14 +7832,14 @@ msgstr "Buffer mesaje sistem"
 msgid "System tuning"
 msgstr "Reglare fină Sistem"
 
+msgid "TCP Forwarding"
+msgstr ""
+
 msgid "TCP Port"
 msgstr ""
 
 msgid "TCP Wrapper"
 msgstr ""
-
-msgid "TCP forwarding"
-msgstr "Retransmitere TCP"
 
 msgid "TCP port"
 msgstr "Port TCP"
@@ -7896,6 +7870,9 @@ msgstr "Verificare certificat TLS Server"
 
 msgid "Tag"
 msgstr "Etichetă"
+
+msgid "Tag Number"
+msgstr ""
 
 msgid "Tag number"
 msgstr "Număr Etichetă"
@@ -8058,6 +8035,9 @@ msgid ""
 msgstr ""
 "Acțiunea va fi executată atunci cînd pachetul de date va respecta criteriul "
 "specificat mai jos."
+
+msgid "The actual size is depend on your disks."
+msgstr ""
 
 msgid "The administrator has been notified to apply your changes."
 msgstr ""
@@ -8644,13 +8624,6 @@ msgstr ""
 "prioritate. Acest mod este util atunci cînd se dorește un mod flexibil de "
 "acces a unei partajări de către utilizatori multipli."
 
-msgid ""
-"The port to listen to. The default is to listen to the tftp port specified "
-"in /etc/services."
-msgstr ""
-"Portul de utilizat. Portul implicit pentru tftp este cel specificat în "
-"/etc/services."
-
 #, php-format
 msgid "The portal '%s' is invalid."
 msgstr "Portalul '%s' este invalid."
@@ -8676,10 +8649,6 @@ msgstr ""
 
 msgid "The queuedepth range is invalid."
 msgstr "Lungimea listei este incorectă."
-
-#, php-format
-msgid "The recommended length for compatibility is %d."
-msgstr "Lungimea recomandată pentru compatibilitate este %d."
 
 #, php-format
 msgid "The recommended queue depth is %d."
@@ -8796,13 +8765,13 @@ msgstr "Valoarea variabilei."
 msgid "The volume must be detached before it can be deleted."
 msgstr "Volumul trebuie detașat pentru a putea fi șters."
 
+msgid "The work directory does not exist."
+msgstr ""
+
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
 "clients. (maximum 15 characters)."
 msgstr ""
-
-msgid "The working directory does not exist."
-msgstr "Folderul de lucru nu există."
 
 msgid "There are too many additional groups."
 msgstr "Sînt prea multe grupuri adiționale."
@@ -8881,6 +8850,15 @@ msgstr "Acești parametri sînt adăugați la secțiunea [Global] a %s."
 #, php-format
 msgid "These parameters are added to [Share] section of %s."
 msgstr "Acești parametri sînt adăugați la secțiunea [Partajare] a %s."
+
+msgid ""
+"These parameters are added to the hardware-specific part of the driver for "
+"the second UPS."
+msgstr ""
+
+msgid ""
+"These parameters are added to the hardware-specific part of the driver."
+msgstr ""
 
 #, php-format
 msgid "These parameters will be added to %s."
@@ -9757,6 +9735,9 @@ msgstr "URL"
 msgid "Ukrainian"
 msgstr "Ucraineană"
 
+msgid "Umask"
+msgstr ""
+
 msgid "Unavailable"
 msgstr "Indisponibil"
 
@@ -9814,6 +9795,9 @@ msgstr "Demontare..."
 msgid "Up"
 msgstr "Activ"
 
+msgid "Update Period"
+msgstr ""
+
 msgid "Update period"
 msgstr "Perioada de actualizare"
 
@@ -9827,8 +9811,8 @@ msgstr ""
 msgid "Upload Bandwidth"
 msgstr ""
 
-msgid "Upload directory"
-msgstr "Folder de încărcare"
+msgid "Upload Directory"
+msgstr ""
 
 #, php-format
 msgid "Upload directory of the webserver. The default is %s."
@@ -10293,14 +10277,11 @@ msgstr "Caractere Speciale"
 msgid "Wireless configuration"
 msgstr "Configurație Wireless"
 
-msgid "Workgroup"
-msgstr "Grup de Lucru"
-
-msgid "Working Directory"
+msgid "Work Directory"
 msgstr ""
 
-msgid "Working directory"
-msgstr "Folder de lucru"
+msgid "Workgroup"
+msgstr "Grup de Lucru"
 
 msgid "Write"
 msgstr "Scriere"
@@ -10392,8 +10373,9 @@ msgstr ""
 "implicită (pînă la %d caractere ASCII)"
 
 #, php-format
-msgid "You may specify logical block length (%d by default)."
-msgstr "Puteți defini lungimea blocului logic (implicit %d)."
+msgid ""
+"You may specify logical block size. (default is %dB for compatibility)."
+msgstr ""
 
 msgid ""
 "You must add at least a Portal Group, an Initiator Group and an Extent "
@@ -10647,17 +10629,26 @@ msgstr "sysvol există în cale."
 msgid "to"
 msgstr "către"
 
-msgid "umask"
-msgstr "umask"
-
 msgid "umount"
 msgstr "demontare"
 
-msgid "user"
-msgstr "utilizator"
-
 msgid "week days"
 msgstr "zilele saptaminii"
+
+#~ msgid "All dirs"
+#~ msgstr "Toate directoarele"
+
+#~ msgid "Always scan"
+#~ msgstr "Scanează întotdeauna"
+
+#~ msgid "Auxiliary parameters"
+#~ msgstr "Parametri auxiliari"
+
+#~ msgid "CIFS/SMB disabled"
+#~ msgstr "CIFS/SMB dezactivat"
+
+#~ msgid "Domain name"
+#~ msgstr "Nume Domeniu"
 
 #~ msgid "Dos charset"
 #~ msgstr "Caractere Dos"
@@ -10665,11 +10656,23 @@ msgstr "zilele saptaminii"
 #~ msgid "Enable store DOS attributes"
 #~ msgstr "Activare salvare atribute DOS"
 
+#~ msgid "Hosts allow"
+#~ msgstr "Adrese permise"
+
+#~ msgid "Hosts deny"
+#~ msgstr "Adrese blocate"
+
 #~ msgid "Inherit permissions"
 #~ msgstr "Permisiuni ierarhice"
 
 #~ msgid "NetBIOS name"
 #~ msgstr "Nume NetBIOS"
+
+#~ msgid "Preserve permissions"
+#~ msgstr "Păstrează permisiunile"
+
+#~ msgid "Server name"
+#~ msgstr "Nume server"
 
 #~ msgid "Store DOS attributes"
 #~ msgstr "Salvare atribute DOS"
@@ -10677,11 +10680,17 @@ msgstr "zilele saptaminii"
 #~ msgid "Swap disabled"
 #~ msgstr "Swap dezactivat"
 
+#~ msgid "TCP forwarding"
+#~ msgstr "Retransmitere TCP"
+
 #~ msgid "Unix charset"
 #~ msgstr "Caractere Unix"
 
 #~ msgid "WINS server"
 #~ msgstr "Server WINS"
+
+#~ msgid "umask"
+#~ msgstr "umask"
 
 #~ msgid "Enable ZFS ACL"
 #~ msgstr "Activare ACL ZFS."
@@ -10689,11 +10698,29 @@ msgstr "zilele saptaminii"
 #~ msgid "Enable shadow copy"
 #~ msgstr "Activare copie de rezervă"
 
+#~ msgid "Logical Block Length"
+#~ msgstr "Lungime Block Logic"
+
 #~ msgid "Null passwords"
 #~ msgstr "Parolă nulă"
 
+#~ msgid "Number of servers"
+#~ msgstr "Numărul de servere"
+
+#~ msgid "Preserve extended attributes"
+#~ msgstr "Păstrare atribute extinse"
+
+#~ msgid "Run as"
+#~ msgstr "Rulează ca"
+
+#~ msgid "Scan type"
+#~ msgstr "Tip scanare"
+
 #~ msgid "Set read only"
 #~ msgstr "Setare doar citire"
+
+#~ msgid "Synchronization time"
+#~ msgstr "Timp sincronizare"
 
 #~ msgid "Time server"
 #~ msgstr "Server Bază de Timp"
@@ -10704,6 +10731,16 @@ msgstr "zilele saptaminii"
 #~ msgid "Enable extended attribute support"
 #~ msgstr "Activare suport atribute extinse"
 
+#, php-format
+#~ msgid "The recommended length for compatibility is %d."
+#~ msgstr "Lungimea recomandată pentru compatibilitate este %d."
+
+#~ msgid "The working directory does not exist."
+#~ msgstr "Folderul de lucru nu există."
+
+#~ msgid "Permit root login"
+#~ msgstr "Permisiune autentificare directă root"
+
 #~ msgid "AIO write size"
 #~ msgstr "Mărimea buffer scriere AIO"
 
@@ -10713,8 +10750,36 @@ msgstr "zilele saptaminii"
 #~ msgid "Receive Buffer Size"
 #~ msgstr "Mărime Buffer Intrare"
 
+#~ msgid "Working directory"
+#~ msgstr "Folder de lucru"
+
 #~ msgid "Create mask"
 #~ msgstr "Creare mască"
+
+#~ msgid ""
+#~ "The port to listen to. The default is to listen to the tftp port specified "
+#~ "in /etc/services."
+#~ msgstr ""
+#~ "Portul de utilizat. Portul implicit pentru tftp este cel specificat în "
+#~ "/etc/services."
+
+#~ msgid "Max. connections"
+#~ msgstr "Număr maxim Conexiuni"
+
+#~ msgid "Max. sessions"
+#~ msgstr "Număr maxim de sesiuni"
+
+#~ msgid "Document root"
+#~ msgstr "Folderul rădăcină"
+
+#~ msgid "Alternate TCP port. Default is 873"
+#~ msgstr "Port TCP Alternativ. Portul implicit este 873"
+
+#~ msgid "Map all users to root"
+#~ msgstr "Maparea tuturor utilizatorilor în root"
+
+#~ msgid "Upload directory"
+#~ msgstr "Folder de încărcare"
 
 #~ msgid "Password server"
 #~ msgstr "Server Parolă"
@@ -10734,6 +10799,44 @@ msgstr "zilele saptaminii"
 #~ msgid "Trusted domains"
 #~ msgstr "Domenii de încredere."
 
+#~ msgid "Allow new files"
+#~ msgstr "Permite fișiere noi"
+
+#, php-format
+#~ msgid ""
+#~ "Location where the working files will be stored, e.g. %s/backup/.unison"
+#~ msgstr ""
+#~ "Locația unde vor fi stocate fișierele de lucru, ex. %s/backup/.unison"
+
+#~ msgid ""
+#~ "A directory listing is generated if a directory is requested and no index-"
+#~ "file (index.php, index.html, index.htm or default.htm) was found in that "
+#~ "directory."
+#~ msgstr ""
+#~ "O listă cu fișierele și folderele curente este generată dacă se solicită un "
+#~ "folder care nu conține niciun fişier specific (index.php, index.html, "
+#~ "index.htm sau default.htm)."
+
+#~ msgid ""
+#~ "A Auth Group contains authorised users and secrets for additional security."
+#~ msgstr ""
+#~ "Un Auth Grup conține utilizatorii autorizați și secretele corespunzătoare "
+#~ "pentru un nivel de securitate suplimentară."
+
+#~ msgid ""
+#~ "A Initiator Group contains authorised initiator names and networks to access "
+#~ "the target."
+#~ msgstr ""
+#~ "Un Grup Inițiator conține numele inițiatorilor și rețelelor autorizate care "
+#~ "pot accesa rețeaua destinație."
+
+#~ msgid ""
+#~ "A Portal Group contains IP addresses and listening TCP ports to connect the "
+#~ "target from the initiator."
+#~ msgstr ""
+#~ "Un Group Portal conține adresele IP și porturile TCP folosite de inițiator "
+#~ "pentru a se conecta la destinație."
+
 #~ msgid ""
 #~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
 #~ msgstr ""
@@ -10746,8 +10849,20 @@ msgstr "zilele saptaminii"
 #~ "Trebuie să introduceți o adresa validă IPv6 pentru serverul primar/secundar "
 #~ "DNS."
 
+#~ msgid "Access mode"
+#~ msgstr "Mod de acces"
+
+#~ msgid "All users will have the root privilege."
+#~ msgstr "Toți utilizatorii vor avea privilegii de root."
+
+#~ msgid "Alternate TCP port. Default is 22"
+#~ msgstr "Port TCP Alternativ. Portul implicit este 22"
+
 #~ msgid "Asynchronous I/O (AIO)"
 #~ msgstr "Mod I/O Asincron (AIO)"
+
+#~ msgid "Destination share"
+#~ msgstr "Partajare Destinație"
 
 #~ msgid "Directory mask"
 #~ msgstr "Mască foldere"
@@ -10758,17 +10873,44 @@ msgstr "zilele saptaminii"
 #~ msgid "Enable large read/write"
 #~ msgstr "Utilizare pachete mari de date la citire/scriere pe disc."
 
+#~ msgid "Forced update period"
+#~ msgstr "Perioada de actualizare forțată"
+
 #~ msgid "Guest account"
 #~ msgstr "Cont vizitator"
 
 #~ msgid "Hide dot files"
 #~ msgstr "Ascundere fișiere cu punct (dot files)"
 
+#~ msgid "Local share (destination)"
+#~ msgstr "Partajare locală (destinație)"
+
+#~ msgid "Local shares to be synchronized"
+#~ msgstr "Partajările locale pentru sincronizare"
+
 #~ msgid "Map to guest"
 #~ msgstr "Mapare ca vizitator"
 
+#~ msgid "Map to user"
+#~ msgstr "Mapare la utilizator"
+
+#~ msgid "Max. block size"
+#~ msgstr "Dimensiune maximă block"
+
+#~ msgid "Maximum connections"
+#~ msgstr "Număr maxim conexiuni"
+
+#~ msgid "Password authentication"
+#~ msgstr "Parola de autentificare"
+
 #~ msgid "Recycle bin"
 #~ msgstr "Coș Fișiere"
+
+#~ msgid "Remote module (source)"
+#~ msgstr "Modul destinație (sursă)"
+
+#~ msgid "Reverse direction"
+#~ msgstr "Direcție inversă"
 
 #, php-format
 #~ msgid ""
@@ -10795,6 +10937,9 @@ msgstr "zilele saptaminii"
 #~ msgid "Shadow Copy format"
 #~ msgstr "Format Copie de Siguranță"
 
+#~ msgid "Source share"
+#~ msgstr "Sursă Partajare"
+
 #~ msgid "This will provide ZFS ACL support. (ZFS only)"
 #~ msgstr ""
 #~ "Aceasta opțiune va oferi suport ACL pentru ZFS (doar pentru sisteme cu ZFS)."
@@ -10803,6 +10948,10 @@ msgstr "zilele saptaminii"
 #~ msgstr ""
 #~ "Aceasta opțiune va furniza o copie de rezervă creată de o imagine sistem "
 #~ "generată automat (doar pentru ZFS)."
+
+#, php-format
+#~ msgid "You may specify logical block length (%d by default)."
+#~ msgstr "Puteți defini lungimea blocului logic (implicit %d)."
 
 #~ msgid ""
 #~ "The workgroup in which the server will appear when queried by Windows or SMB "
@@ -10814,8 +10963,14 @@ msgstr "zilele saptaminii"
 #~ msgid "Interface selection"
 #~ msgstr "Selecție interfață"
 
+#~ msgid "Active Directory List"
+#~ msgstr "Lista Active Directory"
+
 #~ msgid "Store NTFS acls"
 #~ msgstr "Salveaza NTFS acls"
+
+#~ msgid "Skip first scan"
+#~ msgstr "Salta prima scanare"
 
 #~ msgid "Store alternate data streams in Extended Attributes"
 #~ msgstr "Salveaza stream de date in Atribute Extinse"
@@ -10832,6 +10987,9 @@ msgstr "zilele saptaminii"
 #~ msgid "AIO module"
 #~ msgstr "modul AIO"
 
+#~ msgid "Remote rsync daemon"
+#~ msgstr "Daemon reomote sync"
+
 #~ msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
 #~ msgstr ""
 #~ "Vor fi activate permisiunile NTFS acls fără suport ZFS ACL (ex. UFS)."
@@ -10842,14 +11000,59 @@ msgstr "zilele saptaminii"
 #~ msgid "Enable mapping DOS attributes"
 #~ msgstr "Activare mapare atribute DOS"
 
+#~ msgid ""
+#~ "Enter the path to the home directory. The config will be created under the "
+#~ "specified directory."
+#~ msgstr ""
+#~ "Introduceți calea către directorul home. Fișierul de configurare va fi creat "
+#~ "în directorul specificat."
+
 #~ msgid "AFP compatibility"
 #~ msgstr "Compatibilitate AFP"
 
 #~ msgid "Enhanced compatibility with Netatalk AFP server"
 #~ msgstr "Compatibilitate extinsă cu serverul Netatalk AFP"
 
+#, php-format
+#~ msgid ""
+#~ "%s must be enabled for Unison to work, and the %s must have shell access."
+#~ msgstr ""
+#~ "%s trebuie activat pentru funcționarea Unison iar %s trebuie să aibă acces "
+#~ "de tip shell."
+
+#~ msgid ""
+#~ "Additional parameters to the hardware-specific part of the driver for second "
+#~ "UPS."
+#~ msgstr ""
+#~ "PArametri adiționali pentru partea hardware a driverului pentru UPS-ul "
+#~ "secundar."
+
 #~ msgid "Enable 'Asynchronous I/O (AIO)' switch."
 #~ msgstr "Activare opțiune 'Asynchronous I/O (AIO)'"
+
+#~ msgid "SSHD"
+#~ msgstr "SSHD"
+
+#~ msgid ""
+#~ "Running the service as user root is not recommended for security reasons, "
+#~ "use at your own risk!"
+#~ msgstr ""
+#~ "Rularea serviciilor ca user root nu este recomandată, faceți acest lucru pe "
+#~ "propria răspundere!"
+
+#~ msgid "user"
+#~ msgstr "utilizator"
+
+#~ msgid "Set under which user the service should run (www by default)."
+#~ msgstr ""
+#~ "Definiți utilizatorul sub care va rula serviciul (utilizatorulimplicit este "
+#~ "www)."
+
+#~ msgid "Compilations directories"
+#~ msgstr "Director colecții"
+
+#~ msgid "Group compilations"
+#~ msgstr "Colecții Grupuri"
 
 #~ msgid "Server Max Protocol"
 #~ msgstr "Protocol Max server"
@@ -10862,3 +11065,9 @@ msgstr "zilele saptaminii"
 
 #~ msgid "Client Max Protocol"
 #~ msgstr "Protocol Max client"
+
+#~ msgid "Auxiliary Parameters"
+#~ msgstr "Parametri auxiliari"
+
+#~ msgid "Auxiliary Parameter"
+#~ msgstr "Parametru auxiliar"

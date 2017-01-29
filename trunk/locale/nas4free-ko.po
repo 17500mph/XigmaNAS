@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-28 02:17+0000\n"
+"POT-Creation-Date: 2017-01-29 13:11+0000\n"
 "PO-Revision-Date: 2016-10-12 06:40+0000\n"
 "Last-Translator: Dingle28 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-28 01:56+0000\n"
+"X-Launchpad-Export-Date: 2017-01-29 12:20+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: KOREA\n"
 "Language: \n"
@@ -77,11 +77,6 @@ msgstr "%s은(는) 이미 볼륨으로 설정되었습니다."
 #, php-format
 msgid "%s is too long."
 msgstr "%s은(는) 너무 깁니다."
-
-#, php-format
-msgid ""
-"%s must be enabled for Unison to work, and the %s must have shell access."
-msgstr "Unison을 작동하려면 %s이(가) 반드시 활성화되고 %s 이(가) 쉘에 액세스 할 수 있어야 합니다."
 
 #, php-format
 msgid "%s of %sB"
@@ -182,22 +177,8 @@ msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN 태그(1에서 4094까지)."
 
 msgid ""
-"A Auth Group contains authorised users and secrets for additional security."
-msgstr "인증 그룹은 추가적인 보안을 위해 권한을 부여 받은 사용자와 비밀을 포함합니다."
-
-msgid ""
-"A Initiator Group contains authorised initiator names and networks to access "
-"the target."
-msgstr "개시자 그룹은 목표 지점에 접근할 권한을 부여 받은 개시자 명과 네트워크를 포함합니다."
-
-msgid ""
 "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
 msgstr "A NTP 타임 서버 명은 a-z, 0-9, '-'과 '.' 문자만 포함할 수 있습니다."
-
-msgid ""
-"A Portal Group contains IP addresses and listening TCP ports to connect the "
-"target from the initiator."
-msgstr "포털 그룹은 개시자로부터 타젯에 연결하는 IP 주소와 listen 하는 TCP 포트를 포함합니다."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -209,12 +190,9 @@ msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr "태그 %s을(를) 가진 VLAN이 이미 이 인터페이스에 정의되어 있습니다."
 
 msgid ""
-"A directory listing is generated if a directory is requested and no index-"
-"file (index.php, index.html, index.htm or default.htm) was found in that "
-"directory."
+"A directory listing is generated when no index-files (index.php, index.html, "
+"index.htm or default.htm) are found in a directory."
 msgstr ""
-"디렉터리 리스팅은 인덱스파일(index.php, index.html, index.htm이나 default.htm)이 없는 디렉토리를 "
-"요청하는 경우에 생성됩니다."
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -374,9 +352,6 @@ msgstr "접근 제한"
 msgid "Access Time (atime)"
 msgstr ""
 
-msgid "Access mode"
-msgstr "접근 모드"
-
 msgid "Access the webGUI with the new IP address"
 msgstr "새 IP주소로 webGUI에 접속"
 
@@ -404,9 +379,6 @@ msgstr ""
 
 msgid "Active Directory"
 msgstr "액티브 디렉터리"
-
-msgid "Active Directory List"
-msgstr ""
 
 msgid "Active Shares"
 msgstr ""
@@ -543,12 +515,10 @@ msgstr ""
 msgid "Additional Network"
 msgstr ""
 
-msgid "Additional Storage"
+msgid "Additional Parameters"
 msgstr ""
 
-msgid ""
-"Additional parameters to the hardware-specific part of the driver for second "
-"UPS."
+msgid "Additional Storage"
 msgstr ""
 
 msgid "Additional parameters to the hardware-specific part of the driver."
@@ -635,6 +605,9 @@ msgstr ""
 msgid "All"
 msgstr "모두"
 
+msgid "All Dirs"
+msgstr ""
+
 msgid "All data from the following statistics have been deleted:"
 msgstr ""
 
@@ -645,9 +618,6 @@ msgstr ""
 
 msgid "All data will be lost when you activate this option!"
 msgstr ""
-
-msgid "All dirs"
-msgstr "모든 디렉터리"
 
 #, php-format
 msgid "All dirs requires mounted path, but Path %s is not mounted."
@@ -666,14 +636,14 @@ msgstr ""
 msgid "All software raid disks are imported."
 msgstr ""
 
-msgid "All users will have the root privilege."
-msgstr "모든 사용자가 루트 권한을 가질 것입니다."
-
 msgid "Alloc"
 msgstr ""
 
 msgid "Allow"
 msgstr "허용"
+
+msgid "Allow New Files"
+msgstr ""
 
 msgid "Allow TLS connections only."
 msgstr ""
@@ -687,9 +657,6 @@ msgstr "클라이언트가 공유에 OS/2 스타일의 확장된 속성을 저�
 
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "클라이언트가 중단된 업로드와 다운로드를 계속 진행하는 것 허용."
-
-msgid "Allow new files"
-msgstr "새 파일 허용"
 
 msgid "Allow new files to be created."
 msgstr "새 파일 생성 허용."
@@ -730,11 +697,8 @@ msgstr "대체 루트"
 msgid "Alternate Data Streams"
 msgstr ""
 
-msgid "Alternate TCP port. Default is 22"
-msgstr "다른 TCP 포트. 기본 값은 22"
-
-msgid "Alternate TCP port. Default is 873"
-msgstr "다른 TCP 포트. 기본 값은 873"
+msgid "Alternate TCP port. (Default is 873)."
+msgstr ""
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr "다른 설정 디렉터리(보통은 비워 둠)."
@@ -745,8 +709,8 @@ msgstr ""
 msgid "Always On"
 msgstr ""
 
-msgid "Always scan"
-msgstr "항상 스캔"
+msgid "Always Scan"
+msgstr ""
 
 msgid "Ambient Conditions From External Probe Equipment"
 msgstr ""
@@ -902,6 +866,10 @@ msgstr ""
 msgid "Auth Groups"
 msgstr "인증 그룹들"
 
+msgid ""
+"Auth Groups contains authorised users and secrets for additional security."
+msgstr ""
+
 msgid "Auth Method"
 msgstr "인증 방법"
 
@@ -926,6 +894,9 @@ msgid "Authentication"
 msgstr "인증"
 
 msgid "Authentication Method"
+msgstr ""
+
+msgid "Authorised Network"
 msgstr ""
 
 msgid "Authorised network"
@@ -961,17 +932,8 @@ msgstr ""
 msgid "Autoselect"
 msgstr "자동 선택"
 
-msgid "Auxiliary Parameter"
-msgstr ""
-
-msgid "Auxiliary Parameters"
-msgstr ""
-
 msgid "Auxiliary device firmware"
 msgstr ""
-
-msgid "Auxiliary parameters"
-msgstr "보조 인자들"
 
 msgid "Avail"
 msgstr ""
@@ -1084,6 +1046,10 @@ msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
 
 msgid "Before - File-deletions will be performed before the transfer starts."
+msgstr ""
+
+msgid ""
+"Before a Unison Client can start to work, you need to perform the following:"
 msgstr ""
 
 msgid "Best available"
@@ -1207,8 +1173,8 @@ msgstr "CIFS/SMB"
 msgid "CIFS/SMB Information"
 msgstr ""
 
-msgid "CIFS/SMB disabled"
-msgstr "CIFS/SMB 비활성화"
+msgid "CIFS/SMB is disabled."
+msgstr ""
 
 msgid "CIFS/SMB is enabled."
 msgstr ""
@@ -1477,7 +1443,7 @@ msgstr "Common 인터넷 파일 시스템"
 msgid "Community"
 msgstr "커뮤니티"
 
-msgid "Compilations directories"
+msgid "Compilations Directories"
 msgstr ""
 
 msgid "Compiled"
@@ -2188,9 +2154,6 @@ msgstr "이 스태틱 라우트를 위한 목적지 네트워크"
 msgid "Destination port"
 msgstr "목적지 포트"
 
-msgid "Destination share"
-msgstr "목적지 공유"
-
 msgid "Destroy a pool"
 msgstr ""
 
@@ -2638,8 +2601,8 @@ msgstr ""
 msgid "Do you want to toggle selected options?"
 msgstr ""
 
-msgid "Document root"
-msgstr "문서 루트"
+msgid "Document Root"
+msgstr ""
 
 msgid "Document root of the webserver. Home of the web page files."
 msgstr "웹 서버의 문서 루트. 웹 페이지 파일들의 홈."
@@ -2650,14 +2613,14 @@ msgstr ""
 msgid "Domain"
 msgstr "도메인"
 
+msgid "Domain Name"
+msgstr ""
+
 msgid "Domain controller name"
 msgstr "도메인 컨트롤러 명"
 
 msgid "Domain is missing 2nd level name."
 msgstr ""
-
-msgid "Domain name"
-msgstr "도메인 명"
 
 msgid "Domain name (DNS/Realm-Name)"
 msgstr "도메인 명(DNS/실제 명)"
@@ -3082,6 +3045,9 @@ msgstr ""
 msgid "Enable serial console."
 msgstr ""
 
+msgid "Enable service SSH when disabled"
+msgstr ""
+
 msgid "Enable shadow copy."
 msgstr ""
 
@@ -3171,8 +3137,18 @@ msgstr ""
 
 #, php-format
 msgid ""
-"Enter a custom port number if you want to override the default port. Default "
-"port is %s."
+"Enter a custom port number if you want to override the default port. "
+"(Default is %s)."
+msgstr ""
+
+msgid ""
+"Enter a custom port number if you want to override the default port. "
+"(Default is 22)."
+msgstr ""
+
+msgid ""
+"Enter a custom port number if you want to override the default port. "
+"(Default is 69). "
 msgstr ""
 
 msgid "Enter a description"
@@ -3217,6 +3193,11 @@ msgid ""
 msgstr "WPA-PSK 모드에서 이용될 비밀번호를 입력하십시오. 이것은 8자에서 63자 사이의 길이여야 합니다."
 
 msgid ""
+"Enter the path to the database directory. The config files will be created "
+"under the specified directory."
+msgstr ""
+
+msgid ""
 "Enter the path to the home directory of VirtualBox. VM config and HDD image "
 "will be created under the specified directory."
 msgstr ""
@@ -3225,11 +3206,6 @@ msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
 msgstr "이 사용자의 홈 디렉터리 경로를 입력합니다. 기본 경로인 /mnt를 이용하려면 이 난을 비워 두십시오."
-
-msgid ""
-"Enter the path to the home directory. The config will be created under the "
-"specified directory."
-msgstr ""
 
 msgid ""
 "Enter the path to the home directory. This directory will store the "
@@ -3560,8 +3536,8 @@ msgstr ""
 msgid "Force use"
 msgstr ""
 
-msgid "Forced update period"
-msgstr "강제 갱신 간격"
+msgid "Forced Update Period"
+msgstr ""
 
 msgid ""
 "Forces use of vdevs, even if they appear in use or specify different size. "
@@ -3704,6 +3680,9 @@ msgstr "그룹"
 msgid "Group Allow"
 msgstr ""
 
+msgid "Group Compilations"
+msgstr ""
+
 msgid "Group ID"
 msgstr "그룹 ID"
 
@@ -3711,9 +3690,6 @@ msgid "Group Settings"
 msgstr ""
 
 msgid "Group Suffix"
-msgstr ""
-
-msgid "Group compilations"
 msgstr ""
 
 msgid "Group is locked"
@@ -3870,12 +3846,6 @@ msgstr ""
 
 msgid "Hosts Setup"
 msgstr ""
-
-msgid "Hosts allow"
-msgstr "호스트 허용"
-
-msgid "Hosts deny"
-msgstr "호스트 거부"
 
 msgid "Hour"
 msgstr ""
@@ -4160,6 +4130,11 @@ msgstr ""
 
 msgid "Initiator Groups"
 msgstr "개시자 그룹"
+
+msgid ""
+"Initiator Groups contains authorised initiator names and networks to access "
+"the target."
+msgstr ""
 
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
@@ -4577,12 +4552,6 @@ msgstr ""
 msgid "Local User"
 msgstr "로컬 사용자"
 
-msgid "Local share (destination)"
-msgstr "로컬 공유(대상)"
-
-msgid "Local shares to be synchronized"
-msgstr "동기화 될 로컬 공유들"
-
 msgid "Location"
 msgstr "위치"
 
@@ -4601,9 +4570,11 @@ msgid "Location where the content database file will be stored."
 msgstr "컨텐츠 데이터베이스 파일이 저장될 위치."
 
 #, php-format
-msgid ""
-"Location where the working files will be stored, e.g. %s/backup/.unison"
-msgstr "작업 파일들이 저장될 장소. 예. %s/backup/.unison"
+msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
+msgstr ""
+
+msgid "Locked Files"
+msgstr ""
 
 msgid "Log"
 msgstr "로그"
@@ -4629,8 +4600,8 @@ msgstr "이 규칙에 의해 처리된 패킷들을 syslog에 기록합니다."
 msgid "Logarithmic Scaling"
 msgstr ""
 
-msgid "Logical Block Length"
-msgstr "논리적 블록 길이"
+msgid "Logical Block"
+msgstr ""
 
 #, php-format
 msgid "Logical Unit Controller Authorised network (%s by default)"
@@ -4742,14 +4713,17 @@ msgstr "제조자"
 msgid "Manufacturing date"
 msgstr ""
 
-msgid "Map all users to root"
-msgstr "모든 사용자를 root로 mapping"
+msgid "Map all users to root, all users will have root privileges."
+msgstr ""
 
 msgid "Map to Guest"
 msgstr ""
 
-msgid "Map to user"
-msgstr "사용자로 mapping"
+msgid "Map to Root"
+msgstr ""
+
+msgid "Map to User"
+msgstr ""
 
 msgid "Mapping DOS Attributes"
 msgstr ""
@@ -4771,7 +4745,13 @@ msgstr ""
 msgid "Max Entries"
 msgstr ""
 
+msgid "Max. Block Size"
+msgstr ""
+
 msgid "Max. Clients"
+msgstr ""
+
+msgid "Max. Connections"
 msgstr ""
 
 msgid "Max. Connections Per Host"
@@ -4783,20 +4763,14 @@ msgstr ""
 msgid "Max. Passive Port"
 msgstr ""
 
+msgid "Max. Sessions"
+msgstr ""
+
 msgid "Max. TTL"
 msgstr "최대 TTL"
 
-msgid "Max. block size"
-msgstr "최대 블록 크기"
-
-msgid "Max. connections"
-msgstr "최대 연결"
-
 msgid "Max. pre-send R2T"
 msgstr "최대 pre-send R2T"
-
-msgid "Max. sessions"
-msgstr "최대 세션"
 
 msgid ""
 "Max. time-to-live (max. number of hops) used in outgoing probe packets."
@@ -4816,9 +4790,6 @@ msgstr ""
 
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr ""
-
-msgid "Maximum connections"
-msgstr "최대 연결 수"
 
 msgid "Maximum frequency"
 msgstr ""
@@ -5143,6 +5114,9 @@ msgstr ""
 msgid "Netgraph"
 msgstr "네트 그래프"
 
+msgid "Netstat"
+msgstr ""
+
 msgid "Network"
 msgstr "네트워크"
 
@@ -5429,9 +5403,6 @@ msgid ""
 "the maximum physical erase cycles the drive is designed to endure."
 msgstr ""
 
-msgid "Number of servers"
-msgstr "서버 수"
-
 msgid "Numeric identifier of the group."
 msgstr "그룹의 숫자 식별자"
 
@@ -5654,6 +5625,9 @@ msgstr "비밀번호"
 msgid "Password (confirmed)"
 msgstr "비밀번호(확인됨)"
 
+msgid "Password Authentication"
+msgstr ""
+
 msgid "Password Encryption"
 msgstr ""
 
@@ -5662,9 +5636,6 @@ msgstr ""
 
 msgid "Password Suffix"
 msgstr ""
-
-msgid "Password authentication"
-msgstr "비밀번호 인증"
 
 msgid ""
 "Password does not match the confirmation password. Please ensure both "
@@ -5699,6 +5670,9 @@ msgstr "경로"
 msgid "Path of the URL relative to document root."
 msgstr "문서 루트에 대한 URL의 상대 경로."
 
+msgid "Path to be shared to be synchronized."
+msgstr ""
+
 msgid "Path to be shared."
 msgstr "공유될 경로."
 
@@ -5728,11 +5702,11 @@ msgstr ""
 msgid "Permanent samba data path (e.g. %s)."
 msgstr ""
 
-msgid "Permit Root Login"
+msgid "Permission"
 msgstr ""
 
-msgid "Permit root login"
-msgstr "root 로그인 허용"
+msgid "Permit Root Login"
+msgstr ""
 
 msgid "Permit to do SSH Tunneling."
 msgstr "SSH 터널링 허용."
@@ -5905,6 +5879,11 @@ msgstr ""
 msgid "Portal Groups"
 msgstr "포털 그룹"
 
+msgid ""
+"Portal Groups contains IP addresses and listening on TCP ports to connect "
+"the target from the initiator."
+msgstr ""
+
 msgid "Portals"
 msgstr "포털"
 
@@ -5953,14 +5932,17 @@ msgstr "접두사"
 msgid "Preformatted file system"
 msgstr "이미 포맷된 파일 시스템"
 
-msgid "Preserve extended attributes"
-msgstr "확장 속성 보존"
+msgid "Preserve Extended Attributes"
+msgstr ""
+
+msgid "Preserve Extended attributes"
+msgstr ""
+
+msgid "Preserve Permissions"
+msgstr ""
 
 msgid "Preserve modification times."
 msgstr "변경 시간 보존."
-
-msgid "Preserve permissions"
-msgstr "권한 보존"
 
 msgid "Prevent deep discharge of battery"
 msgstr ""
@@ -6252,6 +6234,9 @@ msgstr ""
 msgid "Remote Module (Source)"
 msgstr ""
 
+msgid "Remote Rsync Daemon"
+msgstr ""
+
 msgid "Remote Rsync Server"
 msgstr "원격 Rsync 서버"
 
@@ -6260,9 +6245,6 @@ msgstr ""
 
 msgid "Remote Syslog Server"
 msgstr ""
-
-msgid "Remote module (source)"
-msgstr "원격 모듈(소스)"
 
 msgid "Remote module name"
 msgstr "원격 모듈 명"
@@ -6276,9 +6258,6 @@ msgstr ""
 
 msgid ""
 "Remote monitoring username. Must be equal on both master and slave system."
-msgstr ""
-
-msgid "Remote rsync daemon"
 msgstr ""
 
 msgid "Removable"
@@ -6335,6 +6314,9 @@ msgid "Rescan"
 msgstr ""
 
 msgid "Rescan Disks"
+msgstr ""
+
+msgid "Rescan Interval"
 msgstr ""
 
 msgid "Rescan interval"
@@ -6403,7 +6385,7 @@ msgstr ""
 msgid "Reverse DNS lookup"
 msgstr "DNS 역 방향 조회"
 
-msgid "Reverse direction"
+msgid "Reverse Direction"
 msgstr ""
 
 msgid "Role"
@@ -6457,9 +6439,6 @@ msgstr "규칙 번호"
 msgid "Rules"
 msgstr "규칙"
 
-msgid "Run as"
-msgstr ""
-
 msgid "Run now"
 msgstr "지금 실행"
 
@@ -6470,8 +6449,8 @@ msgid "Running"
 msgstr "실행 중"
 
 msgid ""
-"Running the service as user root is not recommended for security reasons, "
-"use at your own risk!"
+"Running this service as root is not recommended for security reasons, use at "
+"your own risk!"
 msgstr ""
 
 msgid "Russian"
@@ -6525,9 +6504,6 @@ msgstr "SSH"
 msgid "SSH events"
 msgstr "SSH 이벤트"
 
-msgid "SSHD"
-msgstr ""
-
 msgid "SSHD log"
 msgstr "SSHD 로그"
 
@@ -6576,6 +6552,9 @@ msgstr "설정 파일에 로그인 정보 저장."
 msgid "Saved file to"
 msgstr "아래에 파일 저장됨:"
 
+msgid "Scan Mode"
+msgstr ""
+
 msgid "Scan Targets"
 msgstr "타젯 스캔"
 
@@ -6587,9 +6566,6 @@ msgid ""
 msgstr ""
 "파일이 추가되었거나 삭제되지 않았는지 보기 위해 N 초 간격으로 파일 시스템을 스캔 합니다. 0으로 설정하면 background 스캐닝이 "
 "비활성화 됩니다. background 재 스캔이 비활성화 되더라도 관리 웹 인터페이스의 상태 페이지에서는 여전히 스캔이 나갈 수 있습니다."
-
-msgid "Scan type"
-msgstr "스캔 타입"
 
 msgid "Schedule Time"
 msgstr ""
@@ -6735,6 +6711,9 @@ msgstr ""
 msgid "Select the location closest to you."
 msgstr "가장 가까운 위치를 선택하십시오."
 
+msgid "Select the permission for running this service. (www by default)."
+msgstr ""
+
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
 "the button below to restore the configuration."
@@ -6832,10 +6811,10 @@ msgstr "서버 설명. 공백으로 둘 수도 있습니다."
 msgid "Server information"
 msgstr ""
 
-msgid "Server name"
-msgstr "서버 명"
-
 msgid "Server version"
+msgstr ""
+
+msgid "Servers"
 msgstr ""
 
 msgid "Service"
@@ -6886,9 +6865,6 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
 
-msgid "Set under which user the service should run (www by default)."
-msgstr ""
-
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr "root 데이터 셋을 위한 다른 마운트 지점을 설정합니다. 기본 값은 /mnt입니다."
 
@@ -6904,6 +6880,9 @@ msgstr "새로 생성된 파일들을 위한 umask를 특정 값으로 설정합
 
 msgid "Settings"
 msgstr "설정"
+
+msgid "Setup user to get shell access"
+msgstr ""
 
 msgid "Shadow Copy"
 msgstr ""
@@ -6979,6 +6958,9 @@ msgstr "수신 버퍼의 크기(기본 값은 %d)."
 msgid "Size of send buffer (%d by default)."
 msgstr "전송 버퍼의 크기(기본 값은 %d)."
 
+msgid "Size offered to the initiator. (up to 8EiB=8388608TiB)."
+msgstr ""
+
 msgid ""
 "Size offered to the initiator. (up to 8EiB=8388608TiB. actual size is depend "
 "on your disks.)"
@@ -6987,7 +6969,7 @@ msgstr "개시자에게 제공된 크기. (8EiB=8388608TiB까지. 실제 크기 
 msgid "Skew"
 msgstr ""
 
-msgid "Skip first scan"
+msgid "Skip First Scan"
 msgstr ""
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
@@ -7029,6 +7011,9 @@ msgstr ""
 msgid "Sockets"
 msgstr "소켓"
 
+msgid "Sockstat"
+msgstr ""
+
 msgid "SoftRaid"
 msgstr "소프트웨어 Raid"
 
@@ -7052,9 +7037,6 @@ msgstr "동기화 될 소스 디렉터리."
 
 msgid "Source port"
 msgstr "소스 포트"
-
-msgid "Source share"
-msgstr "소스 공유"
 
 msgid "Space Usage"
 msgstr ""
@@ -7277,8 +7259,8 @@ msgstr "%s/s로(으로) 전환"
 msgid "Sync"
 msgstr ""
 
-msgid "Synchronization time"
-msgstr "동기화 시간"
+msgid "Synchronization Time"
+msgstr ""
 
 msgid "Synchronize"
 msgstr "동기화"
@@ -7346,14 +7328,14 @@ msgstr "시스템 메시지 버퍼"
 msgid "System tuning"
 msgstr "시스템 미세 조정"
 
+msgid "TCP Forwarding"
+msgstr ""
+
 msgid "TCP Port"
 msgstr ""
 
 msgid "TCP Wrapper"
 msgstr ""
-
-msgid "TCP forwarding"
-msgstr "TCP 포워딩"
 
 msgid "TCP port"
 msgstr "TCP 포트"
@@ -7384,6 +7366,9 @@ msgstr ""
 
 msgid "Tag"
 msgstr "태그"
+
+msgid "Tag Number"
+msgstr ""
 
 msgid "Tag number"
 msgstr "태그 번호"
@@ -7535,6 +7520,9 @@ msgid ""
 "The action which will be executed when the packet match the criteria "
 "specified below."
 msgstr "패킷이 아래에 명세 된 기준과 일치할 때 실행될 행동."
+
+msgid "The actual size is depend on your disks."
+msgstr ""
 
 msgid "The administrator has been notified to apply your changes."
 msgstr "변경 내용을 적용하라는 당신의 공지를 관리자가 받았습니다."
@@ -8043,11 +8031,6 @@ msgstr ""
 "새 파일과 디렉터리에 관한 권한은 보통 생성 마스크와 디렉터리 마스크에 의해 통제되지만 권한 상속 인자는 이것에 우선합니다. 이것은 많은 "
 "사용자를 가진 시스템에서 하나의 공유가 각 사용자에게 유연성 있게 이용되도록 허용하려고 할 때 특히 유용할 수 있습니다."
 
-msgid ""
-"The port to listen to. The default is to listen to the tftp port specified "
-"in /etc/services."
-msgstr "listen 할 포트. tftp 포트가 listen 하는 기본 값은 /etc/services에 명세 됩니다."
-
 #, php-format
 msgid "The portal '%s' is invalid."
 msgstr "포털 '%s'는 무효합니다."
@@ -8069,10 +8052,6 @@ msgstr ""
 
 msgid "The queuedepth range is invalid."
 msgstr "큐 깊이 범위가 무효합니다."
-
-#, php-format
-msgid "The recommended length for compatibility is %d."
-msgstr "호환성을 위한 권장 길이는 %d입니다."
 
 #, php-format
 msgid "The recommended queue depth is %d."
@@ -8178,13 +8157,13 @@ msgstr "변수의 값."
 msgid "The volume must be detached before it can be deleted."
 msgstr "볼륨이 먼저 분리되어야 삭제될 수 있습니다."
 
+msgid "The work directory does not exist."
+msgstr ""
+
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
 "clients. (maximum 15 characters)."
 msgstr ""
-
-msgid "The working directory does not exist."
-msgstr "작업 디렉터리가 존재하지 않습니다."
 
 msgid "There are too many additional groups."
 msgstr "추가적인 그룹이 너무 많이 존재합니다."
@@ -8253,6 +8232,15 @@ msgstr "이들 인자들이 %s의 [Global] 섹션에 추가됩니다."
 #, php-format
 msgid "These parameters are added to [Share] section of %s."
 msgstr "이들 인자들이 %s의 [Share] 섹션에 추가됩니다."
+
+msgid ""
+"These parameters are added to the hardware-specific part of the driver for "
+"the second UPS."
+msgstr ""
+
+msgid ""
+"These parameters are added to the hardware-specific part of the driver."
+msgstr ""
 
 #, php-format
 msgid "These parameters will be added to %s."
@@ -9003,6 +8991,9 @@ msgstr "URL"
 msgid "Ukrainian"
 msgstr ""
 
+msgid "Umask"
+msgstr ""
+
 msgid "Unavailable"
 msgstr ""
 
@@ -9060,6 +9051,9 @@ msgstr "마운트 해제 중..."
 msgid "Up"
 msgstr "Up"
 
+msgid "Update Period"
+msgstr ""
+
 msgid "Update period"
 msgstr "갱신 간격"
 
@@ -9072,7 +9066,7 @@ msgstr ""
 msgid "Upload Bandwidth"
 msgstr ""
 
-msgid "Upload directory"
+msgid "Upload Directory"
 msgstr ""
 
 #, php-format
@@ -9494,14 +9488,11 @@ msgstr "와일드 카드"
 msgid "Wireless configuration"
 msgstr "무선 설정"
 
-msgid "Workgroup"
-msgstr "작업 그룹"
-
-msgid "Working Directory"
+msgid "Work Directory"
 msgstr ""
 
-msgid "Working directory"
-msgstr "작업 디렉터리"
+msgid "Workgroup"
+msgstr "작업 그룹"
 
 msgid "Write"
 msgstr "쓰기"
@@ -9580,8 +9571,9 @@ msgid ""
 msgstr "SCSI 조회 데이터로 명세 할 수 있습니다. 비워 두면 기본 값. (%d개까지의 ASCII 문자)"
 
 #, php-format
-msgid "You may specify logical block length (%d by default)."
-msgstr "논리적 블록 길이를 명세 할 수 있습니다(기본 값은 %d)."
+msgid ""
+"You may specify logical block size. (default is %dB for compatibility)."
+msgstr ""
 
 msgid ""
 "You must add at least a Portal Group, an Initiator Group and an Extent "
@@ -9822,17 +9814,33 @@ msgstr ""
 msgid "to"
 msgstr ""
 
-msgid "umask"
-msgstr "umask"
-
 msgid "umount"
 msgstr "마운트 해제"
 
-msgid "user"
-msgstr ""
-
 msgid "week days"
 msgstr ""
+
+#~ msgid ""
+#~ "A Auth Group contains authorised users and secrets for additional security."
+#~ msgstr "인증 그룹은 추가적인 보안을 위해 권한을 부여 받은 사용자와 비밀을 포함합니다."
+
+#~ msgid ""
+#~ "A Initiator Group contains authorised initiator names and networks to access "
+#~ "the target."
+#~ msgstr "개시자 그룹은 목표 지점에 접근할 권한을 부여 받은 개시자 명과 네트워크를 포함합니다."
+
+#~ msgid ""
+#~ "A Portal Group contains IP addresses and listening TCP ports to connect the "
+#~ "target from the initiator."
+#~ msgstr "포털 그룹은 개시자로부터 타젯에 연결하는 IP 주소와 listen 하는 TCP 포트를 포함합니다."
+
+#~ msgid ""
+#~ "A directory listing is generated if a directory is requested and no index-"
+#~ "file (index.php, index.html, index.htm or default.htm) was found in that "
+#~ "directory."
+#~ msgstr ""
+#~ "디렉터리 리스팅은 인덱스파일(index.php, index.html, index.htm이나 default.htm)이 없는 디렉토리를 "
+#~ "요청하는 경우에 생성됩니다."
 
 #~ msgid ""
 #~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
@@ -9848,14 +9856,50 @@ msgstr ""
 #~ msgid "AIO write size"
 #~ msgstr "AIO 쓰기 크기"
 
+#~ msgid "Access mode"
+#~ msgstr "접근 모드"
+
+#~ msgid "All dirs"
+#~ msgstr "모든 디렉터리"
+
+#~ msgid "All users will have the root privilege."
+#~ msgstr "모든 사용자가 루트 권한을 가질 것입니다."
+
+#~ msgid "Allow new files"
+#~ msgstr "새 파일 허용"
+
+#~ msgid "Alternate TCP port. Default is 22"
+#~ msgstr "다른 TCP 포트. 기본 값은 22"
+
+#~ msgid "Alternate TCP port. Default is 873"
+#~ msgstr "다른 TCP 포트. 기본 값은 873"
+
+#~ msgid "Always scan"
+#~ msgstr "항상 스캔"
+
 #~ msgid "Asynchronous I/O (AIO)"
 #~ msgstr "비동기적 I/O(AIO)"
+
+#~ msgid "Auxiliary parameters"
+#~ msgstr "보조 인자들"
+
+#~ msgid "CIFS/SMB disabled"
+#~ msgstr "CIFS/SMB 비활성화"
 
 #~ msgid "Create mask"
 #~ msgstr "mask 생성"
 
+#~ msgid "Destination share"
+#~ msgstr "목적지 공유"
+
 #~ msgid "Directory mask"
 #~ msgstr "디렉터리 마스크"
+
+#~ msgid "Document root"
+#~ msgstr "문서 루트"
+
+#~ msgid "Domain name"
+#~ msgstr "도메인 명"
 
 #~ msgid "Dos charset"
 #~ msgstr "도스 문자 셋"
@@ -9881,11 +9925,20 @@ msgstr ""
 #~ msgid "Enable store DOS attributes"
 #~ msgstr "도스 속성 저장 활성화"
 
+#~ msgid "Forced update period"
+#~ msgstr "강제 갱신 간격"
+
 #~ msgid "Guest account"
 #~ msgstr "게스트 계정"
 
 #~ msgid "Hide dot files"
 #~ msgstr "숨김 파일 감추기"
+
+#~ msgid "Hosts allow"
+#~ msgstr "호스트 허용"
+
+#~ msgid "Hosts deny"
+#~ msgstr "호스트 거부"
 
 #~ msgid "Inherit permissions"
 #~ msgstr "권한 상속"
@@ -9893,17 +9946,67 @@ msgstr ""
 #~ msgid "Large read/write"
 #~ msgstr "대용량 읽기/쓰기"
 
+#~ msgid "Local share (destination)"
+#~ msgstr "로컬 공유(대상)"
+
+#~ msgid "Local shares to be synchronized"
+#~ msgstr "동기화 될 로컬 공유들"
+
+#, php-format
+#~ msgid ""
+#~ "Location where the working files will be stored, e.g. %s/backup/.unison"
+#~ msgstr "작업 파일들이 저장될 장소. 예. %s/backup/.unison"
+
+#~ msgid "Logical Block Length"
+#~ msgstr "논리적 블록 길이"
+
+#~ msgid "Map all users to root"
+#~ msgstr "모든 사용자를 root로 mapping"
+
+#~ msgid "Map to user"
+#~ msgstr "사용자로 mapping"
+
+#~ msgid "Max. block size"
+#~ msgstr "최대 블록 크기"
+
+#~ msgid "Max. connections"
+#~ msgstr "최대 연결"
+
+#~ msgid "Max. sessions"
+#~ msgstr "최대 세션"
+
+#~ msgid "Maximum connections"
+#~ msgstr "최대 연결 수"
+
 #~ msgid "NetBIOS name"
 #~ msgstr "NetBIOS 명"
 
 #~ msgid "Null passwords"
 #~ msgstr "비밀번호 없는 계정"
 
+#~ msgid "Number of servers"
+#~ msgstr "서버 수"
+
+#~ msgid "Password authentication"
+#~ msgstr "비밀번호 인증"
+
+#~ msgid "Permit root login"
+#~ msgstr "root 로그인 허용"
+
+#~ msgid "Preserve extended attributes"
+#~ msgstr "확장 속성 보존"
+
+#~ msgid "Preserve permissions"
+#~ msgstr "권한 보존"
+
 #~ msgid "Receive Buffer Size"
 #~ msgstr "수신 버퍼 크기"
 
 #~ msgid "Recycle bin"
 #~ msgstr "휴지통"
+
+#~ msgid "Remote module (source)"
+#~ msgstr "원격 모듈(소스)"
 
 #, php-format
 #~ msgid ""
@@ -9917,8 +10020,14 @@ msgstr ""
 #~ "this value. (%d by default)"
 #~ msgstr "요청된 크기가 이 값보다 클 때 삼바는 파일을 비동기적으로 기록할 것입니다. (기본 값은 %d)"
 
+#~ msgid "Scan type"
+#~ msgstr "스캔 타입"
+
 #~ msgid "Send Buffer Size"
 #~ msgstr "버퍼 크기 전송"
+
+#~ msgid "Server name"
+#~ msgstr "서버 명"
 
 #~ msgid "Set browseable"
 #~ msgstr "검색 가능 설정"
@@ -9926,11 +10035,32 @@ msgstr ""
 #~ msgid "Set read only"
 #~ msgstr "읽기 전용으로 설정"
 
+#~ msgid "Source share"
+#~ msgstr "소스 공유"
+
 #~ msgid "Store DOS attributes"
 #~ msgstr "도스 속성 저장"
 
 #~ msgid "Swap disabled"
 #~ msgstr "스왑 비활성화됨"
+
+#~ msgid "Synchronization time"
+#~ msgstr "동기화 시간"
+
+#~ msgid "TCP forwarding"
+#~ msgstr "TCP 포워딩"
+
+#~ msgid ""
+#~ "The port to listen to. The default is to listen to the tftp port specified "
+#~ "in /etc/services."
+#~ msgstr "listen 할 포트. tftp 포트가 listen 하는 기본 값은 /etc/services에 명세 됩니다."
+
+#, php-format
+#~ msgid "The recommended length for compatibility is %d."
+#~ msgstr "호환성을 위한 권장 길이는 %d입니다."
+
+#~ msgid "The working directory does not exist."
+#~ msgstr "작업 디렉터리가 존재하지 않습니다."
 
 #~ msgid "Time server"
 #~ msgstr "타임 서버"
@@ -9940,6 +10070,21 @@ msgstr ""
 
 #~ msgid "WINS server"
 #~ msgstr "WINS 서버"
+
+#~ msgid "Working directory"
+#~ msgstr "작업 디렉터리"
+
+#, php-format
+#~ msgid "You may specify logical block length (%d by default)."
+#~ msgstr "논리적 블록 길이를 명세 할 수 있습니다(기본 값은 %d)."
+
+#~ msgid "umask"
+#~ msgstr "umask"
+
+#, php-format
+#~ msgid ""
+#~ "%s must be enabled for Unison to work, and the %s must have shell access."
+#~ msgstr "Unison을 작동하려면 %s이(가) 반드시 활성화되고 %s 이(가) 쉘에 액세스 할 수 있어야 합니다."
 
 #~ msgid "AFP compatibility"
 #~ msgstr "AFP 호환성"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-28 02:17+0000\n"
+"POT-Creation-Date: 2017-01-29 13:11+0000\n"
 "PO-Revision-Date: 2016-12-29 18:46+0000\n"
 "Last-Translator: Lukas Vescicik <lukas.vescicik@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-28 01:57+0000\n"
+"X-Launchpad-Export-Date: 2017-01-29 12:21+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: SLOVAKIA\n"
 "Language: \n"
@@ -77,12 +77,6 @@ msgstr "%s už bol nakonfigurovaný ako logický oddiel."
 #, php-format
 msgid "%s is too long."
 msgstr "%s je píliš dlhý."
-
-#, php-format
-msgid ""
-"%s must be enabled for Unison to work, and the %s must have shell access."
-msgstr ""
-"%s musí byť povolený aby Unison fungoval, a %s musí mať shell prístup."
 
 #, php-format
 msgid "%s of %sB"
@@ -201,29 +195,9 @@ msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "značka VLAN 802.1Q (medzi 1 a 4094)."
 
 msgid ""
-"A Auth Group contains authorised users and secrets for additional security."
-msgstr ""
-"Autentifikačná skupina obsahuje oprávnených používateľov a heslá kvôli "
-"zvýšeniu bezpečnosti."
-
-msgid ""
-"A Initiator Group contains authorised initiator names and networks to access "
-"the target."
-msgstr ""
-"Skupina iniciátora obsahuje názvy oprávnených iniciátorov a siete na prístup "
-"k cieľu."
-
-msgid ""
 "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
 msgstr ""
 "Názov časového servera NTP môže obsahovať iba znaky a-z, 0-9, „-“ a „.“."
-
-msgid ""
-"A Portal Group contains IP addresses and listening TCP ports to connect the "
-"target from the initiator."
-msgstr ""
-"Skupina portálu obsahuje IP adresy a počúvajúce TCP porty na pripojenie "
-"cieľov z iniciátorov."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -237,13 +211,9 @@ msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr "VLAN so značkou %s je už na tomto rozhraní definovaná."
 
 msgid ""
-"A directory listing is generated if a directory is requested and no index-"
-"file (index.php, index.html, index.htm or default.htm) was found in that "
-"directory."
+"A directory listing is generated when no index-files (index.php, index.html, "
+"index.htm or default.htm) are found in a directory."
 msgstr ""
-"Ak klient vyžiada zobrazenie adresára a nenachádza sa v ňom žiadny indexový "
-"súbor (index.php, index.html, index.htm or default.htm), vytvorí sa výpis "
-"obsahu adresára."
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -407,9 +377,6 @@ msgstr "Obmedzenia prístupu"
 msgid "Access Time (atime)"
 msgstr "Čas prístupu (atime)"
 
-msgid "Access mode"
-msgstr "Režim prístupu"
-
 msgid "Access the webGUI with the new IP address"
 msgstr "Prístup do webGUI s novou IP adresov"
 
@@ -437,9 +404,6 @@ msgstr "Aktívny"
 
 msgid "Active Directory"
 msgstr "Active Directory"
-
-msgid "Active Directory List"
-msgstr "Active Directory List"
 
 msgid "Active Shares"
 msgstr "Aktívne zdieľania"
@@ -576,14 +540,11 @@ msgstr ""
 msgid "Additional Network"
 msgstr "Ďalšia sieť"
 
+msgid "Additional Parameters"
+msgstr ""
+
 msgid "Additional Storage"
 msgstr "Ďalší úložný priestor"
-
-msgid ""
-"Additional parameters to the hardware-specific part of the driver for second "
-"UPS."
-msgstr ""
-"dodatočné parametre pre  hardwarovo-špecifické časti ovládača pre druhú UPS."
 
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr "Dodatočné parametre hardvérovej časti ovládača."
@@ -669,6 +630,9 @@ msgstr ""
 msgid "All"
 msgstr "Všetko:"
 
+msgid "All Dirs"
+msgstr ""
+
 msgid "All data from the following statistics have been deleted:"
 msgstr ""
 
@@ -679,9 +643,6 @@ msgstr ""
 
 msgid "All data will be lost when you activate this option!"
 msgstr ""
-
-msgid "All dirs"
-msgstr "Všetky adresáre"
 
 #, php-format
 msgid "All dirs requires mounted path, but Path %s is not mounted."
@@ -700,14 +661,14 @@ msgstr ""
 msgid "All software raid disks are imported."
 msgstr ""
 
-msgid "All users will have the root privilege."
-msgstr "Všetci používatelia budú mať práva roota."
-
 msgid "Alloc"
 msgstr ""
 
 msgid "Allow"
 msgstr "Povoliť"
+
+msgid "Allow New Files"
+msgstr ""
 
 msgid "Allow TLS connections only."
 msgstr ""
@@ -723,9 +684,6 @@ msgstr ""
 
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "Umožniť klientom pokračovať v prerušenom sťahovaní a nahrávaní."
-
-msgid "Allow new files"
-msgstr "Povoliť nové súbory"
 
 msgid "Allow new files to be created."
 msgstr "Povoliť tvorbu nových súborov."
@@ -770,11 +728,8 @@ msgstr "AltKoreň"
 msgid "Alternate Data Streams"
 msgstr ""
 
-msgid "Alternate TCP port. Default is 22"
-msgstr "Alternatívny TCP port. Štandardný je 22"
-
-msgid "Alternate TCP port. Default is 873"
-msgstr "Alternatívny TCP port. Štandardný je 873"
+msgid "Alternate TCP port. (Default is 873)."
+msgstr ""
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr "Alternatívny konfiguračný priečinok (zvyčajne prázdne)."
@@ -785,8 +740,8 @@ msgstr ""
 msgid "Always On"
 msgstr ""
 
-msgid "Always scan"
-msgstr "Vždy zisťovať"
+msgid "Always Scan"
+msgstr ""
 
 msgid "Ambient Conditions From External Probe Equipment"
 msgstr ""
@@ -948,6 +903,10 @@ msgstr ""
 msgid "Auth Groups"
 msgstr "Autentifikačné skupiny"
 
+msgid ""
+"Auth Groups contains authorised users and secrets for additional security."
+msgstr ""
+
 msgid "Auth Method"
 msgstr "Metóda autentifikácie"
 
@@ -972,6 +931,9 @@ msgid "Authentication"
 msgstr "Autentifikácia"
 
 msgid "Authentication Method"
+msgstr ""
+
+msgid "Authorised Network"
 msgstr ""
 
 msgid "Authorised network"
@@ -1007,17 +969,8 @@ msgstr ""
 msgid "Autoselect"
 msgstr "Automatický výber"
 
-msgid "Auxiliary Parameter"
-msgstr ""
-
-msgid "Auxiliary Parameters"
-msgstr ""
-
 msgid "Auxiliary device firmware"
 msgstr ""
-
-msgid "Auxiliary parameters"
-msgstr "Pomocné parametre"
 
 msgid "Avail"
 msgstr ""
@@ -1130,6 +1083,10 @@ msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
 
 msgid "Before - File-deletions will be performed before the transfer starts."
+msgstr ""
+
+msgid ""
+"Before a Unison Client can start to work, you need to perform the following:"
 msgstr ""
 
 msgid "Best available"
@@ -1253,8 +1210,8 @@ msgstr "CIFS/SMB"
 msgid "CIFS/SMB Information"
 msgstr ""
 
-msgid "CIFS/SMB disabled"
-msgstr "CIFS/SMB vypnuté"
+msgid "CIFS/SMB is disabled."
+msgstr ""
 
 msgid "CIFS/SMB is enabled."
 msgstr ""
@@ -1526,7 +1483,7 @@ msgstr "Common Internet File System"
 msgid "Community"
 msgstr "Komunita"
 
-msgid "Compilations directories"
+msgid "Compilations Directories"
 msgstr ""
 
 msgid "Compiled"
@@ -2242,9 +2199,6 @@ msgstr "Cieľová sieť tejto statickej cesty"
 msgid "Destination port"
 msgstr "Cieľový port"
 
-msgid "Destination share"
-msgstr "Cieľový zdieľaný priečinok"
-
 msgid "Destroy a pool"
 msgstr ""
 
@@ -2703,8 +2657,8 @@ msgstr ""
 msgid "Do you want to toggle selected options?"
 msgstr ""
 
-msgid "Document root"
-msgstr "Koreňový adresár webu"
+msgid "Document Root"
+msgstr ""
 
 msgid "Document root of the webserver. Home of the web page files."
 msgstr ""
@@ -2716,14 +2670,14 @@ msgstr ""
 msgid "Domain"
 msgstr "Doména"
 
+msgid "Domain Name"
+msgstr ""
+
 msgid "Domain controller name"
 msgstr "Názov radiča domény"
 
 msgid "Domain is missing 2nd level name."
 msgstr ""
-
-msgid "Domain name"
-msgstr "Názov domény"
 
 msgid "Domain name (DNS/Realm-Name)"
 msgstr "Doménový názov (DNS/názov domény)"
@@ -3151,6 +3105,9 @@ msgstr ""
 msgid "Enable serial console."
 msgstr ""
 
+msgid "Enable service SSH when disabled"
+msgstr ""
+
 msgid "Enable shadow copy."
 msgstr ""
 
@@ -3240,8 +3197,18 @@ msgstr ""
 
 #, php-format
 msgid ""
-"Enter a custom port number if you want to override the default port. Default "
-"port is %s."
+"Enter a custom port number if you want to override the default port. "
+"(Default is %s)."
+msgstr ""
+
+msgid ""
+"Enter a custom port number if you want to override the default port. "
+"(Default is 22)."
+msgstr ""
+
+msgid ""
+"Enter a custom port number if you want to override the default port. "
+"(Default is 69). "
 msgstr ""
 
 msgid "Enter a description"
@@ -3290,6 +3257,11 @@ msgstr ""
 "63 znakmi."
 
 msgid ""
+"Enter the path to the database directory. The config files will be created "
+"under the specified directory."
+msgstr ""
+
+msgid ""
 "Enter the path to the home directory of VirtualBox. VM config and HDD image "
 "will be created under the specified directory."
 msgstr ""
@@ -3300,11 +3272,6 @@ msgid ""
 msgstr ""
 "Zadajte cestu k domovskému adresáru používateľa. Ak necháte toto pole "
 "prázdne, použije sa štandardná cesta /mnt."
-
-msgid ""
-"Enter the path to the home directory. The config will be created under the "
-"specified directory."
-msgstr ""
 
 msgid ""
 "Enter the path to the home directory. This directory will store the "
@@ -3639,8 +3606,8 @@ msgstr ""
 msgid "Force use"
 msgstr ""
 
-msgid "Forced update period"
-msgstr "Vynútený interval aktualizácie"
+msgid "Forced Update Period"
+msgstr ""
 
 msgid ""
 "Forces use of vdevs, even if they appear in use or specify different size. "
@@ -3783,6 +3750,9 @@ msgstr "Skupina"
 msgid "Group Allow"
 msgstr ""
 
+msgid "Group Compilations"
+msgstr ""
+
 msgid "Group ID"
 msgstr "ID skupiny"
 
@@ -3790,9 +3760,6 @@ msgid "Group Settings"
 msgstr ""
 
 msgid "Group Suffix"
-msgstr ""
-
-msgid "Group compilations"
 msgstr ""
 
 msgid "Group is locked"
@@ -3949,12 +3916,6 @@ msgstr ""
 
 msgid "Hosts Setup"
 msgstr ""
-
-msgid "Hosts allow"
-msgstr "Povolené stroje"
-
-msgid "Hosts deny"
-msgstr "Zakázané stroje"
 
 msgid "Hour"
 msgstr ""
@@ -4248,6 +4209,11 @@ msgid "Initiator Group Settings"
 msgstr ""
 
 msgid "Initiator Groups"
+msgstr ""
+
+msgid ""
+"Initiator Groups contains authorised initiator names and networks to access "
+"the target."
 msgstr ""
 
 msgid ""
@@ -4665,12 +4631,6 @@ msgstr ""
 msgid "Local User"
 msgstr "Lokálny používateľ"
 
-msgid "Local share (destination)"
-msgstr "Miestny zdieľaný priečinok (cieľ)"
-
-msgid "Local shares to be synchronized"
-msgstr "Miestne zdieľané priečinky, ktoré sa majú synchronizovať"
-
 msgid "Location"
 msgstr "Umiestnenie"
 
@@ -4691,8 +4651,10 @@ msgid "Location where the content database file will be stored."
 msgstr "Umiestnenie databázového súboru s obsahom."
 
 #, php-format
-msgid ""
-"Location where the working files will be stored, e.g. %s/backup/.unison"
+msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
+msgstr ""
+
+msgid "Locked Files"
 msgstr ""
 
 msgid "Log"
@@ -4720,7 +4682,7 @@ msgstr ""
 msgid "Logarithmic Scaling"
 msgstr ""
 
-msgid "Logical Block Length"
+msgid "Logical Block"
 msgstr ""
 
 #, php-format
@@ -4833,14 +4795,17 @@ msgstr "Výrobca"
 msgid "Manufacturing date"
 msgstr ""
 
-msgid "Map all users to root"
-msgstr "Mapovať všetkých používateľov na roota."
+msgid "Map all users to root, all users will have root privileges."
+msgstr ""
 
 msgid "Map to Guest"
 msgstr ""
 
-msgid "Map to user"
-msgstr "Mapovať na používateľa"
+msgid "Map to Root"
+msgstr ""
+
+msgid "Map to User"
+msgstr ""
 
 msgid "Mapping DOS Attributes"
 msgstr ""
@@ -4862,7 +4827,13 @@ msgstr ""
 msgid "Max Entries"
 msgstr ""
 
+msgid "Max. Block Size"
+msgstr ""
+
 msgid "Max. Clients"
+msgstr ""
+
+msgid "Max. Connections"
 msgstr ""
 
 msgid "Max. Connections Per Host"
@@ -4874,19 +4845,13 @@ msgstr ""
 msgid "Max. Passive Port"
 msgstr ""
 
+msgid "Max. Sessions"
+msgstr ""
+
 msgid "Max. TTL"
 msgstr "Max. TTL"
 
-msgid "Max. block size"
-msgstr "Max. veľkosť bloku"
-
-msgid "Max. connections"
-msgstr ""
-
 msgid "Max. pre-send R2T"
-msgstr ""
-
-msgid "Max. sessions"
 msgstr ""
 
 msgid ""
@@ -4909,9 +4874,6 @@ msgstr ""
 
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr ""
-
-msgid "Maximum connections"
-msgstr "Maximálny počet spojení"
 
 msgid "Maximum frequency"
 msgstr ""
@@ -5239,6 +5201,9 @@ msgstr ""
 msgid "Netgraph"
 msgstr "Graf siete"
 
+msgid "Netstat"
+msgstr ""
+
 msgid "Network"
 msgstr "Sieť"
 
@@ -5533,9 +5498,6 @@ msgid ""
 "the maximum physical erase cycles the drive is designed to endure."
 msgstr ""
 
-msgid "Number of servers"
-msgstr "Počet serverov"
-
 msgid "Numeric identifier of the group."
 msgstr ""
 
@@ -5764,6 +5726,9 @@ msgstr "Heslo"
 msgid "Password (confirmed)"
 msgstr "Heslo (potvrdené)"
 
+msgid "Password Authentication"
+msgstr ""
+
 msgid "Password Encryption"
 msgstr ""
 
@@ -5772,9 +5737,6 @@ msgstr ""
 
 msgid "Password Suffix"
 msgstr ""
-
-msgid "Password authentication"
-msgstr "Autentifikácia pomocou hesla"
 
 msgid ""
 "Password does not match the confirmation password. Please ensure both "
@@ -5809,6 +5771,9 @@ msgstr "Cesta"
 msgid "Path of the URL relative to document root."
 msgstr "Cesta URL relatívna ku koreňovému adresáru dokumentov."
 
+msgid "Path to be shared to be synchronized."
+msgstr ""
+
 msgid "Path to be shared."
 msgstr "Cesta, ktorá sa má zdieľať."
 
@@ -5838,11 +5803,11 @@ msgstr ""
 msgid "Permanent samba data path (e.g. %s)."
 msgstr ""
 
-msgid "Permit Root Login"
+msgid "Permission"
 msgstr ""
 
-msgid "Permit root login"
-msgstr "Povoliť prihlásenie roota."
+msgid "Permit Root Login"
+msgstr ""
 
 msgid "Permit to do SSH Tunneling."
 msgstr "Povoliť SSH tunneling."
@@ -6019,6 +5984,11 @@ msgstr ""
 msgid "Portal Groups"
 msgstr ""
 
+msgid ""
+"Portal Groups contains IP addresses and listening on TCP ports to connect "
+"the target from the initiator."
+msgstr ""
+
 msgid "Portals"
 msgstr ""
 
@@ -6067,14 +6037,17 @@ msgstr "Prefix"
 msgid "Preformatted file system"
 msgstr "Predformátovaný súborový systém"
 
-msgid "Preserve extended attributes"
-msgstr "Zachovať rozšírené atribúty"
+msgid "Preserve Extended Attributes"
+msgstr ""
+
+msgid "Preserve Extended attributes"
+msgstr ""
+
+msgid "Preserve Permissions"
+msgstr ""
 
 msgid "Preserve modification times."
 msgstr "Zachovať časy úprav."
-
-msgid "Preserve permissions"
-msgstr "Zachovať prístupové práva"
 
 msgid "Prevent deep discharge of battery"
 msgstr ""
@@ -6366,6 +6339,9 @@ msgstr ""
 msgid "Remote Module (Source)"
 msgstr ""
 
+msgid "Remote Rsync Daemon"
+msgstr ""
+
 msgid "Remote Rsync Server"
 msgstr "Vzdialený rsync server"
 
@@ -6374,9 +6350,6 @@ msgstr ""
 
 msgid "Remote Syslog Server"
 msgstr ""
-
-msgid "Remote module (source)"
-msgstr "Vzdialený modul (zdroj)"
 
 msgid "Remote module name"
 msgstr "Názov vzdialeného modulu"
@@ -6390,9 +6363,6 @@ msgstr ""
 
 msgid ""
 "Remote monitoring username. Must be equal on both master and slave system."
-msgstr ""
-
-msgid "Remote rsync daemon"
 msgstr ""
 
 msgid "Removable"
@@ -6453,6 +6423,9 @@ msgid "Rescan"
 msgstr ""
 
 msgid "Rescan Disks"
+msgstr ""
+
+msgid "Rescan Interval"
 msgstr ""
 
 msgid "Rescan interval"
@@ -6521,7 +6494,7 @@ msgstr ""
 msgid "Reverse DNS lookup"
 msgstr "Reverzný DNS preklad"
 
-msgid "Reverse direction"
+msgid "Reverse Direction"
 msgstr ""
 
 msgid "Role"
@@ -6575,9 +6548,6 @@ msgstr "Číslo pravidla"
 msgid "Rules"
 msgstr "Pravidlá"
 
-msgid "Run as"
-msgstr ""
-
 msgid "Run now"
 msgstr "Spustiť teraz"
 
@@ -6588,8 +6558,8 @@ msgid "Running"
 msgstr "Beží"
 
 msgid ""
-"Running the service as user root is not recommended for security reasons, "
-"use at your own risk!"
+"Running this service as root is not recommended for security reasons, use at "
+"your own risk!"
 msgstr ""
 
 msgid "Russian"
@@ -6643,9 +6613,6 @@ msgstr "SSH"
 msgid "SSH events"
 msgstr "Udalosti SSH"
 
-msgid "SSHD"
-msgstr ""
-
 msgid "SSHD log"
 msgstr "Záznam SSHD"
 
@@ -6694,6 +6661,9 @@ msgstr ""
 msgid "Saved file to"
 msgstr "Súbor bol uložený do"
 
+msgid "Scan Mode"
+msgstr ""
+
 msgid "Scan Targets"
 msgstr ""
 
@@ -6707,9 +6677,6 @@ msgstr ""
 "odstránené súbory. Kontrolu na pozadí vypnete nastavením na 0. Ak je "
 "kontrola na pozadí vypnutá, je vždy možné vynútiť kontrolu zo stavovej "
 "stránky webového rozhrania na správu."
-
-msgid "Scan type"
-msgstr "Typ kontroly"
 
 msgid "Schedule Time"
 msgstr ""
@@ -6855,6 +6822,9 @@ msgstr ""
 msgid "Select the location closest to you."
 msgstr "Zvoľte miesto, ktoré je k vám najbližšie"
 
+msgid "Select the permission for running this service. (www by default)."
+msgstr ""
+
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
 "the button below to restore the configuration."
@@ -6952,10 +6922,10 @@ msgstr "Popis servera. Toto je zvyčajne možné vynechať."
 msgid "Server information"
 msgstr ""
 
-msgid "Server name"
-msgstr "Názov servera"
-
 msgid "Server version"
+msgstr ""
+
+msgid "Servers"
 msgstr ""
 
 msgid "Service"
@@ -7009,9 +6979,6 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
 
-msgid "Set under which user the service should run (www by default)."
-msgstr ""
-
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
 
@@ -7031,6 +6998,9 @@ msgstr ""
 
 msgid "Settings"
 msgstr "Nastavenia"
+
+msgid "Setup user to get shell access"
+msgstr ""
 
 msgid "Shadow Copy"
 msgstr ""
@@ -7106,6 +7076,9 @@ msgstr ""
 msgid "Size of send buffer (%d by default)."
 msgstr ""
 
+msgid "Size offered to the initiator. (up to 8EiB=8388608TiB)."
+msgstr ""
+
 msgid ""
 "Size offered to the initiator. (up to 8EiB=8388608TiB. actual size is depend "
 "on your disks.)"
@@ -7114,7 +7087,7 @@ msgstr ""
 msgid "Skew"
 msgstr ""
 
-msgid "Skip first scan"
+msgid "Skip First Scan"
 msgstr ""
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
@@ -7156,6 +7129,9 @@ msgstr ""
 msgid "Sockets"
 msgstr "Sockety"
 
+msgid "Sockstat"
+msgstr ""
+
 msgid "SoftRaid"
 msgstr "SoftRaid"
 
@@ -7179,9 +7155,6 @@ msgstr "Synchronizovať zdojový adresár."
 
 msgid "Source port"
 msgstr "Zdrojový port"
-
-msgid "Source share"
-msgstr "Zdroj zdieľaného priečinka"
 
 msgid "Space Usage"
 msgstr ""
@@ -7412,7 +7385,7 @@ msgstr "Zmeniť na %s/s"
 msgid "Sync"
 msgstr ""
 
-msgid "Synchronization time"
+msgid "Synchronization Time"
 msgstr ""
 
 msgid "Synchronize"
@@ -7481,14 +7454,14 @@ msgstr "Vyrovnávacia pamäť systémových správ"
 msgid "System tuning"
 msgstr "Ladenie systému"
 
+msgid "TCP Forwarding"
+msgstr ""
+
 msgid "TCP Port"
 msgstr ""
 
 msgid "TCP Wrapper"
 msgstr ""
-
-msgid "TCP forwarding"
-msgstr "TCP forwarding"
 
 msgid "TCP port"
 msgstr "TCP port"
@@ -7518,6 +7491,9 @@ msgid "TLS Server Certificate Check"
 msgstr ""
 
 msgid "Tag"
+msgstr ""
+
+msgid "Tag Number"
 msgstr ""
 
 msgid "Tag number"
@@ -7672,6 +7648,9 @@ msgid ""
 "The action which will be executed when the packet match the criteria "
 "specified below."
 msgstr "Operácia, ktorá sa vykoná, ak paket spĺňa dolu uvedené kritériá."
+
+msgid "The actual size is depend on your disks."
+msgstr ""
 
 msgid "The administrator has been notified to apply your changes."
 msgstr ""
@@ -8195,13 +8174,6 @@ msgstr ""
 "byť obzvlášť užitočné na systémoch s množstvom používateľov, kde to môže "
 "umožniť flexibilne zdieľať každému používateľovy jeden súbor."
 
-msgid ""
-"The port to listen to. The default is to listen to the tftp port specified "
-"in /etc/services."
-msgstr ""
-"Na ktorom porte počúvať. Štandardne sa počúva na TFTP porte uvedenom v "
-"/etc/services."
-
 #, php-format
 msgid "The portal '%s' is invalid."
 msgstr ""
@@ -8219,10 +8191,6 @@ msgid ""
 msgstr ""
 
 msgid "The queuedepth range is invalid."
-msgstr ""
-
-#, php-format
-msgid "The recommended length for compatibility is %d."
 msgstr ""
 
 #, php-format
@@ -8331,12 +8299,12 @@ msgstr "Hodnota premennej."
 msgid "The volume must be detached before it can be deleted."
 msgstr "Jednotku je potrebné pred zmazaním odobrať."
 
+msgid "The work directory does not exist."
+msgstr ""
+
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
 "clients. (maximum 15 characters)."
-msgstr ""
-
-msgid "The working directory does not exist."
 msgstr ""
 
 msgid "There are too many additional groups."
@@ -8410,6 +8378,15 @@ msgstr "Tieto parametre sa pridajú do sekcie [Global] súboru %s."
 #, php-format
 msgid "These parameters are added to [Share] section of %s."
 msgstr "Tieto parametre sa pridajú do sekcie [Share] súboru %s."
+
+msgid ""
+"These parameters are added to the hardware-specific part of the driver for "
+"the second UPS."
+msgstr ""
+
+msgid ""
+"These parameters are added to the hardware-specific part of the driver."
+msgstr ""
 
 #, php-format
 msgid "These parameters will be added to %s."
@@ -9204,6 +9181,9 @@ msgstr "URL"
 msgid "Ukrainian"
 msgstr ""
 
+msgid "Umask"
+msgstr ""
+
 msgid "Unavailable"
 msgstr ""
 
@@ -9261,6 +9241,9 @@ msgstr "Odpája sa..."
 msgid "Up"
 msgstr "Hore"
 
+msgid "Update Period"
+msgstr ""
+
 msgid "Update period"
 msgstr "Interval aktualizácie"
 
@@ -9273,7 +9256,7 @@ msgstr ""
 msgid "Upload Bandwidth"
 msgstr ""
 
-msgid "Upload directory"
+msgid "Upload Directory"
 msgstr ""
 
 #, php-format
@@ -9707,14 +9690,11 @@ msgstr "Maska"
 msgid "Wireless configuration"
 msgstr "Konfigurácia bezdrôtových sietí"
 
+msgid "Work Directory"
+msgstr ""
+
 msgid "Workgroup"
 msgstr "Pracovná skupina"
-
-msgid "Working Directory"
-msgstr ""
-
-msgid "Working directory"
-msgstr ""
 
 msgid "Write"
 msgstr "Zápis"
@@ -9795,7 +9775,8 @@ msgid ""
 msgstr ""
 
 #, php-format
-msgid "You may specify logical block length (%d by default)."
+msgid ""
+"You may specify logical block size. (default is %dB for compatibility)."
 msgstr ""
 
 msgid ""
@@ -10037,17 +10018,40 @@ msgstr "sysvol existuje na zadanej ceste"
 msgid "to"
 msgstr "do"
 
-msgid "umask"
-msgstr "umask"
-
 msgid "umount"
 msgstr "umount"
 
-msgid "user"
-msgstr "užívateľ"
-
 msgid "week days"
 msgstr "dní v týždni"
+
+#~ msgid ""
+#~ "A Auth Group contains authorised users and secrets for additional security."
+#~ msgstr ""
+#~ "Autentifikačná skupina obsahuje oprávnených používateľov a heslá kvôli "
+#~ "zvýšeniu bezpečnosti."
+
+#~ msgid ""
+#~ "A Initiator Group contains authorised initiator names and networks to access "
+#~ "the target."
+#~ msgstr ""
+#~ "Skupina iniciátora obsahuje názvy oprávnených iniciátorov a siete na prístup "
+#~ "k cieľu."
+
+#~ msgid ""
+#~ "A Portal Group contains IP addresses and listening TCP ports to connect the "
+#~ "target from the initiator."
+#~ msgstr ""
+#~ "Skupina portálu obsahuje IP adresy a počúvajúce TCP porty na pripojenie "
+#~ "cieľov z iniciátorov."
+
+#~ msgid ""
+#~ "A directory listing is generated if a directory is requested and no index-"
+#~ "file (index.php, index.html, index.htm or default.htm) was found in that "
+#~ "directory."
+#~ msgstr ""
+#~ "Ak klient vyžiada zobrazenie adresára a nenachádza sa v ňom žiadny indexový "
+#~ "súbor (index.php, index.html, index.htm or default.htm), vytvorí sa výpis "
+#~ "obsahu adresára."
 
 #~ msgid ""
 #~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
@@ -10059,11 +10063,47 @@ msgstr "dní v týždni"
 #~ msgstr ""
 #~ "Musí byť uvedená platná IPv6 adresa primárneho/sekundárneho DNS servera."
 
+#~ msgid "Access mode"
+#~ msgstr "Režim prístupu"
+
+#~ msgid "All dirs"
+#~ msgstr "Všetky adresáre"
+
+#~ msgid "All users will have the root privilege."
+#~ msgstr "Všetci používatelia budú mať práva roota."
+
+#~ msgid "Allow new files"
+#~ msgstr "Povoliť nové súbory"
+
+#~ msgid "Alternate TCP port. Default is 22"
+#~ msgstr "Alternatívny TCP port. Štandardný je 22"
+
+#~ msgid "Alternate TCP port. Default is 873"
+#~ msgstr "Alternatívny TCP port. Štandardný je 873"
+
+#~ msgid "Always scan"
+#~ msgstr "Vždy zisťovať"
+
+#~ msgid "Auxiliary parameters"
+#~ msgstr "Pomocné parametre"
+
+#~ msgid "CIFS/SMB disabled"
+#~ msgstr "CIFS/SMB vypnuté"
+
 #~ msgid "Create mask"
 #~ msgstr "Vytvoriť masku"
 
+#~ msgid "Destination share"
+#~ msgstr "Cieľový zdieľaný priečinok"
+
 #~ msgid "Directory mask"
 #~ msgstr "Maska adresára"
+
+#~ msgid "Document root"
+#~ msgstr "Koreňový adresár webu"
+
+#~ msgid "Domain name"
+#~ msgstr "Názov domény"
 
 #~ msgid "Dos charset"
 #~ msgstr "Znaková sada DOS"
@@ -10086,11 +10126,20 @@ msgstr "dní v týždni"
 #~ msgid "Enable store DOS attributes"
 #~ msgstr "Zapnúť ukladanie DOS atribútov."
 
+#~ msgid "Forced update period"
+#~ msgstr "Vynútený interval aktualizácie"
+
 #~ msgid "Guest account"
 #~ msgstr "Účet hosťa"
 
 #~ msgid "Hide dot files"
 #~ msgstr "Skryť súbory s bodkou"
+
+#~ msgid "Hosts allow"
+#~ msgstr "Povolené stroje"
+
+#~ msgid "Hosts deny"
+#~ msgstr "Zakázané stroje"
 
 #~ msgid "Inherit permissions"
 #~ msgstr "Dedičnosť práv"
@@ -10098,11 +10147,44 @@ msgstr "dní v týždni"
 #~ msgid "Large read/write"
 #~ msgstr "Veľké čítanie/zápis"
 
+#~ msgid "Local share (destination)"
+#~ msgstr "Miestny zdieľaný priečinok (cieľ)"
+
+#~ msgid "Local shares to be synchronized"
+#~ msgstr "Miestne zdieľané priečinky, ktoré sa majú synchronizovať"
+
+#~ msgid "Map all users to root"
+#~ msgstr "Mapovať všetkých používateľov na roota."
+
+#~ msgid "Map to user"
+#~ msgstr "Mapovať na používateľa"
+
+#~ msgid "Max. block size"
+#~ msgstr "Max. veľkosť bloku"
+
+#~ msgid "Maximum connections"
+#~ msgstr "Maximálny počet spojení"
+
 #~ msgid "NetBIOS name"
 #~ msgstr "NetBIOS názov"
 
 #~ msgid "Null passwords"
 #~ msgstr "Prázdne heslá"
+
+#~ msgid "Number of servers"
+#~ msgstr "Počet serverov"
+
+#~ msgid "Password authentication"
+#~ msgstr "Autentifikácia pomocou hesla"
+
+#~ msgid "Permit root login"
+#~ msgstr "Povoliť prihlásenie roota."
+
+#~ msgid "Preserve extended attributes"
+#~ msgstr "Zachovať rozšírené atribúty"
+
+#~ msgid "Preserve permissions"
+#~ msgstr "Zachovať prístupové práva"
 
 #~ msgid "Receive Buffer Size"
 #~ msgstr "Veľkosť prijímacieho bufera"
@@ -10110,8 +10192,17 @@ msgstr "dní v týždni"
 #~ msgid "Recycle bin"
 #~ msgstr "Odpadkový kôš"
 
+#~ msgid "Remote module (source)"
+#~ msgstr "Vzdialený modul (zdroj)"
+
+#~ msgid "Scan type"
+#~ msgstr "Typ kontroly"
+
 #~ msgid "Send Buffer Size"
 #~ msgstr "Veľkosť odosielacieho bufera"
+
+#~ msgid "Server name"
+#~ msgstr "Názov servera"
 
 #~ msgid "Set browseable"
 #~ msgstr "Nastaviť prehliadateľnosť"
@@ -10119,11 +10210,24 @@ msgstr "dní v týždni"
 #~ msgid "Set read only"
 #~ msgstr "Nastaviť len na čítanie"
 
+#~ msgid "Source share"
+#~ msgstr "Zdroj zdieľaného priečinka"
+
 #~ msgid "Store DOS attributes"
 #~ msgstr "Ukladať atribúty DOS"
 
 #~ msgid "Swap disabled"
 #~ msgstr "Odkladanie vypnuté"
+
+#~ msgid "TCP forwarding"
+#~ msgstr "TCP forwarding"
+
+#~ msgid ""
+#~ "The port to listen to. The default is to listen to the tftp port specified "
+#~ "in /etc/services."
+#~ msgstr ""
+#~ "Na ktorom porte počúvať. Štandardne sa počúva na TFTP porte uvedenom v "
+#~ "/etc/services."
 
 #~ msgid "Time server"
 #~ msgstr "Časový server"
@@ -10133,6 +10237,18 @@ msgstr "dní v týždni"
 
 #~ msgid "WINS server"
 #~ msgstr "WINS server"
+
+#~ msgid "umask"
+#~ msgstr "umask"
+
+#~ msgid "user"
+#~ msgstr "užívateľ"
+
+#, php-format
+#~ msgid ""
+#~ "%s must be enabled for Unison to work, and the %s must have shell access."
+#~ msgstr ""
+#~ "%s musí byť povolený aby Unison fungoval, a %s musí mať shell prístup."
 
 #~ msgid "AFP compatibility"
 #~ msgstr "Kompatibilita AFP"
@@ -10145,3 +10261,12 @@ msgstr "dní v týždni"
 
 #~ msgid "AIO read size"
 #~ msgstr "Veľkosť čítania AIO"
+
+#~ msgid "Active Directory List"
+#~ msgstr "Active Directory List"
+
+#~ msgid ""
+#~ "Additional parameters to the hardware-specific part of the driver for second "
+#~ "UPS."
+#~ msgstr ""
+#~ "dodatočné parametre pre  hardwarovo-špecifické časti ovládača pre druhú UPS."
