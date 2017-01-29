@@ -34,6 +34,26 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
+function sysctl_process_updatenotification($mode,$data) {
+	global $config;
+	$retval = 0;
+
+	switch ($mode):
+		case UPDATENOTIFY_MODE_NEW:
+		case UPDATENOTIFY_MODE_MODIFIED:
+			break;
+		case UPDATENOTIFY_MODE_DIRTY:
+		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
+			$sphere_array = &array_make_branch($config,'system','sysctl','param');
+			if(false !== ($index_uuid = array_search_ex($data,$sphere_array,'uuid'))):
+				unset($sphere_array[$index_uuid]);
+				write_config();
+			endif;
+			break;
+	endswitch;
+	return $retval;
+}
+
 $sphere_scriptname = basename(__FILE__);
 $sphere_scriptname_child = 'system_sysctl_edit.php';
 $sphere_header = 'Location: '.$sphere_scriptname;
@@ -179,45 +199,28 @@ if($_POST):
 		endswitch;
 	endif;
 endif;
-function sysctl_process_updatenotification($mode,$data) {
-	global $config;
-	$retval = 0;
-
-	switch ($mode):
-		case UPDATENOTIFY_MODE_NEW:
-		case UPDATENOTIFY_MODE_MODIFIED:
-			break;
-		case UPDATENOTIFY_MODE_DIRTY:
-		case UPDATENOTIFY_MODE_DIRTY_CONFIG:
-			$sphere_array = &array_make_branch($config,'system','sysctl','param');
-			if(false !== ($index_uuid = array_search_ex($data,$sphere_array,'uuid'))):
-				unset($sphere_array[$index_uuid]);
-				write_config();
-			endif;
-			break;
-	endswitch;
-	return $retval;
-}
 $enabletogglemode = isset($config['system']['enabletogglemode']);
 $pgtitle = [gtext('System'),gtext('Advanced'),gtext('sysctl.conf')];
 ?>
-<?php include 'fbegin.inc';?>
+<?php
+include 'fbegin.inc';
+?>
 <script type="text/javascript">
 //<![CDATA[
 $(window).on("load",function() {
 <?php // Init action buttons.?>
-	<?php if($enabletogglemode):?>
-		$("#toggle_selected_rows").click(function () {
-			return confirm('<?=$gt_selection_toggle_confirm;?>');
-		});
-	<?php else:?>
-		$("#enable_selected_rows").click(function () {
-			return confirm('<?=$gt_selection_enable_confirm;?>');
-		});
-		$("#disable_selected_rows").click(function () {
-			return confirm('<?=$gt_selection_disable_confirm;?>');
-		});
-	<?php endif;?>
+<?php if($enabletogglemode):?>
+	$("#toggle_selected_rows").click(function () {
+		return confirm('<?=$gt_selection_toggle_confirm;?>');
+	});
+<?php else:?>
+	$("#enable_selected_rows").click(function () {
+		return confirm('<?=$gt_selection_enable_confirm;?>');
+	});
+	$("#disable_selected_rows").click(function () {
+		return confirm('<?=$gt_selection_disable_confirm;?>');
+	});
+<?php endif;?>
 	$("#delete_selected_rows").click(function () {
 		return confirm('<?=$gt_selection_delete_confirm;?>');
 	});
@@ -234,15 +237,15 @@ $(window).on("load",function() {
 <?php // Init spinner.?>
 	$("#iform").submit(function() { spinner(); });
 	$(".spin").click(function() { spinner(); });
-}); 
+});
 function disableactionbuttons(ab_disable) {
 	var ab_element;
-	<?php if($enabletogglemode):?>
-		ab_element = document.getElementById('toggle_selected_rows'); if((ab_element !== null) && (ab_element.disabled !== ab_disable)) { ab_element.disabled = ab_disable; }
-	<?php else:?>
-		ab_element = document.getElementById('enable_selected_rows'); if((ab_element !== null) && (ab_element.disabled !== ab_disable)) { ab_element.disabled = ab_disable; }
-		ab_element = document.getElementById('disable_selected_rows'); if((ab_element !== null) && (ab_element.disabled !== ab_disable)) { ab_element.disabled = ab_disable; }
-	<?php endif;?>
+<?php if($enabletogglemode):?>
+	ab_element = document.getElementById('toggle_selected_rows'); if((ab_element !== null) && (ab_element.disabled !== ab_disable)) { ab_element.disabled = ab_disable; }
+<?php else:?>
+	ab_element = document.getElementById('enable_selected_rows'); if((ab_element !== null) && (ab_element.disabled !== ab_disable)) { ab_element.disabled = ab_disable; }
+	ab_element = document.getElementById('disable_selected_rows'); if((ab_element !== null) && (ab_element.disabled !== ab_disable)) { ab_element.disabled = ab_disable; }
+<?php endif;?>
 	ab_element = document.getElementById('delete_selected_rows'); if((ab_element !== null) && (ab_element.disabled !== ab_disable)) { ab_element.disabled = ab_disable; }
 }
 function togglecheckboxesbyname(ego,triggerbyname) {
@@ -295,29 +298,30 @@ function controlactionbuttons(ego,triggerbyname) {
 	</ul></td></tr>
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame"><form action="<?=$sphere_scriptname;?>" method="post" id="iform" name="iform">
-	<?php
+<?php
+	if(file_exists($d_sysrebootreqd_path)):
+		print_info_box(get_std_save_message(0));
+	endif;
 	if(!empty($savemsg)):
 		print_info_box($savemsg);
-	else:
-		if(file_exists($d_sysrebootreqd_path)):
-			print_info_box(get_std_save_message(0));
-		endif;
 	endif;
 	if(updatenotify_exists($sphere_notifier)):
 		print_config_change_box();
 	endif;
-	?>
+?>
 	<table class="area_data_selection">
 		<colgroup>
 			<col style="width:5%">
 			<col style="width:30%">
 			<col style="width:20%">
-			<col style="width:5%">
-			<col style="width:30%">
+			<col style="width:10%">
+			<col style="width:25%">
 			<col style="width:10%">
 		</colgroup>
 		<thead>
-			<?php html_titleline2(gtext('Overview'),6);?>
+<?php
+			html_titleline2(gtext('Overview'),6);
+?>
 			<tr>
 				<th class="lhelc"><input type="checkbox" id="togglemembers" name="togglemembers" title="<?=gtext('Invert Selection');?>"/></th>
 				<th class="lhell"><?=gtext('MIB');?></th>
@@ -331,47 +335,63 @@ function controlactionbuttons(ego,triggerbyname) {
 			<?=html_row_add($sphere_scriptname_child,$gt_record_add,6);?>
 		</tfoot>
 		<tbody>
-			<?php foreach($sphere_array as $sphere_record):?>
+<?php
+			foreach($sphere_array as $sphere_record):
+?>
 				<tr>
-					<?php
+<?php
 					$notificationmode = updatenotify_get_mode($sphere_notifier,$sphere_record['uuid']);
 					$notdirty = (UPDATENOTIFY_MODE_DIRTY != $notificationmode) && (UPDATENOTIFY_MODE_DIRTY_CONFIG != $notificationmode);
 					$enabled = isset($sphere_record['enable']);
 					$notprotected = !isset($sphere_record['protected']);
-					?>
+?>
 					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
-						<?php if($notdirty && $notprotected):?>
+<?php
+						if($notdirty && $notprotected):
+?>
 							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>"/>
-						<?php else:?>
+<?php
+						else:
+?>
 							<input type="checkbox" name="<?=$checkbox_member_name;?>[]" value="<?=$sphere_record['uuid'];?>" id="<?=$sphere_record['uuid'];?>" disabled="disabled"/>
-						<?php endif;?>
+<?php
+						endif;
+?>
 					</td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['name']);?></td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['value']);?></td>
 					<td class="<?=$enabled ? "lcelc" : "lcelcd";?>">
-						<?php if($enabled):?>
+<?php
+						if($enabled):
+?>
 							<a title="<?=gtext('Enabled');?>"><img src="<?=$g_img['ena'];?>" alt=""/></a>
-						<?php else:?>
+<?php
+						else:
+?>
 							<a title="<?=gtext('Disabled');?>"><img src="<?=$g_img['dis'];?>" alt=""/></a>
-						<?php endif;?>
+<?php
+						endif;
+?>
 					</td>
 					<td class="<?=$enabled ? "lcell" : "lcelld";?>"><?=htmlspecialchars($sphere_record['comment']);?></td>
 					<td class="lcebld">
 						<table class="area_data_selection_toolbox"><tbody><tr>
-							<?php
+<?php
 							$helpinghand = sprintf('%s?uuid=%s',$sphere_scriptname_child,$sphere_record['uuid']);
 							echo html_row_toolbox($helpinghand,$gt_record_mod,$gt_record_del,$gt_record_loc,$notprotected,$notdirty);
-							?>
+?>
 							<td></td>
 							<td></td>
 						</tr></tbody></table>
 					</td>
 				</tr>
-			<?php endforeach;?>
+<?php
+			endforeach;
+?>
 		</tbody>
 	</table>
 	<div id="submit">
-		<?php
+<?php
 		if($enabletogglemode):
 			echo html_button_toggle_rows($gt_selection_toggle);
 		else:
@@ -379,11 +399,17 @@ function controlactionbuttons(ego,triggerbyname) {
 			echo html_button_disable_rows($gt_selection_disable);
 		endif;
 		echo html_button_delete_rows($gt_selection_delete);
-		?>
+?>
 	</div>
 	<div id="remarks">
-		<?php html_remark2('note',gtext('Note'),gtext('These MIBs will be added to /etc/sysctl.conf. This allows you to make changes to a running system.'));?>
+<?php
+		html_remark2('note',gtext('Note'),gtext('These MIBs will be added to /etc/sysctl.conf. This allows you to make changes to a running system.'));
+?>
 	</div>
-<?php include 'formend.inc';?>
+<?php
+	include 'formend.inc';
+?>
 </form></td></tr></tbody></table>
-<?php include 'fend.inc';?>
+<?php
+include 'fend.inc';
+?>
