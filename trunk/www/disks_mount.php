@@ -151,10 +151,10 @@ function mountmanagement_process_updatenotification($mode, $data) {
         <?php if ($savemsg) print_info_box($savemsg);?>
         <?php if (updatenotify_exists("mountpoint")) print_config_change_box();?>
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<?php html_titleline2(gtext('Mount Points'), 6);?>
+	<?php html_titleline2(gtext('Mount Point Management'), 6);?>
           <tr>
             <td width="30%" class="listhdrlr"><?=gtext('Disk');?></td>
-            <td width="15%" class="listhdrr"><?=gtext('File system');?></td>
+            <td width="15%" class="listhdrr"><?=gtext('File System');?></td>
             <td width="15%" class="listhdrr"><?=gtext('Name');?></td>
             <td width="20%" class="listhdrr"><?=gtext('Description');?></td>
             <td width="13%" class="listhdrr"><?=gtext('Status');?></td>

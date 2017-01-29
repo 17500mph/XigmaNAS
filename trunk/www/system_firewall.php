@@ -275,7 +275,7 @@ spinner();
 					<tr>
 						<td width="22%" valign="top" class="vncell">&nbsp;</td>
 						<td width="78%" class="vtable">
-							<?=gtext("Download firewall rules.");?><br />
+							<?=gtext("Export firewall rules.");?><br />
 							<div id="submit">
 								<input name="export" type="submit" class="formbtn" value="<?=gtext("Export");?>" /><br />
 							</div>
