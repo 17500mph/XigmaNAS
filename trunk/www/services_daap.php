@@ -166,7 +166,7 @@ function enable_change(enable_change) {
 					html_inputbox("rescaninterval", gtext("Rescan Interval"), $pconfig['rescaninterval'], gtext("Scan file system every N seconds to see if any files have been added or removed. Set to 0 to disable background scanning. If background rescanning is disabled, a scan can still be forced from the status page of the administrative web interface."), false, 5);
 					html_checkbox("alwaysscan", gtext("Always Scan"), !empty($pconfig['alwaysscan']) ? true : false, "", gtext("Whether scans should be skipped if there are no users connected. This allows the drive to spin down when no users are connected."), false);
 					html_checkbox("skipfirst", gtext("Skip First Scan"), !empty($pconfig['skipfirst']) ? true : false, "", gtext("Whether to skip initial boot-up scan."), false);
-					html_combobox("scantype", gtext("Scan Type"), $pconfig['scantype'], array("0" => gtext("Normal"), "1" => gtext("Aggressive"), "2" => gtext("Painfully aggressive")), "", false);
+					html_combobox("scantype", gtext("Scan Mode"), $pconfig['scantype'], array("0" => gtext("Normal"), "1" => gtext("Aggressive"), "2" => gtext("Painfully aggressive")), "", false);
 					html_separator();
 					html_titleline(gtext("Administrative WebGUI"));
 					html_passwordbox("admin_pw", gtext("Password"), $pconfig['admin_pw'], sprintf("%s %s", gtext("Password for the administrative pages."), gtext("Default user name is 'admin'.")), true, 20);

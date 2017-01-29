@@ -744,7 +744,7 @@ function enable_change(enable_change) {
 						endfor;
 						?>
 						<?php
-						html_combobox("blocklen", gtext("Logical Block"), $pconfig['blocklen'], $a_blocklen, sprintf(gtext("You may specify logical block size. (default is %dB for compatibility)."), 512), false, "");
+						html_combobox("blocklen", gtext("Block Size"), $pconfig['blocklen'], $a_blocklen, sprintf(gtext("You may specify logical block size. (default is %dB for compatibility)."), 512), false, "");
 					else:?>
 						<input name="blocklen" type="hidden" value="512" />
 					<?php endif; ?>
