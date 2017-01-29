@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-28 02:17+0000\n"
+"POT-Creation-Date: 2017-01-29 13:11+0000\n"
 "PO-Revision-Date: 2017-01-17 15:29+0000\n"
 "Last-Translator: Yuchen Guo <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-28 01:57+0000\n"
+"X-Launchpad-Export-Date: 2017-01-29 12:21+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "Language: zh_CN\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -76,11 +76,6 @@ msgstr "%s 卷已存在。"
 #, php-format
 msgid "%s is too long."
 msgstr "%s 太长了。"
-
-#, php-format
-msgid ""
-"%s must be enabled for Unison to work, and the %s must have shell access."
-msgstr "%s 必须开启同步才能正常工作，%s 必须通过shell访问"
 
 #, php-format
 msgid "%s of %sB"
@@ -181,22 +176,8 @@ msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN 标签 （介于1和4094之间）。"
 
 msgid ""
-"A Auth Group contains authorised users and secrets for additional security."
-msgstr "认证组含有授权用户和秘密以增强额外的安全性。"
-
-msgid ""
-"A Initiator Group contains authorised initiator names and networks to access "
-"the target."
-msgstr "启动器组拥有已授权的启动器名称和目标器的网络访问权限。"
-
-msgid ""
 "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
 msgstr "NTP 伺服器名称只可以含有 a-z，0-9，'-' 及 '.' 的字元。"
-
-msgid ""
-"A Portal Group contains IP addresses and listening TCP ports to connect the "
-"target from the initiator."
-msgstr "门户组含有可从启动器（initiator）连接目标器（target）的 IP 地址和侦听的TCP 端口。"
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -208,12 +189,9 @@ msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr "此介面已经定义一个为 %s 的VLAN 标签。"
 
 msgid ""
-"A directory listing is generated if a directory is requested and no index-"
-"file (index.php, index.html, index.htm or default.htm) was found in that "
-"directory."
+"A directory listing is generated when no index-files (index.php, index.html, "
+"index.htm or default.htm) are found in a directory."
 msgstr ""
-"如果要求目录时目录档不存在和目录没有索引文件，系统将会自动产生目录列表。（index.php, index.html, index.htm 或 "
-"default.htm）"
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -369,9 +347,6 @@ msgstr "存取权限"
 msgid "Access Time (atime)"
 msgstr "访问时间(atime)"
 
-msgid "Access mode"
-msgstr "存取模式"
-
 msgid "Access the webGUI with the new IP address"
 msgstr "用新IP地址访问webGUI"
 
@@ -397,9 +372,6 @@ msgstr "活动"
 
 msgid "Active Directory"
 msgstr "活动目录"
-
-msgid "Active Directory List"
-msgstr "Active Directory 列表"
 
 msgid "Active Shares"
 msgstr "活跃分享区"
@@ -536,13 +508,11 @@ msgstr ""
 msgid "Additional Network"
 msgstr "其他网络"
 
+msgid "Additional Parameters"
+msgstr ""
+
 msgid "Additional Storage"
 msgstr "额外的存储"
-
-msgid ""
-"Additional parameters to the hardware-specific part of the driver for second "
-"UPS."
-msgstr ""
 
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr "驱动程序中与硬件相关到附加参数。"
@@ -628,6 +598,9 @@ msgstr "警报等级"
 msgid "All"
 msgstr "全部"
 
+msgid "All Dirs"
+msgstr ""
+
 msgid "All data from the following statistics have been deleted:"
 msgstr "以下统计的所有数据已经被删除："
 
@@ -638,9 +611,6 @@ msgstr "路径中的全部数据都将被覆盖，推荐使用空的UFS目录以
 
 msgid "All data will be lost when you activate this option!"
 msgstr "当你激活此选项所有的数据将会丢失"
-
-msgid "All dirs"
-msgstr "所有目录"
 
 #, php-format
 msgid "All dirs requires mounted path, but Path %s is not mounted."
@@ -657,14 +627,14 @@ msgstr "所有分享区使用'usedots' 选项，导致任何以.Parent 和.Apple
 msgid "All software raid disks are imported."
 msgstr "已经导入所有软体RAID的硬盘。"
 
-msgid "All users will have the root privilege."
-msgstr "让所有的用户都有 root 权限。"
-
 msgid "Alloc"
 msgstr "分派"
 
 msgid "Allow"
 msgstr "允许"
+
+msgid "Allow New Files"
+msgstr ""
 
 msgid "Allow TLS connections only."
 msgstr "只允许TLS连接。"
@@ -678,9 +648,6 @@ msgstr "允许使用者以 OS/2 延伸属性于分享区储存档案。"
 
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "允许客户端在上传和下载时断点续传"
-
-msgid "Allow new files"
-msgstr "允许新文件"
 
 msgid "Allow new files to be created."
 msgstr "允许创建新文件."
@@ -721,11 +688,8 @@ msgstr "AltRoot"
 msgid "Alternate Data Streams"
 msgstr ""
 
-msgid "Alternate TCP port. Default is 22"
-msgstr "备用TCP端口。默认为 22"
-
-msgid "Alternate TCP port. Default is 873"
-msgstr "备用TCP端口。默认为 873"
+msgid "Alternate TCP port. (Default is 873)."
+msgstr ""
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr "备用配置目录（通常是空的） 。"
@@ -736,8 +700,8 @@ msgstr "总是"
 msgid "Always On"
 msgstr "永远开机"
 
-msgid "Always scan"
-msgstr "永远扫描"
+msgid "Always Scan"
+msgstr ""
 
 msgid "Ambient Conditions From External Probe Equipment"
 msgstr "外探测器的环境条件"
@@ -893,6 +857,10 @@ msgstr ""
 msgid "Auth Groups"
 msgstr "认证群组（Auth Groups）"
 
+msgid ""
+"Auth Groups contains authorised users and secrets for additional security."
+msgstr ""
+
 msgid "Auth Method"
 msgstr "认证模式"
 
@@ -918,6 +886,9 @@ msgstr "认证方式"
 
 msgid "Authentication Method"
 msgstr "验证方式"
+
+msgid "Authorised Network"
+msgstr ""
 
 msgid "Authorised network"
 msgstr "认可网路"
@@ -952,17 +923,8 @@ msgstr ""
 msgid "Autoselect"
 msgstr "自动选择"
 
-msgid "Auxiliary Parameter"
-msgstr ""
-
-msgid "Auxiliary Parameters"
-msgstr ""
-
 msgid "Auxiliary device firmware"
 msgstr "辅助设备固件"
-
-msgid "Auxiliary parameters"
-msgstr "辅助参数"
 
 msgid "Avail"
 msgstr ""
@@ -1075,6 +1037,10 @@ msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
 
 msgid "Before - File-deletions will be performed before the transfer starts."
+msgstr ""
+
+msgid ""
+"Before a Unison Client can start to work, you need to perform the following:"
 msgstr ""
 
 msgid "Best available"
@@ -1198,8 +1164,8 @@ msgstr "CIFS/SMB/网芳"
 msgid "CIFS/SMB Information"
 msgstr ""
 
-msgid "CIFS/SMB disabled"
-msgstr "CIFS/SMB 伺服器关闭中"
+msgid "CIFS/SMB is disabled."
+msgstr ""
 
 msgid "CIFS/SMB is enabled."
 msgstr "CIFS/ SMB 已启用。"
@@ -1466,8 +1432,8 @@ msgstr "网路文件共享系统（CIFS）"
 msgid "Community"
 msgstr "社群"
 
-msgid "Compilations directories"
-msgstr "汇编目录"
+msgid "Compilations Directories"
+msgstr ""
 
 msgid "Compiled"
 msgstr "已编译"
@@ -2176,9 +2142,6 @@ msgstr "此静态路由的目的端网络"
 msgid "Destination port"
 msgstr "目的地端口"
 
-msgid "Destination share"
-msgstr "共享目的端"
-
 msgid "Destroy a pool"
 msgstr ""
 
@@ -2624,8 +2587,8 @@ msgstr ""
 msgid "Do you want to toggle selected options?"
 msgstr ""
 
-msgid "Document root"
-msgstr "文件根目录"
+msgid "Document Root"
+msgstr ""
 
 msgid "Document root of the webserver. Home of the web page files."
 msgstr "网页伺服器文件根目录。"
@@ -2636,14 +2599,14 @@ msgstr ""
 msgid "Domain"
 msgstr "网域"
 
+msgid "Domain Name"
+msgstr ""
+
 msgid "Domain controller name"
 msgstr "网域控制器名称"
 
 msgid "Domain is missing 2nd level name."
 msgstr ""
-
-msgid "Domain name"
-msgstr "网域名称"
 
 msgid "Domain name (DNS/Realm-Name)"
 msgstr "网域名称（DNS/Realm-Name）"
@@ -3067,6 +3030,9 @@ msgstr ""
 msgid "Enable serial console."
 msgstr ""
 
+msgid "Enable service SSH when disabled"
+msgstr ""
+
 msgid "Enable shadow copy."
 msgstr ""
 
@@ -3156,8 +3122,18 @@ msgstr "如果您想覆盖默认值的话，请输入自定的网页界面 的�
 
 #, php-format
 msgid ""
-"Enter a custom port number if you want to override the default port. Default "
-"port is %s."
+"Enter a custom port number if you want to override the default port. "
+"(Default is %s)."
+msgstr ""
+
+msgid ""
+"Enter a custom port number if you want to override the default port. "
+"(Default is 22)."
+msgstr ""
+
+msgid ""
+"Enter a custom port number if you want to override the default port. "
+"(Default is 69). "
 msgstr ""
 
 msgid "Enter a description"
@@ -3202,6 +3178,11 @@ msgid ""
 msgstr "请输入在 WPA-PSK 模式中使用的密码短语。这个密语长度必须在 8 到 63 个字元之间。"
 
 msgid ""
+"Enter the path to the database directory. The config files will be created "
+"under the specified directory."
+msgstr ""
+
+msgid ""
 "Enter the path to the home directory of VirtualBox. VM config and HDD image "
 "will be created under the specified directory."
 msgstr ""
@@ -3210,11 +3191,6 @@ msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
 msgstr "请输入该用户的主目录的路径。将此字段留空以使用默认的路径到 /mnt。"
-
-msgid ""
-"Enter the path to the home directory. The config will be created under the "
-"specified directory."
-msgstr ""
 
 msgid ""
 "Enter the path to the home directory. This directory will store the "
@@ -3541,8 +3517,8 @@ msgstr ""
 msgid "Force use"
 msgstr "强制使用"
 
-msgid "Forced update period"
-msgstr "强制更新间隔"
+msgid "Forced Update Period"
+msgstr ""
 
 msgid ""
 "Forces use of vdevs, even if they appear in use or specify different size. "
@@ -3685,6 +3661,9 @@ msgstr "群组"
 msgid "Group Allow"
 msgstr ""
 
+msgid "Group Compilations"
+msgstr ""
+
 msgid "Group ID"
 msgstr "群组 ID"
 
@@ -3692,9 +3671,6 @@ msgid "Group Settings"
 msgstr ""
 
 msgid "Group Suffix"
-msgstr ""
-
-msgid "Group compilations"
 msgstr ""
 
 msgid "Group is locked"
@@ -3851,12 +3827,6 @@ msgstr ""
 
 msgid "Hosts Setup"
 msgstr ""
-
-msgid "Hosts allow"
-msgstr "允许主机"
-
-msgid "Hosts deny"
-msgstr "拒绝主机"
 
 msgid "Hour"
 msgstr ""
@@ -4138,6 +4108,11 @@ msgstr ""
 
 msgid "Initiator Groups"
 msgstr "启动器群组"
+
+msgid ""
+"Initiator Groups contains authorised initiator names and networks to access "
+"the target."
+msgstr ""
 
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
@@ -4553,12 +4528,6 @@ msgstr "本机分享区(目标)"
 msgid "Local User"
 msgstr "本机用户"
 
-msgid "Local share (destination)"
-msgstr "本机分享区(目标)"
-
-msgid "Local shares to be synchronized"
-msgstr "欲同步的本机分享区"
-
 msgid "Location"
 msgstr "位置"
 
@@ -4577,9 +4546,11 @@ msgid "Location where the content database file will be stored."
 msgstr "储存内容资料库文件的位置。"
 
 #, php-format
-msgid ""
-"Location where the working files will be stored, e.g. %s/backup/.unison"
-msgstr "存储使用文件的位置，例如：%s/backup/.unison"
+msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
+msgstr ""
+
+msgid "Locked Files"
+msgstr ""
 
 msgid "Log"
 msgstr "记录档"
@@ -4605,8 +4576,8 @@ msgstr "这条规则所处理的记录档到 syslog。"
 msgid "Logarithmic Scaling"
 msgstr ""
 
-msgid "Logical Block Length"
-msgstr "逻辑块长度"
+msgid "Logical Block"
+msgstr ""
 
 #, php-format
 msgid "Logical Unit Controller Authorised network (%s by default)"
@@ -4718,14 +4689,17 @@ msgstr "制造商"
 msgid "Manufacturing date"
 msgstr "制造日期"
 
-msgid "Map all users to root"
-msgstr "视所有用户为root"
+msgid "Map all users to root, all users will have root privileges."
+msgstr ""
 
 msgid "Map to Guest"
 msgstr ""
 
-msgid "Map to user"
-msgstr "對應為用戶"
+msgid "Map to Root"
+msgstr ""
+
+msgid "Map to User"
+msgstr ""
 
 msgid "Mapping DOS Attributes"
 msgstr ""
@@ -4747,7 +4721,13 @@ msgstr ""
 msgid "Max Entries"
 msgstr ""
 
+msgid "Max. Block Size"
+msgstr ""
+
 msgid "Max. Clients"
+msgstr ""
+
+msgid "Max. Connections"
 msgstr ""
 
 msgid "Max. Connections Per Host"
@@ -4759,20 +4739,14 @@ msgstr ""
 msgid "Max. Passive Port"
 msgstr ""
 
+msgid "Max. Sessions"
+msgstr ""
+
 msgid "Max. TTL"
 msgstr "最大 TTL 值"
 
-msgid "Max. block size"
-msgstr "最大数据块值"
-
-msgid "Max. connections"
-msgstr "IP 连线数目上限"
-
 msgid "Max. pre-send R2T"
 msgstr "最大 pre=send R2T"
-
-msgid "Max. sessions"
-msgstr "最多会话（sessions）数目"
 
 msgid ""
 "Max. time-to-live (max. number of hops) used in outgoing probe packets."
@@ -4792,9 +4766,6 @@ msgstr ""
 
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr ""
-
-msgid "Maximum connections"
-msgstr "连线数目上限"
 
 msgid "Maximum frequency"
 msgstr "最大频率"
@@ -5119,6 +5090,9 @@ msgstr ""
 msgid "Netgraph"
 msgstr "网络图"
 
+msgid "Netstat"
+msgstr ""
+
 msgid "Network"
 msgstr "网络"
 
@@ -5403,9 +5377,6 @@ msgid ""
 "the maximum physical erase cycles the drive is designed to endure."
 msgstr ""
 
-msgid "Number of servers"
-msgstr "伺服器数量"
-
 msgid "Numeric identifier of the group."
 msgstr "群组的数字识别码。"
 
@@ -5626,6 +5597,9 @@ msgstr "密码"
 msgid "Password (confirmed)"
 msgstr "密码（确认）"
 
+msgid "Password Authentication"
+msgstr ""
+
 msgid "Password Encryption"
 msgstr ""
 
@@ -5634,9 +5608,6 @@ msgstr ""
 
 msgid "Password Suffix"
 msgstr ""
-
-msgid "Password authentication"
-msgstr "密码认证"
 
 msgid ""
 "Password does not match the confirmation password. Please ensure both "
@@ -5671,6 +5642,9 @@ msgstr "路径"
 msgid "Path of the URL relative to document root."
 msgstr "URL 相对路径（从根目录开始）。"
 
+msgid "Path to be shared to be synchronized."
+msgstr ""
+
 msgid "Path to be shared."
 msgstr "欲共享的路径"
 
@@ -5700,11 +5674,11 @@ msgstr ""
 msgid "Permanent samba data path (e.g. %s)."
 msgstr "永久Samba数据路径（如 %s）。"
 
-msgid "Permit Root Login"
+msgid "Permission"
 msgstr ""
 
-msgid "Permit root login"
-msgstr "允许root登录"
+msgid "Permit Root Login"
+msgstr ""
 
 msgid "Permit to do SSH Tunneling."
 msgstr "允许 SSH Tunneling"
@@ -5877,6 +5851,11 @@ msgstr ""
 msgid "Portal Groups"
 msgstr "门户群组"
 
+msgid ""
+"Portal Groups contains IP addresses and listening on TCP ports to connect "
+"the target from the initiator."
+msgstr ""
+
 msgid "Portals"
 msgstr "门户网站（Portals）"
 
@@ -5925,14 +5904,17 @@ msgstr "前缀"
 msgid "Preformatted file system"
 msgstr "已格式化的文件系统"
 
-msgid "Preserve extended attributes"
-msgstr "保留扩展属性"
+msgid "Preserve Extended Attributes"
+msgstr ""
+
+msgid "Preserve Extended attributes"
+msgstr ""
+
+msgid "Preserve Permissions"
+msgstr ""
 
 msgid "Preserve modification times."
 msgstr "保留更改次数。"
-
-msgid "Preserve permissions"
-msgstr "保留权限"
 
 msgid "Prevent deep discharge of battery"
 msgstr "防止电池深度漏电"
@@ -6224,6 +6206,9 @@ msgstr "远程地址"
 msgid "Remote Module (Source)"
 msgstr ""
 
+msgid "Remote Rsync Daemon"
+msgstr ""
+
 msgid "Remote Rsync Server"
 msgstr "远端 Rsync 伺服器"
 
@@ -6232,9 +6217,6 @@ msgstr ""
 
 msgid "Remote Syslog Server"
 msgstr ""
-
-msgid "Remote module (source)"
-msgstr "远端模组（来源）"
 
 msgid "Remote module name"
 msgstr "远端模组名称"
@@ -6249,9 +6231,6 @@ msgstr ""
 msgid ""
 "Remote monitoring username. Must be equal on both master and slave system."
 msgstr ""
-
-msgid "Remote rsync daemon"
-msgstr "远程rsync进程"
 
 msgid "Removable"
 msgstr "可移除"
@@ -6308,6 +6287,9 @@ msgstr ""
 
 msgid "Rescan Disks"
 msgstr "重新扫描磁盘"
+
+msgid "Rescan Interval"
+msgstr ""
 
 msgid "Rescan interval"
 msgstr "重新扫描间隔"
@@ -6375,8 +6357,8 @@ msgstr "返回到命令网页"
 msgid "Reverse DNS lookup"
 msgstr "反向DNS查找"
 
-msgid "Reverse direction"
-msgstr "反向"
+msgid "Reverse Direction"
+msgstr ""
 
 msgid "Role"
 msgstr "角色"
@@ -6429,9 +6411,6 @@ msgstr "规则编号"
 msgid "Rules"
 msgstr "规则"
 
-msgid "Run as"
-msgstr "执行为"
-
 msgid "Run now"
 msgstr "立刻执行"
 
@@ -6442,8 +6421,8 @@ msgid "Running"
 msgstr "执行中"
 
 msgid ""
-"Running the service as user root is not recommended for security reasons, "
-"use at your own risk!"
+"Running this service as root is not recommended for security reasons, use at "
+"your own risk!"
 msgstr ""
 
 msgid "Russian"
@@ -6497,9 +6476,6 @@ msgstr "SSH"
 msgid "SSH events"
 msgstr "SSH 事件"
 
-msgid "SSHD"
-msgstr ""
-
 msgid "SSHD log"
 msgstr "SSHD 记录"
 
@@ -6548,6 +6524,9 @@ msgstr "将登录讯息储存在设定档内。"
 msgid "Saved file to"
 msgstr "将文件储存至"
 
+msgid "Scan Mode"
+msgstr ""
+
 msgid "Scan Targets"
 msgstr "扫描目标"
 
@@ -6558,9 +6537,6 @@ msgid ""
 "administrative web interface."
 msgstr ""
 "每N 秒扫描档案系统以查看是否有任何档案被加入或移除。设为 0 则停用背景扫描。如果停用背景扫描，仍然可以使用管理网页介面的状态页来强制扫描。"
-
-msgid "Scan type"
-msgstr "扫描类型"
 
 msgid "Schedule Time"
 msgstr "排程时间"
@@ -6706,6 +6682,9 @@ msgstr "请选择网页界面的语言。"
 msgid "Select the location closest to you."
 msgstr "请选择最邻近的区域。"
 
+msgid "Select the permission for running this service. (www by default)."
+msgstr ""
+
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
 "the button below to restore the configuration."
@@ -6803,11 +6782,11 @@ msgstr "伺服器说明。通常可以留空白。"
 msgid "Server information"
 msgstr "伺服器讯息"
 
-msgid "Server name"
-msgstr "伺服器名称"
-
 msgid "Server version"
 msgstr "伺服器版本"
+
+msgid "Servers"
+msgstr ""
 
 msgid "Service"
 msgstr "服务"
@@ -6856,9 +6835,6 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "设置标题滚动速度 0-10（默认为10）。"
 
-msgid "Set under which user the service should run (www by default)."
-msgstr ""
-
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr "设置根数据集的备用挂载点。默认为 /mnt。"
 
@@ -6874,6 +6850,9 @@ msgstr "设置新文件的 umask 预设值。默认值是 0（任何人都可读
 
 msgid "Settings"
 msgstr "设置"
+
+msgid "Setup user to get shell access"
+msgstr ""
 
 msgid "Shadow Copy"
 msgstr "阴影复制"
@@ -6949,6 +6928,9 @@ msgstr "接收缓冲区的大小（默认为 %d）。"
 msgid "Size of send buffer (%d by default)."
 msgstr "传送缓冲区的大小（默认为 %d）。"
 
+msgid "Size offered to the initiator. (up to 8EiB=8388608TiB)."
+msgstr ""
+
 msgid ""
 "Size offered to the initiator. (up to 8EiB=8388608TiB. actual size is depend "
 "on your disks.)"
@@ -6957,8 +6939,8 @@ msgstr "设定启动器的硬盘容量。 （最多到8EiB=8388608TiB。实际�
 msgid "Skew"
 msgstr "级值"
 
-msgid "Skip first scan"
-msgstr "跳过第一次扫描"
+msgid "Skip First Scan"
+msgstr ""
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr "睡眠 - 除了睡眠模式之外的设备都将检查。"
@@ -6999,6 +6981,9 @@ msgstr "快照（Snapshots）"
 msgid "Sockets"
 msgstr "套接字（Sockets）"
 
+msgid "Sockstat"
+msgstr ""
+
 msgid "SoftRaid"
 msgstr "软体RAID"
 
@@ -7022,9 +7007,6 @@ msgstr "要备份的资料夹。"
 
 msgid "Source port"
 msgstr "来源端口"
-
-msgid "Source share"
-msgstr "来源位置"
 
 msgid "Space Usage"
 msgstr ""
@@ -7246,8 +7228,8 @@ msgstr "切换到 %s/s"
 msgid "Sync"
 msgstr "同步"
 
-msgid "Synchronization time"
-msgstr "同步时间"
+msgid "Synchronization Time"
+msgstr ""
 
 msgid "Synchronize"
 msgstr "同步"
@@ -7317,14 +7299,14 @@ msgstr "系统消息缓冲区"
 msgid "System tuning"
 msgstr "系统微调"
 
+msgid "TCP Forwarding"
+msgstr ""
+
 msgid "TCP Port"
 msgstr ""
 
 msgid "TCP Wrapper"
 msgstr ""
-
-msgid "TCP forwarding"
-msgstr "TCP 转送"
 
 msgid "TCP port"
 msgstr "TCP 端口"
@@ -7355,6 +7337,9 @@ msgstr ""
 
 msgid "Tag"
 msgstr "标签"
+
+msgid "Tag Number"
+msgstr ""
 
 msgid "Tag number"
 msgstr "标签号码"
@@ -7506,6 +7491,9 @@ msgid ""
 "The action which will be executed when the packet match the criteria "
 "specified below."
 msgstr "数据包（packet）符合以下规定的标准时，将执行该动作。"
+
+msgid "The actual size is depend on your disks."
+msgstr ""
 
 msgid "The administrator has been notified to apply your changes."
 msgstr "已通知来管理员套用您的更改。"
@@ -8012,11 +8000,6 @@ msgstr ""
 "新文件和目录的权限通常是由创建掩码（create mask）和目录面具（directory mask）参数管辖，但继承权限参数覆盖这些参数。\r\n"
 "这在多用户的系统上特别有用，让每个用户灵活的使用分享区。"
 
-msgid ""
-"The port to listen to. The default is to listen to the tftp port specified "
-"in /etc/services."
-msgstr "要侦听的端口。默认是侦听在 /etc/services 中指定的 tftp 端口。"
-
 #, php-format
 msgid "The portal '%s' is invalid."
 msgstr "门户网站 '%s' 无效。"
@@ -8038,10 +8021,6 @@ msgstr ""
 
 msgid "The queuedepth range is invalid."
 msgstr "伫列深度（queuedepth）范围无效。"
-
-#, php-format
-msgid "The recommended length for compatibility is %d."
-msgstr "建议的兼容长度为 %d。"
 
 #, php-format
 msgid "The recommended queue depth is %d."
@@ -8147,13 +8126,13 @@ msgstr "变数的数值。"
 msgid "The volume must be detached before it can be deleted."
 msgstr "硬盘必需先移除才可以删除。"
 
+msgid "The work directory does not exist."
+msgstr ""
+
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
 "clients. (maximum 15 characters)."
 msgstr ""
-
-msgid "The working directory does not exist."
-msgstr "工作目录不存在。"
 
 msgid "There are too many additional groups."
 msgstr "有太多的附加组。"
@@ -8220,6 +8199,15 @@ msgstr "这些参数将被添加到 %s 的[Global] 区域。"
 #, php-format
 msgid "These parameters are added to [Share] section of %s."
 msgstr "这些参数将被添加到 %s 的 [Share] 区域。"
+
+msgid ""
+"These parameters are added to the hardware-specific part of the driver for "
+"the second UPS."
+msgstr ""
+
+msgid ""
+"These parameters are added to the hardware-specific part of the driver."
+msgstr ""
 
 #, php-format
 msgid "These parameters will be added to %s."
@@ -8955,6 +8943,9 @@ msgstr "URL"
 msgid "Ukrainian"
 msgstr "乌克兰语"
 
+msgid "Umask"
+msgstr ""
+
 msgid "Unavailable"
 msgstr "无法使用"
 
@@ -9012,6 +9003,9 @@ msgstr "卸载中..."
 msgid "Up"
 msgstr "上"
 
+msgid "Update Period"
+msgstr ""
+
 msgid "Update period"
 msgstr "更新间隔"
 
@@ -9024,8 +9018,8 @@ msgstr ""
 msgid "Upload Bandwidth"
 msgstr ""
 
-msgid "Upload directory"
-msgstr "上传目录"
+msgid "Upload Directory"
+msgstr ""
 
 #, php-format
 msgid "Upload directory of the webserver. The default is %s."
@@ -9442,14 +9436,11 @@ msgstr "通配符"
 msgid "Wireless configuration"
 msgstr "无线网络配置"
 
-msgid "Workgroup"
-msgstr "工作群组（Workgroup）"
-
-msgid "Working Directory"
+msgid "Work Directory"
 msgstr ""
 
-msgid "Working directory"
-msgstr "工作目录"
+msgid "Workgroup"
+msgstr "工作群组（Workgroup）"
 
 msgid "Write"
 msgstr "写入"
@@ -9528,8 +9519,9 @@ msgid ""
 msgstr "您可以指定 SCSI INQUIRY 数据。默认情况下是空白的。 （最多 %d 个 ASCII 字符）"
 
 #, php-format
-msgid "You may specify logical block length (%d by default)."
-msgstr "您可以指定逻辑块长度（默认为 %d）"
+msgid ""
+"You may specify logical block size. (default is %dB for compatibility)."
+msgstr ""
 
 msgid ""
 "You must add at least a Portal Group, an Initiator Group and an Extent "
@@ -9770,17 +9762,23 @@ msgstr "路径已有 sysvol。"
 msgid "to"
 msgstr "到"
 
-msgid "umask"
-msgstr "档案预设权限（umask）"
-
 msgid "umount"
 msgstr "卸载"
 
-msgid "user"
-msgstr ""
-
 msgid "week days"
 msgstr ""
+
+#~ msgid "Access mode"
+#~ msgstr "存取模式"
+
+#~ msgid "All dirs"
+#~ msgstr "所有目录"
+
+#~ msgid "All users will have the root privilege."
+#~ msgstr "让所有的用户都有 root 权限。"
+
+#~ msgid "Allow new files"
+#~ msgstr "允许新文件"
 
 #~ msgid "Asynchronous I/O (AIO)"
 #~ msgstr "异步 I/O (AIO)"
@@ -9791,17 +9789,38 @@ msgstr ""
 #~ msgid "Hide dot files"
 #~ msgstr "隐藏以点开头的文件"
 
+#~ msgid "Hosts allow"
+#~ msgstr "允许主机"
+
+#~ msgid "Hosts deny"
+#~ msgstr "拒绝主机"
+
 #~ msgid "Inherit permissions"
 #~ msgstr "权限继承"
 
 #~ msgid "Large read/write"
 #~ msgstr "大笔资料 读／写"
 
+#~ msgid "Map all users to root"
+#~ msgstr "视所有用户为root"
+
 #~ msgid "NetBIOS name"
 #~ msgstr "NetBIOS 名称"
 
+#~ msgid "Password authentication"
+#~ msgstr "密码认证"
+
+#~ msgid "Permit root login"
+#~ msgstr "允许root登录"
+
 #~ msgid "Receive Buffer Size"
 #~ msgstr "接收缓冲区的大小"
+
+#~ msgid "Remote module (source)"
+#~ msgstr "远端模组（来源）"
+
+#~ msgid "Scan type"
+#~ msgstr "扫描类型"
 
 #~ msgid "Send Buffer Size"
 #~ msgstr "发送缓冲区的大小"
@@ -9818,8 +9837,28 @@ msgstr ""
 #~ msgid "Swap disabled"
 #~ msgstr "关闭 Swap"
 
+#~ msgid "TCP forwarding"
+#~ msgstr "TCP 转送"
+
 #~ msgid "Unix charset"
 #~ msgstr "Unix 字符编码"
+
+#~ msgid ""
+#~ "A Auth Group contains authorised users and secrets for additional security."
+#~ msgstr "认证组含有授权用户和秘密以增强额外的安全性。"
+
+#~ msgid ""
+#~ "A Initiator Group contains authorised initiator names and networks to access "
+#~ "the target."
+#~ msgstr "启动器组拥有已授权的启动器名称和目标器的网络访问权限。"
+
+#~ msgid ""
+#~ "A directory listing is generated if a directory is requested and no index-"
+#~ "file (index.php, index.html, index.htm or default.htm) was found in that "
+#~ "directory."
+#~ msgstr ""
+#~ "如果要求目录时目录档不存在和目录没有索引文件，系统将会自动产生目录列表。（index.php, index.html, index.htm 或 "
+#~ "default.htm）"
 
 #~ msgid ""
 #~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
@@ -9835,11 +9874,35 @@ msgstr ""
 #~ msgid "AIO read size"
 #~ msgstr "AIO 读取大小"
 
+#~ msgid "Alternate TCP port. Default is 22"
+#~ msgstr "备用TCP端口。默认为 22"
+
+#~ msgid "Always scan"
+#~ msgstr "永远扫描"
+
+#~ msgid "Alternate TCP port. Default is 873"
+#~ msgstr "备用TCP端口。默认为 873"
+
+#~ msgid "Auxiliary parameters"
+#~ msgstr "辅助参数"
+
+#~ msgid "CIFS/SMB disabled"
+#~ msgstr "CIFS/SMB 伺服器关闭中"
+
 #~ msgid "Create mask"
 #~ msgstr "创建掩码"
 
+#~ msgid "Destination share"
+#~ msgstr "共享目的端"
+
 #~ msgid "Directory mask"
 #~ msgstr "目录掩码"
+
+#~ msgid "Document root"
+#~ msgstr "文件根目录"
+
+#~ msgid "Domain name"
+#~ msgstr "网域名称"
 
 #~ msgid "Dos charset"
 #~ msgstr "DOS 字符集"
@@ -9871,20 +9934,67 @@ msgstr ""
 #~ msgid "Enable shadow copy"
 #~ msgstr "启用阴影复制"
 
+#~ msgid "Forced update period"
+#~ msgstr "强制更新间隔"
+
 #~ msgid "Guest account"
 #~ msgstr "访客帐号"
+
+#~ msgid "Local shares to be synchronized"
+#~ msgstr "欲同步的本机分享区"
+
+#~ msgid "Local share (destination)"
+#~ msgstr "本机分享区(目标)"
+
+#, php-format
+#~ msgid ""
+#~ "Location where the working files will be stored, e.g. %s/backup/.unison"
+#~ msgstr "存储使用文件的位置，例如：%s/backup/.unison"
+
+#~ msgid "Logical Block Length"
+#~ msgstr "逻辑块长度"
+
+#~ msgid "Map to user"
+#~ msgstr "對應為用戶"
 
 #~ msgid "Map to guest"
 #~ msgstr "对应为访客（guest）"
 
+#~ msgid "Max. block size"
+#~ msgstr "最大数据块值"
+
+#~ msgid "Max. connections"
+#~ msgstr "IP 连线数目上限"
+
+#~ msgid "Max. sessions"
+#~ msgstr "最多会话（sessions）数目"
+
+#~ msgid "Maximum connections"
+#~ msgstr "连线数目上限"
+
 #~ msgid "Null passwords"
 #~ msgstr "密码空白"
+
+#~ msgid "Number of servers"
+#~ msgstr "伺服器数量"
 
 #~ msgid "Password server"
 #~ msgstr "密码伺服器"
 
+#~ msgid "Preserve extended attributes"
+#~ msgstr "保留扩展属性"
+
+#~ msgid "Preserve permissions"
+#~ msgstr "保留权限"
+
 #~ msgid "Recycle bin"
 #~ msgstr "垃圾桶"
+
+#~ msgid "Reverse direction"
+#~ msgstr "反向"
+
+#~ msgid "Run as"
+#~ msgstr "执行为"
 
 #, php-format
 #~ msgid ""
@@ -9898,13 +10008,34 @@ msgstr ""
 #~ "this value. (%d by default)"
 #~ msgstr "当大小要求大于这个数值时，Samba将异步写入文件。 （默认为 %d）"
 
+#~ msgid "Server name"
+#~ msgstr "伺服器名称"
+
 #~ msgid "Shadow Copy format"
 #~ msgstr "阴影复制格式"
+
+#~ msgid "Source share"
+#~ msgstr "来源位置"
+
+#~ msgid "Synchronization time"
+#~ msgstr "同步时间"
+
+#~ msgid ""
+#~ "The port to listen to. The default is to listen to the tftp port specified "
+#~ "in /etc/services."
+#~ msgstr "要侦听的端口。默认是侦听在 /etc/services 中指定的 tftp 端口。"
+
+#, php-format
+#~ msgid "The recommended length for compatibility is %d."
+#~ msgstr "建议的兼容长度为 %d。"
 
 #~ msgid ""
 #~ "The workgroup in which the server will appear when queried by Windows or SMB "
 #~ "clients (maximum 15 characters)."
 #~ msgstr "伺服器的 Workgroup 名称（最多15个字符）。"
+
+#~ msgid "The working directory does not exist."
+#~ msgstr "工作目录不存在。"
 
 #~ msgid "This will provide ZFS ACL support. (ZFS only)"
 #~ msgstr "这将提供ZFS ACL 支持。（只是 ZFS）"
@@ -9918,17 +10049,41 @@ msgstr ""
 #~ msgid "Trusted domains"
 #~ msgstr "受信任域"
 
+#~ msgid "Upload directory"
+#~ msgstr "上传目录"
+
 #~ msgid "WINS server"
 #~ msgstr "WINS 伺服器"
 
+#~ msgid "Working directory"
+#~ msgstr "工作目录"
+
+#, php-format
+#~ msgid "You may specify logical block length (%d by default)."
+#~ msgstr "您可以指定逻辑块长度（默认为 %d）"
+
+#~ msgid "umask"
+#~ msgstr "档案预设权限（umask）"
+
+#~ msgid "Active Directory List"
+#~ msgstr "Active Directory 列表"
+
 #~ msgid "Interface selection"
 #~ msgstr "介面选择"
+
+#~ msgid ""
+#~ "A Portal Group contains IP addresses and listening TCP ports to connect the "
+#~ "target from the initiator."
+#~ msgstr "门户组含有可从启动器（initiator）连接目标器（target）的 IP 地址和侦听的TCP 端口。"
 
 #~ msgid "Enable ACL inheritance"
 #~ msgstr "启用ACL继承"
 
 #~ msgid "AIO module"
 #~ msgstr "AIO模块"
+
+#~ msgid "Skip first scan"
+#~ msgstr "跳过第一次扫描"
 
 #~ msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
 #~ msgstr "这将提供NTFS ACL支援，而不是ZFS ACL的支援，例如UFS。"
@@ -9939,6 +10094,9 @@ msgstr ""
 #~ msgid "Store NTFS acls in Extended Attributes"
 #~ msgstr "将NTFS ACL储存在扩展属性"
 
+#~ msgid "Remote rsync daemon"
+#~ msgstr "远程rsync进程"
+
 #~ msgid "Store alternate data streams"
 #~ msgstr "存储交换数据流"
 
@@ -9947,3 +10105,11 @@ msgstr ""
 
 #~ msgid "AFP compatibility"
 #~ msgstr "AFP 兼容性"
+
+#~ msgid "Compilations directories"
+#~ msgstr "汇编目录"
+
+#, php-format
+#~ msgid ""
+#~ "%s must be enabled for Unison to work, and the %s must have shell access."
+#~ msgstr "%s 必须开启同步才能正常工作，%s 必须通过shell访问"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-28 02:17+0000\n"
-"PO-Revision-Date: 2017-01-26 20:09+0000\n"
+"POT-Creation-Date: 2017-01-29 13:11+0000\n"
+"PO-Revision-Date: 2017-01-29 08:10+0000\n"
 "Last-Translator: Kiss-Kálmán Dániel <kisskalmandaniel@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-28 01:56+0000\n"
+"X-Launchpad-Export-Date: 2017-01-29 12:22+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "Language: hu_HU\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -81,12 +81,6 @@ msgstr "%s már kötetnek be lett állítva."
 #, php-format
 msgid "%s is too long."
 msgstr "%s túl hosszú."
-
-#, php-format
-msgid ""
-"%s must be enabled for Unison to work, and the %s must have shell access."
-msgstr ""
-"%s-t be kell kapcsolni, és % számára shell hozzáférést kell biztosítani."
 
 #, php-format
 msgid "%s of %sB"
@@ -205,30 +199,10 @@ msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN címke (1 és 4094 közötti érték)."
 
 msgid ""
-"A Auth Group contains authorised users and secrets for additional security."
-msgstr ""
-"Az Hitelesítő csoport hitelesített felhasználókat és titkosításokat "
-"tartalmaz a nagyobb biztonság érdekében."
-
-msgid ""
-"A Initiator Group contains authorised initiator names and networks to access "
-"the target."
-msgstr ""
-"A Kezdeményező csoport tartalmazza az hitelesített kezdeményező "
-"felhasználókat és hálózatok a cél eléréséhez."
-
-msgid ""
 "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
 msgstr ""
 "Az NTP-időkiszolgáló neve csak a-z, 0-9, '-' és '.' karaktereket "
 "tartalmazhat."
-
-msgid ""
-"A Portal Group contains IP addresses and listening TCP ports to connect the "
-"target from the initiator."
-msgstr ""
-"Egy Portal csoport IP címeket és TCP portokat tartalmaz, melyekhez a célhoz "
-"kapcsolódnak a kezdeményezőtől."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -242,12 +216,9 @@ msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr "Ez a VLAN címke %s már be van állítva ezen az interfészen."
 
 msgid ""
-"A directory listing is generated if a directory is requested and no index-"
-"file (index.php, index.html, index.htm or default.htm) was found in that "
-"directory."
+"A directory listing is generated when no index-files (index.php, index.html, "
+"index.htm or default.htm) are found in a directory."
 msgstr ""
-"A könyvtár lista akkor keletkezik, ha a könyvtárat meghívják, és ott nem "
-"található index fájl (index.php, index.html, index.htm vagy default.htm)."
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -305,10 +276,10 @@ msgstr ""
 "szükséges."
 
 msgid "A valid IPv4 address must be specified for the primary DNS server."
-msgstr ""
+msgstr "Érvényes IPv4 címet adj meg elsődleges DNS szervernek."
 
 msgid "A valid IPv4 address must be specified for the secondary DNS server."
-msgstr ""
+msgstr "Érvényes IPv4 címet adj meg másodlagos DNS szervernek."
 
 msgid "A valid IPv4 address must be specified."
 msgstr "Érvényes IPv4  cím megadása szükséges."
@@ -320,10 +291,10 @@ msgid "A valid IPv6 Gateway address must be specified."
 msgstr "Az átjárónak érvényes IPv4 cím megadása szükséges."
 
 msgid "A valid IPv6 address must be specified for the primary DNS server."
-msgstr ""
+msgstr "Érvényes IPv6 címet adj meg elsődleges DNS szervernek."
 
 msgid "A valid IPv6 address must be specified for the secondary DNS server."
-msgstr ""
+msgstr "Érvényes IPv6 címet adj meg másodlagos DNS szervernek.."
 
 msgid "A valid IPv6 address must be specified."
 msgstr "Érvényes IPv6  cím megadása szükséges."
@@ -371,19 +342,19 @@ msgid "AFP"
 msgstr "AFP (Apple MacOSX)"
 
 msgid "AFP Compatibility"
-msgstr ""
+msgstr "AFP kompatibilitás"
 
 msgid "AG"
 msgstr "AG"
 
 msgid "AIO Module"
-msgstr ""
+msgstr "AIO modul"
 
 msgid "AIO Read Size"
-msgstr ""
+msgstr "AIO olvasási méret"
 
 msgid "AIO Write Size"
-msgstr ""
+msgstr "AIO írási méret"
 
 msgid "ALL Interfaces"
 msgstr "Összes interfész"
@@ -415,9 +386,6 @@ msgstr "Hozzáférési korlátozások"
 msgid "Access Time (atime)"
 msgstr "Hozzáférési idő"
 
-msgid "Access mode"
-msgstr "Hozzáférési mód"
-
 msgid "Access the webGUI with the new IP address"
 msgstr "WebGUI-t az új IP címen lehet elérni."
 
@@ -445,9 +413,6 @@ msgstr "Aktív"
 
 msgid "Active Directory"
 msgstr "Címtárszolgáltatás (AD)"
-
-msgid "Active Directory List"
-msgstr "Aktív könyvtárak"
 
 msgid "Active Shares"
 msgstr "Aktív megosztások"
@@ -579,20 +544,16 @@ msgid "Add target"
 msgstr "Cél hozzáadása"
 
 msgid "Additional Group"
-msgstr ""
+msgstr "További csoport"
 
 msgid "Additional Network"
 msgstr "Kiegészítő hálózat"
 
+msgid "Additional Parameters"
+msgstr ""
+
 msgid "Additional Storage"
 msgstr "Kiegészítő tároló"
-
-msgid ""
-"Additional parameters to the hardware-specific part of the driver for second "
-"UPS."
-msgstr ""
-"Második szünetmentes illeszetőprogramjnak hardverfüggő részének további "
-"paraméterei."
 
 msgid "Additional parameters to the hardware-specific part of the driver."
 msgstr "További paraméterek az illesztőprogram hardver-specifikus részéhez."
@@ -604,7 +565,7 @@ msgid "Address of the remote hastd daemon. It must be a static IP address."
 msgstr "Remote hastd daemon címe. Statikus IP címnek kell lennie."
 
 msgid "Admin Password"
-msgstr ""
+msgstr "Rendszergazda jelszava"
 
 msgid "Administration password"
 msgstr "Rendszergazdai jelszó"
@@ -685,6 +646,9 @@ msgstr "Riasztási szint"
 msgid "All"
 msgstr "Minden"
 
+msgid "All Dirs"
+msgstr "Összes könyvtár"
+
 msgid "All data from the following statistics have been deleted:"
 msgstr "A következő statisztikák összes adatát sikeresen törölted:"
 
@@ -697,9 +661,6 @@ msgstr ""
 
 msgid "All data will be lost when you activate this option!"
 msgstr "Az opció aktiválásakor az összes adat el fog veszni!"
-
-msgid "All dirs"
-msgstr "Minden könyvtár"
 
 #, php-format
 msgid "All dirs requires mounted path, but Path %s is not mounted."
@@ -720,14 +681,14 @@ msgstr ""
 msgid "All software raid disks are imported."
 msgstr "Összes szoftveres raid lemez importálva."
 
-msgid "All users will have the root privilege."
-msgstr "Az összes felhasználónak root privilégiuma lesz."
-
 msgid "Alloc"
 msgstr "Foglalt"
 
 msgid "Allow"
 msgstr "Engedélyez"
+
+msgid "Allow New Files"
+msgstr "Új fájlok engedélyezése"
 
 msgid "Allow TLS connections only."
 msgstr "Csak TLS kapcsolat engedélyezése."
@@ -743,9 +704,6 @@ msgstr ""
 
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "Engedélyezés a klienseknek a le- és feltöltések folytatására"
-
-msgid "Allow new files"
-msgstr "Új állományok engedélyezése."
 
 msgid "Allow new files to be created."
 msgstr "Új állományok létrehozásának engedélyezése."
@@ -794,13 +752,10 @@ msgid "AltRoot"
 msgstr "AltRoot"
 
 msgid "Alternate Data Streams"
-msgstr ""
+msgstr "Alternatív adatfolyamok"
 
-msgid "Alternate TCP port. Default is 22"
-msgstr "Alternatív TCP port. Az alapértelmezett 22"
-
-msgid "Alternate TCP port. Default is 873"
-msgstr "Alternatív TCP port. Az alapértelmezett 873."
+msgid "Alternate TCP port. (Default is 873)."
+msgstr "Alternatív TCP port (alapértelmezetten 873)."
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr "Alternatív konfigurációs mappa (általában üresen hagyandó)."
@@ -811,8 +766,8 @@ msgstr "Mindig"
 msgid "Always On"
 msgstr "Mindig bekapcsolva"
 
-msgid "Always scan"
-msgstr "Mindig keres"
+msgid "Always Scan"
+msgstr ""
 
 msgid "Ambient Conditions From External Probe Equipment"
 msgstr "A külső érzékelőkből érkező környezeti jellemzők"
@@ -863,10 +818,10 @@ msgid "An interface with the specified description already exists."
 msgstr "Ilyen leírású interfész már létezik."
 
 msgid "Anonymous Bind"
-msgstr ""
+msgstr "Névtelen kötés"
 
 msgid "Anonymous Users"
-msgstr ""
+msgstr "Névtelen felhasználók"
 
 msgid "Anonymous access has been deprecated starting from SMB2."
 msgstr "Anonim hozzáférés SMB2-tól kezdve elavult."
@@ -937,7 +892,7 @@ msgid "Are you sure you want to shutdown the server?"
 msgstr "Biztos, hogy kikapcsolod a szervert?"
 
 msgid "Asynchronous I/O"
-msgstr ""
+msgstr "Aszinkron I/O"
 
 msgid ""
 "At the highest level, a target is what is presented to the initiator, and is "
@@ -986,31 +941,42 @@ msgstr "Hitelesítő csoport beállításai"
 msgid "Auth Groups"
 msgstr "Hitelesítő csoportok"
 
+msgid ""
+"Auth Groups contains authorised users and secrets for additional security."
+msgstr ""
+
 msgid "Auth Method"
 msgstr "Auth eljárás"
 
 msgid "Authenticate Path & Realm"
-msgstr ""
+msgstr "Hitelesítő útvonal és terület"
 
 msgid "Authenticate URL"
 msgstr "Autentikációs URL"
 
 msgid "Authenticated Users"
-msgstr ""
+msgstr "Hitelesített felhasználók"
 
 msgid ""
 "Authenticated user download bandwith in KB/s. An empty field means infinity."
 msgstr ""
+"Hitelesített felhasználó letöltés sávszélessége KB/s-ben. Üres mező "
+"végtelent jelent."
 
 msgid ""
 "Authenticated user upload bandwith in KB/s. An empty field means infinity."
 msgstr ""
+"Hitelesített felhasználó feltöltés sávszélessége KB/s-ben. Üres mező "
+"végtelent jelent."
 
 msgid "Authentication"
 msgstr "Hitelesítés"
 
 msgid "Authentication Method"
 msgstr "Hitelesítési eljárás"
+
+msgid "Authorised Network"
+msgstr "Hitelesített hálózat"
 
 msgid "Authorised network"
 msgstr "Hitelesített hálózat"
@@ -1045,17 +1011,8 @@ msgstr "Grafikonok automatikus skálázása"
 msgid "Autoselect"
 msgstr "Automatikus választás"
 
-msgid "Auxiliary Parameter"
-msgstr ""
-
-msgid "Auxiliary Parameters"
-msgstr "Auxiliary parameterek"
-
 msgid "Auxiliary device firmware"
-msgstr "Auxiliary eszköz firmware"
-
-msgid "Auxiliary parameters"
-msgstr "Kiegészítő paraméterek"
+msgstr "Kiegészítő eszköz firmware"
 
 msgid "Avail"
 msgstr "Elérhető"
@@ -1110,7 +1067,7 @@ msgid "Ban List Rule Settings"
 msgstr "Tiltólista-szabály beállításai"
 
 msgid "Banner"
-msgstr "Fejléc"
+msgstr "Szalaghirdetés"
 
 msgid "Base DN"
 msgstr "Alap DN"
@@ -1175,6 +1132,10 @@ msgstr "Előtte - Átvitel megkezdése előtt töröljük a fájlokat."
 msgid "Before - File-deletions will be performed before the transfer starts."
 msgstr "Előtte - Átvitel megkezdése előtt töröljük a fájlokat."
 
+msgid ""
+"Before a Unison Client can start to work, you need to perform the following:"
+msgstr ""
+
 msgid "Best available"
 msgstr "Az elérhető legjobb"
 
@@ -1182,7 +1143,7 @@ msgid "Bind DN"
 msgstr "Kapcsolódó DN"
 
 msgid "Bind Password"
-msgstr ""
+msgstr "Kötés jelszava"
 
 msgid "BitTorrent"
 msgstr "BitTorrent"
@@ -1299,10 +1260,10 @@ msgid "CIFS/SMB"
 msgstr "CIFS/SMB"
 
 msgid "CIFS/SMB Information"
-msgstr ""
+msgstr "CIFS/SMB informaáció"
 
-msgid "CIFS/SMB disabled"
-msgstr "CIFS/SMB kikapcsolva"
+msgid "CIFS/SMB is disabled."
+msgstr ""
 
 msgid "CIFS/SMB is enabled."
 msgstr "CIFS/SMB engedélyezve van."
@@ -1510,10 +1471,10 @@ msgid "Client"
 msgstr "Kliens"
 
 msgid "Client Max. Protocol"
-msgstr ""
+msgstr "Kliens maximális protokoll"
 
 msgid "Client Min. Protocol"
-msgstr ""
+msgstr "Kliens minimális protokoll"
 
 msgid "Clone"
 msgstr "Klón"
@@ -1531,6 +1492,8 @@ msgid ""
 "Comma-separated list of group names that are permitted to login to the FTP "
 "server. (empty = ftp group)."
 msgstr ""
+"Csoportnevek vesszővel elválasztott felsorolása, akik számára a "
+"bejelentkezés az FTP szerverre engedélyezett (üres = ftp csoport)."
 
 msgid "Command"
 msgstr "Parancs"
@@ -1579,8 +1542,8 @@ msgstr "Common Internet File System"
 msgid "Community"
 msgstr "Közösség"
 
-msgid "Compilations directories"
-msgstr "Összeválogatott könyvtárak"
+msgid "Compilations Directories"
+msgstr ""
 
 msgid "Compiled"
 msgstr "Lefordítva"
@@ -1610,13 +1573,13 @@ msgid "Configuration"
 msgstr "Beállítások"
 
 msgid "Configuration Directory"
-msgstr ""
+msgstr "Beállítások könyvtára"
 
 msgid "Configuring"
 msgstr "Beállítás"
 
 msgid "Confirm New Password"
-msgstr ""
+msgstr "Új jelszó megerõsítése"
 
 msgid "Confirmation"
 msgstr "Megerősítés"
@@ -1902,7 +1865,7 @@ msgid "Create HVM Guest"
 msgstr "HVM vendég létrehozása"
 
 msgid "Create Mask"
-msgstr ""
+msgstr "Maszk létrehozása"
 
 msgid "Create PV Guest"
 msgstr "PV vendég létrehozása"
@@ -1977,7 +1940,7 @@ msgstr ""
 "használd."
 
 msgid "Current password is incorrectly entered."
-msgstr ""
+msgstr "A jelenlegi jelszót hibásan adtad meg."
 
 msgid "Current state of drive operation based upon the Life Curve."
 msgstr "Az életgörbén alapuló meghajtóművelet pillanatnyi állapota."
@@ -2031,10 +1994,10 @@ msgid "DNS"
 msgstr "DNS"
 
 msgid "DNS Domain"
-msgstr ""
+msgstr "DNS domain"
 
 msgid "DNS Forwarder"
-msgstr ""
+msgstr "DNS továbbító"
 
 msgid "DNS server is empty."
 msgstr "DNS szerver üres."
@@ -2153,7 +2116,7 @@ msgid "Default Device Settings"
 msgstr "Alapértelmezett eszközbeállítások"
 
 msgid "Default Root"
-msgstr ""
+msgstr "Alapértelmezett gyökér"
 
 msgid "Default user name is 'admin'."
 msgstr "Az 'admin' az alapértelmezett felhasználónév."
@@ -2363,9 +2326,6 @@ msgstr "Célhálózat ehhez az útvonalhoz."
 msgid "Destination port"
 msgstr "Cél port"
 
-msgid "Destination share"
-msgstr "Cél megosztás"
-
 msgid "Destroy a pool"
 msgstr "Tároló megsemmisítése"
 
@@ -2390,7 +2350,7 @@ msgid "Detected"
 msgstr "Észlelt"
 
 msgid "Detected Disks"
-msgstr ""
+msgstr "Észlelt lemezek"
 
 msgid "Detected Language:"
 msgstr "Érzékelt nyelv:"
@@ -2493,7 +2453,7 @@ msgid "Directory %s doesn't exist!"
 msgstr "%s könyvtár nem létezik!"
 
 msgid "Directory Mask"
-msgstr ""
+msgstr "Könyvtármaszk"
 
 msgid "Directory for incomplete files. An empty field means disable."
 msgstr "Befejezetlen fájlok könyvtára. Az üres mező tiltást jelent."
@@ -2600,7 +2560,7 @@ msgstr ""
 "miatt). Mértékegysége ismeretlen."
 
 msgid "Distributed Hash Table"
-msgstr ""
+msgstr "Elosztott hash tábla"
 
 msgid "Do not activate this option if you want to add an existing RAID."
 msgstr ""
@@ -2848,8 +2808,8 @@ msgstr "Biztos, hogy átkapcsolod a kiválasztott feladatokat?"
 msgid "Do you want to toggle selected options?"
 msgstr "Biztos, hogy átkapcsolod a kiválasztott beállításokat?"
 
-msgid "Document root"
-msgstr "Dokumentum főkönyvtár"
+msgid "Document Root"
+msgstr ""
 
 msgid "Document root of the webserver. Home of the web page files."
 msgstr ""
@@ -2861,17 +2821,17 @@ msgstr "DomID"
 msgid "Domain"
 msgstr "Tartomány"
 
+msgid "Domain Name"
+msgstr ""
+
 msgid "Domain controller name"
 msgstr "Tartományvezérlő neve"
 
 msgid "Domain is missing 2nd level name."
-msgstr ""
-
-msgid "Domain name"
-msgstr "Tartománynév"
+msgstr "Domainhoz hiányzik a másodlagos név."
 
 msgid "Domain name (DNS/Realm-Name)"
-msgstr "Tartomány név (DNS/Realm-Name)"
+msgstr "Tartomány név (DNS/Területnév)"
 
 msgid "Domain name (NetBIOS-Name)"
 msgstr "Tartománynév (NetBIOS-Név)"
@@ -2892,19 +2852,19 @@ msgid "Done."
 msgstr "Kész."
 
 msgid "Dos Charset"
-msgstr ""
+msgstr "Dos karaktergyűjtemény"
 
 msgid "Download"
 msgstr "Letöltés"
 
 msgid "Download Bandwidth"
-msgstr ""
+msgstr "Letöltési sávszélesség"
 
 msgid "Download Configuration"
 msgstr "Konfiguráció letöltése"
 
 msgid "Download Directory"
-msgstr ""
+msgstr "Letöltések könyvtára"
 
 msgid "Download directory"
 msgstr "Letöltési mappa"
@@ -2922,10 +2882,10 @@ msgid "Driver"
 msgstr "Illesztőprogram"
 
 msgid "Driver List"
-msgstr ""
+msgstr "Meghajtólista"
 
 msgid "Driver Parameter"
-msgstr ""
+msgstr "Meghajtó paramétere"
 
 msgid "Driver used"
 msgstr "Használatban lévő illesztőprogram"
@@ -2959,7 +2919,7 @@ msgid "Dynamic IP (DHCP) can not be used for HAST resources."
 msgstr "Dinamikus IP (DHCP) nem használható HAST erőforrásokhoz."
 
 msgid "EA Support"
-msgstr ""
+msgstr "EA támogatás"
 
 msgid "EFI/GPT partition can be use with UFS only."
 msgstr "EFI/GPT partíció csak UFS-sel használható."
@@ -3092,19 +3052,19 @@ msgid "Enable"
 msgstr "Engedélyezés"
 
 msgid "Enable 'Asynchronous I/O (AIO).' switch."
-msgstr ""
+msgstr "'Aszinkron I/O (AIO).' kapcsoló engedélyezése."
 
 msgid "Enable 'Large read/write' switch."
-msgstr "'Nagy írás/olvasás' bekapcsolásának engedélyezése"
+msgstr "'Óriás írás/olvasás' bekapcsolásának engedélyezése"
 
 msgid "Enable ACL inheritance."
-msgstr ""
+msgstr "ACL örökítés bekapcsolása"
 
 msgid "Enable Advanced Format (4KB Sector Size)."
 msgstr "Fejlett formázás bekapcsolása (4KB-os szektorméret)"
 
 msgid "Enable Asynchronous I/O. (AIO)."
-msgstr ""
+msgstr "Aszinkron I/O (AIO) bekapcsolása"
 
 msgid "Enable Challenge-Response Authentication"
 msgstr "Challenge-Response hitelesítés engedélyezése"
@@ -3157,7 +3117,7 @@ msgid "Enable Time Machine support"
 msgstr "Időkiszolgáló támogatásának engedélyezése"
 
 msgid "Enable ZFS ACL."
-msgstr ""
+msgstr "ZFS ACL bekapcsolása"
 
 msgid "Enable Zeroconf/Bonjour to advertise services of this device."
 msgstr "Az eszköz szolgáltatásait közzétevő Zeroconf/Bonjour engedélyezése."
@@ -3226,7 +3186,7 @@ msgid "Enable encryption."
 msgstr "Titkosítás engedélyezése."
 
 msgid "Enable extended attribute support."
-msgstr ""
+msgstr "Kiterjesztett attribútumtámogatás bekapcsolása."
 
 msgid "Enable extended attributes for this file system."
 msgstr "Kiterjesztett attribútum-támogatás engedélyezése ezen fájlrendszerre"
@@ -3247,13 +3207,13 @@ msgid "Enable keyboard-interactive authentication."
 msgstr "Billentyű-interaktív authentikáció hitelesítés"
 
 msgid "Enable large read/write."
-msgstr ""
+msgstr "Óriás írás/olvasás bekapcsolása."
 
 msgid "Enable local user authentication."
 msgstr "Helyi felhasználó hitelesítés engedélyezése."
 
 msgid "Enable mapping DOS attributes."
-msgstr ""
+msgstr "DOS attribútum leképezésének bekapcsolása."
 
 msgid "Enable module listing."
 msgstr "Modulok listázásának engedélyezése."
@@ -3268,7 +3228,7 @@ msgid "Enable peer exchange (PEX)."
 msgstr "Peer csere engedélyezése (PEX)."
 
 msgid "Enable permission inheritance."
-msgstr ""
+msgstr "Jogosultságok öröklődésének engedélyezése."
 
 msgid "Enable port forwarding via NAT-PMP or UPnP."
 msgstr "Port továbbítás engedélyezése NAT-PMP vagy UPnP alatt."
@@ -3277,7 +3237,7 @@ msgid "Enable proxy authentication."
 msgstr "Proxy hitelesítés engedélyezése"
 
 msgid "Enable recycle bin."
-msgstr ""
+msgstr "Lomtár engedélyezése."
 
 msgid "Enable remote monitoring of the local connected UPS."
 msgstr "Helyi UPS távoli megfigyelésének engedélyezése."
@@ -3299,11 +3259,14 @@ msgstr "Második helyi kapcsolatú szünetmentes engedélyezése."
 msgid "Enable serial console."
 msgstr "Speciális konzol engedélyezése."
 
-msgid "Enable shadow copy."
+msgid "Enable service SSH when disabled"
 msgstr ""
 
+msgid "Enable shadow copy."
+msgstr "Árnyékmásolat engedélyezése."
+
 msgid "Enable store DOS attributes."
-msgstr ""
+msgstr "DOS attribútumok tárolásának engedélyezése."
 
 msgid "Enable the ident protocol (RFC1413)."
 msgstr "Ident protocol (RFC1413) engedélyezése"
@@ -3374,7 +3337,7 @@ msgid "English"
 msgstr "Angol"
 
 msgid "Enhanced compatibility with Netatalk AFP server."
-msgstr ""
+msgstr "Megnövelt kompatibilitás Netatalk AFP szerverrel."
 
 msgid "Enter Command"
 msgstr "Parancs megadása"
@@ -3391,9 +3354,25 @@ msgstr ""
 
 #, php-format
 msgid ""
-"Enter a custom port number if you want to override the default port. Default "
-"port is %s."
+"Enter a custom port number if you want to override the default port. "
+"(Default is %s)."
 msgstr ""
+"Az alapértelmezettet port felülírásához adj meg egy számot (alapértelmezett "
+"= %s)."
+
+msgid ""
+"Enter a custom port number if you want to override the default port. "
+"(Default is 22)."
+msgstr ""
+"Az alapértelmezettet port felülírásához adj meg egy számot (alapértelmezett "
+"= 22)."
+
+msgid ""
+"Enter a custom port number if you want to override the default port. "
+"(Default is 69). "
+msgstr ""
+"Az alapértelmezettet port felülírásához adj meg egy számot (alapértelmezett "
+"= 69). "
 
 msgid "Enter a description"
 msgstr "Adj meg egy leírást"
@@ -3445,6 +3424,11 @@ msgstr ""
 "lennie."
 
 msgid ""
+"Enter the path to the database directory. The config files will be created "
+"under the specified directory."
+msgstr ""
+
+msgid ""
 "Enter the path to the home directory of VirtualBox. VM config and HDD image "
 "will be created under the specified directory."
 msgstr ""
@@ -3457,13 +3441,6 @@ msgid ""
 msgstr ""
 "Írd be a felhasználó saját mappájának útvonalát. Az alapértelmezett útvonal "
 "/mnt használatához hagyd üresen."
-
-msgid ""
-"Enter the path to the home directory. The config will be created under the "
-"specified directory."
-msgstr ""
-"Add meg a saját könyvtár útvonalát. A konfigurációs állomány a megadott "
-"könyvtárba kerül."
 
 msgid ""
 "Enter the path to the home directory. This directory will store the "
@@ -3578,7 +3555,7 @@ msgstr ""
 "használni."
 
 msgid "Extra Options"
-msgstr ""
+msgstr "További lehetőségek"
 
 msgid "Extra options"
 msgstr "Extra beállítások"
@@ -3707,7 +3684,7 @@ msgid "File Manager"
 msgstr "Fájlkezelő"
 
 msgid "File Mask"
-msgstr ""
+msgstr "Fájlmaszk"
 
 msgid "File Path"
 msgstr "Elérési út"
@@ -3804,8 +3781,8 @@ msgstr "Törlés kikényszerítése"
 msgid "Force use"
 msgstr "Mindenképpen használ"
 
-msgid "Forced update period"
-msgstr "Kényszerített frissítési időszak"
+msgid "Forced Update Period"
+msgstr ""
 
 msgid ""
 "Forces use of vdevs, even if they appear in use or specify different size. "
@@ -3942,12 +3919,15 @@ msgid "Greek"
 msgstr "Görög"
 
 msgid "Greeting banner displayed to client when firts connection comes in."
-msgstr ""
+msgstr "Az üdvözlő szalaghirdetés a kliens első kapcsolódásakor jelenik meg."
 
 msgid "Group"
 msgstr "Csoport"
 
 msgid "Group Allow"
+msgstr "Engedélyező csoport"
+
+msgid "Group Compilations"
 msgstr ""
 
 msgid "Group ID"
@@ -3957,10 +3937,7 @@ msgid "Group Settings"
 msgstr "Csoportbeállítások"
 
 msgid "Group Suffix"
-msgstr ""
-
-msgid "Group compilations"
-msgstr "Válogatások csoportosítása"
+msgstr "Csoport utótag"
 
 msgid "Group is locked"
 msgstr "Csoport zárolva"
@@ -3984,7 +3961,7 @@ msgid "Guest"
 msgstr "Vendég"
 
 msgid "Guest Account"
-msgstr ""
+msgstr "Vendég felhasználói fiók"
 
 msgid "HAST"
 msgstr "HAST"
@@ -4078,7 +4055,7 @@ msgid "Hide Default Groups"
 msgstr "Alapértelmezett csoportok elrejtése"
 
 msgid "Hide Dot Files"
-msgstr ""
+msgstr "Pontfájlok elrejtése"
 
 msgid "High voltage boosting transfer point"
 msgstr "Nagyfeszültségű fellendítő átviteli pont"
@@ -4123,16 +4100,10 @@ msgid "Hosts Allow"
 msgstr "Engedélyezett kiszolgálók"
 
 msgid "Hosts Deny"
-msgstr ""
+msgstr "Tiltott kiszolgálók"
 
 msgid "Hosts Setup"
 msgstr "Kiszolgálók beállítása"
-
-msgid "Hosts allow"
-msgstr "Állomások engedélyezése"
-
-msgid "Hosts deny"
-msgstr "Állomások tiltása"
 
 msgid "Hour"
 msgstr "Óra"
@@ -4246,7 +4217,7 @@ msgid "ISP DNS Servers"
 msgstr "Internetszolgáltató DNS szerverei"
 
 msgid "IdentLookups"
-msgstr ""
+msgstr "IdentLookups"
 
 msgid "Identifier"
 msgstr "Azonosító"
@@ -4379,7 +4350,7 @@ msgid "Incoming Line/Power Information"
 msgstr "Bemeneti áram/teljesítmény információ"
 
 msgid "Incomplete Directory"
-msgstr ""
+msgstr "Nem teljes könyvtár"
 
 msgid ""
 "Indicates the approximate SSD life left, in terms of program/erase cycles or "
@@ -4410,7 +4381,7 @@ msgid "Inherit ACL"
 msgstr "ACL öröklődése"
 
 msgid "Inherit Permissions"
-msgstr ""
+msgstr "Jogosultságok örökítése"
 
 msgid "Inhibit some of the syslog diagnostics for bad lines in /etc/exports."
 msgstr ""
@@ -4443,6 +4414,11 @@ msgstr "Kezdeményező csoport beállításai"
 
 msgid "Initiator Groups"
 msgstr "Kezdeményező csoportok"
+
+msgid ""
+"Initiator Groups contains authorised initiator names and networks to access "
+"the target."
+msgstr ""
 
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
@@ -4596,6 +4572,8 @@ msgid ""
 "It is impossible to enable 'Anonymous Users' and 'Authenticated Users' both "
 "at the same time."
 msgstr ""
+"'Névtelen felhasználó' és 'Hitelesített felhasználók' egyidejű engedélyezése "
+"nem lehetséges."
 
 msgid ""
 "It is not recommanded to import non healthy pools nor virtual devices that "
@@ -4712,7 +4690,7 @@ msgid "LAN Only"
 msgstr "Csak LAN"
 
 msgid "LAN interface is not configured."
-msgstr ""
+msgstr "LAN interfész nincs beállítva."
 
 msgid "LAN net"
 msgstr "Hálózat"
@@ -4745,7 +4723,7 @@ msgid "Language to use on front panel"
 msgstr "Első panelen használt nyelv"
 
 msgid "Large Read/Write"
-msgstr ""
+msgstr "Óriás olvasás/írás"
 
 msgid "Last Configuration Change"
 msgstr "Beállítások utolsó módosítása"
@@ -4895,12 +4873,6 @@ msgstr "Helyi megosztás (cél)"
 msgid "Local User"
 msgstr "Helyi felhasználó"
 
-msgid "Local share (destination)"
-msgstr "Helyi megosztás (célállomás)"
-
-msgid "Local shares to be synchronized"
-msgstr "Szinkronizálandó helyi megosztások"
-
 msgid "Location"
 msgstr "Hely"
 
@@ -4921,9 +4893,11 @@ msgid "Location where the content database file will be stored."
 msgstr "Az adatbázis tartalom fájl helye."
 
 #, php-format
-msgid ""
-"Location where the working files will be stored, e.g. %s/backup/.unison"
-msgstr "Munka fájlok helye, pl. %s/backup/.unison"
+msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
+msgstr ""
+
+msgid "Locked Files"
+msgstr ""
 
 msgid "Log"
 msgstr "Napló"
@@ -4949,8 +4923,8 @@ msgstr "Naplózd készítése a syslog-ba."
 msgid "Logarithmic Scaling"
 msgstr "Logaritmikus skálázás"
 
-msgid "Logical Block Length"
-msgstr "Logikai Blokk Hossza"
+msgid "Logical Block"
+msgstr ""
 
 #, php-format
 msgid "Logical Unit Controller Authorised network (%s by default)"
@@ -5039,7 +5013,7 @@ msgid "MTU"
 msgstr "MTU"
 
 msgid "Machine Suffix"
-msgstr ""
+msgstr "Gép utótag"
 
 msgid "Maintenance"
 msgstr "Karbantartás"
@@ -5065,17 +5039,22 @@ msgstr "Gyártó"
 msgid "Manufacturing date"
 msgstr "Gyártás dátuma"
 
-msgid "Map all users to root"
-msgstr "Összes felhasználó root-ként"
+msgid "Map all users to root, all users will have root privileges."
+msgstr ""
+"Összes felhasználó leképzése root-ként, így az összes felhasználó root "
+"jogosultságokkal fog rendelkezni."
 
 msgid "Map to Guest"
-msgstr ""
+msgstr "Leképezés vendégként"
 
-msgid "Map to user"
-msgstr "Felhasználóként viselkedés"
+msgid "Map to Root"
+msgstr "Leképezés root-ként"
+
+msgid "Map to User"
+msgstr "Leképezés felhasználóként"
 
 msgid "Mapping DOS Attributes"
-msgstr ""
+msgstr "DOS attribútumok leképezése"
 
 msgid "Mar"
 msgstr "Márc"
@@ -5091,37 +5070,37 @@ msgstr ""
 "meghatározott."
 
 msgid "Masquerade Address"
-msgstr ""
+msgstr "Álarc cím"
 
 msgid "Max Entries"
 msgstr "Maximális bejegyzésszám"
 
+msgid "Max. Block Size"
+msgstr "Maximális blokkméret"
+
 msgid "Max. Clients"
-msgstr ""
+msgstr "Kliensek maximális száma"
+
+msgid "Max. Connections"
+msgstr "Kapcsolatok maximális száma"
 
 msgid "Max. Connections Per Host"
-msgstr ""
+msgstr "Kliensek maximális száma kiszolgálonként"
 
 msgid "Max. Login Attempts"
-msgstr ""
+msgstr "Bejelentkezési próbálkozások maximális száma"
 
 msgid "Max. Passive Port"
+msgstr "Legnagyobb passzív port"
+
+msgid "Max. Sessions"
 msgstr ""
 
 msgid "Max. TTL"
 msgstr "Maximális TTL"
 
-msgid "Max. block size"
-msgstr "Maximális blokk méret"
-
-msgid "Max. connections"
-msgstr "Max. kapcsolatok"
-
 msgid "Max. pre-send R2T"
 msgstr "Max. előküldött R2T"
-
-msgid "Max. sessions"
-msgstr "Max. munkamenetek"
 
 msgid ""
 "Max. time-to-live (max. number of hops) used in outgoing probe packets."
@@ -5143,9 +5122,6 @@ msgstr "Maximum (Legjobb teljesítmény)"
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr "Maximális teljesítmény, maximális zajszint kimenet"
 
-msgid "Maximum connections"
-msgstr "Maximális kapcsolatok száma"
-
 msgid "Maximum frequency"
 msgstr "Maximum frekvencia"
 
@@ -5161,6 +5137,7 @@ msgstr "Max. jelszó próbálkozások ledobás előtt"
 msgid ""
 "Maximum number of connections allowed per IP address. (0 = unlimited)."
 msgstr ""
+"Maximálisan megengedett kapcsolatok száma IP címenként (0 = korlátlan)."
 
 #, php-format
 msgid "Maximum number of connections in each session (%d by default)."
@@ -5183,7 +5160,7 @@ msgstr ""
 "Egyidejű kapcsolatok maximális száma. Alapértelmezetten 0 (nincs korlát)"
 
 msgid "Maximum number of users that can connect to the server."
-msgstr ""
+msgstr "Maximálisan hány felhasználó csatlakozhat a szerverhez."
 
 msgid "Maximum relative humidity seen (percent)"
 msgstr "Valaha mért maximális relatív páratartalom (százalék)"
@@ -5237,7 +5214,7 @@ msgid "MibII"
 msgstr "MibII"
 
 msgid "Min. Passive Port"
-msgstr ""
+msgstr "Legkisebb passzív port"
 
 msgid "MiniDLNA"
 msgstr "MiniDLNA"
@@ -5429,7 +5406,7 @@ msgid "NT1 (CIFS)"
 msgstr "NT1 (CIFS)"
 
 msgid "NTFS ACLs"
-msgstr ""
+msgstr "NTFS ACL-ek"
 
 msgid "NTP Time Server"
 msgstr "NTP időszerver"
@@ -5471,13 +5448,16 @@ msgid "Nested HVM"
 msgstr "Egymásba ágyazott HVM"
 
 msgid "NetBIOS Domain"
-msgstr ""
+msgstr "NetBIOS Domain"
 
 msgid "NetBIOS Name"
-msgstr ""
+msgstr "NetBIOS név"
 
 msgid "Netgraph"
 msgstr "Netgraph"
+
+msgid "Netstat"
+msgstr "Netstat"
 
 msgid "Network"
 msgstr "Hálózat"
@@ -5531,6 +5511,8 @@ msgid ""
 "New Password does not match the confirmation password. Please ensure both "
 "passwords are the same."
 msgstr ""
+"Az új és a megerősítő jelszó nem egyezik. Ellenőrizd, hogy a kettő ugyanaz "
+"legyen."
 
 msgid "New password"
 msgstr "Új jelszó"
@@ -5542,7 +5524,7 @@ msgid "No"
 msgstr "Nem"
 
 msgid "No DNS server have been configured."
-msgstr ""
+msgstr "Nincs beállítva DNS szerver."
 
 msgid "No DNS setting found."
 msgstr "Nem találtam DNS beállítást."
@@ -5759,7 +5741,7 @@ msgid "Now"
 msgstr "Most"
 
 msgid "Null Passwords"
-msgstr ""
+msgstr "Üres jelszavak"
 
 msgid "Number of bad battery packs"
 msgstr "Rossz akkumulátor-csomagok száma"
@@ -5784,9 +5766,6 @@ msgstr ""
 "A meghajtón befejezett fizikai törlési ciklusok száma a tervezett maximális "
 "fizikai törlési ciklusok számához viszonyítva (amit a lemeznek bírnia kell "
 "terv szerint) százalékban."
-
-msgid "Number of servers"
-msgstr "Kiszolgálók száma"
 
 msgid "Numeric identifier of the group."
 msgstr "Csoport numerikus azonosítója."
@@ -5982,7 +5961,7 @@ msgid "Partitions"
 msgstr "Partíciók"
 
 msgid "Passive Port"
-msgstr ""
+msgstr "Passzív port"
 
 msgid ""
 "Passive ports restricts the range of ports from which the server will select "
@@ -6024,22 +6003,23 @@ msgstr "Jelszó"
 msgid "Password (confirmed)"
 msgstr "Jelszó (megerősítve)"
 
+msgid "Password Authentication"
+msgstr "Jelszóhitelesítés"
+
 msgid "Password Encryption"
-msgstr ""
+msgstr "Jelszótitkosítás"
 
 msgid "Password Server"
-msgstr ""
+msgstr "Jelszószerver"
 
 msgid "Password Suffix"
-msgstr ""
-
-msgid "Password authentication"
-msgstr "Jelszó hitelesítés"
+msgstr "Jelszó utótag"
 
 msgid ""
 "Password does not match the confirmation password. Please ensure both "
 "passwords are the same."
 msgstr ""
+"A jelszó és annak megerősítése nem egyezik. Ellenőrizd, hogy azonosak-e."
 
 msgid "Password don't match."
 msgstr "Jelszó nem egyezik."
@@ -6070,6 +6050,9 @@ msgstr "Útvonal"
 msgid "Path of the URL relative to document root."
 msgstr "Az URL relatív útvonala a gyökérdokumentumhoz viszonyítva."
 
+msgid "Path to be shared to be synchronized."
+msgstr "Szinkronizációhoz megosztott útvonal."
+
 msgid "Path to be shared."
 msgstr "Megosztandó útvonal."
 
@@ -6078,10 +6061,10 @@ msgid "Path to the local device. (e.g. %s)"
 msgstr "A helyi eszközhöz elérési útja (pl. %s)"
 
 msgid "Peer Exchange"
-msgstr ""
+msgstr "Peer csere"
 
 msgid "Peer Port"
-msgstr ""
+msgstr "Peer portja"
 
 msgid "Peer Secret"
 msgstr "Peer titok"
@@ -6099,11 +6082,11 @@ msgstr "Teljesítmény beállítások"
 msgid "Permanent samba data path (e.g. %s)."
 msgstr "Állandó Samba-adatútvonal (pl. %s)."
 
-msgid "Permit Root Login"
+msgid "Permission"
 msgstr ""
 
-msgid "Permit root login"
-msgstr "root bejelentkezés engedélyezése"
+msgid "Permit Root Login"
+msgstr "Root bejelentkezés engedélyezése"
 
 msgid "Permit to do SSH Tunneling."
 msgstr "SSH csatorna engedélyezése"
@@ -6246,7 +6229,7 @@ msgid "Port %ld is already used by another service."
 msgstr "A %ld portot már egy másik szolgáltatás használja."
 
 msgid "Port Forwarding"
-msgstr ""
+msgstr "Portátirányítás"
 
 #, php-format
 msgid "Port number must be in the range between %d and %d."
@@ -6279,6 +6262,11 @@ msgstr "Portal csoport beállításai"
 
 msgid "Portal Groups"
 msgstr "Portálcsoportok"
+
+msgid ""
+"Portal Groups contains IP addresses and listening on TCP ports to connect "
+"the target from the initiator."
+msgstr ""
 
 msgid "Portals"
 msgstr "Portálok"
@@ -6328,14 +6316,17 @@ msgstr "Előtag"
 msgid "Preformatted file system"
 msgstr "Előreformázott fájlrendszer"
 
-msgid "Preserve extended attributes"
-msgstr "Kiterjesztett attribútumok megtartása"
+msgid "Preserve Extended Attributes"
+msgstr "Kiterjesztett attribútumok megőrzése"
+
+msgid "Preserve Extended attributes"
+msgstr "Kiterjesztett attribútumok megőrzése"
+
+msgid "Preserve Permissions"
+msgstr "Jogosultságok megőrzése"
 
 msgid "Preserve modification times."
 msgstr "Módosítások időpontjának megőrzése."
-
-msgid "Preserve permissions"
-msgstr "A jogosultságok megőrzése"
 
 msgid "Prevent deep discharge of battery"
 msgstr "Akkumulátor mély kisülésének megakadályozása."
@@ -6541,7 +6532,7 @@ msgid "Read"
 msgstr "Olvasás"
 
 msgid "Read Only"
-msgstr ""
+msgstr "Csak olvasható"
 
 msgid "Read Only (ro)"
 msgstr "Csak olvasható (ro)"
@@ -6600,7 +6591,7 @@ msgid "Reboot"
 msgstr "Újraindítás"
 
 msgid "Receive Buffer"
-msgstr ""
+msgstr "Fogadó puffer"
 
 msgid "Record is locked"
 msgstr "Rekord zárolt"
@@ -6612,7 +6603,7 @@ msgid "Recursive"
 msgstr "Rekurzív"
 
 msgid "Recycle Bin"
-msgstr ""
+msgstr "Lomtár"
 
 msgid "Refresh"
 msgstr "Frissítés"
@@ -6641,6 +6632,9 @@ msgstr "Távoli cím"
 msgid "Remote Module (Source)"
 msgstr "Távoli modul (forrás)"
 
+msgid "Remote Rsync Daemon"
+msgstr ""
+
 msgid "Remote Rsync Server"
 msgstr "Távoli Rsync Kiszolgáló"
 
@@ -6649,9 +6643,6 @@ msgstr "Távoli rendszernapló-üzenetek"
 
 msgid "Remote Syslog Server"
 msgstr "Távoli rendszernapló-szerver"
-
-msgid "Remote module (source)"
-msgstr "Távoli modul (forrás)"
 
 msgid "Remote module name"
 msgstr "Távoli modul neve"
@@ -6670,9 +6661,6 @@ msgid ""
 msgstr ""
 "Távoli felügyeleti felhasználónév. Ugyanannak kell lennie a mester és a "
 "szolga rendszeren."
-
-msgid "Remote rsync daemon"
-msgstr "Távoli rsync démon"
 
 msgid "Removable"
 msgstr "Eltávolítható"
@@ -6734,6 +6722,9 @@ msgstr "Újrakeresés"
 msgid "Rescan Disks"
 msgstr "Lemezek újrakeresése"
 
+msgid "Rescan Interval"
+msgstr ""
+
 msgid "Rescan interval"
 msgstr "Újrakeresési időköz"
 
@@ -6764,7 +6755,7 @@ msgid "Resource"
 msgstr "Erőforrás"
 
 msgid "Resource Name"
-msgstr ""
+msgstr "Erőforrás neve"
 
 msgid "Resource name"
 msgstr "Erőforrás neve"
@@ -6804,8 +6795,8 @@ msgstr "Vissza a parancssorhoz."
 msgid "Reverse DNS lookup"
 msgstr "Fordított DNS keresés"
 
-msgid "Reverse direction"
-msgstr "Fordított irányban"
+msgid "Reverse Direction"
+msgstr "Irány megfordítása"
 
 msgid "Role"
 msgstr "Szabály"
@@ -6820,10 +6811,10 @@ msgid "Root"
 msgstr "Root"
 
 msgid "Root Bind DN"
-msgstr ""
+msgstr "Gyökérkötés DN-je"
 
 msgid "Root Bind Password"
-msgstr ""
+msgstr "Gyökérkötés jelszava"
 
 msgid "Rotation Rate"
 msgstr "Forgási sebesség"
@@ -6838,7 +6829,7 @@ msgid "Routes"
 msgstr "Útvonalak"
 
 msgid "Routing Tables"
-msgstr ""
+msgstr "Útválasztási tábla"
 
 msgid "Rows"
 msgstr "Sorok"
@@ -6858,9 +6849,6 @@ msgstr "Szabály száma"
 msgid "Rules"
 msgstr "Szabályok"
 
-msgid "Run as"
-msgstr "Futtatás mint"
-
 msgid "Run now"
 msgstr "Futtatás most"
 
@@ -6873,11 +6861,9 @@ msgid "Running"
 msgstr "Fut"
 
 msgid ""
-"Running the service as user root is not recommended for security reasons, "
-"use at your own risk!"
+"Running this service as root is not recommended for security reasons, use at "
+"your own risk!"
 msgstr ""
-"Biztonsági okok miatt nem célszerű root felhasználó nevében futtatni "
-"szolgáltatást, csak saját felelősségedre csináld!"
 
 msgid "Russian"
 msgstr "Orosz"
@@ -6930,9 +6916,6 @@ msgstr "SSH"
 msgid "SSH events"
 msgstr "SSH események"
 
-msgid "SSHD"
-msgstr "SSHD"
-
 msgid "SSHD log"
 msgstr "SSHD napló"
 
@@ -6953,12 +6936,16 @@ msgid ""
 "Samba will read from file asynchronously when size of request is bigger than "
 "this value. (%d by default)."
 msgstr ""
+"A Samba aszinkron módon olvassa az ennél nagyobb fájlokat (alapértelmezetten "
+"%d)."
 
 #, php-format
 msgid ""
 "Samba will write to file asynchronously when size of request is bigger than "
 "this value. (%d by default)."
 msgstr ""
+"A Samba aszinkron módon írja az ennél nagyobb fájlokat (alapértelmezetten "
+"%d)."
 
 msgid "Sat"
 msgstr "Szo"
@@ -6981,6 +6968,9 @@ msgstr "Bejelentkezési információk mentése a konfigurációs fájlba."
 msgid "Saved file to"
 msgstr "Fájl mentése ide"
 
+msgid "Scan Mode"
+msgstr ""
+
 msgid "Scan Targets"
 msgstr "Célpontok keresése"
 
@@ -6994,9 +6984,6 @@ msgstr ""
 "vagy törölve. A 0 letiltja a vizsgálatot a háttérben. Ha a vizsgálat a "
 "háttérben le van tiltva, az akkor is elindítható az adminisztrációs webes "
 "felületen állapot oldalán."
-
-msgid "Scan type"
-msgstr "Átvizsgálás típusa"
 
 msgid "Schedule Time"
 msgstr "Ütemezett időpont"
@@ -7156,6 +7143,9 @@ msgstr "Válaszd ki a WebGUI nyelvét."
 msgid "Select the location closest to you."
 msgstr "Válaszd ki a hozzád legközelebbi területet."
 
+msgid "Select the permission for running this service. (www by default)."
+msgstr ""
+
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
 "the button below to restore the configuration."
@@ -7196,7 +7186,7 @@ msgid "Self-tests Management"
 msgstr "Öntesztek kezelése"
 
 msgid "Send Buffer"
-msgstr ""
+msgstr "Küldő puffer"
 
 msgid "Send Command!"
 msgstr "Parancs kiadása!"
@@ -7244,10 +7234,10 @@ msgid "Server"
 msgstr "Szerver"
 
 msgid "Server Max. Protocol"
-msgstr ""
+msgstr "Szerver maximális protokollja"
 
 msgid "Server Min. Protocol"
-msgstr ""
+msgstr "Szerver minimális protokollja"
 
 msgid "Server Name"
 msgstr "Kiszolgálónév"
@@ -7258,11 +7248,11 @@ msgstr "Szerver leírása. Üresen maradhat."
 msgid "Server information"
 msgstr "Szerver információ"
 
-msgid "Server name"
-msgstr "Kiszolgáló neve"
-
 msgid "Server version"
 msgstr "Szerver verzió"
+
+msgid "Servers"
+msgstr "Szerverek"
 
 msgid "Service"
 msgstr "Szolgáltatás"
@@ -7277,10 +7267,10 @@ msgid "Set additional group memberships for this account."
 msgstr "Állítsa be további csoportot a fiókhoz."
 
 msgid "Set browseable."
-msgstr ""
+msgstr "Tallózhatónak beállítás."
 
 msgid "Set read only."
-msgstr ""
+msgstr "Csak olvashatónak beállítás."
 
 msgid "Set share password."
 msgstr "Megosztási jelszó beállítása"
@@ -7318,9 +7308,6 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr "Állítsd be a görgető sebességét 0-10 között (alapértelmezetten 10)."
 
-msgid "Set under which user the service should run (www by default)."
-msgstr "Add meg szolgáltatást futtató felhasználót (alapértelmezetten www)."
-
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
 "A gyökér adattárnak egy másik csatolási pont beállítása. Az alapértelmezett "
@@ -7343,11 +7330,14 @@ msgstr ""
 msgid "Settings"
 msgstr "Beállítások"
 
+msgid "Setup user to get shell access"
+msgstr ""
+
 msgid "Shadow Copy"
 msgstr "Árnyékmásolat"
 
 msgid "Shadow Copy Format"
-msgstr ""
+msgstr "Árnyékmásolat formátuma"
 
 msgid "Share"
 msgstr "Megosztás"
@@ -7420,6 +7410,9 @@ msgstr "Fogadó buffer mérete (%d alapértelmezetten)"
 msgid "Size of send buffer (%d by default)."
 msgstr "Küldő buffer mérete (%d alapértelmezetten)"
 
+msgid "Size offered to the initiator. (up to 8EiB=8388608TiB)."
+msgstr ""
+
 msgid ""
 "Size offered to the initiator. (up to 8EiB=8388608TiB. actual size is depend "
 "on your disks.)"
@@ -7430,8 +7423,8 @@ msgstr ""
 msgid "Skew"
 msgstr "Skew"
 
-msgid "Skip first scan"
-msgstr "Első átvizsgálása kihagyása"
+msgid "Skip First Scan"
+msgstr ""
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr ""
@@ -7473,6 +7466,9 @@ msgstr "Pillanatképek"
 msgid "Sockets"
 msgstr "Csatlakozások (Sockets)"
 
+msgid "Sockstat"
+msgstr "Sockstat"
+
 msgid "SoftRaid"
 msgstr "SzoftRaid"
 
@@ -7496,9 +7492,6 @@ msgstr "Szinkronizálandó forrásmappa."
 
 msgid "Source port"
 msgstr "Forrás portja"
-
-msgid "Source share"
-msgstr "Forrás megosztása"
 
 msgid "Space Usage"
 msgstr "Foglalt hely"
@@ -7655,13 +7648,13 @@ msgid "Storage"
 msgstr "Tároló"
 
 msgid "Store DOS Attributes"
-msgstr ""
+msgstr "DOS attribútumok tárolása"
 
 msgid "Store NTFS ACLs in Extended Attributes."
-msgstr ""
+msgstr "Az NTFS ACL-ek tárolása a kiterjesztett attribútumokban."
 
 msgid "Store alternate data streams in Extended Attributes."
-msgstr ""
+msgstr "Az alternatív adatfolyamok tárolása a kiterjesztett attribútumokban."
 
 msgid "Strict DLNA"
 msgstr "Szigorú DLNA"
@@ -7721,7 +7714,7 @@ msgid "Swap Usage"
 msgstr "Cserehely-használat"
 
 msgid "Swap is disabled."
-msgstr ""
+msgstr "A cserehely ki van kapcsolva."
 
 msgid "Swedish"
 msgstr "Svéd"
@@ -7745,8 +7738,8 @@ msgstr "Váltás erre: %s/s"
 msgid "Sync"
 msgstr "Szinkronizálás"
 
-msgid "Synchronization time"
-msgstr "Szinkronizációs idő"
+msgid "Synchronization Time"
+msgstr "Szinkronizálási idő"
 
 msgid "Synchronize"
 msgstr "Szinkronizálás"
@@ -7817,14 +7810,14 @@ msgstr "Rendszerüzenet buffer"
 msgid "System tuning"
 msgstr "Rendszer tuning"
 
+msgid "TCP Forwarding"
+msgstr "TCP továbbítás"
+
 msgid "TCP Port"
-msgstr ""
+msgstr "TCP Port"
 
 msgid "TCP Wrapper"
-msgstr ""
-
-msgid "TCP forwarding"
-msgstr "TCP továbbítás"
+msgstr "TCP csomagoló"
 
 msgid "TCP port"
 msgstr "TCP port"
@@ -7848,13 +7841,16 @@ msgid "TLS Mode"
 msgstr "TLS mód"
 
 msgid "TLS Only"
-msgstr ""
+msgstr "Csak TLS"
 
 msgid "TLS Server Certificate Check"
 msgstr "TLS Szerver Hitelesítés Ellenőrzés"
 
 msgid "Tag"
 msgstr "Címke"
+
+msgid "Tag Number"
+msgstr ""
 
 msgid "Tag number"
 msgstr "Címke szám"
@@ -8004,7 +8000,7 @@ msgstr ""
 "helyezés óta észlelt hibás flash blokkok összszáma."
 
 msgid "The TCP Port must be a valid port number."
-msgstr ""
+msgstr "A TCP portnak érvényes számnak kell lennie."
 
 msgid "The UPS identifier and IP address"
 msgstr "A szünetmentes azonosítója és IP címe"
@@ -8016,6 +8012,9 @@ msgid ""
 "The action which will be executed when the packet match the criteria "
 "specified below."
 msgstr "A művelet típusa, ha a csomag megfelelnek az alábbi feltételeknek."
+
+msgid "The actual size is depend on your disks."
+msgstr ""
 
 msgid "The administrator has been notified to apply your changes."
 msgstr "A rendszergazda értesítést kapott, hogy módosításaidat alkalmazza."
@@ -8461,9 +8460,11 @@ msgstr "A bejelentkezési név max. 16 karakter lehet."
 msgid ""
 "The max. connections per IP address must be either 0 (unlimited) or greater."
 msgstr ""
+"Az IP címenkénti maximális kapcsolatok száma 0 (korlátlan) vagy nagyobb "
+"kell, hogy legyen."
 
 msgid "The max. number of clients must be in the range from 1 to 50."
-msgstr ""
+msgstr "A kliensek maximális száma 1 és 50 közötti szám kell, hogy legyen."
 
 msgid ""
 "The maximum download bandwith in KiB/s. An empty field means infinity."
@@ -8471,7 +8472,7 @@ msgstr ""
 "A maximális letöltési sávszélességet KB/s-ben. Üresen hagyva végtelen."
 
 msgid "The maximum idle time must be a number."
-msgstr ""
+msgstr "A maximális tétlenségi idő értéke szám kell, hogy legyen."
 
 msgid ""
 "The maximum port to allocate for PASV style data connections (0 = use any "
@@ -8600,13 +8601,6 @@ msgstr ""
 "különösen hasznos lehet sok felhasználós rendszerek esetén, így lehetővé "
 "válik, hogy egy megosztást rugalmasan használhasson több felhasználó."
 
-msgid ""
-"The port to listen to. The default is to listen to the tftp port specified "
-"in /etc/services."
-msgstr ""
-"A figyelő port. Az alapértelmezett tftp port a /etc/services fájlban van "
-"megadva."
-
 #, php-format
 msgid "The portal '%s' is invalid."
 msgstr "A(z) '%s' portál nem érvényes."
@@ -8632,10 +8626,6 @@ msgstr ""
 
 msgid "The queuedepth range is invalid."
 msgstr "A queuedepth intervallum nem érvényes."
-
-#, php-format
-msgid "The recommended length for compatibility is %d."
-msgstr "Az ajánlott hossza kompatibilitás érdekében %d."
 
 #, php-format
 msgid "The recommended queue depth is %d."
@@ -8753,13 +8743,15 @@ msgstr "A változó értéke."
 msgid "The volume must be detached before it can be deleted."
 msgstr "A meghajtót törlés előtt le kell csatolnia."
 
+msgid "The work directory does not exist."
+msgstr ""
+
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
 "clients. (maximum 15 characters)."
 msgstr ""
-
-msgid "The working directory does not exist."
-msgstr "A munkakönyvtár nem létezik."
+"Az a munkacsoport, amelyben a szerver megjelenik, amikor a Windows vagy az "
+"SMB kliensek lekérdezik (maximálisan 15 karakter)."
 
 msgid "There are too many additional groups."
 msgstr "Túl sok a további csoport."
@@ -8836,6 +8828,15 @@ msgstr "Ezek a paraméterek hozzáadódnak a következő [Global] részéhez: %s
 #, php-format
 msgid "These parameters are added to [Share] section of %s."
 msgstr "Ezek a paraméterek hozzáadódnak a következő [Share] részéhez: %s."
+
+msgid ""
+"These parameters are added to the hardware-specific part of the driver for "
+"the second UPS."
+msgstr ""
+
+msgid ""
+"These parameters are added to the hardware-specific part of the driver."
+msgstr ""
 
 #, php-format
 msgid "These parameters will be added to %s."
@@ -9220,10 +9221,10 @@ msgstr ""
 "létrehozáskor hozzáfűződik, például: %s."
 
 msgid "This password is required to access the admin web interface."
-msgstr ""
+msgstr "Evvel a jelszóval lehet elérni a rendszergazdai webes felületet."
 
 msgid "This password is the root password of the system."
-msgstr ""
+msgstr "Ez a jelszó a rendszer root felhasználójának jelszava."
 
 msgid "This pool name already exists."
 msgstr "Ilyen tárolónév már létezik."
@@ -9294,12 +9295,16 @@ msgstr ""
 
 msgid "This will provide NTFS ACLs without ZFS ACL support such as UFS."
 msgstr ""
+"Ez biztosítja az NTFS ACL-ek ZFS ACL nélküli támogatását, mint például az "
+"UFS-t."
 
 msgid "This will provide ZFS ACL support. (ZFS only)."
-msgstr ""
+msgstr "Ez biztosítja a ZFS ACL támogatást (csak ZFS esetén)."
 
 msgid "This will provide shadow copy created by auto snapshot. (ZFS only)."
 msgstr ""
+"Ez biztosítja, hogy az árnyékmásolat automatikus pillanatképként jöjjön "
+"létre (csak ZFS esetén)."
 
 msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
@@ -9323,13 +9328,13 @@ msgid "Time"
 msgstr "idő"
 
 msgid "Time Interval"
-msgstr ""
+msgstr "időintervallum"
 
 msgid "Time Machine"
 msgstr "Időkiszolgáló"
 
 msgid "Time Server"
-msgstr ""
+msgstr "Időkiszolgáló"
 
 msgid "Time Synchronization"
 msgstr "Időszinkronizáció"
@@ -9366,7 +9371,7 @@ msgid "Times"
 msgstr "Idő"
 
 msgid "Title Speed"
-msgstr ""
+msgstr "Címsebesség"
 
 msgid "TitleSpeed"
 msgstr "Címgyorsaság"
@@ -9542,7 +9547,7 @@ msgid "Trivial File Transfer Protocol"
 msgstr "Trivial File Transfer Protocol"
 
 msgid "Trusted Domains"
-msgstr ""
+msgstr "Megbízható domainek"
 
 msgid "Try to force import."
 msgstr "Próbáld kikényszeríteni az importálást."
@@ -9697,6 +9702,9 @@ msgstr "URL"
 msgid "Ukrainian"
 msgstr "Ukrán"
 
+msgid "Umask"
+msgstr "UImaszk"
+
 msgid "Unavailable"
 msgstr "Nem érhető el"
 
@@ -9722,7 +9730,7 @@ msgid "Unison File Synchronisation"
 msgstr "Unison fájlszinkronizálás"
 
 msgid "Unix Charset"
-msgstr ""
+msgstr "Unix karaktergyűjtemény"
 
 msgid "Unix Command"
 msgstr "Unix parancs"
@@ -9754,6 +9762,9 @@ msgstr "Leválasztás..."
 msgid "Up"
 msgstr "Felfelé"
 
+msgid "Update Period"
+msgstr ""
+
 msgid "Update period"
 msgstr "Frissítési időköz"
 
@@ -9765,10 +9776,10 @@ msgstr ""
 "ZFS frissítése és összes támogatott tulajdonság hozzáadása az tárolóhoz"
 
 msgid "Upload Bandwidth"
-msgstr ""
+msgstr "Feltöltési sávszélesség"
 
-msgid "Upload directory"
-msgstr "Feltöltési könyvtár"
+msgid "Upload Directory"
+msgstr ""
 
 #, php-format
 msgid "Upload directory of the webserver. The default is %s."
@@ -9881,19 +9892,19 @@ msgid "User ID"
 msgstr "Felhasználó-azonosító (ID)"
 
 msgid "User Mask"
-msgstr ""
+msgstr "Felhasználói maszk"
 
 msgid "User Portal"
-msgstr ""
+msgstr "Felhasználói portál"
 
 msgid "User Settings"
 msgstr "Felhasználói beállítások"
 
 msgid "User Shares"
-msgstr ""
+msgstr "Felhasználói megosztások"
 
 msgid "User Suffix"
-msgstr ""
+msgstr "Felhasználói utótag"
 
 msgid "User account is locked"
 msgstr "Felhasználói fiók zárolva"
@@ -10091,7 +10102,7 @@ msgid "WEP"
 msgstr "WEP"
 
 msgid "WINS Server"
-msgstr ""
+msgstr "WINS szerver"
 
 msgid "WINS server IP address (e.g. from MS Active Directory server)."
 msgstr "WINS kiszolgáló IP címe (pl. MS Címtárszolgáltató kiszolgáló)."
@@ -10118,7 +10129,7 @@ msgid "WPA2"
 msgstr "WPA2"
 
 msgid "Wait Time"
-msgstr ""
+msgstr "Várakozási idő"
 
 msgid "Wait time"
 msgstr "Várakozási idő"
@@ -10140,13 +10151,13 @@ msgstr ""
 "elveszik."
 
 msgid "Watch Directory"
-msgstr ""
+msgstr "Figyelő könyvtár"
 
 msgid "WebGUI"
 msgstr "Webes felhasználói felület (WebGUI)"
 
 msgid "WebGUI and Root Password"
-msgstr ""
+msgstr "WebGUI és root jelszó"
 
 msgid "Webserver"
 msgstr "Webkiszolgáló"
@@ -10224,14 +10235,11 @@ msgstr "Helyettesítő karakter"
 msgid "Wireless configuration"
 msgstr "Vezetéknélküli beállítások"
 
-msgid "Workgroup"
-msgstr "Munkacsoport"
-
-msgid "Working Directory"
+msgid "Work Directory"
 msgstr ""
 
-msgid "Working directory"
-msgstr "Munka könyvtár"
+msgid "Workgroup"
+msgstr "Munkacsoport"
 
 msgid "Write"
 msgstr "Írás"
@@ -10318,8 +10326,9 @@ msgstr ""
 "ASCII karakter)"
 
 #, php-format
-msgid "You may specify logical block length (%d by default)."
-msgstr "Megadhatod a logikai blokk hosszát (%d alapértelmezetten)."
+msgid ""
+"You may specify logical block size. (default is %dB for compatibility)."
+msgstr ""
 
 msgid ""
 "You must add at least a Portal Group, an Initiator Group and an Extent "
@@ -10352,7 +10361,7 @@ msgstr "Legalább egy hitelesítési eljárást ki kell választanod."
 
 msgid ""
 "You need to update your browser or use Internet Explorer 10 or higher."
-msgstr ""
+msgstr "Frissítsd böngésződet vagy használj Explorer 10-est vagy újabbat."
 
 msgid "You should use HTTPS as WebGUI protocol for sending passphrase."
 msgstr ""
@@ -10362,7 +10371,7 @@ msgid "Your ZFS system is not healthy."
 msgstr "A ZFS fájlrendszered nincs jó állapotban."
 
 msgid "Your browser does not support this svg object type."
-msgstr ""
+msgstr "Böngésződ nem támogatja ezt az svg objektumtípust."
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -10567,14 +10576,8 @@ msgstr "sysvol létezik az útvonalban."
 msgid "to"
 msgstr "eddig:"
 
-msgid "umask"
-msgstr "umask"
-
 msgid "umount"
 msgstr "leválasztás"
-
-msgid "user"
-msgstr "felhasználó"
 
 msgid "week days"
 msgstr "hétköznap"
@@ -10584,14 +10587,50 @@ msgstr "hétköznap"
 #~ msgstr ""
 #~ "Érvényes IPv4 cím megadása szükséges az elsődleges/másodlagos DNS szervernek."
 
+#~ msgid "Access mode"
+#~ msgstr "Hozzáférési mód"
+
+#~ msgid "All dirs"
+#~ msgstr "Minden könyvtár"
+
+#~ msgid "All users will have the root privilege."
+#~ msgstr "Az összes felhasználónak root privilégiuma lesz."
+
+#~ msgid "Allow new files"
+#~ msgstr "Új állományok engedélyezése."
+
+#~ msgid "Alternate TCP port. Default is 22"
+#~ msgstr "Alternatív TCP port. Az alapértelmezett 22"
+
+#~ msgid "Alternate TCP port. Default is 873"
+#~ msgstr "Alternatív TCP port. Az alapértelmezett 873."
+
+#~ msgid "Always scan"
+#~ msgstr "Mindig keres"
+
 #~ msgid "Asynchronous I/O (AIO)"
 #~ msgstr "Aszinkron I/O (AIO)"
+
+#~ msgid "Auxiliary parameters"
+#~ msgstr "Kiegészítő paraméterek"
+
+#~ msgid "CIFS/SMB disabled"
+#~ msgstr "CIFS/SMB kikapcsolva"
 
 #~ msgid "Create mask"
 #~ msgstr "Maszk létrehozása"
 
+#~ msgid "Destination share"
+#~ msgstr "Cél megosztás"
+
 #~ msgid "Directory mask"
 #~ msgstr "Könyvtár maszk"
+
+#~ msgid "Document root"
+#~ msgstr "Dokumentum főkönyvtár"
+
+#~ msgid "Domain name"
+#~ msgstr "Tartománynév"
 
 #~ msgid "Dos charset"
 #~ msgstr "Dos karakterkiosztás."
@@ -10605,11 +10644,41 @@ msgstr "hétköznap"
 #~ msgid "Guest account"
 #~ msgstr "Vendéghozzáférés"
 
+#~ msgid "Local share (destination)"
+#~ msgstr "Helyi megosztás (célállomás)"
+
+#~ msgid "Local shares to be synchronized"
+#~ msgstr "Szinkronizálandó helyi megosztások"
+
+#~ msgid "Max. block size"
+#~ msgstr "Maximális blokk méret"
+
+#~ msgid "Max. connections"
+#~ msgstr "Max. kapcsolatok"
+
+#~ msgid "Max. sessions"
+#~ msgstr "Max. munkamenetek"
+
+#~ msgid "Maximum connections"
+#~ msgstr "Maximális kapcsolatok száma"
+
 #~ msgid "NetBIOS name"
 #~ msgstr "NetBIOS név"
 
 #~ msgid "Null passwords"
 #~ msgstr "Üres jelszavak"
+
+#~ msgid "Number of servers"
+#~ msgstr "Kiszolgálók száma"
+
+#~ msgid "Password authentication"
+#~ msgstr "Jelszó hitelesítés"
+
+#~ msgid "Permit root login"
+#~ msgstr "root bejelentkezés engedélyezése"
+
+#~ msgid "Preserve permissions"
+#~ msgstr "A jogosultságok megőrzése"
 
 #~ msgid "Receive Buffer Size"
 #~ msgstr "Fogadó puffer mérete"
@@ -10617,17 +10686,43 @@ msgstr "hétköznap"
 #~ msgid "Recycle bin"
 #~ msgstr "Lomtár"
 
+#~ msgid "Remote module (source)"
+#~ msgstr "Távoli modul (forrás)"
+
 #~ msgid "Send Buffer Size"
 #~ msgstr "Puffer méret küldése"
 
+#~ msgid "Server name"
+#~ msgstr "Kiszolgáló neve"
+
+#~ msgid "The working directory does not exist."
+#~ msgstr "A munkakönyvtár nem létezik."
+
 #~ msgid "WINS server"
 #~ msgstr "WINS szerver"
+
+#~ msgid "Working directory"
+#~ msgstr "Munka könyvtár"
+
+#~ msgid "Reverse direction"
+#~ msgstr "Fordított irányban"
 
 #~ msgid "AIO read size"
 #~ msgstr "AIO olvasási méret"
 
 #~ msgid "AIO write size"
 #~ msgstr "AIO írási méret"
+
+#~ msgid "umask"
+#~ msgstr "umask"
+
+#~ msgid ""
+#~ "A directory listing is generated if a directory is requested and no index-"
+#~ "file (index.php, index.html, index.htm or default.htm) was found in that "
+#~ "directory."
+#~ msgstr ""
+#~ "A könyvtár lista akkor keletkezik, ha a könyvtárat meghívják, és ott nem "
+#~ "található index fájl (index.php, index.html, index.htm vagy default.htm)."
 
 #~ msgid "Enable ZFS ACL"
 #~ msgstr "ZFS ACL engedélyezése"
@@ -10644,17 +10739,43 @@ msgstr "hétköznap"
 #~ msgid "Enable store DOS attributes"
 #~ msgstr "DOS attribútumok tárolásának engedélyezése"
 
+#~ msgid "Synchronization time"
+#~ msgstr "Szinkronizációs idő"
+
+#~ msgid "Upload directory"
+#~ msgstr "Feltöltési könyvtár"
+
 #~ msgid "Interface selection"
 #~ msgstr "Interfész kiválasztása"
 
 #~ msgid "Large read/write"
 #~ msgstr "Nagy olvasás/írás"
 
+#, php-format
+#~ msgid ""
+#~ "Location where the working files will be stored, e.g. %s/backup/.unison"
+#~ msgstr "Munka fájlok helye, pl. %s/backup/.unison"
+
+#~ msgid "Logical Block Length"
+#~ msgstr "Logikai Blokk Hossza"
+
+#~ msgid "Map all users to root"
+#~ msgstr "Összes felhasználó root-ként"
+
 #~ msgid "Map to guest"
 #~ msgstr "Vendégként viselkedés"
 
+#~ msgid "Map to user"
+#~ msgstr "Felhasználóként viselkedés"
+
 #~ msgid "Password server"
 #~ msgstr "Jelszó szerver"
+
+#~ msgid "Run as"
+#~ msgstr "Futtatás mint"
+
+#~ msgid "Scan type"
+#~ msgstr "Átvizsgálás típusa"
 
 #~ msgid "Set browseable"
 #~ msgstr "Beállítás böngészhetőnek"
@@ -10664,6 +10785,26 @@ msgstr "hétköznap"
 
 #~ msgid "Store DOS attributes"
 #~ msgstr "DOS attribútumok tárolása"
+
+#~ msgid "TCP forwarding"
+#~ msgstr "TCP továbbítás"
+
+#~ msgid ""
+#~ "The port to listen to. The default is to listen to the tftp port specified "
+#~ "in /etc/services."
+#~ msgstr ""
+#~ "A figyelő port. Az alapértelmezett tftp port a /etc/services fájlban van "
+#~ "megadva."
+
+#, php-format
+#~ msgid "The recommended length for compatibility is %d."
+#~ msgstr "Az ajánlott hossza kompatibilitás érdekében %d."
+
+#~ msgid "Forced update period"
+#~ msgstr "Kényszerített frissítési időszak"
+
+#~ msgid "Source share"
+#~ msgstr "Forrás megosztása"
 
 #~ msgid "Trusted domains"
 #~ msgstr "Megbízható domain-ek"
@@ -10682,11 +10823,20 @@ msgstr "hétköznap"
 #~ msgid "Enable ACL inheritance"
 #~ msgstr "ACL öröklődés engedélyezése"
 
+#~ msgid "Compilations directories"
+#~ msgstr "Összeválogatott könyvtárak"
+
 #~ msgid "Enable permission inheritance"
 #~ msgstr "Öröklődés engedélyezése"
 
 #~ msgid "This will provide ZFS ACL support. (ZFS only)"
 #~ msgstr "Ez ZFS ACL támogatást biztosít (csak ZFS esetén)."
+
+#~ msgid "Group compilations"
+#~ msgstr "Válogatások csoportosítása"
+
+#~ msgid "Skip first scan"
+#~ msgstr "Első átvizsgálása kihagyása"
 
 #~ msgid "Store alternate data streams"
 #~ msgstr "Alternatív adatfolyamok tárolása"
@@ -10706,6 +10856,9 @@ msgstr "hétköznap"
 #~ msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
 #~ msgstr ""
 #~ "Ez NTFS acl-eket biztosít ZFS acl támogatás nélkül, például UFS számára."
+
+#~ msgid "Remote rsync daemon"
+#~ msgstr "Távoli rsync démon"
 
 #~ msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
 #~ msgstr ""
@@ -10730,11 +10883,20 @@ msgstr "hétköznap"
 #~ "Samba aszinkron módon fog írni amikor a kérés mérete nagyobb, mint ez az "
 #~ "érték (%d alapértelmezetten)"
 
+#~ msgid "Preserve extended attributes"
+#~ msgstr "Kiterjesztett attribútumok megtartása"
+
 #~ msgid "Enable extended attribute support"
 #~ msgstr "Kiterjesztett attribútum-támogatás engedélyezése"
 
 #~ msgid "Hide dot files"
 #~ msgstr "Pont fájlok elrejtése"
+
+#~ msgid "Hosts deny"
+#~ msgstr "Állomások tiltása"
+
+#~ msgid "Hosts allow"
+#~ msgstr "Állomások engedélyezése"
 
 #~ msgid ""
 #~ "The workgroup in which the server will appear when queried by Windows or SMB "
@@ -10742,6 +10904,10 @@ msgstr "hétköznap"
 #~ msgstr ""
 #~ "A munkacsoport, melyben a szerver megjelenik amikor a Windows vagy a SMB "
 #~ "kliensek meghívják (maximum 15 karakter)."
+
+#, php-format
+#~ msgid "You may specify logical block length (%d by default)."
+#~ msgstr "Megadhatod a logikai blokk hosszát (%d alapértelmezetten)."
 
 #~ msgid "Time server"
 #~ msgstr "Időszerver"
@@ -10755,14 +10921,73 @@ msgstr "hétköznap"
 #~ msgid "Set read only"
 #~ msgstr "Beállítás írásvédettnek"
 
+#~ msgid ""
+#~ "Enter the path to the home directory. The config will be created under the "
+#~ "specified directory."
+#~ msgstr ""
+#~ "Add meg a saját könyvtár útvonalát. A konfigurációs állomány a megadott "
+#~ "könyvtárba kerül."
+
+#~ msgid "Active Directory List"
+#~ msgstr "Aktív könyvtárak"
+
 #~ msgid "Enhanced compatibility with Netatalk AFP server"
 #~ msgstr "Továbbfejlesztett kompatibilitás Netatalk AFP szerverrel"
 
 #~ msgid "AFP compatibility"
 #~ msgstr "AFP kompatibilitás"
 
+#~ msgid ""
+#~ "Additional parameters to the hardware-specific part of the driver for second "
+#~ "UPS."
+#~ msgstr ""
+#~ "Második szünetmentes illeszetőprogramjnak hardverfüggő részének további "
+#~ "paraméterei."
+
+#~ msgid ""
+#~ "A Portal Group contains IP addresses and listening TCP ports to connect the "
+#~ "target from the initiator."
+#~ msgstr ""
+#~ "Egy Portal csoport IP címeket és TCP portokat tartalmaz, melyekhez a célhoz "
+#~ "kapcsolódnak a kezdeményezőtől."
+
+#~ msgid ""
+#~ "A Auth Group contains authorised users and secrets for additional security."
+#~ msgstr ""
+#~ "Az Hitelesítő csoport hitelesített felhasználókat és titkosításokat "
+#~ "tartalmaz a nagyobb biztonság érdekében."
+
+#~ msgid ""
+#~ "A Initiator Group contains authorised initiator names and networks to access "
+#~ "the target."
+#~ msgstr ""
+#~ "A Kezdeményező csoport tartalmazza az hitelesített kezdeményező "
+#~ "felhasználókat és hálózatok a cél eléréséhez."
+
+#, php-format
+#~ msgid ""
+#~ "%s must be enabled for Unison to work, and the %s must have shell access."
+#~ msgstr ""
+#~ "%s-t be kell kapcsolni, és % számára shell hozzáférést kell biztosítani."
+
+#~ msgid "SSHD"
+#~ msgstr "SSHD"
+
 #~ msgid "Enable 'Asynchronous I/O (AIO)' switch."
 #~ msgstr "'Aszinkron I/O (AIO)' kapcsoló engedélyezése."
+
+#~ msgid ""
+#~ "Running the service as user root is not recommended for security reasons, "
+#~ "use at your own risk!"
+#~ msgstr ""
+#~ "Biztonsági okok miatt nem célszerű root felhasználó nevében futtatni "
+#~ "szolgáltatást, csak saját felelősségedre csináld!"
+
+#~ msgid "user"
+#~ msgstr "felhasználó"
+
+#~ msgid "Set under which user the service should run (www by default)."
+#~ msgstr "Add meg szolgáltatást futtató felhasználót (alapértelmezetten www)."
 
 #~ msgid "Client Min Protocol"
 #~ msgstr "Kliens minimális protokoll"
@@ -10775,3 +11000,15 @@ msgstr "hétköznap"
 
 #~ msgid "Server Min Protocol"
 #~ msgstr "Szerver min. protokoll"
+
+#~ msgid "Auxiliary Parameters"
+#~ msgstr "Kiegészítő parameterek"
+
+#~ msgid "Auxiliary Parameter"
+#~ msgstr "Kiegészítő paraméter"
+
+#~ msgid "Working Directory"
+#~ msgstr "Munkamappa"
+
+#~ msgid "Remote Rsync Saemon"
+#~ msgstr "Távoli Rsync seamon"

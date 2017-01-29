@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-28 02:17+0000\n"
+"POT-Creation-Date: 2017-01-29 13:11+0000\n"
 "PO-Revision-Date: 2016-11-06 09:31+0000\n"
 "Last-Translator: Åka Sikrom <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-28 01:56+0000\n"
+"X-Launchpad-Export-Date: 2017-01-29 12:21+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: NORWAY\n"
 "Language: \n"
@@ -77,11 +77,6 @@ msgstr "%s er allerede konfigurert som et volum"
 #, php-format
 msgid "%s is too long."
 msgstr "%s er for langt."
-
-#, php-format
-msgid ""
-"%s must be enabled for Unison to work, and the %s must have shell access."
-msgstr ""
 
 #, php-format
 msgid "%s of %sB"
@@ -182,29 +177,9 @@ msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN tagg (mellom 1 og 4094)"
 
 msgid ""
-"A Auth Group contains authorised users and secrets for additional security."
-msgstr ""
-"En \"Auth\" gruppe inneholder autoriserte brukere og 'hemmeligheter' for "
-"ekstra sikkerhet."
-
-msgid ""
-"A Initiator Group contains authorised initiator names and networks to access "
-"the target."
-msgstr ""
-"En oppstartsgruppe består av autoriserte initiativtagernavn og nettverk for "
-"å aksessere ressursen."
-
-msgid ""
 "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
 msgstr ""
 "En NTP tids-tjeners navn kan kun inneholde tegnene a-z, 0-9 '-' og '.'."
-
-msgid ""
-"A Portal Group contains IP addresses and listening TCP ports to connect the "
-"target from the initiator."
-msgstr ""
-"En portalgruppe inneholder IP adresser og lyttende TCP porter for å koble "
-"ressursen ut fra initiativtageren."
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -216,12 +191,9 @@ msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr "Et VLAN med taggen %s er allerede definert på dette grensesnittet."
 
 msgid ""
-"A directory listing is generated if a directory is requested and no index-"
-"file (index.php, index.html, index.htm or default.htm) was found in that "
-"directory."
+"A directory listing is generated when no index-files (index.php, index.html, "
+"index.htm or default.htm) are found in a directory."
 msgstr ""
-"En filliste blir laget dersom det i forespurte katalog ikke finnes en "
-"indeksfil (index.php, index.html, index.htm eller default.htm)."
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -385,9 +357,6 @@ msgstr "Tilgangsrestriksjoner"
 msgid "Access Time (atime)"
 msgstr "Tilgangstid"
 
-msgid "Access mode"
-msgstr "Tilgangsmodus"
-
 msgid "Access the webGUI with the new IP address"
 msgstr ""
 
@@ -415,9 +384,6 @@ msgstr ""
 
 msgid "Active Directory"
 msgstr "Active Directory"
-
-msgid "Active Directory List"
-msgstr "Active Directory Liste"
 
 msgid "Active Shares"
 msgstr "Aktive Delinger"
@@ -554,12 +520,10 @@ msgstr ""
 msgid "Additional Network"
 msgstr ""
 
-msgid "Additional Storage"
+msgid "Additional Parameters"
 msgstr ""
 
-msgid ""
-"Additional parameters to the hardware-specific part of the driver for second "
-"UPS."
+msgid "Additional Storage"
 msgstr ""
 
 msgid "Additional parameters to the hardware-specific part of the driver."
@@ -646,6 +610,9 @@ msgstr ""
 msgid "All"
 msgstr "Alle"
 
+msgid "All Dirs"
+msgstr ""
+
 msgid "All data from the following statistics have been deleted:"
 msgstr ""
 
@@ -656,9 +623,6 @@ msgstr ""
 
 msgid "All data will be lost when you activate this option!"
 msgstr ""
-
-msgid "All dirs"
-msgstr "Alle kataloger"
 
 #, php-format
 msgid "All dirs requires mounted path, but Path %s is not mounted."
@@ -677,14 +641,14 @@ msgstr ""
 msgid "All software raid disks are imported."
 msgstr ""
 
-msgid "All users will have the root privilege."
-msgstr "Alle brukere vil ha superbrukerprivilegier."
-
 msgid "Alloc"
 msgstr ""
 
 msgid "Allow"
 msgstr "Tillat"
+
+msgid "Allow New Files"
+msgstr ""
 
 msgid "Allow TLS connections only."
 msgstr ""
@@ -700,9 +664,6 @@ msgstr ""
 
 msgid "Allow clients to resume interrupted uploads and downloads."
 msgstr "Tillat klienter å fortsette stoppede opplastinger og nedlastinger."
-
-msgid "Allow new files"
-msgstr "Tillatt nye filer"
 
 msgid "Allow new files to be created."
 msgstr "Tillatt nye filer å bli laget"
@@ -747,11 +708,8 @@ msgstr "AltRoot"
 msgid "Alternate Data Streams"
 msgstr ""
 
-msgid "Alternate TCP port. Default is 22"
-msgstr "Alternativ TCP port. Standard er 22"
-
-msgid "Alternate TCP port. Default is 873"
-msgstr "Alternativ TCP port. Standard er 873"
+msgid "Alternate TCP port. (Default is 873)."
+msgstr ""
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr "Alternativ konfigurasjons katalog (vanligvis tom)."
@@ -762,8 +720,8 @@ msgstr ""
 msgid "Always On"
 msgstr ""
 
-msgid "Always scan"
-msgstr "Alltid scan"
+msgid "Always Scan"
+msgstr ""
 
 msgid "Ambient Conditions From External Probe Equipment"
 msgstr ""
@@ -921,6 +879,10 @@ msgstr ""
 msgid "Auth Groups"
 msgstr "Auth grupper"
 
+msgid ""
+"Auth Groups contains authorised users and secrets for additional security."
+msgstr ""
+
 msgid "Auth Method"
 msgstr "Auth metode"
 
@@ -945,6 +907,9 @@ msgid "Authentication"
 msgstr "Autentisering"
 
 msgid "Authentication Method"
+msgstr ""
+
+msgid "Authorised Network"
 msgstr ""
 
 msgid "Authorised network"
@@ -980,17 +945,8 @@ msgstr ""
 msgid "Autoselect"
 msgstr "Autovalg"
 
-msgid "Auxiliary Parameter"
-msgstr ""
-
-msgid "Auxiliary Parameters"
-msgstr ""
-
 msgid "Auxiliary device firmware"
 msgstr ""
-
-msgid "Auxiliary parameters"
-msgstr "Hjelpe-parametere"
 
 msgid "Avail"
 msgstr ""
@@ -1103,6 +1059,10 @@ msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
 
 msgid "Before - File-deletions will be performed before the transfer starts."
+msgstr ""
+
+msgid ""
+"Before a Unison Client can start to work, you need to perform the following:"
 msgstr ""
 
 msgid "Best available"
@@ -1226,8 +1186,8 @@ msgstr "CIFS/SMB"
 msgid "CIFS/SMB Information"
 msgstr ""
 
-msgid "CIFS/SMB disabled"
-msgstr "CIFS/SMB deaktivert"
+msgid "CIFS/SMB is disabled."
+msgstr ""
 
 msgid "CIFS/SMB is enabled."
 msgstr ""
@@ -1499,7 +1459,7 @@ msgstr "Common Internet File System"
 msgid "Community"
 msgstr "Samfunn"
 
-msgid "Compilations directories"
+msgid "Compilations Directories"
 msgstr ""
 
 msgid "Compiled"
@@ -2215,9 +2175,6 @@ msgstr "Mottaker nettverk for denne statiske ruten"
 msgid "Destination port"
 msgstr "Destinasjons port"
 
-msgid "Destination share"
-msgstr "Mål deling"
-
 msgid "Destroy a pool"
 msgstr ""
 
@@ -2677,8 +2634,8 @@ msgstr ""
 msgid "Do you want to toggle selected options?"
 msgstr ""
 
-msgid "Document root"
-msgstr "Dokument rot"
+msgid "Document Root"
+msgstr ""
 
 msgid "Document root of the webserver. Home of the web page files."
 msgstr "Dokument roten på nett-serveren. Hjemmet til nettsidene."
@@ -2689,14 +2646,14 @@ msgstr ""
 msgid "Domain"
 msgstr "Domene"
 
+msgid "Domain Name"
+msgstr ""
+
 msgid "Domain controller name"
 msgstr "Domenekontrollernavn"
 
 msgid "Domain is missing 2nd level name."
 msgstr ""
-
-msgid "Domain name"
-msgstr "Domenenavn"
 
 msgid "Domain name (DNS/Realm-Name)"
 msgstr "Domenenavn (DNS/Realm-Name)"
@@ -3125,6 +3082,9 @@ msgstr ""
 msgid "Enable serial console."
 msgstr ""
 
+msgid "Enable service SSH when disabled"
+msgstr ""
+
 msgid "Enable shadow copy."
 msgstr ""
 
@@ -3214,8 +3174,18 @@ msgstr ""
 
 #, php-format
 msgid ""
-"Enter a custom port number if you want to override the default port. Default "
-"port is %s."
+"Enter a custom port number if you want to override the default port. "
+"(Default is %s)."
+msgstr ""
+
+msgid ""
+"Enter a custom port number if you want to override the default port. "
+"(Default is 22)."
+msgstr ""
+
+msgid ""
+"Enter a custom port number if you want to override the default port. "
+"(Default is 69). "
 msgstr ""
 
 msgid "Enter a description"
@@ -3264,6 +3234,11 @@ msgstr ""
 "og 63 tegn langt."
 
 msgid ""
+"Enter the path to the database directory. The config files will be created "
+"under the specified directory."
+msgstr ""
+
+msgid ""
 "Enter the path to the home directory of VirtualBox. VM config and HDD image "
 "will be created under the specified directory."
 msgstr ""
@@ -3274,11 +3249,6 @@ msgid ""
 msgstr ""
 "Skriv inn banen til brukerens hjemmeområde. Om feltet er tomt brukes /mnt "
 "som standard."
-
-msgid ""
-"Enter the path to the home directory. The config will be created under the "
-"specified directory."
-msgstr ""
 
 msgid ""
 "Enter the path to the home directory. This directory will store the "
@@ -3612,8 +3582,8 @@ msgstr ""
 msgid "Force use"
 msgstr ""
 
-msgid "Forced update period"
-msgstr "Tving oppdaterings periode"
+msgid "Forced Update Period"
+msgstr ""
 
 msgid ""
 "Forces use of vdevs, even if they appear in use or specify different size. "
@@ -3756,6 +3726,9 @@ msgstr "Gruppe"
 msgid "Group Allow"
 msgstr ""
 
+msgid "Group Compilations"
+msgstr ""
+
 msgid "Group ID"
 msgstr "Gruppe-ID"
 
@@ -3763,9 +3736,6 @@ msgid "Group Settings"
 msgstr ""
 
 msgid "Group Suffix"
-msgstr ""
-
-msgid "Group compilations"
 msgstr ""
 
 msgid "Group is locked"
@@ -3922,12 +3892,6 @@ msgstr ""
 
 msgid "Hosts Setup"
 msgstr ""
-
-msgid "Hosts allow"
-msgstr "Verter tillatt"
-
-msgid "Hosts deny"
-msgstr "Verter nektet"
 
 msgid "Hour"
 msgstr ""
@@ -4214,6 +4178,11 @@ msgid "Initiator Group Settings"
 msgstr ""
 
 msgid "Initiator Groups"
+msgstr ""
+
+msgid ""
+"Initiator Groups contains authorised initiator names and networks to access "
+"the target."
 msgstr ""
 
 msgid ""
@@ -4628,12 +4597,6 @@ msgstr ""
 msgid "Local User"
 msgstr "Lokal bruker"
 
-msgid "Local share (destination)"
-msgstr "Lokal deling (mål)"
-
-msgid "Local shares to be synchronized"
-msgstr "Lokale delinger som skal synkroniseres"
-
 msgid "Location"
 msgstr "Plassering"
 
@@ -4653,10 +4616,11 @@ msgid "Location where the content database file will be stored."
 msgstr "Lokasjon hvor innholdsdatabasen skal lagres."
 
 #, php-format
-msgid ""
-"Location where the working files will be stored, e.g. %s/backup/.unison"
+msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
 msgstr ""
-"Lokasjon der fungerende filer vil bli lagret, f.eks %s/backup/.unison"
+
+msgid "Locked Files"
+msgstr ""
 
 msgid "Log"
 msgstr "Logg"
@@ -4682,8 +4646,8 @@ msgstr "Loggpakker som er håndtert av denne regelen til syslog."
 msgid "Logarithmic Scaling"
 msgstr ""
 
-msgid "Logical Block Length"
-msgstr "Logisk Blokklengde"
+msgid "Logical Block"
+msgstr ""
 
 #, php-format
 msgid "Logical Unit Controller Authorised network (%s by default)"
@@ -4795,14 +4759,17 @@ msgstr "Produsent"
 msgid "Manufacturing date"
 msgstr ""
 
-msgid "Map all users to root"
-msgstr "Map alle brukere til root"
+msgid "Map all users to root, all users will have root privileges."
+msgstr ""
 
 msgid "Map to Guest"
 msgstr ""
 
-msgid "Map to user"
-msgstr "Map til bruker"
+msgid "Map to Root"
+msgstr ""
+
+msgid "Map to User"
+msgstr ""
 
 msgid "Mapping DOS Attributes"
 msgstr ""
@@ -4824,7 +4791,13 @@ msgstr ""
 msgid "Max Entries"
 msgstr ""
 
+msgid "Max. Block Size"
+msgstr ""
+
 msgid "Max. Clients"
+msgstr ""
+
+msgid "Max. Connections"
 msgstr ""
 
 msgid "Max. Connections Per Host"
@@ -4836,20 +4809,14 @@ msgstr ""
 msgid "Max. Passive Port"
 msgstr ""
 
+msgid "Max. Sessions"
+msgstr ""
+
 msgid "Max. TTL"
 msgstr "Maks. TTL"
 
-msgid "Max. block size"
-msgstr "Maks. blokk størrelse"
-
-msgid "Max. connections"
-msgstr "Maks tilkoblinger"
-
 msgid "Max. pre-send R2T"
 msgstr ""
-
-msgid "Max. sessions"
-msgstr "Maks sesjoner"
 
 msgid ""
 "Max. time-to-live (max. number of hops) used in outgoing probe packets."
@@ -4869,9 +4836,6 @@ msgstr ""
 
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr ""
-
-msgid "Maximum connections"
-msgstr "Maksimalt antall tilkoblinger"
 
 msgid "Maximum frequency"
 msgstr ""
@@ -5200,6 +5164,9 @@ msgstr ""
 msgid "Netgraph"
 msgstr "Netgraph"
 
+msgid "Netstat"
+msgstr ""
+
 msgid "Network"
 msgstr "Nettverk"
 
@@ -5489,9 +5456,6 @@ msgid ""
 "the maximum physical erase cycles the drive is designed to endure."
 msgstr ""
 
-msgid "Number of servers"
-msgstr "Antall tjenere"
-
 msgid "Numeric identifier of the group."
 msgstr ""
 
@@ -5718,6 +5682,9 @@ msgstr "Passord"
 msgid "Password (confirmed)"
 msgstr "Passord (bekreftet)"
 
+msgid "Password Authentication"
+msgstr ""
+
 msgid "Password Encryption"
 msgstr ""
 
@@ -5726,9 +5693,6 @@ msgstr ""
 
 msgid "Password Suffix"
 msgstr ""
-
-msgid "Password authentication"
-msgstr "Passord autentikasjon"
 
 msgid ""
 "Password does not match the confirmation password. Please ensure both "
@@ -5763,6 +5727,9 @@ msgstr "Sti"
 msgid "Path of the URL relative to document root."
 msgstr "Bane til URL relativt til dokument roten."
 
+msgid "Path to be shared to be synchronized."
+msgstr ""
+
 msgid "Path to be shared."
 msgstr "Sti som skal deles"
 
@@ -5792,11 +5759,11 @@ msgstr ""
 msgid "Permanent samba data path (e.g. %s)."
 msgstr ""
 
-msgid "Permit Root Login"
+msgid "Permission"
 msgstr ""
 
-msgid "Permit root login"
-msgstr "Tillat root innlogging"
+msgid "Permit Root Login"
+msgstr ""
 
 msgid "Permit to do SSH Tunneling."
 msgstr "Tilatt SSH tunneler."
@@ -5972,6 +5939,11 @@ msgstr ""
 msgid "Portal Groups"
 msgstr "Portal grupper"
 
+msgid ""
+"Portal Groups contains IP addresses and listening on TCP ports to connect "
+"the target from the initiator."
+msgstr ""
+
 msgid "Portals"
 msgstr "Portaler"
 
@@ -6020,14 +5992,17 @@ msgstr "Prefiks"
 msgid "Preformatted file system"
 msgstr "Preformatert filsystem"
 
-msgid "Preserve extended attributes"
-msgstr "Behold utvidede attributter"
+msgid "Preserve Extended Attributes"
+msgstr ""
+
+msgid "Preserve Extended attributes"
+msgstr ""
+
+msgid "Preserve Permissions"
+msgstr ""
 
 msgid "Preserve modification times."
 msgstr "Behold endringstidspunkter."
-
-msgid "Preserve permissions"
-msgstr "Behold rettigheter"
 
 msgid "Prevent deep discharge of battery"
 msgstr ""
@@ -6319,6 +6294,9 @@ msgstr ""
 msgid "Remote Module (Source)"
 msgstr ""
 
+msgid "Remote Rsync Daemon"
+msgstr ""
+
 msgid "Remote Rsync Server"
 msgstr "Fjern Rsync tjener"
 
@@ -6327,9 +6305,6 @@ msgstr ""
 
 msgid "Remote Syslog Server"
 msgstr ""
-
-msgid "Remote module (source)"
-msgstr "Fjern modul (kilde)"
 
 msgid "Remote module name"
 msgstr "Fjern modulnavn"
@@ -6343,9 +6318,6 @@ msgstr ""
 
 msgid ""
 "Remote monitoring username. Must be equal on both master and slave system."
-msgstr ""
-
-msgid "Remote rsync daemon"
 msgstr ""
 
 msgid "Removable"
@@ -6406,6 +6378,9 @@ msgid "Rescan"
 msgstr ""
 
 msgid "Rescan Disks"
+msgstr ""
+
+msgid "Rescan Interval"
 msgstr ""
 
 msgid "Rescan interval"
@@ -6474,7 +6449,7 @@ msgstr ""
 msgid "Reverse DNS lookup"
 msgstr "Reversert DNS oppslag"
 
-msgid "Reverse direction"
+msgid "Reverse Direction"
 msgstr ""
 
 msgid "Role"
@@ -6528,9 +6503,6 @@ msgstr "Regel nummer"
 msgid "Rules"
 msgstr "Regler"
 
-msgid "Run as"
-msgstr ""
-
 msgid "Run now"
 msgstr "Kjør nå"
 
@@ -6541,8 +6513,8 @@ msgid "Running"
 msgstr "Kjører"
 
 msgid ""
-"Running the service as user root is not recommended for security reasons, "
-"use at your own risk!"
+"Running this service as root is not recommended for security reasons, use at "
+"your own risk!"
 msgstr ""
 
 msgid "Russian"
@@ -6596,9 +6568,6 @@ msgstr "SSH"
 msgid "SSH events"
 msgstr "SSH saker"
 
-msgid "SSHD"
-msgstr ""
-
 msgid "SSHD log"
 msgstr "SSHD logg"
 
@@ -6647,6 +6616,9 @@ msgstr ""
 msgid "Saved file to"
 msgstr "Lagret fil til"
 
+msgid "Scan Mode"
+msgstr ""
+
 msgid "Scan Targets"
 msgstr ""
 
@@ -6656,9 +6628,6 @@ msgid ""
 "is disabled, a scan can still be forced from the status page of the "
 "administrative web interface."
 msgstr ""
-
-msgid "Scan type"
-msgstr "Skann type"
 
 msgid "Schedule Time"
 msgstr ""
@@ -6804,6 +6773,9 @@ msgstr ""
 msgid "Select the location closest to you."
 msgstr "Velg stedet nærmest deg"
 
+msgid "Select the permission for running this service. (www by default)."
+msgstr ""
+
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
 "the button below to restore the configuration."
@@ -6901,10 +6873,10 @@ msgstr "Tjener beskrivelse. Denne kan vanligvis være tom."
 msgid "Server information"
 msgstr ""
 
-msgid "Server name"
-msgstr "Tjenernavn"
-
 msgid "Server version"
+msgstr ""
+
+msgid "Servers"
 msgstr ""
 
 msgid "Service"
@@ -6953,9 +6925,6 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
 
-msgid "Set under which user the service should run (www by default)."
-msgstr ""
-
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
 
@@ -6973,6 +6942,9 @@ msgstr ""
 
 msgid "Settings"
 msgstr "Innstillinger"
+
+msgid "Setup user to get shell access"
+msgstr ""
 
 msgid "Shadow Copy"
 msgstr ""
@@ -7048,6 +7020,9 @@ msgstr ""
 msgid "Size of send buffer (%d by default)."
 msgstr ""
 
+msgid "Size offered to the initiator. (up to 8EiB=8388608TiB)."
+msgstr ""
+
 msgid ""
 "Size offered to the initiator. (up to 8EiB=8388608TiB. actual size is depend "
 "on your disks.)"
@@ -7056,7 +7031,7 @@ msgstr ""
 msgid "Skew"
 msgstr ""
 
-msgid "Skip first scan"
+msgid "Skip First Scan"
 msgstr ""
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
@@ -7098,6 +7073,9 @@ msgstr ""
 msgid "Sockets"
 msgstr "Kontakter"
 
+msgid "Sockstat"
+msgstr ""
+
 msgid "SoftRaid"
 msgstr "SoftRaid"
 
@@ -7121,9 +7099,6 @@ msgstr "Kildekatalog som skal synkroniseres."
 
 msgid "Source port"
 msgstr "Kildeport"
-
-msgid "Source share"
-msgstr "Kilde deling"
 
 msgid "Space Usage"
 msgstr ""
@@ -7348,7 +7323,7 @@ msgstr "Bytt itl %s/s"
 msgid "Sync"
 msgstr ""
 
-msgid "Synchronization time"
+msgid "Synchronization Time"
 msgstr ""
 
 msgid "Synchronize"
@@ -7417,14 +7392,14 @@ msgstr "System beskjed buffer"
 msgid "System tuning"
 msgstr "System tuning"
 
+msgid "TCP Forwarding"
+msgstr ""
+
 msgid "TCP Port"
 msgstr ""
 
 msgid "TCP Wrapper"
 msgstr ""
-
-msgid "TCP forwarding"
-msgstr "TCP videresending"
 
 msgid "TCP port"
 msgstr "TCP port"
@@ -7455,6 +7430,9 @@ msgstr ""
 
 msgid "Tag"
 msgstr "Tag"
+
+msgid "Tag Number"
+msgstr ""
 
 msgid "Tag number"
 msgstr ""
@@ -7605,6 +7583,9 @@ msgstr "VLAN ID må være mellom 1 og 4094."
 msgid ""
 "The action which will be executed when the packet match the criteria "
 "specified below."
+msgstr ""
+
+msgid "The actual size is depend on your disks."
 msgstr ""
 
 msgid "The administrator has been notified to apply your changes."
@@ -8105,11 +8086,6 @@ msgid ""
 "single share to be used flexibly by each user."
 msgstr ""
 
-msgid ""
-"The port to listen to. The default is to listen to the tftp port specified "
-"in /etc/services."
-msgstr ""
-
 #, php-format
 msgid "The portal '%s' is invalid."
 msgstr ""
@@ -8127,10 +8103,6 @@ msgid ""
 msgstr ""
 
 msgid "The queuedepth range is invalid."
-msgstr ""
-
-#, php-format
-msgid "The recommended length for compatibility is %d."
 msgstr ""
 
 #, php-format
@@ -8237,12 +8209,12 @@ msgstr "Variabelens verdi."
 msgid "The volume must be detached before it can be deleted."
 msgstr "Volumet på bli koblet fra før det kan slettes."
 
+msgid "The work directory does not exist."
+msgstr ""
+
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
 "clients. (maximum 15 characters)."
-msgstr ""
-
-msgid "The working directory does not exist."
 msgstr ""
 
 msgid "There are too many additional groups."
@@ -8313,6 +8285,15 @@ msgstr ""
 
 #, php-format
 msgid "These parameters are added to [Share] section of %s."
+msgstr ""
+
+msgid ""
+"These parameters are added to the hardware-specific part of the driver for "
+"the second UPS."
+msgstr ""
+
+msgid ""
+"These parameters are added to the hardware-specific part of the driver."
 msgstr ""
 
 #, php-format
@@ -9050,6 +9031,9 @@ msgstr "URL"
 msgid "Ukrainian"
 msgstr ""
 
+msgid "Umask"
+msgstr ""
+
 msgid "Unavailable"
 msgstr ""
 
@@ -9107,6 +9091,9 @@ msgstr "Avmonterer..."
 msgid "Up"
 msgstr "Opp"
 
+msgid "Update Period"
+msgstr ""
+
 msgid "Update period"
 msgstr "Oppdaterings periode"
 
@@ -9119,7 +9106,7 @@ msgstr ""
 msgid "Upload Bandwidth"
 msgstr ""
 
-msgid "Upload directory"
+msgid "Upload Directory"
 msgstr ""
 
 #, php-format
@@ -9541,14 +9528,11 @@ msgstr "Joker"
 msgid "Wireless configuration"
 msgstr "Trådløs konfigurasjon"
 
+msgid "Work Directory"
+msgstr ""
+
 msgid "Workgroup"
 msgstr "Arbeidsgruppe"
-
-msgid "Working Directory"
-msgstr ""
-
-msgid "Working directory"
-msgstr ""
 
 msgid "Write"
 msgstr "Skriv"
@@ -9629,7 +9613,8 @@ msgid ""
 msgstr ""
 
 #, php-format
-msgid "You may specify logical block length (%d by default)."
+msgid ""
+"You may specify logical block size. (default is %dB for compatibility)."
 msgstr ""
 
 msgid ""
@@ -9871,17 +9856,24 @@ msgstr ""
 msgid "to"
 msgstr ""
 
-msgid "umask"
-msgstr ""
-
 msgid "umount"
 msgstr "avmontér"
 
-msgid "user"
-msgstr ""
-
 msgid "week days"
 msgstr ""
+
+#~ msgid ""
+#~ "A Auth Group contains authorised users and secrets for additional security."
+#~ msgstr ""
+#~ "En \"Auth\" gruppe inneholder autoriserte brukere og 'hemmeligheter' for "
+#~ "ekstra sikkerhet."
+
+#~ msgid ""
+#~ "A Portal Group contains IP addresses and listening TCP ports to connect the "
+#~ "target from the initiator."
+#~ msgstr ""
+#~ "En portalgruppe inneholder IP adresser og lyttende TCP porter for å koble "
+#~ "ressursen ut fra initiativtageren."
 
 #~ msgid ""
 #~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
@@ -9895,14 +9887,50 @@ msgstr ""
 #~ msgid "AIO write size"
 #~ msgstr "AIO skrivestørrelse"
 
+#~ msgid "Access mode"
+#~ msgstr "Tilgangsmodus"
+
+#~ msgid "All dirs"
+#~ msgstr "Alle kataloger"
+
+#~ msgid "All users will have the root privilege."
+#~ msgstr "Alle brukere vil ha superbrukerprivilegier."
+
+#~ msgid "Allow new files"
+#~ msgstr "Tillatt nye filer"
+
+#~ msgid "Alternate TCP port. Default is 22"
+#~ msgstr "Alternativ TCP port. Standard er 22"
+
+#~ msgid "Alternate TCP port. Default is 873"
+#~ msgstr "Alternativ TCP port. Standard er 873"
+
+#~ msgid "Always scan"
+#~ msgstr "Alltid scan"
+
 #~ msgid "Asynchronous I/O (AIO)"
 #~ msgstr "Asynkron I/O (AIO)"
+
+#~ msgid "Auxiliary parameters"
+#~ msgstr "Hjelpe-parametere"
+
+#~ msgid "CIFS/SMB disabled"
+#~ msgstr "CIFS/SMB deaktivert"
 
 #~ msgid "Create mask"
 #~ msgstr "Lag maske"
 
+#~ msgid "Destination share"
+#~ msgstr "Mål deling"
+
 #~ msgid "Directory mask"
 #~ msgstr "Katalog maske"
+
+#~ msgid "Document root"
+#~ msgstr "Dokument rot"
+
+#~ msgid "Domain name"
+#~ msgstr "Domenenavn"
 
 #~ msgid "Dos charset"
 #~ msgstr "Dos tegnsett"
@@ -9928,11 +9956,20 @@ msgstr ""
 #~ msgid "Enable store DOS attributes"
 #~ msgstr "Slå på lagring av DOS attributter"
 
+#~ msgid "Forced update period"
+#~ msgstr "Tving oppdaterings periode"
+
 #~ msgid "Guest account"
 #~ msgstr "Gjestekonto"
 
 #~ msgid "Hide dot files"
 #~ msgstr "Gjem dot filer"
+
+#~ msgid "Hosts allow"
+#~ msgstr "Verter tillatt"
+
+#~ msgid "Hosts deny"
+#~ msgstr "Verter nektet"
 
 #~ msgid "Inherit permissions"
 #~ msgstr "Arv tillatelser"
@@ -9940,11 +9977,59 @@ msgstr ""
 #~ msgid "Large read/write"
 #~ msgstr "Stor les/skriv"
 
+#~ msgid "Local share (destination)"
+#~ msgstr "Lokal deling (mål)"
+
+#~ msgid "Local shares to be synchronized"
+#~ msgstr "Lokale delinger som skal synkroniseres"
+
+#, php-format
+#~ msgid ""
+#~ "Location where the working files will be stored, e.g. %s/backup/.unison"
+#~ msgstr ""
+#~ "Lokasjon der fungerende filer vil bli lagret, f.eks %s/backup/.unison"
+
+#~ msgid "Logical Block Length"
+#~ msgstr "Logisk Blokklengde"
+
+#~ msgid "Map all users to root"
+#~ msgstr "Map alle brukere til root"
+
+#~ msgid "Map to user"
+#~ msgstr "Map til bruker"
+
+#~ msgid "Max. block size"
+#~ msgstr "Maks. blokk størrelse"
+
+#~ msgid "Max. connections"
+#~ msgstr "Maks tilkoblinger"
+
+#~ msgid "Max. sessions"
+#~ msgstr "Maks sesjoner"
+
+#~ msgid "Maximum connections"
+#~ msgstr "Maksimalt antall tilkoblinger"
+
 #~ msgid "NetBIOS name"
 #~ msgstr "NetBIOS navn"
 
 #~ msgid "Null passwords"
 #~ msgstr "Tomme passord"
+
+#~ msgid "Number of servers"
+#~ msgstr "Antall tjenere"
+
+#~ msgid "Password authentication"
+#~ msgstr "Passord autentikasjon"
+
+#~ msgid "Permit root login"
+#~ msgstr "Tillat root innlogging"
+
+#~ msgid "Preserve extended attributes"
+#~ msgstr "Behold utvidede attributter"
+
+#~ msgid "Preserve permissions"
+#~ msgstr "Behold rettigheter"
 
 #~ msgid "Receive Buffer Size"
 #~ msgstr "Motta Buffer størrelse"
@@ -9952,8 +10037,17 @@ msgstr ""
 #~ msgid "Recycle bin"
 #~ msgstr "Papirkurv"
 
+#~ msgid "Remote module (source)"
+#~ msgstr "Fjern modul (kilde)"
+
+#~ msgid "Scan type"
+#~ msgstr "Skann type"
+
 #~ msgid "Send Buffer Size"
 #~ msgstr "Send Buffer størrelse"
+
+#~ msgid "Server name"
+#~ msgstr "Tjenernavn"
 
 #~ msgid "Set browseable"
 #~ msgstr "Sett søkbar"
@@ -9961,11 +10055,17 @@ msgstr ""
 #~ msgid "Set read only"
 #~ msgstr "Set kun-lese"
 
+#~ msgid "Source share"
+#~ msgstr "Kilde deling"
+
 #~ msgid "Store DOS attributes"
 #~ msgstr "Lagre DOS attributter"
 
 #~ msgid "Swap disabled"
 #~ msgstr "Swap slått av"
+
+#~ msgid "TCP forwarding"
+#~ msgstr "TCP videresending"
 
 #~ msgid "Time server"
 #~ msgstr "Tids tjener"
@@ -9977,6 +10077,13 @@ msgstr ""
 #~ msgstr "WINS tjener"
 
 #~ msgid ""
+#~ "A Initiator Group contains authorised initiator names and networks to access "
+#~ "the target."
+#~ msgstr ""
+#~ "En oppstartsgruppe består av autoriserte initiativtagernavn og nettverk for "
+#~ "å aksessere ressursen."
+
+#~ msgid ""
 #~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
 #~ msgstr ""
 #~ "En gyldig IPv4 adresse må spesifiseres for den primære/sekundære DNS "
@@ -9984,6 +10091,17 @@ msgstr ""
 
 #~ msgid "AIO module"
 #~ msgstr "AIO modul"
+
+#~ msgid "Active Directory List"
+#~ msgstr "Active Directory Liste"
+
+#~ msgid ""
+#~ "A directory listing is generated if a directory is requested and no index-"
+#~ "file (index.php, index.html, index.htm or default.htm) was found in that "
+#~ "directory."
+#~ msgstr ""
+#~ "En filliste blir laget dersom det i forespurte katalog ikke finnes en "
+#~ "indeksfil (index.php, index.html, index.htm eller default.htm)."
 
 #~ msgid "AFP compatibility"
 #~ msgstr "AFP kompabilitet"

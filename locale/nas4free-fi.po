@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-28 02:17+0000\n"
+"POT-Creation-Date: 2017-01-29 13:11+0000\n"
 "PO-Revision-Date: 2016-10-16 11:58+0000\n"
 "Last-Translator: Janne <Unknown>\n"
 "Language-Team: NAS4Free <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-28 01:57+0000\n"
+"X-Launchpad-Export-Date: 2017-01-29 12:21+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: FINLAND\n"
 "X-Poedit-Language: Finnish\n"
@@ -81,13 +81,6 @@ msgstr "%s on jo määritelty asemaksi."
 #, php-format
 msgid "%s is too long."
 msgstr "%s on liian pitkä"
-
-#, php-format
-msgid ""
-"%s must be enabled for Unison to work, and the %s must have shell access."
-msgstr ""
-"%s on käynnistettävä että Unison toimii, ja %s on oltava pääsy "
-"komentoriville."
 
 #, php-format
 msgid "%s of %sB"
@@ -213,25 +206,9 @@ msgid "802.1Q VLAN tag (between 1 and 4094)."
 msgstr "802.1Q VLAN tunniste (1 ja 4094 väliltä)."
 
 msgid ""
-"A Auth Group contains authorised users and secrets for additional security."
-msgstr ""
-"Määräävä Ryhmä sisältää määrääviä käyttäjiä ja salaisuuksia lisätietoturvan "
-"hyväksi."
-
-msgid ""
-"A Initiator Group contains authorised initiator names and networks to access "
-"the target."
-msgstr ""
-
-msgid ""
 "A NTP time server name may only contain the characters a-z, 0-9, '-' and '.'."
 msgstr ""
 "NTP aikapalvelimen nimi voi sisältää vain merkkejä a-z, 0-9, '-' tai '.'."
-
-msgid ""
-"A Portal Group contains IP addresses and listening TCP ports to connect the "
-"target from the initiator."
-msgstr ""
 
 msgid ""
 "A Portal Group is identified by a tag number and defines IP addresses and "
@@ -243,12 +220,9 @@ msgid "A VLAN with the tag %s is already defined on this interface."
 msgstr "Vlan tunnisteella %s on jo määritelty tälle liitännälle."
 
 msgid ""
-"A directory listing is generated if a directory is requested and no index-"
-"file (index.php, index.html, index.htm or default.htm) was found in that "
-"directory."
+"A directory listing is generated when no index-files (index.php, index.html, "
+"index.htm or default.htm) are found in a directory."
 msgstr ""
-"Hakemistolistaus luodaan jos hakemistoa kutsutaan ja se ei sisällä index-"
-"tiedostoa (index.php, index.html, index.htm tai default.htm)."
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -408,9 +382,6 @@ msgstr "Pääsyrajoitukset"
 msgid "Access Time (atime)"
 msgstr "Hakuaika"
 
-msgid "Access mode"
-msgstr "Käyttötila"
-
 msgid "Access the webGUI with the new IP address"
 msgstr ""
 
@@ -438,9 +409,6 @@ msgstr ""
 
 msgid "Active Directory"
 msgstr "Active Directory"
-
-msgid "Active Directory List"
-msgstr ""
 
 msgid "Active Shares"
 msgstr ""
@@ -577,12 +545,10 @@ msgstr ""
 msgid "Additional Network"
 msgstr ""
 
-msgid "Additional Storage"
+msgid "Additional Parameters"
 msgstr ""
 
-msgid ""
-"Additional parameters to the hardware-specific part of the driver for second "
-"UPS."
+msgid "Additional Storage"
 msgstr ""
 
 msgid "Additional parameters to the hardware-specific part of the driver."
@@ -669,6 +635,9 @@ msgstr ""
 msgid "All"
 msgstr "Kaikki"
 
+msgid "All Dirs"
+msgstr ""
+
 msgid "All data from the following statistics have been deleted:"
 msgstr ""
 
@@ -679,9 +648,6 @@ msgstr ""
 
 msgid "All data will be lost when you activate this option!"
 msgstr ""
-
-msgid "All dirs"
-msgstr "Kaikki hakemistot"
 
 #, php-format
 msgid "All dirs requires mounted path, but Path %s is not mounted."
@@ -698,14 +664,14 @@ msgstr ""
 msgid "All software raid disks are imported."
 msgstr ""
 
-msgid "All users will have the root privilege."
-msgstr "Kaikilla käyttäjillä tulee olemaan root-oikeudet."
-
 msgid "Alloc"
 msgstr ""
 
 msgid "Allow"
 msgstr "Salli"
+
+msgid "Allow New Files"
+msgstr ""
 
 msgid "Allow TLS connections only."
 msgstr ""
@@ -718,9 +684,6 @@ msgid ""
 msgstr ""
 
 msgid "Allow clients to resume interrupted uploads and downloads."
-msgstr ""
-
-msgid "Allow new files"
 msgstr ""
 
 msgid "Allow new files to be created."
@@ -762,11 +725,8 @@ msgstr ""
 msgid "Alternate Data Streams"
 msgstr ""
 
-msgid "Alternate TCP port. Default is 22"
-msgstr "Vaihtoehtoinen TCP-portti. Oletus on 22."
-
-msgid "Alternate TCP port. Default is 873"
-msgstr "Vaihtoehtoinen TCP-portti. Oletus on 873."
+msgid "Alternate TCP port. (Default is 873)."
+msgstr ""
 
 msgid "Alternative configuration directory (usually empty)."
 msgstr ""
@@ -777,8 +737,8 @@ msgstr ""
 msgid "Always On"
 msgstr ""
 
-msgid "Always scan"
-msgstr "Skannaa aina"
+msgid "Always Scan"
+msgstr ""
 
 msgid "Ambient Conditions From External Probe Equipment"
 msgstr ""
@@ -937,6 +897,10 @@ msgstr ""
 msgid "Auth Groups"
 msgstr ""
 
+msgid ""
+"Auth Groups contains authorised users and secrets for additional security."
+msgstr ""
+
 msgid "Auth Method"
 msgstr ""
 
@@ -961,6 +925,9 @@ msgid "Authentication"
 msgstr "Todennus"
 
 msgid "Authentication Method"
+msgstr ""
+
+msgid "Authorised Network"
 msgstr ""
 
 msgid "Authorised network"
@@ -996,17 +963,8 @@ msgstr ""
 msgid "Autoselect"
 msgstr "Automaattivalinta"
 
-msgid "Auxiliary Parameter"
-msgstr ""
-
-msgid "Auxiliary Parameters"
-msgstr ""
-
 msgid "Auxiliary device firmware"
 msgstr ""
-
-msgid "Auxiliary parameters"
-msgstr "Lisäparametrit"
 
 msgid "Avail"
 msgstr ""
@@ -1119,6 +1077,10 @@ msgid "Before - File-deletions will be done before the transfer starts."
 msgstr ""
 
 msgid "Before - File-deletions will be performed before the transfer starts."
+msgstr ""
+
+msgid ""
+"Before a Unison Client can start to work, you need to perform the following:"
 msgstr ""
 
 msgid "Best available"
@@ -1242,7 +1204,7 @@ msgstr "CIFS/SMB"
 msgid "CIFS/SMB Information"
 msgstr ""
 
-msgid "CIFS/SMB disabled"
+msgid "CIFS/SMB is disabled."
 msgstr ""
 
 msgid "CIFS/SMB is enabled."
@@ -1510,7 +1472,7 @@ msgstr "Common Internet File System"
 msgid "Community"
 msgstr "Yhteisö"
 
-msgid "Compilations directories"
+msgid "Compilations Directories"
 msgstr ""
 
 msgid "Compiled"
@@ -2222,9 +2184,6 @@ msgstr "Kohdeverkko tälle kiinteälle reitille"
 msgid "Destination port"
 msgstr "Kode portti"
 
-msgid "Destination share"
-msgstr "Kohde jako"
-
 msgid "Destroy a pool"
 msgstr ""
 
@@ -2670,7 +2629,7 @@ msgstr ""
 msgid "Do you want to toggle selected options?"
 msgstr ""
 
-msgid "Document root"
+msgid "Document Root"
 msgstr ""
 
 msgid "Document root of the webserver. Home of the web page files."
@@ -2682,14 +2641,14 @@ msgstr ""
 msgid "Domain"
 msgstr "Toimialue"
 
+msgid "Domain Name"
+msgstr ""
+
 msgid "Domain controller name"
 msgstr "Toimialueen valvojan nimi"
 
 msgid "Domain is missing 2nd level name."
 msgstr ""
-
-msgid "Domain name"
-msgstr "Toimialueen nimi"
 
 msgid "Domain name (DNS/Realm-Name)"
 msgstr "Toimialueen nimi (DNS/Realm-nimi)"
@@ -3113,6 +3072,9 @@ msgstr ""
 msgid "Enable serial console."
 msgstr ""
 
+msgid "Enable service SSH when disabled"
+msgstr ""
+
 msgid "Enable shadow copy."
 msgstr ""
 
@@ -3202,8 +3164,18 @@ msgstr ""
 
 #, php-format
 msgid ""
-"Enter a custom port number if you want to override the default port. Default "
-"port is %s."
+"Enter a custom port number if you want to override the default port. "
+"(Default is %s)."
+msgstr ""
+
+msgid ""
+"Enter a custom port number if you want to override the default port. "
+"(Default is 22)."
+msgstr ""
+
+msgid ""
+"Enter a custom port number if you want to override the default port. "
+"(Default is 69). "
 msgstr ""
 
 msgid "Enter a description"
@@ -3250,6 +3222,11 @@ msgid ""
 msgstr ""
 
 msgid ""
+"Enter the path to the database directory. The config files will be created "
+"under the specified directory."
+msgstr ""
+
+msgid ""
 "Enter the path to the home directory of VirtualBox. VM config and HDD image "
 "will be created under the specified directory."
 msgstr ""
@@ -3257,11 +3234,6 @@ msgstr ""
 msgid ""
 "Enter the path to the home directory of that user. Leave this field empty to "
 "use default path /mnt."
-msgstr ""
-
-msgid ""
-"Enter the path to the home directory. The config will be created under the "
-"specified directory."
 msgstr ""
 
 msgid ""
@@ -3589,8 +3561,8 @@ msgstr ""
 msgid "Force use"
 msgstr ""
 
-msgid "Forced update period"
-msgstr "Pakota päivitysväli"
+msgid "Forced Update Period"
+msgstr ""
 
 msgid ""
 "Forces use of vdevs, even if they appear in use or specify different size. "
@@ -3733,6 +3705,9 @@ msgstr "Ryhmä"
 msgid "Group Allow"
 msgstr ""
 
+msgid "Group Compilations"
+msgstr ""
+
 msgid "Group ID"
 msgstr "Ryhmätunniste ID"
 
@@ -3740,9 +3715,6 @@ msgid "Group Settings"
 msgstr ""
 
 msgid "Group Suffix"
-msgstr ""
-
-msgid "Group compilations"
 msgstr ""
 
 msgid "Group is locked"
@@ -3899,12 +3871,6 @@ msgstr ""
 
 msgid "Hosts Setup"
 msgstr ""
-
-msgid "Hosts allow"
-msgstr "Palvelimen sallinnat"
-
-msgid "Hosts deny"
-msgstr "Palvelimen estot"
 
 msgid "Hour"
 msgstr ""
@@ -4181,6 +4147,11 @@ msgid "Initiator Group Settings"
 msgstr ""
 
 msgid "Initiator Groups"
+msgstr ""
+
+msgid ""
+"Initiator Groups contains authorised initiator names and networks to access "
+"the target."
 msgstr ""
 
 msgid ""
@@ -4595,12 +4566,6 @@ msgstr ""
 msgid "Local User"
 msgstr "Paikallinen käyttäjä"
 
-msgid "Local share (destination)"
-msgstr "Paikallinen jako (kohde)"
-
-msgid "Local shares to be synchronized"
-msgstr ""
-
 msgid "Location"
 msgstr "Sijainti"
 
@@ -4621,8 +4586,10 @@ msgid "Location where the content database file will be stored."
 msgstr ""
 
 #, php-format
-msgid ""
-"Location where the working files will be stored, e.g. %s/backup/.unison"
+msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
+msgstr ""
+
+msgid "Locked Files"
 msgstr ""
 
 msgid "Log"
@@ -4649,7 +4616,7 @@ msgstr ""
 msgid "Logarithmic Scaling"
 msgstr ""
 
-msgid "Logical Block Length"
+msgid "Logical Block"
 msgstr ""
 
 #, php-format
@@ -4763,13 +4730,16 @@ msgstr "Valmistaja"
 msgid "Manufacturing date"
 msgstr ""
 
-msgid "Map all users to root"
+msgid "Map all users to root, all users will have root privileges."
 msgstr ""
 
 msgid "Map to Guest"
 msgstr ""
 
-msgid "Map to user"
+msgid "Map to Root"
+msgstr ""
+
+msgid "Map to User"
 msgstr ""
 
 msgid "Mapping DOS Attributes"
@@ -4792,7 +4762,13 @@ msgstr ""
 msgid "Max Entries"
 msgstr ""
 
+msgid "Max. Block Size"
+msgstr ""
+
 msgid "Max. Clients"
+msgstr ""
+
+msgid "Max. Connections"
 msgstr ""
 
 msgid "Max. Connections Per Host"
@@ -4804,19 +4780,13 @@ msgstr ""
 msgid "Max. Passive Port"
 msgstr ""
 
+msgid "Max. Sessions"
+msgstr ""
+
 msgid "Max. TTL"
 msgstr ""
 
-msgid "Max. block size"
-msgstr ""
-
-msgid "Max. connections"
-msgstr "Enimmäismäärä yhteyksiä"
-
 msgid "Max. pre-send R2T"
-msgstr ""
-
-msgid "Max. sessions"
 msgstr ""
 
 msgid ""
@@ -4837,9 +4807,6 @@ msgstr ""
 
 msgid "Maximum Performance, Maximum Acoustic Output"
 msgstr ""
-
-msgid "Maximum connections"
-msgstr "Yhteyksien enimmäismäärä"
 
 msgid "Maximum frequency"
 msgstr ""
@@ -5165,6 +5132,9 @@ msgstr ""
 msgid "Netgraph"
 msgstr "Verkkografiikka"
 
+msgid "Netstat"
+msgstr ""
+
 msgid "Network"
 msgstr "Verkko"
 
@@ -5447,9 +5417,6 @@ msgid ""
 "the maximum physical erase cycles the drive is designed to endure."
 msgstr ""
 
-msgid "Number of servers"
-msgstr "Palvelimien  määrrä"
-
 msgid "Numeric identifier of the group."
 msgstr ""
 
@@ -5670,6 +5637,9 @@ msgstr "Salasana"
 msgid "Password (confirmed)"
 msgstr "Password (varmistettu)"
 
+msgid "Password Authentication"
+msgstr ""
+
 msgid "Password Encryption"
 msgstr ""
 
@@ -5678,9 +5648,6 @@ msgstr ""
 
 msgid "Password Suffix"
 msgstr ""
-
-msgid "Password authentication"
-msgstr "Salasanan todennus"
 
 msgid ""
 "Password does not match the confirmation password. Please ensure both "
@@ -5715,6 +5682,9 @@ msgstr "Polku"
 msgid "Path of the URL relative to document root."
 msgstr ""
 
+msgid "Path to be shared to be synchronized."
+msgstr ""
+
 msgid "Path to be shared."
 msgstr ""
 
@@ -5744,11 +5714,11 @@ msgstr "Suorituskyvyn asetukset"
 msgid "Permanent samba data path (e.g. %s)."
 msgstr ""
 
-msgid "Permit Root Login"
+msgid "Permission"
 msgstr ""
 
-msgid "Permit root login"
-msgstr "Salli pääkäyttäjän (root) kirjautuminen"
+msgid "Permit Root Login"
+msgstr ""
 
 msgid "Permit to do SSH Tunneling."
 msgstr ""
@@ -5921,6 +5891,11 @@ msgstr ""
 msgid "Portal Groups"
 msgstr ""
 
+msgid ""
+"Portal Groups contains IP addresses and listening on TCP ports to connect "
+"the target from the initiator."
+msgstr ""
+
 msgid "Portals"
 msgstr ""
 
@@ -5969,14 +5944,17 @@ msgstr "Etuliite"
 msgid "Preformatted file system"
 msgstr "Valmiiksi alustettu tiedostojärjestelmä"
 
-msgid "Preserve extended attributes"
-msgstr "Säilytä laajennetut määritteet"
+msgid "Preserve Extended Attributes"
+msgstr ""
+
+msgid "Preserve Extended attributes"
+msgstr ""
+
+msgid "Preserve Permissions"
+msgstr ""
 
 msgid "Preserve modification times."
 msgstr ""
-
-msgid "Preserve permissions"
-msgstr "Säilytä käyttöoikeudet"
 
 msgid "Prevent deep discharge of battery"
 msgstr "Älä anna akun tyhjentyä kokonaan"
@@ -6268,6 +6246,9 @@ msgstr "Etäosoite"
 msgid "Remote Module (Source)"
 msgstr ""
 
+msgid "Remote Rsync Daemon"
+msgstr ""
+
 msgid "Remote Rsync Server"
 msgstr ""
 
@@ -6275,9 +6256,6 @@ msgid "Remote Syslog Messages"
 msgstr ""
 
 msgid "Remote Syslog Server"
-msgstr ""
-
-msgid "Remote module (source)"
 msgstr ""
 
 msgid "Remote module name"
@@ -6292,9 +6270,6 @@ msgstr ""
 
 msgid ""
 "Remote monitoring username. Must be equal on both master and slave system."
-msgstr ""
-
-msgid "Remote rsync daemon"
 msgstr ""
 
 msgid "Removable"
@@ -6351,6 +6326,9 @@ msgid "Rescan"
 msgstr ""
 
 msgid "Rescan Disks"
+msgstr ""
+
+msgid "Rescan Interval"
 msgstr ""
 
 msgid "Rescan interval"
@@ -6419,7 +6397,7 @@ msgstr ""
 msgid "Reverse DNS lookup"
 msgstr ""
 
-msgid "Reverse direction"
+msgid "Reverse Direction"
 msgstr ""
 
 msgid "Role"
@@ -6473,9 +6451,6 @@ msgstr "Sääntö numero"
 msgid "Rules"
 msgstr "Säännöt"
 
-msgid "Run as"
-msgstr ""
-
 msgid "Run now"
 msgstr "Käynnistä nyt"
 
@@ -6486,8 +6461,8 @@ msgid "Running"
 msgstr "Käynnissä"
 
 msgid ""
-"Running the service as user root is not recommended for security reasons, "
-"use at your own risk!"
+"Running this service as root is not recommended for security reasons, use at "
+"your own risk!"
 msgstr ""
 
 msgid "Russian"
@@ -6541,9 +6516,6 @@ msgstr "SSH"
 msgid "SSH events"
 msgstr "SSH tapahtumat"
 
-msgid "SSHD"
-msgstr ""
-
 msgid "SSHD log"
 msgstr "SSHD loki"
 
@@ -6592,6 +6564,9 @@ msgstr ""
 msgid "Saved file to"
 msgstr ""
 
+msgid "Scan Mode"
+msgstr ""
+
 msgid "Scan Targets"
 msgstr ""
 
@@ -6601,9 +6576,6 @@ msgid ""
 "is disabled, a scan can still be forced from the status page of the "
 "administrative web interface."
 msgstr ""
-
-msgid "Scan type"
-msgstr "Haku muoto"
 
 msgid "Schedule Time"
 msgstr ""
@@ -6749,6 +6721,9 @@ msgstr ""
 msgid "Select the location closest to you."
 msgstr ""
 
+msgid "Select the permission for running this service. (www by default)."
+msgstr ""
+
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
 "the button below to restore the configuration."
@@ -6846,10 +6821,10 @@ msgstr ""
 msgid "Server information"
 msgstr ""
 
-msgid "Server name"
-msgstr "Palvelimen nimi"
-
 msgid "Server version"
+msgstr ""
+
+msgid "Servers"
 msgstr ""
 
 msgid "Service"
@@ -6898,9 +6873,6 @@ msgstr ""
 msgid "Set title scrolling speed between 0-10 (default 10)."
 msgstr ""
 
-msgid "Set under which user the service should run (www by default)."
-msgstr ""
-
 msgid "Sets an alternate mount point for the root dataset. Default is /mnt."
 msgstr ""
 
@@ -6916,6 +6888,9 @@ msgstr ""
 
 msgid "Settings"
 msgstr "Asetukset"
+
+msgid "Setup user to get shell access"
+msgstr ""
 
 msgid "Shadow Copy"
 msgstr ""
@@ -6991,6 +6966,9 @@ msgstr ""
 msgid "Size of send buffer (%d by default)."
 msgstr ""
 
+msgid "Size offered to the initiator. (up to 8EiB=8388608TiB)."
+msgstr ""
+
 msgid ""
 "Size offered to the initiator. (up to 8EiB=8388608TiB. actual size is depend "
 "on your disks.)"
@@ -6999,7 +6977,7 @@ msgstr ""
 msgid "Skew"
 msgstr ""
 
-msgid "Skip first scan"
+msgid "Skip First Scan"
 msgstr ""
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
@@ -7041,6 +7019,9 @@ msgstr "Tilannevedokset"
 msgid "Sockets"
 msgstr ""
 
+msgid "Sockstat"
+msgstr ""
+
 msgid "SoftRaid"
 msgstr ""
 
@@ -7064,9 +7045,6 @@ msgstr ""
 
 msgid "Source port"
 msgstr "Lähteen portti"
-
-msgid "Source share"
-msgstr "Lähteen jako"
 
 msgid "Space Usage"
 msgstr "Tilankäyttö"
@@ -7287,7 +7265,7 @@ msgstr ""
 msgid "Sync"
 msgstr "Synkronoi"
 
-msgid "Synchronization time"
+msgid "Synchronization Time"
 msgstr ""
 
 msgid "Synchronize"
@@ -7356,13 +7334,13 @@ msgstr "Järjestelmän  viesti puskuri"
 msgid "System tuning"
 msgstr "Järjestelmän hienosäätö"
 
+msgid "TCP Forwarding"
+msgstr ""
+
 msgid "TCP Port"
 msgstr ""
 
 msgid "TCP Wrapper"
-msgstr ""
-
-msgid "TCP forwarding"
 msgstr ""
 
 msgid "TCP port"
@@ -7394,6 +7372,9 @@ msgstr ""
 
 msgid "Tag"
 msgstr "Tunniste"
+
+msgid "Tag Number"
+msgstr ""
 
 msgid "Tag number"
 msgstr ""
@@ -7544,6 +7525,9 @@ msgstr ""
 msgid ""
 "The action which will be executed when the packet match the criteria "
 "specified below."
+msgstr ""
+
+msgid "The actual size is depend on your disks."
 msgstr ""
 
 msgid "The administrator has been notified to apply your changes."
@@ -8045,11 +8029,6 @@ msgid ""
 "single share to be used flexibly by each user."
 msgstr ""
 
-msgid ""
-"The port to listen to. The default is to listen to the tftp port specified "
-"in /etc/services."
-msgstr ""
-
 #, php-format
 msgid "The portal '%s' is invalid."
 msgstr ""
@@ -8067,10 +8046,6 @@ msgid ""
 msgstr ""
 
 msgid "The queuedepth range is invalid."
-msgstr ""
-
-#, php-format
-msgid "The recommended length for compatibility is %d."
 msgstr ""
 
 #, php-format
@@ -8177,12 +8152,12 @@ msgstr "Muuttujan arvo."
 msgid "The volume must be detached before it can be deleted."
 msgstr ""
 
+msgid "The work directory does not exist."
+msgstr ""
+
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
 "clients. (maximum 15 characters)."
-msgstr ""
-
-msgid "The working directory does not exist."
 msgstr ""
 
 msgid "There are too many additional groups."
@@ -8249,6 +8224,15 @@ msgstr ""
 
 #, php-format
 msgid "These parameters are added to [Share] section of %s."
+msgstr ""
+
+msgid ""
+"These parameters are added to the hardware-specific part of the driver for "
+"the second UPS."
+msgstr ""
+
+msgid ""
+"These parameters are added to the hardware-specific part of the driver."
 msgstr ""
 
 #, php-format
@@ -8978,6 +8962,9 @@ msgstr "URL"
 msgid "Ukrainian"
 msgstr ""
 
+msgid "Umask"
+msgstr ""
+
 msgid "Unavailable"
 msgstr ""
 
@@ -9035,6 +9022,9 @@ msgstr "Poistetaan liitosta"
 msgid "Up"
 msgstr "Ylös"
 
+msgid "Update Period"
+msgstr ""
+
 msgid "Update period"
 msgstr "Päivitysväli"
 
@@ -9047,7 +9037,7 @@ msgstr ""
 msgid "Upload Bandwidth"
 msgstr ""
 
-msgid "Upload directory"
+msgid "Upload Directory"
 msgstr ""
 
 #, php-format
@@ -9463,14 +9453,11 @@ msgstr "Asteriksi"
 msgid "Wireless configuration"
 msgstr "Langattomanverkon asetukset"
 
+msgid "Work Directory"
+msgstr ""
+
 msgid "Workgroup"
 msgstr "Työryhmä"
-
-msgid "Working Directory"
-msgstr ""
-
-msgid "Working directory"
-msgstr ""
 
 msgid "Write"
 msgstr "Kirjoitus"
@@ -9551,7 +9538,8 @@ msgid ""
 msgstr ""
 
 #, php-format
-msgid "You may specify logical block length (%d by default)."
+msgid ""
+"You may specify logical block size. (default is %dB for compatibility)."
 msgstr ""
 
 msgid ""
@@ -9794,17 +9782,19 @@ msgstr ""
 msgid "to"
 msgstr "kohteelle"
 
-msgid "umask"
-msgstr ""
-
 msgid "umount"
-msgstr ""
-
-msgid "user"
 msgstr ""
 
 msgid "week days"
 msgstr ""
+
+#~ msgid ""
+#~ "A directory listing is generated if a directory is requested and no index-"
+#~ "file (index.php, index.html, index.htm or default.htm) was found in that "
+#~ "directory."
+#~ msgstr ""
+#~ "Hakemistolistaus luodaan jos hakemistoa kutsutaan ja se ei sisällä index-"
+#~ "tiedostoa (index.php, index.html, index.htm tai default.htm)."
 
 #~ msgid ""
 #~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
@@ -9818,11 +9808,35 @@ msgstr ""
 #~ "Ensi-/toissijaiselle nimipalvelimelle täytyy määritellä kelvollinen IPv6-"
 #~ "osoite."
 
+#~ msgid "Access mode"
+#~ msgstr "Käyttötila"
+
+#~ msgid "All dirs"
+#~ msgstr "Kaikki hakemistot"
+
+#~ msgid "All users will have the root privilege."
+#~ msgstr "Kaikilla käyttäjillä tulee olemaan root-oikeudet."
+
+#~ msgid "Alternate TCP port. Default is 22"
+#~ msgstr "Vaihtoehtoinen TCP-portti. Oletus on 22."
+
+#~ msgid "Alternate TCP port. Default is 873"
+#~ msgstr "Vaihtoehtoinen TCP-portti. Oletus on 873."
+
+#~ msgid "Auxiliary parameters"
+#~ msgstr "Lisäparametrit"
+
 #~ msgid "Create mask"
 #~ msgstr "Luo maski"
 
+#~ msgid "Destination share"
+#~ msgstr "Kohde jako"
+
 #~ msgid "Directory mask"
 #~ msgstr "Hakemiston maski"
+
+#~ msgid "Domain name"
+#~ msgstr "Toimialueen nimi"
 
 #~ msgid "Dos charset"
 #~ msgstr "Dos merkistö"
@@ -9839,8 +9853,23 @@ msgstr ""
 #~ msgid "Enable store DOS attributes"
 #~ msgstr "Ota DOS määritteiden tallennus käyttöön."
 
+#~ msgid "Forced update period"
+#~ msgstr "Pakota päivitysväli"
+
 #~ msgid "Guest account"
 #~ msgstr "Vieras tili"
+
+#~ msgid "Hosts allow"
+#~ msgstr "Palvelimen sallinnat"
+
+#~ msgid "Hosts deny"
+#~ msgstr "Palvelimen estot"
+
+#~ msgid "Local share (destination)"
+#~ msgstr "Paikallinen jako (kohde)"
+
+#~ msgid "Maximum connections"
+#~ msgstr "Yhteyksien enimmäismäärä"
 
 #~ msgid "NetBIOS name"
 #~ msgstr "NetBIOS nimi"
@@ -9848,11 +9877,29 @@ msgstr ""
 #~ msgid "Null passwords"
 #~ msgstr "Tyhjät salasanat"
 
+#~ msgid "Number of servers"
+#~ msgstr "Palvelimien  määrrä"
+
+#~ msgid "Password authentication"
+#~ msgstr "Salasanan todennus"
+
+#~ msgid "Preserve extended attributes"
+#~ msgstr "Säilytä laajennetut määritteet"
+
+#~ msgid "Preserve permissions"
+#~ msgstr "Säilytä käyttöoikeudet"
+
 #~ msgid "Receive Buffer Size"
 #~ msgstr "Vanstaanottopuskurin koko"
 
 #~ msgid "Recycle bin"
 #~ msgstr "Roskakori"
+
+#~ msgid "Scan type"
+#~ msgstr "Haku muoto"
+
+#~ msgid "Source share"
+#~ msgstr "Lähteen jako"
 
 #~ msgid "Store DOS attributes"
 #~ msgstr "Tallenna DOS määritteet"
@@ -9869,6 +9916,15 @@ msgstr ""
 #~ msgid "WINS server"
 #~ msgstr "WINS palvelin"
 
+#~ msgid ""
+#~ "A Auth Group contains authorised users and secrets for additional security."
+#~ msgstr ""
+#~ "Määräävä Ryhmä sisältää määrääviä käyttäjiä ja salaisuuksia lisätietoturvan "
+#~ "hyväksi."
+
+#~ msgid "Always scan"
+#~ msgstr "Skannaa aina"
+
 #~ msgid "Asynchronous I/O (AIO)"
 #~ msgstr "Asynkroninen I/O"
 
@@ -9880,3 +9936,19 @@ msgstr ""
 
 #~ msgid "AIO module"
 #~ msgstr "AIO moduuli"
+
+#~ msgid "Max. connections"
+#~ msgstr "Enimmäismäärä yhteyksiä"
+
+#~ msgid "Permit root login"
+#~ msgstr "Salli pääkäyttäjän (root) kirjautuminen"
+
+#~ msgid "Server name"
+#~ msgstr "Palvelimen nimi"
+
+#, php-format
+#~ msgid ""
+#~ "%s must be enabled for Unison to work, and the %s must have shell access."
+#~ msgstr ""
+#~ "%s on käynnistettävä että Unison toimii, ja %s on oltava pääsy "
+#~ "komentoriville."
