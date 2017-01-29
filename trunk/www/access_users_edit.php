@@ -224,7 +224,7 @@ function get_nextuser_id() {
 						$grouplist[$groupv] = $groupk;
 					endforeach;
 					html_combobox("primarygroup", gtext("Primary Group"), $pconfig['primarygroup'], $grouplist, gtext("Set the account's primary group to the given group."), true);
-					html_listbox("group", gtext("Additional Group"), !empty($pconfig['group']) ? $pconfig['group'] : array(), $grouplist, gtext("Set additional group memberships for this account.")."<br />".gtext("Note: Ctrl-click (or command-click on the Mac) to select and deselect groups."));
+					html_listbox("group", gtext("Additional Group"), !empty($pconfig['group']) ? $pconfig['group'] : [], $grouplist, gtext("Set additional group memberships for this account.")."<br />".gtext("Note: Ctrl-click (or command-click on the Mac) to select and deselect groups."));
 					html_filechooser("homedir", gtext("Home Directory"), $pconfig['homedir'], gtext("Enter the path to the home directory of that user. Leave this field empty to use default path /mnt."), $g['media_path'], false, 60);
 					html_checkbox("userportal", gtext("User Portal"), !empty($pconfig['userportal']) ? true : false, gtext("Grant access to the user portal."), "", false);
 					?>

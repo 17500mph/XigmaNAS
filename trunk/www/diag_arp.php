@@ -60,7 +60,7 @@ $resolve = isset($config['syslogd']['resolve']);
 
 $fp = @fopen("{$g['vardb_path']}/dhcpd.leases","r");
 if ($fp) {
-	$return = array();
+	$return = [];
 
 	while ($line = fgets($fp)) {
 		$matches = "";
@@ -84,13 +84,13 @@ if ($fp) {
 		do {
 			if (preg_match("/^\s*\"([^\"]*)\"(.*)$/", $line, $matches)) {
 				$line = $matches[2];
-				$return[] = array($matches[1], 0);
+				$return[] = [$matches[1], 0];
 			} else if (preg_match("/^\s*([{};])(.*)$/", $line, $matches)) {
 				$line = $matches[2];
-				$return[] = array($matches[0], 1);
+				$return[] = [$matches[0], 1];
 			} else if (preg_match("/^\s*([^{}; \t]+)(.*)$/", $line, $matches)) {
 				$line = $matches[2];
-				$return[] = array($matches[1], 0);
+				$return[] = [$matches[1], 0];
 			} else
 				break;
 
@@ -101,7 +101,7 @@ if ($fp) {
 
 	fclose($fp);
 
-	$leases = array();
+	$leases = [];
 	$i = 0;
 
 	// Put everything together again
@@ -146,8 +146,8 @@ if ($fp) {
 	}
 
 	// Put this in an easy to use form
-	$dhcpmac = array();
-	$dhcpip = array();
+	$dhcpmac = [];
+	$dhcpip = [];
 
 	foreach ($leases as $value) {
 		$dhcpmac[$value['mac']] = $value['hostname'];
@@ -160,7 +160,7 @@ if ($fp) {
 exec("/usr/sbin/arp -an",$rawdata);
 
 $i = 0;
-$ifdescrs = array('lan' => 'LAN');
+$ifdescrs = ['lan' => 'LAN'];
 
 for ($j = 1; isset($config['interfaces']['opt' . $j]); $j++) {
 	$ifdescrs['opt' . $j] = $config['interfaces']['opt' . $j]['descr'];
@@ -170,13 +170,13 @@ foreach ($ifdescrs as $key => $interface) {
 	$hwif[get_ifname($config['interfaces'][$key]['if'])] = $interface;
 }
 
-$data = array();
+$data = [];
 foreach ($rawdata as $line) {
 	$elements = explode(' ',$line);
 
 	if ($elements[3] != "(incomplete)") {
-		$arpent = array();
-		$arpent['ip'] = trim(str_replace(array('(',')'),'',$elements[1]));
+		$arpent = [];
+		$arpent['ip'] = trim(str_replace(['(',')'],'',$elements[1]));
 		$arpent['mac'] = trim($elements[3]);
 		$arpent['interface'] = trim($elements[5]);
 		$data[] = $arpent;
