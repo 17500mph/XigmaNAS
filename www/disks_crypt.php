@@ -132,7 +132,7 @@ $pgtitle = [gtext('Disks'),gtext('Encryption'),gtext('Management')];
         <?php if (updatenotify_exists_mode("geli", UPDATENOTIFY_MODE_DIRTY)) print_warning_box(gtext("Warning: You are going to delete an encrypted volume. All data will get lost and can not be recovered."));?>
         <?php if (updatenotify_exists("geli")) print_config_change_box();?>
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
-	<?php html_titleline2(gtext('Overview'), 5);?>
+	<?php html_titleline2(gtext('Encryption Management'), 5);?>
           <tr>
             <td width="25%" class="listhdrlr"><?=gtext("Disk"); ?></td>
             <td width="25%" class="listhdrr"><?=gtext("Data Integrity"); ?></td>
