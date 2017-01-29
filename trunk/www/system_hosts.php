@@ -34,7 +34,7 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-$pgtitle = [gtext('Network'), gtext('Hosts')];
+$pgtitle = [gtext('Network'),gtext('Hosts')];
 
 if ($_POST) {
 	if (isset($_POST['Submit']) && $_POST['Submit']) {
@@ -113,12 +113,12 @@ function hosts_process_updatenotification($mode, $data) {
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 				<?php html_titleline2(gtext('Hosts'), 2);?>
 					<tr>
-						<td width="22%" valign="top" class="vncell"><?=gtext("Hostname database");?></td>
+						<td width="22%" valign="top" class="vncell"><?=gtext("Hostname Database");?></td>
 						<td width="78%" class="vtable">
 							<table width="100%" border="0" cellpadding="0" cellspacing="0">
 								<tr>
 									<td width="25%" class="listhdrlr"><?=gtext("Hostname");?></td>
-									<td width="30%" class="listhdrr"><?=gtext("IP address");?></td>
+									<td width="30%" class="listhdrr"><?=gtext("IP Address");?></td>
 									<td width="35%" class="listhdrr"><?=gtext("Description");?></td>
 									<td width="10%" class="list"></td>
 								</tr>
@@ -152,7 +152,7 @@ function hosts_process_updatenotification($mode, $data) {
 					$helpinghand = '<a href="' . 'http://www.freebsd.org/doc/en/books/handbook/tcpwrappers.html' . '" target="_blank">'
 						. gtext('Check the FreeBSD documentation for detailed information about TCP Wrappers')
 						. '</a>.';
-					html_textarea("hostsacl", gtext("Host access control"), $pconfig['hostsacl'], gtext("The basic configuration usually takes the form of 'daemon : address : action'. Where daemon is the daemon name of the service started. The address can be a valid hostname, an IP address or an IPv6 address enclosed in brackets. The action field can be either allow or deny to grant or deny access appropriately. Keep in mind that configuration works off a first rule match semantic, meaning that the configuration file is scanned in ascending order for a matching rule. When a match is found the rule is applied and the search process will halt.") . " " . $helpinghand, false, 80, 8, false, false);?>
+					html_textarea("hostsacl", gtext("Host Access Control"), $pconfig['hostsacl'], gtext("The basic configuration usually takes the form of 'daemon : address : action'. Where daemon is the daemon name of the service started. The address can be a valid hostname, an IP address or an IPv6 address enclosed in brackets. The action field can be either allow or deny to grant or deny access appropriately. Keep in mind that configuration works off a first rule match semantic, meaning that the configuration file is scanned in ascending order for a matching rule. When a match is found the rule is applied and the search process will halt.") . " " . $helpinghand, false, 80, 8, false, false);?>
 				</table>
 				<div id="submit">
 					<input name="Submit" type="submit" class="formbtn" value="<?=gtext("Save and Restart");?>" />
