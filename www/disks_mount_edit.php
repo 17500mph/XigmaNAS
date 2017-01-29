@@ -144,43 +144,43 @@ if ($_POST) {
 	// Input validation
 	switch ($_POST['type']) {
 		case "disk":
-			$reqdfields = explode(" ", "mdisk partitiontype fstype sharename");
-			$reqdfieldsn = array(gtext("Disk"), gtext("Partition type"), gtext("File system"), gtext("Mount point name"));
-			$reqdfieldst = explode(" ", "string string string string");
+			$reqdfields = ['mdisk','partitiontype','fstype','sharename'];
+			$reqdfieldsn = [gtext('Disk'),gtext('Partition type'),gtext('File system'),gtext('Mount point name')];
+			$reqdfieldst = ['string','string','string','string'];
 			switch ($_POST['partitiontype']) {
 				case 'p':
 				case 's':
-					$reqdfields = array_merge($reqdfields, explode(" ", "partitionnum"));
-					$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Partition number")));
-					$reqdfieldst = array_merge($reqdfieldst, explode(" ", "numeric"));
+					$reqdfields = array_merge($reqdfields,['partitionnum']);
+					$reqdfieldsn = array_merge($reqdfieldsn,[gtext('Partition number')]);
+					$reqdfieldst = array_merge($reqdfieldst,['numeric']);
 					break;
 			}
 			break;
 
 		case "hvol":
-			$reqdfields = explode(" ", "hvol partitiontype fstype sharename");
-			$reqdfieldsn = array(gtext("HAST volume"), gtext("Partition type"), gtext("File system"), gtext("Mount point name"));
-			$reqdfieldst = explode(" ", "string string string string");
+			$reqdfields = ['hvol','partitiontype','fstype','sharename'];
+			$reqdfieldsn = [gtext('HAST volume'),gtext('Partition type'),gtext('File system'),gtext('Mount point name')];
+			$reqdfieldst = ['string','string','string','string'];
 			switch ($_POST['partitiontype']) {
 				case 'p':
 				case 's':
-					$reqdfields = array_merge($reqdfields, explode(" ", "partitionnum"));
-					$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Partition number")));
-					$reqdfieldst = array_merge($reqdfieldst, explode(" ", "numeric"));
+					$reqdfields = array_merge($reqdfields,['partitionnum']);
+					$reqdfieldsn = array_merge($reqdfieldsn,[gtext('Partition number')]);
+					$reqdfieldst = array_merge($reqdfieldst,['numeric']);
 					break;
 			}
 			break;
 
 		case "iso":
-			$reqdfields = explode(" ", "filename sharename");
-			$reqdfieldsn = array(gtext("Filename"), gtext("Mount point name"));
-			$reqdfieldst = explode(" ", "string string");
+			$reqdfields = ['filename','sharename'];
+			$reqdfieldsn = [gtext('Filename'),gtext('Mount point name')];
+			$reqdfieldst = ['string','string'];
 			break;
 
 		case "custom":
-			$reqdfields = explode(" ", "devname fstype sharename");
-			$reqdfieldsn = array(gtext("Device / Label"), gtext("File system"), gtext("Mount point name"));
-			$reqdfieldst = explode(" ", "string string string");
+			$reqdfields = ['devname','fstype','sharename'];
+			$reqdfieldsn = [gtext('Device / Label'),gtext('File system'),gtext('Mount point name')];
+			$reqdfieldst = ['string','string','string'];
 			break;
 	}
 
