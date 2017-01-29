@@ -38,25 +38,26 @@
 require 'auth.inc';
 require 'guiconfig.inc';
 
-function get_raidinfo() {
-	exec("/sbin/gconcat list",$rawdata);
-	return implode("\n", $rawdata);
+function disks_raid_gconcat_info_ajax() {
+	$cmd = '/sbin/gconcat list';
+	mwexec2($cmd,$rawdata);
+	return implode("\n",$rawdata);
 }
-
-if (is_ajax()) {
-	$raidinfo = get_raidinfo();
-	render_ajax($raidinfo);
-}
+if(is_ajax()):
+	$status = disks_raid_gconcat_info_ajax();
+	render_ajax($status);
+endif;
 $pgtitle = [gtext('Disks'),gtext('Software RAID'),gtext('JBOD'),gtext('Information')];
-
 ?>
 <?php include 'fbegin.inc';?>
 <script type="text/javascript">
 //<![CDATA[
 $(document).ready(function(){
 	var gui = new GUI;
-	gui.recall(0, 5000, 'disks_raid_gconcat_info.php', null, function(data) {
-		$('#raidinfo').text(data.data);
+	gui.recall(5000, 5000, 'disks_raid_gconcat_info.php', null, function(data) {
+		if ($('#area_refresh').length > 0) {
+			$('#area_refresh').text(data.data);
+		}
 	});
 });
 //]]>
@@ -74,12 +75,21 @@ $(document).ready(function(){
 </tbody></table>
 <table id="area_data"><tbody><tr><td id="area_data_frame">
 	<table class="area_data_settings">
-		<?php html_titleline(gtext('JBOD Information & Status'));?>
-		<tr>
-			<td class="listt">
-				<pre><span id="raidinfo"></span></pre>
-			</td>
-		</tr>
+		<colgroup>
+			<col class="area_data_settings_col_tag">
+			<col class="area_data_settings_col_data">
+		</colgroup>
+		<thead>
+			<?php html_titleline(gtext('JBOD Information & Status'));?>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="celltag"><?=gtext('Information');?></td>
+				<td class="celldata">
+					<pre><span id="area_refresh"><?=disks_raid_gconcat_info_ajax();?></span></pre>
+				</td>
+			</tr>
+		</tbody>
 	</table>
 </td></tr></tbody></table>
 <?php include 'fend.inc';?>
