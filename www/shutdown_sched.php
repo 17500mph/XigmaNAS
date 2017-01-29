@@ -141,7 +141,7 @@ function enable_change(enable_change) {
 									<td class="listhdrr"><?=gtext("Hours");?></td>
 									<td class="listhdrr"><?=gtext("Days");?></td>
 									<td class="listhdrr"><?=gtext("Months");?></td>
-									<td class="listhdrr"><?=gtext("Week days");?></td>
+									<td class="listhdrr"><?=gtext("Week Days");?></td>
 								</tr>
 								<tr>
 									<td class="listlr">
