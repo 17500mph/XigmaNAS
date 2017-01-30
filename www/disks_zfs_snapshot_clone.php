@@ -98,7 +98,7 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 function zfsclone_process_updatenotification($mode, $data) {
 	global $config;
 
-	$ret = ["output' => [],'retval' => 0];
+	$ret = ['output' => [],'retval' => 0];
 
 	switch ($mode) {
 		case UPDATENOTIFY_MODE_NEW:
