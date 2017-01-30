@@ -33,11 +33,11 @@
 */
 require 'auth.inc';
 require 'guiconfig.inc';
-// sphere structure
+//	sphere structure
 $sphere = new \stdClass();
 $sphere->msg = new \stdClass();
 $sphere->msg->selection = new \stdClass();
-// sphere content
+//	sphere content
 $sphere->basename = 'services_tftp';
 $sphere->extension = '.php';
 $sphere->scriptname = $sphere->basename . $sphere->extension;
@@ -55,12 +55,12 @@ $sphere->default = [
 	'maxblocksize' => 16384,
 	'extraoptions' => ''
 ];
-// sphere external content
+//	sphere external content
 $sphere->array = &array_make_branch($config,'tftpd');
-// local variables
+//	local variables
 $input_errors = [];
 $a_message = [];
-// identify page mode
+//	identify page mode
 $mode_page = ($_POST) ? PAGE_MODE_POST : PAGE_MODE_VIEW;
 switch($mode_page):
 	case PAGE_MODE_POST:
@@ -78,10 +78,12 @@ switch($mode_page):
 				case 'rows.disable':
 					$page_action = 'disable';
 					break;
+/*
 				case 'cancel':
 					$mode_page = PAGE_MODE_VIEW;
 					$page_action = 'view';
 					break;
+ */
 				default:
 					$mode_page = PAGE_MODE_VIEW;
 					$page_action = 'view';
@@ -92,13 +94,15 @@ switch($mode_page):
 			$page_action = 'view';
 		endif;
 		break;
+/*
 	case PAGE_MODE_VIEW:
 		$page_action = 'view';
 		break;
 	case PAGE_MODE_EDIT:
 		$mode_page = PAGE_MODE_VIEW;
 		$page_action = 'view';
-		break;			
+		break;
+ */
 	default:
 		$mode_page = PAGE_MODE_VIEW;
 		$page_action = 'view';
@@ -122,7 +126,7 @@ $sphere->record['umask'] = $source['umask'] ?? $sphere->default['umask'];
 $sphere->record['timeout'] = $source['timeout'] ?? $sphere->default['timeout'];
 $sphere->record['maxblocksize'] = $source['maxblocksize'] ?? $sphere->default['maxblocksize'];
 $sphere->record['extraoptions'] = $source['extraoptions'] ?? $sphere->default['extraoptions'];
-// set defaults
+//	set defaults
 if(preg_match('/\S/',$sphere->record['username'])):
 else:
 	$sphere->record['username'] = $sphere->default['username'];
@@ -182,6 +186,23 @@ switch($page_action):
 		endif;
 		$mode_page = PAGE_MODE_VIEW;
 		$page_action = 'view';
+		break;
+endswitch;
+//	determine final page mode
+switch($mode_page):
+	case PAGE_MODE_EDIT:
+		break;
+/*
+	case PAGE_MODE_VIEW:
+ */
+	default:
+		if(isset($config['system']['skipviewmode'])):
+			$mode_page = PAGE_MODE_EDIT;
+			$page_action = 'edit';
+		else:
+			$mode_page = PAGE_MODE_VIEW;
+			$page_action = 'view';
+		endif;
 		break;
 endswitch;
 $pgtitle = [gtext('Services'),gtext('TFTP')];
