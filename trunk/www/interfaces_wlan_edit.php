@@ -95,14 +95,14 @@ if ($_POST) {
 
 	// Input validation.
 	$reqdfields = explode(" ", "wlandev");
-	$reqdfieldsn = array(gtext("Physical interface"));
+	$reqdfieldsn = [gtext('Physical Interface')];
 	$reqdfieldst = explode(" ", "string numeric");
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 	if (isset($_POST['apmode'])) {
 		$reqdfields = explode(" ", "ap_ssid ap_channel ap_psk");
-		$reqdfieldsn = array(gtext("SSID"), gtext("Channel"), gtext("PSK"));
+		$reqdfieldsn = [gtext('SSID'),gtext('Channel'),gtext('PSK')];
 		$reqdfieldst = explode(" ", "string string string");
 
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -118,7 +118,7 @@ if ($_POST) {
 	}
 
 	if (empty($input_errors)) {
-		$wlan = array();
+		$wlan = [];
 		$wlan['enable'] = !empty($_POST['enable']) ? true : false;
 		$wlan['uuid'] = $_POST['uuid'];
 		$wlan['if'] = $_POST['if'];
@@ -215,18 +215,18 @@ $(document).ready(function(){
 			<table width="100%" border="0" cellpadding="6" cellspacing="0">
 			<?php html_titleline(gtext("WLAN Settings"));?>
 				<?php
-				$a_if = array(); foreach (get_interface_wlist() as $ifk => $ifv) { if (preg_match('/wlan/i', $ifk)) { continue; } $a_if[$ifk] = htmlspecialchars("{$ifk} ({$ifv['mac']})"); };
-				html_combobox("wlandev", gtext("Physical interface"), $pconfig['wlandev'], $a_if, "", true);
+				$a_if = []; foreach (get_interface_wlist() as $ifk => $ifv) { if (preg_match('/wlan/i', $ifk)) { continue; } $a_if[$ifk] = htmlspecialchars("{$ifk} ({$ifv['mac']})"); };
+				html_combobox("wlandev", gtext("Physical Interface"), $pconfig['wlandev'], $a_if, "", true);
 				html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("You may enter a description here for your reference."), false, 40);
 				html_separator();
 				html_titleline_checkbox("apmode", gtext("AP mode"), !empty($pconfig['apmode']) ? true : false, gtext("Enable"), "");
 				html_inputbox("ap_ssid", gtext("SSID"), $pconfig['ap_ssid'], gtext("Set the desired Service Set Identifier (aka network name)."), true, 20);
 				html_inputbox("ap_channel", gtext("Channel"), $pconfig['ap_channel'], "", true, 10);
-				html_combobox("ap_encryption", gtext("Encryption"), $pconfig['ap_encryption'], array("wpa" => sprintf("%s / %s", gtext("WPA"), gtext("WPA2"))), "", true, false, "encryption_change()");
+				html_combobox("ap_encryption", gtext("Encryption"), $pconfig['ap_encryption'], ['wpa' => sprintf('%s / %s', gtext('WPA'), gtext('WPA2'))], "", true, false, "encryption_change()");
 				html_combobox("ap_keymgmt", gtext("Key Management Protocol"), $pconfig['ap_keymgmt'], array("WPA-PSK" => gtext("WPA-PSK (Pre Shared Key)")), "", true);
 				html_combobox("ap_pairwise", gtext("Pairwise"), $pconfig['ap_pairwise'], array("CCMP" => gtext("CCMP"), "CCMP TKIP" => gtext("CCMP TKIP")), "", true);
 				html_passwordbox("ap_psk", gtext("PSK"), $pconfig['ap_psk'], gtext("Enter the passphrase that will be used in WPA-PSK mode. This must be between 8 and 63 characters long."), true, 40);
-				html_inputbox("ap_extraoptions", gtext("Extra options"), $pconfig['ap_extraoptions'], gtext("Extra options to ifconfig (usually empty)."), false, 60);
+				html_inputbox("ap_extraoptions", gtext("Extra Options"), $pconfig['ap_extraoptions'], gtext("Extra options to ifconfig (usually empty)."), false, 60);
 				$helpinghand = '<a href="'
 					. 'http://www.freebsd.org/cgi/man.cgi?query=hostapd.conf'
 					. '" target="_blank">'

@@ -74,7 +74,7 @@ if ($_POST) {
 
 	// Input validation.
 	$reqdfields = explode(" ", "vlandev tag");
-	$reqdfieldsn = array(gtext("Physical interface"), gtext("VLAN tag"));
+	$reqdfieldsn = [gtext('Physical Interface'), gtext('VLAN Tag')];
 	$reqdfieldst = explode(" ", "string numeric");
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -98,7 +98,7 @@ if ($_POST) {
 	}
 
 	if (empty($input_errors)) {
-		$vlan = array();
+		$vlan = [];
 		$vlan['enable'] = !empty($_POST['enable']) ? true : false;
 		$vlan['uuid'] = $_POST['uuid'];
 		$vlan['if'] = $_POST['if'];
@@ -155,9 +155,9 @@ function get_nextvlan_id() {
 			<?php if ($input_errors) print_input_errors($input_errors);?>
 			<table width="100%" border="0" cellpadding="6" cellspacing="0">
 			<?php html_titleline(gtext("VLAN Settings"));?>
-					<?php html_inputbox("tag", gtext("VLAN tag"), $pconfig['tag'], gtext("802.1Q VLAN tag (between 1 and 4094)."), true, 4);?>
-					<?php $a_if = array(); foreach (get_interface_list() as $ifk => $ifv) { if (preg_match('/vlan/i', $ifk)) { continue; } $a_if[$ifk] = htmlspecialchars("{$ifk} ({$ifv['mac']})"); };?>
-					<?php html_combobox("vlandev", gtext("Physical interface"), $pconfig['vlandev'], $a_if, "", true);?>
+					<?php html_inputbox("tag", gtext("VLAN Tag"), $pconfig['tag'], gtext("802.1Q VLAN tag (between 1 and 4094)."), true, 4);?>
+					<?php $a_if = []; foreach (get_interface_list() as $ifk => $ifv) { if (preg_match('/vlan/i', $ifk)) { continue; } $a_if[$ifk] = htmlspecialchars("{$ifk} ({$ifv['mac']})"); };?>
+					<?php html_combobox("vlandev", gtext("Physical Interface"), $pconfig['vlandev'], $a_if, "", true);?>
 					<?php html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("You may enter a description here for your reference."), false, 40);?>
 				</table>
 				<div id="submit">

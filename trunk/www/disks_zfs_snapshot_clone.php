@@ -44,11 +44,11 @@ else:
 endif;
 
 function get_zfs_clones() {
-	$result = array();
+	$result = [];
 	mwexec2("zfs list -H -o name,origin,creation -t filesystem,volume 2>&1", $rawdata);
 	foreach ($rawdata as $line) {
 		$a = preg_split("/\t/", $line);
-		$r = array();
+		$r = [];
 		$name = $a[0];
 		$r['path'] = $name;
 		if (preg_match('/^([^\/\@]+)(\/([^\@]+))?$/', $name, $m)) {
@@ -69,7 +69,7 @@ if ($_POST) {
 	$pconfig = $_POST;
 
 	if (isset($_POST['apply']) && $_POST['apply']) {
-		$ret = array("output" => array(), "retval" => 0);
+		$ret = ['output' => [],'retval' => 0];
 
 		if (!file_exists($d_sysrebootreqd_path)) {
 			// Process notifications
@@ -88,7 +88,7 @@ if ($_POST) {
 }
 
 if (isset($_GET['act']) && $_GET['act'] === "del") {
-	$clone = array();
+	$clone = [];
 	$clone['path'] = $_GET['path'];
 	updatenotify_set("zfsclone", UPDATENOTIFY_MODE_DIRTY, serialize($clone));
 	header("Location: disks_zfs_snapshot_clone.php");
@@ -98,7 +98,7 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 function zfsclone_process_updatenotification($mode, $data) {
 	global $config;
 
-	$ret = array("output" => array(), "retval" => 0);
+	$ret = ["output' => [],'retval' => 0];
 
 	switch ($mode) {
 		case UPDATENOTIFY_MODE_NEW:
@@ -158,7 +158,7 @@ function zfsclone_process_updatenotification($mode, $data) {
 						<td width="10%" class="list"></td>
 					</tr>
 					<?php foreach ($a_clone as $clonev):?>
-					<?php $notificationmode = updatenotify_get_mode("zfsclone", serialize(array('path' => $clonev['path'])));?>
+					<?php $notificationmode = updatenotify_get_mode("zfsclone", serialize(['path' => $clonev['path']]));?>
 					<tr>
 						<td class="listlr"><?=htmlspecialchars($clonev['path']);?>&nbsp;</td>
 						<td class="listr"><?=htmlspecialchars($clonev['origin']);?>&nbsp;</td>

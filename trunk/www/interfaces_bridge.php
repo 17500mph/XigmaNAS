@@ -109,7 +109,7 @@ $pgtitle = [gtext('Network'),gtext('Interface Management'),gtext('Bridge')];
 			<?php foreach ($a_bridge as $bridge):?>
 			<tr>
 				<td class="listlr"><?=htmlspecialchars($bridge['if']);?></td>
-				<td class="listr"><?=htmlspecialchars(implode(" ", !empty($bridge['bridgeif']) ? $bridge['bridgeif'] : array()));?></td>
+				<td class="listr"><?=htmlspecialchars(implode(" ", !empty($bridge['bridgeif']) ? $bridge['bridgeif'] : []));?></td>
 				<td class="listbg"><?=htmlspecialchars($bridge['desc']);?>&nbsp;</td>
 				<td valign="middle" nowrap="nowrap" class="list">
 					<a href="interfaces_bridge_edit.php?uuid=<?=$bridge['uuid'];?>"><img src="images/edit.png" title="<?=gtext("Edit interface");?>" border="0" alt="<?=gtext("Edit interface");?>" /></a>&nbsp;

@@ -41,7 +41,7 @@ function zfs_snapshot_display_list() {
 function zfs_snapshot_display_properties() {
 	mwexec2("zfs list -H -o name -t snapshot 2>&1", $rawdata);
 	$snaps = implode(" ", $rawdata);
-	$rawdata2 = array();
+	$rawdata2 = [];
 	if (!empty($snaps)) {
 		mwexec2("zfs get all $snaps 2>&1", $rawdata2);
 	}

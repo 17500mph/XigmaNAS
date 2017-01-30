@@ -187,7 +187,7 @@ $pool = null;
 $vdev = null;
 $type = null;
 $i = 0;
-$vdev_type = array('mirror', 'raidz1', 'raidz2', 'raidz3');
+$vdev_type = ['mirror','raidz1','raidz2','raidz3'];
 
 $rawdata = null;
 mwexec2('zpool status', $rawdata);
@@ -279,7 +279,7 @@ foreach ($rawdata as $line) {
 }
 
 function get_geli_info($device) {
-	$result = array();
+	$result = [];
 	exec("/sbin/geli dump {$device}", $rawdata);
 	array_shift($rawdata);
 	foreach($rawdata as $line) {
@@ -435,7 +435,7 @@ if (isset($_POST['import_config'])) {
 			$pconfig['zfs']['autosnapshots'] = $_GET['zfs']['autosnapshots'];
 		}
 		if (isset($_POST['leave_autosnapshots'])) {
-			$cfg['zfs']['autosnapshots'] = !empty($config['zfs']['autosnapshots']) ? $config['zfs']['autosnapshots'] : array();
+			$cfg['zfs']['autosnapshots'] = !empty($config['zfs']['autosnapshots']) ? $config['zfs']['autosnapshots'] : [];
 		}
 		$config['zfs'] = $cfg['zfs'];
 		$config['disks'] = $cfg['disks'];

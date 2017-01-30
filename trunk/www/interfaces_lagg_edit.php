@@ -59,7 +59,7 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_lagg, "uuid"))
 	$pconfig['uuid'] = uuid();
 	$pconfig['if'] = "lagg" . get_nextlagg_id();
 	$pconfig['laggproto'] = "failover";
-	$pconfig['laggport'] = array();
+	$pconfig['laggport'] = [];
 	$pconfig['desc'] = "";
 }
 
@@ -74,7 +74,7 @@ if ($_POST) {
 
 	// Input validation.
 	$reqdfields = explode(" ", "laggproto");
-	$reqdfieldsn = array(gtext("Aggregation protocol"));
+	$reqdfieldsn = [gtext('Aggregation Protocol')];
 	$reqdfieldst = explode(" ", "string");
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -84,7 +84,7 @@ if ($_POST) {
 		$input_errors[] = gtext("There must be selected a minimum of 1 interface.");
 
 	if (empty($input_errors)) {
-		$lagg = array();
+		$lagg = [];
 		$lagg['enable'] = $_POST['enable'] ? true : false;
 		$lagg['uuid'] = $_POST['uuid'];
 		$lagg['if'] = $_POST['if'];
@@ -142,8 +142,8 @@ function get_nextlagg_id() {
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 			<?php html_titleline(gtext("LAGG Settings"));?>
 					<?php html_inputbox("if", gtext("Interface"), $pconfig['if'], "", true, 5, true);?>
-					<?php html_combobox("laggproto", gtext("Aggregation protocol"), $pconfig['laggproto'], array("failover" => gtext("Failover"), "fec" => gtext("FEC (Fast EtherChannel)"), "lacp" => gtext("LACP (Link Aggregation Control Protocol)"), "loadbalance" => gtext("Loadbalance"), "roundrobin" => gtext("Roundrobin"), "none" => gtext("None")), "", true);?>
-					<?php $a_port = array(); foreach (get_interface_list() as $ifk => $ifv) { if (preg_match('/lagg/i', $ifk)) { continue; } if (!(isset($uuid) && (FALSE !== $cnid)) && false !== array_search_ex($ifk, $a_lagg, "laggport")) { continue; } $a_port[$ifk] = htmlspecialchars("{$ifk} ({$ifv['mac']})"); } ?>
+					<?php html_combobox("laggproto", gtext("Aggregation Protocol"), $pconfig['laggproto'],['failover' => gtext('Failover'),'fec' => gtext('FEC (Fast EtherChannel)'),'lacp' => gtext('LACP (Link Aggregation Control Protocol)'),'loadbalance' => gtext('Loadbalance'),'roundrobin' => gtext('Roundrobin'),'none' => gtext('None')], "", true);?>
+					<?php $a_port = []; foreach (get_interface_list() as $ifk => $ifv) { if (preg_match('/lagg/i', $ifk)) { continue; } if (!(isset($uuid) && (FALSE !== $cnid)) && false !== array_search_ex($ifk, $a_lagg, "laggport")) { continue; } $a_port[$ifk] = htmlspecialchars("{$ifk} ({$ifv['mac']})"); } ?>
 					<?php html_listbox("laggport", gtext("Ports"), $pconfig['laggport'], $a_port, gtext("Note: Ctrl-click (or command-click on the Mac) to select multiple entries."), true);?>
 					<?php html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("You may enter a description here for your reference."), false, 40);?>
 				</table>

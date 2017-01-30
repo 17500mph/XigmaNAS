@@ -210,7 +210,7 @@ EOD;
 		$allow = $this->make_regex($allow);
 		$hide = $this->make_regex($hide);
 
-		$ret = array();
+		$ret = [];
 		$ret = preg_grep("/$allow/", $arr);
 		$ret = preg_grep("/$hide/",  $ret, PREG_GREP_INVERT);
 
@@ -253,7 +253,7 @@ EOD;
 
 	function format_size($bytes) {
 		if(is_numeric($bytes) && $bytes > 0) {
-			$formats = array("%d Bytes","%.1f KB","%.1f MB","%.1f GB","%.1f TB");
+			$formats = ['%d Bytes','%.1f KB','%.1f MB','%.1f GB','%.1f TB'];
 			$logsize = min(intval(log($bytes)/log(1024)), count($formats)-1);
 			return sprintf($formats[$logsize], $bytes/pow(1024, $logsize));
 		} elseif(!is_numeric($bytes) && $bytes == '-') { // is a folder without calculated size
@@ -307,7 +307,7 @@ EOD;
 
 	function order_by_column($input, $type) {
 		$column = $this->cfg['sortMode'];
-		$result = array();
+		$result = [];
 
 		// available sort columns
 		$columnList = [
