@@ -253,6 +253,23 @@ switch($page_action):
 		$page_action = 'view';
 		break;
 endswitch;
+//	determine final page mode
+switch($mode_page):
+	case PAGE_MODE_EDIT:
+		break;
+/*
+	case PAGE_MODE_VIEW:
+ */
+	default:
+		if(isset($config['system']['skipviewmode'])):
+			$mode_page = PAGE_MODE_EDIT;
+			$page_action = 'edit';
+		else:
+			$mode_page = PAGE_MODE_VIEW;
+			$page_action = 'view';
+		endif;
+		break;
+endswitch;
 //	list of configured interfaces
 $a_interface = get_interface_list();
 $l_interfaces = [];
