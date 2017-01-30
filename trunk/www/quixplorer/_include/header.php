@@ -309,8 +309,8 @@ function show_header($title, $additional_header_content = null)
 	}
 	echo "</head>\n";
 	// NAS4Free Header
-	echo "<body id="main">", "\n";
-	echo "<header id="g4h">", "\n";
+	echo "<body id='main'>", "\n";
+	echo "<header id='g4h'>", "\n";
 	echo "<div id=\"header\">\n";
 	echo "<div id=\"headerlogo\">\n";
 	echo "<a title=\"www.".get_product_url()."\" href=\"http://".get_product_url()."\" target='_blank'><img src='../images/header_logo.png' alt='logo' /></a>\n";
