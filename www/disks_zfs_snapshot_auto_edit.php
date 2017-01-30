@@ -55,11 +55,11 @@ else:
 endif;
 
 function get_zfs_paths() {
-	$result = array();
+	$result = [];
 	mwexec2("zfs list -H -o name -t filesystem,volume 2>&1", $rawdata);
 	foreach ($rawdata as $line) {
 		$a = preg_split("/\t/", $line);
-		$r = array();
+		$r = [];
 		$name = $a[0];
 		$r['path'] = $name;
 		if (preg_match('/^([^\/\@]+)(\/([^\@]+))?$/', $name, $m)) {
@@ -73,20 +73,20 @@ function get_zfs_paths() {
 }
 $a_path = get_zfs_paths();
 
-$a_timehour = array();
+$a_timehour = [];
 foreach (range(0, 23) as $hour) {
 	$min = 0;
 	$a_timehour[sprintf("%02.2d%02.2d", $hour, $min)] = sprintf("%02.2d:%02.2d", $hour, $min);
 }
-$a_lifetime = array("0" => gtext("infinity"),
-	    "1w" => sprintf(gtext("%d week"), 1),
-	    "2w" => sprintf(gtext("%d weeks"), 2),
-	    "30d" => sprintf(gtext("%d days"), 30),
-	    "60d" => sprintf(gtext("%d days"), 60),
-	    "90d" => sprintf(gtext("%d days"), 90),
-	    "180d" => sprintf(gtext("%d days"), 180),
-	    "1y" => sprintf(gtext("%d year"), 1),
-	    "2y" => sprintf(gtext("%d years"), 2));
+$a_lifetime = ['0' => gtext('infinity'),
+	    '1w' => sprintf(gtext('%d week'), 1),
+	    '2w' => sprintf(gtext('%d weeks'), 2),
+	    '30d' => sprintf(gtext('%d days'), 30),
+	    '60d' => sprintf(gtext('%d days'), 60),
+	    '90d' => sprintf(gtext('%d days'), 90),
+	    '180d' => sprintf(gtext('%d days'), 180),
+	    '1y' => sprintf(gtext('%d year'), 1),
+	    '2y' => sprintf(gtext('%d years'), 2)];
 
 if (!isset($uuid) && (!sizeof($a_pool))) {
 	$link = sprintf('<a href="%1$s">%2$s</a>', 'disks_zfs_zpool.php', gtext('pools'));
@@ -136,7 +136,7 @@ if ($_POST) {
 
 	// Input validation
 	$reqdfields = explode(" ", "path name");
-	$reqdfieldsn = array(gtext("Path"), gtext("Name"));
+	$reqdfieldsn = [gtext('Path'),gtext('Name')];
 	$reqdfieldst = explode(" ", "string string");
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -147,7 +147,7 @@ if ($_POST) {
 	}
 
 	if (empty($input_errors)) {
-		$autosnapshot = array();
+		$autosnapshot = [];
 		$autosnapshot['uuid'] = $_POST['uuid'];
 		$autosnapshot['type'] = $_POST['type'];
 		$autosnapshot['path'] = $_POST['path'];
@@ -214,7 +214,7 @@ function enable_change(enable_change) {
 				<?php if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 				<?php html_titleline(gtext("Auto Snapshot Settings"));?>
-					<?php $a_pathlist = array(); foreach ($a_path as $pathv) { $a_pathlist[$pathv['path']] = htmlspecialchars($pathv['path']); }?>
+					<?php $a_pathlist = []; foreach ($a_path as $pathv) { $a_pathlist[$pathv['path']] = htmlspecialchars($pathv['path']); }?>
 					<?php html_combobox("path", gtext("Path"), $pconfig['path'], $a_pathlist, "", true);?>
 					<?php html_inputbox("name", gtext("Name"), $pconfig['name'], "", true, 40);?>
 					<?php html_checkbox("recursive", gtext("Recursive"), !empty($pconfig['recursive']) ? true : false, gtext("Creates the recursive snapshot."), "", false);?>

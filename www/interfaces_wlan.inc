@@ -67,17 +67,17 @@ function wireless_config_post() {
 	// Input validation
 	if ($_POST['enable']) {
 		$reqdfields = explode(" ", "standard ssid channel");
-		$reqdfieldsn = array(gtext("Standard"), gtext("SSID"), gtext("Channel"));
+		$reqdfieldsn = [gtext('Standard'),gtext('SSID'),gtext('Channel')];
 
 		switch ($_POST['encryption']) {
 			case "wep":
-				$reqdfields = array_merge($reqdfields, array("wep_key"));
-				$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("Key")));
+				$reqdfields = array_merge($reqdfields, ['wep_key']);
+				$reqdfieldsn = array_merge($reqdfieldsn, [gtext('Key')]);
 				break;
 
 			case "wpa":
-				$reqdfields = array_merge($reqdfields, array("wpa_psk"));
-				$reqdfieldsn = array_merge($reqdfieldsn, array(gtext("PSK")));
+				$reqdfields = array_merge($reqdfields, ['wpa_psk']);
+				$reqdfieldsn = array_merge($reqdfieldsn, [gtext('PSK')]);
 				break;
 
 			default;
@@ -128,7 +128,7 @@ function wireless_config_print() {
 ?>
 			<?php html_separator();?>
 			<?php html_titleline(gtext("Wireless configuration"));?>
-			<?php $a_standard = array(); foreach (interfaces_wireless_get_standards($optcfg['if']) as $standardv) { $a_standard[$standardv] = "802.{$standardv}"; }?>
+			<?php $a_standard = []; foreach (interfaces_wireless_get_standards($optcfg['if']) as $standardv) { $a_standard[$standardv] = "802.{$standardv}"; }?>
 			<?php html_combobox("standard", gtext("Standard"), $pconfig['standard'], $a_standard, "", true);?>
 			<?php html_inputbox("ssid", gtext("SSID"), $pconfig['ssid'], gtext("Set the desired Service Set Identifier (aka network name)."), true, 20);?>
 			<?php html_checkbox('scan_ssid', gtext('Connect to hidden network'), $pconfig['scan_ssid'], gtext('Allows to connect to a hidden network'));?>
@@ -144,9 +144,9 @@ function wireless_config_print() {
 				</select>
 				</td>
 			</tr>
-			<?php html_combobox("encryption", gtext("Encryption"), $pconfig['encryption'], array("none" => gtext("None"), "wep" => gtext("WEP"), "wpa" => sprintf("%s / %s", gtext("WPA"), gtext("WPA2"))), "", true, false, "encryption_change()");?>
+			<?php html_combobox("encryption", gtext("Encryption"), $pconfig['encryption'], ['none' => gtext('None'),'wep' => gtext('WEP'),'wpa' => sprintf('%s / %s', gtext('WPA'),gtext('WPA2')]), "", true, false, "encryption_change()");?>
 			<?php html_passwordbox("wep_key", gtext("Key"), $pconfig['wep_key'], gtext("A key will be either 5 or 13 characters (40 or 104 bits) depending of the local network and the capabilities of the adaptor. It may be specified either as a plain string or as a string of hexadecimal digits preceded by '0x'."), true, 40);?>
-			<?php html_combobox("wpa_keymgmt", gtext("Key Management Protocol"), $pconfig['wpa_keymgmt'], array("WPA-PSK" => gtext("WPA-PSK (Pre Shared Key)"), "WPA-EAP" => gtext("WPA-EAP (Extensible Authentication Protocol)"), "WPA-PSK WPA-EAP" => gtext("WPA-PSK WPA-EAP")), "", true);?>
-			<?php html_combobox("wpa_pairwise", gtext("Pairwise"), $pconfig['wpa_pairwise'], array("CCMP" => gtext("CCMP"), "CCMP TKIP" => gtext("CCMP TKIP"), "TKIP" => gtext("TKIP")), gtext("List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP (AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP (Temporal Key Integrity Protocol, IEEE 802.11i/D7.0)."), true);?>
+			<?php html_combobox("wpa_keymgmt", gtext("Key Management Protocol"), $pconfig['wpa_keymgmt'], ['WPA-PSK' => gtext('WPA-PSK (Pre Shared Key)'), 'WPA-EAP' => gtext('WPA-EAP (Extensible Authentication Protocol)'), 'WPA-PSK WPA-EAP' => gtext('WPA-PSK WPA-EAP')], "", true);?>
+			<?php html_combobox("wpa_pairwise", gtext("Pairwise"), $pconfig['wpa_pairwise'], ['CCMP' => gtext('CCMP'),'CCMP TKIP' => gtext('CCMP TKIP'),'TKIP' => gtext('TKIP')], gtext("List of acceptable pairwise (unicast) ciphers for WPA. One or more of: CCMP (AES in Counter mode with CBC-MAC, RFC 3610, IEEE 802.11i/D7.0), TKIP (Temporal Key Integrity Protocol, IEEE 802.11i/D7.0)."), true);?>
 			<?php html_passwordbox("wpa_psk", gtext("PSK"), $pconfig['wpa_psk'], gtext("Enter the passphrase that will be used in WPA-PSK mode. This must be between 8 and 63 characters long."), true, 40);?>
 <?php } ?>

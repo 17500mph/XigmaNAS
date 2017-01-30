@@ -49,11 +49,11 @@ else:
 endif;
 
 function get_zfs_paths() {
-	$result = array();
+	$result = [];
 	mwexec2("zfs list -H -o name -t filesystem,volume 2>&1", $rawdata);
 	foreach ($rawdata as $line) {
 		$a = preg_split("/\t/", $line);
-		$r = array();
+		$r = [];
 		$name = $a[0];
 		$r['path'] = $name;
 		if (preg_match('/^([^\/\@]+)(\/([^\@]+))?$/', $name, $m)) {
@@ -77,7 +77,7 @@ if (!isset($uuid) && (!sizeof($a_pool))) {
 $cnid = FALSE;
 if (isset($uuid) && (FALSE !== $cnid)) {
 	// not supported
-	$pconfig = array();
+	$pconfig = [];
 } else {
 	$pconfig['uuid'] = uuid();
 	$pconfig['snapshot'] = "";
@@ -100,7 +100,7 @@ if ($_POST) {
 
 	// Input validation
 	$reqdfields = explode(" ", "path name");
-	$reqdfieldsn = array(gtext("Path"), gtext("Name"));
+	$reqdfieldsn = [gtext('Path'),gtext('Name')];
 	$reqdfieldst = explode(" ", "string string");
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -111,7 +111,7 @@ if ($_POST) {
 	}
 
 	if (empty($input_errors)) {
-		$snapshot = array();
+		$snapshot = [];
 		$snapshot['uuid'] = $_POST['uuid'];
 		$snapshot['path'] = $_POST['path'];
 		$snapshot['name'] = $_POST['name'];
@@ -171,7 +171,7 @@ function enable_change(enable_change) {
 				<?php if (file_exists($d_sysrebootreqd_path)) print_info_box(get_std_save_message(0));?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 				<?php html_titleline(gtext("Snapshot"));?>
-					<?php $a_pathlist = array(); foreach ($a_path as $pathv) { $a_pathlist[$pathv['path']] = htmlspecialchars($pathv['path']); }?>
+					<?php $a_pathlist = []; foreach ($a_path as $pathv) { $a_pathlist[$pathv['path']] = htmlspecialchars($pathv['path']); }?>
 					<?php html_combobox("path", gtext("Path"), $pconfig['path'], $a_pathlist, "", true);?>
 					<?php html_inputbox("name", gtext("Name"), $pconfig['name'], "", true, 20);?>
 					<?php html_checkbox("recursive", gtext("Recursive"), !empty($pconfig['recursive']) ? true : false, gtext("Creates the recursive snapshot."), "", false);?>

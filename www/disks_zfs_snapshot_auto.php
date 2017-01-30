@@ -56,26 +56,26 @@ if (!isset($uuid) && (!sizeof($a_pool))) {
 	$errormsg = $helpinghand;
 }
 
-$a_timehour = array();
+$a_timehour = [];
 foreach (range(0, 23) as $hour) {
 	$min = 0;
 	$a_timehour[sprintf("%02.2d%02.2d", $hour, $min)] = sprintf("%02.2d:%02.2d", $hour, $min);
 }
-$a_lifetime = array("0" => gtext("infinity"),
-	    "1w" => sprintf(gtext("%d week"), 1),
-	    "2w" => sprintf(gtext("%d weeks"), 2),
-	    "30d" => sprintf(gtext("%d days"), 30),
-	    "60d" => sprintf(gtext("%d days"), 60),
-	    "90d" => sprintf(gtext("%d days"), 90),
-	    "180d" => sprintf(gtext("%d days"), 180),
-	    "1y" => sprintf(gtext("%d year"), 1),
-	    "2y" => sprintf(gtext("%d years"), 2));
+$a_lifetime = ['0' => gtext('infinity'),
+	    '1w' => sprintf(gtext('%d week'), 1),
+	    '2w' => sprintf(gtext('%d weeks'), 2),
+	    '30d' => sprintf(gtext('%d days'), 30),
+	    '60d' => sprintf(gtext('%d days'), 60),
+	    '90d' => sprintf(gtext('%d days'), 90),
+	    '180d' => sprintf(gtext('%d days'), 180),
+	    '1y' => sprintf(gtext('%d year'), 1),
+	    '2y' => sprintf(gtext('%d years'), 2)];
 
 if ($_POST) {
 	$pconfig = $_POST;
 
 	if (isset($_POST['apply']) && $_POST['apply']) {
-		$ret = array("output" => array(), "retval" => 0);
+		$ret = ['output' => [], 'retval' => 0];
 
 		if (!file_exists($d_sysrebootreqd_path)) {
 			// Process notifications
@@ -96,7 +96,7 @@ if ($_POST) {
 }
 
 if (isset($_GET['act']) && $_GET['act'] === "del") {
-	$autosnapshot = array();
+	$autosnapshot = [];
 	$autosnapshot['uuid'] = $_GET['uuid'];
 	updatenotify_set("zfsautosnapshot", UPDATENOTIFY_MODE_DIRTY, serialize($autosnapshot));
 	header("Location: disks_zfs_snapshot_auto.php");
@@ -106,7 +106,7 @@ if (isset($_GET['act']) && $_GET['act'] === "del") {
 function zfsautosnapshot_process_updatenotification($mode, $data) {
 	global $config;
 
-	$ret = array("output" => array(), "retval" => 0);
+	$ret = ['output' => [],'retval' => 0];
 
 	switch ($mode) {
 		case UPDATENOTIFY_MODE_NEW:
@@ -173,7 +173,7 @@ function zfsautosnapshot_process_updatenotification($mode, $data) {
 				<td width="10%" class="list"></td>
 			</tr>
 				<?php foreach ($a_autosnapshot as $autosnapshotv):?>
-				<?php $notificationmode = updatenotify_get_mode("zfsautosnapshot", serialize(array('uuid' => $autosnapshotv['uuid'])));?>
+				<?php $notificationmode = updatenotify_get_mode("zfsautosnapshot", serialize(['uuid' => $autosnapshotv['uuid']]));?>
 			<tr>
 				<td class="listlr"><?=htmlspecialchars($autosnapshotv['path']);?>&nbsp;</td>
 				<td class="listr"><?=htmlspecialchars($autosnapshotv['name']);?>&nbsp;</td>

@@ -49,11 +49,11 @@ else:
 endif;
 
 function get_zfs_paths() {
-	$result = array();
+	$result = [];
 	mwexec2("zfs list -H -o name -t filesystem,volume 2>&1", $rawdata);
 	foreach ($rawdata as $line) {
 		$a = preg_split("/\t/", $line);
-		$r = array();
+		$r = [];
 		$name = $a[0];
 		$r['path'] = $name;
 		if (preg_match('/^([^\/\@]+)(\/([^\@]+))?$/', $name, $m)) {
@@ -97,7 +97,7 @@ if (isset($snapshot) && !empty($snapshot)) {
 	$pconfig['action'] = "clone";
 } else {
 	// not supported
-	$pconfig = array();
+	$pconfig = [];
 }
 
 if ($_POST) {
@@ -119,7 +119,7 @@ if ($_POST) {
 			case 'clone':
 				// Input validation
 				$reqdfields = explode(" ", "newpath");
-				$reqdfieldsn = array(gtext("Path"));
+				$reqdfieldsn = [gtext('Path')];
 				$reqdfieldst = explode(" ", "string");
 
 				do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
@@ -130,7 +130,7 @@ if ($_POST) {
 				}
 
 				if (empty($input_errors)) {
-					$snapshot = array();
+					$snapshot = [];
 					$snapshot['uuid'] = $_POST['uuid'];
 					$snapshot['pool'] = $_POST['pool'];
 					$snapshot['path'] = $_POST['newpath'];
@@ -246,7 +246,7 @@ function action_change() {
 				<?php html_titleline(gtext("Edit Snapshot"));?>
 				<?php
 				html_text("snapshot", gtext("Snapshot"), htmlspecialchars($pconfig['snapshot']));
-				$a_action = array("clone" => gtext("Clone"), "delete" => gtext("Delete"), "rollback" => gtext("Rollback"));
+				$a_action = ['clone' => gtext('Clone'),'delete' => gtext('Delete'),'rollback' => gtext('Rollback')];
 				html_combobox("action", gtext("Action"), $pconfig['action'], $a_action, "", true, false, "action_change()");
 				html_inputbox("newpath", gtext("Path"), $pconfig['newpath'], "", true, 30);
 				html_checkbox("recursive", gtext("Recursive"), !empty($pconfig['recursive']) ? true : false, gtext("Deletes the recursive snapshot."), "", false);

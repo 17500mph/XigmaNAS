@@ -45,7 +45,7 @@ $a_bridge = &array_make_branch($config,'vinterfaces','bridge');
 array_sort_key($a_bridge, "if");
 
 // WLAN interfaces.
-$a_wlans = array();
+$a_wlans = [];
 array_make_branch($config,'vinterfaces','wlan');
 if(count($config['vinterfaces']['wlan'])):
 	foreach($config['vinterfaces']['wlan'] as $wlanv):
@@ -65,7 +65,7 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_bridge, "uuid"
 	$pconfig['enable'] = true;
 	$pconfig['uuid'] = uuid();
 	$pconfig['if'] = "bridge" . get_nextbridge_id();
-	$pconfig['bridgeif'] = array();
+	$pconfig['bridgeif'] = [];
 	$pconfig['mtu'] = "";
 	$pconfig['extraoptions'] = "";
 	$pconfig['taplist'] = "";
@@ -89,11 +89,11 @@ if ($_POST) {
 		$input_errors[] = sprintf(gtext("The attribute '%s' must be a number."), gtext("MTU"));
 
 	if (empty($input_errors)) {
-		$bridge = array();
+		$bridge = [];
 		$bridge['enable'] = $_POST['enable'] ? true : false;
 		$bridge['uuid'] = $_POST['uuid'];
 		$bridge['if'] = $_POST['if'];
-		$bridge['bridgeif'] = !empty($_POST['bridgeif']) ? $_POST['bridgeif'] : array();
+		$bridge['bridgeif'] = !empty($_POST['bridgeif']) ? $_POST['bridgeif'] : [];
 		$bridge['mtu'] = $_POST['mtu'];
 		$bridge['extraoptions'] = $_POST['extraoptions'];
 		$bridge['taplist'] = $_POST['taplist'];
@@ -149,12 +149,12 @@ function get_nextbridge_id() {
 			<table width="100%" border="0" cellpadding="6" cellspacing="0">
 			<?php html_titleline(gtext("Bridge Settings"));?>
 				<?php html_inputbox("if", gtext("Interface"), $pconfig['if'], "", true, 5, true);?>
-				<?php $a_bridgeif = array(); foreach (get_interface_list() as $ifk => $ifv) { if (preg_match('/bridge/i', $ifk)) { continue; } if (!(isset($uuid) && (FALSE !== $cnid)) && false !== array_search_ex($ifk, $a_bridge, "bridgeif")) { continue; } $a_bridgeif[$ifk] = htmlspecialchars("{$ifk} ({$ifv['mac']})"); }
+				<?php $a_bridgeif = []; foreach (get_interface_list() as $ifk => $ifv) { if (preg_match('/bridge/i', $ifk)) { continue; } if (!(isset($uuid) && (FALSE !== $cnid)) && false !== array_search_ex($ifk, $a_bridge, "bridgeif")) { continue; } $a_bridgeif[$ifk] = htmlspecialchars("{$ifk} ({$ifv['mac']})"); }
 				foreach ($a_wlans as $ifk => $ifv) { if (!(isset($uuid) && (FALSE !== $cnid)) && false !== array_search_ex($ifk, $a_bridge, "bridgeif")) { continue; } $a_bridgeif[$ifk] = htmlspecialchars("{$ifk} ({$ifv['wlandev']})"); } ?>
 				<?php html_listbox("bridgeif", gtext("Member Interface"), $pconfig['bridgeif'], $a_bridgeif, gtext("Note: Ctrl-click (or command-click on the Mac) to select multiple entries."), true);?>
 				<?php html_inputbox("mtu", gtext("MTU"), $pconfig['mtu'], gtext("Set the maximum transmission unit of the interface to n, default is interface specific. The MTU is used to limit the size of packets that are transmitted on an interface. Not all interfaces support setting the MTU, and some interfaces have range restrictions."), false, 5);?>
-				<?php html_inputbox("extraoptions", gtext("Extra options"), $pconfig['extraoptions'], gtext("Extra options to ifconfig (usually empty)."), false, 40);?>
-				<?php html_inputbox("taplist", gtext("Tap device"), $pconfig['taplist'], gtext("Enter a space-separated list of tap devices. The devices will be created and automatically added it to the bridge."), false, 40);?>
+				<?php html_inputbox("extraoptions", gtext("Extra Options"), $pconfig['extraoptions'], gtext("Extra options to ifconfig (usually empty)."), false, 40);?>
+				<?php html_inputbox("taplist", gtext("Tap Device"), $pconfig['taplist'], gtext("Enter a space-separated list of tap devices. The devices will be created and automatically added it to the bridge."), false, 40);?>
 				<?php html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("You may enter a description here for your reference."), false, 40);?>
 			</table>
 			<div id="submit">

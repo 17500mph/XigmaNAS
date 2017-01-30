@@ -73,16 +73,16 @@ if (file_exists($d_firmwarelock_path)) {
 }
 
 /* Reserverd login names */
-$reservedlogin = array("root", "toor", "daemon", "operator", "bin", "tty", "kmem", "www", "nobody", "ftp", "sshd");
+$reservedlogin = ['root','toor','daemon','operator','bin','tty','kmem','www','nobody','ftp','sshd'];
 
 /* TCP flags */
-$tcpflags = array("fin", "syn", "rst", "psh", "ack", "urg");
+$tcpflags = ["fin",'syn','rst','psh','ack','urg'];
 
 /* platforms that support firmware updating */
-$fwupplatforms = array('embedded', 'full');
+$fwupplatforms = ['embedded','full'];
 
 /* default setting */
-$input_errors = array();
+$input_errors = [];
 $errormsg = "";
 $savemsg = "";
 
@@ -97,12 +97,12 @@ function is_ajax() {
 }
 
 function render_ajax($data, $result = 0) {
-	$a = array('result' => $result);
+	$a = ['result' => $result];
 	if (isset($data)) {
 		if (is_array($data)) {
 			$a = array_merge($a, $data);
 		} else {
-			$a = array_merge($a, array('data' => $data));
+			$a = array_merge($a, ['data' => $data]);
 		}
 	}
 	header("Content-Type: application/json; UTF-8\n");

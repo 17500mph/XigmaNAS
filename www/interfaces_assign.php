@@ -73,9 +73,9 @@ if ($_POST) {
 	unset($input_errors);
 
 	/* Build a list of the port names so we can see how the interfaces map */
-	$portifmap = array();
+	$portifmap = [];
 	foreach ($portlist as $portname => $portinfo)
-		$portifmap[$portname] = array();
+		$portifmap[$portname] = [];
 
 	/* Go through the list of ports selected by the user,
 	   build a list of port-to-interface mappings in portifmap */
@@ -108,7 +108,7 @@ if ($_POST) {
 					/* check for wireless interfaces, set or clear ['wireless'] */
 					if (preg_match($g['wireless_regex'], $ifport)) {
 						if (!is_array($config['interfaces'][$ifname]['wireless']))
-							$config['interfaces'][$ifname]['wireless'] = array();
+							$config['interfaces'][$ifname]['wireless'] = [];
 					} else {
 						unset($config['interfaces'][$ifname]['wireless']);
 					}
@@ -168,7 +168,7 @@ if (isset($_GET['act']) && $_GET['act'] == "add") {
 		$i++;
 
 	$newifname = 'opt' . $i;
-	$config['interfaces'][$newifname] = array();
+	$config['interfaces'][$newifname] = [];
 	$config['interfaces'][$newifname]['descr'] = "OPT" . $i;
 
 	// Set IPv4 to 'DHCP' and IPv6 to 'Auto' per default.
@@ -187,7 +187,7 @@ if (isset($_GET['act']) && $_GET['act'] == "add") {
 		if (!$portused) {
 			$config['interfaces'][$newifname]['if'] = $portname;
 			if (preg_match($g['wireless_regex'], $portname))
-				$config['interfaces'][$newifname]['wireless'] = array();
+				$config['interfaces'][$newifname]['wireless'] = [];
 			break;
 		}
 	}
