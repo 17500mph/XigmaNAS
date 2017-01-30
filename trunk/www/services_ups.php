@@ -290,7 +290,7 @@ function ups2_change() {
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php
 					html_titleline_checkbox("enable", gtext("Uninterruptible Power Supply"), !empty($pconfig['enable']) ? true : false, gtext("Enable"), "enable_change(false)");
-					html_combobox("mode", gtext("Mode"), !empty($config['ups']['mode']) ? $config['ups']['mode'] : "Master", array('master' =>'Master','slave'=> 'Slave'), gtext("Choose UPS mode."), true, false, "mode_change()" );
+					html_combobox("mode", gtext("Mode"), !empty($config['ups']['mode']) ? $config['ups']['mode'] : "Master", ['master' =>'Master','slave'=> 'Slave'], gtext("Choose UPS mode."), true, false, "mode_change()" );
 					html_inputbox("upsname", gtext("Identifier"), $pconfig['upsname'], gtext("This name is used to uniquely identify your UPS on this system.")." ".gtext("In slave mode it is the UPS name (Identifier) at the UPS master."), true, 30);
 					$helpinghand = gtext('The driver used to communicate with your UPS.')
 						. ' '
@@ -314,7 +314,7 @@ function ups2_change() {
 					html_textarea("ups2_auxparam", gtext("Additional Parameters"), !empty($pconfig['ups2_auxparam']) ? $pconfig['ups2_auxparam'] : "", gtext("These parameters are added to the hardware-specific part of the driver for the second UPS."), false, 65, 5, false, false);
 					html_inputbox("ups2_desc", gtext("Description"), $pconfig['ups2_desc'], gtext("You may enter a description here for your reference."), false, 40);
 					html_inputbox("ip", gtext("IP address"), $pconfig['ip'], gtext("The IP address of the UPS master."), true, 30);
-					html_combobox("shutdownmode", gtext("Shutdown mode"), $pconfig['shutdownmode'], array("fsd" => gtext("UPS reaches low battery"), "onbatt" => gtext("UPS goes on battery")), gtext("Defines when the shutdown is initiated."), true, false, "shutdownmode_change()");
+					html_combobox("shutdownmode", gtext("Shutdown mode"), $pconfig['shutdownmode'], ['fsd' => gtext('UPS reaches low battery'),'onbatt' => gtext('UPS goes on battery')], gtext("Defines when the shutdown is initiated."), true, false, "shutdownmode_change()");
 					html_inputbox("shutdowntimer", gtext("Shutdown timer"), $pconfig['shutdowntimer'], gtext("The time in seconds until shutdown is initiated. If the UPS happens to come back before the time is up the shutdown is canceled."), true, 3);
 					html_checkbox("remotemonitor", gtext("Remote monitoring"), !empty($pconfig['remotemonitor']) ? true : false, gtext("Enable remote monitoring of the local connected UPS."), "", false, "monitoring_change()");
 					html_inputbox("monitoruser", gtext("Username"), $pconfig['monitoruser'], gtext("Remote monitoring username. Must be equal on both master and slave system."), true, 20);

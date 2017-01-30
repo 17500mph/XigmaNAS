@@ -48,7 +48,7 @@ else:
 endif;
 
 function get_all_hast() {
-	$a = array();
+	$a = [];
 	$a[''] = gtext("Must choose one");
 	mwexec2("hastctl dump | grep resource", $rawdata);
 	foreach ($rawdata as $line) {
@@ -232,7 +232,7 @@ if ($_POST) {
 
 		// convert to UFSID
 		if ($_POST['fstype'] == "ufs") {
-			$out = array();
+			$out = [];
 			$ufsid = disks_get_ufsid($device, $out);
 			if (empty($ufsid)) {
 				$input_errors[] = sprintf("%s: %s", $device, gtext("Can't get UFS ID."))."<br />".join('<br />', $out);
@@ -264,7 +264,7 @@ if ($_POST) {
 
 		// convert to UFSID
 		if ($_POST['fstype'] == "ufs") {
-			$out = array();
+			$out = [];
 			$ufsid = disks_get_ufsid($device, $out);
 			if (empty($ufsid)) {
 				$input_errors[] = sprintf("%s: %s", $device, gtext("Can't get UFS ID."))."<br />".join('<br />', $out);
@@ -316,7 +316,7 @@ if ($_POST) {
 	}
 
 	if (empty($input_errors)) {
-		$mount = array();
+		$mount = [];
 		$mount['uuid'] = $_POST['uuid'];
 		$mount['type'] = $_POST['type'];
 
@@ -392,9 +392,9 @@ if ($_POST) {
 }
 
 function initmodectrl(&$pconfig, $mode) {
-	$pconfig['mode_owner'] = array();
-	$pconfig['mode_group'] = array();
-	$pconfig['mode_others'] = array();
+	$pconfig['mode_owner'] = [];
+	$pconfig['mode_group'] = [];
+	$pconfig['mode_others'] = [];
 
 	// Convert octal to decimal
 	$mode = octdec($mode);
@@ -417,7 +417,7 @@ function initmodectrl(&$pconfig, $mode) {
 
 function getmodectrl($owner, $group, $others) {
 		$mode = "";
-		$legal = array("r", "w", "x");
+		$legal = ['r','w','x'];
 
 		foreach ($legal as $value) {
 			$mode .= (is_array($owner) && in_array($value, $owner)) ? $value : "-";
@@ -430,7 +430,7 @@ function getmodectrl($owner, $group, $others) {
 		}
 
     $realmode = "";
-    $legal = array("", "w", "r", "x", "-");
+    $legal = ['', 'w','r','x','-'];
     $attarray = preg_split("//",$mode);
 
     for ($i=0; $i<count($attarray); $i++) {
@@ -440,7 +440,7 @@ function getmodectrl($owner, $group, $others) {
     }
 
     $mode = str_pad($realmode, 9, '-');
-    $trans = array('-'=>'0', 'r'=>'4', 'w'=>'2', 'x'=>'1');
+    $trans = ['-'=>'0', 'r'=>'4', 'w'=>'2', 'x'=>'1'];
     $mode = strtr($mode, $trans);
     $newmode = "0";
     $newmode .= $mode[0]+$mode[1]+$mode[2];
@@ -566,7 +566,7 @@ function enable_change(enable_change) {
 				<?php if (!empty($input_errors)) print_input_errors($input_errors);?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 					<?php html_titleline(gtext("Settings"));?>
-					<?php html_combobox("type", gtext("Type"), $pconfig['type'], array("disk" => gtext("Disk"), "hvol" => gtext("HAST volume"), "iso" => "ISO", "custom" => gtext("Custom device")), "", true, false, "type_change()");?>
+					<?php html_combobox("type",gtext("Type"),$pconfig['type'],['disk' => gtext('Disk'),'hvol' => gtext('HAST volume'),'iso' => 'ISO','custom' => gtext('Custom device')], "", true, false, "type_change()");?>
 					<tr id="mdisk_tr">
 						<td width="22%" valign="top" class="vncellreq"><?=gtext("Disk");?></td>
 						<td class="vtable">
@@ -601,7 +601,7 @@ function enable_change(enable_change) {
 					</tr>
 					<?php
 					html_inputbox("partitionnum", gtext("Partition number"), $pconfig['partitionnum'], "", true, 3);
-					html_combobox("fstype", gtext("File system"), !empty($pconfig['fstype']) ? $pconfig['fstype'] : "", array("ufs" => "UFS", "msdosfs" => "FAT", "cd9660" => "CD/DVD", "ntfs" => "NTFS", "ext2fs" => "EXT2/3", "ext4fuse" => "EXT4", "exfat" => "exFAT"), "", true, false, "fstype_change()");
+					html_combobox("fstype", gtext("File system"), !empty($pconfig['fstype']) ? $pconfig['fstype'] : "", ['ufs' => 'UFS','msdosfs' => 'FAT','cd9660' => 'CD/DVD','ntfs' => 'NTFS','ext2fs' => 'EXT2/3','ext4fuse' => 'EXT4','exfat' => 'exFAT'], "", true, false, "fstype_change()");
 					html_filechooser("filename", "Filename", !empty($pconfig['filename']) ? $pconfig['filename'] : "", gtext("ISO file to be mounted."), $g['media_path'], true);
 					html_inputbox("sharename", gtext("Mount point name"), !empty($pconfig['sharename']) ? $pconfig['sharename'] : "", "", true, 20);
 					html_inputbox("desc", gtext("Description"), !empty($pconfig['desc']) ? $pconfig['desc'] : "", gtext("You may enter a description here for your reference."), false, 40);
@@ -609,9 +609,9 @@ function enable_change(enable_change) {
 					html_checkbox("fsck", gtext("File system check"), $pconfig['fsck'] ? true : false, gtext("Enable foreground/background file system consistency check during boot process."), "", false);
 					html_separator();
 					html_titleline(gtext("Access Restrictions"));
-					$a_owner = array(); foreach (system_get_user_list() as $userk => $userv) { $a_owner[$userk] = htmlspecialchars($userk); }
+					$a_owner = []; foreach (system_get_user_list() as $userk => $userv) { $a_owner[$userk] = htmlspecialchars($userk); }
 					html_combobox("owner", gtext("Owner"), $pconfig['owner'], $a_owner, "", false);
-					$a_group = array(); foreach (system_get_group_list() as $groupk => $groupv) { $a_group[$groupk] = htmlspecialchars($groupk); }
+					$a_group = []; foreach (system_get_group_list() as $groupk => $groupv) { $a_group[$groupk] = htmlspecialchars($groupk); }
 					html_combobox("group", gtext("Group"), $pconfig['group'], $a_group, "", false);
 					?>
 					<tr>
