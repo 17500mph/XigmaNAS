@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-29 13:11+0000\n"
-"PO-Revision-Date: 2017-01-22 19:33+0000\n"
-"Last-Translator: Renaud Trudel <Unknown>\n"
+"POT-Creation-Date: 2017-01-30 02:33+0000\n"
+"PO-Revision-Date: 2017-01-30 02:10+0000\n"
+"Last-Translator: transposed messenger <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-29 12:22+0000\n"
+"X-Launchpad-Export-Date: 2017-01-30 02:13+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: GERMANY\n"
 "Language: \n"
@@ -225,6 +225,8 @@ msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
 "index.htm or default.htm) are found in a directory."
 msgstr ""
+"Wenn keine Indexdateien gefunded werden(index.php, index.html, index.htm or "
+"default.htm), eine Verzeichnisliste wird erzeugt."
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -581,14 +583,14 @@ msgstr ""
 msgid "Admin Password"
 msgstr ""
 
-msgid "Administration password"
-msgstr "Administrationspasswort"
+msgid "Administration Password"
+msgstr ""
 
 msgid "Administrative WebGUI"
 msgstr "Administratives WebGUI"
 
-msgid "Administrator name"
-msgstr "Name des Administrator"
+msgid "Administrator Name"
+msgstr ""
 
 msgid "Advanced"
 msgstr "Erweitert"
@@ -611,8 +613,8 @@ msgstr "Erweiterte Einrichtung"
 msgid "Advanced settings"
 msgstr "Erweiterte Einstellungen"
 
-msgid "Advertisement skew"
-msgstr "Advertisement skew"
+msgid "Advertisement Skew"
+msgstr ""
 
 msgid "Afrikaans"
 msgstr "Afrikaans"
@@ -643,8 +645,8 @@ msgstr ""
 msgid "Age"
 msgstr "Alter"
 
-msgid "Aggregation protocol"
-msgstr "Aggregation Protokoll"
+msgid "Aggregation Protocol"
+msgstr ""
 
 msgid "Aggressive"
 msgstr "Aggressiv"
@@ -2029,11 +2031,11 @@ msgstr "Dienstprotokoll"
 msgid "Danish"
 msgstr "Dänisch"
 
+msgid "Data Integrity"
+msgstr ""
+
 msgid "Data digest"
 msgstr "Datenauszug"
-
-msgid "Data integrity"
-msgstr "Datenintegrität"
 
 msgid "Database Directory"
 msgstr "Datenbankverzeichnis"
@@ -2303,6 +2305,9 @@ msgstr "Beschreibung"
 msgid "Destination"
 msgstr "Ziel"
 
+msgid "Destination Network"
+msgstr ""
+
 msgid "Destination Share"
 msgstr "Ziel"
 
@@ -2318,14 +2323,11 @@ msgstr "Host Name oder IP-Adresse des Ziel-Hosts."
 msgid "Destination host name or IP number."
 msgstr "Host-Name des Ziels oder IP Nummer."
 
-msgid "Destination network"
-msgstr "Zielnetzwerk"
-
 msgid "Destination network bit count"
 msgstr "Zielnetzwerk Bit Count"
 
-msgid "Destination network for this static route"
-msgstr "Zielnetzwerk für diese statische Route"
+msgid "Destination network for this static route."
+msgstr ""
 
 msgid "Destination port"
 msgstr "Ziel-Port"
@@ -2826,20 +2828,20 @@ msgstr "Domain ID"
 msgid "Domain"
 msgstr "Domäne"
 
+msgid "Domain Controller Name"
+msgstr ""
+
 msgid "Domain Name"
 msgstr ""
 
-msgid "Domain controller name"
-msgstr "Name des Domain-Controllers"
+msgid "Domain Name (DNS/Realm-Name)"
+msgstr ""
+
+msgid "Domain Name (NetBIOS-Name)"
+msgstr ""
 
 msgid "Domain is missing 2nd level name."
 msgstr ""
-
-msgid "Domain name (DNS/Realm-Name)"
-msgstr "Name der Domain (DNS/Realm-Name)"
-
-msgid "Domain name (NetBIOS-Name)"
-msgstr "Name der Domain (NetBIOS-Name)"
 
 msgid "Domain name in old format, e.g. EXAMPLE."
 msgstr "Domain-Name im alten Format, z.B. BEISPIELNAME."
@@ -2873,9 +2875,6 @@ msgstr ""
 
 msgid "Download directory"
 msgstr "Übertragungsverzeichnis"
-
-msgid "Download firewall rules."
-msgstr "Firewallregeln herunterladen."
 
 msgid "Drive Temperature."
 msgstr "Festplattentemperatur"
@@ -3330,8 +3329,14 @@ msgstr "»%s« wird verschlüsselt, bitte warten …"
 msgid "Encryption"
 msgstr "Verschlüsselung"
 
-msgid "Encryption Setup"
-msgstr "Verschlüsselungseinrichtung"
+msgid "Encryption Algorithm"
+msgstr ""
+
+msgid "Encryption Management"
+msgstr ""
+
+msgid "Encryption Settings"
+msgstr ""
 
 msgid "Encryption Tools"
 msgstr "Verschlüsselungswerkzeuge"
@@ -3362,6 +3367,11 @@ msgstr ""
 "von NAS4Free nur ein, wenn Sie den Standardwert überschreiben wollen (80 für "
 "HTTP, 443 für HTTPS)"
 
+msgid ""
+"Enter a custom port number if you want to override the default port (default "
+"is 69)."
+msgstr ""
+
 #, php-format
 msgid ""
 "Enter a custom port number if you want to override the default port. "
@@ -3371,11 +3381,6 @@ msgstr ""
 msgid ""
 "Enter a custom port number if you want to override the default port. "
 "(Default is 22)."
-msgstr ""
-
-msgid ""
-"Enter a custom port number if you want to override the default port. "
-"(Default is 69). "
 msgstr ""
 
 msgid "Enter a description"
@@ -3519,6 +3524,9 @@ msgstr "Exportiere einen Pool aus dem System"
 
 msgid "Export all the directories in the specified path."
 msgstr "Alle Ordner im angegebenen Pfad exportieren."
+
+msgid "Export firewall rules."
+msgstr ""
 
 msgid "Exported"
 msgstr "Exportiert"
@@ -3915,8 +3923,8 @@ msgid "Graph shows last 120 seconds"
 msgstr "Graph zeigt die letzten 120 Sekunden"
 
 #, php-format
-msgid "Graph updates every %d seconds"
-msgstr "Diagramm wird alle %d Sekunden aktualisiert"
+msgid "Graph updates every %d seconds."
+msgstr ""
 
 msgid "Graphs Height"
 msgstr "Diagramm Höhe"
@@ -4085,8 +4093,8 @@ msgstr "Persönlicher Ordner"
 msgid "Host"
 msgstr "Host"
 
-msgid "Host access control"
-msgstr "Host-Zugangskontrolle"
+msgid "Host Access Control"
+msgstr ""
 
 msgid "Host resources"
 msgstr "Host-Ressourcen"
@@ -4094,8 +4102,8 @@ msgstr "Host-Ressourcen"
 msgid "Hostname"
 msgstr "Hostname"
 
-msgid "Hostname database"
-msgstr "Hostname Datenbank"
+msgid "Hostname Database"
+msgstr ""
 
 msgid "Hosts"
 msgstr "Hosts"
@@ -4560,9 +4568,8 @@ msgid "Invalid file format."
 msgstr "Ungültiges Dateiformat."
 
 #, php-format
-msgid "Invalid max. block size! It must be in the range from %d to %d."
+msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
-"Ungültigemaximale Blockgröße! Sie muss im Bereich von %d bis %d sein."
 
 msgid "Invalid username or password."
 msgstr "Benutzername oder Passwort ungültig."
@@ -4665,11 +4672,11 @@ msgstr "Systemkern-Datei (z.B. %s)"
 msgid "Key"
 msgstr "Schlüssel"
 
+msgid "Key Length"
+msgstr ""
+
 msgid "Key Management Protocol"
 msgstr "Key Management Protocol"
-
-msgid "Key length"
-msgstr "Schlüssellänge"
 
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr "Schlüssellänge des zu verwendenden kryptographischen Algorithmus."
@@ -4830,11 +4837,11 @@ msgstr ""
 "Dateisystem und Schnappschüsse. Um die Größe einzustellen bitte die "
 "folgenden Suffixe benutzen: »k«, »KB«, »M«, »Gb«, usw."
 
-msgid "Link down action"
-msgstr "Schnittstelle aus Aktion"
+msgid "Link Down Action"
+msgstr ""
 
-msgid "Link up action"
-msgstr "Schnittstelle an Aktion"
+msgid "Link Up Action"
+msgstr ""
 
 msgid "List"
 msgstr "Liste"
@@ -5348,6 +5355,9 @@ msgstr "Einhängepunkt"
 
 msgid "Mount Point Fsck"
 msgstr "Einhängepunkt Fsck"
+
+msgid "Mount Point Management"
+msgstr ""
 
 msgid "Mount Point Tools"
 msgstr "Einhängepunkt Werkzeuge"
@@ -6099,9 +6109,6 @@ msgid "Permit to do SSH Tunneling."
 msgstr "SSH Tunneling erlauben."
 
 msgid "Physical Interface"
-msgstr "Physische Schnittstelle"
-
-msgid "Physical interface"
 msgstr "Physische Schnittstelle"
 
 msgid "Pictures"
@@ -7665,6 +7672,9 @@ msgstr "Zeichenkette zur Identifizierung des Extents."
 msgid "Subject"
 msgstr "Betreff"
 
+msgid "Subnet Bit Count"
+msgstr ""
+
 msgid "Subnet Mask"
 msgstr "Subnetz-Maske"
 
@@ -7825,6 +7835,9 @@ msgstr "TCP Port zum Bind Server."
 msgid "TFTP"
 msgstr "TFTP"
 
+msgid "TFTP has been disabled."
+msgstr ""
+
 msgid "TKIP"
 msgstr "TKIP"
 
@@ -7860,8 +7873,8 @@ msgstr "Tag%d (%s)"
 msgid "Take a device offline"
 msgstr "Ein Gerät Offline setzen"
 
-msgid "Tap device"
-msgstr "TAP-Gerät"
+msgid "Tap Device"
+msgstr ""
 
 msgid "Tape"
 msgstr "Band"
@@ -10026,9 +10039,6 @@ msgstr "VLAN Einstellungen"
 msgid "VLAN Tag"
 msgstr "VLAN-Markierung"
 
-msgid "VLAN tag"
-msgstr "VLAN-Markierung"
-
 msgid "VM Type"
 msgstr "VM-Typ"
 
@@ -10231,6 +10241,9 @@ msgstr "Mi."
 
 msgid "Wednesday"
 msgstr "Mittwoch"
+
+msgid "Week Days"
+msgstr ""
 
 msgid "Week days"
 msgstr "Wochentage"
@@ -10655,433 +10668,32 @@ msgstr "Aushängen"
 msgid "week days"
 msgstr "wochentagen"
 
-#~ msgid ""
-#~ "A Auth Group contains authorised users and secrets for additional security."
-#~ msgstr ""
-#~ "Eine Authentifizierungsgruppe enthält autorisierte Benutzer und weiteren "
-#~ "Schutz für zusätzliche Sicherheit."
+#~ msgid "Aggregation protocol"
+#~ msgstr "Aggregation Protokoll"
 
-#~ msgid ""
-#~ "A Initiator Group contains authorised initiator names and networks to access "
-#~ "the target."
-#~ msgstr ""
-#~ "Die Initiatorgruppe enthält autorisierte Initiatornamen und Netzwerke, um "
-#~ "auf das Ziel zuzugreifen."
+#~ msgid "Physical interface"
+#~ msgstr "Physische Schnittstelle"
 
-#~ msgid ""
-#~ "A Portal Group contains IP addresses and listening TCP ports to connect the "
-#~ "target from the initiator."
-#~ msgstr ""
-#~ "Eine Portalgruppe beinhaltet IP-Adressen und lauschende TCP-Ports, um das "
-#~ "Ziel vom Initiator zu verbinden."
+#~ msgid "Link down action"
+#~ msgstr "Schnittstelle aus Aktion"
 
-#~ msgid ""
-#~ "A directory listing is generated if a directory is requested and no index-"
-#~ "file (index.php, index.html, index.htm or default.htm) was found in that "
-#~ "directory."
-#~ msgstr ""
-#~ "Eine Verzeichnisübersicht wird erstellt, wenn ein Verzeichnis angefordert "
-#~ "wird und keine Indexdatei (index.php, index.html, index.htm oder "
-#~ "default.htm) enthält."
+#~ msgid "Link up action"
+#~ msgstr "Schnittstelle an Aktion"
 
-#~ msgid ""
-#~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
-#~ msgstr ""
-#~ "Es muss eine gültige IPv4-Adresse für den primären/sekundären DNS-Server "
-#~ "angegeben werden."
-
-#~ msgid ""
-#~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
-#~ msgstr ""
-#~ "Es muss eine gültige IPv6-Adresse für den primären/sekundären DNS-Server "
-#~ "angegeben werden."
-
-#~ msgid "AIO read size"
-#~ msgstr "AIO Lesegröße"
-
-#~ msgid "AIO write size"
-#~ msgstr "AIO schreib-größe"
-
-#~ msgid "Access mode"
-#~ msgstr "Zugriffsmodus"
-
-#~ msgid "All dirs"
-#~ msgstr "Alle Verzeichnisse"
-
-#~ msgid "All users will have the root privilege."
-#~ msgstr "Alle Benutzer erhalten Administratorrechte."
-
-#~ msgid "Allow new files"
-#~ msgstr "Erlaube neue Dateien"
-
-#~ msgid "Alternate TCP port. Default is 22"
-#~ msgstr "Alternativer TCP Port (Standard: 22)."
-
-#~ msgid "Alternate TCP port. Default is 873"
-#~ msgstr "Alternativer TCP Port (Standard: 873)."
-
-#~ msgid "Always scan"
-#~ msgstr "Immer prüfen"
-
-#~ msgid "Asynchronous I/O (AIO)"
-#~ msgstr "Asynchrones I/O (AIO)"
-
-#~ msgid "Auxiliary parameters"
-#~ msgstr "Zusätzliche Parameter"
-
-#~ msgid "CIFS/SMB disabled"
-#~ msgstr "CIFS/SMB deaktiviert"
-
-#~ msgid "Create mask"
-#~ msgstr "Erzeuge Maske"
-
-#~ msgid "Destination share"
-#~ msgstr "Zielfreigabe"
-
-#~ msgid "Directory mask"
-#~ msgstr "Verzeichnismaske"
-
-#~ msgid "Document root"
-#~ msgstr "Stammverzeichnis"
-
-#~ msgid "Domain name"
-#~ msgstr "Domänenname"
-
-#~ msgid "Dos charset"
-#~ msgstr "DOS-Zeichensatz"
-
-#~ msgid "EA support"
-#~ msgstr "EA Unterstützung"
-
-#~ msgid "Enable Asynchronous I/O (AIO)"
-#~ msgstr "Asynchrones I/O (AIO) aktivieren"
-
-#~ msgid "Enable ZFS ACL"
-#~ msgstr "Aktivierung von ZFS ACL"
-
-#~ msgid "Enable extended attribute support"
-#~ msgstr "Erweiterte Attributunterstützung aktivieren"
-
-#~ msgid "Enable guest access"
-#~ msgstr "Gastzugriff aktivieren"
-
-#~ msgid "Enable large read/write"
-#~ msgstr "Large read/write ermöglichen"
-
-#~ msgid "Enable permission inheritance"
-#~ msgstr "Aktiviere Rechtevererbung"
-
-#~ msgid "Enable recycle bin"
-#~ msgstr "Papierkorb aktivieren"
-
-#~ msgid "Enable shadow copy"
-#~ msgstr "Aktiviere Schattenkopie"
-
-#~ msgid "Enable store DOS attributes"
-#~ msgstr "Aktiviere Speicherung der DOS-Attribute"
-
-#~ msgid "Forced update period"
-#~ msgstr "Erzwungene Updateperiode"
-
-#~ msgid "Guest account"
-#~ msgstr "Gastkonto"
-
-#~ msgid "Hide dot files"
-#~ msgstr "Dateien verstecken, deren Namen mit einem Punkt beginnen"
-
-#~ msgid "Hosts allow"
-#~ msgstr "zuzulassende Hosts"
-
-#~ msgid "Hosts deny"
-#~ msgstr "abzuweisende Hosts"
-
-#~ msgid "Inherit permissions"
-#~ msgstr "Berechtigungen vererben"
-
-#~ msgid "Large read/write"
-#~ msgstr "Large read/write"
-
-#~ msgid "Local share (destination)"
-#~ msgstr "Lokale Freigabe (Ziel)"
-
-#~ msgid "Local shares to be synchronized"
-#~ msgstr "Lokale Freigaben für Synchonisation"
+#~ msgid "Advertisement skew"
+#~ msgstr "Advertisement skew"
 
 #, php-format
-#~ msgid ""
-#~ "Location where the working files will be stored, e.g. %s/backup/.unison"
+#~ msgid "Invalid max. block size! It must be in the range from %d to %d."
 #~ msgstr ""
-#~ "Ort, an dem die Arbeitsdateien gespeichert werden sollen, z.B. "
-#~ "%s/backup/.unison"
+#~ "Ungültigemaximale Blockgröße! Sie muss im Bereich von %d bis %d sein."
 
-#~ msgid "Logical Block Length"
-#~ msgstr "Logische Block Größe"
+#~ msgid "Tap device"
+#~ msgstr "TAP-Gerät"
 
-#~ msgid "Map all users to root"
-#~ msgstr "Bilde alle Benutzer auf den Nutzer 'root' ab"
-
-#~ msgid "Map to user"
-#~ msgstr "Bilde auf den Benutzer ab"
-
-#~ msgid "Max. block size"
-#~ msgstr "Max. Blockgröße"
-
-#~ msgid "Max. connections"
-#~ msgstr "Maximale Verbindungen"
-
-#~ msgid "Max. sessions"
-#~ msgstr "Maximale Verbindungen"
-
-#~ msgid "Maximum connections"
-#~ msgstr "Max. Verbindungen"
-
-#~ msgid "NetBIOS name"
-#~ msgstr "NetBIOS-Name"
-
-#~ msgid "Null passwords"
-#~ msgstr "Leere Passwörter"
-
-#~ msgid "Number of servers"
-#~ msgstr "Anzahl der Server"
-
-#~ msgid "Password authentication"
-#~ msgstr "Passwortauthentifizierung"
-
-#~ msgid "Permit root login"
-#~ msgstr "Root Login zulassen"
-
-#~ msgid "Preserve extended attributes"
-#~ msgstr "Erhalte erweiterte Attribute"
-
-#~ msgid "Preserve permissions"
-#~ msgstr "Dateirechte beibehalten"
-
-#~ msgid "Receive Buffer Size"
-#~ msgstr "Receive Buffer Size"
-
-#~ msgid "Recycle bin"
-#~ msgstr "Papierkorb"
-
-#~ msgid "Remote module (source)"
-#~ msgstr "Remote Modul (Quelle)"
-
-#~ msgid "Reverse direction"
-#~ msgstr "Umgekehrte Richtung"
+#~ msgid "VLAN tag"
+#~ msgstr "VLAN-Markierung"
 
 #, php-format
-#~ msgid ""
-#~ "Samba will read from file asynchronously when size of request is bigger than "
-#~ "this value. (%d by default)"
-#~ msgstr ""
-#~ "Samba wird asynchron lesen, wenn die Größe der Anfrage größer ist als diese "
-#~ "Variable. (Standard: %d)"
-
-#, php-format
-#~ msgid ""
-#~ "Samba will write to file asynchronously when size of request is bigger than "
-#~ "this value. (%d by default)"
-#~ msgstr ""
-#~ "Samba wird asynchron schreiben, wenn die Größe der Anfrage größer ist als "
-#~ "diese Variable. (Standard: %d)"
-
-#~ msgid "Scan type"
-#~ msgstr "Suchart"
-
-#~ msgid "Send Buffer Size"
-#~ msgstr "Send Buffer Size"
-
-#~ msgid "Server name"
-#~ msgstr "Servername"
-
-#~ msgid "Set browseable"
-#~ msgstr "Durchsuchbar machen"
-
-#~ msgid "Set read only"
-#~ msgstr "Schreibschutz einschalten"
-
-#~ msgid "Shadow Copy format"
-#~ msgstr "Schattenkopie-Format"
-
-#~ msgid "Source share"
-#~ msgstr "Quell - Freigabe"
-
-#~ msgid "Store DOS attributes"
-#~ msgstr "DOS-Attribute speichern"
-
-#~ msgid "Swap disabled"
-#~ msgstr "Swap deaktiviert"
-
-#~ msgid "Synchronization time"
-#~ msgstr "Synchronisationszeit"
-
-#~ msgid "TCP forwarding"
-#~ msgstr "TCP forwarding"
-
-#~ msgid ""
-#~ "The port to listen to. The default is to listen to the tftp port specified "
-#~ "in /etc/services."
-#~ msgstr ""
-#~ "Portnummer. Standardmäßig wird der in /etc/services definierte tftp Port "
-#~ "verwendet."
-
-#, php-format
-#~ msgid "The recommended length for compatibility is %d."
-#~ msgstr "Die empfohlende Länge der Kompatibilität ist %d."
-
-#~ msgid "The working directory does not exist."
-#~ msgstr "Das Arbeitsverzeichnis existiert nicht."
-
-#~ msgid "This will provide ZFS ACL support. (ZFS only)"
-#~ msgstr "Dies wird ZFS ACL-Unterstützung bereitstellen. (Nur ZFS)"
-
-#~ msgid "Time server"
-#~ msgstr "Zeitserver"
-
-#~ msgid "Unix charset"
-#~ msgstr "Unix charset"
-
-#~ msgid "WINS server"
-#~ msgstr "WINS Server"
-
-#~ msgid "Working directory"
-#~ msgstr "Arbeitsverzeichnis"
-
-#, php-format
-#~ msgid "You may specify logical block length (%d by default)."
-#~ msgstr "Sie können die logische Blocklänge zuweisen (Standard ist %d)"
-
-#~ msgid "umask"
-#~ msgstr "umask"
-
-#~ msgid "Map to guest"
-#~ msgstr "Dem Gastkonto zur Verfügung stellen"
-
-#~ msgid "Run as"
-#~ msgstr "Ausführen als"
-
-#~ msgid "Upload directory"
-#~ msgstr "Verzeichnis hochladen"
-
-#~ msgid "Password server"
-#~ msgstr "Passwort Server"
-
-#~ msgid "Trusted domains"
-#~ msgstr "authorisierte Netzwerkdomänen"
-
-#~ msgid ""
-#~ "The workgroup in which the server will appear when queried by Windows or SMB "
-#~ "clients (maximum 15 characters)."
-#~ msgstr ""
-#~ "Die Arbeitsgruppe unter der eine Windows- oder Samba-Client den Server "
-#~ "ansprechen kann  (maximal 15 Zeichen möglich)"
-
-#~ msgid "Interface selection"
-#~ msgstr "Auswahl der Schnittstelle"
-
-#~ msgid "Active Directory List"
-#~ msgstr "Active Directory Verzeichnis"
-
-#~ msgid "Enable ACL inheritance"
-#~ msgstr "ACL Vererbung aktivieren"
-
-#~ msgid "AIO module"
-#~ msgstr "AIO Modul"
-
-#~ msgid "Skip first scan"
-#~ msgstr "Überspringe den ersten Scan"
-
-#~ msgid "Store NTFS acls"
-#~ msgstr "NTFS acls speichern"
-
-#~ msgid "Store alternate data streams in Extended Attributes"
-#~ msgstr "ADS (alternate data streams) in den erweiterten Attributen speichern"
-
-#~ msgid "Store NTFS acls in Extended Attributes"
-#~ msgstr "NTFS acls in erweiterten Attributen speichern"
-
-#~ msgid "Store alternate data streams"
-#~ msgstr "ADS (alternate data streams) speichern"
-
-#~ msgid "Group compilations"
-#~ msgstr "Aufstellungsgruppe"
-
-#~ msgid "Compilations directories"
-#~ msgstr "Verzeichnisse der Aufstellung"
-
-#~ msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
-#~ msgstr ""
-#~ "Dies stellt NTFS acls bereit ohne ZFS ACL Unterstützung, wie bei UFS."
-
-#~ msgid "Remote rsync daemon"
-#~ msgstr "Remote-rsync-Daemon"
-
-#~ msgid "AFP compatibility"
-#~ msgstr "Kompatibilität zum Apple Fle Protokol"
-
-#~ msgid "Enhanced compatibility with Netatalk AFP server"
-#~ msgstr "erhöhte Kompatibilität zum Netatalk AFP Server"
-
-#~ msgid "Enable mapping DOS attributes"
-#~ msgstr "Mapping von DOS Datei-Attributen aktivieren"
-
-#~ msgid ""
-#~ "Enter the path to the home directory. The config will be created under the "
-#~ "specified directory."
-#~ msgstr "Pfad des 'Home Directory'. Die Konfiguration wird dort gespeichert"
-
-#~ msgid "Mapping DOS attributes"
-#~ msgstr "Maping der DOS-Datei Attribute"
-
-#~ msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
-#~ msgstr ""
-#~ "Das ermöglicht die Erstellung von Schattenkopien durch automatische "
-#~ "Schnappschüsse. (Nur ZFS)"
-
-#, php-format
-#~ msgid ""
-#~ "%s must be enabled for Unison to work, and the %s must have shell access."
-#~ msgstr ""
-#~ "%s muss aktiviert sein damit Unison funktioniert und  %s muss über Shell "
-#~ "Zugriff verfügen."
-
-#~ msgid ""
-#~ "Additional parameters to the hardware-specific part of the driver for second "
-#~ "UPS."
-#~ msgstr ""
-#~ "Zusätzliche Parameter für den hardware-spezifischen Treiber der zweiten "
-#~ "unterbrechungsfreien Stromversorgung (UPS)"
-
-#~ msgid "Enable 'Asynchronous I/O (AIO)' switch."
-#~ msgstr "Aktivieren Sie den 'Asynchronous I/O (AIO)' Schalter."
-
-#~ msgid ""
-#~ "Running the service as user root is not recommended for security reasons, "
-#~ "use at your own risk!"
-#~ msgstr ""
-#~ "Den Dienst als root-user auszuführen wird aus Sicherheitsgründen nicht "
-#~ "empfohlen - auf eigene Gefahr!"
-
-#~ msgid "SSHD"
-#~ msgstr "SSHD"
-
-#~ msgid "user"
-#~ msgstr "Benutzer"
-
-#~ msgid "Set under which user the service should run (www by default)."
-#~ msgstr ""
-#~ "Einstellung unter welchem Benutzer der Dienst laufen soll (www als Standard)."
-
-#~ msgid "Server Max Protocol"
-#~ msgstr "Server Max Protokol"
-
-#~ msgid "Server Min Protocol"
-#~ msgstr "Server Min Protokol"
-
-#~ msgid "Client Max Protocol"
-#~ msgstr "Client Max Protokoll"
-
-#~ msgid "Client Min Protocol"
-#~ msgstr "Client Min Protokoll"
-
-#~ msgid "Auxiliary Parameters"
-#~ msgstr "Hilfsparameter"
+#~ msgid "Graph updates every %d seconds"
+#~ msgstr "Diagramm wird alle %d Sekunden aktualisiert"

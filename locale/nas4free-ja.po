@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-29 13:11+0000\n"
+"POT-Creation-Date: 2017-01-30 02:33+0000\n"
 "PO-Revision-Date: 2016-11-21 20:27+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-29 12:20+0000\n"
+"X-Launchpad-Export-Date: 2017-01-30 02:12+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: JAPAN\n"
 "Language: \n"
@@ -541,14 +541,14 @@ msgstr "リモート hastd デーモンのアドレス。固定IPアドレスで
 msgid "Admin Password"
 msgstr ""
 
-msgid "Administration password"
-msgstr "管理者パスワード"
+msgid "Administration Password"
+msgstr ""
 
 msgid "Administrative WebGUI"
 msgstr "管理用 Web 画面"
 
-msgid "Administrator name"
-msgstr "管理者名"
+msgid "Administrator Name"
+msgstr ""
 
 msgid "Advanced"
 msgstr "高度な設定"
@@ -571,8 +571,8 @@ msgstr ""
 msgid "Advanced settings"
 msgstr "高度な設定"
 
-msgid "Advertisement skew"
-msgstr "広告スキュー"
+msgid "Advertisement Skew"
+msgstr ""
 
 msgid "Afrikaans"
 msgstr ""
@@ -596,8 +596,8 @@ msgstr ""
 msgid "Age"
 msgstr ""
 
-msgid "Aggregation protocol"
-msgstr "アグリゲーションプロトコル"
+msgid "Aggregation Protocol"
+msgstr ""
 
 msgid "Aggressive"
 msgstr "アグレッシブ"
@@ -1889,11 +1889,11 @@ msgstr "デーモン ログ"
 msgid "Danish"
 msgstr "デンマーク語"
 
+msgid "Data Integrity"
+msgstr ""
+
 msgid "Data digest"
 msgstr "データダイジェスト"
-
-msgid "Data integrity"
-msgstr "データの完全性"
 
 msgid "Database Directory"
 msgstr ""
@@ -2147,6 +2147,9 @@ msgstr "概要"
 msgid "Destination"
 msgstr "宛て先"
 
+msgid "Destination Network"
+msgstr ""
+
 msgid "Destination Share"
 msgstr "接続先共有"
 
@@ -2162,14 +2165,11 @@ msgstr ""
 msgid "Destination host name or IP number."
 msgstr "宛て先のホスト名もしくは IP アドレス"
 
-msgid "Destination network"
-msgstr "宛て先ネットワーク"
-
 msgid "Destination network bit count"
 msgstr "宛て先ネットワークのビット数"
 
-msgid "Destination network for this static route"
-msgstr "この静的ルートの宛先ネットワーク"
+msgid "Destination network for this static route."
+msgstr ""
 
 msgid "Destination port"
 msgstr "宛て先ポート"
@@ -2634,20 +2634,20 @@ msgstr "ドメイン ID"
 msgid "Domain"
 msgstr "ドメイン"
 
+msgid "Domain Controller Name"
+msgstr ""
+
 msgid "Domain Name"
 msgstr ""
 
-msgid "Domain controller name"
-msgstr "ドメインコントローラ名"
+msgid "Domain Name (DNS/Realm-Name)"
+msgstr ""
+
+msgid "Domain Name (NetBIOS-Name)"
+msgstr ""
 
 msgid "Domain is missing 2nd level name."
 msgstr ""
-
-msgid "Domain name (DNS/Realm-Name)"
-msgstr "ドメイン名 (DNS/Realm-Name)"
-
-msgid "Domain name (NetBIOS-Name)"
-msgstr "ドメイン名(NetBIOS名)"
 
 msgid "Domain name in old format, e.g. EXAMPLE."
 msgstr "古い形式のドメイン名 例.EXAMPLE"
@@ -2681,9 +2681,6 @@ msgstr ""
 
 msgid "Download directory"
 msgstr "ダウンロードディレクトリ"
-
-msgid "Download firewall rules."
-msgstr "ファイアウォールルールをダウンロード。"
 
 msgid "Drive Temperature."
 msgstr "ドライブ温度。"
@@ -3127,7 +3124,13 @@ msgstr "'%s' を暗号化中です... お待ちください。"
 msgid "Encryption"
 msgstr "暗号化"
 
-msgid "Encryption Setup"
+msgid "Encryption Algorithm"
+msgstr ""
+
+msgid "Encryption Management"
+msgstr ""
+
+msgid "Encryption Settings"
 msgstr ""
 
 msgid "Encryption Tools"
@@ -3156,6 +3159,11 @@ msgid ""
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr "WebGUIデフォルトポート(HTTP 80, HTTPS 443)を変更したい場合は、カスタムポート番号を入力してください。"
 
+msgid ""
+"Enter a custom port number if you want to override the default port (default "
+"is 69)."
+msgstr ""
+
 #, php-format
 msgid ""
 "Enter a custom port number if you want to override the default port. "
@@ -3165,11 +3173,6 @@ msgstr ""
 msgid ""
 "Enter a custom port number if you want to override the default port. "
 "(Default is 22)."
-msgstr ""
-
-msgid ""
-"Enter a custom port number if you want to override the default port. "
-"(Default is 69). "
 msgstr ""
 
 msgid "Enter a description"
@@ -3296,6 +3299,9 @@ msgstr ""
 
 msgid "Export all the directories in the specified path."
 msgstr "指定されたパスの中にあるすべてのディレクトリーをエクスポートします。"
+
+msgid "Export firewall rules."
+msgstr ""
 
 msgid "Exported"
 msgstr ""
@@ -3682,7 +3688,7 @@ msgid "Graph shows last 120 seconds"
 msgstr "直近120秒のグラフ表示"
 
 #, php-format
-msgid "Graph updates every %d seconds"
+msgid "Graph updates every %d seconds."
 msgstr ""
 
 msgid "Graphs Height"
@@ -3846,8 +3852,8 @@ msgstr "ホームディレクトリ"
 msgid "Host"
 msgstr "ホスト"
 
-msgid "Host access control"
-msgstr "ホストのアクセスコントロール"
+msgid "Host Access Control"
+msgstr ""
 
 msgid "Host resources"
 msgstr "ホストリソース"
@@ -3855,8 +3861,8 @@ msgstr "ホストリソース"
 msgid "Hostname"
 msgstr "ホスト名"
 
-msgid "Hostname database"
-msgstr "ホスト名データベース"
+msgid "Hostname Database"
+msgstr ""
 
 msgid "Hosts"
 msgstr "ホスト"
@@ -4287,8 +4293,8 @@ msgid "Invalid file format."
 msgstr "無効なファイル形式です。"
 
 #, php-format
-msgid "Invalid max. block size! It must be in the range from %d to %d."
-msgstr "無効なブロックサイズの最大値です! %d から %d の範囲で指定して下さい。"
+msgid "Invalid maximum block size! It must be in the range from %d to %d."
+msgstr ""
 
 msgid "Invalid username or password."
 msgstr ""
@@ -4379,11 +4385,11 @@ msgstr "カーネルファイル (例: %s)。"
 msgid "Key"
 msgstr "鍵"
 
+msgid "Key Length"
+msgstr ""
+
 msgid "Key Management Protocol"
 msgstr "鍵管理プロトコル"
-
-msgid "Key length"
-msgstr "鍵長"
 
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr "暗号化アルゴリズムで使用する鍵長。"
@@ -4530,11 +4536,11 @@ msgstr ""
 "ショットを含む子孫によるすべての容量を含みます。サイズを指定するには、以下の人間が読める接尾語を使用してください。(例えば、'k', 'KB', "
 "'M', 'Gb', など)"
 
-msgid "Link down action"
-msgstr "リンクダウン時の処理"
+msgid "Link Down Action"
+msgstr ""
 
-msgid "Link up action"
-msgstr "リンクアップ時の処理"
+msgid "Link Up Action"
+msgstr ""
 
 msgid "List"
 msgstr "リスト"
@@ -5029,6 +5035,9 @@ msgid "Mount Point"
 msgstr "マウントポイント"
 
 msgid "Mount Point Fsck"
+msgstr ""
+
+msgid "Mount Point Management"
 msgstr ""
 
 msgid "Mount Point Tools"
@@ -5746,9 +5755,6 @@ msgid "Permit to do SSH Tunneling."
 msgstr "SSH トンネリングを許可します。"
 
 msgid "Physical Interface"
-msgstr "物理インタフェース"
-
-msgid "Physical interface"
 msgstr "物理インタフェース"
 
 msgid "Pictures"
@@ -7233,6 +7239,9 @@ msgstr "このエクステントを識別する文字列を入力して下さい
 msgid "Subject"
 msgstr "件名"
 
+msgid "Subnet Bit Count"
+msgstr ""
+
 msgid "Subnet Mask"
 msgstr ""
 
@@ -7392,6 +7401,9 @@ msgstr "サーバが待ち受ける TCP ポート。"
 msgid "TFTP"
 msgstr "TFTP"
 
+msgid "TFTP has been disabled."
+msgstr ""
+
 msgid "TKIP"
 msgstr "TKIP"
 
@@ -7427,8 +7439,8 @@ msgstr "タグ%d (%s)"
 msgid "Take a device offline"
 msgstr ""
 
-msgid "Tap device"
-msgstr "Tapデバイス"
+msgid "Tap Device"
+msgstr ""
 
 msgid "Tape"
 msgstr "テープ"
@@ -9298,9 +9310,6 @@ msgstr ""
 msgid "VLAN Tag"
 msgstr "VLAN タグ"
 
-msgid "VLAN tag"
-msgstr "VLAN タグ"
-
 msgid "VM Type"
 msgstr "VM 形式"
 
@@ -9495,6 +9504,9 @@ msgid "Wed"
 msgstr ""
 
 msgid "Wednesday"
+msgstr ""
+
+msgid "Week Days"
 msgstr ""
 
 msgid "Week days"
@@ -9882,360 +9894,27 @@ msgstr "アンマウント"
 msgid "week days"
 msgstr ""
 
-#~ msgid ""
-#~ "A Auth Group contains authorised users and secrets for additional security."
-#~ msgstr "認証グループは、追加のセキュリティの為に認証用ユーザ名とシークレットの組を含みます。"
-
-#~ msgid ""
-#~ "A Initiator Group contains authorised initiator names and networks to access "
-#~ "the target."
-#~ msgstr "イニシエータグループは、ターゲットへの接続を許可されたイニシエータ名とネットワークの組を含みます。"
-
-#~ msgid ""
-#~ "A Portal Group contains IP addresses and listening TCP ports to connect the "
-#~ "target from the initiator."
-#~ msgstr "ポータルグループは、イニシエータからターゲットへの接続に利用するIPアドレスとTCP待ち受けポート番号の組を含みます。"
-
-#~ msgid ""
-#~ "A directory listing is generated if a directory is requested and no index-"
-#~ "file (index.php, index.html, index.htm or default.htm) was found in that "
-#~ "directory."
-#~ msgstr ""
-#~ "ディレクトリが要求された時、その中にインデックスファイル (index.php, index.html, index.htm, default.htm) "
-#~ "が存在しない場合は、ディレクトリリストを生成します。"
-
-#~ msgid ""
-#~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
-#~ msgstr "プライマリ/セカンダリ DNS サーバは有効な IPv4 アドレスを指定してください。"
-
-#~ msgid ""
-#~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
-#~ msgstr "プライマリ/セカンダリ DNS サーバは有効な IPv6 アドレスを指定してください。"
-
-#~ msgid "AIO read size"
-#~ msgstr "AIO 読み込みサイズ"
-
-#~ msgid "AIO write size"
-#~ msgstr "AIO 書き込みサイズ"
-
-#~ msgid "Access mode"
-#~ msgstr "アクセスモード"
-
-#~ msgid "All dirs"
-#~ msgstr "すべてのディレクトリ"
-
-#~ msgid "All users will have the root privilege."
-#~ msgstr "全てのユーザが root 権限を持ちます。"
-
-#~ msgid "Allow new files"
-#~ msgstr "新しいファイルを許可します。"
-
-#~ msgid "Alternate TCP port. Default is 22"
-#~ msgstr "代わりの TCP ポート。デフォルトは 22"
-
-#~ msgid "Alternate TCP port. Default is 873"
-#~ msgstr "代わりの TCP ポート。デフォルトは 873"
-
-#~ msgid "Always scan"
-#~ msgstr "常にスキャン"
-
-#~ msgid "Asynchronous I/O (AIO)"
-#~ msgstr "非同期I/O (AIO)"
-
-#~ msgid "Auxiliary parameters"
-#~ msgstr "補助パラメータ"
-
-#~ msgid "CIFS/SMB disabled"
-#~ msgstr "CIFS/SMB は無効です"
-
-#~ msgid "Create mask"
-#~ msgstr "Create mask"
-
-#~ msgid "Destination share"
-#~ msgstr "接続先共有"
-
-#~ msgid "Directory mask"
-#~ msgstr "Directory mask"
-
-#~ msgid "Document root"
-#~ msgstr "ドキュメントルート"
-
-#~ msgid "Domain name"
-#~ msgstr "ドメイン名"
-
-#~ msgid "Dos charset"
-#~ msgstr "Dos 文字セット"
-
-#~ msgid "EA support"
-#~ msgstr "拡張属性サポート"
-
-#~ msgid "Enable Asynchronous I/O (AIO)"
-#~ msgstr "非同期I/O (AIO)を有効にします。"
-
-#~ msgid "Enable ZFS ACL"
-#~ msgstr "ZFS ACLを有効化"
-
-#~ msgid "Enable extended attribute support"
-#~ msgstr "拡張属性サポートを有効にします"
-
-#~ msgid "Enable guest access"
-#~ msgstr "ゲストアクセスの有効化"
-
-#~ msgid "Enable large read/write"
-#~ msgstr "大きな単位での読み書きを有効にします。"
-
-#~ msgid "Enable permission inheritance"
-#~ msgstr "パーミッションの継承の有効化"
-
-#~ msgid "Enable recycle bin"
-#~ msgstr "ごみ箱機能を有効化"
-
-#~ msgid "Enable shadow copy"
-#~ msgstr "シャドウコピーを有効にします。"
-
-#~ msgid "Enable store DOS attributes"
-#~ msgstr "DOS 属性の保存を有効にします"
-
-#~ msgid "Forced update period"
-#~ msgstr "強制的に時刻をアップデートします"
-
-#~ msgid "Guest account"
-#~ msgstr "ゲストアカウント"
-
-#~ msgid "Hide dot files"
-#~ msgstr "ドットファイルを隠す"
-
-#~ msgid "Hosts allow"
-#~ msgstr "許可するホスト"
-
-#~ msgid "Hosts deny"
-#~ msgstr "拒否するホスト"
-
-#~ msgid "Inherit permissions"
-#~ msgstr "パーミッションを引き継ぐ"
-
-#~ msgid "Large read/write"
-#~ msgstr "Large read/write"
-
-#~ msgid "Local share (destination)"
-#~ msgstr "ローカル共有 (接続先)"
-
-#~ msgid "Local shares to be synchronized"
-#~ msgstr "ローカル共有は同期されました"
+#~ msgid "Aggregation protocol"
+#~ msgstr "アグリゲーションプロトコル"
 
 #, php-format
-#~ msgid ""
-#~ "Location where the working files will be stored, e.g. %s/backup/.unison"
-#~ msgstr "作業ファイルが保存される場所を指定します。例) %s/backup/.unison"
+#~ msgid "Invalid max. block size! It must be in the range from %d to %d."
+#~ msgstr "無効なブロックサイズの最大値です! %d から %d の範囲で指定して下さい。"
 
-#~ msgid "Logical Block Length"
-#~ msgstr "論理ブロック長"
+#~ msgid "Physical interface"
+#~ msgstr "物理インタフェース"
 
-#~ msgid "Map all users to root"
-#~ msgstr "全てのユーザを root にマッピングします。"
+#~ msgid "VLAN tag"
+#~ msgstr "VLAN タグ"
 
-#~ msgid "Map to guest"
-#~ msgstr "ゲストのマッピング"
+#~ msgid "Advertisement skew"
+#~ msgstr "広告スキュー"
 
-#~ msgid "Map to user"
-#~ msgstr "ユーザのマッピング"
+#~ msgid "Link down action"
+#~ msgstr "リンクダウン時の処理"
 
-#~ msgid "Max. block size"
-#~ msgstr "ブロックサイズの最大値"
+#~ msgid "Link up action"
+#~ msgstr "リンクアップ時の処理"
 
-#~ msgid "Max. connections"
-#~ msgstr "最大接続数"
-
-#~ msgid "Max. sessions"
-#~ msgstr "最大セッション数"
-
-#~ msgid "Maximum connections"
-#~ msgstr "最大接続数"
-
-#~ msgid "NetBIOS name"
-#~ msgstr "NetBIOS 名"
-
-#~ msgid "Null passwords"
-#~ msgstr "空のパスワード"
-
-#~ msgid "Number of servers"
-#~ msgstr "サーバの数"
-
-#~ msgid "Password authentication"
-#~ msgstr "パスワード認証"
-
-#~ msgid "Permit root login"
-#~ msgstr "root ログインを許可"
-
-#~ msgid "Preserve extended attributes"
-#~ msgstr "拡張属性を保持します。"
-
-#~ msgid "Preserve permissions"
-#~ msgstr "パーミッションを保持します。"
-
-#~ msgid "Receive Buffer Size"
-#~ msgstr "受信バッファサイズ"
-
-#~ msgid "Recycle bin"
-#~ msgstr "ごみ箱"
-
-#~ msgid "Remote module (source)"
-#~ msgstr "リモートモジュール (ソース)"
-
-#~ msgid "Reverse direction"
-#~ msgstr "逆方向"
-
-#, php-format
-#~ msgid ""
-#~ "Samba will read from file asynchronously when size of request is bigger than "
-#~ "this value. (%d by default)"
-#~ msgstr "Samba は要求サイズがこの値より大きい場合に非同期ファイル読み込みを行います。(デフォルトは %d)"
-
-#, php-format
-#~ msgid ""
-#~ "Samba will write to file asynchronously when size of request is bigger than "
-#~ "this value. (%d by default)"
-#~ msgstr "Samba は要求サイズがこの値より大きい場合に非同期ファイル書き込みを行います。(デフォルトは %d)"
-
-#~ msgid "Scan type"
-#~ msgstr "スキャンタイプ"
-
-#~ msgid "Send Buffer Size"
-#~ msgstr "送信バッファサイズ"
-
-#~ msgid "Server name"
-#~ msgstr "サーバ名"
-
-#~ msgid "Set browseable"
-#~ msgstr "参照可能に設定します。"
-
-#~ msgid "Set read only"
-#~ msgstr "読込み専用に設定します。"
-
-#~ msgid "Shadow Copy format"
-#~ msgstr "シャドウコピー書式"
-
-#~ msgid "Source share"
-#~ msgstr "接続元共有"
-
-#~ msgid "Swap disabled"
-#~ msgstr "スワップ無効"
-
-#~ msgid "Synchronization time"
-#~ msgstr "時間の同期"
-
-#~ msgid "TCP forwarding"
-#~ msgstr "TCP転送"
-
-#~ msgid ""
-#~ "The port to listen to. The default is to listen to the tftp port specified "
-#~ "in /etc/services."
-#~ msgstr "待ち受けるポート。デフォルトは /etc/service で指定された tftp ポートを使用します。"
-
-#, php-format
-#~ msgid "The recommended length for compatibility is %d."
-#~ msgstr "互換性のため推奨する長さは%dです。"
-
-#~ msgid "The working directory does not exist."
-#~ msgstr "作業用ディレクトリーが存在していません。"
-
-#~ msgid "This will provide ZFS ACL support. (ZFS only)"
-#~ msgstr "ZFS ACLサポートを提供します。(ZFS専用)"
-
-#~ msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
-#~ msgstr "自動スナップショットにより作成されたシャドウコピーを提供します。(ZFS専用)"
-
-#~ msgid "Time server"
-#~ msgstr "タイムサーバ"
-
-#~ msgid "Unix charset"
-#~ msgstr "Unix 文字セット"
-
-#~ msgid "WINS server"
-#~ msgstr "WINS サーバ"
-
-#~ msgid "Working directory"
-#~ msgstr "作業ディレクトリ"
-
-#, php-format
-#~ msgid "You may specify logical block length (%d by default)."
-#~ msgstr "論理ブロック長を指定して下さい。(デフォルトは%d)"
-
-#~ msgid "umask"
-#~ msgstr "umask"
-
-#~ msgid "Run as"
-#~ msgstr "実行ユーザ"
-
-#~ msgid "Upload directory"
-#~ msgstr "アップロードディレクトリ"
-
-#~ msgid "Password server"
-#~ msgstr "パスワードサーバ"
-
-#~ msgid "Trusted domains"
-#~ msgstr "信頼するドメイン"
-
-#~ msgid ""
-#~ "The workgroup in which the server will appear when queried by Windows or SMB "
-#~ "clients (maximum 15 characters)."
-#~ msgstr "サーバがクライアントからのクエリによって表示されるワークグループ名 (最大 15文字)。"
-
-#~ msgid "Active Directory List"
-#~ msgstr "アクティブなディレクトリリスト"
-
-#~ msgid "Interface selection"
-#~ msgstr "インターフェース選択"
-
-#~ msgid "Skip first scan"
-#~ msgstr "初回スキャンのスキップ"
-
-#~ msgid "Compilations directories"
-#~ msgstr "コンピレーション ディレクトリ"
-
-#~ msgid "Group compilations"
-#~ msgstr "グループ コンピレーション"
-
-#~ msgid "Enable ACL inheritance"
-#~ msgstr "ACL継承を有効化"
-
-#~ msgid "Store NTFS acls in Extended Attributes"
-#~ msgstr "NTFSアクセス権を拡張属性に保存する"
-
-#~ msgid "Store alternate data streams in Extended Attributes"
-#~ msgstr "代替データストリームを拡張属性に保存する"
-
-#~ msgid "Store alternate data streams"
-#~ msgstr "代替データストリームの保存"
-
-#~ msgid "AIO module"
-#~ msgstr "AIO モジュール"
-
-#~ msgid "Store NTFS acls"
-#~ msgstr "NTFSアクセス権の保存"
-
-#~ msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
-#~ msgstr "これは、UFS など ZFS ACLサポートなしで NTFS ACL を提供します。"
-
-#~ msgid "Remote rsync daemon"
-#~ msgstr "リモート rsync デーモン"
-
-#~ msgid "Enable mapping DOS attributes"
-#~ msgstr "DOS属性のマッピングを有効化にします"
-
-#~ msgid "Store DOS attributes"
-#~ msgstr "DOS属性の保存"
-
-#~ msgid "Mapping DOS attributes"
-#~ msgstr "DOS属性の割当"
-
-#~ msgid ""
-#~ "Enter the path to the home directory. The config will be created under the "
-#~ "specified directory."
-#~ msgstr "ホームディレクトリへのパスを入力します。設定は指定したディレクトリの下に作成されます。"
-
-#~ msgid "AFP compatibility"
-#~ msgstr "AFP 互換性"
-
-#~ msgid "Enhanced compatibility with Netatalk AFP server"
-#~ msgstr "NetatalkのAFPサーバとの互換性の強化"
+#~ msgid "Tap device"
+#~ msgstr "Tapデバイス"

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-29 13:11+0000\n"
-"PO-Revision-Date: 2017-01-29 10:53+0000\n"
+"POT-Creation-Date: 2017-01-30 02:33+0000\n"
+"PO-Revision-Date: 2017-01-29 12:43+0000\n"
 "Last-Translator: Anders Malm <anders.malm@brevet.se>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-29 12:21+0000\n"
+"X-Launchpad-Export-Date: 2017-01-30 02:13+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: SWEDEN\n"
 "Language: \n"
@@ -561,14 +561,14 @@ msgstr "Adress till fjärr hastd demonen. Det måste vara en fast IP-adress."
 msgid "Admin Password"
 msgstr "Administratörslösenord"
 
-msgid "Administration password"
-msgstr "Administratörslösenord"
+msgid "Administration Password"
+msgstr ""
 
 msgid "Administrative WebGUI"
 msgstr "Administrativt webbgränssnitt"
 
-msgid "Administrator name"
-msgstr "Administratörens namn"
+msgid "Administrator Name"
+msgstr ""
 
 msgid "Advanced"
 msgstr "Avancerat"
@@ -591,8 +591,8 @@ msgstr "Avancerad inställning"
 msgid "Advanced settings"
 msgstr "Avancerade inställningar"
 
-msgid "Advertisement skew"
-msgstr "Annonseringsfördröjning (Advertisment skew)"
+msgid "Advertisement Skew"
+msgstr ""
 
 msgid "Afrikaans"
 msgstr "Afrikaans"
@@ -620,8 +620,8 @@ msgstr ""
 msgid "Age"
 msgstr "Ålder"
 
-msgid "Aggregation protocol"
-msgstr "Sammanslagning av protokoll"
+msgid "Aggregation Protocol"
+msgstr ""
 
 msgid "Aggressive"
 msgstr "Aggressivt"
@@ -2017,11 +2017,11 @@ msgstr "Daemon logg"
 msgid "Danish"
 msgstr "Danska"
 
+msgid "Data Integrity"
+msgstr ""
+
 msgid "Data digest"
 msgstr "Datasammandrag"
-
-msgid "Data integrity"
-msgstr "Dataintegritet"
 
 msgid "Database Directory"
 msgstr "Databaskatalog"
@@ -2289,6 +2289,9 @@ msgstr "Beskrivning"
 msgid "Destination"
 msgstr "Mål"
 
+msgid "Destination Network"
+msgstr ""
+
 msgid "Destination Share"
 msgstr "Mål Utdelning"
 
@@ -2304,14 +2307,11 @@ msgstr "Destinationens värdnamn eller IP adress."
 msgid "Destination host name or IP number."
 msgstr "Destinationsvärd eller IP-adress"
 
-msgid "Destination network"
-msgstr "Destinationsnätverk"
-
 msgid "Destination network bit count"
 msgstr "Biträknare för destinationsnätverk"
 
-msgid "Destination network for this static route"
-msgstr "Destinationsnätverk för denna statiska väg"
+msgid "Destination network for this static route."
+msgstr ""
 
 msgid "Destination port"
 msgstr "Målport"
@@ -2798,20 +2798,20 @@ msgstr "DomID"
 msgid "Domain"
 msgstr "Domän"
 
+msgid "Domain Controller Name"
+msgstr ""
+
 msgid "Domain Name"
 msgstr "Domännamn"
 
-msgid "Domain controller name"
-msgstr "Domänkontrollernamn"
+msgid "Domain Name (DNS/Realm-Name)"
+msgstr ""
+
+msgid "Domain Name (NetBIOS-Name)"
+msgstr ""
 
 msgid "Domain is missing 2nd level name."
 msgstr "Domänen saknar nivå 2 namn."
-
-msgid "Domain name (DNS/Realm-Name)"
-msgstr "Domännamn (DNS/Realm-Namn)"
-
-msgid "Domain name (NetBIOS-Name)"
-msgstr "Domännamn (NetBIOS-Namn)"
 
 msgid "Domain name in old format, e.g. EXAMPLE."
 msgstr "Domännamn i gammalt format, såsom EXEMPEL."
@@ -2845,9 +2845,6 @@ msgstr "Nedladdningskatalog"
 
 msgid "Download directory"
 msgstr "Nedladdningsmapp"
-
-msgid "Download firewall rules."
-msgstr "Ladda ner brandväggsregler."
 
 msgid "Drive Temperature."
 msgstr "Disktemperatur"
@@ -3300,8 +3297,14 @@ msgstr "Krypterar '%s'... Var god vänta"
 msgid "Encryption"
 msgstr "Kryptering"
 
-msgid "Encryption Setup"
-msgstr "Krypteringsinställningar"
+msgid "Encryption Algorithm"
+msgstr ""
+
+msgid "Encryption Management"
+msgstr ""
+
+msgid "Encryption Settings"
+msgstr ""
 
 msgid "Encryption Tools"
 msgstr "Krypteringsverktyg"
@@ -3331,6 +3334,11 @@ msgstr ""
 "Mata in ett portnummer för webgränssnittet om du vill ändra "
 "standardinställningen (80 för HTTP, 443 för HTTPS)"
 
+msgid ""
+"Enter a custom port number if you want to override the default port (default "
+"is 69)."
+msgstr ""
+
 #, php-format
 msgid ""
 "Enter a custom port number if you want to override the default port. "
@@ -3343,12 +3351,6 @@ msgid ""
 "(Default is 22)."
 msgstr ""
 "Mata in ett portnummer om du vill frångå standardporten. (standard är 23)"
-
-msgid ""
-"Enter a custom port number if you want to override the default port. "
-"(Default is 69). "
-msgstr ""
-"Mata in ett portnummer om du vill frångå standardporten. (standard är 69) "
 
 msgid "Enter a description"
 msgstr "Ange en beskrivning"
@@ -3494,6 +3496,9 @@ msgstr "Exportera en pool från systemet"
 
 msgid "Export all the directories in the specified path."
 msgstr "Exportera alla kataloger i den angivna sökvägen."
+
+msgid "Export firewall rules."
+msgstr ""
 
 msgid "Exported"
 msgstr "Exprterad"
@@ -3888,8 +3893,8 @@ msgid "Graph shows last 120 seconds"
 msgstr "Diagrammet visar senaste 120 sekunder"
 
 #, php-format
-msgid "Graph updates every %d seconds"
-msgstr "Grafen uppdateras var %d sekund"
+msgid "Graph updates every %d seconds."
+msgstr ""
 
 msgid "Graphs Height"
 msgstr "Grafhöjd"
@@ -4057,8 +4062,8 @@ msgstr "Hemkatalog"
 msgid "Host"
 msgstr "Värd"
 
-msgid "Host access control"
-msgstr "Åtkomst kontroll av värd"
+msgid "Host Access Control"
+msgstr ""
 
 msgid "Host resources"
 msgstr "Värdresurser"
@@ -4066,8 +4071,8 @@ msgstr "Värdresurser"
 msgid "Hostname"
 msgstr "Värdnamn"
 
-msgid "Hostname database"
-msgstr "Värdnamndatabas"
+msgid "Hostname Database"
+msgstr ""
 
 msgid "Hosts"
 msgstr "Värdar"
@@ -4528,9 +4533,8 @@ msgid "Invalid file format."
 msgstr "Ogiltigt filformat."
 
 #, php-format
-msgid "Invalid max. block size! It must be in the range from %d to %d."
+msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
-"Ogiltig max. blockstorlek! Det måste vara i intervallet från %d till %d."
 
 msgid "Invalid username or password."
 msgstr "Ogiltigt användarnamn eller lösenord."
@@ -4635,11 +4639,11 @@ msgstr "Kärnfil (ex. %s)"
 msgid "Key"
 msgstr "Nyckel"
 
+msgid "Key Length"
+msgstr ""
+
 msgid "Key Management Protocol"
 msgstr "Nyckelhanteringsprotokoll"
-
-msgid "Key length"
-msgstr "Nyckellängd"
 
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr "Nyckellängd att använda för den givna kryptografiska algoritmen."
@@ -4782,11 +4786,11 @@ msgstr ""
 "inklusive filsystem och ögonblicksbilder. För att ange storleken använd "
 "följande läsbara suffix (till exempel \"k\", \"KB\", \"M\", \"GB \", etc.)."
 
-msgid "Link down action"
-msgstr "Länk nere, åtgärd"
+msgid "Link Down Action"
+msgstr ""
 
-msgid "Link up action"
-msgstr "Länk uppe, åtgärd"
+msgid "Link Up Action"
+msgstr ""
 
 msgid "List"
 msgstr "Lista"
@@ -5291,6 +5295,9 @@ msgstr "Monteringspunkt"
 
 msgid "Mount Point Fsck"
 msgstr "Filsystemskontroll av monteringspunkt"
+
+msgid "Mount Point Management"
+msgstr ""
 
 msgid "Mount Point Tools"
 msgstr "Monteringspunktsverktyg"
@@ -6041,9 +6048,6 @@ msgid "Permit to do SSH Tunneling."
 msgstr "Tillåt att köra SSH-tunnelering."
 
 msgid "Physical Interface"
-msgstr "Fysiskt gränssnitt"
-
-msgid "Physical interface"
 msgstr "Fysiskt gränssnitt"
 
 msgid "Pictures"
@@ -6910,7 +6914,7 @@ msgid "Saved file to"
 msgstr "Sparade filen till"
 
 msgid "Scan Mode"
-msgstr ""
+msgstr "Skanntyp"
 
 msgid "Scan Targets"
 msgstr "Skanna Mål"
@@ -7605,6 +7609,9 @@ msgstr "Textidentifierare för innehållet."
 msgid "Subject"
 msgstr "Ämne"
 
+msgid "Subnet Bit Count"
+msgstr ""
+
 msgid "Subnet Mask"
 msgstr "Delnätsmask"
 
@@ -7765,6 +7772,9 @@ msgstr "TCP-port att knyta servern till."
 msgid "TFTP"
 msgstr "TFTP"
 
+msgid "TFTP has been disabled."
+msgstr ""
+
 msgid "TKIP"
 msgstr "TKIP"
 
@@ -7800,8 +7810,8 @@ msgstr "Etikett%d (%s)"
 msgid "Take a device offline"
 msgstr "Ta en enhet offline"
 
-msgid "Tap device"
-msgstr "Anslutningsenhet"
+msgid "Tap Device"
+msgstr ""
 
 msgid "Tape"
 msgstr "Band"
@@ -9902,9 +9912,6 @@ msgstr "VLAN inställningar"
 msgid "VLAN Tag"
 msgstr "VLAN etikett"
 
-msgid "VLAN tag"
-msgstr "VLAN-etikett"
-
 msgid "VM Type"
 msgstr "VM Typ"
 
@@ -10107,6 +10114,9 @@ msgstr "ons"
 
 msgid "Wednesday"
 msgstr "onsdag"
+
+msgid "Week Days"
+msgstr ""
 
 msgid "Week days"
 msgstr "Veckodagar"
@@ -10524,447 +10534,38 @@ msgstr "umount"
 msgid "week days"
 msgstr "veckodagar"
 
-#~ msgid ""
-#~ "A Auth Group contains authorised users and secrets for additional security."
+#, php-format
+#~ msgid "Invalid max. block size! It must be in the range from %d to %d."
 #~ msgstr ""
-#~ "En auktoriserad grupp innehåller auktoriserade användare och hemligheter för "
-#~ "ytterligare säkerhet."
+#~ "Ogiltig max. blockstorlek! Det måste vara i intervallet från %d till %d."
 
-#~ msgid "All dirs"
-#~ msgstr "Alla kataloger"
+#~ msgid "Physical interface"
+#~ msgstr "Fysiskt gränssnitt"
 
-#~ msgid "Allow new files"
-#~ msgstr "Tillåt nya filer"
+#~ msgid "Link down action"
+#~ msgstr "Länk nere, åtgärd"
 
-#~ msgid "Always scan"
-#~ msgstr "Skanna alltid"
+#~ msgid "Link up action"
+#~ msgstr "Länk uppe, åtgärd"
 
-#~ msgid "Asynchronous I/O (AIO)"
-#~ msgstr "Asynkron I/O (AIO)"
+#~ msgid "Aggregation protocol"
+#~ msgstr "Sammanslagning av protokoll"
 
-#~ msgid "Auxiliary parameters"
-#~ msgstr "Yttre parametrar"
+#~ msgid "Tap device"
+#~ msgstr "Anslutningsenhet"
 
-#~ msgid "CIFS/SMB disabled"
-#~ msgstr "CIFS/SMB avaktiverad"
+#~ msgid "VLAN tag"
+#~ msgstr "VLAN-etikett"
 
-#~ msgid "Create mask"
-#~ msgstr "Skapa mask"
-
-#~ msgid "Destination share"
-#~ msgstr "Destination utdelning"
-
-#~ msgid "Directory mask"
-#~ msgstr "Katalogmask"
-
-#~ msgid "Document root"
-#~ msgstr "Dokumentrot"
-
-#~ msgid "Domain name"
-#~ msgstr "Domännamn"
-
-#~ msgid "Dos charset"
-#~ msgstr "Dos-teckenuppsättning"
-
-#~ msgid "Enable Asynchronous I/O (AIO)"
-#~ msgstr "Aktivera Asynkron I/O (AIO)"
-
-#~ msgid "Enable permission inheritance"
-#~ msgstr "Aktivera behörighetsarv"
-
-#~ msgid "Enable recycle bin"
-#~ msgstr "Aktivera papperskorg"
-
-#~ msgid "Enable store DOS attributes"
-#~ msgstr "Möjliggör lagring av DOS attribut"
-
-#~ msgid "Guest account"
-#~ msgstr "Gästkonto"
-
-#~ msgid "Hide dot files"
-#~ msgstr "Dölj punktfiler"
-
-#~ msgid "Hosts allow"
-#~ msgstr "Tillåtna värdar"
-
-#~ msgid "Hosts deny"
-#~ msgstr "Nekade värdar"
-
-#~ msgid "Inherit permissions"
-#~ msgstr "Ärv rättigheter"
-
-#~ msgid "Large read/write"
-#~ msgstr "Stor läs/skriv (read/write)"
-
-#~ msgid "Local share (destination)"
-#~ msgstr "Lokal utdelning (destination)"
-
-#~ msgid "Local shares to be synchronized"
-#~ msgstr "Lokala utdelningar som ska synkroniseras"
+#~ msgid "Advertisement skew"
+#~ msgstr "Annonseringsfördröjning (Advertisment skew)"
 
 #, php-format
-#~ msgid ""
-#~ "Location where the working files will be stored, e.g. %s/backup/.unison"
-#~ msgstr "Platsen där arbetsfilerna ska lagras, t.ex. %s/backup/.unison"
-
-#~ msgid "Logical Block Length"
-#~ msgstr "Logisk Blocklängd"
-
-#~ msgid "Map all users to root"
-#~ msgstr "Mappa alla användare till root"
-
-#~ msgid "Map to user"
-#~ msgstr "Koppla till användare"
-
-#~ msgid "Max. block size"
-#~ msgstr "Max. blockstorlek"
-
-#~ msgid "Max. connections"
-#~ msgstr "Max. anslutningar"
-
-#~ msgid "Max. sessions"
-#~ msgstr "Maximalt antal sessioner"
-
-#~ msgid "Maximum connections"
-#~ msgstr "Maximalt antal anslutningar"
-
-#~ msgid "NetBIOS name"
-#~ msgstr "NetBIOS namn"
-
-#~ msgid "Null passwords"
-#~ msgstr "Tomma lösenord"
-
-#~ msgid "Number of servers"
-#~ msgstr "Antal servrar"
-
-#~ msgid "Password authentication"
-#~ msgstr "Lösenords autentisering"
-
-#~ msgid "Permit root login"
-#~ msgstr "Tillåt root inloggning"
-
-#~ msgid "Preserve extended attributes"
-#~ msgstr "Bevara utökade attribut"
-
-#~ msgid "Preserve permissions"
-#~ msgstr "Bevara rättigheter"
-
-#~ msgid "Receive Buffer Size"
-#~ msgstr "Storlek på mottagningsbuffert"
-
-#~ msgid "Recycle bin"
-#~ msgstr "Papperskorgen"
-
-#, php-format
-#~ msgid ""
-#~ "Samba will read from file asynchronously when size of request is bigger than "
-#~ "this value. (%d by default)"
-#~ msgstr ""
-#~ "Samba kommer att läsa från filen asynkront när storleken på begäran är "
-#~ "större än detta värde. (%d som standard)"
-
-#, php-format
-#~ msgid ""
-#~ "Samba will write to file asynchronously when size of request is bigger than "
-#~ "this value. (%d by default)"
-#~ msgstr ""
-#~ "Samba kommer att skriva till filen asynkront när storleken på begäran är "
-#~ "större än detta värde. (%d som standard)"
-
-#~ msgid "Scan type"
-#~ msgstr "Typ av genomsökning"
-
-#~ msgid "Server name"
-#~ msgstr "Servernamn"
-
-#~ msgid "Set browseable"
-#~ msgstr "Välj bläddringsbarhet"
-
-#~ msgid "Set read only"
-#~ msgstr "Välj endast läsning (read-only)"
-
-#~ msgid "Source share"
-#~ msgstr "Källa för delning"
-
-#~ msgid "Store DOS attributes"
-#~ msgstr "Lagra DOS attribut"
-
-#~ msgid "Swap disabled"
-#~ msgstr "Växlingsutrymme inaktiverat"
-
-#~ msgid "Synchronization time"
-#~ msgstr "Synkroniseringstid"
-
-#~ msgid "TCP forwarding"
-#~ msgstr "Vidarebefodran av TCP"
+#~ msgid "Graph updates every %d seconds"
+#~ msgstr "Grafen uppdateras var %d sekund"
 
 #~ msgid ""
-#~ "The port to listen to. The default is to listen to the tftp port specified "
-#~ "in /etc/services."
+#~ "Enter a custom port number if you want to override the default port. "
+#~ "(Default is 69). "
 #~ msgstr ""
-#~ "Porten att lyssna på. Standard är att lyssna till tftp-porten som anges i "
-#~ "/etc/services."
-
-#, php-format
-#~ msgid "The recommended length for compatibility is %d."
-#~ msgstr "Det rekommenderade värdet för kompatibilitet är %d."
-
-#~ msgid "The working directory does not exist."
-#~ msgstr "Arbetskatalogen finns inte."
-
-#~ msgid "Time server"
-#~ msgstr "Tidsserver"
-
-#~ msgid "Unix charset"
-#~ msgstr "Unix-teckenuppsättning"
-
-#~ msgid "WINS server"
-#~ msgstr "WINS-server"
-
-#~ msgid "Working directory"
-#~ msgstr "Arbetskatalog"
-
-#, php-format
-#~ msgid "You may specify logical block length (%d by default)."
-#~ msgstr "Du kan ange logisk block-längd (%d som standard)."
-
-#~ msgid "Enable ZFS ACL"
-#~ msgstr "Aktivera ZFS ACL"
-
-#~ msgid "Enable shadow copy"
-#~ msgstr "Aktivera skuggkopia"
-
-#~ msgid "Reverse direction"
-#~ msgstr "Motsatt riktning"
-
-#~ msgid "Shadow Copy format"
-#~ msgstr "Format för skuggkopia"
-
-#~ msgid "Map to guest"
-#~ msgstr "Länka till gäst"
-
-#~ msgid "This will provide ZFS ACL support. (ZFS only)"
-#~ msgstr "Detta aktiverar tillgång till ZFS ACL support. (endast ZFS)"
-
-#~ msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
-#~ msgstr ""
-#~ "Detta aktiverar tillgång till skuggkopia skapad med automatisk avbild "
-#~ "(endast ZFS)"
-
-#~ msgid "Run as"
-#~ msgstr "Kör som"
-
-#~ msgid "umask"
-#~ msgstr "umask"
-
-#~ msgid "Password server"
-#~ msgstr "Lösenordsserver"
-
-#~ msgid ""
-#~ "The workgroup in which the server will appear when queried by Windows or SMB "
-#~ "clients (maximum 15 characters)."
-#~ msgstr ""
-#~ "Arbetsgruppen som servern tillhör vid frågor från Windows- eller SM-klienter "
-#~ "(max. 15 tecken)."
-
-#~ msgid "Upload directory"
-#~ msgstr "Uppladningskatalog"
-
-#~ msgid "Trusted domains"
-#~ msgstr "Betrodda domäner"
-
-#~ msgid "Interface selection"
-#~ msgstr "Val av gränssnitt"
-
-#~ msgid "Enable guest access"
-#~ msgstr "Aktivera gäståtkomst"
-
-#~ msgid "Enable large read/write"
-#~ msgstr "Aktivering av stora läs/skriv"
-
-#~ msgid "Forced update period"
-#~ msgstr "Tvingande uppdateringsperiod"
-
-#~ msgid ""
-#~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
-#~ msgstr ""
-#~ "En giltig IPv6 adress måste anges för den primära/sekundära DNS servern."
-
-#~ msgid ""
-#~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
-#~ msgstr ""
-#~ "En giltig IPv4 adress måste anges för den primära/sekundära DNS servern."
-
-#~ msgid "AIO read size"
-#~ msgstr "AIO läs storlek"
-
-#~ msgid "AIO write size"
-#~ msgstr "AIO skriv storlek"
-
-#~ msgid "Access mode"
-#~ msgstr "Åtkomst läge"
-
-#~ msgid "Active Directory List"
-#~ msgstr "Active Directory förteckning"
-
-#~ msgid "All users will have the root privilege."
-#~ msgstr "Alla användare kommer att ha root behörighet."
-
-#~ msgid "Alternate TCP port. Default is 873"
-#~ msgstr "Alternativ TCP port. Standard är 873."
-
-#~ msgid "Alternate TCP port. Default is 22"
-#~ msgstr "Alternativ TCP port. Standard är 22."
-
-#~ msgid "Skip first scan"
-#~ msgstr "Hoppa över första skanningen"
-
-#~ msgid "AIO module"
-#~ msgstr "AIO modul"
-
-#~ msgid "Remote rsync daemon"
-#~ msgstr "Fjärr rsync demon"
-
-#~ msgid "Store NTFS acls"
-#~ msgstr "Lagra NTFS acls"
-
-#~ msgid "Store alternate data streams in Extended Attributes"
-#~ msgstr "Lagra alternativa dataströmmar i Extended Attributes"
-
-#~ msgid "Store NTFS acls in Extended Attributes"
-#~ msgstr "Lagra NTFS acls i Extended Attributes"
-
-#~ msgid "Store alternate data streams"
-#~ msgstr "Lagra alternativa dataströmmar"
-
-#~ msgid "Enable ACL inheritance"
-#~ msgstr "Aktivera ärvning av ACL"
-
-#~ msgid "Compilations directories"
-#~ msgstr "Katalog för samlingar"
-
-#~ msgid "Group compilations"
-#~ msgstr "Gruppsamlingar"
-
-#~ msgid "Enable mapping DOS attributes"
-#~ msgstr "Aktivera översättning av DOS-attribut"
-
-#~ msgid "Enhanced compatibility with Netatalk AFP server"
-#~ msgstr "Utökad kompatibilitet med Netatalk server"
-
-#~ msgid "AFP compatibility"
-#~ msgstr "AFP kompatibilitet"
-
-#~ msgid ""
-#~ "Enter the path to the home directory. The config will be created under the "
-#~ "specified directory."
-#~ msgstr ""
-#~ "Mata in sökvägen till hemmakatalogen. Konfigurationen kommer att skapas "
-#~ "under den aktuella katalogen."
-
-#~ msgid "Enable extended attribute support"
-#~ msgstr "Aktivera utökad attributsupport"
-
-#~ msgid "Send Buffer Size"
-#~ msgstr "Storlek på sändningsbuffert"
-
-#~ msgid "EA support"
-#~ msgstr "Utökad attributsupport"
-
-#~ msgid "Mapping DOS attributes"
-#~ msgstr "Översätt DOS-attribut"
-
-#~ msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
-#~ msgstr "Detta ger NTFS acls utan ZFS ACL stöd som UFS."
-
-#~ msgid "Remote module (source)"
-#~ msgstr "Fjärrmodul (källa)"
-
-#~ msgid ""
-#~ "A Portal Group contains IP addresses and listening TCP ports to connect the "
-#~ "target from the initiator."
-#~ msgstr ""
-#~ "En portalgrupp innehåller IP adresser och lyssnar på TCP portar för att "
-#~ "ansluta till målet från initiatorn."
-
-#~ msgid ""
-#~ "A Initiator Group contains authorised initiator names and networks to access "
-#~ "the target."
-#~ msgstr ""
-#~ "En initiatorgrupp innehåller tillåtna initiator namn och nätverk för åtkomst "
-#~ "till destinationen."
-
-#~ msgid ""
-#~ "Additional parameters to the hardware-specific part of the driver for second "
-#~ "UPS."
-#~ msgstr ""
-#~ "Extra parametrar för de hårdvaruspecifika delarna av drivrutinen för UPS två."
-
-#, php-format
-#~ msgid ""
-#~ "%s must be enabled for Unison to work, and the %s must have shell access."
-#~ msgstr ""
-#~ "%s måste aktiveras för att Unison skall fungera, och %s måste ha access till "
-#~ "kommandonivå (Shell)."
-
-#~ msgid "Enable 'Asynchronous I/O (AIO)' switch."
-#~ msgstr "Aktivera 'Asynkron I/O (AIO)' val."
-
-#~ msgid "SSHD"
-#~ msgstr "SSHD"
-
-#~ msgid "Set under which user the service should run (www by default)."
-#~ msgstr "Välj under vilken användare tjänsten skall köras (www som standard)."
-
-#~ msgid ""
-#~ "Running the service as user root is not recommended for security reasons, "
-#~ "use at your own risk!"
-#~ msgstr ""
-#~ "Att köra tjänsten som rootanvändare är inte att rekommendera av "
-#~ "säkerhetsskäl, används på egen risk!"
-
-#~ msgid "user"
-#~ msgstr "användare"
-
-#~ msgid "Server Max Protocol"
-#~ msgstr "Högsta protokoll för server"
-
-#~ msgid "Server Min Protocol"
-#~ msgstr "Lägsta protokoll för server"
-
-#~ msgid "Client Min Protocol"
-#~ msgstr "Lägsta protokoll för klient"
-
-#~ msgid "Client Max Protocol"
-#~ msgstr "Högsta protokoll för klient"
-
-#~ msgid "Auxiliary Parameters"
-#~ msgstr "Extra parametrar"
-
-#~ msgid ""
-#~ "A directory listing is generated if a directory is requested and no index-"
-#~ "file (index.php, index.html, index.htm or default.htm) was found in that "
-#~ "directory."
-#~ msgstr ""
-#~ "En katalogförteckning genereras om en katalog efterfrågas men ingen index "
-#~ "fil (index.php, index.html, index.htm eller default.htm) återfanns i "
-#~ "katalogen."
-
-#~ msgid "Auxiliary Parameter"
-#~ msgstr "Tilläggsparametrar"
-
-#, php-format
-#~ msgid ""
-#~ "Enter a custom port number if you want to override the default port. Default "
-#~ "port is %s."
-#~ msgstr ""
-#~ "Mata in ett portnummer om du vill frångå standardporten. Standard är %s."
-
-#~ msgid "Working Directory"
-#~ msgstr "Arbetskatalog"
-
-#~ msgid "Remote Rsync Saemon"
-#~ msgstr "Fjärr Rsync Saemon"
-
-#~ msgid "Scan Type"
-#~ msgstr "Skanningstyp"
+#~ "Mata in ett portnummer om du vill frångå standardporten. (standard är 69) "

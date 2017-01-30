@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-29 13:11+0000\n"
-"PO-Revision-Date: 2017-01-29 12:13+0000\n"
+"POT-Creation-Date: 2017-01-30 02:33+0000\n"
+"PO-Revision-Date: 2017-01-30 02:07+0000\n"
 "Last-Translator: zoon01 <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-29 12:21+0000\n"
+"X-Launchpad-Export-Date: 2017-01-30 02:13+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: Netherlands\n"
 "Language: \n"
@@ -587,14 +587,14 @@ msgstr ""
 msgid "Admin Password"
 msgstr "Admin Wachtwoord"
 
-msgid "Administration password"
-msgstr "Administrator wachtwoord"
+msgid "Administration Password"
+msgstr "Administratie Wachtwoord"
 
 msgid "Administrative WebGUI"
 msgstr "Administratie WebGUI"
 
-msgid "Administrator name"
-msgstr "Administrator naam"
+msgid "Administrator Name"
+msgstr "Administrator Naam"
 
 msgid "Advanced"
 msgstr "Geavanceerd"
@@ -617,8 +617,8 @@ msgstr "Geavanceerde Instellingen"
 msgid "Advanced settings"
 msgstr "Geavanceerde opties"
 
-msgid "Advertisement skew"
-msgstr "Advertisement skew"
+msgid "Advertisement Skew"
+msgstr "Advertisement Skew"
 
 msgid "Afrikaans"
 msgstr "Afrikaans"
@@ -648,8 +648,8 @@ msgstr ""
 msgid "Age"
 msgstr "Leeftijd"
 
-msgid "Aggregation protocol"
-msgstr "Protocol samenvoeging"
+msgid "Aggregation Protocol"
+msgstr "Aggregation Protocol"
 
 msgid "Aggressive"
 msgstr "Agressief"
@@ -2092,11 +2092,11 @@ msgstr "Daemon log"
 msgid "Danish"
 msgstr "Deens"
 
+msgid "Data Integrity"
+msgstr "Integriteit Data"
+
 msgid "Data digest"
 msgstr "Gegevens overzicht"
-
-msgid "Data integrity"
-msgstr "Data integriteit"
 
 msgid "Database Directory"
 msgstr "Database Gegevensmap"
@@ -2366,6 +2366,9 @@ msgstr "Omschrijving"
 msgid "Destination"
 msgstr "Bestemming"
 
+msgid "Destination Network"
+msgstr "Bestemmingsnetwerk"
+
 msgid "Destination Share"
 msgstr "Gedeelde Bestemmingsmap"
 
@@ -2383,14 +2386,11 @@ msgstr "Bestemming hostnaam of het IP-adres."
 msgid "Destination host name or IP number."
 msgstr "Bestemmings hostnaam of IP-nummer."
 
-msgid "Destination network"
-msgstr "Bestemmingsnetwerk"
-
 msgid "Destination network bit count"
 msgstr "Bestemmingsnetwerk bit aantal"
 
-msgid "Destination network for this static route"
-msgstr "Bestemmingsnetwerk voor deze statische route"
+msgid "Destination network for this static route."
+msgstr "Bestemmingsnetwerk voor deze statische route."
 
 msgid "Destination port"
 msgstr "Bestemmingspoort"
@@ -2889,20 +2889,20 @@ msgstr "DomID"
 msgid "Domain"
 msgstr "Domein"
 
+msgid "Domain Controller Name"
+msgstr "Domeincontroller Naam"
+
 msgid "Domain Name"
 msgstr "Domein Naam"
 
-msgid "Domain controller name"
-msgstr "Naam domeinbeheerder"
+msgid "Domain Name (DNS/Realm-Name)"
+msgstr "Domeinnaam (DNS/Realm-Name)"
+
+msgid "Domain Name (NetBIOS-Name)"
+msgstr "Domeinnaam (NetBIOS-Name)"
 
 msgid "Domain is missing 2nd level name."
 msgstr "Domein mist de 2e level naam."
-
-msgid "Domain name (DNS/Realm-Name)"
-msgstr "Domeinnaam"
-
-msgid "Domain name (NetBIOS-Name)"
-msgstr "Domeinnaam (NetBIOS-Naam)"
 
 msgid "Domain name in old format, e.g. EXAMPLE."
 msgstr "Domeinnaam in oud formaat, bijv. VOORBEELD."
@@ -2936,10 +2936,6 @@ msgstr "Downloadmap"
 
 msgid "Download directory"
 msgstr "Downloadmap"
-
-msgid "Download firewall rules."
-msgstr ""
-"Exporteer de huidige firewall configuratie om als backup elders te bewaren."
 
 msgid "Drive Temperature."
 msgstr "Schijf temperatuur."
@@ -3400,8 +3396,14 @@ msgstr "Bezig met het versleutelen '%s'... Een ogenblik geduld"
 msgid "Encryption"
 msgstr "Versleuteling"
 
-msgid "Encryption Setup"
-msgstr "Versleuteling Instellingen"
+msgid "Encryption Algorithm"
+msgstr "Versleutelingsalgoritme"
+
+msgid "Encryption Management"
+msgstr "Encryptie Management"
+
+msgid "Encryption Settings"
+msgstr "Encryptie Instellingen"
 
 msgid "Encryption Tools"
 msgstr "Versleuteling Hulpmiddelen"
@@ -3431,6 +3433,13 @@ msgstr ""
 "Vul een aangepast poort nummer in voor de WebGUI als u de standaard poort "
 "(80 voor HTTP, 443 voor HTTPS) niet wilt gebruiken."
 
+msgid ""
+"Enter a custom port number if you want to override the default port (default "
+"is 69)."
+msgstr ""
+"Vul een aangepast poort nummer in als u de standaard poort niet wilt "
+"gebruiken. (Standaard is 69)."
+
 #, php-format
 msgid ""
 "Enter a custom port number if you want to override the default port. "
@@ -3445,13 +3454,6 @@ msgid ""
 msgstr ""
 "Vul een aangepast poort nummer in als u de standaard poort niet wilt "
 "gebruiken. (Standaard is 22)."
-
-msgid ""
-"Enter a custom port number if you want to override the default port. "
-"(Default is 69). "
-msgstr ""
-"Vul een aangepast poort nummer in als u de standaard poort niet wilt "
-"gebruiken. (Standaard is 69). "
 
 msgid "Enter a description"
 msgstr "Geef een beschrijving op"
@@ -3598,6 +3600,9 @@ msgstr "Exporteer een pool van het systeem"
 
 msgid "Export all the directories in the specified path."
 msgstr "Exporteer alle mappen in de opgegeven locatie."
+
+msgid "Export firewall rules."
+msgstr "Exporteer firewall regels."
 
 msgid "Exported"
 msgstr "Geëxporteerd"
@@ -3993,8 +3998,8 @@ msgid "Graph shows last 120 seconds"
 msgstr "Grafiek van de laatste 120 seconden"
 
 #, php-format
-msgid "Graph updates every %d seconds"
-msgstr "Grafiek ververst elke %d seconden"
+msgid "Graph updates every %d seconds."
+msgstr "Grafiek wordt elke %d seconden bijgewerkt."
 
 msgid "Graphs Height"
 msgstr "Grafiek Hoogte"
@@ -4167,8 +4172,8 @@ msgstr "Gegevensmap"
 msgid "Host"
 msgstr "Host"
 
-msgid "Host access control"
-msgstr "Host toegangscontrole"
+msgid "Host Access Control"
+msgstr "Host toegangsbeheer"
 
 msgid "Host resources"
 msgstr "Host bronnen"
@@ -4176,8 +4181,8 @@ msgstr "Host bronnen"
 msgid "Hostname"
 msgstr "Hostnaam"
 
-msgid "Hostname database"
-msgstr "Hostnaam database"
+msgid "Hostname Database"
+msgstr "Hostnaam Database"
 
 msgid "Hosts"
 msgstr "Hosten"
@@ -4407,9 +4412,7 @@ msgid "Import disks used in configuration."
 msgstr "Importeer schijfen gebruikt in de configuratie."
 
 msgid "Import firewall rules."
-msgstr ""
-"Importeer een firewall configuratiebestand  om de firewall te herstellen of "
-"regels toe te voegen."
+msgstr "Importeer firewall regels."
 
 msgid "Import on-disk ZFS config"
 msgstr "Importeer op-schijf ZFS config"
@@ -4645,8 +4648,9 @@ msgid "Invalid file format."
 msgstr "Ongeldig bestandsformaat."
 
 #, php-format
-msgid "Invalid max. block size! It must be in the range from %d to %d."
-msgstr "Ongeldige blokgrootte! Het dient in het bereik %d tot %d te zijn."
+msgid "Invalid maximum block size! It must be in the range from %d to %d."
+msgstr ""
+"Ongeldige maximum blokgrootte! Dit moet in het bereik zijn van %d tot %d."
 
 msgid "Invalid username or password."
 msgstr "Gebruikersnaam of wachtwoord onjuist."
@@ -4751,11 +4755,11 @@ msgstr "Kernel bestand (bijv. %s)."
 msgid "Key"
 msgstr "Sleutel"
 
+msgid "Key Length"
+msgstr "Sleutellengte"
+
 msgid "Key Management Protocol"
 msgstr "Sleutel Beheer Protocol"
-
-msgid "Key length"
-msgstr "Sleutellengte"
 
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr ""
@@ -4911,11 +4915,11 @@ msgstr ""
 "specificeren gebruikt u de volgende leesbare achtervoegsels (bijvoorbeeld, ' "
 "k' , ' KB' , ' M' , ' Gb' , enz.)."
 
-msgid "Link down action"
-msgstr "Link down actie"
+msgid "Link Down Action"
+msgstr "Link Down Actie"
 
-msgid "Link up action"
-msgstr "Link up actie"
+msgid "Link Up Action"
+msgstr "Link Up Actie"
 
 msgid "List"
 msgstr "Lijst"
@@ -5436,6 +5440,9 @@ msgstr "Koppelpunten"
 
 msgid "Mount Point Fsck"
 msgstr "Koppelpunt Fsck"
+
+msgid "Mount Point Management"
+msgstr "Koppelpunt Management"
 
 msgid "Mount Point Tools"
 msgstr "Koppelpunt Hulpmiddelen"
@@ -6200,9 +6207,6 @@ msgstr "SSH Tunneling toelaten."
 
 msgid "Physical Interface"
 msgstr "Fysiek Netwerk"
-
-msgid "Physical interface"
-msgstr "fysiek netwerk"
 
 msgid "Pictures"
 msgstr "Afbeeldingen"
@@ -7781,6 +7785,9 @@ msgstr "Text identificatie van de extent."
 msgid "Subject"
 msgstr "Onderwerp"
 
+msgid "Subnet Bit Count"
+msgstr "Subnet Bit Count"
+
 msgid "Subnet Mask"
 msgstr "Subnetmasker"
 
@@ -7941,6 +7948,9 @@ msgstr "TCP-poort om de sever aan te koppelen."
 msgid "TFTP"
 msgstr "TFTP"
 
+msgid "TFTP has been disabled."
+msgstr "TFTP is nu uitgeschakeld."
+
 msgid "TKIP"
 msgstr "TKIP"
 
@@ -7976,8 +7986,8 @@ msgstr "markering%d (%s)"
 msgid "Take a device offline"
 msgstr "Neem een schijf offline"
 
-msgid "Tap device"
-msgstr "Tap device"
+msgid "Tap Device"
+msgstr "Tap Device"
 
 msgid "Tape"
 msgstr "Tape"
@@ -10144,9 +10154,6 @@ msgstr "VLAN Instellingen"
 msgid "VLAN Tag"
 msgstr "VLAN Tag"
 
-msgid "VLAN tag"
-msgstr "VLAN markering"
-
 msgid "VM Type"
 msgstr "VM Type"
 
@@ -10349,6 +10356,9 @@ msgstr "Wo"
 
 msgid "Wednesday"
 msgstr "Woensdag"
+
+msgid "Week Days"
+msgstr "Weekdagen"
 
 msgid "Week days"
 msgstr "Week dagen"
@@ -10774,459 +10784,38 @@ msgstr "loskoppelen"
 msgid "week days"
 msgstr "weekdagen"
 
-#~ msgid ""
-#~ "A Auth Group contains authorised users and secrets for additional security."
-#~ msgstr ""
-#~ "Een Auth Groep bevat geautoriseerde gebruikers en wachtwoorden voor extra "
-#~ "beveiliging."
-
-#~ msgid ""
-#~ "A Initiator Group contains authorised initiator names and networks to access "
-#~ "the target."
-#~ msgstr ""
-#~ "Een Initiator Groep bevat geautoriseerde initiator-namen en netwerken om "
-#~ "toegang te krijgen tot de doel."
-
-#~ msgid ""
-#~ "A directory listing is generated if a directory is requested and no index-"
-#~ "file (index.php, index.html, index.htm or default.htm) was found in that "
-#~ "directory."
-#~ msgstr ""
-#~ "Een mappenlijst wordt gegenereerd zodra een map wordt opgevraagd en er geen "
-#~ "index-bestand (index.php, index.html, index.htm of default.htm) wordt "
-#~ "gevonden in deze map."
-
-#~ msgid ""
-#~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
-#~ msgstr ""
-#~ "Een geldig IPv4 adres moet gespecificeerd worden voor de primaire/secundaire "
-#~ "DNS server."
-
-#~ msgid ""
-#~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
-#~ msgstr ""
-#~ "Een geldig IPv6 adres moet worden gespecificeerd voor de primaire/secundaire "
-#~ "DNS server."
-
-#~ msgid "AIO read size"
-#~ msgstr "AIO lees grootte"
-
-#~ msgid "AIO write size"
-#~ msgstr "AIO schrijf grootte"
-
-#~ msgid "Access mode"
-#~ msgstr "Toegangs mode"
-
-#~ msgid "All dirs"
-#~ msgstr "Alle mappen"
-
-#~ msgid "All users will have the root privilege."
-#~ msgstr "Alle gebruikers zullen root bevoegdheden hebben."
-
-#~ msgid "Allow new files"
-#~ msgstr "Nieuwe bestanden toelaten"
-
-#~ msgid "Alternate TCP port. Default is 873"
-#~ msgstr "Alternatieve TCP-poort. Standaard 873"
-
-#~ msgid "Always scan"
-#~ msgstr "Altijd scannen"
-
-#~ msgid "Auxiliary parameters"
-#~ msgstr "Aanvullende parameters"
-
-#~ msgid "CIFS/SMB disabled"
-#~ msgstr "CIFS/SMB uitgeschakeld"
-
-#~ msgid "Create mask"
-#~ msgstr "Bestandsmachtigingen"
-
-#~ msgid "Destination share"
-#~ msgstr "Gedeelde bestemmingsmap"
-
-#~ msgid "Directory mask"
-#~ msgstr "Mapmachtigingen"
-
-#~ msgid "Document root"
-#~ msgstr "Documentenmap"
-
-#~ msgid "Domain name"
-#~ msgstr "Domeinnaam"
-
-#~ msgid "Dos charset"
-#~ msgstr "DOS Karakterset"
-
-#~ msgid "Enable ZFS ACL"
-#~ msgstr "Activeer ZFS ACL"
-
-#~ msgid "Enable guest access"
-#~ msgstr "Inschakelen gast toegang"
-
-#~ msgid "Enable large read/write"
-#~ msgstr "Inschakelen groot lezen/schrijven"
-
-#~ msgid "Enable permission inheritance"
-#~ msgstr "Inschakelen permissie overerving"
-
-#~ msgid "Enable recycle bin"
-#~ msgstr "Inschakelen prullenbak"
-
-#~ msgid "Enable shadow copy"
-#~ msgstr "Activeer schaduw kopie"
-
-#~ msgid "Forced update period"
-#~ msgstr "Geforceerde update periode"
-
-#~ msgid "Guest account"
-#~ msgstr "Gast account"
-
-#~ msgid "Hide dot files"
-#~ msgstr "Verberg punt bestanden"
-
-#~ msgid "Hosts allow"
-#~ msgstr "Hosten toestaan"
-
-#~ msgid "Hosts deny"
-#~ msgstr "Hosten afwijzen"
-
-#~ msgid "Inherit permissions"
-#~ msgstr "Overerf permissies"
-
-#~ msgid "Large read/write"
-#~ msgstr "Groot lezen/schrijven"
-
-#~ msgid "Local share (destination)"
-#~ msgstr "Lokaal gedeeld (bestemming)"
-
-#~ msgid "Local shares to be synchronized"
-#~ msgstr "Lokale mappen om te worden gesynchroniseerd"
+#~ msgid "Aggregation protocol"
+#~ msgstr "Protocol samenvoeging"
 
 #, php-format
-#~ msgid ""
-#~ "Location where the working files will be stored, e.g. %s/backup/.unison"
-#~ msgstr ""
-#~ "Plaats waar de werk bestanden zullen worden opgeslagen, bijv. "
-#~ "%s/backup/.unison"
+#~ msgid "Invalid max. block size! It must be in the range from %d to %d."
+#~ msgstr "Ongeldige blokgrootte! Het dient in het bereik %d tot %d te zijn."
 
-#~ msgid "Logical Block Length"
-#~ msgstr "Logische Blok Lengte"
+#~ msgid "VLAN tag"
+#~ msgstr "VLAN markering"
 
-#~ msgid "Map all users to root"
-#~ msgstr "Alle gebruikers aan de root toewijzen"
+#~ msgid "Advertisement skew"
+#~ msgstr "Advertisement skew"
 
-#~ msgid "Map to guest"
-#~ msgstr "Verwijs naar gast"
+#~ msgid "Link down action"
+#~ msgstr "Link down actie"
 
-#~ msgid "Map to user"
-#~ msgstr "Aan gebruiker toewijzen"
+#~ msgid "Link up action"
+#~ msgstr "Link up actie"
 
-#~ msgid "Max. block size"
-#~ msgstr "Max. blokgrootte"
+#~ msgid "Physical interface"
+#~ msgstr "fysiek netwerk"
 
-#~ msgid "Max. connections"
-#~ msgstr "Max. Verbindingen"
-
-#~ msgid "Max. sessions"
-#~ msgstr "Max. Sessies"
-
-#~ msgid "Maximum connections"
-#~ msgstr "Maximaal aantal verbindingen"
-
-#~ msgid "NetBIOS name"
-#~ msgstr "NetBIOS naam"
-
-#~ msgid "Null passwords"
-#~ msgstr "Leeg wachtwoord"
-
-#~ msgid "Number of servers"
-#~ msgstr "Aantal servers"
-
-#~ msgid "Password authentication"
-#~ msgstr "Wachtwoord verificatie"
-
-#~ msgid "Permit root login"
-#~ msgstr "Root aanmeldingen toelaten"
-
-#~ msgid "Preserve extended attributes"
-#~ msgstr "Reserveer externe attubuten"
-
-#~ msgid "Preserve permissions"
-#~ msgstr "Toestemmingen reserveren"
-
-#~ msgid "Receive Buffer Size"
-#~ msgstr "Ontvangstbuffer Grootte"
-
-#~ msgid "Recycle bin"
-#~ msgstr "Prullenbak"
-
-#~ msgid "Remote module (source)"
-#~ msgstr "Remote module (bron)"
-
-#~ msgid "Reverse direction"
-#~ msgstr "Omgekeerde richting"
+#~ msgid "Tap device"
+#~ msgstr "Tap device"
 
 #, php-format
-#~ msgid ""
-#~ "Samba will read from file asynchronously when size of request is bigger than "
-#~ "this value. (%d by default)"
-#~ msgstr ""
-#~ "Samba zal het bestand asynchroon lezen als de grootte van aanvraag groter is "
-#~ "dan deze waarde. (standaard %d)"
-
-#, php-format
-#~ msgid ""
-#~ "Samba will write to file asynchronously when size of request is bigger than "
-#~ "this value. (%d by default)"
-#~ msgstr ""
-#~ "Samba zal het bestand asynchroon schrijven als de grootte van aanvraag "
-#~ "groter is dan deze waarde. (standaard %d)"
-
-#~ msgid "Scan type"
-#~ msgstr "Scan type"
-
-#~ msgid "Send Buffer Size"
-#~ msgstr "Zendbuffer Grootte"
-
-#~ msgid "Server name"
-#~ msgstr "Servernaam"
-
-#~ msgid "Set browseable"
-#~ msgstr "Verkenbaar activeren"
-
-#~ msgid "Set read only"
-#~ msgstr "Alleen-lezen activeren"
-
-#~ msgid "Shadow Copy format"
-#~ msgstr "Schaduw Kopie formaat"
-
-#~ msgid "Source share"
-#~ msgstr "Gedeelde bronmap"
-
-#~ msgid "Store DOS attributes"
-#~ msgstr "DOS attributen opslaan"
-
-#~ msgid "Synchronization time"
-#~ msgstr "Synchronisatietijd"
-
-#~ msgid "TCP forwarding"
-#~ msgstr "TCP forwarding"
+#~ msgid "Graph updates every %d seconds"
+#~ msgstr "Grafiek ververst elke %d seconden"
 
 #~ msgid ""
-#~ "The port to listen to. The default is to listen to the tftp port specified "
-#~ "in /etc/services."
-#~ msgstr ""
-#~ "Poort om op te luisteren. Standaard is de tftp poort opgegeven in "
-#~ "/etc/services."
-
-#, php-format
-#~ msgid "The recommended length for compatibility is %d."
-#~ msgstr "De aanbevolen lengte voor compatibiliteit is %d."
-
-#~ msgid "The working directory does not exist."
-#~ msgstr "De werkmap bestaat niet."
-
-#~ msgid "This will provide ZFS ACL support. (ZFS only)"
-#~ msgstr "Deze optie zorgt voor ZFS ACL ondersteuing (alleen ZFS)"
-
-#~ msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
-#~ msgstr ""
-#~ "Deze optie zorgt voor schaduw kopie ondersteuing, gecreerd door automatische "
-#~ "snapshot (alleen ZFS)"
-
-#~ msgid "Time server"
-#~ msgstr "Tijdserver"
-
-#~ msgid "Unix charset"
-#~ msgstr "UNIX Karakterset"
-
-#~ msgid "WINS server"
-#~ msgstr "WINS server"
-
-#~ msgid "Working directory"
-#~ msgstr "Werkmap"
-
-#, php-format
-#~ msgid "You may specify logical block length (%d by default)."
-#~ msgstr "U kunt de logische blok lengte opgeven (standaard %d)."
-
-#~ msgid "umask"
-#~ msgstr "umask"
-
-#~ msgid "Run as"
-#~ msgstr "Uitvoeren als"
-
-#~ msgid "Upload directory"
-#~ msgstr "Upload folder"
-
-#~ msgid "Password server"
-#~ msgstr "Wachtwoord server"
-
-#~ msgid "Trusted domains"
-#~ msgstr "Vertrouwde domeinen"
-
-#~ msgid "Interface selection"
-#~ msgstr "Netwerk selectie"
-
-#~ msgid "Compilations directories"
-#~ msgstr "Compilaties mappen"
-
-#~ msgid "Group compilations"
-#~ msgstr "Groep compilaties"
-
-#~ msgid "Skip first scan"
-#~ msgstr "Skip eerste scan"
-
-#~ msgid "Enable ACL inheritance"
-#~ msgstr "ACL overnemen inschakelen"
-
-#~ msgid "Store NTFS acls in Extended Attributes"
-#~ msgstr "NTFS ACL's opslaan in Uitgebreide attributen"
-
-#~ msgid "Store alternate data streams in Extended Attributes"
-#~ msgstr "Opslaan alternatieve gegevensstromen in Uitgebreide Attributen"
-
-#~ msgid "Store alternate data streams"
-#~ msgstr "Opslaan alternatieve gegevensstromen"
-
-#~ msgid "Store NTFS acls"
-#~ msgstr "NTFS acls opslaan"
-
-#~ msgid "AIO module"
-#~ msgstr "AIO module"
-
-#~ msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
-#~ msgstr ""
-#~ "Dit zal zorgen voor NTFS ACL's zonder ZFS ACL ondersteuning, zoals UFS."
-
-#~ msgid "Remote rsync daemon"
-#~ msgstr "Remote rsync daemon"
-
-#~ msgid "Active Directory List"
-#~ msgstr "Active Directory Lijst"
-
-#~ msgid "EA support"
-#~ msgstr "EA ondersteuning"
-
-#~ msgid "Enable extended attribute support"
-#~ msgstr "Inschakelen externe attributen ondersteuning"
-
-#~ msgid "Enable mapping DOS attributes"
-#~ msgstr "Inschakelen mapping DOS attributen"
-
-#~ msgid "Mapping DOS attributes"
-#~ msgstr "Mapping DOS attributen"
-
-#~ msgid "Enable store DOS attributes"
-#~ msgstr "Inschakelen opslaan van DOS attributen"
-
-#~ msgid "Asynchronous I/O (AIO)"
-#~ msgstr "Asynchrone I/O (AIO)"
-
-#~ msgid "Enable Asynchronous I/O (AIO)"
-#~ msgstr "Inschakelen Asynchrone I/O (AIO)"
-
-#~ msgid "Swap disabled"
-#~ msgstr "Het wisselbestand is uitgeschakeld"
-
-#~ msgid "AFP compatibility"
-#~ msgstr "AFP compatibiliteit"
-
-#~ msgid "Enhanced compatibility with Netatalk AFP server"
-#~ msgstr "Verbeterde compatibiliteit met Netatalk AFP server"
-
-#~ msgid "Alternate TCP port. Default is 22"
-#~ msgstr "Alternatieve TCP-poort. (Standaard poort 22)"
-
-#~ msgid ""
-#~ "A Portal Group contains IP addresses and listening TCP ports to connect the "
-#~ "target from the initiator."
-#~ msgstr ""
-#~ "Een Portaal Groep bevat IP-adressen en TCP luisterpoorten om te verbinden "
-#~ "met het doel vanaf de initiator."
-
-#~ msgid ""
-#~ "The workgroup in which the server will appear when queried by Windows or SMB "
-#~ "clients (maximum 15 characters)."
-#~ msgstr ""
-#~ "De werkgroep waarin de server verschijnt voor de Windows of SMB cliënten "
-#~ "(maximaal 15 tekens)."
-
-#, php-format
-#~ msgid ""
-#~ "%s must be enabled for Unison to work, and the %s must have shell access."
-#~ msgstr ""
-#~ "%s moet ingeschakeld zijn om Unison te laten werken en de %s heeft volledige "
-#~ "shell toegang nodig."
-
-#~ msgid "user"
-#~ msgstr "gebruiker"
-
-#~ msgid "Enable 'Asynchronous I/O (AIO)' switch."
-#~ msgstr "Inschakelen Asynchrone I/O (AIO)."
-
-#~ msgid "SSHD"
-#~ msgstr "SSHD"
-
-#~ msgid ""
-#~ "Running the service as user root is not recommended for security reasons, "
-#~ "use at your own risk!"
-#~ msgstr ""
-#~ "Als root uitvoeren is niet aanbevolen vanwege beveiligingsredenen, uitvoeren "
-#~ "als root is geheel voor eigen risico!"
-
-#~ msgid "Set under which user the service should run (www by default)."
-#~ msgstr ""
-#~ "Selecteer onder welke gebruiker de service uitgevoerd zal worden (standaard "
-#~ "www)."
-
-#~ msgid ""
-#~ "Additional parameters to the hardware-specific part of the driver for second "
-#~ "UPS."
-#~ msgstr ""
-#~ "Extra parameters naar het hardware-specifieke deel voor het stuurprogramma "
-#~ "van de tweede UPS."
-
-#~ msgid ""
-#~ "Enter the path to the home directory. The config will be created under the "
-#~ "specified directory."
-#~ msgstr ""
-#~ "Vul de locatie in naar de gegevensmap. De configuratie zal onder de "
-#~ "opgegeven map worden aangemaakt."
-
-#~ msgid "Server Max Protocol"
-#~ msgstr "Server Max Protocol"
-
-#~ msgid "Server Min Protocol"
-#~ msgstr "Server Min Protocol"
-
-#~ msgid "Client Min Protocol"
-#~ msgstr "Cliënt Min Protocol"
-
-#~ msgid "Client Max Protocol"
-#~ msgstr "Cliënt Max Protocol"
-
-#~ msgid "Auxiliary Parameters"
-#~ msgstr "Aanvullende Parameters"
-
-#~ msgid "Auxiliary Parameter"
-#~ msgstr "Aanvullende parameter"
-
-#, php-format
-#~ msgid ""
-#~ "Enter a custom port number if you want to override the default port. Default "
-#~ "port is %s."
+#~ "Enter a custom port number if you want to override the default port. "
+#~ "(Default is 69). "
 #~ msgstr ""
 #~ "Vul een aangepast poort nummer in als u de standaard poort niet wilt "
-#~ "gebruiken. Standaard poort is %s."
-
-#~ msgid "Working Directory"
-#~ msgstr "Werkmap"
-
-#~ msgid "AIO Rrite Size"
-#~ msgstr "AIO Lees Grootte"
-
-#~ msgid "Remote Rsync Saemon"
-#~ msgstr "Remote Rsync Daemon"
-
-#~ msgid "Scan Type"
-#~ msgstr "Scan Mode"
+#~ "gebruiken. (Standaard is 69). "

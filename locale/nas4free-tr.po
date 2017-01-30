@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-29 13:11+0000\n"
+"POT-Creation-Date: 2017-01-30 02:33+0000\n"
 "PO-Revision-Date: 2016-08-31 21:50+0000\n"
 "Last-Translator: Mustafa DAĞCI <mustafa.matrix@gmail.com>\n"
 "Language-Team: NAS4Free <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-29 12:22+0000\n"
+"X-Launchpad-Export-Date: 2017-01-30 02:13+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: TURKEY\n"
 "X-Poedit-Language: Turkish\n"
@@ -530,14 +530,14 @@ msgstr ""
 msgid "Admin Password"
 msgstr ""
 
-msgid "Administration password"
-msgstr "Yönetici Parolası"
+msgid "Administration Password"
+msgstr ""
 
 msgid "Administrative WebGUI"
 msgstr ""
 
-msgid "Administrator name"
-msgstr "Yönetici Adı"
+msgid "Administrator Name"
+msgstr ""
 
 msgid "Advanced"
 msgstr "Gelişmiş"
@@ -560,7 +560,7 @@ msgstr ""
 msgid "Advanced settings"
 msgstr "Gelişmiş Ayarlar"
 
-msgid "Advertisement skew"
+msgid "Advertisement Skew"
 msgstr ""
 
 msgid "Afrikaans"
@@ -585,8 +585,8 @@ msgstr ""
 msgid "Age"
 msgstr ""
 
-msgid "Aggregation protocol"
-msgstr "Yığın protokolü"
+msgid "Aggregation Protocol"
+msgstr ""
 
 msgid "Aggressive"
 msgstr "Agresif"
@@ -1870,11 +1870,11 @@ msgstr "Daemon Kayıt defteri"
 msgid "Danish"
 msgstr ""
 
-msgid "Data digest"
+msgid "Data Integrity"
 msgstr ""
 
-msgid "Data integrity"
-msgstr "Veri Bütünlüğü"
+msgid "Data digest"
+msgstr ""
 
 msgid "Database Directory"
 msgstr ""
@@ -2128,6 +2128,9 @@ msgstr "Açıklama"
 msgid "Destination"
 msgstr "Hedef"
 
+msgid "Destination Network"
+msgstr ""
+
 msgid "Destination Share"
 msgstr ""
 
@@ -2143,14 +2146,11 @@ msgstr ""
 msgid "Destination host name or IP number."
 msgstr "Hedef IP adresi yada ismi."
 
-msgid "Destination network"
-msgstr "Hedef Ağ"
-
 msgid "Destination network bit count"
 msgstr "Hedef Ağ Bit sayısı"
 
-msgid "Destination network for this static route"
-msgstr "Bu statik Roue için hedef network"
+msgid "Destination network for this static route."
+msgstr ""
 
 msgid "Destination port"
 msgstr "Hedef port"
@@ -2619,20 +2619,20 @@ msgstr ""
 msgid "Domain"
 msgstr "Alan Adı"
 
+msgid "Domain Controller Name"
+msgstr ""
+
 msgid "Domain Name"
 msgstr ""
 
-msgid "Domain controller name"
+msgid "Domain Name (DNS/Realm-Name)"
+msgstr ""
+
+msgid "Domain Name (NetBIOS-Name)"
 msgstr ""
 
 msgid "Domain is missing 2nd level name."
 msgstr ""
-
-msgid "Domain name (DNS/Realm-Name)"
-msgstr "Domain adı (DNS/Realm-Name)"
-
-msgid "Domain name (NetBIOS-Name)"
-msgstr "Domain adı (NetBIOS-İsmi)"
 
 msgid "Domain name in old format, e.g. EXAMPLE."
 msgstr ""
@@ -2666,9 +2666,6 @@ msgstr ""
 
 msgid "Download directory"
 msgstr "İndirme dizini"
-
-msgid "Download firewall rules."
-msgstr "İndirme için güvenlik duvarı kuralları"
 
 msgid "Drive Temperature."
 msgstr ""
@@ -3113,7 +3110,13 @@ msgstr "'%s' şifreleniyor...Lütfen Bekleyin"
 msgid "Encryption"
 msgstr "Şifreleme"
 
-msgid "Encryption Setup"
+msgid "Encryption Algorithm"
+msgstr ""
+
+msgid "Encryption Management"
+msgstr ""
+
+msgid "Encryption Settings"
 msgstr ""
 
 msgid "Encryption Tools"
@@ -3142,6 +3145,11 @@ msgid ""
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr ""
 
+msgid ""
+"Enter a custom port number if you want to override the default port (default "
+"is 69)."
+msgstr ""
+
 #, php-format
 msgid ""
 "Enter a custom port number if you want to override the default port. "
@@ -3151,11 +3159,6 @@ msgstr ""
 msgid ""
 "Enter a custom port number if you want to override the default port. "
 "(Default is 22)."
-msgstr ""
-
-msgid ""
-"Enter a custom port number if you want to override the default port. "
-"(Default is 69). "
 msgstr ""
 
 msgid "Enter a description"
@@ -3281,6 +3284,9 @@ msgid "Export a pool from the system"
 msgstr ""
 
 msgid "Export all the directories in the specified path."
+msgstr ""
+
+msgid "Export firewall rules."
 msgstr ""
 
 msgid "Exported"
@@ -3667,7 +3673,7 @@ msgid "Graph shows last 120 seconds"
 msgstr ""
 
 #, php-format
-msgid "Graph updates every %d seconds"
+msgid "Graph updates every %d seconds."
 msgstr ""
 
 msgid "Graphs Height"
@@ -3828,8 +3834,8 @@ msgstr "Başlangıç dizini"
 msgid "Host"
 msgstr "Bilgisayar"
 
-msgid "Host access control"
-msgstr "Sunucu erişim kontrolü"
+msgid "Host Access Control"
+msgstr ""
 
 msgid "Host resources"
 msgstr "Host kaynakları"
@@ -3837,7 +3843,7 @@ msgstr "Host kaynakları"
 msgid "Hostname"
 msgstr "Bilgisayar adı"
 
-msgid "Hostname database"
+msgid "Hostname Database"
 msgstr ""
 
 msgid "Hosts"
@@ -4262,7 +4268,7 @@ msgid "Invalid file format."
 msgstr ""
 
 #, php-format
-msgid "Invalid max. block size! It must be in the range from %d to %d."
+msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
 
 msgid "Invalid username or password."
@@ -4355,11 +4361,11 @@ msgstr ""
 msgid "Key"
 msgstr "Anahtar"
 
+msgid "Key Length"
+msgstr ""
+
 msgid "Key Management Protocol"
 msgstr "Anahtar Yönetim Protokolü"
-
-msgid "Key length"
-msgstr "Anahtar Uzunluğu"
 
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr ""
@@ -4497,10 +4503,10 @@ msgid ""
 "'k', 'KB', 'M', 'Gb', etc.)."
 msgstr ""
 
-msgid "Link down action"
+msgid "Link Down Action"
 msgstr ""
 
-msgid "Link up action"
+msgid "Link Up Action"
 msgstr ""
 
 msgid "List"
@@ -4993,6 +4999,9 @@ msgid "Mount Point"
 msgstr "Bağlanma Noktası"
 
 msgid "Mount Point Fsck"
+msgstr ""
+
+msgid "Mount Point Management"
 msgstr ""
 
 msgid "Mount Point Tools"
@@ -5703,9 +5712,6 @@ msgstr ""
 
 msgid "Physical Interface"
 msgstr ""
-
-msgid "Physical interface"
-msgstr "Fiziksel arayüz"
 
 msgid "Pictures"
 msgstr ""
@@ -7176,6 +7182,9 @@ msgstr ""
 msgid "Subject"
 msgstr "Konu"
 
+msgid "Subnet Bit Count"
+msgstr ""
+
 msgid "Subnet Mask"
 msgstr ""
 
@@ -7333,6 +7342,9 @@ msgstr ""
 msgid "TFTP"
 msgstr "TFTP"
 
+msgid "TFTP has been disabled."
+msgstr ""
+
 msgid "TKIP"
 msgstr "TKIP"
 
@@ -7368,7 +7380,7 @@ msgstr ""
 msgid "Take a device offline"
 msgstr ""
 
-msgid "Tap device"
+msgid "Tap Device"
 msgstr ""
 
 msgid "Tape"
@@ -9183,9 +9195,6 @@ msgstr ""
 msgid "VLAN Tag"
 msgstr ""
 
-msgid "VLAN tag"
-msgstr "VLAN etiketi"
-
 msgid "VM Type"
 msgstr ""
 
@@ -9380,6 +9389,9 @@ msgid "Wed"
 msgstr ""
 
 msgid "Wednesday"
+msgstr ""
+
+msgid "Week Days"
 msgstr ""
 
 msgid "Week days"
@@ -9765,179 +9777,11 @@ msgstr "umount"
 msgid "week days"
 msgstr ""
 
-#~ msgid ""
-#~ "A Auth Group contains authorised users and secrets for additional security."
-#~ msgstr ""
-#~ "Bir Auth Group yetkili kullanıcıları ve ek güvenlik için sırları içerir."
+#~ msgid "Aggregation protocol"
+#~ msgstr "Yığın protokolü"
 
-#~ msgid ""
-#~ "A Initiator Group contains authorised initiator names and networks to access "
-#~ "the target."
-#~ msgstr ""
-#~ "Initiator Grubu hedef erişimine isim ve ağları için yetkileri içerir."
+#~ msgid "Physical interface"
+#~ msgstr "Fiziksel arayüz"
 
-#~ msgid ""
-#~ "A Portal Group contains IP addresses and listening TCP ports to connect the "
-#~ "target from the initiator."
-#~ msgstr ""
-#~ "Hedefe bağlanmak için Portal grubunun Ip adreslerini içerir ve Tcp "
-#~ "portlarını dinler."
-
-#~ msgid ""
-#~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
-#~ msgstr "Birincil ve ikincil DNS sunucusu için bir geçerli IPv4 adresi girin"
-
-#~ msgid ""
-#~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
-#~ msgstr ""
-#~ "Birincil ve İkincil DNS Server için geçerli bir IPv6 adresi belirtilmelidir."
-
-#~ msgid "AIO read size"
-#~ msgstr "AIO okuma boyutu"
-
-#~ msgid "AIO write size"
-#~ msgstr "AIO yazma boyutu"
-
-#~ msgid "Access mode"
-#~ msgstr "Erişim Modu"
-
-#~ msgid "All dirs"
-#~ msgstr "Tüm Dizinler"
-
-#~ msgid "All users will have the root privilege."
-#~ msgstr "Tüm kullanıcılar root hakkına sahip olacak."
-
-#~ msgid "Allow new files"
-#~ msgstr "Yeni dosyalara izin ver"
-
-#~ msgid "Alternate TCP port. Default is 22"
-#~ msgstr "Varsayılan alternatif TCP Port 22'dir."
-
-#~ msgid "Alternate TCP port. Default is 873"
-#~ msgstr "Varsayılan Alternatif TCP port 873'tür."
-
-#~ msgid "Always scan"
-#~ msgstr "Her zaman tara"
-
-#~ msgid "Asynchronous I/O (AIO)"
-#~ msgstr "Asenkronize I/O (AIO)"
-
-#~ msgid "Auxiliary parameters"
-#~ msgstr "Yardımcı Parametreler"
-
-#~ msgid "CIFS/SMB disabled"
-#~ msgstr "CIFS/SMB etkin değil"
-
-#~ msgid "Create mask"
-#~ msgstr "Maske Oluşturuldu"
-
-#~ msgid "Destination share"
-#~ msgstr "Hedef Paylaşım"
-
-#~ msgid "Directory mask"
-#~ msgstr "Dizin Maskesi"
-
-#~ msgid "Domain name"
-#~ msgstr "Alan adı"
-
-#~ msgid "Dos charset"
-#~ msgstr "Dos karakter seti"
-
-#~ msgid "EA support"
-#~ msgstr "EA desteği"
-
-#~ msgid "Enable Asynchronous I/O (AIO)"
-#~ msgstr "Asynchronous I/O (AIO) Etkinleştir"
-
-#~ msgid "Enable extended attribute support"
-#~ msgstr "Genişletilmiş öztenlik desteğini aktifleştir"
-
-#~ msgid "Enable large read/write"
-#~ msgstr "Büyük yazma ve okumayı Aktifleştir"
-
-#~ msgid "Enable permission inheritance"
-#~ msgstr "miras iznini etkin kıl"
-
-#~ msgid "Enable recycle bin"
-#~ msgstr "Geri Dönüşüm Kutusunu Aktifleştir"
-
-#~ msgid "Enable store DOS attributes"
-#~ msgstr "DOS simgelerini yedeklemeyi etkin kıl"
-
-#~ msgid "Forced update period"
-#~ msgstr "Periyodik olarak güncellemeye zorla"
-
-#~ msgid "Guest account"
-#~ msgstr "Misafir hesabı"
-
-#~ msgid "Hosts allow"
-#~ msgstr "Bilgisayarlara izin ver"
-
-#~ msgid "Hosts deny"
-#~ msgstr "Bilgisayarlara reddet"
-
-#~ msgid "Inherit permissions"
-#~ msgstr "İzinleri miras olarak al"
-
-#~ msgid "Large read/write"
-#~ msgstr "Büyük okuma/yazma"
-
-#~ msgid "Local share (destination)"
-#~ msgstr "Yerel paylaşım (hedef)"
-
-#~ msgid "Local shares to be synchronized"
-#~ msgstr "Senkronize edilmiş olan paylaşımların listesi"
-
-#~ msgid "Logical Block Length"
-#~ msgstr "Matıksal Blok Uzunluğu"
-
-#~ msgid "Map all users to root"
-#~ msgstr "Tüm kullanıcıları roota yönlendir"
-
-#~ msgid "Map to user"
-#~ msgstr "Kullanıcıya yönlendir"
-
-#~ msgid "Max. block size"
-#~ msgstr "Max. blok boyutu"
-
-#~ msgid "Max. connections"
-#~ msgstr "Max. bağlantı"
-
-#~ msgid "Max. sessions"
-#~ msgstr "Max. oturum"
-
-#~ msgid "Maximum connections"
-#~ msgstr "Maksimum bağlantılar"
-
-#~ msgid "NetBIOS name"
-#~ msgstr "NetBIOS ismi"
-
-#~ msgid "Number of servers"
-#~ msgstr "Serverların numarası"
-
-#~ msgid "Recycle bin"
-#~ msgstr "Çöp kutusu"
-
-#~ msgid "Scan type"
-#~ msgstr "Tarama tipi"
-
-#~ msgid "Server name"
-#~ msgstr "Sunucu adı"
-
-#~ msgid "Set browseable"
-#~ msgstr "Gezilebilebilir olarak ayarla"
-
-#~ msgid "Time server"
-#~ msgstr "Saat sunucusu"
-
-#~ msgid "WINS server"
-#~ msgstr "WINS sunucu"
-
-#~ msgid "umask"
-#~ msgstr "umask"
-
-#~ msgid "Null passwords"
-#~ msgstr "Boş parolalar"
-
-#~ msgid "Password authentication"
-#~ msgstr "Parola doğrulaması"
+#~ msgid "VLAN tag"
+#~ msgstr "VLAN etiketi"

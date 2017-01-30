@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-29 13:11+0000\n"
+"POT-Creation-Date: 2017-01-30 02:33+0000\n"
 "PO-Revision-Date: 2016-11-08 14:34+0000\n"
 "Last-Translator: Kini <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-29 12:21+0000\n"
+"X-Launchpad-Export-Date: 2017-01-30 02:12+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: SLOVENIA\n"
 "Language: \n"
@@ -537,14 +537,14 @@ msgstr ""
 msgid "Admin Password"
 msgstr ""
 
-msgid "Administration password"
-msgstr "Skrbniško geslo"
+msgid "Administration Password"
+msgstr ""
 
 msgid "Administrative WebGUI"
 msgstr "Skrbniški vmesnik WebGUI"
 
-msgid "Administrator name"
-msgstr "Ime skrbnika"
+msgid "Administrator Name"
+msgstr ""
 
 msgid "Advanced"
 msgstr "Zahtevnejše"
@@ -567,7 +567,7 @@ msgstr "Napredne nastavitve"
 msgid "Advanced settings"
 msgstr "Napredne nastavitve"
 
-msgid "Advertisement skew"
+msgid "Advertisement Skew"
 msgstr ""
 
 msgid "Afrikaans"
@@ -594,8 +594,8 @@ msgstr ""
 msgid "Age"
 msgstr "Starost"
 
-msgid "Aggregation protocol"
-msgstr "Protokol združitve"
+msgid "Aggregation Protocol"
+msgstr ""
 
 msgid "Aggressive"
 msgstr "Agresivno"
@@ -1887,11 +1887,11 @@ msgstr "Dnevnik procesa v ozadju"
 msgid "Danish"
 msgstr "Danščina"
 
+msgid "Data Integrity"
+msgstr ""
+
 msgid "Data digest"
 msgstr "Povzetek podatkov"
-
-msgid "Data integrity"
-msgstr "Neokrnjenost podatkov"
 
 msgid "Database Directory"
 msgstr ""
@@ -2145,6 +2145,9 @@ msgstr "Opis"
 msgid "Destination"
 msgstr "Cilj"
 
+msgid "Destination Network"
+msgstr ""
+
 msgid "Destination Share"
 msgstr ""
 
@@ -2160,14 +2163,11 @@ msgstr ""
 msgid "Destination host name or IP number."
 msgstr "Ime ali IP naslov cilja"
 
-msgid "Destination network"
-msgstr "Ciljno omrežje"
-
 msgid "Destination network bit count"
 msgstr "Omrežna maska clija"
 
-msgid "Destination network for this static route"
-msgstr "Ciljno omrežje za to statično pot"
+msgid "Destination network for this static route."
+msgstr ""
 
 msgid "Destination port"
 msgstr "Vrata cilja"
@@ -2643,20 +2643,20 @@ msgstr ""
 msgid "Domain"
 msgstr "Domena"
 
+msgid "Domain Controller Name"
+msgstr ""
+
 msgid "Domain Name"
 msgstr ""
 
-msgid "Domain controller name"
-msgstr "Ime domenskega kontrolerja"
+msgid "Domain Name (DNS/Realm-Name)"
+msgstr ""
+
+msgid "Domain Name (NetBIOS-Name)"
+msgstr ""
 
 msgid "Domain is missing 2nd level name."
 msgstr ""
-
-msgid "Domain name (DNS/Realm-Name)"
-msgstr "Ime domene (DNS/Realm ime)"
-
-msgid "Domain name (NetBIOS-Name)"
-msgstr "Ime domene (NetBIOS ime)"
 
 msgid "Domain name in old format, e.g. EXAMPLE."
 msgstr "Ime domene v starejšem  formatu, npr. PRIMER."
@@ -2690,9 +2690,6 @@ msgstr ""
 
 msgid "Download directory"
 msgstr "Mapa prenosov"
-
-msgid "Download firewall rules."
-msgstr "Prenesi pravila požarnega zidu"
 
 msgid "Drive Temperature."
 msgstr ""
@@ -3137,7 +3134,13 @@ msgstr "Kriptiranje '%s'... Prosim počakajte"
 msgid "Encryption"
 msgstr "Šifriranje"
 
-msgid "Encryption Setup"
+msgid "Encryption Algorithm"
+msgstr ""
+
+msgid "Encryption Management"
+msgstr ""
+
+msgid "Encryption Settings"
 msgstr ""
 
 msgid "Encryption Tools"
@@ -3166,6 +3169,11 @@ msgid ""
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr ""
 
+msgid ""
+"Enter a custom port number if you want to override the default port (default "
+"is 69)."
+msgstr ""
+
 #, php-format
 msgid ""
 "Enter a custom port number if you want to override the default port. "
@@ -3175,11 +3183,6 @@ msgstr ""
 msgid ""
 "Enter a custom port number if you want to override the default port. "
 "(Default is 22)."
-msgstr ""
-
-msgid ""
-"Enter a custom port number if you want to override the default port. "
-"(Default is 69). "
 msgstr ""
 
 msgid "Enter a description"
@@ -3313,6 +3316,9 @@ msgid "Export a pool from the system"
 msgstr ""
 
 msgid "Export all the directories in the specified path."
+msgstr ""
+
+msgid "Export firewall rules."
 msgstr ""
 
 msgid "Exported"
@@ -3704,7 +3710,7 @@ msgid "Graph shows last 120 seconds"
 msgstr "Graf prikazuje zadnjih 120 sekund"
 
 #, php-format
-msgid "Graph updates every %d seconds"
+msgid "Graph updates every %d seconds."
 msgstr ""
 
 msgid "Graphs Height"
@@ -3865,8 +3871,8 @@ msgstr "Domača mapa"
 msgid "Host"
 msgstr "Gostitelj"
 
-msgid "Host access control"
-msgstr "Nadzor dostopa"
+msgid "Host Access Control"
+msgstr ""
 
 msgid "Host resources"
 msgstr "Viri"
@@ -3874,8 +3880,8 @@ msgstr "Viri"
 msgid "Hostname"
 msgstr "Ime gostitelja"
 
-msgid "Hostname database"
-msgstr "Podatkovna baza imen"
+msgid "Hostname Database"
+msgstr ""
 
 msgid "Hosts"
 msgstr "Gostitelji"
@@ -4314,8 +4320,8 @@ msgid "Invalid file format."
 msgstr "Napačen format datoteke."
 
 #, php-format
-msgid "Invalid max. block size! It must be in the range from %d to %d."
-msgstr "Napačna velikost bloka. Biti more med %d in %d."
+msgid "Invalid maximum block size! It must be in the range from %d to %d."
+msgstr ""
 
 msgid "Invalid username or password."
 msgstr "Napačno uporabniško ime ali geslo"
@@ -4408,11 +4414,11 @@ msgstr "Datoteka jedra (npr. %s)."
 msgid "Key"
 msgstr "Ključ"
 
+msgid "Key Length"
+msgstr ""
+
 msgid "Key Management Protocol"
 msgstr "Protokol upravljanja s ključi"
-
-msgid "Key length"
-msgstr "Dolžina ključa"
 
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr "Dolžina ključa za uporabo z izbranim kriptiranjem."
@@ -4553,10 +4559,10 @@ msgstr ""
 "prostora. Uporabite naslednje pripone, pri omejevanju prostora (npr. 'k', "
 "'KB', 'M', 'Gb', itd.)."
 
-msgid "Link down action"
+msgid "Link Down Action"
 msgstr ""
 
-msgid "Link up action"
+msgid "Link Up Action"
 msgstr ""
 
 msgid "List"
@@ -5055,6 +5061,9 @@ msgid "Mount Point"
 msgstr "Točka priklopa"
 
 msgid "Mount Point Fsck"
+msgstr ""
+
+msgid "Mount Point Management"
 msgstr ""
 
 msgid "Mount Point Tools"
@@ -5784,9 +5793,6 @@ msgid "Permit to do SSH Tunneling."
 msgstr "Dovoli SSH tunel."
 
 msgid "Physical Interface"
-msgstr "Fizična naprava"
-
-msgid "Physical interface"
 msgstr "Fizična naprava"
 
 msgid "Pictures"
@@ -7291,6 +7297,9 @@ msgstr "Označevalec obsega."
 msgid "Subject"
 msgstr "Zadeva"
 
+msgid "Subnet Bit Count"
+msgstr ""
+
 msgid "Subnet Mask"
 msgstr ""
 
@@ -7448,6 +7457,9 @@ msgstr "TCP vrata, na katerih strežnik posluša."
 msgid "TFTP"
 msgstr "TFTP"
 
+msgid "TFTP has been disabled."
+msgstr ""
+
 msgid "TKIP"
 msgstr "TKIP"
 
@@ -7483,7 +7495,7 @@ msgstr "Tag%d (%s)"
 msgid "Take a device offline"
 msgstr ""
 
-msgid "Tap device"
+msgid "Tap Device"
 msgstr ""
 
 msgid "Tape"
@@ -9316,9 +9328,6 @@ msgstr ""
 msgid "VLAN Tag"
 msgstr ""
 
-msgid "VLAN tag"
-msgstr "VLAN oznaka"
-
 msgid "VM Type"
 msgstr ""
 
@@ -9513,6 +9522,9 @@ msgid "Wed"
 msgstr ""
 
 msgid "Wednesday"
+msgstr ""
+
+msgid "Week Days"
 msgstr ""
 
 msgid "Week days"
@@ -9899,281 +9911,15 @@ msgstr "izvrzi"
 msgid "week days"
 msgstr ""
 
-#~ msgid ""
-#~ "A Auth Group contains authorised users and secrets for additional security."
-#~ msgstr ""
-#~ "Skupina dovoljenj vsebuje uporabnike in gesla, za še višjo raven varnosti."
-
-#~ msgid ""
-#~ "A Initiator Group contains authorised initiator names and networks to access "
-#~ "the target."
-#~ msgstr ""
-#~ "Skupina sprožiteljev vsebuje imena sprožiteljev, ter omrežja za dostop do "
-#~ "cilja."
-
-#~ msgid ""
-#~ "A Portal Group contains IP addresses and listening TCP ports to connect the "
-#~ "target from the initiator."
-#~ msgstr ""
-#~ "Skupina vsebuje IP naslove in TCP porte za povezave sprožiteljev do cilja."
-
-#~ msgid ""
-#~ "A directory listing is generated if a directory is requested and no index-"
-#~ "file (index.php, index.html, index.htm or default.htm) was found in that "
-#~ "directory."
-#~ msgstr ""
-#~ "Seznam mape je generiran, če v mapi ni index datoteke (index.php, "
-#~ "index.html, index.htm ali default.htm) ."
-
-#~ msgid ""
-#~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
-#~ msgstr ""
-#~ "Določen mora biti veljaven IPv4 naslov primarnega/sekundarnega DNS strežnika."
-
-#~ msgid ""
-#~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
-#~ msgstr ""
-#~ "Določen mora biti veljaven IPv6 naslov primarnega/sekundarnega DNS strežnika."
-
-#~ msgid "AIO read size"
-#~ msgstr "AIO velikost branja"
-
-#~ msgid "AIO write size"
-#~ msgstr "AIO velikost pisanja"
-
-#~ msgid "Access mode"
-#~ msgstr "Način dostopa"
-
-#~ msgid "All dirs"
-#~ msgstr "Vse mape"
-
-#~ msgid "All users will have the root privilege."
-#~ msgstr "Vsi uporabniki bodo imeli root pravice."
-
-#~ msgid "Allow new files"
-#~ msgstr "Dovoli nove datoteke"
-
-#~ msgid "Alternate TCP port. Default is 22"
-#~ msgstr "Alternativna TCP vrata. Privzeta so 22."
-
-#~ msgid "Alternate TCP port. Default is 873"
-#~ msgstr "Alternativna TCP vrata. Privzeta so 873."
-
-#~ msgid "Always scan"
-#~ msgstr "Vedno preišči"
-
-#~ msgid "Asynchronous I/O (AIO)"
-#~ msgstr "Asinhron I/O (AIO)"
-
-#~ msgid "Auxiliary parameters"
-#~ msgstr "Dodatni parametri"
-
-#~ msgid "CIFS/SMB disabled"
-#~ msgstr "CIFS/SMB onemogočen"
-
-#~ msgid "Create mask"
-#~ msgstr "Maska ustvarjanj"
-
-#~ msgid "Destination share"
-#~ msgstr "Ciljni deljeni vir"
-
-#~ msgid "Directory mask"
-#~ msgstr "Maska map"
-
-#~ msgid "Document root"
-#~ msgstr "Root dokument"
-
-#~ msgid "Domain name"
-#~ msgstr "Ime domene"
-
-#~ msgid "Dos charset"
-#~ msgstr "Dos kodna tabela"
-
-#~ msgid "EA support"
-#~ msgstr "EA podpora"
-
-#~ msgid "Enable Asynchronous I/O (AIO)"
-#~ msgstr "Omogoči asinhron I/O (AIO)"
-
-#~ msgid "Enable extended attribute support"
-#~ msgstr "Omogoči napredno podporo atributov"
-
-#~ msgid "Enable large read/write"
-#~ msgstr "Omogoči veliko branje/pisanje"
-
-#~ msgid "Enable permission inheritance"
-#~ msgstr "Omogoči posvojitev dovoljenj"
-
-#~ msgid "Enable recycle bin"
-#~ msgstr "Omogoči koš"
-
-#~ msgid "Enable store DOS attributes"
-#~ msgstr "Omogoči shranjevanje DOS atributov"
-
-#~ msgid "Forced update period"
-#~ msgstr "Vsiljen čas posodobitev"
-
-#~ msgid "Guest account"
-#~ msgstr "Gost"
-
-#~ msgid "Hide dot files"
-#~ msgstr "Skrij datoteke s piko"
-
-#~ msgid "Hosts allow"
-#~ msgstr "Dovoljeni dostopi"
-
-#~ msgid "Hosts deny"
-#~ msgstr "Zavrnjeni dostopi"
-
-#~ msgid "Inherit permissions"
-#~ msgstr "Podeduj dovoljenja"
-
-#~ msgid "Large read/write"
-#~ msgstr "Veliko branje/pisanje"
-
-#~ msgid "Local share (destination)"
-#~ msgstr "Lokalni deljeni vir (cilj)"
-
-#~ msgid "Local shares to be synchronized"
-#~ msgstr "Lokala deljena mapa, ki naj bo sinhronizirana"
+#~ msgid "Aggregation protocol"
+#~ msgstr "Protokol združitve"
 
 #, php-format
-#~ msgid ""
-#~ "Location where the working files will be stored, e.g. %s/backup/.unison"
-#~ msgstr "Mesto, kjer bodo shranjene delujoče datoteke, npr. %s/backup/.unison"
+#~ msgid "Invalid max. block size! It must be in the range from %d to %d."
+#~ msgstr "Napačna velikost bloka. Biti more med %d in %d."
 
-#~ msgid "Logical Block Length"
-#~ msgstr "Logical Block Length"
+#~ msgid "Physical interface"
+#~ msgstr "Fizična naprava"
 
-#~ msgid "Map all users to root"
-#~ msgstr "Dodaj vse uporabnike k root-u"
-
-#~ msgid "Map to user"
-#~ msgstr "Dodeli uporabniku"
-
-#~ msgid "Max. block size"
-#~ msgstr "Največja velikost bloka"
-
-#~ msgid "Max. connections"
-#~ msgstr "Največ povezav"
-
-#~ msgid "Max. sessions"
-#~ msgstr "Največ sej"
-
-#~ msgid "Maximum connections"
-#~ msgstr "Največje število povezav"
-
-#~ msgid "NetBIOS name"
-#~ msgstr "NetBIOS ime"
-
-#~ msgid "Null passwords"
-#~ msgstr "Prazna gesla"
-
-#~ msgid "Number of servers"
-#~ msgstr "Število strežnikov"
-
-#~ msgid "Password authentication"
-#~ msgstr "Prijava z geslom"
-
-#~ msgid "Permit root login"
-#~ msgstr "Dovoli root prijavo"
-
-#~ msgid "Preserve extended attributes"
-#~ msgstr "Obdrži dodatne atribute"
-
-#~ msgid "Preserve permissions"
-#~ msgstr "Ohrani dovoljenja"
-
-#~ msgid "Receive Buffer Size"
-#~ msgstr "Velikost predpomnilnika sprejemanja"
-
-#~ msgid "Recycle bin"
-#~ msgstr "Koš"
-
-#~ msgid "Remote module (source)"
-#~ msgstr "Oddaljen modul (vir)"
-
-#, php-format
-#~ msgid ""
-#~ "Samba will read from file asynchronously when size of request is bigger than "
-#~ "this value. (%d by default)"
-#~ msgstr ""
-#~ "Samba bo brala iz datoteke asinhrono, ko je velikost zahtevka višja, kot ta "
-#~ "vrednost. (%d privzeto)"
-
-#, php-format
-#~ msgid ""
-#~ "Samba will write to file asynchronously when size of request is bigger than "
-#~ "this value. (%d by default)"
-#~ msgstr ""
-#~ "Samba bo pisala v datoteko asinhrono, ko je velikost zahtevka večja od "
-#~ "nastavljene vrednosti. (%d privzeto)"
-
-#~ msgid "Scan type"
-#~ msgstr "Tip iskanja"
-
-#~ msgid "Send Buffer Size"
-#~ msgstr "Velikost predpomnilnika pošiljanja"
-
-#~ msgid "Server name"
-#~ msgstr "Ime strežnika"
-
-#~ msgid "Set browseable"
-#~ msgstr "Lahko se brska"
-
-#~ msgid "Set read only"
-#~ msgstr "Samo za branje"
-
-#~ msgid "Source share"
-#~ msgstr "Izvorni deljeni vir"
-
-#~ msgid "Store DOS attributes"
-#~ msgstr "Shani DOS atribute"
-
-#~ msgid "Synchronization time"
-#~ msgstr "Čas sinhronizacije"
-
-#~ msgid "TCP forwarding"
-#~ msgstr "TCP posredovanje"
-
-#~ msgid "Time server"
-#~ msgstr "Časovni strežnik"
-
-#~ msgid "Unix charset"
-#~ msgstr "Unix kodna tabela"
-
-#~ msgid "WINS server"
-#~ msgstr "WINS strežnik"
-
-#~ msgid "umask"
-#~ msgstr "umask"
-
-#~ msgid "Enable 'Asynchronous I/O (AIO)' switch."
-#~ msgstr "Omogoči stikalo 'Asinhron I/O (AIO)'"
-
-#~ msgid "Interface selection"
-#~ msgstr "Izbira vmesnika"
-
-#~ msgid "AIO module"
-#~ msgstr "AIO modul"
-
-#~ msgid "Enable ZFS ACL"
-#~ msgstr "Omogoči ZFS ACL"
-
-#~ msgid "user"
-#~ msgstr "uporabnik"
-
-#~ msgid "AFP compatibility"
-#~ msgstr "AFP kompatibilnost"
-
-#~ msgid "Reverse direction"
-#~ msgstr "Obrni smer"
-
-#~ msgid "Run as"
-#~ msgstr "Zaženi kot"
-
-#~ msgid "SSHD"
-#~ msgstr "SSHD"
-
-#~ msgid "Swap disabled"
-#~ msgstr "Izmenjevalni pomnilnik je onemogočen"
+#~ msgid "VLAN tag"
+#~ msgstr "VLAN oznaka"

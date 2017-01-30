@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-29 13:11+0000\n"
+"POT-Creation-Date: 2017-01-30 02:33+0000\n"
 "PO-Revision-Date: 2016-11-06 21:25+0000\n"
 "Last-Translator: acidlord <acidlord_34@abv.bg>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-29 12:22+0000\n"
+"X-Launchpad-Export-Date: 2017-01-30 02:13+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: BULGARIA\n"
 "Language: \n"
@@ -542,14 +542,14 @@ msgstr "Адрес на отдалечения hastd демон. Трябва д
 msgid "Admin Password"
 msgstr ""
 
-msgid "Administration password"
-msgstr "Парола на администратора"
+msgid "Administration Password"
+msgstr ""
 
 msgid "Administrative WebGUI"
 msgstr "Административен уеб интерфейс"
 
-msgid "Administrator name"
-msgstr "Администраторско име"
+msgid "Administrator Name"
+msgstr ""
 
 msgid "Advanced"
 msgstr "Разширен"
@@ -572,8 +572,8 @@ msgstr "Setup за напреднали"
 msgid "Advanced settings"
 msgstr "Разширени настройки"
 
-msgid "Advertisement skew"
-msgstr "Advertisement skew"
+msgid "Advertisement Skew"
+msgstr ""
 
 msgid "Afrikaans"
 msgstr ""
@@ -602,8 +602,8 @@ msgstr ""
 msgid "Age"
 msgstr "Възраст"
 
-msgid "Aggregation protocol"
-msgstr "Агрегатен протокол"
+msgid "Aggregation Protocol"
+msgstr ""
 
 msgid "Aggressive"
 msgstr "Агресивно"
@@ -1995,11 +1995,11 @@ msgstr "Демон лог"
 msgid "Danish"
 msgstr "Датски"
 
+msgid "Data Integrity"
+msgstr ""
+
 msgid "Data digest"
 msgstr "Справочник на данни"
-
-msgid "Data integrity"
-msgstr "Цялост на данните"
 
 msgid "Database Directory"
 msgstr ""
@@ -2255,6 +2255,9 @@ msgstr "Описание"
 msgid "Destination"
 msgstr "Дестинация"
 
+msgid "Destination Network"
+msgstr ""
+
 msgid "Destination Share"
 msgstr ""
 
@@ -2270,14 +2273,11 @@ msgstr ""
 msgid "Destination host name or IP number."
 msgstr "Целево Име или IP номер"
 
-msgid "Destination network"
-msgstr "Отправна мрежа"
-
 msgid "Destination network bit count"
 msgstr ""
 
-msgid "Destination network for this static route"
-msgstr "Отправна мрежа за този статичен път"
+msgid "Destination network for this static route."
+msgstr ""
 
 msgid "Destination port"
 msgstr "Целеви порт"
@@ -2744,19 +2744,19 @@ msgstr ""
 msgid "Domain"
 msgstr "Домейн"
 
+msgid "Domain Controller Name"
+msgstr ""
+
 msgid "Domain Name"
 msgstr ""
 
-msgid "Domain controller name"
+msgid "Domain Name (DNS/Realm-Name)"
+msgstr ""
+
+msgid "Domain Name (NetBIOS-Name)"
 msgstr ""
 
 msgid "Domain is missing 2nd level name."
-msgstr ""
-
-msgid "Domain name (DNS/Realm-Name)"
-msgstr ""
-
-msgid "Domain name (NetBIOS-Name)"
 msgstr ""
 
 msgid "Domain name in old format, e.g. EXAMPLE."
@@ -2791,9 +2791,6 @@ msgstr ""
 
 msgid "Download directory"
 msgstr "Папка за сваляне"
-
-msgid "Download firewall rules."
-msgstr ""
 
 msgid "Drive Temperature."
 msgstr "Температура на устройство."
@@ -3236,7 +3233,13 @@ msgstr ""
 msgid "Encryption"
 msgstr "Криптиране"
 
-msgid "Encryption Setup"
+msgid "Encryption Algorithm"
+msgstr ""
+
+msgid "Encryption Management"
+msgstr ""
+
+msgid "Encryption Settings"
 msgstr ""
 
 msgid "Encryption Tools"
@@ -3265,6 +3268,11 @@ msgid ""
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr ""
 
+msgid ""
+"Enter a custom port number if you want to override the default port (default "
+"is 69)."
+msgstr ""
+
 #, php-format
 msgid ""
 "Enter a custom port number if you want to override the default port. "
@@ -3274,11 +3282,6 @@ msgstr ""
 msgid ""
 "Enter a custom port number if you want to override the default port. "
 "(Default is 22)."
-msgstr ""
-
-msgid ""
-"Enter a custom port number if you want to override the default port. "
-"(Default is 69). "
 msgstr ""
 
 msgid "Enter a description"
@@ -3404,6 +3407,9 @@ msgid "Export a pool from the system"
 msgstr ""
 
 msgid "Export all the directories in the specified path."
+msgstr ""
+
+msgid "Export firewall rules."
 msgstr ""
 
 msgid "Exported"
@@ -3790,7 +3796,7 @@ msgid "Graph shows last 120 seconds"
 msgstr ""
 
 #, php-format
-msgid "Graph updates every %d seconds"
+msgid "Graph updates every %d seconds."
 msgstr ""
 
 msgid "Graphs Height"
@@ -3951,7 +3957,7 @@ msgstr ""
 msgid "Host"
 msgstr "хост"
 
-msgid "Host access control"
+msgid "Host Access Control"
 msgstr ""
 
 msgid "Host resources"
@@ -3960,7 +3966,7 @@ msgstr ""
 msgid "Hostname"
 msgstr "Име на хоста"
 
-msgid "Hostname database"
+msgid "Hostname Database"
 msgstr ""
 
 msgid "Hosts"
@@ -4382,7 +4388,7 @@ msgid "Invalid file format."
 msgstr ""
 
 #, php-format
-msgid "Invalid max. block size! It must be in the range from %d to %d."
+msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
 
 msgid "Invalid username or password."
@@ -4476,10 +4482,10 @@ msgstr ""
 msgid "Key"
 msgstr "Ключ"
 
-msgid "Key Management Protocol"
+msgid "Key Length"
 msgstr ""
 
-msgid "Key length"
+msgid "Key Management Protocol"
 msgstr ""
 
 msgid "Key length to use with the given cryptographic algorithm."
@@ -4618,10 +4624,10 @@ msgid ""
 "'k', 'KB', 'M', 'Gb', etc.)."
 msgstr ""
 
-msgid "Link down action"
+msgid "Link Down Action"
 msgstr ""
 
-msgid "Link up action"
+msgid "Link Up Action"
 msgstr ""
 
 msgid "List"
@@ -5113,6 +5119,9 @@ msgid "Mount Point"
 msgstr "Място за монтиране"
 
 msgid "Mount Point Fsck"
+msgstr ""
+
+msgid "Mount Point Management"
 msgstr ""
 
 msgid "Mount Point Tools"
@@ -5824,9 +5833,6 @@ msgid "Permit to do SSH Tunneling."
 msgstr "Permit to do SSH Tunneling."
 
 msgid "Physical Interface"
-msgstr ""
-
-msgid "Physical interface"
 msgstr ""
 
 msgid "Pictures"
@@ -7299,6 +7305,9 @@ msgstr ""
 msgid "Subject"
 msgstr ""
 
+msgid "Subnet Bit Count"
+msgstr ""
+
 msgid "Subnet Mask"
 msgstr ""
 
@@ -7456,6 +7465,9 @@ msgstr ""
 msgid "TFTP"
 msgstr ""
 
+msgid "TFTP has been disabled."
+msgstr ""
+
 msgid "TKIP"
 msgstr ""
 
@@ -7491,7 +7503,7 @@ msgstr ""
 msgid "Take a device offline"
 msgstr ""
 
-msgid "Tap device"
+msgid "Tap Device"
 msgstr ""
 
 msgid "Tape"
@@ -9313,9 +9325,6 @@ msgstr ""
 msgid "VLAN Tag"
 msgstr ""
 
-msgid "VLAN tag"
-msgstr "VLAN tag"
-
 msgid "VM Type"
 msgstr ""
 
@@ -9510,6 +9519,9 @@ msgid "Wed"
 msgstr ""
 
 msgid "Wednesday"
+msgstr ""
+
+msgid "Week Days"
 msgstr ""
 
 msgid "Week days"
@@ -9896,152 +9908,11 @@ msgstr ""
 msgid "week days"
 msgstr ""
 
-#~ msgid "Destination share"
-#~ msgstr "Destination share"
+#~ msgid "VLAN tag"
+#~ msgstr "VLAN tag"
 
-#~ msgid "Domain name"
-#~ msgstr "Домейн"
+#~ msgid "Advertisement skew"
+#~ msgstr "Advertisement skew"
 
-#~ msgid "Dos charset"
-#~ msgstr "Dos charset"
-
-#~ msgid "Enable large read/write"
-#~ msgstr "Enable large read/write"
-
-#~ msgid "Large read/write"
-#~ msgstr "Large read/write"
-
-#~ msgid "Local share (destination)"
-#~ msgstr "Локален дял (дестинация)"
-
-#~ msgid "Map all users to root"
-#~ msgstr "Направи всички потребители администратори"
-
-#~ msgid "Map to user"
-#~ msgstr "Map to user"
-
-#~ msgid "Maximum connections"
-#~ msgstr "максимален брой връзки"
-
-#~ msgid "Permit root login"
-#~ msgstr "позволи администраторския вход"
-
-#~ msgid "Receive Buffer Size"
-#~ msgstr "Receive Buffer Size"
-
-#~ msgid "Send Buffer Size"
-#~ msgstr "Send Buffer Size"
-
-#~ msgid "Source share"
-#~ msgstr "Source share"
-
-#~ msgid "Time server"
-#~ msgstr "Time server"
-
-#~ msgid "Unix charset"
-#~ msgstr "Unix charset"
-
-#~ msgid "WINS server"
-#~ msgstr "WINS сървър"
-
-#~ msgid ""
-#~ "A Auth Group contains authorised users and secrets for additional security."
-#~ msgstr ""
-#~ "A Auth Group съдържа оторизирани потребители и тайни, за допълнителна "
-#~ "сигурност."
-
-#~ msgid ""
-#~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
-#~ msgstr ""
-#~ "Трябва да бъде уточнен валиден IPv6 адрес за основен/вторичен DNS сървър."
-
-#~ msgid ""
-#~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
-#~ msgstr ""
-#~ "Трябва да бъде уточнен валиден IPv4 адрес за основен/вторичен DNS сървър."
-
-#~ msgid "AIO write size"
-#~ msgstr "AIO размер на записване"
-
-#~ msgid "AIO read size"
-#~ msgstr "AIO размер на четене"
-
-#~ msgid "Access mode"
-#~ msgstr "Режим на достъп"
-
-#~ msgid "Active Directory List"
-#~ msgstr "Списък на Активната директория"
-
-#~ msgid "All dirs"
-#~ msgstr "Всички директории"
-
-#~ msgid "All users will have the root privilege."
-#~ msgstr "Всички потребители ще имат администраторски права."
-
-#~ msgid "Allow new files"
-#~ msgstr "Разреши нови файлове"
-
-#~ msgid "Alternate TCP port. Default is 873"
-#~ msgstr "Замени TCP порта. По подразбиране е 873."
-
-#~ msgid "Alternate TCP port. Default is 22"
-#~ msgstr "Замени TCP порта. По подразбиране е 22."
-
-#~ msgid "Always scan"
-#~ msgstr "Винаги сканирай"
-
-#~ msgid "CIFS/SMB disabled"
-#~ msgstr "CIFS/SMB изключен"
-
-#~ msgid "Create mask"
-#~ msgstr "Създай маска"
-
-#~ msgid "Asynchronous I/O (AIO)"
-#~ msgstr "Несинхронен I/O (AIO)"
-
-#~ msgid "Auxiliary parameters"
-#~ msgstr "Помощни опции"
-
-#~ msgid ""
-#~ "A directory listing is generated if a directory is requested and no index-"
-#~ "file (index.php, index.html, index.htm or default.htm) was found in that "
-#~ "directory."
-#~ msgstr ""
-#~ "Списък на директорията се създава  и показва, когато директорията е извикана "
-#~ "и не е намерен индекс файл  в нея. (index.php, index.html, index.htm или "
-#~ "default.htm)"
-
-#~ msgid "umask"
-#~ msgstr "umask"
-
-#, php-format
-#~ msgid ""
-#~ "%s must be enabled for Unison to work, and the %s must have shell access."
-#~ msgstr ""
-#~ "%s трябва да е позволено, за да работи Unison, и %s трябва да има shell "
-#~ "достъп."
-
-#~ msgid "user"
-#~ msgstr "потребител"
-
-#~ msgid "AFP compatibility"
-#~ msgstr "AFP съвместимост"
-
-#~ msgid "AIO module"
-#~ msgstr "AIO модул"
-
-#~ msgid ""
-#~ "Additional parameters to the hardware-specific part of the driver for second "
-#~ "UPS."
-#~ msgstr ""
-#~ "Допълнителни параметри на хардуерно специфичната част на драйвера за втори "
-#~ "UPS."
-
-#~ msgid "Compilations directories"
-#~ msgstr "Колекции  от директории"
-
-#~ msgid "Directory mask"
-#~ msgstr "Маска на директорията"
-
-#~ msgid "Document root"
-#~ msgstr "Корен на документа"
+#~ msgid "Aggregation protocol"
+#~ msgstr "Агрегатен протокол"
