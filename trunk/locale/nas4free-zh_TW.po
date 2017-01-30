@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-29 13:11+0000\n"
+"POT-Creation-Date: 2017-01-30 02:33+0000\n"
 "PO-Revision-Date: 2016-03-03 17:10+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-29 12:21+0000\n"
+"X-Launchpad-Export-Date: 2017-01-30 02:13+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "Language: zh_TW\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,128,-1,-1,-1,-1,-1\n"
@@ -526,14 +526,14 @@ msgstr "hastd 遠程守護進程的位址。它必須是一個靜態IP位址。"
 msgid "Admin Password"
 msgstr ""
 
-msgid "Administration password"
-msgstr "管理員密碼"
+msgid "Administration Password"
+msgstr ""
 
 msgid "Administrative WebGUI"
 msgstr "網頁管理界面"
 
-msgid "Administrator name"
-msgstr "管理者帳號"
+msgid "Administrator Name"
+msgstr ""
 
 msgid "Advanced"
 msgstr "進階"
@@ -556,8 +556,8 @@ msgstr ""
 msgid "Advanced settings"
 msgstr "進階设置"
 
-msgid "Advertisement skew"
-msgstr "廣告的毫秒級值"
+msgid "Advertisement Skew"
+msgstr ""
 
 msgid "Afrikaans"
 msgstr ""
@@ -581,8 +581,8 @@ msgstr ""
 msgid "Age"
 msgstr ""
 
-msgid "Aggregation protocol"
-msgstr "聚合協議"
+msgid "Aggregation Protocol"
+msgstr ""
 
 msgid "Aggressive"
 msgstr "積極模式"
@@ -1857,11 +1857,11 @@ msgstr "守護進程記錄"
 msgid "Danish"
 msgstr "丹麥文"
 
+msgid "Data Integrity"
+msgstr ""
+
 msgid "Data digest"
 msgstr "數據摘要"
-
-msgid "Data integrity"
-msgstr "數據完整性"
 
 msgid "Database Directory"
 msgstr ""
@@ -2115,6 +2115,9 @@ msgstr "說明"
 msgid "Destination"
 msgstr "目的端"
 
+msgid "Destination Network"
+msgstr ""
+
 msgid "Destination Share"
 msgstr "共享目的端"
 
@@ -2130,14 +2133,11 @@ msgstr ""
 msgid "Destination host name or IP number."
 msgstr "目的端主機名稱或 IP 位址。"
 
-msgid "Destination network"
-msgstr "目標網段"
-
 msgid "Destination network bit count"
 msgstr "目標網域 bit count"
 
-msgid "Destination network for this static route"
-msgstr "本路由設定要套用的目標網段"
+msgid "Destination network for this static route."
+msgstr ""
 
 msgid "Destination port"
 msgstr "目的端端口"
@@ -2599,20 +2599,20 @@ msgstr ""
 msgid "Domain"
 msgstr "網域"
 
+msgid "Domain Controller Name"
+msgstr ""
+
 msgid "Domain Name"
 msgstr ""
 
-msgid "Domain controller name"
-msgstr "網域控制器名稱"
+msgid "Domain Name (DNS/Realm-Name)"
+msgstr ""
+
+msgid "Domain Name (NetBIOS-Name)"
+msgstr ""
 
 msgid "Domain is missing 2nd level name."
 msgstr ""
-
-msgid "Domain name (DNS/Realm-Name)"
-msgstr "網域名稱（DNS/Realm-Name）"
-
-msgid "Domain name (NetBIOS-Name)"
-msgstr "網域名稱（NetBIOS-Name）"
 
 msgid "Domain name in old format, e.g. EXAMPLE."
 msgstr "舊式網域名稱，例如：DOMAIN"
@@ -2646,9 +2646,6 @@ msgstr ""
 
 msgid "Download directory"
 msgstr "下載目錄"
-
-msgid "Download firewall rules."
-msgstr "下載防火牆規則"
 
 msgid "Drive Temperature."
 msgstr "硬盤溫度。"
@@ -3091,7 +3088,13 @@ msgstr "正在加密 '%s'... 請稍待..."
 msgid "Encryption"
 msgstr "加密方式"
 
-msgid "Encryption Setup"
+msgid "Encryption Algorithm"
+msgstr ""
+
+msgid "Encryption Management"
+msgstr ""
+
+msgid "Encryption Settings"
 msgstr ""
 
 msgid "Encryption Tools"
@@ -3120,6 +3123,11 @@ msgid ""
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr "如果您想覆蓋默認值的話，請輸入自定的網頁界面的端口編號（80為HTTP，HTTPS為443）。"
 
+msgid ""
+"Enter a custom port number if you want to override the default port (default "
+"is 69)."
+msgstr ""
+
 #, php-format
 msgid ""
 "Enter a custom port number if you want to override the default port. "
@@ -3129,11 +3137,6 @@ msgstr ""
 msgid ""
 "Enter a custom port number if you want to override the default port. "
 "(Default is 22)."
-msgstr ""
-
-msgid ""
-"Enter a custom port number if you want to override the default port. "
-"(Default is 69). "
 msgstr ""
 
 msgid "Enter a description"
@@ -3260,6 +3263,9 @@ msgstr ""
 
 msgid "Export all the directories in the specified path."
 msgstr "導出指定的路徑中的所有目錄。"
+
+msgid "Export firewall rules."
+msgstr ""
 
 msgid "Exported"
 msgstr ""
@@ -3643,7 +3649,7 @@ msgid "Graph shows last 120 seconds"
 msgstr "圖表顯示最近120秒"
 
 #, php-format
-msgid "Graph updates every %d seconds"
+msgid "Graph updates every %d seconds."
 msgstr ""
 
 msgid "Graphs Height"
@@ -3804,8 +3810,8 @@ msgstr "個人目錄（ Home ）"
 msgid "Host"
 msgstr "主機"
 
-msgid "Host access control"
-msgstr "主機訪問控制"
+msgid "Host Access Control"
+msgstr ""
 
 msgid "Host resources"
 msgstr "主機資源"
@@ -3813,8 +3819,8 @@ msgstr "主機資源"
 msgid "Hostname"
 msgstr "主機名稱"
 
-msgid "Hostname database"
-msgstr "主機名數據庫"
+msgid "Hostname Database"
+msgstr ""
 
 msgid "Hosts"
 msgstr "主機列表"
@@ -4239,8 +4245,8 @@ msgid "Invalid file format."
 msgstr "檔案格式無效。"
 
 #, php-format
-msgid "Invalid max. block size! It must be in the range from %d to %d."
-msgstr "数据块的最大值無效！它必須是從 %d 到 %d 的範圍。"
+msgid "Invalid maximum block size! It must be in the range from %d to %d."
+msgstr ""
 
 msgid "Invalid username or password."
 msgstr ""
@@ -4331,11 +4337,11 @@ msgstr "內核文件（如 %s）。"
 msgid "Key"
 msgstr "密鑰"
 
+msgid "Key Length"
+msgstr ""
+
 msgid "Key Management Protocol"
 msgstr "密鑰管理協議"
-
-msgid "Key length"
-msgstr "密鑰長度"
 
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr "加密算法用的密鑰長度。"
@@ -4475,11 +4481,11 @@ msgstr ""
 "限制數據集與其所有後代的可用空間。此屬性強硬限制可用空間量。這包括其所有後代，文件系統和快照佔用的空間。請使用以下的後綴來指定大小（例如 "
 "'k'，'KB'，'M'，'Gb' 等）。"
 
-msgid "Link down action"
-msgstr "未連接動作"
+msgid "Link Down Action"
+msgstr ""
 
-msgid "Link up action"
-msgstr "連接動作"
+msgid "Link Up Action"
+msgstr ""
 
 msgid "List"
 msgstr "列表"
@@ -4971,6 +4977,9 @@ msgid "Mount Point"
 msgstr "掛載點"
 
 msgid "Mount Point Fsck"
+msgstr ""
+
+msgid "Mount Point Management"
 msgstr ""
 
 msgid "Mount Point Tools"
@@ -5684,9 +5693,6 @@ msgid "Permit to do SSH Tunneling."
 msgstr "允許 SSH Tunneling"
 
 msgid "Physical Interface"
-msgstr "實體介面"
-
-msgid "Physical interface"
 msgstr "實體介面"
 
 msgid "Pictures"
@@ -7161,6 +7167,9 @@ msgstr "Extent 的字符串標識符。"
 msgid "Subject"
 msgstr "主題"
 
+msgid "Subnet Bit Count"
+msgstr ""
+
 msgid "Subnet Mask"
 msgstr ""
 
@@ -7320,6 +7329,9 @@ msgstr "綁定伺服器的TCP端口。"
 msgid "TFTP"
 msgstr "TFTP"
 
+msgid "TFTP has been disabled."
+msgstr ""
+
 msgid "TKIP"
 msgstr "TKIP"
 
@@ -7355,7 +7367,7 @@ msgstr "標籤%d （%s）"
 msgid "Take a device offline"
 msgstr ""
 
-msgid "Tap device"
+msgid "Tap Device"
 msgstr ""
 
 msgid "Tape"
@@ -9186,9 +9198,6 @@ msgstr ""
 msgid "VLAN Tag"
 msgstr "VLAN 標籤"
 
-msgid "VLAN tag"
-msgstr "VLAN 標籤"
-
 msgid "VM Type"
 msgstr "VM 類型"
 
@@ -9383,6 +9392,9 @@ msgid "Wed"
 msgstr ""
 
 msgid "Wednesday"
+msgstr ""
+
+msgid "Week Days"
 msgstr ""
 
 msgid "Week days"
@@ -9768,340 +9780,24 @@ msgstr "卸載"
 msgid "week days"
 msgstr ""
 
-#~ msgid "Access mode"
-#~ msgstr "存取模式"
-
-#~ msgid "All dirs"
-#~ msgstr "所有目錄"
-
-#~ msgid "All users will have the root privilege."
-#~ msgstr "讓所有的使用者都有 root 權限。"
-
-#~ msgid "Allow new files"
-#~ msgstr "允許新檔案"
-
-#~ msgid "Always scan"
-#~ msgstr "永遠掃描"
-
-#~ msgid "Domain name"
-#~ msgstr "網域名稱"
-
-#~ msgid "Hosts allow"
-#~ msgstr "允許主機"
-
-#~ msgid "Hosts deny"
-#~ msgstr "拒絕主機"
-
-#~ msgid "Inherit permissions"
-#~ msgstr "繼承權限"
-
-#~ msgid "Maximum connections"
-#~ msgstr "連線數目上限"
-
-#~ msgid "NetBIOS name"
-#~ msgstr "NetBIOS 名稱"
-
-#~ msgid "Null passwords"
-#~ msgstr "密碼空白"
-
-#~ msgid "Number of servers"
-#~ msgstr "伺服器數量"
-
-#~ msgid "Password authentication"
-#~ msgstr "密碼認證"
-
-#~ msgid "Preserve permissions"
-#~ msgstr "保留權限"
-
-#~ msgid "Receive Buffer Size"
-#~ msgstr "接收緩衝區大小"
-
-#~ msgid "Recycle bin"
-#~ msgstr "垃圾桶"
-
-#~ msgid "Remote module (source)"
-#~ msgstr "遠端模組（來源）"
-
-#~ msgid "Scan type"
-#~ msgstr "掃描類型"
-
-#~ msgid "Server name"
-#~ msgstr "伺服器名稱"
-
-#~ msgid "Set browseable"
-#~ msgstr "設為可瀏覽"
-
-#~ msgid "Set read only"
-#~ msgstr "設成唯讀"
-
-#~ msgid "Source share"
-#~ msgstr "來源位置"
-
-#~ msgid "Store DOS attributes"
-#~ msgstr "儲存 DOS 屬性"
-
-#~ msgid "Swap disabled"
-#~ msgstr "關閉 Swap"
-
-#~ msgid "Synchronization time"
-#~ msgstr "同步時間"
-
-#~ msgid "The working directory does not exist."
-#~ msgstr "工作目錄不存在。"
-
-#~ msgid "Time server"
-#~ msgstr "時間伺服器"
-
-#~ msgid "Unix charset"
-#~ msgstr "Unix字元編碼"
-
-#~ msgid "WINS server"
-#~ msgstr "WINS伺服器"
-
-#~ msgid "Working directory"
-#~ msgstr "工作目錄"
-
-#~ msgid "umask"
-#~ msgstr "umask 檔案預設權限"
-
-#~ msgid "Asynchronous I/O (AIO)"
-#~ msgstr "異步 I/O (AIO)"
-
-#~ msgid "Auxiliary parameters"
-#~ msgstr "輔助參數"
-
-#~ msgid "AIO write size"
-#~ msgstr "AIO寫入大小"
-
-#~ msgid "AIO read size"
-#~ msgstr "AIO 讀取大小"
-
-#~ msgid "Directory mask"
-#~ msgstr "目錄掩碼"
-
-#~ msgid "Enable Asynchronous I/O (AIO)"
-#~ msgstr "啟用異步 I/O（AIO）"
-
-#~ msgid "Enable ZFS ACL"
-#~ msgstr "啟用 ZFS 存取控制清單 (ACL)"
-
-#~ msgid "Enable permission inheritance"
-#~ msgstr "啟用權限繼承"
-
-#~ msgid "Enable shadow copy"
-#~ msgstr "啟用陰影複製"
-
-#~ msgid "Forced update period"
-#~ msgstr "強制更新週期"
+#~ msgid "Physical interface"
+#~ msgstr "實體介面"
 
 #, php-format
-#~ msgid ""
-#~ "Location where the working files will be stored, e.g. %s/backup/.unison"
-#~ msgstr "存儲使用文件的位置，例如：%s/backup/.unison"
+#~ msgid "Invalid max. block size! It must be in the range from %d to %d."
+#~ msgstr "数据块的最大值無效！它必須是從 %d 到 %d 的範圍。"
 
-#~ msgid "Logical Block Length"
-#~ msgstr "邏輯塊長度"
+#~ msgid "Link down action"
+#~ msgstr "未連接動作"
 
-#~ msgid "Map to user"
-#~ msgstr "對應為用戶"
+#~ msgid "Link up action"
+#~ msgstr "連接動作"
 
-#~ msgid "Max. block size"
-#~ msgstr "最大數據塊值"
+#~ msgid "Aggregation protocol"
+#~ msgstr "聚合協議"
 
-#~ msgid "Password server"
-#~ msgstr "密碼伺服器"
+#~ msgid "Advertisement skew"
+#~ msgstr "廣告的毫秒級值"
 
-#~ msgid "Preserve extended attributes"
-#~ msgstr "保留擴展屬性"
-
-#~ msgid "Reverse direction"
-#~ msgstr "反向"
-
-#~ msgid "Run as"
-#~ msgstr "執行為"
-
-#, php-format
-#~ msgid ""
-#~ "Samba will read from file asynchronously when size of request is bigger than "
-#~ "this value. (%d by default)"
-#~ msgstr "當大小要求大於這個數值時，Samba將異步讀取文件。（默認為 %d）"
-
-#, php-format
-#~ msgid ""
-#~ "Samba will write to file asynchronously when size of request is bigger than "
-#~ "this value. (%d by default)"
-#~ msgstr "當大小要求大於這個數值時，Samba將異步寫入文件。（默認為 %d）"
-
-#~ msgid "Send Buffer Size"
-#~ msgstr "傳送緩衝區大小"
-
-#~ msgid "Shadow Copy format"
-#~ msgstr "陰影複製格式"
-
-#~ msgid "TCP forwarding"
-#~ msgstr "TCP 轉發"
-
-#~ msgid ""
-#~ "The port to listen to. The default is to listen to the tftp port specified "
-#~ "in /etc/services."
-#~ msgstr "要偵聽的端口。默認是偵聽在 /etc/services 中指定的 tftp端口。"
-
-#~ msgid "This will provide ZFS ACL support. (ZFS only)"
-#~ msgstr "這將提供ZFS ACL 支持。（只是 ZFS）"
-
-#~ msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
-#~ msgstr "這將提供自動快照創建的陰影複製。（只是 ZFS）"
-
-#~ msgid "Trusted domains"
-#~ msgstr "受信任域"
-
-#~ msgid "Upload directory"
-#~ msgstr "上傳目錄"
-
-#, php-format
-#~ msgid "You may specify logical block length (%d by default)."
-#~ msgstr "您可以指定邏輯塊長度（默認為 %d）"
-
-#~ msgid "Map all users to root"
-#~ msgstr "對應所有用戶為root"
-
-#~ msgid "Map to guest"
-#~ msgstr "對應為訪客（guest）"
-
-#~ msgid "Permit root login"
-#~ msgstr "允許 root 登入"
-
-#~ msgid "Enable guest access"
-#~ msgstr "啟用訪客（guest）訪問"
-
-#~ msgid "Enable large read/write"
-#~ msgstr "開啟大筆資料讀／寫"
-
-#~ msgid "Large read/write"
-#~ msgstr "大筆資料讀／寫"
-
-#~ msgid "EA support"
-#~ msgstr "延伸屬性（EA）支援"
-
-#~ msgid "Enable recycle bin"
-#~ msgstr "啟用垃圾桶"
-
-#~ msgid "Create mask"
-#~ msgstr "創建掩碼"
-
-#~ msgid "Max. sessions"
-#~ msgstr "最多會話（sessions）數目"
-
-#~ msgid "Max. connections"
-#~ msgstr "最多連線數目"
-
-#~ msgid ""
-#~ "The workgroup in which the server will appear when queried by Windows or SMB "
-#~ "clients (maximum 15 characters)."
-#~ msgstr "伺服器的 Workgroup 名稱（最多15個字符）。"
-
-#~ msgid "Guest account"
-#~ msgstr "訪客帳號"
-
-#~ msgid ""
-#~ "A Portal Group contains IP addresses and listening TCP ports to connect the "
-#~ "target from the initiator."
-#~ msgstr "門戶組含有可從啟動器（initiator）連接目標器（target）的 IP 地址和偵聽的 TCP 端口 。"
-
-#~ msgid ""
-#~ "A directory listing is generated if a directory is requested and no index-"
-#~ "file (index.php, index.html, index.htm or default.htm) was found in that "
-#~ "directory."
-#~ msgstr ""
-#~ "如果要求目錄時目錄檔不存在和目錄沒有索引文件，系統將會自動產生目錄列表。 （index.php, index.html, index.htm "
-#~ "或default.htm）"
-
-#~ msgid ""
-#~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
-#~ msgstr "請輸入一個主/備用DNS服務器的 IPv6 位址。"
-
-#~ msgid ""
-#~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
-#~ msgstr "請輸入一個有效的 DNS IPv4 位址。"
-
-#~ msgid "Destination share"
-#~ msgstr "共享目的端"
-
-#~ msgid "Document root"
-#~ msgstr "檔案根目錄"
-
-#~ msgid "Dos charset"
-#~ msgstr "DOS 字符集"
-
-#~ msgid "Enable extended attribute support"
-#~ msgstr "啟用延伸屬性支援"
-
-#~ msgid "Enable store DOS attributes"
-#~ msgstr "啟用 DOS 屬性儲存"
-
-#~ msgid "Hide dot files"
-#~ msgstr "隱藏以點開頭的檔案"
-
-#~ msgid "Local shares to be synchronized"
-#~ msgstr "欲同步的本地端分享區"
-
-#~ msgid "Local share (destination)"
-#~ msgstr "本地端分享區(目標)"
-
-#, php-format
-#~ msgid "The recommended length for compatibility is %d."
-#~ msgstr "建議的兼容長度為 %d。"
-
-#~ msgid "Active Directory List"
-#~ msgstr "Active Directory 列表"
-
-#~ msgid "Interface selection"
-#~ msgstr "介面選擇"
-
-#~ msgid ""
-#~ "A Auth Group contains authorised users and secrets for additional security."
-#~ msgstr "認證組含有授權用戶和加密以增強額外的安全性。"
-
-#~ msgid ""
-#~ "A Initiator Group contains authorised initiator names and networks to access "
-#~ "the target."
-#~ msgstr "啟動器組擁有已授權的啟動器名稱和目標器的網路訪問權限。"
-
-#~ msgid "Alternate TCP port. Default is 22"
-#~ msgstr "另外指定TCP連接埠，預設為 22。"
-
-#~ msgid "Alternate TCP port. Default is 873"
-#~ msgstr "另外指定TCP連接埠，預設為 873。"
-
-#~ msgid "CIFS/SMB disabled"
-#~ msgstr "CIFS/SMB 已停用"
-
-#~ msgid "Enable ACL inheritance"
-#~ msgstr "啟用ACL繼承"
-
-#~ msgid "AIO module"
-#~ msgstr "AIO模塊"
-
-#~ msgid "Skip first scan"
-#~ msgstr "跳過第一次掃描"
-
-#~ msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
-#~ msgstr "這將提供NTFS ACL支援，而不是ZFS ACL的支援，例如UFS。"
-
-#~ msgid "Store NTFS acls"
-#~ msgstr "儲存NTFS ACL"
-
-#~ msgid "Store NTFS acls in Extended Attributes"
-#~ msgstr "將NTFS ACL儲存在擴展屬性"
-
-#~ msgid "Remote rsync daemon"
-#~ msgstr "遠程rsync的進程"
-
-#~ msgid "Store alternate data streams in Extended Attributes"
-#~ msgstr "存儲交換數據流於擴展屬性"
-
-#~ msgid "Store alternate data streams"
-#~ msgstr "存儲交換數據流"
-
-#~ msgid "AFP compatibility"
-#~ msgstr "AFP 兼容性"
+#~ msgid "VLAN tag"
+#~ msgstr "VLAN 標籤"

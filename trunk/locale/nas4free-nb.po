@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-29 13:11+0000\n"
+"POT-Creation-Date: 2017-01-30 02:33+0000\n"
 "PO-Revision-Date: 2016-11-06 09:31+0000\n"
 "Last-Translator: Åka Sikrom <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-29 12:21+0000\n"
+"X-Launchpad-Export-Date: 2017-01-30 02:13+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: NORWAY\n"
 "Language: \n"
@@ -538,14 +538,14 @@ msgstr "Ip adresse for host-daemon. Kun statisc IP-adresse kan benyttes"
 msgid "Admin Password"
 msgstr ""
 
-msgid "Administration password"
-msgstr "Passord for administrasjon (admin password)"
+msgid "Administration Password"
+msgstr ""
 
 msgid "Administrative WebGUI"
 msgstr "Web grensesnitt for administrasjon"
 
-msgid "Administrator name"
-msgstr "Administrator navn"
+msgid "Administrator Name"
+msgstr ""
 
 msgid "Advanced"
 msgstr "Avansert"
@@ -568,7 +568,7 @@ msgstr ""
 msgid "Advanced settings"
 msgstr "Avanserte innstillinger"
 
-msgid "Advertisement skew"
+msgid "Advertisement Skew"
 msgstr ""
 
 msgid "Afrikaans"
@@ -593,8 +593,8 @@ msgstr ""
 msgid "Age"
 msgstr ""
 
-msgid "Aggregation protocol"
-msgstr "Aggregerings protokol"
+msgid "Aggregation Protocol"
+msgstr ""
 
 msgid "Aggressive"
 msgstr "Aggressiv"
@@ -1890,11 +1890,11 @@ msgstr "Tjenestelogg"
 msgid "Danish"
 msgstr "Dansk"
 
-msgid "Data digest"
+msgid "Data Integrity"
 msgstr ""
 
-msgid "Data integrity"
-msgstr "Dataintegritet"
+msgid "Data digest"
+msgstr ""
 
 msgid "Database Directory"
 msgstr ""
@@ -2148,6 +2148,9 @@ msgstr "Beskrivelse"
 msgid "Destination"
 msgstr "Mål"
 
+msgid "Destination Network"
+msgstr ""
+
 msgid "Destination Share"
 msgstr ""
 
@@ -2163,14 +2166,11 @@ msgstr ""
 msgid "Destination host name or IP number."
 msgstr "Målets vertsnavn eller IP adresse."
 
-msgid "Destination network"
-msgstr "Mottaker nettverk"
-
 msgid "Destination network bit count"
 msgstr "Destinasjons nettverkets bitantall"
 
-msgid "Destination network for this static route"
-msgstr "Mottaker nettverk for denne statiske ruten"
+msgid "Destination network for this static route."
+msgstr ""
 
 msgid "Destination port"
 msgstr "Destinasjons port"
@@ -2646,20 +2646,20 @@ msgstr ""
 msgid "Domain"
 msgstr "Domene"
 
+msgid "Domain Controller Name"
+msgstr ""
+
 msgid "Domain Name"
 msgstr ""
 
-msgid "Domain controller name"
-msgstr "Domenekontrollernavn"
+msgid "Domain Name (DNS/Realm-Name)"
+msgstr ""
+
+msgid "Domain Name (NetBIOS-Name)"
+msgstr ""
 
 msgid "Domain is missing 2nd level name."
 msgstr ""
-
-msgid "Domain name (DNS/Realm-Name)"
-msgstr "Domenenavn (DNS/Realm-Name)"
-
-msgid "Domain name (NetBIOS-Name)"
-msgstr "Domenenavn (NetBIOS navn)"
 
 msgid "Domain name in old format, e.g. EXAMPLE."
 msgstr "Domenenavn i gammelt format; f.eks. EKSEMPEL."
@@ -2693,9 +2693,6 @@ msgstr ""
 
 msgid "Download directory"
 msgstr "Nedlastingsmappe"
-
-msgid "Download firewall rules."
-msgstr "Last ned brannmur regler."
 
 msgid "Drive Temperature."
 msgstr ""
@@ -3143,7 +3140,13 @@ msgstr "Krypterer '%s'... Vennligst vent"
 msgid "Encryption"
 msgstr "Kryptering"
 
-msgid "Encryption Setup"
+msgid "Encryption Algorithm"
+msgstr ""
+
+msgid "Encryption Management"
+msgstr ""
+
+msgid "Encryption Settings"
 msgstr ""
 
 msgid "Encryption Tools"
@@ -3172,6 +3175,11 @@ msgid ""
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr ""
 
+msgid ""
+"Enter a custom port number if you want to override the default port (default "
+"is 69)."
+msgstr ""
+
 #, php-format
 msgid ""
 "Enter a custom port number if you want to override the default port. "
@@ -3181,11 +3189,6 @@ msgstr ""
 msgid ""
 "Enter a custom port number if you want to override the default port. "
 "(Default is 22)."
-msgstr ""
-
-msgid ""
-"Enter a custom port number if you want to override the default port. "
-"(Default is 69). "
 msgstr ""
 
 msgid "Enter a description"
@@ -3319,6 +3322,9 @@ msgid "Export a pool from the system"
 msgstr ""
 
 msgid "Export all the directories in the specified path."
+msgstr ""
+
+msgid "Export firewall rules."
 msgstr ""
 
 msgid "Exported"
@@ -3708,7 +3714,7 @@ msgid "Graph shows last 120 seconds"
 msgstr ""
 
 #, php-format
-msgid "Graph updates every %d seconds"
+msgid "Graph updates every %d seconds."
 msgstr ""
 
 msgid "Graphs Height"
@@ -3869,8 +3875,8 @@ msgstr "Hjemme mappe"
 msgid "Host"
 msgstr "Vert"
 
-msgid "Host access control"
-msgstr "Vertsnavn kontroll"
+msgid "Host Access Control"
+msgstr ""
 
 msgid "Host resources"
 msgstr "Tjener ressurser"
@@ -3878,8 +3884,8 @@ msgstr "Tjener ressurser"
 msgid "Hostname"
 msgstr "Vertsnavn"
 
-msgid "Hostname database"
-msgstr "Vertsnavn database"
+msgid "Hostname Database"
+msgstr ""
 
 msgid "Hosts"
 msgstr "Verter"
@@ -4310,8 +4316,8 @@ msgid "Invalid file format."
 msgstr "Ugyldig filformat."
 
 #, php-format
-msgid "Invalid max. block size! It must be in the range from %d to %d."
-msgstr "Feil maks. blokk størrelse. Må være innen rekkevidden fra %d til %d."
+msgid "Invalid maximum block size! It must be in the range from %d to %d."
+msgstr ""
 
 msgid "Invalid username or password."
 msgstr ""
@@ -4404,11 +4410,11 @@ msgstr ""
 msgid "Key"
 msgstr "Nøkkel"
 
+msgid "Key Length"
+msgstr ""
+
 msgid "Key Management Protocol"
 msgstr "Key Management Protocol"
-
-msgid "Key length"
-msgstr "Nøkkellengde"
 
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr "Nøkkellengde for bruk med den kryptografiske algoritmen."
@@ -4546,10 +4552,10 @@ msgid ""
 "'k', 'KB', 'M', 'Gb', etc.)."
 msgstr ""
 
-msgid "Link down action"
+msgid "Link Down Action"
 msgstr ""
 
-msgid "Link up action"
+msgid "Link Up Action"
 msgstr ""
 
 msgid "List"
@@ -5041,6 +5047,9 @@ msgid "Mount Point"
 msgstr "Monteringspunkt"
 
 msgid "Mount Point Fsck"
+msgstr ""
+
+msgid "Mount Point Management"
 msgstr ""
 
 msgid "Mount Point Tools"
@@ -5770,9 +5779,6 @@ msgstr "Tilatt SSH tunneler."
 
 msgid "Physical Interface"
 msgstr ""
-
-msgid "Physical interface"
-msgstr "Fysisk grensesnitt"
 
 msgid "Pictures"
 msgstr ""
@@ -7256,6 +7262,9 @@ msgstr ""
 msgid "Subject"
 msgstr "Emne"
 
+msgid "Subnet Bit Count"
+msgstr ""
+
 msgid "Subnet Mask"
 msgstr ""
 
@@ -7413,6 +7422,9 @@ msgstr "TCP-port til å binde tjeneren til."
 msgid "TFTP"
 msgstr "TFTP"
 
+msgid "TFTP has been disabled."
+msgstr ""
+
 msgid "TKIP"
 msgstr "TKIP"
 
@@ -7448,7 +7460,7 @@ msgstr "Tag%d (%s)"
 msgid "Take a device offline"
 msgstr ""
 
-msgid "Tap device"
+msgid "Tap Device"
 msgstr ""
 
 msgid "Tape"
@@ -9274,9 +9286,6 @@ msgstr ""
 msgid "VLAN Tag"
 msgstr ""
 
-msgid "VLAN tag"
-msgstr "VLAN tag"
-
 msgid "VM Type"
 msgstr ""
 
@@ -9473,6 +9482,9 @@ msgid "Wed"
 msgstr ""
 
 msgid "Wednesday"
+msgstr ""
+
+msgid "Week Days"
 msgstr ""
 
 msgid "Week days"
@@ -9862,246 +9874,15 @@ msgstr "avmontér"
 msgid "week days"
 msgstr ""
 
-#~ msgid ""
-#~ "A Auth Group contains authorised users and secrets for additional security."
-#~ msgstr ""
-#~ "En \"Auth\" gruppe inneholder autoriserte brukere og 'hemmeligheter' for "
-#~ "ekstra sikkerhet."
-
-#~ msgid ""
-#~ "A Portal Group contains IP addresses and listening TCP ports to connect the "
-#~ "target from the initiator."
-#~ msgstr ""
-#~ "En portalgruppe inneholder IP adresser og lyttende TCP porter for å koble "
-#~ "ressursen ut fra initiativtageren."
-
-#~ msgid ""
-#~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
-#~ msgstr ""
-#~ "En gyldig IPv6 adresse må spesifiseres for den primære/sekundære DNS "
-#~ "tjeneren."
-
-#~ msgid "AIO read size"
-#~ msgstr "AIO lesestørrelse"
-
-#~ msgid "AIO write size"
-#~ msgstr "AIO skrivestørrelse"
-
-#~ msgid "Access mode"
-#~ msgstr "Tilgangsmodus"
-
-#~ msgid "All dirs"
-#~ msgstr "Alle kataloger"
-
-#~ msgid "All users will have the root privilege."
-#~ msgstr "Alle brukere vil ha superbrukerprivilegier."
-
-#~ msgid "Allow new files"
-#~ msgstr "Tillatt nye filer"
-
-#~ msgid "Alternate TCP port. Default is 22"
-#~ msgstr "Alternativ TCP port. Standard er 22"
-
-#~ msgid "Alternate TCP port. Default is 873"
-#~ msgstr "Alternativ TCP port. Standard er 873"
-
-#~ msgid "Always scan"
-#~ msgstr "Alltid scan"
-
-#~ msgid "Asynchronous I/O (AIO)"
-#~ msgstr "Asynkron I/O (AIO)"
-
-#~ msgid "Auxiliary parameters"
-#~ msgstr "Hjelpe-parametere"
-
-#~ msgid "CIFS/SMB disabled"
-#~ msgstr "CIFS/SMB deaktivert"
-
-#~ msgid "Create mask"
-#~ msgstr "Lag maske"
-
-#~ msgid "Destination share"
-#~ msgstr "Mål deling"
-
-#~ msgid "Directory mask"
-#~ msgstr "Katalog maske"
-
-#~ msgid "Document root"
-#~ msgstr "Dokument rot"
-
-#~ msgid "Domain name"
-#~ msgstr "Domenenavn"
-
-#~ msgid "Dos charset"
-#~ msgstr "Dos tegnsett"
-
-#~ msgid "EA support"
-#~ msgstr "EA støtte"
-
-#~ msgid "Enable Asynchronous I/O (AIO)"
-#~ msgstr "Aktiver Asynkron I/O (AIO)"
-
-#~ msgid "Enable extended attribute support"
-#~ msgstr "Slå på utvidet attributt støtte."
-
-#~ msgid "Enable large read/write"
-#~ msgstr "Slå på stor les/skriv"
-
-#~ msgid "Enable permission inheritance"
-#~ msgstr "Slå på tillatelse arv"
-
-#~ msgid "Enable recycle bin"
-#~ msgstr "Slå på papirkurven"
-
-#~ msgid "Enable store DOS attributes"
-#~ msgstr "Slå på lagring av DOS attributter"
-
-#~ msgid "Forced update period"
-#~ msgstr "Tving oppdaterings periode"
-
-#~ msgid "Guest account"
-#~ msgstr "Gjestekonto"
-
-#~ msgid "Hide dot files"
-#~ msgstr "Gjem dot filer"
-
-#~ msgid "Hosts allow"
-#~ msgstr "Verter tillatt"
-
-#~ msgid "Hosts deny"
-#~ msgstr "Verter nektet"
-
-#~ msgid "Inherit permissions"
-#~ msgstr "Arv tillatelser"
-
-#~ msgid "Large read/write"
-#~ msgstr "Stor les/skriv"
-
-#~ msgid "Local share (destination)"
-#~ msgstr "Lokal deling (mål)"
-
-#~ msgid "Local shares to be synchronized"
-#~ msgstr "Lokale delinger som skal synkroniseres"
+#~ msgid "Aggregation protocol"
+#~ msgstr "Aggregerings protokol"
 
 #, php-format
-#~ msgid ""
-#~ "Location where the working files will be stored, e.g. %s/backup/.unison"
-#~ msgstr ""
-#~ "Lokasjon der fungerende filer vil bli lagret, f.eks %s/backup/.unison"
+#~ msgid "Invalid max. block size! It must be in the range from %d to %d."
+#~ msgstr "Feil maks. blokk størrelse. Må være innen rekkevidden fra %d til %d."
 
-#~ msgid "Logical Block Length"
-#~ msgstr "Logisk Blokklengde"
+#~ msgid "Physical interface"
+#~ msgstr "Fysisk grensesnitt"
 
-#~ msgid "Map all users to root"
-#~ msgstr "Map alle brukere til root"
-
-#~ msgid "Map to user"
-#~ msgstr "Map til bruker"
-
-#~ msgid "Max. block size"
-#~ msgstr "Maks. blokk størrelse"
-
-#~ msgid "Max. connections"
-#~ msgstr "Maks tilkoblinger"
-
-#~ msgid "Max. sessions"
-#~ msgstr "Maks sesjoner"
-
-#~ msgid "Maximum connections"
-#~ msgstr "Maksimalt antall tilkoblinger"
-
-#~ msgid "NetBIOS name"
-#~ msgstr "NetBIOS navn"
-
-#~ msgid "Null passwords"
-#~ msgstr "Tomme passord"
-
-#~ msgid "Number of servers"
-#~ msgstr "Antall tjenere"
-
-#~ msgid "Password authentication"
-#~ msgstr "Passord autentikasjon"
-
-#~ msgid "Permit root login"
-#~ msgstr "Tillat root innlogging"
-
-#~ msgid "Preserve extended attributes"
-#~ msgstr "Behold utvidede attributter"
-
-#~ msgid "Preserve permissions"
-#~ msgstr "Behold rettigheter"
-
-#~ msgid "Receive Buffer Size"
-#~ msgstr "Motta Buffer størrelse"
-
-#~ msgid "Recycle bin"
-#~ msgstr "Papirkurv"
-
-#~ msgid "Remote module (source)"
-#~ msgstr "Fjern modul (kilde)"
-
-#~ msgid "Scan type"
-#~ msgstr "Skann type"
-
-#~ msgid "Send Buffer Size"
-#~ msgstr "Send Buffer størrelse"
-
-#~ msgid "Server name"
-#~ msgstr "Tjenernavn"
-
-#~ msgid "Set browseable"
-#~ msgstr "Sett søkbar"
-
-#~ msgid "Set read only"
-#~ msgstr "Set kun-lese"
-
-#~ msgid "Source share"
-#~ msgstr "Kilde deling"
-
-#~ msgid "Store DOS attributes"
-#~ msgstr "Lagre DOS attributter"
-
-#~ msgid "Swap disabled"
-#~ msgstr "Swap slått av"
-
-#~ msgid "TCP forwarding"
-#~ msgstr "TCP videresending"
-
-#~ msgid "Time server"
-#~ msgstr "Tids tjener"
-
-#~ msgid "Unix charset"
-#~ msgstr "Unix tegnsett"
-
-#~ msgid "WINS server"
-#~ msgstr "WINS tjener"
-
-#~ msgid ""
-#~ "A Initiator Group contains authorised initiator names and networks to access "
-#~ "the target."
-#~ msgstr ""
-#~ "En oppstartsgruppe består av autoriserte initiativtagernavn og nettverk for "
-#~ "å aksessere ressursen."
-
-#~ msgid ""
-#~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
-#~ msgstr ""
-#~ "En gyldig IPv4 adresse må spesifiseres for den primære/sekundære DNS "
-#~ "tjeneren."
-
-#~ msgid "AIO module"
-#~ msgstr "AIO modul"
-
-#~ msgid "Active Directory List"
-#~ msgstr "Active Directory Liste"
-
-#~ msgid ""
-#~ "A directory listing is generated if a directory is requested and no index-"
-#~ "file (index.php, index.html, index.htm or default.htm) was found in that "
-#~ "directory."
-#~ msgstr ""
-#~ "En filliste blir laget dersom det i forespurte katalog ikke finnes en "
-#~ "indeksfil (index.php, index.html, index.htm eller default.htm)."
-
-#~ msgid "AFP compatibility"
-#~ msgstr "AFP kompabilitet"
+#~ msgid "VLAN tag"
+#~ msgstr "VLAN tag"

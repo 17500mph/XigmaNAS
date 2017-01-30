@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nas4free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-29 13:11+0000\n"
-"PO-Revision-Date: 2017-01-28 08:12+0000\n"
+"POT-Creation-Date: 2017-01-30 02:33+0000\n"
+"PO-Revision-Date: 2017-01-29 17:05+0000\n"
 "Last-Translator: Victek <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-29 12:21+0000\n"
+"X-Launchpad-Export-Date: 2017-01-30 02:13+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "Language: ca_ES\n"
 
@@ -222,6 +222,8 @@ msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
 "index.htm or default.htm) are found in a directory."
 msgstr ""
+"Un llistat de directori es genera quan no hi ha imatges d'índex (index.php, "
+"index.html, index.htm o default.htm) es troben en un directori."
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -558,7 +560,7 @@ msgid "Additional Network"
 msgstr "Xarxa adicional"
 
 msgid "Additional Parameters"
-msgstr ""
+msgstr "Paràmetres addicionals"
 
 msgid "Additional Storage"
 msgstr "Emmagatzemament adicional"
@@ -576,13 +578,13 @@ msgstr "Adreça del dimoni remot hastd. Ha de esser una adreça IP estàtica."
 msgid "Admin Password"
 msgstr "Contrasenya d'administrador"
 
-msgid "Administration password"
-msgstr "Clau d'administració"
+msgid "Administration Password"
+msgstr "Gestió de contrasenyes"
 
 msgid "Administrative WebGUI"
 msgstr "WebGUI administratiu"
 
-msgid "Administrator name"
+msgid "Administrator Name"
 msgstr "Nom de l'administrador"
 
 msgid "Advanced"
@@ -606,8 +608,8 @@ msgstr "Paràmetres avançats"
 msgid "Advanced settings"
 msgstr "Paràmetres avançats"
 
-msgid "Advertisement skew"
-msgstr "Deslliçament de anunci"
+msgid "Advertisement Skew"
+msgstr ""
 
 msgid "Afrikaans"
 msgstr "Africà"
@@ -637,8 +639,8 @@ msgstr ""
 msgid "Age"
 msgstr "Edat"
 
-msgid "Aggregation protocol"
-msgstr "Protocol d'agregació"
+msgid "Aggregation Protocol"
+msgstr ""
 
 msgid "Aggressive"
 msgstr "Agressiu"
@@ -780,7 +782,7 @@ msgid "Always On"
 msgstr "Sempre actiu"
 
 msgid "Always Scan"
-msgstr ""
+msgstr "Escanejar sempre"
 
 msgid "Ambient Conditions From External Probe Equipment"
 msgstr "Condicions ambientals des de l'equipament de proba extern"
@@ -960,6 +962,8 @@ msgstr "Grups autenticats"
 msgid ""
 "Auth Groups contains authorised users and secrets for additional security."
 msgstr ""
+"Grups d'autenticació conté els usuaris autoritzats i secrets per seguretat "
+"addicional."
 
 msgid "Auth Method"
 msgstr "Mètode de autenticació"
@@ -1152,6 +1156,8 @@ msgstr ""
 msgid ""
 "Before a Unison Client can start to work, you need to perform the following:"
 msgstr ""
+"Abans que un client Unison pot començar a treballar, necessita dur a terme "
+"el següent:"
 
 msgid "Best available"
 msgstr "el millor disponible"
@@ -1280,7 +1286,7 @@ msgid "CIFS/SMB Information"
 msgstr "Informació CIFS/SMB"
 
 msgid "CIFS/SMB is disabled."
-msgstr ""
+msgstr "CIFS / SMB està desactivada."
 
 msgid "CIFS/SMB is enabled."
 msgstr "CIFS/SMB està habilitada."
@@ -1561,7 +1567,7 @@ msgid "Community"
 msgstr "Comunitat"
 
 msgid "Compilations Directories"
-msgstr ""
+msgstr "Directoris de compilacions"
 
 msgid "Compiled"
 msgstr "Compilat"
@@ -2075,11 +2081,11 @@ msgstr "Registre del Dimoni"
 msgid "Danish"
 msgstr "Danès"
 
+msgid "Data Integrity"
+msgstr "Integritat de dades"
+
 msgid "Data digest"
 msgstr "Assimilar dades"
-
-msgid "Data integrity"
-msgstr "Integritat de dades"
 
 msgid "Database Directory"
 msgstr "Directori de la base de dades"
@@ -2346,6 +2352,9 @@ msgstr "Descripció"
 msgid "Destination"
 msgstr "Destinació"
 
+msgid "Destination Network"
+msgstr "Xarxa de destí"
+
 msgid "Destination Share"
 msgstr "Compartició de destinació"
 
@@ -2363,14 +2372,11 @@ msgstr "Nom d'amfitrió o l'adreça IP de destinació."
 msgid "Destination host name or IP number."
 msgstr "Destinació nom del host o adreça IP."
 
-msgid "Destination network"
-msgstr "Xarxa de destinació"
-
 msgid "Destination network bit count"
 msgstr "Destinació nombre de bits de xarxa"
 
-msgid "Destination network for this static route"
-msgstr "Xarxa de destinació per a aquesta ruta estàtica"
+msgid "Destination network for this static route."
+msgstr "Xarxa de destí per aquesta ruta estàtica."
 
 msgid "Destination port"
 msgstr "Port de destinació"
@@ -2853,7 +2859,7 @@ msgid "Do you want to toggle selected options?"
 msgstr "Vols mostrar les opcions seleccionats?"
 
 msgid "Document Root"
-msgstr ""
+msgstr "Document arrel"
 
 msgid "Document root of the webserver. Home of the web page files."
 msgstr ""
@@ -2865,20 +2871,20 @@ msgstr "DomID"
 msgid "Domain"
 msgstr "Domini"
 
-msgid "Domain Name"
-msgstr ""
+msgid "Domain Controller Name"
+msgstr "Nom de controlador de domini"
 
-msgid "Domain controller name"
-msgstr "Nom del controlador de domini"
+msgid "Domain Name"
+msgstr "Nom de domini"
+
+msgid "Domain Name (DNS/Realm-Name)"
+msgstr "Nom de domini (DNS/Nom real)"
+
+msgid "Domain Name (NetBIOS-Name)"
+msgstr "Nom de domini (Nom NetBIOS)"
 
 msgid "Domain is missing 2nd level name."
 msgstr "No es troba segon nom de nivell de domini."
-
-msgid "Domain name (DNS/Realm-Name)"
-msgstr "Nom de domini (DNS / Realm-Nom)"
-
-msgid "Domain name (NetBIOS-Name)"
-msgstr "Nom de domini (NetBIOS Nom)"
 
 msgid "Domain name in old format, e.g. EXAMPLE."
 msgstr "El nom de domini en el format antic, per exemple EXEMPLE."
@@ -2912,9 +2918,6 @@ msgstr "Directori de descàrrega"
 
 msgid "Download directory"
 msgstr "Directori de descarregar"
-
-msgid "Download firewall rules."
-msgstr "Descarregar reglas de talla focs"
 
 msgid "Drive Temperature."
 msgstr "Temperatura del disc/driver."
@@ -3312,7 +3315,7 @@ msgid "Enable serial console."
 msgstr "Activa consola serie."
 
 msgid "Enable service SSH when disabled"
-msgstr ""
+msgstr "Habilitar SSH servei quan està desactivat"
 
 msgid "Enable shadow copy."
 msgstr "Activa còpia d'ombra."
@@ -3372,8 +3375,14 @@ msgstr "Encriptant '%s'... Si us plau esperi"
 msgid "Encryption"
 msgstr "Encriptació"
 
-msgid "Encryption Setup"
-msgstr "Configuració de xifrat"
+msgid "Encryption Algorithm"
+msgstr "Algorisme de xifrat"
+
+msgid "Encryption Management"
+msgstr "Gestió del xifrat"
+
+msgid "Encryption Settings"
+msgstr "Ajustos del Xifrat"
 
 msgid "Encryption Tools"
 msgstr "Eines de xifrat"
@@ -3403,6 +3412,11 @@ msgstr ""
 "Entrar un port personalitzat per el WEBGUI si vol sobreescriure el port per "
 "defecte (80 per HTTP, 443 per HTTPS)."
 
+msgid ""
+"Enter a custom port number if you want to override the default port (default "
+"is 69)."
+msgstr ""
+
 #, php-format
 msgid ""
 "Enter a custom port number if you want to override the default port. "
@@ -3417,13 +3431,6 @@ msgid ""
 msgstr ""
 "Introduïu un número de port personalitzat si voleu canviar el port per "
 "defecte. (Per defecte és 22)."
-
-msgid ""
-"Enter a custom port number if you want to override the default port. "
-"(Default is 69). "
-msgstr ""
-"Introduïu un número de port personalitzat si voleu canviar el port per "
-"defecte. (Per defecte és 69). "
 
 msgid "Enter a description"
 msgstr "Introduïu una descripció"
@@ -3478,6 +3485,8 @@ msgid ""
 "Enter the path to the database directory. The config files will be created "
 "under the specified directory."
 msgstr ""
+"Introduïu la ruta del directori de base de dades. Els arxius de configuració "
+"es creen en el directori especificat."
 
 msgid ""
 "Enter the path to the home directory of VirtualBox. VM config and HDD image "
@@ -3568,6 +3577,11 @@ msgstr "Exportació d'una piscina des del sistema"
 
 msgid "Export all the directories in the specified path."
 msgstr "Exportar tots els directoris en la ruta especificada."
+
+msgid "Export firewall rules."
+msgstr ""
+"Introduïu la ruta del directori de base de dades. Els arxius de configuració "
+"es creen en el directori especificat."
 
 msgid "Exported"
 msgstr "Exportat"
@@ -3840,7 +3854,7 @@ msgid "Force use"
 msgstr "Força ús"
 
 msgid "Forced Update Period"
-msgstr ""
+msgstr "Període d'actualització forçada"
 
 msgid ""
 "Forces use of vdevs, even if they appear in use or specify different size. "
@@ -3969,8 +3983,8 @@ msgid "Graph shows last 120 seconds"
 msgstr "El gràfic mostra els últims 120 segons"
 
 #, php-format
-msgid "Graph updates every %d seconds"
-msgstr "Gràfic s'actualitza cada %d segons"
+msgid "Graph updates every %d seconds."
+msgstr ""
 
 msgid "Graphs Height"
 msgstr "Alçada dels gràfics"
@@ -3990,7 +4004,7 @@ msgid "Group Allow"
 msgstr "Permet grup"
 
 msgid "Group Compilations"
-msgstr ""
+msgstr "Grup de compilacions"
 
 msgid "Group ID"
 msgstr "Identificador del Grup"
@@ -4145,8 +4159,8 @@ msgstr "Directori d'inici"
 msgid "Host"
 msgstr "Amfitrió"
 
-msgid "Host access control"
-msgstr "Control d'access de máquina"
+msgid "Host Access Control"
+msgstr "Control d'Accés a l'amfitrió"
 
 msgid "Host resources"
 msgstr "Recursos de máquina"
@@ -4154,8 +4168,8 @@ msgstr "Recursos de máquina"
 msgid "Hostname"
 msgstr "Nom de l'amfitrió"
 
-msgid "Hostname database"
-msgstr "Base de dades del amfitrió"
+msgid "Hostname Database"
+msgstr "Base de dades d'amfitrió"
 
 msgid "Hosts"
 msgstr "Màquinas"
@@ -4489,6 +4503,8 @@ msgid ""
 "Initiator Groups contains authorised initiator names and networks to access "
 "the target."
 msgstr ""
+"Grups iniciador conté noms iniciador autoritzats i xarxes per accedir a la "
+"destinació."
 
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
@@ -4622,8 +4638,8 @@ msgid "Invalid file format."
 msgstr "Format de fitxer no vàlid."
 
 #, php-format
-msgid "Invalid max. block size! It must be in the range from %d to %d."
-msgstr "Tamany màxim de bloc no valid! Ha d'estar en l'interval de%d a %d."
+msgid "Invalid maximum block size! It must be in the range from %d to %d."
+msgstr ""
 
 msgid "Invalid username or password."
 msgstr "Nom d'usuari o contrasenya incorrectes."
@@ -4728,11 +4744,11 @@ msgstr "Arxiu del nucli (per exemple,%s)."
 msgid "Key"
 msgstr "Clau"
 
+msgid "Key Length"
+msgstr "Longitud de la clau"
+
 msgid "Key Management Protocol"
 msgstr "Protocol de gestió de claus"
-
-msgid "Key length"
-msgstr "Longitud de la clau"
 
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr "Longitud de la clau a utilitzar amb l'algorisme criptogràfic donat."
@@ -4887,11 +4903,11 @@ msgstr ""
 "tamany, utilitzeu els següents sufixos llegibles (per exemple, 'k', 'KB "
 "\",\" M \",\" Gb \", etc.)."
 
-msgid "Link down action"
-msgstr "Acció d'enllaç caigut"
+msgid "Link Down Action"
+msgstr ""
 
-msgid "Link up action"
-msgstr "Acció d'enllaç actiu"
+msgid "Link Up Action"
+msgstr ""
 
 msgid "List"
 msgstr "Llista"
@@ -4963,9 +4979,11 @@ msgstr "Lloc on s'emmagatzemarà l'arxiu de dades de contingut."
 #, php-format
 msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
 msgstr ""
+"Lloc on s'emmagatzemaran els arxius de treball, per exemple, "
+"%s/backup/.unison"
 
 msgid "Locked Files"
-msgstr ""
+msgstr "Arxius bloquejats"
 
 msgid "Log"
 msgstr "Registre"
@@ -4994,7 +5012,7 @@ msgid "Logarithmic Scaling"
 msgstr "Escalat logarítmic"
 
 msgid "Logical Block"
-msgstr ""
+msgstr "Bloc lògic"
 
 #, php-format
 msgid "Logical Unit Controller Authorised network (%s by default)"
@@ -5163,7 +5181,7 @@ msgid "Max. Passive Port"
 msgstr "Màxims ports passius"
 
 msgid "Max. Sessions"
-msgstr ""
+msgstr "Sessions màximes"
 
 msgid "Max. TTL"
 msgstr "Máx. TTL"
@@ -5406,6 +5424,9 @@ msgstr "Punt de muntatge"
 
 msgid "Mount Point Fsck"
 msgstr "Punt de muntatge fsck"
+
+msgid "Mount Point Management"
+msgstr "Gestió de Punt de muntatge"
 
 msgid "Mount Point Tools"
 msgstr "Eines de punt de muntatge"
@@ -6157,7 +6178,7 @@ msgid "Permanent samba data path (e.g. %s)."
 msgstr "Ruta de dades permanent de Samba (per exemple,%s)."
 
 msgid "Permission"
-msgstr ""
+msgstr "Permís"
 
 msgid "Permit Root Login"
 msgstr "Permís l'accés del Root"
@@ -6166,9 +6187,6 @@ msgid "Permit to do SSH Tunneling."
 msgstr "Permetre fer túnel SSH."
 
 msgid "Physical Interface"
-msgstr "Interfície física"
-
-msgid "Physical interface"
 msgstr "Interfície física"
 
 msgid "Pictures"
@@ -6343,6 +6361,8 @@ msgid ""
 "Portal Groups contains IP addresses and listening on TCP ports to connect "
 "the target from the initiator."
 msgstr ""
+"Grups de portal conté les adreces IP i escolta els ports TCP per connectar "
+"la destinació des l'iniciador."
 
 msgid "Portals"
 msgstr "Portals"
@@ -6709,7 +6729,7 @@ msgid "Remote Module (Source)"
 msgstr "Mòdul remot (Font)"
 
 msgid "Remote Rsync Daemon"
-msgstr ""
+msgstr "Dimoni Rsync remot"
 
 msgid "Remote Rsync Server"
 msgstr "Servidor Rsync remot"
@@ -6799,7 +6819,7 @@ msgid "Rescan Disks"
 msgstr "Torna a examinar els discs"
 
 msgid "Rescan Interval"
-msgstr ""
+msgstr "Interval de re-escanejat"
 
 msgid "Rescan interval"
 msgstr "Interval del anàlisi"
@@ -6938,6 +6958,8 @@ msgid ""
 "Running this service as root is not recommended for security reasons, use at "
 "your own risk!"
 msgstr ""
+"L'execució d'aquest servei com a root no es recomana per raons de seguretat, "
+"utilitzeu al seu propi risc!"
 
 msgid "Russian"
 msgstr "Rus"
@@ -7044,7 +7066,7 @@ msgid "Saved file to"
 msgstr "Arxiu guardat a"
 
 msgid "Scan Mode"
-msgstr ""
+msgstr "Mode de escanejat"
 
 msgid "Scan Targets"
 msgstr "Anàlisis d'objectius"
@@ -7218,6 +7240,8 @@ msgstr "Seleccioneu la ubicació més propera a vostè."
 
 msgid "Select the permission for running this service. (www by default)."
 msgstr ""
+"Seleccioneu els permissos per al funcionament d'aquest servei. (www per "
+"defecte)."
 
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
@@ -7407,7 +7431,7 @@ msgid "Settings"
 msgstr "Configuracions"
 
 msgid "Setup user to get shell access"
-msgstr ""
+msgstr "Configuració d'usuari per accedir a una consola"
 
 msgid "Shadow Copy"
 msgstr "Copia a l'ombra"
@@ -7488,7 +7512,7 @@ msgid "Size of send buffer (%d by default)."
 msgstr "Tamany de la memòria intermèdia d'emissió (% d per defecte)."
 
 msgid "Size offered to the initiator. (up to 8EiB=8388608TiB)."
-msgstr ""
+msgstr "Mida oferta a l'iniciador. (Fins 8EiB = 8388608TiB)."
 
 msgid ""
 "Size offered to the initiator. (up to 8EiB=8388608TiB. actual size is depend "
@@ -7501,7 +7525,7 @@ msgid "Skew"
 msgstr "Esbiaixa"
 
 msgid "Skip First Scan"
-msgstr ""
+msgstr "Saltar el primer escanejat"
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr "Somni - Comproveu el dispositiu llevat que sigui en el mode SLEEP."
@@ -7747,6 +7771,9 @@ msgstr "Identificador de cadena de la extensió."
 msgid "Subject"
 msgstr "Assumpte"
 
+msgid "Subnet Bit Count"
+msgstr ""
+
 msgid "Subnet Mask"
 msgstr "Màscara de subxarxa"
 
@@ -7908,6 +7935,9 @@ msgstr "Port TCP per enllaçar amb el servidor per."
 msgid "TFTP"
 msgstr "TFTP"
 
+msgid "TFTP has been disabled."
+msgstr ""
+
 msgid "TKIP"
 msgstr "TKIP"
 
@@ -7927,7 +7957,7 @@ msgid "Tag"
 msgstr "Marcador"
 
 msgid "Tag Number"
-msgstr ""
+msgstr "Nombre d'etiqueta"
 
 msgid "Tag number"
 msgstr "Nombre d'etiqueta"
@@ -7943,8 +7973,8 @@ msgstr "Etiqueta%d (%s)"
 msgid "Take a device offline"
 msgstr "Desconnectar un dispositiu"
 
-msgid "Tap device"
-msgstr "Dispositiu clau"
+msgid "Tap Device"
+msgstr ""
 
 msgid "Tape"
 msgstr "Cinta"
@@ -8094,7 +8124,7 @@ msgstr ""
 "especificats a continuació."
 
 msgid "The actual size is depend on your disks."
-msgstr ""
+msgstr "La capacitat actual depen dels discos."
 
 msgid "The administrator has been notified to apply your changes."
 msgstr "L'administrador ha estat notificat per aplicar els canvis."
@@ -8833,7 +8863,7 @@ msgid "The volume must be detached before it can be deleted."
 msgstr "El volum ha de ser separat abans que pugui ser eliminat."
 
 msgid "The work directory does not exist."
-msgstr ""
+msgstr "El directori de treball no existeix encara."
 
 msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
@@ -8924,10 +8954,14 @@ msgid ""
 "These parameters are added to the hardware-specific part of the driver for "
 "the second UPS."
 msgstr ""
+"Aquests paràmetres s'agreguen a la part específica del maquinari del "
+"controlador per al segon SAI."
 
 msgid ""
 "These parameters are added to the hardware-specific part of the driver."
 msgstr ""
+"Aquests paràmetres s'agreguen a la part específica del maquinari del "
+"controlador."
 
 #, php-format
 msgid "These parameters will be added to %s."
@@ -9886,7 +9920,7 @@ msgid "Up"
 msgstr "Amunt"
 
 msgid "Update Period"
-msgstr ""
+msgstr "Període d'actualització"
 
 msgid "Update period"
 msgstr "Periode d'actualització"
@@ -9903,7 +9937,7 @@ msgid "Upload Bandwidth"
 msgstr "Ample de banda de pujada"
 
 msgid "Upload Directory"
-msgstr ""
+msgstr "Directori de pujada"
 
 #, php-format
 msgid "Upload directory of the webserver. The default is %s."
@@ -10096,9 +10130,6 @@ msgid "VLAN Settings"
 msgstr "Configuració de VLAN"
 
 msgid "VLAN Tag"
-msgstr "Etiqueta VLAN"
-
-msgid "VLAN tag"
 msgstr "Etiqueta VLAN"
 
 msgid "VM Type"
@@ -10306,6 +10337,9 @@ msgstr "Dc"
 msgid "Wednesday"
 msgstr "Dimecres"
 
+msgid "Week Days"
+msgstr "Dies de la setmana"
+
 msgid "Week days"
 msgstr "Dias de la setmana"
 
@@ -10370,7 +10404,7 @@ msgid "Wireless configuration"
 msgstr "Configuració sense fils"
 
 msgid "Work Directory"
-msgstr ""
+msgstr "Directori de treball"
 
 msgid "Workgroup"
 msgstr "Grup de treball"
@@ -10464,6 +10498,8 @@ msgstr ""
 msgid ""
 "You may specify logical block size. (default is %dB for compatibility)."
 msgstr ""
+"Podeu especificar la mida de bloc lògic. (Per defecte és %dB per a la "
+"compatibilitat)."
 
 msgid ""
 "You must add at least a Portal Group, an Initiator Group and an Extent "
@@ -10720,450 +10756,38 @@ msgstr "desmontar"
 msgid "week days"
 msgstr "dias de la setmana"
 
-#~ msgid ""
-#~ "A Auth Group contains authorised users and secrets for additional security."
-#~ msgstr ""
-#~ "Un grup d'autenticació conté els usuaris autoritzats i els secrets per a més "
-#~ "seguretat."
+#~ msgid "Aggregation protocol"
+#~ msgstr "Protocol d'agregació"
 
-#~ msgid ""
-#~ "A Initiator Group contains authorised initiator names and networks to access "
-#~ "the target."
-#~ msgstr ""
-#~ "Un grup iniciador conté noms autoritzats d'iniciador i xarxes per accedir al "
-#~ "objecte."
-
-#~ msgid ""
-#~ "A Portal Group contains IP addresses and listening TCP ports to connect the "
-#~ "target from the initiator."
-#~ msgstr ""
-#~ "Un grup del portal conté adreces IP i ports d'escolta TCP per connectar "
-#~ "l'objectiu des-de l'iniciador."
-
-#~ msgid ""
-#~ "A directory listing is generated if a directory is requested and no index-"
-#~ "file (index.php, index.html, index.htm or default.htm) was found in that "
-#~ "directory."
-#~ msgstr ""
-#~ "Un llistat de directori es genera si un directori es demana i cap índex "
-#~ "d'arxiu (index.php, index.html, index.htm o default.htm) es va trobar en "
-#~ "aquest directori."
-
-#~ msgid ""
-#~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
-#~ msgstr ""
-#~ "Una adreça IPv6 vàlida ha de ser especificats per al servidor DNS primari / "
-#~ "secundari."
-
-#~ msgid ""
-#~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
-#~ msgstr ""
-#~ "Una adreça IPv4 vàlida ha de ser especificats per al servidor DNS primari / "
-#~ "secundari."
-
-#~ msgid "AIO write size"
-#~ msgstr "Mida d'escriptura AIO"
-
-#~ msgid "AIO read size"
-#~ msgstr "Mida de lectura AIO"
-
-#~ msgid "Access mode"
-#~ msgstr "Mode d'accés"
-
-#~ msgid "Active Directory List"
-#~ msgstr "Llista de directori actiu"
-
-#~ msgid "All dirs"
-#~ msgstr "Tots els directoris"
-
-#~ msgid "All users will have the root privilege."
-#~ msgstr "Tots els usuaris tindran el privilegi de root."
-
-#~ msgid "Allow new files"
-#~ msgstr "Permet nous arxius"
-
-#~ msgid "Alternate TCP port. Default is 873"
-#~ msgstr "Port TCP alternatiu. Per defecte es el 873"
-
-#~ msgid "Alternate TCP port. Default is 22"
-#~ msgstr "Port TCP alternatiu. Per defecte ès 22"
-
-#~ msgid "Always scan"
-#~ msgstr "Sempre analitzant"
-
-#~ msgid "Asynchronous I/O (AIO)"
-#~ msgstr "E / S asíncrona (AIO)"
-
-#~ msgid "Auxiliary parameters"
-#~ msgstr "Parametres auxiliars"
-
-#~ msgid "CIFS/SMB disabled"
-#~ msgstr "CIFS/SMB inactiu"
-
-#~ msgid "Create mask"
-#~ msgstr "Crea màscara"
-
-#~ msgid "Destination share"
-#~ msgstr "Destinació del recurs compartit"
-
-#~ msgid "Directory mask"
-#~ msgstr "Màscara de directori"
-
-#~ msgid "Document root"
-#~ msgstr "Arrel de document"
-
-#~ msgid "Domain name"
-#~ msgstr "Nom de domini"
-
-#~ msgid "Dos charset"
-#~ msgstr "Joc de caracteres Dos"
-
-#~ msgid "EA support"
-#~ msgstr "Suport EA"
-
-#~ msgid "umask"
-#~ msgstr "desmmascarar"
-
-#~ msgid "Enable ZFS ACL"
-#~ msgstr "Habilita ZFS ACL"
-
-#~ msgid "Enable guest access"
-#~ msgstr "Habilitar access a convidat."
-
-#~ msgid "Enable large read/write"
-#~ msgstr "Habilita gran lectura/escriptura"
-
-#~ msgid "Enable permission inheritance"
-#~ msgstr "Habilitar l'herència de permisos"
-
-#~ msgid "Enable recycle bin"
-#~ msgstr "Habilita la paperera de reciclatge"
-
-#~ msgid "Enable shadow copy"
-#~ msgstr "Activar la còpia d'ombra"
-
-#~ msgid "Enable store DOS attributes"
-#~ msgstr "Activar amagatzamar atributs DOS"
-
-#~ msgid "Run as"
-#~ msgstr "Executa com"
+#~ msgid "Advertisement skew"
+#~ msgstr "Deslliçament de anunci"
 
 #, php-format
-#~ msgid ""
-#~ "Samba will read from file asynchronously when size of request is bigger than "
-#~ "this value. (%d by default)"
-#~ msgstr ""
-#~ "Samba llegeix l'arxiu de forma asíncrona quan la mida de la sol·licitud és "
-#~ "més gran que aquest valor. (%d per defecte)"
+#~ msgid "Invalid max. block size! It must be in the range from %d to %d."
+#~ msgstr "Tamany màxim de bloc no valid! Ha d'estar en l'interval de%d a %d."
+
+#~ msgid "Link down action"
+#~ msgstr "Acció d'enllaç caigut"
+
+#~ msgid "Link up action"
+#~ msgstr "Acció d'enllaç actiu"
+
+#~ msgid "Physical interface"
+#~ msgstr "Interfície física"
 
 #, php-format
-#~ msgid ""
-#~ "Samba will write to file asynchronously when size of request is bigger than "
-#~ "this value. (%d by default)"
-#~ msgstr ""
-#~ "Samba escriurà l'arxiu de forma asíncrona quan la mida de la sol·licitud és "
-#~ "més gran que aquest valor. (%d per defecte)"
+#~ msgid "Graph updates every %d seconds"
+#~ msgstr "Gràfic s'actualitza cada %d segons"
 
-#~ msgid "Enable Asynchronous I/O (AIO)"
-#~ msgstr "Habilita E/S asíncrona (AIO)"
+#~ msgid "Tap device"
+#~ msgstr "Dispositiu clau"
 
-#~ msgid "Forced update period"
-#~ msgstr "Període d'actualització forçada"
-
-#~ msgid "Enable extended attribute support"
-#~ msgstr "Habilitar el suport de atribut estès"
-
-#~ msgid "Guest account"
-#~ msgstr "Compte de convidat"
-
-#~ msgid "Maximum connections"
-#~ msgstr "Connexions màximes"
-
-#~ msgid "Recycle bin"
-#~ msgstr "Paperera"
-
-#~ msgid "Reverse direction"
-#~ msgstr "Direcció invertida"
-
-#~ msgid "Server name"
-#~ msgstr "Nom del servidor"
-
-#~ msgid "Hosts deny"
-#~ msgstr "Amfitrions rebutjats"
-
-#~ msgid "Hosts allow"
-#~ msgstr "Amfitrións permesos"
-
-#~ msgid "Inherit permissions"
-#~ msgstr "Permisos heretats"
-
-#~ msgid "Hide dot files"
-#~ msgstr "Amaga arxius punt"
-
-#~ msgid "Interface selection"
-#~ msgstr "Selecció de la interficie"
-
-#~ msgid "Large read/write"
-#~ msgstr "Lectura/escriptura llarga"
-
-#~ msgid "Map to guest"
-#~ msgstr "Mapeja a convidats"
-
-#~ msgid "Map all users to root"
-#~ msgstr "Mapeja tots els usuaris a l'arrel"
-
-#~ msgid "Map to user"
-#~ msgstr "Mapeja a usuari"
-
-#~ msgid "Max. block size"
-#~ msgstr "Màxima mida de bloc"
-
-#~ msgid "Max. connections"
-#~ msgstr "Màximes connexions"
-
-#~ msgid "Max. sessions"
-#~ msgstr "Màximes sessions"
-
-#, php-format
-#~ msgid ""
-#~ "Location where the working files will be stored, e.g. %s/backup/.unison"
-#~ msgstr ""
-#~ "Lloc on s'emmagatzemaran els fitxers de treball, per exemple, "
-#~ "%s/backup/.unison"
-
-#~ msgid "Local shares to be synchronized"
-#~ msgstr "Compartició local a esser sincronitzada"
-
-#~ msgid "Local share (destination)"
-#~ msgstr "Compartició local (destí)"
-
-#~ msgid "Logical Block Length"
-#~ msgstr "Longitud del bloc lògic"
-
-#~ msgid "Enable ACL inheritance"
-#~ msgstr "Permetre heretar ACL"
-
-#~ msgid "AIO module"
-#~ msgstr "Mòdul AIO"
-
-#~ msgid "Compilations directories"
-#~ msgstr "Directoris de recopilacions"
-
-#~ msgid "Group compilations"
-#~ msgstr "Compilacions de grup"
-
-#~ msgid "NetBIOS name"
-#~ msgstr "Nom NetBIOS"
-
-#~ msgid "Number of servers"
-#~ msgstr "Nombre de servidors"
-
-#~ msgid "Permit root login"
-#~ msgstr "Permetre inici de sessió de root"
-
-#~ msgid "Preserve extended attributes"
-#~ msgstr "Conservar atributs estesos"
-
-#~ msgid "Preserve permissions"
-#~ msgstr "Conservar els temps de modificació."
-
-#~ msgid "Remote rsync daemon"
-#~ msgstr "Dimoni remot de rsync"
-
-#~ msgid "Remote module (source)"
-#~ msgstr "Mòdul remot (font)"
-
-#~ msgid "AFP compatibility"
-#~ msgstr "Compatibilitat AFP"
-
-#, php-format
-#~ msgid ""
-#~ "%s must be enabled for Unison to work, and the %s must have shell access."
-#~ msgstr ""
-#~ "%s ha de ser habilitat per Unisom per treballar, i el%s ha de tenir accés a "
-#~ "una consola."
-
-#~ msgid "Enable 'Asynchronous I/O (AIO)' switch."
-#~ msgstr "Habilitar interruptor 'E/S asíncrona (AIO)'."
-
-#~ msgid "Enable mapping DOS attributes"
-#~ msgstr "Habilitar l'assignació d'atributs DOS"
-
-#~ msgid "Enhanced compatibility with Netatalk AFP server"
-#~ msgstr "Compatibilitat millorada amb el servidor netatalk AFP"
+#~ msgid "VLAN tag"
+#~ msgstr "Etiqueta VLAN"
 
 #~ msgid ""
-#~ "Enter the path to the home directory. The config will be created under the "
-#~ "specified directory."
-#~ msgstr ""
-#~ "Introduïu la ruta d'accés al directori principal. La configuració es crearà "
-#~ "en el directori especificat."
-
-#~ msgid "Mapping DOS attributes"
-#~ msgstr "Atributs del mapatge DOS"
-
-#~ msgid "Client Min Protocol"
-#~ msgstr "Protocol Min client"
-
-#~ msgid "Client Max Protocol"
-#~ msgstr "Protocol Max client"
-
-#~ msgid "SSHD"
-#~ msgstr "SSHD"
-
-#~ msgid "Source share"
-#~ msgstr "Compartir font"
-
-#~ msgid "Receive Buffer Size"
-#~ msgstr "Mida del Buffer de recepció"
-
-#~ msgid ""
-#~ "Running the service as user root is not recommended for security reasons, "
-#~ "use at your own risk!"
-#~ msgstr ""
-#~ "No es recomana executar el servei com a usuari root per raons de seguretat, "
-#~ "utilitzeu al seu propi risc!"
-
-#~ msgid "Auxiliary Parameters"
-#~ msgstr "Paràmetres auxiliars"
-
-#~ msgid "Scan type"
-#~ msgstr "Tipus d'anàlisi"
-
-#~ msgid "Server Max Protocol"
-#~ msgstr "Protocol Max servidor"
-
-#~ msgid "Server Min Protocol"
-#~ msgstr "Protocol Minìm servidor"
-
-#~ msgid "Set read only"
-#~ msgstr "Fixar-ho de només lectura"
-
-#~ msgid "Send Buffer Size"
-#~ msgstr "Enviar mida de la memòria intermèdia"
-
-#~ msgid "Set browseable"
-#~ msgstr "Establir navegable"
-
-#~ msgid "Set under which user the service should run (www by default)."
-#~ msgstr "Establir sota qui usuari ha d'executar el servei (www per defecte)."
-
-#~ msgid "Shadow Copy format"
-#~ msgstr "Format de copia a l'ombra"
-
-#~ msgid "Skip first scan"
-#~ msgstr "Saltar primera exploració"
-
-#~ msgid "Store NTFS acls"
-#~ msgstr "Desa ACLS NTFS"
-
-#~ msgid "Store DOS attributes"
-#~ msgstr "Desa atributs DOS"
-
-#~ msgid "Store NTFS acls in Extended Attributes"
-#~ msgstr "Desa ACLS de NTFS en atributs extesos"
-
-#~ msgid "Store alternate data streams"
-#~ msgstr "Emmagatzemar seqüències de dades alternatives"
-
-#~ msgid "Store alternate data streams in Extended Attributes"
-#~ msgstr ""
-#~ "Emmagatzemar seqüències de dades alternatives en els atributs estesos"
-
-#~ msgid "Synchronization time"
-#~ msgstr "Temps de sincronització"
-
-#~ msgid "Swap disabled"
-#~ msgstr "Intercanvi desactivat"
-
-#~ msgid "TCP forwarding"
-#~ msgstr "Reenviament TCP"
-
-#~ msgid ""
-#~ "The port to listen to. The default is to listen to the tftp port specified "
-#~ "in /etc/services."
-#~ msgstr ""
-#~ "El port d'escolta. El valor per defecte és escoltar al port TFTP especificat "
-#~ "en /etc/services."
-
-#, php-format
-#~ msgid "The recommended length for compatibility is %d."
-#~ msgstr "La longitud recomanada per a la compatibilitat és %d."
-
-#~ msgid "The working directory does not exist."
-#~ msgstr "El directori de treball no existeix."
-
-#~ msgid ""
-#~ "The workgroup in which the server will appear when queried by Windows or SMB "
-#~ "clients (maximum 15 characters)."
-#~ msgstr ""
-#~ "El grup de treball en què apareixerà el servidor quan se'ls pregunta per "
-#~ "Windows o clients SMB (màxim 15 caràcters)."
-
-#~ msgid "This will provide ZFS ACL support. (ZFS only)"
-#~ msgstr "Això proporcionarà el suport de ZFS ACL. (Només ZFS)"
-
-#~ msgid "This will provide shadow copy created by auto snapshot. (ZFS only)"
-#~ msgstr ""
-#~ "Això proporcionarà còpia de l'ombra creada per auto instantànies. (Només ZFS)"
-
-#~ msgid "This will provide NTFS acls without ZFS ACL support such as UFS."
-#~ msgstr "Això proporcionarà ACL NTFS sense suport de ZFS ACL UFS."
-
-#~ msgid "Time server"
-#~ msgstr "Servidor d'hora"
-
-#~ msgid "Unix charset"
-#~ msgstr "Joc de caracters Unix"
-
-#~ msgid "WINS server"
-#~ msgstr "Servidor WINS"
-
-#~ msgid "Working directory"
-#~ msgstr "Directori de treball"
-
-#, php-format
-#~ msgid "You may specify logical block length (%d by default)."
-#~ msgstr "És possible especificar la longitud de bloc lògic (%d per defecte)."
-
-#~ msgid "Trusted domains"
-#~ msgstr "Dominis de confiança"
-
-#~ msgid "Upload directory"
-#~ msgstr "Directori de pujada"
-
-#~ msgid "user"
-#~ msgstr "usuari"
-
-#~ msgid ""
-#~ "Additional parameters to the hardware-specific part of the driver for second "
-#~ "UPS."
-#~ msgstr ""
-#~ "Paràmetres addicionals a la part específica del maquinari del controlador "
-#~ "per al segon SAI"
-
-#~ msgid "Null passwords"
-#~ msgstr "Contrasenya nules"
-
-#~ msgid "Password authentication"
-#~ msgstr "Autenticació de la contrasenya"
-
-#~ msgid "Password server"
-#~ msgstr "Contrasenya del servidor"
-
-#~ msgid "Auxiliary Parameter"
-#~ msgstr "Paràmetre auxiliar"
-
-#, php-format
-#~ msgid ""
-#~ "Enter a custom port number if you want to override the default port. Default "
-#~ "port is %s."
+#~ "Enter a custom port number if you want to override the default port. "
+#~ "(Default is 69). "
 #~ msgstr ""
 #~ "Introduïu un número de port personalitzat si voleu canviar el port per "
-#~ "defecte. El port per defecte és %s."
-
-#~ msgid "Remote Rsync Saemon"
-#~ msgstr "Dimoni remot de Rsync"
-
-#~ msgid "Working Directory"
-#~ msgstr "Directori de treball"
+#~ "defecte. (Per defecte és 69). "

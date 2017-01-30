@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
-"POT-Creation-Date: 2017-01-29 13:11+0000\n"
+"POT-Creation-Date: 2017-01-30 02:33+0000\n"
 "PO-Revision-Date: 2017-01-15 00:16+0000\n"
 "Last-Translator: Pedro Grave <pedro.grave.abt@gmail.com>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-29 12:21+0000\n"
+"X-Launchpad-Export-Date: 2017-01-30 02:13+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: PORTUGAL\n"
 "Language: \n"
@@ -570,14 +570,14 @@ msgstr ""
 msgid "Admin Password"
 msgstr ""
 
-msgid "Administration password"
-msgstr "Palavra passe de administração"
+msgid "Administration Password"
+msgstr ""
 
 msgid "Administrative WebGUI"
 msgstr "Painel de administração"
 
-msgid "Administrator name"
-msgstr "Nome do administrador"
+msgid "Administrator Name"
+msgstr ""
 
 msgid "Advanced"
 msgstr "Avançado"
@@ -600,8 +600,8 @@ msgstr "Configuração Avançada"
 msgid "Advanced settings"
 msgstr "Configurações avançadas"
 
-msgid "Advertisement skew"
-msgstr "Frequência de divulgação"
+msgid "Advertisement Skew"
+msgstr ""
 
 msgid "Afrikaans"
 msgstr "Afrikaans"
@@ -629,8 +629,8 @@ msgstr ""
 msgid "Age"
 msgstr "Idade"
 
-msgid "Aggregation protocol"
-msgstr "Protocolo de agregação"
+msgid "Aggregation Protocol"
+msgstr ""
 
 msgid "Aggressive"
 msgstr "Agressivo"
@@ -1944,11 +1944,11 @@ msgstr "Registo de serviços"
 msgid "Danish"
 msgstr "Dinamarquês"
 
+msgid "Data Integrity"
+msgstr ""
+
 msgid "Data digest"
 msgstr "Data digest"
-
-msgid "Data integrity"
-msgstr "Integridade dos dados"
 
 msgid "Database Directory"
 msgstr ""
@@ -2204,6 +2204,9 @@ msgstr "Descrição"
 msgid "Destination"
 msgstr "Destino"
 
+msgid "Destination Network"
+msgstr ""
+
 msgid "Destination Share"
 msgstr ""
 
@@ -2219,14 +2222,11 @@ msgstr ""
 msgid "Destination host name or IP number."
 msgstr "Nome ou endereço IP da máquina de destino."
 
-msgid "Destination network"
-msgstr "Rede de destino"
-
 msgid "Destination network bit count"
 msgstr "Número de bits da rede de destino"
 
-msgid "Destination network for this static route"
-msgstr "Rede de destino para esta rota estática"
+msgid "Destination network for this static route."
+msgstr ""
 
 msgid "Destination port"
 msgstr "Porta de destino"
@@ -2705,20 +2705,20 @@ msgstr ""
 msgid "Domain"
 msgstr "Domínio"
 
+msgid "Domain Controller Name"
+msgstr ""
+
 msgid "Domain Name"
 msgstr ""
 
-msgid "Domain controller name"
-msgstr "Nome do controlador de domínio"
+msgid "Domain Name (DNS/Realm-Name)"
+msgstr ""
+
+msgid "Domain Name (NetBIOS-Name)"
+msgstr ""
 
 msgid "Domain is missing 2nd level name."
 msgstr ""
-
-msgid "Domain name (DNS/Realm-Name)"
-msgstr "Nome do domínio (DNS/Realm-Name)"
-
-msgid "Domain name (NetBIOS-Name)"
-msgstr "Nome do domínio (Nome NetBIOS)"
 
 msgid "Domain name in old format, e.g. EXAMPLE."
 msgstr "Nome do domínio no formato antigo, e.g. EXEMPLO."
@@ -2752,9 +2752,6 @@ msgstr ""
 
 msgid "Download directory"
 msgstr "Descarregar directoria"
-
-msgid "Download firewall rules."
-msgstr "Descarregar regras da firewall."
 
 msgid "Drive Temperature."
 msgstr ""
@@ -3202,7 +3199,13 @@ msgstr "A encriptar '%s'... Por favor aguarde"
 msgid "Encryption"
 msgstr "Encriptação"
 
-msgid "Encryption Setup"
+msgid "Encryption Algorithm"
+msgstr ""
+
+msgid "Encryption Management"
+msgstr ""
+
+msgid "Encryption Settings"
 msgstr ""
 
 msgid "Encryption Tools"
@@ -3231,6 +3234,11 @@ msgid ""
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr ""
 
+msgid ""
+"Enter a custom port number if you want to override the default port (default "
+"is 69)."
+msgstr ""
+
 #, php-format
 msgid ""
 "Enter a custom port number if you want to override the default port. "
@@ -3240,11 +3248,6 @@ msgstr ""
 msgid ""
 "Enter a custom port number if you want to override the default port. "
 "(Default is 22)."
-msgstr ""
-
-msgid ""
-"Enter a custom port number if you want to override the default port. "
-"(Default is 69). "
 msgstr ""
 
 msgid "Enter a description"
@@ -3378,6 +3381,9 @@ msgid "Export a pool from the system"
 msgstr ""
 
 msgid "Export all the directories in the specified path."
+msgstr ""
+
+msgid "Export firewall rules."
 msgstr ""
 
 msgid "Exported"
@@ -3770,7 +3776,7 @@ msgid "Graph shows last 120 seconds"
 msgstr "O Gráfico mostra os últimos 120 segundos"
 
 #, php-format
-msgid "Graph updates every %d seconds"
+msgid "Graph updates every %d seconds."
 msgstr ""
 
 msgid "Graphs Height"
@@ -3931,8 +3937,8 @@ msgstr "Pasta pessoal"
 msgid "Host"
 msgstr "Anfitrião (host)"
 
-msgid "Host access control"
-msgstr "Controle de acesso ao servidor"
+msgid "Host Access Control"
+msgstr ""
 
 msgid "Host resources"
 msgstr "Recursos do anfitrião"
@@ -3940,8 +3946,8 @@ msgstr "Recursos do anfitrião"
 msgid "Hostname"
 msgstr "Nome de anfitrião (host)"
 
-msgid "Hostname database"
-msgstr "Base de dados do servidor"
+msgid "Hostname Database"
+msgstr ""
 
 msgid "Hosts"
 msgstr "Anfitriões"
@@ -4390,8 +4396,8 @@ msgid "Invalid file format."
 msgstr "Formato de ficheiro inválido."
 
 #, php-format
-msgid "Invalid max. block size! It must be in the range from %d to %d."
-msgstr "Tamanho máximo do ficheiro inválido! Deve estar entre %d e %d."
+msgid "Invalid maximum block size! It must be in the range from %d to %d."
+msgstr ""
 
 msgid "Invalid username or password."
 msgstr ""
@@ -4484,11 +4490,11 @@ msgstr ""
 msgid "Key"
 msgstr "Chave"
 
+msgid "Key Length"
+msgstr ""
+
 msgid "Key Management Protocol"
 msgstr "Protocolo de Gestão de Chaves"
-
-msgid "Key length"
-msgstr "Comprimento da chave"
 
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr ""
@@ -4633,10 +4639,10 @@ msgstr ""
 "tamanho utilize os sufixos comuns para unidades (por exemplo, 'k', 'KB', "
 "'M', 'Gb', etc.)."
 
-msgid "Link down action"
+msgid "Link Down Action"
 msgstr ""
 
-msgid "Link up action"
+msgid "Link Up Action"
 msgstr ""
 
 msgid "List"
@@ -5135,6 +5141,9 @@ msgid "Mount Point"
 msgstr "Ponto de Montagem"
 
 msgid "Mount Point Fsck"
+msgstr ""
+
+msgid "Mount Point Management"
 msgstr ""
 
 msgid "Mount Point Tools"
@@ -5874,9 +5883,6 @@ msgstr "Permitir a execução de tuneis SSH."
 
 msgid "Physical Interface"
 msgstr ""
-
-msgid "Physical interface"
-msgstr "Interface física"
 
 msgid "Pictures"
 msgstr ""
@@ -7393,6 +7399,9 @@ msgstr "String identificadora de ficheiros contíguos."
 msgid "Subject"
 msgstr "Assunto"
 
+msgid "Subnet Bit Count"
+msgstr ""
+
 msgid "Subnet Mask"
 msgstr ""
 
@@ -7552,6 +7561,9 @@ msgstr "Porta onde o servidor receberá pedidos, e.g. 8080"
 msgid "TFTP"
 msgstr "TFTP"
 
+msgid "TFTP has been disabled."
+msgstr ""
+
 msgid "TKIP"
 msgstr "TKIP"
 
@@ -7587,7 +7599,7 @@ msgstr "Tag%d (%s)"
 msgid "Take a device offline"
 msgstr ""
 
-msgid "Tap device"
+msgid "Tap Device"
 msgstr ""
 
 msgid "Tape"
@@ -9581,9 +9593,6 @@ msgstr ""
 msgid "VLAN Tag"
 msgstr "Etiqueta VLAN"
 
-msgid "VLAN tag"
-msgstr "Etiqueta VLAN"
-
 msgid "VM Type"
 msgstr "Tipo de VM"
 
@@ -9788,6 +9797,9 @@ msgstr "quarta"
 
 msgid "Wednesday"
 msgstr "quarta-feira"
+
+msgid "Week Days"
+msgstr ""
 
 msgid "Week days"
 msgstr "Dias da semana"
@@ -10199,326 +10211,18 @@ msgstr "umount"
 msgid "week days"
 msgstr ""
 
-#~ msgid ""
-#~ "A Auth Group contains authorised users and secrets for additional security."
-#~ msgstr ""
-#~ "Um grupo 'Auth' contem utilizadores autorizados e segredos para segurança "
-#~ "adicional."
-
-#~ msgid ""
-#~ "A Initiator Group contains authorised initiator names and networks to access "
-#~ "the target."
-#~ msgstr ""
-#~ "Um grupo de Iniciadores contém os nomes de iniciadores e redes autorizados a "
-#~ "aceder aos destino iSCSI"
-
-#~ msgid ""
-#~ "A directory listing is generated if a directory is requested and no index-"
-#~ "file (index.php, index.html, index.htm or default.htm) was found in that "
-#~ "directory."
-#~ msgstr ""
-#~ "A listagem da directoria é gerada se for requisitada e os ficheiros de "
-#~ "índice (index.php, index.html, index.htm or default.htm) não forem "
-#~ "encontrados dentro da mesma."
-
-#~ msgid ""
-#~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
-#~ msgstr ""
-#~ "Um endereço IPv4 tem de ser especificado para o servidor DNS "
-#~ "primário/secundário."
-
-#~ msgid ""
-#~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
-#~ msgstr ""
-#~ "Um endereço IPv6 válido deve ser especificado para o servidor DNS "
-#~ "primário/secundário."
-
-#~ msgid "AIO read size"
-#~ msgstr "Tamanho de leitura AIO"
-
-#~ msgid "AIO write size"
-#~ msgstr "Tamanho de escrita AIO"
-
-#~ msgid "Access mode"
-#~ msgstr "Modo de acesso"
-
-#~ msgid "All dirs"
-#~ msgstr "Todas as directorias"
-
-#~ msgid "All users will have the root privilege."
-#~ msgstr "Todos os utilizadores terão previlégios de administrador (root)"
-
-#~ msgid "Allow new files"
-#~ msgstr "Permitir novos ficheiros"
-
-#~ msgid "Alternate TCP port. Default is 22"
-#~ msgstr "Porta TCP alternativa. 22 por defeito."
-
-#~ msgid "Alternate TCP port. Default is 873"
-#~ msgstr "Porta TCP alternativa. Por defeito é 873"
-
-#~ msgid "Always scan"
-#~ msgstr "Procurar Sempre"
-
-#~ msgid "Asynchronous I/O (AIO)"
-#~ msgstr "I/O Assíncrono (AIO)"
-
-#~ msgid "Auxiliary parameters"
-#~ msgstr "Parametros auxiliares"
-
-#~ msgid "CIFS/SMB disabled"
-#~ msgstr "CIFS/SMB desactivado"
-
-#~ msgid "Create mask"
-#~ msgstr "Criar máscara"
-
-#~ msgid "Destination share"
-#~ msgstr "Partilha de destino"
-
-#~ msgid "Directory mask"
-#~ msgstr "Máscara de directório"
-
-#~ msgid "Document root"
-#~ msgstr "Pasta raíz"
-
-#~ msgid "Domain name"
-#~ msgstr "Nome do domínio"
-
-#~ msgid "Dos charset"
-#~ msgstr "Conjunto de caracteres (charset) do DOS"
-
-#~ msgid "EA support"
-#~ msgstr "EA suporte"
-
-#~ msgid "Enable Asynchronous I/O (AIO)"
-#~ msgstr "Permitir I/O Assíncrono (AIO)"
-
-#~ msgid "Enable extended attribute support"
-#~ msgstr "Permitir suporte de atributos extendido."
-
-#~ msgid "Enable large read/write"
-#~ msgstr "Activar a escrita/leitura em blocos grandes."
-
-#~ msgid "Enable permission inheritance"
-#~ msgstr "Herdar permissões"
-
-#~ msgid "Enable recycle bin"
-#~ msgstr "Activar reciclagem"
-
-#~ msgid "Enable store DOS attributes"
-#~ msgstr "Guardar atributos do DOS"
-
-#~ msgid "Forced update period"
-#~ msgstr "Período de actualização forçado."
-
-#~ msgid "Guest account"
-#~ msgstr "Conta-convidado"
-
-#~ msgid "Hide dot files"
-#~ msgstr "Ocultar ficheiros de sistema"
-
-#~ msgid "Hosts allow"
-#~ msgstr "Permissões do servidor"
-
-#~ msgid "Hosts deny"
-#~ msgstr "Servidor negado"
-
-#~ msgid "Inherit permissions"
-#~ msgstr "Herdar permissões"
-
-#~ msgid "Large read/write"
-#~ msgstr "Leitura/Escrita em blocos grandes"
-
-#~ msgid "Local share (destination)"
-#~ msgstr "Partilha local (destino)"
-
-#~ msgid "Local shares to be synchronized"
-#~ msgstr "Partilhas locais a serem sincronizadas"
+#~ msgid "Aggregation protocol"
+#~ msgstr "Protocolo de agregação"
 
 #, php-format
-#~ msgid ""
-#~ "Location where the working files will be stored, e.g. %s/backup/.unison"
-#~ msgstr ""
-#~ "Localização onde os ficheiros de trabalho devem ser guardados, e.g. "
-#~ "%s/backup/.unison"
+#~ msgid "Invalid max. block size! It must be in the range from %d to %d."
+#~ msgstr "Tamanho máximo do ficheiro inválido! Deve estar entre %d e %d."
 
-#~ msgid "Logical Block Length"
-#~ msgstr "Tamanho Lógico Bloco"
+#~ msgid "Physical interface"
+#~ msgstr "Interface física"
 
-#~ msgid "Map all users to root"
-#~ msgstr "Mapear todos os utilizadores para root"
+#~ msgid "VLAN tag"
+#~ msgstr "Etiqueta VLAN"
 
-#~ msgid "Map to user"
-#~ msgstr "Mapear para o utilizador"
-
-#~ msgid "Max. block size"
-#~ msgstr "Tamanho máximo dos blocos"
-
-#~ msgid "Max. connections"
-#~ msgstr "Número máximo de ligações"
-
-#~ msgid "Max. sessions"
-#~ msgstr "Número máximo de sessões"
-
-#~ msgid "Maximum connections"
-#~ msgstr "Máximo de ligações"
-
-#~ msgid "NetBIOS name"
-#~ msgstr "Nome NetBIOS"
-
-#~ msgid "Null passwords"
-#~ msgstr "Palavras-passe em branco"
-
-#~ msgid "Number of servers"
-#~ msgstr "Número de servidores"
-
-#~ msgid "Password authentication"
-#~ msgstr "Autenticação de senha"
-
-#~ msgid "Permit root login"
-#~ msgstr "Permitir o início de sessão do utilizador root"
-
-#~ msgid "Preserve extended attributes"
-#~ msgstr "Preservar atributos estendidos"
-
-#~ msgid "Preserve permissions"
-#~ msgstr "Preservar as permissões"
-
-#~ msgid "Receive Buffer Size"
-#~ msgstr "Tamanho do tampão (buffer) de recepção"
-
-#~ msgid "Recycle bin"
-#~ msgstr "Reciclagem"
-
-#~ msgid "Remote module (source)"
-#~ msgstr "Módulo remoto (fonte)"
-
-#, php-format
-#~ msgid ""
-#~ "Samba will read from file asynchronously when size of request is bigger than "
-#~ "this value. (%d by default)"
-#~ msgstr ""
-#~ "Samba irá ler os ficheiros de forma assíncrona quando o tamanho do pedido "
-#~ "for superior a este valor. (%d por defeito)"
-
-#, php-format
-#~ msgid ""
-#~ "Samba will write to file asynchronously when size of request is bigger than "
-#~ "this value. (%d by default)"
-#~ msgstr ""
-#~ "Samba irá escrever os ficheiros de forma assíncrona quando o tamanho do "
-#~ "pedido for superior a este valor. (%d por defeito)"
-
-#~ msgid "Scan type"
-#~ msgstr "Tipo de verificação"
-
-#~ msgid "Send Buffer Size"
-#~ msgstr "Tamanho do tampão (buffer) de envio"
-
-#~ msgid "Server name"
-#~ msgstr "Nome do servidor"
-
-#~ msgid "Set browseable"
-#~ msgstr "Tornar navegável"
-
-#~ msgid "Set read only"
-#~ msgstr "Activar modo só de leitura"
-
-#~ msgid "Source share"
-#~ msgstr "Partilha de origem"
-
-#~ msgid "Store DOS attributes"
-#~ msgstr "Guardar atributos do DOS"
-
-#~ msgid "Swap disabled"
-#~ msgstr "Memória virtual desactivada"
-
-#~ msgid "Synchronization time"
-#~ msgstr "Tempo de sincronização"
-
-#~ msgid "TCP forwarding"
-#~ msgstr "Encaminhamento TCP"
-
-#~ msgid ""
-#~ "The port to listen to. The default is to listen to the tftp port specified "
-#~ "in /etc/services."
-#~ msgstr ""
-#~ "A porta de escuta. Por defeito, escuta-se a porta tftp especificada em "
-#~ "/etc/services."
-
-#, php-format
-#~ msgid "The recommended length for compatibility is %d."
-#~ msgstr "O tamanho recomendado para compatibilidade é %d."
-
-#~ msgid "The working directory does not exist."
-#~ msgstr "A directoria de trabalho não existe."
-
-#~ msgid "Time server"
-#~ msgstr "Servidor Horário"
-
-#~ msgid "Unix charset"
-#~ msgstr "Conjunto de caracteres (charset) Unix"
-
-#~ msgid "WINS server"
-#~ msgstr "Servidor WINS"
-
-#~ msgid "Working directory"
-#~ msgstr "Directório de trabalho"
-
-#, php-format
-#~ msgid "You may specify logical block length (%d by default)."
-#~ msgstr "Deve especificar o comprimento lógico do bloco (%d por defeito)."
-
-#~ msgid "umask"
-#~ msgstr "umask"
-
-#~ msgid "Enable guest access"
-#~ msgstr "permitir acesso de visitante"
-
-#~ msgid "Enable shadow copy"
-#~ msgstr "permitir shadow copy"
-
-#~ msgid "Reverse direction"
-#~ msgstr "Direcção inversa"
-
-#~ msgid "Enable ZFS ACL"
-#~ msgstr "Permitir ZFS ACL"
-
-#~ msgid "AFP compatibility"
-#~ msgstr "compatibilidade AFP"
-
-#~ msgid "AIO module"
-#~ msgstr "modulo AIO"
-
-#, php-format
-#~ msgid ""
-#~ "%s must be enabled for Unison to work, and the %s must have shell access."
-#~ msgstr ""
-#~ "%s tem que estar activado para o Unison trabalhar, e o %s tem que ter acesso "
-#~ "shell."
-
-#~ msgid ""
-#~ "A Portal Group contains IP addresses and listening TCP ports to connect the "
-#~ "target from the initiator."
-#~ msgstr ""
-#~ "Um Grupo Portal contém endereços IP e portos TCP à escuta para ligação ao "
-#~ "alvo a partir do iniciador."
-
-#~ msgid "Active Directory List"
-#~ msgstr "Lista de Active Directory"
-
-#~ msgid "Trusted domains"
-#~ msgstr "Domínios de Confiança"
-
-#~ msgid "Upload directory"
-#~ msgstr "Pasta de Upload"
-
-#~ msgid "user"
-#~ msgstr "utilizador"
-
-#~ msgid ""
-#~ "Additional parameters to the hardware-specific part of the driver for second "
-#~ "UPS."
-#~ msgstr ""
-#~ "Parâmetros adicionais para a parte específica de hardware do driver para o "
-#~ "segundo UPS."
+#~ msgid "Advertisement skew"
+#~ msgstr "Frequência de divulgação"

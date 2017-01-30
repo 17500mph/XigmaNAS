@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-29 13:11+0000\n"
+"POT-Creation-Date: 2017-01-30 02:33+0000\n"
 "PO-Revision-Date: 2016-10-16 11:58+0000\n"
 "Last-Translator: Janne <Unknown>\n"
 "Language-Team: NAS4Free <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-29 12:21+0000\n"
+"X-Launchpad-Export-Date: 2017-01-30 02:13+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: FINLAND\n"
 "X-Poedit-Language: Finnish\n"
@@ -563,14 +563,14 @@ msgstr ""
 msgid "Admin Password"
 msgstr ""
 
-msgid "Administration password"
-msgstr "Laitehallinnan salasana"
+msgid "Administration Password"
+msgstr ""
 
 msgid "Administrative WebGUI"
 msgstr "Laitehallinnan selainliittymä"
 
-msgid "Administrator name"
-msgstr "Järjestelmänvalvojan nimi"
+msgid "Administrator Name"
+msgstr ""
 
 msgid "Advanced"
 msgstr "Lisäasetukset"
@@ -593,7 +593,7 @@ msgstr ""
 msgid "Advanced settings"
 msgstr "Lisäasetukset"
 
-msgid "Advertisement skew"
+msgid "Advertisement Skew"
 msgstr ""
 
 msgid "Afrikaans"
@@ -618,7 +618,7 @@ msgstr ""
 msgid "Age"
 msgstr ""
 
-msgid "Aggregation protocol"
+msgid "Aggregation Protocol"
 msgstr ""
 
 msgid "Aggressive"
@@ -1899,10 +1899,10 @@ msgstr ""
 msgid "Danish"
 msgstr "Tanska"
 
-msgid "Data digest"
+msgid "Data Integrity"
 msgstr ""
 
-msgid "Data integrity"
+msgid "Data digest"
 msgstr ""
 
 msgid "Database Directory"
@@ -2157,6 +2157,9 @@ msgstr "Selite"
 msgid "Destination"
 msgstr "Kohde"
 
+msgid "Destination Network"
+msgstr ""
+
 msgid "Destination Share"
 msgstr ""
 
@@ -2172,14 +2175,11 @@ msgstr ""
 msgid "Destination host name or IP number."
 msgstr "Kohde palvelimen nimi tai IP-osoite"
 
-msgid "Destination network"
-msgstr "Kohde verkko"
-
 msgid "Destination network bit count"
 msgstr ""
 
-msgid "Destination network for this static route"
-msgstr "Kohdeverkko tälle kiinteälle reitille"
+msgid "Destination network for this static route."
+msgstr ""
 
 msgid "Destination port"
 msgstr "Kode portti"
@@ -2641,20 +2641,20 @@ msgstr ""
 msgid "Domain"
 msgstr "Toimialue"
 
+msgid "Domain Controller Name"
+msgstr ""
+
 msgid "Domain Name"
 msgstr ""
 
-msgid "Domain controller name"
-msgstr "Toimialueen valvojan nimi"
+msgid "Domain Name (DNS/Realm-Name)"
+msgstr ""
+
+msgid "Domain Name (NetBIOS-Name)"
+msgstr ""
 
 msgid "Domain is missing 2nd level name."
 msgstr ""
-
-msgid "Domain name (DNS/Realm-Name)"
-msgstr "Toimialueen nimi (DNS/Realm-nimi)"
-
-msgid "Domain name (NetBIOS-Name)"
-msgstr "Toimialueen nimi (NetBIOS-nimi)"
 
 msgid "Domain name in old format, e.g. EXAMPLE."
 msgstr "Toimialueen nimi vanhassa muodossa esim. ESIMERKKI."
@@ -2688,9 +2688,6 @@ msgstr ""
 
 msgid "Download directory"
 msgstr "Lataus hakemisto"
-
-msgid "Download firewall rules."
-msgstr "Latauksen palomuurin säännöt."
 
 msgid "Drive Temperature."
 msgstr ""
@@ -3133,7 +3130,13 @@ msgstr "Salataan '%s'... Odota hetki"
 msgid "Encryption"
 msgstr "Salaus"
 
-msgid "Encryption Setup"
+msgid "Encryption Algorithm"
+msgstr ""
+
+msgid "Encryption Management"
+msgstr ""
+
+msgid "Encryption Settings"
 msgstr ""
 
 msgid "Encryption Tools"
@@ -3162,6 +3165,11 @@ msgid ""
 "default (80 for HTTP, 443 for HTTPS)."
 msgstr ""
 
+msgid ""
+"Enter a custom port number if you want to override the default port (default "
+"is 69)."
+msgstr ""
+
 #, php-format
 msgid ""
 "Enter a custom port number if you want to override the default port. "
@@ -3171,11 +3179,6 @@ msgstr ""
 msgid ""
 "Enter a custom port number if you want to override the default port. "
 "(Default is 22)."
-msgstr ""
-
-msgid ""
-"Enter a custom port number if you want to override the default port. "
-"(Default is 69). "
 msgstr ""
 
 msgid "Enter a description"
@@ -3303,6 +3306,9 @@ msgid "Export a pool from the system"
 msgstr ""
 
 msgid "Export all the directories in the specified path."
+msgstr ""
+
+msgid "Export firewall rules."
 msgstr ""
 
 msgid "Exported"
@@ -3687,7 +3693,7 @@ msgid "Graph shows last 120 seconds"
 msgstr ""
 
 #, php-format
-msgid "Graph updates every %d seconds"
+msgid "Graph updates every %d seconds."
 msgstr ""
 
 msgid "Graphs Height"
@@ -3848,8 +3854,8 @@ msgstr "Kotihakemisto"
 msgid "Host"
 msgstr "Palvelin"
 
-msgid "Host access control"
-msgstr "Palvelimen käytön tarkkailu"
+msgid "Host Access Control"
+msgstr ""
 
 msgid "Host resources"
 msgstr "Palvelimen resurssit"
@@ -3857,8 +3863,8 @@ msgstr "Palvelimen resurssit"
 msgid "Hostname"
 msgstr "Palvelinnimi"
 
-msgid "Hostname database"
-msgstr "Palvelimien tietokanta"
+msgid "Hostname Database"
+msgstr ""
 
 msgid "Hosts"
 msgstr "Palvelimet"
@@ -4279,7 +4285,7 @@ msgid "Invalid file format."
 msgstr ""
 
 #, php-format
-msgid "Invalid max. block size! It must be in the range from %d to %d."
+msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
 
 msgid "Invalid username or password."
@@ -4373,11 +4379,11 @@ msgstr ""
 msgid "Key"
 msgstr "Avain"
 
+msgid "Key Length"
+msgstr ""
+
 msgid "Key Management Protocol"
 msgstr "Avainten hallinta protokolla"
-
-msgid "Key length"
-msgstr "Avaimen pituus"
 
 msgid "Key length to use with the given cryptographic algorithm."
 msgstr ""
@@ -4515,10 +4521,10 @@ msgid ""
 "'k', 'KB', 'M', 'Gb', etc.)."
 msgstr ""
 
-msgid "Link down action"
+msgid "Link Down Action"
 msgstr ""
 
-msgid "Link up action"
+msgid "Link Up Action"
 msgstr ""
 
 msgid "List"
@@ -5013,6 +5019,9 @@ msgid "Mount Point"
 msgstr "Liitoskohta"
 
 msgid "Mount Point Fsck"
+msgstr ""
+
+msgid "Mount Point Management"
 msgstr ""
 
 msgid "Mount Point Tools"
@@ -5725,9 +5734,6 @@ msgstr ""
 
 msgid "Physical Interface"
 msgstr ""
-
-msgid "Physical interface"
-msgstr "Fyysinen liitäntä"
 
 msgid "Pictures"
 msgstr "Kuvat"
@@ -7198,6 +7204,9 @@ msgstr ""
 msgid "Subject"
 msgstr "Otsikko"
 
+msgid "Subnet Bit Count"
+msgstr ""
+
 msgid "Subnet Mask"
 msgstr ""
 
@@ -7355,6 +7364,9 @@ msgstr ""
 msgid "TFTP"
 msgstr "TFTP"
 
+msgid "TFTP has been disabled."
+msgstr ""
+
 msgid "TKIP"
 msgstr "TKIP"
 
@@ -7390,7 +7402,7 @@ msgstr ""
 msgid "Take a device offline"
 msgstr ""
 
-msgid "Tap device"
+msgid "Tap Device"
 msgstr ""
 
 msgid "Tape"
@@ -9203,9 +9215,6 @@ msgstr ""
 msgid "VLAN Tag"
 msgstr ""
 
-msgid "VLAN tag"
-msgstr "VLAN tunniste"
-
 msgid "VM Type"
 msgstr ""
 
@@ -9400,6 +9409,9 @@ msgid "Wed"
 msgstr ""
 
 msgid "Wednesday"
+msgstr ""
+
+msgid "Week Days"
 msgstr ""
 
 msgid "Week days"
@@ -9788,167 +9800,8 @@ msgstr ""
 msgid "week days"
 msgstr ""
 
-#~ msgid ""
-#~ "A directory listing is generated if a directory is requested and no index-"
-#~ "file (index.php, index.html, index.htm or default.htm) was found in that "
-#~ "directory."
-#~ msgstr ""
-#~ "Hakemistolistaus luodaan jos hakemistoa kutsutaan ja se ei sisällä index-"
-#~ "tiedostoa (index.php, index.html, index.htm tai default.htm)."
+#~ msgid "Physical interface"
+#~ msgstr "Fyysinen liitäntä"
 
-#~ msgid ""
-#~ "A valid IPv4 address must be specified for the primary/secondary DNS server."
-#~ msgstr ""
-#~ "Ensi-/toissijaiselle nimipalvelimelle täytyy määritellä kelvollinen IPv4-"
-#~ "osoite."
-
-#~ msgid ""
-#~ "A valid IPv6 address must be specified for the primary/secondary DNS server."
-#~ msgstr ""
-#~ "Ensi-/toissijaiselle nimipalvelimelle täytyy määritellä kelvollinen IPv6-"
-#~ "osoite."
-
-#~ msgid "Access mode"
-#~ msgstr "Käyttötila"
-
-#~ msgid "All dirs"
-#~ msgstr "Kaikki hakemistot"
-
-#~ msgid "All users will have the root privilege."
-#~ msgstr "Kaikilla käyttäjillä tulee olemaan root-oikeudet."
-
-#~ msgid "Alternate TCP port. Default is 22"
-#~ msgstr "Vaihtoehtoinen TCP-portti. Oletus on 22."
-
-#~ msgid "Alternate TCP port. Default is 873"
-#~ msgstr "Vaihtoehtoinen TCP-portti. Oletus on 873."
-
-#~ msgid "Auxiliary parameters"
-#~ msgstr "Lisäparametrit"
-
-#~ msgid "Create mask"
-#~ msgstr "Luo maski"
-
-#~ msgid "Destination share"
-#~ msgstr "Kohde jako"
-
-#~ msgid "Directory mask"
-#~ msgstr "Hakemiston maski"
-
-#~ msgid "Domain name"
-#~ msgstr "Toimialueen nimi"
-
-#~ msgid "Dos charset"
-#~ msgstr "Dos merkistö"
-
-#~ msgid "EA support"
-#~ msgstr "EA tuki"
-
-#~ msgid "Enable extended attribute support"
-#~ msgstr "Ota laajennetut määritteet käyttöön."
-
-#~ msgid "Enable recycle bin"
-#~ msgstr "Ota roskakori käyttöön."
-
-#~ msgid "Enable store DOS attributes"
-#~ msgstr "Ota DOS määritteiden tallennus käyttöön."
-
-#~ msgid "Forced update period"
-#~ msgstr "Pakota päivitysväli"
-
-#~ msgid "Guest account"
-#~ msgstr "Vieras tili"
-
-#~ msgid "Hosts allow"
-#~ msgstr "Palvelimen sallinnat"
-
-#~ msgid "Hosts deny"
-#~ msgstr "Palvelimen estot"
-
-#~ msgid "Local share (destination)"
-#~ msgstr "Paikallinen jako (kohde)"
-
-#~ msgid "Maximum connections"
-#~ msgstr "Yhteyksien enimmäismäärä"
-
-#~ msgid "NetBIOS name"
-#~ msgstr "NetBIOS nimi"
-
-#~ msgid "Null passwords"
-#~ msgstr "Tyhjät salasanat"
-
-#~ msgid "Number of servers"
-#~ msgstr "Palvelimien  määrrä"
-
-#~ msgid "Password authentication"
-#~ msgstr "Salasanan todennus"
-
-#~ msgid "Preserve extended attributes"
-#~ msgstr "Säilytä laajennetut määritteet"
-
-#~ msgid "Preserve permissions"
-#~ msgstr "Säilytä käyttöoikeudet"
-
-#~ msgid "Receive Buffer Size"
-#~ msgstr "Vanstaanottopuskurin koko"
-
-#~ msgid "Recycle bin"
-#~ msgstr "Roskakori"
-
-#~ msgid "Scan type"
-#~ msgstr "Haku muoto"
-
-#~ msgid "Source share"
-#~ msgstr "Lähteen jako"
-
-#~ msgid "Store DOS attributes"
-#~ msgstr "Tallenna DOS määritteet"
-
-#~ msgid "Swap disabled"
-#~ msgstr "Swap poistettu käytöstä"
-
-#~ msgid "Time server"
-#~ msgstr "Aikapalvelin"
-
-#~ msgid "Unix charset"
-#~ msgstr "Unix merkistö"
-
-#~ msgid "WINS server"
-#~ msgstr "WINS palvelin"
-
-#~ msgid ""
-#~ "A Auth Group contains authorised users and secrets for additional security."
-#~ msgstr ""
-#~ "Määräävä Ryhmä sisältää määrääviä käyttäjiä ja salaisuuksia lisätietoturvan "
-#~ "hyväksi."
-
-#~ msgid "Always scan"
-#~ msgstr "Skannaa aina"
-
-#~ msgid "Asynchronous I/O (AIO)"
-#~ msgstr "Asynkroninen I/O"
-
-#~ msgid "AIO write size"
-#~ msgstr "AIO kirjoituskoko"
-
-#~ msgid "AIO read size"
-#~ msgstr "AIO lukukoko"
-
-#~ msgid "AIO module"
-#~ msgstr "AIO moduuli"
-
-#~ msgid "Max. connections"
-#~ msgstr "Enimmäismäärä yhteyksiä"
-
-#~ msgid "Permit root login"
-#~ msgstr "Salli pääkäyttäjän (root) kirjautuminen"
-
-#~ msgid "Server name"
-#~ msgstr "Palvelimen nimi"
-
-#, php-format
-#~ msgid ""
-#~ "%s must be enabled for Unison to work, and the %s must have shell access."
-#~ msgstr ""
-#~ "%s on käynnistettävä että Unison toimii, ja %s on oltava pääsy "
-#~ "komentoriville."
+#~ msgid "VLAN tag"
+#~ msgstr "VLAN tunniste"
