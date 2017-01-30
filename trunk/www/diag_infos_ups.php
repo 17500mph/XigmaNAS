@@ -196,7 +196,7 @@ function upsc_enable_change() {
 						$curif = $config['ups']['upsname'];
 						if (isset($_GET['if']) && $_GET['if']) $curif = $_GET['if'];
 						$ifnum = $curif;
-						$ifdescrs = array($config['ups']['upsname'] => $config['ups']['upsname'], $config['ups']['ups2_upsname'] => $config['ups']['ups2_upsname']);
+						$ifdescrs = [$config['ups']['upsname'] => $config['ups']['upsname'], $config['ups']['ups2_upsname'] => $config['ups']['ups2_upsname']];
 						foreach ($ifdescrs as $ifn => $ifd) {
 							echo "<option value=\"$ifn\"";
 							if ($ifn == $curif) echo " selected=\"selected\"";
@@ -216,7 +216,7 @@ function upsc_enable_change() {
 					$read = fread($handle, 4096);
 					pclose($handle);
 					$lines = explode("\n", $read);
-					$ups = array();
+					$ups = [];
 					foreach($lines as $line):
 						$line = explode(':', $line);
 						$ups[$line[0]] = trim($line[1]);
