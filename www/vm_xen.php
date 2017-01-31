@@ -49,7 +49,7 @@ endif;
 
 // js button handler
 if (is_ajax()) {
-	$result = array();
+	$result = [];
 	$action = $_GET['action'];
 	$uuid = $_GET['uuid'];
 
@@ -243,7 +243,7 @@ function create_vm_config($vmuuid) {
 	}
 
 	// VIF
-	$vif = array();
+	$vif = [];
 	$vifmodel = "";
 	if ($vm['type'] == "hvm") {
 		if (isset($vm['nestedhvm'])) {
@@ -262,7 +262,7 @@ function create_vm_config($vmuuid) {
 	fprintf($fp, "vif = [ %s ]\n", implode(',', $vif));
 
 	// DISK
-	$disk = array();
+	$disk = [];
 	if ($vm['type'] == "pv") {
 		if (!empty($vm['disk1']))
 			$disk[] = sprintf("'%s,raw,xvda,w'", $vm['disk1']);

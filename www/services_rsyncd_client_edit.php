@@ -82,11 +82,11 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_rsyncclient, "
 	$pconfig['rsyncserverip'] = "";
 	$pconfig['localshare'] = "";
 	$pconfig['remoteshare'] = "";
-	$pconfig['minute'] = array();
-	$pconfig['hour'] = array();
-	$pconfig['day'] = array();
-	$pconfig['month'] = array();
-	$pconfig['weekday'] = array();
+	$pconfig['minute'] = [];
+	$pconfig['hour'] = [];
+	$pconfig['day'] = [];
+	$pconfig['month'] = [];
+	$pconfig['weekday'] = [];
 	//$pconfig['sharetosync'] = "";
 	$pconfig['all_mins'] = 0;
 	$pconfig['all_hours'] = 0;
@@ -121,7 +121,7 @@ if ($_POST) {
 
 	// Input validation
 	$reqdfields = explode(" ", "localshare rsyncserverip remoteshare who");
-	$reqdfieldsn = array(gtext("Local Share (Destination)"),gtext("Remote Rsync Server"), gtext("Remote module name"), gtext("Who"));
+	$reqdfieldsn = [gtext('Local Share (Destination)'),gtext('Remote Rsync Server'),gtext('Remote Module (Source)'),gtext('Who')];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 	if (!empty($_POST['Submit']) && gtext("Execute now") !== $_POST['Submit']) {
@@ -130,7 +130,7 @@ if ($_POST) {
 	}
 
 	if (empty($input_errors)) {
-		$rsyncclient = array();
+		$rsyncclient = [];
 		$rsyncclient['enable'] = isset($_POST['enable']) ? true : false;
 		$rsyncclient['uuid'] = $_POST['uuid'];
 		$rsyncclient['rsyncserverip'] = $_POST['rsyncserverip'];
@@ -253,7 +253,7 @@ function delete_change() {
 							<input name="remoteshare" type="text" class="formfld" id="remoteshare" size="20" value="<?=htmlspecialchars($pconfig['remoteshare']);?>" />
 						</td>
 					</tr>
-					<?php $a_user = array(); foreach (system_get_user_list() as $userk => $userv) { $a_user[$userk] = htmlspecialchars($userk); }?>
+					<?php $a_user = []; foreach (system_get_user_list() as $userk => $userv) { $a_user[$userk] = htmlspecialchars($userk); }?>
 					<?php html_combobox("who", gtext("Who"), $pconfig['who'], $a_user, "", true);?>
 					<tr>
 						<td width="22%" valign="top" class="vncellreq"><?=gtext("Synchronization Time");?></td>
@@ -443,7 +443,7 @@ function delete_change() {
 						. gtext('After - File-deletions will be done after the transfer has completed.')
 						. '</li>'
 						. '</ul></div><span>';
-					html_combobox("delete_algorithm", gtext("Delete algorithm"), $pconfig['delete_algorithm'], array("default" => "Default", "before" => "Before", "during" => "During", "delay" => "Delay", "after" => "After"), $helpinghand, false);
+					html_combobox("delete_algorithm", gtext("Delete algorithm"), $pconfig['delete_algorithm'], ['default' => 'Default','before' => 'Before','during' => 'During','delay' => 'Delay','after' => 'After'], $helpinghand, false);
 					?>
 					<tr>
 						<td width="22%" valign="top" class="vncell"><?=gtext("Quiet");?></td>

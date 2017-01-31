@@ -70,7 +70,7 @@ if ($_POST) {
 
 	// Input validation.
 	$reqdfields = explode(" ", "name address");
-	$reqdfieldsn = array(gtext("Hostname"),gtext("IP Address"));
+	$reqdfieldsn = [gtext('Hostname'),gtext('IP Address')];
 
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
@@ -90,7 +90,7 @@ if ($_POST) {
 	}
 
 	if (empty($input_errors)) {
-		$host = array();
+		$host = [];
 		$host['uuid'] = $_POST['uuid'];
 		$host['name'] = $_POST['name'];
 		$host['address'] = $_POST['address'];

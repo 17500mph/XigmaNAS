@@ -84,14 +84,14 @@ if ($_POST) {
 
 	// Input validation.
 	$reqdfields = explode(" ", "name comment");
-	$reqdfieldsn = array(gtext("Name"), gtext("Comment"));
+	$reqdfieldsn = [gtext('Name'),gtext('Comment')];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 	$reqdfieldst = explode(" ", "string string");
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
 	if(empty($input_errors)) {
-		$module = array();
+		$module = [];
 		$module['uuid'] = $_POST['uuid'];
 		$module['name'] = $_POST['name'];
 		$module['path'] = $_POST['path'];

@@ -83,7 +83,7 @@ if ($_POST) {
 
 	// Input validation.
 	$reqdfields = explode(" ", "desc who command");
-	$reqdfieldsn = array(gtext("Description"),gtext("Who"),gtext("Command"));
+	$reqdfieldsn = [gtext('Description'),gtext('Who'),gtext('Command')];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 	if (gtext("Run now") !== $_POST['Submit']) {
@@ -92,7 +92,7 @@ if ($_POST) {
 	}
 
 	if (empty($input_errors)) {
-		$cronjob = array();
+		$cronjob = [];
 		$cronjob['enable'] = isset($_POST['enable']) ? true : false;
 		$cronjob['uuid'] = $_POST['uuid'];
 		$cronjob['desc'] = $_POST['desc'];
@@ -175,7 +175,7 @@ function set_selected(name) {
 			<table width="100%" border="0" cellpadding="6" cellspacing="0">
 			<?php html_titleline_checkbox("enable", gtext("Cron job"), $pconfig['enable'] ? true : false, gtext("Enable"));?>
 			<?php html_inputbox("command", gtext("Command"), $pconfig['command'], gtext("Specifies the command to be run."), true, 60);?>
-			<?php $a_user = array(); foreach (system_get_user_list() as $userk => $userv) { $a_user[$userk] = htmlspecialchars($userk); }?>
+			<?php $a_user = []; foreach (system_get_user_list() as $userk => $userv) { $a_user[$userk] = htmlspecialchars($userk); }?>
 			<?php html_combobox("who", gtext("Who"), $pconfig['who'], $a_user, "", true);?>
 			<?php html_inputbox("desc", gtext("Description"), $pconfig['desc'], gtext("You may enter a description here for your reference."), true, 40);?>
 		<tr>

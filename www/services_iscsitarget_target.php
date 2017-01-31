@@ -283,7 +283,7 @@ $pgtitle = [gtext('Services'),gtext('iSCSI Target'),gtext('Target')];
 										$pgtag = 1;
 									if ($igtag == 0 && count($config['iscsitarget']['initiatorgroup']) != 0)
 										$igtag = 1;
-									$LUNs = array();
+									$LUNs = [];
 									$LUNs['0'] = "N/A";
 									if (isset($target['lunmap'])) {
 										foreach ($target['lunmap'] as $lunmap) {

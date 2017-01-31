@@ -66,7 +66,7 @@ if ($_POST) {
 
 	// Input validation.
 	$reqdfields = explode(" ", "path realm");
-	$reqdfieldsn = array(gtext("URL"), gtext("Realm"));
+	$reqdfieldsn = [gtext('URL'),gtext('Realm')];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 	// Check if URL is already configured.
@@ -78,7 +78,7 @@ if ($_POST) {
 	}
 
 	if (empty($input_errors)) {
-		$url = array();
+		$url = [];
 		$url['uuid'] = $_POST['uuid'];
 		$url['path'] = $_POST['path'];
 		$url['realm'] = $_POST['realm'];

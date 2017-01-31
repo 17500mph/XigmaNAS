@@ -136,7 +136,7 @@ if ($_POST) {
 		$path = $config['sambaad']['path'];
 
 		$cmd = "/usr/local/bin/samba-tool domain provision";
-		$cmsargs = array();
+		$cmsargs = [];
 		$cmdargs[] = escapeshellarg("--use-rfc2307");
 		if ($config['sambaad']['fstype'] == "ntvfs")
 			$cmdargs[] = escapeshellarg("--use-ntvfs");
@@ -224,7 +224,7 @@ $(document).ready(function(){
 					//html_text("realm", gtext("Kerberos realm"), htmlspecialchars($realm));
 					html_passwordconfbox("password", "password_confirm", gtext("Admin Password"), "", "", gtext("Generate password if leave empty."), true);
 					html_filechooser("path", gtext("Path"), $pconfig['path'], sprintf(gtext("Permanent samba data path (e.g. %s)."), "/mnt/data/samba4"), $g['media_path'], true);
-					html_combobox("fstype", gtext("Fileserver"), $pconfig['fstype'], array("s3fs" => "s3fs", "ntvfs" => "ntvfs"), "", true);
+					html_combobox("fstype", gtext("Fileserver"), $pconfig['fstype'],['s3fs' => 's3fs','ntvfs' => 'ntvfs'], "", true);
 					html_checkbox("user_shares", gtext("User Shares"), !empty($pconfig['user_shares']) ? true : false, gtext("Append user defined shares"), "", false);
 					?>
 				</table>

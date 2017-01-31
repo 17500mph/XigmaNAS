@@ -292,7 +292,7 @@ endswitch;
 					html_separator2();
 					html_titleline2(gtext('Advanced Settings'));
 					html_inputbox2('port',gtext('Port'),htmlspecialchars($sphere->record['port']),gtext('Enter a custom port number if you want to override the default port (default is 69).'),false,5);
-					$a_user = array();
+					$a_user = [];
 					foreach(system_get_user_list() as $userk => $userv):
 						$a_user[$userk] = htmlspecialchars($userk);
 					endforeach;

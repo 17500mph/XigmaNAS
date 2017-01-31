@@ -56,10 +56,10 @@ function get_vnic_mac_base()
 	global $config;
 	// OUI 24bits + random 20bits + I/F# 4bits
 	do {
-		$bytes = array(0x00, 0x16, 0x3e, // OUI
+		$bytes = [0x00, 0x16, 0x3e, // OUI
 			mt_rand(0x00, 0x07f),
 			mt_rand(0x00, 0x0ff),
-			mt_rand(0x00, 0x0f) << 4);
+			mt_rand(0x00, 0x0f) << 4];
 		$mac = implode(':',
 			array_map(function ($v) { return sprintf("%02x",$v); },
 			$bytes));
@@ -109,7 +109,7 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_vms, "uuid")))
 } else {
 	// find next unused display
 	$vncdisplay = 0;
-	$a_vncdisplay = array();
+	$a_vncdisplay = [];
 	foreach($a_vms as $v)
 		$a_vncdisplay[] = $v['vncdisplay'];
 	while (true === in_array($vncdisplay, $a_vncdisplay))
@@ -167,7 +167,7 @@ if ($_POST) {
 
 	// input validation
 	$reqdfields = explode(" ", "name mem vcpus");
-	$reqdfieldsn = array(gtext("Name"), gtext("Memory (MiB)"), gtext("VCPUs"));
+	$reqdfieldsn = [gtext('Name'),gtext('Memory (MiB)'),gtext('VCPUs')];
 	$reqdfieldst = explode(" ", "string numericint numericint");
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
@@ -176,11 +176,11 @@ if ($_POST) {
 	if (trim($_POST['vncdisplay']) != "") {
 		/*
 		$reqdfields = explode(" ", "vncdisplay vncpassword");
-		$reqdfieldsn = array(gtext("VNC Display"), gtext("VNC Password"));
+		$reqdfieldsn = [gtext('VNC Display'),gtext('VNC Password')];
 		$reqdfieldst = explode(" ", "numericint string");
 		*/
 		$reqdfields = explode(" ", "vncdisplay");
-		$reqdfieldsn = array(gtext("VNC Display"));
+		$reqdfieldsn = [gtext('VNC Display')];
 		$reqdfieldst = explode(" ", "numericint");
 		do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 		do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
@@ -188,7 +188,7 @@ if ($_POST) {
 
 	// mac address
 	$reqdfields = explode(" ", "mac1 mac2 mac3 mac4");
-	$reqdfieldsn = array(gtext("MAC Address")." 1", gtext("MAC Address")." 2", gtext("MAC Address")." 3", gtext("MAC Address")." 4");
+	$reqdfieldsn = [gtext("MAC Address")." 1", gtext("MAC Address")." 2", gtext("MAC Address")." 3", gtext("MAC Address")." 4"];
 	$reqdfieldst = explode(" ", "macaddr macaddr macaddr macaddr");
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
@@ -211,7 +211,7 @@ if ($_POST) {
 	}
 
 	if (empty($input_errors)) {
-		$vm = array();
+		$vm = [];
 		$vm['uuid'] = $_POST['uuid'];
 		$vm['name'] = $_POST['name'];
 		$vm['type'] = "pv";
@@ -307,7 +307,7 @@ $(document).ready(function(){
 					html_passwordbox("vncpassword", gtext("VNC Password"), $pconfig['vncpassword'], "", false, 15);
 					html_separator();
 					html_titleline(gtext("Network"));
-					$a_bridgeif = array("none" => gtext("None")); foreach ($a_bridge as $bridge) { $a_bridgeif[$bridge['if']] = htmlspecialchars("{$bridge['if']}".(!empty($bridge['desc']) ? " ({$bridge['desc']})" : "")); }
+					$a_bridgeif = ['none' => gtext('None')]; foreach ($a_bridge as $bridge) { $a_bridgeif[$bridge['if']] = htmlspecialchars("{$bridge['if']}".(!empty($bridge['desc']) ? " ({$bridge['desc']})" : "")); }
 					html_combobox("nic1", gtext("Network Adapter")." 1", $pconfig['nic1'], $a_bridgeif, "", true);
 					html_inputbox("mac1", gtext("MAC Address")." 1", $pconfig['mac1'], "", true, 20);
 					html_separator();

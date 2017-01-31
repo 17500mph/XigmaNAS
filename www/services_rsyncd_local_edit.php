@@ -78,11 +78,11 @@ if (isset($uuid) && (FALSE !== ($cnid = array_search_ex($uuid, $a_rsynclocal, "u
 	$pconfig['uuid'] = uuid();
 	$pconfig['source'] = "";
 	$pconfig['destination'] = "";
-	$pconfig['minute'] = array();
-	$pconfig['hour'] = array();
-	$pconfig['day'] = array();
-	$pconfig['month'] = array();
-	$pconfig['weekday'] = array();
+	$pconfig['minute'] = [];
+	$pconfig['hour'] = [];
+	$pconfig['day'] = [];
+	$pconfig['month'] = [];
+	$pconfig['weekday'] = [];
 	//$pconfig['sharetosync'] = "";
 	$pconfig['all_mins'] = 0;
 	$pconfig['all_hours'] = 0;
@@ -115,7 +115,7 @@ if ($_POST) {
 
 	// Input validation
 	$reqdfields = explode(" ", "source destination who");
-	$reqdfieldsn = array(gtext("Source Share"), gtext("Destination Share"), gtext("Who"));
+	$reqdfieldsn = [gtext('Source Share'),gtext('Destination Share'),gtext('Who')];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 	if (!empty($_POST['Submit']) && gtext("Execute now") !== $_POST['Submit']) {
@@ -124,7 +124,7 @@ if ($_POST) {
 	}
 
 	if (empty($input_errors)) {
-		$rsynclocal = array();
+		$rsynclocal = [];
 		$rsynclocal['enable'] = isset($_POST['enable']) ? true : false;
 		$rsynclocal['uuid'] = $_POST['uuid'];
 		$rsynclocal['minute'] = !empty($_POST['minute']) ? $_POST['minute'] : null;
@@ -239,7 +239,7 @@ function delete_change() {
 							<span class="vexpl"><?=gtext("Target directory.");?></span>
 					  </td>
 					</tr>
-					<?php $a_user = array(); foreach (system_get_user_list() as $userk => $userv) { $a_user[$userk] = htmlspecialchars($userk); }?>
+					<?php $a_user = []; foreach (system_get_user_list() as $userk => $userv) { $a_user[$userk] = htmlspecialchars($userk); }?>
 					<?php html_combobox("who", gtext("Who"), $pconfig['who'], $a_user, "", true);?>
 					<tr>
 						<td width="22%" valign="top" class="vncellreq"><?=gtext("Synchronization Time");?></td>

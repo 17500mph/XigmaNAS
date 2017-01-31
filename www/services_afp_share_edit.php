@@ -97,7 +97,7 @@ if ($_POST) {
 
 	// Input validation.
 	$reqdfields = explode(" ", "name comment");
-	$reqdfieldsn = array(gtext("Name"), gtext("Comment"));
+	$reqdfieldsn = [gtext('Name'),gtext('Comment')];
 	do_input_validation($_POST, $reqdfields, $reqdfieldsn, $input_errors);
 
 	$reqdfieldst = explode(" ", "string string");
@@ -122,7 +122,7 @@ if ($_POST) {
 	}
 
 	if (empty($input_errors)) {
-		$share = array();
+		$share = [];
 		$share['uuid'] = $_POST['uuid'];
 		$share['name'] = $_POST['name'];
 		$share['path'] = $_POST['path'];

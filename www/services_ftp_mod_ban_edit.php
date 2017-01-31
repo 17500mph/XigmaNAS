@@ -75,7 +75,7 @@ if ($_POST) {
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
 	if (empty($input_errors)) {
-		$rule = array();
+		$rule = [];
 		$rule['uuid'] = $_POST['uuid'];
 		$rule['event'] = $_POST['event'];
 		$rule['occurrence'] = $_POST['occurrence'];
@@ -114,7 +114,7 @@ if ($_POST) {
 				<?php if (!empty($input_errors)) print_input_errors($input_errors); ?>
 				<table width="100%" border="0" cellpadding="6" cellspacing="0">
 				<?php html_titleline(gtext("Ban List Rule Settings"));?>
-					<?php html_combobox("event", gtext("Event"), $pconfig['event'], array("AnonRejectPasswords" => "AnonRejectPasswords", "ClientConnectRate" => "ClientConnectRate", "MaxClientsPerClass" => "MaxClientsPerClass", "MaxClientsPerHost" => "MaxClientsPerHost", "MaxClientsPerUser" => "MaxClientsPerUser", "MaxConnectionsPerHost" => "MaxConnectionsPerHost", "MaxHostsPerUser" => "MaxHostsPerUser", "MaxLoginAttempts" => "MaxLoginAttempts", "TimeoutIdle" => "TimeoutIdle", "TimeoutNoTransfer" => "TimeoutNoTransfer"), gtext("This rule is triggered whenever the selected event directive occurs."), true);?>
+					<?php html_combobox("event", gtext("Event"), $pconfig['event'], ['AnonRejectPasswords' => 'AnonRejectPasswords','ClientConnectRate' => 'ClientConnectRate','MaxClientsPerClass' => 'MaxClientsPerClass','MaxClientsPerHost' => 'MaxClientsPerHost','MaxClientsPerUser' => 'MaxClientsPerUser','MaxConnectionsPerHost' => 'MaxConnectionsPerHost','MaxHostsPerUser' => 'MaxHostsPerUser','MaxLoginAttempts' => 'MaxLoginAttempts','TimeoutIdle' => 'TimeoutIdle','TimeoutNoTransfer' => 'TimeoutNoTransfer'], gtext("This rule is triggered whenever the selected event directive occurs."), true);?>
 					<?php html_inputbox("occurrence", gtext("Occurrence"), $pconfig['occurrence'], gtext("This parameter says that if N occurrences of the event happen within the given time interval, then a ban is automatically added."), true, 2);?>
 					<?php html_inputbox("timeinterval", gtext("Time Interval"), $pconfig['timeinterval'], gtext("Specifies the time interval in hh:mm:ss in which the given number of occurrences must happen to add the ban."), true, 8);?>
 					<?php html_inputbox("expire", gtext("Expire"), $pconfig['expire'], gtext("Specifies the time in hh:mm:ss after which the ban expires."), true, 8);?>

@@ -80,7 +80,7 @@ if ($_POST) {
 
 	// Input validation.
 	$reqdfields = explode(" ", "name aname bname apath bpath aremoteaddr bremoteaddr");
-	$reqdfieldsn = array(gtext("Resource name"),
+	$reqdfieldsn = [gtext('Resource Name'],
 				gtext("Node Name"), gtext("Node Name"),
 				gtext("Path"), gtext("Path"),
 				gtext("Node B IP address"), gtext("Node A IP address"));
@@ -89,7 +89,7 @@ if ($_POST) {
 	do_input_validation_type($_POST, $reqdfields, $reqdfieldsn, $reqdfieldst, $input_errors);
 
 	if (empty($input_errors)) {
-		$resource = array();
+		$resource = [];
 		$resource['uuid'] = $_POST['uuid'];
 		$resource['name'] = $_POST['name'];
 		$resource['aname'] = $_POST['aname'];

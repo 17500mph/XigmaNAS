@@ -105,19 +105,19 @@ function get_mount_info($path){
 	if (file_exists($path) === FALSE)
 		return FALSE;
 
-	// get all mount points
-	$a_mounts = array();
+// get all mount points
+	$a_mounts = [];
 	mwexec2('/sbin/mount -p', $rawdata);
 	foreach($rawdata as $line) {
 		list($dev,$dir,$fs,$opt,$dump,$pass) = preg_split('/\s+/', $line);
-		$a_mounts[] = array(
+		$a_mounts[] = [
 			'dev' => $dev,
 			'dir' => $dir,
 			'fs' => $fs,
 			'opt' => $opt,
 			'dump' => $dump,
 			'pass' => $pass,
-		);
+		];
 	}
 	if (empty($a_mounts))
 		return FALSE;
@@ -176,7 +176,7 @@ if ($_POST) {
 	}
 
 	if (empty($input_errors)) {
-		$share = array();
+		$share = [];
 		$share['uuid'] = $_POST['uuid'];
 		$share['name'] = $_POST['name'];
 		$share['path'] = $_POST['path'];
@@ -336,7 +336,7 @@ $pgtitle = [gtext('Services'),gtext('CIFS/SMB'),gtext('Share'),isset($uuid) ? gt
 					<?php html_checkbox("storealternatedatastreams", gtext("Alternate Data Streams"), !empty($pconfig['storealternatedatastreams']) ? true : false, gtext("Store alternate data streams in Extended Attributes."), "", false);?>
 					<?php html_checkbox("storentfsacls", gtext("NTFS ACLs"), !empty($pconfig['storentfsacls']) ? true : false, gtext("Store NTFS ACLs in Extended Attributes."), gtext("This will provide NTFS ACLs without ZFS ACL support such as UFS."), false);?>
 					<?php html_checkbox("afpcompat", gtext("AFP Compatibility"), !empty($pconfig['afpcompat']) ? true : false, gtext("Enhanced compatibility with Netatalk AFP server."), "", false);?>
-					<?php html_combobox("aiomodule", gtext("AIO Module"), $pconfig['aiomodule'], array("aio_pthread" => "aio_pthread", "aio_posix" => "aio_posix"), "", false, false, "");?>
+					<?php html_combobox("aiomodule", gtext("AIO Module"), $pconfig['aiomodule'], ['aio_pthread' => 'aio_pthread','aio_posix' => 'aio_posix'], "", false, false, "");?>
 					<tr>
 						<td width="22%" valign="top" class="vncell"><?=gtext("Hosts Allow");?></td>
 						<td width="78%" class="vtable">

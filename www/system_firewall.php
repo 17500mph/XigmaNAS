@@ -76,13 +76,13 @@ if (isset($_POST['export']) && $_POST['export']) {
 		// import from XML
 		$xml = file_get_contents($_FILES['rulesfile']['tmp_name']);
 		$doc = new DOMDocument();
-		$data = array();
-		$data['rule'] = array();
+		$data = [];
+		$data['rule'] = [];
 		if ($doc->loadXML($xml) != FALSE) {
 			$doc->normalizeDocument();
 			$rules = $doc->getElementsByTagName('rule');
 			foreach ($rules as $rule) {
-				$a = array();
+				$a = [];
 				foreach ($rule->childNodes as $node) {
 					if ($node->nodeType != XML_ELEMENT_NODE)
 						continue;
