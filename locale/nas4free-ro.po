@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-30 02:33+0000\n"
-"PO-Revision-Date: 2017-01-29 19:31+0000\n"
+"PO-Revision-Date: 2017-01-30 18:12+0000\n"
 "Last-Translator: Laurentiu Bubuianu <Unknown>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-30 02:13+0000\n"
+"X-Launchpad-Export-Date: 2017-01-31 07:29+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "Language: ro_RO\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -218,6 +218,9 @@ msgid ""
 "A directory listing is generated when no index-files (index.php, index.html, "
 "index.htm or default.htm) are found in a directory."
 msgstr ""
+"Când fișierele index implicite (index.php, index.html, index.htm sau "
+"default.htm) nu sunt găsite sistemul va genera o listă cu fișierele găsite "
+"în folder."
 
 msgid ""
 "A host name alias. This option can appear multiple times, for each domain "
@@ -602,7 +605,7 @@ msgid "Advanced settings"
 msgstr "Setări Avansate"
 
 msgid "Advertisement Skew"
-msgstr ""
+msgstr "Schimbare anunț"
 
 msgid "Afrikaans"
 msgstr "Africană"
@@ -632,7 +635,7 @@ msgid "Age"
 msgstr "Vechime"
 
 msgid "Aggregation Protocol"
-msgstr ""
+msgstr "Protocol agregare"
 
 msgid "Aggressive"
 msgstr "Agresiv"
@@ -948,6 +951,8 @@ msgstr "Grupuri Auth"
 msgid ""
 "Auth Groups contains authorised users and secrets for additional security."
 msgstr ""
+"Grupurile Auth conțin utilizatorii autorizați și secretele pentru un nivel "
+"sporit de securitate."
 
 msgid "Auth Method"
 msgstr "Metodă Autentificare"
@@ -1141,6 +1146,7 @@ msgstr "Înainte - Fișierele vor fi șterse înainte de începerea transferului
 msgid ""
 "Before a Unison Client can start to work, you need to perform the following:"
 msgstr ""
+"Înainte de a porni un client Unison va trebui să efectuați următoarele:"
 
 msgid "Best available"
 msgstr "Cel mai bun disponibil"
@@ -3391,6 +3397,8 @@ msgid ""
 "Enter a custom port number if you want to override the default port (default "
 "is 69)."
 msgstr ""
+"Introduceți un număr de port dacă vreți să înlocuiți portul implicit "
+"(implicit este 69)."
 
 #, php-format
 msgid ""
@@ -3951,7 +3959,7 @@ msgstr "Graficul afișează ultimele 120 secunde"
 
 #, php-format
 msgid "Graph updates every %d seconds."
-msgstr ""
+msgstr "Graficul se va actualiza la fiecare %d secunde."
 
 msgid "Graphs Height"
 msgstr "Înălțime grafice"
@@ -3960,16 +3968,16 @@ msgid "Greek"
 msgstr "Greacă"
 
 msgid "Greeting banner displayed to client when firts connection comes in."
-msgstr ""
+msgstr "Banerul de întâmpinare afișat la prima conectare a unui client."
 
 msgid "Group"
 msgstr "Grup"
 
 msgid "Group Allow"
-msgstr ""
+msgstr "Grupul Allow"
 
 msgid "Group Compilations"
-msgstr ""
+msgstr "Grupul Compilații"
 
 msgid "Group ID"
 msgstr "ID Grup"
@@ -4396,7 +4404,7 @@ msgid "Incoming Line/Power Information"
 msgstr "Informații circuit alimentare"
 
 msgid "Incomplete Directory"
-msgstr ""
+msgstr "Director incomplet"
 
 msgid ""
 "Indicates the approximate SSD life left, in terms of program/erase cycles or "
@@ -4468,6 +4476,8 @@ msgid ""
 "Initiator Groups contains authorised initiator names and networks to access "
 "the target."
 msgstr ""
+"Grupurile Inițiator conșine numele utilizatorilor autorizați și rețelele "
+"permise pentru accesarea țintei."
 
 msgid ""
 "Initiator authorised to access to the iSCSI target.  It takes a name or "
@@ -4606,6 +4616,8 @@ msgstr "Format invalid fișier."
 #, php-format
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
+"Dimensiune maximă bloc invalidă. Valorile permise se încadrează între %d și "
+"%d."
 
 msgid "Invalid username or password."
 msgstr "Nume utilizator sau parolă invalide."
@@ -4624,6 +4636,8 @@ msgid ""
 "It is impossible to enable 'Anonymous Users' and 'Authenticated Users' both "
 "at the same time."
 msgstr ""
+"Nu pot fi activate simultan opțiunile 'Utilizatori anonimi' și 'Utilizatori "
+"autentificați'."
 
 msgid ""
 "It is not recommanded to import non healthy pools nor virtual devices that "
@@ -4774,7 +4788,7 @@ msgid "Language to use on front panel"
 msgstr "Limba utilizată pentru interfață"
 
 msgid "Large Read/Write"
-msgstr ""
+msgstr "Citire/Scriere în blocuri mari"
 
 msgid "Last Configuration Change"
 msgstr "Ultima modificare configurație"
@@ -4867,10 +4881,10 @@ msgstr ""
 "puteți folosi și sufixe gen 'k', 'KB', 'M', 'Gb', etc.."
 
 msgid "Link Down Action"
-msgstr ""
+msgstr "Dezactivare conexiune"
 
 msgid "Link Up Action"
-msgstr ""
+msgstr "Activare conexiune"
 
 msgid "List"
 msgstr "Listă"
@@ -4942,7 +4956,7 @@ msgstr "Locația unde va fi stocată baza de date."
 
 #, php-format
 msgid "Location where the work files will be stored, e.g. %s/backup/.unison"
-msgstr ""
+msgstr "Locația unde sunt stocate fișierele, ex. %s/backup/.unison"
 
 msgid "Locked Files"
 msgstr "Fișiere blocate"
@@ -5089,15 +5103,17 @@ msgstr "Data de fabricație"
 
 msgid "Map all users to root, all users will have root privileges."
 msgstr ""
+"Maparea tuturor utilizatorilor în root, toți utilizatorii vor avea "
+"privilegii de root."
 
 msgid "Map to Guest"
-msgstr ""
+msgstr "Mapare ca vizitator."
 
 msgid "Map to Root"
-msgstr ""
+msgstr "Mapare ca root"
 
 msgid "Map to User"
-msgstr ""
+msgstr "Mapare ca utilizator"
 
 msgid "Mapping DOS Attributes"
 msgstr "mapare atribute DOS"
@@ -6097,7 +6113,7 @@ msgid "Path of the URL relative to document root."
 msgstr "Calea relativă către folderul rădăcină."
 
 msgid "Path to be shared to be synchronized."
-msgstr ""
+msgstr "Calea de partajare care trebuie sincronizată."
 
 msgid "Path to be shared."
 msgstr "Calea de partajat."
@@ -6110,7 +6126,7 @@ msgid "Peer Exchange"
 msgstr "Peer Exchange"
 
 msgid "Peer Port"
-msgstr ""
+msgstr "Port partener"
 
 msgid "Peer Secret"
 msgstr "Secret grup"
@@ -6132,7 +6148,7 @@ msgid "Permission"
 msgstr "Permisiune"
 
 msgid "Permit Root Login"
-msgstr ""
+msgstr "Permisiune de login ca root"
 
 msgid "Permit to do SSH Tunneling."
 msgstr "Permite SSH Tunneling."
@@ -6311,6 +6327,8 @@ msgid ""
 "Portal Groups contains IP addresses and listening on TCP ports to connect "
 "the target from the initiator."
 msgstr ""
+"grupurile portal conțin adresele IP și porturile TCP care permit conectarea "
+"inițiatorilor la ținte."
 
 msgid "Portals"
 msgstr "Portaluri"
@@ -6365,7 +6383,7 @@ msgid "Preformatted file system"
 msgstr "Sistem de fișiere preformatat"
 
 msgid "Preserve Extended Attributes"
-msgstr ""
+msgstr "Păstrare atribute extinse"
 
 msgid "Preserve Extended attributes"
 msgstr "Păstrare atribute extinse"
@@ -6684,7 +6702,7 @@ msgid "Remote Rsync Server"
 msgstr "Server Rsync Destinație"
 
 msgid "Remote Syslog Messages"
-msgstr ""
+msgstr "Mesaje syslor remote"
 
 msgid "Remote Syslog Server"
 msgstr "Server syslog remote"
@@ -6855,10 +6873,10 @@ msgid "Root"
 msgstr "Rădăcină"
 
 msgid "Root Bind DN"
-msgstr ""
+msgstr "Root Bind DN"
 
 msgid "Root Bind Password"
-msgstr ""
+msgstr "Parola Root Bind"
 
 msgid "Rotation Rate"
 msgstr "Viteză de rotație"
@@ -6906,6 +6924,8 @@ msgid ""
 "Running this service as root is not recommended for security reasons, use at "
 "your own risk!"
 msgstr ""
+"Din motive de securitate rularea acestui serviciu ca root nu este "
+"recomandată, puteți să o faceți pe riscul dumneavoastră!"
 
 msgid "Russian"
 msgstr "Rusă"
@@ -6978,12 +6998,16 @@ msgid ""
 "Samba will read from file asynchronously when size of request is bigger than "
 "this value. (%d by default)."
 msgstr ""
+"Samba va citi fișierul asincron când mărimea cererii este mai mare ca "
+"această valoare (implicit %d)."
 
 #, php-format
 msgid ""
 "Samba will write to file asynchronously when size of request is bigger than "
 "this value. (%d by default)."
 msgstr ""
+"Samba va scrie fișierul asincron când mărimea cererii este mai mare ca "
+"această valoare (implicit %d)."
 
 msgid "Sat"
 msgstr "Sâm"
@@ -7183,7 +7207,7 @@ msgid "Select the location closest to you."
 msgstr "Selectați cea mai apropiată locație de dumneavoastră."
 
 msgid "Select the permission for running this service. (www by default)."
-msgstr ""
+msgstr "Selectați permisiunea pentru a rula acest serviciu (implcit www)."
 
 msgid ""
 "Select the server configuration encrypted GZIP file or XML file and click "
@@ -7304,10 +7328,10 @@ msgid "Set additional group memberships for this account."
 msgstr "Definiți grupuri adiționale pentru acest cont."
 
 msgid "Set browseable."
-msgstr ""
+msgstr "Permite navigarea"
 
 msgid "Set read only."
-msgstr ""
+msgstr "Setare doar citire."
 
 msgid "Set share password."
 msgstr "Setare parolă partajare."
@@ -7369,13 +7393,13 @@ msgid "Settings"
 msgstr "Setări"
 
 msgid "Setup user to get shell access"
-msgstr ""
+msgstr "Setări utilizator pentru acces la shell"
 
 msgid "Shadow Copy"
 msgstr "Copie de Siguranță"
 
 msgid "Shadow Copy Format"
-msgstr ""
+msgstr "Format copie shadow"
 
 msgid "Share"
 msgstr "Partajare"
@@ -7387,7 +7411,7 @@ msgid "Share Password"
 msgstr "Parolă Partajare"
 
 msgid "Share Settings"
-msgstr ""
+msgstr "Setări partajare"
 
 msgid "Share passwords can not be more than 8 characters."
 msgstr "Parola pentru partajare nu poate fi mai mare de 8 caractere."
@@ -7449,7 +7473,7 @@ msgid "Size of send buffer (%d by default)."
 msgstr "Dimensiune bufer transmisie (implicit %d)."
 
 msgid "Size offered to the initiator. (up to 8EiB=8388608TiB)."
-msgstr ""
+msgstr "Dimensiunea oferită de inițiator (până la8EiB=8388608TiB)."
 
 msgid ""
 "Size offered to the initiator. (up to 8EiB=8388608TiB. actual size is depend "
@@ -7462,7 +7486,7 @@ msgid "Skew"
 msgstr "Skew"
 
 msgid "Skip First Scan"
-msgstr ""
+msgstr "Evită prima scanare"
 
 msgid "Sleep - Check the device unless it is in SLEEP mode."
 msgstr "Sleep - Verificare dispozitiv doar dacă nu este deja în modul Sleep."
@@ -7692,7 +7716,7 @@ msgid "Store NTFS ACLs in Extended Attributes."
 msgstr "Stocare NTFS ACLs în atributele extinse."
 
 msgid "Store alternate data streams in Extended Attributes."
-msgstr ""
+msgstr "Stocare flux alternativ de date în Atributele extinse."
 
 msgid "Strict DLNA"
 msgstr "Strict DLNA"
@@ -7708,7 +7732,7 @@ msgid "Subject"
 msgstr "Subiect"
 
 msgid "Subnet Bit Count"
-msgstr ""
+msgstr "Contorizare subnet"
 
 msgid "Subnet Mask"
 msgstr "Mască subrețea"
@@ -7871,7 +7895,7 @@ msgid "TFTP"
 msgstr "TFTP"
 
 msgid "TFTP has been disabled."
-msgstr ""
+msgstr "TFTP a fost dezactivat."
 
 msgid "TKIP"
 msgstr "TKIP"
@@ -7892,7 +7916,7 @@ msgid "Tag"
 msgstr "Etichetă"
 
 msgid "Tag Number"
-msgstr ""
+msgstr "Număr etichetă"
 
 msgid "Tag number"
 msgstr "Număr Etichetă"
@@ -7909,7 +7933,7 @@ msgid "Take a device offline"
 msgstr "DEconectare dispozitiv"
 
 msgid "Tap Device"
-msgstr ""
+msgstr "Dispozitiv bandă"
 
 msgid "Tape"
 msgstr "Casetă"
@@ -8507,10 +8531,10 @@ msgstr "Numele de utilizator este limitat la 16 caractere."
 
 msgid ""
 "The max. connections per IP address must be either 0 (unlimited) or greater."
-msgstr ""
+msgstr "Numărul maxim de conexiuni pe IP pote fi 0 (nelimitat) sau mai mare."
 
 msgid "The max. number of clients must be in the range from 1 to 50."
-msgstr ""
+msgstr "Numărul maxim de clienți trebuie să fie în intervalul 1-50."
 
 msgid ""
 "The maximum download bandwith in KiB/s. An empty field means infinity."
@@ -8792,6 +8816,8 @@ msgid ""
 "The workgroup in which the server will appear when queried by Windows or SMB "
 "clients. (maximum 15 characters)."
 msgstr ""
+"Grupul de lucru in care va apare serverul când este verificat de cleinți "
+"Windows sau SMB (maxim 15 caractere(."
 
 msgid "There are too many additional groups."
 msgstr "Sînt prea multe grupuri adiționale."
@@ -8875,10 +8901,12 @@ msgid ""
 "These parameters are added to the hardware-specific part of the driver for "
 "the second UPS."
 msgstr ""
+"Acești parametri vor fi adăugați la partea hardware a driverului pentru al "
+"doilea UPS."
 
 msgid ""
 "These parameters are added to the hardware-specific part of the driver."
-msgstr ""
+msgstr "Acești parametri vor fi atașați la partea hardware a driverului."
 
 #, php-format
 msgid "These parameters will be added to %s."
@@ -9347,13 +9375,13 @@ msgstr ""
 "folosiți această opțiune dacă doriți să adăugați un disc criptat existent."
 
 msgid "This will provide NTFS ACLs without ZFS ACL support such as UFS."
-msgstr ""
+msgstr "Activare NTFS ACLs fără suport ZFS ACL cum ar fi UFS."
 
 msgid "This will provide ZFS ACL support. (ZFS only)."
 msgstr "Aceasta va oferi suport ZFS ACL (Doar pentru ZFS)."
 
 msgid "This will provide shadow copy created by auto snapshot. (ZFS only)."
-msgstr ""
+msgstr "Activare copie dshadow cretă în mod automat (doar ZFS)."
 
 msgid ""
 "This will support streaming .jpg and .mp3 files to a TiVo supporting HMO."
@@ -10396,6 +10424,8 @@ msgstr ""
 msgid ""
 "You may specify logical block size. (default is %dB for compatibility)."
 msgstr ""
+"Puteți specifica dimensiunea logică a blocului (implicit %d pentru "
+"compatibilitate)."
 
 msgid ""
 "You must add at least a Portal Group, an Initiator Group and an Extent "
@@ -10433,6 +10463,8 @@ msgstr "Trebuie să selectați cel puțin o metodă de autentificare."
 msgid ""
 "You need to update your browser or use Internet Explorer 10 or higher."
 msgstr ""
+"Va trebui să vă actualizți browserul sau să folosiți cel puțin Internet "
+"Explorer 10."
 
 msgid "You should use HTTPS as WebGUI protocol for sending passphrase."
 msgstr ""
@@ -10442,7 +10474,7 @@ msgid "Your ZFS system is not healthy."
 msgstr "Sistemul ZFS conține erori."
 
 msgid "Your browser does not support this svg object type."
-msgstr ""
+msgstr "Browserul dumneavoastră nu suportă acest tip de obiecte svg."
 
 msgid "ZFS"
 msgstr "ZFS"
@@ -10654,41 +10686,3 @@ msgstr "demontare"
 
 msgid "week days"
 msgstr "zilele saptaminii"
-
-#~ msgid "Aggregation protocol"
-#~ msgstr "Protocol de agregare"
-
-#~ msgid "VLAN tag"
-#~ msgstr "Eticheta VLAN"
-
-#~ msgid "Advertisement skew"
-#~ msgstr "Decalaj anunțat"
-
-#, php-format
-#~ msgid "Invalid max. block size! It must be in the range from %d to %d."
-#~ msgstr ""
-#~ "Dimensiune maximă bloc incorectă! Valoarea trebuie să fie în intervalul %d - "
-#~ "%d."
-
-#~ msgid "Link down action"
-#~ msgstr "Acțiune link oprit"
-
-#~ msgid "Link up action"
-#~ msgstr "Acțiune link pornit"
-
-#~ msgid "Physical interface"
-#~ msgstr "Interfață fizică"
-
-#~ msgid "Tap device"
-#~ msgstr "Dispozitiv tap"
-
-#, php-format
-#~ msgid "Graph updates every %d seconds"
-#~ msgstr "Grafic actualizat la fiecare %d secunde"
-
-#~ msgid ""
-#~ "Enter a custom port number if you want to override the default port. "
-#~ "(Default is 69). "
-#~ msgstr ""
-#~ "Introduceți un număr de port pentru a-l înlocui pe cel implicit (portul "
-#~ "implicit este 69). "

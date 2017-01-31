@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: NAS4Free\n"
 "Report-Msgid-Bugs-To: zoon01 <zoon01@nas4free.org>\n"
 "POT-Creation-Date: 2017-01-30 02:33+0000\n"
-"PO-Revision-Date: 2017-01-29 16:03+0000\n"
+"PO-Revision-Date: 2017-01-30 05:34+0000\n"
 "Last-Translator: sleid <jeanluc.fraysse@orange.fr>\n"
 "Language-Team: NAS4Free\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-30 02:12+0000\n"
+"X-Launchpad-Export-Date: 2017-01-31 07:28+0000\n"
 "X-Generator: Launchpad (build 18315)\n"
 "X-Poedit-Country: FRANCE\n"
 "Language: \n"
@@ -613,7 +613,7 @@ msgid "Advanced settings"
 msgstr "Paramètres avancés"
 
 msgid "Advertisement Skew"
-msgstr ""
+msgstr "Changement de diffusion"
 
 msgid "Afrikaans"
 msgstr "Afrikaans"
@@ -644,7 +644,7 @@ msgid "Age"
 msgstr "Âge"
 
 msgid "Aggregation Protocol"
-msgstr ""
+msgstr "Protocole d'agrégation"
 
 msgid "Aggressive"
 msgstr "Agressif"
@@ -3433,6 +3433,8 @@ msgid ""
 "Enter a custom port number if you want to override the default port (default "
 "is 69)."
 msgstr ""
+"Entrez un numéro de port personnalisé si vous souhaitez remplacer le port "
+"par défaut (la valeur par défaut est 69)."
 
 #, php-format
 msgid ""
@@ -3991,7 +3993,7 @@ msgstr "Le graphique montre les dernières 120 secondes"
 
 #, php-format
 msgid "Graph updates every %d seconds."
-msgstr ""
+msgstr "Le graphique est mis à jour tous les %d secondes."
 
 msgid "Graphs Height"
 msgstr "Hauteur des Graphiques"
@@ -4647,6 +4649,7 @@ msgstr "Format de fichier invalide."
 #, php-format
 msgid "Invalid maximum block size! It must be in the range from %d to %d."
 msgstr ""
+"Taille de bloc maximum non valide! elle doit être dans la plage de %d à %d."
 
 msgid "Invalid username or password."
 msgstr "nom d'utilisateur ou mot de passe invalide"
@@ -4911,10 +4914,10 @@ msgstr ""
 "utiliser les suffixes usuels (par exemple : 'k', 'KB', 'M', 'Gb', etc...)"
 
 msgid "Link Down Action"
-msgstr ""
+msgstr "Faire tomber le lien"
 
 msgid "Link Up Action"
-msgstr ""
+msgstr "Faire monter le lien"
 
 msgid "List"
 msgstr "Liste"
@@ -7776,7 +7779,7 @@ msgid "Subject"
 msgstr "Sujet"
 
 msgid "Subnet Bit Count"
-msgstr ""
+msgstr "Comptage des bits de sous-réseau"
 
 msgid "Subnet Mask"
 msgstr "Masque de sous-réseau"
@@ -7940,7 +7943,7 @@ msgid "TFTP"
 msgstr "TFTP"
 
 msgid "TFTP has been disabled."
-msgstr ""
+msgstr "Comptage des bits de sous-réseau"
 
 msgid "TKIP"
 msgstr "TKIP"
@@ -7978,7 +7981,7 @@ msgid "Take a device offline"
 msgstr "Mettre un périphérique hors ligne"
 
 msgid "Tap Device"
-msgstr ""
+msgstr "Périphérique TAP"
 
 msgid "Tape"
 msgstr "Bande"
@@ -10774,40 +10777,3 @@ msgstr "démontage"
 
 msgid "week days"
 msgstr "jours de la semaine"
-
-#~ msgid "Aggregation protocol"
-#~ msgstr "Protocole d'agrégation"
-
-#~ msgid "Physical interface"
-#~ msgstr "Interface physique"
-
-#~ msgid "VLAN tag"
-#~ msgstr "Étiquette VLAN"
-
-#~ msgid "Link down action"
-#~ msgstr "Stopper le lien"
-
-#~ msgid "Link up action"
-#~ msgstr "Démarrer le Lien"
-
-#~ msgid "Advertisement skew"
-#~ msgstr "mauvais avertissement"
-
-#, php-format
-#~ msgid "Invalid max. block size! It must be in the range from %d to %d."
-#~ msgstr ""
-#~ "Taille maximum de bloc invalide ! Elle doit être dans la plage de %d à %d."
-
-#~ msgid "Tap device"
-#~ msgstr "interface TAP"
-
-#, php-format
-#~ msgid "Graph updates every %d seconds"
-#~ msgstr "Graphiques mis à jour toutes les %d secondes"
-
-#~ msgid ""
-#~ "Enter a custom port number if you want to override the default port. "
-#~ "(Default is 69). "
-#~ msgstr ""
-#~ "Entrez un numéro de port personnalisé si vous souhaitez remplacer le port "
-#~ "par défaut. (La valeur par défaut est 69). "
